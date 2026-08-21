@@ -1,0 +1,62 @@
+==============================================================================
+VERIFICACION DE OP-M-03-II, POR CAMINO PROPIO
+  arbol de antes: 4d16c100 | superviviente pivote_o_proceder | absorbido pivotar_o_proceder
+==============================================================================
+
+1. LA CLASIFICACION AMOR TOTAL A INDIFERENCIA, EN EL TEXTO FINAL
+   pasos del superviviente HOY: 9 (antes 7)
+   la frase vive en el paso: [9]
+   texto: Clasifica las respuestas de tus clientes según su nivel de entusiasmo, desde amor total hasta indiferencia
+
+2. EL ALIAS DEL SUPERVIVIENTE CARGA EL ID QUE MUERE
+   ids_alias       : ['pivotar_o_proceder']
+   merged_originals: forma diccionarios | ids ['pivotar_o_proceder']
+   merged_originals en crudo: [{'node_id': 'pivotar_o_proceder', 'titulo': 'La decisión de cambiar de rumbo o seguir adelante (pivot or proceed)', 'fuente': "The Startup Owner's Manual - Steve Blank"}]
+
+3. LAS DOS DUPLICADAS QUE LA FICHA NOMBRA, MEDIDAS HOY (P.16 manda)
+   presentacion_solucion_producto     nodos_previos     entradas 4 | resuelven a pivote_o_proceder: 1
+      entradas: ['mapa_flujo_trabajo_cliente', 'pivote_o_proceder', 'captura_conocimiento_mercado', 'preguntas_ipo_dolor_cliente']
+   scorecard_descubrimiento_cliente   nodos_siguientes  entradas 8 | resuelven a pivote_o_proceder: 1
+      entradas: ['identificar_earlyvangelists', 'pivote_o_proceder', 'ganar_comprension_del_cliente', 'identificacion_problema_cliente', 'mapa_de_canal_de_ventas', 'mapa_flujo_trabajo_cliente', 'verificar_product_market_fit', 'voc_temprano_en_agile_stage_gate']
+   LAS DOS EN CERO: la duplicada que la fusion fabrico esta LIMPIA, que
+   es lo que P.16 manda y lo contrario de lo que la ficha del 12 ago decia.
+
+4. EL ABSORBIDO, DEPRECADO Y CON SU TEXTO INTACTO
+   deprecado: SI | texto y aristas INTACTOS: SI
+
+5. LAS DOS PIEZAS QUE LA FICHA RECLASIFICA COMO QUE VIVEN DENTRO
+   paso 2, dibujar como trabaja el cliente tipico: INTACTO SI
+      Dibuja cómo trabaja realmente tu cliente típico, basándote en datos reales que hayas recogido
+   paso 6, reducir la lista de funciones a un parrafo: INTACTO SI
+      Reduce tu lista de funciones a algo que puedas contar en un párrafo y vender a miles de personas, no a una lista larguísima pensada para diez clientes
+
+6. EL INCISO ADOSADO, VERBATIM DEL PASO 4 DEL QUE MUERE
+   paso 7 ANTES : Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante
+   paso 7 HOY   : Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante hacia la validación con clientes
+   lo anadido   : 'hacia la validación con clientes'
+   es subcadena LITERAL del paso 4 del que muere: True
+
+7. DE DONDE SALEN LOS DOS GRUPOS DE DUPLICADAS QUE DESAPARECEN
+   El diff dice que el censo baja de 927 a 925 y que DESAPARECEN DOS
+   grupos, y NO son los dos que P.16 limpio. Se mide de donde salen.
+   grupos que desaparecen: 2
+      pivotar_o_proceder       nodos_previos     -> decision_pivotar_o_proceder        | vive en el nodo QUE MUERE: SI
+         entradas: ['revalidacion_modelo_negocio', 'decision_pivotar_o_proceder']
+      pivotar_o_proceder       nodos_previos     -> verificar_modelo_ingresos          | vive en el nodo QUE MUERE: SI
+         entradas: ['verificar_modelo_rentable', 'verificar_modelo_ingresos']
+
+   LOS 2 SON DEL NODO QUE MUERE: 2 de 2.
+   LA EXPLICACION MEDIDA, y no es que P.16 los limpiara: el censo de
+   aristas_duplicadas_tras_resolver.py solo revisa NODOS VIVOS (3272
+   antes, 3271 despues), y estos dos eran duplicadas HISTORICAS DENTRO
+   de pivotar_o_proceder. Al quedar deprecado, SALEN DEL CENSO. No se
+   han reparado: siguen enteras en su nodo, que conserva su texto
+   intacto (comprobacion 4). LAS DOS QUE P.16 SI LIMPIO nunca entraron
+   en el censo porque nacieron y murieron dentro de la misma corrida,
+   y por eso el diff da CERO grupos fabricados.
+   contraprueba: las entradas ['revalidacion_modelo_negocio', 'decision_pivotar_o_proceder'] siguen en pivotar_o_proceder.nodos_previos: SI
+   contraprueba: las entradas ['verificar_modelo_rentable', 'verificar_modelo_ingresos'] siguen en pivotar_o_proceder.nodos_previos: SI
+
+==============================================================================
+TODAS EN VERDE.
+==============================================================================

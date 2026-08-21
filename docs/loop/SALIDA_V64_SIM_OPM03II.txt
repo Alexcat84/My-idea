@@ -1,0 +1,34 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### pivote_o_proceder  <==  pivotar_o_proceder
+  1. DESEMPATE POR CABLEADO
+     pivote_o_proceder                            pasos  7 | nombra  5 | LO NOMBRAN  5
+     pivotar_o_proceder                           pasos  5 | nombra 10 | LO NOMBRAN 10
+     >>> gana pivotar_o_proceder por 10 contra 5
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['pivotar_o_proceder']
+  3. ENTRADAS QUE SE REDIRIGEN
+     categorias_entusiasmo_cliente                nodos_siguientes  -> pivote_o_proceder
+     checkpoints_validacion                       nodos_previos     -> pivote_o_proceder
+     decision_pivotar_o_proceder                  nodos_siguientes  -> pivote_o_proceder
+     filosofia_validacion_clientes                nodos_previos     -> pivote_o_proceder
+     mapa_flujo_trabajo_cliente                   nodos_siguientes  -> pivote_o_proceder
+     presentacion_solucion_producto               nodos_previos     -> pivote_o_proceder
+     product_market_fit                           nodos_previos     -> pivote_o_proceder
+     scorecard_descubrimiento_cliente             nodos_siguientes  -> pivote_o_proceder
+     validar_posicionamiento_con_analistas        nodos_siguientes  -> pivote_o_proceder
+     verificar_modelo_ingresos                    nodos_siguientes  -> pivote_o_proceder
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     presentacion_solucion_producto               nodos_previos     -> pivote_o_proceder
+     scorecard_descubrimiento_cliente             nodos_siguientes  -> pivote_o_proceder
+     TOTAL NUEVAS: 2
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ninguna
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     NINGUNA: el acto queda sin aristas internas tras la fusion

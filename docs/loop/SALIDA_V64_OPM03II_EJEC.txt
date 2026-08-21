@@ -1,0 +1,86 @@
+==============================================================================
+OP-M-03-II . ACTO II DE LA MESA DEL PIVOTE, LA PUERTA DE LA REUNION DEL DESCUBRIMIENTO, DE BLANK: pivote_o_proceder absorbe pivotar_o_proceder. Es la TERCERA fusion de mesa de la campana y la PRIMERA EJECUTABLE DEL PUESTO 2 de la fase 03, que quedo adjudicado en el acta 63 con la vara de la vuelta 47 y donde la primera de la lista, OP-M-02-MEDIOS, esta CONSUMIDA. ES LA APLICACION MAS DURA DE P.8 QUE HAY EN EL PLAN: el cableado dice lo contrario y por mucho, 10 contra 5, y aun asi gana el contenido . MODO EJECUTAR
+plan: docs/loop/PLAN_V64_OPM03II.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3272 vivos, 581 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive pivote_o_proceder . absorbe pivotar_o_proceder
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 9 (anadidos 2) | condiciones 1 -> 2 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 4 de pivotar_o_proceder al PASO 7 del superviviente
+        inciso VERBATIM: 'hacia la validación con clientes'
+        nexo (lo unico de cosecha propia): ' '
+        paso resultante: Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante hacia la validación con clientes
+  alias del superviviente: ['pivotar_o_proceder']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 10
+   categorias_entusiasmo_cliente                        nodos_siguientes  pivotar_o_proceder -> pivote_o_proceder
+   checkpoints_validacion                               nodos_previos     pivotar_o_proceder -> pivote_o_proceder
+   decision_pivotar_o_proceder                          nodos_siguientes  pivotar_o_proceder -> pivote_o_proceder
+   filosofia_validacion_clientes                        nodos_previos     pivotar_o_proceder -> pivote_o_proceder
+   mapa_flujo_trabajo_cliente                           nodos_siguientes  pivotar_o_proceder -> pivote_o_proceder
+   presentacion_solucion_producto                       nodos_previos     pivotar_o_proceder -> pivote_o_proceder
+   product_market_fit                                   nodos_previos     pivotar_o_proceder -> pivote_o_proceder
+   scorecard_descubrimiento_cliente                     nodos_siguientes  pivotar_o_proceder -> pivote_o_proceder
+   validar_posicionamiento_con_analistas                nodos_siguientes  pivotar_o_proceder -> pivote_o_proceder
+   verificar_modelo_ingresos                            nodos_siguientes  pivotar_o_proceder -> pivote_o_proceder
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 2
+   revalidacion_modelo_negocio                          nodos_siguientes  pivotar_o_proceder (registro historico)
+   verificar_modelo_rentable                            nodos_siguientes  pivotar_o_proceder (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 2
+   presentacion_solucion_producto                       nodos_previos
+   scorecard_descubrimiento_cliente                     nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 906   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 904   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 2, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 5 de 5
+guarda D, los 1 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (7 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 pivotar_o_proceder                           paso         1  ya lo dice el PASO 1 del superviviente
+        Siéntate con quien te acompañe en esto, sea socio o inversor, a evaluar con calma en qué punto estás
+    1 pivotar_o_proceder                           paso         2  PASO 8 del superviviente
+        Revisa evidencia real, no opiniones, sobre qué tan entusiasmados están tus clientes
+    1 pivotar_o_proceder                           paso         3  PASO 9 del superviviente
+        Clasifica las respuestas de tus clientes según su nivel de entusiasmo, desde amor total hasta indiferencia
+    1 pivotar_o_proceder                           paso         4  INCISO ADOSADO al PASO 7 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Decide con claridad: cambias de rumbo y vuelves al inicio, o sigues adelante hacia la validación con clientes
+    1 pivotar_o_proceder                           paso         5  ya lo dice el PASO 7 del superviviente
+        Documenta tu decisión y los criterios que usaste para tomarla
+    1 pivotar_o_proceder                           condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Después de cada fase de descubrimiento de clientes (Customer Discovery), antes de invertir más en desarrollo
+    1 pivotar_o_proceder                           condicion    2  CONDICION 2 del superviviente
+        Cuando no tienes claro si tu producto resuelve un problema real
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 1
+  nodos implicados    : 2
+  nodos que MUEREN    : 1
+  piezas repartidas   : 7 (3 viajan enteras, 3 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 12
+censo DESPUES: 3853 ficheros, 3271 vivos, 582 deprecados
+censo ANTES  : 3853 ficheros, 3272 vivos, 581 deprecados
+delta deprecados: +1 (esperado +1): OK

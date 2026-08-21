@@ -12,21 +12,42 @@
     "Pregúntate qué tan bien lo que estás construyendo resuelve el problema real de tu cliente",
     "Si la respuesta es 'no del todo', decide si el problema está en que elegiste el cliente equivocado o en las funciones de tu producto",
     "Reduce tu lista de funciones a algo que puedas contar en un párrafo y vender a miles de personas, no a una lista larguísima pensada para diez clientes",
-    "Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante"
+    "Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante hacia la validación con clientes",
+    "Revisa evidencia real, no opiniones, sobre qué tan entusiasmados están tus clientes",
+    "Clasifica las respuestas de tus clientes según su nivel de entusiasmo, desde amor total hasta indiferencia"
   ],
   "entregable_esperado": "Una decisión clara y por escrito: pivotar o seguir, con tu modelo de negocio actualizado y tu lista de funciones ordenada y reducida",
   "nodos_previos": [
     "captura_conocimiento_mercado",
     "business_model_canvas_como_scorecard",
     "scorecard_descubrimiento_cliente",
-    "business_model_canvas_scorecard"
+    "business_model_canvas_scorecard",
+    "categorias_entusiasmo_cliente",
+    "decision_pivotar_o_proceder",
+    "mapa_flujo_trabajo_cliente",
+    "validar_posicionamiento_con_analistas",
+    "verificar_modelo_ingresos"
   ],
   "nodos_siguientes": [
     "presentacion_solucion_producto",
-    "identificar_earlyvangelists"
+    "identificar_earlyvangelists",
+    "checkpoints_validacion",
+    "filosofia_validacion_clientes",
+    "product_market_fit"
   ],
   "condiciones_activacion": [
-    "Cuando terminaste de poner a prueba el problema con clientes reales y necesitas decidir si sigues con tus hipótesis actuales o las cambias"
+    "Cuando terminaste de poner a prueba el problema con clientes reales y necesitas decidir si sigues con tus hipótesis actuales o las cambias",
+    "Cuando no tienes claro si tu producto resuelve un problema real"
   ],
-  "etiqueta_arbol": "Revisa tu Modelo y Decide"
+  "etiqueta_arbol": "Revisa tu Modelo y Decide",
+  "ids_alias": [
+    "pivotar_o_proceder"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "pivotar_o_proceder",
+      "titulo": "La decisión de cambiar de rumbo o seguir adelante (pivot or proceed)",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

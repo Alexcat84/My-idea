@@ -1,0 +1,19 @@
+==============================================================================
+DIFF DEL CENSO DE DUPLICADAS, CON NODO Y DESTINO RESUELTOS POR EL ALIAS
+  OP-M-03-II
+  antes  : docs/loop/_v64_duplicadas_antes.jsonl
+  despues: docs/loop/_v64_duplicadas_despues.jsonl
+==============================================================================
+
+  grupos por rotulo CRUDO   : antes 927 | despues 925
+  grupos ya RESUELTOS       : antes 927 | despues 925
+
+  RENOMBRADOS (aparecen con rotulo nuevo pero son el MISMO grupo): 0
+
+  GRUPOS FABRICADOS DE VERDAD: 0
+
+  grupos que DESAPARECEN: 2
+     pivote_o_proceder | nodos_previos | decision_pivotar_o_proceder
+     pivote_o_proceder | nodos_previos | verificar_modelo_ingresos
+
+  VERDE: CERO grupos fabricados.

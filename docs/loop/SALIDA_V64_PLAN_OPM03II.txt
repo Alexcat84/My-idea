@@ -1,0 +1,33 @@
+==============================================================================
+GENERADOR DEL PLAN DE LA FUSION DE MESA OP-M-03-II (vuelta 64)
+  ficha leida de: docs/plan/OPERACIONES.jsonl
+  tipo: FUSION DE MESA | estado: LISTA | fecha de corte: 2026-08-12
+==============================================================================
+
+  LA FICHA MANDA, y esto es lo que dice:
+     nodos         : pivote_o_proceder, pivotar_o_proceder
+     superviviente : pivote_o_proceder
+     eliminar      : pivotar_o_proceder
+     guarda 1B, ningun absorbido es puerta: OK
+     los 2 miembros vivos y presentes: OK
+
+  EL SUPERVIVIENTE DE HOY: 7 pasos y 1 condiciones
+  EL ABSORBIDO pivotar_o_proceder: 5 pasos y 2 condiciones
+  INCISO al paso 7 del superviviente
+      trozo pedido en ASCII  : 'hacia la validacion con clientes'
+      trozo EXTRAIDO del nodo: 'hacia la validación con clientes'
+      paso resultante        : Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante hacia la validación con clientes
+
+  LA FICHA EN VERDE: cobertura exacta, guarda 1B, incisos extraidos y verbatim.
+  REPARTO: piezas 7 (enteras 3, ya dichas 3, de INCISO 1)
+
+  LAS PERDIDAS SELLADAS EN CAMPO PROPIO (contrato CAMPO PROPIO v1):
+     perdidas selladas: 4
+        DE PARAMETRO DE PASO   el proposito declarado de la reunion, A EVALUAR CON CALMA EN QUE PUNTO ESTAS, y el rotulo de SOCIO O INVERSOR como quienes se sientan; el paso 1 del superviviente convoca a quien te acompana y suma a los inversores, pero no dice A QUE se sientan ni pide calma. SE DICE LO QUE NO SE PIERDE: el gesto de no decidirlo solo esta entero en ese paso 1, y a que se sientan lo dicen los seis pasos que siguen. NO SE ADOSA DE INCISO porque el paso 1 del superviviente cierra en una subordinada sobre los inversores y el inciso quedaria colgando de ella
+        DE PARAMETRO DE PASO   el destino de la rama que pivota, Y VUELVES AL INICIO; la mitad de PROCEDER si viaja, adosada de INCISO al paso 7, pero la de PIVOTAR muere: el paso 7 del superviviente dice CAMBIAS DE RUMBO (PIVOTAS) y no dice adonde te lleva ese cambio. SE DICE LO QUE NO SE PIERDE: la decision misma y su registro por escrito estan enteros en ese paso 7
+        DE PARAMETRO DE PASO   LOS CRITERIOS QUE USASTE PARA TOMARLA, que es lo que hace auditable la decision; el paso 7 del superviviente manda anotar la decision final pero no manda anotar con que se decidio. SE DICE LO QUE NO SE PIERDE: el entregable_esperado del superviviente pide el modelo de negocio actualizado y la lista de funciones reducida, que son el rastro de la decision aunque no sean sus criterios. NO SE ADOSA DE INCISO porque el paso 7 ya recibe el del paso 4 y dos incisos sin coordinar dejan el paso diciendo otra cosa
+        DE CONDICIONES         LA CADENCIA y LA PUERTA DE GASTO: que el alto se hace DESPUES DE CADA fase de descubrimiento de clientes, o sea que se repite y no ocurre una sola vez, y que se hace ANTES DE INVERTIR MAS EN DESARROLLO, que es lo que convierte el alto en una puerta de dinero. La condicion 1 del superviviente dispara por HABER TERMINADO de poner a prueba el problema con clientes reales, que es el mismo momento dicho una sola vez y sin la puerta
+
+  plan escrito: docs\loop\PLAN_V64_OPM03II.json
+
+FIN

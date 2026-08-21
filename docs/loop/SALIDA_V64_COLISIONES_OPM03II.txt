@@ -1,0 +1,78 @@
+==============================================================================
+LAS COLISIONES DE CLASE DE OP-M-03-II: ESPERADAS Y MEDIDAS
+  veredictos leidos: 3388
+  alias del arbol de HOY : 659
+  alias del arbol de 4d16c100: 658
+==============================================================================
+
+--- 1. ANTES DE FUNDIR, sobre el arbol de 4d16c100 ---
+   colisiones vigentes: 0
+
+--- 2. LA CUENTA ESPERADA, SIMULADA SOBRE EL ARBOL DE ANTES ---
+   Se anade al mapa de alias de ANTES la sola entrada que la fusion
+   crea (pivotar_o_proceder -> pivote_o_proceder) y se vuelve a contar.
+   colisiones ESPERADAS tras la fusion: 2
+      par resuelto: pivote_o_proceder contra pivote_startup
+         puesto 668    B | crudo: pivote_o_proceder + pivote_startup
+         puesto 1312   D | crudo: pivotar_o_proceder + pivote_startup
+      par resuelto: pivote_o_proceder contra reunion_pivotar_o_perseverar
+         puesto 968    B | crudo: pivote_o_proceder + reunion_pivotar_o_perseverar
+         puesto 1305   D | crudo: pivotar_o_proceder + reunion_pivotar_o_perseverar
+
+--- 3. DESPUES DE FUNDIR, sobre el arbol de HOY ---
+   colisiones MEDIDAS: 2
+      par resuelto: pivote_o_proceder contra pivote_startup
+         puesto 668    B | crudo: pivote_o_proceder + pivote_startup
+         puesto 1312   D | crudo: pivotar_o_proceder + pivote_startup
+      par resuelto: pivote_o_proceder contra reunion_pivotar_o_perseverar
+         puesto 968    B | crudo: pivote_o_proceder + reunion_pivotar_o_perseverar
+         puesto 1305   D | crudo: pivotar_o_proceder + reunion_pivotar_o_perseverar
+
+   ESPERADAS 2 | MEDIDAS 2 | LAS MISMAS: True | CALZA: SI
+   colisiones que ESTA fusion fabrica: 2 (antes 0, despues 2)
+
+--- 4. DE QUIEN SON LOS PUESTOS QUE CHOCAN ---
+
+   par resuelto: pivote_o_proceder contra pivote_startup
+      puesto 668    B | pivote_o_proceder + pivote_startup
+         nodos en nomina de: OP-M-03-II (03_FUSIONES, LISTA), OP-M-03-III (03_FUSIONES, LISTA), OP-M-03-ENLACES (04_ENLACES, LISTA)
+         el numero del puesto aparece en el texto de: OP-M-03
+      puesto 1312   D | pivotar_o_proceder + pivote_startup
+         nodos en nomina de: OP-M-03-II (03_FUSIONES, LISTA), OP-M-03-III (03_FUSIONES, LISTA)
+         el numero del puesto aparece en el texto de: OP-M-03, OP-M-03-ENLACES
+
+   par resuelto: pivote_o_proceder contra reunion_pivotar_o_perseverar
+      puesto 968    B | pivote_o_proceder + reunion_pivotar_o_perseverar
+         nodos en nomina de: OP-M-03-II (03_FUSIONES, LISTA), OP-M-03-ENLACES (04_ENLACES, LISTA)
+         el numero del puesto aparece en el texto de: OP-D-01, OP-D-02
+      puesto 1305   D | pivotar_o_proceder + reunion_pivotar_o_perseverar
+         nodos en nomina de: OP-M-03-II (03_FUSIONES, LISTA)
+         el numero del puesto aparece en el texto de: NINGUNA ficha
+
+--- 5. SE RESUELVEN SOLAS CUANDO CORRA LO QUE YA ESTA ESCRITO? ---
+   Se simula, sobre el arbol de HOY, cada fusion de mesa PENDIENTE que
+   toque a un nodo de los pares que chocan, y se vuelve a contar.
+   fusiones pendientes que tocan un nodo en choque: 1
+      OP-M-03-III (pivote_estrategico absorbe pivote_startup, pivotes_e_iteraciones)
+   colisiones que quedarian tras esas fusiones: 3
+      par resuelto: pivotar_o_perseverar contra pivote_estrategico
+         puesto 737    B | crudo: pivotar_o_perseverar + pivote_startup
+         puesto 1245   D | crudo: decision_pivote_perseverar + pivote_estrategico
+         puesto 1298   B | crudo: decision_pivote_perseverar + pivote_startup
+         puesto 1320   D | crudo: pivotar_o_perseverar + pivotes_e_iteraciones
+      par resuelto: pivote_estrategico contra pivote_o_proceder
+         puesto 668    B | crudo: pivote_o_proceder + pivote_startup
+         puesto 1312   D | crudo: pivotar_o_proceder + pivote_startup
+      par resuelto: pivote_o_proceder contra reunion_pivotar_o_perseverar
+         puesto 968    B | crudo: pivote_o_proceder + reunion_pivotar_o_perseverar
+         puesto 1305   D | crudo: pivotar_o_proceder + reunion_pivotar_o_perseverar
+   LAS QUE SE RESUELVEN SOLAS: -1 de 2
+
+--- 6. LA NOMINA DE LA MESA OP-M-03, LEIDA DE SU FICHA ---
+   nodos: SIN NOMINA
+   el par pivote_o_proceder contra pivote_startup toca la nomina de la mesa en: NINGUNO
+   el par pivote_o_proceder contra reunion_pivotar_o_perseverar toca la nomina de la mesa en: NINGUNO
+
+==============================================================================
+LA CUENTA ESPERADA Y LA MEDIDA CALZAN: 2 y 2, y son LAS MISMAS.
+==============================================================================

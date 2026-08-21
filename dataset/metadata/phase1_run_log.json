@@ -7,9 +7,44 @@
   "final_cleanup_removed": [],
   "symmetrize_added": [
     {
-      "node": "ocho_fases_experiencia_cliente",
+      "node": "pivote_o_proceder",
       "key": "nodos_siguientes",
-      "added": "estrategia_de_ventas"
+      "added": "checkpoints_validacion"
+    },
+    {
+      "node": "pivote_o_proceder",
+      "key": "nodos_siguientes",
+      "added": "filosofia_validacion_clientes"
+    },
+    {
+      "node": "pivote_o_proceder",
+      "key": "nodos_siguientes",
+      "added": "product_market_fit"
+    },
+    {
+      "node": "pivote_o_proceder",
+      "key": "nodos_previos",
+      "added": "categorias_entusiasmo_cliente"
+    },
+    {
+      "node": "pivote_o_proceder",
+      "key": "nodos_previos",
+      "added": "decision_pivotar_o_proceder"
+    },
+    {
+      "node": "pivote_o_proceder",
+      "key": "nodos_previos",
+      "added": "mapa_flujo_trabajo_cliente"
+    },
+    {
+      "node": "pivote_o_proceder",
+      "key": "nodos_previos",
+      "added": "validar_posicionamiento_con_analistas"
+    },
+    {
+      "node": "pivote_o_proceder",
+      "key": "nodos_previos",
+      "added": "verificar_modelo_ingresos"
     }
   ]
 }

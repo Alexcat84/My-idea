@@ -1,0 +1,77 @@
+==============================================================================
+CASO POSITIVO DE LA VUELTA 57: LAS GUARDAS PUESTAS A FALLAR
+==============================================================================
+
+  LAS MENTIRAS DE PLAN VAN SOBRE EL ACTO 37 DEL TRAMO 3, que esta
+  DECLARADO y que esta vuelta NO TOCA (regla del acta 54, pregunta 7).
+  superviviente seis_herramientas_comunicacion_celebracion, absorbido seis_herramientas_comunicacion_fase_activate
+
+  LA FIGURA DEL ACTO, MEDIDA HOY:
+     seis_herramientas_comunicacion_celebracion     pasos 5 | condiciones 1 | deprecado False
+     seis_herramientas_comunicacion_fase_activate   pasos 5 | condiciones 1 | deprecado False
+     SIMETRICO AL DIGITO: SI
+     la cobertura exacta escrita en este instrumento calza con el nodo: SI
+
+  0. GUARDA 1 con un absorbido YA DEPRECADO (NUEVA en esta vuelta)
+     exit=1 | aborta sin escribir: SI
+     guarda 1, miembros vivos y nomina completa: ROJO ['6s_lugar_trabajo YA esta deprecado']
+     [ROJO] acto 1: 6s_lugar_trabajo YA esta deprecado
+     [ROJO] acto 1, pasos de 6s_lugar_trabajo: faltan ['1', '2', '3', '4', '5', '6'], sobran []
+     [ROJO] acto 1, condiciones de 6s_lugar_trabajo: faltan ['1', '2'], sobran []
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     la rama probada es la de YA DEPRECADO, no la de id inexistente: SI
+     VEREDICTO: LA GUARDA MUERDE
+
+  1. GUARDA 1B con un absorbido que es PUERTA
+     exit=1 | aborta sin escribir: SI
+     guarda 1B, ningun absorbido es semilla ni extremo de puente: ROJO
+     [ROJO] acto 1: domina_lo_que_compras es SEMILLA DE ENTRADA y no se puede absorber
+     [ROJO] acto 1: domina_lo_que_compras es extremo de PUENTE APROBADO (compras) y no se puede absorber
+     [ROJO] acto 1, pasos de domina_lo_que_compras: faltan ['1', '2', '3', '4', '5'], sobran []
+     [ROJO] acto 1, condiciones de domina_lo_que_compras: faltan ['1', '2', '3'], sobran []
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     [ROJO] acto 1: marca desconocida ''
+     VEREDICTO: LA GUARDA MUERDE
+
+  2. GUARDA DE COBERTURA por OLVIDO de un paso (la direccion peligrosa)
+     exit=1 | aborta sin escribir: SI
+     guarda 2, cobertura exacta de indices (cero olvidos): ROJO
+     [ROJO] acto 37, pasos de seis_herramientas_comunicacion_fase_activate: faltan ['3'], sobran []
+     [ROJO] acto 37: marca desconocida ''
+     lineas rojas: 2 (la 55 declaro DOS aqui, D6: una causa, dos sintomas)
+     VEREDICTO: LA GUARDA MUERDE
+
+  3. GUARDA DE COBERTURA por SOBRANTE, la que AISLA la guarda 2
+     exit=1 | aborta sin escribir: SI
+     guarda 2, cobertura exacta de indices (cero olvidos): ROJO
+     [ROJO] acto 37, pasos de seis_herramientas_comunicacion_fase_activate: faltan [], sobran ['6']
+     lineas rojas: 1 | UNA SOLA CAUSA Y UN SOLO SINTOMA: SI
+     VEREDICTO: LA GUARDA MUERDE
+
+  4. GUARDA DEL INCISO VERBATIM con una parafrasis en vez de un trozo literal
+     exit=1 | aborta sin escribir: SI
+     OP-U-01, TRAMO CASO POSITIVO inciso: el inciso NO es trozo verbatim . MODO SIMULAR
+     [ROJO] acto 37: el inciso 'eligiendo los canales que mejor encajen con tu manera de vender' NO es trozo verbatim del paso 2 de seis_herramientas_comunicacion_fase_activate
+     [ROJO] acto 37: el inciso 'eligiendo los canales que mejor encajen con tu manera de vender' NO es trozo verbatim del paso 2 de seis_herramientas_comunicacion_fase_activate
+     VEREDICTO: LA GUARDA MUERDE
+
+  5. GUARDA DE COLISIONES contra una cuenta esperada FALSA
+     CUENTA ESPERADA: 7 | MEDIDA: 2 | CALZA: NO
+     VEREDICTO: LA GUARDA MUERDE
+
+  planes de mentira borrados: _caso_positivo_v57_vivos.json, _caso_positivo_v57_1b.json, _caso_positivo_v57_cobertura.json, _caso_positivo_v57_sobrante.json, _caso_positivo_v57_inciso.json
+
+RESULTADO: LAS SEIS GUARDAS MUERDEN
