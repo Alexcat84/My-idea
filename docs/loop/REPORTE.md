@@ -1,29 +1,41 @@
-# REPORTE DE LA VUELTA 64 (20 ago 2026, ejecutor Opus 5)
+# REPORTE DE LA VUELTA 65 (20 ago 2026, ejecutor Opus 5)
 
-**LO PRIMERO, PORQUE ES LO QUE LA VUELTA ENTREGA: EL PUESTO 2 DE LA FASE 03 ABRE CON SU PRIMERA
-FUSION EJECUTABLE.** Adjudicado el orden del puesto en el acta 63 y consumida la primera de la lista,
-esta vuelta ejecuta **`OP-M-03-II`**, que es **la TERCERA fusion de mesa de la campana** y **la
-aplicacion mas dura de `P.8` que hay en el plan**: el cableado dice lo contrario y por mucho, **10
-contra 5**, y aun asi gana el contenido. Ademas queda **FIJADO EL TRAMO UNICO DE `OP-U-02`, sin
-fundir ni un acto suyo**, la **TAREA 1 entera** (registro del acta 63 con las 33 citas cotejadas, la
-relectura conjunta del `D10` resuelta y las CINCO fichas consumidas corregidas), y **DOS `ROJO`
-propios cazados y arreglados**.
+**LO PRIMERO, PORQUE ES LO QUE LA VUELTA ENCUENTRA Y NO LO QUE ENTREGA: EL PRIMER ACTO DEL PREFIJO DEL
+TRAMO UNICO DE `OP-U-02` NO SE PUEDE FUNDIR, Y LA LETRA QUE LO DICE YA ESTABA ESCRITA.** El acto 1
+tiene **quince miembros, DIEZ pares `D` internos, TRES nodos puente y SEIS triangulos puente**, y
+`P.10` del banco del plan dice con todas sus letras que **una componente con un nodo puente NO SE
+FUNDE hasta que ese triangulo se cierre**. Va **`DECLARADO Y NO FUNDIDO` con motivo sellado**, y es
+**la primera vez que la campana declara un acto por `P.10`**. **NO ES UNA PARADA**: el lote se entrega
+entero.
+
+**LO SEGUNDO: EL ACTO 3 SE FUNDE, Y ES LA PRIMERA FUSION DE MAS DE DOS MIEMBROS DE LA CAMPANA.** Diez
+nodos de Deming a uno, **58 piezas repartidas sobre NUEVE absorbidos** y **trece perdidas selladas en
+campo propio**.
+
+**LO TERCERO, Y VA ANTES QUE EL RESTO PORQUE SIN ELLO NADA DE LO ANTERIOR HABRIA PODIDO CORRERSE: LOS
+DOS INSTRUMENTOS DE TRAMO NO PODIAN CORRER SOBRE `OP-U-02` Y ESTA MEDIDO, NO SUPUESTO.** Corridos tal
+cual, `dossier_del_tramo.py` y `generar_plan_del_lote.py` daban los dos
+`ROJO: el fichero del tramo tiene 0 claves de ordinal ([]). PARADA`. Se corrigen **por correccion
+declarada con el texto viejo citado verbatim y con caso positivo de no regresion**, y **las dos
+correcciones van marcadas discutibles**.
+
+**LA TAREA 1 VA ENTERA:** el registro del acta 64 adosado con **las 37 citas cotejadas antes de
+escribir**, y **la aguja del comprobador de promesas ensanchada** con caso positivo en dos mitades.
 
 **LA FECHA ESTA MEDIDA POR DOS RELOJES Y NO SUPUESTA:** `date` da `2026-08-20` y
 `git log -1 --date=format:'%Y-%m-%d'` da `2026-08-20`. Es la misma medicion que el campo `fecha` del
 plan sellado, que la lee del reloj y no de una constante.
 
-**LA RACHA DE REPORTE VENIA EN CERO Y ESTA VUELTA LA ROMPE, Y LO DICE ANTES QUE NADA.** El mensaje
-del commit `6e1784c0` publico **tres celdas del barrido que no salieron de la corrida de ese
-momento**, sino de la anterior. Esta dicho entero en la seccion 7, con la corrida buena al lado y sin
-tapar el texto viejo, que sigue en el mensaje de aquel commit.
+**LA RACHA DE REPORTE VENIA EN UNO** (acta 64, linea **16989**). **Esta vuelta no publica ninguna
+cifra tomada de una corrida que no sea la suya**, y las **CINCO** averias propias que si hubo estan
+enteras en la seccion 7, **todas cazadas antes de que llegaran a una cifra publicada**.
 
 | | |
 |---|---|
 | **rama** | `pasada-unica` |
-| **hash de apertura** | `f0f8605b` (el commit del acta 63), **arbol limpio y todo pusheado; la regla 3 se cumplio POR VACIO y se dice asi en vez de darla por cumplida** (`git status --porcelain` VACIO, comprobado) |
-| **hash final** | **`ca74f202`**, el commit de este reporte, **pusheado a `origin/pasada-unica`**, mas este ultimo, que **solo escribe esta celda y la de abajo** porque el commit del reporte no podia contener su propio hash |
-| **commits de la vuelta** | **7**, leidos de `git log --format=%h f0f8605b..HEAD`: `22afe95f` (apertura medida), `be69bc56` (TAREA 1.b y 1.c), `6e1784c0` (TAREA 1.a), `4d16c100` (los dos `ROJO` propios), `7a160a25` (`OP-M-03-II`), `2cc84e86` (registro y tramo unico), `ca74f202` (este reporte), **mas el que escribe esta celda** |
+| **hash de apertura** | `b93c28f6` (el commit del acta 64), **arbol limpio y todo pusheado; la regla 3 se cumplio POR VACIO y se dice asi en vez de darla por cumplida** (`git status --porcelain` VACIO, comprobado) |
+| **hash final** | el commit de este reporte, **pusheado a `origin/pasada-unica`**, mas el ultimo, que **solo escribe esta celda y la de abajo** porque el commit del reporte no podia contener su propio hash |
+| **commits de la vuelta** | **8**, leidos de `git log --format=%h b93c28f6..HEAD`: `7897d0e8` (apertura medida), `ae539bb5` (TAREA 1 entera), `c8c6b685` (correccion de los dos instrumentos de tramo), `1ac8c2c4` (la lectura `P.5` y `P.10` del tramo), `a0d6873c` (el LOTE A ejecutado), `778815fd` (el registro del tramo), `a1ca38d0` (medicion de cierre y el `AMBAR` rotulado), mas el de este reporte **y el que escribe esta celda** |
 | **arbol al cierre** | limpio tras el commit del reporte |
 
 ---
@@ -31,72 +43,68 @@ tapar el texto viejo, que sigue en el mensaje de aquel commit.
 ## 0. LA APERTURA Y EL CIERRE, LA TABLA TALLADA POR INSTRUMENTO (regla 1)
 
 **NINGUNA CELDA ESTA TECLEADA:** sale entera de
-`python scripts/loop/tallar_cabecera_reporte.py --vuelta 64`
-([`SALIDA_V64_TALLAR_CABECERA.txt`](SALIDA_V64_TALLAR_CABECERA.txt)). **Las dos columnas se leen de
+`python scripts/loop/tallar_cabecera_reporte.py --vuelta 65`
+([`SALIDA_V65_TALLAR_CABECERA.txt`](SALIDA_V65_TALLAR_CABECERA.txt)). **Las dos columnas se leen de
 ficheros DISTINTOS.**
 
 | | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
 |---|---:|---:|
 | marcador `A` / `B` / `C` / `D` | 551 / 72 / 5 / 2.760 | **551 / 72 / 5 / 2.760** |
 | `n`, huecos, duplicados | 3.388 / 0 / 0 | **3.388 / 0 / 0** |
-| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.272 / 581 / 17.490 | **3.853 / 3.271 / 582 / 17.496** |
-| retrato: `A` crudas / colapsos / pares distintos | 551 / 277 / 274 | **551 / 278 / 273** |
-| actos (componentes) | 80 | **79** |
-| actos `CERRADOS` / `ABIERTOS` | 27 / 53 | **26 / 53** |
-| nodos en `CERRADOS` / `ABIERTOS` | 63 / 240 | **61 / 240** |
-| cola de costuras | 1.456 | **1.455** |
-| colisiones de clase vigentes | 0 | **2** |
-| auto-pares (los dos lados al mismo vivo) | 255 | **256** |
-| duplicadas historicas: grupos / nodos | 927 / 734 | **925 / 733** |
+| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.271 / 582 / 17.496 | **3.853 / 3.262 / 591 / 17.511** |
+| retrato: `A` crudas / colapsos / pares distintos | 551 / 278 / 273 | **551 / 292 / 259** |
+| actos (componentes) | 79 | **78** |
+| actos `CERRADOS` / `ABIERTOS` | 26 / 53 | **26 / 52** |
+| nodos en `CERRADOS` / `ABIERTOS` | 61 / 240 | **61 / 230** |
+| cola de costuras | 1.455 | **1.453** |
+| colisiones de clase vigentes | 2 | **2** |
+| auto-pares (los dos lados al mismo vivo) | 256 | **257** |
+| duplicadas historicas: grupos / nodos | 925 / 733 | **921 / 730** |
 | operaciones, estados, dependencias rotas | 71, todas `LISTA`, 0 | **71, todas `LISTA`, 0** |
 | entradas del inventario | 672 | **672** |
-| las cuatro comprobaciones de `08_VERIFICACION` | TODAS OK (303 igual a 303; 274 igual a 274) | **TODAS OK (301 igual a 301; 273 igual a 273)** |
+| las cuatro comprobaciones de `08_VERIFICACION` | TODAS OK (301 igual a 301; 273 igual a 273) | **TODAS OK (291 igual a 291; 259 igual a 259)** |
 
-**LA APERTURA CALZA AL DIGITO CON EL CIERRE QUE EL ACTA 63 MIDIO POR CORRIDA PROPIA**, y eso es
+**LA APERTURA CALZA AL DIGITO CON EL CIERRE QUE EL ACTA 64 MIDIO POR CORRIDA PROPIA**, y eso es
 contraste, no fuente: marcador, cola, colisiones y duplicadas dan **`diff` VACIO**, el estado difiere
 solo en la etiqueta y el recomputo en **UNA linea**, la de la ruta del `--salida`. **EL BARRIDO
-DIFIERE EN TRES FICHEROS BARRIDOS** (410 contra 407) **y la causa esta medida, no supuesta**: son los
-**tres `.py` que el auditor committeo con el acta 63** (`_auditor_v63_ciega.py`,
-`_auditor_v63_cuenta.py`, `_auditor_v63_mesas.py`), leidos de `git show --stat f0f8605b`; `ROJO`,
-`AMBAR`, `ROTULADO`, `CENSO` e `ILEGIBLE` salen identicos.
+DIFIERE EN UN FICHERO BARRIDO** (422 contra 421) **y la causa esta medida, no supuesta**:
+`git diff --name-status 10186e4f b93c28f6` sobre las cuatro carpetas barridas da **UN solo `.py`
+anadido**, `docs/loop/_auditor_v64_cuenta.py`, el que el auditor committeo con su acta; `ROJO` 32,
+`AMBAR` 0, `ROTULADO` 37, `CENSO` 219 e `ILEGIBLE` 1 salen **identicos**.
 
 Instrumentos de apertura corridos **ANTES de la primera operacion y con el arbol limpio**:
-[`SALIDA_V64_APERTURA.txt`](SALIDA_V64_APERTURA.txt),
-[`SALIDA_V64_MARCADOR_APERTURA.txt`](SALIDA_V64_MARCADOR_APERTURA.txt),
-[`SALIDA_V64_RECOMPUTO_APERTURA.txt`](SALIDA_V64_RECOMPUTO_APERTURA.txt),
-[`SALIDA_V64_COLA_APERTURA.txt`](SALIDA_V64_COLA_APERTURA.txt),
-[`SALIDA_V64_COLISIONES_APERTURA.txt`](SALIDA_V64_COLISIONES_APERTURA.txt),
-[`SALIDA_V64_DUPLICADAS_APERTURA.txt`](SALIDA_V64_DUPLICADAS_APERTURA.txt) y
-[`SALIDA_V64_BARRIDO_APERTURA.txt`](SALIDA_V64_BARRIDO_APERTURA.txt). **Las tres que reescriben sus
+[`SALIDA_V65_APERTURA.txt`](SALIDA_V65_APERTURA.txt),
+[`SALIDA_V65_MARCADOR_APERTURA.txt`](SALIDA_V65_MARCADOR_APERTURA.txt),
+[`SALIDA_V65_RECOMPUTO_APERTURA.txt`](SALIDA_V65_RECOMPUTO_APERTURA.txt),
+[`SALIDA_V65_COLA_APERTURA.txt`](SALIDA_V65_COLA_APERTURA.txt),
+[`SALIDA_V65_COLISIONES_APERTURA.txt`](SALIDA_V65_COLISIONES_APERTURA.txt),
+[`SALIDA_V65_DUPLICADAS_APERTURA.txt`](SALIDA_V65_DUPLICADAS_APERTURA.txt) y
+[`SALIDA_V65_BARRIDO_APERTURA.txt`](SALIDA_V65_BARRIDO_APERTURA.txt). **Las dos que reescriben sus
 ficheros salieron IDEMPOTENTES**, verificado por `git status`, que no listo **ni un fichero rastreado
 modificado**.
 
 **LA MEDICION DE CIERRE SE RE-CORRIO DESPUES DE ESCRIBIR LOS REGISTROS**, que es lo que la regla 1
 manda: la cabecera de arriba es la ULTIMA medicion y no una heredada.
 
-**LAS CELDAS QUE SE MUEVEN, TODAS MEDIDAS Y TODAS PREDICHAS POR LA UNICA FUSION DE LA VUELTA:** vivos
-bajan **1**, deprecados suben **1**, colapsos suben **1**, pares distintos bajan **1**, actos bajan
-**1**, `CERRADOS` bajan **1** y nodos en `CERRADOS` bajan **2**, auto-pares suben **1** y duplicadas
-bajan **2 grupos**. **El delta de deprecados se midio en la propia ejecucion** (`+1` sobre `+1`
-esperado).
+**LAS CELDAS QUE SE MUEVEN, TODAS PREDICHAS POR LA UNICA FUSION DE LA VUELTA, que absorbe NUEVE
+nodos:** vivos bajan **9**, deprecados suben **9**, colapsos suben **14** (son los 14 pares `A`
+internos del acto, que pasan a auto-arista), pares distintos bajan **14**, actos bajan **1**,
+`ABIERTOS` bajan **1** y nodos en `ABIERTOS` bajan **10**, auto-pares suben **1** (los 14 veredictos
+colapsan en UN solo grupo resuelto) y duplicadas bajan **4 grupos** y **3 nodos**, que es lo que
+`P.16` limpio.
 
-**LAS TRES CELDAS QUE NO SE MUEVEN ASI, MEDIDAS Y NO SUPUESTAS:**
+**LAS DOS CELDAS QUE NO SE MUEVEN ASI, MEDIDAS Y NO SUPUESTAS:**
 
-1. **LOS ENLACES SUBEN 6** (17.490 a 17.496). El superviviente hereda los vecinos del que muere por
-   la simetrizacion del paso 5 de Gate 0, y la fusion dedupica por literal, asi que el saldo no es
-   multiplo de nada. **Redirecciones sobre nodos VIVOS: 10**, leidas de
-   [`SALIDA_V64_OPM03II_EJEC.txt`](SALIDA_V64_OPM03II_EJEC.txt).
-2. **LA COLA BAJA 1** (1.456 a 1.455), **y la causa esta en el `diff` del propio fichero, no
-   supuesta**: `pivotar_o_proceder` sale de la cola por quedar deprecado, y `pivote_o_proceder`
-   **SUBE** de `50,7` con pareja `[4, 5]` a `55,0` con pareja `[8, 9]`, porque su pareja mas cercana
-   pasa a ser la de **los dos pasos que heredo de `APPEND`**. Un nodo menos, y el que queda con otra
-   puntuacion.
-3. **LAS COLISIONES DE CLASE VIGENTES SUBEN DE 0 A 2, Y ESA CELDA SE PUBLICA EN ROJO EN VEZ DE
-   ESCONDERSE.** Son **predichas, medidas y NO TOCADAS**, y el desarrollo entero esta en la
-   **seccion 4.4**.
+1. **LOS ENLACES SUBEN 15** (17.496 a 17.511). El superviviente hereda los vecinos de los nueve que
+   mueren por la simetrizacion del paso 5 de Gate 0, la fusion dedupica por literal y `P.16` retira
+   seis duplicadas: el saldo no es multiplo de nada y por eso se publica medido.
+2. **LAS COLISIONES DE CLASE VIGENTES SE QUEDAN EN 2, QUE ES LA LINEA BASE DECLARADA** (acta 64,
+   pregunta 3). **Son las dos de la mesa `OP-M-03` y NO SE HAN TOCADO.** La cuenta esperada se midio
+   **ANTES de fundir** y dio **cero nuevas**; el censo de cierre con `--esperadas 2` da **MEDIDA 2,
+   CALZA SI**.
 
 **TASA POR DOMINIO AL CIERRE**, leida de
-[`SALIDA_V64_MARCADOR_CIERRE.txt`](SALIDA_V64_MARCADOR_CIERRE.txt): compras 0,6 (n 155) | core 22,5
+[`SALIDA_V65_MARCADOR_CIERRE.txt`](SALIDA_V65_MARCADOR_CIERRE.txt): compras 0,6 (n 155) | core 22,5
 (n 1.445) | entrega 1,2 (n 171) | environmental 16,5 (n 170) | exportacion 11,5 (n 130) | franquicias
 10,1 (n 148) | health_safety 22,4 (n 192) | quality 14,1 (n 844) | risk_management 0,0 (n 106) |
 seguridad_digital 11,1 (n 27). **IDENTICA a la de la apertura al digito: fundir no voltea
@@ -104,500 +112,446 @@ veredictos.**
 
 ---
 
-## 1. TAREA 1.a: **EL REGISTRO DEL ACTA 63, CON LAS TREINTA Y TRES CITAS COTEJADAS ANTES DE ESCRIBIR**
+## 1. TAREA 1.a: **EL REGISTRO DEL ACTA 64, CON LAS TREINTA Y SIETE CITAS COTEJADAS ANTES DE ESCRIBIR**
 
 Va al final de [`docs/plan/03_FUSIONES.md`](../plan/03_FUSIONES.md), **adosado y SIN reescribir una
-sola linea de las secciones de arriba** (**+180 lineas, de 3.303 a 3.483**, contadas por el propio
-instrumento). Es la via que esa pagina ya uso **CUATRO** veces: acta 52 (linea **1250**), acta 57
-sobre el acto 25 (**2475**), acta 61 (**2689**) y acta 62 (**2933**).
+sola linea de arriba** (**+119 lineas y CERO borradas**, medido con `git diff --numstat`). Lo escribe
+`python scripts/loop/vuelta65_registrar_acta64.py`
+([`SALIDA_V65_REGISTRO_ACTA64.txt`](SALIDA_V65_REGISTRO_ACTA64.txt)), que **cae en `ROJO` sin escribir
+si una sola de las 37 citas no calza**: salieron **37 cotejadas, 0 malas**. **La guarda de
+idempotencia MUERDE**: la segunda corrida dice *YA ADOSADA* y no escribe. **Las 8 sedes de arriba
+siguen en su linea tras adosar**, re-cotejadas.
 
-**LA GUARDA DE CITAS MORDIO ANTES DE ESCRIBIR**, y su salida esta committeada
-([`SALIDA_V64_REGISTRO_ACTA63.txt`](SALIDA_V64_REGISTRO_ACTA63.txt)): **33 citas de DOS ficheros**
-(24 del acta y 9 de la propia pagina), **0 MALAS**, y el instrumento cae en `ROJO` sin escribir si
-una sola no calza. **Re-cotejo tras adosar: las nueve sedes de arriba siguen en su linea.**
+**LO QUE SE REGISTRA, que es exactamente lo que el encargo pedia:** los nueve discutibles con su vara
+citada linea a linea; **el carril de las dos colisiones con la mesa `OP-M-03` como duena nombrada y
+la linea base del censo en `2`**; **la regla de no apilar mas de un `INCISO`**; **la caida de reporte
+`7.1` con su nombre y la racha en uno**; y **las respuestas de las preguntas 4 y 7, registradas y no
+encargadas**, mas una nota que dice donde quedaron las otras cinco para que no parezca omision.
 
-**Y LAS DOS TABLAS SE PEGAN, NO SE TECLEAN** (regla 1): la de desbloqueos sale de
-`scripts/loop/vuelta64_puesto2.py` y la de las consumidas de `scripts/loop/vuelta64_consumidas.py`,
-**las dos IMPORTADAS por el registrador**, no copiadas. **La frase que nombra la primera ejecutable
-del puesto tampoco se teclea: sale de la propia medicion.**
+### 1.1 **UNA DIVERGENCIA DECLARADA EN VEZ DE RESOLVERSE COPIANDO, Y VA MARCADA COMO DISCUTIBLE**
 
-Contenido: los **NUEVE `A FAVOR`** con su vara citable y su linea, **LA REGLA DE LA FICHA ENVEJECIDA**
-escrita entera con sus tres ramas, el orden del puesto 2 con su tabla, las **CINCO CONSUMIDAS**, la
-**caida de acta del auditor con su nombre** (de 5 a 6) y el `D10` resuelto.
+**El mensaje del commit del acta 64 y el encargo de esta vuelta dicen los dos NUEVE discutibles
+`A FAVOR`**, con el parentesis *el `D5` registrado como caida de procedimiento autodeclarada*. **El
+TEXTO del acta, que es la vara, NO adjudica el `D5` `A FAVOR`**: su linea **16876**, leida hoy, abre
+diciendo *caida de procedimiento del ejecutor, autodeclarada, registrada en la seccion 3*.
 
-**UNA GUARDA DE IDEMPOTENCIA ANADIDA AL REGISTRADOR, y nace de un riesgo real:** adosar dos veces
-publicaria la misma adjudicacion dos veces, **y una pagina con la seccion duplicada no falla, dice
-que si**. Re-corrido: `YA ADOSADA`.
+**Registro OCHO `A FAVOR` y UNO como caida**, y **el texto del resumen del commit queda entero y sin
+tachar como contraste** (regla 2: si discrepan, la discrepancia se declara en vez de resolverse
+copiando). **Ninguna de las dos lecturas mueve una sola cifra ni un solo dato**: el `D5` esta
+registrado en las dos y lo unico que cambia es el rotulo con que se le nombra. **Es el `D1` de la
+seccion 6.**
 
 ---
 
-## 2. TAREA 1.b: **EL `D10`, RELECTURA CONJUNTA. SE SELLA**
+## 2. TAREA 1.b: **EL ENSANCHE DE LA AGUJA DEL COMPROBADOR DE PROMESAS**
 
-**El caso del auditor:** la condicion 1 de `fases_de_retencion_de_clientes` quedo `CUBIERTO:1` **sin
-perdida sellada**, y **ese mismo dia `OP-M-03-I` sello DOS perdidas `DE CONDICIONES` por la misma
-especie**. El auditor no adjudico: mando **verificar contra el grafo y decidir con la vara**.
+**LO PRIMERO FUE MEDIR SI EL ENSANCHE DESTAPABA UNA PROMESA INCUMPLIDA HOY INVISIBLE**, porque el acta
+64 mandaba **PARAR** si asi era. **Barridos los 62 `PLAN_*.json` de `docs/loop`, la forma plural
+aparece en UNO solo** (`PLAN_V64_OPM03II.json`, acto 1, `nota_del_reparto`) **y ESE MISMO campo ya
+trae la singular**. **CERO promesas nuevas y CERO incumplidas destapadas: NO HAY PARADA**, y el
+ensanche no es regresion ni hallazgo, es aguja.
 
-**MEDIDO HOY sobre el json vivo** (`python scripts/loop/vuelta64_d10.py`,
-[`SALIDA_V64_D10.txt`](SALIDA_V64_D10.txt)):
+**LA CORRECCION VA DECLARADA EN EL DOCSTRING con el texto viejo citado verbatim** (*Cuenta como
+PROMESA la frase VA MARCADO COMO DISCUTIBLE, comparada sin distinguir mayusculas*) **y no se quita
+nada**: la constante vieja `PROMESA` conserva su nombre y su valor, se anade `PROMESA_PLURAL` y las
+dos entran juntas en `FORMAS`. **Un campo con CUALQUIERA de las dos formas, o con las dos, cuenta como
+UNA sola promesa**, que es lo que deja el conteo viejo intacto. El instrumento **imprime ahora sus dos
+agujas y la forma hallada en cada fila**, para que la vara no dependa del docstring.
 
-| | el texto de HOY |
+### 2.1 El caso positivo, **en las dos mitades que el encargo pide**
+
+`python scripts/loop/vuelta65_caso_positivo_promesas.py`
+([`SALIDA_V65_CASO_POSITIVO_PROMESAS.txt`](SALIDA_V65_CASO_POSITIVO_PROMESAS.txt)), **VERDE**:
+
+| mitad | que mide | resultado |
+|---|---|---|
+| **NO REGRESION** | las corridas selladas de las vueltas **63** y **64**, re-corridas con la aguja ensanchada **contra el reporte de SU PROPIA vuelta** | **2 de 2** y **2 de 2 CUMPLIDAS**, `exit 0`, **identicas al digito** a `SALIDA_V63_PROMESAS_CUMPLIDAS.txt` y `SALIDA_V64_PROMESAS_CUMPLIDAS.txt` |
+| **VISIBILIDAD** | un **plan de mentira** con la nota **SOLO en plural** | la aguja **VIEJA ve 0**; la **NUEVA ve 1**, y sale **`INCUMPLIDA` con `exit 1`** porque la seccion 6 no nombra ese acto inventado |
+
+**DOS COSAS QUE ESE CASO POSITIVO HACE Y SE DICEN PORQUE SON LA MITAD DE SU VALOR.** La primera: **el
+reporte de cada vuelta se saca de `git`, no se recuerda**, porque `docs/loop/REPORTE.md` se sobrescribe
+cada vuelta; sin eso la mitad 1 estaria comparando contra el reporte equivocado. La segunda: **la
+aguja vieja NO se re-teclea**, se reconstruye del propio instrumento quitandole la forma plural, asi
+que si manana alguien cambia la constante la prueba cambia con ella. **El plan de mentira se BORRA
+tras la prueba y el borrado se comprueba e imprime.**
+
+**CENSO DE PLANTILLAS TRAS EL ENSANCHE: CERO TALLADOS en los 22 instrumentos de nombre estable**
+([`SALIDA_V65_CENSO_PLANTILLAS_TAREA1.txt`](SALIDA_V65_CENSO_PLANTILLAS_TAREA1.txt)).
+
+---
+
+## 3. TAREA 2, PASO PREVIO: **LOS DOS INSTRUMENTOS DE TRAMO NO PODIAN CORRER SOBRE `OP-U-02`**
+
+**MEDIDO ANTES DE TOCAR NADA Y NO SUPUESTO.** Corridos tal cual sobre
+`docs/loop/TRAMO_UNICO_OPU02_V64.jsonl`, **los dos** dan la misma linea:
+
+```
+ROJO: el fichero del tramo tiene 0 claves de ordinal ([]). PARADA.
+```
+
+La clave del tramo unico es `orden_universo` y **los dos solo conocian `orden_tramo`**. Y el generador
+tenia ademas **una segunda averia mas grave, que no para sino que MIENTE**: su linea
+`ab = [x for x in mi if x != sup][0]` **habria sellado el acto 1, de quince miembros, con UN solo
+absorbido y los otros TRECE desaparecidos en silencio**. **El fundidor `fundir_por_plan.py` YA era
+N-ario**, medido leyendo su bucle `for muere in abs_`: lo unico que faltaba era que el generador
+supiera sellarlo.
+
+**SE CORRIGEN POR CORRECCION DECLARADA, que es el carril con el que la vuelta 63 corrigio la cabecera
+de ESTE MISMO generador** (banco `9.10`), **con el texto viejo citado VERBATIM en el sitio donde
+muerde y enumerado en el docstring**, y **las dos van MARCADAS DISCUTIBLES** por las dos condiciones
+del acta 61 (`D2` y pregunta 2). **El titulo del generador, que decia `OP-U-01`, tambien se corrige
+con su texto viejo citado.** En el dossier, ademas, **un acto de mas de dos publica ahora la razon de
+CADA par interno** en vez de decir `NO ENCONTRADO`, que es lo que su propio docstring ya prometia.
+
+### 3.1 El caso positivo, y **su vara esta declarada porque la primera que eligi era mala**
+
+`python scripts/loop/vuelta65_caso_positivo_generador.py`
+([`SALIDA_V65_CASO_POSITIVO_GENERADOR.txt`](SALIDA_V65_CASO_POSITIVO_GENERADOR.txt)), **VERDE**:
+
+| mitad | resultado |
 |---|---|
-| **muere** (condicion 1 de `fases_de_retencion_de_clientes`) | *Cuando la empresa solo tiene procesos disenados para atraer y cerrar ventas, pero no para despues de la compra* |
-| **sobrevive** (condicion 1 de `ocho_fases_experiencia_cliente`) | *Cuando el usuario necesita una estructura sistematica para gestionar la experiencia del cliente despues de la venta* |
+| **NO REGRESION DEL GENERADOR** | el **ANCESTRO** (sacado de `git ae539bb5`) y el **CORREGIDO**, los dos **HOY**, sobre el **mismo** tramo de dos miembros vivos y el **mismo** contenido: **0 campos distintos** salvo la fecha |
+| **NO REGRESION DEL DOSSIER** | ancestro contra corregido, los dos hoy: **0 lineas distintas** |
+| **QUE LA CORRECCION SIRVA** | las dos ramas nuevas **dejan de caer** por el ordinal, y **la guarda del acto de mas de dos SIN reparto MUERDE** sobre el acto 1 de quince miembros |
 
-**LA BUSQUEDA NEGATIVA SE CORRIO EN VEZ DE CITARSE** (regla 9): las **cinco** agujas del encuadre del
-sintoma salen **AUSENTES sobre el json ENTERO del superviviente**, no solo sobre sus condiciones.
+**POR QUE NO SE COMPARA CONTRA LAS SALIDAS SELLADAS DE LAS VUELTAS 61 Y 62, dicho porque fue mi primer
+intento y dio ROJO:** los nodos del tramo 6 de `OP-U-01` **se fundieron en la vuelta 62 y hoy estan
+deprecados y con otro texto**, asi que esa comparacion mide **el movimiento del ARBOL** y no el de la
+correccion (dio **808 lineas distintas** y dos re-generaciones imposibles). **La comparacion que si
+aisla la correccion es ancestro contra corregido sobre el mismo arbol**, y es la que queda. Esta en
+la seccion 7.
 
-**LA DECISION: SE SELLA, Y EL `CUBIERTO` SE SOSTIENE.** El disparador operativo (**el DESPUES DE LA
-VENTA**) esta en la condicion 1 del superviviente con todas sus letras, asi que la marca no se toca;
-**lo que se anade es el sello de la mitad que muere**, el encuadre del sintoma, que es el diagnostico
-por el que un lector se reconoce a si mismo.
-
-**LA VARA, LEIDA ENTERA** (acta 55, pregunta 5): *las perdidas de condiciones no van de `APPEND` por
-defecto, y la perdida NOMBRADA es el carril mientras el pendiente del `INCISO` de condiciones siga
-abierto*. **Esa vara reparte DOS marcas y no una**: `APPEND` para el disparador **distinto**, y
-`CUBIERTO` **con la perdida nombrada** para el **mismo** disparador con un matiz que muere. **Lo que
-no contempla en ninguna de sus dos ramas es el `CUBIERTO` CON SILENCIO.** Y es **la misma especie**
-que las dos hermanas de `OP-M-03-I` (*el mismo fenomeno sin la pendiente*, *el mismo callejon sin la
-imagen*): tratar igual lo medido igual dentro de la misma vuelta es la regla de trabajo **declarada y
-uniforme** del acta 55, pregunta 4.
-
-**COMO SE ESCRIBE:** correccion declarada en el campo `perdidas` y en la `nota_del_reparto` de
-[`PLAN_V63_OPM02PROG.json`](PLAN_V63_OPM02PROG.json), **citando VERBATIM la frase que decia lo
-contrario** (extraida del propio fichero por el instrumento, que cae en `ROJO` si no la encuentra),
-y en el registro de `03_FUSIONES.md` citando las lineas **3189** y **3193** del registro viejo, **que
-no se toca**. **El tallador lo confirma por maquina:** `tallar_perdidas_del_plan.py` da **5 perdidas
-nombradas en los dos planes de la vuelta 63** (**3 `DE CONDICIONES`, 2 `DE PARAMETRO DE PASO`**),
-donde antes daba 4
-([`SALIDA_V64_TALLAR_PERDIDAS_V63.txt`](SALIDA_V64_TALLAR_PERDIDAS_V63.txt)).
-
-**NADA DEL GRAFO SE TOCA:** la fusion esta ejecutada y auditada, y esto es registro.
+**Y ESE CASO POSITIVO YA MORDIO UNA VEZ, que es lo que lo hace creible:** ver la seccion **7.2**.
 
 ---
 
-## 3. TAREA 1.c: **LAS CINCO CONSUMIDAS, MEDIDAS POR CAMINO PROPIO Y CORREGIDAS**
+## 4. TAREA 2: **LA LECTURA `P.5` DEL TRAMO Y SU MITAD DIAGNOSTICA `P.10`**
 
-**El auditor lo midio con instrumento propio y el ejecutor lo volvio a medir por camino propio antes
-de escribir una sola correccion**, que es lo que el protocolo de relectura conjunta pide. **LA TABLA
-SALE ENTERA** de `python scripts/loop/vuelta64_consumidas.py`
-([`SALIDA_V64_CONSUMIDAS.txt`](SALIDA_V64_CONSUMIDAS.txt)):
+**En `OP-U-01` la componente ERA el par y la pregunta de `P.5` se contestaba leyendo ese par. Aqui los
+actos van de 3 a 15 miembros, y ahi manda `P.10`**, que dice con todas sus letras:
 
-| ficha | superviviente de la **ficha** (12 ago) | el que quedo **VIVO** | coinciden | quien la consumio | linea |
-|---|---|---|:---:|---|---:|
-| `OP-M-02-MEDIOS` | `seis_medios_comunicacion_cliente` | `estrategia_multicanal_bienvenida` | **NO** | `OP-U-01`, TRAMO 3, vuelta 56, acto 32, lote B | **2091** |
-| `OP-M-02-ASSESS` | `fase_assess_ciclo_cliente` | `fase_assess_ciclo_cliente` | si | `OP-U-01`, TRAMO 2, vuelta 55, acto 30, lote A | **1832** |
-| `OP-M-02-ADMIT` | `fase_admit` | `fase_admit_celebracion` | **NO** | `OP-U-01`, TRAMO 2, vuelta 55, acto 38, lote B | **1840** |
-| `OP-M-02-ACTIVATE` | `fase_activate_primera_impresion` | `fase_activate_primera_impresion` | si | `OP-U-01`, TRAMO 1, vuelta 48, acto 44 | **417** |
-| `OP-M-02-ACCOMPLISH` | `fase_accomplish_experiencia_cliente` | `fase_accomplish_experiencia_cliente` | si | `OP-U-01`, TRAMO 3, vuelta 56, acto 9, lote A | **2069** |
+> **UN NODO PUENTE es el que tiene `A` con dos nodos que entre si son `D`.** La componente que forma
+> puede ser **UNA familia o DOS pegadas por el**, y **el cierre transitivo no lo distingue**.
+> **Si aparece, la componente NO se funde hasta que ese triangulo se cierre.**
+> **LO QUE NUNCA ES SALIDA: fundir la componente entera porque el cierre transitivo la junta. El
+> cierre transitivo no lee: cuenta.**
 
-**LAS DOS MEDICIONES CALZAN AL DIGITO** en la unica que el auditor situo (`MEDIOS`: tramo 3, vuelta
-56, lote B, acto 32, linea **2091**, con su perdida en la **2132**), y **las otras cuatro quedan
-situadas por el mismo camino**. **Cada correccion va en el campo `nota` de su ficha, por el carril
-del banco `9.10`, con el texto viejo entero y sin tachar**, y en `MEDIOS` y `ADMIT` **la divergencia
-de superviviente va DECLARADA como contraste** en vez de resolverse copiando. **NADA DEL GRAFO SE
-TOCA.**
-
-**POR QUE NO SE ESTRENA CLAVE NUEVA EN `OPERACIONES.jsonl`, dicho para que no parezca descuido:** su
-esquema es **un pendiente de doctrina heredado** (acta 55, seccion 5) y **estrenar clave en 5 de las
-71 fichas seria decidirlo de tapadillo**. El campo `nota` es ademas el sitio que estas fichas ya
-usan: `OP-F-01`, `OP-D-01`, `OP-D-03`, `OP-D-04`, `OP-S-06`, `OP-S-07`, `OP-C-04` y `OP-U-01` traen
-ahi su correccion declarada. **Guardas tras escribir:** 71 fichas antes y despues, **las 18 claves
-intactas en las 71**, las cinco con su `fecha_corte` del 12 ago, cero guiones largos y cero medios
-([`SALIDA_V64_CORRECCIONES_CONSUMIDAS.txt`](SALIDA_V64_CORRECCIONES_CONSUMIDAS.txt)).
-
-**Y EL ORDEN DEL PUESTO 2, RE-MEDIDO EN ESTA VUELTA** y no copiado del acta
-([`SALIDA_V64_PUESTO2.txt`](SALIDA_V64_PUESTO2.txt)):
-
-| puesto | operacion | **desbloquea** | cuales, leidas de su `depende_de` | estado HOY |
-|---:|---|---:|---|---|
-| **1.a** | `OP-M-02-MEDIOS` | **5** | `OP-M-02-ASSESS`, `OP-M-02-ADMIT`, `OP-M-02-ACTIVATE`, `OP-M-02-ACCLIMATE`, `OP-M-02-ACCOMPLISH` | **CONSUMIDA**, su par ya resuelve a un solo vivo |
-| **2.a** | `OP-M-03-II` | **4** | `OP-M-03-ENLACES`, `OP-M-05-INDICE`, `OP-M-05-EDIFICIO`, `OP-M-05-APERTURA` | ejecutable, 2 miembros a 2 vivos |
-| **3.a** | `OP-U-02` | **1** | `OP-E-03` | ejecutable; **SIN nomina de nodos en su ficha**, su universo se abre aparte |
-
----
-
-## 4. TAREA 2.a: **`OP-M-03-II` EJECUTADA**
-
-### 4.1 La regla de la ficha envejecida, aplicada y declarada
-
-**Las mediciones selladas se RE-CORRIERON HOY antes de fundir**
-([`SALIDA_V64_LECTURA_OPM03II.txt`](SALIDA_V64_LECTURA_OPM03II.txt),
-[`SALIDA_V64_SIM_OPM03II.txt`](SALIDA_V64_SIM_OPM03II.txt)) **y TODAS LAS VIAS CONVERGEN** en
-`pivote_o_proceder`:
-
-| via, medida hoy | cifra | apunta a |
-|---|---:|---|
-| vara de **pasos** | 7 contra 5 | `pivote_o_proceder` |
-| vara de **condiciones** | 1 contra 2 | `pivotar_o_proceder` |
-| las dos varas de contenido | **`CHOCAN`** | **decide LA PIEZA DECLARADA** (acta 53, pregunta 3), que es la adjudicacion sellada y nombra a `pivote_o_proceder` |
-| vara de **cableado** | 10 contra 5 | `pivotar_o_proceder`, **y NO ENTRA**: `P.8` dice que el cableado **desempata, no decide**, y solo habla a contenido **EMPATADO**. Aqui el contenido no empata |
-
-**LA CORRECCION DECLARADA QUE LA FICHA YA TRAIA SIGUE SIENDO CIERTA CONTRA EL GRAFO DE HOY:** el
-expediente escribio que el cableado *no desempata* y la ficha lo corrigio el 12 ago diciendo que son
-**10 contra 5**; **medido hoy con la vara del instrumento: 10 contra 5, IDENTICO AL DIGITO**.
-
-**UNA VARA MIA DICHA, Y SON DOS VARAS Y NO UNA DISCREPANCIA:** mi cuenta cruda de cableado (cada nodo
-que lo nombra UNA vez, deprecados incluidos) da **12 contra 6**; **la publicada es la del
-instrumento** (entrantes sobre nodos no deprecados, los dos campos por separado), que es la que la
-ficha uso. **Es el mismo manejo que el acta 63 declaro para los enlaces.**
-
-**LECTURA DE ACTO POR `P.5`, HECHA ANTES DE FUNDIR:** los dos nodos declaran el **MISMO libro**
-(*The Startup Owner's Manual*, de Steve Blank), la **MISMA `fase_proyecto`** (`validacion`) y el
-**MISMO `dominio`** (`core`), **y las tres calzan por maquina**. **UNA familia, no dos.**
-
-**LA SIMULACION DE HOY ES IDENTICA AL DIGITO A LA SELLADA**, y se dice porque es la primera fusion de
-mesa de la campana en la que eso pasa: **10 entradas redirigidas, 2 duplicadas nuevas nombradas una a
-una y 0 auto-aristas**, los mismos nombres y los mismos campos que la ficha escribio el 12 ago.
-**NI UNA DIVERGENCIA QUE DECLARAR en la simulacion.**
-
-### 4.2 El reparto y sus cuatro perdidas
-
-**SIETE PIEZAS: tres viajan enteras, tres ya estaban dichas y UNA de `INCISO`.**
-
-- **LA PIEZA QUE LA FICHA MANDA PRESERVAR VIAJA ENTERA:** clasificar las respuestas del cliente
-  **desde amor total hasta indiferencia** (paso 3 del que muere), **verificada en el texto final**
-  (paso 9 del superviviente). **Y su paso gemelo viaja con ella**, que es lo que la hace utilizable:
-  revisar **evidencia real, no opiniones**, sobre el entusiasmo. El superviviente mira datos reales
-  en su paso 2, pero mira **como trabaja el cliente**, que es otro objeto.
-- **EL UNICO `INCISO` SE ADOSA PORQUE CABE LIMPIO:** el paso resultante es *Anota tu decision final:
-  cambias de rumbo (pivotas) o sigues adelante **hacia la validacion con clientes***, y el trozo se
-  **EXTRAJO VERBATIM** del paso 4 del que muere.
-- **LOS DOS `CUBIERTO` DE PASO VAN CON SU PERDIDA NOMBRADA Y CON EL MOTIVO DE POR QUE EL `INCISO` NO
-  CABE**, que es la mitad que el `D9` exige argumentar. **VAN MARCADOS DISCUTIBLES EN LA SECCION 6.**
-- **CUATRO PERDIDAS SELLADAS EN CAMPO PROPIO**, tres `DE PARAMETRO DE PASO` y una `DE CONDICIONES`.
-- **EL SUPERVIVIENTE QUEDA EN NUEVE PASOS Y DOS CONDICIONES**, y se dice en vez de callarlo: es
-  **candidato legitimo a la poda de la fase 04**, que es el limite que el acta 62 escribio para los
-  repartos anchos del `D5`.
-
-### 4.3 Las guardas, una por una
-
-| guarda | resultado |
-|---|---|
-| guarda 1, miembros vivos y nomina completa | **OK** |
-| guarda 1B, ningun absorbido es semilla ni extremo de puente | **OK** |
-| guarda 2, cobertura exacta de indices | **OK** |
-| guarda 3, cero repetidos literales en el resultado | **OK** |
-| guarda A, cero auto-aristas nuevas | **OK (0)** |
-| guarda B, cero duplicadas nuevas tras resolver | **OK (0)** |
-| guarda C, los cinco campos que la operacion no redacta | **5 de 5 intactos** |
-| guarda D, el absorbido conserva su texto INTACTO | **OK** |
-| `P.16`, duplicadas que la propia fusion fabrica | **2, limpiadas en el mismo commit**; verificacion de cero: **NINGUNA** |
-| re-anclar por resolutor | **nada que re-anclar** |
-| Gate 0 con el ciclo de tres | **OK** (71 etiquetas re-aplicadas, 6 assets mas manifest) |
-| motor / web / `tsc` | **25/25** ; **80 ficheros, 1.030 pasadas, 3 saltadas** ; **CERO lineas** |
-| verificacion propia, por camino propio | **TODAS EN VERDE** |
-
-**`P.16` CONTRA LA LETRA DE LA FICHA, Y MANDA `P.16`:** la ficha del 12 ago dice que las dos
-duplicadas quedan para `OP-S-12`; `P.16` (decision del fundador, 14 ago, **posterior**) dice que
-quien fabrica limpia en el mismo commit, y su punto 3 hace de `OP-S-12` una **verificacion de cero**.
-Es el carril que el acta 63 adjudico `A FAVOR` en su `D5`.
-
-**EL `diff` DE DUPLICADAS POR INSTRUMENTO**
-([`SALIDA_V64_DIFF_DUPLICADAS_OPM03II.txt`](SALIDA_V64_DIFF_DUPLICADAS_OPM03II.txt)):
-**CERO grupos fabricados** y **cero renombrados**. **Y DOS GRUPOS DESAPARECEN QUE NO SON LOS DOS QUE
-`P.16` LIMPIO, y eso se MIDIO en vez de explicarse** (comprobacion 7 de
-[`SALIDA_V64_VERIFICAR_OPM03II.txt`](SALIDA_V64_VERIFICAR_OPM03II.txt)): **los dos eran duplicadas
-historicas DENTRO de `pivotar_o_proceder`**, y **salen del censo porque el censo solo revisa nodos
-VIVOS** (3.272 antes, 3.271 despues). **No se han reparado: siguen enteras en su nodo**, con la
-contraprueba corrida. **Las dos que `P.16` si limpio nunca entraron en el censo** porque nacieron y
-murieron dentro de la misma corrida, **y por eso el `diff` da cero fabricadas**.
-
-### 4.4 **DOS COLISIONES DE CLASE FABRICADAS, PREDICHAS Y NO TOCADAS**
-
-**Esto es lo mas discutible de la vuelta y va con todo el detalle.**
-
-**PRIMERO, MI PROPIO ERROR DE PROCEDIMIENTO:** corri el censo de colisiones con `--esperadas 0`
-**sin haber medido esa cifra**. **La cuenta esperada salio de mi cabeza y no de un instrumento**, que
-es exactamente lo que la regla 1 prohibe, y el censo midio **2**. **La medi despues, como debia
-haberla medido antes**, con `scripts/loop/vuelta64_colisiones_opm03ii.py`
-([`SALIDA_V64_COLISIONES_OPM03II.txt`](SALIDA_V64_COLISIONES_OPM03II.txt)), simulando la fusion sobre
-el mapa de alias del **arbol de ANTES**:
+**MEDIDO SOBRE LOS 47 ACTOS** con `python scripts/loop/vuelta65_puentes_del_tramo.py`
+([`SALIDA_V65_PUENTES_TRAMO.txt`](SALIDA_V65_PUENTES_TRAMO.txt)), con los ids pasados por el resolutor
+(`P.1`), **cuya maquina se copia de `scripts/plan/aristas_duplicadas_tras_resolver.py` lineas 38 a 46
+para que dos instrumentos de la campana no resuelvan distinto en silencio**:
 
 | | |
 |---|---:|
-| colisiones **antes** de fundir | **0** |
-| colisiones **ESPERADAS**, simuladas sobre el arbol de antes | **2** |
-| colisiones **MEDIDAS** sobre el arbol de hoy | **2** |
-| **son LAS MISMAS dos** | **si**, y por eso **`CALZA`** |
+| actos mirados | **47** |
+| **actos CON al menos un nodo puente** | **9** (los actos **1, 10, 11, 17, 20, 21, 23, 24 y 27**) |
+| actos SIN ningun nodo puente | **38** |
+| actos con algun par SIN veredicto escrito | **47** |
 
-| par resuelto | puestos que chocan |
-|---|---|
-| `pivote_o_proceder` contra `pivote_startup` | **668** en `B` (`pivote_o_proceder` + `pivote_startup`) y **1312** en `D` (`pivotar_o_proceder` + `pivote_startup`) |
-| `pivote_o_proceder` contra `reunion_pivotar_o_perseverar` | **968** en `B` y **1305** en `D` |
-
-**NO SE TOCA NI UN VEREDICTO, Y SE DICE POR QUE, con la medicion delante:**
-
-1. **EL 668 ES DE LA MESA.** La ficha de `OP-M-03` lo nombra **literalmente** entre sus **siete
-   dudosos** (*puestos 668, 737, 771, 843, 957, 1298 y 753*) y su expediente del 12 ago **ya lo
-   posiciona**: *el 668 y el 737 se resuelven como PUERTA CONTRA ACTO CON ENLACE*. **El 1312 esta
-   nombrado entre sus TRES sanos.** Re-leerlos **seria ejecutar la adjudicacion de una mesa que no
-   se ha ejecutado**, que es lo que `AUDITOR.md` seccion 3 llama improvisacion.
-2. **`pivote_startup` ES MIEMBRO DE `OP-M-03-III`, PENDIENTE.**
-3. **NO SE RESUELVEN SOLAS, Y ESO TAMBIEN ESTA MEDIDO:** simulada la ejecucion de `OP-M-03-III` sobre
-   el arbol de hoy, **las colisiones pasan de DOS a TRES**, no a cero. **La deuda crece con cada
-   fusion de esa mesa**, y por eso no basta con esperar.
-4. **LO QUE SI ESTA VERDE:** las guardas por operacion que `AUDITOR.md` seccion 3 enumera
-   (simulacion previa, Gate 0 y suites, caso positivo, **cero duplicadas o auto-aristas tras
-   resolver**) estan **TODAS en verde**. El censo de colisiones es una guarda que el encargo anade,
-   y **hoy CALZA**: esperadas 2, medidas 2, las mismas.
-
-**VAN A LA MESA `OP-M-03` CON SU MEDICION, y quedan registradas en `03_FUSIONES.md`.** **Marcado
-discutible en la seccion 6 y con pregunta abierta en la seccion 8.**
-
-### 4.5 **EL CASO POSITIVO DE LA VUELTA 63 CADUCO EN ESTA OPERACION**
-
-**Y caduco en su propia carne, que es lo que lo hace util.** Su regla de trabajo (acta 54, pregunta
-7) manda fabricar el caso positivo **sobre un acto que la vuelta no toque, para que no caduque**; el
-ancestro cumplio la regla en su vuelta y eligio **`OP-M-03-II`**, que es **justo lo que ESTA vuelta
-ejecuta**. **Re-corrido hoy da `ROJO` en CUATRO de sus nueve pruebas** (la 3, la 4, la 5 y la 6), y
-**no porque las guardas se hayan roto**: `pivotar_o_proceder` ya esta deprecado, **el generador cae
-antes en la guarda de miembro vivo y NUNCA llega** a las de cobertura, `INCISO` y perdida, que
-quedarian **dadas por no mordidas**. Su `ROJO` va committeado como contraste
-([`SALIDA_V64_CASO_POSITIVO_MESA_ANCESTRO.txt`](SALIDA_V64_CASO_POSITIVO_MESA_ANCESTRO.txt)).
-
-**LA LECCION MEDIDA: LA REGLA NO BASTA SI EL SUJETO ESTA TALLADO EN EL FICHERO.** El sujeto de una
-vuelta es el ejecutado de la siguiente. **Nace `scripts/loop/caso_positivo_de_fusion_de_mesa.py`, de
-NOMBRE ESTABLE y sucesor declarado**, con tres cambios y ninguno de aritmetica: `--id-op`
-**REQUERIDO**, las marcas de mentira **armadas de la forma real de los nodos** en vez de talladas, y
-**UNA GUARDA NUEVA** que cae en `ROJO` si el sujeto esta consumido **en vez de dar cuatro guardas por
-no mordidas**. **El ancestro queda entero y re-corrible.**
-
-**MEDIDO:** **LAS NUEVE MUERDEN** sobre `OP-M-02-ACCLIMATE`
-([`SALIDA_V64_CASO_POSITIVO_MESA.txt`](SALIDA_V64_CASO_POSITIVO_MESA.txt)) y **la guarda nueva
-muerde** sobre `OP-M-03-II`
-([`SALIDA_V64_CASO_POSITIVO_MESA_CONSUMIDO.txt`](SALIDA_V64_CASO_POSITIVO_MESA_CONSUMIDO.txt)).
-**El heredado de tramos re-corrido: LAS SEIS MUERDEN.**
+**ESTO NO ES UN HALLAZGO SOBRE EL ACTO 1: ES SOBRE EL TRAMO ENTERO.** Nueve de los cuarenta y siete
+actos que quedan de `OP-U-02` **no se pueden fundir enteros mientras su triangulo no se cierre**, y
+eso cambia la forma de lo que queda de la operacion. **Se publica ahora y no cuando llegue su turno.**
 
 ---
 
-## 5. TAREA 2.b: **EL TRAMO UNICO DE `OP-U-02`, FIJADO SIN FUNDIR NI UN ACTO**
+## 5. TAREA 2: **EL LOTE A, DECLARADO AL ABRIRLO Y ENTREGADO ENTERO**
 
-Nace `scripts/loop/fijar_tramo_de_opu02.py`, de **NOMBRE ESTABLE** y **HERMANO, no sucesor**, de
-`abrir_tramo_de_opu01.py`. **La diferencia es de forma del tramo y no de aritmetica:** aquel corta
-cincuenta de una nomina que no cabe entera y por eso necesita dos lecturas, guarda de prefijo y
-guarda de solape; **aqui no hay nada que cortar**, porque el acta 63 (pregunta 5) adjudico que el
-tramo es **prefijo con tope y no minimo** y **los 47 caben bajo el tope de cincuenta**. **TRAMO UNICO
-Y FINAL POR AGOTAMIENTO, declarado al abrirlo.**
+**EL LOTE ES PREFIJO SIN SALTOS del `orden_universo`: LOS ACTOS 1 Y 3**, que son los dos primeros del
+tramo fijado. **Los dos CIERRAN ENTEROS**: el 1 `DECLARADO Y NO FUNDIDO` y el 3 **FUNDIDO**.
 
-**LAS CINCO GUARDAS, contra el grafo de HOY**
-([`SALIDA_V64_TRAMO_OPU02.txt`](SALIDA_V64_TRAMO_OPU02.txt)):
+### 5.1 **EL ACTO 1: `DECLARADO Y NO FUNDIDO` POR `P.10`**
+
+| | |
+|---|---:|
+| miembros | **15**, y **ninguno se toca** |
+| combinaciones internas | 105 |
+| pares `A` internos | 20 |
+| **pares `D` internos** | **10**, leidos y declarados DISTINTOS |
+| pares sin veredicto escrito | 75 |
+| **NODOS PUENTE** | **3** |
+| **TRIANGULOS PUENTE** | **6** |
+
+`errores_como_consecuencia` hace de puente en **cuatro**, `human_error_como_sintoma` en **uno** y
+`vieja_vision_vs_nueva_vision_seguridad` en **uno**. **Fundir la componente entera desmentiria DIEZ
+lecturas que ya estan escritas.**
+
+**LAS TRES SALIDAS DE `P.10`, RECORRIDAS UNA A UNA en vez de elegir la comoda:** *leer el par que
+falta* es la unica que resuelve de verdad **y quedan 75 combinaciones sin veredicto**, que es trabajo
+de cribado y no de esta operacion; *releer contra el superviviente* **no aplica**, porque no hay
+superviviente elegido ni nodo que vaya a cambiar; *fundir solo el subconjunto CERRADO y enlazar el
+resto* **pide que TODAS las lecturas esten hechas, y no lo estan**.
+
+> **Y HAY UNA SEGUNDA RAZON INDEPENDIENTE, TAMBIEN MEDIDA, QUE SOLA BASTARIA: DOS de los quince son
+> PUERTA** con la marca *TIENE QUE SOBREVIVIR* (`enfoque_situacional_vs_personal` y
+> `fallas_activas_condiciones_latentes`, leidas de la salida del dossier). **La GUARDA 1B no deja
+> absorber ninguna de las dos**, y una fusion a un solo superviviente tendria que absorber una.
+
+### 5.2 **EL ACTO 3: LA PRIMERA FUSION DE MAS DE DOS MIEMBROS DE LA CAMPANA**
+
+**LA PREGUNTA DE `P.5` CONTESTADA CON MEDICION:** los **diez** miembros del **mismo libro** (*Out of
+the Crisis*, Deming), **14 pares internos con veredicto y TODOS de clase `A`**, **CERO pares `D`
+internos** y **CERO nodos puente**. **UNA SOLA FAMILIA.**
+
+**SOBREVIVE `causas_comunes_vs_especiales` POR CONTENIDO, con las TRES varas por forma a su lado y
+ninguna en contra** (`TODAS DE ACUERDO`, que funde a su lado): **6 pasos contra un maximo de 5**, **3
+condiciones contra 2** y **cableado 14 contra un maximo de 9**. **Ni el rotulo solo ni la cantidad
+deciden**: decide que es el unico del acto que trae el procedimiento entero de punta a punta.
+**NINGUN miembro es puerta**, medido al sellar.
+
+| | |
+|---|---:|
+| absorbidos | **9** |
+| piezas repartidas | **58** |
+| **enteras (`APPEND`)** | **16** |
+| **ya dichas (`CUBIERTO`)** | **39** |
+| **de `INCISO`** | **3** |
+| **perdidas selladas en campo propio** | **13** (10 `DE PARAMETRO DE PASO`, 3 `DE CONDICIONES`) |
+
+**LAS TRES COSAS QUE EL REPARTO DICE EN VEZ DE CALLAR, cada una con letra citable:**
+
+1. **POR QUE HAY TRES `INCISO` Y NO SEIS.** El paso 4 del superviviente recibe **UN** inciso y **NO**
+   el segundo que pedia `trampa_del_promedio_como_estandar`, **porque NO SE APILA MAS DE UN `INCISO`
+   SOBRE EL MISMO PASO** (acta 64, pregunta 5, **registrada en esta misma vuelta**). Esa pieza va
+   `CUBIERTO` **con la perdida nombrada y enrutada**, y el motivo esta escrito dentro de la perdida.
+2. **LAS ADVERTENCIAS NO SON PASOS** (`P.11`): *evitar sanciones*, *evitar conclusiones apresuradas*,
+   *evitar tratar cada defecto como causa especial* y *dejar de usar el promedio como linea de corte*
+   **califican el acto y no lo constituyen**, asi que van `CUBIERTO` **con su perdida nombrada** en
+   vez de `APPEND`.
+3. **LOS SOLAPES VAN DECLARADOS** para la poda de la fase 04, que es el carril escrito de la pieza
+   mitad propia y mitad ya dicha.
+
+**EL SUPERVIVIENTE PASA DE 6 A 15 PASOS Y DE 3 A 10 CONDICIONES**, y esa cifra se publica **porque es
+la mas alta de la campana**: es consecuencia de fundir DIEZ nodos, no de repartir mal. **Va marcada
+discutible.**
+
+### 5.3 **LAS GUARDAS, UNA POR UNA**
 
 | guarda | resultado |
 |---|---|
-| **1.** identidad de la nomina contra las componentes `ABIERTAS` de hoy, **por conjunto de miembros resueltos (`P.1`)**, no por posicion ni por tamano | **53 de 53**, y **CERO componentes abiertas sin fila** |
-| **2.** ningun miembro que abre esta deprecado hoy | **0 sobre 201 nodos** |
-| **3.** los 6 que quedan fuera **siguen con dueno de mesa o destejido, RE-MEDIDO hoy** y no heredado del fichero | **6 de 6**, y los duenos calzan uno a uno con lo que la nomina decia |
-| **4.** los que abren caben bajo el tope de 50 | **47, caben** |
-| **5.** la suma cierra | **47 mas 6 igual a 53** |
+| **cuenta esperada de colisiones, medida ANTES de fundir** | linea base **2 COMPROBADA, no supuesta**; **CERO nuevas** y **CERO idas** ([`SALIDA_V65_COLISIONES_ESPERADAS.txt`](SALIDA_V65_COLISIONES_ESPERADAS.txt)) |
+| **censo de cierre con la esperada MEDIDA** | **ESPERADA 2 \| MEDIDA 2 \| CALZA: SI** |
+| **`P.16`, duplicadas que la propia fusion fabrica** | **6**, limpiadas **en el mismo commit** |
+| **`P.16` por instrumento**, grupos FABRICADOS de verdad | **0**, y 4 grupos que DESAPARECEN ([`SALIDA_V65_DIFF_DUPLICADAS.txt`](SALIDA_V65_DIFF_DUPLICADAS.txt)) |
+| **guarda 1**, miembros vivos y nomina completa | **OK** |
+| **guarda 1B**, ningun absorbido es semilla ni extremo de puente | **OK** |
+| **guarda 2**, cobertura exacta de indices | **OK** |
+| **guarda 3**, cero repetidos literales en el resultado | **OK** |
+| **guarda A**, cero auto-aristas nuevas | **OK (0)** |
+| **guarda B**, cero duplicadas nuevas tras resolver | **OK (0)** |
+| **guarda C**, los cinco campos que la operacion NO redacta | **5 de 5** |
+| **guarda D**, los 9 absorbidos con su texto INTACTO | **OK** |
+| **reanclar** | *nada que re-anclar: ninguna referencia apunta a un absorbido* |
+| **Gate 0 con su ciclo de tres** | **OK** (71 etiquetas, 6 assets mas manifest) |
+| **motor** | **25/25** |
+| **web** | **80 ficheros, 1.030 pasadas, 3 saltadas** |
+| **`tsc`** | **CERO lineas** |
+| **caso positivo de mesa** (`--id-op OP-M-02-ACCLIMATE`, sujeto que la vuelta NO toca) | **LAS NUEVE MUERDEN** |
+| **la guarda NUEVA de sujeto consumido** (sobre `OP-M-03-II`) | **MUERDE, `exit 1`** |
+| **caso positivo heredado de tramos** | **LAS SEIS MUERDEN** |
 
-**FIJADO** en [`TRAMO_UNICO_OPU02_V64.jsonl`](TRAMO_UNICO_OPU02_V64.jsonl), **47 filas en su
-`orden_universo`**, **201 nodos**, por tamano de acto **3: 23 | 4: 10 | 5: 7 | 6: 4 | 8: 1 | 10: 1 |
-15: 1**. Los 6 de fuera suman **39 nodos**. **Calza al digito con el 47/201 y el 6/39 que el acta 63
-midio por corrida propia.**
+**EL REGISTRO EN `03_FUSIONES.md`:** **+230 lineas y CERO borradas**, bajo su cabecera de tramo,
+**sin una sola tabla tecleada** (la del acto declarado, la de piezas por absorbido y la del reparto
+pieza a pieza **se generan del plan sellado**; la de perdidas **se recorta entera** de la salida del
+tallador; las celdas de guardas y colisiones **se extraen por aguja** de las salidas). Guarda de citas
+**5 de 5** antes y despues, y **guarda de idempotencia MORDIENDO**.
 
-**EL FICHERO NO SE LLAMA `TRAMO<N>_V<vuelta>.jsonl` A PROPOSITO, y se dice:** ese es el patron con el
-que `abrir_tramo_de_opu01.py` **descubre** los tramos ya fijados de `OP-U-01` (su `RE_FIJADO`), y
-meterle dentro un tramo de **otra operacion** le movia la cuenta del siguiente tramo **sin que nadie
-lo notara**. **Fallar ruidoso empieza por no fabricar la trampa.**
-
-**LO QUE ESTA TAREA NO HACE:** no elige superviviente, no reparte piezas, no declara ningun acto y
-**no funde nada**. **Su primer lote es de la vuelta que el orden alcance, no de esta.**
+**NO SE FUNDIO NINGUN ACTO CON DUENO, no se toco la mesa `OP-M-03` ni sus colisiones, y las cinco
+fichas `OP-M-02` consumidas no se ejecutaron.**
 
 ---
 
 ## 6. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
 
-- **`D1`, SELLAR EL `D10` EN VEZ DE DEJARLO CUBIERTO CON SILENCIO.** Acto 1 de
-  `PLAN_V63_OPM02PROG.json`, miembros `ocho_fases_experiencia_cliente` y
-  `fases_de_retencion_de_clientes`. **Corrijo un plan ya sellado, ejecutado y auditado.** Lo que lo
-  sostiene: la vara del acta 55 pregunta 5 leida entera no contempla el `CUBIERTO` con silencio, y la
-  misma especie se sello dos veces el mismo dia. Lo que lo hace discutible: **el auditor podia haber
-  querido que un plan ejecutado no se re-abra ni para anadir**, y la asimetria podia haberse
-  registrado sin tocar el plan.
-- **`D2`, MARCAR `CUBIERTO` CON PERDIDA NOMBRADA EN EL PASO 1 DE `pivotar_o_proceder` PUDIENDO PONER
-  UN `INCISO`.** Acto 1 de `PLAN_V64_OPM03II.json`, miembros `pivote_o_proceder` y
-  `pivotar_o_proceder`. **La guarda de la juntura NO lo habria rechazado** (ese paso no cierra en
-  punto); **lo rechazo yo, por legibilidad del paso resultante**, que es el criterio escrito de la
-  politica pero lo aplique **con mi ojo**. El paso resultante seria *...y si tienes inversores,
-  sumalos tambien, a evaluar con calma en que punto estas*, con el inciso colgando de **sumalos** y
-  no de **sientate**. **Es exactamente el limite que el acta 62 le puso al `D9`.**
-- **`D3`, MARCAR `CUBIERTO` CON PERDIDA NOMBRADA EN EL PASO 5 POR NO APILAR UN SEGUNDO `INCISO`.**
-  Mismo acto y mismos miembros. El paso 7 **ya recibe** el `INCISO` del paso 4, y apilarle *los
-  criterios que usaste para tomarla* lo dejaria diciendo que sigues adelante hacia la validacion
-  **y los criterios**. **Discutible porque el instrumento no prohibe dos incisos al mismo paso: lo
-  decido yo.**
-- **`D4`, EJECUTAR DEJANDO DOS COLISIONES DE CLASE VIVAS.** La celda de la cabecera pasa de 0 a 2 y
-  **la publico en rojo**. Lo que lo sostiene: estan **predichas y medidas** (esperadas 2, medidas 2,
-  las mismas), los puestos son **de la mesa `OP-M-03`** por su propia ficha, y las guardas que
-  `AUDITOR.md` enumera estan verdes. Lo que lo hace discutible: **la campana venia dejando el censo
-  en cero tras cada operacion**, y esta lo deja en dos.
-- **`D5`, MEDIR LA CUENTA ESPERADA DE COLISIONES DESPUES DE FUNDIR.** La corri con `--esperadas 0`
-  adivinado. **La medicion posterior sale identica a la que habria salido antes** (la simulacion se
-  hace sobre el arbol de `4d16c100`, que es el de antes de fundir), **pero el orden fue el
-  equivocado** y va marcado como lo que es.
-- **`D6`, ESTRENAR DOS INSTRUMENTOS DE NOMBRE ESTABLE Y USARLOS EL MISMO DIA**
-  (`caso_positivo_de_fusion_de_mesa.py` y `fijar_tramo_de_opu02.py`). Es el carril del `D3` del acta
-  63, **con la diferencia de que el primero HACE CRECER UNA GUARDA** (la de sujeto consumido). Lo que
-  lo sostiene: la guarda nueva **muerde en la corrida de hoy** sobre el sujeto consumido, el ancestro
-  queda entero y su `ROJO` va committeado.
-- **`D7`, NO ESTRENAR CLAVE NUEVA EN `OPERACIONES.jsonl` PARA LAS CONSUMIDAS.** Meti la correccion en
-  el campo `nota`. **Discutible al reves que los demas**: se puede sostener que una ficha consumida
-  merece un campo propio y que no darselo la deja pareciendo ejecutable.
-- **`D8`, DEJAR LAS CINCO CONSUMIDAS EN ESTADO `LISTA`.** Consecuencia del `D7`: la celda de la
-  cabecera sigue diciendo **71, todas `LISTA`**, y **cinco de esas 71 no se pueden ejecutar**. **No
-  lo cambio porque el encargo no lo pide y el esquema es pendiente de doctrina**, pero la cifra
-  publicada dice algo que ya no es del todo cierto y **prefiero decirlo yo antes que lo diga el
-  auditor**.
-- **`D9`, LA VARA DE CABLEADO QUE PUBLICO NO ES LA QUE YO CONTARIA.** Publico **10 contra 5** (la del
-  instrumento) y mi cuenta cruda da **12 contra 6**. Elegi la del instrumento **porque es la que la
-  ficha uso**, no porque sea mejor.
+**`D1`. REGISTRAR OCHO `A FAVOR` Y NO NUEVE.** El mensaje del commit del acta 64 y el encargo dicen
+NUEVE; el texto del acta, linea **16876**, abre el `D5` llamandolo caida de procedimiento. **Elegi la
+vara del TEXTO y declare la divergencia sin tachar el resumen**, en vez de copiar la cifra del
+encargo. Es discutible porque **un encargo tambien es una instruccion**, no solo un resumen.
 
-**PROMESAS DE MARCADO, COTEJADAS POR MAQUINA ANTES DE SELLAR ESTE REPORTE:** ver la seccion 7.6.
-**Y una promesa que NO se re-reclama aqui, dicha con su motivo en vez de callada:**
-`PLAN_V63_OPM03I.json` promete marcado **en el reporte de SU vuelta**, la 63, donde se cumplio y el
-auditor lo adjudico `A FAVOR` (`D4`). **No se vuelve a marcar en este reporte**, y por eso ese plan
-no entra en la corrida del comprobador.
+**`D2`. CORREGIR DOS INSTRUMENTOS DE NOMBRE ESTABLE EN VEZ DE ESCRIBIR SUCESORES.** El encargo decia
+`generar_plan_del_lote.py con --operacion OP-U-02` con todas sus letras, y ese fichero no podia
+correr. **Elegi corregirlo en el sitio por correccion declarada, que es lo que la vuelta 63 hizo con
+este mismo fichero, en vez de escribir un sucesor de nombre nuevo.** Es discutible: la campana usa
+las dos vias y la de sucesor deja el ancestro re-corrible sin tocar.
+
+**`D3`. LA CAPACIDAD N-ARIA DEL GENERADOR ES UNA GUARDA QUE CRECE Y SE ESTRENA EL MISMO DIA.** El
+cambio 7 anade una guarda nueva (*un acto de mas de dos SIN reparto es `ROJO`*) y se usa en la misma
+vuelta que nace. **Va enumerada en el docstring y marcada aqui, que son las dos condiciones del acta
+61**, pero el estreno del mismo dia es el `D6` del acta 64 otra vez.
+
+**`D3.b`. EL `ACTO 3` ES LA PRIMERA FUSION DE MAS DE DOS MIEMBROS DE LA CAMPANA, Y SU MOTIVO SELLADO
+LO PROMETIO AQUI.** El acto **3** del tramo unico funde **diez** nodos a
+`causas_comunes_vs_especiales`, absorbiendo `distincion_causas_comunes_especiales`,
+`distincion_causas_comunes_especiales_2`, `distincion_causas_comunes_especiales_incidentes`,
+`distincion_causas_especiales_comunes`, `identificacion_causa_raiz_no_culpa_individual`,
+`moral_y_sistema_no_individuo`, `politica_no_culpar_trabajador`, `trampa_del_promedio_como_estandar` y
+`variacion_del_sistema_vs_individuo`. **Es discutible por si mismo, y no solo por el instrumento que
+lo permite:** hasta hoy la campana solo habia fundido pares, **y una fusion de diez es una decision
+sobre diez nodos tomada de una vez**, con `P.5` contestada por medicion (cero `D` internos, cero
+puentes, misma fuente) pero **sin ningun precedente de tamano al que compararla**. Lo marco entero, y
+el reparto pieza a pieza esta en `03_FUSIONES.md` para que se pueda leer contra los textos.
+
+**`D4`. UN TRAMO SIN NUMERO NO SE NUMERA.** El rotulo del tramo se lee del campo `tramo` del propio
+fichero (`UNICO Y FINAL POR AGOTAMIENTO`) en vez de inventarle un ordinal. Discutible porque **el
+titulo del generador ahora publica una frase donde antes publicaba un digito**.
+
+**`D5`. DECLARAR EL ACTO 1 POR `P.10` EN VEZ DE INTENTAR CERRAR SUS TRIANGULOS.** Elegi **no leer los
+75 pares** (es trabajo de cribado y la campana esta en fase de ejecucion, regla 4) y **no fundir el
+subconjunto cerrado** (`P.10` lo condiciona a que todas las lecturas esten hechas). **El resultado es
+que el primer acto del prefijo cierra sin fundir nada.**
+
+**`D6`. LEER UN VEREDICTO AUSENTE COMO *NO CANDIDATO* Y NO COMO *PAR SIN LEER*.** Si un veredicto
+ausente contara como *sin leer* a efectos de `P.10`, **NINGUNO de los 47 actos del tramo podria
+fundirse** y `OP-U-02` quedaria entera bloqueada. **Lo mejor sostenido, y es lo que aplique: el
+disparador de `P.10` es el TRIANGULO `A` mas `A` mas `D`, que es mecanico y esta medido.** Va tambien
+como **PENDIENTE DE DOCTRINA** en la seccion 8.
+
+**`D7`. UN LOTE DE DOS ACTOS, Y EL PRIMERO SIN FUSION.** Declare el lote pequeno porque la vuelta se
+gasto en el paso previo (los dos instrumentos) y en la lectura del tramo. **Entregue lo declarado**,
+pero un lote con UNA sola fusion es un lote corto y se dice.
+
+**`D8`. `CUBIERTO` CON PERDIDA EN LAS CUATRO ADVERTENCIAS, PUDIENDO SER `APPEND`.** `P.11` dice que
+una advertencia es linea y no procedimiento, **pero cuatro advertencias con perdida sellada tambien
+son cuatro perdidas**. Elegi la vara escrita sobre el bulto.
+
+**`D9`. DIECISEIS `APPEND` QUE LLEVAN EL SUPERVIVIENTE A 15 PASOS Y 10 CONDICIONES.** Es el nodo mas
+largo que la campana ha fabricado. **La alternativa era `CUBIERTO` con perdida en varios de ellos**,
+que habria dado un nodo mas corto y un catalogo mas pobre. Elegi que la fase 04 pode.
+
+**`D10`. TRES PERDIDAS SELLADAS *CON ATENUANTE DECLARADO* cuyo contenido SI llega por el `APPEND` de
+un hermano.** Sellar una perdida que quiza no se pierde es **sobre-sellar**. Lo hice por el carril del
+`D8` del acta 63 (*una perdida con atenuante declarado es mas auditable que un silencio*), pero
+**inflar la cuenta de perdidas tiene su propio costo** y por eso va marcado.
+
+**`D11`. EL `INCISO` AL PASO 6, el de la proporcion estimada.** Es el menos limpio de los tres: el
+inciso se adosa al final de un paso que ya cierra en *para cada tipo de causa*. **Lo juzgue legible;
+es el que mas facilmente cae.**
+
+**`D12`. ENSANCHAR EL DOSSIER PARA QUE UN ACTO DE MAS DE DOS PUBLIQUE TODOS SUS PARES INTERNOS.** No
+estaba encargado. Lo hice porque **el propio docstring del dossier ya lo prometia** (*la razon entera
+de cada par interno pegada al lado*) y sin eso `P.5` no se puede leer en un acto de quince.
 
 ---
 
-## 7. LOS `ROJO` PROPIOS Y LA CAIDA DE REPORTE, CON LAS DOS MITADES
+## 7. LAS AVERIAS PROPIAS, LAS CINCO, TODAS CAZADAS ANTES DE UNA CIFRA PUBLICADA
 
-### 7.1 **CAIDA DE REPORTE MIA, CON NOMBRE**
+**CERO de ellas llego a una cifra publicada ni a un dato movido.** Se cuentan enteras porque callarlas
+seria la especie que la casa persigue.
 
-**El mensaje del commit `6e1784c0` dice:** *Barrido tras la TAREA 1: 417 ficheros, `ROJO` 32 sin
-mover, y mis cuatro scripts nuevos sin un solo hallazgo.* **LAS TRES CELDAS ESTABAN MAL.** La corrida
-de ese momento decia **415 ficheros, `ROJO` 33 y `AMBAR` 2**, y **los tres hallazgos eran MIOS.**
+### 7.1 **EL CENSO DE AUTO-PARES QUE NO ERA COPIA**
 
-**LA ESPECIE, dicha sin adorno:** corri el barrido, mire la cola de la salida **y escribi la cifra de
-la corrida anterior**. Es la especie que la regla 1 persigue (*medir temprano y publicar tarde sin
-remedir*), **y no la disculpa que la corrida estuviera hecha**: leerla y no leerla es lo mismo si lo
-que se publica sale de la memoria. **El texto viejo no se borra: sigue entero en el mensaje de aquel
-commit.**
+La primera version de `vuelta65_colisiones_esperadas.py` **conto los auto-pares por VEREDICTO y dio
+278**, donde el censo de la casa los cuenta **por GRUPO RESUELTO DISTINTO y da 256**, que es la cifra
+publicada en la cabecera de la vuelta 64. **Dos instrumentos de la campana contando distinto en
+silencio es justo lo que la regla 2 persigue.** Re-copie la aritmetica del ancestro (`lineas 56 a 72`)
+y **la averia queda escrita en el docstring del instrumento**. **La cifra mala no se publico**: la
+cace comparandola contra la cabecera de la vuelta anterior antes de escribir nada.
 
-### 7.2 **`ROJO` PROPIO 1: ROTULO HUERFANO**
+### 7.2 **EL CASO POSITIVO DEL GENERADOR MORDIO SOBRE MI PROPIA CORRECCION**
 
-`vuelta64_registrar_acta63.py`, linea 23. Copie el `ROTULO` de `PROCEDENCIA` del registrador de la
-vuelta 63 **sin comprobar que aqui cubriera algo**, y no cubria nada: el barrido clasifica el titulo
-de este fichero como `CENSO` (sello fijo) y no como `AMBAR`. **RETIRADO.** Los **dos `AMBAR`** de
-`vuelta64_puesto2.py` (`VUELTA 47` en cabecera y en un `print`) **si son procedencia de verdad** (el
-titulo nombra **la vara del orden de la fase 03**, adjudicada en la 47 y no en esta) y quedan
-**declarados con un `ROTULO` cotejado por maquina** contra `03_FUSIONES.md`.
+Al mover el cuerpo que marca pasos y condiciones dentro del bucle por absorbido, **el bloque que
+asigna las marcas quedo dentro del bucle de las perdidas**, que para el fixture estaba vacio: **el
+plan salia con `pasos {}`**. **Lo cazo la mitad 1 del caso positivo antes de sellar un solo plan
+real**, comparando ancestro contra corregido. Queda dicho en el docstring del generador.
 
-### 7.3 **`ROJO` PROPIO 2: EL INSTRUMENTO SE CONTABA A SI MISMO**
+### 7.3 **CORRI `run_phase1` UNA CUARTA VEZ Y REVERTI LA CURADURIA**
 
-Al adosar el registro de la TAREA 1.a, **la tabla de las cinco consumidas quedo dentro de
-`03_FUSIONES.md`**, y `vuelta64_consumidas.py` volvio a encontrar el par de `MEDIOS` y el de `ADMIT`
-**en su propia tabla**: **2 sitios donde la correccion necesita 1**, y el instrumento cayo en `ROJO`
-al re-correrlo. **La guarda mordio, que es lo que tenia que pasar.** **ARREGLADO SIN ESCONDER NADA:**
-el sitio que vale es el que vive **bajo una cabecera de tramo de `OP-U-01`**, y los demas se
-**DECLARAN** en una linea propia. **La tabla publicada no cambia ni una celda.**
+El ciclo es de **TRES** y el orden lo dice el propio aviso de `run_phase1`: **recompilar**,
+`etiquetas_de_cara.py --aplicar` y `sync_assets_web.py`. **Corri `run_phase1` otra vez despues del
+sync**, que **recompila y revierte**, y **la suite web cayo con 6 fallos de etiquetas**. **La caza fue
+la suite, no mi ojo**, y eso tambien se dice. Rehecho en el orden debido: 71 etiquetas en los dos
+grafos y las tres suites en verde.
 
-### 7.4 **UN TERCER `ROJO` QUE SE ARREGLO ANTES DE ESCRIBIR NADA**
+### 7.4 **ELEGI MAL LA VARA DEL PRIMER CASO POSITIVO**
 
-`vuelta64_consumidas.py` buscaba el id **como subcadena suelta** y daba por bueno un sitio falso para
-`OP-M-02-ACTIVATE` (**la linea 2112**, donde `fase_activate` es subcadena de
-`seis_herramientas_comunicacion_fase_activate`). **Corregido a buscar el id entre comillas inversas
-ANTES de escribir la correccion**, y con la vara estrecha `ACTIVATE` pasa de 1 a 0 rastros sueltos.
-**Acertar por casualidad no es acertar.**
+Mi primera version comparaba el generador corregido **contra los planes y el dossier SELLADOS de las
+vueltas 61 y 62**, y dio **ROJO: 808 lineas distintas**. **La causa no era la correccion**: los nodos
+de aquel tramo **se fundieron en la vuelta 62 y hoy estan deprecados**. Una comparacion contra una
+salida sellada **mide el movimiento del arbol, no el del cambio**. La vara buena (ancestro contra
+corregido, los dos hoy) **queda escrita en el docstring del caso positivo junto con el motivo del
+descarte**.
 
-### 7.5 **Y UN `ROJO` DE MI PROPIO VERIFICADOR, cazado antes de publicar**
+### 7.5 **UNA CITA DE LINEA MAL CALCULADA, CAZADA POR SU GUARDA**
 
-`_v64_verificar_opm03ii.py` dio `ROJO` en su comprobacion 2 diciendo que `merged_originals` no
-cargaba el id que muere. **La averia era mia:** **ese campo NO tiene una sola forma en el catalogo**.
-En `pivotar_o_perseverar` (vuelta 63) es **lista de cadenas**; aqui es **lista de diccionarios** con
-`node_id`, `titulo` y `fuente`. **El verificador lee ahora las dos formas, imprime cual es, y cae en
-`ROJO` si un nodo las MEZCLA.** **Queda dicho como hallazgo de esquema.**
+En `vuelta65_registro_tramo.py` cite la seccion del acta 64 en la linea **3729** cuando esta en la
+**3613**. **La guarda de citas la caza y NO escribio nada** (`MAL (FUERA DE RANGO)`). Es exactamente
+para lo que la guarda existe.
 
 ### 7.6 **LAS PROMESAS DE MARCADO, POR MAQUINA**
 
-**MEDIDO EN ESTA VUELTA:** `python scripts/loop/comprobar_promesas_de_marcado.py --reporte
-docs/loop/REPORTE.md --plan docs/loop/PLAN_V64_OPM03II.json --plan docs/loop/PLAN_V63_OPM02PROG.json`
-da **2 promesas, 2 CUMPLIDAS, 0 INCUMPLIDAS**
-([`SALIDA_V64_PROMESAS_CUMPLIDAS.txt`](SALIDA_V64_PROMESAS_CUMPLIDAS.txt)).
-
-**Y LA PRIMERA CORRIDA DIO UNA, NO DOS, Y ESO ES UN HALLAZGO QUE VA DICHO.** El comprobador busca la
-frase **`VA MARCADO COMO DISCUTIBLE`, en singular**, y la nota del reparto de `PLAN_V64_OPM03II.json`
-la habia escrito **en plural** (*LAS DOS VAN MARCADAS COMO DISCUTIBLES*). **La maquina no la vio.**
-La regla que ese instrumento existe para volver mecanica **se estaba cumpliendo solo por atencion**,
-que es exactamente lo que el acta 62 dejo dicho que no basta.
-
-**COMO SE ARREGLA, y las dos mitades:** se anade al plan **la frase en la forma que la maquina lee**,
-por **correccion declarada**, **sin quitar la otra y sin tocar ni una marca, ni una perdida, ni el
-motivo** (comprobado tras escribir: las 7 marcas identicas, las 4 perdidas intactas, el motivo
-identico y el texto viejo dentro). **Y LA ESTRECHEZ DE LA AGUJA NO LA ARREGLO YO:** tocar un
-instrumento de **nombre estable** al cierre de la vuelta, y encima **uno que se coteja contra
-reportes viejos**, es lo que se trae al auditor. **Va como pregunta en la seccion 8.**
+**MEDIDO EN ESTA VUELTA** con el instrumento **ya ensanchado**:
+`python scripts/loop/comprobar_promesas_de_marcado.py --reporte docs/loop/REPORTE.md --plan
+docs/loop/PLAN_V65_OPU02_LOTE_A.json`
+([`SALIDA_V65_PROMESAS_CUMPLIDAS.txt`](SALIDA_V65_PROMESAS_CUMPLIDAS.txt)).
 
 ---
 
 ## 8. PENDIENTES DE DOCTRINA Y PREGUNTAS
 
-1. **PENDIENTE DE DOCTRINA (heredado y engordado): EL `INCISO` DE CONDICIONES NO EXISTE.** Esta
-   vuelta anade **DOS** perdidas `DE CONDICIONES` mas por esa causa (la del `D10` y la de la
-   condicion 1 de `pivotar_o_proceder`). **Es el costo medido de que ese instrumento no exista.**
-2. **PENDIENTE DE DOCTRINA (heredado): EL ESQUEMA DE `OPERACIONES.jsonl`.** Ver `D7` y `D8`.
-3. **PREGUNTA, y es la que mas me importa: QUIEN RESUELVE UNA COLISION DE CLASE CUYOS PUESTOS SON DE
-   UNA MESA QUE NO SE HA EJECUTADO?** El carril general de colisiones (registrado en
-   `03_FUSIONES.md`, linea **1377**) reparte en **volteo por maquina** (una `A` arrastrada contra un
-   directo `D`) y **relectura en el mismo acto**. **Ninguna de las dos formas cubre este caso**: los
-   cuatro puestos son `B` contra `D`, **el 668 esta nombrado literalmente entre los siete dudosos de
-   `OP-M-03`** y su expediente **ya lo posiciona**, y `pivote_startup` es miembro de `OP-M-03-III`,
-   pendiente. **No lo toco, y lo traigo.** Y con el una segunda mitad medida: **la deuda CRECE**,
-   porque simulada `OP-M-03-III` las colisiones pasan de **2 a 3**.
-4. **PREGUNTA: LAS FUSIONES DE MESA DEBEN CORRER ANTES QUE SUS PROPIAS MESAS?** Lo de arriba tiene
-   una lectura mas ancha: `OP-M-03-I`, `OP-M-03-II` y `OP-M-03-III` son **fusiones que la mesa
-   `OP-M-03` adjudico**, y **la mesa como tal no se ha ejecutado**. **No propongo cambiar el orden**
-   (lo fija el `00_INDICE` y el campo `orden`), pero **queda dicho** que ejecutar las hijas antes que
-   la madre es lo que fabrica estas colisiones.
-5. **PREGUNTA: SE PUEDE APILAR MAS DE UN `INCISO` SOBRE EL MISMO PASO DEL SUPERVIVIENTE?** Ni el
-   instrumento lo prohibe ni la doctrina lo permite con letra. **Lo resolvi como `NO`** (ver `D3`),
-   **y si la respuesta es otra, el paso 5 de `pivotar_o_proceder` se puede rehacer sin tocar el
-   grafo**, porque su perdida esta sellada y enrutada.
-6. **PREGUNTA: LA AGUJA DEL COMPROBADOR DE PROMESAS DEBE ADMITIR EL PLURAL?** Hoy busca solo
-   `VA MARCADO COMO DISCUTIBLE` y **una nota en plural se le escapa entera**, como se le escapo la de
-   esta vuelta (seccion 7.6). **No lo toco**, porque es un instrumento de nombre estable que se
-   coteja contra reportes viejos y ensancharle la aguja podria volver INCUMPLIDAS promesas que hoy no
-   ve. **Lo traigo con la medicion: una promesa invisible es peor que una promesa incumplida, porque
-   la segunda al menos sale en rojo.**
-7. **PREGUNTA: UN CASO POSITIVO PUEDE APUNTAR A UN SUJETO QUE LA PROPIA VUELTA VA A EJECUTAR?** La
-   regla dice que no, **y esta vuelta demuestra por que**. Lo que dejo abierto es si el sujeto
-   deberia escogerse **por medicion** (el instrumento eligiendo un par vivo que la vuelta no toque)
-   en vez de pasarse a mano, que sigue pudiendo equivocarse.
+1. **UN VEREDICTO AUSENTE, ES UN PAR SIN LEER A EFECTOS DE `P.10`?** (nuevo, y es el grande). **Los 47
+   actos del tramo tienen pares sin veredicto escrito** porque solo entraron en la cola los pares que
+   la semejanza propuso. **Si un ausente contara como *sin leer*, ninguno de los 47 podria fundirse y
+   `OP-U-02` quedaria bloqueada entera.** Registro lo mejor sostenido (**el disparador de `P.10` es el
+   triangulo `A` mas `A` mas `D`, mecanico y medido**) y **lo subo**. **No paro**, por la regla 5.
+2. **EL SUBCONJUNTO CERRADO DE UN ACTO CON PUENTE: QUIEN LO FUNDE Y CUANDO?** `P.10` lo nombra como
+   tercera salida y la condiciona a que **todas** las lecturas esten hechas. **Nueve actos de este
+   tramo estan en ese estado.** No hay letra que diga si el subconjunto cerrado se funde en la misma
+   operacion, en otra, o si el acto entero se enruta a una mesa. **Pendiente nombrado, no parada.**
+3. **UN ACTO CON DOS PUERTAS NO SE PUEDE FUNDIR A UNO, Y NO HAY CARRIL ESCRITO PARA EL.** La guarda 1B
+   dice que una puerta no se absorbe, pero **no dice que hacer con un acto que tiene dos**. Aqui la
+   pregunta no mordio porque `P.10` ya lo detenia, **pero mordera en cuanto aparezca un acto de dos
+   puertas y sin puente**. Pendiente nombrado.
+4. **EN UN ACTO N-ARIO NO HAY MARCA PARA *YA LO DICE EL `APPEND` DE UN HERMANO*.** `CUBIERTO:n` solo
+   puede apuntar a los pasos ORIGINALES del superviviente. Resolvi por el carril escrito (`APPEND`
+   entero con **solape declarado**, o `CUBIERTO` con **atenuante declarado**), **pero es un carril
+   pensado para actos de dos**. Pendiente nombrado.
+5. **EL `INCISO` DE CONDICIONES SIGUE SIN EXISTIR** (heredado): **tres perdidas `DE CONDICIONES` mas
+   en esta vuelta**, enrutadas a la fase 04 por el carril del acta 55, pregunta 5.
+6. **EL ESQUEMA DE `OPERACIONES.jsonl`** (heredado): sigue pendiente y el campo `nota` lo cubre.
 
 ---
 
 ## 9. RUTAS TOCADAS, CORRECCIONES DECLARADAS Y CENSOS
 
-**Del grafo (12 nodos, todos por la fusion):** `pivote_o_proceder`, `pivotar_o_proceder`,
-`categorias_entusiasmo_cliente`, `checkpoints_validacion`, `decision_pivotar_o_proceder`,
-`filosofia_validacion_clientes`, `mapa_flujo_trabajo_cliente`, `presentacion_solucion_producto`,
-`product_market_fit`, `scorecard_descubrimiento_cliente`, `validar_posicionamiento_con_analistas` y
-`verificar_modelo_ingresos`, mas `dataset/metadata/master_graph.json`,
-`dataset/metadata/phase1_run_log.json` y los assets de `web/lib/assets/`.
-
-**De registro:** `docs/plan/03_FUSIONES.md` (**+180** del acta 63 y **+126** del registro de la
-fusion), `docs/plan/OPERACIONES.jsonl` (**5 notas**), `docs/loop/PLAN_V63_OPM02PROG.json`
-(correccion declarada del `D10`), `docs/plan/ARISTAS_DUPLICADAS.jsonl`,
+**Del grafo (34 ficheros, todos por la fusion del acto 3):** `causas_comunes_vs_especiales` y sus
+**nueve** absorbidos (`distincion_causas_comunes_especiales`,
+`distincion_causas_comunes_especiales_2`, `distincion_causas_comunes_especiales_incidentes`,
+`distincion_causas_especiales_comunes`, `identificacion_causa_raiz_no_culpa_individual`,
+`moral_y_sistema_no_individuo`, `politica_no_culpar_trabajador`, `trampa_del_promedio_como_estandar`,
+`variacion_del_sistema_vs_individuo`), mas los nodos redirigidos, mas
+`dataset/metadata/master_graph.json`, `dataset/metadata/phase1_run_log.json`,
+`web/lib/assets/` (6 assets mas manifest), `docs/plan/ARISTAS_DUPLICADAS.jsonl`,
 `docs/COSTURAS_INTERNAS.jsonl` y su resumen.
 
-**CORRECCIONES DECLARADAS DE ESTA VUELTA, las SEIS, todas con el texto viejo entero:** las **cinco**
-de las fichas consumidas (banco `9.10`) y la del `D10` sobre el plan de `OP-M-02-PROG`.
+**De registro:** `docs/plan/03_FUSIONES.md` (**+119** del acta 64 y **+230** del registro del tramo,
+**CERO borradas** en los dos, medido con `git diff --numstat`).
 
-**Instrumentos nuevos.** De **nombre ESTABLE**: `scripts/loop/caso_positivo_de_fusion_de_mesa.py` y
-`scripts/loop/fijar_tramo_de_opu02.py`. **De vuelta**: `vuelta64_consumidas.py`,
-`vuelta64_correcciones_consumidas.py`, `vuelta64_d10.py`, `vuelta64_puesto2.py`,
-`vuelta64_registrar_acta63.py`, `vuelta64_lectura_opm03ii.py` y `vuelta64_colisiones_opm03ii.py`.
-**De contenido**: `_v64_opm03ii.py` y `_v64_verificar_opm03ii.py`.
+**CORRECCIONES DECLARADAS DE ESTA VUELTA, las CUATRO, todas con el texto viejo entero:** la aguja del
+comprobador de promesas; el titulo de `generar_plan_del_lote.py`; el descubrimiento del ordinal y la
+capacidad N-aria del mismo generador; y el ordinal mas los pares internos de `dossier_del_tramo.py`.
 
-**CENSO DE PLANTILLAS TALLADAS:** **CERO TALLADOS en los 22 instrumentos de nombre estable**
-([`SALIDA_V64_CENSO_PLANTILLAS.txt`](SALIDA_V64_CENSO_PLANTILLAS.txt)), y son **22 y no 20** porque
-los **dos nuevos entran en el censo**.
+**Instrumentos nuevos, todos DE VUELTA:** `vuelta65_registrar_acta64.py`,
+`vuelta65_caso_positivo_promesas.py`, `vuelta65_caso_positivo_generador.py`,
+`vuelta65_puentes_del_tramo.py`, `vuelta65_colisiones_esperadas.py`, `vuelta65_registro_tramo.py`.
+**De contenido:** `_v65_lote_a.py`. **NINGUNO de nombre estable se estrena esta vuelta**, y los dos
+estables que se tocan lo hacen por correccion declarada con caso positivo.
+
+**CENSO DE PLANTILLAS TALLADAS: CERO TALLADOS en los 22 instrumentos de nombre estable**, medido dos
+veces, tras la TAREA 1 y tras las correcciones de la TAREA 2
+([`SALIDA_V65_CENSO_PLANTILLAS_TAREA1.txt`](SALIDA_V65_CENSO_PLANTILLAS_TAREA1.txt),
+[`SALIDA_V65_CENSO_PLANTILLAS_TAREA2A.txt`](SALIDA_V65_CENSO_PLANTILLAS_TAREA2A.txt)).
 
 **BARRIDO AL CIERRE**, leido de la corrida de cierre y **no de ninguna anterior**
-([`SALIDA_V64_BARRIDO_CIERRE.txt`](SALIDA_V64_BARRIDO_CIERRE.txt)): **421 ficheros barridos**,
-**`ROJO` 32** (la linea de base heredada, **sin mover**), **`AMBAR` 0**, `ROTULADO` **37**, `CENSO`
-**219**, `ILEGIBLE` **1**.
+([`SALIDA_V65_BARRIDO_CIERRE.txt`](SALIDA_V65_BARRIDO_CIERRE.txt)): **429 ficheros barridos** (los 422
+de la apertura mas **los 7 instrumentos que esta vuelta escribe**, medido), **`ROJO` 32** (la linea de
+base heredada, **sin mover**), **`AMBAR` 0**, `ROTULADO` **38**, `CENSO` **220**, `ILEGIBLE` 1. **El
+`AMBAR` que salio no se dejo pasar**: `vuelta65_registrar_acta64.py` declara vuelta 65 y su titulo
+dice `VUELTA 64`, y **el barrido dice con todas sus letras que el no decide** si eso es procedencia o
+cita envejecida. **Es procedencia**, y se rotulo por el carril que la casa ya usa
+(`ROTULO titulo especie=PROCEDENCIA cita=vuelta:64` con su fuente y su literal de prueba), **cotejado
+por maquina contra el acta**.
 
-**FIGURAS Y FAMILIAS AL DIA:** esta vuelta no abre figura nueva. El acto fundido es **fusion de mesa
-de par**, la misma figura de `OP-M-03-I` y `OP-M-02-PROG`, y la familia del pivote queda con
-**`OP-M-03-III` pendiente** y con la mesa `OP-M-03` **sin ejecutar**.
+**FIGURAS Y FAMILIAS AL DIA:** esta vuelta **abre una figura nueva y la nombra**: **`FUSION N-ARIA`**,
+un acto de mas de dos miembros con un superviviente y varios absorbidos, estrenada en el acto 3 con
+diez miembros. Y **estrena un carril de cierre que existia escrito y no se habia usado nunca**:
+**`DECLARADO POR P.10`**, un acto que cierra entero sin fundirse porque tiene nodos puente. **Quedan
+del tramo unico 45 actos y 176 nodos**, de los cuales **ocho actos mas tienen nodos puente medidos**.

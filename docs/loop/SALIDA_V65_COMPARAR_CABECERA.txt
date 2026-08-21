@@ -1,0 +1,42 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 65.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| marcador `A` / `B` / `C` / `D` | 551 / 72 / 5 / 2.760 | **551 / 72 / 5 / 2.760** |
+| `n`, huecos, duplicados | 3.388 / 0 / 0 | **3.388 / 0 / 0** |
+| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.271 / 582 / 17.496 | **3.853 / 3.262 / 591 / 17.511** |
+| retrato: `A` crudas / colapsos / pares distintos | 551 / 278 / 273 | **551 / 292 / 259** |
+| actos (componentes) | 79 | **78** |
+| actos `CERRADOS` / `ABIERTOS` | 26 / 53 | **26 / 52** |
+| nodos en `CERRADOS` / `ABIERTOS` | 61 / 240 | **61 / 230** |
+| cola de costuras | 1.455 | **1.453** |
+| colisiones de clase vigentes | 2 | **2** |
+| auto-pares (los dos lados al mismo vivo) | 256 | **257** |
+| duplicadas historicas: grupos / nodos | 925 / 733 | **921 / 730** |
+| operaciones, estados, dependencias rotas | 71, todas `LISTA`, 0 | **71, todas `LISTA`, 0** |
+| entradas del inventario | 672 | **672** |
+| las cuatro comprobaciones de `08_VERIFICACION` | TODAS OK (301 igual a 301; 273 igual a 273) | **TODAS OK (291 igual a 291; 259 igual a 259)** |
+
+--- LAS CUATRO COMPROBACIONES, CADA LADO DE SU PROPIA SALIDA ---
+
+  APERTURA (SALIDA_V65_RECOMPUTO_APERTURA.txt):
+    i.  nodos en actos 301 == componentes 301
+    ii. A vigentes 273 == aristas A internas 273
+    veredicto: TODAS OK
+  CIERRE   (SALIDA_V65_RECOMPUTO_CIERRE.txt):
+    i.  nodos en actos 291 == componentes 291
+    ii. A vigentes 259 == aristas A internas 259
+    veredicto: TODAS OK
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  filas cotejadas: 14 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+
+FIN
