@@ -1,0 +1,59 @@
+==============================================================================
+CASO POSITIVO DE LA CORRECCION DEL GENERADOR Y DEL DOSSIER (vuelta 65)
+  ancestro sacado de git: ae539bb5
+==============================================================================
+  ancestros escritos: scripts/loop/_v65_generador_ancestro.py y scripts/loop/_v65_dossier_ancestro.py
+  tramo de mentira: superviviente enfoque_situacional_vs_personal, absorbido cultura_de_seguridad_interpretivista_funcionalista (los dos VIVOS, medidos)
+
+==============================================================================
+MITAD 1: NO REGRESION DEL GENERADOR. Ancestro contra corregido, los dos
+HOY, sobre el mismo tramo de dos miembros vivos y el mismo contenido.
+==============================================================================
+     ANCESTRO   exit 0 | plan escrito: True
+     CORREGIDO  exit 0 | plan escrito: True
+
+     campos de la raiz comparados : 16
+     actos                        : ancestro 1, corregido 1
+     el acto sellado por los dos  : superviviente enfoque_situacional_vs_personal, absorbidos ['cultura_de_seguridad_interpretivista_funcionalista']
+     marcas de pasos, ancestro    : {'cultura_de_seguridad_interpretivista_funcionalista': {'1': 'CUBIERTO:1', '2': 'CUBIERTO:1', '3': 'CUBIERTO:1', '4': 'CUBIERTO:1'}}
+     marcas de pasos, corregido   : {'cultura_de_seguridad_interpretivista_funcionalista': {'1': 'CUBIERTO:1', '2': 'CUBIERTO:1', '3': 'CUBIERTO:1', '4': 'CUBIERTO:1'}}
+     campos DISTINTOS (sin fecha) : 0 []
+     IDENTICOS EN TODO MENOS LA FECHA: LA FORMA VIEJA NO SE MOVIO
+
+==============================================================================
+MITAD 2: NO REGRESION DEL DOSSIER. Ancestro contra corregido, los dos HOY.
+==============================================================================
+     ANCESTRO   exit 0 | 43 lineas
+     CORREGIDO  exit 0 | 43 lineas
+     lineas DISTINTAS: 0
+     IDENTICO AL DIGITO: LA RAMA DEL ACTO DE DOS NO SE MOVIO
+
+==============================================================================
+MITAD 3: QUE LA CORRECCION SIRVA. Las ramas nuevas sobre el tramo unico
+de OP-U-02 (clave orden_universo, actos de 3 a 15).
+==============================================================================
+
+  --- el dossier, que ANTES caia en ROJO por la clave del ordinal ---
+     exit 0 | sigue cayendo por el ordinal: False
+     | ==============================================================================
+     | DOSSIER DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO: EL ACTO LEIDO ENTERO (P.5) CON SU RAZON
+     | ==============================================================================
+     |   nodos leidos de: el arbol de trabajo
+     |   universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+     | ##############################################################################
+
+  --- el generador, que ANTES caia en ROJO por la clave del ordinal ---
+     exit 1 | sigue cayendo por el ordinal: False
+     | ==============================================================================
+     | GENERADOR DEL PLAN DEL LOTE A DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO (vuelta 65)
+     |   fichero del tramo: docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+     | ==============================================================================
+     |   ROJO, 1 fallos y NO se escribe nada:
+     |      acto 1: el acto tiene 15 miembros y el contenido no trae reparto por absorbido. Un acto de mas de dos SIN
+     la guarda del acto de mas de dos SIN reparto MUERDE: True
+
+  los 6 ficheros temporales BORRADOS: SI
+
+==============================================================================
+VERDE: LA FORMA VIEJA SALE IDENTICA EN LOS DOS INSTRUMENTOS y las ramas
+nuevas dejan de caer en ROJO, con la guarda del acto de mas de dos mordiendo.

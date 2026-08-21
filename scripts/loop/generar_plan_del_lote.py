@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
-"""generar_plan_del_lote.py . EL GENERADOR DEL PLAN DE UN LOTE DE UN TRAMO DE
-OP-U-01, CON LA PERDIDA SELLADA EN CAMPO PROPIO.
+"""generar_plan_del_lote.py . EL GENERADOR DEL PLAN DE UN LOTE DE UN TRAMO DE LA
+OPERACION QUE ENTRE POR --operacion, CON LA PERDIDA SELLADA EN CAMPO PROPIO.
+
+CORRECCION DECLARADA DEL TITULO (2026-08-20, vuelta 65). Decia, verbatim: "EL
+GENERADOR DEL PLAN DE UN LOTE DE UN TRAMO DE OP-U-01". Desde la vuelta 63
+--operacion es REQUERIDO y este generador no conoce ninguna operacion: un titulo
+que nombra OP-U-01 miente en cuanto se usa para OP-U-02, que es lo que esta
+vuelta hace. El texto viejo queda aqui y no se tacha.
 
 NOMBRE ESTABLE, Y NO LLEVA NUMERO NI DE VUELTA NI DE TRAMO NI DE LOTE: los tres
 entran por argumento (--vuelta, --tramo, --lote) y el contenido editorial por
@@ -61,6 +67,48 @@ leido de la clave del ordinal del propio fichero medido.
          el tramo entero, en vez de citar la salida de otra corrida.
      LA ARITMETICA NO SE TOCA: guardas, cobertura, INCISOS, juntura, validacion
      de perdidas y el campo actos del plan salen exactamente igual que antes.
+
+CORRECCION DECLARADA (2026-08-20, vuelta 65, TAREA 2 del encargo, por el carril
+del banco 9.10 y por el mismo con el que la vuelta 63 corrigio la cabecera de
+este mismo fichero; EL TEXTO VIEJO SE QUEDA ENTERO EN EL SITIO DONDE MUERDE Y NO
+SE TACHA). SON DOS CAMBIOS, Y LOS DOS VAN MARCADOS DISCUTIBLES EN EL REPORTE por
+las dos condiciones del acta 61 (D2 y pregunta 2: una guarda o una capacidad
+puede crecer SI va enumerada aqui y marcada discutible).
+
+  6. EL DESCUBRIMIENTO DEL ORDINAL CONOCE DOS PREFIJOS Y NO UNO. El texto viejo
+     era una sola linea dentro de main y esta citada verbatim en el comentario de
+     ORDINALES: solo aceptaba orden_tramo. MEDIDO: corrido sobre
+     docs/loop/TRAMO_UNICO_OPU02_V64.jsonl, cuya clave es orden_universo, este
+     generador daba "ROJO: el fichero del tramo tiene 0 claves de ordinal ([]).
+     PARADA". LA RAMA orden_tramo SALE IDENTICA. Y un tramo sin numero NO SE
+     NUMERA: su rotulo se lee del campo tramo del propio fichero o se declara
+     ausente.
+
+  7. EL ACTO PUEDE TENER MAS DE DOS MIEMBROS. El texto viejo era
+     "ab = [x for x in mi if x != sup][0]", citado verbatim en el sitio, y con el
+     un acto de 15 miembros habria sellado un plan con UN solo absorbido y los
+     otros trece DESAPARECIDOS EN SILENCIO. El contenido del lote declara ahora
+     el reparto POR ABSORBIDO en una clave reparto; LA FORMA VIEJA (pasos y
+     condiciones en la raiz del acto) SIGUE VALIENDO Y SALE IDENTICA, y un acto
+     de mas de dos SIN reparto es ROJO en vez de recorte mudo. El fundidor
+     fundir_por_plan.py YA era N-ario (medido en su bucle "for muere in abs_"):
+     lo que faltaba era que el generador supiera sellarlo.
+
+     LA ARITMETICA DE LAS MARCAS NO SE TOCA NI SE RETECLEA: el cuerpo que marca
+     pasos y condiciones se INDENTO cuatro espacios para vivir dentro del bucle
+     por absorbido y no se le cambio una sola condicion. La prueba de que no hay
+     regresion es scripts/loop/vuelta65_caso_positivo_generador.py, que corre EL
+     ANCESTRO (sacado de git) Y ESTE FICHERO sobre el MISMO tramo de dos
+     miembros vivos y el MISMO contenido, y exige que los dos planes salgan
+     IDENTICOS campo a campo salvo la fecha. NO se compara contra los planes
+     SELLADOS de OP-U-01 y se dice por que: sus nodos se fundieron en la vuelta
+     62 y hoy estan deprecados, asi que esa comparacion mediria el movimiento
+     del ARBOL y no el de la correccion.
+
+     Y ESE CASO POSITIVO YA MORDIO UNA VEZ, que es lo que lo hace creible: en su
+     primera corrida el bloque que asigna las marcas por absorbido habia quedado
+     dentro del bucle de las perdidas, y el plan salio con pasos {} vacio. Lo
+     caza la mitad 1 antes de sellar nada.
 
 DE ESCRITURA SOLO SOBRE docs/loop/PLAN_V<N>_*.json. No toca ni un nodo.
 
@@ -281,6 +329,41 @@ def cargar_jsonl(p):
     return [json.loads(l) for l in io.open(p, encoding="utf-8") if l.strip()]
 
 
+# CAMBIO 5 DE LA VUELTA 65: LOS PREFIJOS DE ORDINAL QUE ESTE GENERADOR CONOCE.
+# El texto viejo, verbatim, era UNA sola linea dentro de main:
+#   claves = sorted({k for k in filas[0] if k.startswith("orden_tramo")}) if filas else []
+# y con ella el generador cae en ROJO sobre el tramo unico de OP-U-02, cuya
+# clave de ordinal es orden_universo (medido: 0 claves de ordinal, PARADA).
+# LA RAMA orden_tramo SALE IDENTICA A COMO ESTABA, y por eso los planes de los
+# tramos de OP-U-01 se re-generan byte a byte iguales.
+ORDINALES = ("orden_tramo", "orden_universo")
+
+
+def clave_del_ordinal(filas):
+    """Devuelve (clave, rotulo del tramo, lo que hay que imprimir). La clave que
+    no se pueda descubrir SIN AMBIGUEDAD no se adivina: se declara y se para."""
+    if not filas:
+        return None, None, "ROJO: el fichero del tramo esta vacio. PARADA."
+    for prefijo in ORDINALES:
+        claves = sorted({k for k in filas[0] if k.startswith(prefijo)})
+        if len(claves) > 1:
+            return None, None, ("ROJO: el fichero del tramo tiene %d claves de ordinal con el "
+                                "prefijo %s (%s). PARADA." % (len(claves), prefijo, claves))
+        if len(claves) == 1:
+            ORD = claves[0]
+            if prefijo == "orden_tramo":
+                m = re.search(r"(\d+)$", ORD)
+                rotulo = m.group(1) if m else "SIN NUMERO EN LA CLAVE %s" % ORD
+            else:
+                # UN TRAMO SIN NUMERO NO SE NUMERA: el rotulo lo dice el propio
+                # fichero en su campo tramo, y si no lo trae se declara.
+                rotulo = str(filas[0].get("tramo") or "SIN ROTULO EN EL FICHERO DEL TRAMO")
+            return ORD, rotulo, "  clave del ordinal: %s | tramo: %s" % (ORD, rotulo)
+    return None, None, ("ROJO: el fichero del tramo no trae ninguna clave de ordinal de las "
+                        "conocidas (%s). Las que trae son: %s. PARADA."
+                        % (", ".join(ORDINALES), sorted(filas[0])))
+
+
 def puertas():
     """MISMA fuente que scripts/loop/vuelta48_puertas_en_el_lote.py."""
     out = set()
@@ -352,16 +435,14 @@ def main():
     sys.stdout.reconfigure(encoding="utf-8")
 
     filas = cargar_jsonl(os.path.join(RAIZ, a.tramo.replace("/", os.sep)))
-    claves = sorted({k for k in filas[0] if k.startswith("orden_tramo")}) if filas else []
-    if len(claves) != 1:
-        print("ROJO: el fichero del tramo tiene %d claves de ordinal (%s). PARADA."
-              % (len(claves), claves))
-        return 1
-    ORD = claves[0]
     # EL NUMERO DE TRAMO SALE DEL FICHERO MEDIDO Y NO DE UNA CONSTANTE, que es la
-    # correccion que la TAREA 1.1 de esta vuelta manda: orden_tramo5 dice tramo 5.
-    m = re.search(r"(\d+)$", ORD)
-    num_tramo = m.group(1) if m else "SIN NUMERO EN LA CLAVE %s" % ORD
+    # correccion que la TAREA 1.1 de la vuelta 58 mando: orden_tramo5 dice tramo 5.
+    # CAMBIO 5 DE LA VUELTA 65: el descubrimiento del ordinal conoce DOS prefijos
+    # y no uno. La rama orden_tramo sale IDENTICA a como estaba.
+    ORD, num_tramo, dicho = clave_del_ordinal(filas)
+    if ORD is None:
+        print(dicho)
+        return 1
 
     tramo = {r[ORD]: r for r in filas}
     prot = puertas()
@@ -401,80 +482,119 @@ def main():
         if sup not in mi:
             fallos.append("acto %d: el superviviente %s no es miembro" % (n, sup))
             continue
-        ab = [x for x in mi if x != sup][0]
-        if ab in prot:
-            fallos.append("acto %d: GUARDA 1B EN ROJO, el absorbido %s es puerta" % (n, ab))
-        oa = json.load(io.open(os.path.join(NODOS, ab + ".json"), encoding="utf-8"))
+        # CAMBIO 6 DE LA VUELTA 65: EL ACTO PUEDE TENER MAS DE DOS MIEMBROS.
+        # El texto viejo, verbatim, era: ab = [x for x in mi if x != sup][0], y
+        # con el un acto de 15 miembros habria sellado un plan con UNO solo
+        # absorbido y los otros trece DESAPARECIDOS EN SILENCIO. Esa es la
+        # especie que el banco seccion 9 prohibe: fallar ruidoso, no mentir
+        # calladito. El fundidor (fundir_por_plan.py) YA es N-ario, medido
+        # leyendo su bucle for muere in abs_: lo unico que faltaba era que el
+        # generador supiera sellarlo.
+        absorbidos = [x for x in mi if x != sup]
+        reparto = spec.get("reparto")
+        if reparto is None:
+            # LA FORMA VIEJA, INTACTA: el spec trae pasos y condiciones en su
+            # raiz y el acto es de DOS. Si no lo es, ROJO, que es lo contrario
+            # de recortar el acto sin decirlo.
+            if len(absorbidos) != 1:
+                fallos.append("acto %d: el acto tiene %d miembros y el contenido no trae "
+                              "reparto por absorbido. Un acto de mas de dos SIN reparto no "
+                              "se sella" % (n, len(mi)))
+                continue
+            reparto = {absorbidos[0]: {"pasos": spec["pasos"],
+                                       "condiciones": spec["condiciones"]}}
+        faltan_ab = [x for x in absorbidos if x not in reparto]
+        sobran_ab = [x for x in reparto if x not in absorbidos]
+        if faltan_ab or sobran_ab:
+            fallos.append("acto %d: el reparto no cubre a los absorbidos, faltan %s y sobran %s"
+                          % (n, faltan_ab, sobran_ab))
+            continue
         os_ = json.load(io.open(os.path.join(NODOS, sup + ".json"), encoding="utf-8"))
-        if oa.get("deprecado") or os_.get("deprecado"):
-            fallos.append("acto %d: alguno de los dos miembros YA esta deprecado" % n)
-        pa = oa.get("pasos_accionables") or []
-        ca = oa.get("condiciones_activacion") or []
+        if os_.get("deprecado"):
+            fallos.append("acto %d: el superviviente %s YA esta deprecado" % (n, sup))
         ps = os_.get("pasos_accionables") or []
         cs = os_.get("condiciones_activacion") or []
 
-        marcas_p, marcas_c = {}, {}
-        for i, texto in enumerate(pa, 1):
-            m2 = spec["pasos"].get(str(i))
-            if not m2:
-                fallos.append("acto %d: el paso %d de %s no tiene marca" % (n, i, ab))
-                continue
-            if m2[0] == "APPEND":
-                marcas_p[str(i)] = "APPEND"
-            elif m2[0] == "CUBIERTO":
-                if not (1 <= m2[1] <= len(ps)):
-                    fallos.append("acto %d: CUBIERTO:%d y el superviviente tiene %d pasos"
-                                  % (n, m2[1], len(ps)))
-                marcas_p[str(i)] = "CUBIERTO:%d" % m2[1]
-            elif m2[0] == "CUBIERTO_COND":
-                if not (1 <= m2[1] <= len(cs)):
-                    fallos.append("acto %d: CUBIERTO_COND:%d y el superviviente tiene %d condiciones"
-                                  % (n, m2[1], len(cs)))
-                marcas_p[str(i)] = "CUBIERTO_COND:%d" % m2[1]
-            elif m2[0] == "INCISO":
-                _, k, ascii_trozo, nexo = m2
-                trozo, motivo = extraer_verbatim(texto, ascii_trozo)
-                if trozo is None:
-                    fallos.append("acto %d, paso %d de %s: INCISO %r, %s"
-                                  % (n, i, ab, ascii_trozo, motivo))
+        pasos_por_absorbido, cond_por_absorbido = {}, {}
+        for ab in absorbidos:
+            spec_ab = reparto[ab]
+            if ab in prot:
+                fallos.append("acto %d: GUARDA 1B EN ROJO, el absorbido %s es puerta" % (n, ab))
+            oa = json.load(io.open(os.path.join(NODOS, ab + ".json"), encoding="utf-8"))
+            if oa.get("deprecado"):
+                fallos.append("acto %d: el absorbido %s YA esta deprecado" % (n, ab))
+            pa = oa.get("pasos_accionables") or []
+            ca = oa.get("condiciones_activacion") or []
+
+            marcas_p, marcas_c = {}, {}
+            for i, texto in enumerate(pa, 1):
+                m2 = spec_ab["pasos"].get(str(i))
+                if not m2:
+                    fallos.append("acto %d: el paso %d de %s no tiene marca" % (n, i, ab))
                     continue
-                if trozo not in texto:
-                    fallos.append("acto %d: el INCISO extraido %r NO es trozo verbatim del paso %d de %s"
-                                  % (n, trozo, i, ab))
-                if "|" in trozo or "|" in nexo:
-                    fallos.append("acto %d: el INCISO o su nexo llevan la barra vertical, que es el separador de la marca" % n)
-                if not (1 <= k <= len(ps)):
-                    fallos.append("acto %d: INCISO al paso %d y el superviviente tiene %d"
-                                  % (n, k, len(ps)))
+                if m2[0] == "APPEND":
+                    marcas_p[str(i)] = "APPEND"
+                elif m2[0] == "CUBIERTO":
+                    if not (1 <= m2[1] <= len(ps)):
+                        fallos.append("acto %d: CUBIERTO:%d y el superviviente tiene %d pasos"
+                                      % (n, m2[1], len(ps)))
+                    marcas_p[str(i)] = "CUBIERTO:%d" % m2[1]
+                elif m2[0] == "CUBIERTO_COND":
+                    if not (1 <= m2[1] <= len(cs)):
+                        fallos.append("acto %d: CUBIERTO_COND:%d y el superviviente tiene %d condiciones"
+                                      % (n, m2[1], len(cs)))
+                    marcas_p[str(i)] = "CUBIERTO_COND:%d" % m2[1]
+                elif m2[0] == "INCISO":
+                    _, k, ascii_trozo, nexo = m2
+                    trozo, motivo = extraer_verbatim(texto, ascii_trozo)
+                    if trozo is None:
+                        fallos.append("acto %d, paso %d de %s: INCISO %r, %s"
+                                      % (n, i, ab, ascii_trozo, motivo))
+                        continue
+                    if trozo not in texto:
+                        fallos.append("acto %d: el INCISO extraido %r NO es trozo verbatim del paso %d de %s"
+                                      % (n, trozo, i, ab))
+                    if "|" in trozo or "|" in nexo:
+                        fallos.append("acto %d: el INCISO o su nexo llevan la barra vertical, que es el separador de la marca" % n)
+                    if not (1 <= k <= len(ps)):
+                        fallos.append("acto %d: INCISO al paso %d y el superviviente tiene %d"
+                                      % (n, k, len(ps)))
+                    else:
+                        resultante = ps[k - 1] + nexo + trozo
+                        if (ps[k - 1].rstrip().endswith((".", "!", "?"))
+                                and nexo.lstrip().startswith((",", ";"))):
+                            fallos.append(
+                                "acto %d, paso %d de %s: JUNTURA ROTA, el paso del "
+                                "superviviente acaba en punto y el nexo abre con coma: %r"
+                                % (n, i, ab, resultante[max(0, len(ps[k - 1]) - 30):][:80]))
+                        print("  acto %-3d INCISO al paso %d" % (n, k))
+                        print("      trozo pedido en ASCII : %r" % ascii_trozo)
+                        print("      trozo EXTRAIDO del nodo: %r" % trozo)
+                        print("      paso resultante        : %s" % (ps[k - 1] + nexo + trozo))
+                    marcas_p[str(i)] = "INCISO:%d|%s|%s" % (k, trozo, nexo)
                 else:
-                    resultante = ps[k - 1] + nexo + trozo
-                    if (ps[k - 1].rstrip().endswith((".", "!", "?"))
-                            and nexo.lstrip().startswith((",", ";"))):
-                        fallos.append(
-                            "acto %d, paso %d de %s: JUNTURA ROTA, el paso del "
-                            "superviviente acaba en punto y el nexo abre con coma: %r"
-                            % (n, i, ab, resultante[max(0, len(ps[k - 1]) - 30):][:80]))
-                    print("  acto %-3d INCISO al paso %d" % (n, k))
-                    print("      trozo pedido en ASCII : %r" % ascii_trozo)
-                    print("      trozo EXTRAIDO del nodo: %r" % trozo)
-                    print("      paso resultante        : %s" % (ps[k - 1] + nexo + trozo))
-                marcas_p[str(i)] = "INCISO:%d|%s|%s" % (k, trozo, nexo)
-            else:
-                fallos.append("acto %d: marca desconocida %r" % (n, m2))
-        for i, texto in enumerate(ca, 1):
-            m2 = spec["condiciones"].get(str(i))
-            if not m2:
-                fallos.append("acto %d: la condicion %d de %s no tiene marca" % (n, i, ab))
-                continue
-            if m2[0] == "APPEND":
-                marcas_c[str(i)] = "APPEND"
-            elif m2[0] == "CUBIERTO":
-                if not (1 <= m2[1] <= len(cs)):
-                    fallos.append("acto %d: CUBIERTO:%d y el superviviente tiene %d condiciones"
-                                  % (n, m2[1], len(cs)))
-                marcas_c[str(i)] = "CUBIERTO:%d" % m2[1]
-            else:
-                fallos.append("acto %d: marca de condicion desconocida %r" % (n, m2))
+                    fallos.append("acto %d: marca desconocida %r" % (n, m2))
+            for i, texto in enumerate(ca, 1):
+                m2 = spec_ab["condiciones"].get(str(i))
+                if not m2:
+                    fallos.append("acto %d: la condicion %d de %s no tiene marca" % (n, i, ab))
+                    continue
+                if m2[0] == "APPEND":
+                    marcas_c[str(i)] = "APPEND"
+                elif m2[0] == "CUBIERTO":
+                    if not (1 <= m2[1] <= len(cs)):
+                        fallos.append("acto %d: CUBIERTO:%d y el superviviente tiene %d condiciones"
+                                      % (n, m2[1], len(cs)))
+                    marcas_c[str(i)] = "CUBIERTO:%d" % m2[1]
+                else:
+                    fallos.append("acto %d: marca de condicion desconocida %r" % (n, m2))
+            sobra_p = set(spec_ab["pasos"]) - {str(i) for i in range(1, len(pa) + 1)}
+            sobra_c = set(spec_ab["condiciones"]) - {str(i) for i in range(1, len(ca) + 1)}
+            if sobra_p or sobra_c:
+                fallos.append("acto %d, absorbido %s: marcas que sobran, pasos %s condiciones %s"
+                              % (n, ab, sorted(sobra_p), sorted(sobra_c)))
+            pasos_por_absorbido[ab] = marcas_p
+            cond_por_absorbido[ab] = marcas_c
         # CAMBIO 3 DECLARADO, GUARDA QUE CRECE Y VA MARCADA DISCUTIBLE (acta 61,
         # D2 y pregunta 2: una guarda puede crecer en un sucesor declarado SI va
         # enumerada en el docstring y marcada discutible). Las perdidas se validan
@@ -488,22 +608,23 @@ def main():
             elif p_["especie"] not in ESPECIES_DE_PERDIDA:
                 fallos.append("acto %d: especie de perdida desconocida %r. Las escritas son: %s"
                               % (n, p_["especie"], ", ".join(ESPECIES_DE_PERDIDA)))
-        sobra_p = set(spec["pasos"]) - {str(i) for i in range(1, len(pa) + 1)}
-        sobra_c = set(spec["condiciones"]) - {str(i) for i in range(1, len(ca) + 1)}
-        if sobra_p or sobra_c:
-            fallos.append("acto %d: marcas que sobran, pasos %s condiciones %s"
-                          % (n, sorted(sobra_p), sorted(sobra_c)))
 
         actos.append({
             "orden": n,
-            "miembros": [sup, ab],
+            "miembros": [sup] + absorbidos,
             "miembros_del_acto_entero": mi,
-            "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+            # CAMBIO 6 DE LA VUELTA 65: la figura del acto de DOS sale IDENTICA a
+            # como estaba; la de un acto de mas de dos SE MIDE del propio fichero
+            # del tramo en vez de afirmar una fusion pura que nadie midio.
+            "figura": ("FUSION PURA, un solo par A directo y ningun mixto"
+                       if len(mi) == 2 else
+                       "ACTO DE %d MIEMBROS, clases internas %s medidas en el fichero del tramo"
+                       % (len(mi), act.get("clases_internas"))),
             "superviviente": sup,
             "motivo": spec["motivo"],
-            "absorbidos": [ab],
-            "pasos": {ab: marcas_p},
-            "condiciones": {ab: marcas_c},
+            "absorbidos": list(absorbidos),
+            "pasos": dict(pasos_por_absorbido),
+            "condiciones": dict(cond_por_absorbido),
             "nota_del_reparto": spec["nota"],
             # CAMBIO 2 DECLARADO: EL CAMPO perdidas VA SIEMPRE, aunque vacio.
             # Es la mitad util del contrato CAMPO PROPIO v1: LISTA VACIA es una

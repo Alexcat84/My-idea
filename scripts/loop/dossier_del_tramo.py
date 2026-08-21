@@ -99,13 +99,33 @@ def main():
     tramo = [json.loads(l) for l in io.open(a.tramo, encoding="utf-8") if l.strip()]
 
     # LO UNICO QUE NO ES COPIA: la clave del ordinal se descubre del fichero.
-    claves = sorted({k for k in tramo[0] if k.startswith("orden_tramo")}) if tramo else []
-    if len(claves) != 1:
-        print("ROJO: el fichero del tramo tiene %d claves de ordinal (%s). PARADA."
-              % (len(claves), claves))
+    # CORRECCION DECLARADA (2026-08-20, vuelta 65, TAREA 2 del encargo, carril
+    # del banco 9.10). EL TEXTO VIEJO, VERBATIM, ERA:
+    #   claves = sorted({k for k in tramo[0] if k.startswith("orden_tramo")}) if tramo else []
+    #   ...
+    #   NTRAMO = ORD.replace("orden_tramo", "")
+    # y con el este dossier daba "ROJO: el fichero del tramo tiene 0 claves de
+    # ordinal ([]). PARADA" sobre docs/loop/TRAMO_UNICO_OPU02_V64.jsonl, cuya
+    # clave es orden_universo (medido en la vuelta 65 antes de tocar nada).
+    # LA RAMA orden_tramo SALE IDENTICA y el tramo sin numero NO SE NUMERA: su
+    # rotulo se lee del campo tramo del propio fichero o se declara ausente.
+    ORD = NTRAMO = None
+    for prefijo in ("orden_tramo", "orden_universo"):
+        claves = sorted({k for k in tramo[0] if k.startswith(prefijo)}) if tramo else []
+        if len(claves) > 1:
+            print("ROJO: el fichero del tramo tiene %d claves de ordinal con el prefijo %s "
+                  "(%s). PARADA." % (len(claves), prefijo, claves))
+            return 1
+        if len(claves) == 1:
+            ORD = claves[0]
+            NTRAMO = (ORD.replace("orden_tramo", "") if prefijo == "orden_tramo"
+                      else str(tramo[0].get("tramo") or "SIN ROTULO EN EL FICHERO DEL TRAMO"))
+            break
+    if ORD is None:
+        print("ROJO: el fichero del tramo no trae ninguna clave de ordinal de las conocidas "
+              "(orden_tramo, orden_universo). Las que trae son: %s. PARADA."
+              % (sorted(tramo[0]) if tramo else []))
         return 1
-    ORD = claves[0]
-    NTRAMO = ORD.replace("orden_tramo", "")
 
     puertas = cargar_puertas()
 
@@ -132,17 +152,45 @@ def main():
         print("# ACTO %d del tramo %s (puesto %s de hoy, %s en la de la 48)"
               % (n, NTRAMO, r.get("puesto_hoy"), r.get("puesto_v48") or "nuevo"))
         print("#" * 78)
-        v = ver.get(frozenset(ms))
-        if v:
-            print("  [PAR A] puesto %s, clase %s, dominio %s"
-                  % (v.get("puesto_intra"), v.get("clase"), v.get("dominio")))
-            print("  nodo_a (EL PRIMERO de la razon): %s" % v.get("nodo_a"))
-            print("  nodo_b (EL SEGUNDO de la razon): %s" % v.get("nodo_b"))
-            print()
-            print("  RAZON ENTERA, sin recortar:")
-            print("    %s" % v.get("razon"))
+        # CORRECCION DECLARADA (2026-08-20, vuelta 65). EL TEXTO VIEJO, VERBATIM,
+        # ERA: v = ver.get(frozenset(ms)), o sea UNA sola busqueda por el
+        # conjunto ENTERO de miembros. Eso es exacto en un acto de DOS, donde el
+        # conjunto ES el par, y en un acto de 3 a 15 no encuentra nada y publica
+        # "NO ENCONTRADO" sobre un acto que tiene decenas de pares internos con
+        # su razon escrita. El docstring de este fichero promete "la RAZON entera
+        # de cada par interno pegada al lado", y esto es lo que la cumple. LA
+        # RAMA DEL ACTO DE DOS SALE IDENTICA.
+        internos = []
+        for i_ in range(len(ms)):
+            for j_ in range(i_ + 1, len(ms)):
+                w = ver.get(frozenset((ms[i_], ms[j_])))
+                if w:
+                    internos.append(w)
+        if len(ms) == 2:
+            v = ver.get(frozenset(ms))
+            if v:
+                print("  [PAR A] puesto %s, clase %s, dominio %s"
+                      % (v.get("puesto_intra"), v.get("clase"), v.get("dominio")))
+                print("  nodo_a (EL PRIMERO de la razon): %s" % v.get("nodo_a"))
+                print("  nodo_b (EL SEGUNDO de la razon): %s" % v.get("nodo_b"))
+                print()
+                print("  RAZON ENTERA, sin recortar:")
+                print("    %s" % v.get("razon"))
+            else:
+                print("  [PAR A] NO ENCONTRADO en los veredictos")
         else:
-            print("  [PAR A] NO ENCONTRADO en los veredictos")
+            print("  ACTO DE %d MIEMBROS: %d pares internos con veredicto escrito, de %d "
+                  "combinaciones posibles" % (len(ms), len(internos), len(ms) * (len(ms) - 1) // 2))
+            for w in sorted(internos, key=lambda x: (x.get("clase") or "", x.get("puesto_intra") or 0)):
+                print()
+                print("  [PAR] puesto %s, clase %s, dominio %s"
+                      % (w.get("puesto_intra"), w.get("clase"), w.get("dominio")))
+                print("     nodo_a (EL PRIMERO de la razon): %s" % w.get("nodo_a"))
+                print("     nodo_b (EL SEGUNDO de la razon): %s" % w.get("nodo_b"))
+                print("     RAZON ENTERA, sin recortar:")
+                print("       %s" % w.get("razon"))
+            if not internos:
+                print("  NINGUN PAR INTERNO ENCONTRADO en los veredictos, y esa ausencia se publica.")
         print()
         for m in ms:
             d = leer_nodo(m, a.commit)
