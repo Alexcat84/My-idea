@@ -22,8 +22,8 @@ tapar el texto viejo, que sigue en el mensaje de aquel commit.
 |---|---|
 | **rama** | `pasada-unica` |
 | **hash de apertura** | `f0f8605b` (el commit del acta 63), **arbol limpio y todo pusheado; la regla 3 se cumplio POR VACIO y se dice asi en vez de darla por cumplida** (`git status --porcelain` VACIO, comprobado) |
-| **hash final** | **`2cc84e86`**, mas el commit de este reporte, **pusheado a `origin/pasada-unica`** |
-| **commits de la vuelta** | **6**, leidos de `git log --format=%h f0f8605b..HEAD`: `22afe95f` (apertura medida), `be69bc56` (TAREA 1.b y 1.c), `6e1784c0` (TAREA 1.a), `4d16c100` (los dos `ROJO` propios), `7a160a25` (`OP-M-03-II`), `2cc84e86` (registro y tramo unico), **mas el de este reporte** |
+| **hash final** | **`ca74f202`**, el commit de este reporte, **pusheado a `origin/pasada-unica`**, mas este ultimo, que **solo escribe esta celda y la de abajo** porque el commit del reporte no podia contener su propio hash |
+| **commits de la vuelta** | **7**, leidos de `git log --format=%h f0f8605b..HEAD`: `22afe95f` (apertura medida), `be69bc56` (TAREA 1.b y 1.c), `6e1784c0` (TAREA 1.a), `4d16c100` (los dos `ROJO` propios), `7a160a25` (`OP-M-03-II`), `2cc84e86` (registro y tramo unico), `ca74f202` (este reporte), **mas el que escribe esta celda** |
 | **arbol al cierre** | limpio tras el commit del reporte |
 
 ---
