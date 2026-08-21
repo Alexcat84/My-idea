@@ -1,0 +1,45 @@
+=== OP-M-03-I ===
+OK    | superviviente vivo
+OK    | superviviente 6 pasos | mide 6
+OK    | superviviente 3 condiciones | mide 3
+OK    | alias carga al muerto
+OK    | absorbido deprecado
+OK    | absorbido con texto intacto | 4 pasos
+OK    | nodo propio VIVO
+OK    | nodo propio 5 pasos | mide 5
+OK    | nodo propio SIN el id muerto
+OK    | nodo propio nombra al superviviente en previos
+OK    | superviviente nombra al nodo propio en siguientes
+
+=== OP-M-02-PROG ===
+OK    | superviviente vivo
+OK    | superviviente 5 pasos | mide 5
+OK    | superviviente 2 condiciones | mide 2
+OK    | alias carga al muerto
+OK    | absorbido deprecado
+OK    | absorbido con texto intacto | 3 pasos
+OK    | testigo nombra al superviviente UNA vez | cuenta 1
+OK    | testigo nombra al muerto CERO veces
+OK    | testigo sin auto-arista
+OK    | las dos prioridades en el paso 5
+
+=== NOMINA OP-U-02 contra MI recomputo ===
+filas de la nomina: 53
+componentes en mi jsonl: 80 | abiertas segun campo: 53
+actos de la nomina que calzan con una componente ABIERTA mia: 53 de 53
+campos de la nomina: ['abre', 'clases_internas', 'duenos_cualquier_operacion', 'duenos_mesa_o_destejido', 'edad', 'miembros', 'miembros_resueltos_distintos', 'miembros_vivos', 'orden_universo', 'tamano']
+abre: 47 | fuera: 6
+nodos en los que abren: 201
+nodos en los que quedan fuera: 39
+  FUERA tamano 13 duenos ['OP-M-01', 'OP-M-01-FUSION']
+  FUERA tamano 9 duenos ['OP-M-05', 'OP-M-05-EDIFICIO', 'OP-M-05-INDICE']
+  FUERA tamano 7 duenos ['OP-M-05-APERTURA']
+  FUERA tamano 4 duenos ['OP-M-04']
+  FUERA tamano 3 duenos ['OP-D-02']
+  FUERA tamano 3 duenos ['OP-M-03-III']
+criterio ANCHO: tocan alguna nomina: 9 | no tocan ninguna: 44
+
+=== SHA1 DEL ANCESTRO ===
+sha1 vuelta49_fundir_tramo.py: 8ea1020d074f
+
+FALLOS: 0 

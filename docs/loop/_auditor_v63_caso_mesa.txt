@@ -1,0 +1,57 @@
+==============================================================================
+CASO POSITIVO DE LOS INSTRUMENTOS DE MESA DE LA VUELTA 63
+  sujeto: OP-M-03-II (pivote_o_proceder absorbe pivotar_o_proceder), QUE ESTA VUELTA NO EJECUTA
+  el fundidor se llama SIEMPRE en modo SIMULAR: ni en el peor caso toca un nodo
+==============================================================================
+
+  1. SUPERVIVIENTE que la ficha no escribe
+     exit=1 | escribio plan: NO
+     el contenido dice superviviente 'pivotar_o_proceder' y la ficha dice 'pivote_o_proceder'
+     VEREDICTO: LA GUARDA MUERDE
+
+  2. ABSORBIDO que la ficha no escribe
+     exit=1 | escribio plan: NO
+     el contenido dice absorbidos ['pivote_o_proceder'] y la ficha dice ['pivotar_o_proceder']
+     VEREDICTO: LA GUARDA MUERDE
+
+  3. COBERTURA por OLVIDO: a un paso le falta la marca
+     exit=1 | escribio plan: NO
+     el paso 3 de pivotar_o_proceder no tiene marca
+     VEREDICTO: LA GUARDA MUERDE
+
+  4. COBERTURA por SOBRANTE: marca de un paso que no existe
+     exit=1 | escribio plan: NO
+     marcas de paso que sobran: ['9']
+     VEREDICTO: LA GUARDA MUERDE
+
+  5. INCISO que NO es trozo verbatim del paso que muere
+     exit=1 | escribio plan: NO
+     paso 2 de pivotar_o_proceder: INCISO 'una parafrasis que no esta en el paso', el trozo no casa dentro del paso ni comparando sin tildes
+     VEREDICTO: LA GUARDA MUERDE
+
+  6. PERDIDA con especie desconocida
+     exit=1 | escribio plan: NO
+     especie de perdida desconocida 'DE COLOR'. Las escritas son: DE PARAMETRO DE PASO, DE CONDICIONES, DE NOMBRE
+     VEREDICTO: LA GUARDA MUERDE
+
+  7. el plan manda absorber un nodo YA DEPRECADO (guarda 1)
+     exit=1
+     guarda 1, miembros vivos y nomina completa: ROJO ['6s_lugar_trabajo YA esta deprecado']
+     [ROJO] acto 1: 6s_lugar_trabajo YA esta deprecado
+     VEREDICTO: LA GUARDA MUERDE
+
+  8. el plan manda absorber la SEMILLA actividades_clave (guarda 1B)
+     exit=1
+     [ROJO] acto 1: actividades_clave es SEMILLA DE ENTRADA y no se puede absorber
+     VEREDICTO: LA GUARDA MUERDE
+
+  9. plan SIN campo operacion: el titulo lo DICE en vez de suponer OP-U-01
+     exit=1
+     SIN OPERACION DECLARADA EN EL PLAN . PLAN DE MENTIRA . MODO SIMULAR
+     VEREDICTO: LA GUARDA MUERDE
+
+  ficheros de mentira borrados: 9
+
+==============================================================================
+RESULTADO: LAS NUEVE MUERDEN
+==============================================================================

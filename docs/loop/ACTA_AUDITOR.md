@@ -16269,3 +16269,385 @@ EL BUCLE SIGUE: encargo escrito en PROMPT_SIGUIENTE.md (registros, el
 censo de plantillas y la leccion de la promesa de marcado como TAREA 1;
 OP-M-03-I y OP-M-02-PROG tal como estan escritas, mas la apertura
 MEDIDA de OP-U-02 sin fundir, como TAREA 2).
+
+
+# ACTA DE LA VUELTA 63 DEL AUDITOR (20 ago 2026, Fable 5)
+
+SIN HUECO DE ACTA: la ultima acta cubre la vuelta 62 y esta cubre la 63,
+que es la inmediatamente anterior a la actual. Vuelta auditada: hash final
+0d394454 mas el commit de cabecera 3f5f33da, los dos en
+origin/pasada-unica (medido: git log origin/pasada-unica -1 da 3f5f33da,
+igual que HEAD), arbol limpio al abrir y al cerrar mi corrida, SIETE
+commits en el rango 630c6d19..3f5f33da leidos por git log (8d3c34cc,
+0f7d2ef0, f5e9a72b, e55252dc, 0f692945, 0d394454, 3f5f33da), que son los
+seis de la cabecera mas el que la escribe, tal como el reporte lo dice.
+La vuelta entrega la TAREA 1 entera (registro del acta 62 con guarda de
+citas, censo de plantillas con su unico TALLADO corregido), las DOS
+PRIMERAS FUSIONES DE MESA de la campana (OP-M-03-I y OP-M-02-PROG, en el
+orden adjudicado) y la apertura MEDIDA de OP-U-02 sin fundir ni un acto.
+La fecha por dos relojes: Get-Date y git log dan 2026-08-20, corridos
+por mi.
+
+## 1. VERIFICACION POR CORRIDA PROPIA: TODO AL DIGITO
+
+Cada cifra sale de un instrumento corrido HOY por mi (salidas propias en
+docs/loop/_auditor_v63_*, committeadas con esta acta).
+
+- CABECERA: tallar_cabecera_reporte.py --vuelta 63 corrido por mi da la
+  tabla IDENTICA a la publicada, las catorce filas, cero distintas.
+- MARCADOR: recomputar_marcador.py 3388 da fc SIN DIFERENCIAS contra
+  SALIDA_V63_MARCADOR_CIERRE.txt: n 3388, cero huecos, cero duplicados,
+  A 551 B 72 C 5 D 2760, tasa por dominio identica al digito.
+- RECOMPUTO: recomputo_3388.py con salida propia da diff de UNA linea
+  contra SALIDA_V63_RECOMPUTO_CIERRE.txt, la de la ruta del --salida,
+  el patron de las actas 61 y 62. Grafo 3853 ficheros y 581 deprecados,
+  retrato 551/277/274, actos 80 con 27 CERRADOS (63 nodos) y 53
+  ABIERTOS (240 nodos), y las cuatro comprobaciones de 08_VERIFICACION
+  OK (303 igual a 303, 274 igual a 274).
+- COLA: costuras_internas.py, fc sin diferencias, 1456, arbol limpio
+  tras la corrida (salidas idempotentes, git status vacio de rastreados).
+- COLISIONES: vuelta51_censo_colisiones.py, fc sin diferencias: 3388
+  leidos, 3191 pares resueltos, 0 vigentes, 255 auto-pares.
+- DUPLICADAS: aristas_duplicadas_tras_resolver.py, fc sin diferencias,
+  927 grupos y 734 nodos.
+- ESTADO: vuelta31_estado.py corrido por mi: 71 operaciones todas
+  LISTA, 0 dependencias rotas, 672 entradas, y el grafo 3853/3272/581
+  con enlaces 17490. UNA VARA MIA DICHA: mi primera cuenta cruda de
+  enlaces dio 15086 porque sume solo los vivos; la celda usa la vara
+  del instrumento (previos mas siguientes sobre TODOS los nodos, linea
+  192 del script) y con ella calza 17490. No es discrepancia, son dos
+  varas, y la publicada es la del instrumento.
+- BARRIDO: barrido_titulos_tallados.py corrido por mi da fc sin
+  diferencias contra SALIDA_V63_BARRIDO_CIERRE.txt: 407 barridos, ROJO
+  32, AMBAR 0, ROTULADO 35, CENSO 218, ILEGIBLE 1. La diferencia de la
+  apertura (390 contra 387) comprobada: los tres .py del acta 62
+  (_auditor_v62_ciega_pasos, _auditor_v62_cotejo_varas,
+  _auditor_v62_cuenta_tramo6), leidos del stat del commit 630c6d19.
+- GATE 0 Y SUITES, CORRIDA MIA: scripts/run_phase1.py
+  --reaplico-curaduria GATE 0 OK; ciclo de tres entero (71 etiquetas
+  re-aplicadas, 6 assets mas manifest) y arbol limpio tras restaurar
+  phase1_run_log.json (mi log, mismo manejo declarado de las actas
+  previas); motor 25/25 con python engine/run_all_tests.py; web 80
+  ficheros, 1030 pasadas, 3 saltadas; tsc CERO lineas.
+- PROMESAS DE MARCADO: comprobar_promesas_de_marcado.py corrido por mi
+  con los dos planes V63: 2 promesas, 2 CUMPLIDAS, 0 INCUMPLIDAS.
+- CENSO DE PLANTILLAS: censo_de_plantillas_talladas.py corrido por mi:
+  CERO TALLADOS sobre los 20 de nombre estable, 297 excluidos por marca
+  de corrida sobre 312 ficheros de scripts/loop. Y generar_plan_del_lote.py
+  abierto: la correccion 5 esta enumerada en el docstring con nota
+  fechada de hoy, --operacion REQUERIDO y los cuatro insumos con
+  ausencia declarada, que son las dos condiciones del carril del acta
+  61 (D2).
+- CUENTA INDEPENDIENTE DE LAS DOS FUSIONES (_auditor_v63_cuenta.py, sin
+  reusar los verificadores del ejecutor): 22 comprobaciones y CERO
+  fallos. OP-M-03-I: superviviente vivo con 6 pasos y 3 condiciones,
+  alias y merged_originals cargando al muerto, absorbido deprecado con
+  sus 4 pasos intactos, el nodo propio del punto brillante VIVO con sus
+  5 pasos, SIN el id muerto en todo su json, nombrando al superviviente
+  en nodos_previos y nombrado por el en nodos_siguientes. OP-M-02-PROG:
+  superviviente vivo con 5 pasos y 2 condiciones, Affirm y Activate en
+  el paso 5, absorbido deprecado con sus 3 pasos intactos, y el testigo
+  pensamiento_h2h nombrando al superviviente UNA vez, al muerto CERO y
+  sin auto-arista.
+- NOMINA DE OP-U-02: las 53 filas de NOMINA_OPU02_V63.jsonl calzan 53
+  de 53 contra las componentes ABIERTAS de MI recomputo (identidad por
+  conjunto de miembros); 47 abren sobre 201 nodos y 6 quedan fuera
+  sobre 39, con los mismos seis duenos del reporte (13 OP-M-01, 9
+  OP-M-05, 7 OP-M-05-APERTURA, 4 OP-M-04, 3 OP-D-02, 3 OP-M-03-III);
+  criterio ancho 9 tocan y 44 no.
+- OP-D-03 Y OP-D-04, POR CAMINO PROPIO: los 6 nodos de OP-D-03 VIVOS,
+  ninguno resuelve a otro, ninguno en componente alguna, y sus 8 pares
+  internos en el archivo son 8 de clase D (contados por mi sobre
+  INTRA_DOMINIO_VEREDICTOS.jsonl); los 7 de OP-D-04 resuelven a 2
+  supervivientes vivos. Las dos causas del reporte, confirmadas.
+- SHA1 DEL ANCESTRO vuelta49_fundir_tramo.py medido por mi:
+  8ea1020d074f, el del reporte.
+- CITAS DE LINEA: 03_FUSIONES.md linea 62 (EL ORDEN DE ESTA FASE,
+  vuelta 47) y lineas 226 a 228 (la frase envejecida de las CUATRO
+  exclusiones) leidas por mi; los cuatro registros adosados medidos por
+  git diff numstat: 125, 104, 98 y 47 lineas anadidas y CERO borradas.
+- CASOS POSITIVOS RE-CORRIDOS POR MI: el nuevo de mesa
+  (_v63_caso_positivo_mesa.py) con LAS NUEVE GUARDAS MORDIENDO, y el
+  heredado (vuelta57_caso_positivo.py) con LAS SEIS.
+- CASO POSITIVO DE LA CABECERA, leido de su salida: la prueba 2 mide
+  HOY 21 actos y 42 combinaciones, identicos a los planes sellados de
+  la vuelta 62; la prueba 3 con tres filas dice TRES donde la vieja
+  seguia diciendo VEINTIUNO.
+- SITIOS DE PROMESA DE LA VUELTA 62: mi corrida de _v63_sitios_promesa.py
+  dio 7 promesas y 0 cumplidas, DISTINTO del 7 y 1 publicado, y la
+  causa es MIA y va dicha: el instrumento coteja contra
+  docs/loop/REPORTE.md, que hoy ya es el de la vuelta 63; la salida del
+  ejecutor imprime su blanco (cabecera REPORTE DE LA VUELTA 62) y el
+  D8 de aquel reporte nombra a planificacion_gobierno_organizaciones_
+  familiares, miembro del acto 5, leido por mi en git show 630c6d19.
+  El 7/1/6 publicado es correcto contra su blanco.
+- LOS CINCO DEPRECADOS del cableado 12 contra 3 de OP-M-02-PROG
+  (fase_accomplish, fase_activate, fase_admit, fase_affirm,
+  seis_medios_comunicacion_cliente): los cinco DEPRECADOS hoy, medidos
+  por mi.
+
+## 2. RELECTURA CIEGA
+
+El producto de ojo de la vuelta son las dos fusiones de mesa. Imprimi
+PRIMERO los pasos y condiciones de los cinco nodos implicados desde el
+arbol de APERTURA (git show 630c6d19, _auditor_v63_ciega.py), adjudique
+superviviente y carril, y SOLO DESPUES destape los motivos y notas del
+reparto sellados en los dos planes.
+
+- NO ESTRICTA Y SE DECLARA: antes de la ciega yo ya habia leido el
+  reporte entero, que trae superviviente y carril. Lo ciego de verdad
+  fueron los TEXTOS de los nodos contra los motivos sellados.
+- COINCIDEN: 2 de 2 en el fondo. En las dos, pasos y condiciones
+  apuntan a lados opuestos (5 contra 4 y 2 contra 3; 4 contra 3 y 1
+  contra 2), o sea CHOCAN, y la pieza declarada (la adjudicacion
+  sellada de la ficha) nombra al mismo superviviente que el ejecutado.
+  En OP-M-02-PROG el cableado de hoy (12 contra 3) apunta al mismo
+  lado.
+- DISCREPANCIAS FUERA DEL MARCADO: CERO. La relectura al doble no se
+  dispara.
+
+## 3. CAIDAS DE ESTA TANDA: CERO DEL EJECUTOR DE LAS TRES ESPECIES, UNA
+##    DE ACTA DEL AUDITOR
+
+- EJECUTOR: CERO de clase, CERO de cifra publicada, CERO de reporte.
+  Toda cifra y todo nombre propio del reporte que toque calzo con mi
+  corrida. LA RACHA DE REPORTE ROMPE A CERO (venia en uno). OCTAVA
+  tanda limpia de clase o cifra.
+- AUDITOR, UNA CAIDA DE ACTA CON NOMBRE, MIA COMO ROL: el encargo que
+  el acta 62 dejo escrito dice con todas sus letras que en OP-M-02-PROG
+  la duplicada que fabrica queda para OP-S-12, repitiendo la letra de
+  una ficha del 12 ago que P.16 (decision del fundador, 14 ago)
+  contradice, y el MISMO encargo pedia en otra linea el diff de
+  duplicadas con CERO fabricadas. El ejecutor resolvio bien (D5, abajo)
+  y ningun dato se movio, pero la linea era un error del encargo y se
+  registra: caidas de acta del auditor pasan de 5 a 6.
+- MANEJOS PROPIOS SIN CIFRA PUBLICADA DE POR MEDIO: el BOM del redirect
+  de PowerShell (regenerado por cmd, el manejo del acta 62); mi primera
+  cuenta independiente adivino mal los nombres de campo del esquema del
+  nodo (pasos_recomendados por pasos_accionables) y dio 8 fallos que
+  eran mios, corregida antes de publicar; la corrida de sitios de
+  promesa contra el blanco movido (arriba); y run_phase1.py esta en
+  scripts/, no en la raiz.
+
+## 4. ADJUDICACION DE LOS DIEZ DISCUTIBLES
+
+- D1, EXIGIR --operacion Y DECLARAR INSUMOS EN EL GENERADOR ESTABLE: A
+  FAVOR por el carril del acta 61 (D2), con las dos condiciones
+  comprobadas por mi (docstring enumerado con nota fechada, marcado
+  discutible). Que el comando viejo caiga en ROJO es fallar ruidoso,
+  que es canon de la casa (banco seccion 9): un generador que sella
+  planes no puede adivinar la operacion.
+- D2, CORREGIR EL SELLADOR DOS VUELTAS SEGUIDAS: A FAVOR. La prueba 2
+  del caso positivo mide que la cabecera corregida da 21 y 42
+  IDENTICOS a los planes ya sellados: la correccion honra el conteo.
+  El riesgo de tocar el sellador es real y la mitigacion tambien esta
+  medida: el censo re-corrido da cero tallados y el texto viejo queda
+  citado entero.
+- D3, DOS INSTRUMENTOS ESTABLES ESTRENADOS Y USADOS EL MISMO DIA: A
+  FAVOR. fundir_por_plan.py es sucesor declarado POR EXTRACCION con un
+  assert por cambio (sha1 del ancestro medido por mi), y el caso
+  positivo nuevo aisla NUEVE guardas y las nueve muerden en mi corrida.
+  La alternativa real era correr el ancestro con OP-U-01 TALLADO en el
+  titulo, que es la especie que la regla 1 prohibe.
+- D4, EJECUTAR OP-M-03-I CON LA VARA DE LA FICHA ENVEJECIDA: A FAVOR.
+  Las dos vias convergen medidas hoy: el CHOCAN de las varas por forma
+  lo decide la pieza declarada (acta 53, pregunta 3), que es la
+  adjudicacion sellada, y nombra al mismo nodo. La regla general queda
+  en la pregunta 1.
+- D5, SEGUIR P.16 CONTRA LA LETRA DE LA FICHA Y DEL ENCARGO: A FAVOR.
+  P.16 es posterior (14 contra 12 de ago), es decision del fundador, su
+  punto 3 hace de OP-S-12 una verificacion de cero, y AUDITOR.md
+  seccion 3 exige cero duplicadas tras resolver como guarda de la fase
+  III. Una linea de encargo no deroga doctrina del fundador. La
+  operacion NO se rehace; el error era del encargo y esta cazado en la
+  seccion 3.
+- D6, EJECUTAR CON LAS SIMULACIONES SELLADAS DESCUADRADAS: A FAVOR por
+  la regla 1 leida entera: la simulacion sellada es una nota vieja, se
+  cita como contraste, y la de HOY se corrio y se cotejo con las tres
+  diferencias medidas y explicadas (un nodo nacido el 14 ago por
+  OP-F-04-WEI; cinco nodos hoy deprecados, comprobados por mi), y
+  ninguna cambia superviviente ni reparto. Re-sellar fichas no es del
+  ejecutor.
+- D7, SELLAR UNA PERDIDA QUE LA FICHA NIEGA: A FAVOR. El parentesis (no
+  solo para Assess y Admit) NO esta en ningun paso del superviviente de
+  hoy, medido por mi sobre el json vivo, y la pasada de perdidas de la
+  ficha es del 12 ago, ANTERIOR al contrato CAMPO PROPIO v1. La cifra
+  de perdidas se mide contra el texto de hoy; la afirmacion vieja se
+  declara como contraste. Eso no es re-abrir la ficha: es no copiarla.
+- D8, CUBIERTO CON PERDIDA SELLADA POR EL CALIFICATIVO ACCIONABLES: A
+  FAVOR, con el limite dicho: la perdida SELLADA es la mitad auditable
+  y esta; el atenuante de grafo (metricas_accionables es nodo previo
+  del superviviente, comprobado por mi en el arbol de apertura) es
+  contraste medido y NO descuenta el sello. Una perdida con atenuante
+  declarado es mas auditable que un silencio, no menos.
+- D9, CAMBIAR LA VARA DEL CENSO TRAS VER SU RESULTADO: A FAVOR con la
+  guarda cumplida: la vara final es mas estrecha, la lista DEBIL
+  publica todo lo que la estrecha deja fuera, el unico TALLADO de la
+  vara nueva tambien estaba entre los once de la vieja, y es medicion
+  re-corrible, no doctrina. Lo que la salva es la publicacion de la
+  lista DEBIL: sin ella seria fabricar la vara.
+- D10, LA CONDICION 1 CUBIERTA SIN PERDIDA SELLADA: A RELECTURA
+  CONJUNTA, mi caso escrito con la evidencia: en la MISMA vuelta,
+  OP-M-03-I sello DOS perdidas DE CONDICIONES por la especie del matiz
+  del disparador (el mismo fenomeno sin la pendiente; el mismo callejon
+  sin la imagen), y la condicion 1 de fases_de_retencion_de_clientes es
+  esa misma especie: el disparador operativo (despues de la venta) esta
+  cubierto, y el encuadre del sintoma (solo hay procesos para atraer y
+  cerrar ventas) muere sin sello. El CUBIERTO se sostiene; lo que falta
+  es el sello de la mitad que muere. El ejecutor verifica contra el
+  grafo y decide con la vara (acta 55, pregunta 5): si decide sellar,
+  correccion declarada en el plan y su registro; si decide que no, lo
+  escribe con su vara y va marcado discutible.
+
+## 5. LAS CINCO PREGUNTAS, CONTESTADAS SIN DOCTRINA NUEVA
+
+1. FICHA SELLADA CON MEDICION ENVEJECIDA: SE EJECUTA O SE RE-SELLA? La
+   regla existe por extension citable de la regla 1 (EL INSTRUMENTO
+   MANDA: una nota vieja nunca es fuente, se cita como contraste y la
+   discrepancia se declara) y del acta 53 pregunta 3 (el CHOCAN lo
+   decide la pieza declarada). LA FORMA DEBIDA, que es la que esta
+   vuelta ejecuto: las mediciones selladas de una ficha se RE-CORREN el
+   dia de la ejecucion; si TODAS las vias medidas hoy (varas por forma,
+   pieza declarada, correccion declarada si la hay) convergen en el
+   MISMO superviviente y el MISMO reparto, SE EJECUTA con la
+   divergencia declarada en el motivo; si CUALQUIER via cambia el
+   superviviente, o la pieza declarada ya no existe medida hoy, o el
+   objeto de la ficha ya fue consumado por otra operacion ejecutada y
+   auditada, NO SE EJECUTA: se trae al auditor con la medicion. Y si lo
+   consumado es el caso, la ficha no se ejecuta ni se rehace: se
+   declara CONSUMIDA por correccion declarada citando el registro que
+   la consumio (el carril del banco 9.10), porque deshacer una fusion
+   registrada y auditada seria decision de fundador. Vale para las
+   fusiones de mesa restantes con fichas del 12 ago.
+2. QUIEN MANDA ENTRE EL ENCARGO Y LA DOCTRINA POSTERIOR: la doctrina
+   del fundador. La operacion NO se rehace. El encargo se corrige a si
+   mismo en la seccion 3 de esta acta.
+3. PUEDE UN PLAN SELLAR UNA PERDIDA QUE SU FICHA NIEGA: SI, y debe. La
+   perdida se mide contra el texto de HOY con el contrato vigente; la
+   negacion de la ficha es una nota vieja que se cita como contraste
+   (regla 1). Lo contrario seria resolver la discrepancia copiando.
+4. AFINAR LA VARA ENTRE DECLARA FALTA Y MEDIDO: NO. Las dos etiquetas
+   significan cero cifras talladas, que es lo unico que el censo
+   persigue. Afinar seria doctrina de medicion sin necesidad medida; si
+   un dia la diferencia decide algo, se afina ese dia con su motivo.
+   Basta con decirlo, y ya esta dicho.
+5. VALE EL INSTRUMENTO DE TRAMOS PARA OP-U-02: SI, por extension del
+   acta 61 (el tramo es PREFIJO CON TOPE sobre nomina fijada, no
+   minimo). Los 47 que abren caben bajo el tope de cincuenta: UN TRAMO
+   UNICO Y FINAL POR AGOTAMIENTO del universo de OP-U-02, declarado al
+   abrirlo, recorrido en LOTES por vuelta entregando lo que cierre
+   entero. Lo que cambia no es la forma del tramo sino el peso del
+   acto: los abiertos van de 3 a 15 miembros, y ahi mandan las reglas
+   ya escritas (P.5 con el acto leido entero y su pregunta de UNA
+   familia o DOS contestada con el texto estable, el carril del
+   DECLARADO Y NO FUNDIDO con motivo sellado, P.8 en orden, las varas
+   por forma con su letra, el contrato CAMPO PROPIO v1). PERO SU TURNO
+   NO ES TODAVIA: ver la adjudicacion del puesto 2, abajo.
+
+## 6. HALLAZGO PROPIO DEL AUDITOR: CINCO FUSIONES DE MESA YA CONSUMIDAS
+##    POR LOS TRAMOS DE OP-U-01, DOS CON EL SUPERVIVIENTE OPUESTO
+
+Medido por mi con _auditor_v63_mesas.py (solo lectura, P.1 resolviendo
+alias, salida committeada): de las fusiones de mesa pendientes, CINCO
+tienen HOY su par resuelto a UN SOLO VIVO, o sea que su fusion ya la
+ejecuto un tramo de OP-U-01 y esta registrada y auditada:
+
+- OP-M-02-MEDIOS: seis_medios_comunicacion_cliente DEPRECADO resuelve a
+  estrategia_multicanal_bienvenida. El tramo 3 (vuelta 56, lote B, acto
+  32, registro en 03_FUSIONES.md linea 2091, perdida DE CONDICIONES
+  sellada en la 2132) fundio el par con el superviviente OPUESTO al de
+  la ficha (la ficha decia seis_medios).
+- OP-M-02-ADMIT: fase_admit DEPRECADO resuelve a fase_admit_celebracion,
+  tambien OPUESTO al superviviente de su ficha (fase_admit).
+- OP-M-02-ASSESS, OP-M-02-ACTIVATE y OP-M-02-ACCOMPLISH: consumidas con
+  el superviviente de la ficha VIVO (coinciden).
+- SIGUEN EJECUTABLES con sus dos o tres miembros vivos y su acto en los
+  CERRADOS de hoy: OP-M-02-ACCLIMATE, OP-M-03-II, OP-M-03-III,
+  OP-M-01-FUSION, OP-M-05-INDICE, OP-M-05-EDIFICIO y OP-M-05-APERTURA.
+
+ADJUDICACION, con las reglas ya escritas: las fusiones de los tramos son
+cosa juzgada (planes sellados, verificadas por las actas 56 a 62);
+deshacerlas seria decision de fundador y nadie la pide. Las cinco fichas
+consumidas NO SE EJECUTAN NI SE REHACEN: se declaran consumidas por
+correccion declarada (banco 9.10) citando cada una el registro del tramo
+que la consumio, y la divergencia de superviviente en MEDIOS y ADMIT se
+DECLARA como contraste en vez de resolverse copiando (regla 1). El
+ejecutor verifica cada una contra el grafo y el registro antes de
+escribir la correccion (protocolo de relectura conjunta). NADA del grafo
+se toca: la correccion es de registro. Y una pregunta que dejo MEDIDA
+pero no cerrada, para el registro: la nomina de la vuelta 48 incluyo
+cinco pares con dueno de mesa; no he hallado regla escrita que mandara
+excluirlos de OP-U-01, asi que no lo declaro caida de nadie, pero queda
+dicho para que el cierre de la fase 03 lo tenga delante.
+
+## 7. ADJUDICACION DEL ORDEN DEL PUESTO 2 (me toca por la decision del
+##    fundador del 19 ago, 03_FUSIONES.md linea 64, y hay criterio
+##    citable)
+
+El campo orden deja TRES empatadas en el puesto 2 de la fase 03:
+OP-U-02, OP-M-02-MEDIOS y OP-M-03-II. CONGELADOS LIBERADOS literal
+empata a las tres en cero (no quedan congelados). La vara general de la
+vuelta 47 (lo que cada una desbloquea, escrito en depende_de, medido por
+mi hoy): OP-M-02-MEDIOS desbloquea 5 (las cinco OP-M-02 de orden 3),
+OP-M-03-II desbloquea 4 (OP-M-03-ENLACES y las tres OP-M-05), OP-U-02
+desbloquea 1 (OP-E-03). EL PUESTO 2 QUEDA: OP-M-02-MEDIOS, despues
+OP-M-03-II, despues OP-U-02. Como MEDIOS esta consumida (seccion 6), su
+resolucion es la correccion declarada, y LA PRIMERA FUSION EJECUTABLE
+DEL PUESTO ES OP-M-03-II. La observacion del acta 62 (despues viene el
+puesto 2, donde vive OP-U-02) localizaba a OP-U-02 en el puesto y
+encargaba su apertura medida, que esta hecha y aprovechada: no
+adjudicaba el orden interno, que queda adjudicado hoy.
+
+## 8. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 2 relecturas ciegas de acto (fondo 2 de 2, no estricta en el
+superviviente y declarado) mas los 2 motivos y las 2 notas del reparto
+releidos enteros tras destapar, el censo de las 19 fichas OP-M-* contra
+el grafo, y unos 40 sitios re-corridos o leidos al digito (cabecera,
+marcador, recomputo, cola, colisiones, duplicadas, estado, barrido,
+Gate 0 con ciclo de tres, motor, web, tsc, promesas, censo de
+plantillas, cuenta independiente con 22 comprobaciones, nomina 53 de
+53, OP-D-03 y OP-D-04, sha1, citas de linea con numstat, casos
+positivos, sitios de promesa contra el blanco correcto, cinco
+deprecados, fichas y desbloqueos del puesto 2, fecha por dos relojes,
+commits del rango).
+
+Caidas del ejecutor en esta tanda (vuelta 63): CERO de clase, CERO de
+cifra publicada, CERO de reporte. Discrepancias de la ciega en el
+fondo: CERO en 2 de 2. Caidas del auditor: UNA de acta (la linea del
+encargo 62 contra P.16, seccion 3), mas cuatro manejos declarados sin
+cifra publicada.
+
+Acumulado: 459 relecturas, 755 puestos (mas unos 517 nodos de forma y
+unos 868 sitios de codigo), 7 caidas de clase, 26 de reporte del
+ejecutor, 13 de cifra publicada del ejecutor, 3 de cifra del auditor, 6
+de acta del auditor, 3 de procedimiento del auditor.
+
+Rachas: REPORTE EN CERO (la de la vuelta 62 no hizo serie: esta tanda
+vino limpia). CLASE O CIFRA EN CERO (octava tanda limpia).
+
+## 9. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. La ficha envejecida queda bajo la regla 1 mas el
+  acta 53 pregunta 3 por extension citable; las consumidas bajo el
+  carril de la correccion declarada (banco 9.10) y la cosa juzgada de
+  los tramos; el orden del puesto 2 bajo la vara de la vuelta 47; el
+  tramo de OP-U-02 bajo el acta 61. Ninguna regla se estrena.
+- Contradiccion sin regla de correccion: NO. La divergencia de
+  superviviente de MEDIOS y ADMIT se resuelve declarandola, que es la
+  regla de correccion existente.
+- Decision de fundador: NINGUNA SE TOMA. Nada del grafo se toca por
+  esta acta; el merge sigue siendo suyo.
+- Fallo tecnico repetido: NO. Gate 0 y las tres suites en verde en la
+  corrida del ejecutor y en la mia.
+- Credito de tanda roto: NO. Cero caidas del ejecutor de las tres
+  especies.
+- Campana consumada: NO. Quedan las fusiones de mesa ejecutables, las
+  correcciones de las consumidas, OP-U-02 entera y las fases 04 en
+  adelante.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE: encargo escrito en PROMPT_SIGUIENTE.md (registros, la
+relectura conjunta del D10 y las cinco correcciones de las consumidas
+como TAREA 1; OP-M-03-II tal como esta escrita y el tramo unico de
+OP-U-02 fijado sin fundir como TAREA 2).

@@ -1,0 +1,131 @@
+=== CENSO DE FICHAS OP-M-* CONTRA EL GRAFO DE HOY ===
+OP-M-01                fase 06_MESAS     PENDIENTE (15 resueltos distintos) | superviviente ficha: None (SIN SUPERVIVIENTE EN FICHA)
+      asignacion_recursos_en_gates:VIVO
+      decision_factory_mentality:VIVO
+      equipos_dedicados_de_proyecto:VIVO
+      estructura_de_gates:VIVO
+      estructura_gates:VIVO
+      gates_go_kill_decision_points:VIVO
+      gestion_de_portafolio_gates_go_kill:VIVO
+      gestion_portafolio_dos_niveles:VIVO
+      gestion_portafolio_foco:VIVO
+      gestion_portafolio_formal:VIVO
+      portfolio_management:VIVO
+      requisitos_gates_con_dientes:VIVO
+      revision_portafolio_periodica:VIVO
+      sistema_gates_go_kill:VIVO
+      sistema_gestion_recursos_en_gates:DEPRECADO->asignacion_recursos_en_gates
+      sistema_stage_gate:DEPRECADO->stage_gate_system
+      stage_gate_system:VIVO
+OP-M-02                fase 06_MESAS     PENDIENTE (21 resueltos distintos) | superviviente ficha: None (SIN SUPERVIVIENTE EN FICHA)
+      fase_assess:VIVO
+      fase_assess_ciclo_cliente:VIVO
+      fase_assess_experiencia_cliente:DEPRECADO->fase_assess_ciclo_cliente
+      fase_admit:DEPRECADO->fase_admit_celebracion
+      fase_admit_celebracion:VIVO
+      fase_affirm_buyers_remorse:VIVO
+      fase_activate:DEPRECADO->fase_activate_primera_impresion
+      fase_activate_primera_impresion:VIVO
+      fase_acclimate:VIVO
+      fase_acclimate_experiencia_cliente:VIVO
+      fase_acclimate_mapa_de_proceso:VIVO
+      fase_accomplish:DEPRECADO->fase_accomplish_experiencia_cliente
+      fase_accomplish_experiencia_cliente:VIVO
+      fase_adopt:VIVO
+      fase_adopt_ciclo_cliente:VIVO
+      advocacy_customer_journey:VIVO
+      incentivos_no_monetarios_advocacy:VIVO
+      fases_de_retencion_de_clientes:DEPRECADO->ocho_fases_experiencia_cliente
+      ocho_fases_experiencia_cliente:VIVO
+      seis_canales_comunicacion_assess:VIVO
+      seis_herramientas_comunicacion_fase_activate:VIVO
+      seis_herramientas_comunicacion_celebracion:VIVO
+      estrategia_multicanal_bienvenida:VIVO
+      regalos_estrategicos_personalizados:VIVO
+      regalos_estrategicos_sorpresa:DEPRECADO->regalos_estrategicos_personalizados
+      sorprender_cliente_estrategico:VIVO
+      welcome_call_cliente_veterano:VIVO
+      seis_medios_comunicacion_cliente:DEPRECADO->estrategia_multicanal_bienvenida
+OP-M-03                fase 06_MESAS     SIN nomina de nodos
+OP-M-04                fase 06_MESAS     PENDIENTE (4 resueltos distintos) | superviviente ficha: identificar_consejo_asesores (fusion 367) y formalizar_junta_asesora (fusion 328) (DEPRECADO O AUSENTE)
+      formalize_advisory_board:VIVO
+      formalizar_junta_asesora:VIVO
+      identificar_junta_asesores:VIVO
+      identificar_consejo_asesores:VIVO
+OP-M-05                fase 06_MESAS     PENDIENTE (9 resueltos distintos) | superviviente ficha: None (SIN SUPERVIVIENTE EN FICHA)
+      customer_development_modelo:VIVO
+      customer_discovery:VIVO
+      customer_discovery_cuatro_fases:VIVO
+      customer_discovery_get_out_of_building:VIVO
+      customer_discovery_introduccion:VIVO
+      customer_discovery_overview:VIVO
+      desarrollo_de_clientes_customer_development:VIVO
+      get_out_of_the_building:VIVO
+      manifiesto_regla1_hechos_fuera_del_edificio:VIVO
+OP-M-02-PROG           fase 03_FUSIONES  CONSUMIDO (resuelven a 1 vivo) | superviviente ficha: ocho_fases_experiencia_cliente (VIVO)
+      ocho_fases_experiencia_cliente:VIVO
+      fases_de_retencion_de_clientes:DEPRECADO->ocho_fases_experiencia_cliente
+OP-M-02-MEDIOS         fase 03_FUSIONES  CONSUMIDO (resuelven a 1 vivo) | superviviente ficha: seis_medios_comunicacion_cliente (DEPRECADO O AUSENTE)
+      seis_medios_comunicacion_cliente:DEPRECADO->estrategia_multicanal_bienvenida
+      estrategia_multicanal_bienvenida:VIVO
+OP-M-02-ASSESS         fase 03_FUSIONES  CONSUMIDO (resuelven a 1 vivo) | superviviente ficha: fase_assess_ciclo_cliente (VIVO)
+      fase_assess_ciclo_cliente:VIVO
+      fase_assess_experiencia_cliente:DEPRECADO->fase_assess_ciclo_cliente
+OP-M-02-ADMIT          fase 03_FUSIONES  CONSUMIDO (resuelven a 1 vivo) | superviviente ficha: fase_admit (DEPRECADO O AUSENTE)
+      fase_admit:DEPRECADO->fase_admit_celebracion
+      fase_admit_celebracion:VIVO
+OP-M-02-ACTIVATE       fase 03_FUSIONES  CONSUMIDO (resuelven a 1 vivo) | superviviente ficha: fase_activate_primera_impresion (VIVO)
+      fase_activate_primera_impresion:VIVO
+      fase_activate:DEPRECADO->fase_activate_primera_impresion
+OP-M-02-ACCLIMATE      fase 03_FUSIONES  PENDIENTE (2 resueltos distintos) | superviviente ficha: fase_acclimate_experiencia_cliente (VIVO)
+      fase_acclimate_experiencia_cliente:VIVO
+      fase_acclimate_mapa_de_proceso:VIVO
+OP-M-02-ACCOMPLISH     fase 03_FUSIONES  CONSUMIDO (resuelven a 1 vivo) | superviviente ficha: fase_accomplish_experiencia_cliente (VIVO)
+      fase_accomplish_experiencia_cliente:VIVO
+      fase_accomplish:DEPRECADO->fase_accomplish_experiencia_cliente
+OP-M-03-I              fase 03_FUSIONES  CONSUMIDO (resuelven a 1 vivo) | superviviente ficha: pivotar_o_perseverar (VIVO)
+      pivotar_o_perseverar:VIVO
+      decision_pivote_perseverar:DEPRECADO->pivotar_o_perseverar
+OP-M-03-II             fase 03_FUSIONES  PENDIENTE (2 resueltos distintos) | superviviente ficha: pivote_o_proceder (VIVO)
+      pivote_o_proceder:VIVO
+      pivotar_o_proceder:VIVO
+OP-M-03-III            fase 03_FUSIONES  PENDIENTE (3 resueltos distintos) | superviviente ficha: pivote_estrategico (VIVO)
+      pivote_estrategico:VIVO
+      pivote_startup:VIVO
+      pivotes_e_iteraciones:VIVO
+OP-M-03-ENLACES        fase 04_ENLACES   PENDIENTE (3 resueltos distintos) | superviviente ficha: None (SIN SUPERVIVIENTE EN FICHA)
+      pivotar_o_perseverar:VIVO
+      pivote_o_proceder:VIVO
+      pivote_estrategico:VIVO
+OP-M-01-FUSION         fase 03_FUSIONES  PENDIENTE (5 resueltos distintos) | superviviente ficha: sistema_gates_go_kill (VIVO)
+      sistema_gates_go_kill:VIVO
+      gates_go_kill_decision_points:VIVO
+      requisitos_gates_con_dientes:VIVO
+      estructura_gates:VIVO
+      estructura_de_gates:VIVO
+OP-M-01-ESLABONES      fase 04_ENLACES   PENDIENTE (3 resueltos distintos) | superviviente ficha: None (SIN SUPERVIVIENTE EN FICHA)
+      sistema_stage_gate:DEPRECADO->stage_gate_system
+      sistema_gates_go_kill:VIVO
+      asignacion_recursos_en_gates:VIVO
+OP-M-05-INDICE         fase 03_FUSIONES  PENDIENTE (3 resueltos distintos) | superviviente ficha: customer_discovery (VIVO)
+      customer_discovery:VIVO
+      customer_discovery_cuatro_fases:VIVO
+      customer_discovery_overview:VIVO
+OP-M-05-EDIFICIO       fase 03_FUSIONES  PENDIENTE (3 resueltos distintos) | superviviente ficha: customer_discovery_get_out_of_building (VIVO)
+      customer_discovery_get_out_of_building:VIVO
+      get_out_of_the_building:VIVO
+      manifiesto_regla1_hechos_fuera_del_edificio:VIVO
+OP-M-05-APERTURA       fase 03_FUSIONES  PENDIENTE (3 resueltos distintos) | superviviente ficha: customer_validation (VIVO)
+      customer_validation:VIVO
+      filosofia_customer_validation:VIVO
+      introduccion_validacion_clientes:VIVO
+OP-M-01-SEXTO          fase 04_ENLACES   PENDIENTE (2 resueltos distintos) | superviviente ficha: None (SIN SUPERVIVIENTE EN FICHA)
+      gestion_de_portafolio_gates_go_kill:VIVO
+      sistema_gates_go_kill:VIVO
+
+=== PUESTO 2 DE LA FASE 03, LA VARA GENERAL DE LA VUELTA 47 ===
+empatadas por campo orden == 2 en fase 03_FUSIONES:
+   ['OP-U-02', 'OP-M-02-MEDIOS', 'OP-M-03-II']
+  OP-U-02            desbloquea 1: ['OP-E-03']
+  OP-M-02-MEDIOS     desbloquea 5: ['OP-M-02-ASSESS', 'OP-M-02-ADMIT', 'OP-M-02-ACTIVATE', 'OP-M-02-ACCLIMATE', 'OP-M-02-ACCOMPLISH']
+  OP-M-03-II         desbloquea 4: ['OP-M-03-ENLACES', 'OP-M-05-INDICE', 'OP-M-05-EDIFICIO', 'OP-M-05-APERTURA']
