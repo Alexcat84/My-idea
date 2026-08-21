@@ -1,0 +1,407 @@
+==============================================================================
+LOS NODOS PUENTE DEL TRAMO, ACTO POR ACTO (P.10, la mitad diagnostica de P.5)
+  tramo      : docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+  clave      : orden_universo
+  veredictos : 3186 pares indexados por par RESUELTO (P.1)
+==============================================================================
+
+------------------------------------------------------------------------------
+ACTO 1 | miembros 15 | combinaciones 105 | A 20 | D 10 | SIN VEREDICTO 75
+  NODOS PUENTE: 3 | TRIANGULOS PUENTE (A mas A mas D): 6
+     errores_como_consecuencia hace de puente en 4 triangulo(s):
+        A con error_humano_vs_falla_mecanica y A con falla_sistemica_vs_error_individual, y esos dos son D entre si (puesto 2403)
+        A con new_view_human_error y A con riesgos_del_enfoque_en_error_humano, y esos dos son D entre si (puesto 2299)
+        A con new_view_human_error y A con seduccion_modelo_persona, y esos dos son D entre si (puesto 2331)
+        A con riesgos_del_enfoque_en_error_humano y A con seduccion_modelo_persona, y esos dos son D entre si (puesto 2228)
+     human_error_como_sintoma hace de puente en 1 triangulo(s):
+        A con error_humano_vs_falla_mecanica y A con falla_sistemica_vs_error_individual, y esos dos son D entre si (puesto 2403)
+     vieja_vision_vs_nueva_vision_seguridad hace de puente en 1 triangulo(s):
+        A con new_view_human_error y A con new_view_vs_old_view, y esos dos son D entre si (puesto 2220)
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 2220   new_view_human_error  contra  new_view_vs_old_view
+     puesto 2227   new_view_human_error  contra  old_view_vs_new_view_human_error
+     puesto 2228   riesgos_del_enfoque_en_error_humano  contra  seduccion_modelo_persona
+     puesto 2299   new_view_human_error  contra  riesgos_del_enfoque_en_error_humano
+     puesto 2313   human_error_como_sintoma  contra  old_view_vs_new_view_human_error
+     puesto 2331   new_view_human_error  contra  seduccion_modelo_persona
+     puesto 2364   human_error_como_sintoma  contra  new_view_vs_old_view
+     puesto 2366   new_view_vs_old_view  contra  riesgos_del_enfoque_en_error_humano
+     puesto 2367   enfoque_situacional_vs_personal  contra  new_view_vs_old_view
+     puesto 2403   error_humano_vs_falla_mecanica  contra  falla_sistemica_vs_error_individual
+  pares SIN VEREDICTO ESCRITO: 75 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 3 | miembros 10 | combinaciones 45 | A 14 | D 0 | SIN VEREDICTO 31
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 31 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 5 | miembros 8 | combinaciones 28 | A 9 | D 0 | SIN VEREDICTO 19
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 19 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 7 | miembros 6 | combinaciones 15 | A 7 | D 0 | SIN VEREDICTO 8
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 8 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 8 | miembros 6 | combinaciones 15 | A 9 | D 0 | SIN VEREDICTO 6
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 6 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 9 | miembros 6 | combinaciones 15 | A 7 | D 0 | SIN VEREDICTO 8
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 8 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 10 | miembros 6 | combinaciones 15 | A 6 | D 4 | SIN VEREDICTO 5
+  NODOS PUENTE: 2 | TRIANGULOS PUENTE (A mas A mas D): 3
+     refinar_sales_roadmap hace de puente en 2 triangulo(s):
+        A con hoja_de_ruta_de_ventas y A con sales_roadmap_vs_sales_force, y esos dos son D entre si (puesto 1330)
+        A con sales_roadmap y A con sales_roadmap_vs_sales_force, y esos dos son D entre si (puesto 1306)
+     sales_roadmap_vs_sales_force hace de puente en 1 triangulo(s):
+        A con customer_validation_sales_roadmap y A con refinar_sales_roadmap, y esos dos son D entre si (puesto 1023)
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 872    customer_validation_sales_roadmap  contra  hoja_de_ruta_de_ventas
+     puesto 1023   customer_validation_sales_roadmap  contra  refinar_sales_roadmap
+     puesto 1306   sales_roadmap  contra  sales_roadmap_vs_sales_force
+     puesto 1330   hoja_de_ruta_de_ventas  contra  sales_roadmap_vs_sales_force
+  pares SIN VEREDICTO ESCRITO: 5 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 11 | miembros 5 | combinaciones 10 | A 5 | D 2 | SIN VEREDICTO 3
+  NODOS PUENTE: 2 | TRIANGULOS PUENTE (A mas A mas D): 2
+     human_in_the_loop_ia hace de puente en 1 triangulo(s):
+        A con mitigar_falling_asleep_wheel y A con principio_humano_en_el_loop, y esos dos son D entre si (puesto 1541)
+     mitigar_falling_asleep_wheel hace de puente en 1 triangulo(s):
+        A con human_in_the_loop_ia y A con riesgo_sobredependencia_ia, y esos dos son D entre si (puesto 1496)
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 1496   human_in_the_loop_ia  contra  riesgo_sobredependencia_ia
+     puesto 1541   mitigar_falling_asleep_wheel  contra  principio_humano_en_el_loop
+  pares SIN VEREDICTO ESCRITO: 3 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 12 | miembros 5 | combinaciones 10 | A 5 | D 1 | SIN VEREDICTO 4
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 1374   cash_burn_calculation  contra  validacion_hipotesis_ingresos
+  pares SIN VEREDICTO ESCRITO: 4 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 13 | miembros 5 | combinaciones 10 | A 8 | D 0 | SIN VEREDICTO 2
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 2 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 14 | miembros 5 | combinaciones 10 | A 7 | D 0 | SIN VEREDICTO 3
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 3 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 15 | miembros 5 | combinaciones 10 | A 5 | D 0 | SIN VEREDICTO 5
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 5 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 16 | miembros 5 | combinaciones 10 | A 4 | D 0 | SIN VEREDICTO 6
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 6 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 17 | miembros 5 | combinaciones 10 | A 6 | D 2 | SIN VEREDICTO 2
+  NODOS PUENTE: 1 | TRIANGULOS PUENTE (A mas A mas D): 2
+     estrategia_de_innovacion_arenas hace de puente en 2 triangulo(s):
+        A con estrategia_de_innovacion_de_producto y A con estrategia_de_innovacion_y_tecnologia, y esos dos son D entre si (puesto 530)
+        A con estrategia_de_innovacion_y_tecnologia y A con estrategia_innovacion_producto, y esos dos son D entre si (puesto 863)
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 530    estrategia_de_innovacion_de_producto  contra  estrategia_de_innovacion_y_tecnologia
+     puesto 863    estrategia_de_innovacion_y_tecnologia  contra  estrategia_innovacion_producto
+  pares SIN VEREDICTO ESCRITO: 2 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 18 | miembros 4 | combinaciones 6 | A 3 | D 0 | SIN VEREDICTO 3
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 3 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 19 | miembros 4 | combinaciones 6 | A 3 | D 0 | SIN VEREDICTO 3
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 3 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 20 | miembros 4 | combinaciones 6 | A 3 | D 1 | SIN VEREDICTO 2
+  NODOS PUENTE: 1 | TRIANGULOS PUENTE (A mas A mas D): 1
+     colaboracion_cadena_suministro hace de puente en 1 triangulo(s):
+        A con compartir_datos_cadena_suministro y A con efecto_bullwhip, y esos dos son D entre si (puesto 994)
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 994    compartir_datos_cadena_suministro  contra  efecto_bullwhip
+  pares SIN VEREDICTO ESCRITO: 2 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 21 | miembros 4 | combinaciones 6 | A 3 | D 2 | SIN VEREDICTO 1
+  NODOS PUENTE: 2 | TRIANGULOS PUENTE (A mas A mas D): 2
+     fin_precio_como_criterio_unico hace de puente en 1 triangulo(s):
+        A con compra_por_precio_mas_bajo_como_error y A con relaciones_largo_plazo_con_proveedores, y esos dos son D entre si (puesto 2927)
+     relaciones_largo_plazo_con_proveedores hace de puente en 1 triangulo(s):
+        A con fin_precio_como_criterio_unico y A con relacion_largo_plazo_proveedor_unico, y esos dos son D entre si (puesto 3102)
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 2927   compra_por_precio_mas_bajo_como_error  contra  relaciones_largo_plazo_con_proveedores
+     puesto 3102   fin_precio_como_criterio_unico  contra  relacion_largo_plazo_proveedor_unico
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 22 | miembros 4 | combinaciones 6 | A 3 | D 0 | SIN VEREDICTO 3
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 3 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 23 | miembros 4 | combinaciones 6 | A 4 | D 1 | SIN VEREDICTO 1
+  NODOS PUENTE: 1 | TRIANGULOS PUENTE (A mas A mas D): 1
+     pool_opciones_empleados hace de puente en 1 triangulo(s):
+        A con employee_pool_esop y A con option_pool_negociacion, y esos dos son D entre si (puesto 1193)
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 1193   employee_pool_esop  contra  option_pool_negociacion
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 24 | miembros 4 | combinaciones 6 | A 3 | D 2 | SIN VEREDICTO 1
+  NODOS PUENTE: 1 | TRIANGULOS PUENTE (A mas A mas D): 2
+     diseno_experimentos_pass_fail hace de puente en 2 triangulo(s):
+        A con disenar_tests_pass_fail y A con realizar_pruebas_pasa_no_pasa, y esos dos son D entre si (puesto 1346)
+        A con diseno_experimentos_hipotesis y A con realizar_pruebas_pasa_no_pasa, y esos dos son D entre si (puesto 636)
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 636    diseno_experimentos_hipotesis  contra  realizar_pruebas_pasa_no_pasa
+     puesto 1346   disenar_tests_pass_fail  contra  realizar_pruebas_pasa_no_pasa
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 25 | miembros 4 | combinaciones 6 | A 5 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 26 | miembros 4 | combinaciones 6 | A 3 | D 0 | SIN VEREDICTO 3
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 3 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 27 | miembros 4 | combinaciones 6 | A 3 | D 1 | SIN VEREDICTO 2
+  NODOS PUENTE: 1 | TRIANGULOS PUENTE (A mas A mas D): 1
+     fase_diseno_prototipado_modelos hace de puente en 1 triangulo(s):
+        A con proceso_ideacion_modelo_negocio y A con prototipado_modelos_negocio, y esos dos son D entre si (puesto 572)
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 572    proceso_ideacion_modelo_negocio  contra  prototipado_modelos_negocio
+  pares SIN VEREDICTO ESCRITO: 2 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 29 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 30 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 31 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 32 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 33 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 34 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 35 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 36 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 37 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 38 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 39 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 40 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 41 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 42 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 43 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 44 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 45 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 46 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 47 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 49 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 50 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 51 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 53 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+==============================================================================
+RESUMEN DEL TRAMO
+acto   miem   combin   A     D     sin_ver  puentes  triangulos
+1      15     105      20    10    75       3        6
+3      10     45       14    0     31       0        0
+5      8      28       9     0     19       0        0
+7      6      15       7     0     8        0        0
+8      6      15       9     0     6        0        0
+9      6      15       7     0     8        0        0
+10     6      15       6     4     5        2        3
+11     5      10       5     2     3        2        2
+12     5      10       5     1     4        0        0
+13     5      10       8     0     2        0        0
+14     5      10       7     0     3        0        0
+15     5      10       5     0     5        0        0
+16     5      10       4     0     6        0        0
+17     5      10       6     2     2        1        2
+18     4      6        3     0     3        0        0
+19     4      6        3     0     3        0        0
+20     4      6        3     1     2        1        1
+21     4      6        3     2     1        2        2
+22     4      6        3     0     3        0        0
+23     4      6        4     1     1        1        1
+24     4      6        3     2     1        1        2
+25     4      6        5     0     1        0        0
+26     4      6        3     0     3        0        0
+27     4      6        3     1     2        1        1
+29     3      3        2     0     1        0        0
+30     3      3        2     0     1        0        0
+31     3      3        2     0     1        0        0
+32     3      3        2     0     1        0        0
+33     3      3        2     0     1        0        0
+34     3      3        2     0     1        0        0
+35     3      3        2     0     1        0        0
+36     3      3        2     0     1        0        0
+37     3      3        2     0     1        0        0
+38     3      3        2     0     1        0        0
+39     3      3        2     0     1        0        0
+40     3      3        2     0     1        0        0
+41     3      3        2     0     1        0        0
+42     3      3        2     0     1        0        0
+43     3      3        2     0     1        0        0
+44     3      3        2     0     1        0        0
+45     3      3        2     0     1        0        0
+46     3      3        2     0     1        0        0
+47     3      3        2     0     1        0        0
+49     3      3        2     0     1        0        0
+50     3      3        2     0     1        0        0
+51     3      3        2     0     1        0        0
+53     3      3        2     0     1        0        0
+
+  actos mirados                         : 47
+  actos CON al menos un nodo puente     : 9
+  actos SIN ningun nodo puente          : 38
+  actos con algun par SIN veredicto     : 47
+
+LO QUE ESTO NO HACE: no elige salida de P.10 ni funde ni declara nada.
+FIN
