@@ -1,0 +1,48 @@
+=== GATE0
+  [99.2] crosby_estilo_ballet_vs_hockey  <->  estilo_gerencial_ballet_vs_hockey
+  [98.7] ciclo_venta_calidad_franquicia  <->  ciclo_ventas_calidad_franquicia
+  [97.6] capacidad_de_proceso  <->  capacidad_del_proceso
+  [97.3] control_estadistico_de_procesos  <->  control_estadistico_del_proceso
+  [97.2] carta_de_credito_letter_of_credit  <->  letters_of_credit
+  [97.1] costo_de_mala_calidad_3  <->  costo_mala_calidad_copq
+  [97.0] vehiculos_combustibles_alternativos  <->  vehiculos_combustibles_alternativos_2
+  [96.8] causas_comunes_causas_especiales  <->  causas_comunes_vs_especiales
+  [96.7] investigacion_incidentes  <->  investigacion_incidentes_2
+  [96.4] definicion_calidad_conformidad_requisitos_2  <->  definicion_calidad_conformidad_requisitos_3
+  [96.3] involucramiento_sindical  <->  involucramiento_sindical_calidad
+  [96.1] decision_aptitud_para_uso  <->  decision_aptitud_uso
+  [95.7] eliminacion_causas_error_3  <->  eliminacion_causas_error_4
+
+GATE 0: OK
+=== ETIQUETAS
+      + Adapta tus Puntos de Control
+
+71 etiquetas cambian; 0 ya estaban en su forma final.
+escrito: dataset\metadata\master_graph.json (71 etiquetas)
+escrito: web\lib\assets\master_graph.json (0 etiquetas)
+=== SYNC
+  prompts.json: 60059 bytes, sha256=26e0ff92ad0a... (12 prompts)
+  semantic_index.json: 24282332 bytes, sha256=d70adc1db255...
+
+Manifest escrito en web\lib\assets\manifest.json
+Assets sincronizados: ['master_graph.json', 'preguntas_cache.json', 'node_families.json', 'entry_seeds.json', 'prompts.json', 'semantic_index.json']
+=== RESTAURO LOG
+=== MOTOR
+  OK    test_salto_semantico.py (0.2s)
+  OK    test_sigamos_salida.py (0.3s)
+  OK    test_validador_esquema.py (0.3s)
+  OK    test_verificador_huerfanos.py (0.1s)
+
+TODOS LOS TESTS PASARON (25/25).
+=== WEB
+
+ RUN  v4.1.10 C:/Users/AlexDesk/Documents/I have an idea/web
+
+
+ Test Files  80 passed (80)
+      Tests  1030 passed | 3 skipped (1033)
+   Start at  22:26:55
+   Duration  18.94s (transform 42.42s, setup 0ms, import 128.15s, tests 9.62s, environment 16ms)
+
+=== TSC
+=== TSC FIN

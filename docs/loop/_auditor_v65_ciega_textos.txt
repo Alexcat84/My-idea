@@ -1,0 +1,147 @@
+===============================================================================================
+ID: causas_comunes_vs_especiales | fase: ejecucion | dominio: quality
+TITULO: Causas Comunes vs Causas Especiales de Variación
+RESUMEN: Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera 
+PASOS (6):
+   1. Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada
+   2. Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos
+   3. Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales
+   4. Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia
+   5. Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas
+   6. Documentar los hallazgos y definir una acción distinta para cada tipo de causa
+CONDICIONES (3):
+   1. Cuando estás por culparte a ti mismo o a alguien que te ayuda por un defecto o error sin haber verificado si es del sistema
+   2. Cuando observas variaciones inusuales en tus indicadores de desempeño, ventas, calidad o quejas
+   3. Cuando necesitas decidir si conviene intervenir sobre el proceso completo o sobre un caso puntual
+ENTREGABLE: Gráfico de corrida o de control con los puntos clasificados como causa común o especial y un plan de acción diferenciado para cada tipo.
+previos: 5 siguientes: 9
+===============================================================================================
+ID: distincion_causas_comunes_especiales | fase: ejecucion | dominio: quality
+TITULO: Distinción entre Causas Comunes y Especiales de Variación
+RESUMEN: Un trabajador que ha alcanzado control estadístico de su trabajo no debe ser culpado por defectos que provienen del sistema (causas comunes). Solo si su gráfico de control detecta una causa especial, el trabajador debe identificarla y eliminarla. Culpar a alguien por un desempeño que no puede controlar genera frustración y menor producción.
+PASOS (4):
+   1. Determinar si el trabajo del empleado está en estado de control estadístico usando gráficos de control
+   2. Si está en control, no informar sobre defectos individuales; enfocar el esfuerzo en el sistema
+   3. Si hay una causa especial detectada, ayudar al trabajador a identificarla y eliminarla
+   4. Evitar sanciones a trabajadores por fallas atribuibles al sistema
+CONDICIONES (2):
+   1. Cuando se evalúa el desempeño individual de un trabajador
+   2. Cuando se detectan defectos y se debe decidir si corregir al individuo o al sistema
+ENTREGABLE: Un gráfico de control interpretado correctamente que distinga causas comunes de especiales
+previos: 4 siguientes: 5
+===============================================================================================
+ID: distincion_causas_comunes_especiales_2 | fase: ejecucion | dominio: quality
+TITULO: Distinción entre Causas Comunes y Causas Especiales
+RESUMEN: Uno de los errores mas costosos que puedes cometer es tratar cada defecto o problema individual como si tuviera una causa rastreable y puntual, cuando en realidad viene de causas comunes propias de un sistema estable. Eso te lleva a investigar sintomas sin resultado, porque no reduce el nivel de defectos: solo un cambio en el sistema (diseño, método, materiales) puede lograrlo cuando las causas so
+PASOS (4):
+   1. Antes de investigar un defecto puntual, revisa si tu proceso esta en control estadistico usando una carta de control
+   2. Si el proceso esta en control, reconoce que las variaciones, incluidos los defectos, vienen de causas comunes del sistema
+   3. Evita investigar cada caso como si fuera una causa especial cuando el proceso es estable
+   4. Dirige tu esfuerzo de mejora hacia un cambio estructural del sistema, no hacia rastrear caso por caso
+CONDICIONES (2):
+   1. Cuando estes investigando cada defecto por separado sin haber revisado antes si el proceso esta en control
+   2. Cuando el nivel de defectos se mantenga igual a pesar de tus esfuerzos continuos de corrección puntual
+ENTREGABLE: Una clasificación clara de las causas (comunes o especiales) y un plan de mejora del sistema si las causas son comunes
+previos: 1 siguientes: 1
+===============================================================================================
+ID: distincion_causas_comunes_especiales_incidentes | fase: ejecucion | dominio: quality
+TITULO: Distinción entre Causas Comunes y Especiales en el Análisis de Accidentes
+RESUMEN: Antes de atribuir un accidente o falla a la negligencia de una persona específica, es fundamental determinar estadísticamente si la causa pertenece al sistema (causa común) o a una condición especial y aislada. Deming argumenta que la mayoría de los accidentes (posiblemente 99%) provienen del sistema mismo y solo una fracción de la negligencia individual. Sin pensamiento estadístico, las organizac
+PASOS (5):
+   1. Recopilar datos históricos de incidentes o accidentes en un gráfico de control
+   2. Determinar si los eventos caen dentro de los límites de variación esperada del sistema
+   3. Evitar conclusiones apresuradas atribuyendo el evento a negligencia individual sin análisis estadístico
+   4. Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo
+   5. Documentar la proporción estimada de causas sistémicas vs especiales para guiar la mejora
+CONDICIONES (2):
+   1. Cuando ocurren accidentes, fallas o resultados desfavorables recurrentes en un proceso u organización
+   2. Si existe la tentación de culpar directamente a un trabajador sin análisis previo
+ENTREGABLE: Análisis estadístico documentado que clasifique incidentes en causas comunes vs especiales, con recomendaciones de acción correctiva
+previos: 1 siguientes: 1
+===============================================================================================
+ID: distincion_causas_especiales_comunes | fase: ejecucion | dominio: quality
+TITULO: Distinción entre Causas Especiales y Comunes (Teorema de Nelson)
+RESUMEN: Ajustar un proceso que está en control estadístico, reaccionando a cada falla como si tuviera una causa especial obvia, solo genera más problemas, no menos. Apagar incendios o corregir una causa especial detectada por un punto fuera de control únicamente regresa el proceso a donde debería haber estado, sin ser una mejora real. Es crucial diferenciar entre variación de causa común (del sistema) y c
+PASOS (4):
+   1. Antes de ajustar un proceso, verificar si está en control estadístico
+   2. Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+   3. Evitar tratar cada defecto individual como causa especial si el sistema es estable
+   4. Usar métodos estadísticos (Cap. 11) para decidir si una intervención es necesaria
+CONDICIONES (2):
+   1. Cuando se detecta un defecto y se quiere ajustar el proceso inmediatamente sin análisis previo
+   2. Cuando un supervisor reacciona a cada error individual sin evaluar si el sistema es estable
+ENTREGABLE: Gráfico de control del proceso con identificación clara de causas comunes vs especiales antes de tomar acción correctiva
+previos: 1 siguientes: 1
+===============================================================================================
+ID: identificacion_causa_raiz_no_culpa_individual | fase: ejecucion | dominio: quality
+TITULO: Identificación de la causa raíz del problema en lugar de culpar al individuo
+RESUMEN: El caso del banco muestra que, antes de aplicar métodos estadísticos, los errores generaban conflictos entre turnos, departamentos y personas ('la máquina tiene la culpa'), deteriorando la moral. Al usar métodos estadísticos que rastrean el origen real de la variación (departamento, turno, máquina, operador), la organización puede identificar el problema estructural real en lugar de señalar a un i
+PASOS (5):
+   1. Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).
+   2. Analizar los datos para distinguir entre variación común del sistema y causas especiales atribuibles a un caso puntual.
+   3. Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.
+   4. Diseñar acciones correctivas dirigidas a la causa estructural identificada.
+   5. Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.
+CONDICIONES (2):
+   1. Si existe conflicto interno o baja moral por atribución de culpas ante errores recurrentes.
+   2. Si se necesita implementar un sistema de mejora continua basado en datos en lugar de sanciones.
+ENTREGABLE: Un sistema de registro y análisis estadístico que permite localizar la causa raíz de los errores sin atribuir culpa individual, junto con un plan de acción correctiva.
+previos: 4 siguientes: 2
+===============================================================================================
+ID: moral_y_sistema_no_individuo | fase: ejecucion | dominio: quality
+TITULO: Enfoque en el Problema, no en el Individuo
+RESUMEN: Cuando las tasas de rechazo aumentan sin métodos estadísticos, los empleados tienden a culparse mutuamente (turno contra turno, departamento contra departamento), generando discordia y baja moral. Con métodos estadísticos, la causa de una tasa anormal puede rastrearse automáticamente hasta el departamento, turno, máquina u operador, y finalmente hasta el verdadero problema. La filosofía correcta r
+PASOS (4):
+   1. Implementar métodos estadísticos que permitan rastrear el origen real de una desviación
+   2. Comunicar a los equipos que el objetivo es identificar problemas, no culpables
+   3. Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo
+   4. Fomentar la colaboración entre turnos y departamentos para resolver causas comunes
+CONDICIONES (2):
+   1. Cuando existe conflicto interno por errores o tasas de rechazo
+   2. Cuando la moral del equipo se ve afectada por señalamientos de culpa
+ENTREGABLE: Protocolo de análisis de causas que separa la identificación del problema de la evaluación del desempeño individual
+previos: 2 siguientes: 3
+===============================================================================================
+ID: politica_no_culpar_trabajador | fase: ejecucion | dominio: quality
+TITULO: Evitar Culpar al Trabajador por Fallos del Sistema
+RESUMEN: Aplicar la misma advertencia o sanción a todas las personas que cometen errores, sin distinguir entre quienes estan dentro de los limites normales de variación (afectadas por el sistema) y quienes son causas especiales, es una practica dañina que desmoraliza al equipo y no resuelve el problema real. Tu debes usar el análisis de los datos para responder de forma diferenciada y justa.
+PASOS (5):
+   1. Analizar la distribución de errores o defectos entre todas las personas usando limites de control
+   2. Identificar quien excede el limite superior como posible causa especial e investigar el contexto antes de actuar
+   3. Evitar sanciones uniformes o mensajes estándar para todos los niveles de error
+   4. Comunicar que el sistema, no la persona, es el principal responsable de la variación comun
+   5. Diseñar respuestas diferenciadas según lo que muestre el análisis de los datos
+CONDICIONES (2):
+   1. Cuando aplicas sanciones o advertencias uniformes sin analizar antes los datos
+   2. Cuando hay alta rotación o desmotivación por politicas de error que se sienten injustas
+ENTREGABLE: Una politica de manejo de errores basada en evidencia, con mensajes diferenciados según el tipo de causa
+previos: 1 siguientes: 1
+===============================================================================================
+ID: trampa_del_promedio_como_estandar | fase: ejecucion | dominio: quality
+TITULO: La Trampa del Promedio como Estándar de Desempeño
+RESUMEN: Deming muestra un error comun: usar el promedio de un grupo como limite para decidir quien tiene 'bajo desempeño' e intervenir uno por uno. Como en toda distribución la mitad de los puntos queda por debajo del promedio (eso es matematicamente inevitable), este método señala al azar a la mitad de las personas en cada periodo, sin distinguir causas puntuales de la variación normal, y eso genera frus
+PASOS (4):
+   1. Dejar de usar el promedio simple como línea de corte para intervenciones individuales
+   2. Construir un grafico de control con limites superior e inferior calculados estadisticamente
+   3. Identificar solo los puntos que caen fuera de los limites de control como candidatos a intervención
+   4. Investigar causas especiales (por ejemplo problemas de visión o de capacitación) solo en esos casos atipicos
+CONDICIONES (2):
+   1. Cuando usas el promedio del grupo como criterio para intervenir con una persona en particular
+   2. Cuando cambia cada semana quien es la persona 'señalada' sin que haya mejora real
+ENTREGABLE: Grafico de control con limites estadisticos aplicado al indicador de desempeño, y un protocolo de intervención basado en señales reales, no en el promedio
+previos: 2 siguientes: 3
+===============================================================================================
+ID: variacion_del_sistema_vs_individuo | fase: ejecucion | dominio: quality
+TITULO: Cuando la diferencia entre personas es el sistema, no la persona (límites de control)
+RESUMEN: Con ejemplos como el experimento de las canicas rojas y la comparación entre personas que hacen el mismo trabajo para ti, ves que las diferencias aparentes entre ellas casi siempre vienen del sistema en el que trabajan, no de ellas mismas. Puedes calcular límites de variación estadística (límites de control): si el desempeño de alguien cae dentro de esos límites, no tienes evidencia real de que se
+PASOS (5):
+   1. Recopila datos de desempeño de un grupo de personas que hacen un trabajo similar para ti
+   2. Calcula los límites de variación atribuibles al sistema usando teoría estadística básica
+   3. Determina si alguien cae fuera de esos límites, ya sea para bien o para mal
+   4. Para quienes están dentro de los límites, mejora el sistema en vez de calificar a la persona individualmente
+   5. Para quienes están fuera del límite, investiga las causas específicas antes de actuar
+CONDICIONES (2):
+   1. Cuando necesitas determinar si las diferencias de desempeño entre las personas que trabajan contigo son reales o producto del azar del sistema
+   2. Cuando quieres evitar decisiones injustas sobre las personas basadas en variación normal del sistema
+ENTREGABLE: Análisis estadístico de variación del sistema aplicado a la evaluación de las personas que trabajan contigo o de tu proceso
+previos: 1 siguientes: 0
