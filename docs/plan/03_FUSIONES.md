@@ -4073,3 +4073,401 @@ encargada en el apartado b) usa el carril de texto que la ficha ya uso, SIN clav
 **NO toca ni una cifra publicada arriba, NO elige ningun superviviente, NO funde nada, NO deshace
 ninguna fusion y NO re-lee ni un veredicto de las dos colisiones vigentes**, cuya **linea base sigue
 en `2`** y cuya duena sigue siendo la mesa `OP-M-03`. Registra adjudicaciones.
+
+
+---
+
+## `OP-U-02, TRAMO UNICO: EL REGISTRO DEL LOTE B` (2026-08-20, vuelta 66)
+
+**Va bajo la cabecera de tramo que la vuelta 65 adoso** (linea **3732**, cotejada hoy) y **no
+reescribe ni una linea de arriba.** **NINGUNA TABLA DE AQUI SE TECLEA** (regla 1): las del reparto
+pieza a pieza y las de piezas por absorbido **se generan del plan sellado**
+[`../loop/PLAN_V66_OPU02_LOTE_B.json`](../loop/PLAN_V66_OPU02_LOTE_B.json), las de perdidas **se
+recortan de la salida del tallador**, y las celdas de guardas y censos **se extraen por aguja** de
+las salidas de esta vuelta con `python scripts/loop/vuelta66_registro_lote_b.py`.
+
+**EL LOTE, DECLARADO AL ABRIRLO Y ENTREGADO ENTERO:** **PREFIJO SIN SALTOS** del `orden_universo` de
+lo que quedaba del tramo (el lote A cerro los actos **1** y **3**): **los actos 5, 7, 8, 9, 10 y 11,
+SEIS actos y 37 nodos.** **TRES cierran FUNDIDOS** (7, 8 y 9) y **TRES cierran `DECLARADOS Y NO
+FUNDIDOS` con motivo sellado** (5, 10 y 11).
+
+| | |
+|---|---:|
+| nodos VIVOS antes de la operacion | **3262** |
+| nodos VIVOS despues | **3247** |
+| nodos que MUEREN | **15** |
+| piezas repartidas | **107** |
+| ficheros tocados | **65** |
+| duplicadas que la propia fusion fabrico y `P.16` limpio en el mismo commit | **10** |
+| **grupos de duplicadas FABRICADOS de verdad** (diff por instrumento, apertura contra cierre) | **0** |
+| colisiones de clase **ESPERADAS**, medidas ANTES de fundir sobre el arbol de antes | **4** |
+| colisiones de clase **MEDIDAS** por el censo al cierre | **4** |
+| actos del recomputo al cierre | **75** |
+| de ellos `ABIERTOS` | **49** sobre **212** nodos |
+
+> **LAS COLISIONES CALZAN Y LA CUENTA SE MIDIO ANTES, QUE ES LA MITAD DEL PUNTO** (adjudicacion 3 del
+> encargo de esta vuelta): **esperadas 4** sobre la linea base **2** de la mesa `OP-M-03`,
+> con **2 NUEVAS** que la fusion del **acto 8** fabrica
+> (`cierre_satisfaccion_postventa` contra `cierre_segun_complejidad_venta`, y
+> `cierre_segun_complejidad_venta` contra `obtencion_compromiso`, las dos `B` contra `D`), y
+> **medidas 4: LAS MISMAS CUATRO**. **Las dos de la mesa no se tocan**, y su carril sigue
+> siendo el de la linea **1377**.
+
+### a) **EL `ACTO 7`: LA FAMILIA DEL `DMAIC` Y LA SECUENCIA UNIVERSAL DE JURAN**
+
+**Sobrevive `six_sigma_dmaic` y absorbe CINCO.** **`P.5` contestada por medicion:** los seis del
+**mismo libro** (Juran), **7 pares internos con veredicto y los 7 en `A`**, **cero `D`** y **cero
+puentes**. **La vara que elige es EL CABLEADO SOLO, y su letra es `P.8`:** la FORMA medida es
+**`CONTENIDO EMPATA`** (pasos empatan en 6 a tres bandas, condiciones en 3 a dos bandas), y entonces
+**decide el cableado solo**: **11 contra un maximo de 5**. **El superviviente pasa de 6 a
+12 pasos y de 3 a 8 condiciones.**
+
+| absorbido | pasos | condiciones | enteras | ya dichas | de `INCISO` |
+|---|---:|---:|---:|---:|---:|
+| `breakthrough_desempeno_actual` | 5 | 2 | 0 | 7 | 0 |
+| `secuencia_universal_breakthrough` | 6 | 2 | 6 | 2 | 0 |
+| `secuencia_universal_para_el_breakthrough` | 6 | 2 | 3 | 5 | 0 |
+| `seis_sigma_servicios` | 5 | 2 | 1 | 6 | 0 |
+| `six_sigma_dmaic_2` | 5 | 3 | 1 | 7 | 0 |
+| **los 5 juntos** | **27** | **11** | **11** | **27** | **0** |
+
+**El reparto, pieza a pieza:**
+
+| pieza del que muere | marca | a donde va |
+|---|---|---|
+| paso **1** de `breakthrough_desempeno_actual` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **2** de `breakthrough_desempeno_actual` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **3** de `breakthrough_desempeno_actual` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| paso **4** de `breakthrough_desempeno_actual` | `CUBIERTO` | ya lo dice el **paso 5** del superviviente |
+| paso **5** de `breakthrough_desempeno_actual` | `CUBIERTO` | ya lo dice el **paso 6** del superviviente |
+| condicion **1** de `breakthrough_desempeno_actual` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `breakthrough_desempeno_actual` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **1** de `secuencia_universal_breakthrough` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **2** de `secuencia_universal_breakthrough` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **3** de `secuencia_universal_breakthrough` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `secuencia_universal_breakthrough` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| paso **5** de `secuencia_universal_breakthrough` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **6** de `secuencia_universal_breakthrough` | `CUBIERTO` | ya lo dice el **paso 6** del superviviente |
+| condicion **1** de `secuencia_universal_breakthrough` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **2** de `secuencia_universal_breakthrough` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **1** de `secuencia_universal_para_el_breakthrough` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **2** de `secuencia_universal_para_el_breakthrough` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **3** de `secuencia_universal_para_el_breakthrough` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| paso **4** de `secuencia_universal_para_el_breakthrough` | `CUBIERTO` | ya lo dice el **paso 5** del superviviente |
+| paso **5** de `secuencia_universal_para_el_breakthrough` | `CUBIERTO` | ya lo dice el **paso 6** del superviviente |
+| paso **6** de `secuencia_universal_para_el_breakthrough` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `secuencia_universal_para_el_breakthrough` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| condicion **2** de `secuencia_universal_para_el_breakthrough` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **1** de `seis_sigma_servicios` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **2** de `seis_sigma_servicios` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **3** de `seis_sigma_servicios` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| paso **4** de `seis_sigma_servicios` | `CUBIERTO` | ya lo dice el **paso 5** del superviviente |
+| paso **5** de `seis_sigma_servicios` | `CUBIERTO` | ya lo dice el **paso 6** del superviviente |
+| condicion **1** de `seis_sigma_servicios` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `seis_sigma_servicios` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **1** de `six_sigma_dmaic_2` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **2** de `six_sigma_dmaic_2` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **3** de `six_sigma_dmaic_2` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| paso **4** de `six_sigma_dmaic_2` | `CUBIERTO` | ya lo dice el **paso 5** del superviviente |
+| paso **5** de `six_sigma_dmaic_2` | `CUBIERTO` | ya lo dice el **paso 6** del superviviente |
+| condicion **1** de `six_sigma_dmaic_2` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `six_sigma_dmaic_2` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **3** de `six_sigma_dmaic_2` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+
+**Las perdidas selladas en campo propio, recortadas de la salida del tallador:**
+
+| plan | acto | especie | que se pierde | donde vive | enrutada a |
+|---|---:|---|---|---|---|
+| PLAN_V66_OPU02_LOTE_B.json | 7 | DE PARAMETRO DE PASO | EL APOYO DE QUIEN TE ASESORE al definir el problema, que es lo unico del acto que mete a un tercero en el paso de definir. El paso 2 del superviviente manda definir el problema con claridad y en una frase de diez segundos, pero lo deja como tarea de uno solo | paso 1 de breakthrough_desempeno_actual | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 7 | DE CONDICIONES | que el disparador incluya RETRASOS Y COSTOS CRONICOS y no solo defectos, y que lo que se ve afectado sea LA SATISFACCION DEL CLIENTE. La condicion 1 del superviviente habla de un problema cronico de calidad que ya se intento resolver sin exito duradero, y ninguna de esas tres cosas esta nombrada | condicion 1 de breakthrough_desempeno_actual | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V66_OPU02_LOTE_B.json | 7 | DE PARAMETRO DE PASO | que la nominacion del problema se haga A NIVEL DE GERENCIA, que es quien selecciona y no solo que se seleccione. El paso 1 del superviviente manda seleccionar el problema concreto y darse un plazo, pero no dice a que altura de la organizacion se decide | paso 1 de secuencia_universal_para_el_breakthrough | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 7 | DE PARAMETRO DE PASO | EL VIAJE DIAGNOSTICO con sus cuatro tiempos nombrados, sintomas, teorias, pruebas y causa raiz, que es el metodo con el que se llega a la causa. El paso 4 del superviviente manda analizar hasta encontrar la causa raiz pero no dice por que camino | paso 3 de secuencia_universal_para_el_breakthrough | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 7 | DE PARAMETRO DE PASO | que el remedio se PRUEBE BAJO CONDICIONES OPERATIVAS REALES antes de darlo por bueno, que es el viaje remedial. El paso 5 del superviviente manda implementar un remedio dirigido a la causa raiz, pero no manda probarlo en condiciones reales antes | paso 4 de secuencia_universal_para_el_breakthrough | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 7 | DE CONDICIONES | que el disparador sea buscar UNA MEJORA SIGNIFICATIVA Y NO INCREMENTAL. ATENUANTE DECLARADO, y se dice para que la perdida se pueda pesar: la condicion 1 de secuencia_universal_breakthrough viaja ENTERA de APPEND y dice literalmente cambio radical de desempeno, no solo mejora incremental | condicion 1 de secuencia_universal_para_el_breakthrough | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V66_OPU02_LOTE_B.json | 7 | DE PARAMETRO DE PASO | EL EJEMPLO CONCRETO DE SERVICIOS, reducir el ciclo de emision de credito, que es lo unico del acto que aterriza el metodo fuera de la manufactura. El paso 2 del superviviente manda definir el problema en una frase, sin ejemplo | paso 1 de seis_sigma_servicios | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 7 | DE CONDICIONES | que el proceso con el problema cronico sea UN PROCESO DE SERVICIO y que el problema sea CUANTIFICABLE. La condicion 1 del superviviente nombra el problema cronico de calidad sin decir de que tipo de proceso ni que tenga que poder contarse | condicion 1 de seis_sigma_servicios | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V66_OPU02_LOTE_B.json | 7 | DE PARAMETRO DE PASO | EL CHARTER como instrumento con el que se define el problema, y LOS OBJETIVOS DEL PROYECTO junto al problema. El paso 2 del superviviente manda definir el problema con claridad y en diez segundos, pero no nombra ni el documento ni los objetivos | paso 1 de six_sigma_dmaic_2 | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 7 | DE PARAMETRO DE PASO | RECOPILAR LA VOZ DEL CLIENTE (VOC) dentro del paso de medir, que es lo que evita medir solo hacia dentro. El paso 3 del superviviente manda medir la magnitud real de los sintomas con datos, y el cliente no aparece | paso 2 de six_sigma_dmaic_2 | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 7 | DE CONDICIONES | que el disparador sea buscar una mejora DE TIPO BREAKTHROUGH EN PROCESOS CRITICOS PARA EL CLIENTE. ATENUANTE DECLARADO: la condicion 1 de secuencia_universal_breakthrough viaja ENTERA de APPEND y nombra el cambio radical de desempeno; lo que si se pierde sin atenuante es que el proceso sea CRITICO PARA EL CLIENTE | condicion 3 de six_sigma_dmaic_2 | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+
+> **CERO `INCISO` EN ESTE ACTO, Y EL MOTIVO ES MEDIBLE:** el criterio escrito de la politica del
+> `INCISO` es **la legibilidad del paso resultante**, y **los SEIS pasos de `six_sigma_dmaic`
+> terminan en punto**. Un inciso detras de un punto no se lee limpio, asi que **cada parametro
+> concreto va `CUBIERTO` con su perdida nombrada y enrutada**, que es la otra mitad del mismo carril.
+
+### b) **EL `ACTO 8`: LA FAMILIA DEL CIERRE EN LA VENTA GRANDE**
+
+**Sobrevive `cierre_segun_complejidad_venta` y absorbe CINCO.** **`P.5` contestada por medicion:**
+los seis de **SPIN Selling**, **9 pares internos con veredicto y los 9 en `A`**, **cero `D`**, **cero
+puentes**, y **la familia ya estaba DECLARADA** por la razon del puesto **601**. **FORMA medida
+`TODAS DE ACUERDO`:** 5 pasos contra un maximo de 4 y 3 condiciones contra un maximo de 2, **las dos
+varas de contenido al mismo lado**; **el cableado no hace falta y no se usa** (`P.8` solo habla a
+contenido empatado). **El superviviente pasa de 5 a 12 pasos y de 3 a 7
+condiciones.**
+
+| absorbido | pasos | condiciones | enteras | ya dichas | de `INCISO` |
+|---|---:|---:|---:|---:|---:|
+| `cierre_segun_tamano_decision` | 4 | 2 | 2 | 4 | 0 |
+| `cierre_sofisticacion_comprador` | 4 | 2 | 3 | 3 | 0 |
+| `diferencias_venta_pequena_venta_grande` | 4 | 1 | 3 | 1 | 1 |
+| `ineficacia_cierre_ventas_grandes` | 4 | 2 | 2 | 4 | 0 |
+| `riesgo_tecnicas_cierre_venta_compleja` | 4 | 2 | 1 | 5 | 0 |
+| **los 5 juntos** | **20** | **9** | **11** | **17** | **1** |
+
+**El reparto, pieza a pieza:**
+
+| pieza del que muere | marca | a donde va |
+|---|---|---|
+| paso **1** de `cierre_segun_tamano_decision` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **2** de `cierre_segun_tamano_decision` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **3** de `cierre_segun_tamano_decision` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **4** de `cierre_segun_tamano_decision` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `cierre_segun_tamano_decision` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **2** de `cierre_segun_tamano_decision` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **1** de `cierre_sofisticacion_comprador` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **2** de `cierre_sofisticacion_comprador` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **3** de `cierre_sofisticacion_comprador` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **4** de `cierre_sofisticacion_comprador` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `cierre_sofisticacion_comprador` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **2** de `cierre_sofisticacion_comprador` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **1** de `diferencias_venta_pequena_venta_grande` | `INCISO` | **`INCISO` ADOSADO** al paso 1: *su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión* |
+| paso **2** de `diferencias_venta_pequena_venta_grande` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **3** de `diferencias_venta_pequena_venta_grande` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `diferencias_venta_pequena_venta_grande` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `diferencias_venta_pequena_venta_grande` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **1** de `ineficacia_cierre_ventas_grandes` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **2** de `ineficacia_cierre_ventas_grandes` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **3** de `ineficacia_cierre_ventas_grandes` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `ineficacia_cierre_ventas_grandes` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| condicion **1** de `ineficacia_cierre_ventas_grandes` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `ineficacia_cierre_ventas_grandes` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **1** de `riesgo_tecnicas_cierre_venta_compleja` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **2** de `riesgo_tecnicas_cierre_venta_compleja` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **3** de `riesgo_tecnicas_cierre_venta_compleja` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **4** de `riesgo_tecnicas_cierre_venta_compleja` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `riesgo_tecnicas_cierre_venta_compleja` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| condicion **2** de `riesgo_tecnicas_cierre_venta_compleja` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+
+**Las perdidas selladas en campo propio:**
+
+| plan | acto | especie | que se pierde | donde vive | enrutada a |
+|---|---:|---|---|---|---|
+| PLAN_V66_OPU02_LOTE_B.json | 8 | DE PARAMETRO DE PASO | LOS TRES CRITERIOS DE CLASIFICACION DEL PORTAFOLIO, precio, riesgo e IMPACTO ORGANIZACIONAL, y el tercero es el que no es una cifra. El paso 1 del superviviente clasifica por valor, sofisticacion del cliente y relacion posventa, y ninguno de los tres es el impacto organizacional. NO SE ADOSA DE INCISO Y SE DICE POR QUE: el paso 1 YA recibe el inciso del paso 1 de diferencias_venta_pequena_venta_grande, y no se apila mas de un INCISO sobre el mismo paso (acta 64, pregunta 5) | paso 1 de cierre_segun_tamano_decision | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 8 | DE CONDICIONES | que el disparador sea querer optimizar la estrategia comercial SEGUN EL TICKET PROMEDIO, que es el unico sitio del acto donde el criterio de entrada es una cifra del negocio y no una caracteristica de la venta. La condicion 1 del superviviente habla de alto valor y ciclos largos, que es otra cosa | condicion 2 de cierre_segun_tamano_decision | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V66_OPU02_LOTE_B.json | 8 | DE PARAMETRO DE PASO | LOS SUJETOS CONCRETOS con los que no se presiona, compradores corporativos, PROCUREMENT y ejecutivos experimentados. El paso 3 del superviviente manda minimizar el cierre en la venta grande y relacional, pero describe la VENTA y no a QUIEN se le vende | paso 2 de cierre_sofisticacion_comprador | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 8 | DE PARAMETRO DE PASO | que la razon de no presionar entre llamadas sea que ESO REDUCE LA PROBABILIDAD DE EXITO FINAL, que es el dato empirico detras de la regla. El paso 3 del superviviente manda minimizar el cierre sin decir que pasa si no se hace | paso 2 de diferencias_venta_pequena_venta_grande | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 8 | DE PARAMETRO DE PASO | que lo que se sustituya al cierre sean PREGUNTAS QUE EXPLOREN LA NECESIDAD REAL, nombradas como enfoque consultivo. El paso 3 del superviviente manda enfocar el esfuerzo en las etapas de indagacion (SPIN), que es el nombre del metodo pero no el gesto de preguntar | paso 3 de cierre_sofisticacion_comprador | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 8 | DE PARAMETRO DE PASO | que el esfuerzo se ponga en las etapas previas DE INVESTIGACION Y DESARROLLO DE NECESIDADES y no en frases de cierre. El paso 3 del superviviente nombra la indagacion (SPIN) pero no la investigacion previa ni el desarrollo de la necesidad como dos tiempos | paso 3 de riesgo_tecnicas_cierre_venta_compleja | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 8 | DE CONDICIONES | que el sintoma que dispara sea LA BAJA SATISFACCION DE CLIENTES junto a los scripts de cierre agresivo. ATENUANTE DECLARADO, y se dice para que la perdida se pueda pesar: el paso 4 de ESTE MISMO nodo viaja ENTERO de APPEND y manda medir la satisfaccion posventa para detectar el dano, o sea que el gesto se salva aunque el disparador no | condicion 2 de riesgo_tecnicas_cierre_venta_compleja | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V66_OPU02_LOTE_B.json | 8 | DE CONDICIONES | que el disparador sea que el equipo usa tecnicas de cierre tradicionales SIN RESULTADOS. La condicion 3 del superviviente dice que los resultados del cierre agresivo no mejoran las ventas COMPLEJAS, que acota a un tipo de venta lo que aqui se dice del equipo entero | condicion 2 de ineficacia_cierre_ventas_grandes | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+
+### c) **EL `ACTO 9`: EL PRIMER CHOQUE DE PUERTA DEL TRAMO, REGISTRADO EN VEZ DE TAPADO**
+
+**Sobrevive `marco_analisis_mercado_cadena_suministro` y absorbe CINCO.** **`P.5` contestada por
+medicion:** los seis de **Hugos**, **7 pares internos con veredicto y los 7 en `A`**, **cero `D`**,
+**cero puentes**.
+
+> **LAS DOS VIAS APUNTABAN A LADOS DISTINTOS Y SE DICE ENTERO.** La **vara de contenido** apunta a
+> `cuatro_categorias_desempeno_cadena_suministro` con **las dos varas y ninguna en contra** (FORMA
+> `TODAS DE ACUERDO`: **10 pasos contra un maximo de 5** y **4 condiciones contra un maximo de 3**), y
+> ademas la razon del puesto **704** dice que **el marco largo se traga al corto**. **PERO
+> `marco_analisis_mercado_cadena_suministro` ES PUERTA**, con la marca `TIENE QUE SOBREVIVIR` leida
+> del dossier, y **la guarda `1B` prohibe absorber una puerta**. **LA PUERTA SOBREVIVE** por el
+> **acta 54, pregunta 1**, que es el mismo carril con el que esta pagina cerro el **acto 20** de un
+> tramo de `OP-U-01` (linea **2922**).
+>
+> **Y LA CONSECUENCIA VA DICHA Y NO ESCONDIDA:** el nodo que la vara elegia es el que **mas piezas
+> manda de `APPEND`, OCHO de sus diez pasos**, y **el superviviente pasa de 5 a 21 pasos y
+> de 2 a 7 condiciones**, que lo convierte en **el nodo mas largo que la campana ha
+> fabricado**, por encima de los 15 del acto 3. **Ese bulto es consecuencia de la guarda y no de
+> repartir mal**, y va **MARCADO DISCUTIBLE** en el reporte de esta vuelta.
+
+| absorbido | pasos | condiciones | enteras | ya dichas | de `INCISO` |
+|---|---:|---:|---:|---:|---:|
+| `clasificacion_mercados_cadena_suministro` | 5 | 3 | 5 | 2 | 1 |
+| `cuatro_capacidades_mercado` | 4 | 2 | 2 | 4 | 0 |
+| `cuatro_categorias_desempeno_cadena_suministro` | 10 | 4 | 9 | 5 | 0 |
+| `estrategia_cuatro_capacidades_mercado` | 4 | 2 | 4 | 2 | 0 |
+| `modelo_cuadrantes_mercado` | 4 | 2 | 1 | 5 | 0 |
+| **los 5 juntos** | **27** | **13** | **21** | **18** | **1** |
+
+**El reparto, pieza a pieza:**
+
+| pieza del que muere | marca | a donde va |
+|---|---|---|
+| paso **1** de `clasificacion_mercados_cadena_suministro` | `INCISO` | **`INCISO` ADOSADO** al paso 2: *desarrollo, crecimiento, estable o maduro* |
+| paso **2** de `clasificacion_mercados_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **3** de `clasificacion_mercados_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `clasificacion_mercados_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **5** de `clasificacion_mercados_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `clasificacion_mercados_cadena_suministro` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `clasificacion_mercados_cadena_suministro` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| condicion **3** de `clasificacion_mercados_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **1** de `cuatro_capacidades_mercado` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **2** de `cuatro_capacidades_mercado` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| paso **3** de `cuatro_capacidades_mercado` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `cuatro_capacidades_mercado` | `CUBIERTO` | ya lo dice el **paso 5** del superviviente |
+| condicion **1** de `cuatro_capacidades_mercado` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `cuatro_capacidades_mercado` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **1** de `cuatro_categorias_desempeno_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **2** de `cuatro_categorias_desempeno_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **3** de `cuatro_categorias_desempeno_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `cuatro_categorias_desempeno_cadena_suministro` | `CUBIERTO` | ya lo dice el **paso 5** del superviviente |
+| paso **5** de `cuatro_categorias_desempeno_cadena_suministro` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **6** de `cuatro_categorias_desempeno_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **7** de `cuatro_categorias_desempeno_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **8** de `cuatro_categorias_desempeno_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **9** de `cuatro_categorias_desempeno_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **10** de `cuatro_categorias_desempeno_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `cuatro_categorias_desempeno_cadena_suministro` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `cuatro_categorias_desempeno_cadena_suministro` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| condicion **3** de `cuatro_categorias_desempeno_cadena_suministro` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| condicion **4** de `cuatro_categorias_desempeno_cadena_suministro` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **1** de `estrategia_cuatro_capacidades_mercado` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **2** de `estrategia_cuatro_capacidades_mercado` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **3** de `estrategia_cuatro_capacidades_mercado` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `estrategia_cuatro_capacidades_mercado` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `estrategia_cuatro_capacidades_mercado` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **2** de `estrategia_cuatro_capacidades_mercado` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **1** de `modelo_cuadrantes_mercado` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **2** de `modelo_cuadrantes_mercado` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| paso **3** de `modelo_cuadrantes_mercado` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `modelo_cuadrantes_mercado` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| condicion **1** de `modelo_cuadrantes_mercado` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| condicion **2** de `modelo_cuadrantes_mercado` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+
+**Las perdidas selladas en campo propio:**
+
+| plan | acto | especie | que se pierde | donde vive | enrutada a |
+|---|---:|---|---|---|---|
+| PLAN_V66_OPU02_LOTE_B.json | 9 | DE PARAMETRO DE PASO | ANALIZAR LA RELACION ENTRE OFERTA Y DEMANDA DE LA INDUSTRIA como la medicion con la que se decide el cuadrante. SE DICE LO QUE NO SE PIERDE: el paso 2 de clasificacion_mercados_cadena_suministro viaja ENTERO de APPEND y trae ese analisis; lo que se pierde es que sea EL CRITERIO del diagnostico del paso 1 de modelo_cuadrantes_mercado, que va CUBIERTO al paso 2 del superviviente | paso 1 de modelo_cuadrantes_mercado | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 9 | DE PARAMETRO DE PASO | que la comparacion sea contra LOS ESTANDARES ESPERADOS PARA TU TIPO DE MERCADO y no solo contra la competencia. El paso 3 del superviviente compara con la competencia en las cuatro areas, que es otra vara: un mercado entero puede estar por debajo del estandar y la comparacion con el vecino no lo dice | paso 5 de cuatro_categorias_desempeno_cadena_suministro | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 9 | DE PARAMETRO DE PASO | LAS METRICAS ESPECIFICAS POR CAPACIDAD con sus ejemplos, fill rate y tiempo de entrega. ATENUANTE DECLARADO: el paso 1 de cuatro_categorias_desempeno_cadena_suministro viaja ENTERO de APPEND y manda definir metricas concretas para cada una de las cuatro categorias; lo que se pierde son los DOS EJEMPLOS, que son lo que hace ejecutable el paso | paso 4 de cuatro_capacidades_mercado | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 9 | DE PARAMETRO DE PASO | que lo que se identifique sea LA VENTAJA COMPETITIVA YA EXISTENTE, o sea donde ya se es mejor, como insumo de la decision. El paso 4 del superviviente decide si liderar, igualar o superar en cada area, pero no manda antes localizar la fortaleza que ya se tiene | paso 2 de cuatro_capacidades_mercado | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 9 | DE PARAMETRO DE PASO | que la fortaleza relativa se mida FRENTE A COMPETIDORES y de forma RELATIVA. SE DICE LO QUE NO SE PIERDE: el paso 3 del superviviente ya compara con la competencia en las cuatro areas; lo que se pierde es que esa comparacion sirva para elegir DONDE CONCENTRARSE, que llega igual por el APPEND del paso 3 de estrategia_cuatro_capacidades_mercado | paso 2 de estrategia_cuatro_capacidades_mercado | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 9 | DE PARAMETRO DE PASO | que las capacidades a reforzar se elijan SEGUN EL CUADRANTE detectado, y que sean esas cuatro nombradas (servicio, eficiencia, flexibilidad o desarrollo de producto). ATENUANTE DECLARADO: el paso 2 de cuatro_categorias_desempeno_cadena_suministro viaja ENTERO de APPEND y manda determinar cual categoria es critica SEGUN EL CUADRANTE de mercado en el que operas, que es ese mismo amarre | paso 2 de modelo_cuadrantes_mercado | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 9 | DE PARAMETRO DE PASO | AJUSTAR LA MEZCLA de capacidades, o sea que la decision no es por area suelta sino sobre el reparto entre las cuatro. ATENUANTE DECLARADO, el mismo del paso 2: el APPEND del paso 2 de cuatro_categorias_desempeno_cadena_suministro trae la priorizacion por cuadrante | paso 4 de modelo_cuadrantes_mercado | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V66_OPU02_LOTE_B.json | 9 | DE CONDICIONES | que el disparador sea NO SABER COMO PRIORIZAR RECURSOS SEGUN EL TIPO DE MERCADO. La condicion 2 del superviviente dice no tener claro en que areas enfocar los recursos para competir, y le falta el amarre al tipo de mercado, que es lo que esta familia aporta | condicion 2 de clasificacion_mercados_cadena_suministro | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V66_OPU02_LOTE_B.json | 9 | DE CONDICIONES | que el disparador sea necesitar ESTABLECER KPIs de cadena de suministro, que es una entrada por el instrumento y no por la oportunidad. La condicion 1 del superviviente entra por definir oportunidades para la cadena de suministro | condicion 1 de cuatro_categorias_desempeno_cadena_suministro | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V66_OPU02_LOTE_B.json | 9 | DE CONDICIONES | que el disparador sea necesitar EVALUAR OBJETIVAMENTE el desempeno de la cadena, con el acento en lo objetivo. La condicion 2 del superviviente habla de no tener claro en que areas enfocar los recursos, que es una duda de foco y no de metodo | condicion 3 de cuatro_categorias_desempeno_cadena_suministro | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V66_OPU02_LOTE_B.json | 9 | DE CONDICIONES | que el disparador sea DEFINIR LA ESTRATEGIA DE INVERSION EN OPERACIONES. La condicion 1 del superviviente entra por definir oportunidades de cadena de suministro, que es el paso anterior y no la decision de inversion | condicion 1 de cuatro_capacidades_mercado | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V66_OPU02_LOTE_B.json | 9 | DE CONDICIONES | que el disparador sea NO TENER CLARO QUE PRIORIZAR entre servicio, eficiencia, flexibilidad o innovacion, con las cuatro nombradas. La condicion 2 del superviviente dice no tener claro en que areas enfocar los recursos sin nombrar ninguna | condicion 2 de modelo_cuadrantes_mercado | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+
+> **LOS CUATRO CALCULOS FINANCIEROS SE OBSERVAN Y NO SE ACTUAN.** Los pasos **7 a 10** de
+> `cuatro_categorias_desempeno_cadena_suministro` (rotacion de inventario, retorno sobre ventas,
+> ciclo de conversion de efectivo, y mirar cuentas por cobrar y pagar antes que el inventario)
+> **tienen la firma de un bloque pegado**: los pasos 1 a 6 de ese nodo son el tablero de las cuatro
+> categorias y estos cuatro no vuelven a nombrarlas. **La observacion se REGISTRA y no se EJECUTA:**
+> decidir si eso es un injerto es materia de **DESTEJIDO** (`P.3` y `P.19`) y **ninguna operacion
+> escrita lo nombra**. Los cuatro viajan enteros de `APPEND` y la fase 04 poda. **Fundir no es sitio
+> para destejer.**
+
+### d) **EL `ACTO 5`: `DECLARADO Y NO FUNDIDO` POR `P.5`, Y ES LA PRIMERA VEZ QUE LA CAMPANA CIERRA UN ACTO POR LA PREGUNTA DE `P.5` Y NO POR EL TRIANGULO DE `P.10`**
+
+| | |
+|---|---|
+| **acto** | **5** del `orden_universo` |
+| **miembros** | **8**, y **NINGUNO se toca** |
+| **combinaciones internas** | 28 |
+| **pares `A` internos** | 9 |
+| **pares `D` internos** | **0** (por eso `P.10` NO se dispara aqui) |
+| **pares sin veredicto escrito** | 19 |
+| **NODOS PUENTE** | **0** |
+| **TRIANGULOS PUENTE** (`A` mas `A` mas `D`) | **0** |
+| **PUERTAS dentro del acto** | **NINGUNA**, la guarda `1B` pasa por vacio y se dice |
+| **el nodo que PEGA la componente** | `design_test_repeat`, con sus `A` en los puestos **723**, **796**, **1182**, **1449**, **1573** |
+| **lo que solo entra por el** | `design_thinking_proceso`, `testing_process_completo`, `desarrollo_en_espiral` |
+| **instrumento** | [`../loop/SALIDA_V66_PUENTES_LOTE_B.txt`](../loop/SALIDA_V66_PUENTES_LOTE_B.txt) |
+| **dossier `P.5`** | [`../loop/SALIDA_V66_DOSSIER_LOTE_B.txt`](../loop/SALIDA_V66_DOSSIER_LOTE_B.txt) |
+
+> **`P.10` NO SE DISPARA AQUI, Y SE DICE PRIMERO** para que no se confunda con el acto **1** (linea
+> **3744**): **cero `D` internos, cero nodos puente y cero triangulos**, medido. Por la adjudicacion
+> del acta 65 **un veredicto ausente NO es un par sin leer**, asi que **con `P.10` sola este acto se
+> fundiria**.
+>
+> **LO QUE LO DETIENE ES LA OTRA MITAD: la pregunta que `P.5` obliga a contestar antes de fundir, EL
+> ACTO ES UNA FAMILIA O SON DOS.** Contestada sobre el texto estable de los ocho nodos leidos
+> enteros, **NO ES UNA FAMILIA**: hay un **bucle de cuatro tiempos** (`build_measure_learn`,
+> `ciclo_construir_medir_aprender`, `ciclo_crear_medir_aprender` y
+> `startup_como_experimento_cientifico`, cerrados entre si por los puestos 213, 376, 486 y 1208) y
+> hay **TRES PROCESOS LARGOS que lo contienen como UNO DE SUS PASOS** y que tienen procedimiento
+> propio: `design_thinking_proceso` recorre entender, observar con etnografia, definir un punto de
+> vista e idear antes de prototipar; `testing_process_completo` da forma con los dos lienzos, extrae
+> hipotesis, disena con la tarjeta de test y mide con el Progress Board; `desarrollo_en_espiral` fija
+> **que** se mide, **cuantas** vueltas y la documentacion de cada iteracion.
+>
+> **Y LOS TRES ENTRAN A LA COMPONENTE POR UN SOLO NODO QUE NO TIENE NADA PROPIO**,
+> `design_test_repeat`, cuyas cinco `A` son la unica via. **Sus propias razones lo dicen cuatro
+> veces:** el **796** lo llama *el ciclo desnudo contra el proceso que lo contiene* y dice que lo que
+> anade *no llega ni a una linea*; el **1182** y el **1573** lo llaman **SUBCONJUNTO ESTRICTO**; y el
+> **1573** avisa de que de `design_thinking_proceso` *se perderian CUATRO ETAPAS ENTERAS*.
+>
+> **`P.12` ES LA LETRA QUE CIERRA ESTO:** *el cierre transitivo convoca, la lectura decide*, y con el
+> acto leido entero **mandan los veredictos DIRECTOS**, porque **una `A` que nadie leyo no existe**.
+> **Fundir el acto entero sellaria que los tres procesos repiten ENTRE SI**, y **entre ellos no hay
+> ni un solo veredicto escrito**.
+>
+> **LAS ALTERNATIVAS SE RECORREN EN VEZ DE ELEGIR LA COMODA:** leer los 19 pares que faltan es
+> cribado que esta fase no tiene (banco 9.21 y regla 4); **fundir solo la sub-familia cerrada es una
+> FUSION PARCIAL**, que el encargo de esta vuelta prohibe con todas sus letras; y fundir entero
+> desmiente cuatro razones escritas. **ASI QUE NO SE FUNDE NADA Y SE DECLARA.** Es **reversible
+> entero** y **no desmiente ninguna lectura escrita**, que es lo que el acta 65 dijo del acto 1 al
+> adjudicarlo `A FAVOR`. **VA COMO PENDIENTE DE DOCTRINA** en el reporte, por la regla 5, **sin
+> parar**: la letra no dice que hacer cuando `P.5` contesta DOS y `P.10` no se dispara, y **lo mejor
+> sostenido es el carril que ya existe**.
+
+### e) **LOS `ACTOS 10` Y `11`: `DECLARADOS Y NO FUNDIDOS` POR `P.10`, CON SU TRIANGULO MEDIDO**
+
+**El `acto 10`, la familia del sales roadmap:**
+
+| | |
+|---|---|
+| **acto** | **10** del `orden_universo` |
+| **miembros** | **6**, y **NINGUNO se toca** |
+| **combinaciones internas** | 15 |
+| **pares `A` internos** | 6 |
+| **pares `D` internos** | **4**, leidos y declarados DISTINTOS |
+| **pares sin veredicto escrito** | 5 |
+| **NODOS PUENTE** | **2** |
+| **TRIANGULOS PUENTE** (`A` mas `A` mas `D`) | **3** |
+| **PUERTAS dentro del acto** | **NINGUNA**, la guarda `1B` pasa por vacio y se dice |
+| **puestos de los `D` internos** | **872**, **1023**, **1306**, **1330** |
+| **instrumento** | [`../loop/SALIDA_V66_PUENTES_LOTE_B.txt`](../loop/SALIDA_V66_PUENTES_LOTE_B.txt) |
+| **dossier `P.5`** | [`../loop/SALIDA_V66_DOSSIER_LOTE_B.txt`](../loop/SALIDA_V66_DOSSIER_LOTE_B.txt) |
+
+> **Las cuatro lecturas que una fusion entera desmentiria son DE UNA PIEZA y no un accidente:** las
+> razones del **1306** y del **1330** dicen las dos **el contenido del mapa contra el uso del mapa**,
+> y la del **872** dice **la economia de la venta contra el mapa de acceso** y declara que **el
+> sub-puro del sales roadmap SE ROMPE**.
+
+**El `acto 11`, la familia de la supervision de la IA:**
+
+| | |
+|---|---|
+| **acto** | **11** del `orden_universo` |
+| **miembros** | **5**, y **NINGUNO se toca** |
+| **combinaciones internas** | 10 |
+| **pares `A` internos** | 5 |
+| **pares `D` internos** | **2**, leidos y declarados DISTINTOS |
+| **pares sin veredicto escrito** | 3 |
+| **NODOS PUENTE** | **2** |
+| **TRIANGULOS PUENTE** (`A` mas `A` mas `D`) | **2** |
+| **PUERTAS dentro del acto** | **NINGUNA**, la guarda `1B` pasa por vacio y se dice |
+| **puestos de los `D` internos** | **1496**, **1541** |
+| **instrumento** | [`../loop/SALIDA_V66_PUENTES_LOTE_B.txt`](../loop/SALIDA_V66_PUENTES_LOTE_B.txt) |
+| **dossier `P.5`** | [`../loop/SALIDA_V66_DOSSIER_LOTE_B.txt`](../loop/SALIDA_V66_DOSSIER_LOTE_B.txt) |
+
+> **Las dos lecturas que una fusion entera desmentiria dicen LA MISMA FRONTERA con las mismas
+> palabras:** el **1496** dice *uno protege la decision de hoy, el otro protege la capacidad de
+> decidir de manana*, y el **1541** lo repite. Ademas el **1541** declara que con ese par **el racimo
+> de la IA termina su cola** y que **la particion escrita NO se mueve**: **hay una frontera escrita
+> dentro de este acto y una fusion entera la borraria**.
+
+**Los TRES declarados quedan VIVOS Y ENTEROS**, sin un nodo tocado ni un superviviente elegido, y
+**su destino comparte carril con el pendiente 2 del acta 65: el cierre de la fase 03.**
+
+### f) **LO QUE ESTE REGISTRO NO HACE**
+
+**NO toca ni una cifra publicada arriba, NO deshace ninguna fusion, NO re-lee ni un veredicto de las
+colisiones vigentes, NO funde ningun acto con dueno, NO toca la mesa `OP-M-03` y NO ejecuta ninguna
+de las cinco fichas `OP-M-02` consumidas.**
