@@ -21545,3 +21545,530 @@ no hay fallo tecnico (Gate 0, tres suites y `tsc` en verde por corrida propia);
 el credito baja pero ninguna racha llega a su umbral; la campana no esta
 consumada; y el freno de `CIERRE DE LA FASE 05` no se dispara porque la fase
 04 sigue abierta. **`PARA_ALEXIS.md` NO SE ESCRIBE. EL BUCLE SIGUE.**
+
+# ACTA DE LA VUELTA 76 DEL AUDITOR (26 ago 2026, Opus 5)
+
+**HUECO DE ACTA: NO HAY.** La ultima acta escrita es la de la vuelta 75
+(`ACTA_AUDITOR.md` linea 20976, auditor Opus 5) y cubre la vuelta
+inmediatamente anterior a esta. Esta acta cubre UNA vuelta, la 76, y ninguna
+otra.
+
+**LO QUE SE AUDITA.** `docs/loop/REPORTE.md` de la vuelta 76 (ejecutor Sonnet
+5), cadena de dos commits: `7fa9f979` (TAREA 1 y TAREA 2) y `d301ce37` (el
+reporte con el hash y las cifras del cierre). Arbol limpio y
+`origin/pasada-unica` igual a `HEAD` comprobados al empezar.
+
+**EL RESULTADO, DELANTE: DOS CAIDAS DE REPORTE, CERO DE CLASE Y CERO DE CIFRA
+PUBLICADA, Y LA RACHA DE REPORTE LLEGA A TRES TANDAS SEGUIDAS. ES PARADA.**
+El aviso de la vuelta 75 se cumplio en la mitad que menos se esperaba: la
+especie que se detuvo fue la del dictado, no la del dato. Los datos estan
+verdes y verificados al digito.
+
+---
+
+## 1. VERIFICACION POR CORRIDA PROPIA, AL DIGITO
+
+Todo lo de esta seccion se leyo de la salida de un instrumento corrido POR MI
+EN ESTA VUELTA. Ninguna cifra viene de una nota vieja ni del reporte.
+
+### 1.1. Gate 0, el ciclo de tres, corrido entero
+
+| # | comando | mi salida | fichero |
+|---:|---|---|---|
+| **1** | `python scripts/run_phase1.py --reaplico-curaduria` | **EXITCODE 0**, `GATE 0: OK`. **3.853 compilados, 3.188 activos, 665 deprecados**. Auto-aristas **0**. Duplicadas de titulo exacto **0**. Alias con dos duenos **0**. Los dos `master_graph` con **0 nodos divergentes**. Alcanzabilidad **100,0% (3.188/3.188, 85 semillas)**. Enlaces rotos **0** | `_auditor_v76_gate0.txt` |
+| **2** | `python scripts/etiquetas_de_cara.py --aplicar` | **71 etiquetas cambian, 0 ya estaban en su forma final**. CERO encogimiento contra la linea base de 71 | `_auditor_v76_etiquetas.txt` |
+| **3** | `python scripts/sync_assets_web.py` | EXITCODE 0, seis assets sincronizados | `_auditor_v76_sync.txt` |
+
+**Y la comprobacion que da valor al ciclo:** tras correr los tres comandos,
+recompute el grafo y da **exactamente las mismas cuatro cifras de aristas que
+el fichero committeado**, y `git checkout` devolvio el arbol sin un solo
+rastreado modificado. El ciclo es idempotente sobre el trabajo de esta vuelta.
+
+### 1.2. Las tres suites, corridas por mi
+
+| suite | comando | mi salida |
+|---|---|---|
+| motor | `python engine/run_all_tests.py` | **TODOS LOS TESTS PASARON (25/25)**, EXITCODE 0 |
+| web | `npx vitest run` **desde `web/`** | **80 passed (80)**, **1030 passed, 3 skipped (1033)**, EXITCODE 0 |
+| tsc | `npx tsc --noEmit` desde `web/` | **EXITCODE 0, cero lineas de salida** |
+
+El error de ubicacion que el ejecutor declaro en su seccion 0 (haber lanzado
+`vitest` desde la raiz) esta bien declarado y bien resuelto: corrido desde
+`web/` la salida es la que el reporte publica, al digito.
+
+### 1.3. Las cuatro cifras del cierre, recomputadas del archivo
+
+Instrumento propio `docs/loop/_auditor_v76_conteo.py` sobre
+`dataset/metadata/master_graph.json`:
+
+| cifra publicada en el reporte | mi recomputo | |
+|---|---:|---|
+| entradas en `nodos_siguientes` | **8.897** | **DA** |
+| entradas en `nodos_previos` | **8.876** | **DA** |
+| suma de las dos | **17.773** | **DA** |
+| union dirigida unica | **9.520** | **DA** |
+| grafo 3.853 / 3.188 / 665 | **3.853 / 3.188 / 665** | **DA** |
+
+**Y las cifras historicas que el reporte cita, medidas por mi en sus commits:**
+
+| commit | siguientes | previos | suma | union |
+|---|---:|---:|---:|---:|
+| `62d4f28e` (apertura de la fase 04) | 8.846 | 8.825 | **17.671** | 9.469 |
+| `3b319801` (apertura de la vuelta 76) | **8.872** | 8.851 | 17.723 | 9.495 |
+| `6fd2bef1` (cierre de la vuelta 75) | 8.872 | 8.851 | 17.723 | **9.495** |
+
+**La adjudicacion de las dos cifras de enlaces de mi acta 75 se sostiene al
+digito:** el `17.671` es suma de entradas medida en `62d4f28e` y el `9.495` es
+union dirigida unica medida en `6fd2bef1`. El reporte las publica con su
+definicion al lado, como se encargo.
+
+### 1.4. El diff de aristas, por conjuntos y no por conteo
+
+Instrumento propio `docs/loop/_auditor_v76_diff.py`:
+
+| contraste | nuevas | borradas |
+|---|---:|---:|
+| cierre contra la apertura `3b319801` | **26** | **1** |
+| cierre contra `62d4f28e` | **51** | **0** |
+
+- La unica borrada es **`segmentos_de_clientes_problema_necesidad ->
+  get_out_of_the_building`**, y esta borrada **en las dos puntas** (fuera de
+  `nodos_siguientes` de la madre y fuera de `nodos_previos` del hijo). La
+  reversion de 1.3.a esta hecha entera, no a medias.
+- **Las 26 nuevas tienen su reciproca completa en `nodos_previos`: cero
+  faltantes.**
+- 51 = 25 del tramo 1 neto mas 26 del tramo 2. La aritmetica cierra sola.
+
+### 1.5. El filtro `P.9.1`, corrido por mi sobre lo escrito
+
+Barrido propio (`_auditor_v76_p91.txt`) cruzando cada punta de cada arista
+contra el campo `eliminar` de las **70 operaciones NO EJECUTADAS** (36 nodos
+condenados en total):
+
+- **Las 26 del tramo 2: CERO ROJAS.**
+- **Las 51 de la fase 04 entera: CERO ROJAS.**
+- La arista revertida SI estaba condenada, y por la operacion que el reporte
+  nombra: `get_out_of_the_building` vive en el `eliminar` de
+  **`OP-M-05-EDIFICIO`**.
+
+**La correccion de la caida de clase de la vuelta 75 esta hecha y comprobada
+por instrumento propio, no por lectura del reporte.**
+
+**Y un aviso que no es rojo y lo digo igual:** dos de las 51 nacen de
+`customer_validation`, que es **`superviviente`** de `OP-M-05-APERTURA`
+(pendiente). `P.9.1` habla de morir, no de sobrevivir, asi que no las aparta y
+yo tampoco; queda anotado porque un superviviente absorbe contenido y su texto
+de manana no es el de hoy.
+
+### 1.6. El censo de los 168, reproducido racimo por racimo
+
+Barrido propio (`_auditor_v76_censo.txt`) por membresia exacta de lista JSON
+contra `nodos`, `eliminar` y `superviviente` de las 71 operaciones:
+
+| | reporte | mi medicion |
+|---|---:|---:|
+| racimos censados | 32 | **32** |
+| nodos distintos | 168 | **168** |
+| **sin ninguna operacion que los nombre** | **150** | **150** |
+| miembros con repeticion | 171 | **171** |
+| miembros con repeticion sin operacion | 153 | **153** |
+| Crosby catorce pasos, la cifra conocida | 3 de 3 | **3 de 3** |
+
+**Y la tabla de 32 filas del reporte la reproduje entera, fila por fila: las
+32 coinciden en tamano y en cuantos van sin operacion.** Los grupos de
+`MESA_RACIMOS.md` tambien: seccion 2 seis racimos, seccion 3 trece, seccion 4
+trece, 6+13+13 = 32 sin resto y sin solape, y `DECISION N` vive dentro de
+`GRUPO N` (lineas 113, 207, 266 y 337 del documento).
+
+### 1.7. La bolsa y sus apartados, re-corridos con el instrumento
+
+Corri el calibrador con los mismos umbrales
+(`--umbral-titulo 72 --umbral-contencion 0.45 --min-tokens 4`), sellando y
+restaurando el fichero que escribe:
+
+| | reporte (antes del tramo 2) | mi corrida (despues del tramo 2) |
+|---|---:|---:|
+| candidatos brutos | 590 | **590** |
+| bolsa reducida | 468 | **468** |
+| sin arista | 337 | **311** |
+
+**311 = 337 menos las 26 escritas.** La cifra del reporte no solo no falla:
+queda confirmada por la unica via que quedaba, que es medirla despues y
+restar.
+
+Y mi propio `P.9.1` sobre la bolsa da **los mismos 10 apartados, uno a uno,
+con la misma operacion al lado que el reporte publica** (madre, hijo o las dos
+puntas, incluidos los tres matices de `OP-M-01-FUSION`, `OP-M-05-INDICE` y
+`OP-M-03-III`). `327 = 337 - 10`, y
+`docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V76.jsonl` tiene **327 registros
+contados por mi**.
+
+### 1.8. Las tres correcciones que tocan `OPERACIONES.jsonl`, campo a campo
+
+| | mi lectura del fichero |
+|---|---|
+| `OP-E-02` | `estado` **HECHA** (la unica HECHA de las 71), `fecha_corte` **2026-08-26**, la `nota` con el cierre ANADIDO al final y el texto viejo intacto |
+| `OP-E-01` | `verificacion` con el **noveno elemento nuevo**, el `FILTRO DE ELEGIBILIDAD P.9.1`, con las palabras encargadas y los ocho elementos viejos sin tocar |
+| `OP-E-05` | `depende_de` = **`["OP-M-01", "OP-M-01-FUSION"]`**, `estado` sigue **LISTA** |
+
+**Y verifique la razon de la de `OP-E-05` por mi cuenta, no la copie:**
+`OP-E-05.nodos` = `[requisitos_gates_con_dientes, gestion_portafolio_formal,
+gestion_portafolio_dos_niveles]`; `OP-M-01-FUSION.eliminar` =
+`[gates_go_kill_decision_points, requisitos_gates_con_dientes,
+estructura_gates, estructura_de_gates]`. **La interseccion es
+`requisitos_gates_con_dientes`.** El campo dice ahora lo que la nota decia.
+
+### 1.9. `OP-E-02`, el instrumento re-corrido y diferenciado
+
+Corri `scripts/loop/vuelta75_op_e02_racimos.py` yo mismo y **la salida es
+IDENTICA byte a byte a `SALIDA_V76_OPE02_RACIMOS.txt`** (`diff` vacio): 32
+racimos, **171 vivos, 0 muertos/fundidos, 0 racimos con miembro ajeno**.
+
+**Y digo que significa esa cifra, porque publicarla sin definicion seria
+repetir el defecto que esta acta castiga.** El instrumento cuenta *vivo* a
+traves de su `resolver()`, que **sigue los `ids_alias`**: un miembro que murio
+en una fusion y dejo alias hacia su superviviente cuenta como vivo. Medido por
+mi con el criterio literal (deprecado igual a muerto), **38 de los 171 ids
+censados estan hoy deprecados** y solo llegan a vivos por alias. Las dos
+lecturas son ciertas y miden cosas distintas; para lo que `OP-E-02` verifica
+(que ningun racimo conserve un miembro suelto) la buena es la del instrumento,
+y por eso **el cierre de la ficha se sostiene**. Lo que no se sostiene es la
+etiqueta desnuda del instrumento (`TOTAL miembros vivos hoy`), que en el
+tramo mecanico se copia a un reporte sin su definicion. Queda encargado.
+
+### 1.10. El marcador del cribado, recomputado
+
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, contado por mi:
+**A 551, B 72, C 5, D 2.760**, n **3.388**, puestos del 1 al 3.388,
+**cero huecos y cero duplicados**. Sin cambio, como corresponde a una fase que
+no toca el cribado.
+
+---
+
+## 2. RELECTURA CIEGA, EMPEZANDO POR LOS CINCO DISCUTIBLES MARCADOS
+
+Metodo, como manda `AUDITOR.md` seccion 1.2: imprimi PRIMERO los textos
+completos (resumen y pasos) de los nodos con
+`docs/loop/_auditor_v76_ver.py`, adjudique mi clase, y **solo despues** destape
+la razon escrita. Los volcados quedan en `_auditor_v76_D1.txt`,
+`_auditor_v76_D2.txt` y `_auditor_v76_D3.txt`.
+
+**Y esta vuelta traje una vara que ni el ejecutor ni yo habiamos usado en la
+fase 04: `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`.** Es fuente de verdad por
+`AUDITOR.md` seccion 0 punto 3, y para varios de estos pares **el cribado ya
+habia leido y clasificado el par**. Adjudicar contra un veredicto de archivo
+es mas fuerte que adjudicar contra una heuristica de sufijo.
+
+| # | que se marco | mi adjudicacion | resultado |
+|---:|---|---|---|
+| **D1** | `analisis_capacidad_proceso -> capacidad_de_proceso_2`, escrita | **JERARQUIA SANA, LA ARISTA SE QUEDA** | **A FAVOR** |
+| **D2** | posible gemelo de madres: `rol_alta_direccion_calidad` y `consejo_de_calidad_y_rol_del_director` | **NO SON GEMELOS.** Y la razon publicada para no parar es FALSA | **A FAVOR en el fondo, CAIDA DE REPORTE en el dato** |
+| **D3** | los tres pares nuevos al hub `value_proposition_startup` | **LAS TRES SE QUEDAN**, con la comparacion cruzada que el reporte confeso no haber hecho | **A FAVOR** |
+| **D4** | `eliminacion_causas_error_4` descartada por sufijo mientras el D2 del tramo 1 se escribio | **LAS DOS DISPOSICIONES SON CORRECTAS, y la linea que las separa NO es el sufijo** | **A FAVOR en las dos disposiciones, EN CONTRA del criterio publicado** |
+| **D5** | el proxy declarado de la 9.6.1 | **A FAVOR de declararlo, y la relectura destapa algo peor que lo declarado** | **A FAVOR, con caida de reporte anexa** |
+
+### D1, A FAVOR, y con respaldo que el reporte no tenia
+
+**Mi lectura ciega.** La madre (Juran, 5 pasos) tiene por paso 2 *"Verificar si
+el proceso esta en control estadistico mediante cartas de control"*. El hijo
+`capacidad_de_proceso_2` (Deming) trae los cinco pasos de ese monitoreo:
+elegir la unidad, recolectar unos tres meses, construir las cartas, decidir si
+esta dentro de limites, y **intervenir sobre el sistema y no sobre el
+individuo**. El otro hijo ya enlazado (`capacidad_del_proceso`, tambien
+Deming) trae otra cosa: el **calculo** por formulas d2 y A2 y la comunicacion
+a diseno. Por 9.6.3, lo que decide no es el solape sino lo que queda fuera, y
+aqui lo que queda fuera es distinto en cada uno. **Jerarquia sana.**
+
+**Y despues destape lo que ninguno de los dos habia mirado.** El cribado ya
+leyo este vecindario y lo fallo:
+
+| puesto | par | clase |
+|---:|---|:---:|
+| 2412 | `capacidad_de_proceso` contra `capacidad_del_proceso` | **D** |
+| 2751 | `capacidad_de_proceso_2` contra `capacidad_del_proceso` | **D** |
+| 2779 | `capacidad_de_proceso` contra `capacidad_de_proceso_2` | **D** |
+
+El 2779 lleva ademas `procedencia_pareja` = *"ficha, las 36 parejas de sufijo
+vivo"*: **el par de sufijo se ofrecio a proposito, se leyo, y salio D.** La
+familia de la capacidad esta declarada *SIN ACTO y uniformemente D*. El
+destino no es un duplicado esperando fusion: es una faceta con casa propia.
+**La arista se queda, y ahora con un veredicto de archivo detras.**
+
+Nota util para el reporte: el aviso de Gate 0 al 97,6 por ciento es del par
+`capacidad_de_proceso` contra `capacidad_del_proceso`, no del hijo escrito. El
+reporte lo dice asi de claro y hace bien en usarlo solo como indicio.
+
+### D2, A FAVOR EN EL FONDO, Y **UNA CAIDA DE REPORTE** EN EL DATO
+
+**Mi lectura ciega, antes de destapar nada.** `rol_alta_direccion_calidad`
+(Juran, 6 pasos) es **lo que TU haces**: crear el espacio de revision,
+participar personalmente en los equipos que resuelven los problemas cronicos,
+asignar recursos concretos, disenar el reconocimiento, dedicar el diez por
+ciento de tu tiempo. `consejo_de_calidad_y_rol_del_director` (Juran, 5 pasos)
+es **que es el consejo y que hace el director de calidad**: con quien se forma,
+el doble rol del que lleva calidad (el dia a dia y ayudarte a decidir *como
+quien lleva las finanzas te ayuda con los numeros*), designar responsables por
+proyecto. La silueta se parece; **lo que queda fuera es distinto en cada uno**,
+y por 9.6.3 eso es lo que decide. **NO son gemelos.** Y el grafo ya lo dice a
+su modo: `rol_alta_direccion_calidad` cuelga por separado de
+`consejo_de_calidad` y de `rol_director_calidad`.
+
+Ademas, medido por mi: **el par nunca se ofrecio en la cola**
+(`INTRA_DOMINIO_PARES.jsonl` no lo contiene, y no hay veredicto). El reporte
+acierta en no decidirlo aqui y en pedir censo.
+
+**PERO la frase con la que justifica no pararse es FALSA, y esta medida como
+falsa.** El reporte dice, seccion 4, discutible 2:
+
+> *"Ninguna de las dos aparece en ningun racimo de `RACIMOS_MIEMBROS.jsonl` ni
+> lleva sufijo numerico, asi que ninguna regla escrita obliga a pararse por
+> esto."*
+
+**`consejo_de_calidad_y_rol_del_director` SI aparece.** Es miembro del racimo
+**"Consejo de calidad"** (dominio `quality`, tamano 3, origen `cribado`,
+veredicto franja 548), junto a `consejo_calidad_2` y `consejo_de_calidad`.
+Medido por mi en `_auditor_v76_consejo.txt`, con el registro entero volcado.
+
+**Y lo que hace la caida peor de lo que parece: el propio reporte lo midio en
+su seccion 1.4.** Su tabla de 32 filas trae *"Consejo de calidad | quality | 3
+| 3 | DECISION 1"*. La seccion 1.4 mide una cosa y la seccion 4 afirma la
+contraria del mismo nodo, en el mismo documento.
+
+**Por que es caida de REPORTE y no de clase:** comprobe que **ninguna arista
+de esta vuelta nace ni muere en ese nodo** (ni escrita ni borrada): el D3 del
+tramo 1 se descarto y se sigue descartando. **No mueve ningun dato.** La frase
+vive solo en `REPORTE.md`. Es de la especie del dictado suelto.
+
+**La marco DENTRO del marcado**, y lo argumento en vez de decidirlo por
+comodidad: la frase vive dentro del discutible 2 y la encontre leyendo
+justamente lo que el ejecutor puso a revision. Marcar sirve para esto.
+
+### D3, A FAVOR, y hago la comparacion cruzada que el reporte confeso no haber hecho
+
+Los tres pares nuevos apuntan a `value_proposition_startup` (Blank, 3 pasos:
+identificar problemas del segmento, definir que caracteristicas los resuelven,
+verificar el encaje hablando con ellos). Los leo uno a uno y **no con la misma
+lectura**:
+
+- **`earlyvangelists_ventas_tempranas`, la mas limpia.** Su paso 4 es una
+  orden sin procedimiento: *"Si no compran, **reconsiderar la propuesta de
+  valor** o el segmento"*. El hijo ES ese procedimiento. 9.6.2 de manual.
+- **`customer_insights_design`, limpia.** Paso 3: *"Usar los insights para
+  informar decisiones en **propuesta de valor**, canales, relaciones e
+  ingresos"*, y paso 4: *"esta propuesta de valor resuelve un problema real
+  del cliente?"*. La madre nombra y pregunta; el hijo trae los tres pasos
+  para construirla y verificarla.
+- **`simulacion_clientes_ia`, la mas debil de las tres y aun asi se queda.**
+  Aqui la propuesta de valor es el **objeto de la entrevista simulada** (paso
+  2), no algo que se manda construir. Pero el paso 4 de la madre remata
+  *"Validar esas hipotesis posteriormente con clientes reales"*, que es
+  literalmente el paso 3 del hijo. La madre es el ensayo de ese paso. Se
+  sostiene.
+
+**No es el mismo argumento tres veces**, que era el riesgo que el reporte
+declaraba, y por eso lo digo par a par. Las tres se quedan.
+
+### D4, A FAVOR EN LAS DOS DISPOSICIONES, **EN CONTRA DEL CRITERIO PUBLICADO**
+
+El discutible pregunta bien: si `eliminacion_causas_error_4` se descarta por
+sufijo y el D2 del tramo 1 se escribe sin sufijo, se sostiene esa linea?
+
+**Mi adjudicacion: las dos decisiones son CORRECTAS y la linea que las separa
+no es el sufijo. Es la clase que el cribado ya les puso.** Medido por mi en
+`_auditor_v76_veredictos_sufijo.txt`:
+
+| par | puesto | clase del cribado | que se hizo | esta bien? |
+|---|---:|:---:|---|:---:|
+| `eliminacion_causas_error_2` contra `eliminacion_causas_error_4` | 2557 | **A** (*"REPITE"*) | descartada | **SI** |
+| `mejora_calidad_crosby` contra `concepto_programa_catorce_pasos` | 2868 | **D** | escrita (el D2) | **SI** |
+| `capacidad_de_proceso` contra `capacidad_de_proceso_2` | 2779 | **D** | escrita (el D1) | **SI** |
+| `planificacion_estrategica_despliegue` contra `_2` | ninguno | **NUNCA LEIDO** | descartada | **SI, por prudencia** |
+
+**Las cuatro disposiciones aciertan. El criterio que las explica, no.** El
+sufijo acierta por casualidad en tres de cuatro y **habria fallado en el D1**,
+que lleva sufijo y se escribio igual. Es decir: el ejecutor **no aplico su
+propio criterio publicado**, y menos mal, porque aplicarlo habria borrado una
+arista buena.
+
+**El criterio bueno ya existe en la casa y no hay que inventarlo:** cuando el
+par tiene veredicto, manda el veredicto (A espera la fusion, D se escribe);
+cuando no lo tiene, y solo entonces, el sufijo es una razon de prudencia para
+aplazar a `OP-S-09`. **Adjudico por cita, no por doctrina nueva:**
+`INTRA_DOMINIO_VEREDICTOS.jsonl` es fuente de verdad por `AUDITOR.md` seccion
+0 punto 3.
+
+**Y con eso el D2 del tramo 1 queda doblemente resuelto.** Mi caso de la
+vuelta 75 (la fusion que `P.9` pediria esperar no esta en el plan) y la
+verificacion propia del ejecutor en su 2.4 (ninguna de las cuatro aparece en
+ninguna operacion, comprobado tambien por mi) apuntaban a lo mismo; ahora
+ademas hay un **veredicto D de archivo, el puesto 2868**, que dice que no son
+el mismo acto. **La relectura conjunta del D2 CIERRA a favor de escribir, y
+cierra bien.**
+
+**UN HALLAZGO ESTRUCTURAL QUE SALE DE AQUI Y VA A ALEXIS.** El filtro `P.9.1`
+que yo mismo adjudique en el acta 75 **no puede atrapar jamas a `OP-S-09`**:
+esa ficha tiene `nodos: []`, `eliminar: []` y `superviviente: null`. Sus **53
+familias y 125 nodos vivos** viven en prosa (`05_SANEO.md` y la `nota` de la
+operacion) y **no en ningun campo que un cruce mecanico pueda leer**. Por eso
+tres de los cuatro descartes del tramo 2 hubo que argumentarlos a mano. La
+guarda tiene un agujero con nombre y tamano.
+
+### D5, A FAVOR de declarar el proxy, y **la relectura destapa DOS cosas peores**
+
+El reporte declara que su 9.6.1 mide `L` como *"numero de `nodos_siguientes`
+**vivos** de la madre HOY"* y avisa que eso puede sobreestimar la mayoria.
+**Declararlo esta bien y lo cuento a favor.** Pero al re-correr la vara por mi
+cuenta (`_auditor_v76_961.txt`) aparecio otra cosa.
+
+**Primero: el script no filtra vivos.** `scripts/loop/vuelta76_relectura_9_6_1.py`
+hace `l_ligados = len(siguientes)`, sin ninguna comprobacion de `deprecado`.
+La palabra *vivos* esta en su docstring y en el reporte, y **no esta en el
+codigo**. Medido, la diferencia es real y grande:
+`funnel_get_customers_optimizacion` cuenta 7 cuando sus vivos son 4;
+`plan_cambio_climatico` cuenta 3 cuando son 2;
+`identificar_caracteristicas_metas_proceso` cuenta 3 cuando son 2
+(`_auditor_v76_961_fuente.txt`).
+
+**Segundo, y es la caida: el reporte publica una tabla que su propio
+instrumento no dice.**
+
+| | 9.6.1 CONFIRMA | DEJA IGUAL | VOLTEA |
+|---|---:|---:|---:|
+| lo que publica `REPORTE.md` seccion 2.1.a | **13** | **12** | 0 |
+| lo que dice `SALIDA_V76_RELECTURA_9_6_1_TRAMO1.txt`, contado por mi | **14** | **11** | 0 |
+| lo que sale con el criterio *vivos* que el reporte declara, corrido por mi | **12** | **13** | 0 |
+
+**Las tres filas discrepan y la del reporte no coincide con ninguna de las
+otras dos.** El `13/12` no sale del fichero que cita ni del criterio que
+enuncia. Es exactamente la especie que la decision del fundador del 20 ago
+2026 vino a matar: **una cifra tecleada en la cabecera de un reporte, que
+ningun tallador toco**.
+
+**Por que es caida de REPORTE y no de cifra publicada:** el `13/12` vive solo
+en `REPORTE.md`, no en `docs/plan/` ni en el banco, no es un veredicto ni el
+marcador. **Y no mueve un solo dato**: con las tres cuentas, `VOLTEA` es CERO,
+y una 9.6.1 en *deja igual* no tiene autoridad para vetar a la 9.6.2 ya leida.
+Las 25 aristas del tramo 1 se quedan las 25 con cualquiera de los tres
+recuentos. Lo confirmo aparte: **la escalera da 0 de 25** en mi corrida, igual
+que la suya.
+
+**La marco FUERA del marcado.** El discutible 5 marca **el metodo** (el proxy
+de `L`); no marca que la tabla publicada contradiga su propio fichero de
+salida. Eso no estaba puesto a revision: lo encontre contando el fichero.
+**Por `AUDITOR.md` seccion 1.2, el credito de la tanda baja y el tramo se
+relee al doble.**
+
+---
+
+## 3. ADJUDICACIONES DE ESTA VUELTA
+
+1. **D1: la arista se queda**, con el veredicto 2779 detras. Cerrado.
+2. **D2 (el par de madres): no son gemelos**, y el par nunca se ofrecio en la
+   cola. La observacion queda bien archivada y **no es parada**; lo que si
+   queda es la correccion del dato falso, encargada en `PARA_ALEXIS.md`.
+3. **D3: las tres aristas del hub se quedan**, leidas una a una.
+4. **D4: las cuatro disposiciones se confirman**, y **el criterio se corrige
+   por cita**: manda el veredicto del cribado; el sufijo solo opina cuando no
+   hay veredicto. **Sin doctrina nueva.**
+5. **El D2 de la vuelta 75 (relectura conjunta) CIERRA A FAVOR de escribir.**
+   La discrepancia de clase de la tanda anterior queda resuelta, y resuelta
+   con tres evidencias independientes.
+6. **`OP-E-02` queda BIEN CERRADA**, con la salvedad de definicion de 1.9.
+7. **El agujero de `P.9.1` contra `OP-S-09`** no es adjudicable por mi sin
+   tocar el alcance de una ficha del plan: **va a Alexis** en la parada.
+
+**Pendientes de doctrina nuevos: NINGUNO.** Todo lo adjudicado arriba sale de
+reglas escritas citadas por numero o de fuentes de verdad ya listadas en
+`AUDITOR.md` seccion 0.
+
+---
+
+## 4. MIS PROPIOS MANEJOS Y MIS PROPIOS ERRORES, DECLARADOS
+
+1. **Corri DOS instrumentos que escriben en rastreados**: el ciclo de Gate 0
+   (que reescribe `master_graph.json` y `phase1_run_log.json`) y el calibrador
+   (que reescribe `docs/plan/PASO_NODO_CALIBRADO.jsonl`). Selle el calibrado
+   antes de correr, y **restaure los tres con `git checkout` y con copia
+   sellada**. El arbol quedo sin un solo rastreado modificado, comprobado.
+2. **Mis dos primeras versiones del contador de aristas murieron** por asumir
+   la forma del `master_graph.json` en vez de mirarla (`nodes` contra `nodos`,
+   y lista contra diccionario). Las cace antes de publicar cifra alguna, pero
+   son mias y van escritas.
+3. **UNA CAIDA MIA, DE LA VUELTA 75, QUE ESTA VUELTA DESTAPO.** En el acta 75,
+   D1, escribi que los dos `medicion_servicios` son *"gemelos"* del mismo
+   programa Make Certain. **El cribado habia leido ese par exacto y lo fallo
+   D**: puesto **2493**, `make_certain_programa` contra
+   `programa_make_certain_3`, *"El guion de la sesion contra la medicion del
+   programa"*; y el 2739 repite el corte con el tercer nodo. **La disposicion
+   que adjudique sigue en pie por otra via y por eso no se mueve nada**:
+   `OP-S-09` nombra esa familia entre las cuatro mayores y es
+   `RENOMBRE_CON_ALIAS`, o sea que el id del destino cambia, y `P.9` punto 2
+   pide el id resuelto al dia de la escritura. Pero **la palabra "gemelos" era
+   mia, la publique sin consultar el veredicto de archivo, y el reporte de
+   esta vuelta la heredo de mi acta**. La cuento como **caida de reporte del
+   auditor**, no del ejecutor.
+
+---
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda:** cinco discutibles releidos a ciegas con los textos completos de
+diez nodos impresos antes de destapar razon alguna; cero puestos nuevos del
+cribado; unas veinte mediciones e instrumentos re-corridos al digito (seccion
+1), **mas tres varas que el ejecutor no corrio**: el conteo de su propio
+fichero de salida de la 9.6.1, la corrida de esa vara con el criterio *vivos*
+que el reporte declara, y el cruce de los pares en disputa contra
+`INTRA_DOMINIO_VEREDICTOS.jsonl`.
+
+**Caidas del ejecutor en esta tanda:**
+
+| especie | cuantas | cual |
+|---|---:|---|
+| **de clase o cifra publicada (mueve dato)** | **CERO** | las 26 aristas, la reversion, las tres correcciones de `OPERACIONES.jsonl`, el censo de 32 filas, las cuatro cifras del cierre, la bolsa, los 10 apartados y el marcador **se reproducen todos al digito** |
+| **de reporte** | **DOS** | (1) *"Ninguna de las dos aparece en ningun racimo"*, siendo que `consejo_de_calidad_y_rol_del_director` es miembro del racimo *Consejo de calidad* que el mismo reporte tabula en 1.4. **DENTRO del marcado.** (2) la tabla **13/12** de la 9.6.1, que no coincide ni con su propio fichero de salida (**14/11**) ni con el criterio *vivos* que el reporte enuncia (**12/13**). **FUERA del marcado.** |
+
+**Caidas del auditor:** **UNA de reporte**, la palabra *"gemelos"* del D1 en mi
+acta 75 contra el veredicto 2493 (seccion 4.3); **dos manejos propios** y
+**dos errores de instrumento propio** declarados en la seccion 4.
+
+**Acumulado:** 499 relecturas (494 mas las cinco ciegas), 847 puestos,
+**8 caidas de clase** (sin cambio), **35 de reporte del ejecutor** (33 mas las
+dos de esta vuelta), 14 de cifra publicada del ejecutor, 3 de cifra del
+auditor, 8 de acta del auditor, 5 de procedimiento del auditor, y **1 de
+reporte del auditor** (especie nueva, la mia de la seccion 4.3).
+
+**RACHAS:**
+
+> **CLASE O CIFRA PUBLICADA: CERO. La racha se rompe y vuelve a cero.** La
+> vuelta 75 llevaba una; la 76 no trae ninguna. **La parada de dos seguidas NO
+> se dispara.**
+>
+> **REPORTE: TRES TANDAS SEGUIDAS.** El D9 en la 74, el *"es gemelo"* del D3
+> en la 75, y las dos de esta. **La parada de esta especie pide TRES. SE
+> DISPARA.**
+
+**CREDITO DE TANDA REBAJADO.** La segunda caida de reporte aparecio **fuera de
+los discutibles marcados**, asi que por `AUDITOR.md` seccion 1.2 el tramo se
+relee al doble. La forma concreta queda escrita en `PARA_ALEXIS.md` para el
+encargo de reanudacion, no aqui: **el bucle se detiene antes.**
+
+---
+
+## 6. LA PARADA
+
+**SE CUMPLE UNA CONDICION DE PARADA de `AUDITOR.md` seccion 4:** *"Caida de
+REPORTE... **TRES seguidas si son PARADA**: tres de la misma especie ya no son
+ruido, son un patron de dictado suelto."* Es la misma condicion que se disparo
+el 20 ago 2026 en la vuelta 56, y hay precedente escrito con decision del
+fundador (`docs/loop/paradas/2026-08-20-racha-de-reporte-DECISION.md`).
+
+**Y repaso las demas una a una, como manda el protocolo:** no hace falta
+doctrina nueva (todo lo de la seccion 3 se adjudica por cita); no hay
+contradiccion con regla vigente que las reglas de correccion no cubran; nada
+de lo hecho toca lo que la casa reserva al fundador; no hay fallo tecnico
+(Gate 0, tres suites y `tsc` en verde por corrida propia); la racha de clase o
+cifra publicada esta en CERO; la campana no esta consumada; el freno de
+`CIERRE DE LA FASE 05` no aplica porque la fase 04 sigue abierta.
+
+**`docs/loop/PARA_ALEXIS.md` ESCRITO. `docs/loop/PROMPT_SIGUIENTE.md` VACIO.
+EL BUCLE SE DETIENE A LA ESPERA DEL FUNDADOR.**

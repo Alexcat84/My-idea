@@ -1,0 +1,20 @@
+OP-E-05.nodos: ['requisitos_gates_con_dientes', 'gestion_portafolio_formal', 'gestion_portafolio_dos_niveles']
+OP-M-01-FUSION.eliminar: ['gates_go_kill_decision_points', 'requisitos_gates_con_dientes', 'estructura_gates', 'estructura_de_gates']
+INTERSECCION: ['requisitos_gates_con_dientes']
+
+nodos condenados (eliminar de operaciones no ejecutadas): 36
+aristas nuevas contra apertura: 26
+ROJAS P.9.1 entre las 26 nuevas: 0
+
+borradas: [('segmentos_de_clientes_problema_necesidad', 'get_out_of_the_building')]
+   condena de get_out_of_the_building : ['OP-M-05-EDIFICIO']
+
+=== LAS 51 ARISTAS DE LA FASE 04 (tramo1 neto + tramo2) contra P.9.1 ===
+total: 51
+ROJAS por 'eliminar' de operacion pendiente: 0
+Traceback (most recent call last):
+  File "<stdin>", line 21, in <module>
+TypeError: unsupported operand type(s) for |: 'list' and 'set'
+de las 51, tocan un SUPERVIVIENTE de operacion pendiente (aviso, no rojo): 2
+    ('customer_validation', 'mvp_alta_fidelidad', ['OP-M-05-APERTURA'])
+    ('customer_validation', 'prueba_mvp_alta_fidelidad', ['OP-M-05-APERTURA'])

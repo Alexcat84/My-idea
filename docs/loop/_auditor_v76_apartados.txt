@@ -1,0 +1,12 @@
+bolsa reducida sin arista (mi corrida fresca): 311
+APARTADOS por P.9.1 en MI corrida: 10
+   customer_development_team -> get_out_of_the_building   [('hijo', 'get_out_of_the_building', ['OP-M-05-EDIFICIO'])]
+   customer_discovery_overview -> customer_validation   [('madre', 'customer_discovery_overview', ['OP-M-05-INDICE'])]
+   customer_discovery_overview -> mvp_catalogo_tecnicas   [('madre', 'customer_discovery_overview', ['OP-M-05-INDICE'])]
+   genchi_gembutsu_salir_del_edificio -> get_out_of_the_building   [('hijo', 'get_out_of_the_building', ['OP-M-05-EDIFICIO'])]
+   introduccion_validacion_clientes -> herramientas_online_canal_fisico   [('madre', 'introduccion_validacion_clientes', ['OP-M-05-APERTURA'])]
+   introduccion_validacion_clientes -> hipotesis_de_canales   [('madre', 'introduccion_validacion_clientes', ['OP-M-05-APERTURA'])]
+   pivotes_e_iteraciones -> pivote_startup   [('madre', 'pivotes_e_iteraciones', ['OP-M-03-III']), ('hijo', 'pivote_startup', ['OP-M-03-III'])]
+   requisitos_gates_con_dientes -> post_launch_review   [('madre', 'requisitos_gates_con_dientes', ['OP-M-01-FUSION'])]
+   rol_gates_agile -> gates_go_kill_decision_points   [('hijo', 'gates_go_kill_decision_points', ['OP-M-01-FUSION'])]
+   segmentos_de_clientes_problema_necesidad -> get_out_of_the_building   [('hijo', 'get_out_of_the_building', ['OP-M-05-EDIFICIO'])]
