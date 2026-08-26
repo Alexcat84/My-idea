@@ -1,0 +1,558 @@
+====================================================================================================
+[0] necesidades_reales_vs_declaradas -> descubrir_necesidades_del_cliente  (dominio quality, paso senalado 2)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (necesidades_reales_vs_declaradas), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Los clientes expresan sus necesidades en su propio lenguaje, comúnmente en forma de bienes/productos, cuando su necesidad real es el servicio que dicho bien provee. La preocupación por vender bienes puede desviar la atención de las necesidades reales del cliente (ej: 'Marketing Myopia' de Levitt: los ferrocarriles fallaron por enfocarse en trenes en vez de en transporte).
+    paso 1: Preguntar directamente '¿por qué compra este producto/servicio?' y '¿qué servicio espera de él?'
+    paso 2: Traducir las necesidades declaradas del cliente a necesidades reales de servicio <== SENALADO
+    paso 3: Evitar centrarse exclusivamente en el producto ignorando la función/servicio subyacente
+    paso 4: Rediseñar la propuesta de valor en torno a la necesidad real identificada
+  HIJO (descubrir_necesidades_del_cliente), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: El tercer paso del Diseño para la Calidad consiste en descubrir las necesidades reales de clientes externos e internos, diferenciando entre necesidades declaradas (lo que el cliente dice que quiere) y necesidades reales (los beneficios que realmente busca). También deben considerarse las necesidades percibidas, culturales, y las derivadas de usos no previstos. El proceso incluye planificar la recolección de necesidades, listarlas en el lenguaje del cliente, analizarlas y priorizarlas, y traducirlas al lenguaje de la organización.
+    paso 1: Planificar métodos de recolección de necesidades: encuestas, focus groups, quejas, visitas a clientes, etc.
+    paso 2: Recopilar la lista de necesidades en el lenguaje propio del cliente
+    paso 3: Distinguir entre necesidades declaradas, reales, percibidas y culturales, por cada segmento de cliente
+    paso 4: Investigar posibles usos no previstos del producto y sus riesgos de seguridad
+    paso 5: Analizar y priorizar las necesidades identificadas, de forma consensuada, sin asumir jerarquías automáticas por tipo de cliente
+    paso 6: Traducir las necesidades priorizadas al lenguaje técnico de la organización
+
+====================================================================================================
+[1] sujetos_de_control -> key_process_product_characteristics  (dominio quality, paso senalado 3)
+  veredicto propio: puesto 3205, clase D: key_process_product_characteristics (Juran: recolectar inputs de QFD/AMFE/revision, clasificar caracteristicas por importancia critica/mayor/menor/incidental, identificar partes sensibles, documentar 
+  mismo racimo declarado: NO
+  MADRE (sujetos_de_control), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Cada característica del producto o proceso a controlar se denomina 'sujeto de control'. Su selección es el primer paso crítico en la planificación del control, derivándose de necesidades del cliente, regulaciones, seguridad, análisis de modos de fallo (FMEA) y diseño de experimentos.
+    paso 1: Identificar los procesos y productos clave a controlar
+    paso 2: Definir los objetivos del proceso de trabajo
+    paso 3: Traducir la voz del cliente en características de producto (KPC) <== SENALADO
+    paso 4: Identificar características de control de proceso (KCC) relacionadas
+    paso 5: Seleccionar los sujetos de control finales basados en las fuentes disponibles (FMEA, regulaciones, DOE)
+  HIJO (key_process_product_characteristics), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las especificaciones correspondientes, asegura que el esfuerzo de control se dirija a lo que el cliente valora y a lo que realmente afecta el resultado final.
+    paso 1: Recolecta inputs de investigación de mercado, QFD, revisión de diseño y AMFE
+    paso 2: Clasifica las características del producto según su importancia relativa: crítica, mayor, menor o incidental
+    paso 3: Identifica las partes sensibles a calidad usando criterios de complejidad y tasa de fallos
+    paso 4: Documenta la relación entre las características de proceso y los resultados de producto
+    paso 5: Registra las características clave en planos y especificaciones
+
+====================================================================================================
+[2] clasificacion_tipos_activos -> tipos_de_pasivos  (dominio core, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (clasificacion_tipos_activos), fuente: Financial Intelligence for Entrepreneurs
+    resumen: Los activos se dividen en corrientes (convertibles en efectivo en menos de un año: caja, cuentas por cobrar, inventario) y de largo plazo (vida útil mayor a un año: propiedad, planta y equipo, intangibles). Cada categoría involucra distintos niveles de estimación contable y de riesgo de manipulación, siendo el efectivo el único rubro no sujeto a discreción contable significativa.
+    paso 1: Clasificar los activos de la empresa en corrientes y de largo plazo <== SENALADO
+    paso 2: Revisar el saldo de cuentas por cobrar y la reserva para cuentas incobrables
+    paso 3: Evaluar los niveles de inventario (materia prima, en proceso, terminado) y su impacto en el flujo de caja
+    paso 4: Identificar el valor de PPE (propiedad, planta y equipo) registrado al costo de adquisición, no al valor de mercado
+    paso 5: Monitorear que el inventario se mantenga en el nivel mínimo necesario para operar
+  HIJO (tipos_de_pasivos), fuente: Financial Intelligence for Entrepreneurs
+    resumen: Los pasivos son obligaciones financieras de la empresa, divididos en corrientes (pagaderos en menos de un año: porción corriente de deuda largo plazo, préstamos de corto plazo, cuentas por pagar, gastos acumulados) y de largo plazo (préstamos, compensación diferida, impuestos diferidos). Entender esta clasificación es clave para evaluar la liquidez y estructura de financiamiento del negocio.
+    paso 1: Clasificar todas las deudas de la empresa en corrientes vs largo plazo.
+    paso 2: Separar la porción corriente de préstamos largo plazo que vence este año.
+    paso 3: Registrar cuentas por pagar a proveedores y gastos acumulados (como nómina).
+    paso 4: Revisar periódicamente el peso relativo de cada categoría de pasivo.
+
+====================================================================================================
+[3] proceso_llamada_inicial_venta -> proceso_venta_franquicias  (dominio franquicias, paso senalado 6)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (proceso_llamada_inicial_venta), fuente: Franchise Your Business - Mark Siebert
+    resumen: La venta de franquicias es un cortejo, no una venta rápida. Los mejores vendedores escuchan más de lo que hablan en la primera llamada, evitando abrumar al prospecto con información. La llamada inicial sigue una agenda estructurada: obtener datos de contacto, calificar financieramente, calificar por otros criterios, determinar urgencia y motivos, entender el proceso de compra del candidato y posicionar frente a competidores, dar una visión general, explicar próximos pasos y pedir un avance (advance).
+    paso 1: Obtener información de contacto y fuente del lead
+    paso 2: Calificar financieramente al candidato, y hazlo en los primeros 5 minutos
+    paso 3: Calificar según experiencia, territorio deseado, etc.
+    paso 4: Determinar urgencia y motivos para franquiciar
+    paso 5: Identificar por qué considera tu franquicia específicamente (hot buttons)
+    paso 6: Entender su proceso de decisión y qué otras franquicias evalúa <== SENALADO
+    paso 7: Dar overview breve enfatizando hot buttons
+    paso 8: Explicar el proceso y cronograma, y solicitar un avance (ej. completar el CIRF), y agenda la siguiente llamada
+    paso 9: Si no califica, rechazalo con amabilidad y sugierele como resolver su situacion
+  HIJO (proceso_venta_franquicias), fuente: Franchise Your Business - Mark Siebert
+    resumen: La venta de franquicias es un proceso predecible si se sigue una metodología probada, aunque con tasas de cierre bajas y alto nivel de rechazo. No existe un único proceso correcto; varía según tipo de franquicia (individual vs. desarrollo de área), nivel de inversión y experiencia del vendedor. Es fundamentalmente distinto a otras ventas porque implica vender un 'cambio de vida' (dejar el empleo, invertir ahorros) más que un producto o servicio.
+    paso 1: Diseñar un flujo de proceso de ventas adaptado al tipo de franquicia e inversión
+    paso 2: Capacitar al equipo de ventas en entender las motivaciones emocionales del comprador (independencia, ser su propio jefe) más que solo el retorno financiero
+    paso 3: Decidir la estrategia respecto a cerrar en 'Discovery/Decision Day' o después
+    paso 4: Asegurar que los candidatos lean el FDD y consulten con abogado externo
+    paso 5: Medir y ajustar continuamente el proceso según los resultados obtenidos
+
+====================================================================================================
+[4] equipo_customer_development -> customer_development_team  (dominio core, paso senalado 1)
+  veredicto propio: puesto 637, clase B: CORRECCION DECLARADA DE MI PROPIA RAZON DEL PUESTO 615: alli escribi que equipo_customer_development y customer_development_team son una pareja que se lee sola, y LEIDOS DE VERDAD no son gemelos. El n
+  mismo racimo declarado: NO
+  MADRE (equipo_customer_development), fuente: The Startup Owner's Manual - Steve Blank
+    resumen: En lugar de contratar puestos tradicionales de ventas o marketing enfocados en ejecutar, tú y quienes te acompañan forman el equipo que descubre a tus clientes (Customer Development). Al principio ese equipo eres tú mismo con tus cofundadores. Necesitas sentirte cómodo con la incertidumbre, el caos y el cambio constante, y estar dispuesto a aprender del fracaso en vez de celebrar solo el éxito. Las habilidades que te sirven aquí son opuestas a las que se necesitan en una empresa ya establecida.
+    paso 1: Cambia los títulos tradicionales de Ventas y Marketing por el de equipo de descubrimiento de clientes (Customer Development) <== SENALADO
+    paso 2: Lidera tú mismo, junto a tus cofundadores, la interacción directa con los clientes
+    paso 3: Evalúa en ti y en tu equipo la apertura a aprender, la tolerancia a la ambigüedad y la capacidad de hacer varias cosas a la vez
+    paso 4: Define los roles de tu equipo para las cuatro etapas del descubrimiento de clientes
+  HIJO (customer_development_team), fuente: The Startup Owner's Manual - Steve Blank
+    resumen: Aquí te organizas distinto a como lo haría una empresa tradicional: en las primeras etapas, tú y tus cofundadores salen del edificio a hablar con clientes (get out of the building), en vez de dejarle esa tarea a alguien de ventas o marketing contratado para eso. Define quién hace qué en cada una de las cuatro fases de descubrimiento de clientes (Customer Discovery) y deja por escrito los valores centrales de tu proyecto.
+    paso 1: Decide quién de ustedes lidera la conversación con clientes (Customer Development)
+    paso 2: Define cómo vas a salir a hablar con clientes en persona (get out of the building)
+    paso 3: Decide qué parte de las respuestas de tus clientes vas a recoger en línea y qué parte cara a cara
+    paso 4: Escribe entre 3 y 5 valores centrales que te guían a ti y a tus cofundadores (no es tu misión, no habla de ganancias)
+
+====================================================================================================
+[5] metas_desmaterializacion_energia -> establecer_metas_reduccion_emisiones  (dominio environmental, paso senalado 2)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (metas_desmaterializacion_energia), fuente: The Green to Gold Business Play - Daniel C. Esty
+    resumen: Las empresas líderes en ventaja ecológica establecen metas cuantitativas para reducir materiales y energía en sus productos, identificando en qué etapa del ciclo de vida se concentra el mayor impacto. Ejemplos incluyen el 'Considered Boot' de Nike (61% menos material, 35% menos energía) y Tide Coldwater de P&G, que atacó el mayor impacto ambiental identificado en el uso del producto (agua caliente). El rediseño de empaques (lightweighting) también reduce insumos, desperdicio y energía en manufactura y distribución.
+    paso 1: Realizar un análisis de ciclo de vida para identificar dónde se concentra el mayor uso de materiales/energía
+    paso 2: Establecer metas cuantitativas de reducción (% de materiales, % de energía) <== SENALADO
+    paso 3: Rediseñar empaques para reducir peso y volumen (lightweighting)
+    paso 4: Comunicar los ahorros de costos y beneficios ambientales generados
+  HIJO (establecer_metas_reduccion_emisiones), fuente: The Green to Gold Business Play - Daniel C. Esty
+    resumen: Una vez que identifiques el origen de tus emisiones, tienes que fijar objetivos concretos de reducción. Las metas apropiadas varían según tu industria, tu capacidad y tu posición en el mercado. Ejemplos reales incluyen a USG (20% para 2020), MillerCoors (15% de reducción de energía para 2015) y Panasonic e Intel, que superaron ampliamente sus objetivos iniciales. Es importante que fijes metas públicas realistas pero ambiciosas a corto plazo, y que reserves los objetivos más transformadores para tu uso interno, ya que si no cumples una meta pública vas a tener que dar explicaciones y eso puede afectar tu reputación.
+    paso 1: Analiza el inventario de emisiones que ya tienes.
+    paso 2: Define un año base para la comparación.
+    paso 3: Establece metas de reducción a corto y largo plazo.
+    paso 4: Comunica públicamente las metas alcanzables, y guarda para ti las más ambiciosas.
+    paso 5: Prepara explicaciones para posibles incumplimientos.
+
+====================================================================================================
+[6] diferencia_iso9001_iso9004 -> trilogia_de_juran  (dominio quality, paso senalado 3)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (diferencia_iso9001_iso9004), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: ISO 9001 es un sistema de aseguramiento enfocado únicamente en procesos que garantizan cumplir los requisitos del cliente (efectividad). ISO 9004, en cambio, es un modelo de excelencia organizacional similar a premios nacionales de calidad, enfocado tanto en efectividad como en eficiencia, incluyendo planificación, control y mejora en todos los procesos de la empresa. Las organizaciones que usan ISO 9004 como base logran mejores resultados que quienes solo certifican ISO 9001.
+    paso 1: Evaluar si el objetivo es solo certificación de cumplimiento (ISO 9001) o excelencia integral (ISO 9004)
+    paso 2: Usar ISO 9004 como marco complementario para llenar brechas de gestión no cubiertas por ISO 9001
+    paso 3: Incorporar métodos de planificación, control y mejora en todos los procesos, no solo los de producción <== SENALADO
+  HIJO (trilogia_de_juran), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Modelo universal que integra tres procesos gerenciales interrelacionados para gestionar la calidad: planificación de la calidad, que diseña procesos para crear productos o servicios que satisfagan necesidades; control de calidad, que asegura que la producción cumpla los criterios de diseño eliminando picos esporádicos que se alejan del nivel planificado; y mejora de la calidad, que reduce el desperdicio crónico mediante cambios sistemáticos o disruptivos tipo breakthrough. Distinguir si un problema es un pico esporádico o un desperdicio crónico te permite elegir el método correcto: apagar incendios no es lo mismo que mejorar de forma estructural, y cada uno exige un tratamiento distinto aunque compartan herramientas. Estos tres procesos son la base científica de la gestión de calidad moderna, incluyendo metodologías como Six Sigma.
+    paso 1: Diseña tus procesos traduciendo lo que pide tu cliente en especificaciones concretas de tu producto o servicio
+    paso 2: Verifica si el problema que enfrentas es un pico esporádico o un desperdicio crónico antes de decidir cómo actuar
+    paso 3: Aplica control de proceso para eliminar picos esporádicos y devolver el desempeño al nivel planificado
+    paso 4: Aplica un proceso de mejora o breakthrough para reducir el desperdicio crónico a un nivel sin precedentes
+    paso 5: Revisa que lo que produces cumpla con los criterios de diseño originales
+    paso 6: Integra los tres procesos como un ciclo continuo en tu forma de gestionar la calidad
+
+====================================================================================================
+[7] aprobacion_alta_direccion -> metas_negocio_calidad  (dominio quality, paso senalado 2)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (aprobacion_alta_direccion), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Tu implicación directa y no delegable es indispensable para lograr avances importantes cada año. Respondes mejor cuando ves una amenaza competitiva concreta, como perder clientes, o una oportunidad de ahorro cuantificada a traves del costo de la mala calidad, y necesitas asumir tareas activas en vez de delegarlo todo.
+    paso 1: Reunir evidencia de amenazas competitivas concretas, como contratos o clientes perdidos
+    paso 2: Cuantificar las oportunidades de mejora calculando el costo de la mala calidad en tu negocio <== SENALADO
+    paso 3: Definir que tareas no puedes delegar y debes asumir tu mismo
+    paso 4: Establecer revisiones periodicas de tu propio avance
+    paso 5: Reconocer desde el inicio que esto te sumara aproximadamente un 10% mas de trabajo
+  HIJO (metas_negocio_calidad), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Las organizaciones líderes incorporan metas de calidad cuantificadas y con plazo definido dentro de su plan de negocio estratégico (ej. reducir el costo de mala calidad en 50% en 5 años). Esto traduce amenazas y oportunidades organizacionales en objetivos concretos y medibles que guían la asignación de recursos.
+    paso 1: Identificar amenazas y oportunidades estratégicas relacionadas con calidad
+    paso 2: Traducir estas amenazas/oportunidades en metas cuantificadas con plazo definido
+    paso 3: Incorporar estas metas formalmente en el plan de negocio de la organización
+
+====================================================================================================
+[8] seguimiento_cumplimiento_cadena_suministro -> auditorias_proveedores  (dominio environmental, paso senalado 2)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (seguimiento_cumplimiento_cadena_suministro), fuente: The Green to Gold Business Play - Daniel C. Esty
+    resumen: Tu negocio no responde solo por lo que tú haces, sino también por lo que hacen tus proveedores y clientes en materia ambiental. El caso del retiro de productos de Mattel por pintura con plomo muestra el riesgo reputacional y financiero de no revisar a quienes te abastecen. Por eso conviene auditar de forma sistemática a tus proveedores, sobre todo si tu cadena es global.
+    paso 1: Mapea toda tu cadena de suministro e identifica a los proveedores críticos
+    paso 2: Haz auditorías periódicas de cumplimiento ambiental a tus proveedores <== SENALADO
+    paso 3: Fija estándares de cumplimiento comunes para toda tu cadena
+    paso 4: Coordínate con otros negocios de tu sector cuando compartan los mismos proveedores
+  HIJO (auditorias_proveedores), fuente: The Green to Gold Business Play - Daniel C. Esty
+    resumen: Tener un código de conducta no garantiza cumplimiento; se requieren mecanismos de verificación como auditorías anunciadas y no anunciadas. GEMI recomienda: investigar el desempeño existente del proveedor, construir sobre marcos ya existentes (ej. Carbon Disclosure Project), solicitar información adicional solo cuando sea necesaria, ser selectivo sobre a quién auditar, y usar visitas in-situ para proveedores críticos.
+    paso 1: Recopilar reportes existentes de sostenibilidad del proveedor antes de pedir nueva información
+    paso 2: Usar marcos estandarizados de la industria (ej. CDP) para reducir carga de reporte
+    paso 3: Priorizar auditorías en proveedores de mayor impacto en costos, continuidad o reputación
+    paso 4: Realizar visitas in-situ anunciadas y no anunciadas a proveedores críticos
+
+====================================================================================================
+[9] gestion_diferencias_culturales -> participacion_ferias_comerciales  (dominio exportacion, paso senalado 7)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (gestion_diferencias_culturales), fuente: A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+    resumen: Las diferencias culturales afectan estilos de negociación, puntualidad, regalos, saludos, gestos, uso de títulos y nombres. La falta de familiaridad con las prácticas de negocios, costumbres sociales y etiqueta de un país puede debilitar la posición de una empresa en el mercado y llevar al fracaso del esfuerzo exportador. Es crítico entender y respetar estas diferencias para tener éxito en negocios internacionales. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.
+    paso 1: Investigar la literatura sobre antropología cultural del país objetivo
+    paso 2: Hablar con personas que conozcan la cultura antes de viajar
+    paso 3: Comenzar con mercados culturalmente similares (Canadá, Reino Unido) si se es principiante
+    paso 4: Aprender de clientes domésticos de diferentes orígenes étnicos/sociales
+    paso 5: Aprender frases básicas del idioma local
+    paso 6: Considerar contratar un interno o empleado que hable el idioma y entienda la cultura de negocios
+    paso 7: Asistir a ferias comerciales internacionales en la industria propia <== SENALADO
+    paso 8: Contactar a la embajada de EE.UU. y al U.S. Commercial Service antes de un viaje de desarrollo de negocios
+  HIJO (participacion_ferias_comerciales), fuente: A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+    resumen: Las ferias comerciales son 'escaparates' donde miles de empresas de distintos países exhiben sus productos y servicios, sirviendo como punto de encuentro entre compradores y vendedores. Participar requiere planificación cuidadosa: elegir la feria correcta, obtener espacio y diseñar el stand, enviar productos, brindar hospitalidad, y desmontar al finalizar. Muchas ferias cuentan con pabellones de EE.UU. dedicados a empresas estadounidenses.
+    paso 1: Investigar y seleccionar la feria más adecuada para el producto/mercado
+    paso 2: Solicitar espacio de exhibición y diseñar el stand
+    paso 3: Planificar el envío, empaque y desempaque de productos
+    paso 4: Organizar hospitalidad y mantenimiento del stand durante el evento
+    paso 5: Preparar materiales para identificar prospectos serios frente a 'tire-kickers'
+    paso 6: Planificar el desmontaje y envío de regreso del material tras el evento
+
+====================================================================================================
+[10] decision_momento_fundacion -> evaluacion_conocimiento_industria  (dominio core, paso senalado 3)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (decision_momento_fundacion), fuente: The Founder's Dilemmas
+    resumen: Sientes la tensión entre fundar temprano en tu carrera o esperar para acumular más preparación. Esperar te permite construir experiencia, contactos y ahorros, pero fundar tarde puede dejarte con la manera de pensar de las grandes empresas (career imprints), que dificulta el salto a una startup. Tienes que evaluar con honestidad si tus experiencias de carrera te han preparado para dar ese salto.
+    paso 1: Evalúa cuánto conocimiento y habilidades has acumulado, tanto el que aprendiste formalmente como el que solo se aprende con la práctica
+    paso 2: Revisa tu experiencia dirigiendo personas y trabajando en distintas áreas de un negocio
+    paso 3: Revisa cuánto conoces la industria en la que quieres emprender <== SENALADO
+    paso 4: Piensa si tu experiencia fue en empresas pequeñas o startups, o en grandes corporaciones
+    paso 5: Sopesa el riesgo de esperar demasiado contra el riesgo de lanzarte sin estar preparado
+  HIJO (evaluacion_conocimiento_industria), fuente: The Founder's Dilemmas
+    resumen: Cuánto conoces la industria en la que vas a fundar tu negocio pesa en tus probabilidades de éxito: si nunca trabajaste en ella, es probable que consigas menos capital, que tu negocio crezca menos en empleo y que la chance de fracasar sea mayor, aunque más de la mitad de quienes emprenden lo hacen en industrias distintas a las que trabajaron antes. La 'ventaja de la ignorancia' (pensar sin los prejuicios del sector) casi nunca te compensa las desventajas de no conocer el terreno, sobre todo si lo que aprendiste en otra industria no se traduce bien a esta nueva.
+    paso 1: Escribe tu experiencia previa en la industria donde vas a fundar tu negocio
+    paso 2: Identifica qué supuestos o formas de pensar de industrias anteriores podrían no funcionarte en este nuevo terreno
+    paso 3: Valida con gente que conozca bien esta industria los supuestos clave de tu plan
+    paso 4: Si ves huecos grandes en tu conocimiento, busca sumar asesores o socios con experiencia profunda en esta industria
+
+====================================================================================================
+[11] actualizar_business_model_canvas_tuneup -> value_proposition_startup  (dominio core, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (actualizar_business_model_canvas_tuneup), fuente: The Startup Owner's Manual - Steve Blank
+    resumen: El Business Model Canvas se revisa como un 'tune-up' después de cada ronda de Customer Discovery, no como una revisión exhaustiva final. La propuesta de valor suele ser el elemento más afectado, ya que el feedback de clientes revela si tu producto realmente resuelve su problema. Los segmentos de clientes también deben reevaluarse cuando el producto resuena solo con un subconjunto del mercado. Si detectas que una hipótesis del modelo de negocio no se cumple con los resultados de las pruebas, ajusta también las hipótesis de ingresos según quién mostró entusiasmo real. Documenta hallazgos, sorpresas y decepciones de cada ronda para mantener trazabilidad de tus cambios.
+    paso 1: Revisa tu propuesta de valor a la luz del feedback de clientes recibido <== SENALADO
+    paso 2: Reevalúa tus segmentos de clientes identificando si el producto resuena solo con un subconjunto
+    paso 3: Ajusta tus hipótesis de ingresos según los segmentos que mostraron entusiasmo real
+    paso 4: Documenta los cambios, sorpresas y decepciones como parte de un tune-up, no una revisión final
+  HIJO (value_proposition_startup), fuente: The Startup Owner's Manual - Blank, Steve
+    resumen: Tu propuesta de valor describe el trabajo (job) que resuelves para tu cliente. Son las caracteristicas de tu producto o servicio que responden a un problema o una necesidad real: ahorrar tiempo, ganar estatus, simplificar algo, dar comodidad. Para que funcione, tiene que encajar con precisión en el segmento de clientes al que se la ofreces.
+    paso 1: Identifica los problemas o necesidades reales de tu segmento de clientes.
+    paso 2: Define que caracteristicas de tu producto o servicio resuelven esos problemas.
+    paso 3: Verifica el encaje entre tu propuesta de valor y tu segmento de clientes hablando directamente con ellos.
+
+====================================================================================================
+[12] etapa_build_business_case -> value_proposition_startup  (dominio core, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (etapa_build_business_case), fuente: Winning at New Products - Robert G. Cooper
+    resumen: Es la etapa crítica de investigación detallada que define claramente el producto y verifica la atractividad del proyecto antes del gasto fuerte en desarrollo. Incluye definición del producto ganador, análisis de mercado detallado, investigación VoC profunda, análisis competitivo, prueba de concepto, evaluación técnica y operativa detallada, y análisis financiero mediante flujo de caja descontado (NPV, IRR).
+    paso 1: Definir el mercado objetivo, posicionamiento y propuesta de valor del producto <== SENALADO
+    paso 2: Realizar investigación de mercado detallada (tamaño, segmentos, factores de éxito)
+    paso 3: Ejecutar investigación VoC profunda para especificar requerimientos del producto
+    paso 4: Realizar prueba de concepto con clientes potenciales
+    paso 5: Llevar a cabo evaluación técnica y operativa detallada de viabilidad
+    paso 6: Elaborar análisis financiero con NPV, IRR y análisis de sensibilidad
+    paso 7: Consolidar todo en un Business Case con definición de producto, justificación y plan de acción
+  HIJO (value_proposition_startup), fuente: The Startup Owner's Manual - Blank, Steve
+    resumen: Tu propuesta de valor describe el trabajo (job) que resuelves para tu cliente. Son las caracteristicas de tu producto o servicio que responden a un problema o una necesidad real: ahorrar tiempo, ganar estatus, simplificar algo, dar comodidad. Para que funcione, tiene que encajar con precisión en el segmento de clientes al que se la ofreces.
+    paso 1: Identifica los problemas o necesidades reales de tu segmento de clientes.
+    paso 2: Define que caracteristicas de tu producto o servicio resuelven esos problemas.
+    paso 3: Verifica el encaje entre tu propuesta de valor y tu segmento de clientes hablando directamente con ellos.
+
+====================================================================================================
+[13] extraer_priorizar_hipotesis -> value_proposition_startup  (dominio core, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (extraer_priorizar_hipotesis), fuente: Value Proposition Design
+    resumen: A partir de tu mapa de propuesta de valor y tu modelo de negocio, identifica todas las suposiciones que tienen que ser ciertas para que tu idea funcione. No todas pesan igual: primero busca las que pueden matar tu negocio si resultan falsas, y esas son las que testeas primero.
+    paso 1: Lista todo lo que tiene que ser cierto sobre tu modelo de negocio, tu propuesta de valor y tu cliente <== SENALADO
+    paso 2: Escribe cada hipótesis por separado, una por nota
+    paso 3: Elimina las que estén repetidas
+    paso 4: Identifica cuáles son capaces de acabar con tu proyecto si fallan
+    paso 5: Ordena todas tus hipótesis según qué tan crítica es cada una para que tu proyecto funcione
+  HIJO (value_proposition_startup), fuente: The Startup Owner's Manual - Blank, Steve
+    resumen: Tu propuesta de valor describe el trabajo (job) que resuelves para tu cliente. Son las caracteristicas de tu producto o servicio que responden a un problema o una necesidad real: ahorrar tiempo, ganar estatus, simplificar algo, dar comodidad. Para que funcione, tiene que encajar con precisión en el segmento de clientes al que se la ofreces.
+    paso 1: Identifica los problemas o necesidades reales de tu segmento de clientes.
+    paso 2: Define que caracteristicas de tu producto o servicio resuelven esos problemas.
+    paso 3: Verifica el encaje entre tu propuesta de valor y tu segmento de clientes hablando directamente con ellos.
+
+====================================================================================================
+[14] optimizacion_embudo_get_customers -> mvp_alta_fidelidad  (dominio core, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (optimizacion_embudo_get_customers), fuente: The Startup Owner's Manual - Steve Blank
+    resumen: Proceso continuo de 'test, medir, ajustar' enfocado en mejorar volumen, costo y conversión en cada etapa del embudo (adquisición, activación, compra). Requiere pruebas controladas tipo A/B, foco en pocas variables a la vez, y mantener siempre en mente el valor de vida del cliente (LTV) comparado con el costo de adquisición (CAQ), asegurando que LTV > CAQ.
+    paso 1: Asegurar que existan MVP de alta fidelidad, plan de adquisición/activación y dashboard funcionando <== SENALADO
+    paso 2: Definir métricas específicas a optimizar (volumen, costo, conversión) según el tipo de negocio web (e-commerce, mercado multi-lado, marketplace)
+    paso 3: Ejecutar pruebas A/B controladas cambiando no más de dos variables a la vez
+    paso 4: Calcular LTV y compararlo con CAQ antes de escalar inversión en adquisición
+    paso 5: Iterar continuamente: testear, medir, ajustar y volver a testear
+  HIJO (mvp_alta_fidelidad), fuente: The Startup Owner's Manual
+    resumen: Es una versión más completa y pulida del MVP usado en customer discovery, diseñada específicamente para probar tácticas de adquisición y activación con más usuarios. No incluye todas las funcionalidades finales, pero no debe sentirse como un producto de segunda clase. Debe estar instrumentado para capturar datos de comportamiento de clientes y producto continuamente.
+    paso 1: Partir del MVP de baja fidelidad usado en customer discovery
+    paso 2: Pulir funcionalidades limitadas pero completas (ej. solo una categoría de producto)
+    paso 3: Evitar mostrar demasiado contenido 'coming soon' que desincentive la compra actual
+    paso 4: Instrumentar el MVP para capturar datos de comportamiento de usuario en tiempo real
+    paso 5: Iterar continuamente mediante desarrollo ágil y despliegue continuo
+
+====================================================================================================
+[15] preparacion_preguntas_problema_precall -> preguntas_situacion  (dominio core, paso senalado 4)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (preparacion_preguntas_problema_precall), fuente: SPIN Selling - Neil Rackham
+    resumen: Antes de cada reunión de ventas, el vendedor debe anticipar al menos tres problemas potenciales que el comprador podría tener y que su producto o servicio puede resolver. Luego debe redactar ejemplos concretos de Preguntas de Problema (Problem Questions) para cada uno. Esta preparación reduce el tiempo perdido en preguntas de situación innecesarias y acelera el descubrimiento de Necesidades Implícitas (Implied Needs), acortando las etapas iniciales de la venta.
+    paso 1: Listar al menos tres problemas potenciales del comprador que tu oferta pueda resolver
+    paso 2: Redactar ejemplos concretos de Preguntas de Problema para cada problema identificado
+    paso 3: Revisar la lista antes de cada llamada de ventas como parte de la preparación
+    paso 4: Usar estas preguntas para minimizar preguntas de situación irrelevantes <== SENALADO
+    paso 5: Identificar de antemano los problemas típicos que el producto/servicio resuelve
+    paso 6: Formular preguntas directas sobre insatisfacciones relacionadas a esos problemas
+    paso 7: Escuchar activamente las respuestas para detectar problemas no mencionados explícitamente
+  HIJO (preguntas_situacion), fuente: SPIN Selling - Neil Rackham
+    resumen: Son las preguntas con las que abres una conversación para entender hechos y antecedentes del cliente (por ejemplo, 'cuánto tiempo lleva con su proveedor actual'). Las necesitas para tener contexto, pero si abusas de ellas aburres o irritas a la persona que tienes enfrente. Antes de la llamada investiga por tu cuenta (sitio web, redes, lo que encuentres) para llegar con menos preguntas de este tipo y usarlas con moderación.
+    paso 1: Investiga al cliente antes de la llamada (sitio web, redes, lo que encuentres) para reducir preguntas innecesarias
+    paso 2: Limita tus preguntas de situación a lo estrictamente necesario para avanzar
+    paso 3: Úsalas como apertura breve y pasa pronto a preguntar por el problema
+
+====================================================================================================
+[16] producto_mercado_fit_motores -> contabilidad_innovacion  (dominio core, paso senalado 4)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (producto_mercado_fit_motores), fuente: The Lean Startup - Eric Ries
+    resumen: El concepto de encajar con el mercado (product/market fit), acuñado por Marc Andreessen, describe el momento en que tu producto conecta con un mercado amplio. Ries propone hacerlo más riguroso: cada motor de crecimiento tiene una métrica concreta que te dice si estás cerca de lograr ese encaje (por ejemplo, un coeficiente viral de 0.9 o más indica que estás cerca del éxito). Pivotar no es un fracaso, y lograr ese encaje no significa que dejes de pivotar. Tienes que mirar la dirección y el ritmo de progreso, no los números que solo se ven bien (vanity metrics), usando el ciclo de construir, medir y aprender.
+    paso 1: Define la métrica concreta de tu motor de crecimiento elegido
+    paso 2: Registra cómo cambia esa métrica con el tiempo, no solo su valor en un momento dado
+    paso 3: Compara tu ritmo de progreso con otros negocios o referencias del mercado, no solo el número actual
+    paso 4: Usa la contabilidad de la innovación (innovation accounting) para decidir si estás cerca de encajar con el mercado o necesitas pivotar <== SENALADO
+  HIJO (contabilidad_innovacion), fuente: The Lean Startup - Eric Ries
+    resumen: Sistema de medición pensado específicamente para proyectos que operan bajo incertidumbre extrema, que reemplaza a la contabilidad tradicional (diseñada para negocios con un historial estable). Permite demostrar de forma objetiva y cuantitativa si se está generando aprendizaje real y progreso genuino, en vez de depender de narrativas subjetivas u optimismo sin sustento. Funciona en tres pasos: convertir las suposiciones no comprobadas del modelo de negocio en un modelo financiero cuantitativo; usar un producto mínimo viable para establecer una línea base con datos reales, no proyecciones; y diseñar experimentos que muevan esas métricas reales hacia el ideal del modelo de negocio, evaluando si el cambio produce una mejora real y no solo una coincidencia. El sistema también ayuda a distinguir el crecimiento que crea valor genuino del crecimiento aparente sin sustancia (métricas que suben sin que el negocio mejore de verdad).
+    paso 1: Convertir las suposiciones no comprobadas del modelo de negocio en un modelo financiero cuantitativo (línea base), aunque al inicio sea intuitivo
+    paso 2: Usar un producto mínimo viable para establecer datos reales de partida, no proyecciones
+    paso 3: Identificar los impulsores de crecimiento específicos del modelo de negocio (por ejemplo: rentabilidad por cliente, costo de adquisición, tasa de recompra)
+    paso 4: Diseñar y ejecutar experimentos que muevan esas métricas reales hacia el ideal del modelo de negocio
+    paso 5: Evaluar si los cambios generan una mejora real y medible, y no solo una coincidencia
+    paso 6: Definir métricas que reflejen aprendizaje validado y no solo vanidad (por ejemplo, usuarios registrados sin uso real)
+    paso 7: Con base en los datos obtenidos, decidir si perseverar, pivotar o abandonar la estrategia actual
+
+====================================================================================================
+[17] technology_platform_evaluation -> stage_gate_td_tecnologia  (dominio core, paso senalado 2)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (technology_platform_evaluation), fuente: Winning at New Products - Robert G. Cooper
+    resumen: Si tu proyecto es una plataforma tecnológica o una innovación radical, es menos predecible que un proyecto de producto estándar y necesitas otros criterios para decidir si avanza o se detiene (continuar o cancelar): más visión y estrategia, menos números financieros. Usa un proceso especial para desarrollo tecnológico y una tabla de evaluación distinta que mida el ajuste estratégico, el apalancamiento estratégico, la probabilidad de éxito técnico y comercial, y la recompensa potencial en términos amplios.
+    paso 1: Identifica si tu proyecto es una plataforma tecnológica o una innovación radical (idealmente el 10-20% de tu conjunto de proyectos)
+    paso 2: No fuerces estos proyectos por el proceso de etapas y filtros regular; usa uno especial para desarrollo tecnológico (Stage-Gate-TD) <== SENALADO
+    paso 3: Aplica una tabla de evaluación específica centrada en criterios estratégicos y cualitativos, no financieros, que son ajuste estratégico, ventaja competitiva, potencial de mercado
+    paso 4: Evalúa la recompensa potencial con estimaciones amplias, no con cifras financieras precisas
+    paso 5: Considerar métodos financieros más sofisticados para riesgo: opciones reales, Monte Carlo, Valor Comercial Esperado
+    paso 6: Integrar las decisiones de gate con revisiones periódicas de portafolio (trimestrales)
+  HIJO (stage_gate_td_tecnologia), fuente: Winning at New Products - Robert G. Cooper
+    resumen: Modelo especializado de tres etapas y cuatro gates para gestionar proyectos donde el entregable no es un producto nuevo sino una capacidad tecnológica o know-how. Incluye Descubrimiento/Generación de Ideas, Scoping (alcance), Evaluación Técnica, e Investigación Detallada, culminando en un 'Applications Path Gate' que transfiere la tecnología a una unidad de negocio para su comercialización.
+    paso 1: Generar ideas tecnológicas mediante prospección científica o mapeo de rutas tecnológicas
+    paso 2: Realizar un primer filtro cualitativo (Idea Screen) basado en potencial estratégico y viabilidad técnica
+    paso 3: Ejecutar una evaluación técnica preliminar de bajo costo para demostrar factibilidad
+    paso 4: Profundizar en una investigación detallada si los resultados son prometedores
+    paso 5: Planificar la transferencia de la tecnología a la unidad de negocio, incluyendo transferencia de personal clave
+
+====================================================================================================
+[18] ventaja_competitiva_producto -> value_proposition_startup  (dominio core, paso senalado 3)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (ventaja_competitiva_producto), fuente: Winning at New Products - Robert G. Cooper
+    resumen: Uno de los mayores impulsores de rentabilidad en un producto nuevo es que sea realmente superior: con beneficios diferenciados y una propuesta de valor que convenza a quien la escucha. Es fácil caer en la trampa de repetir lo que ya haces y terminar con un producto calcado a los que ya existen. Antes de avanzar en cada revisión de tu proyecto (gate), exígete evidencia de que tu producto es superior, preguntándote: ¿tiene ese factor sorpresa? ¿resuelve un problema importante para tu cliente? ¿ofrece una ventaja clara frente a lo que ya hay en el mercado?
+    paso 1: Pon un criterio de superioridad del producto en cada revisión antes de seguir adelante
+    paso 2: Exígete pruebas concretas de que tu producto se diferencia y tiene ventaja frente a la competencia
+    paso 3: Asegúrate de que cuando definas tu producto quede explícita la propuesta de valor para tu cliente <== SENALADO
+    paso 4: No avances con un proyecto si es simplemente una copia de algo que ya existe
+  HIJO (value_proposition_startup), fuente: The Startup Owner's Manual - Blank, Steve
+    resumen: Tu propuesta de valor describe el trabajo (job) que resuelves para tu cliente. Son las caracteristicas de tu producto o servicio que responden a un problema o una necesidad real: ahorrar tiempo, ganar estatus, simplificar algo, dar comodidad. Para que funcione, tiene que encajar con precisión en el segmento de clientes al que se la ofreces.
+    paso 1: Identifica los problemas o necesidades reales de tu segmento de clientes.
+    paso 2: Define que caracteristicas de tu producto o servicio resuelven esos problemas.
+    paso 3: Verifica el encaje entre tu propuesta de valor y tu segmento de clientes hablando directamente con ellos.
+
+====================================================================================================
+[19] conformidad_comercio_internacional -> sistema_gestion_calidad  (dominio quality, paso senalado 4)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (conformidad_comercio_internacional), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Para vender productos regulados en la Unión Europea, es obligatorio el marcado CE, que exige evidencia de conformidad en cuatro áreas: documentación técnica de diseño, pruebas de tipo, vigilancia del producto y vigilancia del aseguramiento de calidad. Este enfoque modular impulsó masivamente la adopción global de certificaciones ISO 9001/9002, ya que las organizaciones no pueden mantener sistemas de calidad separados para productos regulados y no regulados.
+    paso 1: Determinar si el producto cae bajo una directiva regulada de la UE u otro mercado similar
+    paso 2: Preparar documentación técnica de diseño y evidencia de pruebas de tipo
+    paso 3: Certificar el sistema de calidad ante un organismo notificado si aplica 'Full Quality Assurance'
+    paso 4: Unificar el sistema de gestión de calidad para productos regulados y no regulados <== SENALADO
+  HIJO (sistema_gestion_calidad), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Es el sistema con el que diriges y controlas tu negocio en todo lo relacionado con la calidad. Como la calidad afecta a todo tu negocio y no solo a la parte de producción u operaciones, este sistema también es amplio: puede estar controlado desde distintas partes de tu negocio, no solo desde un area dedicada a calidad.
+    paso 1: Mapea todos los procesos de tu negocio que afectan la calidad, más allá de producción u operaciones
+    paso 2: Identifica quién controla hoy cada parte de ese sistema, ya seas tú o la persona que te ayuda
+    paso 3: Establece una forma de coordinar entre las distintas partes que controlan el sistema
+    paso 4: Documenta el sistema de gestión de calidad siguiendo los estándares que apliquen en tu mercado
+
+====================================================================================================
+[20] viaje_diagnostico_remedial -> resistencia_al_cambio  (dominio quality, paso senalado 7)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (viaje_diagnostico_remedial), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Metodología dual de Juran para resolver problemas de calidad. El viaje diagnóstico va de los síntomas a las teorías de causas, de las teorías a las pruebas, y de las pruebas al establecimiento de la(s) causa(s) raíz. El viaje remedial va de la(s) causa(s) raíz al diseño de remedios, de los remedios a su prueba en condiciones operativas, de los remedios probados al manejo de la resistencia al cambio, y de ahí al establecimiento de nuevos controles para sostener las mejoras.
+    paso 1: Analizar los síntomas del problema (evidencia observable), con un análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)
+    paso 2: Formular teorías sobre las posibles causas, usando brainstorming y diagramas causa-efecto
+    paso 3: Probar las teorías más plausibles con datos, con un mecanismo de recolección que permita correlacionar cada teoría con el defecto observado
+    paso 4: Establecer la(s) causa(s) raíz confirmada(s), validando estadísticamente cuál teoría explica la mayoría de los casos
+    paso 5: Diseñar remedios para eliminar las causas
+    paso 6: Probar los remedios bajo condiciones operativas reales
+    paso 7: Gestionar la resistencia predecible al cambio <== SENALADO
+    paso 8: Establecer nuevos controles para sostener las ganancias
+  HIJO (resistencia_al_cambio), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Fenómeno natural en el que los miembros de una organización se oponen a cambios técnicos o sociales por temor a perder estatus, comodidad o capacidad de desempeño bajo el nuevo sistema. Incluso cambios beneficiosos generan resistencia porque alteran el patrón cultural establecido. Ejemplos históricos incluyen la resistencia a las teorías heliocéntricas y a la diesel-ización de las locomotoras.
+    paso 1: Identificar los grupos y roles cuyo estatus podría verse afectado por el cambio propuesto
+    paso 2: Comunicar de forma anticipada y transparente los beneficios y el impacto del cambio
+    paso 3: Involucrar a los afectados en el diseño e implementación del cambio
+    paso 4: Anticipar y gestionar activamente las reacciones defensivas del personal
+
+====================================================================================================
+[21] breakthrough_cultural -> reconocimiento_publico_recompensas  (dominio quality, paso senalado 3)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (breakthrough_cultural), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Transformación de los estandares de comportamiento, valores y normas de tu negocio para alinearlos con tus objetivos de desempeno y calidad. Es el tipo de cambio mas dificil y lento de lograr, porque exige modificar creencias arraigadas, y solo se sostiene si tu mantienes consistencia y persistencia al reforzar las nuevas normas.
+    paso 1: Revisar la visión, misión y valores de tu negocio
+    paso 2: Alinear como eliges, formas y reconoces a las personas que trabajan contigo con la cultura que quieres construir
+    paso 3: Reforzar de manera constante los nuevos comportamientos con reconocimiento y recompensas <== SENALADO
+    paso 4: No dejar a nadie fuera del cambio, ni siquiera a ti mismo
+    paso 5: Mantener el refuerzo durante un tiempo largo, porque adoptar una nueva forma de trabajar toma anos
+  HIJO (reconocimiento_publico_recompensas), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Estrategia de liderazgo para consolidar nuevos comportamientos deseados mediante recompensas y reconocimientos otorgados públicamente, con ceremonia, en presencia de las personas cuyo comportamiento se busca influenciar, y explicando claramente la conexión entre el premio y el comportamiento específico deseado. Ejemplo típico: asambleas para reconocer equipos de proyectos Six Sigma completados.
+    paso 1: Identificar comportamientos o logros específicos alineados con los objetivos estratégicos
+    paso 2: Organizar eventos públicos de reconocimiento con presencia de líderes
+    paso 3: Explicar explícitamente la conexión entre el premio y el comportamiento deseado
+    paso 4: Repetir el reconocimiento de forma consistente en el tiempo para reforzar la cultura deseada
+
+====================================================================================================
+[22] auditoria_de_proceso -> seguimiento_accion_correctiva  (dominio quality, paso senalado 5)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (auditoria_de_proceso), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: La auditoría de proceso es una verificación sistemática, mediante checklist, de que las operaciones de manufactura cumplen con las especificaciones establecidas: registros, calibración de equipos, procedimientos de limpieza, requisitos de seguridad y control de proceso. Las discrepancias se clasifican en críticas, mayores o menores, y requieren acción correctiva documentada dentro de plazos definidos (inmediato para críticas, cinco días para mayores/menores).
+    paso 1: Diseñar un checklist de auditoría que cubra especificaciones, registros, calibración, procedimientos y seguridad
+    paso 2: Clasificar cada hallazgo como crítico, mayor o menor
+    paso 3: Documentar por escrito las discrepancias encontradas
+    paso 4: Definir plazos de corrección según severidad (inmediato, 5 días)
+    paso 5: Dar seguimiento a la implementación de la acción correctiva <== SENALADO
+  HIJO (seguimiento_accion_correctiva), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: La fase final de una auditoría es el seguimiento: confirmar que la acción correctiva se implementó y que funciona. Si no se implementó, primero verificas si hay acuerdo sobre las conclusiones del reporte. Si hay acuerdo pero faltan recursos, puedes ayudar reformulando la seriedad del hallazgo en términos que te muevan a actuar, por ejemplo, en términos monetarios.
+    paso 1: Programar una auditoría de seguimiento para verificar que las acciones correctivas se implementaron
+    paso 2: Confirmar que hay acuerdo sobre las conclusiones del reporte original
+    paso 3: Si faltan recursos, reformular la deficiencia en términos de impacto que te ayuden a decidir
+    paso 4: Cerrar el archivo de auditoría solo cuando las no conformidades quedaron corregidas
+
+====================================================================================================
+[23] planificacion_inicial_calidad -> medicion_capacidad_servicio  (dominio quality, paso senalado 5)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (planificacion_inicial_calidad), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: La planificación de calidad en manufactura inicia con la revisión del diseño del producto y del proceso para identificar características clave, determinar su importancia relativa, analizar el diagrama de flujo del proceso, evaluar capacidad y control del proceso, aplicar error-proofing, y validar sistemas de medición, buscando prevenir defectos y minimizar variabilidad.
+    paso 1: Revisar el diseño del producto con personal de operaciones antes de su lanzamiento
+    paso 2: Identificar características clave del producto y del proceso (KPCs)
+    paso 3: Clasificar características por importancia (crítica, mayor, menor, incidental)
+    paso 4: Analizar el diagrama de flujo del proceso por estación de trabajo
+    paso 5: Validar la capacidad y los sistemas de medición del proceso <== SENALADO
+  HIJO (medicion_capacidad_servicio), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Se necesita asegurar que el proceso de servicio pueda cumplir con las necesidades y metas del cliente bajo condiciones normales de operación. Cuando las necesidades del cliente pueden cuantificarse, se usan índices de capacidad de proceso o niveles Sigma. Un parámetro cuantitativo importante en el sector servicios es el tiempo para completar una transacción de servicio. Una evaluación más amplia del proceso de servicio mide cuatro parámetros: efectividad, eficiencia, adaptabilidad y tiempo de ciclo.
+    paso 1: Recolectar una muestra de datos históricos del proceso de servicio
+    paso 2: Comparar los datos contra las especificaciones o metas establecidas
+    paso 3: Construir un histograma para visualizar la distribución de los datos
+    paso 4: Determinar si el proceso es capaz de cumplir consistentemente con las especificaciones
+    paso 5: Si no es capaz, rediseñar el proceso y volver a probar
+    paso 6: Evaluar los cuatro parámetros: efectividad, eficiencia, adaptabilidad y tiempo de ciclo
+
+====================================================================================================
+[24] etapa_discovery_ideacion -> internal_idea_capture  (dominio core, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (etapa_discovery_ideacion), fuente: Winning at New Products - Robert G. Cooper
+    resumen: Discovery es la etapa formal de generación de ideas que alimenta todo el sistema Stage-Gate. Es un conjunto proactivo y definido de actividades diseñadas para generar ideas de productos con ventaja competitiva real, incluyendo investigación técnica dirigida, trabajo con usuarios líderes, VoC (Voice of Customer), análisis competitivo, esquemas de sugerencias internas e innovación abierta.
+    paso 1: Establecer un sistema formal de captura de ideas (idea-suggestion scheme) <== SENALADO
+    paso 2: Realizar investigación de Voz del Cliente (VoC) para capturar necesidades no articuladas
+    paso 3: Trabajar con usuarios líderes (lead users) e innovadores del mercado
+    paso 4: Implementar innovación abierta escaneando el entorno externo
+    paso 5: Capturar cada idea en una plantilla simple de una página
+  HIJO (internal_idea_capture), fuente: Winning at New Products - Robert G. Cooper
+    resumen: Es un sistema formal para solicitar, evaluar y gestionar ideas de nuevos productos provenientes de los propios empleados, típicamente a través de una plataforma web interna. Es el método de ideación más utilizado, pero su efectividad depende críticamente de una buena implementación (comunicación, retroalimentación rápida, incentivos adecuados).
+    paso 1: Nombrar un responsable claro del sistema de sugerencias de ideas
+    paso 2: Publicitar ampliamente el sistema entre los empleados
+    paso 3: Separar el sistema de 'ideas para nuevos productos' de las cajas de sugerencias generales
+    paso 4: Definir y publicar los 'campos de búsqueda' donde se buscan activamente ideas
+    paso 5: Garantizar una respuesta rápida (2-4 semanas) con retroalimentación mediante scorecard
+    paso 6: Diseñar incentivos basados en reconocimiento más que en premios monetarios competitivos
+    paso 7: Revisar anualmente el sistema y su desempeño
+
+====================================================================================================
+[25] uso_inadecuado_computadoras -> causas_especiales_y_comunes_variacion  (dominio quality, paso senalado 3)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (uso_inadecuado_computadoras), fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: Las computadoras pueden ser una bendición o una maldición para tu negocio. Puedes acumular datos sin analizarlos con ningún propósito, o dejarte intimidar por la tecnología y aceptar sin cuestionar lo que el sistema te entrega, en lugar de pedir los datos y gráficos específicos que necesitas para entender la variación de tu proceso. Una sola cifra, como las ventas de ayer, sin el contexto de su variación, no te dice nada útil para decidir.
+    paso 1: Definir con claridad qué datos y en qué formato necesitas antes de generar reportes automáticos
+    paso 2: Pedir gráficos de variación en el tiempo en lugar de cifras aisladas
+    paso 3: Aprender a distinguir la variación común de las causas especiales en tus datos <== SENALADO
+    paso 4: Evitar acumular datos sin un propósito claro de análisis
+  HIJO (causas_especiales_y_comunes_variacion), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Shewhart denominó causas 'asignables' y 'no asignables'; Deming las llamó 'especiales' y 'comunes'. Las causas especiales son esporádicas, originadas en una variable dominante y fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes son crónicas, originadas en la interacción de múltiples variables menores, difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.
+    paso 1: Analizar si la desviación observada tiene origen en una sola variable dominante (especial) o en múltiples variables menores (común)
+    paso 2: Si es causa especial: activar acción correctiva inmediata vía PDCA
+    paso 3: Si es causa común: derivar el problema a un proyecto de mejora (ej. Six Sigma DMAIC)
+    paso 4: Evitar tomar acción correctiva sobre variación común (riesgo de 'tampering')
+
+====================================================================================================
+[26] diamante_de_innovacion -> asignacion_recursos_en_gates  (dominio core, paso senalado 2)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (diamante_de_innovacion), fuente: Winning at New Products - Robert G. Cooper
+    resumen: Ganar en innovación no depende solo de tener un buen proceso de desarrollo de productos, sino de un enfoque integral que alinee simultáneamente cuatro pilares: una estrategia de innovación clara (dónde enfocar los esfuerzos), una gestión de portafolio y recursos balanceada, un proceso disciplinado de idea a lanzamiento (por ejemplo, etapas y compuertas de decisión), y un clima, cultura y liderazgo organizacional que tolere el riesgo y premie la creatividad. Sin estos cuatro elementos alineados, incluso el mejor proceso de desarrollo fallará en producir innovaciones audaces.
+    paso 1: Definir una estrategia de innovación clara: dónde enfocar los esfuerzos y recursos
+    paso 2: Evaluar y asegurar una gestión de portafolio y asignación de recursos balanceada <== SENALADO
+    paso 3: Implementar un proceso disciplinado de idea a lanzamiento (por ejemplo, etapas y compuertas de decisión)
+    paso 4: Fomentar una cultura organizacional y un liderazgo que toleren el riesgo y premien la creatividad
+    paso 5: Evaluar el estado actual del proyecto o la empresa en cada uno de los cuatro pilares e identificar cuál es el eslabón más débil
+    paso 6: Diseñar un plan de acción que aborde los cuatro pilares de manera integrada, no aislada
+  HIJO (asignacion_recursos_en_gates), fuente: Winning at New Products - Robert G. Cooper
+    resumen: Toda decisión Go en un gate debe ir acompañada de un compromiso real de recursos, considerando el contexto del portafolio completo (no solo el proyecto individual). Se recomiendan tres enfoques: que el líder de proyecto llegue con candidatos de equipo pre-conversados, uso de software de gestión de recursos que muestre disponibilidad, o que los propios gatekeepers lleguen preparados con conocimiento de disponibilidad de su departamento.
+    paso 1: Mostrar en cada gate la lista de proyectos activos con su priorización y compromisos de recursos actuales
+    paso 2: Elegir un método de seguimiento de recursos: pre-conversación del líder con candidatos, software de gestión, o preparación previa de gatekeepers, o bien lista manual, hoja de cálculo o algún programa especializado
+    paso 3: Verificar disponibilidad real de personas antes de comprometer recursos a un nuevo proyecto
+    paso 4: Evitar agregar proyectos a la lista activa sin resolver las implicaciones de recursos
+    paso 5: En la reunión, comprométete de forma explícita a asignar personas y presupuesto para la siguiente etapa.
+
+====================================================================================================
+[27] timing_solicitud_referidos -> fase_adopt_ciclo_cliente  (dominio core, paso senalado 5)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (timing_solicitud_referidos), fuente: Never Lose a Customer Again - Joey Coleman
+    resumen: Solicitar referencias demasiado pronto (inmediatamente después de la compra) destruye las posibilidades de obtenerlas, ya que el cliente aún no ha experimentado el beneficio real del producto. La solicitud debe ocurrir solo después de que el cliente haya alcanzado su objetivo original de compra (point-of-purchase goal), momento en el cual siente confianza suficiente para asociar su nombre con la marca.
+    paso 1: Identificar el 'punto de logro' donde el cliente obtiene el beneficio prometido del producto/servicio
+    paso 2: Configurar un disparador automatizado (ej. email a los 30 días) que se active después de este punto de logro
+    paso 3: Evitar solicitudes de referido en el momento inmediato de la compra o registro
+    paso 4: Validar mediante datos (aperturas, clics) que el timing elegido genera mejores tasas de respuesta que el promedio de la industria
+    paso 5: Comunica el programa en momentos clave del ciclo de vida (ej: fase Adopt/Advocate) <== SENALADO
+  HIJO (fase_adopt_ciclo_cliente), fuente: Never Lose a Customer Again - Joey Coleman
+    resumen: La fase Adopt ocurre cuando el cliente ha adoptado completamente el producto/servicio y ve resultados significativos, incluso en áreas inesperadas de su vida o negocio. Es el momento de formalizar una relación de largo plazo usando seis canales de comunicación (en persona, email, correo físico, teléfono, video, regalo) para recompensar la lealtad y profundizar el vínculo, antes de que el cliente pase a la fase Advocate.
+    paso 1: Define qué comportamientos/métricas indican que un cliente ha 'adoptado' tu producto
+    paso 2: Diseña interacciones específicas para cada uno de los 6 canales (in-person, email, mail, phone, video, present)
+    paso 3: Implementa una encuesta de éxito para recopilar datos de personalización
+    paso 4: Establece un ritual de reconocimiento de hitos/aniversarios de la relación
+
+====================================================================================================
+[28] plan_cambio_climatico -> formar_consejo_asesor_sostenibilidad  (dominio environmental, paso senalado 5)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (plan_cambio_climatico), fuente: The Green to Gold Business Play - Daniel C. Esty
+    resumen: El cambio climático representa un mega-desafío estratégico que impacta a toda empresa e industria. Las compañías deben evaluar su huella de carbono, establecer metas de reducción de emisiones, implementar estrategias de reducción y considerar la compensación de carbono (carbon offsets) como parte de un plan de acción integral, como hizo NetJets Europe.
+    paso 1: Evaluar la huella de carbono de la empresa usando herramientas de assessment
+    paso 2: Establecer metas cuantitativas de reducción de emisiones
+    paso 3: Identificar e implementar estrategias de reducción de emisiones
+    paso 4: Considerar la compra de offsets de carbono como parte de la estrategia
+    paso 5: Formar un consejo asesor ambiental externo para revisar el plan <== SENALADO
+  HIJO (formar_consejo_asesor_sostenibilidad), fuente: The Green to Gold Business Play - Daniel C. Esty
+    resumen: Práctica avanzada de gobernanza en sostenibilidad donde la empresa constituye un consejo externo de expertos (exfuncionarios, académicos, líderes de ONGs y comunidades) que revisa las iniciativas internas y anticipa tendencias emergentes. Funciona como mecanismo de retroalimentación y radar estratégico de largo plazo.
+    paso 1: Definir el perfil de expertos externos necesarios (gubernamentales, académicos, ONGs, comunidad)
+    paso 2: Convocar y formalizar la conformación del consejo asesor
+    paso 3: Establecer reuniones periódicas de revisión de iniciativas y tendencias emergentes
+    paso 4: Integrar las recomendaciones del consejo en la planificación estratégica de sostenibilidad
+
+====================================================================================================
+[29] requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level  (dominio quality, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (requisitos_numericos_calidad_lotes), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Más allá de los requisitos de calidad para unidades individuales, se necesitan criterios numéricos para juzgar la conformidad de lotes completos, típicamente usados en procedimientos de muestreo de aceptación. Estos criterios facilitan decidir la aceptación o rechazo de un lote basándose en una muestra aleatoria, aunque frecuentemente los proveedores malinterpretan los conceptos estadísticos subyacentes, generando confusión en discusiones de responsabilidad del producto.
+    paso 1: Definir índices numéricos de calidad de lote (ej. AQL, nivel de calidad aceptable) <== SENALADO
+    paso 2: Seleccionar un plan de muestreo de aceptación basado en consideraciones probabilísticas
+    paso 3: Comunicar y capacitar al proveedor en la interpretación correcta de estos criterios estadísticos
+    paso 4: Para productos complejos, definir requisitos numéricos de confiabilidad (ej. tiempo medio entre fallas)
+  HIJO (critica_acceptable_quality_level), fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: El Nivel de Calidad Aceptable (AQL) es un término estadístico de control de calidad que, mal usado, se convierte en una autorización previa para fallar: al aceptar que un porcentaje de tu producto sea no conforme, estás planificando el fracaso desde el inicio. Crosby argumenta que no hay evidencia real de que los últimos puntos porcentuales de mejora cuesten más que los primeros, y que la economía de la calidad debe entenderse como la economía de hacer las cosas bien la primera vez, no como la excusa para tolerar defectos.
+    paso 1: Revisa si estás usando estándares de AQL que toleran un porcentaje fijo de defectos.
+    paso 2: Cuestiona el origen de esos estándares: casi siempre nacen de la operación diaria, no de un análisis técnico riguroso.
+    paso 3: Cambia la mentalidad de 'nivel aceptable de fallas' por el objetivo de conformidad total (Cero Defectos).
+    paso 4: Calcula el costo real de hacer las cosas mal frente al costo de hacerlas bien la primera vez.
+

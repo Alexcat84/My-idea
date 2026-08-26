@@ -285,6 +285,24 @@ y perder 73 gemelos.**
 > `scripts/loop/vuelta77_filtro_p91_ensanchado.py`, con caso positivo
 > verificado en las dos direcciones. El texto viejo de arriba no se toca.
 
+> **CORRECCION DECLARADA (26 ago 2026, vuelta 78, adjudicada por el auditor
+> por cita, acta de la vuelta 77 seccion 3 D4 y seccion 5 punto 5, sin
+> doctrina nueva).** El filtro de arriba solo cruzaba el PLAN
+> (`eliminar`, `superviviente`, `nodos`), y el plan no es el inventario: las
+> fusiones pendientes de verdad son los **551 veredictos A** del cribado
+> (`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`), y solo una parte pequena tiene
+> operacion escrita todavia. Un A sin operacion es una fusion que el plan
+> aun no ha citado, y `P.9` punto 1 (los enlaces corren DESPUES de las
+> fusiones que tocan sus destinos) no distingue si la fusion ya tiene ficha
+> o no. Se ENSANCHA el filtro para cruzar tambien los veredictos **A**
+> donde los DOS nodos del par esten vivos hoy (**187** nodos vivos que
+> participan en al menos un A con otro nodo vivo, sobre 551 A totales,
+> medido por el auditor y confirmado por corrida propia en
+> `scripts/loop/vuelta78_filtro_p91_vara_a.py`,
+> `docs/loop/SALIDA_V78_FILTRO_P91_VARA_A_CASO_POSITIVO.txt`). Un A con un
+> extremo ya deprecado no aparta nada: ya fue resuelto por otra via. El
+> texto viejo de arriba no se toca.
+
 ---
 
 ## LOS SUELTOS DE RACIMOS, y los racimos con miembro ajeno

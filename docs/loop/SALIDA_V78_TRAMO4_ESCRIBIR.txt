@@ -1,0 +1,33 @@
+ARISTAS ESCRITAS: 24
+  necesidades_reales_vs_declaradas -> descubrir_necesidades_del_cliente
+  sujetos_de_control -> key_process_product_characteristics
+  metas_desmaterializacion_energia -> establecer_metas_reduccion_emisiones
+  diferencia_iso9001_iso9004 -> trilogia_de_juran
+  aprobacion_alta_direccion -> metas_negocio_calidad
+  seguimiento_cumplimiento_cadena_suministro -> auditorias_proveedores
+  gestion_diferencias_culturales -> participacion_ferias_comerciales
+  decision_momento_fundacion -> evaluacion_conocimiento_industria
+  actualizar_business_model_canvas_tuneup -> value_proposition_startup
+  etapa_build_business_case -> value_proposition_startup
+  extraer_priorizar_hipotesis -> value_proposition_startup
+  optimizacion_embudo_get_customers -> mvp_alta_fidelidad
+  producto_mercado_fit_motores -> contabilidad_innovacion
+  technology_platform_evaluation -> stage_gate_td_tecnologia
+  ventaja_competitiva_producto -> value_proposition_startup
+  conformidad_comercio_internacional -> sistema_gestion_calidad
+  viaje_diagnostico_remedial -> resistencia_al_cambio
+  breakthrough_cultural -> reconocimiento_publico_recompensas
+  auditoria_de_proceso -> seguimiento_accion_correctiva
+  planificacion_inicial_calidad -> medicion_capacidad_servicio
+  etapa_discovery_ideacion -> internal_idea_capture
+  uso_inadecuado_computadoras -> causas_especiales_y_comunes_variacion
+  diamante_de_innovacion -> asignacion_recursos_en_gates
+  plan_cambio_climatico -> formar_consejo_asesor_sostenibilidad
+ESCALERA ROTA (ciclo de dos, hijo ya apuntaba a la madre): 0
+DESCARTADOS: 6
+  equipo_customer_development -> customer_development_team | VEREDICTO DEL CRIBADO: puesto 637, clase B. El propio archivo dice, con estas palabras, 'Sin arista entre ellos': comparten el paso de liderar la conversacion con clientes (paso 1 de uno, paso 2 del otro) pero cada uno se abre despues por un lado distinto (diseno del equipo contra logistica de campo). No se enlaza, por mandato expreso del archivo.
+  clasificacion_tipos_activos -> tipos_de_pasivos | el paso senalado (1) clasifica ACTIVOS; el hijo entero es sobre PASIVOS, un objeto financiero distinto con estructura de pasos parecida (mismo libro) pero sin relacion de procedimiento entre ellos. Gemelo estructural falso, no jerarquia. No se enlaza.
+  proceso_llamada_inicial_venta -> proceso_venta_franquicias | el hijo es el proceso de venta de franquicias ENTERO, mas amplio que la llamada inicial; ningun paso del hijo elabora especificamente el paso 6 senalado (entender el proceso de decision del comprador). La relacion natural, si existe, es la inversa. No se enlaza.
+  preparacion_preguntas_problema_precall -> preguntas_situacion | dentro del marco SPIN, Preguntas de Problema y Preguntas de Situacion son dos categorias hermanas del mismo modelo, no madre e hijo; el paso senalado solo menciona minimizar el otro tipo de pregunta como beneficio colateral, no lo desarrolla. No se enlaza.
+  timing_solicitud_referidos -> fase_adopt_ciclo_cliente | el paso senalado nombra la fase Adopt solo como ejemplo parentetico ('ej: fase Adopt/Advocate'); el contenido del hijo es la fase COMPLETA del ciclo del cliente de Coleman (seis canales, encuesta de exito, ritual de hitos), mucho mas amplia que el momento de pedir un referido. Match debil, direccion de generalidad al reves. No se enlaza.
+  requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level | PENDIENTE DE DOCTRINA / DISCUTIBLE: el hijo (Crosby) es una CRITICA al uso del AQL que el paso de la madre (Juran) recomienda definir, no un procedimiento de como hacer ese paso. Es un contrapunto de otro autor sobre el mismo termino, no una jerarquia 9.6.2. No se enlaza.

@@ -1,0 +1,131 @@
+BOLSA REDUCIDA TOTAL: 468
+SIN ARISTA (candidatos): 283
+APARTADOS POR P.9.1 ENSANCHADO (operaciones + vara de los A): 92
+  de esos, SOLO por operacion (eliminar/superviviente/nodos): 35
+  de esos, con al menos un motivo de la vara de los A: 57
+  segmentos_de_clientes_problema_necesidad -> get_out_of_the_building: hijo condenado por operacion ['OP-M-05-EDIFICIO']; hijo en veredicto A vivo [(175, 'customer_discovery_get_out_of_building'), (439, 'manifiesto_regla1_hechos_fuera_del_edificio')]
+  medicion_servicios -> make_certain_programa: hijo condenado por operacion ['OP-S-09']
+  medicion_servicios -> programa_make_certain_3: hijo condenado por operacion ['OP-S-09']
+  consejo_de_calidad_y_rol_del_director -> planificacion_estrategica_despliegue_2: hijo condenado por operacion ['OP-S-09']
+  planificacion_cero_defectos -> eliminacion_causas_error_4: hijo condenado por operacion ['OP-S-09']
+  issue_spotting_ambiental -> triple_bottom_line_2: hijo condenado por operacion ['OP-S-09']
+  capacidad_de_proceso -> capacidad_del_proceso: madre condenada por operacion ['OP-S-09']; hijo condenado por operacion ['OP-S-09']
+  customer_development_team -> get_out_of_the_building: hijo condenado por operacion ['OP-M-05-EDIFICIO']; hijo en veredicto A vivo [(175, 'customer_discovery_get_out_of_building'), (439, 'manifiesto_regla1_hechos_fuera_del_edificio')]
+  analisis_de_sistemas_de_medicion_msa -> capacidad_de_proceso_2: hijo condenado por operacion ['OP-S-09']
+  dmadv_fase_verificacion -> capacidad_de_proceso: hijo condenado por operacion ['OP-S-09']
+  validacion_sistema_medicion -> analisis_de_sistemas_de_medicion_msa: madre condenada por operacion ['OP-S-09']
+  introduccion_validacion_clientes -> herramientas_online_canal_fisico: madre condenada por operacion ['OP-M-05-APERTURA']; madre en veredicto A vivo [(549, 'filosofia_customer_validation'), (709, 'customer_validation')]
+  human_error_como_sintoma -> preguntar_que_no_quien: madre en veredicto A vivo [(2261, 'errores_como_consecuencia'), (2280, 'enfoque_situacional_vs_personal'), (2293, 'error_humano_vs_falla_mecanica'), (2310, 'new_view_human_error'), (2397, 'falla_sistemica_vs_error_individual')]; hijo en veredicto A vivo [(2368, 'errores_como_consecuencia')]
+  waterfall_vs_agile_development -> desarrollo_de_clientes_customer_development: hijo en veredicto A vivo [(1052, 'customer_development_modelo')]
+  consejo_de_calidad -> consejo_de_calidad_y_rol_del_director: madre condenada por operacion ['OP-S-09']
+  estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto: madre condenada por operacion ['OP-S-09']; hijo condenado por operacion ['OP-S-09']; madre en veredicto A vivo [(357, 'estrategia_innovacion_producto'), (460, 'estrategia_de_innovacion_arenas')]; hijo en veredicto A vivo [(357, 'estrategia_de_innovacion_de_producto'), (1121, 'estrategia_de_innovacion_arenas')]
+  fin_precio_como_criterio_unico -> relacion_largo_plazo_proveedor_unico: madre en veredicto A vivo [(2424, 'compra_por_precio_mas_bajo_como_error'), (2438, 'relaciones_largo_plazo_con_proveedores')]; hijo en veredicto A vivo [(2421, 'relaciones_largo_plazo_con_proveedores')]
+  medicion_servicios -> programa_make_certain: hijo condenado por operacion ['OP-S-09']
+  estrategia_de_innovacion_de_producto -> estrategia_de_innovacion_arenas: madre condenada por operacion ['OP-S-09']; madre en veredicto A vivo [(357, 'estrategia_innovacion_producto'), (460, 'estrategia_de_innovacion_arenas')]; hijo en veredicto A vivo [(207, 'estrategia_de_innovacion_y_tecnologia'), (280, 'seleccion_arenas_estrategicas'), (460, 'estrategia_de_innovacion_de_producto'), (1121, 'estrategia_innovacion_producto')]
+  customer_discovery_overview -> mvp_catalogo_tecnicas: madre condenada por operacion ['OP-M-05-INDICE']; madre en veredicto A vivo [(156, 'customer_discovery_cuatro_fases'), (206, 'customer_discovery')]
+  seis_herramientas_comunicacion_celebracion -> celebracion_hitos_cliente: madre en veredicto A vivo [(1068, 'seis_herramientas_comunicacion_fase_activate')]
+  seleccion_canal_distribucion -> hipotesis_de_canales: madre en veredicto A vivo [(165, 'seleccion_canal_fisico'), (400, 'hipotesis_de_canales'), (537, 'channels_hypothesis_web_mobile'), (609, 'channels_hypothesis_physical')]; hijo en veredicto A vivo [(214, 'channels_hypothesis_physical'), (400, 'seleccion_canal_distribucion'), (762, 'channels_hypothesis_web_mobile'), (1488, 'seleccion_canal_fisico')]
+  dmaic_fase_measure -> capacidad_del_proceso: hijo condenado por operacion ['OP-S-09']
+  diseno_de_flujos_pace_layers -> framework_ppph_flujos: hijo en veredicto A vivo [(1438, 'framework_flujos_de_datos_ppp')]
+  waterfall_vs_agile_development -> modelo_customer_development: hijo condenado por operacion ['OP-S-09']
+  build_measure_learn -> value_proposition_canvas: madre en veredicto A vivo [(213, 'ciclo_crear_medir_aprender'), (486, 'ciclo_construir_medir_aprender'), (1208, 'startup_como_experimento_cientifico'), (1449, 'design_test_repeat')]
+  fit_problema_solucion -> value_proposition_startup: madre en veredicto A vivo [(536, 'problem_solution_fit')]
+  histograma_calidad -> capacidad_del_proceso: hijo condenado por operacion ['OP-S-09']
+  rol_gates_agile -> gates_go_kill_decision_points: hijo condenado por operacion ['OP-M-01-FUSION']; hijo en veredicto A vivo [(1038, 'sistema_gates_go_kill')]
+  capacidad_proceso_concepto -> control_estadistico_del_proceso: hijo condenado por operacion ['OP-S-09']
+  new_view_human_error -> human_error_como_sintoma: madre en veredicto A vivo [(2310, 'human_error_como_sintoma'), (2362, 'errores_como_consecuencia'), (2400, 'vieja_vision_vs_nueva_vision_seguridad')]; hijo en veredicto A vivo [(2261, 'errores_como_consecuencia'), (2280, 'enfoque_situacional_vs_personal'), (2293, 'error_humano_vs_falla_mecanica'), (2310, 'new_view_human_error'), (2397, 'falla_sistemica_vs_error_individual')]
+  estrategia_innovacion_producto -> strat_map_arenas_estrategicas: madre condenada por operacion ['OP-S-09']; madre en veredicto A vivo [(357, 'estrategia_de_innovacion_de_producto'), (1121, 'estrategia_de_innovacion_arenas')]
+  abolir_inspeccion_masiva -> control_estadistico_del_proceso: hijo condenado por operacion ['OP-S-09']
+  tres_preguntas_carrera -> evaluacion_ventana_mercado: madre en veredicto A vivo [(290, 'decision_cuando_fundar')]
+  control_estadistico_del_proceso -> causas_comunes_vs_especiales: madre condenada por operacion ['OP-S-09']
+  diamante_de_innovacion -> estrategia_de_innovacion_de_producto: hijo condenado por operacion ['OP-S-09']; hijo en veredicto A vivo [(357, 'estrategia_innovacion_producto'), (460, 'estrategia_de_innovacion_arenas')]
+  principio_pareto -> pocos_vitales_muchos_utiles: hijo en veredicto A vivo [(2575, 'proyectos_vitales_pocos')]
+  relaciones_publicas_leads_franquicia -> referidos_franquiciados_existentes: hijo en veredicto A vivo [(2127, 'programa_de_referidos_de_franquiciados')]
+  obtencion_compromiso -> enfoque_etapa_investigacion: madre condenada por operacion ['OP-S-09']; madre en veredicto A vivo [(222, 'obtencion_compromiso_venta'), (463, 'obtencion_de_compromiso')]
+  modelos_gestion_seguridad -> fallas_activas_condiciones_latentes: hijo en veredicto A vivo [(2273, 'falla_sistemica_vs_error_individual'), (2387, 'errores_como_consecuencia')]
+  programa_de_referidos_de_franquiciados -> referidos_franquiciados_existentes: madre en veredicto A vivo [(2127, 'referidos_franquiciados_existentes')]; hijo en veredicto A vivo [(2127, 'programa_de_referidos_de_franquiciados')]
+  desarrollo_caracteristicas_producto -> desarrollar_caracteristicas_proceso: hijo condenado por operacion ['OP-S-09']
+  customer_discovery_overview -> customer_validation: madre condenada por operacion ['OP-M-05-INDICE']; hijo condenado por operacion ['OP-M-05-APERTURA']; madre en veredicto A vivo [(156, 'customer_discovery_cuatro_fases'), (206, 'customer_discovery')]; hijo en veredicto A vivo [(247, 'filosofia_customer_validation'), (709, 'introduccion_validacion_clientes'), (781, 'customer_validation_sell_phase')]
+  cultura_justa_2 -> preguntar_que_no_quien: madre condenada por operacion ['OP-S-09']; hijo en veredicto A vivo [(2368, 'errores_como_consecuencia')]
+  estrategia_de_innovacion_de_producto -> strat_map_arenas_estrategicas: madre condenada por operacion ['OP-S-09']; madre en veredicto A vivo [(357, 'estrategia_innovacion_producto'), (460, 'estrategia_de_innovacion_arenas')]
+  customer_discovery_get_out_of_building -> prueba_solucion_con_cliente: madre condenada por operacion ['OP-M-05-EDIFICIO']; madre en veredicto A vivo [(175, 'get_out_of_the_building'), (510, 'manifiesto_regla1_hechos_fuera_del_edificio'), (849, 'customer_development_modelo'), (1386, 'customer_discovery_introduccion')]
+  concepto_proyecto_breakthrough -> proyectos_vitales_pocos: hijo en veredicto A vivo [(2575, 'pocos_vitales_muchos_utiles')]
+  autocontrol_y_controlabilidad -> capacidad_del_proceso: hijo condenado por operacion ['OP-S-09']
+  requisitos_gates_con_dientes -> post_launch_review: madre condenada por operacion ['OP-M-01-FUSION']; madre en veredicto A vivo [(745, 'estructura_gates'), (765, 'estructura_de_gates'), (801, 'sistema_gates_go_kill')]
+  sistema_pull_push -> reduccion_de_tiempo_de_ciclo: hijo condenado por operacion ['OP-S-09']
+  medicion_calidad -> clasificacion_seriedad_defectos: hijo condenado por operacion ['OP-S-09']
+  cultura_justa_3 -> cultura_de_aprendizaje: madre condenada por operacion ['OP-S-09']
+  carta_de_control_shewhart -> reduccion_tiempo_ciclo: hijo condenado por operacion ['OP-S-09']
+  ingenieria_calidad_proveedores -> relaciones_largo_plazo_con_proveedores: hijo en veredicto A vivo [(2421, 'relacion_largo_plazo_proveedor_unico'), (2438, 'fin_precio_como_criterio_unico')]
+  dia_cero_defectos_2 -> eliminacion_causas_error_4: madre condenada por operacion ['OP-S-09']; hijo condenado por operacion ['OP-S-09']; madre en veredicto A vivo [(2491, 'dia_cero_defectos'), (2525, 'dia_cero_defectos_3')]
+  customer_discovery_phase2_problem_test -> captura_conocimiento_mercado: hijo en veredicto A vivo [(941, 'capturar_conocimiento_de_mercado')]
+  definir_metas_smart_de_proyecto -> costo_de_calidad_3: hijo condenado por operacion ['OP-S-09']
+  estrategias_estimacion_costos -> costo_de_calidad_3: hijo condenado por operacion ['OP-S-09']
+  programa_mejora_calidad_14_pasos -> costo_de_calidad_3: hijo condenado por operacion ['OP-S-09']
+  liderazgo_ejecutivo_innovacion -> estrategia_innovacion_producto: hijo condenado por operacion ['OP-S-09']; hijo en veredicto A vivo [(357, 'estrategia_de_innovacion_de_producto'), (1121, 'estrategia_de_innovacion_arenas')]
+  pivote_o_proceder -> fundadores_lideran_validacion: madre condenada por operacion ['OP-M-03-II']
+  cero_defectos -> dia_cero_defectos_2: hijo condenado por operacion ['OP-S-09']; hijo en veredicto A vivo [(2491, 'dia_cero_defectos'), (2525, 'dia_cero_defectos_3')]
+  genchi_gembutsu_salir_del_edificio -> get_out_of_the_building: hijo condenado por operacion ['OP-M-05-EDIFICIO']; hijo en veredicto A vivo [(175, 'customer_discovery_get_out_of_building'), (439, 'manifiesto_regla1_hechos_fuera_del_edificio')]
+  pivotes_e_iteraciones -> pivote_startup: madre condenada por operacion ['OP-M-03-III']; hijo condenado por operacion ['OP-M-03-III']; madre en veredicto A vivo [(306, 'pivote_startup')]; hijo en veredicto A vivo [(306, 'pivotes_e_iteraciones'), (857, 'pivote_estrategico')]
+  gestion_de_portafolio_gates_go_kill -> tipos_criterios_gate: madre en veredicto A vivo [(488, 'sistema_gates_go_kill'), (616, 'gestion_portafolio_formal'), (967, 'portfolio_management'), (1366, 'gestion_portafolio_foco')]
+  testear_circulo_cuadrado_rectangulo -> validar_modelo_financiero: hijo en veredicto A vivo [(371, 'metrics_that_matter_framework'), (807, 'verificar_modelo_ingresos')]
+  introduccion_validacion_clientes -> hipotesis_de_canales: madre condenada por operacion ['OP-M-05-APERTURA']; madre en veredicto A vivo [(549, 'filosofia_customer_validation'), (709, 'customer_validation')]; hijo en veredicto A vivo [(214, 'channels_hypothesis_physical'), (400, 'seleccion_canal_distribucion'), (762, 'channels_hypothesis_web_mobile'), (1488, 'seleccion_canal_fisico')]
+  mapa_de_canal_de_ventas -> seleccion_canal_distribucion: hijo en veredicto A vivo [(165, 'seleccion_canal_fisico'), (400, 'hipotesis_de_canales'), (537, 'channels_hypothesis_web_mobile'), (609, 'channels_hypothesis_physical')]
+  customer_validation -> establecer_linea_base_mvp: madre condenada por operacion ['OP-M-05-APERTURA']; madre en veredicto A vivo [(247, 'filosofia_customer_validation'), (709, 'introduccion_validacion_clientes'), (781, 'customer_validation_sell_phase')]
+  customer_validation -> mvp_catalogo_tecnicas: madre condenada por operacion ['OP-M-05-APERTURA']; madre en veredicto A vivo [(247, 'filosofia_customer_validation'), (709, 'introduccion_validacion_clientes'), (781, 'customer_validation_sell_phase')]
+  shingo_prize -> premio_shingo: madre en veredicto A vivo [(2475, 'premio_shingo')]; hijo en veredicto A vivo [(2475, 'shingo_prize')]
+  transformacion_calidad_compromiso_alta_direccion_japon -> planificacion_estrategica_despliegue_2: hijo condenado por operacion ['OP-S-09']
+  testing_process_completo -> test_card: madre en veredicto A vivo [(796, 'design_test_repeat')]
+  falla_sistemica_vs_error_individual -> fallas_activas_condiciones_latentes: madre en veredicto A vivo [(2242, 'errores_como_consecuencia'), (2273, 'fallas_activas_condiciones_latentes'), (2397, 'human_error_como_sintoma')]; hijo en veredicto A vivo [(2273, 'falla_sistemica_vs_error_individual'), (2387, 'errores_como_consecuencia')]
+  sistema_pull_push -> reduccion_tiempo_ciclo: hijo condenado por operacion ['OP-S-09']
+  pasivos_vs_operadores -> velocidad_crecimiento_franquicia: hijo condenado por operacion ['OP-S-09']
+  dmaic_fase_measure -> capacidad_de_proceso: hijo condenado por operacion ['OP-S-09']
+  validacion_sistema_medicion -> capacidad_de_proceso: madre condenada por operacion ['OP-S-09']; hijo condenado por operacion ['OP-S-09']
+  definiciones_operacionales_2 -> muestreo_de_aceptacion: madre condenada por operacion ['OP-S-09']
+  dia_cero_defectos_3 -> eliminacion_causas_error_4: madre condenada por operacion ['OP-S-09']; hijo condenado por operacion ['OP-S-09']; madre en veredicto A vivo [(2525, 'dia_cero_defectos_2'), (2853, 'dia_cero_defectos')]
+  desarrollo_de_clientes_customer_development -> customer_development_agile_pairing: madre en veredicto A vivo [(1052, 'customer_development_modelo')]
+  principios_gestion_error -> riesgos_del_enfoque_en_error_humano: hijo en veredicto A vivo [(2267, 'errores_como_consecuencia')]
+  seis_herramientas_comunicacion_celebracion -> celebracion_automatizada_de_hitos: madre en veredicto A vivo [(1068, 'seis_herramientas_comunicacion_fase_activate')]
+  formalizar_junta_asesora -> tamano_junta_directiva_vc: madre en veredicto A vivo [(328, 'formalize_advisory_board'), (712, 'identificar_junta_asesores')]
+  modelo_customer_development -> diseno_experimentos_pass_fail: madre condenada por operacion ['OP-S-09']; hijo en veredicto A vivo [(467, 'diseno_experimentos_hipotesis'), (511, 'disenar_tests_pass_fail'), (639, 'realizar_pruebas_pasa_no_pasa')]
+  canales_distribucion -> ocho_fases_experiencia_cliente: hijo condenado por operacion ['OP-M-02-PROG']
+  desarrollo_en_espiral -> protocepto: madre en veredicto A vivo [(1182, 'design_test_repeat')]
+  reduccion_de_tiempo_de_ciclo -> reduccion_tiempo_ciclo: madre condenada por operacion ['OP-S-09']; hijo condenado por operacion ['OP-S-09']
+  validar_modelo_financiero -> valor_de_vida_del_cliente: madre en veredicto A vivo [(371, 'metrics_that_matter_framework'), (807, 'verificar_modelo_ingresos')]
+  liderazgo_ejecutivo_innovacion -> estrategia_de_innovacion_de_producto: hijo condenado por operacion ['OP-S-09']; hijo en veredicto A vivo [(357, 'estrategia_innovacion_producto'), (460, 'estrategia_de_innovacion_arenas')]
+  licenciamiento_tecnologico -> proteccion_patentes_internacional: madre en veredicto A vivo [(2022, 'proteccion_propiedad_intelectual_internacional')]
+  eliminar_desperdicio_organizacional -> startup_como_experimento_cientifico: hijo en veredicto A vivo [(1208, 'build_measure_learn')]
+LIMPIOS TRAS EL FILTRO, en orden de archivo: 191
+ESCRITO: docs\plan\PASO_NODO_CALIBRADO_FILTRADO_V78.jsonl
+
+CABEZA DE LA BOLSA FILTRADA, primeros 30, en orden de archivo:
+  0: necesidades_reales_vs_declaradas -> descubrir_necesidades_del_cliente (paso 2, dominio quality)
+  1: sujetos_de_control -> key_process_product_characteristics (paso 3, dominio quality)
+  2: clasificacion_tipos_activos -> tipos_de_pasivos (paso 1, dominio core)
+  3: proceso_llamada_inicial_venta -> proceso_venta_franquicias (paso 6, dominio franquicias)
+  4: equipo_customer_development -> customer_development_team (paso 1, dominio core)
+  5: metas_desmaterializacion_energia -> establecer_metas_reduccion_emisiones (paso 2, dominio environmental)
+  6: diferencia_iso9001_iso9004 -> trilogia_de_juran (paso 3, dominio quality)
+  7: aprobacion_alta_direccion -> metas_negocio_calidad (paso 2, dominio quality)
+  8: seguimiento_cumplimiento_cadena_suministro -> auditorias_proveedores (paso 2, dominio environmental)
+  9: gestion_diferencias_culturales -> participacion_ferias_comerciales (paso 7, dominio exportacion)
+  10: decision_momento_fundacion -> evaluacion_conocimiento_industria (paso 3, dominio core)
+  11: actualizar_business_model_canvas_tuneup -> value_proposition_startup (paso 1, dominio core)
+  12: etapa_build_business_case -> value_proposition_startup (paso 1, dominio core)
+  13: extraer_priorizar_hipotesis -> value_proposition_startup (paso 1, dominio core)
+  14: optimizacion_embudo_get_customers -> mvp_alta_fidelidad (paso 1, dominio core)
+  15: preparacion_preguntas_problema_precall -> preguntas_situacion (paso 4, dominio core)
+  16: producto_mercado_fit_motores -> contabilidad_innovacion (paso 4, dominio core)
+  17: technology_platform_evaluation -> stage_gate_td_tecnologia (paso 2, dominio core)
+  18: ventaja_competitiva_producto -> value_proposition_startup (paso 3, dominio core)
+  19: conformidad_comercio_internacional -> sistema_gestion_calidad (paso 4, dominio quality)
+  20: viaje_diagnostico_remedial -> resistencia_al_cambio (paso 7, dominio quality)
+  21: breakthrough_cultural -> reconocimiento_publico_recompensas (paso 3, dominio quality)
+  22: auditoria_de_proceso -> seguimiento_accion_correctiva (paso 5, dominio quality)
+  23: planificacion_inicial_calidad -> medicion_capacidad_servicio (paso 5, dominio quality)
+  24: etapa_discovery_ideacion -> internal_idea_capture (paso 1, dominio core)
+  25: uso_inadecuado_computadoras -> causas_especiales_y_comunes_variacion (paso 3, dominio quality)
+  26: diamante_de_innovacion -> asignacion_recursos_en_gates (paso 2, dominio core)
+  27: timing_solicitud_referidos -> fase_adopt_ciclo_cliente (paso 5, dominio core)
+  28: plan_cambio_climatico -> formar_consejo_asesor_sostenibilidad (paso 5, dominio environmental)
+  29: requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level (paso 1, dominio quality)

@@ -32,6 +32,7 @@ adjudicaciones del 11 ago 2026.
 |---|---|---|
 | **`OP-S-01`** | **fusion del puesto 1955 + vigencia + alias de la DECISION 4** | **tres encargos sobre los mismos dos nodos** |
 | **`OP-S-04`** | **fusion de `analisis_trafico_competitivo` con su gemelo generico** | fundir hacia el generico **borra cinco verificaciones de vigencia de una vez** |
+| **`OP-S-09`** | **2 ids (`estructura_de_gates`, `estructura_gates`) que estan en el `eliminar` de `OP-M-01-FUSION`** (CORRECCION DECLARADA, vuelta 78, TAREA 1.5) | `OP-M-01-FUSION` corre antes (fase `03_FUSIONES`, orden 5) que `OP-S-09` (fase `05_SANEO`, orden 8): la fusion ya los condena, el renombre no los nombra |
 
 ---
 
@@ -459,6 +460,22 @@ contenido esta sano.
 > `docs/plan/OPERACIONES.jsonl` (antes vacio), que es su sitio verdadero
 > porque esta operacion es `RENOMBRE_CON_ALIAS` y sus nodos no van en
 > `eliminar`.
+
+> **CORRECCION DECLARADA (26 ago 2026, vuelta 78, TAREA 1.5, tercer caso de
+> EL TOQUE UNICO).** Medido por el auditor en el acta 77 (seccion 5 punto
+> 9): 2 de los 69 ids de la nomina de arriba, `estructura_de_gates` y
+> `estructura_gates`, estan en el campo `eliminar` de `OP-M-01-FUSION`, que
+> corre antes (fase `03_FUSIONES`, orden 5) que esta operacion (fase
+> `05_SANEO`, orden 8). Es el mismo caso que la tabla de EL TOQUE UNICO ya
+> aplica a `OP-S-01` y `OP-S-04` (banco 9.4, un nodo se abre UNA VEZ): se
+> declara como tercer caso, arriba. Los dos forman por si solos la familia
+> `[PARTICULAS]` de la nomina de la vuelta 77 (`SALIDA_V77_OP_S09_NOMINA.txt`
+> linea 42): al remitirlos a la fusion que ya los condena, la familia
+> desaparece entera y no a medias. Re-medido por
+> `scripts/loop/vuelta78_tarea15_toque_unico.py`
+> (`docs/loop/SALIDA_V78_TAREA15_TOQUE_UNICO.txt`) y escrito en el campo
+> `nodos` de `OP-S-09` (`scripts/loop/vuelta78_tarea15_escribir_toque_unico.py`):
+> la nomina queda en **67 ids**, NO 69.
 
 ---
 
