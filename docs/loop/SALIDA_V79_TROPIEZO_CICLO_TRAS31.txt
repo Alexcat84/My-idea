@@ -1,0 +1,38 @@
+TROPIEZO PROPIO, vuelta 79, TAREA 3.1: declarado y corregido.
+
+Tras editar dataset/nodos/extraer_priorizar_hipotesis.json y
+dataset/nodos/value_proposition_startup.json (reversion simetrizada), corri
+UNICAMENTE "python scripts/run_phase1.py --reaplico-curaduria" (CMD1) para
+verificar Gate 0, que dio OK con 0 nodos divergentes (SALIDA_V79_GATE0_CMD1_TRAS31.txt,
+primera version). Luego corri "engine/run_all_tests.py" directamente, y
+test_gate_alias.py::test_EL_CATALOGO_REAL_ESTA_LIMPIO fallo con 73 nodos
+divergentes en el campo etiqueta_arbol entre dataset/metadata/master_graph.json
+y web/lib/assets/master_graph.json.
+
+CAUSA: no habia corrido CMD2 (etiquetas_de_cara.py --aplicar) ni CMD3
+(sync_assets_web.py) tras el edito de esta vuelta, asi que dataset y web
+seguian con las etiquetas de la vuelta 78 en sus copias respectivas, pero
+SOLO dataset se habia recompilado (CMD1 recompila master_graph.json desde
+dataset/nodos/*.json, que YA tenian las etiquetas finales de la vuelta 78
+escritas como texto plano en el propio JSON) mientras que la copia web
+quedaba intacta hasta que sync_assets_web.py la tocara. Al intentar
+"reverificar" corriendo CMD1 una SEGUNDA vez DESPUES de CMD2 y CMD3 (en vez
+de una vez sola, en orden), reproduje el MISMO tropiezo que la vuelta 78 ya
+declaro en su seccion 0: correr run_phase1.py una segunda vez despues de
+etiquetas_de_cara.py fabrica la divergencia, porque CMD1 recompila
+master_graph.json leyendo las etiquetas ORIGINALES de dataset/nodos/*.json
+(que etiquetas_de_cara.py no persiste en el JSON individual, solo en el
+master_graph compilado), sobrescribiendo la copia de dataset con la etiqueta
+vieja mientras la copia web se queda con la nueva.
+
+CORREGIDO: restaure dataset/metadata/master_graph.json,
+dataset/metadata/phase1_run_log.json, web/lib/assets/master_graph.json y
+web/lib/assets/manifest.json con git checkout, y repeti el ciclo de tres EN
+ORDEN, CADA COMANDO UNA SOLA VEZ (CMD1, CMD2, CMD3), SIN re-correr CMD1 al
+final "para verificar". Tras eso: GATE 0 OK, motor 25/25
+(SALIDA_V79_GATE0_CMD1_TRAS31.txt version final, SALIDA_V79_GATE0_CMD2_TRAS31.txt,
+SALIDA_V79_GATE0_CMD3_TRAS31.txt). LECCION para el resto de esta vuelta y las
+siguientes: el ciclo de tres se corre EXACTAMENTE UNA VEZ cada comando, EN
+ORDEN, y la verificacion de que quedo bien se hace leyendo el resultado de
+ESA corrida (o con "git status" para confirmar cero rastreados modificados
+tras el ciclo, nunca re-corriendo CMD1 al final).

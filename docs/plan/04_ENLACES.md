@@ -332,6 +332,33 @@ y perder 73 gemelos.**
 > criterio publicado, que vivia fuera del reporte. El texto viejo de arriba
 > no se toca.
 
+> **CORRECCION DECLARADA (26 ago 2026, vuelta 79, relectura conjunta del
+> discutible 3 del reporte de la vuelta 78, seccion 4.4, con el caso del
+> auditor confirmado contra el grafo, acta de la vuelta 78 seccion 3 D3 y
+> seccion 5 punto 3).** El tramo 4 de `OP-E-01` (vuelta 78) escribio la
+> arista `extraer_priorizar_hipotesis -> value_proposition_startup`. **SE
+> REVIERTE.** El paso 1 de la madre (*"Lista todo lo que tiene que ser cierto
+> sobre tu modelo de negocio, tu propuesta de valor y tu cliente"*) manda
+> LISTAR; la propuesta de valor es uno de los tres objetos que se listan, no
+> la accion que el paso ejecuta, y el resumen de la propia madre lo dice sin
+> ambiguedad: *"A partir de tu mapa de propuesta de valor [...] identifica
+> todas las suposiciones"*, o sea que la propuesta de valor es insumo previo,
+> no resultado de este paso. El hijo (identificar problemas del segmento,
+> definir que caracteristicas los resuelven, verificar el encaje) no ejecuta
+> "listar hipotesis": la precede. Contraste con la hermana que si pasa la
+> vara en el mismo hub, `etapa_build_business_case` (paso 1 *"Definir el
+> mercado objetivo, posicionamiento y propuesta de valor del producto"*),
+> donde la accion del paso ES definir la propuesta de valor y el hijo es como
+> se define: esa se queda. Verificado contra `dataset/nodos/*.json` en esta
+> vuelta y escrito en
+> `scripts/loop/vuelta79_tarea31_relectura_conjunta.py`
+> (`docs/loop/SALIDA_V79_TAREA31_REVERSION.txt`), quitada de las DOS vistas a
+> la vez y confirmado tras el ciclo de Gate 0 que no reaparece
+> (`docs/loop/SALIDA_V79_GATE0_CMD1_TRAS31.txt`). Las otras tres del mismo
+> hub (`actualizar_business_model_canvas_tuneup`,
+> `etapa_build_business_case`, `ventaja_competitiva_producto`) no se tocan:
+> ya fueron confirmadas en el acta de la vuelta 78.
+
 ---
 
 ## LOS SUELTOS DE RACIMOS, y los racimos con miembro ajeno
