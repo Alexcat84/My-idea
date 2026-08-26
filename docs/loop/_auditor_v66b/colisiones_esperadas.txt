@@ -1,0 +1,17 @@
+﻿==============================================================================
+LA CUENTA ESPERADA DE COLISIONES, SIMULADA ANTES DE FUNDIR
+  plan       : docs\loop\PLAN_V66_OPU02_LOTE_B.json
+  operacion  : OP-U-02
+  linea base : 2, DECLARADA (acta 64, pregunta 3)
+==============================================================================
+
+  ANTES DE FUNDIR (el arbol tal como esta, medido ahora):
+     COLISIONES DE CLASE VIGENTES : 4
+     AUTO-PARES                   : 260
+        cierre_satisfaccion_postventa contra cierre_segun_complejidad_venta | clases ['B', 'D']
+        cierre_segun_complejidad_venta contra obtencion_compromiso | clases ['B', 'D']
+        pivote_o_proceder contra pivote_startup | clases ['B', 'D']
+        pivote_o_proceder contra reunion_pivotar_o_perseverar | clases ['B', 'D']
+
+  ROJO: el censo de ANTES da 4 y la linea base declarada es 2.
+  PARADA: la base se mide, no se supone.

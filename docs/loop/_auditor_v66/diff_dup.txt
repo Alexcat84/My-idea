@@ -1,0 +1,23 @@
+==============================================================================
+DIFF DEL CENSO DE DUPLICADAS, CON NODO Y DESTINO RESUELTOS POR EL ALIAS
+  antes  : docs/loop/_auditor_v66/dup_apertura.jsonl
+  despues: docs/plan/ARISTAS_DUPLICADAS.jsonl
+==============================================================================
+
+  grupos por rotulo CRUDO   : antes 921 | despues 915
+  grupos ya RESUELTOS       : antes 919 | despues 915
+
+  RENOMBRADOS (aparecen con rotulo nuevo pero son el MISMO grupo): 3
+     big_data_ia_cadena_suministro | nodos_siguientes | marco_analisis_mercado_cadena_suministro   -> resuelve a marco_analisis_mercado_cadena_suministro
+     equipo_conjunto_de_mejora_con_proveedores | nodos_previos | marco_analisis_mercado_cadena_suministro   -> resuelve a marco_analisis_mercado_cadena_suministro
+     lienzo_modelo_negocio | nodos_siguientes | marco_analisis_mercado_cadena_suministro   -> resuelve a marco_analisis_mercado_cadena_suministro
+
+  GRUPOS FABRICADOS DE VERDAD: 0
+
+  grupos que DESAPARECEN: 4
+     marco_analisis_mercado_cadena_suministro | nodos_previos | marco_analisis_mercado_cadena_suministro
+     marco_analisis_mercado_cadena_suministro | nodos_siguientes | marco_analisis_mercado_cadena_suministro
+     six_sigma_dmaic | nodos_previos | error_proofing_servicio
+     six_sigma_dmaic | nodos_siguientes | six_sigma_dmaic
+
+  VERDE: CERO grupos fabricados.

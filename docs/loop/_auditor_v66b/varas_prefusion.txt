@@ -1,0 +1,113 @@
+﻿==============================================================================================================
+VARAS POR FORMA, N-ARIAS, DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO
+  fichero del tramo: docs\loop\TRAMO_UNICO_OPU02_V64.jsonl
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+==============================================================================================================
+
+  pasos y cond son las varas de CONTENIDO contables; cab es el CABLEADO,
+  que por P.8 solo habla a contenido empatado. La marca < indica que ese
+  miembro es EL UNICO que alcanza el maximo de esa vara, o sea que la vara
+  APUNTA a el. Si dos o mas lo alcanzan, la vara EMPATA y no apunta.
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 5 | 8 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 6, condiciones 4, cableado 18
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: desarrollo_en_espiral
+   el CABLEADO (P.8)      apunta a: desarrollo_en_espiral
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      build_measure_learn                                           4      1     16
+      ciclo_construir_medir_aprender                                4      1      8
+      ciclo_crear_medir_aprender                                    5      2      5
+      desarrollo_en_espiral                                         6      4     18 <cond <cab
+      design_test_repeat                                            4      1      4
+      design_thinking_proceso                                       6      2     11
+      startup_como_experimento_cientifico                           4      2      3
+      testing_process_completo                                      5      1      9
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 7 | 6 miembros | FORMA: CONTENIDO EMPATA
+   maximos medidos: pasos 6, condiciones 3, cableado 11
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: six_sigma_dmaic
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      breakthrough_desempeno_actual                                 5      2      3
+      secuencia_universal_breakthrough                              6      2      5
+      secuencia_universal_para_el_breakthrough                      6      2      3
+      seis_sigma_servicios                                          5      2      5
+      six_sigma_dmaic                                               6      3     11 <cab
+      six_sigma_dmaic_2                                             5      3      4
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 8 | 6 miembros | FORMA: TODAS DE ACUERDO
+   maximos medidos: pasos 5, condiciones 3, cableado 6
+   la vara de PASOS       apunta a: cierre_segun_complejidad_venta
+   la vara de CONDICIONES apunta a: cierre_segun_complejidad_venta
+   el CABLEADO (P.8)      apunta a: EMPATA, no apunta
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      cierre_segun_complejidad_venta                                5      3      6 <pasos <cond
+      cierre_segun_tamano_decision                                  4      2      6
+      cierre_sofisticacion_comprador                                4      2      3
+      diferencias_venta_pequena_venta_grande                        4      1      4
+      ineficacia_cierre_ventas_grandes                              4      2      4
+      riesgo_tecnicas_cierre_venta_compleja                         4      2      4
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 9 | 6 miembros | FORMA: TODAS DE ACUERDO
+   maximos medidos: pasos 10, condiciones 4, cableado 6
+   la vara de PASOS       apunta a: cuatro_categorias_desempeno_cadena_suministro
+   la vara de CONDICIONES apunta a: cuatro_categorias_desempeno_cadena_suministro
+   el CABLEADO (P.8)      apunta a: EMPATA, no apunta
+   PUERTAS DENTRO DEL ACTO (guarda 1B, no se absorben): marco_analisis_mercado_cadena_suministro
+
+      miembro                                                   pasos   cond    cab
+      clasificacion_mercados_cadena_suministro                      5      3      5
+      cuatro_capacidades_mercado                                    4      2      2
+      cuatro_categorias_desempeno_cadena_suministro                10      4      6 <pasos <cond
+      estrategia_cuatro_capacidades_mercado                         4      2      6
+      marco_analisis_mercado_cadena_suministro                      5      2      3  [PUERTA]
+      modelo_cuadrantes_mercado                                     4      2      3
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 10 | 6 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 6, condiciones 2, cableado 10
+   la vara de PASOS       apunta a: refinar_sales_roadmap
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: hoja_de_ruta_de_ventas
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      customer_validation_sales_roadmap                             4      2      5
+      estrategia_de_ventas                                          4      1      6
+      hoja_de_ruta_de_ventas                                        5      2     10 <cab
+      refinar_sales_roadmap                                         6      2      6 <pasos
+      sales_roadmap                                                 3      1      2
+      sales_roadmap_vs_sales_force                                  4      2      6
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 11 | 5 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 5, condiciones 2, cableado 5
+   la vara de PASOS       apunta a: alineacion_etica_ia_negocio
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: human_in_the_loop_ia
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      alineacion_etica_ia_negocio                                   5      1      2 <pasos
+      human_in_the_loop_ia                                          4      2      5 <cab
+      mitigar_falling_asleep_wheel                                  4      2      3
+      principio_humano_en_el_loop                                   4      2      2
+      riesgo_sobredependencia_ia                                    4      2      3
+
+==============================================================================================================
+  actos mirados: 6 | POR FORMA: {'UNA SOLA VARA': 3, 'CONTENIDO EMPATA': 1, 'TODAS DE ACUERDO': 2}
+
+LO QUE ESTO NO HACE: no elige superviviente, no aplica la guarda 1B y no funde.
+FIN

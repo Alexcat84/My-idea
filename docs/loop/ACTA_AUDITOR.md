@@ -17364,3 +17364,380 @@ tanda limpia).
 EL BUCLE SIGUE: encargo escrito en PROMPT_SIGUIENTE.md (registro del
 acta 65 y la correccion declarada de la ficha de OP-U-02 como TAREA 1;
 el LOTE B del tramo unico como TAREA 2).
+
+# ACTA DE LA VUELTA 66 DEL AUDITOR (25 ago 2026, Fable 5)
+
+SIN HUECO DE ACTA: la ultima acta cubre la vuelta 65 y esta cubre la 66,
+que es la inmediatamente anterior a la actual. PERO HAY UN INCIDENTE DEL
+ROL Y SE DECLARA PRIMERO, con la regla del hueco delante: una sesion de
+auditor corrio el 20 ago de 23:31 a 23:39 (sus salidas quedaron SIN
+trackear en docs/loop/_auditor_v66/ y docs/loop/_auditor_v66_cuenta.py)
+y termino SIN escribir acta, encargo ni parada: la especie de la vuelta
+34. NO fabrico hueco de vuelta porque ningun encargo se emitio y ninguna
+vuelta corrio sin auditar: el bucle quedo parado CINCO dias, hasta que el
+fundador ajusto el orquestador y AUDITOR.md (commits eb91d502 y 51501552,
+de hoy) y relanzo. Sus salidas NO se usan como fuente (regla 1: toda
+cifra sale del instrumento corrido EN ESTA vuelta); se committean con
+esta acta como evidencia del incidente. Lo cuento en mi metrica como
+caida de procedimiento del auditor, con nombre.
+
+Vuelta auditada: los cuatro commits de la 66 en pasada-unica (fa1c3226
+TAREA 1, eedd7fa1 TAREA 2, 24ca8ca3 reporte y registro, dca36726 la
+cabecera de la seccion 12; el reporte no nombra su cuarto hash porque un
+commit no puede llevar el propio, y lo lei de git log, la misma via de la
+vuelta 65). Despues del reporte hay DOS commits de fundador (eb91d502
+orquestador.sh, 51501552 AUDITOR.md con la parada del cierre de la fase
+03) y git diff dca36726..HEAD da SOLO esos dos ficheros, medido: el arbol
+de datos de la vuelta 66 no se movio. origin/pasada-unica igual a HEAD
+(51501552), arbol limpio de rastreados al abrir y al cerrar mi corrida.
+Fecha por dos relojes, corridos por mi: Get-Date y git log dan los dos
+2026-08-25.
+
+## 1. VERIFICACION POR CORRIDA PROPIA: TODO AL DIGITO
+
+Cada cifra sale de un instrumento corrido HOY por mi (salidas propias en
+docs/loop/_auditor_v66b/, committeadas con esta acta).
+
+- CABECERA: tallar_cabecera_reporte.py --vuelta 66 --comparar corrido por
+  mi: IDENTICA AL TALLADOR, 14 filas cotejadas, DISTINTAS 0, ausentes 0.
+- MARCADOR: recomputar_marcador.py 3388: n 3388, cero huecos, cero
+  duplicados, A 551 B 72 C 5 D 2760, y la tasa por dominio identica al
+  digito a la tabla 9.1 del reporte (fundir no volteo ningun veredicto).
+- RECOMPUTO AL CIERRE: recomputo_3388.py corrido por mi: grafo 3853 (3247
+  vivos, 606 deprecados), retrato 551 crudas / 315 colapsos / 236 pares
+  distintos, 75 componentes, 26 CERRADOS (61 nodos) y 49 ABIERTOS (212
+  nodos), y las dos comprobaciones 273 igual a 273 y 236 igual a 236 OK.
+- RECOMPUTO DE APERTURA, RE-DERIVADO: worktree en fa1c3226 (el grafo de
+  apertura: la TAREA 1 no toca dataset, verificado por numstat) y
+  recomputo corrido ahi: 78 componentes, 26 CERRADOS (61) y 52 ABIERTOS
+  (230), 259 aristas A internas y 291 nodos en actos: la columna de
+  apertura de la cabecera, entera y al digito.
+- COLA: costuras_internas.py, 1447, y el arbol sin rastreados movidos.
+- COLISIONES: vuelta51_censo_colisiones.py: 4 vigentes y son LAS MISMAS
+  CUATRO del reporte (las dos nuevas del acto 8 con sus puestos y las dos
+  de la mesa OP-M-03 intactas), auto-pares 260.
+- COLISIONES ESPERADAS, LAS DOS PUNTAS: re-simuladas por mi en el
+  worktree PRE fusion: linea base 2 MEDIDA, 2 nuevas (las dos del acto 8,
+  predichas por nombre), 0 idas, ESPERADAS 4; y el censo de hoy da esas
+  mismas 4. Ademas el instrumento corrido sobre el arbol de HOY da ROJO
+  (base medida 4 contra declarada 2) y PARA: la guarda de medir antes
+  esta viva y muerde, comprobado sin querer y dicho.
+- DUPLICADAS: aristas_duplicadas_tras_resolver.py: 915 grupos, 725 nodos.
+- DIFF DE DUPLICADAS, corrido por mi con la apertura sacada de git show
+  eaa33c77: GRUPOS FABRICADOS 0, RENOMBRADOS 3, DESAPARECEN 4, los siete
+  explicados por el alias nuevo, 921 a 915.
+- ESTADO: vuelta31_estado.py: 71 operaciones todas LISTA, 0 dependencias
+  rotas, 672 entradas, enlaces 17540.
+- LA FICHA OP-U-02, LEIDA POR MI: la clausula vieja VERBATIM y sin tachar
+  como elemento 4 de la lista verificacion, la correccion como elemento 7
+  con las tres mitades citables y la adjudicacion del acta 65 citada con
+  sus lineas; numstat 1 y 1 sobre OPERACIONES.jsonl; 71 fichas. La
+  segunda corrida del corrector dice YA ESCRITA y no escribe.
+- REGISTROS EN 03_FUSIONES.md: numstat mas 118 y CERO borradas (acta 65)
+  y mas 398 y CERO borradas (lote B); idempotencia MUERDE en los tres
+  registradores re-corridos por mi (YA ADOSADA, YA ADOSADO, YA ESCRITA) y
+  la guarda de citas re-coteja 47 con MALAS 0 en mi corrida.
+- BARRIDO: 438 ficheros, ROJO 32 (linea base heredada sin mover), AMBAR
+  0, ROTULADO 40, CENSO 223, ILEGIBLE 1. El mas uno contra el cierre del
+  reporte (437 y 222) es docs/loop/_auditor_v66_cuenta.py, el fichero del
+  incidente del rol, sin trackear al correr el ejecutor su cierre: la
+  MISMA especie que la seccion 1.1 del reporte explico con el fichero del
+  auditor de la 65, y esta medida (el barrido lo lista con su linea).
+- GATE 0 CON SU CICLO DE TRES, CORRIDA MIA: run_phase1 con
+  reaplico-curaduria GATE 0 OK (3247 activos, 606 deprecados), etiquetas
+  71 re-aplicadas, sync con 6 assets mas manifest, phase1_run_log
+  restaurado y el arbol limpio; SIN cuarta corrida. MOTOR 25 de 25; WEB
+  80 ficheros, 1030 pasadas, 3 saltadas; TSC CERO lineas.
+- PROMESAS DE MARCADO: 1 promesa, 1 CUMPLIDA (el D3, hallado en la
+  seccion 6 por maquina). CENSO DE PLANTILLAS: CERO TALLADOS sobre 23
+  instrumentos de nombre estable (el 23 estrena varas_n_arias).
+- PUENTES DEL TRAMO, POST FUSION: acto 5 con CERO puentes y CERO
+  triangulos (P.10 no dispara, confirmado por instrumento), acto 10 con 2
+  y 3, acto 11 con 2 y 2, los cuatro nombres identicos a los del reporte;
+  los actos 7, 8 y 9 colapsados a UN miembro; 47 mirados, 9 con puente, y
+  de los que QUEDAN son 6 (actos 17, 20, 21, 23, 24 y 27).
+- VARAS N-ARIAS Y DOSSIER, RE-CORRIDOS PRE FUSION en el worktree: el
+  dossier da 0 lineas distintas sobre 876 contra la salida sellada; las
+  varas identicas salvo la linea del eco de la ruta (el separador que yo
+  pase distinto, no una cifra). Las FORMAS y flechas de los seis actos
+  salen las del reporte.
+- CASOS POSITIVOS RE-CORRIDOS POR MI: varas con LAS TRES mitades en
+  verde; contrato de perdidas con LAS CUATRO (tras su correccion; y el
+  hallazgo del reporte es real: las actas 64 y 65 enumeran los casos
+  positivos re-corridos y este no esta en ninguna lista, leido por mi en
+  el acta 65 seccion 1); mesa con LAS NUEVE sobre OP-M-02-ACCLIMATE;
+  promesas VERDE en sus dos mitades.
+- CUENTA INDEPENDIENTE DE LAS TRES FUSIONES: lei ENTERA la logica de
+  _auditor_v66_cuenta.py (la del incidente: contrato del plan sellado
+  contra arbol vivo y contra apertura por git show, sin reusar los
+  verificadores del ejecutor), la adjudique sana y la corri yo: 204
+  comprobaciones y CERO fallos. Supervivientes los tres del reporte;
+  prefijos viejos INTACTOS; los dos INCISO verbatim contra su absorbido;
+  los APPEND verbatim y con cobertura EXACTA de indices; piezas 38, 29 y
+  40; APPEND 11, 11 y 21; CUBIERTO 27, 17 y 18; INCISO 0, 1 y 1;
+  perdidas en campo propio 11, 8 y 12; los 15 absorbidos deprecados con
+  pasos, condiciones, resumen y entregable INTACTOS al byte y cargados en
+  merged_originals; los TRES DECLARADOS (5, 10 y 11) con sus 19 nodos
+  INTACTOS al byte contra la apertura; 3247 vivos, 15 muertos, CERO
+  referencias vivas a un absorbido y CERO auto-aristas.
+- P.16: la salida sellada dice 10 fabricadas y limpiadas en la corrida y
+  el pasivo del censo PROPIO de la guarda baja de 900 a 892 (el baja 8
+  del reporte); la cifra de OP-S-12 la publica su instrumento (921 a 915)
+  y mi diff independiente la confirma. REANCLAJE: nada que re-anclar,
+  dicho en su salida, y mi cuenta lo prueba por la via dura (cero
+  referencias vivas).
+- DOS CONTEOS CON CONVENCION, MEDIDOS EN VEZ DE DISCUTIDOS: el dossier
+  sellado tiene 876 newlines y termina en newline (877 elementos por
+  split, que es la cuenta del reporte): convencion de conteo, no caida.
+  El 65 ficheros tocados es la cifra del fundidor (nodos del grafo); el
+  commit trae 67 bajo dataset porque suma master_graph y phase1_run_log,
+  que la seccion 9 del reporte nombra aparte con su mas.
+
+## 2. RELECTURA CIEGA
+
+Empece por los discutibles marcados. El producto de ojo de la vuelta es
+el ACTO 5 (el D1, el mas fuerte y el propio reporte lo sabe). Imprimi
+PRIMERO los textos enteros de los OCHO nodos desde la apertura (git show
+eaa33c77: resumen, pasos, condiciones, entregable), adjudique la pregunta
+de P.5 por escrito, y SOLO DESPUES destape las razones.
+
+- NO ESTRICTA Y SE DECLARA: antes de la ciega yo ya habia leido el
+  reporte entero. Lo ciego de verdad fueron los TEXTOS contra la
+  pregunta.
+- COINCIDE: 1 de 1 en el fondo. Mi lectura previa: NO ES UNA FAMILIA. Hay
+  una sub-familia del ciclo desnudo (build_measure_learn,
+  ciclo_construir_medir_aprender, ciclo_crear_medir_aprender,
+  startup_como_experimento_cientifico, con design_test_repeat como
+  enunciado gemelo del ciclo) y TRES procesos largos que contienen el
+  ciclo como UNA pieza pero traen etapas propias que ningun nodo del
+  ciclo tiene: design_thinking_proceso (entender, observar con
+  etnografia, definir punto de vista, idear), testing_process_completo
+  (lienzos, hipotesis criticas, tarjetas, Progress Board) y
+  desarrollo_en_espiral (numero de vueltas, documentacion por iteracion,
+  pruebas de campo). Fundir los ocho sellaria identidades que los textos
+  desmienten y que nadie leyo.
+- TRAS DESTAPAR: las citas del reporte son verbatim, cotejadas por mi
+  contra INTRA_DOMINIO_VEREDICTOS.jsonl: el 796 dice el ciclo desnudo
+  contra el proceso que lo contiene y lo que anade al paso de la madre no
+  llega ni a una linea; el 1182 dice SEGUNDO SUBCONJUNTO ESTRICTO y el
+  1573 SUBCONJUNTO ESTRICTO; el 1573 dice de design_thinking_proceso se
+  perderian CUATRO ETAPAS ENTERAS. Y entre los tres procesos hay CERO
+  veredictos escritos, contado por mi sobre las 3388 lineas.
+- LOS SEIS D DE LOS ACTOS 10 Y 11, LEIDOS ENTEROS: el 872 dice el
+  sub-puro del sales roadmap se rompe; el 1306 dice el contenido del mapa
+  contra el uso del mapa; el 1496 dice uno protege la decision de hoy, el
+  otro protege la capacidad de decidir de manana, verbatim; el 1541 dice
+  PROTEGE LA DECISION DE HOY contra PROTEGE LA CAPACIDAD DE MANANA, se
+  declara la misma lectura del puesto 1496, y dice que la particion
+  escrita NO se mueve, verbatim. UNA NOTA DE DICTADO SIN CAIDA: el
+  reporte pone en cursiva el contenido del mapa contra el uso del mapa
+  para el 1306 Y el 1330; el literal del 1330 es contra la condicion de
+  contratacion, y la equivalencia la declara el propio 1330 (es la misma
+  relacion del puesto 1306 con el otro miembro). La sustancia calza y la
+  medicion esta delante; la atribucion literal es un pelo suelta y queda
+  dicha aqui, sin contarse como caida porque la afirmacion de fondo (dos
+  lecturas de una pieza que una fusion desmentiria) es verdadera y
+  medida.
+- DISCREPANCIAS FUERA DEL MARCADO: CERO. La relectura al doble no se
+  dispara.
+
+## 3. CAIDAS DE ESTA TANDA: CERO DEL EJECUTOR EN LAS TRES ESPECIES; UNA
+##    DE PROCEDIMIENTO DEL AUDITOR (EL ROL), CON NOMBRE
+
+- EJECUTOR: CERO de clase, CERO de cifra publicada y CERO de reporte. Las
+  tres averias propias de su seccion 7 fueron cazadas ANTES de publicar,
+  estan declaradas con nombre y las verifique donde dejan rastro: la 7.1
+  en el caso positivo de varas (la mitad 2 existe y muerde, re-corrida
+  por mi), la 7.2 en la guarda de citas (re-cotejada 47 y 0 y 8 de 8 en
+  mis corridas), la 7.3 en el diff rehecho (mi diff independiente con la
+  apertura de git da exactamente 0, 3 y 4). Averia declarada y cazada
+  antes de publicar no es caida: es el sistema mordiendo.
+- AUDITOR, UNA CAIDA DE PROCEDIMIENTO DEL ROL: la sesion de auditor del
+  20 ago que corrio 8 minutos de instrumentos y termino sin escribir
+  acta, encargo ni parada (declarada entera en la cabecera). La regla del
+  hueco existe por esta especie exacta (vuelta 34); esta vez no llego a
+  hueco porque no se emitio encargo y nada corrio sin auditar, pero el
+  costo real existe: cinco dias de bucle parado. Se cuenta.
+- MANEJO PROPIO SIN CIFRA DE POR MEDIO, DECLARADO: mi primer diff de
+  duplicadas cayo por el BOM que PowerShell mete al redirigir (rehecho
+  escribiendo bytes limpios); y en el worktree mande el resumen del
+  recomputo de apertura a null por descuido y re-derive las cifras del
+  JSONL de componentes con python, que es la misma salida del
+  instrumento. Ninguno toco una cifra publicada.
+
+## 4. ADJUDICACION DE LOS DOCE DISCUTIBLES
+
+- D1, DECLARAR EL ACTO 5 POR LA PREGUNTA DE P.5 CUANDO P.10 NO SE
+  DISPARA: A FAVOR POR EXTENSION CITABLE, y es la adjudicacion de mas
+  peso de la tanda; la letra entera esta en la seccion 5, pregunta 1. Lo
+  esencial: el encargo mismo MANDA contestar la pregunta de una familia o
+  dos; una pregunta cuya respuesta negativa no tuviera consecuencia seria
+  teatro; la consecuencia con carril escrito es el DECLARADO Y NO FUNDIDO
+  CON MOTIVO SELLADO, que el acta 65 ya extendio a un segundo motivo (la
+  guarda 1B); y fundir desmentiria cuatro lecturas escritas, contra P.12
+  (la lectura decide) y contra mi propia ciega, que llego a lo mismo.
+- D2, FUNDIR EL ACTO 9 CON EL SUPERVIVIENTE MAS CORTO POR LA GUARDA 1B: A
+  FAVOR. El carril del choque de puerta esta escrito (acta 54, pregunta
+  1, con el acto 20 de precedente): la puerta sobrevive y el choque se
+  registra. Declarar habria inventado un tercer carril sin letra. El
+  nodo de 21 pasos es un bulto real, publicado, y la fase 04 existe.
+- D3, LOS PASOS 7 A 10 DE cuatro_categorias COMO APPEND AUNQUE PARECEN
+  INJERTO: A FAVOR. Fundir no desteje: P.3 y P.19 son materia de
+  destejido y ninguna operacion escrita lo nombra; APPEND conserva el
+  texto vivo para la poda de la fase 04; los cuatro viajaron VERBATIM
+  (mi cuenta) y la sospecha quedo publicada con promesa de marcado
+  cumplida por maquina.
+- D4, LA LINEA BASE DEL CENSO DE 2 A 4 CON OP-U-02 DE DUENA: A FAVOR POR
+  EXTENSION, adjudicado entero en la seccion 5, pregunta 2.
+- D5, CERO INCISO EN EL ACTO 7 POR LA PUNTUACION: A FAVOR. El criterio
+  escrito es la legibilidad del paso resultante (el carril de la vuelta
+  56 sobre puntuacion de incisos); ocho CUBIERTO con perdida nombrada y
+  atenuante es el costo publicado de aplicarlo, no un silencio.
+- D6, SEIS APPEND DE LA SECUENCIA UNIVERSAL AL DMAIC: A FAVOR. La
+  identidad que las razones declaran es del VIAJE (breakthrough igual
+  DMAIC como recorrido); el andamiaje (la creencia, el Pareto, los dos
+  brazos, lo cultural, el proyecto formal, el replicar) no esta en los
+  seis pasos del DMAIC, y CUBIERTO lo habria callado. El carril es el
+  del D9 del acta 65: catalogo mas rico con solapes declarados.
+- D7, VEINTIUN APPEND EN EL ACTO 9: A FAVOR, mismo carril del D9 del
+  acta 65, con el costo publicado y la poda de la fase 04 como destino.
+- D8, LAS SIETE PERDIDAS CON ATENUANTE DECLARADO: A FAVOR, carril del D8
+  del acta 63 y el D10 del acta 65: sobre-sellar declarando es mas
+  auditable que callar. La cuenta crece y esta contada (pendiente 4).
+- D9, LOS DOS CAMBIOS DEL CUADRO DE VARAS Y EL ESTRENO EL MISMO DIA: A
+  FAVOR. Las dos condiciones del acta 61 estan cumplidas (docstring y
+  discutible); la segunda averia del ancestro (publicar una fila de DOS
+  sobre actos de quince con los demas desaparecidos en silencio) es de la
+  especie que MIENTE, la peor, y no admitia esperar; el caso positivo
+  mordio de verdad antes de publicar (averia 7.1) y sus tres mitades
+  estan en verde re-corridas por mi, con el ancestro identico sobre el
+  fixture de dos.
+- D10, CORREGIR EL CASO POSITIVO DEL CONTRATO DE PERDIDAS SIN ENCARGO: A
+  FAVOR. Un caso positivo que acusa en falso, committeado a sabiendas, es
+  peor que el alcance: la proxima vez que acuse nadie le cree. El
+  hallazgo es real (roto desde la 63, ausente de las listas de las actas
+  64 y 65, leido por mi), la correccion va declarada con el texto viejo
+  verbatim, y las cuatro pruebas muerden en mi corrida.
+- D11, LA CITA 3959 POR 3962 CORREGIDA CON GREP: A FAVOR con nota. La
+  guarda existe para eso y mordio sin escribir nada; corregir con la
+  medicion delante es legitimo. Re-derivar todas las citas por aguja
+  queda como mejora de instrumento, no como deuda: se nombra y no se
+  encarga.
+- D12, EL FICHERO DE APERTURA CON TITULO SIN ETIQUETA: A FAVOR. Copiar la
+  salida real con el rotulo torcido Y DECIRLO vale mas que re-correr con
+  datos de cierre bajo un rotulo de apertura, que seria fabricar. El
+  titulo dice MEDICION DE SIN ETIQUETA, leido por mi, y las cifras son
+  las de apertura, verificadas enteras por mi worktree.
+
+## 5. LOS PENDIENTES DE DOCTRINA, ADJUDICADOS O NOMBRADOS
+
+1. QUE HACE UN ACTO CUANDO P.5 CONTESTA DOS FAMILIAS Y P.10 NO SE
+   DISPARA: ADJUDICADO A FAVOR de la salida del ejecutor, POR EXTENSION
+   DE CUATRO LETRAS VIGENTES, la misma via del acta 65 con la guarda 1B.
+   PRIMERA: P.5 con su correccion de alcance (15 ago, decision del
+   fundador) OBLIGA a contestar sobre el texto estable si el acto es UNA
+   familia o DOS; el encargo de la vuelta lo repite con todas sus
+   letras. Una pregunta obligatoria cuya respuesta negativa no tuviera
+   consecuencia no seria una pregunta: seria un rito. SEGUNDA: P.12 (el
+   cierre transitivo convoca, la lectura decide) manda que los veredictos
+   DIRECTOS gobiernen: fundir el acto entero sellaria que los tres
+   procesos repiten entre si, y entre ellos hay CERO veredictos, contado
+   por mi. TERCERA: el carril del DECLARADO Y NO FUNDIDO CON MOTIVO
+   SELLADO ya existe y ya acepta mas de un motivo (P.10 de origen, la
+   guarda 1B por el acta 65, seccion 5, pregunta 3): anadir P.5 como
+   tercer motivo es la misma extension, no doctrina nueva. CUARTA: las
+   alternativas estan prohibidas por letra vigente: leer los 19 pares es
+   cribado que la fase no tiene (banco 9.21) y la fusion parcial la
+   prohibe el encargo con todas sus letras. La frase del encargo sobre el
+   triangulo contesta a P.10 y no abole la pregunta de P.5 que el mismo
+   encargo manda contestar dos parrafos despues. NO ES PARADA: nada se
+   toca, es reversible entero, y la letra que faltaba queda adjudicada
+   por extension citable. El acto 5 cierra DECLARADO Y NO FUNDIDO con
+   P.5 como motivo sellado.
+2. UNA COLISION QUE FABRICA UNA FUSION DE OP-U-02, QUIEN LA HEREDA:
+   ADJUDICADO POR EXTENSION: LA DUENA ES QUIEN LA FABRICA. Es el espiritu
+   ya escrito de P.16 (quien fabrica limpia, en el mismo commit) aplicado
+   a lo que no se puede limpiar sino solo gobernar: la colision nace de
+   una sustitucion de OP-U-02, esta predicha en su plan, publicada en
+   rojo y con dueno nombrado; mandarla a la mesa OP-M-03 le colgaria a
+   una mesa cerrada en decisiones un pasivo que no fabrico. LA LINEA BASE
+   OPERATIVA DEL CENSO QUEDA EN 4 (2 de la mesa mas 2 de OP-U-02) y toda
+   fusion siguiente mide sus esperadas SOBRE 4. Que hace la campana con
+   las colisiones vigentes al cierre de la fase (mesa nueva, enlace o
+   saneo) comparte destino con el pendiente 3 y lo vera el fundador en la
+   parada del cierre de la fase 03.
+3. EL SUBCONJUNTO CERRADO DE UN ACTO CON PUENTE (heredado, acta 65
+   pendiente 2): sigue NOMBRADO y enrutado al cierre de la fase 03, ahora
+   con CUATRO actos esperandolo (el 1, el 10 y el 11 por puente, el 5 por
+   la via de P.5). La parada nueva de AUDITOR.md (51501552) garantiza que
+   el fundador lo ve antes del tramo mecanico.
+4. LA MARCA PARA YA LO DICE EL APPEND DE UN HERMANO (heredado, acta 65
+   pendiente 4): sigue NOMBRADO; el carril vigente alcanza y esta vuelta
+   lo pago siete veces con atenuante declarado. La cuenta crece y se
+   publica; estrenar marca sigue siendo doctrina de instrumento que nadie
+   necesita HOY.
+5. EL INCISO DE CONDICIONES (heredado): sigue en su carril, doce perdidas
+   DE CONDICIONES mas, enrutadas a la fase 04 (acta 55, pregunta 5).
+6. EL ESQUEMA DE OPERACIONES.jsonl (heredado): sigue pendiente y el campo
+   existente lo cubre; la correccion de la ficha NO estreno clave, leida
+   por mi (las mismas 18 claves en las 71).
+
+## 6. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 1 relectura ciega (el acto 5, fondo 1 de 1, no estricta y
+declarada) con los ocho textos leidos enteros desde la apertura; QUINCE
+puestos releidos al texto (213, 376, 486, 1208, 723, 796, 1182, 1449,
+1573, 872, 1023, 1306, 1330, 1496, 1541); la cuenta independiente de las
+tres fusiones con 204 comprobaciones y cero fallos; y unos 55 sitios
+re-corridos o leidos al digito (cabecera, marcador, recomputo de cierre y
+de apertura, cola, colisiones, esperadas en las dos puntas, duplicadas y
+su diff, estado, ficha, registros con numstat e idempotencia por tres,
+barrido, censo de plantillas, Gate 0 con ciclo de tres, motor, web, tsc,
+promesas, cuatro casos positivos, puentes post fusion, varas y dossier
+pre fusion al byte, P.16, reanclaje, fecha por dos relojes, commits del
+rango y el diff de los dos commits de fundador).
+
+Caidas del ejecutor en esta tanda (vuelta 66): CERO de clase, CERO de
+cifra publicada, CERO de reporte; tres averias propias declaradas y
+cazadas antes de publicar, verificadas donde dejan rastro. Discrepancias
+de la ciega en el fondo: CERO en 1 de 1. Caidas del auditor: UNA de
+procedimiento del rol (la sesion interrumpida del 20 ago, declarada en la
+cabecera y en la seccion 3).
+
+Acumulado: 462 relecturas, 770 puestos (mas unos 539 nodos de forma y
+unos 1020 sitios de codigo), 7 caidas de clase, 27 de reporte del
+ejecutor, 13 de cifra publicada del ejecutor, 3 de cifra del auditor, 7
+de acta del auditor, 4 de procedimiento del auditor.
+
+Rachas: REPORTE EN CERO (segunda tanda seguida sin caida de reporte del
+ejecutor). CLASE O CIFRA EN CERO (undecima tanda limpia).
+
+## 7. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. Los doce discutibles y los seis pendientes quedan
+  bajo letra citable (P.5 con su correccion, P.8, P.10, P.11, P.12, P.16,
+  guarda 1B, banco 9.10 y 9.21, actas 53, 54, 55, 61, 63, 64 y 65); las
+  dos adjudicaciones nuevas van por extension citable, la misma via que
+  el acta 65 uso con la guarda 1B.
+- Contradiccion sin regla de correccion: NO.
+- Decision de fundador: NINGUNA SE TOMA. El merge sigue siendo suyo; no
+  se autoriza ninguna lectura nueva; las colisiones vigentes y los
+  declarados van a la parada del cierre de la fase 03, donde ya lo
+  espera.
+- Fallo tecnico repetido: NO. Gate 0 y las tres suites en verde en la
+  corrida del ejecutor y en la mia.
+- Credito de tanda roto: NO. Cero caidas del ejecutor en las tres
+  especies.
+- CIERRE DE LA FASE 03 (la parada nueva de 51501552): NO SE CUMPLE
+  TODAVIA. Quedan 39 actos y 139 nodos del tramo unico (6 de ellos con
+  puente, que cerraran DECLARADOS), la mesa OP-M-03, y los declarados
+  con su subconjunto sin resolver. Cuando el ultimo acto del tramo tenga
+  destino y el cierre este verificado, la parada se ejecuta tal como
+  esta escrita: PARA_ALEXIS.md con el cierre medido y PROMPT_SIGUIENTE
+  vacio.
+- Campana consumada: NO.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE: encargo escrito en PROMPT_SIGUIENTE.md (registro del acta
+66 como TAREA 1; el LOTE C del tramo unico como TAREA 2).
+

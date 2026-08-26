@@ -1,0 +1,33 @@
+﻿==============================================================================
+CASO POSITIVO DE LA CORRECCION DEL CUADRO DE VARAS (vuelta 66)
+==============================================================================
+
+  fixture de DOS miembros vivos, elegidos por medicion: cultura_de_seguridad_interpretivista_funcionalista, enfoque_situacional_vs_personal
+  ancestro sacado de git: fa1c3226:scripts/loop/vuelta58_varas_tramo.py
+
+  --- MITAD 1: NO REGRESION SOBRE UN ACTO DE DOS ---
+     exit ancestro 0, exit corregido 0
+     lineas ancestro 16, corregido 16, DISTINTAS 0
+     VERDE: salida IDENTICA linea a linea, la rama vieja no se movio
+
+  --- MITAD 2: LAS DOS RAMAS NUEVAS, Y QUE NINGUNA CALLE ---
+     2.a el ANCESTRO sobre el tramo unico cae por el ORDINAL: SI, como se esperaba
+         ROJO: el fichero del tramo tiene 0 claves de ordinal ([]). PARADA.
+     2.b el CORREGIDO ya NO cae por el ordinal          : SI
+         cae por LA GUARDA NUEVA y nombra al N-ario     : SI
+         y NO imprime ni una fila de cuadro             : SI
+
+  --- MITAD 3: LA FLECHA N-ARIA COINCIDE CON LA VIEJA CUANDO N ES 2 ---
+     exit n-ario 0
+     FORMA del cuadro de pares : TODAS DE ACUERDO
+     FORMA del cuadro N-ario   : TODAS DE ACUERDO
+     la fila vieja, verbatim   : 1   cultura_de_seguridad_interpretivista_funcionalista enfoque_situacional_vs_personal          
+     el N-ario apunta          : pasos a enfoque_situacional_vs_personal | condiciones a enfoque_situacional_vs_personal
+     VERDE: la misma FORMA, o sea que con N igual a 2 la flecha nueva es la vieja
+
+  --- BORRADO DE LO FABRICADO ---
+     docs/loop/_v66_tramo_de_mentira.jsonl                      BORRADO
+     scripts/loop/_v66_varas_ancestro.py                        BORRADO
+
+==============================================================================
+VERDE: las TRES mitades pasan. La correccion no regresa y la guarda muerde.

@@ -1,0 +1,876 @@
+﻿==============================================================================
+DOSSIER DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO: EL ACTO LEIDO ENTERO (P.5) CON SU RAZON
+==============================================================================
+  nodos leidos de: el arbol de trabajo
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+
+##############################################################################
+# ACTO 5 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 8 MIEMBROS: 9 pares internos con veredicto escrito, de 28 combinaciones posibles
+
+  [PAR] puesto 213, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): build_measure_learn
+     nodo_b (EL SEGUNDO de la razon): ciclo_crear_medir_aprender
+     RAZON ENTERA, sin recortar:
+       REPITE con ciclo_crear_medir_aprender. Los dos recorren el mismo ciclo y en el mismo orden: partir de la hipotesis y de que quieres aprender, construir lo minimo, medir con clientes reales y decidir el ajuste. FIGURA: ids casi identicos, el mismo nombre en ingles y en espanol. Candidato a fusion.
+
+  [PAR] puesto 376, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): ciclo_construir_medir_aprender
+     nodo_b (EL SEGUNDO de la razon): ciclo_crear_medir_aprender
+     RAZON ENTERA, sin recortar:
+       REPITE con ciclo_crear_medir_aprender. Los ids son el mismo nombre con un sinonimo, construir y crear, y los pasos van detras: construir lo minimo que permita probar la idea, medir el comportamiento real de los clientes y no su opinion, extraer el aprendizaje y decidir el paso siguiente, y repetir el ciclo cada vez mas rapido. El segundo anade partir del final del ciclo, decidir primero que se necesita aprender, y la contabilidad de innovacion, pero es el mismo ciclo de Ries.
+
+  [PAR] puesto 486, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): build_measure_learn
+     nodo_b (EL SEGUNDO de la razon): ciclo_construir_medir_aprender
+     RAZON ENTERA, sin recortar:
+       REPITE con ciclo_construir_medir_aprender. Los dos mandan el mismo ciclo de Ries: construir el artefacto mas simple que permita probar la hipotesis, medir el comportamiento real y no la opinion, aprender comparando lo esperado con lo ocurrido, y repetir. El primero antepone un paso 0, generar la hipotesis a partir de los lienzos. Con el puesto 376, la familia del ciclo construir, medir y aprender llega a TRES nodos del nucleo.
+
+  [PAR] puesto 723, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): ciclo_construir_medir_aprender
+     nodo_b (EL SEGUNDO de la razon): design_test_repeat
+     RAZON ENTERA, sin recortar:
+       El mismo bucle de cuatro tiempos con dos vocabularios y de dos libros distintos, sin arista entre ellos. ciclo_construir_medir_aprender, de The Lean Startup, dice construir la version mas simple posible para probar una idea, medir como se comportan los clientes de verdad frente a lo construido, aprender de eso para decidir el siguiente paso, y repetir el ciclo cada vez mas rapido. design_test_repeat, de Value Proposition Design, dice prototipar rapido una idea de propuesta de valor, testear el prototipo con clientes reales, aprender de los resultados y redisenar, y repetir de forma continua. Cuatro pasos contra cuatro, uno a uno, y la unica diferencia real es el objeto, producto contra propuesta de valor, y el acelerar del primero. TERCER GEMELO EN LA MISMA FAMILIA: ciclo_construir_medir_aprender enlaza ademas a ciclo_crear_medir_aprender, construir contra crear, y ese par ya se leyo en el puesto 376 y dio A. Son tres nodos para un bucle de cuatro pasos. Y esto CONFIRMA el juicio que declare en la medicion de los veinte sobre design_test_repeat: no es hijo de paso de fit_problema_solucion, es un nodo de ciclo con vida propia, y ahora se sabe que ademas tiene gemelos.
+
+  [PAR] puesto 796, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): design_test_repeat
+     nodo_b (EL SEGUNDO de la razon): testing_process_completo
+     RAZON ENTERA, sin recortar:
+       El ciclo desnudo contra el proceso que lo contiene, y el ciclo no anade nada al paso que lo nombra. testing_process_completo es el proceso entero: dar forma a las ideas con el lienzo de propuesta de valor y el de modelo de negocio, extraer las hipotesis mas criticas, disenar experimentos con la tarjeta de test, EJECUTAR EL CICLO DE APRENDIZAJE capturando insights con la tarjeta de aprendizaje, y medir el avance con el Progress Board y el termometro de preparacion para inversion. design_test_repeat es ese cuarto paso y nada mas: prototipar rapido, testear con clientes reales, aprender y redisenar, y repetir de forma continua. Lo que anade al paso de la madre no llega ni a una linea: la palabra prototipar. REPITE por la vara del banco 9.6.1. Sin arista entre ellos, y los dos de Value Proposition Design. Nota: design_test_repeat ya habia repetido con ciclo_construir_medir_aprender en el puesto 723, o sea que este nodo de cuatro pasos lleva dos gemelos y ninguna arista propia.
+
+  [PAR] puesto 1182, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): desarrollo_en_espiral
+     nodo_b (EL SEGUNDO de la razon): design_test_repeat
+     RAZON ENTERA, sin recortar:
+       SEGUNDO SUBCONJUNTO ESTRICTO DEL EJERCICIO, y el primero que cruza libros. Los CUATRO pasos de design_test_repeat estan enteros dentro de los seis de desarrollo_en_espiral y en el mismo orden: prototipar rapido es construir una version minima, rapida y economica; testear con clientes reales es probar la version con clientes reales; aprender y redisenar son los pasos 3 y 4, recoger respuesta directa sobre que cambiar y revisar diseno, propuesta de valor y beneficios; y repetir el ciclo continuamente es repetir el ciclo varias veces. Y desarrollo_en_espiral trae ademas lo que el otro no tiene: QUE SE MIDE en cada prueba, interes, preferencia e intencion de compra; CUANTAS VUELTAS, de tres a cuatro en promedio y hasta quince en procesos muy iterativos; y documentar cada iteracion desde la investigacion inicial de la voz del cliente hasta la prueba completa. PERDIDA CERO Y DIRECCION FORZADA, igual que en el puesto 511: el nodo que muere no tiene ni una linea propia, asi que aqui no hay reparto por bloques que hacer. LO QUE ESTE PAR LE HACE A UNA NOMINA, verificado con el barrido antes de escribir: design_test_repeat tiene DOS A vigentes, los puestos 723 y 796, y es miembro del racimo BUILD-MEASURE-LEARN, el numero 9 de la tabla viva, con cinco miembros. desarrollo_en_espiral no tenia NINGUNA A hasta ahora. Con esta pasa a ser CANDIDATO A MIEMBRO por el banco 9.20, y seria el PRIMERO DE OTRO LIBRO en ese racimo: Cooper entrando en una familia de Ries y Osterwalder. No lo declaro miembro, lo dejo como candidato levantado con su evidencia.
+
+  [PAR] puesto 1208, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): build_measure_learn
+     nodo_b (EL SEGUNDO de la razon): startup_como_experimento_cientifico
+     RAZON ENTERA, sin recortar:
+       EL MISMO BUCLE DE CUATRO TIEMPOS EN DOS LIBROS, y el segundo solo le pone condiciones al primero. Los cuatro pasos de startup_como_experimento_cientifico calzan uno a uno con los cuatro de build_measure_learn: formular la hipotesis, disenar el experimento o artefacto, ejecutar y medir, y contrastar el resultado contra la hipotesis original. No hay un quinto tiempo ni un orden distinto: es el mismo bucle dicho dos veces. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De startup_como_experimento_cientifico se perderian las TRES CONDICIONES DE RIGOR, que son su aportacion entera y no estan en el otro en ninguna forma: que la hipotesis sea FALSABLE, que el experimento se disene DE MODO QUE PUEDA FALLAR porque si no puede fallar no se puede aprender, y que se ejecute a pequena escala antes de comprometer recursos grandes. De build_measure_learn se perderian dos: que la hipotesis salga de los lienzos de propuesta de valor y de modelo de negocio, que es lo que ata este bucle al resto del metodo, y cerrar el ciclo definiendo QUE CAMBIAR. LO QUE ESTE PAR LE HACE A LA NOMINA, con el barrido corrido antes de escribir: build_measure_learn ya tenia dos A, los puestos 213 y 486, y es miembro del racimo build-measure-learn. startup_como_experimento_cientifico no tenia ninguna. Con esta pasa a CANDIDATO A MIEMBRO por el 9.20, y es el segundo candidato que ese racimo gana en cien puestos, con desarrollo_en_espiral del 1182. Candidatos, no miembros.
+
+  [PAR] puesto 1449, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): build_measure_learn
+     nodo_b (EL SEGUNDO de la razon): design_test_repeat
+     RAZON ENTERA, sin recortar:
+       LOS DOS CICLOS DEL MISMO LIBRO, sin arista entre ellos, y este era el ULTIMO par pendiente en la cola del sub-puro de build-measure-learn. Los CUATRO pasos se corresponden uno a uno: partir de una hipotesis o de una idea de propuesta de valor, construir el artefacto o prototiparla rapido, medir su desempeno o testearla con clientes reales, y aprender comparando lo esperado con lo ocurrido o aprender de los resultados y redisenar. Es el mismo bucle contado con dos vocabularios, y los dos del mismo libro. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De build_measure_learn se perderian dos: que la hipotesis salga de los DOS LIENZOS, el de propuesta de valor y el de modelo de negocio, que es lo unico que ata el ciclo a un artefacto concreto; y que el artefacto pueda ser un PROTOTIPO CONCEPTUAL O UN EXPERIMENTO y no solo un producto minimo, que es la linea que lo hace mas ancho que el resto de su familia. De design_test_repeat se perderia una sola y es la que le da el nombre: REPETIR EL CICLO DE FORMA CONTINUA, que build_measure_learn no dice en ninguno de sus cuatro pasos. NOTA DE COLA CERRADA: con este par el SUB-PURO DE BUILD-MEASURE-LEARN termina su cola. Nomina de SIETE nodos, 21 pares posibles, OCHO encolados y los ocho leidos, LOS OCHO EN A, sin un solo sano. Su cobertura, como manda el banco 9.26, es de 8 de 21: sigue siendo el sub-puro con mas miembros y con la reserva mas grande del inventario, TRECE pares que nunca entraron a la cola. Por el banco 9.16 sigue siendo una promesa.
+
+  [PAR] puesto 1573, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): design_test_repeat
+     nodo_b (EL SEGUNDO de la razon): design_thinking_proceso
+     RAZON ENTERA, sin recortar:
+       EL BUCLE SUELTO CONTRA EL PROCESO QUE LO CONTIENE, libros distintos y sin arista entre ellos, y es un SUBCONJUNTO ESTRICTO. Los CUATRO pasos de design_test_repeat estan dentro de los pasos 5 y 6 de design_thinking_proceso, dichos al mismo grano: prototipar representaciones tangibles rapidas, testear con usuarios reales, y REPETIR EL CICLO PROTOTIPO TEST DE FORMA ITERATIVA, que es literalmente aprender de los resultados, redisenar y repetir. design_test_repeat no trae ni un procedimiento que el otro no tenga. Se registra como A por la misma lectura de los puestos 511, 1182 y 1332, los tres subconjuntos estrictos ya anotados, y el 1182 es precisamente este mismo nodo dentro de otro mayor. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De design_test_repeat se perderia UNA: que lo que se prototipa sea una IDEA DE PROPUESTA DE VALOR, que es lo unico que ata el bucle a un artefacto concreto del catalogo. De design_thinking_proceso se perderian CUATRO ETAPAS ENTERAS, y hay que decirlo fuerte porque son la mayor parte del nodo: ENTENDER el estado actual, el entorno y los objetivos de exito; OBSERVAR a los usuarios en su ambiente con tecnicas etnograficas; DEFINIR UN PUNTO DE VISTA claro sobre el usuario tipico; e IDEAR generando tantas ideas como sea posible. NOTA DE NOMINA: design_test_repeat es miembro del SUB-PURO DE BUILD-MEASURE-LEARN, que era de SIETE. Con esta A el sub-puro pasa a OCHO miembros y hay que remedirlo entero, como manda el 9.26. Queda recomputado en el checkpoint.
+
+  --- build_measure_learn
+      titulo    : Ciclo Build-Measure-Learn (Lean Startup)
+      fuente    : Value Proposition Design
+      pasos 4 | condiciones 1 | previos 11 | siguientes 5 | cableado 16
+      paso 1: Paso 0: Generar una hipótesis clara a partir de los Canvas de Value Proposition y Business Model
+      paso 2: Paso 1: Diseñar/construir un artefacto (prototipo conceptual, experimento o MVP) para testear la hipótesis
+      paso 3: Paso 2: Medir el desempeño del artefacto
+      paso 4: Paso 3: Aprender comparando lo esperado vs lo ocurrido y definir qué cambiar
+      cond 1: Cuando el usuario tiene una hipótesis de negocio o producto que necesita validar rápidamente
+      previos   : ['customer_development_process', 'desarrollo_de_clientes_customer_development', 'disenar_para_sanacion', 'diseno_por_sustraccion', 'fallar_rapido_prototipado', 'intimacion_emocional_como_senal_de_verdad', 'reconocer_el_sesgo_narrativo', 'reconocer_sesgo_de_apofenia', 'stage_gate_system', 'tratar_las_historias_como_herramientas', 'waterfall_vs_agile_development']
+      siguientes: ['test_card', 'learning_card', 'producto_minimo_viable', 'cycle_time', 'modelo_tradicional_introduccion_producto']
+      entregable: Un ciclo completo documentado de Build-Measure-Learn con hipótesis, artefacto de prueba, métricas y aprendizajes registrados
+
+  --- ciclo_construir_medir_aprender
+      titulo    : Ciclo Construir, Medir, Aprender
+      fuente    : The Lean Startup - Eric Ries
+      pasos 4 | condiciones 1 | previos 5 | siguientes 3 | cableado 8
+      paso 1: Construye la versión más simple posible de tu producto o de una parte de él para probar una idea
+      paso 2: Mide cómo se comportan los clientes de verdad frente a lo que construiste
+      paso 3: Aprende de lo que viste para decidir tu siguiente paso
+      paso 4: Repite el ciclo cada vez más rápido
+      cond 1: Si ya tienes una idea que quieres poner a prueba y necesitas un proceso para validarla paso a paso
+      previos   : ['aprendizaje_validado', 'emprendimiento_como_disciplina_de_gestion', 'lienzo_modelo_negocio', 'principios_lean_startup', 'trabajo_en_lotes_pequenos']
+      siguientes: ['pivotar_o_perseverar', 'producto_minimo_viable', 'ciclo_crear_medir_aprender']
+      entregable: Un ciclo completo de construir, medir y aprender documentado con resultados y la decisión que tomaste
+
+  --- ciclo_crear_medir_aprender
+      titulo    : Ciclo de Retroalimentación Crear-Medir-Aprender (Build-Measure-Learn)
+      fuente    : The Lean Startup - Eric Ries
+      pasos 5 | condiciones 2 | previos 3 | siguientes 2 | cableado 5
+      paso 1: Definir qué se necesita aprender antes de construir nada (partir del final del ciclo)
+      paso 2: Determinar qué métricas de innovación accounting demostrarán ese aprendizaje
+      paso 3: Construir el producto mínimo necesario para generar esa medición
+      paso 4: Lanzar, medir resultados reales de clientes y extraer aprendizaje validado
+      paso 5: Repetir el ciclo ajustando la estrategia según lo aprendido
+      cond 1: Cuando el equipo se enfoca demasiado en una sola actividad (solo construir, solo medir o solo aprender) sin ver el ciclo completo
+      cond 2: Cuando se busca reducir el tiempo de iteración de un producto o servicio
+      previos   : ['producto_minimo_viable', 'hipotesis_valor_crecimiento', 'ciclo_construir_medir_aprender']
+      siguientes: ['contabilidad_innovacion', 'pivotar_o_perseverar']
+      entregable: Un ciclo completo documentado de Build-Measure-Learn con hipótesis, métricas definidas y aprendizaje validado registrado
+
+  --- desarrollo_en_espiral
+      titulo    : Desarrollo en Espiral o Iterativo (Build-Test-Feedback-Revise)
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 6 | condiciones 4 | previos 15 | siguientes 3 | cableado 18
+      paso 1: Construir una versión mínima, rápida y económica del producto (prototipo, MVP, protocept), no la versión final
+      paso 2: Probar la versión con clientes reales para medir interés, preferencia e intención de compra
+      paso 3: Recoger feedback directo sobre qué debe cambiarse o corregirse
+      paso 4: Revisar el diseño, propuesta de valor y beneficios en base al feedback
+      paso 5: Repetir el ciclo varias veces (de tres a cuatro en promedio, hasta quince en procesos muy iterativos), manteniendo contacto continuo con el cliente hasta llegar a pruebas de campo formales
+      paso 6: Documentar cada iteración, desde la investigación inicial de la voz del cliente hasta el testeo completo del producto
+      cond 1: Si los clientes no tienen claro lo que quieren o necesitan
+      cond 2: Si el proyecto es de alto riesgo, innovación radical o el mercado es dinámico e incierto
+      cond 3: Si los requerimientos del producto pueden cambiar durante el desarrollo
+      cond 4: Si sigues un proceso lineal rígido y descubres tarde que el producto no cumple las expectativas
+      previos   : ['sistema_triple_a_stage_gate', 'backlog_evolutivo_y_cronograma_flexible', 'co_creation_session', 'rapid_prototyping', 'role_playing', 'roles_product_owner_scrum_master', 'storyboard', 'voc_temprano_en_agile_stage_gate', 'definicion_producto_proyecto', 'voz_del_cliente_voc', 'copy_testing', 'desarrollo_de_clientes_customer_development', 'producto_unico_superior', 'definicion_sprint_terminado_fisico', 'ejecucion_de_touchpoints']
+      siguientes: ['modelo_contingencia_riesgo', 'plan_de_lanzamiento_al_mercado', 'five_data_traps']
+      entregable: Una serie documentada de prototipos iterativos, con registros de feedback de cliente en cada ciclo, que culmina en una definición de producto validada y probada en campo.
+
+  --- design_test_repeat
+      titulo    : Diseñar, Probar, Repetir (Ciclo Iterativo)
+      fuente    : Value Proposition Design
+      pasos 4 | condiciones 1 | previos 3 | siguientes 2 | cableado 5
+      paso 1: Prototipar rápidamente una idea de propuesta de valor.
+      paso 2: Testear el prototipo con clientes reales.
+      paso 3: Aprender de los resultados y rediseñar.
+      paso 4: Repetir el ciclo continuamente.
+      cond 1: Cuando se tiene un prototipo inicial de propuesta de valor listo para testear.
+      previos   : ['value_proposition_canvas', 'fit_problema_solucion', 'prototyping_possibilities']
+      siguientes: ['prototyping_possibilities', 'five_whys_inversion_proporcional']
+      entregable: Un ciclo documentado de iteraciones de prototipo-prueba-aprendizaje.
+
+  --- design_thinking_proceso
+      titulo    : Proceso de Design Thinking (Entender-Observar-Idear-Prototipar-Testear)
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 6 | condiciones 2 | previos 6 | siguientes 5 | cableado 11
+      paso 1: Entender: investigar el status quo, entorno y objetivos de éxito
+      paso 2: Observar: contactar usuarios en su ambiente real mediante técnicas etnográficas y empatía directa
+      paso 3: Revisar insights y definir un punto de vista claro sobre el usuario típico
+      paso 4: Idear: generar tantas ideas como sea posible usando brainstorming
+      paso 5: Prototipar: crear representaciones tangibles simples y rápidas (papel, cartón, arcilla)
+      paso 6: Testear: validar el prototipo con usuarios reales y repetir el ciclo prototipo-test iterativamente
+      cond 1: Cuando existen dificultades para pasar de la investigación de necesidades a un concepto robusto y probado
+      cond 2: Cuando se requiere integrar de forma sistemática investigación, ideación y prototipado
+      previos   : ['etnografia_investigacion_usuario', 'equipos_visita_cliente', 'cliente_disena_producto', 'lead_user_analysis', 'netnografia_social_media', 'tecnologias_disruptivas_oportunidad']
+      siguientes: ['prototipado_rapido', 'stage_gate_td_tecnologia', 'asignacion_agil_de_recursos', 'diseno_consecuencias_no_intencionadas', 'diseno_imperfeccion_intencional']
+      entregable: Un concepto de producto validado y parcialmente probado ('protocepto'), listo para pasar a la etapa formal de desarrollo (Stage-Gate).
+
+  --- startup_como_experimento_cientifico
+      titulo    : La Startup como Experimento Científico
+      fuente    : The Lean Startup - Eric Ries
+      pasos 4 | condiciones 2 | previos 3 | siguientes 1 | cableado 4
+      paso 1: Formular una hipótesis clara y falsable antes de construir cualquier producto o función
+      paso 2: Diseñar el experimento de forma que pueda fallar (si no puede fallar, no se puede aprender)
+      paso 3: Ejecutar el experimento a pequeña escala antes de comprometer recursos grandes
+      paso 4: Analizar los resultados empíricos y contrastarlos contra la hipótesis original
+      cond 1: Cuando el equipo pregunta '¿se puede construir esto?' en lugar de '¿deberíamos construirlo?'
+      cond 2: Cuando se sigue un enfoque de 'lancemos y veamos qué pasa' sin hipótesis previas
+      previos   : ['definicion_tipos_nuevo_producto', 'business_model_canvas_como_scorecard', 'business_model_canvas_scorecard']
+      siguientes: ['hipotesis_valor_crecimiento']
+      entregable: Documento de hipótesis formal con predicciones medibles y diseño del experimento a ejecutar
+
+  --- testing_process_completo
+      titulo    : Proceso de Testing Integral (Testing Process)
+      fuente    : Value Proposition Design
+      pasos 5 | condiciones 1 | previos 3 | siguientes 6 | cableado 9
+      paso 1: Da forma a tus ideas usando el Value Proposition Canvas y Business Model Canvas.
+      paso 2: Extrae las hipótesis más críticas que deben ser verdaderas para que la idea funcione.
+      paso 3: Diseña experimentos (tarjeta de test) para cada hipótesis prioritaria.
+      paso 4: Ejecuta el ciclo de aprendizaje y captura insights con la tarjeta de aprendizaje.
+      paso 5: Mide el progreso usando el Progress Board y el Investment Readiness Thermometer de Steve Blank.
+      cond 1: Cuando se necesita una visión sistemática de cómo avanzar de idea a negocio validado
+      previos   : ['presales', 'mock_sales', 'fit_value_proposition']
+      siguientes: ['fit_problema_solucion', 'verificar_product_market_fit', 'data_integrity_forecasting', 'expected_commercial_value_ecv', 'scorecard_de_seleccion_de_proyectos', 'technology_platform_evaluation']
+      entregable: Un Progress Board actualizado con hipótesis testeadas, validadas/invalidadas y próximos pasos definidos.
+
+##############################################################################
+# ACTO 7 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 6 MIEMBROS: 7 pares internos con veredicto escrito, de 15 combinaciones posibles
+
+  [PAR] puesto 2548, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): six_sigma_dmaic
+     nodo_b (EL SEGUNDO de la razon): six_sigma_dmaic_2
+     RAZON ENTERA, sin recortar:
+       REPITE. six_sigma_dmaic_2 contra six_sigma_dmaic, MISMA FUENTE, Juran, sin arista, sim_tit 82,4, e ids que se diferencian en un sufijo. Sus cinco pasos son las cinco letras de DMAIC y estan enteros en el otro. Lo que le queda propio son DOS LINEAS, las dos denominaciones. six_sigma_dmaic trae ademas TRES COSAS QUE EL OTRO NO TIENE Y QUE SON LAS QUE UN DUENO PUEDE EJECUTAR: SELECCIONAR EL PROBLEMA CONCRETO Y DARSE UN PLAZO PARA ARRANCAR; DEFINIR EL PROBLEMA EN UNA FRASE QUE PUEDAS EXPLICAR A CUALQUIERA EN DIEZ SEGUNDOS, que es una prueba de aceptacion del enunciado y no una recomendacion; y MEDIR LA MAGNITUD REAL DE LOS SINTOMAS CON DATOS Y NO CON IMPRESIONES. Por la vara, REPITE. Sobrevive six_sigma_dmaic. PERDIDAS DE NOMBRE, DOS Y HAY QUE SEPARARLAS: EL CHARTER del proyecto, que el superviviente no nombra y que NO he verificado contra el grafo entero, asi que va como CANDIDATA y no como perdida declarada, por la disciplina del dictado; y VOC, el acronimo de voz del cliente. La voz del cliente SI vive en el catalogo, comprobado: design_for_six_sigma_dfss la nombra en su paso 3. Lo que no vive es EL ACRONIMO VOC. TERCERA VEZ EN ESTA SESION CON LA MISMA FORMA, tras MBO y box plot: el nombre largo sobrevive y la sigla o el termino en el otro idioma se pierde. TRAMPA DEL IDENTIFICADOR, y esta vez sale A.
+
+  [PAR] puesto 2618, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): breakthrough_desempeno_actual
+     nodo_b (EL SEGUNDO de la razon): six_sigma_dmaic
+     RAZON ENTERA, sin recortar:
+       REPITE. breakthrough_desempeno_actual contra six_sigma_dmaic, MISMA FUENTE, Juran, sin arista, sim_tit 22,2, el mas bajo del tramo y aun asi el mismo viaje. Los cinco pasos son DMAIC en los dos: definir el problema con apoyo, medir el desempeno actual, analizar la causa raiz de los problemas cronicos, implementar la mejora (Improve, que breakthrough_desempeno_actual nombra en ingles) y establecer controles para sostenerla (Control, tambien nombrado). breakthrough es la secuencia de ruptura de Juran, madre historica del DMAIC, aplicada al mismo objeto, el desempeno actual. Por la vara, REPITE, no hay paso propio en ninguno. Sobrevive six_sigma_dmaic, la version canonica y mas explicita del ciclo. DISCUTIBLE MARCADO: como el 2602 separo DFSS de DMAIC por proposito distinto, quien lea breakthrough como metodo de marca aparte del Six Sigma dira D; mi defensa es que aqui el proposito y los cinco pasos coinciden, a diferencia del 2602 (disenar contra mejorar).
+
+  [PAR] puesto 2759, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): breakthrough_desempeno_actual
+     nodo_b (EL SEGUNDO de la razon): six_sigma_dmaic_2
+     RAZON ENTERA, sin recortar:
+       breakthrough_desempeno_actual (Ruptura en el Desempeno Actual: definir el problema, medir el desempeno actual, analizar las causas raiz de los problemas cronicos, disenar e implementar mejoras Improve, establecer controles Control) contra six_sigma_dmaic_2 (Metodologia DMAIC: Define el problema con charter, Measure el desempeno y la VOC, Analyze las causas raiz, Improve las soluciones, Control para sostener). MISMA FUENTE, Juran, sin arista, sim_tit 24,7. Los cinco pasos del breakthrough SON el DMAIC (definir, medir, analizar causas, mejorar, controlar), contencion pura. Barrido de familia: 2618 ya dictamino breakthrough_desempeno_actual =A= six_sigma_dmaic (verificado por el auditor en vuelta 2), y 2548 six_sigma_dmaic =A= six_sigma_dmaic_2, asi que por transitividad breakthrough fusiona con _2. A por contencion. DISCUTIBLE MARCADO: sim_tit 24,7 baja; quien lea breakthrough como metodo de marca aparte dira D, el mismo filo del 2618 que el auditor confirmo A.
+
+  [PAR] puesto 2781, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): secuencia_universal_breakthrough
+     nodo_b (EL SEGUNDO de la razon): secuencia_universal_para_el_breakthrough
+     RAZON ENTERA, sin recortar:
+       secuencia_universal_breakthrough (Secuencia Universal para el Breakthrough: establecer la creencia de que el cambio es deseable, estudio de factibilidad con Pareto para separar los pocos vitales, crear un brazo directivo y uno diagnostico, recolectar y analizar hechos para el breakthrough en el conocimiento, evaluar el impacto cultural y gestionar la resistencia, implementar controles para sostener) contra secuencia_universal_para_el_breakthrough (Secuencia Universal de Juran, Mejora Radical: nominar problemas prioritarios a nivel gerencial, establecer un proyecto formal con equipo, diagnosticar la causa raiz por el viaje diagnostico, disenar y probar remedios por el viaje remedial, establecer controles nuevos para mantener las ganancias, replicar los resultados y nominar nuevos proyectos). MISMA FUENTE, Juran, sin arista, sim_tit 75,5. Es la misma Secuencia Universal de Juran para el breakthrough: creer o nominar, factibilidad o proyecto, viaje diagnostico, viaje remedial, controles, replicar. Los pasos calzan. A por contencion, superviviente POR ELEGIR. DISCUTIBLE MARCADO leve: el primero usa brazo directivo y diagnostico, el segundo viaje diagnostico y remedial; quien pese ese encuadre como cara distinta dira D.
+
+  [PAR] puesto 2887, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): secuencia_universal_para_el_breakthrough
+     nodo_b (EL SEGUNDO de la razon): six_sigma_dmaic
+     RAZON ENTERA, sin recortar:
+       secuencia_universal_para_el_breakthrough (Secuencia Universal de Juran para el Breakthrough, Juran: nominar los problemas prioritarios, establecer un proyecto formal con equipo, diagnosticar la causa raiz por el viaje diagnostico, disenar y probar remedios por el viaje remedial, poner controles nuevos, replicar y nominar nuevos) contra six_sigma_dmaic (Modelo Six Sigma DMAIC: seleccionar el problema con plazo, definirlo claro, medir los sintomas con datos, analizar hasta la causa raiz, implementar el remedio dirigido a esa causa, controlar los resultados). MISMA FUENTE Juran, con arista, sim_tit 25,0 solo por los titulos. A POR LA IDENTIDAD BREAKTHROUGH IGUAL DMAIC, ya doctrina: breakthrough_desempeno_actual =A= six_sigma_dmaic (2618) y =A= six_sigma_dmaic_2 (2759), y six_sigma_dmaic =A= six_sigma_dmaic_2 (2548). La Secuencia Universal es el ancestro del DMAIC y sus pasos calzan uno a uno: nominar y proyecto igual Definir, viaje diagnostico igual Medir y Analizar, viaje remedial igual Mejorar, controles igual Controlar. secuencia_universal_para_el =A= secuencia_universal_breakthrough (2781, su gemelo). A por transitividad de esa identidad, no mueve el contador (ambos en cumulos ya contados). DISCUTIBLE MARCADO fuerte: sim_tit 25,0 y el vocabulario difiere (los dos viajes y nominar contra las cinco letras); quien lea esa estructura como distinta dira D.
+
+  [PAR] puesto 2935, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): breakthrough_desempeno_actual
+     nodo_b (EL SEGUNDO de la razon): secuencia_universal_para_el_breakthrough
+     RAZON ENTERA, sin recortar:
+       breakthrough_desempeno_actual (Juran: definir el problema, medir el desempeno actual, analizar causas raiz de problemas cronicos, disenar e implementar mejoras, establecer controles) contra secuencia_universal_para_el_breakthrough (Juran: nominar problemas prioritarios, establecer un proyecto formal, diagnosticar la causa raiz por el viaje diagnostico, disenar y probar remedios por el viaje remedial, establecer controles nuevos, replicar y nominar nuevos). MISMA FUENTE Juran, sim_tit 46,3, sin arista. A POR IDENTIDAD YA DOCTRINA: breakthrough_desempeno_actual =A= six_sigma_dmaic (2618) y =A= six_sigma_dmaic_2 (2759); secuencia_universal_para_el_breakthrough =A= secuencia_universal_breakthrough (2781, gemelo) y =A= six_sigma_dmaic (2887, identidad breakthrough=DMAIC). Los dos nodos de este par son, cada uno por su propio eslabon de identidad (no de contencion), el MISMO six_sigma_dmaic; la transitividad compone entre identidades (regla del 2805/2916). Leido directo confirma: definir/medir/analizar/mejorar/controlar (breakthrough) calza fase a fase con nominar-proyecto/viaje diagnostico/viaje remedial/controles/replicar (secuencia universal), la misma correspondencia ya escrita en el 2887 (nominar=Definir, viaje diagnostico=Medir y Analizar, viaje remedial=Mejorar, controles=Controlar). A por transitividad de identidad, no mueve el contador (ambos en cumulos ya contados). DISCUTIBLE MARCADO: sim_tit 46,3 y el vocabulario difiere (viajes y nominar contra definir/medir/analizar/mejorar/controlar); quien lea esa diferencia de vocabulario como estructura distinta dira D. CITA CORREGIDA (bucle vuelta 6, TAREA 1.3a, sin cambio de clase): el peso de la identidad no se apoya en los cuatro eslabones citados arriba. El 2759 cierra con "contencion pura" y el 2781 con "A por contencion, superviviente POR ELEGIR": los dos son contencion, no identidad, y no prueban nada por transitividad (disciplina de la cita, TAREA 1.2). El peso lo cargan el 2618, que REPITE por identidad directa ("Los cinco pasos son DMAIC en los dos... Por la vara, REPITE, no hay paso propio en ninguno"), y el 2887, identidad declarada ("A POR LA IDENTIDAD BREAKTHROUGH IGUAL DMAIC... sus pasos calzan uno a uno: nominar y proyecto igual Definir, viaje diagnostico igual Medir y Analizar, viaje remedial igual Mejorar, controles igual Controlar"). Los dos nodos de este par llegan, cada uno por su propio eslabon de identidad, al mismo hub six_sigma_dmaic (2618 desde breakthrough_desempeno_actual, 2887 desde secuencia_universal_para_el_breakthrough); la transitividad compone entre esos dos, no entre los cuatro citados originalmente. Se retira la afirmacion de que los cuatro son identidad. Clase sin cambio: A. DISCUTIBLE MARCADO fuerte (TAREA 1.4): sim_tit 46,3; quien lea el vocabulario distinto (los dos viajes contra las cinco letras del DMAIC) como estructura distinta dira D.
+
+  [PAR] puesto 2962, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): seis_sigma_servicios
+     nodo_b (EL SEGUNDO de la razon): six_sigma_dmaic_2
+     RAZON ENTERA, sin recortar:
+       seis_sigma_servicios (Juran: definir el proyecto y el problema especifico en servicios, medir el estado actual con datos cuantitativos, analizar causas raiz de la variacion o defectos, mejorar implementando cambios basados en el analisis, controlar el proceso mejorado para sostener las ganancias) contra six_sigma_dmaic_2 (Juran: Define, definir claramente el problema y objetivos via charter; Measure, medir el desempeno actual y recopilar VOC; Analyze, analizar para determinar causas raiz; Improve, seleccionar e implementar soluciones; Control, establecer mecanismos para sostener las mejoras). MISMA FUENTE Juran, sim_tit 38,5, sin arista, cero veredictos previos en seis_sigma_servicios. A POR IDENTIDAD: es DMAIC aplicado literalmente a servicios, sin ningun paso adicional ni faltante; los cinco pasos calzan uno a uno (definir/definir, medir/medir, analizar/analizar, mejorar/mejorar, controlar/controlar), el mismo patron de identidad ya doctrina para DMAIC (2548 six_sigma_dmaic =A= six_sigma_dmaic_2, 2618, 2759, 2887, 2935). El unico cambio es el dominio de aplicacion (servicios, con el ejemplo del ciclo de emision de credito) en vez del generico o de manufactura. A por transitividad de identidad, superviviente dentro del cumulo del DMAIC ya absorbido y contado; no abre figura nueva. DISCUTIBLE MARCADO: seis_sigma_servicios trae el ejemplo especifico de servicios; quien lea el dominio de aplicacion como cara distinta del DMAIC generico dira D. CITA CORREGIDA (bucle vuelta 6, TAREA 1.3b, sin cambio de clase): el 2548, citado arriba en la lista de identidades ya doctrina para DMAIC, dice textualmente que a six_sigma_dmaic_2 "le queda propio son DOS LINEAS", firma de contencion (disciplina de la cita, TAREA 1.2), no identidad. Este par NO depende de esa cadena: el fundamento es el argumento directo ya escrito arriba, los cinco pasos calzan uno a uno (definir/definir, medir/medir, analizar/analizar, mejorar/mejorar, controlar/controlar) sin paso adicional ni faltante, confirmado por la ciega del auditor en vuelta 6 con esa misma lectura directa. La mencion al 2548, 2618, 2759, 2887, 2935 baja de cadena de prueba a antecedente del mismo patron, no fundamento. Clase sin cambio: A. DISCUTIBLE MARCADO fuerte (TAREA 1.4): quien lea el ejemplo de servicios (ciclo de emision de credito) como cara distinta del DMAIC generico dira D.
+
+  --- breakthrough_desempeno_actual
+      titulo    : Ruptura en el Desempeño Actual (Breakthrough in Current Performance)
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Define el problema con apoyo de quien te asesore
+      paso 2: Mide el desempeño actual del proceso
+      paso 3: Analiza las causas raíz de los problemas crónicos
+      paso 4: Diseña e implementa mejoras (Improve)
+      paso 5: Establece controles para sostener la mejora (Control)
+      cond 1: Cuando existen defectos, retrasos o costos crónicos que afectan la satisfacción del cliente
+      cond 2: Cuando se requiere un enfoque sistemático de mejora de procesos
+      previos   : ['equipos_ruptura_vet', 'equipos_blitz']
+      siguientes: ['breakthrough_cultural']
+      entregable: Proyecto DMAIC completo con causas raíz eliminadas y controles implementados
+
+  --- secuencia_universal_breakthrough
+      titulo    : Secuencia Universal para el Breakthrough
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 6 | condiciones 2 | previos 4 | siguientes 2 | cableado 6
+      paso 1: Establecer la creencia de que el cambio es deseable y factible
+      paso 2: Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales
+      paso 3: Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)
+      paso 4: Recolectar y analizar hechos para lograr un breakthrough en el conocimiento
+      paso 5: Evaluar el impacto cultural de los cambios propuestos y gestionar la resistencia
+      paso 6: Implementar controles para sostener el nuevo nivel de desempeño
+      cond 1: Cuando la organización necesita un cambio radical de desempeño, no solo mejora incremental
+      cond 2: Cuando existe resistencia cultural anticipada a los cambios propuestos
+      previos   : ['juran_quality_by_design', 'costo_de_mala_calidad_copq_2', 'diferencia_planeacion_mejora', 'costo_de_mala_calidad_copq']
+      siguientes: ['six_sigma_dmaic', 'viaje_diagnostico_remedial']
+      entregable: Un plan estructurado de breakthrough con roles definidos (steering/diagnostic arm) y un análisis de factibilidad basado en Pareto
+
+  --- secuencia_universal_para_el_breakthrough
+      titulo    : Secuencia Universal de Juran para el Breakthrough (Mejora Radical)
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 6 | condiciones 2 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Nominar e identificar problemas prioritarios a nivel de gerencia.
+      paso 2: Establecer un proyecto formal con equipo asignado.
+      paso 3: Diagnosticar la(s) causa(s) raíz mediante el viaje diagnóstico (síntomas, teorías, pruebas, causa raíz).
+      paso 4: Diseñar y probar remedios bajo condiciones operativas reales (viaje remedial).
+      paso 5: Establecer controles nuevos para mantener las ganancias logradas.
+      paso 6: Replicar los resultados exitosos y nominar nuevos proyectos de mejora.
+      cond 1: Cuando la organización busca una mejora significativa (no incremental) en el desempeño de un proceso
+      cond 2: Cuando existen altos costos de mala calidad recurrentes
+      previos   : ['desarrollo_de_controles_de_proceso']
+      siguientes: ['dmaic_six_sigma', 'consejo_ejecutivo_calidad', 'six_sigma_dmaic']
+      entregable: Proyecto de mejora (breakthrough) completado con causa raíz identificada, remedio implementado y controles establecidos para sostener el resultado.
+
+  --- seis_sigma_servicios
+      titulo    : Aplicación de Six Sigma en Industrias de Servicio
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 2 | previos 4 | siguientes 1 | cableado 5
+      paso 1: Definir el proyecto y el problema específico a resolver (ej. reducir ciclo de emisión de crédito)
+      paso 2: Medir el estado actual del proceso con datos cuantitativos
+      paso 3: Analizar causas raíz de la variación o defectos
+      paso 4: Mejorar el proceso implementando cambios basados en el análisis
+      paso 5: Controlar el proceso mejorado para sostener las ganancias en el tiempo
+      cond 1: Cuando existe un problema crónico de calidad cuantificable en un proceso de servicio
+      cond 2: Si la organización busca institucionalizar una cultura de mejora continua basada en datos
+      previos   : ['control_calidad_operaciones_servicio', 'organizacion_equipos_calidad_servicio', 'equipos_autodirigidos_servicio', 'auditorias_calidad_proceso']
+      siguientes: ['medicion_capacidad_servicio']
+      entregable: Proyecto Six Sigma documentado con las fases DMAIC completas y resultados medibles de mejora
+
+  --- six_sigma_dmaic
+      titulo    : Modelo Six Sigma DMAIC
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 6 | condiciones 3 | previos 9 | siguientes 5 | cableado 14
+      paso 1: Selecciona el problema concreto que vas a resolver y date un plazo para arrancar el proyecto.
+      paso 2: Define el problema con claridad, en una frase que puedas explicar a cualquiera en diez segundos.
+      paso 3: Mide la magnitud real de los síntomas con datos, no con impresiones.
+      paso 4: Analiza la información recolectada hasta encontrar la causa raíz, no solo el síntoma visible.
+      paso 5: Implementa un remedio dirigido específicamente a esa causa raíz.
+      paso 6: Controla los resultados periódicamente para asegurar que la mejora se mantenga.
+      cond 1: Cuando enfrentas un problema crónico de calidad que ya intentaste resolver sin éxito duradero.
+      cond 2: Cuando necesitas un método estructurado y probado para mejorar un proceso con métricas cuantificables.
+      cond 3: Cuando quieres asegurar que una mejora se mantenga en el tiempo y no se revierta a los pocos meses.
+      previos   : ['secuencia_universal_breakthrough', 'viaje_diagnostico_remedial', 'analisis_pareto_priorizacion', 'error_proofing_servicio', 'secuencia_universal_para_el_breakthrough', 'dmaic_fase_improve', 'impacto_calidad_en_costos', 'analisis_pareto_de_proveedores', 'costo_de_mala_calidad_copq']
+      siguientes: ['sostener_las_ganancias', 'dmadv_design_for_six_sigma', 'roles_six_sigma', 'consejo_ejecutivo_calidad', 'design_for_six_sigma_dfss']
+      entregable: Proyecto DMAIC documentado con las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.
+
+  --- six_sigma_dmaic_2
+      titulo    : Six Sigma - Metodología DMAIC
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 3 | previos 3 | siguientes 3 | cableado 6
+      paso 1: Define: Definir claramente el problema y los objetivos del proyecto mediante un charter
+      paso 2: Measure: Medir el desempeño actual del proceso y recopilar la voz del cliente (VOC)
+      paso 3: Analyze: Analizar los datos recolectados para determinar las causas raíz del problema
+      paso 4: Improve: Seleccionar e implementar las soluciones adecuadas para resolver el problema
+      paso 5: Control: Establecer mecanismos de control para sostener las mejoras logradas en el tiempo
+      cond 1: Cuando se necesita resolver un problema crónico de calidad con causas no evidentes
+      cond 2: Cuando se requiere alcanzar niveles de calidad cercanos a la perfección (ppm)
+      cond 3: Cuando la organización busca una mejora de tipo breakthrough en procesos críticos para el cliente
+      previos   : ['mistake_proofing_poka_yoke', 'descubrir_necesidades_del_cliente', 'error_proofing_servicio']
+      siguientes: ['dmadv_design_for_six_sigma', 'roles_six_sigma', 'design_for_six_sigma_dfss']
+      entregable: Un proyecto Six Sigma DMAIC completado con métricas de sigma level, causas raíz identificadas, soluciones implementadas y un plan de control documentado
+
+##############################################################################
+# ACTO 8 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 6 MIEMBROS: 9 pares internos con veredicto escrito, de 15 combinaciones posibles
+
+  [PAR] puesto 274, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): cierre_segun_complejidad_venta
+     nodo_b (EL SEGUNDO de la razon): riesgo_tecnicas_cierre_venta_compleja
+     RAZON ENTERA, sin recortar:
+       REPITE con riesgo_tecnicas_cierre_venta_compleja. Los dos mandan clasificar primero la venta segun valor, sofisticacion del cliente y relacion posventa, aplicar tecnicas de cierre solo en la venta pequena y transaccional, evitarlas en la grande y relacional, mover el esfuerzo a las etapas previas de investigacion y necesidad, y medir el efecto en la relacion. Es la misma tesis de Rackham con el mismo procedimiento.
+
+  [PAR] puesto 321, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): ineficacia_cierre_ventas_grandes
+     nodo_b (EL SEGUNDO de la razon): riesgo_tecnicas_cierre_venta_compleja
+     RAZON ENTERA, sin recortar:
+       REPITE con riesgo_tecnicas_cierre_venta_compleja. Los dos mandan evaluar primero si la venta es pequena y transaccional o grande y compleja, y eliminar la presion de cierre en la segunda. El primero anade auditar el uso de tecnicas observando llamadas reales y comparar tasas de exito entre quienes las usan mucho y poco. Con el puesto 274, la familia de la ineficacia del cierre en venta grande llega a TRES nodos del nucleo: cierre_segun_complejidad_venta, riesgo_tecnicas_cierre_venta_compleja e ineficacia_cierre_ventas_grandes, y ninguno esta en RACIMOS_MIEMBROS.jsonl.
+
+  [PAR] puesto 432, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): cierre_sofisticacion_comprador
+     nodo_b (EL SEGUNDO de la razon): riesgo_tecnicas_cierre_venta_compleja
+     RAZON ENTERA, sin recortar:
+       REPITE con riesgo_tecnicas_cierre_venta_compleja. Los dos mandan lo mismo: identificar el nivel de sofisticacion del comprador, evitar las tacticas de presion con compradores profesionales y de procurement, y sustituir el cierre por preguntas que exploren la necesidad real. El primero anade construir la relacion sobre confianza y transparencia. Con los puestos 274, 321 y 337, la familia de las tecnicas de cierre en venta grande llega a CINCO nodos del nucleo y sigue sin estar en RACIMOS_MIEMBROS.jsonl.
+
+  [PAR] puesto 601, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): cierre_segun_complejidad_venta
+     nodo_b (EL SEGUNDO de la razon): ineficacia_cierre_ventas_grandes
+     RAZON ENTERA, sin recortar:
+       FAMILIA DECLARADA: los dos son miembros del racimo EL CIERRE EN VENTA GRANDE, ocho miembros, declarado en la seccion 9 del informe, asi que no se pelea la clase. Se registra A porque el corto cabe entero en el largo: ineficacia_cierre_ventas_grandes manda evaluar si tu ciclo es venta pequena o venta grande, auditar el uso de tecnicas de cierre observando llamadas reales, comparar tasas de exito entre quienes usan muchas tecnicas y quienes usan pocas, y eliminar la presion de cierre en las ventas de alto valor. cierre_segun_complejidad_venta dice eso mismo con la clasificacion delante y anade lo suyo: que en la venta pequena y transaccional las tecnicas de cierre SI se aplican sin restriccion, que hay que revisar el proceso de venta completo y no solo el cierre para encontrar el verdadero factor de exito, y que hay que capacitar al equipo diferenciando el enfoque segun el tipo de venta que maneja cada quien. Lo que se perderia es la mitad permisiva, o sea que en la venta pequena el cierre agresivo funciona. Sin arista entre ellos. Este es el DECIMO par leido del racimo y el quinto A.
+
+  [PAR] puesto 1004, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): cierre_segun_tamano_decision
+     nodo_b (EL SEGUNDO de la razon): riesgo_tecnicas_cierre_venta_compleja
+     RAZON ENTERA, sin recortar:
+       LA MISMA REGLA DE CIERRE SEGUN EL TAMANO, del mismo libro y sin arista entre ellos, y es la sexta lectura intra-Rackham del racimo del cierre. Lo comun es el instrumento entero: clasificar la venta propia por valor, riesgo e impacto o por sofisticacion del comprador; aplicar tecnicas de cierre directo SOLO en transacciones de bajo valor o decision rapida; y en las de alto valor sustituir el cierre por indagacion y construccion de valor, poniendo el esfuerzo en las etapas previas. Lo propio de cierre_segun_tamano_decision es medir el tiempo de transaccion y la tasa de exito antes y despues de cambiar el enfoque; lo propio de riesgo_tecnicas_cierre_venta_compleja es medir la satisfaccion posventa para detectar dano en la relacion. Cada uno propone una medicion distinta del mismo cambio, y las dos hay que salvarlas. Nota: riesgo_tecnicas_cierre_venta_compleja lleva ya DOS gemelos declarados, con el puesto 432.
+
+  [PAR] puesto 1202, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): diferencias_venta_pequena_venta_grande
+     nodo_b (EL SEGUNDO de la razon): riesgo_tecnicas_cierre_venta_compleja
+     RAZON ENTERA, sin recortar:
+       LA CLASIFICACION Y LA REGLA DEL TAMANO, otra vez, y con esto el racimo del cierre suma miembro. Lo comun es la tesis entera de los dos nodos y sus dos primeros pasos: clasificar cada oportunidad de venta por su tamano, ciclo, monto y visibilidad en uno, valor y sofisticacion del comprador en el otro; y la regla que sale de esa clasificacion, si la venta es grande no presionar ni cerrar de forma agresiva. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De diferencias_venta_pequena_venta_grande se perderian dos y la primera es su aportacion real: DISENAR LA ESTRATEGIA DE SEGUIMIENTO ENTRE LLAMADAS, porque las decisiones importantes ocurren cuando el vendedor no esta delante, que es lo unico del racimo que habla del tiempo entre reuniones; y anticipar que el cliente evalua tambien la relacion con el vendedor. De riesgo_tecnicas_cierre_venta_compleja se perderian enfocar el esfuerzo en las etapas previas de investigacion y desarrollo de necesidades, y MEDIR LA SATISFACCION POSVENTA para detectar si las tecnicas de cierre estan danando la relacion. NOTA DE NOMINA, banco 9.20 y 9.10: riesgo_tecnicas_cierre_venta_compleja es el centro del racimo del cierre en venta grande y llevaba CUATRO A contra hermanos, los puestos 274, 321, 432 y 1004. El 1004 no estaba en la ficha de la seccion 9, que se escribio con ocho miembros; con el y con este, la nomina medida hoy es de DIEZ.
+
+  [PAR] puesto 1205, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): cierre_segun_complejidad_venta
+     nodo_b (EL SEGUNDO de la razon): diferencias_venta_pequena_venta_grande
+     RAZON ENTERA, sin recortar:
+       LA MISMA TESIS CON DOS COLAS DISTINTAS, y son dos miembros del racimo del cierre leidos entre si. Lo comun es lo que da titulo a los dos: clasificar la venta por su tamano y su sofisticacion, y aplicar la regla que sale de ahi, presionar el cierre si es pequena y transaccional, y no presionarlo si es grande y relacional. Eso son los dos o tres primeros pasos de cada uno y es su tesis entera. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De cierre_segun_complejidad_venta se perderian tres: el PERMISO EXPLICITO de usar tecnicas tradicionales sin restriccion cuando la venta es pequena, que es el unico sitio del racimo donde el cierre duro queda autorizado en vez de solo desaconsejado; revisar el proceso de venta completo y no solo el cierre para encontrar el verdadero factor decisivo; y capacitar al equipo diferenciando el enfoque segun el tipo de venta que maneja cada quien. De diferencias_venta_pequena_venta_grande se perderian las dos ya nombradas en el puesto 1202, la estrategia de seguimiento entre llamadas y la relacion como criterio de decision del cliente. Con el 1202, este nodo lleva DOS A y queda dentro de la nomina del racimo.
+
+  [PAR] puesto 1564, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): cierre_segun_tamano_decision
+     nodo_b (EL SEGUNDO de la razon): ineficacia_cierre_ventas_grandes
+     RAZON ENTERA, sin recortar:
+       LA MISMA REGLA DEL CIERRE CON DOS INSTRUMENTOS DE PRUEBA, del mismo libro y con arista, y es par INTERNO del racimo del cierre. TRES de los cuatro pasos se corresponden: clasificar la venta por tamano de decision es evaluar si el ciclo es pequeno y transaccional o grande y relacional; no presionar en las de alto valor y sustituir el cierre por indagacion es eliminar el uso de tecnicas de presion en ventas de alto valor o ciclo largo; y medir la tasa de exito antes y despues del cambio es comparar las tasas entre vendedores que usan muchas tecnicas y los que usan pocas. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De cierre_segun_tamano_decision se perderian dos: los TRES CRITERIOS de clasificacion del portafolio, precio, riesgo e IMPACTO ORGANIZACIONAL, que es el unico de los tres que no es una cifra; y MEDIR EL TIEMPO DE TRANSACCION junto a la tasa de exito, porque el cambio de enfoque alarga la venta y sin ese dato el balance queda incompleto. De ineficacia_cierre_ventas_grandes se perderia UNA y es la mas dura: AUDITAR EL USO DE TECNICAS DE CIERRE MEDIANTE OBSERVACION DE LLAMADAS REALES, que es el unico paso del racimo que va a mirar lo que el vendedor hace de verdad en vez de preguntarselo. NOTA DE NOMINA: los dos ya estaban en el racimo del cierre, de SEIS miembros, asi que el racimo NO crece. Lo que cambia es la densidad: sus pares leidos suben y su cobertura queda en 7 de 15.
+
+  [PAR] puesto 1585, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): cierre_segun_complejidad_venta
+     nodo_b (EL SEGUNDO de la razon): cierre_segun_tamano_decision
+     RAZON ENTERA, sin recortar:
+       LA MISMA REGLA DEL CIERRE CLASIFICADA DOS VECES, del mismo libro y sin arista entre ellos, y es el segundo par interno del racimo del cierre en veinte puestos. TRES pasos se corresponden y son el nucleo de los dos: clasificar la venta propia, en uno por valor, sofisticacion del cliente y relacion posventa y en el otro por precio, riesgo e impacto organizacional; aplicar tecnicas de cierre tradicionales sin restriccion si la venta es pequena y transaccional; y minimizar o sustituir el cierre por indagacion y construccion de valor si la venta es grande. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De cierre_segun_complejidad_venta se perderian dos: REVISAR EL PROCESO DE VENTA COMPLETO Y NO SOLO EL CIERRE para identificar el verdadero factor decisivo, que es la unica linea del racimo que manda buscar la causa fuera del cierre; y CAPACITAR AL EQUIPO DIFERENCIANDO EL ENFOQUE segun el tipo de venta que cada uno maneja. De cierre_segun_tamano_decision se perderian las dos ya anotadas en el puesto 1564, el IMPACTO ORGANIZACIONAL como criterio de clasificacion y MEDIR EL TIEMPO DE TRANSACCION junto a la tasa de exito. NOTA DE NOMINA: los dos ya estaban en el racimo del cierre, de SEIS miembros, asi que el racimo NO crece. Su cobertura sube a 8 de 15 y sigue sin un solo sano entre sus pares leidos.
+
+  --- cierre_segun_complejidad_venta
+      titulo    : Efectividad del Cierre según la Complejidad de la Venta
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 5 | condiciones 3 | previos 4 | siguientes 5 | cableado 9
+      paso 1: Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa
+      paso 2: Si es venta pequeña y transaccional: aplicar técnicas de cierre tradicionales sin restricción
+      paso 3: Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN)
+      paso 4: Revisar el proceso de venta completo, no solo el cierre, para identificar el verdadero factor decisivo del éxito
+      paso 5: Capacitar al equipo de ventas diferenciando el enfoque según el tipo de venta que manejan
+      cond 1: Cuando la empresa vende productos o servicios de alto valor con ciclos de venta largos
+      cond 2: Cuando existe una relación continua con el cliente después de la venta
+      cond 3: Cuando los resultados de cierre agresivo no mejoran las ventas complejas
+      previos   : ['escala_actitud_cierre', 'modelo_spin_preguntas', 'preguntas_beneficio', 'preguntas_need_payoff']
+      siguientes: ['compromiso_linea_tiempo_cliente', 'fase_affirm_reducir_remordimiento', 'kit_shock_and_awe_bienvenida', 'fase_affirm_buyers_remorse', 'shock_and_awe_kit_bienvenida']
+      entregable: Una estrategia de ventas diferenciada según el tipo de venta (transaccional vs. consultiva/compleja)
+
+  --- cierre_segun_tamano_decision
+      titulo    : Relación entre Presión de Cierre y Tamaño de la Decisión
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 2 | previos 4 | siguientes 2 | cableado 6
+      paso 1: Clasificar tu portafolio de productos/servicios por tamaño de decisión (precio, riesgo, impacto organizacional)
+      paso 2: Aplicar técnicas de cierre directo solo en transacciones de bajo valor o decisión rápida
+      paso 3: Para ventas de alto valor, sustituir el cierre por técnicas de indagación y construcción de valor (ej. SPIN)
+      paso 4: Medir tiempo de transacción y tasa de éxito antes/después de cambiar el enfoque
+      cond 1: Si el usuario tiene un portafolio mixto de productos de distinto valor/complejidad
+      cond 2: Si se busca optimizar la estrategia comercial según el ticket promedio
+      previos   : ['ineficacia_cierre_ventas_grandes', 'comunicacion_honesta_en_crisis_al_equipo', 'nobody_cares_just_run_company', 'reuniones_diarias_eliminar_bloqueos']
+      siguientes: ['modelo_spin_preguntas', 'cierre_sofisticacion_comprador']
+      entregable: Matriz de segmentación de productos por tamaño de decisión con estrategia de venta diferenciada
+
+  --- cierre_sofisticacion_comprador
+      titulo    : Rechazo de Compradores Sofisticados a las Técnicas de Cierre
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Identificar el nivel de sofisticación del comprador (comprador profesional vs. consumidor ocasional)
+      paso 2: Evitar tácticas de presión con compradores corporativos, procurement o ejecutivos experimentados
+      paso 3: Reemplazar el cierre por preguntas que exploren necesidades reales (enfoque consultivo)
+      paso 4: Construir la relación en base a confianza y transparencia en lugar de tácticas de persuasión
+      cond 1: Si el cliente objetivo es un comprador profesional o departamento de compras
+      cond 2: Si las ventas son B2B con procesos de decisión formales
+      previos   : ['cierre_segun_tamano_decision']
+      siguientes: ['modelo_spin_preguntas', 'cierre_satisfaccion_postventa']
+      entregable: Perfil de sofisticación del comprador tipo y ajuste del guion de venta según ese perfil
+
+  --- diferencias_venta_pequena_venta_grande
+      titulo    : Diferencias psicológicas entre venta pequeña y venta grande
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 1 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Clasificar cada oportunidad de venta según su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión para el cliente
+      paso 2: Si es venta grande, evitar presión y cierre agresivo entre llamadas, ya que reduce la probabilidad de éxito final
+      paso 3: Diseñar la estrategia de seguimiento entre llamadas, ya que las decisiones importantes ocurren cuando el vendedor no está presente
+      paso 4: Anticipar que el cliente evaluará también la relación con el vendedor, no solo el producto, en decisiones grandes
+      cond 1: Cuando el equipo comercial aplica la misma técnica a todas las ventas sin distinguir tamaño o complejidad
+      previos   : ['metodologia_spin_selling']
+      siguientes: ['construccion_de_valor_percibido', 'relacion_continua_con_cliente', 'ineficacia_cierre_ventas_grandes']
+      entregable: Matriz de clasificación de oportunidades de venta (pequeña/grande) con estrategia diferenciada para cada tipo
+
+  --- ineficacia_cierre_ventas_grandes
+      titulo    : Ineficacia de las Técnicas de Cierre en Ventas Grandes
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 2 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Evaluar si tu ciclo de venta es una venta pequeña (transaccional) o una venta grande/compleja (relacional)
+      paso 2: Auditar el uso de técnicas de cierre en tu equipo comercial mediante observación de llamadas reales
+      paso 3: Comparar tasas de éxito entre vendedores que usan muchas técnicas de cierre vs. pocas
+      paso 4: Eliminar el uso de técnicas de presión de cierre en ventas de alto valor o ciclo largo
+      cond 1: Si el usuario vende productos/servicios de alto valor o con ciclos de venta largos
+      cond 2: Si el equipo comercial usa técnicas de cierre tradicionales sin resultados
+      previos   : ['diferencias_venta_pequena_venta_grande']
+      siguientes: ['metodologia_spin_selling', 'cierre_segun_tamano_decision', 'escala_actitud_cierre']
+      entregable: Diagnóstico del estilo de cierre actual del equipo de ventas y su correlación con tasas de éxito
+
+  --- riesgo_tecnicas_cierre_venta_compleja
+      titulo    : Riesgo de las Técnicas de Cierre en Ventas Complejas
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Evaluar si tu venta es de bajo valor/simple o de alto valor/compleja antes de decidir tu estrategia de cierre.
+      paso 2: Si vendes a compradores profesionales o buscas relaciones de largo plazo, evita presionar con técnicas de cierre agresivas.
+      paso 3: Enfoca el esfuerzo en las etapas previas de investigación y desarrollo de necesidades, no en frases de cierre.
+      paso 4: Mide la satisfacción post-venta para detectar si tus técnicas de cierre están dañando la relación con el cliente.
+      cond 1: Cuando el usuario vende productos o servicios de alto valor con relación continua post-venta.
+      cond 2: Cuando el equipo comercial usa scripts de cierre agresivo y presenta baja satisfacción de clientes.
+      previos   : ['modelo_spin_preguntas', 'gratificacion_inmediata_producto']
+      siguientes: ['marco_avances_continuaciones', 'objetivos_de_llamada_orientados_a_avance']
+      entregable: Diagnóstico del tipo de venta (simple vs compleja) y una política de cierre alineada a la relación deseada con el cliente.
+
+##############################################################################
+# ACTO 9 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 6 MIEMBROS: 7 pares internos con veredicto escrito, de 15 combinaciones posibles
+
+  [PAR] puesto 252, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): clasificacion_mercados_cadena_suministro
+     nodo_b (EL SEGUNDO de la razon): modelo_cuadrantes_mercado
+     RAZON ENTERA, sin recortar:
+       REPITE con modelo_cuadrantes_mercado. Los dos mandan diagnosticar en que cuadrante esta cada mercado que atiendes, ajustar la mezcla de capacidades y la estrategia de cadena segun ese cuadrante, y revisarlo periodicamente porque el mercado se mueve. Candidato a fusion.
+
+  [PAR] puesto 343, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): estrategia_cuatro_capacidades_mercado
+     nodo_b (EL SEGUNDO de la razon): modelo_cuadrantes_mercado
+     RAZON ENTERA, sin recortar:
+       REPITE con modelo_cuadrantes_mercado. Los dos mandan lo mismo: diagnosticar en que etapa o cuadrante esta el mercado, identificar que capacidad hay que reforzar en esa etapa entre servicio, eficiencia, flexibilidad y desarrollo de producto, y ajustar ahi la inversion en vez de repartirla en todas. El primero manda concentrarse en una o dos y avisa de no invertir en eficiencia interna en mercado de crecimiento; el segundo manda vigilar las senales de cambio de cuadrante. Misma tesis, mismo diagnostico previo.
+
+  [PAR] puesto 483, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): clasificacion_mercados_cadena_suministro
+     nodo_b (EL SEGUNDO de la razon): marco_analisis_mercado_cadena_suministro
+     RAZON ENTERA, sin recortar:
+       REPITE con marco_analisis_mercado_cadena_suministro. Los dos mandan clasificar cada mercado en el mismo modelo de cuadrantes, desarrollo, crecimiento, estable y maduro, decidir la estrategia a partir del cuadrante, y revisarlo cada tanto porque cambia; el segundo lo dice como definir en que tipo esta hoy y en cual estara en dos anos. Y los dos usan las mismas cuatro areas del modelo, atencion al cliente, eficiencia, flexibilidad y desarrollo de producto: el primero para ver que oportunidades ofrece el cuadrante y el segundo para compararse con la competencia en cada una. FAMILIA anotada, de CUATRO: con el puesto 343, el nucleo tiene estrategia_cuatro_capacidades_mercado, modelo_cuadrantes_mercado, clasificacion_mercados_cadena_suministro y marco_analisis_mercado_cadena_suministro sobre el mismo modelo de cuadrantes. Ninguno esta en RACIMOS_MIEMBROS.jsonl.
+
+  [PAR] puesto 518, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): cuatro_capacidades_mercado
+     nodo_b (EL SEGUNDO de la razon): estrategia_cuatro_capacidades_mercado
+     RAZON ENTERA, sin recortar:
+       REPITE con estrategia_cuatro_capacidades_mercado. Los dos mandan lo mismo: evaluar el desempeno propio en las cuatro capacidades frente a los competidores, identificar en cual ya se tiene ventaja, y concentrar la inversion ahi en vez de repartirla o de corregir debilidades menores. El primero anade definir metricas concretas por capacidad, fill rate o tiempo de ciclo; el segundo anade el diagnostico previo de la etapa del mercado y el aviso de no invertir en eficiencia interna si se compite en mercado de crecimiento. Con los puestos 343 y 483, esta familia llega a CINCO nodos del nucleo y ninguno esta en RACIMOS_MIEMBROS.jsonl.
+
+  [PAR] puesto 651, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): cuatro_capacidades_mercado
+     nodo_b (EL SEGUNDO de la razon): cuatro_categorias_desempeno_cadena_suministro
+     RAZON ENTERA, sin recortar:
+       Las mismas cuatro categorias contadas dos veces y del mismo libro, Essentials of Supply Chain Management, sin arista entre ellos. cuatro_categorias_desempeno_cadena_suministro fija metricas concretas para cada una de las cuatro, servicio, eficiencia, flexibilidad y la cuarta, determina cuales son criticas segun el cuadrante de mercado en que operas, recolecta datos de forma continua, fija objetivos alineados a esas prioridades, compara contra los estandares esperados para tu tipo de mercado y usa los datos para detectar problemas. cuatro_capacidades_mercado recorre las mismas cuatro con otro verbo: evaluar el desempeno actual en cada una frente a competidores, identificar en cual ya tienes ventaja, y definir metricas especificas por capacidad, con ejemplos como el fill rate. Lo propio de cuatro_capacidades_mercado es una doctrina que el otro no tiene y que vale: INVERTIR EN REFORZAR LA FORTALEZA en vez de corregir debilidades menores no criticas, contra la tentacion de igualar al competidor en eficiencia interna. Eso es lo que se perderia. Y lo propio del otro es el amarre al cuadrante de mercado, que lo conecta con modelo_cuadrantes_mercado del puesto 252.
+
+  [PAR] puesto 704, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): cuatro_capacidades_mercado
+     nodo_b (EL SEGUNDO de la razon): marco_analisis_mercado_cadena_suministro
+     RAZON ENTERA, sin recortar:
+       El marco largo se traga al corto, y es del mismo libro. marco_analisis_mercado_cadena_suministro manda identificar los mercados en los que trabajas y quien participa, definir en que tipo de mercado esta cada linea hoy y en dos anos, COMPARAR TU DESEMPENO CON LA COMPETENCIA EN CUATRO AREAS, atencion al cliente, eficiencia y las otras dos, decidir si en cada area necesitas liderar, igualar o superar, y fijar metas concretas de desempeno segun lo que el mercado te exige. cuatro_capacidades_mercado hace exactamente esos pasos 3, 4 y 5 y nada mas: evaluar el desempeno en las cuatro capacidades frente a competidores, identificar en cual ya tienes ventaja, invertir en reforzar esa fortaleza en vez de corregir debilidades menores, y definir metricas por capacidad con ejemplos como el fill rate. Lo unico propio del corto es la doctrina de invertir en la fortaleza, que es buena y no esta en el largo. Sin arista entre ellos. CANDIDATO A RACIMO, y van tres: con el puesto 651 este nodo ya repitio tambien con cuatro_categorias_desempeno_cadena_suministro. Tres nodos del mismo libro sobre las mismas cuatro areas de desempeno, y el tercero les anade el tipo de mercado y el horizonte de dos anos.
+
+  [PAR] puesto 963, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): clasificacion_mercados_cadena_suministro
+     nodo_b (EL SEGUNDO de la razon): estrategia_cuatro_capacidades_mercado
+     RAZON ENTERA, sin recortar:
+       EL MISMO CUADRANTE DE MERCADO Y LA MISMA RECETA, del mismo libro y sin arista entre ellos. Lo comun es el instrumento entero: diagnosticar en que etapa o cuadrante esta cada mercado que atiendes, desarrollo o emergente, crecimiento, estable o maduro, y elegir segun ese cuadrante en que capacidad concentrarte, servicio al cliente, desarrollo de producto, eficiencia interna o flexibilidad de demanda. Lo propio de clasificacion_mercados_cadena_suministro son analizar la relacion entre oferta y demanda de la industria, ajustar inventario, precios y cadena segun el cuadrante, y revisar periodicamente porque el cuadrante cambia. Lo propio de estrategia_cuatro_capacidades_mercado son identificar en que capacidad tienes fortaleza RELATIVA frente a competidores, concentrar la inversion en una o dos y no en todas, y el aviso de no invertir en eficiencia interna si compites en mercado de crecimiento. CONDICION VIVA CUMPLIDA: era el ultimo par en cola de la familia de los cuadrantes de mercado. Cinco pares leidos y los CINCO en A, y le quedan cinco que nunca entraron.
+
+  --- clasificacion_mercados_cadena_suministro
+      titulo    : Clasificación de Mercados por Oferta y Demanda
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 5 | condiciones 3 | previos 3 | siguientes 3 | cableado 6
+      paso 1: Identificar en qué cuadrante opera cada mercado que atiendes: desarrollo, crecimiento, estable o maduro
+      paso 2: Analizar la relación actual entre oferta y demanda en tu industria
+      paso 3: Determinar qué oportunidades específicas ofrece ese cuadrante: alianzas, servicio al cliente, eficiencia o flexibilidad
+      paso 4: Ajustar tu estrategia de inventario, precios y cadena de suministro según el cuadrante identificado
+      paso 5: Revisar periódicamente el cuadrante de cada mercado, ya que puede cambiar con el tiempo
+      cond 1: Cuando necesitas definir tu estrategia de cadena de suministro
+      cond 2: Si hay incertidumbre sobre cómo priorizar recursos según el tipo de mercado
+      cond 3: Cuando atiendes varios mercados con dinámicas distintas de oferta y demanda
+      previos   : ['market_type_revenue_growth', 'estudio_mercado_calidad', 'lienzo_modelo_negocio']
+      siguientes: ['metricas_desempeno_cadena_suministro', 'gestion_inventario', 'cuatro_categorias_desempeno_cadena_suministro']
+      entregable: Diagnóstico escrito del cuadrante de mercado en que opera cada negocio o mercado atendido, con la estrategia correspondiente asociada
+
+  --- cuatro_capacidades_mercado
+      titulo    : Las Cuatro Capacidades de Mercado en la Cadena de Suministro
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Evalúa el desempeño actual de la empresa en las cuatro capacidades frente a competidores
+      paso 2: Identifica en qué capacidad la empresa ya tiene ventaja competitiva
+      paso 3: Invierte recursos en reforzar esa fortaleza en vez de corregir debilidades menores no críticas
+      paso 4: Define métricas de desempeño específicas para cada capacidad elegida (ej. fill rate, tiempo de entrega)
+      cond 1: Cuando se define la estrategia de inversión en operaciones
+      cond 2: Cuando existe la tentación de igualar a competidores en eficiencia interna en vez de diferenciarse
+      previos   : ['definicion_alineacion_cadena_suministro']
+      siguientes: ['creacion_data_warehouse']
+      entregable: Matriz de las cuatro capacidades con evaluación comparativa frente a competidores y decisión de dónde invertir
+
+  --- cuatro_categorias_desempeno_cadena_suministro
+      titulo    : Cuatro Categorías de Desempeño de la Cadena de Suministro
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 10 | condiciones 4 | previos 4 | siguientes 3 | cableado 7
+      paso 1: Define métricas concretas para cada una de las cuatro categorías: servicio, eficiencia, flexibilidad y desarrollo de producto
+      paso 2: Determina cuál o cuáles categorías son críticas según el cuadrante de mercado en el que operas
+      paso 3: Recolecta tus datos de desempeño de forma diaria o continua
+      paso 4: Establece objetivos de desempeño alineados a esas prioridades
+      paso 5: Compara tu desempeño actual contra los estándares esperados para tu tipo de mercado
+      paso 6: Usa los datos para detectar problemas y oportunidades de mejora
+      paso 7: Calcular la rotación de inventario actual de la empresa
+      paso 8: Calcular el retorno sobre ventas (return on sales)
+      paso 9: Calcular el ciclo de conversión de efectivo (cash-to-cash cycle time)
+      paso 10: Identificar oportunidades de mejora en cuentas por cobrar/pagar antes que en niveles de inventario
+      cond 1: Cuando necesitas establecer KPIs de cadena de suministro
+      cond 2: Si no sabes en qué área enfocar tus esfuerzos operativos
+      cond 3: Cuando necesitas evaluar objetivamente el desempeño de tu cadena de suministro
+      cond 4: Cuando quieres justificar una inversión en mejoras de operación logística
+      previos   : ['clasificacion_mercados_cadena_suministro', 'modelo_cuatro_cuadrantes_mercado', 'big_data_ia_cadena_suministro', 'simulacion_de_operaciones_supply_chain']
+      siguientes: ['metricas_servicio_cliente_bts_bto', 'medicion_de_calidad_en_manufactura', 'equipo_conjunto_de_mejora_con_proveedores']
+      entregable: Un tablero de control con métricas y metas definidas para las cuatro categorías de desempeño según tu tipo de mercado.
+
+  --- estrategia_cuatro_capacidades_mercado
+      titulo    : Las Cuatro Capacidades de Mercado (Customer Service, Product Development, Internal Efficiency, Demand Flexibility)
+      fuente    : Essentials of Supply Chain Mana - Michael H. Hugos
+      pasos 4 | condiciones 2 | previos 2 | siguientes 4 | cableado 6
+      paso 1: Diagnosticar en qué etapa de madurez está tu mercado (emergente, crecimiento, estable, maduro).
+      paso 2: Identificar en qué capacidad tu empresa ya tiene fortalezas relativas frente a competidores.
+      paso 3: Seleccionar 1-2 capacidades de mercado donde concentrarás inversión (no todas a la vez).
+      paso 4: Evitar invertir en eficiencia interna si compites en mercado de crecimiento; prioriza servicio y producto.
+      cond 1: Cuando la empresa entra en un mercado de rápido crecimiento y debe decidir dónde invertir recursos limitados.
+      cond 2: Cuando existe confusión sobre si competir por precio o por servicio/innovación.
+      previos   : ['market_type_revenue_growth', 'arquetipos_de_cliente']
+      siguientes: ['key_process_product_characteristics', 'product_roadmap_estrategico', 'estrategia_captura_mercado_crecimiento', 'roadmap_proyectos_operacionales_12_meses']
+      entregable: Documento de estrategia de cadena de suministro que defina la capacidad de mercado prioritaria y la justificación basada en la etapa del mercado.
+
+  --- marco_analisis_mercado_cadena_suministro   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Cómo entender tu mercado para encontrar oportunidades en tu cadena de suministro
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 5 | condiciones 2 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Identifica los mercados en los que trabajas y quiénes participan en ellos: quienes producen, distribuyen, hacen la logística y venden al público
+      paso 2: Define en qué tipo de mercado está cada línea de tu negocio hoy y en qué tipo estará en dos años
+      paso 3: Compara tu desempeño con el de tu competencia en cuatro áreas: atención al cliente, eficiencia interna, capacidad de adaptarte a cambios en la demanda y desarrollo de producto
+      paso 4: Decide si en cada área necesitas liderar, igualar o superar a tu competencia
+      paso 5: Fija metas concretas de desempeño que respondan a lo que tu mercado te exige
+      cond 1: Cuando empiezas a definir oportunidades para tu cadena de suministro
+      cond 2: Cuando no tienes claro en qué áreas debes enfocar tus recursos para competir
+      previos   : ['market_type_revenue_growth']
+      siguientes: ['creacion_estrategia_cadena_suministro', 'investigacion_mercado_paso_a_paso', 'enfoque_paso_a_paso_investigacion_mercado']
+      entregable: Un mapa claro de en qué necesitas destacar frente a tu competencia, con metas de desempeño definidas para cada una de las cuatro áreas
+
+  --- modelo_cuadrantes_mercado
+      titulo    : Modelo de los Cuatro Cuadrantes de Mercado (Desarrollo, Crecimiento, Estable, Maduro)
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Diagnostica en qué cuadrante está tu mercado ahora mismo, comparando oferta y demanda
+      paso 2: Identifica qué capacidades necesitas reforzar en ese cuadrante: servicio, eficiencia, flexibilidad o desarrollo de producto
+      paso 3: Presta atención a señales de que tu mercado está cambiando de cuadrante para anticiparte
+      paso 4: Ajusta la mezcla de capacidades que trabajas según el cuadrante que detectes
+      cond 1: Cuando necesitas decidir qué prioridades estratégicas seguir según cómo se mueve tu mercado
+      cond 2: Si no tienes claro qué priorizar: servicio, eficiencia, flexibilidad o innovación
+      previos   : ['market_type_revenue_growth', 'estudio_mercado_calidad']
+      siguientes: ['compartir_datos_cadena_suministro']
+      entregable: Un diagnóstico escrito del cuadrante en que está tu mercado y un plan de las capacidades que vas a desarrollar
+
+##############################################################################
+# ACTO 10 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 6 MIEMBROS: 10 pares internos con veredicto escrito, de 15 combinaciones posibles
+
+  [PAR] puesto 192, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): refinar_sales_roadmap
+     nodo_b (EL SEGUNDO de la razon): sales_roadmap
+     RAZON ENTERA, sin recortar:
+       REPITE con sales_roadmap, que es la version corta: identificar los roles y el tipo de organizacion del cliente, definir el orden de contacto y escribir el proceso paso a paso para poder repetirlo. Candidato a fusion. Ver tambien el puesto 200: con hoja_de_ruta_de_ventas son TRES nodos del mismo roadmap.
+
+  [PAR] puesto 200, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): hoja_de_ruta_de_ventas
+     nodo_b (EL SEGUNDO de la razon): refinar_sales_roadmap
+     RAZON ENTERA, sin recortar:
+       REPITE con refinar_sales_roadmap. Los dos mandan mapear la organizacion del cliente, determinar el orden de contacto con los que tienen que decir que si, construir el mapa de acceso y documentar el proceso para repetirlo. FIGURA: RACIMO NUEVO, no esta en RACIMOS_MIEMBROS.jsonl: hoja_de_ruta_de_ventas, refinar_sales_roadmap y sales_roadmap son TRES nodos del nucleo sobre el mismo sales roadmap.
+
+  [PAR] puesto 255, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): hoja_de_ruta_de_ventas
+     nodo_b (EL SEGUNDO de la razon): sales_roadmap
+     RAZON ENTERA, sin recortar:
+       REPITE con sales_roadmap. Los dos mandan identificar los roles de la organizacion del cliente, definir el orden de contacto y escribir el proceso para poder repetirlo. PROCEDENCIA: es el tercer par del mismo trio, con los puestos 192 y 200, que ya registre como RACIMO NUEVO del sales roadmap. La relectura lo sostiene.
+
+  [PAR] puesto 319, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): customer_validation_sales_roadmap
+     nodo_b (EL SEGUNDO de la razon): sales_roadmap_vs_sales_force
+     RAZON ENTERA, sin recortar:
+       REPITE con sales_roadmap_vs_sales_force. Los dos mandan lo mismo y hasta comparten la condicion de activacion: si quieres acelerar contratando vendedores antes de validar el modelo, para. Los dos mandan escribir el camino que lleva a una venta repetible, probarlo con ordenes reales a precio completo antes de escalar, y no armar el equipo de ventas hasta que el mapa este validado. El primero anade quien influye, quien decide y donde esta el presupuesto, pero la tesis y su orden son los mismos.
+
+  [PAR] puesto 918, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): refinar_sales_roadmap
+     nodo_b (EL SEGUNDO de la razon): sales_roadmap_vs_sales_force
+     RAZON ENTERA, sin recortar:
+       El mapa contado entero contra el mismo mapa contado como secuencia, del mismo libro y sin arista entre ellos. sales_roadmap_vs_sales_force manda cuatro cosas: escribir paso a paso el camino que lleva a una venta que se repite, poner a prueba ese mapa con clientes reales antes de crecer el equipo, no contratar vendedores en cantidad hasta validar el modelo, y armar el equipo recien cuando el mapa este validado. refinar_sales_roadmap dice lo mismo y ademas trae el contenido del mapa: identificar el tipo de organizacion del cliente, construir un mapa de estrategia de acceso, detectar patrones de peligro como los concursos formales, las exigencias de demostracion o la negativa a comprarle a una startup, documentar cada paso en un diagrama de flujo, validar el mapa repitiendolo con exito en varias cuentas, y usarlo como prueba de competencia al contratar un director de ventas. Por la vara del banco 9.6.1, lo que anade el primero no es procedimiento sino la misma instruccion en orden: REPITE. Nota: este es uno de los cinco puestos que le faltaban al racimo del sales roadmap, que dejo de ser sub-puro en el 872 y ahora suma un A a su mezcla.
+
+  [PAR] puesto 966, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): estrategia_de_ventas
+     nodo_b (EL SEGUNDO de la razon): sales_roadmap
+     RAZON ENTERA, sin recortar:
+       EL MISMO MAPA DE QUIEN DECIDE, del mismo libro y sin arista entre ellos. Lo comun es el nucleo: identificar los roles clave dentro de la empresa a la que le vendes, quien usa, quien compra y quien decide; determinar cuantas personas deben decir que si; y definir el orden de contacto y el mensaje o guion para cada una. sales_roadmap dice esas tres y nada mas, salvo escribir el proceso paso a paso para poder repetirlo. estrategia_de_ventas dice las mismas tres y anade dos: definir en que nivel de la organizacion entrar, ejecutivo o staff operativo, e identificar que paso podria hacer fracasar la venta entera y quienes son los posibles saboteadores. Por la vara del banco 9.6.1, lo que sales_roadmap anade cabe en una linea: REPITE. Nota de familia: es el racimo del sales roadmap, que dejo de ser sub-puro en el puesto 872 y suma aqui otro A.
+
+  [PAR] puesto 872, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): customer_validation_sales_roadmap
+     nodo_b (EL SEGUNDO de la razon): hoja_de_ruta_de_ventas
+     RAZON ENTERA, sin recortar:
+       La ECONOMIA de la venta contra el MAPA de acceso, sin arista entre ellos, y el sub-puro del sales roadmap se rompe. customer_validation_sales_roadmap mide si la venta funciona: definir quien influye, quien recomienda y quien decide la compra, identificar donde esta el presupuesto disponible, determinar cuantas llamadas de venta y cuanto tiempo toma cerrar una, y probar el proceso completo con ordenes reales a precio completo antes de escalar. hoja_de_ruta_de_ventas construye el camino de acceso: actualizar los mapas de organizacion e influencia hechos en el descubrimiento con hallazgos reales, identificar cuantas personas deben decir que si, determinar el orden correcto de contacto entre ejecutivos, tecnicos y usuarios, crear un mapa de acceso que muestre como conseguir la primera reunion, y disenar un plan de implementacion que liste todo lo pendiente desde el si verbal hasta el cobro efectivo. Lo compartido es UNA linea, quien influye y quien decide, que el primero enuncia y el segundo desarrolla en un procedimiento de cuatro pasos, mapas, conteo de firmantes, orden de contacto y mapa de acceso. Por la vara del banco 9.6.1, CONTINUA. CONSECUENCIA DECLARADA: el sub-puro numero 3 del banco 9.5, el sales roadmap, tenia cuatro pares leidos y los cuatro en A; este es el primero sano, asi que deja de ser sub-puro y pasa a MEZCLADO. Le quedan cinco lecturas.
+
+  [PAR] puesto 1023, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): customer_validation_sales_roadmap
+     nodo_b (EL SEGUNDO de la razon): refinar_sales_roadmap
+     RAZON ENTERA, sin recortar:
+       El mapa de la venta contra el procedimiento de construirlo, del mismo libro y sin arista entre ellos. customer_validation_sales_roadmap enuncia: definir quien influye, recomienda y decide; identificar donde esta el presupuesto; determinar cuantas llamadas y cuanto tiempo toma cerrar; y probar el proceso completo con ordenes reales a precio completo antes de escalar. refinar_sales_roadmap trae el procedimiento: identificar el tipo de organizacion del cliente, por producto, funcion, matriz o franquicia; construir un mapa de estrategia de acceso determinando por donde entrar; detectar patrones de peligro como los concursos formales, las exigencias de demostracion o la negativa a comprarle a una startup; documentar cada paso en un diagrama de flujo; validar el mapa repitiendolo con exito en varias cuentas; y usarlo como prueba de competencia al contratar un director de ventas. Por la vara del banco 9.6.1, CONTINUA. Nota: era uno de los cinco puestos que le faltaban al racimo del sales roadmap, que ya estaba MEZCLADO desde el 872, y suma otro sano.
+
+  [PAR] puesto 1306, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): sales_roadmap
+     nodo_b (EL SEGUNDO de la razon): sales_roadmap_vs_sales_force
+     RAZON ENTERA, sin recortar:
+       El contenido del mapa contra el uso del mapa, del mismo libro y sin arista entre ellos, y son dos miembros del mismo racimo leidos entre si. sales_roadmap_vs_sales_force dice en su paso 1, en UNA LINEA, escribir paso a paso el camino que lleva a una venta que se repite; y su asunto propio es una CONDICION DE CONTRATACION: probar ese mapa con clientes reales antes de crecer el equipo, no contratar vendedores en cantidad hasta validar el modelo, y armar el equipo recien cuando el mapa este validado. sales_roadmap trae el CONTENIDO de esa linea: identificar los roles clave dentro de la empresa a la que se le vende, quien usa el producto y quien decide; definir el orden en que se contacta a cada uno y el mensaje especifico para cada rol; y escribir el proceso paso a paso para poder repetirlo. Por la vara del banco 9.6.1, CONTINUA. NOTA DE NOMINA: los dos son miembros del racimo del SALES ROADMAP, el numero 3 de la tabla viva; sales_roadmap lleva TRES A propias, los puestos 192, 255 y 966, y el otro DOS, el 319 y el 918. Dos miembros leidos entre si y el par sale sano: el racimo sigue MEZCLADO y no crece.
+
+  [PAR] puesto 1330, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): hoja_de_ruta_de_ventas
+     nodo_b (EL SEGUNDO de la razon): sales_roadmap_vs_sales_force
+     RAZON ENTERA, sin recortar:
+       El contenido del mapa contra la condicion de contratacion, del mismo libro y sin arista entre ellos, y es la misma relacion del puesto 1306 con el otro miembro. sales_roadmap_vs_sales_force dice en su paso 1, en UNA LINEA, escribir paso a paso el camino que lleva a una venta que se repite; y su asunto propio es no contratar vendedores hasta que el mapa este validado. hoja_de_ruta_de_ventas trae el CONTENIDO de esa linea: actualizar los mapas de organizacion e influencia creados en el descubrimiento con hallazgos reales, identificar CUANTAS PERSONAS deben decir que si para cerrar una venta, determinar el orden correcto de contacto entre ejecutivos, tecnicos y usuarios; crear un mapa de acceso que muestre como conseguir la primera reunion, y disenar un plan de implementacion con todos los pasos pendientes tras el si verbal. Por la vara del banco 9.6.1, CONTINUA. Tercer par interno del racimo del SALES ROADMAP leido y el tercero sano: el racimo sigue MEZCLADO.
+
+  --- customer_validation_sales_roadmap
+      titulo    : Customer Validation y Sales Roadmap
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 4 | condiciones 2 | previos 2 | siguientes 4 | cableado 6
+      paso 1: Definir quién influye, recomienda y decide la compra
+      paso 2: Identificar dónde está el presupuesto disponible
+      paso 3: Determinar cuántas llamadas de venta y cuánto tiempo toma cerrar una venta
+      paso 4: Probar el proceso de venta completo con órdenes reales a precio completo antes de escalar
+      cond 1: Cuando el startup ya validó el problema/solución y busca confirmar que puede vender de forma repetible y escalable
+      cond 2: Si el CEO quiere acelerar contratando vendedores antes de validar el modelo
+      previos   : ['producto_minimo_viable', 'customer_discovery_cuatro_fases']
+      siguientes: ['sintesis_hipotesis_modelo_negocio', 'vision_estrategia_producto_pivote', 'tipos_de_pivote', 'catalogo_pivotes']
+      entregable: Sales roadmap validado con evidencia de ventas repetibles antes de construir el equipo comercial
+
+  --- estrategia_de_ventas
+      titulo    : Estrategia de Ventas (Sales Strategy)
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 4 | condiciones 1 | previos 5 | siguientes 1 | cableado 6
+      paso 1: Define en qué nivel de la organización entrarás (ejecutivo o staff operativo)
+      paso 2: Determina cuántas personas del mapa organizacional deben decir 'sí'
+      paso 3: Establece el orden de contacto y el guion para cada persona
+      paso 4: Identifica qué paso podría hacer fracasar toda la venta y quiénes son los posibles saboteadores
+      cond 1: Si se tienen los mapas de influencia y acceso pero falta un plan de acción concreto
+      previos   : ['mapa_de_acceso_al_cliente', 'lienzo_modelo_negocio', 'refinar_sales_roadmap', 'ocho_fases_experiencia_cliente', 'evaluacion_vp_ventas']
+      siguientes: ['plan_de_implementacion_de_venta']
+      entregable: Una estrategia de ventas documentada con guiones y orden de contacto definidos
+
+  --- hoja_de_ruta_de_ventas
+      titulo    : Hoja de Ruta de Ventas (Sales Roadmap)
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 2 | previos 6 | siguientes 4 | cableado 10
+      paso 1: Actualiza los mapas de organización e influencia creados en Customer Discovery con hallazgos reales
+      paso 2: Identifica cuántas personas deben decir 'sí' para cerrar una venta
+      paso 3: Determina el orden correcto de contacto con los distintos stakeholders (ejecutivos, técnicos, usuarios)
+      paso 4: Crea un mapa de acceso al cliente que muestre cómo conseguir la primera reunión
+      paso 5: Diseña un plan de implementación que liste todos los pasos pendientes tras el 'sí' verbal hasta el cobro efectivo
+      cond 1: Si el startup está por contratar una fuerza de ventas
+      cond 2: Si las ventas son complejas y requieren múltiples aprobaciones (ventas B2B/enterprise)
+      previos   : ['contratar_cerrador_de_ventas', 'mapa_de_canal_de_ventas', 'checkpoints_validacion', 'filosofia_validacion_clientes', 'herramientas_de_activacion_web', 'mercados_multilaterales']
+      siguientes: ['formalizar_junta_asesora', 'ejecucion_de_touchpoints', 'fundadores_lideran_validacion', 'mapa_de_influencia']
+      entregable: Una hoja de ruta de ventas completa con mapas de influencia, acceso y plan de implementación
+
+  --- refinar_sales_roadmap
+      titulo    : Desarrollar el Sales Roadmap (Hoja de Ruta de Ventas)
+      fuente    : The Startup Owner's Manual - Blank, Steve
+      pasos 6 | condiciones 2 | previos 4 | siguientes 2 | cableado 6
+      paso 1: Identificar el tipo de organización del cliente (por producto, función, matriz o franquicia)
+      paso 2: Construir un mapa de estrategia de acceso (Access Strategy Map) determinando por dónde entrar
+      paso 3: Detectar patrones de 'peligro' como RFPs, requisitos de demo o negativa a comprar de startups
+      paso 4: Documentar cada paso del proceso de venta en un flowchart
+      paso 5: Validar el roadmap haciendo que se repita con éxito en múltiples cuentas
+      paso 6: Usar el roadmap como prueba de competencia al contratar un VP de ventas
+      cond 1: Cuando ya se han hecho múltiples ventas de prueba y se busca escalar el proceso comercial
+      cond 2: Antes de contratar un VP de ventas profesional
+      previos   : ['influence_map_organizacional', 'get_out_building_test_sell', 'formalizar_junta_asesora', 'proceso_venta_b2b']
+      siguientes: ['customer_creation', 'estrategia_de_ventas']
+      entregable: Playbook documentado (flowchart) del proceso de venta repetible y escalable
+
+  --- sales_roadmap
+      titulo    : Mapa de ruta de ventas (Sales Roadmap)
+      fuente    : The Startup Owner's Manual - Blank, Steve
+      pasos 3 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Identifica los roles clave dentro de la empresa a la que le vendes: quién usa el producto, quién lo compra y quién decide el gasto.
+      paso 2: Define el orden en que vas a contactar a cada uno y el mensaje específico para cada rol.
+      paso 3: Escribe el proceso paso a paso para poder repetirlo cada vez que vendas.
+      cond 1: Cuando necesitas un proceso de venta que puedas repetir y hacer crecer.
+      previos   : ['sales_funnel_get_keep_grow']
+      siguientes: ['metrics_that_matter_framework']
+      entregable: Un guion de ventas que detalla cómo y en qué orden contactar a cada persona clave dentro de la empresa a la que le vendes.
+
+  --- sales_roadmap_vs_sales_force
+      titulo    : Construye un mapa de ventas (sales roadmap) antes que un equipo de ventas
+      fuente    : The Startup Owner's Manual - Blank, Steve
+      pasos 4 | condiciones 2 | previos 3 | siguientes 4 | cableado 7
+      paso 1: Escribe paso a paso el camino que te lleva a una venta que se repite
+      paso 2: Pon a prueba ese mapa de ventas con clientes reales antes de crecer tu equipo
+      paso 3: No contrates vendedores en cantidad hasta que hayas validado el modelo
+      paso 4: Recién cuando el mapa esté validado, arma tu equipo de ventas
+      cond 1: Si quieres acelerar tus ventas contratando gente antes de validar tu modelo
+      cond 2: Si estás en la etapa de validar tu producto con clientes
+      previos   : ['customer_discovery', 'producto_minimo_viable', 'earlyvangelists_ventas_tempranas']
+      siguientes: ['customer_creation', 'pivot_o_proceder', 'metricas_de_adquisicion_activacion', 'decision_pivotar_o_proceder']
+      entregable: Un mapa de ventas escrito y probado con clientes reales, antes de contratar vendedores en cantidad
+
+##############################################################################
+# ACTO 11 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 5 MIEMBROS: 7 pares internos con veredicto escrito, de 10 combinaciones posibles
+
+  [PAR] puesto 166, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): human_in_the_loop_ia
+     nodo_b (EL SEGUNDO de la razon): principio_humano_en_el_loop
+     RAZON ENTERA, sin recortar:
+       REPITE con principio_humano_en_el_loop. Los dos mandan decidir de antemano en que tareas la IA asiste y en cuales decide, revisar cada salida antes de usarla, reconocer las alucinaciones y reservar la doble revision para lo de alto impacto. Candidato a fusion.
+
+  [PAR] puesto 293, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): mitigar_falling_asleep_wheel
+     nodo_b (EL SEGUNDO de la razon): riesgo_sobredependencia_ia
+     RAZON ENTERA, sin recortar:
+       REPITE con riesgo_sobredependencia_ia. Los dos mandan lo mismo contra el mismo riesgo: poner revision humana obligatoria sobre las salidas de la IA en vez de aceptarlas, entrenar al equipo para cuestionarlas de forma activa, rotar las tareas criticas para que nadie pierda el criterio propio por no ejercitarlo, y medir la calidad de las decisiones para detectar la caida. El primero anade las pruebas con casos disenados para que la IA falle, que es el unico gesto que no esta en el otro.
+
+  [PAR] puesto 692, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): alineacion_etica_ia_negocio
+     nodo_b (EL SEGUNDO de la razon): principio_humano_en_el_loop
+     RAZON ENTERA, sin recortar:
+       El mismo principio de supervision humana contado dos veces y del mismo libro, Co-Intelligence de Mollick, sin arista entre ellos. Lo comun es el corazon de los dos: que una persona revise lo que la IA produce ANTES de que llegue a un cliente o se ejecute, y que se decida DE ANTEMANO en que casos la IA puede actuar sola y en cuales no. principio_humano_en_el_loop anade lo suyo, y es lo mas util del par: aprender a reconocer cuando la IA esta inventando, citas que no existen y datos que no se pueden comprobar, y no tomar nunca una respuesta como unica verdad cuando la decision importa. alineacion_etica_ia_negocio anade otras dos: crear una forma simple de detectar y corregir sesgos, y AVISAR con transparencia al cliente cuando esta hablando con una IA, que es la unica obligacion hacia afuera que aparece en el par. Eso es lo que se perderia. NOTA DE FAMILIA: este par pertenece al CANDIDATO A RACIMO de la supervision de la IA, seccion 11 del informe, y es el primero de esa familia que sale en A, o sea que el candidato sube de sospecha.
+
+  [PAR] puesto 792, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): alineacion_etica_ia_negocio
+     nodo_b (EL SEGUNDO de la razon): human_in_the_loop_ia
+     RAZON ENTERA, sin recortar:
+       FAMILIA DECLARADA: los dos son miembros del racimo LA SUPERVISION DE LA IA, ocho miembros, declarado en la seccion 11, asi que no se pelea la clase. Se registra A porque el corazon se repite: definir de antemano en que tareas la IA decide sola y en cuales nunca, y revisar con ojo critico lo que produce antes de usarlo en algo real. Lo propio de human_in_the_loop_ia son dos mecanismos concretos: ANOTAR los casos en que la IA alucino para calibrar cuanto confiar la proxima vez, y la regla de DOBLE REVISION para las decisiones de alto impacto, financieras o legales. Lo propio de alineacion_etica_ia_negocio son la deteccion de sesgos y el AVISO TRANSPARENTE al cliente de que esta hablando con una IA, que es la unica obligacion hacia afuera de toda la familia. DATO PARA EL RACIMO: este es el QUINTO par leido de los ocho miembros y el quinto en A, y ademas es de los que CRUZAN, porque une alineacion_etica_ia_negocio con el segundo nodo de la mitad 1. Las cuatro condiciones vivas de la seccion 11 siguen siendo las cuatro: 1211, 1239, 1339 y 1451.
+
+  [PAR] puesto 1041, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): human_in_the_loop_ia
+     nodo_b (EL SEGUNDO de la razon): mitigar_falling_asleep_wheel
+     RAZON ENTERA, sin recortar:
+       LA MISMA GUARDIA HUMANA, del mismo libro y sin arista entre ellos, y los dos son MIEMBROS del racimo de la supervision de la IA. Lo comun es el mecanismo entero: establecer puntos de revision humana obligatoria en las decisiones de alto riesgo aunque la IA parezca confiable, y cuestionar activamente sus respuestas en vez de aceptarlas. Lo propio de human_in_the_loop_ia son dos: clasificar de antemano en que tareas la IA solo asiste y en cuales NUNCA decide, y llevar registro de los casos en que alucino para calibrar cuanto confiar la proxima vez. Lo propio de mitigar_falling_asleep_wheel son otros dos, y son los mas duros: hacer pruebas periodicas con casos DISENADOS PARA QUE LA IA FALLE y medir si el equipo detecta el error, y rotar responsabilidades para que nadie dependa solo de la IA sin ejercitar su propio criterio. Nota de racimo: es el quinto par interno leido, y con el 993 el racimo sigue MEZCLADO, cuatro A y un sano.
+
+  [PAR] puesto 1496, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): human_in_the_loop_ia
+     nodo_b (EL SEGUNDO de la razon): riesgo_sobredependencia_ia
+     RAZON ENTERA, sin recortar:
+       La regla de la decision contra el musculo del equipo, del mismo libro y sin arista entre ellos, y es par INTERNO del racimo de la IA. Lo compartido es UNA LINEA, cuestionar siempre la salida de la maquina antes de usarla. Lo demas no se toca. human_in_the_loop_ia PONE UNA REGLA POR TAREA: definir en que tareas la IA solo asiste y en cuales nunca decide, ANOTAR LOS CASOS EN QUE SE EQUIVOCO para saber cuanto confiar la proxima vez, y ponerse una regla de DOBLE REVISION para las decisiones de alto impacto, financieras o legales. riesgo_sobredependencia_ia CUIDA EL CRITERIO DE LAS PERSONAS: ROTAR TAREAS CRITICAS entre revision humana pura y asistida para que el equipo no pierda el criterio, capacitar en pensamiento critico aplicado a la IA para identificar cuando desconfiar, y MEDIR PERIODICAMENTE LA CALIDAD DE LAS DECISIONES tomadas con y sin apoyo de la maquina. Uno protege la decision de hoy, el otro protege la capacidad de decidir de manana. NOTA DE NOMINA: los dos estan en el BLOQUE MAYOR DE CINCO de la particion escrita en el puesto 1451, asi que este par NO la mueve. Lo que si cambia es la densidad de ese bloque: de sus seis pares internos leidos, CINCO son A y este es el primer sano. El bloque de cinco tampoco es puro por dentro.
+
+  [PAR] puesto 1541, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): mitigar_falling_asleep_wheel
+     nodo_b (EL SEGUNDO de la razon): principio_humano_en_el_loop
+     RAZON ENTERA, sin recortar:
+       La revision que no se salta contra el musculo que no se atrofia, del mismo libro y sin arista entre ellos, y ERA EL ULTIMO PAR PENDIENTE EN LA COLA DEL RACIMO DE LA IA. Lo compartido son dos lineas, que haya revision humana obligatoria en lo de alto riesgo y que no se acepte la respuesta sin cuestionarla. Lo demas no se toca. principio_humano_en_el_loop PROTEGE LA DECISION DE HOY: revisar personalmente todo antes de que llegue a un cliente, aprender a reconocer cuando la maquina inventa, citas que no existen; y nunca tomar la respuesta como unica verdad cuando la decision importa. mitigar_falling_asleep_wheel PROTEGE LA CAPACIDAD DE MANANA: REALIZAR PRUEBAS PERIODICAS CON CASOS DISENADOS PARA QUE LA IA FALLE y medir si el equipo los detecta, y ROTAR RESPONSABILIDADES para que nadie dependa solo de la maquina sin ejercitar su propio criterio. Es la misma lectura del puesto 1496 y por eso sale igual: la disciplina de la decision y el entrenamiento del criterio son dos cosas. Y el simulacro con casos trucados es lo unico del racimo que MIDE si el equipo sigue despierto. NOTA DE COLA CERRADA: con este par EL RACIMO DE LA IA TERMINA SU COLA. Nomina de DIEZ tras la absorcion del 1517, 45 pares posibles, 15 encolados y los quince leidos, OCHO en A y SIETE sanos. Cobertura 15 de 45, y la particion escrita en la seccion 11.bis NO se mueve: los dos nodos ya estaban en el bloque humano.
+
+  --- alineacion_etica_ia_negocio
+      titulo    : Que tu IA actúe según tus valores (alineación ética)
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 5 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Define con claridad qué objetivos y qué límites éticos tiene el sistema de IA que usas en tu negocio
+      paso 2: Revisa tú mismo, o la persona que te ayuda, las decisiones importantes que tome la IA antes de que se ejecuten
+      paso 3: Crea una forma simple de detectar y corregir sesgos o errores del sistema
+      paso 4: Avisa con transparencia a tus clientes cuando están hablando con una IA
+      paso 5: Revisa cada tanto si el comportamiento de la IA sigue respetando los valores que definiste
+      cond 1: Cuando vas a dejar que una IA tome decisiones por su cuenta que afecten directamente a tus clientes o a las personas con las que trabajas
+      previos   : ['evaluacion_riesgos_legales_ia']
+      siguientes: ['desafios_implementacion_ia']
+      entregable: Un documento simple con las reglas éticas de tu IA y cómo la vas a supervisar.
+
+  --- human_in_the_loop_ia
+      titulo    : Tú sigues al mando de la decisión (Human in the Loop)
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 4 | condiciones 2 | previos 2 | siguientes 4 | cableado 6
+      paso 1: Define en qué tareas de tu negocio la IA solo te va a asistir y en cuáles nunca decide por ti
+      paso 2: Revisa con ojo crítico cada respuesta de la IA antes de usarla en una decisión real
+      paso 3: Anota los casos donde la IA se equivocó (alucinó) para saber cuánto confiar en ella la próxima vez
+      paso 4: Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto
+      cond 1: Cuando empiezas a meter IA en las decisiones de tu negocio
+      cond 2: Cuando notas que estás dependiendo demasiado de lo que la IA te da sin revisarlo
+      previos   : ['oficina_digital_sin_papel', 'oficina_digital_sin_papel_2']
+      siguientes: ['gestion_alucinaciones_ia', 'ingenieria_de_prompts_efectiva', 'construccion_experticia_era_ia', 'principio_mejora_continua_ia']
+      entregable: Un protocolo escrito de cómo usas la IA, que diga con claridad qué decisiones necesitan tu revisión obligatoria antes de aplicarse
+
+  --- mitigar_falling_asleep_wheel
+      titulo    : Mitigar el Riesgo de 'Dormirse al Volante' con IA
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 4 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Establecer puntos de revisión humana obligatoria en tareas de alto riesgo, incluso si la IA parece confiable
+      paso 2: Entrenar al equipo para cuestionar activamente las respuestas de la IA en vez de aceptarlas automáticamente
+      paso 3: Realizar pruebas periódicas con casos diseñados para que la IA falle, y medir si el equipo detecta el error
+      paso 4: Rotar responsabilidades para que nadie dependa exclusivamente de la IA sin ejercitar su propio criterio
+      cond 1: Cuando se detecta que el equipo confía ciegamente en resultados de IA sin revisión
+      cond 2: Cuando la tarea tiene consecuencias importantes si la IA se equivoca (decisiones financieras, contratación, diagnósticos)
+      previos   : ['centaur_cyborg_ia']
+      siguientes: ['desafios_implementacion_ia', 'shadow_ia_organizacional']
+      entregable: Protocolo de revisión crítica de resultados de IA para tareas de alto riesgo o impacto en el negocio
+
+  --- principio_humano_en_el_loop
+      titulo    : Principio 2: Sé tú quien decide, no la IA (mantente en el ciclo)
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Antes de que algo generado por IA llegue a un cliente o se ejecute, revísalo tú mismo, sin excepción
+      paso 2: Aprende a reconocer cuándo la IA está inventando: citas que no existen, datos que no puedes comprobar, respuestas dadas con demasiada seguridad
+      paso 3: Nunca tomes una respuesta de la IA como la única verdad cuando la decisión es importante para tu negocio
+      paso 4: Decide de antemano en qué casos la IA puede actuar sola y en qué casos necesitas revisarlo tú antes
+      cond 1: Cuando usas IA para generar algo que le llega directo a un cliente o afecta una operación importante de tu negocio
+      cond 2: Cuando notas o sospechas que la IA te está inventando información
+      previos   : ['principio_invitar_ia_siempre']
+      siguientes: ['gestion_riesgo_seguridad_ia']
+      entregable: Un protocolo simple donde defines en qué momentos revisas tú lo que hace la IA antes de dejarla actuar
+
+  --- riesgo_sobredependencia_ia
+      titulo    : Riesgo de Sobredependencia y Pérdida de Criterio Propio
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Establecer como norma editar y cuestionar siempre las salidas de la IA antes de usarlas.
+      paso 2: Rotar tareas críticas entre revisión humana pura y asistida por IA para mantener el criterio del equipo.
+      paso 3: Capacitar al equipo en 'pensamiento crítico aplicado a IA': identificar cuándo desconfiar de una respuesta plausible.
+      paso 4: Medir periódicamente la calidad de las decisiones tomadas con y sin apoyo de IA.
+      cond 1: Cuando el equipo empieza a delegar decisiones importantes a la IA sin revisión.
+      cond 2: Cuando se detecta una caída en la calidad de las decisiones pese a mayor velocidad.
+      previos   : ['descomposicion_tareas_trabajo', 'jagged_frontier_ia']
+      siguientes: ['reconstruccion_significado_trabajo']
+      entregable: Protocolo interno de uso responsable de IA con checkpoints de revisión humana obligatoria.
+
+FIN
