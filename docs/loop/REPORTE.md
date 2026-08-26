@@ -1,562 +1,615 @@
-# REPORTE DE LA VUELTA 78 DEL EJECUTOR (modelo: Sonnet 5)
+# REPORTE DE LA VUELTA 79 DEL EJECUTOR (modelo: Sonnet 5)
 
-Sobrescribe el reporte de la vuelta 77. Cubre TAREA 1 (los registros y cinco
-correcciones declaradas), TAREA 2 (la relectura al doble del tramo 3 por el
-credito rebajado), TAREA 3 (la relectura conjunta de las once aristas que la
-vara de los veredictos A toca, con el ensanche del filtro `P.9.1`) y TAREA 4
-(el tramo 4 de `OP-E-01`) del encargo de `docs/loop/PROMPT_SIGUIENTE.md`,
-escrito tras el acta de la vuelta 77 (`docs/loop/ACTA_AUDITOR.md`, linea
-22077).
+Sobrescribe el reporte de la vuelta 78. Cubre TAREA 1 (registros y correccion
+declarada del criterio real de TAREA 3.2), TAREA 2 BLOQUEANTE (escalada
+automatica del tallador a la fase 04), TAREA 3 (relectura conjunta de un
+discutible y relectura al doble del tramo 4), TAREA 4 (la guarda del par no
+dirigido) y TAREA 5 (el tramo 5 de `OP-E-01`) del encargo de
+`docs/loop/PROMPT_SIGUIENTE.md`, escrito tras el acta de la vuelta 78
+(`docs/loop/ACTA_AUDITOR.md`, desde la linea 22702).
+
+**LA CABECERA DE ABAJO ESTA TALLADA, NO TECLEADA**, con el instrumento nuevo
+de esta vuelta:
+
+```
+python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 79
+```
+
+Salida completa en `docs/loop/SALIDA_V79_TALLADOR_FASE04.txt`, pegada entera:
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.188 / 665 | **3.853 / 3.188 / 665** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.949 / 8.928 / 17.877 / 9.572 | **8.960 / 8.939 / 17.899 / 9.583** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+
+**El marcador del cribado no aparece**: esta fase no lo toca, y el tallador
+omite la fila cuando no hay `SALIDA_V79_MARCADOR_*` que citar (mecanica
+explicita del modo `--fase04`, no un olvido). Sin cambio real de todos modos:
+el cribado sigue en A 551, B 72, C 5, D 2.760, n 3.388, medido la ultima vez
+en `docs/loop/SALIDA_V78_MARCADOR_CIERRE.txt` (contraste, no cifra nueva de
+esta vuelta).
+
+Commit de apertura: `43b02413` (acta de la vuelta 78, rama `pasada-unica`,
+arbol limpio, `origin/pasada-unica` igual a `HEAD` antes de empezar la
+primera tarea de codigo, verificado con `git rev-parse HEAD` y `git rev-parse
+origin/pasada-unica`).
 
 **SE MANTIENE "LA TABLA SE CUENTA DE SU FICHERO"**: toda tabla o cifra de
-este reporte cita el fichero de salida del que sale y fue reconstruida
-contando ese fichero antes de publicarse.
+este reporte cita el fichero de salida del que sale.
 
 ---
 
-## 0. LA APERTURA, medida ANTES de la primera operacion
+## 0. LO QUE CAMBIA COMO SE ESCRIBE ESTA VUELTA
 
-Commit de apertura: `57863182` (acta de la vuelta 77, rama `pasada-unica`,
-arbol limpio, `origin/pasada-unica` igual a `HEAD` antes de empezar,
-verificado con `git rev-parse HEAD` y `git rev-parse origin/pasada-unica`).
+La racha de caidas de reporte llego a **DOS TANDAS SEGUIDAS** (vueltas 77 y
+78), que es el numero exacto que el fundador dejo escrito como gatillo de la
+**ESCALADA AUTOMATICA de la opcion (b)**
+(`docs/loop/paradas/2026-08-26-racha-tramo-mecanico-DECISION.md`, linea 183):
+extender el tallador a la fase 04. Es la **TAREA 2 de este reporte, y fue
+BLOQUEANTE**: no se leyo un solo candidato nuevo hasta que quedo verde. **La
+parada de esta especie pide TRES tandas**: esta es la ultima vuelta antes de
+esa parada si hubiera una tercera caida de reporte.
 
-| | medido con |
-|---|---|
-| grafo: 3.853 nodos, 3.188 vivos, 665 deprecados | `python scripts/run_phase1.py --reaplico-curaduria`, corrida de apertura, ciclo de tres completo (`SALIDA_V78_GATE0_CMD1_APERTURA.txt`, `_CMD2_`, `_CMD3_`) |
-| `nodos_siguientes` en `57863182` | **8.925**, contado con `python docs/loop/_auditor_v77_conteo.py 57863182` (`SALIDA_V78_CONTEO_APERTURA.txt`) |
-| `nodos_previos` en `57863182` | **8.904** |
-| suma | **17.829** |
-| union dirigida unica | **9.548** |
-| Gate 0 | OK (ciclo de tres, auto-aristas 0, duplicadas 0, divergentes 0) |
-| motor | `python engine/run_all_tests.py`: **25/25** (`SALIDA_V78_MOTOR_APERTURA.txt`) |
-| web | `npx vitest run` desde `web/`: **80 ficheros, 1.030 pasadas, 3 saltadas** (`SALIDA_V78_WEB_APERTURA.txt`) |
-| tsc | `npx tsc --noEmit` desde `web/`: **exitcode 0, cero lineas** (`SALIDA_V78_TSC_APERTURA.txt`) |
-
-**Declaro un tropiezo propio de esta vuelta, corregido antes de tocar el
-grafo real:** al medir la apertura corri `python scripts/run_phase1.py
---reaplico-curaduria` una SEGUNDA vez sin haber corrido antes
-`etiquetas_de_cara.py --aplicar`, y reproduje al digito el mismo tropiezo
-que el reporte de la vuelta 77 declaro (**71 nodos divergentes**,
-`GATE 0: FALLIDO`). Restaure el arbol con `git checkout --
-dataset/metadata/master_graph.json dataset/metadata/phase1_run_log.json`
-antes de medir nada, y repeti el ciclo de tres EN ORDEN (`run_phase1.py`
-UNA vez, `etiquetas_de_cara.py --aplicar` UNA vez, `sync_assets_web.py` UNA
-vez). Ninguna cifra de esta seccion sale de la corrida con el tropiezo.
+**Cero caidas de clase y cero de cifra publicada en la vuelta 78** (acta 78,
+delantera): la racha de esa especie sigue en cero.
 
 ---
 
-## 1. TAREA 1: LOS REGISTROS Y CINCO CORRECCIONES
+## 1. TAREA 1: LOS REGISTROS Y LA CORRECCION DECLARADA
 
-### 1.1. La caida de clase (dentro del marcado) y las dos caidas de reporte (fuera), registradas con su nombre
+### 1.1. La caida de reporte de la vuelta 78, registrada con su nombre
 
-Las tres estan medidas y descritas en `docs/loop/ACTA_AUDITOR.md`
-(vuelta 77, desde la linea 22077, secciones 3 y 4). Se registran aqui con
-su nombre porque `EJECUTOR.md` regla 1 lo exige, **sin volver a
-remedirlas** (ya vienen medidas por el auditor, citado como fuente):
+Medida y descrita en `docs/loop/ACTA_AUDITOR.md` (vuelta 78, seccion 3 D4 y
+seccion 5 punto 4). Se registra aqui con su nombre, **sin volver a medirla**
+(ya viene medida por el auditor, citado como fuente):
 
-1. **Caida de CLASE, DENTRO del marcado (acta 77, seccion 3, D5 segundo
-   par).** El reporte de la vuelta 77, seccion 3.3, dejo sin escribir la
-   arista `mejora_calidad_crosby -> programa_mejora_calidad_14_pasos` por
-   una razon publicada: "los dos son miembros del mismo racimo declarado".
-   El auditor midio que esa razon es **FALSA** contra
-   `docs/RACIMOS_MIEMBROS.jsonl` (`mejora_calidad_crosby` no esta en
-   ninguno de los 32 racimos) y que el par **SI tiene veredicto propio**,
-   puesto_intra **2583**, clase **D**, cuyo texto dice que
-   `mejora_calidad_crosby` "literalmente REMITE al de catorce pasos como
-   su contenido". Corregida en 1.2 de este reporte.
-2. **Caida de REPORTE, FUERA del marcado (acta 77, seccion 4.1).** El
-   reporte de la vuelta 77, seccion 3.3, publico *"4 de 30 tenian
-   veredicto propio"* sin fichero de salida detras. El auditor conto **7**
-   sin direccion (como lee el cribado) y **6** en direccion madre a hijo.
-   Corregida en 1.3 de este reporte.
-3. **Caida de REPORTE, FUERA del marcado (acta 77, seccion 4.2).** El
-   reporte de la vuelta 77, seccion 3.2, publico que 15 candidatos se
-   apartaban *"por las fusiones de fase 06"*. Las siete operaciones que
-   apartan (`OP-M-01-FUSION`, `OP-M-02-PROG`, `OP-M-03-II`,
-   `OP-M-03-III`, `OP-M-05-APERTURA`, `OP-M-05-EDIFICIO`,
-   `OP-M-05-INDICE`) llevan **todas** `fase` = `03_FUSIONES` en su ficha
-   (`docs/plan/OPERACIONES.jsonl`), y dos de ellas (`OP-M-02-PROG`,
-   `OP-M-03-II`) ni siquiera estan entre las seis remitidas a la fase 06
-   por `03_FUSIONES.md` linea 9246. El conteo de 15 SI es correcto; la
-   etiqueta no. Corregida en 1.4 de este reporte.
+**UNA caida de reporte, DENTRO del marcado.** El reporte de la vuelta 78,
+seccion 3.2, publico un criterio unico para las once aristas que la vara de
+los veredictos A toca: *"si el extremo ESCRITO en la arista esta condenado
+por una operacion sin ser su superviviente, la arista SE MUEVE; si el extremo
+escrito ES el superviviente declarado, o si ninguna operacion condena al
+extremo escrito, la arista SE QUEDA"*. La fila 11 de su propia tabla tiene el
+hijo escrito sin ninguna operacion que lo condene, y por ese criterio debia
+quedarse: se movio (revirtio). El criterio publicado no produce la decision
+publicada, y no distingue la fila 11 de la 4 ni de la 6 (misma forma,
+resultado distinto). **Las once disposiciones son correctas**; solo el
+criterio publicado esta mal. Corregido en 1.2.
 
-**Con esta caida de clase registrada, la racha de clase o cifra publicada
-queda en UNA** (tal como el acta 77 la deja) **y la racha de reporte queda
-en UNA tanda**: ninguna de las dos dispara parada (piden dos y tres
-seguidas respectivamente), pero el credito de la tanda queda REBAJADO
-porque las dos caidas de reporte cayeron fuera del marcado, por lo que
-`AUDITOR.md` seccion 1.2 obliga a releer el tramo 3 al doble (TAREA 2 de
-este reporte).
+**Cero caidas de clase y cero de cifra publicada en la vuelta 78**: la racha
+de esa especie sigue en cero (acta 78, delantera).
 
-### 1.2. Correccion declarada y arista escrita: `mejora_calidad_crosby -> programa_mejora_calidad_14_pasos`
+### 1.2. Correccion declarada: el criterio real de la TAREA 3.2, escrito donde se pueda auditar
 
-**Verificado por corrida propia en esta vuelta, ANTES de escribir**
-(script `scripts/loop/vuelta78_tarea12_arista_2583.py`, salida
-`docs/loop/SALIDA_V78_TAREA12_ARISTA_2583.txt`):
+**Verificado por corrida propia en esta vuelta** contra las fichas de
+`docs/plan/OPERACIONES.jsonl` antes de escribir la correccion
+(`docs/loop/SALIDA_V79_TAREA12_FICHAS.txt`):
 
-- `mejora_calidad_crosby` en los 32 racimos de `docs/RACIMOS_MIEMBROS.jsonl`:
-  **[] (cero coincidencias, busqueda negativa confirmada)**.
-- Veredicto puesto_intra **2583**, dominio quality, clase **D**,
-  `nodo_a=mejora_calidad_crosby`, `nodo_b=programa_mejora_calidad_14_pasos`.
-- Los dos nodos vivos hoy, la arista no existia, cero escalera rota (el
-  hijo no apuntaba a la madre).
+```
+OP-S-09       | tipo: RENOMBRE_CON_ALIAS | superviviente: None | eliminar: [] | nodos_len: 67
+OP-M-05-APERTURA | tipo: FUSION DE MESA | superviviente: customer_validation | eliminar: ['filosofia_customer_validation', 'introduccion_validacion_clientes'] | nodos_len: 3
+```
 
-**Texto viejo (reporte de la vuelta 77, seccion 3.3), citado sin
-reescribir:** *"mejora_calidad_crosby -> programa_mejora_calidad_14_pasos:
-mismo racimo 'Programa de catorce pasos de Crosby' [...] Extender esa
-excepcion sin nueva adjudicacion a un segundo hijo del mismo racimo seria
-adjudicar por acumulacion. No se enlaza."*
+`OP-M-05-APERTURA` **es una FUSION con `superviviente` declarado**
+(`customer_validation`) y `eliminar` de dos ids; `OP-S-09` **es un
+RENOMBRE_CON_ALIAS con `superviviente` `null`**: confirma exactamente lo que
+el docstring de `scripts/loop/vuelta78_tarea32_decision_once.py` ya
+distinguia y el reporte de la vuelta 78 nunca publico.
 
-**CORRECCION DECLARADA (vuelta 78): la premisa era falsa** (la madre no
-esta en ese racimo, solo el hijo) **y el par tenia veredicto D propio que
-el cruce de la vuelta 77 no encontro.** Arista escrita en
-`dataset/nodos/mejora_calidad_crosby.json`.
+**Texto viejo (reporte de la vuelta 78, seccion 3.2), citado sin
+reescribir:** *"si el extremo ESCRITO en la arista (no su companero de A)
+esta condenado por una operacion sin ser su superviviente, la arista SE
+MUEVE; si el extremo escrito ES el superviviente declarado, o si ninguna
+operacion condena al extremo escrito, la arista SE QUEDA con la razon
+puesta."*
 
-### 1.3. Correccion declarada y tabla re-tallada: "4 de 30"
+**CORRECCION DECLARADA (vuelta 79): el criterio real** vive ahora en
+`docs/plan/04_ENLACES.md`, bajo las notas de `P.9.1` (correccion declarada
+del 26 ago 2026, texto viejo intacto al lado): *"no es lo mismo que el
+companero de A caiga en el `eliminar` de una FUSION que en los `nodos` de un
+RENOMBRE_CON_ALIAS. Una fusion ya declara superviviente: si el extremo
+escrito no es el condenado, el extremo escrito esta a salvo y la arista SE
+QUEDA (filas 2, 3 y 4). Un renombre no mata a nadie y no declara ganador:
+cual de los dos gemelos vivira sigue abierto, asi que la arista escrita sobre
+cualquiera de los dos SE MUEVE y espera (fila 11). Y cuando el archivo remite
+la familia a mesa, manda la mesa (fila 6, puesto 460)."* **Las once
+disposiciones de la vuelta 78 no cambian**: solo se corrige el criterio
+publicado.
 
-**LA TABLA SE CUENTA DE SU FICHERO.** Script
-`scripts/loop/vuelta78_tarea13_treinta.py`, que importa `PARES_SANOS` y
-`PARES_DESCARTADOS` directo de `scripts/loop/vuelta77_tramo3_escribir.py`
-(sin retranscribir la lista de 30 a mano). Salida completa en
-`docs/loop/SALIDA_V78_TAREA13_TREINTA.txt`:
+### 1.3. Las cinco adjudicaciones del auditor, registradas sin remedirlas
 
-| forma de emparejar | cuantos de 30 (contado del fichero) |
-|---|---:|
-| **sin direccion (como lee el cribado)** | **7** |
-| solo direccion madre a hijo | **6** |
-| clase A entre los siete | **0** |
+De la seccion 5 del acta 78 (cita como fuente, no se vuelve a medir):
 
-Los siete: puestos_intra **1369, 2464, 1951, 2826, 223, 1746 y 2583**,
-**los siete clase D**: ninguna arista revertida por esta via. **Coincide
-al digito con la medicion del auditor** (acta 77, seccion 4.1).
-
-**Texto viejo (reporte de la vuelta 77, seccion 3.3), citado sin
-reescribir:** *"Cruzados los 30 [...] 4 de 30 tenian veredicto propio, los
-4 clase D"*. **CORRECCION DECLARADA: son 7 sin direccion, 6 en direccion
-madre-hijo, no 4.**
-
-### 1.4. Correccion declarada: la etiqueta de "fusiones de fase 06"
-
-**LA TABLA SE CUENTA DE SU FICHERO.** Verificado sobre
-`docs/plan/OPERACIONES.jsonl` (`SALIDA_V78_TAREA14_FASE_OPS.txt`):
-
-| operacion | `fase` en su ficha |
-|---|---|
-| `OP-M-01-FUSION` | `03_FUSIONES` |
-| `OP-M-02-PROG` | `03_FUSIONES` |
-| `OP-M-03-II` | `03_FUSIONES` |
-| `OP-M-03-III` | `03_FUSIONES` |
-| `OP-M-05-APERTURA` | `03_FUSIONES` |
-| `OP-M-05-EDIFICIO` | `03_FUSIONES` |
-| `OP-M-05-INDICE` | `03_FUSIONES` |
-
-**Las siete llevan `fase` = `03_FUSIONES`.** Verificado tambien contra
-`docs/plan/03_FUSIONES.md` linea 9246 ("SEIS FUSIONES ENRUTADAS a la fase
-06": `OP-M-01-FUSION`, `OP-M-02-ACCLIMATE`, `OP-M-03-III`,
-`OP-M-05-INDICE`, `OP-M-05-EDIFICIO`, `OP-M-05-APERTURA`): **`OP-M-02-PROG`
-y `OP-M-03-II` no estan en esa lista de seis.**
-
-**Texto viejo (reporte de la vuelta 77, seccion 3.2), citado sin
-reescribir:** *"de esos, por las fusiones de fase 06 (via
-eliminar/superviviente, filtro viejo) | 15"*. **CORRECCION DECLARADA: el
-conteo de 15 es correcto; la etiqueta "fusiones de fase 06" no lo es para
-las siete operaciones, que llevan fase 03_FUSIONES en su ficha, y dos de
-ellas ni siquiera estan entre las seis remitidas a la fase 06.**
-
-### 1.5. Tercer caso de EL TOQUE UNICO (banco 9.4): 2 ids de gates remitidos a `OP-M-01-FUSION`
-
-**Medido por el auditor** (acta 77, seccion 5 punto 9) **y verificado de
-nuevo por corrida propia** (script
-`scripts/loop/vuelta78_tarea15_toque_unico.py`, salida
-`docs/loop/SALIDA_V78_TAREA15_TOQUE_UNICO.txt`):
-
-| | |
-|---|---|
-| overlap `OP-M-01-FUSION.eliminar` x `OP-S-09.nodos` | `estructura_de_gates`, `estructura_gates` |
-| `OP-M-01-FUSION` | fase `03_FUSIONES`, orden **5** |
-| `OP-S-09` | fase `05_SANEO`, orden **8** (corre despues) |
-
-`OP-M-01-FUSION` corre antes: el mismo caso que `05_SANEO.md` ya aplica a
-`OP-S-01` y `OP-S-04` (banco 9.4, EL TOQUE UNICO). **Declarado como tercer
-caso** en `docs/plan/05_SANEO.md` (tabla de EL TOQUE UNICO y nota bajo la
-seccion de `OP-S-09`, texto viejo intacto). Los dos ids forman por si
-solos la familia `[PARTICULAS]` de la nomina de la vuelta 77: al
-remitirlos, la familia desaparece entera.
-
-**RE-MEDIDO, LA TABLA SE CUENTA DE SU FICHERO:**
-
-| | vuelta 77 | vuelta 78, tras el toque unico |
-|---|---:|---:|
-| ids en `OP-S-09.nodos` | 69 | **67** |
-| familias | 29 | **28** (la familia `[PARTICULAS]` desaparece entera) |
-
-Escrito en `docs/plan/OPERACIONES.jsonl` (script
-`scripts/loop/vuelta78_tarea15_escribir_toque_unico.py`, correccion
-declarada anadida a `nota`, `adjudicacion` y `evidencia`, texto viejo
-intacto).
+1. **D1** (`diferencia_iso9001_iso9004 -> trilogia_de_juran`): **la arista se
+   queda**, por banco 9.6.2. Cerrado.
+2. **D2** (`conformidad_comercio_internacional -> sistema_gestion_calidad`):
+   **se queda**, por banco 9.6.2, con el lado flojo declarado. Cerrado.
+3. **D3**: **no es sobre-conexion por termino generico**; tres de las cuatro
+   se quedan; la cuarta (`extraer_priorizar_hipotesis ->
+   value_proposition_startup`) fue a relectura conjunta. **Resuelta en la
+   TAREA 3.1 de este reporte: se revierte.**
+4. **D4**: **las once disposiciones se confirman una a una.** El criterio
+   publicado se corrigio en 1.2.
+5. **D5** (`requisitos_numericos_calidad_lotes ->
+   critica_acceptable_quality_level`): **la abstencion se confirma y el
+   PENDIENTE DE DOCTRINA queda DISUELTO por cita** de banco 9.6.2 (el hijo no
+   ejecuta el paso de la madre: lo deroga) y banco 9.6.3 (procedimiento en
+   los dos lados, par sano, caminos distintos). **No queda ninguna doctrina
+   nueva pendiente por este par.** El pendiente que la seccion 7 del reporte
+   de la vuelta 78 declaraba queda cerrado aqui, sin texto nuevo que
+   inventar: es exactamente la cita del auditor.
 
 ---
 
-## 2. TAREA 2: LA RELECTURA AL DOBLE DEL TRAMO 3 (credito rebajado)
+## 2. TAREA 2 BLOQUEANTE: LA ESCALADA AUTOMATICA DEL TALLADOR A LA FASE 04
 
-**La vara**: cruzar las 28 aristas del tramo 3 (vuelta 77) contra
-`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` y publicar, par a par, si el cribado
-ya habia leido ese par y con que clase. Script
-`scripts/loop/vuelta78_tarea2_relectura_doble_tramo3.py` (importa
-`PARES_SANOS` directo de `scripts/loop/vuelta77_tramo3_escribir.py`, sin
-retranscribir la lista). **LA TABLA SE CUENTA DE SU FICHERO**, salida
-completa en `docs/loop/SALIDA_V78_TAREA2_RELECTURA_DOBLE_TRAMO3.txt`:
+Disparada por la condicion escrita del fundador (racha de reporte en DOS),
+no por decision propia. `scripts/loop/tallar_cabecera_reporte.py` ganó un
+modo `--fase04` que talla la cabecera de la fase de ENLACES (apertura y
+cierre por separado) leyendo `SALIDA_V<N>_GATE0_CMD1_*` (censo y las tres
+comprobaciones de Gate 0), `SALIDA_V<N>_CONTEO_*` (las cuatro cifras de
+aristas), `SALIDA_V<N>_MOTOR_*`, `SALIDA_V<N>_WEB_*`, `SALIDA_V<N>_TSC_*`, y
+`SALIDA_V<N>_MARCADOR_*` **solo si la vuelta lo produce** (fila opcional, sin
+la cual el tallador no cae en rojo).
+
+**Mecanica de rojo, probada**: `python scripts/loop/tallar_cabecera_reporte.py
+--fase04 --vuelta 999` (vuelta inexistente) cae en ROJO citando cada celda
+que no se pudo leer, exit code 1, sin escribir tabla.
+
+**`--comparar` funcional en fase04, probado con un sanity check propio**: se
+tallo la cabecera de la vuelta 78 con `--fase04`, se pego en un fichero de
+prueba, y `--comparar` contra si misma dio "CABECERA: IDENTICA AL TALLADOR"
+(0 distintas, 0 ausentes); se inyecto una diferencia (`25/25` por `24/25` en
+motor) y `--comparar` la nombro exacta: `DISTINTA | motor | apertura`, exit
+code 1. El sanity check no se dejo en el repo (era un fichero temporal fuera
+de convencion de nombre); el comando y su resultado quedan citados aqui para
+que se puedan reproducir.
+
+**CASO POSITIVO OBLIGATORIO con la vuelta 78**, script
+`scripts/loop/vuelta79_tarea2_caso_positivo.py`, salida en
+`docs/loop/SALIDA_V79_TAREA2_CASO_POSITIVO_TALLADOR.txt`: talla la cabecera
+de la vuelta 78 con sus `SALIDA_V78_*` ya en el repo y coteja, **cifra por
+cifra** (no por prosa: el reporte archivado en `0ea71f3a` teclea en dos
+tablas de PROSA de dos columnas, no en la tabla limpia de tres columnas que
+el tallador imprime, asi que `--comparar` no aplica aqui por choque de
+FORMA, no de DATO; el script hace el cotejo de dato que el encargo pide,
+leyendo el texto exacto del archivado). **Las 25 cifras cotejadas (censo,
+las ocho de aristas, motor, web, tsc y Gate 0 en los dos lados, mas las
+cinco del marcador de cierre) dan IGUALES.** Las unicas diferencias
+literales de texto (p. ej. `"1.030 passed, 3 skipped (1.033)"` del tallador
+contra `"1.030 pasadas, 3 saltadas"` del reporte viejo) son de PALABRA, no de
+CIFRA: el tallador cita el instrumento en su idioma original (vitest en
+ingles); el reporte viejo lo parafraseaba. Declarado, no oculto.
+
+**Usado en el propio reporte de esta vuelta**: la cabecera de la seccion
+"LA CABECERA DE ABAJO ESTA TALLADA" arriba sale integra de `python
+scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 79`
+(`docs/loop/SALIDA_V79_TALLADOR_FASE04.txt`).
+
+**Gate 0 con su ciclo de tres, motor, web y tsc en verde ANTES de pasar a la
+TAREA 3**: medido con la apertura de esta vuelta (seccion 5, columna
+apertura), sin una sola operacion de codigo todavia.
+
+---
+
+## 3. TAREA 3: LA RELECTURA CONJUNTA Y LA RELECTURA AL DOBLE DEL TRAMO 4
+
+### 3.1. Relectura conjunta: `extraer_priorizar_hipotesis -> value_proposition_startup`
+
+**Verificado contra el grafo esta vuelta** (`dataset/nodos/*.json`): el paso
+1 de la madre dice *"Lista todo lo que tiene que ser cierto sobre tu modelo
+de negocio, tu propuesta de valor y tu cliente"*. **La accion del paso es
+LISTAR**; la propuesta de valor es uno de los tres objetos que se listan, no
+la accion. El resumen de la propia madre lo confirma sin ambiguedad: *"A
+partir de tu mapa de propuesta de valor y tu modelo de negocio, identifica
+todas las suposiciones..."*, es decir que la propuesta de valor es **insumo
+previo** a este paso, no su resultado. El hijo (identificar problemas del
+segmento, definir caracteristicas que los resuelven, verificar el encaje)
+**no ejecuta "listar hipotesis": la precede.**
+
+**DECISION: SE REVIERTE.** El caso del auditor (acta 78, seccion 3 D3) se
+confirma contra el grafo. Contraste con la hermana que si pasa la vara en el
+mismo hub, `etapa_build_business_case` (paso 1 *"Definir el mercado
+objetivo, posicionamiento y propuesta de valor del producto"*): ahi la
+accion del paso ES definir la propuesta de valor; aqui la accion es listar
+hipotesis sobre tres objetos distintos. Reversion simetrizada en las dos
+vistas (`scripts/loop/vuelta79_tarea31_relectura_conjunta.py`,
+`docs/loop/SALIDA_V79_TAREA31_REVERSION.txt`), confirmada tras el ciclo de
+Gate 0 que no reaparece (`docs/loop/SALIDA_V79_GATE0_CMD1_TRAS31.txt`).
+Correccion declarada en `docs/plan/04_ENLACES.md`, bajo `OP-E-01`, texto
+viejo intacto. **Las otras tres del mismo hub
+(`actualizar_business_model_canvas_tuneup`, `etapa_build_business_case`,
+`ventaja_competitiva_producto`) no se tocan**: ya fueron confirmadas en el
+acta de la vuelta 78.
+
+**TROPIEZO PROPIO declarado**: al verificar esta reversion corri Gate 0 CMD1
+una segunda vez tras CMD2/CMD3 "para reverificar", reproduciendo el mismo
+tropiezo de divergencia de `etiqueta_arbol` que la vuelta 78 documento
+(`docs/loop/SALIDA_V79_TROPIEZO_CICLO_TRAS31.txt`). Corregido restaurando
+los artefactos compilados con `git checkout` y corriendo el ciclo de tres
+una vez cada comando, en orden, sin re-verificacion. **Leccion aplicada el
+resto de esta vuelta**: el ciclo de tres se corre EXACTAMENTE una vez cada
+comando; la confirmacion se lee del resultado de esa corrida o de `git
+status`, nunca de una segunda corrida de CMD1.
+
+### 3.2. Relectura al doble del tramo 4 (24 aristas), por el credito rebajado
+
+El credito de la tanda quedo rebajado porque el hallazgo del par en dos
+direcciones (TAREA 4 del encargo) aparecio fuera de los discutibles
+marcados. Por `AUDITOR.md` seccion 1.2, el tramo 4 se releyo al doble, en
+dos barridos (`scripts/loop/vuelta79_tarea32_relectura_doble_tramo4.py`,
+salida completa en
+`docs/loop/SALIDA_V79_TAREA32_RELECTURA_DOBLE_TRAMO4.txt`):
+
+**Barrido 1, contra `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, sin direccion:**
 
 | | contado del fichero |
 |---|---:|
-| pares del tramo 3 | 28 |
-| **LEIDOS por el cribado** | **6** |
-| **NUNCA LEIDOS por el cribado** | **22** |
-| clase D (de los leidos) | 6 |
-| clase A (de los leidos) | **0** |
-| **A REVERTIR (clase A y escrito como enlace)** | **0** |
+| aristas del tramo 4 | 24 |
+| **LEIDAS por el cribado** | **1** |
+| clase A (de las leidas) | 0 |
+| **A REVERTIR** | **0** |
 
-Los 6 pares leidos: puestos_intra 2826, 2464, 223, 1369, 1746, 1951,
-**todos clase D**. **Coincide al digito con la medicion del auditor** (acta
-77, seccion 2: "TRAMO 3 (28 aristas de esta vuelta): 6 leidos por el
-cribado, clase A 0"). **Cero reversiones: las 28 aristas del tramo 3 se
-sostienen.**
+La unica leida: `sujetos_de_control -> key_process_product_characteristics`,
+puesto 3205, clase D. **Declaracion sobre el numero, no discrepancia con el
+auditor**: el encargo cita *"2 de las 30 leidas (3205 D y 637 B)"*, que es la
+cifra correcta para el conjunto de **30** (24 escritas mas las 6 no
+escritas del tramo 4): el puesto 637
+(`equipo_customer_development -> customer_development_team`) pertenece a las
+6 NO escritas, fuera de esta vara de 24. Sobre las 24 escritas
+especificamente, que es lo que este punto pide cruzar, **1 de 24** es la
+cifra que da la corrida.
+
+**Barrido 2, contra la bolsa filtrada de 191 filas de la vuelta 78, buscando
+la reciproca:**
+
+| | contado del fichero |
+|---|---:|
+| de las 24, con reciproca propuesta en la bolsa y no leida | **1** |
+
+La unica: `necesidades_reales_vs_declaradas -> descubrir_necesidades_del_cliente`
+(fila 1 de 191), con su reciproca en la fila 46. **Coincide al digito con el
+hallazgo del auditor** (acta 78, seccion 4). Ya esta adjudicada por el
+auditor y no se toca: la arista se queda como esta escrita (banco 9.6.2, la
+madre conserva materia propia que el hijo no toca).
+
+**Resultado de la relectura al doble: cero reversiones. Las 24 aristas del
+tramo 4 se sostienen** (menos la de la TAREA 3.1, que no forma parte de esta
+vara: se revirtio por relectura conjunta de un discutible marcado, no por
+esta vara de credito).
 
 ---
 
-## 3. TAREA 3: LA RELECTURA CONJUNTA DE LAS ONCE ARISTAS QUE LA VARA DE LOS VEREDICTOS A TOCA
+## 4. TAREA 4: LA GUARDA DEL PAR NO DIRIGIDO
 
-### 3.1. El filtro `P.9.1` ensanchado con la vara de los veredictos A
+Adjudicada por cita del banco 9.6.2 y de `AUDITOR.md` seccion 3, **sin
+doctrina nueva**. El hallazgo del auditor (acta 78, seccion 4): la bolsa
+filtrada de la vuelta 78 traia el mismo par dos veces, una en cada
+direccion, y el campo `arista` del calibrador no tiene direccion, asi que
+escribir un sentido resolvia el otro sin que nadie lo mirara.
 
-**Adjudicado por el auditor por cita, sin doctrina nueva** (acta 77,
-seccion 3 D4 y seccion 5 punto 5): `P.9` punto 1 (los enlaces corren
-DESPUES de las fusiones que tocan sus destinos), `P.9` punto 2 (el id
-escrito es el que estara vivo) y `AUDITOR.md` seccion 0 punto 3
-(`INTRA_DOMINIO_VEREDICTOS.jsonl` es fuente de verdad). Un veredicto A es
-una fusion que el plan aun no ha citado con una operacion.
+**LA GUARDA**: antes de leer, la bolsa filtrada se agrupa por **par NO
+DIRIGIDO**; cuando el mismo par aparece en las dos direcciones, las dos
+filas se leen juntas y la direccion se decide con 9.6.2 explicitamente, con
+la opcion descartada nombrada; la fila hermana no cuenta como candidato
+aparte. Implementada en `scripts/loop/vuelta79_guarda_par_no_dirigido.py`.
 
-Script `scripts/loop/vuelta78_filtro_p91_vara_a.py`: aparta el candidato
-cuyo extremo (madre o hijo) participe en un veredicto clase A donde los
-DOS nodos del par esten vivos hoy, ademas de lo que ya apartaba el filtro
-de la vuelta 77 (`eliminar`, `superviviente`, `nodos` de
-`RENOMBRE_CON_ALIAS`). **Caso positivo con datos SINTETICOS** (no tocan el
-grafo real), salida en
-`docs/loop/SALIDA_V78_FILTRO_P91_VARA_A_CASO_POSITIVO.txt`: confirma que
-la vara aparta por madre y por hijo, en las dos direcciones, que un A con
-un extremo ya deprecado NO aparta nada (ya resuelto por otra via), y que
-el caso clasico de `FUSION` sigue apartando igual (no rompe lo viejo).
+**CASO POSITIVO OBLIGATORIO, con datos sinteticos**, salida en
+`docs/loop/SALIDA_V79_TAREA4_GUARDA_CASO_POSITIVO.txt`: de 5 filas
+sinteticas, agrupa el par `alfa<->beta` (propuesto en las dos direcciones)
+como UNA pareja; deja suelto el candidato normal `gamma -> delta` (una sola
+direccion); **y no produce falso positivo** con `epsilon -> zeta` y
+`zeta -> eta` (comparten el nodo `zeta` pero con companeros distintos: NO
+son el mismo par no dirigido, y la guarda los deja sueltos correctamente).
+Candidatos tras la guarda: 4 (1 pareja + 3 sueltas), no 5. **Los cuatro
+chequeos del caso positivo dan OK.**
 
-**Verificado contra el grafo real, mismo fichero de salida:**
+Documentado en `docs/plan/04_ENLACES.md`, bajo las notas de `P.9.1`. **La
+direccion de la fila 1 (`necesidades_reales_vs_declaradas ->
+descubrir_necesidades_del_cliente`) ya esta adjudicada por el auditor y NO
+se toca** (seccion 3.2 arriba).
 
-| | |
-|---|---:|
-| veredictos clase A en el archivo | **551** |
-| nodos VIVOS que participan en al menos un A con otro nodo VIVO | **187** |
-
-**Coincide al digito con la medicion del auditor** (acta 77, seccion 3,
-`_auditor_v77_guardaA.txt`). Correccion declarada equivalente en
-`docs/plan/04_ENLACES.md` (bajo las notas de `P.9.1` de las vueltas 76 y
-77, texto viejo intacto) y linea nueva anadida al array `verificacion` de
-`OP-E-01` en `OPERACIONES.jsonl` (script
-`scripts/loop/vuelta78_ensanchar_verificacion_ope01.py`, sin tocar ninguna
-linea vieja).
-
-### 3.2. Las once aristas, verificadas una a una y decididas par a par
-
-Dossier completo (veredicto propio, cobertura por operacion, estado
-vivo/deprecado de cada extremo y companero) en
-`docs/loop/SALIDA_V78_TAREA3_DOSSIER_ONCE.txt`. **Criterio aplicado, uno
-solo para las once, citado por `P.9` puntos 1 y 2, sin doctrina nueva**: si
-el extremo ESCRITO en la arista (no su companero de A) esta condenado por
-una operacion sin ser su superviviente, la arista SE MUEVE; si el extremo
-escrito ES el superviviente declarado, o si ninguna operacion condena al
-extremo escrito, la arista SE QUEDA con la razon puesta.
-
-**LA TABLA SE CUENTA DE SU FICHERO**, decision completa en
-`docs/loop/SALIDA_V78_TAREA32_DECISION_ONCE.txt`:
-
-| # | arista | decision | razon corta |
-|---:|---|:---:|---|
-| 1 | `concepto_proyecto_breakthrough -> pocos_vitales_muchos_utiles` | **QUEDA** | ni madre ni hijo condenados; el propio cribado dice "el acto es POR ELEGIR" |
-| 2 | `customer_validation -> mvp_alta_fidelidad` | **QUEDA** | la madre ES el `superviviente` declarado de `OP-M-05-APERTURA` (P.9 punto 2) |
-| 3 | `customer_validation -> prueba_mvp_alta_fidelidad` | **QUEDA** | mismo caso: madre superviviente de `OP-M-05-APERTURA` |
-| 4 | `earlyvangelists_ventas_tempranas -> value_proposition_startup` | **QUEDA** | ni madre ni hijo condenados; el companero condenado no es parte de esta arista |
-| 5 | `ecuacion_de_valor_cliente -> preguntas_need_payoff` | **QUEDA** | los tres companeros de A sin operacion |
-| 6 | `estrategia_de_innovacion_arenas -> product_roadmap_estrategico` | **QUEDA** | la madre no esta condenada; el cribado remite esta familia de 6 "a mesa", no a `OP-S-09` |
-| 7 | `franquicia_unidad_individual -> programa_de_referidos_de_franquiciados` | **QUEDA** | ni madre ni hijo condenados |
-| 8 | `funnel_get_customers_optimizacion -> disenar_tests_pass_fail` | **QUEDA** | ni madre ni hijo condenados |
-| 9 | `screening_mercados_potenciales -> uso_del_us_commercial_service` | **QUEDA** | ni madre ni hijo condenados; un companero ya deprecado (A ya resuelta) |
-| 10 | `testing_process_completo -> value_proposition_canvas` | **QUEDA** | ni madre ni hijo condenados; un companero ya deprecado |
-| 11 | `waterfall_vs_agile_development -> desarrollo_de_clientes_customer_development` | **SE MUEVE (revertida)** | el hijo tiene A vivo (puesto 1052) con `customer_development_modelo`, YA en la nomina de `OP-S-09`; el hijo mismo no esta en esa nomina (sinonimo puro no detectado) |
-
-**RESULTADO: 10 se quedan, 1 se revierte.**
-
-**TROPIEZO PROPIO, cazado y corregido antes de publicar cifra.** El primer
-intento de revertir la arista 11 solo quito
-`desarrollo_de_clientes_customer_development` de
-`nodos_siguientes` de la madre. Tras correr el ciclo de Gate 0, la arista
-**reaparecio sola**: `scripts/run_phase1.py` paso 5 (simetrizacion)
-reciproca cualquier arista declarada por CUALQUIERA de los dos extremos, y
-el hijo seguia declarandola en su propio `nodos_previos`. Corregido
-quitando las DOS vistas a la vez (script
-`scripts/loop/vuelta78_tarea32_decision_once.py`, version final); verificado
-tras el ciclo de Gate 0 que la arista no vuelve (`SALIDA_V78_GATE0_CMD1_TRAS32.txt`
-a `_CMD3_`).
-
-### 3.3. Cuantas de la fase 04 quedan tocadas por la vara, tras la decision
-
-**LA TABLA SE CUENTA DE SU FICHERO**, script
-`scripts/loop/vuelta78_tarea33_fase04_tras_decision.py`, salida en
-`docs/loop/SALIDA_V78_TAREA33_FASE04_TRAS_DECISION.txt`:
-
-| | |
-|---|---:|
-| aristas de la fase 04 (HOY menos `62d4f28e`) | **79** |
-| de esas, tocadas por la vara de los A (tras la decision de 3.2) | **10** |
-
-Las diez son las que la tabla de 3.2 marca "QUEDA": se quedan tocadas
-porque ninguna operacion condena a su extremo escrito, no porque el
-hallazgo se ignore; quedan como observacion para cuando la operacion que
-las cubra se escriba.
+**Corrida sobre la bolsa real de esta vuelta (TAREA 5): 0 parejas
+detectadas** (`docs/loop/SALIDA_V79_TRAMO5_FILTRO_P91_GUARDA.txt`) — caso
+normal, la guarda no rompe nada y confirma que no hay un segundo par en dos
+direcciones esta vez.
 
 ---
 
-## 4. TAREA 4: EL TRAMO 4 DE `OP-E-01`
+## 5. TAREA 5: EL TRAMO 5 DE `OP-E-01`
 
-Corrido porque las TAREA 1, 2 y 3 cerraron en verde (Gate 0 OK, motor
-25/25, web 1030/3, tsc limpio en cada tramo intermedio).
+Corrido porque TAREA 1 a 4 cerraron en verde (Gate 0 OK, motor 25/25, web
+1.030/3, tsc limpio en cada tramo intermedio).
 
-### 4.1. Bolsa recalibrada FRESCA (el grafo se movio con 1.2 y 3.2)
+### 5.1. Bolsa recalibrada FRESCA
 
 Corrida: `python scripts/plan/paso_contra_nodo_calibrado.py --umbral-titulo
-72 --umbral-contencion 0.45 --min-tokens 4` (mismos umbrales, sin tocar,
-corrida DESPUES de escribir la arista de 1.2 y de revertir la de 3.2).
-**LA TABLA SE CUENTA DE SU FICHERO**, salida en
-`docs/loop/SALIDA_V78_CALIBRADO_FRESCO.txt`:
+72 --umbral-contencion 0.45 --min-tokens 4` (mismos umbrales, sobre el grafo
+YA movido por 1.2 y 3.1). `docs/plan/PASO_NODO_CALIBRADO.jsonl` sellado
+antes y **restaurado despues** de la corrida
+(`docs/loop/SALIDA_V79_CALIBRADO_FRESCO.txt`):
 
-| | vuelta 77, DESPUES del tramo 3 (283 sin arista, medido por el auditor en su acta seccion 1.5, "283 = 311 menos las 28 escritas") | **vuelta 78, esta vuelta** |
+| | vuelta 78, tras el tramo 4 (auditor, seccion 1.6 del acta) | **vuelta 79, esta vuelta** |
 |---|---:|---:|
 | candidatos brutos | 590 | **590** |
 | bolsa reducida | 468 | **468** |
-| **sin arista** | 283 | **283** |
+| **sin arista** | 258 | **259** |
 
-**SIN CAMBIO, y verificado por que**: el par de TAREA 1.2
-(`mejora_calidad_crosby -> programa_mejora_calidad_14_pasos`) SI estaba en
-la bolsa del calibrador y al escribirlo salio de "sin arista" (-1); el par
-de TAREA 3.2 (`waterfall_vs_agile_development -> desarrollo_de_clientes_customer_development`)
-tambien esta en la bolsa y al revertirlo volvio a "sin arista" (+1).
-**Los dos movimientos se cancelan**, verificado contra
-`docs/plan/PASO_NODO_CALIBRADO.jsonl` (campo `arista`: `True` para el
-primer par, `False` para el segundo, tras la recalibracion de esta
-vuelta): 283 sigue siendo 283. **CORRECCION DECLARADA sobre mi propio
-primer borrador de esta seccion**: escribi una comparacion contra 311 (que
-es la cifra ANTES del tramo 3, no despues) y una explicacion de "-28" que
-no correspondia a esta vuelta; la cace releyendo el propio texto de la
-acta 77 seccion 1.5 antes de publicar, y la corrijo aqui sin dejar la
-cifra vieja circulando.
+**259, no 258: verificado por que.** La TAREA 3.1 de esta vuelta revirtio
+`extraer_priorizar_hipotesis -> value_proposition_startup`, que SI esta en
+la bolsa del calibrador: al revertirla, vuelve a "sin arista" (+1). 258 + 1
+= 259. **No es discrepancia con el auditor: es el mismo fichero despues de
+un movimiento que el propio encargo de esta vuelta ordeno** (TAREA 3.1).
 
-### 4.2. Filtro `P.9.1` ensanchado con la vara de los A, corrido ANTES de leer nada
+### 5.2. Filtro `P.9.1` ensanchado MAS la guarda del par no dirigido
 
-Script `scripts/loop/vuelta78_tramo4_filtrar.py`. **LA TABLA SE CUENTA DE
-SU FICHERO**, salida en `docs/loop/SALIDA_V78_TRAMO4_FILTRO_P91.txt`:
+Script `scripts/loop/vuelta79_tramo5_filtrar.py`, salida en
+`docs/loop/SALIDA_V79_TRAMO5_FILTRO_P91_GUARDA.txt`:
 
 | | contado del fichero |
 |---|---:|
-| candidatos sin arista | 283 |
+| candidatos sin arista | 259 |
 | **apartados por P.9.1 ensanchado (operaciones + vara de los A)** | **92** |
-| de esos, SOLO por operacion (`eliminar`/`superviviente`/`nodos`) | 35 |
+| de esos, SOLO por operacion | 35 |
 | de esos, con al menos un motivo de la vara de los A | 57 |
-| **limpios tras el filtro** | **191** |
+| **limpios tras P.9.1** | **167** |
+| **parejas detectadas por la guarda del par no dirigido** | **0** |
+| **CANDIDATOS (unidades de lectura) tras la guarda** | **167** |
 
-Bolsa filtrada completa en `docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V78.jsonl`
-(191 filas, orden de archivo, sin sorteo).
+Bolsa filtrada completa en `docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V79.jsonl`
+(167 filas, orden de archivo, sin sorteo).
 
-### 4.3. Lectura de los primeros 30, con el criterio adjudicado
+### 5.3. Lectura de las primeras 30 unidades, con el criterio adjudicado
 
-**Criterio, sin cambio sobre tramos anteriores**: veredicto del cribado
-PRIMERO; el sufijo numerico y el racimo solo opinan cuando NO hay
-veredicto (y ya lo cubre el filtro); cuando el paso que el calibrador
-senala no es el que calza, manda la lectura (adjudicado en el acta 77,
-D1). Dossier completo (resumen, pasos, veredicto y racimo de cada uno de
-los 30) en `docs/loop/SALIDA_V78_TRAMO4_DOSSIER30.txt`.
+Dossier completo en `docs/loop/SALIDA_V79_TRAMO5_DOSSIER30.txt`.
 
-**DOS de los 30 tenian veredicto propio**: puesto_intra **3205**, clase
-**D** (`sujetos_de_control -> key_process_product_characteristics`:
-"ficha nombrada dentro del paso de otro nodo, figura reconocida") y
-puesto_intra **637**, clase **B**
-(`equipo_customer_development -> customer_development_team`: el archivo
-dice, con estas palabras, *"Sin arista entre ellos"*). Los otros 28 sin
-veredicto, decididos por 9.6.2 (contenido).
+**SIETE de las 30 unidades YA ESTABAN DECIDIDAS por vueltas anteriores de
+esta misma campana** (reaparecen en la cabeza de la bolsa porque nunca se
+escribieron y siguen pasando el filtro P.9.1): se citan sin re-derivar.
 
-**LA TABLA SE CUENTA DE SU FICHERO**, salida en
-`docs/loop/SALIDA_V78_TRAMO4_ESCRIBIR.txt`:
+| # | par | decidido en |
+|---:|---|---|
+| 0 | `clasificacion_tipos_activos -> tipos_de_pasivos` | tramo 4, vuelta 78: gemelo estructural falso |
+| 1 | `proceso_llamada_inicial_venta -> proceso_venta_franquicias` | tramo 4, vuelta 78: direccion inversa |
+| 2 | `equipo_customer_development -> customer_development_team` | tramo 4, vuelta 78: veredicto B puesto 637, "sin arista entre ellos" |
+| 3 | `extraer_priorizar_hipotesis -> value_proposition_startup` | TAREA 3.1 de esta vuelta: revertida |
+| 4 | `preparacion_preguntas_problema_precall -> preguntas_situacion` | tramo 4, vuelta 78: hermanas SPIN, no madre-hijo |
+| 5 | `timing_solicitud_referidos -> fase_adopt_ciclo_cliente` | tramo 4, vuelta 78: direccion de generalidad al reves |
+| 6 | `requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level` | D5 disuelto, TAREA 1.3 de esta vuelta: critica, no procedimiento |
 
-| clase | cuantos de 30 | que se hizo |
+**Las 23 restantes son lectura fresca de esta vuelta.** Tres tenian
+veredicto propio del cribado, honrado como manda el criterio adjudicado
+("veredicto del cribado PRIMERO"):
+
+| puesto | par | clase | lo que dice el archivo | decision |
+|---:|---|:---:|---|:---:|
+| 2324 | `identificacion_evaluacion_peligros -> investigacion_incidentes` | D | *"Por la vara, CONTINUA. ARISTA QUE FALTA."* | **SE ENLAZA** |
+| 2097 | `analisis_competencia_franquicias -> posicionamiento_vs_competidores` (mismo par, direccion inversa a la propuesta) | D | *"sin arista entre ellos... CONTINUA en los dos sentidos, banco 9.22: uno junta la municion, el otro dispara"* | **NO SE ENLAZA** |
+| 384 | `mvp_catalogo_tecnicas -> mvp_tipo_video` | D | *"no hay arista entre estos dos, [...] la madre real es producto_minimo_viable"* | **NO SE ENLAZA** |
+
+**El puesto 2324 es el hallazgo de la tanda**: un veredicto CLASE D cuya
+propia razon dice explicitamente que la arista FALTA, es decir que la clase
+D en este cribado no siempre significa "no se enlaza": hay que leer la
+razon, no solo la letra. Los otros 20 se decidieron por 9.6.2 (contenido).
+
+**LA TABLA SE CUENTA DE SU FICHERO**, escritura en
+`docs/loop/SALIDA_V79_TRAMO5_ESCRIBIR.txt`:
+
+| clase | cuantos de las 23 nuevas | que se hizo |
 |---|---:|---|
-| **JERARQUIA SANA (9.6.2)** | **24** | arista escrita en `nodos_siguientes` Y `nodos_previos` (las dos vistas a la vez, leccion de 3.2) |
-| **NO ESCRITOS, con razon** | **6** | sin arista, razon citada abajo |
+| **JERARQUIA SANA (9.6.2)** | **12** | arista escrita en `nodos_siguientes` Y `nodos_previos` a la vez |
+| **NO ESCRITOS, con razon** | **11** | sin arista, razon citada abajo |
 
-**Chequeo de escalera, exacto**, sobre las 24: cero de 24 (contado del
-mismo fichero, seccion "ESCALERA ROTA").
+**Chequeo de escalera, exacto**, sobre las 12: **cero de 12** (contado del
+mismo fichero, seccion "ESCALERA ROTA: 0").
 
-**Los seis no escritos:**
+**Las 12 aristas sanas escritas:**
 
-- `equipo_customer_development -> customer_development_team`: **veredicto
-  propio B, puesto 637**, y el archivo dice con estas palabras "Sin
-  arista entre ellos": comparten el paso de liderar la conversacion con
-  clientes pero cada uno se abre despues por un lado distinto. Se honra
-  el mandato expreso del archivo.
-- `clasificacion_tipos_activos -> tipos_de_pasivos`: el paso senalado
-  clasifica ACTIVOS; el hijo entero es sobre PASIVOS, objeto financiero
-  distinto con estructura de pasos parecida (mismo libro) pero sin
-  relacion de procedimiento. Gemelo estructural falso.
-- `proceso_llamada_inicial_venta -> proceso_venta_franquicias`: el hijo es
-  el proceso de venta ENTERO, mas amplio que la llamada inicial; ningun
-  paso del hijo elabora el paso 6 senalado. La relacion natural, si
-  existe, es la inversa.
-- `preparacion_preguntas_problema_precall -> preguntas_situacion`: dentro
-  de SPIN, Preguntas de Problema y de Situacion son categorias hermanas,
-  no madre e hijo; el paso senalado solo menciona minimizar la otra
-  categoria como beneficio colateral.
-- `timing_solicitud_referidos -> fase_adopt_ciclo_cliente`: el paso
-  senalado nombra la fase Adopt solo como ejemplo parentetico; el
-  contenido del hijo es la fase COMPLETA del ciclo de Coleman, mucho mas
-  amplia que el momento de pedir un referido. Direccion de generalidad al
-  reves.
-- `requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level`:
-  **DISCUTIBLE / PENDIENTE DE DOCTRINA.** El hijo (Crosby) es una CRITICA
-  al uso del AQL que el paso de la madre (Juran) recomienda definir, no
-  un procedimiento de como hacer ese paso: es un contrapunto de otro
-  autor sobre el mismo termino. Ninguna regla escrita dice si una relacion
-  "critica a" cuenta como 9.6.2; por `EJECUTOR.md` regla 5 no paro:
-  registro el criterio mas conservador (no es jerarquia, no se enlaza) y
-  sigo, marcado PENDIENTE DE DOCTRINA.
+1. `uso_inadecuado_computadoras -> causas_comunes_vs_especiales`: paso 3 es
+   la linea (aprender a distinguir causa comun de causa especial); el hijo
+   ES ese procedimiento de deteccion (Deming) con 15 pasos propios.
+2. `producto_mercado_fit_motores -> afinar_motor_crecimiento`: el calibrador
+   senala el paso 1, pero el que calza es el paso 4 (usar la contabilidad de
+   la innovacion para decidir pivote); el hijo ES el segundo paso de esa
+   misma contabilidad de la innovacion, nombrado por su propio resumen.
+3. `planificacion_inicial_calidad -> identificar_caracteristicas_metas_proceso`:
+   paso 2 es la linea (identificar KPCs); el hijo ES ese procedimiento.
+4. `establecimiento_capacidad_proceso -> pruebas_destructivas`: paso 5 es la
+   linea (confirmar control estadistico mediante cartas de control); el
+   hijo especializa esa confirmacion para el caso de pruebas que destruyen
+   la muestra.
+5. `certificacion_de_proveedores -> indice_cpk`: paso 3 es la linea (usar
+   indices de capacidad de proceso en la certificacion); el hijo ES uno de
+   esos indices con procedimiento propio.
+6. `mitigacion_efecto_latigo -> precios_todos_los_dias_bajos`: paso 4 es la
+   linea literal ("everyday low price"); el hijo ES esa politica.
+7. `herramientas_analisis_causa_raiz -> estratificacion_datos`: paso 5
+   nombra la estratificacion explicitamente; el hijo ES esa tecnica.
+8. `identificacion_evaluacion_peligros -> investigacion_incidentes`:
+   veredicto propio, puesto 2324, "ARISTA QUE FALTA" (arriba).
+9. `establecimiento_capacidad_proceso -> control_estadistico_de_procesos`:
+   mismo paso 5 que el par 4, hijo distinto: el metodo GENERAL de SPC (10
+   pasos), frente al caso especializado de pruebas destructivas. Dos hijos
+   legitimos para el mismo paso.
+10. `testear_circulo_cuadrado_rectangulo -> validar_modelo_negocio_hechos`:
+    paso 3 es la linea (validar el modelo de negocio completo, "rectangulo");
+    el hijo ES el procedimiento de convertir el canvas en hechos.
+11. `terminologia_clave_breakthrough -> analisis_sintomas`: paso 2 es la
+    linea (diferenciar sintomas de causas); el hijo profundiza la
+    caracterizacion de sintomas antes de inferir causas.
+12. `mapa_de_canal_de_ventas -> validar_canal_distribucion`: paso 1 es la
+    linea literal (validar un solo canal); el hijo ES ese procedimiento.
 
-**Gate 0 el ciclo entero, tras las 24 escrituras**, salidas en
-`docs/loop/SALIDA_V78_GATE0_CMD1_TRAMO4.txt` (comando 1), `_CMD2_`
-(comando 2) y `_CMD3_` (comando 3): OK, **3.853/3.188/665** (censo
-identico), **0 auto-aristas**, **0 duplicadas de titulo**, **0 nodos
-divergentes**; motor **25/25**; web **80 ficheros, 1.030 pasadas, 3
-saltadas**; tsc **exitcode 0, cero lineas**.
+**Los once no escritos, con razon:**
 
-### 4.4. Discutibles de la lectura, marcados AQUI (antes de saber si aciertan)
+- `hipotesis_relacion_clientes_web -> mvp_alta_fidelidad`: el paso senalado
+  nombra MVP de BAJA fidelidad; el hijo propuesto es de ALTA fidelidad.
+  Mismatch de fidelidad, ningun paso nombra la version alta.
+- `valor_intangible_sostenibilidad -> compromiso_cliente_sostenibilidad`: el
+  paso es sobre metricas de tracking; el hijo es una tactica especifica de
+  campanas digitales. Tematico, no procedimiento del paso.
+- `analisis_valor -> customer_needs_spreadsheet`: el paso exige relacionar
+  COSTOS con necesidades; el hijo nunca toca costos, es otra herramienta
+  (matriz cliente x necesidad de Quality by Design).
+- `posicionamiento_vs_competidores -> analisis_competencia_franquicias`:
+  veredicto propio, puesto 2097, "sin arista entre ellos" (arriba).
+- `organizacion_interna_exportacion -> estructura_plan_exportacion`: el
+  paso es sobre estructura de REPORTE organizacional; el hijo es la
+  estructura de un DOCUMENTO. Coincidencia lexica, significados distintos.
+- `errores_comunes_fundraising -> confidencialidad_nda_adquisicion`: reglas
+  opuestas para escenarios distintos (VC vs M&A): contraste, no jerarquia.
+- `mvp_catalogo_tecnicas -> mvp_tipo_video`: veredicto propio, puesto 384,
+  "no hay arista entre estos dos" (arriba).
+- `reporte_estado_miembro_equipo -> variance_analysis`: el hijo no cabe en
+  un solo paso de la madre (abarca tres a la vez); posible relacion mas
+  ancha o invertida.
+- `evaluacion_actitudes_empleados -> identificar_oportunidades_sostenibilidad`:
+  el paso es sobre reacciones internas de empleados; el hijo es analisis
+  estrategico de mercado externo. Mismatch de objeto.
+- `pre_control_estadistico -> limites_de_especificacion_vs_limites_de_control`:
+  el hijo es una advertencia conceptual contra el TIPO de ajuste que
+  Pre-Control practica: contraste, no procedimiento.
+- `posicionamiento_por_tipo_de_mercado -> resegmentacion_mercado_nicho_bajo_costo`:
+  el paso manda COMUNICAR; el hijo es el trabajo analitico previo a esa
+  comunicacion (identificar, evaluar, definir, mapear). Misma especie que
+  `extraer_priorizar_hipotesis` (TAREA 3.1): el paso nombra el resultado, el
+  hijo hace el trabajo previo, no la accion mandada.
 
-1. **`diferencia_iso9001_iso9004 -> trilogia_de_juran`.** El paso 3 de la
-   madre cita "incorporar metodos de planificacion, control y mejora en
-   todos los procesos" y el hijo ES esos tres metodos (la Trilogia de
-   Juran). A favor: el paso los nombra como la accion a tomar. En contra:
-   la Trilogia es un marco mas fundamental y general que la comparacion
-   de normas ISO que lo cita; podria ser la relacion inversa (la Trilogia
-   es la base, la comparacion ISO una aplicacion). Se escribio igual,
-   marcado para relectura de direccion.
-2. **`conformidad_comercio_internacional -> sistema_gestion_calidad`.**
-   Mismo patron: el paso 4 de la madre dice "unificar el sistema de
-   gestion de calidad", y el hijo ES ese sistema (`sistema_gestion_calidad`)
-   de forma generica y amplia, mas fundamental que la conformidad de
-   comercio internacional que lo nombra. Se escribio igual, marcado para
-   relectura de direccion.
-3. **Los cuatro candidatos hacia `value_proposition_startup`**
-   (`actualizar_business_model_canvas_tuneup`, `etapa_build_business_case`,
-   `extraer_priorizar_hipotesis`, `ventaja_competitiva_producto`).
-   `value_proposition_startup` ya tenia **17 madres y 26 hijos** en el
-   grafo ANTES de esta vuelta (verificado contra
-   `dataset/metadata/master_graph.json`): es un nodo concepto ampliamente
-   citado, y cada una de las cuatro madres nueva menciona "propuesta de
-   valor" en el paso senalado, aunque ninguna dedica el paso ENTERO solo
-   a eso (viene junto a otros elementos: feedback loop, business case,
-   hipotesis, ventaja competitiva). A favor: el patron ya esta establecido
-   en el grafo para este mismo nodo. En contra: es la primera vez en esta
-   campana que CUATRO candidatos de un solo tramo convergen en el mismo
-   hijo hub; vale la pena que el auditor confirme que no es sobre-conexion
-   por termino generico.
-4. **La decision completa de TAREA 3.2** (10 quedan, 1 se revierte),
-   primera vez que esta vuelta revierte una arista por la vara de los A en
-   vez de solo apartar candidatos nuevos. El criterio ("extremo escrito
-   condenado sin ser superviviente") es nuevo en su aplicacion practica,
-   aunque se apoya en reglas ya citadas (`P.9` puntos 1 y 2). Vale relectura
-   completa, no solo del par revertido.
-5. **`requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level`,
-   no escrita, PENDIENTE DE DOCTRINA** (seccion 4.3): la tension entre un
-   paso que recomienda una practica y un hijo que la critica desde otro
-   autor no tiene regla escrita. Se aplico el criterio conservador (no es
-   jerarquia).
+**Gate 0 el ciclo entero, tras las 12 escrituras**
+(`docs/loop/SALIDA_V79_GATE0_CMD1_TRAMO5.txt`, `_CMD2_`, `_CMD3_`): OK,
+3.853/3.188/665, 0 auto-aristas, 0 duplicadas de titulo, 0 divergentes;
+motor **25/25** (`SALIDA_V79_MOTOR_TRAMO5.txt`); web **80/1.030/3**
+(`SALIDA_V79_WEB_TRAMO5.txt`); tsc **exitcode 0, cero lineas**
+(`SALIDA_V79_TSC_TRAMO5.txt`).
+
+### 5.4. Discutibles de la lectura, marcados AQUI antes de saber si aciertan
+
+1. **`uso_inadecuado_computadoras -> causas_comunes_vs_especiales`.** La
+   madre ya tiene OTRO hijo del tramo 4 sobre el mismo paso 3 y el mismo
+   concepto (`causas_especiales_y_comunes_variacion`, via Juran), y existe
+   un TERCER nodo casi identico en el grafo
+   (`causas_comunes_causas_especiales`, ya senalado por Gate 0 como
+   similitud de titulo >=95 contra `causas_comunes_vs_especiales`). El par
+   pasa 9.6.2 solo (cabe entero en el paso, madre conserva materia propia),
+   pero la posible sobre-cobertura del mismo paso con un hijo casi-gemelo de
+   uno ya escrito merece relectura: podria ser que uno de los tres nodos de
+   "causas comunes/especiales" sea un duplicado no detectado que deberia
+   fundirse en vez de acumular madres distintas.
+2. **`producto_mercado_fit_motores -> afinar_motor_crecimiento`.** Escrita
+   bajo el paso 4 (redireccion de paso, acta 77 D1), no el paso 1 que el
+   calibrador senalo. El hijo cubre solo UNO de los tres pasos del framework
+   de "contabilidad de la innovacion" que el paso 4 invoca en bloque
+   (establecer linea base, afinar motor, pivotar o perseverar). Se escribe
+   por el precedente de redireccion, pero la cobertura parcial vale
+   relectura.
+3. **`terminologia_clave_breakthrough -> analisis_sintomas`.** La accion
+   literal del paso 2 es "diferenciar" sintomas de causas; el hijo no hace
+   esa comparacion paso a paso, solo profundiza la caracterizacion del
+   sintoma (frecuencia, severidad, tipo, ubicacion). Direccion floja, mismo
+   patron que los discutibles de `iso9001/iso9004` y
+   `conformidad_comercio_internacional` de la vuelta 78 (D1 y D2, ambos A
+   FAVOR pero con el lado flojo declarado).
+4. **`identificacion_evaluacion_peligros -> investigacion_incidentes`**,
+   puesto 2324. Es la primera vez en esta campana que un veredicto **clase
+   D** se lee como mandato de ENLAZAR (**"ARISTA QUE FALTA"**) en vez de
+   como "no se enlaza". Vale que el auditor confirme que la lectura de la
+   letra de clase contra el texto de la razon es correcta aqui, porque
+   podria sentar un precedente sobre como se lee la clase D en general.
 
 ---
 
-## 5. EL CIERRE, medido AL CIERRE
+## 6. EL CIERRE, medido AL CIERRE
 
-Commit de esta vuelta que cierra TAREA 1 a 4: `2e040cb6` (rama
-`pasada-unica`, push confirmado a `origin/pasada-unica`); este reporte se
-cierra en un commit posterior que solo anade este mismo fichero, sin tocar
-dato ni cifra.
+Commit de esta vuelta que cierra TAREA 1 a 5:
+`2bbb0408` (TAREA 1 y 2), `07324da5` (TAREA 3), `43b02413` (TAREA 4),
+`38ab7b37` (TAREA 5); este reporte se cierra en un commit posterior que solo
+anade este mismo fichero.
+
+La tabla de cabecera de la seccion 0 de arriba **es** la medicion de cierre
+(columna derecha), tallada con `python scripts/loop/tallar_cabecera_reporte.py
+--fase04 --vuelta 79` sobre `SALIDA_V79_*_CIERRE.txt`. Cifras adicionales que
+el tallador de fase04 no cubre, contadas de su fichero:
 
 | | medido con |
 |---|---|
-| grafo: 3.853 nodos, 3.188 vivos, 665 deprecados (sin cambio: la fase 04 no muda ids) | `python scripts/run_phase1.py --reaplico-curaduria`, corrida de cierre (`SALIDA_V78_GATE0_CMD1_CIERRE.txt` a `_CMD3_`) |
-| `nodos_siguientes` | **8.949** (apertura 8.925, mas 1 de TAREA 1.2, menos 1 de TAREA 3.2, mas 24 de TAREA 4: 8.925 + 1 - 1 + 24 = 8.949) |
-| `nodos_previos` | **8.928** (misma aritmetica: 8.904 + 24) |
-| suma | **17.877** |
-| union dirigida unica | **9.572** |
-| Gate 0 | OK, ciclo de tres, auto-aristas 0, duplicadas 0, divergentes 0 |
-| motor | 25/25 (`SALIDA_V78_MOTOR_CIERRE.txt`) |
-| web (corrido desde `web/`) | 80 ficheros, 1.030 pasadas, 3 saltadas (`SALIDA_V78_WEB_CIERRE.txt`) |
-| tsc (corrido desde `web/`) | EXITCODE 0, cero lineas (`SALIDA_V78_TSC_CIERRE.txt`) |
-| marcador del cribado | A 551, B 72, C 5, D 2.760, n 3.388 (sin cambio, `SALIDA_V78_MARCADOR_CIERRE.txt`) |
-| aristas nuevas escritas esta vuelta | 25 (1 de TAREA 1.2, 24 de TAREA 4) |
-| aristas revertidas esta vuelta | 1 (TAREA 3.2: `waterfall_vs_agile_development -> desarrollo_de_clientes_customer_development`) |
-| pares leidos y no enlazados esta vuelta (tramo 4, con razon) | 6 |
+| aristas nuevas escritas esta vuelta | **12** (TAREA 5); **0** de TAREA 1 esta vuelta (TAREA 1 fue registro y correccion de texto, no arista) |
+| aristas revertidas esta vuelta | **1** (TAREA 3.1: `extraer_priorizar_hipotesis -> value_proposition_startup`) |
+| pares leidos y no enlazados esta vuelta (tramo 5, con razon) | **11** |
+| pares ya decididos citados sin re-derivar | **7** |
 | operaciones cerradas esta vuelta | 0 |
-| correcciones declaradas esta vuelta | 5 (1.2, 1.3, 1.4, 1.5, y la reversion de 3.2) |
-| bolsa de `OP-E-01` restante sin leer (filtrada por `P.9.1` ensanchado con la vara de los A, esta vuelta) | **161 de 191** (191 filtrados menos los 30 leidos: 24 escritas mas 6 no escritas) |
+| correcciones declaradas esta vuelta | 3 (1.2, la de TAREA 3.1 en `04_ENLACES.md`, la guarda de TAREA 4) |
+| bolsa de `OP-E-01` restante sin leer (filtrada por P.9.1 ensanchado + guarda, esta vuelta) | **137 de 167** (167 filtrados menos las 30 unidades leidas) |
 
-Verificado con `python docs/loop/_auditor_v77_conteo.py 2e040cb6` que las
-cifras de arriba coinciden con el estado del arbol de trabajo tras el
-cierre (`SALIDA_V78_CONTEO_CIERRE.txt`).
+Verificado con `python docs/loop/_auditor_v78_conteo.py HEAD WORK` que las
+cifras de aristas de la cabecera coinciden con el arbol de trabajo tras el
+cierre (`docs/loop/SALIDA_V79_CONTEO_CIERRE.txt`).
 
----
-
-## 6. LOS DISCUTIBLES MARCADOS, para la relectura ciega del auditor
-
-Los cinco discutibles de la seccion 4.4 (arriba) son los que esta vuelta
-trae para relectura ciega. Los seis discutibles de la vuelta 77 (seccion
-3.4 de su reporte) ya fueron auditados y adjudicados en el acta 77
-(D1 a D6, todos A FAVOR o resueltos), no se repiten aqui.
-
----
-
-## 7. PENDIENTES DE DOCTRINA
-
-**Uno nuevo**, seccion 4.3: ninguna regla escrita dice si una relacion
-"el hijo critica la practica que el paso de la madre recomienda" (distinto
-autor, mismo termino, postura opuesta) cuenta como jerarquia 9.6.2.
-Ejemplar: `requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level`.
-Aplique el criterio conservador (no se enlaza) y lo registro en vez de
-pararme, por `EJECUTOR.md` regla 5.
+**OBSERVACION TECNICA, no bloqueante, declarada para que no se repita sin
+aviso**: durante esta vuelta, correr `run_phase1.py` (Gate 0 CMD1) una
+SEGUNDA vez despues de `etiquetas_de_cara.py`/`sync_assets_web.py` reprodujo
+DOS VECES el mismo tropiezo de divergencia de `etiqueta_arbol` entre
+`dataset/metadata/master_graph.json` y `web/lib/assets/master_graph.json`
+(seccion 3.1 arriba, y de nuevo al intentar medir esta misma seccion de
+cierre). **En al menos una de las dos veces, el propio chequeo interno de
+Gate 0 ("Los dos master_graph dicen lo mismo") reporto 0 divergentes pese a
+que `test_gate_alias.py::test_EL_CATALOGO_REAL_ESTA_LIMPIO` si detectaria la
+divergencia real de contenido si se corriera en ese instante** (no se
+corrio motor en ese instante exacto, asi que esto es una observacion sobre
+el ORDEN de los datos en disco, no una caida confirmada por dos
+instrumentos a la vez). No se investigo mas a fondo por no ser parte del
+encargo; **se marca aqui como discutible tecnico** para que el auditor o una
+vuelta futura decida si Gate 0 necesita el mismo chequeo que
+`test_gate_alias.py` ya tiene.
 
 ---
 
-## 8. LO QUE QUEDA PENDIENTE PARA LA VUELTA SIGUIENTE
+## 7. LOS DISCUTIBLES MARCADOS, para la relectura ciega del auditor
 
-- Continuar `OP-E-01` con un TRAMO 5, recalibrando la bolsa antes de leer
+Los cuatro discutibles de la seccion 5.4 (arriba): el posible near-duplicate
+en `causas_comunes_vs_especiales`, la redireccion de paso parcial en
+`afinar_motor_crecimiento`, la direccion floja en `analisis_sintomas`, y la
+lectura de la clase D como mandato de enlazar en el puesto 2324. Mas la
+observacion tecnica de la seccion 6 sobre el chequeo de divergencia de Gate
+0.
+
+---
+
+## 8. PENDIENTES DE DOCTRINA
+
+**Ninguno nuevo.** El pendiente que la vuelta 78 dejo abierto (D5,
+`requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level`)
+quedo disuelto por cita en la TAREA 1.3 de este reporte (banco 9.6.2 y
+9.6.3), sin doctrina nueva que escribir.
+
+---
+
+## 9. LO QUE QUEDA PENDIENTE PARA LA VUELTA SIGUIENTE
+
+- Continuar `OP-E-01` con un TRAMO 6, recalibrando la bolsa antes de leer
   (regla EL INSTRUMENTO MANDA: no reusar
-  `PASO_NODO_CALIBRADO_FILTRADO_V78.jsonl`, el grafo ya se habra movido
-  otra vez con las 24 aristas de este tramo).
-- El par `PENDIENTE DE DOCTRINA` de 4.3 (seccion 7) espera adjudicacion.
-- Los cinco discutibles de 4.4 esperan la relectura ciega del auditor,
-  especialmente la decision completa de TAREA 3.2 (unica reversion de
-  arista por la vara de los A hecha hasta ahora).
-- Las diez aristas de la fase 04 que la vara de los A sigue tocando
-  (3.3) quedan como observacion, no como parada: ninguna operacion las
-  condena hoy.
+  `PASO_NODO_CALIBRADO_FILTRADO_V79.jsonl`, el grafo ya se habra movido otra
+  vez con las 12 aristas de este tramo), y con la guarda del par no dirigido
+  ya incorporada de forma permanente al flujo de filtrado.
+- Los cuatro discutibles de la seccion 5.4 esperan la relectura ciega del
+  auditor.
+- La observacion tecnica de la seccion 6 (Gate 0 vs `test_gate_alias.py` en
+  el chequeo de divergencia) espera decision: se investiga a fondo o se
+  deja como esta.
 - `OP-E-02` sigue CERRADO (vuelta 76), sin cambio.
 - `OP-E-03` sigue esperando a que `OP-E-01` termine entero.
 - `OP-M-03-ENLACES`, `OP-E-04`, `OP-E-05`, `OP-M-01-ESLABONES` y
   `OP-M-01-SEXTO` siguen esperando a la fase 06 (remision escrita, no se
   tocan).
-- `OP-E-06` y `OP-E-07` siguen libres de bloqueo de dependencia pero
-  esperan su turno en el orden escrito.
+- `OP-E-06` y `OP-E-07` siguen libres de bloqueo de dependencia pero esperan
+  su turno en el orden escrito.
+- Las diez aristas de la fase 04 que la vara de los A sigue tocando (acta
+  78, seccion 1.8) quedan como observacion, no como parada: ninguna
+  operacion las condena hoy.
 
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada (esta
-vuelta: hecho al cierre de este mismo reporte). Cero guiones largos y cero
-guiones medios. El hook corrio en el commit sin saltarse. No se adivino
-nada que no se pudiera medir.
+vuelta: hecho al cierre de cada tramo, y de nuevo al cierre de este mismo
+reporte). Cero guiones largos y cero guiones medios. El hook corrio en cada
+commit sin saltarse. No se adivino nada que no se pudiera medir.
