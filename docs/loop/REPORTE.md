@@ -577,6 +577,11 @@ tramo al cierre** ([`SALIDA_V74_TRAMO_CIERRE.txt`](SALIDA_V74_TRAMO_CIERRE.txt))
 
 ## 16. HASH FINAL Y COMMITS
 
+**LA CADENA ENTERA DE LA VUELTA 74, ESCRITA AQUI POR EL SEXTO COMMIT:** `46aee890` (la apertura),
+`85a83352` (`TAREA 1`), `5a44b1cf` (`TAREA 2`), `36949269` (el cierre y las suites), `97bbddab` (el
+reporte) **y este, que es el que puede escribir el hash del anterior.**
+**`origin/pasada-unica` queda igual a `HEAD` y el arbol limpio de rastreados.**
+
 **Los commits de esta vuelta en `pasada-unica`, en orden:**
 
 | commit | que trae |
@@ -585,7 +590,8 @@ tramo al cierre** ([`SALIDA_V74_TRAMO_CIERRE.txt`](SALIDA_V74_TRAMO_CIERRE.txt))
 | **`85a83352`** | **`TAREA 1` entera**: el registro del acta 73 (`+235`, `0` borradas, 60 agujas, tres negativas de sustancia, idempotencia mordiendo) **mas la REGLA NUEVA de redaccion de las promesas de marcado, con sus tres formas citadas por aguja y no tecleadas** |
 | **`5a44b1cf`** | **`TAREA 2` entera**: el instrumento del peso y su salida, con las dieciseis fichas, los quince declarados por dos vias, los duenos campo a campo, la mesa leida entera y **las seis fusiones pendientes destapadas** |
 | **`36949269`** | **el CIERRE medido al cierre** y las tres suites: cabecera tallada, `Gate 0` con su ciclo de tres, motor, web, `tsc`, barrido, censo y el caso positivo de promesas |
-| **este** | **el reporte**, este fichero |
+| **`97bbddab`** | **el reporte**, este fichero, con la cabecera tallada y cotejada, los trece discutibles, las cinco averias y las tres preguntas |
+| **este** | **la cabecera de esta seccion 16**, con el hash del commit del reporte y la cadena entera |
 
 **El hash final de la vuelta y la cadena entera van escritos en la cabecera de esta seccion por un
 commit posterior**, que es lo que la regla 7 pide y lo que el commit del reporte no puede contener: un
