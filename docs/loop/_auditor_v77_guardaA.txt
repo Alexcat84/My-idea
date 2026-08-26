@@ -1,0 +1,40 @@
+veredictos clase A: 551
+nodos VIVOS que participan en al menos un A con OTRO NODO VIVO: 187
+
+=== TRAMO 3 (28): 6 de 28 aristas con un extremo vivo en un A vivo ===
+  concepto_proyecto_breakthrough -> pocos_vitales_muchos_utiles
+     HIJO en A: [(2575, 'proyectos_vitales_pocos')]
+  ecuacion_de_valor_cliente -> preguntas_need_payoff
+     MADRE en A: [(185, 'ecuacion_de_valor_venta'), (217, 'ecuacion_de_valor'), (1146, 'prevencion_objeciones_vs_manejo')]
+  estrategia_de_innovacion_arenas -> product_roadmap_estrategico
+     MADRE en A: [(207, 'estrategia_de_innovacion_y_tecnologia'), (280, 'seleccion_arenas_estrategicas'), (460, 'estrategia_de_innovacion_de_producto')]
+  franquicia_unidad_individual -> programa_de_referidos_de_franquiciados
+     HIJO en A: [(2127, 'referidos_franquiciados_existentes')]
+  screening_mercados_potenciales -> uso_del_us_commercial_service
+     MADRE en A: [(1966, 'enfoque_paso_a_paso_investigacion_mercado')]
+  waterfall_vs_agile_development -> desarrollo_de_clientes_customer_development
+     HIJO en A: [(1052, 'customer_development_modelo')]
+
+=== FASE 04 ENTERA (79): 11 de 79 aristas con un extremo vivo en un A vivo ===
+  concepto_proyecto_breakthrough -> pocos_vitales_muchos_utiles
+     HIJO en A: [(2575, 'proyectos_vitales_pocos')]
+  customer_validation -> mvp_alta_fidelidad
+     MADRE en A: [(247, 'filosofia_customer_validation'), (709, 'introduccion_validacion_clientes'), (781, 'customer_validation_sell_phase')]
+  customer_validation -> prueba_mvp_alta_fidelidad
+     MADRE en A: [(247, 'filosofia_customer_validation'), (709, 'introduccion_validacion_clientes'), (781, 'customer_validation_sell_phase')]
+  earlyvangelists_ventas_tempranas -> value_proposition_startup
+     MADRE en A: [(1096, 'filosofia_customer_validation')]
+  ecuacion_de_valor_cliente -> preguntas_need_payoff
+     MADRE en A: [(185, 'ecuacion_de_valor_venta'), (217, 'ecuacion_de_valor'), (1146, 'prevencion_objeciones_vs_manejo')]
+  estrategia_de_innovacion_arenas -> product_roadmap_estrategico
+     MADRE en A: [(207, 'estrategia_de_innovacion_y_tecnologia'), (280, 'seleccion_arenas_estrategicas'), (460, 'estrategia_de_innovacion_de_producto')]
+  franquicia_unidad_individual -> programa_de_referidos_de_franquiciados
+     HIJO en A: [(2127, 'referidos_franquiciados_existentes')]
+  funnel_get_customers_optimizacion -> disenar_tests_pass_fail
+     HIJO en A: [(511, 'diseno_experimentos_pass_fail')]
+  screening_mercados_potenciales -> uso_del_us_commercial_service
+     MADRE en A: [(1966, 'enfoque_paso_a_paso_investigacion_mercado')]
+  testing_process_completo -> value_proposition_canvas
+     MADRE en A: [(796, 'design_test_repeat')]
+  waterfall_vs_agile_development -> desarrollo_de_clientes_customer_development
+     HIJO en A: [(1052, 'customer_development_modelo')]

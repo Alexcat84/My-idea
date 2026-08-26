@@ -1,0 +1,50 @@
+### capacidad_proceso_concepto  [quality] deprecado=None
+TITULO: Capacidad de Proceso (Process Capability)
+FUENTE: Juran's Quality Handbook_ The C - Joseph A. Defeo
+RESUMEN: La capacidad de proceso es la variación inherente medida del producto generado por un proceso en estado de control estadístico. Proporciona una predicción cuantificada de la adecuación del proceso, siendo fundamental para predecir variabilidad, elegir procesos, planificar secuencias de procesos, y establecer bases para control periódico y certificación de proveedores.
+PASOS:
+  1. Confirmar que el proceso está en estado de control estadístico (sin causas asignables)
+  2. Definir claramente el proceso: máquina, método, material, personas involucradas
+  3. Recolectar datos representativos de mediciones de producto bajo condiciones estables
+  4. Calcular la desviación estándar del proceso (σ) a partir de datos de control
+  5. Comparar la variación de 6σ contra los límites de especificación
+  6. Utilizar la información resultante para decisiones de diseño, selección de procesos y control
+ENTREGABLE: Informe de capacidad de proceso con distribución de variación cuantificada y su relación con especificaciones
+SIGUIENTES: ['planificacion_estudio_capacidad', 'indice_cp', 'indice_cpk', 'pre_control_estadistico', 'control_estadistico_de_procesos']
+PREVIOS: ['graficos_control_multivariados', 'tolerancia_estadistica_dimensiones_interactuantes', 'funcion_perdida_limites_especificacion', 'limites_especificacion_dimensiones_interactuantes']
+
+### control_estadistico_de_procesos  [quality] deprecado=None
+TITULO: Control Estadístico de Procesos (SPC)
+FUENTE: Juran's Quality Handbook_ The C - Joseph A. Defeo
+RESUMEN: Aplicación de métodos estadísticos, mediante gráficos de control, para medir y analizar la variación de un proceso, distinguiendo entre causas comunes (inherentes, aleatorias) y causas especiales (asignables) de variación, con el objetivo de predecir el desempeño del proceso y reducir la variación de forma continua.
+PASOS:
+  1. Elegir la característica a graficar, priorizando las de alta tasa de defectos
+  2. Identificar variables y condiciones del proceso que contribuyen a la característica final
+  3. Verificar que el sistema de medición tenga precisión y exactitud suficientes
+  4. Determinar el punto más temprano de prueba para detectar causas asignables
+  5. Elegir el tipo de gráfico de control adecuado (variables o atributos)
+  6. Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio
+  7. Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5
+  8. Establecer un sistema simple y confiable de recolección de datos
+  9. Calcular límites de control y definir instrucciones de interpretación y acción
+  10. Graficar los datos e interpretar los resultados
+ENTREGABLE: Gráfico de control implementado con límites calculados, subgrupos racionales definidos y protocolo de interpretación/acción
+SIGUIENTES: ['plan_de_control', 'aim_of_leadership', 'deteccion_de_lideres_y_rezagados', 'deteccion_defectos_raros_control_estadistico', 'graficos_control_defectos_raros', 'mejora_continua_del_proceso', 'pruebas_destructivas', 'punto_equilibrio_calidad_inspeccion', 'gestion_miedo_reportes', 'causas_comunes_vs_especiales']
+PREVIOS: ['histograma', 'analisis_pareto_de_proveedores', 'cuatro_costos_de_calidad', 'plan_de_control', 'mejora_continua_del_sistema', 'error_proofing_servicio', 'costo_de_mala_calidad_copq', 'capacidad_proceso_concepto']
+
+### control_estadistico_del_proceso  [quality] deprecado=None
+TITULO: Control Estadístico del Proceso (SPC)
+FUENTE: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+RESUMEN: Un proceso está en control estadístico cuando su variación proviene únicamente de causas comunes (inherentes al sistema) y no de causas especiales (eventos aislados). Solo cuando un proceso está en control estadístico es posible predecir su comportamiento futuro. Sin este control, la inspección se vuelve la única alternativa, lo cual es costoso y poco confiable, ya que un proceso puede cumplir especificaciones ahora y fallar más tarde sin previo aviso.
+PASOS:
+  1. Recolectar datos secuenciales del proceso (por hora, por lote, etc.)
+  2. Construir gráficos de control (X-barra y R) con los datos
+  3. Identificar y eliminar causas especiales de variación hasta que el proceso muestre estabilidad
+  4. Una vez estable, calcular la capacidad real del proceso
+  5. Aceptar que estar en control no equivale a cumplir especificaciones
+  6. Iniciar intervención en el sistema (cambio de diseño, método, materiales) para reducir el nivel de defectos una vez confirmado el control
+  7. Distinguir entre cambiar el nivel promedio (más simple) y reducir la dispersión (usualmente más difícil)
+ENTREGABLE: Gráfico de control validado que demuestre estabilidad estadística del proceso, con causas especiales documentadas y eliminadas.
+SIGUIENTES: ['capacidad_del_proceso', 'graficos_de_control_uso', 'limites_de_especificacion_vs_limites_de_control', 'estudio_mezclas_multiples_fuentes']
+PREVIOS: ['diseno_de_metodos_de_recoleccion_de_datos', 'muestreo_aleatorio_vs_mecanico', 'distorsion_muestreo_mecanico']
+

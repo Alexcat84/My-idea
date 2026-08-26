@@ -1,0 +1,33 @@
+### lean_launchpad_web_startup_process  [core] deprecado=None
+TITULO: Proceso Lean LaunchPad para Construir un Startup Web
+FUENTE: The Startup Owner's Manual - Blank, Steve
+RESUMEN: Guía paso a paso de 10 pasos para llevar una idea de startup web desde la hipótesis hasta el cobro de dinero, integrando Business Model Canvas y Customer Development. Cubre desde la logística del equipo, la hipótesis de negocio, la propuesta de valor, la construcción de un sitio de baja fidelidad, la adquisición de tráfico, hasta la construcción de una versión de alta fidelidad y el cobro a clientes.
+PASOS:
+  1. Configurar la logística del equipo (blog, comunicación)
+  2. Redactar las hipótesis del modelo de negocio de 9 bloques
+  3. Escribir una propuesta de venta única (Unique Selling Proposition) en formato 'Ayudamos a X a hacer Y haciendo Z'
+  4. Configurar dominio y hosting del sitio web
+  5. Construir un sitio web de baja fidelidad (splash page, formularios de pre-orden)
+  6. Dirigir tráfico de clientes potenciales al sitio para probar segmento y propuesta de valor
+  7. Conectar la interfaz de usuario con el código backend
+  8. Probar el 'problema del cliente' recopilando datos mediante analytics y encuestas
+  9. Construir una versión de alta fidelidad para probar la 'solución'
+  10. Pedir dinero mediante formularios de pre-orden o cobro real
+ENTREGABLE: Sitio web funcional de alta fidelidad con métricas de tráfico, feedback de usuarios y sistema de cobro implementado
+SIGUIENTES: ['customer_creation', 'lienzo_modelo_negocio', 'adaptacion_teorica_del_lean_startup', 'riesgos_lanzamiento_mvp', 'mvp_alta_fidelidad', 'construir_mvp_baja_fidelidad']
+PREVIOS: ['lienzo_modelo_negocio', 'fit_value_proposition', 'unique_selling_proposition_statement']
+
+### construir_mvp_baja_fidelidad  [core] deprecado=None
+TITULO: Construir una versión básica para probar tu idea (MVP de baja fidelidad)
+FUENTE: The Startup Owner's Manual - Steve Blank
+RESUMEN: Una versión básica es una pagina simple o un prototipo sin diseño cuidado que comunica tu propuesta de valor, describe el problema y pide una accion concreta. Te sirve para validar rápido si el problema que quieres resolver le urge de verdad a la gente, antes de gastar tiempo y dinero construyendo el producto real.
+PASOS:
+  1. Crea una pagina simple con tu propuesta de valor y sus beneficios
+  2. Incluye una accion clara para que la persona haga algo: registrarse, responder una encuesta, dejar un preorden
+  3. Suma videos, encuestas o un blog si te ayudan a mostrar la idea
+  4. Prueba varias versiones si quieres testear distintas formas de contar el problema
+  5. Publica lo antes posible sin preocuparte por que se vea perfecto
+ENTREGABLE: Una pagina o prototipo funcionando en línea, listo para recibir visitas y medir el interes real
+SIGUIENTES: ['prueba_mvp_problema_baja_fidelidad', 'concierge_mvp', 'medir_comportamiento_cliente_mvp']
+PREVIOS: ['disenar_tests_pass_fail', 'desirability_feasibility_viability', 'lean_launchpad_web_startup_process']
+
