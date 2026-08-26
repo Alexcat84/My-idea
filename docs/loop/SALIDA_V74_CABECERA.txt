@@ -1,0 +1,38 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 74.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| marcador `A` / `B` / `C` / `D` | 551 / 72 / 5 / 2.760 | **551 / 72 / 5 / 2.760** |
+| `n`, huecos, duplicados | 3.388 / 0 / 0 | **3.388 / 0 / 0** |
+| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.188 / 665 / 17.671 | **3.853 / 3.188 / 665 / 17.671** |
+| retrato: `A` crudas / colapsos / pares distintos | 551 / 376 / 175 | **551 / 376 / 175** |
+| actos (componentes) | 49 | **49** |
+| actos `CERRADOS` / `ABIERTOS` | 26 / 23 | **26 / 23** |
+| nodos en `CERRADOS` / `ABIERTOS` | 61 / 127 | **61 / 127** |
+| cola de costuras | 1.438 | **1.438** |
+| colisiones de clase vigentes | 7 | **7** |
+| auto-pares (los dos lados al mismo vivo) | 286 | **286** |
+| duplicadas historicas: grupos / nodos | 898 / 711 | **898 / 711** |
+| operaciones, estados, dependencias rotas | 71, todas `LISTA`, 0 | **71, todas `LISTA`, 0** |
+| entradas del inventario | 672 | **672** |
+| las cuatro comprobaciones de `08_VERIFICACION` | TODAS OK (188 igual a 188; 175 igual a 175) | **TODAS OK (188 igual a 188; 175 igual a 175)** |
+
+--- LAS CUATRO COMPROBACIONES, CADA LADO DE SU PROPIA SALIDA ---
+
+  APERTURA (SALIDA_V74_RECOMPUTO_APERTURA.txt):
+    i.  nodos en actos 188 == componentes 188
+    ii. A vigentes 175 == aristas A internas 175
+    veredicto: TODAS OK
+  CIERRE   (SALIDA_V74_RECOMPUTO_CIERRE.txt):
+    i.  nodos en actos 188 == componentes 188
+    ii. A vigentes 175 == aristas A internas 175
+    veredicto: TODAS OK
+  AVISO: los dos lados dan la MISMA cifra. Puede ser cierto (vuelta que no
+  movio el retrato), pero es la forma que la caida de la vuelta 56 tenia.
+
+FIN
