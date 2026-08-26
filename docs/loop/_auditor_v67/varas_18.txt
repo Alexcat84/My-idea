@@ -1,0 +1,30 @@
+==============================================================================================================
+VARAS POR FORMA, N-ARIAS, DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO
+  fichero del tramo: docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+==============================================================================================================
+
+  pasos y cond son las varas de CONTENIDO contables; cab es el CABLEADO,
+  que por P.8 solo habla a contenido empatado. La marca < indica que ese
+  miembro es EL UNICO que alcanza el maximo de esa vara, o sea que la vara
+  APUNTA a el. Si dos o mas lo alcanzan, la vara EMPATA y no apunta.
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 18 | 4 miembros | FORMA: EMPATE SIN VARA
+   maximos medidos: pasos 4, condiciones 2, cableado 3
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: EMPATA, no apunta
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      alianzas_cross_industry                                       4      2      3
+      co_opetition_industria                                        4      2      3
+      colaboracion_sectorial                                        4      2      1
+      trabajo_colectivo_estandares_industria                        4      2      2
+
+==============================================================================================================
+  actos mirados: 1 | POR FORMA: {'EMPATE SIN VARA': 1}
+
+LO QUE ESTO NO HACE: no elige superviviente, no aplica la guarda 1B y no funde.
+FIN
