@@ -42,6 +42,23 @@ lo que diga el encargo.
    con el comando citado al lado; LA CELDA QUE NO SALGA DE UN INSTRUMENTO NO
    SE ESCRIBE. Antes del commit, --comparar docs/loop/REPORTE.md tiene que
    dar CABECERA IDENTICA AL TALLADOR, y su salida se cita en el reporte.
+   LA TABLA SE CUENTA DE SU FICHERO (26 ago 2026; motivo: la racha de las
+   vueltas 74, 75 y 76, otra vez frases tecleadas, esta vez DONDE EL
+   TALLADOR DEL CRIBADO NO ALCANZA. El tallador lee salidas de marcador y
+   recomputo, y una fase mecanica no produce ninguna de las dos: desde que
+   el bucle entro al tramo mecanico las cifras del reporte volvieron a
+   teclearse. El ejemplar de la 76: el reporte publica 13 CONFIRMA y 12 DEJA
+   IGUAL de la vara 9.6.1, y su propio fichero de salida, contado, dice 14 y
+   11). TODA TABLA O CIFRA DEL REPORTE CITA EL FICHERO DE SALIDA DEL QUE
+   SALE, Y SE RECONSTRUYE CONTANDO ESE FICHERO ANTES DE PUBLICARLA. Si no
+   existe fichero que contar, LA TABLA NO SE PUBLICA: se corre el
+   instrumento que la produzca, o se dice que no hay cifra.
+   Y LA ESCALADA, escrita para que no haya que volver a pararse a decidirla:
+   SI LA RACHA DE CAIDAS DE REPORTE LLEGA A DOS TANDAS OTRA VEZ, la
+   extension del tallador a las fases mecanicas (toda tabla del reporte
+   tallada de ficheros de salida, como ya se hace con la cabecera del
+   cribado) queda AUTOMATICAMENTE ENCARGADA como operacion de codigo en la
+   vuelta siguiente, SIN esperar parada ni decision nueva del fundador.
 2. EL INSTRUMENTO MANDA (14 ago 2026; motivo: las caidas de las vueltas 15
    y 16 fueron las dos de esta especie). Toda cifra o nombre propio que se
    publique se lee de la salida del instrumento corrido EN ESTA VUELTA. Una

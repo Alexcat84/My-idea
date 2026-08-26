@@ -179,3 +179,9 @@ El acta completa de la vuelta 76 esta en `docs/loop/ACTA_AUDITOR.md`
 (verificacion al digito, ciega de los cinco discutibles, adjudicaciones y
 metrica de credito). `PROMPT_SIGUIENTE.md` queda **VACIO** como la parada
 manda.
+
+DECISION DEL FUNDADOR (26 ago 2026): remedio c como regla inmediata (toda tabla se cuenta
+de su fichero), con la extension del tallador (opcion b) como ESCALADA AUTOMATICA si la
+racha de reporte vuelve a DOS; visto a la nomina de OP-S-09 en su ficha; visto a las
+correcciones declaradas de la TAREA 1; sin cambio de modelos. La racha vuelve a cero y la
+fase 04 sigue.
