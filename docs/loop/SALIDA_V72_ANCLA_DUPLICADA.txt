@@ -1,0 +1,27 @@
+==============================================================================
+DEPURACION DEL ANCLA DUPLICADA DEL BANCO DE RUMBOS (vuelta 72, acta 71 adj. 7)
+==============================================================================
+
+  rumbos leidos del fichero : 49
+  anclas totales (con repeticiones) : 21
+
+  --- CENSO DE ANCLAS REPETIDAS, SOBRE LOS 49 RUMBOS ---
+     rumbos con alguna ancla repetida : 1
+       nucleo_le_sirve_a_todo_el_mundo -> {'segmentos_de_clientes_problema_necesidad': 2}
+          ancla entera: ['segmentos_de_clientes_problema_necesidad', 'segmentos_de_clientes_problema_necesidad']
+
+  el acta 71 nombra : nucleo_le_sirve_a_todo_el_mundo
+  lo medido nombra  : ['nucleo_le_sirve_a_todo_el_mundo']
+  calza exactamente : SI
+
+  la depuracion quita 1 entrada(s) repetida(s) y CERO destinos
+
+GUARDAS TRAS ESCRIBIR
+  rumbos antes 49, despues 49
+  las claves de los 49 rumbos son las MISMAS : OK
+  rumbos con alguna ancla repetida, DESPUES  : 0 OK
+  el CONJUNTO de destinos de cada ancla es el MISMO : OK
+  otros rumbos movidos : 0 OK
+  nucleo_le_sirve_a_todo_el_mundo : 2 anclas antes, 1 despues -> ['segmentos_de_clientes_problema_necesidad']
+
+VERDE

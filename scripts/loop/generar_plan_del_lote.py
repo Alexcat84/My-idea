@@ -68,6 +68,43 @@ leido de la clave del ordinal del propio fichero medido.
      LA ARITMETICA NO SE TOCA: guardas, cobertura, INCISOS, juntura, validacion
      de perdidas y el campo actos del plan salen exactamente igual que antes.
 
+CORRECCION DECLARADA (2026-08-26, vuelta 72, TAREA 1 del encargo, por el MISMO
+carril de correccion declarada sobre instrumento de nombre estable con el que
+este fichero ya se corrigio en la vuelta 63 y en la vuelta 65, y con el que
+vuelta65_colisiones_esperadas.py lleva TRES escalones en su --base; EL TEXTO
+VIEJO SE QUEDA ENTERO, CITADO VERBATIM AQUI Y EN EL SITIO DONDE MUERDE, Y NO SE
+TACHA). ADJUDICADA POR EL ACTA 71 EN SU SECCION 6, ADJUDICACION 6.
+
+  8. EL PREFIJO DEL NOMBRE DEL FICHERO SE DERIVA DE --operacion EN VEZ DE TENER
+     DEFECTO PROPIO OPU01. EL TEXTO VIEJO, VERBATIM, ERAN DOS LINEAS. La de la
+     declaracion del argumento:
+
+         ap.add_argument("--prefijo", default=None,
+                         help="prefijo del plan; por defecto PLAN_V<vuelta>_OPU01_LOTE_")
+
+     y la de su uso dentro de main:
+
+         prefijo = a.prefijo or ("PLAN_V%d_OPU01_LOTE_" % a.vuelta)
+
+     LA EVIDENCIA ES LA AVERIA 7.3 DE LA VUELTA 71, y por eso la correccion no
+     se apoya en una impresion: el ejecutor paso --operacion OP-U-02, el
+     generador lo acepto y sello BIEN el contenido, y aun asi escribio el
+     fichero como PLAN_V71_OPU01_LOTE_G.json, con el nombre de la operacion
+     equivocada dentro del nombre. Un plan cuyo NOMBRE miente sobre su operacion
+     es exactamente la especie de trampa que esta campana caza, y el instrumento
+     no debe poder fabricarla: la vuelta 63 ya hizo --operacion REQUERIDO con
+     estas palabras (un generador de nombre estable que da OP-U-01 por supuesto
+     miente en cuanto se use para otra operacion), y el prefijo quedo fuera de
+     aquella correccion por olvido, no por decision.
+
+     LO QUE CAMBIA Y LO QUE NO. Cambia UNA expresion: el defecto del prefijo sale
+     ahora de a.operacion sin sus guiones. --prefijo SIGUE EXISTIENDO y sigue
+     ganando cuando se pasa, asi que ninguna llamada vieja que lo pase a mano
+     cambia de resultado. LA ARITMETICA NO SE TOCA: guardas, cobertura, INCISOS,
+     juntura, validacion de perdidas, el campo actos y el resto del generador
+     salen exactamente igual que antes; lo unico que se mueve es como se llama el
+     fichero de salida.
+
 CORRECCION DECLARADA (2026-08-20, vuelta 65, TAREA 2 del encargo, por el carril
 del banco 9.10 y por el mismo con el que la vuelta 63 corrigio la cabecera de
 este mismo fichero; EL TEXTO VIEJO SE QUEDA ENTERO EN EL SITIO DONDE MUERDE Y NO
@@ -428,8 +465,13 @@ def main():
                     help="salida del cuadro de varas del tramo")
     ap.add_argument("--colisiones-esperadas", dest="colisiones_esperadas", default=None,
                     help="salida del censo de colisiones esperadas del tramo")
+    # CORRECCION DECLARADA (vuelta 72, acta 71 seccion 6, adjudicacion 6). El
+    # texto viejo de esta llamada, VERBATIM, era:
+    #     ap.add_argument("--prefijo", default=None,
+    #                     help="prefijo del plan; por defecto PLAN_V<vuelta>_OPU01_LOTE_")
     ap.add_argument("--prefijo", default=None,
-                    help="prefijo del plan; por defecto PLAN_V<vuelta>_OPU01_LOTE_")
+                    help="prefijo del plan; por defecto PLAN_V<vuelta>_<OPERACION sin "
+                         "guiones>_LOTE_, derivado de --operacion, que ya es requerido")
     ap.add_argument("--simular", action="store_true")
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
@@ -460,7 +502,13 @@ def main():
               % (a.contenido, a.lote, sorted(lotes)))
         return 1
     lote = lotes[a.lote]
-    prefijo = a.prefijo or ("PLAN_V%d_OPU01_LOTE_" % a.vuelta)
+    # CORRECCION DECLARADA (vuelta 72, acta 71 seccion 6, adjudicacion 6). El
+    # texto viejo de esta linea, VERBATIM, era:
+    #     prefijo = a.prefijo or ("PLAN_V%d_OPU01_LOTE_" % a.vuelta)
+    # El defecto OPU01 no lo elegia nadie: lo heredaba el fichero. Ahora sale de
+    # --operacion, que es REQUERIDO desde la vuelta 63, y --prefijo sigue ganando
+    # cuando se pasa a mano.
+    prefijo = a.prefijo or ("PLAN_V%d_%s_LOTE_" % (a.vuelta, a.operacion.replace("-", "")))
 
     print("=" * 78)
     print("GENERADOR DEL PLAN DEL LOTE %s DEL TRAMO %s (vuelta %d)"
