@@ -150,6 +150,14 @@ FASE III, EJECUCION: SOLO tras cerrar la fase II con Gate 0 verde. Se ejecuta en
   escrito. Las demas condiciones de parada quedan intactas, incluida la
   auditoria integral de cierre antes del merge, que sigue siendo de
   Alexis.
+- CIERRE DE LA FASE 03 (decision del fundador, 21 ago 2026): cuando la
+  fase 03 quede CERRADA Y VERIFICADA (todas sus operaciones con destino,
+  incluidos los actos declarados y no fundidos con su subconjunto
+  resuelto), NO abras la fase 04. Escribe docs/loop/PARA_ALEXIS.md con el
+  cierre medido de la fase 03 y el plan de ataque de las fases mecanicas,
+  y deja PROMPT_SIGUIENTE.md VACIO. El fundador cambia los modelos antes
+  del tramo mecanico y relanza. Al reanudar, el encargo es la apertura de
+  la fase 04.
 En PARA_ALEXIS.md: motivo, estado exacto (hash, marcador, fase), lo que se
 necesita de Alexis, y como retomar.
 
