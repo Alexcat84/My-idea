@@ -4,13 +4,14 @@ CENSO DE PLANTILLAS TALLADAS EN LOS INSTRUMENTOS DE NOMBRE ESTABLE
 ==============================================================================
 
 PASO 1: QUIEN ENTRA
-  .py en la raiz                 : 376
+  .py en la raiz                 : 377
   EXCLUIDOS por marca de corrida : 351
      (con --excluidos se imprime la lista entera con su marca)
-  DE NOMBRE ESTABLE, y son los que se censan: 25
+  DE NOMBRE ESTABLE, y son los que se censan: 26
      abrir_tramo_de_opu01.py
      abrir_universo_de_opu02.py
      barrido_titulos_tallados.py
+     caso_positivo_cuenta_agregada.py
      caso_positivo_de_fusion_de_mesa.py
      caso_positivo_del_contrato_de_perdidas.py
      censo_de_plantillas_talladas.py
@@ -41,6 +42,7 @@ PASO 2: EL VEREDICTO POR FICHERO
   abrir_tramo_de_opu01.py                        MEDIDO               0      41      12       0
   abrir_universo_de_opu02.py                     MEDIDO               0       4       2       0
   barrido_titulos_tallados.py                    MEDIDO               0       0       0       0
+  caso_positivo_cuenta_agregada.py               MEDIDO               0       8       1       0
   caso_positivo_de_fusion_de_mesa.py             MEDIDO               0       1       2       0
   caso_positivo_del_contrato_de_perdidas.py      DECLARA FALTA        0      11       3       1
   censo_de_plantillas_talladas.py                DECLARA FALTA        0      10       0       8
@@ -64,11 +66,11 @@ PASO 2: EL VEREDICTO POR FICHERO
   varas_n_arias_del_tramo.py                     DECLARA FALTA        0       1       4       1
   verificar_mapas_destejido.py                   MEDIDO               0       4       0       0
 
-  RESUMEN: DECLARA FALTA 5   MEDIDO 20
+  RESUMEN: DECLARA FALTA 5   MEDIDO 21
 
 PASO 3: LOS TALLADOS, CON SU LINEA CITADA
 
-  NINGUNO. CERO TALLADOS EN LOS 25 INSTRUMENTOS DE NOMBRE ESTABLE,
+  NINGUNO. CERO TALLADOS EN LOS 26 INSTRUMENTOS DE NOMBRE ESTABLE,
   y esa ausencia se publica igual que se habria publicado un hallazgo.
 
 PASO 4: LA LISTA DEBIL, que NO fija veredicto y se publica igual
@@ -122,6 +124,16 @@ PASO 4: LA LISTA DEBIL, que NO fija veredicto y se publica igual
       linea 140   cifra 2      ...PASO 2: EL DUENO DE CADA ABIERTO, POR EL...
       linea 183   cifra 3      ...PASO 3: LOS QUE QUEDAN FUERA, CADA UNO C...
       linea 191   cifra 4      ...PASO 4: LAS EXCLUSIONES QUE EL PLAN ESCR...
+
+  --- caso_positivo_cuenta_agregada.py (8)
+      linea 45    cifra 2      ...ieza cualquiera. ATENUANTE DECLARADO: el paso 2 del superviviente ya dice la mita...
+      linea 47    cifra 1      ...paso 1 de otro_de_mentira...
+      linea 48    cifra 04     ...la fase 04...
+      linea 52    cifra 3      ...paso 3 de otro_de_mentira y condicion 1 ...
+      linea 52    cifra 1      ...paso 3 de otro_de_mentira y condicion 1 de otro_de_mentira...
+      linea 53    cifra 04     ...la fase 04...
+      linea 58    cifra 4      ...paso 4 de otro_de_mentira...
+      linea 59    cifra 04     ...la fase 04...
 
   --- caso_positivo_de_fusion_de_mesa.py (1)
       linea 73    cifra 8      ...# -*- coding: utf-8 -*-...
@@ -251,6 +263,9 @@ PASO 5: LOS DESCARTES POR CITA, CON SU MOTIVO (la vara, vista trabajar)
   --- abrir_universo_de_opu02.py (2 descartes)
       linea 109   cifra 02     id de OPERACION                          ...LA APERTURA MEDIDA DE OP-U-02. NO SE FUNDE NI UN ACTO....
       linea 140   cifra 1      punto del BANCO DEL PLAN                 ...EL DUENO DE CADA ABIERTO, POR EL RESOLUTOR (P.1)...
+
+  --- caso_positivo_cuenta_agregada.py (1 descartes)
+      linea 40    cifra 1      numero de VERSION de un contrato         ...CAMPO PROPIO v1...
 
   --- caso_positivo_de_fusion_de_mesa.py (2 descartes)
       linea 171   cifra 54     numero de ACTA                           ...     esta vuelta NO ejecute (acta 54, pregunta 7). PARADA....
