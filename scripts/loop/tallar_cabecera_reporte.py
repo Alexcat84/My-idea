@@ -40,6 +40,35 @@ copia literal de lo medido.
 
 SALIDA: exit 0 si talla (y si, con --comparar, no hay diferencias); exit 1 si
 alguna celda no se pudo leer o si la comparacion encuentra diferencias.
+
+--- MODO --fase04 (ESCALADA AUTOMATICA, vuelta 79) ---
+
+POR QUE NACE (decision del fundador, 26 ago 2026, opcion b, disparada por la
+racha de reporte volviendo a DOS tandas seguidas, vueltas 77 y 78): el modo de
+arriba lee salidas DEL CRIBADO (`SALIDA_V<N>_MARCADOR_*`,
+`SALIDA_V<N>_RECOMPUTO_*`), y la fase 04 (ENLACES) no produce ninguna de las
+dos. Desde que el bucle entro al tramo mecanico, las cifras de la cabecera del
+reporte volvieron a teclearse a mano. `--fase04` talla la cabecera propia de
+esa fase, apertura y cierre por separado, cada celda leida de SU PROPIA salida
+del dia:
+
+  - censo del grafo y las tres comprobaciones de Gate 0: `SALIDA_V<N>_GATE0_CMD1_<LADO>.txt`
+  - las cuatro cifras de aristas: `SALIDA_V<N>_CONTEO_<LADO>.txt`
+  - el motor: `SALIDA_V<N>_MOTOR_<LADO>.txt`
+  - la web: `SALIDA_V<N>_WEB_<LADO>.txt`
+  - el tsc: `SALIDA_V<N>_TSC_<LADO>.txt`
+  - el marcador del cribado: `SALIDA_V<N>_MARCADOR_<LADO>.txt`, SOLO si la
+    vuelta lo produce (no es obligatorio: la fase 04 no toca el cribado)
+
+USO:
+  python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 79
+  python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 78 --comparar docs/loop/REPORTE.md
+
+Misma mecanica que el modo de cribado: ROJO sin escribir nada si una celda
+obligatoria no se puede leer; `--comparar` coteja fila a fila la tabla que el
+fichero YA tiene contra la tallada. El marcador es la unica fila opcional: si
+no hay `SALIDA_V<N>_MARCADOR_*` para esa vuelta, la fila simplemente no se
+imprime (no es una celda rota, es una fase que no toco el cribado).
 """
 import argparse
 import io
@@ -183,6 +212,124 @@ def filas(ap, ci, con_miles):
     return f
 
 
+def leer_opcional(nombre):
+    """Como leer(), pero SIN registrar fallo si no existe: para la fila del
+    marcador en fase04, que es la unica opcional (la fase 04 no toca el
+    cribado). Devuelve None si el fichero no existe."""
+    ruta = os.path.join(LOOP, nombre)
+    if not os.path.exists(ruta):
+        return None
+    return io.open(ruta, encoding="utf-8").read()
+
+
+def lado_fase04(vuelta, sufijo, fallos, con_miles=True):
+    """Lee TODAS las cifras de un lado (APERTURA o CIERRE) de fase 04, cada
+    una de SU PROPIA salida del dia. Ninguna celda hereda del otro lado."""
+    p = "SALIDA_V%d_" % vuelta
+    m = lambda v: miles(v, con_miles)
+    d = {}
+
+    gate = leer(p + "GATE0_CMD1_" + sufijo + ".txt", fallos)
+    d["nodos"] = busca(gate, r"master_graph\.json == archivos en disco \(valor: (\d+) vs \d+\)",
+                       "censo (nodos) %s" % sufijo, fallos)
+    d["vivos"] = busca(gate, r"Universo: activos / deprecados \(valor: (\d+) activos",
+                       "censo (vivos) %s" % sufijo, fallos)
+    d["deprecados"] = busca(gate, r"Universo: activos / deprecados \(valor: \d+ activos, (\d+) deprecados",
+                            "censo (deprecados) %s" % sufijo, fallos)
+    d["auto_aristas"] = busca(gate, r"auto-arista via alias\) \(valor: (\d+) auto-aristas\)",
+                              "Gate 0 auto-aristas %s" % sufijo, fallos)
+    d["dup_titulo"] = busca(gate, r"titulo_concepto exacto duplicado \(valor: (\d+)\)",
+                            "Gate 0 duplicadas de titulo %s" % sufijo, fallos)
+    d["divergentes"] = busca(gate, r"dicen lo mismo \(valor: (\d+) nodos divergentes\)",
+                             "Gate 0 nodos divergentes %s" % sufijo, fallos)
+    d["gate_veredicto"] = busca(gate, r"GATE 0: (\w+)", "veredicto Gate 0 %s" % sufijo, fallos)
+
+    con = leer(p + "CONTEO_" + sufijo + ".txt", fallos)
+    ocurrencias = re.findall(r"sig (\d+) prev (\d+) suma (\d+) union (\d+)", con) if con else []
+    if not ocurrencias:
+        fallos.append("no se pudo leer las cifras de aristas %s" % sufijo)
+        d["sig"] = d["prev"] = d["suma"] = d["union"] = "?"
+    else:
+        d["sig"], d["prev"], d["suma"], d["union"] = ocurrencias[-1]
+
+    motor = leer(p + "MOTOR_" + sufijo + ".txt", fallos)
+    d["motor"] = busca(motor, r"TODOS LOS TESTS PASARON \((\d+/\d+)\)", "motor %s" % sufijo, fallos)
+
+    web = leer(p + "WEB_" + sufijo + ".txt", fallos)
+    m_ficheros = re.search(r"Test Files\s+(\d+) passed \((\d+)\)", web) if web else None
+    if not m_ficheros:
+        fallos.append("no se pudo leer web ficheros %s" % sufijo)
+        d["web_ficheros"] = "?"
+    else:
+        d["web_ficheros"] = "%s passed (%s)" % (m(m_ficheros.group(1)), m(m_ficheros.group(2)))
+    m_tests = re.search(r"Tests\s+(\d+) passed(?:\s*\|\s*(\d+) skipped)? \((\d+)\)", web) if web else None
+    if not m_tests:
+        fallos.append("no se pudo leer web tests %s" % sufijo)
+        d["web_tests"] = "?"
+    else:
+        pasadas, saltadas, total = m_tests.groups()
+        d["web_tests"] = ("%s passed, %s skipped (%s)" % (m(pasadas), m(saltadas), m(total))) if saltadas \
+            else ("%s passed (%s)" % (m(pasadas), m(total)))
+
+    # El tsc vacio ES la senal de exito (tsc sin salida == exitcode 0), asi que
+    # se lee aparte, sin pasar por busca() (que exigiria un patron y fallaria
+    # sobre un fichero vacio que en realidad es el caso bueno).
+    ruta_tsc = os.path.join(LOOP, p + "TSC_" + sufijo + ".txt")
+    if not os.path.exists(ruta_tsc):
+        fallos.append("no existe la salida %s" % (p + "TSC_" + sufijo + ".txt"))
+        d["tsc"] = "?"
+    else:
+        contenido_tsc = io.open(ruta_tsc, encoding="utf-8").read()
+        if contenido_tsc.strip() == "":
+            d["tsc"] = "EXITCODE 0, cero lineas"
+        else:
+            n = len(contenido_tsc.strip("\n").splitlines())
+            d["tsc"] = "%d linea(s) de salida (revisar)" % n
+
+    mar = leer_opcional(p + "MARCADOR_" + sufijo + ".txt")
+    if mar is not None:
+        d["marcador_A"] = busca(mar, r"'A': (\d+)", "marcador A %s" % sufijo, fallos)
+        d["marcador_B"] = busca(mar, r"'B': (\d+)", "marcador B %s" % sufijo, fallos)
+        d["marcador_C"] = busca(mar, r"'C': (\d+)", "marcador C %s" % sufijo, fallos)
+        d["marcador_D"] = busca(mar, r"'D': (\d+)", "marcador D %s" % sufijo, fallos)
+        d["marcador_n"] = busca(mar, r"\}\s*(\d+)\s*$", "marcador n %s" % sufijo, fallos)
+    else:
+        d["marcador_A"] = None
+    return d
+
+
+def filas_fase04(ap, ci, con_miles):
+    """Las filas de la cabecera de fase 04, etiqueta + celda apertura + celda
+    cierre, cada celda leida de SU PROPIO lado."""
+    m = lambda v: miles(v, con_miles)
+    f = []
+    f.append(("censo: nodos / vivos / deprecados",
+              "%s / %s / %s" % (m(ap["nodos"]), m(ap["vivos"]), m(ap["deprecados"])),
+              "%s / %s / %s" % (m(ci["nodos"]), m(ci["vivos"]), m(ci["deprecados"]))))
+    f.append(("Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes",
+              "%s (auto-aristas %s, duplicadas %s, divergentes %s)"
+              % (ap["gate_veredicto"], ap["auto_aristas"], ap["dup_titulo"], ap["divergentes"]),
+              "%s (auto-aristas %s, duplicadas %s, divergentes %s)"
+              % (ci["gate_veredicto"], ci["auto_aristas"], ci["dup_titulo"], ci["divergentes"])))
+    f.append(("aristas: `nodos_siguientes` / `nodos_previos` / suma / union",
+              "%s / %s / %s / %s" % (m(ap["sig"]), m(ap["prev"]), m(ap["suma"]), m(ap["union"])),
+              "%s / %s / %s / %s" % (m(ci["sig"]), m(ci["prev"]), m(ci["suma"]), m(ci["union"]))))
+    f.append(("motor", ap["motor"], ci["motor"]))
+    f.append(("web: ficheros / tests",
+              "%s / %s" % (ap["web_ficheros"], ap["web_tests"]),
+              "%s / %s" % (ci["web_ficheros"], ci["web_tests"])))
+    f.append(("tsc", ap["tsc"], ci["tsc"]))
+    if ap.get("marcador_A") is not None or ci.get("marcador_A") is not None:
+        def celda_marcador(d):
+            if d.get("marcador_A") is None:
+                return "(sin cambio esta vuelta: no se remidio)"
+            return "%s / %s / %s / %s, n %s" % (m(d["marcador_A"]), m(d["marcador_B"]),
+                                                m(d["marcador_C"]), m(d["marcador_D"]), m(d["marcador_n"]))
+        f.append(("marcador del cribado `A` / `B` / `C` / `D`, `n`",
+                  celda_marcador(ap), celda_marcador(ci)))
+    return f
+
+
 RE_FILA = re.compile(r"^\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*$")
 
 
@@ -209,65 +356,13 @@ def tabla_del_fichero(ruta):
     return filas_halladas
 
 
-def main():
-    ap_arg = argparse.ArgumentParser(description=__doc__,
-                                     formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap_arg.add_argument("--vuelta", type=int, required=True)
-    ap_arg.add_argument("--sin-miles", action="store_true")
-    ap_arg.add_argument("--comparar", default=None,
-                        help="fichero cuya tabla de cabecera se coteja contra la tallada")
-    a = ap_arg.parse_args()
-    sys.stdout.reconfigure(encoding="utf-8")
-    con_miles = not a.sin_miles
-
-    print("=" * 78)
-    print("LA CABECERA DEL REPORTE, TALLADA. Vuelta %d." % a.vuelta)
-    print("Cada celda sale de la salida que la cita; ninguna esta tecleada.")
-    print("=" * 78)
+def comparar_contra(f, ruta_arg):
+    """Cotejo compartido por los dos modos: extrae la tabla que RUTA_ARG YA
+    tiene y la coteja fila a fila contra F (las filas talladas). Devuelve el
+    exit code (0 identica, 1 rojo o con diferencias)."""
+    print("--- COMPARACION CONTRA %s ---" % ruta_arg)
     print()
-
-    fallos = []
-    apertura = lado(a.vuelta, "APERTURA", fallos)
-    cierre = lado(a.vuelta, "CIERRE", fallos)
-
-    if fallos:
-        print("  ROJO, %d celdas no se pudieron leer y NO se talla nada:" % len(fallos))
-        for f in fallos:
-            print("     %s" % f)
-        return 1
-
-    f = filas(apertura, cierre, con_miles)
-
-    print("--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---")
-    print()
-    print("| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |")
-    print("|---|---:|---:|")
-    for etiqueta, celda_ap, celda_ci in f:
-        print("| %s | %s | **%s** |" % (etiqueta, celda_ap, celda_ci))
-    print()
-
-    print("--- LAS CUATRO COMPROBACIONES, CADA LADO DE SU PROPIA SALIDA ---")
-    print()
-    print("  APERTURA (SALIDA_V%d_RECOMPUTO_APERTURA.txt):" % a.vuelta)
-    print("    i.  nodos en actos %s == componentes %s" % (apertura["c1_izq"], apertura["c1_der"]))
-    print("    ii. A vigentes %s == aristas A internas %s" % (apertura["c2_izq"], apertura["c2_der"]))
-    print("    veredicto: %s" % apertura["cuatro"])
-    print("  CIERRE   (SALIDA_V%d_RECOMPUTO_CIERRE.txt):" % a.vuelta)
-    print("    i.  nodos en actos %s == componentes %s" % (cierre["c1_izq"], cierre["c1_der"]))
-    print("    ii. A vigentes %s == aristas A internas %s" % (cierre["c2_izq"], cierre["c2_der"]))
-    print("    veredicto: %s" % cierre["cuatro"])
-    if apertura["c1_izq"] == cierre["c1_izq"] and apertura["c2_izq"] == cierre["c2_izq"]:
-        print("  AVISO: los dos lados dan la MISMA cifra. Puede ser cierto (vuelta que no")
-        print("  movio el retrato), pero es la forma que la caida de la vuelta 56 tenia.")
-    print()
-
-    if not a.comparar:
-        print("FIN")
-        return 0
-
-    print("--- COMPARACION CONTRA %s ---" % a.comparar)
-    print()
-    ruta = a.comparar if os.path.isabs(a.comparar) else os.path.join(RAIZ, a.comparar)
+    ruta = ruta_arg if os.path.isabs(ruta_arg) else os.path.join(RAIZ, ruta_arg)
     if not os.path.exists(ruta):
         print("  ROJO: no existe %s" % ruta)
         return 1
@@ -296,8 +391,75 @@ def main():
         return 1
     print("  CABECERA: IDENTICA AL TALLADOR")
     print()
-    print("FIN")
     return 0
+
+
+def main():
+    ap_arg = argparse.ArgumentParser(description=__doc__,
+                                     formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap_arg.add_argument("--vuelta", type=int, required=True)
+    ap_arg.add_argument("--sin-miles", action="store_true")
+    ap_arg.add_argument("--fase04", action="store_true",
+                        help="talla la cabecera de la fase 04 (ENLACES) en vez de la del cribado")
+    ap_arg.add_argument("--comparar", default=None,
+                        help="fichero cuya tabla de cabecera se coteja contra la tallada")
+    a = ap_arg.parse_args()
+    sys.stdout.reconfigure(encoding="utf-8")
+    con_miles = not a.sin_miles
+
+    print("=" * 78)
+    print("LA CABECERA DEL REPORTE, TALLADA. Vuelta %d.%s" % (a.vuelta, " Modo fase04." if a.fase04 else ""))
+    print("Cada celda sale de la salida que la cita; ninguna esta tecleada.")
+    print("=" * 78)
+    print()
+
+    fallos = []
+    if a.fase04:
+        apertura = lado_fase04(a.vuelta, "APERTURA", fallos, con_miles)
+        cierre = lado_fase04(a.vuelta, "CIERRE", fallos, con_miles)
+    else:
+        apertura = lado(a.vuelta, "APERTURA", fallos)
+        cierre = lado(a.vuelta, "CIERRE", fallos)
+
+    if fallos:
+        print("  ROJO, %d celdas no se pudieron leer y NO se talla nada:" % len(fallos))
+        for fallo in fallos:
+            print("     %s" % fallo)
+        return 1
+
+    f = filas_fase04(apertura, cierre, con_miles) if a.fase04 else filas(apertura, cierre, con_miles)
+
+    print("--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---")
+    print()
+    print("| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |")
+    print("|---|---:|---:|")
+    for etiqueta, celda_ap, celda_ci in f:
+        print("| %s | %s | **%s** |" % (etiqueta, celda_ap, celda_ci))
+    print()
+
+    if not a.fase04:
+        print("--- LAS CUATRO COMPROBACIONES, CADA LADO DE SU PROPIA SALIDA ---")
+        print()
+        print("  APERTURA (SALIDA_V%d_RECOMPUTO_APERTURA.txt):" % a.vuelta)
+        print("    i.  nodos en actos %s == componentes %s" % (apertura["c1_izq"], apertura["c1_der"]))
+        print("    ii. A vigentes %s == aristas A internas %s" % (apertura["c2_izq"], apertura["c2_der"]))
+        print("    veredicto: %s" % apertura["cuatro"])
+        print("  CIERRE   (SALIDA_V%d_RECOMPUTO_CIERRE.txt):" % a.vuelta)
+        print("    i.  nodos en actos %s == componentes %s" % (cierre["c1_izq"], cierre["c1_der"]))
+        print("    ii. A vigentes %s == aristas A internas %s" % (cierre["c2_izq"], cierre["c2_der"]))
+        print("    veredicto: %s" % cierre["cuatro"])
+        if apertura["c1_izq"] == cierre["c1_izq"] and apertura["c2_izq"] == cierre["c2_izq"]:
+            print("  AVISO: los dos lados dan la MISMA cifra. Puede ser cierto (vuelta que no")
+            print("  movio el retrato), pero es la forma que la caida de la vuelta 56 tenia.")
+        print()
+
+    if not a.comparar:
+        print("FIN")
+        return 0
+
+    resultado = comparar_contra(f, a.comparar)
+    print("FIN")
+    return resultado
 
 
 if __name__ == "__main__":

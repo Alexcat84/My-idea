@@ -303,6 +303,35 @@ y perder 73 gemelos.**
 > extremo ya deprecado no aparta nada: ya fue resuelto por otra via. El
 > texto viejo de arriba no se toca.
 
+> **CORRECCION DECLARADA (26 ago 2026, vuelta 79, adjudicada por el auditor
+> por cita, acta de la vuelta 78 seccion 3 D4 y seccion 5 punto 4, sin
+> doctrina nueva).** El reporte de la vuelta 78 (seccion 3.2) publico, como
+> criterio unico para las once aristas que la vara de arriba toca, este
+> texto, citado sin reescribir: *"si el extremo ESCRITO en la arista (no su
+> companero de A) esta condenado por una operacion sin ser su
+> superviviente, la arista SE MUEVE; si el extremo escrito ES el
+> superviviente declarado, o si ninguna operacion condena al extremo
+> escrito, la arista SE QUEDA con la razon puesta."* **Ese criterio no
+> produce la decision que la propia tabla de esa seccion publica**: la fila
+> 11 tiene el hijo escrito sin ninguna operacion que lo condene, y por el
+> criterio publicado debia quedarse; se movio. El criterio real, que si
+> existia pero solo vivia en el docstring de
+> `scripts/loop/vuelta78_tarea32_decision_once.py`, es este: **no es lo
+> mismo que el companero de A caiga en el `eliminar` de una FUSION que en
+> los `nodos` de un RENOMBRE_CON_ALIAS. Una fusion ya declara
+> superviviente: si el extremo escrito no es el condenado, el extremo
+> escrito esta a salvo y la arista SE QUEDA (filas 2, 3 y 4). Un renombre no
+> mata a nadie y no declara ganador: cual de los dos gemelos vivira sigue
+> abierto, asi que la arista escrita sobre cualquiera de los dos SE MUEVE y
+> espera (fila 11). Y cuando el archivo remite la familia a mesa, manda la
+> mesa (fila 6, puesto 460).** Verificado contra las fichas en esta vuelta
+> (`docs/loop/SALIDA_V79_TAREA12_FICHAS.txt`): `OP-M-05-APERTURA` es
+> `FUSION DE MESA` con `superviviente` `customer_validation` y `eliminar`
+> de dos ids; `OP-S-09` es `RENOMBRE_CON_ALIAS` con `superviviente` `null`.
+> Las once disposiciones de la vuelta 78 no cambian: solo se corrige el
+> criterio publicado, que vivia fuera del reporte. El texto viejo de arriba
+> no se toca.
+
 ---
 
 ## LOS SUELTOS DE RACIMOS, y los racimos con miembro ajeno
