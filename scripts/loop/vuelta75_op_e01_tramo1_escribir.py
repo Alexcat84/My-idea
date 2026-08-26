@@ -83,6 +83,16 @@ PARES_DESCARTADOS = [
      "MADRE QUE REPITE: coincide con el racimo de MESA_RACIMOS grupo 1, 'Programa de catorce pasos de Crosby' (3 nodos declarados). No se enlaza sin resolver antes el racimo"),
     ("consejo_de_calidad_y_rol_del_director", "planificacion_estrategica_despliegue_2",
      "MADRE QUE REPITE: el sufijo _2 es la figura de MESA_RACIMOS grupo 4 (familia de ids); es gemelo de planificacion_estrategica_despliegue, no hijo nuevo"),
+    # CORRECCION DECLARADA (26 ago 2026, vuelta 76, adjudicada por el auditor,
+    # acta de la vuelta 75 seccion 4 D3). La razon de arriba ("es gemelo") es
+    # una CAIDA DE REPORTE: los dos nodos comparten la cabeza (mision, vision,
+    # metas) pero divergen en el cuerpo (catch ball y scorecards contra
+    # paridad con lo financiero, lenguaje comun y poda de lo no alineado). No
+    # es un calcado. LA DISPOSICION (no enlazar) SE SOSTIENE, pero por otra
+    # razon: el destino lleva sufijo numerico y la verificacion de OP-S-09
+    # (05_SANEO, orden 8) exige "ningun id vivo lleva sufijo numerico de
+    # duplicado". Por P.9 punto 1, el enlace espera a OP-S-09. El texto viejo
+    # no se borra: se corrige al lado.
 ]
 
 

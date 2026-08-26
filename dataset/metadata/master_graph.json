@@ -2648,7 +2648,8 @@
       ],
       "entregable_esperado": "Un mapa que muestre como tu visión se conecta con tus estrategias, tus metas anuales y tus iniciativas o proyectos alineados",
       "nodos_previos": [
-        "evaluacion_riesgo_calidad_organizacional"
+        "evaluacion_riesgo_calidad_organizacional",
+        "rol_alta_direccion_calidad"
       ],
       "nodos_siguientes": [
         "costo_pobre_calidad",
@@ -3198,7 +3199,8 @@
       "nodos_siguientes": [
         "mejora_continua_del_proceso",
         "indice_cpk",
-        "capacidad_del_proceso"
+        "capacidad_del_proceso",
+        "capacidad_de_proceso_2"
       ],
       "condiciones_activacion": [
         "Cuando se necesita verificar si un proceso cumple con las especificaciones del producto",
@@ -11172,7 +11174,8 @@
         "decision_hire_investment_banker",
         "employee_pool_esop",
         "right_of_first_refusal_pro_rata",
-        "vesting_acciones_fundadores"
+        "vesting_acciones_fundadores",
+        "valuacion_pre_post_money"
       ],
       "condiciones_activacion": [
         "Si estás evaluando una propuesta de inversión (term sheet) de un inversionista",
@@ -11199,7 +11202,9 @@
         "etapas_de_control_operativo",
         "calidad_de_diseno_vs_produccion",
         "control_charts_shewhart",
-        "interpretacion_graficos_variables"
+        "interpretacion_graficos_variables",
+        "mantenimiento_productivo_total",
+        "planificacion_inicial_calidad"
       ],
       "nodos_siguientes": [
         "causas_especiales_y_comunes_variacion",
@@ -11231,7 +11236,8 @@
       ],
       "entregable_esperado": "Carta de control con límites de capacidad del proceso y decisión de intervención documentada",
       "nodos_previos": [
-        "calidad_de_diseno_vs_produccion"
+        "calidad_de_diseno_vs_produccion",
+        "analisis_capacidad_proceso"
       ],
       "nodos_siguientes": [
         "causas_comunes_vs_especiales",
@@ -12570,7 +12576,8 @@
         "mejora_continua_del_proceso",
         "mejora_del_sistema_responsabilidad_gerencial",
         "sistema_estable_causas_comunes",
-        "sistema_estable_responsabilidad_gerencial"
+        "sistema_estable_responsabilidad_gerencial",
+        "control_estadistico_de_inventario_en_transito"
       ],
       "nodos_siguientes": [
         "experimento_cuentas_rojas",
@@ -12696,7 +12703,8 @@
         "ciclo_pdca_pdsa"
       ],
       "nodos_siguientes": [
-        "carta_de_control_shewhart"
+        "carta_de_control_shewhart",
+        "six_sigma_dmaic"
       ],
       "condiciones_activacion": [
         "Cuando se detecta una diferencia entre el desempeño real y la meta de calidad",
@@ -15103,7 +15111,8 @@
       ],
       "entregable_esperado": "Documento con listas clasificadas de características de calidad y defectos asociados.",
       "nodos_previos": [
-        "planificacion_inspeccion"
+        "planificacion_inspeccion",
+        "planificacion_de_la_inspeccion"
       ],
       "nodos_siguientes": [
         "clasificacion_seriedad",
@@ -17070,7 +17079,8 @@
       ],
       "entregable_esperado": "Matriz de capacidades organizacionales vs. requerimientos del sistema propuesto, con ajuste de alcance si es necesario",
       "nodos_previos": [
-        "equipos_alto_desempeno"
+        "equipos_alto_desempeno",
+        "guias_diseno_sistemas_estrategicos"
       ],
       "nodos_siguientes": [
         "definicion_objetivos_proyecto_sistema"
@@ -18461,7 +18471,8 @@
       "nodos_previos": [
         "concepto_cuatro_pilares_programa_calidad",
         "concepto_costo_de_calidad",
-        "costo_de_mala_calidad_copq"
+        "costo_de_mala_calidad_copq",
+        "mejora_calidad_crosby"
       ],
       "nodos_siguientes": [
         "concepto_zero_defects",
@@ -19848,7 +19859,8 @@
       "nodos_previos": [
         "desarrollar_metas_anuales",
         "dmaic_six_sigma",
-        "six_sigma_dmaic"
+        "six_sigma_dmaic",
+        "rol_alta_direccion_calidad"
       ],
       "nodos_siguientes": [
         "desplegar_metas_organizacion"
@@ -20846,7 +20858,8 @@
       ],
       "entregable_esperado": "Decisión documentada sobre el método contable a usar y plan de transición si aplica",
       "nodos_previos": [
-        "fundamentos_inteligencia_financiera"
+        "fundamentos_inteligencia_financiera",
+        "principio_correspondencia_contable"
       ],
       "nodos_siguientes": [
         "estado_flujo_de_caja_tres_categorias"
@@ -21905,7 +21918,8 @@
         "muestreo_estadistico_para_inspeccion"
       ],
       "nodos_siguientes": [
-        "sistema_estable_responsabilidad_gerencial"
+        "sistema_estable_responsabilidad_gerencial",
+        "causas_comunes_vs_especiales"
       ],
       "condiciones_activacion": [
         "Si existe inventario de seguridad excesivo basado en estimaciones no estadísticas.",
@@ -24848,7 +24862,9 @@
         "gestion_portafolio_dos_niveles",
         "scorecard_de_seleccion_de_proyectos"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "post_launch_review"
+      ],
       "condiciones_activacion": [
         "Cuando ya tienes experiencia con procesos de evaluación por etapas y puedes hacer estimaciones realistas",
         "Cuando quieres generar mayor responsabilidad y compromiso en tu equipo"
@@ -28357,7 +28373,8 @@
         "empathy_map",
         "proceso_ideacion_modelo_negocio",
         "customer_scenarios_business_model",
-        "escenarios_diseno_modelo_negocio"
+        "escenarios_diseno_modelo_negocio",
+        "value_proposition_startup"
       ],
       "condiciones_activacion": [
         "Si el equipo diseña productos/modelos sin haber estudiado profundamente al cliente"
@@ -28861,7 +28878,9 @@
         "decision_pivotar_o_proceder",
         "metrics_that_matter_framework",
         "pivote_startup",
-        "validar_modelo_financiero"
+        "validar_modelo_financiero",
+        "prueba_mvp_alta_fidelidad",
+        "mvp_alta_fidelidad"
       ],
       "condiciones_activacion": [
         "Si ya terminaste el descubrimiento de clientes y confirmaste el problema y la solución",
@@ -38330,7 +38349,8 @@
         "distribucion_poisson"
       ],
       "nodos_siguientes": [
-        "teoremas_probabilidad"
+        "teoremas_probabilidad",
+        "planes_de_muestreo_de_aceptacion"
       ],
       "condiciones_activacion": [
         "Cuando se diseña un plan de muestreo de aceptación de lotes",
@@ -39983,7 +40003,8 @@
         "customer_validation_sell_phase"
       ],
       "nodos_siguientes": [
-        "sales_roadmap_vs_sales_force"
+        "sales_roadmap_vs_sales_force",
+        "value_proposition_startup"
       ],
       "condiciones_activacion": [
         "Cuando se inicia la fase de customer validation y se necesita probar la propuesta de valor con ventas reales"
@@ -40224,7 +40245,8 @@
       "nodos_previos": [
         "mitigacion_riesgos_ambientales",
         "modelo_green_wave",
-        "eco_advantage"
+        "eco_advantage",
+        "lente_sostenibilidad_finanzas"
       ],
       "nodos_siguientes": [
         "crecimiento_ingresos_verdes",
@@ -48993,7 +49015,9 @@
       "nodos_previos": [
         "arrendamiento_verde"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "virtualizacion_servidores"
+      ],
       "condiciones_activacion": [
         "Si la empresa tiene operaciones significativas de TI, centros de datos o infraestructura tecnológica que impacta el consumo energético"
       ],
@@ -61454,8 +61478,7 @@
       "entregable_esperado": "Tu registro de entrevistas con clientes reales y de lo que vas aprendiendo",
       "nodos_previos": [
         "customer_discovery_introduccion",
-        "equipo_customer_development",
-        "segmentos_de_clientes_problema_necesidad"
+        "equipo_customer_development"
       ],
       "nodos_siguientes": [
         "earlyvangelists",
@@ -62734,7 +62757,8 @@
         "diseno_conceptual_sistema"
       ],
       "nodos_siguientes": [
-        "revision_diseno"
+        "revision_diseno",
+        "complejidad_acorde_capacidad_organizacional"
       ],
       "condiciones_activacion": [
         "Antes de aprobar la construcción final de un sistema o plataforma tecnológica",
@@ -70483,7 +70507,8 @@
         "customer_creation",
         "lienzo_modelo_negocio",
         "adaptacion_teorica_del_lean_startup",
-        "riesgos_lanzamiento_mvp"
+        "riesgos_lanzamiento_mvp",
+        "mvp_alta_fidelidad"
       ],
       "condiciones_activacion": [
         "Cuando el usuario está construyendo un startup web/mobile y necesita un proceso concreto y ordenado",
@@ -70540,7 +70565,8 @@
       ],
       "nodos_siguientes": [
         "shingo_enterprise_excellence_model",
-        "shingo_prize"
+        "shingo_prize",
+        "poka_yoke_a_prueba_de_errores"
       ],
       "condiciones_activacion": [
         "Cuando la organización busca reducir desperdicio y mejorar flujo de producción",
@@ -70863,7 +70889,8 @@
       ],
       "nodos_siguientes": [
         "contabilidad_basada_actividades",
-        "contabilidad_ambiental"
+        "contabilidad_ambiental",
+        "eco_eficiencia"
       ],
       "condiciones_activacion": [
         "Si el área financiera de la empresa no ha integrado criterios de sostenibilidad en su análisis"
@@ -73075,7 +73102,8 @@
         "autocontrol_y_controlabilidad"
       ],
       "nodos_siguientes": [
-        "lean_manufacturing_tps"
+        "lean_manufacturing_tps",
+        "capacidad_de_proceso"
       ],
       "condiciones_activacion": [
         "Cuando el equipo presenta fallas frecuentes o pérdidas de capacidad",
@@ -75646,7 +75674,8 @@
         "educacion_calidad"
       ],
       "nodos_siguientes": [
-        "asuntos_consumidor"
+        "asuntos_consumidor",
+        "concepto_programa_catorce_pasos"
       ],
       "condiciones_activacion": [
         "Cuando la organización busca consolidar una cultura de mejora continua"
@@ -80075,7 +80104,9 @@
       "nodos_previos": [
         "producto_minimo_viable",
         "customer_discovery",
-        "prueba_mvp_alta_fidelidad"
+        "prueba_mvp_alta_fidelidad",
+        "customer_validation",
+        "lean_launchpad_web_startup_process"
       ],
       "nodos_siguientes": [
         "plan_de_activacion",
@@ -86794,7 +86825,8 @@
       "entregable_esperado": "Plan de muestreo documentado con niveles de aceptación, tamaños de muestra y criterios de rechazo",
       "nodos_previos": [
         "clasificacion_de_seriedad_de_defectos",
-        "clasificacion_de_seriedad_de_defectos_2"
+        "clasificacion_de_seriedad_de_defectos_2",
+        "distribucion_binomial"
       ],
       "nodos_siguientes": [
         "establecimiento_de_niveles_de_calidad_aql_dpm"
@@ -87024,7 +87056,8 @@
       "nodos_siguientes": [
         "conformidad_especificacion_aptitud_uso",
         "auditoria_de_producto",
-        "planificacion_inspeccion"
+        "planificacion_inspeccion",
+        "clasificacion_caracteristicas_calidad"
       ],
       "condiciones_activacion": [
         "Cuando se diseña un nuevo proceso de manufactura",
@@ -87223,7 +87256,8 @@
         "auditoria_de_proceso",
         "caracteristicas_clave_producto_proceso",
         "key_process_product_characteristics",
-        "analisis_flujo_proceso"
+        "analisis_flujo_proceso",
+        "capacidad_de_proceso"
       ],
       "condiciones_activacion": [
         "Cuando se diseña o transfiere un nuevo producto a manufactura y se requiere planificación de calidad previa"
@@ -87724,7 +87758,8 @@
       ],
       "entregable_esperado": "Mecanismo o procedimiento implementado que previene físicamente la ocurrencia de un error específico",
       "nodos_previos": [
-        "kaizen_mejora_continua"
+        "kaizen_mejora_continua",
+        "lean_manufacturing_tps"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -88253,7 +88288,8 @@
       "entregable_esperado": "Informe de auditoría retrospectiva con comparación de resultados reales vs. proyectados y lecciones aprendidas documentadas para mejora continua.",
       "nodos_previos": [
         "stage5_launch",
-        "revision_portafolio_periodica"
+        "revision_portafolio_periodica",
+        "criterios_de_exito_gate"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -90550,7 +90586,8 @@
       ],
       "nodos_siguientes": [
         "lectura_estado_resultados",
-        "accruals_y_activos_prepagados"
+        "accruals_y_activos_prepagados",
+        "contabilidad_caja_vs_devengo"
       ],
       "condiciones_activacion": [
         "El usuario confunde utilidad contable con caja disponible o presenta problemas de liquidez pese a ser rentable"
@@ -95087,7 +95124,8 @@
       "entregable_esperado": "Un reporte de tu prueba con clientes reales, con las métricas de velocidad de uso y los criterios que usaste para decidir si pasa o no pasa",
       "nodos_previos": [
         "actualizar_modelo_de_negocio_pivot_o_proceed",
-        "riesgos_lanzamiento_mvp"
+        "riesgos_lanzamiento_mvp",
+        "customer_validation"
       ],
       "nodos_siguientes": [
         "medir_comportamiento_y_entusiasmo_del_cliente",
@@ -101476,7 +101514,8 @@
         "estrategia_crecimiento_clientes",
         "factores_valoracion_startup",
         "experiencia_del_cliente_proactiva",
-        "lienzo_modelo_negocio"
+        "lienzo_modelo_negocio",
+        "valor_de_vida_del_cliente"
       ],
       "condiciones_activacion": [
         "Cuando necesitas cuantificar el éxito de tus tácticas de retención",
@@ -103270,7 +103309,9 @@
       ],
       "nodos_siguientes": [
         "consejo_de_calidad",
-        "rol_director_calidad"
+        "rol_director_calidad",
+        "alineacion_estrategica_despliegue",
+        "consejo_ejecutivo_calidad"
       ],
       "condiciones_activacion": [
         "Cuando empiezas una transformación cultural de calidad en tu negocio",
@@ -104565,7 +104606,8 @@
         "project_scope_statement",
         "requirements_management_plan",
         "project_management_plan",
-        "work_breakdown_structure"
+        "work_breakdown_structure",
+        "wbs_dictionary"
       ],
       "condiciones_activacion": [
         "Cuando el proyecto tiene alto riesgo de 'scope creep'",
@@ -105331,8 +105373,7 @@
         "lienzo_modelo_negocio",
         "plan_de_adquisicion_acquire",
         "relaciones_con_clientes",
-        "tipos_de_clientes",
-        "get_out_of_the_building"
+        "tipos_de_clientes"
       ],
       "condiciones_activacion": [
         "Cuando no tienes claro quien toma la decisión de compra dentro del negocio de tu cliente",
@@ -108309,7 +108350,8 @@
       ],
       "nodos_siguientes": [
         "prueba_solucion_con_cliente",
-        "arquetipos_de_cliente"
+        "arquetipos_de_cliente",
+        "value_proposition_startup"
       ],
       "condiciones_activacion": [
         "Antes de realizar entrevistas costosas o difíciles de conseguir con clientes reales",
@@ -109755,7 +109797,8 @@
         "equipos_blitz",
         "equipos_ruptura_vet",
         "juran_quality_by_design",
-        "organizacion_equipos_calidad_servicio"
+        "organizacion_equipos_calidad_servicio",
+        "causas_especiales_y_comunes_variacion"
       ],
       "nodos_siguientes": [
         "sostener_las_ganancias",
@@ -113421,7 +113464,8 @@
         "data_integrity_forecasting",
         "expected_commercial_value_ecv",
         "scorecard_de_seleccion_de_proyectos",
-        "technology_platform_evaluation"
+        "technology_platform_evaluation",
+        "value_proposition_canvas"
       ],
       "condiciones_activacion": [
         "Cuando se necesita una visión sistemática de cómo avanzar de idea a negocio validado"
@@ -116828,7 +116872,8 @@
       "entregable_esperado": "Métrica de LTV calculada y monitoreada con tendencia de crecimiento",
       "nodos_previos": [
         "coeficiente_viral",
-        "optimizacion_metricas_crecimiento"
+        "optimizacion_metricas_crecimiento",
+        "retention_metrics"
       ],
       "nodos_siguientes": [
         "optimizacion_mercado_multilado"
@@ -117115,7 +117160,8 @@
       "entregable_esperado": "Cálculo claro y documentado del porcentaje de dilución esperado en la ronda.",
       "nodos_previos": [
         "entender_term_sheet",
-        "option_pool_negociacion"
+        "option_pool_negociacion",
+        "cap_table_basico"
       ],
       "nodos_siguientes": [
         "pool_opciones_empleados",
@@ -117232,7 +117278,8 @@
         "empathy_map",
         "prototipado_modelos_negocio",
         "value_proposition_startup",
-        "seis_formas_innovar_perfil_cliente"
+        "seis_formas_innovar_perfil_cliente",
+        "testing_process_completo"
       ],
       "nodos_siguientes": [
         "customer_profile",
@@ -117293,7 +117340,10 @@
         "multi_sided_platforms",
         "search_for_business_model",
         "preguntas_need_payoff",
-        "pivot_post_ventas"
+        "pivot_post_ventas",
+        "customer_insights_design",
+        "earlyvangelists_ventas_tempranas",
+        "simulacion_clientes_ia"
       ],
       "nodos_siguientes": [
         "value_proposition_canvas",
@@ -118680,7 +118730,8 @@
       ],
       "entregable_esperado": "Infraestructura de servidores virtualizada con métricas de mejora en utilización y reducción de consumo energético",
       "nodos_previos": [
-        "deteccion_ineficiencias_ti"
+        "deteccion_ineficiencias_ti",
+        "estrategia_ti_verde"
       ],
       "nodos_siguientes": [
         "gestion_centro_datos_verde"
@@ -119806,7 +119857,8 @@
       "entregable_esperado": "Diccionario completo del WBS con detalle de cada paquete de trabajo",
       "nodos_previos": [
         "work_breakdown_structure",
-        "project_scope_statement"
+        "project_scope_statement",
+        "scope_management_plan"
       ],
       "nodos_siguientes": [
         "stakeholder_register",

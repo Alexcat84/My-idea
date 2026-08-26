@@ -1,0 +1,679 @@
+====================================================================================================
+PAR 0: medicion_servicios -> programa_make_certain_3  (paso 3, dominio quality)
+MADRE titulo: Medición de Calidad en Áreas de Servicio y Administrativas  | fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+  paso senalado (3): Implementar el programa 'Make Certain' para servicio y áreas administrativas
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Reconocer que las áreas de servicio también generan costos de no calidad
+    [2] Definir una base de medición: cambios causados por desviación no planificada de procedimientos
+    [3] Implementar el programa 'Make Certain' para servicio y áreas administrativas
+    [4] Solicitar a cada departamento que identifique su propio método de conteo de errores
+    [5] Registrar y graficar el progreso de estas mediciones
+  nodos_siguientes actuales de la madre (2): ['costo_de_calidad', 'costo_de_calidad_3']
+
+HIJO titulo: Programa Make Certain  | fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+  resumen: El programa Make Certain es el primer programa de prevención de defectos diseñado específicamente para empleados administrativos (white-collar) y no relacionados con manufactura. Reconoce que los errores de oficina y paperwork generan problemas costosos y frustrantes, y que basta un solo dato erróneo en la cadena de información para afectar toda su efectividad y precisión. El programa incluye una guía del instructor con pasos de acción específicos para implementarlo en entornos administrativos.
+  PASOS DEL HIJO:
+    [1] Identificar los procesos administrativos críticos susceptibles a errores de datos
+    [2] Capacitar a los empleados administrativos usando la guía del instructor del programa
+    [3] Implementar los pasos de acción definidos para la prevención de errores de oficina
+    [4] Monitorear la exactitud de los datos y documentos en la cadena de comunicación
+  nodos_previos actuales del hijo: ['cero_defectos']
+
+====================================================================================================
+PAR 1: medicion_servicios -> make_certain_programa  (paso 3, dominio quality)
+MADRE titulo: Medición de Calidad en Áreas de Servicio y Administrativas  | fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+  paso senalado (3): Implementar el programa 'Make Certain' para servicio y áreas administrativas
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Reconocer que las áreas de servicio también generan costos de no calidad
+    [2] Definir una base de medición: cambios causados por desviación no planificada de procedimientos
+    [3] Implementar el programa 'Make Certain' para servicio y áreas administrativas
+    [4] Solicitar a cada departamento que identifique su propio método de conteo de errores
+    [5] Registrar y graficar el progreso de estas mediciones
+  nodos_siguientes actuales de la madre (2): ['costo_de_calidad', 'costo_de_calidad_3']
+
+HIJO titulo: Programa Make Certain para Áreas Administrativas  | fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+  resumen: Make Certain es un programa de mejora orientado a personal de oficina y administrativo (white-collar), diseñado para generar conciencia inmediata sobre la responsabilidad personal en la calidad del trabajo de comunicación y papeleo. Se basa en el reconocimiento de que la mayoría de las personas atribuyen sus problemas a otros y no a sí mismas, y busca revertir esa percepción mediante ejercicios grupales guiados.
+  PASOS DEL HIJO:
+    [1] Informar al personal directivo sobre el concepto e intención del programa
+    [2] Designar coordinadores por departamento administrativo
+    [3] Recolectar ejemplos reales de errores de prevención evitables
+    [4] Realizar sesión donde cada participante declare su 'mayor problema'
+    [5] Evidenciar que los problemas suelen atribuirse a otros, no a uno mismo
+    [6] Solicitar ideas escritas de prevención de defectos al equipo de mejora
+    [7] Establecer reuniones regulares de prevención de defectos por grupo, similar a los círculos de acción correctiva en manufactura
+  nodos_previos actuales del hijo: ['programa_catorce_pasos_crosby', 'zero_defects_concepto', 'programa_mejora_calidad_14_pasos']
+
+====================================================================================================
+PAR 2: mejora_calidad_crosby -> concepto_programa_catorce_pasos  (paso 2, dominio quality)
+MADRE titulo: Programa de Mejora de Calidad  | fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+  paso senalado (2): Implementar un programa estructurado de mejora (como el de catorce pasos)
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Establecer la mejora de calidad como política obligatoria, no opcional, en toda la organización
+    [2] Implementar un programa estructurado de mejora (como el de catorce pasos)
+    [3] Fomentar la comunicación interna generada por el proceso de mejora
+    [4] Sostener el programa en el tiempo para consolidar resultados y cultura
+  nodos_siguientes actuales de la madre (1): ['asuntos_consumidor']
+
+HIJO titulo: Programa de Catorce Pasos para la Mejora de la Calidad  | fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+  resumen: Descrito por Crosby como la base de todos los programas de calidad de ITT, es un programa estructurado de mejora mediante prevención de defectos, implementado de manera adaptable en cada unidad de negocio. Aunque el detalle completo se desarrolla más adelante en el libro, se presenta aquí como el mecanismo operativo central que traduce el compromiso directivo en acciones concretas de mejora continua.
+  PASOS DEL HIJO:
+    [1] Adaptar el programa de catorce pasos a la realidad y madurez de cada unidad de negocio.
+    [2] Iniciar con unidades piloto para generar casos de éxito antes de expandir a toda la corporación.
+    [3] Documentar resultados tempranos para usarlos como evidencia en seminarios internos.
+    [4] Dar seguimiento sostenido durante varios años, ya que la adopción plena toma tiempo (4-5 años según Crosby).
+  nodos_previos actuales del hijo: ['concepto_cuatro_pilares_programa_calidad', 'concepto_costo_de_calidad', 'costo_de_mala_calidad_copq']
+
+====================================================================================================
+PAR 3: consejo_de_calidad_y_rol_del_director -> planificacion_estrategica_despliegue_2  (paso 3, dominio quality)
+MADRE titulo: Consejo de Calidad y Rol del Director de Calidad  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  paso senalado (3): Integra las metas de calidad en tus planes de negocio y de desempeño
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Forma un consejo de calidad con las personas que toman las decisiones importantes en tu negocio
+    [2] Define y comunica visión, misión, valores compartidos y tu política de calidad
+    [3] Integra las metas de calidad en tus planes de negocio y de desempeño
+    [4] Designa responsables para los proyectos clave de calidad
+    [5] Revisa el progreso con frecuencia y elimina los obstáculos que encuentres
+  nodos_siguientes actuales de la madre (2): ['transferencia_de_actividades_a_departamentos_de_linea', 'rol_tactico_estrategico_oficina']
+
+HIJO titulo: Cómo integrar la calidad en tu plan de negocio  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  resumen: Es el proceso sistemático mediante el cual tú defines tus metas de largo plazo relacionadas con la calidad y los clientes, integrándolas de forma equitativa con las metas financieras, de la gente que trabaja contigo, marketing y desarrollo, en un solo plan de negocio cohesivo. Ese plan luego se baja a metas más pequeñas, proyectos y acciones concretas en cada área. Integrarlo evita que tengas planes que se contradicen entre sí (dinero contra calidad) y asegura que elimines o cambies las actividades que no estén alineadas con tus metas.
+  PASOS DEL HIJO:
+    [1] Definir tu visión, misión, estrategias y metas anuales de forma integrada
+    [2] Poner la voz del cliente y las metas de calidad al mismo nivel que las metas financieras
+    [3] Reconocer y premiar el desempeño de acuerdo a las metas de mejora que te propongas
+    [4] Asegurarte de que participen todos los que te ayudan, sin importar su rol o nivel
+    [5] Usar el mismo lenguaje para los términos clave, como calidad, comparación con el mercado o cómo bajas la estrategia a lo concreto
+    [6] Enseñar estos conceptos y herramientas a todos los que trabajan contigo, no solo a quien se encarga de la calidad
+    [7] Eliminar las iniciativas que no estén alineadas con tu plan estratégico
+  nodos_previos actuales del hijo: ['auditoria_sistema_control_calidad', 'auditoria_sistema_control_calidad_2']
+
+====================================================================================================
+PAR 4: customer_validation -> prueba_mvp_alta_fidelidad  (paso 1, dominio core)
+MADRE titulo: Validación con clientes (Customer Validation)  | fuente: The Startup Owner's Manual - Steve Blank
+  paso senalado (1): Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes
+    [2] Diseña un plan de ventas y pruébalo en el terreno con tus primeros clientes
+    [3] Mide si por cada peso que inviertes en ventas y marketing te regresan el doble (o la proporción que hayas definido)
+    [4] Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar
+    [5] Evalúa si ya alcanzaste el impulso suficiente para pasar a escalar
+  nodos_siguientes actuales de la madre (5): ['customer_creation', 'decision_pivotar_o_proceder', 'metrics_that_matter_framework', 'pivote_startup', 'validar_modelo_financiero']
+
+HIJO titulo: Prueba de alta fidelidad de tu producto mínimo (MVP)  | fuente: The Startup Owner's Manual - Steve Blank
+  resumen: A diferencia de la prueba sencilla anterior, que solo mide si el problema te interesa a la gente, aquí invitas a un número limitado de clientes reales a usar una versión funcional de tu producto (MVP) para ver si de verdad lo compran o lo usan. No es un lanzamiento completo ni abierto; conviene que el acceso sea solo por invitación, para controlar quién lo ve y evitar que la competencia o la prensa se enteren antes de tiempo. Lo que más te interesa medir es la velocidad con la que tus clientes empiezan a usarlo de verdad.
+  PASOS DEL HIJO:
+    [1] Decide un número limitado de clientes a quienes invitarás a probar tu producto (MVP)
+    [2] Incluye una llamada a la acción clara: comprar, registrarse o saber más
+    [3] Mide cuántas visitas necesitas antes de que alguien empiece a usarlo
+    [4] Mide cuántos usuarios recomiendan tu producto a amigos y qué tan rápido empiezan a usarlo
+    [5] Evita publicidad, prensa o demostraciones públicas durante esta prueba
+  nodos_previos actuales del hijo: ['actualizar_modelo_de_negocio_pivot_o_proceed', 'riesgos_lanzamiento_mvp']
+
+====================================================================================================
+PAR 5: rol_alta_direccion_calidad -> alineacion_estrategica_despliegue  (paso 2, dominio quality)
+MADRE titulo: Tu Rol en el Liderazgo de Calidad  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  paso senalado (2): Definir estrategias y metas de calidad alineadas con tu visión del negocio
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Crear y participar personalmente en un espacio de revisión de calidad
+    [2] Definir estrategias y metas de calidad alineadas con tu visión del negocio
+    [3] Asignar recursos concretos (tiempo, personas, presupuesto) para las actividades de calidad
+    [4] Participar personalmente en los equipos que resuelven los problemas cronicos mas importantes
+    [5] Revisar el progreso periodicamente y quitar los obstaculos que encuentres
+    [6] Disenar formas de reconocer y recompensar la mejora de calidad
+  nodos_siguientes actuales de la madre (2): ['consejo_de_calidad', 'rol_director_calidad']
+
+HIJO titulo: Alineación entre tu estrategia y tus metas de calidad  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  resumen: Un paso crucial en cualquier revisión de tu negocio es verificar que tu misión, visión, valores y politicas esten alineados y se comuniquen con claridad hasta llegar al cliente final. A partir de estos elementos se desarrollan estrategias de largo plazo y metas anuales de corto plazo, que se despliegan mediante politicas e iniciativas. La falta de alineación entre tu plan estrategico y las actividades diarias puede provocar proyectos de baja importancia y desperdicio de recursos.
+  PASOS DEL HIJO:
+    [1] Identificar la misión, visión, valores y politicas actuales de tu negocio
+    [2] Verificar la coherencia entre tus metas de largo plazo (estrategias) y tus metas anuales de corto plazo
+    [3] Revisar tu mismo, o con la persona que te ayuda a decidir, como se esta desplegando el plan estrategico
+    [4] Detectar areas desalineadas entre tu plan estrategico y los proyectos o actividades diarias
+    [5] Realinear iniciativas y proyectos con los objetivos estrategicos identificados
+  nodos_previos actuales del hijo: ['evaluacion_riesgo_calidad_organizacional']
+
+====================================================================================================
+PAR 6: cap_table_basico -> valuacion_pre_post_money  (paso 2, dominio core)
+MADRE titulo: Cómo armar tu tabla de reparto de acciones (cap table)  | fuente: Venture Deals
+  paso senalado (2): Define la valuación antes de la inversión (pre-money) y el monto que vas a recibir, para calcular la valuación después de la inversión (post-money)
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Lista las acciones que tienes como fundador antes de recibir la inversión
+    [2] Define la valuación antes de la inversión (pre-money) y el monto que vas a recibir, para calcular la valuación después de la inversión (post-money)
+    [3] Calcula el porcentaje que le corresponde al inversionista dividiendo lo que invierte entre la valuación post-money
+    [4] Si vas a crear una bolsa de opciones después de la inversión, resta ese porcentaje del tuyo para saber cuánto te queda realmente
+    [5] Resuelve lo que falta en tu tabla (total de acciones, precio por acción) con álgebra básica
+    [6] Verifica tus cálculos comparando la valuación pre-money implícita contra el número de acciones y el precio por acción
+    [7] Usa decimales o fracciones de acciones en los cálculos intermedios y redondea solo al final
+  nodos_siguientes actuales de la madre (6): ['metodo_conversion_notas_cap_table', 'composicion_board_directors', 'decision_hire_investment_banker', 'employee_pool_esop', 'right_of_first_refusal_pro_rata', 'vesting_acciones_fundadores']
+
+HIJO titulo: Valuación Pre-Money y Post-Money  | fuente: Venture Deals - Brad Feld
+  resumen: La valuación determina cuánto de la empresa se vende y la dilución resultante. La valuación pre-money es el valor antes de la inversión; la post-money es pre-money más el monto invertido. Confundir estos términos en la negociación verbal puede llevar a diferencias significativas en el porcentaje de propiedad cedido.
+  PASOS DEL HIJO:
+    [1] Al recibir una oferta verbal de valuación, clarificar explícitamente si es pre-money o post-money.
+    [2] Calcular el porcentaje de dilución usando la fórmula: inversión / post-money valuation.
+    [3] Usar frases como 'asumo que te refieres a $X pre-money' para forzar claridad en la negociación.
+  nodos_previos actuales del hijo: ['entender_term_sheet', 'option_pool_negociacion']
+
+====================================================================================================
+PAR 7: criterios_de_exito_gate -> post_launch_review  (paso 4, dominio core)
+MADRE titulo: Criterios de Éxito para Evaluar tu Proyecto por Etapas (Gates)  | fuente: Winning at New Products - Robert G. Cooper
+  paso senalado (4): Compara los resultados reales contra tus criterios en la revisión posterior al lanzamiento
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Define criterios de éxito específicos y medibles para cada etapa de tu proyecto
+    [2] Acuerda esos criterios con tu equipo antes de avanzar a la siguiente etapa
+    [3] Usa esos criterios para evaluar tu progreso en cada etapa sucesiva
+    [4] Compara los resultados reales contra tus criterios en la revisión posterior al lanzamiento
+  nodos_siguientes actuales de la madre (0): []
+
+HIJO titulo: Revisión Post-Lanzamiento  | fuente: Winning at New Products - Robert G. Cooper
+  resumen: Revisión que ocurre generalmente entre 12 y 18 meses después de la comercialización, donde se compara el desempeño real (ingresos, costos, gastos, ganancias, tiempos) contra las proyecciones hechas en los Gates 3 y 5. Incluye una auditoría retrospectiva del proyecto completo para identificar aprendizajes y mejorar procesos futuros (kaizen). Muchas empresas hacen dos revisiones: una temprana (1-2 meses) para correcciones inmediatas y otra tardía (12-24 meses) para rendición de cuentas final.
+  PASOS DEL HIJO:
+    [1] Comparar resultados reales de ventas, costos y ganancias contra las proyecciones originales
+    [2] Evaluar la responsabilidad y desempeño del equipo del proyecto
+    [3] Realizar una auditoría retrospectiva (post audit) del proyecto completo
+    [4] Documentar lecciones aprendidas para mejorar el próximo proceso de desarrollo
+    [5] Disolver el equipo del proyecto y transferir el producto a la línea regular de productos
+  nodos_previos actuales del hijo: ['stage5_launch', 'revision_portafolio_periodica']
+
+====================================================================================================
+PAR 8: causas_especiales_y_comunes_variacion -> six_sigma_dmaic  (paso 3, dominio quality)
+MADRE titulo: Causas Especiales y Comunes de Variación  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  paso senalado (3): Si es causa común: derivar el problema a un proyecto de mejora (ej. Six Sigma DMAIC)
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Analizar si la desviación observada tiene origen en una sola variable dominante (especial) o en múltiples variables menores (común)
+    [2] Si es causa especial: activar acción correctiva inmediata vía PDCA
+    [3] Si es causa común: derivar el problema a un proyecto de mejora (ej. Six Sigma DMAIC)
+    [4] Evitar tomar acción correctiva sobre variación común (riesgo de 'tampering')
+  nodos_siguientes actuales de la madre (1): ['carta_de_control_shewhart']
+
+HIJO titulo: Modelo Six Sigma DMAIC  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  resumen: DMAIC es el modelo de mejora Six Sigma más ampliamente adoptado y reconocido, basado en la secuencia universal de Juran para resolver problemas crónicos de calidad. Consiste en seis momentos: seleccionar el problema y lanzar el proyecto, definir el problema con claridad, medir la magnitud de los síntomas, analizar la información para descubrir la causa raíz, mejorar aplicando un remedio a esa causa, y controlar para sostener las ganancias obtenidas. Es un método estructurado que te permite avanzar de forma ordenada desde el diagnóstico hasta la solución sostenida en el tiempo, usando métricas cuantificables en cada fase para saber si realmente estás progresando o solo dando vueltas alrededor del síntoma.
+  PASOS DEL HIJO:
+    [1] Selecciona el problema concreto que vas a resolver y date un plazo para arrancar el proyecto.
+    [2] Define el problema con claridad, en una frase que puedas explicar a cualquiera en diez segundos.
+    [3] Mide la magnitud real de los síntomas con datos, no con impresiones.
+    [4] Analiza la información recolectada hasta encontrar la causa raíz, no solo el síntoma visible.
+    [5] Implementa un remedio dirigido específicamente a esa causa raíz.
+    [6] Controla los resultados periódicamente para asegurar que la mejora se mantenga.
+    [7] Establecer la creencia de que el cambio es deseable y factible
+    [8] Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales
+    [9] Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)
+    [10] Evaluar el impacto cultural de los cambios propuestos y gestionar la resistencia
+    [11] Establecer un proyecto formal con equipo asignado.
+    [12] Replicar los resultados exitosos y nominar nuevos proyectos de mejora.
+  nodos_previos actuales del hijo: ['viaje_diagnostico_remedial', 'analisis_pareto_priorizacion', 'error_proofing_servicio', 'dmaic_fase_improve', 'impacto_calidad_en_costos', 'analisis_pareto_de_proveedores', 'costo_de_mala_calidad_copq', 'auditorias_calidad_proceso', 'control_calidad_operaciones_servicio', 'desarrollo_de_controles_de_proceso', 'descubrir_necesidades_del_cliente', 'diferencia_planeacion_mejora', 'equipos_autodirigidos_servicio', 'equipos_blitz', 'equipos_ruptura_vet', 'juran_quality_by_design', 'organizacion_equipos_calidad_servicio']
+
+====================================================================================================
+PAR 9: analisis_capacidad_proceso -> capacidad_de_proceso_2  (paso 2, dominio quality)
+MADRE titulo: Análisis de Capacidad de Proceso (Process Capability)  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  paso senalado (2): Verificar si el proceso está en control estadístico mediante cartas de control
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Graficar mediciones individuales contra los límites de especificación
+    [2] Verificar si el proceso está en control estadístico mediante cartas de control
+    [3] Calcular la desviación estándar y los límites de capacidad del proceso
+    [4] Comparar los índices de capacidad (Cpk, Cpm) con las especificaciones usando un histograma
+    [5] Verificar los cinco supuestos clave: estabilidad, normalidad, datos suficientes, representatividad de muestras e independencia de mediciones
+  nodos_siguientes actuales de la madre (3): ['mejora_continua_del_proceso', 'indice_cpk', 'capacidad_del_proceso']
+
+HIJO titulo: Capacidad de Proceso mediante Monitoreo Estadístico  | fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  resumen: Cada unidad estudiada (un operador humano, una máquina o un sistema) debe ser monitoreada durante un período de tiempo para determinar su capacidad de proceso: lo que puede hacer predeciblemente bajo las condiciones actuales. Esta capacidad usualmente puede determinarse en unos tres meses mediante cartas de control. Si la dirección determina que la capacidad del proceso no está dentro de límites aceptables, debe actuar sobre el proceso o sistema, ya que la calidad no puede exceder la capacidad del sistema y no puede ser inspeccionada dentro del producto, debe ser construida en él.
+  PASOS DEL HIJO:
+    [1] Seleccionar la unidad a estudiar (persona, máquina, sistema)
+    [2] Recolectar datos de desempeño durante un período representativo (aprox. 3 meses)
+    [3] Construir cartas de control (run charts, control charts) para visualizar variación
+    [4] Determinar si el proceso está dentro de límites aceptables
+    [5] Si no lo está, intervenir sobre el sistema (no sobre el individuo)
+  nodos_previos actuales del hijo: ['calidad_de_diseno_vs_produccion']
+
+====================================================================================================
+PAR 10: customer_insights_design -> value_proposition_startup  (paso 4, dominio core)
+MADRE titulo: Diseño de Modelos de Negocio basados en Customer Insights  | fuente: Business Model Generation (Osterwalder)
+  paso senalado (4): Cuestionar constantemente: ¿esta propuesta de valor resuelve un problema real del cliente?
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Investigar segmentos de clientes actuales pero también periféricos o no atendidos
+    [2] Emplear métodos etnográficos/observacionales (no solo encuestas) para entender comportamiento real
+    [3] Usar los insights para informar decisiones en propuesta de valor, canales, relaciones e ingresos
+    [4] Cuestionar constantemente: ¿esta propuesta de valor resuelve un problema real del cliente?
+  nodos_siguientes actuales de la madre (4): ['empathy_map', 'proceso_ideacion_modelo_negocio', 'customer_scenarios_business_model', 'escenarios_diseno_modelo_negocio']
+
+HIJO titulo: Propuesta de Valor  | fuente: The Startup Owner's Manual - Blank, Steve
+  resumen: Tu propuesta de valor describe el trabajo (job) que resuelves para tu cliente. Son las caracteristicas de tu producto o servicio que responden a un problema o una necesidad real: ahorrar tiempo, ganar estatus, simplificar algo, dar comodidad. Para que funcione, tiene que encajar con precisión en el segmento de clientes al que se la ofreces.
+  PASOS DEL HIJO:
+    [1] Identifica los problemas o necesidades reales de tu segmento de clientes.
+    [2] Define que caracteristicas de tu producto o servicio resuelven esos problemas.
+    [3] Verifica el encaje entre tu propuesta de valor y tu segmento de clientes hablando directamente con ellos.
+  nodos_previos actuales del hijo: ['definicion_startup', 'disenar_los_detalles_no_lo_inevitable', 'disenar_para_sanacion', 'disenar_verbos_no_sustantivos', 'economia_circular_de_la_imaginacion', 'economia_de_la_experiencia', 'multi_sided_platform_pattern', 'narrativa_como_herramienta_de_sentido', 'ecuacion_de_valor_venta', 'preguntas_beneficio', 'multi_sided_platforms', 'search_for_business_model', 'preguntas_need_payoff', 'pivot_post_ventas']
+
+====================================================================================================
+PAR 11: testing_process_completo -> value_proposition_canvas  (paso 1, dominio core)
+MADRE titulo: Proceso de Testing Integral (Testing Process)  | fuente: Value Proposition Design
+  paso senalado (1): Da forma a tus ideas usando el Value Proposition Canvas y Business Model Canvas.
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Da forma a tus ideas usando el Value Proposition Canvas y Business Model Canvas.
+    [2] Extrae las hipótesis más críticas que deben ser verdaderas para que la idea funcione.
+    [3] Diseña experimentos (tarjeta de test) para cada hipótesis prioritaria.
+    [4] Ejecuta el ciclo de aprendizaje y captura insights con la tarjeta de aprendizaje.
+    [5] Mide el progreso usando el Progress Board y el Investment Readiness Thermometer de Steve Blank.
+  nodos_siguientes actuales de la madre (6): ['fit_problema_solucion', 'verificar_product_market_fit', 'data_integrity_forecasting', 'expected_commercial_value_ecv', 'scorecard_de_seleccion_de_proyectos', 'technology_platform_evaluation']
+
+HIJO titulo: Value Proposition Canvas  | fuente: Value Proposition Design
+  resumen: Herramienta con dos lados: el Perfil del Cliente (Customer Profile) que clarifica el entendimiento del cliente, y el Mapa de Valor (Value Map) que describe cómo se pretende crear valor para ese cliente. Se logra Fit (encaje) cuando el mapa de valor satisface el perfil del cliente. Es un plug-in que hace zoom en dos bloques del Business Model Canvas: Segmentos de Clientes y Propuesta de Valor.
+  PASOS DEL HIJO:
+    [1] Descargar el template del Value Proposition Canvas
+    [2] Dibujar el círculo del Customer Profile a la derecha, especificando en él los jobs, pains y gains del cliente
+    [3] Dibujar el cuadrado del Value Map a la izquierda, documentando en él cómo tu producto/servicio alivia pains y crea gains
+    [4] Trabajar ambos lados iterativamente hasta encontrar Fit
+    [5] Comunicar ambos documentos a toda la organización para crear entendimiento compartido.
+    [6] Usar los documentos como scoreboard durante conversaciones reales con clientes.
+  nodos_previos actuales del hijo: ['lienzo_modelo_negocio', 'empathy_map', 'prototipado_modelos_negocio', 'value_proposition_startup', 'seis_formas_innovar_perfil_cliente']
+
+====================================================================================================
+PAR 12: lean_manufacturing_tps -> poka_yoke_a_prueba_de_errores  (paso 4, dominio quality)
+MADRE titulo: Lean Manufacturing y Toyota Production System (TPS)  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  paso senalado (4): Introducir poka-yoke (a prueba de errores) en puntos críticos del proceso
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Identificar los tipos de desperdicio (muda) presentes en los procesos productivos
+    [2] Implementar kaizen (mejora continua) como práctica constante
+    [3] Aplicar 6S para mantener un lugar de trabajo limpio y organizado
+    [4] Introducir poka-yoke (a prueba de errores) en puntos críticos del proceso
+    [5] Establecer sistemas pull mediante kanban para sincronizar la producción con la demanda
+    [6] Usar el Heijunka box para nivelar y suavizar el flujo de producción
+  nodos_siguientes actuales de la madre (2): ['shingo_enterprise_excellence_model', 'shingo_prize']
+
+HIJO titulo: Poka-Yoke (A Prueba de Errores)  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  resumen: Técnica Lean que consiste en diseñar mecanismos o procedimientos que hacen imposible o muy difícil que ocurra un error humano en el proceso, previniendo defectos en su origen en lugar de detectarlos después de producidos.
+  PASOS DEL HIJO:
+    [1] Identificar los puntos del proceso donde ocurren errores humanos frecuentes
+    [2] Diseñar un mecanismo físico o de procedimiento que prevenga el error
+    [3] Probar el mecanismo de prueba de errores en condiciones reales
+    [4] Estandarizar e implementar la solución a prueba de errores en todo el proceso
+  nodos_previos actuales del hijo: ['kaizen_mejora_continua']
+
+====================================================================================================
+PAR 13: lente_sostenibilidad_finanzas -> eco_eficiencia  (paso 2, dominio environmental)
+MADRE titulo: Aplicar un Lente de Sostenibilidad al Análisis Financiero  | fuente: The Green to Gold Business Play - Daniel C. Esty
+  paso senalado (2): Evaluar oportunidades de ahorro en eficiencia energética y reducción de residuos
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Revisar los procesos financieros actuales para identificar riesgos ambientales ocultos
+    [2] Evaluar oportunidades de ahorro en eficiencia energética y reducción de residuos
+    [3] Incorporar criterios de sostenibilidad en las decisiones de inversión y reporting
+    [4] Explorar incentivos fiscales y financiamiento verde disponibles
+  nodos_siguientes actuales de la madre (2): ['contabilidad_basada_actividades', 'contabilidad_ambiental']
+
+HIJO titulo: Eco-Eficiencia para Reducción de Costos  | fuente: The Green to Gold Business Play - Daniel C. Esty
+  resumen: La eco-eficiencia consiste en incorporar un enfoque de sostenibilidad a la estrategia corporativa para identificar y eliminar desperdicio e ineficiencia, generando ahorros sustanciales. Las mayores ganancias suelen provenir de la gestión energética, pero también del consumo de agua y la eliminación de desperdicio en procesos de producción. Requiere un enfoque estructurado y basado en datos (ej. herramientas como AUDIO assessment, Lean Six Sigma) para identificar oportunidades de ahorro, con retornos de inversión frecuentemente muy altos y rápidos.
+  PASOS DEL HIJO:
+    [1] Realizar una auditoría energética y de recursos (agua, materiales) de todas las operaciones, y en cada etapa de tu proceso
+    [2] Aplicar frameworks de identificación de desperdicio como AUDIO assessment o Lean/Green Six Sigma, y rediseña el proceso para reducirlo
+    [3] Priorizar inversiones en eficiencia con mayor retorno (HVAC, iluminación, automatización)
+    [4] Revisar la utilización de activos fijos (edificios, espacio) para eliminar excedentes
+    [5] Medir y reportar ahorros logrados para justificar expansión del programa
+    [6] Implementa un sistema de seguimiento ambiental con métricas que puedas ir ampliando (panel de control digital)
+  nodos_previos actuales del hijo: ['mitigacion_riesgos_ambientales', 'modelo_green_wave', 'eco_advantage']
+
+====================================================================================================
+PAR 14: planificacion_de_la_inspeccion -> clasificacion_caracteristicas_calidad  (paso 4, dominio quality)
+MADRE titulo: Planificación de la Inspección  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  paso senalado (4): Elaborar una clasificación de características derivada de especificaciones
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Designar las estaciones de inspección a lo largo del proceso productivo
+    [2] Especificar instrucciones detalladas para cada punto de inspección
+    [3] Definir las facilidades y equipos requeridos para la inspección
+    [4] Elaborar una clasificación de características derivada de especificaciones
+    [5] Elaborar una clasificación de defectos basada en síntomas de no conformidad
+  nodos_siguientes actuales de la madre (3): ['conformidad_especificacion_aptitud_uso', 'auditoria_de_producto', 'planificacion_inspeccion']
+
+HIJO titulo: Clasificación de Características y Defectos de Calidad  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  resumen: Consiste en elaborar dos listas: una de características de calidad derivadas de las especificaciones, y otra de defectos (síntomas de no conformidad durante manufactura o uso). Estas listas guían al planificador para determinar cuáles características requieren mayor atención en la inspección.
+  PASOS DEL HIJO:
+    [1] Derivar la lista de características de calidad a partir de las especificaciones del producto.
+    [2] Elaborar la lista de defectos observados en manufactura y en campo.
+    [3] Comparar ambas listas para identificar diferencias relevantes.
+    [4] Usar la clasificación para priorizar esfuerzos de inspección.
+  nodos_previos actuales del hijo: ['planificacion_inspeccion']
+
+====================================================================================================
+PAR 15: retention_metrics -> valor_de_vida_del_cliente  (paso 5, dominio core)
+MADRE titulo: Métricas de Retención  | fuente: The Startup Owner's Manual - Steve Blank
+  paso senalado (5): Estima la vida promedio del cliente y su valor de vida (lifetime value)
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Registra la fecha de inicio y la fuente de cada cliente, y agrúpalos en cohortes por mes de ingreso para poder comparar su comportamiento
+    [2] Mide la actividad de cada cliente y de cada cohorte: visitas, páginas vistas, tiempo en el sitio o la aplicación, frecuencia y duración de cada visita, y el tiempo promedio que pasa entre una y la siguiente
+    [3] Monitorea el comportamiento dentro del sitio: qué clics hace cada cliente y cuáles no
+    [4] Detecta el momento y la causa del abandono, y monitorea las quejas, los tickets de soporte y las tasas de respuesta a tus correos
+    [5] Estima la vida promedio del cliente y su valor de vida (lifetime value)
+    [6] Mide lo que tu retención produce: los referidos que genera cada cliente y el resultado de cada promoción o campaña de retención
+  nodos_siguientes actuales de la madre (4): ['estrategia_crecimiento_clientes', 'factores_valoracion_startup', 'experiencia_del_cliente_proactiva', 'lienzo_modelo_negocio']
+
+HIJO titulo: Valor de Vida del Cliente (Customer Lifetime Value - LTV)  | fuente: The Startup Owner's Manual - Steve Blank
+  resumen: El LTV mide cuánto vale un cliente para la empresa a lo largo de su relación completa. Crece cuando el cliente compra más, refiere más clientes, o (en mercados multi-lado) se vuelve más activo generando más ingresos. Los programas de 'grow customers' son el principal motor de crecimiento del LTV.
+  PASOS DEL HIJO:
+    [1] Calcular el LTV actual de los clientes
+    [2] Monitorear la evolución del LTV en el tiempo
+    [3] Implementar nuevos programas y ofertas que incrementen el LTV
+    [4] Mejorar la eficiencia de los procesos de retención y crecimiento
+  nodos_previos actuales del hijo: ['coeficiente_viral', 'optimizacion_metricas_crecimiento']
+
+====================================================================================================
+PAR 16: control_estadistico_de_inventario_en_transito -> causas_comunes_vs_especiales  (paso 3, dominio quality)
+MADRE titulo: Control estadístico de procesos aplicado a tiempos de tránsito e inventario  | fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  paso senalado (3): Separar las causas especiales (ej. averías) de la variación normal del sistema.
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Recolectar datos históricos de tiempo de tránsito o duración del proceso.
+    [2] Construir un gráfico de control para identificar si el proceso está en control estadístico.
+    [3] Separar las causas especiales (ej. averías) de la variación normal del sistema.
+    [4] Calcular el límite superior de tiempo esperado bajo control estadístico.
+    [5] Ajustar los niveles de inventario o buffer con base en ese límite, y monitorear ahorros resultantes.
+  nodos_siguientes actuales de la madre (1): ['sistema_estable_responsabilidad_gerencial']
+
+HIJO titulo: Causas Comunes vs Causas Especiales de Variación  | fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  resumen: Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.
+  PASOS DEL HIJO:
+    [1] Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes
+    [2] Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos
+    [3] Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales
+    [4] Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla
+    [5] Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas
+    [6] Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales
+    [7] Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo
+    [8] Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+    [9] Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).
+    [10] Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.
+    [11] Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.
+    [12] Comunicar a los equipos que el objetivo es identificar problemas, no culpables
+    [13] Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo
+    [14] Fomentar la colaboración entre turnos y departamentos para resolver causas comunes
+    [15] Analizar la distribución de errores o defectos entre todas las personas usando limites de control
+  nodos_previos actuales del hijo: ['limites_de_especificacion_vs_limites_de_control', 'estandarizacion_industrial_voluntaria', 'falacia_meta_numerica_sin_metodo', 'carta_de_control_shewhart', 'aim_of_leadership', 'capacidad_de_proceso', 'capacidad_de_proceso_2', 'control_estadistico_de_procesos', 'costo_de_mala_calidad_copq', 'estudio_mezclas_multiples_fuentes', 'evaluacion_de_desempeno_merito', 'limites_control_por_juicio_error', 'mejora_continua_del_proceso', 'mejora_del_sistema_responsabilidad_gerencial', 'sistema_estable_causas_comunes', 'sistema_estable_responsabilidad_gerencial']
+
+====================================================================================================
+PAR 17: customer_validation -> mvp_alta_fidelidad  (paso 1, dominio core)
+MADRE titulo: Validación con clientes (Customer Validation)  | fuente: The Startup Owner's Manual - Steve Blank
+  paso senalado (1): Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes
+    [2] Diseña un plan de ventas y pruébalo en el terreno con tus primeros clientes
+    [3] Mide si por cada peso que inviertes en ventas y marketing te regresan el doble (o la proporción que hayas definido)
+    [4] Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar
+    [5] Evalúa si ya alcanzaste el impulso suficiente para pasar a escalar
+  nodos_siguientes actuales de la madre (5): ['customer_creation', 'decision_pivotar_o_proceder', 'metrics_that_matter_framework', 'pivote_startup', 'validar_modelo_financiero']
+
+HIJO titulo: MVP de Alta Fidelidad  | fuente: The Startup Owner's Manual
+  resumen: Es una versión más completa y pulida del MVP usado en customer discovery, diseñada específicamente para probar tácticas de adquisición y activación con más usuarios. No incluye todas las funcionalidades finales, pero no debe sentirse como un producto de segunda clase. Debe estar instrumentado para capturar datos de comportamiento de clientes y producto continuamente.
+  PASOS DEL HIJO:
+    [1] Partir del MVP de baja fidelidad usado en customer discovery
+    [2] Pulir funcionalidades limitadas pero completas (ej. solo una categoría de producto)
+    [3] Evitar mostrar demasiado contenido 'coming soon' que desincentive la compra actual
+    [4] Instrumentar el MVP para capturar datos de comportamiento de usuario en tiempo real
+    [5] Iterar continuamente mediante desarrollo ágil y despliegue continuo
+  nodos_previos actuales del hijo: ['producto_minimo_viable', 'customer_discovery', 'prueba_mvp_alta_fidelidad']
+
+====================================================================================================
+PAR 18: earlyvangelists_ventas_tempranas -> value_proposition_startup  (paso 4, dominio core)
+MADRE titulo: Vender a Earlyvangelists como Primeros Clientes  | fuente: The Startup Owner's Manual - Blank, Steve
+  paso senalado (4): Si no compran, reconsiderar la propuesta de valor o el segmento
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Identificar earlyvangelists definidos previamente en customer discovery
+    [2] Ofrecerles el MVP y pedir órdenes reales, no solo opiniones
+    [3] Usar su feedback para refinar el producto y el modelo de negocio
+    [4] Si no compran, reconsiderar la propuesta de valor o el segmento
+  nodos_siguientes actuales de la madre (1): ['sales_roadmap_vs_sales_force']
+
+HIJO titulo: Propuesta de Valor  | fuente: The Startup Owner's Manual - Blank, Steve
+  resumen: Tu propuesta de valor describe el trabajo (job) que resuelves para tu cliente. Son las caracteristicas de tu producto o servicio que responden a un problema o una necesidad real: ahorrar tiempo, ganar estatus, simplificar algo, dar comodidad. Para que funcione, tiene que encajar con precisión en el segmento de clientes al que se la ofreces.
+  PASOS DEL HIJO:
+    [1] Identifica los problemas o necesidades reales de tu segmento de clientes.
+    [2] Define que caracteristicas de tu producto o servicio resuelven esos problemas.
+    [3] Verifica el encaje entre tu propuesta de valor y tu segmento de clientes hablando directamente con ellos.
+  nodos_previos actuales del hijo: ['definicion_startup', 'disenar_los_detalles_no_lo_inevitable', 'disenar_para_sanacion', 'disenar_verbos_no_sustantivos', 'economia_circular_de_la_imaginacion', 'economia_de_la_experiencia', 'multi_sided_platform_pattern', 'narrativa_como_herramienta_de_sentido', 'ecuacion_de_valor_venta', 'preguntas_beneficio', 'multi_sided_platforms', 'search_for_business_model', 'preguntas_need_payoff', 'pivot_post_ventas']
+
+====================================================================================================
+PAR 19: scope_management_plan -> wbs_dictionary  (paso 3, dominio core)
+MADRE titulo: Plan de Gestión del Alcance  | fuente: A Project Manager's Book of Forms
+  paso senalado (3): Determinar los campos y nivel de detalle del WBS Dictionary
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Definir cómo se desarrollará el Project Scope Statement (entrevistas, análisis, investigación)
+    [2] Establecer la estructura del WBS (por fases, geografía, entregables)
+    [3] Determinar los campos y nivel de detalle del WBS Dictionary
+    [4] Diferenciar qué constituye un cambio de alcance versus una revisión menor
+    [5] Definir cómo se validará y aceptará cada entregable
+  nodos_siguientes actuales de la madre (4): ['project_scope_statement', 'requirements_management_plan', 'project_management_plan', 'work_breakdown_structure']
+
+HIJO titulo: WBS Dictionary  | fuente: A Project Manager's Book of Forms
+  resumen: Documento que provee detalle sobre las cuentas de control y paquetes de trabajo del WBS, incluyendo descripción del trabajo, supuestos, restricciones, responsables, hitos, recursos, estimaciones de costo y criterios de calidad y aceptación.
+  PASOS DEL HIJO:
+    [1] Documentar el código de cuenta para cada paquete de trabajo
+    [2] Describir el trabajo requerido en cada paquete
+    [3] Listar hitos y fechas asociadas
+    [4] Identificar recursos requeridos y estimaciones de costo
+    [5] Definir requisitos de calidad y criterios de aceptación
+  nodos_previos actuales del hijo: ['work_breakdown_structure', 'project_scope_statement']
+
+====================================================================================================
+PAR 20: simulacion_clientes_ia -> value_proposition_startup  (paso 2, dominio core)
+MADRE titulo: Simulación de Clientes con IA para Validación Preliminar  | fuente: Co-Intelligence_ Living and Wor - Ethan Mollick
+  paso senalado (2): Realizar una 'entrevista' simulada sobre el producto o propuesta de valor
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Asignar a la IA una persona de cliente objetivo con datos demográficos y de comportamiento específicos
+    [2] Realizar una 'entrevista' simulada sobre el producto o propuesta de valor
+    [3] Extraer hipótesis o preguntas clave a partir de las respuestas simuladas
+    [4] Validar esas hipótesis posteriormente con clientes reales antes de tomar decisiones definitivas
+  nodos_siguientes actuales de la madre (2): ['prueba_solucion_con_cliente', 'arquetipos_de_cliente']
+
+HIJO titulo: Propuesta de Valor  | fuente: The Startup Owner's Manual - Blank, Steve
+  resumen: Tu propuesta de valor describe el trabajo (job) que resuelves para tu cliente. Son las caracteristicas de tu producto o servicio que responden a un problema o una necesidad real: ahorrar tiempo, ganar estatus, simplificar algo, dar comodidad. Para que funcione, tiene que encajar con precisión en el segmento de clientes al que se la ofreces.
+  PASOS DEL HIJO:
+    [1] Identifica los problemas o necesidades reales de tu segmento de clientes.
+    [2] Define que caracteristicas de tu producto o servicio resuelven esos problemas.
+    [3] Verifica el encaje entre tu propuesta de valor y tu segmento de clientes hablando directamente con ellos.
+  nodos_previos actuales del hijo: ['definicion_startup', 'disenar_los_detalles_no_lo_inevitable', 'disenar_para_sanacion', 'disenar_verbos_no_sustantivos', 'economia_circular_de_la_imaginacion', 'economia_de_la_experiencia', 'multi_sided_platform_pattern', 'narrativa_como_herramienta_de_sentido', 'ecuacion_de_valor_venta', 'preguntas_beneficio', 'multi_sided_platforms', 'search_for_business_model', 'preguntas_need_payoff', 'pivot_post_ventas']
+
+====================================================================================================
+PAR 21: distribucion_binomial -> planes_de_muestreo_de_aceptacion  (paso 4, dominio quality)
+MADRE titulo: Distribución Binomial para Muestreo de Aceptación  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  paso senalado (4): Usar los resultados para diseñar planes de muestreo de aceptación
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Definir el tamaño de muestra n y la probabilidad de defecto histórica p
+    [2] Calcular q = 1 - p
+    [3] Aplicar la fórmula binomial o usar software (Minitab, Excel) para obtener probabilidades
+    [4] Usar los resultados para diseñar planes de muestreo de aceptación
+  nodos_siguientes actuales de la madre (1): ['teoremas_probabilidad']
+
+HIJO titulo: Planes de Muestreo de Aceptación  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  resumen: Establecimiento de criterios de muestreo para inspección y pruebas que equilibran el riesgo del proveedor (aceptar lotes con el promedio de proceso habitual) y el riesgo del comprador (daño causado por un defecto que pasa el filtro de muestreo). El diseño debe balancear el costo de clasificación (sorting) versus muestreo, considerando también el error de medición.
+  PASOS DEL HIJO:
+    [1] Definir el promedio de proceso esperado del proveedor
+    [2] Calcular el costo del daño por defectos no detectados
+    [3] Balancear costo de inspección al 100% versus muestreo
+    [4] Diseñar la curva característica de operación (OC curve) del plan
+    [5] Considerar errores de medición en el diseño del plan
+  nodos_previos actuales del hijo: ['clasificacion_de_seriedad_de_defectos', 'clasificacion_de_seriedad_de_defectos_2']
+
+====================================================================================================
+PAR 22: mantenimiento_productivo_total -> capacidad_de_proceso  (paso 2, dominio quality)
+MADRE titulo: Mantenimiento Productivo Total (TPM) y Mantenimiento Centrado en Confiabilidad (RCM)  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  paso senalado (2): Identificar problemas de mantenimiento que afectan la capacidad del proceso
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Formar equipos multidisciplinarios de mantenimiento
+    [2] Identificar problemas de mantenimiento que afectan la capacidad del proceso
+    [3] Implementar mejoras incrementales de mantenimiento preventivo y correctivo
+    [4] Medir la efectividad global del equipo (OEE)
+  nodos_siguientes actuales de la madre (1): ['lean_manufacturing_tps']
+
+HIJO titulo: Capacidad de Proceso  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  resumen: La capacidad de proceso mide la uniformidad inherente de un proceso para producir dentro de especificaciones. Se cuantifica desde la etapa de planificación y sirve para decidir sobre la adecuación de procesos, elección de alternativas, necesidad de rediseño y, en control, para definir la frecuencia de medición y mantenimiento: a mayor estabilidad, menor necesidad de medición frecuente.
+  PASOS DEL HIJO:
+    [1] Recolectar datos históricos de desempeño del proceso
+    [2] Calcular índices de capacidad (uniformidad) del proceso frente a especificaciones
+    [3] Usar los resultados para decidir frecuencia de medición y mantenimiento
+    [4] Determinar si el proceso requiere rediseño o si es apto para producción
+  nodos_previos actuales del hijo: ['concepto_de_dominancia', 'etapas_de_control_operativo', 'calidad_de_diseno_vs_produccion', 'control_charts_shewhart', 'interpretacion_graficos_variables']
+
+====================================================================================================
+PAR 23: planificacion_inicial_calidad -> capacidad_de_proceso  (paso 5, dominio quality)
+MADRE titulo: Planificación Inicial de Calidad en Manufactura  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  paso senalado (5): Validar la capacidad y los sistemas de medición del proceso
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Revisar el diseño del producto con personal de operaciones antes de su lanzamiento
+    [2] Identificar características clave del producto y del proceso (KPCs)
+    [3] Clasificar características por importancia (crítica, mayor, menor, incidental)
+    [4] Analizar el diagrama de flujo del proceso por estación de trabajo
+    [5] Validar la capacidad y los sistemas de medición del proceso
+  nodos_siguientes actuales de la madre (5): ['autocontrol_y_controlabilidad', 'auditoria_de_proceso', 'caracteristicas_clave_producto_proceso', 'key_process_product_characteristics', 'analisis_flujo_proceso']
+
+HIJO titulo: Capacidad de Proceso  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  resumen: La capacidad de proceso mide la uniformidad inherente de un proceso para producir dentro de especificaciones. Se cuantifica desde la etapa de planificación y sirve para decidir sobre la adecuación de procesos, elección de alternativas, necesidad de rediseño y, en control, para definir la frecuencia de medición y mantenimiento: a mayor estabilidad, menor necesidad de medición frecuente.
+  PASOS DEL HIJO:
+    [1] Recolectar datos históricos de desempeño del proceso
+    [2] Calcular índices de capacidad (uniformidad) del proceso frente a especificaciones
+    [3] Usar los resultados para decidir frecuencia de medición y mantenimiento
+    [4] Determinar si el proceso requiere rediseño o si es apto para producción
+  nodos_previos actuales del hijo: ['concepto_de_dominancia', 'etapas_de_control_operativo', 'calidad_de_diseno_vs_produccion', 'control_charts_shewhart', 'interpretacion_graficos_variables']
+
+====================================================================================================
+PAR 24: rol_alta_direccion_calidad -> consejo_ejecutivo_calidad  (paso 1, dominio quality)
+MADRE titulo: Tu Rol en el Liderazgo de Calidad  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  paso senalado (1): Crear y participar personalmente en un espacio de revisión de calidad
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Crear y participar personalmente en un espacio de revisión de calidad
+    [2] Definir estrategias y metas de calidad alineadas con tu visión del negocio
+    [3] Asignar recursos concretos (tiempo, personas, presupuesto) para las actividades de calidad
+    [4] Participar personalmente en los equipos que resuelven los problemas cronicos mas importantes
+    [5] Revisar el progreso periodicamente y quitar los obstaculos que encuentres
+    [6] Disenar formas de reconocer y recompensar la mejora de calidad
+  nodos_siguientes actuales de la madre (2): ['consejo_de_calidad', 'rol_director_calidad']
+
+HIJO titulo: Crear un espacio de revisión de calidad  | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  resumen: Un paso clave en la planificación estratégica es tener un espacio propio, o junto con las personas que te ayudan, para revisar y coordinar las acciones estratégicas de tu negocio. Ese espacio es responsable de ejecutar el plan de negocio y de vigilar los indicadores clave (KPI). Conviene reunirse de forma mensual o trimestral, y repetir esta misma dinámica en escalas más pequeñas si tu negocio crece y sumas colaboradores.
+  PASOS DEL HIJO:
+    [1] Definir quién participa en esta revisión: tú solo o las personas clave que te ayudan
+    [2] Fijar la frecuencia de las reuniones, mensual o trimestral
+    [3] Si tu negocio crece, replicar esta misma dinámica de revisión en equipos o áreas más pequeñas, conectadas entre sí
+    [4] Asignar a este espacio la responsabilidad de vigilar los KPI y de ejecutar el plan estratégico
+    [5] Fomentar que las distintas partes de tu negocio colaboren entre sí, en vez de trabajar cada una por su cuenta
+  nodos_previos actuales del hijo: ['desarrollar_metas_anuales', 'dmaic_six_sigma', 'six_sigma_dmaic']
+
+====================================================================================================
+PAR 25: estrategia_ti_verde -> virtualizacion_servidores  (paso 1, dominio environmental)
+MADRE titulo: Estrategia de TI Verde (Green IT)  | fuente: The Green to Gold Business Play - Daniel C. Esty
+  paso senalado (1): Evaluar oportunidades de virtualización para optimizar utilización de servidores
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Evaluar oportunidades de virtualización para optimizar utilización de servidores
+    [2] Implementar sistemas de recuperación de calor residual de centros de datos
+    [3] Establecer programa de reciclaje de e-waste con proveedores certificados
+    [4] Reducir empaques y consolidar envíos de equipos con proveedores
+    [5] Explorar oportunidades de ingresos mediante software de sostenibilidad y analítica
+  nodos_siguientes actuales de la madre (0): []
+
+HIJO titulo: Virtualización de Servidores  | fuente: The Green to Gold Business Play - Daniel C. Esty
+  resumen: La mayoría de los servidores operan solo entre 5-15% de su capacidad máxima debido al aprovisionamiento para picos de demanda. La virtualización permite ejecutar múltiples instancias de servidor en una sola máquina física, consolidando hasta 10 servidores en uno y mejorando la utilización hasta en un 85%, generando ahorros energéticos significativos.
+  PASOS DEL HIJO:
+    [1] Medir el nivel de utilización actual de los servidores físicos
+    [2] Implementar software de virtualización (ej. VMware)
+    [3] Consolidar múltiples servidores físicos en instancias virtuales
+    [4] Monitorear mejoras en utilización y ahorro energético resultante
+  nodos_previos actuales del hijo: ['deteccion_ineficiencias_ti']
+
+====================================================================================================
+PAR 26: guias_diseno_sistemas_estrategicos -> complejidad_acorde_capacidad_organizacional  (paso 6, dominio core)
+MADRE titulo: Siete Guías Estratégicas para el Diseño de Sistemas  | fuente: Essentials of Supply Chain Management - Michael H. Hugos
+  paso senalado (6): Contrastar la complejidad del sistema contra la capacidad real de la organización
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Verificar que el diseño esté alineado con las metas y métricas de desempeño del negocio (guía obligatoria, no violable)
+    [2] Evaluar si el sistema puede generar una ventaja competitiva difícil de copiar
+    [3] Revisar qué infraestructura existente puede reutilizarse en vez de reemplazarse
+    [4] Simplificar la combinación tecnología-proceso para maximizar probabilidad de éxito
+    [5] Diseñar componentes que puedan desarrollarse en paralelo e independientemente
+    [6] Contrastar la complejidad del sistema contra la capacidad real de la organización
+    [7] Si un proyecto anterior falló, cambiar sustancialmente el enfoque, no solo repetir el esfuerzo
+    [8] Haz una lista de todo lo que tu sistema tiene que lograr
+    [9] Busca una sola combinación de tecnología o proceso que te sirva para varios de esos objetivos a la vez
+    [10] Evita armar una solución distinta para cada objetivo por separado
+    [11] Antes de decidir, evalúa el riesgo y el costo de cada combinación que estás considerando
+  nodos_siguientes actuales de la madre (1): ['revision_diseno']
+
+HIJO titulo: Alinear la Complejidad del Sistema con la Capacidad de la Organización  | fuente: Essentials of Supply Chain Management - Michael H. Hugos
+  resumen: No intentes construir un sistema más complejo de lo que tú y tu equipo realmente pueden manejar. Cuando defines el alcance, ponte metas que sean un reto pero alcanzables: eso mantiene la confianza del equipo. Si te propones metas imposibles, agotas esa confianza y terminas en el fracaso.
+  PASOS DEL HIJO:
+    [1] Evaluar honestamente las capacidades técnicas y humanas actuales de la organización
+    [2] Definir metas desafiantes pero realistas, no utópicas
+    [3] Validar con el equipo si consideran factible el alcance propuesto antes de comprometerse
+    [4] Crear una sección del plan para cada objetivo definido
+    [5] Listar las tareas principales de diseño y construcción para cada objetivo
+    [6] Mostrar dependencias entre tareas y entre objetivos
+    [7] Asignar 'time boxes' (límites de tiempo) a cada tarea con input del equipo ejecutor
+    [8] Ajustar iterativamente tiempo y alcance hasta lograr un plan ambicioso pero factible
+  nodos_previos actuales del hijo: ['equipos_alto_desempeno']
+
+====================================================================================================
+PAR 27: lean_launchpad_web_startup_process -> mvp_alta_fidelidad  (paso 9, dominio core)
+MADRE titulo: Proceso Lean LaunchPad para Construir un Startup Web  | fuente: The Startup Owner's Manual - Blank, Steve
+  paso senalado (9): Construir una versión de alta fidelidad para probar la 'solución'
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Configurar la logística del equipo (blog, comunicación)
+    [2] Redactar las hipótesis del modelo de negocio de 9 bloques
+    [3] Escribir una propuesta de venta única (Unique Selling Proposition) en formato 'Ayudamos a X a hacer Y haciendo Z'
+    [4] Configurar dominio y hosting del sitio web
+    [5] Construir un sitio web de baja fidelidad (splash page, formularios de pre-orden)
+    [6] Dirigir tráfico de clientes potenciales al sitio para probar segmento y propuesta de valor
+    [7] Conectar la interfaz de usuario con el código backend
+    [8] Probar el 'problema del cliente' recopilando datos mediante analytics y encuestas
+    [9] Construir una versión de alta fidelidad para probar la 'solución'
+    [10] Pedir dinero mediante formularios de pre-orden o cobro real
+  nodos_siguientes actuales de la madre (4): ['customer_creation', 'lienzo_modelo_negocio', 'adaptacion_teorica_del_lean_startup', 'riesgos_lanzamiento_mvp']
+
+HIJO titulo: MVP de Alta Fidelidad  | fuente: The Startup Owner's Manual
+  resumen: Es una versión más completa y pulida del MVP usado en customer discovery, diseñada específicamente para probar tácticas de adquisición y activación con más usuarios. No incluye todas las funcionalidades finales, pero no debe sentirse como un producto de segunda clase. Debe estar instrumentado para capturar datos de comportamiento de clientes y producto continuamente.
+  PASOS DEL HIJO:
+    [1] Partir del MVP de baja fidelidad usado en customer discovery
+    [2] Pulir funcionalidades limitadas pero completas (ej. solo una categoría de producto)
+    [3] Evitar mostrar demasiado contenido 'coming soon' que desincentive la compra actual
+    [4] Instrumentar el MVP para capturar datos de comportamiento de usuario en tiempo real
+    [5] Iterar continuamente mediante desarrollo ágil y despliegue continuo
+  nodos_previos actuales del hijo: ['producto_minimo_viable', 'customer_discovery', 'prueba_mvp_alta_fidelidad']
+
+====================================================================================================
+PAR 28: planificacion_cero_defectos -> eliminacion_causas_error_4  (paso 6, dominio quality)
+MADRE titulo: Planificación de Cero Defectos (Paso 7 de Crosby)  | fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+  paso senalado (6): Planificar el programa de eliminación de causas de error (error-cause-removal) como continuación
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Explicar el concepto ZD a todo el personal supervisor y prepararlos para transmitirlo a sus equipos
+    [2] Determinar y preparar los materiales necesarios (cartas, pines, folletos)
+    [3] Elegir el método de lanzamiento adecuado a la cultura organizacional
+    [4] Definir la política de reconocimiento para el desempeño mejorado
+    [5] Establecer un cronograma y ensayar a quienes participarán en el evento
+    [6] Planificar el programa de eliminación de causas de error (error-cause-removal) como continuación
+    [7] Incluir representación sindical en la planificación desde el inicio
+  nodos_siguientes actuales de la madre (5): ['dia_cero_defectos', 'entrenamiento_supervisores', 'dia_cero_defectos_2', 'entrenamiento_supervisores_2', 'entrenamiento_supervisores_calidad']
+
+HIJO titulo: Eliminación de Causas de Error (Error Cause Removal - ECR)  | fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+  resumen: ECR es la forma en que cualquier persona que te ayuda en tu negocio te avisa, sin necesidad de proponer la solución, sobre algo que le impide hacer bien su trabajo: una herramienta que no funciona, poca luz, un proceso que no tiene sentido, etc. Se activa una vez que ya tienes clara la meta de cero errores y todos la entienden, trasladando la detección de obstáculos a quien está en el día a día. Cada aviso merece una respuesta rápida y un agradecimiento personal; si decides no actuar, esa decisión debe quedar justificada y revisada por alguien de más experiencia o confianza. Bien manejado, genera participación positiva sin volverse quejas destructivas, y sirve de base para reconocer periódicamente a quienes avisan.
+  PASOS DEL HIJO:
+    [1] Crea un canal simple, con un formulario, para que quien te ayuda reporte causas de error sin necesidad de proponer la solución, y ponlo en cada área de trabajo, a la vista de todos
+    [2] Envía un agradecimiento personal e inmediato a quien te avisa de un problema
+    [3] Clasifica y prioriza cada aviso y pásalo a quien pueda resolverlo
+    [4] Consigue lo necesario y actúa rápido para eliminar la causa
+    [5] Si decides no actuar, justifica la decisión y revísala con alguien de más experiencia o confianza antes de cerrarla
+    [6] Confirma a cada persona la decisión tomada y considera reconocer periódicamente a quienes más avisan, por ejemplo con un sorteo semanal o un reconocimiento visible
+  nodos_previos actuales del hijo: ['cero_defectos', 'accion_correctiva', 'zero_defects_concepto', 'accion_correctiva_crosby', 'analisis_datos_atributos', 'dia_cero_defectos', 'fijacion_de_metas']
+
+====================================================================================================
+PAR 29: principio_correspondencia_contable -> contabilidad_caja_vs_devengo  (paso 1, dominio core)
+MADRE titulo: Principio de Correspondencia (Matching Principle)  | fuente: Financial Intelligence for Entrepreneurs
+  paso senalado (1): Identificar si la empresa usa contabilidad de caja o de devengo
+  TODOS LOS PASOS DE LA MADRE:
+    [1] Identificar si la empresa usa contabilidad de caja o de devengo
+    [2] Revisar que los costos estén correctamente asociados a las ventas del período
+    [3] Distinguir entre utilidad reportada y flujo de caja real disponible
+    [4] Consultar al contador sobre depreciaciones y gastos diferidos relevantes
+  nodos_siguientes actuales de la madre (2): ['lectura_estado_resultados', 'accruals_y_activos_prepagados']
+
+HIJO titulo: Contabilidad de Caja versus Contabilidad de Devengo (Accrual)  | fuente: Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe
+  resumen: Las empresas pequeñas suelen empezar con contabilidad de caja, donde las ventas y costos se registran cuando el efectivo entra o sale. Es simple pero, a medida que el negocio crece, no logra emparejar bien ingresos con costos (principio de emparejamiento), por lo que casi todas las empresas en crecimiento eventualmente migran a contabilidad de devengo (accrual), que ofrece una imagen más precisa de la rentabilidad por periodo.
+  PASOS DEL HIJO:
+    [1] Evaluar el tamaño y complejidad actual del negocio
+    [2] Consultar con el contador si el modelo de caja sigue siendo adecuado
+    [3] Planificar la transición a contabilidad de devengo cuando el negocio empiece a escalar
+    [4] Ajustar reportes financieros y procesos internos al nuevo método
+  nodos_previos actuales del hijo: ['fundamentos_inteligencia_financiera']
+

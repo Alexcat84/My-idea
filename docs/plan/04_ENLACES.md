@@ -258,6 +258,20 @@ diferencias falsas.
 477 cuesta, en el peor caso, 477 lecturas; no leerlos cuesta meter 71 aristas malas
 y perder 73 gemelos.**
 
+> **CORRECCION DECLARADA (26 ago 2026, vuelta 76, adjudicada por el auditor,
+> acta de la vuelta 75 seccion 4.4).** La verificacion de `OP-E-01` transcribia
+> `P.9` sin su punto 1, y esa omision dejo pasar en el tramo 1 la arista
+> `segmentos_de_clientes_problema_necesidad -> get_out_of_the_building` contra
+> un destino condenado (`OP-M-05-EDIFICIO`, fusion de la fase 03 enrutada a la
+> fase 06, no ejecutada). Se anade el **FILTRO DE ELEGIBILIDAD `P.9.1`,
+> OBLIGATORIO ANTES DE ESCRIBIR**: todo candidato de la bolsa se cruza contra
+> los campos `eliminar` y `superviviente` de las operaciones NO EJECUTADAS. Si
+> el destino o la madre muere en una operacion pendiente, el par NO se lee
+> para escribir: se aparta con el id de esa operacion escrito al lado y espera
+> su turno. Es `P.9` punto 1 y aplica a toda operacion que escriba aristas
+> desde una bolsa calculada. El texto viejo de la tabla no se toca: esta linea
+> se anade a lo que ya estaba.
+
 ---
 
 ## LOS SUELTOS DE RACIMOS, y los racimos con miembro ajeno
@@ -304,6 +318,24 @@ racimo de la supervision de la IA, cuya particion provisional es **5 mas 4 mas 1
 **Y el control mecanico que los encuentra a todos de una vez ya esta adoptado**:
 revisar **toda** nomina por el DOMINIO de sus miembros, cruzando
 `RACIMOS_MIEMBROS.jsonl` contra el grafo.
+
+> **CORRECCION DECLARADA (26 ago 2026, vuelta 76, adjudicada por el auditor,
+> acta de la vuelta 75 seccion 4.1).** *"El control los encuentra todos de una
+> vez"* es FALSA y esta medida como falsa: el control cubre los racimos
+> **censados en `RACIMOS_MIEMBROS.jsonl`** (32 racimos, reconstruidos por el
+> commit `d4d2652f` de las razones de `FRANJA_VEREDICTOS.jsonl`), o sea los
+> racimos que el CRIBADO declaro. Un racimo del INFORME que nunca paso por
+> franja, como *el lienzo de propuesta de valor* (seccion 14 del informe,
+> remedido a SIETE miembros por cierre transitivo), **no esta en ese universo
+> por construccion, no porque el control lo perdiera.** Las dos fuentes son
+> distintas por construccion. Los tres ejemplares de la tabla de arriba ya
+> estan resueltos: `value_stream_mapping_ambiental` y `analisis_flujo_de_valor`
+> por la segunda salida (su racimo *Mapeo del flujo de valor* tiene
+> `dominio_censado` literal `quality + environmental + nucleo`, que ES la
+> declaracion transversal explicita); `desarrollo_value_proposition_usp` por
+> la primera salida, la nomina se depura (informe seccion 33.2: *"CAE, y ni
+> siquiera es del dominio... CERO SOLAPE"*, y 33.3 lo llama *"defecto de
+> NOMINA, no de lectura"*). El texto viejo de arriba no se toca.
 
 ---
 

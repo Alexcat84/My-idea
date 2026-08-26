@@ -2366,6 +2366,24 @@ racimos cuyos miembros no comparten dominio.**
 > depura, o el racimo se declara transversal de forma explícita.** Lo que no puede
 > quedar es un racimo que **parece** de un dominio y no lo es.
 
+> **CORRECCION DECLARADA (26 ago 2026, vuelta 76, adjudicada por el auditor,
+> acta de la vuelta 75 seccion 4.1).** *"El control los encuentra todos de una
+> vez"* es FALSA y esta medida como falsa: el control cubre los racimos
+> **censados en `docs/RACIMOS_MIEMBROS.jsonl`** (32 racimos, reconstruidos por
+> el commit `d4d2652f` de las razones de `FRANJA_VEREDICTOS.jsonl`), o sea los
+> racimos que el CRIBADO declaro. Un racimo del INFORME que nunca paso por
+> franja, como *el lienzo de propuesta de valor* (seccion 14 del informe,
+> remedido a SIETE miembros por cierre transitivo), **no esta en ese universo
+> por construccion, no porque el control lo perdiera.** Las dos fuentes son
+> distintas por construccion. Los tres ejemplares de la tabla de arriba ya
+> estan resueltos: `value_stream_mapping_ambiental` y `analisis_flujo_de_valor`
+> por la segunda salida (su racimo *Mapeo del flujo de valor* tiene
+> `dominio_censado` literal `quality + environmental + nucleo`, que ES la
+> declaracion transversal explicita); `desarrollo_value_proposition_usp` por
+> la primera salida, la nomina se depura (informe seccion 33.2: *"CAE, y ni
+> siquiera es del dominio... CERO SOLAPE"*, y 33.3 lo llama *"defecto de
+> NOMINA, no de lectura"*). El texto viejo de arriba no se toca.
+
 ---
 
 ## LA BOLSA DEL PASO CONTRA NODO: 624 candidatos, una sola clase
