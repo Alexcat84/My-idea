@@ -657,10 +657,12 @@ no se ejecuta ni se rehace.
 | **`c50cf7e4`** | **TAREA 2**: el lote C ejecutado (1 fusion, 5 declarados, 4 nodos muertos, `P.16` limpio, colisiones que calzan sobre la base 4, Gate 0 con su ciclo de tres y las tres suites en verde) |
 | **`944747aa`** | **el registro del lote C** (`+410`, `0` borradas, citas 11 de 11, idempotencia mordiendo) |
 
-**EL HASH FINAL DE LA VUELTA ES ESTE FICHERO ESCRITO POR SU CUARTO COMMIT**, y por eso se escribe
-aqui **en una edicion posterior**: **un commit no puede contener su propio hash**. **Los TRES
-anteriores estan arriba, leidos hoy con `git log --oneline`**, y el cuarto **es el que escribe esta
-misma linea**. Es la misma via que las vueltas 65 y 66 usaron.
+**El CUARTO commit de la vuelta es** **`821cd3cc`**, **el que escribio este reporte entero**, y va
+aqui **leido hoy con `git log --oneline`**. **EL HASH FINAL DE LA VUELTA ES EL QUINTO**, el que
+escribe esta misma linea, **y por eso no se puede escribir dentro de si mismo**: **un commit no puede
+contener su propio hash**. **Los CUATRO anteriores estan arriba y en esta linea, ninguno de
+memoria.** Es la misma via que las vueltas 65 y 66 usaron, y la regla 7 pide exactamente esto: el
+hash final y los commits anteriores en la cabecera de la seccion 12.
 
 **LAS TRES GUARDAS DE CIERRE, RE-CORRIDAS TRAS ESTA EDICION** (regla 1: lo que la propia vuelta
 mueve, se remide antes de publicar):
