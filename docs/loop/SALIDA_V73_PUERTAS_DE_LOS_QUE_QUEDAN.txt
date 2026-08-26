@@ -1,0 +1,42 @@
+==============================================================================================================
+VARAS POR FORMA, N-ARIAS, DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO
+  fichero del tramo: docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+==============================================================================================================
+
+  pasos y cond son las varas de CONTENIDO contables; cab es el CABLEADO,
+  que por P.8 solo habla a contenido empatado. La marca < indica que ese
+  miembro es EL UNICO que alcanza el maximo de esa vara, o sea que la vara
+  APUNTA a el. Si dos o mas lo alcanzan, la vara EMPATA y no apunta.
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 31 | 3 miembros | FORMA: CHOCAN
+   maximos medidos: pasos 7, condiciones 2, cableado 6
+   la vara de PASOS       apunta a: captura_conocimiento_mercado
+   la vara de CONDICIONES apunta a: capturar_conocimiento_de_mercado
+   el CABLEADO (P.8)      apunta a: analisis_trafico_competitivo
+   PUERTAS DENTRO DEL ACTO (guarda 1B, no se absorben): captura_conocimiento_mercado
+
+      miembro                                                   pasos   cond    cab
+      analisis_trafico_competitivo                                  4      1      6 <cab
+      captura_conocimiento_mercado                                  7      1      4 <pasos  [PUERTA]
+      capturar_conocimiento_de_mercado                              5      2      5 <cond
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 37 | 3 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 5, condiciones 3, cableado 4
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: cumplimiento_inversionistas_acreditados
+   el CABLEADO (P.8)      apunta a: equity_crowdfunding
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      crowdfunding_legal_exemptions_jobs_act                        5      2      3
+      cumplimiento_inversionistas_acreditados                       5      3      2 <cond
+      equity_crowdfunding                                           4      2      4 <cab
+
+==============================================================================================================
+  actos mirados: 2 | POR FORMA: {'CHOCAN': 1, 'UNA SOLA VARA': 1}
+
+LO QUE ESTO NO HACE: no elige superviviente, no aplica la guarda 1B y no funde.
+FIN

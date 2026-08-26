@@ -1,0 +1,32 @@
+==============================================================================
+LOS NODOS PUENTE DEL TRAMO, ACTO POR ACTO (P.10, la mitad diagnostica de P.5)
+  tramo      : docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+  clave      : orden_universo
+  veredictos : 3082 pares indexados por par RESUELTO (P.1)
+==============================================================================
+
+------------------------------------------------------------------------------
+ACTO 31 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 37 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+==============================================================================
+RESUMEN DEL TRAMO
+acto   miem   combin   A     D     sin_ver  puentes  triangulos
+31     3      3        2     0     1        0        0
+37     3      3        2     0     1        0        0
+
+  actos mirados                         : 2
+  actos CON al menos un nodo puente     : 0
+  actos SIN ningun nodo puente          : 2
+  actos con algun par SIN veredicto     : 2
+
+LO QUE ESTO NO HACE: no elige salida de P.10 ni funde ni declara nada.
+FIN
