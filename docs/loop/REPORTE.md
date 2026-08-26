@@ -753,6 +753,11 @@ con su duena**, **no se toco ni un nodo del `acto 44` ni sus dos puertas**, y **
 
 ## 12. HASH FINAL Y COMMITS
 
+**LA CADENA ENTERA DE LA VUELTA 72, ESCRITA AQUI POR EL QUINTO COMMIT:** `a3bc1153` (TAREA 1),
+`c4c38956` (el plan sellado del lote `H`), `90df5a9f` (la fusion y el registro), `664149c5` (el
+reporte) **y este, que es el que puede escribir el hash del anterior.** **`origin/pasada-unica`
+queda igual a `HEAD` y el arbol limpio de rastreados.**
+
 **Los commits de esta vuelta en `pasada-unica`, en orden:**
 
 | commit | que trae |
@@ -760,7 +765,8 @@ con su duena**, **no se toco ni un nodo del `acto 44` ni sus dos puertas**, y **
 | **`a3bc1153`** | **TAREA 1 entera**: el registro del acta 71 (`+246`, `0` borradas, 59 agujas, tres negativas de sustancia) **mas las TRES CORRECCIONES DECLARADAS** (la ficha de `OP-L-03`, el prefijo del generador y el ancla duplicada del rumbo) **y la APERTURA medida antes de la primera operacion**, con toda salida escrita en `UTF-8` desde el origen |
 | **`c4c38956`** | **TAREA 2, paso 1**: el lote `H` **declarado al abrirlo** y su **plan sellado dos veces**, con el `P.5`, las varas, el borde del dueno medido y **las colisiones esperadas sobre base 7**, todo **ANTES DE TOCAR UN NODO** |
 | **`90df5a9f`** | **TAREA 2 ejecutada**: las cuatro fusiones, el `acto 44` `DECLARADO` por la guarda `1B`, `P.16`, el reanclaje, `Gate 0` con su ciclo de tres, las tres suites y **el registro del lote `H`** (`+498`, `0` borradas) |
-| **este** | el reporte |
+| **`664149c5`** | **el reporte** |
+| **este** | **la cabecera de esta seccion 12**, con el hash del cuarto commit y la cadena entera |
 
 **El hash final de la vuelta y la cadena entera van escritos en la cabecera de esta seccion por un
 commit posterior**, que es lo que la regla 7 pide y lo que el commit del reporte no puede contener: un
