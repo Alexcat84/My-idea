@@ -19414,3 +19414,444 @@ adjudicacion 2 del acta 69, las esperadas sobre la base 7, y TODA
 cifra de cableado leida de la columna del instrumento (P.1).
 
 EL BUCLE SIGUE, CON EL CONTADOR DE PARADA EN UNO DE DOS.
+
+# ACTA DE LA VUELTA 71 DEL AUDITOR (26 ago 2026, Fable 5)
+
+Vuelta auditada: los cinco commits de la 71 en pasada-unica (c1859ed5
+TAREA 1 con las dos correcciones declaradas y la apertura medida,
+f188f1c3 TAREA 2 el lote G, eacce4a3 el registro del lote G, 373425e3
+el reporte, fd46adc3 la cabecera de la seccion 12; el hash final leido
+de git log, la misma via de las vueltas 65 a 70). SIN HUECO DE ACTA:
+la ultima acta escrita cubre la vuelta 70, la inmediatamente anterior
+a esta. origin/pasada-unica igual a HEAD (fd46adc3), arbol limpio de
+rastreados al abrir y al cerrar mi corrida. Fecha por dos relojes,
+corridos por mi: el sistema da 2026-08-26 y git log da los commits del
+26 a las 05:14; la vuelta no cruzo medianoche, como el reporte declaro.
+
+## 1. VERIFICACION POR CORRIDA PROPIA: TODO CALZA AL DIGITO
+
+Cada cifra sale de un instrumento corrido HOY por mi (sondas y salidas
+en docs/loop/_auditor_v71/, committeadas con esta acta).
+
+- CABECERA: tallar_cabecera_reporte.py --vuelta 71 --comparar corrido
+  por mi: IDENTICA AL TALLADOR, 14 filas cotejadas, DISTINTAS 0,
+  ausentes 0.
+- MARCADOR, POR MI PROPIO CONTEO sobre el archivo: n 3388, cero
+  huecos, cero duplicados, A 551 B 72 C 5 D 2760; y la tasa por
+  dominio identica al digito a la tabla 9.1 del reporte, las diez
+  lineas (fundir no volteo ningun veredicto).
+- RECOMPUTO AL CIERRE, corrido por mi (recomputo_3388.py): grafo 3853
+  (3204 vivos, 649 deprecados), retrato 551 crudas, 360 colapsos, 191
+  pares distintos; 57 componentes, 26 CERRADOS (61 nodos) y 31
+  ABIERTOS (151 nodos); las cuatro comprobaciones OK (212 igual a 212,
+  191 igual a 191). Enlaces 17639 contados por mi sobre master_graph
+  (8809 previos mas 8830 siguientes).
+- LA APERTURA CONTRA 2d22e7e6, por git show y conteo propio:
+  duplicadas 911/721, costuras 1441; la aritmetica del salto coherente
+  entera (menos 5 componentes, menos 15 nodos abiertos, menos 10
+  vivos, mas 10 deprecados, mas 27 enlaces, mas 5 auto-pares).
+- LA COLA DE COSTURAS: 1441 a 1442, y el delta EXACTO por mi propio
+  diff: ENTRAN defensas_en_profundidad_3,
+  segmentos_de_clientes_problema_necesidad y traction_goal (los tres
+  supervivientes que el reporte nombra) y SALEN
+  diseno_organizacional_equipos_innovacion y problem_recognition_scale
+  (dos absorbidos que dejan de ser vivos).
+- COLISIONES: censo corrido por mi: 7 vigentes y auto-pares 278.
+- ESPERADAS, RE-SIMULADAS PRE FUSION POR MI: worktree en c1859ed5 con
+  el plan sellado copiado, instrumento corrido SIN pasar base a mano:
+  base 7 MEDIDA sobre el arbol de antes (la correccion de TAREA 1
+  entro sola), 0 nuevas, 0 idas, ESPERADAS 7, auto-pares 273 a 278
+  predichos; el censo de hoy da esos 7 y esos 278. CALZA. Primer lote
+  del tramo desde la vuelta 68 que no fabrica ninguna.
+- VARAS Y PUENTES PRE FUSION, EN EL MISMO WORKTREE: formas al byte
+  (38, 39, 40 y 42 UNA SOLA VARA; 41 TODAS DE ACUERDO); TODAS las
+  celdas de pasos, condiciones y cableado identicas a la tabla 3.2,
+  leidas de la columna cab (38: 12 contra 5 y 4; 39: 11 contra 3 y 2;
+  40: empate 3, 3 y 3; 41: 12 contra 3 y 3; 42: 5 contra 4 y 2);
+  puertas NINGUNA en los cinco (la guarda 1B por vacio); 2 A, 0 D y 1
+  sin veredicto por acto; cero puentes y cero triangulos. Los
+  desgloses del D2 y del D3 verificados ademas por mi sobre el grafo
+  pre fusion (defensas_en_profundidad 9 previos y 4 siguientes contra
+  1 y 1 del superviviente; customer_segments_hypothesis 3 y 12).
+- DUENOS, LEIDOS DEL FICHERO FIJADO: vacios en los cinco; el 31 con
+  OP-F-04-WEI y OP-S-04, el 37 con OP-S-07, el 43 y el 44 sin dueno.
+  Las dos entradas familia_de_ids existen tal como el reporte las cita
+  (defensas_en_profundidad con 3 de 3 y design_for_six_sigma_dmadv con
+  2 de 3, las dos con OP-S-09, estado pendiente se resuelve por
+  continua o repite, y la nota DECISION 4 de la mesa de racimos,
+  aprobada el 9 ago 2026: familia unica, fusion con alias). Las
+  entradas tipo acto de los cinco nombran OP-L-03 y OP-U-02, medido
+  por mi: la medicion nueva de la seccion 5 del reporte es real. La
+  ficha de OP-L-03 conserva la letra vieja (ningun acto se funde con
+  un par interno sin veredicto) y la correccion del acta 65 esta
+  aplicada sobre OP-U-02 y NO sobre ella, leido por mi de
+  OPERACIONES.jsonl.
+- RACIMOS Y OPERACIONES: ninguno de los 15 miembros del lote en
+  ninguna nomina de RACIMOS_MIEMBROS.jsonl (32 lineas) y CERO
+  menciones en OPERACIONES.jsonl, barrido por mi. 71 operaciones todas
+  LISTA, 0 dependencias rotas, 672 entradas de inventario, contadas
+  por mi.
+- GUARDA D Y SUPERVIVIENTES: los 10 absorbidos deprecados con su texto
+  entero; pasos y condiciones de los cinco supervivientes exactos
+  (6/3, 7/2, 7/2, 6/4, 7/3); CERO referencias de vivos a absorbidos
+  tras la fusion, contado por mi sobre el grafo entero.
+- LOS INCISO: los cinco trozos comprobados VERBATIM por mi contra su
+  fuente pre fusion (customer_segments_hypothesis,
+  problem_recognition_scale, defensas_en_profundidad,
+  definir_meta_de_traccion y diseno_organizacional_equipos_innovacion)
+  y los cinco resultantes presentes hoy. Mi primera sonda los busco
+  CON el nexo y no hallo cuatro: el nexo es del ejecutor (D10) y el
+  trozo es lo verbatim, que es la letra exacta del instrumento.
+- BANCO DE RUMBOS: UNA referencia re-anclada (el rumbo
+  nucleo_le_sirve_a_todo_el_mundo), diff de una linea leido por mi.
+  PERO QUEDA UN ANCLA DUPLICADA: la lista ancla de ese rumbo trae
+  ahora segmentos_de_clientes_problema_necesidad DOS veces, porque el
+  ancla vieja y la nueva resolvian al mismo destino. La fabrico el
+  reanclaje de esta vuelta y va a la TAREA 1 del encargo (adjudicacion
+  7).
+- DUPLICADAS: instrumento corrido por mi con la apertura por git show:
+  911 a 902 en crudo, 909 a 902 resueltos, CERO fabricadas, CERO
+  renombradas, 7 que desaparecen nombradas una a una, todas de la
+  especie declarada (un vivo que apuntaba a dos miembros del mismo
+  acto y hereda el destino una sola vez).
+- REGISTROS: numstat 222/0 y 473/0 leidos por mi de git show;
+  idempotencia MUERDE en los dos registradores re-corridos por mi (YA
+  ADOSADA, YA ADOSADO, arbol limpio despues). La correccion de la base
+  6 a 7 leida por mi en el diff de c1859ed5: el texto viejo entero,
+  las DOS llamadas viejas citadas verbatim, la aritmetica intacta, y
+  la prueba sola en la corrida de esperadas (base medida 7 sin
+  pasarla).
+- LA CUENTA AGREGADA, RE-CORRIDA POR MI: 30 filas (19 DE PARAMETRO y
+  11 DE CONDICIONES), 5 con atenuante declarado, 3 de la especie del
+  pendiente 4, 1 medido, 4 con dos sedes, CERO exclusiones que
+  declarar, y la lectura contraria da 34.
+- EL DIFF DE SELLOS: un solo campo cambiado (colisiones_esperadas,
+  la linea 10 del plan), la misma lectura de una linea que las actas
+  68 y 69 dieron por buena; el instrumento la imprime como 2 lineas
+  distintas porque cuenta el antes y el despues de esa linea.
+- TRAMO AL CIERRE, RECONTADO POR MI: 47 filas, 22 FUNDIDOS medidos
+  sobre el grafo, 25 con dos o mas vivos que son los 14 declarados mas
+  11 sin destino con 33 nodos; duenos entre los que quedan: 24
+  (declarado), 31 y 37. PUERTAS de los 11 medidas por mi con el
+  instrumento: CUATRO actos con puerta (el 31 una; el 44 DOS; el 46
+  una; el 51 una), identicas a las publicadas. Formas de los 11: 8 UNA
+  SOLA VARA, 1 CHOCAN (el 31), 1 CONTENIDO EMPATA (el 45), 1 TODAS DE
+  ACUERDO (el 53). El siguiente sin dueno del prefijo es el 43.
+- GATE 0 CON SU CICLO DE TRES, CORRIDA MIA: run_phase1 con
+  reaplico-curaduria GATE 0 OK, etiquetas 71 re-aplicadas, sync con 6
+  assets mas manifest; master_graph de vuelta a su estado committeado
+  y phase1_run_log restaurado del commit, igual que las actas 69 y 70.
+  MOTOR 25 de 25; WEB 80 ficheros, 1030 pasadas, 3 saltadas; TSC CERO
+  lineas.
+- BARRIDO: 470 ficheros, ROJO 32 (linea base en su sitio), AMBAR 0,
+  ROTULADO 51, CENSO 224, ILEGIBLE 1. CENSO DE PLANTILLAS: CERO
+  TALLADOS sobre 26 instrumentos de nombre estable. PROMESAS: 4 de 4
+  CUMPLIDAS, re-corridas por mi. CASOS POSITIVOS RE-CORRIDOS POR MI,
+  LOS SEIS: mesa LAS NUEVE sobre OP-M-02-ACCLIMATE, contrato LAS
+  CUATRO, varas LAS TRES mitades, promesas LAS DOS, cuenta agregada
+  LAS CINCO, y el del generador. Todos muerden.
+
+## 2. RELECTURA CIEGA: 5 DE 5 ACTOS CON SUPERVIVIENTE COINCIDENTE,
+##    TODO DENTRO DEL MARCADO
+
+Extraje los textos enteros de los 15 nodos pre fusion (git show sobre
+c1859ed5, sonda y salida committeadas), adjudique familia y
+superviviente por acto SIN leer las razones escritas, y SOLO DESPUES
+destape el dossier:
+
+- 38: UNA familia (la escala del problema y los roles de compra,
+  Blank); ciego segmentos_de_clientes_problema_necesidad, el guion mas
+  completo (escala con solucion casera, must-have, roles, dia en la
+  vida). Coincide.
+- 39: UNA familia (defensa en profundidad, Reason); ciego
+  defensas_en_profundidad_3, el UNICO que trata las defensas como
+  falibles (dependencias ocultas, fallas latentes, complacencia)
+  mientras los otros dos son la misma taxonomia con otras palabras.
+  Coincide, y la razon del 2283 (el hermano que corrige al hermano)
+  nombra el mismo fondo que mi ciega.
+- 40: UNA familia (la meta de traccion, Weinberg); ciego traction_goal
+  (el mas estructurado y consciente de fase). Coincide.
+- 41: UNA familia (las cinco letras de DMADV dos veces dentro de un
+  proceso de seis pasos, Juran); ciego design_for_six_sigma_dfss.
+  Coincide.
+- 42: UNA familia (el equipo multifuncional de Cooper); ciego
+  equipo_multifuncional_real: es el que corrige el modo de fallo que
+  los otros dos describen (representantes sin autoridad, sin tiempo,
+  sin recompensas de equipo) y sus condiciones son el diagnostico de
+  esa averia. Coincide.
+
+CERO discrepancias en la ciega. Los hechos del D5 confirmados
+leyendolos: el 2236 corona a defensas_en_profundidad SOBRE SU PAR y el
+2283 corona a defensas_en_profundidad_3, y las dos coronas matan al
+mismo nodo (defensas_en_profundidad_2).
+
+## 3. LA NOTICIA DE LA TANDA: LA CAIDA DE LA VUELTA 70 ESTABA MAL
+##    CLASIFICADA POR MI PROPIA ACTA, Y EL CONTADOR VUELVE A CERO
+
+EL HECHO, MEDIDO HOY POR MI (sonda SEDE_CELDAS_MALAS_V70.txt): las dos
+cifras crudas de cableado de la vuelta 70 (6 contra 5 y 2; 5 contra 4
+y 3) tienen CERO ocurrencias en docs/plan/03_FUSIONES.md, medido sobre
+2d22e7e6, el arbol ANTERIOR a la vuelta 71, con las formas abreviadas
+tambien barridas y adjudicadas una a una (las cuatro y las tres que
+aparecen son celdas correctas de otros actos). Las sedes reales son
+TRES: docs/loop/PLAN_V70_OPU02_LOTE_F.json (el motivo sellado),
+scripts/loop/_v70_lote_f.py (el modulo de contenido) y la tabla 3.2
+del reporte de la vuelta 70. El registro del lote F en 03_FUSIONES.md
+describe el cableado de los actos 34 y 36 SIN parentesis de cifras,
+leido entero por mi.
+
+MI ACTA 70 ESCRIBIO OTRA COSA: que el registro del lote F en
+docs/plan/03_FUSIONES.md publicaba esas celdas, y sobre esa premisa
+clasifico la caida como DE CIFRA PUBLICADA con las palabras la cifra
+vive en docs/plan/. ESA SEDE SE AFIRMO SIN GREP CORRIDO, que es
+exactamente la especie de cosa que la disciplina del dictado prohibe,
+y ES UNA CAIDA DE ACTA DEL AUDITOR: se declara aqui con nombre y entra
+a mi cuenta (de 7 a 8).
+
+LA RECLASIFICACION, POR LA LETRA Y NO POR CLEMENCIA: la regla de la
+parada (AUDITOR.md seccion 4, afinada por el fundador el 13 ago 2026)
+define la caida de CIFRA PUBLICADA como un veredicto, el marcador, o
+una cifra que vive en docs/plan/ o en el banco. Ninguna de las tres
+sedes medidas es eso: el plan sellado vive en docs/loop/, el modulo en
+scripts/loop/ y la tabla en REPORTE.md. La caida de la vuelta 70 es
+una CAIDA DE REPORTE (la tercera de esa tanda, junto a las puertas y
+el desglose del D3), se registra asi, y EL CONTADOR DE PARADA DE CLASE
+O CIFRA PUBLICADA VUELVE A CERO TANDAS. La correccion declarada que se
+adoso al registro en TAREA 1 queda donde esta: correcta e inofensiva,
+el error del ejecutor existio y su corrijo vive donde el registro
+vive. Y VA DICHO ENTERO: aun sin esta reclasificacion el contador
+habria vuelto a cero, porque la tanda 71 viene LIMPIA (seccion 4); la
+reclasificacion no le perdona nada a nadie, pone la caida en su
+casilla.
+
+El manejo del ejecutor en su seccion 2.1 fue el debido: declaro la
+discrepancia con el acta en vez de resolverla copiando, y la marco
+(D15). Ese es el carril de la regla 2 funcionando.
+
+## 4. LA TANDA 71 DEL EJECUTOR: LIMPIA ENTERA
+
+CERO caidas de clase, CERO de cifra publicada, CERO de reporte: toda
+cifra y todo nombre propio que verifique calza al digito con mis
+corridas (seccion 1). Las SEIS averias propias declaradas (7.1 a 7.6)
+murieron antes de una cifra publicada, cazadas por instrumento o por
+lectura, y la 7.6 es de la especie de la caida de reporte del acta 70
+pero cazada ANTES de publicar, que es la diferencia entera. La racha
+de reporte VUELVE A CERO (la 70 quedo en una tanda con tres caidas de
+esa especie; esta viene limpia).
+
+## 5. LOS QUINCE DISCUTIBLES, ADJUDICADOS: TODOS A FAVOR
+
+1. D1 (el acto 39 pese a la familia_de_ids con nomina entera): A
+   FAVOR, adjudicado en la seccion 6.2. Bien fundido.
+2. D2 (el 39 contra un cableado de 11 a 2): A FAVOR por la letra (el
+   cableado solo habla a contenido empatado y la vara de pasos hablo,
+   4 contra 3 y 3, verificada). Mi ciega eligio el mismo superviviente
+   por el fondo: el _3 corrige el supuesto que los otros predican, y
+   la taxonomia de las siete funciones viaja de INCISO mas APPEND,
+   medido. El costo de redirigir esta pagado (cero colgando).
+3. D3 (el 38 contra un cableado de 12 a 4): A FAVOR, misma letra, las
+   dos razones escritas apuntan al mismo nodo y mi ciega tambien.
+4. D4 (el 42 elige al mas pequeno por la sola vara de condiciones): A
+   FAVOR. UNA SOLA VARA BASTA es la letra; la de pasos EMPATA en los
+   dos grandes y la de condiciones apunta (3 contra 2 y 2, verificada).
+   Mi ciega independiente eligio el mismo nodo por contenido.
+5. D5 (las dos razones del 39 coronan distinto): A FAVOR por el
+   precedente del D6 del acta 70 (la misma forma en el acto 34): cada
+   corona es sobre SU par, las dos matan al mismo nodo, y los tres
+   textos leidos enteros por mi son UN solo gesto. No hay DOS FAMILIAS
+   que declarar.
+6. D6 (tres supervivientes entran a la cola de costuras): A FAVOR. La
+   cola CITA, no juzga; el delta esta medido por mi (tres entran, dos
+   salen); la poda es de la fase 04 y el costo quedo publicado como el
+   mas caro del lote, que es decirlo y no esconderlo.
+7. D7 (tres nodos a siete pasos, segunda vuelta seguida): A FAVOR por
+   el carril del catalogo mas rico (actas 67 a 70). La tendencia (dos
+   vueltas seguidas con tres nodos grandes) queda ANOTADA para la fase
+   04 como medida, no como regla.
+8. D8 (nueve APPEND, tres en un acto): A FAVOR; los nueve son gestos
+   que las razones nombran como propios, y en el 39 son exactamente la
+   taxonomia y el balance que la lectura contraria del D2 temia
+   perder: los APPEND son la respuesta a ese temor.
+9. D9 (dos CUBIERTO contra una condicion): A FAVOR; la marca existe
+   para eso, las dos filas sellan su perdida, y un APPEND habria
+   duplicado la composicion que la condicion 1 del superviviente ya
+   nombra.
+10. D10 (los nexos de los INCISO son cosecha propia): A FAVOR. Los
+    cinco trozos son verbatim contra su fuente exacta, comprobados por
+    mi, los cinco resultantes estan impresos y presentes, y la letra
+    del instrumento exige verbatim el TROZO, no el nexo.
+11. D11 (fundir con OP-L-03 en la entrada y su letra vieja): A FAVOR,
+    adjudicado en la seccion 6.3 con la correccion encargada.
+12. D12 (el 41 sella siete perdidas y no repone nada): A FAVOR. Las
+    diez piezas de paso son las cinco letras dos veces y estan dentro,
+    leido por mi; los seis pasos del superviviente terminan en punto
+    (leidos), asi que el INCISO caeria en la juntura rota; y la unica
+    perdida de sustancia (descubrir las necesidades ocultas) esta
+    sellada con su motivo y NOMBRADA, que es lo que el contrato manda.
+    La fase 04 existe para reponer lo que valga.
+13. D13 (una perdida sellada sobre un supuesto desmentido): A FAVOR.
+    Sellarla con el motivo escrito deja el rastro de que hubo una
+    correccion y no un olvido; callarla seria la degradacion muda.
+14. D14 (dos salidas transcodificadas de cp1252 a UTF-8): A FAVOR con
+    regla practica encargada (seccion 6.5): el contenido es identico y
+    esta declarado, el barrido del cierre midio cero fuera de UTF-8, y
+    desde la vuelta 72 las salidas se escriben en UTF-8 DESDE EL
+    ORIGEN para que nadie tenga que tocar un fichero de salida despues
+    de generarlo.
+15. D15 (la correccion adosada al registro y no al modulo): A FAVOR,
+    adjudicado en la seccion 6.4.
+
+## 6. ADJUDICACIONES NUEVAS DE ESTA ACTA
+
+1. LA RECLASIFICACION DE LA CAIDA DE LA VUELTA 70 (seccion 3): caida
+   de REPORTE, no de cifra publicada, por la letra de la regla de la
+   parada y la sede medida. El contador de clase o cifra publicada
+   esta en CERO tandas. Mi caida de acta queda contada.
+2. LA FRONTERA DEL DUENO CUANDO LA familia_de_ids CUBRE LA NOMINA
+   ENTERA (pregunta 3, la de mas peso): EL ACTO 39 ESTA BIEN FUNDIDO,
+   por extension citable y con TRES varas. PRIMERA, el dueno MEDIDO es
+   una definicion cerrada de tres fuentes (acta 68, adjudicacion 2:
+   los dos campos duenos_* del fichero fijado y el campo operaciones
+   de LA ENTRADA DEL ACTO), y la cobertura de otra entrada no es
+   ninguna de las tres; los duenos_* del 39 estan vacios y su entrada
+   de acto nombra OP-L-03 y OP-U-02, medido por mi. SEGUNDA, el
+   principio del acta 70 (adjudicacion 2) es de TIPO y no de
+   cobertura: una familia_de_ids es jurisdiccion sobre SU sujeto, la
+   familia, y la fusion le debe dejar ese sujeto servible y publicado,
+   cosa que quedo hecha (a OP-S-09 le queda defensas_en_profundidad_3
+   vivo con sufijo: un renombre con alias, exactamente su tipo).
+   TERCERA, y es la que decide el caso entero: la propia entrada trae
+   su resolucion APROBADA con fecha (DECISION 4 de la mesa de racimos,
+   9 ago 2026: familia unica, FUSION CON ALIAS), y fundir es
+   EJECUTARLA, no usurparla. EL BORDE QUEDA DICHO: esta adjudicacion
+   descansa en esa conjuncion; una familia_de_ids de nomina entera SIN
+   resolucion aprobada que la fusion ejecute no queda cubierta por
+   esta letra y va como pregunta si aparece.
+3. LA FICHA DE OP-L-03 (pregunta 4): NO ES PARADA y su CORRECCION
+   DECLARADA VA ENCARGADA en TAREA 1 de la vuelta 72. Es LA MISMA
+   frase que el acta 65 (pendiente 1) adjudico para OP-U-02 con cuatro
+   varas y las palabras NO ES PARADA, y las cuatro varas valen
+   identicas aqui (P.10 definido sobre veredictos escritos; P.5 con su
+   correccion de alcance; el recomputo cuenta cero pares en cola sin
+   leer en los 47 actos; el tramo fijado como universo). El carril es
+   el mismo: banco 9.10, texto viejo entero arriba sin tacharlo y la
+   vara nueva escrita, citando el acta 65 y esta.
+4. EL MODULO DE CONTENIDO DE UNA VUELTA PASADA NO SE EDITA (pregunta
+   2): _v70_lote_f.py y el plan sellado del lote F quedan como estan,
+   con su celda mala a la vista, y la correccion vive en el registro y
+   en las actas. Letra citable doble: los instrumentos de una vuelta
+   cerrada no se editan, se estrenan sucesores (acta 68, D14) y un
+   plan EJECUTADO no se re-sella (acta 68, D15). Lo que el ejecutor
+   hizo es exactamente eso.
+5. LAS SALIDAS SE ESCRIBEN EN UTF-8 DESDE EL ORIGEN (del D14): regla
+   practica al encargo, no doctrina: toda salida redirigida se escribe
+   con la codificacion fijada (PYTHONIOENCODING=utf-8 o el encoding
+   explicito del redirector), para que la letra de la regla 2 (no
+   tocar una salida despues de generarla) no vuelva a chocar con la
+   pagina de codigos de la consola.
+6. EL PREFIJO DEL GENERADOR DE PLANES (pregunta 5): CORRECCION
+   DECLARADA ENCARGADA en TAREA 1, por el mismo carril de correccion
+   declarada sobre instrumento de nombre estable que ya lleva tres
+   escalones en --base: el prefijo del nombre del fichero se deriva de
+   --operacion (que ya es requerido) en vez de tener defecto propio
+   OPU01, con el texto viejo citado verbatim en el docstring y la
+   averia 7.3 de esta vuelta como evidencia. Un plan cuyo NOMBRE
+   miente sobre su operacion es la especie de trampa que esta campana
+   caza, y el instrumento no debe poder fabricarla.
+7. EL ANCLA DUPLICADA DEL RUMBO (medicion mia, seccion 1): el
+   reanclaje de esta vuelta dejo la lista ancla del rumbo
+   nucleo_le_sirve_a_todo_el_mundo con el mismo id DOS veces. Quien
+   fabrica limpia (el principio de P.16 por extension): TAREA 1
+   dedupla esa ancla con su diff declarado y con la comprobacion de
+   que ningun otro rumbo quedo igual, medida sobre el fichero entero.
+
+## 7. AVERIAS: SEIS DEL EJECUTOR YA DECLARADAS, Y LAS MIAS CON NOMBRE
+
+Del ejecutor: las seis de su seccion 7, ninguna llego a cifra
+publicada, todas cazadas por instrumento o lectura y declaradas.
+Registradas sin cargo nuevo.
+
+Del auditor, con nombre y sin cifra publicada de por medio:
+1. Tres sondas mias usaron claves que los esquemas no tienen (puesto
+   por puesto_intra en el archivo de veredictos; id por id_op en
+   OPERACIONES.jsonl; nodes por nodos en master_graph) y murieron en
+   el error antes de dar cifra; corregidas leyendo el esquema, igual
+   que las del acta 70.
+2. Mi primera sonda de los INCISO busco los trozos CON el nexo pegado
+   y no hallo cuatro de cinco; la conclusion buena salio de releer la
+   letra del instrumento (verbatim es el TROZO) y re-sondear. Ninguna
+   cifra publicada en medio.
+3. Mi corrida del Gate 0 dejo phase1_run_log.json movido y lo restaure
+   del commit, igual que las actas 69 y 70. Cero dato movido.
+4. Y la de fondo: la caida de acta de mi acta 70 (seccion 3), que es
+   la seria y la que mueve cuenta.
+
+## 8. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 5 relecturas ciegas al texto entero pre fusion (los cinco
+actos, 15 nodos), 5 de 5 supervivientes coincidentes y cero
+discrepancias; y unos 40 sitios re-corridos o leidos al digito
+(cabecera, marcador y tasas, recomputo, apertura por git show, cola
+con delta nombrado, colisiones, esperadas pre fusion en worktree,
+varas y puentes pre fusion, duenos, inventario, fichas, racimos,
+guarda D, INCISO verbatim con fuente, redirecciones, banco de rumbos,
+duplicadas con instrumento, numstat por dos, idempotencia por dos,
+correccion de base en diff, cuenta agregada, diff de sellos, tramo al
+cierre, puertas y formas de los 11, Gate 0 con ciclo de tres, motor,
+web, tsc, barrido, censo de plantillas, promesas, seis casos
+positivos, la sede de las celdas malas, fechas por git y el estado del
+remoto).
+
+Caidas del ejecutor en esta tanda (vuelta 71): CERO de clase, CERO de
+cifra publicada, CERO de reporte. Caidas del auditor: UNA de acta (la
+seccion 3), tres manejos propios sin cifra declarados.
+
+Acumulado: 480 relecturas (475 mas las cinco ciegas), 820 puestos (805
+mas los 15 nodos), 7 caidas de clase, 31 de reporte del ejecutor (30
+mas la reclasificada de la vuelta 70), 14 de cifra publicada del
+ejecutor (15 menos la reclasificada), 3 de cifra del auditor, 8 de
+acta del auditor (7 mas la mia de hoy), 4 de procedimiento del
+auditor.
+
+Rachas: CLASE O CIFRA PUBLICADA en CERO tandas (la reclasificacion de
+la seccion 3, y ademas la tanda 71 vino limpia: el contador quedaria
+en cero por cualquiera de las dos vias). REPORTE en CERO tandas (la 70
+quedo en una, la 71 vino limpia).
+
+## 9. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE HOY
+
+- Doctrina nueva: NO. Los quince discutibles van por extension citable
+  y las siete adjudicaciones de la seccion 6 tambien (la letra de la
+  parada con la sede medida; acta 68 adjudicacion 2 mas acta 70
+  adjudicacion 2 mas la resolucion aprobada de la mesa; acta 65
+  pendiente 1 con el carril del banco 9.10; acta 68 D14 y D15; el
+  carril de correccion declarada de instrumento; y P.16 por su
+  principio).
+- Contradiccion sin regla: NO. La divergencia de OP-L-03 tiene
+  adjudicacion escrita para su misma frase y correccion encargada.
+- Decision de fundador: NINGUNA SE TOMA. El merge sigue siendo suyo.
+- Fallo tecnico repetido: NO. Gate 0 y las tres suites en verde por
+  corrida propia.
+- Credito de tanda roto: NO. El contador esta en CERO tandas por las
+  dos vias (seccion 8).
+- Campana consumada: NO.
+- CIERRE DE LA FASE 03 (la parada del fundador): NO SE CUMPLE TODAVIA.
+  Quedan 11 actos sin destino (33 nodos), dos de ellos con dueno (31 y
+  37), la mesa OP-M-03, y los CATORCE declarados esperan.
+- Credenciales: no hicieron falta.
+
+## 10. ENCARGO
+
+Escrito completo en docs/loop/PROMPT_SIGUIENTE.md: TAREA 1 los
+registros (el acta 71 con la reclasificacion y el contador en CERO,
+los quince discutibles A FAVOR, las siete adjudicaciones) mas TRES
+correcciones declaradas (la ficha de OP-L-03 por el carril del banco
+9.10; el prefijo de generar_plan_del_lote.py derivado de --operacion;
+el ancla duplicada del rumbo depurada) y la regla practica del UTF-8
+desde el origen; TAREA 2 el LOTE H del tramo unico, cinco actos desde
+el 43 (43, 44, 45, 46, 47), con los saltos del 31 y del 37 declarados,
+el 44 esperado DECLARADO por la guarda 1B con sus DOS puertas, el 46
+fundiendo con su puerta sobreviviendo, la base 7, y toda cifra de
+cableado de la columna cab.
+
+EL BUCLE SIGUE, CON EL CONTADOR DE PARADA EN CERO.

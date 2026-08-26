@@ -1,0 +1,168 @@
+
+===== ACTO 38 =====
+
+--- segmentos_de_clientes_problema_necesidad (dominio core, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Sal del edificio (get out of the building) a observar como tus clientes viven el problema
+  paso 2: Clasifica el problema en la escala: latente, pasivo, activo o con una solución casera
+  paso 3: Identifica si tu producto es indispensable (must-have) o solo agradable de tener (nice-to-have)
+  paso 4: Mapea los tipos de cliente: quien usa el producto, quien influye en la compra y quien lo recomienda
+  paso 5: Documenta un día en la vida de tu cliente y un mapa de quien influye en la decisión
+  cond 1: Cuando no tienes claro quien toma la decisión de compra dentro del negocio de tu cliente
+  cond 2: Al definir la historia de usuario (user story) y la urgencia del problema que quieres resolver
+
+--- customer_segments_hypothesis (dominio core, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Define el problema de tu cliente y ubícalo en la escala de qué tan consciente es de él: no lo nota, lo nota pero no actúa, ya busca una solución, o aún no existe y tú le muestras una visión
+  paso 2: Identifica a las distintas personas que intervienen en la compra: quien usa el producto, quien lo paga, quien toma la decisión final
+  paso 3: Evalúa si tu producto resuelve un problema crítico o cubre una necesidad imprescindible
+  paso 4: Revisa si tu mercado es de un solo lado o de varios lados, como Google o las redes sociales, donde quien usa el producto no es quien paga por él
+  cond 1: Si todavía no tienes claro quién es tu cliente
+  cond 2: Si estás empezando a salir a hablar con clientes para descubrirlo (descubrimiento de clientes)
+
+--- problem_recognition_scale (dominio core, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Salir a entrevistar clientes para entender cómo experimentan el problema
+  paso 2: Clasificar cada tipo de cliente importante según la escala (latente/pasivo/activo/visión)
+  paso 3: Buscar específicamente clientes que hayan intentado construir su propia solución
+  paso 4: Determinar la intensidad del dolor que causa el problema
+  cond 1: Si no está claro qué tan urgente es el problema para el cliente
+  cond 2: Antes de diseñar el pitch de ventas
+
+===== ACTO 39 =====
+
+--- defensas_en_profundidad_3 (dominio health_safety, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Mapear todas las capas de defensa del sistema (barreras físicas, sistemas de protección, procedimientos)
+  paso 2: Evaluar si existen dependencias ocultas entre capas que se asumen independientes
+  paso 3: Implementar mecanismos de detección temprana de fallas latentes antes de que se acumulen
+  paso 4: Revisar si la confianza en las múltiples defensas ha generado complacencia operativa
+  cond 1: Cuando el sistema depende de múltiples capas de protección redundantes
+  cond 2: Si ha ocurrido un accidente donde fallaron varias defensas simultáneamente
+
+--- defensas_en_profundidad (dominio health_safety, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Inventariar las defensas actuales de la organización clasificándolas en las siete funciones defensivas.
+  paso 2: Evaluar el balance entre defensas duras y blandas existentes.
+  paso 3: Identificar funciones defensivas ausentes o débiles en el sistema.
+  cond 1: Cuando se diseña o audita un sistema de seguridad para una operación de alto riesgo.
+
+--- defensas_en_profundidad_2 (dominio health_safety, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Clasificar las defensas existentes en el sistema según su función y modo (dura/blanda)
+  paso 2: Evaluar la integridad de cada capa defensiva de forma independiente
+  paso 3: Diseñar redundancia entre capas para evitar que un solo punto de falla comprometa todo el sistema
+  cond 1: Al diseñar o auditar los sistemas de seguridad de una organización
+  cond 2: Cuando se requiere justificar por qué múltiples barreras no garantizan seguridad absoluta
+
+===== ACTO 40 =====
+
+--- traction_goal (dominio core, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Define un objetivo de tracción cuantificable y significativo para tu etapa actual de negocio
+  paso 2: Verifica que el objetivo esté alineado con tu estrategia general (crecimiento vs rentabilidad vs fundraising)
+  paso 3: Desglosa el objetivo en subobjetivos cuantitativos con fechas límite (ej. 20% de crecimiento mensual)
+  paso 4: Coloca estos subobjetivos en el calendario junto a los hitos de producto
+  paso 5: Reevalúa el traction goal cuando cambie de fase (I, II, III)
+  cond 1: Al iniciar cualquier esfuerzo de crecimiento o tracción
+  cond 2: Cuando el startup pasa de una fase a otra (ej. de producto/mercado fit a escalamiento)
+
+--- definir_meta_de_traccion (dominio core, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Determina si tu objetivo actual es levantar fondos o llegar a rentabilidad
+  paso 2: Traduce ese objetivo en números concretos: cantidad de clientes y tasa de crecimiento mensual
+  paso 3: Evalúa cada actividad de marketing preguntando si mueve la aguja hacia esa meta
+  paso 4: Descarta estrategias que generen resultados marginales sin impacto real
+  cond 1: Cuando el equipo no tiene claridad sobre qué resultados de marketing importan realmente
+  cond 2: Antes de iniciar cualquier campaña de adquisición de usuarios
+
+--- moving_the_needle (dominio core, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Define tu meta de tracción en números concretos (ej. 5,000 visitantes nuevos/día, no solo 'crecer').
+  paso 2: Antes de invertir en un canal, calcula si el volumen potencial de ese canal puede acercarte realmente a tu meta.
+  paso 3: Descarta o reduce la prioridad de canales que, aunque funcionen, no generan el volumen necesario.
+  cond 1: Cuando el equipo obtiene resultados en un canal pero no sabe si son 'suficientes'
+  cond 2: Cuando hay riesgo de dispersar esfuerzos en canales de bajo impacto
+
+===== ACTO 41 =====
+
+--- design_for_six_sigma_dfss (dominio quality, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Revisa tu plan de negocio y define el alcance del proyecto de diseño antes de empezar.
+  paso 2: Identifica a tus clientes objetivo y traduce sus necesidades en requerimientos medibles (CTQs).
+  paso 3: Analiza la voz del cliente y evalúa varios conceptos de diseño usando métodos estadísticos.
+  paso 4: Diseña el producto y su proceso de producción de forma integrada, incorporando los CTQs como criterios de decisión.
+  paso 5: Verifica que el diseño detallado cumple los niveles de calidad Six Sigma y los CTQs antes de producir a escala completa.
+  paso 6: Prepara el plan de lanzamiento y define mecanismos de control para asegurar que se mantenga el cumplimiento de los CTQs.
+  cond 1: Cuando necesitas desarrollar un producto, servicio o proceso completamente nuevo con calidad Six Sigma.
+  cond 2: Cuando el diseño actual no satisface las necesidades del mercado y requiere un rediseño total.
+  cond 3: Cuando no existe un proceso previo que mejorar sino que debe crearse desde cero.
+  cond 4: Cuando necesitas asegurar que el diseño cumpla múltiples requisitos críticos del cliente desde el inicio.
+
+--- design_for_six_sigma_dmadv (dominio quality, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Definir el proyecto de diseño y sus metas específicas
+  paso 2: Medir los requisitos críticos para el cliente y la calidad (CTQs)
+  paso 3: Analizar la información para generar un diseño de alto nivel incorporando los CTQs
+  paso 4: Diseñar en detalle, evaluar y optimizar antes de transferir a operaciones
+  paso 5: Verificar que el diseño final cumple los requisitos establecidos
+  cond 1: Cuando el producto es complejo y requiere un enfoque estadístico riguroso de diseño
+  cond 2: Cuando se busca alcanzar niveles extraordinarios de calidad en manufactura
+
+--- design_for_six_sigma_dmadv_2 (dominio quality, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Define: establecer metas y objetivos para el nuevo bien, servicio o proceso
+  paso 2: Measure: medir y descubrir necesidades ocultas de los clientes
+  paso 3: Analyze: analizar las necesidades y determinar características innovadoras
+  paso 4: Design: diseñar combinando las características para crear la solución innovadora
+  paso 5: Verify: verificar que la innovación cumple con las necesidades del cliente y la organización
+  cond 1: Cuando la organización busca innovar de manera sistemática en lugar de azarosa
+  cond 2: Cuando se requiere diseñar nuevos productos, servicios o procesos desde cero
+  cond 3: Cuando existe necesidad de descubrir necesidades ocultas del cliente antes de diseñar
+
+===== ACTO 42 =====
+
+--- equipo_multifuncional_real (dominio core, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Asigna un líder de proyecto dedicado y dale autoridad real, no solo la responsabilidad
+  paso 2: Libera tiempo real de las tareas habituales de las personas que reúnas para el equipo
+  paso 3: Define indicadores y recompensas basadas en el desempeño del equipo, no solo individual
+  paso 4: Mantén un núcleo estable de personas comprometidas desde el inicio hasta el final del proyecto
+  cond 1: Si tu negocio ya tiene varias personas o áreas trabajando juntas en un proyecto
+  cond 2: Cuando el equipo de proyecto está formado por representantes de área sin autoridad ni dedicación real
+  cond 3: Cuando los proyectos avanzan lento porque falta compromiso real entre áreas
+
+--- diseno_organizacional_equipos_innovacion (dominio core, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Cuando un proyecto importante pase el filtro de aprobación (gate), arma un equipo dedicado con personas de distintas áreas
+  paso 2: Nombra a alguien como líder de proyecto con espíritu emprendedor, no solo para administrar tareas del día a día
+  paso 3: Elige cómo vas a organizar al equipo según qué tan complejo sea: compartiendo tiempo con otras tareas, dándole prioridad al proyecto, o dedicándolo por completo
+  paso 4: Busca que el equipo esté físicamente junto o, si no se puede, que tengan formas efectivas de comunicarse a distancia
+  paso 5: Asegúrate de que el equipo se mantenga desde el inicio del proyecto hasta después de lanzarlo, y que quede claro quién responde por qué
+  cond 1: Cuando notas que cada área trabaja por su cuenta, sin cruzar información con las demás
+  cond 2: Cuando no está claro quién lidera el proyecto ni quién es responsable de que avance
+
+--- equipo_multifuncional (dominio core, fase None) ---
+TITULO: None
+RESUMEN: 
+  paso 1: Incluye desde el inicio a alguien de cada área clave, no solo al final
+  paso 2: Elige un líder de proyecto con verdadera capacidad de liderazgo, no solo de coordinar tareas
+  paso 3: Construye una visión compartida del proyecto entre todos los que participan
+  paso 4: Deja claro quién responde por qué, de forma compartida entre todo el equipo
+  paso 5: Evita el modelo de pasar el proyecto de área en área; trabaja en paralelo y de forma colaborativa
+  cond 1: Si tu proyecto avanza de forma secuencial entre áreas que no se hablan entre sí
+  cond 2: Si falta compromiso o visión compartida en el equipo que desarrolla el producto

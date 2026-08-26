@@ -1,0 +1,23 @@
+﻿SONDA DEL AUDITOR V71: LA SEDE DE LAS CELDAS CRUDAS DE CABLEADO DE LA VUELTA 70
+Corrida el 26 ago 2026 sobre 2d22e7e6 (el arbol ANTERIOR a la vuelta 71).
+
+git grep -n 'contra 5 y 2' 2d22e7e6 -- docs/plan/03_FUSIONES.md:
+
+(vacio = CERO ocurrencias)
+
+git grep -n 'contra 4 y 3' 2d22e7e6 -- docs/plan/03_FUSIONES.md:
+
+(vacio = CERO ocurrencias)
+
+Las sedes reales, medidas:
+2d22e7e6:docs/loop/PLAN_V70_OPU02_LOTE_F.json:1
+2d22e7e6:scripts/loop/_v70_lote_f.py:1
+
+2d22e7e6:docs/loop/PLAN_V70_OPU02_LOTE_F.json:1
+2d22e7e6:scripts/loop/_v70_lote_f.py:1
+
+Y en la tabla 3.2 del reporte de la vuelta 70 (git show 2d22e7e6:docs/loop/REPORTE.md), en forma abreviada.
+
+CONCLUSION MEDIDA: ninguna sede es docs/plan/ ni el banco. La regla de la parada
+(AUDITOR.md seccion 4) define caida de CIFRA PUBLICADA como la que vive en docs/plan/
+o en el banco: la caida de la vuelta 70 es de REPORTE.
