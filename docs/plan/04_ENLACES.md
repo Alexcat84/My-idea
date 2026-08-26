@@ -272,6 +272,19 @@ y perder 73 gemelos.**
 > desde una bolsa calculada. El texto viejo de la tabla no se toca: esta linea
 > se anade a lo que ya estaba.
 
+> **CORRECCION DECLARADA (26 ago 2026, vuelta 77, decision del fundador en
+> docs/loop/paradas/2026-08-26-racha-tramo-mecanico-DECISION.md).** El
+> filtro de arriba solo cruzaba `eliminar` y `superviviente`, y por eso
+> nunca podia ver a `OP-S-09` (tipo `RENOMBRE_CON_ALIAS`: sus nodos no se
+> eliminan, se renombran conservando alias, asi que viven en el campo
+> `nodos`, no en `eliminar`). Con la nomina de `OP-S-09` ya escrita en su
+> campo `nodos` (69 ids, vuelta 77, `docs/loop/SALIDA_V77_OP_S09_NOMINA.txt`),
+> el filtro se ENSANCHA para cruzar tambien `nodos` en toda operacion NO
+> EJECUTADA de tipo `RENOMBRE_CON_ALIAS`, en las dos direcciones (madre o
+> hijo del candidato). Implementado en
+> `scripts/loop/vuelta77_filtro_p91_ensanchado.py`, con caso positivo
+> verificado en las dos direcciones. El texto viejo de arriba no se toca.
+
 ---
 
 ## LOS SUELTOS DE RACIMOS, y los racimos con miembro ajeno

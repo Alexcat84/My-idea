@@ -1,542 +1,544 @@
-# REPORTE DE LA VUELTA 76 DEL EJECUTOR (modelo: Sonnet 5)
+# REPORTE DE LA VUELTA 77 DEL EJECUTOR (modelo: Sonnet 5)
 
-Sobrescribe el reporte de la vuelta 75. Cubre TAREA 1 (los registros, cinco
-correcciones declaradas y el censo) y TAREA 2 (la relectura al doble del
-tramo 1, el cierre de `OP-E-02` y el tramo 2 de `OP-E-01`) del encargo de
-`docs/loop/PROMPT_SIGUIENTE.md`, escrito por el auditor tras el acta de la
-vuelta 75 (`docs/loop/ACTA_AUDITOR.md`, linea 20976).
+Sobrescribe el reporte de la vuelta 76. Cubre TAREA 1 (los registros, cinco
+correcciones declaradas de la parada del 26 ago 2026), TAREA 2 (la
+relectura al doble del tramo 2 de `OP-E-01`) y TAREA 3 (el tramo 3 de
+`OP-E-01`) del encargo de `docs/loop/PROMPT_SIGUIENTE.md`, escrito por el
+fundador tras la parada de la vuelta 76
+(`docs/loop/paradas/2026-08-26-racha-tramo-mecanico-DECISION.md`).
+
+**ESTRENA EL RENGLON "LA TABLA SE CUENTA DE SU FICHERO"** (EJECUTOR.md
+regla 1, quinto parrafo): toda tabla o cifra de este reporte cita el
+fichero de salida del que sale y fue reconstruida contando ese fichero
+antes de publicarse. Donde no hay fichero que contar, se dice.
 
 ---
 
 ## 0. LA APERTURA, medida ANTES de la primera operacion
 
-Commit de apertura: `3b319801` (acta de la vuelta 75, rama `pasada-unica`,
-arbol limpio, `origin/pasada-unica` igual a `HEAD` antes de empezar).
+Commit de apertura: `4f2e587a` (decision del fundador, rama `pasada-unica`,
+arbol limpio, `origin/pasada-unica` igual a `HEAD` antes de empezar,
+verificado con `git rev-parse HEAD` y `git rev-parse origin/pasada-unica`).
 
 | | medido con |
 |---|---|
-| grafo: 3.853 nodos, 3.188 vivos, 665 deprecados | `python scripts/run_phase1.py --reaplico-curaduria`, corrida de apertura |
-| aristas en `nodos_siguientes` a la apertura | **8.872**, medido sobre `dataset/metadata/master_graph.json` en `3b319801` |
-| Gate 0 | OK (ciclo de tres corrido en esta vuelta antes de tocar nada) |
-| motor | 25/25 |
-| web | 80 ficheros, 1.030 pasadas, 3 saltadas |
-| tsc | limpio |
+| grafo: 3.853 nodos, 3.188 vivos, 665 deprecados | `python scripts/run_phase1.py --reaplico-curaduria`, corrida de apertura, ciclo de tres completo |
+| `nodos_siguientes` en `4f2e587a` | **8.897**, contado sobre `git show 4f2e587a:dataset/metadata/master_graph.json` |
+| `nodos_previos` en `4f2e587a` | **8.876** |
+| suma | **17.773** |
+| union dirigida unica | **9.520** |
+| Gate 0 | OK (ciclo de tres: `run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py --aplicar`, `sync_assets_web.py`) |
+| motor | `python engine/run_all_tests.py`: **25/25** |
+| web | `npx vitest run` desde `web/`: **80 ficheros, 1.030 pasadas, 3 saltadas** |
+| tsc | `npx tsc --noEmit` desde `web/`: **exitcode 0, cero lineas** |
 
-**Sobre la cabecera tallada** (`scripts/loop/tallar_cabecera_reporte.py`):
-igual que en la vuelta 75, esta vuelta no toca el marcador del cribado
-(`A`/`B`/`C`/`D`) ni los actos de `03_FUSIONES.md`. Ese tallador lee salidas
-del cribado (`SALIDA_V<N>_MARCADOR_*`, `SALIDA_V<N>_RECOMPUTO_*`) que esta
-fase no produce: la fase 04 anade aristas, no funde ni deteje. No aplica esta
-vuelta, y la razon queda citada para que nadie la espere sin encontrarla.
-
-**Declaro un error propio, corregido antes de publicar nada:** mi primera
-corrida de `npx vitest run` la lance desde la raiz del repo, no desde `web/`
-(que es donde vive `package.json` y `vitest.config.ts`). Esa corrida mal
-ubicada devolvio 52 ficheros en rojo por un fallo de resolucion de la ruta
-`@/lib/testUtils/fakeSupabase` que no existe cuando el comando corre desde
-`web/`. Comprobado con `git stash` que el fallo aparece igual en el arbol
-limpio de `3b319801` (o sea que no lo causaron mis cambios) y que corriendo
-`npx vitest run` DESDE `web/` la salida es la buena: 80 ficheros, 1.030
-pasadas, 3 saltadas, identica a la de la apertura. La corrida mala queda
-declarada aqui, no escondida en una nota al pie, y limpie el `node_modules`
-espurio que esa corrida dejo en la raiz.
-
----
-
-## 1. TAREA 1: LOS REGISTROS, CINCO CORRECCIONES Y UN CENSO
-
-### 1.1. La caida de CLASE, registrada con su nombre
-
-**`segmentos_de_clientes_problema_necesidad -> get_out_of_the_building`** se
-escribio en el tramo 1 de la vuelta 75 contra `BANCO_DEL_PLAN.md` `P.9` punto
-1 (*"los enlaces corren DESPUES de las fusiones que tocan sus destinos"*):
-`get_out_of_the_building` esta en el campo `eliminar` de
-`OP-M-05-EDIFICIO`, una de las SEIS fusiones que la fase 03 enruto a la fase
-06 (citada dos veces en el propio reporte de la vuelta 75, secciones 1.3 y
-2.4, para justificar su propia parada). La CLASE de la lectura estaba bien
-leida (jerarquia sana de manual); lo que fallo fue la ELEGIBILIDAD: se leyo
-un par que todavia no tocaba leer. La caida esta FUERA de los cinco
-discutibles marcados en la vuelta 75, y por `AUDITOR.md` seccion 1.2 eso baja
-el credito de la tanda entera. Revertida en 1.3.a.
-
-### 1.2. La caida de REPORTE, registrada (D3, dentro del marcado)
-
-En `scripts/loop/vuelta75_op_e01_tramo1_escribir.py`, `PARES_DESCARTADOS`
-publico que `planificacion_estrategica_despliegue_2` **"es gemelo de
-`planificacion_estrategica_despliegue`, no hijo nuevo"**. El auditor leyo los
-dos nodos enteros: comparten la cabeza (mision, vision, metas) y divergen en
-el cuerpo (catch ball y scorecards contra paridad con lo financiero, lenguaje
-comun y poda de lo no alineado). No es un calcado: es un veredicto de clase
-publicado sin el par leido. La DISPOSICION (no enlazar) queda CONFIRMADA; la
-RAZON se corrige en 1.3.d. Corregida sin borrar el texto viejo.
-
-### 1.3. LAS CINCO CORRECCIONES DECLARADAS
-
-**a) La arista revertida.** Script
-`scripts/loop/vuelta76_revertir_arista_edificio.py`: quita
-`get_out_of_the_building` de `nodos_siguientes` de
-`segmentos_de_clientes_problema_necesidad` y `segmentos_de_clientes_problema_necesidad`
-de `nodos_previos` de `get_out_of_the_building` (el paso 5 de `run_phase1.py`
-solo ANADE reciprocas que falten, no borra las que sobran: las dos puntas se
-quitaron a mano). Corrido el ciclo de Gate 0 entero despues
-(`docs/loop/SALIDA_V76_GATE0_TRAS_REVERSION.txt`): **OK, 3.853/3.188/665, 0
-auto-aristas, 0 duplicadas, simetria 0 faltante**. Diff de grafos contra
-`62d4f28e` con `scripts/loop/vuelta76_diff_aristas.py`
-(`docs/loop/SALIDA_V76_DIFF_ARISTAS_25.txt`): **25 aristas nuevas en
-`nodos_siguientes`, 25 en `nodos_previos`, los dos conjuntos identicos entre
-si, CERO borradas fuera de la revertida.** El par vuelve a la bolsa apartado,
-con "espera a `OP-M-05-EDIFICIO`" como razon. No se reescribio al
-superviviente (`customer_discovery_get_out_of_building`, eso seria escribir
-el id de manana contra `P.9` punto 2) ni se dejo para que la limpie
-`OP-S-12` (eso es justo lo que `P.9` existe para impedir).
-
-**b) El filtro `P.9.1` en `OP-E-01`.** Anadido campo a `verificacion` en
-`docs/plan/OPERACIONES.jsonl` (script
-`scripts/loop/vuelta76_correcciones_operaciones.py`) y correccion declarada
-en `docs/plan/04_ENLACES.md` (seccion `OP-E-01`, tabla del orden adjudicado),
-con estas palabras: *"todo candidato de la bolsa se cruza contra los campos
-`eliminar` y `superviviente` de las operaciones NO EJECUTADAS. Si el destino
-o la madre muere en una operacion pendiente, el par NO se lee para escribir:
-se aparta con el id de esa operacion escrito al lado y espera su turno."* El
-texto viejo de la verificacion y de la tabla no se toco.
-
-**c) `depende_de` de `OP-E-05`.** Mismo script: pasa de `["OP-M-01"]` a
-`["OP-M-01", "OP-M-01-FUSION"]`. Verificado campo a campo (ya lo habia hecho
-el auditor, re-verificado aqui): `OP-E-05.nodos` incluye
-`requisitos_gates_con_dientes`, que esta en `OP-M-01-FUSION.eliminar`; la
-propia `verificacion` de `OP-E-05` dice *"los ids se escriben resueltos tras
-`OP-M-01-TRIO`"* y la `nota` de `OP-M-01-FUSION` dice *"`OP-M-01-TRIO` SE
-DISUELVE AQUI"*. La operacion NO cambia de estado: sigue bloqueada, ahora con
-el campo diciendolo.
-
-**d) La razon del descarte de `consejo_de_calidad_y_rol_del_director` contra
-`planificacion_estrategica_despliegue_2`.** Corregida en
-`scripts/loop/vuelta75_op_e01_tramo1_escribir.py` con un comentario de
-correccion declarada que deja el texto viejo intacto arriba: la nueva razon
-es que el destino lleva sufijo numerico y la `verificacion` de `OP-S-09`
-(`05_SANEO`, orden 8) exige *"ningun id vivo lleva sufijo numerico de
-duplicado"*. Por `P.9` punto 1, el enlace espera a `OP-S-09`. Deja de ser un
-descarte sin fecha y pasa a ser un aplazamiento con operacion nombrada.
-
-**e) El universo del control de racimos.** Correccion declarada en
-`docs/PENDIENTES.md` (seccion *2. TRES RACIMOS CON MIEMBROS DE OTRO DOMINIO*)
-y en `docs/plan/04_ENLACES.md` (seccion *2. LOS RACIMOS CON MIEMBRO DE OTRO
-DOMINIO*): la frase *"el control los encuentra todos de una vez"* es FALSA.
-El control cubre los racimos censados en `docs/RACIMOS_MIEMBROS.jsonl` (32
-racimos, reconstruidos por el commit `d4d2652f` de las razones de
-`FRANJA_VEREDICTOS.jsonl`), o sea los racimos que el CRIBADO declaro. *El
-lienzo de propuesta de valor* es un racimo del INFORME (seccion 14, remedido
-a siete miembros por cierre transitivo) y nunca fue racimo de franja: las dos
-fuentes son distintas por construccion. El texto viejo no se toco.
-
-### 1.4. EL CENSO: cuantos de los 168 nodos no tiene operacion que los nombre
-
-Barrido con `scripts/loop/vuelta76_censo_racimos_sin_operacion.py` contra los
-campos `nodos`, `eliminar` y `superviviente` de las 71 operaciones de
-`OPERACIONES.jsonl`. **El cruce es por membresia exacta de lista JSON, no por
-texto ni por grep**: cada campo es un array de ids que se compara elemento a
-elemento, lo que es mas estricto que una frontera de palabra sobre texto
-plano (no puede haber falso positivo por substring porque no se busca
-substring). Salida completa en
-`docs/loop/SALIDA_V76_CENSO_RACIMOS_SIN_OPERACION.txt`.
-
-| | medido |
-|---|---:|
-| racimos censados en `RACIMOS_MIEMBROS.jsonl` | **32** |
-| nodos distintos entre los 32 | **168** |
-| **nodos distintos SIN ninguna operacion que los nombre** | **150 de 168** |
-| miembros totales (con repeticion, 3 nodos comparten dos racimos) | 171 |
-| miembros totales sin operacion (con repeticion) | 153 de 171 |
-
-**CIFRA CONOCIDA REPRODUCIDA AL DIGITO:** *"Programa de catorce pasos de
-Crosby"* (`concepto_programa_catorce_pasos`, `programa_mejora_calidad_14_pasos`,
-`crosby_programa_14_pasos_introduccion`): **3 de 3 sin operacion.** Coincide
-con lo que el auditor midio.
-
-**LA TABLA POR RACIMO Y POR DECISION DE `MESA_RACIMOS.md`**, leida a mano de
-las tres tablas del documento (`GRUPO 1` seccion 2, `GRUPO 2` seccion 3,
-`GRUPO 3` seccion 4: 6 + 13 + 13 = 32 nombres, cubren los 32 racimos sin
-resto y sin solape, comprobado por el script):
-
-| racimo | dominio censado | tamano | sin operacion | decision |
-|---|---|---:|---:|---|
-| Accion correctiva | quality | 7 | 7 | DECISION 1 |
-| Los puntos de Deming en el titulo | quality | 7 | 7 | DECISION 1 |
-| Metas de calidad | quality | 3 | 3 | DECISION 1 |
-| Consejo de calidad | quality | 3 | 3 | DECISION 1 |
-| Eliminacion de causas de error | quality | 3 | 3 | DECISION 1 |
-| Programa de catorce pasos de Crosby | quality | 3 | 3 | DECISION 1 |
-| No culpar a la persona, arreglar el sistema | health_safety | 20 | 20 | DECISION 2 |
-| Causas comunes y responsabilidad del sistema | quality | 12 | 12 | DECISION 2 |
-| La estructura de cinturones de Six Sigma | quality | 9 | 9 | DECISION 2 |
-| Auditoria de calidad | quality | 6 | 6 | DECISION 2 |
-| Benchmarking | quality | 5 | 5 | DECISION 2 |
-| Ciclo de mejora PDCA / PDSA | quality | 4 | 4 | DECISION 2 |
-| Clasificacion de defectos | quality | 4 | 4 | DECISION 2 |
-| Analisis de causa raiz | quality | 4 | 4 | DECISION 2 |
-| Fitness for purpose | quality | 3 | 3 | DECISION 2 |
-| Costo de calidad | quality | 3 | 3 | DECISION 2 |
-| Plan y matriz de control | quality | 3 | 3 | DECISION 2 |
-| Diversidad en el diseno | environmental | 3 | 3 | DECISION 2 |
-| Poka yoke | quality | 3 | 3 | DECISION 2 |
-| Cradle to cradle | environmental + nucleo | 11 | 11 | DECISION 3 |
-| Portafolio: revisar, podar, reasignar | NUCLEO | 7 | 1 | DECISION 3 |
-| Customer discovery: salir a hablar con el cliente | NUCLEO | 7 | 3 | DECISION 3 |
-| Los cinco porques | NUCLEO | 5 | 4 | DECISION 3 |
-| Pivotar o proceder | NUCLEO | 5 | 2 | DECISION 3 |
-| El avance y el compromiso en la venta | NUCLEO | 5 | 5 | DECISION 3 |
-| Mapeo del flujo de valor | quality + environmental + nucleo | 5 | 4 | DECISION 3 |
-| Encuadre del problema (How Might We) | NUCLEO | 5 | 5 | DECISION 3 |
-| Las reglas del brainstorming | nucleo (3) + quality (1) | 4 | 1 | DECISION 3 |
-| El efectivo contra la ganancia | NUCLEO | 3 | 3 | DECISION 3 |
-| La etapa de investigacion en la venta | NUCLEO | 3 | 3 | DECISION 3 |
-| Estrategia de innovacion de producto | NUCLEO | 3 | 3 | DECISION 3 |
-| Obtencion de compromiso | NUCLEO | 3 | 3 | DECISION 3 |
-
-**LO QUE ESTO DICE, medido y no decidido:** DECISION 1 (26 de 26 sin
-operacion) y DECISION 2 (79 de 79 sin operacion) estan enteras sin ninguna
-ficha que las nombre: ninguna de sus 19 racimos tiene ni un miembro tocado
-por `OPERACIONES.jsonl`. DECISION 3 (nucleo, priorizada por el fundador el 9
-ago 2026) ya tiene trabajo hecho en varios de sus racimos (Portafolio 1 de 7
-sin operacion, Customer discovery 3 de 7, Pivotar o proceder 2 de 5, Mapeo
-del flujo de valor 4 de 5, brainstorming 1 de 4), consistente con la
-prioridad que la mesa le dio. **NO SE ENRUTA NADA con esta cifra**: el
-enrutamiento se decide en la vuelta siguiente, con la tabla delante.
-
-### 1.5. Las dos adjudicaciones del auditor, citadas y no repreguntadas
-
-- **PENDIENTE 1** (universo de "racimo con miembro ajeno"): adjudicado.
-  *Mapeo del flujo de valor* resuelto por la segunda salida (`dominio_censado`
-  literal *"quality + environmental + nucleo"*, declaracion transversal
-  explicita); `desarrollo_value_proposition_usp` por la primera salida, la
-  nomina se depura (informe seccion 33.2: *"CAE, y ni siquiera es del
-  dominio... CERO SOLAPE"*; 33.3: *"defecto de NOMINA, no de lectura"*).
-- **PENDIENTE 2** (`MESA_RACIMOS.md` dentro de los 221 actos): confusion de
-  categoria, contestada citando `MESA_RACIMOS.md` seccion 6: *"CERRADA como
-  insumo del plan de la pasada unica... lo que sigue no es decidir, es
-  planificar la ejecucion con estas cuatro como marco."* La mesa no es un
-  acto: es el marco. Ya cableado: DECISION 1 la cita `OP-M-02`; DECISION 2 y
-  3 las cita `OP-D-04`; DECISION 4 tiene operacion propia, `OP-S-09`.
-
-### 1.6. Las dos cifras de enlaces, con su definicion al lado
-
-**`17.671`** es *entradas de `nodos_siguientes` mas entradas de
-`nodos_previos`*, medido en el commit de apertura de la vuelta 75
-(`62d4f28e`). **`9.495`** es *union dirigida unica* (`siguientes` union
-`previos`, deduplicada), medida en el cierre de la vuelta 75 (`6fd2bef1`).
-Las dos conviven, ninguna sustituye a la otra. Al cierre de ESTA vuelta las
-dos cifras vuelven a moverse: ver seccion 3.
+**Declaro un tropiezo propio de esta vuelta, corregido antes de publicar
+nada:** al correr `python scripts/run_phase1.py --reaplico-curaduria` una
+SEGUNDA vez (para verificar el ciclo, sin haber corrido antes
+`etiquetas_de_cara.py --aplicar`), el comando 1 por si solo dio **GATE 0:
+FALLIDO, 71 nodos divergentes** entre `dataset/metadata/master_graph.json` y
+`web/lib/assets/master_graph.json`. Esto NO es una caida del catalogo: es
+que el paso 6 (compilacion) recalcula `etiqueta_arbol` desde las fuentes en
+`dataset/nodos/`, y esa cifra vuelve a estar en su forma "sin editar" hasta
+que `etiquetas_de_cara.py --aplicar` la reescribe. **El ciclo de tres es
+`run_phase1.py` UNA VEZ, seguido de `etiquetas_de_cara.py --aplicar` UNA
+VEZ, seguido de `sync_assets_web.py` UNA VEZ: correr `run_phase1.py` una
+segunda vez DESPUES de `etiquetas_de_cara.py` deshace su correccion.**
+Verificado con `git diff --stat -- dataset/metadata/master_graph.json`: tras
+el tropiezo mostraba 72 lineas cambiadas contra HEAD; tras repetir
+`etiquetas_de_cara.py --aplicar` volvio a diff vacio (bytes identicos salvo
+el aviso de fin de linea LF/CRLF, que no es contenido). Ninguna cifra de
+esta seccion se tomo de la corrida con el tropiezo.
 
 ---
 
-## 2. TAREA 2: LA RELECTURA AL DOBLE, EL CIERRE DE `OP-E-02` Y EL TRAMO 2
+## 1. TAREA 1: LOS REGISTROS Y SEIS CORRECCIONES
 
-### 2.1. La relectura al doble del tramo 1 (las 25 aristas que quedan)
+### 1.1. Las dos caidas de REPORTE de la vuelta 76 y la de la vuelta 75, registradas con su nombre
 
-**a) Vara 9.6.1 completa (mayoria de la madre), par a par.** Metodo
-declarado porque no es una relectura semantica plena de cada hermano (esa
-lectura ya la hizo la 9.6.2 al escribir el par): para cada madre se mide
-`N` = numero de `pasos_accionables` y `L` = numero de `nodos_siguientes`
-vivos que tiene HOY. Si `L` es mayoria estricta de `N`, la silueta CONFIRMA
-la jerarquia (9.6.1 manda); si es la mitad o menos, la silueta ni exculpa ni
-acusa y sigue mandando el contenido ya leido (9.6.2). Script
-`scripts/loop/vuelta76_relectura_9_6_1.py`, salida en
-`docs/loop/SALIDA_V76_RELECTURA_9_6_1_TRAMO1.txt`:
+Las tres estan descritas y verificadas en
+`docs/loop/paradas/2026-08-26-racha-tramo-mecanico-DECISION.md` (el acta de
+la vuelta 76 del auditor). Se registran aqui con su nombre porque
+`EJECUTOR.md` regla 1 lo exige, sin volver a remedirlas (ya vienen medidas
+por el auditor en esa acta, citada como fuente):
 
-| resultado | cuantos de 25 |
+1. **Caida de REPORTE, DENTRO del marcado (discutible 2 de la vuelta 76).**
+   El reporte de la vuelta 76, seccion 4 discutible 2, afirmo que *"Ninguna
+   de las dos aparece en ningun racimo de `RACIMOS_MIEMBROS.jsonl`"* sobre
+   `rol_alta_direccion_calidad` y `consejo_de_calidad_y_rol_del_director`.
+   Es falso para el segundo nodo: SI aparece, en el racimo "Consejo de
+   calidad". Corregida en 1.2 de este reporte.
+2. **Caida de REPORTE, FUERA del marcado.** El reporte de la vuelta 76
+   publico que la vara 9.6.1 dio **13 CONFIRMA y 12 DEJA IGUAL** en el tramo
+   1, cuando el script que la produjo no filtraba `deprecado` en ninguna
+   linea (contradiciendo su propio docstring, que decia "vivos"). Corregida
+   en 1.3 de este reporte.
+3. **Caida de REPORTE de la vuelta 75 (acta del auditor de esa vuelta,
+   citada en la parada).** El auditor escribio en su acta de la vuelta 75
+   que los dos `medicion_servicios` eran "gemelos" sin haber consultado que
+   el cribado ya habia leido ese par exacto (puesto 2493) y lo habia fallado
+   **D**. La disposicion final (no enlazar, esperar a `OP-S-09`) se sostiene
+   por otra via, asi que no movio dato, pero la palabra "gemelos" se publico
+   sin consultar el veredicto de archivo.
+
+**Con esta tercera caida registrada, la racha de reporte queda en TRES
+caidas documentadas (dos de la vuelta 76, una de la vuelta 75) y vuelve a
+CERO al relanzar esta vuelta**, tal como fija la decision del fundador del
+26 ago 2026. Cero caidas de clase o de cifra publicada en la tanda 74-76,
+sin cambio (asi lo cerro el acta del auditor).
+
+### 1.2. Correccion declarada: el discutible 2 de la vuelta 76 sobre `RACIMOS_MIEMBROS.jsonl`
+
+**Texto viejo (reporte de la vuelta 76, seccion 4, discutible 2), citado sin
+reescribir:** *"Posible gemelo de MADRES no catalogado: `rol_alta_direccion_calidad`
+(madre de dos pares escritos, `alineacion_estrategica_despliegue` y
+`consejo_ejecutivo_calidad`) y `consejo_de_calidad_y_rol_del_director`
+(madre del D3) tienen estructuras de pasos casi identicas del mismo libro
+(Juran) [...]. Ninguna de las dos aparece en ningun racimo de
+`RACIMOS_MIEMBROS.jsonl` ni lleva sufijo numerico, asi que ninguna regla
+escrita obliga a pararse por esto."*
+
+**CORRECCION DECLARADA (vuelta 77): la frase subrayada es FALSA para uno de
+los dos nodos.** Verificado por corrida propia sobre
+`docs/RACIMOS_MIEMBROS.jsonl`, campo `miembros[].node_id`:
+`consejo_de_calidad_y_rol_del_director` SI aparece, en el racimo "Consejo de
+calidad" (quality, 3 miembros, junto a `consejo_calidad_2` y
+`consejo_de_calidad`), que es exactamente la fila de la seccion 1.4 del
+reporte de la vuelta 76 ("Consejo de calidad | quality | 3 | 3 | DECISION
+1"). `rol_alta_direccion_calidad` SI queda sin racimo (busqueda negativa
+confirmada, cero coincidencias). El propio reporte de la vuelta 76 se
+contradecia entre su seccion 1.4 (que media bien este nodo) y su seccion 4
+(que lo afirmaba al reves).
+
+### 1.3. Correccion declarada y tabla re-tallada: `vuelta76_relectura_9_6_1.py`
+
+**El bug, con nombre.** La linea vieja del script
+(`scripts/loop/vuelta76_relectura_9_6_1.py`) era:
+```
+siguientes = [s for s in (madre.get("nodos_siguientes") or [])]
+```
+Contaba TODOS los `nodos_siguientes` de la madre, vivos o no, mientras el
+docstring y el reporte de la vuelta 76 publicaban la cifra como si fuera
+solo de hijos VIVOS. **Se eligio filtrar `deprecado` de verdad** (no bajar
+el docstring): se anadio la funcion `cargar_siguientes_vivos()`, que carga
+cada hijo de `nodos_siguientes` y descarta los que tengan `deprecado` en
+`True`. El texto viejo del docstring no se borro: la correccion esta
+anadida como parrafo nuevo en el propio script.
+
+**LA TABLA SE CUENTA DE SU FICHERO.** Re-corrido el script sobre las mismas
+25 aristas del tramo 1, salida completa en
+`docs/loop/SALIDA_V77_RELECTURA_9_6_1_TRAMO1_CORREGIDA.txt`, contada con
+`grep -c` sobre ese mismo fichero:
+
+| resultado | cuantos de 25 (contado del fichero) |
 |---|---:|
-| 9.6.1 CONFIRMA (mayoria establecida) | 13 |
-| 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida) | 12 |
-| 9.6.1 VOLTEA la direccion | **0** |
+| 9.6.1 CONFIRMA (mayoria establecida) | **12** |
+| 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida) | **13** |
+| ESCALERA ROTA (ciclo de dos) | **0** |
 
-**Ninguna de las 25 se voltea ni se tumba.** Las 12 que quedan en "deja
-igual" no pierden la arista: 9.6.2 ya las leyo linea a linea al escribirlas
-en el tramo 1, y 9.6.1 en mitad-o-menos no tiene autoridad para vetar sola lo
-que el contenido ya establecio (banco 9.6.1: *"la silueta ni exculpa ni
-acusa"*, no *"la silueta descarta"*).
+**Esta es la tercera cuenta que la parada del 26 ago 2026 predijo** (el
+`13/12` publicado, el `14/11` del fichero sin filtrar, y este `12/13` con el
+filtro real aplicado): coincide al digito con lo que el auditor midio
+corriendo la misma vara con el criterio declarado. Ninguna de las 25
+aristas se mueve: 9.6.1 sigue siendo un respaldo o un silencio, nunca un
+veto en solitario contra 9.6.2 ya leida linea a linea (banco 9.6.1). Cero
+correcciones de arista salen de esta tabla.
 
-**b) Chequeo de escalera, exacto:** para las 25, ¿el hijo ya apuntaba a la
-madre antes de la arista? **CERO de 25 cierran ciclo de dos**, reproduciendo
-lo que el auditor midio sobre las 26 (antes de la reversion).
+### 1.4. Correccion declarada: la etiqueta del instrumento de `OP-E-02`
 
-**c) Filtro `P.9.1` sobre las 25, corrida propia.** Script
-`scripts/loop/vuelta76_filtro_p91_tramo1.py`, salida en
-`docs/loop/SALIDA_V76_P91_TRAMO1.txt`: **CERO rojas de 25.** Coincide con lo
-que el auditor midio sobre las 26 antes de revertir (el auditor dio UNA
-roja, la que 1.3.a ya revirtio).
+**El bug.** `scripts/loop/vuelta75_op_e02_racimos.py` publicaba `"TOTAL
+miembros vivos hoy: {total_vivos}"` sin decir que "vivos" significa "nodo
+vivo TRAS RESOLVER ALIAS", no "nodo cuyo propio fichero no esta deprecado".
+**Verificado por corrida propia**: de los 171 miembros censados, **133 son
+vivos directos** (su propio nodo no esta deprecado) y **38 estan deprecados
+en su propio fichero y solo llegan a "vivos" porque `resolver()` los
+redirige a un id distinto que si esta vivo** (133 + 38 = 171).
 
-**d) Ninguna correccion declarada nueva sale de esta relectura**: las 25 se
-sostienen por 9.6.2 (ya leida), 9.6.1 no voltea ninguna, la escalera da cero
-y el filtro `P.9.1` da cero rojas.
+**Correccion aplicada** (texto viejo no borrado, la etiqueta se ANADE su
+definicion): la linea ahora dice `"TOTAL miembros vivos hoy (nodo vivo TRAS
+RESOLVER ALIAS): {total_vivos}"`. **LA TABLA SE CUENTA DE SU FICHERO**:
+re-corrido, salida en `docs/loop/SALIDA_V77_OPE02_RACIMOS.txt`:
 
-### 2.2. `OP-E-02`, CERRADO con declaracion
-
-Script `scripts/loop/vuelta76_cerrar_op_e02.py`: `estado` pasa de `LISTA` a
-`HECHA`, `fecha_corte` a `2026-08-26`, y se ANADE al final de `nota` (sin
-tocar el texto viejo) el registro de cierre. Re-corrida propia de
-`scripts/loop/vuelta75_op_e02_racimos.py` ANTES de cerrar (salida en
-`docs/loop/SALIDA_V76_OPE02_RACIMOS.txt`, EL INSTRUMENTO MANDA):
-
-| medido HOY | |
+| medido HOY, contado de `SALIDA_V77_OPE02_RACIMOS.txt` | |
 |---|---:|
 | racimos censados | 32 |
-| miembros vivos | **171 de 171** |
+| miembros vivos (nodo vivo TRAS RESOLVER ALIAS) | **171 de 171** |
 | muertos/fundidos desde el censo | **0** |
 | racimos con miembro ajeno tras normalizar NUCLEO=core | **0** |
 
-Con eso la ficha cierra con sus tres piezas resueltas: `comprender_alineacion_etica_ia`
-va a mesa sin arista (racimo sin centro, tercer supuesto de la regla del 11
-ago 2026); los 171 miembros siguen vivos y ningun racimo queda con miembro
-ajeno; los dos ejemplares de racimo transversal y el ejemplar de nomina a
-depurar quedan resueltos como dice 1.5. **No escribio ni una arista**: es
-lectura y declaracion, y la operacion queda HECHA por el criterio de la
-fase.
+Sin cambio de cifra frente a la vuelta 76: la correccion es de etiqueta, no
+de dato.
 
-### 2.3. EL TRAMO 2 DE `OP-E-01`
+### 1.5. `OP-S-09`: la nomina llevada a su ficha, por instrumento, con delta declarado
 
-**a) Bolsa recalibrada FRESCA en esta vuelta** (no se reuso la salida de la
-75, que corrio antes de la reversion de 1.3.a). Corrida:
-`python scripts/plan/paso_contra_nodo_calibrado.py --umbral-titulo 72
---umbral-contencion 0.45 --min-tokens 4` (mismos umbrales, sin tocar).
-Salida en `docs/loop/SALIDA_V76_CALIBRADO_FRESCO.txt`:
+**Donde vivia el agujero.** `OP-S-09` (tipo `RENOMBRE_CON_ALIAS`, fase
+`05_SANEO`) tenia `nodos: []`, `eliminar: []`, `superviviente: null`: sus 53
+familias y 125 nodos vivos (medidos el 11 ago 2026) vivian solo en prosa
+(`docs/plan/05_SANEO.md`), asi que el filtro `P.9.1` nunca podia verla.
 
-| | 26 ago 2026, corrida de la vuelta 75 (26 aristas escritas) | **26 ago 2026, esta vuelta (tras revertir 1)** |
+**El recomputo, script `scripts/loop/vuelta77_op_s09_nomina.py`.** Metodo
+declarado en el propio script (docstring): universo = nodos VIVOS hoy; se
+agrupan por clave normalizada (sufijo numerico retirado, particulas
+retiradas, tokens restantes ordenados alfabeticamente); toda clave
+compartida por 2 o mas ids vivos es una familia. Causa de la familia
+(sufijo numerico / particulas / orden de palabras) asignada por el patron
+de los tokens. Sinonimo puro declarado en 0 (no detectable por este metodo
+lexico, igual que el recomputo de 11 ago 2026). Excepcion de
+`nafta_free_trade_agreements` (ya cubierta por `OP-S-01`) excluida por
+nombre.
+
+**LA TABLA SE CUENTA DE SU FICHERO**, salida completa en
+`docs/loop/SALIDA_V77_OP_S09_NOMINA.txt`:
+
+| | medido HOY (26 ago 2026), contado del fichero | medido el 11 ago 2026 (05_SANEO.md) |
+|---|---:|---:|
+| familias | **29** | 53 |
+| nodos vivos en familia | **69** | 125 |
+| por sufijo numerico | 16 familias, 37 nodos | 35 familias |
+| por particulas | 11 familias, 26 nodos | 12 familias |
+| por orden de palabras | 2 familias, 6 nodos | 6 familias |
+| por sinonimo puro | 0 (no detectable por este metodo) | 0 |
+
+**DELTA DECLARADO, no forzado, con verificacion propia de la causa.** El
+recomputo de hoy NO da 53/125. Para las cuatro familias mayores que
+`05_SANEO.md` cita por nombre (`accion_correctiva` x5, "el consejo de
+calidad" x5, "el programa Make Certain" x4, `definiciones_operacionales`
+x4), verifique uno a uno el estado de sus miembros contra
+`dataset/metadata/master_graph.json`:
+
+| id | estaba en la nomina de 11 ago | estado HOY |
+|---|---|---|
+| `accion_correctiva_5` | si | **deprecado** |
+| `accion_correctiva_6` | si | **deprecado** |
+| `consejo_calidad` | si | **deprecado** |
+| `consejo_calidad_2` | si | **deprecado** |
+| `definiciones_operacionales_4` | si | **deprecado** |
+| `make_certain_programa`, `programa_make_certain`, `_2`, `_3` | si (los 4) | **vivos los 4** (familia identica a la de 11 ago, "orden de palabras", confirma el metodo) |
+
+**Los cinco ids que faltan de las cuatro familias mayores estan TODOS
+deprecados hoy**: otras operaciones de fusion (fase 03) ya los absorbieron
+por otra via desde el 11 ago 2026, quince dias de campana antes de esta
+vuelta. La familia Make Certain, en cambio, sale identica a la de 11 ago
+(los cuatro miembros siguen vivos), lo que confirma que el metodo
+reproduce bien cuando el grafo no se movio. **El delta es real movimiento
+del grafo, no un fallo del metodo**, pero se declara sin forzar la cifra:
+si el recomputo no fuera a dar los 53/125 aunque el grafo no se hubiera
+movido, seria una discrepancia de metodo, y no hay forma de distinguir las
+dos causas sin la nomina original (que nunca se escribio).
+
+**Donde se escribio.** Por instrucción del encargo: `OP-S-09` es
+`RENOMBRE_CON_ALIAS` (sus nodos no se eliminan, se renombran conservando
+alias), asi que la nomina de 69 ids va al campo **`nodos`** de
+`docs/plan/OPERACIONES.jsonl` (antes vacio), NO a `eliminar`. Script
+`scripts/loop/vuelta77_op_s09_escribir_nomina.py`: escribe `nodos`, y ANADE
+(sin borrar el texto viejo) una correccion declarada al final de `nota` y
+de `adjudicacion`, mas una entrada nueva en `evidencia`. Correccion
+declarada equivalente, con el mismo delta, anadida en
+`docs/plan/05_SANEO.md` bajo la seccion de `OP-S-09` (texto viejo intacto).
+
+**El filtro `P.9.1`, ENSANCHADO.** El filtro de la vuelta 76 solo cruzaba
+`eliminar` y `superviviente`: nunca podia ver a `OP-S-09` aunque su nomina
+estuviera escrita, porque sus ids viven en `nodos`. Script nuevo
+`scripts/loop/vuelta77_filtro_p91_ensanchado.py`: cruza tambien `nodos` de
+toda operacion NO EJECUTADA de tipo `RENOMBRE_CON_ALIAS`, en las DOS
+direcciones (madre o hijo del candidato). **Caso positivo, con datos
+sinteticos** (no tocan el grafo real), salida en
+`docs/loop/SALIDA_V77_FILTRO_P91_ENSANCHADO_CASO_POSITIVO.txt`: confirma que
+el filtro aparta un candidato cuando la MADRE esta en `nodos` de una
+`RENOMBRE_CON_ALIAS`, y otro cuando es el HIJO el que esta, sin romper el
+caso clasico (`FUSION` con `eliminar`, que sigue apartando igual). Verificado
+tambien contra el grafo real: **de los 69 ids de la nomina de `OP-S-09`, el
+filtro ensanchado ve los 69** (mismo fichero de salida).
+
+Correccion declarada equivalente en `docs/plan/04_ENLACES.md` (bajo la nota
+de `P.9.1` de la vuelta 76, texto viejo intacto) y linea nueva anadida al
+array `verificacion` de `OP-E-01` en `OPERACIONES.jsonl` (script
+`scripts/loop/vuelta77_ensanchar_verificacion_ope01.py`, sin tocar ninguna
+linea vieja del array).
+
+### 1.6. El renglon "LA TABLA SE CUENTA DE SU FICHERO", estrenado
+
+Cada tabla de este reporte con una cifra medida hoy trae, en su propia
+seccion, el fichero de salida del que sale, y fue reconstruida contando ese
+fichero (con `grep -c`, con el propio script sumando, o leyendo el bloque
+`NOMINA_IDS_JSON_START`/`END`) antes de publicarse. Donde una cifra viene de
+un acta o reporte anterior, se cita como tal y no como medicion de hoy
+(seccion 1.1).
+
+---
+
+## 2. TAREA 2: LA RELECTURA AL DOBLE DEL TRAMO 2, CONTRA EL CRIBADO
+
+**La vara que la parada del 26 ago 2026 encontro**: cruzar las 26 aristas
+del tramo 2 (vuelta 76) contra `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`
+(fuente de verdad por `AUDITOR.md` seccion 0) y publicar, par a par, si el
+cribado ya habia leido ese par y con que clase. Script
+`scripts/loop/vuelta77_tarea2_relectura_tramo2.py` (importa `PARES_SANOS`
+directo de `scripts/loop/vuelta76_op_e01_tramo2_escribir.py`, sin
+retranscribir la lista a mano). **LA TABLA SE CUENTA DE SU FICHERO**, salida
+completa en `docs/loop/SALIDA_V77_TAREA2_RELECTURA_TRAMO2.txt`:
+
+| | contado del fichero |
+|---|---:|
+| pares del tramo 2 | 26 |
+| **LEIDOS por el cribado** | **4** |
+| **NUNCA LEIDOS por el cribado** | **22** |
+| clase D (de los leidos) | 4 |
+| clase A (de los leidos) | **0** |
+| **A REVERTIR (clase A y escrito como enlace)** | **0** |
+
+Los 4 pares que el cribado ya habia leido:
+
+| par | puesto | clase |
+|---|---:|:---:|
+| `analisis_capacidad_proceso -> capacidad_de_proceso_2` | 3086 | D |
+| `planificacion_de_la_inspeccion -> clasificacion_caracteristicas_calidad` | 2462 | D |
+| `principio_correspondencia_contable -> contabilidad_caja_vs_devengo` | 859 | D |
+| `mejora_calidad_crosby -> concepto_programa_catorce_pasos` | 2868 | D |
+
+**Ningun par del tramo 2 fue fallado A por el cribado: cero reversiones.**
+Las 26 aristas del tramo 2 se sostienen. Esta vara, corrida sobre esta
+tanda, no encuentra el patron que encontro en la vuelta 76 (donde el
+`13/12` sin tallar si escondia un problema): aqui las cuatro coincidencias
+son todas D, coherentes con las lecturas de contenido que las escribieron.
+
+---
+
+## 3. TAREA 3: EL TRAMO 3 DE `OP-E-01`
+
+### 3.1. Bolsa recalibrada FRESCA (el grafo se movio con el tramo 2)
+
+Corrida: `python scripts/plan/paso_contra_nodo_calibrado.py --umbral-titulo
+72 --umbral-contencion 0.45 --min-tokens 4` (mismos umbrales, sin tocar).
+**LA TABLA SE CUENTA DE SU FICHERO**, salida en
+`docs/loop/SALIDA_V77_CALIBRADO_FRESCO.txt`:
+
+| | vuelta 76 (tras tramo 2, 337 sin arista) | **vuelta 77, esta vuelta** |
 |---|---:|---:|
 | candidatos brutos | 590 | **590** |
 | bolsa reducida | 468 | **468** |
-| **sin arista** | 336 | **337** |
+| **sin arista** | 337 | **311** |
 
-**El +1 es exactamente la arista revertida en 1.3.a**, que vuelve a aparecer
-como candidato sin arista: confirma que la recalibracion capturo el
-movimiento del grafo de esta misma vuelta.
+**El -26 es exactamente las 26 aristas que el tramo 2 escribio**, que ya no
+aparecen como "sin arista": confirma que la recalibracion capturo el
+movimiento de la vuelta anterior.
 
-**b) Filtro `P.9.1` corrido ANTES de leer nada.** Script
-`scripts/loop/vuelta76_op_e01_tramo2_filtrar.py`, salida en
-`docs/loop/SALIDA_V76_TRAMO2_FILTRO_P91.txt`: de los **337** candidatos sin
-arista, **10 se apartan por `P.9.1`**, todos por el mismo grupo de fusiones
-de la fase 06 ya conocido:
+### 3.2. Filtro `P.9.1` ENSANCHADO, corrido ANTES de leer nada
 
-| candidato apartado | operacion que lo condena |
-|---|---|
-| `segmentos_de_clientes_problema_necesidad -> get_out_of_the_building` | `OP-M-05-EDIFICIO` (hijo) |
-| `customer_development_team -> get_out_of_the_building` | `OP-M-05-EDIFICIO` (hijo) |
-| `genchi_gembutsu_salir_del_edificio -> get_out_of_the_building` | `OP-M-05-EDIFICIO` (hijo) |
-| `introduccion_validacion_clientes -> herramientas_online_canal_fisico` | `OP-M-05-APERTURA` (madre) |
-| `introduccion_validacion_clientes -> hipotesis_de_canales` | `OP-M-05-APERTURA` (madre) |
-| `customer_discovery_overview -> mvp_catalogo_tecnicas` | `OP-M-05-INDICE` (madre) |
-| `customer_discovery_overview -> customer_validation` | `OP-M-05-INDICE` (madre) |
-| `rol_gates_agile -> gates_go_kill_decision_points` | `OP-M-01-FUSION` (hijo) |
-| `requisitos_gates_con_dientes -> post_launch_review` | `OP-M-01-FUSION` (madre) |
-| `pivotes_e_iteraciones -> pivote_startup` | `OP-M-03-III` (madre y hijo) |
+Script `scripts/loop/vuelta77_tramo3_filtrar.py`. **LA TABLA SE CUENTA DE SU
+FICHERO**, salida en `docs/loop/SALIDA_V77_TRAMO3_FILTRO_P91.txt`:
 
-Quedan **327 limpios**, escritos en orden de archivo en
-`docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V76.jsonl`.
+| | contado del fichero |
+|---|---:|
+| candidatos sin arista | 311 |
+| **apartados por P.9.1 ensanchado** | **61** |
+| de esos, por `OP-S-09` (via campo `nodos`, filtro nuevo) | **46** |
+| de esos, por las fusiones de fase 06 (via `eliminar`/`superviviente`, filtro viejo) | 15 |
+| **limpios tras el filtro** | **250** |
 
-**c) Lectura de los primeros 30**, textos completos de madre e hijo en
-`docs/loop/SALIDA_V76_OPE01_TRAMO2_LECTURA.txt`. Cuatro de los 30 SON LOS
-MISMOS pares que el tramo 1 ya descarto (reaparecen porque quedaron `sin
-arista` en la bolsa): los dos gemelos de `medicion_servicios` (D1), el D2
-(`mejora_calidad_crosby -> concepto_programa_catorce_pasos`) y el D3
-(`consejo_de_calidad_y_rol_del_director -> planificacion_estrategica_despliegue_2`).
-Su disposicion NO se vuelve a decidir desde cero salvo el D2 (2.4, abajo).
+**El salto de 10 apartados (vuelta 76) a 61 (esta vuelta) es el efecto
+medido del ensanche del filtro**: 46 candidatos que la vuelta 76 habria
+dejado pasar (porque sus ids viven en `nodos` de `OP-S-09`, no en
+`eliminar`) quedan apartados desde esta vuelta. Bolsa filtrada completa en
+`docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V77.jsonl` (250 filas, orden de
+archivo, sin sorteo).
 
-**d) Vara 9.6.1 Y 9.6.2, las dos, par a par**, en
-`scripts/loop/vuelta76_op_e01_tramo2_escribir.py` (`PARES_SANOS`, cada uno
-con su razon de 9.6.2 y su medida de 9.6.1):
+### 3.3. Lectura de los primeros 30, con el criterio adjudicado
+
+**Criterio del encargo**: veredicto del cribado PRIMERO; el sufijo numerico
+solo opina cuando NO hay veredicto (y ese caso ya lo cubre el filtro
+`P.9.1` via `OP-S-09`, asi que en la practica no quedaba ningun candidato
+"solo con sufijo" en esta cabeza). Cruzados los 30 contra
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` ANTES de leer el contenido: **4 de 30
+tenian veredicto propio, los 4 clase D** (ninguno A, nada que temer por esa
+via); los otros 26 sin veredicto, decididos por 9.6.2 (contenido).
+
+**Verificacion nueva de esta vuelta, no pedida por el encargo pero hallada
+al leer**: crucé los 30 pares contra `docs/RACIMOS_MIEMBROS.jsonl` para ver
+si madre e hijo caian en el MISMO racimo declarado (la misma trampa que la
+parada del 26 ago 2026 nombro para `OP-S-09`, pero para racimos SIN
+sufijo numerico, que ningun filtro escrito cubre). Resultado: **2 de 30**.
+Ninguna regla vigente dice que hacer con un candidato asi, asi que por
+`EJECUTOR.md` regla 5 no pare: registro el criterio aplicado (no se enlaza
+dentro de un racimo declarado sin que su propia mesa lo adjudique primero)
+y sigo, marcado **PENDIENTE DE DOCTRINA**.
+
+**LA TABLA SE CUENTA DE SU FICHERO**, salida en
+`docs/loop/SALIDA_V77_TRAMO3_ESCRIBIR.txt`:
 
 | clase | cuantos de 30 | que se hizo |
 |---|---:|---|
-| **JERARQUIA SANA** | **26** | arista escrita en `nodos_siguientes` |
-| **MADRE QUE REPITE / sufijo numerico sin operacion** | **4** | sin arista, razon citada |
+| **JERARQUIA SANA (9.6.2)** | **28** | arista escrita en `nodos_siguientes` |
+| **PENDIENTE DE DOCTRINA (mismo racimo declarado sin adjudicar)** | **2** | sin arista, razon citada |
 
-**Los cuatro descartados:**
+**Los dos no escritos:**
 
-- `medicion_servicios -> programa_make_certain_3` y `-> make_certain_programa`:
-  REPITEN el descarte D1 del tramo 1 (gemelos del mismo programa Make
-  Certain de Crosby). Espera a `OP-S-09`.
-- `consejo_de_calidad_y_rol_del_director -> planificacion_estrategica_despliegue_2`:
-  REPITE el D3, con la razon ya corregida en 1.3.d (sufijo numerico, espera
-  `OP-S-09`).
-- `planificacion_cero_defectos -> eliminacion_causas_error_4`: **nuevo en
-  esta vuelta, misma figura que el D3.** El hijo lleva sufijo numerico vivo
-  y pertenece al racimo `MESA_RACIMOS.md` grupo 1 *"Eliminacion de causas de
-  error"* (`eliminacion_causas_error`, `eliminacion_causas_error_2`,
-  `eliminacion_causas_error_4`), con fusion adjudicada (DECISION 1) pendiente
-  solo del disparo del fundador. A diferencia del D2, aqui SI hay sufijo
-  numerico: no se escribe.
+- `human_error_como_sintoma -> preguntar_que_no_quien`: los dos son
+  miembros del racimo "No culpar a la persona, arreglar el sistema"
+  (health_safety, 20 miembros, DECISION 2, verificado contra
+  `docs/RACIMOS_MIEMBROS.jsonl`, sin operacion ejecutada que lo toque).
+  Enlazarlos como jerarquia madre-hijo adjudicaria por la puerta de enlaces
+  una pregunta que pertenece a la mesa de DECISION 2 ("continua o repite,
+  par a par, dentro del racimo"). No se enlaza.
+- `mejora_calidad_crosby -> programa_mejora_calidad_14_pasos`: mismo racimo
+  "Programa de catorce pasos de Crosby" (quality, 3 miembros, sin
+  operacion) que el D2 YA ESCRITO en el tramo 2
+  (`mejora_calidad_crosby -> concepto_programa_catorce_pasos`, adjudicado
+  por el auditor UNA VEZ, para ESE par). Extender esa excepcion sin nueva
+  adjudicacion a un segundo hijo del mismo racimo seria adjudicar por
+  acumulacion. No se enlaza.
 
-**El D2 se escribe** (razon completa en 2.4).
+**Chequeo de escalera, exacto**, sobre las 28: ¿el hijo ya apuntaba a la
+madre antes de la arista? **CERO de 28**, contado del mismo fichero
+(`SALIDA_V77_TRAMO3_ESCRIBIR.txt`, seccion "ESCALERA ROTA").
 
-**Nueve pares escritos tocan racimos de `MESA_RACIMOS.md` sin ninguna
-operacion que los nombre y sin sufijo numerico** (misma logica que el D2:
-`lean_manufacturing_tps -> poka_yoke_a_prueba_de_errores`,
-`planificacion_de_la_inspeccion -> clasificacion_caracteristicas_calidad`,
-`control_estadistico_de_inventario_en_transito -> causas_comunes_vs_especiales`):
-verificado en la tabla de 1.4 que sus tres racimos (Poka yoke, Clasificacion
-de defectos, Causas comunes y responsabilidad del sistema) estan enteros SIN
-operacion, y ninguno de los tres hijos lleva sufijo numerico. Escritos.
-
-**e) Gate 0 el ciclo entero, tras las 26 escrituras**, salida en
-`docs/loop/SALIDA_V76_GATE0_TRAS_TRAMO2.txt`:
+**Gate 0 el ciclo entero, tras las 28 escrituras**, salidas en
+`docs/loop/SALIDA_V77_GATE0_CMD1.txt` (comando 1), `SALIDA_V77_GATE0_CMD2.txt`
+(comando 2) y `SALIDA_V77_GATE0_CMD3.txt` (comando 3):
 
 | verificacion | resultado |
 |---|---|
-| Gate 0, comando 1 | OK, **3.853/3.188/665** (censo identico, no se crean ni deprecan nodos), **0 auto-aristas**, **0 duplicadas de titulo**, simetria 0 faltante |
-| Gate 0, comando 2 (`etiquetas_de_cara.py --aplicar`) | 71 etiquetas reaplicadas, CERO encogimiento contra la base de 71 |
-| Gate 0, comando 3 (`sync_assets_web.py`) | corrido, `master_graph.json` sincronizado a `web/lib/assets/` |
+| Gate 0, comando 1 | OK, **3.853/3.188/665** (censo identico, no se crean ni deprecan nodos), **0 auto-aristas**, **0 duplicadas de titulo**, **0 nodos divergentes** |
+| Gate 0, comando 2 (`etiquetas_de_cara.py --aplicar`) | 71 etiquetas reaplicadas |
+| Gate 0, comando 3 (`sync_assets_web.py`) | corrido (la operacion cambio el grafo), 6 assets sincronizados |
 | Gate 0, comando 4 (`plan_readiness.py`) | NO corrido: censo identico, no se dispara la regla condicional |
-| motor | 25/25 |
-| web (`npx vitest run`, corrido desde `web/`) | 80 ficheros, 1.030 pasadas, 3 saltadas |
-| tsc (`npx tsc --noEmit`, desde `web/`) | EXITCODE 0, cero lineas |
+| motor | `python engine/run_all_tests.py`: **25/25** |
+| web (`npx vitest run`, corrido desde `web/`) | **80 ficheros, 1.030 pasadas, 3 saltadas** |
+| tsc (`npx tsc --noEmit`, desde `web/`) | **EXITCODE 0, cero lineas** |
 
-**Cero auto-aristas y cero duplicadas tras resolver: ninguna PARADA de
-guarda en este tramo.**
+### 3.4. Discutibles de la lectura, marcados AQUI (antes de saber si aciertan)
 
-### 2.4. El D2, RELECTURA CONJUNTA, decidido con la vara
-
-**Verificado por cuenta propia contra el grafo y contra `OPERACIONES.jsonl`,
-como pide el encargo, y no solo citado.** El caso del auditor: `mejora_calidad_crosby`
-paso 2 dice *"Implementar un programa estructurado de mejora (como el de
-catorce pasos)"*; el hijo `concepto_programa_catorce_pasos` ES ese programa,
-del mismo libro, y sus cuatro pasos son el procedimiento de adopcion
-(adaptar por unidad, arrancar con piloto, documentar, sostener cuatro o
-cinco anos). Es 9.6.2 en limpio: la madre nombra en una linea, el hijo trae
-el procedimiento.
-
-**Verificacion propia de esta vuelta:** barrido exacto de
-`mejora_calidad_crosby`, `concepto_programa_catorce_pasos`,
-`programa_mejora_calidad_14_pasos` y `crosby_programa_14_pasos_introduccion`
-contra `nodos`, `eliminar` y `superviviente` de las 71 operaciones (el mismo
-barrido de 1.4): **ninguna de las cuatro aparece en ninguna operacion.** Y el
-hijo no lleva sufijo numerico, asi que tampoco cae en `OP-S-09`.
-
-**DECIDO CON LA VARA, a favor del auditor: se escribe.** La fusion que `P.9`
-pediria esperar NO ESTA EN EL PLAN (ninguna operacion la nombra): esperar
-seria aplazar la arista a un momento que el plan no programa, que es
-precisamente lo que `P.9` NO pide (pide esperar una fusion QUE VA A TOCAR el
-destino, no cualquier racimo teorico sin operacion asociada). Escrita con
-correccion declarada sobre `PARES_DESCARTADOS` de la vuelta 75 (texto viejo
-intacto arriba, en 1.2).
-
-### 2.5. Donde se detiene el MODO CONTINUO
-
-`OP-E-01` sigue EN PROGRESO (tramo 2 de N; quedan **297** candidatos limpios
-sin leer en la bolsa filtrada de esta vuelta, `327 - 30`). `OP-E-02` esta
-CERRADO (2.2). La siguiente ficha en el orden de `OPERACIONES.jsonl`
-(`fase == "04_ENLACES"`, campo `orden`) es `OP-M-03-ENLACES` (orden 4), que
-depende de `OP-M-03-III`: **sigue sin ejecutar**, una de las seis fusiones
-enrutadas a la fase 06. Su texto no alcanza para ejecutarse sin decidir sobre
-una fusion que la decision del fundador del 26 ago 2026 fija para *"cuando
-sus mesas se sienten"*. Este es el punto de parada de esta vuelta, igual que
-en la 75.
-
-Las cinco fichas bloqueadas por las fusiones de la fase 06
-(`OP-M-03-ENLACES`, `OP-E-04`, `OP-E-05`, ahora con su campo corregido en
-1.3.c, `OP-M-01-ESLABONES`, `OP-M-01-SEXTO`) no se tocan: su destino ya esta
-escrito y su momento es cuando sus mesas se sienten. `OP-E-03` sigue
-esperando a que `OP-E-01` termine entero. `OP-E-06` y `OP-E-07` no tienen
-bloqueo de dependencia pero esperan su turno en el orden escrito (no se
-saltan por conveniencia).
+1. **`lean_launchpad_web_startup_process -> construir_mvp_baja_fidelidad`,
+   ESCRITA CON EL PASO CORREGIDO.** El calibrador senalo el paso 9 de la
+   madre, que habla de **ALTA** fidelidad ("Construir una version de alta
+   fidelidad para probar la 'solucion'"), y el hijo es sobre **BAJA**
+   fidelidad: no calzan. El paso que si calza, leido por mi, es el 5
+   ("Construir un sitio web de baja fidelidad, splash page, formularios de
+   pre-orden"). Se escribio la arista igual (no lleva indice de paso, solo
+   madre-hijo), pero con el paso corregido en la razon. A favor: el
+   contenido del hijo (crear pagina simple, accion clara, sumar
+   videos/encuestas, probar variantes, publicar rapido) SI elabora el paso
+   5. En contra: es la primera vez en esta campana que el paso citado por el
+   calibrador no es el que realmente calza, y no hay regla escrita sobre
+   cuando eso es aceptable.
+2. **`cero_defectos -> zero_defects_concepto`, veredicto D del cribado
+   (puesto 2464) pero titulo y tema muy cercanos.** Los dos son sobre el
+   mismo estandar Cero Defectos de Crosby. A favor: el cribado ya la leyo y
+   dio D; el hijo trae contenido propio (poner el compromiso por escrito con
+   quien te ayuda, enfoque explicito de negocio pequeno) que la madre no
+   tiene. En contra: es el mismo perfil que el discutible 2 de la vuelta 76
+   (madres con estructura casi identica del mismo autor): aqui ademas madre
+   e hijo comparten CASI el mismo tema, no solo estructura.
+3. **`capacidad_proceso_concepto -> control_estadistico_de_procesos`,
+   titulo con 97,3% de similitud (Gate 0) contra `control_estadistico_del_proceso`
+   (que SI esta en la nomina de `OP-S-09` de esta vuelta; este hijo NO).**
+   A favor: el contenido de este hijo es la metodologia SPC general de 10
+   pasos, distinta de lo que trae `control_estadistico_del_proceso` (no leido
+   en esta vuelta, pero ya enlazado en tramos anteriores). En contra: mi
+   propio recomputo de `OP-S-09` declara que su metodo lexico (sufijo,
+   particulas, orden de palabras) NO agrupa singular/plural
+   (`procesos`/`proceso`), asi que no puedo descartar que sea un cuarto
+   miembro de esa familia que el metodo simplemente no vio.
+4. **`waterfall_vs_agile_development -> desarrollo_de_clientes_customer_development`,
+   posible sinonimo puro no detectado por el recomputo de `OP-S-09`.** El
+   titulo del hijo ("El Modelo de Desarrollo de Clientes") se parece al de
+   dos ids YA en la nomina de `OP-S-09` de esta vuelta
+   (`customer_development_modelo`, `modelo_customer_development`), pero mi
+   metodo lexico no los agrupo porque este tercer id usa palabras en
+   espanol ("desarrollo_de_clientes") en vez de las mismas palabras en
+   ingles. Es exactamente el hueco que la seccion 1.5 declara ("sinonimo
+   puro: 0, no detectable por este metodo"): aqui podria haber uno de
+   verdad. A favor: el contenido leido (metodologia Customer Development
+   general, "get out of the building", ejemplos IMVU/Webvan) no repite lo
+   que ya se sabe de los otros dos ids (no releidos en esta vuelta). En
+   contra: la sospecha de familia queda sin resolver.
+5. **Los dos pares del mismo racimo, no escritos (3.3), son la primera vez
+   en la campana que se aplica el criterio "no enlazar dentro de un racimo
+   declarado sin adjudicar".** Es `PENDIENTE DE DOCTRINA`, no una regla
+   escrita: si el auditor o el fundador deciden que un racimo SIN sufijo
+   numerico y SIN operacion NO bloquea el enlace (el mismo argumento que
+   dejo pasar al D2 en el tramo 2), estos dos pares se leerian otra vez con
+   ese criterio.
+6. **La medicion de 9.6.1 sigue usando el proxy declarado en la vuelta 76**
+   (`L` = `nodos_siguientes` vivos de la madre HOY, no "hijos con nodo propio
+   en el grafo, esten o no ya ligados"), ahora con el filtro de `deprecado`
+   corregido (1.3). El proxy en si mismo no se corrigio de fondo, solo el
+   bug de conteo.
 
 ---
 
-## 3. EL CIERRE, medido AL CIERRE
+## 4. EL CIERRE, medido AL CIERRE
 
-Commit final de esta vuelta: `7fa9f979`, push a `origin/pasada-unica`.
+Commit final de esta vuelta: se declara con el hash real tras el commit
+(ver mensaje de commit; esta seccion se escribe antes de commitear, como
+manda medir al cierre de la vuelta y no de la operacion). Push a
+`origin/pasada-unica`.
 
 | | medido con |
 |---|---|
-| grafo: 3.853 nodos, 3.188 vivos, 665 deprecados (sin cambio: la fase 04 no mueve ids) | `python scripts/run_phase1.py --reaplico-curaduria`, corrida de cierre |
-| entradas en `nodos_siguientes` | **8.897** (apertura 8.872 mas 25 netas: menos 1 revertida, mas 26 del tramo 2) |
-| entradas en `nodos_previos` | **8.876** |
-| suma de las dos | **17.773** |
-| union dirigida unica (`siguientes` union `previos`) | **9.520** |
-| Gate 0 | OK, ciclo de tres, auto-aristas 0, duplicadas 0 |
+| grafo: 3.853 nodos, 3.188 vivos, 665 deprecados (sin cambio: la fase 04 no muda ids) | `python scripts/run_phase1.py --reaplico-curaduria`, corrida de cierre |
+| `nodos_siguientes` | **8.925** (apertura 8.897 mas 28 del tramo 3) |
+| `nodos_previos` | **8.904** (apertura 8.876 mas 28) |
+| suma | **17.829** |
+| union dirigida unica | **9.548** |
+| Gate 0 | OK, ciclo de tres, auto-aristas 0, duplicadas 0, divergentes 0 |
 | motor | 25/25 |
 | web (corrido desde `web/`) | 80 ficheros, 1.030 pasadas, 3 saltadas |
 | tsc (corrido desde `web/`) | EXITCODE 0, cero lineas |
-| aristas revertidas esta vuelta | 1 (`segmentos_de_clientes_problema_necesidad -> get_out_of_the_building`) |
-| aristas nuevas escritas esta vuelta (tramo 2) | 26 |
-| pares leidos y descartados esta vuelta (tramo 2) | 4 |
-| operaciones cerradas esta vuelta | 1 (`OP-E-02`) |
-| bolsa de `OP-E-01` restante sin leer (filtrada por `P.9.1`) | **297 de 327** |
+| aristas revertidas esta vuelta | 0 (TAREA 2 no encontro ninguna A del cribado escrita) |
+| aristas nuevas escritas esta vuelta (tramo 3) | 28 |
+| pares leidos y no enlazados esta vuelta (tramo 3, PENDIENTE DE DOCTRINA) | 2 |
+| operaciones cerradas esta vuelta | 0 |
+| correcciones declaradas esta vuelta | 6 (1.2, 1.3, 1.4, 1.5 x2 (nomina + filtro), y la de `OP-E-01.verificacion`) |
+| bolsa de `OP-E-01` restante sin leer (filtrada por `P.9.1` ensanchado, esta vuelta) | **220 de 250** (250 menos los 30 leidos: 28 escritas mas 2 PENDIENTE DE DOCTRINA) |
 
 ---
 
-## 4. LOS DISCUTIBLES MARCADOS, para la relectura ciega del auditor
+## 5. LOS DISCUTIBLES MARCADOS, para la relectura ciega del auditor
 
-1. **`analisis_capacidad_proceso -> capacidad_de_proceso_2`, escrita.** Gate
-   0 marca `capacidad_de_proceso` y `capacidad_del_proceso` con 97,6% de
-   similitud de titulo (warning informativo de esta misma corrida). El hijo
-   de este par (`capacidad_de_proceso_2`, del mismo libro de Deming que
-   `capacidad_del_proceso`, ya enlazada en el tramo 1 al mismo madre por otro
-   paso) trae contenido que se pudo leer como distinto (monitoreo de tres
-   meses e intervenir sobre el sistema y no el individuo, contra el calculo
-   por formulas y la comunicacion a diseno del otro). A favor: 9.6.3 dice que
-   el solape no decide, lo que importa es lo que queda fuera, y aqui lo que
-   queda fuera es distinto en cada uno. En contra: la señal de similitud de
-   titulo mas el mismo autor es exactamente el perfil de un gemelo no
-   catalogado todavia por ninguna mesa, y no hay racimo declarado que lo
-   cubra para pedir un tratamiento explicito.
-2. **Posible gemelo de MADRES no catalogado**: `rol_alta_direccion_calidad`
-   (madre de dos pares escritos, `alineacion_estrategica_despliegue` y
-   `consejo_ejecutivo_calidad`) y `consejo_de_calidad_y_rol_del_director`
-   (madre del D3) tienen estructuras de pasos casi identicas del mismo libro
-   (Juran): las dos abren formando un espacio/consejo de calidad, siguen
-   definiendo vision/estrategia, asignan recursos o integran en planes, y
-   cierran revisando progreso. Ninguna de las dos aparece en ningun racimo
-   de `RACIMOS_MIEMBROS.jsonl` ni lleva sufijo numerico, asi que ninguna
-   regla escrita obliga a pararse por esto. Se anota como observacion, NO
-   como parada: es un hallazgo de esta vuelta que ninguna mesa ha censado
-   todavia, y pide un censo, no una decision aqui.
-3. **Tres pares nuevos apuntan al mismo hub `value_proposition_startup`**
-   (`customer_insights_design`, `earlyvangelists_ventas_tempranas` y
-   `simulacion_clientes_ia`, cada uno desde un paso que solo MENCIONA
-   "propuesta de valor" de pasada, no que la desarrolla). A favor: el hijo
-   trae un procedimiento de tres pasos que ninguno de los tres madres tiene,
-   y el patron de hub muy citado ya esta validado en el banco (`decision_intensidad_capital`,
-   23 emparejamientos sin mala). En contra: es exactamente el perfil de
-   riesgo que el calibrador de OP-E-01 describe como falso positivo por
-   vocabulario compartido, y las tres se aceptaron con la misma lectura
-   rapida en vez de una comparacion cruzada entre las tres.
-4. **`eliminacion_causas_error_4` descartada por sufijo numerico, mientras
-   que el D2 (mismo perfil sin sufijo) se escribio.** La linea que separa los
-   dos casos es el sufijo `_N` como figura de `MESA_RACIMOS.md` grupo 4. Si
-   esa distincion no se sostiene (si el auditor lee que el sufijo por si solo
-   no basta para aplazar sin una operacion que lo nombre, igual que se
-   argumento para el D2), las dos decisiones tendrian que ser la misma.
-5. **La medicion de 9.6.1 usa un proxy declarado, no una lectura completa de
-   hermanos con casa propia.** `L` (ligados) se mide como el numero de
-   `nodos_siguientes` vivos de la madre HOY, no como "hijos con nodo propio
-   en el grafo, esten o no ya ligados". Eso puede sobreestimar la mayoria en
-   madres con mucho fan-out hacia temas no relacionados con los pasos
-   numerados. Declarado en el script y en las secciones 2.1 y 2.3.d; no se
-   corrigio por no encontrar una forma barata de listar hermanos no ligados
-   sin releer cada madre entera otra vez.
+Los seis discutibles de la seccion 3.4 (arriba), mas los cinco heredados de
+la vuelta 76 (`docs/loop/paradas/2026-08-26-racha-tramo-mecanico-DECISION.md`
+y el reporte anterior, no repetidos aqui porque ya fueron auditados y
+adjudicados: PENDIENTE 1 y 2 cerrados, D2 decidido, y el resto queda como
+observacion sin parada). Los seis nuevos son los unicos que esta vuelta trae
+para relectura ciega.
 
 ---
 
-## 5. PENDIENTES DE DOCTRINA
+## 6. PENDIENTES DE DOCTRINA
 
-Ninguno nuevo. Los dos que trajo la vuelta 75 quedaron adjudicados por el
-auditor y citados sin repreguntar en 1.5.
+**Uno nuevo, con dos ejemplares esta vuelta (3.3, discutible 5).** Ninguna
+regla escrita dice que hacer con un candidato de enlace cuyos dos nodos
+(madre e hijo) son miembros del MISMO racimo declarado en
+`docs/RACIMOS_MIEMBROS.jsonl`, cuando ese racimo NO tiene sufijo numerico
+(asi que `P.9.1` no lo aparta) y NO tiene operacion que lo nombre. Aplique
+el criterio mas conservador (no enlazar sin que la mesa del racimo
+adjudique primero) y lo registro en vez de pararme, por `EJECUTOR.md` regla
+5. Los dos ejemplares (3.3) esperan esa doctrina o una adjudicacion del
+auditor.
 
 ---
 
-## 6. LO QUE QUEDA PENDIENTE PARA LA VUELTA SIGUIENTE
+## 7. LO QUE QUEDA PENDIENTE PARA LA VUELTA SIGUIENTE
 
-- Continuar `OP-E-01` con un TRAMO 3, RECALIBRANDO la bolsa antes de leer
-  (regla EL INSTRUMENTO MANDA: no reusar `PASO_NODO_CALIBRADO_FILTRADO_V76.jsonl`,
-  el grafo ya se habra movido otra vez).
+- Continuar `OP-E-01` con un TRAMO 4, recalibrando la bolsa antes de leer
+  (regla EL INSTRUMENTO MANDA: no reusar
+  `PASO_NODO_CALIBRADO_FILTRADO_V77.jsonl`, el grafo ya se habra movido
+  otra vez con las 28 aristas de este tramo).
+- Los dos pares `PENDIENTE DE DOCTRINA` de 3.3 esperan adjudicacion.
+- Los seis discutibles de 3.4 esperan la relectura ciega del auditor.
+- `OP-E-02` sigue CERRADO (vuelta 76), sin cambio.
 - `OP-E-03` sigue esperando a que `OP-E-01` termine entero.
 - `OP-M-03-ENLACES`, `OP-E-04`, `OP-E-05`, `OP-M-01-ESLABONES` y
   `OP-M-01-SEXTO` siguen esperando a la fase 06 (remision escrita, no se
   tocan).
-- `OP-E-06` y `OP-E-07` estan libres de bloqueo de dependencia pero esperan
+- `OP-E-06` y `OP-E-07` siguen libres de bloqueo de dependencia pero esperan
   su turno en el orden escrito.
-- Los cinco discutibles de la seccion 4 esperan la relectura ciega.
+- La escalada automatica del tallador a las fases mecanicas (opcion b de la
+  decision del fundador) SOLO se dispara si la racha de reporte vuelve a
+  DOS: esta vuelta la deja en CERO.
 
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada (esta
 vuelta: hecho al cierre de este mismo reporte). Cero guiones largos y cero
-guiones medios. El hook corrio en el commit sin saltarse. No se adivino nada
-que no se pudiera medir.
+guiones medios. El hook corrio en el commit sin saltarse. No se adivino
+nada que no se pudiera medir.

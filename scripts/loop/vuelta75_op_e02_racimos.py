@@ -93,6 +93,13 @@ for r in racimos:
         print()
 
 print("="*80)
-print(f"TOTAL miembros vivos hoy: {total_vivos}")
+# CORRECCION DECLARADA (vuelta 77, TAREA 1.4): la etiqueta de abajo no
+# llevaba su definicion. "Vivos" aqui es "nodo vivo TRAS RESOLVER ALIAS":
+# de los 171 miembros, 38 estan deprecados en su propio fichero y SOLO
+# llegan a este total porque resolver() los redirige a un id vivo distinto
+# (verificado por corrida propia en la vuelta 77: 133 directos + 38 via
+# alias = 171). El texto viejo de la etiqueta no se borra, se le anade la
+# definicion.
+print(f"TOTAL miembros vivos hoy (nodo vivo TRAS RESOLVER ALIAS): {total_vivos}")
 print(f"TOTAL miembros muertos/fundidos desde el censo: {total_muertos}")
 print(f"Racimos con miembro ajeno HOY: {len(transversales_nuevos)}")

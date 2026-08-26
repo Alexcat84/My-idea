@@ -444,6 +444,22 @@ la, el), 6 por **orden de palabras**, y **0** por sinonimo puro.
 intelectual **van por renombre o alias y NO por fusion**, porque en los dos el
 contenido esta sano.
 
+> **CORRECCION DECLARADA (26 ago 2026, vuelta 77, TAREA 1.5).** La nomina de
+> 125 ids nunca vivio en esta pagina (solo el criterio, las cifras y las
+> cuatro mayores). Recomputada del grafo de HOY con el mismo criterio,
+> aplicado por `scripts/loop/vuelta77_op_s09_nomina.py`
+> (`docs/loop/SALIDA_V77_OP_S09_NOMINA.txt`): **29 familias, 69 nodos
+> vivos**, NO 53 y 125. **DELTA DECLARADO, no forzado**: verificado por
+> corrida propia que los miembros que faltan de las cuatro mayores citadas
+> arriba (`accion_correctiva_5`, `accion_correctiva_6`,
+> `definiciones_operacionales_4`, `consejo_calidad`, `consejo_calidad_2`)
+> estan **deprecados** en el grafo de hoy, es decir que otras operaciones de
+> fusion ya los absorbieron por otra via desde el 11 ago 2026. La nomina de
+> 69 ids queda escrita en el campo `nodos` de `OP-S-09` en
+> `docs/plan/OPERACIONES.jsonl` (antes vacio), que es su sitio verdadero
+> porque esta operacion es `RENOMBRE_CON_ALIAS` y sus nodos no van en
+> `eliminar`.
+
 ---
 
 ## `OP-S-10`: EL REENCUADRE DE MARCO . **CONDICIONAL**

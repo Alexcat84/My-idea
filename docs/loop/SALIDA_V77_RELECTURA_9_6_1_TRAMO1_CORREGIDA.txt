@@ -1,0 +1,78 @@
+adaptar_empaque_segun_tipo_de_articulo -> proteger_fragiles_caja_dentro_de_caja
+    N pasos=5, L ligados=2, mayoria=NO -> 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida)
+    escalera (hijo ya apunta a madre)=NO
+adn_de_innovacion_organizacional -> espacios_fisicos_de_innovacion
+    N pasos=5, L ligados=3, mayoria=SI -> 9.6.1 CONFIRMA (mayoria establecida)
+    escalera (hijo ya apunta a madre)=NO
+analisis_capacidad_proceso -> capacidad_del_proceso
+    N pasos=5, L ligados=4, mayoria=SI -> 9.6.1 CONFIRMA (mayoria establecida)
+    escalera (hijo ya apunta a madre)=NO
+brecha_de_calidad_cuatro_gaps -> capacidad_del_proceso
+    N pasos=4, L ligados=3, mayoria=SI -> 9.6.1 CONFIRMA (mayoria establecida)
+    escalera (hijo ya apunta a madre)=NO
+contractor_status_report -> project_performance_report
+    N pasos=5, L ligados=3, mayoria=SI -> 9.6.1 CONFIRMA (mayoria establecida)
+    escalera (hijo ya apunta a madre)=NO
+cultura_justa_2 -> justicia_restaurativa
+    N pasos=4, L ligados=2, mayoria=NO -> 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida)
+    escalera (hijo ya apunta a madre)=NO
+customer_creation -> determinar_tipo_de_mercado
+    N pasos=4, L ligados=2, mayoria=NO -> 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida)
+    escalera (hijo ya apunta a madre)=NO
+definiciones_operacionales_de_calidad -> ctq_caracteristicas_criticas
+    N pasos=4, L ligados=3, mayoria=SI -> 9.6.1 CONFIRMA (mayoria establecida)
+    escalera (hijo ya apunta a madre)=NO
+desarrollo_de_controles_de_proceso -> decision_conformidad_producto
+    N pasos=6, L ligados=3, mayoria=NO -> 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida)
+    escalera (hijo ya apunta a madre)=NO
+dmadv_fase_verificacion -> analisis_de_sistemas_de_medicion_msa
+    N pasos=7, L ligados=2, mayoria=NO -> 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida)
+    escalera (hijo ya apunta a madre)=NO
+evitar_pseudociencia_producto -> metricas_accionables
+    N pasos=4, L ligados=2, mayoria=NO -> 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida)
+    escalera (hijo ya apunta a madre)=NO
+franquicia_unidad_individual -> proceso_venta_franquicias
+    N pasos=4, L ligados=3, mayoria=SI -> 9.6.1 CONFIRMA (mayoria establecida)
+    escalera (hijo ya apunta a madre)=NO
+funnel_get_customers_optimizacion -> disenar_tests_pass_fail
+    N pasos=7, L ligados=4, mayoria=SI -> 9.6.1 CONFIRMA (mayoria establecida)
+    escalera (hijo ya apunta a madre)=NO
+identificar_caracteristicas_metas_proceso -> diseno_de_procesos_por_caracteristicas
+    N pasos=5, L ligados=2, mayoria=NO -> 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida)
+    escalera (hijo ya apunta a madre)=NO
+marco_analisis_mercado_cadena_suministro -> ciclo_de_conversion_de_efectivo
+    N pasos=21, L ligados=13, mayoria=SI -> 9.6.1 CONFIRMA (mayoria establecida)
+    escalera (hijo ya apunta a madre)=NO
+mobilizar_empleados_cultura_ecologica -> evaluacion_actitudes_empleados
+    N pasos=5, L ligados=1, mayoria=NO -> 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida)
+    escalera (hijo ya apunta a madre)=NO
+pivot_post_ventas -> value_proposition_startup
+    N pasos=6, L ligados=2, mayoria=NO -> 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida)
+    escalera (hijo ya apunta a madre)=NO
+plan_cambio_climatico -> establecer_metas_reduccion_emisiones
+    N pasos=5, L ligados=2, mayoria=NO -> 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida)
+    escalera (hijo ya apunta a madre)=NO
+planificacion_estrategica_despliegue -> definir_mision_organizacional
+    N pasos=7, L ligados=4, mayoria=SI -> 9.6.1 CONFIRMA (mayoria establecida)
+    escalera (hijo ya apunta a madre)=NO
+planificacion_inicial_calidad -> analisis_flujo_proceso
+    N pasos=5, L ligados=5, mayoria=SI -> 9.6.1 CONFIRMA (mayoria establecida)
+    escalera (hijo ya apunta a madre)=NO
+project_close_out -> project_charter
+    N pasos=5, L ligados=2, mayoria=NO -> 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida)
+    escalera (hijo ya apunta a madre)=NO
+recursos_apoyo_gubernamental_exportacion -> programas_ex_im_bank
+    N pasos=6, L ligados=3, mayoria=NO -> 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida)
+    escalera (hijo ya apunta a madre)=NO
+resumen_de_datos_graficos -> medidas_tendencia_dispersion
+    N pasos=5, L ligados=2, mayoria=NO -> 9.6.1 DEJA IGUAL (mitad o menos, manda 9.6.2 ya leida)
+    escalera (hijo ya apunta a madre)=NO
+six_sigma_dmaic -> replicar_resultados
+    N pasos=12, L ligados=8, mayoria=SI -> 9.6.1 CONFIRMA (mayoria establecida)
+    escalera (hijo ya apunta a madre)=NO
+verificar_clientes_y_canales -> dia_en_la_vida_del_cliente
+    N pasos=6, L ligados=5, mayoria=SI -> 9.6.1 CONFIRMA (mayoria establecida)
+    escalera (hijo ya apunta a madre)=NO
+
+TOTAL PARES: 25
+ESCALERA ROTA (ciclo de dos): 0 de 25

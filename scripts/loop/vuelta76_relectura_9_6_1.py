@@ -17,6 +17,17 @@ nunca un veto en solitario contra 9.6.2 ya leido linea a linea.
 
 Chequeo de escalera, exacto y barato: para cada par (madre, hijo), si el
 hijo ya trae a la madre en su nodos_siguientes, hay ciclo de dos.
+
+CORRECCION DECLARADA (vuelta 77, parada del 26 ago 2026,
+docs/loop/paradas/2026-08-26-racha-tramo-mecanico-DECISION.md): la version
+original de este script NO filtraba deprecado en ninguna linea. La linea
+vieja era:
+    siguientes = [s for s in (madre.get("nodos_siguientes") or [])]
+o sea que L contaba TODOS los nodos_siguientes de la madre, vivos o no,
+mientras el docstring y el reporte de la vuelta 76 publicaban la cifra como
+si fuera solo de hijos VIVOS. La funcion cargar_siguientes_vivos() de abajo
+sustituye esa linea: ahora L es de verdad el numero de nodos_siguientes con
+deprecado distinto de True. El texto viejo de este parrafo no se borra.
 """
 import json
 from pathlib import Path
@@ -58,6 +69,16 @@ def cargar(node_id):
         return json.load(f)
 
 
+def cargar_siguientes_vivos(madre):
+    """L de verdad: solo los nodos_siguientes cuyo propio nodo NO esta deprecado."""
+    vivos = []
+    for s in (madre.get("nodos_siguientes") or []):
+        sd = cargar(s)
+        if not sd.get("deprecado"):
+            vivos.append(s)
+    return vivos
+
+
 def main():
     escalera_rota = []
     for madre_id, hijo_id in PARES:
@@ -65,9 +86,7 @@ def main():
         hijo = cargar(hijo_id)
 
         n_pasos = len(madre.get("pasos_accionables") or [])
-        siguientes = [
-            s for s in (madre.get("nodos_siguientes") or [])
-        ]
+        siguientes = cargar_siguientes_vivos(madre)
         l_ligados = len(siguientes)
         mayoria = l_ligados > n_pasos / 2
 
