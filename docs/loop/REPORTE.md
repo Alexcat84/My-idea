@@ -469,10 +469,9 @@ madre antes de la arista? **CERO de 28**, contado del mismo fichero
 
 ## 4. EL CIERRE, medido AL CIERRE
 
-Commit final de esta vuelta: se declara con el hash real tras el commit
-(ver mensaje de commit; esta seccion se escribe antes de commitear, como
-manda medir al cierre de la vuelta y no de la operacion). Push a
-`origin/pasada-unica`.
+Commit final de esta vuelta: `122bcc77` (contiene todo lo de TAREA 1, 2 y 3;
+el segundo commit de esta vuelta solo anade este hash al propio reporte, sin
+tocar dato ni cifra). Push a `origin/pasada-unica`.
 
 | | medido con |
 |---|---|
