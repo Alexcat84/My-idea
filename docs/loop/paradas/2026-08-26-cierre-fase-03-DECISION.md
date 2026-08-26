@@ -102,3 +102,12 @@ decision mande (la apertura de la fase 04 con los modelos nuevos, o las
 lecturas del subconjunto, o el orden que elijas). PROMPT_SIGUIENTE.md
 queda VACIO a proposito, como tu parada manda: nadie ejecuta nada hasta
 que tu letra vuelva.
+
+DECISION DEL FUNDADOR (26 ago 2026): 1) la fase 03 CIERRA AHORA como CERRADA CON
+REMISION: las seis fusiones quedan enrutadas a la fase 06 con destino escrito y se
+ejecutan cuando sus mesas se sienten; las fases 04 y 05 corren antes. 2) los nueve del
+subconjunto quedan DECLARADOS como estan, cosa juzgada con motivo sellado; reabrible solo
+por la cola ordinaria post campaña. 3) el acto 24 pesa en las dos columnas con sus dos
+marcas y cuenta una vez en el total. 4) las cinco mesas son territorio de la fase 06; la
+dependencia queda como remision escrita. Modelos del tramo mecanico: ejecutor Sonnet 5,
+auditor Opus 5; el ejecutor vuelve a Opus 5 al abrir la fase 06.

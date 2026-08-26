@@ -158,6 +158,20 @@ FASE III, EJECUCION: SOLO tras cerrar la fase II con Gate 0 verde. Se ejecuta en
   y deja PROMPT_SIGUIENTE.md VACIO. El fundador cambia los modelos antes
   del tramo mecanico y relanza. Al reanudar, el encargo es la apertura de
   la fase 04.
+  CUMPLIDA (26 ago 2026): la parada se disparo en la vuelta 74, el
+  fundador decidio, y la fase 03 quedo CERRADA CON REMISION (ver
+  docs/loop/paradas/2026-08-26-cierre-fase-03-DECISION.md y la seccion
+  de 03_FUSIONES.md). Los modelos del tramo mecanico quedan en ejecutor
+  Sonnet 5 y auditor Opus 5. La condicion no se borra: queda cumplida y
+  citable.
+- CIERRE DE LA FASE 05 (decision del fundador, 26 ago 2026): cuando la
+  fase 05 quede cerrada y verificada, NO abras la fase 06. Escribe
+  docs/loop/PARA_ALEXIS.md con el cierre medido y deja
+  PROMPT_SIGUIENTE.md VACIO: el fundador sube el ejecutor a Opus 5 para
+  las mesas y las seis fusiones diferidas, y relanza. El motivo esta
+  escrito y no es de rutina: la fase 06 sienta las cinco mesas y con
+  ellas se ejecutan las SEIS fusiones que la fase 03 dejo enrutadas, o
+  sea que el tramo mecanico se acaba ahi y vuelve el trabajo de lectura.
 En PARA_ALEXIS.md: motivo, estado exacto (hash, marcador, fase), lo que se
 necesita de Alexis, y como retomar.
 

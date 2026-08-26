@@ -244,6 +244,31 @@ escriben aqui arriba:
 | **destejido antes que fusion** | fundir antes de destejer **obliga a decidir el destino de material que la cirugia iba a quitar de todos modos** |
 | ~~resolutor de alias antes que el alias~~ **CORREGIDA** | **El codigo SI lee `ids_alias`.** `resolverId` existe en `graph.ts` (linea 131), camina cadenas y lo invocan `etiquetaArbol` y `tituloDeNodo`. **La dependencia no era esa**: lo que falta es MEDIR que caminos del runtime pasan por el. `OP-S-08` es ahora esa medicion y **no bloquea a nadie** |
 
+### CORRECCION DECLARADA: **LA FASE 03 QUEDA CERRADA CON REMISION** (26 ago 2026, decision del fundador)
+
+**El mapa de arriba se queda entero y sus flechas siguen siendo ciertas.** Lo que esta
+correccion escribe es **el estado de la fase 03 al cerrarla**, que ninguna flecha decia. El
+peso lo armo la vuelta 74 y lo verifico el acta 74 del auditor; el detalle entero, con sus
+nominas y sus cifras, esta en
+[`03_FUSIONES.md`](03_FUSIONES.md), seccion *LA FASE 03 QUEDA CERRADA CON REMISION*.
+
+> **CERRADA CON REMISION: 10 de 16 fichas RESUELTAS, y las SEIS que faltan quedan ENRUTADAS a
+> la fase 06 con destino escrito.** No cierran aqui porque **no dependen de la fase 03**:
+> dependen de que las cinco mesas se sienten. **Las fases 04 y 05 corren ANTES.**
+
+| pieza | como queda |
+|---|---|
+| **las seis fusiones** (19 nodos vivos) | `OP-M-01-FUSION`, `OP-M-02-ACCLIMATE`, `OP-M-03-III`, `OP-M-05-INDICE`, `OP-M-05-EDIFICIO`, `OP-M-05-APERTURA`: **enrutadas a la fase 06**, se ejecutan cuando sus mesas se sienten |
+| **quince actos DECLARADOS** (82 nodos) | **cosa juzgada con motivo sellado**; el **44** es especie propia (dos puertas y la guarda 1B). Los **NUEVE** del subconjunto de `P.10` **quedan como estan**, reabribles solo por la cola ordinaria post campaña |
+| **el acto 24** | **pesa en LAS DOS columnas con sus dos marcas** (declarado **Y** con dueno `OP-S-07`) y **cuenta UNA vez en el total** |
+| **el 31 y el 37** | con **dueno fuera de la fase**: el 31 en `OP-F-04-WEI` y `OP-S-04`, el 37 en `OP-S-07` |
+| **las cinco mesas** | **territorio integro de la fase 06.** La dependencia de la fase 03 hacia ellas queda como **REMISION ESCRITA**, no como bloqueo |
+
+> **POR QUE ESTO NO AFLOJA EL CRITERIO DE HECHO:** una fase con trabajo restante **sin destino**
+> estaria abierta. Estas seis **tienen destino, nomina medida y cero decisiones pendientes**: lo
+> que les falta es **que otra fase llegue**, y el orden ya la trae. **Lo que se remite se cuenta,
+> se nombra y se persigue; lo que se olvida, no.** Por eso la remision se escribe y no se calla.
+
 ---
 
 ## LAS CIFRAS, cada una con su corte

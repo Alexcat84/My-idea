@@ -9223,3 +9223,57 @@ ni ningun otro instrumento**, **NO decide el cierre de la fase 03** (esa es para
 peso lo pesa el auditor), **NO abre la fase 04**, **NO mueve la linea base del censo de colisiones**
 (la mueve el auditor) y **NO anade ni una fila ni una columna a ninguna tabla de registrador**, que es
 la adjudicacion 3 del acta 69 aplicada sobre el instrumento que la registra.
+
+---
+
+## LA FASE 03 QUEDA **CERRADA CON REMISION** (26 ago 2026, decision del fundador)
+
+**Correccion declarada. Nada de lo escrito arriba se borra ni se reescribe:** el peso que la
+vuelta 74 armo se queda entero, y esta seccion escribe la LECTURA DEL CIERRE que aquel peso
+dejo al fundador, que es lo unico que faltaba. **El peso es del acta 74 del auditor y se cita
+con sus cifras, no de memoria.**
+
+> **LA FASE 03 NO CIERRA POR LA LETRA ESTRICTA NI QUEDA ABIERTA: CIERRA CON REMISION.** Las
+> piezas que le faltan **tienen destino escrito** y **no dependen de la fase 03**, sino de la
+> fase 06. Una fase cuyo trabajo restante esta enrutado, medido y sin decision pendiente **no
+> bloquea el orden**: lo remite.
+
+### EL PESO DEL CIERRE, CITADO DEL ACTA 74
+
+| | |
+|---|---|
+| **fichas RESUELTAS** | **10 de 16**: los dos abridores (`OP-U-01` y `OP-U-02`, servidos por sus 14 y 11 registros), **tres EJECUTADAS** (`OP-M-02-PROG`, `OP-M-03-I`, `OP-M-03-II`, vueltas 63 y 64) y **cinco CONSUMIDAS** por los tramos de `OP-U-01` |
+| **SEIS FUSIONES ENRUTADAS a la fase 06** | `OP-M-01-FUSION` (5 nodos), `OP-M-02-ACCLIMATE` (2), `OP-M-03-III` (3), `OP-M-05-INDICE` (3), `OP-M-05-EDIFICIO` (3) y `OP-M-05-APERTURA` (3): **19 nodos vivos en total** |
+| **DECLARADOS Y NO FUNDIDOS** | **quince actos, 82 nodos que no se tocan**: 1, 5, 10, 11, 12, 13, 14, 15, 17, 20, 21, 23, 24, 27 y 44. **El acto 44 es especie propia** (dos puertas y la guarda 1B) |
+| **el subconjunto de `P.10`** | **NUEVE de los quince** (el acto 5 nombra `P.10` para negarlo y cierra por `P.5`, adjudicado en el D13 del acta 74) |
+| **actos con dueno FUERA de la fase** | el **31** (`OP-F-04-WEI` en `01_FUENTES` y `OP-S-04` en `05_SANEO`) y el **37** (`OP-S-07` en `00_CODIGO`) |
+| **el acto 24** | **pesa en LAS DOS columnas**: declarado **Y** con dueno (`OP-S-07`), medido campo a campo |
+| **actos abiertos sin declaracion y sin dueno** | **CERO**, re-medido |
+
+### LAS CUATRO DECISIONES DEL FUNDADOR, ESCRITAS
+
+**1. LAS SEIS FUSIONES: la fase 03 CIERRA AHORA y ellas quedan ENRUTADAS a la fase 06.** Su
+destino esta escrito: **se ejecutan cuando sus mesas se sienten**, con la simulacion previa y
+el caso positivo que sus fichas ya tienen. **Las fases 04 y 05 corren ANTES.** Los bloqueadores
+internos de la fase 03 ya estaban resueltos: lo unico que las detiene son las cinco mesas, que
+son de otra fase.
+
+**2. LOS NUEVE DEL SUBCONJUNTO QUEDAN DECLARADOS COMO ESTAN: COSA JUZGADA con motivo sellado.**
+No se piden lecturas nuevas dirigidas. **Reabrible SOLO por la cola ordinaria post campaña**, no
+por esta pasada. Con esto, el pendiente escrito en la linea **4061** de esta misma pagina
+(*al cierre de la fase 03, con el fundador delante si pide lecturas nuevas*) **queda contestado
+y cerrado**: el fundador estuvo delante y no las pide.
+
+**3. EL ACTO 24 PESA EN LAS DOS COLUMNAS, CON SUS DOS MARCAS, Y CUENTA UNA VEZ EN EL TOTAL.**
+Es declarado **y** tiene dueno (`OP-S-07`); las dos cosas son ciertas y las dos se escriben.
+**Contarlo dos veces en el total seria inflar la cuenta**, y por eso la marca es doble y el
+conteo es uno.
+
+**4. LAS CINCO MESAS SON TERRITORIO INTEGRO DE LA FASE 06.** La letra de sus fichas ya lo decia;
+la medicion decia que la fase 03 depende de ellas. **Las dos son verdad y no se contradicen: la
+dependencia queda como REMISION ESCRITA**, que es exactamente lo que esta seccion registra.
+
+> **LO QUE ESTA SECCION NO HACE:** no ejecuta ninguna ficha, no funde ningun acto, no toca ni un
+> nodo, ni un alias ni una puerta, no re-lee ningun veredicto, no toca la mesa `OP-M-03` ni sus
+> colisiones, no mueve la linea base del censo, y **no abre la fase 04**. Escribe el cierre y su
+> remision; abrir la fase siguiente es del encargo, no de un registro.
