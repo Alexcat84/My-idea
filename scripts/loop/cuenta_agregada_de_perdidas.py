@@ -33,6 +33,39 @@ LAS DOS COSAS QUE MIDE Y QUE UNA LECTURA DE MEMORIA SE SALTA:
      El instrumento publica ademas cuanto daria la lectura contraria, para que el
      lector pueda restar en vez de tener que recontar.
 
+CORRECCION DECLARADA (2026-08-26, vuelta 73, TAREA 1 del encargo; adjudicacion 1
+del acta 72, seccion 5.1, nacida de la pregunta 2 y del D8 del reporte de la
+vuelta 72). EL TEXTO VIEJO NO SE TACHA Y SE QUEDA ENTERO ARRIBA, y aqui va
+citado VERBATIM para que la correccion se pueda auditar sin abrir el historial:
+
+  "la frase sellada ATENUANTE DECLARADO, las que ademas son de la ESPECIE DEL
+  PENDIENTE 4, las que llevan ATENUANTE DECLARADO Y MEDIDO"
+
+Eso es lo que este instrumento CUENTA, y sigue siendo exacto. Lo que faltaba no
+era una cuenta sino UNA DEFINICION: el nombre historico de la marca (ya lo dice
+el APPEND de un hermano) nombra un VEHICULO, y quien leia la celda sin la
+definicion delante podia entender que una pieza que llega por INCISO no es de
+esta especie. La vuelta 72 pago ese hueco: la fila del acto 43 de su lote H
+cumplia el hecho y llegaba por INCISO, y la celda salio en 0 con glosa.
+
+LA ESPECIE DEL PENDIENTE 4 LA DEFINE EL HECHO, NO EL VEHICULO. Una fila es de
+esta especie cuando LA SUSTANCIA QUE SE PIERDE LLEGA ENTERA DESDE OTRO ABSORBIDO
+DEL MISMO ACTO, sea el vehiculo un APPEND o un INCISO. El motivo esta escrito en
+la adjudicacion: la marca existe porque una perdida cuya sustancia llega entera
+es mas barata que una perdida seca, y ese hecho no depende del vehiculo. El
+nombre historico nacio cuando el APPEND era el unico vehiculo que la producia;
+el INCISO nacio despues. EN ADELANTE la frase sellada ESPECIE DEL PENDIENTE 4 se
+escribe en la fila cuando el HECHO se cumpla, por cualquiera de los dos.
+
+LO QUE ESTA CORRECCION NO TOCA, Y SE DICE PARA QUE SE PUEDA MEDIR: la BUSQUEDA y
+la ARITMETICA se quedan como estaban, byte a byte. FRASE_PENDIENTE4 sigue siendo
+la misma cadena, la nomina sigue buscandola dentro del campo que, y la lectura
+contraria sigue sumando igual. Tampoco se toca la tupla PISTAS_SIN_SELLO, que
+conserva su pista "llega por el APPEND" con el nombre del vehiculo dentro: esa tupla NO define la
+especie, solo delata prosa de atenuante sin sello, y estrecharla o ensancharla
+seria mover la busqueda. ESTA CORRECCION ES DE GLOSA: cambia lo que el lector
+entiende, no lo que la maquina cuenta.
+
 DE SOLO LECTURA. No escribe nada.
 
 Uso:

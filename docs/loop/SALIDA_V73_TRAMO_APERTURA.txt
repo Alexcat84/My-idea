@@ -1,0 +1,58 @@
+==============================================================================
+LO QUE QUEDA DEL TRAMO AL CIERRE DE LA VUELTA 73
+  fichero fijado : docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+  MEDIDO sobre dataset/nodos en esta corrida; el reparto por lotes y la
+  lista de DECLARADOS son HISTORIA y entran por argumento, no se miden.
+==============================================================================
+
+  actos del tramo (filas del fichero fijado) : 47
+  actos FUNDIDOS, medido (ningun miembro vivo, o uno solo): 26
+     [3, 7, 8, 9, 16, 18, 19, 22, 25, 26, 29, 30, 32, 33, 34, 35, 36, 38, 39, 40, 41, 42, 43, 45, 46, 47]
+  actos con DOS O MAS miembros vivos           : 21
+  de esos, DECLARADOS Y NO FUNDIDOS (argumento): 15
+     [1, 5, 10, 11, 12, 13, 14, 15, 17, 20, 21, 23, 24, 27, 44]
+
+  QUEDAN SIN DESTINO: 6 actos y 18 nodos
+     [31, 37, 49, 50, 51, 53]
+  de los que quedan, CON DUENO medido: 2 [31, 37]
+     acto 31  duenos_cualquier_operacion = ['OP-F-04-WEI', 'OP-S-04']
+     acto 37  duenos_cualquier_operacion = ['OP-S-07']
+  el siguiente del prefijo: acto 31
+
+  LOS ACTOS FUNDIDOS, CON SU SUPERVIVIENTE VIVO Y SU TAMANO DE HOY:
+     acto 3   causas_comunes_vs_especiales                         pasos 15  condiciones 10
+     acto 7   six_sigma_dmaic                                      pasos 12  condiciones 8
+     acto 8   cierre_segun_complejidad_venta                       pasos 12  condiciones 7
+     acto 9   marco_analisis_mercado_cadena_suministro             pasos 21  condiciones 7
+     acto 16  encuadre_desafio_diseno                              pasos 10  condiciones 3
+     acto 18  alianzas_cross_industry                              pasos 7   condiciones 4
+     acto 19  division_trabajo_humano_ia                           pasos 7   condiciones 5
+     acto 22  comprension_capacidades_limitaciones_ia              pasos 9   condiciones 3
+     acto 25  enfoque_etapa_investigacion                          pasos 6   condiciones 2
+     acto 26  investigacion_etnografica_ideacion                   pasos 9   condiciones 3
+     acto 29  marco_avances_continuaciones                         pasos 6   condiciones 2
+     acto 30  viaje_diagnostico_remedial                           pasos 8   condiciones 2
+     acto 32  atacar_mercados_establecidos_con_problema            pasos 5   condiciones 3
+     acto 33  wallas_intimacion_fringe_consciousness               pasos 5   condiciones 3
+     acto 34  ciclo_de_culpa_2                                     pasos 8   condiciones 4
+     acto 35  construccion_tribu_de_marca                          pasos 8   condiciones 2
+     acto 36  plan_de_control                                      pasos 10  condiciones 2
+     acto 38  segmentos_de_clientes_problema_necesidad             pasos 6   condiciones 3
+     acto 39  defensas_en_profundidad_3                            pasos 7   condiciones 2
+     acto 40  traction_goal                                        pasos 7   condiciones 2
+     acto 41  design_for_six_sigma_dfss                            pasos 6   condiciones 4
+     acto 42  equipo_multifuncional_real                           pasos 7   condiciones 3
+     acto 43  preservar_efectivo_buscar_modelo                     pasos 8   condiciones 4
+     acto 45  reconstruccion_contexto_situacional                  pasos 6   condiciones 2
+     acto 46  mitigacion_riesgos_ambientales                       pasos 5   condiciones 3
+     acto 47  gestion_terminacion_franquiciado                     pasos 5   condiciones 2
+
+  LOS QUE QUEDAN, UNO A UNO:
+     acto 31  miembros 3, vivos 3, duenos ['OP-F-04-WEI', 'OP-S-04']
+     acto 37  miembros 3, vivos 3, duenos ['OP-S-07']
+     acto 49  miembros 3, vivos 3, duenos []
+     acto 50  miembros 3, vivos 3, duenos []
+     acto 51  miembros 3, vivos 3, duenos []
+     acto 53  miembros 3, vivos 3, duenos []
+
+FIN
