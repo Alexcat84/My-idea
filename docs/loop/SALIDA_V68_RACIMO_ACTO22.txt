@@ -1,0 +1,143 @@
+==============================================================================
+LAS ENTRADAS NO-ACTO QUE TOCAN AL LOTE D, LEIDAS ENTERAS
+==============================================================================
+
+### tipo=racimo
+{
+ "tipo": "racimo",
+ "nombre": "la supervision de la IA",
+ "miembros": [
+  "alineacion_etica_ia_negocio",
+  "comprender_alineacion_etica_ia",
+  "comprension_capacidades_limitaciones_ia",
+  "human_in_the_loop_ia",
+  "invitar_ia_a_todo",
+  "jagged_frontier_ia",
+  "mitigar_falling_asleep_wheel",
+  "principio_humano_en_el_loop",
+  "principio_invitar_ia_siempre",
+  "riesgo_sobredependencia_ia"
+ ],
+ "forma": "PARTIDO 5 mas 4 mas 1",
+ "cobertura": "18 de 45 al corte 3.388 (vuelta 15)",
+ "estado": "en mesa, particion PROVISIONAL",
+ "operaciones": [],
+ "fecha_corte": "2026-08-13",
+ "nota": "de la TABLA VIVA DE LOS PUROS y del registro de mesas. CORREGIDO EN LA VUELTA 15 (docs/plan/RECOMPUTO_3388.md, seccion TAREA vuelta 15; docs/loop/ACTA_AUDITOR.md VUELTA 14 seccion 4): la nomina anterior (fecha_corte 2026-08-11) listaba SOLO OCHO miembros, sin invitar_ia_a_todo ni principio_invitar_ia_siempre, que entraron a la nomina vigente por el puesto 1.517 (docs/INTRA_DOMINIO_INFORME.md seccion 11.bis.3); la nomina vigente es de DIEZ, no se borra la vieja de ocho. La cobertura vieja era 14 de 45 al puesto 1517; no se borra."
+}
+
+### tipo=figura
+{
+ "tipo": "figura",
+ "nombre": "SUBCONJUNTO ESTRICTO",
+ "miembros": [],
+ "forma": "figura de lectura",
+ "cobertura": "23 ejemplares",
+ "estado": "sano, doctrina escrita",
+ "operaciones": [],
+ "fecha_corte": "2026-08-11",
+ "nota": "los pasos del corto viven dentro del largo y lo unico propio cabe en una linea EJEMPLARES NOMBRADOS EL 14 ago 2026 (vuelta 19), adicion declarada, nada borrado. LAS 23 QUE EL CAMPO cobertura DECLARA SON EXACTAMENTE LAS 23 RAZONES DEL ARCHIVO QUE TRAEN LA ETIQUETA SUBCONJUNTO ESTRICTO EN MAYUSCULAS, y no es una coincidencia elegida: la aritmetica del informe reproduce exacta sobre ese conjunto. LOS 23 PUESTOS, verificados uno por uno en esta vuelta contra docs/INTRA_DOMINIO_VEREDICTOS.jsonl con scripts/loop/vuelta19_figuras.py (que el puesto existe, con clase A y entre esos dos nodos), CERO FALLOS y LOS 23 EN A. En core: 1182 desarrollo_en_espiral con design_test_repeat, 1332 metodo_valor_presente_neto con valor_presente, y 1573 design_test_repeat con design_thinking_proceso. En entrega: 1601 y 1602, los dos del mismo nodo calcular_peso_dimensional_antes_cotizar, contra medir_paquete_redondeando_hacia_arriba y contra conocer_limites_peso_tamano_courier. En environmental: 1776 evitar_greenwashing con evitar_greenwashing_2, 1783 critica_eco_eficiencia con eco_eficiencia_critica, 1794 critica_al_pib_como_metrica con critica_del_pib_como_metrica_de_progreso, y 1811 liderazgo_ceo_sostenibilidad con vision_alineacion_sostenibilidad. En exportacion, siete: 1943 export_administration_regulations con regulaciones_exportacion_ear, 1947 seguro_de_carga_transporte con seguro_exportacion, 1952 incoterms_reglas_comerciales_internacionales con terminos_de_venta_incoterms, 1966 y 1967, los dos de enfoque_paso_a_paso_investigacion_mercado, contra screening_mercados_potenciales y contra evaluacion_mercados_objetivo, 2022 licenciamiento_tecnologico con proteccion_propiedad_intelectual_internacional, y 2043 consejos_distrito_exportacion_dec con uso_del_us_commercial_service. En franquicias, siete: 2072 gestion_terminacion_franquiciado con terminacion_franquiciado_causas, 2074 y 2075, los dos de cinco_categorias_costos_franquicia, contra estimacion_inversion_inicial_franquiciador y contra costos_preparacion_franquicia, 2076 y 2090, los dos de contratar_abogado_especializado_franquicias, contra eleccion_abogado_franquicias y contra contratar_abogado_franquicias, 2079 estrategia_multicanal_expansion con franquicia_mas_crecimiento_corporativo_hibrido, y 2087 sitio_web_captura_leads con sitio_web_franquicia. LA ARITMETICA DEL INFORME, REPRODUCIDA CON I
+
+### tipo=figura
+{
+ "tipo": "figura",
+ "nombre": "ESTRELLA (9.23)",
+ "miembros": [],
+ "forma": "figura de lectura",
+ "cobertura": "9 ejemplares",
+ "estado": "sano, doctrina escrita",
+ "operaciones": [],
+ "fecha_corte": "2026-08-11",
+ "nota": "un centro que repite con dos periferios que entre si son sanos. La septima es INVERTIDA: el centro es el corto EJEMPLARES NOMBRADOS EL 14 ago 2026 (vuelta 18), adicion declarada, nada borrado. OCHO NOMBRADAS Y VERIFICADAS con las DOS cuentas que el banco 9.23 exige (radios con el centro todos A, y al menos un par entre perifericos leido y ninguno A). (1) pass/fail, centro diseno_experimentos_pass_fail, radios 467, 511 y 639, perifericos 636 D y 1346 D. (2) scorecard, centro scoring_model_scorecard, radios 184 y 820, periferico 1201 D. (3) los regalos, centro regalos_estrategicos_sorpresa, radios 251 y 799, periferico 1348 D. (4) la fase de diseno, centro fase_diseno_prototipado_modelos, radios 507 y 641, periferico 572 D. (5) el peso dimensional, centro calcular_peso_dimensional_antes_cotizar, radios 1601 y 1602, periferico 1609 D, la primera fuera del nucleo. (6) investigacion de mercados, centro enfoque_paso_a_paso_investigacion_mercado, radios 1966 y 1967, periferico 1972 D. (7) el abogado, INVERTIDA porque el centro es el corto, centro contratar_abogado_especializado_franquicias, radios 2076 y 2090, periferico 2086 D. (8) los costos de franquicia, clasica, centro cinco_categorias_costos_franquicia, radios 2074 y 2075, periferico 2092 D. LAS OCHO VERIFICAN, CERO FALLOS. DISCREPANCIA DECLARADA Y NO ARREGLADA: el campo cobertura dice NUEVE y la lectura de esta vuelta solo pudo localizar OCHO declaradas por escrito; la novena no se encontro y la cifra del campo NO se toca. El candidato mas probable es tecnologias_disruptivas_oportunidad (dos A, puestos 505 y 513), y NO se cuenta como ejemplar a proposito: su par entre perifericos NUNCA ENTRO A LA COLA, o sea que le falta la segunda cuenta, y el propio 9.23 dice que sin ella no se puede llamar estrella. SEGUNDA MEDICION, para que la cifra se lea bien: la misma forma contada A MAQUINA sobre las 3.388 lineas da 33 centros que calzan con las dos cuentas. Los 33 no son ejemplares: son candidatos. La diferencia entre 8 y 33 es de definicion, no de medicion. CRITERIO DE EJEMPLAR DE LA VUELTA 18, escrito para que se pueda discutir: un ejemplar es una instancia DECLARADA POR ESCRITO (en docs/INTRA_DOMINIO_INFORME.md, en docs/BANCO_DE_TEXTOS.md, en un expediente o en una lectura dirigida), no cualquier par que calce con la forma. Cada puesto citado aqui esta verificado en esta vuelta contra d
+
+==============================================================================
+LAS OPERACIONES QUE NOMBRAN A UN MIEMBRO DEL LOTE D
+==============================================================================
+
+{
+ "id_op": "OP-S-07",
+ "fase": "00_CODIGO",
+ "tipo": "CAMPO_SUCIO",
+ "nodos": [
+  "analisis_de_cohortes",
+  "analisis_flujo_de_valor",
+  "buyin_customer_development",
+  "costo_de_mala_calidad_copq",
+  "cronograma_proyecto",
+  "cuatro_etapas_del_pensamiento_creativo",
+  "cumplimiento_inversionistas_acreditados",
+  "customer_needs_spreadsheet",
+  "customer_retention_tactics",
+  "decision_pivotar_o_proceder",
+  "definicion_sprint_terminado_fisico",
+  "diseno_experimentos_pass_fail",
+  "diseno_landing_page",
+  "diseno_para_el_ciclo_completo",
+  "eleccion_abogado_franquicias",
+  "elevated_surfaces_fall_protection",
+  "gestion_portafolio_formal",
+  "lockout_tagout_procedures",
+  "medir_comportamiento_cliente_mvp",
+  "medir_huella_carbono_corporativa",
+  "metodo_strategic_buckets",
+  "metricas_accionables",
+  "multi_sided_platforms",
+  "redundancia_en_diseno",
+  "reglas_gestion_riesgo_gambling",
+  "reporte_estado_miembro_equipo",
+  "search_for_business_model"
+ ],
+ "superviviente": null,
+ "preservar": [
+  "nada que preservar: el enlace retirado no aporta informacion, apunta al propio nodo",
+  "los ids_alias NO se tocan: el alias es correcto y util; lo que sobra es la arista que lo usa para volver a casa"
+ ],
+ "eliminar": [
+  "de cada uno de los 27 nodos vivos, el enlace de nodos_previos o nodos_siguientes que RESUELVE al propio nodo, Y su reciproca LITERAL en el gemelo deprecado que la proyecta de vuelta: 66 enlaces en total (33 vivos mas 33 deprecadas), en 59 ficheros. No se toca ningun otro campo. Las 48 alias contra alias del lado deprecado (se simetrizan entre deprecados y NO proyectan sobre vivos) NO se tocan por esta operacion: quedan censadas en esta nota."
+ ],
+ "aristas_nuevas": [],
+ "orden": 5,
+ "depende_de": [],
+ "bloquea_a": [
+  "OP-C-04"
+ ],
+ "verificacion": [
+  "n
+
+{
+ "id_op": "OP-L-03",
+ "fase": "09_LECTURAS_DIRIGIDAS",
+ "tipo": "MESA",
+ "nodos": [],
+ "superviviente": null,
+ "preservar": [],
+ "eliminar": [],
+ "aristas_nuevas": [],
+ "orden": 3,
+ "depende_de": [
+  "OP-D-01",
+  "OP-D-02",
+  "OP-D-03",
+  "OP-D-04",
+  "OP-D-05",
+  "OP-D-06"
+ ],
+ "bloquea_a": [
+  "OP-U-01",
+  "OP-U-02"
+ ],
+ "verificacion": [
+  "ningun acto se funde con un par interno sin veredicto",
+  "las 55 lecturas marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador",
+  "cada acto cuya lectura completa cambie su forma se re-mide con su cobertura al lado"
+ ],
+ "evidencia": [
+  "BANCO_DEL_PLAN.md P.5",
+  "MEDIDO el 11 ago 2026: 55 pares en 29 actos, corte puesto 2117",
+  "LECTURAS_DIRIGIDAS.md, el reparto por acto"
+ ],
+ "estado": "LISTA",
+ "fecha_corte": "2026-08-11",
+ "adjudicacion": "LOS 55 DEJAN DE SER BACKLOG. Por la regla P.5, cada acto que vaya a fundirse se lee ENTERO despues de su destejido y antes de su fusion. Los 55 pares se reparten entre 29 actos y bajan del backlog.",
+ "pregunta_pendiente": null,
+ "nota": "EL REPARTO POR TAMANO DE ACTO: uno de SEIS miembros con 6 pares por leer; cuatro de CINCO con 15 pares; nueve de CUATRO con 19; y quince de TRES con un par cada uno. EL MAYOR es cierre_segun_complejidad_venta, seis miembros y SEIS pares por leer de quince. DOS DE LOS 55 YA ESTAN LEIDOS como lectura dirigida de la primera tanda: LD-04 (evaluacion_tecnologias_disruptivas) y LD-08 (disenar_tests_pass_fail). PENDIENTES REALES: 53. NO ES TRABAJO NUEVO: es trabajo que ya estaba y no tenia dueno. Antes esos actos se iban a fundir sin leerse enteros. RECOMPUTO AL CORTE 3.388 (vuelta 14, docs/plan/RECOMPUTO_3388.md, seccion TAREA vuelta 14 punto 2, instrumento scripts/loop/backlog_l03_vuelta14.py): el backlog SUBIO de 29 actos y 55 pares (cort

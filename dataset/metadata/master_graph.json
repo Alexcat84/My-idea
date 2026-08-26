@@ -7606,7 +7606,8 @@
         "Si el equipo reporta alta rotación o baja moral por tareas repetitivas",
         "Al iniciar la adopción de IA en una organización"
       ],
-      "etiqueta_arbol": "Automatiza lo Aburrido Primero"
+      "etiqueta_arbol": "Automatiza lo Aburrido Primero",
+      "deprecado": true
     },
     "autonomia_dependencia_regulatoria": {
       "node_id": "autonomia_dependencia_regulatoria",
@@ -12739,8 +12740,8 @@
       ],
       "entregable_esperado": "Un flujo de trabajo definido que especifica qué tareas se hacen en modo Centauro y cuáles en modo Cyborg",
       "nodos_previos": [
-        "framework_tareas_ia_humano",
-        "jagged_frontier_ia"
+        "division_trabajo_humano_ia",
+        "comprension_capacidades_limitaciones_ia"
       ],
       "nodos_siguientes": [
         "mitigar_falling_asleep_wheel",
@@ -16094,7 +16095,7 @@
         "espacios_de_diseno_superpuestos",
         "distincion_esfuerzo_energia",
         "emocion_e_imagen_en_el_pensamiento",
-        "jagged_frontier_ia"
+        "comprension_capacidades_limitaciones_ia"
       ],
       "condiciones_activacion": [
         "Cuando se busca innovación radical más allá de la investigación de mercado convencional",
@@ -17275,22 +17276,55 @@
       "resumen_teorico": "Las IA modernas muestran capacidades que ni sus propios creadores anticiparon del todo: pueden sobresalir en tareas complejas, como escribir código funcional, y al mismo tiempo fallar en tareas aparentemente simples, como jugar tic-tac-toe correctamente. Esto significa que lo que es fácil para ti puede ser difícil para la IA, y al revés. Antes de confiar en ella para algo importante de tu negocio, prueba tú mismo qué tan bien resuelve tu caso concreto, en lugar de asumir que funciona bien solo porque el modelo tiene buena fama.",
       "pasos_accionables": [
         "Diseña pruebas específicas para tu propio caso de uso, no te quedes solo con pruebas estándar generales (benchmarks)",
-        "Prueba la IA en los casos límite (edge cases) que más importan en tu negocio",
+        "Prueba la IA en los casos límite (edge cases) que más importan en tu negocio, con casos reales y variados, no solo con ejemplos fáciles",
         "Anota qué patrones de error y de acierto vas encontrando mientras pruebas",
         "Revisa tú mismo, o con quien te ayude, cualquier resultado crítico antes de usarlo",
-        "Ajusta la instrucción que le das a la IA o la forma de trabajar según lo que vayas descubriendo"
+        "Ajusta la instrucción que le das a la IA o la forma de trabajar según lo que vayas descubriendo, hasta encontrar la forma óptima de uso para esa tarea específica",
+        "Probar la IA en cada tarea del flujo de trabajo diario, sin descartar previamente ninguna por asumir que 'no aplica'",
+        "Repetir el ejercicio periódicamente ya que las capacidades de la IA cambian con el tiempo",
+        "Compartir hallazgos con el equipo para acelerar el aprendizaje colectivo",
+        "Usa ese mapa para decidir qué automatizas, qué supervisas de cerca y qué haces tú sin IA"
       ],
       "entregable_esperado": "Un documento donde anotas, después de probar la IA en tu caso concreto, qué funcionó bien y qué falló.",
       "nodos_previos": [
-        "seleccion_modelo_ia_adecuado"
+        "seleccion_modelo_ia_adecuado",
+        "colaboracion_creador_consumidor",
+        "desafios_implementacion_ia"
       ],
       "nodos_siguientes": [
-        "fine_tuning_ia_para_caso_de_uso"
+        "fine_tuning_ia_para_caso_de_uso",
+        "centaur_cyborg_ia",
+        "principio_humano_en_el_loop",
+        "riesgo_sobredependencia_ia"
       ],
       "condiciones_activacion": [
-        "Cuando vas a dejarle a la IA una tarea importante de tu negocio"
+        "Cuando vas a dejarle a la IA una tarea importante de tu negocio",
+        "Cuando un equipo o emprendedor comienza a explorar el uso de IA generativa en su negocio",
+        "Cuando se busca ventaja competitiva mediante el dominio experto de herramientas de IA"
       ],
-      "etiqueta_arbol": "Conoce lo que la IA Ignora"
+      "etiqueta_arbol": "Conoce lo que la IA Ignora",
+      "ids_alias": [
+        "invitar_ia_a_todo",
+        "jagged_frontier_ia",
+        "principio_invitar_ia_siempre"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "invitar_ia_a_todo",
+          "titulo": "Principio de Invitar la IA a Todo",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+        },
+        {
+          "node_id": "jagged_frontier_ia",
+          "titulo": "El límite irregular de la IA (jagged frontier)",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+        },
+        {
+          "node_id": "principio_invitar_ia_siempre",
+          "titulo": "Principio 1: Invitar Siempre a la IA a la Mesa",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+        }
+      ]
     },
     "compromiso_cliente_sostenibilidad": {
       "node_id": "compromiso_cliente_sostenibilidad",
@@ -32216,8 +32250,7 @@
         "data_integrity_forecasting",
         "comprender_alineacion_etica_ia",
         "ingenieria_de_prompts_efectiva",
-        "invitar_ia_a_todo",
-        "principio_invitar_ia_siempre"
+        "comprension_capacidades_limitaciones_ia"
       ],
       "condiciones_activacion": [
         "Cuando la organización planea otorgar mayor autonomía de decisión a sistemas de IA",
@@ -32972,7 +33005,8 @@
         "Cuando estás armando tu equipo y definiendo roles.",
         "Cuando sientes miedo o dudas sobre qué tareas te va a quitar la IA."
       ],
-      "etiqueta_arbol": "Analiza el Trabajo por Tareas"
+      "etiqueta_arbol": "Analiza el Trabajo por Tareas",
+      "deprecado": true
     },
     "desconexion_ventas_experiencia": {
       "node_id": "desconexion_ventas_experiencia",
@@ -38511,7 +38545,10 @@
         "Mapear las tareas del proceso operativo y clasificarlas en rutinarias vs. creativas/ambiguas.",
         "Automatizar con IA/algoritmos las tareas repetitivas de monitoreo y registro de datos.",
         "Asignar a personas las tareas de excepción, negociación y resolución de problemas complejos.",
-        "Diseñar el sistema para que la IA alerte a humanos ante anomalías o excepciones relevantes."
+        "Diseñar el sistema para que la IA alerte a humanos ante anomalías o excepciones relevantes.",
+        "Recompensar a empleados que identifiquen y automaticen tareas aburridas con IA",
+        "Clasificar cada tarea en Just Me, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA",
+        "Revisar periódicamente la clasificación conforme mejora la IA o cambian las prioridades del negocio"
       ],
       "entregable_esperado": "Matriz de asignación de tareas indicando cuáles son automatizables por IA y cuáles requieren intervención humana.",
       "nodos_previos": [
@@ -38520,13 +38557,41 @@
       ],
       "nodos_siguientes": [
         "bucle_retroalimentacion_autoajustable",
-        "automatizacion_tareas_aburridas"
+        "centaur_cyborg_ia",
+        "riesgo_sobredependencia_ia",
+        "search_for_business_model",
+        "sistemas_organizacionales_ia"
       ],
       "condiciones_activacion": [
         "Cuando se está diseñando un sistema que combina automatización con toma de decisiones humana.",
-        "Cuando el equipo pierde tiempo humano valioso en tareas repetitivas que podrían automatizarse."
+        "Cuando el equipo pierde tiempo humano valioso en tareas repetitivas que podrían automatizarse.",
+        "Al iniciar la adopción de IA en una organización",
+        "Cuando estás armando tu equipo y definiendo roles.",
+        "Cuando sientes miedo o dudas sobre qué tareas te va a quitar la IA."
       ],
-      "etiqueta_arbol": "Reparte Tareas entre Humanos e IA"
+      "etiqueta_arbol": "Reparte Tareas entre Humanos e IA",
+      "ids_alias": [
+        "automatizacion_tareas_aburridas",
+        "descomposicion_tareas_trabajo",
+        "framework_tareas_ia_humano"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "automatizacion_tareas_aburridas",
+          "titulo": "Automatizar lo Aburrido Primero",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+        },
+        {
+          "node_id": "descomposicion_tareas_trabajo",
+          "titulo": "Divide cada puesto en tareas para ver dónde entra la IA",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+        },
+        {
+          "node_id": "framework_tareas_ia_humano",
+          "titulo": "Framework de Clasificación de Tareas: Just Me, Delegadas y Automatizadas",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+        }
+      ]
     },
     "dmadv_design_for_six_sigma": {
       "node_id": "dmadv_design_for_six_sigma",
@@ -57196,7 +57261,8 @@
         "Cuando un equipo quiere decidir sistemáticamente qué automatizar con IA y qué no",
         "Cuando existe riesgo de sobrecarga humana o subutilización de la IA en el equipo"
       ],
-      "etiqueta_arbol": "Clasifica tus Tareas con IA"
+      "etiqueta_arbol": "Clasifica tus Tareas con IA",
+      "deprecado": true
     },
     "framework_tres_rs_sucesion": {
       "node_id": "framework_tres_rs_sucesion",
@@ -68567,7 +68633,8 @@
       "condiciones_activacion": [
         "Cuando un equipo o emprendedor comienza a explorar el uso de IA generativa en su negocio"
       ],
-      "etiqueta_arbol": "Prueba la IA en Todo"
+      "etiqueta_arbol": "Prueba la IA en Todo",
+      "deprecado": true
     },
     "involucramiento_empleados_sostenibilidad": {
       "node_id": "involucramiento_empleados_sostenibilidad",
@@ -69004,7 +69071,8 @@
         "jagged_frontier_ia_2",
         "jagged_frontier_ia_3"
       ],
-      "etiqueta_arbol": "Conoce los Límites de la IA"
+      "etiqueta_arbol": "Conoce los Límites de la IA",
+      "deprecado": true
     },
     "jardines_terrenos_verdes": {
       "node_id": "jardines_terrenos_verdes",
@@ -90110,7 +90178,7 @@
       ],
       "entregable_esperado": "Un protocolo simple donde defines en qué momentos revisas tú lo que hace la IA antes de dejarla actuar",
       "nodos_previos": [
-        "principio_invitar_ia_siempre"
+        "comprension_capacidades_limitaciones_ia"
       ],
       "nodos_siguientes": [
         "gestion_riesgo_seguridad_ia"
@@ -90146,7 +90214,8 @@
         "Al iniciar la integración de IA generativa en cualquier proceso del negocio",
         "Cuando se busca ventaja competitiva mediante el dominio experto de herramientas de IA"
       ],
-      "etiqueta_arbol": "Invita Siempre a la IA"
+      "etiqueta_arbol": "Invita Siempre a la IA",
+      "deprecado": true
     },
     "principio_mejora_continua_ia": {
       "node_id": "principio_mejora_continua_ia",
@@ -102145,8 +102214,8 @@
       ],
       "entregable_esperado": "Protocolo interno de uso responsable de IA con checkpoints de revisión humana obligatoria.",
       "nodos_previos": [
-        "descomposicion_tareas_trabajo",
-        "jagged_frontier_ia"
+        "division_trabajo_humano_ia",
+        "comprension_capacidades_limitaciones_ia"
       ],
       "nodos_siguientes": [
         "reconstruccion_significado_trabajo"
@@ -104322,7 +104391,7 @@
         "ficcion_especulativa_como_metodo",
         "tecnica_cambio_de_perspectiva_escala",
         "vision_estrategia_producto_pivote",
-        "descomposicion_tareas_trabajo",
+        "division_trabajo_humano_ia",
         "buscar_armonia_diseno",
         "modelo_tradicional_introduccion_producto",
         "contabilidad_innovacion_pivote",
@@ -108905,7 +108974,7 @@
       "entregable_esperado": "Propuesta de rediseño de sistema organizacional que incorpore IA de forma estructural",
       "nodos_previos": [
         "incentivos_transparencia_ia",
-        "automatizacion_tareas_aburridas",
+        "division_trabajo_humano_ia",
         "shadow_ai_use_organizacional"
       ],
       "nodos_siguientes": [
@@ -127047,7 +127116,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 231,
+    "nodos_sin_enlaces_entrantes": 234,
     "enlaces_rotos_en_grafo": 0
   }
 }

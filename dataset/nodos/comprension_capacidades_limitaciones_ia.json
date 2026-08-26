@@ -7,20 +7,53 @@
   "resumen_teorico": "Las IA modernas muestran capacidades que ni sus propios creadores anticiparon del todo: pueden sobresalir en tareas complejas, como escribir código funcional, y al mismo tiempo fallar en tareas aparentemente simples, como jugar tic-tac-toe correctamente. Esto significa que lo que es fácil para ti puede ser difícil para la IA, y al revés. Antes de confiar en ella para algo importante de tu negocio, prueba tú mismo qué tan bien resuelve tu caso concreto, en lugar de asumir que funciona bien solo porque el modelo tiene buena fama.",
   "pasos_accionables": [
     "Diseña pruebas específicas para tu propio caso de uso, no te quedes solo con pruebas estándar generales (benchmarks)",
-    "Prueba la IA en los casos límite (edge cases) que más importan en tu negocio",
+    "Prueba la IA en los casos límite (edge cases) que más importan en tu negocio, con casos reales y variados, no solo con ejemplos fáciles",
     "Anota qué patrones de error y de acierto vas encontrando mientras pruebas",
     "Revisa tú mismo, o con quien te ayude, cualquier resultado crítico antes de usarlo",
-    "Ajusta la instrucción que le das a la IA o la forma de trabajar según lo que vayas descubriendo"
+    "Ajusta la instrucción que le das a la IA o la forma de trabajar según lo que vayas descubriendo, hasta encontrar la forma óptima de uso para esa tarea específica",
+    "Probar la IA en cada tarea del flujo de trabajo diario, sin descartar previamente ninguna por asumir que 'no aplica'",
+    "Repetir el ejercicio periódicamente ya que las capacidades de la IA cambian con el tiempo",
+    "Compartir hallazgos con el equipo para acelerar el aprendizaje colectivo",
+    "Usa ese mapa para decidir qué automatizas, qué supervisas de cerca y qué haces tú sin IA"
   ],
   "entregable_esperado": "Un documento donde anotas, después de probar la IA en tu caso concreto, qué funcionó bien y qué falló.",
   "nodos_previos": [
-    "seleccion_modelo_ia_adecuado"
+    "seleccion_modelo_ia_adecuado",
+    "colaboracion_creador_consumidor",
+    "desafios_implementacion_ia"
   ],
   "nodos_siguientes": [
-    "fine_tuning_ia_para_caso_de_uso"
+    "fine_tuning_ia_para_caso_de_uso",
+    "centaur_cyborg_ia",
+    "principio_humano_en_el_loop",
+    "riesgo_sobredependencia_ia"
   ],
   "condiciones_activacion": [
-    "Cuando vas a dejarle a la IA una tarea importante de tu negocio"
+    "Cuando vas a dejarle a la IA una tarea importante de tu negocio",
+    "Cuando un equipo o emprendedor comienza a explorar el uso de IA generativa en su negocio",
+    "Cuando se busca ventaja competitiva mediante el dominio experto de herramientas de IA"
   ],
-  "etiqueta_arbol": "Conoce lo que la IA Ignora"
+  "etiqueta_arbol": "Conoce lo que la IA Ignora",
+  "ids_alias": [
+    "invitar_ia_a_todo",
+    "jagged_frontier_ia",
+    "principio_invitar_ia_siempre"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "invitar_ia_a_todo",
+      "titulo": "Principio de Invitar la IA a Todo",
+      "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+    },
+    {
+      "node_id": "jagged_frontier_ia",
+      "titulo": "El límite irregular de la IA (jagged frontier)",
+      "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+    },
+    {
+      "node_id": "principio_invitar_ia_siempre",
+      "titulo": "Principio 1: Invitar Siempre a la IA a la Mesa",
+      "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+    }
+  ]
 }

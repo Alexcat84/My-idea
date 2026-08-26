@@ -9,7 +9,10 @@
     "Mapear las tareas del proceso operativo y clasificarlas en rutinarias vs. creativas/ambiguas.",
     "Automatizar con IA/algoritmos las tareas repetitivas de monitoreo y registro de datos.",
     "Asignar a personas las tareas de excepción, negociación y resolución de problemas complejos.",
-    "Diseñar el sistema para que la IA alerte a humanos ante anomalías o excepciones relevantes."
+    "Diseñar el sistema para que la IA alerte a humanos ante anomalías o excepciones relevantes.",
+    "Recompensar a empleados que identifiquen y automaticen tareas aburridas con IA",
+    "Clasificar cada tarea en Just Me, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA",
+    "Revisar periódicamente la clasificación conforme mejora la IA o cambian las prioridades del negocio"
   ],
   "entregable_esperado": "Matriz de asignación de tareas indicando cuáles son automatizables por IA y cuáles requieren intervención humana.",
   "nodos_previos": [
@@ -18,11 +21,39 @@
   ],
   "nodos_siguientes": [
     "bucle_retroalimentacion_autoajustable",
-    "automatizacion_tareas_aburridas"
+    "centaur_cyborg_ia",
+    "riesgo_sobredependencia_ia",
+    "search_for_business_model",
+    "sistemas_organizacionales_ia"
   ],
   "condiciones_activacion": [
     "Cuando se está diseñando un sistema que combina automatización con toma de decisiones humana.",
-    "Cuando el equipo pierde tiempo humano valioso en tareas repetitivas que podrían automatizarse."
+    "Cuando el equipo pierde tiempo humano valioso en tareas repetitivas que podrían automatizarse.",
+    "Al iniciar la adopción de IA en una organización",
+    "Cuando estás armando tu equipo y definiendo roles.",
+    "Cuando sientes miedo o dudas sobre qué tareas te va a quitar la IA."
   ],
-  "etiqueta_arbol": "Reparte Tareas entre Humanos e IA"
+  "etiqueta_arbol": "Reparte Tareas entre Humanos e IA",
+  "ids_alias": [
+    "automatizacion_tareas_aburridas",
+    "descomposicion_tareas_trabajo",
+    "framework_tareas_ia_humano"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "automatizacion_tareas_aburridas",
+      "titulo": "Automatizar lo Aburrido Primero",
+      "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+    },
+    {
+      "node_id": "descomposicion_tareas_trabajo",
+      "titulo": "Divide cada puesto en tareas para ver dónde entra la IA",
+      "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+    },
+    {
+      "node_id": "framework_tareas_ia_humano",
+      "titulo": "Framework de Clasificación de Tareas: Just Me, Delegadas y Automatizadas",
+      "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+    }
+  ]
 }

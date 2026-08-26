@@ -1,0 +1,114 @@
+==============================================================================================================
+VARAS POR FORMA, N-ARIAS, DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO
+  fichero del tramo: docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+==============================================================================================================
+
+  pasos y cond son las varas de CONTENIDO contables; cab es el CABLEADO,
+  que por P.8 solo habla a contenido empatado. La marca < indica que ese
+  miembro es EL UNICO que alcanza el maximo de esa vara, o sea que la vara
+  APUNTA a el. Si dos o mas lo alcanzan, la vara EMPATA y no apunta.
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 18 | 4 miembros | FORMA: EMPATE SIN VARA
+   maximos medidos: pasos 4, condiciones 2, cableado 3
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: EMPATA, no apunta
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      alianzas_cross_industry                                       4      2      3
+      co_opetition_industria                                        4      2      3
+      colaboracion_sectorial                                        4      2      1
+      trabajo_colectivo_estandares_industria                        4      2      2
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 19 | 4 miembros | FORMA: CONTENIDO EMPATA
+   maximos medidos: pasos 4, condiciones 2, cableado 4
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: division_trabajo_humano_ia
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      automatizacion_tareas_aburridas                               3      2      2
+      descomposicion_tareas_trabajo                                 4      2      3
+      division_trabajo_humano_ia                                    4      2      4 <cab
+      framework_tareas_ia_humano                                    4      2      2
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 20 | 4 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 6, condiciones 2, cableado 4
+   la vara de PASOS       apunta a: efecto_bullwhip
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: compartir_datos_cadena_suministro
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      colaboracion_cadena_suministro                                5      2      2
+      compartir_datos_cadena_suministro                             4      2      4 <cab
+      diagnostico_efecto_latigo                                     4      2      2
+      efecto_bullwhip                                               6      2      3 <pasos
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 21 | 4 miembros | FORMA: CONTENIDO EMPATA
+   maximos medidos: pasos 4, condiciones 2, cableado 6
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: relacion_largo_plazo_proveedor_unico
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      compra_por_precio_mas_bajo_como_error                         3      2      2
+      fin_precio_como_criterio_unico                                4      2      3
+      relacion_largo_plazo_proveedor_unico                          4      2      6 <cab
+      relaciones_largo_plazo_con_proveedores                        4      1      2
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 22 | 4 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 5, condiciones 2, cableado 7
+   la vara de PASOS       apunta a: comprension_capacidades_limitaciones_ia
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: jagged_frontier_ia
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      comprension_capacidades_limitaciones_ia                       5      1      2 <pasos
+      invitar_ia_a_todo                                             4      1      2
+      jagged_frontier_ia                                            4      2      7 <cab
+      principio_invitar_ia_siempre                                  4      2      3
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 23 | 4 miembros | FORMA: CONTENIDO EMPATA
+   maximos medidos: pasos 4, condiciones 2, cableado 5
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: employee_pool_esop
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      creacion_option_pool                                          3      2      4
+      employee_pool_esop                                            4      2      5 <cab
+      option_pool_negociacion                                       4      2      3
+      pool_opciones_empleados                                       4      1      2
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 24 | 4 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 6, condiciones 2, cableado 8
+   la vara de PASOS       apunta a: diseno_experimentos_pass_fail
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: diseno_experimentos_pass_fail
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      disenar_tests_pass_fail                                       5      2      3
+      diseno_experimentos_hipotesis                                 4      1      5
+      diseno_experimentos_pass_fail                                 6      2      8 <pasos <cab
+      realizar_pruebas_pasa_no_pasa                                 4      1      5
+
+==============================================================================================================
+  actos mirados: 7 | POR FORMA: {'EMPATE SIN VARA': 1, 'CONTENIDO EMPATA': 3, 'UNA SOLA VARA': 3}
+
+LO QUE ESTO NO HACE: no elige superviviente, no aplica la guarda 1B y no funde.
+FIN

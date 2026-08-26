@@ -1,0 +1,321 @@
+{
+ "operacion": "OP-U-02",
+ "fecha": "2026-08-26",
+ "estado": "SELLADO",
+ "nomina": "docs/loop/SALIDA_V68_RECOMPUTO_ACTOS_APERTURA.jsonl (75 lineas, medidas al sellar). Es el recomputo del que sale la nomina de los actos.",
+ "tramo_definido_en": "docs/loop/TRAMO_UNICO_OPU02_V64.jsonl. EL INSUMO NO SE RE-MIDE, SE COTEJA: 47 actos, el fichero del tramo no trae puesto_hoy y este plan no lo inventa y el fichero del tramo no trae puesto de nomina previa, 0 de figura PURO A y 0 de tamano dos, TODO MEDIDO AL SELLAR sobre ese mismo fichero. La vara del tramo es un PREFIJO CON TOPE y no un minimo (acta 61, D1 y pregunta 1, registrada en docs/plan/03_FUSIONES.md). COTEJADO CONTRA LOS NODOS DE HOY antes de escribir una linea de este plan: 47 actos mirados, 42 vivos, 5 ya fundidos, DESCALCES 0, contados al sellar sobre dataset/nodos.",
+ "dossier": "docs/loop/SALIDA_V68_DOSSIER_LOTE_D.txt (601 lineas, medidas al sellar). Es la lectura P.5, el acto leido entero con su razon entera pegada.",
+ "vara": "DE LOS 47 ACTOS DEL TRAMO, 0 SON DE FUSION PURA, medido al sellar sobre el fichero del tramo (figura PURO A y tamano dos): un acto de dos miembros con UN par A directo y ningun mixto. El superviviente lo elige el CONTENIDO como P.8 lo define; UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4); si TODAS las varas de contenido concuerdan se funde a su lado; si el contenido EMPATA ENTERO, EL CABLEADO DECIDE SOLO (P.8); si dos varas de contenido CHOCAN decide la pieza DECLARADA (acta 53 pregunta 3, y tambien contra DOS conteos por acta 59 pregunta 2), y si la declarada esta a los dos lados se DECLARA. Y LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO (acta 54, pregunta 1, registrada en docs/plan/03_FUSIONES.md): en un acto de dos donde el unico candidato limpio es la puerta, LA PUERTA SOBREVIVE y el choque se registra en el motivo. EL ROTULO SOLO (LINEA contra PASOS) NUNCA DECIDE, y LA RAMA DE LA CANTIDAD COMO VARA SIGUE NO ADOPTADA.",
+ "varas_impresas": "docs/loop/SALIDA_V68_VARAS_N_ARIAS.txt (115 lineas, medidas al sellar). Es una fila por acto con pasos, condiciones y cableado contados por maquina y la FORMA del veredicto impresa. ESTE GENERADOR NO RE-CUENTA ESA FORMA Y POR ESO NO PUBLICA SU REPARTO: quien la quiera, la lee de ese fichero. LA FORMA IMPRESA ES MEDICION DE LOS TRES CONTEOS Y NO ADJUDICACION: no conoce la pieza declarada ni la guarda 1B, y por eso un acto puede salir de la tabla apuntando a un lado y decidirse al otro.",
+ "colisiones_esperadas": "docs/loop/SALIDA_V68_COLISIONES_ESPERADAS.txt (37 lineas, medidas al sellar). Es el censo por PAR RESUELTO sobre el archivo entero, medido ANTES de tocar un nodo. COMBINACIONES POSIBLES DE SUPERVIVIENTE EN ESTE TRAMO: 201, contadas al sellar como la suma de los miembros de los 47 actos. El censo esperado de cada lote lo fija ese fichero y una colision real DETIENE.",
+ "vara_de_las_puertas": "GUARDA 1B: ningun absorbido de este plan es semilla de entrada ni extremo de puente aprobado, comprobado por el generador y otra vez por el ejecutor. EN ESTE TRAMO HAY 11 ACTO(S) CON MIEMBRO PUERTA, MEDIDO AL SELLAR CONTRA entry_seeds.json Y LOS PUENTES APROBADOS: acto 1, acto 9, acto 13, acto 15, acto 17, acto 25, acto 26, acto 31, acto 44, acto 46, acto 51. Donde la puerta no sea la que el contenido elige, el choque se registra en el motivo por acta 54, pregunta 1.",
+ "politica_del_reparto": "LA HEREDADA Y CITADA, no reinventada (acta 51 D3; acta 52 D5 y D10; acta 54 pregunta 5; acta 55 preguntas 3, 4 y 5; registros de las vueltas 53 a 57 y 60): una pieza del absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de APPEND, y una pieza mitad propia mitad ya dicha va de APPEND ENTERO con el solape declarado para la poda de la fase 04. CUANDO LA RAZON DECLARA COMPARTIDO UN GESTO QUE EL TEXTO NO DICE, PARA EL REPARTO MANDA EL TEXTO (acta 55, pregunta 3). LAS PERDIDAS DE CONDICIONES NO VAN DE APPEND POR DEFECTO: se NOMBRAN mientras el INCISO de condiciones no exista (acta 55, pregunta 5), y solo van de APPEND cuando la condicion es un DISPARADOR DISTINTO y no un matiz del que el superviviente ya tiene. El INCISO es siempre TROZO VERBATIM del paso que muere, y se EXTRAE del nodo en vez de teclearse. Y BAJO EL CONTRATO CAMPO PROPIO v1: TODA perdida nombrada va ADEMAS sellada en el campo perdidas de su acto, con su especie, donde vive y a quien se enruta.",
+ "contrato_de_perdidas": "CAMPO PROPIO v1",
+ "vuelta": 68,
+ "tramo": "UNICO Y FINAL POR AGOTAMIENTO, LOTE D DEL TRAMO UNICO DE OP-U-02, PREFIJO SIN SALTOS DEL orden_universo DE LO QUE QUEDA: EL PREFIJO 18 A 24, SIETE ACTOS Y 28 NODOS. SEIS CIERRAN ENTEROS EN ESTA VUELTA: los actos 19 y 22 cierran FUNDIDOS y los actos 20, 21, 23 y 24 cierran DECLARADOS Y NO FUNDIDOS con el TRIANGULO DE P.10 como motivo sellado. EL ACTO 18 SE PROCESA ENTERO Y SE CUENTA APARTE: su forma medida es EMPATE SIN VARA, ninguna guarda ni motivo sellado lo detiene, y por el carril del transito que el acta 67 adjudico en su pregunta 2 NO se elige superviviente, el caso entero va al reporte marcado discutible y el acto queda ABIERTO EN TRANSITO dentro del tramo, ni cerrado ni saltado, para que el auditor adjudique el superviviente en su acta y el lote siguiente ejecute esa fusion como su primera operacion. POR ESO EL ACTO 18 NO TIENE FICHA EN ESTE PLAN: un plan de fusion sella fusiones y declarados con motivo sellado, y un acto en transito no es ninguna de las dos cosas",
+ "actos": [
+  {
+   "orden": 19,
+   "miembros": [
+    "division_trabajo_humano_ia",
+    "automatizacion_tareas_aburridas",
+    "descomposicion_tareas_trabajo",
+    "framework_tareas_ia_humano"
+   ],
+   "miembros_del_acto_entero": [
+    "automatizacion_tareas_aburridas",
+    "descomposicion_tareas_trabajo",
+    "division_trabajo_humano_ia",
+    "framework_tareas_ia_humano"
+   ],
+   "figura": "ACTO DE 4 MIEMBROS, clases internas {'A': 3} medidas en el fichero del tramo",
+   "superviviente": "division_trabajo_humano_ia",
+   "motivo": "ACTO 19 DEL TRAMO UNICO DE OP-U-02, LA FAMILIA DEL REPARTO DE TAREAS ENTRE PERSONA Y MAQUINA. UNA SOLA FAMILIA, Y LA PREGUNTA DE P.5 SE CONTESTA CON LAS RAZONES DELANTE Y NO CON IMPRESION: los CUATRO miembros tienen TRES pares internos con veredicto escrito y los TRES son de clase A (puestos 972, 1582 y 1597), hay CERO pares D internos, CERO nodos puente y CERO triangulos, medido con scripts/loop/vuelta65_puentes_del_tramo.py sobre el estado del dia. Y LA FAMILIA NO ES LECTURA MIA SINO DECLARACION DEL ARCHIVO: el puesto 1597 dice con todas sus letras que con ese par LA FAMILIA DEL REPARTO DE TAREAS ENTRE PERSONA Y MAQUINA PASA A CUATRO NODOS POR CIERRE TRANSITIVO, con descomposicion_tareas_trabajo de centro y sus tres A, los puestos 972, 1582 y este; y el 1582 la habia visto pasar de DOS a TRES y con miembros de DOS LIBROS distintos. UNA FRONTERA QUE EL ARCHIVO ESCRIBE Y QUE ESTA FUSION NO CRUZA, dicha porque es la que podria confundirse: el mismo puesto 1597 declara que ESTA FAMILIA NO ES EL RACIMO DE LA SUPERVISION DE LA IA de la seccion 11, y que ninguno de sus cuatro miembros figura en aquella nomina de diez. Cotejado hoy contra docs/plan/INVENTARIO.jsonl: los cuatro miembros de este acto estan FUERA de esa nomina. Son dos familias de IA distintas, una sobre quien hace que y otra sobre quien revisa. P.8 EN ORDEN: la FORMA medida es CONTENIDO EMPATA (pasos 4 a tres bandas, condiciones 2 a cuatro bandas), asi que EL CABLEADO DECIDE SOLO y apunta a division_trabajo_humano_ia con 4 contra un maximo de 3. No es que el cableado gane a un contenido que dice otra cosa: es que el contenido NO DICE NADA, que es el unico supuesto en que P.8 le da la palabra. EL ROTULO SOLO Y LA CANTIDAD NUNCA DECIDEN. GUARDA 1B: NINGUNO de los cuatro miembros es puerta (ni semilla de entrada ni extremo de puente aprobado), medido con scripts/loop/varas_n_arias_del_tramo.py contra el universo protegido de 256 ids. La guarda pasa por vacio y se dice. DUENOS: los dos campos del fichero fijado del tramo estan VACIOS para este acto (duenos_mesa_o_destejido y duenos_cualquier_operacion), medido hoy.",
+   "absorbidos": [
+    "automatizacion_tareas_aburridas",
+    "descomposicion_tareas_trabajo",
+    "framework_tareas_ia_humano"
+   ],
+   "pasos": {
+    "automatizacion_tareas_aburridas": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:1",
+     "3": "APPEND"
+    },
+    "descomposicion_tareas_trabajo": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:1",
+     "3": "CUBIERTO:3",
+     "4": "CUBIERTO:2"
+    },
+    "framework_tareas_ia_humano": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND",
+     "3": "CUBIERTO:2",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "automatizacion_tareas_aburridas": {
+     "1": "CUBIERTO:2",
+     "2": "APPEND"
+    },
+    "descomposicion_tareas_trabajo": {
+     "1": "APPEND",
+     "2": "APPEND"
+    },
+    "framework_tareas_ia_humano": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "EL REPARTO DE ESTE ACTO, con su costo publicado en vez de maquillado. CERO INCISO Y ES POR LA PUNTUACION, que es el carril que el acta 66 adjudico en su D5: LOS CUATRO PASOS DEL SUPERVIVIENTE TERMINAN EN PUNTO, asi que cualquier INCISO con nexo de coma cae en la guarda de la JUNTURA ROTA del generador. No se fuerza ninguno: lo que no cabe de INCISO va de APPEND si es gesto distinto y de CUBIERTO con la perdida NOMBRADA si no. SEIS APPEND, y el nodo crece de 4 pasos a 7 y de 2 condiciones a 5. VA MARCADO DISCUTIBLE. La eleccion es la del carril del D8 del acta 67 y del D9 del acta 65: catalogo mas rico con solapes declarados por encima de CUBIERTO que calla texto vivo. Los TRES APPEND de paso son gestos que el superviviente no tiene y que las razones nombran como propios: RECOMPENSAR a quien identifique y automatice tareas aburridas (la unica linea del acto que pone el incentivo en la gente y no en el jefe, y el puesto 1597 dice que no esta en ningun otro nodo del catalogo); LA TAXONOMIA DE TRES CAJAS con sus criterios de riesgo, importancia personal y capacidad actual de la IA (el puesto 972 dice que la taxonomia es lo que hay que salvar); y REVISAR PERIODICAMENTE la clasificacion, que es lo unico que dice que el reparto CADUCA. LOS TRES APPEND DE CONDICION son DISPARADORES DISTINTOS y no matices, que es la unica puerta por la que el acta 55 (pregunta 5) deja pasar una condicion de APPEND mientras el INCISO de condiciones no exista: el ARRANQUE DE LA ADOPCION de IA en la organizacion, el momento de ARMAR EL EQUIPO Y DEFINIR ROLES, y el MIEDO A QUE LA IA QUITE TAREAS, que es el unico disparador humano del acto. Ninguno de los tres es el disparador del superviviente, que es disenar un sistema mixto o ver tiempo humano perdido. UNA PERDIDA CON DOS SEDES EN UN SOLO CAMPO donde, por el criterio que el acta 67 adjudico en su D10: LA FILA ES POR PIEZA QUE SE PIERDE, NO POR SITIO DONDE VIVIA. La unidad de analisis POR ROL abre en el paso 1 de descomposicion_tareas_trabajo y cierra en su paso 3, y va en UNA fila con los dos sitios nombrados. DOS PERDIDAS CON ATENUANTE DECLARADO, que es la cuenta del pendiente 4 y crece otra vez.",
+   "perdidas": [
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "LA UNIDAD DE ANALISIS: que el barrido se haga POR PUESTO O ROL y termine en un ROL REDISENADO, y no por proceso operativo. Es la perdida que el propio puesto 1582 nombro antes de que nadie fundiera nada. El superviviente mapea LAS TAREAS DEL PROCESO OPERATIVO y asigna a personas las excepciones, la negociacion y los problemas complejos, pero en ningun paso dice que la unidad sea el puesto ni que el entregable sea un rol redisenado. UNA SOLA PIEZA CON DOS SEDES, sellada una vez con las dos nombradas (acta 67, D10)",
+     "donde": "paso 1 y paso 3 de descomposicion_tareas_trabajo",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "la CREATIVIDAD como destino del tiempo que se libera. El paso 3 del superviviente asigna a las personas la excepcion, la negociacion y la resolucion de problemas complejos, y esas tres cubren dos de las tres que el absorbido nombra, pero la creatividad no esta en ninguna",
+     "donde": "paso 3 de descomposicion_tareas_trabajo",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "que la delegacion a la maquina se evalue CON SUPERVISION HUMANA, dicho en el mismo paso que decide que se delega. ATENUANTE DECLARADO: el paso 4 del superviviente pone el mecanismo entero de escalamiento, que la IA alerte a las personas ante anomalias o excepciones relevantes, asi que la supervision llega por otro sitio aunque no acompane a la decision de delegar",
+     "donde": "paso 2 de automatizacion_tareas_aburridas",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "el ORDEN DE ARRANQUE de la delegacion: empezar por lo TEDIOSO Y FACIL DE VERIFICAR, que es la unica linea del acto que dice por donde se empieza y con que criterio de riesgo. ATENUANTE DECLARADO: el APPEND del paso 2 de framework_tareas_ia_humano trae la taxonomia entera con su criterio de capacidad actual de la IA, que es la mitad de ese arranque",
+     "donde": "paso 3 de framework_tareas_ia_humano",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE CONDICIONES",
+     "que": "la ROTACION ALTA y la MORAL BAJA por tareas repetitivas como sintoma disparador. La condicion 2 del superviviente habla de tiempo humano valioso perdido en tareas repetitivas, que es el mismo hecho medido por el reloj y no por la gente",
+     "donde": "condicion 1 de automatizacion_tareas_aburridas",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"
+    },
+    {
+     "especie": "DE CONDICIONES",
+     "que": "la SUBUTILIZACION DE LA IA como disparador simetrico. La condicion 2 del superviviente solo mira el lado humano, el tiempo que se pierde en lo repetitivo, y no el lado de la maquina ociosa que el absorbido pone a su lado",
+     "donde": "condicion 2 de framework_tareas_ia_humano",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"
+    }
+   ]
+  },
+  {
+   "orden": 22,
+   "miembros": [
+    "comprension_capacidades_limitaciones_ia",
+    "invitar_ia_a_todo",
+    "jagged_frontier_ia",
+    "principio_invitar_ia_siempre"
+   ],
+   "miembros_del_acto_entero": [
+    "comprension_capacidades_limitaciones_ia",
+    "invitar_ia_a_todo",
+    "jagged_frontier_ia",
+    "principio_invitar_ia_siempre"
+   ],
+   "figura": "ACTO DE 4 MIEMBROS, clases internas {'A': 3} medidas en el fichero del tramo",
+   "superviviente": "comprension_capacidades_limitaciones_ia",
+   "motivo": "ACTO 22 DEL TRAMO UNICO DE OP-U-02, EL BLOQUE DE CUATRO DEL RACIMO DE LA SUPERVISION DE LA IA. UNA SOLA FAMILIA, Y LA PREGUNTA DE P.5 SE CONTESTA CON LAS RAZONES DELANTE: los CUATRO miembros tienen TRES pares internos con veredicto escrito y los TRES son de clase A (puestos 177, 456 y 1517), hay CERO pares D internos, CERO nodos puente y CERO triangulos, medido con scripts/loop/vuelta65_puentes_del_tramo.py sobre el estado del dia. El 177 dice REPITE entre comprension_capacidades_limitaciones_ia y jagged_frontier_ia; el 456 dice que invitar_ia_a_todo y principio_invitar_ia_siempre son EL MISMO PRINCIPIO NUMERADO; y el 1517 declara que LA ABSORCION SI OCURRE y que la pareja de invitar a la IA a todo ENTRA al racimo por ese par. LA PARTICION ESCRITA NO SE MUEVE, Y ESO ES LA MITAD DEL MOTIVO. El racimo de la supervision de la IA esta en docs/plan/INVENTARIO.jsonl con nomina de DIEZ miembros y forma PARTIDO 5 MAS 4 MAS 1. Contrastado hoy contra el fichero fijado del tramo: el ACTO 11 es exactamente el bloque de CINCO (y ya cerro DECLARADO Y NO FUNDIDO por P.10 en la vuelta 66, donde el puesto 1541 dejo escrito que LA PARTICION ESCRITA NO SE MUEVE), ESTE ACTO 22 es exactamente el bloque de CUATRO, y comprender_alineacion_etica_ia es el UNO, el suelto que 04_ENLACES.md manda a mesa por ser el suelto de un racimo sin centro. LA SUMA DA 5 MAS 4 MAS 1 Y CALZA CON EL CAMPO forma DEL INVENTARIO. Esta fusion opera DENTRO de un bloque de la particion y NO CRUZA NI UNA DE SUS DOS FRONTERAS: ni toca al bloque de cinco, ni toca al suelto. LO QUE SE TRAE COMO CONTRASTE Y NO COMO FUENTE (regla 2 del ejecutor), porque se puede leer al reves y por eso va MARCADO DISCUTIBLE: el campo estado de esa entrada de inventario dice EN MESA, PARTICION PROVISIONAL, con fecha de corte 2026-08-13. MEDIDO HOY contra el fichero fijado del tramo: este acto tiene los DOS campos de dueno VACIOS (duenos_mesa_o_destejido y duenos_cualquier_operacion), y el campo operaciones de la propia entrada del racimo esta VACIO, o sea que NINGUNA operacion lo reclama. El criterio con el que OP-U-02 abrio su universo es el dueno medido, y la discrepancia se declara en vez de resolverse copiando. P.8 EN ORDEN: la FORMA medida es UNA SOLA VARA. La vara de PASOS apunta a comprension_capacidades_limitaciones_ia con 5 contra un maximo de 4 y la de CONDICIONES empata en 2, asi que SE FUNDE A SU LADO. El cableado apunta al OTRO, jagged_frontier_ia con 7 contra 3, y NO HABLA: P.8 es regla de PRELACION y el cableado solo decide a contenido empatado. Es la misma forma que el acto 16 de la vuelta 67, cuyo D7 el acta 67 adjudico A FAVOR con esta misma letra. EL MARGEN DEL CABLEADO SE PUBLICA COMO DATO. GUARDA 1B: NINGUNO de los cuatro miembros es puerta, medido con scripts/loop/varas_n_arias_del_tramo.py contra el universo protegido de 256 ids.",
+   "absorbidos": [
+    "invitar_ia_a_todo",
+    "jagged_frontier_ia",
+    "principio_invitar_ia_siempre"
+   ],
+   "pasos": {
+    "invitar_ia_a_todo": {
+     "1": "APPEND",
+     "2": "CUBIERTO:3",
+     "3": "APPEND",
+     "4": "APPEND"
+    },
+    "jagged_frontier_ia": {
+     "1": "CUBIERTO:1",
+     "2": "INCISO:2|con casos reales y variados, no solo con ejemplos fáciles|, ",
+     "3": "CUBIERTO:3",
+     "4": "APPEND"
+    },
+    "principio_invitar_ia_siempre": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:1",
+     "3": "CUBIERTO:3",
+     "4": "INCISO:5|hasta encontrar la forma óptima de uso para esa tarea específica|, "
+    }
+   },
+   "condiciones": {
+    "invitar_ia_a_todo": {
+     "1": "APPEND"
+    },
+    "jagged_frontier_ia": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:1"
+    },
+    "principio_invitar_ia_siempre": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL REPARTO DE ESTE ACTO, con su costo publicado. DOS INCISO Y NINGUNO APILADO SOBRE EL MISMO PASO, que es la regla que el acta 64 dejo escrita: uno al paso 2 y otro al paso 5 del superviviente. Los dos se EXTRAEN del nodo y se comprueban VERBATIM, y aqui SI caben porque los cinco pasos del superviviente NO terminan en punto, al reves que en el acto 19. SEIS APPEND, y el nodo crece de 5 pasos a 9 y de 1 condicion a 3. VA MARCADO DISCUTIBLE, y es el nodo mas grande que este tramo ha producido. La eleccion es la del carril del D8 del acta 67: catalogo mas rico con solapes declarados por encima de CUBIERTO que calla texto vivo. Los CUATRO APPEND de paso son los que el propio puesto 1517 nombro como propios de cada lado antes de que nadie fundiera nada: EL BARRIDO SIN DESCARTE PREVIO (probar en CADA tarea del flujo diario sin descartar ninguna por asumir que no aplica, que es el principio que da nombre a los dos nodos de la pareja); REPETIR EL EJERCICIO PERIODICAMENTE, la unica linea del racimo que dice que el mapa CADUCA; COMPARTIR LOS HALLAZGOS CON EL EQUIPO, la unica que saca el ejercicio de una sola cabeza; y USAR EL MAPA PARA DECIDIR que se automatiza, que se supervisa de cerca y que se hace sin la maquina, el unico paso que convierte la medicion en una politica. LOS DOS APPEND DE CONDICION son DISPARADORES DISTINTOS: EL ARRANQUE DE LA EXPLORACION de IA generativa (el superviviente dispara cuando ya vas a delegarle una tarea importante, que es mas tarde) y LA VENTAJA COMPETITIVA por dominio experto de la herramienta. DOS PERDIDAS CON ATENUANTE DECLARADO Y LAS DOS SON DE LA ESPECIE DEL PENDIENTE 4, ya lo dice el APPEND de un hermano: el paso 2 y la condicion 1 de principio_invitar_ia_siempre llegan enteros por los APPEND del paso 1 y de la condicion 1 de invitar_ia_a_todo, que es su gemelo declarado en el puesto 456. La marca no existe, el carril vigente alcanza, y la cuenta se publica. UNA PERDIDA CON DOS SEDES EN UN SOLO CAMPO donde, por el D10 del acta 67: el INVENTARIO DE TAREAS como paso previo vive en el paso 1 de jagged_frontier_ia y en el paso 1 de principio_invitar_ia_siempre, y va en UNA fila con los dos sitios nombrados.",
+   "perdidas": [
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "EL INVENTARIO DE TAREAS como paso previo: LISTAR todas las tareas del negocio donde se podria usar la IA, con sus areas nombradas (marketing, ventas, atencion al cliente, analisis), ANTES de probar nada. El superviviente arranca disenando pruebas para su propio caso de uso y en ningun paso manda listar. ATENUANTE DECLARADO: el APPEND del paso 1 de invitar_ia_a_todo manda probar en CADA tarea del flujo de trabajo diario, que recorre el mismo terreno sin escribirlo como lista. UNA SOLA PIEZA CON DOS SEDES, sellada una vez con las dos nombradas (acta 67, D10)",
+     "donde": "paso 1 de jagged_frontier_ia y paso 1 de principio_invitar_ia_siempre",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "el barrido SISTEMATICO SIN DESCARTE PREVIO dicho por segunda vez y con la palabra sistematicamente delante. ATENUANTE DECLARADO, Y ES LA ESPECIE DEL PENDIENTE 4: el contenido llega ENTERO por el APPEND del paso 1 de invitar_ia_a_todo, que es su gemelo declarado en el puesto 456 (el mismo principio numerado). Se sella igual, porque sobre-sellar declarando es mas auditable que callar",
+     "donde": "paso 2 de principio_invitar_ia_siempre",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "el CRITERIO DE PARADA de la iteracion. El paso 5 del superviviente manda ajustar la instruccion segun lo que se vaya descubriendo, pero no dice hasta cuando. ATENUANTE DECLARADO Y MEDIDO: el INCISO al paso 5 de este mismo acto le adosa VERBATIM el criterio del absorbido, asi que la pieza NO se pierde de hecho; se sella porque el sello es del reparto y no del resultado",
+     "donde": "paso 4 de principio_invitar_ia_siempre",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE CONDICIONES",
+     "que": "el ARRANQUE DE LA EXPLORACION de IA generativa como disparador. ATENUANTE DECLARADO, Y ES LA ESPECIE DEL PENDIENTE 4: llega entero por el APPEND de la condicion 1 de invitar_ia_a_todo, su gemelo del puesto 456",
+     "donde": "condicion 1 de principio_invitar_ia_siempre",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"
+    },
+    {
+     "especie": "DE CONDICIONES",
+     "que": "la DESCONFIANZA MEDIDA como disparador: no saber que tan confiable es la IA para una tarea especifica. La condicion 1 del superviviente dispara cuando vas a dejarle una tarea importante, que es la decision y no la duda que la precede",
+     "donde": "condicion 2 de jagged_frontier_ia",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"
+    }
+   ]
+  }
+ ],
+ "declarados_y_no_fundidos": [
+  {
+   "acto": 20,
+   "miembros": [
+    "colaboracion_cadena_suministro",
+    "compartir_datos_cadena_suministro",
+    "diagnostico_efecto_latigo",
+    "efecto_bullwhip"
+   ],
+   "superviviente_que_el_contenido_elige": "NINGUNO SE ELIGE, Y ESA ES LA DECISION. No se elige superviviente porque el acto no se funde. Se dice ademas a quien habria apuntado la forma: la FORMA medida es UNA SOLA VARA y la de PASOS apunta a efecto_bullwhip con 6 contra un maximo de 5, mientras el cableado apunta al otro lado, a compartir_datos_cadena_suministro con 4 contra 3. No llega a aplicarse: P.10 detiene ANTES.",
+   "motivo": "ACTO 20 DEL TRAMO UNICO DE OP-U-02, LA FAMILIA DEL EFECTO LATIGO EN LA CADENA DE SUMINISTRO. DECLARADO Y NO FUNDIDO CON EL TRIANGULO DE P.10 COMO MOTIVO SELLADO, que es el primero de los CUATRO motivos del catalogo. LO MEDIDO, Y ES LO QUE MANDA: UN nodo puente, colaboracion_cadena_suministro, que hace de puente en UN triangulo A mas A mas D; y UN par D interno, el puesto 994, entre compartir_datos_cadena_suministro y efecto_bullwhip. La ultima linea de P.10 dice que LO QUE NUNCA ES SALIDA es fundir la componente entera porque el cierre transitivo la junta, y aqui el cierre la junta por ese puente. LA LECTURA QUE UNA FUSION ENTERA DESMENTIRIA, con su razon delante: el 994 dice que efecto_bullwhip MIDE EL PROBLEMA y compartir_datos_cadena_suministro ES LA INVERSION QUE LO CURA, que NI UN PASO SE SOLAPA, y que es ARISTA QUE FALTA DE LAS MAS CLARAS porque el diagnostico termina apuntando al remedio POR SU NOMBRE y el grafo no los une. Fundir los cuatro a un vivo unico deprecaria los dos extremos de ese D contra el mismo superviviente y sellaria que repiten entre si, que es exactamente lo que esa lectura niega. UNA SEGUNDA COSA QUE SE DICE EN VEZ DE CALLARSE, y no es el motivo sellado: el puesto 730 declara un CHOQUE ENCIMA, con todas sus letras. Dice que la clase queda en A POR LA LECTURA VIEJA DEL CERO-ENLAZADOS y que SI MANDA EL CONTENIDO seria D, porque el hijo trae una contabilidad entera que la madre no tiene; y lo deja anotado en vez de elegir. Un acto con un choque de clase declarado y sin resolver es otro sitio por donde una fusion entera pisaria una lectura escrita. LA PREGUNTA DE P.5 SE CONTESTA IGUAL Y SE DEJA ESCRITA, porque el acto se lee entero aunque no se funda: ES UNA FAMILIA, los cuatro de Essentials of Supply Chain Management, PERO ES UNA FAMILIA MEZCLADA, que es el nombre que el archivo usa para una familia con un D dentro. FAMILIA NO ES FUSION. GUARDA 1B: NINGUN miembro es puerta, medido; la guarda pasa por vacio y se dice, para que la razon del declarado quede en UNA y no en dos. EL ACTO QUEDA VIVO Y ENTERO: no se toca ni un nodo, no se depreca ninguno y no se elige superviviente. Su destino comparte carril con el pendiente 3 del acta 67: el cierre de la fase 03.",
+   "medicion": {
+    "instrumento": "scripts/loop/vuelta65_puentes_del_tramo.py",
+    "salida": "docs/loop/SALIDA_V68_PUENTES_TRAMO.txt",
+    "dossier": "docs/loop/SALIDA_V68_DOSSIER_LOTE_D.txt",
+    "varas": "docs/loop/SALIDA_V68_VARAS_N_ARIAS.txt",
+    "miembros": 4,
+    "combinaciones": 6,
+    "pares_A": 3,
+    "pares_D": 1,
+    "pares_sin_veredicto": 2,
+    "nodos_puente": 1,
+    "triangulos_puente": 1,
+    "puertas_dentro": [],
+    "puestos_D_internos": [
+     994
+    ]
+   }
+  },
+  {
+   "acto": 21,
+   "miembros": [
+    "compra_por_precio_mas_bajo_como_error",
+    "fin_precio_como_criterio_unico",
+    "relacion_largo_plazo_proveedor_unico",
+    "relaciones_largo_plazo_con_proveedores"
+   ],
+   "superviviente_que_el_contenido_elige": "NINGUNO SE ELIGE, Y ESA ES LA DECISION. Se dice a quien habria apuntado la forma: la FORMA medida es CONTENIDO EMPATA (pasos 4 a tres bandas, condiciones 2 a tres bandas), asi que por P.8 decidiria EL CABLEADO SOLO, y apunta a relacion_largo_plazo_proveedor_unico con 6 contra un maximo de 3. No llega a aplicarse: P.10 detiene ANTES.",
+   "motivo": "ACTO 21 DEL TRAMO UNICO DE OP-U-02, LA FAMILIA DEL PUNTO 4 DE DEMING (dejar de comprar por precio y construir relaciones largas con pocos proveedores). DECLARADO Y NO FUNDIDO CON EL TRIANGULO DE P.10 COMO MOTIVO SELLADO. LO MEDIDO: DOS nodos puente, fin_precio_como_criterio_unico y relaciones_largo_plazo_con_proveedores, cada uno en UN triangulo A mas A mas D, y DOS pares D internos, los puestos 2927 y 3102. Es el acto mas mezclado del prefijo: de sus seis combinaciones hay CINCO leidas, tres A y dos D. LAS DOS LECTURAS QUE UNA FUSION ENTERA DESMENTIRIA, y las dos vienen con la verificacion hecha: el 2927 dice que compra_por_precio_mas_bajo_como_error y relaciones_largo_plazo_con_proveedores solo comparten la premisa, que compra trae DOS pasos enteros que relaciones no tiene y relaciones trae TRES que compra no tiene, y avisa con todas sus letras de que los dos fusionan por A CON EL MISMO TERCER NODO y de que QUIEN COMPONGA ESA CADENA SIN VERIFICAR QUE ES CONTENCION EN LOS DOS ESLABONES DIRA A. El 3102 dice que fin_precio_como_criterio_unico y relacion_largo_plazo_proveedor_unico tienen CONJUNTOS DISJUNTOS de pasos propios y entregables distintos. ESE AVISO ES LA RAZON POR LA QUE ESTE ACTO NO SE FUNDE Y SE DICE ASI: el cierre transitivo junta a los cuatro justamente por la cadena que el 2927 declara que NO COMPONE. Fundir la componente entera seria hacer exactamente lo que esa lectura dice que no se puede hacer, que es lo que la ultima linea de P.10 prohibe con todas sus letras. LA PREGUNTA DE P.5, CONTESTADA Y ESCRITA: ES UNA FAMILIA, los cuatro de Out of the Crisis y los cuatro del Punto 4, PERO ES UNA FAMILIA MEZCLADA, con DOS D dentro. FAMILIA NO ES FUSION. GUARDA 1B: NINGUN miembro es puerta, medido; la razon del declarado es UNA. EL ACTO QUEDA VIVO Y ENTERO. Su destino comparte carril con el pendiente 3 del acta 67: el cierre de la fase 03.",
+   "medicion": {
+    "instrumento": "scripts/loop/vuelta65_puentes_del_tramo.py",
+    "salida": "docs/loop/SALIDA_V68_PUENTES_TRAMO.txt",
+    "dossier": "docs/loop/SALIDA_V68_DOSSIER_LOTE_D.txt",
+    "varas": "docs/loop/SALIDA_V68_VARAS_N_ARIAS.txt",
+    "miembros": 4,
+    "combinaciones": 6,
+    "pares_A": 3,
+    "pares_D": 2,
+    "pares_sin_veredicto": 1,
+    "nodos_puente": 2,
+    "triangulos_puente": 2,
+    "puertas_dentro": [],
+    "puestos_D_internos": [
+     2927,
+     3102
+    ]
+   }
+  },
+  {
+   "acto": 23,
+   "miembros": [
+    "creacion_option_pool",
+    "employee_pool_esop",
+    "option_pool_negociacion",
+    "pool_opciones_empleados"
+   ],
+   "superviviente_que_el_contenido_elige": "NINGUNO SE ELIGE, Y ESA ES LA DECISION. Se dice a quien habria apuntado la forma: la FORMA medida es CONTENIDO EMPATA (pasos 4 a tres bandas, condiciones 2 a tres bandas), asi que por P.8 decidiria EL CABLEADO SOLO, y apunta a employee_pool_esop con 5 contra un maximo de 4. No llega a aplicarse: P.10 detiene ANTES.",
+   "motivo": "ACTO 23 DEL TRAMO UNICO DE OP-U-02, LA FAMILIA DE LA RESERVA DE OPCIONES PARA EMPLEADOS. DECLARADO Y NO FUNDIDO CON EL TRIANGULO DE P.10 COMO MOTIVO SELLADO. LO MEDIDO: UN nodo puente, pool_opciones_empleados, que hace de puente en UN triangulo A mas A mas D, y UN par D interno, el puesto 1193, entre employee_pool_esop y option_pool_negociacion. Es el acto mas leido del prefijo: de sus seis combinaciones hay CINCO con veredicto, cuatro A y una D. LA LECTURA QUE UNA FUSION ENTERA DESMENTIRIA: el 1193 dice que option_pool_negociacion es NEGOCIACION y employee_pool_esop es MECANICA, y nombra las dos cuentas concretas que la negociacion no trae en ninguna forma (definir si la reserva incluye lo ya entregado, y calcular como esa dilucion afecta el precio por accion que le queda al fundador). Y cierra diciendo que ESE PAR NO ANADE MIEMBRO: SALE SANO PORQUE TRAE CALCULOS PROPIOS, Y NO REPETICION. Fundir los cuatro a un vivo unico deprecaria los dos extremos de ese D contra el mismo superviviente y sellaria una repeticion que la lectura niega por escrito. LA PREGUNTA DE P.5, CONTESTADA Y ESCRITA: ES UNA FAMILIA, y el archivo la nombra dos veces con su cuenta. El puesto 1371 dice que LA FAMILIA DE LA RESERVA DE OPCIONES QUEDA EN CUATRO NODOS POR CIERRE TRANSITIVO, con option_pool_negociacion de centro, y el 1436 dice que NO CRECE, que sigue en cuatro, que su cobertura pasa a CINCO DE SEIS y que la forma sigue PROVISIONAL por un solo par. ES UNA FAMILIA MEZCLADA: cuatro A y un D dentro. FAMILIA NO ES FUSION. GUARDA 1B: NINGUN miembro es puerta, medido; la razon del declarado es UNA. EL ACTO QUEDA VIVO Y ENTERO. Su destino comparte carril con el pendiente 3 del acta 67: el cierre de la fase 03.",
+   "medicion": {
+    "instrumento": "scripts/loop/vuelta65_puentes_del_tramo.py",
+    "salida": "docs/loop/SALIDA_V68_PUENTES_TRAMO.txt",
+    "dossier": "docs/loop/SALIDA_V68_DOSSIER_LOTE_D.txt",
+    "varas": "docs/loop/SALIDA_V68_VARAS_N_ARIAS.txt",
+    "miembros": 4,
+    "combinaciones": 6,
+    "pares_A": 4,
+    "pares_D": 1,
+    "pares_sin_veredicto": 1,
+    "nodos_puente": 1,
+    "triangulos_puente": 1,
+    "puertas_dentro": [],
+    "puestos_D_internos": [
+     1193
+    ]
+   }
+  },
+  {
+   "acto": 24,
+   "miembros": [
+    "disenar_tests_pass_fail",
+    "diseno_experimentos_hipotesis",
+    "diseno_experimentos_pass_fail",
+    "realizar_pruebas_pasa_no_pasa"
+   ],
+   "superviviente_que_el_contenido_elige": "NINGUNO SE ELIGE, Y ESA ES LA DECISION. Se dice a quien habria apuntado la forma: la FORMA medida es UNA SOLA VARA, y por una vez las tres cuentas coinciden: pasos, cableado y el centro de la figura apuntan todos a diseno_experimentos_pass_fail (6 pasos contra un maximo de 5, cableado 8 contra 5). No llega a aplicarse: P.10 detiene ANTES, y ademas este acto TIENE DUENO.",
+   "motivo": "ACTO 24 DEL TRAMO UNICO DE OP-U-02, LA ESTRELLA DE PASS/FAIL. DECLARADO Y NO FUNDIDO CON EL TRIANGULO DE P.10 COMO MOTIVO SELLADO, Y CON DOS RAZONES INDEPENDIENTES MAS QUE SE PUBLICAN EN VEZ DE CALLARSE. LO MEDIDO: UN nodo puente, diseno_experimentos_pass_fail, que hace de puente en DOS triangulos A mas A mas D, y DOS pares D internos, los puestos 636 y 1346. PRIMERA RAZON, P.10: las dos lecturas que una fusion entera desmentiria dicen LA MISMA FRONTERA con las mismas palabras. El 636 dice que UNO CONSTRUYE EL EXPERIMENTO Y EL OTRO DICTA CUANDO SE APRUEBA, y el 1346 la repite entera: disciplina de diseno contra mecanica de ejecucion, con UNA sola linea compartida de cinco y de cuatro. Hay una frontera escrita DENTRO de este acto y una fusion entera la borraria. SEGUNDA RAZON, INDEPENDIENTE Y MEDIDA: ESTE ACTO ES UN EJEMPLAR DECLARADO DE UNA FIGURA DEL CATALOGO. La entrada figura ESTRELLA (9.23) de docs/plan/INVENTARIO.jsonl lo nombra como su ejemplar numero UNO, con el centro diseno_experimentos_pass_fail, los radios 467, 511 y 639 y los perifericos 636 y 1346 en D, y declara que LAS DOS CUENTAS QUE EL BANCO 9.23 EXIGE ESTAN HECHAS. Ademas el propio 1346 dice que ese par ERA EL QUE DECIDIA la condicion viva de la estrella y que al salir D la figura QUEDA CONFIRMADA. Fundir el acto entero deprecaria a la vez el centro y sus perifericos y borraria el ejemplar de una figura del inventario. TERCERA RAZON, Y ES LA MAS SECA: ESTE ACTO TIENE DUENO. Medido hoy sobre el fichero fijado del tramo, su campo duenos_cualquier_operacion trae OP-S-07, la operacion de CAMPO SUCIO de la fase 00 que retira enlaces que resuelven al propio nodo y que nombra a diseno_experimentos_pass_fail entre sus 27 nodos. El encargo de esta vuelta prohibe fundir un acto con dueno con todas sus letras. Es la unica razon de las tres que habria bastado sola sin leer nada. LA PREGUNTA DE P.5, CONTESTADA Y ESCRITA: ES UNA FAMILIA, los cuatro de The Startup Owner's Manual, PERO ES UNA FAMILIA MEZCLADA con DOS D dentro, y ademas es una FIGURA con centro y periferia, que es una forma mas fina que una familia plana. FAMILIA NO ES FUSION. GUARDA 1B: NINGUN miembro es puerta, medido. EL ACTO QUEDA VIVO Y ENTERO. Su destino comparte carril con el pendiente 3 del acta 67: el cierre de la fase 03.",
+   "medicion": {
+    "instrumento": "scripts/loop/vuelta65_puentes_del_tramo.py",
+    "salida": "docs/loop/SALIDA_V68_PUENTES_TRAMO.txt",
+    "dossier": "docs/loop/SALIDA_V68_DOSSIER_LOTE_D.txt",
+    "varas": "docs/loop/SALIDA_V68_VARAS_N_ARIAS.txt",
+    "miembros": 4,
+    "combinaciones": 6,
+    "pares_A": 3,
+    "pares_D": 2,
+    "pares_sin_veredicto": 1,
+    "nodos_puente": 1,
+    "triangulos_puente": 2,
+    "puertas_dentro": [],
+    "puestos_D_internos": [
+     636,
+     1346
+    ],
+    "duenos_cualquier_operacion": [
+     "OP-S-07"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+==============================================================================
+GENERADOR DEL PLAN DEL LOTE D DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO (vuelta 68)
+  fichero del tramo: docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+==============================================================================
+
+  acto 22  INCISO al paso 2
+      trozo pedido en ASCII : 'con casos reales y variados, no solo con ejemplos faciles'
+      trozo EXTRAIDO del nodo: 'con casos reales y variados, no solo con ejemplos fáciles'
+      paso resultante        : Prueba la IA en los casos límite (edge cases) que más importan en tu negocio, con casos reales y variados, no solo con ejemplos fáciles
+  acto 22  INCISO al paso 5
+      trozo pedido en ASCII : 'hasta encontrar la forma optima de uso para esa tarea especifica'
+      trozo EXTRAIDO del nodo: 'hasta encontrar la forma óptima de uso para esa tarea específica'
+      paso resultante        : Ajusta la instrucción que le das a la IA o la forma de trabajar según lo que vayas descubriendo, hasta encontrar la forma óptima de uso para esa tarea específica
+
+  las 2 fichas del lote D: TODAS en verde
+  guarda 1B: ningun absorbido es puerta
+  cobertura: cada paso y cada condicion de cada absorbido con marca UNICA
+  incisos: todos EXTRAIDOS del nodo y comprobados VERBATIM dentro del paso
+
+  RESUMEN DEL REPARTO POR ACTO:
+     acto 19  sobrevive division_trabajo_humano_ia                     piezas 17 (enteras 6, ya dichas 11, de INCISO 0)
+     acto 22  sobrevive comprension_capacidades_limitaciones_ia        piezas 17 (enteras 6, ya dichas 9, de INCISO 2)
+     TOTAL del lote D: piezas 34 (enteras 12, ya dichas 20, de INCISO 2)
+
+  LAS PERDIDAS SELLADAS EN CAMPO PROPIO (contrato CAMPO PROPIO v1):
+     actos con el campo perdidas presente: 2 de 2 (el campo va SIEMPRE)
+     actos que DECLARAN cero perdidas    : 0
+     actos con al menos una perdida      : 2
+     perdidas selladas, en total         : 11
+        acto 19  DE PARAMETRO DE PASO   LA UNIDAD DE ANALISIS: que el barrido se haga POR PUESTO O ROL y termine en un ROL REDISENADO, y no por proceso operativo. Es la perdida que el propio puesto 1582 nombro antes de que nadie fundiera nada. El superviviente mapea LAS TAREAS DEL PROCESO OPERATIVO y asigna a personas las excepciones, la negociacion y los problemas complejos, pero en ningun paso dice que la unidad sea el puesto ni que el entregable sea un rol redisenado. UNA SOLA PIEZA CON DOS SEDES, sellada una vez con las dos nombradas (acta 67, D10)
+        acto 19  DE PARAMETRO DE PASO   la CREATIVIDAD como destino del tiempo que se libera. El paso 3 del superviviente asigna a las personas la excepcion, la negociacion y la resolucion de problemas complejos, y esas tres cubren dos de las tres que el absorbido nombra, pero la creatividad no esta en ninguna
+        acto 19  DE PARAMETRO DE PASO   que la delegacion a la maquina se evalue CON SUPERVISION HUMANA, dicho en el mismo paso que decide que se delega. ATENUANTE DECLARADO: el paso 4 del superviviente pone el mecanismo entero de escalamiento, que la IA alerte a las personas ante anomalias o excepciones relevantes, asi que la supervision llega por otro sitio aunque no acompane a la decision de delegar
+        acto 19  DE PARAMETRO DE PASO   el ORDEN DE ARRANQUE de la delegacion: empezar por lo TEDIOSO Y FACIL DE VERIFICAR, que es la unica linea del acto que dice por donde se empieza y con que criterio de riesgo. ATENUANTE DECLARADO: el APPEND del paso 2 de framework_tareas_ia_humano trae la taxonomia entera con su criterio de capacidad actual de la IA, que es la mitad de ese arranque
+        acto 19  DE CONDICIONES         la ROTACION ALTA y la MORAL BAJA por tareas repetitivas como sintoma disparador. La condicion 2 del superviviente habla de tiempo humano valioso perdido en tareas repetitivas, que es el mismo hecho medido por el reloj y no por la gente
+        acto 19  DE CONDICIONES         la SUBUTILIZACION DE LA IA como disparador simetrico. La condicion 2 del superviviente solo mira el lado humano, el tiempo que se pierde en lo repetitivo, y no el lado de la maquina ociosa que el absorbido pone a su lado
+        acto 22  DE PARAMETRO DE PASO   EL INVENTARIO DE TAREAS como paso previo: LISTAR todas las tareas del negocio donde se podria usar la IA, con sus areas nombradas (marketing, ventas, atencion al cliente, analisis), ANTES de probar nada. El superviviente arranca disenando pruebas para su propio caso de uso y en ningun paso manda listar. ATENUANTE DECLARADO: el APPEND del paso 1 de invitar_ia_a_todo manda probar en CADA tarea del flujo de trabajo diario, que recorre el mismo terreno sin escribirlo como lista. UNA SOLA PIEZA CON DOS SEDES, sellada una vez con las dos nombradas (acta 67, D10)
+        acto 22  DE PARAMETRO DE PASO   el barrido SISTEMATICO SIN DESCARTE PREVIO dicho por segunda vez y con la palabra sistematicamente delante. ATENUANTE DECLARADO, Y ES LA ESPECIE DEL PENDIENTE 4: el contenido llega ENTERO por el APPEND del paso 1 de invitar_ia_a_todo, que es su gemelo declarado en el puesto 456 (el mismo principio numerado). Se sella igual, porque sobre-sellar declarando es mas auditable que callar
+        acto 22  DE PARAMETRO DE PASO   el CRITERIO DE PARADA de la iteracion. El paso 5 del superviviente manda ajustar la instruccion segun lo que se vaya descubriendo, pero no dice hasta cuando. ATENUANTE DECLARADO Y MEDIDO: el INCISO al paso 5 de este mismo acto le adosa VERBATIM el criterio del absorbido, asi que la pieza NO se pierde de hecho; se sella porque el sello es del reparto y no del resultado
+        acto 22  DE CONDICIONES         el ARRANQUE DE LA EXPLORACION de IA generativa como disparador. ATENUANTE DECLARADO, Y ES LA ESPECIE DEL PENDIENTE 4: llega entero por el APPEND de la condicion 1 de invitar_ia_a_todo, su gemelo del puesto 456
+        acto 22  DE CONDICIONES         la DESCONFIANZA MEDIDA como disparador: no saber que tan confiable es la IA para una tarea especifica. La condicion 1 del superviviente dispara cuando vas a dejarle una tarea importante, que es la decision y no la duda que la precede
+
+  plan escrito: docs\loop\PLAN_V68_OPU02_LOTE_D.json
+
+FIN

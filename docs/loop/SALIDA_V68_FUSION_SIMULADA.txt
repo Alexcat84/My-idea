@@ -1,0 +1,150 @@
+==============================================================================
+OP-U-02 . UNICO Y FINAL POR AGOTAMIENTO, LOTE D DEL TRAMO UNICO DE OP-U-02, PREFIJO SIN SALTOS DEL orden_universo DE LO QUE QUEDA: EL PREFIJO 18 A 24, SIETE ACTOS Y 28 NODOS. SEIS CIERRAN ENTEROS EN ESTA VUELTA: los actos 19 y 22 cierran FUNDIDOS y los actos 20, 21, 23 y 24 cierran DECLARADOS Y NO FUNDIDOS con el TRIANGULO DE P.10 como motivo sellado. EL ACTO 18 SE PROCESA ENTERO Y SE CUENTA APARTE: su forma medida es EMPATE SIN VARA, ninguna guarda ni motivo sellado lo detiene, y por el carril del transito que el acta 67 adjudico en su pregunta 2 NO se elige superviviente, el caso entero va al reporte marcado discutible y el acto queda ABIERTO EN TRANSITO dentro del tramo, ni cerrado ni saltado, para que el auditor adjudique el superviviente en su acta y el lote siguiente ejecute esa fusion como su primera operacion. POR ESO EL ACTO 18 NO TIENE FICHA EN ESTE PLAN: un plan de fusion sella fusiones y declarados con motivo sellado, y un acto en transito no es ninguna de las dos cosas . MODO SIMULAR
+plan: docs/loop/PLAN_V68_OPU02_LOTE_D.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3243 vivos, 610 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 19 . sobrevive division_trabajo_humano_ia . absorbe automatizacion_tareas_aburridas, descomposicion_tareas_trabajo, framework_tareas_ia_humano
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 7 (anadidos 3) | condiciones 2 -> 5 (anadidas 3)
+  alias del superviviente: ['automatizacion_tareas_aburridas', 'descomposicion_tareas_trabajo', 'framework_tareas_ia_humano']
+
+------------------------------------------------------------------------------
+ACTO 22 . sobrevive comprension_capacidades_limitaciones_ia . absorbe invitar_ia_a_todo, jagged_frontier_ia, principio_invitar_ia_siempre
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 9 (anadidos 4) | condiciones 1 -> 3 (anadidas 2)
+  INCISOS ADOSADOS: 2
+     del paso 2 de jagged_frontier_ia al PASO 2 del superviviente
+        inciso VERBATIM: 'con casos reales y variados, no solo con ejemplos fáciles'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Prueba la IA en los casos límite (edge cases) que más importan en tu negocio, con casos reales y variados, no solo con ejemplos fáciles
+     del paso 4 de principio_invitar_ia_siempre al PASO 5 del superviviente
+        inciso VERBATIM: 'hasta encontrar la forma óptima de uso para esa tarea específica'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Ajusta la instrucción que le das a la IA o la forma de trabajar según lo que vayas descubriendo, hasta encontrar la forma óptima de uso para esa tarea específica
+  alias del superviviente: ['invitar_ia_a_todo', 'jagged_frontier_ia', 'principio_invitar_ia_siempre']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 11
+   centaur_cyborg_ia                                    nodos_previos     framework_tareas_ia_humano -> division_trabajo_humano_ia
+   centaur_cyborg_ia                                    nodos_previos     jagged_frontier_ia -> comprension_capacidades_limitaciones_ia
+   colaboracion_creador_consumidor                      nodos_siguientes  jagged_frontier_ia -> comprension_capacidades_limitaciones_ia
+   desafios_implementacion_ia                           nodos_siguientes  invitar_ia_a_todo -> comprension_capacidades_limitaciones_ia
+   desafios_implementacion_ia                           nodos_siguientes  principio_invitar_ia_siempre -> comprension_capacidades_limitaciones_ia
+   division_trabajo_humano_ia                           nodos_siguientes  automatizacion_tareas_aburridas -> division_trabajo_humano_ia
+   principio_humano_en_el_loop                          nodos_previos     principio_invitar_ia_siempre -> comprension_capacidades_limitaciones_ia
+   riesgo_sobredependencia_ia                           nodos_previos     descomposicion_tareas_trabajo -> division_trabajo_humano_ia
+   riesgo_sobredependencia_ia                           nodos_previos     jagged_frontier_ia -> comprension_capacidades_limitaciones_ia
+   search_for_business_model                            nodos_previos     descomposicion_tareas_trabajo -> division_trabajo_humano_ia
+   sistemas_organizacionales_ia                         nodos_previos     automatizacion_tareas_aburridas -> division_trabajo_humano_ia
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 1
+   definicion_startup                                   nodos_previos     descomposicion_tareas_trabajo (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 1
+   desafios_implementacion_ia                           nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   division_trabajo_humano_ia                           nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 891   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 890   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 1, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 10 de 10
+guarda D, los 6 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (34 filas)
+ acto de que nodo                                  que          n  a donde va
+   19 automatizacion_tareas_aburridas              paso         1  ya lo dice el PASO 1 del superviviente
+        Listar las tareas más tediosas y repetitivas del equipo u organización
+   19 automatizacion_tareas_aburridas              paso         2  ya lo dice el PASO 1 del superviviente
+        Evaluar cuáles de esas tareas pueden delegarse a IA con supervisión humana
+   19 automatizacion_tareas_aburridas              paso         3  PASO 5 del superviviente
+        Recompensar a empleados que identifiquen y automaticen tareas aburridas con IA
+   19 automatizacion_tareas_aburridas              condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Si el equipo reporta alta rotación o baja moral por tareas repetitivas
+   19 automatizacion_tareas_aburridas              condicion    2  CONDICION 3 del superviviente
+        Al iniciar la adopción de IA en una organización
+   19 descomposicion_tareas_trabajo                paso         1  ya lo dice el PASO 1 del superviviente
+        Lista todas las tareas que forman cada rol clave de tu negocio.
+   19 descomposicion_tareas_trabajo                paso         2  ya lo dice el PASO 1 del superviviente
+        Revisa cada tarea y pregúntate cuánto se parece a algo que la IA ya puede hacer hoy.
+   19 descomposicion_tareas_trabajo                paso         3  ya lo dice el PASO 3 del superviviente
+        Rediseña el rol para que la persona se dedique a lo que más vale: creatividad, relación con clientes, decisiones difíciles.
+   19 descomposicion_tareas_trabajo                paso         4  ya lo dice el PASO 2 del superviviente
+        Pasa las tareas repetitivas o administrativas a herramientas de IA.
+   19 descomposicion_tareas_trabajo                condicion    1  CONDICION 4 del superviviente
+        Cuando estás armando tu equipo y definiendo roles.
+   19 descomposicion_tareas_trabajo                condicion    2  CONDICION 5 del superviviente
+        Cuando sientes miedo o dudas sobre qué tareas te va a quitar la IA.
+   19 framework_tareas_ia_humano                   paso         1  ya lo dice el PASO 1 del superviviente
+        Listar todas las tareas recurrentes del negocio o rol
+   19 framework_tareas_ia_humano                   paso         2  PASO 6 del superviviente
+        Clasificar cada tarea en Just Me, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA
+   19 framework_tareas_ia_humano                   paso         3  ya lo dice el PASO 2 del superviviente
+        Empezar delegando tareas tediosas y fáciles de verificar
+   19 framework_tareas_ia_humano                   paso         4  PASO 7 del superviviente
+        Revisar periódicamente la clasificación conforme mejora la IA o cambian las prioridades del negocio
+   19 framework_tareas_ia_humano                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando un equipo quiere decidir sistemáticamente qué automatizar con IA y qué no
+   19 framework_tareas_ia_humano                   condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando existe riesgo de sobrecarga humana o subutilización de la IA en el equipo
+   22 invitar_ia_a_todo                            paso         1  PASO 6 del superviviente
+        Probar la IA en cada tarea del flujo de trabajo diario, sin descartar previamente ninguna por asumir que 'no aplica'
+   22 invitar_ia_a_todo                            paso         2  ya lo dice el PASO 3 del superviviente
+        Registrar resultados (buenos y malos) de cada experimento
+   22 invitar_ia_a_todo                            paso         3  PASO 7 del superviviente
+        Repetir el ejercicio periódicamente ya que las capacidades de la IA cambian con el tiempo
+   22 invitar_ia_a_todo                            paso         4  PASO 8 del superviviente
+        Compartir hallazgos con el equipo para acelerar el aprendizaje colectivo
+   22 invitar_ia_a_todo                            condicion    1  CONDICION 2 del superviviente
+        Cuando un equipo o emprendedor comienza a explorar el uso de IA generativa en su negocio
+   22 jagged_frontier_ia                           paso         1  ya lo dice el PASO 1 del superviviente
+        Haz una lista de todas las tareas de tu negocio o producto donde podrías usar IA
+   22 jagged_frontier_ia                           paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Prueba la IA en cada tarea con casos reales y variados, no solo con ejemplos fáciles
+   22 jagged_frontier_ia                           paso         3  ya lo dice el PASO 3 del superviviente
+        Anota en qué tareas rinde bien y en cuáles rinde mal
+   22 jagged_frontier_ia                           paso         4  PASO 9 del superviviente
+        Usa ese mapa para decidir qué automatizas, qué supervisas de cerca y qué haces tú sin IA
+   22 jagged_frontier_ia                           condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando estás decidiendo qué partes de tu proceso o producto puedes delegarle a la IA
+   22 jagged_frontier_ia                           condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando no sabes qué tan confiable es la IA para una tarea específica de tu negocio
+   22 principio_invitar_ia_siempre                 paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar todas las tareas cotidianas del negocio (marketing, ventas, atención al cliente, análisis)
+   22 principio_invitar_ia_siempre                 paso         2  ya lo dice el PASO 1 del superviviente
+        Probar sistemáticamente el uso de IA en cada una de ellas, sin descartar tareas por asumir que 'no aplica'
+   22 principio_invitar_ia_siempre                 paso         3  ya lo dice el PASO 3 del superviviente
+        Documentar qué usos generaron valor real y cuáles fueron frustrantes o inútiles
+   22 principio_invitar_ia_siempre                 paso         4  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Iterar el prompt o flujo de trabajo hasta encontrar la forma óptima de uso para esa tarea específica
+   22 principio_invitar_ia_siempre                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Al iniciar la integración de IA generativa en cualquier proceso del negocio
+   22 principio_invitar_ia_siempre                 condicion    2  CONDICION 3 del superviviente
+        Cuando se busca ventaja competitiva mediante el dominio experto de herramientas de IA
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 2
+  nodos implicados    : 8
+  nodos que MUEREN    : 6
+  piezas repartidas   : 34 (12 viajan enteras, 20 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 4
+
+SIMULACION: cero escrituras.
