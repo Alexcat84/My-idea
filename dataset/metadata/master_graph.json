@@ -2111,7 +2111,8 @@
       "condiciones_activacion": [
         "Cuando el usuario está en proceso de venta consultiva compleja (B2B) y necesita definir objetivos claros para reuniones con clientes potenciales"
       ],
-      "etiqueta_arbol": "Mide Avances, no Solo Charlas"
+      "etiqueta_arbol": "Mide Avances, no Solo Charlas",
+      "deprecado": true
     },
     "advocacy_customer_journey": {
       "node_id": "advocacy_customer_journey",
@@ -2421,24 +2422,57 @@
       "fuente": "The Green to Gold Business Play - Daniel C. Esty",
       "resumen_teorico": "Algunos desafíos de sostenibilidad son demasiado grandes para que una sola empresa los resuelva, por lo que las compañías líderes forman coaliciones industriales. Ejemplos incluyen la colaboración de Nike y Patagonia para impulsar el mercado de algodón orgánico, o la Electronics Industry Citizenship Coalition (EICC) que creó un código de conducta unificado para toda la industria electrónica.",
       "pasos_accionables": [
-        "Identificar desafíos de sostenibilidad compartidos con competidores o empresas de la industria",
+        "Identificar desafíos de sostenibilidad compartidos con competidores o empresas de la industria, evaluando antes si la empresa tiene suficiente poder de mercado para exigir cambios individualmente",
         "Buscar coaliciones existentes (ej. EICC, AIM-PROGRESS) o formar una nueva",
         "Definir estándares comunes de conducta social y ambiental para toda la industria",
-        "Usar el poder de compra colectivo para incentivar cambios en el mercado (ej. productos orgánicos)"
+        "Usar el poder de compra colectivo para incentivar cambios en el mercado (ej. productos orgánicos)",
+        "Publicar y monitorear el cumplimiento colectivo de los estándares",
+        "Diseñar un marco de cumplimiento colectivo (tipo 'Responsible Care')",
+        "Aplicar el estándar conjunto a proveedores compartidos"
       ],
       "entregable_esperado": "Una alianza o membresía formal en una coalición industrial con estándares compartidos de sostenibilidad",
       "nodos_previos": [
         "optimizacion_tecnologia_cadena_suministro",
-        "programa_mentoria_proveedores"
+        "programa_mentoria_proveedores",
+        "dialogo_proveedores",
+        "formalizar_alianza_estrategica",
+        "identificar_evaluar_socios_estrategicos",
+        "seguimiento_cumplimiento_cadena_suministro",
+        "uso_regulaciones_como_espada"
       ],
       "nodos_siguientes": [
-        "manufactura_verde"
+        "manufactura_verde",
+        "formar_consejo_asesor_sostenibilidad"
       ],
       "condiciones_activacion": [
         "Cuando el poder de compra individual de la empresa es insuficiente para inducir cambios en el mercado",
-        "Si existen desafíos sistémicos de sostenibilidad en toda la industria"
+        "Si existen desafíos sistémicos de sostenibilidad en toda la industria",
+        "Si el mal desempeño de competidores puede afectar la reputación de toda la industria",
+        "Si múltiples empresas dependen de los mismos proveedores críticos"
       ],
-      "etiqueta_arbol": "Une Fuerzas con tu Industria"
+      "etiqueta_arbol": "Une Fuerzas con tu Industria",
+      "ids_alias": [
+        "co_opetition_industria",
+        "colaboracion_sectorial",
+        "trabajo_colectivo_estandares_industria"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "co_opetition_industria",
+          "titulo": "Co-opetición: Colaboración entre Competidores de la Industria",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        },
+        {
+          "node_id": "colaboracion_sectorial",
+          "titulo": "Colaboración Sectorial para Estándares de Proveedores",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        },
+        {
+          "node_id": "trabajo_colectivo_estandares_industria",
+          "titulo": "Trabajo Colectivo para Elevar Estándares de la Industria antes de la Legislación",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        }
+      ]
     },
     "alineacion_bd_metricas_core": {
       "node_id": "alineacion_bd_metricas_core",
@@ -3325,7 +3359,8 @@
         "Cuando existe un problema crónico de calidad sin causa clara",
         "Cuando el equipo tiene múltiples hipótesis sin validar"
       ],
-      "etiqueta_arbol": "Encuentra la Causa Real"
+      "etiqueta_arbol": "Encuentra la Causa Real",
+      "deprecado": true
     },
     "analisis_competencia_franquicias": {
       "node_id": "analisis_competencia_franquicias",
@@ -3884,7 +3919,8 @@
       "condiciones_activacion": [
         "Cuando se ha definido un problema y se requiere identificar su causa antes de proponer un remedio"
       ],
-      "etiqueta_arbol": "Diagnostica tu Causa Raíz"
+      "etiqueta_arbol": "Diagnostica tu Causa Raíz",
+      "deprecado": true
     },
     "analisis_disrupciones_mercado": {
       "node_id": "analisis_disrupciones_mercado",
@@ -14094,7 +14130,7 @@
       "entregable_esperado": "Un registro documentado de al menos un ciclo PDSA completo aplicado a una etapa de proceso, incluyendo hipótesis, datos y conclusiones",
       "nodos_previos": [
         "plan_de_accion_transformacion",
-        "analisis_diagnostico_causa",
+        "viaje_diagnostico_remedial",
         "control_mantener_ganancias"
       ],
       "nodos_siguientes": [
@@ -14386,7 +14422,6 @@
         "marco_avances_continuaciones",
         "metodologia_spin_selling",
         "modelo_spin_preguntas",
-        "objetivos_de_llamada_orientados_a_avance",
         "relacion_continua_con_cliente"
       ],
       "condiciones_activacion": [
@@ -15761,7 +15796,8 @@
         "Si la industria enfrenta una crisis reputacional o regulatoria compartida",
         "Si los esfuerzos individuales no bastan para transformar la percepción del sector"
       ],
-      "etiqueta_arbol": "Colabora con tu Competencia Directa"
+      "etiqueta_arbol": "Colabora con tu Competencia Directa",
+      "deprecado": true
     },
     "co_sale_drag_along_agreements": {
       "fase_proyecto": "ejecucion",
@@ -16150,7 +16186,8 @@
         "Si la empresa no tiene poder individual sobre proveedores",
         "Si existen economías de escala en la colaboración sectorial"
       ],
-      "etiqueta_arbol": "Únete a tu Sector por Estándares"
+      "etiqueta_arbol": "Únete a tu Sector por Estándares",
+      "deprecado": true
     },
     "colaboracion_transporte_ctm": {
       "node_id": "colaboracion_transporte_ctm",
@@ -26229,8 +26266,7 @@
         "obtencion_de_compromiso",
         "modelo_spin_preguntas",
         "obtencion_compromiso",
-        "etapa_investigacion_ventas",
-        "investigacion_como_habilidad_clave"
+        "enfoque_etapa_investigacion"
       ],
       "condiciones_activacion": [
         "Cuando no tienes una estructura clara para tus llamadas comerciales"
@@ -30992,7 +31028,7 @@
       ],
       "nodos_siguientes": [
         "analisis_sintomas",
-        "analisis_diagnostico_causa"
+        "viaje_diagnostico_remedial"
       ],
       "condiciones_activacion": [
         "Cuando existe un problema de calidad recurrente o crítico que requiere ser abordado formalmente.",
@@ -33560,7 +33596,7 @@
       ],
       "entregable_esperado": "Un concepto de producto validado y parcialmente probado ('protocepto'), listo para pasar a la etapa formal de desarrollo (Stage-Gate).",
       "nodos_previos": [
-        "etnografia_investigacion_usuario",
+        "investigacion_etnografica_ideacion",
         "equipos_visita_cliente",
         "cliente_disena_producto",
         "lead_user_analysis",
@@ -34395,7 +34431,7 @@
         "brief_competitivo",
         "entrada_mercado_nuevo",
         "embudo_get_keep_grow",
-        "etapa_de_investigacion",
+        "enfoque_etapa_investigacion",
         "hipotesis_relacion_clientes_web",
         "resegmentacion_mercado_nicho_bajo_costo"
       ],
@@ -34764,7 +34800,7 @@
       ],
       "entregable_esperado": "Un diagnóstico basado en datos reales de tus conversaciones de venta, que te muestre la causa raíz antes de decidir cómo mejorar o entrenarte",
       "nodos_previos": [
-        "analisis_causa_raiz_diagnostico"
+        "viaje_diagnostico_remedial"
       ],
       "nodos_siguientes": [
         "prevencion_objeciones_vs_manejo"
@@ -35077,7 +35113,7 @@
         "codigo_conducta_proveedores"
       ],
       "nodos_siguientes": [
-        "colaboracion_sectorial",
+        "alianzas_cross_industry",
         "programa_mentoria_proveedores"
       ],
       "condiciones_activacion": [
@@ -37749,7 +37785,7 @@
         "search_for_business_model"
       ],
       "nodos_siguientes": [
-        "etnografia_de_proyecto",
+        "investigacion_etnografica_ideacion",
         "alineacion_de_objetivos_en_sistemas"
       ],
       "condiciones_activacion": [
@@ -38703,7 +38739,7 @@
       ],
       "nodos_siguientes": [
         "dmaic_fase_improve",
-        "analisis_causa_raiz_diagnostico"
+        "viaje_diagnostico_remedial"
       ],
       "condiciones_activacion": [
         "Cuando se dispone de datos de línea base y se requiere confirmar estadísticamente las causas raíz del problema"
@@ -42806,7 +42842,7 @@
       ],
       "entregable_esperado": "Un mapa de insights organizado en las tres capas (física, cognitiva, emocional) que revele necesidades latentes del usuario.",
       "nodos_previos": [
-        "etnografia_de_proyecto"
+        "investigacion_etnografica_ideacion"
       ],
       "nodos_siguientes": [
         "tecnologias_disruptivas_oportunidad",
@@ -43621,28 +43657,55 @@
         "Al planificar una llamada, dedica más tiempo a diseñar preguntas que a preparar el discurso de producto.",
         "Evita mostrar beneficios o capacidades hasta haber desarrollado suficientemente el problema y su implicación.",
         "Evalúa tus llamadas pasadas: ¿cuánto tiempo hablaste de tu producto en la primera mitad? Si es mucho, ajusta tu enfoque.",
-        "Entrena primero en preguntas de Situación y Problema antes de avanzar a Implicación y Necesidad-beneficio."
+        "Entrena primero en preguntas de Situación y Problema antes de avanzar a Implicación y Necesidad-beneficio.",
+        "Usa las respuestas del cliente para desarrollar y ampliar la percepción de sus propias necesidades",
+        "Practica escuchar de verdad para detectar problemas que el cliente no dice de manera directa"
       ],
       "entregable_esperado": "Una checklist de planificación de llamada de ventas centrada en preguntas de investigación, con métricas de tiempo dedicado a cada etapa del call.",
       "nodos_previos": [
         "modelo_spin_secuencia_preguntas",
-        "objetivos_de_llamada_orientados_a_avance",
+        "marco_avances_continuaciones",
         "apertura_llamada_venta_grande",
         "reglas_aprendizaje_habilidades_venta",
-        "modelo_spin_preguntas"
+        "modelo_spin_preguntas",
+        "cuatro_etapas_llamada_de_ventas",
+        "determinar_tipo_de_mercado"
       ],
       "nodos_siguientes": [
         "obtencion_compromiso_venta",
-        "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor"
+        "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
+        "modelo_spin_preguntas",
+        "necesidades_implicitas_vs_explicitas",
+        "obtencion_de_compromiso"
       ],
       "condiciones_activacion": [
         "Cuando los vendedores tienden a presentar el producto antes de entender las necesidades reales del cliente.",
         "Si las tasas de cierre son bajas a pesar de buenas presentaciones de producto."
       ],
       "ids_alias": [
-        "etapa_investigacion_necesidades"
+        "etapa_investigacion_necesidades",
+        "etapa_de_investigacion",
+        "etapa_investigacion_ventas",
+        "investigacion_como_habilidad_clave"
       ],
-      "etiqueta_arbol": "Pregunta Antes de Vender"
+      "etiqueta_arbol": "Pregunta Antes de Vender",
+      "merged_originals": [
+        {
+          "node_id": "etapa_de_investigacion",
+          "titulo": "La Etapa de Investigación en la Venta",
+          "fuente": "SPIN Selling - Neil Rackham"
+        },
+        {
+          "node_id": "etapa_investigacion_ventas",
+          "titulo": "La Etapa de Investigación como Motor de Éxito en Ventas Grandes",
+          "fuente": "SPIN Selling - Neil Rackham"
+        },
+        {
+          "node_id": "investigacion_como_habilidad_clave",
+          "titulo": "Preguntar (investigar) es la habilidad de venta más importante",
+          "fuente": "SPIN Selling - Neil Rackham"
+        }
+      ]
     },
     "enfoque_find_and_fix": {
       "node_id": "enfoque_find_and_fix",
@@ -43873,7 +43936,7 @@
       "entregable_esperado": "Portafolio de proyectos de breakthrough definidos con alcance, responsables y métricas",
       "nodos_previos": [
         "juran_trilogy",
-        "analisis_causa_raiz_diagnostico",
+        "viaje_diagnostico_remedial",
         "desperdicio_cronico_vs_esporadico",
         "trilogia_de_juran"
       ],
@@ -45373,7 +45436,6 @@
       "node_id": "equipos_visita_cliente",
       "nodos_previos": [
         "sistema_captura_ideas",
-        "etnografia_investigacion_usuario",
         "investigacion_etnografica_ideacion"
       ],
       "nodos_siguientes": [
@@ -45572,7 +45634,7 @@
         "analisis_flujo_proceso_servicio",
         "diseno_servicio_calidad",
         "reduccion_tiempo_ciclo",
-        "analisis_diagnostico_causa",
+        "viaje_diagnostico_remedial",
         "analisis_flujo_proceso",
         "control_del_proceso_del_proveedor",
         "control_proceso_variables",
@@ -49669,7 +49731,8 @@
       "condiciones_activacion": [
         "Cuando el usuario tiende a presentar su producto demasiado pronto sin entender bien las necesidades del cliente"
       ],
-      "etiqueta_arbol": "Investiga Antes de Vender"
+      "etiqueta_arbol": "Investiga Antes de Vender",
+      "deprecado": true
     },
     "etapa_development": {
       "node_id": "etapa_development",
@@ -49754,7 +49817,8 @@
         "Cuando las ventas complejas no están cerrando",
         "Si el equipo comercial se enfoca demasiado en presentar en vez de preguntar"
       ],
-      "etiqueta_arbol": "Haz las Preguntas Correctas"
+      "etiqueta_arbol": "Haz las Preguntas Correctas",
+      "deprecado": true
     },
     "etapa_pruebas_necesaria": {
       "node_id": "etapa_pruebas_necesaria",
@@ -50011,7 +50075,8 @@
         "Cuando el proyecto involucra comunidades o contextos culturales distintos al del equipo de diseño.",
         "Si se requiere generar confianza profunda con usuarios antes de diseñar soluciones."
       ],
-      "etiqueta_arbol": "Observa con Equipos Diversos"
+      "etiqueta_arbol": "Observa con Equipos Diversos",
+      "deprecado": true
     },
     "etnografia_de_proyecto": {
       "node_id": "etnografia_de_proyecto",
@@ -50040,7 +50105,8 @@
         "Cuando el equipo necesita entender comportamientos reales de usuarios antes de idear soluciones",
         "Si la investigación de mercado tradicional (encuestas, focus groups) no ha revelado necesidades profundas"
       ],
-      "etiqueta_arbol": "Aplica Etnografía a tu Diseño"
+      "etiqueta_arbol": "Aplica Etnografía a tu Diseño",
+      "deprecado": true
     },
     "etnografia_investigacion_usuario": {
       "node_id": "etnografia_investigacion_usuario",
@@ -50074,7 +50140,8 @@
         "Cuando las encuestas y focus groups no revelan necesidades reales",
         "Cuando el producto se usa en contextos físicos complejos (campo, hospital, fábrica)"
       ],
-      "etiqueta_arbol": "Descubre lo que Nadie Dice"
+      "etiqueta_arbol": "Descubre lo que Nadie Dice",
+      "deprecado": true
     },
     "evalua_la_gravedad_sin_autoengano": {
       "node_id": "evalua_la_gravedad_sin_autoengano",
@@ -56489,7 +56556,7 @@
       ],
       "nodos_siguientes": [
         "formar_consejo_asesor_sostenibilidad",
-        "co_opetition_industria",
+        "alianzas_cross_industry",
         "gestion_beneficios_alianza_sostenible"
       ],
       "condiciones_activacion": [
@@ -56605,7 +56672,7 @@
       "entregable_esperado": "Consejo asesor de sostenibilidad constituido y en funcionamiento con reuniones periódicas documentadas",
       "nodos_previos": [
         "formalizar_alianza_estrategica",
-        "co_opetition_industria"
+        "alianzas_cross_industry"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -65356,7 +65423,7 @@
       ],
       "nodos_siguientes": [
         "formalizar_alianza_estrategica",
-        "co_opetition_industria"
+        "alianzas_cross_industry"
       ],
       "condiciones_activacion": [
         "Si la empresa busca ir más allá de donaciones hacia una colaboración estructurada",
@@ -68212,7 +68279,8 @@
         "Si te das cuenta de que hablas más de las características de tu producto que de preguntar",
         "Si tus ventas grandes no cierran aunque conoces bien tu producto"
       ],
-      "etiqueta_arbol": "Haz Preguntas para Descubrir Necesidades"
+      "etiqueta_arbol": "Haz Preguntas para Descubrir Necesidades",
+      "deprecado": true
     },
     "investigacion_del_consumidor": {
       "node_id": "investigacion_del_consumidor",
@@ -68306,15 +68374,22 @@
       "resumen_teorico": "La etnografía consiste en observar a los clientes en su entorno natural durante períodos extendidos, detectando necesidades no articuladas. Aunque es poco popular (baja adopción por costo y tiempo), es calificada como el método MÁS EFECTIVO para generar ideas innovadoras, ya que revela problemas que el cliente ni siquiera sabe expresar (ejemplo: Purell FST Military Bottle desarrollado tras observar soldados en entrenamiento).",
       "pasos_accionables": [
         "Seleccionar un contexto de uso real del producto (ej. campo, fábrica, hospital)",
-        "Observar directamente a los usuarios utilizando o mal utilizando el producto durante un período extendido",
+        "Observar directamente a los usuarios utilizando o mal utilizando el producto durante un período extendido, involucrando a líderes o clientes (deputizar) en la observación de campo para generar empatía directa",
         "Documentar problemas, quejas y comportamientos no verbalizados",
         "Capacitar al equipo observador en habilidades de escucha e inferencia",
         "Reducir el tiempo por visita si es necesario (ej. 'día en la vida' de un día por sitio)",
-        "Traducir los hallazgos observacionales en conceptos de producto concretos"
+        "Traducir los hallazgos observacionales en conceptos de producto concretos",
+        "Formar equipos que combinen antropólogos/etnógrafos con diseñadores, arquitectos e ingenieros.",
+        "Buscar situaciones análogas (ej. un pit stop de carreras para entender una sala de emergencias)",
+        "Construir confianza genuina con los sujetos observados antes de extraer insights"
       ],
       "entregable_esperado": "Informe etnográfico con insights de necesidades no articuladas traducidos en conceptos de producto",
       "nodos_previos": [
-        "sistema_captura_ideas"
+        "sistema_captura_ideas",
+        "diseno_sistemico_partes_interesadas",
+        "reglas_brainstorming",
+        "seleccion_arenas_estrategicas",
+        "usuarios_extremos_edge_cases"
       ],
       "nodos_siguientes": [
         "equipos_visita_cliente",
@@ -68329,13 +68404,42 @@
         "tecnica_perder_objeto",
         "tres_espacios_innovacion",
         "desirability_feasibility_viability",
-        "espacios_de_diseno_superpuestos"
+        "espacios_de_diseno_superpuestos",
+        "design_thinking_proceso",
+        "empatia_capas_de_comprension",
+        "netnografia_social_media",
+        "pensamiento_de_conexiones_ripple_effect",
+        "reglas_brainstorming",
+        "tecnologias_disruptivas_oportunidad"
       ],
       "condiciones_activacion": [
         "Cuando se buscan ideas verdaderamente innovadoras (breakthrough) y no incrementales",
-        "Cuando los métodos tradicionales (encuestas, focus groups) no revelan necesidades profundas del usuario"
+        "Cuando los métodos tradicionales (encuestas, focus groups) no revelan necesidades profundas del usuario",
+        "Cuando el proyecto involucra comunidades o contextos culturales distintos al del equipo de diseño."
       ],
-      "etiqueta_arbol": "Observa a tus Clientes Reales"
+      "etiqueta_arbol": "Observa a tus Clientes Reales",
+      "ids_alias": [
+        "etnografia_aplicada_en_equipos_multidisciplinarios",
+        "etnografia_de_proyecto",
+        "etnografia_investigacion_usuario"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "etnografia_aplicada_en_equipos_multidisciplinarios",
+          "titulo": "Etnografía Aplicada en Equipos Multidisciplinarios",
+          "fuente": "Change by Design"
+        },
+        {
+          "node_id": "etnografia_de_proyecto",
+          "titulo": "Etnografía Aplicada al Diseño",
+          "fuente": "Change by Design, Revised and U - Tim Brown"
+        },
+        {
+          "node_id": "etnografia_investigacion_usuario",
+          "titulo": "Etnografía para Identificar Necesidades No Articuladas",
+          "fuente": "Winning at New Products - Robert G. Cooper"
+        }
+      ]
     },
     "investigacion_incidentes": {
       "node_id": "investigacion_incidentes",
@@ -69315,11 +69419,11 @@
       ],
       "entregable_esperado": "Causa raíz identificada, remedio implementado y controles ajustados para prevenir recurrencia",
       "nodos_previos": [
-        "analisis_diagnostico_causa"
+        "viaje_diagnostico_remedial"
       ],
       "nodos_siguientes": [
         "definicion_problema_moms_2",
-        "analisis_diagnostico_causa"
+        "viaje_diagnostico_remedial"
       ],
       "condiciones_activacion": [
         "Cuando ocurre un problema esporádico de causa especial en un proceso que estaba previamente bajo control"
@@ -73642,21 +73746,41 @@
         "Después de cada reunión de ventas, clasifica el resultado en Orden, Avance, Continuación o No-venta.",
         "Si el resultado fue una Continuación, identifica qué acción concreta faltó para convertirla en Avance.",
         "Diseña la siguiente interacción con el objetivo explícito de lograr una acción medible del cliente.",
-        "Evita medir el éxito de una llamada solo por comentarios positivos o buena impresión del cliente."
+        "Evita medir el éxito de una llamada solo por comentarios positivos o buena impresión del cliente.",
+        "Descarta objetivos ambiguos como 'construir relación' o 'recolectar información' como únicos fines de la llamada.",
+        "Si el objetivo principal falla durante la llamada, busca activamente una alternativa que igualmente genere una acción medible (Avance)."
       ],
       "entregable_esperado": "Sistema de seguimiento de llamadas de venta que registre el tipo de resultado obtenido en cada interacción con el cliente.",
       "nodos_previos": [
         "cierre_segun_complejidad_venta",
-        "escala_actitud_cierre"
+        "escala_actitud_cierre",
+        "stakeholder_mapping_wheel"
       ],
       "nodos_siguientes": [
-        "objetivos_de_llamada_orientados_a_avance"
+        "enfoque_etapa_investigacion",
+        "obtencion_de_compromiso"
       ],
       "condiciones_activacion": [
         "Cuando el ciclo de venta es largo y complejo, con múltiples interacciones antes de cerrar.",
         "Cuando el equipo comercial confunde señales positivas del cliente con progreso real de la venta."
       ],
-      "etiqueta_arbol": "Clasifica cada Resultado de Venta"
+      "etiqueta_arbol": "Clasifica cada Resultado de Venta",
+      "ids_alias": [
+        "advances_vs_continuations",
+        "objetivos_de_llamada_orientados_a_avance"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "advances_vs_continuations",
+          "titulo": "Avances vs. Continuaciones en Ventas",
+          "fuente": "SPIN Selling - Neil Rackham"
+        },
+        {
+          "node_id": "objetivos_de_llamada_orientados_a_avance",
+          "titulo": "Definir Objetivos de Llamada Orientados a la Acción (Avance)",
+          "fuente": "SPIN Selling - Neil Rackham"
+        }
+      ]
     },
     "marco_legal_comercio_electronico_internacional": {
       "node_id": "marco_legal_comercio_electronico_internacional",
@@ -78605,7 +78729,7 @@
         "cuatro_etapas_llamada_de_ventas",
         "diseno_embudo_ventas_cliente",
         "estrategia_ventas_enterprise",
-        "etapa_investigacion_ventas"
+        "enfoque_etapa_investigacion"
       ],
       "nodos_siguientes": [
         "ecuacion_de_valor_cliente",
@@ -80007,12 +80131,11 @@
       ],
       "entregable_esperado": "Mapa de necesidades del cliente clasificadas en implícitas y explícitas, con plan de preguntas para avanzar cada una",
       "nodos_previos": [
-        "etapa_de_investigacion",
+        "enfoque_etapa_investigacion",
         "customer_discovery_phase2_problem_test",
         "elementos_creadores_valor",
         "construccion_de_valor_percibido",
         "cuatro_etapas_llamada_de_ventas",
-        "investigacion_como_habilidad_clave",
         "metodologia_spin_selling",
         "modelo_spin_preguntas",
         "preguntas_problema_2",
@@ -80277,7 +80400,7 @@
       ],
       "entregable_esperado": "Un informe de insights de comunidad online con segmentos de usuario y necesidades identificadas, y potencialmente una comunidad propia activa para escucha continua.",
       "nodos_previos": [
-        "etnografia_investigacion_usuario",
+        "investigacion_etnografica_ideacion",
         "analisis_y_sintesis"
       ],
       "nodos_siguientes": [
@@ -81222,7 +81345,8 @@
       "condiciones_activacion": [
         "Cuando los vendedores del equipo reportan llamadas 'exitosas' que en realidad no generan progreso medible en el pipeline."
       ],
-      "etiqueta_arbol": "Define un Objetivo de Avance"
+      "etiqueta_arbol": "Define un Objetivo de Avance",
+      "deprecado": true
     },
     "observar_al_cliente_en_su_contexto": {
       "node_id": "observar_al_cliente_en_su_contexto",
@@ -81409,8 +81533,8 @@
       ],
       "entregable_esperado": "Guion o checklist de cierre que incluya verificación de dudas, resumen de beneficios y propuesta de próximo paso concreto",
       "nodos_previos": [
-        "advances_vs_continuations",
-        "etapa_de_investigacion",
+        "marco_avances_continuaciones",
+        "enfoque_etapa_investigacion",
         "cuatro_etapas_llamada_de_ventas",
         "ecuacion_de_valor",
         "necesidades_implicitas_vs_explicitas"
@@ -84032,7 +84156,7 @@
       ],
       "entregable_esperado": "Un diagrama de sistema que muestre las relaciones causales entre tu producto y los cambios de comportamiento/cultura que podría generar",
       "nodos_previos": [
-        "etnografia_investigacion_usuario",
+        "investigacion_etnografica_ideacion",
         "customer_discovery",
         "pensamiento_visual_modelos_negocio"
       ],
@@ -98446,7 +98570,7 @@
         "equipo_diverso_ideacion",
         "cuatro_etapas_del_pensamiento_creativo",
         "equipos_visita_cliente",
-        "etnografia_investigacion_usuario",
+        "investigacion_etnografica_ideacion",
         "encuadre_desafio_diseno",
         "buscar_armonia_diseno",
         "cultura_de_optimismo",
@@ -98468,7 +98592,7 @@
         "brainstorming",
         "butterfly_test_convergencia",
         "deriva_deliberada",
-        "etnografia_investigacion_usuario",
+        "investigacion_etnografica_ideacion",
         "ideacion_con_ia_en_la_sesion",
         "prototipado_rapido",
         "tecnica_perder_objeto",
@@ -104891,7 +105015,7 @@
         "reduccion_cargas_regulatorias"
       ],
       "nodos_siguientes": [
-        "trabajo_colectivo_estandares_industria"
+        "alianzas_cross_industry"
       ],
       "condiciones_activacion": [
         "Si tu negocio depende de una cadena de suministro extensa o internacional",
@@ -105549,7 +105673,7 @@
         "definicion_tipos_nuevo_producto",
         "busqueda_vs_ejecucion",
         "portfolio_management",
-        "etnografia_investigacion_usuario",
+        "investigacion_etnografica_ideacion",
         "strat_map_arenas_estrategicas"
       ],
       "condiciones_activacion": [
@@ -109617,8 +109741,7 @@
       "entregable_esperado": "Plan de control documentado, auditado periódicamente, con programa de entrenamiento asociado",
       "nodos_previos": [
         "viaje_diagnostico_remedial",
-        "six_sigma_dmaic",
-        "analisis_causa_raiz_diagnostico"
+        "six_sigma_dmaic"
       ],
       "nodos_siguientes": [
         "replicar_resultados",
@@ -110172,7 +110295,7 @@
         "evaluacion_materialidad_empresarial"
       ],
       "nodos_siguientes": [
-        "advances_vs_continuations",
+        "marco_avances_continuaciones",
         "colaboracion_transporte_ctm",
         "plataforma_colaboracion_masiva",
         "seguimiento_tendencias_sostenibilidad",
@@ -111895,7 +112018,7 @@
         "evaluacion_industria_cliente",
         "reconocer_sesgo_de_apofenia",
         "empatia_capas_de_comprension",
-        "etnografia_de_proyecto"
+        "investigacion_etnografica_ideacion"
       ],
       "nodos_siguientes": [
         "design_thinking_proceso",
@@ -113648,7 +113771,8 @@
         "Si el mal desempeño de competidores puede afectar la reputación de toda la industria",
         "Si múltiples empresas dependen de los mismos proveedores críticos"
       ],
-      "etiqueta_arbol": "Une Fuerzas por tu Industria"
+      "etiqueta_arbol": "Une Fuerzas por tu Industria",
+      "deprecado": true
     },
     "trabajo_como_imaginado_vs_trabajo_como_hecho": {
       "node_id": "trabajo_como_imaginado_vs_trabajo_como_hecho",
@@ -115745,7 +115869,7 @@
         "diferenciacion_de_marca_contraintuitiva"
       ],
       "nodos_siguientes": [
-        "trabajo_colectivo_estandares_industria"
+        "alianzas_cross_industry"
       ],
       "condiciones_activacion": [
         "Si la empresa tiene ventaja tecnológica o de cumplimiento sobre sus competidores",
@@ -115775,7 +115899,7 @@
         "enfoque_centrado_humano_organizacional"
       ],
       "nodos_siguientes": [
-        "etnografia_aplicada_en_equipos_multidisciplinarios",
+        "investigacion_etnografica_ideacion",
         "biomimicry_conexiones_naturales",
         "reconocer_sesgo_de_apofenia",
         "encuadre_desafio_diseno",
@@ -117817,10 +117941,10 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "Metodología dual de Juran para resolver problemas de calidad. El viaje diagnóstico va de los síntomas a las teorías de causas, de las teorías a las pruebas, y de las pruebas al establecimiento de la(s) causa(s) raíz. El viaje remedial va de la(s) causa(s) raíz al diseño de remedios, de los remedios a su prueba en condiciones operativas, de los remedios probados al manejo de la resistencia al cambio, y de ahí al establecimiento de nuevos controles para sostener las mejoras.",
       "pasos_accionables": [
-        "Analizar los síntomas del problema (evidencia observable)",
-        "Formular teorías sobre las posibles causas",
-        "Probar las teorías más plausibles con datos",
-        "Establecer la(s) causa(s) raíz confirmada(s)",
+        "Analizar los síntomas del problema (evidencia observable), con un análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)",
+        "Formular teorías sobre las posibles causas, usando brainstorming y diagramas causa-efecto",
+        "Probar las teorías más plausibles con datos, con un mecanismo de recolección que permita correlacionar cada teoría con el defecto observado",
+        "Establecer la(s) causa(s) raíz confirmada(s), validando estadísticamente cuál teoría explica la mayoría de los casos",
         "Diseñar remedios para eliminar las causas",
         "Probar los remedios bajo condiciones operativas reales",
         "Gestionar la resistencia predecible al cambio",
@@ -117831,16 +117955,41 @@
         "six_sigma_dmaic",
         "analisis_pareto_priorizacion",
         "establecer_proyecto_mejora",
-        "analisis_pareto_de_proveedores"
+        "analisis_pareto_de_proveedores",
+        "definicion_problema_moms_2",
+        "dmaic_fase_analyze",
+        "juran_rcca_metodo"
       ],
       "nodos_siguientes": [
         "six_sigma_dmaic",
-        "sostener_las_ganancias"
+        "sostener_las_ganancias",
+        "ciclo_shewhart_pdsa",
+        "diagnostico_sintoma_vs_causa_ventas",
+        "enfoque_proyecto_por_proyecto",
+        "error_proofing_servicio",
+        "juran_rcca_metodo"
       ],
       "condiciones_activacion": [
-        "Cuando se ha identificado un problema crónico de calidad y se requiere metodología estructurada de resolución"
+        "Cuando se ha identificado un problema crónico de calidad y se requiere metodología estructurada de resolución",
+        "Cuando el equipo tiene múltiples hipótesis sin validar"
       ],
-      "etiqueta_arbol": "Diagnostica y Corrige la Causa"
+      "etiqueta_arbol": "Diagnostica y Corrige la Causa",
+      "ids_alias": [
+        "analisis_causa_raiz_diagnostico",
+        "analisis_diagnostico_causa"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "analisis_causa_raiz_diagnostico",
+          "titulo": "Análisis de Causa Raíz mediante Diagnóstico Sistemático",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "analisis_diagnostico_causa",
+          "titulo": "Análisis y Diagnóstico de la Causa Raíz",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "video_marketing_franquicia": {
       "node_id": "video_marketing_franquicia",
@@ -127116,7 +127265,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 234,
+    "nodos_sin_enlaces_entrantes": 242,
     "enlaces_rotos_en_grafo": 0
   }
 }

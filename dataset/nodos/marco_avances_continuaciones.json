@@ -9,19 +9,39 @@
     "Después de cada reunión de ventas, clasifica el resultado en Orden, Avance, Continuación o No-venta.",
     "Si el resultado fue una Continuación, identifica qué acción concreta faltó para convertirla en Avance.",
     "Diseña la siguiente interacción con el objetivo explícito de lograr una acción medible del cliente.",
-    "Evita medir el éxito de una llamada solo por comentarios positivos o buena impresión del cliente."
+    "Evita medir el éxito de una llamada solo por comentarios positivos o buena impresión del cliente.",
+    "Descarta objetivos ambiguos como 'construir relación' o 'recolectar información' como únicos fines de la llamada.",
+    "Si el objetivo principal falla durante la llamada, busca activamente una alternativa que igualmente genere una acción medible (Avance)."
   ],
   "entregable_esperado": "Sistema de seguimiento de llamadas de venta que registre el tipo de resultado obtenido en cada interacción con el cliente.",
   "nodos_previos": [
     "cierre_segun_complejidad_venta",
-    "escala_actitud_cierre"
+    "escala_actitud_cierre",
+    "stakeholder_mapping_wheel"
   ],
   "nodos_siguientes": [
-    "objetivos_de_llamada_orientados_a_avance"
+    "enfoque_etapa_investigacion",
+    "obtencion_de_compromiso"
   ],
   "condiciones_activacion": [
     "Cuando el ciclo de venta es largo y complejo, con múltiples interacciones antes de cerrar.",
     "Cuando el equipo comercial confunde señales positivas del cliente con progreso real de la venta."
   ],
-  "etiqueta_arbol": "Clasifica cada Resultado de Venta"
+  "etiqueta_arbol": "Clasifica cada Resultado de Venta",
+  "ids_alias": [
+    "advances_vs_continuations",
+    "objetivos_de_llamada_orientados_a_avance"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "advances_vs_continuations",
+      "titulo": "Avances vs. Continuaciones en Ventas",
+      "fuente": "SPIN Selling - Neil Rackham"
+    },
+    {
+      "node_id": "objetivos_de_llamada_orientados_a_avance",
+      "titulo": "Definir Objetivos de Llamada Orientados a la Acción (Avance)",
+      "fuente": "SPIN Selling - Neil Rackham"
+    }
+  ]
 }

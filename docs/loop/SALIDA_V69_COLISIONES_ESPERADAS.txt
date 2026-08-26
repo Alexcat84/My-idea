@@ -1,0 +1,39 @@
+==============================================================================
+LA CUENTA ESPERADA DE COLISIONES, SIMULADA ANTES DE FUNDIR
+  plan       : docs/loop/PLAN_V69_OPU02_LOTE_E.json
+  operacion  : OP-U-02
+  linea base : 4, DECLARADA (acta 66, pregunta 2; el texto viejo decia 2 por el acta 64, pregunta 3, y la correccion va declarada en el docstring)
+==============================================================================
+
+  ANTES DE FUNDIR (el arbol tal como esta, medido ahora):
+     COLISIONES DE CLASE VIGENTES : 4
+     AUTO-PARES                   : 263
+        cierre_satisfaccion_postventa contra cierre_segun_complejidad_venta | clases ['B', 'D']
+        cierre_segun_complejidad_venta contra obtencion_compromiso | clases ['B', 'D']
+        pivote_o_proceder contra pivote_startup | clases ['B', 'D']
+        pivote_o_proceder contra reunion_pivotar_o_perseverar | clases ['B', 'D']
+
+  LA SIMULACION EN MEMORIA: 13 absorbido(s) de 5 acto(s) pasan a resolver a su superviviente. NO SE TOCA NI UN NODO.
+
+  DESPUES DE FUNDIR (simulado):
+     COLISIONES DE CLASE VIGENTES : 6
+     AUTO-PARES                   : 268
+        cierre_satisfaccion_postventa contra cierre_segun_complejidad_venta | clases ['B', 'D']
+        cierre_segun_complejidad_venta contra obtencion_compromiso | clases ['B', 'D']
+        cuatro_etapas_llamada_de_ventas contra enfoque_etapa_investigacion | clases ['B', 'D']
+        enfoque_etapa_investigacion contra modelo_spin_preguntas | clases ['B', 'D']
+        pivote_o_proceder contra pivote_startup | clases ['B', 'D']
+        pivote_o_proceder contra reunion_pivotar_o_perseverar | clases ['B', 'D']
+
+  EL DELTA, QUE ES LO QUE LA GUARDA MIRA:
+     colisiones NUEVAS que la fusion fabricaria : 2
+        cuatro_etapas_llamada_de_ventas contra enfoque_etapa_investigacion | clases ['B', 'D']
+        enfoque_etapa_investigacion contra modelo_spin_preguntas | clases ['B', 'D']
+     colisiones que DESAPARECERIAN              : 0
+     auto-pares NUEVOS (pares internos del acto): 5
+
+  ESPERADAS TRAS FUNDIR = 6, y es 4 de base mas 2 nuevas menos 0 idas
+
+LA FUSION FABRICA COLISIONES Y HAY QUE PREDECIRLAS EN EL PLAN.
+
+FIN

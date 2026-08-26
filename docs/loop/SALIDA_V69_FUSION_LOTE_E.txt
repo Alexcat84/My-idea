@@ -1,0 +1,325 @@
+==============================================================================
+OP-U-02 . UNICO Y FINAL POR AGOTAMIENTO, LOTE E DEL TRAMO UNICO DE OP-U-02. ABRE CON LA FUSION ADJUDICADA DEL ACTO 18 (acta 68, adjudicaciones 1 y 3: superviviente alianzas_cross_industry, ejecutada como PRIMERA operacion del lote y dentro de ESTE plan propio, sin reabrir el del lote D) Y SIGUE CON EL PREFIJO SIN SALTOS DESDE EL ACTO 25. SEIS ACTOS CIERRAN ENTEROS Y SON 22 NODOS: los actos 18, 25, 26, 29 y 30 cierran FUNDIDOS y el acto 27 cierra DECLARADO Y NO FUNDIDO con el TRIANGULO DE P.10 como motivo sellado, mas una segunda razon independiente (es el ejemplar 4 de la figura ESTRELLA del inventario, y el centro de esa estrella es el mismo nodo puente que P.10 detecto). EL TOPE DEL PREFIJO ES ESTRUCTURAL Y SE DICE: el siguiente es el ACTO 31, que TIENE DUENO (OP-F-04-WEI y OP-S-04 en duenos_cualquier_operacion, medido hoy sobre el fichero fijado) y que ademas NO trae ninguno de los cuatro motivos sellados con los que podria cerrar DECLARADO, o sea que no podria cerrar ENTERO; el contrato del lote es entregar lo declarado y por eso el tope cae ANTES de el . MODO EJECUTAR
+plan: docs/loop/PLAN_V69_OPU02_LOTE_E.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3237 vivos, 616 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 18 . sobrevive alianzas_cross_industry . absorbe co_opetition_industria, colaboracion_sectorial, trabajo_colectivo_estandares_industria
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 7 (anadidos 3) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 1 de colaboracion_sectorial al PASO 1 del superviviente
+        inciso VERBATIM: 'si la empresa tiene suficiente poder de mercado para exigir cambios individualmente'
+        nexo (lo unico de cosecha propia): ', evaluando antes '
+        paso resultante: Identificar desafíos de sostenibilidad compartidos con competidores o empresas de la industria, evaluando antes si la empresa tiene suficiente poder de mercado para exigir cambios individualmente
+  alias del superviviente: ['co_opetition_industria', 'colaboracion_sectorial', 'trabajo_colectivo_estandares_industria']
+
+------------------------------------------------------------------------------
+ACTO 25 . sobrevive enfoque_etapa_investigacion . absorbe etapa_de_investigacion, etapa_investigacion_ventas, investigacion_como_habilidad_clave
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['etapa_investigacion_necesidades', 'etapa_de_investigacion', 'etapa_investigacion_ventas', 'investigacion_como_habilidad_clave']
+
+------------------------------------------------------------------------------
+ACTO 26 . sobrevive investigacion_etnografica_ideacion . absorbe etnografia_aplicada_en_equipos_multidisciplinarios, etnografia_de_proyecto, etnografia_investigacion_usuario
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 9 (anadidos 3) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 3 de etnografia_aplicada_en_equipos_multidisciplinarios al PASO 2 del superviviente
+        inciso VERBATIM: 'a líderes o clientes (deputizar) en la observación de campo para generar empatía directa'
+        nexo (lo unico de cosecha propia): ', involucrando '
+        paso resultante: Observar directamente a los usuarios utilizando o mal utilizando el producto durante un período extendido, involucrando a líderes o clientes (deputizar) en la observación de campo para generar empatía directa
+  alias del superviviente: ['etnografia_aplicada_en_equipos_multidisciplinarios', 'etnografia_de_proyecto', 'etnografia_investigacion_usuario']
+
+------------------------------------------------------------------------------
+ACTO 29 . sobrevive marco_avances_continuaciones . absorbe advances_vs_continuations, objetivos_de_llamada_orientados_a_avance
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['advances_vs_continuations', 'objetivos_de_llamada_orientados_a_avance']
+
+------------------------------------------------------------------------------
+ACTO 30 . sobrevive viaje_diagnostico_remedial . absorbe analisis_causa_raiz_diagnostico, analisis_diagnostico_causa
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 8 -> 8 (anadidos 0) | condiciones 1 -> 2 (anadidas 1)
+  INCISOS ADOSADOS: 4
+     del paso 1 de analisis_causa_raiz_diagnostico al PASO 1 del superviviente
+        inciso VERBATIM: 'análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)'
+        nexo (lo unico de cosecha propia): ', con un '
+        paso resultante: Analizar los síntomas del problema (evidencia observable), con un análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)
+     del paso 3 de analisis_causa_raiz_diagnostico al PASO 3 del superviviente
+        inciso VERBATIM: 'que permita correlacionar cada teoría con el defecto observado'
+        nexo (lo unico de cosecha propia): ', con un mecanismo de recolección '
+        paso resultante: Probar las teorías más plausibles con datos, con un mecanismo de recolección que permita correlacionar cada teoría con el defecto observado
+     del paso 4 de analisis_causa_raiz_diagnostico al PASO 4 del superviviente
+        inciso VERBATIM: 'estadísticamente cuál teoría explica la mayoría de los casos'
+        nexo (lo unico de cosecha propia): ', validando '
+        paso resultante: Establecer la(s) causa(s) raíz confirmada(s), validando estadísticamente cuál teoría explica la mayoría de los casos
+     del paso 2 de analisis_diagnostico_causa al PASO 2 del superviviente
+        inciso VERBATIM: 'usando brainstorming y diagramas causa-efecto'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Formular teorías sobre las posibles causas, usando brainstorming y diagramas causa-efecto
+  alias del superviviente: ['analisis_causa_raiz_diagnostico', 'analisis_diagnostico_causa']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 38
+   ciclo_shewhart_pdsa                                  nodos_previos     analisis_diagnostico_causa -> viaje_diagnostico_remedial
+   cierre_segun_complejidad_venta                       nodos_siguientes  objetivos_de_llamada_orientados_a_avance -> marco_avances_continuaciones
+   cuatro_etapas_llamada_de_ventas                      nodos_siguientes  etapa_investigacion_ventas -> enfoque_etapa_investigacion
+   cuatro_etapas_llamada_de_ventas                      nodos_siguientes  investigacion_como_habilidad_clave -> enfoque_etapa_investigacion
+   definicion_problema_moms_2                           nodos_siguientes  analisis_diagnostico_causa -> viaje_diagnostico_remedial
+   design_thinking_proceso                              nodos_previos     etnografia_investigacion_usuario -> investigacion_etnografica_ideacion
+   determinar_tipo_de_mercado                           nodos_siguientes  etapa_de_investigacion -> enfoque_etapa_investigacion
+   diagnostico_sintoma_vs_causa_ventas                  nodos_previos     analisis_causa_raiz_diagnostico -> viaje_diagnostico_remedial
+   dialogo_proveedores                                  nodos_siguientes  colaboracion_sectorial -> alianzas_cross_industry
+   diseno_sistemico_partes_interesadas                  nodos_siguientes  etnografia_de_proyecto -> investigacion_etnografica_ideacion
+   dmaic_fase_analyze                                   nodos_siguientes  analisis_causa_raiz_diagnostico -> viaje_diagnostico_remedial
+   empatia_capas_de_comprension                         nodos_previos     etnografia_de_proyecto -> investigacion_etnografica_ideacion
+   enfoque_etapa_investigacion                          nodos_previos     objetivos_de_llamada_orientados_a_avance -> marco_avances_continuaciones
+   enfoque_proyecto_por_proyecto                        nodos_previos     analisis_causa_raiz_diagnostico -> viaje_diagnostico_remedial
+   equipos_visita_cliente                               nodos_previos     etnografia_investigacion_usuario -> investigacion_etnografica_ideacion
+   error_proofing_servicio                              nodos_previos     analisis_diagnostico_causa -> viaje_diagnostico_remedial
+   formalizar_alianza_estrategica                       nodos_siguientes  co_opetition_industria -> alianzas_cross_industry
+   formar_consejo_asesor_sostenibilidad                 nodos_previos     co_opetition_industria -> alianzas_cross_industry
+   identificar_evaluar_socios_estrategicos              nodos_siguientes  co_opetition_industria -> alianzas_cross_industry
+   juran_rcca_metodo                                    nodos_previos     analisis_diagnostico_causa -> viaje_diagnostico_remedial
+   juran_rcca_metodo                                    nodos_siguientes  analisis_diagnostico_causa -> viaje_diagnostico_remedial
+   marco_avances_continuaciones                         nodos_siguientes  objetivos_de_llamada_orientados_a_avance -> marco_avances_continuaciones
+   modelo_spin_preguntas                                nodos_previos     etapa_investigacion_ventas -> enfoque_etapa_investigacion
+   necesidades_implicitas_vs_explicitas                 nodos_previos     etapa_de_investigacion -> enfoque_etapa_investigacion
+   necesidades_implicitas_vs_explicitas                 nodos_previos     investigacion_como_habilidad_clave -> enfoque_etapa_investigacion
+   netnografia_social_media                             nodos_previos     etnografia_investigacion_usuario -> investigacion_etnografica_ideacion
+   obtencion_de_compromiso                              nodos_previos     advances_vs_continuations -> marco_avances_continuaciones
+   obtencion_de_compromiso                              nodos_previos     etapa_de_investigacion -> enfoque_etapa_investigacion
+   pensamiento_de_conexiones_ripple_effect              nodos_previos     etnografia_investigacion_usuario -> investigacion_etnografica_ideacion
+   reglas_brainstorming                                 nodos_previos     etnografia_investigacion_usuario -> investigacion_etnografica_ideacion
+   reglas_brainstorming                                 nodos_siguientes  etnografia_investigacion_usuario -> investigacion_etnografica_ideacion
+   seguimiento_cumplimiento_cadena_suministro           nodos_siguientes  trabajo_colectivo_estandares_industria -> alianzas_cross_industry
+   seleccion_arenas_estrategicas                        nodos_siguientes  etnografia_investigacion_usuario -> investigacion_etnografica_ideacion
+   sostener_las_ganancias                               nodos_previos     analisis_causa_raiz_diagnostico -> viaje_diagnostico_remedial
+   stakeholder_mapping_wheel                            nodos_siguientes  advances_vs_continuations -> marco_avances_continuaciones
+   tecnologias_disruptivas_oportunidad                  nodos_previos     etnografia_de_proyecto -> investigacion_etnografica_ideacion
+   uso_regulaciones_como_espada                         nodos_siguientes  trabajo_colectivo_estandares_industria -> alianzas_cross_industry
+   usuarios_extremos_edge_cases                         nodos_siguientes  etnografia_aplicada_en_equipos_multidisciplinarios -> investigacion_etnografica_ideacion
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 9
+   arenas_estrategicas                                  nodos_siguientes  etnografia_investigacion_usuario (registro historico)
+   brainstorming_efectivo                               nodos_siguientes  etnografia_investigacion_usuario (registro historico)
+   definicion_problema_moms                             nodos_siguientes  analisis_diagnostico_causa (registro historico)
+   hipotesis_tipo_mercado                               nodos_siguientes  etapa_de_investigacion (registro historico)
+   mantener_las_ganancias                               nodos_previos     analisis_causa_raiz_diagnostico (registro historico)
+   mistake_proofing_poka_yoke_2                         nodos_previos     analisis_diagnostico_causa (registro historico)
+   modelo_spin                                          nodos_previos     etapa_investigacion_ventas (registro historico)
+   pdsa_shewhart_cycle                                  nodos_previos     analisis_diagnostico_causa (registro historico)
+   riesgo_tecnicas_cierre_venta_compleja                nodos_siguientes  objetivos_de_llamada_orientados_a_avance (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 5
+   cierre_segun_complejidad_venta                       nodos_siguientes
+   cuatro_etapas_llamada_de_ventas                      nodos_siguientes
+   equipos_visita_cliente                               nodos_previos
+   necesidades_implicitas_vs_explicitas                 nodos_previos
+   sostener_las_ganancias                               nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   marco_avances_continuaciones                         nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 890   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 889   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 1, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 25 de 25
+guarda D, los 13 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (78 filas)
+ acto de que nodo                                  que          n  a donde va
+   18 co_opetition_industria                       paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar problemas ambientales comunes a nivel sectorial
+   18 co_opetition_industria                       paso         2  ya lo dice el PASO 2 del superviviente
+        Convocar a competidores clave mediante asociaciones industriales existentes
+   18 co_opetition_industria                       paso         3  ya lo dice el PASO 3 del superviviente
+        Establecer estándares y metas compartidas de desempeño ambiental
+   18 co_opetition_industria                       paso         4  PASO 5 del superviviente
+        Publicar y monitorear el cumplimiento colectivo de los estándares
+   18 co_opetition_industria                       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si la industria enfrenta una crisis reputacional o regulatoria compartida
+   18 co_opetition_industria                       condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si los esfuerzos individuales no bastan para transformar la percepción del sector
+   18 colaboracion_sectorial                       paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evaluar si la empresa tiene suficiente poder de mercado para exigir cambios individualmente
+   18 colaboracion_sectorial                       paso         2  ya lo dice el PASO 2 del superviviente
+        Identificar asociaciones industriales o alianzas existentes relacionadas al sector
+   18 colaboracion_sectorial                       paso         3  ya lo dice el PASO 3 del superviviente
+        Co-crear una agenda compartida de sostenibilidad con competidores/socios del sector
+   18 colaboracion_sectorial                       paso         4  ya lo dice el PASO 4 del superviviente
+        Definir métricas y compromisos conjuntos para proveedores comunes
+   18 colaboracion_sectorial                       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si la empresa no tiene poder individual sobre proveedores
+   18 colaboracion_sectorial                       condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si existen economías de escala en la colaboración sectorial
+   18 trabajo_colectivo_estandares_industria       paso         1  ya lo dice el PASO 1 del superviviente
+        Evaluar si el riesgo reputacional es compartido con otros actores del sector
+   18 trabajo_colectivo_estandares_industria       paso         2  ya lo dice el PASO 3 del superviviente
+        Convocar a competidores y aliados de la industria para definir estándares comunes
+   18 trabajo_colectivo_estandares_industria       paso         3  PASO 6 del superviviente
+        Diseñar un marco de cumplimiento colectivo (tipo 'Responsible Care')
+   18 trabajo_colectivo_estandares_industria       paso         4  PASO 7 del superviviente
+        Aplicar el estándar conjunto a proveedores compartidos
+   18 trabajo_colectivo_estandares_industria       condicion    1  CONDICION 3 del superviviente
+        Si el mal desempeño de competidores puede afectar la reputación de toda la industria
+   18 trabajo_colectivo_estandares_industria       condicion    2  CONDICION 4 del superviviente
+        Si múltiples empresas dependen de los mismos proveedores críticos
+   25 etapa_de_investigacion                       paso         1  ya lo dice el PASO 1 del superviviente
+        Antes de presentar tu producto o solución, dedica tiempo suficiente a preguntar sobre la situación, problemas y necesidades del cliente
+   25 etapa_de_investigacion                       paso         2  ya lo dice el PASO 2 del superviviente
+        Resiste la tentación de pasar rápido a la demostración de capacidades
+   25 etapa_de_investigacion                       paso         3  PASO 5 del superviviente
+        Usa las respuestas del cliente para desarrollar y ampliar la percepción de sus propias necesidades
+   25 etapa_de_investigacion                       paso         4  ya lo dice el PASO 3 del superviviente
+        Evalúa después de cada llamada cuánto tiempo relativo dedicaste a investigar versus presentar
+   25 etapa_de_investigacion                       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el usuario tiende a presentar su producto demasiado pronto sin entender bien las necesidades del cliente
+   25 etapa_investigacion_ventas                   paso         1  ya lo dice el PASO 1 del superviviente
+        Priorizar el desarrollo de habilidades de preguntas por sobre técnicas de presentación
+   25 etapa_investigacion_ventas                   paso         2  ya lo dice el PASO 3 del superviviente
+        Medir la proporción de preguntas vs afirmaciones en las llamadas de venta propias
+   25 etapa_investigacion_ventas                   paso         3  ya lo dice el PASO 4 del superviviente
+        Entrenar al equipo comercial en formular preguntas que revelen necesidades ocultas
+   25 etapa_investigacion_ventas                   paso         4  ya lo dice el PASO 2 del superviviente
+        Evitar pasar a la demostración del producto sin haber investigado suficientemente
+   25 etapa_investigacion_ventas                   condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando las ventas complejas no están cerrando
+   25 etapa_investigacion_ventas                   condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si el equipo comercial se enfoca demasiado en presentar en vez de preguntar
+   25 investigacion_como_habilidad_clave           paso         1  ya lo dice el PASO 1 del superviviente
+        Antes de cada llamada, prepara preguntas que busquen descubrir necesidades reales, no solo preguntas para lucir tu producto
+   25 investigacion_como_habilidad_clave           paso         2  ya lo dice el PASO 2 del superviviente
+        No te apoyes en el conocimiento técnico de tu producto como reemplazo de indagar lo que la otra persona necesita
+   25 investigacion_como_habilidad_clave           paso         3  PASO 6 del superviviente
+        Practica escuchar de verdad para detectar problemas que el cliente no dice de manera directa
+   25 investigacion_como_habilidad_clave           paso         4  ya lo dice el PASO 3 del superviviente
+        Fíjate qué porcentaje del tiempo de tu llamada usas para preguntar y cuánto para presentar
+   25 investigacion_como_habilidad_clave           condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si te das cuenta de que hablas más de las características de tu producto que de preguntar
+   25 investigacion_como_habilidad_clave           condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si tus ventas grandes no cierran aunque conoces bien tu producto
+   26 etnografia_aplicada_en_equipos_multidisciplinarios paso         1  PASO 7 del superviviente
+        Formar equipos que combinen antropólogos/etnógrafos con diseñadores, arquitectos e ingenieros.
+   26 etnografia_aplicada_en_equipos_multidisciplinarios paso         2  ya lo dice el PASO 2 del superviviente
+        Planificar inmersión profunda con los usuarios (convivencia, estadías) en lugar de entrevistas puntuales.
+   26 etnografia_aplicada_en_equipos_multidisciplinarios paso         3  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Involucrar directamente a líderes o clientes (deputizar) en la observación de campo para generar empatía directa.
+   26 etnografia_aplicada_en_equipos_multidisciplinarios paso         4  ya lo dice el PASO 2 del superviviente
+        Construir confianza con las comunidades estudiadas antes de extraer conclusiones de diseño.
+   26 etnografia_aplicada_en_equipos_multidisciplinarios condicion    1  CONDICION 3 del superviviente
+        Cuando el proyecto involucra comunidades o contextos culturales distintos al del equipo de diseño.
+   26 etnografia_aplicada_en_equipos_multidisciplinarios condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si se requiere generar confianza profunda con usuarios antes de diseñar soluciones.
+   26 etnografia_de_proyecto                       paso         1  ya lo dice el PASO 4 del superviviente
+        Ensamblar un equipo cross-disciplinario que incluya perfiles técnicos y sociales
+   26 etnografia_de_proyecto                       paso         2  ya lo dice el PASO 2 del superviviente
+        Realizar observación de campo directa con usuarios reales en su contexto
+   26 etnografia_de_proyecto                       paso         3  PASO 8 del superviviente
+        Buscar situaciones análogas (ej. un pit stop de carreras para entender una sala de emergencias)
+   26 etnografia_de_proyecto                       paso         4  ya lo dice el PASO 2 del superviviente
+        Considerar involucrar a los propios clientes o ejecutivos en la observación directa ('deputizar')
+   26 etnografia_de_proyecto                       paso         5  PASO 9 del superviviente
+        Construir confianza genuina con los sujetos observados antes de extraer insights
+   26 etnografia_de_proyecto                       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el equipo necesita entender comportamientos reales de usuarios antes de idear soluciones
+   26 etnografia_de_proyecto                       condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si la investigación de mercado tradicional (encuestas, focus groups) no ha revelado necesidades profundas
+   26 etnografia_investigacion_usuario             paso         1  ya lo dice el PASO 1 del superviviente
+        Seleccionar un entorno real donde el usuario utiliza el producto (campo, hospital, fábrica, etc.)
+   26 etnografia_investigacion_usuario             paso         2  ya lo dice el PASO 2 del superviviente
+        Observar sin interferir cómo el usuario interactúa, usa mal o abusa del producto
+   26 etnografia_investigacion_usuario             paso         3  ya lo dice el PASO 3 del superviviente
+        Documentar problemas físicos, emocionales y contextuales detectados
+   26 etnografia_investigacion_usuario             paso         4  ya lo dice el PASO 6 del superviviente
+        Traducir las observaciones en insights de diseño accionables
+   26 etnografia_investigacion_usuario             paso         5  ya lo dice el PASO 4 del superviviente
+        Formar equipos con habilidades de observación e inferencia entrenadas
+   26 etnografia_investigacion_usuario             condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se busca innovación radical y no solo incremental
+   26 etnografia_investigacion_usuario             condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando las encuestas y focus groups no revelan necesidades reales
+   26 etnografia_investigacion_usuario             condicion    3  ya lo dice la CONDICION 1 del superviviente
+        Cuando el producto se usa en contextos físicos complejos (campo, hospital, fábrica)
+   29 advances_vs_continuations                    paso         1  ya lo dice el PASO 3 del superviviente
+        Antes de cada reunión de venta, define el objetivo como una acción concreta que el cliente debe realizar
+   29 advances_vs_continuations                    paso         2  ya lo dice el PASO 3 del superviviente
+        Evita objetivos vagos como 'recopilar información' o 'construir relación'
+   29 advances_vs_continuations                    paso         3  ya lo dice el PASO 1 del superviviente
+        Al finalizar la llamada, evalúa si obtuviste un compromiso de acción real (avance) o solo una promesa de seguir hablando (continuación)
+   29 advances_vs_continuations                    paso         4  ya lo dice el PASO 2 del superviviente
+        Si el resultado fue una continuación, identifica qué faltó para lograr un avance real
+   29 advances_vs_continuations                    condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el usuario está en proceso de venta consultiva compleja (B2B) y necesita definir objetivos claros para reuniones con clientes potenciales
+   29 objetivos_de_llamada_orientados_a_avance     paso         1  ya lo dice el PASO 3 del superviviente
+        Antes de cada llamada o reunión comercial, define un objetivo específico que implique una acción concreta del cliente.
+   29 objetivos_de_llamada_orientados_a_avance     paso         2  PASO 5 del superviviente
+        Descarta objetivos ambiguos como 'construir relación' o 'recolectar información' como únicos fines de la llamada.
+   29 objetivos_de_llamada_orientados_a_avance     paso         3  PASO 6 del superviviente
+        Si el objetivo principal falla durante la llamada, busca activamente una alternativa que igualmente genere una acción medible (Avance).
+   29 objetivos_de_llamada_orientados_a_avance     paso         4  ya lo dice el PASO 1 del superviviente
+        Revisa después de cada llamada si el objetivo planteado se cumplió con una acción concreta del cliente.
+   29 objetivos_de_llamada_orientados_a_avance     condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando los vendedores del equipo reportan llamadas 'exitosas' que en realidad no generan progreso medible en el pipeline.
+   30 analisis_causa_raiz_diagnostico              paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Realizar análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)
+   30 analisis_causa_raiz_diagnostico              paso         2  ya lo dice el PASO 2 del superviviente
+        Generar una lista de teorías/hipótesis sobre las causas probables con el equipo
+   30 analisis_causa_raiz_diagnostico              paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseñar un mecanismo de recolección de datos que permita correlacionar cada teoría con el defecto observado
+   30 analisis_causa_raiz_diagnostico              paso         4  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Validar estadísticamente cuál teoría explica la mayoría de los casos
+   30 analisis_causa_raiz_diagnostico              paso         5  ya lo dice el PASO 4 del superviviente
+        Confirmar la causa raíz antes de diseñar el remedio
+   30 analisis_causa_raiz_diagnostico              condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando existe un problema crónico de calidad sin causa clara
+   30 analisis_causa_raiz_diagnostico              condicion    2  CONDICION 2 del superviviente
+        Cuando el equipo tiene múltiples hipótesis sin validar
+   30 analisis_diagnostico_causa                   paso         1  ya lo dice el PASO 1 del superviviente
+        Analizar los síntomas del problema
+   30 analisis_diagnostico_causa                   paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Formular teorías sobre posibles causas usando brainstorming y diagramas causa-efecto
+   30 analisis_diagnostico_causa                   paso         3  ya lo dice el PASO 3 del superviviente
+        Probar las teorías mediante recolección y análisis de datos
+   30 analisis_diagnostico_causa                   paso         4  ya lo dice el PASO 4 del superviviente
+        Identificar la(s) causa(s) raíz confirmada(s) con evidencia
+   30 analisis_diagnostico_causa                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se ha definido un problema y se requiere identificar su causa antes de proponer un remedio
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 5
+  nodos implicados    : 18
+  nodos que MUEREN    : 13
+  piezas repartidas   : 78 (14 viajan enteras, 58 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 1
+
+ESCRITO. ficheros tocados: 49
+censo DESPUES: 3853 ficheros, 3224 vivos, 629 deprecados
+censo ANTES  : 3853 ficheros, 3237 vivos, 616 deprecados
+delta deprecados: +13 (esperado +13): OK

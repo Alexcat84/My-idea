@@ -47,14 +47,14 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 
 ## Conteos
 
-**1447 nodos** en la cola, sobre 3237 activos.
+**1443 nodos** en la cola, sobre 3224 activos.
 
 | dominio | nodos |
 |---|---:|
-| core | 633 |
-| quality | 366 |
+| core | 631 |
+| quality | 365 |
 | health_safety | 112 |
-| environmental | 85 |
+| environmental | 84 |
 | franquicias | 77 |
 | exportacion | 70 |
 | compras | 33 |
@@ -71,7 +71,7 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 | p99 | 65.9 | 56.8 |
 | maximo | 86.6 | 72.6 |
 
-Nodos evaluados por bloques (4 pasos o mas): **2126**. Los de menos dan **NO APLICA**, que no es cero.
+Nodos evaluados por bloques (4 pasos o mas): **2119**. Los de menos dan **NO APLICA**, que no es cero.
 
 ## La franja 44 a 45: lo que el umbral viejo dejaba fuera
 
@@ -319,18 +319,18 @@ Nodos evaluados por bloques (4 pasos o mas): **2126**. Los de menos dan **NO APL
 | 6 | core | `producto_como_servicio_de_acceso` | 8 | 71.0 | 67.0 | 4 | bloque |
 | 7 | core | `efecto_bullwhip` | 6 | 69.7 | 53.0 | 3 | bloque |
 | 8 | core | `blue_ocean_four_actions` | 7 | 68.4 | 66.1 | 3 | bloque |
-| 9 | core | `objetivos_de_llamada_orientados_a_avance` | 4 | 67.9 | 49.5 | 2 | bloque |
-| 10 | quality | `smed_setup_reduction` | 5 | 67.9 | 54.0 | 3 | bloque |
-| 11 | core | `reunion_conclusion_proyecto` | 13 | 67.8 | 54.2 | 11 | bloque |
-| 12 | environmental | `reduccion_cargas_regulatorias` | 5 | 67.4 | 47.1 | 2 | bloque |
-| 13 | core | `reporte_estado_miembro_equipo` | 6 | 67.2 | 57.8 | 4 | bloque |
-| 14 | quality | `modelo_transformacion_juran` | 4 | 67.1 | 51.2 | 2 | bloque |
-| 15 | core | `activity_attributes` | 5 | 66.7 | 58.1 | 3 | bloque |
-| 16 | core | `ejecucion_incremental_transicion_tecnologica` | 16 | 66.7 | 55.9 | 7 | bloque |
-| 17 | quality | `implementacion_monitoreo_controles` | 6 | 66.7 | 46.6 | 3 | bloque |
-| 18 | quality | `product_design_spreadsheet` | 5 | 66.3 | 49.7 | 2 | bloque |
-| 19 | core | `mantener_puntaje_innovacion` | 7 | 65.9 | 47.7 | 4 | bloque |
-| 20 | quality | `mapa_satisfaccion_importancia` | 4 | 65.9 | 54.0 | 2 | bloque |
+| 9 | quality | `smed_setup_reduction` | 5 | 67.9 | 54.0 | 3 | bloque |
+| 10 | core | `reunion_conclusion_proyecto` | 13 | 67.8 | 54.2 | 11 | bloque |
+| 11 | environmental | `reduccion_cargas_regulatorias` | 5 | 67.4 | 47.1 | 2 | bloque |
+| 12 | core | `reporte_estado_miembro_equipo` | 6 | 67.2 | 57.8 | 4 | bloque |
+| 13 | quality | `modelo_transformacion_juran` | 4 | 67.1 | 51.2 | 2 | bloque |
+| 14 | core | `activity_attributes` | 5 | 66.7 | 58.1 | 3 | bloque |
+| 15 | core | `ejecucion_incremental_transicion_tecnologica` | 16 | 66.7 | 55.9 | 7 | bloque |
+| 16 | quality | `implementacion_monitoreo_controles` | 6 | 66.7 | 46.6 | 3 | bloque |
+| 17 | quality | `product_design_spreadsheet` | 5 | 66.3 | 49.7 | 2 | bloque |
+| 18 | core | `mantener_puntaje_innovacion` | 7 | 65.9 | 47.7 | 4 | bloque |
+| 19 | quality | `mapa_satisfaccion_importancia` | 4 | 65.9 | 54.0 | 2 | bloque |
+| 20 | core | `cultura_de_experiencia` | 8 | 65.8 | 54.7 | 5 | bloque |
 
 La cola completa, con los dos pasos de cada pareja, en `COSTURAS_INTERNAS.jsonl`.
 <!-- MANUAL -->

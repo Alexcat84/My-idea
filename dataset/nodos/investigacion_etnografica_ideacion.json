@@ -7,15 +7,22 @@
   "resumen_teorico": "La etnografía consiste en observar a los clientes en su entorno natural durante períodos extendidos, detectando necesidades no articuladas. Aunque es poco popular (baja adopción por costo y tiempo), es calificada como el método MÁS EFECTIVO para generar ideas innovadoras, ya que revela problemas que el cliente ni siquiera sabe expresar (ejemplo: Purell FST Military Bottle desarrollado tras observar soldados en entrenamiento).",
   "pasos_accionables": [
     "Seleccionar un contexto de uso real del producto (ej. campo, fábrica, hospital)",
-    "Observar directamente a los usuarios utilizando o mal utilizando el producto durante un período extendido",
+    "Observar directamente a los usuarios utilizando o mal utilizando el producto durante un período extendido, involucrando a líderes o clientes (deputizar) en la observación de campo para generar empatía directa",
     "Documentar problemas, quejas y comportamientos no verbalizados",
     "Capacitar al equipo observador en habilidades de escucha e inferencia",
     "Reducir el tiempo por visita si es necesario (ej. 'día en la vida' de un día por sitio)",
-    "Traducir los hallazgos observacionales en conceptos de producto concretos"
+    "Traducir los hallazgos observacionales en conceptos de producto concretos",
+    "Formar equipos que combinen antropólogos/etnógrafos con diseñadores, arquitectos e ingenieros.",
+    "Buscar situaciones análogas (ej. un pit stop de carreras para entender una sala de emergencias)",
+    "Construir confianza genuina con los sujetos observados antes de extraer insights"
   ],
   "entregable_esperado": "Informe etnográfico con insights de necesidades no articuladas traducidos en conceptos de producto",
   "nodos_previos": [
-    "sistema_captura_ideas"
+    "sistema_captura_ideas",
+    "diseno_sistemico_partes_interesadas",
+    "reglas_brainstorming",
+    "seleccion_arenas_estrategicas",
+    "usuarios_extremos_edge_cases"
   ],
   "nodos_siguientes": [
     "equipos_visita_cliente",
@@ -30,11 +37,40 @@
     "tecnica_perder_objeto",
     "tres_espacios_innovacion",
     "desirability_feasibility_viability",
-    "espacios_de_diseno_superpuestos"
+    "espacios_de_diseno_superpuestos",
+    "design_thinking_proceso",
+    "empatia_capas_de_comprension",
+    "netnografia_social_media",
+    "pensamiento_de_conexiones_ripple_effect",
+    "reglas_brainstorming",
+    "tecnologias_disruptivas_oportunidad"
   ],
   "condiciones_activacion": [
     "Cuando se buscan ideas verdaderamente innovadoras (breakthrough) y no incrementales",
-    "Cuando los métodos tradicionales (encuestas, focus groups) no revelan necesidades profundas del usuario"
+    "Cuando los métodos tradicionales (encuestas, focus groups) no revelan necesidades profundas del usuario",
+    "Cuando el proyecto involucra comunidades o contextos culturales distintos al del equipo de diseño."
   ],
-  "etiqueta_arbol": "Observa a tus Clientes Reales"
+  "etiqueta_arbol": "Observa a tus Clientes Reales",
+  "ids_alias": [
+    "etnografia_aplicada_en_equipos_multidisciplinarios",
+    "etnografia_de_proyecto",
+    "etnografia_investigacion_usuario"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "etnografia_aplicada_en_equipos_multidisciplinarios",
+      "titulo": "Etnografía Aplicada en Equipos Multidisciplinarios",
+      "fuente": "Change by Design"
+    },
+    {
+      "node_id": "etnografia_de_proyecto",
+      "titulo": "Etnografía Aplicada al Diseño",
+      "fuente": "Change by Design, Revised and U - Tim Brown"
+    },
+    {
+      "node_id": "etnografia_investigacion_usuario",
+      "titulo": "Etnografía para Identificar Necesidades No Articuladas",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

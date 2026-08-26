@@ -9,26 +9,53 @@
     "Al planificar una llamada, dedica más tiempo a diseñar preguntas que a preparar el discurso de producto.",
     "Evita mostrar beneficios o capacidades hasta haber desarrollado suficientemente el problema y su implicación.",
     "Evalúa tus llamadas pasadas: ¿cuánto tiempo hablaste de tu producto en la primera mitad? Si es mucho, ajusta tu enfoque.",
-    "Entrena primero en preguntas de Situación y Problema antes de avanzar a Implicación y Necesidad-beneficio."
+    "Entrena primero en preguntas de Situación y Problema antes de avanzar a Implicación y Necesidad-beneficio.",
+    "Usa las respuestas del cliente para desarrollar y ampliar la percepción de sus propias necesidades",
+    "Practica escuchar de verdad para detectar problemas que el cliente no dice de manera directa"
   ],
   "entregable_esperado": "Una checklist de planificación de llamada de ventas centrada en preguntas de investigación, con métricas de tiempo dedicado a cada etapa del call.",
   "nodos_previos": [
     "modelo_spin_secuencia_preguntas",
-    "objetivos_de_llamada_orientados_a_avance",
+    "marco_avances_continuaciones",
     "apertura_llamada_venta_grande",
     "reglas_aprendizaje_habilidades_venta",
-    "modelo_spin_preguntas"
+    "modelo_spin_preguntas",
+    "cuatro_etapas_llamada_de_ventas",
+    "determinar_tipo_de_mercado"
   ],
   "nodos_siguientes": [
     "obtencion_compromiso_venta",
-    "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor"
+    "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
+    "modelo_spin_preguntas",
+    "necesidades_implicitas_vs_explicitas",
+    "obtencion_de_compromiso"
   ],
   "condiciones_activacion": [
     "Cuando los vendedores tienden a presentar el producto antes de entender las necesidades reales del cliente.",
     "Si las tasas de cierre son bajas a pesar de buenas presentaciones de producto."
   ],
   "ids_alias": [
-    "etapa_investigacion_necesidades"
+    "etapa_investigacion_necesidades",
+    "etapa_de_investigacion",
+    "etapa_investigacion_ventas",
+    "investigacion_como_habilidad_clave"
   ],
-  "etiqueta_arbol": "Pregunta Antes de Vender"
+  "etiqueta_arbol": "Pregunta Antes de Vender",
+  "merged_originals": [
+    {
+      "node_id": "etapa_de_investigacion",
+      "titulo": "La Etapa de Investigación en la Venta",
+      "fuente": "SPIN Selling - Neil Rackham"
+    },
+    {
+      "node_id": "etapa_investigacion_ventas",
+      "titulo": "La Etapa de Investigación como Motor de Éxito en Ventas Grandes",
+      "fuente": "SPIN Selling - Neil Rackham"
+    },
+    {
+      "node_id": "investigacion_como_habilidad_clave",
+      "titulo": "Preguntar (investigar) es la habilidad de venta más importante",
+      "fuente": "SPIN Selling - Neil Rackham"
+    }
+  ]
 }

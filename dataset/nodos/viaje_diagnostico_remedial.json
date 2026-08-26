@@ -6,10 +6,10 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Metodología dual de Juran para resolver problemas de calidad. El viaje diagnóstico va de los síntomas a las teorías de causas, de las teorías a las pruebas, y de las pruebas al establecimiento de la(s) causa(s) raíz. El viaje remedial va de la(s) causa(s) raíz al diseño de remedios, de los remedios a su prueba en condiciones operativas, de los remedios probados al manejo de la resistencia al cambio, y de ahí al establecimiento de nuevos controles para sostener las mejoras.",
   "pasos_accionables": [
-    "Analizar los síntomas del problema (evidencia observable)",
-    "Formular teorías sobre las posibles causas",
-    "Probar las teorías más plausibles con datos",
-    "Establecer la(s) causa(s) raíz confirmada(s)",
+    "Analizar los síntomas del problema (evidencia observable), con un análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)",
+    "Formular teorías sobre las posibles causas, usando brainstorming y diagramas causa-efecto",
+    "Probar las teorías más plausibles con datos, con un mecanismo de recolección que permita correlacionar cada teoría con el defecto observado",
+    "Establecer la(s) causa(s) raíz confirmada(s), validando estadísticamente cuál teoría explica la mayoría de los casos",
     "Diseñar remedios para eliminar las causas",
     "Probar los remedios bajo condiciones operativas reales",
     "Gestionar la resistencia predecible al cambio",
@@ -20,14 +20,39 @@
     "six_sigma_dmaic",
     "analisis_pareto_priorizacion",
     "establecer_proyecto_mejora",
-    "analisis_pareto_de_proveedores"
+    "analisis_pareto_de_proveedores",
+    "definicion_problema_moms_2",
+    "dmaic_fase_analyze",
+    "juran_rcca_metodo"
   ],
   "nodos_siguientes": [
     "six_sigma_dmaic",
-    "sostener_las_ganancias"
+    "sostener_las_ganancias",
+    "ciclo_shewhart_pdsa",
+    "diagnostico_sintoma_vs_causa_ventas",
+    "enfoque_proyecto_por_proyecto",
+    "error_proofing_servicio",
+    "juran_rcca_metodo"
   ],
   "condiciones_activacion": [
-    "Cuando se ha identificado un problema crónico de calidad y se requiere metodología estructurada de resolución"
+    "Cuando se ha identificado un problema crónico de calidad y se requiere metodología estructurada de resolución",
+    "Cuando el equipo tiene múltiples hipótesis sin validar"
   ],
-  "etiqueta_arbol": "Diagnostica y Corrige la Causa"
+  "etiqueta_arbol": "Diagnostica y Corrige la Causa",
+  "ids_alias": [
+    "analisis_causa_raiz_diagnostico",
+    "analisis_diagnostico_causa"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "analisis_causa_raiz_diagnostico",
+      "titulo": "Análisis de Causa Raíz mediante Diagnóstico Sistemático",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "analisis_diagnostico_causa",
+      "titulo": "Análisis y Diagnóstico de la Causa Raíz",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }
