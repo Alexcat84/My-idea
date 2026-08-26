@@ -2544,7 +2544,7 @@
       ],
       "entregable_esperado": "Un mapa de las personas involucradas con sus objetivos alineados y una nueva forma de plantear el problema",
       "nodos_previos": [
-        "how_might_we_framing",
+        "encuadre_desafio_diseno",
         "analisis_y_sintesis",
         "diseno_sistemico_partes_interesadas",
         "mastery_sensibilidades_diseno",
@@ -19375,7 +19375,7 @@
       ],
       "entregable_esperado": "Un plan de implementación construido junto a la gente del lugar, que incluya cómo se sostiene la solución después de que tú te vayas",
       "nodos_previos": [
-        "how_might_we_brief_social",
+        "encuadre_desafio_diseno",
         "usuarios_extremos_globales",
         "cultura_climatica_innovacion"
       ],
@@ -30218,7 +30218,7 @@
       "nodos_previos": [
         "practica_de_observacion_atenta",
         "ways_to_grow_matrix",
-        "how_might_we_hmw",
+        "encuadre_desafio_diseno",
         "investigacion_etnografica_ideacion"
       ],
       "nodos_siguientes": [
@@ -33500,7 +33500,7 @@
         "diseno_activismo_social",
         "diseno_estrategico_vs_tactico",
         "diseno_intencional_etica",
-        "how_might_we_framing",
+        "encuadre_desafio_diseno",
         "mastery_sensibilidades_diseno"
       ],
       "condiciones_activacion": [
@@ -35911,7 +35911,7 @@
       ],
       "nodos_siguientes": [
         "desirability_feasibility_viability",
-        "how_might_we_brief_social",
+        "encuadre_desafio_diseno",
         "integracion_deseabilidad_viabilidad_factibilidad_social"
       ],
       "condiciones_activacion": [
@@ -36027,7 +36027,7 @@
       ],
       "nodos_siguientes": [
         "diseno_activismo_social",
-        "how_might_we_briefs",
+        "encuadre_desafio_diseno",
         "sistema_gates_go_kill"
       ],
       "condiciones_activacion": [
@@ -36277,7 +36277,7 @@
         "analisis_y_sintesis"
       ],
       "nodos_siguientes": [
-        "how_might_we_framing",
+        "encuadre_desafio_diseno",
         "transformacion_organizacional_diseno",
         "storytelling_como_herramienta_diseno"
       ],
@@ -43166,25 +43166,77 @@
       "fuente": "The field guide to human-centered design",
       "resumen_teorico": "Herramienta inicial para estructurar un proyecto de diseño centrado en humanos. Consiste en formular el problema como una pregunta de diseño, definir el impacto final deseado, explorar posibles soluciones de manera amplia sin cerrarse prematuramente, y documentar el contexto y las restricciones (geográficas, tecnológicas, temporales o poblacionales) que afectan el proyecto.",
       "pasos_accionables": [
-        "Formular el problema como una pregunta de diseño abierta",
+        "Formular el problema como una pregunta de diseño abierta, utilizando la fórmula '¿Cómo podríamos...?'",
         "Definir el impacto último que se busca lograr",
         "Listar posibles soluciones pensando ampliamente, permitiendo resultados sorprendentes",
         "Documentar contexto y restricciones (geográficas, tecnológicas, de tiempo, poblacionales)",
-        "Revisar y ajustar la pregunta original según lo aprendido"
+        "Revisar y ajustar la pregunta original según lo aprendido, iterando la formulación con el equipo hasta encontrar el nivel de abstracción correcto",
+        "Validar el brief con conocimiento local ('local knowledge') de ONGs o actores en terreno antes de prototipar",
+        "Identificar el objetivo macro o problema social/de negocio a resolver.",
+        "Verifica que la pregunta no sea demasiado general (imposible de abordar) ni demasiado específica (limita soluciones)",
+        "Usa la pregunta como brújula durante todo el proceso de diseño",
+        "Usar esta pregunta como titular para las sesiones de brainstorming."
       ],
       "entregable_esperado": "Un documento de encuadre con la pregunta de diseño, el impacto deseado, soluciones potenciales y restricciones identificadas",
       "nodos_previos": [
-        "analisis_y_sintesis"
+        "analisis_y_sintesis",
+        "design_thinking_fundamentos",
+        "diseno_activismo_social",
+        "diseno_como_plataforma_expansiva",
+        "diseno_de_desafios_de_innovacion",
+        "enfoque_centrado_humano_organizacional",
+        "integracion_deseabilidad_viabilidad_factibilidad_social",
+        "search_for_business_model",
+        "usuarios_extremos_edge_cases",
+        "usuarios_extremos_globales"
       ],
       "nodos_siguientes": [
         "guia_entrevista_hcd",
-        "generar_insights_how_might_we"
+        "generar_insights_how_might_we",
+        "alineacion_de_objetivos_en_sistemas",
+        "conocimiento_local_colaboracion",
+        "deep_dive_workshop",
+        "fallar_rapido_prototipado",
+        "integracion_deseabilidad_viabilidad_factibilidad_social",
+        "investigacion_analoga",
+        "prototipado_rapido",
+        "reglas_brainstorming",
+        "usuarios_extremos_globales"
       ],
       "condiciones_activacion": [
         "Al iniciar cualquier proyecto de diseño centrado en humanos",
-        "Cuando el equipo no tiene claridad sobre el alcance del problema"
+        "Cuando el equipo no tiene claridad sobre el alcance del problema",
+        "Si se trabaja con objetivos institucionales o de política pública que requieren traducción a nivel de proyecto"
       ],
-      "etiqueta_arbol": "Encuadra tu Desafío de Diseño"
+      "etiqueta_arbol": "Encuadra tu Desafío de Diseño",
+      "ids_alias": [
+        "how_might_we_brief_social",
+        "how_might_we_briefs",
+        "how_might_we_framing",
+        "how_might_we_hmw"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "how_might_we_brief_social",
+          "titulo": "Traducir Metas Globales en Briefs de Diseño Accionables (How Might We)",
+          "fuente": "Change by Design"
+        },
+        {
+          "node_id": "how_might_we_briefs",
+          "titulo": "Diseño de Briefs mediante 'How Might We'",
+          "fuente": "Change by Design"
+        },
+        {
+          "node_id": "how_might_we_framing",
+          "titulo": "El Marco 'How Might We?' (HMW)",
+          "fuente": "Change by Design, Revised and U - Tim Brown"
+        },
+        {
+          "node_id": "how_might_we_hmw",
+          "titulo": "El Reto '¿Cómo Podríamos...?' (How Might We)",
+          "fuente": "Change by Design"
+        }
+      ]
     },
     "encuesta_satisfaccion_postproyecto": {
       "node_id": "encuesta_satisfaccion_postproyecto",
@@ -43432,7 +43484,7 @@
         "analisis_y_sintesis"
       ],
       "nodos_siguientes": [
-        "how_might_we_briefs",
+        "encuadre_desafio_diseno",
         "usuarios_extremos_edge_cases"
       ],
       "condiciones_activacion": [
@@ -53441,7 +53493,7 @@
       ],
       "entregable_esperado": "Un prototipo de baja fidelidad (físico o narrativo) probado con al menos un usuario real.",
       "nodos_previos": [
-        "how_might_we_briefs",
+        "encuadre_desafio_diseno",
         "aceleracion_de_gates"
       ],
       "nodos_siguientes": [
@@ -63853,7 +63905,8 @@
         "Cuando el equipo enfrenta un problema social muy amplio y necesita acotarlo para empezar a diseñar",
         "Si se trabaja con objetivos institucionales o de política pública que requieren traducción a nivel de proyecto"
       ],
-      "etiqueta_arbol": "Convierte Metas en Retos Concretos"
+      "etiqueta_arbol": "Convierte Metas en Retos Concretos",
+      "deprecado": true
     },
     "how_might_we_briefs": {
       "node_id": "how_might_we_briefs",
@@ -63885,7 +63938,8 @@
       "condiciones_activacion": [
         "Cuando el equipo tiene un objetivo abstracto o una misión filantrópica sin un punto de partida concreto para el diseño."
       ],
-      "etiqueta_arbol": "Formula tu Reto de Diseño"
+      "etiqueta_arbol": "Formula tu Reto de Diseño",
+      "deprecado": true
     },
     "how_might_we_framing": {
       "node_id": "how_might_we_framing",
@@ -63915,7 +63969,8 @@
         "Al iniciar cualquier proyecto de diseño o innovación",
         "Cuando el equipo no logra definir el alcance del problema"
       ],
-      "etiqueta_arbol": "Calibra tu Pregunta de Diseño"
+      "etiqueta_arbol": "Calibra tu Pregunta de Diseño",
+      "deprecado": true
     },
     "how_might_we_hmw": {
       "node_id": "how_might_we_hmw",
@@ -63942,7 +63997,8 @@
         "Al inicio de cualquier proyecto de innovación",
         "Cuando el equipo se siente estancado por un problema demasiado abstracto o demasiado restrictivo"
       ],
-      "etiqueta_arbol": "Pregunta Cómo Podrías Resolverlo"
+      "etiqueta_arbol": "Pregunta Cómo Podrías Resolverlo",
+      "deprecado": true
     },
     "hr_calidad_gestion": {
       "node_id": "hr_calidad_gestion",
@@ -67332,11 +67388,11 @@
       "nodos_previos": [
         "diseno_activismo_social",
         "lienzo_modelo_negocio",
-        "how_might_we_brief_social",
+        "encuadre_desafio_diseno",
         "diseno_intencional_etica"
       ],
       "nodos_siguientes": [
-        "how_might_we_brief_social"
+        "encuadre_desafio_diseno"
       ],
       "condiciones_activacion": [
         "Cuando se diseña una empresa social o proyecto con doble objetivo (impacto + sostenibilidad)",
@@ -68051,7 +68107,7 @@
       "nodos_previos": [
         "metaforas_para_pensar",
         "biomimicry_conexiones_naturales",
-        "how_might_we_framing"
+        "encuadre_desafio_diseno"
       ],
       "nodos_siguientes": [
         "mapeo_de_patrones",
@@ -94272,9 +94328,7 @@
         "falacia_del_disenador_affordances",
         "ficcion_especulativa_como_metodo",
         "gestion_decisiones_bajo_carga_emocional",
-        "how_might_we_brief_social",
-        "how_might_we_briefs",
-        "how_might_we_framing",
+        "encuadre_desafio_diseno",
         "mental_trial_and_error",
         "deep_dive_workshop",
         "narrativa_como_herramienta_de_sentido",
@@ -98324,11 +98378,10 @@
         "cuatro_etapas_del_pensamiento_creativo",
         "equipos_visita_cliente",
         "etnografia_investigacion_usuario",
-        "how_might_we_hmw",
+        "encuadre_desafio_diseno",
         "buscar_armonia_diseno",
         "cultura_de_optimismo",
         "esfuerzo_voluntario_vs_urge_espontaneo",
-        "how_might_we_briefs",
         "intimation_illumination",
         "pensamiento_convergente_divergente",
         "wallas_etapa_incubacion",
@@ -104288,7 +104341,7 @@
         "marcos_historicos_comunidades_startup",
         "antigoals_framework",
         "diseno_sistemico_partes_interesadas",
-        "how_might_we_briefs",
+        "encuadre_desafio_diseno",
         "mapeo_capas_diseno",
         "pensamiento_espacial_mapeo",
         "embudo_secuencial_de_inversores",
@@ -115656,7 +115709,7 @@
         "etnografia_aplicada_en_equipos_multidisciplinarios",
         "biomimicry_conexiones_naturales",
         "reconocer_sesgo_de_apofenia",
-        "how_might_we_briefs",
+        "encuadre_desafio_diseno",
         "pensamiento_convergente_divergente"
       ],
       "condiciones_activacion": [
@@ -115692,13 +115745,13 @@
       "nodos_previos": [
         "identificacion_problema_cliente",
         "empathy_map",
-        "how_might_we_brief_social"
+        "encuadre_desafio_diseno"
       ],
       "nodos_siguientes": [
         "prototipado_rapido",
         "diseno_activismo_social",
         "conocimiento_local_colaboracion",
-        "how_might_we_brief_social",
+        "encuadre_desafio_diseno",
         "restricciones_extremas_como_innovacion"
       ],
       "condiciones_activacion": [
@@ -126994,7 +127047,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 230,
+    "nodos_sin_enlaces_entrantes": 231,
     "enlaces_rotos_en_grafo": 0
   }
 }

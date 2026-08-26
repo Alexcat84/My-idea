@@ -7,6 +7,20 @@ la vuelta 64, registrada por el acta 64: la cuenta esperada se midio DESPUES de
 fundir y quedo como caida de procedimiento autodeclarada. Aqui se mide antes,
 sobre el arbol tal como esta, simulando la fusion EN MEMORIA sin tocar un nodo.
 
+CORRECCION DECLARADA DE LA LINEA BASE (2026-08-25, vuelta 67, por el carril del
+banco 9.10 y de la regla de la ficha envejecida registrada en
+docs/plan/03_FUSIONES.md linea 3338; EL TEXTO VIEJO SE QUEDA ENTERO AQUI ABAJO Y
+NO SE TACHA). EL ACTA 66 ADJUDICO POR EXTENSION QUE LA DUENA DE UNA COLISION ES
+QUIEN LA FABRICA, Y QUE LA LINEA BASE OPERATIVA DEL CENSO QUEDA EN 4: las DOS de
+la mesa OP-M-03 mas las DOS que la fusion del acto 8 de la vuelta 66 fabrico, que
+son de OP-U-02 y no de la mesa. Por eso el valor por defecto de --base pasa de 2
+a 4. LA ARITMETICA NO SE TOCA: la guarda sigue MIDIENDO la base sobre el arbol y
+cayendo en ROJO si la medida no calza con la declarada, que es lo que la hizo
+morder en la corrida del auditor de la vuelta 66. VA MARCADO DISCUTIBLE EN EL
+REPORTE DE LA VUELTA 67.
+
+EL TEXTO VIEJO, VERBATIM:
+
 LA LINEA BASE ES 2 Y ESTA DECLARADA (acta 64, pregunta 3): las dos colisiones
 que OP-M-03-II dejo vigentes son de la mesa OP-M-03 y las resuelve la mesa en su
 turno. Toda operacion corre el censo con esperadas MEDIDAS sobre esa base, y un
@@ -78,8 +92,10 @@ def censar(alias):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--plan", required=True)
-    ap.add_argument("--base", type=int, default=2,
-                    help="la linea base declarada del censo (acta 64, pregunta 3)")
+    ap.add_argument("--base", type=int, default=4,
+                    help="la linea base declarada del censo (acta 66, pregunta 2: "
+                         "2 de la mesa OP-M-03 mas 2 de OP-U-02). El defecto viejo "
+                         "era 2 y la correccion esta declarada en el docstring")
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
 
@@ -88,7 +104,9 @@ def main():
     print("LA CUENTA ESPERADA DE COLISIONES, SIMULADA ANTES DE FUNDIR")
     print("  plan       : %s" % a.plan)
     print("  operacion  : %s" % plan.get("operacion"))
-    print("  linea base : %d, DECLARADA (acta 64, pregunta 3)" % a.base)
+    print("  linea base : %d, DECLARADA (acta 66, pregunta 2; el texto viejo decia "
+          "2 por el acta 64, pregunta 3, y la correccion va declarada en el docstring)"
+          % a.base)
     print("=" * 78)
 
     alias = alias_vivos()

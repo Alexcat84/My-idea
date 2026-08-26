@@ -1,0 +1,106 @@
+==============================================================================================================
+VARAS POR FORMA, N-ARIAS, DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO
+  fichero del tramo: docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+==============================================================================================================
+
+  pasos y cond son las varas de CONTENIDO contables; cab es el CABLEADO,
+  que por P.8 solo habla a contenido empatado. La marca < indica que ese
+  miembro es EL UNICO que alcanza el maximo de esa vara, o sea que la vara
+  APUNTA a el. Si dos o mas lo alcanzan, la vara EMPATA y no apunta.
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 12 | 5 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 6, condiciones 4, cableado 14
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: metrics_that_matter_framework
+   el CABLEADO (P.8)      apunta a: metrics_that_matter_framework
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      cash_burn_calculation                                         4      2      4
+      metrics_that_matter_framework                                 6      4     14 <cond <cab
+      validacion_hipotesis_ingresos                                 5      1      5
+      validar_modelo_financiero                                     6      2      4
+      verificar_modelo_ingresos                                     6      3      8
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 13 | 5 miembros | FORMA: CONTENIDO EMPATA
+   maximos medidos: pasos 5, condiciones 2, cableado 8
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: hipotesis_de_canales
+   PUERTAS DENTRO DEL ACTO (guarda 1B, no se absorben): hipotesis_de_canales, seleccion_canal_distribucion
+
+      miembro                                                   pasos   cond    cab
+      channels_hypothesis_physical                                  5      2      7
+      channels_hypothesis_web_mobile                                5      2      4
+      hipotesis_de_canales                                          5      1      8 <cab  [PUERTA]
+      seleccion_canal_distribucion                                  5      2      7  [PUERTA]
+      seleccion_canal_fisico                                        4      1      2
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 14 | 5 miembros | FORMA: CONTENIDO EMPATA
+   maximos medidos: pasos 5, condiciones 2, cableado 7
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: tecnica_anclaje_negociacion
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      construccion_de_leverage                                      5      2      6
+      estrategia_competencia_vcs                                    4      1      2
+      gestion_multiples_term_sheets                                 5      1      4
+      leverage_en_negociacion_con_vcs                               4      2      3
+      tecnica_anclaje_negociacion                                   4      1      7 <cab
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 15 | 5 miembros | FORMA: TODAS DE ACUERDO
+   maximos medidos: pasos 6, condiciones 3, cableado 9
+   la vara de PASOS       apunta a: prevencion_objeciones_vs_manejo
+   la vara de CONDICIONES apunta a: prevencion_objeciones_vs_manejo
+   el CABLEADO (P.8)      apunta a: prevencion_objeciones_vs_manejo
+   PUERTAS DENTRO DEL ACTO (guarda 1B, no se absorben): ecuacion_de_valor, prevencion_objeciones_vs_manejo
+
+      miembro                                                   pasos   cond    cab
+      construccion_de_valor_percibido                               4      2      4
+      ecuacion_de_valor                                             4      1      4  [PUERTA]
+      ecuacion_de_valor_cliente                                     4      2      3
+      ecuacion_de_valor_venta                                       3      2      4
+      prevencion_objeciones_vs_manejo                               6      3      9 <pasos <cond <cab  [PUERTA]
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 16 | 5 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 5, condiciones 2, cableado 8
+   la vara de PASOS       apunta a: encuadre_desafio_diseno
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: how_might_we_briefs
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      encuadre_desafio_diseno                                       5      2      3 <pasos
+      how_might_we_brief_social                                     4      2      6
+      how_might_we_briefs                                           4      1      8 <cab
+      how_might_we_framing                                          4      2      6
+      how_might_we_hmw                                              4      2      3
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 17 | 5 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 6, condiciones 4, cableado 14
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: seleccion_arenas_estrategicas
+   el CABLEADO (P.8)      apunta a: EMPATA, no apunta
+   PUERTAS DENTRO DEL ACTO (guarda 1B, no se absorben): estrategia_de_innovacion_y_tecnologia
+
+      miembro                                                   pasos   cond    cab
+      estrategia_de_innovacion_arenas                               4      2      9
+      estrategia_de_innovacion_de_producto                          6      2      6
+      estrategia_de_innovacion_y_tecnologia                         5      2      5  [PUERTA]
+      estrategia_innovacion_producto                                5      3     14
+      seleccion_arenas_estrategicas                                 6      4     14 <cond
+
+==============================================================================================================
+  actos mirados: 6 | POR FORMA: {'UNA SOLA VARA': 3, 'CONTENIDO EMPATA': 2, 'TODAS DE ACUERDO': 1}
+
+LO QUE ESTO NO HACE: no elige superviviente, no aplica la guarda 1B y no funde.
+FIN

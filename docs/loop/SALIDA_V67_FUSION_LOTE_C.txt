@@ -1,0 +1,135 @@
+==============================================================================
+OP-U-02 . UNICO Y FINAL POR AGOTAMIENTO, LOTE C DEL TRAMO UNICO DE OP-U-02, PREFIJO SIN SALTOS DEL orden_universo DE LO QUE QUEDA: LOS ACTOS 12, 13, 14, 15, 16 Y 17, SEIS ACTOS Y 30 NODOS. El acto 16 cierra FUNDIDO; los actos 12, 13, 14, 15 y 17 cierran DECLARADOS Y NO FUNDIDOS con motivo sellado. El acto 13 y el acto 15 son las DOS PRIMERAS veces de la campana en que la guarda 1B es el motivo UNICO de un DECLARADO; el acto 14 es el SEGUNDO uso del carril que el acta 66 adjudico (P.5 contesta que no es una familia); y el acto 12 estrena una situacion sin letra, un veredicto D DIRECTO sin triangulo que cerrar, que va como PENDIENTE DE DOCTRINA y marcado DISCUTIBLE . MODO EJECUTAR
+plan: docs/loop/PLAN_V67_OPU02_LOTE_C.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3247 vivos, 606 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 16 . sobrevive encuadre_desafio_diseno . absorbe how_might_we_brief_social, how_might_we_briefs, how_might_we_framing, how_might_we_hmw
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 10 (anadidos 5) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 3 de how_might_we_framing al PASO 5 del superviviente
+        inciso VERBATIM: 'con el equipo hasta encontrar el nivel de abstracción correcto'
+        nexo (lo unico de cosecha propia): ', iterando la formulación '
+        paso resultante: Revisar y ajustar la pregunta original según lo aprendido, iterando la formulación con el equipo hasta encontrar el nivel de abstracción correcto
+     del paso 2 de how_might_we_hmw al PASO 1 del superviviente
+        inciso VERBATIM: "utilizando la fórmula '¿Cómo podríamos...?'"
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Formular el problema como una pregunta de diseño abierta, utilizando la fórmula '¿Cómo podríamos...?'
+  alias del superviviente: ['how_might_we_brief_social', 'how_might_we_briefs', 'how_might_we_framing', 'how_might_we_hmw']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 21
+   alineacion_de_objetivos_en_sistemas                  nodos_previos     how_might_we_framing -> encuadre_desafio_diseno
+   conocimiento_local_colaboracion                      nodos_previos     how_might_we_brief_social -> encuadre_desafio_diseno
+   deep_dive_workshop                                   nodos_previos     how_might_we_hmw -> encuadre_desafio_diseno
+   design_thinking_fundamentos                          nodos_siguientes  how_might_we_framing -> encuadre_desafio_diseno
+   diseno_activismo_social                              nodos_siguientes  how_might_we_brief_social -> encuadre_desafio_diseno
+   diseno_como_plataforma_expansiva                     nodos_siguientes  how_might_we_briefs -> encuadre_desafio_diseno
+   diseno_de_desafios_de_innovacion                     nodos_siguientes  how_might_we_framing -> encuadre_desafio_diseno
+   enfoque_centrado_humano_organizacional               nodos_siguientes  how_might_we_briefs -> encuadre_desafio_diseno
+   fallar_rapido_prototipado                            nodos_previos     how_might_we_briefs -> encuadre_desafio_diseno
+   integracion_deseabilidad_viabilidad_factibilidad_social nodos_previos     how_might_we_brief_social -> encuadre_desafio_diseno
+   integracion_deseabilidad_viabilidad_factibilidad_social nodos_siguientes  how_might_we_brief_social -> encuadre_desafio_diseno
+   investigacion_analoga                                nodos_previos     how_might_we_framing -> encuadre_desafio_diseno
+   prototipado_rapido                                   nodos_previos     how_might_we_brief_social -> encuadre_desafio_diseno
+   prototipado_rapido                                   nodos_previos     how_might_we_briefs -> encuadre_desafio_diseno
+   prototipado_rapido                                   nodos_previos     how_might_we_framing -> encuadre_desafio_diseno
+   reglas_brainstorming                                 nodos_previos     how_might_we_briefs -> encuadre_desafio_diseno
+   reglas_brainstorming                                 nodos_previos     how_might_we_hmw -> encuadre_desafio_diseno
+   search_for_business_model                            nodos_siguientes  how_might_we_briefs -> encuadre_desafio_diseno
+   usuarios_extremos_edge_cases                         nodos_siguientes  how_might_we_briefs -> encuadre_desafio_diseno
+   usuarios_extremos_globales                           nodos_previos     how_might_we_brief_social -> encuadre_desafio_diseno
+   usuarios_extremos_globales                           nodos_siguientes  how_might_we_brief_social -> encuadre_desafio_diseno
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 4
+   brainstorming_efectivo                               nodos_previos     how_might_we_briefs (registro historico)
+   definicion_startup                                   nodos_siguientes  how_might_we_briefs (registro historico)
+   metodologia_deep_dive                                nodos_previos     how_might_we_hmw (registro historico)
+   usuarios_extremos_insights                           nodos_siguientes  how_might_we_briefs (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 2
+   prototipado_rapido                                   nodos_previos
+   reglas_brainstorming                                 nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 892   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 891   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 1, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 5 de 5
+guarda D, los 4 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (23 filas)
+ acto de que nodo                                  que          n  a donde va
+   16 how_might_we_brief_social                    paso         1  ya lo dice el PASO 1 del superviviente
+        Tomar la meta u objetivo amplio y descomponerlo en preguntas específicas tipo '¿Cómo podríamos...?'
+   16 how_might_we_brief_social                    paso         2  ya lo dice el PASO 4 del superviviente
+        Verificar que cada pregunta tenga suficiente especificidad (contexto, población, restricción) para ser accionable
+   16 how_might_we_brief_social                    paso         3  ya lo dice el PASO 3 del superviviente
+        Verificar que cada pregunta tenga suficiente flexibilidad para permitir múltiples soluciones creativas
+   16 how_might_we_brief_social                    paso         4  PASO 6 del superviviente
+        Validar el brief con conocimiento local ('local knowledge') de ONGs o actores en terreno antes de prototipar
+   16 how_might_we_brief_social                    condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando el equipo enfrenta un problema social muy amplio y necesita acotarlo para empezar a diseñar
+   16 how_might_we_brief_social                    condicion    2  CONDICION 3 del superviviente
+        Si se trabaja con objetivos institucionales o de política pública que requieren traducción a nivel de proyecto
+   16 how_might_we_briefs                          paso         1  PASO 7 del superviviente
+        Identificar el objetivo macro o problema social/de negocio a resolver.
+   16 how_might_we_briefs                          paso         2  ya lo dice el PASO 1 del superviviente
+        Reformular el objetivo como una pregunta 'How Might We' (Cómo podríamos...).
+   16 how_might_we_briefs                          paso         3  ya lo dice el PASO 3 del superviviente
+        Asegurar que la pregunta sea lo suficientemente flexible para permitir múltiples soluciones creativas.
+   16 how_might_we_briefs                          paso         4  ya lo dice el PASO 4 del superviviente
+        Asegurar que la pregunta sea lo suficientemente específica para conectar con la vida real de los beneficiarios.
+   16 how_might_we_briefs                          condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando el equipo tiene un objetivo abstracto o una misión filantrópica sin un punto de partida concreto para el diseño.
+   16 how_might_we_framing                         paso         1  ya lo dice el PASO 1 del superviviente
+        Redacta el problema como una pregunta que comience con 'How Might We...'
+   16 how_might_we_framing                         paso         2  PASO 8 del superviviente
+        Verifica que la pregunta no sea demasiado general (imposible de abordar) ni demasiado específica (limita soluciones)
+   16 how_might_we_framing                         paso         3  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Itera la formulación de la pregunta con el equipo hasta encontrar el nivel de abstracción correcto
+   16 how_might_we_framing                         paso         4  PASO 9 del superviviente
+        Usa la pregunta como brújula durante todo el proceso de diseño
+   16 how_might_we_framing                         condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Al iniciar cualquier proyecto de diseño o innovación
+   16 how_might_we_framing                         condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando el equipo no logra definir el alcance del problema
+   16 how_might_we_hmw                             paso         1  ya lo dice el PASO 1 del superviviente
+        Tomar el problema central identificado.
+   16 how_might_we_hmw                             paso         2  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Reformularlo utilizando la fórmula '¿Cómo podríamos...?'
+   16 how_might_we_hmw                             paso         3  ya lo dice el PASO 5 del superviviente
+        Verificar que el alcance no sea demasiado amplio (imposible de resolver) ni demasiado estrecho (limita la innovación).
+   16 how_might_we_hmw                             paso         4  PASO 10 del superviviente
+        Usar esta pregunta como titular para las sesiones de brainstorming.
+   16 how_might_we_hmw                             condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Al inicio de cualquier proyecto de innovación
+   16 how_might_we_hmw                             condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando el equipo se siente estancado por un problema demasiado abstracto o demasiado restrictivo
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 1
+  nodos implicados    : 5
+  nodos que MUEREN    : 4
+  piezas repartidas   : 23 (6 viajan enteras, 15 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 5
+
+ESCRITO. ficheros tocados: 21
+censo DESPUES: 3853 ficheros, 3243 vivos, 610 deprecados
+censo ANTES  : 3853 ficheros, 3247 vivos, 606 deprecados
+delta deprecados: +4 (esperado +4): OK

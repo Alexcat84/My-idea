@@ -1,0 +1,705 @@
+==============================================================================
+DOSSIER DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO: EL ACTO LEIDO ENTERO (P.5) CON SU RAZON
+==============================================================================
+  nodos leidos de: el arbol de trabajo
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+
+##############################################################################
+# ACTO 12 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 5 MIEMBROS: 6 pares internos con veredicto escrito, de 10 combinaciones posibles
+
+  [PAR] puesto 371, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): metrics_that_matter_framework
+     nodo_b (EL SEGUNDO de la razon): validar_modelo_financiero
+     RAZON ENTERA, sin recortar:
+       REPITE con validar_modelo_financiero. Los dos mandan armar el mismo modelo financiero en el mismo momento, al terminar la validacion con clientes: precio de venta promedio ya validado con clientes, descuentos y costos de canal restados, costos operativos y margenes, y el efectivo que queda en banco. El primero remata en cuanto burn rate se aguanta y cuantos pivotes mas se pueden pagar; el segundo remata en un P&L y un flujo de caja presentables a inversionistas. Mismo calculo, dos destinatarios.
+
+  [PAR] puesto 404, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): cash_burn_calculation
+     nodo_b (EL SEGUNDO de la razon): metrics_that_matter_framework
+     RAZON ENTERA, sin recortar:
+       REPITE con metrics_that_matter_framework. Los cuatro pasos del primero son los pasos 3, 4 y 5 del segundo dichos igual: ingreso neto restando los costos de canal a las ventas brutas, restar despues los costos de ventas, producto y operativos para obtener lo que se quemo en el trimestre, y restarlo del efectivo con el que se empezo para saber lo que queda. El segundo antepone el tipo de canal y remata en cuantos pivotes se pueden pagar. Con el puesto 371, la familia del modelo financiero del fin de la validacion llega a TRES nodos del nucleo: metrics_that_matter_framework, validar_modelo_financiero y cash_burn_calculation.
+
+  [PAR] puesto 451, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): validacion_hipotesis_ingresos
+     nodo_b (EL SEGUNDO de la razon): verificar_modelo_ingresos
+     RAZON ENTERA, sin recortar:
+       REPITE con verificar_modelo_ingresos. Los dos hacen el mismo calculo y en el mismo orden: ingreso bruto de unidades por precio, ingreso neto descontando comisiones, descuentos y devoluciones del canal, y despues restar los costos operativos y los de adquisicion para ver si el negocio se sostiene. El primero anade el valor de vida del cliente para fijar el techo de lo que se puede pagar por conseguirlo; el segundo anade los tres escenarios y el cash burn contra la caja. FAMILIA anotada, y ya es de CINCO: con los puestos 371 y 404, el nucleo tiene metrics_that_matter_framework, validar_modelo_financiero, cash_burn_calculation, validacion_hipotesis_ingresos y verificar_modelo_ingresos sobre el mismo modelo financiero del fin de la validacion. Ninguno esta en RACIMOS_MIEMBROS.jsonl.
+
+  [PAR] puesto 791, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): metrics_that_matter_framework
+     nodo_b (EL SEGUNDO de la razon): verificar_modelo_ingresos
+     RAZON ENTERA, sin recortar:
+       El mismo calculo de supervivencia contado dos veces y del mismo libro, sin arista entre ellos. Lo comun es la cuenta entera: partir de precios y unidades, descontar los costos de canal para llegar al ingreso neto, restar los costos operativos y de adquisicion, y terminar mirando el consumo de caja contra lo que queda en el banco. Lo propio de metrics_that_matter_framework son dos cosas que valen: empezar identificando el TIPO DE CANAL, fisico, digital directo o mercado de varios lados, porque cambia la aritmetica, y cerrar preguntando CUANTOS PIVOTES MAS PUEDES COSTEAR antes de quedarte sin efectivo, que convierte la hoja de calculo en una decision. Lo propio de verificar_modelo_ingresos son los TRES ESCENARIOS, optimista, esperado y pesimista. El numero de pivotes que quedan y los tres escenarios son lo que hay que salvar.
+
+  [PAR] puesto 807, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): validar_modelo_financiero
+     nodo_b (EL SEGUNDO de la razon): verificar_modelo_ingresos
+     RAZON ENTERA, sin recortar:
+       La misma validacion financiera contada dos veces y del mismo libro, sin arista entre ellos. Lo comun es la cuenta entera: reunir precios, costos de adquisicion, tamano de mercado y costos de canal, calcular el ingreso neto despues del canal, restar operativos y adquisicion, y mirar la caja disponible contra lo proyectado. Lo propio de validar_modelo_financiero son dos cosas de peso: el VALOR DE VIDA DEL CLIENTE junto a las tasas de conversion, y convertir todo en un estado de resultados, un balance y un flujo de caja MULTIANUAL listo para inversionistas, que es lo unico del par que produce documentos formales. Lo propio de verificar_modelo_ingresos son los TRES ESCENARIOS, optimista, esperado y pesimista. LA FAMILIA FINANCIERA DE LA VALIDACION llega a CUATRO nodos vistos, con metrics_that_matter_framework del puesto 791, tambien en A, y revenue_pricing_hypothesis del 679, que salio sano. Tres de los cuatro dicen casi lo mismo con nombres distintos.
+
+  [PAR] puesto 1374, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): cash_burn_calculation
+     nodo_b (EL SEGUNDO de la razon): validacion_hipotesis_ingresos
+     RAZON ENTERA, sin recortar:
+       El efectivo que queda contra lo que vale un cliente, del mismo libro y sin arista entre ellos. cash_burn_calculation termina en UNA CIFRA DE CAJA: calcular los ingresos netos por trimestre restando los costos de canal a los brutos, restar los costos de ventas, de producto y los operativos, obtener cuanto se quemo o se genero, y restarlo del efectivo que habia al inicio para saber cuanto queda. validacion_hipotesis_ingresos termina en OTRA COSA: calcular los ingresos brutos multiplicando unidades por precio promedio, revisar si alcanzan para cubrir costos fijos y variables en el corto plazo, evaluar si la rentabilidad mejora al crecer, tomar en cuenta como el canal afecta lo que de verdad llega, y CALCULAR CUANTO VALE UN CLIENTE durante toda la relacion para definir con eso el gasto de adquisicion. Los dos parten del mismo dato, el ingreso neto de canal, y salen por puertas distintas: uno responde cuanto tiempo queda, el otro cuanto se puede gastar en traer al siguiente cliente.
+
+  --- cash_burn_calculation
+      titulo    : Cuánto dinero quemas cada trimestre (Cash Burn)
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 4 | condiciones 2 | previos 3 | siguientes 1 | cableado 4
+      paso 1: Calcula tus ingresos netos por trimestre (ingresos brutos menos costos de canal)
+      paso 2: Resta tus costos de ventas, de producto y los operativos corrientes
+      paso 3: El resultado es cuánto dinero quemaste o generaste (cash burn) en ese periodo
+      paso 4: Resta ese número del efectivo que tenías al inicio del trimestre para saber cuánto efectivo te queda
+      cond 1: Cuando necesitas saber cuánto tiempo puedes operar antes de quedarte sin capital
+      cond 2: Antes de decidir si escalas el negocio o buscas más financiamiento
+      previos   : ['metrics_that_matter_framework', 'actualizar_modelo_de_negocio_pivot_o_proceed', 'diferencia_ganancia_flujo_caja']
+      siguientes: ['decision_pivotar_o_proceder']
+      entregable: Tu cálculo trimestral de cuánto dinero quemas y cuánto efectivo te queda, durante al menos el primer año
+
+  --- metrics_that_matter_framework
+      titulo    : Metrics That Matter (Métricas que Importan)
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 6 | condiciones 4 | previos 8 | siguientes 10 | cableado 18
+      paso 1: Identifica el tipo de canal de venta de tu producto: físico, digital directo o mercado multi-lado
+      paso 2: Calcula las unidades vendidas por periodo y el precio de venta promedio validado con clientes
+      paso 3: Resta los descuentos y costos de canal a las ventas brutas para obtener el ingreso neto
+      paso 4: Resta los costos de ventas, producto y operativos al ingreso neto para calcular el burn rate por periodo
+      paso 5: Construye una hoja de cálculo trimestral que muestre el efectivo restante en banco después de cada periodo
+      paso 6: Define cuál burn rate es aceptable para ti y cuántos pivotes más puedes costear antes de quedarte sin fondos
+      cond 1: Cuando has completado la validación de clientes y necesitas decidir si avanzar a la etapa de creación de clientes
+      cond 2: Cuando necesitas evaluar si tu modelo de negocio es financieramente viable antes de escalar
+      cond 3: Si confundes este análisis con las proyecciones financieras tradicionales de cinco años
+      cond 4: Cuando necesitas decidir si invertir fuertemente en escalar sin quedarte sin fondos
+      previos   : ['fit_value_proposition', 'customer_validation', 'market_type_revenue_growth', 'sales_funnel_get_keep_grow', 'sales_roadmap', 'viral_loop_marketing', 'validar_modelo_negocio_hechos', 'war_room_pivot_proceed']
+      siguientes: ['decision_pivotar_o_proceder', 'worst_case_best_case_analysis', 'cash_burn_calculation', 'demand_curve_pricing', 'revalidar_modelo_negocio', 'customer_creation', 'burn_rate_por_etapa', 'pivot_o_proceder_revalidar_modelo_negocio', 'revalidacion_modelo_negocio', 'tipo_mercado_curva_ingresos']
+      entregable: Hoja de cálculo de 'Metrics that Matter' con proyección trimestral de cash burn y efectivo remanente para al menos 12 meses, mostrando si el negocio es escalable y rentable.
+
+  --- validacion_hipotesis_ingresos
+      titulo    : Comprobar si tus ingresos aguantan el negocio
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 1 | previos 3 | siguientes 2 | cableado 5
+      paso 1: Calcula tus ingresos brutos aproximados multiplicando cuánto vendes por tu precio promedio
+      paso 2: Revisa si ese ingreso te alcanza para cubrir tus costos fijos y variables en el corto plazo
+      paso 3: Evalúa si tu rentabilidad mejora a medida que crecen tus ingresos
+      paso 4: Toma en cuenta cómo el canal por el que vendes (descuentos, devoluciones) afecta el ingreso que realmente te queda
+      paso 5: Calcula cuánto vale un cliente durante todo el tiempo que te compra (LTV) y usa eso para definir tu precio
+      cond 1: Cuando ya definiste cómo vas a cobrar y necesitas decidir si el negocio vale la pena antes de crecer
+      previos   : ['seleccion_estrategia_pricing', 'analisis_tco_roi_b2b', 'diseno_basado_en_comportamientos_existentes']
+      siguientes: ['sintesis_hipotesis_modelo_negocio', 'estrategia_ferias_comerciales']
+      entregable: Un cálculo preliminar, hecho a mano, de si tu modelo de ingresos es viable
+
+  --- validar_modelo_financiero
+      titulo    : Validar el Modelo Financiero
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 6 | condiciones 2 | previos 5 | siguientes 2 | cableado 7
+      paso 1: Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable
+      paso 2: Calcular costos de adquisición de clientes, tasas de conversión y Customer Lifetime Value (LTV)
+      paso 3: Determinar costos operativos básicos, costos de canal y márgenes
+      paso 4: Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año
+      paso 5: Verificar el balance de caja disponible (runway)
+      paso 6: Convertir las métricas validadas en un P&L, balance y flujo de caja multianual listo para inversionistas
+      cond 1: Cuando el startup está a punto de terminar la fase de Customer Validation
+      cond 2: Cuando se necesita preparar información financiera para inversionistas o bancos
+      previos   : ['customer_validation', 'fit_value_proposition', 'pivot_o_proceder', 'validar_modelo_negocio_hechos', 'decision_pivotar_o_proceder']
+      siguientes: ['revalidar_modelo_negocio', 'decision_pivotar_o_proceder']
+      entregable: Un modelo financiero completo con pruebas pass/fail identificadas que demuestre la viabilidad de escalar el negocio de forma rentable
+
+  --- verificar_modelo_ingresos
+      titulo    : Verificar si se Puede Generar Ingresos y Crecer (Revenue Model Data)
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 6 | condiciones 3 | previos 3 | siguientes 6 | cableado 9
+      paso 1: Recopila tus datos de precios, costos de adquisición, tamaño de mercado y costos de canal
+      paso 2: Calcula el ingreso bruto directo estimado por trimestre
+      paso 3: Calcula el ingreso neto de canal descontando comisiones, márgenes y costos promocionales
+      paso 4: Suma los ingresos totales y resta los costos operativos y de adquisición de clientes
+      paso 5: Repite el cálculo en tres escenarios: optimista, esperado y pesimista
+      paso 6: Evalúa tu cash burn y la caja disponible para saber si sobrevives el periodo proyectado
+      cond 1: Cuando necesitas decidir si tu modelo de negocio es financieramente viable antes de escalar
+      cond 2: Cuando inversionistas o tú mismo requieren evidencia numérica de rentabilidad potencial
+      cond 3: Cuando quieres saber si tu negocio sobrevivirá y crecerá de forma rentable
+      previos   : ['verificar_clientes_y_canales', 'escenarios_diseno_modelo_negocio', 'verificar_product_market_fit']
+      siguientes: ['decision_pivotar_o_proceder', 'preservar_caja_buscar_gastar', 'metodo_valor_presente_neto', 'metodos_de_valuacion', 'pivote_o_proceder', 'preservar_efectivo_buscar_modelo']
+      entregable: Pronóstico financiero de ingresos netos a 4-8 trimestres en tres escenarios, con análisis de cash burn y Business Model Canvas actualizado.
+
+##############################################################################
+# ACTO 13 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 5 MIEMBROS: 8 pares internos con veredicto escrito, de 10 combinaciones posibles
+
+  [PAR] puesto 165, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): seleccion_canal_distribucion
+     nodo_b (EL SEGUNDO de la razon): seleccion_canal_fisico
+     RAZON ENTERA, sin recortar:
+       REPITE con seleccion_canal_fisico. Los dos mandan analizar los habitos de compra de la categoria, evaluar los canales por costo y control, y quedarse con UN SOLO canal dominante evitando lanzar por varios. FIGURA: ids casi identicos dentro del nucleo, y con seleccion_canales_distribucion de exportacion, ya registrado en el informe como la primera transdominio, la familia del canal de distribucion llega a TRES nodos en dos dominios. Candidato a fusion.
+
+  [PAR] puesto 214, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): channels_hypothesis_physical
+     nodo_b (EL SEGUNDO de la razon): hipotesis_de_canales
+     RAZON ENTERA, sin recortar:
+       REPITE con hipotesis_de_canales. Los cinco pasos coinciden: habitos de compra y ajuste del producto al canal, precio y complejidad, costos del canal, elegir UN canal principal y recalcular el modelo de ingresos neto. FIGURA: con el puesto 165 la familia del canal de distribucion del nucleo llega a CUATRO nodos, seleccion_canal_distribucion, seleccion_canal_fisico, channels_hypothesis_physical e hipotesis_de_canales, mas el de exportacion ya registrado. Candidato a fusion.
+
+  [PAR] puesto 400, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): hipotesis_de_canales
+     nodo_b (EL SEGUNDO de la razon): seleccion_canal_distribucion
+     RAZON ENTERA, sin recortar:
+       REPITE con seleccion_canal_distribucion. Los dos mandan la misma seleccion de canal: pesar el precio y la complejidad del producto contra el canal, calcular todos los costos del canal incluyendo descuentos, promocion y devoluciones, recalcular el ingreso neto con esos costos encima, y concentrarse en UN canal principal en vez de lanzar por varios a la vez. Los dos lo dicen con las mismas mayusculas en el UN canal. Cuatro gestos de cinco.
+
+  [PAR] puesto 537, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): channels_hypothesis_web_mobile
+     nodo_b (EL SEGUNDO de la razon): seleccion_canal_distribucion
+     RAZON ENTERA, sin recortar:
+       REPITE con seleccion_canal_distribucion. Los dos mandan lo mismo: listar los canales que tienen sentido para el producto, evaluarlos por control, costo y alcance, quedarse con UN canal principal para concentrar los recursos al inicio, y calcular el ingreso que queda despues de descontar el costo del canal. El primero anade probar varios con presupuesto parecido para comparar el costo de conseguir un cliente en cada uno. CHOCA CON LA DIRECCION DE FUSION DE LA RELECTURA R1 Y LO TRAIGO: R1 declaro seleccion_canal_distribucion superviviente natural frente a seleccion_canal_fisico, y eso sigue siendo cierto PARA ESE PAR. Pero la familia son CINCO nodos del nucleo, los cinco de Blank: seleccion_canal_distribucion, seleccion_canal_fisico, channels_hypothesis_web_mobile, hipotesis_de_canales y validar_canal_distribucion. Y ya lleva TRES veredictos A, los puestos 165, 400 y este. La direccion de fusion no se puede cerrar par por par: fisico y digital son especializaciones que el nodo general NO lleva, asi que la tercera pregunta de la relectura, que se pierde al fusionar, cambia de respuesta al mirar los cinco. Sube a racimo en la seccion 10 del informe.
+
+  [PAR] puesto 609, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): channels_hypothesis_physical
+     nodo_b (EL SEGUNDO de la razon): seleccion_canal_distribucion
+     RAZON ENTERA, sin recortar:
+       FAMILIA DECLARADA: los dos son miembros del racimo LA SELECCION DE CANAL, seis miembros, declarado en la seccion 10 del informe, asi que no se pelea la clase. Se registra A porque el calco es de los mas limpios que han salido: los cinco pasos van uno a uno y casi en el mismo orden. Habitos de compra establecidos en la categoria, si el canal fortalece el proceso de venta y a que costo, precio y complejidad del producto frente al canal, un solo canal principal hasta terminar el descubrimiento o la validacion, y recalcular el modelo o la hipotesis de ingresos con los costos de ese canal. Las diferencias son de redaccion: channels_hypothesis_physical dice hasta completar la VALIDACION de clientes y seleccion_canal_distribucion dice durante el customer DISCOVERY, y este ultimo detalla los costos como distribucion y promocion. Hay arista en los dos sentidos, verificada resolviendo a nodo vivo, o sea que aqui la arista NO salva nada: no es una madre con un hijo desarrollado, son dos textos del mismo grano. Los dos de The Startup Owner's Manual. Este racimo llega a cuatro pares leidos.
+
+  [PAR] puesto 762, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): channels_hypothesis_web_mobile
+     nodo_b (EL SEGUNDO de la razon): hipotesis_de_canales
+     RAZON ENTERA, sin recortar:
+       FAMILIA DECLARADA: los dos son miembros del racimo LA SELECCION DE CANAL, seis miembros, seccion 10, asi que no se pelea la clase. Se registra A porque el calco es casi total: hacer la lista de canales que tienen sentido para el producto, evaluar cada uno por control, costo y alcance, mirar el precio y la complejidad del producto frente al canal, elegir UN SOLO canal principal para concentrar los recursos al inicio, y recalcular el ingreso neto despues de descontar los costos del canal. Los cinco pasos van practicamente uno a uno. Lo unico propio de channels_hypothesis_web_mobile es probar varios canales con presupuesto parecido para comparar cuanto cuesta conseguir un cliente en cada uno, y lo unico propio de hipotesis_de_canales es la primera decision, si el producto va por canal fisico, digital o hibrido, que es la que este otro da por resuelta al llamarse web y movil. Los dos de The Startup Owner's Manual, sin arista entre ellos. Este racimo llega a cinco pares leidos.
+
+  [PAR] puesto 945, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): channels_hypothesis_physical
+     nodo_b (EL SEGUNDO de la razon): seleccion_canal_fisico
+     RAZON ENTERA, sin recortar:
+       LA MISMA SELECCION DE CANAL FISICO, del mismo libro y sin arista entre ellos, y los pasos se emparejan casi uno a uno. Lo comun es el procedimiento entero: evaluar si existen habitos de compra establecidos en la categoria, pesar las fortalezas y el costo de cada canal contra el precio y la complejidad del producto, y elegir UN SOLO canal dominante evitando lanzar por varios a la vez. Lo propio de channels_hypothesis_physical es revisar el modelo de ingresos segun los costos de ese canal; lo propio de seleccion_canal_fisico es listar primero las opciones de canal relevantes para la industria. Dos lineas contra cuatro gestos compartidos. Nota de familia: es la familia del canal de la seccion 10, la del choque de la relectura R1, y este par la engorda: seleccion_canal_fisico ya habia dado A contra seleccion_canal_distribucion en el puesto 165, o sea que el nodo fisico repite con el general y con la hipotesis fisica.
+
+  [PAR] puesto 1488, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): hipotesis_de_canales
+     nodo_b (EL SEGUNDO de la razon): seleccion_canal_fisico
+     RAZON ENTERA, sin recortar:
+       LA MISMA ELECCION DE CANAL, LA GENERAL Y LA FISICA, del mismo libro y con arista, y confirma la adjudicacion del banco 9.25. TRES de los cuatro pasos de seleccion_canal_fisico tienen su correspondiente: listar las opciones de canal relevantes se corresponde con determinar si el producto se ajusta mejor a canal fisico, digital o hibrido; evaluar fortalezas y debilidades por costo, control y velocidad se corresponde con evaluar el precio contra el canal y calcular todos los costos del canal; y SELECCIONAR UN UNICO CANAL DOMINANTE Y EVITAR LANZAR POR VARIOS A LA VEZ es literalmente el mismo paso que seleccionar UN canal principal para enfocar los esfuerzos iniciales. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De seleccion_canal_fisico se perderia UNA: ANALIZAR LOS HABITOS DE COMPRA ESTABLECIDOS en la categoria de producto, que es el unico paso de la familia que mira lo que el cliente ya hace en vez de lo que le conviene a la empresa. De hipotesis_de_canales se perderian dos: la rama DIGITAL E HIBRIDA, que el nodo fisico por definicion no cubre; y RECALCULAR EL MODELO DE INGRESOS NETO despues de los costos del canal, que es el unico paso que devuelve la eleccion de canal al estado de resultados. NOTA DE NOMINA, por el banco 9.25: la especializacion FISICA vuelve a fundir, y van tres veces, con los puestos 165 y 945. El racimo del canal NO crece: sigue en SEIS miembros y su cobertura pasa a 8 de 15, con los ocho en A. Sigue siendo SUB-PURO y sigue siendo, por el 9.16, una promesa.
+
+  --- channels_hypothesis_physical
+      titulo    : Hipótesis de Canal de Distribución Físico
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 2 | previos 2 | siguientes 6 | cableado 8
+      paso 1: Evaluar si existen hábitos de compra establecidos para la categoría de producto
+      paso 2: Determinar si el canal fortalece el proceso de venta y a qué costo
+      paso 3: Analizar precio y complejidad del producto frente al canal elegido
+      paso 4: Elegir un solo canal con mayor potencial hasta completar la validación de clientes
+      paso 5: Revisar el modelo de ingresos según los costos de ese canal
+      cond 1: Si el producto es físico o híbrido físico/digital
+      cond 2: Cuando se debate entre múltiples canales de venta
+      previos   : ['dia_en_la_vida_del_cliente', 'mapa_organizacional_influencia']
+      siguientes: ['market_type_definicion', 'seleccion_canal_distribucion', 'validar_canal_distribucion', 'customer_retention_tactics', 'revenue_pricing_hypothesis', 'determinar_tipo_de_mercado']
+      entregable: Selección de canal físico principal con análisis de costos directos e indirectos
+
+  --- channels_hypothesis_web_mobile
+      titulo    : Cómo va a llegar tu producto al cliente (canal de venta digital)
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 2 | previos 2 | siguientes 3 | cableado 5
+      paso 1: Haz una lista de los canales digitales que tengan sentido para tu producto
+      paso 2: Evalúa las fortalezas y debilidades de cada canal: cuánto control tienes, cuánto cuesta, a cuánta gente llegas
+      paso 3: Elige un único canal principal para enfocar ahí tus recursos al inicio
+      paso 4: Prueba varios canales con un presupuesto parecido para comparar cuánto te cuesta conseguir cada cliente
+      paso 5: Calcula el ingreso que te queda después de descontar el costo del canal
+      cond 1: Si tu producto es una aplicación web o móvil
+      cond 2: Cuando necesitas decidir cómo va a llegar tu producto al cliente por medios digitales
+      previos   : ['mapa_organizacional_influencia', 'customer_segments_hypothesis']
+      siguientes: ['multi_sided_market_channel', 'market_type_definicion', 'determinar_tipo_de_mercado']
+      entregable: Tu elección de canal de distribución digital, con la justificación de costos y alcance que la respalda
+
+  --- hipotesis_de_canales   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Hipótesis de Canales de Distribución
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 1 | previos 1 | siguientes 7 | cableado 8
+      paso 1: Determinar si el producto se ajusta mejor a canal físico, digital o híbrido
+      paso 2: Evaluar el precio del producto en relación al canal (ej. ventas enterprise vs apps de bajo costo)
+      paso 3: Calcular todos los costos del canal (descuentos, promoción, devoluciones)
+      paso 4: Seleccionar UN canal principal para enfocar los esfuerzos iniciales
+      paso 5: Recalcular el modelo de ingresos neto tras costos de canal
+      cond 1: Cuando el equipo necesita definir cómo el producto llegará físicamente o digitalmente al cliente
+      previos   : ['mapa_organizacional_influencia']
+      siguientes: ['seleccion_canal_fisico', 'determinar_tipo_de_mercado', 'acquisicion_viral_engineering', 'embudo_get_keep_grow', 'estrategia_plataformas_existentes', 'programa_afiliados', 'seleccion_canales_distribucion']
+      entregable: Hipótesis de canal seleccionado con diagrama de distribución y cálculo de ingresos netos tras costos de canal
+
+  --- seleccion_canal_distribucion   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Selección de Canal de Distribución
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 2 | previos 2 | siguientes 5 | cableado 7
+      paso 1: Identificar los hábitos de compra establecidos en la categoría de tu producto
+      paso 2: Evaluar si el canal fortalece el proceso de venta y a qué costo
+      paso 3: Analizar la complejidad y precio del producto respecto al canal elegido
+      paso 4: Recalcular la hipótesis de ingresos netos considerando costos del canal (distribución, promoción, devoluciones)
+      paso 5: Enfocarse en UN canal principal durante el customer discovery, evitando lanzar por múltiples canales a la vez
+      cond 1: Cuando la startup está definiendo cómo llevará el producto al cliente
+      cond 2: Si se está considerando lanzar por varios canales simultáneamente sin validación previa
+      previos   : ['revenue_pricing_hypothesis', 'channels_hypothesis_physical']
+      siguientes: ['determinar_tipo_de_mercado', 'customer_discovery', 'publicidad_offline_pruebas_locales', 'estrategia_multicanal_bienvenida', 'seleccion_canales_distribucion']
+      entregable: Hipótesis de canal documentada con análisis de costos netos y justificación de por qué ese canal es el más adecuado para el producto
+
+  --- seleccion_canal_fisico
+      titulo    : Selección de Canal de Distribución Física
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 4 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Listar las opciones de canal físico relevantes para la industria
+      paso 2: Evaluar fortalezas y debilidades de cada canal (costo, control, velocidad)
+      paso 3: Analizar hábitos de compra establecidos en la categoría de producto
+      paso 4: Seleccionar un único canal dominante y evitar lanzar por múltiples canales simultáneamente
+      cond 1: Si el producto es físico y requiere intermediarios para llegar al consumidor final
+      previos   : ['hipotesis_de_canales']
+      siguientes: ['determinar_tipo_de_mercado']
+      entregable: Selección justificada de canal(es) físico(s) de distribución con análisis de costo-beneficio
+
+##############################################################################
+# ACTO 14 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 5 MIEMBROS: 7 pares internos con veredicto escrito, de 10 combinaciones posibles
+
+  [PAR] puesto 257, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): estrategia_competencia_vcs
+     nodo_b (EL SEGUNDO de la razon): leverage_en_negociacion_con_vcs
+     RAZON ENTERA, sin recortar:
+       REPITE con leverage_en_negociacion_con_vcs. Los dos mandan lo mismo para ganar poder frente al inversor: empezar la ronda con anticipacion y sincronizar varias conversaciones para tener mas de una propuesta sobre la mesa al mismo tiempo. Candidato a fusion.
+
+  [PAR] puesto 334, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): construccion_de_leverage
+     nodo_b (EL SEGUNDO de la razon): leverage_en_negociacion_con_vcs
+     RAZON ENTERA, sin recortar:
+       REPITE con leverage_en_negociacion_con_vcs. Los dos mandan la misma palanca y con el mismo mecanismo: no depender de un solo inversionista, buscar varios term sheets a la vez en vez de en serie, y empezar con tiempo antes de que apriete el efectivo. El primero anade sincronizar los tiempos de respuesta, no revelar nombres, anclar en dos o tres terminos y no ser el primero en poner precio; el segundo anade construir traccion antes y explorar ofertas de compra. Distintas tacticas, la misma instruccion.
+
+  [PAR] puesto 394, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): construccion_de_leverage
+     nodo_b (EL SEGUNDO de la razon): gestion_multiples_term_sheets
+     RAZON ENTERA, sin recortar:
+       REPITE con gestion_multiples_term_sheets. Los dos mandan la misma maniobra: hablar con varios inversionistas en paralelo y no en serie, coordinar el ritmo para que los term sheets lleguen en ventanas cercanas, decirle a cada uno que hay otras conversaciones sin revelar identidades, y no compartir jamas el contenido de un term sheet con otro. Cuatro gestos de cuatro. Con el puesto 334, la familia de la palanca en la negociacion con inversionistas llega a TRES nodos del nucleo.
+
+  [PAR] puesto 413, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): estrategia_competencia_vcs
+     nodo_b (EL SEGUNDO de la razon): gestion_multiples_term_sheets
+     RAZON ENTERA, sin recortar:
+       REPITE con gestion_multiples_term_sheets. Los dos mandan la misma maniobra: coordinar las conversaciones con varios inversionistas para que los term sheets lleguen juntos, y no revelar con quien mas se esta hablando. El primero anade planear la ronda en una ventana de tres a seis meses y pedir feedback concreto a quien dice que no. Con los puestos 334 y 394, la familia de la palanca frente a los inversionistas llega a CUATRO nodos del nucleo: construccion_de_leverage, leverage_en_negociacion_con_vcs, gestion_multiples_term_sheets y estrategia_competencia_vcs.
+
+  [PAR] puesto 787, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): construccion_de_leverage
+     nodo_b (EL SEGUNDO de la razon): estrategia_competencia_vcs
+     RAZON ENTERA, sin recortar:
+       El mismo juego de hacer competir a los inversores, contado dos veces y del mismo libro, sin arista entre ellos. Lo comun es el nucleo: buscar interes de varios inversionistas EN PARALELO y no en secuencia, sincronizar los tiempos para que los term sheets lleguen en la misma ventana, y no revelar con quien mas estas hablando. Lo propio de construccion_de_leverage son dos reglas de negociacion que el otro no tiene: ANCLAR en dos o tres terminos prioritarios y ser flexible en el resto, y NUNCA ser el primero en poner un term sheet con precio delante de un VC. Lo propio de estrategia_competencia_vcs son la ventana de tres a seis meses y pedir feedback concreto a quien decide no invertir. Las dos reglas de anclaje y de no mover primero son lo mas caro de perder. Nota de familia: estrategia_competencia_vcs ya habia repetido con leverage_en_negociacion_con_vcs en el puesto 257, o sea que esta familia va en tres nodos y dos pares, los dos en A.
+
+  [PAR] puesto 878, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): construccion_de_leverage
+     nodo_b (EL SEGUNDO de la razon): tecnica_anclaje_negociacion
+     RAZON ENTERA, sin recortar:
+       El paso cuatro contado como nodo, y no trae procedimiento propio. El paso 4 de construccion_de_leverage dice anclar en dos o tres terminos prioritarios y mantener flexibilidad en el resto. tecnica_anclaje_negociacion es ese paso en cuatro lineas: identificar los dos o tres terminos verdaderamente criticos antes de negociar, definir posiciones razonables pero con margen de flexibilidad en esos puntos, comunicarlas de forma clara y consistente, y estar dispuesto a ceder en puntos secundarios para proteger los anclados. Lo que anade son dos matices, el margen y la consistencia al comunicar, y los dos caben en una linea. Por la vara del banco 9.6.1, REPITE. Sin arista entre ellos. Y PRIMER USO DEL BARRIDO DE LAS A del banco 9.15: este nodo aparece ahora con un A vigente contra un miembro del sub-puro de la competencia entre inversores, o sea que entra como candidato a miembro; la lectura lo deja FUERA, porque su objeto es como negociar terminos y no como generar competencia entre inversores. El candidato se levanta por el archivo y se resuelve leyendo, que es exactamente para lo que se escribio la regla.
+
+  [PAR] puesto 1030, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): gestion_multiples_term_sheets
+     nodo_b (EL SEGUNDO de la razon): leverage_en_negociacion_con_vcs
+     RAZON ENTERA, sin recortar:
+       LA MISMA PALANCA, libros distintos y sin arista entre ellos, Y CON ESTE PAR NACE EL PRIMER PURO DE CUATRO. Lo comun es la maniobra: buscar varias propuestas de inversion al mismo tiempo y de distintos inversionistas en vez de ir en serie, y coordinar los tiempos para que lleguen juntas. Lo propio de leverage_en_negociacion_con_vcs son tres: desarrollar traccion, producto, ingresos o contratos, ANTES de acercarse; explorar ofertas de compra como palanca adicional; y empezar las negociaciones con anticipacion, antes de que se acabe el efectivo. Lo propio de gestion_multiples_term_sheets son otras tres: identificar a todos los fondos objetivo antes de empezar conversaciones formales, no compartir jamas el contenido de un term sheet con otro inversor, y usar el primero recibido como palanca para acelerar a los demas. CONDICION VIVA CUMPLIDA: era la unica lectura que le faltaba a la familia de la competencia entre inversores. Cuatro miembros, SEIS pares posibles, los SEIS leidos y los SEIS en A. Es PURO por la condicion dura y es el PRIMER PURO DE CUATRO MIEMBROS del archivo, despues de tres puros de tres.
+
+  --- construccion_de_leverage
+      titulo    : Construcción de Leverage en Negociaciones de Financiamiento
+      fuente    : Venture Deals - Brad Feld
+      pasos 5 | condiciones 2 | previos 2 | siguientes 4 | cableado 6
+      paso 1: Buscar generar interés de múltiples inversionistas en paralelo, no de forma secuencial
+      paso 2: Sincronizar los tiempos de respuesta de los distintos VCs para recibir term sheets en ventanas similares
+      paso 3: Comunicar que existe interés de otras firmas sin revelar nombres ni compartir term sheets reales
+      paso 4: Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto
+      paso 5: Nunca ser el primero en ofrecer un term sheet con precio a un VC
+      cond 1: Si el usuario tiene o busca tener más de un inversionista interesado
+      cond 2: Si el usuario está por recibir su primer term sheet
+      previos   : ['batna_definicion', 'estilos_de_negociacion']
+      siguientes: ['leverage_en_negociacion_con_vcs', 'contratacion_acelerada_hipercrecimiento', 'mercado_de_uno_fundraising', 'peligro_capital_barato']
+      entregable: Múltiples conversaciones activas con inversionistas gestionadas estratégicamente en el tiempo, y una lista de términos ancla definidos
+
+  --- estrategia_competencia_vcs
+      titulo    : Haz que varios inversores compitan por invertir (VCs)
+      fuente    : Venture Deals - Brad Feld
+      pasos 4 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Planea tu ronda con una ventana de 3 a 6 meses.
+      paso 2: Sincroniza tus conversaciones con varios inversores para que las ofertas (term sheets) te lleguen en fechas cercanas.
+      paso 3: No reveles con qué otros inversores estás hablando, salvo que sean colaboradores conocidos entre ellos.
+      paso 4: Pide feedback concreto si un inversor decide no invertir.
+      cond 1: Cuando quieres tener más poder de negociación frente a los inversores.
+      previos   : ['proceso_decision_vc']
+      siguientes: ['cierre_term_sheet']
+      entregable: Un calendario de tu ronda con varios inversores avanzando en etapas de negociación sincronizadas.
+
+  --- gestion_multiples_term_sheets
+      titulo    : Gestión de Múltiples Term Sheets Simultáneos
+      fuente    : Venture Deals
+      pasos 5 | condiciones 1 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Identificar a todos los VCs objetivo antes de iniciar conversaciones formales
+      paso 2: Coordinar el ritmo de las conversaciones para que avancen en paralelo
+      paso 3: Comunicar a cada VC que existen otras conversaciones en curso sin revelar identidades
+      paso 4: Nunca compartir el contenido de un term sheet con otro inversor
+      paso 5: Usar el primer term sheet recibido como palanca para acelerar a otros interesados
+      cond 1: Cuando el emprendedor está en proceso activo de levantar una ronda con múltiples inversores interesados
+      previos   : ['elevator_pitch_inversion', 'errores_comunes_fundraising']
+      siguientes: ['tecnica_anclaje_negociacion', 'encontrar_lead_vc']
+      entregable: Múltiples term sheets competitivos recibidos en ventana temporal similar
+
+  --- leverage_en_negociacion_con_vcs
+      titulo    : Cómo ganar poder de negociación (leverage) frente a los inversionistas
+      fuente    : The Founder's Dilemmas
+      pasos 4 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Desarrolla tracción (producto, ingresos, contratos) antes de acercarte a los inversionistas
+      paso 2: Busca varias propuestas de inversión (term sheets) al mismo tiempo, de distintos inversionistas
+      paso 3: Explora ofertas de compra como palanca de negociación
+      paso 4: Empieza las negociaciones con suficiente anticipación, antes de que se te acabe el efectivo disponible (runway)
+      cond 1: Si estás por iniciar una ronda de levantamiento de capital
+      cond 2: Si dependes de un solo inversionista sin alternativas
+      previos   : ['construccion_de_leverage']
+      siguientes: ['term_sheet_negociacion', 'control_del_board_startup']
+      entregable: Una estrategia clara de cuándo y cómo negociar tu ronda de financiamiento para tener el mayor poder de negociación posible
+
+  --- tecnica_anclaje_negociacion
+      titulo    : Anclaje en Negociación de Términos
+      fuente    : Venture Deals
+      pasos 4 | condiciones 1 | previos 7 | siguientes 1 | cableado 8
+      paso 1: Antes de negociar, identificar los 2-3 términos verdaderamente críticos para el negocio
+      paso 2: Definir posiciones razonables pero con margen de flexibilidad en esos puntos
+      paso 3: Comunicar estas posiciones de forma clara y consistente
+      paso 4: Estar dispuesto a ceder en puntos secundarios para proteger los términos anclados
+      cond 1: Cuando se inicia la negociación formal de un term sheet con un VC
+      previos   : ['gestion_multiples_term_sheets', 'contrarrestar_argumento_mercado', 'anticipacion_riesgos_fundacionales', 'decision_intensidad_capital', 'eleccion_ritmo_crecimiento', 'riesgos_terminos_favorables_seed', 'seed_deals_riesgos_precedente']
+      siguientes: ['orden_negociacion_puntos']
+      entregable: Lista priorizada de términos no negociables vs. negociables antes de sentarse a la mesa
+
+##############################################################################
+# ACTO 15 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 5 MIEMBROS: 5 pares internos con veredicto escrito, de 10 combinaciones posibles
+
+  [PAR] puesto 185, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): ecuacion_de_valor_cliente
+     nodo_b (EL SEGUNDO de la razon): ecuacion_de_valor_venta
+     RAZON ENTERA, sin recortar:
+       REPITE con ecuacion_de_valor_venta. Los dos mandan lo mismo y en el mismo orden: medir que tan grande percibe el cliente el problema antes de hablar de precio, usar preguntas de implicacion para agrandarlo si es pequeno, y presentar la solucion solo cuando la balanza ya se inclino. FIGURA: ids casi identicos. Candidato a fusion.
+
+  [PAR] puesto 217, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): ecuacion_de_valor
+     nodo_b (EL SEGUNDO de la razon): ecuacion_de_valor_cliente
+     RAZON ENTERA, sin recortar:
+       REPITE con ecuacion_de_valor_cliente. Los dos mandan medir el costo total percibido contra el tamano del problema percibido, agrandar el problema con preguntas si la balanza no cierra, y no presentar la solucion hasta que cierre. FIGURA: RACIMO NUEVO, con el puesto 185 son TRES nodos del nucleo con la misma ecuacion de valor: ecuacion_de_valor, ecuacion_de_valor_cliente y ecuacion_de_valor_venta. Candidato a fusion.
+
+  [PAR] puesto 258, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): ecuacion_de_valor
+     nodo_b (EL SEGUNDO de la razon): ecuacion_de_valor_venta
+     RAZON ENTERA, sin recortar:
+       REPITE con ecuacion_de_valor_venta. Los dos mandan medir el problema percibido contra el costo percibido antes de hablar de precio, agrandar el problema con preguntas si la balanza no cierra, y no presentar hasta que cierre. PROCEDENCIA: es el tercer par del trio de la ecuacion de valor que registre como racimo nuevo en el puesto 217. La relectura lo sostiene.
+
+  [PAR] puesto 950, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): construccion_de_valor_percibido
+     nodo_b (EL SEGUNDO de la razon): ecuacion_de_valor
+     RAZON ENTERA, sin recortar:
+       LA MISMA BALANZA DE RACKHAM CON DOS NOMBRES, del mismo libro y sin arista entre ellos. Lo comun es la ecuacion entera: pesar el tamano del problema contra el costo que el cliente percibe, usar preguntas de implicacion para amplificar la percepcion del problema cuando la balanza no favorece la compra, y no pasar a la solucion hasta que la balanza se incline. Lo propio de ecuacion_de_valor es desglosar el COSTO PERCIBIDO en sus cuatro partes, dinero, riesgo, esfuerzo y riesgo laboral o reputacional. Lo propio de construccion_de_valor_percibido son cuantificar en numeros el costo del problema actual del cliente, y el aviso de no usar la sobrecarga de detalle tecnico como estrategia de venta. CONSECUENCIA DECLARADA, y cuesta un puro: la ecuacion de valor era el SEGUNDO PURO del banco 9.5, tres miembros y tres pares posibles leidos y en A. Con este par, construccion_de_valor_percibido entra como cuarto miembro por el BARRIDO DE LAS A del banco 9.15, y la familia pasa a CUATRO miembros con SEIS pares posibles, cuatro leidos y los cuatro en A. DEGRADA A SUB-PURO, y le faltan dos lecturas.
+
+  [PAR] puesto 1146, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): ecuacion_de_valor_cliente
+     nodo_b (EL SEGUNDO de la razon): prevencion_objeciones_vs_manejo
+     RAZON ENTERA, sin recortar:
+       EL MODELO CONTRA LA REGLA QUE YA LO CONTIENE, del mismo libro y con arista. TRES de los cuatro pasos de ecuacion_de_valor_cliente estan dentro de prevencion_objeciones_vs_manejo: usar preguntas de implicacion para amplificar las consecuencias no vistas y usar preguntas de necesidad y beneficio para que el cliente articule el valor son su paso 5, reforzar el uso de implicacion y necesidad beneficio antes de mencionar cualquier ventaja; y presentar la solucion y su costo solo entonces es su paso 4, retrasar la presentacion de beneficios hasta confirmar una necesidad explicita clara. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De ecuacion_de_valor_cliente se perderia el MODELO, que es su unico paso propio y la imagen que le da nombre: mapear que tan grande percibe el cliente su problema ANTES de nada, y presentar el precio solo cuando la balanza de valor ya se inclino. Es un marco conceptual, no un procedimiento, y el otro nodo no lo enuncia en ninguna parte. De prevencion_objeciones_vs_manejo se perderia todo su DIAGNOSTICO, que es lo que ningun otro nodo de Rackham da: registrar en cuantas llamadas aparecen objeciones y en que punto exacto, identificar si surgen justo despues de ofrecer una ventaja sin necesidad establecida, leer las objeciones de precio como senal de necesidad mal desarrollada, y sustituir la practica de responder objeciones tipicas por practica en desarrollar necesidades. Nota de forma: no es un par de madre e hijo como los siete anteriores de este libro, son dos nodos laterales, y por eso el resultado no rompe la racha de jerarquias sanas de Rackham sino que mide otra cosa.
+
+  --- construccion_de_valor_percibido
+      titulo    : Construcción de valor percibido en ventas grandes
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 2 | previos 3 | siguientes 1 | cableado 4
+      paso 1: Identificar el problema real que el cliente percibe antes de hablar de características del producto
+      paso 2: Cuantificar el costo del problema actual del cliente para justificar la inversión
+      paso 3: Evitar la sobrecarga de detalles técnicos como estrategia principal de venta
+      paso 4: Usar preguntas de implicación para amplificar la percepción del problema y su urgencia (desarrollado en SPIN)
+      cond 1: Cuando el cliente no percibe suficiente valor para justificar una decisión de compra grande
+      cond 2: Si el vendedor depende del conocimiento técnico del producto y aún así no cierra ventas
+      previos   : ['cierre_segun_complejidad_venta', 'value_proposition_startup', 'metodologia_spin_selling']
+      siguientes: ['necesidades_implicitas_vs_explicitas']
+      entregable: Argumentario de valor cuantificado para la oferta, ligado a los problemas reales del segmento de cliente
+
+  --- ecuacion_de_valor   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : La Ecuación de Valor
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 1 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Identifica el costo total percibido por el cliente (dinero, riesgo, esfuerzo, riesgo laboral/reputacional)
+      paso 2: Evalúa si el problema detectado es lo suficientemente grande como para justificar ese costo
+      paso 3: Si no lo es, usa preguntas para ayudar al cliente a percibir mayor magnitud o urgencia del problema
+      paso 4: No avances a la propuesta de solución hasta que la balanza problema-costo favorezca claramente la compra
+      cond 1: Cuando el usuario enfrenta resistencia de precio o percibe que el cliente no ve suficiente urgencia para comprar una solución costosa
+      previos   : ['necesidades_implicitas_vs_explicitas', 'planificacion_preguntas_implicacion']
+      siguientes: ['obtencion_de_compromiso', 'ofrece_valor_no_economico']
+      entregable: Análisis costo-beneficio percibido por el cliente antes de presentar la propuesta formal
+
+  --- ecuacion_de_valor_cliente
+      titulo    : Ecuación de Valor del Cliente
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Antes de presentar precio o solución, mapear qué tan grande percibe el cliente su problema
+      paso 2: Usar preguntas de Implicación para amplificar las consecuencias no vistas del problema
+      paso 3: Usar preguntas de Necesidad-Beneficio para que el cliente articule el valor de resolverlo
+      paso 4: Solo entonces presentar la solución y su costo, cuando la balanza de valor ya se inclinó a favor
+      cond 1: Cuando el precio o costo de la solución es alto en relación al problema percibido por el cliente
+      cond 2: Cuando se recibe la objeción 'es demasiado caro' o 'no vale la pena el esfuerzo de cambiar'
+      previos   : ['prueba_solucion_con_cliente', 'modelo_spin_preguntas']
+      siguientes: ['prevencion_objeciones_vs_manejo', 'modelo_spin_preguntas']
+      entregable: Mapa de 'costo vs valor percibido' para la oportunidad de venta actual, identificando qué preguntas faltan por hacer para inclinar la balanza
+
+  --- ecuacion_de_valor_venta
+      titulo    : Ecuación de Valor en la Venta Consultiva
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 3 | condiciones 2 | previos 3 | siguientes 3 | cableado 6
+      paso 1: Antes de mencionar precio o solución, evalúa qué tan grande percibe el cliente su problema actual.
+      paso 2: Si el problema percibido es pequeño en relación al costo de tu solución, invierte más tiempo en preguntas de implicación antes de hablar de precio.
+      paso 3: Solo presenta la solución y el precio cuando el cliente ya perciba el problema como suficientemente grave para justificar la inversión.
+      cond 1: Cuando el precio de la solución es alto en relación con el problema aparente del cliente.
+      cond 2: Cuando el cliente reacciona con sorpresa o rechazo ante el precio antes de haber comprendido la gravedad del problema.
+      previos   : ['planificacion_preguntas_implicacion', 'prevencion_de_objeciones', 'prevencion_objeciones_vs_manejo']
+      siguientes: ['preguntas_beneficio', 'value_proposition_startup', 'preguntas_need_payoff']
+      entregable: Justificación cuantificada (costos, tiempos, riesgos) del problema del cliente que respalde el precio de la solución antes de presentarla.
+
+  --- prevencion_objeciones_vs_manejo   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Prevención de Objeciones vs. Manejo de Objeciones
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 6 | condiciones 3 | previos 7 | siguientes 3 | cableado 10
+      paso 1: Registra en cuántas llamadas recibes objeciones y en qué punto exacto de la conversación aparecen.
+      paso 2: Identifica si las objeciones surgen justo después de ofrecer una ventaja o solución sin haber establecido antes una necesidad explícita.
+      paso 3: Identifica si las objeciones son sobre precio o valor, señal de que la necesidad quedó insuficientemente desarrollada.
+      paso 4: Retrasa la presentación de beneficios o soluciones hasta confirmar una necesidad explícita clara del cliente.
+      paso 5: Refuerza el uso de preguntas de implicación y necesidad beneficio antes de mencionar cualquier ventaja.
+      paso 6: Sustituye tu práctica de respuestas a objeciones típicas por práctica en desarrollo de necesidades mediante preguntas.
+      cond 1: Cuando recibes muchas objeciones, especialmente sobre precio o resistencia al cambio.
+      cond 2: Cuando estás diseñando o ajustando tu propio proceso o guion de ventas.
+      cond 3: Cuando tus ventas son de tamaño mediano o grande, no ventas pequeñas de bajo costo.
+      previos   : ['modelo_spin_preguntas', 'ecuacion_de_valor_cliente', 'diagnostico_sintoma_vs_causa_ventas', 'framework_caracteristicas_ventajas_beneficios', 'producto_unico_superior', 'enfoque_resolucion_problemas_lanzamiento_producto', 'lanzamiento_nuevos_productos_enfoque_problema']
+      siguientes: ['necesidades_implicitas_vs_explicitas', 'manejo_objeciones_venta_franquicia', 'ecuacion_de_valor_venta']
+      entregable: Registro de llamadas de venta que clasifica el momento y tipo de objeciones recibidas, con un plan de ajuste en la secuencia de preguntas antes de ofrecer soluciones.
+
+##############################################################################
+# ACTO 16 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 5 MIEMBROS: 4 pares internos con veredicto escrito, de 10 combinaciones posibles
+
+  [PAR] puesto 236, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): how_might_we_brief_social
+     nodo_b (EL SEGUNDO de la razon): how_might_we_briefs
+     RAZON ENTERA, sin recortar:
+       REPITE con how_might_we_briefs. Los dos mandan tomar el objetivo amplio, reformularlo como pregunta Como podriamos y verificar que quede a la vez lo bastante especifica para orientar y lo bastante flexible para no cerrar la solucion. PROCEDENCIA: par ya marcado, los dos del racimo del encuadre del problema. La relectura lo sostiene.
+
+  [PAR] puesto 264, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): how_might_we_framing
+     nodo_b (EL SEGUNDO de la razon): how_might_we_hmw
+     RAZON ENTERA, sin recortar:
+       REPITE con how_might_we_hmw. Los dos mandan reformular el problema con la formula Como podriamos, verificar que el alcance no quede ni demasiado amplio ni demasiado estrecho y usar la pregunta como brujula o titular del resto del proceso. PROCEDENCIA: par ya marcado, los dos del racimo del encuadre del problema censado en la franja. La relectura lo sostiene.
+
+  [PAR] puesto 525, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): encuadre_desafio_diseno
+     nodo_b (EL SEGUNDO de la razon): how_might_we_framing
+     RAZON ENTERA, sin recortar:
+       REPITE con how_might_we_framing. Los dos mandan lo mismo: formular el problema como pregunta abierta de diseno, calibrar que no quede ni demasiado general ni demasiado estrecha, iterar la formulacion con el equipo, y usarla como brujula durante todo el proceso. El primero anade definir el impacto ultimo que se busca y documentar el contexto y las restricciones geograficas, tecnologicas y de tiempo. Los dos ya estan censados en el racimo Encuadre del problema (How Might We), y con el puesto 264 este racimo ya lleva dos pares leidos y los dos REPITEN.
+
+  [PAR] puesto 1319, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): how_might_we_briefs
+     nodo_b (EL SEGUNDO de la razon): how_might_we_hmw
+     RAZON ENTERA, sin recortar:
+       EL MISMO RETO REFORMULADO DOS VECES, del mismo libro y sin arista entre ellos. Lo comun es el nodo entero de los dos: tomar el problema central, reformularlo con la formula de como podriamos, y CALIBRAR SU ALTURA para que no quede ni tan amplio que sea imposible de abordar ni tan estrecho que no deje espacio a soluciones. Los dos dicen la misma calibracion con palabras distintas, flexible y especifico en uno, ni demasiado amplio ni demasiado estrecho en el otro. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De how_might_we_briefs se perderian dos: identificar primero el OBJETIVO MACRO o problema social y de negocio que hay detras, que es el unico paso que dice de donde sale la pregunta; y exigir que conecte con la VIDA REAL de los usuarios y no solo con el problema abstracto. De how_might_we_hmw se perderia una y es su unico gesto propio: USAR LA PREGUNTA COMO TITULAR de las sesiones de lluvia de ideas, que es lo unico del par que dice para que sirve despues de escribirla. LO QUE ESTE PAR LE HACE A LA FAMILIA, medido con el barrido antes de escribir: hasta hoy la familia HMW eran DOS componentes separadas, how_might_we_briefs con how_might_we_brief_social por la A del 236, y how_might_we_hmw con how_might_we_framing y encuadre_desafio_diseno por las A del 264 y el 525. Esta A las UNE: por el cierre transitivo del banco 9.24 son ahora UNA SOLA de CINCO NODOS. Ninguno de los cinco es costura confirmada, asi que los trece actos del cierre no cambian; lo que cambia es el tamano de esta mesa, de tres y dos a cinco.
+
+  --- encuadre_desafio_diseno
+      titulo    : Encuadre del Desafío de Diseño (Frame Your Design Challenge)
+      fuente    : The field guide to human-centered design
+      pasos 5 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Formular el problema como una pregunta de diseño abierta
+      paso 2: Definir el impacto último que se busca lograr
+      paso 3: Listar posibles soluciones pensando ampliamente, permitiendo resultados sorprendentes
+      paso 4: Documentar contexto y restricciones (geográficas, tecnológicas, de tiempo, poblacionales)
+      paso 5: Revisar y ajustar la pregunta original según lo aprendido
+      cond 1: Al iniciar cualquier proyecto de diseño centrado en humanos
+      cond 2: Cuando el equipo no tiene claridad sobre el alcance del problema
+      previos   : ['analisis_y_sintesis']
+      siguientes: ['guia_entrevista_hcd', 'generar_insights_how_might_we']
+      entregable: Un documento de encuadre con la pregunta de diseño, el impacto deseado, soluciones potenciales y restricciones identificadas
+
+  --- how_might_we_brief_social
+      titulo    : Traducir Metas Globales en Briefs de Diseño Accionables (How Might We)
+      fuente    : Change by Design
+      pasos 4 | condiciones 2 | previos 3 | siguientes 5 | cableado 8
+      paso 1: Tomar la meta u objetivo amplio y descomponerlo en preguntas específicas tipo '¿Cómo podríamos...?'
+      paso 2: Verificar que cada pregunta tenga suficiente especificidad (contexto, población, restricción) para ser accionable
+      paso 3: Verificar que cada pregunta tenga suficiente flexibilidad para permitir múltiples soluciones creativas
+      paso 4: Validar el brief con conocimiento local ('local knowledge') de ONGs o actores en terreno antes de prototipar
+      cond 1: Cuando el equipo enfrenta un problema social muy amplio y necesita acotarlo para empezar a diseñar
+      cond 2: Si se trabaja con objetivos institucionales o de política pública que requieren traducción a nivel de proyecto
+      previos   : ['diseno_activismo_social', 'usuarios_extremos_globales', 'integracion_deseabilidad_viabilidad_factibilidad_social']
+      siguientes: ['prototipado_rapido', 'integracion_deseabilidad_viabilidad_factibilidad_social', 'how_might_we_hmw', 'usuarios_extremos_globales', 'conocimiento_local_colaboracion']
+      entregable: Un brief de diseño formulado como pregunta 'How Might We' específica y accionable, validado con conocimiento local
+
+  --- how_might_we_briefs
+      titulo    : Diseño de Briefs mediante 'How Might We'
+      fuente    : Change by Design
+      pasos 4 | condiciones 1 | previos 5 | siguientes 4 | cableado 9
+      paso 1: Identificar el objetivo macro o problema social/de negocio a resolver.
+      paso 2: Reformular el objetivo como una pregunta 'How Might We' (Cómo podríamos...).
+      paso 3: Asegurar que la pregunta sea lo suficientemente flexible para permitir múltiples soluciones creativas.
+      paso 4: Asegurar que la pregunta sea lo suficientemente específica para conectar con la vida real de los beneficiarios.
+      cond 1: Cuando el equipo tiene un objetivo abstracto o una misión filantrópica sin un punto de partida concreto para el diseño.
+      previos   : ['definicion_startup', 'enfoque_centrado_humano_organizacional', 'usuarios_extremos_edge_cases', 'diseno_como_plataforma_expansiva', 'search_for_business_model']
+      siguientes: ['reglas_brainstorming', 'prototipado_rapido', 'how_might_we_framing', 'fallar_rapido_prototipado']
+      entregable: Un documento de 'Design Brief' con 3-5 preguntas 'How Might We' que guiarán la fase de ideación.
+
+  --- how_might_we_framing
+      titulo    : El Marco 'How Might We?' (HMW)
+      fuente    : Change by Design, Revised and U - Tim Brown
+      pasos 4 | condiciones 2 | previos 3 | siguientes 3 | cableado 6
+      paso 1: Redacta el problema como una pregunta que comience con 'How Might We...'
+      paso 2: Verifica que la pregunta no sea demasiado general (imposible de abordar) ni demasiado específica (limita soluciones)
+      paso 3: Itera la formulación de la pregunta con el equipo hasta encontrar el nivel de abstracción correcto
+      paso 4: Usa la pregunta como brújula durante todo el proceso de diseño
+      cond 1: Al iniciar cualquier proyecto de diseño o innovación
+      cond 2: Cuando el equipo no logra definir el alcance del problema
+      previos   : ['design_thinking_fundamentos', 'how_might_we_briefs', 'diseno_de_desafios_de_innovacion']
+      siguientes: ['investigacion_analoga', 'prototipado_rapido', 'alineacion_de_objetivos_en_sistemas']
+      entregable: Una pregunta HMW clara y accionable que enmarca el desafío de diseño del proyecto
+
+  --- how_might_we_hmw
+      titulo    : El Reto '¿Cómo Podríamos...?' (How Might We)
+      fuente    : Change by Design
+      pasos 4 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Tomar el problema central identificado.
+      paso 2: Reformularlo utilizando la fórmula '¿Cómo podríamos...?'
+      paso 3: Verificar que el alcance no sea demasiado amplio (imposible de resolver) ni demasiado estrecho (limita la innovación).
+      paso 4: Usar esta pregunta como titular para las sesiones de brainstorming.
+      cond 1: Al inicio de cualquier proyecto de innovación
+      cond 2: Cuando el equipo se siente estancado por un problema demasiado abstracto o demasiado restrictivo
+      previos   : ['how_might_we_brief_social']
+      siguientes: ['reglas_brainstorming', 'deep_dive_workshop']
+      entregable: Una declaración de problema (Problem Statement) formulada como pregunta abierta y accionable.
+
+##############################################################################
+# ACTO 17 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 5 MIEMBROS: 8 pares internos con veredicto escrito, de 10 combinaciones posibles
+
+  [PAR] puesto 207, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): estrategia_de_innovacion_arenas
+     nodo_b (EL SEGUNDO de la razon): estrategia_de_innovacion_y_tecnologia
+     RAZON ENTERA, sin recortar:
+       REPITE con estrategia_de_innovacion_y_tecnologia. Los dos mandan mapear las arenas de mercado y tecnologia, elegir las que cruzan atractivo con competencias propias y usar esa eleccion como filtro de las ideas. FIGURA: el racimo de estrategia de innovacion de producto, censado con TRES miembros, llega a CUATRO con estrategia_de_innovacion_arenas, que no esta en su nomina. Candidato a fusion.
+
+  [PAR] puesto 235, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): estrategia_de_innovacion_y_tecnologia
+     nodo_b (EL SEGUNDO de la razon): seleccion_arenas_estrategicas
+     RAZON ENTERA, sin recortar:
+       REPITE con seleccion_arenas_estrategicas. Los dos mandan generar la lista de arenas potenciales, evaluarlas cruzando atractivo de mercado con competencias propias y quedarse con unas pocas como foco y filtro de las ideas. FIGURA: con el puesto 207 la familia de la estrategia de innovacion llega a CINCO nodos, dos mas que los tres de su nomina censada. Candidato a fusion.
+
+  [PAR] puesto 280, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): estrategia_de_innovacion_arenas
+     nodo_b (EL SEGUNDO de la razon): seleccion_arenas_estrategicas
+     RAZON ENTERA, sin recortar:
+       REPITE con seleccion_arenas_estrategicas. Los dos mandan la misma sesion estrategica: mapear las arenas potenciales de mercado y tecnologia donde competir, evaluarlas por atractivo de mercado y por fortaleza competitiva propia, y seleccionar las que seran el foco de la busqueda de ideas. El primero anade el roadmap de producto y el segundo anade generar doce o mas y quedarse con dos a cuatro, pero es la misma instruccion de Cooper con el mismo criterio de seleccion.
+
+  [PAR] puesto 357, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): estrategia_de_innovacion_de_producto
+     nodo_b (EL SEGUNDO de la razon): estrategia_innovacion_producto
+     RAZON ENTERA, sin recortar:
+       REPITE con estrategia_innovacion_producto. Los ids son el mismo nombre con y sin preposiciones, y los pasos van detras: fijar los objetivos de innovacion y amarrarlos a las metas del negocio, identificar y priorizar las arenas estrategicas, y repartir los recursos entre esas arenas con buckets o presupuesto. El primero anade el roadmap a tres o cinco anos y el compromiso de largo plazo; el segundo anade los planes de ataque por arena. Los dos ya estan censados en el racimo Estrategia de innovacion de producto.
+
+  [PAR] puesto 460, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): estrategia_de_innovacion_arenas
+     nodo_b (EL SEGUNDO de la razon): estrategia_de_innovacion_de_producto
+     RAZON ENTERA, sin recortar:
+       REPITE con estrategia_de_innovacion_de_producto. Los dos mandan lo mismo: fijar los objetivos de innovacion de la unidad y amarrarlos a las metas del negocio, mapear y seleccionar las arenas de mercado y tecnologia por atractivo y por fortaleza propia, y construir el roadmap de producto de esas arenas. El segundo anade los buckets estrategicos de recursos y el compromiso de largo plazo. TERCER veredicto A dentro de la misma familia, con los puestos 280 y 357, y eso es exactamente lo que el informe intra dice que pasa cuando una familia se juzga de a pares: tres fusiones distintas que no se pueden ejecutar a la vez. Esta familia ya esta declarada como racimo nuevo de SEIS nodos y se decide en mesa, no aqui.
+
+  [PAR] puesto 1121, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): estrategia_de_innovacion_arenas
+     nodo_b (EL SEGUNDO de la razon): estrategia_innovacion_producto
+     RAZON ENTERA, sin recortar:
+       LA MISMA ESTRATEGIA DE ARENAS DOS VECES, del mismo libro y sin arista entre ellos. Lo comun son los tres primeros pasos de cada uno y en el mismo orden: fijar las metas de crecimiento del negocio, mapear e identificar las arenas potenciales de mercados y tecnologias donde se podria competir, y seleccionarlas por atractivo del mercado y fortaleza competitiva propia. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De estrategia_de_innovacion_arenas se perderia el HOJA DE RUTA DE PRODUCTO para las arenas elegidas, que es lo unico suyo y es lo que convierte la seleccion en calendario. De estrategia_innovacion_producto se perderian tres: establecer QUE ROL juegan los productos nuevos en las metas generales del negocio, decidir la ASIGNACION DE RECURSOS entre las arenas seleccionadas, y definir los PLANES DE ATAQUE para ganar en cada una con sus tres posturas nombradas, ser innovador, seguidor rapido o proveedor de bajo costo. Ese ultimo paso es el que dice COMO se compite una vez elegido donde, y no esta en el otro lado en ninguna forma.
+
+  [PAR] puesto 530, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): estrategia_de_innovacion_de_producto
+     nodo_b (EL SEGUNDO de la razon): estrategia_de_innovacion_y_tecnologia
+     RAZON ENTERA, sin recortar:
+       CORRECCION DECLARADA el 13 ago 2026, RELECTURA CONJUNTA encargada por el auditor tras el puesto 863. ANTES: A, con una razon que afirmaba que los dos nodos mandan identificar los mercados atractivos, pesarlos contra las competencias propias y seleccionar ahi las arenas donde ambos convergen. MEDIDO PASO POR PASO CONTRA EL GRAFO: esa afirmacion es falsa. Los CINCO pasos de estrategia_de_innovacion_y_tecnologia estan ausentes de estrategia_de_innovacion_de_producto, y pesar los mercados contra las competencias propias no aparece ni en sus pasos ni en su resumen. Lo unico que el segundo tiene es la palabra arenas, en UNA LINEA dentro de una lista de seis que va de objetivos a roadmap: definir arenas estrategicas, mercados, tecnologias y sectores, donde enfocar los esfuerzos. AHORA: D, por LA VARA DEL BANCO 9.6.1. estrategia_de_innovacion_y_tecnologia trae el PROCEDIMIENTO de seleccion de arenas que la madre despacha en una linea: identificar mercados grandes, en crecimiento y con competencia debil; evaluar las competencias propias en tecnologia, marketing y produccion; seleccionar las arenas oasis donde ambos factores convergen; declarar explicitamente que queda dentro y fuera del alcance de busqueda de ideas; y usar la estrategia como primer filtro de validacion en las reuniones de gate. CONTINUA. ES EL MISMO ESQUELETO DEL PUESTO 863, verificado, y por eso los dos se resuelven igual. EFECTO EN LA FAMILIA, contado del archivo: la estrategia de innovacion pasa de seis pares leidos y SEIS en A a siete leidos con CINCO en A y DOS en D. Deja de ser la apuesta mas cargada del inventario y queda MEZCLADA, con nueve lecturas todavia pendientes. Sin arista entre ellos, o sea que ademas es arista que falta del banco 9.6.
+
+  [PAR] puesto 863, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): estrategia_de_innovacion_y_tecnologia
+     nodo_b (EL SEGUNDO de la razon): estrategia_innovacion_producto
+     RAZON ENTERA, sin recortar:
+       LA MADRE Y SU PIEZA DE ARENAS, y la vara las separa. estrategia_innovacion_producto es la estrategia ENTERA: definir metas y objetivos del esfuerzo total de innovacion, establecer el rol que jugaran los nuevos productos en las metas del negocio, identificar y priorizar las arenas estrategicas, decidir la asignacion de recursos entre las arenas seleccionadas, y definir los planes de ataque para ganar en cada una. Las arenas son UNA LINEA de las cinco. estrategia_de_innovacion_y_tecnologia desarrolla esa linea con un procedimiento que la madre no tiene: identificar mercados atractivos, grandes, en crecimiento y con competencia debil; evaluar las competencias propias en tecnologia, marketing y produccion; seleccionar las arenas oasis donde ambos factores convergen; declarar explicitamente que queda DENTRO y que queda FUERA del alcance de busqueda de ideas; y usar esa estrategia como primer filtro de validacion en las reuniones de gate. Ese metodo de seleccion, la frontera del alcance y el uso como filtro no estan en ningun paso de la madre. Por la vara del banco 9.6.1, CONTINUA. Sin arista entre ellos, o sea que es tambien arista que falta del banco 9.6. CONDICION VIVA, y con dos correcciones declaradas: primera, mi propia nota de la tanda R19 llamaba a esto un racimo censado de TRES y decia que se cerraba aqui como posible puro de tres; era mia y estaba mal, porque la seccion 4 de este informe ya habia medido la familia en SEIS miembros con quince pares posibles. Segunda, la familia tenia SEIS de SEIS en A y este es el primer D: deja de ser sub-puro y pasa a MEZCLADA. Y traigo sin resolver el puesto 530, que es la MISMA relacion contra el otro gemelo de la madre y esta en A: su razon le atribuye a estrategia_de_innovacion_de_producto pesar los mercados contra las competencias propias, y ese paso no esta en sus seis. Pide relectura conjunta.
+
+  --- estrategia_de_innovacion_arenas
+      titulo    : Estrategia de Innovación y Arenas Estratégicas
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 4 | condiciones 2 | previos 1 | siguientes 10 | cableado 11
+      paso 1: Definir los objetivos de crecimiento a largo plazo de la unidad de negocio.
+      paso 2: Mapear las 'arenas' potenciales (mercados/tecnologías) donde la empresa podría competir.
+      paso 3: Seleccionar arenas objetivo basadas en el atractivo del mercado y la fortaleza competitiva propia.
+      paso 4: Desarrollar un Roadmap de producto estratégico para esas arenas seleccionadas.
+      cond 1: Cuando la empresa tiene múltiples ideas de proyectos pero carece de un criterio unificado para decidir en qué invertir.
+      cond 2: Al inicio de un ciclo de planificación anual de I+D.
+      previos   : ['resolver_problemas_grandes']
+      siguientes: ['gestion_de_portafolio_arriesgado', 'assumption_constraint_log', 'prototipado_organizacional_estrategico', 'strat_map_arenas_estrategicas', 'transicion_producto_a_experiencia', 'clima_positivo_innovacion', 'sistema_de_gates_go_kill', 'voc_temprano_en_agile_stage_gate', 'cultura_de_innovacion', 'sistema_gates_go_kill']
+      entregable: Un documento de Estrategia de Innovación que defina las arenas estratégicas seleccionadas y los objetivos de inversión para el portafolio de nuevos productos.
+
+  --- estrategia_de_innovacion_de_producto
+      titulo    : Estrategia de Innovación de Producto y Tecnología
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 6 | condiciones 2 | previos 1 | siguientes 5 | cableado 6
+      paso 1: Definir objetivos claros de innovación de producto (% de ventas/ganancias de nuevos productos a 3-5 años)
+      paso 2: Vincular explícitamente las metas de innovación con las metas generales del negocio
+      paso 3: Definir arenas estratégicas (mercados, tecnologías, sectores) donde enfocar los esfuerzos de innovación
+      paso 4: Asignar 'buckets estratégicos' de recursos a diferentes tipos de proyectos o arenas
+      paso 5: Crear un roadmap de producto que proyecte iniciativas de desarrollo a 3-5 años
+      paso 6: Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+      cond 1: Al iniciar el proceso de planificación de innovación de una unidad de negocio
+      cond 2: Cuando la empresa carece de dirección clara para decidir en qué proyectos invertir
+      previos   : ['producto_unico_superior']
+      siguientes: ['gestion_de_portafolio_gates_go_kill', 'apalancamiento_de_competencias_centrales', 'calidad_de_ejecucion_proceso_innovacion', 'hipotesis_de_tamano_de_mercado', 'producto_minimo_viable']
+      entregable: Un documento de estrategia de innovación que incluya objetivos, arenas estratégicas, buckets de recursos y roadmap de producto
+
+  --- estrategia_de_innovacion_y_tecnologia   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Estrategia de Innovación y Tecnología de Producto (Arenas Estratégicas)
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 5 | condiciones 2 | previos 1 | siguientes 5 | cableado 6
+      paso 1: Identificar mercados atractivos: grandes, en crecimiento, con competencia débil
+      paso 2: Evaluar las competencias core de la empresa en tecnología, marketing y producción
+      paso 3: Seleccionar arenas estratégicas ('oasis arenas') donde ambos factores convergen
+      paso 4: Definir explícitamente qué está dentro y fuera del alcance de búsqueda de ideas
+      paso 5: Usar esta estrategia como primer filtro de validación en las reuniones de gate
+      cond 1: Cuando la empresa carece de ideas de producto de gran impacto (blockbuster)
+      cond 2: Cuando hay dispersión o falta de foco en la búsqueda de nuevas ideas
+      previos   : ['producto_unico_superior']
+      siguientes: ['sistema_captura_ideas', 'scorecard_descubrimiento_cliente', 'desarrollar_estrategias_largo_plazo', 'frameworks_para_innovacion_eco', 'marcos_pensamiento_dfe']
+      entregable: Documento de estrategia de innovación con arenas estratégicas claramente definidas y priorizadas
+
+  --- estrategia_innovacion_producto
+      titulo    : Estrategia de Innovación de Producto
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 5 | condiciones 3 | previos 8 | siguientes 7 | cableado 15
+      paso 1: Definir las metas y objetivos generales para el esfuerzo total de innovación del negocio
+      paso 2: Establecer el rol que jugarán los nuevos productos en el logro de las metas generales del negocio
+      paso 3: Identificar y priorizar las arenas estratégicas (mercados, tecnologías, categorías de producto) en las que se enfocará el esfuerzo de I+D
+      paso 4: Decidir la asignación de recursos (personas, presupuesto de I+D, marketing) entre las arenas seleccionadas
+      paso 5: Definir los planes de ataque para ganar en cada arena (ser innovador, seguidor rápido, proveedor de bajo costo)
+      cond 1: Cuando el negocio tiene un sistema Stage-Gate pero carece de dirección estratégica general
+      cond 2: Cuando los proyectos de nuevos productos se seleccionan sin criterio de alineación estratégica
+      cond 3: Cuando la empresa atraviesa una crisis y necesita reorientar su innovación
+      previos   : ['diamante_de_innovacion', 'stage_gate_system', 'aceleracion_de_gates', 'benchmark_inversion_rd_industria', 'definicion_tipos_nuevo_producto', 'mrg_event', 'patent_mapping', 'plan_mejora_procesos']
+      siguientes: ['arenas_estrategicas', 'portfolio_management', 'metas_objetivos_smart_innovacion', 'metodo_strategic_buckets', 'innovacion_abierta', 'tecnologia_como_medio_no_fin', 'seleccion_arenas_estrategicas']
+      entregable: Un documento de estrategia de innovación de producto que contenga metas medibles, arenas estratégicas priorizadas, asignación de recursos y planes de ataque claros.
+
+  --- seleccion_arenas_estrategicas
+      titulo    : Selección de Arenas Estratégicas (Pick Your Battlefields)
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 6 | condiciones 4 | previos 9 | siguientes 6 | cableado 15
+      paso 1: Dedica una sesión de reflexión estratégica enfocada exclusivamente en definir tus arenas de innovación
+      paso 2: Analiza previamente el mercado, las tendencias, la competencia y tus propias competencias centrales
+      paso 3: Genera una lista amplia (12 o más) de arenas potenciales usando dimensiones como clientes, sectores, productos y tecnologías, evitando definiciones demasiado amplias
+      paso 4: Evalúa cada arena según su atractivo de mercado, tu fortaleza para competir en ella y si representa una oportunidad real de crecimiento y no solo un área familiar o madura
+      paso 5: Busca especialmente mercados emergentes o de rápido crecimiento con grandes problemas sin resolver
+      paso 6: Selecciona y prioriza de 2 a 4 arenas específicas como foco final
+      cond 1: Cuando tu búsqueda de ideas de nuevos productos es difusa o no está dirigida
+      cond 2: Cuando tu cartera de proyectos contiene iniciativas dispersas, no relacionadas o poco rentables
+      cond 3: Antes de iniciar cualquier búsqueda de ideas de nuevos productos
+      cond 4: Cuando necesitas decidir dónde invertir tus esfuerzos de I+D
+      previos   : ['analisis_competitivo', 'evaluacion_competencias_centrales', 'analisis_cadena_de_valor', 'atacar_mercados_establecidos_con_problema', 'encontrar_grandes_problemas_mercados_emergentes', 'evaluacion_tecnologias_disruptivas', 'vision_periferica', 'voice_of_customer_estrategico', 'estrategia_innovacion_producto']
+      siguientes: ['strat_map', 'definicion_tipos_nuevo_producto', 'busqueda_vs_ejecucion', 'portfolio_management', 'etnografia_investigacion_usuario', 'strat_map_arenas_estrategicas']
+      entregable: Una lista corta (2 a 4) de arenas estratégicas definidas con claridad y priorizadas, que guiarán tu búsqueda de ideas y desarrollo de nuevos productos.
+
+FIN

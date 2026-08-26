@@ -1,0 +1,66 @@
+==============================================================================
+LOS NODOS PUENTE DEL TRAMO, ACTO POR ACTO (P.10, la mitad diagnostica de P.5)
+  tramo      : docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+  clave      : orden_universo
+  veredictos : 3137 pares indexados por par RESUELTO (P.1)
+==============================================================================
+
+------------------------------------------------------------------------------
+ACTO 12 | miembros 5 | combinaciones 10 | A 5 | D 1 | SIN VEREDICTO 4
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 1374   cash_burn_calculation  contra  validacion_hipotesis_ingresos
+  pares SIN VEREDICTO ESCRITO: 4 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 13 | miembros 5 | combinaciones 10 | A 8 | D 0 | SIN VEREDICTO 2
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 2 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 14 | miembros 5 | combinaciones 10 | A 7 | D 0 | SIN VEREDICTO 3
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 3 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 15 | miembros 5 | combinaciones 10 | A 5 | D 0 | SIN VEREDICTO 5
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 5 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 16 | miembros 5 | combinaciones 10 | A 4 | D 0 | SIN VEREDICTO 6
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 6 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 17 | miembros 5 | combinaciones 10 | A 6 | D 2 | SIN VEREDICTO 2
+  NODOS PUENTE: 1 | TRIANGULOS PUENTE (A mas A mas D): 2
+     estrategia_de_innovacion_arenas hace de puente en 2 triangulo(s):
+        A con estrategia_de_innovacion_de_producto y A con estrategia_de_innovacion_y_tecnologia, y esos dos son D entre si (puesto 530)
+        A con estrategia_de_innovacion_y_tecnologia y A con estrategia_innovacion_producto, y esos dos son D entre si (puesto 863)
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 530    estrategia_de_innovacion_de_producto  contra  estrategia_de_innovacion_y_tecnologia
+     puesto 863    estrategia_de_innovacion_y_tecnologia  contra  estrategia_innovacion_producto
+  pares SIN VEREDICTO ESCRITO: 2 (la primera salida de P.10 es leerlos)
+
+==============================================================================
+RESUMEN DEL TRAMO
+acto   miem   combin   A     D     sin_ver  puentes  triangulos
+12     5      10       5     1     4        0        0
+13     5      10       8     0     2        0        0
+14     5      10       7     0     3        0        0
+15     5      10       5     0     5        0        0
+16     5      10       4     0     6        0        0
+17     5      10       6     2     2        1        2
+
+  actos mirados                         : 6
+  actos CON al menos un nodo puente     : 1
+  actos SIN ningun nodo puente          : 5
+  actos con algun par SIN veredicto     : 6
+
+LO QUE ESTO NO HACE: no elige salida de P.10 ni funde ni declara nada.
+FIN
