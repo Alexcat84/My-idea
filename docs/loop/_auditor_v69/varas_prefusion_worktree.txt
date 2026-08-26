@@ -1,0 +1,111 @@
+﻿==============================================================================================================
+VARAS POR FORMA, N-ARIAS, DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO
+  fichero del tramo: docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+==============================================================================================================
+
+  pasos y cond son las varas de CONTENIDO contables; cab es el CABLEADO,
+  que por P.8 solo habla a contenido empatado. La marca < indica que ese
+  miembro es EL UNICO que alcanza el maximo de esa vara, o sea que la vara
+  APUNTA a el. Si dos o mas lo alcanzan, la vara EMPATA y no apunta.
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 18 | 4 miembros | FORMA: EMPATE SIN VARA
+   maximos medidos: pasos 4, condiciones 2, cableado 3
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: EMPATA, no apunta
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      alianzas_cross_industry                                       4      2      3
+      co_opetition_industria                                        4      2      3
+      colaboracion_sectorial                                        4      2      1
+      trabajo_colectivo_estandares_industria                        4      2      2
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 25 | 4 miembros | FORMA: CONTENIDO EMPATA
+   maximos medidos: pasos 4, condiciones 2, cableado 6
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: enfoque_etapa_investigacion
+   PUERTAS DENTRO DEL ACTO (guarda 1B, no se absorben): enfoque_etapa_investigacion
+
+      miembro                                                   pasos   cond    cab
+      enfoque_etapa_investigacion                                   4      2      6 <cab  [PUERTA]
+      etapa_de_investigacion                                        4      1      3
+      etapa_investigacion_ventas                                    4      2      2
+      investigacion_como_habilidad_clave                            4      2      2
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 26 | 4 miembros | FORMA: CHOCAN
+   maximos medidos: pasos 6, condiciones 3, cableado 13
+   la vara de PASOS       apunta a: investigacion_etnografica_ideacion
+   la vara de CONDICIONES apunta a: etnografia_investigacion_usuario
+   el CABLEADO (P.8)      apunta a: investigacion_etnografica_ideacion
+   PUERTAS DENTRO DEL ACTO (guarda 1B, no se absorben): investigacion_etnografica_ideacion
+
+      miembro                                                   pasos   cond    cab
+      etnografia_aplicada_en_equipos_multidisciplinarios            4      2      2
+      etnografia_de_proyecto                                        5      2      4
+      etnografia_investigacion_usuario                              5      3      6 <cond
+      investigacion_etnografica_ideacion                            6      2     13 <pasos <cab  [PUERTA]
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 27 | 4 miembros | FORMA: TODAS DE ACUERDO
+   maximos medidos: pasos 6, condiciones 3, cableado 14
+   la vara de PASOS       apunta a: prototipado_modelos_negocio
+   la vara de CONDICIONES apunta a: prototipado_modelos_negocio
+   el CABLEADO (P.8)      apunta a: prototipado_modelos_negocio
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      fase_diseno_prototipado_modelos                               5      2      6
+      proceso_ideacion_modelo_negocio                               5      2      9
+      prototipado_modelos_negocio                                   6      3     14 <pasos <cond <cab
+      prototyping_possibilities                                     5      2      4
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 29 | 3 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 4, condiciones 2, cableado 3
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: marco_avances_continuaciones
+   el CABLEADO (P.8)      apunta a: EMPATA, no apunta
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      advances_vs_continuations                                     4      1      2
+      marco_avances_continuaciones                                  4      2      3 <cond
+      objetivos_de_llamada_orientados_a_avance                      4      1      3
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 30 | 3 miembros | FORMA: CHOCAN
+   maximos medidos: pasos 8, condiciones 2, cableado 4
+   la vara de PASOS       apunta a: viaje_diagnostico_remedial
+   la vara de CONDICIONES apunta a: analisis_causa_raiz_diagnostico
+   el CABLEADO (P.8)      apunta a: EMPATA, no apunta
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      analisis_causa_raiz_diagnostico                               5      2      4 <cond
+      analisis_diagnostico_causa                                    4      1      4
+      viaje_diagnostico_remedial                                    8      1      4 <pasos
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 31 | 3 miembros | FORMA: CHOCAN
+   maximos medidos: pasos 7, condiciones 2, cableado 6
+   la vara de PASOS       apunta a: captura_conocimiento_mercado
+   la vara de CONDICIONES apunta a: capturar_conocimiento_de_mercado
+   el CABLEADO (P.8)      apunta a: analisis_trafico_competitivo
+   PUERTAS DENTRO DEL ACTO (guarda 1B, no se absorben): captura_conocimiento_mercado
+
+      miembro                                                   pasos   cond    cab
+      analisis_trafico_competitivo                                  4      1      6 <cab
+      captura_conocimiento_mercado                                  7      1      4 <pasos  [PUERTA]
+      capturar_conocimiento_de_mercado                              5      2      5 <cond
+
+==============================================================================================================
+  actos mirados: 7 | POR FORMA: {'EMPATE SIN VARA': 1, 'CONTENIDO EMPATA': 1, 'CHOCAN': 3, 'TODAS DE ACUERDO': 1, 'UNA SOLA VARA': 1}
+
+LO QUE ESTO NO HACE: no elige superviviente, no aplica la guarda 1B y no funde.
+FIN
