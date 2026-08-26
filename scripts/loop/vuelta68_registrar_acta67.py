@@ -68,6 +68,7 @@ nada. Una pagina con la adjudicacion duplicada no falla, dice que si.
 Uso:
   python scripts/loop/vuelta68_registrar_acta67.py [--simular]
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:67 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 67 DEL AUDITOR" corte=2026-08-26 motivo="el titulo nombra el ACTA que este registro transcribe, que es de la vuelta 67; el fichero es de la vuelta 68 y por eso el numero no calza con su propia vuelta a proposito"
 import argparse
 import io
 import os
