@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 # Bucle autonomo de la campaña My Idea: ejecutor (Opus 4.8) + auditor (Fable 5).
 # Se corre UNA vez, idealmente dentro de tmux:  bash orquestador.sh
+# EL ROL CON EL QUE ARRANCA LA CORRIDA SE MIDE, no se supone: si el REPORTE es
+# mas nuevo que el ACTA, la vuelta anterior quedo sin auditar y se empieza por
+# el AUDITOR. EMPEZAR_EN=ejecutor|auditor fuerza el rol a mano y gana sobre la
+# medicion.
 # Se detiene solo si: existe docs/loop/PARA_ALEXIS.md, no hay prompt siguiente,
 # se alcanza MAX_VUELTAS, o una invocacion falla 7 veces seguidas por una de las
 # dos especies que el orquestador vigila: instantanea (probable limite de uso
@@ -51,6 +55,69 @@ hash_fichero() { # $1 = ruta. Vacio si no existe: asi un fichero que NACE cuenta
   local archivo="$1"
   [ -f "$archivo" ] || { printf ''; return 0; }
   git hash-object "$archivo" 2>/dev/null || printf 'sin-hash'
+}
+
+# ---------------------------------------------------------------------------
+# EL ROL INICIAL SE DECIDE POR MEDICION, NO POR COSTUMBRE (20 ago 2026).
+#
+# Hasta hoy la corrida empezaba SIEMPRE por el ejecutor, y eso tiene un modo
+# de fallo con nombre y con fecha: la vuelta 34 (15 ago 2026) corrio entera y
+# nunca fue auditada, porque el auditor murio sin escribir acta y el relanzar
+# volvio a poner al ejecutor delante, encima de un reporte que nadie habia
+# verificado. El testigo del auditor mudo cierra el caso DENTRO de una corrida;
+# esto cierra el caso ENTRE corridas.
+#
+# LA MEDICION, y es de las baratas: la fecha del ultimo commit que toco el
+# REPORTE contra la del ultimo que toco el ACTA. Si el reporte es mas nuevo,
+# hay una vuelta sin auditar delante y la corrida empieza por el auditor.
+#
+# EMPATE: si las dos fechas son iguales (o las dos son "nunca"), empieza el
+# ejecutor. Es la salida conservadora y se declara: un empate no es prueba de
+# que falte un acta.
+# ---------------------------------------------------------------------------
+ROL_INICIAL=""
+
+fecha_ultimo_commit() { # $1 = ruta. Imprime segundos unix, o 0 si nunca se commiteo.
+  local ct
+  ct="$(git log -1 --format=%ct -- "$1" 2>/dev/null)"
+  printf '%s' "${ct:-0}"
+}
+
+fecha_legible() { # $1 = segundos unix
+  [ "$1" = "0" ] && { printf 'nunca'; return 0; }
+  date -d "@$1" '+%Y-%m-%d %H:%M:%S' 2>/dev/null || printf '%s' "$1"
+}
+
+decidir_rol_inicial() { # fija ROL_INICIAL. No imprime a stdout: escribe al log.
+  local ct_reporte ct_acta
+  if [ -n "${EMPEZAR_EN:-}" ]; then
+    case "$EMPEZAR_EN" in
+      ejecutor|auditor)
+        ROL_INICIAL="$EMPEZAR_EN"
+        log "ROL INICIAL FORZADO por EMPEZAR_EN: $ROL_INICIAL (gana sobre la medicion)"
+        return 0
+        ;;
+      *)
+        # Fallar ruidoso: una variable mal escrita que se ignora en silencio
+        # deja la corrida haciendo lo contrario de lo que se le mando.
+        log "DETENIDO: EMPEZAR_EN=\"$EMPEZAR_EN\" no es un rol valido. Usa ejecutor o auditor."
+        exit 1
+        ;;
+    esac
+  fi
+
+  ct_reporte="$(fecha_ultimo_commit "$LOOP/REPORTE.md")"
+  ct_acta="$(fecha_ultimo_commit "$LOOP/ACTA_AUDITOR.md")"
+
+  if [ "$ct_reporte" -gt "$ct_acta" ]; then
+    ROL_INICIAL="auditor"
+    log "ROL INICIAL POR MEDICION: AUDITOR. El REPORTE es mas nuevo que el ACTA, asi que la vuelta anterior quedo SIN AUDITAR."
+  else
+    ROL_INICIAL="ejecutor"
+    log "ROL INICIAL POR MEDICION: EJECUTOR. El ACTA no es mas vieja que el REPORTE: no hay vuelta sin auditar delante."
+  fi
+  log "  ultimo commit de REPORTE.md      : $(fecha_legible "$ct_reporte") ($ct_reporte)"
+  log "  ultimo commit de ACTA_AUDITOR.md : $(fecha_legible "$ct_acta") ($ct_acta)"
 }
 
 para_alexis_por_fallo_instantaneo() { # rol modelo vuelta duracion costo motivo
@@ -147,12 +214,22 @@ for i in $(seq 1 "$MAX_VUELTAS"); do
     break
   fi
 
-  log "VUELTA $i : EJECUTOR ($MODELO_EJECUTOR)"
-  invocar_claude "ejecutor" "$MODELO_EJECUTOR" \
-    "Estas en el repo de la campaña. Lee docs/loop/EJECUTOR.md (tus reglas permanentes) y despues docs/loop/PROMPT_SIGUIENTE.md (tu encargo). Ejecuta el encargo al pie de la letra. Escribe tu reporte completo en docs/loop/REPORTE.md sobrescribiendo el anterior, con los discutibles marcados. Commitea y pushea TODO a la rama activa antes de terminar." \
-    "$LOOP/ultimo_ejecutor.json" "$i"
+  # La medicion del rol inicial se hace DESPUES del primer pull, para que mida
+  # el estado de verdad de la rama y no una copia local rezagada.
+  if [ "$i" -eq 1 ]; then
+    decidir_rol_inicial
+  fi
 
-  git pull --rebase origin "$RAMA" >/dev/null 2>&1 || true
+  if [ "$i" -eq 1 ] && [ "$ROL_INICIAL" = "auditor" ]; then
+    log "VUELTA $i : SE SALTA EL TURNO DEL EJECUTOR, la corrida empieza por el AUDITOR"
+  else
+    log "VUELTA $i : EJECUTOR ($MODELO_EJECUTOR)"
+    invocar_claude "ejecutor" "$MODELO_EJECUTOR" \
+      "Estas en el repo de la campaña. Lee docs/loop/EJECUTOR.md (tus reglas permanentes) y despues docs/loop/PROMPT_SIGUIENTE.md (tu encargo). Ejecuta el encargo al pie de la letra. Escribe tu reporte completo en docs/loop/REPORTE.md sobrescribiendo el anterior, con los discutibles marcados. Commitea y pushea TODO a la rama activa antes de terminar." \
+      "$LOOP/ultimo_ejecutor.json" "$i"
+
+    git pull --rebase origin "$RAMA" >/dev/null 2>&1 || true
+  fi
 
   log "VUELTA $i : AUDITOR ($MODELO_AUDITOR)"
   invocar_claude "auditor" "$MODELO_AUDITOR" \
