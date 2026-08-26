@@ -1,0 +1,66 @@
+supervivientes: ['preservar_efectivo_buscar_modelo', 'reconstruccion_contexto_situacional', 'mitigacion_riesgos_ambientales', 'gestion_terminacion_franquiciado']
+absorbidos (8): ['escalamiento_prematuro', 'restriccion_gasto_validacion', 'evitar_sesgo_retrospectivo_hindsight', 'evitar_shopping_bag', 'gestion_eco_riesgos', 'responsabilidad_extendida_productor', 'perdida_control_operativo', 'terminacion_franquiciado_causas']
+miembros del 44: ['evaluacion_tecnologias_disruptivas', 'explotacion_tecnologias_disruptivas', 'tecnologias_disruptivas_oportunidad']
+miembros del lote: 15
+
+--- GUARDA D: los 8 absorbidos ---
+  escalamiento_prematuro                     deprecado=True texto_entero=False resuelve_a=escalamiento_prematuro (MAL)
+  restriccion_gasto_validacion               deprecado=True texto_entero=False resuelve_a=restriccion_gasto_validacion (MAL)
+  evitar_sesgo_retrospectivo_hindsight       deprecado=True texto_entero=False resuelve_a=evitar_sesgo_retrospectivo_hindsight (MAL)
+  evitar_shopping_bag                        deprecado=True texto_entero=False resuelve_a=evitar_shopping_bag (MAL)
+  gestion_eco_riesgos                        deprecado=True texto_entero=False resuelve_a=gestion_eco_riesgos (MAL)
+  responsabilidad_extendida_productor        deprecado=True texto_entero=False resuelve_a=responsabilidad_extendida_productor (MAL)
+  perdida_control_operativo                  deprecado=True texto_entero=False resuelve_a=perdida_control_operativo (MAL)
+  terminacion_franquiciado_causas            deprecado=True texto_entero=False resuelve_a=terminacion_franquiciado_causas (MAL)
+
+--- SUPERVIVIENTES hoy (pasos/condiciones) ---
+  preservar_efectivo_buscar_modelo           vivo=True pasos=8 cond=4
+  reconstruccion_contexto_situacional        vivo=True pasos=6 cond=2
+  mitigacion_riesgos_ambientales             vivo=True pasos=5 cond=3
+  gestion_terminacion_franquiciado           vivo=True pasos=5 cond=2
+
+--- ACTO 44: intacto ---
+  evaluacion_tecnologias_disruptivas         vivo=True identico_a_c4c38956=True
+  explotacion_tecnologias_disruptivas        vivo=True identico_a_c4c38956=True
+  tecnologias_disruptivas_oportunidad        vivo=True identico_a_c4c38956=True
+
+--- OP-S-09: la familia ---
+  responsabilidad_extendida_productor_2      deprecado=False resuelve_a=responsabilidad_extendida_productor_2
+  responsabilidad_extendida_productor        deprecado=True resuelve_a=responsabilidad_extendida_productor
+
+--- INCISO: trozo verbatim en la fuente PRE y en el resultante de HOY ---
+  escalamiento_prematuro paso 3 -> preservar_efectivo_buscar_modelo paso 3 | en_fuente=True en_resultante=True
+  evitar_shopping_bag paso 5 -> reconstruccion_contexto_situacional paso 5 | en_fuente=True en_resultante=True
+  gestion_eco_riesgos paso 4 -> mitigacion_riesgos_ambientales paso 3 | en_fuente=True en_resultante=True
+  perdida_control_operativo paso 1 -> gestion_terminacion_franquiciado paso 1 | en_fuente=True en_resultante=True
+  terminacion_franquiciado_causas paso 2 -> gestion_terminacion_franquiciado paso 2 | en_fuente=True en_resultante=True
+  INCISO totales: 5
+
+--- referencias de vivos a absorbidos (deben ser 0) ---
+  colgando: 0
+
+--- duenos del tramo fijado (43-47) y saltos (31, 37) ---
+  acto 31  duenos_mesa=[] duenos_cualq=['OP-F-04-WEI', 'OP-S-04']
+  acto 37  duenos_mesa=[] duenos_cualq=['OP-S-07']
+  acto 43  duenos_mesa=[] duenos_cualq=[]
+  acto 44  duenos_mesa=[] duenos_cualq=[]
+  acto 45  duenos_mesa=[] duenos_cualq=[]
+  acto 46  duenos_mesa=[] duenos_cualq=[]
+  acto 47  duenos_mesa=[] duenos_cualq=[]
+  acto 49  duenos_mesa=[] duenos_cualq=[]
+
+--- INVENTARIO: entradas que tocan a los 15 ---
+  total tocan: 12 por tipo: {'acto': 9, 'familia_de_ids': 1, 'figura': 2}
+  FAMILIA: {"tipo": "familia_de_ids", "nombre": "responsabilidad_extendida_productor", "miembros": ["responsabilidad_extendida_productor", "responsabilidad_extendida_productor_2"], "forma": "ids que difieren por sufijo, particula u orden", "cobertura": "2 ids", "estado": "pendiente, se resuelve por continua o repite", "operaciones": ["OP-S-09"], "fecha_corte": "2026-08-11", "nota": "DECISION 4 de la mesa de 
+  FIGURA: SUBCONJUNTO ESTRICTO | ops: [] | nombra a los 3 del 44: False
+  FIGURA: ESTRELLA (9.23) | ops: [] | nombra a los 3 del 44: True
+
+--- OPERACIONES.jsonl: menciones de los 15 ---
+  OP-U-01    campo nota           -> ['gestion_terminacion_franquiciado', 'terminacion_franquiciado_causas']
+  OP-U-02    campo nota           -> ['gestion_terminacion_franquiciado', 'terminacion_franquiciado_causas']
+  OP-L-03    campo nota           -> ['evaluacion_tecnologias_disruptivas']
+  OP-I-01    campo nota           -> ['gestion_terminacion_franquiciado', 'perdida_control_operativo']
+  menciones: 7 en fichas: ['OP-I-01', 'OP-L-03', 'OP-U-01', 'OP-U-02']
+
+--- RACIMOS: los 15 en nominas ---
+  lineas racimos: 32 | miembros hallados: NINGUNO

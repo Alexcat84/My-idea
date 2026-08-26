@@ -1,0 +1,94 @@
+==============================================================================================================
+VARAS POR FORMA, N-ARIAS, DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO
+  fichero del tramo: docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+==============================================================================================================
+
+  pasos y cond son las varas de CONTENIDO contables; cab es el CABLEADO,
+  que por P.8 solo habla a contenido empatado. La marca < indica que ese
+  miembro es EL UNICO que alcanza el maximo de esa vara, o sea que la vara
+  APUNTA a el. Si dos o mas lo alcanzan, la vara EMPATA y no apunta.
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 31 | 3 miembros | FORMA: CHOCAN
+   maximos medidos: pasos 7, condiciones 2, cableado 6
+   la vara de PASOS       apunta a: captura_conocimiento_mercado
+   la vara de CONDICIONES apunta a: capturar_conocimiento_de_mercado
+   el CABLEADO (P.8)      apunta a: analisis_trafico_competitivo
+   PUERTAS DENTRO DEL ACTO (guarda 1B, no se absorben): captura_conocimiento_mercado
+
+      miembro                                                   pasos   cond    cab
+      analisis_trafico_competitivo                                  4      1      6 <cab
+      captura_conocimiento_mercado                                  7      1      4 <pasos  [PUERTA]
+      capturar_conocimiento_de_mercado                              5      2      5 <cond
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 37 | 3 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 5, condiciones 3, cableado 4
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: cumplimiento_inversionistas_acreditados
+   el CABLEADO (P.8)      apunta a: equity_crowdfunding
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      crowdfunding_legal_exemptions_jobs_act                        5      2      3
+      cumplimiento_inversionistas_acreditados                       5      3      2 <cond
+      equity_crowdfunding                                           4      2      4 <cab
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 49 | 3 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 4, condiciones 2, cableado 3
+   la vara de PASOS       apunta a: shadow_ia_organizacional
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: shadow_ai_use_organizacional
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      incentivos_transparencia_ia                                   3      2      2
+      shadow_ai_use_organizacional                                  3      2      3 <cab
+      shadow_ia_organizacional                                      4      2      2 <pasos
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 50 | 3 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 5, condiciones 3, cableado 5
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: new_view_vs_old_view_de_error_humano
+   el CABLEADO (P.8)      apunta a: EMPATA, no apunta
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      investigacion_new_view                                        5      2      5
+      new_view_vs_old_view_de_error_humano                          5      3      5 <cond
+      perspectiva_dentro_del_tunel                                  4      2      3
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 51 | 3 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 6, condiciones 3, cableado 10
+   la vara de PASOS       apunta a: metodo_valor_presente_neto
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: metodo_valor_presente_neto
+   PUERTAS DENTRO DEL ACTO (guarda 1B, no se absorben): metodo_valor_presente_neto
+
+      miembro                                                   pasos   cond    cab
+      metodo_valor_presente_neto                                    6      3     10 <pasos <cab  [PUERTA]
+      valor_del_dinero_en_el_tiempo                                 5      3      5
+      valor_presente                                                4      1      4
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 53 | 3 miembros | FORMA: TODAS DE ACUERDO
+   maximos medidos: pasos 5, condiciones 3, cableado 5
+   la vara de PASOS       apunta a: reconocimiento_al_desempeno
+   la vara de CONDICIONES apunta a: reconocimiento_al_desempeno
+   el CABLEADO (P.8)      apunta a: EMPATA, no apunta
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      reconocimiento                                                3      1      2
+      reconocimiento_al_desempeno                                   5      3      5 <pasos <cond
+      reconocimiento_crosby                                         4      2      5
+
+==============================================================================================================
+  actos mirados: 6 | POR FORMA: {'CHOCAN': 1, 'UNA SOLA VARA': 4, 'TODAS DE ACUERDO': 1}
+
+LO QUE ESTO NO HACE: no elige superviviente, no aplica la guarda 1B y no funde.
+FIN
