@@ -1,0 +1,426 @@
+====================================================================================================
+PAR 0 | dominio core
+MADRE verificar_clientes_y_canales (6 pasos) | siguientes ya escritos: ['verificar_modelo_ingresos', 'verificar_modelo_rentable', 'estrategia_plataformas_existentes', 'tacticas_cold_calling', 'descubrir_valor_inesperado_cliente']
+  paso 2: Crear un 'día en la vida' del cliente antes y después del producto
+HIJO candidato dia_en_la_vida_del_cliente | titulo: Un Día en la Vida del Cliente
+  resumen: Ejercicio de investigación de campo para entender cómo 'vive' o 'trabaja' el cliente antes y después de usar el producto, documentando un día típico en su vida. Requiere salir a observar directamente el contexto real del cliente (por ejemplo, trabajar detrás de un mostrador o en su oficina) en vez d
+  pasos (5):
+    1. Observar o entrevistar directamente a los usuarios en su entorno real (oficina, tienda, hogar, planta)
+    2. Documentar cómo resuelven el problema actualmente, sin el producto
+    3. Proyectar y describir cómo cambiaría su día con el nuevo producto
+    4. Repetir el ejercicio para cada tipo de persona relevante en la decisión (usuario final, gerente, ejecutivo, tecnología, etc.)
+    5. Presentar una imagen vívida y específica del antes y el después al equipo de desarrollo de producto, en forma de narrativa o storyboard
+  hijo.nodos_previos ya escritos: ['arquetipos_de_cliente', 'segmentos_de_clientes_problema_necesidad']
+
+====================================================================================================
+PAR 1 | dominio quality
+MADRE planificacion_estrategica_despliegue (7 pasos) | siguientes ya escritos: ['auditorias_gerenciales_periodicas', 'practicas_gerenciales_no_delegables', 'hoshin_kanri']
+  paso 1: Definir la misión organizacional (¿en qué negocio estamos?)
+HIJO candidato definir_mision_organizacional | titulo: Definir la Misión Organizacional
+  resumen: La misión responde a la pregunta '¿en qué negocio(s) estamos?' y clarifica el propósito o razón de existir de la organización. A menudo se confunde con la visión, pero mientras la visión indica hacia dónde se dirige la empresa, la misión define qué es la empresa hoy.
+  pasos (4):
+    1. Reunir al equipo directivo para debatir el propósito central del negocio
+    2. Redactar una declaración de misión clara y distinta de la visión
+    3. Validar que la misión responda a 'qué negocio somos' y no 'qué queremos ser'
+    4. Comunicar la misión junto con la visión como base de la toma de decisiones diaria
+  hijo.nodos_previos ya escritos: ['establecer_vision_organizacional', 'establecer_vision_organizacional_2']
+
+====================================================================================================
+PAR 2 | dominio quality
+MADRE six_sigma_dmaic (12 pasos) | siguientes ya escritos: ['sostener_las_ganancias', 'dmadv_design_for_six_sigma', 'roles_six_sigma', 'consejo_ejecutivo_calidad', 'design_for_six_sigma_dfss', 'breakthrough_cultural', 'medicion_capacidad_servicio', 'viaje_diagnostico_remedial']
+  paso 12: Replicar los resultados exitosos y nominar nuevos proyectos de mejora.
+HIJO candidato replicar_resultados | titulo: Replicar Resultados y Nominar Nuevos Proyectos
+  resumen: Etapa final del ciclo de mejora en la que la dirección clona (con las modificaciones necesarias) el remedio exitoso en otras áreas o plantas similares, y utiliza las lecciones aprendidas para nominar nuevos proyectos de mejora, manteniendo así un ritmo continuo de breakthroughs año tras año.
+  pasos (5):
+    1. Evaluar si el remedio es replicable en otras áreas, plantas o procesos similares
+    2. Adaptar el remedio a las condiciones específicas de cada réplica
+    3. Documentar lecciones aprendidas del proyecto
+    4. Nominar nuevos proyectos de mejora basados en esas lecciones
+    5. Reiniciar el ciclo con el consejo de calidad
+  hijo.nodos_previos ya escritos: ['sostener_las_ganancias']
+
+====================================================================================================
+PAR 3 | dominio core
+MADRE project_close_out (5 pasos) | siguientes ya escritos: ['lessons_learned']
+  paso 1: Revisar los objetivos del proyecto o fase definidos en el Acta de Constitución
+HIJO candidato project_charter | titulo: Acta de Constitución del Proyecto (Project Charter)
+  resumen: Documento formal que autoriza la existencia de un proyecto o fase, otorga autoridad al project manager y define el proyecto en términos de alto nivel: propósito, objetivos, requisitos, riesgos, cronograma resumen, presupuesto resumen y lista de stakeholders. Es el punto de partida oficial que conect
+  pasos (6):
+    1. Definir el propósito o justificación del proyecto (business case, contrato, plan estratégico)
+    2. Redactar una descripción de alto nivel del proyecto y sus entregables principales
+    3. Establecer objetivos de alcance, tiempo y costo con criterios de éxito medibles
+    4. Identificar riesgos de alto nivel y un cronograma/presupuesto resumido
+    5. Asignar formalmente al project manager y definir su nivel de autoridad
+    6. Obtener la firma del sponsor que autoriza el proyecto
+  hijo.nodos_previos ya escritos: ['lienzo_modelo_negocio', 'fit_value_proposition', 'cronograma_proyecto', 'estilos_pensamiento_intuitivo_vs_logico']
+
+====================================================================================================
+PAR 4 | dominio entrega
+MADRE adaptar_empaque_segun_tipo_de_articulo (5 pasos) | siguientes ya escritos: ['sellar_cajas_metodo_cinta_en_h']
+  paso 4: Para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.
+HIJO candidato proteger_fragiles_caja_dentro_de_caja | titulo: Proteger frágiles con el método caja dentro de caja
+  resumen: Para artículos frágiles, filosos o de alto valor, una sola caja no basta: el impacto se transmite directo del exterior al contenido. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando u
+  pasos (5):
+    1. Acolchona el producto y colócalo dentro de una caja interna resistente.
+    2. Elige una caja externa varios centímetros más grande en cada dimensión que la interna.
+    3. Pon relleno en el fondo de la caja externa antes de meter la caja interna.
+    4. Centra la caja interna dentro de la externa y rellena todos los espacios vacíos alrededor.
+    5. Sella ambas cajas con el método de cinta en H antes de despachar.
+  hijo.nodos_previos ya escritos: ['elegir_caja_correcta']
+
+====================================================================================================
+PAR 5 | dominio core
+MADRE contractor_status_report (5 pasos) | siguientes ya escritos: ['contract_close_out', 'procurement_audit']
+  paso 5: Integrar la información en el Informe de Desempeño del Proyecto
+HIJO candidato project_performance_report | titulo: Informe de Desempeño del Proyecto
+  resumen: Reporte resumen elaborado por el project manager para el sponsor y otros stakeholders, consolidando información de los Team Member Status Reports, mostrando logros, variaciones de cronograma y presupuesto, y nuevos riesgos/issues.
+  pasos (4):
+    1. Consolidar logros y pendientes del periodo
+    2. Analizar causas raíz de variaciones de cronograma y presupuesto
+    3. Identificar impacto en hitos y presupuesto general
+    4. Planificar acciones correctivas y reportar nuevos riesgos/issues
+  hijo.nodos_previos ya escritos: ['team_member_status_report', 'reporte_estado_miembro_equipo']
+
+====================================================================================================
+PAR 6 | dominio core
+MADRE segmentos_de_clientes_problema_necesidad (6 pasos) | siguientes ya escritos: ['customer_discovery_cuatro_fases', 'scorecard_descubrimiento_cliente', 'arquetipos_de_cliente', 'canales_distribucion', 'channels_hypothesis_web_mobile', 'customer_retention_tactics', 'dia_en_la_vida_del_cliente', 'embudo_get_keep_grow', 'evaluacion_vp_ventas', 'lienzo_modelo_negocio', 'plan_de_adquisicion_acquire', 'relaciones_con_clientes', 'tipos_de_clientes']
+  paso 1: Sal del edificio (get out of the building) a observar como tus clientes viven el problema
+HIJO candidato get_out_of_the_building | titulo: Sal del edificio (Get Out of the Building)
+  resumen: Los hechos solo existen fuera del edificio, donde viven los clientes. Lo más importante del descubrimiento de clientes es que salgas a hablar directamente con ellos de forma repetida durante semanas o meses, sin delegar esta tarea, para descubrir si tu visión es válida o una fantasía.
+  pasos (4):
+    1. Programa reuniones directas y repetidas con clientes potenciales
+    2. Lidera tú mismo estas conversaciones, no las delegues en personal junior
+    3. Evita hacer listas con todas las características que te piden los clientes
+    4. Documenta lo que aprendes de cada conversación en el momento (blog, CRM)
+  hijo.nodos_previos ya escritos: ['customer_discovery_introduccion', 'equipo_customer_development']
+
+====================================================================================================
+PAR 7 | dominio core
+MADRE customer_creation (4 pasos) | siguientes ya escritos: ['company_building']
+  paso 1: Definir el tipo de mercado (existente, nuevo, o re-segmentado) para la estrategia
+HIJO candidato determinar_tipo_de_mercado | titulo: Determinar el Tipo de Mercado
+  resumen: No todas las startups son iguales: la relación entre el producto y el mercado determina la estrategia completa. Existen cuatro tipos: llevar un producto nuevo a un mercado existente, llevar un producto nuevo a un mercado nuevo, re-segmentar un mercado existente (por bajo costo o nicho), o clonar un 
+  pasos (12):
+    1. Analizar si existen clientes conocidos para tu producto (mercado existente) o si nadie lo conoce aún (mercado nuevo)
+    2. Si el mercado es existente, identificar qué atributos valora el cliente y compararlos contra tus competidores
+    3. Si el mercado es nuevo, evitar gastar rápido en marketing y enfocarte en validar si hay una base de clientes persuadible
+    4. Si el mercado está dominado por incumbentes fuertes, evaluar re-segmentarlo por bajo costo o por nicho
+    5. Evaluar si el modelo de negocio ya funciona en otro país y puede clonarse localmente
+    6. Documentar el tipo de mercado como hipótesis temprana, aunque sea una decisión de atado tardío
+    7. Calcular la cuota de mercado del líder para evaluar si es monopolio, duopolio o mercado inestable
+    8. Si se ataca mercado existente, calcular el costo de entrada (1.7x o 3x el presupuesto de marketing del líder)
+    9. Definir la base de competencia donde el producto puede ganar (features, servicio, precio, marca)
+    10. Si un competidor domina más del 74% del mercado, evita atacarlo de frente; si domina entre 26% y 74%, elige bien tus batallas
+    11. Escribe un breve documento respondiendo las preguntas clave según el tipo de mercado que elegiste
+    12. Actualiza tu mapa de modelo de negocio (Business Model Canvas) con esta hipótesis
+  hijo.nodos_previos ya escritos: ['diseno_experimentos_hipotesis', 'lanzamiento_nuevos_productos_enfoque_problema', 'board_management_buyin', 'channels_hypothesis_physical', 'channels_hypothesis_web_mobile', 'multi_sided_market_channel', 'capturar_conocimiento_de_mercado', 'hipotesis_de_canales', 'lienzo_modelo_negocio', 'resegmentacion_mercado_nicho_bajo_costo', 'seleccion_canal_distribucion', 'seleccion_canal_fisico']
+
+====================================================================================================
+PAR 8 | dominio health_safety
+MADRE cultura_justa_2 (4 pasos) | siguientes ya escritos: ['responsabilidad_prospectiva']
+  paso 4: Explorar la justicia restaurativa en lugar de la retributiva
+HIJO candidato justicia_restaurativa | titulo: Justicia Restaurativa vs. Justicia Retributiva
+  resumen: La justicia retributiva busca castigar a quien cometió el error, asumiendo que si el daño fue real, la respuesta debe doler también. La justicia restaurativa, en cambio, busca sanar: reconoce múltiples perspectivas sobre lo ocurrido, asume que las personas no van a trabajar con la intención de hacer
+  pasos (4):
+    1. Diseñar procesos de respuesta a incidentes centrados en el diálogo y la reparación
+    2. Fomentar espacios donde el trabajador afectado pueda contar su versión sin temor a represalias
+    3. Sustituir sanciones automáticas por planes de mejora colaborativos
+    4. Evaluar el incidente considerando el contexto organizacional completo
+  hijo.nodos_previos ya escritos: ['conocimiento_detallado_y_justicia', 'preguntar_que_no_quien']
+
+====================================================================================================
+PAR 9 | dominio core
+MADRE evitar_pseudociencia_producto (4 pasos) | siguientes ya escritos: ['contabilidad_innovacion_largo_plazo']
+  paso 1: Revisar si las métricas usadas para justificar decisiones son métricas de vanidad o métricas accionables con relación causa-efecto clara
+HIJO candidato metricas_accionables | titulo: Métricas Accionables vs Métricas de Vanidad
+  resumen: Las métricas de vanidad (usuarios totales, ingresos brutos, hits al sitio) suben y generan sensación de progreso, pero no muestran relación causa efecto ni guían decisiones. Son peligrosas porque explotan un sesgo humano: cuando los números suben te atribuyes el mérito, cuando bajan culpas a factore
+  pasos (9):
+    1. Evitar guiarte por números brutos acumulativos (usuarios totales, ingresos totales) como única señal de éxito, distinguiendo entre métricas de vanidad (visitas, descargas) y métricas accionables (retención, conversión, recompra)
+    2. Para cada métrica que uses, preguntarte si sube o baja, sabes exactamente qué acción lo causó
+    3. Diseñar métricas que muestren relación causal clara entre los cambios que haces y el comportamiento del cliente
+    4. Reemplazar gráficos de línea acumulativa por análisis de cohortes para evaluar el progreso real
+    5. Eliminar o sustituir cualquier métrica que no permita esta trazabilidad
+    6. Validar que las métricas que sigues sean comprensibles y accesibles, no solo datos crudos de un dashboard
+    7. Definir qué hipótesis de negocio se quiere validar antes de buscar crecimiento en números brutos
+    8. Evitar campañas de marketing o PR diseñadas solo para inflar métricas superficiales
+    9. Presentar a inversores y stakeholders el aprendizaje validado (curvas de comportamiento real de clientes) en lugar de cifras aisladas
+  hijo.nodos_previos ya escritos: ['analisis_de_cohortes', 'contabilidad_innovacion', 'tres_as_de_metricas', 'medir_lo_que_importa_no_solo_lo_facil', 'producto_minimo_viable']
+
+====================================================================================================
+PAR 10 | dominio environmental
+MADRE mobilizar_empleados_cultura_ecologica (5 pasos) | siguientes ya escritos: []
+  paso 3: Evaluar las actitudes de los empleados hacia la sostenibilidad mediante encuestas y entrevistas.
+HIJO candidato evaluacion_actitudes_empleados | titulo: Evaluación de Actitudes de los Empleados hacia la Sostenibilidad
+  resumen: Uno de los errores más comunes es asumir que los líderes saben cómo piensan los empleados. Antes de decidir la estrategia de engagement, es necesario evaluar cuidadosamente las actitudes de la organización hacia el medio ambiente y la sostenibilidad usando entrevistas, encuestas anónimas, reuniones 
+  pasos (4):
+    1. Diseñar encuestas anónimas o entrevistas sobre percepciones de sostenibilidad
+    2. Identificar reacciones a palabras como 'verde', 'ambiental', 'sostenibilidad'
+    3. Detectar escépticos y líderes potenciales dentro de la organización
+    4. Analizar qué aspectos de iniciativas previas (TQM, salud, diversidad) funcionaron y cuáles no
+  hijo.nodos_previos ya escritos: ['co_creacion_estrategia_engagement']
+
+====================================================================================================
+PAR 11 | dominio core
+MADRE pivot_post_ventas (6 pasos) | siguientes ya escritos: ['identificar_earlyvangelists']
+  paso 4: Evalúa si tu propuesta de valor no encajó con ese segmento
+HIJO candidato value_proposition_startup | titulo: Propuesta de Valor
+  resumen: Tu propuesta de valor describe el trabajo (job) que resuelves para tu cliente. Son las caracteristicas de tu producto o servicio que responden a un problema o una necesidad real: ahorrar tiempo, ganar estatus, simplificar algo, dar comodidad. Para que funcione, tiene que encajar con precisión en el 
+  pasos (3):
+    1. Identifica los problemas o necesidades reales de tu segmento de clientes.
+    2. Define que caracteristicas de tu producto o servicio resuelven esos problemas.
+    3. Verifica el encaje entre tu propuesta de valor y tu segmento de clientes hablando directamente con ellos.
+  hijo.nodos_previos ya escritos: ['definicion_startup', 'disenar_los_detalles_no_lo_inevitable', 'disenar_para_sanacion', 'disenar_verbos_no_sustantivos', 'economia_circular_de_la_imaginacion', 'economia_de_la_experiencia', 'multi_sided_platform_pattern', 'narrativa_como_herramienta_de_sentido', 'ecuacion_de_valor_venta', 'preguntas_beneficio', 'multi_sided_platforms', 'search_for_business_model', 'preguntas_need_payoff']
+
+====================================================================================================
+PAR 12 | dominio quality
+MADRE resumen_de_datos_graficos (5 pasos) | siguientes ya escritos: ['estadistica_basica_calidad']
+  paso 4: Calcular medidas de tendencia central (media, mediana, moda) y dispersión (rango, desviación estándar, varianza)
+HIJO candidato medidas_tendencia_dispersion | titulo: Medidas de Tendencia Central y Dispersión
+  resumen: Los datos pueden resumirse numéricamente mediante medidas de tendencia central (media, mediana) que indican dónde se centran los datos, y medidas de dispersión (rango, desviación estándar) que indican la cantidad de dispersión. La desviación estándar es la medida de dispersión más útil para conjunto
+  pasos (5):
+    1. Calcular la media aritmética de los datos
+    2. Calcular la mediana si los datos presentan asimetría o valores atípicos
+    3. Calcular la desviación estándar y/o el rango según el tamaño de la muestra
+    4. Calcular el coeficiente de variación si se comparan grupos con medias distintas
+    5. Evitar eliminar valores extremos sin evidencia de causa especial
+  hijo.nodos_previos ya escritos: ['frecuencia_distribucion']
+
+====================================================================================================
+PAR 13 | dominio environmental
+MADRE plan_cambio_climatico (5 pasos) | siguientes ya escritos: ['evaluar_huella_carbono', 'medir_huella_carbono_corporativa']
+  paso 2: Establecer metas cuantitativas de reducción de emisiones
+HIJO candidato establecer_metas_reduccion_emisiones | titulo: Establecer Metas de Reducción de Emisiones
+  resumen: Una vez que identifiques el origen de tus emisiones, tienes que fijar objetivos concretos de reducción. Las metas apropiadas varían según tu industria, tu capacidad y tu posición en el mercado. Ejemplos reales incluyen a USG (20% para 2020), MillerCoors (15% de reducción de energía para 2015) y Pana
+  pasos (5):
+    1. Analiza el inventario de emisiones que ya tienes.
+    2. Define un año base para la comparación.
+    3. Establece metas de reducción a corto y largo plazo.
+    4. Comunica públicamente las metas alcanzables, y guarda para ti las más ambiciosas.
+    5. Prepara explicaciones para posibles incumplimientos.
+  hijo.nodos_previos ya escritos: ['medir_huella_carbono_corporativa']
+
+====================================================================================================
+PAR 14 | dominio franquicias
+MADRE franquicia_unidad_individual (4 pasos) | siguientes ya escritos: ['determinacion_cuota_inicial', 'calificacion_candidatos_franquicia', 'calificacion_prospectos_award']
+  paso 1: Definir el proceso de venta para franquicias unitarias.
+HIJO candidato proceso_venta_franquicias | titulo: Proceso de Venta de Franquicias
+  resumen: La venta de franquicias es un proceso predecible si se sigue una metodología probada, aunque con tasas de cierre bajas y alto nivel de rechazo. No existe un único proceso correcto; varía según tipo de franquicia (individual vs. desarrollo de área), nivel de inversión y experiencia del vendedor. Es f
+  pasos (5):
+    1. Diseñar un flujo de proceso de ventas adaptado al tipo de franquicia e inversión
+    2. Capacitar al equipo de ventas en entender las motivaciones emocionales del comprador (independencia, ser su propio jefe) más que solo el retorno financiero
+    3. Decidir la estrategia respecto a cerrar en 'Discovery/Decision Day' o después
+    4. Asegurar que los candidatos lean el FDD y consulten con abogado externo
+    5. Medir y ajustar continuamente el proceso según los resultados obtenidos
+  hijo.nodos_previos ya escritos: ['medicion_resultados_marketing_franquicia', 'brokers_lead_referral_networks', 'contratar_vendedor_franquicia', 'outsourcing_ventas_fso', 'preparar_candidato_validacion', 'referidos_franquiciados_existentes']
+
+====================================================================================================
+PAR 15 | dominio quality
+MADRE planificacion_inicial_calidad (5 pasos) | siguientes ya escritos: ['autocontrol_y_controlabilidad', 'auditoria_de_proceso', 'caracteristicas_clave_producto_proceso', 'key_process_product_characteristics']
+  paso 4: Analizar el diagrama de flujo del proceso por estación de trabajo
+HIJO candidato analisis_flujo_proceso | titulo: Análisis del Diagrama de Flujo de Proceso
+  resumen: El diseño de un proceso puede revisarse mediante un diagrama de flujo que muestra la trayectoria de los materiales hasta convertirse en producto terminado. Este diagrama divide el proceso en estaciones de trabajo, para las cuales se documentan operaciones, secuencia, instalaciones e instrumentos, y 
+  pasos (4):
+    1. Elaborar diagrama de flujo del proceso completo
+    2. Dividir el flujo en estaciones de trabajo lógicas
+    3. Documentar para cada estación las operaciones, secuencia, instrumentos y condiciones de proceso
+    4. Usar el documento como base para auditorías y control por parte de inspectores
+  hijo.nodos_previos ya escritos: ['key_process_product_characteristics']
+
+====================================================================================================
+PAR 16 | dominio core
+MADRE marco_analisis_mercado_cadena_suministro (21 pasos) | siguientes ya escritos: ['creacion_estrategia_cadena_suministro', 'investigacion_mercado_paso_a_paso', 'enfoque_paso_a_paso_investigacion_mercado', 'compartir_datos_cadena_suministro', 'creacion_data_warehouse', 'equipo_conjunto_de_mejora_con_proveedores', 'estrategia_captura_mercado_crecimiento', 'gestion_inventario', 'key_process_product_characteristics', 'medicion_de_calidad_en_manufactura', 'metricas_servicio_cliente_bts_bto', 'product_roadmap_estrategico', 'roadmap_proyectos_operacionales_12_meses']
+  paso 17: Calcular el ciclo de conversión de efectivo (cash-to-cash cycle time)
+HIJO candidato ciclo_de_conversion_de_efectivo | titulo: Ciclo de Conversión de Efectivo (Cash Conversion Cycle)
+  resumen: El ciclo de conversión de efectivo mide cuántos días tarda una empresa en recuperar el efectivo invertido en sus operaciones, desde el pago de materias primas hasta el cobro de las ventas, integrando los periodos de cuentas por pagar, inventario y cuentas por cobrar. Se calcula como DSO + DII − DPO 
+  pasos (7):
+    1. Calcular DSO (días de cobro), DII (días de inventario) y DPO (días de pago), el DSO es cuentas por cobrar finales dividido entre ingresos diarios, y el DPO es cuentas por pagar finales dividido entre COGS diario
+    2. Aplicar la fórmula: Ciclo = DSO + DII - DPO
+    3. Multiplicar el resultado por las ventas diarias para estimar el capital de trabajo requerido
+    4. Evaluar el trade-off entre maximizar el DPO y mantener buenas relaciones con los proveedores
+    5. Identificar en qué punto del ciclo se puede acelerar el retorno de efectivo (reducir DSO, reducir inventario, aumentar DPO razonablemente)
+    6. Monitorear el ciclo periódicamente, especialmente tras fusiones o adquisiciones
+    7. Investigar causas de un DSO elevado: quejas de clientes, términos de venta laxos, facturación lenta
+  hijo.nodos_previos ya escritos: ['gestion_dso', 'gestion_inventario', 'gestion_cuentas_por_pagar_dpo', 'analisis_flujo_de_valor', 'gestion_capital_trabajo', 'ratios_eficiencia_inventario']
+
+====================================================================================================
+PAR 17 | dominio quality
+MADRE medicion_servicios (5 pasos) | siguientes ya escritos: ['costo_de_calidad', 'costo_de_calidad_3']
+  paso 3: Implementar el programa 'Make Certain' para servicio y áreas administrativas
+HIJO candidato make_certain_programa | titulo: Programa Make Certain para Áreas Administrativas
+  resumen: Make Certain es un programa de mejora orientado a personal de oficina y administrativo (white-collar), diseñado para generar conciencia inmediata sobre la responsabilidad personal en la calidad del trabajo de comunicación y papeleo. Se basa en el reconocimiento de que la mayoría de las personas atri
+  pasos (7):
+    1. Informar al personal directivo sobre el concepto e intención del programa
+    2. Designar coordinadores por departamento administrativo
+    3. Recolectar ejemplos reales de errores de prevención evitables
+    4. Realizar sesión donde cada participante declare su 'mayor problema'
+    5. Evidenciar que los problemas suelen atribuirse a otros, no a uno mismo
+    6. Solicitar ideas escritas de prevención de defectos al equipo de mejora
+    7. Establecer reuniones regulares de prevención de defectos por grupo, similar a los círculos de acción correctiva en manufactura
+  hijo.nodos_previos ya escritos: ['programa_catorce_pasos_crosby', 'zero_defects_concepto', 'programa_mejora_calidad_14_pasos']
+
+====================================================================================================
+PAR 18 | dominio quality
+MADRE medicion_servicios (5 pasos) | siguientes ya escritos: ['costo_de_calidad', 'costo_de_calidad_3']
+  paso 3: Implementar el programa 'Make Certain' para servicio y áreas administrativas
+HIJO candidato programa_make_certain_3 | titulo: Programa Make Certain
+  resumen: El programa Make Certain es el primer programa de prevención de defectos diseñado específicamente para empleados administrativos (white-collar) y no relacionados con manufactura. Reconoce que los errores de oficina y paperwork generan problemas costosos y frustrantes, y que basta un solo dato erróne
+  pasos (4):
+    1. Identificar los procesos administrativos críticos susceptibles a errores de datos
+    2. Capacitar a los empleados administrativos usando la guía del instructor del programa
+    3. Implementar los pasos de acción definidos para la prevención de errores de oficina
+    4. Monitorear la exactitud de los datos y documentos en la cadena de comunicación
+  hijo.nodos_previos ya escritos: ['cero_defectos']
+
+====================================================================================================
+PAR 19 | dominio quality
+MADRE dmadv_fase_verificacion (7 pasos) | siguientes ya escritos: ['benchmarking_proceso']
+  paso 2: Haz un análisis de capacidad y revisa tus sistemas de medición
+HIJO candidato analisis_de_sistemas_de_medicion_msa | titulo: Análisis de Sistemas de Medición (MSA)
+  resumen: El MSA evalúa la calidad de un sistema de medición mediante atributos como sesgo (bias), repetibilidad, reproducibilidad, estabilidad y linealidad. Un buen sistema de medición debe tener mínima variación para garantizar decisiones correctas sobre productos y procesos. Los estudios de Gauge R&R permi
+  pasos (6):
+    1. Definir el método de prueba con procedimiento paso a paso, equipo y condiciones
+    2. Identificar el sistema de causas de variabilidad (material, analistas, aparatos, días)
+    3. Verificar que el proceso de medición esté bajo control estadístico mediante carta de control
+    4. Realizar un estudio Gauge R&R con múltiples apraisers, partes y repeticiones
+    5. Calcular 5.15σ y compararlo con el rango de especificación (aceptable si es ≤10%)
+    6. Ajustar o calibrar el instrumento si se detecta sesgo sistemático, respecto a estándares de medida reconocidos
+  hijo.nodos_previos ya escritos: ['diseno_de_metodos_de_recoleccion_de_datos', 'inspeccion_automatizada']
+
+====================================================================================================
+PAR 20 | dominio quality
+MADRE identificar_caracteristicas_metas_proceso (5 pasos) | siguientes ya escritos: ['diseno_para_factores_criticos', 'diseno_para_factores_criticos_y_error_humano']
+  paso 3: Organizar las características y metas en una hoja de cálculo de diseño de proceso
+HIJO candidato diseno_de_procesos_por_caracteristicas | titulo: Diseño de Procesos Basado en Características y Metas
+  resumen: El diseño de procesos organiza las características y metas del proceso (materiales, personas, entrenamiento, recursos, procesos de soporte) en una hoja de cálculo que vincula cada característica del proceso con las características del producto que debe entregar. Esto permite verificar que todas las 
+  pasos (5):
+    1. Identificar los recursos necesarios: materiales, personas, entrenamiento, otros recursos y procesos de soporte.
+    2. Construir una hoja de cálculo de diseño de proceso vinculando características de proceso con metas de producto.
+    3. Verificar que cada meta de producto sea alcanzada por al menos una característica de proceso.
+    4. Verificar que cada característica de proceso sea necesaria para al menos una meta de producto.
+    5. Confirmar la capacidad de los macroprocesos organizacionales que soportan el nuevo proceso.
+  hijo.nodos_previos ya escritos: ['descubrir_necesidades_del_cliente', 'desarrollar_caracteristicas_producto', 'herramientas_de_diseno_de_calidad', 'diseno_organizacional']
+
+====================================================================================================
+PAR 21 | dominio quality
+MADRE desarrollo_de_controles_de_proceso (6 pasos) | siguientes ya escritos: ['auditoria_calidad', 'six_sigma_dmaic']
+  paso 4: Entrenar a los trabajadores en decisiones de conformidad del producto.
+HIJO candidato decision_conformidad_producto | titulo: Decisión de Conformidad del Producto
+  resumen: Es el juicio operativo mediante el cual inspectores o trabajadores de producción determinan si un producto cumple con las especificaciones establecidas. Dado el volumen de decisiones diarias, esta responsabilidad se delega a inspectores entrenados o instrumentos automatizados, quienes identifican el
+  pasos (4):
+    1. Entrenar a inspectores y operadores en el conocimiento de productos, estándares e instrumentos.
+    2. Delegar la autoridad de juicio de conformidad a inspectores o sistemas automatizados.
+    3. Establecer procedimientos de identificación ('stamp') para productos conformes.
+    4. Definir políticas de gestión sobre el envío de productos conformes.
+  hijo.nodos_previos ya escritos: ['planificacion_inspeccion', 'driver_produccion']
+
+====================================================================================================
+PAR 22 | dominio exportacion
+MADRE recursos_apoyo_gubernamental_exportacion (6 pasos) | siguientes ya escritos: ['investigacion_mercado_primaria_secundaria_2', 'centro_asesoria_advocacy_center']
+  paso 3: Evalua financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantias de exportacion
+HIJO candidato programas_ex_im_bank | titulo: Programas de Financiamiento del Ex-Im Bank
+  resumen: El Export-Import Bank de Estados Unidos ofrece seguro de crédito a la exportacion, garantias de prestamo y prestamos directos de mediano (1 a 5 anios) y largo plazo (hasta 10 anios) para reducir riesgos comerciales y politicos, especialmente en proyectos de bienes de capital como plantas de energia,
+  pasos (6):
+    1. Solicita la Garantia de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportacion
+    2. Determina si te conviene mas una garantia de prestamo, que suele ser mas económica, o un prestamo directo de mediano o largo plazo para la venta
+    3. Evalua contratar un seguro de crédito a la exportacion, propio del Ex-Im Bank o privado si ya tienes historial como exportador establecido
+    4. Revisa si calificas para la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energia, telecomunicaciones o transporte
+    5. Presenta tu inventario y tus cuentas por cobrar de exportacion como garantia y negocia las tasas de anticipo con el prestamista
+    6. Consulta con la oficina local del U.S. Commercial Service o en exim.gov el proceso de solicitud y los bancos participantes
+  hijo.nodos_previos ya escritos: ['descuento_aceptaciones_bancarias', 'decisiones_de_financiamiento_exportacion', 'trabajo_con_bancos_comerciales', 'asistencia_us_commercial_service', 'enfoques_generales_exportacion', 'elementos_plan_exportacion_ejemplo']
+
+====================================================================================================
+PAR 23 | dominio quality
+MADRE definiciones_operacionales_de_calidad (4 pasos) | siguientes ya escritos: ['control_estadistico_de_procesos_en_tiempo_real', 'relaciones_largo_plazo_con_proveedores']
+  paso 1: Identificar todas las características críticas de calidad del producto según el cliente
+HIJO candidato ctq_caracteristicas_criticas | titulo: CTQ - Características Críticas para la Calidad
+  resumen: Las CTQ son la traducción técnica y medible de lo que tu cliente te pide. Te sirven como objetivos concretos a la hora de diseñar y como criterio de decisión durante todo el proceso, para asegurarte de que lo que construyes resuelve de verdad el problema de tu cliente.
+  pasos (5):
+    1. Recoge la voz de tu cliente (VOC) con entrevistas, encuestas u observación directa
+    2. Traduce lo que te dice tu cliente a términos técnicos y medibles
+    3. Define para cada CTQ una métrica, una unidad de medida y los límites aceptables
+    4. Prioriza las CTQ según su impacto en la satisfacción de tu cliente
+    5. Usa las CTQ como referencia para comparar y evaluar tus alternativas de diseño
+  hijo.nodos_previos ya escritos: ['dfss_metodologia', 'design_for_six_sigma_dfss']
+
+====================================================================================================
+PAR 24 | dominio core
+MADRE funnel_get_customers_optimizacion (7 pasos) | siguientes ya escritos: ['optimizacion_keep_retencion', 'optimizacion_grow_customers', 'cohort_analysis_retencion', 'analisis_de_cohortes', 'keep_customers_strategy', 'optimizacion_metricas_crecimiento']
+  paso 3: Diseñar tests pass/fail para los programas más decepcionantes
+HIJO candidato disenar_tests_pass_fail | titulo: Diseñar Tests Pass/Fail
+  resumen: Los experimentos de Customer Development deben ser cortos, simples y objetivos, diseñados para dar un resultado claro de aprobado/reprobado. El objetivo es obtener una señal fuerte que permita avanzar, buscando el 'máximo global' de respuesta en vez de detenerse en un 'máximo local' prematuro.
+  pasos (5):
+    1. Preguntarse qué se quiere aprender
+    2. Diseñar el test pass/fail más simple posible
+    3. Definir criterios numéricos claros de éxito o fracaso
+    4. Ejecutar el test y evitar detenerlo antes de tiempo
+    5. Registrar aprendizajes e insights, no solo datos
+  hijo.nodos_previos ya escritos: ['sintesis_hipotesis_modelo_negocio', 'diseno_experimentos_hipotesis']
+
+====================================================================================================
+PAR 25 | dominio quality
+MADRE analisis_capacidad_proceso (5 pasos) | siguientes ya escritos: ['mejora_continua_del_proceso', 'indice_cpk']
+  paso 3: Calcular la desviación estándar y los límites de capacidad del proceso
+HIJO candidato capacidad_del_proceso | titulo: Capacidad del Proceso
+  resumen: Una vez que un proceso está en control estadístico, tiene una capacidad definible y predecible: se puede calcular qué especificaciones puede cumplir de forma sostenida usando la media y el rango de los gráficos X-barra y R. Es un error común calcular capacidad tomando muestras arbitrarias sin antes 
+  pasos (4):
+    1. Verificar primero que el proceso esté en control estadístico (gráfico de corridas o X-barra/R)
+    2. Calcular la media y el rango promedio del proceso estable
+    3. Determinar la capacidad usando las fórmulas estándar (constantes d2, A2, etc.)
+    4. Comunicar la capacidad real a diseño e ingeniería para ajustar especificaciones realistas
+  hijo.nodos_previos ya escritos: ['graficos_de_control_uso', 'causas_comunes_causas_especiales', 'control_estadistico_del_proceso', 'grafico_de_corrida_run_chart', 'causas_comunes_vs_especiales']
+
+====================================================================================================
+PAR 26 | dominio quality
+MADRE brecha_de_calidad_cuatro_gaps (4 pasos) | siguientes ya escritos: ['modelo_quality_by_design_juran', 'descubrir_necesidades_del_cliente', 'juran_quality_by_design']
+  paso 3: Verificar la capacidad del proceso para cumplir consistentemente el diseño
+HIJO candidato capacidad_del_proceso | titulo: Capacidad del Proceso
+  resumen: Una vez que un proceso está en control estadístico, tiene una capacidad definible y predecible: se puede calcular qué especificaciones puede cumplir de forma sostenida usando la media y el rango de los gráficos X-barra y R. Es un error común calcular capacidad tomando muestras arbitrarias sin antes 
+  pasos (4):
+    1. Verificar primero que el proceso esté en control estadístico (gráfico de corridas o X-barra/R)
+    2. Calcular la media y el rango promedio del proceso estable
+    3. Determinar la capacidad usando las fórmulas estándar (constantes d2, A2, etc.)
+    4. Comunicar la capacidad real a diseño e ingeniería para ajustar especificaciones realistas
+  hijo.nodos_previos ya escritos: ['graficos_de_control_uso', 'causas_comunes_causas_especiales', 'control_estadistico_del_proceso', 'grafico_de_corrida_run_chart', 'causas_comunes_vs_especiales']
+
+====================================================================================================
+PAR 27 | dominio core
+MADRE adn_de_innovacion_organizacional (5 pasos) | siguientes ya escritos: ['cultura_de_innovacion', 'equipos_multifuncionales_dfe']
+  paso 3: Crear espacios físicos dedicados exclusivamente al pensamiento de innovación.
+HIJO candidato espacios_fisicos_de_innovacion | titulo: Diseño de Espacios Físicos para la Innovación
+  resumen: El pensamiento de diseño es 'embodied thinking': se manifiesta en espacios físicos tanto como en procesos mentales. Los 'project rooms' dedicados, donde los materiales de investigación (fotos, storyboards, prototipos) permanecen visibles durante toda la duración del proyecto, facilitan la síntesis c
+  pasos (4):
+    1. Asignar una sala de proyecto exclusiva para el equipo durante toda la duración del trabajo.
+    2. Mantener visibles simultáneamente todos los materiales de investigación: notas, fotos, prototipos, storyboards.
+    3. Complementar el espacio físico con un sitio web o wiki de proyecto para mantener contacto con miembros en campo.
+    4. Diseñar espacios flexibles y reconfigurables en lugar de salas de reunión estándar.
+  hijo.nodos_previos ya escritos: ['cultura_de_innovacion_y_juego_serio']
+
+====================================================================================================
+PAR 28 | dominio quality
+MADRE mejora_calidad_crosby (4 pasos) | siguientes ya escritos: ['asuntos_consumidor']
+  paso 2: Implementar un programa estructurado de mejora (como el de catorce pasos)
+HIJO candidato concepto_programa_catorce_pasos | titulo: Programa de Catorce Pasos para la Mejora de la Calidad
+  resumen: Descrito por Crosby como la base de todos los programas de calidad de ITT, es un programa estructurado de mejora mediante prevención de defectos, implementado de manera adaptable en cada unidad de negocio. Aunque el detalle completo se desarrolla más adelante en el libro, se presenta aquí como el me
+  pasos (4):
+    1. Adaptar el programa de catorce pasos a la realidad y madurez de cada unidad de negocio.
+    2. Iniciar con unidades piloto para generar casos de éxito antes de expandir a toda la corporación.
+    3. Documentar resultados tempranos para usarlos como evidencia en seminarios internos.
+    4. Dar seguimiento sostenido durante varios años, ya que la adopción plena toma tiempo (4-5 años según Crosby).
+  hijo.nodos_previos ya escritos: ['concepto_cuatro_pilares_programa_calidad', 'concepto_costo_de_calidad', 'costo_de_mala_calidad_copq']
+
+====================================================================================================
+PAR 29 | dominio quality
+MADRE consejo_de_calidad_y_rol_del_director (5 pasos) | siguientes ya escritos: ['transferencia_de_actividades_a_departamentos_de_linea', 'rol_tactico_estrategico_oficina']
+  paso 3: Integra las metas de calidad en tus planes de negocio y de desempeño
+HIJO candidato planificacion_estrategica_despliegue_2 | titulo: Cómo integrar la calidad en tu plan de negocio
+  resumen: Es el proceso sistemático mediante el cual tú defines tus metas de largo plazo relacionadas con la calidad y los clientes, integrándolas de forma equitativa con las metas financieras, de la gente que trabaja contigo, marketing y desarrollo, en un solo plan de negocio cohesivo. Ese plan luego se baja
+  pasos (7):
+    1. Definir tu visión, misión, estrategias y metas anuales de forma integrada
+    2. Poner la voz del cliente y las metas de calidad al mismo nivel que las metas financieras
+    3. Reconocer y premiar el desempeño de acuerdo a las metas de mejora que te propongas
+    4. Asegurarte de que participen todos los que te ayudan, sin importar su rol o nivel
+    5. Usar el mismo lenguaje para los términos clave, como calidad, comparación con el mercado o cómo bajas la estrategia a lo concreto
+    6. Enseñar estos conceptos y herramientas a todos los que trabajan contigo, no solo a quien se encarga de la calidad
+    7. Eliminar las iniciativas que no estén alineadas con tu plan estratégico
+  hijo.nodos_previos ya escritos: ['auditoria_sistema_control_calidad', 'auditoria_sistema_control_calidad_2']
+

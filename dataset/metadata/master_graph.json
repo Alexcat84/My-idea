@@ -1814,7 +1814,8 @@
         "elegir_material_de_relleno_segun_producto"
       ],
       "nodos_siguientes": [
-        "sellar_cajas_metodo_cinta_en_h"
+        "sellar_cajas_metodo_cinta_en_h",
+        "proteger_fragiles_caja_dentro_de_caja"
       ],
       "condiciones_activacion": [
         "Vendes productos de distinto tipo (líquidos, frágiles, pesados) y empacas todos igual.",
@@ -1936,7 +1937,8 @@
       ],
       "nodos_siguientes": [
         "cultura_de_innovacion",
-        "equipos_multifuncionales_dfe"
+        "equipos_multifuncionales_dfe",
+        "espacios_fisicos_de_innovacion"
       ],
       "condiciones_activacion": [
         "Cuando una empresa de servicios o manufactura busca escalar el design thinking más allá de un solo proyecto piloto"
@@ -3195,7 +3197,8 @@
       ],
       "nodos_siguientes": [
         "mejora_continua_del_proceso",
-        "indice_cpk"
+        "indice_cpk",
+        "capacidad_del_proceso"
       ],
       "condiciones_activacion": [
         "Cuando se necesita verificar si un proceso cumple con las especificaciones del producto",
@@ -3817,7 +3820,8 @@
       "entregable_esperado": "Informe de estudio MSA/Gauge R&R con estimaciones de repetibilidad, reproducibilidad y determinación de aceptabilidad del sistema de medición",
       "nodos_previos": [
         "diseno_de_metodos_de_recoleccion_de_datos",
-        "inspeccion_automatizada"
+        "inspeccion_automatizada",
+        "dmadv_fase_verificacion"
       ],
       "nodos_siguientes": [
         "cribado_de_datos",
@@ -4129,7 +4133,8 @@
       ],
       "entregable_esperado": "Diagrama de flujo de proceso con documentación formal por estación de trabajo",
       "nodos_previos": [
-        "key_process_product_characteristics"
+        "key_process_product_characteristics",
+        "planificacion_inicial_calidad"
       ],
       "nodos_siguientes": [
         "control_proceso_variables",
@@ -9037,7 +9042,8 @@
       "nodos_siguientes": [
         "modelo_quality_by_design_juran",
         "descubrir_necesidades_del_cliente",
-        "juran_quality_by_design"
+        "juran_quality_by_design",
+        "capacidad_del_proceso"
       ],
       "condiciones_activacion": [
         "Cuando el usuario percibe insatisfacción constante de clientes pero no sabe identificar la causa raíz",
@@ -11285,7 +11291,9 @@
         "causas_comunes_causas_especiales",
         "control_estadistico_del_proceso",
         "grafico_de_corrida_run_chart",
-        "causas_comunes_vs_especiales"
+        "causas_comunes_vs_especiales",
+        "analisis_capacidad_proceso",
+        "brecha_de_calidad_cuatro_gaps"
       ],
       "nodos_siguientes": [
         "ventajas_control_estadistico"
@@ -13899,7 +13907,8 @@
         "gestion_cuentas_por_pagar_dpo",
         "analisis_flujo_de_valor",
         "gestion_capital_trabajo",
-        "ratios_eficiencia_inventario"
+        "ratios_eficiencia_inventario",
+        "marco_analisis_mercado_cadena_suministro"
       ],
       "nodos_siguientes": [
         "gestion_relacion_bancaria",
@@ -21239,7 +21248,8 @@
       ],
       "nodos_siguientes": [
         "contract_close_out",
-        "procurement_audit"
+        "procurement_audit",
+        "project_performance_report"
       ],
       "condiciones_activacion": [
         "Cuando el proyecto involucra contratistas externos que deben reportar avance periódicamente"
@@ -25924,7 +25934,8 @@
       "entregable_esperado": "Tu lista priorizada de CTQ con métricas, objetivos y límites de especificación definidos",
       "nodos_previos": [
         "dfss_metodologia",
-        "design_for_six_sigma_dfss"
+        "design_for_six_sigma_dfss",
+        "definiciones_operacionales_de_calidad"
       ],
       "nodos_siguientes": [
         "qfd_matriz"
@@ -27111,7 +27122,8 @@
         "reporte_confidencial_seguridad"
       ],
       "nodos_siguientes": [
-        "responsabilidad_prospectiva"
+        "responsabilidad_prospectiva",
+        "justicia_restaurativa"
       ],
       "condiciones_activacion": [
         "Cuando la organización busca implementar o revisar su programa de 'just culture'",
@@ -27901,7 +27913,8 @@
         "metrics_that_matter_framework"
       ],
       "nodos_siguientes": [
-        "company_building"
+        "company_building",
+        "determinar_tipo_de_mercado"
       ],
       "condiciones_activacion": [
         "Si ya se validó que el modelo es repetible y escalable",
@@ -29447,7 +29460,8 @@
       "entregable_esperado": "Procedimiento documentado de inspección con criterios de conformidad y delegación de autoridad.",
       "nodos_previos": [
         "planificacion_inspeccion",
-        "driver_produccion"
+        "driver_produccion",
+        "desarrollo_de_controles_de_proceso"
       ],
       "nodos_siguientes": [
         "decision_aptitud_uso",
@@ -31636,7 +31650,8 @@
       ],
       "nodos_siguientes": [
         "control_estadistico_de_procesos_en_tiempo_real",
-        "relaciones_largo_plazo_con_proveedores"
+        "relaciones_largo_plazo_con_proveedores",
+        "ctq_caracteristicas_criticas"
       ],
       "condiciones_activacion": [
         "Cuando existen disputas recurrentes sobre calidad entre cliente y proveedor sin resolución clara"
@@ -31845,7 +31860,8 @@
       "entregable_esperado": "Declaración de misión organizacional documentada y diferenciada de la visión",
       "nodos_previos": [
         "establecer_vision_organizacional",
-        "establecer_vision_organizacional_2"
+        "establecer_vision_organizacional_2",
+        "planificacion_estrategica_despliegue"
       ],
       "nodos_siguientes": [
         "desarrollar_estrategias_largo_plazo",
@@ -32833,7 +32849,8 @@
       ],
       "nodos_siguientes": [
         "auditoria_calidad",
-        "six_sigma_dmaic"
+        "six_sigma_dmaic",
+        "decision_conformidad_producto"
       ],
       "condiciones_activacion": [
         "Cuando el diseño del proceso está completo y debe pasar a producción/operaciones"
@@ -34530,7 +34547,8 @@
         "lienzo_modelo_negocio",
         "resegmentacion_mercado_nicho_bajo_costo",
         "seleccion_canal_distribucion",
-        "seleccion_canal_fisico"
+        "seleccion_canal_fisico",
+        "customer_creation"
       ],
       "nodos_siguientes": [
         "metricas_de_startup",
@@ -34775,7 +34793,8 @@
       "node_id": "dia_en_la_vida_del_cliente",
       "nodos_previos": [
         "arquetipos_de_cliente",
-        "segmentos_de_clientes_problema_necesidad"
+        "segmentos_de_clientes_problema_necesidad",
+        "verificar_clientes_y_canales"
       ],
       "nodos_siguientes": [
         "mapa_organizacional_influencia",
@@ -36002,7 +36021,8 @@
       "entregable_esperado": "Lista de hipótesis del modelo de negocio con sus tests pass/fail diseñados y criterios de éxito definidos",
       "nodos_previos": [
         "sintesis_hipotesis_modelo_negocio",
-        "diseno_experimentos_hipotesis"
+        "diseno_experimentos_hipotesis",
+        "funnel_get_customers_optimizacion"
       ],
       "nodos_siguientes": [
         "construir_mvp_baja_fidelidad"
@@ -36673,7 +36693,8 @@
         "descubrir_necesidades_del_cliente",
         "desarrollar_caracteristicas_producto",
         "herramientas_de_diseno_de_calidad",
-        "diseno_organizacional"
+        "diseno_organizacional",
+        "identificar_caracteristicas_metas_proceso"
       ],
       "nodos_siguientes": [
         "diseno_para_factores_criticos_y_error_humano",
@@ -38822,7 +38843,8 @@
         "dmadv_fase_diseno"
       ],
       "nodos_siguientes": [
-        "benchmarking_proceso"
+        "benchmarking_proceso",
+        "analisis_de_sistemas_de_medicion_msa"
       ],
       "condiciones_activacion": [
         "Cuando ya validaste tu diseño detallado con la prueba de verificación de diseño (DVT) y necesitas confirmar que funciona a escala completa",
@@ -46471,7 +46493,8 @@
       ],
       "entregable_esperado": "Un espacio de trabajo físico (o virtual equivalente) donde todo el material del proyecto esté visible y accesible para el equipo en todo momento.",
       "nodos_previos": [
-        "cultura_de_innovacion_y_juego_serio"
+        "cultura_de_innovacion_y_juego_serio",
+        "adn_de_innovacion_organizacional"
       ],
       "nodos_siguientes": [
         "convertir_necesidad_en_demanda"
@@ -46995,7 +47018,8 @@
       ],
       "entregable_esperado": "Un documento con metas cuantificables y con plazos definidos de reducción de emisiones.",
       "nodos_previos": [
-        "medir_huella_carbono_corporativa"
+        "medir_huella_carbono_corporativa",
+        "plan_cambio_climatico"
       ],
       "nodos_siguientes": [
         "draft_plan_accion_climatico"
@@ -50325,7 +50349,8 @@
       ],
       "entregable_esperado": "Informe de diagnóstico de actitudes y percepciones de los empleados sobre sostenibilidad",
       "nodos_previos": [
-        "co_creacion_estrategia_engagement"
+        "co_creacion_estrategia_engagement",
+        "mobilizar_empleados_cultura_ecologica"
       ],
       "nodos_siguientes": [
         "definicion_metas_engagement",
@@ -52612,7 +52637,8 @@
         "search_for_business_model"
       ],
       "nodos_siguientes": [
-        "contabilidad_innovacion_largo_plazo"
+        "contabilidad_innovacion_largo_plazo",
+        "metricas_accionables"
       ],
       "condiciones_activacion": [
         "Si el equipo presenta resultados basados en gráficos de métricas acumulativas sin explicar causalidad",
@@ -57691,7 +57717,8 @@
       "nodos_siguientes": [
         "determinacion_cuota_inicial",
         "calificacion_candidatos_franquicia",
-        "calificacion_prospectos_award"
+        "calificacion_prospectos_award",
+        "proceso_venta_franquicias"
       ],
       "condiciones_activacion": [
         "Cuando el franquiciador es nuevo y no cuenta con recursos para atraer desarrolladores de área"
@@ -58324,7 +58351,8 @@
         "cohort_analysis_retencion",
         "analisis_de_cohortes",
         "keep_customers_strategy",
-        "optimizacion_metricas_crecimiento"
+        "optimizacion_metricas_crecimiento",
+        "disenar_tests_pass_fail"
       ],
       "condiciones_activacion": [
         "Cuando el startup ya tiene tráfico pero necesita convertir más visitantes en clientes activados",
@@ -61426,7 +61454,8 @@
       "entregable_esperado": "Tu registro de entrevistas con clientes reales y de lo que vas aprendiendo",
       "nodos_previos": [
         "customer_discovery_introduccion",
-        "equipo_customer_development"
+        "equipo_customer_development",
+        "segmentos_de_clientes_problema_necesidad"
       ],
       "nodos_siguientes": [
         "earlyvangelists",
@@ -65353,7 +65382,8 @@
       ],
       "nodos_siguientes": [
         "diseno_para_factores_criticos",
-        "diseno_para_factores_criticos_y_error_humano"
+        "diseno_para_factores_criticos_y_error_humano",
+        "diseno_de_procesos_por_caracteristicas"
       ],
       "condiciones_activacion": [
         "Cuando se ha definido el flujo general del proceso y se requiere especificar los mecanismos concretos que lo ejecutarán"
@@ -69731,7 +69761,8 @@
       "entregable_esperado": "Protocolo de justicia restaurativa documentado para el manejo de incidentes",
       "nodos_previos": [
         "conocimiento_detallado_y_justicia",
-        "preguntar_que_no_quien"
+        "preguntar_que_no_quien",
+        "cultura_justa_2"
       ],
       "nodos_siguientes": [
         "responsabilidad_prospectiva",
@@ -73866,7 +73897,8 @@
         "medicion_de_calidad_en_manufactura",
         "metricas_servicio_cliente_bts_bto",
         "product_roadmap_estrategico",
-        "roadmap_proyectos_operacionales_12_meses"
+        "roadmap_proyectos_operacionales_12_meses",
+        "ciclo_de_conversion_de_efectivo"
       ],
       "condiciones_activacion": [
         "Cuando empiezas a definir oportunidades para tu cadena de suministro",
@@ -75288,7 +75320,8 @@
       ],
       "entregable_esperado": "Resumen numérico completo (media, mediana, desviación estándar) del conjunto de datos analizado",
       "nodos_previos": [
-        "frecuencia_distribucion"
+        "frecuencia_distribucion",
+        "resumen_de_datos_graficos"
       ],
       "nodos_siguientes": [
         "distribucion_normal_probabilidad"
@@ -77071,7 +77104,8 @@
         "contabilidad_innovacion",
         "tres_as_de_metricas",
         "medir_lo_que_importa_no_solo_lo_facil",
-        "producto_minimo_viable"
+        "producto_minimo_viable",
+        "evitar_pseudociencia_producto"
       ],
       "nodos_siguientes": [
         "pivotar_o_perseverar",
@@ -78074,7 +78108,9 @@
       "nodos_previos": [
         "inversion_capacitacion_sostenibilidad"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "evaluacion_actitudes_empleados"
+      ],
       "condiciones_activacion": [
         "Si la empresa busca institucionalizar la sostenibilidad como parte de su cultura organizacional.",
         "Si existe baja participación de empleados en iniciativas ambientales existentes."
@@ -85432,7 +85468,8 @@
         "get_out_building_test_sell"
       ],
       "nodos_siguientes": [
-        "identificar_earlyvangelists"
+        "identificar_earlyvangelists",
+        "value_proposition_startup"
       ],
       "condiciones_activacion": [
         "Si tus ventas de prueba terminan en rechazo mayoritario o casi ninguna orden",
@@ -85884,7 +85921,8 @@
       ],
       "nodos_siguientes": [
         "evaluar_huella_carbono",
-        "medir_huella_carbono_corporativa"
+        "medir_huella_carbono_corporativa",
+        "establecer_metas_reduccion_emisiones"
       ],
       "condiciones_activacion": [
         "Si la empresa opera en un sector con alta exposición regulatoria a emisiones",
@@ -87045,7 +87083,8 @@
       "nodos_siguientes": [
         "auditorias_gerenciales_periodicas",
         "practicas_gerenciales_no_delegables",
-        "hoshin_kanri"
+        "hoshin_kanri",
+        "definir_mision_organizacional"
       ],
       "condiciones_activacion": [
         "Cuando la organización necesita alinear todos los niveles jerárquicos hacia objetivos comunes",
@@ -87183,7 +87222,8 @@
         "autocontrol_y_controlabilidad",
         "auditoria_de_proceso",
         "caracteristicas_clave_producto_proceso",
-        "key_process_product_characteristics"
+        "key_process_product_characteristics",
+        "analisis_flujo_proceso"
       ],
       "condiciones_activacion": [
         "Cuando se diseña o transfiere un nuevo producto a manufactura y se requiere planificación de calidad previa"
@@ -91854,7 +91894,8 @@
         "contratar_vendedor_franquicia",
         "outsourcing_ventas_fso",
         "preparar_candidato_validacion",
-        "referidos_franquiciados_existentes"
+        "referidos_franquiciados_existentes",
+        "franquicia_unidad_individual"
       ],
       "nodos_siguientes": [
         "calificacion_prospectos_award"
@@ -93603,7 +93644,8 @@
         "trabajo_con_bancos_comerciales",
         "asistencia_us_commercial_service",
         "enfoques_generales_exportacion",
-        "elementos_plan_exportacion_ejemplo"
+        "elementos_plan_exportacion_ejemplo",
+        "recursos_apoyo_gubernamental_exportacion"
       ],
       "nodos_siguientes": [
         "programas_sba_exportacion",
@@ -93705,7 +93747,8 @@
         "lienzo_modelo_negocio",
         "fit_value_proposition",
         "cronograma_proyecto",
-        "estilos_pensamiento_intuitivo_vs_logico"
+        "estilos_pensamiento_intuitivo_vs_logico",
+        "project_close_out"
       ],
       "nodos_siguientes": [
         "stakeholder_register",
@@ -93746,7 +93789,8 @@
         "estimate_at_completion_eac"
       ],
       "nodos_siguientes": [
-        "lessons_learned"
+        "lessons_learned",
+        "project_charter"
       ],
       "condiciones_activacion": [
         "Cuando el proyecto o una fase importante ha finalizado y debe cerrarse formalmente"
@@ -93803,7 +93847,8 @@
       "entregable_esperado": "Reporte de desempeño consolidado listo para presentar al sponsor",
       "nodos_previos": [
         "team_member_status_report",
-        "reporte_estado_miembro_equipo"
+        "reporte_estado_miembro_equipo",
+        "contractor_status_report"
       ],
       "nodos_siguientes": [
         "variance_analysis",
@@ -94524,7 +94569,8 @@
       ],
       "entregable_esperado": "Un envío frágil protegido con dos capas de caja y relleno entre ambas.",
       "nodos_previos": [
-        "elegir_caja_correcta"
+        "elegir_caja_correcta",
+        "adaptar_empaque_segun_tipo_de_articulo"
       ],
       "nodos_siguientes": [
         "sellar_cajas_metodo_cinta_en_h"
@@ -97302,7 +97348,8 @@
       ],
       "nodos_siguientes": [
         "investigacion_mercado_primaria_secundaria_2",
-        "centro_asesoria_advocacy_center"
+        "centro_asesoria_advocacy_center",
+        "programas_ex_im_bank"
       ],
       "condiciones_activacion": [
         "Cuando inicias tu proceso de internacionalizacion y necesitas orientacion o financiamiento",
@@ -99956,7 +100003,8 @@
       ],
       "entregable_esperado": "Plan de replicación del remedio y lista de nuevos proyectos nominados",
       "nodos_previos": [
-        "sostener_las_ganancias"
+        "sostener_las_ganancias",
+        "six_sigma_dmaic"
       ],
       "nodos_siguientes": [
         "consejo_de_calidad"
@@ -101365,7 +101413,8 @@
         "cribado_de_datos"
       ],
       "nodos_siguientes": [
-        "estadistica_basica_calidad"
+        "estadistica_basica_calidad",
+        "medidas_tendencia_dispersion"
       ],
       "condiciones_activacion": [
         "Al iniciar el análisis exploratorio de un conjunto de datos antes de aplicar pruebas estadísticas formales"
@@ -105282,7 +105331,8 @@
         "lienzo_modelo_negocio",
         "plan_de_adquisicion_acquire",
         "relaciones_con_clientes",
-        "tipos_de_clientes"
+        "tipos_de_clientes",
+        "get_out_of_the_building"
       ],
       "condiciones_activacion": [
         "Cuando no tienes claro quien toma la decisión de compra dentro del negocio de tu cliente",
@@ -109715,7 +109765,8 @@
         "design_for_six_sigma_dfss",
         "breakthrough_cultural",
         "medicion_capacidad_servicio",
-        "viaje_diagnostico_remedial"
+        "viaje_diagnostico_remedial",
+        "replicar_resultados"
       ],
       "condiciones_activacion": [
         "Cuando enfrentas un problema crónico de calidad que ya intentaste resolver sin éxito duradero.",
@@ -117241,7 +117292,8 @@
         "preguntas_beneficio",
         "multi_sided_platforms",
         "search_for_business_model",
-        "preguntas_need_payoff"
+        "preguntas_need_payoff",
+        "pivot_post_ventas"
       ],
       "nodos_siguientes": [
         "value_proposition_canvas",
@@ -118090,7 +118142,8 @@
         "verificar_modelo_rentable",
         "estrategia_plataformas_existentes",
         "tacticas_cold_calling",
-        "descubrir_valor_inesperado_cliente"
+        "descubrir_valor_inesperado_cliente",
+        "dia_en_la_vida_del_cliente"
       ],
       "etiqueta_arbol": "Confirma Clientes y Canales"
     },
