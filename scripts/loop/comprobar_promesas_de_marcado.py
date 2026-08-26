@@ -65,7 +65,29 @@ PROMESA = "va marcado como discutible"
 # singular y no la sustituye. La constante vieja se queda con su nombre y su
 # valor intactos, y las dos entran juntas en FORMAS.
 PROMESA_PLURAL = "van marcadas como discutibles"
-FORMAS = (PROMESA, PROMESA_PLURAL)
+# SEGUNDO ENSANCHE, DECLARADO (2026-08-25, vuelta 67): la forma SIN LA PALABRA
+# "COMO" se ANADE a las dos anteriores y no sustituye a ninguna. Las dos
+# constantes viejas se quedan con su nombre y su valor intactos.
+#
+# POR QUE SE ENSANCHA, y es una averia MEDIDA y no un capricho: la vuelta 67
+# sello en PLAN_V67_OPU02_LOTE_C.json una nota_del_reparto que dice VA MARCADO
+# DISCUTIBLE, sin "COMO", y este instrumento NO LA VIO: la corrida de cierre
+# imprimio "NINGUN PLAN DE LOS PASADOS PROMETE MARCADO" sobre un plan que
+# promete. Es LA MISMA especie que el acta 64 adjudico en su pregunta 6: UNA
+# PROMESA INVISIBLE ES PEOR QUE UNA INCUMPLIDA PORQUE NO SALE EN ROJO.
+#
+# LO QUE SE MIDIO ANTES DE ENSANCHAR, con el mismo barrido que la vuelta 65
+# corrio: barridos los 65 PLAN_*.json de docs/loop, la forma sin "COMO" aparece
+# en UNO solo (PLAN_V67_OPU02_LOTE_C.json, acto 16, nota_del_reparto) y en
+# NINGUN otro plan; ese campo NO trae ninguna de las dos formas viejas, asi que
+# el ensanche destapa UNA promesa nueva, la del acto 16, que la seccion 6 del
+# reporte de la vuelta 67 CUMPLE. CERO promesas incumplidas destapadas: el
+# ensanche no es regresion.
+#
+# ES UNA GUARDA QUE CRECE, y por eso va enumerada aqui y MARCADA DISCUTIBLE en
+# el reporte, que son las dos condiciones del acta 61 (D2 y pregunta 2).
+PROMESA_SIN_COMO = "va marcado discutible"
+FORMAS = (PROMESA, PROMESA_PLURAL, PROMESA_SIN_COMO)
 NL = chr(10)
 
 
@@ -134,8 +156,15 @@ def main():
             incumplidas.append((fichero, orden, campo))
         print("  %-32s acto %-3d campo %-16s %s"
               % (fichero, orden, campo, "CUMPLIDA" if ok else "INCUMPLIDA"))
+        # EL ROTULO DE LA FORMA, CORREGIDO EN EL MISMO ENSANCHE (vuelta 67). El
+        # texto viejo decia, verbatim: '"SINGULAR" if f == PROMESA else "PLURAL"',
+        # que con TRES formas rotulaba PLURAL a la forma SIN COMO, que es
+        # singular. Un rotulo que miente sobre lo que el instrumento hallo es la
+        # especie que esta campana persigue, aunque no mueva ninguna cifra.
+        ROTULO = {PROMESA: "SINGULAR", PROMESA_PLURAL: "PLURAL",
+                  PROMESA_SIN_COMO: "SINGULAR SIN COMO"}
         print("     forma hallada: %s"
-              % ", ".join("SINGULAR" if f == PROMESA else "PLURAL" for f in presentes))
+              % ", ".join(ROTULO.get(f, "DESCONOCIDA") for f in presentes))
         print("     promete: %s" % frase[:150])
         print("     hallado en la seccion 6 por: %s"
               % (", ".join(halladas) if halladas else

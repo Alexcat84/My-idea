@@ -1,0 +1,36 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 67.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| marcador `A` / `B` / `C` / `D` | 551 / 72 / 5 / 2.760 | **551 / 72 / 5 / 2.760** |
+| `n`, huecos, duplicados | 3.388 / 0 / 0 | **3.388 / 0 / 0** |
+| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.247 / 606 / 17.540 | **3.853 / 3.243 / 610 / 17.555** |
+| retrato: `A` crudas / colapsos / pares distintos | 551 / 315 / 236 | **551 / 319 / 232** |
+| actos (componentes) | 75 | **74** |
+| actos `CERRADOS` / `ABIERTOS` | 26 / 49 | **26 / 48** |
+| nodos en `CERRADOS` / `ABIERTOS` | 61 / 212 | **61 / 207** |
+| cola de costuras | 1.447 | **1.448** |
+| colisiones de clase vigentes | 4 | **4** |
+| auto-pares (los dos lados al mismo vivo) | 260 | **261** |
+| duplicadas historicas: grupos / nodos | 915 / 725 | **914 / 724** |
+| operaciones, estados, dependencias rotas | 71, todas `LISTA`, 0 | **71, todas `LISTA`, 0** |
+| entradas del inventario | 672 | **672** |
+| las cuatro comprobaciones de `08_VERIFICACION` | TODAS OK (273 igual a 273; 236 igual a 236) | **TODAS OK (268 igual a 268; 232 igual a 232)** |
+
+--- LAS CUATRO COMPROBACIONES, CADA LADO DE SU PROPIA SALIDA ---
+
+  APERTURA (SALIDA_V67_RECOMPUTO_APERTURA.txt):
+    i.  nodos en actos 273 == componentes 273
+    ii. A vigentes 236 == aristas A internas 236
+    veredicto: TODAS OK
+  CIERRE   (SALIDA_V67_RECOMPUTO_CIERRE.txt):
+    i.  nodos en actos 268 == componentes 268
+    ii. A vigentes 232 == aristas A internas 232
+    veredicto: TODAS OK
+
+FIN

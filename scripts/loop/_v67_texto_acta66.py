@@ -7,7 +7,6 @@ misma razon por la que el contenido de un lote vive aparte del generador: para
 que el fichero que MIDE y el fichero que DICE no se confundan. Es el mismo
 reparto que la vuelta 66 uso con _v66_texto_acta65.py.
 """
-# ROTULO titulo especie=PROCEDENCIA cita=vuelta:66 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 66 DEL AUDITOR" corte=2026-08-25 motivo="el titulo nombra el ACTA que este texto transcribe, que es de la vuelta 66; el fichero es de la vuelta 67 y por eso el numero no calza con su propia vuelta a proposito"
 
 TEXTO = """
 
