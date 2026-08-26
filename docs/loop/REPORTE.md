@@ -702,11 +702,13 @@ ejecutaron**: lo consumado no se ejecuta ni se rehace.
 | **`2bd639c7`** | **TAREA 1 entera**: el registro del acta 67 (`+187`, `0` borradas), **la correccion declarada de la cita** y **la guarda de citas ensanchada**, mas **la APERTURA medida antes de la primera operacion** |
 | **`0c946b7d`** | **TAREA 2**: el lote D ejecutado (2 fusiones, 4 declarados, 1 en transito, 6 nodos muertos, `P.16` limpio, colisiones que calzan sobre la base 4, Gate 0 con su ciclo de tres y las tres suites en verde) |
 | **`e5402157`** | **el registro del lote D** (`+354`, `0` borradas, 16 agujas derivadas, idempotencia mordiendo, barrido con `AMBAR` de vuelta a 0) |
+| **`9cf749f5`** | **el reporte entero**, leido hoy con `git log --oneline` |
 
-**EL CUARTO commit de la vuelta es el que escribe este reporte**, y **EL HASH FINAL ES EL DE ESE
-COMMIT**, que **no se puede escribir dentro de si mismo**: **un commit no puede contener su propio
-hash**. **Los TRES anteriores estan arriba, ninguno de memoria.** Es la misma via que las vueltas 65,
-66 y 67 usaron.
+**EL HASH FINAL DE LA VUELTA ES EL DEL QUINTO COMMIT**, el que escribe esta misma linea, **y por eso
+no se puede escribir dentro de si mismo**: **un commit no puede contener su propio hash**. **Los
+CUATRO anteriores estan arriba y en esta linea, ninguno de memoria.** Es la misma via que las vueltas
+65, 66 y 67 usaron, y la regla 7 pide exactamente esto: el hash final y los commits anteriores en la
+cabecera de la seccion 12.
 
 **LAS TRES GUARDAS DE CIERRE, RE-CORRIDAS TRAS ESTA EDICION** (regla 1: lo que la propia vuelta
 mueve, se remide antes de publicar):
