@@ -1,0 +1,40 @@
+==============================================================================
+CUENTA AGREGADA DE LAS PERDIDAS DEL PLAN, POR MAQUINA
+  plan: docs/loop/PLAN_V71_OPU02_LOTE_G.json
+  la regla es del acta 68: la cuenta se cuenta, no se recuerda, y toda
+  exclusion va DICHA.
+==============================================================================
+
+  perdidas selladas, en total        : 30
+     DE CONDICIONES         : 11
+     DE PARAMETRO DE PASO   : 19
+
+  filas con ATENUANTE DECLARADO      : 5
+     fila  2 (acto 38)  paso 2 de problem_recognition_scale
+     fila  6 (acto 39)  paso 1 de defensas_en_profundidad
+     fila  8 (acto 39)  paso 1 de defensas_en_profundidad_2
+     fila 12 (acto 40)  paso 4 de definir_meta_de_traccion
+     fila 13 (acto 40)  paso 3 de moving_the_needle
+
+  de la ESPECIE DEL PENDIENTE 4      : 3
+     fila  8 (acto 39)  paso 1 de defensas_en_profundidad_2
+     fila 12 (acto 40)  paso 4 de definir_meta_de_traccion
+     fila 13 (acto 40)  paso 3 de moving_the_needle
+
+  con ATENUANTE DECLARADO Y MEDIDO   : 1
+     fila  2 (acto 38)  paso 2 de problem_recognition_scale
+
+  filas con DOS SEDES en el campo donde : 4
+     fila  9 (acto 39)  condicion 1 de defensas_en_profundidad y condicion 1 de defensas_en_profundidad_2
+     fila 17 (acto 41)  paso 2 de design_for_six_sigma_dmadv_2 y condicion 3 de design_for_six_sigma_dmadv_2
+     fila 26 (acto 42)  paso 4 de equipo_multifuncional y paso 5 de diseno_organizacional_equipos_innovacion
+     fila 29 (acto 42)  condicion 1 de diseno_organizacional_equipos_innovacion y condicion 1 de equipo_multifuncional
+
+  LA EXCLUSION, DICHA: filas que describen un atenuante en su prosa y
+  NO llevan la frase sellada (no cuentan para la cifra de arriba)
+     NINGUNA: toda fila que describe un atenuante lo lleva sellado.
+
+  LA LECTURA CONTRARIA (una fila por SITIO y no por PIEZA, que es lo que
+  el D10 del acta 67 descarto): seria 34 y no 30
+
+FIN
