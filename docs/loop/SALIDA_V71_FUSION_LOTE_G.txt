@@ -1,0 +1,308 @@
+==============================================================================
+OP-U-02 . UNICO Y FINAL POR AGOTAMIENTO, LOTE G DEL TRAMO UNICO DE OP-U-02. ABRE EN EL ACTO 38, que es el PRIMERO DEL TRAMO SIN DUENO MEDIDO. LOS DOS SALTOS VAN DECLARADOS Y NO ROMPEN EL PREFIJO SIN SALTOS, porque ninguno de los dos actos saltados esta en la cola de fusiones de esta operacion: el ACTO 31 tiene dueno medido (OP-F-04-WEI y OP-S-04 en duenos_cualquier_operacion, leido hoy del fichero fijado del tramo) y el ACTO 37 tiene dueno medido (OP-S-07, leido hoy del mismo fichero), y la adjudicacion 2 del acta 69 dice con todas sus letras que lo que vale para el 31 vale para el 37 cuando el prefijo lo alcance. CINCO ACTOS CIERRAN ENTEROS Y SON 15 NODOS: los actos 38, 39, 40, 41 y 42 cierran los CINCO FUNDIDOS y NINGUNO cierra DECLARADO Y NO FUNDIDO. LOS MOTIVOS DE DECLARADO POSIBLES SON DOS Y SOLO DOS (adjudicacion 4 del acta 70) Y NINGUNO TIENE SUJETO AQUI: la guarda 1B pasa POR VACIO en los cinco actos (CERO puertas dentro de cada uno, medido contra el universo protegido de 256 ids) y P.5 contesta UNA FAMILIA en los cinco. P.10 y el cuarto motivo siguen sin sujeto: cero puentes, cero triangulos y cero pares D internos en los cinco, medido. EL TOPE DEL PREFIJO NO ES ESTRUCTURAL SINO DE LOTE, Y SE DICE EN VEZ DE DEJARLO COMO UN NUMERO ELEGIDO: el siguiente es el ACTO 43, que NO tiene dueno y NO trae puerta, y el tope cae antes de el porque el encargo fija CINCO actos. EL ACTO 44, que trae DOS puertas y cerrara DECLARADO por la guarda 1B cuando el prefijo lo alcance (adjudicacion 4 del acta 70), queda FUERA de este lote y no se toca . MODO EJECUTAR
+plan: docs/loop/PLAN_V71_OPU02_LOTE_G.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3214 vivos, 639 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 38 . sobrevive segmentos_de_clientes_problema_necesidad . absorbe customer_segments_hypothesis, problem_recognition_scale
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de customer_segments_hypothesis al PASO 2 del superviviente
+        inciso VERBATIM: 'aún no existe y tú le muestras una visión'
+        nexo (lo unico de cosecha propia): ', y también cuando '
+        paso resultante: Clasifica el problema en la escala: latente, pasivo, activo o con una solución casera, y también cuando aún no existe y tú le muestras una visión
+     del paso 4 de problem_recognition_scale al PASO 3 del superviviente
+        inciso VERBATIM: 'la intensidad del dolor que causa el problema'
+        nexo (lo unico de cosecha propia): ', determinando '
+        paso resultante: Identifica si tu producto es indispensable (must-have) o solo agradable de tener (nice-to-have), determinando la intensidad del dolor que causa el problema
+  alias del superviviente: ['customer_segments_hypothesis', 'problem_recognition_scale']
+
+------------------------------------------------------------------------------
+ACTO 39 . sobrevive defensas_en_profundidad_3 . absorbe defensas_en_profundidad, defensas_en_profundidad_2
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 7 (anadidos 3) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de defensas_en_profundidad al PASO 1 del superviviente
+        inciso VERBATIM: 'clasificándolas en las siete funciones defensivas'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Mapear todas las capas de defensa del sistema (barreras físicas, sistemas de protección, procedimientos), clasificándolas en las siete funciones defensivas
+  alias del superviviente: ['defensas_en_profundidad', 'defensas_en_profundidad_2']
+
+------------------------------------------------------------------------------
+ACTO 40 . sobrevive traction_goal . absorbe definir_meta_de_traccion, moving_the_needle
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 2 de definir_meta_de_traccion al PASO 1 del superviviente
+        inciso VERBATIM: 'cantidad de clientes y tasa de crecimiento mensual'
+        nexo (lo unico de cosecha propia): ', en números concretos como '
+        paso resultante: Define un objetivo de tracción cuantificable y significativo para tu etapa actual de negocio, en números concretos como cantidad de clientes y tasa de crecimiento mensual
+  alias del superviviente: ['definir_meta_de_traccion', 'moving_the_needle']
+
+------------------------------------------------------------------------------
+ACTO 41 . sobrevive design_for_six_sigma_dfss . absorbe design_for_six_sigma_dmadv, design_for_six_sigma_dmadv_2
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 4 -> 4 (anadidas 0)
+  alias del superviviente: ['dfss_metodologia', 'dmadv_design_for_six_sigma', 'design_for_six_sigma_dmadv', 'design_for_six_sigma_dmadv_2']
+
+------------------------------------------------------------------------------
+ACTO 42 . sobrevive equipo_multifuncional_real . absorbe diseno_organizacional_equipos_innovacion, equipo_multifuncional
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 7 (anadidos 3) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 2 de diseno_organizacional_equipos_innovacion al PASO 1 del superviviente
+        inciso VERBATIM: 'con espíritu emprendedor'
+        nexo (lo unico de cosecha propia): ', y elígelo '
+        paso resultante: Asigna un líder de proyecto dedicado y dale autoridad real, no solo la responsabilidad, y elígelo con espíritu emprendedor
+  alias del superviviente: ['diseno_organizacional_equipos_innovacion', 'equipo_multifuncional']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 51
+   abrazar_la_incomodidad                               nodos_siguientes  problem_recognition_scale -> segmentos_de_clientes_problema_necesidad
+   accidentes_individuales_vs_organizacionales          nodos_siguientes  defensas_en_profundidad -> defensas_en_profundidad_3
+   accidentes_individuales_vs_organizacionales          nodos_siguientes  defensas_en_profundidad_2 -> defensas_en_profundidad_3
+   analisis_de_capacidad_de_recursos                    nodos_siguientes  diseno_organizacional_equipos_innovacion -> equipo_multifuncional_real
+   arquetipos_de_cliente                                nodos_previos     problem_recognition_scale -> segmentos_de_clientes_problema_necesidad
+   bullseye_framework                                   nodos_previos     definir_meta_de_traccion -> traction_goal
+   bullseye_framework                                   nodos_previos     moving_the_needle -> traction_goal
+   canales_distribucion                                 nodos_previos     customer_segments_hypothesis -> segmentos_de_clientes_problema_necesidad
+   caso_grietas_pequenas_mantenimiento_aeronaves        nodos_previos     defensas_en_profundidad -> defensas_en_profundidad_3
+   channels_hypothesis_web_mobile                       nodos_previos     customer_segments_hypothesis -> segmentos_de_clientes_problema_necesidad
+   company_building                                     nodos_siguientes  equipo_multifuncional -> equipo_multifuncional_real
+   comunicacion_proactiva_puntos_estres                 nodos_siguientes  problem_recognition_scale -> segmentos_de_clientes_problema_necesidad
+   confusion_de_modos_automatizacion                    nodos_siguientes  defensas_en_profundidad -> defensas_en_profundidad_3
+   cultura_de_innovacion                                nodos_previos     diseno_organizacional_equipos_innovacion -> equipo_multifuncional_real
+   customer_retention_tactics                           nodos_previos     customer_segments_hypothesis -> segmentos_de_clientes_problema_necesidad
+   definicion_estable_producto                          nodos_siguientes  equipo_multifuncional -> equipo_multifuncional_real
+   dia_en_la_vida_del_cliente                           nodos_previos     problem_recognition_scale -> segmentos_de_clientes_problema_necesidad
+   diseno_para_el_ciclo_completo                        nodos_siguientes  equipo_multifuncional -> equipo_multifuncional_real
+   documentacion_mantenimiento_linea_base               nodos_siguientes  defensas_en_profundidad -> defensas_en_profundidad_3
+   embudo_get_keep_grow                                 nodos_previos     customer_segments_hypothesis -> segmentos_de_clientes_problema_necesidad
+   erosion_de_defensas_por_ausencia_de_accidentes       nodos_siguientes  defensas_en_profundidad -> defensas_en_profundidad_3
+   evaluacion_vp_ventas                                 nodos_previos     customer_segments_hypothesis -> segmentos_de_clientes_problema_necesidad
+   fallas_activas_condiciones_latentes                  nodos_previos     defensas_en_profundidad_2 -> defensas_en_profundidad_3
+   fallas_activas_condiciones_latentes                  nodos_siguientes  defensas_en_profundidad -> defensas_en_profundidad_3
+   fases_traccion_producto                              nodos_previos     definir_meta_de_traccion -> traction_goal
+   fijar_causa_ultimo_accidente_riesgo_siguiente        nodos_siguientes  defensas_en_profundidad -> defensas_en_profundidad_3
+   gestion_falsas_alarmas                               nodos_previos     defensas_en_profundidad -> defensas_en_profundidad_3
+   gestion_portafolio_foco                              nodos_previos     equipo_multifuncional -> equipo_multifuncional_real
+   hipotesis_de_tamano_de_mercado                       nodos_siguientes  customer_segments_hypothesis -> segmentos_de_clientes_problema_necesidad
+   hipotesis_propuesta_de_valor_producto                nodos_siguientes  customer_segments_hypothesis -> segmentos_de_clientes_problema_necesidad
+   innovacion_tipo_ii                                   nodos_previos     design_for_six_sigma_dmadv -> design_for_six_sigma_dfss
+   innovacion_tipo_ii                                   nodos_previos     design_for_six_sigma_dmadv_2 -> design_for_six_sigma_dfss
+   juran_quality_by_design                              nodos_siguientes  design_for_six_sigma_dmadv -> design_for_six_sigma_dfss
+   juran_quality_by_design                              nodos_siguientes  design_for_six_sigma_dmadv_2 -> design_for_six_sigma_dfss
+   lienzo_modelo_negocio                                nodos_previos     customer_segments_hypothesis -> segmentos_de_clientes_problema_necesidad
+   lienzo_modelo_negocio                                nodos_siguientes  customer_segments_hypothesis -> segmentos_de_clientes_problema_necesidad
+   modelo_queso_suizo                                   nodos_previos     defensas_en_profundidad -> defensas_en_profundidad_3
+   plan_de_adquisicion_acquire                          nodos_previos     customer_segments_hypothesis -> segmentos_de_clientes_problema_necesidad
+   qfd_matriz                                           nodos_previos     design_for_six_sigma_dmadv -> design_for_six_sigma_dfss
+   qfd_matriz                                           nodos_previos     design_for_six_sigma_dmadv_2 -> design_for_six_sigma_dfss
+   reduccion_tamano_de_lote_batch_size                  nodos_previos     diseno_organizacional_equipos_innovacion -> equipo_multifuncional_real
+   regla_50_por_ciento                                  nodos_siguientes  moving_the_needle -> traction_goal
+   relaciones_con_clientes                              nodos_previos     customer_segments_hypothesis -> segmentos_de_clientes_problema_necesidad
+   rendicion_de_cuentas_del_equipo                      nodos_previos     diseno_organizacional_equipos_innovacion -> equipo_multifuncional_real
+   senales_alerta_no_atendidas                          nodos_siguientes  defensas_en_profundidad -> defensas_en_profundidad_3
+   stage_gate_system                                    nodos_previos     equipo_multifuncional -> equipo_multifuncional_real
+   tipos_de_clientes                                    nodos_previos     customer_segments_hypothesis -> segmentos_de_clientes_problema_necesidad
+   traccion_como_metrica_clave                          nodos_siguientes  moving_the_needle -> traction_goal
+   ventana_oportunidad_accidente                        nodos_previos     defensas_en_profundidad -> defensas_en_profundidad_3
+   ventana_oportunidad_accidente                        nodos_previos     defensas_en_profundidad_2 -> defensas_en_profundidad_3
+   verificar_product_market_fit                         nodos_siguientes  definir_meta_de_traccion -> traction_goal
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 13
+   customer_archetypes                                  nodos_previos     problem_recognition_scale (registro historico)
+   customer_types_mapping                               nodos_previos     customer_segments_hypothesis (registro historico)
+   diferenciacion_accidente_individual_organizacional   nodos_siguientes  defensas_en_profundidad (registro historico)
+   diferenciacion_accidente_individual_organizacional   nodos_siguientes  defensas_en_profundidad_2 (registro historico)
+   diseno_ciclo_completo_equipo                         nodos_siguientes  equipo_multifuncional (registro historico)
+   fallas_activas_condiciones_latentes_2                nodos_siguientes  defensas_en_profundidad (registro historico)
+   framework_bullseye                                   nodos_previos     definir_meta_de_traccion (registro historico)
+   framework_evaluacion_director_ventas                 nodos_previos     customer_segments_hypothesis (registro historico)
+   framework_get_keep_grow                              nodos_previos     customer_segments_hypothesis (registro historico)
+   qfd_matriz_calidad                                   nodos_previos     design_for_six_sigma_dmadv (registro historico)
+   qfd_matriz_calidad                                   nodos_previos     design_for_six_sigma_dmadv_2 (registro historico)
+   tipos_innovacion_i_ii                                nodos_previos     design_for_six_sigma_dmadv (registro historico)
+   tipos_innovacion_i_ii                                nodos_previos     design_for_six_sigma_dmadv_2 (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 9
+   accidentes_individuales_vs_organizacionales          nodos_siguientes
+   bullseye_framework                                   nodos_previos
+   fijar_causa_ultimo_accidente_riesgo_siguiente        nodos_siguientes
+   gestion_falsas_alarmas                               nodos_previos
+   hipotesis_propuesta_de_valor_producto                nodos_siguientes
+   innovacion_tipo_ii                                   nodos_previos
+   juran_quality_by_design                              nodos_siguientes
+   qfd_matriz                                           nodos_previos
+   ventana_oportunidad_accidente                        nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 889   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 880   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 9, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 25 de 25
+guarda D, los 10 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (61 filas)
+ acto de que nodo                                  que          n  a donde va
+   38 customer_segments_hypothesis                 paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Define el problema de tu cliente y ubícalo en la escala de qué tan consciente es de él: no lo nota, lo nota pero no actúa, ya busca una solución, o aú
+   38 customer_segments_hypothesis                 paso         2  ya lo dice el PASO 4 del superviviente
+        Identifica a las distintas personas que intervienen en la compra: quien usa el producto, quien lo paga, quien toma la decisión final
+   38 customer_segments_hypothesis                 paso         3  ya lo dice el PASO 3 del superviviente
+        Evalúa si tu producto resuelve un problema crítico o cubre una necesidad imprescindible
+   38 customer_segments_hypothesis                 paso         4  PASO 6 del superviviente
+        Revisa si tu mercado es de un solo lado o de varios lados, como Google o las redes sociales, donde quien usa el producto no es quien paga por él
+   38 customer_segments_hypothesis                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si todavía no tienes claro quién es tu cliente
+   38 customer_segments_hypothesis                 condicion    2  CONDICION 3 del superviviente
+        Si estás empezando a salir a hablar con clientes para descubrirlo (descubrimiento de clientes)
+   38 problem_recognition_scale                    paso         1  ya lo dice el PASO 1 del superviviente
+        Salir a entrevistar clientes para entender cómo experimentan el problema
+   38 problem_recognition_scale                    paso         2  ya lo dice el PASO 2 del superviviente
+        Clasificar cada tipo de cliente importante según la escala (latente/pasivo/activo/visión)
+   38 problem_recognition_scale                    paso         3  ya lo dice el PASO 2 del superviviente
+        Buscar específicamente clientes que hayan intentado construir su propia solución
+   38 problem_recognition_scale                    paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Determinar la intensidad del dolor que causa el problema
+   38 problem_recognition_scale                    condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Si no está claro qué tan urgente es el problema para el cliente
+   38 problem_recognition_scale                    condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Antes de diseñar el pitch de ventas
+   39 defensas_en_profundidad                      paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Inventariar las defensas actuales de la organización clasificándolas en las siete funciones defensivas.
+   39 defensas_en_profundidad                      paso         2  PASO 5 del superviviente
+        Evaluar el balance entre defensas duras y blandas existentes.
+   39 defensas_en_profundidad                      paso         3  PASO 6 del superviviente
+        Identificar funciones defensivas ausentes o débiles en el sistema.
+   39 defensas_en_profundidad                      condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se diseña o audita un sistema de seguridad para una operación de alto riesgo.
+   39 defensas_en_profundidad_2                    paso         1  ya lo dice el PASO 1 del superviviente
+        Clasificar las defensas existentes en el sistema según su función y modo (dura/blanda)
+   39 defensas_en_profundidad_2                    paso         2  ya lo dice el PASO 2 del superviviente
+        Evaluar la integridad de cada capa defensiva de forma independiente
+   39 defensas_en_profundidad_2                    paso         3  PASO 7 del superviviente
+        Diseñar redundancia entre capas para evitar que un solo punto de falla comprometa todo el sistema
+   39 defensas_en_profundidad_2                    condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Al diseñar o auditar los sistemas de seguridad de una organización
+   39 defensas_en_profundidad_2                    condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando se requiere justificar por qué múltiples barreras no garantizan seguridad absoluta
+   40 definir_meta_de_traccion                     paso         1  ya lo dice el PASO 2 del superviviente
+        Determina si tu objetivo actual es levantar fondos o llegar a rentabilidad
+   40 definir_meta_de_traccion                     paso         2  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Traduce ese objetivo en números concretos: cantidad de clientes y tasa de crecimiento mensual
+   40 definir_meta_de_traccion                     paso         3  PASO 6 del superviviente
+        Evalúa cada actividad de marketing preguntando si mueve la aguja hacia esa meta
+   40 definir_meta_de_traccion                     paso         4  ya lo dice el PASO 1 del superviviente
+        Descarta estrategias que generen resultados marginales sin impacto real
+   40 definir_meta_de_traccion                     condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el equipo no tiene claridad sobre qué resultados de marketing importan realmente
+   40 definir_meta_de_traccion                     condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Antes de iniciar cualquier campaña de adquisición de usuarios
+   40 moving_the_needle                            paso         1  ya lo dice el PASO 1 del superviviente
+        Define tu meta de tracción en números concretos (ej. 5,000 visitantes nuevos/día, no solo 'crecer').
+   40 moving_the_needle                            paso         2  PASO 7 del superviviente
+        Antes de invertir en un canal, calcula si el volumen potencial de ese canal puede acercarte realmente a tu meta.
+   40 moving_the_needle                            paso         3  ya lo dice el PASO 1 del superviviente
+        Descarta o reduce la prioridad de canales que, aunque funcionen, no generan el volumen necesario.
+   40 moving_the_needle                            condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el equipo obtiene resultados en un canal pero no sabe si son 'suficientes'
+   40 moving_the_needle                            condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando hay riesgo de dispersar esfuerzos en canales de bajo impacto
+   41 design_for_six_sigma_dmadv                   paso         1  ya lo dice el PASO 1 del superviviente
+        Definir el proyecto de diseño y sus metas específicas
+   41 design_for_six_sigma_dmadv                   paso         2  ya lo dice el PASO 2 del superviviente
+        Medir los requisitos críticos para el cliente y la calidad (CTQs)
+   41 design_for_six_sigma_dmadv                   paso         3  ya lo dice el PASO 3 del superviviente
+        Analizar la información para generar un diseño de alto nivel incorporando los CTQs
+   41 design_for_six_sigma_dmadv                   paso         4  ya lo dice el PASO 4 del superviviente
+        Diseñar en detalle, evaluar y optimizar antes de transferir a operaciones
+   41 design_for_six_sigma_dmadv                   paso         5  ya lo dice el PASO 5 del superviviente
+        Verificar que el diseño final cumple los requisitos establecidos
+   41 design_for_six_sigma_dmadv                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el producto es complejo y requiere un enfoque estadístico riguroso de diseño
+   41 design_for_six_sigma_dmadv                   condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando se busca alcanzar niveles extraordinarios de calidad en manufactura
+   41 design_for_six_sigma_dmadv_2                 paso         1  ya lo dice el PASO 1 del superviviente
+        Define: establecer metas y objetivos para el nuevo bien, servicio o proceso
+   41 design_for_six_sigma_dmadv_2                 paso         2  ya lo dice el PASO 2 del superviviente
+        Measure: medir y descubrir necesidades ocultas de los clientes
+   41 design_for_six_sigma_dmadv_2                 paso         3  ya lo dice el PASO 3 del superviviente
+        Analyze: analizar las necesidades y determinar características innovadoras
+   41 design_for_six_sigma_dmadv_2                 paso         4  ya lo dice el PASO 4 del superviviente
+        Design: diseñar combinando las características para crear la solución innovadora
+   41 design_for_six_sigma_dmadv_2                 paso         5  ya lo dice el PASO 5 del superviviente
+        Verify: verificar que la innovación cumple con las necesidades del cliente y la organización
+   41 design_for_six_sigma_dmadv_2                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la organización busca innovar de manera sistemática en lugar de azarosa
+   41 design_for_six_sigma_dmadv_2                 condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Cuando se requiere diseñar nuevos productos, servicios o procesos desde cero
+   41 design_for_six_sigma_dmadv_2                 condicion    3  ya lo dice la CONDICION 4 del superviviente
+        Cuando existe necesidad de descubrir necesidades ocultas del cliente antes de diseñar
+   42 diseno_organizacional_equipos_innovacion     paso         1  ya lo dice la CONDICION 1 del superviviente
+        Cuando un proyecto importante pase el filtro de aprobación (gate), arma un equipo dedicado con personas de distintas áreas
+   42 diseno_organizacional_equipos_innovacion     paso         2  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Nombra a alguien como líder de proyecto con espíritu emprendedor, no solo para administrar tareas del día a día
+   42 diseno_organizacional_equipos_innovacion     paso         3  PASO 5 del superviviente
+        Elige cómo vas a organizar al equipo según qué tan complejo sea: compartiendo tiempo con otras tareas, dándole prioridad al proyecto, o dedicándolo po
+   42 diseno_organizacional_equipos_innovacion     paso         4  PASO 6 del superviviente
+        Busca que el equipo esté físicamente junto o, si no se puede, que tengan formas efectivas de comunicarse a distancia
+   42 diseno_organizacional_equipos_innovacion     paso         5  ya lo dice el PASO 4 del superviviente
+        Asegúrate de que el equipo se mantenga desde el inicio del proyecto hasta después de lanzarlo, y que quede claro quién responde por qué
+   42 diseno_organizacional_equipos_innovacion     condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Cuando notas que cada área trabaja por su cuenta, sin cruzar información con las demás
+   42 diseno_organizacional_equipos_innovacion     condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando no está claro quién lidera el proyecto ni quién es responsable de que avance
+   42 equipo_multifuncional                        paso         1  ya lo dice la CONDICION 1 del superviviente
+        Incluye desde el inicio a alguien de cada área clave, no solo al final
+   42 equipo_multifuncional                        paso         2  ya lo dice el PASO 1 del superviviente
+        Elige un líder de proyecto con verdadera capacidad de liderazgo, no solo de coordinar tareas
+   42 equipo_multifuncional                        paso         3  ya lo dice el PASO 4 del superviviente
+        Construye una visión compartida del proyecto entre todos los que participan
+   42 equipo_multifuncional                        paso         4  ya lo dice el PASO 3 del superviviente
+        Deja claro quién responde por qué, de forma compartida entre todo el equipo
+   42 equipo_multifuncional                        paso         5  PASO 7 del superviviente
+        Evita el modelo de pasar el proyecto de área en área; trabaja en paralelo y de forma colaborativa
+   42 equipo_multifuncional                        condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Si tu proyecto avanza de forma secuencial entre áreas que no se hablan entre sí
+   42 equipo_multifuncional                        condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Si falta compromiso o visión compartida en el equipo que desarrolla el producto
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 5
+  nodos implicados    : 15
+  nodos que MUEREN    : 10
+  piezas repartidas   : 61 (10 viajan enteras, 46 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 58
+censo DESPUES: 3853 ficheros, 3204 vivos, 649 deprecados
+censo ANTES  : 3853 ficheros, 3214 vivos, 639 deprecados
+delta deprecados: +10 (esperado +10): OK

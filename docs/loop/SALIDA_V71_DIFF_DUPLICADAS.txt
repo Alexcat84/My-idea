@@ -1,0 +1,23 @@
+==============================================================================
+DIFF DEL CENSO DE DUPLICADAS, CON NODO Y DESTINO RESUELTOS POR EL ALIAS
+  antes  : C:/Users/AlexDesk/AppData/Local/Temp/dup_antes_v71.jsonl
+  despues: docs/plan/ARISTAS_DUPLICADAS.jsonl
+==============================================================================
+
+  grupos por rotulo CRUDO   : antes 911 | despues 902
+  grupos ya RESUELTOS       : antes 909 | despues 902
+
+  RENOMBRADOS (aparecen con rotulo nuevo pero son el MISMO grupo): 0
+
+  GRUPOS FABRICADOS DE VERDAD: 0
+
+  grupos que DESAPARECEN: 7
+     defensas_en_profundidad_3 | nodos_previos | accidentes_individuales_vs_organizacionales
+     defensas_en_profundidad_3 | nodos_previos | fallas_activas_condiciones_latentes
+     design_for_six_sigma_dfss | nodos_siguientes | qfd_matriz
+     equipo_multifuncional_real | nodos_previos | diseno_para_el_ciclo_completo
+     segmentos_de_clientes_problema_necesidad | nodos_siguientes | embudo_get_keep_grow
+     segmentos_de_clientes_problema_necesidad | nodos_siguientes | tipos_de_clientes
+     traction_goal | nodos_siguientes | bullseye_framework
+
+  VERDE: CERO grupos fabricados.

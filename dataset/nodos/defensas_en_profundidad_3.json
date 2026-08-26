@@ -6,21 +6,50 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "La filosofía de defensas en profundidad se basa en la redundancia y diversidad de capas de protección, asumiendo independencia causal entre ellas. Sin embargo, Jens Rasmussen señaló la 'falacia de las defensas en profundidad': estas capas pueden ocultar errores y fallas latentes, permitiendo que se acumulen condiciones peligrosas sin ser detectadas ni corregidas. Charles Perrow, en su teoría de accidentes normales, argumentó que la redundancia aumenta la complejidad interactiva, opacidad del sistema, y genera una falsa sensación de seguridad que impulsa a operar con mayor riesgo (más rápido, con peor clima, etc.).",
   "pasos_accionables": [
-    "Mapear todas las capas de defensa del sistema (barreras físicas, sistemas de protección, procedimientos)",
+    "Mapear todas las capas de defensa del sistema (barreras físicas, sistemas de protección, procedimientos), clasificándolas en las siete funciones defensivas",
     "Evaluar si existen dependencias ocultas entre capas que se asumen independientes",
     "Implementar mecanismos de detección temprana de fallas latentes antes de que se acumulen",
-    "Revisar si la confianza en las múltiples defensas ha generado complacencia operativa"
+    "Revisar si la confianza en las múltiples defensas ha generado complacencia operativa",
+    "Evaluar el balance entre defensas duras y blandas existentes.",
+    "Identificar funciones defensivas ausentes o débiles en el sistema.",
+    "Diseñar redundancia entre capas para evitar que un solo punto de falla comprometa todo el sistema"
   ],
   "entregable_esperado": "Mapa de capas de defensa del sistema con análisis de independencia real y puntos ciegos de detección",
   "nodos_previos": [
-    "fijar_causa_ultimo_accidente_riesgo_siguiente"
+    "fijar_causa_ultimo_accidente_riesgo_siguiente",
+    "accidentes_individuales_vs_organizacionales",
+    "confusion_de_modos_automatizacion",
+    "documentacion_mantenimiento_linea_base",
+    "erosion_de_defensas_por_ausencia_de_accidentes",
+    "fallas_activas_condiciones_latentes",
+    "senales_alerta_no_atendidas"
   ],
   "nodos_siguientes": [
-    "gestion_falsas_alarmas"
+    "gestion_falsas_alarmas",
+    "caso_grietas_pequenas_mantenimiento_aeronaves",
+    "fallas_activas_condiciones_latentes",
+    "modelo_queso_suizo",
+    "ventana_oportunidad_accidente"
   ],
   "condiciones_activacion": [
     "Cuando el sistema depende de múltiples capas de protección redundantes",
     "Si ha ocurrido un accidente donde fallaron varias defensas simultáneamente"
   ],
-  "etiqueta_arbol": "Cuidado con Ocultar Riesgos"
+  "etiqueta_arbol": "Cuidado con Ocultar Riesgos",
+  "ids_alias": [
+    "defensas_en_profundidad",
+    "defensas_en_profundidad_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "defensas_en_profundidad",
+      "titulo": "Defensas en Profundidad (Las Siete Funciones)",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    },
+    {
+      "node_id": "defensas_en_profundidad_2",
+      "titulo": "Defensas en Profundidad (Capas de Barreras y Salvaguardas)",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }

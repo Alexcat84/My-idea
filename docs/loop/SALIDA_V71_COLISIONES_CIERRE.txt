@@ -1,0 +1,36 @@
+==============================================================================
+CENSO DE COLISIONES DE CLASE VIGENTES
+==============================================================================
+  veredictos leidos                       : 3388
+  pares resueltos distintos               : 3094
+  AUTO-PARES (los dos lados al mismo vivo): 278
+  COLISIONES DE CLASE VIGENTES            : 7
+
+  par resuelto: cierre_satisfaccion_postventa contra cierre_segun_complejidad_venta
+     puesto 337    B | crudo: cierre_satisfaccion_postventa + riesgo_tecnicas_cierre_venta_compleja
+     puesto 1280   D | crudo: cierre_satisfaccion_postventa + cierre_segun_complejidad_venta
+     puesto 1427   D | crudo: cierre_satisfaccion_postventa + cierre_segun_tamano_decision
+  par resuelto: cierre_segun_complejidad_venta contra obtencion_compromiso
+     puesto 499    D | crudo: ineficacia_cierre_ventas_grandes + obtencion_compromiso
+     puesto 527    B | crudo: obtencion_compromiso + riesgo_tecnicas_cierre_venta_compleja
+     puesto 971    D | crudo: cierre_segun_complejidad_venta + obtencion_compromiso
+     puesto 1598   D | crudo: diferencias_venta_pequena_venta_grande + obtencion_compromiso
+  par resuelto: cuatro_etapas_del_pensamiento_creativo contra wallas_intimacion_fringe_consciousness
+     puesto 279    B | crudo: intimation_illumination + wallas_etapa_iluminacion
+     puesto 721    D | crudo: wallas_etapa_iluminacion + wallas_intimacion_fringe_consciousness
+  par resuelto: cuatro_etapas_llamada_de_ventas contra enfoque_etapa_investigacion
+     puesto 202    D | crudo: cuatro_etapas_llamada_de_ventas + etapa_de_investigacion
+     puesto 775    B | crudo: cuatro_etapas_llamada_de_ventas + enfoque_etapa_investigacion
+     puesto 1364   D | crudo: cuatro_etapas_llamada_de_ventas + etapa_investigacion_ventas
+  par resuelto: enfoque_etapa_investigacion contra modelo_spin_preguntas
+     puesto 648    B | crudo: enfoque_etapa_investigacion + modelo_spin
+     puesto 769    B | crudo: investigacion_como_habilidad_clave + modelo_spin
+     puesto 1422   D | crudo: etapa_investigacion_ventas + modelo_spin
+  par resuelto: pivote_o_proceder contra pivote_startup
+     puesto 668    B | crudo: pivote_o_proceder + pivote_startup
+     puesto 1312   D | crudo: pivotar_o_proceder + pivote_startup
+  par resuelto: pivote_o_proceder contra reunion_pivotar_o_perseverar
+     puesto 968    B | crudo: pivote_o_proceder + reunion_pivotar_o_perseverar
+     puesto 1305   D | crudo: pivotar_o_proceder + reunion_pivotar_o_perseverar
+
+  CUENTA ESPERADA: 7 | MEDIDA: 7 | CALZA: SI
