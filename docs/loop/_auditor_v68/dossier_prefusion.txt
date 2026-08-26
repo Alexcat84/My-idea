@@ -1,0 +1,600 @@
+==============================================================================
+DOSSIER DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO: EL ACTO LEIDO ENTERO (P.5) CON SU RAZON
+==============================================================================
+  nodos leidos de: el arbol de trabajo
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+
+##############################################################################
+# ACTO 18 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 4 MIEMBROS: 3 pares internos con veredicto escrito, de 6 combinaciones posibles
+
+  [PAR] puesto 1797, clase A, dominio environmental
+     nodo_a (EL PRIMERO de la razon): co_opetition_industria
+     nodo_b (EL SEGUNDO de la razon): trabajo_colectivo_estandares_industria
+     RAZON ENTERA, sin recortar:
+       LA MISMA ALIANZA ENTRE COMPETIDORES DOS VECES, MISMA FUENTE y sin arista entre ellos. LOS CUATRO PASOS SE CORRESPONDEN: identificar el problema ambiental comun del sector, que en uno son problemas comunes y en el otro es evaluar si el riesgo reputacional es compartido; CONVOCAR A LOS COMPETIDORES, dicho igual en los dos; ESTABLECER ESTANDARES Y METAS COMPARTIDAS de desempeno ambiental; y montar el mecanismo de cumplimiento colectivo. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De co_opetition_industria se perderian dos: convocar MEDIANTE LAS ASOCIACIONES INDUSTRIALES EXISTENTES, que es la unica linea que dice por donde se convoca sin que parezca acuerdo entre competidores; y PUBLICAR Y MONITOREAR EL CUMPLIMIENTO COLECTIVO, que es lo unico que le pone consecuencia publica al pacto. De trabajo_colectivo_estandares_industria se perderian otras dos: el ejemplo con nombre propio del marco de cumplimiento, que lo vuelve buscable; y APLICAR EL ESTANDAR CONJUNTO A LOS PROVEEDORES COMPARTIDOS, que es la unica linea del par que usa la alianza como palanca hacia arriba en la cadena. Nace un acto de DOS con cobertura 1 de 1.
+
+  [PAR] puesto 1871, clase A, dominio environmental
+     nodo_a (EL PRIMERO de la razon): colaboracion_sectorial
+     nodo_b (EL SEGUNDO de la razon): trabajo_colectivo_estandares_industria
+     RAZON ENTERA, sin recortar:
+       LA MISMA ALIANZA SECTORIAL POR TERCERA VEZ, MISMA FUENTE y sin arista entre ellos, y este par AGRANDA la familia abierta en el puesto 1797. LOS CUATRO PASOS SE CORRESPONDEN: decidir si conviene ir solo o acompanado, que en uno es evaluar si la empresa tiene suficiente PODER DE MERCADO para exigir cambios sola y en el otro es evaluar si el RIESGO REPUTACIONAL es compartido; CONVOCAR A COMPETIDORES Y ALIADOS del sector, en uno a traves de las asociaciones existentes; DEFINIR ESTANDARES O UNA AGENDA COMPARTIDA; y APLICAR EL COMPROMISO A LOS PROVEEDORES COMUNES, dicho casi con las mismas palabras en los dos. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De colaboracion_sectorial se perderian dos: EL TEST DEL PODER DE MERCADO como disparador, que es la unica linea que dice cuando NO hace falta aliarse; y apoyarse en las ASOCIACIONES INDUSTRIALES EXISTENTES para convocar. De trabajo_colectivo_estandares_industria se perderian el ejemplo nombrado del marco de cumplimiento colectivo y el encuadre por riesgo reputacional compartido. NOTA DE NOMINA: la familia de la alianza sectorial pasa de DOS a TRES nodos por cierre transitivo. Cobertura 2 de 3, forma PROVISIONAL.
+
+  [PAR] puesto 1903, clase A, dominio environmental
+     nodo_a (EL PRIMERO de la razon): alianzas_cross_industry
+     nodo_b (EL SEGUNDO de la razon): colaboracion_sectorial
+     RAZON ENTERA, sin recortar:
+       LA MISMA ALIANZA DE INDUSTRIA POR CUARTA VEZ, MISMA FUENTE y sin arista entre ellos, y este par AGRANDA otra vez la familia. LOS CUATRO PASOS SE CORRESPONDEN: identificar los DESAFIOS COMPARTIDOS con competidores del sector; BUSCAR COALICIONES O ASOCIACIONES EXISTENTES, que en uno vienen con nombre propio; DEFINIR ESTANDARES COMUNES de conducta social y ambiental; y usar la fuerza del grupo sobre el mercado, que en uno son metricas y compromisos conjuntos PARA PROVEEDORES COMUNES y en el otro es el PODER DE COMPRA COLECTIVO. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De alianzas_cross_industry se perderian dos: los NOMBRES DE LAS COALICIONES EXISTENTES, que es lo que vuelve buscable el paso; y el encuadre de PODER DE COMPRA COLECTIVO para mover el mercado hacia otro tipo de producto, que es mas ambicioso que fijar un estandar de conducta. De colaboracion_sectorial se perderia EL TEST DEL PODER DE MERCADO, la unica linea que dice cuando NO hace falta aliarse. NOTA DE NOMINA: la familia de la alianza sectorial pasa de TRES a CUATRO nodos por cierre transitivo. Cobertura 3 de 6, forma PROVISIONAL.
+
+  --- alianzas_cross_industry
+      titulo    : Alianzas Cross-Industry para Elevar Estándares
+      fuente    : The Green to Gold Business Play - Daniel C. Esty
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Identificar desafíos de sostenibilidad compartidos con competidores o empresas de la industria
+      paso 2: Buscar coaliciones existentes (ej. EICC, AIM-PROGRESS) o formar una nueva
+      paso 3: Definir estándares comunes de conducta social y ambiental para toda la industria
+      paso 4: Usar el poder de compra colectivo para incentivar cambios en el mercado (ej. productos orgánicos)
+      cond 1: Cuando el poder de compra individual de la empresa es insuficiente para inducir cambios en el mercado
+      cond 2: Si existen desafíos sistémicos de sostenibilidad en toda la industria
+      previos   : ['optimizacion_tecnologia_cadena_suministro', 'programa_mentoria_proveedores']
+      siguientes: ['manufactura_verde']
+      entregable: Una alianza o membresía formal en una coalición industrial con estándares compartidos de sostenibilidad
+
+  --- co_opetition_industria
+      titulo    : Co-opetición: Colaboración entre Competidores de la Industria
+      fuente    : The Green to Gold Business Play - Daniel C. Esty
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Identificar problemas ambientales comunes a nivel sectorial
+      paso 2: Convocar a competidores clave mediante asociaciones industriales existentes
+      paso 3: Establecer estándares y metas compartidas de desempeño ambiental
+      paso 4: Publicar y monitorear el cumplimiento colectivo de los estándares
+      cond 1: Si la industria enfrenta una crisis reputacional o regulatoria compartida
+      cond 2: Si los esfuerzos individuales no bastan para transformar la percepción del sector
+      previos   : ['formalizar_alianza_estrategica', 'identificar_evaluar_socios_estrategicos']
+      siguientes: ['formar_consejo_asesor_sostenibilidad']
+      entregable: Iniciativa sectorial formalizada con estándares ambientales comunes y métricas de seguimiento
+
+  --- colaboracion_sectorial
+      titulo    : Colaboración Sectorial para Estándares de Proveedores
+      fuente    : The Green to Gold Business Play - Daniel C. Esty
+      pasos 4 | condiciones 2 | previos 1 | siguientes 0 | cableado 1
+      paso 1: Evaluar si la empresa tiene suficiente poder de mercado para exigir cambios individualmente
+      paso 2: Identificar asociaciones industriales o alianzas existentes relacionadas al sector
+      paso 3: Co-crear una agenda compartida de sostenibilidad con competidores/socios del sector
+      paso 4: Definir métricas y compromisos conjuntos para proveedores comunes
+      cond 1: Si la empresa no tiene poder individual sobre proveedores
+      cond 2: Si existen economías de escala en la colaboración sectorial
+      previos   : ['dialogo_proveedores']
+      siguientes: []
+      entregable: Membresía o acuerdo formal en una alianza sectorial con agenda de sostenibilidad definida
+
+  --- trabajo_colectivo_estandares_industria
+      titulo    : Trabajo Colectivo para Elevar Estándares de la Industria antes de la Legislación
+      fuente    : The Green to Gold Business Play - Daniel C. Esty
+      pasos 4 | condiciones 2 | previos 2 | siguientes 0 | cableado 2
+      paso 1: Evaluar si el riesgo reputacional es compartido con otros actores del sector
+      paso 2: Convocar a competidores y aliados de la industria para definir estándares comunes
+      paso 3: Diseñar un marco de cumplimiento colectivo (tipo 'Responsible Care')
+      paso 4: Aplicar el estándar conjunto a proveedores compartidos
+      cond 1: Si el mal desempeño de competidores puede afectar la reputación de toda la industria
+      cond 2: Si múltiples empresas dependen de los mismos proveedores críticos
+      previos   : ['uso_regulaciones_como_espada', 'seguimiento_cumplimiento_cadena_suministro']
+      siguientes: []
+      entregable: Un acuerdo o marco de estándares industriales colectivos documentado
+
+##############################################################################
+# ACTO 19 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 4 MIEMBROS: 3 pares internos con veredicto escrito, de 6 combinaciones posibles
+
+  [PAR] puesto 972, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): descomposicion_tareas_trabajo
+     nodo_b (EL SEGUNDO de la razon): framework_tareas_ia_humano
+     RAZON ENTERA, sin recortar:
+       LA MISMA DESCOMPOSICION DE TAREAS, del mismo libro y sin arista entre ellos. Lo comun es el instrumento entero: listar todas las tareas que forman cada rol o que se repiten en el negocio, revisar cada una contra lo que la IA ya puede hacer hoy, y mover a la IA las que corresponda empezando por lo repetitivo. Lo propio de framework_tareas_ia_humano son la taxonomia de tres cajas con sus criterios, Solo Yo, Delegada y Automatizada segun riesgo, importancia personal y capacidad actual de la IA; el consejo de empezar por lo tedioso y facil de verificar; y revisar la clasificacion de forma periodica. Lo propio de descomposicion_tareas_trabajo es redisenar el ROL para que la persona se dedique a lo que mas vale, creatividad, relacion con clientes y decisiones dificiles. La taxonomia y el rediseno del rol son lo que hay que salvar; el resto es la misma pasada.
+
+  [PAR] puesto 1582, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): descomposicion_tareas_trabajo
+     nodo_b (EL SEGUNDO de la razon): division_trabajo_humano_ia
+     RAZON ENTERA, sin recortar:
+       EL MISMO REPARTO DE TAREAS ENTRE PERSONA Y MAQUINA, libros distintos y sin arista entre ellos, y ninguno de los dos venia de la misma familia. LOS CUATRO PASOS SE CORRESPONDEN: listar todas las tareas del rol es mapear las tareas del proceso operativo; preguntarse cuanto se parece cada una a lo que la maquina ya hace es clasificarlas en rutinarias contra creativas o ambiguas; pasar las repetitivas o administrativas a herramientas de IA es automatizar las tareas repetitivas de monitoreo y registro; y redisenar el rol para que la persona se dedique a creatividad y relacion con clientes es asignar a las personas las excepciones, la negociacion y los problemas complejos. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De descomposicion_tareas_trabajo se perderia la UNIDAD DE ANALISIS: que el barrido se hace POR PUESTO y termina en un rol redisenado, y no por proceso. De division_trabajo_humano_ia se perderia una pieza que no esta en ningun otro nodo del catalogo: DISENAR EL SISTEMA PARA QUE LA IA ALERTE A LAS PERSONAS ante anomalias o excepciones relevantes, o sea el mecanismo de escalamiento, que es lo unico que convierte el reparto en un circuito y no en dos listas separadas. NOTA DE NOMINA: descomposicion_tareas_trabajo ya tenia gemelo, el puesto 972 con framework_tareas_ia_humano; con este par la familia del reparto de tareas entre persona y maquina pasa a TRES nodos por cierre transitivo, y con miembros de DOS LIBROS distintos. Su cobertura es de 2 de 3.
+
+  [PAR] puesto 1597, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): automatizacion_tareas_aburridas
+     nodo_b (EL SEGUNDO de la razon): descomposicion_tareas_trabajo
+     RAZON ENTERA, sin recortar:
+       EL MISMO BARRIDO DE TAREAS ABURRIDAS, del mismo libro y sin arista entre ellos, y es el segundo par de esta familia en quince puestos. LOS TRES PASOS de automatizacion_tareas_aburridas tienen su correspondiente: listar las tareas mas tediosas y repetitivas del equipo es listar todas las tareas que forman cada rol; evaluar cuales pueden delegarse a la maquina con supervision humana es revisar cada tarea y preguntarse cuanto se parece a algo que la maquina ya hace; y delegarlas es pasar las repetitivas o administrativas a herramientas de IA. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De automatizacion_tareas_aburridas se perderia UNA y no esta en ningun otro nodo del catalogo: RECOMPENSAR A LOS EMPLEADOS QUE IDENTIFIQUEN Y AUTOMATICEN tareas aburridas con IA, que es la unica linea que pone un incentivo para que el barrido lo haga la gente y no el jefe. De descomposicion_tareas_trabajo se perderia REDISENAR EL ROL para que la persona se dedique a lo que mas vale, creatividad y relacion con clientes, que es el unico paso que cierra el ciclo devolviendo el tiempo liberado a un trabajo concreto. NOTA DE NOMINA: con este par la familia del REPARTO DE TAREAS ENTRE PERSONA Y MAQUINA pasa a CUATRO nodos por cierre transitivo, con descomposicion_tareas_trabajo de centro y sus tres A, los puestos 972, 1582 y este. Cobertura 3 de 6, forma PROVISIONAL. Y conviene dejar dicho que ESTA FAMILIA NO ES EL RACIMO DE LA SUPERVISION DE LA IA de la seccion 11: ninguno de sus cuatro miembros figura en aquella nomina de diez. Son dos familias de IA distintas, una sobre quien hace que y otra sobre quien revisa.
+
+  --- automatizacion_tareas_aburridas
+      titulo    : Automatizar lo Aburrido Primero
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 3 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Listar las tareas más tediosas y repetitivas del equipo u organización
+      paso 2: Evaluar cuáles de esas tareas pueden delegarse a IA con supervisión humana
+      paso 3: Recompensar a empleados que identifiquen y automaticen tareas aburridas con IA
+      cond 1: Si el equipo reporta alta rotación o baja moral por tareas repetitivas
+      cond 2: Al iniciar la adopción de IA en una organización
+      previos   : ['division_trabajo_humano_ia']
+      siguientes: ['sistemas_organizacionales_ia']
+      entregable: Lista priorizada de tareas aburridas candidatas a automatización con IA
+
+  --- descomposicion_tareas_trabajo
+      titulo    : Divide cada puesto en tareas para ver dónde entra la IA
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 4 | condiciones 2 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Lista todas las tareas que forman cada rol clave de tu negocio.
+      paso 2: Revisa cada tarea y pregúntate cuánto se parece a algo que la IA ya puede hacer hoy.
+      paso 3: Rediseña el rol para que la persona se dedique a lo que más vale: creatividad, relación con clientes, decisiones difíciles.
+      paso 4: Pasa las tareas repetitivas o administrativas a herramientas de IA.
+      cond 1: Cuando estás armando tu equipo y definiendo roles.
+      cond 2: Cuando sientes miedo o dudas sobre qué tareas te va a quitar la IA.
+      previos   : ['jagged_frontier_ia']
+      siguientes: ['riesgo_sobredependencia_ia', 'definicion_startup', 'search_for_business_model']
+      entregable: Una lista de tareas por rol, con cuáles se pueden automatizar y cómo queda rediseñada cada responsabilidad.
+
+  --- division_trabajo_humano_ia
+      titulo    : División del Trabajo entre Humanos e IA
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 4 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Mapear las tareas del proceso operativo y clasificarlas en rutinarias vs. creativas/ambiguas.
+      paso 2: Automatizar con IA/algoritmos las tareas repetitivas de monitoreo y registro de datos.
+      paso 3: Asignar a personas las tareas de excepción, negociación y resolución de problemas complejos.
+      paso 4: Diseñar el sistema para que la IA alerte a humanos ante anomalías o excepciones relevantes.
+      cond 1: Cuando se está diseñando un sistema que combina automatización con toma de decisiones humana.
+      cond 2: Cuando el equipo pierde tiempo humano valioso en tareas repetitivas que podrían automatizarse.
+      previos   : ['gestion_visual_del_pipeline_de_desarrollo', 'riesgo_control_algoritmico']
+      siguientes: ['bucle_retroalimentacion_autoajustable', 'automatizacion_tareas_aburridas']
+      entregable: Matriz de asignación de tareas indicando cuáles son automatizables por IA y cuáles requieren intervención humana.
+
+  --- framework_tareas_ia_humano
+      titulo    : Framework de Clasificación de Tareas: Just Me, Delegadas y Automatizadas
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Listar todas las tareas recurrentes del negocio o rol
+      paso 2: Clasificar cada tarea en Just Me, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA
+      paso 3: Empezar delegando tareas tediosas y fáciles de verificar
+      paso 4: Revisar periódicamente la clasificación conforme mejora la IA o cambian las prioridades del negocio
+      cond 1: Cuando un equipo quiere decidir sistemáticamente qué automatizar con IA y qué no
+      cond 2: Cuando existe riesgo de sobrecarga humana o subutilización de la IA en el equipo
+      previos   : ['jagged_frontier_ia']
+      siguientes: ['centaur_cyborg_ia']
+      entregable: Una matriz de tareas del negocio clasificada en las tres categorías, con criterios de revisión
+
+##############################################################################
+# ACTO 20 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 4 MIEMBROS: 4 pares internos con veredicto escrito, de 6 combinaciones posibles
+
+  [PAR] puesto 329, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): diagnostico_efecto_latigo
+     nodo_b (EL SEGUNDO de la razon): efecto_bullwhip
+     RAZON ENTERA, sin recortar:
+       REPITE con efecto_bullwhip. Los dos mandan medir el mismo efecto de la misma manera, comparando como varia la demanda en cada eslabon contra la del consumidor final, y despues cuantificar lo que cuesta en sobreproduccion, en inventario y en ventas perdidas por falta de producto. El primero anade el beer game como ejercicio y el segundo anade el costo de transporte y la decision de invertir en compartir datos, pero el diagnostico y su metodo son los mismos.
+
+  [PAR] puesto 573, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): colaboracion_cadena_suministro
+     nodo_b (EL SEGUNDO de la razon): compartir_datos_cadena_suministro
+     RAZON ENTERA, sin recortar:
+       DUPLICACION CRUZADA, figura nueva: cada uno absorbe por dentro lo que el otro enlaza por fuera. SIN ARISTA entre ellos, verificado resolviendo a nodo vivo. colaboracion_cadena_suministro trae el diagnostico del efecto latigo dentro de sus pasos 1 y 2, medir pedidos entrantes contra salientes y graficar la divergencia, y luego manda lo mismo que el otro: acuerdos de intercambio de datos de inventario y de punto de venta con socios clave y un sistema barato de visibilidad compartida. compartir_datos_cadena_suministro no trae el diagnostico dentro, lo ENLAZA, apunta a diagnostico_efecto_latigo y a mitigacion_efecto_latigo, y desarrolla la parte de datos, que se puede compartir de forma segura, por que mecanismo electronico y con la advertencia que el otro no tiene: compartir las decisiones internas que mueven la demanda, como las promociones, y pesar el beneficio contra el riesgo de exposicion. Los dos de Essentials of Supply Chain Management. Lo que se perderia si se fusiona mal es la evaluacion del riesgo de exposicion.
+
+  [PAR] puesto 730, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): colaboracion_cadena_suministro
+     nodo_b (EL SEGUNDO de la razon): efecto_bullwhip
+     RAZON ENTERA, sin recortar:
+       EL HIJO CON CASA PROPIA con CERO hermanos enlazados, verificado resolviendo a nodo vivo: la madre colaboracion_cadena_suministro tiene una sola arista de salida y va a optimizacion_tecnologia_cadena_suministro, o sea a ninguno de sus hijos de paso, que son efecto_bullwhip por los pasos 1 y 2 y compartir_datos_cadena_suministro por los pasos 4 y 5. efecto_bullwhip desarrolla la medicion del latigo con lo que la madre no tiene: cuanto cuesta en produccion y en programacion de la operacion, cuanto en transporte, envios y recepcion, cuanto inventario de seguridad hace falta y cuanto cuesta mantenerlo, cuanto se pierde en ventas por no tener producto, y usar esos numeros para decidir si vale la pena invertir en compartir datos. LA CLASE QUEDA EN A por la lectura vieja del cero-enlazados, Y CON EL CHOQUE DE LA SECCION 19 ENCIMA: si manda el contenido, este hijo trae una contabilidad entera que la madre no tiene, o sea CONTINUA, y seria D. Es el primer par NUEVO que nace con las dos lecturas encima, y por eso lo dejo anotado aqui en vez de elegir yo. Nota: este nodo ya habia salido en el puesto 573, donde la madre resulto ser la que absorbe por dentro lo que el otro enlaza por fuera.
+
+  [PAR] puesto 994, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): compartir_datos_cadena_suministro
+     nodo_b (EL SEGUNDO de la razon): efecto_bullwhip
+     RAZON ENTERA, sin recortar:
+       Medir el latigo contra compartir los datos que lo curan, del mismo libro y sin arista entre ellos, y uno NOMBRA al otro en su ultimo paso. efecto_bullwhip mide el problema: comparar como varia la demanda en distintos puntos de la cadena, calcular cuanto cuesta en produccion y programacion, cuanto en transporte y recepcion, cuanto inventario hace falta para no quebrar stock y cuanto cuesta mantenerlo, cuanto se pierde en ventas por falta de producto, y USAR ESOS NUMEROS para decidir si vale la pena invertir en compartir datos o coordinarse mejor. compartir_datos_cadena_suministro es esa inversion: definir que datos de demanda, decisiones y desempeno se pueden compartir de forma segura, establecer mecanismos electronicos para compartirlos, compartir las decisiones internas con impacto en demanda como las promociones, y evaluar cuantitativamente los beneficios frente al riesgo de exposicion. Ni un paso se solapa. Es arista que falta de las mas claras: el diagnostico termina apuntando al remedio por su nombre y el grafo no los une.
+
+  --- colaboracion_cadena_suministro
+      titulo    : Iniciar la Colaboración en la Cadena de Suministro
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 5 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Medir el efecto látigo comparando pedidos entrantes vs. pedidos salientes durante un periodo (trimestre o año)
+      paso 2: Graficar la divergencia entre demanda de clientes y órdenes a proveedores
+      paso 3: Determinar la posición de la empresa en la cadena (cerca o lejos del cliente final)
+      paso 4: Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave
+      paso 5: Construir un sistema simple y de bajo costo de visibilidad de inventario compartido (spreadsheets, bases de datos, reportes) si no hay presupuesto para software especializado
+      cond 1: Cuando la empresa sufre variabilidad de demanda no explicada por ventas reales
+      cond 2: Si se busca iniciar colaboración formal con proveedores o clientes en la cadena
+      previos   : ['sales_operations_planning']
+      siguientes: ['optimizacion_tecnologia_cadena_suministro']
+      entregable: Gráfico de medición del efecto látigo propio y acuerdo inicial de intercambio de datos con al menos un socio clave
+
+  --- compartir_datos_cadena_suministro
+      titulo    : Compartición de Datos entre Empresas de la Cadena de Suministro
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 4 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Definir qué datos de demanda, decisiones y desempeño se pueden compartir de forma segura
+      paso 2: Establecer mecanismos electrónicos (reportes vía web) para compartir información con socios
+      paso 3: Compartir decisiones internas con impacto en demanda (ej. promociones) con proveedores clave
+      paso 4: Evaluar cuantitativamente los beneficios de la colaboración frente a los riesgos de exposición
+      cond 1: Cuando existen múltiples empresas interdependientes en la cadena de suministro
+      cond 2: Si se detectan problemas recurrentes de desabasto o exceso de inventario
+      previos   : ['marco_analisis_mercado_cadena_suministro', 'creacion_data_warehouse']
+      siguientes: ['mitigacion_efecto_latigo', 'diagnostico_efecto_latigo']
+      entregable: Acuerdo de intercambio de datos con al menos un socio clave de la cadena de suministro
+
+  --- diagnostico_efecto_latigo
+      titulo    : Diagnóstico del Efecto Látigo (Bullwhip Effect)
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Comparar las órdenes recibidas en cada eslabón contra la demanda real del consumidor final
+      paso 2: Identificar si existe amplificación de la variabilidad de la demanda al subir en la cadena
+      paso 3: Simular el 'beer game' o un ejercicio similar con el equipo para visualizar la dinámica
+      paso 4: Cuantificar costos asociados a sobreproducción, exceso de inventario y rupturas de stock
+      cond 1: Cuando se observan ciclos de escasez seguidos de exceso de inventario
+      cond 2: Si los pronósticos de demanda difieren mucho entre eslabones de la cadena
+      previos   : ['compartir_datos_cadena_suministro']
+      siguientes: ['mitigacion_efecto_latigo']
+      entregable: Informe de diagnóstico que evidencie la presencia y magnitud del efecto látigo en la cadena propia
+
+  --- efecto_bullwhip
+      titulo    : Detectar y calcular el costo del efecto látigo en tu cadena de suministro
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 6 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Mide qué tan grande es el efecto látigo en tu negocio comparando cómo varía la demanda en distintos puntos de tu cadena
+      paso 2: Calcula cuánto te está costando en producción y en programar tu operación
+      paso 3: Calcula cuánto te está costando en transporte, envíos y recepción de mercadería
+      paso 4: Averigua cuánto inventario necesitas para no quedarte sin producto y cuánto te cuesta mantenerlo
+      paso 5: Revisa cuánto estás perdiendo en ventas por no tener producto disponible cuando lo necesitas
+      paso 6: Usa estos números para decidir si vale la pena invertir en compartir datos o coordinarte mejor con tus proveedores
+      cond 1: Cuando ves que tu inventario sube y baja sin explicación clara a lo largo de tu cadena
+      cond 2: Antes de decidir si invertir en sistemas para compartir datos o coordinarte con proveedores
+      previos   : ['impacto_estado_resultados_en_balance']
+      siguientes: ['sistema_visibilidad_cadena_suministro_low_cost', 'gestion_riesgo_cadena_suministro']
+      entregable: Un cálculo claro de cuánto te cuesta el efecto látigo en tu negocio, que te sirva para decidir si conviene invertir en mejor visibilidad de datos con tus proveedores
+
+##############################################################################
+# ACTO 21 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 4 MIEMBROS: 5 pares internos con veredicto escrito, de 6 combinaciones posibles
+
+  [PAR] puesto 2421, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): relacion_largo_plazo_proveedor_unico
+     nodo_b (EL SEGUNDO de la razon): relaciones_largo_plazo_con_proveedores
+     RAZON ENTERA, sin recortar:
+       REPITE. relaciones_largo_plazo_con_proveedores contra relacion_largo_plazo_proveedor_unico, MISMA FUENTE, Deming, y sin arista. Sus cuatro pasos van contra los del otro: contar los proveedores actuales es el arranque implicito de reducirlos; reducir poco a poco hasta uno o muy pocos es su paso 1; formalizar acuerdos de largo plazo es su paso 3; y evaluar por evidencia estadistica de calidad y no solo por precio es su paso 4, evaluar por evidencia de mejora continua. Lo propio es el matiz estadistico, que es LINEA. relacion_largo_plazo_proveedor_unico trae dos mecanismos estructurales que el otro no tiene: EQUIPOS CONJUNTOS DE PROVEEDOR Y COMPRADOR QUE INCLUYAN INGENIERIA, DISENO, MANUFACTURA Y VENTAS, y CONTRATOS DE VARIOS ANOS CON TRANSPARENCIA TOTAL DE COSTOS, OPEN BOOKS, que es lo unico del par que dice como se sostiene la confianza que la reduccion a un solo proveedor exige. Por la vara, REPITE. Sobrevive relacion_largo_plazo_proveedor_unico.
+
+  [PAR] puesto 2424, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): compra_por_precio_mas_bajo_como_error
+     nodo_b (EL SEGUNDO de la razon): fin_precio_como_criterio_unico
+     RAZON ENTERA, sin recortar:
+       REPITE. compra_por_precio_mas_bajo_como_error contra fin_precio_como_criterio_unico, MISMA FUENTE, Deming, y sin arista. Sus TRES pasos estan dentro de los cuatro del otro: dejar el precio como criterio unico es su paso 2, evaluar calidad y desempeno y no solo precio; calcular el costo total de rehacer, tiempo perdido y fallas es su paso 1, el costo total de tener el material; y revisar como funcionan juntos los materiales en todo el proceso es su paso 4. No le queda ni una linea propia. fin_precio_como_criterio_unico trae ademas dos cosas: CONSTRUIR RELACIONES DE LARGO PLAZO CON UN PROVEEDOR UNICO PARA CADA INSUMO CRITICO, que es la consecuencia practica del punto 4 de Deming y no aparece en el otro; y sobre todo EL METODO, SEGUIR UNA MUESTRA DE MATERIALES DURANTE TODO EL PROCESO DE PRODUCCION para comprobar que funcionan bien en conjunto, mientras el otro solo enuncia que hay que revisarlo. Por la vara, REPITE. Sobrevive fin_precio_como_criterio_unico.
+
+  [PAR] puesto 2438, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): fin_precio_como_criterio_unico
+     nodo_b (EL SEGUNDO de la razon): relaciones_largo_plazo_con_proveedores
+     RAZON ENTERA, sin recortar:
+       REPITE, y es la SEGUNDA vez que este nodo repite en el dominio. relaciones_largo_plazo_con_proveedores contra fin_precio_como_criterio_unico, MISMA FUENTE, Deming, y sin arista. Sus cuatro pasos van dentro de los del otro: reducir hasta uno o muy pocos y formalizar acuerdos de largo plazo son su paso 3, construir relaciones de largo plazo con un proveedor unico para cada insumo critico; y evaluar por evidencia estadistica y no solo por precio es su paso 2. Le quedan dos lineas, contar cuantos proveedores hay hoy por articulo clave y el matiz estadistico del criterio. fin_precio_como_criterio_unico trae ademas dos cosas: EL COSTO TOTAL DE TENER el material y no el precio de compra, y EL METODO, SEGUIR UNA MUESTRA DE MATERIALES DURANTE TODO EL PROCESO DE PRODUCCION para comprobar que funcionan bien en conjunto. Por la vara, REPITE. Sobrevive fin_precio_como_criterio_unico. Y las dos lineas propias son las MISMAS que ya viajaban desde el puesto 2421: el paso cero de contar, y la evidencia estadistica que la mejora continua diluye. Van una sola vez al encargo de fusion, no dos.
+
+  [PAR] puesto 2927, clase D, dominio quality
+     nodo_a (EL PRIMERO de la razon): compra_por_precio_mas_bajo_como_error
+     nodo_b (EL SEGUNDO de la razon): relaciones_largo_plazo_con_proveedores
+     RAZON ENTERA, sin recortar:
+       compra_por_precio_mas_bajo_como_error (Deming: dejar el precio como criterio unico, calcular el costo total de rehacer/tiempo perdido/fallas, revisar como funcionan juntos los materiales en el proceso) contra relaciones_largo_plazo_con_proveedores (Deming: revisar cuantos proveedores tienes por articulo, definir criterios con evidencia estadistica, reducir hasta uno o muy pocos, formalizar acuerdos de largo plazo). MISMA FUENTE Deming, sim_tit 37,1, sin arista. Los dos ya fusionan por A con fin_precio_como_criterio_unico (2424 compra, 2438 relaciones), pero verificado contra el grafo, nodos enteros: esos dos eslabones son CONTENCION, no identidad (2424 dice que compra 'no le queda ni una linea propia' dentro de fin_precio, y 2438 dice que a fin_precio 'le quedan dos lineas' dentro de relaciones); con un eslabon de contencion la cadena no compone (regla del 2805/2916). Leido directo: compra trae DOS pasos enteros que relaciones no tiene (calcular el costo total de rehacer y fallas; revisar como funcionan juntos los materiales en el proceso completo) y relaciones trae TRES que compra no tiene (contar proveedores actuales, reducir hasta uno o pocos, formalizar acuerdos de largo plazo). Solo comparten la premisa de no usar el precio como unico criterio. D. DISCUTIBLE MARCADO fuerte: ambos fusionan por A con el mismo tercer nodo fin_precio_como_criterio_unico; quien componga esa cadena sin verificar que es contencion en los dos eslabones dira A.
+
+  [PAR] puesto 3102, clase D, dominio quality
+     nodo_a (EL PRIMERO de la razon): fin_precio_como_criterio_unico
+     nodo_b (EL SEGUNDO de la razon): relacion_largo_plazo_proveedor_unico
+     RAZON ENTERA, sin recortar:
+       fin_precio_como_criterio_unico (Deming Punto 4: calcular el costo total, evaluar calidad y desempeno no solo precio, construir relaciones de largo plazo con proveedor unico basadas en confianza, seguir una muestra durante toda la produccion) contra relacion_largo_plazo_proveedor_unico (Deming Punto 4: reducir progresivamente el numero de proveedores hacia uno solo, formar EQUIPOS CONJUNTOS proveedor-comprador, contratos de largo plazo con transparencia total de costos open books, evaluar por evidencia de mejora continua). MISMA FUENTE Deming, sim_tit 42,4, sin arista. fin_precio trae dos pasos enteros propios que el otro no tiene (calcular costo total, seguir una muestra durante toda la produccion); relacion_largo_plazo trae los suyos (formar equipos conjuntos multidisciplinarios, contratos de largo plazo con libros abiertos). Entregables distintos: forma de comprar con proveedores de confianza contra lista de proveedores unicos con contratos firmados. Conjuntos disjuntos. D.
+
+  --- compra_por_precio_mas_bajo_como_error
+      titulo    : Riesgo de comprar solo por el precio más bajo
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 3 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Deja de usar el precio más bajo como el único criterio para decidir a quién le compras
+      paso 2: Calcula el costo total: lo que te cuesta rehacer trabajo, el tiempo perdido y las fallas
+      paso 3: Revisa cómo funcionan juntos los materiales en todo tu proceso, no solo si cumplen la ficha técnica por separado
+      cond 1: Cuando decides qué proveedor usar mirando solo el precio
+      cond 2: Si tienes problemas seguidos de compatibilidad entre materiales de distintos proveedores
+      previos   : ['calificacion_de_proveedores_por_capacidad']
+      siguientes: ['relacion_largo_plazo_proveedor_unico']
+      entregable: Una forma de decidir tus compras que reemplace el precio más bajo por el costo total y la calidad
+
+  --- fin_precio_como_criterio_unico
+      titulo    : Deja de Elegir Proveedores Solo por Precio
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 4 | condiciones 2 | previos 3 | siguientes 1 | cableado 4
+      paso 1: Calcula el costo total de tener ese material o equipo, no solo el precio que pagas al comprarlo
+      paso 2: Cuando compres, evalúa la calidad y el desempeño en tu producción, no solo el precio
+      paso 3: Construye relaciones de largo plazo con un proveedor único para cada insumo crítico, basadas en confianza
+      paso 4: Sigue una muestra de materiales durante todo tu proceso de producción para comprobar que funcionan bien en conjunto
+      cond 1: Cuando elijes proveedores solo por el precio más bajo
+      cond 2: Cuando tienes problemas de calidad repetidos con materiales que cumplen lo prometido pero fallan cuando los usas juntos
+      previos   : ['cese_dependencia_inspeccion_masiva', 'los_14_puntos_deming', 'abolir_inspeccion_masiva']
+      siguientes: ['decide_criterio_eleccion_proveedor']
+      entregable: Una forma de comprar basada en el costo total y la calidad, con proveedores de confianza definidos para cada insumo crítico
+
+  --- relacion_largo_plazo_proveedor_unico
+      titulo    : Relación de largo plazo con proveedor único
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 4 | condiciones 2 | previos 2 | siguientes 4 | cableado 6
+      paso 1: Identificar y reducir progresivamente el número de proveedores por artículo hacia uno solo
+      paso 2: Formar equipos conjuntos (proveedor-comprador) que incluyan ingeniería, diseño, manufactura y ventas
+      paso 3: Establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')
+      paso 4: Evaluar proveedores no solo por precio sino por evidencia de mejora continua (Punto 5 de los 14 puntos)
+      cond 1: Cuando la empresa maneja múltiples proveedores para un mismo insumo
+      cond 2: Si hay variación de calidad entre lotes de distintos proveedores del mismo ítem
+      previos   : ['compra_por_precio_mas_bajo_como_error', 'eliminacion_planes_muestreo_estandar']
+      siguientes: ['mejora_continua_del_sistema', 'calificacion_de_proveedores_por_capacidad', 'practicas_manufactura_justo_a_tiempo', 'punto_equilibrio_calidad_inspeccion']
+      entregable: Lista de proveedores únicos por artículo crítico y contratos de largo plazo firmados con criterios de calidad definidos
+
+  --- relaciones_largo_plazo_con_proveedores
+      titulo    : Reducción de Proveedores y Relaciones de Largo Plazo
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 4 | condiciones 1 | previos 2 | siguientes 0 | cableado 2
+      paso 1: Revisar cuántos proveedores tienes hoy para cada artículo clave que compras
+      paso 2: Definir criterios de evaluación que incluyan evidencia estadística de calidad, no solo el precio
+      paso 3: Reducir poco a poco el número de proveedores por artículo hasta quedarte con uno o muy pocos
+      paso 4: Formalizar acuerdos de largo plazo con los proveedores que elijas
+      cond 1: Cuando eliges a tus proveedores solo por el precio más bajo
+      previos   : ['definiciones_operacionales_de_calidad', 'transformacion_gerencial_para_la_calidad']
+      siguientes: []
+      entregable: Plan de consolidación de proveedores con criterios de calidad documentados y acuerdos de largo plazo
+
+##############################################################################
+# ACTO 22 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 4 MIEMBROS: 3 pares internos con veredicto escrito, de 6 combinaciones posibles
+
+  [PAR] puesto 177, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): comprension_capacidades_limitaciones_ia
+     nodo_b (EL SEGUNDO de la razon): jagged_frontier_ia
+     RAZON ENTERA, sin recortar:
+       REPITE con jagged_frontier_ia. Los dos mandan probar la IA con casos reales y limite de tu propio negocio, anotar donde acierta y donde falla, y usar ese mapa para decidir que automatizas y que supervisas. Candidato a fusion.
+
+  [PAR] puesto 456, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): invitar_ia_a_todo
+     nodo_b (EL SEGUNDO de la razon): principio_invitar_ia_siempre
+     RAZON ENTERA, sin recortar:
+       REPITE con principio_invitar_ia_siempre. Los dos mandan el mismo principio de Mollick con los mismos gestos: probar la IA en todas las tareas cotidianas del negocio sin descartar ninguna por suponer que no sirve, registrar que funciono y que no, y repetir el ejercicio porque las capacidades cambian. El primero anade compartir los hallazgos con el equipo; el segundo anade iterar el prompt hasta dar con la forma optima. Es el mismo principio numerado.
+
+  [PAR] puesto 1517, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): invitar_ia_a_todo
+     nodo_b (EL SEGUNDO de la razon): jagged_frontier_ia
+     RAZON ENTERA, sin recortar:
+       LA MISMA EXPLORACION DE TAREAS DOS VECES, del mismo libro y con arista, Y ESTA ES LA SEGUNDA ABSORCION QUE LA SECCION 11 DEJO PLANTEADA. Los pasos que hacen el trabajo se corresponden enteros: probar la IA en cada tarea del flujo de trabajo sin descartar ninguna de antemano es exactamente listar todas las tareas donde se podria usar y probarla en cada una; y registrar los resultados buenos y malos es exactamente anotar en que tareas rinde bien y en cuales rinde mal. Es el mismo barrido de tareas escrito dos veces. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De invitar_ia_a_todo se perderian dos: REPETIR EL EJERCICIO PERIODICAMENTE porque las capacidades de la maquina cambian con el tiempo, que es la unica linea del racimo que dice que el mapa CADUCA; y COMPARTIR LOS HALLAZGOS CON EL EQUIPO para acelerar el aprendizaje colectivo, la unica que saca el ejercicio de una sola cabeza. De jagged_frontier_ia se perderian otras dos: probar con CASOS REALES Y VARIADOS y no solo con ejemplos faciles, que es la unica salvaguarda contra un mapa optimista; y USAR ESE MAPA PARA DECIDIR que se automatiza, que se supervisa de cerca y que se hace sin la maquina, que es el unico paso que convierte la medicion en una politica. LA ABSORCION SI OCURRE, y al reves que en el puesto 1478: la pareja de invitar a la IA a todo, hoy adyacente y fuera de la nomina de ocho, ENTRA al racimo por este par. Queda recomputado en el checkpoint, con la particion.
+
+  --- comprension_capacidades_limitaciones_ia
+      titulo    : Comprensión de las Capacidades y Limitaciones Impredecibles de la IA
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 5 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Diseña pruebas específicas para tu propio caso de uso, no te quedes solo con pruebas estándar generales (benchmarks)
+      paso 2: Prueba la IA en los casos límite (edge cases) que más importan en tu negocio
+      paso 3: Anota qué patrones de error y de acierto vas encontrando mientras pruebas
+      paso 4: Revisa tú mismo, o con quien te ayude, cualquier resultado crítico antes de usarlo
+      paso 5: Ajusta la instrucción que le das a la IA o la forma de trabajar según lo que vayas descubriendo
+      cond 1: Cuando vas a dejarle a la IA una tarea importante de tu negocio
+      previos   : ['seleccion_modelo_ia_adecuado']
+      siguientes: ['fine_tuning_ia_para_caso_de_uso']
+      entregable: Un documento donde anotas, después de probar la IA en tu caso concreto, qué funcionó bien y qué falló.
+
+  --- invitar_ia_a_todo
+      titulo    : Principio de Invitar la IA a Todo
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 4 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Probar la IA en cada tarea del flujo de trabajo diario, sin descartar previamente ninguna por asumir que 'no aplica'
+      paso 2: Registrar resultados (buenos y malos) de cada experimento
+      paso 3: Repetir el ejercicio periódicamente ya que las capacidades de la IA cambian con el tiempo
+      paso 4: Compartir hallazgos con el equipo para acelerar el aprendizaje colectivo
+      cond 1: Cuando un equipo o emprendedor comienza a explorar el uso de IA generativa en su negocio
+      previos   : ['desafios_implementacion_ia']
+      siguientes: ['jagged_frontier_ia']
+      entregable: Un registro de experimentos con IA aplicados a tareas cotidianas del negocio
+
+  --- jagged_frontier_ia
+      titulo    : El límite irregular de la IA (jagged frontier)
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 4 | condiciones 2 | previos 3 | siguientes 4 | cableado 7
+      paso 1: Haz una lista de todas las tareas de tu negocio o producto donde podrías usar IA
+      paso 2: Prueba la IA en cada tarea con casos reales y variados, no solo con ejemplos fáciles
+      paso 3: Anota en qué tareas rinde bien y en cuáles rinde mal
+      paso 4: Usa ese mapa para decidir qué automatizas, qué supervisas de cerca y qué haces tú sin IA
+      cond 1: Cuando estás decidiendo qué partes de tu proceso o producto puedes delegarle a la IA
+      cond 2: Cuando no sabes qué tan confiable es la IA para una tarea específica de tu negocio
+      previos   : ['colaboracion_creador_consumidor', 'invitar_ia_a_todo', 'principio_invitar_ia_siempre']
+      siguientes: ['riesgo_sobredependencia_ia', 'framework_tareas_ia_humano', 'centaur_cyborg_ia', 'descomposicion_tareas_trabajo']
+      entregable: Un mapa de qué puede y qué no puede hacer la IA en tu caso concreto (qué tareas sí, qué tareas no)
+
+  --- principio_invitar_ia_siempre
+      titulo    : Principio 1: Invitar Siempre a la IA a la Mesa
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 4 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Identificar todas las tareas cotidianas del negocio (marketing, ventas, atención al cliente, análisis)
+      paso 2: Probar sistemáticamente el uso de IA en cada una de ellas, sin descartar tareas por asumir que 'no aplica'
+      paso 3: Documentar qué usos generaron valor real y cuáles fueron frustrantes o inútiles
+      paso 4: Iterar el prompt o flujo de trabajo hasta encontrar la forma óptima de uso para esa tarea específica
+      cond 1: Al iniciar la integración de IA generativa en cualquier proceso del negocio
+      cond 2: Cuando se busca ventaja competitiva mediante el dominio experto de herramientas de IA
+      previos   : ['desafios_implementacion_ia']
+      siguientes: ['principio_humano_en_el_loop', 'jagged_frontier_ia']
+      entregable: Registro de experimentos de uso de IA por área del negocio con resultados y aprendizajes
+
+##############################################################################
+# ACTO 23 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 4 MIEMBROS: 5 pares internos con veredicto escrito, de 6 combinaciones posibles
+
+  [PAR] puesto 219, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): option_pool_negociacion
+     nodo_b (EL SEGUNDO de la razon): pool_opciones_empleados
+     RAZON ENTERA, sin recortar:
+       REPITE con pool_opciones_empleados. Los dos mandan armar un option budget con las contrataciones planeadas, negociar el tamano del pool con ese presupuesto como evidencia y considerar las alternativas de valuacion en vez de aceptar un pool inflado. Candidato a fusion.
+
+  [PAR] puesto 1112, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): creacion_option_pool
+     nodo_b (EL SEGUNDO de la razon): option_pool_negociacion
+     RAZON ENTERA, sin recortar:
+       EL MISMO PACTO DE OPCIONES EN DOS LIBROS, y los dos hacen el mismo acto. Lo comun es el nucleo entero: estimar cuantas contrataciones clave hacen falta hasta la ronda siguiente, y negociar con eso el tamano del pool antes del cierre sabiendo que afecta la valoracion. creacion_option_pool lo dice en tres pasos y option_pool_negociacion en cuatro, y el orden es el mismo. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De creacion_option_pool se perderia revisar y refrescar el pool en cada ronda posterior segun las necesidades de contratacion, que es lo unico suyo y mira mas alla de esta ronda. De option_pool_negociacion se perderian dos cosas y las dos son de negociacion fina: presentar el presupuesto de opciones como EVIDENCIA OBJETIVA durante la discusion, y el intercambio de si el inversionista insiste en un pool mayor al necesario, aceptar su tamano a cambio de una valoracion previa mas alta. Esa ultima es la unica linea del par que convierte una concesion en un precio, y no esta en el otro lado.
+
+  [PAR] puesto 1371, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): employee_pool_esop
+     nodo_b (EL SEGUNDO de la razon): pool_opciones_empleados
+     RAZON ENTERA, sin recortar:
+       LA MISMA RESERVA DE OPCIONES DOS VECES, del mismo libro y sin arista entre ellos. TRES de los cuatro pasos de cada uno se corresponden: negociar el tamano de la reserva, VERIFICAR SI INCLUYE LAS OPCIONES YA ENTREGADAS o solo lo no emitido, que los dos dicen casi con las mismas palabras; y planear el reparto segun las contrataciones previstas, que en uno es un paso y en el otro es el presupuesto de opciones que abre el nodo. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De employee_pool_esop se perderia UNA y es una cuenta: CALCULAR COMO ESA DILUCION AFECTA EL PRECIO POR ACCION que le queda al fundador, que es el unico paso de la familia que traduce el tamano del pool a lo que uno pierde. De pool_opciones_empleados se perderian dos: las TRES ALTERNATIVAS de negociacion, pool mas pequeno, valoracion previa mas alta o pool posterior a la inversion; y la exigencia de negociar sobre el presupuesto REAL y no sobre cifras arbitrarias del inversionista. NOTA DE NOMINA: con este par la familia de la reserva de opciones queda en CUATRO nodos por cierre transitivo, con option_pool_negociacion de centro por sus A de los puestos 219 y 1112. Y su cobertura, como manda el banco 9.26: de seis pares posibles hay cuatro leidos, asi que la forma es PROVISIONAL.
+
+  [PAR] puesto 1436, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): creacion_option_pool
+     nodo_b (EL SEGUNDO de la razon): pool_opciones_empleados
+     RAZON ENTERA, sin recortar:
+       LA MISMA RESERVA DE OPCIONES OTRA VEZ, libros distintos y sin arista entre ellos, y es el segundo par interno de esta familia en cuarenta puestos. Los DOS pasos que hacen el trabajo se corresponden enteros: estimar el numero de contrataciones clave antes de la siguiente ronda es exactamente el presupuesto de opciones, la lista de contrataciones planeadas con el tamano de cada concesion; y negociar el tamano del pool con los inversionistas antes del cierre es exactamente negociar el tamano sobre ese presupuesto. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De creacion_option_pool se perderia UNA: REVISAR Y REFRESCAR EL POOL EN CADA RONDA SUBSECUENTE segun las necesidades de contratacion, que es el unico paso de la familia que trata la reserva como algo que se vuelve a abrir y no como una negociacion de una sola vez. De pool_opciones_empleados se perderian dos, y son las mismas que ya estaban anotadas en el puesto 1371: las TRES ALTERNATIVAS de negociacion, pool mas pequeno, valoracion previa mas alta o pool posterior; y verificar si el pool incluye las opciones ya entregadas o solo lo no emitido. NOTA DE NOMINA: la familia de la reserva de opciones NO crece con este par, sigue en CUATRO nodos por cierre transitivo, con option_pool_negociacion de centro. Lo que cambia es la densidad: de sus seis pares posibles ya hay CINCO leidos y los cinco en A, asi que su cobertura es de 5 de 6 y la forma sigue PROVISIONAL por un solo par.
+
+  [PAR] puesto 1193, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): employee_pool_esop
+     nodo_b (EL SEGUNDO de la razon): option_pool_negociacion
+     RAZON ENTERA, sin recortar:
+       La mecanica de la reserva contra la negociacion de su tamano, del mismo libro y sin arista entre ellos. option_pool_negociacion es NEGOCIACION: elaborar un presupuesto de opciones detallado con las contrataciones planeadas, presentarlo como evidencia objetiva durante la discusion, aceptar un pool mayor a cambio de una valoracion previa mas alta si el inversionista insiste, y evitar un pool desproporcionado solo por complacer. employee_pool_esop es MECANICA: negociar el tamano como porcentaje de la tabla de capital DESPUES de la inversion, definir si la reserva incluye las opciones ya entregadas o solo lo que se repartira a futuro, y CALCULAR COMO ESA DILUCION AFECTA EL PRECIO POR ACCION que le queda al fundador. Esas dos ultimas son cuentas concretas que la negociacion no trae en ninguna forma. NOTA DE FAMILIA, con el barrido corrido antes de escribir: option_pool_negociacion tiene DOS A vigentes, el puesto 219 contra pool_opciones_empleados y el 1112 contra creacion_option_pool, o sea que es el centro de una familia de al menos cuatro nodos sobre la reserva de opciones. Este par NO anade miembro: sale sano porque trae calculos propios, y no repeticion. Quedan en la cola el 1371 y el 1436 para cerrar la forma de esa familia.
+
+  --- creacion_option_pool
+      titulo    : Creación de Option Pool para Contrataciones Futuras
+      fuente    : The Founder's Dilemmas
+      pasos 3 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Estimar el número de contrataciones clave necesarias antes de la siguiente ronda de financiamiento.
+      paso 2: Negociar el tamaño del option pool con los inversores antes del cierre de la ronda (afecta la valuación pre-money).
+      paso 3: Revisar y refrescar el pool en cada ronda subsecuente según necesidades de contratación.
+      cond 1: Antes de cerrar una ronda de financiamiento formal.
+      cond 2: Cuando se planea escalar el equipo significativamente.
+      previos   : ['seesaw_salario_equity', 'employee_pool_esop']
+      siguientes: ['term_sheet_negociacion', 'decision_autofinanciamiento_vs_inversion']
+      entregable: Cap table actualizado con el porcentaje de option pool reservado y su cronograma de asignación.
+
+  --- employee_pool_esop
+      titulo    : Reserva de acciones para empleados (Employee Pool o ESOP)
+      fuente    : Venture Deals - Brad Feld
+      pasos 4 | condiciones 2 | previos 3 | siguientes 3 | cableado 6
+      paso 1: Negocia el tamaño de la reserva de acciones para empleados como porcentaje de tu tabla de capital después de la inversión.
+      paso 2: Define si la reserva incluye opciones que ya entregaste o solo lo que vas a repartir a futuro.
+      paso 3: Calcula cómo esa dilución afecta el precio por acción que te queda a ti como fundador.
+      paso 4: Planea cómo vas a repartir esa reserva según a quién piensas contratar más adelante.
+      cond 1: Cuando estás negociando cuánto vale tu negocio antes de recibir la inversión
+      cond 2: Si piensas contratar gente clave usando participación en el negocio como incentivo
+      previos   : ['cap_table_basico', 'term_sheet_negociacion', 'vesting_acciones_fundadores']
+      siguientes: ['vesting_acciones_fundadores', 'creacion_option_pool', 'asuncion_stock_options_adquisicion']
+      entregable: El tamaño de la reserva de acciones para empleados acordado y reflejado en tu tabla de capital antes de cerrar la ronda.
+
+  --- option_pool_negociacion
+      titulo    : Negociación del Option Pool (Pool de Opciones)
+      fuente    : Venture Deals
+      pasos 4 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Elaborar un 'option budget' detallado: listar todas las contrataciones planeadas hasta la siguiente ronda de financiamiento y el tamaño aproximado de opciones necesario para cada una.
+      paso 2: Presentar este presupuesto como evidencia objetiva durante la negociación del tamaño del pool.
+      paso 3: Si el VC insiste en un pool mayor al necesario, proponer aceptar el tamaño propuesto por el fundador a cambio de otorgar protección anti-dilución completa si el pool debe expandirse antes de la próxima ronda.
+      paso 4: Evitar aceptar un pool desproporcionadamente grande solo para complacer al inversionista.
+      cond 1: Cuando el usuario está negociando un term sheet con inversionistas de capital de riesgo
+      cond 2: Cuando se discute el tamaño del pool de opciones para empleados
+      previos   : ['estructura_fondo_vc']
+      siguientes: ['valuacion_pre_post_money', 'preferencia_de_liquidacion']
+      entregable: Un option budget documentado con proyección de contrataciones y tamaño de pool justificado para la negociación del term sheet.
+
+  --- pool_opciones_empleados
+      titulo    : Tamaño del Pool de Opciones para Empleados
+      fuente    : Venture Deals - Brad Feld
+      pasos 4 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Crear un 'option budget': lista de contrataciones planeadas hasta la próxima ronda con el tamaño de opción estimado para cada una.
+      paso 2: Negociar el tamaño del pool basado en el option budget real, no en cifras arbitrarias del VC.
+      paso 3: Considerar alternativas de negociación: pool más pequeño, valuación pre-money más alta, o pool post-money.
+      paso 4: Verificar si el pool incluye opciones ya otorgadas o solo el pool no emitido (unissued option pool).
+      cond 1: Cuando el VC propone un tamaño de option pool que impacta la valuación pre-money.
+      previos   : ['valuacion_pre_post_money']
+      siguientes: ['warrants_financiamiento']
+      entregable: Option budget documentado y tamaño de pool negociado alineado con necesidades reales de contratación.
+
+##############################################################################
+# ACTO 24 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 4 MIEMBROS: 5 pares internos con veredicto escrito, de 6 combinaciones posibles
+
+  [PAR] puesto 467, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): diseno_experimentos_hipotesis
+     nodo_b (EL SEGUNDO de la razon): diseno_experimentos_pass_fail
+     RAZON ENTERA, sin recortar:
+       REPITE con diseno_experimentos_pass_fail. Los dos mandan el mismo diseno y en el mismo orden: preguntarse primero que se necesita aprender, disenar la prueba mas simple que lo conteste, hacerla con maquetas, demos o paginas de aterrizaje sin programar nada, y correrla con un grupo pequeno de clientes reales midiendo la senal. El segundo anade fijar de antemano el criterio numerico de exito, cuidar la duracion para no confundir un maximo local, y registrar tambien lo cualitativo. Mismo experimento, uno mas instrumentado.
+
+  [PAR] puesto 511, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): disenar_tests_pass_fail
+     nodo_b (EL SEGUNDO de la razon): diseno_experimentos_pass_fail
+     RAZON ENTERA, sin recortar:
+       REPITE con diseno_experimentos_pass_fail. Los cinco pasos del primero son los seis del segundo sin una sola diferencia de fondo: preguntarse que se quiere aprender antes de disenar nada, hacer el test de pasa o no pasa mas simple posible, fijar el criterio numerico de exito de antemano, ejecutarlo sin cortarlo antes de tiempo, y registrar tambien lo cualitativo y no solo el dato. El segundo concreta con que herramientas y con cuantos prospectos. Con el puesto 467, la familia del diseno de experimentos llega a TRES nodos del nucleo.
+
+  [PAR] puesto 639, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): diseno_experimentos_pass_fail
+     nodo_b (EL SEGUNDO de la razon): realizar_pruebas_pasa_no_pasa
+     RAZON ENTERA, sin recortar:
+       Gemelos de la prueba de pasa o no pasa, sin arista entre ellos y los dos de The Startup Owner's Manual. diseno_experimentos_pass_fail y realizar_pruebas_pasa_no_pasa comparten el corazon entero: definir de antemano el criterio numerico de exito, correr la prueba con un grupo chico de clientes reales, y registrar la reaccion cualitativa ademas del pasa o no pasa. Lo propio de diseno_experimentos_pass_fail son tres cosas de metodo que valen: arrancar preguntandose que quiero aprender de cada hipotesis, la cifra concreta de nueve de treinta pedidos como ejemplo de criterio, y el aviso de extender la duracion lo suficiente para no confundir un maximo local con el maximo real. Lo propio de realizar_pruebas_pasa_no_pasa es la comparacion entre costo de adquisicion y precio del producto, y la clasificacion de reacciones por categoria. El aviso del maximo local es lo mas caro de perder. Nota de familia: realizar_pruebas_pasa_no_pasa ya salio en el puesto 455 como hijo sin arista de customer_validation_sell_phase y en el 636 como sano frente al diseno generico, o sea que este nodo tiene tres lecturas y ninguna arista propia hacia sus parientes.
+
+  [PAR] puesto 636, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): diseno_experimentos_hipotesis
+     nodo_b (EL SEGUNDO de la razon): realizar_pruebas_pasa_no_pasa
+     RAZON ENTERA, sin recortar:
+       Disenar la prueba contra fijar el umbral que la decide, y son dos oficios. diseno_experimentos_hipotesis es generico y barato: preguntarte que necesitas saber para avanzar, definir la prueba mas simple que te de esa respuesta, armarla como maqueta, demo o prototipo fisico sin programar nada, y correrla con un numero minimo de clientes midiendo la senal. realizar_pruebas_pasa_no_pasa no disena nada: pone la vara numerica ANTES, cuantos o que porcentaje de clientes cuentan como pasa, compara cuanto cuesta conseguir un cliente contra el precio del producto, manda invitaciones multiples y mide respuestas en numeros absolutos y en porcentaje, y clasifica las reacciones en categorias, los que aman, los que piden cambios y los demas. Uno construye el experimento, el otro dicta cuando se aprueba. Los dos de The Startup Owner's Manual, sin arista entre ellos.
+
+  [PAR] puesto 1346, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): disenar_tests_pass_fail
+     nodo_b (EL SEGUNDO de la razon): realizar_pruebas_pasa_no_pasa
+     RAZON ENTERA, sin recortar:
+       LA CONDICION VIVA DE LA ESTRELLA SE RESUELVE A SU FAVOR, y este es el par que la decidia. El banco 9.23 dejo escrito que el ejemplar de la figura, la familia PASS/FAIL, se sostenia sobre UN SOLO par periferico leido, y que ESTE puesto, si salia A, rompia la estrella. Sale D. disenar_tests_pass_fail es DISCIPLINA DE DISENO: preguntarse que se quiere aprender, disenar el test mas simple posible, definir criterios numericos de exito o fracaso, ejecutarlo sin detenerlo antes de tiempo, y registrar aprendizajes e ideas y no solo datos. realizar_pruebas_pasa_no_pasa es MECANICA DE EJECUCION: definir de antemano el numero o porcentaje suficiente, comparar cuanto cuesta conseguir un cliente contra el precio del producto, mandar invitaciones multiples y medir cuantos responden en absolutos y en porcentaje, y clasificar las reacciones en categorias. Lo compartido es UNA linea de cinco y de cuatro, fijar el numero de antemano, que es la misma frontera que el puesto 636 dejo escrita para esta familia: uno disena la prueba y el otro fija el umbral que la decide. LA FIGURA QUEDA CONFIRMADA: tres pares con el centro y los tres en A, los puestos 467, 511 y 639; y DOS pares perifericos leidos y los DOS sanos, el 636 y este. Solo queda el par que NUNCA entro a la cola, que es una de las seis parejas de la seccion 52. La estrella de pass/fail pasa de ejemplar con condicion viva a ejemplar con las dos cuentas hechas.
+
+  --- disenar_tests_pass_fail
+      titulo    : Diseñar Tests Pass/Fail
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Preguntarse qué se quiere aprender
+      paso 2: Diseñar el test pass/fail más simple posible
+      paso 3: Definir criterios numéricos claros de éxito o fracaso
+      paso 4: Ejecutar el test y evitar detenerlo antes de tiempo
+      paso 5: Registrar aprendizajes e insights, no solo datos
+      cond 1: Cuando se tienen hipótesis de negocio que requieren validación empírica rápida
+      cond 2: Si el equipo confunde testear con construir el producto real
+      previos   : ['sintesis_hipotesis_modelo_negocio', 'diseno_experimentos_hipotesis']
+      siguientes: ['construir_mvp_baja_fidelidad']
+      entregable: Lista de hipótesis del modelo de negocio con sus tests pass/fail diseñados y criterios de éxito definidos
+
+  --- diseno_experimentos_hipotesis
+      titulo    : Diseñar Pruebas para Validar tus Suposiciones
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 4 | condiciones 1 | previos 3 | siguientes 4 | cableado 7
+      paso 1: Pregúntate qué necesitas saber para poder avanzar
+      paso 2: Define la prueba más simple posible para conseguir esa respuesta
+      paso 3: Diseña el experimento (una maqueta, una demo, un prototipo físico) sin necesidad de programar nada real
+      paso 4: Haz la prueba con un número mínimo de clientes y mide la señal que obtienes
+      cond 1: Si tienes una suposición sin validar sobre tus clientes, tu producto o tu precio
+      previos   : ['business_model_canvas_como_scorecard', 'business_model_canvas_scorecard', 'fracaso_como_aprendizaje_startup']
+      siguientes: ['determinar_tipo_de_mercado', 'metricas_de_startup', 'disenar_tests_pass_fail', 'market_type_definicion']
+      entregable: Protocolo de experimento documentado con criterio de éxito o fracaso definido antes de ejecutarlo
+
+  --- diseno_experimentos_pass_fail
+      titulo    : Diseño de Experimentos Pass/Fail para Probar Hipótesis
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 6 | condiciones 2 | previos 5 | siguientes 4 | cableado 9
+      paso 1: Preguntarte '¿qué quiero aprender?' para cada hipótesis antes de diseñar el test
+      paso 2: Diseñar el test pass/fail más simple posible, usando landing pages, presentaciones o mockups según convenga
+      paso 3: Definir de antemano el criterio numérico de éxito (ej. 9 de 30 pedidos)
+      paso 4: Ejecutar el test con un grupo pequeño de clientes reales (ej. 10 a 30 prospectos), con rapidez y bajo costo
+      paso 5: Extender la duración del test lo suficiente para evitar confundir un máximo local con el máximo global
+      paso 6: Registrar no solo el resultado pass/fail sino también los insights cualitativos
+      cond 1: Cuando las hipótesis del modelo de negocio ya están definidas y necesitas evidencia empírica antes de invertir más recursos
+      cond 2: Cuando tienes hipótesis de negocio sin validar y necesitas salir a probarlas con clientes reales
+      previos   : ['sintesis_hipotesis_modelo_negocio', 'antigoals_framework', 'revenue_pricing_hypothesis', 'pricing_tactics_models', 'seleccion_estrategia_pricing']
+      siguientes: ['preparar_contacto_clientes', 'customer_discovery', 'customer_discovery_phase2_problem_test', 'global_vs_local_maximum']
+      entregable: Lista de experimentos pass/fail diseñados y ejecutados, con criterios de éxito y resultados documentados para cada hipótesis crítica del modelo de negocio.
+
+  --- realizar_pruebas_pasa_no_pasa
+      titulo    : Haz pruebas de pasa o no pasa (pass/fail tests)
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 4 | condiciones 1 | previos 3 | siguientes 3 | cableado 6
+      paso 1: Define de antemano el número o porcentaje de clientes que consideras suficiente para decir que la prueba funcionó
+      paso 2: Compara cuánto te cuesta conseguir un cliente contra el precio de tu producto
+      paso 3: Manda invitaciones múltiples (por correo, anuncios) y mide cuántos responden, en números absolutos y en porcentaje
+      paso 4: Clasifica las reacciones de tus clientes en categorías: los que aman el producto, los que piden funciones nuevas, los que no ven la necesidad, etc.
+      cond 1: Cuando necesitas decidir de forma objetiva, sin opiniones, si sigues adelante o pivotas
+      previos   : ['medir_comportamiento_cliente_mvp', 'introduccion_validacion_clientes', 'wallas_etapa_verificacion']
+      siguientes: ['verificar_product_market_fit', 'actualizar_business_model_canvas_discovery', 'actualizar_business_model_canvas_tuneup']
+      entregable: Un documento con tus criterios de pasa o no pasa, los resultados reales comparados, y tu decisión de seguir adelante o pivotar
+
+FIN
