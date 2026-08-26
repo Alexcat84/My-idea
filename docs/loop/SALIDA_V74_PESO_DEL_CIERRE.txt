@@ -1,0 +1,482 @@
+==============================================================================
+EL PESO DEL CIERRE DE LA FASE 03_FUSIONES, MEDIDO Y NO DECIDIDO (vuelta 74)
+  grafo   : 3853 nodos, 3188 vivos
+  fichas  : 71 en OPERACIONES.jsonl
+  pagina  : docs/plan/03_FUSIONES.md, 9226 lineas
+  puertas : universo protegido de 256 ids, IMPORTADO de
+            scripts/loop/varas_n_arias_del_tramo.py y no re-inventado
+  HEAD    : 85a83352 2026-08-26 08:53
+==============================================================================
+
+==============================================================================
+BLOQUE 1: LAS FICHAS DE LA FASE 03_FUSIONES, UNA A UNA, CON SU DESTINO MEDIDO
+==============================================================================
+
+  fichas de la fase 03_FUSIONES en OPERACIONES.jsonl: 16
+  LA REGLA DEL DESTINO, ESCRITA ANTES DE APLICARLA Y UNICA PARA LAS 16:
+     a) sin nomina de nodos  -> ABRIDOR DE UNIVERSO: su destino son sus REGISTROS
+     b) nomina que resuelve a UN vivo o a ninguno -> SIN FUSION PENDIENTE
+        b.1 con declaracion de CONSUMIDA en su nota -> CONSUMIDA
+        b.2 sin ella                                -> EJECUTADA
+     c) nomina con DOS o mas vivos -> FUSION PENDIENTE, y se dice por que espera
+
+  --- OP-M-01-FUSION ---
+     tipo=FUSION DE MESA: LA CAMARILLA DE CINCO | estado=LISTA | orden=5
+     depende_de = ['OP-M-01']
+     nodos=5  resueltos por P.1=5  VIVOS HOY=5  ['estructura_de_gates', 'estructura_gates', 'gates_go_kill_decision_points', 'requisitos_gates_con_dientes', 'sistema_gates_go_kill']
+     nota con declaracion de CONSUMIDA: NO (nota de 1323 caracteres)
+     sede nivel 2 en 03_FUSIONES.md: NINGUNA cabecera de nivel 2 la nombra
+     commits que la nombran: 2 ['6bc493e8', 'd9d3fd94']
+     espera por OP-M-01          fase=06_MESAS     estado=LISTA
+     DESTINO MEDIDO: FUSION PENDIENTE
+
+  --- OP-M-02-ACCLIMATE ---
+     tipo=FUSION DE MESA | estado=LISTA | orden=3
+     depende_de = ['OP-M-02', 'OP-M-02-MEDIOS']
+     nodos=2  resueltos por P.1=2  VIVOS HOY=2  ['fase_acclimate_experiencia_cliente', 'fase_acclimate_mapa_de_proceso']
+     nota con declaracion de CONSUMIDA: NO (nota de 307 caracteres)
+     sede nivel 2 en 03_FUSIONES.md: NINGUNA cabecera de nivel 2 la nombra
+     commits que la nombran: 4 ['56321732', 'eedd7fa1', 'a0d6873c', '7a160a25']
+     espera por OP-M-02          fase=06_MESAS     estado=LISTA
+     espera por OP-M-02-MEDIOS   fase=03_FUSIONES  estado=LISTA
+     DESTINO MEDIDO: FUSION PENDIENTE
+
+  --- OP-M-02-ACCOMPLISH ---
+     tipo=FUSION DE MESA | estado=LISTA | orden=3
+     depende_de = ['OP-M-02', 'OP-M-02-MEDIOS']
+     nodos=2  resueltos por P.1=1  VIVOS HOY=1  ['fase_accomplish_experiencia_cliente']
+     nota con declaracion de CONSUMIDA: SI (nota de 1708 caracteres)
+     sede nivel 2 en 03_FUSIONES.md: NINGUNA cabecera de nivel 2 la nombra
+     commits que la nombran: 0 []
+     quien la consumio, linea 3399  | `OP-M-02-ACCOMPLISH` | `fase_accomplish_experiencia_cliente` | `fase_accomplish_experi
+     DESTINO MEDIDO: CONSUMIDA
+
+  --- OP-M-02-ACTIVATE ---
+     tipo=FUSION DE MESA | estado=LISTA | orden=3
+     depende_de = ['OP-M-02', 'OP-M-02-MEDIOS']
+     nodos=2  resueltos por P.1=1  VIVOS HOY=1  ['fase_activate_primera_impresion']
+     nota con declaracion de CONSUMIDA: SI (nota de 1687 caracteres)
+     sede nivel 2 en 03_FUSIONES.md: NINGUNA cabecera de nivel 2 la nombra
+     commits que la nombran: 1 ['be69bc56']
+     quien la consumio, linea 3398  | `OP-M-02-ACTIVATE` | `fase_activate_primera_impresion` | `fase_activate_primera_impres
+     DESTINO MEDIDO: CONSUMIDA
+
+  --- OP-M-02-ADMIT ---
+     tipo=FUSION DE MESA | estado=LISTA | orden=3
+     depende_de = ['OP-M-02', 'OP-M-02-MEDIOS']
+     nodos=2  resueltos por P.1=1  VIVOS HOY=1  ['fase_admit_celebracion']
+     nota con declaracion de CONSUMIDA: SI (nota de 1498 caracteres)
+     sede nivel 2 en 03_FUSIONES.md: NINGUNA cabecera de nivel 2 la nombra
+     commits que la nombran: 0 []
+     quien la consumio, linea 3397  | `OP-M-02-ADMIT` | `fase_admit` | `fase_admit_celebracion` | **NO** | `OP-U-01`, TRAMO 
+     DESTINO MEDIDO: CONSUMIDA
+
+  --- OP-M-02-ASSESS ---
+     tipo=FUSION DE MESA | estado=LISTA | orden=3
+     depende_de = ['OP-M-02', 'OP-M-02-MEDIOS']
+     nodos=2  resueltos por P.1=1  VIVOS HOY=1  ['fase_assess_ciclo_cliente']
+     nota con declaracion de CONSUMIDA: SI (nota de 1470 caracteres)
+     sede nivel 2 en 03_FUSIONES.md: NINGUNA cabecera de nivel 2 la nombra
+     commits que la nombran: 0 []
+     quien la consumio, linea 3396  | `OP-M-02-ASSESS` | `fase_assess_ciclo_cliente` | `fase_assess_ciclo_cliente` | si | `O
+     DESTINO MEDIDO: CONSUMIDA
+
+  --- OP-M-02-MEDIOS ---
+     tipo=FUSION DE MESA | estado=LISTA | orden=2
+     depende_de = ['OP-M-02']
+     nodos=2  resueltos por P.1=1  VIVOS HOY=1  ['estrategia_multicanal_bienvenida']
+     nota con declaracion de CONSUMIDA: SI (nota de 2475 caracteres)
+     sede nivel 2 en 03_FUSIONES.md: NINGUNA cabecera de nivel 2 la nombra
+     commits que la nombran: 1 ['7c5dbb28']
+     quien la consumio, linea 3395  | `OP-M-02-MEDIOS` | `seis_medios_comunicacion_cliente` | `estrategia_multicanal_bienven
+     quien la consumio, linea 3401  **LAS DOS MEDICIONES CALZAN.** La del auditor situa `OP-M-02-MEDIOS` en el tramo 3, vuel
+     DESTINO MEDIDO: CONSUMIDA
+
+  --- OP-M-02-PROG ---
+     tipo=FUSION DE MESA | estado=LISTA | orden=1
+     depende_de = ['OP-M-02']
+     nodos=2  resueltos por P.1=1  VIVOS HOY=1  ['ocho_fases_experiencia_cliente']
+     nota con declaracion de CONSUMIDA: NO (nota de 336 caracteres)
+     sede nivel 2 en 03_FUSIONES.md, linea 3161  ## `OP-M-02-PROG`: EL REGISTRO DE LA FUSION (2026-08-20, vuelta 63)
+     commits que la nombran: 7 ['be69bc56', '0d394454', '0f692945', '630c6d19', '1b4441e7', 'd5c4d64b']
+     DESTINO MEDIDO: EJECUTADA
+
+  --- OP-M-03-I ---
+     tipo=FUSION DE MESA | estado=LISTA | orden=1
+     depende_de = ['OP-M-03', 'OP-D-07']
+     nodos=2  resueltos por P.1=1  VIVOS HOY=1  ['pivotar_o_perseverar']
+     nota con declaracion de CONSUMIDA: NO (nota de 195 caracteres)
+     sede nivel 2 en 03_FUSIONES.md, linea 3057  ## `OP-M-03-I`: EL REGISTRO DE LA FUSION (2026-08-20, vuelta 63)
+     commits que la nombran: 19 ['a0d6873c', 'ca74f202', '2cc84e86', '7a160a25', '6e1784c0', 'be69bc56']
+     DESTINO MEDIDO: EJECUTADA
+
+  --- OP-M-03-II ---
+     tipo=FUSION DE MESA | estado=LISTA | orden=2
+     depende_de = ['OP-M-03']
+     nodos=2  resueltos por P.1=1  VIVOS HOY=1  ['pivote_o_proceder']
+     nota con declaracion de CONSUMIDA: NO (nota de 573 caracteres)
+     sede nivel 2 en 03_FUSIONES.md, linea 3486  ## `OP-M-03-II`: EL REGISTRO DE LA FUSION (2026-08-20, vuelta 64)
+     commits que la nombran: 8 ['a0d6873c', 'ca74f202', '2cc84e86', '7a160a25', '6e1784c0', 'f0f8605b']
+     DESTINO MEDIDO: EJECUTADA
+
+  --- OP-M-03-III ---
+     tipo=FUSION DE MESA | estado=LISTA | orden=3
+     depende_de = ['OP-M-03']
+     nodos=3  resueltos por P.1=3  VIVOS HOY=3  ['pivote_estrategico', 'pivote_startup', 'pivotes_e_iteraciones']
+     nota con declaracion de CONSUMIDA: NO (nota de 606 caracteres)
+     sede nivel 2 en 03_FUSIONES.md: NINGUNA cabecera de nivel 2 la nombra
+     commits que la nombran: 2 ['ca74f202', '7a160a25']
+     espera por OP-M-03          fase=06_MESAS     estado=LISTA
+     DESTINO MEDIDO: FUSION PENDIENTE
+
+  --- OP-M-05-APERTURA ---
+     tipo=FUSION DE MESA | estado=LISTA | orden=8
+     depende_de = ['OP-M-05', 'OP-M-04', 'OP-M-03-II']
+     nodos=3  resueltos por P.1=3  VIVOS HOY=3  ['customer_validation', 'filosofia_customer_validation', 'introduccion_validacion_clientes']
+     nota con declaracion de CONSUMIDA: NO (nota de 1493 caracteres)
+     sede nivel 2 en 03_FUSIONES.md: NINGUNA cabecera de nivel 2 la nombra
+     commits que la nombran: 1 ['0ac78fc9']
+     espera por OP-M-05          fase=06_MESAS     estado=LISTA
+     espera por OP-M-04          fase=06_MESAS     estado=LISTA
+     espera por OP-M-03-II       fase=03_FUSIONES  estado=LISTA
+     DESTINO MEDIDO: FUSION PENDIENTE
+
+  --- OP-M-05-EDIFICIO ---
+     tipo=FUSION DE MESA | estado=LISTA | orden=7
+     depende_de = ['OP-M-05', 'OP-M-04', 'OP-M-03-II']
+     nodos=3  resueltos por P.1=3  VIVOS HOY=3  ['customer_discovery_get_out_of_building', 'get_out_of_the_building', 'manifiesto_regla1_hechos_fuera_del_edificio']
+     nota con declaracion de CONSUMIDA: NO (nota de 473 caracteres)
+     sede nivel 2 en 03_FUSIONES.md: NINGUNA cabecera de nivel 2 la nombra
+     commits que la nombran: 0 []
+     espera por OP-M-05          fase=06_MESAS     estado=LISTA
+     espera por OP-M-04          fase=06_MESAS     estado=LISTA
+     espera por OP-M-03-II       fase=03_FUSIONES  estado=LISTA
+     DESTINO MEDIDO: FUSION PENDIENTE
+
+  --- OP-M-05-INDICE ---
+     tipo=FUSION DE MESA | estado=LISTA | orden=6
+     depende_de = ['OP-M-05', 'OP-M-04', 'OP-M-03-II']
+     nodos=3  resueltos por P.1=3  VIVOS HOY=3  ['customer_discovery', 'customer_discovery_cuatro_fases', 'customer_discovery_overview']
+     nota con declaracion de CONSUMIDA: NO (nota de 543 caracteres)
+     sede nivel 2 en 03_FUSIONES.md: NINGUNA cabecera de nivel 2 la nombra
+     commits que la nombran: 0 []
+     espera por OP-M-05          fase=06_MESAS     estado=LISTA
+     espera por OP-M-04          fase=06_MESAS     estado=LISTA
+     espera por OP-M-03-II       fase=03_FUSIONES  estado=LISTA
+     DESTINO MEDIDO: FUSION PENDIENTE
+
+  --- OP-U-01 ---
+     tipo=FUSION | estado=LISTA | orden=1
+     depende_de = ['OP-C-01', 'OP-C-02', 'OP-C-03', 'OP-C-04', 'OP-F-01', 'OP-F-02', 'OP-F-03', 'OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06']
+     nodos=0  resueltos por P.1=0  VIVOS HOY=0  []
+     nota con declaracion de CONSUMIDA: NO (nota de 4119 caracteres)
+     sede nivel 2 en 03_FUSIONES.md, linea 185   ## `OP-U-01`: LOS ACTOS CERRADOS . **LISTA**
+     sede nivel 2 en 03_FUSIONES.md, linea 264   ## `OP-U-01` ABIERTA: **LA LECTURA DE CERO Y EL LOTE RE-MEDIDO** (19 ago 2026, vuelta 47
+     sede nivel 2 en 03_FUSIONES.md, linea 358   ## `OP-U-01`, TRAMO 1: **DIECISEIS ACTOS FUNDIDOS Y CINCO DECLARADOS** (19 ago 2026, vue
+     sede nivel 2 en 03_FUSIONES.md, linea 559   ## `OP-U-01`, TRAMO 1, CIERRE PARCIAL: **LOS DOS EMPATES ADJUDICADOS, LA PRIMERA LECTURA
+     sede nivel 2 en 03_FUSIONES.md, linea 709   ## `OP-U-01`, TRAMO 1, LA VUELTA 50: **EL BARRIDO QUE LA VUELTA 49 NO CORRIO AL CERRAR, 
+     sede nivel 2 en 03_FUSIONES.md, linea 957   ## `OP-U-01`, TRAMO 1, LA VUELTA 51: **CUATRO ACTOS, CUATRO LECTURAS `P.12`, Y UN INSTRU
+     commits que la nombran: 36 ['1ac8c2c4', 'c8c6b685', '2cc84e86', '4d16c100', 'f0f8605b', '0f692945']
+     DESTINO MEDIDO: ABRIDOR DE UNIVERSO
+
+  --- OP-U-02 ---
+     tipo=FUSION | estado=LISTA | orden=2
+     depende_de = ['OP-U-01']
+     nodos=0  resueltos por P.1=0  VIVOS HOY=0  []
+     nota con declaracion de CONSUMIDA: NO (nota de 4971 caracteres)
+     sede nivel 2 en 03_FUSIONES.md, linea 221   ## `OP-U-02`: LOS ACTOS ABIERTOS . **espera al cierre**
+     sede nivel 2 en 03_FUSIONES.md, linea 3259  ## `OP-U-02`: **LA APERTURA MEDIDA, SIN FUNDIR NI UN ACTO** (20 ago 2026, vuelta 63)
+     commits que la nombran: 51 ['c9457681', 'd6341ebe', 'c584f060', '664149c5', '90df5a9f', 'a3bc1153']
+     DESTINO MEDIDO: ABRIDOR DE UNIVERSO
+
+  RESUMEN DE LAS 16, POR DESTINO:
+     ABRIDOR DE UNIVERSO     2  ['OP-U-01', 'OP-U-02']
+     EJECUTADA               3  ['OP-M-02-PROG', 'OP-M-03-I', 'OP-M-03-II']
+     CONSUMIDA               5  ['OP-M-02-ACCOMPLISH', 'OP-M-02-ACTIVATE', 'OP-M-02-ADMIT', 'OP-M-02-ASSESS', 'OP-M-02-MEDIOS']
+     FUSION PENDIENTE        6  ['OP-M-01-FUSION', 'OP-M-02-ACCLIMATE', 'OP-M-03-III', 'OP-M-05-APERTURA', 'OP-M-05-EDIFICIO', 'OP-M-05-INDICE']
+
+==============================================================================
+BLOQUE 1.b: LOS REGISTROS DE LOS DOS ABRIDORES, QUE ES SU DESTINO
+==============================================================================
+
+  --- OP-U-01: 14 cabeceras de nivel 2 en 03_FUSIONES.md ---
+     linea 185   ## `OP-U-01`: LOS ACTOS CERRADOS . **LISTA**
+     linea 264   ## `OP-U-01` ABIERTA: **LA LECTURA DE CERO Y EL LOTE RE-MEDIDO** (19 ago 2026, vuelta 47)
+     linea 358   ## `OP-U-01`, TRAMO 1: **DIECISEIS ACTOS FUNDIDOS Y CINCO DECLARADOS** (19 ago 2026, vuelta 48)
+     linea 559   ## `OP-U-01`, TRAMO 1, CIERRE PARCIAL: **LOS DOS EMPATES ADJUDICADOS, LA PRIMERA LECTURA `P.12` 
+     linea 709   ## `OP-U-01`, TRAMO 1, LA VUELTA 50: **EL BARRIDO QUE LA VUELTA 49 NO CORRIO AL CERRAR, Y UN ALI
+     linea 957   ## `OP-U-01`, TRAMO 1, LA VUELTA 51: **CUATRO ACTOS, CUATRO LECTURAS `P.12`, Y UN INSTRUMENTO QU
+     linea 1098  ## `OP-U-01`, TRAMO 1, LA VUELTA 52: **TRES ACTOS FUNDIDOS, EL CARRIL DEL FILO ESTRENADO, Y CINC
+     linea 1313  ## `OP-U-01`, TRAMO 1, LA VUELTA 53: **EL TRAMO 1 QUEDA CERRADO. DOCE ACTOS FUNDIDOS, UN ACTO MA
+     linea 1518  ## `OP-U-01`, TRAMO 2: **ABIERTO Y CON VEINTIUN ACTOS FUNDIDOS. LOS CINCUENTA SON DE FUSION PURA
+     linea 1706  ## `OP-U-01`, TRAMO 2 **CERRADO: 45 ACTOS FUNDIDOS DE 50 Y CINCO DECLARADOS** (20 ago 2026, vuel
+     linea 1976  ## `OP-U-01`, TRAMO 3 **ABIERTO Y CERRADO EN LA MISMA VUELTA: 47 ACTOS FUNDIDOS DE 50 Y TRES DEC
+     linea 2209  ## `OP-U-01`, TRAMO 4: EL REGISTRO DEL CIERRE (20 ago 2026, vuelta 57)
+     linea 2496  ## `OP-U-01`, TRAMO 5: EL REGISTRO DEL CIERRE (20 ago 2026, vuelta 60)
+     linea 2782  ## `OP-U-01`, TRAMO 6: EL REGISTRO DEL CIERRE (20 ago 2026, vuelta 62)
+
+  --- OP-U-02: 11 cabeceras de nivel 2 en 03_FUSIONES.md ---
+     linea 221   ## `OP-U-02`: LOS ACTOS ABIERTOS . **espera al cierre**
+     linea 3259  ## `OP-U-02`: **LA APERTURA MEDIDA, SIN FUNDIR NI UN ACTO** (20 ago 2026, vuelta 63)
+     linea 3732  ## `OP-U-02, TRAMO UNICO Y FINAL POR AGOTAMIENTO: EL REGISTRO DEL LOTE A` (2026-08-20, vuelta 65
+     linea 4080  ## `OP-U-02, TRAMO UNICO: EL REGISTRO DEL LOTE B` (2026-08-20, vuelta 66)
+     linea 4621  ## `OP-U-02, TRAMO UNICO: EL REGISTRO DEL LOTE C` (2026-08-25, vuelta 67)
+     linea 5218  ## `OP-U-02, TRAMO UNICO: EL REGISTRO DEL LOTE D` (2026-08-26, vuelta 68)
+     linea 5742  ## `OP-U-02, TRAMO UNICO: EL REGISTRO DEL LOTE E` (2026-08-26, vuelta 69)
+     linea 6360  ## `OP-U-02, TRAMO UNICO: EL REGISTRO DEL LOTE F` (2026-08-26, vuelta 70)
+     linea 7055  ## `OP-U-02, TRAMO UNICO: EL REGISTRO DEL LOTE G` (2026-08-26, vuelta 71)
+     linea 7774  ## `OP-U-02, TRAMO UNICO: EL REGISTRO DEL LOTE H` (2026-08-26, vuelta 72)
+     linea 8532  ## `OP-U-02, TRAMO UNICO: EL REGISTRO DEL LOTE I` (2026-08-26, vuelta 73)
+
+==============================================================================
+BLOQUE 2: LOS DECLARADOS Y NO FUNDIDOS, MEDIDOS POR DOS VIAS
+==============================================================================
+
+  fichero fijado del tramo : docs/loop/TRAMO_UNICO_OPU02_V64.jsonl (47 filas)
+  region de los registros  : desde la linea 3732 (## `OP-U-02, TRAMO UNICO Y FINAL POR AGOTAMIENTO: EL REGISTR)
+
+  VIA A, SOBRE EL GRAFO DE HOY (un acto ABIERTO es el que conserva DOS o mas vivos):
+     actos FUNDIDOS (un vivo o ninguno)          : 30
+     actos ABIERTOS                              : 17 [1, 5, 10, 11, 12, 13, 14, 15, 17, 20, 21, 23, 24, 27, 31, 37, 44]
+
+  VIA B, SOBRE LA PAGINA (sedes con la frase DECLARADO Y NO FUNDIDO):
+     actos con al menos una sede                 : 15 [1, 5, 10, 11, 12, 13, 14, 15, 17, 20, 21, 23, 24, 27, 44]
+
+  LAS DOS VIAS, CRUZADAS:
+     ABIERTOS que la pagina DECLARA              : 15 [1, 5, 10, 11, 12, 13, 14, 15, 17, 20, 21, 23, 24, 27, 44]
+     ABIERTOS que la pagina NO declara           : 2 [31, 37]
+     declarados en la pagina que YA NO estan abiertos: []
+     de los NO declarados, CON dueno             : 2 [31, 37]
+     de los NO declarados, SIN dueno NI destino  : 0 []
+     DECLARADOS que ademas tienen dueno          : 1 [24]
+
+  LOS DECLARADOS, UNO A UNO, CON SUS PUERTAS Y SU MOTIVO CITADO:
+
+     acto 1   miembros 15 vivos 15 PUERTAS 2 ['enfoque_situacional_vs_personal', 'fallas_activas_condiciones_latentes']
+        nomina viva : cultura_de_seguridad_interpretivista_funcionalista, enfoque_situacional_vs_personal, error_humano_vs_falla_mecanica, errores_como_consecuencia, falla_sistemica_vs_error_individual, fallas_activas_condiciones_latentes, human_error_como_sintoma, new_view_human_error, new_view_vs_old_view, nueva_vision_organizacion_linea_seguridad, old_view_vs_new_view_human_error, preguntar_que_no_quien, riesgos_del_enfoque_en_error_humano, seduccion_modelo_persona, vieja_vision_vs_nueva_vision_seguridad
+        sede linea 3744  ### a) **EL ACTO 1: `DECLARADO Y NO FUNDIDO` POR `P.10`, Y ES LA PRIMERA VEZ QUE LA 
+        sede linea 4021  puente cierran `DECLARADOS Y NO FUNDIDOS` con motivo sellado, como el acto 1**.
+        motivos que la sede cita: ['P.10']
+
+     acto 5   miembros 8  vivos 8  PUERTAS 0 
+        nomina viva : build_measure_learn, ciclo_construir_medir_aprender, ciclo_crear_medir_aprender, desarrollo_en_espiral, design_test_repeat, design_thinking_proceso, startup_como_experimento_cientifico, testing_process_completo
+        sede linea 4365  ### d) **EL `ACTO 5`: `DECLARADO Y NO FUNDIDO` POR `P.5`, Y ES LA PRIMERA VEZ QUE LA
+        sede linea 4505  | **`D1`** | **declarar el `ACTO 5` por la pregunta de `P.5` cuando `P.10` NO se dis
+        motivos que la sede cita: ['P.10', 'P.5']
+
+     acto 10  miembros 6  vivos 6  PUERTAS 0 
+        nomina viva : customer_validation_sales_roadmap, estrategia_de_ventas, hoja_de_ruta_de_ventas, refinar_sales_roadmap, sales_roadmap, sales_roadmap_vs_sales_force
+        sede linea 4419  ### e) **LOS `ACTOS 10` Y `11`: `DECLARADOS Y NO FUNDIDOS` POR `P.10`, CON SU TRIANG
+        motivos que la sede cita: ['P.10']
+
+     acto 11  miembros 5  vivos 5  PUERTAS 0 
+        nomina viva : alineacion_etica_ia_negocio, human_in_the_loop_ia, mitigar_falling_asleep_wheel, principio_humano_en_el_loop, riesgo_sobredependencia_ia
+        sede linea 4419  ### e) **LOS `ACTOS 10` Y `11`: `DECLARADOS Y NO FUNDIDOS` POR `P.10`, CON SU TRIANG
+        sede linea 5330  | **el CINCO** | **el `acto 11` del tramo**, que ya cerro **`DECLARADO Y NO FUNDIDO`
+        motivos que la sede cita: ['P.10']
+
+     acto 12  miembros 5  vivos 5  PUERTAS 0 
+        nomina viva : cash_burn_calculation, metrics_that_matter_framework, validacion_hipotesis_ingresos, validar_modelo_financiero, verificar_modelo_ingresos
+        sede linea 4631  | **12** | 5 | **`DECLARADO Y NO FUNDIDO`**, y su motivo NO tiene letra: **PENDIENTE
+        sede linea 4797  ### b) **EL `ACTO 12`: `DECLARADO Y NO FUNDIDO` POR ALGO QUE NINGUNA LETRA CUBRE, Y 
+        sede linea 5144  > directo interno que la fusion entera desmentiria**. **El `ACTO 12` cierra `DECLARA
+        motivos que la sede cita: ['D directo interno', 'PENDIENTE DE DOCTRINA']
+
+     acto 13  miembros 5  vivos 5  PUERTAS 2 ['hipotesis_de_canales', 'seleccion_canal_distribucion']
+        nomina viva : channels_hypothesis_physical, channels_hypothesis_web_mobile, hipotesis_de_canales, seleccion_canal_distribucion, seleccion_canal_fisico
+        sede linea 4632  | **13** | 5 | **`DECLARADO Y NO FUNDIDO` por la guarda `1B`** | ninguno se elige |
+        motivos que la sede cita: ['guarda 1B']
+
+     acto 14  miembros 5  vivos 5  PUERTAS 0 
+        nomina viva : construccion_de_leverage, estrategia_competencia_vcs, gestion_multiples_term_sheets, leverage_en_negociacion_con_vcs, tecnica_anclaje_negociacion
+        sede linea 4633  | **14** | 5 | **`DECLARADO Y NO FUNDIDO` por `P.5`** | ninguno se elige |
+        sede linea 4920  ### d) **EL `ACTO 14`: `DECLARADO Y NO FUNDIDO` POR `P.5`, Y ES EL SEGUNDO USO DEL C
+        motivos que la sede cita: ['P.5']
+
+     acto 15  miembros 5  vivos 5  PUERTAS 2 ['ecuacion_de_valor', 'prevencion_objeciones_vs_manejo']
+        nomina viva : construccion_de_valor_percibido, ecuacion_de_valor, ecuacion_de_valor_cliente, ecuacion_de_valor_venta, prevencion_objeciones_vs_manejo
+        sede linea 4634  | **15** | 5 | **`DECLARADO Y NO FUNDIDO` por la guarda `1B`** | ninguno se elige |
+        motivos que la sede cita: ['guarda 1B']
+
+     acto 17  miembros 5  vivos 5  PUERTAS 1 ['estrategia_de_innovacion_y_tecnologia']
+        nomina viva : estrategia_de_innovacion_arenas, estrategia_de_innovacion_de_producto, estrategia_de_innovacion_y_tecnologia, estrategia_innovacion_producto, seleccion_arenas_estrategicas
+        sede linea 4636  | **17** | 5 | **`DECLARADO Y NO FUNDIDO` por `P.10`** | ninguno se elige |
+        sede linea 4962  ### e) **EL `ACTO 17`: `DECLARADO Y NO FUNDIDO` POR `P.10`, CON SU TRIANGULO MEDIDO,
+        motivos que la sede cita: ['P.10']
+
+     acto 20  miembros 4  vivos 4  PUERTAS 0 
+        nomina viva : colaboracion_cadena_suministro, compartir_datos_cadena_suministro, diagnostico_efecto_latigo, efecto_bullwhip
+        sede linea 5239  | **20** | 4 | **`DECLARADO Y NO FUNDIDO`** | **`P.10`**, triangulo medido | ninguno
+        sede linea 5396  ### c) **LOS `ACTOS 20`, `21`, `23` Y `24`: `DECLARADOS Y NO FUNDIDOS` POR `P.10`, C
+        motivos que la sede cita: ['P.10']
+
+     acto 21  miembros 4  vivos 4  PUERTAS 0 
+        nomina viva : compra_por_precio_mas_bajo_como_error, fin_precio_como_criterio_unico, relacion_largo_plazo_proveedor_unico, relaciones_largo_plazo_con_proveedores
+        sede linea 5240  | **21** | 4 | **`DECLARADO Y NO FUNDIDO`** | **`P.10`**, dos triangulos medidos | n
+        motivos que la sede cita: ['P.10']
+
+     acto 23  miembros 4  vivos 4  PUERTAS 0 
+        nomina viva : creacion_option_pool, employee_pool_esop, option_pool_negociacion, pool_opciones_empleados
+        sede linea 5242  | **23** | 4 | **`DECLARADO Y NO FUNDIDO`** | **`P.10`**, triangulo medido | ninguno
+        motivos que la sede cita: ['P.10']
+
+     acto 24  miembros 4  vivos 4  PUERTAS 0   DUENO ['OP-S-07']
+        nomina viva : disenar_tests_pass_fail, diseno_experimentos_hipotesis, diseno_experimentos_pass_fail, realizar_pruebas_pasa_no_pasa
+        sede linea 5243  | **24** | 4 | **`DECLARADO Y NO FUNDIDO`** | **`P.10`**, dos triangulos, **la figur
+        sede linea 5396  ### c) **LOS `ACTOS 20`, `21`, `23` Y `24`: `DECLARADOS Y NO FUNDIDOS` POR `P.10`, C
+        motivos que la sede cita: ['P.10']
+
+     acto 27  miembros 4  vivos 4  PUERTAS 0 
+        nomina viva : fase_diseno_prototipado_modelos, proceso_ideacion_modelo_negocio, prototipado_modelos_negocio, prototyping_possibilities
+        sede linea 5773  | **27** | 4 | `TODAS DE ACUERDO` | **`DECLARADO Y NO FUNDIDO`** | **no llega a apli
+        sede linea 6043  ### e) **EL `ACTO 27`: `DECLARADO Y NO FUNDIDO` POR `P.10`, CON LA `ESTRELLA` ENCIMA
+        motivos que la sede cita: ['P.10']
+
+     acto 44  miembros 3  vivos 3  PUERTAS 2 ['explotacion_tecnologias_disruptivas', 'tecnologias_disruptivas_oportunidad']
+        nomina viva : evaluacion_tecnologias_disruptivas, explotacion_tecnologias_disruptivas, tecnologias_disruptivas_oportunidad
+        sede linea 7790  CIERRA `DECLARADO Y NO FUNDIDO`**: el `acto 44`, **por LA GUARDA `1B` con DOS puerta
+        sede linea 7797  | **44** | 3 | **`DECLARADO Y NO FUNDIDO`** | `UNA SOLA VARA` | **NINGUNO**, y ningu
+        sede linea 7897  ### b) **EL `ACTO 44`: `DECLARADO Y NO FUNDIDO` POR LA GUARDA `1B`, CON DOS PUERTAS,
+        sede linea 9203  | **los `DECLARADOS Y NO FUNDIDOS` con su subconjunto descrito** | **QUINCE**, **con
+        motivos que la sede cita: ['guarda 1B']
+
+==============================================================================
+BLOQUE 3: LOS ACTOS CON DUENO, CON EL DUENO RE-MEDIDO CAMPO A CAMPO
+==============================================================================
+
+  LA VARA ES LA DE LA ADJUDICACION 2 DEL ACTA 68: el dueno de un acto es
+  toda ficha que nombre a alguno de sus miembros en nodos, preservar o
+  eliminar. Se cruza contra LAS 71 FICHAS, no contra las de una fase.
+
+  --- acto 31: 3 miembros, 3 vivos ---
+     miembros: analisis_trafico_competitivo, captura_conocimiento_mercado, capturar_conocimiento_de_mercado
+     duenos escritos en el fichero del tramo : ['OP-F-04-WEI', 'OP-S-04']
+     duenos RE-MEDIDOS campo a campo          : ['OP-F-04-WEI', 'OP-S-04']
+     las dos vias coinciden                   : SI
+        OP-F-04-WEI    fase=01_FUENTES   estado=LISTA   tipo=DECISION_DE_FUENTE
+           campo nodos      -> ['analisis_trafico_competitivo']
+           SU FASE ES LA 01_FUENTES: FUERA de la fase 03_FUSIONES
+        OP-S-04        fase=05_SANEO     estado=LISTA   tipo=HERRAMIENTA
+           campo nodos      -> ['analisis_trafico_competitivo', 'capturar_conocimiento_de_mercado']
+           SU FASE ES LA 05_SANEO: FUERA de la fase 03_FUSIONES
+
+  --- acto 37: 3 miembros, 3 vivos ---
+     miembros: crowdfunding_legal_exemptions_jobs_act, cumplimiento_inversionistas_acreditados, equity_crowdfunding
+     duenos escritos en el fichero del tramo : ['OP-S-07']
+     duenos RE-MEDIDOS campo a campo          : ['OP-S-07']
+     las dos vias coinciden                   : SI
+        OP-S-07        fase=00_CODIGO    estado=LISTA   tipo=CAMPO_SUCIO
+           campo nodos      -> ['cumplimiento_inversionistas_acreditados']
+           SU FASE ES LA 00_CODIGO: FUERA de la fase 03_FUSIONES
+
+==============================================================================
+BLOQUE 4: LA MESA OP-M-03, SU FICHA LEIDA ENTERA
+==============================================================================
+
+  id_op       : OP-M-03
+  FASE        : 06_MESAS
+  tipo        : MESA ADJUDICADA: DOS PUERTAS MAS UN ACTO
+  estado      : LISTA
+  orden       : 3   fecha_corte: 2026-08-12
+  nodos       : []
+  depende_de  : []
+  bloquea_a   : ['OP-D-07', 'OP-M-03-I', 'OP-M-03-II', 'OP-M-03-III', 'OP-M-03-ENLACES', 'OP-S-12']
+  pregunta_pendiente: None
+  adjudicacion: 1918 caracteres, ADJUDICADA
+  la adjudicacion, entera:
+     ADJUDICADA POR EL AUDITOR EL 12 ago 2026. EL CRITERIO, RESPONDIDO: NO HAY UNA PUERTA EN
+     DOS LIBROS. HAY DOS PUERTAS DISTINTAS DEL PROCESO MAS UN ACTO. La puerta de METRICAS es
+     recurrente y es de Ries: se cruza cada vez que el motor se mide. La puerta de la REUNION
+     DEL DESCUBRIMIENTO es de Blank: se cruza una vez, al final de la prueba del problema. Y
+     el ACTO de pivotar es lo que se hace despues de cualquiera de las dos. PROBADO POR TRES
+     VIAS QUE COINCIDEN. UNA, los TRES pares sanos: el 1245 separa decidir si se pivota de
+     ejecutar el pivote, el 1312 separa el marco de la puerta del acto de pivotar, y el 1320
+     separa fijar la linea base de distinguir que clase de cambio es. LOS TRES SEPARAN LO
+     MISMO: LA PUERTA DEL ACTO. DOS, la forma unica de los seis dudosos: los SEIS son
+     metricas contra reunion, ninguno es puerta contra acto. TRES, las aristas sirven
+     maquinarias distintas: la puerta de metricas cuelga del ciclo crear medir aprender, de
+     afinar el motor de crecimiento y de la contabilidad de innovacion, y desemboca en
+     establecer la linea base del MVP; la puerta de la reunion cuelga del scorecard de
+     descubrimiento, del mapa de flujo de trabajo del cliente y de las categorias de
+     entusiasmo, y desemboca en los checkpoints de validacion y en identificar
+     earlyvangelists. NO SON DOS NOMBRES DE LO MISMO: SON DOS MAQUINARIAS. CONSECUENCIA SOBRE
+     LOS DUDOSOS: LOS SEIS B CRUZADOS Y EL 753 SE RESUELVEN POR EL CRITERIO COMO SANOS, y en
+     cada razon se cita el criterio en vez de repetir el analisis. Los puestos 771, 843, 957
+     y 1298 son metricas contra reunion, o sea DOS PUERTAS distintas: sanos. El 668 y el 737
+     se resuelven como PUERTA CONTRA ACTO CON ENLACE: el 668 es la reunion de Blank contra el
+     acto de pivotar, y el 737 es la puerta de metricas de Ries contra el mismo acto. El 753
+     es el acto contra un nodo de despues del pivote: sano por el mismo eje. LA FORMA FINAL
+     DEL RACIMO: DE SIETE NODOS A TRES.
+
+  verificacion (4 puntos):
+     - las siete clases se reescriben CITANDO EL CRITERIO, no repitiendo el analisis: si una razon nueva no lo cita, 
+     - ninguna de las siete reescrituras cambia un veredicto por gusto: las cuatro cruzadas pasan de B a D y las dos 
+     - el racimo termina con TRES nodos y no con uno: si termina con uno, se fundio una puerta con la otra
+     - las tres fusiones traen su simulacion por P.7
+
+  LO QUE BLOQUEA, CON LA FASE DE CADA UNO LEIDA DE SU PROPIA FICHA:
+     OP-D-07            fase=02_DESTEJIDOS estado=LISTA   
+     OP-M-03-I          fase=03_FUSIONES  estado=LISTA   DE LA FASE 03_FUSIONES
+     OP-M-03-II         fase=03_FUSIONES  estado=LISTA   DE LA FASE 03_FUSIONES
+     OP-M-03-III        fase=03_FUSIONES  estado=LISTA   DE LA FASE 03_FUSIONES
+     OP-M-03-ENLACES    fase=04_ENLACES   estado=LISTA   
+     OP-S-12            fase=05_SANEO     estado=LISTA   
+
+  LA LETRA, DICHA CON LA FICHA DELANTE: el campo fase de OP-M-03 dice 06_MESAS.
+  NO pertenece a la fase 03_FUSIONES.
+
+==============================================================================
+BLOQUE 4.b: QUIEN BLOQUEA A LAS FICHAS DE LA FASE 03_FUSIONES QUE SIGUEN PENDIENTES
+==============================================================================
+
+  fichas de la fase 03_FUSIONES con FUSION PENDIENTE: 6 ['OP-M-01-FUSION', 'OP-M-02-ACCLIMATE', 'OP-M-03-III', 'OP-M-05-APERTURA', 'OP-M-05-EDIFICIO', 'OP-M-05-INDICE']
+
+  | quien bloquea | su fase | su estado | a cuantas | cuales |
+  |---|---|---|---:|---|
+  | OP-M-01 | 06_MESAS | LISTA | 1 | OP-M-01-FUSION |
+  | OP-M-02 | 06_MESAS | LISTA | 1 | OP-M-02-ACCLIMATE |
+  | OP-M-02-MEDIOS | 03_FUSIONES | LISTA | 1 | OP-M-02-ACCLIMATE |
+  | OP-M-03 | 06_MESAS | LISTA | 1 | OP-M-03-III |
+  | OP-M-03-II | 03_FUSIONES | LISTA | 3 | OP-M-05-APERTURA, OP-M-05-EDIFICIO, OP-M-05-INDICE |
+  | OP-M-04 | 06_MESAS | LISTA | 3 | OP-M-05-APERTURA, OP-M-05-EDIFICIO, OP-M-05-INDICE |
+  | OP-M-05 | 06_MESAS | LISTA | 3 | OP-M-05-APERTURA, OP-M-05-EDIFICIO, OP-M-05-INDICE |
+
+  bloqueadores de FUERA de la fase 03_FUSIONES : 5 ['OP-M-01', 'OP-M-02', 'OP-M-03', 'OP-M-04', 'OP-M-05']
+  bloqueadores de DENTRO de la fase 03_FUSIONES: 2 ['OP-M-02-MEDIOS', 'OP-M-03-II']
+
+==============================================================================
+BLOQUE 4.c: LAS MESAS QUE ESTORBAN, LEIDAS UNA A UNA. NINGUNA SE SIENTA.
+==============================================================================
+
+  mesas de la fase 06_MESAS en el arbol de bloqueo: 5 ['OP-M-01', 'OP-M-02', 'OP-M-03', 'OP-M-04', 'OP-M-05']
+
+  | mesa | fase | estado | adjudicacion | pregunta_pendiente | bloquea_a |
+  |---|---|---|---|---|---:|
+  | OP-M-01 | 06_MESAS | LISTA | ADJUDICADA, 956 caracteres | ninguna | 5 |
+  | OP-M-02 | 06_MESAS | LISTA | ADJUDICADA, 1559 caracteres | ninguna | 8 |
+  | OP-M-03 | 06_MESAS | LISTA | ADJUDICADA, 1918 caracteres | ninguna | 6 |
+  | OP-M-04 | 06_MESAS | LISTA | ADJUDICADA, 1935 caracteres | ninguna | 2 |
+  | OP-M-05 | 06_MESAS | LISTA | ADJUDICADA, 758 caracteres | ninguna | 4 |
+
+  para contraste, TODAS las fichas de la fase 06_MESAS: 5 ['OP-M-01', 'OP-M-02', 'OP-M-03', 'OP-M-04', 'OP-M-05']
+  de esas, SIN adjudicacion escrita: 0 []
+
+==============================================================================
+BLOQUE 5: EL VEREDICTO MEDIDO, PIEZA A PIEZA. NO DECIDE: MIDE.
+==============================================================================
+
+  | pieza | lo medido | estado | nota |
+  |---|---|---|---|
+  | fichas de la fase 03_FUSIONES con FUSION PENDIENTE | 6 de 16 | PENDIENTE | OP-M-01-FUSION, OP-M-02-ACCLIMATE, OP-M-03-III, OP-M-05-APERTURA, OP-M-05-EDIFICIO, OP-M-05-INDICE |
+  | actos del tramo SIN declaracion y SIN dueno | 0 | LISTA | medido en el bloque 2 por las dos vias: todo acto abierto o esta DECLARADO o tiene dueno |
+  | actos DECLARADOS Y NO FUNDIDOS | 15 actos, 82 nodos | PENDIENTE | su subconjunto es pregunta abierta, no se resuelve aqui |
+  | actos con DUENO fuera de la fase 03_FUSIONES | 2 actos, 6 nodos | PENDIENTE | sus duenos y sus fases van medidos en el bloque 3 |
+  | la mesa OP-M-03 | fase 06_MESAS | FUERA DE LA FASE | bloquea a 6 fichas, y las de la fase 03_FUSIONES van nombradas en el bloque 4 |
+  | mesas y fichas que BLOQUEAN a las pendientes de la fase 03_FUSIONES | 7 bloqueadores distintos | PENDIENTE | OP-M-01, OP-M-02, OP-M-02-MEDIOS, OP-M-03, OP-M-03-II, OP-M-04, OP-M-05 |
+
+  LO QUE ESTE INSTRUMENTO NO HACE, Y SE DICE PARA QUE NADIE LO LEA DE MAS:
+     no decide si la fase 03_FUSIONES esta CERRADA Y VERIFICADA;
+     no abre la fase 04; no funde; no declara; no sienta la mesa;
+     no toca un nodo. La parada la escribe el auditor, no este fichero.
+
+FIN
