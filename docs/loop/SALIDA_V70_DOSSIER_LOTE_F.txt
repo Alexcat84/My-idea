@@ -1,0 +1,371 @@
+==============================================================================
+DOSSIER DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO: EL ACTO LEIDO ENTERO (P.5) CON SU RAZON
+==============================================================================
+  nodos leidos de: el arbol de trabajo
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+
+##############################################################################
+# ACTO 32 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 908, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): encontrar_grandes_problemas_mercados_emergentes
+     nodo_b (EL SEGUNDO de la razon): resolver_problemas_grandes
+     RAZON ENTERA, sin recortar:
+       LA MISMA BUSQUEDA DE PROBLEMAS GRANDES, del mismo libro y sin arista entre ellos, y los cuatro pasos se emparejan uno a uno. Los dos mandan lo mismo: buscar un mercado con insatisfaccion alta, listar los problemas y puntos de dolor que los competidores actuales no resuelven, evaluar las competencias centrales propias para ver si pueden resolverlos, y disenar una solucion de SISTEMA integrado en vez de un producto aislado. Cuatro contra cuatro. La UNICA diferencia esta en donde mirar: encontrar_grandes_problemas_mercados_emergentes manda mercados en fase embrionaria o de rapido crecimiento, y resolver_problemas_grandes manda mercados EXISTENTES, con la aclaracion explicita de que no hace falta un oceano azul. Esa diferencia no es contradiccion sino cobertura, y es justo lo que hay que salvar en la fusion: el nodo superviviente tiene que decir que la busqueda vale en los dos sitios.
+
+  [PAR] puesto 1507, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): atacar_mercados_establecidos_con_problema
+     nodo_b (EL SEGUNDO de la razon): encontrar_grandes_problemas_mercados_emergentes
+     RAZON ENTERA, sin recortar:
+       EL MISMO METODO DE CAZA CON DOS COTOS, del mismo libro y sin arista entre ellos. LOS CUATRO PASOS SE CORRESPONDEN UNO A UNO Y EN EL MISMO ORDEN: identificar el mercado, listar los problemas o tareas dificiles que enfrentan sus clientes, evaluar si la empresa tiene fortalezas o capacidades unicas para resolverlos, y validar o disenar antes de invertir. Lo unico que cambia entre los dos nodos es el PARAMETRO: en uno el coto son mercados grandes y maduros con necesidades sin resolver, en el otro son mercados embrionarios o de rapido crecimiento. Es el mismo procedimiento escrito dos veces con el tipo de mercado cambiado. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De atacar_mercados_establecidos_con_problema se perderian dos: el coto de los MERCADOS MADUROS con grandes desafios sin resolver, que es la unica linea del catalogo que manda buscar en lo viejo y no en lo nuevo; y VALIDAR EL TAMANO DEL PROBLEMA Y EL POTENCIAL DE MERCADO ANTES DE INVERTIR, que es el unico freno economico del par. De encontrar_grandes_problemas_mercados_emergentes se perderian otras dos: el coto de los MERCADOS EMBRIONARIOS o de rapido crecimiento, y DISENAR UNA SOLUCION INTEGRAL que ataque los puntos de dolor principales, que es el unico paso que llega hasta la solucion. NOTA DE NOMINA: encontrar_grandes_problemas_mercados_emergentes ya tenia gemelo, el puesto 908; con este par la familia de la busqueda de problemas grandes pasa a TRES nodos por cierre transitivo, y su cobertura es de 2 de 3.
+
+  --- atacar_mercados_establecidos_con_problema
+      titulo    : Atacar Grandes Mercados Establecidos con un 'Itch' sin Resolver
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Identificar mercados grandes y maduros con necesidades no resueltas a largo plazo (grand challenges)
+      paso 2: Investigar qué tareas importantes son difíciles o costosas para el cliente en ese mercado
+      paso 3: Evaluar si la empresa puede aplicar sus fortalezas para simplificar esa tarea
+      paso 4: Validar el tamaño del problema y el potencial de mercado antes de invertir
+      cond 1: Cuando la empresa opera en mercados maduros pero busca innovación disruptiva
+      cond 2: Cuando existen 'grandes desafíos' sociales o industriales sin resolver
+      previos   : ['atestiguar_sin_prejuicios', 'estrategia_expansion_centros_distribucion']
+      siguientes: ['seleccion_arenas_estrategicas']
+      entregable: Informe de mercado establecido con 'itch' identificado y propuesta de cómo la empresa podría resolverlo
+
+  --- encontrar_grandes_problemas_mercados_emergentes
+      titulo    : Encontrar Grandes Problemas en Mercados Nuevos y Crecientes
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Identificar mercados en fase embrionaria o de rápido crecimiento
+      paso 2: Listar los problemas y frustraciones que enfrentan los clientes en ese mercado
+      paso 3: Evaluar si la empresa tiene capacidades únicas (diseño, tecnología) para resolver esos problemas
+      paso 4: Diseñar una solución integral que ataque los puntos de dolor principales
+      cond 1: Cuando se busca un mercado de alto potencial de crecimiento
+      cond 2: Cuando existe un mercado con múltiples competidores pero ninguno resuelve bien el problema del cliente
+      previos   : ['analisis_y_sintesis']
+      siguientes: ['seleccion_arenas_estrategicas']
+      entregable: Documento con mercado emergente identificado y lista de problemas no resueltos que la empresa podría atacar
+
+  --- resolver_problemas_grandes
+      titulo    : Encontrar Grandes Problemas, Crear Grandes Soluciones
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Investigar mercados existentes (no necesariamente 'océanos azules') buscando alta insatisfacción del usuario.
+      paso 2: Identificar los 'puntos de dolor' (pain points) específicos que los competidores actuales no resuelven.
+      paso 3: Evaluar las fortalezas centrales (core competencies) de la propia empresa para ver cómo se pueden aplicar a ese problema.
+      paso 4: Diseñar una solución de 'sistema' integrado en lugar de solo un producto aislado.
+      cond 1: Cuando el equipo cree que necesita 'inventar' tecnología nueva para innovar, pero carece de I+D radical.
+      cond 2: En mercados maduros y comoditizados donde parece no haber espacio para la innovación.
+      previos   : ['encontrar_el_golpe_mental']
+      siguientes: ['estrategia_de_innovacion_arenas']
+      entregable: Una definición del 'gran problema' del cliente y un boceto de la solución sistémica propuesta (hardware+software+servicio).
+
+##############################################################################
+# ACTO 33 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 403, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): intimation_illumination
+     nodo_b (EL SEGUNDO de la razon): wallas_intimacion_fringe_consciousness
+     RAZON ENTERA, sin recortar:
+       REPITE con wallas_intimacion_fringe_consciousness. Los dos desarrollan la misma sub-etapa de Wallas y del mismo libro, y sus pasos se corresponden uno a uno: entrenar la atencion para notar la sensacion difusa de que algo se esta gestando, dedicarle atencion voluntaria en vez de ignorarla, sostener o prolongar deliberadamente esa linea de pensamiento, y registrarla como senal temprana. DATO QUE DECIDE CUAL SOBREVIVE, verificado contra el grafo y anticipado en el puesto 279: la madre wallas_etapa_iluminacion tiene arista con wallas_intimacion_fringe_consciousness y NO la tiene con intimation_illumination. El primero es el gemelo sin casa.
+
+  [PAR] puesto 1510, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): atencion_focal_y_periferica
+     nodo_b (EL SEGUNDO de la razon): wallas_intimacion_fringe_consciousness
+     RAZON ENTERA, sin recortar:
+       LA MISMA CONCIENCIA PERIFERICA DOS VECES, del mismo libro y sin arista entre ellos. DOS de los TRES pasos de atencion_focal_y_periferica tienen su correspondiente exacto: dedicar tiempo a notar los pensamientos perifericos sin forzarlos es entrenar la atencion para notar sensaciones sutiles de que algo se esta gestando; y registrar por escrito las ideas marginales que surgen mientras se trabaja es registrar esas sensaciones como senales tempranas. Con dos de tres pasos compartidos, lo que queda es un matiz de tecnica. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De atencion_focal_y_periferica se perderia UNA: PRACTICAR LA INHIBICION de la tendencia natural a enfocar de inmediato cualquier estimulo interesante, que es la unica instruccion del catalogo que pide NO prestar atencion a proposito. De wallas_intimacion_fringe_consciousness se perderian dos: dedicar un momento de atencion voluntaria cuando se detecta la sensacion en vez de ignorarla, e INTENTAR SOSTENER O PROLONGAR deliberadamente la linea de pensamiento que la genera. Y conviene dejar dicho que esas dos perdidas estan en TENSION con la del otro lado: uno pide inhibir el foco ante cualquier estimulo, el otro pide darselo cuando la senal es la correcta. La fusion tiene que conservar las dos y decir cual es el disparador de cada una. NOTA DE NOMINA: wallas_intimacion_fringe_consciousness ya tenia gemelo, el puesto 403; la familia de la conciencia periferica pasa a TRES nodos por cierre transitivo.
+
+  --- atencion_focal_y_periferica
+      titulo    : Atención Focal y Periférica en el Pensamiento
+      fuente    : The Art of Thought - Wallas, Graham
+      pasos 3 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Durante sesiones de trabajo creativo, dedicar tiempo a notar pensamientos periféricos sin forzarlos inmediatamente al centro de atención
+      paso 2: Practicar la inhibición de la tendencia natural a enfocar de inmediato cualquier estímulo interesante
+      paso 3: Registrar (por escrito o grabación) ideas marginales que surgen mientras se trabaja en el problema principal
+      cond 1: Cuando el emprendedor busca técnicas para captar insights no evidentes durante la ideación
+      cond 2: Cuando se realiza investigación exploratoria o brainstorming
+      previos   : ['coordinacion_organica_de_elementos_independientes', 'analisis_y_sintesis']
+      siguientes: ['asociacion_de_ideas', 'limites_de_la_voluntad_sobre_el_pensamiento']
+      entregable: Un diario o bitácora de ideas periféricas capturadas durante el proceso de trabajo
+
+  --- intimation_illumination
+      titulo    : Intimación como Señal de Iluminación Inminente
+      fuente    : The Art of Thought - Wallas, Graham
+      pasos 3 | condiciones 2 | previos 3 | siguientes 6 | cableado 9
+      paso 1: Prestar atención periódica a sensaciones difusas de 'algo se está gestando' durante el trabajo creativo o de resolución de problemas.
+      paso 2: Registrar (mentalmente o por escrito) el momento en que aparece esa sensación de anticipación, sin forzar aún la conclusión.
+      paso 3: Evaluar si conviene sostener, prolongar o dejar madurar esa línea asociativa antes de intentar verbalizarla.
+      cond 1: Cuando el usuario sospecha que una idea está por surgir pero no puede formularla claramente.
+      cond 2: Cuando se busca mejorar la sensibilidad para captar insights emergentes en procesos creativos.
+      previos   : ['cuatro_etapas_del_pensamiento_creativo', 'wallas_etapa_preparacion', 'fenomeno_del_click']
+      siguientes: ['wallas_etapa_verificacion', 'reglas_brainstorming', 'esfuerzo_voluntario_vs_urge_espontaneo', 'emocion_e_imagen_en_el_pensamiento', 'proteccion_del_tren_asociativo', 'sentido_del_humor_como_herramienta_de_pensamiento']
+      entregable: Un registro o bitácora de momentos de intimación detectados durante sesiones de pensamiento/diseño, con notas sobre el contexto en que aparecieron.
+
+  --- wallas_intimacion_fringe_consciousness
+      titulo    : Intimación y Conciencia Periférica (Fringe-Consciousness)
+      fuente    : The Art of Thought - Wallas, Graham
+      pasos 4 | condiciones 1 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Entrenar la atención para notar sensaciones sutiles de 'algo se está gestando' antes de una idea clara.
+      paso 2: Cuando se detecte esta sensación, dedicar un momento de atención voluntaria en vez de ignorarla.
+      paso 3: Intentar sostener o prolongar deliberadamente una línea de pensamiento que genera esta sensación de aproximación.
+      paso 4: Registrar estas sensaciones como señales tempranas útiles para la gestión del proceso creativo personal o de equipo.
+      cond 1: Cuando un miembro del equipo reporta 'sentir que algo se acerca' sin poder aún articular la idea.
+      previos   : ['cuatro_etapas_del_pensamiento_creativo']
+      siguientes: ['wallas_etapa_verificacion', 'vision_periferica']
+      entregable: Una práctica personal o de equipo para reconocer y aprovechar señales tempranas de ideas emergentes antes del insight completo.
+
+##############################################################################
+# ACTO 34 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 2233, clase A, dominio health_safety
+     nodo_a (EL PRIMERO de la razon): ciclo_de_culpa
+     nodo_b (EL SEGUNDO de la razon): dysfunctional_organizational_culture_patterns
+     RAZON ENTERA, sin recortar:
+       REPITE. ciclo_de_culpa contra dysfunctional_organizational_culture_patterns, MISMA FUENTE, Reason, y sin arista: el primero es UNO de los patrones que el segundo cataloga. Sus cuatro pasos estan dentro del otro: los patrones de culpar y entrenar son su paso 3; si las correctivas atacan la causa raiz o el sintoma es su paso 4; si la organizacion resuelve o solo aparenta accion son sus pasos 2 y 4, los rituales repetidos sin evidencia de efectividad y las reacciones de evitacion de ansiedad; y redirigir hacia lo sistemico es su paso 4. dysfunctional_organizational_culture_patterns trae ademas lo que el otro no tiene: LA INDEFENSION APRENDIDA como sintoma medible, la falta de iniciativa ante riesgos, y el reflejo de la NUEVA NORMA como respuesta automatica distinta de la de culpar. Por la vara, REPITE. Sobrevive dysfunctional_organizational_culture_patterns.
+
+  [PAR] puesto 2272, clase A, dominio health_safety
+     nodo_a (EL PRIMERO de la razon): ciclo_de_culpa
+     nodo_b (EL SEGUNDO de la razon): ciclo_de_culpa_2
+     RAZON ENTERA, sin recortar:
+       REPITE, y es la SEGUNDA vez que este nodo repite en el dominio. ciclo_de_culpa contra ciclo_de_culpa_2, MISMA FUENTE, Reason, y sin arista. Sus cuatro pasos estan cubiertos: los patrones de culpar y entrenar son su paso 2, no usar sanciones ni advertencias como unica respuesta a errores recurrentes; la pregunta de si las correctivas atacan la causa raiz y la de si se resuelve o se aparenta son su paso 3, revisar los informes sin atribuir la causa solo a la accion humana; y redirigir hacia lo sistemico es su paso 4. ciclo_de_culpa_2 si trae dos cosas que el otro no tiene: LA TAXONOMIA DE CUATRO FACTORES QUE PRECEDEN AL ERROR, personales, de tarea, situacionales y organizacionales, que es un tablero por recorrer; y DIFERENCIAR ERROR GENUINO DE VIOLACION DELIBERADA ANTES DE DECIDIR COMO RESPONDER, que es la puerta de decision sin la cual todo lo demas es solo una postura. Por la vara, REPITE. Sobrevive ciclo_de_culpa_2.
+
+  --- ciclo_de_culpa
+      titulo    : El Ciclo de Culpa (Reacciones ante la Impotencia)
+      fuente    : Managing the Risks of Organizat - Reason, J. T_
+      pasos 4 | condiciones 2 | previos 2 | siguientes 4 | cableado 6
+      paso 1: Identificar patrones repetitivos de 'culpar y entrenar' tras incidentes
+      paso 2: Analizar si las medidas correctivas atacan causas raíz o solo síntomas superficiales
+      paso 3: Cuestionar si las respuestas organizacionales buscan resolver el problema o solo aparentar acción
+      paso 4: Redirigir el análisis de incidentes hacia factores sistémicos y organizacionales
+      cond 1: Cuando tras cada incidente la respuesta es siempre 'culpar y entrenar' o 'escribir otro procedimiento'
+      cond 2: Cuando la tasa de accidentes no mejora pese a las medidas correctivas repetidas
+      previos   : ['errores_como_consecuencia', 'gestion_de_errores']
+      siguientes: ['cultura_de_seguridad_componentes', 'cultura_justa', 'cultura_de_reporte', 'enfoque_situacional_vs_personal']
+      entregable: Documento de análisis crítico que identifique si la organización está atrapada en un ciclo de culpa reactivo
+
+  --- ciclo_de_culpa_2
+      titulo    : El Ciclo de la Culpa (Blame Cycle)
+      fuente    : Managing the Risks of Organizat - Reason, J. T_
+      pasos 5 | condiciones 3 | previos 2 | siguientes 3 | cableado 5
+      paso 1: Reconocer que las acciones humanas están casi siempre limitadas por factores fuera del control inmediato de la persona
+      paso 2: Evitar usar sanciones o advertencias como única respuesta a errores recurrentes
+      paso 3: Revisar tus registros o informes de incidentes evitando atribuir la causa solo a la acción humana
+      paso 4: Identificar los factores personales, de tarea, situacionales y organizacionales que precedieron al error
+      paso 5: Diferenciar entre error genuino y violación deliberada antes de decidir cómo responder
+      cond 1: Cuando respondes a errores repetidos únicamente con sanciones cada vez más duras
+      cond 2: Cuando los incidentes se repiten a pesar de advertencias o sanciones anteriores
+      cond 3: Al diseñar tu propio sistema o cultura de reporte justo de errores
+      previos   : ['errores_como_consecuencia', 'reconstruccion_contexto_situacional']
+      siguientes: ['enfoque_situacional_vs_personal', 'tripod_delta_general_failure_types', 'enfoque_situacional_vs_personal_2']
+      entregable: Un documento o política personal de gestión de errores que identifique causas sistémicas y rompa explícitamente el ciclo de culpa en lugar de solo señalar al individuo.
+
+  --- dysfunctional_organizational_culture_patterns
+      titulo    : Patrones Disfuncionales de Cultura Organizacional
+      fuente    : Managing the Risks of Organizat - Reason, J. T_
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Identificar si existen síntomas de indefensión aprendida en el personal (falta de iniciativa ante riesgos)
+      paso 2: Detectar rituales o procedimientos repetidos sin evidencia de efectividad real
+      paso 3: Cuestionar reacciones automáticas como 'nueva norma' o 'culpar y entrenar' tras incidentes
+      paso 4: Sustituir reacciones anxiety-avoidance por análisis genuino de causas raíz
+      cond 1: Cuando se observa apatía o resignación del personal frente a problemas de seguridad recurrentes
+      cond 2: Cuando las respuestas organizacionales a incidentes son repetitivas sin cambios sustanciales
+      previos   : ['normalizacion_de_la_desviacion']
+      siguientes: ['safety_culture_engineering']
+      entregable: Diagnóstico de patrones culturales disfuncionales presentes en la organización
+
+##############################################################################
+# ACTO 35 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 178, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): comunidad_tribu_marca
+     nodo_b (EL SEGUNDO de la razon): construccion_tribu_de_marca
+     RAZON ENTERA, sin recortar:
+       REPITE con construccion_tribu_de_marca. Los dos mandan definir el ethos de la marca mas alla del producto, crear los espacios y los simbolos donde los miembros se reconozcan entre si, y amplificar la identidad compartida. FIGURA: ids casi identicos. Candidato a fusion.
+
+  [PAR] puesto 880, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): construccion_tribu_de_marca
+     nodo_b (EL SEGUNDO de la razon): marcador_visual_marca
+     RAZON ENTERA, sin recortar:
+       LA MISMA TRIBU CON DOS NOMBRES, del mismo libro y sin arista entre ellos. Lo comun es el mecanismo entero: crear o identificar un elemento visual o simbolico distintivo asociado a la marca, facilitar que los clientes lo muestren con orgullo mediante merchandising o insignias, y fomentar la comunidad para que los miembros se reconozcan entre si. Lo propio de construccion_tribu_de_marca son dos piezas de fondo que el otro no tiene: definir el ethos y la historia de origen de la marca mas alla del producto funcional, e identificar que transformacion de identidad vive el cliente al usar el producto. Lo propio de marcador_visual_marca es uno de medicion: monitorear el efecto de reconocimiento que genera el simbolo. Candidato claro a fusion, y lo que hay que salvar es el ethos y la transformacion de identidad.
+
+  --- comunidad_tribu_marca
+      titulo    : Construcción de Comunidad/Tribu de Marca
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 6 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Definir el 'espíritu' o estilo de vida que representa la marca más allá del producto
+      paso 2: Crear espacios (físicos o digitales) donde los clientes leales puedan conectar entre sí
+      paso 3: Reforzar la narrativa de marca que conecta con la identidad personal de los clientes
+      paso 4: Facilitar que los miembros de la tribu se reconozcan entre sí
+      paso 5: Celebrar y amplificar las historias de los clientes más comprometidos
+      paso 6: Escuchar su feedback y darles voz visible dentro de la comunidad
+      cond 1: Cuando la marca tiene una base de clientes altamente comprometidos que podrían convertirse en embajadores o comunidad activa
+      previos   : ['marcador_visual_marca']
+      siguientes: ['comunidad_como_activo_estrategico']
+      entregable: Estrategia de comunidad de marca con espacios de conexión y narrativa de identidad definida
+
+  --- construccion_tribu_de_marca
+      titulo    : Construcción de Tribu de Marca
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 5 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Define el ethos y backstory de tu marca más allá del producto funcional
+      paso 2: Identifica qué transformación de identidad experimenta el cliente al usar tu producto
+      paso 3: Crea elementos visuales o simbólicos (merchandising, insignias) que permitan a clientes mostrar su afiliación
+      paso 4: Facilita espacios donde los miembros de la tribu puedan reconocerse entre sí
+      paso 5: Identificar rituales o símbolos que representen los valores centrales de la marca/comunidad
+      cond 1: Cuando el producto ya tiene una base de clientes fieles pero no existe una comunidad formal
+      cond 2: Si se busca aumentar el boca a boca mediante identidad compartida
+      previos   : ['value_proposition_startup', 'arquetipos_de_cliente']
+      siguientes: ['advocacy_customer_journey', 'enfoque_en_superfans']
+      entregable: Un statement de ethos de marca y al menos un artefacto simbólico de pertenencia para clientes leales
+
+  --- marcador_visual_marca
+      titulo    : Marcadores Visuales de Adopción de Marca
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 5 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Identificar o diseñar un elemento visual distintivo asociado al producto/marca
+      paso 2: Asegurar que sea fácilmente reconocible en contextos públicos/sociales
+      paso 3: Facilitar que los clientes lo muestren con orgullo (merchandising, packaging distintivo)
+      paso 4: Fomentar la creación de comunidad alrededor de ese símbolo visual
+      paso 5: Monitorear el efecto de reconocimiento de marca generado
+      cond 1: Cuando la marca busca generar reconocimiento social y marketing orgánico a través de sus clientes más leales
+      previos   : ['fase_adopt']
+      siguientes: ['comunidad_tribu_marca']
+      entregable: Elemento visual/símbolo de marca diseñado y estrategia para su difusión entre clientes leales
+
+##############################################################################
+# ACTO 36 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 2562, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): matriz_de_control_de_proceso
+     nodo_b (EL SEGUNDO de la razon): plan_de_control
+     RAZON ENTERA, sin recortar:
+       REPITE. plan_de_control contra matriz_de_control_de_proceso, MISMA FUENTE, Juran, y sin arista. Son el mismo artefacto, tanto que el paso 8 de plan_de_control dice REVISAR LA MATRIZ: identificar las variables que afectan al remedio y al cliente, el estandar que dispara la accion idealmente un limite de control, como donde y cuando se mide, quien analiza y quien actua ante el fuera de control, los pasos para regresar el proceso a control, y la revision final. plan_de_control esta MAS GRANULADO, ocho pasos contra seis, porque separa la medicion del registro y separa a quien analiza de quien actua, y nombra el diagnostico de LA CAUSA ASIGNABLE. Por la vara, REPITE. Sobrevive plan_de_control. PERDIDA NOMBRADA, motivo criterio: matriz_de_control_de_proceso revisa por COBERTURA DE VARIABLES CRITICAS Y VELOCIDAD DE RESPUESTA, y la velocidad de respuesta es un criterio de revision que el superviviente no nombra, revisa por completitud y efectividad. Una linea a reponer en la operacion de fusion.
+
+  [PAR] puesto 2639, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): control_mantener_ganancias
+     nodo_b (EL SEGUNDO de la razon): plan_de_control
+     RAZON ENTERA, sin recortar:
+       REPITE. control_mantener_ganancias contra plan_de_control, MISMA FUENTE, Juran, sin arista. Los dos son el PLAN DE CONTROL de Juran, el mismo bucle de realimentacion para mantener las ganancias: seleccionar los sujetos de control, fijar el estandar que dispara accion (idealmente un limite de carta), definir como y donde se mide, decidir quien analiza y quien actua sobre la causa asignable. control_mantener_ganancias trae de mas CAPACITAR A LOS DUENOS DEL PROCESO y AUDITAR la efectividad del plan; plan_de_control trae LOS PASOS PARA REGRESAR EL PROCESO A CONTROL y revisar la matriz por completitud. Barrido de familia: 2562 ya fundio matriz_de_control_de_proceso con plan_de_control (A), que es el hub. Por la vara, REPITE. Sobrevive plan_de_control, el bucle completo de ocho pasos; capacitar y auditar del otro son lineas a reponer. DISCUTIBLE MARCADO: quien lea capacitar duenos y auditar efectividad como pasos enteros propios dira fusion mutua, por elegir.
+
+  --- control_mantener_ganancias
+      titulo    : Control para Mantener las Ganancias (Plan de Control)
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 6 | condiciones 1 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Seleccionar los sujetos de control (características del producto/proceso a monitorear).
+      paso 2: Definir estándares o metas aceptables de desempeño.
+      paso 3: Especificar unidad de medida, sensor, frecuencia y tamaño de muestra.
+      paso 4: Determinar criterios de acción y responsables de decisión y ejecución.
+      paso 5: Capacitar a los dueños del proceso en el uso del plan de control.
+      paso 6: Auditar periódicamente la efectividad del plan de control.
+      cond 1: Cuando se ha implementado un remedio y se necesita garantizar que el problema no vuelva a ocurrir.
+      previos   : ['diseno_implementacion_remedio']
+      siguientes: ['ciclo_pdsa', 'ciclo_shewhart_pdsa']
+      entregable: Un plan de control documentado (matriz de control) implementado y auditado, que asegura la sostenibilidad de la mejora.
+
+  --- matriz_de_control_de_proceso
+      titulo    : Matriz de Control de Proceso
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 6 | condiciones 2 | previos 4 | siguientes 1 | cableado 5
+      paso 1: Identificar variables que afectan el remedio y al cliente directa o indirectamente
+      paso 2: Establecer el estándar que disparará la acción (idealmente un límite de control)
+      paso 3: Definir cómo, dónde y cuándo se medirá cada variable de control
+      paso 4: Asignar quién analizará las mediciones y quién actuará ante condiciones fuera de control
+      paso 5: Definir pasos concretos para regresar el proceso a control
+      paso 6: Revisar la matriz para verificar cobertura de variables críticas y velocidad de respuesta
+      cond 1: Cuando se ha completado una mejora de proceso y se necesita sostenerla en el tiempo
+      cond 2: Cuando el equipo requiere claridad sobre responsabilidades ante desviaciones
+      previos   : ['control_estadistico_de_procesos', 'diagrama_de_flujo_proceso_map', 'fmea_analisis_de_modos_de_falla', 'matriz_de_planificacion_arbol']
+      siguientes: ['control_estadistico_de_procesos']
+      entregable: Matriz de control documentada con variables, estándares, métodos de medición, responsables y acciones correctivas definidas
+
+  --- plan_de_control
+      titulo    : Plan de Control
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 8 | condiciones 1 | previos 4 | siguientes 0 | cableado 4
+      paso 1: Identificar las variables que afectan al remedio y al cliente directa o indirectamente
+      paso 2: Establecer el estándar que activará una acción, idealmente un límite de control de una carta de control
+      paso 3: Definir cómo se medirá cada variable de control
+      paso 4: Establecer dónde, cuándo y cómo se registrarán las mediciones
+      paso 5: Decidir quién analizará las mediciones y determinará si el proceso está fuera de control
+      paso 6: Decidir quién actuará para diagnosticar y eliminar la causa asignable
+      paso 7: Definir los pasos para regresar el proceso a control
+      paso 8: Revisar la matriz para verificar completitud y efectividad
+      cond 1: Cuando se ha completado una mejora de proceso y se necesita sostener los resultados en el tiempo
+      previos   : ['diagrama_barreras_ayudas', 'analisis_beneficio_costo', 'diagrama_caja', 'boxplot_resumen_datos']
+      siguientes: []
+      entregable: Plan de control documentado con variables, mediciones, responsables y acciones correctivas definidas
+
+##############################################################################
+# ACTO 37 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 462, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): crowdfunding_legal_exemptions_jobs_act
+     nodo_b (EL SEGUNDO de la razon): equity_crowdfunding
+     RAZON ENTERA, sin recortar:
+       REPITE con equity_crowdfunding. Los dos mandan lo mismo sobre la misma ronda: verificar si quienes quieren invertir califican como inversionista acreditado, no promocionar la ronda en publico salvo que la excepcion lo permita, y consultar con un abogado de valores que excepcion de registro ante la SEC aplica. El primero anade determinar antes si lo que se ofrece es un security y elegir portal autorizado si va por el Titulo III; el segundo anade como funcionan los sindicatos de una plataforma. CANDIDATOS DE MARCO-PAIS anotados sin adjudicar: los dos cablean SEC y JOBS Act y NINGUNO nombra el pais en sus condiciones de activacion. No los verifico aqui porque no es el encargo, pero van a la lista del barrido junto a las EAR.
+
+  [PAR] puesto 916, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): cumplimiento_inversionistas_acreditados
+     nodo_b (EL SEGUNDO de la razon): equity_crowdfunding
+     RAZON ENTERA, sin recortar:
+       LAS MISMAS REGLAS DE VALORES, del mismo libro y sin arista entre ellos. Lo comun es el nucleo: revisar si cada persona que quiere invertir califica como inversionista acreditado antes de venderle equity, y consultar con un abogado de valores que excepcion de registro aplica antes de levantar capital. Los dos ademas rondan las excepciones, uno nombrando el JOBS Act y el crowdfunding y el otro las excepciones que permiten o prohiben promocionar la ronda. Lo propio de cumplimiento_inversionistas_acreditados son dos: documentar la verificacion de acreditacion de cada inversionista, y el aviso de no ofrecer acciones a amigos o familiares no acreditados sin asesoria. Lo propio de equity_crowdfunding son otros dos: no promocionar la ronda publicamente salvo excepcion, y entender como funcionan los sindicatos que juntan capital en plataformas como AngelList. Repite el nucleo regulatorio y cada uno guarda una pieza practica distinta.
+
+  --- crowdfunding_legal_exemptions_jobs_act
+      titulo    : Crowdfunding y Exenciones Legales (JOBS Act)
+      fuente    : Venture Deals
+      pasos 5 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Determina si lo que ofreces es un security (equity, deuda convertible) o algo distinto, como la preventa de un producto.
+      paso 2: Evalúa si los inversionistas a los que apuntas son acreditados o no acreditados.
+      paso 3: Elige el marco adecuado (506(b), 506(c) o Título III) según si necesitas hacer publicidad abierta y cuánto quieres levantar.
+      paso 4: Consulta con un abogado especializado en valores antes de publicitar tu ronda.
+      paso 5: Si usas el Título III, elige un portal de financiamiento autorizado y prepara las divulgaciones que exige la SEC.
+      cond 1: Si estás considerando recaudar capital a través de plataformas online o crowdfunding.
+      cond 2: Si tienes dudas sobre si necesitas registrar tu oferta ante la SEC.
+      previos   : ['equity_crowdfunding']
+      siguientes: ['equity_crowdfunding_terminos', 'venture_debt_introduccion']
+      entregable: Documento legal que defina el marco de exención elegido, el tipo de inversionistas permitidos y la estructura de tu ronda de crowdfunding.
+
+  --- cumplimiento_inversionistas_acreditados
+      titulo    : Cumplimiento con Regulación de Inversionistas Acreditados
+      fuente    : Venture Deals
+      pasos 5 | condiciones 3 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Verificar el estatus de inversionista acreditado de cada persona antes de vender equity
+      paso 2: Evaluar si te conviene usar las excepciones de crowdfunding bajo el JOBS Act
+      paso 3: Evitar ofrecer acciones a amigos o familiares no acreditados sin asesoría legal
+      paso 4: Consultar con un abogado de valores antes de cualquier ronda de levantamiento de capital
+      paso 5: Documentar la verificación de acreditación de cada inversionista
+      cond 1: Cuando la empresa planea vender acciones o levantar capital de terceros
+      cond 2: Cuando existe presión de familiares o amigos para invertir en la startup
+      cond 3: Cuando estás por levantar capital de inversionistas privados
+      previos   : ['seleccion_estructura_corporativa']
+      siguientes: ['term_sheet_negociacion']
+      entregable: Proceso de verificación de inversionistas acreditados documentado antes de cualquier ronda de financiamiento
+
+  --- equity_crowdfunding
+      titulo    : Vender una parte de tu negocio a través de una plataforma online (equity crowdfunding) y las reglas de valores (SEC)
+      fuente    : Venture Deals
+      pasos 4 | condiciones 2 | previos 3 | siguientes 1 | cableado 4
+      paso 1: Revisa si las personas que quieren invertir califican como 'inversionista acreditado' según las reglas de la SEC
+      paso 2: Evita promocionar tu ronda de financiamiento públicamente, salvo que cumplas con las excepciones que lo permiten
+      paso 3: Consulta con un abogado de valores qué excepción de registro ante la SEC aplica a tu forma de levantar capital
+      paso 4: Si usas una plataforma como AngelList, entiende cómo funcionan los grupos de inversionistas ('syndicates') que juntan capital
+      cond 1: Si estás pensando en levantar capital a través de una plataforma online como AngelList
+      cond 2: Si existe riesgo de que promocionar tu ronda públicamente cuente como 'solicitud general'
+      previos   : ['crowdfunding_de_producto', 'safe_simple_agreement_future_equity', 'recursos_ecosistema_emprendedor']
+      siguientes: ['crowdfunding_legal_exemptions_jobs_act']
+      entregable: Tener la estructura legal de tu ronda de equity crowdfunding validada con un abogado, cumpliendo las excepciones de la SEC que apliquen
+
+FIN

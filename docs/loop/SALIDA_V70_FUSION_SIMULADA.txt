@@ -1,0 +1,278 @@
+==============================================================================
+OP-U-02 . UNICO Y FINAL POR AGOTAMIENTO, LOTE F DEL TRAMO UNICO DE OP-U-02. ABRE EN EL ACTO 32, que es donde la adjudicacion 2 del acta 69 manda abrir el prefijo: el acto 31 TIENE DUENO MEDIDO (OP-F-04-WEI y OP-S-04 en duenos_cualquier_operacion, leido hoy del fichero fijado del tramo) y NO es una fusion de OP-U-02, asi que su salto va DECLARADO con esa cita y NO rompe el prefijo sin saltos, porque el 31 no esta en la cola de fusiones de esta operacion. CINCO ACTOS CIERRAN ENTEROS Y SON 15 NODOS: los actos 32, 33, 34, 35 y 36 cierran los CINCO FUNDIDOS y NINGUNO cierra DECLARADO Y NO FUNDIDO. Es el primer lote del tramo sin ningun DECLARADO, y esta anticipado: la adjudicacion 4 del acta 69 midio que en lo que resta del tramo no hay actos con nodo puente ni con par D interno, asi que P.10 y el cuarto motivo quedan SIN SUJETO; de los otros dos motivos, la guarda 1B pasa POR VACIO en los cinco actos (CERO puertas dentro de cada uno, medido) y P.5 contesta UNA FAMILIA en los cinco. EL TOPE DEL PREFIJO ES ESTRUCTURAL Y SE DICE: el siguiente es el ACTO 37, que TIENE DUENO (OP-S-07 en duenos_cualquier_operacion, medido hoy) y sobre el que la adjudicacion 2 del acta 69 dice con todas sus letras que vale lo mismo que para el 31. El acto 37 se leyo entero igual, por el carril del D16 del acta 68 (la letra prohibe FUNDIR un acto con dueno, no leerlo): esta en el dossier y en las varas de esta vuelta, su forma medida es UNA SOLA VARA y su destino queda con su dueno en su fase . MODO SIMULAR
+plan: docs/loop/PLAN_V70_OPU02_LOTE_F.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3224 vivos, 629 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 32 . sobrevive atacar_mercados_establecidos_con_problema . absorbe encontrar_grandes_problemas_mercados_emergentes, resolver_problemas_grandes
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 1 de encontrar_grandes_problemas_mercados_emergentes al PASO 1 del superviviente
+        inciso VERBATIM: 'mercados en fase embrionaria o de rápido crecimiento'
+        nexo (lo unico de cosecha propia): ', y también '
+        paso resultante: Identificar mercados grandes y maduros con necesidades no resueltas a largo plazo (grand challenges), y también mercados en fase embrionaria o de rápido crecimiento
+  alias del superviviente: ['encontrar_grandes_problemas_mercados_emergentes', 'resolver_problemas_grandes']
+
+------------------------------------------------------------------------------
+ACTO 33 . sobrevive wallas_intimacion_fringe_consciousness . absorbe atencion_focal_y_periferica, intimation_illumination
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 1 -> 3 (anadidas 2)
+  alias del superviviente: ['atencion_focal_y_periferica', 'intimation_illumination']
+
+------------------------------------------------------------------------------
+ACTO 34 . sobrevive ciclo_de_culpa_2 . absorbe ciclo_de_culpa, dysfunctional_organizational_culture_patterns
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 8 (anadidos 3) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 1 de ciclo_de_culpa al PASO 2 del superviviente
+        inciso VERBATIM: "patrones repetitivos de 'culpar y entrenar' tras incidentes"
+        nexo (lo unico de cosecha propia): ', identificando los '
+        paso resultante: Evitar usar sanciones o advertencias como única respuesta a errores recurrentes, identificando los patrones repetitivos de 'culpar y entrenar' tras incidentes
+  alias del superviviente: ['ciclo_de_culpa_blame_cycle', 'ciclo_de_culpa', 'dysfunctional_organizational_culture_patterns']
+
+------------------------------------------------------------------------------
+ACTO 35 . sobrevive construccion_tribu_de_marca . absorbe comunidad_tribu_marca, marcador_visual_marca
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 8 (anadidos 3) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 2 de comunidad_tribu_marca al PASO 4 del superviviente
+        inciso VERBATIM: 'físicos o digitales'
+        nexo (lo unico de cosecha propia): ', ya sean '
+        paso resultante: Facilita espacios donde los miembros de la tribu puedan reconocerse entre sí, ya sean físicos o digitales
+  alias del superviviente: ['comunidad_tribu_marca', 'marcador_visual_marca']
+
+------------------------------------------------------------------------------
+ACTO 36 . sobrevive plan_de_control . absorbe control_mantener_ganancias, matriz_de_control_de_proceso
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 8 -> 10 (anadidos 2) | condiciones 1 -> 2 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 3 de control_mantener_ganancias al PASO 3 del superviviente
+        inciso VERBATIM: 'unidad de medida, sensor, frecuencia y tamaño de muestra'
+        nexo (lo unico de cosecha propia): ', especificando '
+        paso resultante: Definir cómo se medirá cada variable de control, especificando unidad de medida, sensor, frecuencia y tamaño de muestra
+     del paso 6 de matriz_de_control_de_proceso al PASO 8 del superviviente
+        inciso VERBATIM: 'cobertura de variables críticas y velocidad de respuesta'
+        nexo (lo unico de cosecha propia): ', y también su '
+        paso resultante: Revisar la matriz para verificar completitud y efectividad, y también su cobertura de variables críticas y velocidad de respuesta
+  alias del superviviente: ['control_mantener_ganancias', 'matriz_de_control_de_proceso']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 34
+   analisis_y_sintesis                                  nodos_siguientes  atencion_focal_y_periferica -> wallas_intimacion_fringe_consciousness
+   analisis_y_sintesis                                  nodos_siguientes  encontrar_grandes_problemas_mercados_emergentes -> atacar_mercados_establecidos_con_problema
+   asociacion_de_ideas                                  nodos_previos     atencion_focal_y_periferica -> wallas_intimacion_fringe_consciousness
+   ciclo_shewhart_pdsa                                  nodos_previos     control_mantener_ganancias -> plan_de_control
+   comunidad_como_activo_estrategico                    nodos_previos     comunidad_tribu_marca -> construccion_tribu_de_marca
+   control_estadistico_de_procesos                      nodos_previos     matriz_de_control_de_proceso -> plan_de_control
+   control_estadistico_de_procesos                      nodos_siguientes  matriz_de_control_de_proceso -> plan_de_control
+   coordinacion_organica_de_elementos_independientes    nodos_siguientes  atencion_focal_y_periferica -> wallas_intimacion_fringe_consciousness
+   cuatro_etapas_del_pensamiento_creativo               nodos_siguientes  intimation_illumination -> wallas_intimacion_fringe_consciousness
+   cultura_de_reporte                                   nodos_previos     ciclo_de_culpa -> ciclo_de_culpa_2
+   cultura_de_seguridad_componentes                     nodos_previos     ciclo_de_culpa -> ciclo_de_culpa_2
+   cultura_justa                                        nodos_previos     ciclo_de_culpa -> ciclo_de_culpa_2
+   diagrama_de_flujo_proceso_map                        nodos_siguientes  matriz_de_control_de_proceso -> plan_de_control
+   diseno_implementacion_remedio                        nodos_siguientes  control_mantener_ganancias -> plan_de_control
+   emocion_e_imagen_en_el_pensamiento                   nodos_previos     intimation_illumination -> wallas_intimacion_fringe_consciousness
+   encontrar_el_golpe_mental                            nodos_siguientes  resolver_problemas_grandes -> atacar_mercados_establecidos_con_problema
+   enfoque_situacional_vs_personal                      nodos_previos     ciclo_de_culpa -> ciclo_de_culpa_2
+   errores_como_consecuencia                            nodos_siguientes  ciclo_de_culpa -> ciclo_de_culpa_2
+   esfuerzo_voluntario_vs_urge_espontaneo               nodos_previos     intimation_illumination -> wallas_intimacion_fringe_consciousness
+   estrategia_de_innovacion_arenas                      nodos_previos     resolver_problemas_grandes -> atacar_mercados_establecidos_con_problema
+   fase_adopt                                           nodos_siguientes  marcador_visual_marca -> construccion_tribu_de_marca
+   fenomeno_del_click                                   nodos_siguientes  intimation_illumination -> wallas_intimacion_fringe_consciousness
+   fmea_analisis_de_modos_de_falla                      nodos_siguientes  matriz_de_control_de_proceso -> plan_de_control
+   gestion_de_errores                                   nodos_siguientes  ciclo_de_culpa -> ciclo_de_culpa_2
+   limites_de_la_voluntad_sobre_el_pensamiento          nodos_previos     atencion_focal_y_periferica -> wallas_intimacion_fringe_consciousness
+   matriz_de_planificacion_arbol                        nodos_siguientes  matriz_de_control_de_proceso -> plan_de_control
+   normalizacion_de_la_desviacion                       nodos_siguientes  dysfunctional_organizational_culture_patterns -> ciclo_de_culpa_2
+   proteccion_del_tren_asociativo                       nodos_previos     intimation_illumination -> wallas_intimacion_fringe_consciousness
+   reglas_brainstorming                                 nodos_previos     intimation_illumination -> wallas_intimacion_fringe_consciousness
+   safety_culture_engineering                           nodos_previos     dysfunctional_organizational_culture_patterns -> ciclo_de_culpa_2
+   seleccion_arenas_estrategicas                        nodos_previos     encontrar_grandes_problemas_mercados_emergentes -> atacar_mercados_establecidos_con_problema
+   sentido_del_humor_como_herramienta_de_pensamiento    nodos_previos     intimation_illumination -> wallas_intimacion_fringe_consciousness
+   wallas_etapa_preparacion                             nodos_siguientes  intimation_illumination -> wallas_intimacion_fringe_consciousness
+   wallas_etapa_verificacion                            nodos_previos     intimation_illumination -> wallas_intimacion_fringe_consciousness
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 5
+   brainstorming_efectivo                               nodos_previos     intimation_illumination (registro historico)
+   ciclo_pdsa                                           nodos_previos     control_mantener_ganancias (registro historico)
+   control_estadistico_de_procesos_2                    nodos_previos     matriz_de_control_de_proceso (registro historico)
+   control_voluntario_del_pensamiento                   nodos_previos     intimation_illumination (registro historico)
+   pdsa_shewhart_cycle                                  nodos_previos     control_mantener_ganancias (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 5
+   cuatro_etapas_del_pensamiento_creativo               nodos_siguientes
+   enfoque_situacional_vs_personal                      nodos_previos
+   errores_como_consecuencia                            nodos_siguientes
+   seleccion_arenas_estrategicas                        nodos_previos
+   wallas_etapa_verificacion                            nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 889   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 889   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 0, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 25 de 25
+guarda D, los 10 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (62 filas)
+ acto de que nodo                                  que          n  a donde va
+   32 encontrar_grandes_problemas_mercados_emergentes paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar mercados en fase embrionaria o de rápido crecimiento
+   32 encontrar_grandes_problemas_mercados_emergentes paso         2  ya lo dice el PASO 2 del superviviente
+        Listar los problemas y frustraciones que enfrentan los clientes en ese mercado
+   32 encontrar_grandes_problemas_mercados_emergentes paso         3  ya lo dice el PASO 3 del superviviente
+        Evaluar si la empresa tiene capacidades únicas (diseño, tecnología) para resolver esos problemas
+   32 encontrar_grandes_problemas_mercados_emergentes paso         4  ya lo dice el PASO 4 del superviviente
+        Diseñar una solución integral que ataque los puntos de dolor principales
+   32 encontrar_grandes_problemas_mercados_emergentes condicion    1  CONDICION 3 del superviviente
+        Cuando se busca un mercado de alto potencial de crecimiento
+   32 encontrar_grandes_problemas_mercados_emergentes condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando existe un mercado con múltiples competidores pero ninguno resuelve bien el problema del cliente
+   32 resolver_problemas_grandes                   paso         1  ya lo dice el PASO 1 del superviviente
+        Investigar mercados existentes (no necesariamente 'océanos azules') buscando alta insatisfacción del usuario.
+   32 resolver_problemas_grandes                   paso         2  ya lo dice el PASO 2 del superviviente
+        Identificar los 'puntos de dolor' (pain points) específicos que los competidores actuales no resuelven.
+   32 resolver_problemas_grandes                   paso         3  ya lo dice el PASO 3 del superviviente
+        Evaluar las fortalezas centrales (core competencies) de la propia empresa para ver cómo se pueden aplicar a ese problema.
+   32 resolver_problemas_grandes                   paso         4  PASO 5 del superviviente
+        Diseñar una solución de 'sistema' integrado en lugar de solo un producto aislado.
+   32 resolver_problemas_grandes                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el equipo cree que necesita 'inventar' tecnología nueva para innovar, pero carece de I+D radical.
+   32 resolver_problemas_grandes                   condicion    2  ya lo dice la CONDICION 1 del superviviente
+        En mercados maduros y comoditizados donde parece no haber espacio para la innovación.
+   33 atencion_focal_y_periferica                  paso         1  ya lo dice el PASO 1 del superviviente
+        Durante sesiones de trabajo creativo, dedicar tiempo a notar pensamientos periféricos sin forzarlos inmediatamente al centro de atención
+   33 atencion_focal_y_periferica                  paso         2  PASO 5 del superviviente
+        Practicar la inhibición de la tendencia natural a enfocar de inmediato cualquier estímulo interesante
+   33 atencion_focal_y_periferica                  paso         3  ya lo dice el PASO 4 del superviviente
+        Registrar (por escrito o grabación) ideas marginales que surgen mientras se trabaja en el problema principal
+   33 atencion_focal_y_periferica                  condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el emprendedor busca técnicas para captar insights no evidentes durante la ideación
+   33 atencion_focal_y_periferica                  condicion    2  CONDICION 2 del superviviente
+        Cuando se realiza investigación exploratoria o brainstorming
+   33 intimation_illumination                      paso         1  ya lo dice el PASO 1 del superviviente
+        Prestar atención periódica a sensaciones difusas de 'algo se está gestando' durante el trabajo creativo o de resolución de problemas.
+   33 intimation_illumination                      paso         2  ya lo dice el PASO 4 del superviviente
+        Registrar (mentalmente o por escrito) el momento en que aparece esa sensación de anticipación, sin forzar aún la conclusión.
+   33 intimation_illumination                      paso         3  ya lo dice el PASO 3 del superviviente
+        Evaluar si conviene sostener, prolongar o dejar madurar esa línea asociativa antes de intentar verbalizarla.
+   33 intimation_illumination                      condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el usuario sospecha que una idea está por surgir pero no puede formularla claramente.
+   33 intimation_illumination                      condicion    2  CONDICION 3 del superviviente
+        Cuando se busca mejorar la sensibilidad para captar insights emergentes en procesos creativos.
+   34 ciclo_de_culpa                               paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar patrones repetitivos de 'culpar y entrenar' tras incidentes
+   34 ciclo_de_culpa                               paso         2  ya lo dice el PASO 3 del superviviente
+        Analizar si las medidas correctivas atacan causas raíz o solo síntomas superficiales
+   34 ciclo_de_culpa                               paso         3  ya lo dice el PASO 3 del superviviente
+        Cuestionar si las respuestas organizacionales buscan resolver el problema o solo aparentar acción
+   34 ciclo_de_culpa                               paso         4  ya lo dice el PASO 4 del superviviente
+        Redirigir el análisis de incidentes hacia factores sistémicos y organizacionales
+   34 ciclo_de_culpa                               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando tras cada incidente la respuesta es siempre 'culpar y entrenar' o 'escribir otro procedimiento'
+   34 ciclo_de_culpa                               condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando la tasa de accidentes no mejora pese a las medidas correctivas repetidas
+   34 dysfunctional_organizational_culture_patterns paso         1  PASO 6 del superviviente
+        Identificar si existen síntomas de indefensión aprendida en el personal (falta de iniciativa ante riesgos)
+   34 dysfunctional_organizational_culture_patterns paso         2  PASO 7 del superviviente
+        Detectar rituales o procedimientos repetidos sin evidencia de efectividad real
+   34 dysfunctional_organizational_culture_patterns paso         3  ya lo dice el PASO 2 del superviviente
+        Cuestionar reacciones automáticas como 'nueva norma' o 'culpar y entrenar' tras incidentes
+   34 dysfunctional_organizational_culture_patterns paso         4  PASO 8 del superviviente
+        Sustituir reacciones anxiety-avoidance por análisis genuino de causas raíz
+   34 dysfunctional_organizational_culture_patterns condicion    1  CONDICION 4 del superviviente
+        Cuando se observa apatía o resignación del personal frente a problemas de seguridad recurrentes
+   34 dysfunctional_organizational_culture_patterns condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando las respuestas organizacionales a incidentes son repetitivas sin cambios sustanciales
+   35 comunidad_tribu_marca                        paso         1  ya lo dice el PASO 1 del superviviente
+        Definir el 'espíritu' o estilo de vida que representa la marca más allá del producto
+   35 comunidad_tribu_marca                        paso         2  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Crear espacios (físicos o digitales) donde los clientes leales puedan conectar entre sí
+   35 comunidad_tribu_marca                        paso         3  ya lo dice el PASO 2 del superviviente
+        Reforzar la narrativa de marca que conecta con la identidad personal de los clientes
+   35 comunidad_tribu_marca                        paso         4  ya lo dice el PASO 4 del superviviente
+        Facilitar que los miembros de la tribu se reconozcan entre sí
+   35 comunidad_tribu_marca                        paso         5  PASO 6 del superviviente
+        Celebrar y amplificar las historias de los clientes más comprometidos
+   35 comunidad_tribu_marca                        paso         6  PASO 7 del superviviente
+        Escuchar su feedback y darles voz visible dentro de la comunidad
+   35 comunidad_tribu_marca                        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la marca tiene una base de clientes altamente comprometidos que podrían convertirse en embajadores o comunidad activa
+   35 marcador_visual_marca                        paso         1  ya lo dice el PASO 3 del superviviente
+        Identificar o diseñar un elemento visual distintivo asociado al producto/marca
+   35 marcador_visual_marca                        paso         2  ya lo dice el PASO 3 del superviviente
+        Asegurar que sea fácilmente reconocible en contextos públicos/sociales
+   35 marcador_visual_marca                        paso         3  ya lo dice el PASO 3 del superviviente
+        Facilitar que los clientes lo muestren con orgullo (merchandising, packaging distintivo)
+   35 marcador_visual_marca                        paso         4  ya lo dice el PASO 4 del superviviente
+        Fomentar la creación de comunidad alrededor de ese símbolo visual
+   35 marcador_visual_marca                        paso         5  PASO 8 del superviviente
+        Monitorear el efecto de reconocimiento de marca generado
+   35 marcador_visual_marca                        condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando la marca busca generar reconocimiento social y marketing orgánico a través de sus clientes más leales
+   36 control_mantener_ganancias                   paso         1  ya lo dice el PASO 1 del superviviente
+        Seleccionar los sujetos de control (características del producto/proceso a monitorear).
+   36 control_mantener_ganancias                   paso         2  ya lo dice el PASO 2 del superviviente
+        Definir estándares o metas aceptables de desempeño.
+   36 control_mantener_ganancias                   paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Especificar unidad de medida, sensor, frecuencia y tamaño de muestra.
+   36 control_mantener_ganancias                   paso         4  ya lo dice el PASO 5 del superviviente
+        Determinar criterios de acción y responsables de decisión y ejecución.
+   36 control_mantener_ganancias                   paso         5  PASO 9 del superviviente
+        Capacitar a los dueños del proceso en el uso del plan de control.
+   36 control_mantener_ganancias                   paso         6  PASO 10 del superviviente
+        Auditar periódicamente la efectividad del plan de control.
+   36 control_mantener_ganancias                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se ha implementado un remedio y se necesita garantizar que el problema no vuelva a ocurrir.
+   36 matriz_de_control_de_proceso                 paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar variables que afectan el remedio y al cliente directa o indirectamente
+   36 matriz_de_control_de_proceso                 paso         2  ya lo dice el PASO 2 del superviviente
+        Establecer el estándar que disparará la acción (idealmente un límite de control)
+   36 matriz_de_control_de_proceso                 paso         3  ya lo dice el PASO 3 del superviviente
+        Definir cómo, dónde y cuándo se medirá cada variable de control
+   36 matriz_de_control_de_proceso                 paso         4  ya lo dice el PASO 5 del superviviente
+        Asignar quién analizará las mediciones y quién actuará ante condiciones fuera de control
+   36 matriz_de_control_de_proceso                 paso         5  ya lo dice el PASO 7 del superviviente
+        Definir pasos concretos para regresar el proceso a control
+   36 matriz_de_control_de_proceso                 paso         6  INCISO ADOSADO al PASO 8 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Revisar la matriz para verificar cobertura de variables críticas y velocidad de respuesta
+   36 matriz_de_control_de_proceso                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se ha completado una mejora de proceso y se necesita sostenerla en el tiempo
+   36 matriz_de_control_de_proceso                 condicion    2  CONDICION 2 del superviviente
+        Cuando el equipo requiere claridad sobre responsabilidades ante desviaciones
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 5
+  nodos implicados    : 15
+  nodos que MUEREN    : 10
+  piezas repartidas   : 62 (15 viajan enteras, 42 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.

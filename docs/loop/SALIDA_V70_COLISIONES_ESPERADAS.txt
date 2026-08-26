@@ -1,0 +1,41 @@
+==============================================================================
+LA CUENTA ESPERADA DE COLISIONES, SIMULADA ANTES DE FUNDIR
+  plan       : docs/loop/PLAN_V70_OPU02_LOTE_F.json
+  operacion  : OP-U-02
+  linea base : 6, DECLARADA (acta 69, seccion 5.1; los textos viejos decian 4 por el acta 66 pregunta 2 y antes 2 por el acta 64 pregunta 3, y las dos correcciones van declaradas en el docstring)
+==============================================================================
+
+  ANTES DE FUNDIR (el arbol tal como esta, medido ahora):
+     COLISIONES DE CLASE VIGENTES : 6
+     AUTO-PARES                   : 268
+        cierre_satisfaccion_postventa contra cierre_segun_complejidad_venta | clases ['B', 'D']
+        cierre_segun_complejidad_venta contra obtencion_compromiso | clases ['B', 'D']
+        cuatro_etapas_llamada_de_ventas contra enfoque_etapa_investigacion | clases ['B', 'D']
+        enfoque_etapa_investigacion contra modelo_spin_preguntas | clases ['B', 'D']
+        pivote_o_proceder contra pivote_startup | clases ['B', 'D']
+        pivote_o_proceder contra reunion_pivotar_o_perseverar | clases ['B', 'D']
+
+  LA SIMULACION EN MEMORIA: 10 absorbido(s) de 5 acto(s) pasan a resolver a su superviviente. NO SE TOCA NI UN NODO.
+
+  DESPUES DE FUNDIR (simulado):
+     COLISIONES DE CLASE VIGENTES : 7
+     AUTO-PARES                   : 273
+        cierre_satisfaccion_postventa contra cierre_segun_complejidad_venta | clases ['B', 'D']
+        cierre_segun_complejidad_venta contra obtencion_compromiso | clases ['B', 'D']
+        cuatro_etapas_del_pensamiento_creativo contra wallas_intimacion_fringe_consciousness | clases ['B', 'D']
+        cuatro_etapas_llamada_de_ventas contra enfoque_etapa_investigacion | clases ['B', 'D']
+        enfoque_etapa_investigacion contra modelo_spin_preguntas | clases ['B', 'D']
+        pivote_o_proceder contra pivote_startup | clases ['B', 'D']
+        pivote_o_proceder contra reunion_pivotar_o_perseverar | clases ['B', 'D']
+
+  EL DELTA, QUE ES LO QUE LA GUARDA MIRA:
+     colisiones NUEVAS que la fusion fabricaria : 1
+        cuatro_etapas_del_pensamiento_creativo contra wallas_intimacion_fringe_consciousness | clases ['B', 'D']
+     colisiones que DESAPARECERIAN              : 0
+     auto-pares NUEVOS (pares internos del acto): 5
+
+  ESPERADAS TRAS FUNDIR = 7, y es 6 de base mas 1 nuevas menos 0 idas
+
+LA FUSION FABRICA COLISIONES Y HAY QUE PREDECIRLAS EN EL PLAN.
+
+FIN
