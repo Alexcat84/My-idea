@@ -3697,7 +3697,7 @@
       ],
       "entregable_esperado": "Un análisis completo de gasto de capital con el desembolso inicial, los flujos proyectados y la evaluación de retorno por NPV, payback e IRR, redactado como propuesta de inversión con sus riesgos, supuestos y análisis de sensibilidad, listo para presentar a un banco o inversionista",
       "nodos_previos": [
-        "valor_del_dinero_en_el_tiempo",
+        "metodo_valor_presente_neto",
         "tasa_de_retorno_requerida",
         "comparacion_metodos_inversion"
       ],
@@ -6548,7 +6548,7 @@
         "human_error_como_sintoma"
       ],
       "nodos_siguientes": [
-        "new_view_vs_old_view_de_error_humano",
+        "investigacion_new_view",
         "reconstruccion_contexto_situacional",
         "riesgo_actividades_mantenimiento"
       ],
@@ -12800,7 +12800,7 @@
       ],
       "nodos_siguientes": [
         "mitigar_falling_asleep_wheel",
-        "shadow_ai_use_organizacional"
+        "shadow_ia_organizacional"
       ],
       "condiciones_activacion": [
         "Cuando un equipo ya usa IA regularmente y busca optimizar la forma de trabajar con ella",
@@ -19764,8 +19764,7 @@
       "nodos_previos": [
         "programa_mejora_calidad_14_pasos",
         "eliminacion_causas_error",
-        "reconocimiento",
-        "reconocimiento_crosby"
+        "reconocimiento_al_desempeno"
       ],
       "nodos_siguientes": [
         "reinicio_programa_calidad",
@@ -19869,7 +19868,6 @@
         "reconocimiento_al_desempeno",
         "eliminacion_causas_error_3",
         "programa_catorce_pasos_crosby",
-        "reconocimiento_crosby",
         "eliminacion_causas_error_4",
         "programa_mejora_calidad_14_pasos"
       ],
@@ -27062,7 +27060,6 @@
         "desajuste_autoridad_responsabilidad",
         "hard_fixes_organizacionales",
         "investigacion_new_view",
-        "new_view_vs_old_view_de_error_humano",
         "old_view_vs_new_view_human_error",
         "reporte_confidencial_seguridad",
         "resiliencia_organizacional",
@@ -41829,9 +41826,8 @@
         "zero_defects_concepto"
       ],
       "nodos_siguientes": [
-        "reconocimiento",
-        "consejo_de_calidad_3",
-        "reconocimiento_crosby"
+        "reconocimiento_al_desempeno",
+        "consejo_de_calidad_3"
       ],
       "condiciones_activacion": [
         "Cuando los empleados identifican obstáculos recurrentes para el trabajo sin errores"
@@ -41923,9 +41919,8 @@
       ],
       "nodos_siguientes": [
         "consejo_de_calidad",
-        "reconocimiento_crosby",
-        "consejos_de_calidad",
-        "reconocimiento_al_desempeno"
+        "reconocimiento_al_desempeno",
+        "consejos_de_calidad"
       ],
       "condiciones_activacion": [
         "Cuando quienes te ayudan entienden que la mejora es necesaria y ya tienes clara la meta de cero errores",
@@ -64396,7 +64391,7 @@
       ],
       "nodos_siguientes": [
         "resiliencia_organizacional",
-        "new_view_vs_old_view_de_error_humano",
+        "investigacion_new_view",
         "atribucion_retrospectiva_del_error",
         "safety_i_safety_ii"
       ],
@@ -66287,7 +66282,8 @@
         "Si se detecta miedo o resistencia a declarar el uso de IA",
         "Si se quiere escalar la adopción de IA de forma democrática en la empresa"
       ],
-      "etiqueta_arbol": "Incentiva Hablar de IA"
+      "etiqueta_arbol": "Incentiva Hablar de IA",
+      "deprecado": true
     },
     "incoterms_reglas_comerciales_internacionales": {
       "node_id": "incoterms_reglas_comerciales_internacionales",
@@ -68793,29 +68789,54 @@
       "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
       "resumen_teorico": "Una investigación New View busca entender la situación desde el punto de vista de las personas involucradas al momento del evento, evitando sesgos de retrospectiva (hindsight bias) y de resultado. Evita declaraciones de 'causa probable' simplistas, optando por hallazgos sobre causas, contribuciones y riesgos, con foco en acciones de seguridad preventivas. Ejemplos reales incluyen la investigación del accidente de Swissair 111 y el análisis revisionista del derribo de los Black Hawks en Irak.",
       "pasos_accionables": [
-        "Reconstruir la situación tal como la vivieron los involucrados, sin usar el conocimiento del resultado final",
+        "Reconstruir la situación tal como la vivieron los involucrados, sin usar el conocimiento del resultado final, a partir de la información y las señales disponibles para los actores en el momento del evento",
         "Evitar declaraciones de causa única o 'causa probable'",
         "Documentar hallazgos como causas, contribuciones y riesgos por separado",
-        "Dedicar una sección sustancial del informe a acciones de seguridad preventivas",
-        "Contrastar la investigación oficial con relatos revisionistas o independientes si están disponibles"
+        "Dedicar una sección sustancial del informe a acciones de seguridad preventivas, y comunicar los hallazgos de forma que honren la experiencia humana en lugar de reducirla a una lista de errores",
+        "Contrastar la investigación oficial con relatos revisionistas o independientes si están disponibles",
+        "Involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento",
+        "Entrevistar a los involucrados para entender su percepción y objetivos en el momento"
       ],
       "entregable_esperado": "Informe de investigación de incidente estructurado según principios New View, con foco en prevención en lugar de culpabilización",
       "nodos_previos": [
         "new_view_vs_old_view",
         "abandonar_la_falacia_del_arreglo_rapido",
-        "abandonar_arreglos_rapidos"
+        "abandonar_arreglos_rapidos",
+        "atribucion_retrospectiva_del_error",
+        "human_error_como_sintoma",
+        "process_tracing_methods",
+        "reacciones_al_fallo",
+        "riesgos_del_enfoque_en_error_humano",
+        "sesgo_retrospectivo"
       ],
       "nodos_siguientes": [
         "cultura_justa",
         "resiliencia_organizacional",
         "cultura_justa_3",
-        "safety_i_safety_ii"
+        "safety_i_safety_ii",
+        "process_tracing_methods"
       ],
       "condiciones_activacion": [
         "Al investigar un accidente o incidente de seguridad ocupacional",
         "Cuando se busca evitar sesgos retrospectivos en el análisis de fallos"
       ],
-      "etiqueta_arbol": "Investiga sin Culpar a Nadie"
+      "etiqueta_arbol": "Investiga sin Culpar a Nadie",
+      "ids_alias": [
+        "new_view_vs_old_view_de_error_humano",
+        "perspectiva_dentro_del_tunel"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "new_view_vs_old_view_de_error_humano",
+          "titulo": "Nueva Visión (New View) vs Vieja Visión (Old View) del Error Humano",
+          "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+        },
+        {
+          "node_id": "perspectiva_dentro_del_tunel",
+          "titulo": "Perspectiva desde Dentro del Túnel",
+          "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+        }
+      ]
     },
     "investigar_datos_cliente": {
       "node_id": "investigar_datos_cliente",
@@ -76594,7 +76615,7 @@
       "pasos_accionables": [
         "Proyectar los flujos de efectivo futuros esperados de la inversión",
         "Definir la tasa de descuento (hurdle rate) de la empresa",
-        "Aplicar la ecuación de descuento usando esa tasa para traer cada flujo futuro a valor presente",
+        "Aplicar la ecuación de descuento usando esa tasa para traer cada flujo futuro a valor presente, porque cualquier dinero que esperas recibir en el futuro tienes que descontarlo para poder compararlo con el efectivo que tienes hoy",
         "Sumar los valores presentes de todos los flujos futuros y restar el desembolso inicial para obtener el NPV",
         "Aceptar la inversión si el NPV es positivo, rechazarla si es negativo; entre proyectos alternativos, elegir el de mayor NPV positivo",
         "Realizar un análisis de sensibilidad usando 80-90% de las proyecciones originales para probar la robustez de la decisión"
@@ -76608,20 +76629,39 @@
       "node_id": "metodo_valor_presente_neto",
       "nodos_previos": [
         "analisis_de_gastos_de_capital",
-        "valor_presente",
         "tasa_de_retorno_requerida",
         "verificar_modelo_ingresos",
-        "metodo_payback"
+        "metodo_payback",
+        "tasa_crecimiento_sostenible",
+        "valor_futuro"
       ],
       "nodos_siguientes": [
         "tasa_interna_retorno_irr",
         "gestion_capital_trabajo",
         "analisis_varianza_financiera",
-        "valor_presente",
         "comparacion_metodos_inversion",
-        "monetizacion_npv_caso_negocio"
+        "monetizacion_npv_caso_negocio",
+        "analisis_de_gastos_de_capital",
+        "tasa_de_retorno_requerida",
+        "valor_futuro"
       ],
-      "etiqueta_arbol": "Calcula el Valor Presente Neto"
+      "etiqueta_arbol": "Calcula el Valor Presente Neto",
+      "ids_alias": [
+        "valor_del_dinero_en_el_tiempo",
+        "valor_presente"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "valor_del_dinero_en_el_tiempo",
+          "titulo": "Valor del Dinero en el Tiempo (Time Value of Money)",
+          "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+        },
+        {
+          "node_id": "valor_presente",
+          "titulo": "Valor Presente (Present Value)",
+          "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+        }
+      ]
     },
     "metodologia_6s": {
       "node_id": "metodologia_6s",
@@ -80788,7 +80828,8 @@
         "Cuando existe presión por encontrar 'culpables' rápidamente tras un accidente",
         "Cuando se busca mejorar la cultura de seguridad y el aprendizaje organizacional a largo plazo"
       ],
-      "etiqueta_arbol": "Compara Ambas Visiones del Error"
+      "etiqueta_arbol": "Compara Ambas Visiones del Error",
+      "deprecado": true
     },
     "nist_privacy_framework_introduccion": {
       "node_id": "nist_privacy_framework_introduccion",
@@ -84997,7 +85038,8 @@
         "Al redactar la sección de análisis de causas en un informe de accidente",
         "Cuando se busca fomentar el aprendizaje organizacional en lugar de la culpabilización"
       ],
-      "etiqueta_arbol": "Ponte en su Lugar"
+      "etiqueta_arbol": "Ponte en su Lugar",
+      "deprecado": true
     },
     "persuasion_directivos_prioridad_cliente": {
       "node_id": "persuasion_directivos_prioridad_cliente",
@@ -91864,11 +91906,11 @@
       ],
       "entregable_esperado": "Un informe de investigación de incidente/accidente que incluya el relato dual (contexto-específico y conceptual) explicando por qué las acciones de los practicantes tuvieron sentido dado su contexto y comprensión en el momento.",
       "nodos_previos": [
-        "new_view_vs_old_view_de_error_humano",
+        "investigacion_new_view",
         "limite_busqueda_causas_pendulo"
       ],
       "nodos_siguientes": [
-        "perspectiva_dentro_del_tunel"
+        "investigacion_new_view"
       ],
       "condiciones_activacion": [
         "Cuando se necesita investigar un incidente o accidente y entender la perspectiva de los involucrados",
@@ -96486,7 +96528,7 @@
       ],
       "nodos_siguientes": [
         "sesgo_retrospectivo",
-        "perspectiva_dentro_del_tunel"
+        "investigacion_new_view"
       ],
       "condiciones_activacion": [
         "Al iniciar cualquier investigación de incidente o accidente",
@@ -96916,7 +96958,8 @@
       "condiciones_activacion": [
         "Cuando se busca sostener la motivación del equipo tras alcanzar metas de calidad"
       ],
-      "etiqueta_arbol": "Reconoce los Logros de tu Equipo"
+      "etiqueta_arbol": "Reconoce los Logros de tu Equipo",
+      "deprecado": true
     },
     "reconocimiento_al_desempeno": {
       "node_id": "reconocimiento_al_desempeno",
@@ -96926,9 +96969,9 @@
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
       "resumen_teorico": "Duodécimo paso del programa de catorce pasos de Crosby. Su propósito es apreciar de forma sincera a quienes te ayudan a mejorar. La clave no es el valor del premio, sino el reconocimiento genuino y visible frente a los demás. Las personas no trabajan solo por dinero; una vez fijado el pago, lo que buscan es apreciación real por metas concretas acordadas antes, y deben tener voz en cómo se eligen esos premios.",
       "pasos_accionables": [
-        "Arma un sistema simple con tres tipos de reconocimiento: logros grupales de metas a corto plazo, contribuciones individuales sobresalientes y sorteos ocasionales entre las ideas de mejora que te compartan",
+        "Arma un sistema simple con tres tipos de reconocimiento: logros grupales de metas a corto plazo, contribuciones individuales sobresalientes y sorteos ocasionales entre las ideas de mejora que te compartan, y trata todos los problemas reportados de manera equitativa",
         "Define una frecuencia: reconocimiento individual cada trimestre, logros grupales cada mes, y sorteos de vez en cuando",
-        "Si trabajas con colaboradores o freelancers, decide junto con ellos cómo se elige el premio, en lugar de imponerlo tú solo",
+        "Si trabajas con colaboradores o freelancers, decide junto con ellos cómo se elige el premio, en lugar de imponerlo tú solo, y adapta el reconocimiento a la forma de trabajar que tienes con tu gente",
         "Cuida que la entrega sea digna y visible, más que el valor económico del premio",
         "No reduzcas el reconocimiento a bonos o dinero; prioriza la ceremonia y el aprecio genuino"
       ],
@@ -96937,18 +96980,37 @@
         "dia_cero_defectos",
         "fijacion_de_metas",
         "programa_ecr_causa_de_error",
-        "eliminacion_causas_error_4"
+        "eliminacion_causas_error_4",
+        "eliminacion_causas_error",
+        "seminario_de_exito_para_gerencia"
       ],
       "nodos_siguientes": [
         "consejos_de_calidad",
-        "reinicio_programa_calidad"
+        "reinicio_programa_calidad",
+        "consejo_de_calidad_3"
       ],
       "condiciones_activacion": [
         "Cuando alcanzas metas y necesitas sostener la motivación de quienes te ayudan",
         "Si sientes que el esfuerzo de mejora se percibe solo como obligación y no como algo apreciado",
         "Cuando quieres institucionalizar la celebración de los logros de calidad"
       ],
-      "etiqueta_arbol": "Reconoce Públicamente el Buen Desempeño"
+      "etiqueta_arbol": "Reconoce Públicamente el Buen Desempeño",
+      "ids_alias": [
+        "reconocimiento",
+        "reconocimiento_crosby"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "reconocimiento",
+          "titulo": "Reconocimiento (Paso 12)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        },
+        {
+          "node_id": "reconocimiento_crosby",
+          "titulo": "Reconocimiento sin dinero de por medio",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        }
+      ]
     },
     "reconocimiento_crosby": {
       "node_id": "reconocimiento_crosby",
@@ -96978,7 +97040,8 @@
         "Cuando logras mejoras medibles que vale la pena celebrar",
         "Cuando quieres mantener la motivación sin gastar de más"
       ],
-      "etiqueta_arbol": "Reconoce sin Depender del Dinero"
+      "etiqueta_arbol": "Reconoce sin Depender del Dinero",
+      "deprecado": true
     },
     "reconocimiento_de_ingresos": {
       "node_id": "reconocimiento_de_ingresos",
@@ -102747,7 +102810,7 @@
       ],
       "nodos_siguientes": [
         "cultura_de_seguridad_componentes",
-        "new_view_vs_old_view_de_error_humano"
+        "investigacion_new_view"
       ],
       "condiciones_activacion": [
         "Cuando tu, o quien lidere, atribuye un incidente a 'falta de cuidado' o a 'no seguir el procedimiento' por parte de alguien del equipo.",
@@ -107173,7 +107236,7 @@
         "responsabilidad_personal_en_gestion"
       ],
       "nodos_siguientes": [
-        "reconocimiento_crosby",
+        "reconocimiento_al_desempeno",
         "compromiso_gerencial_calidad",
         "persuasion_directivos_prioridad_cliente"
       ],
@@ -107735,7 +107798,7 @@
         "reacciones_al_fallo"
       ],
       "nodos_siguientes": [
-        "perspectiva_dentro_del_tunel"
+        "investigacion_new_view"
       ],
       "condiciones_activacion": [
         "Cuando se redactan conclusiones de una investigación de accidente",
@@ -107865,7 +107928,8 @@
         "Si la empresa restringe IA sin plan de adopción claro",
         "Si se sospecha uso no declarado de IA por miedo a represalias"
       ],
-      "etiqueta_arbol": "Descubre el Uso Oculto de IA"
+      "etiqueta_arbol": "Descubre el Uso Oculto de IA",
+      "deprecado": true
     },
     "shadow_ia_organizacional": {
       "node_id": "shadow_ia_organizacional",
@@ -107875,23 +107939,43 @@
       "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
       "resumen_teorico": "Muchos empleados ya usan IA para optimizar su trabajo pero lo ocultan a la organización por miedo a sanciones, a que su trabajo se perciba como 'hecho por máquina', o a ser reemplazados si revelan que automatizaron gran parte de su función. Esto genera un desajuste entre lo que realmente sucede en el trabajo diario y lo que la empresa cree que sucede, impidiendo capturar y escalar innovaciones valiosas. Las organizaciones deben crear incentivos y cultura segura para que estos usos salgan a la luz.",
       "pasos_accionables": [
-        "Evitar prohibiciones tajantes de herramientas de IA que empujen a un uso clandestino",
+        "Evitar prohibiciones tajantes de herramientas de IA que empujen a un uso clandestino, y sustituirlas por marcos de uso responsable y transparente",
         "Crear canales seguros y sin penalización para que empleados compartan cómo usan IA en su trabajo",
         "Identificar a los usuarios más avanzados de IA en la organización (pueden estar en cualquier nivel jerárquico)",
-        "Recompensar la innovación con IA en vez de amenazar puestos de trabajo, para incentivar la transparencia"
+        "Recompensar la innovación con IA en vez de amenazar puestos de trabajo, para incentivar la transparencia, con incentivos tangibles (bonos, reconocimientos) para quienes descubran usos innovadores de IA",
+        "Comunicar explícitamente que el uso de IA no resultará en despidos automáticos",
+        "Realizar encuestas anónimas para detectar el nivel real de adopción de IA entre empleados"
       ],
       "entregable_esperado": "Una política interna de IA que fomente la transparencia y capture buenas prácticas de empleados",
       "nodos_previos": [
-        "mitigar_falling_asleep_wheel"
+        "mitigar_falling_asleep_wheel",
+        "centaur_cyborg_ia"
       ],
       "nodos_siguientes": [
-        "desafios_implementacion_ia"
+        "desafios_implementacion_ia",
+        "sistemas_organizacionales_ia"
       ],
       "condiciones_activacion": [
         "Cuando la empresa sospecha o detecta uso no oficial de IA por parte de empleados",
         "Cuando se quiere escalar innovaciones individuales de IA a nivel organizacional"
       ],
-      "etiqueta_arbol": "Saca la IA de las Sombras"
+      "etiqueta_arbol": "Saca la IA de las Sombras",
+      "ids_alias": [
+        "incentivos_transparencia_ia",
+        "shadow_ai_use_organizacional"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "incentivos_transparencia_ia",
+          "titulo": "Incentivar la Transparencia en el Uso de IA",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+        },
+        {
+          "node_id": "shadow_ai_use_organizacional",
+          "titulo": "Uso Oculto de IA (Shadow AI)",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+        }
+      ]
     },
     "shapeshifting_diversidad": {
       "node_id": "shapeshifting_diversidad",
@@ -109393,9 +109477,8 @@
       ],
       "entregable_esperado": "Propuesta de rediseño de sistema organizacional que incorpore IA de forma estructural",
       "nodos_previos": [
-        "incentivos_transparencia_ia",
-        "division_trabajo_humano_ia",
-        "shadow_ai_use_organizacional"
+        "shadow_ia_organizacional",
+        "division_trabajo_humano_ia"
       ],
       "nodos_siguientes": [
         "ia_como_nivelador_habilidades",
@@ -111784,7 +111867,7 @@
         "ciclo_de_conversion_de_efectivo"
       ],
       "nodos_siguientes": [
-        "valor_del_dinero_en_el_tiempo"
+        "metodo_valor_presente_neto"
       ],
       "condiciones_activacion": [
         "El fundador quiere crecer la empresa sin diluir capital con nuevos inversionistas",
@@ -111807,12 +111890,11 @@
       ],
       "entregable_esperado": "Una tasa de retorno mínima definida y justificada para evaluar proyectos de inversión",
       "nodos_previos": [
-        "valor_del_dinero_en_el_tiempo",
+        "metodo_valor_presente_neto",
         "costo_de_capital",
         "costo_de_oportunidad"
       ],
       "nodos_siguientes": [
-        "valor_presente",
         "metodo_valor_presente_neto",
         "analisis_de_gastos_de_capital",
         "tasa_interna_retorno_irr"
@@ -116734,7 +116816,8 @@
         "tasa_de_retorno_requerida",
         "analisis_de_gastos_de_capital"
       ],
-      "etiqueta_arbol": "Piensa el Valor del Tiempo"
+      "etiqueta_arbol": "Piensa el Valor del Tiempo",
+      "deprecado": true
     },
     "valor_futuro": {
       "node_id": "valor_futuro",
@@ -116751,10 +116834,10 @@
       ],
       "entregable_esperado": "Proyección numérica del valor futuro de una inversión bajo distintos supuestos de tasa de retorno",
       "nodos_previos": [
-        "valor_del_dinero_en_el_tiempo"
+        "metodo_valor_presente_neto"
       ],
       "nodos_siguientes": [
-        "valor_presente"
+        "metodo_valor_presente_neto"
       ],
       "condiciones_activacion": [
         "Cuando se necesita proyectar el crecimiento de una inversión o ahorro a futuro",
@@ -116832,7 +116915,8 @@
       "condiciones_activacion": [
         "Cuando estás decidiendo si comprar equipo, invertir en un inmueble o hacer una fusión o adquisición vale la pena"
       ],
-      "etiqueta_arbol": "Calcula tu Valor Presente"
+      "etiqueta_arbol": "Calcula tu Valor Presente",
+      "deprecado": true
     },
     "valor_presente_franquicia_pvf": {
       "node_id": "valor_presente_franquicia_pvf",
@@ -127612,7 +127696,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 263,
+    "nodos_sin_enlaces_entrantes": 268,
     "enlaces_rotos_en_grafo": 0
   }
 }

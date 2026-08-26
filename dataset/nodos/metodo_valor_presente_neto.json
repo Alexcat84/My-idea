@@ -7,7 +7,7 @@
   "pasos_accionables": [
     "Proyectar los flujos de efectivo futuros esperados de la inversión",
     "Definir la tasa de descuento (hurdle rate) de la empresa",
-    "Aplicar la ecuación de descuento usando esa tasa para traer cada flujo futuro a valor presente",
+    "Aplicar la ecuación de descuento usando esa tasa para traer cada flujo futuro a valor presente, porque cualquier dinero que esperas recibir en el futuro tienes que descontarlo para poder compararlo con el efectivo que tienes hoy",
     "Sumar los valores presentes de todos los flujos futuros y restar el desembolso inicial para obtener el NPV",
     "Aceptar la inversión si el NPV es positivo, rechazarla si es negativo; entre proyectos alternativos, elegir el de mayor NPV positivo",
     "Realizar un análisis de sensibilidad usando 80-90% de las proyecciones originales para probar la robustez de la decisión"
@@ -21,18 +21,37 @@
   "node_id": "metodo_valor_presente_neto",
   "nodos_previos": [
     "analisis_de_gastos_de_capital",
-    "valor_presente",
     "tasa_de_retorno_requerida",
     "verificar_modelo_ingresos",
-    "metodo_payback"
+    "metodo_payback",
+    "tasa_crecimiento_sostenible",
+    "valor_futuro"
   ],
   "nodos_siguientes": [
     "tasa_interna_retorno_irr",
     "gestion_capital_trabajo",
     "analisis_varianza_financiera",
-    "valor_presente",
     "comparacion_metodos_inversion",
-    "monetizacion_npv_caso_negocio"
+    "monetizacion_npv_caso_negocio",
+    "analisis_de_gastos_de_capital",
+    "tasa_de_retorno_requerida",
+    "valor_futuro"
   ],
-  "etiqueta_arbol": "Calcula el Valor Presente Neto"
+  "etiqueta_arbol": "Calcula el Valor Presente Neto",
+  "ids_alias": [
+    "valor_del_dinero_en_el_tiempo",
+    "valor_presente"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "valor_del_dinero_en_el_tiempo",
+      "titulo": "Valor del Dinero en el Tiempo (Time Value of Money)",
+      "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+    },
+    {
+      "node_id": "valor_presente",
+      "titulo": "Valor Presente (Present Value)",
+      "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+    }
+  ]
 }

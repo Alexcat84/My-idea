@@ -6,27 +6,52 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
   "resumen_teorico": "Una investigación New View busca entender la situación desde el punto de vista de las personas involucradas al momento del evento, evitando sesgos de retrospectiva (hindsight bias) y de resultado. Evita declaraciones de 'causa probable' simplistas, optando por hallazgos sobre causas, contribuciones y riesgos, con foco en acciones de seguridad preventivas. Ejemplos reales incluyen la investigación del accidente de Swissair 111 y el análisis revisionista del derribo de los Black Hawks en Irak.",
   "pasos_accionables": [
-    "Reconstruir la situación tal como la vivieron los involucrados, sin usar el conocimiento del resultado final",
+    "Reconstruir la situación tal como la vivieron los involucrados, sin usar el conocimiento del resultado final, a partir de la información y las señales disponibles para los actores en el momento del evento",
     "Evitar declaraciones de causa única o 'causa probable'",
     "Documentar hallazgos como causas, contribuciones y riesgos por separado",
-    "Dedicar una sección sustancial del informe a acciones de seguridad preventivas",
-    "Contrastar la investigación oficial con relatos revisionistas o independientes si están disponibles"
+    "Dedicar una sección sustancial del informe a acciones de seguridad preventivas, y comunicar los hallazgos de forma que honren la experiencia humana en lugar de reducirla a una lista de errores",
+    "Contrastar la investigación oficial con relatos revisionistas o independientes si están disponibles",
+    "Involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento",
+    "Entrevistar a los involucrados para entender su percepción y objetivos en el momento"
   ],
   "entregable_esperado": "Informe de investigación de incidente estructurado según principios New View, con foco en prevención en lugar de culpabilización",
   "nodos_previos": [
     "new_view_vs_old_view",
     "abandonar_la_falacia_del_arreglo_rapido",
-    "abandonar_arreglos_rapidos"
+    "abandonar_arreglos_rapidos",
+    "atribucion_retrospectiva_del_error",
+    "human_error_como_sintoma",
+    "process_tracing_methods",
+    "reacciones_al_fallo",
+    "riesgos_del_enfoque_en_error_humano",
+    "sesgo_retrospectivo"
   ],
   "nodos_siguientes": [
     "cultura_justa",
     "resiliencia_organizacional",
     "cultura_justa_3",
-    "safety_i_safety_ii"
+    "safety_i_safety_ii",
+    "process_tracing_methods"
   ],
   "condiciones_activacion": [
     "Al investigar un accidente o incidente de seguridad ocupacional",
     "Cuando se busca evitar sesgos retrospectivos en el análisis de fallos"
   ],
-  "etiqueta_arbol": "Investiga sin Culpar a Nadie"
+  "etiqueta_arbol": "Investiga sin Culpar a Nadie",
+  "ids_alias": [
+    "new_view_vs_old_view_de_error_humano",
+    "perspectiva_dentro_del_tunel"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "new_view_vs_old_view_de_error_humano",
+      "titulo": "Nueva Visión (New View) vs Vieja Visión (Old View) del Error Humano",
+      "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+    },
+    {
+      "node_id": "perspectiva_dentro_del_tunel",
+      "titulo": "Perspectiva desde Dentro del Túnel",
+      "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+    }
+  ]
 }
