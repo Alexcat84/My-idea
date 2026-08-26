@@ -1,0 +1,239 @@
+==============================================================================
+OP-U-02 . UNICO Y FINAL POR AGOTAMIENTO, LOTE I DEL TRAMO UNICO DE OP-U-02, EL ULTIMO SIN DUENO. ABRE EN EL ACTO 49, que es el PRIMERO DEL TRAMO SIN DUENO MEDIDO, y cierra en el 53. LOS DOS SALTOS VAN DECLARADOS Y NO ROMPEN EL PREFIJO SIN SALTOS, porque ninguno de los dos actos saltados esta en la cola de fusiones de esta operacion: el ACTO 31 tiene dueno medido (OP-F-04-WEI y OP-S-04 en duenos_cualquier_operacion, leido hoy del fichero fijado del tramo) y el ACTO 37 tiene dueno medido (OP-S-07, leido hoy del mismo fichero), y la adjudicacion 2 del acta 69 dice con todas sus letras que lo que vale para el 31 vale para el 37 cuando el prefijo lo alcance. CUATRO ACTOS CIERRAN ENTEROS Y SON 12 NODOS: los actos 49, 50, 51 y 53 cierran LOS CUATRO FUNDIDOS y NINGUNO cierra DECLARADO. EL ACTO 51 FUNDE CON SU UNICA PUERTA SOBREVIVIENDO (acta 54, pregunta 1) Y SIN NINGUN CHOQUE QUE PUBLICAR, porque la vara de pasos y el cableado apuntan a la puerta los dos. EL ACTO 50 ES EL CARO: su unica vara apunta al nodo que LAS DOS RAZONES ESCRITAS MATAN, se funde a favor del archivo por la letra de P.8 y de CHOCAN DECIDE LA PIEZA DECLARADA, y va MARCADO DISCUTIBLE con su pendiente de doctrina nombrado. CON ESTE LOTE EL TRAMO SE QUEDA SIN NINGUN ACTO SIN DUENO Y SIN DESTINO: lo que queda son los DOS con dueno (31 y 37) y los QUINCE declarados, y ese estado es el insumo del CIERRE DE LA FASE 03, que es PARADA DE FUNDADOR y que este lote NI ABRE NI DECIDE . MODO SIMULAR
+plan: docs/loop/PLAN_V73_OPU02_LOTE_I.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3196 vivos, 657 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 49 . sobrevive shadow_ia_organizacional . absorbe incentivos_transparencia_ia, shadow_ai_use_organizacional
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 2 de incentivos_transparencia_ia al PASO 4 del superviviente
+        inciso VERBATIM: 'incentivos tangibles (bonos, reconocimientos) para quienes descubran usos innovadores de IA'
+        nexo (lo unico de cosecha propia): ', con '
+        paso resultante: Recompensar la innovación con IA en vez de amenazar puestos de trabajo, para incentivar la transparencia, con incentivos tangibles (bonos, reconocimientos) para quienes descubran usos innovadores de IA
+     del paso 3 de shadow_ai_use_organizacional al PASO 1 del superviviente
+        inciso VERBATIM: 'marcos de uso responsable y transparente'
+        nexo (lo unico de cosecha propia): ', y sustituirlas por '
+        paso resultante: Evitar prohibiciones tajantes de herramientas de IA que empujen a un uso clandestino, y sustituirlas por marcos de uso responsable y transparente
+  alias del superviviente: ['incentivos_transparencia_ia', 'shadow_ai_use_organizacional']
+
+------------------------------------------------------------------------------
+ACTO 50 . sobrevive investigacion_new_view . absorbe new_view_vs_old_view_de_error_humano, perspectiva_dentro_del_tunel
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 5 de new_view_vs_old_view_de_error_humano al PASO 4 del superviviente
+        inciso VERBATIM: 'honren la experiencia humana en lugar de reducirla a una lista de errores'
+        nexo (lo unico de cosecha propia): ', y comunicar los hallazgos de forma que '
+        paso resultante: Dedicar una sección sustancial del informe a acciones de seguridad preventivas, y comunicar los hallazgos de forma que honren la experiencia humana en lugar de reducirla a una lista de errores
+     del paso 1 de perspectiva_dentro_del_tunel al PASO 1 del superviviente
+        inciso VERBATIM: 'la información y las señales disponibles para los actores en el momento del evento'
+        nexo (lo unico de cosecha propia): ', a partir de '
+        paso resultante: Reconstruir la situación tal como la vivieron los involucrados, sin usar el conocimiento del resultado final, a partir de la información y las señales disponibles para los actores en el momento del evento
+  alias del superviviente: ['new_view_vs_old_view_de_error_humano', 'perspectiva_dentro_del_tunel']
+
+------------------------------------------------------------------------------
+ACTO 51 . sobrevive metodo_valor_presente_neto . absorbe valor_del_dinero_en_el_tiempo, valor_presente
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de valor_del_dinero_en_el_tiempo al PASO 3 del superviviente
+        inciso VERBATIM: 'cualquier dinero que esperas recibir en el futuro tienes que descontarlo para poder compararlo con el efectivo que tienes hoy'
+        nexo (lo unico de cosecha propia): ', porque '
+        paso resultante: Aplicar la ecuación de descuento usando esa tasa para traer cada flujo futuro a valor presente, porque cualquier dinero que esperas recibir en el futuro tienes que descontarlo para poder compararlo con el efectivo que tienes hoy
+  alias del superviviente: ['valor_del_dinero_en_el_tiempo', 'valor_presente']
+
+------------------------------------------------------------------------------
+ACTO 53 . sobrevive reconocimiento_al_desempeno . absorbe reconocimiento, reconocimiento_crosby
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 2 de reconocimiento al PASO 1 del superviviente
+        inciso VERBATIM: 'todos los problemas reportados de manera equitativa'
+        nexo (lo unico de cosecha propia): ', y trata '
+        paso resultante: Arma un sistema simple con tres tipos de reconocimiento: logros grupales de metas a corto plazo, contribuciones individuales sobresalientes y sorteos ocasionales entre las ideas de mejora que te compartan, y trata todos los problemas reportados de manera equitativa
+     del paso 4 de reconocimiento_crosby al PASO 3 del superviviente
+        inciso VERBATIM: 'la forma de trabajar que tienes con tu gente'
+        nexo (lo unico de cosecha propia): ', y adapta el reconocimiento a '
+        paso resultante: Si trabajas con colaboradores o freelancers, decide junto con ellos cómo se elige el premio, en lugar de imponerlo tú solo, y adapta el reconocimiento a la forma de trabajar que tienes con tu gente
+  alias del superviviente: ['reconocimiento', 'reconocimiento_crosby']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 26
+   analisis_de_gastos_de_capital                        nodos_previos     valor_del_dinero_en_el_tiempo -> metodo_valor_presente_neto
+   atribucion_retrospectiva_del_error                   nodos_siguientes  new_view_vs_old_view_de_error_humano -> investigacion_new_view
+   centaur_cyborg_ia                                    nodos_siguientes  shadow_ai_use_organizacional -> shadow_ia_organizacional
+   consejo_de_calidad_3                                 nodos_previos     reconocimiento -> reconocimiento_al_desempeno
+   consejo_de_calidad_3                                 nodos_previos     reconocimiento_crosby -> reconocimiento_al_desempeno
+   consejos_de_calidad                                  nodos_previos     reconocimiento_crosby -> reconocimiento_al_desempeno
+   cultura_justa                                        nodos_previos     new_view_vs_old_view_de_error_humano -> investigacion_new_view
+   eliminacion_causas_error                             nodos_siguientes  reconocimiento -> reconocimiento_al_desempeno
+   eliminacion_causas_error                             nodos_siguientes  reconocimiento_crosby -> reconocimiento_al_desempeno
+   eliminacion_causas_error_4                           nodos_siguientes  reconocimiento_crosby -> reconocimiento_al_desempeno
+   human_error_como_sintoma                             nodos_siguientes  new_view_vs_old_view_de_error_humano -> investigacion_new_view
+   metodo_valor_presente_neto                           nodos_previos     valor_presente -> metodo_valor_presente_neto
+   metodo_valor_presente_neto                           nodos_siguientes  valor_presente -> metodo_valor_presente_neto
+   process_tracing_methods                              nodos_previos     new_view_vs_old_view_de_error_humano -> investigacion_new_view
+   process_tracing_methods                              nodos_siguientes  perspectiva_dentro_del_tunel -> investigacion_new_view
+   reacciones_al_fallo                                  nodos_siguientes  perspectiva_dentro_del_tunel -> investigacion_new_view
+   riesgos_del_enfoque_en_error_humano                  nodos_siguientes  new_view_vs_old_view_de_error_humano -> investigacion_new_view
+   seminario_de_exito_para_gerencia                     nodos_siguientes  reconocimiento_crosby -> reconocimiento_al_desempeno
+   sesgo_retrospectivo                                  nodos_siguientes  perspectiva_dentro_del_tunel -> investigacion_new_view
+   sistemas_organizacionales_ia                         nodos_previos     incentivos_transparencia_ia -> shadow_ia_organizacional
+   sistemas_organizacionales_ia                         nodos_previos     shadow_ai_use_organizacional -> shadow_ia_organizacional
+   tasa_crecimiento_sostenible                          nodos_siguientes  valor_del_dinero_en_el_tiempo -> metodo_valor_presente_neto
+   tasa_de_retorno_requerida                            nodos_previos     valor_del_dinero_en_el_tiempo -> metodo_valor_presente_neto
+   tasa_de_retorno_requerida                            nodos_siguientes  valor_presente -> metodo_valor_presente_neto
+   valor_futuro                                         nodos_previos     valor_del_dinero_en_el_tiempo -> metodo_valor_presente_neto
+   valor_futuro                                         nodos_siguientes  valor_presente -> metodo_valor_presente_neto
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 1
+   eliminacion_causas_error_3                           nodos_siguientes  reconocimiento_crosby (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 7
+   consejo_de_calidad_3                                 nodos_previos
+   consejos_de_calidad                                  nodos_previos
+   cultura_justa                                        nodos_previos
+   eliminacion_causas_error                             nodos_siguientes
+   eliminacion_causas_error_4                           nodos_siguientes
+   sistemas_organizacionales_ia                         nodos_previos
+   tasa_de_retorno_requerida                            nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 2
+   metodo_valor_presente_neto                           nodos_previos
+   metodo_valor_presente_neto                           nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 877   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 876   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 1, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 20 de 20
+guarda D, los 8 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (47 filas)
+ acto de que nodo                                  que          n  a donde va
+   49 incentivos_transparencia_ia                  paso         1  PASO 5 del superviviente
+        Comunicar explícitamente que el uso de IA no resultará en despidos automáticos
+   49 incentivos_transparencia_ia                  paso         2  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Crear incentivos tangibles (bonos, reconocimientos) para quienes descubran usos innovadores de IA
+   49 incentivos_transparencia_ia                  paso         3  ya lo dice el PASO 2 del superviviente
+        Fomentar una cultura de confianza donde compartir el uso de IA se perciba como ventaja, no riesgo
+   49 incentivos_transparencia_ia                  condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si se detecta miedo o resistencia a declarar el uso de IA
+   49 incentivos_transparencia_ia                  condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si se quiere escalar la adopción de IA de forma democrática en la empresa
+   49 shadow_ai_use_organizacional                 paso         1  ya lo dice el PASO 1 del superviviente
+        Evaluar si existen políticas restrictivas de IA en la organización que puedan estar generando uso oculto
+   49 shadow_ai_use_organizacional                 paso         2  PASO 6 del superviviente
+        Realizar encuestas anónimas para detectar el nivel real de adopción de IA entre empleados
+   49 shadow_ai_use_organizacional                 paso         3  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Sustituir prohibiciones por marcos de uso responsable y transparente
+   49 shadow_ai_use_organizacional                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si la empresa restringe IA sin plan de adopción claro
+   49 shadow_ai_use_organizacional                 condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si se sospecha uso no declarado de IA por miedo a represalias
+   50 new_view_vs_old_view_de_error_humano         paso         1  ya lo dice el PASO 1 del superviviente
+        Reconocer y evitar el sesgo retrospectivo (hindsight bias) al analizar decisiones pasadas
+   50 new_view_vs_old_view_de_error_humano         paso         2  ya lo dice el PASO 3 del superviviente
+        Reformular las conclusiones evitando vocabulario centrado en 'fallas', 'deficiencias' o 'incumplimientos'
+   50 new_view_vs_old_view_de_error_humano         paso         3  ya lo dice el PASO 1 del superviviente
+        Buscar entender las restricciones organizacionales, tecnológicas y situacionales que enmarcaron las decisiones de los practicantes
+   50 new_view_vs_old_view_de_error_humano         paso         4  PASO 6 del superviviente
+        Involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento
+   50 new_view_vs_old_view_de_error_humano         paso         5  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Comunicar los hallazgos de forma que honren la experiencia humana en lugar de reducirla a una lista de errores
+   50 new_view_vs_old_view_de_error_humano         condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la organización debe decidir el enfoque ético y metodológico para investigar accidentes
+   50 new_view_vs_old_view_de_error_humano         condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando existe presión por encontrar 'culpables' rápidamente tras un accidente
+   50 new_view_vs_old_view_de_error_humano         condicion    3  ya lo dice la CONDICION 2 del superviviente
+        Cuando se busca mejorar la cultura de seguridad y el aprendizaje organizacional a largo plazo
+   50 perspectiva_dentro_del_tunel                 paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Reconstruir la información y las señales disponibles para los actores en el momento del evento
+   50 perspectiva_dentro_del_tunel                 paso         2  ya lo dice el PASO 3 del superviviente
+        Evitar el uso de palabras como 'fallaron en' o 'debieron haber' en los reportes
+   50 perspectiva_dentro_del_tunel                 paso         3  PASO 7 del superviviente
+        Entrevistar a los involucrados para entender su percepción y objetivos en el momento
+   50 perspectiva_dentro_del_tunel                 paso         4  ya lo dice el PASO 1 del superviviente
+        Documentar el contexto de presión, tiempo y recursos disponibles en el momento del incidente
+   50 perspectiva_dentro_del_tunel                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Al redactar la sección de análisis de causas en un informe de accidente
+   50 perspectiva_dentro_del_tunel                 condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se busca fomentar el aprendizaje organizacional en lugar de la culpabilización
+   51 valor_del_dinero_en_el_tiempo                paso         1  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Reconoce que cualquier dinero que esperas recibir en el futuro tienes que descontarlo para poder compararlo con el efectivo que tienes hoy
+   51 valor_del_dinero_en_el_tiempo                paso         2  ya lo dice el PASO 2 del superviviente
+        Identifica el riesgo de recibir ese dinero en el futuro frente a tenerlo ahora
+   51 valor_del_dinero_en_el_tiempo                paso         3  ya lo dice el PASO 2 del superviviente
+        Define qué retorno necesitas exigirle a tu inversión o proyecto según ese riesgo
+   51 valor_del_dinero_en_el_tiempo                paso         4  ya lo dice el PASO 4 del superviviente
+        Calcula cuánto vale hoy el dinero que esperas recibir y compáralo con lo que tendrías que desembolsar ahora
+   51 valor_del_dinero_en_el_tiempo                paso         5  ya lo dice el PASO 5 del superviviente
+        Usa ese resultado para decidir si te conviene hacer la inversión
+   51 valor_del_dinero_en_el_tiempo                condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando tienes que decidir entre invertir dinero ahora o recibirlo en el futuro
+   51 valor_del_dinero_en_el_tiempo                condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando estás evaluando préstamos, inversiones o compras de activos a largo plazo
+   51 valor_del_dinero_en_el_tiempo                condicion    3  ya lo dice la CONDICION 1 del superviviente
+        Cuando tienes que decidir si comprar un activo, una máquina o un software para tu negocio
+   51 valor_presente                               paso         1  ya lo dice el PASO 1 del superviviente
+        Proyecta los flujos de efectivo futuros que esperas de la inversión
+   51 valor_presente                               paso         2  ya lo dice el PASO 2 del superviviente
+        Elige una tasa de descuento apropiada (hurdle rate)
+   51 valor_presente                               paso         3  ya lo dice el PASO 3 del superviviente
+        Aplica la fórmula de descuento para traer esos flujos futuros a valor de hoy
+   51 valor_presente                               paso         4  ya lo dice el PASO 4 del superviviente
+        Compara ese valor presente con el costo inicial de la inversión
+   51 valor_presente                               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando estás decidiendo si comprar equipo, invertir en un inmueble o hacer una fusión o adquisición vale la pena
+   53 reconocimiento                               paso         1  ya lo dice el PASO 5 del superviviente
+        Diseñar un programa de reconocimiento no financiero
+   53 reconocimiento                               paso         2  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Tratar todos los problemas reportados de manera equitativa
+   53 reconocimiento                               paso         3  ya lo dice el PASO 4 del superviviente
+        Reconocer públicamente logros de calidad y cumplimiento de metas
+   53 reconocimiento                               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se busca sostener la motivación del equipo tras alcanzar metas de calidad
+   53 reconocimiento_crosby                        paso         1  ya lo dice el PASO 5 del superviviente
+        Crea una manera de reconocer basada en apreciación real, no en valor monetario
+   53 reconocimiento_crosby                        paso         2  ya lo dice el PASO 4 del superviviente
+        Evita premios costosos que distorsionen la motivación
+   53 reconocimiento_crosby                        paso         3  ya lo dice el PASO 2 del superviviente
+        Da reconocimientos regulares y visibles
+   53 reconocimiento_crosby                        paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Adapta el reconocimiento a la forma de trabajar que tienes con tu gente
+   53 reconocimiento_crosby                        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando logras mejoras medibles que vale la pena celebrar
+   53 reconocimiento_crosby                        condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando quieres mantener la motivación sin gastar de más
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 4
+  nodos implicados    : 12
+  nodos que MUEREN    : 8
+  piezas repartidas   : 47 (4 viajan enteras, 36 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.

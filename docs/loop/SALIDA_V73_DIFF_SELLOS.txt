@@ -1,0 +1,20 @@
+==============================================================================
+DIFF DE LOS DOS SELLOS DEL PLAN DEL LOTE I, CAMPO A CAMPO Y NO SOLO POR LINEAS
+  sello 1: sin --colisiones-esperadas (el plan que la simulacion necesita)
+  sello 2: con --colisiones-esperadas (el plan que se ejecuta)
+==============================================================================
+
+  lineas de diff: 2
+     - "colisiones_esperadas": "NO ENTRO NINGUN FICHERO DE COLISIONES ESPERADAS A ESTE GENERADOR, y por eso este plan NO LO DECLARA en vez de suponerlo. Es el censo por PAR RESUELTO sobre el archivo entero, medido ANTES de to
+     + "colisiones_esperadas": "docs/loop/SALIDA_V73_COLISIONES_ESPERADAS.txt (43 lineas, medidas al sellar). Es el censo por PAR RESUELTO sobre el archivo entero, medido ANTES de tocar un nodo. COMBINACIONES POSIBLES DE SUPE
+
+  CAMPO A CAMPO EN LA RAIZ:
+     DISTINTO colisiones_esperadas
+        sello 1: "NO ENTRO NINGUN FICHERO DE COLISIONES ESPERADAS A ESTE GENERADOR, y por eso este plan NO LO DECLARA en vez de suponerlo. Es el censo por PAR RESUELTO sobre el archivo entero, medido ANTES de tocar un
+        sello 2: "docs/loop/SALIDA_V73_COLISIONES_ESPERADAS.txt (43 lineas, medidas al sellar). Es el censo por PAR RESUELTO sobre el archivo entero, medido ANTES de tocar un nodo. COMBINACIONES POSIBLES DE SUPERVIVIE
+
+  campos distintos en la raiz: 1 (colisiones_esperadas)
+  el campo actos es IDENTICO entre los dos sellos: True
+  el campo declarados_y_no_fundidos es IDENTICO   : True
+
+FIN

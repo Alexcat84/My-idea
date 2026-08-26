@@ -1,0 +1,248 @@
+==============================================================================
+DOSSIER DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO: EL ACTO LEIDO ENTERO (P.5) CON SU RAZON
+==============================================================================
+  nodos leidos de: el arbol de trabajo
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+
+##############################################################################
+# ACTO 49 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 241, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): shadow_ai_use_organizacional
+     nodo_b (EL SEGUNDO de la razon): shadow_ia_organizacional
+     RAZON ENTERA, sin recortar:
+       REPITE con shadow_ia_organizacional. Los dos mandan no prohibir la IA de golpe porque empuja el uso a la sombra, abrir canales seguros y sin penalizacion para que la gente declare lo que usa, e identificar y aprovechar a los usuarios mas avanzados. FIGURA: ids casi identicos, use contra ia. Candidato a fusion.
+
+  [PAR] puesto 1032, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): incentivos_transparencia_ia
+     nodo_b (EL SEGUNDO de la razon): shadow_ia_organizacional
+     RAZON ENTERA, sin recortar:
+       LA MISMA POLITICA CONTRA LA IA CLANDESTINA, del mismo libro y sin arista entre ellos. Lo comun es el mecanismo entero: recompensar la innovacion con IA en vez de amenazar puestos de trabajo, y crear un espacio seguro y sin penalizacion para que la gente cuente como la usa. Lo propio de incentivos_transparencia_ia es comunicar de forma EXPLICITA que usar IA no va a resultar en despidos automaticos, que es la version dicha en voz alta de lo que el otro deja implicito. Lo propio de shadow_ia_organizacional son dos: evitar las prohibiciones tajantes que empujan al uso clandestino, e identificar a los usuarios mas avanzados de la organizacion, que pueden estar en cualquier nivel jerarquico. Ese ultimo es el mas util del par: la persona que mas sabe de IA en un negocio pequeno rara vez es quien manda.
+
+  --- incentivos_transparencia_ia
+      titulo    : Incentivar la Transparencia en el Uso de IA
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 3 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Comunicar explícitamente que el uso de IA no resultará en despidos automáticos
+      paso 2: Crear incentivos tangibles (bonos, reconocimientos) para quienes descubran usos innovadores de IA
+      paso 3: Fomentar una cultura de confianza donde compartir el uso de IA se perciba como ventaja, no riesgo
+      cond 1: Si se detecta miedo o resistencia a declarar el uso de IA
+      cond 2: Si se quiere escalar la adopción de IA de forma democrática en la empresa
+      previos   : ['shadow_ai_use_organizacional']
+      siguientes: ['sistemas_organizacionales_ia']
+      entregable: Política interna de incentivos y garantías para el uso abierto de IA
+
+  --- shadow_ai_use_organizacional
+      titulo    : Uso Oculto de IA (Shadow AI)
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 3 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Evaluar si existen políticas restrictivas de IA en la organización que puedan estar generando uso oculto
+      paso 2: Realizar encuestas anónimas para detectar el nivel real de adopción de IA entre empleados
+      paso 3: Sustituir prohibiciones por marcos de uso responsable y transparente
+      cond 1: Si la empresa restringe IA sin plan de adopción claro
+      cond 2: Si se sospecha uso no declarado de IA por miedo a represalias
+      previos   : ['centaur_cyborg_ia']
+      siguientes: ['incentivos_transparencia_ia', 'sistemas_organizacionales_ia']
+      entregable: Diagnóstico del uso real (visible y oculto) de IA en el equipo u organización
+
+  --- shadow_ia_organizacional
+      titulo    : Gestionar el Uso Oculto de IA en la Organización (Shadow AI)
+      fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Evitar prohibiciones tajantes de herramientas de IA que empujen a un uso clandestino
+      paso 2: Crear canales seguros y sin penalización para que empleados compartan cómo usan IA en su trabajo
+      paso 3: Identificar a los usuarios más avanzados de IA en la organización (pueden estar en cualquier nivel jerárquico)
+      paso 4: Recompensar la innovación con IA en vez de amenazar puestos de trabajo, para incentivar la transparencia
+      cond 1: Cuando la empresa sospecha o detecta uso no oficial de IA por parte de empleados
+      cond 2: Cuando se quiere escalar innovaciones individuales de IA a nivel organizacional
+      previos   : ['mitigar_falling_asleep_wheel']
+      siguientes: ['desafios_implementacion_ia']
+      entregable: Una política interna de IA que fomente la transparencia y capture buenas prácticas de empleados
+
+##############################################################################
+# ACTO 50 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 2290, clase A, dominio health_safety
+     nodo_a (EL PRIMERO de la razon): investigacion_new_view
+     nodo_b (EL SEGUNDO de la razon): new_view_vs_old_view_de_error_humano
+     RAZON ENTERA, sin recortar:
+       REPITE. new_view_vs_old_view_de_error_humano contra investigacion_new_view, MISMA FUENTE, Dekker, y sin arista, y los dos hablan del mismo objeto, el informe de investigacion. Su paso 1, evitar el sesgo retrospectivo, es el paso 1 del otro, reconstruir la situacion tal como la vivieron sin usar el conocimiento del resultado; y sus pasos 2, 3 y 5, el vocabulario sin fallas ni incumplimientos, las restricciones que enmarcaron las decisiones y comunicar honrando la experiencia humana, son formas de decir lo que el otro pide con instrumentos. Le queda una linea propia, ampliar el circulo de testigos a colegas, familiares y allegados. investigacion_new_view si trae cuatro instrumentos que el otro no tiene: EVITAR TODA DECLARACION DE CAUSA UNICA O CAUSA PROBABLE; DOCUMENTAR LOS HALLAZGOS SEPARANDO CAUSAS, CONTRIBUCIONES Y RIESGOS, que es una taxonomia de tres casillas; DEDICAR UNA SECCION SUSTANCIAL DEL INFORME A ACCIONES PREVENTIVAS; y CONTRASTAR LA INVESTIGACION OFICIAL CON RELATOS REVISIONISTAS O INDEPENDIENTES, que es la unica linea del dominio que somete el informe propio a una version rival. Por la vara, REPITE. Sobrevive investigacion_new_view, y el circulo ampliado de testigos se absorbe como linea suya. Este nodo sobrevivio en los puestos 2246, 2262 y 2266 contra doctrina, estructura y diagnostico; muere contra el unico que escribe el mismo informe mejor.
+
+  [PAR] puesto 2292, clase A, dominio health_safety
+     nodo_a (EL PRIMERO de la razon): new_view_vs_old_view_de_error_humano
+     nodo_b (EL SEGUNDO de la razon): perspectiva_dentro_del_tunel
+     RAZON ENTERA, sin recortar:
+       REPITE, y es la SEGUNDA vez que este nodo repite en el dominio. new_view_vs_old_view_de_error_humano contra perspectiva_dentro_del_tunel, MISMA FUENTE, Dekker, y sin arista. Su paso 1, evitar el sesgo retrospectivo, es la definicion misma del tunel del otro; su paso 2, el vocabulario sin fallas ni incumplimientos, es su paso 2, evitar FALLARON EN o DEBIERON HABER en los reportes; y su paso 3, entender las restricciones que enmarcaron las decisiones, es su paso 4, documentar el contexto de presion, tiempo y recursos disponibles. Le quedan dos lineas, ampliar el circulo de testigos y comunicar honrando la experiencia humana. perspectiva_dentro_del_tunel si trae dos pasos de trabajo: RECONSTRUIR LA INFORMACION Y LAS SENALES QUE ESTABAN DISPONIBLES en el momento, y ENTREVISTAR A LOS INVOLUCRADOS PARA ENTENDER SU PERCEPCION Y SUS OBJETIVOS, que es ir a preguntarles en vez de deducirlo. Por la vara, REPITE. Sobrevive perspectiva_dentro_del_tunel.
+
+  --- investigacion_new_view
+      titulo    : Investigación de accidentes bajo el enfoque New View
+      fuente    : The Field Guide to Understandin - Dekker, Sidney;
+      pasos 5 | condiciones 2 | previos 3 | siguientes 4 | cableado 7
+      paso 1: Reconstruir la situación tal como la vivieron los involucrados, sin usar el conocimiento del resultado final
+      paso 2: Evitar declaraciones de causa única o 'causa probable'
+      paso 3: Documentar hallazgos como causas, contribuciones y riesgos por separado
+      paso 4: Dedicar una sección sustancial del informe a acciones de seguridad preventivas
+      paso 5: Contrastar la investigación oficial con relatos revisionistas o independientes si están disponibles
+      cond 1: Al investigar un accidente o incidente de seguridad ocupacional
+      cond 2: Cuando se busca evitar sesgos retrospectivos en el análisis de fallos
+      previos   : ['new_view_vs_old_view', 'abandonar_la_falacia_del_arreglo_rapido', 'abandonar_arreglos_rapidos']
+      siguientes: ['cultura_justa', 'resiliencia_organizacional', 'cultura_justa_3', 'safety_i_safety_ii']
+      entregable: Informe de investigación de incidente estructurado según principios New View, con foco en prevención en lugar de culpabilización
+
+  --- new_view_vs_old_view_de_error_humano
+      titulo    : Nueva Visión (New View) vs Vieja Visión (Old View) del Error Humano
+      fuente    : The Field Guide to Understandin - Dekker, Sidney;
+      pasos 5 | condiciones 3 | previos 3 | siguientes 2 | cableado 5
+      paso 1: Reconocer y evitar el sesgo retrospectivo (hindsight bias) al analizar decisiones pasadas
+      paso 2: Reformular las conclusiones evitando vocabulario centrado en 'fallas', 'deficiencias' o 'incumplimientos'
+      paso 3: Buscar entender las restricciones organizacionales, tecnológicas y situacionales que enmarcaron las decisiones de los practicantes
+      paso 4: Involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento
+      paso 5: Comunicar los hallazgos de forma que honren la experiencia humana en lugar de reducirla a una lista de errores
+      cond 1: Cuando la organización debe decidir el enfoque ético y metodológico para investigar accidentes
+      cond 2: Cuando existe presión por encontrar 'culpables' rápidamente tras un accidente
+      cond 3: Cuando se busca mejorar la cultura de seguridad y el aprendizaje organizacional a largo plazo
+      previos   : ['human_error_como_sintoma', 'atribucion_retrospectiva_del_error', 'riesgos_del_enfoque_en_error_humano']
+      siguientes: ['process_tracing_methods', 'cultura_justa']
+      entregable: Una política o guía interna de investigación de incidentes que adopte explícitamente los principios de la Nueva Visión, evitando lenguaje de culpa y centrada en el aprendizaje sistémico.
+
+  --- perspectiva_dentro_del_tunel
+      titulo    : Perspectiva desde Dentro del Túnel
+      fuente    : The Field Guide to Understandin - Dekker, Sidney;
+      pasos 4 | condiciones 2 | previos 3 | siguientes 0 | cableado 3
+      paso 1: Reconstruir la información y las señales disponibles para los actores en el momento del evento
+      paso 2: Evitar el uso de palabras como 'fallaron en' o 'debieron haber' en los reportes
+      paso 3: Entrevistar a los involucrados para entender su percepción y objetivos en el momento
+      paso 4: Documentar el contexto de presión, tiempo y recursos disponibles en el momento del incidente
+      cond 1: Al redactar la sección de análisis de causas en un informe de accidente
+      cond 2: Cuando se busca fomentar el aprendizaje organizacional en lugar de la culpabilización
+      previos   : ['sesgo_retrospectivo', 'process_tracing_methods', 'reacciones_al_fallo']
+      siguientes: []
+      entregable: Narrativa de incidente reconstruida desde la perspectiva interna de los actores involucrados, evitando lenguaje contrafactual y enjuiciador
+
+##############################################################################
+# ACTO 51 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 378, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): valor_del_dinero_en_el_tiempo
+     nodo_b (EL SEGUNDO de la razon): valor_presente
+     RAZON ENTERA, sin recortar:
+       REPITE con valor_presente. Los dos ensenan a traer dinero futuro a hoy y a decidir con eso: elegir la tasa segun el riesgo, aplicar el descuento, y comparar el resultado con lo que hay que desembolsar. Lo unico que el primero tiene de mas es la premisa, reconocer que el dinero futuro se descuenta, que es el porque y no un paso. FAMILIA anotada, de tres: con el puesto 287, el nucleo tiene valor_del_dinero_en_el_tiempo, valor_presente y metodo_valor_presente_neto sobre el mismo descuento, y solo el tercero resta ademas el desembolso inicial.
+
+  [PAR] puesto 1332, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): metodo_valor_presente_neto
+     nodo_b (EL SEGUNDO de la razon): valor_presente
+     RAZON ENTERA, sin recortar:
+       TERCER SUBCONJUNTO ESTRICTO DEL EJERCICIO, del mismo libro y con arista. Los CUATRO pasos de valor_presente estan enteros dentro de los seis de metodo_valor_presente_neto y en el mismo orden: proyectar los flujos futuros esperados, elegir la tasa de descuento, aplicar la formula para traerlos a hoy, y comparar contra el costo inicial, que en el otro es restar el desembolso inicial para obtener el valor presente neto. PERDIDA CERO Y DIRECCION FORZADA, igual que en los puestos 511 y 1182: el nodo que muere no tiene ni una linea propia. Y metodo_valor_presente_neto trae ademas la REGLA DE DECISION, aceptar si sale positivo y rechazar si sale negativo, y elegir el mayor entre alternativas; y el ANALISIS DE SENSIBILIDAD con el ochenta o noventa por ciento de las proyecciones originales para probar la robustez. NOTA DE NOMINA: valor_presente ya tenia una A vigente, el puesto 378; con esta lleva dos. Y en el puesto 1093 salio sano contra valor_futuro, que calcula lo inverso: repite con quien hace la misma cuenta y se separa de quien hace la contraria.
+
+  --- metodo_valor_presente_neto   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Método del Valor Presente Neto (NPV)
+      fuente    : Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe
+      pasos 6 | condiciones 3 | previos 5 | siguientes 6 | cableado 11
+      paso 1: Proyectar los flujos de efectivo futuros esperados de la inversión
+      paso 2: Definir la tasa de descuento (hurdle rate) de la empresa
+      paso 3: Aplicar la ecuación de descuento usando esa tasa para traer cada flujo futuro a valor presente
+      paso 4: Sumar los valores presentes de todos los flujos futuros y restar el desembolso inicial para obtener el NPV
+      paso 5: Aceptar la inversión si el NPV es positivo, rechazarla si es negativo; entre proyectos alternativos, elegir el de mayor NPV positivo
+      paso 6: Realizar un análisis de sensibilidad usando 80-90% de las proyecciones originales para probar la robustez de la decisión
+      cond 1: Cuando se necesita determinar si una inversión de capital agregará valor real a la empresa en términos de dólares de hoy
+      cond 2: Cuando el emprendedor debe decidir entre múltiples proyectos de inversión de capital
+      cond 3: Cuando los métodos de IRR y payback dan resultados contradictorios
+      previos   : ['analisis_de_gastos_de_capital', 'valor_presente', 'tasa_de_retorno_requerida', 'verificar_modelo_ingresos', 'metodo_payback']
+      siguientes: ['tasa_interna_retorno_irr', 'gestion_capital_trabajo', 'analisis_varianza_financiera', 'valor_presente', 'comparacion_metodos_inversion', 'monetizacion_npv_caso_negocio']
+      entregable: Cifra de valor presente neto en dólares, con supuestos y análisis de sensibilidad documentados, que indique si la inversión agrega valor real a la empresa
+
+  --- valor_del_dinero_en_el_tiempo
+      titulo    : Valor del Dinero en el Tiempo (Time Value of Money)
+      fuente    : Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe
+      pasos 5 | condiciones 3 | previos 1 | siguientes 4 | cableado 5
+      paso 1: Reconoce que cualquier dinero que esperas recibir en el futuro tienes que descontarlo para poder compararlo con el efectivo que tienes hoy
+      paso 2: Identifica el riesgo de recibir ese dinero en el futuro frente a tenerlo ahora
+      paso 3: Define qué retorno necesitas exigirle a tu inversión o proyecto según ese riesgo
+      paso 4: Calcula cuánto vale hoy el dinero que esperas recibir y compáralo con lo que tendrías que desembolsar ahora
+      paso 5: Usa ese resultado para decidir si te conviene hacer la inversión
+      cond 1: Cuando tienes que decidir entre invertir dinero ahora o recibirlo en el futuro
+      cond 2: Cuando estás evaluando préstamos, inversiones o compras de activos a largo plazo
+      cond 3: Cuando tienes que decidir si comprar un activo, una máquina o un software para tu negocio
+      previos   : ['tasa_crecimiento_sostenible']
+      siguientes: ['valor_futuro', 'valor_presente', 'tasa_de_retorno_requerida', 'analisis_de_gastos_de_capital']
+      entregable: Tu análisis de cuánto vale hoy (o en el futuro) una inversión que estás por hacer, con tu decisión final basada en comparar ese valor contra lo que tendrías que desembolsar de entrada
+
+  --- valor_presente
+      titulo    : Valor Presente (Present Value)
+      fuente    : Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe
+      pasos 4 | condiciones 1 | previos 4 | siguientes 1 | cableado 5
+      paso 1: Proyecta los flujos de efectivo futuros que esperas de la inversión
+      paso 2: Elige una tasa de descuento apropiada (hurdle rate)
+      paso 3: Aplica la fórmula de descuento para traer esos flujos futuros a valor de hoy
+      paso 4: Compara ese valor presente con el costo inicial de la inversión
+      cond 1: Cuando estás decidiendo si comprar equipo, invertir en un inmueble o hacer una fusión o adquisición vale la pena
+      previos   : ['valor_del_dinero_en_el_tiempo', 'valor_futuro', 'metodo_valor_presente_neto', 'tasa_de_retorno_requerida']
+      siguientes: ['metodo_valor_presente_neto']
+      entregable: Cálculo de valor presente de los flujos de efectivo esperados de una inversión, listo para compararlo con el desembolso inicial
+
+##############################################################################
+# ACTO 53 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 2616, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): reconocimiento
+     nodo_b (EL SEGUNDO de la razon): reconocimiento_al_desempeno
+     RAZON ENTERA, sin recortar:
+       REPITE. reconocimiento contra reconocimiento_al_desempeno, MISMA FUENTE, Crosby, sin arista y sim_tit 80,9, los dos el Paso 12 (Reconocimiento). Es el mismo acto: un programa de reconocimiento NO FINANCIERO, publico y con la ceremonia por encima del dinero. reconocimiento es el esqueleto, disenar programa no financiero, tratar los problemas de forma equitativa, reconocer en publico; reconocimiento_al_desempeno es el mismo paso detallado, tres tipos de reconocimiento (grupal, individual, sorteo), su frecuencia, decidir el premio con los colaboradores, entrega digna y visible, y NO reducirlo a bonos ni dinero. El esqueleto va entero dentro del detallado. Por la vara, REPITE. Sobrevive reconocimiento_al_desempeno. Sin perdida propia.
+
+  [PAR] puesto 2942, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): reconocimiento
+     nodo_b (EL SEGUNDO de la razon): reconocimiento_crosby
+     RAZON ENTERA, sin recortar:
+       reconocimiento (Crosby, Paso 12: disenar un programa de reconocimiento no financiero, tratar todos los problemas reportados de forma equitativa, reconocer publicamente logros de calidad) contra reconocimiento_crosby (Crosby: crear una manera de reconocer basada en apreciacion real, no en valor monetario, evitar premios costosos que distorsionen la motivacion, dar reconocimientos regulares y visibles, adaptar el reconocimiento a tu forma de trabajar con la gente). MISMA FUENTE Crosby, sim_tit 45,2, sin arista. Es el mismo Paso 12, Reconocimiento, descrito dos veces: reconocimiento es el esqueleto (programa no financiero, tratamiento equitativo, reconocimiento publico); reconocimiento_crosby es el mismo esqueleto con enfasis (apreciacion real en vez de dinero = no financiero; evitar premios costosos = la misma regla no financiera; dar reconocimientos regulares y visibles = reconocer publicamente). Ninguno trae un paso entero ajeno al otro: 'adaptar a tu forma de trabajar con la gente' es una linea de estilo, no un acto nuevo; 'tratar los problemas de forma equitativa' es una linea de criterio, no un acto nuevo. Mismo patron ya escrito para este Paso 12 en el 2616 (reconocimiento =A= reconocimiento_al_desempeno, 'el esqueleto va entero dentro del detallado'). A, superviviente POR ELEGIR dentro del cumulo del Paso 12 ya absorbido; no abre figura nueva. DISCUTIBLE MARCADO fuerte (TAREA 1.4, marca agregada sin tocar clase ni razon vieja): reconocimiento_crosby trae la linea de adaptar el reconocimiento a tu equipo; quien la lea como un paso entero propio dira D.
+
+  --- reconocimiento
+      titulo    : Reconocimiento (Paso 12)
+      fuente    : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+      pasos 3 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Diseñar un programa de reconocimiento no financiero
+      paso 2: Tratar todos los problemas reportados de manera equitativa
+      paso 3: Reconocer públicamente logros de calidad y cumplimiento de metas
+      cond 1: Cuando se busca sostener la motivación del equipo tras alcanzar metas de calidad
+      previos   : ['eliminacion_causas_error']
+      siguientes: ['consejo_de_calidad_3']
+      entregable: Programa de reconocimiento de calidad implementado y comunicado.
+
+  --- reconocimiento_al_desempeno
+      titulo    : Paso 12: Reconocimiento
+      fuente    : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+      pasos 5 | condiciones 3 | previos 4 | siguientes 2 | cableado 6
+      paso 1: Arma un sistema simple con tres tipos de reconocimiento: logros grupales de metas a corto plazo, contribuciones individuales sobresalientes y sorteos ocasionales entre las ideas de mejora que te compartan
+      paso 2: Define una frecuencia: reconocimiento individual cada trimestre, logros grupales cada mes, y sorteos de vez en cuando
+      paso 3: Si trabajas con colaboradores o freelancers, decide junto con ellos cómo se elige el premio, en lugar de imponerlo tú solo
+      paso 4: Cuida que la entrega sea digna y visible, más que el valor económico del premio
+      paso 5: No reduzcas el reconocimiento a bonos o dinero; prioriza la ceremonia y el aprecio genuino
+      cond 1: Cuando alcanzas metas y necesitas sostener la motivación de quienes te ayudan
+      cond 2: Si sientes que el esfuerzo de mejora se percibe solo como obligación y no como algo apreciado
+      cond 3: Cuando quieres institucionalizar la celebración de los logros de calidad
+      previos   : ['dia_cero_defectos', 'fijacion_de_metas', 'programa_ecr_causa_de_error', 'eliminacion_causas_error_4']
+      siguientes: ['consejos_de_calidad', 'reinicio_programa_calidad']
+      entregable: Un sistema simple de reconocimiento documentado, con tipos de premio, frecuencia, forma de elegirlos entre los involucrados y protocolo de entrega pública
+
+  --- reconocimiento_crosby
+      titulo    : Reconocimiento sin dinero de por medio
+      fuente    : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+      pasos 4 | condiciones 2 | previos 4 | siguientes 2 | cableado 6
+      paso 1: Crea una manera de reconocer basada en apreciación real, no en valor monetario
+      paso 2: Evita premios costosos que distorsionen la motivación
+      paso 3: Da reconocimientos regulares y visibles
+      paso 4: Adapta el reconocimiento a la forma de trabajar que tienes con tu gente
+      cond 1: Cuando logras mejoras medibles que vale la pena celebrar
+      cond 2: Cuando quieres mantener la motivación sin gastar de más
+      previos   : ['eliminacion_causas_error', 'eliminacion_causas_error_3', 'seminario_de_exito_para_gerencia', 'eliminacion_causas_error_4']
+      siguientes: ['consejos_de_calidad', 'consejo_de_calidad_3']
+      entregable: Una manera de reconocer definida, con criterios claros y frecuencia establecida.
+
+FIN

@@ -1,0 +1,52 @@
+==============================================================================
+EL BORDE DEL DUENO DEL LOTE I, MEDIDO Y NO SUPUESTO
+==============================================================================
+
+--- 1. LOS DOS CAMPOS duenos_* DEL FICHERO FIJADO ---
+  (los del lote tienen que estar VACIOS; los DOS saltos tienen que
+   traer el dueno que el acta 69 les adjudico, y aqui se lee)
+     acto 49  LOTE I  duenos_mesa_o_destejido=[]  duenos_cualquier_operacion=[]
+     acto 50  LOTE I  duenos_mesa_o_destejido=[]  duenos_cualquier_operacion=[]
+     acto 51  LOTE I  duenos_mesa_o_destejido=[]  duenos_cualquier_operacion=[]
+     acto 53  LOTE I  duenos_mesa_o_destejido=[]  duenos_cualquier_operacion=[]
+     acto 31  SALTO   duenos_mesa_o_destejido=[]  duenos_cualquier_operacion=['OP-F-04-WEI', 'OP-S-04']
+     acto 37  SALTO   duenos_mesa_o_destejido=[]  duenos_cualquier_operacion=['OP-S-07']
+
+  miembros del lote I, contados: 12
+
+--- 2. INVENTARIO.jsonl, BARRIDO ENTERO ---
+  entradas del inventario, contadas hoy: 672
+  entradas que TOCAN a alguno de los 12 miembros: 6
+     de tipo acto             : 6
+
+  UNA A UNA, con el acto que tocan y su cobertura:
+     [acto          ] incentivos_transparencia_ia        acto 49  cubre 3 de 3   NOMINA ENTERA | operaciones=['OP-L-03', 'OP-U-02']
+        nota: tamano 3. Puede crecer: 0 en cola y 1 fuera de cola. SUPERADA POR EL CORTE 3.388 (vuelta 17, 14 ago 2026), adjudicacion del discutible 1 de la vuelta 16. NADA SE BORRA: esta linea sigue entera y su fe
+     [acto          ] metodo_valor_presente_neto         acto 51  cubre 3 de 3   NOMINA ENTERA | operaciones=['OP-L-03', 'OP-U-02']
+        nota: tamano 3. Puede crecer: 0 en cola y 1 fuera de cola. SUPERADA POR EL CORTE 3.388 (vuelta 17, 14 ago 2026), adjudicacion del discutible 1 de la vuelta 16. NADA SE BORRA: esta linea sigue entera y su fe
+     [acto          ] incentivos_transparencia_ia        acto 49  cubre 3 de 3   NOMINA ENTERA | operaciones=['OP-L-03', 'OP-U-02']
+        nota: tamano 3. Puede crecer: 0 en cola y 1 fuera de cola. REGENERADO EN LA VUELTA 16 sobre docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl al corte 3.388. Sucede a la entrada vieja "incentivos_transparencia_ia"
+     [acto          ] metodo_valor_presente_neto         acto 51  cubre 3 de 3   NOMINA ENTERA | operaciones=['OP-L-03', 'OP-U-02']
+        nota: tamano 3. Puede crecer: 0 en cola y 1 fuera de cola. REGENERADO EN LA VUELTA 16 sobre docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl al corte 3.388. Sucede a la entrada vieja "metodo_valor_presente_neto" 
+     [acto          ] investigacion_new_view             acto 50  cubre 3 de 3   NOMINA ENTERA | operaciones=['OP-L-03', 'OP-U-02']
+        nota: tamano 3. Puede crecer: 0 en cola y 1 fuera de cola. REGENERADO EN LA VUELTA 16 sobre docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl al corte 3.388. Sin antecesor en la nomina de 221 del corte 2.117: comp
+     [acto          ] reconocimiento                     acto 53  cubre 3 de 3   NOMINA ENTERA | operaciones=['OP-L-03', 'OP-U-02']
+        nota: tamano 3. Puede crecer: 0 en cola y 1 fuera de cola. REGENERADO EN LA VUELTA 16 sobre docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl al corte 3.388. Sin antecesor en la nomina de 221 del corte 2.117: comp
+
+  familia_de_ids que cubren la NOMINA ENTERA de un acto del lote: 0
+  (la adjudicacion 2 del acta 71: si hubiera alguna SIN resolucion
+   aprobada, va como PREGUNTA y no como fusion)
+
+--- 3. RACIMOS_MIEMBROS.jsonl ---
+  lineas de racimos barridas: 32
+  miembros del lote que aparecen en alguna nomina de racimo: 0
+
+--- 4. LAS MENCIONES EN OPERACIONES.jsonl, CAMPO A CAMPO ---
+  fichas leidas: 71
+
+  MENCIONES en total: 0, en 0 fichas: []
+  LAS TRES FUENTES QUE HACEN DUENO (acta 68, adjudicacion 2) son los
+  campos nodos, preservar y eliminar de la ficha. Menciones en nota NO
+  hacen dueno. Reparto por campo:
+
+FIN

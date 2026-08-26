@@ -1,0 +1,844 @@
+# -*- coding: utf-8 -*-
+"""_v73_lote_i.py . EL CONTENIDO EDITORIAL DEL LOTE I DEL TRAMO UNICO DE OP-U-02.
+
+NO ES UN INSTRUMENTO: es el texto del lote. La maquina que lo sella es
+scripts/loop/generar_plan_del_lote.py, que entra aqui por --contenido _v73_lote_i.
+
+EL LOTE SE DECLARA AL ABRIRLO. Abre en el ACTO 49, que es el PRIMERO DEL TRAMO
+SIN DUENO MEDIDO, y cierra en el 53. LOS DOS SALTOS VAN DECLARADOS con su cita y
+NO rompen el prefijo sin saltos, porque ninguno de los dos actos saltados esta en
+la cola de fusiones de esta operacion: el ACTO 31 tiene dueno medido
+(OP-F-04-WEI y OP-S-04 en duenos_cualquier_operacion) y el ACTO 37 tiene dueno
+medido (OP-S-07), los dos leidos HOY del fichero fijado del tramo con
+scripts/loop/_v73_borde_del_dueno.py, y la adjudicacion 2 del acta 69 dice con
+todas sus letras que lo que vale para el 31 vale para el 37 cuando el prefijo lo
+alcance. Sigue el PREFIJO SIN SALTOS del orden_universo de lo que queda: el lote
+A de la vuelta 65 cerro los actos 1 y 3; el B de la 66 el 5, 7, 8, 9, 10 y 11; el
+C de la 67 el 12 al 17; el D de la 68 el 19 al 24 y dejo el 18 en transito; el E
+de la 69 cerro el 18, 25, 26, 27, 29 y 30; el F de la 70 el 32, 33, 34, 35 y 36;
+el G de la 71 el 38, 39, 40, 41 y 42; el H de la 72 el 43, 45, 46 y 47 y dejo el
+44 DECLARADO por la guarda 1B.
+
+LA DECLARACION: CUATRO ACTOS CIERRAN ENTEROS Y SON 12 NODOS. LOS CUATRO CIERRAN
+FUNDIDOS y NINGUNO cierra DECLARADO. Los motivos de DECLARADO posibles son DOS y
+solo DOS (adjudicacion 4 del acta 70) y NINGUNO tiene sujeto aqui: P.10 pasa por
+vacio en los cuatro (cero nodos puente, cero triangulos y cero pares D internos,
+medido con scripts/loop/vuelta65_puentes_del_tramo.py) y la guarda 1B nunca pide
+DOS puertas (el 51 trae UNA sola y ademas SOBREVIVE). P.5 contesta UNA FAMILIA en
+los cuatro.
+
+CON ESTE LOTE EL TRAMO SE QUEDA SIN NINGUN ACTO SIN DUENO Y SIN DESTINO. Lo que
+quede despues son los DOS con dueno (31 y 37) y los QUINCE declarados, y ese
+estado es el insumo del cierre de la fase 03, que es PARADA DE FUNDADOR. Este
+lote NO abre la fase 04 y NO decide ese cierre.
+
+LA UNICA PUERTA DEL LOTE ESTA EN EL ACTO 51 Y NO HAY CHOQUE QUE PUBLICAR, Y ESO
+SE DICE PORQUE ES LA DIFERENCIA CON EL LOTE ANTERIOR. metodo_valor_presente_neto
+es puerta (universo protegido de 256 ids, medido con
+scripts/loop/varas_n_arias_del_tramo.py) y SOBREVIVE, que es lo que el acta 54,
+pregunta 1, manda gane o pierda en contenido. AQUI GANA: la vara de pasos apunta
+a el (6 contra 5 y 4) y el cableado tambien (10 contra 5 y 4). El acto 46 del
+lote H tuvo que escribir el choque en su motivo sellado porque alli la puerta
+perdia; aqui NO HAY CHOQUE QUE ESCRIBIR, y decirlo es tan obligatorio como lo
+otro: callar que no hubo choque dejaria al lector sin saber si se miro.
+
+EL ACTO 50 ES EL CARO DE ESTE LOTE, Y VA DECLARADO ARRIBA EN VEZ DE ESCONDIDO EN
+SU MOTIVO. La FORMA medida es UNA SOLA VARA y esa vara, la de CONDICIONES, apunta
+a new_view_vs_old_view_de_error_humano (3 contra 2 y 2). LAS DOS RAZONES ESCRITAS
+DEL ACTO MATAN A ESE MISMO NODO, cada una sobre SU par y con estas palabras: el
+puesto 2290 cierra con SOBREVIVE investigacion_new_view y el 2292 con SOBREVIVE
+perspectiva_dentro_del_tunel. Fundir a favor de la vara habria DESMENTIDO DOS
+RAZONES PUBLICADAS a la vez; fundir a favor del archivo deja la vara de
+condiciones apuntando al absorbido, y eso VA MARCADO DISCUTIBLE con sus tres
+cifras. La eleccion ENTRE LOS DOS CORONADOS no la hace mi lectura: la hacen las
+varas restringidas a ellos dos, que es donde P.8 sigue mandando, y las dos que
+hablan apuntan al mismo (pasos 5 contra 4 y cableado 5 contra 3, las dos a
+investigacion_new_view; condiciones EMPATA en 2). Ver el motivo sellado del acto
+50, donde esto va entero y con su pendiente de doctrina nombrado.
+
+EL REPARTO VA POR ABSORBIDO en la clave reparto, que es la forma que la vuelta 65
+estreno para los actos de mas de dos miembros.
+
+CUATRO MEDICIONES QUE ESTE FICHERO DECLARA Y NO ESCONDE:
+
+  1. LA FRONTERA DEL DUENO PASA SU BORDE, Y SE MIDIO EN VEZ DE SUPONERSE. El acta
+     71 dejo escrito en su adjudicacion 2 un BORDE: una familia_de_ids de nomina
+     ENTERA sin resolucion aprobada que la fusion ejecute NO queda cubierta y va
+     como PREGUNTA. Barrido hoy sobre docs/plan/INVENTARIO.jsonl (672 entradas):
+     SEIS entradas tocan a alguno de los 12 miembros y LAS SEIS son de tipo acto.
+     CERO son de tipo familia_de_ids, asi que CERO cubren la nomina entera de un
+     acto de este lote: EL BORDE NO SE PISA, y esta vez ni siquiera se acerca.
+  2. CERO MENCIONES EN OPERACIONES.jsonl, barrido CAMPO A CAMPO sobre las 71
+     fichas: ninguno de los 12 miembros aparece en ningun campo de ninguna ficha.
+     Es la misma figura del lote G y no la del lote H, que trajo siete menciones
+     en cuatro fichas. Y CERO en las 32 lineas de docs/RACIMOS_MIEMBROS.jsonl.
+  3. LAS ENTRADAS DE TIPO ACTO DE LOS CUATRO traen en operaciones NO SOLO OP-U-02
+     sino tambien OP-L-03, igual que en los lotes G y H. La ficha de OP-L-03 lleva
+     desde la vuelta 72 su CORRECCION DECLARADA aplicada, asi que la clausula
+     vieja ya no esta en divergencia: sigue entera arriba y la vara nueva esta
+     escrita debajo. Se declara, y como pregunta CONTESTADA con su cita.
+  4. LA ESPECIE DEL PENDIENTE 4 SE MIDIO CON LA DEFINICION CORREGIDA DE ESTA
+     MISMA VUELTA (adjudicacion 1 del acta 72, aplicada en la TAREA 1 sobre la
+     glosa de scripts/loop/cuenta_agregada_de_perdidas.py): una fila es de esa
+     especie cuando LA SUSTANCIA LLEGA ENTERA desde otro absorbido del mismo
+     acto, sea el vehiculo APPEND o INCISO. Aplicada fila a fila sobre las
+     diecisiete de este lote da CERO, y la unica que se acerco va con su
+     ATENUANTE DECLARADO Y MEDIDO y con la razon de por que NO es de la especie
+     escrita dentro (acto 50, la prohibicion de vocabulario): lo que llega por el
+     INCISO es la POSTURA, no la LISTA DE PALABRAS, y una pieza vecina no es la
+     misma pieza. La definicion nueva sirve justamente para poder decir que no.
+"""
+
+# ======================================================================
+# ACTO 49: LA FAMILIA DE LA POLITICA CONTRA LA IA CLANDESTINA.
+# TRES miembros del mismo libro, DOS pares internos con veredicto y los
+# DOS en A, CERO D, CERO puentes, CERO triangulos y CERO puertas.
+# FORMA medida: UNA SOLA VARA (la de pasos). El cableado apunta al OTRO
+# lado y por la letra no habla.
+# ======================================================================
+
+SUP49 = "shadow_ia_organizacional"
+
+MOTIVO49 = (
+    "ACTO 49 DEL TRAMO UNICO DE OP-U-02, LA FAMILIA DE LA POLITICA CONTRA LA IA "
+    "CLANDESTINA. "
+    "UNA SOLA FAMILIA, Y LA PREGUNTA DE P.5 SE CONTESTA CON LAS RAZONES DELANTE Y NO CON "
+    "IMPRESION: los TRES miembros son del MISMO LIBRO (Co-Intelligence, de Ethan Mollick), "
+    "tienen DOS pares internos con veredicto escrito de TRES combinaciones posibles y los DOS "
+    "son de clase A (puestos 241 y 1032), hay CERO pares D internos, CERO nodos puente y CERO "
+    "triangulos, medido con scripts/loop/vuelta65_puentes_del_tramo.py sobre el estado del dia. "
+    "Y LA FAMILIA NO ES LECTURA MIA SINO DECLARACION DEL ARCHIVO: el puesto 1032 se titula LA "
+    "MISMA POLITICA CONTRA LA IA CLANDESTINA, DEL MISMO LIBRO Y SIN ARISTA ENTRE ELLOS, y el "
+    "241 abre con REPITE y remata con FIGURA: ids casi identicos, use contra ia. El par que "
+    "falta es el unico sin veredicto del acto. "
+    "LO QUE LAS DOS RAZONES DICEN QUE ES LO MISMO, y es el nucleo entero: no prohibir la IA de "
+    "golpe porque empuja el uso a la sombra, abrir canales seguros y sin penalizacion para que "
+    "la gente declare lo que usa, e identificar y aprovechar a los usuarios mas avanzados. "
+    "P.8 EN ORDEN, Y LA FORMA MANDA: la FORMA medida es UNA SOLA VARA. La de PASOS apunta a "
+    "shadow_ia_organizacional (4 contra 3 y 3); la de CONDICIONES EMPATA en 2 a tres bandas y "
+    "no apunta. UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4), y es la "
+    "misma forma que el acta 71 adjudico A FAVOR en su D4 para el acto 42 con estas palabras: "
+    "UNA SOLA VARA BASTA es la letra. "
+    "Y EL CHOQUE VA ENTERO EN VEZ DE MEDIO: EL CABLEADO APUNTA AL OTRO LADO, a "
+    "shadow_ai_use_organizacional con 3 contra 2 y 2, leido de la columna cab de "
+    "scripts/loop/varas_n_arias_del_tramo.py, que es la unica fuente de cifra de cableado desde "
+    "la adjudicacion 3 del acta 70. LA LETRA DE P.8 ES EXPLICITA EN QUE EL CABLEADO SOLO HABLA "
+    "A CONTENIDO EMPATADO, y aqui el contenido no empata. Se funde a favor del contenido y el "
+    "choque va MARCADO DISCUTIBLE en el reporte con su cifra al lado. EL MARGEN ES DE UNA SOLA "
+    "ARISTA y eso tambien se dice, porque un margen de uno no se lee igual que el de 11 contra "
+    "7 del acto 43. "
+    "LA RAZON ESCRITA NO SE DESMIENTE, y va comprobado en vez de supuesto: el 1032 llama al "
+    "paso de IDENTIFICAR A LOS USUARIOS MAS AVANZADOS DE LA ORGANIZACION, que es propio de "
+    "shadow_ia_organizacional, EL MAS UTIL DEL PAR, con estas palabras: la persona que mas sabe "
+    "de IA en un negocio pequeno rara vez es quien manda. Ese paso vive en el superviviente y "
+    "sigue vivo. El 241 no corona a nadie: reparte lo comun sin elegir. "
+    "EL ROTULO SOLO Y LA CANTIDAD NUNCA DECIDEN, y aqui se dice expresamente porque los ids son "
+    "casi identicos (use contra ia) y elegir por el rotulo habria sido lo comodo. "
+    "GUARDA 1B: NINGUNO de los tres miembros es puerta (ni semilla de entrada ni extremo de "
+    "puente aprobado), medido con scripts/loop/varas_n_arias_del_tramo.py contra el universo "
+    "protegido de 256 ids. La guarda pasa POR VACIO y se dice. "
+    "DUENOS: los dos campos del fichero fijado del tramo estan VACIOS para este acto, medido "
+    "hoy con scripts/loop/_v73_borde_del_dueno.py; NINGUNA entrada de docs/plan/INVENTARIO.jsonl "
+    "que no sea de tipo acto nombra a ninguno de los tres miembros; NINGUNO de los tres esta en "
+    "ninguna nomina de docs/RACIMOS_MIEMBROS.jsonl; y el barrido CAMPO A CAMPO sobre "
+    "docs/plan/OPERACIONES.jsonl no devuelve ninguna mencion de los tres. La entrada de tipo "
+    "acto nombra OP-L-03 y OP-U-02, y eso se declara aparte en el docstring del lote."
+)
+
+NOTA49 = (
+    "EL REPARTO DE ESTE ACTO, con su costo publicado en vez de maquillado. DOS APPEND DE PASO Y "
+    "DOS INCISO a pasos distintos, cero APPEND de condicion, y el nodo crece de 4 pasos a 6 y "
+    "se queda en 2 condiciones. "
+    "EL PRIMER APPEND ES UN PROPIO QUE LA RAZON NOMBRA POR SU NOMBRE: el 1032 dice, de "
+    "incentivos_transparencia_ia, que lo suyo es COMUNICAR DE FORMA EXPLICITA QUE USAR IA NO VA "
+    "A RESULTAR EN DESPIDOS AUTOMATICOS, y lo llama la version dicha en voz alta de lo que el "
+    "otro deja implicito. El superviviente promete recompensar en vez de amenazar, pero NUNCA "
+    "manda decirlo en voz alta, y decirlo es un gesto distinto de hacerlo. Entra de APPEND "
+    "ENTERO. "
+    "EL SEGUNDO APPEND NO LO NOMBRA NINGUNA RAZON Y POR ESO VA MARCADO DISCUTIBLE: es el paso 2 "
+    "de shadow_ai_use_organizacional, REALIZAR ENCUESTAS ANONIMAS PARA DETECTAR EL NIVEL REAL "
+    "DE ADOPCION DE IA ENTRE EMPLEADOS. Lo salvo por lectura y digo la lectura entera: es el "
+    "UNICO instrumento de MEDIDA de los tres nodos, ninguno de los seis pasos restantes mide "
+    "nada, y el entregable de ese absorbido es literalmente un DIAGNOSTICO DEL USO REAL "
+    "(VISIBLE Y OCULTO) DE IA, que sin ese paso no lo produce nadie. La lectura contraria, que "
+    "tambien se escribe: un APPEND que ninguna razon declara propio es el ejecutor decidiendo "
+    "contenido, y el carril conservador habria sido sellarlo como perdida. "
+    "EL PRIMER INCISO VA AL PASO 1 Y NO SE APILA CON NADIE (acta 64): el superviviente manda "
+    "EVITAR prohibiciones tajantes y nunca dice QUE PONER EN SU LUGAR; lo que entra es "
+    "exactamente eso, los marcos de uso responsable y transparente del paso 3 del absorbido. Es "
+    "un parametro del gesto que el superviviente ya tiene, no un gesto nuevo. El paso 1 del "
+    "superviviente NO termina en punto (cierra en la palabra clandestino), asi que la guarda de "
+    "la JUNTURA ROTA no salta. "
+    "EL SEGUNDO INCISO VA AL PASO 4, TAMBIEN SIN APILARSE: el superviviente manda RECOMPENSAR "
+    "la innovacion y no dice CON QUE; lo que entra es la forma concreta, los incentivos "
+    "tangibles con sus dos ejemplos. El paso 4 NO termina en punto (cierra en la palabra "
+    "transparencia). "
+    "CINCO PERDIDAS SELLADAS, UNA DE ELLAS CON DOS SEDES, contadas por maquina sobre esta misma "
+    "lista y no de memoria, que es la regla que sale de la caida del D9 de la vuelta 68. "
+    "NINGUNA ES DE LA ESPECIE DEL PENDIENTE 4 con la definicion corregida de esta vuelta: en "
+    "ninguna de las cinco la sustancia perdida llega entera desde otro absorbido del acto, ni "
+    "por APPEND ni por INCISO."
+)
+
+PERDIDAS49 = [
+    {"especie": "DE PARAMETRO DE PASO",
+     "que": ("EL ENCUADRE DIAGNOSTICO DE LA PROHIBICION. El paso 1 del absorbido manda EVALUAR "
+             "SI EXISTEN politicas restrictivas que puedan estar generando uso oculto, que es "
+             "una averiguacion previa; el paso 1 del superviviente manda EVITAR esas "
+             "prohibiciones, que es la accion. Lo que se pierde es el paso de ir a mirar si ya "
+             "las hay antes de decidir nada"),
+     "donde": "paso 1 de shadow_ai_use_organizacional",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"},
+    {"especie": "DE PARAMETRO DE PASO",
+     "que": ("QUE COMPARTIR EL USO DE IA SE PERCIBA COMO VENTAJA Y NO COMO RIESGO. El paso 2 "
+             "del superviviente crea los canales seguros y sin penalizacion, que es la "
+             "condicion material; el paso 3 del absorbido pide ademas el efecto sobre la "
+             "percepcion, que es lo que convierte un canal abierto en una cultura. Se pierde el "
+             "efecto, no el canal"),
+     "donde": "paso 3 de incentivos_transparencia_ia",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"},
+    {"especie": "DE CONDICIONES",
+     "que": ("el disparador del MIEDO A DECLARAR. La condicion 1 del superviviente dispara "
+             "cuando la empresa SOSPECHA O DETECTA uso no oficial, que es un hecho observado "
+             "desde arriba; las dos que se pierden disparan desde el estado de la gente, el "
+             "miedo o la resistencia a declarar y el miedo a represalias, que llega antes y por "
+             "otro camino. ES UNA SOLA PIEZA PERDIDA EN DOS SITIOS, y por eso va en UNA fila "
+             "con las DOS sedes nombradas (acta 67, D10: la fila es por PIEZA y no por sitio)"),
+     "donde": ("condicion 1 de incentivos_transparencia_ia y condicion 2 de "
+               "shadow_ai_use_organizacional"),
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"},
+    {"especie": "DE CONDICIONES",
+     "que": ("el matiz de ESCALAR LA ADOPCION DE FORMA DEMOCRATICA. La condicion 2 del "
+             "superviviente dispara cuando se quiere escalar innovaciones individuales a nivel "
+             "organizacional; la del absorbido anade COMO se escala, sin que dependa del nivel "
+             "jerarquico, que es la misma idea que su paso 3 defiende y que aqui se pierde como "
+             "disparador"),
+     "donde": "condicion 2 de incentivos_transparencia_ia",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"},
+    {"especie": "DE CONDICIONES",
+     "que": ("el disparador de RESTRINGIR LA IA SIN PLAN DE ADOPCION CLARO. Ninguna de las dos "
+             "condiciones del superviviente dispara por lo que la EMPRESA hizo mal: las dos "
+             "disparan por lo que la empresa quiere o sospecha. Se pierde el unico disparador "
+             "del acto que apunta a la propia politica como causa"),
+     "donde": "condicion 1 de shadow_ai_use_organizacional",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"},
+]
+
+REPARTO49 = {
+    "incentivos_transparencia_ia": {
+        "pasos": {
+            "1": ("APPEND",),       # DECIRLO EN VOZ ALTA: propio declarado por el 1032
+            # INCISO al paso 4: el superviviente manda recompensar y no dice CON QUE.
+            "2": ("INCISO", 4,
+                  "incentivos tangibles (bonos, reconocimientos) para quienes descubran usos "
+                  "innovadores de IA",
+                  ", con "),
+            "3": ("CUBIERTO", 2),   # con perdida: el efecto sobre la percepcion
+        },
+        "condiciones": {
+            "1": ("CUBIERTO", 1),   # con perdida: el miedo como disparador
+            "2": ("CUBIERTO", 2),   # con perdida: de forma democratica
+        },
+    },
+    "shadow_ai_use_organizacional": {
+        "pasos": {
+            "1": ("CUBIERTO", 1),   # con perdida: el encuadre diagnostico
+            "2": ("APPEND",),       # LAS ENCUESTAS ANONIMAS: el unico instrumento de medida
+            # INCISO al paso 1: que poner EN LUGAR de la prohibicion.
+            "3": ("INCISO", 1, "marcos de uso responsable y transparente",
+                  ", y sustituirlas por "),
+        },
+        "condiciones": {
+            "1": ("CUBIERTO", 1),   # con perdida: restringir sin plan
+            "2": ("CUBIERTO", 1),   # con perdida: el miedo a represalias (segunda sede)
+        },
+    },
+}
+
+
+# ======================================================================
+# ACTO 50: LA FAMILIA DEL INFORME DE INVESTIGACION NEW VIEW.
+# TRES miembros del mismo libro, DOS pares internos con veredicto y los
+# DOS en A, CERO D, CERO puentes, CERO triangulos y CERO puertas.
+# FORMA medida: UNA SOLA VARA (la de condiciones), Y APUNTA AL NODO QUE
+# LAS DOS RAZONES ESCRITAS MATAN. Es el acto caro del lote y el motivo
+# lleva el choque entero, con su pendiente de doctrina nombrado.
+# ======================================================================
+
+SUP50 = "investigacion_new_view"
+
+MOTIVO50 = (
+    "ACTO 50 DEL TRAMO UNICO DE OP-U-02, LA FAMILIA DEL INFORME DE INVESTIGACION BAJO EL "
+    "ENFOQUE NEW VIEW. "
+    "UNA SOLA FAMILIA, Y LA PREGUNTA DE P.5 SE CONTESTA CON LAS RAZONES DELANTE: los TRES "
+    "miembros son del MISMO LIBRO (The Field Guide to Understanding Human Error, de Sidney "
+    "Dekker), tienen DOS pares internos con veredicto escrito de TRES combinaciones posibles y "
+    "los DOS son de clase A (puestos 2290 y 2292), hay CERO pares D internos, CERO nodos puente "
+    "y CERO triangulos, medido. Las dos razones abren las dos con REPITE y las dos dicen que "
+    "hablan DEL MISMO OBJETO, el informe de investigacion. "
+    "AQUI VA EL CHOQUE DE ESTE LOTE, ENTERO Y AL PRINCIPIO, PORQUE ES LO QUE HAY QUE AUDITAR. "
+    "LA FORMA MEDIDA ES UNA SOLA VARA Y ESA VARA APUNTA AL NODO QUE LAS DOS RAZONES MATAN: la "
+    "de PASOS EMPATA en 5 entre investigacion_new_view y new_view_vs_old_view_de_error_humano y "
+    "no apunta; la de CONDICIONES apunta a new_view_vs_old_view_de_error_humano (3 contra 2 y "
+    "2); el CABLEADO EMPATA en 5 entre los dos grandes y por la letra tampoco habla. Y LAS DOS "
+    "RAZONES ESCRITAS MATAN A new_view_vs_old_view_de_error_humano, cada una sobre SU par y con "
+    "sus palabras: el 2290 cierra con SOBREVIVE investigacion_new_view y el 2292 con SOBREVIVE "
+    "perspectiva_dentro_del_tunel. "
+    "POR QUE MANDA EL ARCHIVO Y NO LA VARA, CITADO Y NO IMPROVISADO. P.8 dice que donde el "
+    "contenido dice algo el contenido manda, y define expresamente que CONTENIDO NO ES SOLO EL "
+    "TEXTO DE LOS PASOS: un PADRE DECLARADO por el archivo es contenido. Aqui el archivo "
+    "declara CONTENCION en las dos razones: el 2290 escribe que el paso 1 del absorbido ES el "
+    "paso 1 del otro y que sus pasos 2, 3 y 5 SON FORMAS DE DECIR LO QUE EL OTRO PIDE CON "
+    "INSTRUMENTOS, y remata con LE QUEDA UNA LINEA PROPIA; el 2292 escribe la misma contencion "
+    "contra el tercero y remata con LE QUEDAN DOS LINEAS. Un conteo de condiciones de 3 contra "
+    "2 no vence a una contencion declarada dos veces, y la letra del tramo lo dice tambien por "
+    "su lado: CHOCAN DECIDE LA PIEZA DECLARADA (acta 53, pregunta 3). Fundir a favor de la vara "
+    "habria DESMENTIDO DOS RAZONES PUBLICADAS a la vez y habria absorbido al nodo que el 2290 "
+    "llama EL UNICO QUE ESCRIBE EL MISMO INFORME MEJOR. "
+    "LA ELECCION ENTRE LOS DOS CORONADOS NO LA HACE MI LECTURA, LA HACEN LAS VARAS. Las dos "
+    "coronas son cruzadas y sobre SU propio par, que es la figura que las actas 70, 71 y 72 "
+    "adjudicaron A FAVOR en su D6, su D5 y su D6 con estas palabras: cada corona es sobre SU "
+    "par y las dos matan al mismo nodo. EL PAR QUE FALTA, el unico sin veredicto del acto, es "
+    "exactamente el que enfrentaria a los dos coronados, asi que el archivo no los compara y "
+    "hay que medirlos: pasos 5 contra 4 y cableado 5 contra 3, LAS DOS a investigacion_new_view; "
+    "condiciones EMPATA en 2. Ninguna vara apunta a perspectiva_dentro_del_tunel. Y el fondo lo "
+    "confirma sin decidirlo: el entregable de investigacion_new_view es el INFORME entero y el "
+    "de perspectiva_dentro_del_tunel es UNA NARRATIVA dentro de ese informe. "
+    "PENDIENTE DE DOCTRINA, NOMBRADO Y NO INVENTADO: ninguna regla escrita dice hoy que hacer "
+    "cuando la FORMA que el instrumento imprime es UNA SOLA VARA y esa vara apunta al nodo que "
+    "las razones matan. El instrumento no lee razones y por eso no puede imprimir CHOCAN. "
+    "Registro lo mejor sostenido, lo marco DISCUTIBLE y sigo, que es la regla 5 del EJECUTOR; "
+    "no estreno regla. "
+    "EL ROTULO SOLO Y LA CANTIDAD NUNCA DECIDEN. "
+    "GUARDA 1B: NINGUNO de los tres miembros es puerta, medido con "
+    "scripts/loop/varas_n_arias_del_tramo.py contra el universo protegido de 256 ids. La guarda "
+    "pasa POR VACIO y se dice. "
+    "DUENOS: los dos campos del fichero fijado del tramo estan VACIOS para este acto, medido "
+    "hoy con scripts/loop/_v73_borde_del_dueno.py; NINGUNA entrada de docs/plan/INVENTARIO.jsonl "
+    "que no sea de tipo acto nombra a ninguno de los tres miembros; NINGUNO de los tres esta en "
+    "ninguna nomina de docs/RACIMOS_MIEMBROS.jsonl; y el barrido CAMPO A CAMPO sobre "
+    "docs/plan/OPERACIONES.jsonl no devuelve ninguna mencion de los tres."
+)
+
+NOTA50 = (
+    "EL REPARTO DE ESTE ACTO, con su costo publicado en vez de maquillado. DOS APPEND DE PASO Y "
+    "DOS INCISO a pasos distintos, cero APPEND de condicion, y el nodo crece de 5 pasos a 7 y "
+    "se queda en 2 condiciones. "
+    "LOS DOS APPEND SON LOS DOS PROPIOS QUE LAS RAZONES NOMBRAN, uno de cada absorbido, y no "
+    "hace falta interpretarlas. El 2290 dice, de new_view_vs_old_view_de_error_humano: LE QUEDA "
+    "UNA LINEA PROPIA, AMPLIAR EL CIRCULO DE TESTIGOS A COLEGAS, FAMILIARES Y ALLEGADOS, y "
+    "remata encargando que EL CIRCULO AMPLIADO DE TESTIGOS SE ABSORBE COMO LINEA SUYA. Este "
+    "reparto lo ejecuta. El 2292 dice, de perspectiva_dentro_del_tunel, que trae DOS PASOS DE "
+    "TRABAJO, y el segundo es ENTREVISTAR A LOS INVOLUCRADOS PARA ENTENDER SU PERCEPCION Y SUS "
+    "OBJETIVOS, que la razon glosa como IR A PREGUNTARLES EN VEZ DE DEDUCIRLO. Entra de APPEND "
+    "ENTERO: el superviviente reconstruye la situacion pero nunca manda ir a hablar con nadie. "
+    "EL PRIMER INCISO VA AL PASO 1 Y ES EL OTRO PROPIO DECLARADO DEL 2292: RECONSTRUIR LA "
+    "INFORMACION Y LAS SENALES QUE ESTABAN DISPONIBLES en el momento. El paso 1 del "
+    "superviviente reconstruye LA SITUACION tal como la vivieron; lo que entra es CON QUE se "
+    "reconstruye, que es un parametro del mismo gesto y no un gesto nuevo. El paso 1 NO termina "
+    "en punto (cierra en la palabra final), asi que la guarda de la JUNTURA ROTA no salta. "
+    "Y AQUI VA UNA ELECCION QUE SE DECLARA EN VEZ DE CALLARSE: al paso 1 solo cabe UN INCISO "
+    "(acta 64), y competian por el DOS piezas, esta y la enumeracion del contexto que enmarco "
+    "las decisiones. Se salva la que las razones DECLARAN PROPIA y se sella la que las razones "
+    "declaran MUTUAMENTE CUBIERTA (el 2292 dice que el paso 3 de uno ES el paso 4 del otro). "
+    "EL SEGUNDO INCISO VA AL PASO 4 y trae la postura con la que se comunica el informe: que "
+    "los hallazgos HONREN LA EXPERIENCIA HUMANA EN LUGAR DE REDUCIRLA A UNA LISTA DE ERRORES. "
+    "El paso 4 del superviviente dedica una seccion sustancial a las acciones preventivas y no "
+    "dice nada de COMO se cuenta; lo que entra es eso. El paso 4 NO termina en punto (cierra en "
+    "la palabra preventivas). "
+    "SEIS PERDIDAS SELLADAS, TRES DE ELLAS CON DOS SEDES, contadas por maquina sobre esta misma "
+    "lista y no de memoria. UNA lleva ATENUANTE DECLARADO Y MEDIDO y ademas lleva escrito POR "
+    "QUE NO ES DE LA ESPECIE DEL PENDIENTE 4 con la definicion corregida de esta vuelta."
+)
+
+PERDIDAS50 = [
+    {"especie": "DE PARAMETRO DE PASO",
+     "que": ("LA PROHIBICION EXPLICITA DE VOCABULARIO. Los dos absorbidos traen la misma pieza "
+             "y con listas distintas de palabras: fallas, deficiencias e incumplimientos en uno; "
+             "fallaron en y debieron haber en el otro. El paso 3 del superviviente da la "
+             "TAXONOMIA que sustituye ese vocabulario (causas, contribuciones y riesgos por "
+             "separado) pero NUNCA nombra las palabras prohibidas, y una taxonomia no impide "
+             "escribir la frase. ATENUANTE DECLARADO Y MEDIDO: la POSTURA si llega, y llega por "
+             "el INCISO al paso 4 de este mismo acto, que trae honrar la experiencia humana en "
+             "lugar de reducirla a una lista de errores. Y SE DICE POR QUE ESTA FILA NO ENTRA "
+             "EN LA CUENTA DEL PENDIENTE 4 con la definicion corregida de esta vuelta, que pide "
+             "que LA SUSTANCIA LLEGUE ENTERA: lo que llega es la postura, lo que se pierde es "
+             "la lista de palabras, y una pieza vecina no es la misma pieza. LA FRASE SELLADA "
+             "NO SE ESCRIBE AQUI A PROPOSITO, porque el instrumento la busca dentro de este "
+             "campo y escribirla dentro de una NEGACION la contaria como positiva. "
+             "ES UNA SOLA PIEZA PERDIDA "
+             "EN DOS SITIOS y va en UNA fila con las DOS sedes nombradas"),
+     "donde": ("paso 2 de new_view_vs_old_view_de_error_humano y paso 2 de "
+               "perspectiva_dentro_del_tunel"),
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"},
+    {"especie": "DE PARAMETRO DE PASO",
+     "que": ("LA ENUMERACION EXPLICITA DEL CONTEXTO QUE ENMARCO LAS DECISIONES: las "
+             "restricciones organizacionales, tecnologicas y situacionales en un absorbido, y "
+             "la presion, el tiempo y los recursos disponibles en el otro. El paso 1 del "
+             "superviviente manda reconstruir la situacion tal como la vivieron, que contiene "
+             "el gesto pero no la lista de que hay que documentar. Se pierde la lista, no el "
+             "gesto. SE DECLARA ADEMAS QUE ESTA PIEZA COMPITIO POR EL UNICO INCISO DEL PASO 1 Y "
+             "PERDIO frente a la que las razones declaran propia. ES UNA SOLA PIEZA PERDIDA EN "
+             "DOS SITIOS y va en UNA fila con las DOS sedes nombradas"),
+     "donde": ("paso 3 de new_view_vs_old_view_de_error_humano y paso 4 de "
+               "perspectiva_dentro_del_tunel"),
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"},
+    {"especie": "DE CONDICIONES",
+     "que": ("el disparador de DECIDIR EL ENFOQUE ETICO Y METODOLOGICO PARA INVESTIGAR. Las dos "
+             "condiciones del superviviente disparan cuando YA hay un accidente que investigar o "
+             "un sesgo que evitar; la que se pierde dispara ANTES, cuando la organizacion "
+             "escribe su politica y todavia no hay caso"),
+     "donde": "condicion 1 de new_view_vs_old_view_de_error_humano",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"},
+    {"especie": "DE CONDICIONES",
+     "que": ("el disparador de LA PRESION POR ENCONTRAR CULPABLES RAPIDAMENTE TRAS UN "
+             "ACCIDENTE. Es el unico disparador del acto que nombra una presion externa sobre "
+             "el investigador, y ninguna de las dos condiciones del superviviente la nombra"),
+     "donde": "condicion 2 de new_view_vs_old_view_de_error_humano",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"},
+    {"especie": "DE CONDICIONES",
+     "que": ("el disparador del APRENDIZAJE ORGANIZACIONAL FRENTE A LA CULPABILIZACION, que los "
+             "dos absorbidos traen: mejorar la cultura de seguridad y el aprendizaje a largo "
+             "plazo en uno, y fomentar el aprendizaje en lugar de la culpabilizacion en el "
+             "otro. Las dos condiciones del superviviente disparan por el CASO y no por el "
+             "PROPOSITO. ES UNA SOLA PIEZA PERDIDA EN DOS SITIOS y va en UNA fila con las DOS "
+             "sedes nombradas"),
+     "donde": ("condicion 3 de new_view_vs_old_view_de_error_humano y condicion 2 de "
+               "perspectiva_dentro_del_tunel"),
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"},
+    {"especie": "DE CONDICIONES",
+     "que": ("el disparador de AL REDACTAR LA SECCION DE ANALISIS DE CAUSAS. La condicion 1 del "
+             "superviviente dispara al investigar el accidente, que es toda la operacion; la "
+             "que se pierde apunta a UN MOMENTO CONCRETO dentro de la redaccion del informe"),
+     "donde": "condicion 1 de perspectiva_dentro_del_tunel",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"},
+]
+
+REPARTO50 = {
+    "new_view_vs_old_view_de_error_humano": {
+        "pasos": {
+            "1": ("CUBIERTO", 1),   # el sesgo retrospectivo: el 2290 dice que ES su paso 1
+            "2": ("CUBIERTO", 3),   # con perdida: la lista de palabras prohibidas
+            "3": ("CUBIERTO", 1),   # con perdida: la enumeracion del contexto
+            "4": ("APPEND",),       # EL CIRCULO DE TESTIGOS: propio declarado por el 2290
+            # INCISO al paso 4: la postura con la que se comunica el informe.
+            "5": ("INCISO", 4,
+                  "honren la experiencia humana en lugar de reducirla a una lista de errores",
+                  ", y comunicar los hallazgos de forma que "),
+        },
+        "condiciones": {
+            "1": ("CUBIERTO", 1),   # con perdida: el enfoque etico y metodologico
+            "2": ("CUBIERTO", 2),   # con perdida: la presion por culpables
+            "3": ("CUBIERTO", 2),   # con perdida: el aprendizaje a largo plazo (primera sede)
+        },
+    },
+    "perspectiva_dentro_del_tunel": {
+        "pasos": {
+            # INCISO al paso 1: CON QUE se reconstruye. Propio declarado por el 2292.
+            "1": ("INCISO", 1,
+                  "la informacion y las senales disponibles para los actores en el momento del "
+                  "evento",
+                  ", a partir de "),
+            "2": ("CUBIERTO", 3),   # con perdida: la lista de palabras prohibidas (segunda sede)
+            "3": ("APPEND",),       # ENTREVISTAR A LOS INVOLUCRADOS: propio declarado por el 2292
+            "4": ("CUBIERTO", 1),   # con perdida: la enumeracion del contexto (segunda sede)
+        },
+        "condiciones": {
+            "1": ("CUBIERTO", 1),   # con perdida: al redactar la seccion de causas
+            "2": ("CUBIERTO", 2),   # con perdida: el aprendizaje (segunda sede)
+        },
+    },
+}
+
+
+# ======================================================================
+# ACTO 51: LA FAMILIA DEL DESCUENTO DE FLUJOS FUTUROS.
+# TRES miembros del mismo libro, DOS pares internos con veredicto y los
+# DOS en A, CERO D, CERO puentes, CERO triangulos y UNA PUERTA.
+# FORMA medida: UNA SOLA VARA (la de pasos), Y APUNTA A LA PUERTA. El
+# cableado apunta al mismo sitio. NO HAY CHOQUE QUE PUBLICAR, y se dice.
+# ======================================================================
+
+SUP51 = "metodo_valor_presente_neto"
+
+MOTIVO51 = (
+    "ACTO 51 DEL TRAMO UNICO DE OP-U-02, LA FAMILIA DEL DESCUENTO DE FLUJOS FUTUROS. "
+    "UNA SOLA FAMILIA, Y NO ES LECTURA MIA SINO DECLARACION DEL ARCHIVO CON LA PALABRA FAMILIA "
+    "DENTRO: el puesto 378 escribe FAMILIA anotada, DE TRES, y la nombra entera, "
+    "valor_del_dinero_en_el_tiempo, valor_presente y metodo_valor_presente_neto SOBRE EL MISMO "
+    "DESCUENTO, y anade que SOLO EL TERCERO RESTA ADEMAS EL DESEMBOLSO INICIAL. Los TRES "
+    "miembros son del MISMO LIBRO (Financial Intelligence for Entrepreneurs, de Berman y "
+    "Knight), tienen DOS pares internos con veredicto escrito de TRES combinaciones posibles y "
+    "los DOS son de clase A (puestos 378 y 1332), hay CERO pares D internos, CERO nodos puente "
+    "y CERO triangulos, medido. "
+    "GUARDA 1B: metodo_valor_presente_neto ES PUERTA (universo protegido de 256 ids, medido con "
+    "scripts/loop/varas_n_arias_del_tramo.py) Y SOBREVIVE, que es lo que el acta 54, pregunta "
+    "1, manda gane o pierda en contenido. AQUI GANA, Y ESO SE DICE EN VEZ DE DARSE POR HECHO: "
+    "no hay ningun choque entre la puerta y el contenido en este acto, a diferencia del acto 46 "
+    "del lote H, que tuvo que escribir el suyo en el motivo sellado. Callar que no hubo choque "
+    "dejaria al lector sin saber si se miro. "
+    "P.8 EN ORDEN, Y LA FORMA MANDA: la FORMA medida es UNA SOLA VARA. La de PASOS apunta a "
+    "metodo_valor_presente_neto (6 contra 5 y 4); la de CONDICIONES EMPATA en 3 entre "
+    "metodo_valor_presente_neto y valor_del_dinero_en_el_tiempo y no apunta. UNA SOLA VARA DE "
+    "CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4). EL CABLEADO APUNTA AL MISMO NODO con 10 "
+    "contra 5 y 4, leido de la columna cab de scripts/loop/varas_n_arias_del_tramo.py, que es la "
+    "unica fuente de cifra de cableado desde la adjudicacion 3 del acta 70; por la letra NO "
+    "HABLA, porque el contenido no empata, y se publica solo para dejar dicho que no hay nada "
+    "tirando del otro lado. ES EL PRIMER ACTO DE TODO EL LOTE DONDE LA VARA, EL CABLEADO Y LA "
+    "PUERTA APUNTAN AL MISMO SITIO. "
+    "LAS DOS RAZONES ESCRITAS CORONAN AL MISMO NODO Y NINGUNA SE DESMIENTE. El 1332 se titula "
+    "TERCER SUBCONJUNTO ESTRICTO DEL EJERCICIO y escribe que LOS CUATRO PASOS DE valor_presente "
+    "ESTAN ENTEROS DENTRO DE LOS SEIS DE metodo_valor_presente_neto Y EN EL MISMO ORDEN, remata "
+    "con PERDIDA CERO Y DIRECCION FORZADA: EL NODO QUE MUERE NO TIENE NI UNA LINEA PROPIA, y "
+    "nombra dos piezas que solo el superviviente trae, LA REGLA DE DECISION (aceptar si sale "
+    "positivo, rechazar si sale negativo, elegir el mayor entre alternativas) y EL ANALISIS DE "
+    "SENSIBILIDAD. El 378 no corona explicitamente, pero nombra al superviviente como el unico "
+    "de los tres que resta el desembolso inicial, que es el paso que cierra el ejercicio. "
+    "EL ROTULO SOLO Y LA CANTIDAD NUNCA DECIDEN. "
+    "DUENOS: los dos campos del fichero fijado del tramo estan VACIOS para este acto, medido "
+    "hoy con scripts/loop/_v73_borde_del_dueno.py; NINGUNA entrada de docs/plan/INVENTARIO.jsonl "
+    "que no sea de tipo acto nombra a ninguno de los tres miembros; NINGUNO de los tres esta en "
+    "ninguna nomina de docs/RACIMOS_MIEMBROS.jsonl; y el barrido CAMPO A CAMPO sobre "
+    "docs/plan/OPERACIONES.jsonl no devuelve ninguna mencion de los tres."
+)
+
+NOTA51 = (
+    "EL REPARTO DE ESTE ACTO, con su costo publicado en vez de maquillado. CERO APPEND Y UN "
+    "SOLO INCISO, y el nodo NO CRECE NI UN PASO: se queda en 6 pasos y 3 condiciones. ES EL "
+    "REPARTO MAS BARATO DE TODO EL TRAMO, y no por generosidad sino porque el archivo ya lo "
+    "habia dicho: el 1332 escribe PERDIDA CERO Y DIRECCION FORZADA. "
+    "LOS NUEVE PASOS DE LOS DOS ABSORBIDOS ENTRAN TODOS, ocho de CUBIERTO uno a uno y uno de "
+    "INCISO, Y NINGUNO SE PIERDE. Los cuatro de valor_presente caen sobre los pasos 1, 2, 3 y 4 "
+    "del superviviente EN EL MISMO ORDEN, que es exactamente lo que el 1332 describe. Los cinco "
+    "de valor_del_dinero_en_el_tiempo caen sobre los pasos 2, 2, 3, 4 y 5. "
+    "EL UNICO INCISO VA AL PASO 3 Y ES LA PIEZA QUE LA RAZON DECLARA PROPIA, con la precision "
+    "que la propia razon pone: el 378 dice que LO UNICO QUE EL PRIMERO TIENE DE MAS ES LA "
+    "PREMISA, RECONOCER QUE EL DINERO FUTURO SE DESCUENTA, Y QUE ES EL PORQUE Y NO UN PASO. Por "
+    "eso NO entra de APPEND: un porque no es un paso, y meterlo como paso habria contradicho la "
+    "razon escrita. Entra de INCISO al paso 3, que es justamente el paso que aplica la ecuacion "
+    "de descuento, o sea el paso al que ese porque pertenece. El paso 3 del superviviente NO "
+    "termina en punto (cierra en la palabra presente), asi que la guarda de la JUNTURA ROTA no "
+    "salta. "
+    "CUATRO PERDIDAS SELLADAS, UNA DE PASO Y TRES DE CONDICIONES, UNA DE ELLAS CON DOS SEDES, "
+    "contadas por maquina sobre esta misma lista. Y SE DICE ALGO QUE LA RAZON NO DIJO, porque "
+    "callarlo seria escudarse en ella: el 1332 escribe PERDIDA CERO sobre los PASOS de "
+    "valor_presente, y es cierto al digito; las condiciones de los dos absorbidos SI pierden, y "
+    "esas perdidas se sellan aqui en vez de esconderse detras de la frase de la razon. "
+    "NINGUNA ES DE LA ESPECIE DEL PENDIENTE 4 con la definicion corregida de esta vuelta."
+)
+
+PERDIDAS51 = [
+    {"especie": "DE PARAMETRO DE PASO",
+     "que": ("LA IDENTIFICACION DEL RIESGO COMO ACTO PROPIO Y PREVIO. El paso 2 del absorbido "
+             "manda IDENTIFICAR EL RIESGO de recibir ese dinero en el futuro frente a tenerlo "
+             "ahora, y solo despues, en su paso 3, definir el retorno que se le exige. El paso "
+             "2 del superviviente manda DEFINIR LA TASA DE DESCUENTO de la empresa, que es el "
+             "resultado, y da por hecho que ya existe. Se pierde el paso de pensar el riesgo "
+             "antes de poner la cifra"),
+     "donde": "paso 2 de valor_del_dinero_en_el_tiempo",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"},
+    {"especie": "DE CONDICIONES",
+     "que": ("el disparador de ELEGIR ENTRE INVERTIR AHORA O RECIBIR EL DINERO EN EL FUTURO. "
+             "Las tres condiciones del superviviente disparan sobre una INVERSION DE CAPITAL "
+             "que ya se esta evaluando; la que se pierde dispara sobre la disyuntiva anterior, "
+             "que es la que hace falta el descuento en primer lugar"),
+     "donde": "condicion 1 de valor_del_dinero_en_el_tiempo",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"},
+    {"especie": "DE CONDICIONES",
+     "que": ("LOS PRESTAMOS Y LAS COMPRAS DE ACTIVO, MAQUINA O SOFTWARE como disparadores "
+             "nombrados. Las tres condiciones del superviviente hablan de INVERSION DE CAPITAL "
+             "en abstracto y de la comparacion entre IRR y payback; ninguna nombra un prestamo "
+             "ni una compra concreta, que es como el emprendedor reconoce su caso. ES UNA SOLA "
+             "PIEZA PERDIDA EN DOS SITIOS y va en UNA fila con las DOS sedes nombradas"),
+     "donde": ("condicion 2 y condicion 3 de valor_del_dinero_en_el_tiempo"),
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"},
+    {"especie": "DE CONDICIONES",
+     "que": ("LA FUSION O ADQUISICION Y EL INMUEBLE como casos nombrados. La unica condicion de "
+             "valor_presente enumera comprar equipo, invertir en un inmueble o hacer una fusion "
+             "o adquisicion; el superviviente no nombra ninguno de los tres. SE SELLA AUNQUE LA "
+             "RAZON DIGA PERDIDA CERO, y se dice por que: el 1332 mide la perdida cero sobre "
+             "los PASOS, no sobre las condiciones"),
+     "donde": "condicion 1 de valor_presente",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"},
+]
+
+REPARTO51 = {
+    "valor_presente": {
+        "pasos": {
+            "1": ("CUBIERTO", 1),   # proyectar los flujos futuros
+            "2": ("CUBIERTO", 2),   # elegir la tasa de descuento
+            "3": ("CUBIERTO", 3),   # aplicar la formula
+            "4": ("CUBIERTO", 4),   # comparar contra el costo inicial
+        },
+        "condiciones": {
+            "1": ("CUBIERTO", 1),   # con perdida: la fusion, la adquisicion y el inmueble
+        },
+    },
+    "valor_del_dinero_en_el_tiempo": {
+        "pasos": {
+            # INCISO al paso 3: LA PREMISA, que la razon llama EL PORQUE Y NO UN PASO.
+            "1": ("INCISO", 3,
+                  "cualquier dinero que esperas recibir en el futuro tienes que descontarlo "
+                  "para poder compararlo con el efectivo que tienes hoy",
+                  ", porque "),
+            "2": ("CUBIERTO", 2),   # con perdida: identificar el riesgo como acto previo
+            "3": ("CUBIERTO", 2),   # definir el retorno exigido
+            "4": ("CUBIERTO", 4),   # calcular y comparar con el desembolso
+            "5": ("CUBIERTO", 5),   # usar el resultado para decidir
+        },
+        "condiciones": {
+            "1": ("CUBIERTO", 1),   # con perdida: invertir ahora o recibir despues
+            "2": ("CUBIERTO", 1),   # con perdida: los prestamos (primera sede)
+            "3": ("CUBIERTO", 1),   # con perdida: activo, maquina o software (segunda sede)
+        },
+    },
+}
+
+
+# ======================================================================
+# ACTO 53: LA FAMILIA DEL PASO 12 DE CROSBY, EL RECONOCIMIENTO.
+# TRES miembros del mismo libro, DOS pares internos con veredicto y los
+# DOS en A, CERO D, CERO puentes, CERO triangulos y CERO puertas.
+# FORMA medida: TODAS DE ACUERDO. Es la unica del lote y funde a su lado.
+# TRAE UNA PROMESA DE MARCADO ESCRITA EN LA RAZON DEL 2942.
+# ======================================================================
+
+SUP53 = "reconocimiento_al_desempeno"
+
+MOTIVO53 = (
+    "ACTO 53 DEL TRAMO UNICO DE OP-U-02, LA FAMILIA DEL PASO 12 DE CROSBY, EL RECONOCIMIENTO. "
+    "UNA SOLA FAMILIA, Y LAS DOS RAZONES LA NOMBRAN CON EL MISMO NUMERO DE PASO: los TRES "
+    "miembros son del MISMO LIBRO (Quality is Free, de Philip B. Crosby), los tres son EL PASO "
+    "12 del programa, tienen DOS pares internos con veredicto escrito de TRES combinaciones "
+    "posibles y los DOS son de clase A (puestos 2616 y 2942), hay CERO pares D internos, CERO "
+    "nodos puente y CERO triangulos, medido. El 2616 escribe ES EL MISMO ACTO y el 2942 escribe "
+    "ES EL MISMO PASO 12, RECONOCIMIENTO, DESCRITO DOS VECES. "
+    "P.8 EN ORDEN, Y LA FORMA ES LA MAS LIMPIA DEL TRAMO: la FORMA medida es TODAS DE ACUERDO, "
+    "la unica del lote. La de PASOS apunta a reconocimiento_al_desempeno (5 contra 4 y 3) y la "
+    "de CONDICIONES apunta AL MISMO NODO (3 contra 2 y 1). Las dos varas de contenido que "
+    "hablan apuntan al mismo lado, que es lo que la forma nombra, y se funde a su lado. EL "
+    "CABLEADO EMPATA en 5 entre reconocimiento_al_desempeno y reconocimiento_crosby y por la "
+    "letra tampoco habria hablado. "
+    "LAS DOS RAZONES ESCRITAS APUNTAN AL MISMO SITIO Y UNA CORONA EXPRESAMENTE. El 2616 cierra "
+    "con SOBREVIVE reconocimiento_al_desempeno y anade SIN PERDIDA PROPIA, con la vara escrita "
+    "delante: EL ESQUELETO VA ENTERO DENTRO DEL DETALLADO. El 2942 no corona (escribe "
+    "SUPERVIVIENTE POR ELEGIR DENTRO DEL CUMULO DEL PASO 12 YA ABSORBIDO) pero desarma las dos "
+    "candidaturas contrarias con estas palabras: NINGUNO TRAE UN PASO ENTERO AJENO AL OTRO, y "
+    "clasifica lo propio de cada lado como LINEA DE ESTILO y LINEA DE CRITERIO, no como acto "
+    "nuevo. "
+    "LA PROMESA DE MARCADO DE LA RAZON SE CUMPLE Y NO SE OLVIDA: el 2942 lleva escrito "
+    "DISCUTIBLE MARCADO fuerte sobre la linea de reconocimiento_crosby de ADAPTAR EL "
+    "RECONOCIMIENTO A TU FORMA DE TRABAJAR CON TU GENTE, con esta frase: quien la lea como un "
+    "paso entero propio dira D. Va marcada en la seccion 6 del reporte. Y ESTE REPARTO LE QUITA "
+    "EL FILO A LA PREGUNTA EN VEZ DE ESQUIVARLA: esa linea NO SE PIERDE, entra de INCISO al "
+    "paso 3 del superviviente, asi que se lea como paso o como linea, el contenido se conserva. "
+    "EL ROTULO SOLO Y LA CANTIDAD NUNCA DECIDEN. "
+    "GUARDA 1B: NINGUNO de los tres miembros es puerta, medido con "
+    "scripts/loop/varas_n_arias_del_tramo.py contra el universo protegido de 256 ids. La guarda "
+    "pasa POR VACIO y se dice. "
+    "DUENOS: los dos campos del fichero fijado del tramo estan VACIOS para este acto, medido "
+    "hoy con scripts/loop/_v73_borde_del_dueno.py; NINGUNA entrada de docs/plan/INVENTARIO.jsonl "
+    "que no sea de tipo acto nombra a ninguno de los tres miembros; NINGUNO de los tres esta en "
+    "ninguna nomina de docs/RACIMOS_MIEMBROS.jsonl; y el barrido CAMPO A CAMPO sobre "
+    "docs/plan/OPERACIONES.jsonl no devuelve ninguna mencion de los tres."
+)
+
+NOTA53 = (
+    "EL REPARTO DE ESTE ACTO, con su costo publicado en vez de maquillado. CERO APPEND Y DOS "
+    "INCISO a pasos distintos, y el nodo NO CRECE NI UN PASO: se queda en 5 pasos y 3 "
+    "condiciones. ES EL SEGUNDO REPARTO SIN NINGUN APPEND DE TODO EL LOTE, y no es casualidad: "
+    "las dos razones dicen que NINGUNO TRAE UN PASO ENTERO AJENO AL OTRO, asi que meter un "
+    "APPEND habria contradicho lo escrito. "
+    "LOS DOS INCISO SON LAS DOS LINEAS QUE LAS RAZONES CLASIFICAN COMO LINEAS Y NO COMO ACTOS, "
+    "y por eso van por el vehiculo de las lineas y no por el de los pasos. "
+    "EL PRIMERO VA AL PASO 1: TRATAR TODOS LOS PROBLEMAS REPORTADOS DE MANERA EQUITATIVA, que "
+    "el 2942 llama expresamente UNA LINEA DE CRITERIO, NO UN ACTO NUEVO. Es el unico gesto del "
+    "acto que mira a los problemas reportados por la gente y no a los premios, y sin el se "
+    "perderia entero. El paso 1 del superviviente NO termina en punto (cierra en la palabra "
+    "compartan), asi que la guarda de la JUNTURA ROTA no salta. "
+    "EL SEGUNDO VA AL PASO 3 Y ES EL SUJETO DE LA PROMESA DE MARCADO: ADAPTAR EL RECONOCIMIENTO "
+    "A LA FORMA DE TRABAJAR QUE TIENES CON TU GENTE, que el 2942 llama UNA LINEA DE ESTILO, NO "
+    "UN ACTO NUEVO, y sobre la que deja escrito su DISCUTIBLE. El paso 3 del superviviente ya "
+    "manda decidir el premio JUNTO CON los colaboradores en vez de imponerlo, que es la misma "
+    "idea aplicada a una decision; lo que entra es la regla general. El paso 3 NO termina en "
+    "punto (cierra en la palabra solo). "
+    "TRES PERDIDAS SELLADAS, UNA DE PASO Y DOS DE CONDICIONES, contadas por maquina sobre esta "
+    "misma lista. Y SE DICE QUE EL ABSORBIDO PEQUENO NO PIERDE NADA, tal como el 2616 prometio "
+    "con las palabras SIN PERDIDA PROPIA: los tres pasos y la unica condicion de reconocimiento "
+    "entran, dos de CUBIERTO y uno de INCISO, y ninguna de las tres perdidas de este acto es "
+    "suya. Las tres son de reconocimiento_crosby. "
+    "NINGUNA ES DE LA ESPECIE DEL PENDIENTE 4 con la definicion corregida de esta vuelta."
+)
+
+PERDIDAS53 = [
+    {"especie": "DE PARAMETRO DE PASO",
+     "que": ("LA DISTORSION DE LA MOTIVACION COMO EL PORQUE DE EVITAR PREMIOS COSTOSOS. El paso "
+             "4 del superviviente pide que la entrega sea digna y visible MAS QUE EL VALOR "
+             "ECONOMICO del premio, y su paso 5 prohibe reducirlo a bonos o dinero; los dos "
+             "dicen QUE hacer. El paso 2 del absorbido dice POR QUE: porque el premio costoso "
+             "DISTORSIONA la motivacion. Se pierde el mecanismo, no la regla"),
+     "donde": "paso 2 de reconocimiento_crosby",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"},
+    {"especie": "DE CONDICIONES",
+     "que": ("el disparador de MANTENER LA MOTIVACION SIN GASTAR DE MAS. Es la unica condicion "
+             "de los tres nodos que nombra una RESTRICCION DE PRESUPUESTO como motivo para "
+             "abrir el programa; las tres del superviviente disparan por metas alcanzadas, por "
+             "el esfuerzo percibido como obligacion y por querer institucionalizar la "
+             "celebracion"),
+     "donde": "condicion 2 de reconocimiento_crosby",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"},
+    {"especie": "DE CONDICIONES",
+     "que": ("el disparador de LAS MEJORAS MEDIBLES QUE VALE LA PENA CELEBRAR. La condicion 1 "
+             "del superviviente dispara cuando ALCANZAS METAS, que es un hito acordado de "
+             "antemano; la que se pierde dispara por una MEJORA MEDIDA, que puede aparecer sin "
+             "que nadie la hubiera fijado como meta"),
+     "donde": "condicion 1 de reconocimiento_crosby",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"},
+]
+
+REPARTO53 = {
+    "reconocimiento": {
+        "pasos": {
+            "1": ("CUBIERTO", 5),   # el programa NO FINANCIERO
+            # INCISO al paso 1: la LINEA DE CRITERIO que el 2942 nombra.
+            "2": ("INCISO", 1, "todos los problemas reportados de manera equitativa",
+                  ", y trata "),
+            "3": ("CUBIERTO", 4),   # reconocer publicamente
+        },
+        "condiciones": {
+            "1": ("CUBIERTO", 1),   # sostener la motivacion tras alcanzar metas. SIN PERDIDA
+        },
+    },
+    "reconocimiento_crosby": {
+        "pasos": {
+            "1": ("CUBIERTO", 5),   # apreciacion real y no valor monetario
+            "2": ("CUBIERTO", 4),   # con perdida: la distorsion de la motivacion
+            "3": ("CUBIERTO", 2),   # reconocimientos regulares: la frecuencia
+            # INCISO al paso 3: la LINEA DE ESTILO, sujeto de la promesa de marcado.
+            "4": ("INCISO", 3, "la forma de trabajar que tienes con tu gente",
+                  ", y adapta el reconocimiento a "),
+        },
+        "condiciones": {
+            "1": ("CUBIERTO", 1),   # con perdida: las mejoras medibles
+            "2": ("CUBIERTO", 1),   # con perdida: sin gastar de mas
+        },
+    },
+}
+
+
+CABECERA_I = {
+    49: {
+        "familia": "la politica contra la IA clandestina (Mollick)",
+        "varas": "docs/loop/SALIDA_V73_VARAS_N_ARIAS.txt",
+        "miembros": 3,
+        "combinaciones": 3,
+        "pares_A": 2,
+        "pares_D": 0,
+        "pares_sin_veredicto": 1,
+        "nodos_puente": 0,
+        "triangulos_puente": 0,
+        "puertas_dentro": [],
+        "puestos_D_internos": [],
+        "duenos_cualquier_operacion": [],
+    },
+    50: {
+        "familia": "el informe de investigacion New View (Dekker)",
+        "varas": "docs/loop/SALIDA_V73_VARAS_N_ARIAS.txt",
+        "miembros": 3,
+        "combinaciones": 3,
+        "pares_A": 2,
+        "pares_D": 0,
+        "pares_sin_veredicto": 1,
+        "nodos_puente": 0,
+        "triangulos_puente": 0,
+        "puertas_dentro": [],
+        "puestos_D_internos": [],
+        "duenos_cualquier_operacion": [],
+    },
+    51: {
+        "familia": "el descuento de flujos futuros (Berman y Knight)",
+        "varas": "docs/loop/SALIDA_V73_VARAS_N_ARIAS.txt",
+        "miembros": 3,
+        "combinaciones": 3,
+        "pares_A": 2,
+        "pares_D": 0,
+        "pares_sin_veredicto": 1,
+        "nodos_puente": 0,
+        "triangulos_puente": 0,
+        "puertas_dentro": ["metodo_valor_presente_neto"],
+        "puestos_D_internos": [],
+        "duenos_cualquier_operacion": [],
+    },
+    53: {
+        "familia": "el Paso 12 de Crosby, el reconocimiento",
+        "varas": "docs/loop/SALIDA_V73_VARAS_N_ARIAS.txt",
+        "miembros": 3,
+        "combinaciones": 3,
+        "pares_A": 2,
+        "pares_D": 0,
+        "pares_sin_veredicto": 1,
+        "nodos_puente": 0,
+        "triangulos_puente": 0,
+        "puertas_dentro": [],
+        "puestos_D_internos": [],
+        "duenos_cualquier_operacion": [],
+    },
+}
+
+
+LOTE_I = {
+    "titulo": ("LOTE I DEL TRAMO UNICO DE OP-U-02, EL ULTIMO SIN DUENO. ABRE EN EL ACTO 49, que "
+               "es el PRIMERO DEL TRAMO SIN DUENO MEDIDO, y cierra en el 53. LOS DOS SALTOS VAN "
+               "DECLARADOS Y NO ROMPEN EL PREFIJO SIN SALTOS, porque ninguno de los dos actos "
+               "saltados esta en la cola de fusiones de esta operacion: el ACTO 31 tiene dueno "
+               "medido (OP-F-04-WEI y OP-S-04 en duenos_cualquier_operacion, leido hoy del "
+               "fichero fijado del tramo) y el ACTO 37 tiene dueno medido (OP-S-07, leido hoy "
+               "del mismo fichero), y la adjudicacion 2 del acta 69 dice con todas sus letras "
+               "que lo que vale para el 31 vale para el 37 cuando el prefijo lo alcance. CUATRO "
+               "ACTOS CIERRAN ENTEROS Y SON 12 NODOS: los actos 49, 50, 51 y 53 cierran LOS "
+               "CUATRO FUNDIDOS y NINGUNO cierra DECLARADO. EL ACTO 51 FUNDE CON SU UNICA "
+               "PUERTA SOBREVIVIENDO (acta 54, pregunta 1) Y SIN NINGUN CHOQUE QUE PUBLICAR, "
+               "porque la vara de pasos y el cableado apuntan a la puerta los dos. EL ACTO 50 "
+               "ES EL CARO: su unica vara apunta al nodo que LAS DOS RAZONES ESCRITAS MATAN, se "
+               "funde a favor del archivo por la letra de P.8 y de CHOCAN DECIDE LA PIEZA "
+               "DECLARADA, y va MARCADO DISCUTIBLE con su pendiente de doctrina nombrado. CON "
+               "ESTE LOTE EL TRAMO SE QUEDA SIN NINGUN ACTO SIN DUENO Y SIN DESTINO: lo que "
+               "queda son los DOS con dueno (31 y 37) y los QUINCE declarados, y ese estado es "
+               "el insumo del CIERRE DE LA FASE 03, que es PARADA DE FUNDADOR y que este lote "
+               "NI ABRE NI DECIDE"),
+    "actos": [
+        {
+            "orden": 49,
+            "superviviente": SUP49,
+            "motivo": MOTIVO49,
+            "nota": NOTA49,
+            "reparto": REPARTO49,
+            "perdidas": PERDIDAS49,
+        },
+        {
+            "orden": 50,
+            "superviviente": SUP50,
+            "motivo": MOTIVO50,
+            "nota": NOTA50,
+            "reparto": REPARTO50,
+            "perdidas": PERDIDAS50,
+        },
+        {
+            "orden": 51,
+            "superviviente": SUP51,
+            "motivo": MOTIVO51,
+            "nota": NOTA51,
+            "reparto": REPARTO51,
+            "perdidas": PERDIDAS51,
+        },
+        {
+            "orden": 53,
+            "superviviente": SUP53,
+            "motivo": MOTIVO53,
+            "nota": NOTA53,
+            "reparto": REPARTO53,
+            "perdidas": PERDIDAS53,
+        },
+    ],
+    "declarados": [],
+}

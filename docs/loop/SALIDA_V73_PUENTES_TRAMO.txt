@@ -1,0 +1,46 @@
+==============================================================================
+LOS NODOS PUENTE DEL TRAMO, ACTO POR ACTO (P.10, la mitad diagnostica de P.5)
+  tramo      : docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+  clave      : orden_universo
+  veredictos : 3088 pares indexados por par RESUELTO (P.1)
+==============================================================================
+
+------------------------------------------------------------------------------
+ACTO 49 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 50 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 51 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 53 | miembros 3 | combinaciones 3 | A 2 | D 0 | SIN VEREDICTO 1
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 1 (la primera salida de P.10 es leerlos)
+
+==============================================================================
+RESUMEN DEL TRAMO
+acto   miem   combin   A     D     sin_ver  puentes  triangulos
+49     3      3        2     0     1        0        0
+50     3      3        2     0     1        0        0
+51     3      3        2     0     1        0        0
+53     3      3        2     0     1        0        0
+
+  actos mirados                         : 4
+  actos CON al menos un nodo puente     : 0
+  actos SIN ningun nodo puente          : 4
+  actos con algun par SIN veredicto     : 4
+
+LO QUE ESTO NO HACE: no elige salida de P.10 ni funde ni declara nada.
+FIN
