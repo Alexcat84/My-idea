@@ -8988,3 +8988,238 @@ anade, quita ni corrige ni una fila ni una columna ni una celda de ninguna tabla
 es la adjudicacion 3 del acta 69 aplicada entera: **la correccion que la vuelta 72 hizo en la celda de
 la figura del inventario ya viene aplicada en el ancestro y esta vuelta solo comprueba que sigue en
 pie.**
+
+
+---
+
+## LAS ADJUDICACIONES DEL ACTA DE LA VUELTA 73, REGISTRADAS AQUI PARA QUE EL REGISTRO NO DEPENDA DEL ACTA (26 ago 2026, vuelta 74, TAREA 1 del encargo)
+
+**Se adosan al final del documento y NO reescriben ni una linea de las secciones de arriba**, que es
+la via que esta pagina ya uso **CATORCE** veces, **y la cifra va con su medicion del dia al lado en
+vez de heredada**: **DOCE** llevan esta misma cabecera de nivel dos (de la del acta 61 a la del acta
+72, contadas hoy por maquina sobre el fichero) y **DOS** son las mas viejas, que la pagina adoso con
+cabecera de nivel tres (la del acta 52 y la del acta 57). **La ultima de las catorce es la del acta 72
+en la linea **8272** y la anterior la del acta 71 en la **7528**, las dos cotejadas
+HOY abriendo el fichero.** **Ninguna cifra publicada de arriba se toca.**
+
+**NINGUNA CITA DE LINEA DE ESTA SECCION ESTA TECLEADA:** cada una es una marca que el registrador
+sustituye por el numero que le devuelve **buscar su aguja de contenido** en el fichero, y **antes de
+escribir una sola letra el instrumento vuelve a barrer el texto ya sustituido y exige que TODO numero
+de linea que aparezca en el salga de una aguja**; si uno solo no sale, cae en `ROJO` y **no escribe
+nada**.
+
+**El acta de la vuelta 73 abre en la linea **20305** de
+[`../loop/ACTA_AUDITOR.md`](../loop/ACTA_AUDITOR.md)**, su verificacion por corrida propia en la
+**20311**, su relectura ciega en la **20405**, sus trece adjudicaciones de discutibles
+en la **20433**, las cuatro averias del ejecutor en la **20533**, sus errores
+propios en la **20545**, su metrica de credito en la **20559**, sus condiciones de
+parada en la **20588** y su encargo en la **20615**.
+
+> **ESTA ACTA NO TIENE SECCION DE ADJUDICACIONES NUEVAS, Y ESO NO ES UN OLVIDO: ES DONDE ESTAN.** Las
+> actas 69 a 72 llevaban una seccion aparte para ellas; **la 73 adjudica DENTRO de los discutibles**,
+> porque **las tres preguntas abiertas del reporte se resolvieron por EXTENSION CITABLE de reglas ya
+> escritas y no por doctrina nueva**, y una extension se lee mejor pegada al caso que la provoca.
+> **Este registro las saca de ahi y las pone juntas en su apartado**, con la linea de cada una, para
+> que la vuelta siguiente no tenga que releer trece discutibles para encontrar tres reglas.
+
+### a) **LA VERIFICACION FUE COMPLETA Y POR CORRIDA PROPIA, Y VA PRIMERA PORQUE ES LA QUE SOSTIENE TODO LO DEMAS**
+
+**El acta 73 no acepto ni una cifra del reporte: las volvio a medir con sus propios instrumentos y
+publico sus sondas.** **La tabla de abajo es lo que el acta dice haber corrido, sede por sede, y cada
+fila lleva la linea del acta donde esa medicion esta escrita.** **Esto no es una cifra nueva: es el
+registro de una verificacion, y por eso cita en vez de recontar.**
+
+| lo que el acta 73 re-corrio por su cuenta | lo que le dio | linea |
+|---|---|---:|
+| **la cadena de commits**, leida de `git log` | **los SEIS del reporte en la rama y EN ORDEN**, y la seccion 12 del reporte nombrandolos igual | **20316** |
+| **el marcador**, con su propio `python` sobre el archivo de veredictos | las cuatro clases, `n`, **cero huecos y cero duplicados de puesto**, y **las DIEZ tasas por dominio calzando AL DECIMAL** | **20319** |
+| **la cabecera del reporte**, con el tallador re-corrido | **identica a la pegada, celda a celda** | **20324** |
+| **el recomputo al cierre**, con `recomputo_3388.py` | **IDENTICA BYTE A BYTE** a la salida del ejecutor **salvo la linea de la ruta de escritura**, con retrato, componentes y las cuatro comprobaciones en `OK` | **20326** |
+| **el grafo**, contado por el auditor sobre `master_graph.json` | ficheros, vivos, deprecados y enlaces al digito, **y su propia primera cuenta declarada como error de definicion suya** | **20332** |
+| **los OCHO absorbidos y los CUATRO supervivientes** | los absorbidos **deprecados** y los supervivientes **vivos con los tamanos del reporte**, y el crecimiento acto a acto calzando | **20336** |
+| **la cola de costuras**, por `git show` sobre el commit del plan y por conteo de hoy | **los DOS que entran presentes y los CUATRO absorbidos que salen ausentes**, por `grep` propio | **20341** |
+| **las colisiones**, con el censo re-corrido | **identica a la del ejecutor salvo su linea final de cotejo**: vigentes, auto-pares y pares resueltos distintos | **20345** |
+| **las colisiones esperadas**, **RE-SIMULADAS PRE FUSION en un worktree** sobre el commit del plan | la base **MEDIDA sobre el arbol de antes**, cero nuevas, cero idas, y **`CALZA`** con el censo del cierre | **20348** |
+| **las varas y los puentes PRE FUSION**, en el mismo worktree | **la tabla entera al digito**: los cuatro actos, las tres columnas, las marcas de apunte **y la restriccion a los dos coronados del `acto 50`** | **20352** |
+| **las duplicadas**, contadas sobre el archivo de aristas | los grupos y los nodos al digito | **20362** |
+| **las operaciones y el inventario** | **las fichas todas `LISTA`**, **CERO dependencias rotas** por `depende_de` contra `id_op`, las entradas y los racimos, **y el `diff` desde el corte anterior VACIO** | **20364** |
+| **el `numstat` de los commits de la vuelta** | las lineas anadidas y **CERO borradas** en cada sede, **los instrumentos nuevos por `--diff-filter=A`** y **el unico modificado por `M`** | **20368** |
+| **la cuenta agregada de perdidas**, re-corrida sobre el plan sellado | el total, el reparto por especie, el atenuante, **y la celda del pendiente 4 en `0` CON LA DEFINICION YA CORREGIDA** | **20372** |
+| **las promesas de marcado**, con su instrumento **y ademas leyendo el plan a mano** | **DOS medidas y DOS cumplidas**, **y las DOS formas que el instrumento NO VE leidas por el auditor en el propio plan** | **20376** |
+| **el borde del dueno**, por instrumento **y por cruce propio campo a campo** | **los duenos del reporte calzando POR DOS VIAS** | **20381** |
+| **el tramo al cierre**, recomputado sobre el fichero fijado y el grafo de hoy | las filas, los actos con un vivo o menos y los que tienen dos o mas, **y NINGUN acto sin dueno y sin destino** | **20387** |
+| **`Gate 0` con su ciclo de TRES y las tres suites**, corridas por el auditor | `GATE 0 OK`, alcanzabilidad entera, **el grafo identico al committeado tras el ciclo**, motor, web y `tsc` en verde, **y el log restaurado** | **20392** |
+| **el barrido de titulos** | ficheros, `ROJO` en su linea base, `AMBAR` en cero, rotulados y censados, **identico a la seccion 9 del reporte** | **20400** |
+| **el censo de ficheros de la vuelta** | contado por el auditor con `grep -c`, **como el censo del ejecutor dice** | **20402** |
+
+> **LAS DOS MEDICIONES MAS CARAS DEL ACTA SIGUEN SIENDO LAS PRE FUSION**, porque exigen un **worktree
+> sobre el commit anterior** para poder medir lo que ya no existe en el arbol de hoy: **las esperadas
+> sobre la base medida** (linea **20348**) y **las varas con la restriccion a los
+> coronados** (linea **20352**). **Es la unica forma de comprobar una prediccion sin creerle
+> a quien la hizo.**
+>
+> **Y HAY UNA TERCERA QUE ESTA ACTA ANADE Y QUE NO ES DE INSTRUMENTO SINO DE LECTURA** (linea
+> **20376**): el auditor **no se quedo con el verde del instrumento de promesas**, abrio
+> el plan y leyo los motivos. **Ahi es donde salieron las dos formas invisibles**, y de ahi sale la
+> regla nueva del apartado `d`. **Un instrumento en verde sobre lo que sabe ver no dice nada sobre lo
+> que no sabe ver.**
+
+### b) **LA RELECTURA CIEGA: 4 DE 4 ACTOS COINCIDENTES, Y CERO DISCREPANCIAS**
+
+**El auditor extrajo los textos ENTEROS de los doce nodos en su version PRE fusion** (por `git show`
+sobre el commit anterior al plan), **imprimio pasos, condiciones y entregables ANTES de destapar UNA
+SOLA razon**, adjudico familia y superviviente, **y SOLO DESPUES leyo las ocho razones** (linea
+**20407**).
+
+**`CERO` DISCREPANCIAS: las cuatro coronas del auditor son las cuatro del ejecutor**, y **todas
+dentro del marcado** (linea **20415**).
+
+| lo que la ciega confirmo, y por que importa | linea |
+|---|---:|
+| **la afirmacion mas cara del reporte entero**: **las DOS razones del `acto 50` matan LAS DOS al mismo nodo que la unica vara elige**, con la contencion escrita verbatim (*le queda una linea propia*, *le quedan dos lineas*) | **20418** |
+| **los siete `INCISO` VERBATIM en los supervivientes de hoy, CON SUS TILDES**, mas los dos `APPEND` declarados propios, el `APPEND` del `D3` y la linea del `D6` viviendo como inciso | **20426** |
+
+> **LA CIEGA DEL `50` ES LA QUE MAS PESA, Y LLEGO POR OTRA VIA AL MISMO SITIO** (linea
+> **20423**): el auditor separo los dos entregables leyendolos, **el informe entero
+> contra una narrativa DENTRO de ese informe**, sin haber visto todavia las razones que dicen lo
+> mismo. **Cuando la lectura ciega y las razones escritas coinciden desde fuera, la decision del `D1`
+> deja de apoyarse en una sola vara.**
+
+### c) **LA TANDA 73 SALIO LIMPIA ENTERA, Y EL CONTADOR DE PARADA SIGUE EN `CERO` POR TERCERA TANDA SEGUIDA**
+
+**Es la noticia que mueve el contador, y va con las cifras separadas en vez de con un limpia suelto**,
+porque la regla de la parada distingue especies y no humores.
+
+| | lo que el acta 73 escribe | linea |
+|---|---|---:|
+| **las tres especies del ejecutor, contadas por separado** | `CERO` **de clase**, `CERO` **de cifra publicada**, `CERO` **de reporte** | **20575** |
+| **las CUATRO averias propias del ejecutor** | **manejos propios cazados por instrumento o por lectura ANTES de una cifra publicada o un dato movido**; **NINGUNA cuenta como caida** | **20535** |
+| **los TRES errores propios del AUDITOR, con nombre** | la cuenta de enlaces con definicion propia distinta, las claves inventadas en su primer recomputo, y `run_phase1` corrido sin el ciclo de tres | **20547** |
+| **el acumulado, que sigue creciendo y no se reinicia** | relecturas, puestos y las caidas historicas de las dos partes, **cada especie con su columna** | **20580** |
+| **LA RACHA DE CLASE O CIFRA PUBLICADA** | **`CERO` tandas, TERCERA limpia seguida** | **20585** |
+| **LA RACHA DE REPORTE** | **`CERO` tandas, TERCERA limpia seguida** | **20586** |
+
+> **LAS DOS RACHAS SE REGISTRAN POR SEPARADO PORQUE LA REGLA DE LA PARADA LAS CUENTA POR SEPARADO:**
+> la de **clase o cifra publicada** para en **DOS** seguidas y la de **reporte** en **TRES**. **Que
+> las dos esten en cero a la vez por TERCERA tanda es lo que este registro deja escrito**, y **una
+> racha es una medida de las tandas que ya pasaron, no un permiso para la siguiente.**
+>
+> **LOS ERRORES DEL AUDITOR SE REGISTRAN CON LA MISMA LETRA QUE LOS DEL EJECUTOR** (linea
+> **20547**), **y el primero es el ejemplar util**: el auditor conto los enlaces con
+> **su** definicion (solo vivos) y le dio otra cifra que la del instrumento (todos los ficheros).
+> **No copio la cifra buena: declaro la discrepancia y fue a leer el instrumento**, que es exactamente
+> lo que la regla 2 manda hacer cuando dos mediciones no calzan.
+
+### d) **LA REGLA NUEVA DE REDACCION: TODA PROMESA DE MARCADO USA UNA DE LAS TRES FORMAS QUE EL INSTRUMENTO VE**
+
+**ESTE ES EL UNICO APARTADO DE TODO ESTE REGISTRO QUE RIGE HACIA ADELANTE**, y por eso va con su
+letra entera y no resumido. **Nace del `D13`, que es la averia que el ejecutor declaro CONTRA SI
+MISMO**, y el acta la adjudica como **pregunta 3 de la seccion 8 del reporte**.
+
+**LA ADJUDICACION VA VERBATIM Y NO PARAFRASEADA, PORQUE UNA REGLA QUE SE PARAFRASEA SE DEFORMA** (la
+cita arranca en la cabecera del `D13` y se copia tal cual):
+
+> D13 (las dos promesas de marcado invisibles para la guarda): A FAVOR
+> como declaracion, y es la averia mas util de la vuelta porque la
+> declaro el ejecutor contra si mismo. Adjudicacion de la pregunta 3 de
+> la seccion 8, por extension de la leccion del acta 64 pregunta 6 y de
+> la practica de frases selladas: NO se ensancha el instrumento; se
+> adopta la regla de redaccion de que toda promesa de marcado en un
+> motivo sellado use UNA de las tres formas que
+> comprobar_promesas_de_marcado.py imprime como agujas (VA MARCADO COMO
+> DISCUTIBLE, VAN MARCADAS COMO DISCUTIBLES, VA MARCADO DISCUTIBLE). Los
+> planes ejecutados no se re-sellan (acta 68, D15); la regla rige de la
+> vuelta 74 en adelante y queda encargada.
+
+**LO QUE LA REGLA MANDA, DICHO EN UNA SOLA FRASE:** de la **vuelta 74 en adelante**, **toda promesa de
+marcado escrita en un motivo sellado usa UNA de las tres formas que
+[`../../scripts/loop/comprobar_promesas_de_marcado.py`](../../scripts/loop/comprobar_promesas_de_marcado.py)
+define e imprime como agujas.** **Escribirla de otro modo no es un error de estilo: es una promesa que
+el instrumento NO VE, y una promesa invisible es peor que una incumplida porque no sale en `ROJO`**
+(esa es la leccion del acta 64, pregunta 6, que esta adjudicacion extiende).
+
+**LAS TRES FORMAS NO SE TECLEAN AQUI: SE CITAN POR AGUJA SOBRE EL FICHERO QUE LAS DEFINE**, que es la
+diferencia entre una regla que puede divergir del instrumento sin que nadie lo note y una que no.
+
+| la forma | donde el instrumento la define | linea |
+|---|---|---:|
+| **la singular**, la mas vieja | la constante que nacio con el instrumento | **63** |
+| **la plural** | **ANADIDA y no sustituida** en la vuelta 65, por el acta 64 pregunta 6 | **67** |
+| **la que no lleva la palabra intermedia** | **ANADIDA y no sustituida** en la vuelta 67, tras una promesa que el instrumento no vio | **89** |
+| **las tres juntas, que es lo que la vara mira** | la tupla que el instrumento recorre | **90** |
+| **y las tres IMPRESAS en cada corrida** | para que **la vara no dependa del docstring** sino de la salida | **113** |
+
+> **LO QUE ESTA REGLA NO HACE, Y SE DICE PARA QUE SE PUEDA MEDIR:**
+>
+> **NO ENSANCHA EL INSTRUMENTO** (linea **20525**). Ni una forma nueva, ni una
+> condicion nueva, ni una tabla nueva. **La tupla de formas se queda como esta.** Ensancharla seria
+> maquina nueva sobre nombre estable sin necesidad, que es lo que la adjudicacion 3 del acta 69
+> prohibe; **la regla resuelve el mismo problema por el lado de quien escribe, que no cuesta nada.**
+>
+> **NO RE-SELLA LOS PLANES YA EJECUTADOS** (acta 68, `D15`, citado por la propia adjudicacion en la
+> linea **20530**). **Las dos promesas invisibles que el auditor encontro se quedan donde
+> estan, declaradas**, y **el `D13` sigue siendo la declaracion que las cubre**. Corregir hacia atras
+> un plan ejecutado seria tapar lo que se corrige.
+>
+> **NO CONVIERTE LA FORMA EN LA COSA.** La promesa que vale es la que **se cumple en la seccion 6 del
+> reporte**; la forma solo garantiza que el instrumento pueda **verla para exigirla**. Las dos
+> promesas invisibles de la vuelta 73 **estaban cumplidas**: lo que fallo no fue el marcado, fue la
+> vara.
+
+### e) **LAS OTRAS DOS PREGUNTAS DE LA SECCION 8, ADJUDICADAS POR EXTENSION CITABLE Y SIN DOCTRINA NUEVA**
+
+**Van registradas aunque esta vuelta no las use, y ese es justamente el motivo**: el encargo pide
+recordarlas **por si vuelven a salir**, y una regla que solo vive en el acta que la escribio se pierde
+en la vuelta siguiente.
+
+| | lo que el acta 73 adjudica, y con que letra ya escrita | linea |
+|---:|---|---:|
+| **1** | **LA FORMA `UNA SOLA VARA` CON LAS RAZONES EN CONTRA ES UN `CHOCAN` QUE EL INSTRUMENTO NO SABE VER, Y MANDA LA PIEZA DECLARADA.** Por `P.8`, que define en su propia tabla que **una contencion declarada por el archivo es contenido CON EL MISMO PESO**, y por el acta 53, pregunta 3, que dice que **a `CHOCAN` decide la pieza declarada** | **20446** |
+| **2** | **LA FRASE SELLADA ESCRITA DENTRO DE UNA NEGACION ES REGLA DE REDACCION, NO MAQUINA NUEVA.** **BASTA con dejarla escrita**; el instrumento **NO se ensancha a distinguir negaciones** | **20489** |
+
+> **LA PRIMERA LLEVA SU EXTENSION EN SU PROPIA LINEA, Y POR ESO SE CITA APARTE DE SU ANUNCIO** (linea
+> **20448**): **cuando la unica vara que habla apunta al nodo que las razones escritas matan,
+> ES un `CHOCAN` que el instrumento no sabe ver, y manda la pieza declarada.** **El instrumento NO se
+> ensancha a leer razones**, y el motivo esta dicho: seria **maquina nueva sobre nombre estable sin
+> necesidad** (acta 69, adjudicacion 3), **y la marca `D1` hizo su papel sin ella**.
+>
+> **LAS TRES ADJUDICACIONES DE ESTA ACTA COMPARTEN LA MISMA FIGURA, Y REGISTRARLA JUNTA VALE MAS QUE
+> REGISTRARLAS SUELTAS: NINGUNA ENSANCHA UN INSTRUMENTO.** La primera manda leer la letra de `P.8` en
+> vez de ensenarle razones al medidor; la segunda deja una regla de redaccion en vez de ensenarle
+> negaciones; **la tercera deja otra regla de redaccion en vez de ensenarle formas nuevas.** **Tres
+> problemas distintos, la misma salida barata**, y **las tres con su letra ya escrita en vez de
+> doctrina nueva**, que es lo que la condicion de parada de doctrina exige comprobar.
+
+### f) **LOS PENDIENTES HEREDADOS Y LO QUE EL ACTA 73 DEJA MEDIDO PARA EL PESO DEL CIERRE**
+
+**El acta 73 recorre sus condiciones de parada y dice que NINGUNA se cumple hoy** (linea
+**20588**), **pero nombra el cierre de la fase 03 como LO UNICO QUE QUEDA DELANTE** (linea
+**20600**), **porque ya no hay ningun acto del tramo sin dueno y sin destino** (linea
+**20601**).
+
+| lo que falta PESAR, segun el acta | lo que el acta dice de ello, sin decidirlo |
+|---|---|
+| **el destino de cada una de las fichas de `03_FUSIONES`** | **se mide, no se recuerda** (linea **20603**) |
+| **los `DECLARADOS Y NO FUNDIDOS` con su subconjunto descrito** | **QUINCE**, **con el `acto 44` NOMBRADO APARTE** por la adjudicacion 3 del acta 72 (linea **20604**) |
+| **los DOS actos con dueno** | **el `31` y el `37`**, cuyos duenos **viven fuera de la fase 03** segun el acta, **y eso hay que decirlo CON LA FICHA DELANTE** (linea **20606**) |
+| **la mesa `OP-M-03`** | **su ficha es de otra fase**: si no es de la 03, **no la bloquea**, **y eso tambien se mide, no se supone** (linea **20608**) |
+| **quien decide** | **la vuelta 74 ARMA el peso; el auditor de la 74 DECIDE si el cierre esta cerrado y verificado** (linea **20609**) |
+
+> **EL REPARTO DE ESA PARADA ESTA ESCRITO Y ESTE REGISTRO LO DEJA CITABLE, QUE ES LO QUE HACE QUE NO
+> SE PUEDA CONFUNDIR MAS TARDE** (linea **20609**): **medir no es decidir.** La
+> vuelta que pesa **no cierra la fase**, **no abre la siguiente** y **no toca un nodo**; **escribe lo
+> que hay y lo deja al alcance de quien si decide.** **Y la decision final no es del bucle: el cierre
+> de la fase 03 es parada de fundador desde el 21 ago 2026.**
+
+### g) **LO QUE ESTE REGISTRO NO HACE**
+
+**NO toca ni una cifra publicada arriba**, **NO deshace ninguna fusion**, **NO re-lee ni un veredicto
+de las siete colisiones vigentes**, **NO toca la mesa `OP-M-03` ni sus colisiones**, **NO ejecuta
+ninguna ficha**, **NO funde ningun acto** (ni los que tienen dueno ni los declarados), **NO toca ni un
+nodo, ni un alias ni una puerta del `acto 44`**, **NO re-sella ningun plan ejecutado** (que es la parte
+negativa de la regla nueva cumplida a la letra), **NO ensancha
+[`../../scripts/loop/comprobar_promesas_de_marcado.py`](../../scripts/loop/comprobar_promesas_de_marcado.py)
+ni ningun otro instrumento**, **NO decide el cierre de la fase 03** (esa es parada de fundador y el
+peso lo pesa el auditor), **NO abre la fase 04**, **NO mueve la linea base del censo de colisiones**
+(la mueve el auditor) y **NO anade ni una fila ni una columna a ninguna tabla de registrador**, que es
+la adjudicacion 3 del acta 69 aplicada sobre el instrumento que la registra.
