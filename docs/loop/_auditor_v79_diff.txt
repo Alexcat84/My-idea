@@ -1,0 +1,25 @@
+APERTURA aea7cc81 -> CIERRE WORK
+nuevas en nodos_siguientes : 12
+nuevas en nodos_previos    : 12
+nuevas con RECIPROCA completa (en las dos vistas): 12 de 12
+borradas de nodos_siguientes: 1
+borradas de nodos_previos   : 1
+borradas con reciproca tambien borrada: 1 de 1
+auto-aristas al cierre: 0
+
+--- LAS NUEVAS (nodos_siguientes), orden alfabetico ---
+  1. certificacion_de_proveedores -> indice_cpk   [reciproca nueva en previos: SI]
+  2. establecimiento_capacidad_proceso -> control_estadistico_de_procesos   [reciproca nueva en previos: SI]
+  3. establecimiento_capacidad_proceso -> pruebas_destructivas   [reciproca nueva en previos: SI]
+  4. herramientas_analisis_causa_raiz -> estratificacion_datos   [reciproca nueva en previos: SI]
+  5. identificacion_evaluacion_peligros -> investigacion_incidentes   [reciproca nueva en previos: SI]
+  6. mapa_de_canal_de_ventas -> validar_canal_distribucion   [reciproca nueva en previos: SI]
+  7. mitigacion_efecto_latigo -> precios_todos_los_dias_bajos   [reciproca nueva en previos: SI]
+  8. planificacion_inicial_calidad -> identificar_caracteristicas_metas_proceso   [reciproca nueva en previos: SI]
+  9. producto_mercado_fit_motores -> afinar_motor_crecimiento   [reciproca nueva en previos: SI]
+ 10. terminologia_clave_breakthrough -> analisis_sintomas   [reciproca nueva en previos: SI]
+ 11. testear_circulo_cuadrado_rectangulo -> validar_modelo_negocio_hechos   [reciproca nueva en previos: SI]
+ 12. uso_inadecuado_computadoras -> causas_comunes_vs_especiales   [reciproca nueva en previos: SI]
+
+--- LAS BORRADAS (nodos_siguientes) ---
+  1. extraer_priorizar_hipotesis -> value_proposition_startup   [borrada tambien de previos: SI]

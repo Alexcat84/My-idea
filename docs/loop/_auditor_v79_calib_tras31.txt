@@ -1,0 +1,32 @@
+UMBRALES: titulo 72 | contencion 0.45 | min tokens 4  (LOS MISMOS del original)
+
+CANDIDATOS BRUTOS (antes de la senal del verbo): 590
+DESCARTADOS POR LA SENAL DEL VERBO:              122  (20.7%)
+BOLSA REDUCIDA:                                  468
+
+SIN ARISTA, brutos:  360
+SIN ARISTA, descartados por el verbo: 101
+SIN ARISTA, BOLSA REDUCIDA: 259
+
+REPARTO POR DOMINIO de la bolsa reducida sin arista
+| dominio | brutos | reducidos | descartados |
+|---|---:|---:|---:|
+| quality | 172 | 116 | 56 |
+| core | 131 | 107 | 24 |
+| environmental | 18 | 11 | 7 |
+| franquicias | 17 | 9 | 8 |
+| health_safety | 12 | 9 | 3 |
+| exportacion | 6 | 4 | 2 |
+| entrega | 2 | 2 | 0 |
+| risk_management | 1 | 1 | 0 |
+| seguridad_digital | 1 | 0 | 1 |
+
+LOS PARES DE FAMILIAS QUE MAS DESCARTAN
+   verbo: OBSERVAR contra GESTIONAR   16
+   verbo: OBSERVAR contra CONSTRUIR   14
+   verbo: DEFINIR contra GESTIONAR    11
+   verbo: CONSTRUIR contra OBSERVAR   8
+   verbo: EJECUTAR contra CONSTRUIR   6
+   verbo: DEFINIR contra DECIDIR      6
+   verbo: EJECUTAR contra GESTIONAR   6
+   verbo: CONSTRUIR contra GESTIONAR  6

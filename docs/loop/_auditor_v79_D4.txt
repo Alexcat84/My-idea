@@ -1,0 +1,48 @@
+==============================================================================
+### identificacion_evaluacion_peligros   [vivo]  dominio=health_safety
+TITULO   : Identificación y Evaluación de Peligros (Industria General)
+ETIQUETA : Identifica los Peligros del Trabajo
+FUENTE   : OSHA3885
+RESUMEN  : Es un proceso continuo para descubrir peligros presentes o previsibles en tu lugar de trabajo. Reúne la información que ya tienes: manuales, fichas de seguridad, registros de incidentes y lesiones (los que te pida tu mercado), análisis de riesgos por tarea y resultados de mediciones. Haz inspecciones periódicas, asumiendo tú mismo el papel de la persona que revisa el sitio con frecuencia. Investiga incidentes y casi-accidentes para encontrar la causa real, y agrupa los casos parecidos para detectar patrones. Prioriza los peligros según qué tan grave serían y qué tan probable es que ocurran; eso te da la base para poner controles o actuar antes de cambios importantes en procesos, equipos, personas o etapas del trabajo. No detectar peligros a tiempo es una causa frecuente de accidentes, por eso este proceso nunca se detiene.
+PASOS (6):
+   1. Reunir la información que ya existe sobre peligros: manuales, fichas de seguridad, registros de lesiones, análisis de riesgos por tarea y resultados de mediciones
+   2. Hacer inspecciones regulares del lugar de trabajo, involucrando a quienes trabajan contigo cuando sea posible
+   3. Documentar lo que encuentres con fotos o videos para poder darle seguimiento y corregirlo
+   4. Investigar incidentes y casi-accidentes para entender la causa de fondo
+   5. Agrupar incidentes parecidos para detectar patrones
+   6. Priorizar los peligros según qué tan graves serían y qué tan probable es que pasen
+ENTREGABLE: Un registro documentado de inspecciones con la lista de peligros priorizada por riesgo y un plan de acción correctivo.
+MADRES (9): ['participacion_trabajadores', 'condiciones_latentes_organizacionales', 'coordinacion_sitios_multiempleador', 'cultura_generativa_westrum', 'enfoque_find_and_fix', 'liderazgo_gerencial_seguridad', 'nueve_pasos_iniciar_programa', 'participacion_trabajadores_2', 'programa_seguridad_salud_ocupacional']
+HIJOS  (5): ['prevencion_control_peligros', 'prevencion_control_peligros_2', 'identificacion_recopilacion_informacion_peligros', 'recopilacion_informacion_peligros', 'investigacion_incidentes']
+==============================================================================
+### investigacion_incidentes   [vivo]  dominio=health_safety
+TITULO   : Investigación de Incidentes y Casi Accidentes
+ETIQUETA : Investiga cada Casi Accidente
+FUENTE   : OSHA3885
+RESUMEN  : Cada lesión, enfermedad, casi accidente o señal de alerta te dice que existe un peligro real en tu lugar de trabajo. Investigarlo a fondo te permite descubrir las causas de raíz, que casi siempre son varias, en lugar de quedarte con lo primero que salta a la vista. Una buena investigación pregunta reiteradamente por qué hasta llegar a las fallas de fondo en tu manera de gestionar la seguridad. Conviene que sumes tu propia mirada y la de quienes trabajan contigo, que te formes en técnicas objetivas de análisis y que no te limites a los casos con daño, porque los casi accidentes también cuentan. Además, infórmate sobre los plazos de reporte que exige la normativa de tu mercado ante accidentes graves o fatales, y cúmplelos.
+PASOS (6):
+   1. Define un plan y un procedimiento claro para investigar incidentes, con responsabilidades bien definidas
+   2. Fórmate en técnicas objetivas de análisis para no quedarte en la primera explicación
+   3. Suma en cada investigación tu propia visión y la de las personas que trabajan contigo
+   4. Investiga también los casi accidentes y las señales de alerta, no solo los casos con daño
+   5. Pregunta reiteradamente por qué hasta identificar las causas de raíz, sin detenerte en el primer factor evidente
+   6. Comparte los resultados con quienes trabajan contigo y verifica los plazos de reporte que exige la normativa de tu mercado para accidentes fatales o graves
+ENTREGABLE: Informe de investigación de incidente con causas de raíz identificadas y plan de acción correctiva.
+MADRES (8): ['identificacion_peligros_salud', 'inspeccion_sitio_peligros', 'evitar_cherry_picking', 'evitar_micro_matching', 'reconstruccion_contexto_situacional', 'five_whys_inversion_proporcional', 'capacitacion_roles_gerencia', 'identificacion_evaluacion_peligros']
+HIJOS  (7): ['jerarquia_controles', 'plan_control_peligros', 'caracterizacion_priorizacion_peligros', 'construccion_timeline_resolucion', 'peligros_emergencias_no_rutinarias', 'accident_proneness_fallacy', 'prevencion_control_peligros']
+==============================================================================
+### investigacion_incidentes_2   [DEPRECADO]  dominio=health_safety
+TITULO   : Investigación de Incidentes y Cuasi-Accidentes
+ETIQUETA : Investiga todo Cuasi-Accidente
+FUENTE   : OSHA3886
+RESUMEN  : Toda lesión, enfermedad, cuasi-accidente o reporte de preocupación debe investigarse para identificar las causas raíz -que suelen ser múltiples- y prevenir su repetición. Una investigación efectiva no se detiene en el primer factor identificado, sino que pregunta reiteradamente '¿por qué?' hasta llegar a fallas sistémicas del programa.
+PASOS (6):
+   1. Desarrollar un procedimiento claro de investigación con roles definidos
+   2. Capacitar equipos investigadores en técnicas objetivas de análisis
+   3. Incluir representantes de gerencia y trabajadores en cada investigación
+   4. Investigar también los cuasi-accidentes, no solo los incidentes con daño
+   5. Identificar causas raíz y comunicar resultados a toda la organización
+   6. Cumplir con los plazos de reporte a OSHA (8h fatalidad, 24h hospitalización/amputación)
+ENTREGABLE: Informe de investigación de incidente con causas raíz identificadas y plan de acción correctiva
+MADRES (6): ['inspeccion_sitio_peligros', 'evitar_cherry_picking', 'evitar_micro_matching', 'evitar_shopping_bag', 'five_whys_inversion_proporcional', 'inspeccion_lugar_trabajo_peligros']
+HIJOS  (1): ['caracterizacion_priorizacion_peligros']

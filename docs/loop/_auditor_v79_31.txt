@@ -1,0 +1,62 @@
+==============================================================================
+### extraer_priorizar_hipotesis   [vivo]  dominio=core
+TITULO   : Saca y Ordena tus Hipótesis por Prioridad
+ETIQUETA : Prioriza tus Hipótesis Clave
+FUENTE   : Value Proposition Design
+RESUMEN  : A partir de tu mapa de propuesta de valor y tu modelo de negocio, identifica todas las suposiciones que tienen que ser ciertas para que tu idea funcione. No todas pesan igual: primero busca las que pueden matar tu negocio si resultan falsas, y esas son las que testeas primero.
+PASOS (5):
+   1. Lista todo lo que tiene que ser cierto sobre tu modelo de negocio, tu propuesta de valor y tu cliente
+   2. Escribe cada hipótesis por separado, una por nota
+   3. Elimina las que estén repetidas
+   4. Identifica cuáles son capaces de acabar con tu proyecto si fallan
+   5. Ordena todas tus hipótesis según qué tan crítica es cada una para que tu proyecto funcione
+ENTREGABLE: Tu lista de hipótesis ordenada por prioridad, con las que pueden matar tu negocio arriba de todo
+MADRES (3): ['diez_principios_testing', 'testear_circulo_cuadrado_rectangulo', 'customer_development_process']
+HIJOS  (1): ['test_card']
+==============================================================================
+### etapa_build_business_case   [vivo]  dominio=core
+TITULO   : Etapa 2 - Build the Business Case
+ETIQUETA : Construye tu Caso de Negocio
+FUENTE   : Winning at New Products - Robert G. Cooper
+RESUMEN  : Es la etapa crítica de investigación detallada que define claramente el producto y verifica la atractividad del proyecto antes del gasto fuerte en desarrollo. Incluye definición del producto ganador, análisis de mercado detallado, investigación VoC profunda, análisis competitivo, prueba de concepto, evaluación técnica y operativa detallada, y análisis financiero mediante flujo de caja descontado (NPV, IRR).
+PASOS (7):
+   1. Definir el mercado objetivo, posicionamiento y propuesta de valor del producto
+   2. Realizar investigación de mercado detallada (tamaño, segmentos, factores de éxito)
+   3. Ejecutar investigación VoC profunda para especificar requerimientos del producto
+   4. Realizar prueba de concepto con clientes potenciales
+   5. Llevar a cabo evaluación técnica y operativa detallada de viabilidad
+   6. Elaborar análisis financiero con NPV, IRR y análisis de sensibilidad
+   7. Consolidar todo en un Business Case con definición de producto, justificación y plan de acción
+ENTREGABLE: Un Business Case completo con tres elementos: definición del producto, justificación financiera/de negocio, y plan de proyecto detallado (action plan)
+MADRES (3): ['gate2_second_screen', 'afinar_frente_difuso_innovacion', 'prototipado_modelos_negocio']
+HIJOS  (2): ['gate3_go_to_development', 'value_proposition_startup']
+==============================================================================
+### establecer_linea_base_mvp   [vivo]  dominio=core
+TITULO   : Mide tu punto de partida con tu producto mínimo viable (MVP)
+ETIQUETA : Mide tu Punto de Partida
+FUENTE   : The Lean Startup - Eric Ries
+RESUMEN  : Este es el primer paso para llevar la cuenta real de tu avance. Usa un producto mínimo viable (MVP) para conseguir datos reales sobre dónde estás hoy, sin importar qué tan lejos te encuentres de tu objetivo. Sin esta foto clara de tu punto de partida, no puedes medir si avanzas después. Prueba primero la suposición más riesgosa de tu plan de negocio.
+PASOS (4):
+   1. Construye un MVP completo o parcial que ponga a prueba las suposiciones clave de tu negocio
+   2. Considera hacer antes una prueba rápida de interés (smoke test) para validar si al cliente le importa, antes de invertir más recursos
+   3. Identifica cuál es la suposición más riesgosa de tu plan de negocio y pruébala primero
+   4. Recolecta tus métricas base: tasas de conversión, de registro, de prueba, valor de vida del cliente, etc.
+ENTREGABLE: Un conjunto de métricas base reales (no proyectadas) sobre cómo se comportan hoy los clientes con tu MVP
+MADRES (2): ['contabilidad_innovacion', 'pivotar_o_perseverar']
+HIJOS  (1): ['afinar_motor_crecimiento']
+==============================================================================
+### pivotar_o_perseverar   [vivo]  dominio=core
+TITULO   : Cambiar de rumbo o seguir igual (pivotar o perseverar)
+ETIQUETA : Sostener el Rumbo o Cambiarlo
+FUENTE   : The Lean Startup - Eric Ries
+RESUMEN  : Es el tercer paso para medir el avance real de tu negocio con números: el momento en que decides si el progreso hacia tu modelo ideal justifica seguir igual (perseverar) o si necesitas un cambio de rumbo serio (pivotar). Si los números clave de tu negocio no se mueven a pesar del esfuerzo, es una señal clara de que necesitas pivotar. Sabes que un pivote funciono porque, después de hacerlo, tus ajustes empiezan a dar mas resultado que antes.
+PASOS (6):
+   1. Compara el progreso de tus metricas actuales con el modelo ideal de tu plan de negocio y con las expectativas cuantitativas definidas al inicio
+   2. Si las metricas se acercan a ese ideal, sigue con tu estrategia actual (perseveras)
+   3. Si las metricas no mejoran después de varios intentos, reconoce que no esta funcionando y considera un cambio de rumbo (pivote), con datos concretos en la sala, no solo con intuición
+   4. Si pivotas, establece una nueva línea base y vuelve a empezar el ciclo de ajuste de tu negocio
+   5. Comprueba que, después del cambio, tus nuevas acciones den mejores resultados que las anteriores
+   6. Evaluar si el equipo puede racionalizar el fracaso en lugar de aceptarlo
+ENTREGABLE: Tu decisión escrita de pivotar (con la nueva estrategia y la hipótesis) o de perseverar (con el plan para seguir)
+MADRES (7): ['afinar_motor_crecimiento', 'ciclo_construir_medir_aprender', 'contabilidad_innovacion', 'metricas_accionables', 'quemar_las_naves_burning_the_boats', 'ciclo_crear_medir_aprender', 'contabilidad_innovacion_pivote']
+HIJOS  (4): ['establecer_linea_base_mvp', 'catalogo_pivotes', 'puntos_brillantes_antes_del_pivote', 'reunion_pivotar_o_perseverar']

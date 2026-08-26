@@ -1,0 +1,28 @@
+==============================================================================
+### terminologia_clave_breakthrough   [vivo]  dominio=quality
+TITULO   : Terminología Clave para Diagnóstico de Breakthrough
+ETIQUETA : Domina los Términos Clave
+FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+RESUMEN  : Para realizar un diagnóstico riguroso es esencial dominar conceptos clave: defecto (no conformidad), síntoma (evidencia externa del defecto), teoría/hipótesis (razón no probada), causa (razón probada, sigue el principio de Pareto), causa dominante (contribuyente mayor que debe remediarse), diagnóstico (proceso de estudiar síntomas y probar teorías) y remedio (cambio que elimina la causa).
+PASOS (4):
+   1. Definir claramente cada término con el equipo antes de iniciar el diagnóstico
+   2. Diferenciar síntomas de causas en cada problema detectado
+   3. Aplicar el principio de Pareto para identificar la causa dominante
+   4. Documentar teorías propuestas antes de validarlas con datos
+ENTREGABLE: Glosario de términos de diagnóstico aplicado al proyecto y lista de teorías a probar
+MADRES (1): ['diagnostico_antes_remedio']
+HIJOS  (2): ['diagnostico_antes_remedio', 'analisis_sintomas']
+==============================================================================
+### analisis_sintomas   [vivo]  dominio=quality
+TITULO   : Análisis de Síntomas del Problema
+ETIQUETA : Observa los Síntomas del Problema
+FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+RESUMEN  : Etapa que busca comprender la situación actual del problema respondiendo preguntas sobre frecuencia, severidad, tipos de fallas y ubicación en el proceso. Este análisis es fundamental para orientar la búsqueda de causas, de forma similar a conocer el punto de partida antes de trazar una ruta hacia un destino.
+PASOS (4):
+   1. Recolectar datos detallados sobre la ocurrencia del problema.
+   2. Usar diagramas de flujo de proceso para ubicar dónde ocurre la falla.
+   3. Aplicar análisis de Pareto y estratificación para identificar patrones.
+   4. Documentar la frecuencia, severidad y tipo de fallas observadas.
+ENTREGABLE: Un análisis documentado de síntomas que describe claramente la situación actual del problema (frecuencia, severidad, ubicación).
+MADRES (3): ['definicion_problema_moms_2', 'herramientas_analisis_causa_raiz', 'terminologia_clave_breakthrough']
+HIJOS  (1): ['formulacion_teorias_causa']

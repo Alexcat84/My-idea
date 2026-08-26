@@ -1,0 +1,19 @@
+huerfano de camino    | certificacion_de_proveedores -> indice_cpk   (no habia camino <=6 saltos)
+huerfano de camino    | establecimiento_capacidad_proceso -> control_estadistico_de_procesos   (no habia camino <=6 saltos)
+huerfano de camino    | establecimiento_capacidad_proceso -> pruebas_destructivas   (no habia camino <=6 saltos)
+huerfano de camino    | herramientas_analisis_causa_raiz -> estratificacion_datos   (no habia camino <=6 saltos)
+YA ALCANZABLE (salto 3) | identificacion_evaluacion_peligros -> investigacion_incidentes
+     camino previo: identificacion_evaluacion_peligros -> identificacion_recopilacion_informacion_peligros -> identificacion_peligros_salud -> investigacion_incidentes
+YA ALCANZABLE (salto 4) | mapa_de_canal_de_ventas -> validar_canal_distribucion
+     camino previo: mapa_de_canal_de_ventas -> hoja_de_ruta_de_ventas -> formalizar_junta_asesora -> get_out_building_test_sell -> validar_canal_distribucion
+huerfano de camino    | mitigacion_efecto_latigo -> precios_todos_los_dias_bajos   (no habia camino <=6 saltos)
+huerfano de camino    | planificacion_inicial_calidad -> identificar_caracteristicas_metas_proceso   (no habia camino <=6 saltos)
+YA ALCANZABLE (salto 3) | producto_mercado_fit_motores -> afinar_motor_crecimiento
+     camino previo: producto_mercado_fit_motores -> contabilidad_innovacion -> establecer_linea_base_mvp -> afinar_motor_crecimiento
+huerfano de camino    | terminologia_clave_breakthrough -> analisis_sintomas   (no habia camino <=6 saltos)
+YA ALCANZABLE (salto 5) | testear_circulo_cuadrado_rectangulo -> validar_modelo_negocio_hechos
+     camino previo: testear_circulo_cuadrado_rectangulo -> experiment_library -> producto_minimo_viable -> customer_validation -> decision_pivotar_o_proceder -> validar_modelo_negocio_hechos
+YA ALCANZABLE (salto 3) | uso_inadecuado_computadoras -> causas_comunes_vs_especiales
+     camino previo: uso_inadecuado_computadoras -> causas_especiales_y_comunes_variacion -> carta_de_control_shewhart -> causas_comunes_vs_especiales
+
+DE LAS 12 NUEVAS, EL HIJO YA ERA ALCANZABLE DESDE LA MADRE EN: 5

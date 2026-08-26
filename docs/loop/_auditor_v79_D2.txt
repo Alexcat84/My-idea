@@ -1,0 +1,46 @@
+==============================================================================
+### producto_mercado_fit_motores   [vivo]  dominio=core
+TITULO   : Encajar con tu mercado (product/market fit): mídelo con tu motor de crecimiento
+ETIQUETA : Mide tu Encaje con Motores
+FUENTE   : The Lean Startup - Eric Ries
+RESUMEN  : None
+PASOS (4):
+   1. Define la métrica concreta de tu motor de crecimiento elegido
+   2. Registra cómo cambia esa métrica con el tiempo, no solo su valor en un momento dado
+   3. Compara tu ritmo de progreso con otros negocios o referencias del mercado, no solo el número actual
+   4. Usa la contabilidad de la innovación (innovation accounting) para decidir si estás cerca de encajar con el mercado o necesitas pivotar
+ENTREGABLE: Un tablero de seguimiento (dashboard) que muestre la tendencia de tu métrica clave a lo largo de varios períodos
+MADRES (3): ['enfoque_motor_unico_crecimiento', 'motor_crecimiento_pago', 'motor_crecimiento_viral']
+HIJOS  (5): ['organizacion_adaptativa', 'test_sell_channel_partners', 'validar_canal_distribucion', 'contabilidad_innovacion', 'afinar_motor_crecimiento']
+==============================================================================
+### afinar_motor_crecimiento   [vivo]  dominio=core
+TITULO   : Afinar el motor de crecimiento
+ETIQUETA : Afina tu Motor de Crecimiento
+FUENTE   : The Lean Startup - Eric Ries
+RESUMEN  : None
+PASOS (5):
+   1. Elige un motor específico de tu crecimiento que quieras mejorar (por ejemplo, cuántos usuarios se activan)
+   2. Formula una hipótesis clara sobre qué cambio va a mejorar esa métrica
+   3. Diseña y corre experimentos enfocados solo en esa hipótesis
+   4. Mide si el cambio realmente mejoró la métrica que buscabas
+   5. Descarta los cambios que no den una mejora medible, aunque te parezcan bonitos o te haya costado hacerlos
+ENTREGABLE: Evidencia con números de que los cambios que hiciste mejoran o no los motores clave de tu crecimiento
+MADRES (3): ['establecer_linea_base_mvp', 'motor_crecimiento_pegajoso', 'producto_mercado_fit_motores']
+HIJOS  (4): ['pivotar_o_perseverar', 'adherence_loop_diseno_temporal', 'emprendedor_como_puesto_de_trabajo', 'motor_crecimiento_pago']
+==============================================================================
+### contabilidad_innovacion   [vivo]  dominio=core
+TITULO   : Contabilidad de la Innovación (Innovation Accounting)
+ETIQUETA : Mide tu Innovación con Método Propio
+FUENTE   : The Lean Startup - Eric Ries
+RESUMEN  : None
+PASOS (7):
+   1. Convertir las suposiciones no comprobadas del modelo de negocio en un modelo financiero cuantitativo (línea base), aunque al inicio sea intuitivo
+   2. Usar un producto mínimo viable para establecer datos reales de partida, no proyecciones
+   3. Identificar los impulsores de crecimiento específicos del modelo de negocio (por ejemplo: rentabilidad por cliente, costo de adquisición, tasa de recompra)
+   4. Diseñar y ejecutar experimentos que muevan esas métricas reales hacia el ideal del modelo de negocio
+   5. Evaluar si los cambios generan una mejora real y medible, y no solo una coincidencia
+   6. Definir métricas que reflejen aprendizaje validado y no solo vanidad (por ejemplo, usuarios registrados sin uso real)
+   7. Con base en los datos obtenidos, decidir si perseverar, pivotar o abandonar la estrategia actual
+ENTREGABLE: Modelo financiero cuantitativo con métricas base (línea base) y un sistema de experimentos con métricas de aprendizaje, que permita justificar ante el equipo e inversionistas decisiones de perseverar o pivotar
+MADRES (14): ['producto_minimo_viable', 'concierge_mvp', 'wizard_of_oz_testing', 'riesgos_lanzamiento_mvp', 'leap_of_faith_assumptions', 'ciclo_crear_medir_aprender', 'hipotesis_valor_crecimiento', 'internal_idea_capture', 'mvp_tipo_concierge', 'mvp_tipo_video', 'principio_calidad_mvp', 'principios_lean_startup', 'teatro_del_exito', 'producto_mercado_fit_motores']
+HIJOS  (7): ['pivote_startup', 'motor_de_crecimiento', 'pivotar_o_perseverar', 'metricas_accionables', 'establecer_linea_base_mvp', 'reunion_pivotar_o_perseverar', 'sandbox_de_innovacion']
