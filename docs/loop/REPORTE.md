@@ -442,8 +442,7 @@ saltan por conveniencia).
 
 ## 3. EL CIERRE, medido AL CIERRE
 
-Commit final de esta vuelta: **[se completa tras el commit]**, push a
-`origin/pasada-unica`.
+Commit final de esta vuelta: `7fa9f979`, push a `origin/pasada-unica`.
 
 | | medido con |
 |---|---|
