@@ -6549,7 +6549,7 @@
       ],
       "nodos_siguientes": [
         "new_view_vs_old_view_de_error_humano",
-        "evitar_sesgo_retrospectivo_hindsight",
+        "reconstruccion_contexto_situacional",
         "riesgo_actividades_mantenimiento"
       ],
       "condiciones_activacion": [
@@ -13101,7 +13101,7 @@
       ],
       "entregable_esperado": "Solicitud de certificación Cradle to Cradle completada con documentación de materiales, energía, agua y responsabilidad social",
       "nodos_previos": [
-        "responsabilidad_extendida_productor",
+        "mitigacion_riesgos_ambientales",
         "responsabilidad_extendida_productor_2"
       ],
       "nodos_siguientes": [],
@@ -20144,7 +20144,7 @@
       "nodos_previos": [
         "error_humano_vs_falla_mecanica",
         "construccion_linea_tiempo",
-        "evitar_sesgo_retrospectivo_hindsight",
+        "reconstruccion_contexto_situacional",
         "operacionalizacion_de_etiquetas_psicologicas"
       ],
       "nodos_siguientes": [
@@ -27898,7 +27898,7 @@
         "pivot_o_proceder_revalidar_modelo_negocio",
         "plan_de_activacion",
         "refinar_sales_roadmap",
-        "restriccion_gasto_validacion",
+        "preservar_efectivo_buscar_modelo",
         "sales_roadmap_vs_sales_force",
         "validar_canal_distribucion",
         "metrics_that_matter_framework"
@@ -28134,7 +28134,7 @@
         "pensamiento_de_conexiones_ripple_effect",
         "plan_de_adquisicion_acquire",
         "plan_de_materiales_colaterales",
-        "restriccion_gasto_validacion",
+        "preservar_efectivo_buscar_modelo",
         "sales_funnel_get_keep_grow",
         "sales_roadmap_vs_sales_force"
       ],
@@ -30044,7 +30044,7 @@
         "war_room_datos",
         "customer_development_modelo",
         "fundadores_lideran_validacion",
-        "restriccion_gasto_validacion",
+        "preservar_efectivo_buscar_modelo",
         "sales_roadmap_vs_sales_force",
         "war_room_pivot_proceed",
         "metricas_que_importan",
@@ -40203,11 +40203,9 @@
       ],
       "entregable_esperado": "Plan de eco-eficiencia con auditoría energética completada, iniciativas priorizadas por ROI, y métricas de ahorro proyectado (energía, agua, desperdicio)",
       "nodos_previos": [
-        "gestion_eco_riesgos",
+        "mitigacion_riesgos_ambientales",
         "modelo_green_wave",
-        "responsabilidad_extendida_productor",
-        "eco_advantage",
-        "mitigacion_riesgos_ambientales"
+        "eco_advantage"
       ],
       "nodos_siguientes": [
         "crecimiento_ingresos_verdes",
@@ -40308,7 +40306,7 @@
         "business_model_environment_mapping"
       ],
       "nodos_siguientes": [
-        "escalamiento_prematuro",
+        "preservar_efectivo_buscar_modelo",
         "estrategia_circular_y_mecanismo_de_retorno"
       ],
       "condiciones_activacion": [
@@ -41443,7 +41441,7 @@
       "nodos_previos": [
         "dilema_riqueza_vs_control",
         "priorizacion_hipercrecimiento",
-        "escalamiento_prematuro"
+        "preservar_efectivo_buscar_modelo"
       ],
       "nodos_siguientes": [
         "decision_intensidad_capital",
@@ -46040,7 +46038,8 @@
         "Si estás por contratar un equipo grande de ventas justo después de lanzar tu producto.",
         "Si tus inversionistas te presionan para crecer rápido sin que tengas datos de que tus clientes se quedan (retención)."
       ],
-      "etiqueta_arbol": "No Escales Antes de Tiempo"
+      "etiqueta_arbol": "No Escales Antes de Tiempo",
+      "deprecado": true
     },
     "escaleras_fijas_seguridad": {
       "node_id": "escaleras_fijas_seguridad",
@@ -48840,7 +48839,7 @@
         "modelo_green_wave"
       ],
       "nodos_siguientes": [
-        "gestion_eco_riesgos"
+        "mitigacion_riesgos_ambientales"
       ],
       "condiciones_activacion": [
         "Si tu negocio actualmente solo cumple con regulaciones mínimas",
@@ -52613,7 +52612,7 @@
       "nodos_previos": [
         "definicion_startup_busqueda_modelo_negocio",
         "producto_minimo_viable",
-        "restriccion_gasto_validacion",
+        "preservar_efectivo_buscar_modelo",
         "tres_as_de_metricas",
         "search_for_business_model"
       ],
@@ -52652,7 +52651,8 @@
         "Cuando se investiga un accidente o incidente y existe la tentación de juzgar decisiones pasadas con la información actual",
         "Cuando se pregunta '¿cómo no vieron la evidencia?' sobre un evento pasado"
       ],
-      "etiqueta_arbol": "Evita el Sesgo Retrospectivo"
+      "etiqueta_arbol": "Evita el Sesgo Retrospectivo",
+      "deprecado": true
     },
     "evitar_shopping_bag": {
       "node_id": "evitar_shopping_bag",
@@ -52679,7 +52679,8 @@
       "condiciones_activacion": [
         "Cuando se cuestiona por qué un equipo no reconoció una situación de peligro que en retrospectiva parece obvia (ej. clima adverso)"
       ],
-      "etiqueta_arbol": "No Agrupes Señales Retrospectivas"
+      "etiqueta_arbol": "No Agrupes Señales Retrospectivas",
+      "deprecado": true
     },
     "evitar_terminos_enganosos_garantia": {
       "node_id": "evitar_terminos_enganosos_garantia",
@@ -53096,7 +53097,7 @@
         "multi_sided_market_channel"
       ],
       "nodos_siguientes": [
-        "escalamiento_prematuro"
+        "preservar_efectivo_buscar_modelo"
       ],
       "condiciones_activacion": [
         "Cuando el negocio opera en mercados informales o físicos donde no aplican metodologías digitales estándar",
@@ -57850,7 +57851,7 @@
       "entregable_esperado": "Plan de estructura de capital definiendo mezcla de fuentes de financiamiento",
       "nodos_previos": [
         "decision_pivotar_o_proceder",
-        "restriccion_gasto_validacion"
+        "preservar_efectivo_buscar_modelo"
       ],
       "nodos_siguientes": [
         "term_sheet_negociacion",
@@ -58224,7 +58225,7 @@
         "priorizar_elementos_a_validar"
       ],
       "nodos_siguientes": [
-        "restriccion_gasto_validacion",
+        "preservar_efectivo_buscar_modelo",
         "checkpoints_validacion",
         "pivot_o_proceder",
         "decision_pivotar_o_proceder"
@@ -59964,7 +59965,8 @@
         "Si la empresa depende de proveedores externos o cadenas de suministro extendidas",
         "Si el usuario no ha evaluado formalmente su exposición a riesgos ambientales"
       ],
-      "etiqueta_arbol": "Anticipa tus Riesgos Ambientales"
+      "etiqueta_arbol": "Anticipa tus Riesgos Ambientales",
+      "deprecado": true
     },
     "gestion_efectiva_benchmarking": {
       "node_id": "gestion_efectiva_benchmarking",
@@ -61123,22 +61125,39 @@
       "fuente": "Franchise Your Business - Mark Siebert",
       "resumen_teorico": "A diferencia de un empleado, un franquiciador no puede terminar a un franquiciado a voluntad; debe demostrar causa (violación del contrato) y, en la mayoría de los casos, dar oportunidad de 'cura' del incumplimiento mediante una carta de default. Existen incumplimientos no subsanables (falsificación de datos, uso indebido de marca, insolvencia, delitos graves) que permiten terminación inmediata, y subsanables (ej. tienda sucia, licencia faltante) que requieren un plazo de corrección.",
       "pasos_accionables": [
-        "Definir en el contrato de franquicia qué violaciones son curables y cuáles no",
-        "Establecer plazos estándar de cura para cada tipo de incumplimiento",
+        "Definir en el contrato de franquicia qué violaciones son curables y cuáles no, tras aceptar y documentar qué decisiones operativas quedarán bajo control del franquiciado",
+        "Establecer plazos estándar de cura para cada tipo de incumplimiento, graduados según su gravedad",
         "Crear plantilla de carta de default con descripción del problema y plazo de corrección",
         "Documentar el proceso de escalamiento para incumplimientos repetidos (ej. checklist de cumplimiento fallido 3 veces)",
         "Consultar con abogado de franquicias para validar la exigibilidad de las cláusulas de terminación"
       ],
       "entregable_esperado": "Cláusulas de default/terminación en el contrato de franquicia y plantillas de cartas de incumplimiento",
       "nodos_previos": [
-        "exito_franquiciado_determina_exito_franquiciador"
+        "exito_franquiciado_determina_exito_franquiciador",
+        "riesgo_litigios_franquicia"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
         "Cuando un franquiciado incumple estándares de calidad o contrato",
         "Al redactar el acuerdo de franquicia"
       ],
-      "etiqueta_arbol": "Termina Contratos con Causa"
+      "etiqueta_arbol": "Termina Contratos con Causa",
+      "ids_alias": [
+        "perdida_control_operativo",
+        "terminacion_franquiciado_causas"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "perdida_control_operativo",
+          "titulo": "Pérdida de Control Operativo del Franquiciante",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        },
+        {
+          "node_id": "terminacion_franquiciado_causas",
+          "titulo": "Causales de Terminación de Contrato de Franquicia",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ]
     },
     "gestion_testimonios": {
       "node_id": "gestion_testimonios",
@@ -68159,7 +68178,7 @@
       "entregable_esperado": "Plan de pruebas de venta con métricas de validación claras para escalar el modelo de negocio",
       "nodos_previos": [
         "decision_pivotar_o_proceder",
-        "restriccion_gasto_validacion",
+        "preservar_efectivo_buscar_modelo",
         "gestion_alucinaciones_ia"
       ],
       "nodos_siguientes": [
@@ -68601,7 +68620,7 @@
         "inspeccion_sitio_peligros",
         "evitar_cherry_picking",
         "evitar_micro_matching",
-        "evitar_shopping_bag",
+        "reconstruccion_contexto_situacional",
         "five_whys_inversion_proporcional"
       ],
       "nodos_siguientes": [
@@ -74203,7 +74222,7 @@
         "estrategia_captura_mercado_crecimiento",
         "determinar_tipo_de_mercado",
         "metricas_que_importan",
-        "restriccion_gasto_validacion"
+        "preservar_efectivo_buscar_modelo"
       ],
       "nodos_siguientes": [
         "metrics_that_matter_framework",
@@ -77752,22 +77771,44 @@
       "pasos_accionables": [
         "Realizar una auditoría de riesgos ambientales en operaciones propias y de proveedores",
         "Establecer protocolos de cumplimiento y verificación en la cadena de suministro extendida",
-        "Diseñar planes de contingencia y comunicación de crisis para incidentes ambientales",
-        "Monitorear cambios regulatorios que puedan generar nuevas exposiciones legales"
+        "Diseñar planes de contingencia y comunicación de crisis para incidentes ambientales, a partir de escenarios y probabilidades de riesgo",
+        "Monitorear cambios regulatorios que puedan generar nuevas exposiciones legales",
+        "Mapear todos los puntos de la cadena de valor donde pueden surgir riesgos ambientales (materias primas, producción, distribución, uso, disposición final)"
       ],
       "entregable_esperado": "Mapa de riesgos ambientales de la cadena de valor con plan de mitigación y protocolos de cumplimiento para proveedores",
       "nodos_previos": [
         "eco_advantage",
-        "proteccion_organizacion_matriz_experimentos"
+        "proteccion_organizacion_matriz_experimentos",
+        "estrategia_proactiva_ambiental",
+        "modelo_green_wave",
+        "separar_opciones_dfe"
       ],
       "nodos_siguientes": [
-        "eco_eficiencia"
+        "eco_eficiencia",
+        "certificacion_cradle_to_cradle"
       ],
       "condiciones_activacion": [
         "Si la empresa maneja materiales peligrosos, tóxicos o cadenas de suministro complejas",
-        "Cuando existan antecedentes de incidentes regulatorios o de reputación relacionados al ambiente"
+        "Cuando existan antecedentes de incidentes regulatorios o de reputación relacionados al ambiente",
+        "Si el usuario no ha evaluado formalmente su exposición a riesgos ambientales"
       ],
-      "etiqueta_arbol": "Reduce tu Responsabilidad Extendida"
+      "etiqueta_arbol": "Reduce tu Responsabilidad Extendida",
+      "ids_alias": [
+        "gestion_eco_riesgos",
+        "responsabilidad_extendida_productor"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "gestion_eco_riesgos",
+          "titulo": "Gestión de Eco-Riesgos Empresariales",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        },
+        {
+          "node_id": "responsabilidad_extendida_productor",
+          "titulo": "Responsabilidad Extendida del Productor",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        }
+      ]
     },
     "mitigar_falling_asleep_wheel": {
       "node_id": "mitigar_falling_asleep_wheel",
@@ -78522,7 +78563,7 @@
         "innovar_transformar_mercados"
       ],
       "nodos_siguientes": [
-        "gestion_eco_riesgos",
+        "mitigacion_riesgos_ambientales",
         "eco_eficiencia",
         "estrategia_proactiva_ambiental"
       ],
@@ -81399,7 +81440,7 @@
         "audacia_del_cero"
       ],
       "nodos_siguientes": [
-        "escalamiento_prematuro",
+        "preservar_efectivo_buscar_modelo",
         "desarrollo_de_clientes_customer_development"
       ],
       "condiciones_activacion": [
@@ -81622,7 +81663,7 @@
         "modelo_spin_preguntas"
       ],
       "nodos_siguientes": [
-        "restriccion_gasto_validacion"
+        "preservar_efectivo_buscar_modelo"
       ],
       "condiciones_activacion": [
         "Cuando el vendedor necesita avanzar la relación comercial sin recurrir a técnicas de presión tradicionales.",
@@ -82276,7 +82317,7 @@
       ],
       "entregable_esperado": "Análisis documentado que conecta hechos específicos con una definición operacional del fenómeno psicológico, dejando un rastro analítico",
       "nodos_previos": [
-        "evitar_sesgo_retrospectivo_hindsight"
+        "reconstruccion_contexto_situacional"
       ],
       "nodos_siguientes": [
         "construccion_de_causas",
@@ -84645,7 +84686,8 @@
       "condiciones_activacion": [
         "Si el emprendedor tiene fuerte necesidad de control operativo y esto genera dudas sobre franquiciar"
       ],
-      "etiqueta_arbol": "Acepta Perder Control Operativo"
+      "etiqueta_arbol": "Acepta Perder Control Operativo",
+      "deprecado": true
     },
     "perfeccionismo_vs_valor": {
       "node_id": "perfeccionismo_vs_valor",
@@ -89694,9 +89736,12 @@
       "pasos_accionables": [
         "No contrates equipo de ventas ni marketing hasta validar el modelo con hechos, no hipótesis",
         "Busca patrones de venta repetibles, evitando ventas puntuales por relaciones personales o esfuerzos heroicos",
-        "Aplica el test de escalabilidad: verifica si cada vendedor o dólar adicional genera más ganancia bruta que lo invertido",
+        "Aplica el test de escalabilidad: verifica si cada vendedor o dólar adicional genera más ganancia bruta que lo invertido, usando tu ritmo de consumo de caja (burn rate) como tu métrica principal",
         "Documenta tu propio criterio explícito de qué constituye un modelo validado antes de escalar gasto",
-        "Una vez confirmado el product/market fit, invierte agresivamente en generar demanda y llenar el canal de ventas"
+        "Una vez confirmado el product/market fit, invierte agresivamente en generar demanda y llenar el canal de ventas",
+        "Retrasa las inversiones grandes en infraestructura hasta tener tracción real con clientes.",
+        "Definir un presupuesto máximo por prueba o experimento (por ejemplo, no más de 2,000 a 10,000 dólares por test)",
+        "Reservar caja suficiente para financiar múltiples pivotes"
       ],
       "entregable_esperado": "Plan de gasto condicionado a hitos de validación del modelo de negocio, con un criterio explícito y documentado de qué constituye un modelo repetible y escalable antes de escalar la inversión.",
       "nodos_previos": [
@@ -89704,12 +89749,30 @@
         "lienzo_modelo_negocio",
         "verificar_modelo_ingresos",
         "alineacion_ti_negocio",
-        "company_building"
+        "company_building",
+        "customer_discovery",
+        "economia_circular_como_modelo_de_negocio",
+        "experimentacion_iterativa_mercado_fisico",
+        "fundadores_lideran_validacion",
+        "nueve_pecados_capitales_lanzamiento",
+        "obtencion_compromiso_venta",
+        "recursos_de_segundo_nivel"
       ],
       "nodos_siguientes": [
         "customer_validation",
         "comunicacion_aprendizaje_startup",
-        "comunicacion_aprendizaje_continuo"
+        "comunicacion_aprendizaje_continuo",
+        "customer_creation",
+        "decision_pivotar_o_proceder",
+        "eleccion_ritmo_crecimiento",
+        "evitar_pseudociencia_producto",
+        "fuentes_financiamiento_startup",
+        "introduccion_validacion_clientes",
+        "market_type_revenue_growth",
+        "priorizar_elementos_a_validar",
+        "red_flags_proyectos_en_problemas",
+        "riesgo_no_pivotar_a_tiempo",
+        "war_room_pivot_proceed"
       ],
       "condiciones_activacion": [
         "Si estás gastando en marketing o ventas antes de validar tu modelo de negocio",
@@ -89720,7 +89783,9 @@
       "etiqueta_arbol": "Cuida tu Efectivo al Buscar",
       "ids_alias": [
         "preservar_caja_buscar_gastar",
-        "preservar_caja_hasta_validar"
+        "preservar_caja_hasta_validar",
+        "escalamiento_prematuro",
+        "restriccion_gasto_validacion"
       ],
       "merged_originals": [
         {
@@ -89731,6 +89796,16 @@
         {
           "node_id": "preservar_caja_hasta_validar",
           "titulo": "Preservar la Caja Hasta Encontrar el Modelo Escalable",
+          "fuente": "The Startup Owner's Manual - Steve Blank"
+        },
+        {
+          "node_id": "escalamiento_prematuro",
+          "titulo": "Escalamiento Prematuro (Premature Scaling)",
+          "fuente": "The Startup Owner's Manual - Steve Blank"
+        },
+        {
+          "node_id": "restriccion_gasto_validacion",
+          "titulo": "Restringir el Gasto Durante la Validación de Clientes",
           "fuente": "The Startup Owner's Manual - Steve Blank"
         }
       ]
@@ -90982,7 +91057,7 @@
       ],
       "node_id": "priorizar_elementos_a_validar",
       "nodos_previos": [
-        "restriccion_gasto_validacion",
+        "preservar_efectivo_buscar_modelo",
         "lienzo_modelo_negocio",
         "filosofia_customer_validation",
         "multi_sided_platforms"
@@ -96971,27 +97046,47 @@
         "Reconstruir qué señales/cues recibieron y en qué orden temporal",
         "Identificar las metas que perseguían sin saber el resultado final",
         "Usar el timeline construido para modelar la evolución incompleta e incierta de su comprensión situacional",
-        "Evitar imponer marcos de referencia posteriores (procedimientos, datos críticos conocidos después) sin verificar su relevancia contextual real"
+        "Evitar imponer marcos de referencia posteriores (procedimientos, datos críticos conocidos después) sin verificar su relevancia contextual real, y sin presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio",
+        "Identificar qué señales se contradecían entre sí en el momento"
       ],
       "entregable_esperado": "Narrativa reconstruida desde la perspectiva de los actores en el momento, sin conocimiento del resultado final",
       "nodos_previos": [
         "identificacion_eventos_datos",
-        "conexion_comportamiento_proceso"
+        "conexion_comportamiento_proceso",
+        "atribucion_retrospectiva_del_error"
       ],
       "nodos_siguientes": [
         "evitar_micro_matching",
         "evitar_cherry_picking",
-        "evitar_shopping_bag",
         "evitar_lenguaje_juzgador",
         "ciclo_de_culpa_blame_cycle",
         "old_view_vs_new_view_human_error",
-        "ciclo_de_culpa_2"
+        "ciclo_de_culpa_2",
+        "construccion_de_causas",
+        "investigacion_incidentes",
+        "operacionalizacion_de_etiquetas_psicologicas"
       ],
       "condiciones_activacion": [
         "Cuando se redacta el informe final de investigación de 'error humano'",
         "Cuando se debe explicar por qué las acciones tuvieron sentido para los involucrados"
       ],
-      "etiqueta_arbol": "Ponte en el Lugar del Otro"
+      "etiqueta_arbol": "Ponte en el Lugar del Otro",
+      "ids_alias": [
+        "evitar_sesgo_retrospectivo_hindsight",
+        "evitar_shopping_bag"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "evitar_sesgo_retrospectivo_hindsight",
+          "titulo": "Evitar el Sesgo Retrospectivo (Hindsight) en el Análisis de Errores",
+          "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+        },
+        {
+          "node_id": "evitar_shopping_bag",
+          "titulo": "Evitar el Efecto 'Shopping Bag' de Evidencia",
+          "fuente": "The Field Guide to Understandin - Dekker, Sidney"
+        }
+      ]
     },
     "reconstruccion_de_equipo_ejecutivo": {
       "node_id": "reconstruccion_de_equipo_ejecutivo",
@@ -97245,7 +97340,7 @@
         "dilema_riqueza_vs_control"
       ],
       "nodos_siguientes": [
-        "escalamiento_prematuro"
+        "preservar_efectivo_buscar_modelo"
       ],
       "condiciones_activacion": [
         "Cuando quieres conservar control o participación pero necesitas avanzar tu producto con recursos limitados.",
@@ -97432,7 +97527,7 @@
       "nodos_previos": [
         "protocolo_reuniones_gate",
         "revision_portafolio_periodica",
-        "escalamiento_prematuro"
+        "preservar_efectivo_buscar_modelo"
       ],
       "nodos_siguientes": [
         "aceleracion_de_gates"
@@ -100706,7 +100801,8 @@
         "Si la empresa tiene una marca de cara al consumidor",
         "Si la empresa terceriza producción o depende de proveedores externos"
       ],
-      "etiqueta_arbol": "Asume tu Ciclo de Vida"
+      "etiqueta_arbol": "Asume tu Ciclo de Vida",
+      "deprecado": true
     },
     "responsabilidad_extendida_productor_2": {
       "node_id": "responsabilidad_extendida_productor_2",
@@ -101104,7 +101200,8 @@
         "decision_pivotar_o_proceder",
         "market_type_revenue_growth"
       ],
-      "etiqueta_arbol": "Cuida tu Gasto al Validar"
+      "etiqueta_arbol": "Cuida tu Gasto al Validar",
+      "deprecado": true
     },
     "restricciones_extremas_como_innovacion": {
       "node_id": "restricciones_extremas_como_innovacion",
@@ -102396,7 +102493,7 @@
         "reduccion_riesgo_franquiciante"
       ],
       "nodos_siguientes": [
-        "perdida_control_operativo"
+        "gestion_terminacion_franquiciado"
       ],
       "condiciones_activacion": [
         "Si el emprendedor tiene temor específico a litigios como barrera para franquiciar"
@@ -102452,7 +102549,7 @@
         "metricas_accionables",
         "reunion_pivotar_o_perseverar",
         "comunicacion_aprendizaje_startup",
-        "escalamiento_prematuro",
+        "preservar_efectivo_buscar_modelo",
         "comunicacion_aprendizaje_continuo"
       ],
       "nodos_siguientes": [
@@ -107474,7 +107571,7 @@
         "marcos_pensamiento_dfe"
       ],
       "nodos_siguientes": [
-        "responsabilidad_extendida_productor",
+        "mitigacion_riesgos_ambientales",
         "responsabilidad_extendida_productor_2"
       ],
       "condiciones_activacion": [
@@ -112790,7 +112887,8 @@
         "Si se está redactando el contrato legal de franquicia",
         "Si un franquiciado existente incumple términos del acuerdo"
       ],
-      "etiqueta_arbol": "Define Cuándo Terminar Contratos"
+      "etiqueta_arbol": "Define Cuándo Terminar Contratos",
+      "deprecado": true
     },
     "terminologia_clave_breakthrough": {
       "node_id": "terminologia_clave_breakthrough",
@@ -119285,7 +119383,7 @@
       "entregable_esperado": "Un espacio físico o virtual con toda la evidencia visual organizada para tomar la decisión de pivotar o proceder",
       "nodos_previos": [
         "lienzo_modelo_negocio",
-        "restriccion_gasto_validacion",
+        "preservar_efectivo_buscar_modelo",
         "cohort_analysis_retencion",
         "validar_posicionamiento_con_analistas",
         "hire_data_analytics_chief",
@@ -127514,7 +127612,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 257,
+    "nodos_sin_enlaces_entrantes": 263,
     "enlaces_rotos_en_grafo": 0
   }
 }

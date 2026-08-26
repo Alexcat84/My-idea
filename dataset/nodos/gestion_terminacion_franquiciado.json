@@ -6,20 +6,37 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "A diferencia de un empleado, un franquiciador no puede terminar a un franquiciado a voluntad; debe demostrar causa (violación del contrato) y, en la mayoría de los casos, dar oportunidad de 'cura' del incumplimiento mediante una carta de default. Existen incumplimientos no subsanables (falsificación de datos, uso indebido de marca, insolvencia, delitos graves) que permiten terminación inmediata, y subsanables (ej. tienda sucia, licencia faltante) que requieren un plazo de corrección.",
   "pasos_accionables": [
-    "Definir en el contrato de franquicia qué violaciones son curables y cuáles no",
-    "Establecer plazos estándar de cura para cada tipo de incumplimiento",
+    "Definir en el contrato de franquicia qué violaciones son curables y cuáles no, tras aceptar y documentar qué decisiones operativas quedarán bajo control del franquiciado",
+    "Establecer plazos estándar de cura para cada tipo de incumplimiento, graduados según su gravedad",
     "Crear plantilla de carta de default con descripción del problema y plazo de corrección",
     "Documentar el proceso de escalamiento para incumplimientos repetidos (ej. checklist de cumplimiento fallido 3 veces)",
     "Consultar con abogado de franquicias para validar la exigibilidad de las cláusulas de terminación"
   ],
   "entregable_esperado": "Cláusulas de default/terminación en el contrato de franquicia y plantillas de cartas de incumplimiento",
   "nodos_previos": [
-    "exito_franquiciado_determina_exito_franquiciador"
+    "exito_franquiciado_determina_exito_franquiciador",
+    "riesgo_litigios_franquicia"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando un franquiciado incumple estándares de calidad o contrato",
     "Al redactar el acuerdo de franquicia"
   ],
-  "etiqueta_arbol": "Termina Contratos con Causa"
+  "etiqueta_arbol": "Termina Contratos con Causa",
+  "ids_alias": [
+    "perdida_control_operativo",
+    "terminacion_franquiciado_causas"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "perdida_control_operativo",
+      "titulo": "Pérdida de Control Operativo del Franquiciante",
+      "fuente": "Franchise Your Business - Mark Siebert"
+    },
+    {
+      "node_id": "terminacion_franquiciado_causas",
+      "titulo": "Causales de Terminación de Contrato de Franquicia",
+      "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ]
 }

@@ -8,9 +8,12 @@
   "pasos_accionables": [
     "No contrates equipo de ventas ni marketing hasta validar el modelo con hechos, no hipótesis",
     "Busca patrones de venta repetibles, evitando ventas puntuales por relaciones personales o esfuerzos heroicos",
-    "Aplica el test de escalabilidad: verifica si cada vendedor o dólar adicional genera más ganancia bruta que lo invertido",
+    "Aplica el test de escalabilidad: verifica si cada vendedor o dólar adicional genera más ganancia bruta que lo invertido, usando tu ritmo de consumo de caja (burn rate) como tu métrica principal",
     "Documenta tu propio criterio explícito de qué constituye un modelo validado antes de escalar gasto",
-    "Una vez confirmado el product/market fit, invierte agresivamente en generar demanda y llenar el canal de ventas"
+    "Una vez confirmado el product/market fit, invierte agresivamente en generar demanda y llenar el canal de ventas",
+    "Retrasa las inversiones grandes en infraestructura hasta tener tracción real con clientes.",
+    "Definir un presupuesto máximo por prueba o experimento (por ejemplo, no más de 2,000 a 10,000 dólares por test)",
+    "Reservar caja suficiente para financiar múltiples pivotes"
   ],
   "entregable_esperado": "Plan de gasto condicionado a hitos de validación del modelo de negocio, con un criterio explícito y documentado de qué constituye un modelo repetible y escalable antes de escalar la inversión.",
   "nodos_previos": [
@@ -18,12 +21,30 @@
     "lienzo_modelo_negocio",
     "verificar_modelo_ingresos",
     "alineacion_ti_negocio",
-    "company_building"
+    "company_building",
+    "customer_discovery",
+    "economia_circular_como_modelo_de_negocio",
+    "experimentacion_iterativa_mercado_fisico",
+    "fundadores_lideran_validacion",
+    "nueve_pecados_capitales_lanzamiento",
+    "obtencion_compromiso_venta",
+    "recursos_de_segundo_nivel"
   ],
   "nodos_siguientes": [
     "customer_validation",
     "comunicacion_aprendizaje_startup",
-    "comunicacion_aprendizaje_continuo"
+    "comunicacion_aprendizaje_continuo",
+    "customer_creation",
+    "decision_pivotar_o_proceder",
+    "eleccion_ritmo_crecimiento",
+    "evitar_pseudociencia_producto",
+    "fuentes_financiamiento_startup",
+    "introduccion_validacion_clientes",
+    "market_type_revenue_growth",
+    "priorizar_elementos_a_validar",
+    "red_flags_proyectos_en_problemas",
+    "riesgo_no_pivotar_a_tiempo",
+    "war_room_pivot_proceed"
   ],
   "condiciones_activacion": [
     "Si estás gastando en marketing o ventas antes de validar tu modelo de negocio",
@@ -34,7 +55,9 @@
   "etiqueta_arbol": "Cuida tu Efectivo al Buscar",
   "ids_alias": [
     "preservar_caja_buscar_gastar",
-    "preservar_caja_hasta_validar"
+    "preservar_caja_hasta_validar",
+    "escalamiento_prematuro",
+    "restriccion_gasto_validacion"
   ],
   "merged_originals": [
     {
@@ -45,6 +68,16 @@
     {
       "node_id": "preservar_caja_hasta_validar",
       "titulo": "Preservar la Caja Hasta Encontrar el Modelo Escalable",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    },
+    {
+      "node_id": "escalamiento_prematuro",
+      "titulo": "Escalamiento Prematuro (Premature Scaling)",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    },
+    {
+      "node_id": "restriccion_gasto_validacion",
+      "titulo": "Restringir el Gasto Durante la Validación de Clientes",
       "fuente": "The Startup Owner's Manual - Steve Blank"
     }
   ]

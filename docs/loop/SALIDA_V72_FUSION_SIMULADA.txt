@@ -1,0 +1,234 @@
+==============================================================================
+OP-U-02 . UNICO Y FINAL POR AGOTAMIENTO, LOTE H DEL TRAMO UNICO DE OP-U-02. ABRE EN EL ACTO 43, que es el PRIMERO DEL TRAMO SIN DUENO MEDIDO. LOS DOS SALTOS VAN DECLARADOS Y NO ROMPEN EL PREFIJO SIN SALTOS, porque ninguno de los dos actos saltados esta en la cola de fusiones de esta operacion: el ACTO 31 tiene dueno medido (OP-F-04-WEI y OP-S-04 en duenos_cualquier_operacion, leido hoy del fichero fijado del tramo) y el ACTO 37 tiene dueno medido (OP-S-07, leido hoy del mismo fichero), y la adjudicacion 2 del acta 69 dice con todas sus letras que lo que vale para el 31 vale para el 37 cuando el prefijo lo alcance. CINCO ACTOS CIERRAN ENTEROS Y SON 15 NODOS: los actos 43, 45, 46 y 47 cierran FUNDIDOS y el ACTO 44 cierra DECLARADO Y NO FUNDIDO con LA GUARDA 1B como motivo sellado, por sus DOS PUERTAS (explotacion_tecnologias_disruptivas y tecnologias_disruptivas_oportunidad, medidas hoy), que es el PRIMER DECLARADO DESDE EL LOTE E de la vuelta 69 y el PRIMERO DE TODO EL TRAMO con ese motivo y no el triangulo de P.10. EL ACTO 46 FUNDE CON SU UNICA PUERTA SOBREVIVIENDO (acta 54, pregunta 1) AUNQUE LA VARA DE CONTENIDO APUNTE AL OTRO LADO, y el choque queda escrito entero en su motivo sellado. EL TOPE DEL PREFIJO NO ES ESTRUCTURAL SINO DE LOTE, Y SE DICE: el siguiente es el ACTO 49, que NO tiene dueno y NO trae puerta; el tope cae ANTES del 49 porque el encargo fija CINCO actos, no porque el 49 tenga nada que lo impida . MODO SIMULAR
+plan: docs/loop/PLAN_V72_OPU02_LOTE_H.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3204 vivos, 649 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 43 . sobrevive preservar_efectivo_buscar_modelo . absorbe escalamiento_prematuro, restriccion_gasto_validacion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 8 (anadidos 3) | condiciones 4 -> 4 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 3 de escalamiento_prematuro al PASO 3 del superviviente
+        inciso VERBATIM: 'tu ritmo de consumo de caja (burn rate) como tu métrica principal'
+        nexo (lo unico de cosecha propia): ', usando '
+        paso resultante: Aplica el test de escalabilidad: verifica si cada vendedor o dólar adicional genera más ganancia bruta que lo invertido, usando tu ritmo de consumo de caja (burn rate) como tu métrica principal
+  alias del superviviente: ['preservar_caja_buscar_gastar', 'preservar_caja_hasta_validar', 'escalamiento_prematuro', 'restriccion_gasto_validacion']
+
+------------------------------------------------------------------------------
+ACTO 45 . sobrevive reconstruccion_contexto_situacional . absorbe evitar_sesgo_retrospectivo_hindsight, evitar_shopping_bag
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 5 de evitar_shopping_bag al PASO 5 del superviviente
+        inciso VERBATIM: 'presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio'
+        nexo (lo unico de cosecha propia): ', y sin '
+        paso resultante: Evitar imponer marcos de referencia posteriores (procedimientos, datos críticos conocidos después) sin verificar su relevancia contextual real, y sin presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio
+  alias del superviviente: ['evitar_sesgo_retrospectivo_hindsight', 'evitar_shopping_bag']
+
+------------------------------------------------------------------------------
+ACTO 46 . sobrevive mitigacion_riesgos_ambientales . absorbe gestion_eco_riesgos, responsabilidad_extendida_productor
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 4 de gestion_eco_riesgos al PASO 3 del superviviente
+        inciso VERBATIM: 'escenarios y probabilidades de riesgo'
+        nexo (lo unico de cosecha propia): ', a partir de '
+        paso resultante: Diseñar planes de contingencia y comunicación de crisis para incidentes ambientales, a partir de escenarios y probabilidades de riesgo
+  alias del superviviente: ['gestion_eco_riesgos', 'responsabilidad_extendida_productor']
+
+------------------------------------------------------------------------------
+ACTO 47 . sobrevive gestion_terminacion_franquiciado . absorbe perdida_control_operativo, terminacion_franquiciado_causas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 1 de perdida_control_operativo al PASO 1 del superviviente
+        inciso VERBATIM: 'qué decisiones operativas quedarán bajo control del franquiciado'
+        nexo (lo unico de cosecha propia): ', tras aceptar y documentar '
+        paso resultante: Definir en el contrato de franquicia qué violaciones son curables y cuáles no, tras aceptar y documentar qué decisiones operativas quedarán bajo control del franquiciado
+     del paso 2 de terminacion_franquiciado_causas al PASO 2 del superviviente
+        inciso VERBATIM: 'según su gravedad'
+        nexo (lo unico de cosecha propia): ', graduados '
+        paso resultante: Establecer plazos estándar de cura para cada tipo de incumplimiento, graduados según su gravedad
+  alias del superviviente: ['perdida_control_operativo', 'terminacion_franquiciado_causas']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 30
+   atribucion_retrospectiva_del_error                   nodos_siguientes  evitar_sesgo_retrospectivo_hindsight -> reconstruccion_contexto_situacional
+   certificacion_cradle_to_cradle                       nodos_previos     responsabilidad_extendida_productor -> mitigacion_riesgos_ambientales
+   construccion_de_causas                               nodos_previos     evitar_sesgo_retrospectivo_hindsight -> reconstruccion_contexto_situacional
+   customer_creation                                    nodos_previos     restriccion_gasto_validacion -> preservar_efectivo_buscar_modelo
+   customer_discovery                                   nodos_siguientes  restriccion_gasto_validacion -> preservar_efectivo_buscar_modelo
+   decision_pivotar_o_proceder                          nodos_previos     restriccion_gasto_validacion -> preservar_efectivo_buscar_modelo
+   eco_eficiencia                                       nodos_previos     gestion_eco_riesgos -> mitigacion_riesgos_ambientales
+   eco_eficiencia                                       nodos_previos     responsabilidad_extendida_productor -> mitigacion_riesgos_ambientales
+   economia_circular_como_modelo_de_negocio             nodos_siguientes  escalamiento_prematuro -> preservar_efectivo_buscar_modelo
+   eleccion_ritmo_crecimiento                           nodos_previos     escalamiento_prematuro -> preservar_efectivo_buscar_modelo
+   estrategia_proactiva_ambiental                       nodos_siguientes  gestion_eco_riesgos -> mitigacion_riesgos_ambientales
+   evitar_pseudociencia_producto                        nodos_previos     restriccion_gasto_validacion -> preservar_efectivo_buscar_modelo
+   experimentacion_iterativa_mercado_fisico             nodos_siguientes  escalamiento_prematuro -> preservar_efectivo_buscar_modelo
+   fuentes_financiamiento_startup                       nodos_previos     restriccion_gasto_validacion -> preservar_efectivo_buscar_modelo
+   fundadores_lideran_validacion                        nodos_siguientes  restriccion_gasto_validacion -> preservar_efectivo_buscar_modelo
+   introduccion_validacion_clientes                     nodos_previos     restriccion_gasto_validacion -> preservar_efectivo_buscar_modelo
+   investigacion_incidentes                             nodos_previos     evitar_shopping_bag -> reconstruccion_contexto_situacional
+   market_type_revenue_growth                           nodos_previos     restriccion_gasto_validacion -> preservar_efectivo_buscar_modelo
+   modelo_green_wave                                    nodos_siguientes  gestion_eco_riesgos -> mitigacion_riesgos_ambientales
+   nueve_pecados_capitales_lanzamiento                  nodos_siguientes  escalamiento_prematuro -> preservar_efectivo_buscar_modelo
+   obtencion_compromiso_venta                           nodos_siguientes  restriccion_gasto_validacion -> preservar_efectivo_buscar_modelo
+   operacionalizacion_de_etiquetas_psicologicas         nodos_previos     evitar_sesgo_retrospectivo_hindsight -> reconstruccion_contexto_situacional
+   priorizar_elementos_a_validar                        nodos_previos     restriccion_gasto_validacion -> preservar_efectivo_buscar_modelo
+   reconstruccion_contexto_situacional                  nodos_siguientes  evitar_shopping_bag -> reconstruccion_contexto_situacional
+   recursos_de_segundo_nivel                            nodos_siguientes  escalamiento_prematuro -> preservar_efectivo_buscar_modelo
+   red_flags_proyectos_en_problemas                     nodos_previos     escalamiento_prematuro -> preservar_efectivo_buscar_modelo
+   riesgo_litigios_franquicia                           nodos_siguientes  perdida_control_operativo -> gestion_terminacion_franquiciado
+   riesgo_no_pivotar_a_tiempo                           nodos_previos     escalamiento_prematuro -> preservar_efectivo_buscar_modelo
+   separar_opciones_dfe                                 nodos_siguientes  responsabilidad_extendida_productor -> mitigacion_riesgos_ambientales
+   war_room_pivot_proceed                               nodos_previos     restriccion_gasto_validacion -> preservar_efectivo_buscar_modelo
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 3
+   investigacion_incidentes_2                           nodos_previos     evitar_shopping_bag (registro historico)
+   pivot_o_proceder                                     nodos_previos     restriccion_gasto_validacion (registro historico)
+   tipo_mercado_curva_ingresos                          nodos_previos     restriccion_gasto_validacion (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 1
+   eco_eficiencia                                       nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   reconstruccion_contexto_situacional                  nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 880   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 877   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 3, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 20 de 20
+guarda D, los 8 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (49 filas)
+ acto de que nodo                                  que          n  a donde va
+   43 escalamiento_prematuro                       paso         1  ya lo dice el PASO 1 del superviviente
+        No aumentes tu equipo de ventas y marketing hasta que valides que tu proceso de venta se puede repetir.
+   43 escalamiento_prematuro                       paso         2  PASO 6 del superviviente
+        Retrasa las inversiones grandes en infraestructura hasta tener tracción real con clientes.
+   43 escalamiento_prematuro                       paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Usa tu ritmo de consumo de caja (burn rate) como tu métrica principal, en lugar de guiarte por proyecciones de ingresos.
+   43 escalamiento_prematuro                       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si estás por contratar un equipo grande de ventas justo después de lanzar tu producto.
+   43 escalamiento_prematuro                       condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Si tus inversionistas te presionan para crecer rápido sin que tengas datos de que tus clientes se quedan (retención).
+   43 restriccion_gasto_validacion                 paso         1  ya lo dice el PASO 1 del superviviente
+        Posponer la contratación masiva de vendedores hasta validar el modelo de negocio
+   43 restriccion_gasto_validacion                 paso         2  ya lo dice el PASO 1 del superviviente
+        Limitar el gasto en marketing de demanda hasta confirmar el segmento de clientes
+   43 restriccion_gasto_validacion                 paso         3  PASO 7 del superviviente
+        Definir un presupuesto máximo por prueba o experimento (por ejemplo, no más de 2,000 a 10,000 dólares por test)
+   43 restriccion_gasto_validacion                 paso         4  PASO 8 del superviviente
+        Reservar caja suficiente para financiar múltiples pivotes
+   43 restriccion_gasto_validacion                 paso         5  ya lo dice el PASO 3 del superviviente
+        Medir constantemente la tasa de consumo de caja durante esta etapa
+   43 restriccion_gasto_validacion                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el equipo quiere escalar ventas o marketing antes de validar el modelo de negocio
+   43 restriccion_gasto_validacion                 condicion    2  ya lo dice la CONDICION 4 del superviviente
+        Si el proyecto está tentado a escalar el gasto antes de tiempo
+   45 evitar_sesgo_retrospectivo_hindsight         paso         1  ya lo dice el PASO 2 del superviviente
+        Reconstruir una línea de tiempo de cuándo llegó cada pista o indicación
+   45 evitar_sesgo_retrospectivo_hindsight         paso         2  ya lo dice el PASO 5 del superviviente
+        Evitar asumir que el resultado era predecible desde el inicio
+   45 evitar_sesgo_retrospectivo_hindsight         paso         3  ya lo dice el PASO 1 del superviviente
+        Imaginar la situación sin conocer el desenlace
+   45 evitar_sesgo_retrospectivo_hindsight         paso         4  ya lo dice el PASO 4 del superviviente
+        Analizar qué pudo significar cada señal dado el contexto y entendimiento de las personas en ese momento
+   45 evitar_sesgo_retrospectivo_hindsight         paso         5  ya lo dice el PASO 4 del superviviente
+        Reconocer que el entendimiento de los actores era incompleto y cambiante, no estático
+   45 evitar_sesgo_retrospectivo_hindsight         condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se investiga un accidente o incidente y existe la tentación de juzgar decisiones pasadas con la información actual
+   45 evitar_sesgo_retrospectivo_hindsight         condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se pregunta '¿cómo no vieron la evidencia?' sobre un evento pasado
+   45 evitar_shopping_bag                          paso         1  ya lo dice el PASO 2 del superviviente
+        Reconstruir el orden temporal exacto en que llegaron las señales/cues
+   45 evitar_shopping_bag                          paso         2  PASO 6 del superviviente
+        Identificar qué señales se contradecían entre sí en el momento
+   45 evitar_shopping_bag                          paso         3  ya lo dice el PASO 4 del superviviente
+        Evaluar qué significaban las señales dado el contexto en que aparecieron, no el significado que tienen ahora
+   45 evitar_shopping_bag                          paso         4  ya lo dice el PASO 4 del superviviente
+        Modelar cómo evolucionó la comprensión de la situación de forma incompleta e incierta
+   45 evitar_shopping_bag                          paso         5  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evitar presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio
+   45 evitar_shopping_bag                          condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando se cuestiona por qué un equipo no reconoció una situación de peligro que en retrospectiva parece obvia (ej. clima adverso)
+   46 gestion_eco_riesgos                          paso         1  PASO 5 del superviviente
+        Mapear todos los puntos de la cadena de valor donde pueden surgir riesgos ambientales (materias primas, producción, distribución, uso, disposición fin
+   46 gestion_eco_riesgos                          paso         2  ya lo dice el PASO 4 del superviviente
+        Evaluar la exposición a riesgos regulatorios, de reputación, legales y de mercado
+   46 gestion_eco_riesgos                          paso         3  ya lo dice el PASO 2 del superviviente
+        Establecer protocolos de auditoría para proveedores y terceros en la cadena de suministro
+   46 gestion_eco_riesgos                          paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Desarrollar escenarios y probabilidades de riesgo con planes de contingencia asociados
+   46 gestion_eco_riesgos                          condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si la empresa maneja materiales tóxicos, metales pesados o químicos peligrosos
+   46 gestion_eco_riesgos                          condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si la empresa depende de proveedores externos o cadenas de suministro extendidas
+   46 gestion_eco_riesgos                          condicion    3  CONDICION 3 del superviviente
+        Si el usuario no ha evaluado formalmente su exposición a riesgos ambientales
+   46 responsabilidad_extendida_productor          paso         1  ya lo dice el PASO 2 del superviviente
+        Identificar todos los eslabones de la cadena de valor extendida, incluyendo proveedores de segundo y tercer nivel
+   46 responsabilidad_extendida_productor          paso         2  ya lo dice el PASO 2 del superviviente
+        Establecer guías de cumplimiento ambiental explícitas para todos los proveedores
+   46 responsabilidad_extendida_productor          paso         3  ya lo dice el PASO 2 del superviviente
+        Implementar mecanismos de verificación y auditoría más allá de las políticas escritas
+   46 responsabilidad_extendida_productor          paso         4  ya lo dice el PASO 3 del superviviente
+        Preparar planes de comunicación de crisis para escenarios de incumplimiento en la cadena
+   46 responsabilidad_extendida_productor          condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Si la empresa tiene una marca de cara al consumidor
+   46 responsabilidad_extendida_productor          condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si la empresa terceriza producción o depende de proveedores externos
+   47 perdida_control_operativo                    paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Aceptar y documentar qué decisiones operativas quedarán bajo control del franquiciado
+   47 perdida_control_operativo                    paso         2  ya lo dice el PASO 1 del superviviente
+        Diseñar el contrato de franquicia especificando violaciones curables vs. no curables
+   47 perdida_control_operativo                    paso         3  ya lo dice el PASO 2 del superviviente
+        Establecer plazos y procedimientos claros para notificar y curar defaults del franquiciado
+   47 perdida_control_operativo                    paso         4  ya lo dice el PASO 5 del superviviente
+        Definir con el abogado una lista de causales de terminación inmediata (no curables)
+   47 perdida_control_operativo                    condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si el emprendedor tiene fuerte necesidad de control operativo y esto genera dudas sobre franquiciar
+   47 terminacion_franquiciado_causas              paso         1  ya lo dice el PASO 1 del superviviente
+        Listar explícitamente en el contrato las violaciones consideradas no curables
+   47 terminacion_franquiciado_causas              paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir plazos estándar de cura para violaciones curables según su gravedad
+   47 terminacion_franquiciado_causas              paso         3  ya lo dice el PASO 3 del superviviente
+        Crear plantillas de cartas de default para notificar incumplimientos
+   47 terminacion_franquiciado_causas              paso         4  ya lo dice el PASO 4 del superviviente
+        Establecer un checklist de cumplimiento que sirva como evidencia objetiva de violaciones repetidas
+   47 terminacion_franquiciado_causas              condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Si se está redactando el contrato legal de franquicia
+   47 terminacion_franquiciado_causas              condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si un franquiciado existente incumple términos del acuerdo
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 4
+  nodos implicados    : 12
+  nodos que MUEREN    : 8
+  piezas repartidas   : 49 (6 viajan enteras, 38 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 1
+
+SIMULACION: cero escrituras.

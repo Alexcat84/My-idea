@@ -10,25 +10,45 @@
     "Reconstruir qué señales/cues recibieron y en qué orden temporal",
     "Identificar las metas que perseguían sin saber el resultado final",
     "Usar el timeline construido para modelar la evolución incompleta e incierta de su comprensión situacional",
-    "Evitar imponer marcos de referencia posteriores (procedimientos, datos críticos conocidos después) sin verificar su relevancia contextual real"
+    "Evitar imponer marcos de referencia posteriores (procedimientos, datos críticos conocidos después) sin verificar su relevancia contextual real, y sin presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio",
+    "Identificar qué señales se contradecían entre sí en el momento"
   ],
   "entregable_esperado": "Narrativa reconstruida desde la perspectiva de los actores en el momento, sin conocimiento del resultado final",
   "nodos_previos": [
     "identificacion_eventos_datos",
-    "conexion_comportamiento_proceso"
+    "conexion_comportamiento_proceso",
+    "atribucion_retrospectiva_del_error"
   ],
   "nodos_siguientes": [
     "evitar_micro_matching",
     "evitar_cherry_picking",
-    "evitar_shopping_bag",
     "evitar_lenguaje_juzgador",
     "ciclo_de_culpa_blame_cycle",
     "old_view_vs_new_view_human_error",
-    "ciclo_de_culpa_2"
+    "ciclo_de_culpa_2",
+    "construccion_de_causas",
+    "investigacion_incidentes",
+    "operacionalizacion_de_etiquetas_psicologicas"
   ],
   "condiciones_activacion": [
     "Cuando se redacta el informe final de investigación de 'error humano'",
     "Cuando se debe explicar por qué las acciones tuvieron sentido para los involucrados"
   ],
-  "etiqueta_arbol": "Ponte en el Lugar del Otro"
+  "etiqueta_arbol": "Ponte en el Lugar del Otro",
+  "ids_alias": [
+    "evitar_sesgo_retrospectivo_hindsight",
+    "evitar_shopping_bag"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "evitar_sesgo_retrospectivo_hindsight",
+      "titulo": "Evitar el Sesgo Retrospectivo (Hindsight) en el Análisis de Errores",
+      "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+    },
+    {
+      "node_id": "evitar_shopping_bag",
+      "titulo": "Evitar el Efecto 'Shopping Bag' de Evidencia",
+      "fuente": "The Field Guide to Understandin - Dekker, Sidney"
+    }
+  ]
 }

@@ -8,20 +8,42 @@
   "pasos_accionables": [
     "Realizar una auditoría de riesgos ambientales en operaciones propias y de proveedores",
     "Establecer protocolos de cumplimiento y verificación en la cadena de suministro extendida",
-    "Diseñar planes de contingencia y comunicación de crisis para incidentes ambientales",
-    "Monitorear cambios regulatorios que puedan generar nuevas exposiciones legales"
+    "Diseñar planes de contingencia y comunicación de crisis para incidentes ambientales, a partir de escenarios y probabilidades de riesgo",
+    "Monitorear cambios regulatorios que puedan generar nuevas exposiciones legales",
+    "Mapear todos los puntos de la cadena de valor donde pueden surgir riesgos ambientales (materias primas, producción, distribución, uso, disposición final)"
   ],
   "entregable_esperado": "Mapa de riesgos ambientales de la cadena de valor con plan de mitigación y protocolos de cumplimiento para proveedores",
   "nodos_previos": [
     "eco_advantage",
-    "proteccion_organizacion_matriz_experimentos"
+    "proteccion_organizacion_matriz_experimentos",
+    "estrategia_proactiva_ambiental",
+    "modelo_green_wave",
+    "separar_opciones_dfe"
   ],
   "nodos_siguientes": [
-    "eco_eficiencia"
+    "eco_eficiencia",
+    "certificacion_cradle_to_cradle"
   ],
   "condiciones_activacion": [
     "Si la empresa maneja materiales peligrosos, tóxicos o cadenas de suministro complejas",
-    "Cuando existan antecedentes de incidentes regulatorios o de reputación relacionados al ambiente"
+    "Cuando existan antecedentes de incidentes regulatorios o de reputación relacionados al ambiente",
+    "Si el usuario no ha evaluado formalmente su exposición a riesgos ambientales"
   ],
-  "etiqueta_arbol": "Reduce tu Responsabilidad Extendida"
+  "etiqueta_arbol": "Reduce tu Responsabilidad Extendida",
+  "ids_alias": [
+    "gestion_eco_riesgos",
+    "responsabilidad_extendida_productor"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "gestion_eco_riesgos",
+      "titulo": "Gestión de Eco-Riesgos Empresariales",
+      "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    },
+    {
+      "node_id": "responsabilidad_extendida_productor",
+      "titulo": "Responsabilidad Extendida del Productor",
+      "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ]
 }
