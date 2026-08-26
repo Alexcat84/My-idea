@@ -1,0 +1,470 @@
+==============================================================================
+DOSSIER DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO: EL ACTO LEIDO ENTERO (P.5) CON SU RAZON
+==============================================================================
+  nodos leidos de: el arbol de trabajo
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+
+##############################################################################
+# ACTO 18 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 4 MIEMBROS: 3 pares internos con veredicto escrito, de 6 combinaciones posibles
+
+  [PAR] puesto 1797, clase A, dominio environmental
+     nodo_a (EL PRIMERO de la razon): co_opetition_industria
+     nodo_b (EL SEGUNDO de la razon): trabajo_colectivo_estandares_industria
+     RAZON ENTERA, sin recortar:
+       LA MISMA ALIANZA ENTRE COMPETIDORES DOS VECES, MISMA FUENTE y sin arista entre ellos. LOS CUATRO PASOS SE CORRESPONDEN: identificar el problema ambiental comun del sector, que en uno son problemas comunes y en el otro es evaluar si el riesgo reputacional es compartido; CONVOCAR A LOS COMPETIDORES, dicho igual en los dos; ESTABLECER ESTANDARES Y METAS COMPARTIDAS de desempeno ambiental; y montar el mecanismo de cumplimiento colectivo. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De co_opetition_industria se perderian dos: convocar MEDIANTE LAS ASOCIACIONES INDUSTRIALES EXISTENTES, que es la unica linea que dice por donde se convoca sin que parezca acuerdo entre competidores; y PUBLICAR Y MONITOREAR EL CUMPLIMIENTO COLECTIVO, que es lo unico que le pone consecuencia publica al pacto. De trabajo_colectivo_estandares_industria se perderian otras dos: el ejemplo con nombre propio del marco de cumplimiento, que lo vuelve buscable; y APLICAR EL ESTANDAR CONJUNTO A LOS PROVEEDORES COMPARTIDOS, que es la unica linea del par que usa la alianza como palanca hacia arriba en la cadena. Nace un acto de DOS con cobertura 1 de 1.
+
+  [PAR] puesto 1871, clase A, dominio environmental
+     nodo_a (EL PRIMERO de la razon): colaboracion_sectorial
+     nodo_b (EL SEGUNDO de la razon): trabajo_colectivo_estandares_industria
+     RAZON ENTERA, sin recortar:
+       LA MISMA ALIANZA SECTORIAL POR TERCERA VEZ, MISMA FUENTE y sin arista entre ellos, y este par AGRANDA la familia abierta en el puesto 1797. LOS CUATRO PASOS SE CORRESPONDEN: decidir si conviene ir solo o acompanado, que en uno es evaluar si la empresa tiene suficiente PODER DE MERCADO para exigir cambios sola y en el otro es evaluar si el RIESGO REPUTACIONAL es compartido; CONVOCAR A COMPETIDORES Y ALIADOS del sector, en uno a traves de las asociaciones existentes; DEFINIR ESTANDARES O UNA AGENDA COMPARTIDA; y APLICAR EL COMPROMISO A LOS PROVEEDORES COMUNES, dicho casi con las mismas palabras en los dos. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De colaboracion_sectorial se perderian dos: EL TEST DEL PODER DE MERCADO como disparador, que es la unica linea que dice cuando NO hace falta aliarse; y apoyarse en las ASOCIACIONES INDUSTRIALES EXISTENTES para convocar. De trabajo_colectivo_estandares_industria se perderian el ejemplo nombrado del marco de cumplimiento colectivo y el encuadre por riesgo reputacional compartido. NOTA DE NOMINA: la familia de la alianza sectorial pasa de DOS a TRES nodos por cierre transitivo. Cobertura 2 de 3, forma PROVISIONAL.
+
+  [PAR] puesto 1903, clase A, dominio environmental
+     nodo_a (EL PRIMERO de la razon): alianzas_cross_industry
+     nodo_b (EL SEGUNDO de la razon): colaboracion_sectorial
+     RAZON ENTERA, sin recortar:
+       LA MISMA ALIANZA DE INDUSTRIA POR CUARTA VEZ, MISMA FUENTE y sin arista entre ellos, y este par AGRANDA otra vez la familia. LOS CUATRO PASOS SE CORRESPONDEN: identificar los DESAFIOS COMPARTIDOS con competidores del sector; BUSCAR COALICIONES O ASOCIACIONES EXISTENTES, que en uno vienen con nombre propio; DEFINIR ESTANDARES COMUNES de conducta social y ambiental; y usar la fuerza del grupo sobre el mercado, que en uno son metricas y compromisos conjuntos PARA PROVEEDORES COMUNES y en el otro es el PODER DE COMPRA COLECTIVO. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De alianzas_cross_industry se perderian dos: los NOMBRES DE LAS COALICIONES EXISTENTES, que es lo que vuelve buscable el paso; y el encuadre de PODER DE COMPRA COLECTIVO para mover el mercado hacia otro tipo de producto, que es mas ambicioso que fijar un estandar de conducta. De colaboracion_sectorial se perderia EL TEST DEL PODER DE MERCADO, la unica linea que dice cuando NO hace falta aliarse. NOTA DE NOMINA: la familia de la alianza sectorial pasa de TRES a CUATRO nodos por cierre transitivo. Cobertura 3 de 6, forma PROVISIONAL.
+
+  --- alianzas_cross_industry
+      titulo    : Alianzas Cross-Industry para Elevar Estándares
+      fuente    : The Green to Gold Business Play - Daniel C. Esty
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Identificar desafíos de sostenibilidad compartidos con competidores o empresas de la industria
+      paso 2: Buscar coaliciones existentes (ej. EICC, AIM-PROGRESS) o formar una nueva
+      paso 3: Definir estándares comunes de conducta social y ambiental para toda la industria
+      paso 4: Usar el poder de compra colectivo para incentivar cambios en el mercado (ej. productos orgánicos)
+      cond 1: Cuando el poder de compra individual de la empresa es insuficiente para inducir cambios en el mercado
+      cond 2: Si existen desafíos sistémicos de sostenibilidad en toda la industria
+      previos   : ['optimizacion_tecnologia_cadena_suministro', 'programa_mentoria_proveedores']
+      siguientes: ['manufactura_verde']
+      entregable: Una alianza o membresía formal en una coalición industrial con estándares compartidos de sostenibilidad
+
+  --- co_opetition_industria
+      titulo    : Co-opetición: Colaboración entre Competidores de la Industria
+      fuente    : The Green to Gold Business Play - Daniel C. Esty
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Identificar problemas ambientales comunes a nivel sectorial
+      paso 2: Convocar a competidores clave mediante asociaciones industriales existentes
+      paso 3: Establecer estándares y metas compartidas de desempeño ambiental
+      paso 4: Publicar y monitorear el cumplimiento colectivo de los estándares
+      cond 1: Si la industria enfrenta una crisis reputacional o regulatoria compartida
+      cond 2: Si los esfuerzos individuales no bastan para transformar la percepción del sector
+      previos   : ['formalizar_alianza_estrategica', 'identificar_evaluar_socios_estrategicos']
+      siguientes: ['formar_consejo_asesor_sostenibilidad']
+      entregable: Iniciativa sectorial formalizada con estándares ambientales comunes y métricas de seguimiento
+
+  --- colaboracion_sectorial
+      titulo    : Colaboración Sectorial para Estándares de Proveedores
+      fuente    : The Green to Gold Business Play - Daniel C. Esty
+      pasos 4 | condiciones 2 | previos 1 | siguientes 0 | cableado 1
+      paso 1: Evaluar si la empresa tiene suficiente poder de mercado para exigir cambios individualmente
+      paso 2: Identificar asociaciones industriales o alianzas existentes relacionadas al sector
+      paso 3: Co-crear una agenda compartida de sostenibilidad con competidores/socios del sector
+      paso 4: Definir métricas y compromisos conjuntos para proveedores comunes
+      cond 1: Si la empresa no tiene poder individual sobre proveedores
+      cond 2: Si existen economías de escala en la colaboración sectorial
+      previos   : ['dialogo_proveedores']
+      siguientes: []
+      entregable: Membresía o acuerdo formal en una alianza sectorial con agenda de sostenibilidad definida
+
+  --- trabajo_colectivo_estandares_industria
+      titulo    : Trabajo Colectivo para Elevar Estándares de la Industria antes de la Legislación
+      fuente    : The Green to Gold Business Play - Daniel C. Esty
+      pasos 4 | condiciones 2 | previos 2 | siguientes 0 | cableado 2
+      paso 1: Evaluar si el riesgo reputacional es compartido con otros actores del sector
+      paso 2: Convocar a competidores y aliados de la industria para definir estándares comunes
+      paso 3: Diseñar un marco de cumplimiento colectivo (tipo 'Responsible Care')
+      paso 4: Aplicar el estándar conjunto a proveedores compartidos
+      cond 1: Si el mal desempeño de competidores puede afectar la reputación de toda la industria
+      cond 2: Si múltiples empresas dependen de los mismos proveedores críticos
+      previos   : ['uso_regulaciones_como_espada', 'seguimiento_cumplimiento_cadena_suministro']
+      siguientes: []
+      entregable: Un acuerdo o marco de estándares industriales colectivos documentado
+
+##############################################################################
+# ACTO 25 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 4 MIEMBROS: 5 pares internos con veredicto escrito, de 6 combinaciones posibles
+
+  [PAR] puesto 209, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): etapa_de_investigacion
+     nodo_b (EL SEGUNDO de la razon): etapa_investigacion_ventas
+     RAZON ENTERA, sin recortar:
+       REPITE con etapa_investigacion_ventas. Los dos mandan lo mismo: dedicarle mas tiempo a preguntar que a presentar, resistir la tentacion de saltar a la demostracion y medir la proporcion entre preguntar y presentar en cada llamada. PROCEDENCIA: par ya marcado, los dos del racimo de la etapa de investigacion, que el informe de la franja registro como TRIO. La relectura lo sostiene.
+
+  [PAR] puesto 278, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): enfoque_etapa_investigacion
+     nodo_b (EL SEGUNDO de la razon): etapa_de_investigacion
+     RAZON ENTERA, sin recortar:
+       REPITE con etapa_de_investigacion. Los dos mandan lo mismo en la misma etapa de la venta: dedicar tiempo a preguntar por la situacion y el problema antes de presentar nada, resistir la tentacion de pasar a la demostracion de capacidades, usar las respuestas para ampliar la percepcion de necesidad, y evaluar despues de cada llamada cuanto se hablo de investigar contra cuanto de presentar. Los dos ya estan censados en el racimo La etapa de investigacion en la venta, y el racimo no impide que este par concreto repita.
+
+  [PAR] puesto 303, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): enfoque_etapa_investigacion
+     nodo_b (EL SEGUNDO de la razon): etapa_investigacion_ventas
+     RAZON ENTERA, sin recortar:
+       REPITE con etapa_investigacion_ventas. Los dos mandan poner el esfuerzo de entrenamiento en las preguntas y no en la presentacion, medir la proporcion entre preguntar y afirmar en las llamadas propias, entrenar las preguntas que revelan la necesidad, y no pasar a la demostracion sin haber investigado bastante. Con el puesto 278, el racimo La etapa de investigacion en la venta ya tiene tres nodos que dicen esto, y el racimo esta censado.
+
+  [PAR] puesto 800, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): etapa_investigacion_ventas
+     nodo_b (EL SEGUNDO de la razon): investigacion_como_habilidad_clave
+     RAZON ENTERA, sin recortar:
+       EL PAR QUE DECIDE EL CUARTO PURO, y lo decide en contra. etapa_investigacion_ventas manda priorizar el desarrollo de habilidades de preguntas por sobre las tecnicas de presentacion, MEDIR LA PROPORCION de preguntas contra afirmaciones en las llamadas propias, entrenar al equipo en preguntas que revelen necesidades ocultas, y no pasar a la demostracion sin haber investigado. investigacion_como_habilidad_clave manda preparar antes de cada llamada preguntas que descubran necesidades reales, no apoyarse en el conocimiento tecnico del producto como reemplazo de indagar, practicar escuchar de verdad para detectar problemas que el cliente no dice, y FIJARSE QUE PORCENTAJE del tiempo de la llamada se usa en preguntar y cuanto en presentar. Tres de los cuatro pasos son el mismo: priorizar preguntar sobre presentar, medir la proporcion, y buscar lo que el cliente no dice. Sin arista entre ellos. CONSECUENCIA, y es la que la condicion del banco anticipaba: la familia NO es de tres sino de CUATRO. El CUARTO PURO queda DEGRADADO A SUB-PURO, con correccion declarada en el banco: el trio sigue siendo puro puertas adentro, la familia de cuatro tiene SEIS pares posibles, CUATRO leidos y los cuatro en A, y le faltan DOS, el puesto 862 y el par de etapa_de_investigacion contra investigacion_como_habilidad_clave, que nunca entro a la cola. Dos lecturas dirigidas y esta familia cierra en un sentido o en el otro.
+
+  [PAR] puesto 862, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): enfoque_etapa_investigacion
+     nodo_b (EL SEGUNDO de la razon): investigacion_como_habilidad_clave
+     RAZON ENTERA, sin recortar:
+       LA MISMA TESIS DE RACKHAM CONTADA DOS VECES, y con esto el SUB-PURO de la etapa de investigacion llega a cinco de seis. Lo comun es el nucleo entero: al planificar la llamada dedicar mas tiempo a disenar preguntas que a preparar el discurso de producto, no apoyarse en el conocimiento tecnico del producto como sustituto de indagar, no mostrar beneficios ni capacidades hasta haber desarrollado el problema, y medir que porcentaje del tiempo de la llamada se usa para preguntar y cuanto para presentar, que los dos mandan con las mismas palabras. Lo propio de enfoque_etapa_investigacion es el orden de entrenamiento, primero Situacion y Problema y despues Implicacion y Necesidad-beneficio. Lo propio de investigacion_como_habilidad_clave es practicar escuchar de verdad para detectar problemas que el cliente no dice de manera directa. Sin arista entre ellos. CONDICION VIVA CUMPLIDA: el sub-puro numero 4 del banco 9.5 tenia dos lecturas pendientes, este puesto y un par que nunca entro a la cola. Con esta, cinco de seis pares leidos y los CINCO en A. Le queda UNA sola, y no llegara por la cola: hay que encargarla.
+
+  --- enfoque_etapa_investigacion   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Priorizar la Etapa de Investigación sobre Demostración de Capacidad
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 2 | previos 5 | siguientes 2 | cableado 7
+      paso 1: Al planificar una llamada, dedica más tiempo a diseñar preguntas que a preparar el discurso de producto.
+      paso 2: Evita mostrar beneficios o capacidades hasta haber desarrollado suficientemente el problema y su implicación.
+      paso 3: Evalúa tus llamadas pasadas: ¿cuánto tiempo hablaste de tu producto en la primera mitad? Si es mucho, ajusta tu enfoque.
+      paso 4: Entrena primero en preguntas de Situación y Problema antes de avanzar a Implicación y Necesidad-beneficio.
+      cond 1: Cuando los vendedores tienden a presentar el producto antes de entender las necesidades reales del cliente.
+      cond 2: Si las tasas de cierre son bajas a pesar de buenas presentaciones de producto.
+      previos   : ['modelo_spin_secuencia_preguntas', 'objetivos_de_llamada_orientados_a_avance', 'apertura_llamada_venta_grande', 'reglas_aprendizaje_habilidades_venta', 'modelo_spin_preguntas']
+      siguientes: ['obtencion_compromiso_venta', 'investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor']
+      entregable: Una checklist de planificación de llamada de ventas centrada en preguntas de investigación, con métricas de tiempo dedicado a cada etapa del call.
+
+  --- etapa_de_investigacion
+      titulo    : La Etapa de Investigación en la Venta
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 1 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Antes de presentar tu producto o solución, dedica tiempo suficiente a preguntar sobre la situación, problemas y necesidades del cliente
+      paso 2: Resiste la tentación de pasar rápido a la demostración de capacidades
+      paso 3: Usa las respuestas del cliente para desarrollar y ampliar la percepción de sus propias necesidades
+      paso 4: Evalúa después de cada llamada cuánto tiempo relativo dedicaste a investigar versus presentar
+      cond 1: Cuando el usuario tiende a presentar su producto demasiado pronto sin entender bien las necesidades del cliente
+      previos   : ['determinar_tipo_de_mercado']
+      siguientes: ['necesidades_implicitas_vs_explicitas', 'obtencion_de_compromiso']
+      entregable: Registro o grabación de llamada de venta con proporción de tiempo dedicado a preguntas vs. presentación
+
+  --- etapa_investigacion_ventas
+      titulo    : La Etapa de Investigación como Motor de Éxito en Ventas Grandes
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Priorizar el desarrollo de habilidades de preguntas por sobre técnicas de presentación
+      paso 2: Medir la proporción de preguntas vs afirmaciones en las llamadas de venta propias
+      paso 3: Entrenar al equipo comercial en formular preguntas que revelen necesidades ocultas
+      paso 4: Evitar pasar a la demostración del producto sin haber investigado suficientemente
+      cond 1: Cuando las ventas complejas no están cerrando
+      cond 2: Si el equipo comercial se enfoca demasiado en presentar en vez de preguntar
+      previos   : ['cuatro_etapas_llamada_de_ventas']
+      siguientes: ['modelo_spin_preguntas']
+      entregable: Un registro/análisis de llamadas de venta propias mostrando la cantidad y tipo de preguntas realizadas
+
+  --- investigacion_como_habilidad_clave
+      titulo    : Preguntar (investigar) es la habilidad de venta más importante
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Antes de cada llamada, prepara preguntas que busquen descubrir necesidades reales, no solo preguntas para lucir tu producto
+      paso 2: No te apoyes en el conocimiento técnico de tu producto como reemplazo de indagar lo que la otra persona necesita
+      paso 3: Practica escuchar de verdad para detectar problemas que el cliente no dice de manera directa
+      paso 4: Fíjate qué porcentaje del tiempo de tu llamada usas para preguntar y cuánto para presentar
+      cond 1: Si te das cuenta de que hablas más de las características de tu producto que de preguntar
+      cond 2: Si tus ventas grandes no cierran aunque conoces bien tu producto
+      previos   : ['cuatro_etapas_llamada_de_ventas']
+      siguientes: ['necesidades_implicitas_vs_explicitas']
+      entregable: Tu propia lista de preguntas de descubrimiento, adaptadas a cada tipo de cliente con el que hablas
+
+##############################################################################
+# ACTO 26 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 4 MIEMBROS: 3 pares internos con veredicto escrito, de 6 combinaciones posibles
+
+  [PAR] puesto 230, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): etnografia_investigacion_usuario
+     nodo_b (EL SEGUNDO de la razon): investigacion_etnografica_ideacion
+     RAZON ENTERA, sin recortar:
+       REPITE con investigacion_etnografica_ideacion. Los dos mandan elegir un contexto de uso real, observar sin interferir como el usuario usa y mal usa el producto, documentar lo no verbalizado, entrenar al equipo observador y traducir lo observado en conceptos de producto. FIGURA: ids casi identicos. Candidato a fusion.
+
+  [PAR] puesto 381, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): etnografia_aplicada_en_equipos_multidisciplinarios
+     nodo_b (EL SEGUNDO de la razon): etnografia_de_proyecto
+     RAZON ENTERA, sin recortar:
+       REPITE con etnografia_de_proyecto. Los dos mandan la misma etnografia y con los mismos cuatro gestos: montar un equipo que mezcle perfiles sociales con tecnicos y de diseno, observar en el terreno real y no con encuestas ni focus groups, meter a los propios clientes o ejecutivos en la observacion, que los dos llaman deputizar con la misma palabra, y construir confianza con la comunidad antes de sacar conclusiones. El segundo anade buscar situaciones analogas, como el pit stop para entender urgencias, y es su unico gesto propio.
+
+  [PAR] puesto 839, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): etnografia_de_proyecto
+     nodo_b (EL SEGUNDO de la razon): etnografia_investigacion_usuario
+     RAZON ENTERA, sin recortar:
+       LA MISMA ETNOGRAFIA DE CAMPO CONTADA POR DOS LIBROS, y este par es el que CRUZA las dos parejas ya declaradas. Lo comun es el instrumento entero: elegir un entorno de uso real y meterse en el, observar directamente a los usuarios en su contexto en vez de preguntarles, traducir lo observado en insights de diseno accionables, y montar el equipo con las habilidades necesarias para observar e inferir. Lo propio de etnografia_de_proyecto son buscar SITUACIONES ANALOGAS, el pit stop de carreras para entender una sala de urgencias, meter a los propios clientes o ejecutivos en la observacion, que llama deputizar, y construir confianza genuina con los observados antes de sacar conclusiones. Lo propio de etnografia_investigacion_usuario son observar SIN INTERFERIR como el usuario usa MAL o abusa del producto, y documentar los problemas fisicos, emocionales y contextuales. Libros distintos, Change by Design contra Winning at New Products, sin arista entre ellos. LO QUE ESTE PAR CIERRA: la familia de la etnografia de campo tenia dos parejas declaradas y separadas, la de Brown en el puesto 381 y la de Cooper en el 230, las dos en A, y ningun par cruzado leido. Este es el cruce y sale A: son CUATRO nodos del mismo instrumento y no dos parejas vecinas.
+
+  --- etnografia_aplicada_en_equipos_multidisciplinarios
+      titulo    : Etnografía Aplicada en Equipos Multidisciplinarios
+      fuente    : Change by Design
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Formar equipos que combinen antropólogos/etnógrafos con diseñadores, arquitectos e ingenieros.
+      paso 2: Planificar inmersión profunda con los usuarios (convivencia, estadías) en lugar de entrevistas puntuales.
+      paso 3: Involucrar directamente a líderes o clientes (deputizar) en la observación de campo para generar empatía directa.
+      paso 4: Construir confianza con las comunidades estudiadas antes de extraer conclusiones de diseño.
+      cond 1: Cuando el proyecto involucra comunidades o contextos culturales distintos al del equipo de diseño.
+      cond 2: Si se requiere generar confianza profunda con usuarios antes de diseñar soluciones.
+      previos   : ['usuarios_extremos_edge_cases']
+      siguientes: ['etnografia_de_proyecto']
+      entregable: Reporte de investigación etnográfica colaborativa con hallazgos validados mediante inmersión directa en el contexto del usuario.
+
+  --- etnografia_de_proyecto
+      titulo    : Etnografía Aplicada al Diseño
+      fuente    : Change by Design, Revised and U - Tim Brown
+      pasos 5 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Ensamblar un equipo cross-disciplinario que incluya perfiles técnicos y sociales
+      paso 2: Realizar observación de campo directa con usuarios reales en su contexto
+      paso 3: Buscar situaciones análogas (ej. un pit stop de carreras para entender una sala de emergencias)
+      paso 4: Considerar involucrar a los propios clientes o ejecutivos en la observación directa ('deputizar')
+      paso 5: Construir confianza genuina con los sujetos observados antes de extraer insights
+      cond 1: Cuando el equipo necesita entender comportamientos reales de usuarios antes de idear soluciones
+      cond 2: Si la investigación de mercado tradicional (encuestas, focus groups) no ha revelado necesidades profundas
+      previos   : ['etnografia_aplicada_en_equipos_multidisciplinarios', 'diseno_sistemico_partes_interesadas']
+      siguientes: ['empatia_capas_de_comprension', 'tecnologias_disruptivas_oportunidad']
+      entregable: Un conjunto de notas de campo, videos y observaciones directas que sirvan como materia prima para generar insights de diseño.
+
+  --- etnografia_investigacion_usuario
+      titulo    : Etnografía para Identificar Necesidades No Articuladas
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 5 | condiciones 3 | previos 3 | siguientes 5 | cableado 8
+      paso 1: Seleccionar un entorno real donde el usuario utiliza el producto (campo, hospital, fábrica, etc.)
+      paso 2: Observar sin interferir cómo el usuario interactúa, usa mal o abusa del producto
+      paso 3: Documentar problemas físicos, emocionales y contextuales detectados
+      paso 4: Traducir las observaciones en insights de diseño accionables
+      paso 5: Formar equipos con habilidades de observación e inferencia entrenadas
+      cond 1: Cuando se busca innovación radical y no solo incremental
+      cond 2: Cuando las encuestas y focus groups no revelan necesidades reales
+      cond 3: Cuando el producto se usa en contextos físicos complejos (campo, hospital, fábrica)
+      previos   : ['arenas_estrategicas', 'reglas_brainstorming', 'seleccion_arenas_estrategicas']
+      siguientes: ['design_thinking_proceso', 'reglas_brainstorming', 'equipos_visita_cliente', 'netnografia_social_media', 'pensamiento_de_conexiones_ripple_effect']
+      entregable: Un reporte de insights etnográficos con problemas de usuario identificados y no articulados, listo para alimentar sesiones de ideación.
+
+  --- investigacion_etnografica_ideacion   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Investigación Etnográfica ('Camping Out') para Generación de Ideas
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 6 | condiciones 2 | previos 1 | siguientes 13 | cableado 14
+      paso 1: Seleccionar un contexto de uso real del producto (ej. campo, fábrica, hospital)
+      paso 2: Observar directamente a los usuarios utilizando o mal utilizando el producto durante un período extendido
+      paso 3: Documentar problemas, quejas y comportamientos no verbalizados
+      paso 4: Capacitar al equipo observador en habilidades de escucha e inferencia
+      paso 5: Reducir el tiempo por visita si es necesario (ej. 'día en la vida' de un día por sitio)
+      paso 6: Traducir los hallazgos observacionales en conceptos de producto concretos
+      cond 1: Cuando se buscan ideas verdaderamente innovadoras (breakthrough) y no incrementales
+      cond 2: Cuando los métodos tradicionales (encuestas, focus groups) no revelan necesidades profundas del usuario
+      previos   : ['sistema_captura_ideas']
+      siguientes: ['equipos_visita_cliente', 'voc_temprano_en_agile_stage_gate', 'analisis_y_sintesis', 'customer_journey_mapping', 'diseno_basado_en_comportamientos_existentes', 'deep_dive_workshop', 'prototipado_de_experiencias', 'reformular_problema_mas_alla_del_producto', 'sintesis_de_insights_en_principios_de_diseno', 'tecnica_perder_objeto', 'tres_espacios_innovacion', 'desirability_feasibility_viability', 'espacios_de_diseno_superpuestos']
+      entregable: Informe etnográfico con insights de necesidades no articuladas traducidos en conceptos de producto
+
+##############################################################################
+# ACTO 27 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 4 MIEMBROS: 4 pares internos con veredicto escrito, de 6 combinaciones posibles
+
+  [PAR] puesto 507, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): fase_diseno_prototipado_modelos
+     nodo_b (EL SEGUNDO de la razon): proceso_ideacion_modelo_negocio
+     RAZON ENTERA, sin recortar:
+       REPITE con proceso_ideacion_modelo_negocio. Los dos mandan lo mismo: generar varias variantes de modelo de negocio en vez de aferrarse a la primera, prototipar cada una con el lienzo, y elegir la de mas potencial solo despues de haber explorado alternativas. El primero anade construir una narrativa para cada modelo y buscar retroalimentacion externa; el segundo anade el equipo diverso, la fase de inmersion y los criterios de seleccion. FAMILIA anotada: con el puesto 395, el nucleo tiene TRES nodos sobre el diseno de modelos de negocio, proceso_diseno_modelo_negocio_5_fases, proceso_ideacion_modelo_negocio y fase_diseno_prototipado_modelos. Ninguno esta en RACIMOS_MIEMBROS.jsonl.
+
+  [PAR] puesto 641, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): fase_diseno_prototipado_modelos
+     nodo_b (EL SEGUNDO de la razon): prototipado_modelos_negocio
+     RAZON ENTERA, sin recortar:
+       DOS CASAS PARA LA MISMA FASE. Dato del grafo: SIN ARISTA entre ellas, verificado resolviendo a nodo vivo. REESCRITA EL 13 ago 2026 POR EL BARRIDO DE RAZONES: la apertura original citaba la PARAFRASIS ABOLIDA por el banco 9.5.0 como si fuera el argumento. La arista es DATO DEL GRAFO y no argumento, y corta en los dos sentidos: no acusa cuando falta ni exculpa cuando esta. La clase la decide LA VARA del banco 9.6.1, la linea o el procedimiento, como se lee mas abajo, y NO CAMBIA. Los dos desarrollan la fase 3 de proceso_diseno_modelo_negocio_5_fases, disenar y prototipar modelos de negocio hasta elegir el mejor. fase_diseno_prototipado_modelos lo cuenta como taller: brainstorming de variantes, prototipar cada una con el lienzo, narrativa por modelo con retroalimentacion externa, no descartar por el no de un experto, y elegir despues de explorar. prototipado_modelos_negocio lo cuenta como escalera de artefactos: boceto rapido, lienzo elaborado con sus relaciones, caso de negocio en hoja de calculo, manipulacion por escenarios quitando un segmento o un recurso clave, prueba de campo con clientes reales, y la regla de tres prototipos minimo antes de elegir. Lo que se perderia del primero es la narrativa con feedback externo y el permiso explicito de ignorar al experto. LA FAMILIA DE LA FASE 3, contada: la madre de cinco fases, dos hijos directos de la fase 3, este y proceso_ideacion_modelo_negocio del puesto 395, y un nieto, prototipado_modelos_negocio, que es hijo con arista del segundo segun el puesto 572 y hermano sin arista del primero segun este. Cuatro nodos para una fase, y el cableado es un si y dos no.
+
+  [PAR] puesto 1056, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): prototipado_modelos_negocio
+     nodo_b (EL SEGUNDO de la razon): prototyping_possibilities
+     RAZON ENTERA, sin recortar:
+       LA MISMA ESCALERA DE PROTOTIPOS, libros distintos y sin arista entre ellos. Lo comun es el instrumento entero: generar VARIAS direcciones alternativas y no solo una, empezar con bocetos rapidos y baratos, subir la fidelidad solo en las mas prometedoras, y no apegarse a la primera antes de haber comparado. Lo propio de prototipado_modelos_negocio son tres piezas fuertes: convertir el lienzo detallado en un CASO DE NEGOCIO en hoja de calculo para estimar costos e ingresos, MANIPULAR cada prototipo probando escenarios, quitar un segmento de cliente o un recurso costoso para ver que aguanta, y la regla de construir AL MENOS TRES antes de elegir. Lo propio de prototyping_possibilities son las plantillas para precisar como cada alternativa crea valor y el lienzo de propuesta de valor para las mejores. La manipulacion por escenarios y la regla de los tres son lo que hay que salvar.
+
+  [PAR] puesto 572, clase D, dominio core
+     nodo_a (EL PRIMERO de la razon): proceso_ideacion_modelo_negocio
+     nodo_b (EL SEGUNDO de la razon): prototipado_modelos_negocio
+     RAZON ENTERA, sin recortar:
+       EL HIJO CON CASA PROPIA. Dato del grafo: CON ARISTA en los dos sentidos, verificada resolviendo a nodo vivo. REESCRITA EL 13 ago 2026 POR EL BARRIDO DE RAZONES: la apertura original citaba la PARAFRASIS ABOLIDA por el banco 9.5.0 como si fuera el argumento. La arista es DATO DEL GRAFO y no argumento, y corta en los dos sentidos: no acusa cuando falta ni exculpa cuando esta. La clase la decide LA VARA del banco 9.6.1, la linea o el procedimiento, como se lee mas abajo, y NO CAMBIA. prototipado_modelos_negocio desarrolla el paso 5 de proceso_ideacion_modelo_negocio, reducir a entre tres y cinco ideas y prototiparlas con el lienzo, y le anade lo suyo entero: la escalera de prototipos del boceto rapido al lienzo elaborado y de ahi al caso de negocio en hoja de calculo, la manipulacion por escenarios quitando un segmento o un recurso clave para ver que aguanta, la prueba de campo con clientes reales y la regla de construir al menos tres antes de elegir cual refinar. La madre se queda con lo suyo, el equipo diverso en antiguedad y area, la inmersion previa y los criterios de seleccion por tiempo de implementacion, ingresos y resistencia interna. Los dos de Business Model Generation, Osterwalder. Nota: esta madre es el hijo del puesto 395, o sea que la cadena tiene tres pisos.
+
+  --- fase_diseno_prototipado_modelos
+      titulo    : Fase de Diseño: Prototipado de Modelos de Negocio
+      fuente    : Business Model Generation - Osterwalder, Alexander
+      pasos 5 | condiciones 2 | previos 1 | siguientes 5 | cableado 6
+      paso 1: Hacer brainstorming de múltiples variantes de modelo de negocio
+      paso 2: Prototipar cada variante usando el Business Model Canvas
+      paso 3: Desarrollar una narrativa/historia para cada modelo y buscar retroalimentación externa
+      paso 4: Evitar descartar ideas solo porque expertos digan 'no funcionará'
+      paso 5: Seleccionar el modelo con mayor potencial tras explorar alternativas
+      cond 1: Si ya se completó la investigación del entorno y se necesita generar alternativas de modelo de negocio
+      cond 2: Si el equipo tiende a aferrarse a la primera idea
+      previos   : ['fase_entendimiento_investigacion_mercado']
+      siguientes: ['riesgo_recompensa_ideas_audaces', 'fase_implementacion_modelo', 'open_business_models', 'unbundling_business_models', 'modelos_negocio_mas_alla_del_lucro']
+      entregable: Conjunto de prototipos de Business Model Canvas evaluados, con feedback de expertos/clientes y un modelo seleccionado.
+
+  --- proceso_ideacion_modelo_negocio
+      titulo    : Proceso de Ideación de Modelos de Negocio
+      fuente    : Business Model Generation (Osterwalder)
+      pasos 5 | condiciones 2 | previos 7 | siguientes 3 | cableado 10
+      paso 1: Ensamblar un equipo diverso en antigüedad, experiencia, área funcional y conocimiento del cliente
+      paso 2: Realizar una fase de inmersión: investigar clientes, tecnologías y modelos de negocio existentes
+      paso 3: Expandir generando la mayor cantidad de ideas posible por cada bloque del lienzo de modelo de negocio, sin criticar todavía y priorizando cantidad sobre calidad
+      paso 4: Definir criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.)
+      paso 5: Reducir a entre tres y cinco ideas y prototiparlas usando el lienzo de modelo de negocio
+      cond 1: Cuando se necesita generar múltiples opciones de modelo de negocio antes de comprometerse con una
+      cond 2: Si el equipo está atascado en pensamiento incremental sobre su modelo actual
+      previos   : ['customer_insights_design', 'epicentros_innovacion_modelo_negocio', 'what_if_questions', 'lienzo_modelo_negocio', 'empathy_map', 'equipo_diverso_ideacion', 'open_business_models']
+      siguientes: ['lienzo_modelo_negocio', 'prototipado_modelos_negocio', 'scorecard_de_seleccion_de_proyectos']
+      entregable: Lista corta de 3 a 5 prototipos de modelo de negocio esbozados en el lienzo de modelo de negocio, resultado de un proceso de ideación estructurado
+
+  --- prototipado_modelos_negocio
+      titulo    : Prototipado de Modelos de Negocio
+      fuente    : Business Model Generation (Osterwalder)
+      pasos 6 | condiciones 3 | previos 9 | siguientes 6 | cableado 15
+      paso 1: Generar un boceto rápido con la idea, la propuesta de valor y las principales fuentes de ingreso
+      paso 2: Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, con una verificación básica de los hechos
+      paso 3: Convertir el lienzo detallado en un caso de negocio (hoja de cálculo) para estimar costos, ingresos y ganancia potencial bajo distintos escenarios
+      paso 4: Manipular cada prototipo probando escenarios: eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos
+      paso 5: Realizar una prueba de campo con clientes reales para validar la propuesta de valor, los canales y los mecanismos de precio
+      paso 6: Construir al menos tres prototipos distintos antes de elegir cuál refinar y ejecutar, evitando apegarse emocionalmente a uno temprano
+      cond 1: Cuando existen varias ideas de modelo de negocio preseleccionadas y se necesita explorarlas antes de decidir
+      cond 2: Si el equipo tiende a apegarse prematuramente a una única solución sin explorar alternativas
+      cond 3: Cuando se necesita innovar el modelo de negocio en vez de solo mejorar el actual
+      previos   : ['pensamiento_visual_modelos_negocio', 'proceso_ideacion_modelo_negocio', 'lienzo_modelo_negocio', 'empathy_map', 'business_model_environment_mapping', 'blue_ocean_four_actions', 'escenarios_diseno_modelo_negocio', 'evaluacion_amazon_case', 'swot_business_model_canvas']
+      siguientes: ['revalidacion_modelo_negocio', 'value_proposition_canvas', 'etapa_build_business_case', 'get_out_building_test_sell', 'storytelling_modelo_negocio', 'decision_pivotar_o_proceder']
+      entregable: Conjunto de al menos tres prototipos de modelo de negocio en distintos niveles de detalle (boceto, lienzo elaborado, caso de negocio), con anotaciones de pros y contras de cada uno, listos para evaluación comparativa
+
+  --- prototyping_possibilities
+      titulo    : Prototipado de Posibilidades
+      fuente    : Value Proposition Design
+      pasos 5 | condiciones 2 | previos 2 | siguientes 3 | cableado 5
+      paso 1: Generar múltiples direcciones alternativas para la misma idea (no solo una).
+      paso 2: Usar napkin sketches (bocetos rápidos de 5-15 min) para hacer tangibles las ideas.
+      paso 3: Rellenar ad-libs para precisar cómo cada alternativa crea valor.
+      paso 4: Desarrollar Value Proposition Canvases para las direcciones más prometedoras.
+      paso 5: Construir un MVP para llevar la propuesta a la vida y testearla.
+      cond 1: Cuando se tienen ideas iniciales pero ninguna ha sido explorada visualmente.
+      cond 2: Cuando el equipo tiende a enamorarse de la primera idea sin explorar alternativas.
+      previos   : ['value_proposition_canvas', 'design_test_repeat']
+      siguientes: ['diez_principios_prototipado', 'design_test_repeat', 'seleccion_modelo_ia_adecuado']
+      entregable: Conjunto de prototipos alternativos (sketches, ad-libs, canvases) listos para exponer a feedback.
+
+##############################################################################
+# ACTO 29 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 220, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): advances_vs_continuations
+     nodo_b (EL SEGUNDO de la razon): objetivos_de_llamada_orientados_a_avance
+     RAZON ENTERA, sin recortar:
+       REPITE con objetivos_de_llamada_orientados_a_avance. Los dos mandan definir el objetivo de la llamada como una accion concreta, descartar los objetivos vagos de recolectar informacion o construir relacion, y revisar despues de la llamada si hubo avance o solo continuacion. PROCEDENCIA: par ya marcado, los dos del racimo del avance y el compromiso.
+
+  [PAR] puesto 482, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): advances_vs_continuations
+     nodo_b (EL SEGUNDO de la razon): marco_avances_continuaciones
+     RAZON ENTERA, sin recortar:
+       REPITE con marco_avances_continuaciones. Los dos mandan lo mismo de Rackham: definir el objetivo de cada llamada como una accion concreta que el cliente tiene que hacer, clasificar despues el resultado, y si fue una continuacion identificar que accion falto para que hubiera sido un avance. Y los dos rematan con el mismo aviso, no medir el exito por comentarios positivos ni por buena impresion. El segundo anade la clasificacion completa en Orden, Avance, Continuacion y No-venta. Los dos ya estan censados en el racimo El avance y el compromiso en la venta.
+
+  --- advances_vs_continuations
+      titulo    : Avances vs. Continuaciones en Ventas
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Antes de cada reunión de venta, define el objetivo como una acción concreta que el cliente debe realizar
+      paso 2: Evita objetivos vagos como 'recopilar información' o 'construir relación'
+      paso 3: Al finalizar la llamada, evalúa si obtuviste un compromiso de acción real (avance) o solo una promesa de seguir hablando (continuación)
+      paso 4: Si el resultado fue una continuación, identifica qué faltó para lograr un avance real
+      cond 1: Cuando el usuario está en proceso de venta consultiva compleja (B2B) y necesita definir objetivos claros para reuniones con clientes potenciales
+      previos   : ['stakeholder_mapping_wheel']
+      siguientes: ['obtencion_de_compromiso']
+      entregable: Lista de objetivos de llamada definidos como acciones concretas del cliente (ej: 'conseguir una reunión con su jefe')
+
+  --- marco_avances_continuaciones
+      titulo    : Marco de Resultados de Llamada: Órdenes, Avances, Continuaciones y No-Ventas
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Después de cada reunión de ventas, clasifica el resultado en Orden, Avance, Continuación o No-venta.
+      paso 2: Si el resultado fue una Continuación, identifica qué acción concreta faltó para convertirla en Avance.
+      paso 3: Diseña la siguiente interacción con el objetivo explícito de lograr una acción medible del cliente.
+      paso 4: Evita medir el éxito de una llamada solo por comentarios positivos o buena impresión del cliente.
+      cond 1: Cuando el ciclo de venta es largo y complejo, con múltiples interacciones antes de cerrar.
+      cond 2: Cuando el equipo comercial confunde señales positivas del cliente con progreso real de la venta.
+      previos   : ['cierre_segun_complejidad_venta', 'escala_actitud_cierre']
+      siguientes: ['objetivos_de_llamada_orientados_a_avance']
+      entregable: Sistema de seguimiento de llamadas de venta que registre el tipo de resultado obtenido en cada interacción con el cliente.
+
+  --- objetivos_de_llamada_orientados_a_avance
+      titulo    : Definir Objetivos de Llamada Orientados a la Acción (Avance)
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 1 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Antes de cada llamada o reunión comercial, define un objetivo específico que implique una acción concreta del cliente.
+      paso 2: Descarta objetivos ambiguos como 'construir relación' o 'recolectar información' como únicos fines de la llamada.
+      paso 3: Si el objetivo principal falla durante la llamada, busca activamente una alternativa que igualmente genere una acción medible (Avance).
+      paso 4: Revisa después de cada llamada si el objetivo planteado se cumplió con una acción concreta del cliente.
+      cond 1: Cuando los vendedores del equipo reportan llamadas 'exitosas' que en realidad no generan progreso medible en el pipeline.
+      previos   : ['marco_avances_continuaciones', 'cierre_segun_complejidad_venta']
+      siguientes: ['enfoque_etapa_investigacion']
+      entregable: Plantilla de planificación de llamadas de venta con objetivo de Avance definido para cada interacción con el cliente.
+
+##############################################################################
+# ACTO 30 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 2600, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): analisis_causa_raiz_diagnostico
+     nodo_b (EL SEGUNDO de la razon): analisis_diagnostico_causa
+     RAZON ENTERA, sin recortar:
+       REPITE. analisis_causa_raiz_diagnostico contra analisis_diagnostico_causa, MISMA FUENTE, Juran, y sin arista, ultimo par del checkpoint 2.600. Es el mismo viaje diagnostico de Juran, y los cuatro pasos de analisis_diagnostico_causa van dentro de los cinco del otro: formular teorias de causa, probarlas recolectando y analizando datos, y confirmar la causa raiz con evidencia. analisis_causa_raiz_diagnostico trae LO QUE LO HACE RIGUROSO: EL ANALISIS DE PARETO PARA DESCARTAR VARIABLES NO RELEVANTES antes de teorizar, DISENAR LA RECOLECCION PARA CORRELACIONAR CADA TEORIA CON EL DEFECTO, y VALIDAR ESTADISTICAMENTE CUAL TEORIA EXPLICA LA MAYORIA DE LOS CASOS. Por la vara, REPITE. Sobrevive analisis_causa_raiz_diagnostico. PERDIDA NOMBRADA, motivo tecnica nombrada: EL DIAGRAMA CAUSA-EFECTO, el de Ishikawa, que el que muere usa para generar teorias y el superviviente no nombra; es la herramienta que un dueno sin estadistica puede usar para el mismo paso. DISCUTIBLE MARCADO: quien lea el diagrama causa-efecto como un metodo aparte de generar teorias, distinto del Pareto mas la correlacion, dira D; mi defensa es que es la misma etapa, generar teorias, con dos herramientas.
+
+  [PAR] puesto 2838, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): analisis_causa_raiz_diagnostico
+     nodo_b (EL SEGUNDO de la razon): viaje_diagnostico_remedial
+     RAZON ENTERA, sin recortar:
+       analisis_causa_raiz_diagnostico (Analisis de Causa Raiz mediante Diagnostico Sistematico, Juran: Pareto para descartar variables, generar teorias, disenar la recoleccion para correlacionar cada teoria, validar estadisticamente cual explica la mayoria, confirmar la causa raiz ANTES de disenar el remedio) contra viaje_diagnostico_remedial (Viaje Diagnostico y Viaje Remedial, Juran: analizar sintomas, formular teorias, probar con datos, establecer la causa raiz, disenar remedios, probarlos en condiciones reales, gestionar la resistencia, poner nuevos controles). MISMA FUENTE Juran, sim_tit 49,4. A POR CONTENCION: analisis_causa_raiz es el VIAJE DIAGNOSTICO entero y se detiene explicitamente antes del remedio; viaje_diagnostico_remedial es ese mismo viaje diagnostico (sintomas, teorias, probar, causa raiz) MAS el viaje remedial completo (remedios, prueba, resistencia, controles) como pasos del superviviente. El diagnostico cabe entero en el diagnostico mas remedial, y analisis no trae ningun paso propio que viaje no tenga. Es la contencion del 2618 y del 2645, no la ficha de una fase del 2678. analisis_causa_raiz ya tiene su gemelo diagnostico (2600 A). A, superviviente viaje_diagnostico_remedial. DISCUTIBLE MARCADO fuerte: quien lea el viaje diagnostico como una PARTE contra el mapa de los dos viajes, o como cara distinta por su Pareto y validacion estadistica, dira D.
+
+  --- analisis_causa_raiz_diagnostico
+      titulo    : Análisis de Causa Raíz mediante Diagnóstico Sistemático
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 2 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Realizar análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)
+      paso 2: Generar una lista de teorías/hipótesis sobre las causas probables con el equipo
+      paso 3: Diseñar un mecanismo de recolección de datos que permita correlacionar cada teoría con el defecto observado
+      paso 4: Validar estadísticamente cuál teoría explica la mayoría de los casos
+      paso 5: Confirmar la causa raíz antes de diseñar el remedio
+      cond 1: Cuando existe un problema crónico de calidad sin causa clara
+      cond 2: Cuando el equipo tiene múltiples hipótesis sin validar
+      previos   : ['dmaic_fase_analyze']
+      siguientes: ['sostener_las_ganancias', 'enfoque_proyecto_por_proyecto', 'diagnostico_sintoma_vs_causa_ventas']
+      entregable: Documento de diagnóstico con la causa raíz confirmada y evidencia de correlación de datos
+
+  --- analisis_diagnostico_causa
+      titulo    : Análisis y Diagnóstico de la Causa Raíz
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 4 | condiciones 1 | previos 2 | siguientes 3 | cableado 5
+      paso 1: Analizar los síntomas del problema
+      paso 2: Formular teorías sobre posibles causas usando brainstorming y diagramas causa-efecto
+      paso 3: Probar las teorías mediante recolección y análisis de datos
+      paso 4: Identificar la(s) causa(s) raíz confirmada(s) con evidencia
+      cond 1: Cuando se ha definido un problema y se requiere identificar su causa antes de proponer un remedio
+      previos   : ['definicion_problema_moms_2', 'juran_rcca_metodo']
+      siguientes: ['juran_rcca_metodo', 'error_proofing_servicio', 'ciclo_shewhart_pdsa']
+      entregable: Causa raíz identificada y confirmada mediante datos
+
+  --- viaje_diagnostico_remedial
+      titulo    : Viaje Diagnóstico y Viaje Remedial
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 8 | condiciones 1 | previos 4 | siguientes 2 | cableado 6
+      paso 1: Analizar los síntomas del problema (evidencia observable)
+      paso 2: Formular teorías sobre las posibles causas
+      paso 3: Probar las teorías más plausibles con datos
+      paso 4: Establecer la(s) causa(s) raíz confirmada(s)
+      paso 5: Diseñar remedios para eliminar las causas
+      paso 6: Probar los remedios bajo condiciones operativas reales
+      paso 7: Gestionar la resistencia predecible al cambio
+      paso 8: Establecer nuevos controles para sostener las ganancias
+      cond 1: Cuando se ha identificado un problema crónico de calidad y se requiere metodología estructurada de resolución
+      previos   : ['six_sigma_dmaic', 'analisis_pareto_priorizacion', 'establecer_proyecto_mejora', 'analisis_pareto_de_proveedores']
+      siguientes: ['six_sigma_dmaic', 'sostener_las_ganancias']
+      entregable: Documento de causa raíz validada y plan de remedio probado con controles de sostenimiento
+
+FIN
