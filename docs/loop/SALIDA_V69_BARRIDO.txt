@@ -1,7 +1,7 @@
 ====================================================================================================
 BARRIDO DE TITULOS TALLADOS A MANO EN LOS INSTRUMENTOS DEL BUCLE
   carpetas barridas: scripts/loop, scripts/plan, scripts, docs/loop
-  ficheros barridos: 451
+  ficheros barridos: 453
 ====================================================================================================
 
 --- ILEGIBLE: 1 ---
@@ -77,7 +77,7 @@ BARRIDO DE TITULOS TALLADOS A MANO EN LOS INSTRUMENTOS DEL BUCLE
 --- AMBAR: 0 ---
     ninguno
 
---- ROTULADO (AMBAR YA TRIADO, con el rotulo cotejado en esta corrida): 46 en 33 ficheros ---
+--- ROTULADO (AMBAR YA TRIADO, con el rotulo cotejado en esta corrida): 47 en 34 ficheros ---
     scripts/loop/_v41_patch_costuras.py:1  [CABECERA]  'vuelta 40'
         PROCEDENCIA cotejada: vuelta 40 nombra un ancestro que existe (docs/loop/ACTA_AUDITOR.md contiene 'ACTA DE LA VUELTA 40 DEL AUDITOR'; rotulo de la linea 11, corte 2026-08-20)
     scripts/loop/_v50_contraste_contar_ld_v49.py:1  [CABECERA]  'Vuelta 48'
@@ -170,6 +170,8 @@ BARRIDO DE TITULOS TALLADOS A MANO EN LOS INSTRUMENTOS DEL BUCLE
         PROCEDENCIA cotejada: vuelta 68 nombra un ancestro que existe (docs/loop/ACTA_AUDITOR.md contiene 'ACTA DE LA VUELTA 68 DEL AUDITOR'; rotulo de la linea 57, corte 2026-08-26)
     scripts/loop/vuelta69_registrar_acta68.py:342  [PRINT]  'vuelta 68'
         PROCEDENCIA cotejada: vuelta 68 nombra un ancestro que existe (docs/loop/ACTA_AUDITOR.md contiene 'ACTA DE LA VUELTA 68 DEL AUDITOR'; rotulo de la linea 57, corte 2026-08-26)
+    scripts/loop/vuelta69_registro_lote_e.py:1  [CABECERA]  'VUELTA 65'
+        PROCEDENCIA cotejada: vuelta 65 nombra un ancestro que existe (docs/plan/03_FUSIONES.md contiene 'TRAMO UNICO Y FINAL POR AGOTAMIENTO: EL REGISTRO DEL LOTE A'; rotulo de la linea 42, corte 2026-08-26)
 
 --- CENSO (SELLO FIJO), para las vueltas que los toquen: 224 en 173 ficheros ---
     docs/loop/_auditor_v29_medicion.py                   vuelta 29 (linea 1)
@@ -346,5 +348,5 @@ BARRIDO DE TITULOS TALLADOS A MANO EN LOS INSTRUMENTOS DEL BUCLE
     scripts/loop/vuelta66_caso_positivo_varas.py         vuelta 66 (linea 130)
     scripts/loop/vuelta68_registro_lote_d.py             vuelta 68 (linea 243)
 
-RESUMEN: 451 ficheros barridos, 202 con hallazgo, 249 limpios | ROJO 32, AMBAR 0, ROTULADO 46, CENSO 224, ILEGIBLE 1
+RESUMEN: 453 ficheros barridos, 203 con hallazgo, 250 limpios | ROJO 32, AMBAR 0, ROTULADO 47, CENSO 224, ILEGIBLE 1
 FIN

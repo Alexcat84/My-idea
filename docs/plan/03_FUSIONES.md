@@ -5735,3 +5735,443 @@ superviviente** (el del `acto 18` lo eligio el auditor y aqui solo se transcribe
 veredicto de las cuatro colisiones vigentes**, **NO toca la mesa `OP-M-03`**, **NO toca ninguna ficha
 de `OP-U-02` ni de `OPERACIONES.jsonl`** y **NO abre el lote `E`**: **registra adjudicaciones**. El
 lote `E` es la TAREA 2 de esta misma vuelta y se registra en su propia seccion, debajo de esta.
+
+
+---
+
+## `OP-U-02, TRAMO UNICO: EL REGISTRO DEL LOTE E` (2026-08-26, vuelta 69)
+
+**Se adosa al final del documento, bajo la cabecera de tramo que la vuelta 65 dejo en la linea
+**3732**, y NO reescribe ni una linea de las secciones de arriba.** El orden de la
+fase sigue siendo el de la linea **62**; el registro del lote `C` esta en la
+**4621** y el del lote `D` en la **5218**.
+
+**EL LOTE SE DECLARO AL ABRIRLO Y SE ENTREGO ENTERO: SEIS actos y 22 nodos.** **Abre con LA FUSION
+ADJUDICADA DEL `ACTO 18`**, que el acta 68 resolvio y que esta pagina registra en la linea
+**5655**, ejecutada **como PRIMERA operacion del lote y dentro de un PLAN PROPIO** (la
+adjudicacion esta en la linea **5701**: el plan del lote `D` NO se reabre, y el acto
+CUENTA en la declaracion como cierre ENTERO). **Despues sigue el PREFIJO SIN SALTOS desde el `acto
+25`.**
+
+| | |
+|---|---|
+| **actos que cierran ENTEROS** | **6**: el **18**, **25**, **26**, **29** y **30** FUNDIDOS, y el **27** `DECLARADO Y NO FUNDIDO` |
+| **nodos del lote** | **22** |
+| **nodos que MUEREN** | **13** |
+| **vivos del catalogo** | de **3237** a **3224** |
+| **ficheros tocados** | **49** |
+| **piezas repartidas** | **78** (**14** viajan enteras, **58** ya estaban dichas) |
+| **EL TOPE DEL PREFIJO, y es ESTRUCTURAL** | el siguiente es el **acto 31**, que **TIENE DUENO** (`OP-F-04-WEI` y `OP-S-04`, medido hoy sobre el fichero fijado) y que **no trae ninguno de los cuatro motivos sellados** con los que podria cerrar `DECLARADO`: **no podria cerrar ENTERO**, y el contrato del lote es entregar lo declarado |
+
+**LAS FORMAS MEDIDAS DEL LOTE, y `P.8` aplicado en orden sobre cada una:**
+
+| acto | miembros | **FORMA medida** | cierra | **la letra que decide** |
+|---:|---:|---|---|---|
+| **18** | 4 | `EMPATE SIN VARA` | **FUNDIDO** | **ninguna vara apunta**: lo adjudico el auditor, y este plan EJECUTA esa adjudicacion |
+| **25** | 4 | `CONTENIDO EMPATA` | **FUNDIDO** | **el cableado DECIDE SOLO** y apunta a **la MISMA puerta** que la guarda `1B` obliga a conservar |
+| **26** | 4 | `CHOCAN` | **FUNDIDO** | **decide LA PIEZA DECLARADA**, y apunta al mismo nodo que la vara de pasos, el cableado y la puerta |
+| **27** | 4 | `TODAS DE ACUERDO` | **`DECLARADO Y NO FUNDIDO`** | **no llega a aplicarse: `P.10` detiene ANTES**, y la figura del inventario tambien |
+| **29** | 3 | `UNA SOLA VARA` | **FUNDIDO** | **una sola vara BASTA**: la de condiciones, con pasos y cableado empatados |
+| **30** | 3 | `CHOCAN` | **FUNDIDO** | **decide LA PIEZA DECLARADA**, y aqui la declaracion es **verbatim** del puesto **2838** |
+
+> **LA GUARDA `1B` MUERDE EN DOS ACTOS DE ESTE LOTE Y NO PARA NINGUNO**, que es la mitad de la letra
+> que menos se usa: el `acto 25` y el `acto 26` tienen **UNA** puerta cada uno, y con **UNA** puerta
+> el acto **si se funde y la puerta SOBREVIVE** (acta 54, pregunta 1), frente al caso de **DOS o
+> mas**, que cierra `DECLARADO` y esta registrado en la linea **4023**.
+
+### a) **EL `ACTO 18`: LA FUSION QUE EL EJECUTOR NO ELIGIO, Y LAS CINCO PIEZAS DEL ACTA CONSERVADAS LAS CINCO**
+
+**Es el cierre del carril del `EMPATE SIN VARA`** (registrado en la linea **5152** y
+estrenado sobre este mismo acto en la **5506**). **La vuelta 68 lo dejo `ABIERTO
+EN TRANSITO` sin elegir superviviente; el acta 68 adjudico `alianzas_cross_industry`; y esta vuelta
+ejecuta esa fusion.** **El ejecutor no re-decidio nada: reparte.**
+
+**`P.5`, contestada sobre el texto estable: ES UNA FAMILIA**, los cuatro del mismo libro (*The Green
+to Gold Business Play*, de Esty), con **tres pares internos leidos y los tres en `A`** (puestos
+**1797**, **1871** y **1903**), **cero `D`**, **cero nodos puente** y **cero triangulos**.
+
+**LAS CINCO PIEZAS QUE EL ACTA MANDO CONSERVAR O SELLAR QUEDAN LAS CINCO CONSERVADAS**, y ninguna
+sellada como perdida:
+
+| pieza nombrada por el acta 68 | de donde sale | **como se conserva** |
+|---|---|---|
+| publicar y monitorear el cumplimiento colectivo | `co_opetition_industria`, paso 4 | **`APPEND`** |
+| aplicar el estandar conjunto a los proveedores compartidos | `trabajo_colectivo_estandares_industria`, paso 4 | **`APPEND`** |
+| el marco nombrado *Responsible Care* | `trabajo_colectivo_estandares_industria`, paso 3 | **`APPEND`** |
+| el encuadre por riesgo reputacional compartido | `trabajo_colectivo_estandares_industria`, condicion 1 | **`APPEND`** |
+| el test del poder de mercado **como arranque explicito** | `colaboracion_sectorial`, paso 1 | **`INCISO` ADOSADO AL PASO 1**, que es **la unica forma de que siga siendo un arranque**: un `APPEND` lo habria puesto al final |
+
+**El nodo crece de 4 pasos a 7 y de 2 condiciones a 4.** **EL REPARTO,
+PIEZA POR PIEZA, GENERADO DEL PLAN SELLADO:**
+
+| pieza del que muere | marca | a donde va |
+|---|---|---|
+| paso **1** de `co_opetition_industria` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **2** de `co_opetition_industria` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **3** de `co_opetition_industria` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **4** de `co_opetition_industria` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `co_opetition_industria` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `co_opetition_industria` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **1** de `colaboracion_sectorial` | `INCISO` | **`INCISO` ADOSADO** al paso 1: *si la empresa tiene suficiente poder de mercado para exigir cambios individualmente* |
+| paso **2** de `colaboracion_sectorial` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **3** de `colaboracion_sectorial` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **4** de `colaboracion_sectorial` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| condicion **1** de `colaboracion_sectorial` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `colaboracion_sectorial` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **1** de `trabajo_colectivo_estandares_industria` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **2** de `trabajo_colectivo_estandares_industria` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **3** de `trabajo_colectivo_estandares_industria` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `trabajo_colectivo_estandares_industria` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `trabajo_colectivo_estandares_industria` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **2** de `trabajo_colectivo_estandares_industria` | `APPEND` | **viaja ENTERA** al superviviente |
+
+| absorbido | pasos | condiciones | enteras | ya dichas | de `INCISO` |
+|---|---:|---:|---:|---:|---:|
+| `co_opetition_industria` | 4 | 2 | 1 | 5 | 0 |
+| `colaboracion_sectorial` | 4 | 2 | 0 | 5 | 1 |
+| `trabajo_colectivo_estandares_industria` | 4 | 2 | 4 | 2 | 0 |
+| **los 3 juntos** | **12** | **6** | **5** | **12** | **1** |
+
+**LAS PERDIDAS SELLADAS EN CAMPO PROPIO, recortadas enteras de la salida del tallador:**
+
+| plan | acto | especie | que se pierde | donde vive | enrutada a |
+|---|---:|---|---|---|---|
+| PLAN_V69_OPU02_LOTE_E.json | 18 | DE PARAMETRO DE PASO | EL CANAL DE LA CONVOCATORIA: convocar MEDIANTE LAS ASOCIACIONES INDUSTRIALES EXISTENTES, que la razon del puesto 1797 llama la unica linea que dice por donde se convoca sin que parezca acuerdo entre competidores. El paso 2 del superviviente manda BUSCAR COALICIONES EXISTENTES o formar una nueva, que es el mismo terreno visto desde quien se suma y no desde quien convoca. ATENUANTE DECLARADO: ese paso 2 trae ademas los nombres propios de las coaliciones, asi que el sitio donde buscarlas no se pierde. UNA SOLA PIEZA CON DOS SEDES, sellada una vez con las dos nombradas (acta 67, D10) | paso 2 de co_opetition_industria y paso 2 de colaboracion_sectorial | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V69_OPU02_LOTE_E.json | 18 | DE PARAMETRO DE PASO | las METAS COMPARTIDAS DE DESEMPENO AMBIENTAL, o sea la parte MEDIBLE del pacto. El paso 3 del superviviente define ESTANDARES COMUNES DE CONDUCTA social y ambiental para toda la industria, que es la regla, pero en ningun paso pide metas de desempeno contra las que medirse | paso 3 de co_opetition_industria | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V69_OPU02_LOTE_E.json | 18 | DE PARAMETRO DE PASO | las METRICAS Y COMPROMISOS CONJUNTOS para los proveedores comunes, dichos como definicion propia. ATENUANTE DECLARADO, Y ES LA ESPECIE DEL PENDIENTE 4: el APPEND del paso 4 de trabajo_colectivo_estandares_industria manda APLICAR EL ESTANDAR CONJUNTO A PROVEEDORES COMPARTIDOS, o sea que la palanca hacia arriba en la cadena llega entera por el hermano; lo que no llega es la palabra METRICAS | paso 4 de colaboracion_sectorial | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V69_OPU02_LOTE_E.json | 18 | DE PARAMETRO DE PASO | el RIESGO REPUTACIONAL COMPARTIDO dicho como PRIMER PASO, o sea como test de arranque y no como disparador. ATENUANTE DECLARADO, Y ES LA ESPECIE DEL PENDIENTE 4: el encuadre llega entero por el APPEND de la condicion 1 de este mismo nodo, pero cambia de sitio, de paso a condicion | paso 1 de trabajo_colectivo_estandares_industria | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V69_OPU02_LOTE_E.json | 18 | DE CONDICIONES | la CRISIS REGULATORIA compartida como disparador. La mitad reputacional de esa condicion llega entera por el APPEND de la condicion 1 de trabajo_colectivo_estandares_industria; lo que se pierde es la palabra REGULATORIA, que es el unico sitio del acto donde el disparador es el regulador y no el mercado ni la prensa | condicion 1 de co_opetition_industria | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V69_OPU02_LOTE_E.json | 18 | DE CONDICIONES | las ECONOMIAS DE ESCALA en la colaboracion sectorial como disparador. Las dos condiciones del superviviente miran la DEBILIDAD (el poder de compra individual insuficiente) y el PROBLEMA (el desafio sistemico); ninguna mira el AHORRO de hacerlo juntos | condicion 2 de colaboracion_sectorial | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V69_OPU02_LOTE_E.json | 18 | DE CONDICIONES | el alcance del test sobre los PROVEEDORES: no tener poder individual SOBRE PROVEEDORES. La condicion 1 del superviviente mide el poder de compra sobre EL MERCADO, que es mas ancho y por eso no dice lo mismo. ATENUANTE DECLARADO Y MEDIDO: el INCISO al paso 1 de este mismo acto adosa el test del poder de mercado VERBATIM como arranque, asi que el test no se pierde; lo que se pierde es el objeto proveedores | condicion 1 de colaboracion_sectorial | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+
+### b) **EL `ACTO 25`: LA PUERTA SOBREVIVE, Y ESTA FUSION FABRICA DOS COLISIONES DE CLASE**
+
+**`P.5`, contestada: ES UNA FAMILIA, y es el acto MEJOR LEIDO del prefijo**: cuatro miembros del
+mismo libro (*SPIN Selling*, de Rackham), **CINCO pares internos leidos de seis y los CINCO en `A`**
+(puestos **209**, **278**, **303**, **800** y **862**), cero `D`, cero puentes, cero triangulos. **La
+cuarta membresia la declara el archivo y no el ejecutor**: el **800** dice que **la familia no es de
+tres sino de CUATRO** y que el cuarto puro queda degradado a sub-puro, y el **862** la deja en cinco
+de seis.
+
+**EL RACIMO CENSADO NO SE PARTE, Y ESO SE MIDE:** el racimo *La etapa de investigacion en la venta*
+de `docs/RACIMOS_MIEMBROS.jsonl` tiene nomina de **TRES** y **los TRES estan DENTRO de este acto**:
+el racimo cabe entero en el acto y esta fusion no lo corta por ningun sitio.
+
+**LA PUERTA:** `enfoque_etapa_investigacion` **es puerta**, medido contra el universo protegido de
+**256** ids, **y es UNA sola**, asi que **sobrevive**. **El cableado apunta al MISMO nodo** (6 contra
+un maximo de 3), o sea que **no hay choque que resolver**, y se dice para que nadie tenga que
+reconstruirlo.
+
+**El nodo crece de 4 pasos a 6 y se queda en 2 condiciones.** **CERO `INCISO` y
+es por la puntuacion**: los cuatro pasos del superviviente terminan en punto y la guarda de la
+**JUNTURA ROTA** los habria rechazado. **CERO perdidas `DE CONDICIONES`, y se dice en vez de
+callarlo.**
+
+| pieza del que muere | marca | a donde va |
+|---|---|---|
+| paso **1** de `etapa_de_investigacion` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **2** de `etapa_de_investigacion` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **3** de `etapa_de_investigacion` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `etapa_de_investigacion` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| condicion **1** de `etapa_de_investigacion` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **1** de `etapa_investigacion_ventas` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **2** de `etapa_investigacion_ventas` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **3** de `etapa_investigacion_ventas` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| paso **4** de `etapa_investigacion_ventas` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| condicion **1** de `etapa_investigacion_ventas` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| condicion **2** de `etapa_investigacion_ventas` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **1** de `investigacion_como_habilidad_clave` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **2** de `investigacion_como_habilidad_clave` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **3** de `investigacion_como_habilidad_clave` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `investigacion_como_habilidad_clave` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| condicion **1** de `investigacion_como_habilidad_clave` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `investigacion_como_habilidad_clave` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+
+| absorbido | pasos | condiciones | enteras | ya dichas | de `INCISO` |
+|---|---:|---:|---:|---:|---:|
+| `etapa_de_investigacion` | 4 | 1 | 1 | 4 | 0 |
+| `etapa_investigacion_ventas` | 4 | 2 | 0 | 6 | 0 |
+| `investigacion_como_habilidad_clave` | 4 | 2 | 1 | 5 | 0 |
+| **los 3 juntos** | **12** | **5** | **2** | **15** | **0** |
+
+| plan | acto | especie | que se pierde | donde vive | enrutada a |
+|---|---:|---|---|---|---|
+| PLAN_V69_OPU02_LOTE_E.json | 25 | DE PARAMETRO DE PASO | EL NIVEL DE EQUIPO: que la prioridad de las preguntas sobre la presentacion sea una decision de DESARROLLO DE HABILIDADES del equipo comercial y no solo de la planificacion de la llamada propia. El paso 1 del superviviente manda dedicar mas tiempo a disenar preguntas que a preparar el discurso de producto, que es la misma prioridad dicha para una sola cabeza. ATENUANTE DECLARADO: el paso 4 del superviviente si ordena el ENTRENAMIENTO, primero Situacion y Problema y despues Implicacion y Necesidad-beneficio, asi que el nivel de equipo asoma por ahi aunque no acompane a la prioridad | paso 1 de etapa_investigacion_ventas | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V69_OPU02_LOTE_E.json | 25 | DE PARAMETRO DE PASO | entrenar al equipo en preguntas que revelen NECESIDADES OCULTAS. El paso 4 del superviviente entrena por TIPO de pregunta (Situacion, Problema, Implicacion, Necesidad-beneficio) y no por lo que la pregunta tiene que sacar a la luz. ATENUANTE DECLARADO, Y ES LA ESPECIE DEL PENDIENTE 4: lo de los problemas que el cliente no dice llega entero por el APPEND del paso 3 de investigacion_como_habilidad_clave, que es su hermano en este mismo acto | paso 3 de etapa_investigacion_ventas | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V69_OPU02_LOTE_E.json | 25 | DE PARAMETRO DE PASO | EL CONOCIMIENTO TECNICO DEL PRODUCTO COMO SUSTITUTO DE INDAGAR, nombrado. El paso 2 del superviviente prohibe MOSTRAR BENEFICIOS O CAPACIDADES antes de desarrollar el problema, que es la conducta, pero no nombra la causa que el absorbido si nombra: apoyarse en lo que uno sabe del producto. La razon del puesto 862 declara este gesto COMUN a los dos nodos; el texto del superviviente no lo dice, y PARA EL REPARTO MANDA EL TEXTO (acta 55, pregunta 3) | paso 2 de investigacion_como_habilidad_clave | la fase 04, que redacta y afina los pasos del superviviente |
+
+> **LO QUE ESTA FUSION CUESTA, Y VA EN SU PROPIO APARTADO PORQUE ES LO MAS CARO DEL LOTE:** **fabrica
+> DOS colisiones de clase**, predichas antes de tocar un nodo y publicadas en el apartado g).
+
+### c) **EL `ACTO 26`: EL PRIMER `CHOCAN` DEL TRAMO QUE LLEGA A FUNDIRSE, Y EL NODO MAS GRANDE**
+
+**`P.5`, contestada con la razon que la cerro delante: ES UNA FAMILIA.** Tres pares internos leidos y
+los tres en `A` (puestos **230**, **381** y **839**), cero `D`, cero puentes, cero triangulos. **Son
+DOS libros distintos** (*Change by Design* de Brown y *Winning at New Products* de Cooper) **y eso NO
+parte la familia**: el **839** es justamente **el par que CRUZA las dos parejas ya declaradas** y
+dice con todas sus letras que son **CUATRO nodos del mismo instrumento y no dos parejas vecinas**.
+
+**LA FORMA ES `CHOCAN` Y DECIDE LA PIEZA DECLARADA:** la vara de PASOS apunta a
+`investigacion_etnografica_ideacion` (6 contra 5) y la de CONDICIONES al otro lado (3 contra 2).
+**Las otras dos cuentas apuntan al mismo sitio que los pasos**: el cableado (14 contra 8) **y la
+puerta**, que aqui vuelve a ser UNA sola y sobrevive. **Este `CHOCAN` no deja residuo.**
+
+**El nodo crece de 6 pasos a 9 y de 2 condiciones a 3.** **NUEVE PASOS
+IGUALA AL NODO MAS GRANDE QUE ESTE TRAMO HA PRODUCIDO** y va dicho en vez de maquillado. **UN solo
+`INCISO`, al paso 2**: *deputizar*, que es un **parametro** de la observacion que el superviviente ya
+manda hacer, no un gesto aparte.
+
+| pieza del que muere | marca | a donde va |
+|---|---|---|
+| paso **1** de `etnografia_aplicada_en_equipos_multidisciplinarios` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **2** de `etnografia_aplicada_en_equipos_multidisciplinarios` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **3** de `etnografia_aplicada_en_equipos_multidisciplinarios` | `INCISO` | **`INCISO` ADOSADO** al paso 2: *a líderes o clientes (deputizar) en la observación de campo para generar empatía directa* |
+| paso **4** de `etnografia_aplicada_en_equipos_multidisciplinarios` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| condicion **1** de `etnografia_aplicada_en_equipos_multidisciplinarios` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **2** de `etnografia_aplicada_en_equipos_multidisciplinarios` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **1** de `etnografia_de_proyecto` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| paso **2** de `etnografia_de_proyecto` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **3** de `etnografia_de_proyecto` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `etnografia_de_proyecto` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **5** de `etnografia_de_proyecto` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `etnografia_de_proyecto` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `etnografia_de_proyecto` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **1** de `etnografia_investigacion_usuario` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **2** de `etnografia_investigacion_usuario` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **3** de `etnografia_investigacion_usuario` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **4** de `etnografia_investigacion_usuario` | `CUBIERTO` | ya lo dice el **paso 6** del superviviente |
+| paso **5** de `etnografia_investigacion_usuario` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| condicion **1** de `etnografia_investigacion_usuario` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `etnografia_investigacion_usuario` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| condicion **3** de `etnografia_investigacion_usuario` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+
+| absorbido | pasos | condiciones | enteras | ya dichas | de `INCISO` |
+|---|---:|---:|---:|---:|---:|
+| `etnografia_aplicada_en_equipos_multidisciplinarios` | 4 | 2 | 2 | 3 | 1 |
+| `etnografia_de_proyecto` | 5 | 2 | 2 | 5 | 0 |
+| `etnografia_investigacion_usuario` | 5 | 3 | 0 | 8 | 0 |
+| **los 3 juntos** | **14** | **7** | **4** | **16** | **1** |
+
+| plan | acto | especie | que se pierde | donde vive | enrutada a |
+|---|---:|---|---|---|---|
+| PLAN_V69_OPU02_LOTE_E.json | 26 | DE PARAMETRO DE PASO | LA INMERSION PROFUNDA como forma de la observacion: convivencia y estadias EN LUGAR DE entrevistas puntuales. El paso 2 del superviviente manda observar durante un PERIODO EXTENDIDO, que es duracion y no convivencia, y su paso 5 empuja en el sentido contrario, REDUCIR EL TIEMPO POR VISITA si hace falta. ATENUANTE DECLARADO: el periodo extendido del paso 2 conserva la mitad larga de la pieza | paso 2 de etnografia_aplicada_en_equipos_multidisciplinarios | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V69_OPU02_LOTE_E.json | 26 | DE PARAMETRO DE PASO | CONSTRUIR CONFIANZA CON LAS COMUNIDADES ESTUDIADAS antes de extraer conclusiones de diseno, dicho sobre COMUNIDADES y no sobre sujetos. ATENUANTE DECLARADO, Y ES LA ESPECIE DEL PENDIENTE 4: el gesto llega entero por el APPEND del paso 5 de etnografia_de_proyecto, que lo dice sobre LOS SUJETOS OBSERVADOS; lo que no llega es la palabra COMUNIDADES | paso 4 de etnografia_aplicada_en_equipos_multidisciplinarios | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V69_OPU02_LOTE_E.json | 26 | DE PARAMETRO DE PASO | ENSAMBLAR UN EQUIPO CROSS-DISCIPLINARIO con perfiles tecnicos y sociales. El paso 4 del superviviente CAPACITA al equipo observador en escucha e inferencia, que es entrenar a quien ya esta, no elegir de que esta hecho. ATENUANTE DECLARADO, Y ES LA ESPECIE DEL PENDIENTE 4: la composicion mixta llega entera y con mas detalle por el APPEND del paso 1 de etnografia_aplicada_en_equipos_multidisciplinarios | paso 1 de etnografia_de_proyecto | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V69_OPU02_LOTE_E.json | 26 | DE PARAMETRO DE PASO | DEPUTIZAR dicho por segunda vez, con la palabra CONSIDERAR delante y sobre CLIENTES O EJECUTIVOS PROPIOS. ATENUANTE DECLARADO Y MEDIDO: el INCISO al paso 2 de este mismo acto adosa VERBATIM el deputizar del hermano, asi que la pieza NO se pierde de hecho; se sella igual porque el sello es del reparto y no del resultado (acta 68, D10) | paso 4 de etnografia_de_proyecto | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V69_OPU02_LOTE_E.json | 26 | DE PARAMETRO DE PASO | OBSERVAR SIN INTERFERIR. El paso 2 del superviviente manda observar DIRECTAMENTE a los usuarios usando o mal usando el producto, y recoge por tanto el mal uso, pero en ningun sitio dice que el observador no intervenga. Es la unica linea del acto que pone una regla sobre la conducta DEL OBSERVADOR, y el puesto 839 la nombra como lo propio de etnografia_investigacion_usuario | paso 2 de etnografia_investigacion_usuario | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V69_OPU02_LOTE_E.json | 26 | DE PARAMETRO DE PASO | LA TIPOLOGIA DE LO QUE SE DOCUMENTA: problemas FISICOS, EMOCIONALES Y CONTEXTUALES. El paso 3 del superviviente documenta problemas, quejas y comportamientos no verbalizados, que es una lista distinta y sin el eje emocional. El puesto 839 la nombra tambien como propia | paso 3 de etnografia_investigacion_usuario | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V69_OPU02_LOTE_E.json | 26 | DE CONDICIONES | LA NECESIDAD DE CONFIANZA PROFUNDA con los usuarios ANTES de disenar, como disparador. Es el disparador propio del paso de confianza que este mismo acto adosa por APPEND, y ninguna de las dos condiciones del superviviente lo recoge | condicion 2 de etnografia_aplicada_en_equipos_multidisciplinarios | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V69_OPU02_LOTE_E.json | 26 | DE CONDICIONES | EL CONTEXTO FISICO COMPLEJO (campo, hospital, fabrica) como disparador. El paso 1 del superviviente nombra esos mismos sitios como EJEMPLO de donde observar, pero como PASO y no como condicion: el acto pierde el CUANDO y conserva el DONDE. ATENUANTE DECLARADO Y MEDIDO: los tres sitios estan escritos verbatim en el paso 1 del superviviente | condicion 3 de etnografia_investigacion_usuario | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+
+### d) **LOS `ACTOS 29` Y `30`: EL MAS BARATO DEL LOTE Y EL MAS RARO DEL TRAMO**
+
+**EL `ACTO 29`, la familia del avance contra la continuacion.** `P.5`: **ES UNA FAMILIA**, los tres
+del mismo libro, dos pares leidos y los dos en `A` (puestos **220** y **482**). **FORMA `UNA SOLA
+VARA`**: pasos y cableado empatan y **la de CONDICIONES apunta**, y **una sola vara BASTA**. El nodo
+crece de 4 pasos a 6.
+
+> **EL RACIMO CENSADO SI SE TOCA AQUI, Y SE DECLARA EN VEZ DE CALLARSE.** El racimo *El avance y el
+> compromiso en la venta* tiene nomina censada de **CINCO** y este acto contiene **DOS** de ellos.
+> **Los otros TRES no se tocan y tienen casa propia MEDIDA**: `INVENTARIO.jsonl` trae la entrada
+> racimo *el compromiso contado tres veces*, **forma `PURO`, estado sano y forma cerrada**, con
+> nomina de exactamente esos tres. **El censo de cinco del cribado ya estaba PARTIDO en el inventario
+> en un `PURO` de tres mas dos sueltos, y esta fusion opera sobre los DOS SUELTOS.**
+
+**EL `ACTO 30`, la familia del viaje diagnostico de Juran.** `P.5`: **ES UNA FAMILIA**, los tres de
+la misma fuente, dos pares leidos y los dos en `A` (puestos **2600** y **2838**). **FORMA `CHOCAN`**,
+con el cableado **empatado** (o sea que ni podria desempatar si le tocara), **y decide LA PIEZA
+DECLARADA**: el **2838** dice `A` **POR CONTENCION** y cierra con la frase *superviviente
+viaje_diagnostico_remedial*, verbatim.
+
+> **CUATRO `INCISO` EN UN SOLO ACTO, QUE ES LA CIFRA MAS ALTA DE LA CAMPANA**, y **ninguno apilado
+> sobre el mismo paso**. **La razon esta medida y no es de gusto:** el superviviente ya trae ocho
+> pasos y las cuatro piezas propias del absorbido **no son gestos nuevos sino PARAMETROS DE RIGOR** de
+> gestos que el superviviente ya manda hacer (el Pareto, los diagramas causa-efecto, la recoleccion
+> disenada para correlacionar y la validacion estadistica). **Los cuatro pasos que reciben `INCISO`
+> no terminan en punto**, asi que la guarda de la **JUNTURA ROTA** no salta en ninguno. El nodo se
+> queda en 8 pasos y crece de 1 condicion a 2.
+
+| pieza del que muere | marca | a donde va |
+|---|---|---|
+| paso **1** de `advances_vs_continuations` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **2** de `advances_vs_continuations` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **3** de `advances_vs_continuations` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **4** de `advances_vs_continuations` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| condicion **1** de `advances_vs_continuations` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **1** de `objetivos_de_llamada_orientados_a_avance` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **2** de `objetivos_de_llamada_orientados_a_avance` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **3** de `objetivos_de_llamada_orientados_a_avance` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `objetivos_de_llamada_orientados_a_avance` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **1** de `objetivos_de_llamada_orientados_a_avance` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+
+| absorbido | pasos | condiciones | enteras | ya dichas | de `INCISO` |
+|---|---:|---:|---:|---:|---:|
+| `advances_vs_continuations` | 4 | 1 | 0 | 5 | 0 |
+| `objetivos_de_llamada_orientados_a_avance` | 4 | 1 | 2 | 3 | 0 |
+| **los 2 juntos** | **8** | **2** | **2** | **8** | **0** |
+
+| plan | acto | especie | que se pierde | donde vive | enrutada a |
+|---|---:|---|---|---|---|
+| PLAN_V69_OPU02_LOTE_E.json | 29 | DE PARAMETRO DE PASO | EL DESCARTE DE LOS OBJETIVOS VAGOS dicho por segunda vez, con RECOPILAR INFORMACION y CONSTRUIR RELACION nombrados. El paso 3 del superviviente disena la siguiente interaccion con el objetivo explicito de lograr una accion medible, o sea que manda lo que SI hay que hacer, pero no nombra lo que NO cuenta. ATENUANTE DECLARADO, Y ES LA ESPECIE DEL PENDIENTE 4: el descarte llega entero, con los dos ejemplares nombrados, por el APPEND del paso 2 de objetivos_de_llamada_orientados_a_avance, que es su hermano en este mismo acto | paso 2 de advances_vs_continuations | la fase 04, que redacta y afina los pasos del superviviente |
+
+| pieza del que muere | marca | a donde va |
+|---|---|---|
+| paso **1** de `analisis_causa_raiz_diagnostico` | `INCISO` | **`INCISO` ADOSADO** al paso 1: *análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)* |
+| paso **2** de `analisis_causa_raiz_diagnostico` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **3** de `analisis_causa_raiz_diagnostico` | `INCISO` | **`INCISO` ADOSADO** al paso 3: *que permita correlacionar cada teoría con el defecto observado* |
+| paso **4** de `analisis_causa_raiz_diagnostico` | `INCISO` | **`INCISO` ADOSADO** al paso 4: *estadísticamente cuál teoría explica la mayoría de los casos* |
+| paso **5** de `analisis_causa_raiz_diagnostico` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| condicion **1** de `analisis_causa_raiz_diagnostico` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `analisis_causa_raiz_diagnostico` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **1** de `analisis_diagnostico_causa` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **2** de `analisis_diagnostico_causa` | `INCISO` | **`INCISO` ADOSADO** al paso 2: *usando brainstorming y diagramas causa-efecto* |
+| paso **3** de `analisis_diagnostico_causa` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **4** de `analisis_diagnostico_causa` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| condicion **1** de `analisis_diagnostico_causa` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+
+| absorbido | pasos | condiciones | enteras | ya dichas | de `INCISO` |
+|---|---:|---:|---:|---:|---:|
+| `analisis_causa_raiz_diagnostico` | 5 | 2 | 1 | 3 | 3 |
+| `analisis_diagnostico_causa` | 4 | 1 | 0 | 4 | 1 |
+| **los 2 juntos** | **9** | **3** | **1** | **7** | **4** |
+
+| plan | acto | especie | que se pierde | donde vive | enrutada a |
+|---|---:|---|---|---|---|
+| PLAN_V69_OPU02_LOTE_E.json | 30 | DE PARAMETRO DE PASO | LA PARADA EXPLICITA ANTES DEL REMEDIO: confirmar la causa raiz ANTES de disenar el remedio, dicho como orden y no solo como orden de los pasos. Es la frase que el puesto 2838 usa para separar los dos viajes, y el superviviente conserva el ORDEN (su paso 4 establece la causa y su paso 5 disena remedios) pero pierde la PROHIBICION de adelantarse. ATENUANTE DECLARADO: el orden de los ocho pasos del superviviente hace lo mismo de hecho, aunque sin decirlo | paso 5 de analisis_causa_raiz_diagnostico | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V69_OPU02_LOTE_E.json | 30 | DE PARAMETRO DE PASO | EL DIAGRAMA CAUSA-EFECTO, el de Ishikawa, que es la perdida que el puesto 2600 nombro por su nombre al declarar aquel par: la herramienta que un dueno sin estadistica puede usar para el mismo paso de generar teorias. ATENUANTE DECLARADO Y MEDIDO: el INCISO al paso 2 de este mismo acto adosa VERBATIM USANDO BRAINSTORMING Y DIAGRAMAS CAUSA-EFECTO, asi que la pieza NO se pierde de hecho; se sella igual porque el sello es del reparto y no del resultado (acta 68, D10), y porque la perdida la nombro una razon publicada y una perdida publicada que desaparece sin decirlo es peor que una sellada de mas | paso 2 de analisis_diagnostico_causa | la fase 04, que redacta y afina los pasos del superviviente |
+
+### e) **EL `ACTO 27`: `DECLARADO Y NO FUNDIDO` POR `P.10`, CON LA `ESTRELLA` ENCIMA**
+
+**Es la forma mas limpia del prefijo y aun asi NO se funde**, que es exactamente lo que `P.10`
+existe para hacer: las tres cuentas apuntan al mismo nodo y **`P.10` detiene ANTES**.
+
+**Y ES LA MISMA FORMA DEL `ACTO 24` DE LA VUELTA 68** (registrado en la linea
+**5396**): **el nodo puente que `P.10` detecta ES el centro de una figura
+declarada del inventario**, y una fusion entera deprecaria a la vez el centro y sus perifericos.
+
+| | |
+|---|---|
+| **acto** | **27** del `orden_universo` |
+| **MOTIVO SELLADO DEL CIERRE** | **`P.10`**, con su triangulo MEDIDO (el carril registrado en la linea **3744**), **mas el ejemplar de la figura `ESTRELLA (9.23)` que una fusion entera borraria**, que es la misma forma del `acto 24` de la vuelta 68 |
+| **miembros** | **4**, y **NINGUNO se toca** |
+| **combinaciones internas** | 6 |
+| **pares `A` internos** | 3 |
+| **pares `D` internos** | **1**, leidos y declarados DISTINTOS |
+| **pares sin veredicto escrito** | 2 |
+| **NODOS PUENTE** | **1** |
+| **TRIANGULOS PUENTE** (`A` mas `A` mas `D`) | **1** |
+| **PUERTAS dentro del acto** | **NINGUNA**, la guarda `1B` pasa por vacio y se dice |
+| **puestos de los `D` internos** | **572** |
+| **duenos medidos hoy en el fichero del tramo** | **NINGUNO**, los dos campos vacios |
+| **figura del inventario de la que es ejemplar** | **ESTRELLA (9.23), ejemplar 4, la fase de diseno**, y su centro es el MISMO nodo puente que `P.10` detecto |
+| **instrumento** | [`../loop/SALIDA_V69_PUENTES_TRAMO.txt`](../loop/SALIDA_V69_PUENTES_TRAMO.txt) |
+| **dossier `P.5`** | [`../loop/SALIDA_V69_DOSSIER_LOTE_E.txt`](../loop/SALIDA_V69_DOSSIER_LOTE_E.txt) |
+
+> **LA LECTURA QUE UNA FUSION ENTERA DESMENTIRIA:** el **572** se titula *EL HIJO CON CASA PROPIA* y
+> dice que `prototipado_modelos_negocio` **desarrolla el paso 5** de `proceso_ideacion_modelo_negocio`
+> y le anade lo suyo entero, mientras **la madre se queda con lo suyo**. **Fundir los cuatro a un
+> vivo unico deprecaria los dos extremos de ese `D` contra el mismo superviviente y sellaria que
+> repiten entre si**, que es lo que esa lectura niega, y ademas es **una cadena de TRES PISOS** que el
+> propio **572** cuenta al cerrar. **Los radios de la estrella son los puestos 507 y 641**, y el
+> cuarto miembro, de otro libro, entra por el **1056**.
+
+**El acto queda VIVO Y ENTERO. Su destino comparte carril con el pendiente del subconjunto cerrado:
+el cierre de la fase 03.**
+
+### f) **LAS GUARDAS DE LA OPERACION, LEIDAS DE LAS SALIDAS Y NO AFIRMADAS**
+
+| guarda | resultado, extraido por aguja de su salida |
+|---|---|
+| **guardas 1, 1B, 2 y 3** | **VERDES en las CINCO fusiones**: miembros vivos y nomina completa, ningun absorbido es puerta, cobertura exacta de indices y cero repetidos literales |
+| **`P.16`, quien fabrica limpia en el mismo commit** | **5** duplicadas fabricadas y limpiadas en la misma corrida; **1** auto-arista retirada; el pasivo propio de la guarda baja de **890** a **889** |
+| **guarda A** (cero auto-aristas nuevas) y **guarda B** (cero duplicadas nuevas tras resolver) | **las dos `OK`** |
+| **guarda C** (los campos que esta operacion NO redacta, intactos) | **25 de 25** |
+| **guarda D** (los absorbidos conservan su texto INTACTO) | **`OK` sobre los 13** |
+| **redirecciones sobre nodos vivos** | **38** |
+| **reanclaje**, corrido **ENTRE** la fusion y `run_phase1` | **NADA QUE RE-ANCLAR**, y se corrio igual, que es lo que la guarda pide |
+| **diff independiente de duplicadas**, con la apertura sacada de `git` | **FABRICADOS 0**, **RENOMBRADOS 0**, y **913** grupos pasan a **912** |
+| **Gate 0 con su ciclo de TRES** | **`OK`**: **3224** activos y **629** deprecados, alcanzabilidad 100,0 por ciento; **SIN cuarta corrida** |
+| **las tres suites** | motor **25/25**, web **80 ficheros y 1030 pasadas**, `tsc` **CERO lineas** |
+
+**LAS PERDIDAS DEL LOTE, CONTADAS POR MAQUINA Y NO DE MEMORIA**, que es la regla que sale de la caida
+del `D9` de la vuelta 68 y que esta pagina registro en la linea **5610**:
+
+| | contado sobre el plan sellado |
+|---|---:|
+| **perdidas selladas en campo propio** | **21** |
+| de ellas `DE PARAMETRO DE PASO` | **16** |
+| de ellas `DE CONDICIONES` | **5** |
+| **filas con `ATENUANTE DECLARADO`** | **14** |
+| de ellas, de la **especie del pendiente 4** | **6** |
+| de ellas, con **`ATENUANTE DECLARADO Y MEDIDO`** | **4** |
+| **filas con DOS SEDES en el campo `donde`** | **1** (el carril de la linea **5114**) |
+| la aritmetica de **la lectura contraria** (una fila por SITIO y no por PIEZA) | **22** y no **21** |
+
+### g) **LAS DOS COLISIONES DE CLASE QUE ESTA VUELTA FABRICA, PREDICHAS ANTES DE TOCAR UN NODO Y PUBLICADAS EN ROJO CON SU DUENA**
+
+**Es la pieza mas delicada del lote y por eso va en su propio apartado.** **La fusion del `acto 25`
+fabrica DOS colisiones**, y **el carril esta escrito** en la linea **4542**: *la duena
+es quien la fabrica*, la colision **nace de una sustitucion de `OP-U-02`, esta predicha en su plan y
+se publica en rojo con dueno nombrado**.
+
+| | medido |
+|---|---:|
+| **linea base declarada y MEDIDA sobre el arbol de antes** | **4** |
+| **colisiones NUEVAS que la fusion fabricaria** | **2** |
+| colisiones que desaparecerian | 0 |
+| **ESPERADAS TRAS FUNDIR** | **6** |
+| **MEDIDAS al cierre por el censo** | **6** |
+| **`CALZA`** | **`SI`** |
+| auto-pares al cierre | **268** |
+
+**LAS DOS, NOMBRADAS UNA A UNA CON SUS PUESTOS PARA QUE EL CENSO SE PUEDA COTEJAR SIN ABRIR OTRO
+FICHERO:**
+
+| colision nueva | clases | **de donde sale** |
+|---|---|---|
+| `cuatro_etapas_llamada_de_ventas` contra `enfoque_etapa_investigacion` | **`B`** contra **`D`** | el **775** dice `B` contra el superviviente; el **202** y el **1364** dicen `D` contra dos absorbidos, y al resolver los tres al mismo vivo las lecturas chocan |
+| `enfoque_etapa_investigacion` contra `modelo_spin_preguntas` | **`B`** contra **`D`** | el **648** y el **769** dicen `B`; el **1422** dice `D` contra un absorbido |
+
+> **LAS DOS SON LA MISMA ESPECIE, y se dice porque explica el choque**: **el marco entero contra una
+> de sus etapas**. Contra el superviviente la lectura dijo `B` (dos caras del mismo asunto) y contra
+> los absorbidos dijo `D` (el todo no repite la parte). **La fusion junta las tres lecturas en un
+> solo par y el choque se vuelve visible.**
+>
+> **LA LINEA BASE OPERATIVA DEL CENSO PASA DE 4 A 6**, y **eso NO se adjudica
+> aqui**: la base vigente esta escrita en la linea **4542**, la anterior se movio por
+> adjudicacion del auditor, y esta se le sube **COMO PREGUNTA** en el reporte de esta vuelta. **Las
+> dos de la mesa `OP-M-03` no se tocan y las dos viejas de `OP-U-02` siguen vigentes con su duena.**
+
+### h) **LO QUE QUEDA DEL TRAMO AL CIERRE DE ESTE LOTE, MEDIDO Y NO ARRASTRADO**
+
+| | |
+|---|---:|
+| actos del tramo unico | **47** |
+| cerrados por los lotes `A` a `D` | **20** |
+| **cerrados por el lote `E`** | **6** (5 fundidos, 1 declarado) |
+| **quedan** | **21 actos** |
+| **nodos que quedan** | **63** |
+| **el siguiente del prefijo** | el acto **31**, **con dueno** |
+| de los que quedan, **con nodo puente** | **0** |
+| de los que quedan, **con par `D` interno** | **0** |
+| de los que quedan, **con dueno medido** | **2** |
+| **actos declarados que esperan el cierre de la fase 03** | **14** |
+| actos (componentes) al cierre | **67** |
+| actos `ABIERTOS` al cierre | **41** sobre **181** nodos |
+
+> **UN HECHO MEDIDO QUE CAMBIA LO QUE VIENE:** **de los 21 actos que quedan, NINGUNO
+> trae nodo puente y NINGUNO trae par `D` interno**. **Todos los actos con puente del tramo estan ya
+> cerrados**, y con ellos el motivo sellado de `P.10` (linea **3744**) y el cuarto
+> motivo (linea **5121**) **se quedan sin sujeto en lo que resta del tramo**. Lo que
+> queda son actos de tres miembros con dos pares `A` leidos y uno sin veredicto.
+
+### i) **LO QUE ESTE REGISTRO NO HACE**
+
+**NO toca ni una cifra publicada arriba**, **NO deshace ninguna fusion**, **NO re-lee ni un veredicto
+de las colisiones vigentes**, **NO adjudica la linea base nueva del censo** (la sube como pregunta),
+**NO funde ningun acto con dueno** (el **31** y el resto siguen fuera), **NO toca la mesa
+`OP-M-03` ni sus dos colisiones**, **NO ejecuta ninguna de las cinco fichas `OP-M-02` consumidas** y
+**NO abre el lote siguiente**. La respuesta *DOS FAMILIAS* de `P.5` sigue siendo motivo sellado en la
+linea **4518** y **en este lote no se uso: los seis actos contestaron UNA familia**. El
+dueno se sigue midiendo como el acta 68 lo adjudico, en la linea **5687**, y las
+adjudicaciones de esa acta estan registradas desde la linea **5572**.
