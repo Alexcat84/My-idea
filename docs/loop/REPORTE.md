@@ -765,7 +765,7 @@ cinco fichas `OP-M-02` consumidas no se ejecutaron**: lo consumado no se ejecuta
 
 **LA CADENA ENTERA DE LA VUELTA 73, ESCRITA AQUI POR EL SEXTO COMMIT:** `1562faa9` (TAREA 1),
 `c584f060` (el plan sellado del lote `I`), `d6341ebe` (la fusion), `7f07d02f` (el registro del lote),
-`PENDIENTE` (el reporte) **y este, que es el que puede escribir el hash del anterior.**
+`c9457681` (el reporte) **y este, que es el que puede escribir el hash del anterior.**
 **`origin/pasada-unica` queda igual a `HEAD` y el arbol limpio de rastreados.**
 
 **Los commits de esta vuelta en `pasada-unica`, en orden:**
@@ -776,7 +776,7 @@ cinco fichas `OP-M-02` consumidas no se ejecutaron**: lo consumado no se ejecuta
 | **`c584f060`** | **TAREA 2, paso 1**: el lote `I` **declarado al abrirlo** y su **plan sellado dos veces**, con el `P.5`, las varas, el borde del dueno medido por maquina y **las colisiones esperadas sobre base 7**, todo **ANTES DE TOCAR UN NODO** |
 | **`d6341ebe`** | **TAREA 2 ejecutada**: las cuatro fusiones, `P.16` con su limpieza en la misma corrida, el reanclaje, el diff de duplicadas, `Gate 0` con su ciclo de tres y las tres suites |
 | **`7f07d02f`** | **TAREA 2, paso 3**: el registro del lote `I` en `03_FUSIONES.md` (`+463`, `0` borradas) y los censos del cierre |
-| **el reporte** | **este fichero** |
+| **`c9457681`** | **el reporte**, este fichero, con la cabecera tallada, los trece discutibles, las cuatro averias y las promesas cotejadas por maquina antes de sellarlo |
 | **este** | **la cabecera de esta seccion 12**, con el hash del commit del reporte y la cadena entera |
 
 **El hash final de la vuelta y la cadena entera van escritos en la cabecera de esta seccion por un
