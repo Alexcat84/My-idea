@@ -695,10 +695,12 @@ consumidas no se ejecutaron**: lo consumado no se ejecuta ni se rehace.
 | **`764523c0`** | **TAREA 1 entera**: el registro del acta 68 (`+170`, `0` borradas, 64 agujas, dos negativas de sustancia) **mas la APERTURA medida antes de la primera operacion** |
 | **`471971de`** | **TAREA 2**: el lote E ejecutado (5 fusiones, 1 declarado, 13 nodos muertos, `P.16` limpio, **dos colisiones fabricadas y predichas**, Gate 0 con su ciclo de tres y las tres suites en verde) |
 | **`9073ed13`** | **el registro del lote E** (`+440`, `0` borradas, 18 agujas, idempotencia mordiendo, barrido con `AMBAR` en 0) |
+| **`331612cc`** | **el reporte entero**, leido hoy con `git log --oneline` |
 
 **EL HASH FINAL DE LA VUELTA ES EL DEL COMMIT QUE ESCRIBE ESTA MISMA LINEA, y por eso no se puede
-escribir dentro de si mismo: un commit no puede contener su propio hash.** **Los TRES anteriores estan
-arriba, ninguno de memoria.** Es la misma via que las vueltas 65 a 68 usaron, y la regla 7 pide
+escribir dentro de si mismo: un commit no puede contener su propio hash.** **Los CUATRO anteriores
+estan arriba, ninguno de memoria**, y **la cadena entera queda escrita en esta cabecera**, que es lo
+que la regla 7 pide y lo que el commit del reporte no podia contener. Es la misma via que las vueltas 65 a 68 usaron, y la regla 7 pide
 exactamente esto: el hash final y los commits anteriores en la cabecera de la seccion 12.
 
 **LAS GUARDAS DE CIERRE, RE-CORRIDAS TRAS ESTA EDICION** (regla 1: lo que la propia vuelta mueve, se
