@@ -781,6 +781,7 @@ consumidas no se ejecutaron**: lo consumado no se ejecuta ni se rehace.
 | **`c1859ed5`** | **TAREA 1 entera**: el registro del acta 70 (`+222`, `0` borradas, 80 agujas, tres negativas de sustancia) **mas las DOS CORRECCIONES DECLARADAS** (las celdas de cableado con las cifras medidas por mi en worktree, y la linea base de 6 a 7) **y la APERTURA medida antes de la primera operacion, con el marcador tallado con `recomputar_marcador.py` desde el principio** |
 | **`f188f1c3`** | **TAREA 2**: el lote G ejecutado (5 fusiones, 0 declarados, 10 nodos muertos, `P.16` limpio, **CERO colisiones fabricadas**, Gate 0 con su ciclo de tres y las tres suites en verde) |
 | **`eacce4a3`** | **el registro del lote G** (`+473`, `0` borradas, 16 agujas, idempotencia mordiendo) **mas los censos de cierre, las puertas de los 11 medidas con su salida y los seis casos positivos** |
+| **`373425e3`** | **el reporte entero**, leido hoy con `git log --oneline` |
 
 **EL HASH FINAL DE LA VUELTA ES EL DEL COMMIT QUE ESCRIBE ESTA MISMA LINEA, y por eso no se puede
 escribir dentro de si mismo: un commit no puede contener su propio hash.** **Los TRES anteriores estan
