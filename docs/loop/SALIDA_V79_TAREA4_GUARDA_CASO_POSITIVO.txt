@@ -1,0 +1,15 @@
+==============================================================================
+CASO POSITIVO SINTETICO: LA GUARDA DEL PAR NO DIRIGIDO
+==============================================================================
+
+Filas de entrada: 5
+
+PAREJAS detectadas (mismo par, dos direcciones): 1
+  -> ['F1', 'F2']: [('alfa', '->', 'beta'), ('beta', '->', 'alfa')]
+
+SUELTAS (una sola direccion, no tocadas por la guarda): 3
+  -> F3: gamma -> delta
+  -> F4: epsilon -> zeta
+  -> F5: zeta -> eta
+
+RESULTADO DEL CASO POSITIVO: OK, LA GUARDA FUNCIONA

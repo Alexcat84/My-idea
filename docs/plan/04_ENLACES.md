@@ -359,6 +359,30 @@ y perder 73 gemelos.**
 > `etapa_build_business_case`, `ventaja_competitiva_producto`) no se tocan:
 > ya fueron confirmadas en el acta de la vuelta 78.
 
+> **GUARDA NUEVA (26 ago 2026, vuelta 79, adjudicada por cita, SIN doctrina
+> nueva, acta de la vuelta 78 seccion 4 y seccion 5 punto 6).** La bolsa
+> filtrada trajo el mismo par DOS VECES en la vuelta 78, una en cada
+> direccion (`necesidades_reales_vs_declaradas -> descubrir_necesidades_del_cliente`,
+> fila 1; la reciproca en la fila 46), y el campo `arista` del calibrador NO
+> TIENE DIRECCION: al escribir la fila 1, la fila 46 quedo resuelta sin que
+> nadie la mirara. Es el mismo fallo que banco 9.6.2 nombra para la vara al
+> reves. **LA GUARDA, adjudicada por cita de 9.6.2 y de `AUDITOR.md` seccion
+> 3 (el criterio del forastero: la fuente propone, la lectura confirma):**
+> antes de leer, la bolsa filtrada se agrupa por **par NO DIRIGIDO**; cuando
+> el mismo par aparece en las dos direcciones, las dos filas se leen JUNTAS y
+> la direccion se decide con 9.6.2 explicitamente, con las dos opciones
+> escritas en la razon y la descartada nombrada; la fila hermana no se cuenta
+> como candidato aparte en la cifra de bolsa restante. Implementada en
+> `scripts/loop/vuelta79_guarda_par_no_dirigido.py`, con caso positivo
+> SINTETICO verificado (`docs/loop/SALIDA_V79_TAREA4_GUARDA_CASO_POSITIVO.txt`):
+> agrupa un par en dos direcciones, no rompe el candidato normal de una sola
+> direccion, y no agrupa por falso positivo dos filas que solo comparten UN
+> extremo con companeros distintos. **La direccion de la fila 1 ya fue
+> adjudicada por el auditor y NO se toca**: la madre conserva materia propia
+> que el hijo no toca (la miopia de marketing de Levitt, el rediseno de la
+> propuesta de valor) y el hijo despliega el paso 2 de la madre con
+> procedimiento propio de 6 pasos; la arista se queda como esta escrita.
+
 ---
 
 ## LOS SUELTOS DE RACIMOS, y los racimos con miembro ajeno
