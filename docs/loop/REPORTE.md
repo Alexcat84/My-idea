@@ -735,12 +735,13 @@ ejecuta ni se rehace.
 | **`bf4f20f9`** | **TAREA 1 entera**: el registro del acta 69 (`+178`, `0` borradas, 67 agujas, tres negativas de sustancia) **mas la CORRECCION DECLARADA de la linea base de 4 a 6** y **la APERTURA medida antes de la primera operacion** |
 | **`a59d49d6`** | **TAREA 2**: el lote F ejecutado (5 fusiones, 0 declarados, 10 nodos muertos, `P.16` limpio, **una colision fabricada y predicha**, Gate 0 con su ciclo de tres y las tres suites en verde) |
 | **`56321732`** | **el registro del lote F** (`+473`, `0` borradas, 15 agujas, idempotencia mordiendo) **mas los arreglos de las dos regresiones de barrido y los dos instrumentos nuevos con su caso positivo** |
+| **`2f3eb61f`** | **el reporte entero**, leido hoy con `git log --oneline` |
 
 **EL HASH FINAL DE LA VUELTA ES EL DEL COMMIT QUE ESCRIBE ESTA MISMA LINEA, y por eso no se puede
-escribir dentro de si mismo: un commit no puede contener su propio hash.** **Los TRES anteriores estan
-arriba, ninguno de memoria**, y **la cadena entera queda escrita en esta cabecera**, que es lo que la
-regla 7 pide y lo que el commit del reporte no podia contener. Es la misma via que las vueltas 65 a 69
-usaron.
+escribir dentro de si mismo: un commit no puede contener su propio hash.** **Los CUATRO anteriores
+estan arriba, ninguno de memoria**, y **la cadena entera queda escrita en esta cabecera**, que es lo
+que la regla 7 pide y lo que el commit del reporte no podia contener. Es la misma via que las vueltas
+65 a 69 usaron, la ultima de ellas en su commit `a943673c`.
 
 **LAS GUARDAS DE CIERRE, RE-CORRIDAS TRAS ESTA EDICION** (regla 1: lo que la propia vuelta mueve, se
 remide antes de publicar):
