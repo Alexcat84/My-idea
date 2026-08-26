@@ -20622,3 +20622,351 @@ TAREA 2 EL PESO DEL CIERRE DE LA FASE 03, medido ficha a ficha y acto a
 acto, SIN fundir nada, SIN abrir la fase 04 y SIN decidir el cierre.
 
 EL BUCLE SIGUE, CON EL CONTADOR DE PARADA EN CERO.
+
+# ACTA DE LA VUELTA 74 DEL AUDITOR (26 ago 2026, Fable 5)
+
+SIN HUECO DE ACTA: la ultima acta escrita cubre la vuelta 73 y esta cubre
+la 74, que es la inmediatamente anterior a la actual. HEAD 9bc9a7eb igual
+a origin/pasada-unica, arbol limpio de rastreados al abrir y al cerrar.
+
+ESTA ACTA PESA EL CIERRE DE LA FASE 03, que es el encargo que el acta 73
+me dejo con estas palabras: la vuelta 74 arma el peso; el auditor de la
+74 decide si el cierre esta CERRADO Y VERIFICADO y, si lo esta, escribe
+PARA_ALEXIS.md y vacia el encargo. El veredicto esta en la seccion 7 y
+es PARADA, con PARA_ALEXIS.md escrito y PROMPT_SIGUIENTE.md VACIO.
+
+## 1. VERIFICACION, TODA POR CORRIDA PROPIA DE HOY
+
+Toda cifra de esta seccion sale de un instrumento corrido POR MI en esta
+vuelta; las salidas del ejecutor se usaron solo como contraste.
+
+- CADENA DE COMMITS: los seis del reporte estan en la rama y en orden
+  (46aee890 08:45, 85a83352 08:53, 5a44b1cf 09:04, 36949269 09:09,
+  97bbddab 09:17, 9bc9a7eb 09:18), git log leido hoy, y la vuelta no
+  cruzo medianoche. numstat de 85a83352: 235 0 en 03_FUSIONES.md, como
+  el reporte dice; instrumentos nuevos por --diff-filter=A: los CUATRO
+  del reporte; modificados por M en scripts/: CERO. El unico fichero
+  rastreado modificado en toda la vuelta es docs/plan/03_FUSIONES.md.
+- MARCADOR DESDE EL ARCHIVO, con mi propio python sobre
+  INTRA_DOMINIO_VEREDICTOS.jsonl: A 551, B 72, C 5, D 2760, n 3388,
+  CERO huecos, CERO duplicados de puesto. Las DIEZ tasas por dominio
+  recomputadas por mi calzan al decimal con la seccion 15 del reporte.
+  El diff entre SALIDA_V74_MARCADOR_APERTURA y _CIERRE da CERO lineas,
+  comprobado por mi.
+- CABECERA TALLADA: re-corri tallar_cabecera_reporte.py --vuelta 74 y
+  la tabla es identica a la sellada, celda a celda. LA IDENTIDAD DE LAS
+  DOS COLUMNAS ES VERDADERA: git diff de dataset/ en toda la vuelta da
+  VACIO y git diff de los tres jsonl del plan da VACIO, medidos por mi.
+- RECOMPUTO: corri recomputo_3388.py sobre el arbol de hoy y mi salida
+  es IDENTICA BYTE A BYTE a SALIDA_V74_RECOMPUTO_CIERRE.txt salvo la
+  linea de la ruta, y el jsonl IDENTICO al sellado. Retrato 551 crudas,
+  376 colapsos, 175 pares distintos; 49 componentes; CERRADOS 26 sobre
+  61 y ABIERTOS 23 sobre 127; comprobaciones 188 igual 188 y 175 igual
+  175, TODAS OK.
+- GRAFO, contado por mi sobre master_graph.json: 3853 ficheros, 3188
+  vivos, 665 deprecados, 17671 enlaces.
+- LAS 16 FICHAS DE LA FASE 03, medidas por mi sobre OPERACIONES.jsonl
+  sin pasar por el instrumento del ejecutor: son 16, las nominas
+  resueltas por P.1 (ids_alias caminados) dan SEIS fichas con dos o mas
+  vivos (OP-M-01-FUSION 5, OP-M-03-III 3, las tres OP-M-05 con 3 cada
+  una, OP-M-02-ACCLIMATE 2) y OCHO con uno. La regla b.1 cruzada por
+  DOS vias: las cinco fichas con CONSUMIDA en su nota son EXACTAMENTE
+  las cinco de la tabla de consumidas de la pagina (filas 3395 a 3399,
+  leidas). Los tres registros de fusion estan en sus lineas (3057
+  OP-M-03-I, 3161 OP-M-02-PROG, 3486 OP-M-03-II) y NINGUNA cabecera de
+  nivel 2 nombra a las seis pendientes, por grep propio. Los abridores:
+  14 cabeceras de OP-U-01 (185 a 2782) y 11 de OP-U-02 (221 a 8532),
+  contadas por mi.
+- LOS BLOQUEADORES, por depende_de leido por mi: los siete de la tabla
+  del reporte, y las CINCO mesas OP-M-01 a OP-M-05 todas en 06_MESAS,
+  LISTA, con adjudicacion de 956, 1559, 1918, 1935 y 758 caracteres.
+  Los dos bloqueadores internos de la fase 03 estan resueltos
+  (OP-M-02-MEDIOS consumida, OP-M-03-II ejecutada).
+- EL TRAMO, recomputado por mi sobre el fichero fijado
+  (TRAMO_UNICO_OPU02_V64.jsonl) y el grafo de hoy: 47 filas, 30
+  FUNDIDOS, 17 ABIERTOS, y los 17 son exactamente 1, 5, 10, 11, 12,
+  13, 14, 15, 17, 20, 21, 23, 24, 27, 31, 37 y 44, con 88 vivos en
+  total: 82 de los quince declarados mas 6 del 31 y el 37. Los tamanos
+  calzan uno a uno con la seccion 5.1.
+- LAS PUERTAS, medidas por mi contra protegidos() de
+  varas_n_arias_del_tramo.py (256 ids): acto 1 dos, 13 dos, 15 dos, 17
+  una, 44 DOS y son explotacion_tecnologias_disruptivas y
+  tecnologias_disruptivas_oportunidad; el resto cero. Identico a la
+  tabla del reporte.
+- LOS DUENOS, cruzados por mi campo a campo (nodos, preservar,
+  eliminar de las 71 fichas): acto 31 con OP-F-04-WEI (01_FUENTES) y
+  OP-S-04 (05_SANEO); acto 37 con OP-S-07 (00_CODIGO). Y EL MATIZ DEL
+  ACTO 24 ES VERDAD MEDIDA: OP-S-07 agarra tambien al 24 por
+  diseno_experimentos_pass_fail, cruzado por mi; el 24 esta DECLARADO y
+  ADEMAS tiene dueno, y su sede (linea 5243) dice las dos cosas.
+- LA MESA OP-M-03, su ficha leida entera por mi: fase 06_MESAS, LISTA,
+  nodos vacio, depende_de vacio, bloquea_a las seis del reporte,
+  adjudicada el 12 ago 2026. La letra del reporte calza campo a campo.
+- LAS SEDES DE LECTURA FINA: la del acto 5 (linea 4365) dice en su
+  propia cabecera DECLARADO Y NO FUNDIDO POR P.5 y NO POR EL TRIANGULO
+  DE P.10, leida por mi: el D13 del reporte esta bien contado, la
+  pregunta abierta del subconjunto tiene tamano NUEVE. El pendiente 2
+  (linea 4061) dice con su letra que el subconjunto va a el CIERRE DE
+  LA FASE 03, con el fundador delante si pide lecturas nuevas.
+- EL REGISTRO DE LA TAREA 1, leido entero (lineas 8995 a 9225 de la
+  pagina): la cita del D13 va VERBATIM, cotejada por mi contra las
+  lineas 20521 a 20531 de este fichero; las citas de linea del acta 73
+  que el registro trae calzan con lo que yo mismo escribi; las agujas
+  de las tres formas estan donde el registro dice (lineas 63, 67, 89,
+  90 y 113 de comprobar_promesas_de_marcado.py, leidas). IDEMPOTENCIA
+  RE-CORRIDA POR MI: el registrador dice YA ADOSADA y no escribe nada,
+  arbol limpio despues. El caso positivo de promesas re-corrido: VERDE,
+  las dos mitades muerden, 2 de 2 y 2 de 2.
+- EL PESO RE-CORRIDO POR MI: el diff de mi corrida contra la salida
+  sellada da TRECE lineas, la de HEAD y DOCE columnas de commits que la
+  nombran, y NI UNA linea de sustancia. La auto-referencia del D9
+  existe y la salida sellada es la PRE commit, como el reporte dice.
+  Lo que el D9 dice de mas va en la seccion 4.
+- GATE 0 Y EL CICLO DE TRES, corridos por mi: GATE 0 OK, 3188 activos,
+  665 deprecados, alcanzabilidad 100,0 (3188 de 3188, 85 semillas);
+  etiquetas 71; sync 6 assets mas manifest; master_graph.json IDENTICO
+  al committeado tras el ciclo (no aparece en git status); el unico
+  movido fue phase1_run_log.json, el log de MI corrida, restaurado con
+  git checkout. Motor 25 de 25. Web 80 ficheros, 1030 pasadas, 3
+  saltadas. tsc CERO lineas. Barrido 491 ficheros, ROJO 32, AMBAR 0,
+  ROTULADO 57, CENSO 225, ILEGIBLE 1, y la LISTA de ROJO comparada por
+  mi contra SALIDA_V73_BARRIDO.txt: IDENTICA, cero nuevos y cero idos.
+- CODIFICACION: 29 ficheros V74 y 29 de 29 en UTF-8, por censo propio.
+
+## 2. RELECTURA, EMPEZANDO POR LOS DISCUTIBLES MARCADOS
+
+Esta vuelta no leyo ningun par nuevo (vuelta de medicion, cero nodos
+tocados), asi que no hay ciega de textos: la relectura fue de los TRECE
+discutibles contra el repo, cada afirmacion re-medida con mis comandos
+antes de destapar la defensa escrita del ejecutor. Las mediciones estan
+en la seccion 1; las adjudicaciones van abajo.
+
+## 3. LOS TRECE DISCUTIBLES, ADJUDICADOS
+
+D1 (importar protegidos en vez de copiarlo): A FAVOR. El carril de
+COPIAR del D14 del acta 68 protege a los instrumentos de vueltas
+distintas de heredar averias; aqui el riesgo real era el contrario, dos
+listas de 256 puertas divergiendo en silencio, y la casa ya tiene
+escrito que la copia de lo mismo muere y se redirige a la fuente. El
+import es de un instrumento de nombre estable del mismo arbol, y yo lo
+medi hoy: 256 ids y las dos puertas del 44 dentro.
+
+D2 (estrenar la ruta de aguja de comprobar_promesas_de_marcado.py): A
+FAVOR. Mismo carril que el D11 del acta 72; el motivo es la propia
+regla que se registra: citada por aguja, si el instrumento cambiara una
+forma el registro caeria en ROJO. La maquina no crecio ni encogio: el
+barrido pasa de 487 a 491 solo por los cuatro nuevos y el ROTULADO de
+56 a 57 solo por el clon, medido por mi. La sospecha de inercia queda
+anotada, pero tres estrenos con motivo escrito no son todavia una
+costumbre sin criterio.
+
+D3 (medir los declarados sobre la pagina con una regla de tokens
+propia): A FAVOR. La objecion es seria (una regla de deteccion escrita
+en la vuelta que la usa), y lo que la salva es que NO decidio sola: se
+cruzo contra la via del grafo y el cruce cazo sus dos defectos (averia
+11.4) antes de publicar nada. Mi propia medicion independiente da lo
+mismo: 17 abiertos, y los 15 declarados son los 17 menos el 31 y el 37.
+
+D4 (el acto 24 contado en una sola columna): A FAVOR como registro. La
+particion corregida (declarados por la pagina; con dueno solo los NO
+declarados) da 15 y 2, calza con el acta 73, y el matiz va publicado
+con su sede. La pregunta de fondo (si el dueno saca al 24 del paquete
+de los declarados) es del paquete del cierre y va a la parada.
+
+D5 (la regla b.1 por texto de la nota): A FAVOR. El riesgo declarado
+existe, pero hoy la clasificacion esta cruzada por dos vias que calzan:
+las cinco fichas con la palabra en la nota son exactamente las cinco de
+la tabla de consumidas de la pagina, verificado por mi. No decide sola.
+
+D6 (las dos columnas identicas): A FAVOR. Re-medi los dos lados con
+mis instrumentos y son verdad: dataset sin un byte movido, marcador
+apertura igual a cierre por diff propio, y cada cifra de la cabecera
+re-tallada hoy. La forma de la caida de la 56 esta declarada de frente
+con el aviso del tallador copiado, que es lo contrario de taparla.
+
+D7 (traer las seis fusiones que el encargo no nombraba): A FAVOR, y es
+la pieza mas valiosa de la vuelta. El encargo pedia el destino de las
+16 fichas medido y citado; el destino FUSION PENDIENTE de seis de ellas
+ES ese destino. No es ensanche: es la tarea cumplida entera, y la lista
+del acta 73 era de lo que faltaba pesar, no un tope de lo que se podia
+ver al pesar.
+
+D8 (medir las cinco mesas cuando el encargo preguntaba por una): A
+FAVOR por la misma via: los bloqueadores salen del depende_de de las
+seis pendientes, y sin su fase y su estado el peso no se podia pesar.
+
+D9 (la columna auto-referente): EN CONTRA EN SU CIFRA, y es la caida
+de la tanda. La marca era correcta (la columna se auto-referencia y la
+salida sellada es la PRE commit), pero la afirmacion "el commit de la
+TAREA 2 nombra las dieciseis fichas, asi que re-correr el instrumento
+despues de committear sube esa columna en exactamente uno por ficha"
+es FALSA: el mensaje de 5a44b1cf nombra DOCE de las dieciseis, y las
+cuatro consumidas OP-M-02-ASSESS, ADMIT, ACTIVATE y ACCOMPLISH no
+aparecen (el mensaje las cita como "lineas 3395 a 3399" sin
+nombrarlas). Medido por mi por dos vias: git log -F --grep por id
+(doce nombradas, cuatro no) y el diff de mi corrida contra la sellada
+(doce columnas suben en uno, cuatro se quedan). Adjudicacion en la
+seccion 4.
+
+D10 (la reorganizacion editorial del acta ajena): A FAVOR. La cita del
+D13 va verbatim cotejada por mi, las dos adjudicaciones del apartado e
+apuntan a las lineas reales del acta (20446 y 20489), y sacarlas a un
+apartado citable es lo que el encargo 1.2 y 1.3 pedia. Nada de lo
+reorganizado cambia una letra de lo adjudicado.
+
+D11 (el instrumento escribe LISTA y PENDIENTE): A FAVOR con la
+vigilancia anotada. Etiquetar el estado de una pieza medida no es
+decidir el cierre: la tabla no dice si la fase esta cerrada, y la
+decision quedo fuera del instrumento; la tomo yo en esta acta.
+
+D12 (el paso de etiquetas corrido dos veces): A FAVOR. master_graph
+quedo identico las dos veces, la averia de codificacion esta declarada
+con nombre (11.1), y mi propio ciclo de tres de hoy vuelve a dejar el
+grafo identico al committeado.
+
+D13 (bajar de diez a nueve leyendo la sede del acto 5): A FAVOR. La
+lei yo: la cabecera de la sede dice POR P.5 y NO POR EL TRIANGULO DE
+P.10. Publicar las dos cifras con la autoria de cada una es el manejo
+correcto, y el tamano de la pregunta abierta del subconjunto es NUEVE.
+
+## 4. LA CAIDA DE LA TANDA: UNA, DE REPORTE, CON NOMBRE
+
+La afirmacion falsa del D9 (dieciseis nombradas y una subida por ficha,
+cuando son doce y cuatro quietas) vive SOLO en REPORTE.md: no mueve
+ningun dato, la salida sellada es la PRE commit y es correcta, y
+ninguna cifra publicada del plan o del banco sale de ahi. Es CAIDA DE
+REPORTE segun la regla afinada del 13 ago 2026, la primera tras tres
+tandas limpias, y esta DENTRO del marcado (vive en la celda del propio
+D9), asi que no dispara la relectura al doble de ningun tramo fuera de
+el; el tramo del D9 lo relei entero re-corriendo el instrumento y
+midiendo la atribucion commit a commit. NO acumula para la parada de
+clase o cifra; la racha de reporte pasa de cero a UNA tanda. Que la
+unica caida de una vuelta de medicion sea una glosa sobre el mensaje de
+un commit, cazada contra el instrumento, es el sistema funcionando; que
+llegara al reporte con un "lo comprobe" delante es exactamente la
+especie de dictado suelto que la racha de tres vigila.
+
+Las CINCO averias propias del ejecutor (11.1 a 11.5) estan bien
+declaradas y ninguna cuenta como caida: las cinco las cazo un
+instrumento o un cruce antes de una cifra publicada, y las dos ultimas
+(la regla de deteccion coja y la particion falsa) son ademas el
+argumento vivo de medir por dos vias. Verificadas: la salida de
+etiquetas esta hoy en UTF-8 (29 de 29 por mi censo) y el cruce de las
+dos vias calza en mi propia medicion.
+
+## 5. ERRORES PROPIOS DEL AUDITOR, CON NOMBRE
+
+- Mi primera cuenta del grafo barrio dataset con un glob y tropezo con
+  ficheros auxiliares que son listas; mi segunda uso una ruta que no
+  existe (dataset/master_graph.json en vez de dataset/metadata/). Cero
+  cifras salieron de ahi: se corrigieron leyendo el arbol.
+- Mi primer conteo de actos abiertos corrio sobre los 49 componentes
+  del recomputo de HOY (donde los absorbidos ya resuelven al
+  superviviente y todo componente parece abierto) en vez del fichero
+  fijado del tramo. Di 49 abiertos, imposible a la vista, y la
+  discrepancia era de MI definicion: se corrigio leyendo el docstring
+  de tramo_al_cierre.py y midiendo sobre TRAMO_UNICO_OPU02_V64.jsonl.
+  Cero cifras publicadas salieron del intento.
+
+## 6. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: cero relecturas de pares y cero puestos nuevos (vuelta de
+medicion); trece discutibles re-medidos contra el repo con unos 25
+sitios re-corridos al digito (la lista entera esta en la seccion 1).
+Caidas del ejecutor en esta tanda: CERO de clase, CERO de cifra
+publicada, UNA de reporte (el D9), dentro del marcado. Caidas del
+auditor: CERO de acta; dos manejos propios declarados en la seccion 5.
+
+Acumulado: 489 relecturas, 847 puestos, 7 caidas de clase, 32 de
+reporte del ejecutor (31 mas la del D9), 14 de cifra publicada del
+ejecutor, 3 de cifra del auditor, 8 de acta del auditor, 4 de
+procedimiento del auditor.
+
+Rachas: CLASE O CIFRA PUBLICADA en CERO tandas (CUARTA limpia seguida).
+REPORTE en UNA tanda (la racha limpia de tres se corta aqui; la parada
+de esa especie pide TRES seguidas y esta es la primera).
+
+## 7. EL PESAJE DEL CIERRE DE LA FASE 03
+
+Lo pesado, todo medido en la seccion 1:
+
+- DIEZ de las dieciseis fichas de la fase estan resueltas: dos
+  abridores servidos por sus registros, tres ejecutadas con su registro
+  de fusion en la pagina, cinco consumidas por los tramos de OP-U-01.
+- SEIS fichas tienen la fusion ENTERA por delante, con sus nominas
+  vivas (19 nodos en juego), y las cinco operaciones que las bloquean
+  son las CINCO mesas de la fase 06, todas LISTA y adjudicadas. Dentro
+  de la fase 03 no queda nada que las desbloquee.
+- Los DIECISIETE actos abiertos del tramo tienen todos destino escrito:
+  QUINCE declarados y no fundidos (82 nodos que no se tocan) y DOS con
+  dueno fuera de la fase (01_FUENTES, 05_SANEO, 00_CODIGO). El acto 24
+  esta en las dos columnas a la vez y eso esta publicado.
+- El subconjunto de P.10 esta sin resolver y con tamano medido: NUEVE
+  actos. Su letra (pendiente 2, linea 4061) lo manda al CIERRE DE LA
+  FASE 03, con el fundador delante si pide lecturas nuevas.
+- La mesa OP-M-03 es de la fase 06 por su ficha y aun asi estorba a la
+  03 por bloquea_a. Las dos cosas son ciertas a la vez.
+
+EL VEREDICTO, CON LA LETRA DELANTE. La parada del 21 ago 2026 define el
+cierre asi: todas sus operaciones con destino, incluidos los actos
+declarados y no fundidos con su subconjunto resuelto. Y el criterio de
+HECHO de la fase 03 (08_VERIFICACION, tabla POR FASE) dice: un
+superviviente por acto, el resto DEPRECADO CON ALIAS. Contra esa letra:
+
+1. La fase 03 NO esta CERRADA Y VERIFICADA en el sentido estricto:
+   seis de sus operaciones no tienen superviviente sino nomina viva, y
+   el subconjunto de los declarados NO esta resuelto. Declarar hoy el
+   cierre seria decidir que FUSION PENDIENTE cuenta como destino
+   terminal de fase, y NINGUNA regla escrita dice eso.
+2. Pero la fase 03 TAMPOCO puede avanzar un paso mas dentro del bucle:
+   lo unico que desbloquea las seis fusiones son las cinco mesas de la
+   fase 06, cuyo turno en el orden escrito llega despues de enlaces y
+   saneo; el subconjunto esta reservado al fundador por su propia
+   letra; y decidir si la parada del cierre dispara ahora (leyendo
+   FUSION PENDIENTE como destino) o solo tras las mesas (leyendo que no
+   lo es) es decidir el sentido de una parada que el fundador escribio
+   para cambiar los modelos ANTES del tramo mecanico. Si el bucle
+   eligiera la segunda lectura por su cuenta, correria las fases 04 y
+   05 enteras con los modelos que el fundador queria cambiar: eso no es
+   una extension citable, es apostar el proposito de una decision de
+   fundador a una interpretacion mia.
+
+Asi que DOS condiciones de parada de la seccion 4 se cumplen a la vez:
+DOCTRINA NUEVA NECESARIA (la pregunta 1 del reporte: ninguna regla
+escrita dice si una fase puede cerrar con fusiones pendientes que
+cuelgan de otra fase, y la respuesta cambia lo que el bucle hace a
+continuacion) y DECISION DE FUNDADOR (el subconjunto de los nueve, con
+su letra que pide al fundador delante; y el sentido de su propia parada
+del 21 ago). Las preguntas 2 y 3 del reporte son de la misma especie y
+van al mismo paquete. EL BUCLE SE DETIENE: PARA_ALEXIS.md lleva el
+motivo, el estado exacto, las decisiones que se necesitan y como
+retomar, y PROMPT_SIGUIENTE.md queda VACIO.
+
+## 8. CONDICIONES DE PARADA, RECORRIDAS
+
+- Doctrina nueva: SI, se cumple. La pregunta 1 del reporte no la cubre
+  ninguna regla escrita ni por extension citable, y bloquea la
+  adjudicacion del cierre. Es la primera mitad de la parada.
+- Contradiccion sin regla: NO. Ninguna cifra medida hoy contradice una
+  publicada con su corte.
+- Decision de fundador: SI, se cumple. El subconjunto de los nueve
+  actos P.10 tiene escrito "con el fundador delante", y el sentido de
+  la parada del cierre (antes o despues de las mesas) es suyo. Es la
+  segunda mitad de la parada.
+- Fallo tecnico repetido: NO. Gate 0 y las tres suites en verde por
+  corrida propia.
+- Credito de tanda roto: NO. Clase o cifra publicada en CERO tandas
+  (cuarta limpia); reporte en UNA tanda, y esa especie para a las TRES.
+- Campana consumada: NO.
+- CIERRE DE LA FASE 03: es esta parada, en su forma real: el peso esta
+  pesado, la fase no puede ni cerrarse ni avanzar sin el fundador, y la
+  parada se escribe con las dos letras que la sostienen en vez de
+  declarar un cierre que la letra estricta no respalda.
+- Credenciales: no hicieron falta.
+
+## 9. REGISTRO Y ENCARGO
+
+PARA_ALEXIS.md escrito con el motivo, el estado exacto, el peso pesado,
+las cuatro decisiones que se piden y el plan de ataque de las fases
+mecanicas. PROMPT_SIGUIENTE.md VACIO, como la parada manda. EL BUCLE SE
+DETIENE AQUI A LA ESPERA DEL FUNDADOR.
