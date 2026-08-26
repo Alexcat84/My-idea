@@ -1,0 +1,310 @@
+==============================================================================
+DOSSIER DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO: EL ACTO LEIDO ENTERO (P.5) CON SU RAZON
+==============================================================================
+  nodos leidos de: el arbol de trabajo
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+
+##############################################################################
+# ACTO 43 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 550, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): preservar_efectivo_buscar_modelo
+     nodo_b (EL SEGUNDO de la razon): restriccion_gasto_validacion
+     RAZON ENTERA, sin recortar:
+       REPITE con restriccion_gasto_validacion. Los dos mandan lo mismo mientras se busca el modelo: no contratar equipo de ventas ni marketing hasta validarlo con hechos, limitar el gasto de demanda hasta confirmar el segmento, reservar caja para financiar varios pivotes, y vigilar el consumo de caja. El primero anade el test de patron repetible, que no valga la venta puntual por relacion personal, y el permiso explicito de invertir agresivo una vez confirmado el ajuste; el segundo anade el tope de gasto por experimento con cifra.
+
+  [PAR] puesto 935, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): escalamiento_prematuro
+     nodo_b (EL SEGUNDO de la razon): restriccion_gasto_validacion
+     RAZON ENTERA, sin recortar:
+       EL MISMO FRENO CONTRA EL ESCALAMIENTO TEMPRANO, del mismo libro y sin arista entre ellos. Lo comun es el nucleo: no aumentar el equipo de ventas y marketing hasta validar que el proceso de venta se repite, y medir el ritmo de consumo de caja como metrica principal durante toda la etapa. Lo propio de escalamiento_prematuro es retrasar las inversiones grandes en infraestructura hasta tener traccion real, y guiarse por el burn rate en vez de por proyecciones de ingresos. Lo propio de restriccion_gasto_validacion son dos piezas concretas que el otro no da: definir un presupuesto maximo por prueba, de dos mil a diez mil dolares por test, y reservar caja suficiente para financiar VARIOS pivotes. Esas dos son lo que hay que salvar: el resto es el mismo aviso.
+
+  --- escalamiento_prematuro
+      titulo    : Escalamiento Prematuro (Premature Scaling)
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 3 | condiciones 2 | previos 4 | siguientes 3 | cableado 7
+      paso 1: No aumentes tu equipo de ventas y marketing hasta que valides que tu proceso de venta se puede repetir.
+      paso 2: Retrasa las inversiones grandes en infraestructura hasta tener tracción real con clientes.
+      paso 3: Usa tu ritmo de consumo de caja (burn rate) como tu métrica principal, en lugar de guiarte por proyecciones de ingresos.
+      cond 1: Si estás por contratar un equipo grande de ventas justo después de lanzar tu producto.
+      cond 2: Si tus inversionistas te presionan para crecer rápido sin que tengas datos de que tus clientes se quedan (retención).
+      previos   : ['nueve_pecados_capitales_lanzamiento', 'economia_circular_como_modelo_de_negocio', 'experimentacion_iterativa_mercado_fisico', 'recursos_de_segundo_nivel']
+      siguientes: ['eleccion_ritmo_crecimiento', 'riesgo_no_pivotar_a_tiempo', 'red_flags_proyectos_en_problemas']
+      entregable: Un plan de gastos que dependa de que alcances hitos reales con clientes, no de fechas del calendario.
+
+  --- preservar_efectivo_buscar_modelo
+      titulo    : Preservar Efectivo Mientras se Busca el Modelo de Negocio
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 4 | previos 5 | siguientes 3 | cableado 8
+      paso 1: No contrates equipo de ventas ni marketing hasta validar el modelo con hechos, no hipótesis
+      paso 2: Busca patrones de venta repetibles, evitando ventas puntuales por relaciones personales o esfuerzos heroicos
+      paso 3: Aplica el test de escalabilidad: verifica si cada vendedor o dólar adicional genera más ganancia bruta que lo invertido
+      paso 4: Documenta tu propio criterio explícito de qué constituye un modelo validado antes de escalar gasto
+      paso 5: Una vez confirmado el product/market fit, invierte agresivamente en generar demanda y llenar el canal de ventas
+      cond 1: Si estás gastando en marketing o ventas antes de validar tu modelo de negocio
+      cond 2: Si confundes ventas puntuales o heroicas con un patrón de venta repetible
+      cond 3: Si sientes presión externa para escalar el gasto prematuramente
+      cond 4: Si tienes dudas sobre el momento correcto para pisar el acelerador de gasto
+      previos   : ['equipo_customer_development', 'lienzo_modelo_negocio', 'verificar_modelo_ingresos', 'alineacion_ti_negocio', 'company_building']
+      siguientes: ['customer_validation', 'comunicacion_aprendizaje_startup', 'comunicacion_aprendizaje_continuo']
+      entregable: Plan de gasto condicionado a hitos de validación del modelo de negocio, con un criterio explícito y documentado de qué constituye un modelo repetible y escalable antes de escalar la inversión.
+
+  --- restriccion_gasto_validacion
+      titulo    : Restringir el Gasto Durante la Validación de Clientes
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 2 | previos 3 | siguientes 10 | cableado 13
+      paso 1: Posponer la contratación masiva de vendedores hasta validar el modelo de negocio
+      paso 2: Limitar el gasto en marketing de demanda hasta confirmar el segmento de clientes
+      paso 3: Definir un presupuesto máximo por prueba o experimento (por ejemplo, no más de 2,000 a 10,000 dólares por test)
+      paso 4: Reservar caja suficiente para financiar múltiples pivotes
+      paso 5: Medir constantemente la tasa de consumo de caja durante esta etapa
+      cond 1: Cuando el equipo quiere escalar ventas o marketing antes de validar el modelo de negocio
+      cond 2: Si el proyecto está tentado a escalar el gasto antes de tiempo
+      previos   : ['fundadores_lideran_validacion', 'customer_discovery', 'obtencion_compromiso_venta']
+      siguientes: ['priorizar_elementos_a_validar', 'evitar_pseudociencia_producto', 'introduccion_validacion_clientes', 'tipo_mercado_curva_ingresos', 'pivot_o_proceder', 'customer_creation', 'fuentes_financiamiento_startup', 'war_room_pivot_proceed', 'decision_pivotar_o_proceder', 'market_type_revenue_growth']
+      entregable: Un presupuesto de validación acotado, con límites claros de gasto por experimento y suficiente caja reservada para financiar varios pivotes
+
+##############################################################################
+# ACTO 44 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 505, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): evaluacion_tecnologias_disruptivas
+     nodo_b (EL SEGUNDO de la razon): tecnologias_disruptivas_oportunidad
+     RAZON ENTERA, sin recortar:
+       REPITE con tecnologias_disruptivas_oportunidad. Los dos mandan lo mismo de Christensen: identificar las tecnologias emergentes que hoy rinden menos pero traen algo distinto, calcular cuanto y cuando pueden mejorar, y decidir si son amenaza u oportunidad y que hacer al respecto. El segundo anade mapear el desempeno de la tecnologia dominante en el tiempo y preguntarse si ya excede lo que el usuario necesita, que es la pieza que explica por que la disrupcion funciona; el primero remata con la pregunta practica de y entonces que hago.
+
+  [PAR] puesto 513, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): explotacion_tecnologias_disruptivas
+     nodo_b (EL SEGUNDO de la razon): tecnologias_disruptivas_oportunidad
+     RAZON ENTERA, sin recortar:
+       REPITE con tecnologias_disruptivas_oportunidad. Los dos mandan lo mismo: vigilar las tecnologias emergentes que hoy rinden menos, evaluar su probabilidad de exito y decidir si conviene invertir temprano. El primero anade mirar tambien las industrias vecinas que trabajan en problemas parecidos, identificar el grupo pequeno de clientes que mas se beneficiaria y hacer trabajo de campo con los adoptantes tempranos. Con el puesto 505, esta familia llega a TRES nodos del nucleo y ninguno esta en RACIMOS_MIEMBROS.jsonl.
+
+  --- evaluacion_tecnologias_disruptivas
+      titulo    : Cómo evaluar tecnologías que pueden cambiarlo todo (disruptivas)
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Identifica tecnologías nuevas que hoy rinden menos pero traen algo distinto a la mesa
+      paso 2: Calcula qué tan probable es que esa tecnología mejore y en cuánto tiempo
+      paso 3: Decide si es una amenaza para tu negocio o una oportunidad que puedes aprovechar
+      paso 4: Pregúntate '¿y entonces qué hago?': qué acción concreta vas a tomar frente a esa tecnología
+      cond 1: Aparece una tecnología nueva que rinde menos hoy pero tiene algo distinto a favor
+      cond 2: No quieres terminar como Kodak o Polaroid, que no vieron venir el cambio a tiempo
+      previos   : ['evaluacion_competencias_centrales']
+      siguientes: ['seleccion_arenas_estrategicas']
+      entregable: Una lista de las tecnologías nuevas que estás vigilando, con qué tan probable y grave sería su impacto en tu negocio, y qué vas a hacer con cada una (actuar ya o solo seguir de cerca)
+
+  --- explotacion_tecnologias_disruptivas   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Explotación de Tecnologías Disruptivas
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 6 | condiciones 2 | previos 3 | siguientes 2 | cableado 5
+      paso 1: Monitorear continuamente el panorama tecnológico externo en la propia industria
+      paso 2: Monitorear tecnologías en industrias relacionadas que trabajan en problemas similares
+      paso 3: Al detectar una tecnología emergente, evaluar su probabilidad de éxito analizando necesidades insatisfechas del cliente
+      paso 4: Identificar el pequeño grupo de clientes potenciales que más se beneficiarían de la nueva solución
+      paso 5: Realizar trabajo de campo con adoptantes tempranos para entender aplicaciones y potencial de adopción
+      paso 6: Evaluar el impacto en la industria mediante IOTA (Impact of Opportunities and Threats Analysis)
+      cond 1: Cuando existe riesgo de disrupción tecnológica en la industria del usuario
+      cond 2: Cuando se busca identificar oportunidades en nichos especializados antes que la competencia
+      previos   : ['evaluacion_industria_cliente', 'analisis_y_sintesis', 'ejecucion_incremental_transicion_tecnologica']
+      siguientes: ['iota_analysis', 'ley_de_capacidad_de_sistemas']
+      entregable: Reporte de tecnologías disruptivas monitoreadas con evaluación de impacto potencial y nicho de adopción temprana
+
+  --- tecnologias_disruptivas_oportunidad   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Explotar Tecnologías Disruptivas en la Búsqueda de Ideas
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 4 | condiciones 2 | previos 4 | siguientes 2 | cableado 6
+      paso 1: Mapear el desempeño de la tecnología dominante actual a lo largo del tiempo (innovación sostenida)
+      paso 2: Identificar tecnologías emergentes con rendimiento inicial inferior pero con potencial disruptivo
+      paso 3: Evaluar si la tecnología dominante ya excede las necesidades reales de los usuarios
+      paso 4: Analizar el riesgo/oportunidad de invertir tempranamente en la tecnología disruptiva
+      cond 1: Cuando la tecnología dominante en la industria muestra signos de sobre-satisfacer las necesidades del mercado
+      cond 2: Cuando existen tecnologías emergentes con rendimiento inferior pero potencial de crecimiento rápido
+      previos   : ['evaluacion_industria_cliente', 'reconocer_sesgo_de_apofenia', 'empatia_capas_de_comprension', 'investigacion_etnografica_ideacion']
+      siguientes: ['design_thinking_proceso', 'new_technology_error_pathways']
+      entregable: Un análisis comparativo de curvas de rendimiento (tecnología dominante vs disruptiva) con una recomendación estratégica de inversión o vigilancia.
+
+##############################################################################
+# ACTO 45 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 2244, clase A, dominio health_safety
+     nodo_a (EL PRIMERO de la razon): evitar_sesgo_retrospectivo_hindsight
+     nodo_b (EL SEGUNDO de la razon): reconstruccion_contexto_situacional
+     RAZON ENTERA, sin recortar:
+       REPITE. evitar_sesgo_retrospectivo_hindsight contra reconstruccion_contexto_situacional, MISMA FUENTE, Dekker, y sin arista, con SUS CINCO PASOS CUBIERTOS uno a uno: la linea de tiempo de cuando llego cada pista es su paso 2, que senales recibieron y en que orden; imaginar la situacion sin conocer el desenlace es su paso 1, como se veia el mundo para ellos; no dar el resultado por predecible es su paso 5, no imponer marcos de referencia posteriores; y leer que significaba cada senal con un entendimiento incompleto y cambiante es su paso 4, usar el timeline para modelar la evolucion incierta de su comprension. No le queda ni una linea propia. reconstruccion_contexto_situacional trae ademas una dimension que el otro no tiene: IDENTIFICAR LAS METAS QUE PERSEGUIAN SIN SABER EL RESULTADO FINAL, sin la cual el contexto queda descrito pero no explicado, y la verificacion explicita de si los procedimientos y datos conocidos despues eran siquiera relevantes entonces. Por la vara, REPITE. Sobrevive reconstruccion_contexto_situacional. Este nodo sobrevivio en los puestos 2231 y 2234 contra nodos que traian otro test, y muere aqui contra el que hace su misma reconstruccion mejor: la clase es del par.
+
+  [PAR] puesto 2294, clase A, dominio health_safety
+     nodo_a (EL PRIMERO de la razon): evitar_sesgo_retrospectivo_hindsight
+     nodo_b (EL SEGUNDO de la razon): evitar_shopping_bag
+     RAZON ENTERA, sin recortar:
+       REPITE, y es la SEGUNDA vez que este nodo repite en el dominio. evitar_sesgo_retrospectivo_hindsight contra evitar_shopping_bag, MISMA FUENTE, Dekker, y sin arista, con SUS CINCO PASOS PAREADOS: la linea de tiempo de llegada de las senales es su paso 1, el orden temporal exacto; no dar el resultado por predecible es su paso 5, no presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio; leer que significaba cada senal en su contexto es su paso 3; y el entendimiento incompleto y cambiante es su paso 4. No le queda ni una linea propia. evitar_shopping_bag trae ademas el paso que le da nombre al efecto y que ningun otro nodo del racimo tiene: IDENTIFICAR QUE SENALES SE CONTRADECIAN ENTRE SI EN EL MOMENTO, sin el cual la bolsa de evidencia sigue pareciendo coherente. Por la vara, REPITE. Sobrevive evitar_shopping_bag.
+
+  --- evitar_sesgo_retrospectivo_hindsight
+      titulo    : Evitar el Sesgo Retrospectivo (Hindsight) en el Análisis de Errores
+      fuente    : The Field Guide to Understandin - Dekker, Sidney;
+      pasos 5 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Reconstruir una línea de tiempo de cuándo llegó cada pista o indicación
+      paso 2: Evitar asumir que el resultado era predecible desde el inicio
+      paso 3: Imaginar la situación sin conocer el desenlace
+      paso 4: Analizar qué pudo significar cada señal dado el contexto y entendimiento de las personas en ese momento
+      paso 5: Reconocer que el entendimiento de los actores era incompleto y cambiante, no estático
+      cond 1: Cuando se investiga un accidente o incidente y existe la tentación de juzgar decisiones pasadas con la información actual
+      cond 2: Cuando se pregunta '¿cómo no vieron la evidencia?' sobre un evento pasado
+      previos   : ['atribucion_retrospectiva_del_error']
+      siguientes: ['operacionalizacion_de_etiquetas_psicologicas', 'construccion_de_causas']
+      entregable: Línea de tiempo reconstruida desde la perspectiva de los actores, sin sesgo de resultado conocido
+
+  --- evitar_shopping_bag
+      titulo    : Evitar el Efecto 'Shopping Bag' de Evidencia
+      fuente    : The Field Guide to Understandin - Dekker, Sidney
+      pasos 5 | condiciones 1 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Reconstruir el orden temporal exacto en que llegaron las señales/cues
+      paso 2: Identificar qué señales se contradecían entre sí en el momento
+      paso 3: Evaluar qué significaban las señales dado el contexto en que aparecieron, no el significado que tienen ahora
+      paso 4: Modelar cómo evolucionó la comprensión de la situación de forma incompleta e incierta
+      paso 5: Evitar presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio
+      cond 1: Cuando se cuestiona por qué un equipo no reconoció una situación de peligro que en retrospectiva parece obvia (ej. clima adverso)
+      previos   : ['reconstruccion_contexto_situacional']
+      siguientes: ['investigacion_incidentes_2', 'investigacion_incidentes']
+      entregable: Reconstrucción cronológica de cómo llegaron las señales de advertencia y su ambigüedad en tiempo real
+
+  --- reconstruccion_contexto_situacional
+      titulo    : Reconstrucción del Contexto Situacional (Poner Datos en Contexto)
+      fuente    : The Field Guide to Understandin - Dekker, Sidney
+      pasos 5 | condiciones 2 | previos 2 | siguientes 7 | cableado 9
+      paso 1: Preguntar cómo se veía el mundo para los actores en ese momento
+      paso 2: Reconstruir qué señales/cues recibieron y en qué orden temporal
+      paso 3: Identificar las metas que perseguían sin saber el resultado final
+      paso 4: Usar el timeline construido para modelar la evolución incompleta e incierta de su comprensión situacional
+      paso 5: Evitar imponer marcos de referencia posteriores (procedimientos, datos críticos conocidos después) sin verificar su relevancia contextual real
+      cond 1: Cuando se redacta el informe final de investigación de 'error humano'
+      cond 2: Cuando se debe explicar por qué las acciones tuvieron sentido para los involucrados
+      previos   : ['identificacion_eventos_datos', 'conexion_comportamiento_proceso']
+      siguientes: ['evitar_micro_matching', 'evitar_cherry_picking', 'evitar_shopping_bag', 'evitar_lenguaje_juzgador', 'ciclo_de_culpa_blame_cycle', 'old_view_vs_new_view_human_error', 'ciclo_de_culpa_2']
+      entregable: Narrativa reconstruida desde la perspectiva de los actores en el momento, sin conocimiento del resultado final
+
+##############################################################################
+# ACTO 46 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 1788, clase A, dominio environmental
+     nodo_a (EL PRIMERO de la razon): gestion_eco_riesgos
+     nodo_b (EL SEGUNDO de la razon): mitigacion_riesgos_ambientales
+     RAZON ENTERA, sin recortar:
+       EL MISMO RIESGO AMBIENTAL GESTIONADO DOS VECES, MISMA FUENTE y sin arista entre ellos. TRES de los cuatro pasos de cada uno se corresponden: auditar la cadena de suministro, que en uno son protocolos de auditoria para proveedores y terceros y en el otro una auditoria de riesgos en operaciones propias y de proveedores con protocolos de cumplimiento y verificacion; los PLANES DE CONTINGENCIA, que los dos traen; y la exposicion regulatoria y legal, que en uno es evaluar la exposicion a riesgos regulatorios y legales y en el otro monitorear los cambios regulatorios que generen nuevas exposiciones. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De gestion_eco_riesgos se perderian dos: MAPEAR TODOS LOS PUNTOS DE LA CADENA DE VALOR donde pueden surgir riesgos, que es el unico paso que da un metodo para encontrarlos en vez de suponerlos; y DESARROLLAR ESCENARIOS Y PROBABILIDADES, que es el unico que le pone una medida de verosimilitud a cada riesgo. De mitigacion_riesgos_ambientales se perderian otras dos: la COMUNICACION DE CRISIS para incidentes ambientales, que es la unica linea del dominio que se ocupa de que se dice cuando ya paso; y el MONITOREO CONTINUO de cambios regulatorios, que convierte una evaluacion de una vez en una vigilancia. Nace un acto de DOS con cobertura 1 de 1.
+
+  [PAR] puesto 1822, clase A, dominio environmental
+     nodo_a (EL PRIMERO de la razon): mitigacion_riesgos_ambientales
+     nodo_b (EL SEGUNDO de la razon): responsabilidad_extendida_productor
+     RAZON ENTERA, sin recortar:
+       LA MISMA CADENA EXTENDIDA AUDITADA DOS VECES, MISMA FUENTE y sin arista entre ellos, y este par AGRANDA la familia abierta en el puesto 1788. TRES de los cuatro pasos de cada uno se corresponden: auditar y verificar a los proveedores, que en uno es una auditoria de riesgos en operaciones propias y de proveedores y en el otro son mecanismos de verificacion y auditoria mas alla de las politicas escritas; ESTABLECER PROTOCOLOS O GUIAS DE CUMPLIMIENTO en la cadena extendida, dicho casi igual; y PREPARAR LA COMUNICACION DE CRISIS para incidentes o incumplimientos. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De mitigacion_riesgos_ambientales se perderia UNA: MONITOREAR LOS CAMBIOS REGULATORIOS que puedan generar nuevas exposiciones legales, que es la unica linea que convierte la auditoria en vigilancia continua. De responsabilidad_extendida_productor se perderian dos: IDENTIFICAR LOS PROVEEDORES DE SEGUNDO Y TERCER NIVEL, que es la unica que baja mas alla del proveedor directo; y la exigencia de que la verificacion vaya MAS ALLA DE LAS POLITICAS ESCRITAS. NOTA DE NOMINA: la familia del riesgo ambiental extendido pasa de DOS a TRES nodos por cierre transitivo, con mitigacion_riesgos_ambientales de centro. Cobertura 2 de 3, forma PROVISIONAL.
+
+  --- gestion_eco_riesgos
+      titulo    : Gestión de Eco-Riesgos Empresariales
+      fuente    : The Green to Gold Business Play - Daniel C. Esty
+      pasos 4 | condiciones 3 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Mapear todos los puntos de la cadena de valor donde pueden surgir riesgos ambientales (materias primas, producción, distribución, uso, disposición final)
+      paso 2: Evaluar la exposición a riesgos regulatorios, de reputación, legales y de mercado
+      paso 3: Establecer protocolos de auditoría para proveedores y terceros en la cadena de suministro
+      paso 4: Desarrollar escenarios y probabilidades de riesgo con planes de contingencia asociados
+      cond 1: Si la empresa maneja materiales tóxicos, metales pesados o químicos peligrosos
+      cond 2: Si la empresa depende de proveedores externos o cadenas de suministro extendidas
+      cond 3: Si el usuario no ha evaluado formalmente su exposición a riesgos ambientales
+      previos   : ['estrategia_proactiva_ambiental', 'modelo_green_wave']
+      siguientes: ['responsabilidad_extendida_productor', 'eco_eficiencia']
+      entregable: Mapa de riesgos ambientales de la cadena de valor completa con plan de mitigación y protocolos de auditoría a proveedores
+
+  --- mitigacion_riesgos_ambientales   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Mitigación de Riesgos Ambientales y Responsabilidad Extendida del Productor
+      fuente    : The Green to Gold Business Play - Daniel C. Esty
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Realizar una auditoría de riesgos ambientales en operaciones propias y de proveedores
+      paso 2: Establecer protocolos de cumplimiento y verificación en la cadena de suministro extendida
+      paso 3: Diseñar planes de contingencia y comunicación de crisis para incidentes ambientales
+      paso 4: Monitorear cambios regulatorios que puedan generar nuevas exposiciones legales
+      cond 1: Si la empresa maneja materiales peligrosos, tóxicos o cadenas de suministro complejas
+      cond 2: Cuando existan antecedentes de incidentes regulatorios o de reputación relacionados al ambiente
+      previos   : ['eco_advantage', 'proteccion_organizacion_matriz_experimentos']
+      siguientes: ['eco_eficiencia']
+      entregable: Mapa de riesgos ambientales de la cadena de valor con plan de mitigación y protocolos de cumplimiento para proveedores
+
+  --- responsabilidad_extendida_productor
+      titulo    : Responsabilidad Extendida del Productor
+      fuente    : The Green to Gold Business Play - Daniel C. Esty
+      pasos 4 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Identificar todos los eslabones de la cadena de valor extendida, incluyendo proveedores de segundo y tercer nivel
+      paso 2: Establecer guías de cumplimiento ambiental explícitas para todos los proveedores
+      paso 3: Implementar mecanismos de verificación y auditoría más allá de las políticas escritas
+      paso 4: Preparar planes de comunicación de crisis para escenarios de incumplimiento en la cadena
+      cond 1: Si la empresa tiene una marca de cara al consumidor
+      cond 2: Si la empresa terceriza producción o depende de proveedores externos
+      previos   : ['gestion_eco_riesgos', 'separar_opciones_dfe']
+      siguientes: ['eco_eficiencia', 'certificacion_cradle_to_cradle']
+      entregable: Política de responsabilidad extendida documentada con mecanismos de auditoría a proveedores en todos los niveles de la cadena
+
+##############################################################################
+# ACTO 47 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 2072, clase A, dominio franquicias
+     nodo_a (EL PRIMERO de la razon): gestion_terminacion_franquiciado
+     nodo_b (EL SEGUNDO de la razon): terminacion_franquiciado_causas
+     RAZON ENTERA, sin recortar:
+       REPITE. terminacion_franquiciado_causas cabe ENTERO dentro de gestion_terminacion_franquiciado, PRIMER PAR DEL DOMINIO DE FRANQUICIAS, misma fuente y sin arista entre ellos, y es SUBCONJUNTO ESTRICTO por el banco 9.6.1. El nodo corto tiene CUATRO pasos y LOS CUATRO viven dentro del largo, casi con las mismas palabras. Paso 1, listar en el contrato las violaciones NO CURABLES, es el paso 1 del largo, definir en el contrato que violaciones son curables y cuales no. Paso 2, plazos estandar de cura para las curables, es el paso 2 del largo, plazos estandar de cura para cada tipo de incumplimiento. Paso 3, plantillas de carta de incumplimiento, es el paso 3 del largo, plantilla de carta con descripcion del problema y plazo de correccion. Paso 4, checklist de cumplimiento como evidencia objetiva de violaciones repetidas, esta dentro del paso 4 del largo, que documenta el escalamiento para incumplimientos repetidos Y NOMBRA EL CHECKLIST DE CUMPLIMIENTO por su nombre. LO UNICO QUE EL CORTO ANADE ES UNA FRASE: que los plazos se gradúen segun la gravedad. Y eso cabe en una linea. Ademas el largo tiene un paso propio que el corto no tiene, consultar con abogado de franquicias para validar la exigibilidad de las clausulas de terminacion, que es justamente lo que decide si todo lo anterior sirve de algo. Por la vara, REPITE.
+
+  [PAR] puesto 2190, clase A, dominio franquicias
+     nodo_a (EL PRIMERO de la razon): gestion_terminacion_franquiciado
+     nodo_b (EL SEGUNDO de la razon): perdida_control_operativo
+     RAZON ENTERA, sin recortar:
+       REPITE. perdida_control_operativo contra gestion_terminacion_franquiciado, MISMA FUENTE y sin arista, con TRES DE SUS CUATRO PASOS PAREADOS UNO A UNO: disenar el contrato especificando violaciones curables y no curables es el paso 1 del otro; establecer plazos y procedimientos para notificar y curar defaults son los pasos 2 y 3 del otro; y definir con el abogado las causales de terminacion inmediata es su paso 5. Lo unico propio de perdida_control_operativo es su paso 1, aceptar y documentar que decisiones operativas quedan bajo el franquiciado, y eso CABE EN UNA LINEA. gestion_terminacion_franquiciado en cambio trae procedimiento que el otro no tiene: una PLANTILLA DE CARTA DE DEFAULT con descripcion del problema y plazo de correccion, y un PROCESO DOCUMENTADO DE ESCALAMIENTO PARA REINCIDENTES, del tipo checklist de cumplimiento fallido tres veces. Por la vara del banco 9.6.1, REPITE. Sobrevive gestion_terminacion_franquiciado por contenido, y la linea de la aceptacion del control cedido se absorbe en el.
+
+  --- gestion_terminacion_franquiciado
+      titulo    : Gestión de Incumplimiento y Terminación de Franquiciados
+      fuente    : Franchise Your Business - Mark Siebert
+      pasos 5 | condiciones 2 | previos 1 | siguientes 0 | cableado 1
+      paso 1: Definir en el contrato de franquicia qué violaciones son curables y cuáles no
+      paso 2: Establecer plazos estándar de cura para cada tipo de incumplimiento
+      paso 3: Crear plantilla de carta de default con descripción del problema y plazo de corrección
+      paso 4: Documentar el proceso de escalamiento para incumplimientos repetidos (ej. checklist de cumplimiento fallido 3 veces)
+      paso 5: Consultar con abogado de franquicias para validar la exigibilidad de las cláusulas de terminación
+      cond 1: Cuando un franquiciado incumple estándares de calidad o contrato
+      cond 2: Al redactar el acuerdo de franquicia
+      previos   : ['exito_franquiciado_determina_exito_franquiciador']
+      siguientes: []
+      entregable: Cláusulas de default/terminación en el contrato de franquicia y plantillas de cartas de incumplimiento
+
+  --- perdida_control_operativo
+      titulo    : Pérdida de Control Operativo del Franquiciante
+      fuente    : Franchise Your Business - Mark Siebert
+      pasos 4 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Aceptar y documentar qué decisiones operativas quedarán bajo control del franquiciado
+      paso 2: Diseñar el contrato de franquicia especificando violaciones curables vs. no curables
+      paso 3: Establecer plazos y procedimientos claros para notificar y curar defaults del franquiciado
+      paso 4: Definir con el abogado una lista de causales de terminación inmediata (no curables)
+      cond 1: Si el emprendedor tiene fuerte necesidad de control operativo y esto genera dudas sobre franquiciar
+      previos   : ['riesgo_litigios_franquicia']
+      siguientes: ['terminacion_franquiciado_causas']
+      entregable: Listado documentado de causales de incumplimiento curables y no curables en el contrato de franquicia
+
+  --- terminacion_franquiciado_causas
+      titulo    : Causales de Terminación de Contrato de Franquicia
+      fuente    : Franchise Your Business - Mark Siebert
+      pasos 4 | condiciones 2 | previos 1 | siguientes 0 | cableado 1
+      paso 1: Listar explícitamente en el contrato las violaciones consideradas no curables
+      paso 2: Definir plazos estándar de cura para violaciones curables según su gravedad
+      paso 3: Crear plantillas de cartas de default para notificar incumplimientos
+      paso 4: Establecer un checklist de cumplimiento que sirva como evidencia objetiva de violaciones repetidas
+      cond 1: Si se está redactando el contrato legal de franquicia
+      cond 2: Si un franquiciado existente incumple términos del acuerdo
+      previos   : ['perdida_control_operativo']
+      siguientes: []
+      entregable: Cláusulas de terminación y proceso de default documentados en el contrato de franquicia final
+
+FIN
