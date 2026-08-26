@@ -79,7 +79,6 @@ escribe nada. Una pagina con la adjudicacion duplicada no falla, dice que si.
 Uso:
   python scripts/loop/vuelta70_registrar_acta69.py [--simular]
 """
-# ROTULO titulo especie=PROCEDENCIA cita=vuelta:69 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 69 DEL AUDITOR" corte=2026-08-26 motivo="el titulo nombra el ACTA que este registro transcribe, que es de la vuelta 69; el fichero es de la vuelta 70 y por eso el numero no calza con su propia vuelta a proposito"
 '''
 
 PROPIO = '''
@@ -241,7 +240,26 @@ def main():
     print("  PIEZA 3 main entero       : %d lineas, EXTRAIDA con 3 rotulos cambiados"
           % cuerpo.count(NL))
 
-    salida = CABECERA + imports + PROPIO.lstrip(NL) + NL + maquina + CIERRE.lstrip(NL) + NL + cuerpo
+    # PIEZA 4: EL ROTULO DEL FICHERO HIJO, EXTRAIDO DEL ANCESTRO Y NO TECLEADO
+    # AQUI. Va por extraccion por dos motivos y los dos se dicen: es la misma
+    # doctrina de copiar y no retecleaar que rige la maquina, y un rotulo escrito
+    # DENTRO del constructor es un ROTULO HUERFANO para el barrido de titulos,
+    # porque el titulo que cubre no es el del constructor sino el del hijo. El
+    # barrido lo cazo en su primera corrida de esta vuelta y por eso se cambio.
+    i4 = src.index("# ROTULO titulo")
+    f4 = src.index(NL, i4)
+    rotulo = src[i4:f4]
+    cambios_rotulo = [("cita=vuelta:68", "cita=vuelta:69"),
+                      ("ACTA DE LA VUELTA 68 DEL AUDITOR", "ACTA DE LA VUELTA 69 DEL AUDITOR"),
+                      ("que es de la vuelta 68", "que es de la vuelta 69"),
+                      ("el fichero es de la vuelta 69", "el fichero es de la vuelta 70")]
+    for viejo, nuevo in cambios_rotulo:
+        assert rotulo.count(viejo) == 1, viejo
+        rotulo = rotulo.replace(viejo, nuevo)
+    print("  PIEZA 4 el rotulo del hijo: EXTRAIDO con %d campos cambiados" % len(cambios_rotulo))
+
+    salida = (CABECERA + rotulo + NL + imports + PROPIO.lstrip(NL) + NL + maquina
+              + CIERRE.lstrip(NL) + NL + cuerpo)
     for mal, nombre in ((chr(8212), "guion largo"), (chr(8211), "guion medio")):
         assert mal not in salida, nombre
     io.open(DESTINO, "w", encoding="utf-8", newline=NL).write(salida)

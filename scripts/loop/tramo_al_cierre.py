@@ -96,7 +96,7 @@ def main():
                             r.get("duenos_cualquier_operacion") or []))
 
     print("  actos del tramo (filas del fichero fijado) : %d" % len(filas))
-    print("  actos FUNDIDOS, medido (1 o 0 miembros vivos): %d" % len(fundidos))
+    print("  actos FUNDIDOS, medido (ningun miembro vivo, o uno solo): %d" % len(fundidos))
     print("     %s" % sorted(fundidos))
     print("  actos con DOS O MAS miembros vivos           : %d" % len(abiertos))
     print("  de esos, DECLARADOS Y NO FUNDIDOS (argumento): %d" % len(declarados & set(abiertos)))

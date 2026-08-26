@@ -1,14 +1,32 @@
-==============================================================================
-MARCADOR DEL ARCHIVO, recomputado al cierre de la vuelta 38
-==============================================================================
-  docs/INTRA_DOMINIO_VEREDICTOS.jsonl : 3388 filas
-  docs/INTRA_DOMINIO_PARES.jsonl      : 3388 filas
+n = 3388 corte = 3388 huecos: [] dups(puesto): 0
+pares duplicados (nodo_a,nodo_b,dominio): 0
 
-  n = 3388
-  A = 551
-  B = 72
-  C = 5
-  D = 2760
+MARCADOR GLOBAL
+  A 551 16.3
+  B 72 2.1
+  C 5 0.1
+  D 2760 81.5
 
-  suma de clases: 3388   (tiene que ser igual a n)
-  cuadra: SI
+TASA POR DOMINIO
+  compras 155 1 0.6
+  core 1445 325 22.5
+  entrega 171 2 1.2
+  environmental 170 28 16.5
+  exportacion 130 15 11.5
+  franquicias 148 15 10.1
+  health_safety 192 43 22.4
+  quality 844 119 14.1
+  risk_management 106 0 0.0
+  seguridad_digital 27 3 11.1
+
+NOTA DE PROCEDENCIA DE ESTA SALIDA, ESCRITA PARA NO MENTIR CON UN NOMBRE DE
+FICHERO. La medicion de APERTURA de esta vuelta se corrio ANTES de la primera
+operacion con scripts/loop/vuelta38_marcador.py (docs/loop/SALIDA_V70_APERTURA
+y su propia salida) y dio n 3388, A 551, B 72, C 5, D 2760, cero huecos y cero
+duplicados: los mismos digitos que estan arriba. Este fichero se genero DESPUES,
+con scripts/recomputar_marcador.py, que es el instrumento cuyo FORMATO lee
+tallar_cabecera_reporte.py, y la cifra es la de la apertura porque LAS DOS
+ENTRADAS DEL MARCADOR NO SE TOCARON EN TODA LA VUELTA, medido con git: el sha de
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl y el de docs/INTRA_DOMINIO_PARES.jsonl son
+IDENTICOS en el arbol de hoy y en el commit de la apertura (f276ae2d), y
+git diff sobre los dos ficheros entre f276ae2d y HEAD sale vacio.
