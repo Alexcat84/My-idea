@@ -1,0 +1,576 @@
+====================================================================================================
+[0] clasificacion_tipos_activos -> tipos_de_pasivos  (dominio core, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (clasificacion_tipos_activos), fuente: Financial Intelligence for Entrepreneurs
+    resumen: Los activos se dividen en corrientes (convertibles en efectivo en menos de un año: caja, cuentas por cobrar, inventario) y de largo plazo (vida útil mayor a un año: propiedad, planta y equipo, intangibles). Cada categoría involucra distintos niveles de estimación contable y de riesgo de manipulación, siendo el efectivo el único rubro no sujeto a discreción contable significativa.
+    paso 1: Clasificar los activos de la empresa en corrientes y de largo plazo <== SENALADO
+    paso 2: Revisar el saldo de cuentas por cobrar y la reserva para cuentas incobrables
+    paso 3: Evaluar los niveles de inventario (materia prima, en proceso, terminado) y su impacto en el flujo de caja
+    paso 4: Identificar el valor de PPE (propiedad, planta y equipo) registrado al costo de adquisición, no al valor de mercado
+    paso 5: Monitorear que el inventario se mantenga en el nivel mínimo necesario para operar
+  HIJO (tipos_de_pasivos), fuente: Financial Intelligence for Entrepreneurs
+    resumen: Los pasivos son obligaciones financieras de la empresa, divididos en corrientes (pagaderos en menos de un año: porción corriente de deuda largo plazo, préstamos de corto plazo, cuentas por pagar, gastos acumulados) y de largo plazo (préstamos, compensación diferida, impuestos diferidos). Entender esta clasificación es clave para evaluar la liquidez y estructura de financiamiento del negocio.
+    paso 1: Clasificar todas las deudas de la empresa en corrientes vs largo plazo.
+    paso 2: Separar la porción corriente de préstamos largo plazo que vence este año.
+    paso 3: Registrar cuentas por pagar a proveedores y gastos acumulados (como nómina).
+    paso 4: Revisar periódicamente el peso relativo de cada categoría de pasivo.
+
+====================================================================================================
+[1] proceso_llamada_inicial_venta -> proceso_venta_franquicias  (dominio franquicias, paso senalado 6)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (proceso_llamada_inicial_venta), fuente: Franchise Your Business - Mark Siebert
+    resumen: La venta de franquicias es un cortejo, no una venta rápida. Los mejores vendedores escuchan más de lo que hablan en la primera llamada, evitando abrumar al prospecto con información. La llamada inicial sigue una agenda estructurada: obtener datos de contacto, calificar financieramente, calificar por otros criterios, determinar urgencia y motivos, entender el proceso de compra del candidato y posicionar frente a competidores, dar una visión general, explicar próximos pasos y pedir un avance (advance).
+    paso 1: Obtener información de contacto y fuente del lead
+    paso 2: Calificar financieramente al candidato, y hazlo en los primeros 5 minutos
+    paso 3: Calificar según experiencia, territorio deseado, etc.
+    paso 4: Determinar urgencia y motivos para franquiciar
+    paso 5: Identificar por qué considera tu franquicia específicamente (hot buttons)
+    paso 6: Entender su proceso de decisión y qué otras franquicias evalúa <== SENALADO
+    paso 7: Dar overview breve enfatizando hot buttons
+    paso 8: Explicar el proceso y cronograma, y solicitar un avance (ej. completar el CIRF), y agenda la siguiente llamada
+    paso 9: Si no califica, rechazalo con amabilidad y sugierele como resolver su situacion
+  HIJO (proceso_venta_franquicias), fuente: Franchise Your Business - Mark Siebert
+    resumen: La venta de franquicias es un proceso predecible si se sigue una metodología probada, aunque con tasas de cierre bajas y alto nivel de rechazo. No existe un único proceso correcto; varía según tipo de franquicia (individual vs. desarrollo de área), nivel de inversión y experiencia del vendedor. Es fundamentalmente distinto a otras ventas porque implica vender un 'cambio de vida' (dejar el empleo, invertir ahorros) más que un producto o servicio.
+    paso 1: Diseñar un flujo de proceso de ventas adaptado al tipo de franquicia e inversión
+    paso 2: Capacitar al equipo de ventas en entender las motivaciones emocionales del comprador (independencia, ser su propio jefe) más que solo el retorno financiero
+    paso 3: Decidir la estrategia respecto a cerrar en 'Discovery/Decision Day' o después
+    paso 4: Asegurar que los candidatos lean el FDD y consulten con abogado externo
+    paso 5: Medir y ajustar continuamente el proceso según los resultados obtenidos
+
+====================================================================================================
+[2] equipo_customer_development -> customer_development_team  (dominio core, paso senalado 1)
+  veredicto propio: puesto 637, clase B: CORRECCION DECLARADA DE MI PROPIA RAZON DEL PUESTO 615: alli escribi que equipo_customer_development y customer_development_team son una pareja que se lee sola, y LEIDOS DE VERDAD no son gemelos. El n
+  mismo racimo declarado: NO
+  MADRE (equipo_customer_development), fuente: The Startup Owner's Manual - Steve Blank
+    resumen: En lugar de contratar puestos tradicionales de ventas o marketing enfocados en ejecutar, tú y quienes te acompañan forman el equipo que descubre a tus clientes (Customer Development). Al principio ese equipo eres tú mismo con tus cofundadores. Necesitas sentirte cómodo con la incertidumbre, el caos y el cambio constante, y estar dispuesto a aprender del fracaso en vez de celebrar solo el éxito. Las habilidades que te sirven aquí son opuestas a las que se necesitan en una empresa ya establecida.
+    paso 1: Cambia los títulos tradicionales de Ventas y Marketing por el de equipo de descubrimiento de clientes (Customer Development) <== SENALADO
+    paso 2: Lidera tú mismo, junto a tus cofundadores, la interacción directa con los clientes
+    paso 3: Evalúa en ti y en tu equipo la apertura a aprender, la tolerancia a la ambigüedad y la capacidad de hacer varias cosas a la vez
+    paso 4: Define los roles de tu equipo para las cuatro etapas del descubrimiento de clientes
+  HIJO (customer_development_team), fuente: The Startup Owner's Manual - Steve Blank
+    resumen: Aquí te organizas distinto a como lo haría una empresa tradicional: en las primeras etapas, tú y tus cofundadores salen del edificio a hablar con clientes (get out of the building), en vez de dejarle esa tarea a alguien de ventas o marketing contratado para eso. Define quién hace qué en cada una de las cuatro fases de descubrimiento de clientes (Customer Discovery) y deja por escrito los valores centrales de tu proyecto.
+    paso 1: Decide quién de ustedes lidera la conversación con clientes (Customer Development)
+    paso 2: Define cómo vas a salir a hablar con clientes en persona (get out of the building)
+    paso 3: Decide qué parte de las respuestas de tus clientes vas a recoger en línea y qué parte cara a cara
+    paso 4: Escribe entre 3 y 5 valores centrales que te guían a ti y a tus cofundadores (no es tu misión, no habla de ganancias)
+
+====================================================================================================
+[3] extraer_priorizar_hipotesis -> value_proposition_startup  (dominio core, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (extraer_priorizar_hipotesis), fuente: Value Proposition Design
+    resumen: A partir de tu mapa de propuesta de valor y tu modelo de negocio, identifica todas las suposiciones que tienen que ser ciertas para que tu idea funcione. No todas pesan igual: primero busca las que pueden matar tu negocio si resultan falsas, y esas son las que testeas primero.
+    paso 1: Lista todo lo que tiene que ser cierto sobre tu modelo de negocio, tu propuesta de valor y tu cliente <== SENALADO
+    paso 2: Escribe cada hipótesis por separado, una por nota
+    paso 3: Elimina las que estén repetidas
+    paso 4: Identifica cuáles son capaces de acabar con tu proyecto si fallan
+    paso 5: Ordena todas tus hipótesis según qué tan crítica es cada una para que tu proyecto funcione
+  HIJO (value_proposition_startup), fuente: The Startup Owner's Manual - Blank, Steve
+    resumen: Tu propuesta de valor describe el trabajo (job) que resuelves para tu cliente. Son las caracteristicas de tu producto o servicio que responden a un problema o una necesidad real: ahorrar tiempo, ganar estatus, simplificar algo, dar comodidad. Para que funcione, tiene que encajar con precisión en el segmento de clientes al que se la ofreces.
+    paso 1: Identifica los problemas o necesidades reales de tu segmento de clientes.
+    paso 2: Define que caracteristicas de tu producto o servicio resuelven esos problemas.
+    paso 3: Verifica el encaje entre tu propuesta de valor y tu segmento de clientes hablando directamente con ellos.
+
+====================================================================================================
+[4] preparacion_preguntas_problema_precall -> preguntas_situacion  (dominio core, paso senalado 4)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (preparacion_preguntas_problema_precall), fuente: SPIN Selling - Neil Rackham
+    resumen: Antes de cada reunión de ventas, el vendedor debe anticipar al menos tres problemas potenciales que el comprador podría tener y que su producto o servicio puede resolver. Luego debe redactar ejemplos concretos de Preguntas de Problema (Problem Questions) para cada uno. Esta preparación reduce el tiempo perdido en preguntas de situación innecesarias y acelera el descubrimiento de Necesidades Implícitas (Implied Needs), acortando las etapas iniciales de la venta.
+    paso 1: Listar al menos tres problemas potenciales del comprador que tu oferta pueda resolver
+    paso 2: Redactar ejemplos concretos de Preguntas de Problema para cada problema identificado
+    paso 3: Revisar la lista antes de cada llamada de ventas como parte de la preparación
+    paso 4: Usar estas preguntas para minimizar preguntas de situación irrelevantes <== SENALADO
+    paso 5: Identificar de antemano los problemas típicos que el producto/servicio resuelve
+    paso 6: Formular preguntas directas sobre insatisfacciones relacionadas a esos problemas
+    paso 7: Escuchar activamente las respuestas para detectar problemas no mencionados explícitamente
+  HIJO (preguntas_situacion), fuente: SPIN Selling - Neil Rackham
+    resumen: Son las preguntas con las que abres una conversación para entender hechos y antecedentes del cliente (por ejemplo, 'cuánto tiempo lleva con su proveedor actual'). Las necesitas para tener contexto, pero si abusas de ellas aburres o irritas a la persona que tienes enfrente. Antes de la llamada investiga por tu cuenta (sitio web, redes, lo que encuentres) para llegar con menos preguntas de este tipo y usarlas con moderación.
+    paso 1: Investiga al cliente antes de la llamada (sitio web, redes, lo que encuentres) para reducir preguntas innecesarias
+    paso 2: Limita tus preguntas de situación a lo estrictamente necesario para avanzar
+    paso 3: Úsalas como apertura breve y pasa pronto a preguntar por el problema
+
+====================================================================================================
+[5] timing_solicitud_referidos -> fase_adopt_ciclo_cliente  (dominio core, paso senalado 5)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (timing_solicitud_referidos), fuente: Never Lose a Customer Again - Joey Coleman
+    resumen: Solicitar referencias demasiado pronto (inmediatamente después de la compra) destruye las posibilidades de obtenerlas, ya que el cliente aún no ha experimentado el beneficio real del producto. La solicitud debe ocurrir solo después de que el cliente haya alcanzado su objetivo original de compra (point-of-purchase goal), momento en el cual siente confianza suficiente para asociar su nombre con la marca.
+    paso 1: Identificar el 'punto de logro' donde el cliente obtiene el beneficio prometido del producto/servicio
+    paso 2: Configurar un disparador automatizado (ej. email a los 30 días) que se active después de este punto de logro
+    paso 3: Evitar solicitudes de referido en el momento inmediato de la compra o registro
+    paso 4: Validar mediante datos (aperturas, clics) que el timing elegido genera mejores tasas de respuesta que el promedio de la industria
+    paso 5: Comunica el programa en momentos clave del ciclo de vida (ej: fase Adopt/Advocate) <== SENALADO
+  HIJO (fase_adopt_ciclo_cliente), fuente: Never Lose a Customer Again - Joey Coleman
+    resumen: La fase Adopt ocurre cuando el cliente ha adoptado completamente el producto/servicio y ve resultados significativos, incluso en áreas inesperadas de su vida o negocio. Es el momento de formalizar una relación de largo plazo usando seis canales de comunicación (en persona, email, correo físico, teléfono, video, regalo) para recompensar la lealtad y profundizar el vínculo, antes de que el cliente pase a la fase Advocate.
+    paso 1: Define qué comportamientos/métricas indican que un cliente ha 'adoptado' tu producto
+    paso 2: Diseña interacciones específicas para cada uno de los 6 canales (in-person, email, mail, phone, video, present)
+    paso 3: Implementa una encuesta de éxito para recopilar datos de personalización
+    paso 4: Establece un ritual de reconocimiento de hitos/aniversarios de la relación
+
+====================================================================================================
+[6] requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level  (dominio quality, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (requisitos_numericos_calidad_lotes), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Más allá de los requisitos de calidad para unidades individuales, se necesitan criterios numéricos para juzgar la conformidad de lotes completos, típicamente usados en procedimientos de muestreo de aceptación. Estos criterios facilitan decidir la aceptación o rechazo de un lote basándose en una muestra aleatoria, aunque frecuentemente los proveedores malinterpretan los conceptos estadísticos subyacentes, generando confusión en discusiones de responsabilidad del producto.
+    paso 1: Definir índices numéricos de calidad de lote (ej. AQL, nivel de calidad aceptable) <== SENALADO
+    paso 2: Seleccionar un plan de muestreo de aceptación basado en consideraciones probabilísticas
+    paso 3: Comunicar y capacitar al proveedor en la interpretación correcta de estos criterios estadísticos
+    paso 4: Para productos complejos, definir requisitos numéricos de confiabilidad (ej. tiempo medio entre fallas)
+  HIJO (critica_acceptable_quality_level), fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: El Nivel de Calidad Aceptable (AQL) es un término estadístico de control de calidad que, mal usado, se convierte en una autorización previa para fallar: al aceptar que un porcentaje de tu producto sea no conforme, estás planificando el fracaso desde el inicio. Crosby argumenta que no hay evidencia real de que los últimos puntos porcentuales de mejora cuesten más que los primeros, y que la economía de la calidad debe entenderse como la economía de hacer las cosas bien la primera vez, no como la excusa para tolerar defectos.
+    paso 1: Revisa si estás usando estándares de AQL que toleran un porcentaje fijo de defectos.
+    paso 2: Cuestiona el origen de esos estándares: casi siempre nacen de la operación diaria, no de un análisis técnico riguroso.
+    paso 3: Cambia la mentalidad de 'nivel aceptable de fallas' por el objetivo de conformidad total (Cero Defectos).
+    paso 4: Calcula el costo real de hacer las cosas mal frente al costo de hacerlas bien la primera vez.
+
+====================================================================================================
+[7] uso_inadecuado_computadoras -> causas_comunes_vs_especiales  (dominio quality, paso senalado 3)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (uso_inadecuado_computadoras), fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: Las computadoras pueden ser una bendición o una maldición para tu negocio. Puedes acumular datos sin analizarlos con ningún propósito, o dejarte intimidar por la tecnología y aceptar sin cuestionar lo que el sistema te entrega, en lugar de pedir los datos y gráficos específicos que necesitas para entender la variación de tu proceso. Una sola cifra, como las ventas de ayer, sin el contexto de su variación, no te dice nada útil para decidir.
+    paso 1: Definir con claridad qué datos y en qué formato necesitas antes de generar reportes automáticos
+    paso 2: Pedir gráficos de variación en el tiempo en lugar de cifras aisladas
+    paso 3: Aprender a distinguir la variación común de las causas especiales en tus datos <== SENALADO
+    paso 4: Evitar acumular datos sin un propósito claro de análisis
+  HIJO (causas_comunes_vs_especiales), fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.
+    paso 1: Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes
+    paso 2: Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos
+    paso 3: Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales
+    paso 4: Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla
+    paso 5: Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas
+    paso 6: Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales
+    paso 7: Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo
+    paso 8: Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+    paso 9: Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).
+    paso 10: Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.
+    paso 11: Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.
+    paso 12: Comunicar a los equipos que el objetivo es identificar problemas, no culpables
+    paso 13: Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo
+    paso 14: Fomentar la colaboración entre turnos y departamentos para resolver causas comunes
+    paso 15: Analizar la distribución de errores o defectos entre todas las personas usando limites de control
+
+====================================================================================================
+[8] hipotesis_relacion_clientes_web -> mvp_alta_fidelidad  (dominio core, paso senalado 4)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (hipotesis_relacion_clientes_web), fuente: The Startup Owner's Manual - Steve Blank
+    resumen: Describe cómo la startup atraerá clientes a su sitio web o app (Get), los retendrá (Keep) y generará ingresos adicionales de ellos con el tiempo (Grow). En web/mobile el embudo es más simple que en canal físico, con solo dos pasos principales: adquisición y activación, además de un 'viral loop' donde clientes invitan a otros.
+    paso 1: Diseñar el embudo de adquisición: cómo llevar tráfico a la landing page
+    paso 2: Definir el paso de activación: cuándo se considera un cliente 'activado' (descarga, registro, permiso de recontacto)
+    paso 3: Si es un mercado multi-sided (como Google/Facebook), crear hipótesis separadas para usuarios y para pagadores
+    paso 4: Probar tácticas a pequeña escala (cientos de usuarios) con un MVP de baja fidelidad <== SENALADO
+    paso 5: Mapear el customer journey: descubrimiento de necesidad, búsqueda, y decisión rápida (primera página de resultados)
+  HIJO (mvp_alta_fidelidad), fuente: The Startup Owner's Manual
+    resumen: Es una versión más completa y pulida del MVP usado en customer discovery, diseñada específicamente para probar tácticas de adquisición y activación con más usuarios. No incluye todas las funcionalidades finales, pero no debe sentirse como un producto de segunda clase. Debe estar instrumentado para capturar datos de comportamiento de clientes y producto continuamente.
+    paso 1: Partir del MVP de baja fidelidad usado en customer discovery
+    paso 2: Pulir funcionalidades limitadas pero completas (ej. solo una categoría de producto)
+    paso 3: Evitar mostrar demasiado contenido 'coming soon' que desincentive la compra actual
+    paso 4: Instrumentar el MVP para capturar datos de comportamiento de usuario en tiempo real
+    paso 5: Iterar continuamente mediante desarrollo ágil y despliegue continuo
+
+====================================================================================================
+[9] producto_mercado_fit_motores -> afinar_motor_crecimiento  (dominio core, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (producto_mercado_fit_motores), fuente: The Lean Startup - Eric Ries
+    resumen: El concepto de encajar con el mercado (product/market fit), acuñado por Marc Andreessen, describe el momento en que tu producto conecta con un mercado amplio. Ries propone hacerlo más riguroso: cada motor de crecimiento tiene una métrica concreta que te dice si estás cerca de lograr ese encaje (por ejemplo, un coeficiente viral de 0.9 o más indica que estás cerca del éxito). Pivotar no es un fracaso, y lograr ese encaje no significa que dejes de pivotar. Tienes que mirar la dirección y el ritmo de progreso, no los números que solo se ven bien (vanity metrics), usando el ciclo de construir, medir y aprender.
+    paso 1: Define la métrica concreta de tu motor de crecimiento elegido <== SENALADO
+    paso 2: Registra cómo cambia esa métrica con el tiempo, no solo su valor en un momento dado
+    paso 3: Compara tu ritmo de progreso con otros negocios o referencias del mercado, no solo el número actual
+    paso 4: Usa la contabilidad de la innovación (innovation accounting) para decidir si estás cerca de encajar con el mercado o necesitas pivotar
+  HIJO (afinar_motor_crecimiento), fuente: The Lean Startup - Eric Ries
+    resumen: Es el segundo paso de la contabilidad de la innovación. Cada cosa que hagas en producto, marketing o cualquier otra área debe apuntar a mejorar uno de los motores de tu crecimiento. Formula hipótesis claras sobre qué mejorará una métrica específica y diseña experimentos para probarlas, en lugar de meter varios cambios a la vez sin saber qué vas a medir.
+    paso 1: Elige un motor específico de tu crecimiento que quieras mejorar (por ejemplo, cuántos usuarios se activan)
+    paso 2: Formula una hipótesis clara sobre qué cambio va a mejorar esa métrica
+    paso 3: Diseña y corre experimentos enfocados solo en esa hipótesis
+    paso 4: Mide si el cambio realmente mejoró la métrica que buscabas
+    paso 5: Descarta los cambios que no den una mejora medible, aunque te parezcan bonitos o te haya costado hacerlos
+
+====================================================================================================
+[10] valor_intangible_sostenibilidad -> compromiso_cliente_sostenibilidad  (dominio environmental, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (valor_intangible_sostenibilidad), fuente: The Green to Gold Business Play - Daniel C. Esty
+    resumen: El valor de una empresa va más allá de sus estados financieros: incluye intangibles como lealtad de marca, reputación corporativa y moral del equipo. Una reputación de sostenibilidad ambiental fortalece la marca, conecta emocionalmente con los clientes y crea 'stickiness' (atracción y retención), además de mejorar la capacidad de reclutar y retener talento, aumentando la productividad. Este valor es especialmente relevante para sostener la moral del equipo durante crisis económicas. También actúa como escudo ante el escrutinio de reguladores y ONGs, generando un 'aura verde' que facilita las relaciones con stakeholders. Capitalizar este valor exige medir y comunicar de forma transparente los avances, integrándolos en la cultura y la marca que proyectas como emprendedor.
+    paso 1: Incorpora métricas de sostenibilidad en tu seguimiento del negocio (satisfacción del cliente, compromiso del equipo, impacto ambiental) <== SENALADO
+    paso 2: Comunica de forma transparente y auténtica tus compromisos y logros ambientales
+    paso 3: Alinea tu cultura de trabajo y propósito de sostenibilidad con la marca que quieres proyectar como empleador
+    paso 4: Mide el impacto de tus iniciativas verdes en la retención de talento y la percepción de tus clientes
+    paso 5: Evalúa periódicamente cómo tu reputación ambiental afecta la lealtad de clientes y la relación con reguladores
+  HIJO (compromiso_cliente_sostenibilidad), fuente: The Green to Gold Business Play - Daniel C. Esty
+    resumen: El uso de redes sociales y plataformas digitales permite a las empresas involucrar a los clientes en sus esfuerzos de sostenibilidad, generando lealtad de marca y visibilidad de sus iniciativas ambientales. Ejemplos incluyen campañas de donación vinculadas a acciones sociales y promociones que incentivan comportamientos sostenibles entre los consumidores.
+    paso 1: Identificar plataformas sociales relevantes para el público objetivo de la empresa.
+    paso 2: Diseñar campañas que vinculen la interacción del cliente con acciones ambientales concretas (donaciones, compensaciones de carbono).
+    paso 3: Medir el impacto de las campañas en engagement y percepción de marca.
+    paso 4: Comunicar resultados de sostenibilidad de forma transparente a través de estos canales.
+
+====================================================================================================
+[11] planificacion_inicial_calidad -> identificar_caracteristicas_metas_proceso  (dominio quality, paso senalado 2)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (planificacion_inicial_calidad), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: La planificación de calidad en manufactura inicia con la revisión del diseño del producto y del proceso para identificar características clave, determinar su importancia relativa, analizar el diagrama de flujo del proceso, evaluar capacidad y control del proceso, aplicar error-proofing, y validar sistemas de medición, buscando prevenir defectos y minimizar variabilidad.
+    paso 1: Revisar el diseño del producto con personal de operaciones antes de su lanzamiento
+    paso 2: Identificar características clave del producto y del proceso (KPCs) <== SENALADO
+    paso 3: Clasificar características por importancia (crítica, mayor, menor, incidental)
+    paso 4: Analizar el diagrama de flujo del proceso por estación de trabajo
+    paso 5: Validar la capacidad y los sistemas de medición del proceso
+  HIJO (identificar_caracteristicas_metas_proceso), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Una característica de proceso es cualquier propiedad o atributo necesario para crear el bien o entregar el servicio y alcanzar las metas de características del producto. Responde a qué mecanismos se necesitan para crear o entregar esas características repetidamente sin fallas, categorizándose en procedimientos, métodos, equipos, materiales, personas, entrenamiento y otros recursos.
+    paso 1: Descomponer el proceso en características específicas necesarias para cada característica del producto
+    paso 2: Clasificar cada característica en procedimientos, métodos, equipos, materiales, personas, entrenamiento o recursos
+    paso 3: Organizar las características y metas en una hoja de cálculo de diseño de proceso
+    paso 4: Verificar que cada característica del producto sea alcanzada por al menos una característica del proceso y eliminar redundancias
+    paso 5: Confirmar que los macroprocesos organizacionales de soporte sean capaces de cumplir las metas requeridas
+
+====================================================================================================
+[12] establecimiento_capacidad_proceso -> pruebas_destructivas  (dominio quality, paso senalado 5)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (establecimiento_capacidad_proceso), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Consiste en probar la efectividad del proceso mejorado mediante pruebas planificadas, ajustando resultados no satisfactorios, y utilizando cartas de control para confirmar que el proceso está bajo control estadístico antes de determinar su capacidad final mediante análisis de capacidad.
+    paso 1: Decidir cómo se probarán las mejoras
+    paso 2: Preparar un plan de prueba para cada mejora
+    paso 3: Conducir la prueba y medir resultados
+    paso 4: Ajustar las mejoras si los resultados no son satisfactorios
+    paso 5: Confirmar control estadístico mediante cartas de control <== SENALADO
+    paso 6: Realizar el análisis de capacidad del proceso
+  HIJO (pruebas_destructivas), fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: Cuando la prueba de calidad destruye la muestra (ej. vida útil de una lámpara, contenido de lana en tela), no es posible aplicar inspección por muestreo o screening tradicional, ya que no queda producto para enviar a producción. La única solución viable es lograr el control estadístico del proceso de fabricación para 'hacerlo bien desde la primera vez', eliminando la necesidad de probar cada unidad.
+    paso 1: Identificar los atributos de calidad que requieren pruebas destructivas.
+    paso 2: Implementar cartas de control (X-barra y R) sobre el proceso de fabricación en lugar de pruebas al producto terminado.
+    paso 3: Verificar que el proceso esté en control estadístico antes de confiar en la calidad del producto.
+    paso 4: Eliminar la práctica de screening de lotes rechazados, ya que no aporta valor en pruebas destructivas.
+
+====================================================================================================
+[13] certificacion_de_proveedores -> indice_cpk  (dominio quality, paso senalado 3)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (certificacion_de_proveedores), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Sistema de clasificación de proveedores en niveles: 'certificado' (no requiere inspección rutinaria por su historial de calidad), 'preferido' (calidad superior al mínimo) y 'aprobado' (cumple requisitos mínimos). La certificación reduce drásticamente los costos de inspección del comprador, es esencial para manufactura justo a tiempo (JIT) y sirve para identificar proveedores para alianzas estratégicas.
+    paso 1: Definir criterios de certificación (ej. 90% de cumplimiento por 4 trimestres consecutivos)
+    paso 2: Aplicar los ocho criterios recomendados por ASQ para certificación
+    paso 3: Usar índices de capacidad de proceso como parte del proceso de certificación <== SENALADO
+    paso 4: Otorgar preferencia en licitaciones a proveedores certificados
+    paso 5: Reconocer públicamente el estatus de certificación
+  HIJO (indice_cpk), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Cpk es un índice que refleja tanto la variación del proceso como la ubicación de su media respecto a los límites de especificación, a diferencia de Cp que asume centrado perfecto. Cpk indica qué tan cerca está la media actual del proceso del límite de especificación más próximo, siendo crítico para certificación de proveedores y detección de procesos descentrados.
+    paso 1: Calcular la media actual del proceso y su desviación estándar
+    paso 2: Calcular la distancia de la media a cada límite de especificación (USL y LSL)
+    paso 3: Determinar Cpk como el mínimo entre (USL-media)/3σ y (media-LSL)/3σ
+    paso 4: Comparar Cpk con Cp para determinar si el proceso está descentrado
+    paso 5: Si Cpk es menor a Cp, tomar acciones para centrar la media del proceso y/o reducir su variación
+    paso 6: Revisar siempre el histograma del proceso, no solo el valor numérico de Cpk
+    paso 7: Comparar con el índice Cpm si existe un valor objetivo (target) diferente de la media
+
+====================================================================================================
+[14] mitigacion_efecto_latigo -> precios_todos_los_dias_bajos  (dominio core, paso senalado 4)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (mitigacion_efecto_latigo), fuente: Essentials of Supply Chain Management - Michael H. Hugos
+    resumen: Existen cinco factores que generan el efecto látigo y sus respectivas estrategias de mitigación: (1) pronóstico de demanda basado en pedidos en lugar de datos de punto de venta reales; (2) agrupamiento de pedidos (order batching) por costos de procesamiento/transporte; (3) racionamiento de producto que induce 'shortage gaming'; (4) fluctuación de precios que genera compras anticipadas; y (5) incentivos de desempeño desalineados (ej. cuotas de fin de mes). Cada factor requiere una intervención específica: compartir datos POS, reducir costos de pedido, basar el racionamiento en históricos, aplicar precios estables ('everyday low prices'), y alinear incentivos con costeo basado en actividades (ABC).
+    paso 1: Sustituir pronósticos basados en pedidos por datos de punto de venta (POS) compartidos
+    paso 2: Reducir costos de procesamiento de pedidos mediante pedidos electrónicos y 3PLs para permitir lotes más pequeños y frecuentes
+    paso 3: Basar el racionamiento de producto en patrones históricos de pedido, no en el pedido actual, y avisar con anticipación de posibles escaseces
+    paso 4: Implementar políticas de precios estables ('everyday low price') para evitar compras anticipadas <== SENALADO
+    paso 5: Rediseñar incentivos de ventas e internos usando costeo ABC para eliminar el impulso a vender por cuota a fin de periodo
+  HIJO (precios_todos_los_dias_bajos), fuente: Essentials of Supply Chain Management - Michael H. Hugos
+    resumen: Las fluctuaciones de precio (promociones, descuentos) generan compras anticipadas (forward buying) y oleadas de demanda difíciles de gestionar. Mantener precios estables y predecibles hace que los clientes compren según necesidad real, facilitando el pronóstico de demanda y la eficiencia de la cadena.
+    paso 1: Evaluar el impacto histórico de promociones en la variabilidad de la demanda
+    paso 2: Diseñar una política de precios estables en lugar de descuentos periódicos agresivos
+    paso 3: Medir la reducción en fluctuaciones de demanda tras implementar precios constantes
+
+====================================================================================================
+[15] herramientas_analisis_causa_raiz -> estratificacion_datos  (dominio quality, paso senalado 5)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (herramientas_analisis_causa_raiz), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Conjunto de herramientas visuales que permiten representar y comprender grandes volúmenes de datos cuantitativos para detectar patrones, variaciones y relaciones. Incluyen gráficos y cartas para resumir información, histogramas y box plots para mostrar variación, el análisis de Pareto de Juran para identificar los 'pocos vitales', diagramas de dispersión para explorar relaciones causa-efecto, y la estratificación para separar datos en categorías relevantes.
+    paso 1: Recolectar datos cuantitativos relevantes al problema de calidad.
+    paso 2: Seleccionar la herramienta gráfica adecuada según el tipo de análisis requerido (variación, relación, ranking).
+    paso 3: Construir el gráfico y analizar patrones o anomalías visibles.
+    paso 4: Usar el análisis de Pareto para priorizar los factores más significativos.
+    paso 5: Aplicar estratificación para descomponer los datos por categorías y encontrar focos del problema. <== SENALADO
+  HIJO (estratificacion_datos), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: La estratificación es la separación de datos en categorías para identificar qué grupos contribuyen a un problema de calidad. Se usa en análisis de problemas, identificación de proyectos, análisis de síntomas, prueba de hipótesis y desarrollo de soluciones. Ayuda a responder preguntas sobre frecuencia de defectos, factores contribuyentes y diferencias entre grupos (estratos), como en el caso de comparar proveedores distintos.
+    paso 1: Seleccionar las variables de estratificación relevantes
+    paso 2: Establecer categorías (valores discretos o rangos) para cada variable
+    paso 3: Clasificar las observaciones en las categorías correspondientes
+    paso 4: Calcular el fenómeno medido (conteo, promedio o histograma) para cada categoría
+    paso 5: Mostrar los resultados, preferentemente en gráficos de barras
+    paso 6: Repetir el proceso para otras variables de estratificación (segunda etapa)
+    paso 7: Planificar confirmación adicional de los hallazgos
+
+====================================================================================================
+[16] identificacion_evaluacion_peligros -> investigacion_incidentes  (dominio health_safety, paso senalado 4)
+  veredicto propio: puesto 2324, clase D: La linea contra su procedimiento, MISMA FUENTE, OSHA3885, y sin arista entre ellos. identificacion_evaluacion_peligros dice en su paso 4, en UNA LINEA, investigar incidentes y casi accidentes para ent
+  mismo racimo declarado: NO
+  MADRE (identificacion_evaluacion_peligros), fuente: OSHA3885
+    resumen: Es un proceso continuo para descubrir peligros presentes o previsibles en tu lugar de trabajo. Reúne la información que ya tienes: manuales, fichas de seguridad, registros de incidentes y lesiones (los que te pida tu mercado), análisis de riesgos por tarea y resultados de mediciones. Haz inspecciones periódicas, asumiendo tú mismo el papel de la persona que revisa el sitio con frecuencia. Investiga incidentes y casi-accidentes para encontrar la causa real, y agrupa los casos parecidos para detectar patrones. Prioriza los peligros según qué tan grave serían y qué tan probable es que ocurran; eso te da la base para poner controles o actuar antes de cambios importantes en procesos, equipos, personas o etapas del trabajo. No detectar peligros a tiempo es una causa frecuente de accidentes, por eso este proceso nunca se detiene.
+    paso 1: Reunir la información que ya existe sobre peligros: manuales, fichas de seguridad, registros de lesiones, análisis de riesgos por tarea y resultados de mediciones
+    paso 2: Hacer inspecciones regulares del lugar de trabajo, involucrando a quienes trabajan contigo cuando sea posible
+    paso 3: Documentar lo que encuentres con fotos o videos para poder darle seguimiento y corregirlo
+    paso 4: Investigar incidentes y casi-accidentes para entender la causa de fondo <== SENALADO
+    paso 5: Agrupar incidentes parecidos para detectar patrones
+    paso 6: Priorizar los peligros según qué tan graves serían y qué tan probable es que pasen
+  HIJO (investigacion_incidentes), fuente: OSHA3885
+    resumen: Cada lesión, enfermedad, casi accidente o señal de alerta te dice que existe un peligro real en tu lugar de trabajo. Investigarlo a fondo te permite descubrir las causas de raíz, que casi siempre son varias, en lugar de quedarte con lo primero que salta a la vista. Una buena investigación pregunta reiteradamente por qué hasta llegar a las fallas de fondo en tu manera de gestionar la seguridad. Conviene que sumes tu propia mirada y la de quienes trabajan contigo, que te formes en técnicas objetivas de análisis y que no te limites a los casos con daño, porque los casi accidentes también cuentan. Además, infórmate sobre los plazos de reporte que exige la normativa de tu mercado ante accidentes graves o fatales, y cúmplelos.
+    paso 1: Define un plan y un procedimiento claro para investigar incidentes, con responsabilidades bien definidas
+    paso 2: Fórmate en técnicas objetivas de análisis para no quedarte en la primera explicación
+    paso 3: Suma en cada investigación tu propia visión y la de las personas que trabajan contigo
+    paso 4: Investiga también los casi accidentes y las señales de alerta, no solo los casos con daño
+    paso 5: Pregunta reiteradamente por qué hasta identificar las causas de raíz, sin detenerte en el primer factor evidente
+    paso 6: Comparte los resultados con quienes trabajan contigo y verifica los plazos de reporte que exige la normativa de tu mercado para accidentes fatales o graves
+
+====================================================================================================
+[17] analisis_valor -> customer_needs_spreadsheet  (dominio quality, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (analisis_valor), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Calcula el costo incremental de características específicas del producto y el costo de satisfacer necesidades particulares del cliente, comparando diseños alternativos. Ayuda a evitar sobrecargar el producto con funciones secundarias a expensas de la funcionalidad fundamental.
+    paso 1: Elaborar una hoja de cálculo que relacione costos con necesidades del cliente por prioridad <== SENALADO
+    paso 2: Identificar necesidades de baja prioridad con alto costo asociado y buscar alternativas
+    paso 3: Verificar que las necesidades de alta prioridad reciban recursos suficientes
+    paso 4: Evitar el uso de recursos en funciones de bajo valor en detrimento de las funciones esenciales
+  HIJO (customer_needs_spreadsheet), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Es una matriz de planificación que organiza tus clientes, internos y externos, en filas ordenadas por prioridad, y las necesidades que descubriste en columnas. Te permite correlacionar cada relación con evidencia sólida y analizar tanto la fuerza de esa relación como la importancia relativa del cliente, para determinar qué necesidades son más críticas. Es especialmente útil cuando la información de voz del cliente que recolectaste es demasiado amplia, vaga o voluminosa para usarla directamente en el diseño. Resume esos datos en un formato claro que asegura que tu presupuesto de desarrollo se enfoque en lo más importante. Es la base para convertir necesidades en características y luego en procesos, siguiendo la secuencia de Quality by Design.
+    paso 1: Crea una hoja de cálculo multicolumna
+    paso 2: Lista en la primera columna a tus clientes, internos y externos, en orden de prioridad
+    paso 3: Lista en la fila superior todas las necesidades descubiertas, una por columna
+    paso 4: Correlaciona cada cliente con cada necesidad usando una leyenda basada en evidencia
+    paso 5: Analiza la fuerza de cada relación y la importancia del cliente para priorizar las necesidades
+    paso 6: Usa la matriz resultante para enfocar tus recursos de diseño en lo más crítico
+
+====================================================================================================
+[18] establecimiento_capacidad_proceso -> control_estadistico_de_procesos  (dominio quality, paso senalado 5)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (establecimiento_capacidad_proceso), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Consiste en probar la efectividad del proceso mejorado mediante pruebas planificadas, ajustando resultados no satisfactorios, y utilizando cartas de control para confirmar que el proceso está bajo control estadístico antes de determinar su capacidad final mediante análisis de capacidad.
+    paso 1: Decidir cómo se probarán las mejoras
+    paso 2: Preparar un plan de prueba para cada mejora
+    paso 3: Conducir la prueba y medir resultados
+    paso 4: Ajustar las mejoras si los resultados no son satisfactorios
+    paso 5: Confirmar control estadístico mediante cartas de control <== SENALADO
+    paso 6: Realizar el análisis de capacidad del proceso
+  HIJO (control_estadistico_de_procesos), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Aplicación de métodos estadísticos, mediante gráficos de control, para medir y analizar la variación de un proceso, distinguiendo entre causas comunes (inherentes, aleatorias) y causas especiales (asignables) de variación, con el objetivo de predecir el desempeño del proceso y reducir la variación de forma continua.
+    paso 1: Elegir la característica a graficar, priorizando las de alta tasa de defectos
+    paso 2: Identificar variables y condiciones del proceso que contribuyen a la característica final
+    paso 3: Verificar que el sistema de medición tenga precisión y exactitud suficientes
+    paso 4: Determinar el punto más temprano de prueba para detectar causas asignables
+    paso 5: Elegir el tipo de gráfico de control adecuado (variables o atributos)
+    paso 6: Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio
+    paso 7: Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5
+    paso 8: Establecer un sistema simple y confiable de recolección de datos
+    paso 9: Calcular límites de control y definir instrucciones de interpretación y acción
+    paso 10: Graficar los datos e interpretar los resultados
+
+====================================================================================================
+[19] posicionamiento_vs_competidores -> analisis_competencia_franquicias  (dominio franquicias, paso senalado 2)
+  veredicto propio: puesto 2097, clase D: Estudiar al competidor contra contestarle al candidato, MISMA FUENTE y sin arista entre ellos. Lo compartido es UNA linea casi textual: preguntarle al prospecto que otras franquicias esta considerando
+  mismo racimo declarado: NO
+  MADRE (posicionamiento_vs_competidores), fuente: Franchise Your Business - Mark Siebert
+    resumen: La mayoría de los candidatos serios evalúa seis o más franquicias antes de decidir. Tú debes conocer a tus competidores directos, preguntar abiertamente cuáles otras opciones está evaluando el candidato, y responder con profesionalismo, destacando diferencias, tanto a favor como en contra, respaldadas por una propuesta única de venta que ya tienes definida a partir de comparar tu franquicia con las demás.
+    paso 1: Pregunta directamente qué otras franquicias está considerando el candidato
+    paso 2: Compara en detalle tu franquicia con las de tus competidores directos <== SENALADO
+    paso 3: Responde destacando tus diferencias, incluyendo tus propias desventajas, con una justificación clara
+    paso 4: Si el competidor es de una industria distinta, enfoca la conversación en las ventajas de panorama general
+  HIJO (analisis_competencia_franquicias), fuente: Franchise Your Business - Mark Siebert
+    resumen: Para desarrollar una posición única (USP), el franquiciador debe conocer profundamente a los competidores con los que realmente compite por franquiciados (no todos los 3,000 franquiciadores existentes). Esto incluye revisar sus FDDs, entrevistar a sus franquiciados y monitorear constantemente nuevos competidores mencionados por los prospectos.
+    paso 1: Identificar a los competidores directos por categoría, tamaño de inversión y mercado
+    paso 2: Obtener y analizar los FDDs de esos competidores
+    paso 3: Entrevistar a franquiciados de esos sistemas para entender fortalezas y debilidades
+    paso 4: Preguntar sistemáticamente a los propios prospectos qué otras opciones están considerando
+
+====================================================================================================
+[20] organizacion_interna_exportacion -> estructura_plan_exportacion  (dominio exportacion, paso senalado 3)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (organizacion_interna_exportacion), fuente: A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+    resumen: A medida que las ventas internacionales crecen, la empresa puede necesitar separar la gestión de exportación de la gestión doméstica, creando un departamento de exportación o incluso una división internacional que reporte directamente a la presidencia. Esta separación centraliza habilidades especializadas y mejora el enfoque de marketing internacional, aunque puede reducir la eficiencia en el uso de recursos si se hace prematuramente. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.
+    paso 1: Evaluar el volumen actual de ventas internacionales frente a las domésticas
+    paso 2: Determinar si se requiere un gerente de exportación de tiempo parcial o completo
+    paso 3: Definir la estructura de reporte del área de exportación <== SENALADO
+    paso 4: Planificar la eventual creación de una división internacional autónoma
+  HIJO (estructura_plan_exportacion), fuente: A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+    resumen: Un plan de exportación formal es una herramienta estratégica y operativa que documenta la declaración de política de exportación, el análisis de situación, el componente de marketing, las tácticas de acción, el presupuesto de exportación y el cronograma de implementación. Contar con un plan escrito ayuda a la empresa a mantener el compromiso a largo plazo, dado que la exportación puede tardar meses o años en generar retorno.
+    paso 1: Redactar tabla de contenido y resumen ejecutivo (1-2 páginas)
+    paso 2: Escribir la declaración de compromiso de política de exportación
+    paso 3: Realizar el análisis de situación: producto/servicio, operaciones, personal y recursos internos
+    paso 4: Desarrollar el componente de marketing: selección de mercados, producto, precio, distribución y términos
+    paso 5: Definir tácticas y pasos de acción para países meta primarios y secundarios
+    paso 6: Elaborar el presupuesto de exportación y estados financieros pro-forma
+    paso 7: Establecer el cronograma de implementación y seguimiento periódico
+
+====================================================================================================
+[21] errores_comunes_fundraising -> confidencialidad_nda_adquisicion  (dominio core, paso senalado 2)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (errores_comunes_fundraising), fuente: Venture Deals
+    resumen: Existen comportamientos que hacen ver al emprendedor como inexperto o directamente eliminan sus posibilidades de financiamiento: comportarse como una 'máquina' sin conexión humana, pedir NDA (que los VCs normalmente rechazan y genera desconfianza), enviar emails masivos no personalizados ('carpet-bombing'), pedir referencias después de un rechazo, ser fundador solitario sin equipo, y sobrevalorar patentes en negocios de software.
+    paso 1: Construir una relación genuina y humana con el VC, no solo presentar el pitch
+    paso 2: Nunca solicitar un acuerdo de confidencialidad (NDA) a un VC <== SENALADO
+    paso 3: Personalizar cada contacto con inversionistas, evitando envíos masivos
+    paso 4: Aceptar un 'no' sin insistir ni pedir referencias inmediatamente después
+    paso 5: Formar un equipo cofundador antes de buscar financiamiento serio
+    paso 6: En startups de software, enfocar el pitch en ejecución y equipo, no en estrategia de patentes
+  HIJO (confidencialidad_nda_adquisicion), fuente: Venture Deals - Brad Feld
+    resumen: A diferencia de las rondas de inversión, en procesos de M&A los NDAs son prácticamente obligatorios, ya que ambas partes comparten información sensible durante el due diligence. Un NDA débil o unilateral puede ser señal de que el comprador busca información competitiva más que cerrar un trato genuino.
+    paso 1: Exigir un NDA bidireccional y robusto antes de compartir información sensible.
+    paso 2: Evaluar si el NDA es unilateral como señal de alerta sobre las intenciones reales del comprador.
+    paso 3: Asegurar que el NDA cubra el escenario de que la transacción no se cierre.
+
+====================================================================================================
+[22] testear_circulo_cuadrado_rectangulo -> validar_modelo_negocio_hechos  (dominio core, paso senalado 3)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (testear_circulo_cuadrado_rectangulo), fuente: Value Proposition Design
+    resumen: Marco de tres niveles de testing: primero el 'círculo' (perfil del cliente: jobs, pains y gains que realmente importan), luego el 'cuadrado' (mapa de valor: si los productos/servicios realmente alivian esos pains y crean esos gains), y finalmente el 'rectángulo' (el modelo de negocio completo: si generará más ingresos que costos y es viable). Testear en este orden evita perder tiempo desarrollando soluciones para problemas irrelevantes.
+    paso 1: Primero, validar con evidencia qué jobs, pains y gains le importan realmente al cliente (círculo)
+    paso 2: Luego, validar que los pain relievers y gain creators propuestos resuelven esos problemas (cuadrado)
+    paso 3: Finalmente, validar que el modelo de negocio completo (socios, canales, ingresos, costos) es viable (rectángulo) <== SENALADO
+    paso 4: No avanzar al siguiente nivel sin evidencia suficiente del anterior
+  HIJO (validar_modelo_negocio_hechos), fuente: The Startup Owner's Manual - Blank, Steve
+    resumen: Se trata de convertir las hipótesis originales del business model canvas (propuesta de valor, segmentos de clientes, canales, relaciones con clientes, estructura de costos, flujos de ingresos) en hechos comprobados mediante pruebas extensivas cara a cara con cientos o miles de clientes reales. El canvas actúa como un 'scorecard' que documenta la evolución del negocio a través de iteraciones y pivotes.
+    paso 1: Reunir todas las snapshots semanales o por pivote del business model canvas
+    paso 2: Revisar cada componente del canvas y verificar que tenga respuestas fácticas, no hipotéticas
+    paso 3: Usar el checklist del modelo de negocio para recorrer cada casilla sistemáticamente
+    paso 4: Identificar pruebas pass/fail para cada hipótesis
+    paso 5: Determinar si los resultados cumplen los objetivos de tráfico o financieros
+
+====================================================================================================
+[23] mvp_catalogo_tecnicas -> mvp_tipo_video  (dominio core, paso senalado 1)
+  veredicto propio: puesto 384, clase D: El catalogo de tecnicas de MVP contra una de las tecnicas. El primero manda elegir: identificar la hipotesis a validar, empezar por el MVP mas barato, hoja de datos, folleto o storyboard, y subir de s
+  mismo racimo declarado: NO
+  MADRE (mvp_catalogo_tecnicas), fuente: Value Proposition Design
+    resumen: Un MVP es una representación o prototipo de una propuesta de valor diseñado específicamente para probar la validez de una o más hipótesis, de la forma más rápida, barata y eficiente posible. Existen múltiples niveles de sofisticación: desde data sheets y brochures (bajo esfuerzo) hasta prototipos funcionales y Wizard of Oz (alto esfuerzo), pasando por landing pages, videos y product boxes.
+    paso 1: Identifica la hipótesis específica que necesitas validar antes de elegir el tipo de MVP. <== SENALADO
+    paso 2: Comienza con el MVP más barato posible (data sheet, brochure, storyboard).
+    paso 3: Escala la sofisticación del MVP solo si los resultados iniciales son prometedores.
+    paso 4: Usa herramientas accesibles (ej. smartphone) antes de invertir en producción profesional.
+  HIJO (mvp_tipo_video), fuente: The Lean Startup - Eric Ries
+    resumen: Técnica de MVP donde creas un video demostrativo del producto funcionando como esperas que funcione, dirigido a una comunidad específica de early adopters, sin necesidad de construir el producto completo. Te permite validar el interés y la demanda real (mediante señales de compromiso como registros) antes de invertir en desarrollo técnico complejo. Ejemplo: Dropbox validó su pregunta clave de fe con un video de 3 minutos que aumentó su lista de espera de forma notable.
+    paso 1: Define la hipótesis de valor específica que quieres testear
+    paso 2: Crea un video simple que muestre el producto funcionando como lo imaginas
+    paso 3: Dirige el video a una comunidad específica de early adopters relevante
+    paso 4: Mide señales de compromiso real (registros, lista de espera, clics) generadas por el video
+    paso 5: Usa los resultados para decidir si sigues adelante con el desarrollo
+
+====================================================================================================
+[24] reporte_estado_miembro_equipo -> variance_analysis  (dominio core, paso senalado 3)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (reporte_estado_miembro_equipo), fuente: A Project Manager's Book of Forms
+    resumen: Es el informe periódico que completas tú mismo para dejar constancia de cómo avanza tu trabajo en el proyecto. En él registras las actividades que planeaste, las que lograste completar y las que quedaron pendientes, además de los fondos gastados frente a lo planificado y las variaciones de costo y cronograma. También documentas las causas raíz de esas variaciones y las acciones correctivas o preventivas que piensas aplicar, junto con cualquier riesgo o issue nuevo que detectes. Este reporte individual es la base sobre la que luego se arma una visión más amplia del desempeño del proyecto, así que entre más completo y honesto sea, mejor reflejará la realidad de tu avance.
+    paso 1: Listar las actividades planeadas, completadas y no logradas en el periodo
+    paso 2: Registrar los fondos gastados versus lo planeado
+    paso 3: Identificar las causas raíz de las variaciones en actividades y costos <== SENALADO
+    paso 4: Documentar las acciones correctivas o preventivas que vas a aplicar
+    paso 5: Reportar los nuevos riesgos e issues que detectaste
+    paso 6: Planificar las actividades y costos para el siguiente periodo
+  HIJO (variance_analysis), fuente: A Project Manager's Book of Forms
+    resumen: Recopila y analiza información sobre variaciones de desempeño del proyecto en cronograma, costo y calidad, comparando resultados planificados vs. reales e identificando causas raíz y respuestas planificadas.
+    paso 1: Comparar resultados planificados vs. reales en cronograma, costo y calidad
+    paso 2: Calcular la magnitud de la variación
+    paso 3: Identificar causa raíz de cada variación
+    paso 4: Documentar respuesta planificada (correctiva o preventiva)
+
+====================================================================================================
+[25] terminologia_clave_breakthrough -> analisis_sintomas  (dominio quality, paso senalado 2)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (terminologia_clave_breakthrough), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Para realizar un diagnóstico riguroso es esencial dominar conceptos clave: defecto (no conformidad), síntoma (evidencia externa del defecto), teoría/hipótesis (razón no probada), causa (razón probada, sigue el principio de Pareto), causa dominante (contribuyente mayor que debe remediarse), diagnóstico (proceso de estudiar síntomas y probar teorías) y remedio (cambio que elimina la causa).
+    paso 1: Definir claramente cada término con el equipo antes de iniciar el diagnóstico
+    paso 2: Diferenciar síntomas de causas en cada problema detectado <== SENALADO
+    paso 3: Aplicar el principio de Pareto para identificar la causa dominante
+    paso 4: Documentar teorías propuestas antes de validarlas con datos
+  HIJO (analisis_sintomas), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Etapa que busca comprender la situación actual del problema respondiendo preguntas sobre frecuencia, severidad, tipos de fallas y ubicación en el proceso. Este análisis es fundamental para orientar la búsqueda de causas, de forma similar a conocer el punto de partida antes de trazar una ruta hacia un destino.
+    paso 1: Recolectar datos detallados sobre la ocurrencia del problema.
+    paso 2: Usar diagramas de flujo de proceso para ubicar dónde ocurre la falla.
+    paso 3: Aplicar análisis de Pareto y estratificación para identificar patrones.
+    paso 4: Documentar la frecuencia, severidad y tipo de fallas observadas.
+
+====================================================================================================
+[26] mapa_de_canal_de_ventas -> validar_canal_distribucion  (dominio core, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (mapa_de_canal_de_ventas), fuente: The Startup Owner's Manual - Steve Blank
+    resumen: Diagrama que describe todas las organizaciones intermedias entre la empresa y el cliente final (mayoristas, distribuidores, minoristas), sus responsabilidades y relaciones financieras. Permite entender cómo fluye el dinero y el producto a través de la cadena, y evitar el error común de asumir que los socios de canal generan demanda por sí mismos.
+    paso 1: Enfócate en validar un solo canal de distribución antes de expandirte a otros <== SENALADO
+    paso 2: Dibuja la cadena completa de organizaciones entre tu empresa y el cliente final
+    paso 3: Documenta las responsabilidades de cada eslabón (quién genera demanda vs quién solo distribuye)
+    paso 4: Calcula los descuentos y márgenes que cada nivel del canal requiere
+    paso 5: Diseña un plan de gestión de canal para monitorear inventario, ventas y posibles retornos
+  HIJO (validar_canal_distribucion), fuente: The Startup Owner's Manual - Blank, Steve
+    resumen: Para negocios con venta indirecta a través de distribuidores, representantes o retailers, esta etapa valida la estrategia de canal consiguiendo órdenes o compromisos firmes de los socios. Antes de contactar canales necesitas demostrar demanda real de clientes finales, porque su pregunta implícita es si podrán ganar dinero y si habrá demanda que los empuje a vender. No confundas al socio de canal con el cliente final: el canal solo vende cuando la demanda lo obliga a hacerlo, no la crea por sí mismo salvo que lo verifiques. Debes entender los términos comerciales (márgenes, costos, devoluciones), el volumen potencial y los incentivos necesarios para que el canal se comprometa a vender tu producto.
+    paso 1: Identifica y lista distribuidores o revendedores potenciales de distintos tamaños y tipos
+    paso 2: Consigue primero evidencia de demanda de clientes finales antes de acercarte a los canales
+    paso 3: Prepara una presentación de canal actualizada con pedidos o compromisos de clientes tempranos
+    paso 4: Reúnete con representantes y distribuidores en varios mercados para evaluar si comprarán y venderán tu producto en esas condiciones
+    paso 5: Pregunta el porcentaje del precio de venta que exige el canal, costos adicionales y política de devoluciones, y determina si el canal crea demanda o solo la cumple
+    paso 6: Negocia incentivos como bonos, entrenamiento o demostraciones y busca una orden inicial de stock, registrando cada conversación para estimar ventas futuras
+
+====================================================================================================
+[27] evaluacion_actitudes_empleados -> identificar_oportunidades_sostenibilidad  (dominio environmental, paso senalado 2)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (evaluacion_actitudes_empleados), fuente: The Green to Gold Business Play - Daniel C. Esty
+    resumen: Uno de los errores más comunes es asumir que los líderes saben cómo piensan los empleados. Antes de decidir la estrategia de engagement, es necesario evaluar cuidadosamente las actitudes de la organización hacia el medio ambiente y la sostenibilidad usando entrevistas, encuestas anónimas, reuniones pequeñas o town halls, para entender reacciones, escepticismo, conexión con el trabajo diario y nivel de conocimiento existente.
+    paso 1: Diseñar encuestas anónimas o entrevistas sobre percepciones de sostenibilidad
+    paso 2: Identificar reacciones a palabras como 'verde', 'ambiental', 'sostenibilidad' <== SENALADO
+    paso 3: Detectar escépticos y líderes potenciales dentro de la organización
+    paso 4: Analizar qué aspectos de iniciativas previas (TQM, salud, diversidad) funcionaron y cuáles no
+  HIJO (identificar_oportunidades_sostenibilidad), fuente: The Green to Gold Business Play - Daniel C. Esty
+    resumen: Antes de lanzar cualquier campaña de marketing verde, mira cómo la sostenibilidad encaja en tu estrategia de negocio y de crecimiento. Entiende por qué tus clientes quieren que seas más verde y cuál es tu propuesta de valor sostenible. Revisa, línea de producto por línea de producto, tus fortalezas, debilidades, oportunidades y amenazas en el tema ambiental (análisis FODA), y compara tu posición frente a la competencia.
+    paso 1: Define por qué tú y tus clientes quieren una oferta más verde
+    paso 2: Revisa tus fortalezas, debilidades, oportunidades y amenazas ambientales, línea de producto por línea de producto
+    paso 3: Compara tu desempeño ambiental con el de tus competidores
+    paso 4: Detecta los atributos verdes que ya tienes pero que todavía no le has contado al mercado
+
+====================================================================================================
+[28] pre_control_estadistico -> limites_de_especificacion_vs_limites_de_control  (dominio quality, paso senalado 1)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (pre_control_estadistico), fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso.
+    paso 1: Centrar el proceso entre los límites de especificación al iniciar <== SENALADO
+    paso 2: Definir zonas de PRE-Control (verde, amarilla, roja) según distancia a los límites
+    paso 3: Tomar muestras periódicas de tres piezas consecutivas
+    paso 4: Detener el proceso si dos de tres mediciones caen en zona amarilla del mismo lado
+    paso 5: Ajustar el proceso y reiniciar el monitoreo
+  HIJO (limites_de_especificacion_vs_limites_de_control), fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: Los límites de especificación son requisitos externos impuestos al producto (lo que el cliente acepta), mientras que los límites de control son calculados estadísticamente a partir del propio comportamiento del proceso. Confundirlos lleva a ajustar el proceso constantemente para 'cumplir especificaciones', lo cual introduce más variación y pérdidas económicas severas (sobre-ajuste).
+    paso 1: Calcular los límites de control a partir de datos reales del proceso (no de especificaciones deseadas)
+    paso 2: Nunca ajustar el proceso basándose en si un punto individual cae dentro o fuera de especificación
+    paso 3: Ajustar el proceso solo cuando el gráfico de control señale una causa especial
+    paso 4: Capacitar a supervisores para distinguir ambos conceptos
+
+====================================================================================================
+[29] posicionamiento_por_tipo_de_mercado -> resegmentacion_mercado_nicho_bajo_costo  (dominio core, paso senalado 5)
+  veredicto propio: NINGUNO
+  mismo racimo declarado: NO
+  MADRE (posicionamiento_por_tipo_de_mercado), fuente: The Startup Owner's Manual - Blank, Steve
+    resumen: El tipo de mercado (existente, nuevo, clon, o re-segmentado) cambia radicalmente el mensaje de posicionamiento. En mercado existente se destaca diferenciación (atributos, canal, servicio). En mercado nuevo se comunica visión y pasión, no características, porque no hay contexto comparativo. En mercado clon se imita el posicionamiento de la empresa equivalente en otro país. En re-segmentación (nicho o bajo costo) se comunica comprensión profunda de necesidades desatendidas.
+    paso 1: Identificar el tipo de mercado seleccionado (existente, nuevo, clon, re-segmentado)
+    paso 2: Si es mercado existente: definir diferenciación en atributos, canal o servicio
+    paso 3: Si es mercado nuevo: articular la visión y el problema que se busca resolver
+    paso 4: Si es mercado clon: adoptar el posicionamiento de la empresa análoga en otro país
+    paso 5: Si es re-segmentación: comunicar comprensión única de un nicho o ventaja de bajo costo <== SENALADO
+  HIJO (resegmentacion_mercado_nicho_bajo_costo), fuente: The Startup Owner's Manual
+    resumen: Cuando eres el jugador más débil frente a un competidor dominante, atacarlo de frente es inviable por falta de recursos, así que debes aprovechar tu agilidad en lugar de tu tamaño. La alternativa es re-segmentar el mercado existente creando un submercado único mediante diferenciación de nicho o precio bajo, o combinando ambos en una estrategia de Océano Azul que vuelve irrelevante a la competencia. Para elegir el camino correcto evalúa si ese segmento desatendido pagaría más por características específicas o aceptaría menor desempeño a cambio de un precio menor. El objetivo no es ser el más grande, sino ser el número uno en algo importante para ese cliente, aunque sea un segmento pequeño.
+    paso 1: Identifica de qué mercados existentes vendrían tus clientes desatendidos
+    paso 2: Evalúa si ese segmento pagaría más por características específicas o aceptaría menor desempeño por menor precio
+    paso 3: Define las características únicas de esos clientes y sus necesidades insatisfechas
+    paso 4: Determina qué características de tu producto harían que abandonen a su proveedor actual
+    paso 5: Dibuja un mapa de mercado con tu startup en el centro
+    paso 6: Prueba cuantitativamente el costo de cambio (switching cost) si tu estrategia es de bajo costo
+

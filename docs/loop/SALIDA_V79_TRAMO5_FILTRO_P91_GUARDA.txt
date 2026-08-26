@@ -1,0 +1,42 @@
+BOLSA REDUCIDA TOTAL: 468
+SIN ARISTA (candidatos): 259
+APARTADOS POR P.9.1 ENSANCHADO (operaciones + vara de los A): 92
+  de esos, SOLO por operacion (eliminar/superviviente/nodos): 35
+  de esos, con al menos un motivo de la vara de los A: 57
+LIMPIOS TRAS P.9.1 ENSANCHADO (antes de la guarda del par no dirigido): 167
+
+GUARDA DEL PAR NO DIRIGIDO: 0 pareja(s) detectada(s) (mismo par, dos direcciones)
+CANDIDATOS (unidades de lectura) TRAS LA GUARDA: 167 (0 parejas + 167 sueltas, de 167 filas)
+ESCRITO: docs\plan\PASO_NODO_CALIBRADO_FILTRADO_V79.jsonl (167 filas, orden de fichero)
+
+CABEZA DE LA BOLSA FILTRADA, primeras 30 UNIDADES, en orden de fichero:
+  0: clasificacion_tipos_activos -> tipos_de_pasivos (paso 1, dominio core)
+  1: proceso_llamada_inicial_venta -> proceso_venta_franquicias (paso 6, dominio franquicias)
+  2: equipo_customer_development -> customer_development_team (paso 1, dominio core)
+  3: extraer_priorizar_hipotesis -> value_proposition_startup (paso 1, dominio core)
+  4: preparacion_preguntas_problema_precall -> preguntas_situacion (paso 4, dominio core)
+  5: timing_solicitud_referidos -> fase_adopt_ciclo_cliente (paso 5, dominio core)
+  6: requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level (paso 1, dominio quality)
+  7: uso_inadecuado_computadoras -> causas_comunes_vs_especiales (paso 3, dominio quality)
+  8: hipotesis_relacion_clientes_web -> mvp_alta_fidelidad (paso 4, dominio core)
+  9: producto_mercado_fit_motores -> afinar_motor_crecimiento (paso 1, dominio core)
+  10: valor_intangible_sostenibilidad -> compromiso_cliente_sostenibilidad (paso 1, dominio environmental)
+  11: planificacion_inicial_calidad -> identificar_caracteristicas_metas_proceso (paso 2, dominio quality)
+  12: establecimiento_capacidad_proceso -> pruebas_destructivas (paso 5, dominio quality)
+  13: certificacion_de_proveedores -> indice_cpk (paso 3, dominio quality)
+  14: mitigacion_efecto_latigo -> precios_todos_los_dias_bajos (paso 4, dominio core)
+  15: herramientas_analisis_causa_raiz -> estratificacion_datos (paso 5, dominio quality)
+  16: identificacion_evaluacion_peligros -> investigacion_incidentes (paso 4, dominio health_safety)
+  17: analisis_valor -> customer_needs_spreadsheet (paso 1, dominio quality)
+  18: establecimiento_capacidad_proceso -> control_estadistico_de_procesos (paso 5, dominio quality)
+  19: posicionamiento_vs_competidores -> analisis_competencia_franquicias (paso 2, dominio franquicias)
+  20: organizacion_interna_exportacion -> estructura_plan_exportacion (paso 3, dominio exportacion)
+  21: errores_comunes_fundraising -> confidencialidad_nda_adquisicion (paso 2, dominio core)
+  22: testear_circulo_cuadrado_rectangulo -> validar_modelo_negocio_hechos (paso 3, dominio core)
+  23: mvp_catalogo_tecnicas -> mvp_tipo_video (paso 1, dominio core)
+  24: reporte_estado_miembro_equipo -> variance_analysis (paso 3, dominio core)
+  25: terminologia_clave_breakthrough -> analisis_sintomas (paso 2, dominio quality)
+  26: mapa_de_canal_de_ventas -> validar_canal_distribucion (paso 1, dominio core)
+  27: evaluacion_actitudes_empleados -> identificar_oportunidades_sostenibilidad (paso 2, dominio environmental)
+  28: pre_control_estadistico -> limites_de_especificacion_vs_limites_de_control (paso 1, dominio quality)
+  29: posicionamiento_por_tipo_de_mercado -> resegmentacion_mercado_nicho_bajo_costo (paso 5, dominio core)
