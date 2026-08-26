@@ -1,0 +1,81 @@
+==============================================================================================================
+VARAS POR FORMA, N-ARIAS, DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO
+  fichero del tramo: docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+==============================================================================================================
+
+  pasos y cond son las varas de CONTENIDO contables; cab es el CABLEADO,
+  que por P.8 solo habla a contenido empatado. La marca < indica que ese
+  miembro es EL UNICO que alcanza el maximo de esa vara, o sea que la vara
+  APUNTA a el. Si dos o mas lo alcanzan, la vara EMPATA y no apunta.
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 38 | 3 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 5, condiciones 2, cableado 12
+   la vara de PASOS       apunta a: segmentos_de_clientes_problema_necesidad
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: customer_segments_hypothesis
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      customer_segments_hypothesis                                  4      2     12 <cab
+      problem_recognition_scale                                     4      2      5
+      segmentos_de_clientes_problema_necesidad                      5      2      4 <pasos
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 39 | 3 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 4, condiciones 2, cableado 11
+   la vara de PASOS       apunta a: defensas_en_profundidad_3
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: defensas_en_profundidad
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      defensas_en_profundidad                                       3      1     11 <cab
+      defensas_en_profundidad_2                                     3      2      3
+      defensas_en_profundidad_3                                     4      2      2 <pasos
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 40 | 3 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 5, condiciones 2, cableado 3
+   la vara de PASOS       apunta a: traction_goal
+   la vara de CONDICIONES apunta a: EMPATA, no apunta
+   el CABLEADO (P.8)      apunta a: EMPATA, no apunta
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      definir_meta_de_traccion                                      4      2      3
+      moving_the_needle                                             3      2      3
+      traction_goal                                                 5      2      3 <pasos
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 41 | 3 miembros | FORMA: TODAS DE ACUERDO
+   maximos medidos: pasos 6, condiciones 4, cableado 12
+   la vara de PASOS       apunta a: design_for_six_sigma_dfss
+   la vara de CONDICIONES apunta a: design_for_six_sigma_dfss
+   el CABLEADO (P.8)      apunta a: design_for_six_sigma_dfss
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      design_for_six_sigma_dfss                                     6      4     12 <pasos <cond <cab
+      design_for_six_sigma_dmadv                                    5      2      3
+      design_for_six_sigma_dmadv_2                                  5      3      3
+
+--------------------------------------------------------------------------------------------------------------
+ACTO 42 | 3 miembros | FORMA: UNA SOLA VARA
+   maximos medidos: pasos 5, condiciones 3, cableado 5
+   la vara de PASOS       apunta a: EMPATA, no apunta
+   la vara de CONDICIONES apunta a: equipo_multifuncional_real
+   el CABLEADO (P.8)      apunta a: equipo_multifuncional
+   PUERTAS DENTRO DEL ACTO: NINGUNA (la guarda 1B pasa por vacio)
+
+      miembro                                                   pasos   cond    cab
+      diseno_organizacional_equipos_innovacion                      5      2      4
+      equipo_multifuncional                                         5      2      5 <cab
+      equipo_multifuncional_real                                    4      3      2 <cond
+
+==============================================================================================================
+  actos mirados: 5 | POR FORMA: {'UNA SOLA VARA': 4, 'TODAS DE ACUERDO': 1}
+
+LO QUE ESTO NO HACE: no elige superviviente, no aplica la guarda 1B y no funde.
+FIN

@@ -1,0 +1,310 @@
+==============================================================================
+DOSSIER DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO: EL ACTO LEIDO ENTERO (P.5) CON SU RAZON
+==============================================================================
+  nodos leidos de: el arbol de trabajo
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+
+##############################################################################
+# ACTO 38 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 547, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): customer_segments_hypothesis
+     nodo_b (EL SEGUNDO de la razon): segmentos_de_clientes_problema_necesidad
+     RAZON ENTERA, sin recortar:
+       REPITE con segmentos_de_clientes_problema_necesidad. Los dos mandan lo mismo: ubicar el problema del cliente en una escala de conciencia o urgencia, que uno llama de no nombrarlo a tener solucion casera y el otro latente, pasivo, activo o con apano; evaluar si el producto es imprescindible o solo agradable de tener; y mapear a los distintos que intervienen en la compra, quien usa, quien influye y quien decide. El segundo anade salir del edificio a observar y documentar un dia en la vida del cliente; el primero anade mirar si el mercado es de uno o de varios lados.
+
+  [PAR] puesto 1216, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): problem_recognition_scale
+     nodo_b (EL SEGUNDO de la razon): segmentos_de_clientes_problema_necesidad
+     RAZON ENTERA, sin recortar:
+       LA ESCALA DEL PROBLEMA CONTADA DOS VECES, del mismo libro y sin arista entre ellos. TRES de los cuatro pasos de problem_recognition_scale estan dentro de segmentos_de_clientes_problema_necesidad: salir a entender como el cliente experimenta el problema, clasificarlo en la escala de cuatro niveles, y buscar a quienes intentaron construir su propia solucion, que en el otro nodo es directamente el cuarto nivel de la escala. PERDIDAS PROPUESTAS, con la verificacion hecha y son dos, las dos finas y las dos reales. La primera es UN NIVEL DE LA ESCALA: problem_recognition_scale la cierra en VISION, el cliente que ya imagina la solucion, y segmentos_de_clientes_problema_necesidad la cierra en SOLUCION CASERA. No son la misma escala con otras palabras: el cuarto nivel es distinto, y el nivel de vision no aparece en el otro nodo en ninguna forma. La segunda es QUE SE CLASIFICA: uno clasifica CADA TIPO DE CLIENTE en la escala y el otro clasifica EL PROBLEMA. Del otro lado se perderian el mapa de roles de compra, el dia en la vida y el mapa de influencia. NOTA DE NOMINA: segmentos_de_clientes_problema_necesidad ya tenia una A, la del puesto 547, releida a ciegas en la tanda R31. Con esta lleva dos y problem_recognition_scale entra como candidato a miembro por el 9.20. Y queda dicho que la misma escala de cuatro niveles aparece ya en TRES etiquetados distintos en esta zona.
+
+  --- customer_segments_hypothesis
+      titulo    : Hipótesis de quién es tu cliente y qué problema tiene
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 4 | condiciones 2 | previos 3 | siguientes 12 | cableado 15
+      paso 1: Define el problema de tu cliente y ubícalo en la escala de qué tan consciente es de él: no lo nota, lo nota pero no actúa, ya busca una solución, o aún no existe y tú le muestras una visión
+      paso 2: Identifica a las distintas personas que intervienen en la compra: quien usa el producto, quien lo paga, quien toma la decisión final
+      paso 3: Evalúa si tu producto resuelve un problema crítico o cubre una necesidad imprescindible
+      paso 4: Revisa si tu mercado es de un solo lado o de varios lados, como Google o las redes sociales, donde quien usa el producto no es quien paga por él
+      cond 1: Si todavía no tienes claro quién es tu cliente
+      cond 2: Si estás empezando a salir a hablar con clientes para descubrirlo (descubrimiento de clientes)
+      previos   : ['lienzo_modelo_negocio', 'hipotesis_de_tamano_de_mercado', 'hipotesis_propuesta_de_valor_producto']
+      siguientes: ['customer_types_mapping', 'problem_recognition_scale', 'canales_distribucion', 'channels_hypothesis_web_mobile', 'customer_retention_tactics', 'framework_get_keep_grow', 'lienzo_modelo_negocio', 'plan_de_adquisicion_acquire', 'relaciones_con_clientes', 'evaluacion_vp_ventas', 'tipos_de_clientes', 'embudo_get_keep_grow']
+      entregable: Un documento con tu hipótesis de quién es tu cliente, qué tan consciente es de su problema, y si tu mercado es de un solo lado o de varios lados
+
+  --- problem_recognition_scale
+      titulo    : Escala de Reconocimiento del Problema
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 4 | condiciones 2 | previos 3 | siguientes 2 | cableado 5
+      paso 1: Salir a entrevistar clientes para entender cómo experimentan el problema
+      paso 2: Clasificar cada tipo de cliente importante según la escala (latente/pasivo/activo/visión)
+      paso 3: Buscar específicamente clientes que hayan intentado construir su propia solución
+      paso 4: Determinar la intensidad del dolor que causa el problema
+      cond 1: Si no está claro qué tan urgente es el problema para el cliente
+      cond 2: Antes de diseñar el pitch de ventas
+      previos   : ['customer_segments_hypothesis', 'abrazar_la_incomodidad', 'comunicacion_proactiva_puntos_estres']
+      siguientes: ['arquetipos_de_cliente', 'dia_en_la_vida_del_cliente']
+      entregable: Matriz de clientes clasificados por nivel de reconocimiento del problema
+
+  --- segmentos_de_clientes_problema_necesidad
+      titulo    : Segmentos de Clientes: Problema, Necesidad o Pasión
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Sal del edificio (get out of the building) a observar como tus clientes viven el problema
+      paso 2: Clasifica el problema en la escala: latente, pasivo, activo o con una solución casera
+      paso 3: Identifica si tu producto es indispensable (must-have) o solo agradable de tener (nice-to-have)
+      paso 4: Mapea los tipos de cliente: quien usa el producto, quien influye en la compra y quien lo recomienda
+      paso 5: Documenta un día en la vida de tu cliente y un mapa de quien influye en la decisión
+      cond 1: Cuando no tienes claro quien toma la decisión de compra dentro del negocio de tu cliente
+      cond 2: Al definir la historia de usuario (user story) y la urgencia del problema que quieres resolver
+      previos   : ['hipotesis_propuesta_de_valor_producto', 'encontrar_el_golpe_mental']
+      siguientes: ['customer_discovery_cuatro_fases', 'scorecard_descubrimiento_cliente']
+      entregable: Mapa de tus segmentos de cliente con la escala del problema, los tipos de cliente y la historia de usuario (user story) del problema
+
+##############################################################################
+# ACTO 39 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 2236, clase A, dominio health_safety
+     nodo_a (EL PRIMERO de la razon): defensas_en_profundidad
+     nodo_b (EL SEGUNDO de la razon): defensas_en_profundidad_2
+     RAZON ENTERA, sin recortar:
+       REPITE. defensas_en_profundidad_2 contra defensas_en_profundidad, MISMA FUENTE, Reason, y sin arista. Su paso 1, clasificar las defensas por funcion y modo duro o blando, son los pasos 1 y 2 del otro juntos; su paso 2, evaluar la integridad de cada capa, es el paso 3 del otro, identificar funciones ausentes o debiles. Le queda un paso propio, disenar redundancia entre capas para que un solo punto de falla no comprometa el sistema, y es UN PRINCIPIO DE DISENO enunciado en una linea, sin decir como se decide donde va la redundancia. defensas_en_profundidad si trae un instrumento nombrado que el otro no tiene: LAS SIETE FUNCIONES DEFENSIVAS como taxonomia de inventario, que es lo que convierte la clasificacion en un procedimiento con casillas y no en una intencion. Por la vara, REPITE. Sobrevive defensas_en_profundidad, y el principio de redundancia se absorbe como linea suya.
+
+  [PAR] puesto 2283, clase A, dominio health_safety
+     nodo_a (EL PRIMERO de la razon): defensas_en_profundidad_2
+     nodo_b (EL SEGUNDO de la razon): defensas_en_profundidad_3
+     RAZON ENTERA, sin recortar:
+       REPITE, y es la SEGUNDA vez que este nodo repite en el dominio. defensas_en_profundidad_2 contra defensas_en_profundidad_3, MISMA FUENTE, Reason, y sin arista. Su paso 1, clasificar las defensas por funcion y modo, es el paso 1 del otro, mapear todas las capas, barreras fisicas, sistemas de proteccion y procedimientos. Le quedan dos lineas, el modo duro o blando y el principio de disenar redundancia. defensas_en_profundidad_3 trae tres cosas que el otro no tiene, y una de ellas LO CORRIGE: EVALUAR SI HAY DEPENDENCIAS OCULTAS ENTRE CAPAS QUE SE ASUMEN INDEPENDIENTES, que es exactamente lo contrario de evaluar cada capa DE FORMA INDEPENDIENTE como pide el paso 2 del otro; MECANISMOS DE DETECCION TEMPRANA DE FALLAS LATENTES ANTES DE QUE SE ACUMULEN; y REVISAR SI LA CONFIANZA EN LAS MULTIPLES DEFENSAS HA GENERADO COMPLACENCIA OPERATIVA, que es el reverso del principio de redundancia que el otro predica. Por la vara, REPITE. Sobrevive defensas_en_profundidad_3. FIGURA NUEVA, EL HERMANO QUE CORRIGE AL HERMANO: no es contradiccion con regla ni con cifra publicada, es un nodo del catalogo que desmiente el supuesto de otro nodo del catalogo, y queda declarado. RACIMO DE LAS DEFENSAS EN PROFUNDIDAD, tres miembros y sin una sola arista.
+
+  --- defensas_en_profundidad
+      titulo    : Defensas en Profundidad (Las Siete Funciones)
+      fuente    : Managing the Risks of Organizat - Reason, J. T_
+      pasos 3 | condiciones 1 | previos 9 | siguientes 4 | cableado 13
+      paso 1: Inventariar las defensas actuales de la organización clasificándolas en las siete funciones defensivas.
+      paso 2: Evaluar el balance entre defensas duras y blandas existentes.
+      paso 3: Identificar funciones defensivas ausentes o débiles en el sistema.
+      cond 1: Cuando se diseña o audita un sistema de seguridad para una operación de alto riesgo.
+      previos   : ['erosion_de_defensas_por_ausencia_de_accidentes', 'confusion_de_modos_automatizacion', 'diferenciacion_accidente_individual_organizacional', 'documentacion_mantenimiento_linea_base', 'fallas_activas_condiciones_latentes', 'fallas_activas_condiciones_latentes_2', 'fijar_causa_ultimo_accidente_riesgo_siguiente', 'senales_alerta_no_atendidas', 'accidentes_individuales_vs_organizacionales']
+      siguientes: ['modelo_queso_suizo', 'caso_grietas_pequenas_mantenimiento_aeronaves', 'gestion_falsas_alarmas', 'ventana_oportunidad_accidente']
+      entregable: Un inventario clasificado de defensas (duras/blandas) mapeadas contra las siete funciones defensivas universales.
+
+  --- defensas_en_profundidad_2
+      titulo    : Defensas en Profundidad (Capas de Barreras y Salvaguardas)
+      fuente    : Managing the Risks of Organizat - Reason, J. T_
+      pasos 3 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Clasificar las defensas existentes en el sistema según su función y modo (dura/blanda)
+      paso 2: Evaluar la integridad de cada capa defensiva de forma independiente
+      paso 3: Diseñar redundancia entre capas para evitar que un solo punto de falla comprometa todo el sistema
+      cond 1: Al diseñar o auditar los sistemas de seguridad de una organización
+      cond 2: Cuando se requiere justificar por qué múltiples barreras no garantizan seguridad absoluta
+      previos   : ['diferenciacion_accidente_individual_organizacional', 'accidentes_individuales_vs_organizacionales']
+      siguientes: ['fallas_activas_condiciones_latentes', 'ventana_oportunidad_accidente']
+      entregable: Inventario de capas de defensa del sistema, clasificadas por función y modo
+
+  --- defensas_en_profundidad_3
+      titulo    : Defensas en Profundidad: Protección o Ocultamiento Peligroso
+      fuente    : Managing the Risks of Organizat - Reason, J. T_
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Mapear todas las capas de defensa del sistema (barreras físicas, sistemas de protección, procedimientos)
+      paso 2: Evaluar si existen dependencias ocultas entre capas que se asumen independientes
+      paso 3: Implementar mecanismos de detección temprana de fallas latentes antes de que se acumulen
+      paso 4: Revisar si la confianza en las múltiples defensas ha generado complacencia operativa
+      cond 1: Cuando el sistema depende de múltiples capas de protección redundantes
+      cond 2: Si ha ocurrido un accidente donde fallaron varias defensas simultáneamente
+      previos   : ['fijar_causa_ultimo_accidente_riesgo_siguiente']
+      siguientes: ['gestion_falsas_alarmas']
+      entregable: Mapa de capas de defensa del sistema con análisis de independencia real y puntos ciegos de detección
+
+##############################################################################
+# ACTO 40 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 627, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): definir_meta_de_traccion
+     nodo_b (EL SEGUNDO de la razon): traction_goal
+     RAZON ENTERA, sin recortar:
+       La misma meta contada dos veces y con el mismo libro detras, Traction de Weinberg, sin arista entre ellos. definir_meta_de_traccion y traction_goal comparten el nucleo: fijar una meta de traccion cuantificable, alineada con lo que persigues en esta etapa, levantar fondos o llegar a rentabilidad, y usarla como vara para descartar lo que no mueve la aguja. Lo propio de traction_goal es la mecanica de calendario: desglosar la meta en subobjetivos cuantitativos CON FECHAS LIMITE, por ejemplo veinte por ciento de crecimiento mensual, ponerlos en el calendario junto a los hitos de producto, y reevaluar la meta al cambiar de fase, I, II o III. Lo propio de definir_meta_de_traccion es la regla de descarte explicita, evaluar cada actividad de marketing preguntando si mueve la aguja y descartar las que dan resultados marginales. El calendario con fechas y las fases numeradas son lo mas concreto del par y es lo que se perderia.
+
+  [PAR] puesto 824, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): definir_meta_de_traccion
+     nodo_b (EL SEGUNDO de la razon): moving_the_needle
+     RAZON ENTERA, sin recortar:
+       La misma meta de traccion contada dos veces y del mismo libro, sin arista entre ellos. Lo comun es el eje: definir la meta en NUMEROS CONCRETOS y no en adjetivos, y descartar o bajar de prioridad lo que no mueve la aguja hacia ella. Lo propio de moving_the_needle es el calculo previo por canal, antes de invertir en uno, estimar si su VOLUMEN POTENCIAL puede acercarte de verdad a la meta, que convierte la doctrina en un filtro aplicable canal por canal. Lo propio de definir_meta_de_traccion es la pregunta de arranque, si lo que persigues ahora es levantar fondos o llegar a rentabilidad, porque cambia el numero. LA FAMILIA DE LA META DE TRACCION llega a TRES nodos y dos pares leidos, los dos en A, con el puesto 627: definir_meta_de_traccion, traction_goal y moving_the_needle. Tres nodos para una sola idea, y ninguno enlaza a otro.
+
+  --- definir_meta_de_traccion
+      titulo    : Definir la Meta de Tracción
+      fuente    : Traction - Gabriel Weinberg
+      pasos 4 | condiciones 2 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Determina si tu objetivo actual es levantar fondos o llegar a rentabilidad
+      paso 2: Traduce ese objetivo en números concretos: cantidad de clientes y tasa de crecimiento mensual
+      paso 3: Evalúa cada actividad de marketing preguntando si mueve la aguja hacia esa meta
+      paso 4: Descarta estrategias que generen resultados marginales sin impacto real
+      cond 1: Cuando el equipo no tiene claridad sobre qué resultados de marketing importan realmente
+      cond 2: Antes de iniciar cualquier campaña de adquisición de usuarios
+      previos   : ['verificar_product_market_fit']
+      siguientes: ['framework_bullseye', 'fases_traccion_producto', 'bullseye_framework']
+      entregable: Documento con meta de tracción cuantificada (número de clientes objetivo y tasa de crecimiento necesaria)
+
+  --- moving_the_needle
+      titulo    : Moving the Needle (Mover la Aguja)
+      fuente    : Traction - Gabriel Weinberg
+      pasos 3 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Define tu meta de tracción en números concretos (ej. 5,000 visitantes nuevos/día, no solo 'crecer').
+      paso 2: Antes de invertir en un canal, calcula si el volumen potencial de ese canal puede acercarte realmente a tu meta.
+      paso 3: Descarta o reduce la prioridad de canales que, aunque funcionen, no generan el volumen necesario.
+      cond 1: Cuando el equipo obtiene resultados en un canal pero no sabe si son 'suficientes'
+      cond 2: Cuando hay riesgo de dispersar esfuerzos en canales de bajo impacto
+      previos   : ['traccion_como_metrica_clave', 'regla_50_por_ciento']
+      siguientes: ['bullseye_framework']
+      entregable: Documento con la meta de tracción cuantificada y criterios de decisión para evaluar canales según su potencial de impacto.
+
+  --- traction_goal
+      titulo    : Definición del Traction Goal
+      fuente    : Traction - Gabriel Weinberg
+      pasos 5 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Define un objetivo de tracción cuantificable y significativo para tu etapa actual de negocio
+      paso 2: Verifica que el objetivo esté alineado con tu estrategia general (crecimiento vs rentabilidad vs fundraising)
+      paso 3: Desglosa el objetivo en subobjetivos cuantitativos con fechas límite (ej. 20% de crecimiento mensual)
+      paso 4: Coloca estos subobjetivos en el calendario junto a los hitos de producto
+      paso 5: Reevalúa el traction goal cuando cambie de fase (I, II, III)
+      cond 1: Al iniciar cualquier esfuerzo de crecimiento o tracción
+      cond 2: Cuando el startup pasa de una fase a otra (ej. de producto/mercado fit a escalamiento)
+      previos   : ['despliegue_metas']
+      siguientes: ['critical_path', 'bullseye_framework']
+      entregable: Documento con el traction goal principal, su justificación estratégica, y subobjetivos cuantitativos con fechas
+
+##############################################################################
+# ACTO 41 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 2465, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): design_for_six_sigma_dfss
+     nodo_b (EL SEGUNDO de la razon): design_for_six_sigma_dmadv
+     RAZON ENTERA, sin recortar:
+       REPITE. design_for_six_sigma_dmadv contra design_for_six_sigma_dfss, MISMA FUENTE, Juran, y sin arista. Sus cinco pasos son las cinco letras de DMADV y estan todas en el otro: definir el proyecto, medir los CTQ, analizar para el diseno de alto nivel, disenar en detalle y optimizar, y verificar. design_for_six_sigma_dfss trae ademas tres cosas que el otro no tiene: REVISAR EL PLAN DE NEGOCIO Y DEFINIR EL ALCANCE ANTES DE EMPEZAR, que es la puerta de entrada; EVALUAR VARIOS CONCEPTOS DE DISENO CON METODOS ESTADISTICOS en vez de uno solo; DISENAR EL PRODUCTO Y SU PROCESO DE PRODUCCION DE FORMA INTEGRADA, que es lo que distingue al DFSS de un diseno a secas; y UN SEXTO PASO ENTERO, el plan de lanzamiento con mecanismos de control para que los CTQ se sostengan despues. Por la vara del banco 9.6.1, REPITE. Sobrevive design_for_six_sigma_dfss. Y NO HAY PERDIDA DE NOMBRE, comprobado: el titulo del superviviente dice DFSS Y METODOLOGIA DMADV, asi que la denominacion por la que se busca sigue en el texto.
+
+  [PAR] puesto 2547, clase A, dominio quality
+     nodo_a (EL PRIMERO de la razon): design_for_six_sigma_dfss
+     nodo_b (EL SEGUNDO de la razon): design_for_six_sigma_dmadv_2
+     RAZON ENTERA, sin recortar:
+       REPITE. design_for_six_sigma_dmadv_2 contra design_for_six_sigma_dfss, MISMA FUENTE, Juran, y sin arista. Sus cinco pasos son las cinco letras de DMADV y todas estan dentro de los seis del otro: metas y objetivos, medir necesidades, analizar y determinar caracteristicas, disenar la solucion y verificar. design_for_six_sigma_dfss trae todo lo que convierte las letras en un metodo: REVISAR EL PLAN DE NEGOCIO Y DEFINIR EL ALCANCE ANTES DE EMPEZAR; TRADUCIR LAS NECESIDADES EN CTQs MEDIBLES; EVALUAR VARIOS CONCEPTOS DE DISENO CON METODOS ESTADISTICOS, que es lo unico del par que compara alternativas en vez de disenar una; DISENAR PRODUCTO Y PROCESO DE FORMA INTEGRADA; VERIFICAR CONTRA LOS NIVELES SIX SIGMA ANTES DE PRODUCIR A ESCALA COMPLETA; y EL PLAN DE LANZAMIENTO CON MECANISMOS DE CONTROL. Por la vara, REPITE. Sobrevive design_for_six_sigma_dfss. PERDIDA NOMBRADA, motivo ALCANCE: DESCUBRIR LAS NECESIDADES OCULTAS DEL CLIENTE, que no es lo mismo que traducir las necesidades declaradas y es de donde sale la caracteristica innovadora. Y NOTA DE FAMILIA: design_for_six_sigma_dfss gana su SEGUNDO par, tras el 2465, y ningun par leido lo ha hecho perder: tercera candidata a GANADOR POR DERECHO del dominio.
+
+  --- design_for_six_sigma_dfss
+      titulo    : Design for Six Sigma (DFSS) y Metodología DMADV
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 6 | condiciones 4 | previos 6 | siguientes 6 | cableado 12
+      paso 1: Revisa tu plan de negocio y define el alcance del proyecto de diseño antes de empezar.
+      paso 2: Identifica a tus clientes objetivo y traduce sus necesidades en requerimientos medibles (CTQs).
+      paso 3: Analiza la voz del cliente y evalúa varios conceptos de diseño usando métodos estadísticos.
+      paso 4: Diseña el producto y su proceso de producción de forma integrada, incorporando los CTQs como criterios de decisión.
+      paso 5: Verifica que el diseño detallado cumple los niveles de calidad Six Sigma y los CTQs antes de producir a escala completa.
+      paso 6: Prepara el plan de lanzamiento y define mecanismos de control para asegurar que se mantenga el cumplimiento de los CTQs.
+      cond 1: Cuando necesitas desarrollar un producto, servicio o proceso completamente nuevo con calidad Six Sigma.
+      cond 2: Cuando el diseño actual no satisface las necesidades del mercado y requiere un rediseño total.
+      cond 3: Cuando no existe un proceso previo que mejorar sino que debe crearse desde cero.
+      cond 4: Cuando necesitas asegurar que el diseño cumpla múltiples requisitos críticos del cliente desde el inicio.
+      previos   : ['herramientas_de_diseno_de_calidad', 'diseno_de_procesos_por_caracteristicas', 'innovacion_tipo_ii', 'juran_quality_by_design', 'six_sigma_dmaic', 'descubrir_necesidades_del_cliente']
+      siguientes: ['establecer_capacidad_del_proceso', 'ctq_caracteristicas_criticas', 'qfd_matriz', 'roles_six_sigma', 'control_del_proceso_del_proveedor', 'dmadv_fase_diseno']
+      entregable: Diseño de producto/proceso completamente desarrollado y verificado contra los CTQs del cliente, con plan de producción y lanzamiento a escala completa.
+
+  --- design_for_six_sigma_dmadv
+      titulo    : Design for Six Sigma (DFSS) - Modelo DMADV
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 2 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Definir el proyecto de diseño y sus metas específicas
+      paso 2: Medir los requisitos críticos para el cliente y la calidad (CTQs)
+      paso 3: Analizar la información para generar un diseño de alto nivel incorporando los CTQs
+      paso 4: Diseñar en detalle, evaluar y optimizar antes de transferir a operaciones
+      paso 5: Verificar que el diseño final cumple los requisitos establecidos
+      cond 1: Cuando el producto es complejo y requiere un enfoque estadístico riguroso de diseño
+      cond 2: Cuando se busca alcanzar niveles extraordinarios de calidad en manufactura
+      previos   : ['juran_quality_by_design']
+      siguientes: ['qfd_matriz_calidad', 'innovacion_tipo_ii', 'qfd_matriz']
+      entregable: Diseño de producto verificado y optimizado listo para transferencia a manufactura
+
+  --- design_for_six_sigma_dmadv_2
+      titulo    : Design for Six Sigma (DMADV) para Innovación Continua
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 3 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Define: establecer metas y objetivos para el nuevo bien, servicio o proceso
+      paso 2: Measure: medir y descubrir necesidades ocultas de los clientes
+      paso 3: Analyze: analizar las necesidades y determinar características innovadoras
+      paso 4: Design: diseñar combinando las características para crear la solución innovadora
+      paso 5: Verify: verificar que la innovación cumple con las necesidades del cliente y la organización
+      cond 1: Cuando la organización busca innovar de manera sistemática en lugar de azarosa
+      cond 2: Cuando se requiere diseñar nuevos productos, servicios o procesos desde cero
+      cond 3: Cuando existe necesidad de descubrir necesidades ocultas del cliente antes de diseñar
+      previos   : ['juran_quality_by_design']
+      siguientes: ['qfd_matriz_calidad', 'innovacion_tipo_ii', 'qfd_matriz']
+      entregable: Un diseño validado de producto/servicio/proceso que incorpora características innovadoras basadas en necesidades ocultas del cliente, con verificación formal de cumplimiento
+
+##############################################################################
+# ACTO 42 del tramo UNICO Y FINAL POR AGOTAMIENTO (puesto None de hoy, nuevo en la de la 48)
+##############################################################################
+  ACTO DE 3 MIEMBROS: 2 pares internos con veredicto escrito, de 3 combinaciones posibles
+
+  [PAR] puesto 476, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): diseno_organizacional_equipos_innovacion
+     nodo_b (EL SEGUNDO de la razon): equipo_multifuncional_real
+     RAZON ENTERA, sin recortar:
+       REPITE con equipo_multifuncional_real. Los dos mandan lo mismo para el mismo equipo de proyecto: nombrar un lider dedicado con autoridad real y espiritu emprendedor, y no solo con la responsabilidad; liberar de verdad el tiempo de las personas que se reunen en vez de que sigan con su carga habitual; y mantener un nucleo estable desde el inicio del proyecto hasta despues del lanzamiento. El primero anade elegir la forma de organizacion segun la complejidad y juntar al equipo fisicamente; el segundo anade que los indicadores y las recompensas sean del equipo y no solo individuales.
+
+  [PAR] puesto 672, clase A, dominio core
+     nodo_a (EL PRIMERO de la razon): equipo_multifuncional
+     nodo_b (EL SEGUNDO de la razon): equipo_multifuncional_real
+     RAZON ENTERA, sin recortar:
+       Gemelos del mismo libro sobre el mismo problema, sin arista entre ellos, y los dos avisan de lo mismo: un equipo multifuncional de fachada no sirve. equipo_multifuncional pide incluir desde el inicio a alguien de cada area clave y no al final, elegir un lider con capacidad real de liderazgo y no de coordinar tareas, construir vision compartida, dejar claro quien responde por que, y no pasar el proyecto de area en area sino trabajar en paralelo. equipo_multifuncional_real pide un lider dedicado CON AUTORIDAD real y no solo responsabilidad, liberar tiempo de verdad de las tareas habituales de quienes entran al equipo, definir indicadores y recompensas por desempeno del EQUIPO y no solo individual, y mantener un nucleo estable de gente comprometida de principio a fin. El eje es el mismo, el lider de verdad y el equipo de verdad. Lo que se perderia si se fusiona mal son las dos condiciones materiales del segundo, LIBERAR TIEMPO y RECOMPENSAR POR EQUIPO, que son las unicas que convierten el aviso en algo ejecutable, y el no pasar de area en area del primero. Los dos de Winning at New Products, Cooper.
+
+  --- diseno_organizacional_equipos_innovacion
+      titulo    : Cómo organizar tu equipo para innovar entre distintas áreas
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 5 | condiciones 2 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Cuando un proyecto importante pase el filtro de aprobación (gate), arma un equipo dedicado con personas de distintas áreas
+      paso 2: Nombra a alguien como líder de proyecto con espíritu emprendedor, no solo para administrar tareas del día a día
+      paso 3: Elige cómo vas a organizar al equipo según qué tan complejo sea: compartiendo tiempo con otras tareas, dándole prioridad al proyecto, o dedicándolo por completo
+      paso 4: Busca que el equipo esté físicamente junto o, si no se puede, que tengan formas efectivas de comunicarse a distancia
+      paso 5: Asegúrate de que el equipo se mantenga desde el inicio del proyecto hasta después de lanzarlo, y que quede claro quién responde por qué
+      cond 1: Cuando notas que cada área trabaja por su cuenta, sin cruzar información con las demás
+      cond 2: Cuando no está claro quién lidera el proyecto ni quién es responsable de que avance
+      previos   : ['analisis_de_capacidad_de_recursos']
+      siguientes: ['cultura_de_innovacion', 'rendicion_de_cuentas_del_equipo', 'reduccion_tamano_de_lote_batch_size']
+      entregable: Un organigrama simple de tu equipo de proyecto, con los roles definidos (líder, quien administra las tareas y el resto de los integrantes) y quién responde a quién
+
+  --- equipo_multifuncional
+      titulo    : Equipos que cruzan áreas vs. equipos que no funcionan (cross-funcionales)
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 5 | condiciones 2 | previos 4 | siguientes 2 | cableado 6
+      paso 1: Incluye desde el inicio a alguien de cada área clave, no solo al final
+      paso 2: Elige un líder de proyecto con verdadera capacidad de liderazgo, no solo de coordinar tareas
+      paso 3: Construye una visión compartida del proyecto entre todos los que participan
+      paso 4: Deja claro quién responde por qué, de forma compartida entre todo el equipo
+      paso 5: Evita el modelo de pasar el proyecto de área en área; trabaja en paralelo y de forma colaborativa
+      cond 1: Si tu proyecto avanza de forma secuencial entre áreas que no se hablan entre sí
+      cond 2: Si falta compromiso o visión compartida en el equipo que desarrolla el producto
+      previos   : ['definicion_estable_producto', 'company_building', 'diseno_ciclo_completo_equipo', 'diseno_para_el_ciclo_completo']
+      siguientes: ['gestion_portafolio_foco', 'stage_gate_system']
+      entregable: Estructura del equipo documentada con roles, responsabilidades y el compromiso de cada área clave
+
+  --- equipo_multifuncional_real
+      titulo    : Equipo Multifuncional Real (no un equipo de fachada)
+      fuente    : Winning at New Products - Robert G. Cooper
+      pasos 4 | condiciones 3 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Asigna un líder de proyecto dedicado y dale autoridad real, no solo la responsabilidad
+      paso 2: Libera tiempo real de las tareas habituales de las personas que reúnas para el equipo
+      paso 3: Define indicadores y recompensas basadas en el desempeño del equipo, no solo individual
+      paso 4: Mantén un núcleo estable de personas comprometidas desde el inicio hasta el final del proyecto
+      cond 1: Si tu negocio ya tiene varias personas o áreas trabajando juntas en un proyecto
+      cond 2: Cuando el equipo de proyecto está formado por representantes de área sin autoridad ni dedicación real
+      cond 3: Cuando los proyectos avanzan lento porque falta compromiso real entre áreas
+      previos   : ['sistema_gates_go_kill']
+      siguientes: ['procesamiento_paralelo_con_espirales']
+      entregable: Carta de equipo con roles definidos, tiempo asignado, autoridad del líder y un sistema de incentivos ligado a resultados
+
+FIN

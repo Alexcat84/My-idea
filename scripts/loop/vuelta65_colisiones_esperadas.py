@@ -7,6 +7,20 @@ la vuelta 64, registrada por el acta 64: la cuenta esperada se midio DESPUES de
 fundir y quedo como caida de procedimiento autodeclarada. Aqui se mide antes,
 sobre el arbol tal como esta, simulando la fusion EN MEMORIA sin tocar un nodo.
 
+CORRECCION DECLARADA DE LA LINEA BASE, TERCERA (2026-08-26, vuelta 71, por el
+mismo carril con el que la vuelta 67 la paso de 2 a 4 y la vuelta 70 de 4 a 6;
+EL TEXTO VIEJO SE QUEDA ENTERO AQUI ABAJO Y NO SE TACHA, NI EL DE LA SEGUNDA
+CORRECCION NI EL DE LA PRIMERA NI EL ORIGINAL). EL ACTA 70 ADJUDICO EN SU
+SECCION 6.1 QUE LA LINEA BASE OPERATIVA DEL CENSO PASA DE 6 A 7: la colision que
+la fusion del acto 33 de la vuelta 70 fabrico estaba PREDICHA antes de tocar un
+nodo, PUBLICADA en rojo y con DUENA OP-U-02 sellada en el plan, que son las tres
+condiciones del carril, y por eso entra a la base operativa igual que entraron
+las dos del acto 8 y las dos del acto 25. Es el CUARTO escalon del mismo carril:
+2 por el acta 64, 4 por el acta 66, 6 por el acta 69 y 7 por el acta 70. Por eso
+el valor por defecto de --base pasa de 6 a 7. LA ARITMETICA NO SE TOCA: la
+guarda sigue MIDIENDO la base sobre el arbol y cayendo en ROJO si la medida no
+calza con la declarada. VA MARCADO DISCUTIBLE EN EL REPORTE DE LA VUELTA 71.
+
 CORRECCION DECLARADA DE LA LINEA BASE, SEGUNDA (2026-08-26, vuelta 70, por el
 mismo carril con el que la vuelta 67 la paso de 2 a 4; EL TEXTO VIEJO SE QUEDA
 ENTERO AQUI ABAJO Y NO SE TACHA, NI EL DE LA PRIMERA CORRECCION NI EL ORIGINAL).
@@ -104,18 +118,25 @@ def censar(alias):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--plan", required=True)
-    # CORRECCION DECLARADA, SEGUNDA (vuelta 70, acta 69 seccion 5.1). El texto
+    # CORRECCION DECLARADA, TERCERA (vuelta 71, acta 70 seccion 6.1). El texto
     # viejo de esta llamada, VERBATIM, era:
+    #     ap.add_argument("--base", type=int, default=6,
+    #                     help="la linea base declarada del censo (acta 69, seccion 5.1: "
+    #                          "2 de la mesa OP-M-03, 2 del acto 8 y 2 del acto 25, las "
+    #                          "cuatro de OP-U-02 predichas, publicadas y con duena). Los "
+    #                          "defectos viejos eran 2 y 4 y las dos correcciones estan "
+    #                          "declaradas en el docstring")
+    # Y EL DE LA CORRECCION ANTERIOR A ESA, TAMBIEN VERBATIM, era:
     #     ap.add_argument("--base", type=int, default=4,
     #                     help="la linea base declarada del censo (acta 66, pregunta 2: "
     #                          "2 de la mesa OP-M-03 mas 2 de OP-U-02). El defecto viejo "
     #                          "era 2 y la correccion esta declarada en el docstring")
-    ap.add_argument("--base", type=int, default=6,
-                    help="la linea base declarada del censo (acta 69, seccion 5.1: "
-                         "2 de la mesa OP-M-03, 2 del acto 8 y 2 del acto 25, las "
-                         "cuatro de OP-U-02 predichas, publicadas y con duena). Los "
-                         "defectos viejos eran 2 y 4 y las dos correcciones estan "
-                         "declaradas en el docstring")
+    ap.add_argument("--base", type=int, default=7,
+                    help="la linea base declarada del censo (acta 70, seccion 6.1: "
+                         "2 de la mesa OP-M-03, 2 del acto 8, 2 del acto 25 y 1 del "
+                         "acto 33, las CINCO de OP-U-02 predichas, publicadas y con "
+                         "duena). Los defectos viejos eran 2, 4 y 6 y las tres "
+                         "correcciones estan declaradas en el docstring")
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
 
@@ -124,9 +145,10 @@ def main():
     print("LA CUENTA ESPERADA DE COLISIONES, SIMULADA ANTES DE FUNDIR")
     print("  plan       : %s" % a.plan)
     print("  operacion  : %s" % plan.get("operacion"))
-    print("  linea base : %d, DECLARADA (acta 69, seccion 5.1; los textos viejos "
-          "decian 4 por el acta 66 pregunta 2 y antes 2 por el acta 64 pregunta 3, "
-          "y las dos correcciones van declaradas en el docstring)"
+    print("  linea base : %d, DECLARADA (acta 70, seccion 6.1; los textos viejos "
+          "decian 6 por el acta 69 seccion 5.1, antes 4 por el acta 66 pregunta 2 "
+          "y antes 2 por el acta 64 pregunta 3, y las tres correcciones van "
+          "declaradas en el docstring)"
           % a.base)
     print("=" * 78)
 
