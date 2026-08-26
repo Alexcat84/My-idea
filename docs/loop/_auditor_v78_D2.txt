@@ -1,0 +1,26 @@
+### conformidad_comercio_internacional  [quality] deprecado=None
+TITULO: Evaluación de Conformidad en el Comercio Internacional (Marcado CE)
+FUENTE: Juran's Quality Handbook_ The C - Joseph A. Defeo
+RESUMEN: Para vender productos regulados en la Unión Europea, es obligatorio el marcado CE, que exige evidencia de conformidad en cuatro áreas: documentación técnica de diseño, pruebas de tipo, vigilancia del producto y vigilancia del aseguramiento de calidad. Este enfoque modular impulsó masivamente la adopción global de certificaciones ISO 9001/9002, ya que las organizaciones no pueden mantener sistemas de calidad separados para productos regulados y no regulados.
+PASOS:
+  1. Determinar si el producto cae bajo una directiva regulada de la UE u otro mercado similar
+  2. Preparar documentación técnica de diseño y evidencia de pruebas de tipo
+  3. Certificar el sistema de calidad ante un organismo notificado si aplica 'Full Quality Assurance'
+  4. Unificar el sistema de gestión de calidad para productos regulados y no regulados
+ENTREGABLE: Marcado CE u homólogo obtenido, con sistema de calidad único que cubra ambos tipos de producto
+SIGUIENTES: ['adaptaciones_sectoriales_iso', 'sistema_gestion_calidad']
+PREVIOS: ['acreditacion_organismos_certificadores', 'estandar_gtin_epc']
+
+### sistema_gestion_calidad  [quality] deprecado=None
+TITULO: Sistema de Gestión de Calidad
+FUENTE: Juran's Quality Handbook_ The C - Joseph A. Defeo
+RESUMEN: Es el sistema con el que diriges y controlas tu negocio en todo lo relacionado con la calidad. Como la calidad afecta a todo tu negocio y no solo a la parte de producción u operaciones, este sistema también es amplio: puede estar controlado desde distintas partes de tu negocio, no solo desde un area dedicada a calidad.
+PASOS:
+  1. Mapea todos los procesos de tu negocio que afectan la calidad, más allá de producción u operaciones
+  2. Identifica quién controla hoy cada parte de ese sistema, ya seas tú o la persona que te ayuda
+  3. Establece una forma de coordinar entre las distintas partes que controlan el sistema
+  4. Documenta el sistema de gestión de calidad siguiendo los estándares que apliquen en tu mercado
+ENTREGABLE: Mapa del sistema de gestión de calidad de tu negocio con responsables identificados
+SIGUIENTES: ['oficina_calidad_y_excelencia', 'auditorias_primera_segunda_tercera_parte', 'iso_31000_gestion_riesgo', 'principios_gestion_calidad_iso9000']
+PREVIOS: ['principios_gestion_calidad_iso9000', 'trilogia_de_juran', 'conformidad_comercio_internacional']
+

@@ -22698,3 +22698,641 @@ aristas de la fase 04 que la vara de los veredictos A toca**; el ensanche del
 filtro con esa vara y su caso positivo; el toque unico de los dos ids de
 gates; y el tramo 4 de `OP-E-01` con la bolsa recalibrada. Escrito completo en
 `docs/loop/PROMPT_SIGUIENTE.md`.
+
+# ACTA DE LA VUELTA 78 DEL AUDITOR (26 ago 2026, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** La ultima acta escrita es la de la vuelta 77
+(`ACTA_AUDITOR.md` linea 22077, auditor Opus 5) y cubre la vuelta
+inmediatamente anterior a esta. Esta acta cubre UNA vuelta, la 78, y ninguna
+otra.
+
+**LO QUE SE AUDITA.** `docs/loop/REPORTE.md` de la vuelta 78 (ejecutor Sonnet
+5), cadena de dos commits: `2e040cb6` (TAREA 1 a 4) y `0ea71f3a` (el reporte
+de cierre). Rama `pasada-unica`, arbol limpio y `origin/pasada-unica` igual a
+`HEAD` al empezar (`git rev-parse` de las dos identicos:
+`0ea71f3a23705816b3fb908613a73d4bc96cf9eb`).
+
+**EL RESULTADO, DELANTE. CERO CAIDAS DE CLASE Y CERO DE CIFRA PUBLICADA: LA
+RACHA QUE EL ACTA 77 DEJO EN UNA VUELVE A CERO, Y LA PARADA QUE ESA ACTA
+ANUNCIABA CON TODAS LAS LETRAS ("una sola caida de clase o de cifra publicada
+en la vuelta 78 ES PARADA") NO SE DISPARA.** Todo lo medible se reprodujo al
+digito por corrida propia mia: las ocho cifras de aristas, el diff por
+conjuntos, el censo, las tres suites, el marcador, el filtro fila a fila, la
+nomina y las dos tablas de la TAREA 1.
+
+**LO QUE SI HAY ES UNA CAIDA DE REPORTE, DENTRO DEL MARCADO, Y NO ES DE
+CIFRA: ES DE CRITERIO.** El criterio de una sola linea que la seccion 3.2
+publica para las once aristas NO produce la decision que la misma seccion
+publica en su tabla. La decision es correcta (la verifique par a par contra
+las fichas y contra el archivo); la frase que dice como se tomo, no.
+
+**Y CON ESA CAIDA LA RACHA DE REPORTE VUELVE A DOS TANDAS SEGUIDAS, QUE ES
+EXACTAMENTE EL NUMERO QUE EL FUNDADOR DEJO ESCRITO COMO GATILLO: se dispara la
+ESCALADA AUTOMATICA de la opcion (b)**, extender el tallador a la fase 04
+(`docs/loop/paradas/2026-08-26-racha-tramo-mecanico-DECISION.md`, linea 183).
+No es parada: la parada de esta especie sigue pidiendo TRES.
+
+---
+
+## 1. VERIFICACION POR CORRIDA PROPIA, AL DIGITO
+
+Todo lo de esta seccion se leyo de la salida de un instrumento corrido POR MI
+EN ESTA VUELTA. Ninguna cifra viene de una nota vieja, ni del reporte, ni de
+mi acta anterior. Donde cito una cifra vieja, la marco como contraste.
+
+### 1.1. Las ocho cifras de aristas, apertura y cierre
+
+Instrumento propio `docs/loop/_auditor_v78_conteo.py`, escrito esta vuelta,
+con `assert` sobre la clave del fichero (`node_id`) porque ese fue mi tropiezo
+declarado del acta 77. Salida en `docs/loop/_auditor_v78_conteo.txt`:
+
+| ref | nodos | vivos | depre | siguientes | previos | suma | union | auto |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| `57863182` (apertura) | 3.853 | 3.188 | 665 | **8.925** | **8.904** | **17.829** | **9.548** | 0 |
+| `2e040cb6` (cierre del trabajo) | 3.853 | 3.188 | 665 | **8.949** | **8.928** | **17.877** | **9.572** | 0 |
+| `0ea71f3a` (HEAD) | 3.853 | 3.188 | 665 | 8.949 | 8.928 | 17.877 | 9.572 | 0 |
+| arbol de trabajo | 3.853 | 3.188 | 665 | 8.949 | 8.928 | 17.877 | 9.572 | 0 |
+
+**LAS OCHO CIFRAS DEL REPORTE (secciones 0 y 5) DAN LAS OCHO**, y la
+aritmetica que el reporte publica cierra sola: 8.925 mas 1 menos 1 mas 24
+igual a 8.949, y 8.904 mas 24 igual a 8.928.
+
+### 1.2. El diff de aristas, por conjuntos y no por conteo
+
+Instrumento propio `docs/loop/_auditor_v78_diff.py`
+(`docs/loop/_auditor_v78_diff.txt`):
+
+| | |
+|---|---:|
+| nuevas en `nodos_siguientes` | **25** |
+| **de esas, con su reciproca completa en `nodos_previos`** | **25 de 25** |
+| borradas de `nodos_siguientes` | **1** |
+| **la borrada, con su reciproca tambien borrada** | **1 de 1** |
+| auto-aristas en todo el grafo al cierre | **0** |
+
+Las 25 son exactamente la de la TAREA 1.2 mas las 24 del tramo 4, una a una,
+sin sobrantes ni faltantes. La borrada es exactamente
+`waterfall_vs_agile_development -> desarrollo_de_clientes_customer_development`.
+
+**Y LA COMPROBACION QUE EL TROPIEZO DE LA SECCION 3.2 DEL REPORTE PIDE A
+GRITOS, HECHA POR MI Y NO LEIDA DE SU FICHERO:** la arista revertida quedo
+quitada de LAS DOS VISTAS, y tras correr yo el ciclo de tres entero (seccion
+1.3) el arbol volvio byte a byte al que `0ea71f3a` dejo. **La arista no
+reaparece. La leccion de la simetrizacion esta bien aplicada.**
+
+**Y la escalera, comprobada por mi sobre el grafo de la apertura**
+(`_auditor_v78_bolsa_delta.txt`): para cada una de las 25, mire si el hijo ya
+apuntaba a la madre ANTES de la escritura. **CERO de 25.** El "cero de 24" del
+reporte se sostiene por corrida independiente y ademas cubre la 25.
+
+### 1.3. Gate 0, el ciclo de tres, corrido entero
+
+| # | comando | mi salida | fichero |
+|---:|---|---|---|
+| **1** | `python scripts/run_phase1.py --reaplico-curaduria` | **EXITCODE 0**, `GATE 0: OK`. **3.853 compilados, 3.188 activos, 665 deprecados**. Auto-aristas **0**, duplicadas de titulo **0**, alias con dos duenos **0**, los dos `master_graph` con **0 nodos divergentes**, alcanzabilidad **100,0% (3.188/3.188, 85 semillas)**, enlaces rotos **0** | `_auditor_v78_gate0.txt` |
+| **2** | `python scripts/etiquetas_de_cara.py --aplicar` | **71 etiquetas cambian, 0 ya estaban en su forma final**, EXITCODE 0 | `_auditor_v78_etiquetas.txt` |
+| **3** | `python scripts/sync_assets_web.py` | EXITCODE 0, **seis assets sincronizados** | `_auditor_v78_sync.txt` |
+
+**Tras los tres comandos, `git status` no muestra un solo rastreado
+modificado.** El ciclo de tres es idempotente sobre el trabajo de esta vuelta,
+igual que lo fue sobre el de la 77, y el tropiezo de las 71 divergentes que el
+reporte declara en su seccion 0 queda confirmado como lo que dice ser: la
+divergencia la fabrica correr `run_phase1.py` una SEGUNDA vez despues de
+`etiquetas_de_cara.py`, no el trabajo de la vuelta. **Bien declarado y bien
+resuelto; no lo cuento como caida.**
+
+### 1.4. Las tres suites, corridas por mi
+
+| suite | comando | mi salida |
+|---|---|---|
+| motor | `python engine/run_all_tests.py` | **TODOS LOS TESTS PASARON (25/25)**, EXITCODE 0 |
+| web | `npx vitest run` **desde `web/`** | **80 passed (80)**, **1030 passed, 3 skipped (1033)**, EXITCODE 0 |
+| tsc | `npx tsc --noEmit` desde `web/` | **EXITCODE 0, cero lineas de salida** |
+
+Las tres cifras del reporte dan las tres.
+
+### 1.5. El marcador del cribado y los huecos
+
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, contado por mi
+(`_auditor_v78_cribado_marcador.txt`): **A 551, B 72, C 5, D 2.760**, n
+**3.388**, puestos del 1 al 3.388, **3.388 unicos, CERO huecos y CERO
+duplicados**. Sin cambio, como corresponde a una fase que no toca el cribado.
+
+### 1.6. La bolsa, medida por mi en LOS DOS extremos y reconciliada fila a fila
+
+Corri el calibrador con los mismos umbrales (`--umbral-titulo 72
+--umbral-contencion 0.45 --min-tokens 4`) **tres veces**: sobre el grafo de la
+apertura (con `master_graph.json` sacado de `57863182` y devuelto despues),
+sobre el grafo final de hoy, y contra el fichero que el ejecutor commiteo.
+Sellado y restaurado `docs/plan/PASO_NODO_CALIBRADO.jsonl` en cada pasada.
+
+| corrida | brutos | reducida | **sin arista** |
+|---|---:|---:|---:|
+| grafo de la apertura `57863182` | 590 | 468 | **283** |
+| fichero commiteado en `0ea71f3a` (la corrida de la seccion 4.1 del reporte) | 590 | 468 | **283** |
+| grafo final de hoy | 590 | 468 | **258** |
+
+**EL 283 DEL REPORTE QUEDA CONFIRMADO POR DOS CAMINOS**, y el 258 de hoy es el
+mismo fichero despues de que el tramo 4 consumiera sus candidatos. Diferencia
+fila a fila entre la corrida de 4.1 y la de hoy: **25 filas cambian de
+`arista` False a True**, ni una mas ni una menos
+(`_auditor_v78_bolsa_delta.txt`).
+
+**Y AQUI ESTA EL HALLAZGO DE LA TANDA, QUE NADIE PIDIO Y QUE SALIO DE CUADRAR
+UN UNO.** Las 25 filas que cambian NO son las 24 aristas del tramo 4 mas la de
+la TAREA 1.2: son **24 del tramo 4, la de la TAREA 1.2, y una vigesimoquinta
+que nadie escribio**. Va en la seccion 4.
+
+### 1.7. El filtro `P.9.1` ensanchado, re-corrido por mi entero
+
+Barrido propio (`_auditor_v78_p91.txt`): cruce los 283 candidatos sin arista
+de la bolsa de 4.1 contra las **70 operaciones NO EJECUTADAS** (campo
+`eliminar`, **36** ids; `superviviente`, **18**; `nodos` de las de tipo
+`RENOMBRE_CON_ALIAS`, **67**) y contra los **187** nodos vivos que participan
+en un veredicto **A** vivo.
+
+| | mi corrida | el reporte |
+|---|---:|---:|
+| candidatos sin arista | **283** | 283 |
+| **apartados por `P.9.1` ensanchado** | **92** | 92 |
+| solo por operacion (92 menos los 57 de la vara) | **35** | 35 |
+| con al menos un motivo de la vara de los A | **57** | 57 |
+| **limpios** | **191** | 191 |
+
+**Y NO ME QUEDE EN EL CONTEO: compare mi conjunto de 191 contra
+`docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V78.jsonl` FILA A FILA, por la terna
+(madre, hijo, paso). COINCIDEN LAS 191, cero mias de mas y cero suyas de
+mas.** Es la comprobacion mas dura que este filtro admite y sale limpia.
+
+### 1.8. Las dos cifras de la vara de los A, y las once que toca
+
+Instrumento propio (`_auditor_v78_guardaA.txt`):
+
+| | |
+|---|---:|
+| veredictos clase A en el archivo | **551** |
+| nodos VIVOS que participan en al menos un A con otro nodo VIVO | **187** |
+| aristas de la fase 04 en `57863182` (contra `62d4f28e`) | **79** |
+| aristas de la fase 04 hoy | **103** |
+| de esas 103, tocadas hoy por la vara de los A | **10** |
+
+**Las dos cifras del reporte (551 y 187) dan las dos**, y las diez tocadas son
+exactamente las diez que la tabla de 3.2 marca QUEDA.
+
+**CONTRASTE DECLARADO, NO DISCREPANCIA.** El reporte publica **79** aristas de
+fase 04 en su seccion 3.3 y yo mido **103** hoy. **No es un choque: la seccion
+3.3 corrio ANTES del tramo 4.** La cadena, medida por mi y no derivada: 79 en
+la apertura, mas la de la TAREA 1.2 son 80, menos la revertida son 79 (que es
+lo que 3.3 midio), mas las 24 del tramo 4 son **103**. Lo digo aqui porque la
+regla del instrumento manda declarar la discrepancia en vez de resolverla
+copiando, y esta se resuelve con el reloj, no con la aritmetica.
+
+**Y LA COMPROBACION QUE VALE MAS QUE EL CONTEO: ninguna de las 24 aristas
+nuevas del tramo 4 esta tocada por la vara de los A.** El filtro ensanchado no
+solo se corrio: funciono.
+
+### 1.9. La TAREA 1 entera, re-medida celda a celda
+
+| lo que el reporte publica | mi corrida |
+|---|---|
+| `mejora_calidad_crosby` en los 32 racimos de `RACIMOS_MIEMBROS.jsonl`: **cero** | **cero.** Solo el hijo esta (`_auditor_v78_racimos_2583.txt`) |
+| puesto **2583**, quality, clase **D**, y el texto dice que la madre *"literalmente REMITE al de catorce pasos como su contenido"* | **al digito, y lei el veredicto entero** |
+| los 30 del tramo 3: **7** sin direccion, **6** madre a hijo, **los 7 clase D**, **0 clase A** | **7, 6, los siete D, cero A**, y los siete puestos son los mismos: 1369, 2464, 1951, 2826, 223, 1746 y 2583 (`_auditor_v78_treinta.txt`) |
+| las siete operaciones que apartaban llevan `fase` `03_FUSIONES` | **las siete**, y `OP-M-02-PROG` y `OP-M-03-II` **no** estan entre las seis enrutadas a la fase 06 de `03_FUSIONES.md` linea 9246 (`_auditor_v78_ops.txt`) |
+| `OP-S-09.nodos` pasa de **69** a **67** | **69 en `57863182`, 67 hoy**, y los dos ids quitados son exactamente `estructura_de_gates` y `estructura_gates`, los dos en el `eliminar` de `OP-M-01-FUSION` |
+| familias de **29** a **28**, la familia `[PARTICULAS]` desaparece entera | **re-corri el generador de la nomina** (`_auditor_v78_nomina_recompute.txt`): da 29 familias y 69 nodos por metodo lexico, y la familia de los gates tiene **exactamente dos miembros**, asi que al remitirlos desaparece entera. **28 y 67 confirmados** |
+| `OP-M-01-FUSION` corre antes (fase 03, orden 5) que `OP-S-09` (fase 05, orden 8) | **confirmado campo a campo** |
+
+Y la escritura: `OP-E-01.verificacion` pasa de **10** a **11** entradas, con
+las **diez viejas intactas byte a byte** (`_auditor_v78_ope01.txt`); el tercer
+caso de EL TOQUE UNICO esta escrito en `05_SANEO.md` linea 35 con su
+correccion declarada; el ensanche del filtro esta escrito en `04_ENLACES.md`
+bajo las notas viejas, que tampoco se tocaron.
+
+---
+
+## 2. LA VARA DEL CREDITO REBAJADO, CORRIDA POR MI
+
+El encargo mandaba releer el tramo 3 al doble contra
+`INTRA_DOMINIO_VEREDICTOS.jsonl`. Lo corri con instrumento propio, emparejando
+**sin direccion** (el cribado lee pares, no aristas):
+
+| conjunto | pares | leidos por el cribado | **clase A** | a revertir |
+|---|---:|---:|---:|---:|
+| **TRAMO 3** (28 aristas de la vuelta 77) | 28 | **6** | **0** | **0** |
+| **los 30 del tramo 4** (24 escritas mas 6 no escritas) | 30 | **2** | **0** | **0** |
+
+**EL TRAMO 3 DA AL DIGITO LO QUE EL REPORTE PUBLICA**: los mismos 6 puestos
+(2826, 2464, 223, 1369, 1746 y 1951), los seis **D**, cero clase A, cero
+reversiones. **La TAREA 2 esta bien hecha y bien contada.**
+
+**Y CORRI ADEMAS LA VARA SOBRE EL TRAMO 4, QUE NADIE ME PIDIO**
+(`_auditor_v78_treinta_tramo4.txt`): **DOS de los 30 tienen veredicto propio**,
+que son exactamente los dos que el reporte nombra (**3205 D** y **637 B**),
+**cero clase A**, y **cero pares con los dos extremos en el mismo racimo
+declarado**. El cruce que fallo en la vuelta 77 esta bien corrido en esta.
+
+**Y verifique la palabra del archivo, no su parafrasis:** el puesto 637 dice,
+con estas letras, ***"Sin arista entre ellos"***. El ejecutor honro un mandato
+expreso del archivo en vez de pasarle por encima. Se dice.
+
+---
+
+## 3. RELECTURA CIEGA, EMPEZANDO POR LOS CINCO DISCUTIBLES MARCADOS
+
+Metodo, como manda `AUDITOR.md` seccion 1.2: volque PRIMERO los textos
+completos (resumen, pasos, entregable y aristas) de los nodos con
+`docs/loop/_auditor_v78_ver.py`, adjudique mi clase con la vara del banco en la
+mano, y **solo despues** fui a la razon escrita y al veredicto de archivo. Los
+volcados quedan en `_auditor_v78_D1.txt` a `_auditor_v78_D5.txt`.
+
+| # | que se marco | mi adjudicacion | resultado |
+|---:|---|---|---|
+| **1** | `diferencia_iso9001_iso9004 -> trilogia_de_juran`, duda de direccion | **LA ARISTA SE QUEDA**, y la duda la disuelve el propio 9.6.2 | **A FAVOR** |
+| **2** | `conformidad_comercio_internacional -> sistema_gestion_calidad`, duda de direccion | **SE QUEDA**, mismo argumento y con el grafo detras | **A FAVOR** |
+| **3** | los cuatro candidatos hacia `value_proposition_startup` | **TRES SE QUEDAN. LA CUARTA NO PASA LA VARA** y va a relectura conjunta | **EN CONTRA en una de las cuatro** |
+| **4** | la decision completa de la TAREA 3.2 (10 quedan, 1 revierte) | **LAS ONCE DISPOSICIONES SON CORRECTAS. EL CRITERIO PUBLICADO NO LAS PRODUCE** | **A FAVOR en las once, EN CONTRA del criterio publicado** |
+| **5** | `requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level`, pendiente de doctrina | **LA ABSTENCION SE CONFIRMA, Y EL PENDIENTE QUEDA DISUELTO POR CITA** | **A FAVOR, sin doctrina nueva** |
+
+### D1, A FAVOR, y la duda se disuelve con la regla que la genera
+
+**Mi lectura ciega.** La madre (`diferencia_iso9001_iso9004`, Juran, 3 pasos)
+trae en su **paso 3** *"Incorporar metodos de planificacion, control y mejora
+en todos los procesos, no solo los de produccion"*. El hijo
+`trilogia_de_juran` **ES esos tres metodos**, con 6 pasos propios: disenar
+traduciendo lo que pide el cliente, distinguir pico esporadico de desperdicio
+cronico, control, breakthrough, verificar contra el diseno, e integrar los tres
+como ciclo.
+
+**Aplico la prueba de reconocimiento del banco 9.6.2, la que se cita:** *"el
+hijo cabe entero dentro de UN paso de la madre, y la madre conserva materia
+propia que el hijo no toca en ningun paso"*. **Cabe**: la Trilogia es
+literalmente planificacion, control y mejora. **Y la madre conserva materia
+propia**: sus pasos 1 y 2 son decidir si el objetivo es certificacion o
+excelencia y usar la ISO 9004 para llenar brechas de gestion, y el hijo no
+toca la ISO en ninguna linea.
+
+**Y LA DUDA DEL DISCUTIBLE ES EXACTAMENTE LA QUE 9.6.2 EXISTE PARA MATAR.**
+Preguntar si la relacion no sera la inversa porque el hijo es "mas
+fundamental" es preguntar que anade la madre al hijo, y el banco escribe la
+reduccion al absurdo con esas palabras: *"si se pregunta que anade la madre al
+hijo, la respuesta casi siempre son lineas, porque una madre enuncia sus pasos
+en forma compacta: eso es lo que es una madre"*. **La vara tiene direccion y
+esta puesta en el sentido correcto.**
+
+**Y una comprobacion que el reporte no hizo y que refuerza su decision:** la
+madre YA colgaba de `trilogia_juran_qa_qc` antes de esta vuelta, y el hijo ya
+tenia siete madres del mismo tipo (`gestion_para_la_calidad`,
+`enfoques_gurus_calidad`, `definicion_calidad_fitness_for_purpose` y cuatro
+mas). **El patron no lo estrena esta arista: lo continua.**
+
+### D2, A FAVOR, y es la mas floja de las dos aunque pasa
+
+**Mi lectura ciega.** La madre (`conformidad_comercio_internacional`, Juran, 4
+pasos, marcado CE) trae en su **paso 4** *"Unificar el sistema de gestion de
+calidad para productos regulados y no regulados"*. El hijo
+`sistema_gestion_calidad` es ese sistema con 4 pasos propios: mapear todos los
+procesos que afectan la calidad mas alla de produccion, identificar quien
+controla cada parte, coordinar entre partes, y documentar segun el estandar del
+mercado.
+
+**La prueba de 9.6.2 se cumple, y lo digo con el lado flojo delante.** La
+madre conserva materia propia de sobra y sin discusion: la directiva de la UE,
+la documentacion tecnica de diseno, las pruebas de tipo, el organismo
+notificado. El hijo no toca nada de eso. **Lo que es menos limpio es el otro
+lado:** el paso 1 del hijo (mapear TODOS los procesos del negocio) es mas ancho
+que "unificar los dos sistemas", asi que el encaje dentro de un solo paso no es
+tan exacto como en el D1. **Pasa igual, y por que:** el paso 4 de la madre
+nombra la accion y el hijo es el unico nodo del grafo que la ejecuta, que es la
+formulacion literal del banco (*"la prueba de que el paso de la madre es un
+procedimiento es que existe el hijo que lo ejecuta"*).
+
+**Y el grafo lo respalda:** `sistema_gestion_calidad` ya recibia de
+`trilogia_de_juran` y de `principios_gestion_calidad_iso9000`, o sea de nodos
+mas especificos que el. **El discutible pregunta bien y la respuesta es que se
+queda.**
+
+### D3, **EN CONTRA EN UNA DE LAS CUATRO**, y no es sobre-conexion: es una mencion
+
+**Primero la cifra del discutible, medida por mi antes de leer nada**
+(`_auditor_v78_D3_hub.txt`): `value_proposition_startup` tenia **17 madres y 26
+hijos** en `57863182` y tiene **21 madres** hoy. **La cifra del reporte da al
+digito por barrido del grafo, no por el campo.**
+
+**Y respondo lo que el discutible pregunta: NO es sobre-conexion por termino
+generico.** Un hijo con 26 hijos propios y 17 madres previas es un concepto
+central del nucleo, y cuatro madres nuevas no lo desbordan. **La pregunta buena
+no era cuantas, era cual.** Las lei una a una con la prueba de 9.6.2:
+
+| madre | el paso senalado | mi lectura |
+|---|---|---|
+| `actualizar_business_model_canvas_tuneup` | paso 1: *"Revisa tu propuesta de valor a la luz del feedback de clientes recibido"* | **la accion del paso ES la propuesta de valor.** Pasa |
+| `etapa_build_business_case` | paso 1: *"Definir el mercado objetivo, posicionamiento y propuesta de valor del producto"* | **el paso manda DEFINIR la propuesta de valor y el hijo es como se define.** Pasa, y es la mas limpia de las cuatro |
+| `ventaja_competitiva_producto` | paso 3: *"Asegurate de que cuando definas tu producto quede explicita la propuesta de valor para tu cliente"* | **la accion del paso es dejarla explicita.** Pasa |
+| `extraer_priorizar_hipotesis` | paso 1: *"Lista todo lo que tiene que ser cierto sobre tu modelo de negocio, tu propuesta de valor y tu cliente"* | **NO PASA** |
+
+**POR QUE LA CUARTA NO PASA, Y LO DIGO CON LA VARA Y CON EL PROPIO REPORTE.**
+La accion de ese paso es **listar hipotesis**. La propuesta de valor aparece
+como uno de los tres objetos sobre los que se listan, no como la accion a
+ejecutar. El hijo `value_proposition_startup` (identificar problemas del
+segmento, definir que caracteristicas los resuelven, verificar el encaje
+hablando con clientes) **no ejecuta ese paso: es su insumo**, y el resumen de
+la propia madre lo dice con estas palabras: ***"A partir de tu mapa de
+propuesta de valor y tu modelo de negocio, identifica todas las
+suposiciones"***. **La prueba de 9.6.2 pide que el hijo ejecute el paso, y este
+lo precede.**
+
+**Y LA RAZON ESCRITA POR EL EJECUTOR LO CONCEDE SIN QUERER.** Destapada
+despues, dice: *"paso 1 nombra la propuesta de valor entre lo que hay que
+testear; mismo hijo hub"*. **Nombrar entre lo que hay que testear no es
+desplegar el paso.** Y el mismo reporte, ocho lineas mas abajo, rechaza
+`timing_solicitud_referidos -> fase_adopt_ciclo_cliente` porque *"el paso
+senalado nombra la fase Adopt solo como ejemplo parentetico"*. **Es la misma
+especie y recibe dos tratos distintos en la misma tanda.** Eso es lo que hace
+que valga la pena decirlo, no el par en si.
+
+**NO LA REVIERTO YO.** Por `AUDITOR.md` seccion 1.3 una discrepancia va a
+relectura conjunta: mi caso queda escrito arriba con la cita del banco, el
+ejecutor lo verifica contra el grafo y decide con la vara, y lo que se mueva se
+mueve con correccion declarada y recomputo. Va en el encargo. **Y sigo el
+precedente del acta 75 (linea 21204, D2): una discrepancia de lectura sobre un
+discutible bien descrito, con la razon escrita cierta contra el fichero, es una
+ADJUDICACION y no una caida.** No la cuento como caida de clase, y digo por que
+en la seccion 5.
+
+### D4, **A FAVOR EN LAS ONCE DISPOSICIONES, EN CONTRA DEL CRITERIO PUBLICADO**
+
+**Verifique las once una a una contra las fichas y contra el archivo, no contra
+el reporte** (`_auditor_v78_D4.txt`). Lo que sale:
+
+- **`OP-M-05-APERTURA` declara `superviviente` = `customer_validation` y
+  `eliminar` = `filosofia_customer_validation`,
+  `introduccion_validacion_clientes`.** Las aristas 2 y 3 se quedan por `P.9`
+  punto 2, con el texto de la ficha detras. **Correcto.**
+- Los companeros de A de las aristas 1, 5, 7, 8 no tienen operacion ninguna;
+  los de las 9 y 10 tienen un miembro ya deprecado. **Se quedan. Correcto.**
+- La arista 6 (`estrategia_de_innovacion_arenas`) tiene dos companeros en la
+  nomina de `OP-S-09`, y el archivo (puesto 460) manda esa familia **a mesa**.
+  **Se queda. Correcto.**
+- La 11 se revierte, y **el archivo la respalda con sus propias palabras**
+  (puesto 1052, clase A): *"EL MISMO MODELO DE DESARROLLO DE CLIENTES, del
+  mismo libro y sin arista entre ellos, y los ids son el mismo nombre en dos
+  formas"*. **Y lo medi: `customer_development_modelo` esta en la nomina de 67
+  de `OP-S-09` y `desarrollo_de_clientes_customer_development` NO.** Es el
+  sinonimo puro que el acta 77 destapo. **La reversion es correcta.**
+
+**LAS ONCE ESTAN BIEN DECIDIDAS. Y AHORA LA CAIDA.**
+
+El reporte publica, en 3.2, **un criterio unico para las once** y lo publica
+como cita, en negrita:
+
+> *"si el extremo ESCRITO en la arista (no su companero de A) esta condenado
+> por una operacion sin ser su superviviente, la arista SE MUEVE; si el extremo
+> escrito ES el superviviente declarado, **o si ninguna operacion condena al
+> extremo escrito, la arista SE QUEDA** con la razon puesta."*
+
+**Y la fila 11 de su propia tabla, dos parrafos mas abajo, dice: *"el hijo
+mismo no esta en esa nomina"*.** Ninguna operacion condena al extremo escrito.
+**Por el criterio publicado, la arista 11 SE QUEDA. Se movio.** El criterio no
+produce la decision, y ademas no distingue la 11 de la 4 ni de la 6, que tienen
+la misma forma (companero de A dentro de una operacion, extremo escrito fuera
+de toda operacion) y se quedaron.
+
+**LA DECISION SI TIENE CRITERIO, Y ESTA ESCRITO, PERO NO EN EL REPORTE.** Fui a
+buscarlo al docstring de `scripts/loop/vuelta78_tarea32_decision_once.py`, y
+ahi la razon de la 11 es otra y es buena: *"No hay operacion que declare a
+`desarrollo_de_clientes_customer_development` como el id que sobrevivira frente
+a su gemelo YA anotado para renombre"*. **La linea que de verdad separa la 11
+de la 4 es que el companero de la 4 va al `eliminar` de una FUSION (que ya
+declara superviviente, y no es el nodo escrito, asi que el nodo escrito esta a
+salvo) mientras que el companero de la 11 va a los `nodos` de un RENOMBRE (que
+no mata a nadie y no declara ganador, asi que cual de los dos gemelos vivira
+sigue abierto).** Esa distincion es correcta, es citable por `P.9` punto 2, y
+**no aparece en el reporte por ninguna parte.**
+
+**LA CUENTO COMO CAIDA DE REPORTE Y NO DE CLASE, y digo por que:** el dato se
+movio bien, ninguna de las once cambia de destino por esto, y lo unico
+equivocado es una frase que vive solo en `REPORTE.md`. **DENTRO del marcado**:
+el discutible 4 pone a revision *"la decision completa de TAREA 3.2"* con estas
+palabras, y dice que *"el criterio es nuevo en su aplicacion practica"*. El
+ejecutor marco el sitio exacto donde estaba flojo. **Marcar sirve para esto, y
+por eso la caida es de la especie barata.**
+
+### D5, A FAVOR, **Y EL PENDIENTE DE DOCTRINA QUEDA DISUELTO POR CITA**
+
+**Mi lectura ciega.** La madre (`requisitos_numericos_calidad_lotes`, Juran, 4
+pasos) trae en su **paso 1** *"Definir indices numericos de calidad de lote
+(ej. AQL, nivel de calidad aceptable)"*. El hijo
+`critica_acceptable_quality_level` es Crosby, y sus 4 pasos son: revisar si
+usas estandares AQL, cuestionar su origen, cambiar la mentalidad por Cero
+Defectos, y calcular el costo real. **Su entregable literal es *"la eliminacion
+de los estandares AQL que toleran el defecto"*.**
+
+**No hace falta doctrina nueva: 9.6.2 lo resuelve en su propia prueba.** El
+hijo **no cabe dentro del paso 1 de la madre** (sus cuatro pasos salen hacia
+Cero Defectos y hacia el costo de calidad, que no estan en ese paso ni en
+ninguno) **y sobre todo no lo ejecuta: lo deroga.** El paso manda definir el
+indice; el hijo manda eliminarlo. **La formulacion que el banco cita, *"la
+prueba de que el paso de la madre es un procedimiento es que existe el hijo que
+lo ejecuta"*, falla por su lado mas evidente.**
+
+**Y 9.6.3 remata sin ambiguedad.** La vara *"pregunta que queda FUERA del
+solape, y en que lado"*: fuera queda, del lado de la madre, el plan de
+muestreo, la capacitacion al proveedor y el MTBF; del lado del hijo, Cero
+Defectos y el costo de la no calidad. **Procedimiento en los dos lados: el par
+es SANO y sigue caminos distintos.** Ni fusion ni arista de jerarquia.
+
+**ADJUDICADO POR CITA, SIN DOCTRINA NUEVA: no se enlaza, que es justo lo que el
+ejecutor hizo, y EL PENDIENTE DE DOCTRINA DE LA SECCION 7 DEL REPORTE QUEDA
+DISUELTO.** Es la segunda vuelta seguida en que un pendiente de doctrina
+declarado resulta estar cubierto por 9.6.2 y 9.6.3 leidos enteros. **Lo digo
+como observacion util, no como reproche: registrar en vez de pararse es lo que
+`EJECUTOR.md` regla 5 manda, y esta bien hecho.**
+
+**NO HAY DOCTRINA NUEVA PENDIENTE. NO HAY PARADA POR ESE LADO.**
+
+---
+
+## 4. LO QUE ENCONTRE FUERA DEL MARCADO: UN PAR PROPUESTO EN LAS DOS DIRECCIONES
+
+**Esto salio de cuadrar un uno**, y lo dejo escrito con el camino entero porque
+el camino es el hallazgo. La bolsa de hoy tiene **258** candidatos sin arista y
+la de la seccion 4.1 tenia **283**. La resta da **25**, pero el tramo 4
+escribio **24**. Fui a buscar la fila numero 25 y es esta:
+
+| fila | par | paso | estaba en |
+|---:|---|---:|---|
+| **1** de 191 | `necesidades_reales_vs_declaradas -> descubrir_necesidades_del_cliente` | 2 | **leida y escrita** por el tramo 4 |
+| **46** de 191 | `descubrir_necesidades_del_cliente -> necesidades_reales_vs_declaradas` | 3 | **nunca leida, y ya consumida** |
+
+> **EL MISMO PAR ESTABA EN LA BOLSA FILTRADA DOS VECES, UNA EN CADA
+> DIRECCION.** El ejecutor leyo la fila 1, escribio la arista, y la fila 46
+> quedo resuelta sin que nadie la mirara: el campo `arista` del calibrador **no
+> tiene direccion**, asi que al escribir en un sentido las dos filas se marcan.
+
+**POR QUE IMPORTA, Y NO ES POR EL UNO.** Un par que el instrumento propone en
+las dos direcciones es **el caso exacto para el que 9.6.2 se escribio**: *"LA
+VARA TIENE DIRECCION"*, y el banco dice que se escribio aparte precisamente
+*"porque se aplico al reves tres veces y ninguna de las tres se detecto al
+escribirla"*. **Aqui el instrumento puso las dos direcciones sobre la mesa y la
+que no se leyo se apago sola. Eso es la deteccion muriendo en silencio.**
+
+**LA DIRECCION ESCRITA, LA ADJUDICO, Y LA SOSTENGO.** Lei los dos nodos enteros
+(`_auditor_v78_D6_direccion.txt`) y **el par no tiene veredicto del cribado**
+(lo comprobe: cero). La madre escrita tiene 4 pasos y conserva materia propia
+que el hijo no toca (la miopia de marketing de Levitt y el rediseno de la
+propuesta de valor en torno a la necesidad real); el hijo tiene 6 pasos de
+procedimiento (planificar la recoleccion, recoger en lenguaje del cliente,
+distinguir declaradas de reales de percibidas de culturales, usos no previstos,
+priorizar, traducir a lenguaje tecnico) y despliega el paso 2 de la madre.
+**Es procedimiento contra enunciado en el sentido escrito. La arista se queda y
+no ordeno nada sobre ella.**
+
+**LO QUE SI ENCARGO ES LA GUARDA, Y LA ADJUDICO POR CITA, SIN DOCTRINA
+NUEVA:** antes de leer, la bolsa filtrada se **agrupa por par NO DIRIGIDO**, y
+cuando el mismo par aparece en las dos direcciones **las dos filas se leen
+juntas y la direccion se decide con 9.6.2 explicitamente, con las dos opciones
+escritas en la razon**. Se sostiene en el banco 9.6.2 entero, que ya manda esa
+lectura, y en `AUDITOR.md` seccion 3 (el criterio del forastero: la fuente
+propone, la lectura confirma). **No inventa nada: obliga a mirar lo que el
+instrumento ya estaba diciendo.**
+
+**Y LO MEDI PARA QUE EL ENCARGO NO SEA UNA CORAZONADA**
+(`_auditor_v78_filtrado.txt`): **en las 191 filas filtradas hay UN solo par
+repetido, este.** No es una plaga; es una fila. **Pero es la fila que prueba
+que la guarda no existia.**
+
+**NO LO CUENTO COMO CAIDA, y digo por que:** el reporte no publica ninguna
+afirmacion falsa sobre esto, y su propia seccion 8 ya ordena recalibrar la
+bolsa antes del tramo 5 con la regla del instrumento manda, que es lo que deja
+sin efecto el "161 de 191" como cifra viva. **Es una vara que no se corrio, no
+una frase equivocada.** Va al encargo como guarda nueva y como medicion.
+
+---
+
+## 5. ADJUDICACIONES DE ESTA VUELTA
+
+1. **D1: la arista se queda.** La duda de direccion la disuelve la reduccion al
+   absurdo del banco 9.6.2. **Por cita.** Cerrado.
+2. **D2: la arista se queda**, con el lado flojo declarado y el grafo detras.
+   **Por cita** (9.6.2, prueba de reconocimiento). Cerrado.
+3. **D3: no es sobre-conexion por termino generico** (17 madres y 26 hijos
+   medidos por mi, y 21 hoy). **Tres de las cuatro se quedan. La cuarta,
+   `extraer_priorizar_hipotesis -> value_proposition_startup`, VA A RELECTURA
+   CONJUNTA**: por 9.6.2 el hijo no ejecuta el paso, lo precede. Mi caso esta
+   escrito en la seccion 3.
+4. **D4: las once disposiciones se confirman una a una.** La reversion de la 11
+   es correcta y el archivo la respalda (puesto 1052). **El criterio publicado
+   en 3.2 NO produce esas disposiciones y es la caida de reporte de la tanda.**
+   Se encarga su correccion declarada, con la linea real (fusion con
+   superviviente declarado contra renombre sin ganador) escrita donde se pueda
+   auditar.
+5. **D5: la abstencion se confirma y el pendiente de doctrina queda DISUELTO
+   por cita** (banco 9.6.2 y 9.6.3). **Sin doctrina nueva.**
+6. **GUARDA NUEVA, POR CITA Y SIN DOCTRINA NUEVA:** la bolsa filtrada se agrupa
+   por par no dirigido antes de leer, y los pares propuestos en las dos
+   direcciones se leen juntos y se deciden con 9.6.2. Seccion 4.
+7. **SE DISPARA LA ESCALADA AUTOMATICA DEL TALLADOR (opcion b del fundador,
+   `docs/loop/paradas/2026-08-26-racha-tramo-mecanico-DECISION.md` linea 183),
+   porque la racha de reporte vuelve a DOS.** No es decision mia: es la
+   condicion que el fundador dejo escrita, y se cumple. Va como TAREA propia en
+   el encargo.
+
+**PENDIENTES DE DOCTRINA NUEVOS: NINGUNO.** Todo lo de arriba sale de reglas
+escritas citadas por numero.
+
+---
+
+## 6. MIS PROPIOS MANEJOS Y MIS PROPIOS ERRORES, DECLARADOS
+
+1. **Corri tres instrumentos que escriben en rastreados**: el ciclo de Gate 0
+   (reescribe `master_graph.json` y `phase1_run_log.json`), el calibrador
+   (reescribe `docs/plan/PASO_NODO_CALIBRADO.jsonl`), y **ademas sustitui
+   `dataset/metadata/master_graph.json` por el de `57863182`** para medir la
+   bolsa en la apertura. **Selle y restaure los tres**, y comprobe el arbol al
+   final: **sin un solo rastreado modificado**. Lo digo entero porque el tercero
+   es el mas peligroso que he hecho en una auditoria y no quiero que se repita
+   sin sello.
+2. **Ninguna caida de acta ni de cifra propia esta vez.** Las cifras de esta
+   acta salen todas de ficheros `_auditor_v78_*` que quedan commiteados al lado.
+
+---
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda:** cinco discutibles releidos a ciegas con los textos completos de
+nueve nodos volcados antes de destapar razon alguna; **once aristas verificadas
+una a una** contra ficha y archivo (la TAREA 3.2 entera); **veinte puestos del
+cribado releidos** (2583, 637, 3205, 1052, 1096, 2575, 460, 511, 2127, 796,
+1966, 185, 217, 1146, 247, 709, 781, 280, 1121 y 207); y unas veinticinco
+mediciones re-corridas al digito, **mas cuatro varas que el ejecutor no
+corrio**: el cruce de los 30 del tramo 4 contra los veredictos, el barrido de
+los 30 contra `RACIMOS_MIEMBROS.jsonl`, la comparacion FILA A FILA de mi filtro
+contra su fichero de 191, y **la reconciliacion de la bolsa que destapo el par
+en dos direcciones**.
+
+**Caidas del ejecutor en esta tanda:**
+
+| especie | cuantas | cual |
+|---|---:|---|
+| **de clase (mueve dato)** | **CERO** | las 25 aristas nuevas, la reversion en sus dos vistas, las once disposiciones de 3.2, las cuatro correcciones de `OPERACIONES.jsonl` y `05_SANEO.md`, y las 24 escrituras del tramo 4 **se sostienen todas** |
+| **de cifra publicada** | **CERO** | las ocho cifras de aristas, el censo, las tres suites, el marcador, el 283 de la bolsa, el 92 y el 191 del filtro **fila a fila**, el 551 y el 187 de la vara, el 69 a 67 y el 29 a 28 de la nomina, el 7 y el 6 de la tabla re-tallada, y el 17 y 26 del hub **se reproducen todos al digito** |
+| **de reporte** | **UNA** | el criterio unico de la seccion 3.2 **no produce la decision de su propia tabla** (la fila 11 se mueve donde el criterio dice que se queda, y no distingue la 11 de la 4 ni de la 6). **DENTRO del marcado** (discutible 4) |
+
+**Caidas del auditor:** ninguna; **un manejo propio triple declarado** en la
+seccion 6.
+
+**Acumulado:** 510 relecturas (505 mas las cinco ciegas), 873 puestos (853 mas
+veinte), **9 caidas de clase** (sin cambio), **38 de reporte del ejecutor** (37
+mas la de esta vuelta), 14 de cifra publicada del ejecutor, 3 de cifra del
+auditor, 8 de acta del auditor, 5 de procedimiento del auditor, y 1 de reporte
+del auditor.
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA: CERO.** La vuelta 77 la dejo en UNA y el acta 77
+> aviso que **una sola mas en esta vuelta era PARADA**. **No la hay: la racha
+> se rompe y vuelve a cero.** Es la noticia buena de la tanda y va dicha con el
+> aviso viejo al lado para que se vea que no se olvido.
+>
+> **REPORTE: DOS TANDAS SEGUIDAS** (la 77 con dos caidas, la 78 con una). **La
+> parada de esta especie pide TRES: NO se dispara.** **Pero DOS es el numero
+> exacto que el fundador puso como gatillo de la ESCALADA AUTOMATICA del
+> tallador (opcion b), y esa SI se dispara.** La vuelta 79 es la ultima que hay
+> antes de la parada.
+
+**CREDITO DE TANDA REBAJADO.** El hallazgo del par en dos direcciones
+(seccion 4) aparecio **FUERA de los discutibles marcados**, asi que por
+`AUDITOR.md` seccion 1.2 **el tramo 4 se relee al doble** y queda escrito en el
+encargo.
+
+---
+
+## 8. LAS CONDICIONES DE PARADA, REPASADAS UNA A UNA
+
+| condicion | esta vuelta |
+|---|---|
+| Doctrina NUEVA necesaria | **NO.** Los siete puntos de la seccion 5 se adjudican citando banco 9.6.2, 9.6.3, `P.9` puntos 1 y 2 y `AUDITOR.md` seccion 3. **El pendiente de doctrina que el reporte declaraba queda DISUELTO por cita** |
+| Contradiccion con regla vigente o cifra publicada sin remedio | **NO.** La unica contradiccion es interna al reporte (criterio contra tabla) y se resuelve con una correccion declarada, que es un remedio existente |
+| Decision de fundador (lo que la casa reserva) | **NO.** Nada de lo encargado borra contenido que ninguna regla ordene, ni cambia el alcance de la campana, ni gasta fuera del repo, ni toca produccion fuera de `pasada-unica` |
+| Fallo tecnico repetido | **NO.** Gate 0 con su ciclo de tres, motor 25/25, web 1.030 y 3 saltadas, `tsc` en cero, todo por corrida propia mia |
+| Credito de tanda roto | **NO.** Clase o cifra publicada en **CERO** (pide dos seguidas); reporte en **DOS** tandas (pide tres). **Se dispara la escalada del tallador, que no es una parada** |
+| Campana consumada | **NO.** `OP-E-01` sigue con 161 candidatos filtrados sin leer del corte de esta vuelta, y la bolsa se recalibra antes del tramo 5 |
+| Credenciales ausentes | **NO.** Ninguna suite las pidio |
+| CIERRE DE LA FASE 05 | **NO APLICA.** La fase 04 sigue abierta |
+
+**NO HAY PARADA. EL BUCLE SIGUE.** `docs/loop/PROMPT_SIGUIENTE.md` queda
+escrito con el encargo de la vuelta 79 y NO se escribe `PARA_ALEXIS.md`.
+
+---
+
+## 9. EL ENCARGO DE LA VUELTA 79, EN UNA LINEA
+
+Registros y la correccion declarada del criterio de 3.2; **la escalada
+automatica del tallador extendido a la fase 04**; la relectura conjunta de
+`extraer_priorizar_hipotesis -> value_proposition_startup`; la relectura al
+doble del tramo 4 por el credito rebajado, con el chequeo de las dos
+direcciones; la guarda del par no dirigido en la bolsa filtrada con su caso
+positivo; y el tramo 5 de `OP-E-01` con la bolsa recalibrada. Escrito completo
+en `docs/loop/PROMPT_SIGUIENTE.md`.

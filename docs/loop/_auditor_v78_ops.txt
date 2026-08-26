@@ -1,0 +1,18 @@
+operaciones totales: 71
+  OP-M-01-FUSION         fase=03_FUSIONES  orden=5  estado=LISTA
+  OP-M-02-PROG           fase=03_FUSIONES  orden=1  estado=LISTA
+  OP-M-03-II             fase=03_FUSIONES  orden=2  estado=LISTA
+  OP-M-03-III            fase=03_FUSIONES  orden=3  estado=LISTA
+  OP-M-05-APERTURA       fase=03_FUSIONES  orden=8  estado=LISTA
+  OP-M-05-EDIFICIO       fase=03_FUSIONES  orden=7  estado=LISTA
+  OP-M-05-INDICE         fase=03_FUSIONES  orden=6  estado=LISTA
+
+OP-S-09: fase 05_SANEO orden 8 tipo RENOMBRE_CON_ALIAS estado LISTA
+OP-S-09.nodos: 67 unicos: 67
+OP-M-01-FUSION: fase 03_FUSIONES orden 5 | eliminar: 4 | superviviente: sistema_gates_go_kill
+overlap OP-M-01-FUSION.eliminar x OP-S-09.nodos: []
+  estructura_de_gates: en OP-S-09.nodos=False  en OP-M-01-FUSION.eliminar=True
+  estructura_gates: en OP-S-09.nodos=False  en OP-M-01-FUSION.eliminar=True
+
+OP-S-09.nodos en 57863182 (apertura): 69
+quitados: ['estructura_de_gates', 'estructura_gates'] | anadidos: []

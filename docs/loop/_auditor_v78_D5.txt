@@ -1,0 +1,26 @@
+### requisitos_numericos_calidad_lotes  [quality] deprecado=None
+TITULO: Requisitos Numéricos de Calidad y Confiabilidad para Lotes
+FUENTE: Juran's Quality Handbook_ The C - Joseph A. Defeo
+RESUMEN: Más allá de los requisitos de calidad para unidades individuales, se necesitan criterios numéricos para juzgar la conformidad de lotes completos, típicamente usados en procedimientos de muestreo de aceptación. Estos criterios facilitan decidir la aceptación o rechazo de un lote basándose en una muestra aleatoria, aunque frecuentemente los proveedores malinterpretan los conceptos estadísticos subyacentes, generando confusión en discusiones de responsabilidad del producto.
+PASOS:
+  1. Definir índices numéricos de calidad de lote (ej. AQL, nivel de calidad aceptable)
+  2. Seleccionar un plan de muestreo de aceptación basado en consideraciones probabilísticas
+  3. Comunicar y capacitar al proveedor en la interpretación correcta de estos criterios estadísticos
+  4. Para productos complejos, definir requisitos numéricos de confiabilidad (ej. tiempo medio entre fallas)
+ENTREGABLE: Plan de muestreo de aceptación con índices numéricos de calidad y confiabilidad definidos y comunicados al proveedor
+SIGUIENTES: ['definicion_sistema_calidad_proveedor']
+PREVIOS: ['especificacion_requisitos_proveedores']
+
+### critica_acceptable_quality_level  [quality] deprecado=None
+TITULO: Crítica al Nivel de Calidad Aceptable (AQL)
+FUENTE: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+RESUMEN: El Nivel de Calidad Aceptable (AQL) es un término estadístico de control de calidad que, mal usado, se convierte en una autorización previa para fallar: al aceptar que un porcentaje de tu producto sea no conforme, estás planificando el fracaso desde el inicio. Crosby argumenta que no hay evidencia real de que los últimos puntos porcentuales de mejora cuesten más que los primeros, y que la economía de la calidad debe entenderse como la economía de hacer las cosas bien la primera vez, no como la excusa para tolerar defectos.
+PASOS:
+  1. Revisa si estás usando estándares de AQL que toleran un porcentaje fijo de defectos.
+  2. Cuestiona el origen de esos estándares: casi siempre nacen de la operación diaria, no de un análisis técnico riguroso.
+  3. Cambia la mentalidad de 'nivel aceptable de fallas' por el objetivo de conformidad total (Cero Defectos).
+  4. Calcula el costo real de hacer las cosas mal frente al costo de hacerlas bien la primera vez.
+ENTREGABLE: Una comparación del costo de tus reprocesos actuales frente al costo estimado de prevenir esos errores, y la eliminación de los estándares AQL que toleran el defecto.
+SIGUIENTES: ['programa_zero_defects', 'costo_de_la_no_calidad', 'cero_defectos', 'costo_de_mala_calidad_copq']
+PREVIOS: ['definicion_calidad_conformidad_requisitos', 'definicion_calidad_conformidad_requisitos_3', 'definicion_calidad_conformidad']
+

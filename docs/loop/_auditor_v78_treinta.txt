@@ -1,0 +1,30 @@
+PARES_SANOS: 28  PARES_DESCARTADOS: 2  total: 30
+
+SIN DIRECCION (como lee el cribado): 7
+   puesto 2826  clase D  estadistica_basica_calidad | medidas_tendencia_dispersion
+   puesto 2464  clase D  cero_defectos | zero_defects_concepto
+   puesto 223  clase D  fees_y_breakup_fee_adquisicion | breakup_fee_evaluation
+   puesto 1369  clase D  analisis_de_ratios_financieros | retorno_sobre_capital
+   puesto 1746  clase D  identificar_si_tu_producto_necesita_proteccion_especial | probar_empaque_antes_de_escalar_envios
+   puesto 1951  clase D  control_exportaciones_bis | licencia_exportacion_regulaciones
+   puesto 2583  clase D  mejora_calidad_crosby | programa_mejora_calidad_14_pasos
+
+SOLO DIRECCION madre->hijo: 6
+   puesto 2826  clase D  estadistica_basica_calidad -> medidas_tendencia_dispersion
+   puesto 2464  clase D  cero_defectos -> zero_defects_concepto
+   puesto 1369  clase D  analisis_de_ratios_financieros -> retorno_sobre_capital
+   puesto 1746  clase D  identificar_si_tu_producto_necesita_proteccion_especial -> probar_empaque_antes_de_escalar_envios
+   puesto 1951  clase D  control_exportaciones_bis -> licencia_exportacion_regulaciones
+   puesto 2583  clase D  mejora_calidad_crosby -> programa_mejora_calidad_14_pasos
+
+clase A entre los sin-direccion: 0
+
+--- TAREA 2, solo las 28 escritas del tramo 3 ---
+leidos por el cribado: 6 de 28
+   puesto 2826  clase D  estadistica_basica_calidad -> medidas_tendencia_dispersion
+   puesto 2464  clase D  cero_defectos -> zero_defects_concepto
+   puesto 223  clase D  fees_y_breakup_fee_adquisicion -> breakup_fee_evaluation
+   puesto 1369  clase D  analisis_de_ratios_financieros -> retorno_sobre_capital
+   puesto 1746  clase D  identificar_si_tu_producto_necesita_proteccion_especial -> probar_empaque_antes_de_escalar_envios
+   puesto 1951  clase D  control_exportaciones_bis -> licencia_exportacion_regulaciones
+clase A entre ellos: 0 -> A REVERTIR: 0
