@@ -1,0 +1,38 @@
+PUESTO 1191 | alternativas que disparan: 2
+      describe las piezas
+      la madre\b
+   cita de paso numerado: False
+   cita "en UNA LINEA": False
+   NIEGA_JERARQUIA: False
+
+PUESTO 1163 | alternativas que disparan: 2
+      paso\s+\d
+      en\s+(?:una|dos|tres|media)\s+l[ií]neas?(?!\s*compartid)
+   cita de paso numerado: True
+   cita "en UNA LINEA": True
+   NIEGA_JERARQUIA: False
+
+PUESTO 1847 | alternativas que disparan: 2
+      paso\s+\d
+      en\s+(?:una|dos|tres|media)\s+l[ií]neas?(?!\s*compartid)
+   cita de paso numerado: True
+   cita "en UNA LINEA": True
+   NIEGA_JERARQUIA: False
+
+PUESTO 1388 | alternativas que disparan: 2
+      es (?:el|un) indice
+      enumera
+   cita de paso numerado: False
+   cita "en UNA LINEA": False
+   NIEGA_JERARQUIA: False
+
+PUESTO 1500 | alternativas que disparan: 1
+      enumera
+   cita de paso numerado: False
+   cita "en UNA LINEA": False
+   NIEGA_JERARQUIA: False
+
+freq describe las piezas    =    3   [1125, 1191, 1220]
+freq la madre\b             =  122   [203, 218, 263, 393, 395, 396, 402, 403, 409, 425, 455, 466]
+freq es (?:el|un) indice    =   14   [622, 628, 1092, 1139, 1141, 1203, 1250, 1294, 1308, 1388, 1408, 1450]
+freq enumera                =   54   [269, 291, 425, 470, 490, 522, 555, 581, 585, 610, 624, 628]
