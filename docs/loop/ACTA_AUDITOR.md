@@ -34021,3 +34021,516 @@ auditor, y 1 vuelta no entregada.
 
 **EL BUCLE PARA.** Escribo `docs/loop/PARA_ALEXIS.md` y dejo
 `docs/loop/PROMPT_SIGUIENTE.md` VACIO.
+
+# ACTA DE LA VUELTA 96 DEL AUDITOR (27 ago 2026, reloj real, Opus 5)
+# ==========================================================================
+
+**LA FECHA, declarada y no resuelta copiando** (banco `9.21`): mi reloj real da
+`Thu, Aug 27, 2026 5:45:50 PM`, corrido por mi con `date`. Los cinco commits de
+la vuelta 96 van fechados `2026-08-27` entre las 17:06:21 y las 17:43:53
+(`git log --date=iso`). **Coinciden.**
+
+**HUECO DE ACTA: NO HAY, y lo mido antes de nada** (`AUDITOR.md` seccion 1.0).
+Mi comando: `grep -n '^# ACTA DE LA VUELTA' docs/loop/ACTA_AUDITOR.md | tail -3`.
+La ultima acta escrita es la de la vuelta **95** (linea 33446, commit
+`ea93d674`), y la vuelta que audito es la **96**, la inmediatamente siguiente.
+`git log ea93d674..HEAD` da **seis commits**: `f9c7bb77` (la DECISION DEL
+FUNDADOR, que no es del ejecutor) y los **cinco** de la vuelta 96 (`a9cc39ee`,
+`4b7c8363`, `600a26ae`, `c1873af3`, `4d7c4e19`). **Ninguna vuelta sin auditar
+entre medias.**
+
+Rama `pasada-unica`. Fase III, fase 04 ENLACES, modo de ejecucion continua. Todo
+lo que sigue esta medido por instrumento corrido POR MI EN ESTA VUELTA; los
+ficheros `docs/loop/_auditor_v96_*` quedan commiteados al lado.
+
+**EL RESUMEN, ENTERO Y AL FRENTE.**
+
+**Esta es la primera tanda de la campana en la que no encuentro NI UNA SOLA
+CAIDA DEL EJECUTOR de ninguna especie.** Ni de clase, ni de cifra publicada, ni
+de reporte, ni de expediente, ni de incumplimiento de encargo. Lo digo primero y
+sin rebajarlo, porque la vuelta anterior paro el bucle y seria facil leer esta
+con el dedo puesto. **Verifique todo lo verificable y todo reproduce al digito**,
+incluidas las cuentas de piezas de artefacto, que son la especie exacta que cayo
+tres veces seguidas en las vueltas 93, 94 y 95: las composiciones de
+`PENDIENTES.md` (1 mas 4, 1 mas 6, 1 mas 6), las 152 y las 1.368 lineas, los 33
+nuevos y 3 modificados con su desglose 9 mas 23 mas 1, y las seis mutaciones de
+la TAREA 3 que son **seis** y **caen las seis**.
+
+**Mi lectura ciega da 8 de 8**, empezada por los discutibles marcados como manda
+la seccion 1.2, y en cuatro de las ocho llegue al mismo argumento por mi cuenta
+antes de destapar la razon.
+
+**Y el discutible mas grande lo probe en vez de opinarlo.** El ejecutor invita
+expresamente: *"si el auditor construye una vara que las reproduzca todas, mi
+conclusion cae"*. **Construi TRECE varas distintas sobre el texto de la razon.
+Ninguna reproduce las diecinueve.** La mejor llega a **17 de 19**, mejor que la
+del propio ejecutor (14 de 19), y aun asi contradice dos adjudicaciones
+publicadas, con lo cual tampoco es citable por la misma vara con que el ejecutor
+descarto la suya. **Su conclusion se sostiene, y ahora esta medida.**
+
+**Cae UNA cosa, y es MIA:** el "OCHO con la formula literal" de mi acta anterior
+esta mal. Son seis (estricta) o siete (ancha). Lo confirmo con regex propias y va
+a la seccion de mis errores.
+
+## 1. LA VERIFICACION, CIFRA POR CIFRA, CON MIS COMANDOS
+
+### 1.1 Las ocho cifras del grafo en CINCO refs, con sha256 en las cinco
+
+`docs/loop/_auditor_v96_grafo.py`, escrito por mi (el del acta 95 no me servia:
+apunta a las refs de aquella vuelta), corrido a `_auditor_v96_grafo.txt`:
+
+```
+{"ref": "ea93d674", "sha": "f0e3993967...da902", "total": 3853, "deprecado": 665,
+ "vivos": 3188, "sig": 9190, "prev": 9169, "suma": 18359, "union": 9813, "auto": 0}
+{"ref": "f9c7bb77", ...identico...}   {"ref": "c1873af3", ...identico...}
+{"ref": "4d7c4e19", ...identico...}   {"ref": "WORK",     ...identico...}
+BORRADAS (apertura f9c7bb77 menos trabajo): 0
+NUEVAS (trabajo menos apertura f9c7bb77): 0
+SHA IGUALES EN LAS CINCO REFS: True
+```
+
+**Las cinco refs dan el MISMO sha256.** Censo `3.853 / 3.188 / 665`, aristas
+`9.190 / 9.169 / 18.359 / 9.813`, auto-aristas 0, y el diff de la union entera da
+**cero borradas y cero nuevas**. Calza al digito con la cabecera publicada.
+**CERO ARISTAS SE MOVIERON, verificado y no creido.**
+
+### 1.2 El sello de apertura: en el PRIMER commit, y su padre ES el hash sellado
+
+```
+git log --diff-filter=A -- docs/loop/SALIDA_V96_HEAD_APERTURA.txt -> a9cc39ee (PRIMER commit)
+git rev-parse a9cc39ee^  -> f9c7bb7706990a9e30cb470e83a2ad040642b588
+cat docs/loop/SALIDA_V96_HEAD_APERTURA.txt -> f9c7bb7706990a9e30cb470e83a2ad040642b588
+```
+
+**Cumplido al pie**, y esta vuelta con el caso dificil delante: el commit del
+acta (`ea93d674`) y el HEAD real de apertura (`f9c7bb77`) son DISTINTOS, porque
+entre medias entro la decision del fundador. La fila de identidad del tallador
+nombra los dos y compara sus arboles de `dataset/`. Lo re corri yo: **los cinco
+sha del grafo coinciden**, luego el VERDE de esa celda es correcto.
+
+### 1.3 El ciclo de tres, corrido entero por mi, con Gate 0 IDENTICO BYTE A BYTE
+
+`python scripts/run_phase1.py --reaplico-curaduria` (EXIT 0),
+`python scripts/etiquetas_de_cara.py --aplicar` (EXIT 0),
+`python scripts/sync_assets_web.py` (EXIT 0). Detras, `git diff --stat --
+dataset/ web/lib/assets/` da **VACIO** y `git status --short` solo trae mis
+propios `_auditor_v96_*`: **no movi un byte del dato.**
+
+`cmp` de mi salida contra las DOS del ejecutor: **IDENTICO BYTE A BYTE** contra
+`SALIDA_V96_GATE0_CMD1_APERTURA.txt` y contra `SALIDA_V96_GATE0_CMD1_CIERRE.txt`.
+
+### 1.4 Las tres suites, corridas por mi
+
+| suite | mi comando | mi resultado |
+|---|---|---|
+| motor | `python engine/run_all_tests.py` | **TODOS LOS TESTS PASARON (25/25)**, EXIT 0 |
+| web | `pnpm vitest run` (desde `web/`) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)**, EXIT 0 |
+| tsc | `pnpm exec tsc --noEmit` (desde `web/`) | EXIT 0, **fichero de 0 bytes** |
+
+Las tres calzan con la cabecera publicada. El `cmp` del motor difiere **solo en
+los segundos de cada test**, que es lo esperado.
+
+**CAIDA PROPIA MENOR, declarada:** mis dos primeras corridas de `pnpm` las lance
+desde la raiz del repo y dieron `ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND` y
+`ERR_PNPM_RECURSIVE_EXEC_NO_PACKAGE`. **Por un momento tuve delante un `tsc` en
+EXIT 1 contra un EXIT 0 publicado.** No lo publique: fui a mirar y era mi
+directorio, no su cifra. Lo dejo escrito porque el criterio de la seccion 1.1 es
+que el instrumento manda, y un instrumento mal invocado no es el instrumento.
+
+### 1.5 El marcador, REMEDIDO por mi: IDENTICO BYTE A BYTE
+
+`python scripts/recomputar_marcador.py 3388` (`_auditor_v96_marcador.txt`).
+`cmp` contra `SALIDA_V96_MARCADOR_CRIBADO_CIERRE.txt`: **IDENTICO BYTE A BYTE.**
+`n = 3388 corte = 3388 huecos: [] dups(puesto): 0`, pares duplicados 0,
+**A 551 (16,3) / B 72 (2,1) / C 5 (0,1) / D 2.760 (81,5)**, y las diez tasas por
+dominio. **Cero huecos.**
+
+Y la afirmacion de que nada de esta vuelta lo mueve la verifique en vez de
+creerla: `git diff --stat f9c7bb77 HEAD -- docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+docs/INTRA_DOMINIO_PARES.jsonl` da **vacio**.
+
+**La nota sobre el nombre del fichero es cierta:** la vuelta 94 uso la misma
+convencion (`SALIDA_V94_MARCADOR_CRIBADO_APERTURA.txt` y `..._CIERRE.txt`
+existen los dos). No es una excusa inventada esta vuelta.
+
+### 1.6 La cabecera, tallada por mi y cotejada contra el reporte ya escrito
+
+`python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 96` produce una
+salida **IDENTICA BYTE A BYTE** a `SALIDA_V96_CABECERA_TALLADA.txt` (`cmp`). Y con
+`--comparar docs/loop/REPORTE.md` sobre el fichero final ya escrito:
+**`filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0` . CABECERA: IDENTICA AL
+TALLADOR.** Corrido por mi, EXIT 0.
+
+### 1.7 El desfase del calibrado y el aviso del Gate 0
+
+468 filas en el calibrado y **1 fila de desfase**
+(`ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`), identica a la de
+las vueltas 94 y 95, como corresponde a una vuelta que no toco el grafo.
+
+**Y el aviso del Gate 0 que la TAREA 3 dice corroborar existe en MI PROPIA
+corrida**, linea 69 de `_auditor_v96_gate0.txt`:
+`[97.6] capacidad_de_proceso <-> capacidad_del_proceso`. La figura 4 del tramo no
+se invento un respaldo: lo tiene.
+
+### 1.8 LAS CUENTAS DE PIEZAS, UNA POR UNA. Es la especie que cayo tres veces
+
+`AUDITOR.md` seccion 1.1 y mi propio encargo de la vuelta 94 son literales: toda
+cifra que describa la composicion de un fichero se talla. Las talle TODAS:
+
+| lo que el reporte publica | mi medicion | calza |
+|---|---|---|
+| composicion TAREA 1: 1 seccion nivel 2 y 4 de nivel 3 | `grep '^+## '` y `'^+### '` sobre el diff: TAREA 1 aporta 1 y 4 | **SI** |
+| composicion TAREA 2: 1 y 6 | 1 y (a) a (f) = 6 | **SI** |
+| composicion TAREA 3: 1 y 6 | 1 y (a) a (f) = 6 | **SI** |
+| (total del diff de `PENDIENTES.md`) | **3 de nivel 2 y 16 de nivel 3**; 4 mas 6 mas 6 = 16 | **cuadra** |
+| mesa de formula, **152 lineas** | `wc -l` da **152** | **SI** |
+| material del tramo, **1.368 lineas** | `wc -l` da **1.368** | **SI** |
+| rutas: **33 nuevos (A) y 3 modificados (M)** | `git diff --name-status f9c7bb77 c1873af3`: **A 33, M 3, D 0, total 36** | **SI** |
+| los tres M enumerados | `docs/PENDIENTES.md`, `docs/plan/04_ENLACES.md`, `docs/plan/OPERACIONES.jsonl` | **SI, los tres** |
+| desglose de los 33: **9 instrumentos, 23 salidas, 1 fichero de lectura** | `9` en `scripts/loop/`, `23` en `docs/loop/SALIDA_V96*`, `1` en `docs/plan/` | **SI** |
+| addendum: **28 lineas anadidas, 0 borradas** en `04_ENLACES.md`, **1 linea** de `OPERACIONES.jsonl` | `git diff --numstat 600a26ae c1873af3`: `28 0` y `1 1` | **SI** |
+| TAREA 3: **seis** mutaciones y **las seis CAEN** | corridas por mi: A, B, C, D, E, F, las **seis** `-> CAE (correcto)` | **SI** |
+| TAREA 1.c: **dos** guardas caen, la tercera se declara | corridas por mi: 2 `CAE`, 1 declarada tautologia | **SI** |
+| TAREA 2: A1, A2 y **dos** mecanicas de rojo | corridas por mi: A1, A2, B, C = **cuatro** | **SI** |
+| el 1844 esta **dos filas encima** de la 32695 | `sed -n '32691,32696p'`: el 1844 en la **32693**, el 1886 en la **32695** | **SI** |
+| el fichero del SyntaxWarning tiene **un solo commit** | `git log --oneline` da **`d1d88d1a`, uno** | **SI** |
+| **seis** figuras destapadas, **cuatro** de ellas gemelos | el instrumento enumera **6** y su cabecera dice `(6)`; las 1 a 4 son gemelos, la 5 y la 6 son propiedades | **SI** |
+
+**Ninguna cuenta de piezas falla esta vuelta.** La especie esta cortada.
+
+### 1.9 Higiene del expediente
+
+- `git diff --numstat f9c7bb77..HEAD -- docs/PENDIENTES.md`: **508 insertions,
+  0 deletions**. **ADITIVO**, no pisa una palabra vieja.
+- JSONL validos linea a linea, corridos por mi: `OPERACIONES.jsonl` (**71**),
+  `DIFERENCIA_CONTRA_COLA.jsonl` (**183**), `OP_E_03_LECTURA_TRAMO1_V96.jsonl`
+  (**40**), `INTRA_DOMINIO_PARES.jsonl` (**3.388**),
+  `INTRA_DOMINIO_VEREDICTOS.jsonl` (**3.388**). **Cero malas.**
+- **Guiones largos y medios en la prosa nueva: CERO**
+  (`git diff f9c7bb77 HEAD -- '*.md' '*.py' | grep '^+' | grep -c`).
+- **La idempotencia del addendum la probe EN VIVO**, no me la crei: corri
+  `vuelta96_tarea3_addendum_opE03.py --aplicar` por segunda vez y da **EXIT 1**,
+  `ROJO, 2 cosa(s) no cuadran y NO SE ESCRIBE NADA`, con `git status --short
+  docs/plan/` **limpio** detras. La guarda existe y muerde.
+
+## 2. LOS CINCO PUNTOS DE `OP-E-03`, REPRODUCIDOS CON VARA PROPIA
+
+`docs/loop/_auditor_v96_cola.py`, escrito por mi. Salida:
+
+```
+PARES: 3388  VEREDICTOS: 3388
+pares distintos SIN resolver: 3388
+pares distintos EN LA COLA TRAS RESOLVER: 2796
+filas del tramo: 40 | pares distintos dentro del tramo: 40
+filas del tramo YA EN LA COLA: 0 []
+ids que el resolutor MOVIO: 0 []
+nodos que no existen en el grafo: 0 []
+```
+
+**El 2.796 no es una cifra que me traguen: la reproduje.** Y con ella los cinco
+puntos: cribado cerrado en 3.388, ids por el resolutor antes de cruzar (y no
+movio ninguno, declarado como `P.1` obliga), cuenta sin fugas (**cero** de las 40
+en la cola, **cero** repetidas dentro del tramo), la marca `LECTURA DIRIGIDA` en
+las 40 filas (leida por mi del JSONL: el conjunto de marcas es **uno solo**,
+`('LECTURA DIRIGIDA', True, True, False)`), y los veredictos aparte de la tasa.
+
+**Y las cinco tablas publicadas de la TAREA 3 las reconte yo del JSONL:**
+
+| tabla | mi recuento |
+|---|---|
+| clases | **A 1, B 1, C 0, D 38** |
+| direccion | **29 afirmadas, 11 no resueltas** |
+| por dominio | core 20 (0/1/0/19), environmental 2, franquicias 2, health_safety 2 (1/0/0/1), quality 14 . **suma 40** |
+| el unico A | par **12**, `human_error_como_sintoma` / `preguntar_que_no_quien` |
+| el unico B | par **23**, `fit_problema_solucion` / `value_proposition_startup` |
+
+**Las cinco calzan al digito.**
+
+## 3. MI RELECTURA CIEGA: OCHO UNIDADES, Y LAS OCHO COINCIDEN
+
+**El metodo, como manda `AUDITOR.md` seccion 1.2**, y **empezando por los
+discutibles marcados**: volque PRIMERO los `pasos_accionables` de los dos nodos
+de cada par, SIN razon, SIN clase y SIN direccion
+(`_auditor_v96_ciega_pasos.py`), adjudique por escrito, y **solo despues**
+destape (`_auditor_v96_destape.py`).
+
+| par | mi adjudicacion a ciegas | lo escrito, destapado | veredicto |
+|---:|---|---|---|
+| 26 | **D.** Anade tres cosas operativamente distintas (recursos en el gate, no separar hardware y software, cronograma estable) y dos de ellas son temas que el otro no toca. No es una linea | D, *"tres instrucciones operativas, no una linea"* | **COINCIDO** |
+| 16 | **Direccion INVERTIDA.** El paso 1 de `proceso_venta_franquicias` nombra el flujo; el guion de nueve pasos de la primera llamada es un grano de dentro | direccion invertida, *"caben enteros dentro de ese flujo"* | **COINCIDO** |
+| 23 | **B.** Ninguno contiene al otro: 2 de 3 pasos solapan y a cada lado le queda un residuo propio | B, *"es mas que una linea y menos que un procedimiento"* | **COINCIDO** |
+| 11 | **No resuelta.** Verbos distintos: uno PRUEBA canales, el otro los MONTA | *"Construir no es probar"* | **COINCIDO, y con el mismo argumento** |
+| 22 | **No resuelta.** La propuesta de valor esta nombrada como sustantivo en una lista, no como paso a ejecutar | *"nombrar no es mandar ejecutar"* | **COINCIDO, y con el mismo argumento** |
+| 35 | **No resuelta.** Comparten motor y metrica pero se reparten el trabajo; el hijo no cae dentro del paso | *"no define la metrica: corre el ciclo para MEJORARLA"* | **COINCIDO** |
+| 36 | **No resuelta, y ni de lejos.** Lo unico compartido son las personas; el mecanismo va en direccion contraria | *"Coinciden las personas, no la actividad"* | **COINCIDO, y con el mismo argumento** |
+| 37 | **No resuelta.** Solo el paso 4 del hijo aterriza en el paso 2 de la madre; sus pasos 1 a 3 son un programa que la madre no nombra | *"por un canal que la madre no nombra en ningun paso"* | **COINCIDO, y con el mismo argumento** |
+
+**Ocho de ocho.** Y en **cuatro** (11, 22, 36, 37) llegue al mismo argumento por
+mi cuenta antes de destapar, que es la prueba dura de que la clase no es una
+opinion privada del ejecutor.
+
+## 4. LO QUE ADJUDICO
+
+### 4.1 Discutible 1, LA VARA: CONFIRMADO, y lo PROBE en vez de opinarlo
+
+El ejecutor invita expresamente: *"si el auditor construye una vara que las
+reproduzca todas, mi conclusion cae"*. **Acepte la invitacion.**
+`_auditor_v96_varas_alternativas.py` y `_auditor_v96_varas_ronda2.py` construyen
+**TRECE varas distintas** sobre el texto de la razon, cada una con una idea
+distinta de que es "nombrar a la madre", y las corren contra las **19
+adjudicaciones publicadas**:
+
+| vara | calzan de 19 | choca en |
+|---|---:|---|
+| la palabra madre, literal | 7 | doce |
+| madre literal mas "es/son linea" | 13 | seis |
+| **la del ejecutor (trece familias)** | **14** | 909, 1086, 1844, 1886, 1992 |
+| la razon nombra los DOS ids | 15 | 1009, 1098, 1281, 1992 |
+| v3 sin el ordinal de fase | 14 | cinco |
+| v3 mas no declara solape roto | 14 | cinco |
+| **no confiesa solape roto (la mejor)** | **17** | **1281, 1992** |
+| nombra los dos ids y no confiesa | 17 | 1281, 1992 |
+| ancla O (nombra dos y no confiesa) | 17 | 1281, 1992 |
+| ancla Y no confiesa | 14 | cinco |
+| ancla sola | 14 | cinco |
+
+**NINGUNA DE LAS TRECE REPRODUCE LAS DIECINUEVE.** La mejor llega a **17 de 19**
+y sigue contradiciendo dos adjudicaciones publicadas, con lo cual **cae por la
+misma vara con la que el ejecutor descarto la suya**: una vara que tumba lo ya
+adjudicado reordena, no separa.
+
+**Y hay un segundo resultado que refuerza la decision en vez de discutirla:** las
+tres varas que llegan a 17 dicen **QUEDA a los tres de la mesa** (886, 890, 947).
+O sea que **aunque una de ellas fuera citable, el destino de los tres seria el
+mismo que el ejecutor decidio**. La decision no depende de la vara elegida.
+
+**ADJUDICO: la conclusion "NO HAY VARA CITABLE" se sostiene, y ahora esta medida
+con trece intentos y no con uno.** Los tres QUEDAN COMO ESTAN y la duda queda
+sellada, que es literalmente la rama que la decision 2 del fundador escribio.
+
+**Lo que si dejo dicho, sin llamarlo caida:** la vara que el ejecutor eligio no
+era la mas fuerte disponible (14 de 19 contra 17 de 19). **No es caida porque el
+propio ejecutor marco esa eleccion como su discutible numero 1 y pidio justo esta
+prueba**; declarar el riesgo y pedir que se lo verifiquen es lo contrario de una
+caida. Queda escrito para quien vuelva sobre la mesa.
+
+### 4.2 Discutible 5, EL "OCHO" DE MI ACTA ANTERIOR: EL EJECUTOR TIENE RAZON
+
+Lo medi con **regex propias, escritas por mi y sin importar su codigo**
+(`_auditor_v96_grupoc.py`). Mi tabla:
+
+| pregunta | mi cifra |
+|---|---:|
+| mencionan "linea" en cualquier forma | **9** |
+| formula LITERAL "es/son UNA (sola) LINEA" | **6** |
+| formula ANCHA "es/son ... linea" | **7** |
+| anclan con "en ... linea" y NO con "es/son" | **1** |
+| NO la mencionan | **9** |
+
+**Identica a la suya, enumeraciones incluidas** (menciona: 896, 909, 910, 940,
+983, 993, 1057, 1086, 1196). Y el cruce contra mi acta anterior:
+
+```
+EL OCHO DEL ACTA 95: [896, 909, 910, 940, 993, 1057, 1086, 1196]
+  de esos ocho, NO casan mi formula literal: [909, 1086]
+  en mi literal y NO en el ocho del acta: []
+```
+
+**Los dos sobrantes, leidos en su texto:** el **909** dice *"sus dos referencias
+al mapa **son lineas**"*, plural y sin determinante, que no es *"son UNA LINEA"*;
+y el **1086** dice *"cierra con tres preguntas **en una sola linea**"*, que ancla
+con **EN** y no con **ES/SON**.
+
+**Y lo que lo vuelve indiscutible es que mi propia acta se contradice:** su error
+propio numero 1 diagnostica que el fallo del patron era confundir "EN una linea"
+con "ES una linea", y **acto seguido mete el 1086, que es un "EN una linea",
+dentro del conjunto que rotula "formula literal es/son UNA LINEA"**. Me
+contradije dentro del mismo texto.
+
+**ADJUDICO: la discrepancia del ejecutor es CORRECTA. El "ocho" es MIO y esta
+mal.** Va a la seccion 6 con mi nombre. La correccion, sin borrar lo viejo: de
+las nueve que mencionan "linea", **SEIS** con la formula estricta, **SIETE** con
+la ancha, mas el **1086** ("en") y el **983** (tras dos puntos). La CONCLUSION
+que saque del grupo C sigue en pie y no la toco: lo que cae es la etiqueta.
+
+### 4.3 Discutibles 2, 4 y 6 (pares 26, 16 y 23): CONFIRMADOS los tres
+
+Los tres los lei a ciegas antes de destapar (seccion 3) y **coincido en los
+tres**. El 26 es D y no A: lo que anade son tres instrucciones sobre tres asuntos
+distintos, y dos de esos asuntos (la interdependencia hardware/software y el
+cronograma estable) **no aparecen en ninguna forma en el otro nodo**, asi que no
+hay lectura razonable en que quepan en una linea. El `titulo_ratio` 91,7 es senal
+de titulo y el banco `9.6.3` dice que el tamano del solape no decide. El 16 lo
+lei invertido por mi cuenta. El 23 es B: **ninguno contiene al otro**, y esa es
+exactamente la frontera donde vive la clase B.
+
+### 4.4 Discutible 3, LAS ONCE DIRECCIONES NO RESUELTAS: EL UMBRAL NO ES DEMASIADO ESTRICTO
+
+El ejecutor sospecha de si mismo (*"once de cuarenta es mucho"*) y nombra las
+cinco que con un umbral mas laxo se afirmarian: **11, 22, 35, 36, 37**. **Lei las
+cinco a ciegas y en las cinco llegue a NO RESUELTA por mi cuenta**, en tres de
+ellas con el mismo argumento que despues encontre escrito.
+
+**ADJUDICO: el umbral esta bien puesto y no se toca.** El **36** es el que zanja
+la duda: PR a los franquiciados contra referidos DE los franquiciados comparten
+**las personas y nada mas**, y afirmar direccion ahi seria exactamente el error
+que el banco `9.6.2` nace para evitar. **Once de cuarenta no es exceso de celo:
+es la bolsa que hay.** Y el propio `9.6.2` ya nombra el caso 2.195 (que no haya
+madre e hijo en absoluto) como resultado legitimo.
+
+### 4.5 EL PENDIENTE DE DOCTRINA: NO ES PARADA. Lo adjudico por extension citable
+
+El ejecutor registra uno nuevo y **hace bien en no parar** (`EJECUTOR.md` regla
+5): cuando la lectura ciega del auditor (`AUDITOR.md` 1.2, que manda imprimir los
+pasos y adjudicar sobre ellos) y el criterio de una operacion
+(`OP-E-07.verificacion`, que manda decidir por la razon y no releer el par)
+apuntan a lados distintos, **cual manda**.
+
+`AUDITOR.md` seccion 3 me obliga a mirar primero si una regla escrita lo cubre
+**por extension natural** antes de declarar doctrina nueva. **La cubre, y esta en
+mi propio protocolo:**
+
+- La seccion **1.2** define la relectura ciega por lo que produce: *"Registra
+  cuantos coinciden, cuantos discrepan, y la METRICA DE CREDITO"*. Es un
+  **contador de coincidencia**, o sea un control de calidad. En ningun punto dice
+  que adjudique la direccion de un par.
+- La seccion **1.3** dice que pasa cuando discrepan, y no deja hueco: las
+  discrepancias *"van a relectura conjunta (tu caso escrito con evidencia; **el
+  ejecutor verifica contra el grafo y decide con la vara**)"*. **La vara decide.
+  La lectura ciega detecta.**
+
+**ADJUDICO, citando `AUDITOR.md` 1.2 y 1.3: manda el criterio escrito de la
+operacion. La lectura ciega del auditor es control de la clase y detector de
+discrepancia, nunca fuente de direccion.** Es exactamente "lo mejor sostenido"
+que el ejecutor dejo escrito, asi que **no cambia el trabajo**: lo unico que
+faltaba era que estuviera escrito, y con esta adjudicacion lo esta. **NO ES
+DOCTRINA NUEVA y por tanto NO ES PARADA.**
+
+Y queda dicho de donde viene la friccion, porque es real y esta medida en la
+mesa: el **1886** y el **1844** se adjudicaron leyendo **PASOS** (actas 93 y 95)
+y el **1009** y el **1098** cayeron leyendo **RAZON**. Los dos carriles ya
+produjeron adjudicaciones publicadas. Esta adjudicacion **no las reabre**: fija
+cual manda de aqui en adelante.
+
+### 4.6 La deriva de contenido: CITADA BIEN, y sigue RESERVADA
+
+El reporte usa la deriva como razon para no aplicar la segunda vara, y la cita
+como medicion previa (*"ya medida"*), no como cifra nueva, que es la forma que
+`AUDITOR.md` 1.1 permite. **Verifique la atribucion y el ejemplar:**
+`PENDIENTES.md` la atribuye al *"acta 92 seccion 4.4"* y esa seccion existe y
+dice **26 de 140 nodos y 32 de 87 pares**. Y el ejemplar lo remedi yo:
+
+```
+git show 50f03099:dataset/nodos/fit_problema_solucion.json -> 6 pasos
+hoy                                                        -> 3 pasos
+```
+
+**Seis en el encendido y tres hoy, y los tres que faltan son exactamente el
+bloque de traccion** (fases I/II/III, clientes frios, no escalar marketing) que
+las razones del 886 y del 1009 citan como lo mas valioso del par. La cita es
+fiel. **Y la deriva sigue siendo lo que el acta 92 dijo: ANOTADA para Alexis y NO
+encargada, porque roza el ALCANCE de la campana. No la encargo yo tampoco.**
+
+## 5. CAIDAS DEL EJECUTOR EN ESTA TANDA: NINGUNA, DE NINGUNA ESPECIE
+
+| especie | cuantas | como lo se |
+|---|---:|---|
+| **de clase (mueve dato)** | **CERO** | mis 8 lecturas ciegas coinciden 8 de 8 |
+| **de cifra publicada** | **CERO** | marcador identico byte a byte; grafo en cinco refs; ninguna cifra de `docs/plan/` ni del banco sin su corte |
+| **de reporte** | **CERO** | talle **las quince** cuentas de piezas de la seccion 1.8 y **todas** calzan |
+| **de expediente** | **CERO** | `PENDIENTES.md` aditivo (508 insertions, 0 deletions), cinco JSONL validos, cero guiones |
+| **incumplimiento de encargo** | **CERO** | las tres tareas del encargo estan hechas y con la forma que el encargo pedia |
+
+**Es la primera tanda de la campana sin una sola caida**, y llega justo despues
+de la que paro el bucle. Que la especie que cayo tres veces seguidas (la cuenta
+de piezas a ojo) sea precisamente la que esta vuelta talla **quince de quince** no
+es casualidad: es el remedio funcionando.
+
+**Y lo digo con el freno puesto:** no bajo el liston para premiar la vuelta. Las
+quince cuentas las corri una por una con mi comando, y la unica cifra que me sono
+rara (el 2.796) la reproduje con instrumento propio antes de darla por buena.
+
+## 6. MIS PROPIOS ERRORES, CON NOMBRE
+
+`AUDITOR.md` seccion 2: mis errores se declaran como los del ejecutor.
+
+1. **CAIDA DE ACTA: el "OCHO con la formula literal" de mi acta de la vuelta 95
+   esta MAL.** Son **seis** con la formula estricta y **siete** con la ancha. Mi
+   conjunto de ocho metia el **909** (*"son lineas"*, plural sin determinante) y
+   el **1086** (*"en una sola linea"*, que ancla con EN). **Y es peor que un
+   descuido de conteo: mi propia acta, dos parrafos antes, diagnostica que el
+   fallo del patron era confundir "EN una linea" con "ES una linea", y despues
+   mete un "EN una linea" dentro del conjunto rotulado "es/son UNA LINEA".**
+   Adjudicado en 4.2, corregido sin borrar lo viejo.
+2. **CAIDA DE PROCEDIMIENTO, menor y atajada a tiempo:** corri `pnpm` dos veces
+   desde la raiz del repo en vez de desde `web/` y tuve un `tsc` en EXIT 1
+   delante, contra un EXIT 0 publicado. **No lo publique**: mire por que antes de
+   escribirlo, y era mi invocacion. Lo declaro igual porque de haberlo dictado
+   sin mirar habria sido una acusacion falsa al ejecutor, que es la falta mas
+   grave que puedo cometer en este puesto.
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda:** **8 relecturas de unidad a ciegas** (empezadas por los discutibles
+marcados, con los pasos volcados antes de la razon), mas **las varas propias**:
+las ocho cifras del grafo en cinco refs con sha256 en las cinco y el diff de la
+union entera; el sello y su padre; el ciclo de tres con Gate 0 identico byte a
+byte contra las DOS salidas del ejecutor y `dataset/` sin mover; las tres suites;
+el marcador identico byte a byte; el `--comparar` de la cabecera sobre el fichero
+final; el desfase y el aviso de similitud en mi propio Gate 0; **las quince
+cuentas de piezas talladas una por una**; **una implementacion propia de la cola
+que reproduce el 2.796 y los cinco puntos de `OP-E-03`**; **las cinco tablas de la
+TAREA 3 recontadas del JSONL**; **regex propias que reproducen la tabla del grupo
+C con sus enumeraciones**; **TRECE varas alternativas contra las diecinueve
+adjudicaciones**; las tres pruebas de mutacion re corridas; **la idempotencia del
+addendum disparada en vivo**; los cinco JSONL validados linea a linea; la
+aditividad de `PENDIENTES.md`; el cero de guiones; y la verificacion del 6 contra
+3 de la deriva contra el commit del encendido.
+
+**Caidas del auditor en esta tanda: UNA de acta y UNA de procedimiento**
+(seccion 6).
+
+**Acumulado:** **749 relecturas** (741 mas 8), **886 puestos** (sin cambio: las 40
+de `OP-E-03` son LECTURA DIRIGIDA, fuera de la cola, y se cuentan aparte), **11
+caidas de clase** (sin cambio), **53 de reporte del ejecutor** (sin cambio), **15
+de cifra publicada del ejecutor** (sin cambio), **1 de expediente del ejecutor**
+(sin cambio), **3 de incumplimiento de encargo del ejecutor** (sin cambio), 3 de
+cifra del auditor, **16 de acta del auditor** (15 mas 1), **21 de procedimiento
+del auditor** (20 mas 1), 1 de reporte del auditor, y 1 vuelta no entregada.
+
+**RACHAS, con la aritmetica delante y la letra nueva aplicada:**
+
+> **CLASE O CIFRA PUBLICADA: CERO, y van TRES TANDAS SEGUIDAS** (94, 95, 96).
+> **El dato esta sano.**
+>
+> **REPORTE QUE ACUMULA: CERO.** La de la vuelta 95 **se registra y NO acumula**,
+> por letra expresa de la decision del fundador del 27 ago 2026, que la nombra
+> por su caso (vivia en una lista de rutas). Y esta vuelta **no aporta ninguna**:
+> talle las quince cuentas de piezas y las quince calzan. **La racha esta en
+> CERO, no en uno.**
+>
+> **LA ESCALADA: NO PROCEDE ENCARGARLA, y digo por que.** `AUDITOR.md` 1.2 me
+> obliga a encargar la operacion de codigo de la escalada **cuando la racha
+> llegue a DOS**, y declararla sin encargarla es caida propia mia. **La racha
+> esta en CERO**, luego no hay escalada que encargar. Lo dejo escrito para que no
+> se lea mi silencio como la omision que hundio la vuelta 89.
+
+## 8. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** El unico pendiente nuevo lo adjudico en 4.5 **citando `AUDITOR.md` 1.2 y 1.3**, por extension natural |
+| contradiccion con regla vigente o cifra publicada | **NO.** La unica discrepancia (el "ocho") se resuelve con correccion declarada, que es regla existente |
+| decision de fundador reservada | **NO.** No se funde ninguna rama. La deriva de contenido sigue anotada y sin encargar |
+| fallo tecnico repetido | **NO.** Gate 0 y las tres suites en verde por corrida propia |
+| credito de tanda roto (clase o cifra) | **NO.** Esa racha esta en CERO, tres tandas seguidas |
+| credito de tanda roto (reporte) | **NO.** Racha en CERO por la letra nueva, y esta vuelta no aporta ninguna |
+| campana consumada | **NO.** Fase 04 abierta; `OP-E-03` va por 40 de 183 |
+| credenciales ausentes | **NO** |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO APLICA.** Seguimos en la fase 04 |
+
+**EL BUCLE SIGUE.** No escribo `PARA_ALEXIS.md`. Escribo el encargo de la vuelta
+97 en `docs/loop/PROMPT_SIGUIENTE.md`: los registros de esta acta, y el segundo
+tramo de `OP-E-03`, mas largo que el primero porque la mesa esta cerrada y la
+tarea de registros es corta.

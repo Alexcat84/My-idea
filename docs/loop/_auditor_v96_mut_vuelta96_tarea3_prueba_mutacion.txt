@@ -1,0 +1,21 @@
+====================================================================================================
+PRUEBA DE MUTACION DE LAS GUARDAS DE OP-E-03, TRAMO 1 (vuelta 96, TAREA 3)
+====================================================================================================
+
+CONTROL (dato real): material 40 filas / 0 fallos, veredictos 40 filas / 0 fallos -> VERDE
+MUTACION A (bolsa en memoria con un par que SI esta en la cola, calcula_costo_de_mantener_contra_costo_de_reponer / define_punto_maximo_de_stock): fallos 1 -> CAE (correcto)
+    fila 1: el par calcula_costo_de_mantener_contra_costo_de_reponer / define_punto_maximo_de_stock YA ESTA EN LA COLA tras resolver (lectura por dos puertas)
+MUTACION B (corte esperado 3389 sobre el dato real): fallos 1 -> CAE (correcto)
+    el cribado no esta cerrado en 3389: PARES 3388, VEREDICTOS 3388
+MUTACION C (clase 'Z' en el par 1): fallos 1 -> CAE (correcto)
+MUTACION D (el par 1 renumerado a 999): fallos 2 -> CAE (correcto)
+MUTACION E (direccion del par 1 con un nodo ajeno): fallos 1 -> CAE (correcto)
+MUTACION F (sin el veredicto del par 40): fallos 2 -> CAE (correcto)
+    hay 39 veredictos y 40 filas de material: no es uno a uno
+    faltan veredictos para las filas [40] del tramo
+CONTROL DE VUELTA (mutaciones deshechas): material 40/0, veredictos 40/0 -> VERDE
+
+LO QUE NO SE PRUEBA, Y SE DICE: la CLASE A/B/C/D de cada par es tabla a mano.
+NO HAY CASO ROJO AUTOMATICO PARA ELLA. No se le fabrica uno que se apruebe solo.
+
+VEREDICTO: VERDE, las seis mutaciones CAEN y el control vuelve a verde

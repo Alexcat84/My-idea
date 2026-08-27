@@ -1,0 +1,516 @@
+diff --git a/docs/PENDIENTES.md b/docs/PENDIENTES.md
+index 0412c0f9..acfa373f 100644
+--- a/docs/PENDIENTES.md
++++ b/docs/PENDIENTES.md
+@@ -3767,3 +3767,511 @@ de esta vuelta para abrir el primer tramo despues: el resolutor de ids, la
+ marca de LECTURA DIRIGIDA, el no entrar en cola ni mover el marcador, y el
+ conteo aparte de la tasa por dominio, los cinco puntos de la verificacion,
+ quedan citados aqui para la vuelta que la tome.
++
++## VUELTA 96, TAREA 1: LOS REGISTROS DEL ACTA 95 (acta de la vuelta 95, `ACTA_AUDITOR.md` lineas 33446 a 34023)
++
++### (1.1) La caida de reporte de la vuelta 95, con su nombre, su medicion y LA LETRA NUEVA al lado
++
++**LA CAIDA, con su nombre.** `docs/loop/REPORTE.md` de la vuelta 95, linea 210,
++publico en su lista de RUTAS TOCADAS el parentesis **"`docs/PENDIENTES.md`
++(cinco secciones nuevas)"**, y las secciones eran **CUATRO**.
++
++**LA MEDICION, que NO se rehace aqui porque ya viene hecha** (encargo de la
++vuelta 96, TAREA 1.1, literal: *"No se vuelve a medir: ya viene medida"*). La
++tallo el auditor con `scripts/loop/tallar_composicion_salida.py` sobre el diff
++de la vuelta entera, y su salida vive en
++`docs/loop/_auditor_v95_pendientes_tallado.txt`: **4 secciones de nivel 2 (##) y
++4 subsecciones de nivel 3 (###)**, 8 filas casadas en total, con las dos
++enumeraciones nominales impresas. El acta 95 (seccion 5, lineas 33854 a 33917)
++probo ademas **siete criterios distintos y NINGUNO da cinco** (`##` 4, `###` 4,
++las dos juntas 8, cualquier nivel 8, lineas que abren en negrita 17, lineas que
++mencionan "VUELTA 95" 4, hunks del diff 1).
++
++**LA LETRA NUEVA AL LADO, que es lo que cambia el trato.** Decision del fundador
++del 27 ago 2026 (`docs/loop/paradas/2026-08-27-racha-parentesis-DECISION.md`,
++recogida en `AUDITOR.md` seccion 4): la caida de reporte cuenta para la racha
++**SOLO cuando la cifra vive en una TABLA, una CABECERA o una CONCLUSION**; si
++vive en una **LISTA DE RUTAS** o en **PROSA DE ACOMPANAMIENTO**, se registra y
++dispara la relectura al doble, **pero NO acumula**. Esta cifra vivia en la lista
++de rutas tocadas.
++
++**CONSECUENCIA, escrita entera:** la caida **SE REGISTRA** (aqui), **dispara la
++relectura al doble** de su tramo, y **NO ACUMULA para la racha**, por letra
++expresa de esa misma decision, que la nombra por su caso. La racha de reporte
++que acumula queda por tanto **en CERO**, y la de clase o cifra publicada
++tambien, con dos tandas limpias seguidas (acta 95, seccion 7).
++
++### (1.2) LAS DOS CAIDAS PROPIAS DEL AUDITOR, cada una con su nombre
++
++El acta 95 las declara ella misma en su seccion 6 (lineas 33919 a 33946), con el
++mismo trato que las del ejecutor, y las dos quedan aqui verificadas por medicion
++propia de la vuelta 96.
++
++**(i) AFIRMO UNA BUSQUEDA QUE NO CORRIO** (acta 95, seccion 6 punto 2, y
++adjudicacion 4.4, linea 33826). El encargo de la vuelta 95 mando arreglar *"el
++SyntaxWarning de `scripts/loop/vuelta94_tarea4_reparar_marca_hijo.py` (secuencia
++de escape en la docstring)"*. **Ese warning no existe y nunca existio.**
++Remedido hoy: `git log --format='%h %s' -- scripts/loop/vuelta94_tarea4_reparar_marca_hijo.py`
++da **UN SOLO commit en toda la historia del fichero** (`d1d88d1a`), y
++`git show d1d88d1a:scripts/loop/vuelta94_tarea4_reparar_marca_hijo.py | head -2`
++muestra que **ese commit ya abre con la cadena cruda `r` mas tres comillas**,
++identico a la cabecera de hoy. `AUDITOR.md` seccion 2 lo prohibe con esas
++palabras: *"Prohibido afirmar una busqueda no corrida."* **El ejecutor gasto
++tres vias en desmentirlo y tenia razon** (reporte de la vuelta 95, TAREA 4).
++
++**(ii) UNA OMISION QUE MANDO UN PAR A LA MESA SIN NECESIDAD** (acta 95,
++seccion 6 punto 3, y adjudicacion 4.1, linea 33773). El auditor dio al ejecutor
++la linea **32695** del acta para resolver el **1886**, y no vio que **la misma
++tabla, DOS FILAS MAS ARRIBA, ya resolvia el 1844**. Verificado hoy leyendo
++`sed -n '32693,32697p' docs/loop/ACTA_AUDITOR.md`: la linea **32693** es la del
++**1844** (*"encaje plausible en el paso 2"*, razon *"NOMBRA EL PROBLEMA ... TRAE
++EL PROCEDIMIENTO"*, veredicto **COINCIDO**) y la **32695** es la del 1886.
++**El 1844 QUEDA**, adjudicado por el acta 95 (4.1) por extension natural del
++mismo trato dado al 1886, y **la relectura conjunta baja de CUATRO a TRES: 886,
++890 y 947.** No es caida del ejecutor: la prudencia no lo es.
++
++### (1.3) LA ETIQUETA DEL GRUPO C, CORREGIDA PARA LOS NUEVE, sin borrar el texto viejo
++
++**EL TEXTO VIEJO, que NO se borra** (acta de la vuelta 94, y repetido en la
++seccion 6 punto 1 del acta 95): el auditor publico las 18 razones del grupo C
++como *"ni citan linea ni traen forma de indice"*.
++
++**LA CORRECCION, medida con instrumento propio de ESTA vuelta** (`EJECUTOR.md`
++regla 2, "EL INSTRUMENTO MANDA": el acta 95 se cita como CONTRASTE, no como
++fuente). Instrumento: `scripts/loop/vuelta96_tarea1c_etiqueta_grupo_c.py`,
++salida en `docs/loop/SALIDA_V96_TAREA1C_ETIQUETA_GRUPO_C.txt`, EXIT 0. La bolsa
++de 18 **no se teclea**: se calcula importando `clasifica_razon()` de
++`scripts/loop/vuelta95_tarea3a_cribado_cita_de_linea.py`. Tabla pegada entera de
++ese fichero:
++
++| pregunta | cuantas de las 18 |
++|---|---:|
++| mencionan la palabra "linea" en cualquier forma | 9 |
++| lo hacen con la formula ESTRICTA "es/son UNA LINEA" (con determinante) | 6 |
++| lo hacen con la formula ANCHA "es/son ... LINEA" (con o sin determinante) | 7 |
++| anclan con "en ... linea" y NO con "es/son" | 1 |
++| NO mencionan la palabra "linea" en ninguna forma | 9 |
++| casan el patron A del acta 94 (tiene que ser 0) | 0 |
++
++- **mencionan linea (9):** 896, 909, 910, 940, 983, 993, 1057, 1086, 1196
++- **formula ESTRICTA (6):** 896, 910, 940, 993, 1057, 1196
++- **formula ANCHA (7):** 896, 909, 910, 940, 993, 1057, 1196
++- **"en ... linea" y no "es/son" (1):** 1086
++- **no la mencionan (9):** 886, 890, 947, 1020, 1083, 1191, 1220, 1844, 1886
++
++**LO QUE CALZA Y LO QUE NO, declarado y no resuelto copiando.** El **NUEVE**
++del acta 95 calza al digito **y con la misma enumeracion**. Su **OCHO con la
++formula literal "es/son UNA LINEA"** (896, 909, 910, 940, 993, 1057, 1086,
++1196) **NO calza con mi medicion**: mi formula estricta da **SEIS** y la ancha
++**SIETE**. La diferencia esta nombrada, par por par, y no es opinable:
++
++- el **909** dice *"Sus dos referencias al mapa **son lineas**"*, plural y sin
++  determinante: entra en la formula ANCHA (7) y no en la estricta (6);
++- el **1086** dice *"cierra con TRES PREGUNTAS **en una sola linea**"*, que
++  **NO es la formula "es/son"** sino un "en ... linea"; escapa al patron A del
++  acta 94 solo por la palabra "sola" que se cuela en medio;
++- el **983** dice *"... validacion suficiente**: UNA LINEA**"*, tras dos puntos,
++  y el propio acta 95 ya lo contaba aparte de sus ocho.
++
++**7 mas 1 mas 1 dan los 9. Todo queda contado y nada sobra.**
++
++**LO QUE SE CORRIGE ES LA ETIQUETA, NO LA CONCLUSION.** La conclusion que el
++auditor saco del grupo C **sigue en pie y esta medida** (acta 95, seccion 3.2):
++el **1083**, el ejemplar CONFIRMADO de la casa, cae dentro de C bajo **las tres
++varas** probadas (la del acta 18, la mas ancha 8, la mas estrecha 50), o sea que
++**ninguna vara de este tipo separa confirmados de caidos**. Lo que era falso, y
++queda corregido aqui, es la **ETIQUETA**: el grupo C no era "la poblacion que no
++cita linea", era **la poblacion que el patron A del acta 94 dejo fuera**, y ese
++patron casa *"EN una linea"* pero no *"ES una linea"*, que es como el redactor
++escribe la mayoria de sus anclas.
++
++**LA MECANICA DE ROJO DEL INSTRUMENTO, PROBADA POR MUTACION** (`EJECUTOR.md`
++regla 1, "EL CASO ROJO SE PRUEBA POR MUTACION"):
++`scripts/loop/vuelta96_tarea1c_prueba_mutacion.py`, salida en
++`docs/loop/SALIDA_V96_TAREA1C_MUTACION.txt`, EXIT 0. Control sobre dato real
++VERDE (18 filas, 0 fallos); mutacion (ii) del tamano esperado a 17 sobre el dato
++real **CAE**; mutacion (i) sobre una copia EN MEMORIA del fichero de veredictos
++sin la entrada del puesto 872 **CAE**; control de vuelta VERDE. **Y la tercera
++guarda se DECLARA en vez de fabricarle un rojo que se apruebe solo:** la guarda
++"esta en C y ademas casa el patron A" es una **TAUTOLOGIA** mientras el mismo
++`clasifica_razon()` alimente las dos piezas, asi que **NO TIENE CASO ROJO
++AUTOMATICO** y asi queda escrito en el propio instrumento.
++
++### (1.4) LAS ADJUDICACIONES DEL ACTA 95, cada una por su numero
++
++Leidas hoy con `grep -n '^### ' docs/loop/ACTA_AUDITOR.md` sobre el tramo del
++acta 95; la linea de cada una va al lado y sale de ese grep, no de memoria.
++
++| num | linea | que adjudica | efecto sobre el trabajo |
++|---|---:|---|---|
++| **4.1** | 33773 | **EL 1844 SALE DE RELECTURA CONJUNTA Y QUEDA**, por extension natural del mismo trato dado al 1886 (misma regla, mismo fichero, misma tabla) | la relectura conjunta baja de **4 a 3**: quedan 886, 890 y 947 |
++| **4.2** | 33795 | **LOS TRES QUE SIGUEN: CONFIRMADOS como duda genuina**, con la evidencia que faltaba (el 886 es el hermano vivo del 1009 caido: mismo hijo `fit_problema_solucion`, misma formula, madre casi gemela) | los tres van a **MESA DE FORMULA**, TAREA 2 de esta vuelta |
++| **4.3** | 33816 | **Discutible 1** (la unidad de medida del barrido nuevo, por ocurrencia y no por linea, con `OPERACIONES.jsonl` dentro): **CONFIRMADO Y SUFICIENTE**, la unidad nueva es la buena | deja de ser discutible; queda escrita en el docstring del instrumento |
++| **4.4** | 33826 | **Discutible 3** (el SyntaxWarning no reproducido): **EL EJECUTOR TIENE RAZON**, el auditor estaba equivocado | ver (1.2)(i); el fichero **no se toca** |
++| **4.5** | 33835 | **Discutible 4** (la herencia de apertura por el criterio 2.2): **CONFIRMADO**, el criterio aguanta con la vara mas estricta (`web/` entero, no solo `web/lib/assets/`) | **deja de ser discutible** |
++| **4.6** | 33843 | **Discutible 2** (la aplicacion del criterio a 15 razones nuevas): **CONFIRMADO Y RESUELTO POR MEDICION**, una vara mecanica que no vio el codigo del ejecutor reproduce sus dos listas exactas (11 y 4) | apartarse del criterio estricto fue **correcto**: el estricto habria sacado al 1083 |
++
++## VUELTA 96, TAREA 2: LA MESA DE FORMULA DE LOS PARES 886, 890 Y 947. NO HAY VARA CITABLE: LOS TRES QUEDAN COMO ESTAN, Y LA DUDA QUEDA SELLADA AQUI
++
++**Origen:** decision 2 del fundador, 27 ago 2026
++(`docs/loop/paradas/2026-08-27-racha-parentesis-DECISION.md`), literal: *"los
++pares 886, 890 y 947 van a MESA DE FORMULA en la reanudacion: los cinco
++ejemplares de la formula (1083, 1009 y los tres) impresos enteros y juntos, la
++vara que los separa escrita o declarada inexistente, y los tres adjudicados por
++ella con correccion declarada; si no hay vara citable, los tres quedan como
++estan y la duda va sellada a PENDIENTES."* **La mesa se sento entera. Este
++apartado es la ultima de las cuatro ramas: la que la propia decision escribio
++para el caso de que no hubiera vara.**
++
++### (a) LOS CINCO EJEMPLARES, IMPRESOS ENTEROS Y JUNTOS
++
++`scripts/loop/vuelta96_tarea2_mesa_de_formula.py`, salida completa en
++`docs/loop/SALIDA_V96_TAREA2_MESA_DE_FORMULA.txt` (**152 lineas**, contadas del
++fichero con `wc -l`), EXIT 0. De cada uno de los cinco: puesto, estado con el
++sitio que lo dice, dominio, clase, los dos nodos **crudos y RESUELTOS por el
++resolutor antes de cruzarse** (`P.1`, `BANCO_DEL_PLAN.md` linea 11; ninguno de
++los diez ids cambio al resolverse, y se dice porque `P.1` obliga a decir siempre
++si se resolvio), la direccion registrada en `OP_E_07_DIRECCION_V94.jsonl`, **la
++razon COMPLETA sin recortar**, y los `pasos_accionables` **ENTEROS** de los dos
++nodos. Los diez recuentos de pasos salen del fichero:
++
++| puesto | estado | nodo A y sus pasos | nodo B y sus pasos |
++|---:|---|---|---|
++| 1083 | CONFIRMADO | `customer_discovery_cuatro_fases` (4) | `priorizar_elementos_a_validar` (5) |
++| 1009 | CAIDO, YA SALIO | `customer_discovery_phase2_problem_test` (5) | `fit_problema_solucion` (3) |
++| 886 | VIVO, a mesa | `customer_discovery_overview` (4) | `fit_problema_solucion` (3) |
++| 890 | VIVO, a mesa | `checkpoints_validacion` (4) | `customer_validation` (5) |
++| 947 | VIVO, a mesa | `customer_discovery` (5) | `product_market_fit` (6) |
++
++**LA MECANICA DE ROJO de este instrumento, probada por mutacion** (mutacion C de
++`docs/loop/SALIDA_V96_TAREA2_MUTACION.txt`): con un puesto inventado en la lista
++de ejemplares, **CAE** y no imprime nada.
++
++### (b) LA VARA CANDIDATA, ESCRITA, Y DE DONDE SALE CADA PIEZA
++
++No se invento ninguna regla. La vara candidata sale entera de dos textos ya
++escritos, citados literalmente en el docstring del instrumento:
++
++- **banco `9.6.2`** (`docs/BANCO_DE_TEXTOS.md` linea 1737 y siguientes):
++  *"COMO SE RECONOCE UN PAR MADRE E HIJO... El hijo CABE ENTERO DENTRO DE UN
++  PASO DE LA MADRE, y la madre conserva materia propia que el hijo no toca en
++  ningun paso."*
++- **`OP-E-07.verificacion`** (`docs/plan/OPERACIONES.jsonl`, campo
++  `verificacion`): *"NO SE RELEE EL PAR: se lee su razon, que ya esta escrita.
++  Si la razon tampoco lo dice, el par sale de la cosecha y se anota por que."*
++
++De las dos juntas sale la vara: **la razon tiene que SENALAR UN PASO, FASE O
++LINEA UNICA** de uno de los dos nodos como el sitio donde el otro cabe entero.
++Si la razon solo opone el nodo ENTERO contra lo que el otro *"no tiene"*,
++*"asume"* o *"da por supuesto"*, no ha senalado madre: ha comparado dos clases.
++
++- **T1, ANCLA SINGULAR** (decide): trece familias de designacion, cada una
++  tomada de una forma que el expediente ya usa (paso numerado, paso ordinal,
++  fase numerada u ordinal, "es/son ... linea", "en N lineas", dos puntos y UNA
++  LINEA, "una de sus lineas", "termina/cierra/empieza con una linea", "entre
++  sus pasos", "el paso nombra", "una de las N", la palabra "madre" literal, "es
++  el indice").
++- **T2, SIN RESIDUO DECLARADO** (se publica al lado, NO decide sola): la razon
++  no declara ella misma que una parte del hijo *queda fuera* del solape. Se mide
++  **literal y estrecho a proposito**, para que no se pueda ensanchar hasta
++  atrapar a quien convenga.
++
++### (c) LA PRUEBA: LA VARA SE CORRE CONTRA LAS DIECINUEVE ADJUDICACIONES YA PUBLICADAS, Y CONTRADICE TRES
++
++`scripts/loop/vuelta96_tarea2_vara_de_la_mesa.py`, salida completa en
++`docs/loop/SALIDA_V96_TAREA2_VARA.txt`, EXIT 0. **Una vara que tumba lo ya
++adjudicado no separa nada: reordena.** Por eso se prueba antes de usarse, sobre
++los quince pares que el expediente publico como QUEDA y los cuatro que publico
++como SALE, cada uno con el sitio de su adjudicacion en la tabla. Cifras leidas
++de ese fichero:
++
++**EXPEDIENTE: 19 filas. CALZAN 16. CHOCAN 3, nominales: 1886, 1844 y 1009.**
++
++**LAS TRES QUE CHOCAN, cada una con su nombre y su motivo:**
++
++| puesto | publicado | la vara da | por que choca |
++|---:|---|---|---|
++| **1886** | QUEDA (acta 93, `ACTA_AUDITOR.md` linea 32695) | **SALE** | su razon **no trae NINGUNA** de las trece familias de ancla |
++| **1844** | QUEDA (acta 95, adjudicacion 4.1, linea 33773) | **SALE** | su razon **no trae NINGUNA** de las trece familias de ancla |
++| **1009** | SALE (vuelta 93) | **QUEDA** | su razon **si trae** un ordinal de fase, *"en la fase I"*, **pero esa fase es del HIJO**, no de la madre |
++
++**Y LAS TRES CHOCAN POR LA MISMA RAIZ, que es lo que hace inutil seguir
++afinando el patron.** El 1886 y el 1844 fueron adjudicados QUEDA **leyendo los
++PASOS DE LOS NODOS**, no la razon: el acta 93 dice del 1886 *"encaje limpio
++dentro del paso 1"* y la lectura ciega del acta 95 (seccion 3.3) dice del 1844
++*"madre `productos_crudos`, ancla en su paso 2"*. Las dos son lecturas del PAR.
++El 1009, en cambio, cayo **leyendo la RAZON**, que es el carril que
++`OP-E-07.verificacion` manda. **Los dos carriles dan respuestas opuestas sobre
++razones de la MISMA FORMA**, y el ejemplar esta a la vista en el fichero de la
++mesa: la razon del **1844** dice *"`productos_crudos` NOMBRA EL PROBLEMA:
++[tres cosas] ... `diagnostico_de_productos_crudos` TRAE EL PROCEDIMIENTO:
++[cinco cosas]"*, y la del **1009** dice *"`customer_discovery_phase2_problem_test`
++prueba el problema: [cinco cosas] ... `fit_problema_solucion` trae un
++procedimiento que esa fase no tiene: [tres cosas]"*. **Misma forma, veredictos
++opuestos.** Ningun patron sobre el texto de la razon puede separar dos frases
++que tienen la misma forma.
++
++**LA COMPARACION NO ES UNA TAUTOLOGIA, y esta probado en las dos direcciones**
++(`docs/loop/SALIDA_V96_TAREA2_MUTACION.txt`, EXIT 0): sobre el dato real ya sabe
++decir que NO (3 CHOCAN de 19); la **mutacion A1** voltea en memoria el veredicto
++publicado del 1083, que hoy CALZA, y **pasa a CHOCAR**; la **mutacion A2**
++voltea el del 1886, que hoy CHOCA, y **pasa a CALZAR**; la **mutacion B** mete
++un puesto inventado y la mecanica de ROJO **CAE**; y el control vuelve a verde
++con las mutaciones deshechas.
++
++### (d) LA SEGUNDA VARA POSIBLE, LA QUE SI LOS SEPARARIA, Y POR QUE NO SE APLICA
++
++**Se dice entera en vez de callarla**, porque callarla seria esconder que la
++mesa tenia una salida y no se tomo. Si en vez de leer la RAZON se leyera el PAR
++(el test de `9.6.2` aplicado a los `pasos_accionables` de hoy), los cinco SI se
++separarian. **Esto es LECTURA MIA, declarada como tal, sobre el material impreso
++en `SALIDA_V96_TAREA2_MESA_DE_FORMULA.txt`, y no es un instrumento:**
++
++- **1083:** los cinco pasos del hijo (revisar el lienzo, las cinco variables
++  criticas, enfocar recursos, priorizar cada lado, no validar todo a la vez)
++  caben **enteros dentro de la fase 1 de la madre** (*"desarma tu idea en las
++  nueve partes del lienzo"*), y la madre conserva sus fases 2, 3 y 4. **Cumple
++  9.6.2. QUEDA**, igual que lo publicado.
++- **1009:** el paso 1 del hijo solapa con la madre, pero sus pasos 2 y 3
++  (product market fit y modelo de negocio escalable) **quedan por encima de una
++  fase que solo prueba el problema**. No cabe en UN paso. **Falla 9.6.2. SALE**,
++  igual que lo publicado.
++- **886:** mismo hijo que el 1009. Sus tres pasos se reparten entre las fases
++  **2, 3 y 4** de `customer_discovery_overview`. **No cabe en UN paso. Falla.**
++- **947:** las seis evaluaciones del hijo cubren cosas que la madre no tiene en
++  ningun paso (tamano de mercado, crecimiento predecible, decision formal con
++  inversores). **No cabe en UN paso. Falla.**
++- **890:** el mas dudoso de los cinco y se dice asi. El hijo fija umbrales de
++  ventas, **retencion y referidos**, y por canal; el paso 3 de la madre solo
++  habla de la proporcion de ventas y marketing. **Se reparte entre el paso 3 y
++  el 5 y anade materia. Falla, pero por poco.**
++
++**Y NO SE APLICA, por dos razones escritas, ninguna de ellas mia:**
++
++1. **`OP-E-07.verificacion` dice literalmente lo contrario**: *"NO SE RELEE EL
++   PAR: se lee su razon, que ya esta escrita."* Cambiar el carril de decision de
++   esta operacion no es afinar una vara: es cambiar su criterio de verificacion.
++2. **LA DERIVA DE CONTENIDO lo haria ademas poco fiable**, y ya esta medida y
++   registrada en este mismo fichero (seccion de la vuelta 93, apartado **(d)**,
++   medida por el auditor en el acta 92 seccion 4.4): de los 140 nodos que tocan
++   los 87 pares de `OP-E-07`, **26** tienen hoy `pasos_accionables` distintos de
++   los del encendido del bucle, y eso afecta a **32** de los 87 pares.
++   **El ejemplar es justamente el nodo de esta mesa**: `fit_problema_solucion`
++   tenia **6** pasos en `50f03099` (3 encajes de Value Proposition Design mas 3
++   de traccion) y hoy tiene **3** (el bloque de traccion se fue en `cadc9977`,
++   vuelta 53, LOTE A). **Las razones del 886 y del 1009 describen los seis
++   pasos**, incluido el bloque de traccion que citan como lo valioso del par, y
++   ese bloque **ya no esta en el nodo**. Leer el par hoy es leer un nodo
++   distinto del que la razon describe.
++   Y ese mismo apartado (d) ya dejo escrito que ampliar el carril es **una
++   pregunta de ALCANCE y RESERVA DE FUNDADOR, no del bucle.**
++
++### (e) LO QUE SE DECIDE, Y LO QUE NO
++
++**NO HAY VARA CITABLE.** La unica que se puede escribir sin doctrina nueva
++contradice tres adjudicaciones ya publicadas; la que si separaria exige cambiar
++el criterio de verificacion escrito de la operacion, que es reserva de fundador.
++
++**POR LA DECISION 2 DEL FUNDADOR, literal** (*"si no hay vara citable, los tres
++quedan como estan y la duda va sellada a PENDIENTES"*):
++
++> **EL 886, EL 890 Y EL 947 QUEDAN COMO ESTAN.** Siguen en
++> `docs/plan/OP_E_07_DIRECCION_V94.jsonl` con su direccion registrada, sus
++> aristas no se tocan, y **NINGUNA CIFRA DEL PLAN NI DEL MARCADOR SE MUEVE POR
++> ESTA MESA.** La relectura conjunta queda **CERRADA SIN RETIRADAS**: de los
++> cuatro que traia el acta 95, el 1844 salio de ella por la adjudicacion 4.1 y
++> QUEDA, y estos tres quedan por falta de vara.
++
++**CORRECCION DECLARADA, sin borrar el texto viejo.** El acta 95 (seccion 4.2,
++linea 33795) escribio: *"Ninguna vara escrita hoy discrimina entre ellos, y por
++eso los tres son duda genuina y no pereza."* **Esa frase queda RATIFICADA y
++ahora esta MEDIDA, no solo afirmada**: la vara se escribio, se corrio contra las
++19 adjudicaciones publicadas y contradijo 3. Lo que se corrige es el alcance de
++la frase: el acta la dejo como impresion, y hoy es una medicion con fichero.
++
++**LO QUE ESTA MESA SI DEJA GANADO, y no es poco:** el motivo de que no haya vara
++ya no es *"nadie ha encontrado una"*, es **una causa nombrada y medida**: el
++expediente decide unos pares leyendo la RAZON y otros leyendo los NODOS, y sobre
++razones de la misma forma los dos carriles dan respuestas opuestas.
++
++### (f) PENDIENTE DE DOCTRINA (`EJECUTOR.md` regla 5: no se para, se registra)
++
++**LA PREGUNTA QUE NINGUNA REGLA ESCRITA CONTESTA HOY:** cuando la lectura ciega
++del auditor (`AUDITOR.md` seccion 1.2, que **manda** imprimir primero los pasos
++de los nodos y adjudicar sobre ellos) y el criterio de verificacion de la
++operacion (`OP-E-07.verificacion`, que **manda** decidir por la razon y no
++releer el par) apuntan a lados distintos, **cual manda**.
++
++Las dos reglas estan vigentes, las dos se han aplicado, y **el expediente tiene
++adjudicaciones publicadas de las dos clases**: el 1886 y el 1844 QUEDAN por
++lectura de nodos, el 1009 y el 1098 SALIERON por lectura de razon. **No es una
++contradiccion que se resuelva con las reglas de correccion existentes** (ninguna
++de las cuatro adjudicaciones esta mal bajo la regla que la produjo), asi que no
++se toca ninguna: **se registra la pregunta y se sigue**, como manda la regla 5.
++
++**Lo mejor sostenido, mientras no haya doctrina:** cada operacion decide por SU
++propio criterio de verificacion escrito (para `OP-E-07`, la razon), y la lectura
++ciega del auditor sigue siendo control de calidad de la clase, no fuente de
++direccion. **Es lo que ya se hace de hecho; lo que falta es que este escrito.**
++
++## VUELTA 96, TAREA 3: `OP-E-03` EMPIEZA A LEERSE. PRIMER TRAMO, 40 DE 183, CON SUS CINCO PUNTOS DE VERIFICACION CUMPLIDOS
++
++**Origen:** encargo de la vuelta 96, TAREA 3, que recoge la parada deliberada y
++bien puesta de la vuelta 95 (seccion "VUELTA 95, TAREA 5" de este mismo fichero:
++el ejecutor leyo la nota de `OP-E-03`, vio que pedia el juicio COMPLETO del banco
++`9.6.1` mas direccion, y paro en vez de abrirlo apurado al final de una vuelta ya
++densa). **Esta vuelta lo abre con la vuelta entera por delante.**
++
++### (a) LOS CINCO PUNTOS DE `OP-E-03.verificacion`, uno por uno, con lo que los cumple
++
++Copiados literales del campo `verificacion` de la operacion
++(`docs/plan/OPERACIONES.jsonl`, `id_op` `OP-E-03`), leidos hoy:
++
++| punto de la verificacion | como se cumple, y donde se ve |
++|---|---|
++| *"se corre DESPUES del cierre de la cola del dominio, nunca antes"* | **REMEDIDO en esta vuelta**, no heredado: `docs/INTRA_DOMINIO_PARES.jsonl` **3.388 filas** y `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` **3.388 filas**, contadas por el propio instrumento. Si no cuadran, cae en ROJO y no imprime nada |
++| *"los ids pasan por el resolutor antes de comparar (regla P.1)"* | el resolutor se construye de `ids_alias` del grafo y se aplica a madre e hijo **antes** de cruzar contra la cola. Cada fila imprime el crudo al lado del resuelto cuando difieren, y una linea que dice si el resolutor movio algo. **En estas 40 no movio ninguno**, y se dice porque `P.1` obliga a declarar siempre si se resolvio |
++| *"la cuenta cuadra sin fugas"* | ninguna de las 40 se repite dentro del tramo, ninguna resuelve a un par consigo mismo, y los **2.796 pares distintos de la cola tras resolver** se cruzan contra las 40: **cero coincidencias** |
++| *"la diferencia se marca LECTURA DIRIGIDA: no entra en la cola y NO mueve el marcador del cribado"* | la marca va escrita en **cada** fila de la salida y en **cada** fila del JSONL (`marca`, `fuera_de_la_cola`, `mueve_el_marcador_del_cribado: false`). **El marcador no se toco**: sigue en A 551 / B 72 / C 5 / D 2.760, n 3.388, **remedido en esta vuelta** contando `INTRA_DOMINIO_VEREDICTOS.jsonl` por clase |
++| *"sus veredictos se cuentan aparte de la tasa por dominio"* | la tabla por dominio se imprime **rotulada** como que NO entra en la tasa del banco `9.27`, y los veredictos viven en fichero propio, `docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl`, no en `INTRA_DOMINIO_VEREDICTOS.jsonl` |
++
++### (b) LOS INSTRUMENTOS, Y QUE HACE CADA UNO
++
++- `scripts/loop/vuelta96_tarea3_tramo1_opE03.py`: imprime el material entero de
++  los 40 (par crudo y resuelto, el paso de la madre que el barrido caso con su
++  texto, y los `pasos_accionables` ENTEROS de los dos nodos con titulo, fuente y
++  entregable). Salida: `docs/loop/SALIDA_V96_TAREA3_TRAMO1_MATERIAL.txt`,
++  **1.368 lineas** contadas con `wc -l`, EXIT 0. **No juzga nada.**
++- `scripts/loop/vuelta96_tarea3_veredictos_tramo1.py`: recoge los veredictos de
++  la lectura, los cruza uno a uno contra las filas reales del tramo y cuenta.
++  Salida: `docs/loop/SALIDA_V96_TAREA3_VEREDICTOS.txt` y
++  `docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl` (**40 filas**), EXIT 0.
++- `scripts/loop/vuelta96_tarea3_prueba_mutacion.py`: las guardas, probadas.
++  Salida: `docs/loop/SALIDA_V96_TAREA3_MUTACION.txt`, EXIT 0.
++
++### (c) EL RESULTADO, TALLADO DE `SALIDA_V96_TAREA3_VEREDICTOS.txt`
++
++Vara aplicada, citada y no inventada: banco **`9.6.1`** rama contenido manda
++(*"Si lo que el hijo anade a lo que la madre ya dice CABE EN UNA LINEA, REPITE.
++Si trae un PROCEDIMIENTO que la madre no tiene, CONTINUA"*), direccion por
++**`9.6.2`**, y **`9.6.3`** para no dejar que el tamano del solape decida.
++
++| clase | que significa | cuantas de 40 |
++|---|---|---:|
++| A | REPITE (lo que anade cabe en una linea) | 1 |
++| B | DUDOSO (la vara no lo resuelve sola) | 1 |
++| C | figura aparte | 0 |
++| D | CONTINUA (trae procedimiento que el otro no tiene) | 38 |
++
++- **A (1):** el par **12**, `human_error_como_sintoma` contra
++  `preguntar_que_no_quien`, misma fuente (Dekker). Los pasos 1, 2 y 4 del segundo
++  dicen con otras palabras lo que los pasos 1 y 2 del primero ya mandan; lo unico
++  que anade es *"anota las condiciones de trabajo que rodeaban el momento"*, y
++  **eso cabe en una linea**.
++- **B (1):** el par **23**, `fit_problema_solucion` contra
++  `value_proposition_startup`. El paso 3 del segundo ES el paso 2 del primero; lo
++  que anade (identificar los problemas reales y definir que caracteristicas los
++  resuelven) **es mas que una linea y menos que un procedimiento con logica
++  propia**, y ademas son de fuentes distintas. **Se declara DUDOSO en vez de
++  forzarlo.**
++- **D (38):** el resto.
++
++**LA DIRECCION (`9.6.2`), contada de la misma tabla:**
++
++| resultado | cuantas |
++|---|---:|
++| direccion LEIDA y afirmada | **29** |
++| direccion NO RESUELTA, declarada como tal | **11** (pares 11, 12, 15, 22, 23, 26, 32, 34, 35, 36, 37) |
++
++**Las once no resueltas no son pereza y cada una dice por que en su razon**: en
++unas el hijo hace algo ADYACENTE al paso y no lo ejecuta (11 construir no es
++probar, 22 nombrar no es mandar ejecutar, 34 el MVP de alta fidelidad EMPIEZA
++donde acaba el de baja, 35 definir la metrica no es afinar el motor, 36 coinciden
++las personas y no la actividad, 37 el canal social no esta en ningun paso de la
++madre); en otras **no hay madre e hijo en absoluto**, que es el caso 2.195 que el
++propio banco `9.6.2` ya nombra (15 los dos lados del balance, 26 linea compartida
++con procedimiento propio a cada lado, 32 el hijo REFUTA el paso en vez de
++desarrollarlo); y en dos no hay pregunta de direccion porque el par no CONTINUA
++(12 es A y 23 es B).
++
++**POR DOMINIO, Y SE ROTULA: ESTA TABLA NO ENTRA EN LA TASA POR DOMINIO DEL BANCO
++`9.27`**, se cuenta aparte como manda el punto 5 de la verificacion:
++
++| dominio | pares del tramo | A | B | C | D |
++|---|---:|---:|---:|---:|---:|
++| core | 20 | 0 | 1 | 0 | 19 |
++| environmental | 2 | 0 | 0 | 0 | 2 |
++| franquicias | 2 | 0 | 0 | 0 | 2 |
++| health_safety | 2 | 1 | 0 | 0 | 1 |
++| quality | 14 | 0 | 0 | 0 | 14 |
++
++### (d) LAS SEIS FIGURAS QUE LA LECTURA DESTAPA, y no son veredictos de par
++
++Van enteras en `SALIDA_V96_TAREA3_VEREDICTOS.txt`. En corto, y las cuatro
++primeras importan porque **la nota de la operacion dice que este barrido "ES
++TAMBIEN UN DETECTOR DE GEMELOS"** y aqui se le ve haciendolo:
++
++1. **Tres hijos de una misma linea, los tres de Crosby.** El paso 3 de
++   `medicion_servicios` tiene TRES casas distintas en la bolsa:
++   `make_certain_programa`, `programa_make_certain_3` y `programa_make_certain`
++   (pares 2, 3 y 14). Los tres pares son D por separado. **La sospecha de gemelos
++   es ENTRE LOS TRES HIJOS**, que es otra pregunta y otra operacion.
++2. **Dos hijos de una misma linea, los dos de Blank.** El paso 3 de
++   `waterfall_vs_agile_development` tiene dos:
++   `desarrollo_de_clientes_customer_development` y `modelo_customer_development`
++   (pares 13 y 20).
++3. **Dos nodos de titulo casi identico, uno haciendo de madre y otro de hijo.**
++   `estrategia_innovacion_producto` (madre del par 27) y
++   `estrategia_de_innovacion_de_producto` (hijo del par 33), mismo libro
++   (Cooper). **Es la forma que mas cuesta ver**, porque los dos papeles distintos
++   disimulan el parecido.
++4. **La familia de la capacidad de proceso, y el Gate 0 ya avisaba.**
++   `capacidad_de_proceso`, `capacidad_del_proceso` y `capacidad_de_proceso_2`
++   aparecen en los pares 8, 9, 18 y 25. El aviso informativo de Gate 0 **de esta
++   misma vuelta** ya lista `capacidad_de_proceso <-> capacidad_del_proceso` con
++   **97,6** de similitud de titulo. **La lectura corrobora el aviso desde otro
++   camino**, y eso vale mas que cualquiera de los dos por separado.
++5. **El barrido puede casar un paso con su propia refutacion.** Par 32: el paso
++   *"Definir indices numericos de calidad de lote (AQL)"* de Juran quedo casado
++   con `critica_acceptable_quality_level` de Crosby, que manda **eliminar** el
++   AQL. **No es un defecto del barrido**: casa por vocabulario y el vocabulario no
++   distingue desarrollar de refutar. Conviene tenerlo escrito **antes** de leer
++   los 143 que quedan.
++6. **Un par con la direccion INVERTIDA respecto a la etiqueta de la bolsa.** Par
++   16: la bolsa etiqueta `madre=proceso_llamada_inicial_venta`, y la lectura da
++   lo contrario (el flujo de ventas es la madre, y el guion de nueve pasos de la
++   primera llamada cabe entero dentro de su paso 1). **Uno de 40, y es exactamente
++   el error que el banco `9.6.2` nace para evitar**, asi que se cuenta y se nombra.
++
++### (e) LAS GUARDAS, PROBADAS POR MUTACION, Y LA QUE SE DECLARA SIN PROBAR
++
++`docs/loop/SALIDA_V96_TAREA3_MUTACION.txt`, EXIT 0. **Seis mutaciones y las seis
++CAEN**, con el control en verde antes y despues:
++
++| mutacion | que se muta | resultado |
++|---|---|---|
++| A | bolsa EN MEMORIA con un par que **si esta en la cola** | **CAE**, nombrando el par |
++| B | corte del cribado esperado a 3389 sobre el dato real | **CAE** |
++| C | una clase fuera de `{A,B,C,D}` | **CAE** |
++| D | un veredicto renumerado a una fila que no existe | **CAE** |
++| E | una direccion que nombra un nodo ajeno a esa fila | **CAE** |
++| F | un veredicto que falta | **CAE**, nombrando la fila |
++
++La mutacion **A** es la que mas importa: es la guarda que sostiene la
++adjudicacion del 11 ago 2026 de esta operacion (*"una lectura que entra por dos
++puertas se cuenta dos veces, y entonces la tasa por dominio del banco 9.27 deja
++de significar nada"*), y ahora esta probado que dispara.
++
++**Y LO QUE NO SE PRUEBA, DICHO EN VEZ DE FABRICARLE UN ROJO** (`EJECUTOR.md`
++regla 1, parrafo final): **la CLASE A/B/C/D de cada par la pone la lectura y vive
++en una TABLA A MANO. NO HAY CASO ROJO AUTOMATICO PARA ELLA.** No se le construye
++una asercion que se apruebe sola, que es la caida 2 de la vuelta 89.
++
++### (f) LO QUE QUEDA, Y EL RITMO MEDIDO
++
++**143 de los 183 sin leer** (183 menos 40). El tramo siguiente empieza en la fila
++41 y el instrumento ya lo acepta sin tocar codigo:
++`--desde 40 --cuantos 40`. **CERO ARISTAS ESCRITAS O RETIRADAS por esta tarea**:
++`OP-E-03` es LECTURA DIRIGIDA y su producto es el juicio, no el cableado; el
++cableado de lo que estas lecturas habiliten es decision de otra operacion y de
++otra vuelta.

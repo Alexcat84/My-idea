@@ -3,65 +3,92 @@ SESION EJECUTORA. FASE III, EJECUCION. RAMA pasada-unica. MODO DE
 EJECUCION CONTINUA (AUDITOR.md seccion 3), con las guardas obligatorias
 por operacion.
 
-La decision del fundador que desbloquea esta vuelta esta en
-docs/loop/paradas/2026-08-27-racha-parentesis-DECISION.md, y la parada
-entera en docs/loop/paradas/2026-08-27-racha-parentesis.md. En resumen:
-OPCION C, la regla del credito se afina y ya esta corregida en AUDITOR.md
-seccion 4 con la letra vieja tachada y conservada. La caida de reporte
-cuenta para la racha SOLO cuando la cifra vive en una TABLA, una CABECERA
-o una CONCLUSION; en LISTA DE RUTAS o en PROSA DE ACOMPANAMIENTO se
-registra y se relee al doble pero NO acumula. La caida de la vuelta 95
-(el parentesis de las secciones de PENDIENTES) se registra y NO acumula.
-Modelos sin cambio. El bucle sigue.
+El acta de la vuelta 96 esta en docs/loop/ACTA_AUDITOR.md a partir de la
+linea 34025. En resumen, y sin adornarlo: la vuelta 96 es LA PRIMERA
+TANDA DE LA CAMPANA SIN UNA SOLA CAIDA DEL EJECUTOR de ninguna especie.
+Talle las quince cuentas de piezas de artefacto del reporte, que son la
+especie que cayo tres veces seguidas en las vueltas 93, 94 y 95, y las
+quince calzan. Mi lectura ciega dio 8 de 8. Las dos rachas estan en
+CERO: la de clase o cifra publicada lleva tres tandas seguidas en cero,
+y la de reporte esta en cero (la de la vuelta 95 se registro y no
+acumula por la letra afinada del fundador). NO hay escalada que
+encargar, y lo digo expresamente para que mi silencio no se lea como la
+omision de la vuelta 89.
 
-- TAREA 1, LOS REGISTROS DEL ACTA 95. (1.1) La caida de reporte de la
-  vuelta 95 con su nombre y su medicion: REPORTE.md linea 210 publica
-  "docs/PENDIENTES.md (cinco secciones nuevas)" y son CUATRO, tallado por
-  el auditor con scripts/loop/tallar_composicion_salida.py a
-  docs/loop/_auditor_v95_pendientes_tallado.txt (4 secciones de nivel 2 y
-  4 subsecciones de nivel 3; siete criterios probados y ninguno da
-  cinco). Se registra CON la letra nueva al lado: vive en una lista de
-  rutas, asi que NO acumula. No se vuelve a medir: ya viene medida.
-  (1.2) LAS DOS CAIDAS DEL PROPIO AUDITOR, cada una con su nombre, que el
-  acta 95 declara en su seccion de errores propios: (i) afirmo una
-  busqueda que no corrio, mandando arreglar un SyntaxWarning en
-  scripts/loop/vuelta94_tarea4_reparar_marca_hijo.py que NO existe y
-  nunca existio (el fichero abre con r-triple-comilla desde su unico
-  commit), y el ejecutor gasto tres vias en desmentirlo y tenia razon;
-  (ii) una omision suya mando un par a la mesa sin necesidad, al dar la
-  linea 32695 del acta para el 1886 sin ver que la misma tabla, dos filas
-  mas arriba, ya resolvia el 1844: el 1844 QUEDA y la relectura conjunta
-  baja de cuatro a TRES.
-  (1.3) LA ETIQUETA DEL GRUPO C, CORREGIDA PARA LOS NUEVE, con correccion
-  declarada y sin borrar el texto viejo: el auditor publico que las 18
-  razones del grupo C "ni citan linea ni traen forma de indice", y NUEVE
-  de ellas mencionan la palabra "linea", ocho con la formula literal
-  "es/son UNA LINEA". Su regex casaba "EN una linea" y no "ES una
-  linea", que es como el redactor escribe la mayoria de sus anclas. La
-  conclusion que saco sigue en pie; la etiqueta no, y es la etiqueta la
-  que se corrige.
-  (1.4) Las adjudicaciones del acta 95, cada una por su numero.
-- TAREA 2, LA MESA DE FORMULA de los pares 886, 890 y 947, tal como la
-  decision 2 la escribe: los CINCO EJEMPLARES DE LA FORMULA (el 1083, el
-  1009 y los tres) IMPRESOS ENTEROS Y JUNTOS, la VARA QUE LOS SEPARA
-  escrita o DECLARADA INEXISTENTE, y los tres ADJUDICADOS POR ELLA con
-  correccion declarada. SI NO HAY VARA CITABLE, LOS TRES QUEDAN COMO
-  ESTAN Y LA DUDA VA SELLADA A PENDIENTES.
-  Lo que la mesa tiene delante, del acta 95: el 886 es el hermano vivo
-  del 1009 que ya salio (mismo nodo hijo fit_problema_solucion, misma
-  formula literal "trae un procedimiento que esas fases / esa fase no
-  tienen", madre casi gemela), y la razon por la que la mesa no se puede
-  evitar es que esa MISMA formula produjo el 1083 CONFIRMADO y el 1009
-  CAIDO, asi que ninguna vara escrita hoy los separa. Es mesa, no otra
-  vuelta de bucle: la vara se escribe aqui o se declara que no existe.
-- TAREA 3, EL PRIMER TRAMO DE LECTURA DE OP-E-03, que es donde el
-  ejecutor paro deliberadamente y bien: 40 pares de los 183 de
-  docs/plan/DIFERENCIA_CONTRA_COLA.jsonl, con los ids pasados por el
-  RESOLUTOR antes de contar nada (P.1), marcados LECTURA DIRIGIDA, FUERA
-  DE LA COLA y FUERA DE LA TASA POR DOMINIO.
-- Con el freno delante: la racha de reporte queda como la letra nueva
-  manda (la de la 95 registrada y sin acumular), y la de clase o cifra
-  publicada esta en CERO, no en una, con dos tandas limpias seguidas.
+Lo unico que cayo esta vuelta es MIO: el "OCHO con la formula literal"
+de mi acta de la vuelta 95. Tu discrepancia era correcta.
+
+- TAREA 1, LOS REGISTROS DEL ACTA 96. Cortos, porque el acta confirma
+  casi todo. En docs/PENDIENTES.md, seccion propia, con la composicion
+  del anadido TALLADA con scripts/loop/tallar_composicion_salida.py y no
+  contada a ojo:
+  (1.1) LAS SEIS ADJUDICACIONES DEL ACTA 96, cada una por su numero
+  (4.1 a 4.6) y con su efecto sobre el trabajo. Las que cierran cosas:
+  la 4.1 CONFIRMA que no hay vara citable, y ahora esta medida con TRECE
+  varas construidas por el auditor en vez de una (la mejor llega a 17 de
+  19 y sigue contradiciendo dos adjudicaciones publicadas, asi que
+  tampoco es citable; y las tres varas que llegan a 17 dicen QUEDA a los
+  tres de la mesa, con lo cual el destino de 886, 890 y 947 no depende
+  de la vara elegida). La 4.3 confirma los pares 26, 16 y 23. La 4.4
+  confirma que el umbral de las once direcciones no resueltas ESTA BIEN
+  PUESTO Y NO SE TOCA: el auditor leyo a ciegas las cinco que marcaste
+  (11, 22, 35, 36, 37) y llego a NO RESUELTA en las cinco por su cuenta.
+  (1.2) LA CORRECCION DECLARADA DEL "OCHO", que es una caida de acta del
+  auditor y va nombrada como tal, sin borrar el texto viejo: de las
+  nueve razones del grupo C que mencionan "linea", SEIS con la formula
+  estricta "es/son UNA LINEA" y SIETE con la ancha, mas el 1086 (que
+  ancla con EN y no con ES/SON) y el 983 (tras dos puntos). El auditor
+  lo remidio con regex propias y su tabla salio identica a la tuya,
+  enumeraciones incluidas. NO SE REMIDE: ya viene medida dos veces.
+  (1.3) EL PENDIENTE DE DOCTRINA QUE ABRISTE EN LA TAREA 2 (f), QUEDA
+  RESUELTO Y SE MARCA COMO RESUELTO SIN BORRAR SU TEXTO. Hiciste bien en
+  no parar. El auditor lo adjudica POR EXTENSION CITABLE y no como
+  doctrina nueva, con esta letra: MANDA EL CRITERIO ESCRITO DE LA
+  OPERACION; la lectura ciega del auditor es control de la clase y
+  detector de discrepancia, NUNCA fuente de direccion. Se cita
+  AUDITOR.md seccion 1.2 (que define la relectura ciega por lo que
+  produce, un contador de coincidencia) y seccion 1.3 (que dice que en
+  la relectura conjunta "el ejecutor verifica contra el grafo y decide
+  con la vara"). Es lo mismo que tu dejaste escrito como "lo mejor
+  sostenido", asi que NO CAMBIA EL TRABAJO: lo que faltaba era que
+  estuviera escrito. Y queda dicho que esto NO REABRE las adjudicaciones
+  ya publicadas por el carril de los pasos (1886 y 1844) ni por el de la
+  razon (1009 y 1098): fija cual manda de aqui en adelante.
+- TAREA 2, EL SEGUNDO TRAMO DE OP-E-03, Y ES EL TRABAJO DE LA VUELTA.
+  Sesenta pares, las filas 41 a 100 de las 183 de
+  docs/plan/DIFERENCIA_CONTRA_COLA.jsonl, con
+  scripts/loop/vuelta96_tarea3_tramo1_opE03.py --desde 40 --cuantos 60,
+  que el auditor probo en vivo que acepta el salto sin tocar codigo.
+  Sube de 40 a 60 porque la mesa esta cerrada y la tarea de registros es
+  corta, no porque el trabajo sea mas facil: si a mitad del tramo ves
+  que la lectura se degrada, PARAS DONDE VAYAS Y LO DICES CON LA CIFRA,
+  que es lo que hiciste bien en la vuelta 94 y nadie te lo reprocho.
+  Los CINCO PUNTOS de OP-E-03.verificacion se cumplen y se REMIDEN en la
+  vuelta, no se heredan del tramo anterior: cribado cerrado en 3.388
+  filas cada fichero contadas por el instrumento; ids por el RESOLUTOR
+  antes de cruzar nada (P.1), y si el resolutor no mueve ninguno se
+  declara igual porque P.1 obliga; cuenta sin fugas contra los pares
+  distintos de la cola tras resolver (el auditor reprodujo el 2.796 con
+  instrumento propio, asi que esa cifra ya tiene dos varas); marca
+  LECTURA DIRIGIDA en cada fila y en cada fila del JSONL; y veredictos
+  contados APARTE de la tasa por dominio del banco 9.27, en fichero
+  propio y rotulado como tal.
+  Con las once no resueltas del tramo 1 confirmadas por el auditor, NO
+  bajes el umbral de direccion para que salgan menos: el auditor midio
+  que once de cuarenta no es exceso de celo. Si el segundo tramo da otra
+  proporcion parecida, es la bolsa, no tu vara.
+  Las SEIS FIGURAS del tramo 1 quedan REGISTRADAS Y SIN ADJUDICAR, que
+  es donde deben estar: las sospechas de gemelos entre nodos son otra
+  pregunta y otra operacion, y no se abren aqui. Si el tramo 2 destapa
+  figuras nuevas, mismo trato.
+- LA DERIVA DE CONTENIDO (26 nodos de 140, 32 pares de 87, medida por el
+  auditor en el acta 92 seccion 4.4) SIGUE ANOTADA PARA ALEXIS Y SIN
+  ENCARGAR, porque roza el ALCANCE de la campana. No la toques. Citarla
+  como contraste, con su fuente nombrada, es correcto y es lo que
+  hiciste.
+- Con el freno delante: las dos rachas estan en CERO. La cuenta de
+  piezas de artefacto se talla SIEMPRE y se pega con su comando, NI
+  SIQUIERA LAS FACILES, que es lo que corto la especie esta vuelta.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.

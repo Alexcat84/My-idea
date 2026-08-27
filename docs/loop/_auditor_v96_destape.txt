@@ -1,0 +1,56 @@
+==============================================================================
+PAR 26 | clase ESCRITA: D | paso_casado: 1
+direccion_leida: None
+bolsa decia: rol_gates_agile (madre) / gates_go_kill_decision_points (hijo)
+razon: CONTINUA, pero la DIRECCION ES NINGUNA: cada lado trae procedimiento propio sobre una linea compartida, el caso 2.195 del banco 9.6.2 otra vez. rol_gates_agile anade revisar tambien los recursos en cada punto, no separar los puntos de hardware y software, y sostener un cronograma de hitos estable; gates_go_kill_decision_points anade anotar QUE se decidio entre cinco salidas posibles. Ninguno de los dos cabe entero dentro de un paso del otro. DISCUTIBLE: esta cerca de A y no lo es porque lo que anade rol_gates_agile son tres instrucciones operativas, no una linea.
+vara: banco 9.6.1 rama contenido manda; direccion por 9.6.2; tamano del solape no decide por 9.6.3
+
+==============================================================================
+PAR 16 | clase ESCRITA: D | paso_casado: 6
+direccion_leida: proceso_venta_franquicias -> proceso_llamada_inicial_venta
+bolsa decia: proceso_llamada_inicial_venta (madre) / proceso_venta_franquicias (hijo)
+razon: CONTINUA, y la DIRECCION SALE INVERTIDA respecto a la etiqueta del barrido, que es justo el error que el banco 9.6.2 nace para evitar. El paso 1 de proceso_venta_franquicias, 'Disenar un flujo de proceso de ventas adaptado al tipo de franquicia', es UNA LINEA, y proceso_llamada_inicial_venta trae los NUEVE pasos de la primera llamada, que caben enteros dentro de ese flujo. La madre conserva la capacitacion en motivaciones, la estrategia de Discovery Day, el FDD con abogado y la medicion del proceso.
+vara: banco 9.6.1 rama contenido manda; direccion por 9.6.2; tamano del solape no decide por 9.6.3
+
+==============================================================================
+PAR 23 | clase ESCRITA: B | paso_casado: 2
+direccion_leida: None
+bolsa decia: fit_problema_solucion (madre) / value_proposition_startup (hijo)
+razon: DUDOSO, y se declara en vez de forzarlo a A o a D. El paso 3 del hijo, 'Verifica el encaje entre tu propuesta de valor y tu segmento hablando directamente con ellos', ES el paso 2 de fit_problema_solucion, 'Testear si los clientes quieren tu propuesta de valor concreta'. Lo que value_proposition_startup anade son sus pasos 1 y 2, identificar los problemas reales y definir que caracteristicas los resuelven: es mas que una linea y menos que un procedimiento con logica propia, y ademas son de fuentes distintas (Value Proposition Design contra Blank). La vara del 9.6.1 no lo resuelve sola.
+vara: banco 9.6.1 rama contenido manda; direccion por 9.6.2; tamano del solape no decide por 9.6.3
+
+==============================================================================
+PAR 11 | clase ESCRITA: D | paso_casado: 3
+direccion_leida: None
+bolsa decia: introduccion_validacion_clientes (madre) / herramientas_online_canal_fisico (hijo)
+razon: CONTINUA sin discusion, pero la DIRECCION NO SE RESUELVE y no se fuerza. El paso 3 de introduccion_validacion_clientes dice 'Probar canales de ventas y distribucion', y herramientas_online_canal_fisico no PRUEBA canales: MONTA presencia en linea de apoyo al canal fisico (sitio web, redes, campanas de email, equilibrio entre push y pull). Construir no es probar, asi que el hijo no cabe dentro de ese paso y el par no ensena quien es la madre.
+vara: banco 9.6.1 rama contenido manda; direccion por 9.6.2; tamano del solape no decide por 9.6.3
+
+==============================================================================
+PAR 22 | clase ESCRITA: D | paso_casado: 1
+direccion_leida: None
+bolsa decia: extraer_priorizar_hipotesis (madre) / value_proposition_startup (hijo)
+razon: CONTINUA, pero la DIRECCION NO SE RESUELVE. El paso 1 de extraer_priorizar_hipotesis manda LISTAR todo lo que tiene que ser cierto sobre el modelo, la propuesta de valor y el cliente; value_proposition_startup no lista hipotesis: CONSTRUYE la propuesta de valor y verifica su encaje. La linea NOMBRA la propuesta de valor de pasada, y nombrar no es mandar ejecutar.
+vara: banco 9.6.1 rama contenido manda; direccion por 9.6.2; tamano del solape no decide por 9.6.3
+
+==============================================================================
+PAR 35 | clase ESCRITA: D | paso_casado: 1
+direccion_leida: None
+bolsa decia: producto_mercado_fit_motores (madre) / afinar_motor_crecimiento (hijo)
+razon: CONTINUA, pero la DIRECCION NO SE RESUELVE y se dice en vez de forzarla. El paso 1 de producto_mercado_fit_motores manda DEFINIR LA METRICA del motor elegido; afinar_motor_crecimiento no define la metrica: corre el ciclo de experimentos para MEJORARLA. Comparten el motor y se reparten el trabajo, pero el hijo no cabe dentro de ese paso.
+vara: banco 9.6.1 rama contenido manda; direccion por 9.6.2; tamano del solape no decide por 9.6.3
+
+==============================================================================
+PAR 36 | clase ESCRITA: D | paso_casado: 5
+direccion_leida: None
+bolsa decia: relaciones_publicas_leads_franquicia (madre) / referidos_franquiciados_existentes (hijo)
+razon: CONTINUA, pero la DIRECCION NO SE RESUELVE. El paso 5 de relaciones_publicas_leads_franquicia manda extender el beneficio de RELACIONES PUBLICAS a los franquiciados existentes; referidos_franquiciados_existentes monta un programa de REFERIDOS con esos mismos franquiciados. Coinciden las personas, no la actividad.
+vara: banco 9.6.1 rama contenido manda; direccion por 9.6.2; tamano del solape no decide por 9.6.3
+
+==============================================================================
+PAR 37 | clase ESCRITA: D | paso_casado: 1
+direccion_leida: None
+bolsa decia: valor_intangible_sostenibilidad (madre) / compromiso_cliente_sostenibilidad (hijo)
+razon: CONTINUA, pero la DIRECCION NO SE RESUELVE. El paso 1 de valor_intangible_sostenibilidad manda incorporar metricas de sostenibilidad al seguimiento del negocio; compromiso_cliente_sostenibilidad monta campanas en plataformas sociales que vinculan la interaccion del cliente con acciones ambientales. El hijo mide y comunica, como la madre, pero por un canal que la madre no nombra en ningun paso.
+vara: banco 9.6.1 rama contenido manda; direccion por 9.6.2; tamano del solape no decide por 9.6.3
+
