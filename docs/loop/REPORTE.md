@@ -520,3 +520,36 @@ las dos vistas. Motor **25/25** (`SALIDA_V83_MOTOR_TRAS_TAREA3.txt`); web
 lineas** (`SALIDA_V83_TSC_TRAS_TAREA3.txt`).
 
 ---
+
+## 4. TAREA 4: LA VARA DEL TRAMO 7, CORRIDA CON INSTRUMENTO PROPIO
+
+Instrumento propio de esta vuelta, `scripts/loop/vuelta83_tarea4_vara_tramo7.py`
+(sucesor directo de `scripts/loop/vuelta82_tarea4_vara_tramo6.py`, mismo
+metodo), pares LEIDOS del fichero del filtro, sin teclear. Salida completa
+en `docs/loop/SALIDA_V83_TAREA4_VARA_TRAMO7.txt`:
+
+- **(4.a)** Las 3 unidades frescas del tramo 7 (indices 27 a 29) contra
+  `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` SIN direccion (par no dirigido).
+- **(4.b)** Las mismas 3 contra `docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V82.jsonl`
+  buscando la reciproca.
+
+**Mi corrida**: 30 unidades leidas del filtro, 3 frescas; **3.388
+veredictos y 3.388 pares no dirigidos unicos**; **154 unidades en la bolsa
+filtrada V82**; **UN solo par con veredicto** (fila 29,
+`estructura_reporte_dual_estadistico -> organizacion_liderazgo_estadistico`,
+clase D, puesto 3121, quality, dirigido en el mismo sentido que la lectura
+de la vuelta 82); **CERO reciprocas**.
+
+| # | par | veredicto sin direccion | reciproca en la bolsa V82 |
+|---:|---|---|---|
+| 27 | `participacion_preferente -> seed_deals_riesgos_precedente` | sin veredicto | no |
+| 28 | `preservar_efectivo_buscar_modelo -> validar_modelo_negocio_hechos` | sin veredicto | no |
+| 29 | `estructura_reporte_dual_estadistico -> organizacion_liderazgo_estadistico` | D puesto 3121 (quality) | no |
+
+**Cotejado contra el encargo (`docs/loop/PROMPT_SIGUIENTE.md`), que cita la
+medicion del auditor de hoy**: 3.388 veredictos, 3.388 pares no dirigidos
+unicos, 154 unidades en la bolsa filtrada, un solo par con veredicto (el de
+la fila 29, clase D, puesto 3121, quality) y cero reciprocas. **SIN
+DISCREPANCIA en ningun digito.**
+
+---
