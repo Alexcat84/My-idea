@@ -1,0 +1,29 @@
+==============================================================================================================
+LAS FECHAS DE TODOS LOS ADDENDA DE docs/plan/OPERACIONES.jsonl, COTEJADAS CONTRA GIT
+==============================================================================================================
+TECHO DEL RELOJ DEL REPO (git log --all --format=%ad --date=short | sort -u | tail -1): 2026-08-27
+ADDENDA ENCONTRADOS: 8
+
+| # | linea | operacion | vuelta | fecha declarada | fecha(s) real(es) de git | veredicto |
+|---|---:|---|---:|---|---|---|
+| 1 | 25 | OP-E-01 | 88 | 28 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 2 | 25 | OP-E-01 | 89 | 29 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 3 | 45 | OP-E-03 | 94 | 29 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 4 | 45 | OP-E-03 | 96 | 27 ago 2026 | 2026-08-27 | CALZA |
+| 5 | 45 | OP-E-03 | 97 | 30 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 6 | 68 | OP-E-06 | 90 | 29 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 7 | 69 | OP-E-07 | 91 | 29 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 8 | 69 | OP-E-07 | (ninguna) | (ninguna) | (no aplica) | SIN FECHA |
+
+RECUENTO POR VEREDICTO, contado del propio censo:
+   CALZA      1
+   IMPOSIBLE  6
+   SIN FECHA  1
+
+ROJO, 6 cosa(s) no cuadran y NO SE ESCRIBE NADA:
+   la correccion de OP-E-01 (28 ago 2026) YA ESTA escrita: correr dos veces la duplicaria
+   la correccion de OP-E-01 (29 ago 2026) YA ESTA escrita: correr dos veces la duplicaria
+   la correccion de OP-E-03 (29 ago 2026) YA ESTA escrita: correr dos veces la duplicaria
+   la correccion de OP-E-03 (30 ago 2026) YA ESTA escrita: correr dos veces la duplicaria
+   la correccion de OP-E-06 (29 ago 2026) YA ESTA escrita: correr dos veces la duplicaria
+   la correccion de OP-E-07 (29 ago 2026) YA ESTA escrita: correr dos veces la duplicaria

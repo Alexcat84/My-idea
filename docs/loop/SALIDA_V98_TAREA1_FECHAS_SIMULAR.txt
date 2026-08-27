@@ -1,0 +1,51 @@
+==============================================================================================================
+LAS FECHAS DE TODOS LOS ADDENDA DE docs/plan/OPERACIONES.jsonl, COTEJADAS CONTRA GIT
+==============================================================================================================
+TECHO DEL RELOJ DEL REPO (git log --all --format=%ad --date=short | sort -u | tail -1): 2026-08-27
+ADDENDA ENCONTRADOS: 8
+
+| # | linea | operacion | vuelta | fecha declarada | fecha(s) real(es) de git | veredicto |
+|---|---:|---|---:|---|---|---|
+| 1 | 25 | OP-E-01 | 88 | 28 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 2 | 25 | OP-E-01 | 89 | 29 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 3 | 45 | OP-E-03 | 94 | 29 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 4 | 45 | OP-E-03 | 96 | 27 ago 2026 | 2026-08-27 | CALZA |
+| 5 | 45 | OP-E-03 | 97 | 30 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 6 | 68 | OP-E-06 | 90 | 29 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 7 | 69 | OP-E-07 | 91 | 29 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 8 | 69 | OP-E-07 | (ninguna) | (ninguna) | (no aplica) | SIN FECHA |
+
+RECUENTO POR VEREDICTO, contado del propio censo:
+   CALZA      1
+   IMPOSIBLE  6
+   SIN FECHA  1
+
+--------------------------------------------------------------------------------------------------------------
+LAS 6 CORRECCIONES DECLARADAS QUE SE ANADEN (SIMULACION), aditivas, sin borrar nada:
+--------------------------------------------------------------------------------------------------------------
+
+### OP-E-01, 28 ago 2026 (linea 25 del JSONL)
+ANCLA: ADDENDUM (28 ago 2026, vuelta 88, relectura conjunta de la fila 117)
+SE ANADE: [CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "28 ago 2026" de este addendum estaba TECLEADA y es FALSA. El texto viejo se queda entero y sin borrar una letra, que es la regla de correccion de EJECUTOR.md 8. LA FECHA REAL, LEIDA DE GIT EN LA VUELTA 98 con `git log --all --format=%ad^%h^%s --date=short, quedandose con los commits cuyo asunto empieza por "VUELTA 88"`, es 2026-08-27 (commits e7b0d21f, dfe9650a, e6402ea2, 970713d6), o sea 27 ago 2026. Y el techo del reloj del repo, medido con `git log --all --format=%ad --date=short`, es 2026-08-27: ninguna fecha posterior a esa puede ser cierta en este repo.]
+
+### OP-E-01, 29 ago 2026 (linea 25 del JSONL)
+ANCLA: ADDENDUM (29 ago 2026, vuelta 89, reversion de la fila 117)
+SE ANADE: [CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026" de este addendum estaba TECLEADA y es FALSA. El texto viejo se queda entero y sin borrar una letra, que es la regla de correccion de EJECUTOR.md 8. LA FECHA REAL, LEIDA DE GIT EN LA VUELTA 98 con `git log --all --format=%ad^%h^%s --date=short, quedandose con los commits cuyo asunto empieza por "VUELTA 89"`, es 2026-08-27 (commits 71b5e17d, 5ae40940, 43bafe47, 7f546873), o sea 27 ago 2026. Y el techo del reloj del repo, medido con `git log --all --format=%ad --date=short`, es 2026-08-27: ninguna fecha posterior a esa puede ser cierta en este repo.]
+
+### OP-E-03, 29 ago 2026 (linea 45 del JSONL)
+ANCLA: ADDENDUM DE EJECUCION (29 ago 2026, vuelta 94, docs/loop/PROMPT_SIGUIENTE.md TAREA 6)
+SE ANADE: [CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026" de este addendum estaba TECLEADA y es FALSA. El texto viejo se queda entero y sin borrar una letra, que es la regla de correccion de EJECUTOR.md 8. LA FECHA REAL, LEIDA DE GIT EN LA VUELTA 98 con `git log --all --format=%ad^%h^%s --date=short, quedandose con los commits cuyo asunto empieza por "VUELTA 94"`, es 2026-08-27 (commits a4c89ab6, 4c22a083, 4cccca94, 57ab0476, d1d88d1a, 163c51c3, ce8767c9), o sea 27 ago 2026. Y el techo del reloj del repo, medido con `git log --all --format=%ad --date=short`, es 2026-08-27: ninguna fecha posterior a esa puede ser cierta en este repo.]
+
+### OP-E-03, 30 ago 2026 (linea 45 del JSONL)
+ANCLA: ADDENDUM DE EJECUCION (30 ago 2026, vuelta 97, TAREA 2)
+SE ANADE: [CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "30 ago 2026" de este addendum estaba TECLEADA y es FALSA. El texto viejo se queda entero y sin borrar una letra, que es la regla de correccion de EJECUTOR.md 8. LA FECHA REAL, LEIDA DE GIT EN LA VUELTA 98 con `git log --all --format=%ad^%h^%s --date=short, quedandose con los commits cuyo asunto empieza por "VUELTA 97"`, es 2026-08-27 (commits bbdb5a13, c46cd795, 9788a45d, eee77af3), o sea 27 ago 2026. Y el techo del reloj del repo, medido con `git log --all --format=%ad --date=short`, es 2026-08-27: ninguna fecha posterior a esa puede ser cierta en este repo.]
+
+### OP-E-06, 29 ago 2026 (linea 68 del JSONL)
+ANCLA: ADDENDUM DE EJECUCION (29 ago 2026, vuelta 90)
+SE ANADE: [CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026" de este addendum estaba TECLEADA y es FALSA. El texto viejo se queda entero y sin borrar una letra, que es la regla de correccion de EJECUTOR.md 8. LA FECHA REAL, LEIDA DE GIT EN LA VUELTA 98 con `git log --all --format=%ad^%h^%s --date=short, quedandose con los commits cuyo asunto empieza por "VUELTA 90"`, es 2026-08-27 (commits 3df9cfa7, aeb66e78, 919841c0, fc7fa309), o sea 27 ago 2026. Y el techo del reloj del repo, medido con `git log --all --format=%ad --date=short`, es 2026-08-27: ninguna fecha posterior a esa puede ser cierta en este repo.]
+
+### OP-E-07, 29 ago 2026 (linea 69 del JSONL)
+ANCLA: ADDENDUM DE EJECUCION (29 ago 2026, vuelta 91)
+SE ANADE: [CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026" de este addendum estaba TECLEADA y es FALSA. El texto viejo se queda entero y sin borrar una letra, que es la regla de correccion de EJECUTOR.md 8. LA FECHA REAL, LEIDA DE GIT EN LA VUELTA 98 con `git log --all --format=%ad^%h^%s --date=short, quedandose con los commits cuyo asunto empieza por "VUELTA 91"`, es 2026-08-27 (commits 0691d225, 1626d81b, efb427bc, 5783d081, 56e0f84c), o sea 27 ago 2026. Y el techo del reloj del repo, medido con `git log --all --format=%ad --date=short`, es 2026-08-27: ninguna fecha posterior a esa puede ser cierta en este repo.]
+
+SIMULACION: no se escribio nada.

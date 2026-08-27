@@ -20,9 +20,42 @@ ES ADITIVO: la nota vieja NO se toca y el apartado de la vuelta 96 en
 MECANICA DE ROJO, y no escribe nada si salta: (i) OP-E-03 no aparece exactamente
 una vez; (ii) el fichero de lectura no trae las 60 filas del tramo; (iii) alguna
 fila no trae la marca completa de LECTURA DIRIGIDA; (iv) el addendum de ESTA
-vuelta ya estaba escrito (correr dos veces duplicaria texto); (v) no se encuentra
-el ancla, que es el cierre del apartado de la vuelta 96. La guarda (iv) se prueba
-EN VIVO: la segunda corrida de --aplicar tiene que dar ROJO.
+vuelta ya estaba escrito, en su forma vieja o en la nueva (correr dos veces
+duplicaria texto); (v) no se encuentra el ancla, que es el cierre del apartado de
+la vuelta 96; (vi) LA GUARDA DE FECHA, que se explica abajo. La guarda (iv) se
+prueba EN VIVO: la segunda corrida de --aplicar tiene que dar ROJO.
+
+--- LA FECHA DEJA DE ESTAR TECLEADA (VUELTA 98, TAREA 1) ---
+
+POR QUE SE TOCA ESTE FICHERO (acta de la vuelta 97, seccion 4.1, linea 34956:
+CAIDA DE CIFRA PUBLICADA, y encargo de la vuelta 98 apartado 1.2, "ARREGLA LA
+FUENTE, no solo el sintoma"). La constante MARCA de este script llevaba la
+fecha "30 ago 2026" TECLEADA como literal, y de ahi la copio al fichero del
+plan. NINGUN commit de este repo es posterior al 27 ago 2026
+(`git log --all --format=%ad --date=short | sort -u | tail -1`). Es EJECUTOR.md
+regla 1, "TODO HASH, NOMBRE DE COMMIT, RAMA O FECHA ... SE LEE DE git rev-parse O
+DE git log EN ESA VUELTA Y SE TALLA".
+
+EL ARREGLO, y con el la razon de por que no basta con leer git y ya:
+  - MARCA se CONSTRUYE en tiempo de ejecucion con la fecha que `git log`
+    devuelve HOY para los commits de la vuelta 97. Ya no hay fecha tecleada en
+    ninguna constante de este fichero.
+  - MARCA_APLICADA es la cadena historica CONGELADA que este script escribio de
+    verdad en su dia, con su fecha mala dentro. NO ES FUENTE DE NINGUNA CIFRA:
+    existe solo para poder RECONOCER el addendum ya escrito y no duplicarlo. El
+    addendum aplicado NO se reescribe, porque reescribirlo borraria el texto que
+    la correccion declarada tiene que dejar a la vista (EJECUTOR.md regla 8).
+  - LA GUARDA DE FECHA compara las dos y, cuando difieren (que es el caso hoy),
+    EXIGE que la correccion declarada de la vuelta 98 este presente en la nota.
+    Si difieren y la correccion NO esta, es ROJO y no se escribe nada.
+
+POR QUE LA GUARDA NO ES UN CHEQUEO QUE SE APRUEBA SOLO NI UNO QUE NO PUEDE
+APROBARSE NUNCA (las dos especies que este repo ya cazo: acta 89 seccion 4.2 y
+la leccion de la vuelta 82). Sus tres salidas dependen de datos reales y
+distintos: la fecha que devuelve git, la fecha que lleva la cadena historica y
+la presencia de la correccion en el fichero del plan. Mover cualquiera de las
+tres la mueve a ella. Se prueba por mutacion en
+scripts/loop/vuelta98_tarea1_prueba_mutacion.py.
 
 USO:
   python scripts/loop/vuelta97_tarea2_addendum_opE03.py --simular
@@ -33,6 +66,8 @@ import collections
 import io
 import json
 import os
+import re
+import subprocess
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OPERACIONES = os.path.join(RAIZ, "docs", "plan", "OPERACIONES.jsonl")
@@ -40,12 +75,92 @@ ENLACES = os.path.join(RAIZ, "docs", "plan", "04_ENLACES.md")
 LECTURA = os.path.join(RAIZ, "docs", "plan", "OP_E_03_LECTURA_TRAMO2_V97.jsonl")
 BOLSA = os.path.join(RAIZ, "docs", "plan", "DIFERENCIA_CONTRA_COLA.jsonl")
 
-MARCA = "ADDENDUM DE EJECUCION (30 ago 2026, vuelta 97, TAREA 2): SEGUNDO TRAMO LEIDO."
+VUELTA = 97
+MESES = {1: "ene", 2: "feb", 3: "mar", 4: "abr", 5: "may", 6: "jun",
+         7: "jul", 8: "ago", 9: "sep", 10: "oct", 11: "nov", 12: "dic"}
+RE_FECHA = re.compile(r"\b(\d{1,2}) (ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic) (\d{4})\b")
+MARCA_DE_LA_CORRECCION = "CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1)"
+
+
+def fecha_de_git():
+    """La fecha de los commits de la vuelta 97, LEIDA DE GIT. Nunca tecleada.
+
+    Devuelve la fecha en el estilo del plan ("27 ago 2026") o None si git no da
+    ni un commit de esa vuelta: en ese caso el que llama decide, y este no
+    inventa nada.
+    """
+    r = subprocess.run(["git", "log", "--all", "--format=%ad|%s", "--date=short"],
+                       cwd=RAIZ, capture_output=True)
+    if r.returncode != 0:
+        return None
+    pat = re.compile(r"^VUELTA %d\b" % VUELTA)
+    fechas = set()
+    for linea in r.stdout.decode("utf-8", "replace").splitlines():
+        partes = linea.split("|", 1)
+        if len(partes) == 2 and pat.match(partes[1]):
+            fechas.add(partes[0])
+    if not fechas:
+        return None
+    a, m, d = sorted(fechas)[-1].split("-")
+    return "%d %s %s" % (int(d), MESES[int(m)], a)
+
+
+def marca_con(fecha):
+    return ("ADDENDUM DE EJECUCION (%s, vuelta 97, TAREA 2): SEGUNDO TRAMO LEIDO."
+            % fecha)
+
+
+def ancla_de(marca):
+    """El trozo de la marca hasta el parentesis de cierre, ambos incluidos.
+
+    POR QUE EXISTE, y se descubrio corriendo el script (vuelta 98, TAREA 1): la
+    correccion declarada de la fecha se inserta JUSTO DETRAS del parentesis, o
+    sea EN MEDIO de la marca, con lo cual la marca entera dejo de ser subcadena
+    de la nota y la guarda de idempotencia (iv) dejo de disparar. Anclar en el
+    parentesis la vuelve inmune a lo que se inserte detras.
+    """
+    return marca.split(")")[0] + ")"
+
+
+# LA CADENA HISTORICA, CONGELADA. No es fuente de ninguna cifra: solo sirve para
+# reconocer el addendum que este script ya escribio, con su fecha mala dentro.
+MARCA_APLICADA = "ADDENDUM DE EJECUCION (30 ago 2026, vuelta 97, TAREA 2): SEGUNDO TRAMO LEIDO."
+# LA MARCA BUENA, construida con la fecha que git devuelve HOY.
+MARCA = marca_con(fecha_de_git() or "FECHA NO LEIDA DE GIT")
+
 TITULO_ENLACES = "LO QUE SE HIZO EN LA VUELTA 97, TAREA 2: EL SEGUNDO TRAMO TAMBIEN ESTA LEIDO"
 ANCLA = ("dominio del banco `9.27`, como manda el punto 5 de la verificacion.\n")
 
 ESPERADAS = 60
 DESDE_FILA = 41
+
+
+def guarda_de_fecha(nota):
+    """CAE si la fecha de la marca historica no es la que git devuelve hoy Y la
+    correccion declarada que lo dice no esta escrita en la nota.
+
+    Devuelve (lista de fallos, linea de diagnostico). La linea se imprime
+    siempre, aprobado o no, para que la comprobacion no pueda pasar callada.
+    """
+    hoy = fecha_de_git()
+    if hoy is None:
+        return (["la guarda de fecha no pudo leer de git ni un commit de la vuelta %d"
+                 % VUELTA],
+                "GUARDA DE FECHA: ROJO, git no devuelve commits de la vuelta %d" % VUELTA)
+    m = RE_FECHA.search(MARCA_APLICADA)
+    escrita = m.group(0) if m else None
+    if escrita == hoy:
+        return ([], "GUARDA DE FECHA: VERDE, la marca escrita dice %s y git dice %s"
+                % (escrita, hoy))
+    if MARCA_DE_LA_CORRECCION in (nota or ""):
+        return ([], "GUARDA DE FECHA: VERDE CON DESFASE DECLARADO. La marca escrita dice "
+                "%s, git dice %s, y la correccion declarada (%s) SI esta en la nota."
+                % (escrita, hoy, MARCA_DE_LA_CORRECCION))
+    return (["la marca escrita lleva la fecha %s, git dice %s, y la correccion "
+             "declarada (%s) NO esta en la nota de OP-E-03"
+             % (escrita, hoy, MARCA_DE_LA_CORRECCION)],
+            "GUARDA DE FECHA: ROJO, desfase de fecha SIN correccion declarada "
+            "(escrita %s, git %s)" % (escrita, hoy))
 
 
 def cargar_jsonl(ruta):
@@ -190,9 +305,19 @@ def main():
     objetivo = [o for o in ops if o.get("id_op") == "OP-E-03"]
     if len(objetivo) != 1:
         fallos.append("OP-E-03 aparece %d veces en OPERACIONES.jsonl, se esperaba 1" % len(objetivo))
-    elif MARCA in (objetivo[0].get("nota") or ""):
-        fallos.append("el addendum de la vuelta 97 YA ESTA en la nota de OP-E-03: "
-                      "correr dos veces lo duplicaria")
+    else:
+        nota_actual = objetivo[0].get("nota") or ""
+        # (iv) el addendum ya escrito se reconoce EN SUS DOS FORMAS: la historica
+        # (con la fecha mala, que es la que de verdad esta en el fichero) y la
+        # nueva (con la fecha leida de git). Si se mirara solo la nueva, la
+        # guarda dejaria de disparar y correr dos veces duplicaria el texto.
+        if ancla_de(MARCA) in nota_actual or ancla_de(MARCA_APLICADA) in nota_actual:
+            fallos.append("el addendum de la vuelta 97 YA ESTA en la nota de OP-E-03: "
+                          "correr dos veces lo duplicaria")
+        # (vi) la guarda de fecha
+        f_fecha, diagnostico = guarda_de_fecha(nota_actual)
+        print(diagnostico)
+        fallos.extend(f_fecha)
 
     enlaces = io.open(ENLACES, encoding="utf-8").read()
     if enlaces.count(ANCLA) != 1:

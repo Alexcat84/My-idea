@@ -1,0 +1,47 @@
+==============================================================================================================
+LAS FECHAS DE docs/plan/04_ENLACES.md, COTEJADAS CONTRA GIT
+==============================================================================================================
+TECHO DEL RELOJ DEL REPO (git log --all --format=%ad --date=short | sort -u | tail -1): 2026-08-27
+LINEAS DEL FICHERO: 1181
+MARCADORES CON FECHA ENCONTRADOS: 12
+
+| # | linea | marcador | vuelta | fecha declarada | fecha(s) real(es) de git | veredicto |
+|---|---:|---|---:|---|---|---|
+| 1 | 246 | ADDENDUM DE EJECUCION (29 ago 2026, vuelta 94, docs/loop/PRO | 94 | 29 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 2 | 375 | CORRECCION DECLARADA (26 ago 2026, vuelta 76, adjudicada por | 76 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 3 | 389 | CORRECCION DECLARADA (26 ago 2026, vuelta 77, decision del f | 77 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 4 | 402 | CORRECCION DECLARADA (26 ago 2026, vuelta 78, adjudicada por | 78 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 5 | 420 | CORRECCION DECLARADA (26 ago 2026, vuelta 79, adjudicada por | 79 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 6 | 449 | CORRECCION DECLARADA (26 ago 2026, vuelta 79, relectura conj | 79 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 7 | 500 | CORRECCION DECLARADA (26 ago 2026, vuelta 80, relectura conj | 80 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 8 | 559 | CORRECCION DECLARADA (26 ago 2026, vuelta 82, relectura conj | 82 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 9 | 668 | CORRECCION DECLARADA (28 ago 2026, vuelta 88) | 88 | 28 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 10 | 734 | CORRECCION DECLARADA (29 ago 2026, vuelta 89) | 89 | 29 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 11 | 875 | CORRECCION DECLARADA (26 ago 2026, vuelta 76, adjudicada por | 76 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 12 | 903 | CORRECCION DECLARADA (20 ago 2026, vuelta 57, TAREA 1.2, por | 57 | 20 ago 2026 | 2026-08-20 | CALZA |
+
+RECUENTO POR VEREDICTO, contado del propio censo:
+   CALZA      9
+   IMPOSIBLE  3
+
+BARRIDO APARTE: TODA fecha del fichero posterior al techo, este o no en un marcador
+| # | linea | fecha | veredicto |
+|---|---:|---|---|
+| 1 | 246 | 29 ago 2026 | FECHA EN PROSA |
+| 2 | 247 | 29 ago 2026 | FECHA EN PROSA |
+| 3 | 668 | 28 ago 2026 | FECHA EN PROSA |
+| 4 | 668 | 28 ago 2026 | FECHA EN PROSA |
+| 5 | 734 | 29 ago 2026 | FECHA EN PROSA |
+| 6 | 734 | 29 ago 2026 | FECHA EN PROSA |
+| 7 | 1001 | 29 ago 2026 | FECHA EN PROSA |
+| 8 | 1001 | 2026-08-29 | NOMBRE DE FICHERO |
+
+RECUENTO DEL BARRIDO, contado del propio barrido:
+   FECHA EN PROSA     7
+   NOMBRE DE FICHERO  1
+   LAS 'NOMBRE DE FICHERO' NO SE CORRIGEN: son rutas reales del repo y cambiarlas escribiria una ruta falsa.
+
+ROJO, 3 cosa(s) no cuadran y NO SE ESCRIBE NADA:
+   la correccion de '29 ago 2026' YA ESTA escrita
+   la correccion de '28 ago 2026' YA ESTA escrita
+   la correccion de '29 ago 2026' YA ESTA escrita

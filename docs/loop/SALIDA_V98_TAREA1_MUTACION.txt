@@ -1,0 +1,32 @@
+======================================================================================================================
+PRUEBA DE MUTACION, VUELTA 98 TAREA 1
+======================================================================================================================
+DATO DE PARTIDA, leido y no supuesto:
+   fecha_de_git() de la vuelta 97 = '27 ago 2026'
+   fecha dentro de MARCA_APLICADA = '30 ago 2026'
+   la correccion declarada esta en la nota de OP-E-03: SI
+
+GUARDA DE FECHA
+  C1   control: estado real del repo                              espera VERDE CON DESFASE            obtiene VERDE CON DESFASE            OK
+  M1   mutada la nota: sin la correccion declarada                espera ROJO                         obtiene ROJO                         OK
+  M2   mutada la marca historica: lleva la fecha de git           espera VERDE                        obtiene VERDE                        OK
+  M3   mutada la marca a la de git y la nota sin correccion       espera VERDE                        obtiene VERDE                        OK
+  M4   mutado git: no devuelve ni un commit de la vuelta 97       espera ROJO                         obtiene ROJO                         OK
+  M5   mutada la fecha esperada de git y la nota sin correccion   espera ROJO                         obtiene ROJO                         OK
+
+GUARDA DE IDEMPOTENCIA ANCLADA EN EL PARENTESIS
+  C2   control: la nota real de OP-E-03                           espera DISPARA                      obtiene DISPARA                      OK
+  M6   mutada la nota: sin el ancla del addendum                  espera NO DISPARA                   obtiene NO DISPARA                   OK
+
+CENSO DE FECHAS
+  C3   control: el fichero real                                   espera 6 IMPOSIBLE / 1 CALZA / 1 SIN FECHA obtiene 6 IMPOSIBLE / 1 CALZA / 1 SIN FECHA OK
+  M7   mutada la fecha de la vuelta 97 a la de git                espera 5 IMPOSIBLE / 2 CALZA        obtiene 5 IMPOSIBLE / 2 CALZA        OK
+  M8   mutada la fecha BUENA de la vuelta 96 a una imposible      espera 7 IMPOSIBLE / 0 CALZA        obtiene 7 IMPOSIBLE / 0 CALZA        OK
+
+RECUENTO, contado de los propios casos corridos:
+   casos totales      11
+   controles          3, verdes 3
+   mutaciones         8, se comportan como se esperaba 8
+   casos que FALLAN   0
+
+VERDE: los 3 controles pasan y las 8 mutaciones mueven el veredicto. NINGUNA guarda de esta tarea es una constante que se apruebe sola.

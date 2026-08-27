@@ -244,7 +244,7 @@ diferencias falsas.
 > igual a 2 pares repetidos mas 88 ya en cola mas 387 de diferencia. **Sin fugas.**
 
 **ADDENDUM DE EJECUCION (29 ago 2026, vuelta 94, docs/loop/PROMPT_SIGUIENTE.md TAREA
-6): OP-E-03 ABRE. EL DISPARADOR YA SE ACTIVO.** El cribado intra-dominio cerro
+6) **[CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026" de este marcador estaba TECLEADA y es FALSA. El texto viejo se queda entero y sin borrar una letra (EJECUTOR.md 8). LA FECHA REAL, LEIDA DE GIT EN LA VUELTA 98 con `git log --all --format=%ad^%h^%s --date=short, quedandose con los commits cuyo asunto empieza por "VUELTA 94"`, es 2026-08-27 (commits a4c89ab6, 4c22a083, 4cccca94, 57ab0476, d1d88d1a, 163c51c3, ce8767c9), o sea 27 ago 2026. Techo del reloj del repo, medido con `git log --all --format=%ad --date=short`: 2026-08-27.]**: OP-E-03 ABRE. EL DISPARADOR YA SE ACTIVO.** El cribado intra-dominio cerro
 COMPLETO en 3.388 de 3.388 el 13 ago 2026 (commit `9095686e`, "CIERRA EL DOMINIO
 quality en el 3255"; reconfirmado en `docs/plan/RECOMPUTO_3388.md` y en
 `docs/loop/ACTA_AUDITOR.md`, "LA FASE I DEL CRIBADO INTRA DOMINIO ESTA CERRADA Y
@@ -665,7 +665,7 @@ unidades de la bolsa filtrada V87. Ninguna unidad queda sin decision:
 abrio unidades nuevas respecto de la vuelta anterior (0 de 121, medido en
 `docs/loop/SALIDA_V87_TRAMO12_FILTRO_P91_GUARDA_CADENA.txt`).
 
-**CORRECCION DECLARADA (28 ago 2026, vuelta 88): la celda de la fila 117 no se
+**CORRECCION DECLARADA (28 ago 2026, vuelta 88) **[CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "28 ago 2026" de este marcador estaba TECLEADA y es FALSA. El texto viejo se queda entero y sin borrar una letra (EJECUTOR.md 8). LA FECHA REAL, LEIDA DE GIT EN LA VUELTA 98 con `git log --all --format=%ad^%h^%s --date=short, quedandose con los commits cuyo asunto empieza por "VUELTA 88"`, es 2026-08-27 (commits e7b0d21f, dfe9650a, e6402ea2, 970713d6), o sea 27 ago 2026. Techo del reloj del repo, medido con `git log --all --format=%ad --date=short`: 2026-08-27.]**: la celda de la fila 117 no se
 borra, se corrige.** El auditor (acta de la vuelta 87, seccion 2.1 y
 adjudicacion 6.1) discrepo con la fila 117 de la tabla de arriba, que dice **"ES
 la cadena propia de la madre"** y a la vez **SE ESCRIBE**, sin una linea que
@@ -731,7 +731,7 @@ que las filas 119 y 120.** La cifra final de la operacion (220 / 99 / 121,
 arriba) NO CAMBIA: la arista ya estaba escrita con la clase correcta, lo que
 cambia es la razon que la sostiene.
 
-**CORRECCION DECLARADA (29 ago 2026, vuelta 89): la correccion del 28 ago de
+**CORRECCION DECLARADA (29 ago 2026, vuelta 89) **[CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026" de este marcador estaba TECLEADA y es FALSA. El texto viejo se queda entero y sin borrar una letra (EJECUTOR.md 8). LA FECHA REAL, LEIDA DE GIT EN LA VUELTA 98 con `git log --all --format=%ad^%h^%s --date=short, quedandose con los commits cuyo asunto empieza por "VUELTA 89"`, es 2026-08-27 (commits 71b5e17d, 5ae40940, 43bafe47, 7f546873), o sea 27 ago 2026. Techo del reloj del repo, medido con `git log --all --format=%ad --date=short`: 2026-08-27.]**: la correccion del 28 ago de
 arriba queda SUPERADA, y no se borra.** El auditor corrio la relectura
 conjunta del par 117 (acta de la vuelta 88, secciones 2.2 a 2.4 y
 adjudicacion 5.1) y la resolvio CONTRA el ejecutor: la clase pasa de `SE

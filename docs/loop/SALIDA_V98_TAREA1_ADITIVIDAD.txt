@@ -1,0 +1,20 @@
+====================================================================================================
+ADITIVIDAD DE LA CORRECCION DE FECHAS, PROBADA CAMPO A CAMPO
+====================================================================================================
+VIEJO: HEAD:docs/plan/OPERACIONES.jsonl   NUEVO: arbol de trabajo
+LINEAS: antes 71, despues 71
+ID_OP en el mismo orden y sin altas ni bajas: SI
+
+CAMPOS QUE CAMBIARON, contados de los propios registros:
+   nota         en 4 registro(s): OP-E-01, OP-E-03, OP-E-06, OP-E-07
+
+| operacion | nota antes | nota despues | inserciones | reconstruccion == viejo |
+|---|---:|---:|---:|---|
+| OP-E-01 | 6242 | 7502 | 2 | SI |
+| OP-E-03 | 7980 | 9270 | 2 | SI |
+| OP-E-06 | 1849 | 2479 | 1 | SI |
+| OP-E-07 | 11984 | 12624 | 1 | SI |
+
+NOTAS TOCADAS: 4
+
+VERDE: la escritura es PURAMENTE ADITIVA (el texto viejo se reconstruye caracter a caracter en las 4 notas tocadas) y NO movio ningun campo de decision (estado, fecha_corte, verificacion, evidencia, adjudicacion, nodos, aristas_nuevas, orden, superviviente, preservar, eliminar, depende_de, bloquea_a, fase, tipo, pregunta_pendiente).

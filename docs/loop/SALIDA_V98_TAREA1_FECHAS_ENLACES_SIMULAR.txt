@@ -1,0 +1,55 @@
+==============================================================================================================
+LAS FECHAS DE docs/plan/04_ENLACES.md, COTEJADAS CONTRA GIT
+==============================================================================================================
+TECHO DEL RELOJ DEL REPO (git log --all --format=%ad --date=short | sort -u | tail -1): 2026-08-27
+LINEAS DEL FICHERO: 1181
+MARCADORES CON FECHA ENCONTRADOS: 12
+
+| # | linea | marcador | vuelta | fecha declarada | fecha(s) real(es) de git | veredicto |
+|---|---:|---|---:|---|---|---|
+| 1 | 246 | ADDENDUM DE EJECUCION (29 ago 2026, vuelta 94, docs/loop/PRO | 94 | 29 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 2 | 375 | CORRECCION DECLARADA (26 ago 2026, vuelta 76, adjudicada por | 76 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 3 | 389 | CORRECCION DECLARADA (26 ago 2026, vuelta 77, decision del f | 77 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 4 | 402 | CORRECCION DECLARADA (26 ago 2026, vuelta 78, adjudicada por | 78 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 5 | 420 | CORRECCION DECLARADA (26 ago 2026, vuelta 79, adjudicada por | 79 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 6 | 449 | CORRECCION DECLARADA (26 ago 2026, vuelta 79, relectura conj | 79 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 7 | 500 | CORRECCION DECLARADA (26 ago 2026, vuelta 80, relectura conj | 80 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 8 | 559 | CORRECCION DECLARADA (26 ago 2026, vuelta 82, relectura conj | 82 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 9 | 668 | CORRECCION DECLARADA (28 ago 2026, vuelta 88) | 88 | 28 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 10 | 734 | CORRECCION DECLARADA (29 ago 2026, vuelta 89) | 89 | 29 ago 2026 | 2026-08-27 | IMPOSIBLE |
+| 11 | 875 | CORRECCION DECLARADA (26 ago 2026, vuelta 76, adjudicada por | 76 | 26 ago 2026 | 2026-08-26 | CALZA |
+| 12 | 903 | CORRECCION DECLARADA (20 ago 2026, vuelta 57, TAREA 1.2, por | 57 | 20 ago 2026 | 2026-08-20 | CALZA |
+
+RECUENTO POR VEREDICTO, contado del propio censo:
+   CALZA      9
+   IMPOSIBLE  3
+
+BARRIDO APARTE: TODA fecha del fichero posterior al techo, este o no en un marcador
+| # | linea | fecha | veredicto |
+|---|---:|---|---|
+| 1 | 246 | 29 ago 2026 | FECHA EN PROSA |
+| 2 | 668 | 28 ago 2026 | FECHA EN PROSA |
+| 3 | 734 | 29 ago 2026 | FECHA EN PROSA |
+| 4 | 1001 | 29 ago 2026 | FECHA EN PROSA |
+| 5 | 1001 | 2026-08-29 | NOMBRE DE FICHERO |
+
+RECUENTO DEL BARRIDO, contado del propio barrido:
+   FECHA EN PROSA     4
+   NOMBRE DE FICHERO  1
+   LAS 'NOMBRE DE FICHERO' NO SE CORRIGEN: son rutas reales del repo y cambiarlas escribiria una ruta falsa.
+
+--------------------------------------------------------------------------------------------------------------
+LAS 3 CORRECCIONES DECLARADAS QUE SE ANADEN (SIMULACION), aditivas:
+--------------------------------------------------------------------------------------------------------------
+
+### linea 246: ADDENDUM DE EJECUCION (29 ago 2026, vuelta 94, docs/loop/PROMPT_SIGUIENTE.md TAREA
+6)
+SE ANADE: **[CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026" de este marcador estaba TECLEADA y es FALSA. El texto viejo se queda entero y sin borrar una letra (EJECUTOR.md 8). LA FECHA REAL, LEIDA DE GIT EN LA VUELTA 98 con `git log --all --format=%ad^%h^%s --date=short, quedandose con los commits cuyo asunto empieza por "VUELTA 94"`, es 2026-08-27 (commits a4c89ab6, 4c22a083, 4cccca94, 57ab0476, d1d88d1a, 163c51c3, ce8767c9), o sea 27 ago 2026. Techo del reloj del repo, medido con `git log --all --format=%ad --date=short`: 2026-08-27.]**
+
+### linea 668: CORRECCION DECLARADA (28 ago 2026, vuelta 88)
+SE ANADE: **[CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "28 ago 2026" de este marcador estaba TECLEADA y es FALSA. El texto viejo se queda entero y sin borrar una letra (EJECUTOR.md 8). LA FECHA REAL, LEIDA DE GIT EN LA VUELTA 98 con `git log --all --format=%ad^%h^%s --date=short, quedandose con los commits cuyo asunto empieza por "VUELTA 88"`, es 2026-08-27 (commits e7b0d21f, dfe9650a, e6402ea2, 970713d6), o sea 27 ago 2026. Techo del reloj del repo, medido con `git log --all --format=%ad --date=short`: 2026-08-27.]**
+
+### linea 734: CORRECCION DECLARADA (29 ago 2026, vuelta 89)
+SE ANADE: **[CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026" de este marcador estaba TECLEADA y es FALSA. El texto viejo se queda entero y sin borrar una letra (EJECUTOR.md 8). LA FECHA REAL, LEIDA DE GIT EN LA VUELTA 98 con `git log --all --format=%ad^%h^%s --date=short, quedandose con los commits cuyo asunto empieza por "VUELTA 89"`, es 2026-08-27 (commits 71b5e17d, 5ae40940, 43bafe47, 7f546873), o sea 27 ago 2026. Techo del reloj del repo, medido con `git log --all --format=%ad --date=short`: 2026-08-27.]**
+
+SIMULACION: no se escribio nada.
