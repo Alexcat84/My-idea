@@ -72,6 +72,19 @@ lo que diga el encargo.
    NOMBRE DE COMMIT, RAMA O FECHA DE APERTURA O DE CIERRE QUE EL REPORTE
    PUBLIQUE SE LEE DE git rev-parse O DE git log EN ESA VUELTA Y SE TALLA;
    UNA LINEA DE IDENTIDAD TECLEADA NO SE PUBLICA.
+   EL CASO ROJO SE PRUEBA POR MUTACION (29 ago 2026; motivo: la caida 2 de
+   la vuelta 89, un caso rojo que no puede fallar publicado como prueba de
+   que el criterio se comporta. En scripts/loop/vuelta89_tarea3_rebase_ope06.py
+   la variable del veredicto era una CONSTANTE LITERAL, veredicto_2 = "ENTRA",
+   y el assert comparaba "ENTRA" con "ENTRA": no puede salir en rojo nunca. La
+   clasificacion real de las 129 filas era una tabla escrita a mano, cosa que
+   el reporte declaraba con honestidad; lo que faltaba era decir que ENTONCES
+   NO HAY CASO ROJO AUTOMATICO, en vez de fabricar uno que se aprueba solo).
+   NINGUN assert, GUARDA O CASO ROJO SE PUBLICA COMO PRUEBA SIN HABER CORRIDO
+   ANTES SU PRUEBA DE MUTACION: se cambia el valor esperado y se comprueba que
+   el caso CAE. Si la clasificacion es una tabla a mano y no hay nada que
+   mutar, SE DECLARA QUE NO HAY CASO ROJO AUTOMATICO, y esa declaracion es la
+   que se publica.
 2. EL INSTRUMENTO MANDA (14 ago 2026; motivo: las caidas de las vueltas 15
    y 16 fueron las dos de esta especie). Toda cifra o nombre propio que se
    publique se lee de la salida del instrumento corrido EN ESTA VUELTA. Una

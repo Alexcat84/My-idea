@@ -178,3 +178,9 @@ linea 29877 (verificacion al digito, relectura de los tres discutibles con las
 fichas impresas antes de destapar las frases, la relectura al doble de las 129,
 las siete adjudicaciones y la metrica de credito).
 `docs/loop/PROMPT_SIGUIENTE.md` queda **VACIO** como la parada manda.
+
+DECISION DEL FUNDADOR (29 ago 2026): opciones a y b, las dos. La escalada del 26 ago se
+ejecuta por fin como operacion de codigo (toda tabla y toda cifra del reporte en fases
+mecanicas se genera contando su fichero de salida), y nace la regla del caso rojo probado
+por mutacion. Sin cambio de modelos. La racha vuelve a cero y OP-E-06 abre con la bolsa
+V90.

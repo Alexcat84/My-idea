@@ -44,6 +44,16 @@ de este documento. El estado de verdad es EL REPO, no tu memoria.
    caidas, dentro/fuera del marcado). La regla del credito: si una discrepancia
    aparece FUERA de los discutibles marcados, baja el credito de toda la tanda:
    ese tramo se relee al doble y lo dices en el acta.
+   LA ESCALADA SE ENCARGA, NO SOLO SE DECLARA (29 ago 2026; motivo: la
+   parada de la vuelta 89. La racha de reporte llego a DOS en el acta de la
+   vuelta 88, el auditor la declaro en dos, y NO encargo la operacion de
+   codigo de la escalada que el fundador ya habia autorizado el 26 ago; la
+   tercera caida llego justo donde el remedio no estaba puesto). CUANDO LA
+   RACHA DE REPORTE LLEGUE A DOS, EL AUDITOR ENCARGA EN EL MISMO ACTA la
+   operacion de codigo de la escalada, COMO TAREA BLOQUEANTE de la vuelta
+   siguiente, sin esperar parada ni decision nueva del fundador.
+   DECLARARLA SIN ENCARGARLA ES UNA CAIDA PROPIA DEL AUDITOR y se registra
+   con su nombre en el acta.
 3. ADJUDICA: discrepancias van a relectura conjunta (tu caso escrito con
    evidencia; el ejecutor verifica contra el grafo y decide con la vara; las
    correcciones con correccion declarada y recomputo). Pendientes de doctrina:
