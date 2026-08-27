@@ -1,0 +1,62 @@
+==========================================================================================
+LECTURA DEL GRUPO C, 18 PUESTOS (vuelta 95, TAREA 3.b a 3.f)
+==========================================================================================
+
+--- YA RESUELTOS SIN RELECTURA (3) ---
+  1083 | customer_discovery_cuatro_fases -> priorizar_elementos_a_validar | QUEDA | CONFIRMADO de la casa: 'que LA MADRE no tiene' (acta 94).
+  1191 | ingenieria_de_prompts_efectiva -> prompting_alta_variacion | QUEDA | razon usa literalmente 'la madre' (acta 94, encargo 95 lo cierra sin releer).
+  1886 | triple_bottom_line -> triple_bottom_line_2 | QUEDA | acta 93, ACTA_AUDITOR.md linea 32695: 'encaje limpio dentro del paso 1', razon 'una de tres columnas ... dentro de esa columna', COINCIDE.
+
+--- LEIDOS EN ESTA VUELTA (15) ---
+  886 | customer_discovery_overview -> fit_problema_solucion | RELECTURA CONJUNTA
+      ancla: (ninguna, esa es la razon)
+      fit_problema_solucion 'trae un procedimiento que ESAS FASES no tienen' (las CUATRO fases enteras, no una): compara la clase entera contra lo que le falta, y el propio solape citado cae dentro de los pasos del HIJO (sus 'tres primeros'), no de un paso de la madre. Sin ancla.
+  890 | customer_validation -> checkpoints_validacion | RELECTURA CONJUNTA
+      ancla: (ninguna, esa es la razon)
+      checkpoints_validacion 'trae el procedimiento para fijar ESOS UMBRALES, que LA ETAPA DA POR SUPUESTOS': plural, sin paso numerado ni 'es UNA LINEA'. Su hermano de la misma relacion (896) SI ancla a un paso ('que es UNA LINEA de umbral'); este no lo hace.
+  896 | customer_validation -> realizar_pruebas_pasa_no_pasa | QUEDA
+      ancla: que es UNA LINEA de umbral
+      customer_validation 'manda medir si por cada peso invertido... regresan dos, QUE ES UNA LINEA de umbral'. realizar_pruebas_pasa_no_pasa 'trae el procedimiento ENTERO de ese umbral'. Formula canonica del 9.6.2.
+  909 | estrategia_de_ventas -> influence_map_organizacional | QUEDA
+      ancla: Sus dos referencias al mapa son lineas
+      estrategia_de_ventas: 'Sus dos referencias al mapa SON LINEAS, e influence_map_organizacional trae el procedimiento de construirlo'.
+  910 | evaluacion_industria_cliente -> voice_of_customer_estrategico | QUEDA
+      ancla: Su primer paso es UNA LINEA
+      evaluacion_industria_cliente: 'Su PRIMER PASO es UNA LINEA, y voice_of_customer_estrategico trae el procedimiento'.
+  940 | invitar_ia_a_todo -> principio_mejora_continua_ia | QUEDA
+      ancla: Ese tercer paso es UNA LINEA
+      invitar_ia_a_todo: 'Ese TERCER PASO es UNA LINEA, y principio_mejora_continua_ia trae el procedimiento ENTERO de esa linea'.
+  947 | customer_discovery -> product_market_fit | RELECTURA CONJUNTA
+      ancla: (ninguna, esa es la razon)
+      product_market_fit 'trae el CHECKLIST de seis evaluaciones que decide SI ESO alcanzo': evalua el RESULTADO del proceso entero de customer_discovery, no un paso especifico nombrado. Sin ancla clara.
+  983 | customer_discovery_overview -> realizar_pruebas_pasa_no_pasa | QUEDA
+      ancla: en la cuarta [fase]... UNA LINEA
+      customer_discovery_overview: 'EN LA CUARTA dice evaluar si hay validacion suficiente: UNA LINEA'. realizar_pruebas_pasa_no_pasa 'trae el procedimiento del umbral'.
+  993 | alineacion_etica_ia_negocio -> comprender_alineacion_etica_ia | QUEDA
+      ancla: Ese tercer paso es una linea
+      alineacion_etica_ia_negocio: 'Ese TERCER PASO es una linea, y comprender_alineacion_etica_ia trae la auditoria'.
+  1020 | fases_de_retencion_de_clientes -> fase_acclimate_experiencia_cliente | QUEDA
+      ancla: desarrolla UNA de las OCHO con procedimiento propio
+      fase_acclimate_experiencia_cliente 'desarrolla UNA de las OCHO [fases del programa] con procedimiento propio'. Misma jerarquia sana del puesto 829 con otra fase (razon lo cita explicito).
+  1057 | celebracion_hitos_cliente -> regalos_estrategicos_sorpresa | QUEDA
+      ancla: Ese segundo paso es una linea
+      celebracion_hitos_cliente: 'Ese SEGUNDO PASO es una linea, y regalos_estrategicos_sorpresa trae el procedimiento ENTERO'.
+  1086 | filosofia_customer_validation -> decision_pivotar_o_proceder | QUEDA
+      ancla: Es una madre con tres hijos verificados
+      filosofia_customer_validation 'cierra con TRES PREGUNTAS en una sola linea'; decision_pivotar_o_proceder 'trae el procedimiento de contestarlas'. Ademas la razon dice literalmente 'Es una MADRE con tres hijos verificados', nombrando al mismo nodo de este par.
+  1196 | colaboracion_creador_consumidor -> co_creation_session | QUEDA
+      ancla: Ese tercer paso es UNA LINEA
+      colaboracion_creador_consumidor: 'Ese TERCER PASO es UNA LINEA y co_creation_session trae su procedimiento'. El solape cae ENTERO en el primer bloque del hijo (veredicto INVARIANTE, dice la razon).
+  1220 | ingenieria_de_prompts_efectiva -> disenar_prompts_efectivos_para_ia | QUEDA
+      ancla: ingenieria_de_prompts_efectiva es la MADRE
+      'define el rol igual que LA MADRE'... 'ingenieria_de_prompts_efectiva ES LA MADRE y tiene CUATRO HIJAS SANAS'. La mas explicita de las 15.
+  1844 | productos_crudos -> diagnostico_de_productos_crudos | RELECTURA CONJUNTA
+      ancla: (ninguna, esa es la razon)
+      productos_crudos 'NOMBRA EL PROBLEMA' (tres items enteros); diagnostico_de_productos_crudos 'TRAE EL PROCEDIMIENTO' (cuatro items enteros): sin paso numerado unico, la misma forma de clase-entera-contra-clase-entera que hizo salir al 1098/1009/1281. Marcado por prudencia pese a no ser identico a 886/947.
+
+QUEDAN (razon nombra la madre): 11 de 15 -> [896, 909, 910, 940, 983, 993, 1020, 1057, 1086, 1196, 1220]
+RELECTURA CONJUNTA (duda genuina, NO resueltos solo): 4 de 15 -> [886, 890, 947, 1844]
+
+NINGUNO SALE ESTA VUELTA: cero aristas retiradas. Los 4 de RELECTURA CONJUNTA quedan pendientes para la mesa, no adjudicados solos.
+
+FIN

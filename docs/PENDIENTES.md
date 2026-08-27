@@ -3659,3 +3659,46 @@ correcta (rehecha por el auditor en la vuelta 94, mismo resultado), pero
 commitear como instrumento un fichero que no es el que se corrio es el mismo
 defecto que esta casa le exige al ejecutor. Se registra aqui como pide el
 encargo, con el mismo trato.
+
+## VUELTA 95, TAREA 3: EL CRIBADO DE CITA DE LINEA, RECONSTRUIDO, Y LA LECTURA DEL GRUPO C
+
+**(a) Reconstruccion del cribado con codigo propio**
+(`scripts/loop/vuelta95_tarea3a_cribado_cita_de_linea.py`,
+`docs/loop/SALIDA_V95_TAREA3A_CRIBADO.txt`): una primera version de mis
+patrones (sin numeros escritos como "tres" y sin conjugaciones de "enunciar")
+dio 56/8/20, DISTINTO del acta. Con dos ajustes linguisticos declarados (numero
+escrito en "dice N lineas", y prefijo en vez de palabra exacta para
+"enumera"/"enuncia") la reconstruccion da **57/9/18, IDENTICO al acta de la
+vuelta 94** (`ACTA_AUDITOR.md` lineas 33317 a 33321), misma enumeracion de B y
+C. Se registra el primer intento fallido junto con el que calza, por
+transparencia del proceso (EJECUTOR.md regla 8).
+
+**(b) a (f) La lectura de las 18 filas del grupo C**
+(`scripts/loop/vuelta95_tarea3_lectura_grupo_c.py`,
+`docs/loop/SALIDA_V95_TAREA3_LECTURA_GRUPO_C.txt`), pasos primero y razon
+despues, misma mecanica que el 1009/1281/1992. Tres ya resueltos sin releer
+(1083 confirmado, 1191 por mandato explicito del encargo, 1886 por el acta de
+la vuelta 93). De las 15 restantes:
+
+**QUEDAN, la razon nombra la madre (11): 896, 909, 910, 940, 983, 993, 1020,
+1057, 1086, 1196, 1220.** Once de once anclan a UN paso, fase o linea concreta
+de un nodo que el otro desarrolla entero (formula canonica del banco 9.6.2,
+"UNA LINEA... ES UN PROCEDIMIENTO NOMBRADO EN UNA LINEA"); el 1220 ademas dice
+literalmente "es la MADRE".
+
+**RELECTURA CONJUNTA, duda genuina, NO resueltos solo (4): 886, 890, 947,
+1844.** Los cuatro comparan una clase entera de un nodo contra lo que el otro
+"no tiene" o "asume", sin anclar a un paso, fase o linea unica y numerada (el
+patron exacto que hizo salir al 1098, 1009, 1281 y 1992). **DISCUTIBLE
+marcado**: mi primer barrido de este mismo grupo, con un criterio mas
+estricto (exigir la palabra literal "madre"), habria dado ONCE candidatos a
+SALIR en vez de cuatro; me aparte de ese criterio porque contradecia la
+propia advertencia del encargo ("si lees las 18 buscando 18 bajas, las
+encontraras y estaras equivocado") y porque el acta de la vuelta 93 ya habia
+usado el criterio de ANCLA A UN PASO (no la palabra literal) para confirmar el
+1886. Traigo la duda entera para que la mesa la revise, no la resuelvo sola:
+ninguna arista se retira esta vuelta por esta via.
+
+**CERO ARISTAS RETIRADAS en esta TAREA 3**: es un resultado legitimo, no una
+falta de trabajo (el encargo lo dice explicito: "cada una se decide por su
+razon", "el grupo C no es una lista de condenados").
