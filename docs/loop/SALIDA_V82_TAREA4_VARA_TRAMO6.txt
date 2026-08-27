@@ -1,0 +1,18 @@
+unidades leidas del filtro: 30 | frescas (20..29): 10
+veredictos leidos: 3388 | pares no dirigidos unicos: 3388
+bolsa filtrada V80: 157 unidades
+
+| # | par | veredicto sin direccion (4.a) | reciproca en la bolsa V80 (4.b) |
+|---:|---|---|---|
+| 20 | `control_calidad_operaciones_servicio -> descubrir_necesidades_del_cliente` (paso 1, dominio quality) | sin veredicto | no |
+| 21 | `el_riesgo_nunca_se_acaba_se_administra -> cuando_el_riesgo_se_vuelve_realidad` (paso 2, dominio risk_management) | sin veredicto | no |
+| 22 | `curva_caracteristica_operativa -> distribucion_binomial` (paso 2, dominio quality) | sin veredicto | no |
+| 23 | `abolir_inspeccion_masiva -> eliminacion_inspeccion_masiva_por_control_estadistico` (paso 5, dominio quality) | D puesto 2560 (quality), dirigido abolir_inspeccion_masiva -> eliminacion_inspeccion_masiva_por_control_estadistico | no |
+| 24 | `recursos_apoyo_gubernamental_exportacion -> trabajo_con_bancos_comerciales` (paso 3, dominio exportacion) | sin veredicto | no |
+| 25 | `definiciones_operacionales_de_calidad -> optimizacion_caracteristicas_diseno` (paso 1, dominio quality) | sin veredicto | no |
+| 26 | `desarrollo_de_controles_de_proceso -> bucle_retroalimentacion_control` (paso 2, dominio quality) | sin veredicto | no |
+| 27 | `descubrir_necesidades_del_cliente -> traduccion_necesidades_cliente` (paso 2, dominio quality) | sin veredicto | no |
+| 28 | `qfd_matriz -> identificar_clientes_externos_e_internos` (paso 2, dominio quality) | sin veredicto | no |
+| 29 | `analisis_variacion_desempeno_servicio -> pre_control_estadistico` (paso 4, dominio quality) | sin veredicto | no |
+
+RESUMEN: 1 de 10 con veredicto, 0 de 10 con reciproca
