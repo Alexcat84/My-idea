@@ -991,12 +991,20 @@ vigente de `OP-E-06`.
 
 ## LA CIFRA DE `OP-E-07`, ENTERA, DE 101 A 87 (TAREA 4 de la vuelta 92, por la misma regla contra el descarte silencioso que la TAREA 2 de la vuelta 91 aplico a `OP-E-06`)
 
+**ACTUALIZADA EN LA VUELTA 93, DE 87 A 86 (ver filas 10 y 11 y el segundo
+bloque citado al final): la relectura conjunta del puesto 1009 (bloqueante,
+`docs/loop/PROMPT_SIGUIENTE.md` TAREA 2 de la vuelta 93, y `docs/loop/
+ACTA_AUDITOR.md` acta de la vuelta 92, seccion 4) concluyo que la razon del
+1009 tampoco nombra cual nodo es la madre y el par SALE por la misma
+`verificacion` de `OP-E-07`. NADA de lo que sigue en esta seccion se borra:
+la cifra de 87 fue correcta hasta la vuelta 93.**
+
 **Por que se escribe aqui:** la misma razon que la seccion de arriba. La
 cifra de `OP-E-07` vive repartida entre el addendum de `OPERACIONES.jsonl`
-(reescrito en la TAREA 3.d de esta vuelta) y las actas 91 y 92; la
-`verificacion` de `OP-E-07` pide la misma cadena unica y citable. Cada eslabon
-trae su fuente; el unico nuevo de esta vuelta (el descenso de 88 a 87) se mide
-con el guarda de la TAREA 2, no a mano.
+(reescrito en la TAREA 3.d de esta vuelta, y de nuevo en la vuelta 93) y las
+actas 91, 92 y 93; la `verificacion` de `OP-E-07` pide la misma cadena unica
+y citable. Cada eslabon trae su fuente; el unico nuevo de esta vuelta (el
+descenso de 88 a 87) se mide con el guarda de la TAREA 2, no a mano.
 
 | # | eslabon | cifra | fuente / comando |
 |---:|---|---:|---|
@@ -1008,7 +1016,9 @@ con el guarda de la TAREA 2, no a mano.
 | 6 | LA CAIDA DE CLASE (vuelta 91, acta seccion 3.1): el puesto **1098** tiene una arista escrita que su propia razon PROHIBE (banco `9.6.2`, `docs/BANCO_DE_TEXTOS.md` linea 1737 y siguientes: no hay madre e hijo, linea compartida que ninguno expande, mismo perfil que el puesto **2.195** de la tabla de linea 1776 a 1782) | quita **1** | `docs/loop/ACTA_AUDITOR.md` lineas 31290 a 31352; `docs/PENDIENTES.md`, seccion "EL PUESTO 1098 DE `OP-E-07` TENIA UNA ARISTA QUE SU PROPIA RAZON PROHIBE" |
 | 7 | El guarda de dos condiciones (TAREA 2 de esta vuelta) filtra la bolsa de direccion | **87 con direccion**, EXACTAMENTE el 1098 sale | `scripts/loop/vuelta92_tarea2_guarda_direccion.py --vara` (los dos casos obligatorios en verde) y `scripts/loop/vuelta92_tarea3a_filtrar_ope07.py`, escrito a `docs/plan/OP_E_07_DIRECCION_V92.jsonl`, **87 filas** (`wc -l` confirmado en esta vuelta) |
 | 8 | La escritura de las aristas sobre los 88 de V91 (vuelta 91): `ESCRITA` + `YA_ESTABA` (puestos 1388 y 1946, resuelven por alias a una arista que otro puesto de la misma bolsa ya escribio) + `ESCALERA_ROTA` | **86 ESCRITA + 2 YA_ESTABA + 0 ESCALERA_ROTA = 88** | `docs/loop/SALIDA_V91_TAREA4_ESCRITURA.txt` lineas 94 a 96 |
-| 9 | La retirada de la arista del 1098 (`scripts/loop/vuelta92_tarea3b_retirar_1098.py`), sobre los 86 `ESCRITA`: los 2 `YA_ESTABA` no se tocan porque el 1098 no era ninguno de los dos | **85 ESCRITA + 2 YA_ESTABA + 0 ESCALERA_ROTA = 87**, cifra vigente de `OP-E-07` | diff de la union del grafo contra el cierre de la vuelta 91 (`0691d2257ddbbf8b26357dbd25f5b304bc984611`): EXACTAMENTE una borrada (`customer_validation_sell_phase -> prueba_solucion_con_cliente`) y cero nuevas, corrido en esta vuelta |
+| 9 | La retirada de la arista del 1098 (`scripts/loop/vuelta92_tarea3b_retirar_1098.py`), sobre los 86 `ESCRITA`: los 2 `YA_ESTABA` no se tocan porque el 1098 no era ninguno de los dos | **85 ESCRITA + 2 YA_ESTABA + 0 ESCALERA_ROTA = 87**, cifra vigente de `OP-E-07` hasta la vuelta 92 | diff de la union del grafo contra el cierre de la vuelta 91 (`0691d2257ddbbf8b26357dbd25f5b304bc984611`): EXACTAMENTE una borrada (`customer_validation_sell_phase -> prueba_solucion_con_cliente`) y cero nuevas, corrido en esta vuelta |
+| 10 | VUELTA 93: la relectura conjunta del puesto **1009** (TAREA 2, bloqueante) concluye que su razon tampoco nombra la madre (formula de la clase D "trae un procedimiento que ESA FASE no tiene", igual en forma a la del 1098; ninguna linea nombrada con su paso; y la propia razon declara que "el bloque de traccion queda fuera" del solape, lo que hace fallar el test del banco `9.6.2`, `BANCO_DE_TEXTOS.md` lineas 1771 a 1774). El guarda reparado en las dos direcciones (`scripts/loop/vuelta93_tarea3_guarda_direccion.py --vara`, los tres casos obligatorios en verde) lo confirma sobre la bolsa vigente de 87 | quita **1** | `docs/loop/SALIDA_V93_TAREA2_RELECTURA_1009.txt`; `docs/loop/SALIDA_V93_TAREA3_VARA.txt`; `docs/loop/ACTA_AUDITOR.md` seccion 4, lineas 31977 a 32106 |
+| 11 | El guarda filtra `OP_E_07_DIRECCION_V92.jsonl` (87 filas) y saca EXACTAMENTE el 1009 (`scripts/loop/vuelta93_tarea3a_filtrar_1009.py`); la arista se retira de `dataset/nodos/` (`scripts/loop/vuelta93_tarea3b_retirar_1009.py`, las dos vistas). El 1009 SI estaba `ESCRITA` (no es 1388 ni 1946), asi que la resta cae sobre el conteo de `ESCRITA` | **84 ESCRITA + 2 YA_ESTABA + 0 ESCALERA_ROTA = 86**, cifra vigente de `OP-E-07` desde la vuelta 93 | `docs/loop/SALIDA_V93_TAREA3A_FILTRAR.txt`, escrito a `docs/plan/OP_E_07_DIRECCION_V93.jsonl` (86 filas, `wc -l` confirmado en esta vuelta); diff de la union del grafo contra el cierre de la vuelta 92 (`85a250bee2495f4a23d89a4cf51338a5bcd8397e`): EXACTAMENTE una borrada (`customer_discovery_phase2_problem_test -> fit_problema_solucion`) y cero nuevas, `docs/loop/SALIDA_V93_DIFF_UNION.txt` |
 
 **LA ARITMETICA COMPLETA, eslabon por eslabon:** 101 menos 13 (frente 4 del
 dedupe, los otros tres frentes en 0) igual a 88; las 88 leidas por su razon
@@ -1022,4 +1032,13 @@ ESCALERA_ROTA**, la cifra vigente de `OP-E-07`.
 > **101 -> (-13 dedupe frente 4) -> 88 -> (0 excluidos 9.22, 0 sin direccion)
 > -> 88 con direccion -> (-1 guarda de dos condiciones, banco 9.6.2, el 1098)
 > -> 87 con direccion -> 85 ESCRITA + 2 YA_ESTABA (1388, 1946) + 0
-> ESCALERA_ROTA.**
+> ESCALERA_ROTA.** Cifra vigente hasta la vuelta 92.
+
+**LA CADENA ACTUALIZADA, VUELTA 93 (el 1009 sale, relectura conjunta,
+`OP-E-07.verificacion`):**
+
+> **101 -> (-13 dedupe frente 4) -> 88 -> (0 excluidos 9.22, 0 sin direccion)
+> -> 88 con direccion -> (-1 guarda de dos condiciones, banco 9.6.2, el 1098)
+> -> 87 con direccion -> (-1 guarda reparado, banco 9.6.2, el 1009, relectura
+> conjunta de la vuelta 93) -> 86 con direccion -> 84 ESCRITA + 2 YA_ESTABA
+> (1388, 1946) + 0 ESCALERA_ROTA.** Cifra vigente desde la vuelta 93.
