@@ -1,0 +1,32 @@
+OP-E-03              depende_de:
+    OP-E-01            fase=04_ENLACES      orden=1   estado=LISTA  addendum=['CIERRE MEDIDO', 'CIFRA FINAL']
+    OP-U-02            fase=03_FUSIONES     orden=2   estado=LISTA  addendum=NO
+OP-M-03-ENLACES      depende_de:
+    OP-M-03-I          fase=03_FUSIONES     orden=1   estado=LISTA  addendum=NO
+    OP-M-03-II         fase=03_FUSIONES     orden=2   estado=LISTA  addendum=NO
+    OP-M-03-III        fase=03_FUSIONES     orden=3   estado=LISTA  addendum=NO
+OP-E-04              depende_de:
+    OP-M-01            fase=06_MESAS        orden=1   estado=LISTA  addendum=NO
+    OP-M-01-FUSION     fase=03_FUSIONES     orden=5   estado=LISTA  addendum=NO
+OP-E-05              depende_de:
+    OP-M-01            fase=06_MESAS        orden=1   estado=LISTA  addendum=NO
+    OP-M-01-FUSION     fase=03_FUSIONES     orden=5   estado=LISTA  addendum=NO
+OP-M-01-ESLABONES    depende_de:
+    OP-M-01            fase=06_MESAS        orden=1   estado=LISTA  addendum=NO
+    OP-M-01-FUSION     fase=03_FUSIONES     orden=5   estado=LISTA  addendum=NO
+OP-M-01-SEXTO        depende_de:
+    OP-M-01            fase=06_MESAS        orden=1   estado=LISTA  addendum=NO
+    OP-M-01-FUSION     fase=03_FUSIONES     orden=5   estado=LISTA  addendum=NO
+
+=== fases presentes en OPERACIONES.jsonl, con cuantas operaciones ===
+  00_CODIGO          7
+  01_FUENTES         7
+  02_DESTEJIDOS      9
+  03_FUSIONES        16
+  04_ENLACES         10
+  05_SANEO           10
+  06_MESAS           5
+  07_ADUANA          2
+  08_VERIFICACION    1
+  09_LECTURAS_DIRIGIDAS 3
+  10_INVENTARIO      1

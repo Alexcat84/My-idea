@@ -1,0 +1,20 @@
+operaciones de 04_ENLACES: 10
+ord  id                   estado   len(nota) addendum/cierre?
+1    OP-E-01              LISTA    6242      ['CIERRE MEDIDO', 'CIFRA FINAL']
+2    OP-E-02              HECHA    2363      NO
+3    OP-E-03              LISTA    550       NO
+4    OP-M-03-ENLACES      LISTA    248       NO
+5    OP-E-04              LISTA    760       NO
+6    OP-E-05              LISTA    444       NO
+7    OP-M-01-ESLABONES    LISTA    490       NO
+8    OP-M-01-SEXTO        LISTA    424       NO
+9    OP-E-06              LISTA    1849      ['ADDENDUM DE EJECUCION']
+10   OP-E-07              LISTA    7670      ['ADDENDUM DE EJECUCION']
+
+dependencias de las que no traen addendum:
+  OP-E-03              depende_de {'OP-E-01': 'LISTA', 'OP-U-02': 'LISTA'}
+  OP-M-03-ENLACES      depende_de {'OP-M-03-I': 'LISTA', 'OP-M-03-II': 'LISTA', 'OP-M-03-III': 'LISTA'}
+  OP-E-04              depende_de {'OP-M-01': 'LISTA', 'OP-M-01-FUSION': 'LISTA'}
+  OP-E-05              depende_de {'OP-M-01': 'LISTA', 'OP-M-01-FUSION': 'LISTA'}
+  OP-M-01-ESLABONES    depende_de {'OP-M-01': 'LISTA', 'OP-M-01-FUSION': 'LISTA'}
+  OP-M-01-SEXTO        depende_de {'OP-M-01': 'LISTA', 'OP-M-01-FUSION': 'LISTA'}
