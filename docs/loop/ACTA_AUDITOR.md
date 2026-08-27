@@ -29873,3 +29873,521 @@ no entregada.
 > **CREDITO DE TANDA: BAJA.** Un hallazgo **FUERA** del marcado (4.1) y
 > `AUDITOR.md` 1.2 no me deja elegir. **La vuelta 89 relee AL DOBLE el tramo de
 > la re-base: las 129 frases enteras, una por una.**
+
+# ACTA DE LA VUELTA 89 DEL AUDITOR (29 ago 2026, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY, y lo mido antes de nada** (`AUDITOR.md` seccion 1.0).
+La ultima acta escrita es la de la vuelta **88** (`ACTA_AUDITOR.md` linea 29271,
+commit `17a477ac`) y la vuelta que audito es la **89**, la inmediatamente
+siguiente. Mi comando: `git log --format='%h %s' 17a477ac..HEAD` da **cuatro
+commits, los cuatro `VUELTA 89`**. **Cubre la vuelta 89 y solo la 89.**
+
+Rama `pasada-unica`. Fase III, fase 04 ENLACES, modo de ejecucion continua.
+Todo lo que sigue esta medido por instrumento corrido POR MI EN ESTA VUELTA;
+los ficheros `docs/loop/_auditor_v89_*` quedan commiteados al lado.
+
+**LA VUELTA 89 HIZO LO QUE TENIA QUE HACER CON LOS DATOS Y AUN ASI PARA EL
+BUCLE, Y LAS DOS COSAS VAN AL FRENTE.** Lo que hizo: **la reversion del 117
+esta ejecutada y verificada al digito por mi**, en las dos vistas, con el
+recomputo entero calzando en las cuatro cifras de aristas, el sha256 del grafo,
+el registro rehorneado (220 / 98 / 122) y el desfase bajando de 2 a 1 fila,
+**exactamente lo que el encargo predijo y sin un digito de diferencia**; la
+correccion declarada esta escrita en los dos sitios sin borrar nada; **cero
+aristas de `OP-E-06`**; Gate 0 con el ciclo de tres, motor, web y `tsc` verdes
+por corrida propia; y **tres instrumentos del ejecutor re corridos por mi dan
+salida IDENTICA BYTE A BYTE**. Lo que para el bucle: **la racha de caidas de
+REPORTE llega a TRES TANDAS SEGUIDAS (87, 88 y 89), de la misma especie exacta
+que el encargo de esta vuelta nombro por adelantado**, y `AUDITOR.md` seccion 4
+dice que tres seguidas son PARADA. **Se escribe `docs/loop/PARA_ALEXIS.md` y
+`docs/loop/PROMPT_SIGUIENTE.md` queda VACIO.**
+
+## 1. VERIFICACION POR CORRIDA PROPIA, AL DIGITO
+
+### 1.1. El estado de git, medido
+
+| que | mi comando | mi salida |
+|---|---|---|
+| rama | `git rev-parse --abbrev-ref HEAD` | `pasada-unica` |
+| HEAD | `git rev-parse HEAD` | `71b5e17d587059a3477d624d4728009c6f7cae1d` |
+| arbol | `git status --porcelain` | **vacio al abrir la auditoria** |
+| origin | `git rev-parse origin/pasada-unica` | `71b5e17d...`, **igual a HEAD: todo pusheado** |
+| commits de la vuelta | `git log --format='%h %s' 17a477ac..HEAD` | **cuatro, los cuatro `VUELTA 89`** |
+| sello de apertura | `cat docs/loop/SALIDA_V89_HEAD_APERTURA.txt` | `17a477acdd6edaeeffd2f28467cde69335d1607b`, **el acta de la vuelta 88: correcto** |
+
+### 1.2. La apertura y el cierre, recomputados los dos por mi
+
+Instrumento propio, `docs/loop/_auditor_v89_medicion.py`, contando el grafo
+crudo; y el mismo conteo sobre `git show 17a477ac:dataset/metadata/master_graph.json`
+para la apertura (`_auditor_v89_apertura.txt`, `_auditor_v89_medicion.txt`).
+
+| cifra | apertura (mi conteo sobre `17a477ac`) | cierre (mi conteo sobre el arbol) | lo que el reporte publica |
+|---|---:|---:|---|
+| nodos / vivos / deprecados | 3.853 / 3.188 / 665 | 3.853 / 3.188 / 665 | **calza** |
+| `nodos_siguientes` | 8.996 | 8.995 | **calza** |
+| `nodos_previos` | 8.975 | 8.974 | **calza** |
+| suma | 17.971 | 17.969 | **calza** |
+| union dirigida unica | 9.619 | 9.618 | **calza** |
+| auto-aristas | 0 | 0 | **calza** |
+| listas con duplicadas internas | 0 | 0 | **calza** |
+| sha256 del `master_graph.json` | `6ea23964...cd9f` | `1671895b2a6cf99300a4065bf6bc4223feb91da5c02ef11e17feb7c7da8c7c22` | **calza** (el reporte publica el prefijo `1671895b2a6c`) |
+
+**Las aristas movidas son `-1 / -1 / -2 / -1`, y son la reversion y nada mas.**
+`git diff --stat 17a477ac..HEAD -- dataset/ web/` da **cinco ficheros**: los dos
+nodos del par, el compilado y los dos assets de web. El diff de `dataset/nodos/`
+lo lei entero: **quita `diseno_implementacion_remedio` de `nodos_siguientes` de
+`juran_rcca_metodo` y `juran_rcca_metodo` de `nodos_previos` de
+`diseno_implementacion_remedio`, y nada mas**. Estado hoy, leido del grafo:
+madre `['definicion_problema_moms_2', 'viaje_diagnostico_remedial']`, hijo
+`['evaluacion_alternativas_solucion']`. **La adjudicacion 5.1 esta cumplida.**
+
+### 1.3. El ciclo de tres, corrido entero por mi
+
+`scripts/run_phase1.py --reaplico-curaduria` (`_auditor_v89_gate0_cmd1.txt`,
+EXIT 0), luego `scripts/etiquetas_de_cara.py --aplicar`
+(`_auditor_v89_etiquetas.txt`, **71 etiquetas cambian**), luego
+`scripts/sync_assets_web.py` (`_auditor_v89_sync.txt`). **Medido por mi y no
+citado de nadie: despues del PRIMER comando solo,
+`git status --porcelain -- dataset/ web/lib/assets/` daba
+`M dataset/metadata/master_graph.json`; despues de los TRES, VACIO.** Es la
+prueba material de la adjudicacion 5.6 y de que el ejecutor la cumplio.
+
+**Gate 0: `GATE 0: OK`, 20 comprobaciones en `[OK]`**, auto-aristas 0,
+duplicadas de titulo 0, divergentes 0. Y mas duro: el `diff` de mis lineas
+`[OK]` mas el veredicto contra
+`docs/loop/SALIDA_V89_GATE0_CMD1_CIERRE.txt` sale **VACIO: identico**.
+
+### 1.4. Las tres suites, corridas por mi
+
+| suite | mi comando | mi salida |
+|---|---|---|
+| motor | `python engine/run_all_tests.py` | **TODOS LOS TESTS PASARON (25/25)**, EXIT 0 |
+| web | `npx vitest run` (en `web/`) | **80 passed (80)**, **1030 passed, 3 skipped (1033)**, EXIT 0 |
+| `tsc` | `npx tsc --noEmit` (en `web/`) | **EXITCODE 0, cero lineas** |
+
+### 1.5. La cabecera, cotejada con el tallador por mi
+
+`python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 89 --comparar docs/loop/REPORTE.md`
+(`_auditor_v89_comparar.txt`): **9 filas cotejadas, 0 DISTINTAS, 0 ausentes.
+CABECERA IDENTICA AL TALLADOR. EXIT 0.** Ninguna celda de la cabecera esta
+tecleada.
+
+### 1.6. El registro de `OP-E-01`, contado y cruzado por mi
+
+Contado de su fichero: **220 filas, 98 `ESCRITA`, 122 `NO SE ENLAZA`**, y la
+fila del par 117 dice `NO SE ENLAZA` con su nota de degradacion
+(`_auditor_v89_decididas.txt`). **Cruzado fila por fila contra las dos vistas
+del grafo de hoy: CERO filas que no calcen.** Re corri el horneador
+(`scripts/loop/vuelta85_hornear_decididas.py`) y la guarda
+(`scripts/loop/vuelta83_guarda_decididas.py --bolsa docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V87.jsonl`):
+**las dos salidas salen IDENTICAS BYTE A BYTE a las del ejecutor**
+(`diff` vacio), la guarda **VERDE, TODA LA BOLSA ESTA DECIDIDA**, y el
+horneador no movio el fichero (`git status` limpio despues).
+
+### 1.7. La correccion declarada, leida en los dos sitios
+
+`git diff 17a477ac..HEAD -- docs/plan/04_ENLACES.md`: **94 lineas anadidas,
+CERO borradas.** Trae el bloque `CORRECCION DECLARADA (29 ago 2026, vuelta 89)`
+con el motivo entero de la adjudicacion 5.1 citado en bloque, la correccion del
+precedente del par 91 (TRES intermedios, y que no corrobora a ninguna de las
+dos lecturas) y la cifra vigente **220 / 98 / 122**. El campo `nota` de
+`OP-E-01` en `docs/plan/OPERACIONES.jsonl`: **6.242 caracteres, con el ADDENDUM
+del 29 ago al final y el texto del 28 ago intacto delante**. El campo `estado`
+sigue en `LISTA`, y el censo del fichero da **71 operaciones, 70 `LISTA` y 1
+`HECHA`** (`_auditor_v89_ops.txt`): la adjudicacion 5.10 del acta 86 se sigue
+cumpliendo.
+
+### 1.8. La linea base de `OP-C-05`, medida por mi
+
+`python scripts/plan/aristas_duplicadas_tras_resolver.py`
+(`_auditor_v89_duplicadas.txt`): **935 entradas que sobran, 711 nodos con al
+menos una duplicada.** Al digito lo del ejecutor. Y corri **su** instrumento en
+`--caso-rojo` (`_auditor_v89_tarea4_rojo.txt`): la copia fabricada da **936**
+(935 mas 1), el rojo se comporta como debe, y `git status --porcelain -- dataset/`
+sale **vacio antes y despues**. Lei el codigo de `--despues`: compara contra el
+sello de `--antes`, **devuelve 1 si la cuenta crecio** y muere si el sello no
+existe en vez de inventar la cuenta. **La TAREA 4 esta bien hecha y la doy por
+buena entera.**
+
+### 1.9. Los guiones y el marcador
+
+`git diff 17a477ac..HEAD | grep '^+' | grep -cP` de guion largo y guion medio da
+**0**: cero guiones largos y cero guiones medios en TODAS las lineas anadidas
+de la vuelta, compilados incluidos. Marcador del cribado recomputado por mi de
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (`_auditor_v89_marcador.txt`): **3.388
+filas, A 551, B 72, C 5, D 2.760**, sin cambio, como el reporte dice.
+
+## 2. LA RELECTURA CIEGA DE LOS TRES DISCUTIBLES
+
+**MI PROPIO INCUMPLIMIENTO DEL METODO, DECLARADO ANTES DE NADA**, igual que en
+las actas 80 y 82 a 88: `AUDITOR.md` 1.2 manda imprimir PRIMERO los pasos y
+destapar DESPUES la razon escrita, y yo llego a la relectura habiendo leido ya
+el reporte entero, porque la 1.1 me obliga a verificarlo primero. **La ceguera
+es imperfecta y lo digo en vez de fingirla.** Lo material si lo hice entero:
+volque **las seis fichas** (los pares de los tres discutibles) con instrumento
+propio (`docs/loop/_auditor_v89_fichas.py`, salidas
+`_auditor_v89_ficha_530.txt` y `_auditor_v89_ficha_581_932.txt`), adjudique
+sobre los pasos, y solo despues abri las frases
+(`_auditor_v89_frases_caidas.txt`).
+
+### 2.1. Puesto 530, `estrategia_de_innovacion_de_producto -> estrategia_de_innovacion_y_tecnologia`: DISCREPO, ENTRA
+
+**Mi lectura de las fichas, antes de la frase.** `nodo_a` es la estrategia
+entera en SEIS pasos (objetivos, metas, arenas, buckets, roadmap, vision) y su
+**paso 3, en una linea**, dice *"Definir arenas estrategicas (mercados,
+tecnologias, sectores) donde enfocar los esfuerzos de innovacion"*. `nodo_b`
+son CINCO pasos dedicados enteros a eso mismo: identificar mercados atractivos,
+evaluar competencias core, seleccionar las arenas, delimitar dentro y fuera, y
+usarlas de filtro en el gate. **Es el patron canonico de `OP-E-06` en su forma
+mas pura: la madre despacha en UNA LINEA lo que el otro trae completo.**
+
+**La frase, destapada:** *"Lo unico que el segundo tiene es la palabra arenas,
+en UNA LINEA dentro de una lista de seis que va de objetivos a roadmap: definir
+arenas estrategicas, mercados, tecnologias y sectores, donde enfocar los
+esfuerzos."* **La frase no se queda en la palabra: CITA LA LINEA ENTERA**, y la
+linea que cita es literalmente el paso 3 de `nodo_a`.
+
+**Y la vara que decide, que no es mi gusto sino la consistencia del propio
+criterio del ejecutor:** el puesto **1169** sobrevive en la bolsa con la frase
+completa *"Su paso 2 nombra las etapas de inversion en UNA LINEA."* (54
+caracteres, ni un nombre de nodo, ni una cita de contenido), y el **1002**
+sobrevive con *"catalogo_pivotes ENUMERA los tipos en UNA LINEA: ..."*, donde
+la palabra `enumera` no lo tumba porque va seguida de la cita. **El 530 dice
+estrictamente MAS que el 1169 y tiene la misma forma que el 1002, y sale.** Un
+criterio que deja dentro al 1169 no puede dejar fuera al 530. **ADJUDICO:
+ENTRA.**
+
+### 2.2. Puesto 581, `cumplimiento_magnuson_moss -> prohibicion_tie_in_sales`: COINCIDO, NO ENTRA, y digo lo que eso cuesta
+
+**Mi lectura de las fichas, antes de la frase.** La madre tiene cuatro pasos y
+su **paso 3, en una linea**, dice *"Revisa que tu garantia no obligue al
+cliente a comprarte algo mas ni use frases enganosas"*, que es exactamente la
+prohibicion de tie-in; su resumen la nombra otra vez (*"ni condicionar tu
+garantia a que el cliente compre otro producto o servicio tuyo"*). `nodo_b`
+trae los tres pasos del procedimiento. Y medido por mi en el grafo de hoy: los
+`nodos_siguientes` de la madre son `clasificacion_garantia_full_limited`,
+`regla_divulgacion_garantia`, `regla_disponibilidad_previa_venta` y
+`contratos_de_servicio_garantia`: **`prohibicion_tie_in_sales` NO esta.** Por
+contenido, este par es tan canonico como el 530.
+
+**La frase, destapada:** *"Cuando la madre demuestra que si sabe enlazar a sus
+hijos, la arista que falta es una omision del grafo y no una prueba de
+duplicacion, y el arreglo barato es la arista, del banco 9."* **Es un argumento
+metodologico entero: no nombra ni un contenido de ninguno de los dos nodos.**
+
+**COINCIDO CON EL EJECUTOR: NO ENTRA**, y no por gusto sino por la letra de la
+verificacion de `OP-E-06` que el acta 88 cito y que sigue vigente: *"Si una
+razon no lo dice, el par NO entra en esta operacion"*. La operacion esta acotada
+por lo que la razon cosechada dice, no por lo que yo lea en las fichas. **Pero
+declaro medido lo que esa exclusion cuesta, porque nadie lo ha dicho todavia:
+el par se cae por como quedo cosechada su frase, no por su contenido**, y va a
+`PENDIENTES` como candidato de una pasada posterior. Es exactamente el mismo
+efecto para el 650, cuya frase (*"prohibicion_tie_in_sales es uno de los DOS
+que la madre no enlaza, aunque enlaza a tres de cinco"*) habla de la misma
+familia.
+
+### 2.3. Puesto 932, `cumplimiento_magnuson_moss -> mecanismo_resolucion_disputas`: DISCREPO, NO ENTRA
+
+**Mi lectura de las fichas, antes de la frase.** Los cuatro pasos de la madre
+son: decidir si ofrece garantia escrita; verificar los tres requisitos (titulo,
+divulgacion, disponibilidad previa); revisar que no obligue a comprar otra cosa
+ni use frases enganosas; consultar abogado. Su resumen entero recorre titulo,
+divulgacion, disponibilidad previa, garantias implicitas, tie-in y terminos
+enganosos. **En ninguna linea, ni en los pasos ni en el resumen, aparece el
+mecanismo informal de resolucion de disputas.** Y el `nodos_previos` de
+`mecanismo_resolucion_disputas`, medido hoy, es `regla_divulgacion_garantia`,
+no la madre. **Mi adjudicacion desde las fichas: la madre NO nombra este
+contenido en ninguna linea. NO ENTRA.**
+
+**La frase, destapada:** *"O NUEVO: cumplimiento_magnuson_moss nombra en DOS
+LINEAS a cuatro nodos hermanos de esta familia, el titulo, la divulgacion, la
+disponibilidad previa y la prohibicion de tie-in, y no enlaza con ninguno."*
+**La frase nombra los cuatro, y `mecanismo_resolucion_disputas` NO es ninguno
+de los cuatro.** O sea que la frase, leida entera, dice lo contrario de lo que
+haria entrar al par: dice que la madre nombra a OTROS cuatro.
+
+**Y la duda que el reporte deja abierta se cierra midiendo, no leyendo:** el
+reporte dice que el fichero de origen esta truncado a 200 caracteres y que por
+eso *"no deja verificar"* si el par es uno de los cuatro. **Contado por mi, esa
+frase mide 202 caracteres, termina en punto y con la oracion completa, y trae
+los cuatro nombres escritos.** Lo truncado es su INICIO (empieza en *"O NUEVO:"*),
+que no es donde estaba la duda. **La frase si deja verificarlo, y lo que se
+verifica es que el par no esta entre los cuatro.**
+
+**DISCREPO Y ADJUDICO: NO ENTRA.** Y esta es la discrepancia que mas pesa de
+las tres, porque es la unica que iba a ESCRIBIR una arista: si la vuelta 90
+hubiera abierto `OP-E-06` con la bolsa tal como esta, habria cableado
+`cumplimiento_magnuson_moss -> mecanismo_resolucion_disputas` sobre una frase
+que nombra a cuatro hermanos distintos.
+
+**El ejecutor marco los tres como discutibles, y el 932 lo marco diciendo que
+era el unico donde la duda podia mover la fila hacia afuera. La marca hizo
+exactamente lo que la 6.7 del acta 87 dice que hace.**
+
+### 2.4. Por que estas dos discrepancias NO son caidas de clase, y lo digo con el precedente delante
+
+Las tres estan **DENTRO de los discutibles marcados** y **ninguna movio un
+dato**: la bolsa es una lista de candidatos y esta vuelta no escribio ni una
+arista de `OP-E-06`. Por el precedente que esta campaña lleva seis actas
+aplicando (**75, 78, 79, 80, 83 y 86**, esta ultima con la frase literal *"las
+tres discrepancias son sobre NO enlazadas, dentro de los discutibles marcados,
+y por el precedente de las actas 75, 78, 79, 80 y 83 son adjudicacion"*),
+**son ADJUDICACION, no caida de clase.** Lo digo explicito porque el acta 88
+dejo escrito que *"cualquier otra caida de clase o de cifra publicada es
+PARADA"*: **no la hay. La racha de clase o cifra publicada vuelve a CERO.**
+
+### 2.5. La relectura AL DOBLE del tramo, que el credito rebajado obligaba
+
+`AUDITOR.md` 1.2 me obligaba a releer el tramo de la re-base al doble. Lo hice
+sobre **las 129 frases**, no sobre una muestra, y lo separo en dos cuentas:
+
+- **Las 12 que caen**, leidas una por una con su frase entera
+  (`_auditor_v89_frases_caidas.txt`): **diez las doy por buenas** (455, 490,
+  522, 650, 658, 669, 676, 778, 795, 816: todas o niegan el enlace del par, o
+  son argumento de familia sin contenido propio), **una la revierto** (530) y
+  **una** (581) la confirmo con la nota medida de 2.2.
+- **Las 117 que quedan**, impresas y leidas enteras las 117: **ninguna niega el
+  enlace del par.** Todas traen la forma positiva (*"X dice / despacha / nombra
+  / trae en UNA LINEA <contenido>"*). **Cero hallazgos nuevos de la especie de
+  la caida 4.1 del acta 88: el defecto que bajo el credito de la tanda 88 esta
+  corregido.** La unica fila de las 117 que hay que sacar es el **932**, por lo
+  de 2.3.
+- **Verificado por conteo propio y no por la palabra de nadie:**
+  `OP_E_06_REBASE_V89.jsonl` tiene **117 filas**, `OP_E_06_REBASE_V88.jsonl`
+  sigue con **129 y sin tocar**, **V89 es subconjunto estricto de V88**, y las
+  12 que faltan son **exactamente las 12 que el reporte nombra**, ni una mas ni
+  una menos. Las tres de la caida 4.1 (455, 490, 522) **salieron las tres**.
+
+**Cifra de la bolsa despues de mis dos adjudicaciones: 117** (117 mas el 530
+menos el 932). Coincide en el numero y **no en el conjunto**, y por eso hay que
+reescribir el fichero, no dejarlo.
+
+## 3. LAS CAIDAS DE REPORTE DE ESTA VUELTA, CON SU NOMBRE Y SU MEDICION
+
+### 3.1. La tercera de la racha: el truncado a 200 caracteres
+
+El reporte, seccion TAREA 3, **HALLAZGO ADICIONAL** (lineas 305 a 309), publica:
+
+> el campo `frase` de `docs/plan/COSECHA_RAZONES_D.jsonl` esta truncado a **200
+> caracteres exactos** en varias filas (**verificado**: `len(frase) == 200` en
+> las filas que cortan a mitad de palabra, por ejemplo puestos 1134, 1149,
+> 1995, **2023**, **2082**, 2106, 2038, entre otras)
+
+**Contado por mi del fichero** (`_auditor_v89_truncado.txt`):
+
+| puesto citado | `len(frase)` medido hoy |
+|---:|---:|
+| 1134 | 200 |
+| 1149 | 200 |
+| 1995 | 200 |
+| **2023** | **305** |
+| **2082** | **263** |
+| 2106 | 200 |
+| 2038 | 200 |
+
+**Dos de los siete ejemplos que la frase ofrece para sostenerse la desmienten**,
+y la palabra que los introduce es *"verificado"*. Y el propio reporte lo sabe:
+**mas abajo**, en `PENDIENTES DE DOCTRINA`, escribe *"deja algunas frases de la
+bolsa re-basada sin su final (o su inicio, **en las filas 2015, 2023, 2082**)"*,
+o sea que reconoce que 2023 y 2082 son de otra especie (cortan al INICIO) y aun
+asi las lista como ejemplos de `len == 200`.
+
+**Las dos lecturas posibles de la frase fallan las dos, y lo digo para no
+adjudicar por la lectura que mas me convenga:** si la lista son ejemplos de
+`len == 200`, dos de siete son falsos; si la lista son ejemplos de *"filas que
+cortan a mitad de palabra"*, entonces la afirmacion universal que los une
+(*"`len(frase) == 200` en las filas que cortan a mitad de palabra"*) queda
+desmentida por esos mismos dos ejemplos, que cortan a mitad de palabra y miden
+305 y 263.
+
+**Lo que si es cierto y lo mido para que quede la cifra buena:**
+`COSECHA_RAZONES_D.jsonl` tiene **397 filas**, **270 con `len(frase)` exactamente
+200**, **23 con mas de 200** y un maximo de **335**. El truncado existe; el
+dictado que lo publica es el que falla. **No mueve ningun dato: vive solo en
+`REPORTE.md` y ninguna de las doce exclusiones depende de el. Es caida de
+REPORTE.**
+
+### 3.2. La segunda de la vuelta: el caso rojo de la TAREA 3.d no puede fallar
+
+El reporte publica (3.d): *"Los dos casos se comportan como el criterio nuevo
+exige y como el filtro viejo no habria dado."* **Abri el codigo**
+(`scripts/loop/vuelta89_tarea3_rebase_ope06.py`, lineas 504 a 531) y esto es lo
+que hay:
+
+```
+veredicto_2 = "ENTRA"  # dice explicitamente quien explica el procedimiento de quien
+...
+assert veredicto_2 == "ENTRA", "CASO ROJO 2 NO CAYO EN VERDE: revisar el criterio"
+```
+
+**`veredicto_2` es una constante literal y el `assert` compara `"ENTRA"` con
+`"ENTRA"`: no puede fallar nunca.** Y `veredicto_1` no sale del criterio de la
+vuelta tampoco: sale de un `in` de cadena escrito a medida de esa unica frase
+fabricada (`"ninguno enlaza al otro" in frase.lower()`), que no es lo que
+clasifica las 129 filas. **La clasificacion real de la bolsa es la tabla
+`DECISIONES`, escrita a mano fila por fila**, cosa que el reporte declara con
+honestidad en 3.b; pero entonces **el criterio no es codigo y no hay caso rojo
+automatico que lo pruebe**, y lo que habia que escribir es eso, no una prueba
+que se aprueba sola.
+
+**Lo mismo, mas leve, en 3.c:** el chequeo ROJO de los puestos 455, 490 y 522
+compara la salida de la tabla `DECISIONES` contra una constante que dice que
+esos tres estan fuera, y la tabla los tiene fuera escritos a mano. **Sirve
+contra una errata en la tabla, y eso lo cuento a favor**; no es una prueba del
+criterio. El reporte lo presenta como *"un chequeo ROJO automatico que habria
+detenido la escritura"*, que es mas de lo que hace.
+
+**No mueve ningun dato tampoco: es caida de REPORTE, y de la misma familia que
+la 3.1**, una afirmacion escrita sin abrir lo que la desmentiria, que aqui es
+su propio codigo. **La cuento UNA vez y no la cuento ademas como incumplimiento
+de encargo, para no condenar dos veces el mismo acto.**
+
+## 4. ADJUDICACIONES DE ESTA VUELTA
+
+**4.1.** **El puesto 530 ENTRA en la bolsa de `OP-E-06`.** Por la seccion 2.1:
+su frase cita la linea entera y no la palabra, y el criterio que deja dentro al
+1169 y al 1002 no puede dejarlo fuera. Extension citable del criterio ya
+adjudicado (encargo de la 89, 3.a), no doctrina nueva.
+
+**4.2.** **El puesto 932 SALE de la bolsa de `OP-E-06`.** Por la seccion 2.3:
+su propia frase nombra a cuatro hermanos y `mecanismo_resolucion_disputas` no
+es ninguno, y las fichas confirman que la madre no nombra ese contenido en
+ninguna linea. Por la letra de la verificacion de `OP-E-06` (*"si una razon no
+lo dice, el par NO entra"*), sale.
+
+**4.3.** **El puesto 581 se queda fuera, y la exclusion se declara con su
+motivo real.** Por la seccion 2.2: la letra de `OP-E-06` manda, aunque las
+fichas del par muestren el patron canonico. **Va a `PENDIENTES` como candidato
+de una pasada posterior, junto con el 650**, y no como error del ejecutor.
+
+**4.4.** **El fichero `OP_E_06_REBASE_V89.jsonl` NO se corrige en esta vuelta y
+NO se borra.** Se corrige en la vuelta de reanudacion, a fichero propio nuevo
+(`V90`), con las dos adjudicaciones aplicadas y las dos cifras delante, que es
+como esta campaña corrige. **La bolsa vigente para abrir `OP-E-06` sera la V90,
+no la V89.**
+
+**4.5.** **La TAREA 4 queda ratificada entera** (seccion 1.8): el instrumento,
+sus tres modos, su rojo real sobre copia y la linea base **935 en 711 nodos**.
+Es la via que `OP-E-06` usa, y esta cableada y probada.
+
+**4.6.** **La reversion del 117 y sus correcciones declaradas quedan
+ratificadas enteras** (secciones 1.2, 1.6 y 1.7). La cifra vigente de `OP-E-01`
+es **220 / 98 ESCRITA / 122 NO SE ENLAZA** y esta escrita en los dos sitios sin
+borrar nada.
+
+**4.7.** **Un caso rojo que no puede fallar no es un caso rojo, y cuando el
+criterio no es codigo se dice.** Adjudicacion por extension citable del canon de
+fallar ruidoso (banco 9) y de `EJECUTOR.md` 1 (*"la celda que no salga de un
+instrumento no se escribe"*): si la vara es una lectura humana escrita a mano,
+**se declara como tal y no se le fabrica una prueba automatica**; y si se
+escribe una prueba, tiene que poder salir en rojo con el codigo tal como esta.
+
+## 5. LAS CONDICIONES DE PARADA, REPASADAS UNA A UNA
+
+| condicion | esta vuelta |
+|---|---|
+| Doctrina NUEVA necesaria | **NO.** Las tres adjudicaciones salen del criterio ya adjudicado, de la letra de la verificacion de `OP-E-06` y del precedente de seis actas |
+| Contradiccion con regla vigente o cifra publicada sin remedio | **NO.** La cifra de `OP-E-01` quedo corregida esta vuelta; la de la bolsa se corrige con fichero nuevo y las dos cifras delante |
+| Decision de fundador (lo que la casa reserva) | **NO.** Nada se borro, el alcance no cambia, no se gasto fuera del repo, nada se toco fuera de `pasada-unica` |
+| Fallo tecnico repetido | **NO.** Gate 0 con su ciclo de tres, motor 25/25, web 1.030 con 3 saltadas y `tsc` en cero, **todo verde a la primera y por corrida propia** |
+| Credito de tanda: **CLASE O CIFRA PUBLICADA** | **NO, y vuelve a CERO.** Cero caidas de clase (las dos discrepancias son adjudicacion, seccion 2.4) y cero de cifra publicada: recompute cabecera, las ocho cifras del grafo en dos refs con sha256, marcador, registro cruzado fila por fila, desfase, bolsa contada y cruzada, las dos cifras de duplicadas y la cifra de `OP-E-01`: **ni un digito.** La del 117 quedo cerrada y REVERTIDA esta vuelta |
+| Credito de tanda: **REPORTE** | **SI. TRES TANDAS SEGUIDAS: 87, 88 y 89.** `AUDITOR.md` seccion 4: *"TRES seguidas si son PARADA: tres de la misma especie ya no son ruido, son un patron de dictado suelto"* |
+| Campaña consumada | **NO.** Quedan nueve operaciones en la fase 04, mas las fases 05, 06 y 07 |
+| Credenciales ausentes | **NO.** Ninguna suite las pidio |
+| CIERRE DE LA FASE 03 | **CUMPLIDA** el 26 ago 2026, citable y no repetible |
+| CIERRE DE LA FASE 05 | **NO APLICA.** La fase 04 sigue abierta |
+
+**HAY PARADA, Y ES LA DE LA RACHA DE REPORTE.** Se escribe
+`docs/loop/PARA_ALEXIS.md` y `docs/loop/PROMPT_SIGUIENTE.md` queda **VACIO**.
+
+**LA ARITMETICA DE LA RACHA, CON LAS TRES ESPECIES DELANTE, porque una parada
+se justifica o no se dispara:**
+
+- **Tanda 87** (acta 88, seccion 3 y su tabla): DOS. *"esa cifra no se puede
+  reproducir"* (se reprodujo al digito) y *"LA TABLA, pegada entera"* sobre una
+  tabla con dos celdas escritas a mano.
+- **Tanda 88** (acta 88, seccion 3): UNA. *"los 36 pares que tocan un nodo
+  deprecado NO se quitan de la bolsa"*: son **17**, no 36.
+- **Tanda 89** (esta acta, seccion 3): DOS. El `len(frase) == 200` *"verificado"*
+  en dos filas que miden 305 y 263, y el caso rojo que no puede fallar.
+
+**Las tres tandas son de la misma especie exacta**, y no lo digo yo hoy: lo dijo
+el encargo de esta vuelta por adelantado, con estas palabras, *"queda UNA de
+margen, y las tres serian de la misma especie exacta: una afirmacion de
+composicion o de proveniencia escrita sin abrir el fichero que la desmiente"*.
+**Es esa, literal, las dos veces.** La regla no me deja elegir.
+
+## 6. MIS PROPIOS ERRORES, DECLARADOS CON NOMBRE
+
+1. **LA ESCALADA AUTOMATICA QUE YO DEBIA ENCARGAR Y NO ENCARGUE, Y ES LA PEOR
+   DE LAS MIAS EN VARIAS VUELTAS.** `EJECUTOR.md` regla 1 lo tiene escrito por
+   decision del fundador del 26 ago 2026: *"SI LA RACHA DE CAIDAS DE REPORTE
+   LLEGA A DOS TANDAS OTRA VEZ, la extension del tallador a las fases mecanicas
+   (toda tabla del reporte tallada de ficheros de salida) queda AUTOMATICAMENTE
+   ENCARGADA como operacion de codigo en la vuelta siguiente, SIN esperar
+   parada ni decision nueva del fundador"*. **Mi acta 88 declaro la racha en
+   DOS y NO encargo la extension**: el encargo de la vuelta 89 pone la regla en
+   prosa (*"ninguna afirmacion de composicion sin abrir el fichero"*) pero no
+   la operacion de codigo. **El remedio que Alexis ya habia decidido estaba
+   disponible y yo no lo puse a trabajar. Esa parte de esta parada es mia.**
+2. **El resto de mi encargo de la 89 lo doy por bueno y lo mido:** las varas de
+   apertura que publique (censo, aristas, Gate 0, motor, web, `tsc`, desfase,
+   marcador y sha256) las volvi a medir hoy contra `17a477ac` y **calzan las
+   nueve**. La prediccion al digito de la 2.f (aristas, movidas, desfase a 1) se
+   cumplio entera.
+3. **La ceguera imperfecta de siempre**, declarada en la seccion 2.
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda:** **tres relecturas** de unidad (los puestos 530, 581 y 932) desde
+**seis fichas** volcadas por mi, **la lectura entera de las 129 frases de la
+bolsa** (las 12 caidas con su texto completo y las 117 supervivientes una por
+una), y **las varas propias**: las ocho cifras del grafo en **dos refs con
+sha256 en las dos**, Gate 0 con el ciclo de tres y sus veinte comprobaciones
+mas el `diff` contra la salida del ejecutor, las tres suites, el `--comparar`
+de la cabecera, el marcador entero, el registro de 220 filas **cruzado fila por
+fila contra las dos vistas**, **tres instrumentos del ejecutor re corridos y los
+tres identicos byte a byte** (horneador, guarda de decididas y caso rojo de
+`OP-C-05`), el instrumento de duplicadas con sus dos cifras, el conteo de
+`COSECHA_RAZONES_D.jsonl` entero (397 filas, 270 en 200, 23 por encima), la
+lectura del codigo de las dos piezas nuevas de la vuelta, el diff de `dataset/`
+leido linea a linea y los guiones en todo el diff.
+
+**Caidas del ejecutor en esta tanda:**
+
+| especie | cuantas | cual |
+|---|---:|---|
+| **de clase (mueve dato)** | **CERO** | las dos discrepancias (530 y 932) son **sobre filas de una bolsa de candidatos, sin una sola arista escrita, y DENTRO de los discutibles marcados**: adjudicacion por el precedente de las actas 75, 78, 79, 80, 83 y 86 (seccion 2.4) |
+| **de cifra publicada** | **CERO** | recompute cabecera, grafo en dos refs con sha256, marcador, registro, desfase, bolsa contada y cruzada, duplicadas y la cifra de `OP-E-01`: **ni un digito** |
+| **de reporte** | **DOS** | 3.1 el `len(frase) == 200` *"verificado"* en dos filas que miden 305 y 263; 3.2 el caso rojo de la TAREA 3.d, que compara `"ENTRA"` con `"ENTRA"` y no puede fallar |
+| **de expediente** | **CERO** | las dos correcciones declaradas del 29 ago estan medidas, completas y sin borrar el texto del 28 |
+| **incumplimiento de encargo** | **CERO** | repase el encargo punto por punto contra el repo: sello previo y correcto, las cuatro tareas con su commit, cero aristas de `OP-E-06` verificadas por diff, cabecera tallada y `--comparar` en EXIT 0, cero guiones en todo el diff, tres discutibles marcados **de verdad y bien marcados** (los tres eran los que habia que marcar). **El repaso del reporte vuelve a ser honesto** |
+
+**Caidas del auditor:** ninguna de cifra ni de clase; **UNA de acta, y grave**
+(seccion 6 punto 1: la escalada automatica no encargada).
+
+**Acumulado:** **653 relecturas** (650 mas tres), **886 puestos** (sin cambio),
+**10 caidas de clase** (sin cambio), **49 de reporte del ejecutor** (47 mas
+dos), **14 de cifra publicada del ejecutor** (sin cambio), **1 de expediente del
+ejecutor** (sin cambio), **1 de incumplimiento de encargo del ejecutor** (sin
+cambio), 3 de cifra del auditor, **10 de acta del auditor** (9 mas una), **17 de
+procedimiento del auditor** (sin cambio), 1 de reporte del auditor, y 1 vuelta
+no entregada.
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA: CERO.** La del 117 se cerro y se REVIRTIO esta
+> vuelta, y no hay ninguna nueva. **La racha se rompio y volvio a cero**, y lo
+> digo con el mismo cuidado con el que la habria disparado: el acta 88 dejo
+> escrito que otra caida de esta especie seria parada, y **no la hay**.
+>
+> **REPORTE: TRES SEGUIDAS** (87, 88 y 89), de la misma especie exacta.
+> `AUDITOR.md` seccion 4: **PARADA**.
+>
+> **INCUMPLIMIENTO DE ENCARGO: CERO en esta vuelta.** El acumulado sigue en 1.
+>
+> **CREDITO DE TANDA: SUBE en lo que se midio y BAJA en lo que se dicto.** El
+> defecto que bajo el credito de la tanda 88 (frases que niegan el enlace
+> dentro de la bolsa) **esta corregido y lo verifique leyendo las 117**; los
+> tres discutibles estaban bien marcados; y las dos caidas de esta tanda
+> cayeron **fuera** del marcado, que es lo que dispara la parada.
