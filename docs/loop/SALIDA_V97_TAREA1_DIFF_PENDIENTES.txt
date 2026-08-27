@@ -1,0 +1,204 @@
+diff --git a/docs/PENDIENTES.md b/docs/PENDIENTES.md
+index acfa373f..ed266d8d 100644
+--- a/docs/PENDIENTES.md
++++ b/docs/PENDIENTES.md
+@@ -3897,6 +3897,14 @@ guarda se DECLARA en vez de fabricarle un rojo que se apruebe solo:** la guarda
+ `clasifica_razon()` alimente las dos piezas, asi que **NO TIENE CASO ROJO
+ AUTOMATICO** y asi queda escrito en el propio instrumento.
+ 
++**ADJUDICADO EN LA VUELTA 97, y el texto de arriba se queda entero.** El acta de
++la vuelta 96, seccion **4.2** (`docs/loop/ACTA_AUDITOR.md` linea **34317**, leida
++hoy), da la razon a esta discrepancia: **el "ocho" es del auditor y esta mal**, y
++el propio auditor lo lleva a sus errores con nombre (seccion 6 punto 1, linea
++**34457**). La correccion queda registrada en la seccion **VUELTA 97, TAREA 1**
++apartado **(1.2)** de este mismo fichero, y **NO se remide**, porque ya viene
++medida dos veces.
++
+ ### (1.4) LAS ADJUDICACIONES DEL ACTA 95, cada una por su numero
+ 
+ Leidas hoy con `grep -n '^### ' docs/loop/ACTA_AUDITOR.md` sobre el tramo del
+@@ -4114,6 +4122,18 @@ propio criterio de verificacion escrito (para `OP-E-07`, la razon), y la lectura
+ ciega del auditor sigue siendo control de calidad de la clase, no fuente de
+ direccion. **Es lo que ya se hace de hecho; lo que falta es que este escrito.**
+ 
++**RESUELTO EN LA VUELTA 97, Y EL TEXTO DE ARRIBA NO SE BORRA** (`EJECUTOR.md`
++regla 8: *"una correccion que tapa lo que corrige no se puede auditar"*). El acta
++de la vuelta 96, seccion **4.5** (`docs/loop/ACTA_AUDITOR.md` linea **34381**,
++leida hoy con `grep -n '^### 4\.'`), lo adjudica **POR EXTENSION CITABLE y NO
++como doctrina nueva**, con esta letra: **manda el criterio escrito de la
++operacion; la lectura ciega del auditor es control de la clase y detector de
++discrepancia, NUNCA fuente de direccion.** Es lo mismo que este apartado dejo
++escrito como "lo mejor sostenido", asi que **no cambia el trabajo**: lo que
++faltaba era que estuviera escrito. La letra entera, con sus dos citas y con lo
++que expresamente NO reabre, esta en la seccion **VUELTA 97, TAREA 1** apartado
++**(1.3)** de este mismo fichero.
++
+ ## VUELTA 96, TAREA 3: `OP-E-03` EMPIEZA A LEERSE. PRIMER TRAMO, 40 DE 183, CON SUS CINCO PUNTOS DE VERIFICACION CUMPLIDOS
+ 
+ **Origen:** encargo de la vuelta 96, TAREA 3, que recoge la parada deliberada y
+@@ -4275,3 +4295,165 @@ una asercion que se apruebe sola, que es la caida 2 de la vuelta 89.
+ `OP-E-03` es LECTURA DIRIGIDA y su producto es el juicio, no el cableado; el
+ cableado de lo que estas lecturas habiliten es decision de otra operacion y de
+ otra vuelta.
++
++## VUELTA 97, TAREA 1: LOS REGISTROS DEL ACTA 96 (acta de la vuelta 96, `ACTA_AUDITOR.md` lineas 34025 a 34536, leidas hoy)
++
++**DE DONDE SALEN LAS LINEAS DE ESTA SECCION, para que se puedan volver a correr.**
++Ninguna cita de linea esta tecleada de memoria (`EJECUTOR.md` regla 1, "LA CITA
++LLEVA SU LINEA"). Los cortes del acta se leyeron HOY con
++`grep -n '^# ACTA DE LA VUELTA 96\|^## [0-9]\.' docs/loop/ACTA_AUDITOR.md` y con
++`grep -n '^### 4\.[1-6]' docs/loop/ACTA_AUDITOR.md`, y el final del acta con
++`wc -l docs/loop/ACTA_AUDITOR.md`, que da **34536**: el acta 96 es la ultima del
++fichero, asi que su cierre es el cierre del fichero.
++
++**EL ESTADO DE LA TANDA ANTERIOR, tal como el acta lo escribe** (seccion 5, linea
++**34434**): **CAIDAS DEL EJECUTOR EN ESTA TANDA: NINGUNA, DE NINGUNA ESPECIE**,
++con las cinco especies en CERO (clase, cifra publicada, reporte, expediente,
++incumplimiento de encargo). El acta lo llama *"la primera tanda de la campana sin
++una sola caida"*. Se registra aqui sin adornarlo y sin rebajarlo, y **con el
++freno delante**: la especie que cayo tres veces seguidas (la cuenta de piezas de
++artefacto contada a ojo) se talla SIEMPRE, tambien las faciles.
++
++### (1.1) LAS SEIS ADJUDICACIONES DEL ACTA 96, cada una por su numero, con su linea leida hoy y su efecto sobre el trabajo
++
++| num | linea del acta | que adjudica | efecto sobre el trabajo |
++|---|---:|---|---|
++| **4.1** | 34274 | Discutible 1, LA VARA: **CONFIRMADO**, y probado en vez de opinado | **CIERRA la mesa.** Nada que rehacer |
++| **4.2** | 34317 | Discutible 5, el "OCHO": **el ejecutor tiene razon**, la caida es del auditor | Correccion declarada, apartado **(1.2)** |
++| **4.3** | 34356 | Discutibles 2, 4 y 6 (pares **26**, **16** y **23**): **CONFIRMADOS los tres** | **CIERRA** las tres clases del tramo 1. Nada que rehacer |
++| **4.4** | 34367 | Discutible 3, las once direcciones no resueltas: **el umbral esta bien puesto** | **NO se toca el umbral** en el tramo de hoy |
++| **4.5** | 34381 | El pendiente de doctrina: **NO ES PARADA**, adjudicado por extension citable | Marcado RESUELTO, apartado **(1.3)** |
++| **4.6** | 34415 | La deriva de contenido: **citada bien**, y sigue **RESERVADA** | **NO se toca.** Sigue anotada para Alexis y sin encargar |
++
++**LA 4.1, CON SU CIFRA (linea 34274).** El acta acepta la invitacion que el
++reporte de la vuelta 96 le hizo (*"si el auditor construye una vara que las
++reproduzca todas, mi conclusion cae"*) y construye **TRECE varas distintas**
++sobre el texto de la razon, corridas contra las **19 adjudicaciones publicadas**.
++Su veredicto, literal en la linea **34297**: **"NINGUNA DE LAS TRECE REPRODUCE
++LAS DIECINUEVE."** La mejor llega a **17 de 19** (mejor que la del ejecutor, que
++llego a 14 de 19) y **sigue contradiciendo dos adjudicaciones publicadas**, el
++**1281** y el **1992**, con lo cual **cae por la misma vara con la que el ejecutor
++descarto la suya**. Adjudicacion literal, linea **34307**: *"la conclusion 'NO HAY
++VARA CITABLE' se sostiene, y ahora esta medida con trece intentos y no con uno"*.
++
++**Y el segundo resultado de la 4.1, que es el que de verdad cierra la mesa:** las
++**tres** varas que llegan a 17 dicen **QUEDA a los tres pares de la mesa** (886,
++890 y 947). O sea que **el destino de los tres no depende de la vara elegida**.
++Los tres **QUEDAN COMO ESTAN** y la duda queda sellada, que es la rama que la
++decision 2 del fundador escribio.
++
++**Lo que la 4.1 deja dicho sin llamarlo caida, y se registra igual porque es
++material para quien vuelva sobre la mesa:** la vara que el ejecutor eligio **no
++era la mas fuerte disponible** (14 de 19 contra 17 de 19). El acta explica por
++que no es caida: *"el propio ejecutor marco esa eleccion como su discutible
++numero 1 y pidio justo esta prueba"*.
++
++**LA 4.3, CON LOS TRES PARES NOMBRADOS (linea 34356).** El auditor leyo los tres
++a ciegas antes de destapar y **coincide en los tres**: el **26** es **D** y no A
++(dos de las tres instrucciones que anade, la interdependencia hardware y software
++y el cronograma estable, **no aparecen en ninguna forma en el otro nodo**, y el
++`titulo_ratio` 91,7 es senal de titulo, que por banco `9.6.3` no decide); el
++**16** lo leyo **invertido por su cuenta**, o sea que la direccion contraria a la
++etiqueta de la bolsa se sostiene con dos lecturas independientes; y el **23** es
++**B** porque *"ninguno contiene al otro"*.
++
++**LA 4.4, QUE ES LA QUE MANDA SOBRE EL TRABAJO DE HOY (linea 34367).** El
++ejecutor sospecho de si mismo (*"once de cuarenta es mucho"*) y nombro las cinco
++que con un umbral mas laxo se afirmarian: **11, 22, 35, 36, 37**. El auditor
++**leyo las cinco a ciegas y llego a NO RESUELTA en las cinco por su cuenta**, en
++tres de ellas con el mismo argumento. Adjudicacion literal, linea **34374**: *"el
++umbral esta bien puesto y no se toca"*. Su ejemplar zanjador es el **36** (PR a
++los franquiciados contra referidos DE los franquiciados: comparten *"las personas
++y nada mas"*). **CONSECUENCIA OPERATIVA, escrita aqui para que el tramo de hoy no
++la olvide: NO se baja el umbral de direccion para que salgan menos no resueltas.
++Si el tramo 2 da una proporcion parecida, es la bolsa, no la vara.**
++
++**LA 4.6, Y LO QUE NO SE HACE CON ELLA (linea 34415).** La deriva de contenido
++(**26** nodos de 140 y **32** pares de 87, medida por el auditor en el acta 92
++seccion 4.4) queda **verificada en su atribucion y en su ejemplar**: el auditor
++remidio `fit_problema_solucion` y da **6 pasos en el encendido** contra **3 hoy**.
++Cierre literal, linea **34431**: *"la deriva sigue siendo lo que el acta 92 dijo:
++ANOTADA para Alexis y NO encargada, porque roza el ALCANCE de la campana"*. **NO
++se toca en esta vuelta**, y citarla como contraste con su fuente nombrada es la
++forma correcta de usarla.
++
++### (1.2) LA CORRECCION DECLARADA DEL "OCHO": ES UNA CAIDA DE ACTA DEL AUDITOR Y VA NOMBRADA COMO TAL, sin borrar el texto viejo
++
++**QUIEN CAYO, CON SU NOMBRE.** No es una caida del ejecutor. Es una **CAIDA DE
++ACTA DEL AUDITOR**, y el propio auditor la lleva a su seccion de errores con
++nombre (`ACTA_AUDITOR.md` seccion 6 punto 1, linea **34457**, leida hoy).
++
++**EL TEXTO VIEJO, QUE NO SE BORRA** (`EJECUTOR.md` regla 8): el acta de la vuelta
++**95** publico que **OCHO** de las razones del grupo C llevaban *"la formula
++literal es/son UNA LINEA"*, y enumero `[896, 909, 910, 940, 993, 1057, 1086, 1196]`.
++
++**LA CORRECCION, adjudicada en la seccion 4.2 del acta 96 (linea 34317) y
++literal en la linea 34350** (*"la discrepancia del ejecutor es CORRECTA. El
++'ocho' es MIO y esta mal"*): de las **NUEVE** razones del grupo C que mencionan
++la palabra "linea", **SEIS** llevan la formula **estricta** *"es/son UNA (sola)
++LINEA"* y **SIETE** la **ancha** *"es/son ... linea"*, mas el **1086** (que ancla
++con **EN** y no con **ES/SON**) y el **983** (que va tras dos puntos).
++
++**LOS DOS SOBRANTES DEL OCHO, leidos en su texto por el auditor:** el **909** dice
++*"sus dos referencias al mapa son lineas"*, plural y sin determinante, que no es
++*"son UNA LINEA"*; y el **1086** dice *"cierra con tres preguntas en una sola
++linea"*, que ancla con **EN**.
++
++**LO QUE VUELVE LA CORRECCION INDISCUTIBLE, y lo dice el auditor de si mismo:**
++su propia acta 95 diagnostica, dos parrafos antes, que el fallo del patron era
++confundir *"EN una linea"* con *"ES una linea"*, **y acto seguido mete el 1086
++(que es un "EN una linea") dentro del conjunto rotulado "formula literal es/son
++UNA LINEA"**. Se contradijo dentro del mismo texto.
++
++**NO SE REMIDE EN ESTA VUELTA, y se dice por que en vez de dejarlo implicito**
++(encargo de la vuelta 97, TAREA 1.2, literal: *"NO SE REMIDE: ya viene medida dos
++veces"*). Las dos mediciones existen y son independientes: la del ejecutor en la
++vuelta 96 (`scripts/loop/vuelta96_tarea1c_etiqueta_grupo_c.py`, salida en
++`docs/loop/SALIDA_V96_TAREA1C_ETIQUETA_GRUPO_C.txt`) y la del auditor con regex
++propias y sin importar aquel codigo (`_auditor_v96_grupoc.py`). **Salieron
++identicas, enumeraciones incluidas.** Correr una tercera no anade vara: anade
++ruido.
++
++**LO QUE NO CAMBIA:** la **CONCLUSION** que el auditor saco del grupo C sigue en
++pie y no se toca. **Lo que cae es la ETIQUETA**, no el juicio.
++
++### (1.3) EL PENDIENTE DE DOCTRINA DE LA VUELTA 96 APARTADO (f): QUEDA RESUELTO, y se marca como resuelto sin borrar su texto
++
++**DONDE ESTA EL TEXTO VIEJO:** seccion "VUELTA 96, TAREA 2" apartado **(f)** de
++este mismo fichero, **intacto**, con la marca de resuelto **anadida debajo** y
++nada borrado.
++
++**LA PREGUNTA QUE ABRIO:** cuando la lectura ciega del auditor (`AUDITOR.md`
++seccion 1.2) y el criterio de verificacion de una operacion
++(`OP-E-07.verificacion`) apuntan a lados distintos, **cual manda**.
++
++**QUE HIZO BIEN EL EJECUTOR, y el acta lo dice expresamente (linea 34381):** no
++paro. Registro lo mejor sostenido, lo marco PENDIENTE DE DOCTRINA y siguio, que
++es literalmente lo que manda `EJECUTOR.md` regla 5.
++
++**LA ADJUDICACION, Y SU CLASE: POR EXTENSION CITABLE, NO DOCTRINA NUEVA.** El
++auditor esta obligado por `AUDITOR.md` seccion 3 a mirar primero si una regla ya
++escrita lo cubre por extension natural, y encuentra que **la cubre su propio
++protocolo**, con dos citas:
++
++- **`AUDITOR.md` seccion 1.2** define la relectura ciega **por lo que produce**:
++  *"Registra cuantos coinciden, cuantos discrepan, y la METRICA DE CREDITO"*. Es
++  un **contador de coincidencia**, o sea un control de calidad. **En ningun punto
++  dice que adjudique la direccion de un par.**
++- **`AUDITOR.md` seccion 1.3** dice que pasa cuando discrepan y no deja hueco:
++  las discrepancias van a relectura conjunta, *"el ejecutor verifica contra el
++  grafo y **decide con la vara**"*. **La vara decide. La lectura ciega detecta.**
++
++**LA LETRA, literal del acta linea 34402:** *"manda el criterio escrito de la
++operacion. La lectura ciega del auditor es control de la clase y detector de
++discrepancia, nunca fuente de direccion."*
++
++**NO CAMBIA EL TRABAJO, y por eso no hay nada que rehacer.** Es exactamente "lo
++mejor sostenido" que el ejecutor dejo escrito en el apartado (f). Lo unico que
++faltaba era que estuviera escrito, y con esta adjudicacion lo esta.
++
++**LO QUE EXPRESAMENTE NO REABRE, y se registra porque es la mitad util de la
++adjudicacion:** las adjudicaciones ya publicadas por el carril de los **PASOS**
++(el **1886** y el **1844**, actas 93 y 95) y por el carril de la **RAZON** (el
++**1009** y el **1098**) **quedan como estan**. La adjudicacion **fija cual manda
++de aqui en adelante**; no retrocede sobre lo publicado.
