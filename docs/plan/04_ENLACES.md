@@ -383,6 +383,49 @@ y perder 73 gemelos.**
 > propuesta de valor) y el hijo despliega el paso 2 de la madre con
 > procedimiento propio de 6 pasos; la arista se queda como esta escrita.
 
+> **CORRECCION DECLARADA (26 ago 2026, vuelta 80, relectura conjunta de los
+> discutibles 2 y 3 del reporte de la vuelta 79 seccion 5.4, con el caso del
+> auditor confirmado contra el grafo, acta de la vuelta 79 seccion 2 D2/D3 y
+> seccion 5 puntos 2 y 3).** El tramo 5 de `OP-E-01` (vuelta 79) escribio dos
+> aristas que **SE REVIERTEN**:
+>
+> 1. `producto_mercado_fit_motores -> afinar_motor_crecimiento`. **Es un
+>    radio sobre una CADENA COMPLETA ya establecida en el grafo de la
+>    apertura**: el paso 4 de la madre (*"Usa la contabilidad de la
+>    innovacion..."*) nombra literalmente `contabilidad_innovacion`, YA
+>    enlazado; `contabilidad_innovacion.nodos_siguientes` incluye
+>    `establecer_linea_base_mvp` (*"Este es el primer paso..."*, por su
+>    propio resumen); `establecer_linea_base_mvp.nodos_siguientes` es
+>    exactamente `['afinar_motor_crecimiento']` (*"Es el segundo paso..."*).
+>    Verificado campo a campo contra `dataset/nodos/*.json` en esta vuelta.
+>    Es el CAVEAT MEDIDO de la 9.6.1 (*"la familia ENCADENADA no se cuenta
+>    por radios [...] antes de contar, se mira la FORMA"*): el hijo no es
+>    contenido huerfano de camino (banco 9.6), esta a tres saltos por el
+>    camino que el propio paso 4 nombra. Mismo error, mismo remedio, que la
+>    correccion declarada del primer ejemplar de la 9.6
+>    (`proceso_diseno_modelo_negocio_5_fases`).
+> 2. `terminologia_clave_breakthrough -> analisis_sintomas`. El paso 2 de la
+>    madre es literal: *"Diferenciar sintomas de causas en cada problema
+>    detectado"*. Los cuatro pasos del hijo (recolectar datos de ocurrencia,
+>    ubicar la falla con diagramas de flujo, aplicar Pareto y
+>    estratificacion, documentar frecuencia/severidad/tipo) **caracterizan
+>    el sintoma; ninguno lo DIFERENCIA de la causa**. Los entregables no
+>    coinciden (madre: *"glosario de terminos [...] y lista de teorias a
+>    probar"*; hijo: *"analisis documentado de sintomas"*), que 9.6.2
+>    declara la senal mas fiable que los pasos. Por 9.6.2 (*"la vara tiene
+>    direccion"*), el hijo PRECEDE la accion del paso, no la ejecuta.
+>
+> Verificado contra `dataset/nodos/*.json` en esta vuelta y escrito en
+> `scripts/loop/vuelta80_tarea3_relectura_conjunta.py`
+> (`docs/loop/SALIDA_V80_TAREA3_REVERSION.txt`), las dos quitadas de las DOS
+> vistas a la vez y confirmado tras el ciclo de Gate 0
+> (`docs/loop/SALIDA_V80_GATE0_CMD1_TRAS_TAREA3.txt`, OK, sin reaparicion).
+> Aristas tras la doble reversion: 8.958 `nodos_siguientes` / 8.937
+> `nodos_previos` / 17.895 suma / 9.581 union
+> (`docs/loop/SALIDA_V80_CONTEO_TRAS_TAREA3.txt`), dos menos que las 8.960 /
+> 8.939 / 17.899 / 9.583 de la apertura de esta vuelta, en las cuatro
+> cifras, como corresponde a dos aristas quitadas de las dos vistas.
+
 ---
 
 ## LOS SUELTOS DE RACIMOS, y los racimos con miembro ajeno

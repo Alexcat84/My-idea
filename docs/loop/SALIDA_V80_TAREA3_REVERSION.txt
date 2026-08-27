@@ -1,0 +1,15 @@
+=== producto_mercado_fit_motores -> afinar_motor_crecimiento ===
+ANTES: afinar_motor_crecimiento en nodos_siguientes de la madre: True
+ANTES: producto_mercado_fit_motores en nodos_previos del hijo: True
+DESPUES: afinar_motor_crecimiento en nodos_siguientes de la madre: False
+DESPUES: producto_mercado_fit_motores en nodos_previos del hijo: False
+REVERSION SIMETRIZADA CORRECTA: True
+
+=== terminologia_clave_breakthrough -> analisis_sintomas ===
+ANTES: analisis_sintomas en nodos_siguientes de la madre: True
+ANTES: terminologia_clave_breakthrough en nodos_previos del hijo: True
+DESPUES: analisis_sintomas en nodos_siguientes de la madre: False
+DESPUES: terminologia_clave_breakthrough en nodos_previos del hijo: False
+REVERSION SIMETRIZADA CORRECTA: True
+
+LAS DOS REVERSIONES CORRECTAS: True
