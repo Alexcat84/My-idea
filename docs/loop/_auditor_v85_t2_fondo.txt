@@ -1,0 +1,16 @@
+=== ESTADO EN 2d75140e (antes de que la vuelta 85 escribiera nada) ===
+-- par 50 --
+  formulacion_teorias_causa | sig(1)=['prueba_teorias_causa_raiz'] | prev(2)=['analisis_sintomas', 'dmaic_fase_measure']
+  diagrama_causa_efecto | sig(3)=['hojas_de_verificacion', 'analisis_beneficio_costo', 'diagrama_barreras_ayudas'] | prev(3)=['brainstorming', 'diagrama_afinidad', 'prueba_teorias_causa_raiz']
+  brainstorming | sig(2)=['diagrama_afinidad', 'diagrama_causa_efecto'] | prev(2)=['fijacion_de_metas', 'reglas_brainstorming']
+  diagrama_afinidad | sig(3)=['diagrama_causa_efecto', 'hoja_necesidades_cliente', 'customer_needs_spreadsheet'] | prev(1)=['brainstorming']
+  prueba_teorias_causa_raiz | sig(2)=['evaluacion_alternativas_solucion', 'diagrama_causa_efecto'] | prev(1)=['formulacion_teorias_causa']
+-- par 55 --
+  institucionalizar_breakthrough | sig(1)=['revision_progreso'] | prev(1)=['diagnostico_antes_remedio']
+  revision_progreso | sig(4)=['tablero_control_scorecard', 'auditoria_negocio', 'enfoque_en_procesos_no_en_problemas', 'evaluacion_desempeno_proyectos'] | prev(3)=['sistema_medicion_kpi', 'diagrama_arbol_despliegue', 'institucionalizar_breakthrough']
+  auditoria_negocio | sig(2)=['consejo_de_calidad', 'auditoria_presidente'] | prev(6)=['tablero_control_scorecard', 'costo_de_mala_calidad', 'consejo_de_calidad', 'costo_de_mala_calidad_2', 'revision_progreso', 'costo_de_mala_calidad_copq']
+  consejo_de_calidad | sig(7)=['establecer_proyecto_mejora', 'involucramiento_sindical', 'involucramiento_sindical_calidad', 'auditoria_negocio', 'despliegue_metas', 'metas_negocio_calidad', 'rol_director_calidad'] | prev(14)=['analisis_pareto_priorizacion', 'accion_correctiva_sistematica', 'eliminacion_causas_error_4', 'equipo_mejora_calidad_2', 'programa_mejora_calidad_14_pasos', 'programa_zero_defects', 'replicar_resultados', 'analisis_pareto_de_proveedores', 'cero_defectos', 'auditoria_negocio', 'auditoria_presidente', 'calculo_roi_calidad', 'presentaciones_alta_direccion', 'rol_alta_direccion_calidad']
+  metas_negocio_calidad | sig(1)=['despliegue_metas'] | prev(5)=['consejo_de_calidad', 'modelo_shingo_evaluacion_excelencia', 'presentaciones_alta_direccion', 'aprobacion_alta_direccion', 'consejo_de_calidad_y_rol_del_director']
+-- par 77 --
+  eliminacion_inspeccion_masiva_por_control_estadistico | sig(0)=[] | prev(1)=['control_estadistico_de_procesos_en_tiempo_real']
+  carta_de_control_shewhart | sig(3)=['analisis_variacion_desempeno_servicio', 'distincion_causas_comunes_especiales_3', 'causas_comunes_vs_especiales'] | prev(1)=['causas_especiales_y_comunes_variacion']

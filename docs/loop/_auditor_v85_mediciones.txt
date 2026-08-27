@@ -1,0 +1,157 @@
+
+==============================================================================
+1.A. LAS OCHO CIFRAS DEL GRAFO EN CINCO REFS DE GIT
+==============================================================================
+  2d75140e (apertura, acta 84           ): nodos 3853 vivos 3188 depre 665 | sig 8976 prev 8955 suma 17931 union 9599 | auto 0 dup 0
+  b0fd12ff (apertura medida + TAREA 2   ): nodos 3853 vivos 3188 depre 665 | sig 8979 prev 8958 suma 17937 union 9602 | auto 0 dup 0
+  a905fe47 (TAREA 3, instrumento        ): nodos 3853 vivos 3188 depre 665 | sig 8979 prev 8958 suma 17937 union 9602 | auto 0 dup 0
+  425736f2 (tras la TAREA 4             ): nodos 3853 vivos 3188 depre 665 | sig 8986 prev 8965 suma 17951 union 9609 | auto 0 dup 0
+  0933a988 (cierre, HEAD                ): nodos 3853 vivos 3188 depre 665 | sig 8986 prev 8965 suma 17951 union 9609 | auto 0 dup 0
+  arbol de trabajo                                : nodos 3853 vivos 3188 depre 665 | sig 8986 prev 8965 suma 17951 union 9609 | auto 0 dup 0
+
+==============================================================================
+1.B. EL MARCADOR DEL CRIBADO
+==============================================================================
+  n 3388 | A 551 B 72 C 5 D 2760
+  puestos: min 1 max 3388 unicos 3388 huecos 0
+
+==============================================================================
+1.C. EL REGISTRO DE DECIDIDAS, CRUZADO CONTRA EL GRAFO DE HOY
+==============================================================================
+  filas 186 | ESCRITA 89 | NO SE ENLAZA 97 | pares unicos 186
+  por tramo: {3: 30, 4: 30, 5: 23, 6: 10, 7: 3, 8: 30, 9: 30, 10: 30}
+  por fichero_origen:
+     SALIDA_V77_TRAMO3_ESCRIBIR.txt                       30
+     SALIDA_V78_TRAMO4_ESCRIBIR.txt                       30
+     SALIDA_V79_TRAMO5_ESCRIBIR.txt                       23
+     SALIDA_V80_TRAMO6_ESCRIBIR.txt                       10
+     SALIDA_V82_TRAMO7_ESCRIBIR.txt                       3
+     SALIDA_V83_TRAMO8_ESCRIBIR.txt                       30
+     SALIDA_V84_TRAMO9_ESCRIBIR.txt                       30
+     SALIDA_V85_TRAMO10_ESCRIBIR.txt                      30
+  FILAS CUYA DECISION NO CALZA CON EL GRAFO DE HOY: 0
+
+==============================================================================
+1.D. LA BOLSA, EL FILTRO Y EL DESFASE DEL CALIBRADO
+==============================================================================
+  PASO_NODO_CALIBRADO.jsonl: 468 filas, 228 sin arista, 240 con arista
+  FILTRADO_V85: 136 | FILTRADO_V84: 142
+  unidades que estaban en V84 y YA NO estan en V85: 6
+     formulacion_teorias_causa -> diagrama_causa_efecto
+     institucionalizar_breakthrough -> metas_negocio_calidad
+     gate5_go_to_launch -> plan_de_lanzamiento_al_mercado
+     descubrir_necesidades_del_cliente -> necesidades_psicologicas_cliente
+     mix_medios_marketing_franquicia -> presupuesto_marketing_franquicia
+     eliminacion_inspeccion_masiva_por_control_estadistico -> carta_de_control_shewhart
+  unidades NUEVAS en V85 que no estaban en V84: 0
+  V85 y V84 coinciden par a par hasta el mas corto: False
+  DESFASE del calibrado contra el grafo de hoy: 7 filas
+     lienzo_proyecto_innovacion -> actividades_clave (campo arista False)
+     estructura_equipos_innovacion_interna -> equipo_multifuncional_real (campo arista False)
+     evaluacion_industria_cliente -> analisis_cadena_de_valor (campo arista False)
+     diagrama_de_flujo_proceso_map -> analisis_flujo_proceso (campo arista False)
+     stage_gate_system -> tipos_criterios_gate (campo arista False)
+     waterfall_vs_agile_development -> customer_development_process (campo arista False)
+     decidir_vender_solo_online_o_tambien_tienda_fisica -> ofrecer_puntos_recogida (campo arista False)
+
+==============================================================================
+1.E. LA GUARDA SOBRE LA BOLSA V85, CON LAS DOS DEFINICIONES
+==============================================================================
+  --- definicion de DECIDIDA: SOLO NO SE ENLAZA (la del instrumento)
+      prefijo: indices 0 a 75 (76 unidades)
+      primera SIN DECIDIR: indice 76, lienzo_proyecto_innovacion -> actividades_clave (paso 6, core)
+      decididas por detras de una sin decidir: 19 [77, 78, 79, 81, 82, 87, 88, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101]
+      sin decidir restantes tras las 30 frescas: 30
+  --- definicion de DECIDIDA: CUALQUIER decision registrada
+      prefijo: indices 0 a 101 (102 unidades)
+      primera SIN DECIDIR: indice 102, determinacion_cuota_inicial -> analisis_competencia_franquicias (paso 2, franquicias)
+      decididas por detras de una sin decidir: 0 []
+      sin decidir restantes tras las 30 frescas: 4
+
+==============================================================================
+1.F. EL TRAMO 10 (indices 72..101 de V85), EN LAS DOS VISTAS
+==============================================================================
+   72 NO SE ENLAZA   paso 8   search_for_business_model -> herramientas_computacionales_business_model
+   73 NO SE ENLAZA   paso 2   control_calidad_definicion -> pre_control_estadistico
+   74 NO SE ENLAZA   paso 1   grafico_cusum -> pre_control_estadistico
+   75 NO SE ENLAZA   paso 3   eliminacion_inspeccion_masiva_por_control_estadistico -> muestreo_estadistico_para_inspeccion
+   76 ESCRITA        paso 6   lienzo_proyecto_innovacion -> actividades_clave
+   77 NO SE ENLAZA   paso 4   rol_de_la_fuerza_laboral_en_calidad -> identificar_clientes_externos_e_internos
+   78 NO SE ENLAZA   paso 4   metas_desmaterializacion_energia -> valoracion_costos_externos
+   79 NO SE ENLAZA   paso 10  coordinacion_colaboracion_cadena_suministro -> plataforma_colaboracion_masiva
+   80 ESCRITA        paso 2   estructura_equipos_innovacion_interna -> equipo_multifuncional_real
+   81 NO SE ENLAZA   paso 2   product_roadmap_estrategico -> equipo_multifuncional_real
+   82 NO SE ENLAZA   paso 1   product_design_spreadsheet -> traduccion_necesidades_cliente
+   83 ESCRITA        paso 3   evaluacion_industria_cliente -> analisis_cadena_de_valor
+   84 ESCRITA        paso 8   diagrama_de_flujo_proceso_map -> analisis_flujo_proceso
+   85 ESCRITA        paso 2   stage_gate_system -> tipos_criterios_gate
+   86 ESCRITA        paso 3   waterfall_vs_agile_development -> customer_development_process
+   87 NO SE ENLAZA   paso 1   competencias_director_calidad_bloom -> consejo_de_calidad_y_rol_del_director
+   88 NO SE ENLAZA   paso 5   estructura_organizacional_funcional_proceso -> empoderamiento_empleados
+   89 ESCRITA        paso 2   decidir_vender_solo_online_o_tambien_tienda_fisica -> ofrecer_puntos_recogida
+   90 NO SE ENLAZA   paso 4   teletrabajo_sostenible -> medir_huella_carbono_corporativa
+   91 NO SE ENLAZA   paso 3   diseno_controles_proceso_mejorado -> auditorias_calidad_proceso
+   92 NO SE ENLAZA   paso 4   principios_mejora_continua -> auditorias_calidad_proceso
+   93 NO SE ENLAZA   paso 3   materiales_due_diligence -> guia_y_mentoria_vc
+   94 NO SE ENLAZA   paso 3   fase_mobilizar_modelo_negocio -> business_model_canvas_scorecard
+   95 NO SE ENLAZA   paso 2   plan_de_lanzamiento_al_mercado -> personalizacion_investigacion_prospecto
+   96 NO SE ENLAZA   paso 4   planificacion_inicial_calidad -> analisis_flujo_proceso_servicio
+   97 NO SE ENLAZA   paso 3   analisis_tco_roi_b2b -> prueba_solucion_con_cliente
+   98 NO SE ENLAZA   paso 6   capacidad_proceso_concepto -> sistema_informacion_calidad
+   99 NO SE ENLAZA   paso 5   gobierno_corporativo_y_calidad -> principios_mejora_continua
+  100 NO SE ENLAZA   paso 4   poder_a_traves_de_la_accion -> proposito_como_motor_energia
+  101 NO SE ENLAZA   paso 3   customer_discovery_phase2_problem_test -> ganar_comprension_del_cliente
+  ESCRITAS 7 [76, 80, 83, 84, 85, 86, 89]
+  NO SE ENLAZA 23 | INCONSISTENTES 0 | ESCALERA ROTA 0
+
+==============================================================================
+1.G. LAS TRES ARISTAS DE LA TAREA 2, EN LAS DOS VISTAS
+==============================================================================
+  (filas del registro cuyo fichero_origen nombra la TAREA 2: 0)
+
+==============================================================================
+1.H. LA VARA DE LA CADENA DEL TRAMO 10, BFS PROPIO, SIN LAS NUEVAS
+==============================================================================
+  (grafo SIN las 7 aristas del tramo 10 y SIN las 0 de la TAREA 2)
+   72 ALCANZABLE (2 saltos)      via lienzo_modelo_negocio
+   73 SIN CAMINO PREVIO          [HORIZONTE 30: 16 saltos]
+   74 ALCANZABLE (3 saltos)      via graficos_control_multivariados -> capacidad_proceso_concepto
+   75 ALCANZABLE (5 saltos)      via carta_de_control_shewhart -> causas_comunes_vs_especiales -> eliminacion_firmas_redundantes -> retroalimentacion_inmediata_de_errores
+   76 SIN CAMINO PREVIO          [HORIZONTE 30: 8 saltos]
+   77 SIN CAMINO PREVIO          [ni a 30 saltos]
+   78 SIN CAMINO PREVIO          [HORIZONTE 30: 8 saltos]
+   79 SIN CAMINO PREVIO          [HORIZONTE 30: 10 saltos]
+   80 ALCANZABLE (5 saltos)      via actitud_de_experimentacion_organizacional -> cultura_de_optimismo -> calidad_de_ejecucion_proceso_innovacion -> sistema_gates_go_kill
+   81 ALCANZABLE (4 saltos)      via stage_gate_system -> calidad_de_ejecucion_proceso_innovacion -> sistema_gates_go_kill
+   82 SIN CAMINO PREVIO          [HORIZONTE 30: 12 saltos]
+   83 ALCANZABLE (5 saltos)      via evaluacion_competencias_centrales -> seleccion_arenas_estrategicas -> investigacion_etnografica_ideacion -> analisis_y_sintesis
+   84 ALCANZABLE (3 saltos)      via fmea_analisis_de_modos_de_falla -> key_process_product_characteristics
+   85 ALCANZABLE (5 saltos)      via estrategia_innovacion_producto -> innovacion_abierta -> mitos_stage_gate -> estructura_de_gates
+   86 ALCANZABLE (4 saltos)      via build_measure_learn -> modelo_cascada_desarrollo_producto -> search_for_business_model
+   87 SIN CAMINO PREVIO          [HORIZONTE 30: 7 saltos]
+   88 ALCANZABLE (6 saltos)      via equipos_autodirigidos_servicio -> six_sigma_dmaic -> sostener_las_ganancias -> trilogia_de_juran -> sistemas_sociotecnicos
+   89 SIN CAMINO PREVIO          [ni a 30 saltos]
+   90 SIN CAMINO PREVIO          [HORIZONTE 30: 10 saltos]
+   91 ALCANZABLE (4 saltos)      via validacion_sistema_medicion -> autocontrol_y_controlabilidad -> autocontrol_planificacion_servicio
+   92 SIN CAMINO PREVIO          [HORIZONTE 30: 11 saltos]
+   93 SIN CAMINO PREVIO          [HORIZONTE 30: 8 saltos]
+   94 ALCANZABLE (4 saltos)      via fase_entender_modelo_negocio -> customer_scenarios_business_model -> lienzo_modelo_negocio
+   95 SIN CAMINO PREVIO          [HORIZONTE 30: 11 saltos]
+   96 SIN CAMINO PREVIO          [HORIZONTE 30: 8 saltos]
+   97 SIN CAMINO PREVIO          [HORIZONTE 30: 7 saltos]
+   98 ALCANZABLE (6 saltos)      via control_estadistico_de_procesos -> causas_comunes_vs_especiales -> control_estadistico_proceso -> costo_de_mala_calidad_copq -> accion_correctiva
+   99 SIN CAMINO PREVIO          [HORIZONTE 30: 13 saltos]
+  100 ALCANZABLE (2 saltos)      via compromiso_organismico_en_la_accion
+  101 ALCANZABLE (4 saltos)      via problem_solution_fit -> business_model_canvas_scorecard -> customer_discovery
+  SIN CAMINO PREVIO a 6: 15 [73, 76, 77, 78, 79, 82, 87, 89, 90, 92, 93, 95, 96, 97, 99]
+  NI A 30 SALTOS: 2 [77, 89]
+
+==============================================================================
+1.I. LA VARA DE LA TAREA 5, RECOMPUTADA
+==============================================================================
+  veredictos leidos: 3388 | pares no dirigidos unicos: 3388
+  bolsa filtrada V84: 142 unidades
+  RESUMEN: 3 de 30 con veredicto, 0 de 30 con reciproca
+      80 estructura_equipos_innovacion_interna / equipo_multifuncional_real | clase D | puesto 1401 | core
+      84 diagrama_de_flujo_proceso_map / analisis_flujo_proceso | clase D | puesto 2728 | quality
+     101 customer_discovery_phase2_problem_test / ganar_comprension_del_cliente | clase D | puesto 1397 | core

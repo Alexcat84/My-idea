@@ -1,0 +1,22 @@
+pares leidos del fichero: 3
+  formulacion_teorias_causa -> diagrama_causa_efecto | en_sig_madre True en_prev_hijo True | INVERSAS False/False
+  institucionalizar_breakthrough -> metas_negocio_calidad | en_sig_madre True en_prev_hijo True | INVERSAS False/False
+  eliminacion_inspeccion_masiva_por_control_estadistico -> carta_de_control_shewhart | en_sig_madre True en_prev_hijo True | INVERSAS False/False
+
+--- el campo `arista` de los tres pares de la TAREA 3 de la vuelta 84,
+    en el PASO_NODO_CALIBRADO.jsonl COMMITEADO por la vuelta 84 ---
+    filas del CAL de la vuelta 84: 468 | sin arista: 234 | con arista: 234
+    gate5_go_to_launch -> plan_de_lanzamiento_al_mercado                                                 arista=False
+    descubrir_necesidades_del_cliente -> necesidades_psicologicas_cliente                                arista=False
+    mix_medios_marketing_franquicia -> presupuesto_marketing_franquicia                                  arista=False
+    formulacion_teorias_causa -> diagrama_causa_efecto                                                   arista=False
+    institucionalizar_breakthrough -> metas_negocio_calidad                                              arista=False
+    eliminacion_inspeccion_masiva_por_control_estadistico -> carta_de_control_shewhart                   arista=False
+
+--- los mismos pares en el PASO_NODO_CALIBRADO.jsonl de HOY (vuelta 85) ---
+    gate5_go_to_launch -> plan_de_lanzamiento_al_mercado                                                 arista=True
+    descubrir_necesidades_del_cliente -> necesidades_psicologicas_cliente                                arista=True
+    mix_medios_marketing_franquicia -> presupuesto_marketing_franquicia                                  arista=True
+    formulacion_teorias_causa -> diagrama_causa_efecto                                                   arista=True
+    institucionalizar_breakthrough -> metas_negocio_calidad                                              arista=True
+    eliminacion_inspeccion_masiva_por_control_estadistico -> carta_de_control_shewhart                   arista=True
