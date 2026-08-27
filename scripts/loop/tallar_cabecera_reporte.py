@@ -110,6 +110,83 @@ obligatoria no se puede leer; `--comparar` coteja fila a fila la tabla que el
 fichero YA tiene contra la tallada. El marcador es la unica fila opcional: si
 no hay `SALIDA_V<N>_MARCADOR_*` para esa vuelta, la fila simplemente no se
 imprime (no es una celda rota, es una fase que no toco el cribado).
+
+--- TAREA 2.a: LA TABLA DE LA CADENA SE TALLA, NO SE TECLEA (vuelta 81) ---
+
+POR QUE NACE (acta de la vuelta 80, seccion 4: caida de reporte FUERA del
+marcado). El reporte de la vuelta 80 publico a mano, en su tabla de las 10
+lecturas frescas del tramo 6, una columna "alcanzable previo (vara de la
+cadena)" que CONTRADIJO la salida del instrumento que la propia columna
+nombra (`SALIDA_V80_TRAMO6_FILTRO_P91_GUARDA_CADENA.txt`): la fila 27 publico
+"no" donde el instrumento imprimio YA ALCANZABLE (6 saltos); la fila 28
+publico "si, en direccion inversa" donde el instrumento imprimio sin camino
+previo. Es la misma especie que motivo la cabecera: una tabla que un
+instrumento YA produce y que alguien volvio a teclear.
+
+`--tramo-cadena K` (combinado con `--vuelta N`) lee
+`SALIDA_V<N>_TRAMO<K>_FILTRO_P91_GUARDA_CADENA.txt`, localiza la seccion
+"CABEZA DE LA BOLSA FILTRADA" y talla, por cada UNIDAD que ese fichero trae
+(sueltas y parejas), UNA SOLA columna: si hay o no camino previo, y con
+cuantos saltos. "YA ALCANZABLE (N saltos)" se talla como "ALCANZABLE (N
+saltos)"; "sin camino previo" se talla como "SIN CAMINO PREVIO". SI EL
+FICHERO NO EXISTE O UNA UNIDAD NO SE PUEDE LEER, NO TALLA NADA Y SALE CON
+EXIT 1 (misma mecanica de ROJO que las demas filas).
+
+LA COLUMNA CONTESTA UNA SOLA PREGUNTA, la que su titulo dice (alcanzabilidad
+previa). NO dice si ese camino es o no LA CADENA PROPIA de la madre (sus
+pasos enumerados, en su propio orden): esa es una decision de LECTURA, ajena
+a este instrumento, y por eso no se mezcla en esta columna (distincion que el
+acta 79 dejo escrita: "alcanzable no es lo mismo que encadenado").
+
+USO:
+  python scripts/loop/tallar_cabecera_reporte.py --vuelta 80 --tramo-cadena 6
+  python scripts/loop/tallar_cabecera_reporte.py --vuelta 80 --tramo-cadena 6 --comparar docs/loop/REPORTE.md
+
+`--comparar` busca, en el fichero dado, filas de tabla con AL MENOS 4 celdas
+(`# | par (paso) | alcanzable | decision`) cuya primera celda sea un numero:
+es la forma exacta de la tabla de las lecturas frescas del reporte. Las filas
+de 3 celdas (la tabla de las unidades "ya decididas en vueltas anteriores",
+que no lleva columna de alcanzabilidad) se ignoran a proposito: no son la
+misma tabla y comparar contra ellas seria comparar dos preguntas distintas.
+
+CASO POSITIVO OBLIGATORIO (vuelta 81), contra la vuelta 80: tallar el tramo 6
+de la vuelta 80 tiene que dar, en la fila 27, "ALCANZABLE (6 saltos)", y en la
+fila 28, "SIN CAMINO PREVIO"; el reporte de la vuelta 80 publico exactamente
+lo contrario en esas dos celdas.
+
+--- TAREA 2.b: LA IDENTIDAD GANA EL HEAD REAL DE LA APERTURA (vuelta 81) ---
+
+POR QUE NACE (acta de la vuelta 80, seccion 1.8 y seccion 3.1). El modo
+`--fase04` ya tallaba el "commit de apertura" como el commit del ACTA de la
+vuelta anterior, pero el HEAD real cuando el ejecutor abrio la vuelta 80 NO
+era ese commit (`bc9cde6f`, el acta 79): era `3cdf90d1`, el commit de una
+decision del fundador que entro ENTRE el acta y la primera tarea. Esa vez fue
+inocuo (los tres ficheros del commit intermedio eran de `docs/`, y los
+arboles de `dataset/` de los dos commits coinciden), pero el hueco es real:
+el dia que un commit se cuele ahi y SI toque `dataset/`, la fila de identidad
+nombraria un arbol que no es el medido.
+
+EL REMEDIO: el ejecutor sella `git rev-parse HEAD` ANTES de la primera
+operacion de la vuelta, en un fichero propio,
+`SALIDA_V<N>_HEAD_APERTURA.txt` (una linea, el hash completo de 40
+caracteres). En modo `--fase04`, el tallador ahora LEE ese sello (nunca corre
+`git rev-parse HEAD` el mismo: para cuando el tallador corre, HEAD ya se
+movio con las operaciones de la vuelta) y lo compara contra el commit del
+acta: si el ARBOL DE `dataset/` de los dos commits (`git rev-parse
+<commit>:dataset`) NO COINCIDE, el tallador cae en ROJO (no talla nada, exit
+1), porque entonces las cifras de apertura publicadas no son fiables para el
+commit que la fila nombra. Si los dos arboles SI coinciden, la fila lo dice
+explicito: "arboles de `dataset/` IGUALES: VERDE".
+
+Si `SALIDA_V<N>_HEAD_APERTURA.txt` no existe, es ROJO igual (no se inventa el
+HEAD real, ni se calla el chequeo).
+
+CASO POSITIVO OBLIGATORIO (vuelta 81), contra la vuelta 80: los dos hashes
+salen DISTINTOS (`bc9cde6f` el commit del acta, `3cdf90d1` el HEAD real de
+apertura, reconstruido y verificado por `git log` en esta vuelta porque el
+sello en vivo no existia antes de esta TAREA) y el chequeo da VERDE, porque
+sus arboles de `dataset/` son iguales (`git rev-parse bc9cde6f:dataset` y
+`git rev-parse 3cdf90d1:dataset` dan el mismo hash de arbol).
 """
 import argparse
 import io
@@ -420,6 +497,39 @@ def commit_apertura_desde_git(vuelta, rama, fallos):
     return hallados[0][:8]
 
 
+def leer_head_apertura(vuelta, fallos):
+    """EL HEAD REAL DE LA APERTURA, SELLADO POR EL EJECUTOR (TAREA 2.b, vuelta
+    81): lee SALIDA_V<vuelta>_HEAD_APERTURA.txt, una linea con el hash
+    completo de 40 caracteres de `git rev-parse HEAD` corrido ANTES de la
+    primera operacion. El tallador NUNCA corre `git rev-parse HEAD` el mismo:
+    para cuando el tallador corre, HEAD ya se movio con las operaciones de la
+    vuelta, asi que solo puede LEER lo que el ejecutor sello a tiempo."""
+    nombre = "SALIDA_V%d_HEAD_APERTURA.txt" % vuelta
+    ruta = os.path.join(LOOP, nombre)
+    if not os.path.exists(ruta):
+        fallos.append("no existe el sello %s (el ejecutor debe correr `git rev-parse HEAD` "
+                      "antes de la 1.a operacion y guardarlo ahi)" % nombre)
+        return None
+    texto = io.open(ruta, encoding="utf-8").read().strip()
+    m = re.match(r"^([0-9a-f]{40})", texto)
+    if not m:
+        fallos.append("%s no trae un hash de 40 caracteres reconocible" % nombre)
+        return None
+    return m.group(1)
+
+
+def arbol_dataset(commit, etiqueta, fallos):
+    """El arbol de dataset/ de COMMIT, leido con `git rev-parse <commit>:dataset`
+    (nunca tecleado). None y fallo registrado si el commit o la ruta no existen."""
+    try:
+        r = subprocess.run(["git", "rev-parse", "%s:dataset" % commit], cwd=RAIZ,
+                           capture_output=True, text=True, check=True)
+        return r.stdout.strip()
+    except Exception as e:
+        fallos.append("no se pudo leer el arbol de dataset/ de %s (%s): %s" % (etiqueta, commit, e))
+        return None
+
+
 RE_FILA = re.compile(r"^\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*$")
 
 
@@ -484,6 +594,169 @@ def comparar_contra(f, ruta_arg):
     return 0
 
 
+RE_UNIDAD_CADENA = re.compile(
+    r"^\s*(\d+):\s*(.+?)\s*->\s*(.+?)\s*\(paso\s*(.+?),\s*dominio\s*(.+?)\)\s*\|\s*(.+?)\s*$"
+)
+RE_PAREJA_CADENA = re.compile(r"^\s*(\d+):\s*PAREJA:\s*(.+?)\s*$")
+RE_SALTOS = re.compile(r"^YA ALCANZABLE \((\d+)\s*saltos?\)")
+
+
+def leer_tramo_cadena(vuelta, tramo, fallos):
+    """TAREA 2.a: lee SALIDA_V<vuelta>_TRAMO<tramo>_FILTRO_P91_GUARDA_CADENA.txt
+    y devuelve la lista de unidades de la seccion "CABEZA DE LA BOLSA
+    FILTRADA", cada una con su celda de alcanzabilidad TALLADA (nunca
+    tecleada). ROJO (fallos.append) y unidad con alcanzable=None si una linea
+    no se puede leer; ninguna cifra se inventa."""
+    nombre = "SALIDA_V%d_TRAMO%d_FILTRO_P91_GUARDA_CADENA.txt" % (vuelta, tramo)
+    texto = leer(nombre, fallos)
+    if not texto:
+        return []
+    lineas = texto.splitlines()
+    inicio = None
+    for i, l in enumerate(lineas):
+        if l.startswith("CABEZA DE LA BOLSA FILTRADA"):
+            inicio = i
+            break
+    if inicio is None:
+        fallos.append("%s no trae la seccion 'CABEZA DE LA BOLSA FILTRADA': no se talla nada" % nombre)
+        return []
+    i = inicio + 1
+    while i < len(lineas) and not re.match(r"^\s*\d+:", lineas[i]):
+        i += 1
+    unidades = []
+    while i < len(lineas) and lineas[i].strip():
+        l = lineas[i]
+        m = RE_UNIDAD_CADENA.match(l)
+        mp = RE_PAREJA_CADENA.match(l)
+        if m:
+            idx, madre, hijo, paso, dominio, alc = m.groups()
+            if alc.startswith("YA ALCANZABLE"):
+                ms = RE_SALTOS.match(alc)
+                if not ms:
+                    fallos.append("unidad %s de %s: no se pudo leer el numero de saltos en %r"
+                                  % (idx, nombre, alc))
+                    texto_alc = None
+                else:
+                    texto_alc = "ALCANZABLE (%s saltos)" % ms.group(1)
+            elif alc.strip() == "sin camino previo":
+                texto_alc = "SIN CAMINO PREVIO"
+            else:
+                fallos.append("unidad %s de %s: alcanzabilidad no reconocida: %r" % (idx, nombre, alc))
+                texto_alc = None
+            unidades.append({"idx": idx, "par": "%s -> %s (paso %s)" % (madre, hijo, paso),
+                             "alcanzable": texto_alc})
+        elif mp:
+            idx, desc = mp.groups()
+            unidades.append({"idx": idx, "par": "PAREJA: %s" % desc,
+                             "alcanzable": "(pareja, sin alcanzabilidad individual)"})
+        else:
+            break
+        i += 1
+    if not unidades:
+        fallos.append("no se pudo leer ninguna unidad de %s" % nombre)
+    return unidades
+
+
+def parse_filas_pipe(ruta):
+    """Toda fila de tabla markdown del fichero, como lista de celdas limpias
+    (sin las celdas vacias de los extremos, sin filas separadoras)."""
+    texto = io.open(ruta, encoding="utf-8").read()
+    filas_out = []
+    for linea in texto.splitlines():
+        s = linea.strip()
+        if not (s.startswith("|") and s.endswith("|")):
+            continue
+        celdas = [limpiar(c) for c in s.split("|")[1:-1]]
+        if not celdas or set("".join(celdas)) <= set("-: "):
+            continue
+        filas_out.append(celdas)
+    return filas_out
+
+
+def tabla_cadena_del_fichero(ruta):
+    """Busca filas con AL MENOS 4 celdas (# | par (paso) | alcanzable | decision)
+    cuya primera celda sea un numero entero: es la forma exacta de la tabla
+    de las lecturas frescas del reporte. Las filas de 3 celdas (la tabla de
+    las unidades "ya decididas", sin columna de alcanzabilidad) se ignoran a
+    proposito. Primera aparicion por numero gana. Devuelve dict numero ->
+    celda alcanzable (la tercera)."""
+    resultado = {}
+    for celdas in parse_filas_pipe(ruta):
+        if len(celdas) < 4:
+            continue
+        n = celdas[0]
+        if not n.isdigit():
+            continue
+        if n in resultado:
+            continue
+        resultado[n] = celdas[2]
+    return resultado
+
+
+def modo_tramo_cadena(vuelta, tramo, comparar_ruta):
+    """TAREA 2.a: talla la tabla de alcanzabilidad del tramo, la imprime para
+    pegar, y si se pide --comparar, coteja celda por celda contra el fichero
+    dado. Mecanica de ROJO identica a los demas modos."""
+    fallos = []
+    unidades = leer_tramo_cadena(vuelta, tramo, fallos)
+    if fallos:
+        print("  ROJO, %d cosa(s) no se pudieron leer y NO se talla nada:" % len(fallos))
+        for fallo in fallos:
+            print("     %s" % fallo)
+        return 1
+
+    print("=" * 78)
+    print("LA TABLA DE ALCANZABILIDAD (VARA DE LA CADENA) DEL TRAMO %d, TALLADA. Vuelta %d." % (tramo, vuelta))
+    print("Cada celda sale de SALIDA_V%d_TRAMO%d_FILTRO_P91_GUARDA_CADENA.txt; ninguna tecleada." % (vuelta, tramo))
+    print("LA COLUMNA CONTESTA UNA SOLA PREGUNTA: si hay o no camino previo, y con cuantos saltos.")
+    print("Si ese camino es o no LA CADENA PROPIA de la madre es una decision de lectura aparte.")
+    print("=" * 78)
+    print()
+    print("| # | par (paso) | alcanzable previo (vara de la cadena) |")
+    print("|---:|---|---|")
+    for u in unidades:
+        celda = u["alcanzable"] if u["alcanzable"] is not None else "?"
+        print("| %s | `%s` | %s |" % (u["idx"], u["par"], celda))
+    print()
+
+    if not comparar_ruta:
+        print("FIN")
+        return 0
+
+    print("--- COMPARACION CONTRA %s ---" % comparar_ruta)
+    print()
+    ruta = comparar_ruta if os.path.isabs(comparar_ruta) else os.path.join(RAIZ, comparar_ruta)
+    if not os.path.exists(ruta):
+        print("  ROJO: no existe %s" % ruta)
+        return 1
+    existentes = tabla_cadena_del_fichero(ruta)
+    diferencias = 0
+    ausentes = 0
+    for u in unidades:
+        if u["alcanzable"] is None:
+            continue
+        clave = u["idx"]
+        if clave not in existentes:
+            print("  AUSENTE  | fila %s | %s" % (clave, u["par"]))
+            ausentes += 1
+            continue
+        vieja = existentes[clave]
+        if limpiar(vieja) != limpiar(u["alcanzable"]):
+            diferencias += 1
+            print("  DISTINTA | fila %s | %s" % (clave, u["par"]))
+            print("             fichero : %s" % vieja)
+            print("             tallador: %s" % u["alcanzable"])
+    print()
+    print("  filas cotejadas: %d | DISTINTAS: %d | ausentes: %d" % (len(unidades), diferencias, ausentes))
+    if diferencias or ausentes:
+        print("  TABLA DE LA CADENA: NO CALZA CON EL TALLADOR")
+        print("FIN")
+        return 1
+    print("  TABLA DE LA CADENA: IDENTICA AL TALLADOR")
+    print("FIN")
+    return 0
+
+
 def main():
     ap_arg = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -491,11 +764,18 @@ def main():
     ap_arg.add_argument("--sin-miles", action="store_true")
     ap_arg.add_argument("--fase04", action="store_true",
                         help="talla la cabecera de la fase 04 (ENLACES) en vez de la del cribado")
+    ap_arg.add_argument("--tramo-cadena", type=int, default=None, metavar="TRAMO",
+                        help="talla la tabla de alcanzabilidad (vara de la cadena) del TRAMO K de "
+                             "OP-E-01 (TAREA 2.a), leyendo "
+                             "SALIDA_V<vuelta>_TRAMO<K>_FILTRO_P91_GUARDA_CADENA.txt")
     ap_arg.add_argument("--comparar", default=None,
-                        help="fichero cuya tabla de cabecera se coteja contra la tallada")
+                        help="fichero cuya tabla se coteja contra la tallada")
     a = ap_arg.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
     con_miles = not a.sin_miles
+
+    if a.tramo_cadena is not None:
+        return modo_tramo_cadena(a.vuelta, a.tramo_cadena, a.comparar)
 
     print("=" * 78)
     print("LA CABECERA DEL REPORTE, TALLADA. Vuelta %d.%s" % (a.vuelta, " Modo fase04." if a.fase04 else ""))
@@ -509,6 +789,23 @@ def main():
         cierre = lado_fase04(a.vuelta, "CIERRE", fallos, con_miles)
         rama = rama_actual(fallos)
         commit_ap = commit_apertura_desde_git(a.vuelta, rama, fallos)
+        # TAREA 2.b (vuelta 81): el HEAD real de la apertura, sellado por el
+        # ejecutor, mas el chequeo de que su arbol de dataset/ coincide con el
+        # del commit del acta. Si no coinciden, ROJO: las cifras de apertura
+        # no son fiables para el commit que la fila nombra.
+        head_real = leer_head_apertura(a.vuelta, fallos)
+        arbol_verde = None
+        if commit_ap and head_real:
+            arbol_acta = arbol_dataset(commit_ap, "commit del acta %s" % commit_ap, fallos)
+            arbol_head = arbol_dataset(head_real, "HEAD real de apertura %s" % head_real[:8], fallos)
+            if arbol_acta is not None and arbol_head is not None:
+                if arbol_acta != arbol_head:
+                    fallos.append(
+                        "el arbol de dataset/ del commit del acta (%s, arbol %s) y el HEAD real de "
+                        "apertura (%s, arbol %s) NO COINCIDEN: las cifras de apertura no son las del "
+                        "commit que la fila nombra" % (commit_ap, arbol_acta[:8], head_real[:8], arbol_head[:8]))
+                else:
+                    arbol_verde = True
     else:
         apertura = lado(a.vuelta, "APERTURA", fallos)
         cierre = lado(a.vuelta, "CIERRE", fallos)
@@ -521,8 +818,12 @@ def main():
 
     f = filas_fase04(apertura, cierre, con_miles) if a.fase04 else filas(apertura, cierre, con_miles)
     if a.fase04:
-        celda_identidad = "rama `%s`, commit `%s` (ACTA DE LA VUELTA %d DEL AUDITOR, leido de git log)" \
-            % (rama, commit_ap, a.vuelta - 1)
+        celda_identidad = (
+            "rama `%s`, commit del acta `%s` (ACTA DE LA VUELTA %d DEL AUDITOR, leido de git log), "
+            "HEAD real de apertura `%s` (sellado por el ejecutor antes de la 1.a operacion), arboles "
+            "de `dataset/` %s"
+            % (rama, commit_ap, a.vuelta - 1, head_real[:8], "IGUALES: VERDE" if arbol_verde else "?")
+        )
         f.append(("identidad: rama y commit de apertura (leidos de git, no tecleados)",
                   celda_identidad, celda_identidad))
 
