@@ -336,6 +336,33 @@ publica como una linea de prosa debajo de la tabla pegada, citando el
 instrumento que la corrio sin horizonte para la vuelta de que se trate. No es
 una fila mas del tallador porque el fichero del filtro no trae esa cifra por
 defecto.
+
+--- TAREA 2.c: LA FILA DEL DESFASE DEJA DE SER OPCIONAL (vuelta 86) ---
+
+POR QUE NACE (acta de la vuelta 85, seccion 1.14 y adjudicacion 5.4). La fila
+del desfase (TAREA 3.b, vuelta 85) se leia con `leer_opcional()`, la misma
+funcion que la fila del marcador, cuyo docstring decia que el marcador era
+"la unica opcional". Ya no lo era: una vuelta que no generara
+`SALIDA_V<N>_DESFASE_CALIBRADO_<LADO>.txt` perdia la fila SIN NINGUN AVISO,
+que es exactamente la degradacion silenciosa que el canon de fallar ruidoso
+del banco, seccion 9, prohibe ("la degradacion silenciosa es la peor clase
+de fallo: no deja sintoma"), y `EJECUTOR.md` regla 1 en una linea ("la celda
+que no salga de un instrumento no se escribe").
+
+EL ARREGLO: en `lado_fase04`, el desfase se lee ahora con `leer()` (la misma
+funcion que censo, Gate 0, aristas, motor, web y tsc), que SI registra el
+fallo en `fallos` cuando el fichero no existe. Ausencia del fichero del
+desfase en modo `--fase04` es ahora un FALLO DECLARADO: el tallador cae en
+ROJO y no talla nada, igual que si faltara cualquier otra celda obligatoria.
+El marcador SIGUE siendo la fila opcional que queda (la fase 04 no toca el
+cribado) y sigue leyendose con `leer_opcional()`, cuyo docstring ya no dice
+que sea "la unica".
+
+CASO OBLIGATORIO (vuelta 86): correr `--fase04 --vuelta 86` con
+`SALIDA_V86_DESFASE_CALIBRADO_APERTURA.txt` (o el de cierre) renombrado a un
+lado tiene que dar ROJO nombrando esa salida como no encontrada, y no talla
+la tabla; con el fichero de vuelta a su sitio, el mismo comando talla igual
+que antes.
 """
 import argparse
 import io
@@ -482,8 +509,11 @@ def filas(ap, ci, con_miles):
 
 def leer_opcional(nombre):
     """Como leer(), pero SIN registrar fallo si no existe: para la fila del
-    marcador en fase04, que es la unica opcional (la fase 04 no toca el
-    cribado). Devuelve None si el fichero no existe."""
+    marcador en fase04, que es la fila que QUEDA opcional (la fase 04 no toca
+    el cribado). YA NO ES LA UNICA (vuelta 86, adjudicacion 5.4 del acta 85):
+    el desfase del calibrado dejo de leerse con esta funcion porque su
+    ausencia silenciosa era la degradacion que el canon de fallar ruidoso del
+    banco, seccion 9, prohibe. Devuelve None si el fichero no existe."""
     ruta = os.path.join(LOOP, nombre)
     if not os.path.exists(ruta):
         return None
@@ -564,15 +594,18 @@ def lado_fase04(vuelta, sufijo, fallos, con_miles=True):
     else:
         d["marcador_A"] = None
 
-    # TAREA 3.b (vuelta 85): el desfase del calibrado rastreado, opcional
-    # (una vuelta que no genero el fichero no talla la fila, igual que el
-    # marcador). Cuando SI existe, ninguna de sus cifras se deja sin leer.
-    des = leer_opcional(p + "DESFASE_CALIBRADO_" + sufijo + ".txt")
-    if des is not None:
-        d["desfase_n"] = busca(des, r"DESFASE DEL CALIBRADO RASTREADO: (\d+) fila", "desfase %s" % sufijo, fallos)
-        d["desfase_lista"] = re.findall(r"^\s{2}(\S+ -> \S+) \|", des, re.MULTILINE)
-    else:
-        d["desfase_n"] = None
+    # TAREA 2.c (vuelta 86, adjudicacion 5.4 del acta 85): el desfase del
+    # calibrado rastreado DEJA DE SER OPCIONAL. Hasta la vuelta 85 se leia con
+    # leer_opcional() y una vuelta sin el fichero simplemente perdia la fila
+    # sin ruido; el docstring de leer_opcional() decia que el marcador era "la
+    # unica opcional" y ya no lo era. Desde ahora se lee con leer(), que SI
+    # registra fallo (fallos.append) cuando el fichero falta: la ausencia es
+    # un FALLO DECLARADO, no una fila que desaparece en silencio. El marcador
+    # sigue leyendose con leer_opcional() arriba: esa diferencia queda escrita
+    # aqui, en el codigo, y no solo en la prosa del reporte.
+    des = leer(p + "DESFASE_CALIBRADO_" + sufijo + ".txt", fallos)
+    d["desfase_n"] = busca(des, r"DESFASE DEL CALIBRADO RASTREADO: (\d+) fila", "desfase %s" % sufijo, fallos)
+    d["desfase_lista"] = re.findall(r"^\s{2}(\S+ -> \S+) \|", des, re.MULTILINE)
     return d
 
 
@@ -613,17 +646,18 @@ def filas_fase04(ap, ci, con_miles):
               "(no aplica: la celda de cierre es la resta contra esta apertura)",
               "%+d / %+d / %+d / %+d" % (dif("sig"), dif("prev"), dif("suma"), dif("union"))))
 
-    if ap.get("desfase_n") is not None or ci.get("desfase_n") is not None:
-        def celda_desfase(d):
-            if d.get("desfase_n") is None:
-                return "?"
-            n = d["desfase_n"]
-            lista = d.get("desfase_lista") or []
-            if lista and len(lista) <= 10:
-                return "%s fila(s): %s" % (m(n), ", ".join("`%s`" % p for p in lista))
-            return "%s fila(s)" % m(n)
-        f.append(("desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo)",
-                  celda_desfase(ap), celda_desfase(ci)))
+    # TAREA 2.c (vuelta 86): fila OBLIGATORIA, no opcional. Si su fichero
+    # faltara, lado_fase04 ya registro el fallo en `fallos` y main() ROJO
+    # antes de llegar aqui: para cuando esta funcion corre, las dos celdas
+    # existen siempre.
+    def celda_desfase(d):
+        n = d["desfase_n"]
+        lista = d.get("desfase_lista") or []
+        if lista and len(lista) <= 10:
+            return "%s fila(s): %s" % (m(n), ", ".join("`%s`" % p for p in lista))
+        return "%s fila(s)" % m(n)
+    f.append(("desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo)",
+              celda_desfase(ap), celda_desfase(ci)))
     return f
 
 

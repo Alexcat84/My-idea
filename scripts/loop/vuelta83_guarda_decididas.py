@@ -5,10 +5,30 @@ LA GUARDA DEL REGISTRO, ROJO con exit 1 (adjudicacion 5.2 del acta de la
 vuelta 82). Cruza docs/plan/OP_E_01_DECIDIDAS.jsonl (o el registro que se
 pase con --registro) contra una bolsa filtrada (--bolsa RUTA, en orden de
 fichero, la misma cabeza que se lee): toda unidad de la bolsa que tenga
-decision NO SE ENLAZA en el registro tiene que caer DENTRO del PREFIJO de
-decididas (las primeras N unidades, sin huecos); si una unidad decidida
-aparece POR DETRAS de una sin decidir, es ROJO, exit 1: una unidad se salto
-sin leer.
+DECISION REGISTRADA (cualquiera, ver mas abajo) tiene que caer DENTRO del
+PREFIJO de decididas (las primeras N unidades, sin huecos); si una unidad
+decidida aparece POR DETRAS de una sin decidir, es ROJO, exit 1: una unidad
+se salto sin leer.
+
+LA GUARDA APRENDE EL ESTADO ESCRITA (vuelta 86, adjudicacion 5.1 del acta
+85). Hasta la vuelta 85 solo NO SE ENLAZA contaba como decidida, y con esa
+definicion el VERDE que la adjudicacion 6.3 del acta 84 exige (la guarda
+corrida DESPUES del horneado de cierre: verde significa que la primera
+unidad sin decidir es la cabeza del tramo SIGUIENTE) era IMPOSIBLE en cuanto
+un tramo escribiera una sola arista, porque las unidades ESCRITA siguen en
+la bolsa congelada (adjudicacion 5.7 del acta 82) y la guarda vieja las leia
+como sin decidir. Medido por el auditor con las dos definiciones sobre la
+bolsa V85 y el registro de 186 filas (acta 85, seccion 1.8): "solo NO SE
+ENLAZA" da ROJO (prefijo 0 a 75, primera sin decidir el 76, 19 por detras);
+"cualquier decision registrada" da VERDE (prefijo 0 a 101, primera sin
+decidir el 102, cero por detras), que es exactamente la cabeza del tramo
+siguiente. Desde esta vuelta la guarda cuenta como DECIDIDA cualquier fila
+del registro, sin importar su valor de "decision", y la imprime al lado de
+cada unidad del prefijo: el ROJO vuelve a significar lo unico que debe
+significar, que una unidad se salto sin leer, no que el instrumento no sepa
+leer el estado ESCRITA. La doctrina de la bolsa NO se toca: la bolsa sigue
+conteniendo unidades ESCRITA (se commitea "tal como quedo", con su desfase
+dicho y medido, adjudicacion 5.7 del acta 82).
 
 USO:
   python scripts/loop/vuelta83_guarda_decididas.py --bolsa docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V82.jsonl
@@ -47,22 +67,28 @@ def main():
     bolsa = cargar_jsonl(ruta_bolsa)
     registro = cargar_jsonl(ruta_reg)
 
-    decididas_no_enlaza = {}
+    # vuelta 86 (adjudicacion 5.1 del acta 85): decidida es CUALQUIER fila del
+    # registro, no solo NO SE ENLAZA. reparto_decisiones cuenta cuantas filas
+    # trae cada valor de "decision", para que la cabecera de la corrida lo
+    # diga sin tener que volver a contar aparte.
+    decididas = {}
+    reparto_decisiones = {}
     for r in registro:
-        if r["decision"] == "NO SE ENLAZA":
-            decididas_no_enlaza[(r["madre"], r["hijo"])] = r
+        decididas[(r["madre"], r["hijo"])] = r
+        reparto_decisiones[r["decision"]] = reparto_decisiones.get(r["decision"], 0) + 1
 
     print("=" * 78)
-    print("LA GUARDA DEL REGISTRO DE DECIDIDAS, TAREA 2.b vuelta 83")
+    print("LA GUARDA DEL REGISTRO DE DECIDIDAS, TAREA 2.b vuelta 83, ESTADO ESCRITA vuelta 86")
     print("bolsa: %s (%d filas)" % (a.bolsa, len(bolsa)))
-    print("registro: %s (%d filas, %d NO SE ENLAZA)" % (a.registro, len(registro), len(decididas_no_enlaza)))
+    print("registro: %s (%d filas, decidida = cualquier decision registrada, reparto %s)"
+          % (a.registro, len(registro), reparto_decisiones))
     print("=" * 78)
     print()
 
     banderas = []
     for i, fila in enumerate(bolsa):
         clave = (fila["madre"], fila["hijo"])
-        banderas.append(clave in decididas_no_enlaza)
+        banderas.append(clave in decididas)
 
     primer_sin_decidir = None
     for i, b in enumerate(banderas):
@@ -79,6 +105,11 @@ def main():
 
     print("prefijo de decididas: indices 0 a %d (%d unidades)"
           % (prefijo_len - 1 if prefijo_len else -1, prefijo_len))
+    for i in range(prefijo_len):
+        fila = bolsa[i]
+        r = decididas[(fila["madre"], fila["hijo"])]
+        print("   indice %d: %s -> %s | %s (tramo %s)"
+              % (i, fila["madre"], fila["hijo"], r["decision"], r.get("tramo")))
     if primer_sin_decidir is None:
         print("TODA LA BOLSA ESTA DECIDIDA.")
     else:
@@ -92,9 +123,9 @@ def main():
               "(indice %d): una unidad se salto sin leer" % (len(rojos), primer_sin_decidir))
         for i in rojos:
             fila = bolsa[i]
-            r = decididas_no_enlaza[(fila["madre"], fila["hijo"])]
-            print("   indice %d: %s -> %s | decidida en tramo %s (%s)"
-                  % (i, fila["madre"], fila["hijo"], r["tramo"], r["fichero_origen"]))
+            r = decididas[(fila["madre"], fila["hijo"])]
+            print("   indice %d: %s -> %s | decidida %s en tramo %s (%s)"
+                  % (i, fila["madre"], fila["hijo"], r["decision"], r["tramo"], r["fichero_origen"]))
         print("GUARDA: ROJO")
         return 1
 

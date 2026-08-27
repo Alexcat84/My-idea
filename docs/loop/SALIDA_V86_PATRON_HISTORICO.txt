@@ -1,0 +1,45 @@
+veredictos leidos: 3388 | pares no dirigidos unicos: 3388
+registro leido: 186 filas
+
+==============================================================================
+LA TABLA DEL PATRON HISTORICO (TAREA 2.b, escalada de EJECUTOR.md regla 1,
+adjudicacion 5.3 del acta 85). Tallada de docs/plan/OP_E_01_DECIDIDAS.jsonl
+y docs/INTRA_DOMINIO_VEREDICTOS.jsonl. CADA fila es un par del registro que
+SI tiene veredicto (cruce sin direccion); la columna decision es la de HOY.
+==============================================================================
+
+| tramo | par | clase | puesto | dominio | decision (registro de hoy) |
+|---:|---|:---:|---:|---|---|
+| 3 | `fees_y_breakup_fee_adquisicion -> breakup_fee_evaluation` | D | 223 | core | ESCRITA |
+| 3 | `analisis_de_ratios_financieros -> retorno_sobre_capital` | D | 1369 | core | ESCRITA |
+| 3 | `identificar_si_tu_producto_necesita_proteccion_especial -> probar_empaque_antes_de_escalar_envios` | D | 1746 | entrega | ESCRITA |
+| 3 | `control_exportaciones_bis -> licencia_exportacion_regulaciones` | D | 1951 | exportacion | ESCRITA |
+| 3 | `cero_defectos -> zero_defects_concepto` | D | 2464 | quality | ESCRITA |
+| 3 | `mejora_calidad_crosby -> programa_mejora_calidad_14_pasos` | D | 2583 | quality | ESCRITA |
+| 3 | `estadistica_basica_calidad -> medidas_tendencia_dispersion` | D | 2826 | quality | ESCRITA |
+| 4 | `equipo_customer_development -> customer_development_team` | B | 637 | core | NO SE ENLAZA |
+| 4 | `sujetos_de_control -> key_process_product_characteristics` | D | 3205 | quality | ESCRITA |
+| 5 | `mvp_catalogo_tecnicas -> mvp_tipo_video` | D | 384 | core | NO SE ENLAZA |
+| 5 | `posicionamiento_vs_competidores -> analisis_competencia_franquicias` | D | 2097 | franquicias | NO SE ENLAZA |
+| 5 | `identificacion_evaluacion_peligros -> investigacion_incidentes` | D | 2324 | health_safety | ESCRITA |
+| 6 | `abolir_inspeccion_masiva -> eliminacion_inspeccion_masiva_por_control_estadistico` | D | 2560 | quality | NO SE ENLAZA |
+| 7 | `estructura_reporte_dual_estadistico -> organizacion_liderazgo_estadistico` | D | 3121 | quality | NO SE ENLAZA |
+| 8 | `term_sheet_negociacion -> entender_term_sheet` | D | 554 | core | NO SE ENLAZA |
+| 8 | `clasificacion_caracteristicas_calidad -> key_process_product_characteristics` | D | 2959 | quality | NO SE ENLAZA |
+| 9 | `formulacion_teorias_causa -> diagrama_causa_efecto` | D | 2980 | quality | ESCRITA |
+| 9 | `control_calidad_definicion -> plan_de_control` | D | 3056 | quality | NO SE ENLAZA |
+| 10 | `customer_discovery_phase2_problem_test -> ganar_comprension_del_cliente` | D | 1397 | core | NO SE ENLAZA |
+| 10 | `estructura_equipos_innovacion_interna -> equipo_multifuncional_real` | D | 1401 | core | ESCRITA |
+| 10 | `diagrama_de_flujo_proceso_map -> analisis_flujo_proceso` | D | 2728 | quality | ESCRITA |
+
+RESUMEN POR TRAMO (pares con veredicto | clase D | decision ESCRITA | decision NO SE ENLAZA):
+  tramo 10: 3 con veredicto | 3 clase D | 2 ESCRITA | 1 NO SE ENLAZA
+  tramo 3: 7 con veredicto | 7 clase D | 7 ESCRITA | 0 NO SE ENLAZA
+  tramo 4: 2 con veredicto | 1 clase D | 1 ESCRITA | 1 NO SE ENLAZA
+  tramo 5: 3 con veredicto | 3 clase D | 1 ESCRITA | 2 NO SE ENLAZA
+  tramo 6: 1 con veredicto | 1 clase D | 0 ESCRITA | 1 NO SE ENLAZA
+  tramo 7: 1 con veredicto | 1 clase D | 0 ESCRITA | 1 NO SE ENLAZA
+  tramo 8: 2 con veredicto | 2 clase D | 0 ESCRITA | 2 NO SE ENLAZA
+  tramo 9: 2 con veredicto | 2 clase D | 1 ESCRITA | 1 NO SE ENLAZA
+
+CASO OBLIGATORIO (acta 85, adjudicacion 5.3): formulacion_teorias_causa -> diagrama_causa_efecto, tramo 9, clase D, decision ESCRITA
