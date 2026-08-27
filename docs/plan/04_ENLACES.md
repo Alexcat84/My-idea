@@ -551,6 +551,72 @@ unidades de la bolsa filtrada V87. Ninguna unidad queda sin decision:
 abrio unidades nuevas respecto de la vuelta anterior (0 de 121, medido en
 `docs/loop/SALIDA_V87_TRAMO12_FILTRO_P91_GUARDA_CADENA.txt`).
 
+**CORRECCION DECLARADA (28 ago 2026, vuelta 88): la celda de la fila 117 no se
+borra, se corrige.** El auditor (acta de la vuelta 87, seccion 2.1 y
+adjudicacion 6.1) discrepo con la fila 117 de la tabla de arriba, que dice **"ES
+la cadena propia de la madre"** y a la vez **SE ESCRIBE**, sin una linea que
+explique por que la condicion de muerte de la adjudicacion 6.1 del acta 83 no
+aplica ahi. Es la caida que la adjudicacion 6.8 del acta 87 nombra: "contestar
+SI y escribir SE ESCRIBE sin una linea mas no es una lectura, es un
+formulario."
+
+**LA RELECTURA CONJUNTA, con instrumento propio**
+(`scripts/loop/vuelta88_tarea2_relectura_117.py`,
+`docs/loop/SALIDA_V88_TAREA2_RELECTURA_117.txt`): las seis aristas del camino
+`juran_rcca_metodo -> definicion_problema_moms_2 -> analisis_sintomas ->
+formulacion_teorias_causa -> prueba_teorias_causa_raiz ->
+evaluacion_alternativas_solucion -> diseno_implementacion_remedio` **estan
+las seis, verificadas hoy en las dos vistas** (`nodos_siguientes` de cada
+origen y `nodos_previos` de cada destino), los siete nodos **vivos**. Sobre
+esto no hay hallazgo: el camino que el auditor trajo existe tal como lo
+describio.
+
+**LA LECTURA QUE CAMBIA es si ese camino ES la cadena propia de la madre.** La
+fila de arriba dice que si. **NO LO ES, y la razon es la que faltaba**: la
+regla de banco 9.6.1 (CAVEAT MEDIDO), citada por su letra y no parafraseada,
+dice que la cadena cuenta como cableado establecido **"si los hijos estan
+encadenados en el orden que la madre enumera"**, y que **"si estan sueltos
+alrededor de la madre, se cuentan los radios"** (o sea, es alcanzabilidad, no
+cadena). De los cinco nodos del camino que preceden al hijo, CUATRO son pasos
+literales de la madre en su propio orden (`definicion_problema_moms_2` su paso
+1; `analisis_sintomas`, `formulacion_teorias_causa` y
+`prueba_teorias_causa_raiz` los tres, su paso 2) pero **UNO no lo es**:
+`evaluacion_alternativas_solucion` no aparece en ninguno de los cuatro pasos de
+`juran_rcca_metodo` (medido leyendo su ficha completa, `pasos_accionables`).
+Ese nodo esta **suelto alrededor de la madre** en el sentido literal de 9.6.1,
+y por el propio texto de la regla un camino con un tramo suelto no es la
+cadena que la madre enumera: es alcanzabilidad, y **"contra la alcanzabilidad
+la arista sigue faltando"**, que es la otra mitad de la adjudicacion 6.1 del
+acta 83 que la fila de arriba no cito.
+
+**El precedente sostiene esta lectura y no la contradice.** El par 55 (acta
+del auditor, discusion de la vuelta 84, `institucionalizar_breakthrough ->
+metas_negocio_calidad`) sobrevivio como NO cadena propia por dos motivos
+escritos juntos: la direccion iba al reves **Y** el camino pasaba "por dos
+nodos de gobernanza que la madre no enumera". El segundo motivo, por si solo,
+es exactamente el que aplica aqui: no hace falta que la direccion falle para
+que un nodo suelto rompa la cadena. Los pares 66, 91 y 100 (los tres citados
+por el auditor como cadena propia que si mata) tienen los dos rasgos
+opuestos: **cero nodos sueltos** en su camino (66: dos nodos, los dos pasos de
+la madre; 91: dos nodos, los dos pasos; 100: dos nodos, los dos pasos) y
+avance forzoso hacia adelante. El 117 comparte con esos tres el avance hacia
+adelante, pero comparte con el 55 el rasgo que de verdad decide segun 9.6.1: un
+nodo que la madre no enumera en el medio del camino.
+
+**LA DECISION: LA CLASE SE SOSTIENE. `SE ESCRIBE` queda**, ahora con la razon
+completa: el camino no es la cadena propia de la madre (por el nodo suelto
+`evaluacion_alternativas_solucion`), asi que es mera alcanzabilidad y **9.6**
+dice que contra la alcanzabilidad la arista sigue faltando; y **9.6.2** ya
+daba la senal de contenido a favor (el paso 3 de la madre nombra el titulo
+entero del hijo, el hijo trae seis pasos propios que la madre no tiene, y la
+madre conserva materia propia en sus pasos 1, 2 y 4). **La fila de la tabla de
+arriba (117, columna "alcanzable") queda superada por esta correccion: donde
+dice "ES la cadena propia de la madre" la lectura correcta es "NO es la cadena
+propia de la madre (nodo suelto: `evaluacion_alternativas_solucion`)", igual
+que las filas 119 y 120.** La cifra final de la operacion (220 / 99 / 121,
+arriba) NO CAMBIA: la arista ya estaba escrita con la clase correcta, lo que
+cambia es la razon que la sostiene.
+
 ---
 
 ## LOS SUELTOS DE RACIMOS, y los racimos con miembro ajeno

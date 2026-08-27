@@ -1,0 +1,35 @@
+=== LOS CUATRO PASOS DE LA MADRE, LEIDOS DE SU FICHA ===
+  paso 1: Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema
+  paso 2: Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+  paso 3: Mejorar: diseñar e implementar el remedio
+  paso 4: Controlar: ajustar los controles para mantener las ganancias
+
+=== LAS SEIS ARISTAS DEL CAMINO, VERIFICADAS EN LAS DOS VISTAS ===
+  juran_rcca_metodo -> definicion_problema_moms_2 | en nodos_siguientes de juran_rcca_metodo: True | en nodos_previos de definicion_problema_moms_2: True | OK
+  definicion_problema_moms_2 -> analisis_sintomas | en nodos_siguientes de definicion_problema_moms_2: True | en nodos_previos de analisis_sintomas: True | OK
+  analisis_sintomas -> formulacion_teorias_causa | en nodos_siguientes de analisis_sintomas: True | en nodos_previos de formulacion_teorias_causa: True | OK
+  formulacion_teorias_causa -> prueba_teorias_causa_raiz | en nodos_siguientes de formulacion_teorias_causa: True | en nodos_previos de prueba_teorias_causa_raiz: True | OK
+  prueba_teorias_causa_raiz -> evaluacion_alternativas_solucion | en nodos_siguientes de prueba_teorias_causa_raiz: True | en nodos_previos de evaluacion_alternativas_solucion: True | OK
+  evaluacion_alternativas_solucion -> diseno_implementacion_remedio | en nodos_siguientes de evaluacion_alternativas_solucion: True | en nodos_previos de diseno_implementacion_remedio: True | OK
+
+TODAS LAS ARISTAS PRESENTES: True
+
+=== DEPRECADO DE CADA NODO DEL CAMINO ===
+  juran_rcca_metodo: deprecado=False
+  definicion_problema_moms_2: deprecado=False
+  analisis_sintomas: deprecado=False
+  formulacion_teorias_causa: deprecado=False
+  prueba_teorias_causa_raiz: deprecado=False
+  evaluacion_alternativas_solucion: deprecado=False
+  diseno_implementacion_remedio: deprecado=False
+
+=== QUE PASO DE LA MADRE ES CADA NODO DEL CAMINO (lectura declarada) ===
+  definicion_problema_moms_2: paso 1 de la madre
+  analisis_sintomas: paso 2 de la madre
+  formulacion_teorias_causa: paso 2 de la madre
+  prueba_teorias_causa_raiz: paso 2 de la madre
+  evaluacion_alternativas_solucion: NINGUN paso de la madre lo enumera (nodo SUELTO)
+  diseno_implementacion_remedio: paso 3 de la madre
+
+NODOS DEL CAMINO (sin contar madre ni hijo) QUE NINGUN PASO DE LA MADRE ENUMERA: 1
+  - evaluacion_alternativas_solucion (Evaluación de Alternativas de Solución)
