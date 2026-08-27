@@ -878,3 +878,67 @@ inventando el barrido.**
 
 > **Se separan a proposito: mezclarlas haria que ciento noventa y dos aristas seguras
 > esperaran a ciento un lecturas de frase.**
+
+---
+
+## REGISTRO DE LA VUELTA 89 (ACTA DEL AUDITOR), TAREA 1 DE LA VUELTA 90
+
+**Por que se registra aqui y no se deja solo en `ACTA_AUDITOR.md`:** la decision
+del fundador del 29 ago 2026 (`docs/loop/paradas/2026-08-29-racha-y-escalada-omitida-DECISION.md`)
+manda TAREA 1, los registros, antes de tocar la bolsa de `OP-E-06`. Todo lo que
+sigue es CITA del acta, no medicion nueva: cada linea trae su numero de linea en
+`docs/loop/ACTA_AUDITOR.md`.
+
+### Las dos caidas de reporte de la vuelta 89 (acta 89, seccion 3, lineas 30165 a 30244)
+
+1. **El truncado a 200 caracteres, publicado como "verificado" con dos ejemplos
+   que lo desmienten** (seccion 3.1, lineas 30167 a 30208). El reporte de la
+   vuelta 89 publico que `len(frase) == 200` estaba "verificado" en siete
+   puestos de ejemplo de `docs/plan/COSECHA_RAZONES_D.jsonl`, y dos de los
+   siete (**2023** y **2082**) median **305** y **263** caracteres, no 200.
+   Medicion del auditor de la cifra buena: **397 filas, 270 con `len(frase)`
+   exactamente 200, 23 por encima de 200, maximo 335.**
+2. **El caso rojo de la TAREA 3.d que no puede fallar** (seccion 3.2, lineas
+   30210 a 30244). En `scripts/loop/vuelta89_tarea3_rebase_ope06.py`, lineas
+   504 a 531, `veredicto_2` es una constante literal (`"ENTRA"`) y el `assert`
+   la compara consigo misma: no puede salir en rojo nunca. El reporte lo
+   publico como prueba de que el criterio se comporta.
+
+### La caida del auditor: la escalada automatica no encargada (acta 89, seccion 6 punto 1, lineas 30320 a 30332)
+
+El acta de la vuelta 88 declaro la racha de reporte en DOS y no encargo la
+extension del tallador que `EJECUTOR.md` regla 1 deja AUTOMATICAMENTE
+ENCARGADA en ese caso (decision del fundador del 26 ago 2026). El encargo de
+la vuelta 89 puso la regla en prosa pero no la operacion de codigo, y la
+tercera caida (la de esta misma seccion, punto 2) llego donde el remedio no
+estaba puesto. Es el motivo por el que la TAREA 3 de esta vuelta (90) es
+BLOQUEANTE y va antes de tocar `OP-E-06`.
+
+### Las siete adjudicaciones de la seccion 4 del acta 89 (lineas 30245 a 30284), cada una por su numero
+
+- **4.1** (linea 30247): el puesto **530 ENTRA** en la bolsa de `OP-E-06`. Su
+  frase cita la linea entera del paso 3 de la madre, y el criterio que deja
+  dentro a los puestos 1169 y 1002 no puede dejarlo fuera.
+- **4.2** (linea 30252): el puesto **932 SALE** de la bolsa de `OP-E-06`. Su
+  propia frase nombra a cuatro hermanos de la madre y `mecanismo_resolucion_
+  disputas` no es ninguno de los cuatro.
+- **4.3** (linea 30258): el puesto **581 se queda fuera**, y la exclusion se
+  declara con su motivo real: la letra de `OP-E-06` ("si una razon no lo dice,
+  el par NO entra") manda, aunque las fichas del par muestren el patron
+  canonico por contenido. Va a `PENDIENTES` como candidato de una pasada
+  posterior (ver TAREA 2 de esta vuelta), junto con el **650**, que es la
+  misma familia por la misma razon.
+- **4.4** (linea 30263): el fichero `OP_E_06_REBASE_V89.jsonl` no se corrige
+  ni se borra en la vuelta 89: la correccion es a fichero propio nuevo (V90),
+  que es la TAREA 2 de esta vuelta.
+- **4.5** (linea 30269): la TAREA 4 de la vuelta 89 (la via de `OP-C-05`,
+  `scripts/loop/vuelta89_tarea4_guarda_op_c05.py`) queda ratificada entera:
+  el instrumento, sus tres modos y la linea base de **935 entradas que sobran
+  en 711 nodos**.
+- **4.6** (linea 30273): la reversion del par 117 y sus correcciones
+  declaradas quedan ratificadas enteras. La cifra vigente de `OP-E-01` es
+  **220 / 98 ESCRITA / 122 NO SE ENLAZA**.
+- **4.7** (linea 30278): un caso rojo que no puede fallar no es un caso rojo,
+  y cuando el criterio es una lectura humana escrita a mano se declara como
+  tal en vez de fabricarle una prueba automatica. Es el precedente directo de
+  la regla nueva de `EJECUTOR.md` ("EL CASO ROJO SE PRUEBA POR MUTACION").

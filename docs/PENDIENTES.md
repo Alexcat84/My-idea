@@ -3041,3 +3041,27 @@ asi que se deciden DESPUES del merge, no dentro de la pasada.
 > misma parada (estado `ejecutada` para las operaciones del plan) **NO entra en este
 > backlog: se decidio SIN estado nuevo**, el estado de verdad sigue siendo el repo y el
 > commit por operacion es su registro de ejecucion.
+
+## CANDIDATOS DE UNA PASADA POSTERIOR DE `OP-E-06`: LOS PUESTOS 581 Y 650 (adjudicacion 4.3 del acta de la vuelta 89)
+
+**Los dos quedan FUERA de la bolsa V90** (`docs/plan/OP_E_06_REBASE_V90.jsonl`), y la
+exclusion se declara con su motivo real: **se caen por como quedo cosechada su frase, no
+por su contenido.**
+
+| puesto | par | por que cae de `OP-E-06` (letra de la verificacion: "si una razon no lo dice, el par NO entra") |
+|---:|---|---|
+| **581** | `cumplimiento_magnuson_moss -> prohibicion_tie_in_sales` | la frase es un argumento METODOLOGICO citando el banco 9 (si la madre sabe enlazar a otros hijos, la falta es omision de grafo), y no dice que ninguno de los dos nodos desarrolle contenido del otro |
+| **650** | (misma familia de `cumplimiento_magnuson_moss`) | su frase habla de que `prohibicion_tie_in_sales` es uno de los DOS que la madre no enlaza, aunque enlaza a tres de cinco: mismo argumento de familia, sin contenido propio del par |
+
+> **LO QUE LA EXCLUSION CUESTA, medido por el auditor (acta 89, seccion 2.2):** por
+> contenido, el par 581 es **tan canonico como el 530** (que si entro por 4.1): la madre
+> `cumplimiento_magnuson_moss` tiene un paso, en una linea, que es exactamente la
+> prohibicion de tie-in, y el grafo de hoy no la enlaza a `prohibicion_tie_in_sales`. La
+> arista real probablemente existe; lo que falta es una LECTURA NUEVA del par, no de la
+> frase ya cosechada, que declare el contenido y no solo el argumento de familia.
+
+**RECOMENDACION QUE VIAJA CON ELLA:** una pasada posterior, fuera de `OP-E-06`, que relea
+a mano los pares `cumplimiento_magnuson_moss -> prohibicion_tie_in_sales` (581) y su
+hermano de familia (650) por CONTENIDO (no por frase cosechada), con el mismo criterio de
+`OP-E-06` ("la frase dice quien desarrolla a quien"). **No bloquea nada de la fase 04**:
+ninguna operacion vigente depende de estos dos puestos.
