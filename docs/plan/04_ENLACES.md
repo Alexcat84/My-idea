@@ -426,6 +426,22 @@ y perder 73 gemelos.**
 > 8.939 / 17.899 / 9.583 de la apertura de esta vuelta, en las cuatro
 > cifras, como corresponde a dos aristas quitadas de las dos vistas.
 
+> **LA VARA NUEVA DE LA CADENA, EN OPERACION (26 ago 2026, vuelta 80,
+> adjudicada por el auditor en el acta de la vuelta 79 seccion 5 punto 6,
+> SIN doctrina nueva).** Desde el tramo 6 de `OP-E-01`, antes de escribir
+> una arista se mide si el hijo YA CUELGA de la cadena PROPIA de la madre
+> (sus pasos enumerados, en el orden que la madre declara), reusando la
+> maquina de `docs/loop/_auditor_v79_atajo.py`
+> (`scripts/loop/vuelta80_vara_cadena.py`). **No aparta candidatos por si
+> sola** (el acta 79 lo dejo escrito: *"alcanzable no es lo mismo que
+> encadenado"*): marca cada candidato ALCANZABLE para que la lectura
+> verifique EXPLICITAMENTE si el camino es la cadena propia antes de
+> decidir, que es exactamente el error que produjo D2 (revertida arriba en
+> esta misma vuelta). Integrada en
+> `scripts/loop/vuelta80_tramo6_filtrar.py`, que anota la alcanzabilidad de
+> las 30 unidades de cabeza sin descartar ninguna por eso
+> (`docs/loop/SALIDA_V80_TRAMO6_FILTRO_P91_GUARDA_CADENA.txt`).
+
 ---
 
 ## LOS SUELTOS DE RACIMOS, y los racimos con miembro ajeno

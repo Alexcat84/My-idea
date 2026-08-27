@@ -9244,7 +9244,8 @@
       "nodos_previos": [
         "control_calidad_definicion",
         "establecimiento_metas_de_calidad",
-        "auditoria_de_producto"
+        "auditoria_de_producto",
+        "desarrollo_de_controles_de_proceso"
       ],
       "nodos_siguientes": [
         "sujetos_de_control",
@@ -27732,7 +27733,8 @@
         "muestreo_de_aceptacion"
       ],
       "nodos_siguientes": [
-        "niveles_calidad_muestreo_aql_lql_aoql"
+        "niveles_calidad_muestreo_aql_lql_aoql",
+        "distribucion_binomial"
       ],
       "condiciones_activacion": [
         "Cuando se necesita validar formalmente un plan de muestreo antes de implementarlo"
@@ -32898,7 +32900,8 @@
       "nodos_siguientes": [
         "auditoria_calidad",
         "six_sigma_dmaic",
-        "decision_conformidad_producto"
+        "decision_conformidad_producto",
+        "bucle_retroalimentacion_control"
       ],
       "condiciones_activacion": [
         "Cuando el diseño del proceso está completo y debe pasar a producción/operaciones"
@@ -38382,7 +38385,8 @@
       ],
       "entregable_esperado": "Tabla de probabilidades binomiales para diseño de plan de muestreo",
       "nodos_previos": [
-        "distribucion_poisson"
+        "distribucion_poisson",
+        "curva_caracteristica_operativa"
       ],
       "nodos_siguientes": [
         "teoremas_probabilidad",

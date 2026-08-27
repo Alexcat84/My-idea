@@ -1,0 +1,45 @@
+BOLSA REDUCIDA TOTAL: 468
+SIN ARISTA (candidatos): 249
+APARTADOS POR P.9.1 ENSANCHADO (operaciones + vara de los A): 92
+  de esos, SOLO por operacion: 35
+  de esos, con al menos un motivo de la vara de los A: 57
+LIMPIOS TRAS P.9.1 ENSANCHADO (antes de la guarda del par no dirigido): 157
+
+GUARDA DEL PAR NO DIRIGIDO: 0 pareja(s) detectada(s) (mismo par, dos direcciones)
+CANDIDATOS (unidades de lectura) TRAS LA GUARDA: 157 (0 parejas + 157 sueltas, de 157 filas)
+ESCRITO: docs\plan\PASO_NODO_CALIBRADO_FILTRADO_V80.jsonl (157 filas, orden de fichero)
+
+CABEZA DE LA BOLSA FILTRADA, primeras 30 UNIDADES, en orden de fichero,
+CON LA VARA NUEVA DE LA CADENA (alcanzabilidad previa, no aparta por si sola):
+  0: clasificacion_tipos_activos -> tipos_de_pasivos (paso 1, dominio core) | YA ALCANZABLE (3 saltos): clasificacion_tipos_activos -> depreciacion_y_amortizacion -> lectura_balance_general -> tipos_de_pasivos
+  1: proceso_llamada_inicial_venta -> proceso_venta_franquicias (paso 6, dominio franquicias) | YA ALCANZABLE (4 saltos): proceso_llamada_inicial_venta -> concepto_de_advances -> validacion_con_franquiciados -> referidos_franquiciados_existentes -> proceso_venta_franquicias
+  2: equipo_customer_development -> customer_development_team (paso 1, dominio core) | YA ALCANZABLE (5 saltos): equipo_customer_development -> preservar_caja_buscar_gastar -> comunicacion_aprendizaje_startup -> buy_in_customer_development -> board_management_buyin -> customer_development_team
+  3: extraer_priorizar_hipotesis -> value_proposition_startup (paso 1, dominio core) | YA ALCANZABLE (5 saltos): extraer_priorizar_hipotesis -> test_card -> experiment_library -> producto_minimo_viable -> earlyvangelists_ventas_tempranas -> value_proposition_startup
+  4: preparacion_preguntas_problema_precall -> preguntas_situacion (paso 4, dominio core) | YA ALCANZABLE (5 saltos): preparacion_preguntas_problema_precall -> planificacion_preguntas_implicacion -> preguntas_need_payoff -> cierre_segun_complejidad_venta -> modelo_spin_preguntas -> preguntas_situacion
+  5: timing_solicitud_referidos -> fase_adopt_ciclo_cliente (paso 5, dominio core) | sin camino previo
+  6: requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level (paso 1, dominio quality) | sin camino previo
+  7: hipotesis_relacion_clientes_web -> mvp_alta_fidelidad (paso 4, dominio core) | YA ALCANZABLE (2 saltos): hipotesis_relacion_clientes_web -> producto_minimo_viable -> mvp_alta_fidelidad
+  8: producto_mercado_fit_motores -> afinar_motor_crecimiento (paso 1, dominio core) | YA ALCANZABLE (3 saltos): producto_mercado_fit_motores -> contabilidad_innovacion -> establecer_linea_base_mvp -> afinar_motor_crecimiento
+  9: valor_intangible_sostenibilidad -> compromiso_cliente_sostenibilidad (paso 1, dominio environmental) | sin camino previo
+  10: analisis_valor -> customer_needs_spreadsheet (paso 1, dominio quality) | sin camino previo
+  11: posicionamiento_vs_competidores -> analisis_competencia_franquicias (paso 2, dominio franquicias) | sin camino previo
+  12: organizacion_interna_exportacion -> estructura_plan_exportacion (paso 3, dominio exportacion) | sin camino previo
+  13: errores_comunes_fundraising -> confidencialidad_nda_adquisicion (paso 2, dominio core) | YA ALCANZABLE (5 saltos): errores_comunes_fundraising -> gestion_multiples_term_sheets -> encontrar_lead_vc -> term_sheet_negociacion -> forma_de_contraprestacion_en_adquisicion -> confidencialidad_nda_adquisicion
+  14: mvp_catalogo_tecnicas -> mvp_tipo_video (paso 1, dominio core) | YA ALCANZABLE (5 saltos): mvp_catalogo_tecnicas -> test_ab_precio -> lienzo_modelo_negocio -> ciclo_construir_medir_aprender -> producto_minimo_viable -> mvp_tipo_video
+  15: reporte_estado_miembro_equipo -> variance_analysis (paso 3, dominio core) | YA ALCANZABLE (2 saltos): reporte_estado_miembro_equipo -> project_performance_report -> variance_analysis
+  16: terminologia_clave_breakthrough -> analisis_sintomas (paso 2, dominio quality) | sin camino previo
+  17: evaluacion_actitudes_empleados -> identificar_oportunidades_sostenibilidad (paso 2, dominio environmental) | YA ALCANZABLE (6 saltos): evaluacion_actitudes_empleados -> incentivos_reconocimiento_sostenibilidad -> inversion_capacitacion_sostenibilidad -> comunicacion_reporte_sostenibilidad -> expandir_cadena_valor -> innovar_transformar_mercados -> identificar_oportunidades_sostenibilidad
+  18: pre_control_estadistico -> limites_de_especificacion_vs_limites_de_control (paso 1, dominio quality) | sin camino previo
+  19: posicionamiento_por_tipo_de_mercado -> resegmentacion_mercado_nicho_bajo_costo (paso 5, dominio core) | YA ALCANZABLE (5 saltos): posicionamiento_por_tipo_de_mercado -> posicionamiento_de_empresa -> decision_pivotar_o_proceder -> customer_creation -> determinar_tipo_de_mercado -> resegmentacion_mercado_nicho_bajo_costo
+  20: control_calidad_operaciones_servicio -> descubrir_necesidades_del_cliente (paso 1, dominio quality) | YA ALCANZABLE (6 saltos): control_calidad_operaciones_servicio -> six_sigma_dmaic -> sostener_las_ganancias -> trilogia_de_juran -> doble_significado_calidad -> fitness_for_use_purpose -> descubrir_necesidades_del_cliente
+  21: el_riesgo_nunca_se_acaba_se_administra -> cuando_el_riesgo_se_vuelve_realidad (paso 2, dominio risk_management) | YA ALCANZABLE (6 saltos): el_riesgo_nunca_se_acaba_se_administra -> correr_hacia_el_riesgo -> riesgo_no_es_mala_suerte -> el_riesgo_cambia_con_el_tiempo -> revisa_tus_riesgos_con_un_ritmo -> que_hacer_con_un_riesgo_nuevo -> cuando_el_riesgo_se_vuelve_realidad
+  22: curva_caracteristica_operativa -> distribucion_binomial (paso 2, dominio quality) | sin camino previo
+  23: abolir_inspeccion_masiva -> eliminacion_inspeccion_masiva_por_control_estadistico (paso 5, dominio quality) | sin camino previo
+  24: recursos_apoyo_gubernamental_exportacion -> trabajo_con_bancos_comerciales (paso 3, dominio exportacion) | sin camino previo
+  25: definiciones_operacionales_de_calidad -> optimizacion_caracteristicas_diseno (paso 1, dominio quality) | sin camino previo
+  26: desarrollo_de_controles_de_proceso -> bucle_retroalimentacion_control (paso 2, dominio quality) | sin camino previo
+  27: descubrir_necesidades_del_cliente -> traduccion_necesidades_cliente (paso 2, dominio quality) | YA ALCANZABLE (6 saltos): descubrir_necesidades_del_cliente -> design_for_six_sigma_dfss -> innovacion_tipo_ii -> juran_quality_by_design -> identificar_clientes_externos_e_internos -> customer_needs_spreadsheet -> traduccion_necesidades_cliente
+  28: qfd_matriz -> identificar_clientes_externos_e_internos (paso 2, dominio quality) | sin camino previo
+  29: analisis_variacion_desempeno_servicio -> pre_control_estadistico (paso 4, dominio quality) | sin camino previo
+
+DE LAS 30 UNIDADES DE CABEZA, CON CAMINO PREVIO YA ALCANZABLE: 15
