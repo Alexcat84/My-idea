@@ -1,0 +1,35 @@
+==============================================================================
+A. LA COSECHA, TALLADA POR MI
+==============================================================================
+filas totales: 397
+campos de la primera fila: ['cubierto_por', 'dominio', 'frase', 'nodo_a', 'nodo_b', 'nuevo', 'puesto', 'senales']
+nuevo=true: 293
+candidatos OP-E-06 (senales distintas de ['continua por la vara']): 192
+candidatos OP-E-07 (senal exacta): 101
+reparto por dominio de los OP-E-06: {'core': 146, 'entrega': 15, 'environmental': 15, 'exportacion': 12, 'franquicias': 4}
+reparto por dominio de los OP-E-07: {'core': 74, 'environmental': 12, 'exportacion': 11, 'entrega': 4}
+
+==============================================================================
+B. MEDICION DE CONTRASTE SOBRE LOS 192 COMPLETOS (definicion estricta, sin alias)
+==============================================================================
+ya tienen arista (alguna direccion, SIN alias): 6
+tocan un nodo DEPRECADO: 36
+tocan un id inexistente: 0
+
+==============================================================================
+C. LA BOLSA RE-BASADA DEL EJECUTOR
+==============================================================================
+filas de docs/plan/OP_E_06_REBASE_V88.jsonl: 129
+campos: ['cubierto_por', 'dominio', 'frase', 'nodo_a', 'nodo_b', 'nuevo', 'puesto', 'senales']
+pares unicos: 129
+filas de la bolsa QUE NO ESTAN en los 192 de la cosecha: 0
+reparto por dominio de la bolsa: {'core': 90, 'entrega': 15, 'environmental': 10, 'exportacion': 10, 'franquicias': 4}
+pares de la bolsa que YA tienen arista hoy (estricto): 0
+pares de la bolsa que tocan un DEPRECADO: 17
+
+==============================================================================
+D. LA DIRECCION, CON LA LISTA DE PALABRAS DEL ENCARGO (vara propia)
+==============================================================================
+campo de frase usado: frase
+de los 192: CON alguna palabra 140, SIN ninguna 52
+frases literales 'Ninguno enlaza al otro.': 9

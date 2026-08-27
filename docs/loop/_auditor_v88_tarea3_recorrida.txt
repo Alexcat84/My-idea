@@ -1,0 +1,84 @@
+==========================================================================================
+TAREA 3 (vuelta 88): EL INSTRUMENTO DE LA TAREA 5 (vuelta 87), ARREGLADO
+Las diez operaciones de docs/plan/04_ENLACES.md, orden de la ficha.
+==========================================================================================
+
+id_op                orden  depende_de                                    DESBLOQUEADA        
+----------------------------------------------------------------------------------------------------
+OP-E-01              1      (ninguna)                                     SI (sin dependencias)
+OP-E-02              2      (ninguna)                                     SI (sin dependencias)
+OP-E-03              3      OP-E-01, OP-U-02                              NO                  
+OP-M-03-ENLACES      4      OP-M-03-I, OP-M-03-II, OP-M-03-III            NO                  
+OP-E-04              5      OP-M-01, OP-M-01-FUSION                       NO                  
+OP-E-05              6      OP-M-01, OP-M-01-FUSION                       NO                  
+OP-M-01-ESLABONES    7      OP-M-01, OP-M-01-FUSION                       NO                  
+OP-M-01-SEXTO        8      OP-M-01, OP-M-01-FUSION                       NO                  
+OP-E-06              9      OP-D-01, OP-D-02, OP-D-03, OP-D-04, OP-D-05, OP-D-06, OP-D-07 SI                  
+OP-E-07              10     OP-E-06                                       NO SE PUEDE DECIR (dependencia AMBIGUA)
+
+==========================================================================================
+EL DETALLE, DEPENDENCIA POR DEPENDENCIA, CON SU EVIDENCIA CITADA
+==========================================================================================
+
+OP-E-01 (orden 1) -> DESBLOQUEADA: SI (sin dependencias)
+  (esta operacion no declara depende_de)
+
+OP-E-02 (orden 2) -> DESBLOQUEADA: SI (sin dependencias)
+  (esta operacion no declara depende_de)
+
+OP-E-03 (orden 3) -> DESBLOQUEADA: NO
+  depende de OP-E-01              | EJECUTADA      | fuente 04_ENLACES.md                | ## `OP-E-01`, CIERRE
+  depende de OP-U-02              | NO EJECUTADA   | fuente 03_FUSIONES.md               | re.**  **Operaciones: `OP-U-01` LISTA y `OP-U-02` pendiente del cierre del cribado.**  > **ADJUDICADO el 11 ago 2026: se
+
+OP-M-03-ENLACES (orden 4) -> DESBLOQUEADA: NO
+  depende de OP-M-03-I            | NO EJECUTADA   | fuente 03_FUSIONES.md               | * por los tramos de `OP-U-01` | | **SEIS FUSIONES ENRUTADAS a la fase 06** | `OP-M-01-FUSION` (5 nodos), `OP-M-02-ACCLI
+  depende de OP-M-03-II           | NO EJECUTADA   | fuente 03_FUSIONES.md               | * por los tramos de `OP-U-01` | | **SEIS FUSIONES ENRUTADAS a la fase 06** | `OP-M-01-FUSION` (5 nodos), `OP-M-02-ACCLI
+  depende de OP-M-03-III          | NO EJECUTADA   | fuente 03_FUSIONES.md               | mas pivote_startup es miembro de OP-M-03-III, que sigue pendiente. Re-leerlos seria decidir cosa de mesa, que es lo
+
+OP-E-04 (orden 5) -> DESBLOQUEADA: NO
+  depende de OP-M-01              | NO EJECUTADA   | fuente 06_MESAS.md                  | **Operaciones: `OP-M-01` a `OP-M-05`. LAS CINCO DECISION PENDIENTE**, porque una mesa **es** una decision pendiente:
+  depende de OP-M-01-FUSION       | NO EJECUTADA   | fuente 03_FUSIONES.md               | * por los tramos de `OP-U-01` | | **SEIS FUSIONES ENRUTADAS a la fase 06** | `OP-M-01-FUSION` (5 nodos), `OP-M-02-ACCLI
+
+OP-E-05 (orden 6) -> DESBLOQUEADA: NO
+  depende de OP-M-01              | NO EJECUTADA   | fuente 06_MESAS.md                  | **Operaciones: `OP-M-01` a `OP-M-05`. LAS CINCO DECISION PENDIENTE**, porque una mesa **es** una decision pendiente:
+  depende de OP-M-01-FUSION       | NO EJECUTADA   | fuente 03_FUSIONES.md               | * por los tramos de `OP-U-01` | | **SEIS FUSIONES ENRUTADAS a la fase 06** | `OP-M-01-FUSION` (5 nodos), `OP-M-02-ACCLI
+
+OP-M-01-ESLABONES (orden 7) -> DESBLOQUEADA: NO
+  depende de OP-M-01              | NO EJECUTADA   | fuente 06_MESAS.md                  | **Operaciones: `OP-M-01` a `OP-M-05`. LAS CINCO DECISION PENDIENTE**, porque una mesa **es** una decision pendiente:
+  depende de OP-M-01-FUSION       | NO EJECUTADA   | fuente 03_FUSIONES.md               | * por los tramos de `OP-U-01` | | **SEIS FUSIONES ENRUTADAS a la fase 06** | `OP-M-01-FUSION` (5 nodos), `OP-M-02-ACCLI
+
+OP-M-01-SEXTO (orden 8) -> DESBLOQUEADA: NO
+  depende de OP-M-01              | NO EJECUTADA   | fuente 06_MESAS.md                  | **Operaciones: `OP-M-01` a `OP-M-05`. LAS CINCO DECISION PENDIENTE**, porque una mesa **es** una decision pendiente:
+  depende de OP-M-01-FUSION       | NO EJECUTADA   | fuente 03_FUSIONES.md               | * por los tramos de `OP-U-01` | | **SEIS FUSIONES ENRUTADAS a la fase 06** | `OP-M-01-FUSION` (5 nodos), `OP-M-02-ACCLI
+
+OP-E-06 (orden 9) -> DESBLOQUEADA: SI
+  depende de OP-D-01              | EJECUTADA      | fuente correccion manual, ver docstring | CORREGIDO A MANO: el crudo del instrumento ata OP-D-01 a la frase 'su umbral acompanante sigue pendiente del fundador [...] y el par 494 sigue yendo a OP-D-01 como cura acoplada mayor' (02_DESTEJIDOS.md linea 3580), pero esa 'pendiente' es sobre el umbral MIN_BLOQUE y el enrutamiento del par 494, no sobre si OP-D-01 esta hecha. FUENTE AUTORITATIVA: 02_DESTEJIDOS.md linea 4470 ('EL CIERRE DE LA FASE 02, DECLARADO MIDIENDO'), tabla de las 9 operaciones: OP-D-01 SI, con REGISTRO DE OPERACION HECHA, linea 3581 (la seccion que empieza justo despues de la frase que confundio al localizador). (crudo del instrumento: NO EJECUTADA | BLOQUE = 2` **intacto** y su umbral acompanante **sigue pendiente del fundador**, las **dos aristas que > faltan**)
+  depende de OP-D-02              | EJECUTADA      | fuente 02_DESTEJIDOS.md             | P-D-01` Y `OP-D-02`: **LA VERIFICACION PUNTO POR PUNTO Y EL REGISTRO DE OPERACION HECHA** (19 ago 20
+  depende de OP-D-03              | EJECUTADA      | fuente 02_DESTEJIDOS.md             | ## `OP-D-03` CERRADA
+  depende de OP-D-04              | EJECUTADA      | fuente 02_DESTEJIDOS.md             | ## `OP-D-04` CERRADA
+  depende de OP-D-05              | EJECUTADA      | fuente 02_DESTEJIDOS.md             | ## `OP-D-05` SELLADA
+  depende de OP-D-06              | EJECUTADA      | fuente 02_DESTEJIDOS.md             | ## `OP-D-06`, EL CIERRE
+  depende de OP-D-07              | EJECUTADA      | fuente 02_DESTEJIDOS.md             | ## `OP-D-07` SELLADA
+
+OP-E-07 (orden 10) -> DESBLOQUEADA: NO SE PUEDE DECIR (dependencia AMBIGUA)
+  depende de OP-E-06              | AMBIGUA        | fuente (ninguna)                    | ninguna marca positiva ni negativa reconocida
+
+==========================================================================================
+RESUMEN: OPERACIONES DE FASE 04 DESBLOQUEADAS HOY (ademas de OP-E-01, ya
+cerrada)
+==========================================================================================
+  OP-E-06
+
+NO SE ABRE NINGUNA OPERACION ESTA VUELTA: esta tabla se publica y se lee su
+texto para contestar si alcanza para ejecutarla sin decidir nada.
+
+==========================================================================================
+CASO OBLIGATORIO 3.a: OP-E-02 leida directamente, citando su nota
+==========================================================================================
+OP-E-02 -> EJECUTADA | fuente OPERACIONES.jsonl:nota | o de lectura). Con eso la ficha tiene destino en sus tres piezas y la operacion queda HECHA por el c
+
+==========================================================================================
+CASO OBLIGATORIO 3.b: OP-C-04 y OP-C-05 leidas directamente
+==========================================================================================
+OP-C-04 -> AMBIGUA | fuente (ninguna) | ninguna marca positiva ni negativa reconocida
+OP-C-05 -> AMBIGUA | fuente (ninguna) | ninguna marca positiva ni negativa reconocida

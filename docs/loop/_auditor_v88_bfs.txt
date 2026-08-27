@@ -1,0 +1,63 @@
+==============================================================================
+PAR: juran_rcca_metodo -> diseno_implementacion_remedio
+PASOS DE LA MADRE (Método RCCA de Juran (Análisis de Causa Raíz)):
+   1. Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema
+   2. Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+   3. Mejorar: diseñar e implementar el remedio
+   4. Controlar: ajustar los controles para mantener las ganancias
+CAMINO MAS CORTO (6 saltos, ignorando la arista directa):
+   juran_rcca_metodo                               Método RCCA de Juran (Análisis de Causa Raíz)
+   definicion_problema_moms_2                      Definición y Selección del Problema (Criterios MOMS)
+   analisis_sintomas                               Análisis de Síntomas del Problema
+   formulacion_teorias_causa                       Formulación de Teorías de Causa
+   prueba_teorias_causa_raiz                       Prueba de Teorías para Identificar la Causa Raíz
+   evaluacion_alternativas_solucion                Evaluación de Alternativas de Solución
+   diseno_implementacion_remedio                   Diseño e Implementación del Remedio
+INTERMEDIOS (ni madre ni hijo): 5
+
+==============================================================================
+PAR: diseno_controles_proceso_mejorado -> auditorias_calidad_proceso
+PASOS DE LA MADRE (Diseño de Controles del Proceso Mejorado):
+   1. Actualizar el FMEA para identificar controles necesarios
+   2. Aplicar técnicas de mistake-proofing en las mejoras
+   3. Diseñar controles de calidad de proceso para Xs y Ys
+   4. Establecer estándares de control basados en el desempeño real
+   5. Determinar cómo se comparará el desempeño real con el estándar (SPC)
+   6. Establecer el autocontrol para los individuos responsables del proceso
+CAMINO MAS CORTO (4 saltos, ignorando la arista directa):
+   diseno_controles_proceso_mejorado               Diseño de Controles del Proceso Mejorado
+   validacion_sistema_medicion                     Validación del Sistema de Medición (Antes de Confiar en los Datos)
+   autocontrol_y_controlabilidad                   Autocontrol (Self-Control) y Controlabilidad
+   autocontrol_planificacion_servicio              Planifica el autocontrol en tu servicio (Self-Control)
+   auditorias_calidad_proceso                      Auditorías de Calidad de Proceso
+INTERMEDIOS (ni madre ni hijo): 3
+
+==============================================================================
+PAR: poder_a_traves_de_la_accion -> proposito_como_motor_energia
+PASOS DE LA MADRE (Poder a Través de la Acción: Unificar el Pensamiento Mediante el Actuar):
+   1. Actuar de inmediato sobre cualquier resolución o idea prometedora en lugar de posponerla
+   2. Buscar oportunidades de expresar públicamente o poner en práctica opiniones que hasta ahora eran solo especulación privada
+   3. Asegurar que la acción sea genuina y comprometida ('significar lo que se dice/hace'), no un gesto mecánico vacío
+   4. Vincular conscientemente el trabajo intelectual cotidiano a un propósito o impacto mayor para sostener la energía a largo plazo (como hizo Bentham)
+CAMINO MAS CORTO (2 saltos, ignorando la arista directa):
+   poder_a_traves_de_la_accion                     Poder a Través de la Acción: Unificar el Pensamiento Mediante el Actuar
+   compromiso_organismico_en_la_accion             Acción Comprometida vs. Movimiento Vacío
+   proposito_como_motor_energia                    El Propósito como Motor de Energía Mental
+INTERMEDIOS (ni madre ni hijo): 1
+
+==============================================================================
+PAR: institucionalizar_breakthrough -> metas_negocio_calidad
+PASOS DE LA MADRE (Institucionalización de la Mejora Anual):
+   1. Incluir metas de mejora en tu plan de negocio anual
+   2. Actualizar las responsabilidades de cada rol para incluir la mejora continua
+   3. Establecer revisiones periódicas del progreso
+   4. Revisar cómo evalúas el desempeño para que valore los logros de mejora
+   5. Crear momentos de reconocimiento público para los avances logrados
+CAMINO MAS CORTO (4 saltos, ignorando la arista directa):
+   institucionalizar_breakthrough                  Institucionalización de la Mejora Anual
+   revision_progreso                               Proceso Formal de Revisión de Progreso
+   auditoria_negocio                               Auditoría de Negocio (Business Audit)
+   consejo_de_calidad                              Consejo de Calidad (Liderazgo y Selección de Proyectos de Juran)
+   metas_negocio_calidad                           Metas de Calidad en el Plan de Negocio
+INTERMEDIOS (ni madre ni hijo): 3
+

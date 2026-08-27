@@ -1,0 +1,66 @@
+==============================================================================
+NODO: autocontrol_planificacion_servicio
+==============================================================================
+  titulo: Planifica el autocontrol en tu servicio (Self-Control)
+  dominio: quality | deprecado: None
+  pasos_accionables (5):
+    1. Documenta y ten a mano procedimientos de trabajo claros y actualizados
+    2. Define estándares concretos de calidad y cantidad para tu trabajo
+    3. Revisa el trabajo con regularidad y da retroalimentación oportuna y específica
+    4. Diseña el proceso y la tarea para que realmente puedas cumplir los objetivos de calidad
+    5. Aprende a ajustar el proceso y haz mantenimiento preventivo antes de que algo falle
+  entregable_esperado: Un checklist de autocontrol que completas evaluando los tres criterios (saber qué hacer, saber cómo te estás desempeñando, poder ajustar el proceso) y un plan de acción para las brechas que encuentres
+  resumen_teorico: El autocontrol dice que para que tú, o la persona que te ayuda, sean responsables de la calidad de un trabajo, necesitas tres cosas: saber con claridad qué se espera de ese trabajo (procedimientos y estándares definidos), saber cómo se está desempeñando en la realidad (retroalimentación) y tener la capacidad y la disposición para ajustar el proceso y reducir la variación. Esto aplica tanto a lo que el cliente ve como a lo que pasa detrás de escena.
+  siguientes (3): ['control_calidad_operaciones_servicio', 'auditorias_calidad_proceso', 'empoderamiento_personal_frontline']
+  previos (1): ['autocontrol_y_controlabilidad']
+
+==============================================================================
+NODO: autocontrol_y_controlabilidad
+==============================================================================
+  titulo: Autocontrol (Self-Control) y Controlabilidad
+  dominio: quality | deprecado: None
+  pasos_accionables (6):
+    1. Verificar que el proceso tenga capacidad real para cumplir las metas fijadas
+    2. Dar a quien ejecuta el trabajo manera de conocer las metas y su desempeño real
+    3. Dar mecanismos concretos para ajustar el proceso y corregir desviaciones
+    4. Usar una lista de verificación por proceso para confirmar que se cumplen las condiciones de autocontrol
+    5. Antes de culpar a alguien por un error, revisar si la responsabilidad es tuya, por cómo diseñaste el proceso, o de quien lo ejecutó
+    6. Entrenar a la persona que te ayuda en el uso de los mecanismos para corregir el proceso
+  entregable_esperado: Una lista de verificación de autocontrol para cada proceso clave de tu negocio, que te permita distinguir errores de diseño, que son tuyos, de errores de ejecución
+  resumen_teorico: Quien ejecuta un trabajo está en autocontrol cuando tiene: (1) manera de conocer las metas, (2) manera de conocer su desempeño real, y (3) manera de cambiar su desempeño si no cumple las metas. Si alguna de estas tres condiciones falta, los errores son responsabilidad de quien diseñó el proceso, es decir tuya, no de quien lo ejecuta. Estudios de Juran mostraron que, históricamente, el 80% de los defectos son responsabilidad de quien dirige el proceso y solo el 20% de quien lo ejecuta, lo que explica por qué muchos intentos de motivar únicamente al personal fracasan.
+  siguientes (4): ['auto_inspeccion', 'autocontrol_planificacion_servicio', 'feedback_supervisores_trabajadores', 'mantenimiento_productivo_total']
+  previos (7): ['limites_control_estadistico_vs_tolerancias', 'bucle_retroalimentacion_control', 'caracteristicas_clave_producto_proceso', 'planificacion_inicial_calidad', 'key_process_product_characteristics', 'validacion_sistema_medicion', 'validacion_sistema_medicion_2']
+
+==============================================================================
+NODO: auditorias_calidad_proceso
+==============================================================================
+  titulo: Auditorías de Calidad de Proceso
+  dominio: quality | deprecado: None
+  pasos_accionables (5):
+    1. Definir las áreas específicas del proceso a auditar
+    2. Establecer una lista detallada de actividades y estándares numéricos a verificar
+    3. Realizar visitas anunciadas y no anunciadas para mayor objetividad
+    4. Registrar y comparar mediciones contra metas numéricas establecidas
+    5. Usar los checklists de autocontrol como fuente de temas específicos para la auditoría
+  entregable_esperado: Informe de auditoría de proceso con hallazgos, comparación contra estándares y recomendaciones de mejora
+  resumen_teorico: Una auditoría de calidad de proceso es una revisión independiente in situ que compara el desempeño real de un proceso contra un estándar establecido, usando los procedimientos operativos del proceso. Estas auditorías frecuentemente revelan procedimientos inadecuados o inexistentes, más allá de verificar el cumplimiento de los existentes. Ejemplos incluyen las auditorías de aerolíneas en llegadas/salidas, interior/exterior de aviones, y las auditorías de McDonald's sobre calidad, servicio, limpieza y sanidad.
+  siguientes (1): ['six_sigma_dmaic']
+  previos (2): ['control_calidad_operaciones_servicio', 'autocontrol_planificacion_servicio']
+
+==============================================================================
+NODO: diseno_controles_proceso_mejorado
+==============================================================================
+  titulo: Diseño de Controles del Proceso Mejorado
+  dominio: quality | deprecado: None
+  pasos_accionables (6):
+    1. Actualizar el FMEA para identificar controles necesarios
+    2. Aplicar técnicas de mistake-proofing en las mejoras
+    3. Diseñar controles de calidad de proceso para Xs y Ys
+    4. Establecer estándares de control basados en el desempeño real
+    5. Determinar cómo se comparará el desempeño real con el estándar (SPC)
+    6. Establecer el autocontrol para los individuos responsables del proceso
+  entregable_esperado: Plan de control de proceso actualizado con estándares, mecanismos de retroalimentación y mistake-proofing
+  resumen_teorico: En la fase de control, el equipo diseña y documenta los controles necesarios para sostener las ganancias de la mejora. Esto incluye actualizar el FMEA, aplicar técnicas de a prueba de errores (mistake-proofing), establecer estándares de control basados en el desempeño real del nuevo proceso, y garantizar el autocontrol de los individuos mediante retroalimentación oportuna y autoridad para ajustar el proceso.
+  siguientes (2): ['gestion_resistencia_cultural_cambio', 'validacion_sistema_medicion']
+  previos (1): ['diseno_de_mejoras_para_clientes']
+

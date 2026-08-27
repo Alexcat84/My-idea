@@ -1,0 +1,128 @@
+==============================================================================
+NODO: juran_rcca_metodo
+==============================================================================
+  titulo: Método RCCA de Juran (Análisis de Causa Raíz)
+  dominio: quality | deprecado: None
+  pasos_accionables (4):
+    1. Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema
+    2. Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+    3. Mejorar: diseñar e implementar el remedio
+    4. Controlar: ajustar los controles para mantener las ganancias
+  entregable_esperado: Causa raíz identificada, remedio implementado y controles ajustados para prevenir recurrencia
+  resumen_teorico: El RCCA (Root Cause Corrective Action) de Juran es un método de cuatro pasos para identificar y solucionar la causa raíz de problemas esporádicos: Definir el problema, Analizar y diagnosticar la causa, Mejorar/remediar la causa, y Controlar para mantener las ganancias. Es análogo al proceso médico de diagnóstico y tratamiento, y se enfoca en causas especiales (esporádicas), a diferencia de Six Sigma que aborda causas comunes (crónicas).
+  siguientes (3): ['definicion_problema_moms_2', 'viaje_diagnostico_remedial', 'diseno_implementacion_remedio']
+  previos (1): ['viaje_diagnostico_remedial']
+
+==============================================================================
+NODO: diseno_implementacion_remedio
+==============================================================================
+  titulo: Diseño e Implementación del Remedio
+  dominio: quality | deprecado: None
+  pasos_accionables (6):
+    1. Verifica que la solución cumple con lo que buscabas lograr.
+    2. Determina los recursos necesarios (personas, dinero, tiempo, materiales).
+    3. Especifica que procedimientos, formas de trabajar o sistemas debes modificar.
+    4. Evalua si necesitas capacitarte tu o capacitar a quien te ayuda.
+    5. Aplica técnicas de prueba de errores para que la solución sea a prueba de fallos.
+    6. Implementa la solución siguiendo un plan claro si es algo complejo.
+  entregable_esperado: Solución diseñada, documentada e implementada, con procedimientos actualizados y con la capacitación necesaria cubierta.
+  resumen_teorico: Proceso de cuatro pasos para diseñar la solución elegida: verificar que cumple lo que buscabas, determinar los recursos que necesitas, especificar los procedimientos y cambios necesarios, y evaluar si necesitas capacitarte o capacitar a alguien. Incluye también diseñar la solución a prueba de errores antes de ponerla en marcha de forma definitiva.
+  siguientes (1): ['plan_de_control']
+  previos (2): ['evaluacion_alternativas_solucion', 'juran_rcca_metodo']
+
+==============================================================================
+NODO: evaluacion_alternativas_solucion
+==============================================================================
+  titulo: Evaluación de Alternativas de Solución
+  dominio: quality | deprecado: None
+  pasos_accionables (4):
+    1. Realizar lluvia de ideas para generar múltiples alternativas de solución.
+    2. Construir diagramas de flujo para visualizar la implementación de cada alternativa.
+    3. Usar una matriz de selección basada en criterios para evaluar las opciones. Define cuánto pesa cada uno
+    4. Seleccionar la solución óptima o combinación de soluciones.
+  entregable_esperado: Una matriz de selección de soluciones con la alternativa (o combinación) elegida para implementar.
+  resumen_teorico: Fase creativa-convergente donde el equipo genera múltiples alternativas de solución mediante lluvia de ideas y luego las evalúa usando matrices de selección basadas en criterios, con el fin de determinar la solución (o combinación de soluciones) que mejor elimine la causa raíz identificada.
+  siguientes (2): ['diseno_implementacion_remedio', 'diseno_de_mejoras_para_clientes']
+  previos (2): ['prueba_teorias_causa_raiz', 'diseno_experimentos_doe_mejora']
+
+==============================================================================
+NODO: definicion_problema_moms_2
+==============================================================================
+  titulo: Definición y Selección del Problema (Criterios MOMS)
+  dominio: quality | deprecado: None
+  pasos_accionables (5):
+    1. Recolectar datos e información sobre problemas potenciales.
+    2. Aplicar análisis de Pareto para identificar los problemas más importantes.
+    3. Redactar el enunciado del problema siguiendo los criterios MOMS.
+    4. Verificar que el problema sea medible, observable, manejable y específico.
+    5. Evitar incluir causas, culpas o soluciones en el enunciado.
+  entregable_esperado: Un enunciado de problema claro y validado según los criterios MOMS, listo para iniciar el análisis de causa raíz.
+  resumen_teorico: Fase inicial del proceso de Análisis de Causa Raíz y Acción Correctiva (RCCA) que consiste en seleccionar el problema más relevante mediante datos y análisis de Pareto, y redactar un enunciado de problema claro utilizando el acrónimo MOMS: Medible, Observable, Manejable y Específico. El enunciado no debe incluir implicaciones de causa, culpa o soluciones sugeridas.
+  siguientes (2): ['analisis_sintomas', 'viaje_diagnostico_remedial']
+  previos (2): ['herramientas_analisis_causa_raiz', 'juran_rcca_metodo']
+
+==============================================================================
+NODO: analisis_sintomas
+==============================================================================
+  titulo: Análisis de Síntomas del Problema
+  dominio: quality | deprecado: None
+  pasos_accionables (4):
+    1. Recolectar datos detallados sobre la ocurrencia del problema.
+    2. Usar diagramas de flujo de proceso para ubicar dónde ocurre la falla.
+    3. Aplicar análisis de Pareto y estratificación para identificar patrones.
+    4. Documentar la frecuencia, severidad y tipo de fallas observadas.
+  entregable_esperado: Un análisis documentado de síntomas que describe claramente la situación actual del problema (frecuencia, severidad, ubicación).
+  resumen_teorico: Etapa que busca comprender la situación actual del problema respondiendo preguntas sobre frecuencia, severidad, tipos de fallas y ubicación en el proceso. Este análisis es fundamental para orientar la búsqueda de causas, de forma similar a conocer el punto de partida antes de trazar una ruta hacia un destino.
+  siguientes (1): ['formulacion_teorias_causa']
+  previos (2): ['definicion_problema_moms_2', 'herramientas_analisis_causa_raiz']
+
+==============================================================================
+NODO: formulacion_teorias_causa
+==============================================================================
+  titulo: Formulación de Teorías de Causa
+  dominio: quality | deprecado: None
+  pasos_accionables (4):
+    1. Realizar sesiones de lluvia de ideas con el equipo y expertos en la materia.
+    2. Agrupar las teorías generadas usando el proceso de afinidad.
+    3. Construir un diagrama de causa-efecto (espina de pescado) para organizar las teorías.
+    4. Aplicar FMEA u otras herramientas de priorización para identificar las teorías más probables.
+  entregable_esperado: Una lista organizada y priorizada de teorías de causa, respaldada por un diagrama de causa-efecto.
+  resumen_teorico: Proceso creativo y divergente donde el equipo, mediante lluvia de ideas, genera múltiples teorías no comprobadas sobre las posibles causas del problema. Luego, estas teorías se organizan (por ejemplo, mediante el proceso de afinidad) y se refinan usando diagramas de causa-efecto y otras herramientas de priorización como FMEA.
+  siguientes (2): ['prueba_teorias_causa_raiz', 'diagrama_causa_efecto']
+  previos (2): ['analisis_sintomas', 'dmaic_fase_measure']
+
+==============================================================================
+NODO: prueba_teorias_causa_raiz
+==============================================================================
+  titulo: Prueba de Teorías para Identificar la Causa Raíz
+  dominio: quality | deprecado: None
+  pasos_accionables (5):
+    1. Seleccionar las teorías más probables del diagrama de causa-efecto.
+    2. Diseñar y recolectar datos específicos para probar cada teoría.
+    3. Analizar los datos para confirmar o descartar teorías.
+    4. Repetir la pregunta '¿por qué?' hasta llegar a una causa raíz controlable.
+    5. Verificar que no existan teorías alternativas plausibles sin descartar.
+  entregable_esperado: Identificación validada y documentada de la(s) causa(s) raíz del problema, respaldada por datos.
+  resumen_teorico: Proceso iterativo de validación de teorías mediante datos, donde cada teoría se asume falsa hasta que los datos demuestren lo contrario. Se aplican preguntas sucesivas de '¿por qué?' hasta llegar a una causa raíz que sea controlable y no tenga teorías alternativas plausibles pendientes. El ejemplo del Jefferson Memorial ilustra cómo profundizar más allá de síntomas superficiales para hallar la verdadera causa raíz.
+  siguientes (2): ['evaluacion_alternativas_solucion', 'diagrama_causa_efecto']
+  previos (1): ['formulacion_teorias_causa']
+
+==============================================================================
+NODO: viaje_diagnostico_remedial
+==============================================================================
+  titulo: Viaje Diagnóstico y Viaje Remedial
+  dominio: quality | deprecado: None
+  pasos_accionables (8):
+    1. Analizar los síntomas del problema (evidencia observable), con un análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)
+    2. Formular teorías sobre las posibles causas, usando brainstorming y diagramas causa-efecto
+    3. Probar las teorías más plausibles con datos, con un mecanismo de recolección que permita correlacionar cada teoría con el defecto observado
+    4. Establecer la(s) causa(s) raíz confirmada(s), validando estadísticamente cuál teoría explica la mayoría de los casos
+    5. Diseñar remedios para eliminar las causas
+    6. Probar los remedios bajo condiciones operativas reales
+    7. Gestionar la resistencia predecible al cambio
+    8. Establecer nuevos controles para sostener las ganancias
+  entregable_esperado: Documento de causa raíz validada y plan de remedio probado con controles de sostenimiento
+  resumen_teorico: Metodología dual de Juran para resolver problemas de calidad. El viaje diagnóstico va de los síntomas a las teorías de causas, de las teorías a las pruebas, y de las pruebas al establecimiento de la(s) causa(s) raíz. El viaje remedial va de la(s) causa(s) raíz al diseño de remedios, de los remedios a su prueba en condiciones operativas, de los remedios probados al manejo de la resistencia al cambio, y de ahí al establecimiento de nuevos controles para sostener las mejoras.
+  siguientes (8): ['six_sigma_dmaic', 'sostener_las_ganancias', 'ciclo_shewhart_pdsa', 'diagnostico_sintoma_vs_causa_ventas', 'enfoque_proyecto_por_proyecto', 'error_proofing_servicio', 'juran_rcca_metodo', 'resistencia_al_cambio']
+  previos (7): ['six_sigma_dmaic', 'analisis_pareto_priorizacion', 'establecer_proyecto_mejora', 'analisis_pareto_de_proveedores', 'definicion_problema_moms_2', 'dmaic_fase_analyze', 'juran_rcca_metodo']
+

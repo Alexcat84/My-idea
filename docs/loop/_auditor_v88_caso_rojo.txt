@@ -1,0 +1,7 @@
+ANTES (texto real, sin tocar): OP-D-02 -> EJECUTADA
+DESPUES (copia en memoria, con marca negativa inyectada): OP-D-02 -> NO EJECUTADA
+  evidencia: , `ab_testing_optimizacion` en `OP-D-03`) **y est QUEDA PENDIENTE la revision de OP-D-02. e era el que no la tenia.
+
+CASO ROJO PROBADO: el lector voltea EJECUTADA -> NO EJECUTADA cuando la
+marca negativa cae dentro de la ventana de proximidad de la copia, y
+NINGUN fichero real se toco (ver git status --porcelain -- docs/plan/).

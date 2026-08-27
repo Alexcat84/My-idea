@@ -1,0 +1,42 @@
+ARISTAS DUPLICADAS TRAS RESOLUCION
+
+| | |
+|---|---:|
+| nodos vivos revisados | 3188 |
+| **nodos con al menos una duplicada** | **711** |
+| **entradas que SOBRAN** | **935** |
+| grupos afectados (nodo mas campo mas destino) | 898 |
+
+POR MOTIVO
+   el id nuevo mas su alias           932
+   dos alias del mismo destino        3
+
+POR CAMPO
+   nodos_previos      476
+   nodos_siguientes   459
+
+| dominio | nodos | duplicadas |
+|---|---:|---:|
+| core | 324 | 407 |
+| quality | 183 | 260 |
+| health_safety | 74 | 113 |
+| environmental | 51 | 57 |
+| franquicias | 44 | 49 |
+| exportacion | 29 | 43 |
+| risk_management | 3 | 3 |
+| entrega | 2 | 2 |
+| seguridad_digital | 1 | 1 |
+
+LOS PEORES
+   doble_significado_calidad                      nodos_siguientes  -> definicion_calidad_conformidad           sobran 5
+   definicion_calidad_conformidad                 nodos_siguientes  -> costo_de_mala_calidad_copq               sobran 3
+   evaluacion_mejora_programa                     nodos_siguientes  -> coordinacion_sitios_multiempleador       sobran 3
+   metrics_that_matter_framework                  nodos_siguientes  -> decision_pivotar_o_proceder              sobran 3
+   modelo_costo_optimo_calidad                    nodos_previos     -> costo_de_mala_calidad_copq               sobran 3
+   aprendizaje_validado                           nodos_previos     -> search_for_business_model                sobran 2
+   auditoria_negocio                              nodos_previos     -> costo_de_mala_calidad_copq               sobran 2
+   capacitacion_educacion_seguridad               nodos_siguientes  -> evaluacion_mejora_programa               sobran 2
+   cero_defectos                                  nodos_previos     -> costo_de_mala_calidad_copq               sobran 2
+   comprender_definicion_legal_franquicia         nodos_previos     -> evaluacion_necesidad_franquiciar         sobran 2
+
+escrito: C:\Users\AlexDesk\Documents\I have an idea\docs\plan\ARISTAS_DUPLICADAS.jsonl
