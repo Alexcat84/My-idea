@@ -1,0 +1,104 @@
+========================================================================================
+PUESTO 1098 | dominio core | clase D | customer_validation_sell_phase  CONTRA  prueba_solucion_con_cliente
+========================================================================================
+  NODO: customer_validation_sell_phase
+  TITULO: Sal a vender de verdad: valida con clientes reales
+  ENTREGABLE: Resultados de pruebas de venta reales que confirman o refutan lo que creías de tu negocio
+  PASOS:
+    1. Define pruebas concretas de pasa o no pasa según lo que crees de tu negocio (por ejemplo, cuántas ventas cierras o cuántos usuarios se activan)
+    2. Sal a vender de verdad en tu canal físico, o lleva tráfico real si vendes por internet o por una aplicación
+    3. Fíjate si a los clientes de verdad les entusiasma lo que les ofreces
+    4. Confirma cómo es el proceso real de compra y de aprobación dentro del negocio de tu cliente
+    5. Comprueba si hay suficientes clientes como para que este negocio se sostenga
+
+  NODO: prueba_solucion_con_cliente
+  TITULO: Prueba de la Solución con el Cliente
+  ENTREGABLE: Una ficha por cada cliente entrevistado con los datos de producto, precio, distribución y referencias, y un mapa preliminar de tu futura cartera de ventas (pipeline)
+  PASOS:
+    1. Amplía tu lista de contactos a por lo menos 10 clientes potenciales (más si es consumo)
+    2. Usa preguntas de presupuesto: pregúntale '¿lo usarías si fuera gratis?' y '¿quién tiene el presupuesto?'
+    3. Explora los límites de precio proponiendo una cifra muy alta y ajustando hacia abajo hasta encontrar lo que de verdad pagaría
+    4. Pregunta qué canal de distribución prefiere: tienda física, en línea, directo o a través de un distribuidor
+    5. Pregunta cómo es el proceso interno de aprobación de compra de quien te compra
+    6. Anota cada entrevista en una ficha (report card) con el mismo formato para poder comparar
+
+  --- RAZON ESCRITA ---
+  Vender en la etapa de validacion contra la entrevista de solucion, del mismo libro y sin arista entre ellos. prueba_solucion_con_cliente trae un procedimiento de entrevista que el otro no tiene en ninguna forma: ampliar la lista a por lo menos DIEZ clientes potenciales y mas si es consumo, usar preguntas de presupuesto del tipo lo usarias si fuera gratis y quien tiene el presupuesto, explorar los limites de precio proponiendo una cifra muy alta y bajando hasta encontrar el punto, preguntar que canal prefiere entre tienda, linea, directo o intermediario, y anotar cada entrevista en una ficha con el mismo formato para poder comparar. customer_validation_sell_phase vende de verdad: definir pruebas de pasa o no pasa, salir a vender en el canal fisico o llevar trafico real si es por internet, mirar si hay entusiasmo genuino, y comprobar si hay suficientes clientes para sostener el negocio. Por la vara del banco 9.6.1, CONTINUA. Queda anotada UNA LINEA COMPARTIDA que no crea jerarquia porque ninguno la expande: los dos preguntan como es el proceso interno de aprobacion de compra, y los dos lo dicen en un solo paso.
+  --- DIRECCION QUE EL EJECUTOR ESCRIBIO: customer_validation_sell_phase -> prueba_solucion_con_cliente
+
+========================================================================================
+PUESTO 1009 | dominio core | clase D | customer_discovery_phase2_problem_test  CONTRA  fit_problema_solucion
+========================================================================================
+  NODO: customer_discovery_phase2_problem_test
+  TITULO: Customer Discovery Fase 2: Probar el Problema
+  ENTREGABLE: Validación documentada de que el problema es real, importante y compartido por un segmento de clientes suficientemente grande
+  PASOS:
+    1. Diseñar experimentos de prueba del problema con clientes reales
+    2. Prepararse para contactos y entrevistas con clientes
+    3. Probar la comprensión del problema y su importancia percibida por el cliente
+    4. Profundizar en el entendimiento del cliente (perfiles, comportamientos)
+    5. Capturar conocimiento competitivo y de mercado durante las entrevistas
+
+  NODO: fit_problema_solucion
+  TITULO: Los Tres Tipos de Fit (Problem-Solution, Product-Market, Business Model)
+  ENTREGABLE: Evidencia documentada de al menos el problem-solution fit antes de escalar.
+  PASOS:
+    1. Validar que los jobs, pains y gains identificados realmente importan a los clientes.
+    2. Testear si los clientes quieren tu propuesta de valor concreta.
+    3. Evaluar si el modelo de negocio asociado es escalable y rentable.
+
+  --- RAZON ESCRITA ---
+  La fase 2 del descubrimiento contra los tres encajes, libros distintos y sin arista entre ellos. customer_discovery_phase2_problem_test prueba el problema: disenar experimentos con clientes reales, prepararse para los contactos y las entrevistas, probar la comprension del problema y su importancia percibida, profundizar en perfiles y comportamientos, y capturar conocimiento competitivo durante las entrevistas. fit_problema_solucion trae un procedimiento que esa fase no tiene: identificar en cual de las tres fases esta el negocio, enviar en la fase I un flujo pequeno y constante de clientes frios por canales de traccion para detectar por donde se FILTRA el producto, y no escalar la inversion en marketing hasta que la fuga sea baja. Por la vara del banco 9.6.1, CONTINUA. Y por el banco 9.9 se juzga hoy: el solape cae en sus tres primeros pasos, los encajes de Value Proposition Design, y el bloque de traccion queda fuera. NOVENO de los veinte leido.
+  --- DIRECCION QUE EL EJECUTOR ESCRIBIO: customer_discovery_phase2_problem_test -> fit_problema_solucion
+
+========================================================================================
+PUESTO 1137 | dominio core | clase D | establecer_linea_base_mvp  CONTRA  filosofia_customer_validation
+========================================================================================
+  NODO: establecer_linea_base_mvp
+  TITULO: Mide tu punto de partida con tu producto mínimo viable (MVP)
+  ENTREGABLE: Un conjunto de métricas base reales (no proyectadas) sobre cómo se comportan hoy los clientes con tu MVP
+  PASOS:
+    1. Construye un MVP completo o parcial que ponga a prueba las suposiciones clave de tu negocio
+    2. Considera hacer antes una prueba rápida de interés (smoke test) para validar si al cliente le importa, antes de invertir más recursos
+    3. Identifica cuál es la suposición más riesgosa de tu plan de negocio y pruébala primero
+    4. Recolecta tus métricas base: tasas de conversión, de registro, de prueba, valor de vida del cliente, etc.
+
+  NODO: filosofia_customer_validation
+  TITULO: Cómo comprobar que tu cliente compra de verdad (Customer Validation)
+  ENTREGABLE: Tener la certeza, comprobada con hechos, de que existen clientes reales dispuestos a pagar o usar tu producto, y que tienes una forma de vender que funciona y se puede predecir
+  PASOS:
+    1. Revisa las hipótesis de negocio que ya confirmaste hablando con clientes
+    2. Prepara tu primera versión del producto (MVP) y los materiales que necesitas para vender y difundirlo
+    3. Sal a pedir pedidos reales, no solo opiniones
+    4. Confirma que haya pedidos, usuarios o clics reales, no solo respuestas de encuestas
+    5. Responde estas tres preguntas: ¿puede crecer tu negocio?, ¿tu forma de vender se repite?, ¿puedes predecir cuánta gente avanza hacia la compra?
+
+  --- RAZON ESCRITA ---
+  La linea base contra la venta, libros distintos y sin arista entre ellos. filosofia_customer_validation dice en su paso 2, en UNA LINEA, preparar la primera version del producto y los materiales que hacen falta para vender y difundir. establecer_linea_base_mvp trae un procedimiento que aquella no tiene y con otro proposito: construir un producto minimo completo o parcial que ponga a prueba las suposiciones clave, considerar antes una prueba rapida de interes para ver si al cliente le importa, identificar cual es la suposicion MAS RIESGOSA del plan y probarla primero, y recolectar las metricas base, tasas de conversion, de registro, de prueba y valor de vida del cliente. Por la vara del banco 9.6.1, CONTINUA, y el proposito lo confirma: uno construye para VENDER, el otro para tener un punto de partida contra el que medir mejoras despues. QUINTO par de filosofia_customer_validation, con los puestos 1079, 1084, 1086 y 1096, y los CINCO sin arista. Cuatro hijos sanos y un repetidor, ni un solo cable.
+  --- DIRECCION QUE EL EJECUTOR ESCRIBIO: filosofia_customer_validation -> establecer_linea_base_mvp
+
+========================================================================================
+PUESTO 1778 | dominio environmental | clase D | herramienta_fractal_triple_top_line  CONTRA  triple_top_line
+========================================================================================
+  NODO: herramienta_fractal_triple_top_line
+  TITULO: Herramienta del Fractal y Triple Top Line
+  ENTREGABLE: Mapa fractal completado del proyecto con respuestas a las preguntas clave de cada sector (Economía, Equidad, Ecología) y ajustes de diseño resultantes
+  PASOS:
+    1. Mapear el proyecto en el fractal recorriendo cada sector: Economía/Economía, Economía/Equidad, Equidad/Equidad, Equidad/Ecología, Ecología/Ecología, Ecología/Economía
+    2. Formular preguntas específicas en cada sector (ej: ¿Es rentable? ¿Es un salario digno? ¿Es justo exponer a toxinas? ¿Obedece las leyes de la naturaleza?)
+    3. Diseñar el producto o sistema abordando las tres dimensiones desde el inicio (top line), no como añadidos posteriores
+    4. Verificar que ningún sector se convierta en un 'ismo' extremo que desestabilice el conjunto
+
+  NODO: triple_top_line
+  TITULO: Triple Top Line: Ecología, Equidad y Economía desde el Diseño
+  ENTREGABLE: Documento de intenciones de diseño que integre metas ecológicas, sociales y económicas formuladas simultáneamente desde el inicio del proyecto
+  PASOS:
+    1. Formular preguntas de ecología, equidad y economía ANTES de iniciar el diseño, no después
+    2. Definir para el proyecto: ¿cómo creamos hábitat?, ¿cómo generamos empleo justo?, ¿cómo somos rentables?
+    3. Evitar tratar los beneficios sociales/ecológicos como 'puntos extra' sobre un cálculo económico tradicional
+    4. Usar estas tres preguntas como filtro de diseño desde la fase de ideación
+
+  --- RAZON ESCRITA ---
+  Las tres preguntas contra la retícula de nueve sectores, MISMA FUENTE y sin arista entre ellos. Lo compartido es el nucleo y los dos lo dicen dos veces: formular las preguntas de ecologia, equidad y economia ANTES del diseño y no como añadido posterior. triple_top_line trae LAS TRES PREGUNTAS CONCRETAS: como creamos habitat, como generamos empleo justo, como somos rentables; mas la advertencia de no tratar los beneficios sociales y ecologicos como puntos extra sobre un calculo economico tradicional, y usarlas como filtro desde la ideacion. herramienta_fractal_triple_top_line trae UN INSTRUMENTO que el otro no tiene: MAPEAR EL PROYECTO EN UN FRACTAL recorriendo cada sector cruzado, economia con economia, economia con equidad, equidad con ecologia y los demas; formular preguntas especificas en CADA CRUCE, y VERIFICAR QUE NINGUN SECTOR SE CONVIERTA EN UN ISMO EXTREMO que desestabilice el conjunto. Por la vara del banco 9.6.1, CONTINUA: las tres dimensiones se enuncian en los dos y solo uno las cruza entre si y vigila el desequilibrio.
+  --- DIRECCION QUE EL EJECUTOR ESCRIBIO: triple_top_line -> herramienta_fractal_triple_top_line
+

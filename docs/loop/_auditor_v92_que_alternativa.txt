@@ -1,0 +1,82 @@
+de las 87, cuantas descansan en UNA SOLA alternativa: 30
+  puesto 886    alternativa unica: ordena
+  puesto 890    alternativa unica: es la etapa
+  puesto 947    alternativa unica: \bmanda\b
+  puesto 960    alternativa unica: dice\s+(?:una|dos|tres)\s+l[ií]neas?(?!\s*compartid)
+  puesto 983    alternativa unica: ordena
+  puesto 1009   alternativa unica: prueba el problema
+  puesto 1020   alternativa unica: es el programa
+  puesto 1023   alternativa unica: enuncia
+  puesto 1055   alternativa unica: en\s+(?:una|dos|tres|media)\s+l[ií]neas?(?!\s*compartid)
+  puesto 1073   alternativa unica: en\s+(?:una|dos|tres|media)\s+l[ií]neas?(?!\s*compartid)
+  puesto 1086   alternativa unica: en\s+una\s+sola\s+l[ií]nea(?!\s*compartid)
+  puesto 1111   alternativa unica: enumera
+  puesto 1129   alternativa unica: (?:primera|segunda|tercera)\s+l[ií]nea(?!\s*compartid)
+  puesto 1195   alternativa unica: en\s+(?:una|dos|tres|media)\s+l[ií]neas?(?!\s*compartid)
+  puesto 1281   alternativa unica: es un h[aá]bito
+  puesto 1500   alternativa unica: enumera
+  puesto 1502   alternativa unica: paso\s+\d
+  puesto 1521   alternativa unica: en\s+(?:una|dos|tres|media)\s+l[ií]neas?(?!\s*compartid)
+  puesto 1567   alternativa unica: escribe el encargo entero
+  puesto 1612   alternativa unica: en\s+(?:una|dos|tres|media)\s+l[ií]neas?(?!\s*compartid)
+  puesto 1634   alternativa unica: enuncia
+  puesto 1778   alternativa unica: enuncia
+  puesto 1844   alternativa unica: nombra el problema
+  puesto 1848   alternativa unica: entre sus pasos
+  puesto 1873   alternativa unica: en\s+(?:una|dos|tres|media)\s+l[ií]neas?(?!\s*compartid)
+  puesto 1876   alternativa unica: en\s+(?:una|dos|tres|media)\s+l[ií]neas?(?!\s*compartid)
+  puesto 1886   alternativa unica: monta el marco
+  puesto 1992   alternativa unica: compara los
+  puesto 2018   alternativa unica: enumera
+  puesto 2057   alternativa unica: en\s+(?:una|dos|tres|media)\s+l[ií]neas?(?!\s*compartid)
+
+de las 87, con marca FUERTE (paso/etapa NUMERADA): 39
+SIN marca fuerte: 48
+  puesto 872    ['enuncia', 'es\\s+(?:una|dos|tres)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 886    ['ordena']
+  puesto 890    ['es la etapa']
+  puesto 896    ['\\bmanda\\b', 'es\\s+(?:una|dos|tres)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 909    ['\\bmanda\\b', 'son\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 910    ['(?:primer|segundo|tercer|cuarto|quinto|sexto|septimo|octavo|noveno)\\s+paso', 'es\\s+(?:una|dos|tres)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 940    ['(?:primer|segundo|tercer|cuarto|quinto|sexto|septimo|octavo|noveno)\\s+paso', '\\bmanda\\b', 'es\\s+(?:una|dos|tres)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 947    ['\\bmanda\\b']
+  puesto 951    ['despacha', 'en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)', 'ordena']
+  puesto 960    ['dice\\s+(?:una|dos|tres)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 983    ['ordena']
+  puesto 993    ['(?:primer|segundo|tercer|cuarto|quinto|sexto|septimo|octavo|noveno)\\s+paso', 'es\\s+(?:una|dos|tres)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 1009   ['prueba el problema']
+  puesto 1020   ['es el programa']
+  puesto 1023   ['enuncia']
+  puesto 1055   ['en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 1057   ['(?:primer|segundo|tercer|cuarto|quinto|sexto|septimo|octavo|noveno)\\s+paso', 'es\\s+(?:una|dos|tres)\\s+l[ií]neas?(?!\\s*compartid)', 'ordena']
+  puesto 1073   ['en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 1083   ['\\bmanda\\b', 'la madre\\b', 'ordena']
+  puesto 1086   ['en\\s+una\\s+sola\\s+l[ií]nea(?!\\s*compartid)']
+  puesto 1102   ['despacha', 'en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 1111   ['enumera']
+  puesto 1129   ['(?:primera|segunda|tercera)\\s+l[ií]nea(?!\\s*compartid)']
+  puesto 1191   ['describe las piezas', 'la madre\\b']
+  puesto 1195   ['en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 1196   ['(?:primer|segundo|tercer|cuarto|quinto|sexto|septimo|octavo|noveno)\\s+paso', 'es un repertorio', 'es\\s+(?:una|dos|tres)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 1220   ['describe las piezas', 'la madre\\b']
+  puesto 1281   ['es un h[aá]bito']
+  puesto 1304   ['despacha', 'en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 1337   ['(?:primera|segunda|tercera)\\s+l[ií]nea(?!\\s*compartid)', 'en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)', 'es postura']
+  puesto 1354   ['despacha', 'en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 1388   ['enumera', 'es (?:el|un) indice']
+  puesto 1500   ['enumera']
+  puesto 1521   ['en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 1536   ['(?:primer|segundo|tercer|cuarto|quinto|sexto|septimo|octavo|noveno)\\s+paso', 'enuncia', 'recorre']
+  puesto 1567   ['escribe el encargo entero']
+  puesto 1612   ['en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 1634   ['enuncia']
+  puesto 1778   ['enuncia']
+  puesto 1844   ['nombra el problema']
+  puesto 1848   ['entre sus pasos']
+  puesto 1873   ['en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 1876   ['en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)']
+  puesto 1886   ['monta el marco']
+  puesto 1946   ['en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)', 'enuncia']
+  puesto 1992   ['compara los']
+  puesto 2018   ['enumera']
+  puesto 2057   ['en\\s+(?:una|dos|tres|media)\\s+l[ií]neas?(?!\\s*compartid)']
