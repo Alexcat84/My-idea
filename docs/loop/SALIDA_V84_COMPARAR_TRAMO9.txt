@@ -1,0 +1,48 @@
+==============================================================================
+LA TABLA DE ALCANZABILIDAD (VARA DE LA CADENA) DEL TRAMO 9, TALLADA. Vuelta 84.
+Cada celda sale de SALIDA_V84_TRAMO9_FILTRO_P91_GUARDA_CADENA.txt; ninguna tecleada.
+LA COLUMNA CONTESTA UNA SOLA PREGUNTA: si hay o no camino previo, y con cuantos saltos.
+Si ese camino es o no LA CADENA PROPIA de la madre es una decision de lectura aparte.
+==============================================================================
+
+| # | par (paso) | alcanzable previo (vara de la cadena) |
+|---:|---|---|
+| 48 | `estandares_voluntarios -> definiciones_operacionales_de_calidad (paso 3)` | SIN CAMINO PREVIO |
+| 49 | `evaluacion_megatendencias -> costo_de_oportunidad (paso 5)` | ALCANZABLE (5 saltos) |
+| 50 | `formulacion_teorias_causa -> diagrama_causa_efecto (paso 3)` | ALCANZABLE (2 saltos) |
+| 51 | `principios_alineacion_empresarial -> desarrollar_estrategias_largo_plazo (paso 3)` | SIN CAMINO PREVIO |
+| 52 | `control_del_proceso_del_proveedor -> buenas_practicas_manufactura_cgmp (paso 3)` | SIN CAMINO PREVIO |
+| 53 | `juran_rcca_metodo -> prueba_teorias_causa_raiz (paso 2)` | ALCANZABLE (4 saltos) |
+| 54 | `desarrollar_metas_anuales -> metas_negocio_calidad (paso 3)` | ALCANZABLE (6 saltos) |
+| 55 | `institucionalizar_breakthrough -> metas_negocio_calidad (paso 1)` | ALCANZABLE (4 saltos) |
+| 56 | `rol_alta_direccion_calidad -> metas_negocio_calidad (paso 2)` | ALCANZABLE (2 saltos) |
+| 57 | `gate5_go_to_launch -> plan_de_lanzamiento_al_mercado (paso 5)` | SIN CAMINO PREVIO |
+| 58 | `brecha_de_calidad_cuatro_gaps -> necesidades_reales_vs_declaradas (paso 1)` | SIN CAMINO PREVIO |
+| 59 | `estimacion_inversion_inicial_franquiciador -> desarrollar_manual_operaciones (paso 3)` | SIN CAMINO PREVIO |
+| 60 | `abolir_inspeccion_masiva -> calidad_de_diseno_vs_produccion (paso 4)` | SIN CAMINO PREVIO |
+| 61 | `activity_attributes -> assumption_constraint_log (paso 4)` | ALCANZABLE (5 saltos) |
+| 62 | `juran_quality_by_design -> diseno_controles_proceso_mejorado (paso 6)` | SIN CAMINO PREVIO |
+| 63 | `analisis_de_ratios_financieros -> gestion_dso (paso 4)` | ALCANZABLE (5 saltos) |
+| 64 | `control_calidad_definicion -> plan_de_control (paso 2)` | SIN CAMINO PREVIO |
+| 65 | `business_model_canvas_scorecard -> key_partners_hypothesis (paso 1)` | ALCANZABLE (5 saltos) |
+| 66 | `emprendimiento_como_disciplina_de_gestion -> emprendedor_como_puesto_de_trabajo (paso 6)` | ALCANZABLE (4 saltos) |
+| 67 | `limites_especificacion_funcionales -> ctq_caracteristicas_criticas (paso 1)` | SIN CAMINO PREVIO |
+| 68 | `equipo_mejora_calidad_2 -> programa_auditoria_calidad (paso 6)` | SIN CAMINO PREVIO |
+| 69 | `ejecucion_de_touchpoints -> economia_de_la_experiencia (paso 1)` | SIN CAMINO PREVIO |
+| 70 | `descubrir_necesidades_del_cliente -> necesidades_psicologicas_cliente (paso 3)` | SIN CAMINO PREVIO |
+| 71 | `diversidad_activa -> respeto_a_la_diversidad (paso 2)` | SIN CAMINO PREVIO |
+| 72 | `enfoque_etapa_investigacion -> preguntas_need_payoff (paso 4)` | ALCANZABLE (2 saltos) |
+| 73 | `metodologia_spin_selling -> preguntas_need_payoff (paso 3)` | ALCANZABLE (2 saltos) |
+| 74 | `seleccion_plan_muestreo_ansi_z14 -> planes_de_muestreo_de_aceptacion (paso 3)` | SIN CAMINO PREVIO |
+| 75 | `mix_medios_marketing_franquicia -> presupuesto_marketing_franquicia (paso 3)` | SIN CAMINO PREVIO |
+| 76 | `control_del_board_startup -> dividends_terms (paso 2)` | SIN CAMINO PREVIO |
+| 77 | `eliminacion_inspeccion_masiva_por_control_estadistico -> carta_de_control_shewhart (paso 3)` | SIN CAMINO PREVIO |
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  UNIDADES NO PUBLICADAS EN ESA TABLA: 0
+
+  filas cotejadas: 30 | DISTINTAS: 0 | ausentes (no rojo): 0 | inventadas (ROJO): 0
+  TABLA DE LA CADENA: IDENTICA AL TALLADOR (las ausentes listadas no son rojo)
+FIN
