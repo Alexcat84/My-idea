@@ -1,0 +1,27 @@
+==============================================================================
+TALLA DE CONTEO DE CAMPO. Cada cifra sale de docs/plan/COSECHA_RAZONES_D.jsonl, campo 'frase'; ninguna tecleada.
+==============================================================================
+
+| | |
+|---|---:|
+| filas totales | 397 |
+| con `len(frase)` == 200 | 270 |
+| con `len(frase)` > 200 (maximo 335) | 23 |
+| con `len(frase)` < 200 | 104 |
+
+--- COTEJO DE PUESTOS CITADOS CONTRA SU `len(frase)` REAL ---
+
+| puesto citado | `len(frase)` medido | == 200 |
+|---:|---:|---|
+| 1134 | 200 | SI |
+| 1149 | 200 | SI |
+| 1995 | 200 | SI |
+| 2023 | 305 | **NO, DISTINTO** |
+| 2082 | 263 | **NO, DISTINTO** |
+| 2106 | 200 | SI |
+| 2038 | 200 | SI |
+
+cotejados: 7 | con `len` DISTINTO de 200: 2
+AVISO: 2 de los 7 puestos citados NO tienen `len(frase)` == 200: publicarlos como ejemplo de esa cifra seria la caida de la vuelta 89.
+
+FIN

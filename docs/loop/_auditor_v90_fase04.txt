@@ -1,0 +1,23 @@
+OP-E-01      orden 1   LISTA        ENLACE                           dep []
+OP-E-02      orden 2   HECHA        ENLACE                           dep []
+OP-E-03      orden 3   LISTA        LECTURA DIRIGIDA                 dep ['OP-E-01', 'OP-U-02']
+OP-M-03-ENLACES orden 4   LISTA        ENLACE                           dep ['OP-M-03-I', 'OP-M-03-II', 'OP-M-03-III']
+OP-E-04      orden 5   LISTA        ENLACE                           dep ['OP-M-01', 'OP-M-01-FUSION']
+OP-E-05      orden 6   LISTA        ENLACE MUTUO                     dep ['OP-M-01', 'OP-M-01-FUSION']
+OP-M-01-ESLABONES orden 7   LISTA        ENLACE                           dep ['OP-M-01', 'OP-M-01-FUSION']
+OP-M-01-SEXTO orden 8   LISTA        ENLACE MAS PODA DEL SOLAPE       dep ['OP-M-01', 'OP-M-01-FUSION']
+OP-E-06      orden 9   LISTA        ENLACE CON EVIDENCIA DE LECTURA  dep ['OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06', 'OP-D-07']
+OP-E-07      orden 10  LISTA        LECTURA DIRIGIDA CORTA           dep ['OP-E-06']
+
+--- fases y cuantas operaciones ---
+  00_CODIGO              7
+  01_FUENTES             7
+  02_DESTEJIDOS          9
+  03_FUSIONES            16
+  04_ENLACES             10
+  05_SANEO               10
+  06_MESAS               5
+  07_ADUANA              2
+  08_VERIFICACION        1
+  09_LECTURAS_DIRIGIDAS  3
+  10_INVENTARIO          1

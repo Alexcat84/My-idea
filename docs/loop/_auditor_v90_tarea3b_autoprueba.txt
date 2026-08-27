@@ -1,0 +1,22 @@
+##############################################################################
+AUTOPRUEBA DE verificar_caso_rojo_por_mutacion.py
+##############################################################################
+
+==============================================================================
+PRUEBA DE MUTACION: CASO POSITIVO (criterio que si depende de la entrada)
+==============================================================================
+  entrada normal -> criterio da: 'ENTRA' (esperado: 'ENTRA')
+  entrada MUTADA -> criterio da: 'NO_ENTRA' (esperado: 'NO_ENTRA')
+  PROBADO POR MUTACION: el veredicto SI depende de la entrada, y los dos lados calzan con lo esperado.
+
+CASO POSITIVO: PROBADO (probar_por_mutacion devolvio True, como se esperaba).
+
+==============================================================================
+PRUEBA DE MUTACION: CASO NEGATIVO (el defecto de la vuelta 89, reproducido a proposito)
+==============================================================================
+  entrada normal -> criterio da: 'ENTRA' (esperado: 'ENTRA')
+  entrada MUTADA -> criterio da: 'ENTRA' (esperado: 'NO_ENTRA')
+CASO NEGATIVO: CAYO EN ROJO COMO SE ESPERABA. Mensaje:
+   ROJO en 'CASO NEGATIVO (el defecto de la vuelta 89, reproducido a proposito)': EL VEREDICTO NO CAMBIO al mutar la entrada ('ENTRA' en los dos casos). Es EXACTAMENTE el defecto de la vuelta 89 (acta 89, seccion 3.2): un assert que compara una variable que no depende de lo que el codigo compute sobre la entrada no es un caso rojo, aunque el numero de la izquierda y el de la derecha sean distintos entre si. NO SE PUBLICA COMO PRUEBA.
+
+LOS DOS CASOS DE LA AUTOPRUEBA SE COMPORTAN COMO SE ESPERA: el positivo pasa, y el negativo (el defecto exacto de la vuelta 89) cae en rojo. El instrumento esta probado por mutacion sobre si mismo.
