@@ -133,11 +133,30 @@ FASE III, EJECUCION: SOLO tras cerrar la fase II con Gate 0 verde. Se ejecuta en
   - **Caida de CLASE o de CIFRA PUBLICADA** (un veredicto, el marcador, o una
     cifra que vive en `docs/plan/` o en el banco): cuenta para el credito y
     para la parada. **Dos tandas seguidas: PARADA.**
-  - **Caida de REPORTE** (una afirmacion equivocada que vive solo en
+  - ~~**Caida de REPORTE** (una afirmacion equivocada que vive solo en
     `REPORTE.md` y no mueve ningun dato): se registra con nombre en el acta
     y dispara la relectura al doble del tramo, pero **NO** acumula para la
     parada. **TRES seguidas si son PARADA**: tres de la misma especie ya no
-    son ruido, son un patron de dictado suelto.
+    son ruido, son un patron de dictado suelto.~~
+    (letra del **13 ago 2026**, no se borra)
+  - **Caida de REPORTE, LETRA AFINADA (decision del fundador, 27 ago 2026,**
+    **tras la parada de la vuelta 95:**
+    **`paradas/2026-08-27-racha-parentesis-DECISION.md`).** La decision,
+    literal: *"opcion c, la regla se afina: la caida de reporte cuenta para la*
+    *racha SOLO cuando la cifra vive en una tabla, una cabecera o una*
+    *conclusion; en lista de rutas o prosa de acompanamiento se registra y se*
+    *relee al doble pero NO acumula; la caida de la vuelta 95 se registra y no*
+    *acumula."*
+    O sea: la caida de REPORTE sigue siendo la afirmacion equivocada que vive
+    solo en `REPORTE.md` y no mueve ningun dato, y SIEMPRE se registra con su
+    nombre en el acta y dispara la relectura al doble del tramo. Lo que cambia
+    es QUE CUENTA PARA LA RACHA: **cuenta solo si la cifra vive en una TABLA,
+    una CABECERA o una CONCLUSION**; si vive en una LISTA DE RUTAS o en PROSA
+    DE ACOMPANAMIENTO, **NO acumula**. Sobre lo que si acumula sigue viva la
+    regla de las **TRES seguidas de la misma especie: PARADA**. Y la caida de
+    la vuelta 95 (el parentesis "cinco secciones nuevas" en la lista de rutas
+    del reporte) **se registra y NO acumula**, por letra expresa de esta misma
+    decision.
 - Campaña consumada: la parada feliz, con el reporte final. Aqui PARA_ALEXIS.md
   PIDE el merge de `pasada-unica` a staging con el estado verde delante; no lo
   hace. El merge a staging o a produccion es siempre decision de fundador.
