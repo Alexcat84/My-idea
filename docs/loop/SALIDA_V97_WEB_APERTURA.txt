@@ -1,0 +1,187 @@
+
+ RUN  v4.1.10 C:/Users/AlexDesk/Documents/I have an idea/web
+
+ ✓ lib/assets/checksums.test.ts (7 tests) 74ms
+ ✓ app/ui/contratoUniforme.test.ts (16 tests) 14ms
+ ✓ lib/loadRootEnv.test.ts (4 tests) 29ms
+ ✓ lib/expediente.test.ts (35 tests) 27ms
+ ✓ app/ui/lenguajeBoton.test.ts (13 tests) 45ms
+ ✓ lib/bitacoraCliente.test.ts (20 tests) 36ms
+ ✓ app/api/project/[id]/checklist/route.test.ts (31 tests) 51ms
+ ✓ app/api/project/[id]/report/route.test.ts (9 tests) 34ms
+stderr | lib/rateLimit.test.ts > verificarFusibleGlobal (tope diario de TODA la app) > dev user exento fuera de producción; Upstash caído permite
+rateLimit: INCR fallo (500); se permite la solicitud
+
+ ✓ lib/rateLimit.test.ts (11 tests) 61ms
+ ✓ app/ui/DetalleActividad.test.ts (18 tests) 64ms
+ ✓ app/api/project/[id]/modo/route.test.ts (12 tests) 31ms
+ ✓ lib/analytics.test.ts (77 tests) 41ms
+ ✓ lib/empaquetado.test.ts (47 tests) 18ms
+ ✓ lib/engine/snapshotProyecto.test.ts (23 tests) 15ms
+ ✓ app/ui/CierreHonesto.test.ts (12 tests) 24ms
+ ✓ app/api/projects/route.test.ts (3 tests) 22ms
+ ✓ lib/dosFactores.test.ts (9 tests) 1641ms
+     ✓ 8 códigos de 12 hex; consumir uno lo gasta y deja 7; repetirlo no pasa  1582ms
+ ✓ lib/costmeter.conversacion.test.ts (3 tests) 9ms
+ ✓ app/api/project/[id]/world/[pack]/completar/route.test.ts (13 tests) 21ms
+ ✓ lib/engine/estimacion.test.ts (24 tests) 12ms
+ ✓ lib/planParser.test.ts (12 tests) 10ms
+ ✓ lib/engine/semillasDePack.test.ts (28 tests) 14ms
+ ✓ lib/verificadorHuerfanos.test.ts (15 tests) 22ms
+ ✓ lib/engine/enlazador.test.ts (23 tests) 23ms
+ ✓ lib/catalogoMundos.test.ts (9 tests) 22ms
+ ✓ lib/fechasBase.test.ts (19 tests) 23ms
+ ✓ lib/db.test.ts (5 tests) 18ms
+ ✓ lib/registroProteccion.test.ts (15 tests) 20ms
+ ✓ app/api/project/[id]/mover-fecha/route.test.ts (4 tests) 53ms
+ ✓ lib/dbContract.test.ts (16 tests) 18ms
+ ✓ lib/numerosVivo.test.ts (11 tests) 20ms
+ ✓ app/api/project/[id]/realizar/route.test.ts (4 tests) 34ms
+ ✓ lib/engine/reformuladorProteccion.test.ts (19 tests) 32ms
+ ✓ lib/espacios.test.ts (11 tests) 14ms
+ ✓ lib/fechas.test.ts (13 tests) 14ms
+ ✓ lib/tableroNumeros.test.ts (11 tests) 22ms
+ ✓ lib/engine/checklist.test.ts (10 tests) 8ms
+ ✓ lib/parseJson.test.ts (5 tests) 6ms
+ ✓ lib/creditos.test.ts (16 tests) 6ms
+ ✓ lib/ics.test.ts (10 tests) 7ms
+ ✓ lib/readiness.test.ts (3 tests) 131ms
+ ✓ app/api/project/[id]/baseline/route.test.ts (4 tests) 32ms
+ ✓ lib/engine/graph.test.ts (11 tests) 45ms
+ ✓ lib/prompts.test.ts (19 tests) 12ms
+ ✓ lib/engine/resolutorHistoria.test.ts (12 tests) 72ms
+ ✓ lib/engine/juezSesion.test.ts (4 tests) 23ms
+stderr | app/api/organizer/route.test.ts > POST /api/organizer > organiza la idea, persiste proyecto/sesion/plan, y actualiza la fase detectada
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/organizer/route.test.ts > POST /api/organizer > organiza la idea, persiste proyecto/sesion/plan, y actualiza la fase detectada
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/organizer/route.test.ts > POST /api/organizer > 502 si Claude falla, pero aun asi cierra la sesion con el costo acumulado hasta ese punto
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+ ✓ lib/etiquetasCara.test.ts (17 tests) 109ms
+stderr | app/api/organizer/route.test.ts > POST /api/organizer > 502 si Claude falla, pero aun asi cierra la sesion con el costo acumulado hasta ese punto
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/organizer/route.test.ts > POST /api/organizer > 502 si Claude falla, pero aun asi cierra la sesion con el costo acumulado hasta ese punto
+[organizer:json] falló {
+  projectId: 'project-1',
+  error: Error: fallo de red simulado
+      at C:/Users/AlexDesk/Documents/I have an idea/web/app/api/organizer/route.test.ts:192:47
+      at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11
+      at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26
+      at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20
+      at new Promise (<anonymous>)
+      at runWithCancel (file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:2323:10)
+      at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:2305:20
+      at new Promise (<anonymous>)
+      at runWithTimeout (file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:2272:10)
+      at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:2955:64
+}
+
+ ✓ lib/calculadora.test.ts (25 tests) 15ms
+ ✓ app/api/organizer/route.test.ts (5 tests) 32ms
+ ✓ app/api/session/[id]/turn/route.test.ts (9 tests) 31ms
+stderr | app/api/session/start/route.test.ts > POST /api/session/start > clasifica, crea proyecto+sesion, y devuelve la primera pregunta
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/session/start/route.test.ts > POST /api/session/start > clasifica, crea proyecto+sesion, y devuelve la primera pregunta
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+ ✓ lib/engine/interprete.test.ts (5 tests) 24ms
+ ✓ lib/engine/seguimientoComposer.test.ts (15 tests) 37ms
+stderr | app/api/session/start/route.test.ts > POST /api/session/start > tipo=salio cierra la sesion y mergea numeros_proyecto/tipo_oferta detectados
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/session/[id]/plan/route.test.ts > POST /api/session/[id]/plan > un hipo transitorio a mitad de stream se REINTENTA y el plan sale igual
+[plan] intento 1/3 fallo: Error: overload simulado
+    at Object.finalMessage (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:75:13)
+    at generarTextoPlan (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:107:41)
+    at Object.start (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:231:85)
+    at setupReadableStreamDefaultController (node:internal/webstreams/readablestream:2464:23)
+    at setupReadableStreamDefaultControllerFromSource (node:internal/webstreams/readablestream:2496:3)
+    at new ReadableStream (node:internal/webstreams/readablestream:279:7)
+    at Module.POST (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:208:18)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:204:17
+    at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20
+
+stderr | app/api/session/start/route.test.ts > POST /api/session/start > tipo=salio cierra la sesion y mergea numeros_proyecto/tipo_oferta detectados
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+ ✓ lib/engine/reporte.test.ts (15 tests) 15ms
+ ✓ lib/engine/planRedactor.test.ts (34 tests) 50ms
+stderr | app/api/session/start/route.test.ts > POST /api/session/start > tipo=error_temporal responde 502 sin cerrar la sesion
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/session/start/route.test.ts > POST /api/session/start > tipo=error_temporal responde 502 sin cerrar la sesion
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+ ✓ app/api/session/start/route.test.ts (6 tests) 41ms
+ ✓ lib/engine/organizador.test.ts (4 tests) 11ms
+ ✓ lib/detectorAcentos.test.ts (6 tests) 12ms
+ ✓ lib/costmeter.test.ts (4 tests) 11ms
+ ✓ lib/engine/reeleccionPuerta.test.ts (14 tests) 131ms
+ ✓ lib/hitosEspacio.test.ts (7 tests) 12ms
+ ✓ app/potenciadores/page.test.ts (5 tests) 17ms
+ ✓ lib/engine/reporteFlow.test.ts (3 tests) 21ms
+ ✓ lib/voz.test.ts (7 tests) 12ms
+ ✓ lib/palancas.test.ts (10 tests) 11ms
+ ✓ lib/feedCalendario.test.ts (4 tests) 7ms
+ ✓ lib/engine/previewMundos.test.ts (15 tests) 12ms
+ ✓ lib/tarjetaAccesoContrato.test.ts (3 tests) 7ms
+ ✓ lib/engine/evaluacionBrecha.test.ts (7 tests) 12ms
+ ✓ lib/nextSeguro.test.ts (4 tests) 6ms
+ ✓ lib/password.test.ts (4 tests) 6ms
+ ✓ lib/engine/bloqueRealidad.test.ts (19 tests) 13ms
+stderr | app/api/session/[id]/plan/route.test.ts > POST /api/session/[id]/plan > agotados los reintentos: error honesto y la sesion NO se cierra (se puede reintentar)
+[plan] intento 1/3 fallo: Error: overload persistente
+    at Object.finalMessage (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:75:13)
+    at generarTextoPlan (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:107:41)
+    at Object.start (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:231:85)
+    at setupReadableStreamDefaultController (node:internal/webstreams/readablestream:2464:23)
+    at setupReadableStreamDefaultControllerFromSource (node:internal/webstreams/readablestream:2496:3)
+    at new ReadableStream (node:internal/webstreams/readablestream:279:7)
+    at Module.POST (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:208:18)
+    at C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:222:17
+    at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20
+
+ ✓ app/ui/ManosALaObra.test.ts (15 tests) 9ms
+stderr | app/api/session/[id]/plan/route.test.ts > POST /api/session/[id]/plan > agotados los reintentos: error honesto y la sesion NO se cierra (se puede reintentar)
+[plan] intento 2/3 fallo: Error: overload persistente
+    at Object.finalMessage (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:75:13)
+    at generarTextoPlan (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:107:41)
+    at Object.start (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:231:79)
+
+ ✓ lib/engine/sensores.test.ts (8 tests) 6ms
+ ✓ lib/engine/recorrido.test.ts (5 tests) 7ms
+ ✓ lib/engine/mundos.test.ts (4 tests) 4ms
+stderr | app/api/session/[id]/plan/route.test.ts > POST /api/session/[id]/plan > agotados los reintentos: error honesto y la sesion NO se cierra (se puede reintentar)
+[plan] intento 3/3 fallo: Error: overload persistente
+    at Object.finalMessage (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:75:13)
+    at generarTextoPlan (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:107:41)
+    at Object.start (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:231:79)
+[plan] redactor agotado tras reintentos {
+  ultimoError: Error: overload persistente
+      at Object.finalMessage (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:75:13)
+      at generarTextoPlan (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:107:41)
+      at Object.start (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:231:79)
+}
+
+ ✓ app/api/session/[id]/plan/route.test.ts (8 tests) 5071ms
+     ✓ un hipo transitorio a mitad de stream se REINTENTA y el plan sale igual  1015ms
+     ✓ agotados los reintentos: error honesto y la sesion NO se cierra (se puede reintentar)  4016ms
+ ✓ app/api/project/[id]/follow/route.test.ts (6 tests) 14ms
+ ✓ lib/engine/puertaUnica.test.ts (7 tests) 6ms
+ ✓ lib/engine/accesosResueltos.test.ts (27 tests) 10ms
+stderr | lib/compass.test.ts > buscarAfines: fallback silencioso sin VOYAGE_API_KEY > devuelve [] sin lanzar si falta la API key (navegacion solo local)
+  (brujula semantica no disponible, navegacion solo local: falta VOYAGE_API_KEY)
+
+ ✓ lib/compass.test.ts (10 tests | 3 skipped) 7ms
+
+ Test Files  80 passed (80)
+      Tests  1030 passed | 3 skipped (1033)
+   Start at  18:10:21
+   Duration  17.68s (transform 39.65s, setup 0ms, import 132.14s, tests 8.75s, environment 15ms)
+
