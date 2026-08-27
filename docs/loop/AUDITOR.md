@@ -226,3 +226,25 @@ Todo lo de esta seccion esta MEDIDO contra el repo el 12 ago 2026, no recordado.
 - El primer encargo ya esta escrito en docs/loop/PROMPT_SIGUIENTE.md (los tres
   vistos del 9.3.1 y 9.28, y el cribado del 2555 al 2600). Empieza verificando
   el reporte que el ejecutor deje de ese encargo.
+
+## 6. MODO AUSTERO (27 ago 2026)
+
+MODO AUSTERO (decision del fundador, 27 ago 2026), vigente desde la
+proxima vuelta y hasta la apertura de la fase 06:
+
+1. LOTES AL DOBLE: las lecturas dirigidas van en tramos de 80 pares (no 40);
+   cuando dos operaciones quepan en una vuelta con sus guardas completas, van
+   las dos.
+2. EL REPORTE SE ENCOGE: tope de 80 lineas. Cabecera tallada, tablas talladas
+   con su comando, adjudicaciones por numero y linea, y las decisiones de
+   lectura en el registro JSONL (no narradas en prosa). Queda prohibida la
+   prosa de acompanamiento que repite lo que el registro ya dice.
+3. EL ACTA SE ENCOGE IGUAL: tope de 60 lineas cuando no hay caidas ni
+   discutibles fuera del marcado. La verificacion NO se recorta: Gate, suites,
+   talladores y ciega sobre el registro siguen enteros; lo que se recorta es su
+   narracion.
+4. NINGUNA GUARDA SE TOCA: simulaciones, casos positivos por mutacion, ciclo de
+   Gate 0, talladores y la metrica de credito siguen identicos. El austero
+   recorta tinta, no control.
+5. Al abrir la fase 06 (cirugia), el modo austero SE SUSPENDE solo y vuelve el
+   regimen completo.
