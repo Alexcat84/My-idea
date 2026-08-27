@@ -1,0 +1,106 @@
+==============================================================================
+UNIDAD 42 | dominio core | paso 6
+PAR: depreciacion_y_amortizacion -> impacto_estado_resultados_en_balance
+TEXTO DEL PASO (del fichero del filtro): Entiende el impacto de la depreciación y amortización en tu estado de resultados y tu balance
+------------------------------------------------------------------------------
+MADRE
+  ID: depreciacion_y_amortizacion
+  TITULO: Depreciación y Amortización: Impacto en la Utilidad
+  DOMINIO: core
+  RESUMEN: La depreciación reparte el costo de un activo físico -un vehículo, un camión, un equipo- a lo largo de su vida útil estimada, en lugar de cargar todo el gasto de una sola vez. La amortización aplica la misma idea a activos intangibles, como patentes o plusvalía (goodwill). El concepto es simple, pero tienes bastante margen para decidir esa vida útil: usar 1 año en vez de 3 o 6 para el mismo tipo de activo cambia de forma directa la utilidad neta que reportas y tu patrimonio, una zona clásica de subjetividad contable. Casos reales de fraude, como manipular la depreciación de camiones y contenedores para inflar ganancias en cientos de millones de dólares, muestran cómo cambiar esos supuestos s
+  PASOS:
+    1. Identifica todos los activos de capital de tu negocio (equipos, vehículos, sistemas, propiedad, planta y equipo) que se deprecian
+    2. Revisa con tu contador qué método de depreciación usas (línea recta u otro) y la vida útil estimada de cada tipo de activo
+    3. Evalúa si esa vida útil estimada es razonable comparada con lo que es normal en tu sector
+    4. Calcula la depreciación acumulada y su efecto en el valor neto en libros de tus activos
+    5. Detecta cambios año tras año en los supuestos de vida útil que puedan indicar que se está maquillando la utilidad
+    6. Entiende el impacto de la depreciación y amortización en tu estado de resultados y tu balance
+    7. Piensa cómo un cambio en tu política de depreciación afectaría las ganancias que reportas, antes de pedir un préstamo o presentar resultados a inversionistas
+  ENTREGABLE: Una tabla de tus activos de capital con el método y el cronograma de depreciación o amortización, la vida útil que asumes, el valor neto en libros y el impacto en tu estado de resultados
+  PREVIOS: clasificacion_tipos_activos, distincion_cogs_gastos_operativos, arte_de_las_finanzas, cogs_vs_operating_expenses, contabilidad_innovacion_largo_plazo
+  SIGUIENTES: calculo_ebitda, lectura_balance_general, activos_intangibles_amortizacion, cargos_extraordinarios_bandera_amarilla
+------------------------------------------------------------------------------
+HIJO
+  ID: impacto_estado_resultados_en_balance
+  TITULO: Cómo el Estado de Resultados Impacta el Balance General
+  DOMINIO: core
+  RESUMEN: Todo cambio en el estado de resultados repercute en el balance: las ventas generan efectivo o cuentas por cobrar, los gastos reducen efectivo o aumentan pasivos acumulados, y la utilidad neta incrementa el patrimonio (vía utilidades retenidas) mientras una pérdida lo reduce. Decisiones operativas aparentemente simples (comprar inventario, atender nuevos clientes, adquirir equipo) tienen efectos complejos y a veces contradictorios sobre activos, pasivos y liquidez que deben analizarse integralmente.
+  PASOS:
+    1. Analizar cada decisión operativa (compras, ventas, nuevas contrataciones) por su efecto simultáneo en balance y estado de resultados.
+    2. Antes de aprobar compras grandes de inventario, evaluar impacto en cuentas por pagar y flujo de caja.
+    3. Al expandir a nuevos segmentos de clientes, evaluar riesgo de cobranza y su efecto en cuentas por cobrar.
+    4. Entrenar a gerentes de área para pensar más allá de su línea de P&L y considerar el balance completo.
+  ENTREGABLE: Análisis de impacto cruzado de una decisión operativa sobre el estado de resultados y el balance general.
+  PREVIOS: por_que_balancea_el_balance, accruals_y_activos_prepagados
+  SIGUIENTES: evaluacion_salud_financiera_empresa, efecto_bullwhip
+
+==============================================================================
+UNIDAD 45 | dominio core | paso 3
+PAR: poder_a_traves_de_la_accion -> compromiso_organismico_en_la_accion
+TEXTO DEL PASO (del fichero del filtro): Asegurar que la acción sea genuina y comprometida ('significar lo que se dice/hace'), no un gesto mecánico vacío
+------------------------------------------------------------------------------
+MADRE
+  ID: poder_a_traves_de_la_accion
+  TITULO: Poder a Través de la Acción: Unificar el Pensamiento Mediante el Actuar
+  DOMINIO: core
+  RESUMEN: Frente al 'evangelio de la relajación' (que puede derivar en pasividad intelectual), Wallas propone la fórmula 'Poder a través de la Acción': actuar sobre las propias ideas y opiniones privadas genera una unidad psicológica entre el 'yo real', el 'yo ideal' y el 'yo que otros perciben', aumentando la energía disponible para el pensamiento. Cita a James: hay que actuar inmediatamente sobre cada resolución o impulso emocional, pues dejarlo evaporar sin fruto práctico entorpece futuras resoluciones. La acción debe ser voluntaria y comprometer a todo el organismo, no un mero movimiento mecánico.
+  PASOS:
+    1. Actuar de inmediato sobre cualquier resolución o idea prometedora en lugar de posponerla
+    2. Buscar oportunidades de expresar públicamente o poner en práctica opiniones que hasta ahora eran solo especulación privada
+    3. Asegurar que la acción sea genuina y comprometida ('significar lo que se dice/hace'), no un gesto mecánico vacío
+    4. Vincular conscientemente el trabajo intelectual cotidiano a un propósito o impacto mayor para sostener la energía a largo plazo (como hizo Bentham)
+  ENTREGABLE: Una lista de resoluciones o ideas pendientes convertidas en acciones concretas ya ejecutadas o programadas, junto con una declaración del propósito mayor que conecta el trabajo diario con su impacto.
+  PREVIOS: emocion_como_motor_pensamiento
+  SIGUIENTES: wallas_etapa_verificacion, afinar_frente_difuso_innovacion, esfuerzo_voluntario_vs_urge_espontaneo, fracaso_como_aprendizaje_startup
+------------------------------------------------------------------------------
+HIJO
+  ID: compromiso_organismico_en_la_accion
+  TITULO: Acción Comprometida vs. Movimiento Vacío
+  DOMINIO: core
+  RESUMEN: Wallas distingue entre la acción meramente motora (repetir gestos mecánicamente) y la acción voluntaria en la que 'todo el organismo participa'. Solo cuando una persona realmente 'quiere decir lo que dice' o 'hace lo que hace' con intención genuina, la acción fortalece la energía mental y emocional. Un actor que repite frases amables sin sentirlas puede incluso aumentar su aversión en lugar de su afecto. Para emprendedores, esto implica que ejecutar tareas (pitches, ventas, entrevistas a clientes) de forma mecánica y sin compromiso genuino no genera aprendizaje ni energía; se requiere autenticidad e implicación real en cada acción para que esta alimente el pensamiento y la motivación futura.
+  PASOS:
+    1. Antes de ejecutar una tarea repetitiva (pitch, entrevista, demo), preguntarse si realmente se cree en lo que se va a decir o hacer
+    2. Evitar la ejecución mecánica de scripts o guiones sin conexión emocional genuina
+    3. Reconectar periódicamente con el propósito detrás de tareas repetitivas para mantener la autenticidad
+    4. Detectar señales de desgaste emocional o cinismo que indiquen pérdida de compromiso genuino en la acción
+  ENTREGABLE: Un checklist personal o ritual de 'reconexión con el propósito' antes de tareas repetitivas clave (pitches, entrevistas de descubrimiento de clientes, ventas)
+  PREVIOS: habito_energetico_vs_mecanico
+  SIGUIENTES: proposito_como_motor_energia
+
+==============================================================================
+UNIDAD 46 | dominio core | paso 4
+PAR: unbundling_business_models -> business_model_canvas_scorecard
+TEXTO DEL PASO (del fichero del filtro): Dibuja el modelo de negocio (Business Model Canvas) de cada parte separada, como si fuera su propio negocio.
+------------------------------------------------------------------------------
+MADRE
+  ID: unbundling_business_models
+  TITULO: Separar los tres negocios que conviven en tu idea (patrón de desagregación)
+  DOMINIO: core
+  RESUMEN: Dentro de un mismo negocio suelen convivir tres tipos de actividad muy distintos: cuidar la relación con el cliente, crear productos nuevos, y sostener la infraestructura que hace que todo funcione. Cada uno se mueve con lógicas distintas: distinta economía, distinta forma de competir y distinta cultura de trabajo. Si los mezclas en una sola operación, uno le termina robando foco al otro y acabas haciendo concesiones que no te convienen. Por eso conviene, cuando puedes, separarlos en partes independientes.
+  PASOS:
+    1. Mira tus actividades y marca cuáles son relación con el cliente, cuáles son crear producto nuevo y cuáles son infraestructura que sostiene la operación.
+    2. Detecta dónde estas tres cosas chocan entre sí dentro de tu día a día o te obligan a elegir una en contra de otra.
+    3. Decide si te conviene separar alguna de estas partes en algo independiente para ganar foco y eficiencia.
+    4. Dibuja el modelo de negocio (Business Model Canvas) de cada parte separada, como si fuera su propio negocio.
+  ENTREGABLE: Tienes claro cuáles de los tres tipos de negocio conviven en lo que haces, y decidiste si separarlos o convivir con las concesiones que eso implica.
+  PREVIOS: lienzo_modelo_negocio, fase_diseno_prototipado_modelos
+  SIGUIENTES: multi_sided_platforms, long_tail_pattern
+------------------------------------------------------------------------------
+HIJO
+  ID: business_model_canvas_scorecard
+  TITULO: El Business Model Canvas como Scorecard Semanal
+  DOMINIO: core
+  RESUMEN: El Business Model Canvas de Osterwalder, además de ser una foto estática del negocio, se usa en Customer Discovery como un scorecard semanal para rastrear el progreso en la búsqueda del modelo de negocio. Cada semana actualizas el canvas reflejando pivotes e iteraciones, resaltando en rojo los cambios respecto a la semana anterior. Esto permite ver claramente qué hipótesis cambiaron y cuáles se mantienen, generando un historial que documenta cómo evoluciona tu entendimiento del negocio con el tiempo. Es especialmente útil cuando no tienes claridad propia sobre tu modelo de negocio o necesitas visualizar tu progreso semana a semana de forma tangible.
+  PASOS:
+    1. Llenar el canvas inicial con tus hipótesis en las 9 áreas: segmentos, propuesta de valor, canales, relaciones, recursos, socios e ingresos
+    2. Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho, y ademas cada vez que obtengas nueva evidencia
+    3. Resaltar en rojo los cambios respecto a la semana anterior
+    4. Una vez que confirmes los cambios, integrarlos como el nuevo canvas base en negro para la siguiente semana
+    5. Repetir este proceso de forma continua durante todo tu customer discovery
+    6. Sal a validar cada hipótesis con clientes reales cara a cara.
+    7. Conserva todas las versiones del canvas como un flip book que documente la evolución de tu modelo de negocio.
+    8. Evita convertir el canvas en un plan operativo prematuro basado en suposiciones sin validar.
+  ENTREGABLE: Serie histórica de canvases semanales que documenta la evolución de tu modelo de negocio.
+  PREVIOS: problem_solution_fit, hipotesis_de_tamano_de_mercado, producto_minimo_viable, lienzo_modelo_negocio, pivotes_e_iteraciones, business_model_environment_mapping, business_plan_cinco_secciones, search_for_business_model
+  SIGUIENTES: customer_validation, biblioteca_experimentos_validacion, pivote_o_proceder, filosofia_customer_validation, filosofia_validacion_clientes, intimacion_emocional_como_senal_de_verdad, startup_como_experimento_cientifico, usuarios_extremos_edge_cases, diseno_experimentos_hipotesis, customer_discovery, modelo_customer_development, pivote_startup
+

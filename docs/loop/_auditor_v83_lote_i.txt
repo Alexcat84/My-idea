@@ -1,0 +1,137 @@
+==============================================================================
+UNIDAD 54 | dominio core | paso 2
+PAR: riesgo_fiduciario_insolvencia_deuda -> convertible_debt_fundamentos
+TEXTO DEL PASO (del fichero del filtro): Minimizar el tiempo entre la emisión de deuda convertible y su conversión a equity
+------------------------------------------------------------------------------
+MADRE
+  ID: riesgo_fiduciario_insolvencia_deuda
+  TITULO: Riesgo Fiduciario por Insolvencia Técnica en Deuda Convertible
+  DOMINIO: core
+  RESUMEN: Levantar una ronda de deuda convertible hace que la empresa sea técnicamente insolvente (los pasivos de deuda superan los activos), lo que puede activar deberes fiduciarios de la junta directiva hacia los acreedores (no solo accionistas) según la ley estatal. Este período de insolvencia dura hasta que la deuda se convierte en equity, ampliando la ventana de exposición legal para directores en caso de fracaso de la empresa.
+  PASOS:
+    1. Consultar con un abogado corporativo sobre las leyes estatales de responsabilidad fiduciaria hacia acreedores
+    2. Minimizar el tiempo entre la emisión de deuda convertible y su conversión a equity
+    3. Mantener registros claros de decisiones de la junta durante el período de insolvencia técnica
+    4. Considerar seguros D&O (directors and officers) que cubran este período de riesgo
+  ENTREGABLE: Evaluación legal documentada del riesgo fiduciario y, si aplica, póliza D&O actualizada
+  PREVIOS: original_issue_discount_oid
+  SIGUIENTES: safe_simple_agreement_future_equity
+------------------------------------------------------------------------------
+HIJO
+  ID: convertible_debt_fundamentos
+  TITULO: Fundamentos de la Deuda Convertible (Convertible Debt)
+  DOMINIO: core
+  RESUMEN: La deuda convertible es un instrumento de financiamiento en el que el inversionista presta dinero a la empresa como deuda, la cual se convierte en acciones (equity) en una ronda de financiamiento futura, evitando así la difícil negociación de valuación temprana. Es popular entre inversionistas ángeles y aceleradoras en rondas semilla, porque reduce la complejidad legal y los costos frente a una ronda de equity preferente. A cambio del riesgo temprano que asumen, los inversionistas reciben una tasa de interés modesta (típicamente 5%-12%, con 8% como promedio, cercana a las tasas federales aplicables) y un descuento sobre el precio de la siguiente ronda (típicamente 10%-30%, siendo 20% el más 
+  PASOS:
+    1. Evaluar si conviene evitar la negociación de valuación temprana usando deuda convertible en vez de una ronda de equity
+    2. Definir el porcentaje de descuento que recibirán los inversionistas en la conversión (típicamente 10%-30%, siendo 20% el más común)
+    3. Considerar el uso de un valuation cap, solo o combinado con el descuento, y a qué monto, evaluando su impacto en rondas futuras
+    4. Fijar una tasa de interés baja (5%-12%, promedio 8%), cercana a las tasas federales aplicables
+    5. Establecer el plazo de maduración (fecha límite) y el monto mínimo de la siguiente ronda ('Qualified Financing') que dispara la conversión automática
+    6. Comparar los costos legales de una ronda de deuda convertible frente a una ronda de equity semilla preferente
+  ENTREGABLE: Term sheet o nota convertible con términos claros: descuento, valuation cap, tasa de interés, plazo de maduración y monto mínimo de conversión
+  PREVIOS: lienzo_modelo_negocio, warrants_financiamiento
+  SIGUIENTES: equity_crowdfunding_terminos, term_sheet_negociacion, mecanica_conversion_deuda, terminos_adicionales_deuda_convertible, valuation_cap_deuda_convertible, warrant_pricing_venture_debt
+
+==============================================================================
+UNIDAD 55 | dominio quality | paso 1
+PAR: clasificacion_caracteristicas_calidad -> key_process_product_characteristics
+TEXTO DEL PASO (del fichero del filtro): Derivar la lista de características de calidad a partir de las especificaciones del producto.
+------------------------------------------------------------------------------
+MADRE
+  ID: clasificacion_caracteristicas_calidad
+  TITULO: Clasificación de Características y Defectos de Calidad
+  DOMINIO: quality
+  RESUMEN: Consiste en elaborar dos listas: una de características de calidad derivadas de las especificaciones, y otra de defectos (síntomas de no conformidad durante manufactura o uso). Estas listas guían al planificador para determinar cuáles características requieren mayor atención en la inspección.
+  PASOS:
+    1. Derivar la lista de características de calidad a partir de las especificaciones del producto.
+    2. Elaborar la lista de defectos observados en manufactura y en campo.
+    3. Comparar ambas listas para identificar diferencias relevantes.
+    4. Usar la clasificación para priorizar esfuerzos de inspección.
+  ENTREGABLE: Documento con listas clasificadas de características de calidad y defectos asociados.
+  PREVIOS: planificacion_inspeccion, planificacion_de_la_inspeccion
+  SIGUIENTES: clasificacion_seriedad, inspeccion_caracteristicas_sensoriales
+------------------------------------------------------------------------------
+HIJO
+  ID: key_process_product_characteristics
+  TITULO: Características Clave de Producto y Proceso (KPC)
+  DOMINIO: quality
+  RESUMEN: Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las 
+  PASOS:
+    1. Recolecta inputs de investigación de mercado, QFD, revisión de diseño y AMFE
+    2. Clasifica las características del producto según su importancia relativa: crítica, mayor, menor o incidental
+    3. Identifica las partes sensibles a calidad usando criterios de complejidad y tasa de fallos
+    4. Documenta la relación entre las características de proceso y los resultados de producto
+    5. Registra las características clave en planos y especificaciones
+  ENTREGABLE: Listado clasificado de características clave de producto y proceso, con su nivel de criticidad y su relación causal documentada.
+  PREVIOS: qfd_matriz_calidad, fmea_analisis_de_modos_de_falla, marco_analisis_mercado_cadena_suministro, planificacion_inicial_calidad, qfd_matriz, definiciones_operacionales_de_calidad, sujetos_de_control
+  SIGUIENTES: analisis_flujo_proceso, control_proceso_variables, bucle_retroalimentacion_autoajustable, autocontrol_y_controlabilidad
+
+==============================================================================
+UNIDAD 56 | dominio quality | paso 1
+PAR: gestion_para_la_calidad -> key_process_product_characteristics
+TEXTO DEL PASO (del fichero del filtro): Definir la calidad tanto en términos de características del producto como en términos de ausencia de fallos
+------------------------------------------------------------------------------
+MADRE
+  ID: gestion_para_la_calidad
+  TITULO: Gestión para la Calidad (Managing for Quality)
+  DOMINIO: quality
+  RESUMEN: Conjunto de métodos universales que cualquier organización -empresa, agencia, universidad, hospital- puede usar para lograr resultados superiores, diseñando, mejorando continuamente y asegurando que todos los productos, servicios y procesos cumplan las necesidades de clientes y stakeholders. Evoluciona del concepto clásico de 'fitness for use' hacia 'fit for purpose', ampliando la responsabilidad de la calidad más allá del departamento de calidad hacia toda la organización.
+  PASOS:
+    1. Definir la calidad tanto en términos de características del producto como en términos de ausencia de fallos
+    2. Extender la responsabilidad de la calidad a toda la jerarquía organizacional, no solo al departamento de calidad
+    3. Adaptar el concepto de 'fit for purpose' considerando a todos los afectados por el producto (compradores, usuarios, reguladores, proveedores)
+    4. Establecer métodos universales aplicables a cualquier industria o función
+  ENTREGABLE: Marco organizacional documentado que defina cómo se gestionará la calidad a nivel de toda la empresa
+  PREVIOS: vacios_conocimiento_cliente
+  SIGUIENTES: trilogia_de_juran, doble_significado_calidad
+------------------------------------------------------------------------------
+HIJO
+  ID: key_process_product_characteristics
+  TITULO: Características Clave de Producto y Proceso (KPC)
+  DOMINIO: quality
+  RESUMEN: Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las 
+  PASOS:
+    1. Recolecta inputs de investigación de mercado, QFD, revisión de diseño y AMFE
+    2. Clasifica las características del producto según su importancia relativa: crítica, mayor, menor o incidental
+    3. Identifica las partes sensibles a calidad usando criterios de complejidad y tasa de fallos
+    4. Documenta la relación entre las características de proceso y los resultados de producto
+    5. Registra las características clave en planos y especificaciones
+  ENTREGABLE: Listado clasificado de características clave de producto y proceso, con su nivel de criticidad y su relación causal documentada.
+  PREVIOS: qfd_matriz_calidad, fmea_analisis_de_modos_de_falla, marco_analisis_mercado_cadena_suministro, planificacion_inicial_calidad, qfd_matriz, definiciones_operacionales_de_calidad, sujetos_de_control
+  SIGUIENTES: analisis_flujo_proceso, control_proceso_variables, bucle_retroalimentacion_autoajustable, autocontrol_y_controlabilidad
+
+==============================================================================
+UNIDAD 57 | dominio core | paso 5
+PAR: term_sheet_negociacion -> entender_term_sheet
+TEXTO DEL PASO (del fichero del filtro): Firmar el term sheet solo después de validar todos los términos con asesoría legal
+------------------------------------------------------------------------------
+MADRE
+  ID: term_sheet_negociacion
+  TITULO: Negociación del Term Sheet en una Ronda de Financiamiento
+  DOMINIO: core
+  RESUMEN: El term sheet es el documento que resume los términos económicos y de control de una ronda de inversión: precio por acción, valuación pre/post-money, preferencia de liquidación, derechos de conversión, antidilución, derechos de voto y composición del board. Entender cada cláusula (participación en liquidación, ratchet completo vs. promedio ponderado, conversión automática en IPO calificado, derechos de redención) es esencial para que el fundador negocie términos justos y entienda las implicaciones de control y económicas de cada elección.
+  PASOS:
+    1. Revisar cada sección del term sheet (dividendos, liquidación, conversión, antidilución, voto, board) con un abogado
+    2. Comparar los términos propuestos con estándares de mercado (ej. preferencia de liquidación 1x no participante)
+    3. Negociar la composición del board para mantener balance de poder adecuado
+    4. Evaluar el impacto de las cláusulas de antidilución en futuras rondas
+    5. Firmar el term sheet solo después de validar todos los términos con asesoría legal
+  ENTREGABLE: Term sheet negociado y firmado con términos claros de valuación, control y derechos económicos
+  PREVIOS: compensacion_service_providers, cumplimiento_inversionistas_acreditados, batna_definicion, capital_calls_lp, convertible_debt_fundamentos, creacion_option_pool, diagnostico_motivacion_para_contrataciones_inversores, vesting_acciones_fundadores, encontrar_lead_vc, evaluacion_tipos_inversores, factores_valoracion_startup, fuentes_financiamiento_startup, fundadores_en_junta_directiva, leverage_en_negociacion_con_vcs, materiales_due_diligence, metodos_de_valuacion, no_shop_agreement, participacion_preferente, preferencias_apiladas_vs_blended, proceso_decision_vc, seleccion_abogado_venture, seleccion_estructura_corporativa, valuation_cap_deuda_convertible, vesting_dinamico, warrant_pricing_venture_debt
+  SIGUIENTES: cierre_term_sheet, antidilucion_provisiones, antidilution_weighted_average_broad_narrow, co_sale_drag_along_agreements, composicion_board_directors, conditions_precedent_financing, conversion_rights, derechos_de_registro, drag_along_agreement, employee_pool_esop, estructura_fondo_vc, forma_de_contraprestacion_en_adquisicion, founders_activities_clause, gestion_sindicato_inversores, indemnification_clause, information_rights, no_shop_agreement, pay_to_play, preferencia_de_liquidacion, right_of_first_refusal_pro_rata, term_sheet_disposiciones_vinculantes, valuacion_409a
+------------------------------------------------------------------------------
+HIJO
+  ID: entender_term_sheet
+  TITULO: El Arte del Term Sheet
+  DOMINIO: core
+  RESUMEN: El term sheet es el documento que resume los términos propuestos de una inversión de capital de riesgo. Aunque hoy puede tener 8 páginas con cláusulas complejas, en esencia solo existen dos cosas que realmente importan en la negociación: economía (cuánto vale la empresa y quién recibe qué) y control (quién toma las decisiones). Entender esto evita perderse en detalles irrelevantes durante la negociación.
+  PASOS:
+    1. Antes de negociar, identificar qué cláusulas del term sheet afectan la economía (valoración, participación) y cuáles afectan el control (juntas, votos, protecciones)
+    2. Priorizar la negociación en estos dos ejes y no distraerse con cláusulas secundarias
+    3. Solicitar asesoría legal especializada en VC para revisar el documento completo
+    4. Identificar cláusulas que no afectan ni economía ni control (posibles tácticas de distracción).
+  ENTREGABLE: Checklist personal de términos de economía y control identificados antes de firmar cualquier term sheet
+  PREVIOS: por_que_existen_los_term_sheets, gestion_angel_investors, jerarquia_firma_vc, gestion_sindicato_inversores, seleccion_abogado_venture, cierre_term_sheet, proceso_decision_vc
+  SIGUIENTES: control_del_board_startup, valuacion_pre_post_money
+

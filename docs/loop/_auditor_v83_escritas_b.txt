@@ -1,0 +1,110 @@
+==============================================================================
+UNIDAD 47 | dominio core | paso 1
+PAR: venture_debt_introduccion -> ratio_deuda_capital
+TEXTO DEL PASO (del fichero del filtro): Evaluar el balance ideal entre equity y deuda dentro de la estrategia de capital.
+------------------------------------------------------------------------------
+MADRE
+  ID: venture_debt_introduccion
+  TITULO: Deuda de Riesgo (Venture Debt) como Complemento al Equity
+  DOMINIO: core
+  RESUMEN: El venture debt es un préstamo diseñado para startups de alto crecimiento respaldadas por capital de riesgo. A diferencia del equity, la deuda tiene términos de repago definidos, tasas y covenants, pero es menos flexible. La regla fundamental es que el venture debt sigue al equity, no lo reemplaza: los prestamistas usan el respaldo de VCs como validación principal para el underwriting. El monto disponible suele ser 25-50% de la última ronda de equity levantada, y sirve como extensión de runway, seguro de performance, o puente hacia la siguiente ronda, reduciendo la dilución de fundadores.
+  PASOS:
+    1. Evaluar el balance ideal entre equity y deuda dentro de la estrategia de capital.
+    2. Confirmar que la empresa ya cuenta con respaldo de capital de riesgo institucional antes de buscar venture debt.
+    3. Identificar bancos especializados (ej. SVB) o fondos de deuda de riesgo con track record en el sector.
+    4. Discutir con el board y los VCs la conveniencia y momento de levantar deuda.
+    5. Definir el propósito específico del préstamo (extensión de runway, capex, adquisición, puente a próxima ronda).
+  ENTREGABLE: Análisis de estrategia de capital que determine cuánta deuda de riesgo levantar, con qué prestamista y para qué propósito específico.
+  PREVIOS: equity_crowdfunding_terminos, venture_debt_terminos_economicos, crowdfunding_legal_exemptions_jobs_act
+  SIGUIENTES: venture_debt_terminos_economicos, plan_a_b_c_soft_landing, ratio_deuda_capital
+------------------------------------------------------------------------------
+HIJO
+  ID: ratio_deuda_capital
+  TITULO: Ratio Deuda-Capital (Debt-to-Equity)
+  DOMINIO: core
+  RESUMEN: Mide cuánta deuda tiene la empresa por cada dólar de patrimonio de los accionistas. Es clave para bancos e inversores al evaluar riesgo de préstamo. Un ratio alto indica mayor apalancamiento y puede dificultar futuras financiaciones por deuda, mientras que uno muy bajo puede convertir a la empresa en objetivo de compra apalancada.
+  PASOS:
+    1. Calcular deuda total dividida entre patrimonio neto usando el balance
+    2. Comparar el ratio con el promedio de la industria
+    3. Evaluar la tolerancia al riesgo del fundador antes de decidir financiarse con deuda o capital
+    4. Consultar con un banquero qué ratio es aceptable para el tamaño y sector de la empresa
+  ENTREGABLE: Cálculo del ratio deuda-capital con comparación sectorial y decisión documentada sobre estrategia de financiamiento
+  PREVIOS: lectura_balance_general, retorno_sobre_capital, venture_debt_introduccion
+  SIGUIENTES: cobertura_de_intereses, tasa_crecimiento_sostenible
+
+==============================================================================
+UNIDAD 50 | dominio core | paso 4
+PAR: gate2_second_screen -> metodo_payback
+TEXTO DEL PASO (del fichero del filtro): Calcula un retorno financiero simple, como el plazo de recuperación de la inversión (Payback Period)
+------------------------------------------------------------------------------
+MADRE
+  ID: gate2_second_screen
+  TITULO: Segundo filtro de tu proyecto (Gate 2)
+  DOMINIO: core
+  RESUMEN: Vuelves a evaluar tu proyecto con más rigor, usando la nueva información que conseguiste en la etapa de exploración (Scoping). Usas los mismos filtros de antes, requisitos indispensables y requisitos deseables, pero ahora sumas la reacción real de tus vendedores y clientes, y cualquier tema legal o regulatorio que pueda frenarte de plano. Aquí haces un primer cálculo financiero simple, como el plazo en que recuperarías la inversión (Payback Period).
+  PASOS:
+    1. Revisa los resultados de tu etapa de exploración (Scoping)
+    2. Repasa la lista de requisitos indispensables actualizada y confirma que los sigues cumpliendo
+    3. Evalúa los requisitos deseables, incluyendo cómo reaccionaron tus vendedores y tus clientes
+    4. Calcula un retorno financiero simple, como el plazo de recuperación de la inversión (Payback Period)
+    5. Decide si sigues adelante, lo descartas, lo pausas o lo repiensas antes de armar el caso de negocio (Build Business Case)
+  ENTREGABLE: Tu decisión documentada, con la lista de requisitos revisada y el cálculo financiero preliminar
+  PREVIOS: etapa_scoping
+  SIGUIENTES: etapa_build_business_case, metodo_payback
+------------------------------------------------------------------------------
+HIJO
+  ID: metodo_payback
+  TITULO: Método de Payback (Período de Recuperación)
+  DOMINIO: core
+  RESUMEN: Es el método más simple para evaluar una inversión de capital: mide el tiempo requerido para que el flujo de efectivo generado recupere la inversión inicial. Es útil como una verificación rápida inicial pero no considera el valor del dinero en el tiempo ni el retorno más allá del punto de equilibrio.
+  PASOS:
+    1. Dividir el desembolso inicial entre el flujo de efectivo anual esperado
+    2. Comparar el período resultante con la vida útil del proyecto
+    3. Usar el resultado solo para comparar o rechazar proyectos rápidamente
+    4. Complementar con NPV o IRR si el resultado inicial es prometedor
+  ENTREGABLE: Cálculo del período de recuperación de la inversión en años o meses
+  PREVIOS: analisis_de_gastos_de_capital, gate2_second_screen
+  SIGUIENTES: metodo_valor_presente_neto, tasa_interna_retorno_irr
+
+==============================================================================
+UNIDAD 51 | dominio core | paso 10
+PAR: coordinacion_colaboracion_cadena_suministro -> plataforma_colaboracion_tiempo_real
+TEXTO DEL PASO (del fichero del filtro): Establecer una plataforma de colaboración online para dar seguimiento en tiempo real a la implementación
+------------------------------------------------------------------------------
+MADRE
+  ID: coordinacion_colaboracion_cadena_suministro
+  TITULO: Coordinación y Colaboración como Ventaja Competitiva
+  DOMINIO: core
+  RESUMEN: En economías de alto cambio, la coordinación entre empresas de una cadena de suministro es más poderosa que el control unilateral. Las ganancias vienen de conectarse a redes de cadena de suministro y desarrollar reputación de buen servicio y buenos productos a precios razonables (no necesariamente los más bajos). Sistemas diseñados para dar control excesivo a grandes empresas sobre proveedores (bajo el disfraz de 'eficiencia') desmotivan a los proveedores y destruyen la innovación colectiva, dejando a toda la cadena vulnerable cuando el mercado cambia (ejemplo iPhone: ecosistema colaborativo vs. control unilateral).
+  PASOS:
+    1. Evaluar si los sistemas actuales de la empresa buscan control unilateral sobre proveedores o colaboración mutua
+    2. Desarrollar reputación de buen servicio y producto en la red de cadena de suministro, no solo competir por precio
+    3. Fomentar que todos los participantes de la cadena innoven y coordinen entre sí (modelo orquesta, no solista)
+    4. Crear plataformas de colaboración online donde las partes discutan problemas y oportunidades en tiempo real
+    5. Usar simulaciones tipo 'juego' para explorar escenarios de cadena de suministro colaborativamente
+    6. Invitar a todos los socios relevantes de la cadena de suministro a una sesión de diseño conjunto
+    7. Usar simulaciones interactivas para probar distintas configuraciones y visualizar problemas en tiempo real
+    8. Iterar el diseño colectivamente hasta alcanzar niveles de desempeño aceptables a un costo operativo viable
+    9. Documentar roles, reglas y metas acordadas en los contratos de cada empresa participante
+    10. Establecer una plataforma de colaboración online para dar seguimiento en tiempo real a la implementación
+    11. Identifica qué proveedores o socios podrían ayudarte a innovar junto contigo, como parte de un mismo ecosistema
+    12. Estudia a competidores que ganaron mercado ofreciendo más valor percibido aunque les costara más producirlo
+  ENTREGABLE: Estrategia de relación con proveedores/socios basada en colaboración mutua, con plataforma o mecanismo de coordinación implementado
+  PREVIOS: trade_off_responsividad_eficiencia
+  SIGUIENTES: ciclo_virtuoso_datos_electronicos, plataforma_colaboracion_tiempo_real
+------------------------------------------------------------------------------
+HIJO
+  ID: plataforma_colaboracion_tiempo_real
+  TITULO: Plataforma de Colaboración en Tiempo Real para Cadena de Suministro
+  DOMINIO: core
+  RESUMEN: Una plataforma basada en la nube que ofrece visibilidad casi en tiempo real a todos los actores de la cadena de suministro (fabricantes, logística, distribuidores, retailers) permite que cada parte identifique problemas y actúe sin esperar instrucciones de una autoridad central. Se combina con sesiones de 'colaboración masiva' (crowdsourcing) donde múltiples empresas ajustan en vivo el diseño de la cadena, corren simulaciones, y llegan a consenso sobre el plan operativo, generando compromiso genuino de todas las partes.
+  PASOS:
+    1. Implementar un sistema visual (mapa) compartido con datos en tiempo real de inventario, rutas y costos.
+    2. Organizar sesiones de colaboración masiva con todos los socios clave de la cadena.
+    3. Permitir que cada participante edite y proponga cambios visibles para todos en vivo.
+    4. Correr simulaciones colectivas y ajustar el diseño hasta llegar a consenso.
+    5. Usar la plataforma no solo para planificar sino para monitorear operaciones diarias y resolver problemas en tiempo real.
+  ENTREGABLE: Plataforma o sistema de visibilidad compartida activa entre los socios de la cadena de suministro, con métricas base y alertas de desviación.
+  PREVIOS: sop_colaborativo, combinacion_humano_ia_decision, modelado_simulacion_cadena_suministro, coordinacion_colaboracion_cadena_suministro
+  SIGUIENTES: profundizacion_cadena_suministro, alcance_profundo_cadena_suministro
+

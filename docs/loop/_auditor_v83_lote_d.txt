@@ -1,0 +1,67 @@
+==============================================================================
+UNIDAD 43 | dominio quality | paso 4
+PAR: desarrollo_expertos_capaces -> evaluacion_desempeno_proyectos
+TEXTO DEL PASO (del fichero del filtro): Medir el impacto de la capacitación en el desempeño de los proyectos de mejora
+------------------------------------------------------------------------------
+MADRE
+  ID: desarrollo_expertos_capaces
+  TITULO: Desarrollo de Expertos Capaces (Capable Experts)
+  DOMINIO: quality
+  RESUMEN: Consiste en desarrollar en el personal las competencias y capacidades necesarias, basadas en las necesidades reales de los clientes internos, para lograr la excelencia en desempeño y calidad. Incluye la evaluación de habilidades, la reeducación y la certificación como mecanismos para cerrar brechas y transformar la Oficina actual en la Oficina que la organización necesita para sostenerse en el futuro (ej. Green Belts, Black Belts, expertos Lean).
+  PASOS:
+    1. Utilizar los resultados de la evaluación de competencias como línea base
+    2. Diseñar un currículo de capacitación por rol y nivel jerárquico
+    3. Establecer un programa de certificación interno (ej. Green Belt, Black Belt, Lean Expert)
+    4. Medir el impacto de la capacitación en el desempeño de los proyectos de mejora
+  ENTREGABLE: Programa de certificación y desarrollo de talento en calidad implementado, con métricas de seguimiento
+  PREVIOS: evaluacion_competencias_calidad, rol_tactico_estrategico_oficina, oficina_calidad_y_excelencia
+  SIGUIENTES: 
+------------------------------------------------------------------------------
+HIJO
+  ID: evaluacion_desempeno_proyectos
+  TITULO: Evaluación de Desempeño en Proyectos de Mejora
+  DOMINIO: quality
+  RESUMEN: Evaluar el desempeño individual en proyectos de equipo es complejo porque los resultados son colectivos. Se requieren métricas a nivel de gerencia como número de proyectos iniciados/completados/abortados, valor generado y porcentaje de subordinados activos en equipos de proyecto.
+  PASOS:
+    1. Definir métricas de desempeño para proyectos: iniciados, en progreso, completados, abortados
+    2. Medir el valor generado en términos de reducción de costos y ROI
+    3. Calcular el porcentaje de empleados activos en equipos de mejora
+    4. Establecer criterios cualitativos para evaluar contribución individual dentro del equipo
+  ENTREGABLE: Tablero de métricas de desempeño de proyectos de mejora por gerente/área
+  PREVIOS: revision_progreso, team_performance_assessment
+  SIGUIENTES: entrenamiento_para_breakthrough
+
+==============================================================================
+UNIDAD 44 | dominio quality | paso 5
+PAR: estructura_competencias_six_sigma_lean -> evaluacion_desempeno_proyectos
+TEXTO DEL PASO (del fichero del filtro): Evaluar periódicamente el desempeño de los Belts en la ejecución de proyectos de mejora
+------------------------------------------------------------------------------
+MADRE
+  ID: estructura_competencias_six_sigma_lean
+  TITULO: Estructura de Competencias Six Sigma y Lean (Belts)
+  DOMINIO: quality
+  RESUMEN: Define los roles y niveles de competencia dentro de una organización que implementa Six Sigma y Lean, desde Green Belt (participante en proyectos) hasta Master Black Belt/Lean Master (experto que integra la estrategia de la organización). Cada rol tiene responsabilidades claras: liderazgo de proyectos, mentoría, capacitación y alineación con los objetivos estratégicos del negocio, formando una matriz de competencias que sustenta el despliegue de la mejora continua.
+  PASOS:
+    1. Definir el perfil de competencias requerido para cada nivel (Green Belt, Black Belt, Master Black Belt, Lean Expert, Lean Master)
+    2. Asignar roles y responsabilidades claras según el nivel de experiencia y liderazgo esperado
+    3. Establecer planes de capacitación y certificación para cada nivel de competencia
+    4. Vincular los roles con los proyectos y objetivos estratégicos del negocio
+    5. Evaluar periódicamente el desempeño de los Belts en la ejecución de proyectos de mejora
+  ENTREGABLE: Matriz de competencias y perfiles de puesto documentados para el despliegue de programas Six Sigma/Lean en la organización
+  PREVIOS: roles_six_sigma
+  SIGUIENTES: aprendizaje_institucionalizado_benchmarking
+------------------------------------------------------------------------------
+HIJO
+  ID: evaluacion_desempeno_proyectos
+  TITULO: Evaluación de Desempeño en Proyectos de Mejora
+  DOMINIO: quality
+  RESUMEN: Evaluar el desempeño individual en proyectos de equipo es complejo porque los resultados son colectivos. Se requieren métricas a nivel de gerencia como número de proyectos iniciados/completados/abortados, valor generado y porcentaje de subordinados activos en equipos de proyecto.
+  PASOS:
+    1. Definir métricas de desempeño para proyectos: iniciados, en progreso, completados, abortados
+    2. Medir el valor generado en términos de reducción de costos y ROI
+    3. Calcular el porcentaje de empleados activos en equipos de mejora
+    4. Establecer criterios cualitativos para evaluar contribución individual dentro del equipo
+  ENTREGABLE: Tablero de métricas de desempeño de proyectos de mejora por gerente/área
+  PREVIOS: revision_progreso, team_performance_assessment
+  SIGUIENTES: entrenamiento_para_breakthrough
+

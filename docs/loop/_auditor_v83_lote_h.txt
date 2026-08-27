@@ -1,0 +1,149 @@
+==============================================================================
+UNIDAD 38 | dominio environmental | paso 3
+PAR: establecer_metas_reduccion_emisiones -> plan_accion_corto_mediano_largo_plazo
+TEXTO DEL PASO (del fichero del filtro): Establece metas de reducción a corto y largo plazo.
+------------------------------------------------------------------------------
+MADRE
+  ID: establecer_metas_reduccion_emisiones
+  TITULO: Establecer Metas de Reducción de Emisiones
+  DOMINIO: environmental
+  RESUMEN: Una vez que identifiques el origen de tus emisiones, tienes que fijar objetivos concretos de reducción. Las metas apropiadas varían según tu industria, tu capacidad y tu posición en el mercado. Ejemplos reales incluyen a USG (20% para 2020), MillerCoors (15% de reducción de energía para 2015) y Panasonic e Intel, que superaron ampliamente sus objetivos iniciales. Es importante que fijes metas públicas realistas pero ambiciosas a corto plazo, y que reserves los objetivos más transformadores para tu uso interno, ya que si no cumples una meta pública vas a tener que dar explicaciones y eso puede afectar tu reputación.
+  PASOS:
+    1. Analiza el inventario de emisiones que ya tienes.
+    2. Define un año base para la comparación.
+    3. Establece metas de reducción a corto y largo plazo.
+    4. Comunica públicamente las metas alcanzables, y guarda para ti las más ambiciosas.
+    5. Prepara explicaciones para posibles incumplimientos.
+  ENTREGABLE: Un documento con metas cuantificables y con plazos definidos de reducción de emisiones.
+  PREVIOS: medir_huella_carbono_corporativa, plan_cambio_climatico, metas_desmaterializacion_energia
+  SIGUIENTES: draft_plan_accion_climatico
+------------------------------------------------------------------------------
+HIJO
+  ID: plan_accion_corto_mediano_largo_plazo
+  TITULO: Plan de Acción a Corto, Mediano y Largo Plazo
+  DOMINIO: environmental
+  RESUMEN: Metodología para estructurar la implementación de sostenibilidad en tres horizontes temporales: un plan a un año enfocado en 'quick wins' fáciles de lograr y con alta visibilidad interna; un plan a tres años que incorpora iniciativas que requieren mayor inversión o construcción de capacidades, como rediseño de procesos de manufactura o edificios más verdes; y un plan a cinco años orientado a transformar la industria o línea de negocio mediante rediseño profundo de productos y estrategia.
+  PASOS:
+    1. Identificar 'quick wins' de bajo costo y alta visibilidad para el plan de un año
+    2. Realizar proyectos piloto para iniciativas de alto ROI potencial pero incertidumbre significativa
+    3. Expandir a nivel de toda la empresa los pilotos exitosos en el plan de tres años
+    4. Incluir en el plan de tres años la responsabilidad de cada función de negocio en desarrollar su propia agenda de sostenibilidad
+    5. Reservar para el plan de largo plazo (cinco años) las iniciativas de rediseño profundo de producto o transformación de industria
+  ENTREGABLE: Tres planes de acción documentados (uno, tres y cinco años) con iniciativas específicas, responsables y métricas de éxito.
+  PREVIOS: priorizacion_iniciativas_sostenibilidad
+  SIGUIENTES: vision_clara_sostenibilidad, etapas_creacion_valor_sostenibilidad, modelo_lubin_esty_4_etapas, vision_alineacion_sostenibilidad
+
+==============================================================================
+UNIDAD 48 | dominio quality | paso 3
+PAR: estudio_desempeno_run_charts_servicios -> causas_comunes_vs_especiales
+TEXTO DEL PASO (del fichero del filtro): Construir gráficos de corrida o distribuciones para detectar causas especiales de variación
+------------------------------------------------------------------------------
+MADRE
+  ID: estudio_desempeno_run_charts_servicios
+  TITULO: Uso de Gráficos de Corrida (Run Charts) para Estudiar Desempeño en Servicios
+  DOMINIO: quality
+  RESUMEN: Deming propone el uso sistemático de gráficos de corrida (run charts) y distribuciones estadísticas para monitorear variables clave de desempeño en organizaciones de servicio (hospitales, aerolíneas, hoteles). Este enfoque permite detectar causas especiales de variación, medir el impacto de mejoras al sistema, y dirigir la capacitación y el reentrenamiento hacia áreas específicas que lo requieran, evitando decisiones basadas en anécdotas o percepciones subjetivas.
+  PASOS:
+    1. Identificar las variables críticas de desempeño del servicio (errores, tiempos, quejas, reprocesos)
+    2. Recolectar datos de forma sistemática y periódica (semanal, mensual) para cada variable
+    3. Construir gráficos de corrida o distribuciones para detectar causas especiales de variación
+    4. Usar los hallazgos para dirigir recursos de capacitación y rediseño de procesos hacia áreas fuera de control estadístico
+  ENTREGABLE: Tablero de indicadores con gráficos de corrida actualizados periódicamente para las variables críticas del servicio
+  PREVIOS: adaptacion_14_puntos_servicio_medico
+  SIGUIENTES: 
+------------------------------------------------------------------------------
+HIJO
+  ID: causas_comunes_vs_especiales
+  TITULO: Causas Comunes vs Causas Especiales de Variación
+  DOMINIO: quality
+  RESUMEN: Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas p
+  PASOS:
+    1. Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes
+    2. Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos
+    3. Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales
+    4. Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla
+    5. Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas
+    6. Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales
+    7. Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo
+    8. Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+    9. Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).
+    10. Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.
+    11. Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.
+    12. Comunicar a los equipos que el objetivo es identificar problemas, no culpables
+    13. Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo
+    14. Fomentar la colaboración entre turnos y departamentos para resolver causas comunes
+    15. Analizar la distribución de errores o defectos entre todas las personas usando limites de control
+  ENTREGABLE: Gráfico de corrida o de control con los puntos clasificados como causa común o especial y un plan de acción diferenciado para cada tipo.
+  PREVIOS: limites_de_especificacion_vs_limites_de_control, estandarizacion_industrial_voluntaria, falacia_meta_numerica_sin_metodo, carta_de_control_shewhart, aim_of_leadership, capacidad_de_proceso, capacidad_de_proceso_2, control_estadistico_de_procesos, costo_de_mala_calidad_copq, estudio_mezclas_multiples_fuentes, evaluacion_de_desempeno_merito, limites_control_por_juicio_error, mejora_continua_del_proceso, mejora_del_sistema_responsabilidad_gerencial, sistema_estable_causas_comunes, sistema_estable_responsabilidad_gerencial, control_estadistico_de_inventario_en_transito, uso_inadecuado_computadoras
+  SIGUIENTES: experimento_cuentas_rojas, control_estadistico_de_procesos_en_tiempo_real, reporte_gerencial_diagnostico_calidad, responsabilidad_gerencial_causas_comunes, control_estadistico_proceso, capacidad_del_proceso, grafico_de_corrida_run_chart, sistema_responsabilidad_gerencial, mejora_del_sistema_responsabilidad_gerencial, adopcion_liderazgo, aim_of_leadership, eliminacion_firmas_redundantes, gestion_miedo_reportes, graficos_control_individuales_operarios, importancia_de_la_capacitacion, mal_uso_histograma_vs_carta_control, mejora_continua_del_proceso, muestreo_con_seguimiento_no_respondientes, sistema_responsabilidad_gerencial_2
+
+==============================================================================
+UNIDAD 49 | dominio quality | paso 4
+PAR: equipo_conjunto_de_mejora_con_proveedores -> fijacion_de_metas
+TEXTO DEL PASO (del fichero del filtro): Fijar metas conjuntas de mejora (ej. reducción de costos en X%)
+------------------------------------------------------------------------------
+MADRE
+  ID: equipo_conjunto_de_mejora_con_proveedores
+  TITULO: Equipo Conjunto Comprador-Proveedor para Mejora de Cadena de Suministro
+  DOMINIO: quality
+  RESUMEN: Enfoque de cinco niveles progresivos para la mejora de la cadena de suministro: crear un equipo conjunto para alinear metas y trabajar en problemas crónicos, enfocarse en reducción de costos, evaluar el valor agregado de cada eslabón, intercambiar información rutinariamente, y finalmente operar la cadena como un proceso único colaborativo. Requiere liderazgo de la alta gerencia en ambas organizaciones.
+  PASOS:
+    1. Formar un equipo multifuncional con representantes del comprador y del proveedor
+    2. Alinear objetivos y analizar el proceso de negocio de la cadena de suministro
+    3. Establecer la 'prueba de la necesidad' con datos concretos (ej. costos de garantía)
+    4. Fijar metas conjuntas de mejora (ej. reducción de costos en X%)
+    5. Proveer entrenamiento y asistencia técnica al proveedor
+    6. Realizar reuniones de seguimiento entre equipos directivos de ambas partes
+    7. Establecer reconocimientos para proveedores destacados
+  ENTREGABLE: Plan de mejora conjunta documentado con metas, roles y mecanismos de seguimiento entre comprador y proveedor
+  PREVIOS: analisis_pareto_de_proveedores, punto_equilibrio_calidad, punto_equilibrio_calidad_inspeccion, regla_todo_o_nada_inspeccion_2, colaboracion_transporte_ctm, logistica_inversa_retornos, metricas_desempeno_cadena_suministro, marco_analisis_mercado_cadena_suministro
+  SIGUIENTES: planificacion_de_la_inspeccion, seleccion_hacer_o_comprar
+------------------------------------------------------------------------------
+HIJO
+  ID: fijacion_de_metas
+  TITULO: Fijar metas de mejora (Paso 10)
+  DOMINIO: quality
+  RESUMEN: Después del Día Cero Defectos (Día ZD), tienes que convertir los compromisos verbales en acciones concretas: pon metas de mejora específicas y medibles, y mejor si las define quien hace el trabajo, no tú desde arriba. Evita metas de cronograma y enfócate en reducir defectos, porque la mejora en los tiempos llega sola cuando bajan los errores.
+  PASOS:
+    1. Una semana después del Día ZD, pide a cada grupo que proponga dos metas específicas y medibles. Fíjalas a 30, 60 y 90 días
+    2. Asegúrate de que las metas sean retadoras, no fáciles de alcanzar.
+    3. Publica las metas en un lugar visible para todo el equipo.
+    4. Reconoce públicamente a los grupos que logran mejoras (por ejemplo, bordes dorados en las pizarras o un lugar de estacionamiento preferencial).
+    5. Usa medidas de corto plazo (por ejemplo, horas sin defectos) en lugar de métricas mensuales, para mantener el enfoque diario.
+  ENTREGABLE: Lista de metas de mejora específicas, medibles y publicadas por cada equipo o área de trabajo.
+  PREVIOS: dia_cero_defectos, dia_cero_defectos_3
+  SIGUIENTES: eliminacion_causas_error, eliminacion_causas_error_4, reconocimiento_al_desempeno, brainstorming
+
+==============================================================================
+UNIDAD 52 | dominio core | paso 2
+PAR: emprendedor_como_puesto_de_trabajo -> contabilidad_innovacion_pivote
+TEXTO DEL PASO (del fichero del filtro): Evalúa ese trabajo con la contabilidad de innovación, no con las métricas tradicionales de un puesto operativo.
+------------------------------------------------------------------------------
+MADRE
+  ID: emprendedor_como_puesto_de_trabajo
+  TITULO: El Emprendedor como Título de Trabajo Formal
+  DOMINIO: core
+  RESUMEN: Si quieres retener a las personas más innovadoras que trabajan contigo, el emprendimiento dentro de tu negocio tiene que ser un camino profesional real, no un paso pasajero antes de volver a un puesto tradicional. Si lideras con la metodología Lean Startup, mide ese trabajo con la contabilidad de innovación, no con métricas de rendimiento comunes, y dale a esa persona el título formal de Emprendedor, para que pueda seguir incubando ideas nuevas después de lograr que un producto crezca con éxito.
+  PASOS:
+    1. Crea un puesto real de Emprendedor Interno dentro de tu equipo o negocio.
+    2. Evalúa ese trabajo con la contabilidad de innovación, no con las métricas tradicionales de un puesto operativo.
+    3. Cuando el producto haya crecido con éxito, deja que esa persona entrene a un nuevo equipo y vuelva a incubar una idea nueva.
+    4. Amplía poco a poco el espacio de experimentación (sandbox) a medida que el equipo demuestre resultados, en lugar de sacarlo de golpe.
+  ENTREGABLE: Una manera clara de reconocer el rol de emprendedor dentro de tu negocio, con su propia forma de medir resultados y su propio camino de crecimiento.
+  PREVIOS: sandbox_de_innovacion, gestion_de_las_cuatro_fases_del_negocio, afinar_motor_crecimiento
+  SIGUIENTES: paradoja_exito_emprendedor, background_startup_vs_corporativo, navegacion_politica_organizacional
+------------------------------------------------------------------------------
+HIJO
+  ID: contabilidad_innovacion_pivote
+  TITULO: Contabilidad de Innovación aplicada a Pivotes
+  DOMINIO: core
+  RESUMEN: El 95% del trabajo real en una startup no es la idea inicial sino el trabajo diario medido por la contabilidad de innovación: decisiones de priorización de producto, elección de clientes, y someter la visión a pruebas constantes. Esta disciplina permite tomar decisiones informadas sobre pivotar o perseverar en lugar de basarse en historias mitificadas del éxito.
+  PASOS:
+    1. Documentar de forma explícita las hipótesis de salto de fe (leaps of faith) al inicio del proyecto
+    2. Medir métricas accionables (registro, activación, retención, referencia) en cada iteración
+    3. Comparar resultados actuales contra predicciones cuantitativas hechas previamente
+    4. Evitar declarar éxito retroactivamente basándose en métricas de vanidad
+  ENTREGABLE: Un reporte de métricas accionables con predicciones cuantitativas explícitas por cada hipótesis de salto de fe
+  PREVIOS: producto_minimo_viable, metricas_accionables, tipos_de_pivote, catalogo_pivotes
+  SIGUIENTES: pivotar_o_perseverar, reunion_pivotar_o_perseverar, search_for_business_model
+

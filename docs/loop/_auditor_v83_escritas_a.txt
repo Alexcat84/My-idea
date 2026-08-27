@@ -1,0 +1,139 @@
+==============================================================================
+UNIDAD 34 | dominio quality | paso 4
+PAR: estructura_organizacional_funcional_proceso -> equipos_autodirigidos_servicio
+TEXTO DEL PASO (del fichero del filtro): Considerar la incorporación de equipos autodirigidos y roles de 'coach' para supervisores
+------------------------------------------------------------------------------
+MADRE
+  ID: estructura_organizacional_funcional_proceso
+  TITULO: Estructuras Organizacionales: Funcional, por Proceso y Matricial
+  DOMINIO: quality
+  RESUMEN: Existen tres tipos básicos de organización para gestionar el trabajo: organización funcional (departamentos por especialidad, con eficiencia interna pero barreras entre áreas), organización por procesos (responsabilidad asignada a un dueño de proceso, con enfoque en cliente pero riesgo de diluir expertise funcional) y organización matricial (híbrido que combina ambos enfoques, requiriendo acuerdos negociados entre gerentes funcionales y dueños de procesos). Un enfoque emergente es la organización en red y los sistemas sociotécnicos (STS), que integran el sistema técnico y el social.
+  PASOS:
+    1. Evaluar ventajas y desventajas de la estructura funcional actual (eficiencia vs. silos)
+    2. Determinar si los procesos cross-funcionales requieren un dueño de proceso dedicado
+    3. Diseñar mecanismos matriciales de resolución de conflictos entre gerentes funcionales y dueños de proceso
+    4. Considerar la incorporación de equipos autodirigidos y roles de 'coach' para supervisores
+    5. Evaluar el nivel de involucramiento de empleados en equipos permanentes y ad hoc
+  ENTREGABLE: Diagrama de estructura organizacional seleccionada (funcional, por proceso o matricial) con roles, líneas de reporte y mecanismos de resolución de conflictos definidos
+  PREVIOS: practicas_gerenciales_no_delegables
+  SIGUIENTES: equipos_autodirigidos_servicio
+------------------------------------------------------------------------------
+HIJO
+  ID: equipos_autodirigidos_servicio
+  TITULO: Equipos Autodirigidos en Servicios
+  DOMINIO: quality
+  RESUMEN: Los equipos semiautónomos o autodirigidos son grupos de trabajo (10-12 personas) que gestionan colectivamente actividades de servicio al cliente, calidad, inventario, horarios y reportes. Ejemplos incluyen American Express, Taco Bell y Ritz-Carlton, donde los equipos comparten responsabilidad por objetivos de desempeño y el líder actúa como coach en vez de supervisor tradicional.
+  PASOS:
+    1. Definir el alcance de responsabilidades del equipo alineado con el contacto con el cliente
+    2. Entrenar a los miembros en roles múltiples (calidad, inventario, atención)
+    3. Proveer información operativa y financiera en tiempo real al equipo
+    4. Establecer al líder como coach, no como supervisor de control
+  ENTREGABLE: Estructura de equipo autodirigido con roles definidos y sistema de información compartida
+  PREVIOS: normas_culturales_calidad, estructura_organizacional_funcional_proceso
+  SIGUIENTES: six_sigma_dmaic
+
+==============================================================================
+UNIDAD 35 | dominio quality | paso 3
+PAR: consejo_de_calidad_y_rol_del_director -> metas_negocio_calidad
+TEXTO DEL PASO (del fichero del filtro): Integra las metas de calidad en tus planes de negocio y de desempeño
+------------------------------------------------------------------------------
+MADRE
+  ID: consejo_de_calidad_y_rol_del_director
+  TITULO: Consejo de Calidad y Rol del Director de Calidad
+  DOMINIO: quality
+  RESUMEN: El consejo de calidad es la instancia responsable de establecer visión, misión, valores y metas de calidad, revisar el progreso, integrar los objetivos de calidad en los planes de tu negocio y quitar los obstáculos del camino. Si tienes a alguien que lidera el tema calidad, esa persona cumple un doble rol: llevar el día a día de calidad y ayudarte a manejar la calidad como parte de la estrategia del negocio, así como quien lleva las finanzas te ayuda a decidir con los números.
+  PASOS:
+    1. Forma un consejo de calidad con las personas que toman las decisiones importantes en tu negocio
+    2. Define y comunica visión, misión, valores compartidos y tu política de calidad
+    3. Integra las metas de calidad en tus planes de negocio y de desempeño
+    4. Designa responsables para los proyectos clave de calidad
+    5. Revisa el progreso con frecuencia y elimina los obstáculos que encuentres
+  ENTREGABLE: Un documento simple con los roles, responsabilidades y calendario de revisiones de tu consejo de calidad
+  PREVIOS: comunicar_politicas_organizacionales
+  SIGUIENTES: transferencia_de_actividades_a_departamentos_de_linea, rol_tactico_estrategico_oficina, metas_negocio_calidad
+------------------------------------------------------------------------------
+HIJO
+  ID: metas_negocio_calidad
+  TITULO: Metas de Calidad en el Plan de Negocio
+  DOMINIO: quality
+  RESUMEN: Las organizaciones líderes incorporan metas de calidad cuantificadas y con plazo definido dentro de su plan de negocio estratégico (ej. reducir el costo de mala calidad en 50% en 5 años). Esto traduce amenazas y oportunidades organizacionales en objetivos concretos y medibles que guían la asignación de recursos.
+  PASOS:
+    1. Identificar amenazas y oportunidades estratégicas relacionadas con calidad
+    2. Traducir estas amenazas/oportunidades en metas cuantificadas con plazo definido
+    3. Incorporar estas metas formalmente en el plan de negocio de la organización
+  ENTREGABLE: Sección de metas de calidad incluida en el plan de negocio estratégico, con cifras y plazos concretos
+  PREVIOS: consejo_de_calidad, modelo_shingo_evaluacion_excelencia, presentaciones_alta_direccion, aprobacion_alta_direccion, consejo_de_calidad_y_rol_del_director
+  SIGUIENTES: despliegue_metas
+
+==============================================================================
+UNIDAD 37 | dominio quality | paso 5
+PAR: lean_manufacturing_tps -> sistema_pull_push
+TEXTO DEL PASO (del fichero del filtro): Establecer sistemas pull mediante kanban para sincronizar la producción con la demanda
+------------------------------------------------------------------------------
+MADRE
+  ID: lean_manufacturing_tps
+  TITULO: Lean Manufacturing y Toyota Production System (TPS)
+  DOMINIO: quality
+  RESUMEN: Lean es un conjunto de herramientas del TPS orientadas a identificar y eliminar sistemáticamente el desperdicio (muda), mejorar la calidad y reducir tiempos y costos de producción. Complementariamente, se enfoca en mejorar el flujo de trabajo (eliminando mura, la irregularidad) mediante técnicas como nivelación de producción, producción pull (kanban) y el Heijunka box. El objetivo es entregar lo correcto, en el lugar correcto, en el momento correcto y en la cantidad correcta, minimizando desperdicio y maximizando flexibilidad.
+  PASOS:
+    1. Identificar los tipos de desperdicio (muda) presentes en los procesos productivos
+    2. Implementar kaizen (mejora continua) como práctica constante
+    3. Aplicar 6S para mantener un lugar de trabajo limpio y organizado
+    4. Introducir poka-yoke (a prueba de errores) en puntos críticos del proceso
+    5. Establecer sistemas pull mediante kanban para sincronizar la producción con la demanda
+    6. Usar el Heijunka box para nivelar y suavizar el flujo de producción
+  ENTREGABLE: Mapa de flujo de valor con desperdicios identificados y plan de implementación de herramientas Lean (kaizen, 6S, poka-yoke, kanban)
+  PREVIOS: mantenimiento_productivo_total
+  SIGUIENTES: shingo_enterprise_excellence_model, shingo_prize, poka_yoke_a_prueba_de_errores, sistema_pull_push
+------------------------------------------------------------------------------
+HIJO
+  ID: sistema_pull_push
+  TITULO: Sistemas Pull versus Push en Producción
+  DOMINIO: quality
+  RESUMEN: Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basandose en pronosticos de demanda, ignorando las restricciones reales de tu proceso y generando inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza segun su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operacion. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la produccion segun consumo real, no segun pronostico.
+  PASOS:
+    1. Evaluar si tu operacion actual funciona bajo un esquema push o pull
+    2. Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso
+    3. Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente
+    4. Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor
+    5. Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad
+    6. Implementar el sistema y capacitar a los operadores
+  ENTREGABLE: Sistema de produccion rediseñado bajo logica pull con kanbans implementados y metricas de flujo mejoradas.
+  PREVIOS: mapeo_flujo_valor, tres_tipos_desperdicio_tps, constraint_management, inventory_analysis_lean, lean_manufacturing_tps
+  SIGUIENTES: eventos_kaizen_rie, constraint_management, smed_setup_reduction
+
+==============================================================================
+UNIDAD 41 | dominio health_safety | paso 3
+PAR: autorregulacion_seguridad -> participacion_trabajadores
+TEXTO DEL PASO (del fichero del filtro): Involucrar activamente a los trabajadores en el diseño e implementación de las medidas de seguridad
+------------------------------------------------------------------------------
+MADRE
+  ID: autorregulacion_seguridad
+  TITULO: Modelo de Autorregulación en Seguridad Laboral
+  DOMINIO: health_safety
+  RESUMEN: Cambio de paradigma legislativo desde reglas prescriptivas detalladas (Factories Act Model) hacia leyes basadas en objetivos de seguridad (HSW Act 1974), otorgando a las organizaciones libertad para determinar los medios con los que alcanzar los fines de seguridad exigidos. El Informe Robens identificó que el exceso de leyes fragmentadas condicionaba a las personas a pensar la seguridad como un asunto de reglas externas, y propuso fomentar la autorregulación mediante mejor organización de seguridad interna, iniciativa gerencial y participación de los trabajadores.
+  PASOS:
+    1. Revisar si la normativa aplicable es prescriptiva (medios) o basada en objetivos (resultados)
+    2. Diseñar un sistema interno de gestión de seguridad que defina cómo se alcanzarán los objetivos exigidos por ley
+    3. Involucrar activamente a los trabajadores en el diseño e implementación de las medidas de seguridad
+    4. Asegurar el compromiso gerencial en todos los niveles, no solo en la dirección
+  ENTREGABLE: Sistema de gestión de seguridad interno documentado que traduzca los objetivos legales de seguridad en procedimientos concretos y participativos
+  PREVIOS: autonomia_dependencia_regulatoria, enfoques_definicion_riesgo_aceptable, legislacion_especifica_vs_accidente_organizacional
+  SIGUIENTES: safety_case_evaluacion_formal, coshh_procedimiento_rolling, participacion_trabajadores
+------------------------------------------------------------------------------
+HIJO
+  ID: participacion_trabajadores
+  TITULO: Participación de los Trabajadores en el Programa de Seguridad
+  DOMINIO: health_safety
+  RESUMEN: Tus trabajadores, incluidos subcontratistas y temporales, conocen mejor que nadie los peligros de su propio trabajo. Por eso debes hacerlos participar activamente en todas las fases del programa: diseño, reporte, investigación de incidentes y evaluación de mejoras, sin que teman represalias. Elimina las barreras de idioma, habilidad, educación o miedo a represalias, y revisa que los incentivos que uses no terminen desalentando el reporte. Mantén canales de comunicación abiertos, da retroalimentación frecuente sobre lo que haces con cada reporte, y protege legalmente a quien reporta según la norma de tu país (en Estados Unidos, esto está amparado por la Sección 11(c) de la ley de salud y segu
+  PASOS:
+    1. Crea un proceso simple para que te reporten peligros, incidentes y casi accidentes, incluyendo la opción de hacerlo de forma anónima
+    2. Da retroalimentación frecuente sobre lo que haces con cada reporte que recibes
+    3. Comparte con tus trabajadores la información de seguridad, como las hojas de datos de seguridad (SDS), los datos de lesiones y las inspecciones
+    4. Involucra a tus trabajadores en el diseño de metas, análisis de peligros, inspecciones, capacitación y desarrollo de soluciones
+    5. Elimina barreras de idioma, habilidad, educación o miedo a represalias
+    6. Comunica con claridad las protecciones contra represalias que existen en tu país y revisa que tus incentivos no desalienten el reporte
+  ENTREGABLE: Un sistema de reporte funcionando, con evidencia de que tus trabajadores participan activamente en al menos dos fases del programa
+  PREVIOS: liderazgo_gerencial_seguridad, compromiso_gerencial_seguridad, escaleras_portatiles_seguridad, prevencion_violencia_laboral, programa_proteccion_respiratoria, programa_seguridad_salud_ocupacional, autorregulacion_seguridad
+  SIGUIENTES: identificacion_evaluacion_peligros, prevencion_control_peligros, educacion_entrenamiento_seguridad, identificacion_evaluacion_peligros_2, seguridad_soldadura_corte_bronceado, seguridad_trabajadores_jovenes, critica_behavior_based_safety, responsabilizacion_del_trabajador, preguntar_que_no_quien, capacitacion_educacion_seguridad, derecho_rechazo_trabajo_peligroso, programa_proteccion_denunciantes
+

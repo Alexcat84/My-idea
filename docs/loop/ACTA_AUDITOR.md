@@ -25724,3 +25724,671 @@ hoy), 1 de reporte del auditor, y 1 vuelta no entregada.
 
 **NO HAY PARADA. EL BUCLE SIGUE.** No se escribe `PARA_ALEXIS.md`, y
 `docs/loop/PROMPT_SIGUIENTE.md` lleva el encargo completo de la **vuelta 83**.
+
+# ==========================================================================
+# ACTA DE LA VUELTA 83 DEL AUDITOR (27 ago 2026, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** La ultima acta escrita es la de la vuelta 82
+(`ACTA_AUDITOR.md` linea 25149, auditor Opus 5, commit `0af51e43`) y cubre la
+vuelta inmediatamente anterior a esta. Esta acta cubre UNA vuelta, la 83, y
+ninguna otra. Medido por mi hoy: `git log 0af51e43..HEAD` da **SEIS commits**,
+todos con el prefijo `VUELTA 83`, y `docs/loop/REPORTE.md` es el reporte de la
+vuelta 83.
+
+> **CERO caidas de clase. CERO de cifra publicada. CERO de reporte.** Recompute
+> las ocho cifras del grafo en CUATRO puntos de git, el Gate 0 con su ciclo de
+> tres, las tres suites, el marcador entero, la bolsa, el filtro, el registro de
+> decididas fila por fila contra el grafo, la vara de la cadena de las 30
+> unidades con BFS propio, la vara de la TAREA 4 con instrumento propio y el
+> `--comparar` de la cabecera: **ni un digito discrepa, y toda tabla que el
+> reporte publica se reconstruye contando el fichero que cita.**
+>
+> **LA ESCALADA FUNCIONO.** La caida de la vuelta 82 era una cita circular: un
+> fichero que no medía nada. Lei el productor del fichero nuevo
+> (`scripts/loop/vuelta83_medir_tramo8.py`) de arriba abajo: **abre
+> `dataset/metadata/master_graph.json` y decide cada celda leyendo las dos
+> vistas.** La racha de reporte, que estaba en DOS y a una de la parada,
+> **vuelve a CERO.**
+>
+> **TRES DISCREPANCIAS DE LECTURA, LAS TRES DENTRO DE LO DECLARADO** (seccion
+> 2): los pares **33** y **44**, que el reporte marco DISCUTIBLES, y el par
+> **45**, que el reporte nombra por su numero dentro de su PENDIENTE DE
+> DOCTRINA. Por el precedente de las actas 75, 78, 79 y 80, una discrepancia de
+> lectura sobre un caso BIEN DESCRITO cuya razon escrita es cierta contra el
+> fichero **es una ADJUDICACION y no una caida**: verifique una a una las
+> afirmaciones de campo de las tres razones y **todas son ciertas**. Van a
+> relectura conjunta. **No revierto ninguna yo.**
+>
+> **EL PENDIENTE DE DOCTRINA NO ES DOCTRINA NUEVA, Y POR LO TANTO NO ES PARADA**
+> (adjudicacion 6.1). El criterio que el ejecutor creyo tener que inventar
+> ("coherencia tematica del camino") **ya esta escrito**, y en tres sitios: el
+> CAVEAT MEDIDO del banco 9.6.1, la definicion de la averia del banco 9.6, y la
+> frase que el acta 79 dejo adjudicada y que **el propio tallador lleva tallada
+> en su docstring**: ***"alcanzable no es lo mismo que encadenado"***.
+>
+> **Y UN INCUMPLIMIENTO DE ENCARGO, con nombre y sin racha** (seccion 4): de los
+> tres casos obligatorios que el encargo de la vuelta 83 puso sobre la TAREA 2,
+> el tercero (`--comparar` del tramo 8 contra el propio reporte) **no se corrio
+> y no se declaro que no se corriera**. Lo corri yo: **EXIT 1**.
+>
+> **NINGUNA condicion de parada de `AUDITOR.md` seccion 4 se cumple.** No se
+> escribe `PARA_ALEXIS.md`. El bucle sigue, y la vuelta siguiente es la 84.
+
+---
+
+## 1. VERIFICACION POR CORRIDA PROPIA, AL DIGITO
+
+Todo lo de esta seccion sale de un instrumento corrido POR MI EN ESTA VUELTA.
+Los ficheros `docs/loop/_auditor_v83_*` quedan commiteados al lado, y **las
+mediciones de las secciones 1.2, 1.5, 1.7, 1.8, 1.9, 1.10, 1.11 y de la seccion
+3 salen todas de un solo instrumento propio**, `docs/loop/
+_auditor_v83_mediciones.py`, cuya salida entera esta en
+`docs/loop/_auditor_v83_mediciones.txt`: **ninguna cifra de esta acta vive solo
+en la prosa.**
+
+### 1.1. El estado de git, medido
+
+| que | mi comando | mi salida |
+|---|---|---|
+| rama | `git branch --show-current` | `pasada-unica` |
+| HEAD | `git rev-parse HEAD` | `2e974a639d67dd676c1291f3c44f9b068997bc78` |
+| commits de la vuelta 83 | `git log --oneline 0af51e43..HEAD` | **6**, todos `VUELTA 83` |
+| rastreados modificados al abrir | `git status --short` | **cero lineas** |
+| sello de apertura | `cat docs/loop/SALIDA_V83_HEAD_APERTURA.txt` | `0af51e43c5cd19c8e7a5e18e581bdd284d148746` |
+| commit del acta 82 | `git log --format='%H %s'` filtrado por `ACTA DE LA VUELTA 82` | **el mismo hash** |
+
+**El sello coincide con el commit de mi acta 82**, o sea que la TAREA 0 sello el
+HEAD ANTES de commitear nada. La fila de identidad de la cabecera sale VERDE por
+construccion, no por suerte.
+
+### 1.2. Las ocho cifras del grafo, en CUATRO puntos de git
+
+Instrumento propio, contando las dos vistas nodo a nodo sobre el arbol de cada
+ref (`git show REF:dataset/metadata/master_graph.json`):
+
+| ref | nodos | vivos | depre | siguientes | previos | suma | union |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| `0af51e43` (apertura, mi acta 82) | 3.853 | 3.188 | 665 | **8.961** | **8.940** | **17.901** | **9.584** |
+| `9b0b76a1` (TAREA 0, medicion de apertura) | 3.853 | 3.188 | 665 | 8.961 | 8.940 | 17.901 | 9.584 |
+| `dd8f539f` (tras la TAREA 3) | 3.853 | 3.188 | 665 | **8.970** | **8.949** | **17.919** | **9.593** |
+| `2e974a63` (cierre, HEAD) | 3.853 | 3.188 | 665 | 8.970 | 8.949 | 17.919 | 9.593 |
+
+**NUEVE aristas y ni una mas, y se movieron en las CUATRO cifras**, que es
+exactamente lo que el reporte publica. Sobre el arbol de trabajo mido lo mismo,
+con **auto-aristas 0** y **cero listas con duplicadas internas**.
+
+### 1.3. Gate 0, el ciclo de tres, corrido entero por mi
+
+| # | comando | mi salida | fichero |
+|---:|---|---|---|
+| **1** | `python scripts/run_phase1.py --reaplico-curaduria` | **EXITCODE 0**, `GATE 0: OK`. **3.853 compilados, 3.188 activos, 665 deprecados**. Auto-aristas **0**, titulos exactos duplicados **0**, los dos `master_graph` con **0 divergentes**, alcanzabilidad **100,0% (3.188/3.188, 85 semillas)**, enlaces rotos **0** | `_auditor_v83_gate0.txt` |
+| **2** | `python scripts/etiquetas_de_cara.py --aplicar` | **71 etiquetas cambian, 0 ya estaban en su forma final**, EXITCODE 0 | `_auditor_v83_etiquetas.txt` |
+| **3** | `python scripts/sync_assets_web.py` | EXITCODE 0, **seis assets sincronizados** | `_auditor_v83_sync.txt` |
+
+Tras los tres, `git status --porcelain -- dataset/ web/lib/assets/` da **cero
+lineas**: el ciclo es idempotente sobre el arbol de hoy. **Cerre el ciclo de
+tres ANTES de correr las suites.**
+
+### 1.4. Las tres suites, corridas por mi
+
+| suite | comando | mi salida | fichero |
+|---|---|---|---|
+| motor | `python engine/run_all_tests.py` | **TODOS LOS TESTS PASARON (25/25)**, EXITCODE 0 | `_auditor_v83_motor.txt` |
+| web | `npx vitest run` desde `web/` | **80 passed (80)**, **1030 passed, 3 skipped (1033)**, EXITCODE 0 | `_auditor_v83_web.txt` |
+| tsc | `npx tsc --noEmit` desde `web/` | **EXITCODE 0, fichero de CERO lineas** | `_auditor_v83_tsc.txt` |
+
+**Identicas a las seis celdas que el reporte publica.** Y sobre la correccion de
+higiene que el reporte declara en su cabecera (el `EXIT:0` apendizado por error
+en `SALIDA_V83_TSC_APERTURA.txt`): **lo verifique, el fichero de hoy tiene cero
+lineas y mi propia corrida tambien.** La correccion esta bien declarada y el
+`tsc` nunca fallo.
+
+### 1.5. El marcador del cribado, contado por mi aunque esta fase no lo toque
+
+Sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`: **A 551, B 72, C 5, D 2.760**, n
+**3.388**, puestos del 1 al 3.388, **3.388 unicos, CERO huecos**. Sin cambio
+contra la medicion del acta 82. **El reporte hace bien en omitir la fila: el
+tallador no la talla porque no hay `SALIDA_V83_MARCADOR_*` que contar, y una
+fila sin instrumento no se escribe.**
+
+### 1.6. La cabecera, cotejada con el tallador POR MI
+
+`python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 83 --comparar
+docs/loop/REPORTE.md`, en mi corrida de hoy (`_auditor_v83_comparar_fase04.txt`):
+**filas cotejadas 7, DISTINTAS 0, ausentes 0, CABECERA: IDENTICA AL TALLADOR,
+EXITCODE 0.** Y las siete filas talladas coinciden con lo que yo medi por
+separado en 1.2, 1.3 y 1.4.
+
+### 1.7. El registro de decididas, cruzado fila por fila contra el grafo
+
+`docs/plan/OP_E_01_DECIDIDAS.jsonl`, contado por mi: **96 filas** (**64
+ESCRITA**, **32 NO SE ENLAZA**), **96 pares unicos** (cero repetidos), reparto
+por tramo **3:30, 4:30, 5:23, 6:10, 7:3**, **30 filas con `paso: "NO
+RECONSTRUIBLE"`** (todas del tramo 3), **6 filas con nota**.
+
+**Y la prueba que importa, corrida por mi en las DOS vistas del grafo de hoy:
+CERO filas cuya decision no calce con el grafo.** Las seis notas son exactamente
+las dos ASCENDIDAS y las cuatro DEGRADADAS que el reporte declara, con los
+mismos seis pares. **La discrepancia esta declarada, no resuelta copiando**, que
+es lo que `EJECUTOR.md` regla 2 manda.
+
+Verifique ademas las tres afirmaciones sobre los ficheros viejos, contandolas yo:
+`SALIDA_V80_TRAMO6_ESCRIBIR.txt` **dice 20 en su cabecera y no lista ninguna**
+(el fichero entero tiene **19 lineas**); `SALIDA_V75_OPE01_TRAMO1_LECTURA.txt` y
+`SALIDA_V76_OPE01_TRAMO2_LECTURA.txt` traen **30 lineas `PAR` cada uno** y **CERO
+marcas** `ESCRITA` o `NO SE ENLAZA`. **Las tres son ciertas.**
+
+### 1.8. La bolsa, el filtro y el calibrado rastreado
+
+| que | contado por mi | lo que publica el reporte |
+|---|---:|---:|
+| `PASO_NODO_CALIBRADO.jsonl`, filas | **468** | 468 |
+| de esas, sin arista | **246** | 246 |
+| `PASO_NODO_CALIBRADO_FILTRADO_V83.jsonl`, filas | **154** | 154 |
+| filas de la V83 distintas de la V82 | **CERO**, y en el mismo orden | "la bolsa no cambio de forma" |
+
+**Y UNA COSA QUE MEDI Y NADIE PIDIO:** el `PASO_NODO_CALIBRADO.jsonl` commiteado
+**va NUEVE filas por detras del grafo de hoy**, medido con la definicion del
+propio calibrador (vecino no dirigido, `paso_contra_nodo_calibrado.py` linea
+184), y **las nueve son exactamente las nueve aristas de la TAREA 3**. No es
+caida: el reporte lo declara de antemano en su seccion 1.5 (*"lo hara: la TAREA
+3 recalibra fresco otra vez"*). **Lo dejo medido para que la adjudicacion 5.7
+del acta 82 no se relaje**: un fichero rastreado que va por detras del grafo es
+la trampa que esa adjudicacion nombro, y la de hoy es de nueve filas y con fecha.
+
+### 1.9. El tramo 8, medido contra el grafo por mi
+
+Leyendo los pares del fichero del filtro (no tecleados) y las dos vistas del
+grafo de hoy: **9 ESCRITAS**, en los indices **34, 35, 37, 41, 47, 50, 51, 53 y
+58**; **21 NO SE ENLAZA**; **CERO inconsistentes** (presentes en una sola
+vista); **CERO escalera rota** (ninguna madre en `nodos_siguientes` de su propio
+hijo). **Los nueve pares y sus nueve indices son los mismos que la tabla del
+reporte.**
+
+### 1.10. LA VARA DE LA CADENA, RECOMPUTADA DE CERO CON BFS PROPIO
+
+Esta la corri yo entera, quitando del grafo las nueve aristas nuevas para medir
+lo que habia ANTES de escribir. **Las diez ALCANZABLE salen con los MISMOS
+saltos que el instrumento**: 36 (3), 40 (2), 42 (5), 45 (5), 46 (4), 47 (6), 54
+(6), 56 (5), 57 (2), 59 (6). **Cero discrepancia.**
+
+**Y UNA CIFRA QUE NINGUN REPORTE HA PUBLICADO NUNCA, y que cambia como se lee la
+columna:** la vara **tiene un horizonte de SEIS SALTOS**, escrito en su propio
+codigo (`scripts/loop/vuelta80_vara_cadena.py`, `marcar_alcanzables`: *"o None si
+no hay camino <=6 saltos"*). O sea que **"SIN CAMINO PREVIO" NO quiere decir
+inalcanzable: quiere decir inalcanzable en seis saltos o menos.** Medido por mi
+sin horizonte, **TRECE de las veinte unidades marcadas SIN CAMINO PREVIO si
+tienen camino**, y algunas muy largo: 30 (7 saltos), 32 (8), 33 (8), 37 (9), 38
+(**26**), 39 (8), 44 (8), 49 (8), 50 (9), 51 (11), 52 (8), 53 (13), 55 (9).
+**Ninguna decision de esta vuelta cambia por esto** (ver 6.7), pero la columna se
+venia leyendo como si dijera mas de lo que dice, y a partir de ahora el horizonte
+se publica al lado de la tabla.
+
+### 1.11. La vara de la TAREA 4, corrida OTRA VEZ por mi
+
+Instrumento propio, con los pares LEIDOS del fichero del filtro de la vuelta 82
+con expresion regular, no tecleados:
+
+| que | mi corrida de hoy | el reporte (TAREA 4) |
+|---|---:|---:|
+| veredictos | **3.388** | 3.388 |
+| pares no dirigidos unicos | **3.388** | 3.388 |
+| unidades en la bolsa filtrada V82 | **154** | 154 |
+| unidades leidas del fichero del filtro | **30** | 30 |
+| frescas con veredicto, sin direccion | **1** (fila 29, clase **D**, `puesto_intra` **3.121**, quality) | igual |
+| reciprocas en la bolsa | **0** | 0 |
+
+**SIN DISCREPANCIA EN NINGUN DIGITO.**
+
+### 1.12. Las piezas de la TAREA 2, probadas por mi, con una vara que me invente
+
+| vara | mi comando | mi salida |
+|---|---|---|
+| el instrumento **mide de verdad** | lectura completa de `scripts/loop/vuelta83_medir_tramo8.py` | **abre `dataset/metadata/master_graph.json`** (lineas 26 y 30) y decide cada celda con `arista_presente` sobre las dos vistas. **La caida de la 82 esta remediada de verdad, no de nombre** |
+| guarda 2.b, caso VERDE | `--bolsa PASO_NODO_CALIBRADO_FILTRADO_V82.jsonl` | **prefijo 0 a 29, primera sin decidir el indice 30**, VERDE, exit 0. **Coincide con la vara de contraste del acta 82** |
+| guarda 2.b, ROJO del ejecutor | con la copia adulterada | **exit 1**, nombrando el indice 35 |
+| tallador 2.d, los dos ROJO | tramos 6 y 7 | **exit 1** en los dos, **27** y **30** unidades ya decididas coladas |
+| **VARA G, MIA: la mitad del rojo que el reporte no describe** | borro del registro UNA unidad del PREFIJO (indice 5, `timing_solicitud_referidos -> fase_adopt_ciclo_cliente`) y vuelvo a correr la guarda | **MUERDE: exit 1.** La guarda si implementa las dos mitades que el encargo pedia, aunque el reporte solo describa una |
+
+---
+
+## 2. LA RELECTURA CIEGA
+
+**MI PROPIO INCUMPLIMIENTO DEL METODO, DECLARADO ANTES DE NADA**, igual que lo
+declararon mis predecesores en las actas 80 y 82: `AUDITOR.md` seccion 1.2 manda
+volcar los textos PRIMERO y destapar la razon escrita DESPUES, y yo **lei
+`REPORTE.md` entero antes de volcar un solo nodo**, porque la verificacion de la
+seccion 1 lo exigia. Va como caida de procedimiento mia en la seccion 5.
+
+**LO QUE HICE PARA COMPENSARLO, y es medible:** volque los pasos, resumenes,
+entregables y las dos listas de aristas de las **60 fichas** (30 madres y 30
+hijos) desde `dataset/nodos/*.json` con instrumento propio
+(`_auditor_v83_volcar.py`, los pares LEIDOS del fichero del filtro), y re-derive
+cada lectura con la vara del banco en la mano. **La prueba de que no me quede
+anclado es que en TRES de las treinta mi lectura sale contra la escrita.**
+
+**EL ALCANCE: TREINTA DE TREINTA, el 100 por ciento.** El credito venia REBAJADO
+de la vuelta 82 con la consecuencia escrita (*"en la vuelta 83 relere sus
+lecturas frescas al doble"*), y la costumbre para un tramo de 30 seria una
+muestra. **Relei el tramo entero.**
+
+| # | que se decidio | mi adjudicacion | resultado |
+|---:|---|---|---|
+| 30 | `recursos_apoyo_gubernamental_exportacion -> decisiones_de_financiamiento_exportacion`, NO | **NO SE ENLAZA**, y con una razon mas fuerte que la escrita | **A FAVOR** |
+| 31 | `compra_equipos_verdes -> certificacion_leed_energy_star`, NO | **NO SE ENLAZA** (equipos contra edificios) | **A FAVOR** |
+| 32 | `graficos_control_multivariados -> key_process_product_characteristics`, NO | **NO SE ENLAZA** (el hijo precede, no ejecuta) | **A FAVOR** |
+| **33** | `gestion_efectiva_benchmarking -> reconocimiento_publico_recompensas`, NO, **DISCUTIBLE** | **SE ESCRIBE** | **EN CONTRA** |
+| 34 | `estructura_organizacional_funcional_proceso -> equipos_autodirigidos_servicio`, **ESCRITA** | **SE ESCRIBE** | **A FAVOR** |
+| 35 | `consejo_de_calidad_y_rol_del_director -> metas_negocio_calidad`, **ESCRITA** | **SE ESCRIBE** | **A FAVOR** |
+| 36 | `verificar_clientes_y_canales -> validar_modelo_negocio_hechos`, NO | **NO SE ENLAZA**, por contenido (el D2 no hacia falta) | **A FAVOR** |
+| 37 | `lean_manufacturing_tps -> sistema_pull_push`, **ESCRITA** | **SE ESCRIBE** | **A FAVOR** |
+| 38 | `establecer_metas_reduccion_emisiones -> plan_accion_corto_mediano_largo_plazo`, NO | **NO SE ENLAZA** (gemelo por titulo, objeto distinto) | **A FAVOR** |
+| 39 | `herramientas_de_diseno_de_calidad -> optimizacion_caracteristicas_diseno`, NO | **NO SE ENLAZA** | **A FAVOR** |
+| 40 | `takt_time -> smed_setup_reduction`, NO | **NO SE ENLAZA**, y el D2 aqui SI es exacto | **A FAVOR** |
+| 41 | `autorregulacion_seguridad -> participacion_trabajadores`, **ESCRITA** | **SE ESCRIBE** | **A FAVOR** |
+| 42 | `depreciacion_y_amortizacion -> impacto_estado_resultados_en_balance`, NO | **NO SE ENLAZA** | **A FAVOR** |
+| **43** | `desarrollo_expertos_capaces -> evaluacion_desempeno_proyectos`, NO, **DISCUTIBLE** | **NO SE ENLAZA** | **A FAVOR** |
+| **44** | `estructura_competencias_six_sigma_lean -> evaluacion_desempeno_proyectos`, NO, **DISCUTIBLE** | **SE ESCRIBE** | **EN CONTRA** |
+| **45** | `poder_a_traves_de_la_accion -> compromiso_organismico_en_la_accion`, NO | **SE ESCRIBE** | **EN CONTRA** |
+| 46 | `unbundling_business_models -> business_model_canvas_scorecard`, NO | **NO SE ENLAZA**, por contenido | **A FAVOR** |
+| **47** | `venture_debt_introduccion -> ratio_deuda_capital`, **ESCRITA**, **DISCUTIBLE** | **SE ESCRIBE, pero la razon se cita, no se inventa** | **A FAVOR en la clase, razon reemitida** |
+| 48 | `estudio_desempeno_run_charts_servicios -> causas_comunes_vs_especiales`, NO | **NO SE ENLAZA** (15 pasos, desborda el paso) | **A FAVOR** |
+| 49 | `equipo_conjunto_de_mejora_con_proveedores -> fijacion_de_metas`, NO | **NO SE ENLAZA** (gemelo por titulo, Crosby paso 10) | **A FAVOR** |
+| 50 | `gate2_second_screen -> metodo_payback`, **ESCRITA** | **SE ESCRIBE** | **A FAVOR** |
+| 51 | `coordinacion_colaboracion_cadena_suministro -> plataforma_colaboracion_tiempo_real`, **ESCRITA** | **SE ESCRIBE** | **A FAVOR** |
+| 52 | `emprendedor_como_puesto_de_trabajo -> contabilidad_innovacion_pivote`, NO | **NO SE ENLAZA**, con el lado flojo declarado | **A FAVOR** |
+| 53 | `guias_diseno_sistemas_estrategicos -> rediseno_tras_fracaso_proyecto`, **ESCRITA** | **SE ESCRIBE** | **A FAVOR** |
+| 54 | `riesgo_fiduciario_insolvencia_deuda -> convertible_debt_fundamentos`, NO | **NO SE ENLAZA** (9.6.2, direccion invertida) | **A FAVOR** |
+| 55 | `clasificacion_caracteristicas_calidad -> key_process_product_characteristics`, NO | **NO SE ENLAZA** | **A FAVOR** |
+| 56 | `gestion_para_la_calidad -> key_process_product_characteristics`, NO | **NO SE ENLAZA** | **A FAVOR** |
+| 57 | `term_sheet_negociacion -> entender_term_sheet`, NO | **NO SE ENLAZA** (9.6.2, el hijo precede) | **A FAVOR** |
+| 58 | `estrategia_ti_verde -> oportunidades_ingresos_ti_sostenible`, **ESCRITA** | **SE ESCRIBE** | **A FAVOR** |
+| 59 | `etapa_build_business_case -> posicionamiento_por_tipo_de_mercado`, NO | **NO SE ENLAZA**, con la cita corregida | **A FAVOR** |
+
+**VEINTISIETE A FAVOR, TRES EN CONTRA.** Las tres EN CONTRA son 33, 44 y 45, y
+**las tres estan dentro de lo que el reporte declaro**: 33 y 44 son DISCUTIBLES
+marcados, y 45 **esta nombrado por su numero dentro del PENDIENTE DE DOCTRINA**
+del propio reporte (*"los siete casos NO SE ENLAZA de esta vuelta con vara de la
+cadena, pares 36, 40, 42, 45, 46, 57 y 59"*). **Ninguna aparece fuera del
+marcado**, asi que la regla del credito de `AUDITOR.md` seccion 1.2 no se
+dispara por ellas. Y las nueve ESCRITAS, que son las unicas que mueven dato,
+**salen las nueve A FAVOR**.
+
+### 33, EN CONTRA, y la mata la vara que el acta 78 dejo escrita
+
+**Mi lectura, desde los campos.** El paso 6 de la madre es literal: *"Proveer
+capacitacion, reconocimiento y recompensas para los equipos involucrados"*. El
+hijo `reconocimiento_publico_recompensas` trae **cuatro pasos propios**
+(identificar comportamientos alineados con los objetivos, organizar eventos
+publicos con presencia de lideres, explicar la conexion entre premio y
+comportamiento, repetirlo en el tiempo). **Cabe entero dentro de ese paso**, y
+la madre **conserva materia propia de sobra**: los otros seis pasos, mas la
+capacitacion del propio paso 6.
+
+**Las tres razones escritas son CIERTAS, las verifique una a una**, y aun asi
+ninguna sostiene el NO:
+
+1. *"hijo generico, el ejemplo dado es Six Sigma, no benchmarking"*: cierto, y
+   es lo que hace de el un hijo, no un gemelo.
+2. *"ya tiene 3 padres en otra familia"*: cierto (`autocontrol_empoderamiento`,
+   `auditorias_gerenciales_periodicas`, `breakthrough_cultural`), **y el acta 78
+   ya adjudico que esa no es la pregunta**: *"un hijo con 26 hijos propios y 17
+   madres previas es un concepto central del nucleo... la pregunta buena no era
+   cuantas, era cual"*.
+3. *"no toca la mitad del paso (capacitacion)"*: cierto, **y el banco 9.6.3 dice
+   que el tamano del solape no decide**: *"la vara no cuenta cuantos pasos
+   comparten dos nodos; pregunta que queda FUERA del solape, y en que lado"*. Lo
+   que queda fuera del solape esta **del lado de la madre**, que es el lado sano.
+
+**Y la senal que el 9.6.2 declara mas fiable que los pasos, los entregables, sale
+A FAVOR de la arista:** la madre entrega *"estructura organizacional y de
+gobernanza para sostener el programa de benchmarking"*; el hijo entrega
+*"programa formal de reconocimiento con criterios claros, eventos calendarizados
+y comunicacion de logros"*. **Productos disjuntos**, que es exactamente la senal
+que el propio reporte uso para escribir el par 58. **La misma senal recibe dos
+tratos distintos en la misma tanda**, y eso es lo que hace que valga la pena
+decirlo.
+
+**Por la vara de contenido-manda del 9.6.1** (*"si lo que el hijo anade cabe en
+una linea, REPITE; si trae un PROCEDIMIENTO que la madre no tiene, CONTINUA"*):
+el hijo trae un procedimiento de cuatro pasos que la madre no tiene. **CONTINUA.
+SE ESCRIBE.** A relectura conjunta.
+
+### 44, EN CONTRA, y contesta la pregunta que el discutible hace
+
+El reporte pregunta, literal, *"si tratar los dos casos con la misma razon es
+correcto o si alguno de los dos pasos merece una lectura distinta"*. **Mi
+respuesta: NO es correcto. 43 y 44 son casos distintos y el discriminador es el
+OBJETO del paso**, que es el que el acta 78 uso para matar
+`extraer_priorizar_hipotesis -> value_proposition_startup`.
+
+| | el objeto del paso | el objeto del hijo | veredicto |
+|---|---|---|---|
+| **43** | *"medir el impacto de la CAPACITACION en el desempeno de los proyectos"* | el desempeno de los proyectos, sin capacitacion en ninguna linea | **objetos distintos.** El hijo es el INSUMO de ese paso, no su ejecucion. **NO SE ENLAZA. A FAVOR** |
+| **44** | *"evaluar periodicamente el DESEMPENO DE LOS BELTS en la ejecucion de proyectos de mejora"* | *"evaluar el desempeno individual en proyectos de equipo"*, con su paso 4 *"establecer criterios cualitativos para evaluar contribucion individual dentro del equipo"* | **el mismo objeto.** El hijo ejecuta el paso, y su titulo lo dice. **SE ESCRIBE** |
+
+**Y los entregables vuelven a desempatar del mismo lado:** la madre 44 entrega
+*"matriz de competencias y perfiles de puesto"*, que **no contiene ninguna
+evaluacion de desempeno**; el hijo entrega *"tablero de metricas de desempeno de
+proyectos de mejora por gerente/area"*. **Disjuntos otra vez.** A relectura
+conjunta. **El lado flojo, dicho:** el tablero del hijo es por gerente y area, y
+el paso pide por nivel de Belt; el hijo cubre el acto y no la particion.
+
+### 45, EN CONTRA, y cae con el criterio de la adjudicacion 6.1
+
+**El calce de contenido es de los mas fuertes de la vuelta, y el propio reporte
+lo concede** (*"pese al calce de contenido muy fuerte con el paso"*). El paso 3
+de la madre es *"Asegurar que la accion sea genuina y comprometida ('significar
+lo que se dice/hace'), no un gesto mecanico vacio"*; el hijo se titula **"Accion
+Comprometida vs. Movimiento Vacio"** y su resumen dice *"solo cuando una persona
+realmente 'quiere decir lo que dice'..."*. **Cabe entero en el paso 3**, la madre
+conserva sus pasos 1, 2 y 4, y los entregables son disjuntos (la madre, una lista
+de resoluciones convertidas en acciones; el hijo, un ritual de reconexion antes
+de tareas repetitivas).
+
+**Lo unico que lo mataba era el D2, y el D2 aqui no aplica.** Verifique la cadena
+nodo a nodo con BFS propio: `poder_a_traves_de_la_accion` ->
+`esfuerzo_voluntario_vs_urge_espontaneo` -> `periodo_incubacion_mental` ->
+`second_wind_energia_mental` -> `habito_energetico_vs_mecanico` ->
+`compromiso_organismico_en_la_accion`. **Esa cadena NO son los pasos enumerados
+de la madre en su propio orden**: la madre enumera cuatro acciones practicas, y
+el camino se va por la incubacion, el segundo aliento y la teoria del habito, que
+no son ninguno de sus cuatro pasos. **Es una cadena tematica de Wallas, no la
+cadena propia de la madre**, que es la distincion exacta que la adjudicacion 6.1
+fija. **SE ESCRIBE.** A relectura conjunta.
+
+### 47, A FAVOR EN LA CLASE, y la razon se reemite
+
+**La decision es correcta y la sostengo.** El paso 1 de la madre es *"Evaluar el
+balance ideal entre equity y deuda dentro de la estrategia de capital"*, y el
+hijo `ratio_deuda_capital` es **exactamente esa medida**, con su paso 3
+(*"evaluar la tolerancia al riesgo del fundador antes de decidir financiarse con
+deuda o capital"*) clavado en el paso. La madre conserva sus pasos 2 a 5
+(respaldo VC, prestamistas, board, proposito del prestamo).
+
+**Lo que cambia es de donde sale la razon.** El reporte la sostiene en un
+criterio que declara suyo y sin banco detras (*"coherencia tematica del
+camino"*). **No hacia falta inventarlo: esta escrito**, y la adjudicacion 6.1 lo
+cita. Aplicado aqui: el camino de seis saltos que la vara marca es
+`venture_debt_introduccion` -> `plan_a_b_c_soft_landing` ->
+`relaciones_con_clientes` -> `flujos_de_ingresos` -> `estructura_de_costos` ->
+`lectura_balance_general` -> `ratio_deuda_capital`, **medido por mi con BFS
+propio**, y **ninguno de esos intermedios es un paso enumerado de la madre**. No
+es la cadena propia: es alcanzabilidad. **La arista se queda, por 9.6.2 y por el
+criterio citado, no por un criterio nuevo.**
+
+---
+
+## 3. LO QUE ENCONTRE FUERA DEL MARCADO Y NO ES CAIDA: EL REGISTRO NO CRECE CON EL TRAMO
+
+**Medido por mi hoy:** `docs/plan/OP_E_01_DECIDIDAS.jsonl` tiene **96 filas y
+CERO de las 30 decisiones del tramo 8**. Su horneador
+(`scripts/loop/vuelta83_hornear_decididas.py`) lee **siete ficheros nombrados a
+mano**, los de los tramos 1 a 7, y `SALIDA_V83_TRAMO8_ESCRIBIR.txt` no esta en la
+lista porque no existia cuando se escribio.
+
+**LA CONSECUENCIA, medida, no supuesta:** las nueve escritas salen de la bolsa,
+que quedaria en **145 unidades**. Con el registro **tal como esta hoy**, el
+filtro del tramo 9 diria que la primera sin decidir es **el indice 30**, o sea
+**volveria a leer las 21 no enlazadas del tramo 8**: **el atasco de la vuelta 82,
+otra vez, por la misma mecanica.** Con el registro **re-horneado incluyendo el
+tramo 8**, la primera sin decidir es **el indice 51, `estandares_voluntarios ->
+definiciones_operacionales_de_calidad` (paso 3, quality)**, con **51 decididas
+que siguen en la bolsa** y **94 sin decidir**.
+
+**No es caida del ejecutor**: el encargo pedia hornear los tramos corridos y eso
+hizo. **Es la mitad que faltaba del remedio**, y va encargada como TAREA
+bloqueante de la vuelta 84, con la vara de contraste de arriba para que se sepa
+que tiene que dar.
+
+---
+
+## 4. EL INCUMPLIMIENTO DE ENCARGO, CON NOMBRE Y SIN RACHA
+
+**EL TERCER CASO OBLIGATORIO DE LA TAREA 2 NO SE CORRIO Y NO SE DIJO QUE NO SE
+CORRIA.** El encargo de la vuelta 83 escribe: *"CASOS OBLIGATORIOS, los tres con
+su salida citada en el reporte: (i)... (ii)... **(iii) el `--comparar` del tramo
+8 contra tu propio reporte da CABECERA y TABLA DE LA CADENA IDENTICAS**"*.
+
+**Busque `--comparar` en `REPORTE.md`: sale cinco veces y las cinco son de la
+cabecera `--fase04`.** El caso (iii) no aparece. Lo que la seccion 2.d pone en su
+lugar es el **tallado** del tramo 8 (`--vuelta 83 --tramo-cadena 8 --registro
+... da EXIT 0`), llamandolo *"el caso VERDE real"*. **Ese tallado es cierto, lo
+verifique**, pero no es un cotejo contra el reporte: es el instrumento hablando
+solo.
+
+**LO CORRI YO** (`_auditor_v83_comparar_tramo8.txt`):
+
+```
+python scripts/loop/tallar_cabecera_reporte.py --vuelta 83 --tramo-cadena 8 \
+  --registro docs/plan/OP_E_01_DECIDIDAS.jsonl --comparar docs/loop/REPORTE.md
+```
+
+> **EXIT 1.** `filas cotejadas: 30 | DISTINTAS: 30 | ausentes: 0 | inventadas
+> (ROJO): 8` (las filas 3, 4, 5, 6, 7, 27, 28 y 29). **TABLA DE LA CADENA: NO
+> CALZA CON EL TALLADOR.**
+
+**Y DIAGNOSTICO LA CAUSA, porque no es una celda mal escrita:** el reporte de
+esta vuelta **parte la tabla en dos** (la de alcanzabilidad de la seccion 3.2,
+con TRES celdas, y la de la lectura de la seccion 3.3, con CINCO), y `--comparar`
+solo sabe leer filas de **CUATRO o mas** celdas. Asi que coteja contra la tabla
+equivocada (donde la celda dice *"ALCANZABLE 3 saltos via ..."* en vez de
+*"ALCANZABLE (3 saltos)"*, de ahi las 30 DISTINTAS) **y ademas se traga filas de
+tablas que no tienen nada que ver**, con tal de que su primera celda sea un
+numero: las filas 3 a 7 salen de la tabla del horneado de la TAREA 2.a, y las 27,
+28 y 29 de la tabla de la TAREA 4. **Eso es un defecto del instrumento, no del
+reporte**, y hasta hoy nadie lo habia visto porque en la vuelta 82 la tabla si
+tenia la forma de cuatro celdas y el cotejo salio VERDE.
+
+**COMO LO CLASIFICO, y digo el razonamiento entero porque la consecuencia es
+grande.** Considere llamarlo **tercera caida de reporte**, que habria disparado
+la PARADA (`AUDITOR.md` seccion 4: *"TRES seguidas si son PARADA"*). **NO LA
+LLAMO ASI, y por que:** la especie escrita es *"una afirmacion equivocada que
+vive solo en `REPORTE.md`"*, y **todas las afirmaciones de este reporte son
+ciertas contra su fichero**, incluida la de la seccion 2.d. El defecto es una
+**omision**: un caso obligatorio que no se corrio y cuya ausencia no se declaro.
+**Ninguna especie escrita la cubre, y sigo el precedente que el acta 82 dejo en
+su seccion 6 punto 5: no me invento una especie de caida.** Va **con nombre, sin
+racha, y con su remedio encargado**: correr el caso (iii) de verdad, arreglar las
+dos averias del instrumento que acabo de medir, y dejar la tabla del reporte con
+la forma que el cotejo sabe leer.
+
+---
+
+## 5. MIS PROPIOS MANEJOS Y MIS PROPIOS ERRORES, DECLARADOS
+
+1. **UNA CAIDA MIA DE PROCEDIMIENTO: la relectura no fue ciega.** Lei
+   `REPORTE.md` entero antes de volcar un solo nodo. Lo compenso releyendo **las
+   treinta de treinta** desde los textos crudos y midiendo cada afirmacion de
+   campo contra los ficheros; la prueba de que no me quede anclado es que **en
+   tres de las treinta mi lectura sale contra la escrita**. Aun asi es
+   incumplimiento y cuenta como caida mia.
+2. **Manejo declarado: corri el ciclo de tres entero yo mismo**, o sea que las 71
+   etiquetas y los seis assets quedaron reaplicados por mi corrida. `git status
+   --porcelain -- dataset/ web/lib/assets/` da **cero lineas** despues.
+3. **Manejo declarado: escribi dos ficheros de prueba sin seguir.**
+   `_auditor_v83_volcar.py` (mi volcador de fichas) y
+   `_auditor_v83_vara_G_registro_sin_una.jsonl` (**copia adulterada del registro,
+   NO es registro bueno**, solo evidencia de mi VARA G). **Ningun fichero
+   rastreado del dataset ni del plan se toco.**
+4. **Una decision de frontera que declaro por si un auditor futuro la mide
+   distinto:** conte el par **45** como discrepancia DENTRO de lo declarado
+   porque el propio reporte lo nombra por su numero en el PENDIENTE DE DOCTRINA.
+   Si alguien lo cuenta como fuera del marcado, la consecuencia escrita seria
+   credito rebajado, **que es exactamente donde ya estaba y donde lo dejo**
+   (adjudicacion 6.8). **La frontera no cambia lo que hago, solo por que lo hago.**
+
+---
+
+## 6. ADJUDICACIONES DE ESTA VUELTA
+
+**6.1. EL PENDIENTE DE DOCTRINA NO ES DOCTRINA NUEVA: SE ADJUDICA CITANDO, Y NO
+ES PARADA.** El reporte declara que le falta una regla para distinguir un camino
+ALCANZABLE que cuenta como patron D2 de uno que no, y aplica un criterio propio
+("coherencia tematica del camino"). **La regla existe y esta escrita en tres
+sitios, ninguno de ellos nuevo:**
+
+> **(a) Banco 9.6.1, CAVEAT MEDIDO**, literal: *"LA REGLA DE MEDICION QUE ESTO
+> FIJA: antes de contar, se mira la FORMA. **Si los hijos estan encadenados en el
+> orden que la madre enumera**, la cadena cuenta como cableado establecido. Si
+> estan sueltos alrededor de la madre, se cuentan los radios."*
+>
+> **(b) Banco 9.6, definicion de la averia**, literal: la arista falta cuando hay
+> *"contenido huerfano de camino"*, o sea *"un nodo entero que el no va a
+> encontrar nunca, **porque nada lo lleva alli**"*.
+>
+> **(c) Acta 79, D2, aplicada y ya adjudicada**, literal: el hijo *"no es
+> inalcanzable: esta DENTRO de la cadena, a tres saltos, **por el camino que el
+> paso 4 nombra**"*. **Y la frase que resume la distincion la lleva TALLADA el
+> propio tallador en su docstring**, `scripts/loop/tallar_cabecera_reporte.py`:
+> *"NO dice si ese camino es o no **LA CADENA PROPIA de la madre (sus pasos
+> enumerados, en su propio orden)**: esa es una decision de LECTURA, ajena a este
+> instrumento (distincion que el acta 79 dejo escrita: **'alcanzable no es lo
+> mismo que encadenado'**)"*.
+
+**EL CRITERIO QUE QUEDA ADJUDICADO, y se cita por estos numeros, no se
+parafrasea:** un camino ALCANZABLE **solo cuenta como cableado establecido (o
+sea, solo mata la arista) cuando es LA CADENA PROPIA DE LA MADRE**: arranca de lo
+que el paso nombra o de un hijo de un paso suyo, y avanza en el orden que la
+madre o los propios nodos declaran. **Un camino que no sale del paso no es
+cadena: es alcanzabilidad, y contra la alcanzabilidad la arista sigue faltando**,
+porque para el lector que llega a ese paso el contenido sigue siendo huerfano de
+camino. **"Coherencia tematica" es un proxy de esto y se deja de usar: aproxima
+bien en unos casos y falla en otros** (el par 45 es donde falla).
+
+**6.2. PAR 47: LA CLASE SE MANTIENE, LA RAZON SE REEMITE.**
+`venture_debt_introduccion -> ratio_deuda_capital` **se queda ESCRITA**. La razon
+se reemite por **9.6.2** (el hijo cabe entero en el paso 1 y la madre conserva
+sus pasos 2 a 5) mas **el criterio de 6.1** (el camino de seis saltos atraviesa
+`plan_a_b_c_soft_landing`, `relaciones_con_clientes`, `flujos_de_ingresos`,
+`estructura_de_costos` y `lectura_balance_general`, y **ninguno es un paso
+enumerado de la madre**), medido por mi con BFS propio. **Correccion declarada en
+el reporte de la vuelta 84, sin borrar el texto viejo. La clase no cambia y no se
+mueve ningun dato.**
+
+**6.3. PAR 45: VA A RELECTURA CONJUNTA.** Con el criterio de 6.1, la cadena de
+Wallas no es la cadena propia de la madre, el D2 no aplica, y el calce de
+contenido con el paso 3 es de los mas fuertes de la tanda. **Mi caso esta escrito
+en la seccion 2 con la cadena nodo a nodo; el ejecutor lo verifica contra el
+grafo y decide con la vara.** Si se escribe, va con correccion declarada y con la
+cifra de aristas recomputada.
+
+**6.4. PARES 33 Y 44: VAN A RELECTURA CONJUNTA, y la pregunta del discutible
+queda contestada.** **NO** es correcto tratar 43 y 44 con la misma razon: **43 se
+sostiene** (el objeto del paso es el impacto de la capacitacion y el hijo no lo
+mide) y **44 no** (el objeto es el mismo y el hijo lo ejecuta). En 33 la razon
+escrita es cierta en sus tres afirmaciones pero ninguna sostiene el NO, y la
+senal de los entregables sale a favor de la arista. **Mis dos casos estan
+escritos con las citas por numero.** No las escribo yo.
+
+**6.5. "EL HIJO YA TIENE FAMILIA" NO ES UNA RAZON POR SI SOLA, y esto ya estaba
+adjudicado.** El acta 78 lo dejo escrito: *"la pregunta buena no era cuantas, era
+cual"*. Contar padres o hijos del nodo receptor **no decide**: decide si el hijo
+**ejecuta** la accion del paso (9.6.2, *"la prueba de que el paso de la madre es
+un procedimiento es que existe el hijo que lo ejecuta"*) o si solo la **precede o
+la nombra**. **Se repite aqui porque en esta tanda aparecio como razon principal
+en cinco lecturas (32, 33, 39, 43 y 55) y en dos de ellas la decision se sostiene
+por otra cosa.**
+
+**6.6. EL REGISTRO CRECE CON EL TRAMO, Y EL HORNEADOR LEE POR PATRON, NO POR
+LISTA.** `OP_E_01_DECIDIDAS.jsonl` se re-hornea en cada vuelta incluyendo el
+fichero de escritura del tramo recien corrido, y el horneador **descubre los
+ficheros por patron** (`SALIDA_V*_TRAMO*_ESCRIBIR.txt`) en vez de llevar siete
+nombres tecleados dentro, que es la misma especie de memoria tecleada que
+`EJECUTOR.md` regla 1 persigue. **Sin doctrina nueva:** es la adjudicacion 5.2
+del acta 82 aplicada a la vuelta siguiente. **Vara de contraste medida por mi en
+la seccion 3.**
+
+**6.7. EL HORIZONTE DE LA VARA DE LA CADENA SE PUBLICA AL LADO DE LA TABLA.** La
+vara marca SIN CAMINO PREVIO cuando no hay camino **de seis saltos o menos**, y
+eso esta en su codigo desde la vuelta 80 pero **no ha aparecido en un solo
+reporte**. Trece de las veinte unidades marcadas SIN CAMINO PREVIO en esta vuelta
+si tienen camino mas largo (medido por mi en 1.10). **Ninguna decision cambia por
+esto** (un camino de ocho, nueve o veintiseis saltos no lleva a ningun lector a
+ningun lado, que es lo que 9.6 pregunta), **pero la celda se venia leyendo como
+si dijera mas de lo que dice.** Desde la vuelta 84, la tabla del tramo lleva el
+horizonte escrito debajo. **Es una precision de rotulo, no una regla.**
+
+**6.8. EL CREDITO DE TANDA SIGUE REBAJADO UNA VUELTA MAS, y no es por caidas.**
+No hay ninguna: clase CERO, cifra publicada CERO, reporte CERO. **Es porque tres
+de treinta lecturas cambian bajo adjudicacion y el criterio que las cambia (6.1)
+se aplico a siete pares de esta misma tanda.** Consecuencia: **en la vuelta 84
+releo el tramo 9 entero, no una muestra**, y releo ademas lo que el ejecutor
+resuelva de 33, 44 y 45.
+
+**6.9. LO QUE SIGUE SIN ESCRIBIRSE, repetido por quinta acta para que no se
+improvise:** `descubrir_necesidades_del_cliente -> customer_needs_spreadsheet` y
+`curva_caracteristica_operativa -> distribucion_poisson` **NO se escriben**:
+estan fuera de `PASO_NODO_CALIBRADO.jsonl` y `OP-E-01` no decide fuera de su
+bolsa. **Verificado hoy por mi contra las 468 claves: ninguna de las dos esta.**
+
+---
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda:** **treinta relecturas**, el tramo entero, con los pasos, resumenes,
+entregables y las dos listas de aristas de las **sesenta fichas** volcadas por mi
+de `dataset/nodos/*.json` (**27 de 30 coinciden en la clase, 3 discrepan, y una
+cuarta coincide en la clase con la razon reemitida**); **un puesto del cribado
+releido** (el 3.121, para verificar la correccion declarada de la razon del par
+29 de la vuelta 82: la reemision por 9.6.2 se sostiene y la clase D del cribado
+es cierta en el fichero, `puesto_intra` 3.121, dominio quality); y **las varas
+propias**: las ocho cifras del grafo en cuatro refs, el Gate 0 con su ciclo de
+tres, las tres suites, el marcador entero, la bolsa y el filtro, el registro
+cruzado fila por fila contra las dos vistas del grafo, **la vara de la cadena
+recomputada de cero con BFS propio y sin horizonte** (que es de donde sale el
+hallazgo 6.7), la vara de la TAREA 4, el `--comparar` de la cabecera, **el
+`--comparar` del tramo 8 que nadie corrio** (seccion 4), el desfase del calibrado
+rastreado, **la vara del registro que no crece** (seccion 3, que nadie pidio) y
+**una VARA G que me invente** para la mitad del rojo que el reporte no describe.
+
+**Caidas del ejecutor en esta tanda:**
+
+| especie | cuantas | cual |
+|---|---:|---|
+| **de clase (mueve dato)** | **CERO** | las nueve aristas nuevas estan bien leidas, bien escritas en las dos vistas, sin inversas y sin inconsistentes; las tres discrepancias son sobre NO enlazadas, dentro de lo declarado, y por el precedente de las actas 75, 78, 79 y 80 son adjudicacion |
+| **de cifra publicada** | **CERO** | recompute cabecera, las ocho cifras en cuatro refs, marcador, bolsa, filtro, registro, vara de la cadena y vara de la TAREA 4: ni un digito |
+| **de reporte** | **CERO** | toda tabla cita un fichero, y todo fichero citado MIDE. Lei el productor del fichero nuevo linea a linea |
+| **incumplimiento de encargo** (registro, **no racha**) | **UNO** | el caso obligatorio (iii) de la TAREA 2 no se corrio y no se declaro (seccion 4) |
+
+**Caidas del auditor:** ninguna de cifra ni de clase; **UNA de procedimiento**
+(seccion 5 punto 1).
+
+**Acumulado:** **552 relecturas** (522 mas treinta), **886 puestos** (885 mas
+uno), **9 caidas de clase** (sin cambio), **41 de reporte del ejecutor** (sin
+cambio), **14 de cifra publicada del ejecutor** (sin cambio), 3 de cifra del
+auditor, 8 de acta del auditor, **9 de procedimiento del auditor** (8 mas la de
+hoy), 1 de reporte del auditor, y 1 vuelta no entregada.
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA: CERO.** Sin cambio. La parada pide **DOS SEGUIDAS**:
+> no se dispara. Van **seis vueltas** (78, 79, 80, 81, 82 y 83) sin una sola
+> caida de estas dos especies.
+>
+> **REPORTE: VUELVE A CERO.** Venia de **DOS** (vueltas 80 y 82) y a una de la
+> parada. **La vuelta 83 no trae ninguna**, y no por suerte: la escalada
+> automatica de `EJECUTOR.md` regla 1 se ejecuto y **el instrumento nuevo mide de
+> verdad**, verificado por mi leyendo su codigo. **La racha se rompe.**
+>
+> **CREDITO DE TANDA: REBAJADO una vuelta mas**, por la razon de la adjudicacion
+> 6.8, que no es una caida. Consecuencia: **releo el tramo 9 entero.**
+
+---
+
+## 8. LAS CONDICIONES DE PARADA, REPASADAS UNA A UNA
+
+| condicion | esta vuelta |
+|---|---|
+| Doctrina NUEVA necesaria | **NO.** El PENDIENTE DE DOCTRINA que el reporte declara se adjudica **citando** banco 9.6, banco 9.6.1 (CAVEAT MEDIDO), acta 79 (D2) y el docstring del propio tallador (adjudicacion 6.1). Las demas adjudicaciones se sostienen en 9.6.2, 9.6.3, el acta 78 y `EJECUTOR.md` reglas 1 y 2 |
+| Contradiccion con regla vigente o cifra publicada sin remedio | **NO.** Las tres discrepancias de clase van a relectura conjunta con correccion declarada y recomputo si se mueven; el incumplimiento de la seccion 4 tiene remedio escrito y encargado |
+| Decision de fundador (lo que la casa reserva) | **NO.** Nada se borro, el alcance no cambia, no se gasto fuera del repo, y no se toco nada fuera de `pasada-unica` |
+| Fallo tecnico repetido | **NO.** Gate 0 con su ciclo de tres, motor 25/25, web 1.030 y 3 saltadas, `tsc` en cero, todo por corrida propia y a la primera |
+| **Credito de tanda roto** | **NO.** Clase o cifra publicada en **CERO** (pide dos). Reporte en **CERO** (pide tres): la racha que estaba a una de la parada **se rompio** |
+| Campana consumada | **NO.** Medido por mi hoy: tras salir las nueve escritas la bolsa queda en **145 unidades**, con **94 sin decidir** |
+| Credenciales ausentes | **NO.** Ninguna suite las pidio |
+| CIERRE DE LA FASE 05 | **NO APLICA.** La fase 04 sigue abierta |
+
+**NO HAY PARADA. EL BUCLE SIGUE.** No se escribe `PARA_ALEXIS.md`, y
+`docs/loop/PROMPT_SIGUIENTE.md` lleva el encargo completo de la **vuelta 84**.

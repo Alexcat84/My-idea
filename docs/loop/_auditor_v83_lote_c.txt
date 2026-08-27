@@ -1,0 +1,110 @@
+==============================================================================
+UNIDAD 53 | dominio core | paso 7
+PAR: guias_diseno_sistemas_estrategicos -> rediseno_tras_fracaso_proyecto
+TEXTO DEL PASO (del fichero del filtro): Si un proyecto anterior falló, cambiar sustancialmente el enfoque, no solo repetir el esfuerzo
+------------------------------------------------------------------------------
+MADRE
+  ID: guias_diseno_sistemas_estrategicos
+  TITULO: Siete Guías Estratégicas para el Diseño de Sistemas
+  DOMINIO: core
+  RESUMEN: Conjunto de siete criterios para evaluar y comparar diseños de sistemas antes de construirlos: (1) alinear con metas de negocio, (2) usar sistemas para cambiar el panorama competitivo, (3) aprovechar infraestructura existente, (4) usar la combinación más simple de tecnología y procesos, (5) estructurar el diseño con flexibilidad en la secuencia de desarrollo, (6) no exceder la capacidad de la organización, y (7) no repetir el mismo enfoque tras un fracaso previo. Un diseño que respeta las siete es el mejor; violar tres o más indica un diseño gravemente defectuoso.
+  PASOS:
+    1. Verificar que el diseño esté alineado con las metas y métricas de desempeño del negocio (guía obligatoria, no violable)
+    2. Evaluar si el sistema puede generar una ventaja competitiva difícil de copiar
+    3. Revisar qué infraestructura existente puede reutilizarse en vez de reemplazarse
+    4. Simplificar la combinación tecnología-proceso para maximizar probabilidad de éxito
+    5. Diseñar componentes que puedan desarrollarse en paralelo e independientemente
+    6. Contrastar la complejidad del sistema contra la capacidad real de la organización
+    7. Si un proyecto anterior falló, cambiar sustancialmente el enfoque, no solo repetir el esfuerzo
+    8. Haz una lista de todo lo que tu sistema tiene que lograr
+    9. Busca una sola combinación de tecnología o proceso que te sirva para varios de esos objetivos a la vez
+    10. Evita armar una solución distinta para cada objetivo por separado
+    11. Antes de decidir, evalúa el riesgo y el costo de cada combinación que estás considerando
+  ENTREGABLE: Checklist de evaluación de diseño de sistema con cumplimiento verificado de las siete guías
+  PREVIOS: diseno_conceptual_sistema
+  SIGUIENTES: revision_diseno, complejidad_acorde_capacidad_organizacional, rediseno_tras_fracaso_proyecto
+------------------------------------------------------------------------------
+HIJO
+  ID: rediseno_tras_fracaso_proyecto
+  TITULO: No Repetir el Mismo Enfoque tras un Fracaso de Proyecto
+  DOMINIO: core
+  RESUMEN: Después de que un proyecto ha fallado, simplemente reforzar el esfuerzo o intentarlo con más ganas no es suficiente. El equipo está desmoralizado y requiere un enfoque nuevo que refleje claramente lo aprendido del fracaso anterior, ofreciendo una mejor vía hacia la meta de negocio.
+  PASOS:
+    1. Realizar un análisis post-mortem detallado del proyecto fallido
+    2. Identificar causas raíz específicas, no solo síntomas
+    3. Rediseñar la organización del proyecto y/o el diseño del sistema con cambios sustanciales
+    4. Comunicar al equipo claramente qué se hará diferente esta vez
+  ENTREGABLE: Informe de lecciones aprendidas y nuevo plan de proyecto con cambios estructurales documentados
+  PREVIOS: inhibidores_del_breakthrough, guias_diseno_sistemas_estrategicos
+  SIGUIENTES: definicion_objetivos_proyecto_sistema
+
+==============================================================================
+UNIDAD 58 | dominio environmental | paso 5
+PAR: estrategia_ti_verde -> oportunidades_ingresos_ti_sostenible
+TEXTO DEL PASO (del fichero del filtro): Explorar oportunidades de ingresos mediante software de sostenibilidad y analítica
+------------------------------------------------------------------------------
+MADRE
+  ID: estrategia_ti_verde
+  TITULO: Estrategia de TI Verde (Green IT)
+  DOMINIO: environmental
+  RESUMEN: El rol del CIO y profesionales de TI es fundamental para impulsar la ventaja eco-competitiva de las empresas. Las iniciativas de eficiencia energética en TI (virtualización, actualización de equipos, reutilización de calor residual, reducción de e-waste) generan ahorros significativos, mientras la presión regulatoria y de emisiones GEI relacionadas con TI crece, y surgen oportunidades de negocio mediante software de sostenibilidad y análisis.
+  PASOS:
+    1. Evaluar oportunidades de virtualización para optimizar utilización de servidores
+    2. Implementar sistemas de recuperación de calor residual de centros de datos
+    3. Establecer programa de reciclaje de e-waste con proveedores certificados
+    4. Reducir empaques y consolidar envíos de equipos con proveedores
+    5. Explorar oportunidades de ingresos mediante software de sostenibilidad y analítica
+  ENTREGABLE: Plan de estrategia de TI verde con objetivos de reducción de costos energéticos y huella de carbono
+  PREVIOS: arrendamiento_verde
+  SIGUIENTES: virtualizacion_servidores, oportunidades_ingresos_ti_sostenible
+------------------------------------------------------------------------------
+HIJO
+  ID: oportunidades_ingresos_ti_sostenible
+  TITULO: Oportunidades de Ingresos mediante Soluciones de TI Sostenibles
+  DOMINIO: environmental
+  RESUMEN: Más allá de reducir costos internos, las empresas pueden generar nuevas fuentes de ingreso ofreciendo soluciones tecnológicas que resuelven problemas de sostenibilidad para otras organizaciones, ciudades o industrias. Ejemplos incluyen 'agricultura digital' con GPS y sensores, y proyectos como 'Smarter Planet' de IBM que crean ecosistemas inteligentes para gestión de tráfico, energía y recursos urbanos.
+  PASOS:
+    1. Identificar capacidades tecnológicas internas que podrían convertirse en productos o servicios de sostenibilidad para terceros.
+    2. Explorar alianzas con gobiernos o ciudades para proyectos de eficiencia basados en sensores y datos.
+    3. Desarrollar un caso de negocio para nuevas líneas de ingreso basadas en soluciones de sostenibilidad tecnológica.
+    4. Pilotar la solución en un mercado o cliente reducido antes de escalar.
+  ENTREGABLE: Propuesta de nuevo producto o servicio de TI orientado a sostenibilidad con proyección de ingresos.
+  PREVIOS: compromiso_cliente_sostenibilidad, ti_para_desempeno_ecologico, estrategia_ti_verde
+  SIGUIENTES: diseno_para_el_medio_ambiente
+
+==============================================================================
+UNIDAD 33 | dominio quality | paso 6
+PAR: gestion_efectiva_benchmarking -> reconocimiento_publico_recompensas
+TEXTO DEL PASO (del fichero del filtro): Proveer capacitación, reconocimiento y recompensas para los equipos involucrados
+------------------------------------------------------------------------------
+MADRE
+  ID: gestion_efectiva_benchmarking
+  TITULO: Gestión Efectiva de Iniciativas de Benchmarking
+  DOMINIO: quality
+  RESUMEN: Para que una iniciativa de benchmarking tenga éxito, debe gestionarse con un equipo dedicado liderado por un dueño de proyecto (project owner), mientras la alta gerencia cumple roles clave: fijar metas de benchmarking, integrar el benchmarking al plan estratégico, actuar como modelo a seguir, establecer el entorno para el cambio, crear la infraestructura necesaria (capacitación, reconocimiento) y monitorear el progreso. Es esencial que el bajo desempeño identificado no sea castigado, ya que el benchmarking no debe usarse como herramienta de evaluación de personal.
+  PASOS:
+    1. Establecer un equipo de benchmarking multidisciplinario con un project owner al frente
+    2. Definir y documentar una política de benchmarking con metas claras
+    3. Integrar los hallazgos del benchmarking en el plan estratégico organizacional
+    4. Asegurar que la alta gerencia actúe como modelo, removiendo obstáculos y comprometiendo recursos
+    5. Crear un entorno de cambio que acepte y actúe sobre los hallazgos del benchmarking
+    6. Proveer capacitación, reconocimiento y recompensas para los equipos involucrados
+    7. Monitorear el progreso continuamente y evitar sancionar el bajo desempeño detectado
+  ENTREGABLE: Estructura organizacional y de gobernanza establecida para sostener el programa de benchmarking en el tiempo
+  PREVIOS: aspectos_legales_eticos_benchmarking, tipos_benchmarking_por_participante
+  SIGUIENTES: recoleccion_validacion_datos_benchmarking, benchmarking_estrategia, caso_estudio_benchmarking_terminal, monitoreo_continuo_benchmarking
+------------------------------------------------------------------------------
+HIJO
+  ID: reconocimiento_publico_recompensas
+  TITULO: Reconocimiento Público y Recompensas
+  DOMINIO: quality
+  RESUMEN: Estrategia de liderazgo para consolidar nuevos comportamientos deseados mediante recompensas y reconocimientos otorgados públicamente, con ceremonia, en presencia de las personas cuyo comportamiento se busca influenciar, y explicando claramente la conexión entre el premio y el comportamiento específico deseado. Ejemplo típico: asambleas para reconocer equipos de proyectos Six Sigma completados.
+  PASOS:
+    1. Identificar comportamientos o logros específicos alineados con los objetivos estratégicos
+    2. Organizar eventos públicos de reconocimiento con presencia de líderes
+    3. Explicar explícitamente la conexión entre el premio y el comportamiento deseado
+    4. Repetir el reconocimiento de forma consistente en el tiempo para reforzar la cultura deseada
+  ENTREGABLE: Programa formal de reconocimiento con criterios claros, eventos calendarizados y comunicación de logros vinculados a comportamientos deseados
+  PREVIOS: autocontrol_empoderamiento, auditorias_gerenciales_periodicas, breakthrough_cultural
+  SIGUIENTES: practicas_gerenciales_no_delegables
+

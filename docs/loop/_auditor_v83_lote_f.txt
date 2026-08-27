@@ -1,0 +1,105 @@
+==============================================================================
+UNIDAD 36 | dominio core | paso 6
+PAR: verificar_clientes_y_canales -> validar_modelo_negocio_hechos
+TEXTO DEL PASO (del fichero del filtro): Actualizar el modelo de negocio con los costos de adquisición reales descubiertos
+------------------------------------------------------------------------------
+MADRE
+  ID: verificar_clientes_y_canales
+  TITULO: Verificar Quiénes Son los Clientes y Cómo Alcanzarlos
+  DOMINIO: core
+  RESUMEN: No basta con saber que existen clientes interesados: hay que confirmar que se les puede identificar, encontrar y vender de forma rentable. Esto implica dibujar arquetipos de cliente para cada segmento clave, construir un 'día en la vida' del cliente antes y después del producto, mapear el canal completo desde la empresa hasta el usuario final con sus costos y roles en cada paso, y medir el costo real -todo incluido- de adquirir o activar un grupo de clientes, para saber si los programas de adquisición son rentables y si escalan de forma lineal.
+  PASOS:
+    1. Dibujar un arquetipo de cliente para cada segmento clave
+    2. Crear un 'día en la vida' del cliente antes y después del producto
+    3. Mapear el canal completo desde la empresa hasta el usuario final, con costos y roles en cada paso
+    4. Medir el costo real, todo incluido, de adquirir o activar un grupo de clientes (por ejemplo, 50 clientes)
+    5. Identificar qué programas de adquisición son más rentables y si escalan linealmente
+    6. Actualizar el modelo de negocio con los costos de adquisición reales descubiertos
+  ENTREGABLE: Arquetipos de cliente, mapa de canal con costos, y actualización del lienzo de modelo de negocio con los costos de adquisición reales medidos
+  PREVIOS: verificar_product_market_fit
+  SIGUIENTES: verificar_modelo_ingresos, verificar_modelo_rentable, estrategia_plataformas_existentes, tacticas_cold_calling, descubrir_valor_inesperado_cliente, dia_en_la_vida_del_cliente
+------------------------------------------------------------------------------
+HIJO
+  ID: validar_modelo_negocio_hechos
+  TITULO: Validar el Modelo de Negocio con Hechos
+  DOMINIO: core
+  RESUMEN: Se trata de convertir las hipótesis originales del business model canvas (propuesta de valor, segmentos de clientes, canales, relaciones con clientes, estructura de costos, flujos de ingresos) en hechos comprobados mediante pruebas extensivas cara a cara con cientos o miles de clientes reales. El canvas actúa como un 'scorecard' que documenta la evolución del negocio a través de iteraciones y pivotes.
+  PASOS:
+    1. Reunir todas las snapshots semanales o por pivote del business model canvas
+    2. Revisar cada componente del canvas y verificar que tenga respuestas fácticas, no hipotéticas
+    3. Usar el checklist del modelo de negocio para recorrer cada casilla sistemáticamente
+    4. Identificar pruebas pass/fail para cada hipótesis
+    5. Determinar si los resultados cumplen los objetivos de tráfico o financieros
+  ENTREGABLE: Business Model Canvas actualizado con cada componente respaldado por datos fácticos de clientes reales, con pruebas pass/fail identificadas
+  PREVIOS: war_room_datos, pivot_o_proceder, decision_pivotar_o_proceder, war_room_pivot_proceed, testear_circulo_cuadrado_rectangulo
+  SIGUIENTES: validar_modelo_financiero, metricas_que_importan, metrics_that_matter_framework
+
+==============================================================================
+UNIDAD 39 | dominio quality | paso 4
+PAR: herramientas_de_diseno_de_calidad -> optimizacion_caracteristicas_diseno
+TEXTO DEL PASO (del fichero del filtro): Emplear hojas de cálculo de necesidades del cliente y de diseño de producto para vincular necesidades con características.
+------------------------------------------------------------------------------
+MADRE
+  ID: herramientas_de_diseno_de_calidad
+  TITULO: Herramientas Frecuentes de Diseño de Calidad
+  DOMINIO: quality
+  RESUMEN: Conjunto de herramientas utilizadas frecuentemente en el diseño de calidad, incluyendo diagramas de afinidad, benchmarking, lluvia de ideas, análisis de arrastre, análisis competitivo, cartas de control, análisis de criticidad, grupos focales, investigación de mercado, encuestas, FMEA, análisis de árbol de fallas, diagramas de flujo, glosarios, redes de diseño (PERT/CPM), análisis de procesos, capacidad de proceso, análisis de vendibilidad, diagramas de dispersión, matrices de selección, hojas de cálculo de necesidades del cliente, y análisis de valor.
+  PASOS:
+    1. Seleccionar las herramientas adecuadas según la fase del diseño (recolección de datos, análisis, diseño o verificación).
+    2. Aplicar diagramas de afinidad o lluvia de ideas para agrupar necesidades o causas.
+    3. Usar FMEA y análisis de árbol de fallas para priorizar riesgos.
+    4. Emplear hojas de cálculo de necesidades del cliente y de diseño de producto para vincular necesidades con características.
+  ENTREGABLE: Selección documentada de herramientas aplicadas en cada fase del proyecto de diseño.
+  PREVIOS: descubrir_necesidades_del_cliente
+  SIGUIENTES: diseno_de_procesos_por_caracteristicas, design_for_six_sigma_dfss
+------------------------------------------------------------------------------
+HIJO
+  ID: optimizacion_caracteristicas_diseno
+  TITULO: Optimización de Características y Metas del Producto
+  DOMINIO: quality
+  RESUMEN: Una vez completado el diseño preliminar, debe optimizarse para satisfacer tanto al cliente como al proveedor, minimizando costos combinados y superando a la competencia. La optimización requiere un enfoque organizado que balancee necesidades multiorganizacionales mediante técnicas como revisión de diseño, equipos multifuncionales y negociación estructurada.
+  PASOS:
+    1. Realizar revisiones de diseño formales en distintas etapas del desarrollo con especialistas externos al equipo
+    2. Conformar equipos multifuncionales que incluyan a todos los interesados en el resultado del diseño
+    3. Establecer reglas básicas de negociación estructurada entre clientes y proveedores antes de las reuniones
+    4. Aplicar herramientas de optimización como análisis competitivo, de vendibilidad, de valor, crítico y FMEA
+  ENTREGABLE: Diseño de producto optimizado con documentación de revisiones, decisiones de equipo multifuncional y resultados de negociaciones estructuradas
+  PREVIOS: desarrollo_caracteristicas_producto
+  SIGUIENTES: establecer_diseno_final_producto, analisis_competitivo_calidad, revision_diseno
+
+==============================================================================
+UNIDAD 40 | dominio quality | paso 5
+PAR: takt_time -> smed_setup_reduction
+TEXTO DEL PASO (del fichero del filtro): Reducir tiempos de cambio (setup) para permitir lotes más pequeños
+------------------------------------------------------------------------------
+MADRE
+  ID: takt_time
+  TITULO: Takt Time y Producción en Flujo
+  DOMINIO: quality
+  RESUMEN: El takt time es el ritmo al cual el cliente compra una unidad de producto: el compás que marca la pauta de producción en un sistema pull. Se calcula dividiendo el tiempo disponible entre la demanda del cliente en un periodo definido. Entender el patrón, variabilidad y tendencia de esa demanda es esencial para calcularlo bien y ajustar tus recursos. Comparar el takt time con tu capacidad demostrada y teórica te permite balancear procesos, dimensionar tu dotación de trabajo y eliminar sobreproducción, avanzando hacia flujo de una sola pieza cuando sea posible. Si la demanda varía mucho, considera manejar líneas de valor separadas para no desbalancear tu operación completa.
+  PASOS:
+    1. Calcular la demanda del cliente en un periodo definido
+    2. Determinar el takt time dividiendo el tiempo disponible entre la demanda
+    3. Comparar el takt time con tu capacidad demostrada y teórica
+    4. Ajustar tu dotación de trabajo y balancear las estaciones según el takt
+    5. Reducir tiempos de cambio (setup) para permitir lotes más pequeños
+    6. Si la demanda varía significativamente, separa tus líneas de valor
+  ENTREGABLE: Cálculo de takt time documentado con plan de balanceo de línea y ajuste de recursos según demanda
+  PREVIOS: ocho_desperdicios, lean_manufacturing, value_stream_mapping_2, ocho_desperdicios_lean
+  SIGUIENTES: mapeo_flujo_valor, mapeo_flujo_valor_2, constraint_management
+------------------------------------------------------------------------------
+HIJO
+  ID: smed_setup_reduction
+  TITULO: SMED – Reducción de Tiempos de Cambio (Setup)
+  DOMINIO: quality
+  RESUMEN: Single Minute Exchange of Die (SMED) es un conjunto de técnicas desarrolladas por Shigeo Shingo para reducir drásticamente el tiempo de cambio de producto/proceso, idealmente a menos de 10 minutos, separando actividades internas (que requieren detener producción) de externas (que pueden hacerse sin detenerla).
+  PASOS:
+    1. Documentar el proceso actual de cambio/setup
+    2. Clasificar actividades en internas y externas
+    3. Mover actividades internas a externas siempre que sea posible
+    4. Simplificar y estandarizar las actividades internas restantes
+    5. Eliminar necesidad de ajustes y pruebas de ensayo
+  ENTREGABLE: Tiempo de cambio (setup) reducido y documentado, con procedimiento estandarizado
+  PREVIOS: sistema_pull_push, constraint_management
+  SIGUIENTES: tpm_maintenance
+

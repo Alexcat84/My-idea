@@ -1,0 +1,106 @@
+==============================================================================
+UNIDAD 30 | dominio exportacion | paso 3
+PAR: recursos_apoyo_gubernamental_exportacion -> decisiones_de_financiamiento_exportacion
+TEXTO DEL PASO (del fichero del filtro): Evalua financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantias de exportacion
+------------------------------------------------------------------------------
+MADRE
+  ID: recursos_apoyo_gubernamental_exportacion
+  TITULO: Recursos de Apoyo Gubernamental para Exportadores (CS, SBA, SBDC, USTDA, USAID, Ex-Im Bank)
+  DOMINIO: exportacion
+  RESUMEN: En Estados Unidos existen varias agencias que apoyan a los negocios pequeños que exportan. El U.S. Commercial Service (CS) es el brazo de promocion comercial que depende de Comercio de Estados Unidos; la SBA gestiona programas de financiamiento; los SBDC ofrecen asesoria gratuita si es tu primera vez exportando; USTDA financia estudios de factibilidad en paises en desarrollo cuando tu producto enfrenta competencia subsidiada, es prioridad de desarrollo del pais destino o cuenta con aval de una embajada de EE.UU.; USAID y el Foreign Agricultural Service (FAS) apoyan comodities y asistencia técnica en mercados emergentes; Estado, a traves de su base BIDS, ofrece leads comerciales; y las oficin
+  PASOS:
+    1. Contacta la oficina local del U.S. Commercial Service para asesoria inicial y estudios de mercado
+    2. Consulta con un SBDC cercano si es tu primera experiencia exportadora
+    3. Evalua financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantias de exportacion
+    4. Verifica si tu producto o servicio califica para financiamiento de USTDA o asistencia de FAS/USAID según tu sector
+    5. Registrate en Federal Business Opportunities (FedBizOpps) y en la base BIDS de Estado para monitorear contratos y leads comerciales
+    6. Contacta la oficina estatal de comercio internacional para obtener leads y participar en misiones comerciales
+  ENTREGABLE: Lista de agencias y programas de apoyo que contactaste, con registro en plataformas de oportunidades (FedBizOpps, BIDS) y reuniones o solicitudes iniciadas.
+  PREVIOS: ecosistema_global_emprendimiento_gee, evaluacion_mercados_objetivo, trade_missions
+  SIGUIENTES: investigacion_mercado_primaria_secundaria_2, centro_asesoria_advocacy_center, programas_ex_im_bank
+------------------------------------------------------------------------------
+HIJO
+  ID: decisiones_de_financiamiento_exportacion
+  TITULO: Factores para Decisiones de Financiamiento de Exportación
+  DOMINIO: exportacion
+  RESUMEN: Antes de elegir cómo financiar una exportación, necesitas considerar si ese financiamiento es lo que puede cerrar la venta, qué plazo te exige el comprador, cuánto cuesta cada opción, qué riesgos hay detrás y cuánto capital de trabajo vas a necesitar antes y después de embarcar la mercancía. Para asesorarte puedes acudir a tu banco, a organismos de apoyo al comercio exterior o a agencias de financiamiento para exportadores que existan en tu mercado.
+  PASOS:
+    1. Evalúa si el financiamiento es lo que puede definir si cierras o no la venta
+    2. Determina el plazo de financiamiento que te pide el comprador
+    3. Compara costos (tasas de interés y comisiones) de las opciones que tengas disponibles
+    4. Analiza los riesgos políticos y económicos del país de tu comprador
+    5. Calcula cuánto capital de trabajo vas a necesitar antes y después del embarque
+  ENTREGABLE: Plan de financiamiento de exportación con opciones evaluadas y seleccionadas
+  PREVIOS: resolucion_problemas_de_pago
+  SIGUIENTES: extension_credito_compradores_extranjeros, programas_ex_im_bank, autoevaluacion_gerencial_exportacion, evaluacion_preparacion_empresa_exportar
+
+==============================================================================
+UNIDAD 31 | dominio environmental | paso 1
+PAR: compra_equipos_verdes -> certificacion_leed_energy_star
+TEXTO DEL PASO (del fichero del filtro): Pide certificación Energy Star en cada equipo que compres
+------------------------------------------------------------------------------
+MADRE
+  ID: compra_equipos_verdes
+  TITULO: Cómo elegir equipos tecnológicos sostenibles al comprar
+  DOMINIO: environmental
+  RESUMEN: Cuando compres equipo tecnológico nuevo, revisa cuatro cosas antes de decidir: si tiene certificación de eficiencia energética (Energy Star), qué política tiene el fabricante sobre sustancias tóxicas, si el diseño permite reciclarlo o reutilizar sus piezas, y si el fabricante tiene un programa para recibir de vuelta el equipo cuando ya no lo uses. Puedes apoyarte en guías como la 'Guide to Greener Electronics' de Greenpeace para comparar fabricantes.
+  PASOS:
+    1. Pide certificación Energy Star en cada equipo que compres
+    2. Revisa la 'Guide to Greener Electronics' de Greenpeace antes de elegir proveedor
+    3. Pregunta al fabricante qué política tiene sobre sustancias tóxicas
+    4. Prioriza equipos diseñados para desarmarse y reciclarse fácil
+    5. Confirma si el fabricante tiene un programa para recibir el equipo de vuelta al final de su vida útil
+  ENTREGABLE: Tu propia lista de criterios de compra sostenible para equipos tecnológicos, lista para usar cada vez que compres
+  PREVIOS: gestion_e_waste
+  SIGUIENTES: 
+------------------------------------------------------------------------------
+HIJO
+  ID: certificacion_leed_energy_star
+  TITULO: Certificación LEED o Energy Star
+  DOMINIO: environmental
+  RESUMEN: LEED es un sistema de referencia reconocido que otorga puntos según atributos ambientales (ubicación, eficiencia hídrica, uso de energía, materiales, calidad ambiental interior). Energy Star certifica edificios que están entre el 25% más eficiente energéticamente, usando la herramienta Portfolio Manager. Los edificios certificados suelen mostrar mayor ocupación y mejores precios de renta y venta.
+  PASOS:
+    1. Evalúa si tu proyecto o local califica para LEED o Energy Star
+    2. Usa Portfolio Manager para medir la eficiencia energética actual del espacio
+    3. Identifica qué puntos LEED puedes alcanzar según las categorías: sitio, agua, energía, materiales, calidad interior
+    4. Documenta y reúne la evidencia necesaria para presentar la certificación
+    5. Comunica la certificación como ventaja competitiva a tus clientes y a quienes trabajan contigo
+  ENTREGABLE: Solicitud de certificación LEED o Energy Star presentada con la documentación de soporte
+  PREVIOS: reduccion_residuos_construccion, eficiencia_hidrica_edificios, eficiencia_hidrica_edificios_2
+  SIGUIENTES: compra_energia_limpia
+
+==============================================================================
+UNIDAD 32 | dominio quality | paso 1
+PAR: graficos_control_multivariados -> key_process_product_characteristics
+TEXTO DEL PASO (del fichero del filtro): Identificar las múltiples características de calidad correlacionadas del producto
+------------------------------------------------------------------------------
+MADRE
+  ID: graficos_control_multivariados
+  TITULO: Gráficos de Control Multivariados
+  DOMINIO: quality
+  RESUMEN: Cuando un producto tiene dos o más características de calidad, monitorearlas de forma independiente con gráficos separados puede ser engañoso, ya que la probabilidad conjunta de que ambas excedan sus límites simultáneamente es mucho menor que la individual. Los gráficos multivariados (como el T² de Hotelling o EWMA multivariado) abordan correctamente esta interdependencia.
+  PASOS:
+    1. Identificar las múltiples características de calidad correlacionadas del producto
+    2. Calcular la matriz de covarianza entre las características
+    3. Construir el estadístico multivariado (por ejemplo, T² de Hotelling)
+    4. Establecer límites de control multivariados apropiados
+    5. Monitorear el estadístico combinado en lugar de gráficos independientes
+  ENTREGABLE: Sistema de control multivariado implementado para características de calidad correlacionadas
+  PREVIOS: grafico_box_jenkins, grafico_cusum, grafico_media_movil_ewma
+  SIGUIENTES: capacidad_proceso_concepto
+------------------------------------------------------------------------------
+HIJO
+  ID: key_process_product_characteristics
+  TITULO: Características Clave de Producto y Proceso (KPC)
+  DOMINIO: quality
+  RESUMEN: Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las 
+  PASOS:
+    1. Recolecta inputs de investigación de mercado, QFD, revisión de diseño y AMFE
+    2. Clasifica las características del producto según su importancia relativa: crítica, mayor, menor o incidental
+    3. Identifica las partes sensibles a calidad usando criterios de complejidad y tasa de fallos
+    4. Documenta la relación entre las características de proceso y los resultados de producto
+    5. Registra las características clave en planos y especificaciones
+  ENTREGABLE: Listado clasificado de características clave de producto y proceso, con su nivel de criticidad y su relación causal documentada.
+  PREVIOS: qfd_matriz_calidad, fmea_analisis_de_modos_de_falla, marco_analisis_mercado_cadena_suministro, planificacion_inicial_calidad, qfd_matriz, definiciones_operacionales_de_calidad, sujetos_de_control
+  SIGUIENTES: analisis_flujo_proceso, control_proceso_variables, bucle_retroalimentacion_autoajustable, autocontrol_y_controlabilidad
+
