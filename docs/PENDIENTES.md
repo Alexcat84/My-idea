@@ -3147,3 +3147,67 @@ una operacion de ENLACE MUTUO de dos aristas cada uno. Son candidatos de **escal
 una sola direccion**, por la direccion de la tabla de encima, en una pasada posterior
 fuera de `OP-E-06` (la misma familia de pasada que los puestos 581 y 650 de mas arriba
 en este documento). **No bloquea nada de la fase 04.**
+
+## EL PUESTO 1098 DE `OP-E-07` TENIA UNA ARISTA QUE SU PROPIA RAZON PROHIBE: CORREGIDO (vuelta 92)
+
+**Origen:** acta de la vuelta 91 (`docs/loop/ACTA_AUDITOR.md`, seccion 3.1, lineas 31290
+a 31365, y adjudicacion 5.1, lineas 31438 a 31447). Es una CAIDA DE CLASE (mueve dato),
+la unica de la tanda, encontrada por el auditor con un barrido propio que buscaba
+formulas que NIEGAN la jerarquia (`no crea jerarquia`, `ninguno la expande`, `sin
+jerarquia`) sobre las 88 razones de `OP-E-07`, y confirmada por el ejemplar ya
+registrado del banco.
+
+**LA FRASE, LITERAL, del campo `razon` de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, puesto
+1098** (`customer_validation_sell_phase` contra `prueba_solucion_con_cliente`, clase D,
+core; citada en `ACTA_AUDITOR.md` linea 31298 a 31304):
+
+> "Queda anotada UNA LINEA COMPARTIDA que no crea jerarquia porque ninguno la expande:
+> los dos preguntan como es el proceso interno de aprobacion de compra, y los dos lo
+> dicen en un solo paso."
+
+**QUE PASO, mecanicamente** (`ACTA_AUDITOR.md` linea 31311 a 31317): el criterio de
+`extraer_direccion_automatica` leyo la palabra "trae" de la otra mitad de la razon
+("prueba_solucion_con_cliente trae un procedimiento de entrevista que el otro no tiene
+en ninguna forma") y le puso direccion, cuando esa formula es la de la clase D ("cada
+uno trae lo suyo"), no la de madre e hijo. El par entro con direccion
+`customer_validation_sell_phase -> prueba_solucion_con_cliente` cuando su propia razon
+manda que SALGA.
+
+**LA COMPROBACION SOBRE LOS PASOS DE LOS DOS NODOS** (`ACTA_AUDITOR.md` linea 31319 a
+31330): `customer_validation_sell_phase` toca la linea compartida en su **paso 4**
+("Confirma como es el proceso real de compra y de aprobacion dentro del negocio de tu
+cliente") y `prueba_solucion_con_cliente` en su **paso 5** ("Pregunta como es el proceso
+interno de aprobacion de compra de quien te compra"). Un paso en cada lado, ninguno
+expande al otro.
+
+**EL TEST DEL BANCO `9.6.2` que decide** (`docs/BANCO_DE_TEXTOS.md`, seccion que abre en
+linea 1737, test en lineas 1771 a 1774): *"El hijo cabe entero dentro de UN paso de la
+madre, y la madre conserva materia propia que el hijo no toca en ningun paso"*. Los seis
+pasos de `prueba_solucion_con_cliente` no caben dentro de ningun paso de
+`customer_validation_sell_phase`: no hay madre e hijo.
+
+**EL EJEMPLAR YA REGISTRADO que hace esto adjudicable y no doctrina nueva**
+(`docs/BANCO_DE_TEXTOS.md`, tabla de lineas 1776 a 1782, fila del puesto **2.195**): el
+mismo nodo `capitalizacion_adecuada_del_franquiciador` ya tiene un veredicto escrito con
+las mismas palabras, *"no era madre e hijo: linea compartida y procedimiento propio a
+cada lado"*. El 1098 es ese mismo caso.
+
+**LO QUE MANDA LA OPERACION, literal, del campo `verificacion` de `OP-E-07` en**
+`docs/plan/OPERACIONES.jsonl` (linea 69): *"Si la razon tampoco lo dice, el par sale de
+la cosecha y se anota por que"*, y *"los que salgan se cuentan y se nombran: un
+descarte silencioso aqui seria un enlace perdido"*. El 1098 tenia que SALIR y se conto
+como ENTRADO: es el reverso de la regla, un enlace inventado en vez de uno perdido.
+
+**LA CORRECCION, ejecutada en la vuelta 92 (TAREA 2 y TAREA 3 del encargo,
+`docs/loop/PROMPT_SIGUIENTE.md`):** se construyo un guarda de dos condiciones para
+`extraer_direccion_automatica` (marca de madre positiva Y ausencia de negacion de
+jerarquia), el puesto 1098 salio de `OP_E_07_DIRECCION_V91.jsonl` (queda en 87), su
+arista se retiro de `dataset/nodos/` en las dos vistas, y el `ADDENDUM DE EJECUCION` de
+`OP-E-07` se reescribio con el corte nuevo (1 SALE, 85 ESCRITA, 2 YA_ESTABA, 0
+ESCALERA_ROTA).
+
+**LO QUE NO SE TOCA, y es explicito** (`ACTA_AUDITOR.md` linea 31363 a 31365): el
+marcador no se toca (la clase D del 1098 es correcta, lo que no sostenia era la
+DIRECCION), `OP-E-06` no se reabre (contraprueba corrida por el auditor sobre sus 114
+direcciones, un solo toque, el puesto 1160, leido entero y CONFIRMADO,
+`ACTA_AUDITOR.md` linea 31367 a 31386), y los otros 85 de `OP-E-07` se quedan.
