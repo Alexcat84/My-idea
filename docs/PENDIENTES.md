@@ -3739,3 +3739,31 @@ ya crudo, asi que no genera advertencia. EL INSTRUMENTO MANDA (EJECUTOR.md
 regla 2): no toco el fichero porque mi propia corrida no reproduce el defecto
 que el encargo cita; declaro la discrepancia en vez de "arreglar" algo que no
 esta roto. DISCUTIBLE marcado para la relectura ciega.
+
+## VUELTA 95, TAREA 5: PARADA DELIBERADA, NO INTENTADA ESTA VUELTA
+
+Las TAREAS 1 a 4 cerraron en verde (ningun ROJO, ninguna contradiccion con
+regla vigente), asi que la condicion para abrir la TAREA 5 se cumplia. La leo
+y decido PARAR antes de empezar el tramo, por la propia regla que el encargo
+escribe: "Si el texto de la operacion no alcanza para leer sin decidir,
+PARAS y la traes: eso no es un fracaso de la vuelta, es la regla."
+
+**Por que para.** La nota de `OP-E-03` en `docs/plan/OPERACIONES.jsonl` dice
+que la lectura pendiente es "clasificacion (A/B/C/D, veredictos contados
+aparte de la tasa por dominio) ... del mismo tamano que OP-E-06/OP-E-07": es
+el MISMO juicio completo del banco 9.6.1 (CONTINUA o D) mas la direccion del
+9.6.2 para cada par nuevo, no la pregunta mas estrecha de la TAREA 3 de esta
+vuelta (si la razon YA ESCRITA nombra la madre). La TAREA 3, con esa pregunta
+mas estrecha y con precedente extenso de vueltas anteriores para calibrar
+contra el, ya me dejo 4 de 15 en duda genuina. Abrir 40 pares NUEVOS con el
+juicio completo, en la misma vuelta y despues de las TAREAS 1 a 4, es
+exactamente la clase de lectura apurada que esta casa prohibe ("no adivines").
+
+**Lo que SI deje listo para que la vuelta que la lea no empiece de cero:**
+`docs/plan/OPERACIONES.jsonl` (OP-E-03) trae la verificacion completa (cinco
+puntos) y la bolsa vigente (`docs/plan/DIFERENCIA_CONTRA_COLA.jsonl`, 183
+filas de la vuelta 94, cuenta cuadrada sin fugas). No hace falta releer nada
+de esta vuelta para abrir el primer tramo despues: el resolutor de ids, la
+marca de LECTURA DIRIGIDA, el no entrar en cola ni mover el marcador, y el
+conteo aparte de la tasa por dominio, los cinco puntos de la verificacion,
+quedan citados aqui para la vuelta que la tome.
