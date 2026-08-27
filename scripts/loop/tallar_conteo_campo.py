@@ -112,6 +112,23 @@ def main():
               % (len(sin_campo), a.fichero, a.campo))
         return 1
 
+    # PULIDO (acta de la vuelta 90, seccion 1.11): la existencia de los
+    # puestos pedidos por --verificar-puestos se valida AQUI, ANTES de
+    # imprimir nada, para que un ROJO por puesto inexistente no imprima
+    # primero la tabla de distribucion y diga "NO SE TALLA NADA" despues.
+    # Si cae en ROJO, no se imprime ni una linea de tabla: las palabras y
+    # la salida dicen lo mismo.
+    pedidos_txt = []
+    indice = {}
+    if a.verificar_puestos:
+        pedidos_txt = [p.strip() for p in a.verificar_puestos.split(",") if p.strip()]
+        indice = {str(f.get(a.clave_puesto)): f for f in filas}
+        faltantes = [p for p in pedidos_txt if p not in indice]
+        if faltantes:
+            print("ROJO: %d %s(s) pedido(s) no existen en %s: %s. NO SE TALLA NADA."
+                  % (len(faltantes), a.clave_puesto, a.fichero, ", ".join(faltantes)))
+            return 1
+
     n = a.longitud_exacta
     clases = [clasifica_longitud(f, a.campo, n) for f in filas]
     iguales = clases.count("IGUAL")
@@ -133,18 +150,12 @@ def main():
 
     resultado = 0
     if a.verificar_puestos:
-        pedidos_txt = [p.strip() for p in a.verificar_puestos.split(",") if p.strip()]
-        indice = {str(f.get(a.clave_puesto)): f for f in filas}
         print("--- COTEJO DE PUESTOS CITADOS CONTRA SU `len(%s)` REAL ---" % a.campo)
         print()
         print("| %s citado | `len(%s)` medido | == %d |" % (a.clave_puesto, a.campo, n))
         print("|---:|---:|---|")
-        faltantes = []
         distintos = 0
         for p in pedidos_txt:
-            if p not in indice:
-                faltantes.append(p)
-                continue
             fila = indice[p]
             L = len(fila[a.campo])
             clase = clasifica_longitud(fila, a.campo, n)
@@ -153,10 +164,6 @@ def main():
                 distintos += 1
             print("| %s | %d | %s |" % (p, L, marca))
         print()
-        if faltantes:
-            print("ROJO: %d %s(s) pedido(s) no existen en %s: %s. NO SE TALLA NADA."
-                  % (len(faltantes), a.clave_puesto, a.fichero, ", ".join(faltantes)))
-            return 1
         print("cotejados: %d | con `len` DISTINTO de %d: %d" % (len(pedidos_txt), n, distintos))
         if distintos:
             print("AVISO: %d de los %d puestos citados NO tienen `len(%s)` == %d: "

@@ -1,0 +1,33 @@
+==========================================================================================
+TALLA DE COMPOSICION. Cada cifra sale de docs/loop/SALIDA_V90_TAREA4_ESCRITURA.txt, patron citado arriba; ninguna tecleada.
+==========================================================================================
+
+filas totales casadas por --patron: 114
+
+| clase | filas |
+|---|---:|
+| sin alias | 100 |
+| resuelto por alias | 14 |
+
+ENUMERACION de 'sin alias' (100): 497, 530, 552, 855, 912, 949, 979, 981, 986, 1002, 1058, 1078, 1079, 1084, 1094, 1095, 1118, 1127, 1134, 1143, 1144, 1149, 1151, 1170, 1171, 1186, 1199, 1200, 1209, 1212, 1218, 1226, 1236, 1239, 1241, 1253, 1261, 1264, 1283, 1300, 1309, 1314, 1329, 1336, 1340, 1341, 1351, 1377, 1391, 1405, 1418, 1420, 1424, 1428, 1435, 1447, 1454, 1497, 1503, 1509, 1512, 1531, 1549, 1570, 1595, 1614, 1617, 1618, 1630, 1636, 1642, 1649, 1650, 1659, 1665, 1666, 1677, 1680, 1689, 1764, 1775, 1781, 1787, 1798, 1823, 1835, 1854, 1864, 1888, 1896, 1953, 1973, 1995, 2005, 2009, 2023, 2036, 2038, 2051, 2106
+ENUMERACION de 'resuelto por alias' (14): 956, 1012, 1013, 1160, 1169, 1207, 1270, 1286, 1345, 1472, 1535, 1545, 1546, 2015
+
+--- COTEJO de la clase 'resuelto por alias' (14 reales) contra la lista citada (11 citados) ---
+SOBRAN en la lista citada (citados que NO son de esta clase): NINGUNO
+FALTAN en la lista citada (de esta clase pero AUSENTES de lo citado): 1207, 1535, 2015
+
+--- PARES DISTINTOS DE SUSTITUCION en 'resuelto por alias' (comparando escrito_a,escrito_b contra crudo) ---
+pares de sustitucion (crudo -> escrito) DISTINTOS: 11
+  build_metrics_toolset -> metricas_de_adquisicion_activacion (en 1 fila(s): 1545)
+  customer_development_vs_business_plan -> search_for_business_model (en 1 fila(s): 1207)
+  diseno_organizacional_equipos_innovacion -> equipo_multifuncional_real (en 1 fila(s): 1013)
+  generar_multiples_opciones -> pensamiento_convergente_divergente (en 1 fila(s): 1270)
+  investigacion_como_habilidad_clave -> enfoque_etapa_investigacion (en 1 fila(s): 1535)
+  metricas_cohortes -> analisis_de_cohortes (en 1 fila(s): 1545)
+  nafta_free_trade_agreements -> certificado_de_origen_tratados_libre_comercio (en 1 fila(s): 2015)
+  pivotar_o_proceder -> pivote_o_proceder (en 5 fila(s): 956, 1160, 1345, 1472, 1546)
+  seis_medios_comunicacion_cliente -> estrategia_multicanal_bienvenida (en 1 fila(s): 1012)
+  seleccion_etapa_fondo_vc -> embudo_secuencial_de_inversores (en 1 fila(s): 1169)
+  warrants_deuda_convertible -> warrant_pricing_venture_debt (en 1 fila(s): 1286)
+
+FIN
