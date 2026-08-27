@@ -344,3 +344,179 @@ Sintaxis verificada con `python -c "ast.parse(...)"` en los dos ficheros
 tocados: **SINTAXIS OK**.
 
 ---
+
+## 3. TAREA 3: EL TRAMO 8 DE `OP-E-01`, LEIDO POR LO NO DECIDIDO
+
+Primera vuelta que lee la bolsa por la unidad de lectura nueva (adjudicacion
+5.1 del acta 82): las primeras 30 unidades SIN decision registrada, no las
+30 primeras a secas.
+
+### 3.1. El recalibrado y el filtro, contados de su fichero
+
+Calibrador: `python scripts/plan/paso_contra_nodo_calibrado.py
+--umbral-titulo 72 --umbral-contencion 0.45 --min-tokens 4`
+(`docs/loop/SALIDA_V83_CALIBRADO_FRESCO.txt`). Filtro registro-consciente:
+`scripts/loop/vuelta83_tramo8_filtrar.py`
+(`docs/loop/SALIDA_V83_TRAMO8_FILTRO_P91_GUARDA_CADENA.txt`):
+
+| | contado del fichero |
+|---|---:|
+| bolsa reducida total | 468 |
+| candidatos sin arista | 246 |
+| apartados por P.9.1 ensanchado (operaciones + vara de los A) | 92 |
+| limpios tras P.9.1 | 154 |
+| parejas detectadas por la guarda del par no dirigido | 0 |
+| **CANDIDATOS (unidades de lectura) tras la guarda** | **154** |
+| **unidades YA DECIDIDAS en la cabeza, saltadas (registro)** | **30** (indices 0 a 29) |
+| **unidades FRESCAS leidas este tramo** | **30** (indices 30 a 59) |
+| unidades sin decidir restantes tras esta cabeza | 94 |
+
+El grafo no se habia movido desde el cierre de la vuelta 82 (medido en la
+TAREA 0 de este reporte: 468 filas, 246 sin arista, identico a lo que la
+vuelta 82 dejo), pero se recalibro igual, tal como manda el encargo. Bolsa
+filtrada completa en `docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V83.jsonl` (154
+filas, orden de archivo, sin sorteo). **Las 30 saltadas son EXACTAMENTE las
+mismas 30 que la guarda 2.b midio como prefijo sobre la bolsa V82**
+(cotejado, mismos nombres, mismo orden): el grafo no se movio, la bolsa no
+cambio de forma.
+
+### 3.2. La tabla de alcanzabilidad, TALLADA con el registro cruzado (TAREA 2.d dentro)
+
+`python scripts/loop/tallar_cabecera_reporte.py --vuelta 83 --tramo-cadena 8
+--registro docs/plan/OP_E_01_DECIDIDAS.jsonl`, salida completa en
+`docs/loop/SALIDA_V83_TRAMO8_TABLA_CADENA_TALLADA.txt`, **EXIT 0** (ninguna
+unidad tallada tenia decision `NO SE ENLAZA` ya registrada), pegada entera:
+
+| # | par (paso) | alcanzable previo (vara de la cadena) |
+|---:|---|---|
+| 30 | `recursos_apoyo_gubernamental_exportacion -> decisiones_de_financiamiento_exportacion (paso 3)` | SIN CAMINO PREVIO |
+| 31 | `compra_equipos_verdes -> certificacion_leed_energy_star (paso 1)` | SIN CAMINO PREVIO |
+| 32 | `graficos_control_multivariados -> key_process_product_characteristics (paso 1)` | SIN CAMINO PREVIO |
+| 33 | `gestion_efectiva_benchmarking -> reconocimiento_publico_recompensas (paso 6)` | SIN CAMINO PREVIO |
+| 34 | `estructura_organizacional_funcional_proceso -> equipos_autodirigidos_servicio (paso 4)` | SIN CAMINO PREVIO |
+| 35 | `consejo_de_calidad_y_rol_del_director -> metas_negocio_calidad (paso 3)` | SIN CAMINO PREVIO |
+| 36 | `verificar_clientes_y_canales -> validar_modelo_negocio_hechos (paso 6)` | ALCANZABLE (3 saltos) |
+| 37 | `lean_manufacturing_tps -> sistema_pull_push (paso 5)` | SIN CAMINO PREVIO |
+| 38 | `establecer_metas_reduccion_emisiones -> plan_accion_corto_mediano_largo_plazo (paso 3)` | SIN CAMINO PREVIO |
+| 39 | `herramientas_de_diseno_de_calidad -> optimizacion_caracteristicas_diseno (paso 4)` | SIN CAMINO PREVIO |
+| 40 | `takt_time -> smed_setup_reduction (paso 5)` | ALCANZABLE (2 saltos) |
+| 41 | `autorregulacion_seguridad -> participacion_trabajadores (paso 3)` | SIN CAMINO PREVIO |
+| 42 | `depreciacion_y_amortizacion -> impacto_estado_resultados_en_balance (paso 6)` | ALCANZABLE (5 saltos) |
+| 43 | `desarrollo_expertos_capaces -> evaluacion_desempeno_proyectos (paso 4)` | SIN CAMINO PREVIO |
+| 44 | `estructura_competencias_six_sigma_lean -> evaluacion_desempeno_proyectos (paso 5)` | SIN CAMINO PREVIO |
+| 45 | `poder_a_traves_de_la_accion -> compromiso_organismico_en_la_accion (paso 3)` | ALCANZABLE (5 saltos) |
+| 46 | `unbundling_business_models -> business_model_canvas_scorecard (paso 4)` | ALCANZABLE (4 saltos) |
+| 47 | `venture_debt_introduccion -> ratio_deuda_capital (paso 1)` | ALCANZABLE (6 saltos) |
+| 48 | `estudio_desempeno_run_charts_servicios -> causas_comunes_vs_especiales (paso 3)` | SIN CAMINO PREVIO |
+| 49 | `equipo_conjunto_de_mejora_con_proveedores -> fijacion_de_metas (paso 4)` | SIN CAMINO PREVIO |
+| 50 | `gate2_second_screen -> metodo_payback (paso 4)` | SIN CAMINO PREVIO |
+| 51 | `coordinacion_colaboracion_cadena_suministro -> plataforma_colaboracion_tiempo_real (paso 10)` | SIN CAMINO PREVIO |
+| 52 | `emprendedor_como_puesto_de_trabajo -> contabilidad_innovacion_pivote (paso 2)` | SIN CAMINO PREVIO |
+| 53 | `guias_diseno_sistemas_estrategicos -> rediseno_tras_fracaso_proyecto (paso 7)` | SIN CAMINO PREVIO |
+| 54 | `riesgo_fiduciario_insolvencia_deuda -> convertible_debt_fundamentos (paso 2)` | ALCANZABLE (6 saltos) |
+| 55 | `clasificacion_caracteristicas_calidad -> key_process_product_characteristics (paso 1)` | SIN CAMINO PREVIO |
+| 56 | `gestion_para_la_calidad -> key_process_product_characteristics (paso 1)` | ALCANZABLE (5 saltos) |
+| 57 | `term_sheet_negociacion -> entender_term_sheet (paso 5)` | ALCANZABLE (2 saltos) |
+| 58 | `estrategia_ti_verde -> oportunidades_ingresos_ti_sostenible (paso 5)` | SIN CAMINO PREVIO |
+| 59 | `etapa_build_business_case -> posicionamiento_por_tipo_de_mercado (paso 1)` | ALCANZABLE (6 saltos) |
+
+**Las 30 unidades ya decididas, saltadas y NO releidas** (nombradas por su
+indice y su nombre, `docs/loop/SALIDA_V83_TRAMO8_FILTRO_P91_GUARDA_CADENA.txt`):
+indices 0 a 29, los mismos 30 pares que la guarda 2.b y el tallador 2.d
+verifican en la seccion 2 de este reporte. No se vuelven a leer ni se
+re-derivan sus razones.
+
+### 3.3. Lectura de las 30 unidades frescas, verificada contra `dataset/nodos/*.json`
+
+Los pasos, resumenes, entregables y aristas ya escritas de las 30 madres y
+30 hijos, volcados enteros de `dataset/nodos/*.json` para esta lectura, en
+`docs/loop/SALIDA_V83_TRAMO8_DOSSIER30.txt`.
+
+**LA TABLA SE CUENTA DE SU FICHERO**, `docs/loop/SALIDA_V83_TRAMO8_ESCRIBIR.txt`
+(instrumento `scripts/loop/vuelta83_medir_tramo8.py`, TAREA 2.c: mide la
+decision de cada unidad leyendo el grafo de HOY en las dos vistas, no la
+teclea):
+
+| # | par (paso) | vara cadena | decision | razon resumida |
+|---:|---|---|:---:|---|
+| 30 | `recursos_apoyo_gubernamental_exportacion -> decisiones_de_financiamiento_exportacion` (3) | sin camino | **NO SE ENLAZA** | hijo es marco generico de decision de financiamiento (cualquier fuente), no la ejecucion especifica de "evaluar SBA/Ex-Im" del paso |
+| 31 | `compra_equipos_verdes -> certificacion_leed_energy_star` (1) | sin camino | **NO SE ENLAZA** | objeto distinto: el paso pide sello Energy Star en EQUIPOS comprados; el hijo certifica EDIFICIOS (LEED, Portfolio Manager); familia ya establecida en construccion |
+| 32 | `graficos_control_multivariados -> key_process_product_characteristics` (1) | sin camino | **NO SE ENLAZA** | hijo (KPC) es concepto previo y mas amplio, ya con 7 padres fundacionales (QFD, AMFE...); vara con direccion: el hijo no desarrolla el paso, lo precede |
+| 33 | `gestion_efectiva_benchmarking -> reconocimiento_publico_recompensas` (6) | sin camino | **NO SE ENLAZA**, DISCUTIBLE | hijo generico (ejemplo dado es Six Sigma, no benchmarking), ya tiene 3 padres en familia de empoderamiento/auditorias/cultura breakthrough; no toca la mitad del paso (capacitacion) |
+| 34 | `estructura_organizacional_funcional_proceso -> equipos_autodirigidos_servicio` (4) | sin camino | **ESCRITA** | el paso 4 NOMBRA literalmente "equipos autodirigidos y roles de coach"; el hijo es exactamente eso (paso 4 propio: "lider como coach, no supervisor"); madre conserva los otros 4 pasos |
+| 35 | `consejo_de_calidad_y_rol_del_director -> metas_negocio_calidad` (3) | sin camino | **ESCRITA** | el paso 3 pide integrar metas de calidad al plan de negocio; el hijo es el procedimiento de 3 pasos para eso, con entregable propio y distinto del entregable general de la madre (que es sobre gobernanza del consejo, no sobre metas) |
+| 36 | `verificar_clientes_y_canales -> validar_modelo_negocio_hechos` (6) | ALCANZABLE 3 saltos via `verificar_modelo_ingresos` (hijo directo de la madre) | **NO SE ENLAZA** | vara de la cadena, patron D2 (radio sobre camino ya tejido desde un hijo directo); ademas el hijo desborda muy por encima del paso (valida el canvas entero, no solo actualiza costos de CAC) |
+| 37 | `lean_manufacturing_tps -> sistema_pull_push` (5) | sin camino | **ESCRITA** | el paso 5 nombra "sistemas pull mediante kanban"; el hijo es el procedimiento de 6 pasos para pull vs push con kanbans; entregable propio distinto del mapa de herramientas Lean general de la madre |
+| 38 | `establecer_metas_reduccion_emisiones -> plan_accion_corto_mediano_largo_plazo` (3) | sin camino | **NO SE ENLAZA** | el hijo pertenece a la familia de vision/estrategia de sostenibilidad general (padre `priorizacion_iniciativas_sostenibilidad`, hijos de vision Lubin-Esty), no a la de fijar metas de emisiones; no se limita a emisiones |
+| 39 | `herramientas_de_diseno_de_calidad -> optimizacion_caracteristicas_diseno` (4) | sin camino | **NO SE ENLAZA** | el hijo ya tiene madre establecida y coherente (`desarrollo_caracteristicas_producto`, secuencia desarrollo->optimizacion->diseno final); el paso 4 de esta madre es usar hojas de calculo para vincular necesidades y caracteristicas, actividad distinta |
+| 40 | `takt_time -> smed_setup_reduction` (5) | ALCANZABLE 2 saltos via `constraint_management` (hijo directo de la madre) | **NO SE ENLAZA** | vara de la cadena, patron D2 exacto: `constraint_management` ya es hijo directo de takt_time y ya enlaza a smed_setup_reduction; escribir el atajo directo seria el radio que el patron D2 prohibe, pese al fuerte calce de contenido |
+| 41 | `autorregulacion_seguridad -> participacion_trabajadores` (3) | sin camino | **ESCRITA** | el paso 3 pide "involucrar activamente a los trabajadores en el diseno e implementacion"; el propio paso 4 del hijo dice casi lo mismo palabra por palabra ("involucra a tus trabajadores en el diseno de metas, analisis de peligros..."); madre conserva sus otros 3 pasos (marco regulatorio, diseno del sistema interno, compromiso gerencial) |
+| 42 | `depreciacion_y_amortizacion -> impacto_estado_resultados_en_balance` (6) | ALCANZABLE 5 saltos via `lectura_balance_general` (hijo directo de la madre) | **NO SE ENLAZA** | vara de la cadena, patron D2 (cadena coherente y tematica: lectura de balance -> pasivos -> patrimonio -> por que balancea -> impacto en balance); ademas el hijo es el marco GENERAL de cualquier linea del estado de resultados, no especifico de depreciacion |
+| 43 | `desarrollo_expertos_capaces -> evaluacion_desempeno_proyectos` (4) | sin camino | **NO SE ENLAZA**, DISCUTIBLE | el hijo ya tiene familia propia (`team_performance_assessment`, `revision_progreso`) y es un marco generico de metricas de proyecto; no mide especificamente el IMPACTO DE LA CAPACITACION que pide el paso |
+| 44 | `estructura_competencias_six_sigma_lean -> evaluacion_desempeno_proyectos` (5) | sin camino | **NO SE ENLAZA**, DISCUTIBLE | mismo hijo que 43 (misma familia ya establecida), y tampoco mide especificamente el desempeno POR NIVEL DE BELT que el paso pide: es generico |
+| 45 | `poder_a_traves_de_la_accion -> compromiso_organismico_en_la_accion` (3) | ALCANZABLE 5 saltos via `esfuerzo_voluntario_vs_urge_espontaneo` (hijo directo de la madre) | **NO SE ENLAZA** | vara de la cadena, patron D2: cadena coherente entera dentro de la psicologia de Wallas (esfuerzo voluntario -> incubacion -> segundo aliento -> habito energetico -> accion comprometida); pese al calce de contenido muy fuerte con el paso, ya esta tejida |
+| 46 | `unbundling_business_models -> business_model_canvas_scorecard` (4) | ALCANZABLE 4 saltos via `multi_sided_platforms` (hijo directo de la madre) | **NO SE ENLAZA** | vara de la cadena (D2) mas contenido: el paso pide dibujar el canvas INICIAL de cada negocio separado; el hijo es el USO del canvas como scorecard SEMANAL durante customer discovery, actividad distinta |
+| 47 | `venture_debt_introduccion -> ratio_deuda_capital` (1) | ALCANZABLE 6 saltos, via cajas del BMC (`relaciones_con_clientes`, `flujos_de_ingresos`...) | **ESCRITA**, DISCUTIBLE | el paso 1 pide evaluar el balance ideal entre equity y deuda; el ratio deuda-capital es exactamente esa medida; la cadena de 6 saltos, a diferencia de 36/40/42/45/46/57/59, NO es tematicamente coherente (atraviesa cajas del canvas ajenas a deuda/capital): se lee como alcanzabilidad incidental del grafo, no como cadena propia tejida, asi que no se aplica el patron D2 |
+| 48 | `estudio_desempeno_run_charts_servicios -> causas_comunes_vs_especiales` (3) | sin camino | **NO SE ENLAZA** | el hijo es el concepto fundacional de Deming (19 hijos, 18 padres ya establecidos, 15 pasos), desborda muy por encima del paso 3 (construir un grafico de corrida); ya anclado por las cartas de control clasicas (Shewhart, capacidad de proceso) |
+| 49 | `equipo_conjunto_de_mejora_con_proveedores -> fijacion_de_metas` (4) | sin camino | **NO SE ENLAZA** | gemelo por titulo: el hijo es el "Paso 10" del programa de catorce pasos de Crosby (padres `dia_cero_defectos`, `dia_cero_defectos_3`), sobre metas TRAS el Dia Cero Defectos; sin relacion con el equipo comprador-proveedor de la madre |
+| 50 | `gate2_second_screen -> metodo_payback` (4) | sin camino | **ESCRITA** | el paso 4 nombra literalmente "Payback Period"; el hijo es el metodo de Payback completo; entregable del hijo es subconjunto del "calculo financiero preliminar" de la madre; madre casi sin hijos propios (solo 1 de 5 pasos cubierto) |
+| 51 | `coordinacion_colaboracion_cadena_suministro -> plataforma_colaboracion_tiempo_real` (10) | sin camino | **ESCRITA** | el paso 10 nombra literalmente "plataforma de colaboracion online... en tiempo real"; el hijo es exactamente esa plataforma; madre con solo 1 hijo propio para 12 pasos |
+| 52 | `emprendedor_como_puesto_de_trabajo -> contabilidad_innovacion_pivote` (2) | sin camino | **NO SE ENLAZA** | el hijo aplica la contabilidad de innovacion a decisiones de PIVOTE (familia propia: MVP, metricas accionables, catalogo de pivotes), no a evaluar el desempeno de una PERSONA en el rol de emprendedor interno que pide el paso |
+| 53 | `guias_diseno_sistemas_estrategicos -> rediseno_tras_fracaso_proyecto` (7) | sin camino | **ESCRITA** | el paso 7 es casi el titulo del hijo ("si un proyecto fallo, cambiar el enfoque, no repetir el esfuerzo"); el hijo es el procedimiento de 4 pasos (post-mortem, causa raiz, rediseno, comunicar); entregable propio distinto |
+| 54 | `riesgo_fiduciario_insolvencia_deuda -> convertible_debt_fundamentos` (2) | ALCANZABLE 6 saltos | **NO SE ENLAZA** | vara con direccion (9.6.2): el hijo es el concepto FUNDACIONAL general de la deuda convertible; la madre es un riesgo legal especifico y derivado de usarla. La jerarquia natural es la inversa |
+| 55 | `clasificacion_caracteristicas_calidad -> key_process_product_characteristics` (1) | sin camino | **NO SE ENLAZA** | mismo hijo (KPC) que el par 32, mismo motivo: familia propia ya establecida (QFD, AMFE), que son exactamente las fuentes que el propio paso 1 del hijo cita |
+| 56 | `gestion_para_la_calidad -> key_process_product_characteristics` (1) | ALCANZABLE 5 saltos | **NO SE ENLAZA** | mismo hijo (KPC) otra vez; el paso 1 de esta madre es una definicion abstracta y organizacional de que es calidad (Juran), no el ejercicio operativo de clasificar caracteristicas que el hijo desarrolla |
+| 57 | `term_sheet_negociacion -> entender_term_sheet` (5) | ALCANZABLE 2 saltos via `cierre_term_sheet` (hijo directo de la madre) | **NO SE ENLAZA** | vara de la cadena (D2) mas direccion (9.6.2): el hijo es un marco introductorio/conceptual (por que existen los term sheets, ya padre suyo), mas cercano a un prerrequisito que a un desarrollo del paso 5 (firmar tras validacion legal) |
+| 58 | `estrategia_ti_verde -> oportunidades_ingresos_ti_sostenible` (5) | sin camino | **ESCRITA** | el paso 5 es casi el titulo del hijo ("explorar oportunidades de ingresos mediante software de sostenibilidad"); el entregable PROPIO de la madre (reduccion de costos/huella de carbono) NO cubre ingresos, senal 9.6.2 de que el paso 5 produce un entregable distinto que el hijo si cubre |
+| 59 | `etapa_build_business_case -> posicionamiento_por_tipo_de_mercado` (1) | ALCANZABLE 6 saltos via `value_proposition_startup` (hijo directo de la madre) | **NO SE ENLAZA** | vara de la cadena (D2): la cadena termina exactamente en `desarrollo_posicionamiento_producto -> posicionamiento_por_tipo_de_mercado`, y `desarrollo_posicionamiento_producto` YA es el padre establecido del hijo; el atajo saltaria la secuencia de desarrollo de posicionamiento ya tejida |
+
+**NUEVE aristas escritas, VEINTIUNA no enlazadas, CERO inconsistentes
+(presentes en una sola vista), CERO escalera rota.** Verificado por
+`scripts/loop/vuelta83_medir_tramo8.py` leyendo `dataset/metadata/
+master_graph.json` DESPUES de la escritura
+(`scripts/loop/vuelta83_tramo8_escribir.py`). La corrida de aplicacion
+citada en `docs/loop/SALIDA_V83_TRAMO8_ESCRIBIR_APLICACION.txt` es una
+SEGUNDA corrida, hecha para este mismo reporte: da **"YA ESTABA" en las
+nueve**, que es la confirmacion de idempotencia (las nueve aristas ya
+estaban escritas por la primera corrida, ninguna se duplica ni se
+reescribe).
+
+### 3.4. Los cuatro discutibles, marcados ANTES de saber si aciertan
+
+1. **33** (`gestion_efectiva_benchmarking -> reconocimiento_publico_recompensas`):
+   NO SE ENLAZA por ser generico y ya anclado en otra familia, pero el
+   contenido (capacitacion+reconocimiento) SI aparece nombrado en el paso 6
+   y la madre tiene pocos hijos propios. Vale que el auditor confirme si un
+   nodo ya establecido en una familia ajena puede seguir siendo un segundo
+   padre legitimo cuando el paso lo nombra casi literalmente.
+2. **43 y 44** (los dos apuntan al mismo hijo `evaluacion_desempeno_proyectos`
+   desde madres distintas): las dos se decidieron NO SE ENLAZA por la misma
+   razon de fondo (hijo generico, familia propia ya establecida en
+   `team_performance_assessment`). Vale que el auditor confirme si tratar
+   los dos casos con la misma razon es correcto o si alguno de los dos
+   pasos (impacto de capacitacion; desempeno de Belts) merece una lectura
+   distinta.
+3. **47** (`venture_debt_introduccion -> ratio_deuda_capital`): ESCRITA pese
+   a la vara de la cadena marcar ALCANZABLE (6 saltos), con la razon de que
+   la cadena no es tematicamente coherente (atraviesa cajas ajenas del
+   canvas). Es la primera vez en esta campana que se escribe una arista
+   ALCANZABLE sin aplicar el patron D2: vale que el auditor confirme si el
+   criterio de "coherencia tematica del camino" para distinguir un D2 real
+   de una alcanzabilidad incidental es sostenible, o si hace falta una
+   regla mas explicita (por ejemplo, un limite de saltos, o exigir que el
+   camino pase por nodos del mismo dominio).
+
+### 3.5. El cierre de la TAREA 3, medido tras la escritura
+
+Ciclo de tres: `docs/loop/SALIDA_V83_GATE0_CMD1_TRAS_TAREA3.txt` (OK, 0
+auto-aristas, 0 duplicadas, 0 divergentes), `SALIDA_V83_ETIQUETAS_TRAS_TAREA3.txt`
+(71 etiquetas, 0 en forma final, igual que en la apertura: la vuelta no
+movio etiquetas nuevas), `SALIDA_V83_SYNC_TRAS_TAREA3.txt` (6 assets).
+Aristas: `docs/loop/SALIDA_V83_CONTEO_TRAS_TAREA3.txt`:
+**8.970/8.949/17.919/9.593**, **9 mas** que las 8.961/8.940/17.901/9.584 de
+la apertura, en las cuatro cifras, como corresponde a 9 aristas escritas en
+las dos vistas. Motor **25/25** (`SALIDA_V83_MOTOR_TRAS_TAREA3.txt`); web
+**80/1.030/3** (`SALIDA_V83_WEB_TRAS_TAREA3.txt`); tsc **exitcode 0, cero
+lineas** (`SALIDA_V83_TSC_TRAS_TAREA3.txt`).
+
+---

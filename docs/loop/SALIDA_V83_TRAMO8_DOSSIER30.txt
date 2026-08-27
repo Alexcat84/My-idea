@@ -1,0 +1,705 @@
+====================================================================================================
+[30] recursos_apoyo_gubernamental_exportacion -> decisiones_de_financiamiento_exportacion  (paso senalado 3, dominio exportacion)
+MADRE (recursos_apoyo_gubernamental_exportacion) titulo: Recursos de Apoyo Gubernamental para Exportadores (CS, SBA, SBDC, USTDA, USAID, Ex-Im Bank)
+  resumen: En Estados Unidos existen varias agencias que apoyan a los negocios pequeños que exportan. El U.S. Commercial Service (CS) es el brazo de promocion comercial que depende de Comercio de Estados Unidos; la SBA gestiona programas de financiamiento; los SBDC ofrecen asesoria gratuita si es tu primera vez exportando; USTDA financia estudios de factibilidad en paises en desarrollo cuando tu producto enfrenta competencia subsidiada, es prioridad de desarrollo del pais destino o cuenta con aval de una embajada de EE.UU.; USAID y el Foreign Agricultural Service (FAS) apoyan comodities y asistencia técnica en mercados emergentes; Estado, a traves de su base BIDS, ofrece leads comerciales; y las oficinas estatales de comercio internacional te dan leads y acceso a misiones comerciales. Registrarte en Federal Business Opportunities (FedBizOpps) te permite monitorear contratos de subcontratacion disponibles.
+  paso 1: Contacta la oficina local del U.S. Commercial Service para asesoria inicial y estudios de mercado
+  paso 2: Consulta con un SBDC cercano si es tu primera experiencia exportadora
+  paso 3: Evalua financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantias de exportacion <== SENALADO
+  paso 4: Verifica si tu producto o servicio califica para financiamiento de USTDA o asistencia de FAS/USAID según tu sector
+  paso 5: Registrate en Federal Business Opportunities (FedBizOpps) y en la base BIDS de Estado para monitorear contratos y leads comerciales
+  paso 6: Contacta la oficina estatal de comercio internacional para obtener leads y participar en misiones comerciales
+  nodos_siguientes ya escritos: ['investigacion_mercado_primaria_secundaria_2', 'centro_asesoria_advocacy_center', 'programas_ex_im_bank']
+  nodos_previos ya escritos: ['ecosistema_global_emprendimiento_gee', 'evaluacion_mercados_objetivo', 'trade_missions']
+  entregable: Lista de agencias y programas de apoyo que contactaste, con registro en plataformas de oportunidades (FedBizOpps, BIDS) y reuniones o solicitudes iniciadas.
+HIJO (decisiones_de_financiamiento_exportacion) titulo: Factores para Decisiones de Financiamiento de Exportación
+  resumen: Antes de elegir cómo financiar una exportación, necesitas considerar si ese financiamiento es lo que puede cerrar la venta, qué plazo te exige el comprador, cuánto cuesta cada opción, qué riesgos hay detrás y cuánto capital de trabajo vas a necesitar antes y después de embarcar la mercancía. Para asesorarte puedes acudir a tu banco, a organismos de apoyo al comercio exterior o a agencias de financiamiento para exportadores que existan en tu mercado.
+  paso 1: Evalúa si el financiamiento es lo que puede definir si cierras o no la venta
+  paso 2: Determina el plazo de financiamiento que te pide el comprador
+  paso 3: Compara costos (tasas de interés y comisiones) de las opciones que tengas disponibles
+  paso 4: Analiza los riesgos políticos y económicos del país de tu comprador
+  paso 5: Calcula cuánto capital de trabajo vas a necesitar antes y después del embarque
+  nodos_siguientes ya escritos: ['extension_credito_compradores_extranjeros', 'programas_ex_im_bank', 'autoevaluacion_gerencial_exportacion', 'evaluacion_preparacion_empresa_exportar']
+  nodos_previos ya escritos: ['resolucion_problemas_de_pago']
+  entregable: Plan de financiamiento de exportación con opciones evaluadas y seleccionadas
+
+====================================================================================================
+[31] compra_equipos_verdes -> certificacion_leed_energy_star  (paso senalado 1, dominio environmental)
+MADRE (compra_equipos_verdes) titulo: Cómo elegir equipos tecnológicos sostenibles al comprar
+  resumen: Cuando compres equipo tecnológico nuevo, revisa cuatro cosas antes de decidir: si tiene certificación de eficiencia energética (Energy Star), qué política tiene el fabricante sobre sustancias tóxicas, si el diseño permite reciclarlo o reutilizar sus piezas, y si el fabricante tiene un programa para recibir de vuelta el equipo cuando ya no lo uses. Puedes apoyarte en guías como la 'Guide to Greener Electronics' de Greenpeace para comparar fabricantes.
+  paso 1: Pide certificación Energy Star en cada equipo que compres <== SENALADO
+  paso 2: Revisa la 'Guide to Greener Electronics' de Greenpeace antes de elegir proveedor
+  paso 3: Pregunta al fabricante qué política tiene sobre sustancias tóxicas
+  paso 4: Prioriza equipos diseñados para desarmarse y reciclarse fácil
+  paso 5: Confirma si el fabricante tiene un programa para recibir el equipo de vuelta al final de su vida útil
+  nodos_siguientes ya escritos: []
+  nodos_previos ya escritos: ['gestion_e_waste']
+  entregable: Tu propia lista de criterios de compra sostenible para equipos tecnológicos, lista para usar cada vez que compres
+HIJO (certificacion_leed_energy_star) titulo: Certificación LEED o Energy Star
+  resumen: LEED es un sistema de referencia reconocido que otorga puntos según atributos ambientales (ubicación, eficiencia hídrica, uso de energía, materiales, calidad ambiental interior). Energy Star certifica edificios que están entre el 25% más eficiente energéticamente, usando la herramienta Portfolio Manager. Los edificios certificados suelen mostrar mayor ocupación y mejores precios de renta y venta.
+  paso 1: Evalúa si tu proyecto o local califica para LEED o Energy Star
+  paso 2: Usa Portfolio Manager para medir la eficiencia energética actual del espacio
+  paso 3: Identifica qué puntos LEED puedes alcanzar según las categorías: sitio, agua, energía, materiales, calidad interior
+  paso 4: Documenta y reúne la evidencia necesaria para presentar la certificación
+  paso 5: Comunica la certificación como ventaja competitiva a tus clientes y a quienes trabajan contigo
+  nodos_siguientes ya escritos: ['compra_energia_limpia']
+  nodos_previos ya escritos: ['reduccion_residuos_construccion', 'eficiencia_hidrica_edificios', 'eficiencia_hidrica_edificios_2']
+  entregable: Solicitud de certificación LEED o Energy Star presentada con la documentación de soporte
+
+====================================================================================================
+[32] graficos_control_multivariados -> key_process_product_characteristics  (paso senalado 1, dominio quality)
+MADRE (graficos_control_multivariados) titulo: Gráficos de Control Multivariados
+  resumen: Cuando un producto tiene dos o más características de calidad, monitorearlas de forma independiente con gráficos separados puede ser engañoso, ya que la probabilidad conjunta de que ambas excedan sus límites simultáneamente es mucho menor que la individual. Los gráficos multivariados (como el T² de Hotelling o EWMA multivariado) abordan correctamente esta interdependencia.
+  paso 1: Identificar las múltiples características de calidad correlacionadas del producto <== SENALADO
+  paso 2: Calcular la matriz de covarianza entre las características
+  paso 3: Construir el estadístico multivariado (por ejemplo, T² de Hotelling)
+  paso 4: Establecer límites de control multivariados apropiados
+  paso 5: Monitorear el estadístico combinado en lugar de gráficos independientes
+  nodos_siguientes ya escritos: ['capacidad_proceso_concepto']
+  nodos_previos ya escritos: ['grafico_box_jenkins', 'grafico_cusum', 'grafico_media_movil_ewma']
+  entregable: Sistema de control multivariado implementado para características de calidad correlacionadas
+HIJO (key_process_product_characteristics) titulo: Características Clave de Producto y Proceso (KPC)
+  resumen: Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las especificaciones correspondientes, asegura que el esfuerzo de control se dirija a lo que el cliente valora y a lo que realmente afecta el resultado final.
+  paso 1: Recolecta inputs de investigación de mercado, QFD, revisión de diseño y AMFE
+  paso 2: Clasifica las características del producto según su importancia relativa: crítica, mayor, menor o incidental
+  paso 3: Identifica las partes sensibles a calidad usando criterios de complejidad y tasa de fallos
+  paso 4: Documenta la relación entre las características de proceso y los resultados de producto
+  paso 5: Registra las características clave en planos y especificaciones
+  nodos_siguientes ya escritos: ['analisis_flujo_proceso', 'control_proceso_variables', 'bucle_retroalimentacion_autoajustable', 'autocontrol_y_controlabilidad']
+  nodos_previos ya escritos: ['qfd_matriz_calidad', 'fmea_analisis_de_modos_de_falla', 'marco_analisis_mercado_cadena_suministro', 'planificacion_inicial_calidad', 'qfd_matriz', 'definiciones_operacionales_de_calidad', 'sujetos_de_control']
+  entregable: Listado clasificado de características clave de producto y proceso, con su nivel de criticidad y su relación causal documentada.
+
+====================================================================================================
+[33] gestion_efectiva_benchmarking -> reconocimiento_publico_recompensas  (paso senalado 6, dominio quality)
+MADRE (gestion_efectiva_benchmarking) titulo: Gestión Efectiva de Iniciativas de Benchmarking
+  resumen: Para que una iniciativa de benchmarking tenga éxito, debe gestionarse con un equipo dedicado liderado por un dueño de proyecto (project owner), mientras la alta gerencia cumple roles clave: fijar metas de benchmarking, integrar el benchmarking al plan estratégico, actuar como modelo a seguir, establecer el entorno para el cambio, crear la infraestructura necesaria (capacitación, reconocimiento) y monitorear el progreso. Es esencial que el bajo desempeño identificado no sea castigado, ya que el benchmarking no debe usarse como herramienta de evaluación de personal.
+  paso 1: Establecer un equipo de benchmarking multidisciplinario con un project owner al frente
+  paso 2: Definir y documentar una política de benchmarking con metas claras
+  paso 3: Integrar los hallazgos del benchmarking en el plan estratégico organizacional
+  paso 4: Asegurar que la alta gerencia actúe como modelo, removiendo obstáculos y comprometiendo recursos
+  paso 5: Crear un entorno de cambio que acepte y actúe sobre los hallazgos del benchmarking
+  paso 6: Proveer capacitación, reconocimiento y recompensas para los equipos involucrados <== SENALADO
+  paso 7: Monitorear el progreso continuamente y evitar sancionar el bajo desempeño detectado
+  nodos_siguientes ya escritos: ['recoleccion_validacion_datos_benchmarking', 'benchmarking_estrategia', 'caso_estudio_benchmarking_terminal', 'monitoreo_continuo_benchmarking']
+  nodos_previos ya escritos: ['aspectos_legales_eticos_benchmarking', 'tipos_benchmarking_por_participante']
+  entregable: Estructura organizacional y de gobernanza establecida para sostener el programa de benchmarking en el tiempo
+HIJO (reconocimiento_publico_recompensas) titulo: Reconocimiento Público y Recompensas
+  resumen: Estrategia de liderazgo para consolidar nuevos comportamientos deseados mediante recompensas y reconocimientos otorgados públicamente, con ceremonia, en presencia de las personas cuyo comportamiento se busca influenciar, y explicando claramente la conexión entre el premio y el comportamiento específico deseado. Ejemplo típico: asambleas para reconocer equipos de proyectos Six Sigma completados.
+  paso 1: Identificar comportamientos o logros específicos alineados con los objetivos estratégicos
+  paso 2: Organizar eventos públicos de reconocimiento con presencia de líderes
+  paso 3: Explicar explícitamente la conexión entre el premio y el comportamiento deseado
+  paso 4: Repetir el reconocimiento de forma consistente en el tiempo para reforzar la cultura deseada
+  nodos_siguientes ya escritos: ['practicas_gerenciales_no_delegables']
+  nodos_previos ya escritos: ['autocontrol_empoderamiento', 'auditorias_gerenciales_periodicas', 'breakthrough_cultural']
+  entregable: Programa formal de reconocimiento con criterios claros, eventos calendarizados y comunicación de logros vinculados a comportamientos deseados
+
+====================================================================================================
+[34] estructura_organizacional_funcional_proceso -> equipos_autodirigidos_servicio  (paso senalado 4, dominio quality)
+MADRE (estructura_organizacional_funcional_proceso) titulo: Estructuras Organizacionales: Funcional, por Proceso y Matricial
+  resumen: Existen tres tipos básicos de organización para gestionar el trabajo: organización funcional (departamentos por especialidad, con eficiencia interna pero barreras entre áreas), organización por procesos (responsabilidad asignada a un dueño de proceso, con enfoque en cliente pero riesgo de diluir expertise funcional) y organización matricial (híbrido que combina ambos enfoques, requiriendo acuerdos negociados entre gerentes funcionales y dueños de procesos). Un enfoque emergente es la organización en red y los sistemas sociotécnicos (STS), que integran el sistema técnico y el social.
+  paso 1: Evaluar ventajas y desventajas de la estructura funcional actual (eficiencia vs. silos)
+  paso 2: Determinar si los procesos cross-funcionales requieren un dueño de proceso dedicado
+  paso 3: Diseñar mecanismos matriciales de resolución de conflictos entre gerentes funcionales y dueños de proceso
+  paso 4: Considerar la incorporación de equipos autodirigidos y roles de 'coach' para supervisores <== SENALADO
+  paso 5: Evaluar el nivel de involucramiento de empleados en equipos permanentes y ad hoc
+  nodos_siguientes ya escritos: []
+  nodos_previos ya escritos: ['practicas_gerenciales_no_delegables']
+  entregable: Diagrama de estructura organizacional seleccionada (funcional, por proceso o matricial) con roles, líneas de reporte y mecanismos de resolución de conflictos definidos
+HIJO (equipos_autodirigidos_servicio) titulo: Equipos Autodirigidos en Servicios
+  resumen: Los equipos semiautónomos o autodirigidos son grupos de trabajo (10-12 personas) que gestionan colectivamente actividades de servicio al cliente, calidad, inventario, horarios y reportes. Ejemplos incluyen American Express, Taco Bell y Ritz-Carlton, donde los equipos comparten responsabilidad por objetivos de desempeño y el líder actúa como coach en vez de supervisor tradicional.
+  paso 1: Definir el alcance de responsabilidades del equipo alineado con el contacto con el cliente
+  paso 2: Entrenar a los miembros en roles múltiples (calidad, inventario, atención)
+  paso 3: Proveer información operativa y financiera en tiempo real al equipo
+  paso 4: Establecer al líder como coach, no como supervisor de control
+  nodos_siguientes ya escritos: ['six_sigma_dmaic']
+  nodos_previos ya escritos: ['normas_culturales_calidad']
+  entregable: Estructura de equipo autodirigido con roles definidos y sistema de información compartida
+
+====================================================================================================
+[35] consejo_de_calidad_y_rol_del_director -> metas_negocio_calidad  (paso senalado 3, dominio quality)
+MADRE (consejo_de_calidad_y_rol_del_director) titulo: Consejo de Calidad y Rol del Director de Calidad
+  resumen: El consejo de calidad es la instancia responsable de establecer visión, misión, valores y metas de calidad, revisar el progreso, integrar los objetivos de calidad en los planes de tu negocio y quitar los obstáculos del camino. Si tienes a alguien que lidera el tema calidad, esa persona cumple un doble rol: llevar el día a día de calidad y ayudarte a manejar la calidad como parte de la estrategia del negocio, así como quien lleva las finanzas te ayuda a decidir con los números.
+  paso 1: Forma un consejo de calidad con las personas que toman las decisiones importantes en tu negocio
+  paso 2: Define y comunica visión, misión, valores compartidos y tu política de calidad
+  paso 3: Integra las metas de calidad en tus planes de negocio y de desempeño <== SENALADO
+  paso 4: Designa responsables para los proyectos clave de calidad
+  paso 5: Revisa el progreso con frecuencia y elimina los obstáculos que encuentres
+  nodos_siguientes ya escritos: ['transferencia_de_actividades_a_departamentos_de_linea', 'rol_tactico_estrategico_oficina']
+  nodos_previos ya escritos: ['comunicar_politicas_organizacionales']
+  entregable: Un documento simple con los roles, responsabilidades y calendario de revisiones de tu consejo de calidad
+HIJO (metas_negocio_calidad) titulo: Metas de Calidad en el Plan de Negocio
+  resumen: Las organizaciones líderes incorporan metas de calidad cuantificadas y con plazo definido dentro de su plan de negocio estratégico (ej. reducir el costo de mala calidad en 50% en 5 años). Esto traduce amenazas y oportunidades organizacionales en objetivos concretos y medibles que guían la asignación de recursos.
+  paso 1: Identificar amenazas y oportunidades estratégicas relacionadas con calidad
+  paso 2: Traducir estas amenazas/oportunidades en metas cuantificadas con plazo definido
+  paso 3: Incorporar estas metas formalmente en el plan de negocio de la organización
+  nodos_siguientes ya escritos: ['despliegue_metas']
+  nodos_previos ya escritos: ['consejo_de_calidad', 'modelo_shingo_evaluacion_excelencia', 'presentaciones_alta_direccion', 'aprobacion_alta_direccion']
+  entregable: Sección de metas de calidad incluida en el plan de negocio estratégico, con cifras y plazos concretos
+
+====================================================================================================
+[36] verificar_clientes_y_canales -> validar_modelo_negocio_hechos  (paso senalado 6, dominio core)
+MADRE (verificar_clientes_y_canales) titulo: Verificar Quiénes Son los Clientes y Cómo Alcanzarlos
+  resumen: No basta con saber que existen clientes interesados: hay que confirmar que se les puede identificar, encontrar y vender de forma rentable. Esto implica dibujar arquetipos de cliente para cada segmento clave, construir un 'día en la vida' del cliente antes y después del producto, mapear el canal completo desde la empresa hasta el usuario final con sus costos y roles en cada paso, y medir el costo real -todo incluido- de adquirir o activar un grupo de clientes, para saber si los programas de adquisición son rentables y si escalan de forma lineal.
+  paso 1: Dibujar un arquetipo de cliente para cada segmento clave
+  paso 2: Crear un 'día en la vida' del cliente antes y después del producto
+  paso 3: Mapear el canal completo desde la empresa hasta el usuario final, con costos y roles en cada paso
+  paso 4: Medir el costo real, todo incluido, de adquirir o activar un grupo de clientes (por ejemplo, 50 clientes)
+  paso 5: Identificar qué programas de adquisición son más rentables y si escalan linealmente
+  paso 6: Actualizar el modelo de negocio con los costos de adquisición reales descubiertos <== SENALADO
+  nodos_siguientes ya escritos: ['verificar_modelo_ingresos', 'verificar_modelo_rentable', 'estrategia_plataformas_existentes', 'tacticas_cold_calling', 'descubrir_valor_inesperado_cliente', 'dia_en_la_vida_del_cliente']
+  nodos_previos ya escritos: ['verificar_product_market_fit']
+  entregable: Arquetipos de cliente, mapa de canal con costos, y actualización del lienzo de modelo de negocio con los costos de adquisición reales medidos
+HIJO (validar_modelo_negocio_hechos) titulo: Validar el Modelo de Negocio con Hechos
+  resumen: Se trata de convertir las hipótesis originales del business model canvas (propuesta de valor, segmentos de clientes, canales, relaciones con clientes, estructura de costos, flujos de ingresos) en hechos comprobados mediante pruebas extensivas cara a cara con cientos o miles de clientes reales. El canvas actúa como un 'scorecard' que documenta la evolución del negocio a través de iteraciones y pivotes.
+  paso 1: Reunir todas las snapshots semanales o por pivote del business model canvas
+  paso 2: Revisar cada componente del canvas y verificar que tenga respuestas fácticas, no hipotéticas
+  paso 3: Usar el checklist del modelo de negocio para recorrer cada casilla sistemáticamente
+  paso 4: Identificar pruebas pass/fail para cada hipótesis
+  paso 5: Determinar si los resultados cumplen los objetivos de tráfico o financieros
+  nodos_siguientes ya escritos: ['validar_modelo_financiero', 'metricas_que_importan', 'metrics_that_matter_framework']
+  nodos_previos ya escritos: ['war_room_datos', 'pivot_o_proceder', 'decision_pivotar_o_proceder', 'war_room_pivot_proceed', 'testear_circulo_cuadrado_rectangulo']
+  entregable: Business Model Canvas actualizado con cada componente respaldado por datos fácticos de clientes reales, con pruebas pass/fail identificadas
+
+====================================================================================================
+[37] lean_manufacturing_tps -> sistema_pull_push  (paso senalado 5, dominio quality)
+MADRE (lean_manufacturing_tps) titulo: Lean Manufacturing y Toyota Production System (TPS)
+  resumen: Lean es un conjunto de herramientas del TPS orientadas a identificar y eliminar sistemáticamente el desperdicio (muda), mejorar la calidad y reducir tiempos y costos de producción. Complementariamente, se enfoca en mejorar el flujo de trabajo (eliminando mura, la irregularidad) mediante técnicas como nivelación de producción, producción pull (kanban) y el Heijunka box. El objetivo es entregar lo correcto, en el lugar correcto, en el momento correcto y en la cantidad correcta, minimizando desperdicio y maximizando flexibilidad.
+  paso 1: Identificar los tipos de desperdicio (muda) presentes en los procesos productivos
+  paso 2: Implementar kaizen (mejora continua) como práctica constante
+  paso 3: Aplicar 6S para mantener un lugar de trabajo limpio y organizado
+  paso 4: Introducir poka-yoke (a prueba de errores) en puntos críticos del proceso
+  paso 5: Establecer sistemas pull mediante kanban para sincronizar la producción con la demanda <== SENALADO
+  paso 6: Usar el Heijunka box para nivelar y suavizar el flujo de producción
+  nodos_siguientes ya escritos: ['shingo_enterprise_excellence_model', 'shingo_prize', 'poka_yoke_a_prueba_de_errores']
+  nodos_previos ya escritos: ['mantenimiento_productivo_total']
+  entregable: Mapa de flujo de valor con desperdicios identificados y plan de implementación de herramientas Lean (kaizen, 6S, poka-yoke, kanban)
+HIJO (sistema_pull_push) titulo: Sistemas Pull versus Push en Producción
+  resumen: Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basandose en pronosticos de demanda, ignorando las restricciones reales de tu proceso y generando inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza segun su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operacion. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la produccion segun consumo real, no segun pronostico.
+  paso 1: Evaluar si tu operacion actual funciona bajo un esquema push o pull
+  paso 2: Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso
+  paso 3: Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente
+  paso 4: Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor
+  paso 5: Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad
+  paso 6: Implementar el sistema y capacitar a los operadores
+  nodos_siguientes ya escritos: ['eventos_kaizen_rie', 'constraint_management', 'smed_setup_reduction']
+  nodos_previos ya escritos: ['mapeo_flujo_valor', 'tres_tipos_desperdicio_tps', 'constraint_management', 'inventory_analysis_lean']
+  entregable: Sistema de produccion rediseñado bajo logica pull con kanbans implementados y metricas de flujo mejoradas.
+
+====================================================================================================
+[38] establecer_metas_reduccion_emisiones -> plan_accion_corto_mediano_largo_plazo  (paso senalado 3, dominio environmental)
+MADRE (establecer_metas_reduccion_emisiones) titulo: Establecer Metas de Reducción de Emisiones
+  resumen: Una vez que identifiques el origen de tus emisiones, tienes que fijar objetivos concretos de reducción. Las metas apropiadas varían según tu industria, tu capacidad y tu posición en el mercado. Ejemplos reales incluyen a USG (20% para 2020), MillerCoors (15% de reducción de energía para 2015) y Panasonic e Intel, que superaron ampliamente sus objetivos iniciales. Es importante que fijes metas públicas realistas pero ambiciosas a corto plazo, y que reserves los objetivos más transformadores para tu uso interno, ya que si no cumples una meta pública vas a tener que dar explicaciones y eso puede afectar tu reputación.
+  paso 1: Analiza el inventario de emisiones que ya tienes.
+  paso 2: Define un año base para la comparación.
+  paso 3: Establece metas de reducción a corto y largo plazo. <== SENALADO
+  paso 4: Comunica públicamente las metas alcanzables, y guarda para ti las más ambiciosas.
+  paso 5: Prepara explicaciones para posibles incumplimientos.
+  nodos_siguientes ya escritos: ['draft_plan_accion_climatico']
+  nodos_previos ya escritos: ['medir_huella_carbono_corporativa', 'plan_cambio_climatico', 'metas_desmaterializacion_energia']
+  entregable: Un documento con metas cuantificables y con plazos definidos de reducción de emisiones.
+HIJO (plan_accion_corto_mediano_largo_plazo) titulo: Plan de Acción a Corto, Mediano y Largo Plazo
+  resumen: Metodología para estructurar la implementación de sostenibilidad en tres horizontes temporales: un plan a un año enfocado en 'quick wins' fáciles de lograr y con alta visibilidad interna; un plan a tres años que incorpora iniciativas que requieren mayor inversión o construcción de capacidades, como rediseño de procesos de manufactura o edificios más verdes; y un plan a cinco años orientado a transformar la industria o línea de negocio mediante rediseño profundo de productos y estrategia.
+  paso 1: Identificar 'quick wins' de bajo costo y alta visibilidad para el plan de un año
+  paso 2: Realizar proyectos piloto para iniciativas de alto ROI potencial pero incertidumbre significativa
+  paso 3: Expandir a nivel de toda la empresa los pilotos exitosos en el plan de tres años
+  paso 4: Incluir en el plan de tres años la responsabilidad de cada función de negocio en desarrollar su propia agenda de sostenibilidad
+  paso 5: Reservar para el plan de largo plazo (cinco años) las iniciativas de rediseño profundo de producto o transformación de industria
+  nodos_siguientes ya escritos: ['vision_clara_sostenibilidad', 'etapas_creacion_valor_sostenibilidad', 'modelo_lubin_esty_4_etapas', 'vision_alineacion_sostenibilidad']
+  nodos_previos ya escritos: ['priorizacion_iniciativas_sostenibilidad']
+  entregable: Tres planes de acción documentados (uno, tres y cinco años) con iniciativas específicas, responsables y métricas de éxito.
+
+====================================================================================================
+[39] herramientas_de_diseno_de_calidad -> optimizacion_caracteristicas_diseno  (paso senalado 4, dominio quality)
+MADRE (herramientas_de_diseno_de_calidad) titulo: Herramientas Frecuentes de Diseño de Calidad
+  resumen: Conjunto de herramientas utilizadas frecuentemente en el diseño de calidad, incluyendo diagramas de afinidad, benchmarking, lluvia de ideas, análisis de arrastre, análisis competitivo, cartas de control, análisis de criticidad, grupos focales, investigación de mercado, encuestas, FMEA, análisis de árbol de fallas, diagramas de flujo, glosarios, redes de diseño (PERT/CPM), análisis de procesos, capacidad de proceso, análisis de vendibilidad, diagramas de dispersión, matrices de selección, hojas de cálculo de necesidades del cliente, y análisis de valor.
+  paso 1: Seleccionar las herramientas adecuadas según la fase del diseño (recolección de datos, análisis, diseño o verificación).
+  paso 2: Aplicar diagramas de afinidad o lluvia de ideas para agrupar necesidades o causas.
+  paso 3: Usar FMEA y análisis de árbol de fallas para priorizar riesgos.
+  paso 4: Emplear hojas de cálculo de necesidades del cliente y de diseño de producto para vincular necesidades con características. <== SENALADO
+  nodos_siguientes ya escritos: ['diseno_de_procesos_por_caracteristicas', 'design_for_six_sigma_dfss']
+  nodos_previos ya escritos: ['descubrir_necesidades_del_cliente']
+  entregable: Selección documentada de herramientas aplicadas en cada fase del proyecto de diseño.
+HIJO (optimizacion_caracteristicas_diseno) titulo: Optimización de Características y Metas del Producto
+  resumen: Una vez completado el diseño preliminar, debe optimizarse para satisfacer tanto al cliente como al proveedor, minimizando costos combinados y superando a la competencia. La optimización requiere un enfoque organizado que balancee necesidades multiorganizacionales mediante técnicas como revisión de diseño, equipos multifuncionales y negociación estructurada.
+  paso 1: Realizar revisiones de diseño formales en distintas etapas del desarrollo con especialistas externos al equipo
+  paso 2: Conformar equipos multifuncionales que incluyan a todos los interesados en el resultado del diseño
+  paso 3: Establecer reglas básicas de negociación estructurada entre clientes y proveedores antes de las reuniones
+  paso 4: Aplicar herramientas de optimización como análisis competitivo, de vendibilidad, de valor, crítico y FMEA
+  nodos_siguientes ya escritos: ['establecer_diseno_final_producto', 'analisis_competitivo_calidad', 'revision_diseno']
+  nodos_previos ya escritos: ['desarrollo_caracteristicas_producto']
+  entregable: Diseño de producto optimizado con documentación de revisiones, decisiones de equipo multifuncional y resultados de negociaciones estructuradas
+
+====================================================================================================
+[40] takt_time -> smed_setup_reduction  (paso senalado 5, dominio quality)
+MADRE (takt_time) titulo: Takt Time y Producción en Flujo
+  resumen: El takt time es el ritmo al cual el cliente compra una unidad de producto: el compás que marca la pauta de producción en un sistema pull. Se calcula dividiendo el tiempo disponible entre la demanda del cliente en un periodo definido. Entender el patrón, variabilidad y tendencia de esa demanda es esencial para calcularlo bien y ajustar tus recursos. Comparar el takt time con tu capacidad demostrada y teórica te permite balancear procesos, dimensionar tu dotación de trabajo y eliminar sobreproducción, avanzando hacia flujo de una sola pieza cuando sea posible. Si la demanda varía mucho, considera manejar líneas de valor separadas para no desbalancear tu operación completa.
+  paso 1: Calcular la demanda del cliente en un periodo definido
+  paso 2: Determinar el takt time dividiendo el tiempo disponible entre la demanda
+  paso 3: Comparar el takt time con tu capacidad demostrada y teórica
+  paso 4: Ajustar tu dotación de trabajo y balancear las estaciones según el takt
+  paso 5: Reducir tiempos de cambio (setup) para permitir lotes más pequeños <== SENALADO
+  paso 6: Si la demanda varía significativamente, separa tus líneas de valor
+  nodos_siguientes ya escritos: ['mapeo_flujo_valor', 'mapeo_flujo_valor_2', 'constraint_management']
+  nodos_previos ya escritos: ['ocho_desperdicios', 'lean_manufacturing', 'value_stream_mapping_2', 'ocho_desperdicios_lean']
+  entregable: Cálculo de takt time documentado con plan de balanceo de línea y ajuste de recursos según demanda
+HIJO (smed_setup_reduction) titulo: SMED – Reducción de Tiempos de Cambio (Setup)
+  resumen: Single Minute Exchange of Die (SMED) es un conjunto de técnicas desarrolladas por Shigeo Shingo para reducir drásticamente el tiempo de cambio de producto/proceso, idealmente a menos de 10 minutos, separando actividades internas (que requieren detener producción) de externas (que pueden hacerse sin detenerla).
+  paso 1: Documentar el proceso actual de cambio/setup
+  paso 2: Clasificar actividades en internas y externas
+  paso 3: Mover actividades internas a externas siempre que sea posible
+  paso 4: Simplificar y estandarizar las actividades internas restantes
+  paso 5: Eliminar necesidad de ajustes y pruebas de ensayo
+  nodos_siguientes ya escritos: ['tpm_maintenance']
+  nodos_previos ya escritos: ['sistema_pull_push', 'constraint_management']
+  entregable: Tiempo de cambio (setup) reducido y documentado, con procedimiento estandarizado
+
+====================================================================================================
+[41] autorregulacion_seguridad -> participacion_trabajadores  (paso senalado 3, dominio health_safety)
+MADRE (autorregulacion_seguridad) titulo: Modelo de Autorregulación en Seguridad Laboral
+  resumen: Cambio de paradigma legislativo desde reglas prescriptivas detalladas (Factories Act Model) hacia leyes basadas en objetivos de seguridad (HSW Act 1974), otorgando a las organizaciones libertad para determinar los medios con los que alcanzar los fines de seguridad exigidos. El Informe Robens identificó que el exceso de leyes fragmentadas condicionaba a las personas a pensar la seguridad como un asunto de reglas externas, y propuso fomentar la autorregulación mediante mejor organización de seguridad interna, iniciativa gerencial y participación de los trabajadores.
+  paso 1: Revisar si la normativa aplicable es prescriptiva (medios) o basada en objetivos (resultados)
+  paso 2: Diseñar un sistema interno de gestión de seguridad que defina cómo se alcanzarán los objetivos exigidos por ley
+  paso 3: Involucrar activamente a los trabajadores en el diseño e implementación de las medidas de seguridad <== SENALADO
+  paso 4: Asegurar el compromiso gerencial en todos los niveles, no solo en la dirección
+  nodos_siguientes ya escritos: ['safety_case_evaluacion_formal', 'coshh_procedimiento_rolling']
+  nodos_previos ya escritos: ['autonomia_dependencia_regulatoria', 'enfoques_definicion_riesgo_aceptable', 'legislacion_especifica_vs_accidente_organizacional']
+  entregable: Sistema de gestión de seguridad interno documentado que traduzca los objetivos legales de seguridad en procedimientos concretos y participativos
+HIJO (participacion_trabajadores) titulo: Participación de los Trabajadores en el Programa de Seguridad
+  resumen: Tus trabajadores, incluidos subcontratistas y temporales, conocen mejor que nadie los peligros de su propio trabajo. Por eso debes hacerlos participar activamente en todas las fases del programa: diseño, reporte, investigación de incidentes y evaluación de mejoras, sin que teman represalias. Elimina las barreras de idioma, habilidad, educación o miedo a represalias, y revisa que los incentivos que uses no terminen desalentando el reporte. Mantén canales de comunicación abiertos, da retroalimentación frecuente sobre lo que haces con cada reporte, y protege legalmente a quien reporta según la norma de tu país (en Estados Unidos, esto está amparado por la Sección 11(c) de la ley de salud y seguridad ocupacional, OSH Act).
+  paso 1: Crea un proceso simple para que te reporten peligros, incidentes y casi accidentes, incluyendo la opción de hacerlo de forma anónima
+  paso 2: Da retroalimentación frecuente sobre lo que haces con cada reporte que recibes
+  paso 3: Comparte con tus trabajadores la información de seguridad, como las hojas de datos de seguridad (SDS), los datos de lesiones y las inspecciones
+  paso 4: Involucra a tus trabajadores en el diseño de metas, análisis de peligros, inspecciones, capacitación y desarrollo de soluciones
+  paso 5: Elimina barreras de idioma, habilidad, educación o miedo a represalias
+  paso 6: Comunica con claridad las protecciones contra represalias que existen en tu país y revisa que tus incentivos no desalienten el reporte
+  nodos_siguientes ya escritos: ['identificacion_evaluacion_peligros', 'prevencion_control_peligros', 'educacion_entrenamiento_seguridad', 'identificacion_evaluacion_peligros_2', 'seguridad_soldadura_corte_bronceado', 'seguridad_trabajadores_jovenes', 'critica_behavior_based_safety', 'responsabilizacion_del_trabajador', 'preguntar_que_no_quien', 'capacitacion_educacion_seguridad', 'derecho_rechazo_trabajo_peligroso', 'programa_proteccion_denunciantes']
+  nodos_previos ya escritos: ['liderazgo_gerencial_seguridad', 'compromiso_gerencial_seguridad', 'escaleras_portatiles_seguridad', 'prevencion_violencia_laboral', 'programa_proteccion_respiratoria', 'programa_seguridad_salud_ocupacional']
+  entregable: Un sistema de reporte funcionando, con evidencia de que tus trabajadores participan activamente en al menos dos fases del programa
+
+====================================================================================================
+[42] depreciacion_y_amortizacion -> impacto_estado_resultados_en_balance  (paso senalado 6, dominio core)
+MADRE (depreciacion_y_amortizacion) titulo: Depreciación y Amortización: Impacto en la Utilidad
+  resumen: La depreciación reparte el costo de un activo físico -un vehículo, un camión, un equipo- a lo largo de su vida útil estimada, en lugar de cargar todo el gasto de una sola vez. La amortización aplica la misma idea a activos intangibles, como patentes o plusvalía (goodwill). El concepto es simple, pero tienes bastante margen para decidir esa vida útil: usar 1 año en vez de 3 o 6 para el mismo tipo de activo cambia de forma directa la utilidad neta que reportas y tu patrimonio, una zona clásica de subjetividad contable. Casos reales de fraude, como manipular la depreciación de camiones y contenedores para inflar ganancias en cientos de millones de dólares, muestran cómo cambiar esos supuestos sirve para maquillar resultados. Necesitas entender cómo tu negocio deprecia sus activos, porque eso afecta tu resultado neto, tu balance y las decisiones que tomen bancos e inversionistas sobre ti.
+  paso 1: Identifica todos los activos de capital de tu negocio (equipos, vehículos, sistemas, propiedad, planta y equipo) que se deprecian
+  paso 2: Revisa con tu contador qué método de depreciación usas (línea recta u otro) y la vida útil estimada de cada tipo de activo
+  paso 3: Evalúa si esa vida útil estimada es razonable comparada con lo que es normal en tu sector
+  paso 4: Calcula la depreciación acumulada y su efecto en el valor neto en libros de tus activos
+  paso 5: Detecta cambios año tras año en los supuestos de vida útil que puedan indicar que se está maquillando la utilidad
+  paso 6: Entiende el impacto de la depreciación y amortización en tu estado de resultados y tu balance <== SENALADO
+  paso 7: Piensa cómo un cambio en tu política de depreciación afectaría las ganancias que reportas, antes de pedir un préstamo o presentar resultados a inversionistas
+  nodos_siguientes ya escritos: ['calculo_ebitda', 'lectura_balance_general', 'activos_intangibles_amortizacion', 'cargos_extraordinarios_bandera_amarilla']
+  nodos_previos ya escritos: ['clasificacion_tipos_activos', 'distincion_cogs_gastos_operativos', 'arte_de_las_finanzas', 'cogs_vs_operating_expenses', 'contabilidad_innovacion_largo_plazo']
+  entregable: Una tabla de tus activos de capital con el método y el cronograma de depreciación o amortización, la vida útil que asumes, el valor neto en libros y el impacto en tu estado de resultados
+HIJO (impacto_estado_resultados_en_balance) titulo: Cómo el Estado de Resultados Impacta el Balance General
+  resumen: Todo cambio en el estado de resultados repercute en el balance: las ventas generan efectivo o cuentas por cobrar, los gastos reducen efectivo o aumentan pasivos acumulados, y la utilidad neta incrementa el patrimonio (vía utilidades retenidas) mientras una pérdida lo reduce. Decisiones operativas aparentemente simples (comprar inventario, atender nuevos clientes, adquirir equipo) tienen efectos complejos y a veces contradictorios sobre activos, pasivos y liquidez que deben analizarse integralmente.
+  paso 1: Analizar cada decisión operativa (compras, ventas, nuevas contrataciones) por su efecto simultáneo en balance y estado de resultados.
+  paso 2: Antes de aprobar compras grandes de inventario, evaluar impacto en cuentas por pagar y flujo de caja.
+  paso 3: Al expandir a nuevos segmentos de clientes, evaluar riesgo de cobranza y su efecto en cuentas por cobrar.
+  paso 4: Entrenar a gerentes de área para pensar más allá de su línea de P&L y considerar el balance completo.
+  nodos_siguientes ya escritos: ['evaluacion_salud_financiera_empresa', 'efecto_bullwhip']
+  nodos_previos ya escritos: ['por_que_balancea_el_balance', 'accruals_y_activos_prepagados']
+  entregable: Análisis de impacto cruzado de una decisión operativa sobre el estado de resultados y el balance general.
+
+====================================================================================================
+[43] desarrollo_expertos_capaces -> evaluacion_desempeno_proyectos  (paso senalado 4, dominio quality)
+MADRE (desarrollo_expertos_capaces) titulo: Desarrollo de Expertos Capaces (Capable Experts)
+  resumen: Consiste en desarrollar en el personal las competencias y capacidades necesarias, basadas en las necesidades reales de los clientes internos, para lograr la excelencia en desempeño y calidad. Incluye la evaluación de habilidades, la reeducación y la certificación como mecanismos para cerrar brechas y transformar la Oficina actual en la Oficina que la organización necesita para sostenerse en el futuro (ej. Green Belts, Black Belts, expertos Lean).
+  paso 1: Utilizar los resultados de la evaluación de competencias como línea base
+  paso 2: Diseñar un currículo de capacitación por rol y nivel jerárquico
+  paso 3: Establecer un programa de certificación interno (ej. Green Belt, Black Belt, Lean Expert)
+  paso 4: Medir el impacto de la capacitación en el desempeño de los proyectos de mejora <== SENALADO
+  nodos_siguientes ya escritos: []
+  nodos_previos ya escritos: ['evaluacion_competencias_calidad', 'rol_tactico_estrategico_oficina', 'oficina_calidad_y_excelencia']
+  entregable: Programa de certificación y desarrollo de talento en calidad implementado, con métricas de seguimiento
+HIJO (evaluacion_desempeno_proyectos) titulo: Evaluación de Desempeño en Proyectos de Mejora
+  resumen: Evaluar el desempeño individual en proyectos de equipo es complejo porque los resultados son colectivos. Se requieren métricas a nivel de gerencia como número de proyectos iniciados/completados/abortados, valor generado y porcentaje de subordinados activos en equipos de proyecto.
+  paso 1: Definir métricas de desempeño para proyectos: iniciados, en progreso, completados, abortados
+  paso 2: Medir el valor generado en términos de reducción de costos y ROI
+  paso 3: Calcular el porcentaje de empleados activos en equipos de mejora
+  paso 4: Establecer criterios cualitativos para evaluar contribución individual dentro del equipo
+  nodos_siguientes ya escritos: ['entrenamiento_para_breakthrough']
+  nodos_previos ya escritos: ['revision_progreso', 'team_performance_assessment']
+  entregable: Tablero de métricas de desempeño de proyectos de mejora por gerente/área
+
+====================================================================================================
+[44] estructura_competencias_six_sigma_lean -> evaluacion_desempeno_proyectos  (paso senalado 5, dominio quality)
+MADRE (estructura_competencias_six_sigma_lean) titulo: Estructura de Competencias Six Sigma y Lean (Belts)
+  resumen: Define los roles y niveles de competencia dentro de una organización que implementa Six Sigma y Lean, desde Green Belt (participante en proyectos) hasta Master Black Belt/Lean Master (experto que integra la estrategia de la organización). Cada rol tiene responsabilidades claras: liderazgo de proyectos, mentoría, capacitación y alineación con los objetivos estratégicos del negocio, formando una matriz de competencias que sustenta el despliegue de la mejora continua.
+  paso 1: Definir el perfil de competencias requerido para cada nivel (Green Belt, Black Belt, Master Black Belt, Lean Expert, Lean Master)
+  paso 2: Asignar roles y responsabilidades claras según el nivel de experiencia y liderazgo esperado
+  paso 3: Establecer planes de capacitación y certificación para cada nivel de competencia
+  paso 4: Vincular los roles con los proyectos y objetivos estratégicos del negocio
+  paso 5: Evaluar periódicamente el desempeño de los Belts en la ejecución de proyectos de mejora <== SENALADO
+  nodos_siguientes ya escritos: ['aprendizaje_institucionalizado_benchmarking']
+  nodos_previos ya escritos: ['roles_six_sigma']
+  entregable: Matriz de competencias y perfiles de puesto documentados para el despliegue de programas Six Sigma/Lean en la organización
+HIJO (evaluacion_desempeno_proyectos) titulo: Evaluación de Desempeño en Proyectos de Mejora
+  resumen: Evaluar el desempeño individual en proyectos de equipo es complejo porque los resultados son colectivos. Se requieren métricas a nivel de gerencia como número de proyectos iniciados/completados/abortados, valor generado y porcentaje de subordinados activos en equipos de proyecto.
+  paso 1: Definir métricas de desempeño para proyectos: iniciados, en progreso, completados, abortados
+  paso 2: Medir el valor generado en términos de reducción de costos y ROI
+  paso 3: Calcular el porcentaje de empleados activos en equipos de mejora
+  paso 4: Establecer criterios cualitativos para evaluar contribución individual dentro del equipo
+  nodos_siguientes ya escritos: ['entrenamiento_para_breakthrough']
+  nodos_previos ya escritos: ['revision_progreso', 'team_performance_assessment']
+  entregable: Tablero de métricas de desempeño de proyectos de mejora por gerente/área
+
+====================================================================================================
+[45] poder_a_traves_de_la_accion -> compromiso_organismico_en_la_accion  (paso senalado 3, dominio core)
+MADRE (poder_a_traves_de_la_accion) titulo: Poder a Través de la Acción: Unificar el Pensamiento Mediante el Actuar
+  resumen: Frente al 'evangelio de la relajación' (que puede derivar en pasividad intelectual), Wallas propone la fórmula 'Poder a través de la Acción': actuar sobre las propias ideas y opiniones privadas genera una unidad psicológica entre el 'yo real', el 'yo ideal' y el 'yo que otros perciben', aumentando la energía disponible para el pensamiento. Cita a James: hay que actuar inmediatamente sobre cada resolución o impulso emocional, pues dejarlo evaporar sin fruto práctico entorpece futuras resoluciones. La acción debe ser voluntaria y comprometer a todo el organismo, no un mero movimiento mecánico.
+  paso 1: Actuar de inmediato sobre cualquier resolución o idea prometedora en lugar de posponerla
+  paso 2: Buscar oportunidades de expresar públicamente o poner en práctica opiniones que hasta ahora eran solo especulación privada
+  paso 3: Asegurar que la acción sea genuina y comprometida ('significar lo que se dice/hace'), no un gesto mecánico vacío <== SENALADO
+  paso 4: Vincular conscientemente el trabajo intelectual cotidiano a un propósito o impacto mayor para sostener la energía a largo plazo (como hizo Bentham)
+  nodos_siguientes ya escritos: ['wallas_etapa_verificacion', 'afinar_frente_difuso_innovacion', 'esfuerzo_voluntario_vs_urge_espontaneo', 'fracaso_como_aprendizaje_startup']
+  nodos_previos ya escritos: ['emocion_como_motor_pensamiento']
+  entregable: Una lista de resoluciones o ideas pendientes convertidas en acciones concretas ya ejecutadas o programadas, junto con una declaración del propósito mayor que conecta el trabajo diario con su impacto.
+HIJO (compromiso_organismico_en_la_accion) titulo: Acción Comprometida vs. Movimiento Vacío
+  resumen: Wallas distingue entre la acción meramente motora (repetir gestos mecánicamente) y la acción voluntaria en la que 'todo el organismo participa'. Solo cuando una persona realmente 'quiere decir lo que dice' o 'hace lo que hace' con intención genuina, la acción fortalece la energía mental y emocional. Un actor que repite frases amables sin sentirlas puede incluso aumentar su aversión en lugar de su afecto. Para emprendedores, esto implica que ejecutar tareas (pitches, ventas, entrevistas a clientes) de forma mecánica y sin compromiso genuino no genera aprendizaje ni energía; se requiere autenticidad e implicación real en cada acción para que esta alimente el pensamiento y la motivación futura.
+  paso 1: Antes de ejecutar una tarea repetitiva (pitch, entrevista, demo), preguntarse si realmente se cree en lo que se va a decir o hacer
+  paso 2: Evitar la ejecución mecánica de scripts o guiones sin conexión emocional genuina
+  paso 3: Reconectar periódicamente con el propósito detrás de tareas repetitivas para mantener la autenticidad
+  paso 4: Detectar señales de desgaste emocional o cinismo que indiquen pérdida de compromiso genuino en la acción
+  nodos_siguientes ya escritos: ['proposito_como_motor_energia']
+  nodos_previos ya escritos: ['habito_energetico_vs_mecanico']
+  entregable: Un checklist personal o ritual de 'reconexión con el propósito' antes de tareas repetitivas clave (pitches, entrevistas de descubrimiento de clientes, ventas)
+
+====================================================================================================
+[46] unbundling_business_models -> business_model_canvas_scorecard  (paso senalado 4, dominio core)
+MADRE (unbundling_business_models) titulo: Separar los tres negocios que conviven en tu idea (patrón de desagregación)
+  resumen: Dentro de un mismo negocio suelen convivir tres tipos de actividad muy distintos: cuidar la relación con el cliente, crear productos nuevos, y sostener la infraestructura que hace que todo funcione. Cada uno se mueve con lógicas distintas: distinta economía, distinta forma de competir y distinta cultura de trabajo. Si los mezclas en una sola operación, uno le termina robando foco al otro y acabas haciendo concesiones que no te convienen. Por eso conviene, cuando puedes, separarlos en partes independientes.
+  paso 1: Mira tus actividades y marca cuáles son relación con el cliente, cuáles son crear producto nuevo y cuáles son infraestructura que sostiene la operación.
+  paso 2: Detecta dónde estas tres cosas chocan entre sí dentro de tu día a día o te obligan a elegir una en contra de otra.
+  paso 3: Decide si te conviene separar alguna de estas partes en algo independiente para ganar foco y eficiencia.
+  paso 4: Dibuja el modelo de negocio (Business Model Canvas) de cada parte separada, como si fuera su propio negocio. <== SENALADO
+  nodos_siguientes ya escritos: ['multi_sided_platforms', 'long_tail_pattern']
+  nodos_previos ya escritos: ['lienzo_modelo_negocio', 'fase_diseno_prototipado_modelos']
+  entregable: Tienes claro cuáles de los tres tipos de negocio conviven en lo que haces, y decidiste si separarlos o convivir con las concesiones que eso implica.
+HIJO (business_model_canvas_scorecard) titulo: El Business Model Canvas como Scorecard Semanal
+  resumen: El Business Model Canvas de Osterwalder, además de ser una foto estática del negocio, se usa en Customer Discovery como un scorecard semanal para rastrear el progreso en la búsqueda del modelo de negocio. Cada semana actualizas el canvas reflejando pivotes e iteraciones, resaltando en rojo los cambios respecto a la semana anterior. Esto permite ver claramente qué hipótesis cambiaron y cuáles se mantienen, generando un historial que documenta cómo evoluciona tu entendimiento del negocio con el tiempo. Es especialmente útil cuando no tienes claridad propia sobre tu modelo de negocio o necesitas visualizar tu progreso semana a semana de forma tangible.
+  paso 1: Llenar el canvas inicial con tus hipótesis en las 9 áreas: segmentos, propuesta de valor, canales, relaciones, recursos, socios e ingresos
+  paso 2: Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho, y ademas cada vez que obtengas nueva evidencia
+  paso 3: Resaltar en rojo los cambios respecto a la semana anterior
+  paso 4: Una vez que confirmes los cambios, integrarlos como el nuevo canvas base en negro para la siguiente semana
+  paso 5: Repetir este proceso de forma continua durante todo tu customer discovery
+  paso 6: Sal a validar cada hipótesis con clientes reales cara a cara.
+  paso 7: Conserva todas las versiones del canvas como un flip book que documente la evolución de tu modelo de negocio.
+  paso 8: Evita convertir el canvas en un plan operativo prematuro basado en suposiciones sin validar.
+  nodos_siguientes ya escritos: ['customer_validation', 'biblioteca_experimentos_validacion', 'pivote_o_proceder', 'filosofia_customer_validation', 'filosofia_validacion_clientes', 'intimacion_emocional_como_senal_de_verdad', 'startup_como_experimento_cientifico', 'usuarios_extremos_edge_cases', 'diseno_experimentos_hipotesis', 'customer_discovery', 'modelo_customer_development', 'pivote_startup']
+  nodos_previos ya escritos: ['problem_solution_fit', 'hipotesis_de_tamano_de_mercado', 'producto_minimo_viable', 'lienzo_modelo_negocio', 'pivotes_e_iteraciones', 'business_model_environment_mapping', 'business_plan_cinco_secciones', 'search_for_business_model']
+  entregable: Serie histórica de canvases semanales que documenta la evolución de tu modelo de negocio.
+
+====================================================================================================
+[47] venture_debt_introduccion -> ratio_deuda_capital  (paso senalado 1, dominio core)
+MADRE (venture_debt_introduccion) titulo: Deuda de Riesgo (Venture Debt) como Complemento al Equity
+  resumen: El venture debt es un préstamo diseñado para startups de alto crecimiento respaldadas por capital de riesgo. A diferencia del equity, la deuda tiene términos de repago definidos, tasas y covenants, pero es menos flexible. La regla fundamental es que el venture debt sigue al equity, no lo reemplaza: los prestamistas usan el respaldo de VCs como validación principal para el underwriting. El monto disponible suele ser 25-50% de la última ronda de equity levantada, y sirve como extensión de runway, seguro de performance, o puente hacia la siguiente ronda, reduciendo la dilución de fundadores.
+  paso 1: Evaluar el balance ideal entre equity y deuda dentro de la estrategia de capital. <== SENALADO
+  paso 2: Confirmar que la empresa ya cuenta con respaldo de capital de riesgo institucional antes de buscar venture debt.
+  paso 3: Identificar bancos especializados (ej. SVB) o fondos de deuda de riesgo con track record en el sector.
+  paso 4: Discutir con el board y los VCs la conveniencia y momento de levantar deuda.
+  paso 5: Definir el propósito específico del préstamo (extensión de runway, capex, adquisición, puente a próxima ronda).
+  nodos_siguientes ya escritos: ['venture_debt_terminos_economicos', 'plan_a_b_c_soft_landing']
+  nodos_previos ya escritos: ['equity_crowdfunding_terminos', 'venture_debt_terminos_economicos', 'crowdfunding_legal_exemptions_jobs_act']
+  entregable: Análisis de estrategia de capital que determine cuánta deuda de riesgo levantar, con qué prestamista y para qué propósito específico.
+HIJO (ratio_deuda_capital) titulo: Ratio Deuda-Capital (Debt-to-Equity)
+  resumen: Mide cuánta deuda tiene la empresa por cada dólar de patrimonio de los accionistas. Es clave para bancos e inversores al evaluar riesgo de préstamo. Un ratio alto indica mayor apalancamiento y puede dificultar futuras financiaciones por deuda, mientras que uno muy bajo puede convertir a la empresa en objetivo de compra apalancada.
+  paso 1: Calcular deuda total dividida entre patrimonio neto usando el balance
+  paso 2: Comparar el ratio con el promedio de la industria
+  paso 3: Evaluar la tolerancia al riesgo del fundador antes de decidir financiarse con deuda o capital
+  paso 4: Consultar con un banquero qué ratio es aceptable para el tamaño y sector de la empresa
+  nodos_siguientes ya escritos: ['cobertura_de_intereses', 'tasa_crecimiento_sostenible']
+  nodos_previos ya escritos: ['lectura_balance_general', 'retorno_sobre_capital']
+  entregable: Cálculo del ratio deuda-capital con comparación sectorial y decisión documentada sobre estrategia de financiamiento
+
+====================================================================================================
+[48] estudio_desempeno_run_charts_servicios -> causas_comunes_vs_especiales  (paso senalado 3, dominio quality)
+MADRE (estudio_desempeno_run_charts_servicios) titulo: Uso de Gráficos de Corrida (Run Charts) para Estudiar Desempeño en Servicios
+  resumen: Deming propone el uso sistemático de gráficos de corrida (run charts) y distribuciones estadísticas para monitorear variables clave de desempeño en organizaciones de servicio (hospitales, aerolíneas, hoteles). Este enfoque permite detectar causas especiales de variación, medir el impacto de mejoras al sistema, y dirigir la capacitación y el reentrenamiento hacia áreas específicas que lo requieran, evitando decisiones basadas en anécdotas o percepciones subjetivas.
+  paso 1: Identificar las variables críticas de desempeño del servicio (errores, tiempos, quejas, reprocesos)
+  paso 2: Recolectar datos de forma sistemática y periódica (semanal, mensual) para cada variable
+  paso 3: Construir gráficos de corrida o distribuciones para detectar causas especiales de variación <== SENALADO
+  paso 4: Usar los hallazgos para dirigir recursos de capacitación y rediseño de procesos hacia áreas fuera de control estadístico
+  nodos_siguientes ya escritos: []
+  nodos_previos ya escritos: ['adaptacion_14_puntos_servicio_medico']
+  entregable: Tablero de indicadores con gráficos de corrida actualizados periódicamente para las variables críticas del servicio
+HIJO (causas_comunes_vs_especiales) titulo: Causas Comunes vs Causas Especiales de Variación
+  resumen: Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.
+  paso 1: Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes
+  paso 2: Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos
+  paso 3: Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales
+  paso 4: Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla
+  paso 5: Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas
+  paso 6: Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales
+  paso 7: Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo
+  paso 8: Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+  paso 9: Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).
+  paso 10: Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.
+  paso 11: Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.
+  paso 12: Comunicar a los equipos que el objetivo es identificar problemas, no culpables
+  paso 13: Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo
+  paso 14: Fomentar la colaboración entre turnos y departamentos para resolver causas comunes
+  paso 15: Analizar la distribución de errores o defectos entre todas las personas usando limites de control
+  nodos_siguientes ya escritos: ['experimento_cuentas_rojas', 'control_estadistico_de_procesos_en_tiempo_real', 'reporte_gerencial_diagnostico_calidad', 'responsabilidad_gerencial_causas_comunes', 'control_estadistico_proceso', 'capacidad_del_proceso', 'grafico_de_corrida_run_chart', 'sistema_responsabilidad_gerencial', 'mejora_del_sistema_responsabilidad_gerencial', 'adopcion_liderazgo', 'aim_of_leadership', 'eliminacion_firmas_redundantes', 'gestion_miedo_reportes', 'graficos_control_individuales_operarios', 'importancia_de_la_capacitacion', 'mal_uso_histograma_vs_carta_control', 'mejora_continua_del_proceso', 'muestreo_con_seguimiento_no_respondientes', 'sistema_responsabilidad_gerencial_2']
+  nodos_previos ya escritos: ['limites_de_especificacion_vs_limites_de_control', 'estandarizacion_industrial_voluntaria', 'falacia_meta_numerica_sin_metodo', 'carta_de_control_shewhart', 'aim_of_leadership', 'capacidad_de_proceso', 'capacidad_de_proceso_2', 'control_estadistico_de_procesos', 'costo_de_mala_calidad_copq', 'estudio_mezclas_multiples_fuentes', 'evaluacion_de_desempeno_merito', 'limites_control_por_juicio_error', 'mejora_continua_del_proceso', 'mejora_del_sistema_responsabilidad_gerencial', 'sistema_estable_causas_comunes', 'sistema_estable_responsabilidad_gerencial', 'control_estadistico_de_inventario_en_transito', 'uso_inadecuado_computadoras']
+  entregable: Gráfico de corrida o de control con los puntos clasificados como causa común o especial y un plan de acción diferenciado para cada tipo.
+
+====================================================================================================
+[49] equipo_conjunto_de_mejora_con_proveedores -> fijacion_de_metas  (paso senalado 4, dominio quality)
+MADRE (equipo_conjunto_de_mejora_con_proveedores) titulo: Equipo Conjunto Comprador-Proveedor para Mejora de Cadena de Suministro
+  resumen: Enfoque de cinco niveles progresivos para la mejora de la cadena de suministro: crear un equipo conjunto para alinear metas y trabajar en problemas crónicos, enfocarse en reducción de costos, evaluar el valor agregado de cada eslabón, intercambiar información rutinariamente, y finalmente operar la cadena como un proceso único colaborativo. Requiere liderazgo de la alta gerencia en ambas organizaciones.
+  paso 1: Formar un equipo multifuncional con representantes del comprador y del proveedor
+  paso 2: Alinear objetivos y analizar el proceso de negocio de la cadena de suministro
+  paso 3: Establecer la 'prueba de la necesidad' con datos concretos (ej. costos de garantía)
+  paso 4: Fijar metas conjuntas de mejora (ej. reducción de costos en X%) <== SENALADO
+  paso 5: Proveer entrenamiento y asistencia técnica al proveedor
+  paso 6: Realizar reuniones de seguimiento entre equipos directivos de ambas partes
+  paso 7: Establecer reconocimientos para proveedores destacados
+  nodos_siguientes ya escritos: ['planificacion_de_la_inspeccion', 'seleccion_hacer_o_comprar']
+  nodos_previos ya escritos: ['analisis_pareto_de_proveedores', 'punto_equilibrio_calidad', 'punto_equilibrio_calidad_inspeccion', 'regla_todo_o_nada_inspeccion_2', 'colaboracion_transporte_ctm', 'logistica_inversa_retornos', 'metricas_desempeno_cadena_suministro', 'marco_analisis_mercado_cadena_suministro']
+  entregable: Plan de mejora conjunta documentado con metas, roles y mecanismos de seguimiento entre comprador y proveedor
+HIJO (fijacion_de_metas) titulo: Fijar metas de mejora (Paso 10)
+  resumen: Después del Día Cero Defectos (Día ZD), tienes que convertir los compromisos verbales en acciones concretas: pon metas de mejora específicas y medibles, y mejor si las define quien hace el trabajo, no tú desde arriba. Evita metas de cronograma y enfócate en reducir defectos, porque la mejora en los tiempos llega sola cuando bajan los errores.
+  paso 1: Una semana después del Día ZD, pide a cada grupo que proponga dos metas específicas y medibles. Fíjalas a 30, 60 y 90 días
+  paso 2: Asegúrate de que las metas sean retadoras, no fáciles de alcanzar.
+  paso 3: Publica las metas en un lugar visible para todo el equipo.
+  paso 4: Reconoce públicamente a los grupos que logran mejoras (por ejemplo, bordes dorados en las pizarras o un lugar de estacionamiento preferencial).
+  paso 5: Usa medidas de corto plazo (por ejemplo, horas sin defectos) en lugar de métricas mensuales, para mantener el enfoque diario.
+  nodos_siguientes ya escritos: ['eliminacion_causas_error', 'eliminacion_causas_error_4', 'reconocimiento_al_desempeno', 'brainstorming']
+  nodos_previos ya escritos: ['dia_cero_defectos', 'dia_cero_defectos_3']
+  entregable: Lista de metas de mejora específicas, medibles y publicadas por cada equipo o área de trabajo.
+
+====================================================================================================
+[50] gate2_second_screen -> metodo_payback  (paso senalado 4, dominio core)
+MADRE (gate2_second_screen) titulo: Segundo filtro de tu proyecto (Gate 2)
+  resumen: Vuelves a evaluar tu proyecto con más rigor, usando la nueva información que conseguiste en la etapa de exploración (Scoping). Usas los mismos filtros de antes, requisitos indispensables y requisitos deseables, pero ahora sumas la reacción real de tus vendedores y clientes, y cualquier tema legal o regulatorio que pueda frenarte de plano. Aquí haces un primer cálculo financiero simple, como el plazo en que recuperarías la inversión (Payback Period).
+  paso 1: Revisa los resultados de tu etapa de exploración (Scoping)
+  paso 2: Repasa la lista de requisitos indispensables actualizada y confirma que los sigues cumpliendo
+  paso 3: Evalúa los requisitos deseables, incluyendo cómo reaccionaron tus vendedores y tus clientes
+  paso 4: Calcula un retorno financiero simple, como el plazo de recuperación de la inversión (Payback Period) <== SENALADO
+  paso 5: Decide si sigues adelante, lo descartas, lo pausas o lo repiensas antes de armar el caso de negocio (Build Business Case)
+  nodos_siguientes ya escritos: ['etapa_build_business_case']
+  nodos_previos ya escritos: ['etapa_scoping']
+  entregable: Tu decisión documentada, con la lista de requisitos revisada y el cálculo financiero preliminar
+HIJO (metodo_payback) titulo: Método de Payback (Período de Recuperación)
+  resumen: Es el método más simple para evaluar una inversión de capital: mide el tiempo requerido para que el flujo de efectivo generado recupere la inversión inicial. Es útil como una verificación rápida inicial pero no considera el valor del dinero en el tiempo ni el retorno más allá del punto de equilibrio.
+  paso 1: Dividir el desembolso inicial entre el flujo de efectivo anual esperado
+  paso 2: Comparar el período resultante con la vida útil del proyecto
+  paso 3: Usar el resultado solo para comparar o rechazar proyectos rápidamente
+  paso 4: Complementar con NPV o IRR si el resultado inicial es prometedor
+  nodos_siguientes ya escritos: ['metodo_valor_presente_neto', 'tasa_interna_retorno_irr']
+  nodos_previos ya escritos: ['analisis_de_gastos_de_capital']
+  entregable: Cálculo del período de recuperación de la inversión en años o meses
+
+====================================================================================================
+[51] coordinacion_colaboracion_cadena_suministro -> plataforma_colaboracion_tiempo_real  (paso senalado 10, dominio core)
+MADRE (coordinacion_colaboracion_cadena_suministro) titulo: Coordinación y Colaboración como Ventaja Competitiva
+  resumen: En economías de alto cambio, la coordinación entre empresas de una cadena de suministro es más poderosa que el control unilateral. Las ganancias vienen de conectarse a redes de cadena de suministro y desarrollar reputación de buen servicio y buenos productos a precios razonables (no necesariamente los más bajos). Sistemas diseñados para dar control excesivo a grandes empresas sobre proveedores (bajo el disfraz de 'eficiencia') desmotivan a los proveedores y destruyen la innovación colectiva, dejando a toda la cadena vulnerable cuando el mercado cambia (ejemplo iPhone: ecosistema colaborativo vs. control unilateral).
+  paso 1: Evaluar si los sistemas actuales de la empresa buscan control unilateral sobre proveedores o colaboración mutua
+  paso 2: Desarrollar reputación de buen servicio y producto en la red de cadena de suministro, no solo competir por precio
+  paso 3: Fomentar que todos los participantes de la cadena innoven y coordinen entre sí (modelo orquesta, no solista)
+  paso 4: Crear plataformas de colaboración online donde las partes discutan problemas y oportunidades en tiempo real
+  paso 5: Usar simulaciones tipo 'juego' para explorar escenarios de cadena de suministro colaborativamente
+  paso 6: Invitar a todos los socios relevantes de la cadena de suministro a una sesión de diseño conjunto
+  paso 7: Usar simulaciones interactivas para probar distintas configuraciones y visualizar problemas en tiempo real
+  paso 8: Iterar el diseño colectivamente hasta alcanzar niveles de desempeño aceptables a un costo operativo viable
+  paso 9: Documentar roles, reglas y metas acordadas en los contratos de cada empresa participante
+  paso 10: Establecer una plataforma de colaboración online para dar seguimiento en tiempo real a la implementación <== SENALADO
+  paso 11: Identifica qué proveedores o socios podrían ayudarte a innovar junto contigo, como parte de un mismo ecosistema
+  paso 12: Estudia a competidores que ganaron mercado ofreciendo más valor percibido aunque les costara más producirlo
+  nodos_siguientes ya escritos: ['ciclo_virtuoso_datos_electronicos']
+  nodos_previos ya escritos: ['trade_off_responsividad_eficiencia']
+  entregable: Estrategia de relación con proveedores/socios basada en colaboración mutua, con plataforma o mecanismo de coordinación implementado
+HIJO (plataforma_colaboracion_tiempo_real) titulo: Plataforma de Colaboración en Tiempo Real para Cadena de Suministro
+  resumen: Una plataforma basada en la nube que ofrece visibilidad casi en tiempo real a todos los actores de la cadena de suministro (fabricantes, logística, distribuidores, retailers) permite que cada parte identifique problemas y actúe sin esperar instrucciones de una autoridad central. Se combina con sesiones de 'colaboración masiva' (crowdsourcing) donde múltiples empresas ajustan en vivo el diseño de la cadena, corren simulaciones, y llegan a consenso sobre el plan operativo, generando compromiso genuino de todas las partes.
+  paso 1: Implementar un sistema visual (mapa) compartido con datos en tiempo real de inventario, rutas y costos.
+  paso 2: Organizar sesiones de colaboración masiva con todos los socios clave de la cadena.
+  paso 3: Permitir que cada participante edite y proponga cambios visibles para todos en vivo.
+  paso 4: Correr simulaciones colectivas y ajustar el diseño hasta llegar a consenso.
+  paso 5: Usar la plataforma no solo para planificar sino para monitorear operaciones diarias y resolver problemas en tiempo real.
+  nodos_siguientes ya escritos: ['profundizacion_cadena_suministro', 'alcance_profundo_cadena_suministro']
+  nodos_previos ya escritos: ['sop_colaborativo', 'combinacion_humano_ia_decision', 'modelado_simulacion_cadena_suministro']
+  entregable: Plataforma o sistema de visibilidad compartida activa entre los socios de la cadena de suministro, con métricas base y alertas de desviación.
+
+====================================================================================================
+[52] emprendedor_como_puesto_de_trabajo -> contabilidad_innovacion_pivote  (paso senalado 2, dominio core)
+MADRE (emprendedor_como_puesto_de_trabajo) titulo: El Emprendedor como Título de Trabajo Formal
+  resumen: Si quieres retener a las personas más innovadoras que trabajan contigo, el emprendimiento dentro de tu negocio tiene que ser un camino profesional real, no un paso pasajero antes de volver a un puesto tradicional. Si lideras con la metodología Lean Startup, mide ese trabajo con la contabilidad de innovación, no con métricas de rendimiento comunes, y dale a esa persona el título formal de Emprendedor, para que pueda seguir incubando ideas nuevas después de lograr que un producto crezca con éxito.
+  paso 1: Crea un puesto real de Emprendedor Interno dentro de tu equipo o negocio.
+  paso 2: Evalúa ese trabajo con la contabilidad de innovación, no con las métricas tradicionales de un puesto operativo. <== SENALADO
+  paso 3: Cuando el producto haya crecido con éxito, deja que esa persona entrene a un nuevo equipo y vuelva a incubar una idea nueva.
+  paso 4: Amplía poco a poco el espacio de experimentación (sandbox) a medida que el equipo demuestre resultados, en lugar de sacarlo de golpe.
+  nodos_siguientes ya escritos: ['paradoja_exito_emprendedor', 'background_startup_vs_corporativo', 'navegacion_politica_organizacional']
+  nodos_previos ya escritos: ['sandbox_de_innovacion', 'gestion_de_las_cuatro_fases_del_negocio', 'afinar_motor_crecimiento']
+  entregable: Una manera clara de reconocer el rol de emprendedor dentro de tu negocio, con su propia forma de medir resultados y su propio camino de crecimiento.
+HIJO (contabilidad_innovacion_pivote) titulo: Contabilidad de Innovación aplicada a Pivotes
+  resumen: El 95% del trabajo real en una startup no es la idea inicial sino el trabajo diario medido por la contabilidad de innovación: decisiones de priorización de producto, elección de clientes, y someter la visión a pruebas constantes. Esta disciplina permite tomar decisiones informadas sobre pivotar o perseverar en lugar de basarse en historias mitificadas del éxito.
+  paso 1: Documentar de forma explícita las hipótesis de salto de fe (leaps of faith) al inicio del proyecto
+  paso 2: Medir métricas accionables (registro, activación, retención, referencia) en cada iteración
+  paso 3: Comparar resultados actuales contra predicciones cuantitativas hechas previamente
+  paso 4: Evitar declarar éxito retroactivamente basándose en métricas de vanidad
+  nodos_siguientes ya escritos: ['pivotar_o_perseverar', 'reunion_pivotar_o_perseverar', 'search_for_business_model']
+  nodos_previos ya escritos: ['producto_minimo_viable', 'metricas_accionables', 'tipos_de_pivote', 'catalogo_pivotes']
+  entregable: Un reporte de métricas accionables con predicciones cuantitativas explícitas por cada hipótesis de salto de fe
+
+====================================================================================================
+[53] guias_diseno_sistemas_estrategicos -> rediseno_tras_fracaso_proyecto  (paso senalado 7, dominio core)
+MADRE (guias_diseno_sistemas_estrategicos) titulo: Siete Guías Estratégicas para el Diseño de Sistemas
+  resumen: Conjunto de siete criterios para evaluar y comparar diseños de sistemas antes de construirlos: (1) alinear con metas de negocio, (2) usar sistemas para cambiar el panorama competitivo, (3) aprovechar infraestructura existente, (4) usar la combinación más simple de tecnología y procesos, (5) estructurar el diseño con flexibilidad en la secuencia de desarrollo, (6) no exceder la capacidad de la organización, y (7) no repetir el mismo enfoque tras un fracaso previo. Un diseño que respeta las siete es el mejor; violar tres o más indica un diseño gravemente defectuoso.
+  paso 1: Verificar que el diseño esté alineado con las metas y métricas de desempeño del negocio (guía obligatoria, no violable)
+  paso 2: Evaluar si el sistema puede generar una ventaja competitiva difícil de copiar
+  paso 3: Revisar qué infraestructura existente puede reutilizarse en vez de reemplazarse
+  paso 4: Simplificar la combinación tecnología-proceso para maximizar probabilidad de éxito
+  paso 5: Diseñar componentes que puedan desarrollarse en paralelo e independientemente
+  paso 6: Contrastar la complejidad del sistema contra la capacidad real de la organización
+  paso 7: Si un proyecto anterior falló, cambiar sustancialmente el enfoque, no solo repetir el esfuerzo <== SENALADO
+  paso 8: Haz una lista de todo lo que tu sistema tiene que lograr
+  paso 9: Busca una sola combinación de tecnología o proceso que te sirva para varios de esos objetivos a la vez
+  paso 10: Evita armar una solución distinta para cada objetivo por separado
+  paso 11: Antes de decidir, evalúa el riesgo y el costo de cada combinación que estás considerando
+  nodos_siguientes ya escritos: ['revision_diseno', 'complejidad_acorde_capacidad_organizacional']
+  nodos_previos ya escritos: ['diseno_conceptual_sistema']
+  entregable: Checklist de evaluación de diseño de sistema con cumplimiento verificado de las siete guías
+HIJO (rediseno_tras_fracaso_proyecto) titulo: No Repetir el Mismo Enfoque tras un Fracaso de Proyecto
+  resumen: Después de que un proyecto ha fallado, simplemente reforzar el esfuerzo o intentarlo con más ganas no es suficiente. El equipo está desmoralizado y requiere un enfoque nuevo que refleje claramente lo aprendido del fracaso anterior, ofreciendo una mejor vía hacia la meta de negocio.
+  paso 1: Realizar un análisis post-mortem detallado del proyecto fallido
+  paso 2: Identificar causas raíz específicas, no solo síntomas
+  paso 3: Rediseñar la organización del proyecto y/o el diseño del sistema con cambios sustanciales
+  paso 4: Comunicar al equipo claramente qué se hará diferente esta vez
+  nodos_siguientes ya escritos: ['definicion_objetivos_proyecto_sistema']
+  nodos_previos ya escritos: ['inhibidores_del_breakthrough']
+  entregable: Informe de lecciones aprendidas y nuevo plan de proyecto con cambios estructurales documentados
+
+====================================================================================================
+[54] riesgo_fiduciario_insolvencia_deuda -> convertible_debt_fundamentos  (paso senalado 2, dominio core)
+MADRE (riesgo_fiduciario_insolvencia_deuda) titulo: Riesgo Fiduciario por Insolvencia Técnica en Deuda Convertible
+  resumen: Levantar una ronda de deuda convertible hace que la empresa sea técnicamente insolvente (los pasivos de deuda superan los activos), lo que puede activar deberes fiduciarios de la junta directiva hacia los acreedores (no solo accionistas) según la ley estatal. Este período de insolvencia dura hasta que la deuda se convierte en equity, ampliando la ventana de exposición legal para directores en caso de fracaso de la empresa.
+  paso 1: Consultar con un abogado corporativo sobre las leyes estatales de responsabilidad fiduciaria hacia acreedores
+  paso 2: Minimizar el tiempo entre la emisión de deuda convertible y su conversión a equity <== SENALADO
+  paso 3: Mantener registros claros de decisiones de la junta durante el período de insolvencia técnica
+  paso 4: Considerar seguros D&O (directors and officers) que cubran este período de riesgo
+  nodos_siguientes ya escritos: ['safe_simple_agreement_future_equity']
+  nodos_previos ya escritos: ['original_issue_discount_oid']
+  entregable: Evaluación legal documentada del riesgo fiduciario y, si aplica, póliza D&O actualizada
+HIJO (convertible_debt_fundamentos) titulo: Fundamentos de la Deuda Convertible (Convertible Debt)
+  resumen: La deuda convertible es un instrumento de financiamiento en el que el inversionista presta dinero a la empresa como deuda, la cual se convierte en acciones (equity) en una ronda de financiamiento futura, evitando así la difícil negociación de valuación temprana. Es popular entre inversionistas ángeles y aceleradoras en rondas semilla, porque reduce la complejidad legal y los costos frente a una ronda de equity preferente. A cambio del riesgo temprano que asumen, los inversionistas reciben una tasa de interés modesta (típicamente 5%-12%, con 8% como promedio, cercana a las tasas federales aplicables) y un descuento sobre el precio de la siguiente ronda (típicamente 10%-30%, siendo 20% el más común), o bien un 'valuation cap' como mecanismo alternativo o complementario al descuento.
+  paso 1: Evaluar si conviene evitar la negociación de valuación temprana usando deuda convertible en vez de una ronda de equity
+  paso 2: Definir el porcentaje de descuento que recibirán los inversionistas en la conversión (típicamente 10%-30%, siendo 20% el más común)
+  paso 3: Considerar el uso de un valuation cap, solo o combinado con el descuento, y a qué monto, evaluando su impacto en rondas futuras
+  paso 4: Fijar una tasa de interés baja (5%-12%, promedio 8%), cercana a las tasas federales aplicables
+  paso 5: Establecer el plazo de maduración (fecha límite) y el monto mínimo de la siguiente ronda ('Qualified Financing') que dispara la conversión automática
+  paso 6: Comparar los costos legales de una ronda de deuda convertible frente a una ronda de equity semilla preferente
+  nodos_siguientes ya escritos: ['equity_crowdfunding_terminos', 'term_sheet_negociacion', 'mecanica_conversion_deuda', 'terminos_adicionales_deuda_convertible', 'valuation_cap_deuda_convertible', 'warrant_pricing_venture_debt']
+  nodos_previos ya escritos: ['lienzo_modelo_negocio', 'warrants_financiamiento']
+  entregable: Term sheet o nota convertible con términos claros: descuento, valuation cap, tasa de interés, plazo de maduración y monto mínimo de conversión
+
+====================================================================================================
+[55] clasificacion_caracteristicas_calidad -> key_process_product_characteristics  (paso senalado 1, dominio quality)
+MADRE (clasificacion_caracteristicas_calidad) titulo: Clasificación de Características y Defectos de Calidad
+  resumen: Consiste en elaborar dos listas: una de características de calidad derivadas de las especificaciones, y otra de defectos (síntomas de no conformidad durante manufactura o uso). Estas listas guían al planificador para determinar cuáles características requieren mayor atención en la inspección.
+  paso 1: Derivar la lista de características de calidad a partir de las especificaciones del producto. <== SENALADO
+  paso 2: Elaborar la lista de defectos observados en manufactura y en campo.
+  paso 3: Comparar ambas listas para identificar diferencias relevantes.
+  paso 4: Usar la clasificación para priorizar esfuerzos de inspección.
+  nodos_siguientes ya escritos: ['clasificacion_seriedad', 'inspeccion_caracteristicas_sensoriales']
+  nodos_previos ya escritos: ['planificacion_inspeccion', 'planificacion_de_la_inspeccion']
+  entregable: Documento con listas clasificadas de características de calidad y defectos asociados.
+HIJO (key_process_product_characteristics) titulo: Características Clave de Producto y Proceso (KPC)
+  resumen: Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las especificaciones correspondientes, asegura que el esfuerzo de control se dirija a lo que el cliente valora y a lo que realmente afecta el resultado final.
+  paso 1: Recolecta inputs de investigación de mercado, QFD, revisión de diseño y AMFE
+  paso 2: Clasifica las características del producto según su importancia relativa: crítica, mayor, menor o incidental
+  paso 3: Identifica las partes sensibles a calidad usando criterios de complejidad y tasa de fallos
+  paso 4: Documenta la relación entre las características de proceso y los resultados de producto
+  paso 5: Registra las características clave en planos y especificaciones
+  nodos_siguientes ya escritos: ['analisis_flujo_proceso', 'control_proceso_variables', 'bucle_retroalimentacion_autoajustable', 'autocontrol_y_controlabilidad']
+  nodos_previos ya escritos: ['qfd_matriz_calidad', 'fmea_analisis_de_modos_de_falla', 'marco_analisis_mercado_cadena_suministro', 'planificacion_inicial_calidad', 'qfd_matriz', 'definiciones_operacionales_de_calidad', 'sujetos_de_control']
+  entregable: Listado clasificado de características clave de producto y proceso, con su nivel de criticidad y su relación causal documentada.
+
+====================================================================================================
+[56] gestion_para_la_calidad -> key_process_product_characteristics  (paso senalado 1, dominio quality)
+MADRE (gestion_para_la_calidad) titulo: Gestión para la Calidad (Managing for Quality)
+  resumen: Conjunto de métodos universales que cualquier organización -empresa, agencia, universidad, hospital- puede usar para lograr resultados superiores, diseñando, mejorando continuamente y asegurando que todos los productos, servicios y procesos cumplan las necesidades de clientes y stakeholders. Evoluciona del concepto clásico de 'fitness for use' hacia 'fit for purpose', ampliando la responsabilidad de la calidad más allá del departamento de calidad hacia toda la organización.
+  paso 1: Definir la calidad tanto en términos de características del producto como en términos de ausencia de fallos <== SENALADO
+  paso 2: Extender la responsabilidad de la calidad a toda la jerarquía organizacional, no solo al departamento de calidad
+  paso 3: Adaptar el concepto de 'fit for purpose' considerando a todos los afectados por el producto (compradores, usuarios, reguladores, proveedores)
+  paso 4: Establecer métodos universales aplicables a cualquier industria o función
+  nodos_siguientes ya escritos: ['trilogia_de_juran', 'doble_significado_calidad']
+  nodos_previos ya escritos: ['vacios_conocimiento_cliente']
+  entregable: Marco organizacional documentado que defina cómo se gestionará la calidad a nivel de toda la empresa
+HIJO (key_process_product_characteristics) titulo: Características Clave de Producto y Proceso (KPC)
+  resumen: Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las especificaciones correspondientes, asegura que el esfuerzo de control se dirija a lo que el cliente valora y a lo que realmente afecta el resultado final.
+  paso 1: Recolecta inputs de investigación de mercado, QFD, revisión de diseño y AMFE
+  paso 2: Clasifica las características del producto según su importancia relativa: crítica, mayor, menor o incidental
+  paso 3: Identifica las partes sensibles a calidad usando criterios de complejidad y tasa de fallos
+  paso 4: Documenta la relación entre las características de proceso y los resultados de producto
+  paso 5: Registra las características clave en planos y especificaciones
+  nodos_siguientes ya escritos: ['analisis_flujo_proceso', 'control_proceso_variables', 'bucle_retroalimentacion_autoajustable', 'autocontrol_y_controlabilidad']
+  nodos_previos ya escritos: ['qfd_matriz_calidad', 'fmea_analisis_de_modos_de_falla', 'marco_analisis_mercado_cadena_suministro', 'planificacion_inicial_calidad', 'qfd_matriz', 'definiciones_operacionales_de_calidad', 'sujetos_de_control']
+  entregable: Listado clasificado de características clave de producto y proceso, con su nivel de criticidad y su relación causal documentada.
+
+====================================================================================================
+[57] term_sheet_negociacion -> entender_term_sheet  (paso senalado 5, dominio core)
+MADRE (term_sheet_negociacion) titulo: Negociación del Term Sheet en una Ronda de Financiamiento
+  resumen: El term sheet es el documento que resume los términos económicos y de control de una ronda de inversión: precio por acción, valuación pre/post-money, preferencia de liquidación, derechos de conversión, antidilución, derechos de voto y composición del board. Entender cada cláusula (participación en liquidación, ratchet completo vs. promedio ponderado, conversión automática en IPO calificado, derechos de redención) es esencial para que el fundador negocie términos justos y entienda las implicaciones de control y económicas de cada elección.
+  paso 1: Revisar cada sección del term sheet (dividendos, liquidación, conversión, antidilución, voto, board) con un abogado
+  paso 2: Comparar los términos propuestos con estándares de mercado (ej. preferencia de liquidación 1x no participante)
+  paso 3: Negociar la composición del board para mantener balance de poder adecuado
+  paso 4: Evaluar el impacto de las cláusulas de antidilución en futuras rondas
+  paso 5: Firmar el term sheet solo después de validar todos los términos con asesoría legal <== SENALADO
+  nodos_siguientes ya escritos: ['cierre_term_sheet', 'antidilucion_provisiones', 'antidilution_weighted_average_broad_narrow', 'co_sale_drag_along_agreements', 'composicion_board_directors', 'conditions_precedent_financing', 'conversion_rights', 'derechos_de_registro', 'drag_along_agreement', 'employee_pool_esop', 'estructura_fondo_vc', 'forma_de_contraprestacion_en_adquisicion', 'founders_activities_clause', 'gestion_sindicato_inversores', 'indemnification_clause', 'information_rights', 'no_shop_agreement', 'pay_to_play', 'preferencia_de_liquidacion', 'right_of_first_refusal_pro_rata', 'term_sheet_disposiciones_vinculantes', 'valuacion_409a']
+  nodos_previos ya escritos: ['compensacion_service_providers', 'cumplimiento_inversionistas_acreditados', 'batna_definicion', 'capital_calls_lp', 'convertible_debt_fundamentos', 'creacion_option_pool', 'diagnostico_motivacion_para_contrataciones_inversores', 'vesting_acciones_fundadores', 'encontrar_lead_vc', 'evaluacion_tipos_inversores', 'factores_valoracion_startup', 'fuentes_financiamiento_startup', 'fundadores_en_junta_directiva', 'leverage_en_negociacion_con_vcs', 'materiales_due_diligence', 'metodos_de_valuacion', 'no_shop_agreement', 'participacion_preferente', 'preferencias_apiladas_vs_blended', 'proceso_decision_vc', 'seleccion_abogado_venture', 'seleccion_estructura_corporativa', 'valuation_cap_deuda_convertible', 'vesting_dinamico', 'warrant_pricing_venture_debt']
+  entregable: Term sheet negociado y firmado con términos claros de valuación, control y derechos económicos
+HIJO (entender_term_sheet) titulo: El Arte del Term Sheet
+  resumen: El term sheet es el documento que resume los términos propuestos de una inversión de capital de riesgo. Aunque hoy puede tener 8 páginas con cláusulas complejas, en esencia solo existen dos cosas que realmente importan en la negociación: economía (cuánto vale la empresa y quién recibe qué) y control (quién toma las decisiones). Entender esto evita perderse en detalles irrelevantes durante la negociación.
+  paso 1: Antes de negociar, identificar qué cláusulas del term sheet afectan la economía (valoración, participación) y cuáles afectan el control (juntas, votos, protecciones)
+  paso 2: Priorizar la negociación en estos dos ejes y no distraerse con cláusulas secundarias
+  paso 3: Solicitar asesoría legal especializada en VC para revisar el documento completo
+  paso 4: Identificar cláusulas que no afectan ni economía ni control (posibles tácticas de distracción).
+  nodos_siguientes ya escritos: ['control_del_board_startup', 'valuacion_pre_post_money']
+  nodos_previos ya escritos: ['por_que_existen_los_term_sheets', 'gestion_angel_investors', 'jerarquia_firma_vc', 'gestion_sindicato_inversores', 'seleccion_abogado_venture', 'cierre_term_sheet', 'proceso_decision_vc']
+  entregable: Checklist personal de términos de economía y control identificados antes de firmar cualquier term sheet
+
+====================================================================================================
+[58] estrategia_ti_verde -> oportunidades_ingresos_ti_sostenible  (paso senalado 5, dominio environmental)
+MADRE (estrategia_ti_verde) titulo: Estrategia de TI Verde (Green IT)
+  resumen: El rol del CIO y profesionales de TI es fundamental para impulsar la ventaja eco-competitiva de las empresas. Las iniciativas de eficiencia energética en TI (virtualización, actualización de equipos, reutilización de calor residual, reducción de e-waste) generan ahorros significativos, mientras la presión regulatoria y de emisiones GEI relacionadas con TI crece, y surgen oportunidades de negocio mediante software de sostenibilidad y análisis.
+  paso 1: Evaluar oportunidades de virtualización para optimizar utilización de servidores
+  paso 2: Implementar sistemas de recuperación de calor residual de centros de datos
+  paso 3: Establecer programa de reciclaje de e-waste con proveedores certificados
+  paso 4: Reducir empaques y consolidar envíos de equipos con proveedores
+  paso 5: Explorar oportunidades de ingresos mediante software de sostenibilidad y analítica <== SENALADO
+  nodos_siguientes ya escritos: ['virtualizacion_servidores']
+  nodos_previos ya escritos: ['arrendamiento_verde']
+  entregable: Plan de estrategia de TI verde con objetivos de reducción de costos energéticos y huella de carbono
+HIJO (oportunidades_ingresos_ti_sostenible) titulo: Oportunidades de Ingresos mediante Soluciones de TI Sostenibles
+  resumen: Más allá de reducir costos internos, las empresas pueden generar nuevas fuentes de ingreso ofreciendo soluciones tecnológicas que resuelven problemas de sostenibilidad para otras organizaciones, ciudades o industrias. Ejemplos incluyen 'agricultura digital' con GPS y sensores, y proyectos como 'Smarter Planet' de IBM que crean ecosistemas inteligentes para gestión de tráfico, energía y recursos urbanos.
+  paso 1: Identificar capacidades tecnológicas internas que podrían convertirse en productos o servicios de sostenibilidad para terceros.
+  paso 2: Explorar alianzas con gobiernos o ciudades para proyectos de eficiencia basados en sensores y datos.
+  paso 3: Desarrollar un caso de negocio para nuevas líneas de ingreso basadas en soluciones de sostenibilidad tecnológica.
+  paso 4: Pilotar la solución en un mercado o cliente reducido antes de escalar.
+  nodos_siguientes ya escritos: ['diseno_para_el_medio_ambiente']
+  nodos_previos ya escritos: ['compromiso_cliente_sostenibilidad', 'ti_para_desempeno_ecologico']
+  entregable: Propuesta de nuevo producto o servicio de TI orientado a sostenibilidad con proyección de ingresos.
+
+====================================================================================================
+[59] etapa_build_business_case -> posicionamiento_por_tipo_de_mercado  (paso senalado 1, dominio core)
+MADRE (etapa_build_business_case) titulo: Etapa 2 - Build the Business Case
+  resumen: Es la etapa crítica de investigación detallada que define claramente el producto y verifica la atractividad del proyecto antes del gasto fuerte en desarrollo. Incluye definición del producto ganador, análisis de mercado detallado, investigación VoC profunda, análisis competitivo, prueba de concepto, evaluación técnica y operativa detallada, y análisis financiero mediante flujo de caja descontado (NPV, IRR).
+  paso 1: Definir el mercado objetivo, posicionamiento y propuesta de valor del producto <== SENALADO
+  paso 2: Realizar investigación de mercado detallada (tamaño, segmentos, factores de éxito)
+  paso 3: Ejecutar investigación VoC profunda para especificar requerimientos del producto
+  paso 4: Realizar prueba de concepto con clientes potenciales
+  paso 5: Llevar a cabo evaluación técnica y operativa detallada de viabilidad
+  paso 6: Elaborar análisis financiero con NPV, IRR y análisis de sensibilidad
+  paso 7: Consolidar todo en un Business Case con definición de producto, justificación y plan de acción
+  nodos_siguientes ya escritos: ['gate3_go_to_development', 'value_proposition_startup']
+  nodos_previos ya escritos: ['gate2_second_screen', 'afinar_frente_difuso_innovacion', 'prototipado_modelos_negocio']
+  entregable: Un Business Case completo con tres elementos: definición del producto, justificación financiera/de negocio, y plan de proyecto detallado (action plan)
+HIJO (posicionamiento_por_tipo_de_mercado) titulo: Posicionamiento según Tipo de Mercado
+  resumen: El tipo de mercado (existente, nuevo, clon, o re-segmentado) cambia radicalmente el mensaje de posicionamiento. En mercado existente se destaca diferenciación (atributos, canal, servicio). En mercado nuevo se comunica visión y pasión, no características, porque no hay contexto comparativo. En mercado clon se imita el posicionamiento de la empresa equivalente en otro país. En re-segmentación (nicho o bajo costo) se comunica comprensión profunda de necesidades desatendidas.
+  paso 1: Identificar el tipo de mercado seleccionado (existente, nuevo, clon, re-segmentado)
+  paso 2: Si es mercado existente: definir diferenciación en atributos, canal o servicio
+  paso 3: Si es mercado nuevo: articular la visión y el problema que se busca resolver
+  paso 4: Si es mercado clon: adoptar el posicionamiento de la empresa análoga en otro país
+  paso 5: Si es re-segmentación: comunicar comprensión única de un nicho o ventaja de bajo costo
+  nodos_siguientes ya escritos: ['desarrollar_posicionamiento_empresa', 'posicionamiento_de_empresa']
+  nodos_previos ya escritos: ['desarrollo_posicionamiento_producto']
+  entregable: Posicionamiento de producto ajustado y coherente con el tipo de mercado elegido

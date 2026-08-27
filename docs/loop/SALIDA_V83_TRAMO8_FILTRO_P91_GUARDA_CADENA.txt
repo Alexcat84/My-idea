@@ -1,0 +1,81 @@
+BOLSA REDUCIDA TOTAL: 468
+SIN ARISTA (candidatos): 246
+APARTADOS POR P.9.1 ENSANCHADO (operaciones + vara de los A): 92
+  de esos, SOLO por operacion: 35
+  de esos, con al menos un motivo de la vara de los A: 57
+LIMPIOS TRAS P.9.1 ENSANCHADO (antes de la guarda del par no dirigido): 154
+
+GUARDA DEL PAR NO DIRIGIDO: 0 pareja(s) detectada(s) (mismo par, dos direcciones)
+CANDIDATOS (unidades de lectura) TRAS LA GUARDA: 154 (0 parejas + 154 sueltas, de 154 filas)
+ESCRITO: docs\plan\PASO_NODO_CALIBRADO_FILTRADO_V83.jsonl (154 filas, orden de fichero)
+
+REGISTRO DE DECIDIDAS LEIDO: docs/plan/OP_E_01_DECIDIDAS.jsonl (32 pares NO SE ENLAZA)
+
+UNIDADES YA DECIDIDAS EN LA CABEZA, SALTADAS (no se vuelven a leer): 30
+  0: clasificacion_tipos_activos -> tipos_de_pasivos (paso 1, dominio core)
+  1: proceso_llamada_inicial_venta -> proceso_venta_franquicias (paso 6, dominio franquicias)
+  2: equipo_customer_development -> customer_development_team (paso 1, dominio core)
+  3: extraer_priorizar_hipotesis -> value_proposition_startup (paso 1, dominio core)
+  4: preparacion_preguntas_problema_precall -> preguntas_situacion (paso 4, dominio core)
+  5: timing_solicitud_referidos -> fase_adopt_ciclo_cliente (paso 5, dominio core)
+  6: requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level (paso 1, dominio quality)
+  7: hipotesis_relacion_clientes_web -> mvp_alta_fidelidad (paso 4, dominio core)
+  8: producto_mercado_fit_motores -> afinar_motor_crecimiento (paso 1, dominio core)
+  9: valor_intangible_sostenibilidad -> compromiso_cliente_sostenibilidad (paso 1, dominio environmental)
+  10: analisis_valor -> customer_needs_spreadsheet (paso 1, dominio quality)
+  11: posicionamiento_vs_competidores -> analisis_competencia_franquicias (paso 2, dominio franquicias)
+  12: organizacion_interna_exportacion -> estructura_plan_exportacion (paso 3, dominio exportacion)
+  13: errores_comunes_fundraising -> confidencialidad_nda_adquisicion (paso 2, dominio core)
+  14: mvp_catalogo_tecnicas -> mvp_tipo_video (paso 1, dominio core)
+  15: reporte_estado_miembro_equipo -> variance_analysis (paso 3, dominio core)
+  16: terminologia_clave_breakthrough -> analisis_sintomas (paso 2, dominio quality)
+  17: evaluacion_actitudes_empleados -> identificar_oportunidades_sostenibilidad (paso 2, dominio environmental)
+  18: pre_control_estadistico -> limites_de_especificacion_vs_limites_de_control (paso 1, dominio quality)
+  19: posicionamiento_por_tipo_de_mercado -> resegmentacion_mercado_nicho_bajo_costo (paso 5, dominio core)
+  20: control_calidad_operaciones_servicio -> descubrir_necesidades_del_cliente (paso 1, dominio quality)
+  21: el_riesgo_nunca_se_acaba_se_administra -> cuando_el_riesgo_se_vuelve_realidad (paso 2, dominio risk_management)
+  22: abolir_inspeccion_masiva -> eliminacion_inspeccion_masiva_por_control_estadistico (paso 5, dominio quality)
+  23: recursos_apoyo_gubernamental_exportacion -> trabajo_con_bancos_comerciales (paso 3, dominio exportacion)
+  24: definiciones_operacionales_de_calidad -> optimizacion_caracteristicas_diseno (paso 1, dominio quality)
+  25: qfd_matriz -> identificar_clientes_externos_e_internos (paso 2, dominio quality)
+  26: analisis_variacion_desempeno_servicio -> pre_control_estadistico (paso 4, dominio quality)
+  27: participacion_preferente -> seed_deals_riesgos_precedente (paso 4, dominio core)
+  28: preservar_efectivo_buscar_modelo -> validar_modelo_negocio_hechos (paso 1, dominio core)
+  29: estructura_reporte_dual_estadistico -> organizacion_liderazgo_estadistico (paso 1, dominio quality)
+
+CABEZA DE LA BOLSA FILTRADA, PRIMERAS 30 UNIDADES SIN DECISION REGISTRADA,
+en orden de fichero (indice verdadero de la bolsa, no renumerado),
+CON LA VARA DE LA CADENA (alcanzabilidad previa, no aparta por si sola):
+  30: recursos_apoyo_gubernamental_exportacion -> decisiones_de_financiamiento_exportacion (paso 3, dominio exportacion) | sin camino previo
+  31: compra_equipos_verdes -> certificacion_leed_energy_star (paso 1, dominio environmental) | sin camino previo
+  32: graficos_control_multivariados -> key_process_product_characteristics (paso 1, dominio quality) | sin camino previo
+  33: gestion_efectiva_benchmarking -> reconocimiento_publico_recompensas (paso 6, dominio quality) | sin camino previo
+  34: estructura_organizacional_funcional_proceso -> equipos_autodirigidos_servicio (paso 4, dominio quality) | sin camino previo
+  35: consejo_de_calidad_y_rol_del_director -> metas_negocio_calidad (paso 3, dominio quality) | sin camino previo
+  36: verificar_clientes_y_canales -> validar_modelo_negocio_hechos (paso 6, dominio core) | YA ALCANZABLE (3 saltos): verificar_clientes_y_canales -> verificar_modelo_ingresos -> decision_pivotar_o_proceder -> validar_modelo_negocio_hechos
+  37: lean_manufacturing_tps -> sistema_pull_push (paso 5, dominio quality) | sin camino previo
+  38: establecer_metas_reduccion_emisiones -> plan_accion_corto_mediano_largo_plazo (paso 3, dominio environmental) | sin camino previo
+  39: herramientas_de_diseno_de_calidad -> optimizacion_caracteristicas_diseno (paso 4, dominio quality) | sin camino previo
+  40: takt_time -> smed_setup_reduction (paso 5, dominio quality) | YA ALCANZABLE (2 saltos): takt_time -> constraint_management -> smed_setup_reduction
+  41: autorregulacion_seguridad -> participacion_trabajadores (paso 3, dominio health_safety) | sin camino previo
+  42: depreciacion_y_amortizacion -> impacto_estado_resultados_en_balance (paso 6, dominio core) | YA ALCANZABLE (5 saltos): depreciacion_y_amortizacion -> lectura_balance_general -> tipos_de_pasivos -> patrimonio_de_los_propietarios -> por_que_balancea_el_balance -> impacto_estado_resultados_en_balance
+  43: desarrollo_expertos_capaces -> evaluacion_desempeno_proyectos (paso 4, dominio quality) | sin camino previo
+  44: estructura_competencias_six_sigma_lean -> evaluacion_desempeno_proyectos (paso 5, dominio quality) | sin camino previo
+  45: poder_a_traves_de_la_accion -> compromiso_organismico_en_la_accion (paso 3, dominio core) | YA ALCANZABLE (5 saltos): poder_a_traves_de_la_accion -> esfuerzo_voluntario_vs_urge_espontaneo -> wallas_etapa_incubacion -> second_wind_energia_mental -> habito_energetico_vs_mecanico -> compromiso_organismico_en_la_accion
+  46: unbundling_business_models -> business_model_canvas_scorecard (paso 4, dominio core) | YA ALCANZABLE (4 saltos): unbundling_business_models -> multi_sided_platforms -> customer_scenarios_business_model -> lienzo_modelo_negocio -> business_model_canvas_scorecard
+  47: venture_debt_introduccion -> ratio_deuda_capital (paso 1, dominio core) | YA ALCANZABLE (6 saltos): venture_debt_introduccion -> plan_a_b_c_soft_landing -> relaciones_con_clientes -> flujos_de_ingresos -> estructura_de_costos -> lectura_balance_general -> ratio_deuda_capital
+  48: estudio_desempeno_run_charts_servicios -> causas_comunes_vs_especiales (paso 3, dominio quality) | sin camino previo
+  49: equipo_conjunto_de_mejora_con_proveedores -> fijacion_de_metas (paso 4, dominio quality) | sin camino previo
+  50: gate2_second_screen -> metodo_payback (paso 4, dominio core) | sin camino previo
+  51: coordinacion_colaboracion_cadena_suministro -> plataforma_colaboracion_tiempo_real (paso 10, dominio core) | sin camino previo
+  52: emprendedor_como_puesto_de_trabajo -> contabilidad_innovacion_pivote (paso 2, dominio core) | sin camino previo
+  53: guias_diseno_sistemas_estrategicos -> rediseno_tras_fracaso_proyecto (paso 7, dominio core) | sin camino previo
+  54: riesgo_fiduciario_insolvencia_deuda -> convertible_debt_fundamentos (paso 2, dominio core) | YA ALCANZABLE (6 saltos): riesgo_fiduciario_insolvencia_deuda -> safe_simple_agreement_future_equity -> cap_table_basico -> valuacion_pre_post_money -> pool_opciones_empleados -> warrants_financiamiento -> convertible_debt_fundamentos
+  55: clasificacion_caracteristicas_calidad -> key_process_product_characteristics (paso 1, dominio quality) | sin camino previo
+  56: gestion_para_la_calidad -> key_process_product_characteristics (paso 1, dominio quality) | YA ALCANZABLE (5 saltos): gestion_para_la_calidad -> trilogia_de_juran -> costo_de_mala_calidad_copq -> estudio_mercado_calidad -> marco_analisis_mercado_cadena_suministro -> key_process_product_characteristics
+  57: term_sheet_negociacion -> entender_term_sheet (paso 5, dominio core) | YA ALCANZABLE (2 saltos): term_sheet_negociacion -> cierre_term_sheet -> entender_term_sheet
+  58: estrategia_ti_verde -> oportunidades_ingresos_ti_sostenible (paso 5, dominio environmental) | sin camino previo
+  59: etapa_build_business_case -> posicionamiento_por_tipo_de_mercado (paso 1, dominio core) | YA ALCANZABLE (6 saltos): etapa_build_business_case -> value_proposition_startup -> elementos_creadores_valor -> canales_distribucion -> test_sell_channel_partners -> desarrollo_posicionamiento_producto -> posicionamiento_por_tipo_de_mercado
+
+DE LAS 30 UNIDADES FRESCAS DE CABEZA, CON CAMINO PREVIO YA ALCANZABLE: 10
+UNIDADES SIN DECIDIR RESTANTES TRAS ESTA CABEZA: 94
