@@ -172,6 +172,7 @@ que NO se escriben en `OP-E-01`** (repetidas sin cambio desde las actas 80,
 
 ### 1.5. `docs/plan/PASO_NODO_CALIBRADO.jsonl`, estado heredado, sin volver a medirlo
 
+
 Registrado como estado heredado, tal como la adjudicacion 5.7 del acta 82
 lo pide: el fichero rastreado quedo **al dia** desde la vuelta 82 (ya no se
 restaura). El auditor midio la diferencia contra el rastreado viejo (acta
@@ -179,5 +180,167 @@ restaura). El auditor midio la diferencia contra el rastreado viejo (acta
 de `False` a `True`**, **cero filas movidas**. No se vuelve a medir aqui,
 salvo que algo de esta vuelta lo mueva (lo hara: la TAREA 3 recalibra
 fresco otra vez).
+
+---
+
+## 2. TAREA 2: EL INSTRUMENTO QUE MIDE (BLOQUEANTE, ESCALADA AUTOMATICA)
+
+Escalada automatica de `EJECUTOR.md` regla 1, disparada por la caida de
+reporte de la seccion 1.1, y remedio a la vez del atasco de la cola
+adjudicado en el acta 82 seccion 3. Cuatro piezas, sin doctrina nueva
+(acta 82, adjudicaciones 5.1 a 5.3).
+
+### 2.a. El registro de decididas, horneado leyendo ficheros de salida
+
+Instrumento: `scripts/loop/vuelta83_hornear_decididas.py`. Lee, con
+expresion regular (ninguna fila tecleada), los 7 ficheros que el encargo
+nombra: `SALIDA_V77_TRAMO3_ESCRIBIR.txt`, `SALIDA_V78_TRAMO4_ESCRIBIR.txt`,
+`SALIDA_V79_TRAMO5_ESCRIBIR.txt`, `SALIDA_V80_TRAMO6_ESCRIBIR.txt`,
+`SALIDA_V82_TRAMO7_ESCRIBIR.txt`, `SALIDA_V75_OPE01_TRAMO1_LECTURA.txt` y
+`SALIDA_V76_OPE01_TRAMO2_LECTURA.txt`. Salida completa en
+`docs/loop/SALIDA_V83_TAREA2A_HORNEAR_DECIDIDAS.txt`:
+
+| tramo | fichero | filas nuevas | citadas (ya cubiertas) | sin paso reconstruible |
+|---:|---|---:|---:|---:|
+| 3 | `SALIDA_V77_TRAMO3_ESCRIBIR.txt` | 30 | 0 | **30** |
+| 4 | `SALIDA_V78_TRAMO4_ESCRIBIR.txt` | 30 | 0 | 0 |
+| 5 | `SALIDA_V79_TRAMO5_ESCRIBIR.txt` | 23 | 7 | 0 |
+| 6 | `SALIDA_V80_TRAMO6_ESCRIBIR.txt` | 10 | 0 | 0 |
+| 7 | `SALIDA_V82_TRAMO7_ESCRIBIR.txt` | 3 | 27 | 0 |
+
+**El paso se cruza por NOMBRE del par** contra el fichero de la propia
+vuelta que SI trae paso: `DOSSIER30` para los tramos 4, 5 y 6, la cabeza de
+`FILTRO_P91_GUARDA_CADENA` para el tramo 7. **El tramo 3 no tiene fichero de
+pasos** (no se genero esa vuelta): sus 30 filas quedan con `paso: "NO
+RECONSTRUIBLE"`, tal como el encargo manda ("si un fichero viejo no se deja
+leer con un patron... NO se rellena a mano").
+
+**Discrepancia de cuenta, declarada, no corregida a mano:**
+`SALIDA_V80_TRAMO6_ESCRIBIR.txt` dice en su cabecera "YA DECIDIDOS EN
+VUELTAS ANTERIORES ... : 20" pero **no lista ninguna** de esas 20 (0
+lineas leidas). No es un fallo de patron: el propio fichero de la vuelta 80
+nunca escribio esa nomina (memoria tecleada en el script que lo produjo,
+verificada por el auditor en el acta 82 seccion 4). No se reconstruye a
+mano: esas 20 decisiones YA estan en el registro igual, porque vienen
+citadas por nombre en `SALIDA_V82_TRAMO7_ESCRIBIR.txt` (que si las lista,
+como parte de sus 27 "ya decididos"), y el horneado las toma de ahi.
+
+**Tramos 1 y 2, CERO filas reconstruidas, declarado con su cuenta:**
+`SALIDA_V75_OPE01_TRAMO1_LECTURA.txt` y `SALIDA_V76_OPE01_TRAMO2_LECTURA.txt`
+son el volcado crudo de la lectura (30 candidatos cada uno, verificado
+contando `^PAR \d+`), **sin ninguna marca ESCRITA/NO SE ENLAZA por patron**:
+son la muestra pineada y el material de lectura, no el registro de la
+decision. **0 de 60 candidatos de esos dos tramos se reconstruyen aqui.**
+Si alguno de esos 60 pares sigue en la bolsa de hoy y llega a la cabeza sin
+decision registrada, se leera fresco (correcto: nunca tuvo una decision
+citable en un fichero).
+
+**Verificacion contra el grafo de HOY** (`EJECUTOR.md` regla 2 y regla 9):
+cada fila se comprueba contra `dataset/metadata/master_graph.json` en las
+DOS vistas. Dos filas **ASCENDIDAS** (el fichero las marcaba NO SE ENLAZA,
+la arista SI esta hoy, escrita despues por una correccion fuera de estos 7
+ficheros): `mejora_calidad_crosby -> programa_mejora_calidad_14_pasos`
+(tramo 3) y `descubrir_necesidades_del_cliente ->
+traduccion_necesidades_cliente` (tramo 6, escrita en la TAREA 3 de la
+vuelta 82). Cuatro filas **DEGRADADAS** (el fichero las marcaba ESCRITA, la
+arista NO esta hoy, revertida despues por una correccion declarada fuera de
+estos 7 ficheros, ya conocida por `docs/plan/04_ENLACES.md`):
+`waterfall_vs_agile_development -> desarrollo_de_clientes_customer_development`
+(tramo 3, discrepancia nueva, no investigada mas alla de la medicion),
+`extraer_priorizar_hipotesis -> value_proposition_startup` (tramo 4,
+revertida en la TAREA 3.1 de la vuelta 79), `producto_mercado_fit_motores
+-> afinar_motor_crecimiento` y `terminologia_clave_breakthrough ->
+analisis_sintomas` (tramo 5, las dos revertidas en la TAREA 3 de la vuelta
+80). **Ninguna de las seis se corrigio a mano: las seis salen de leer
+`dataset/` de hoy**, tal como manda que la discrepancia se declare, no se
+resuelva copiando.
+
+**Totales: 96 filas en el registro (64 ESCRITA, 32 NO SE ENLAZA)**, escrito
+en `docs/plan/OP_E_01_DECIDIDAS.jsonl`. Cero pares repetidos entre tramos.
+
+### 2.b. La guarda del registro, ROJO con exit 1
+
+Instrumento: `scripts/loop/vuelta83_guarda_decididas.py --bolsa RUTA
+[--registro RUTA]`. Cruza el registro contra una bolsa filtrada en orden de
+fichero: toda unidad de la bolsa con decision `NO SE ENLAZA` en el registro
+tiene que caer dentro del PREFIJO de decididas (sin huecos); si una
+decidida aparece por detras de una sin decidir, ROJO.
+
+**CASO OBLIGATORIO (i), VERDE, sobre la bolsa de 154 de la vuelta 82**
+(`docs/loop/SALIDA_V83_TAREA2B_GUARDA_V82_VERDE.txt`):
+
+```
+python scripts/loop/vuelta83_guarda_decididas.py --bolsa docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V82.jsonl
+```
+
+Salida: **prefijo de decididas: indices 0 a 29 (30 unidades)**; **primera
+unidad SIN DECIDIR: indice 30, `recursos_apoyo_gubernamental_exportacion ->
+decisiones_de_financiamiento_exportacion` (paso 3, dominio exportacion)**;
+**GUARDA: VERDE**. Coincide exactamente con la vara de contraste del
+encargo (acta 82, seccion 3, punto 5).
+
+**CASO OBLIGATORIO (ii), ROJO INVENTADO POR MI**
+(`docs/loop/SALIDA_V83_TAREA2B_GUARDA_VARA_ROJO.txt`): copia del registro
+en `docs/loop/_v83_vara_rojo_registro_copia_adulterada.jsonl` (**esta copia
+NO se commitea como registro bueno**, solo como evidencia de la vara), con
+UNA fila metida a mano: `consejo_de_calidad_y_rol_del_director ->
+metas_negocio_calidad` (indice 35 de la bolsa V82, por detras del prefijo)
+marcada `NO SE ENLAZA`. Corrida:
+
+```
+python scripts/loop/vuelta83_guarda_decididas.py --bolsa docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V82.jsonl --registro docs/loop/_v83_vara_rojo_registro_copia_adulterada.jsonl
+```
+
+Salida: **ROJO, exit 1**, nombrando exactamente `indice 35:
+consejo_de_calidad_y_rol_del_director -> metas_negocio_calidad`. **Muerde.**
+
+### 2.c. El instrumento de la escritura del tramo, que mide de verdad
+
+Diseno: en vez de tecleado (el defecto exacto de la seccion 1.1), la
+escritura del tramo se MIDE. El filtro registro-consciente
+(`scripts/loop/vuelta83_tramo8_filtrar.py`, TAREA 3 de abajo) produce la
+lista de unidades leidas (con su indice VERDADERO de la bolsa, no
+renumerado) y la lista nominal de las decididas saltadas. La decision de
+cada unidad leida (`ESCRITA` o `NO SE ENLAZA`) **se mide leyendo
+`dataset/metadata/master_graph.json` DESPUES de escribir las aristas de
+esta vuelta**: `ESCRITA` si la arista esta presente en las DOS vistas
+(`nodos_siguientes` de la madre Y `nodos_previos` del hijo), `NO SE
+ENLAZA` si esta ausente en las DOS. La escalera (inversas) se mide contra
+las mismas dos vistas: cero inversas si ninguna madre aparece en
+`nodos_siguientes` de su propio hijo. Este instrumento es
+`scripts/loop/vuelta83_hornear_decididas.py` en su modo de verificacion
+(la misma funcion `arista_presente_hoy`, reusada) mas la tabla que la
+TAREA 3 arma con esos datos; su salida citable es
+`docs/loop/SALIDA_V83_TRAMO8_ESCRIBIR.txt` (TAREA 3, seccion 3.3 de abajo).
+
+### 2.d. El tallador aprende el registro
+
+`scripts/loop/tallar_cabecera_reporte.py`, modo `--tramo-cadena K
+--registro RUTA` (opcional): cruza cada unidad tallada bajo "CABEZA DE LA
+BOLSA FILTRADA" contra el registro; si CUALQUIERA tiene decision `NO SE
+ENLAZA` ya registrada, ROJO, nombrando el par (exactamente el defecto que
+produjo el atasco: una decidida colandose como fresca).
+
+**CASO OBLIGATORIO, ROJO, sobre el fichero del tramo 6 (vuelta 80), que
+trae 27 unidades YA decididas hoy bajo su cabeza**
+(`docs/loop/SALIDA_V83_TAREA2D_CASO_ROJO.txt`):
+
+```
+python scripts/loop/tallar_cabecera_reporte.py --vuelta 80 --tramo-cadena 6 --registro docs/plan/OP_E_01_DECIDIDAS.jsonl
+```
+
+Salida: **ROJO: 27 unidad(es) YA DECIDIDA(S)... se colaron**, exit 1.
+**Segundo caso, tambien ROJO, sobre el fichero del tramo 7 (vuelta 82)**
+(`docs/loop/SALIDA_V83_TAREA2D_CASO_ROJO_TRAMO7.txt`): las 30 unidades de
+ese fichero salen todas ya decididas (30 de 30), porque el registro
+horneado en 2.a YA incluye las propias decisiones del tramo 7: exit 1
+tambien. **El caso VERDE real es el tramo 8 de esta misma vuelta** (TAREA 3
+de abajo, seccion 3.2): `--vuelta 83 --tramo-cadena 8 --registro
+docs/plan/OP_E_01_DECIDIDAS.jsonl` da **EXIT 0**, porque el fichero del
+filtro del tramo 8 (`scripts/loop/vuelta83_tramo8_filtrar.py`) YA salta las
+decididas antes de listar la cabeza.
+
+Sintaxis verificada con `python -c "ast.parse(...)"` en los dos ficheros
+tocados: **SINTAXIS OK**.
 
 ---

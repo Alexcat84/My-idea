@@ -214,6 +214,36 @@ apertura, reconstruido y verificado por `git log` en esta vuelta porque el
 sello en vivo no existia antes de esta TAREA) y el chequeo da VERDE, porque
 sus arboles de `dataset/` son iguales (`git rev-parse bc9cde6f:dataset` y
 `git rev-parse 3cdf90d1:dataset` dan el mismo hash de arbol).
+
+--- TAREA 2.d: EL TALLADOR APRENDE EL REGISTRO (vuelta 83) ---
+
+POR QUE NACE (acta de la vuelta 82, seccion 3 y seccion 5 punto 1: la cola de
+`OP-E-01` estaba atascada porque un par leido y NO enlazado se queda en la
+bolsa, y como cada tramo leia LA CABEZA, los no enlazados se apilaban ahi).
+Desde el tramo 8, la unidad de lectura son las primeras 30 unidades de la
+bolsa filtrada que NO tengan decision registrada en
+`docs/plan/OP_E_01_DECIDIDAS.jsonl` (adjudicacion 5.1 del acta 82), no las 30
+primeras a secas. `--tramo-cadena` ya tallaba, sin cambios de codigo, lo que
+sea que el fichero del filtro ponga bajo "CABEZA DE LA BOLSA FILTRADA" (el
+indice de cada unidad es texto libre, no se recalcula), asi que la
+responsabilidad de saltar las decididas recae en el script que genera ESE
+fichero. `--registro RUTA` (opcional, combinado con `--tramo-cadena`) es la
+RED DE SEGURIDAD que no depende de que ese script generador este bien
+escrito: cruza cada unidad tallada contra el registro, y si CUALQUIERA tiene
+decision `NO SE ENLAZA` ya registrada, es ROJO (una unidad decidida se colo
+en la cabeza que se talla como si fuera fresca: exactamente el defecto que
+produjo el atasco). Sin `--registro`, el comportamiento es identico al de
+antes (no se cruza nada).
+
+USO:
+  python scripts/loop/tallar_cabecera_reporte.py --vuelta 83 --tramo-cadena 8 --registro docs/plan/OP_E_01_DECIDIDAS.jsonl
+  python scripts/loop/tallar_cabecera_reporte.py --vuelta 83 --tramo-cadena 8 --registro docs/plan/OP_E_01_DECIDIDAS.jsonl --comparar docs/loop/REPORTE.md
+
+CASO POSITIVO OBLIGATORIO (vuelta 83): tallar el tramo 8 con
+`--registro docs/plan/OP_E_01_DECIDIDAS.jsonl` sobre un fichero de filtro que
+(por error) SI trajera una de las unidades ya decididas en el registro bajo
+su CABEZA tiene que dar ROJO, nombrando el par; sobre el fichero real (que
+solo trae las 30 frescas) da VERDE.
 """
 import argparse
 import io
@@ -720,10 +750,43 @@ def tabla_cadena_del_fichero(ruta):
     return resultado
 
 
-def modo_tramo_cadena(vuelta, tramo, comparar_ruta):
+def cargar_registro_decididas(ruta_registro, fallos):
+    """TAREA 2.d: carga el set de pares (madre, hijo) con decision 'NO SE
+    ENLAZA' en el registro, para que --tramo-cadena pueda negar que
+    cualquiera de ellos aparezca bajo la CABEZA que talla (red de seguridad,
+    independiente de que el generador del fichero del filtro este bien
+    escrito)."""
+    ruta = ruta_registro if os.path.isabs(ruta_registro) else os.path.join(RAIZ, ruta_registro)
+    if not os.path.exists(ruta):
+        fallos.append("no existe el registro %s" % ruta_registro)
+        return None
+    decididas = set()
+    with io.open(ruta, encoding="utf-8") as fh:
+        for linea in fh:
+            linea = linea.strip()
+            if not linea:
+                continue
+            import json as _json
+            try:
+                fila = _json.loads(linea)
+            except ValueError as e:
+                fallos.append("linea no JSON en %s: %s" % (ruta_registro, e))
+                continue
+            if fila.get("decision") == "NO SE ENLAZA":
+                decididas.add((fila.get("madre"), fila.get("hijo")))
+    return decididas
+
+
+RE_PAR_UNIDAD_TALLADA = re.compile(r"^(.+?)\s*->\s*(.+?)\s*\(paso")
+
+
+def modo_tramo_cadena(vuelta, tramo, comparar_ruta, registro_ruta=None):
     """TAREA 2.a: talla la tabla de alcanzabilidad del tramo, la imprime para
     pegar, y si se pide --comparar, coteja celda por celda contra el fichero
-    dado. Mecanica de ROJO identica a los demas modos."""
+    dado. Mecanica de ROJO identica a los demas modos. TAREA 2.d (vuelta 83):
+    con --registro, ademas niega que alguna unidad tallada ya tenga decision
+    NO SE ENLAZA registrada (ROJO si la tiene: una decidida se colo como
+    fresca)."""
     fallos = []
     unidades = leer_tramo_cadena(vuelta, tramo, fallos)
     if fallos:
@@ -731,6 +794,30 @@ def modo_tramo_cadena(vuelta, tramo, comparar_ruta):
         for fallo in fallos:
             print("     %s" % fallo)
         return 1
+
+    if registro_ruta:
+        fallos_reg = []
+        decididas = cargar_registro_decididas(registro_ruta, fallos_reg)
+        if fallos_reg:
+            print("  ROJO, %d cosa(s) no se pudieron leer y NO se talla nada:" % len(fallos_reg))
+            for fallo in fallos_reg:
+                print("     %s" % fallo)
+            return 1
+        coladas = []
+        for u in unidades:
+            m = RE_PAR_UNIDAD_TALLADA.match(u["par"])
+            if not m:
+                continue
+            clave = (m.group(1), m.group(2))
+            if clave in decididas:
+                coladas.append((u["idx"], u["par"]))
+        if coladas:
+            print("  ROJO: %d unidad(es) YA DECIDIDA(S) (NO SE ENLAZA en el registro) se colaron "
+                  "bajo la CABEZA que se talla como si fueran frescas:" % len(coladas))
+            for idx, par in coladas:
+                print("     fila %s | %s" % (idx, par))
+            print("  TAREA 2.d: EL TALLADOR APRENDE EL REGISTRO, y esto es lo que niega. NO SE TALLA NADA.")
+            return 1
 
     print("=" * 78)
     print("LA TABLA DE ALCANZABILIDAD (VARA DE LA CADENA) DEL TRAMO %d, TALLADA. Vuelta %d." % (tramo, vuelta))
@@ -819,12 +906,16 @@ def main():
                              "SALIDA_V<vuelta>_TRAMO<K>_FILTRO_P91_GUARDA_CADENA.txt")
     ap_arg.add_argument("--comparar", default=None,
                         help="fichero cuya tabla se coteja contra la tallada")
+    ap_arg.add_argument("--registro", default=None, metavar="RUTA",
+                        help="TAREA 2.d: con --tramo-cadena, niega que alguna unidad tallada "
+                             "ya tenga decision NO SE ENLAZA en este registro jsonl "
+                             "(docs/plan/OP_E_01_DECIDIDAS.jsonl)")
     a = ap_arg.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
     con_miles = not a.sin_miles
 
     if a.tramo_cadena is not None:
-        return modo_tramo_cadena(a.vuelta, a.tramo_cadena, a.comparar)
+        return modo_tramo_cadena(a.vuelta, a.tramo_cadena, a.comparar, a.registro)
 
     print("=" * 78)
     print("LA CABECERA DEL REPORTE, TALLADA. Vuelta %d.%s" % (a.vuelta, " Modo fase04." if a.fase04 else ""))

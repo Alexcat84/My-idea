@@ -1,0 +1,37 @@
+==============================================================================
+HORNEADO docs/plan/OP_E_01_DECIDIDAS.jsonl, TAREA 2.a vuelta 83
+==============================================================================
+
+--- FILAS NUEVAS POR TRAMO (ESCRIBIR), leidas con patron ---
+  tramo 3 (SALIDA_V77_TRAMO3_ESCRIBIR.txt): 30 filas nuevas, 0 citadas (ya cubiertas), 30 sin paso reconstruible
+  tramo 4 (SALIDA_V78_TRAMO4_ESCRIBIR.txt): 30 filas nuevas, 0 citadas (ya cubiertas), 0 sin paso reconstruible
+  tramo 5 (SALIDA_V79_TRAMO5_ESCRIBIR.txt): 23 filas nuevas, 7 citadas (ya cubiertas), 0 sin paso reconstruible
+  tramo 6 (SALIDA_V80_TRAMO6_ESCRIBIR.txt): 10 filas nuevas, 0 citadas (ya cubiertas), 0 sin paso reconstruible
+  tramo 7 (SALIDA_V82_TRAMO7_ESCRIBIR.txt): 3 filas nuevas, 27 citadas (ya cubiertas), 0 sin paso reconstruible
+
+--- DISCREPANCIAS DE CUENTA (cabecera del fichero vs lineas leidas) ---
+  SALIDA_V80_TRAMO6_ESCRIBIR.txt | YA DECIDIDOS EN VUELTAS ANTERIORES (citados, no re-derivados) | cabecera dice 20 | leidas 0
+
+--- PARES REPETIDOS ENTRE TRAMOS (declarados, no corregidos a mano) ---
+  NINGUNO
+
+--- TRAMOS 1 Y 2 (LECTURA CRUDA, sin marca de decision) ---
+  tramo 1 (SALIDA_V75_OPE01_TRAMO1_LECTURA.txt): 30 candidatos volcados, 0 filas reconstruibles (el fichero es el volcado crudo de la lectura, sin marca ESCRITA/NO SE ENLAZA por patron)
+  tramo 2 (SALIDA_V76_OPE01_TRAMO2_LECTURA.txt): 30 candidatos volcados, 0 filas reconstruibles (el fichero es el volcado crudo de la lectura, sin marca ESCRITA/NO SE ENLAZA por patron)
+
+--- VERIFICACION CONTRA EL GRAFO DE HOY (dataset/metadata/master_graph.json) ---
+  filas ASCENDIDAS (NO SE ENLAZA -> ESCRITA, arista SI presente hoy): 2
+     mejora_calidad_crosby -> programa_mejora_calidad_14_pasos (tramo 3, SALIDA_V77_TRAMO3_ESCRIBIR.txt)
+     descubrir_necesidades_del_cliente -> traduccion_necesidades_cliente (tramo 6, SALIDA_V80_TRAMO6_ESCRIBIR.txt)
+  filas DEGRADADAS (ESCRITA -> NO SE ENLAZA, arista NO presente hoy): 4
+     waterfall_vs_agile_development -> desarrollo_de_clientes_customer_development (tramo 3, SALIDA_V77_TRAMO3_ESCRIBIR.txt)
+     extraer_priorizar_hipotesis -> value_proposition_startup (tramo 4, SALIDA_V78_TRAMO4_ESCRIBIR.txt)
+     producto_mercado_fit_motores -> afinar_motor_crecimiento (tramo 5, SALIDA_V79_TRAMO5_ESCRIBIR.txt)
+     terminologia_clave_breakthrough -> analisis_sintomas (tramo 5, SALIDA_V79_TRAMO5_ESCRIBIR.txt)
+
+--- TOTALES ---
+  filas en el registro: 96 (64 ESCRITA, 32 NO SE ENLAZA)
+  candidatos de tramos 1 y 2 sin fila reconstruible: 60
+  escrito: docs/plan/OP_E_01_DECIDIDAS.jsonl (96 filas)
+FIN
+EXIT:0
