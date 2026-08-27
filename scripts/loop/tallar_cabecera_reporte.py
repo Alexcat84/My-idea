@@ -41,6 +41,47 @@ copia literal de lo medido.
 SALIDA: exit 0 si talla (y si, con --comparar, no hay diferencias); exit 1 si
 alguna celda no se pudo leer o si la comparacion encuentra diferencias.
 
+--- LA IDENTIDAD SE LEE DE GIT (ESCALADA AUTOMATICA, vuelta 80) ---
+
+POR QUE NACE (decision del fundador, 26 ago 2026, opcion b, disparada por la
+racha de reporte llegando a TRES tandas seguidas, vueltas 77, 78 y 79): la
+vuelta 79 tallaba ya las seis filas de la cabecera (censo, Gate 0, aristas,
+motor, web, tsc) pero la LINEA DEL COMMIT DE APERTURA seguia siendo prosa
+suelta tecleada encima de la tabla, y ahi cayo la tercera caida: el reporte
+de la vuelta 79 publico `43b02413` (el commit de su propia TAREA 4) como
+"commit de apertura", cuando el commit de apertura real era `aea7cc81` (el
+acta de la vuelta 78).
+
+En modo `--fase04`, el tallador ahora lee TAMBIEN el commit de apertura,
+como UNA FILA MAS de la tabla, con la misma mecanica de ROJO que las seis
+filas de arriba: se busca en `git log` de la rama actual el commit cuyo
+mensaje EMPIEZA por "ACTA DE LA VUELTA <vuelta-1> DEL AUDITOR" (el patron
+exacto que todo acta de auditor usa); si no hay NINGUNO, o si hay MAS DE
+UNO (ambiguo), el tallador cae en ROJO y no talla nada. Nunca inventa un
+hash. La rama se lee de `git rev-parse --abbrev-ref HEAD` (no se pide por
+argumento, para que no se pueda teclear una rama distinta de la real).
+
+USO:
+  python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 79
+  python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 78 --comparar docs/loop/REPORTE.md
+
+CASO POSITIVO OBLIGATORIO (vuelta 80), contra la vuelta 79: tallar la vuelta
+79 tiene que dar como commit de apertura `aea7cc81` y NO `43b02413`.
+
+LO QUE ESTA REGLA TODAVIA NO CUBRE, Y SE DICE EN VEZ DE CALLARLO: la regla
+del fundador (EJECUTOR.md, "LA IDENTIDAD SE LEE DE GIT") alcanza a TODO hash,
+nombre de commit, rama o fecha de apertura o de cierre. Esta vuelta talla el
+COMMIT DE APERTURA porque fue el que causo la caida y el unico que el
+encargo pedia. La RAMA se talla como dato de apoyo (se lee de git, no se
+teclea) pero NO como fila propia comparable con su propio ROJO: no hay una
+segunda rama contra la que fallar. EL COMMIT DE CIERRE y la FECHA DE
+APERTURA/CIERRE quedan FUERA de este tallador: el commit de cierre de una
+vuelta no existe todavia en el momento en que el tallador corre (el reporte
+que lo cita es, el mismo, parte de ese commit), asi que no hay como leerlo
+de git sin inventarlo. Mientras el reporte necesite nombrar un commit de
+cierre, lo hace citando los commits de tarea ya creados (que si existen), no
+un hash unico de cierre.
+
 --- MODO --fase04 (ESCALADA AUTOMATICA, vuelta 79) ---
 
 POR QUE NACE (decision del fundador, 26 ago 2026, opcion b, disparada por la
@@ -74,6 +115,7 @@ import argparse
 import io
 import os
 import re
+import subprocess
 import sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -330,6 +372,54 @@ def filas_fase04(ap, ci, con_miles):
     return f
 
 
+def rama_actual(fallos):
+    """La rama de HEAD, leida de git y no tecleada. No es una fila del tallador
+    (no hay una segunda rama contra la que comparar), pero toda cifra que se
+    imprima sale de aqui, nunca de un argumento."""
+    try:
+        r = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=RAIZ,
+                           capture_output=True, text=True, check=True)
+        return r.stdout.strip()
+    except Exception as e:
+        fallos.append("no se pudo leer la rama actual con git rev-parse: %s" % e)
+        return None
+
+
+def commit_apertura_desde_git(vuelta, rama, fallos):
+    """EL COMMIT DE APERTURA, LEIDO DE GIT (escalada del 26 ago 2026, vuelta
+    80): busca en `git log` de RAMA el commit cuyo mensaje EMPIEZA por 'ACTA
+    DE LA VUELTA <vuelta-1> DEL AUDITOR', que es el patron exacto y estable
+    que todo acta de auditor usa para nombrar la vuelta que cierra. Si no hay
+    NINGUNO o hay MAS DE UNO, ROJO: jamas inventa un hash."""
+    if rama is None:
+        fallos.append("sin rama, no se busca el commit de apertura")
+        return None
+    try:
+        r = subprocess.run(["git", "log", rama, "--pretty=format:%H\x01%s"], cwd=RAIZ,
+                           capture_output=True, text=True, check=True)
+    except Exception as e:
+        fallos.append("no se pudo leer git log de la rama %s: %s" % (rama, e))
+        return None
+    patron = re.compile(r"^ACTA DE LA VUELTA %d DEL AUDITOR\b" % (vuelta - 1))
+    hallados = []
+    for linea in r.stdout.splitlines():
+        if "\x01" not in linea:
+            continue
+        h, s = linea.split("\x01", 1)
+        if patron.match(s):
+            hallados.append(h)
+    if not hallados:
+        fallos.append("git log de la rama %s no trae ningun commit 'ACTA DE LA VUELTA %d "
+                      "DEL AUDITOR': no se talla el commit de apertura" % (rama, vuelta - 1))
+        return None
+    if len(hallados) > 1:
+        fallos.append("git log de la rama %s trae %d commits 'ACTA DE LA VUELTA %d DEL "
+                      "AUDITOR' (%s): ambiguo, no se talla el commit de apertura"
+                      % (rama, len(hallados), vuelta - 1, ", ".join(h[:8] for h in hallados)))
+        return None
+    return hallados[0][:8]
+
+
 RE_FILA = re.compile(r"^\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*$")
 
 
@@ -417,6 +507,8 @@ def main():
     if a.fase04:
         apertura = lado_fase04(a.vuelta, "APERTURA", fallos, con_miles)
         cierre = lado_fase04(a.vuelta, "CIERRE", fallos, con_miles)
+        rama = rama_actual(fallos)
+        commit_ap = commit_apertura_desde_git(a.vuelta, rama, fallos)
     else:
         apertura = lado(a.vuelta, "APERTURA", fallos)
         cierre = lado(a.vuelta, "CIERRE", fallos)
@@ -428,6 +520,11 @@ def main():
         return 1
 
     f = filas_fase04(apertura, cierre, con_miles) if a.fase04 else filas(apertura, cierre, con_miles)
+    if a.fase04:
+        celda_identidad = "rama `%s`, commit `%s` (ACTA DE LA VUELTA %d DEL AUDITOR, leido de git log)" \
+            % (rama, commit_ap, a.vuelta - 1)
+        f.append(("identidad: rama y commit de apertura (leidos de git, no tecleados)",
+                  celda_identidad, celda_identidad))
 
     print("--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---")
     print()
