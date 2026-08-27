@@ -1047,4 +1047,21 @@ seguia diciendo en presente, `docs/loop/ACTA_AUDITOR.md` seccion 2.4, lineas
 > -> 88 con direccion -> (-1 guarda de dos condiciones, banco 9.6.2, el 1098)
 > -> 87 con direccion -> (-1 guarda reparado, banco 9.6.2, el 1009, relectura
 > conjunta de la vuelta 93) -> 86 con direccion -> 84 ESCRITA + 2 YA_ESTABA
-> (1388, 1946) + 0 ESCALERA_ROTA.** Cifra vigente desde la vuelta 93.
+> (1388, 1946) + 0 ESCALERA_ROTA.** Cifra vigente hasta la vuelta 94
+> (CORRECCION DECLARADA, vuelta 94: dos relecturas conjuntas mas la mueven,
+> ver fila 12 y la cadena de abajo).
+
+| # | eslabon | cifra | fuente / comando |
+|---:|---|---:|---|
+| 12 | VUELTA 94: dos relecturas conjuntas (acta de la vuelta 93, secciones 5.1 y 5.2, discrepancias del ejecutor sobre direcciones fijadas en la vuelta 91) sobre los puestos **1281** (`get_visual -> pensamiento_visual_modelos_negocio`) y **1992** (`seleccion_de_metodo_de_pago -> metodos_pago_electronico_internacional`): ninguna de las dos razones nombra cual nodo es la madre (el 1281 solo trae "es un habito", INVERIFICABLE, y su unico "trae" esta negado dentro de "ningun habito general trae"; el 1992 no cita paso ni linea, a diferencia de sus hermanos 1991 y 1993, y su direccion salio de un comentario de `DIRECCION_MANUAL`, no de la razon). Por `OP-E-07.verificacion`, LOS DOS SALEN | quita **2** | `scripts/loop/vuelta94_tarea3_relectura_1281_1992.py`, `docs/loop/SALIDA_V94_TAREA3_RELECTURA.txt`; arista retirada con `scripts/loop/vuelta94_tarea3b_retirar_1281_1992.py` (las dos vistas, idempotencia probada); diff de la union del grafo contra el cierre de la vuelta 93 (`352b8529`): EXACTAMENTE dos borradas y cero nuevas, `docs/loop/SALIDA_V94_DIFF_UNION.txt` |
+
+**LA CADENA ACTUALIZADA, VUELTA 94 (el 1281 y el 1992 salen, dos relecturas
+conjuntas, `OP-E-07.verificacion`):**
+
+> **101 -> (-13 dedupe frente 4) -> 88 -> (0 excluidos 9.22, 0 sin direccion)
+> -> 88 con direccion -> (-1 guarda de dos condiciones, banco 9.6.2, el 1098)
+> -> 87 con direccion -> (-1 guarda reparado, banco 9.6.2, el 1009, relectura
+> conjunta de la vuelta 93) -> 86 con direccion -> (-2 relectura conjunta de
+> la vuelta 94, el 1281 y el 1992) -> 84 con direccion -> 82 ESCRITA + 2
+> YA_ESTABA (1388, 1946) + 0 ESCALERA_ROTA.** Cifra vigente desde la vuelta
+> 94.
