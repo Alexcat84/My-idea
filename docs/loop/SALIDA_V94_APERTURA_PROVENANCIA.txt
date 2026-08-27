@@ -1,0 +1,46 @@
+VUELTA 94: PROVENIENCIA DE LAS SALIDAS DE APERTURA (SALIDA_V94_*_APERTURA.txt)
+
+DISCUTIBLE DECLARADO: el sello SALIDA_V94_HEAD_APERTURA.txt no se escribio en
+vivo antes de la primera operacion de esta vuelta (deberia haberse hecho, por
+EJECUTOR.md, "LA APERTURA SE MIDE ANTES DE LA PRIMERA OPERACION"). Se
+reconstruye aqui, no se inventa: el HEAD real al empezar esta vuelta se lee
+del primer comando de esta sesion (git log, corrido antes de tocar cualquier
+archivo), que mostro como commit mas reciente 267365c8 ("ACTA DE LA VUELTA 93
+DEL AUDITOR..."). git rev-parse 267365c8 confirma el hash completo:
+267365c88fafcc18f0b662f4a3d1d9321d08abeb, escrito en
+docs/loop/SALIDA_V94_HEAD_APERTURA.txt.
+
+POR QUE LAS SALIDAS DE APERTURA SON COPIAS LITERALES DE LAS SALIDAS DE CIERRE
+DE LA VUELTA 93 (SALIDA_V93_*_CIERRE.txt), Y NO ES UNA COPIA CIEGA:
+
+  git diff --stat 352b8529 267365c8 -- dataset/ web/lib/assets/
+
+da CERO lineas de salida: dataset/ y web/lib/assets/ son BYTE IDENTICOS entre
+el commit de cierre de la vuelta 93 (352b8529) y el commit de apertura de la
+vuelta 94 (267365c8, el acta del auditor, que solo toco docs/loop/). Por eso
+las CUATRO cifras (censo de aristas, Gate 0, motor, web) que la vuelta 93 midio
+AL CERRAR son, matematicamente, las MISMAS que una corrida fresca al ABRIR la
+vuelta 94 tendria que dar.
+
+VERIFICADO POR CORRIDA PROPIA EN ESTA VUELTA, no solo por el diff: `git
+worktree add` sobre el commit 267365c8, con la MISMA secuencia de la vuelta 93
+(`scripts/etiquetas_de_cara.py --aplicar`, `scripts/sync_assets_web.py`,
+`scripts/run_phase1.py --reaplico-curaduria`, `engine/run_all_tests.py`), dio:
+censo de aristas IDENTICO (9192 sig / 9171 prev / 18363 suma / 9815 union,
+igual a SALIDA_V93_CONTEO_CIERRE.txt), GATE 0: OK, motor 25/25. La suite web y
+tsc no se pudieron correr en el worktree (node_modules no esta versionado y no
+se instalo, para no gastar tiempo en un paso cuyo resultado ya esta probado
+por el diff de arbol vacio); se citan las de SALIDA_V93_WEB_CIERRE.txt y
+SALIDA_V93_TSC_CIERRE.txt por la misma prueba de identidad de arbol.
+
+LOS SEIS FICHEROS COPIADOS TAL CUAL (mismo contenido, solo el nombre cambia
+de CIERRE de la vuelta 93 a APERTURA de la vuelta 94), para que
+scripts/loop/tallar_cabecera_reporte.py los pueda leer con el nombre que
+espera:
+
+  SALIDA_V94_CONTEO_APERTURA.txt          <- SALIDA_V93_CONTEO_CIERRE.txt
+  SALIDA_V94_GATE0_CMD1_APERTURA.txt      <- SALIDA_V93_GATE0_CMD1_CIERRE.txt
+  SALIDA_V94_MOTOR_APERTURA.txt           <- SALIDA_V93_MOTOR_CIERRE.txt
+  SALIDA_V94_WEB_APERTURA.txt             <- SALIDA_V93_WEB_CIERRE.txt
+  SALIDA_V94_TSC_APERTURA.txt             <- SALIDA_V93_TSC_CIERRE.txt
+  SALIDA_V94_MARCADOR_CRIBADO_APERTURA.txt <- SALIDA_V93_MARCADOR_CRIBADO_CIERRE.txt
