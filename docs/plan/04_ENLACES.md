@@ -986,3 +986,40 @@ vigente de `OP-E-06`.
 > sin desarrollo) -> 117 -> (bloqueo de la reversion del 117 de `OP-E-01`,
 > liberado) -> 117 (+1/-1, adjudicaciones 4.1/4.2) -> (-3 banco 9.22) -> 114
 > -> 113 ESCRITA + 1 YA_ESTABA + 0 ESCALERA_ROTA.**
+
+---
+
+## LA CIFRA DE `OP-E-07`, ENTERA, DE 101 A 87 (TAREA 4 de la vuelta 92, por la misma regla contra el descarte silencioso que la TAREA 2 de la vuelta 91 aplico a `OP-E-06`)
+
+**Por que se escribe aqui:** la misma razon que la seccion de arriba. La
+cifra de `OP-E-07` vive repartida entre el addendum de `OPERACIONES.jsonl`
+(reescrito en la TAREA 3.d de esta vuelta) y las actas 91 y 92; la
+`verificacion` de `OP-E-07` pide la misma cadena unica y citable. Cada eslabon
+trae su fuente; el unico nuevo de esta vuelta (el descenso de 88 a 87) se mide
+con el guarda de la TAREA 2, no a mano.
+
+| # | eslabon | cifra | fuente / comando |
+|---:|---|---:|---|
+| 1 | Los candidatos SIN direccion en su propia frase cosechada, tallados de `docs/plan/COSECHA_RAZONES_D.jsonl` (397 filas, `nuevo=true` con `senales == ["continua por la vara"]`) | **101** | `docs/loop/SALIDA_V91_TAREA4_REBASE_OPE07.txt` lineas 5 a 6, reparto por dominio **core 74, environmental 12, exportacion 11, entrega 4** |
+| 2 | Frentes 1, 2 y 3 del dedupe (contra el calibrado, contra `aristas_nuevas` de otras operaciones, contra la cola de relectura post fusion) | quita **0** los tres | mismo fichero, lineas 11, 13 y 15 |
+| 3 | Frente 4 del dedupe: contra pares con arista YA en el grafo de hoy, resolviendo por alias | quita **13**, nombrados uno a uno (875, 884, 990, 1000, 1001, 1022, 1139, 1194, 1231, 1276, 1339, 1474, 1855) | mismo fichero, lineas 17 a 30. Remanente: 101 menos 13 igual a **88** |
+| 4 | La bolsa re-basada, escrita | **88** | `docs/loop/SALIDA_V91_TAREA4_REBASE_OPE07.txt` linea 36, escrito a `docs/plan/OP_E_07_REBASE_V91.jsonl`, **88 filas** (`wc -l` confirmado en esta vuelta) |
+| 5 | La direccion de cada par leida de la razon COMPLETA de `INTRA_DOMINIO_VEREDICTOS.jsonl` (80 por criterio automatico, 8 a mano con cita textual donde la formula no usa "trae") | **88 con direccion**, 0 excluidos por banco 9.22, 0 sin direccion resoluble | `docs/loop/SALIDA_V91_TAREA4_DIRECCION.txt` lineas 4 a 7 y 12, escrito a `docs/plan/OP_E_07_DIRECCION_V91.jsonl`, **88 filas** |
+| 6 | LA CAIDA DE CLASE (vuelta 91, acta seccion 3.1): el puesto **1098** tiene una arista escrita que su propia razon PROHIBE (banco `9.6.2`, `docs/BANCO_DE_TEXTOS.md` linea 1737 y siguientes: no hay madre e hijo, linea compartida que ninguno expande, mismo perfil que el puesto **2.195** de la tabla de linea 1776 a 1782) | quita **1** | `docs/loop/ACTA_AUDITOR.md` lineas 31290 a 31352; `docs/PENDIENTES.md`, seccion "EL PUESTO 1098 DE `OP-E-07` TENIA UNA ARISTA QUE SU PROPIA RAZON PROHIBE" |
+| 7 | El guarda de dos condiciones (TAREA 2 de esta vuelta) filtra la bolsa de direccion | **87 con direccion**, EXACTAMENTE el 1098 sale | `scripts/loop/vuelta92_tarea2_guarda_direccion.py --vara` (los dos casos obligatorios en verde) y `scripts/loop/vuelta92_tarea3a_filtrar_ope07.py`, escrito a `docs/plan/OP_E_07_DIRECCION_V92.jsonl`, **87 filas** (`wc -l` confirmado en esta vuelta) |
+| 8 | La escritura de las aristas sobre los 88 de V91 (vuelta 91): `ESCRITA` + `YA_ESTABA` (puestos 1388 y 1946, resuelven por alias a una arista que otro puesto de la misma bolsa ya escribio) + `ESCALERA_ROTA` | **86 ESCRITA + 2 YA_ESTABA + 0 ESCALERA_ROTA = 88** | `docs/loop/SALIDA_V91_TAREA4_ESCRITURA.txt` lineas 94 a 96 |
+| 9 | La retirada de la arista del 1098 (`scripts/loop/vuelta92_tarea3b_retirar_1098.py`), sobre los 86 `ESCRITA`: los 2 `YA_ESTABA` no se tocan porque el 1098 no era ninguno de los dos | **85 ESCRITA + 2 YA_ESTABA + 0 ESCALERA_ROTA = 87**, cifra vigente de `OP-E-07` | diff de la union del grafo contra el cierre de la vuelta 91 (`0691d2257ddbbf8b26357dbd25f5b304bc984611`): EXACTAMENTE una borrada (`customer_validation_sell_phase -> prueba_solucion_con_cliente`) y cero nuevas, corrido en esta vuelta |
+
+**LA ARITMETICA COMPLETA, eslabon por eslabon:** 101 menos 13 (frente 4 del
+dedupe, los otros tres frentes en 0) igual a 88; las 88 leidas por su razon
+completa dan 88 con direccion (0 excluidos por 9.22, 0 sin direccion); el
+guarda de dos condiciones de la TAREA 2 saca el 1098 por el banco 9.6.2 y deja
+87 con direccion; y la escritura, que ya habia dado 86 ESCRITA mas 2
+YA_ESTABA sobre los 88, pierde exactamente la arista del 1098 (que SI estaba
+`ESCRITA`, no `YA_ESTABA`) y queda en **85 ESCRITA, 2 YA_ESTABA y 0
+ESCALERA_ROTA**, la cifra vigente de `OP-E-07`.
+
+> **101 -> (-13 dedupe frente 4) -> 88 -> (0 excluidos 9.22, 0 sin direccion)
+> -> 88 con direccion -> (-1 guarda de dos condiciones, banco 9.6.2, el 1098)
+> -> 87 con direccion -> 85 ESCRITA + 2 YA_ESTABA (1388, 1946) + 0
+> ESCALERA_ROTA.**
