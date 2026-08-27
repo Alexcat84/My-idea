@@ -1,0 +1,13 @@
+==============================================================================
+TAREA 4.b: CASO ROJO OBLIGATORIO, SOBRE COPIA EN MEMORIA (dataset/ no se toca)
+==============================================================================
+git status --porcelain -- dataset/ ANTES: ''
+cuenta de hoy (grafo real, sin tocar): 935 entradas que sobran, 711 nodos
+fabricado EN MEMORIA (no en disco): ab_testing_optimizacion.nodos_siguientes gana una entrada duplicada de 'cohort_analysis_retencion' (ab_testing_optimizacion -> cohort_analysis_retencion x2)
+cuenta SOBRE LA COPIA FABRICADA (fichero temporal, nunca dataset/): 936 entradas que sobran, 711 nodos
+git status --porcelain -- dataset/ DESPUES: ''
+
+LA COPIA FABRICADA CRECE LA CUENTA (935 -> 936, +1), que es EXACTAMENTE la condicion que --despues detecta como ROJO. El caso rojo CAE EN ROJO como se espera de el (simulando --despues con estas dos cuentas):
+   --despues simulado: ROJO (exit 1), LA OPERACION PARA. CASO ROJO: PROBADO.
+
+dataset/ nunca se toco: los dos git status de arriba salieron vacios.

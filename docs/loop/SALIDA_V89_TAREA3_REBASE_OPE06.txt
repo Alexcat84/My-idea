@@ -1,0 +1,88 @@
+==========================================================================================
+TAREA 3.d: CASO ROJO INVENTADO, SOBRE COPIA EN MEMORIA (dos frases fabricadas)
+==========================================================================================
+FABRICADA 1 (contiene palabras de la lista vieja: True) y NIEGA el enlace:
+  frase: La madre cuelga de un tercero y enumera a sus dos hijos, pero ninguno enlaza al otro: son ramas que no se tocan.
+  el filtro VIEJO (por palabra) la habria aceptado (contiene 'madre', 'cuelga', 'enumera').
+  el criterio NUEVO da: NO_ENTRA (esperado NO_ENTRA)
+
+FABRICADA 2 (SIN ninguna palabra de la lista vieja: True) y SI dice quien desarrolla a quien:
+  frase: nodo_prueba_w explica en su tercer paso, con dos parrafos completos, exactamente lo mismo que nodo_prueba_z resume en una sola frase de su lista de pendientes.
+  el filtro VIEJO (por palabra) la habria rechazado (no trae 'madre', 'hijo', 'desarrolla', 'en una linea', etc).
+  el criterio NUEVO da: ENTRA (esperado ENTRA)
+
+LOS DOS CASOS SE COMPORTAN COMO EL CRITERIO NUEVO EXIGE Y COMO EL FILTRO VIEJO NO HABRIA DADO. Ninguno de los dos toco ningun fichero: son frases fabricadas sobre copia en memoria, declaradas aqui.
+
+==========================================================================================
+TAREA 3.a Y 3.b: EL CRITERIO NUEVO, APLICADO A LAS 129 FRASES DE LA BOLSA V88, UNA POR UNA
+==========================================================================================
+CRITERIO: LA FRASE DICE QUIEN DESARROLLA A QUIEN, O NO LO DICE.
+(lista de palabras de la vuelta 88 DEROGADA como filtro unico)
+
+LAS 12 FRASES QUE NO ENTRAN (NO_ENTRA), TODAS NOMBRADAS (nunca silencioso):
+  puesto 455 (core): customer_validation_sell_phase -- realizar_pruebas_pasa_no_pasa
+     frase : Ninguno enlaza al otro, aunque los dos cuelgan del mismo padre, introduccion_validacion_clientes: son hermanos que no se conocen.
+     razon : niega el enlace del par ('Ninguno enlaza al otro... son hermanos que no se conocen'): los dos cuelgan de un TERCER nodo (el padre comun), y la frase no dice que uno desarrolle al otro. De la caida 4.1 del acta 88.
+  puesto 490 (core): fit_problema_solucion -- product_market_fit
+     frase : La madre enumera los tres tipos de encaje y ninguno enlaza al otro.
+     razon : niega el enlace del par ('La madre enumera los tres tipos... y ninguno enlaza al otro'): enumerar no es desarrollar, y la frase cierra negando el enlace. De la caida 4.1 del acta 88.
+  puesto 522 (core): metricas_cohortes -- retention_metrics
+     frase : Ninguno enlaza al otro, aunque los dos cuelgan de la misma vecindad de retencion.
+     razon : niega el enlace del par ('Ninguno enlaza al otro, aunque los dos cuelgan de la misma vecindad de retencion'): vecindad comun, no desarrollo entre los dos. De la caida 4.1 del acta 88.
+  puesto 530 (core): estrategia_de_innovacion_de_producto -- estrategia_de_innovacion_y_tecnologia
+     frase : Lo unico que el segundo tiene es la palabra arenas, en UNA LINEA dentro de una lista de seis que va de objetivos a roadmap: definir arenas estrategicas, mercados, tecnologias y sectores, donde enfocar los esfuerzos.
+     razon : DISCUTIBLE: 'Lo unico que el segundo tiene es la palabra arenas, en UNA LINEA...' declara ella misma que la evidencia es una palabra suelta compartida, no un desarrollo de contenido: la propia frase la llama 'lo unico que tiene'.
+  puesto 581 (core): cumplimiento_magnuson_moss -- prohibicion_tie_in_sales
+     frase : Cuando la madre demuestra que si sabe enlazar a sus hijos, la arista que falta es una omision del grafo y no una prueba de duplicacion, y el arreglo barato es la arista, del banco 9.
+     razon : DISCUTIBLE: es un argumento METODOLOGICO citando el banco 9 (si la madre sabe enlazar a otros hijos, la falta aqui es omision de grafo) para RECOMENDAR la arista, pero no dice que nodo_a o nodo_b desarrolle contenido del otro: no hay 'dice en', 'nombra' ni 'desarrolla' sobre el par.
+  puesto 650 (core): diferenciacion_garantia_contrato_servicio -- prohibicion_tie_in_sales
+     frase : de la familia, que la relectura conjunta del 12 de agosto acaba de medir: los dos son hijos de cumplimiento_magnuson_moss y prohibicion_tie_in_sales es uno de los DOS que la madre no enlaza, aunque enlaza a tres de cinco.
+     razon : describe a los dos como HERMANOS bajo una madre comun (cumplimiento_magnuson_moss) y el patron de cuales enlaza la madre: no dice que nodo_a desarrolle a nodo_b ni al reves.
+  puesto 658 (core): overlapping_stages_concurrent_execution -- reduccion_tiempo_de_mercado_velocidad
+     frase : CERO ENLAZADOS NO ES LA FIGURA DE HERMANOS ENLAZADOS MENOS UNO: esa figura pide que la madre enlace a unos si y a otros no, y aqui no enlaza a ninguno, asi que no hay hermanos enlazados de los que sacar mayoria y manda la regla original, sin arista igual a DUPLICACION.
+     razon : es la figura CERO ENLAZADOS del banco aplicada a la familia entera, y concluye 'sin arista igual a DUPLICACION': no cita contenido del par, y su propia conclusion es que NO hay arista.
+  puesto 669 (core): seis_herramientas_comunicacion_celebracion -- seis_medios_comunicacion_cliente
+     frase : La madre no enlaza a ninguna de sus tres aplicaciones, verificado resolviendo a nodo vivo, asi que el instrumento reparte hacia otro lado y sus usos quedan huerfanos de camino.
+     razon : 'La madre no enlaza a ninguna de sus tres aplicaciones... quedan huerfanos de camino': describe el patron de la madre con sus TRES aplicaciones, no el desarrollo especifico entre nodo_a y nodo_b.
+  puesto 676 (core): customer_discovery_overview -- verificar_product_market_fit
+     frase : La madre no enlaza a ninguna de las tres.
+     razon : 'La madre no enlaza a ninguna de las tres': una linea, sin ningun contenido del par.
+  puesto 778 (core): design_thinking_fundamentos -- triada_restricciones_diseno
+     frase : 1, y la madre no enlaza a ninguno de sus hijos de paso: cero enlazados, que por la ratificacion es el caso extremo del mitad-o-menos, asi que manda el contenido.
+     razon : 'la madre no enlaza a ninguno de sus hijos de paso: cero enlazados... asi que manda el contenido': remite a 'el contenido' sin decirlo: no es ella misma la que dice quien desarrolla a quien.
+  puesto 795 (core): busqueda_cofundador_complementario -- circulos_busqueda_cofundadores
+     frase : O sea que la madre tiene dos hijos que dicen casi lo mismo y no enlaza a ninguno de los dos.
+     razon : 'la madre tiene dos hijos que dicen casi lo mismo y no enlaza a ninguno de los dos': sinonimia entre hermanos, no desarrollo del uno sobre el otro.
+  puesto 816 (core): get_out_building_test_sell -- realizar_pruebas_pasa_no_pasa
+     frase : 1, y la madre no enlaza a su hijo de paso.
+     razon : 'la madre no enlaza a su hijo de paso': una linea, sin contenido del par.
+
+CIFRA NUEVA DE LA BOLSA (ENTRA): 117 de 129
+CIFRA DE LAS QUE CAEN (NO_ENTRA): 12 de 129
+
+==========================================================================================
+TAREA 3.c: LAS TRES DE LA CAIDA 4.1 DEL ACTA 88 (455, 490, 522) TIENEN QUE SALIR
+==========================================================================================
+LAS TRES SALIERON: [455, 490, 522] (verificado contra puestos_no_entran)
+
+==========================================================================================
+LAS 3 FILAS MARCADAS DISCUTIBLE (lectura mas fina, para la relectura ciega)
+==========================================================================================
+  puesto 530 (core decision NO_ENTRA): estrategia_de_innovacion_de_producto -- estrategia_de_innovacion_y_tecnologia
+     frase : Lo unico que el segundo tiene es la palabra arenas, en UNA LINEA dentro de una lista de seis que va de objetivos a roadmap: definir arenas estrategicas, mercados, tecnologias y sectores, donde enfocar los esfuerzos.
+     razon : DISCUTIBLE: 'Lo unico que el segundo tiene es la palabra arenas, en UNA LINEA...' declara ella misma que la evidencia es una palabra suelta compartida, no un desarrollo de contenido: la propia frase la llama 'lo unico que tiene'.
+  puesto 581 (core decision NO_ENTRA): cumplimiento_magnuson_moss -- prohibicion_tie_in_sales
+     frase : Cuando la madre demuestra que si sabe enlazar a sus hijos, la arista que falta es una omision del grafo y no una prueba de duplicacion, y el arreglo barato es la arista, del banco 9.
+     razon : DISCUTIBLE: es un argumento METODOLOGICO citando el banco 9 (si la madre sabe enlazar a otros hijos, la falta aqui es omision de grafo) para RECOMENDAR la arista, pero no dice que nodo_a o nodo_b desarrolle contenido del otro: no hay 'dice en', 'nombra' ni 'desarrolla' sobre el par.
+  puesto 932 (core decision ENTRA): cumplimiento_magnuson_moss -- mecanismo_resolucion_disputas
+     frase : O NUEVO: cumplimiento_magnuson_moss nombra en DOS LINEAS a cuatro nodos hermanos de esta familia, el titulo, la divulgacion, la disponibilidad previa y la prohibicion de tie-in, y no enlaza con ninguno.
+     razon : DISCUTIBLE: 'cumplimiento_magnuson_moss nombra en DOS LINEAS a cuatro nodos hermanos de esta familia... y no enlaza con ninguno': la madre SI nombra en dos lineas a sus hijos (patron de dieccion), aunque el fichero de origen esta truncado a 200 caracteres y no deja verificar si mecanismo_resolucion_disputas es literalmente uno de los cuatro nombrados o un quinto hermano: se lee a favor de la evidencia positiva escrita ('nombra en DOS LINEAS'), no de la duda sobre el truncado.
+
+==========================================================================================
+TAREA 3.e: EL RESULTADO
+==========================================================================================
+CIFRA V88 (28 ago 2026, con el filtro de palabras, se deja delante, no se borra): 129
+CIFRA V89 (29 ago 2026, con el criterio de direccion): 117
+escrito: C:\Users\AlexDesk\Documents\I have an idea\docs\plan\OP_E_06_REBASE_V89.jsonl
+
+NO SE ESCRIBIO NINGUNA ARISTA DE OP-E-06 EN ESTA VUELTA. OP-E-06 NO ABRE en la vuelta 89 (adjudicacion 5.8 del acta 88): la vuelta 90 abre la operacion con esta bolsa de 117, no con la de 129 ni con la de 192.
