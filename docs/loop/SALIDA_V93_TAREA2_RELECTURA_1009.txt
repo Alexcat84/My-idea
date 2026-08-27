@@ -1,0 +1,37 @@
+==========================================================================================
+TAREA 2 (BLOQUEANTE): LA RELECTURA CONJUNTA DEL PUESTO 1009
+==========================================================================================
+
+--- PUESTO 1083 (VARA: CONFIRMADO por el acta 91 (nombra 'la madre' literal)) ---
+razon completa:
+  'Las cuatro fases contra como elegir que validar, del mismo libro y sin arista entre ellos. customer_discovery_cuatro_fases ordena el descubrimiento, y su fase 1 manda desarmar la idea en las nueve partes del lienzo y escribir un resumen por cada una. priorizar_elementos_a_validar trae un procedimiento que la madre no tiene: revisar el lienzo completo, identificar las CINCO variables criticas o menos que determinan el exito, concentrar los recursos de validacion en propuesta de valor, relacion con el cliente y canales, priorizar cada lado por separado si el mercado es de varios lados, y evitar validar todo a la vez. Por la vara del banco 9.6.1, CONTINUA. El limite de cinco variables es la clase de cifra concreta que ningun nodo de proceso da.'
+medicion: {"puesto": 1083, "formula_madre_hijo_literal": false, "nombra_la_madre_literal": true, "formula_clase_d": false, "tiene_linea_con_paso_numerado": false, "contradice_declarando_fuera_del_solape": false}
+
+--- PUESTO 1098 (VARA: CAYO en la vuelta 92 (formula de clase D, no nombra madre)) ---
+razon completa:
+  'Vender en la etapa de validacion contra la entrevista de solucion, del mismo libro y sin arista entre ellos. prueba_solucion_con_cliente trae un procedimiento de entrevista que el otro no tiene en ninguna forma: ampliar la lista a por lo menos DIEZ clientes potenciales y mas si es consumo, usar preguntas de presupuesto del tipo lo usarias si fuera gratis y quien tiene el presupuesto, explorar los limites de precio proponiendo una cifra muy alta y bajando hasta encontrar el punto, preguntar que canal prefiere entre tienda, linea, directo o intermediario, y anotar cada entrevista en una ficha con el mismo formato para poder comparar. customer_validation_sell_phase vende de verdad: definir pruebas de pasa o no pasa, salir a vender en el canal fisico o llevar trafico real si es por internet, mirar si hay entusiasmo genuino, y comprobar si hay suficientes clientes para sostener el negocio. Por la vara del banco 9.6.1, CONTINUA. Queda anotada UNA LINEA COMPARTIDA que no crea jerarquia porque ninguno la expande: los dos preguntan como es el proceso interno de aprobacion de compra, y los dos lo dicen en un solo paso.'
+medicion: {"puesto": 1098, "formula_madre_hijo_literal": false, "nombra_la_madre_literal": false, "formula_clase_d": false, "tiene_linea_con_paso_numerado": false, "contradice_declarando_fuera_del_solape": false}
+
+--- PUESTO 1009 (EL PUESTO EN DISCREPANCIA) ---
+razon completa:
+  'La fase 2 del descubrimiento contra los tres encajes, libros distintos y sin arista entre ellos. customer_discovery_phase2_problem_test prueba el problema: disenar experimentos con clientes reales, prepararse para los contactos y las entrevistas, probar la comprension del problema y su importancia percibida, profundizar en perfiles y comportamientos, y capturar conocimiento competitivo durante las entrevistas. fit_problema_solucion trae un procedimiento que esa fase no tiene: identificar en cual de las tres fases esta el negocio, enviar en la fase I un flujo pequeno y constante de clientes frios por canales de traccion para detectar por donde se FILTRA el producto, y no escalar la inversion en marketing hasta que la fuga sea baja. Por la vara del banco 9.6.1, CONTINUA. Y por el banco 9.9 se juzga hoy: el solape cae en sus tres primeros pasos, los encajes de Value Proposition Design, y el bloque de traccion queda fuera. NOVENO de los veinte leido.'
+medicion: {"puesto": 1009, "formula_madre_hijo_literal": false, "nombra_la_madre_literal": false, "formula_clase_d": true, "tiene_linea_con_paso_numerado": false, "contradice_declarando_fuera_del_solape": true}
+
+==========================================================================================
+LA PREGUNTA UNICA: LA RAZON DEL 1009 NOMBRA CUAL NODO ES LA MADRE, SI O NO
+==========================================================================================
+1. usa la formula de madre e hijo ('trae el procedimiento DE ESA LINEA')? False
+2. nombra 'la madre' literalmente, como el 1083? False
+3. usa la formula de la clase D ('trae un procedimiento que ESA FASE no tiene',
+   igual en forma a la del 1098, 'que EL OTRO no tiene')? True
+4. hay una linea nombrada con su paso (numero u ordinal) para algun nodo? False
+5. la propia razon declara que un bloque del hijo queda FUERA del solape
+   (contradice el test del banco 9.6.2, BANCO_DE_TEXTOS.md lineas 1771 a 1774,
+   'el hijo cabe entero dentro de UN paso de la madre')? True
+
+==========================================================================================
+VEREDICTO: LA RAZON DEL 1009 NO NOMBRA CUAL NODO ES LA MADRE.
+Se parece al 1098 (formula de clase D, sin linea nombrada, calla la jerarquia)
+y NO se parece al 1083 (que nombra 'la madre' literal).
+Por OP-E-07.verificacion ('si la razon tampoco lo dice, el par sale de la
+cosecha y se anota por que'): EL PAR SALE.
