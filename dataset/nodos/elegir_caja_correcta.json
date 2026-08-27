@@ -16,7 +16,8 @@
   "nodos_previos": [
     "tratar_packaging_costo_marca",
     "disenar_empaque_logistica",
-    "medir_paquete_redondeando_hacia_arriba"
+    "medir_paquete_redondeando_hacia_arriba",
+    "clasificar_tipo_paquete"
   ],
   "nodos_siguientes": [
     "acolchado_segun_forma",
@@ -26,7 +27,8 @@
     "proteger_fragiles_caja_dentro_de_caja",
     "calcular_peso_dimensional_antes_cotizar",
     "conocer_limites_peso_tamano_courier",
-    "aplicar_regla_fija_de_colchon_de_relleno"
+    "aplicar_regla_fija_de_colchon_de_relleno",
+    "elegir_resistencia_caja_peso"
   ],
   "condiciones_activacion": [
     "Estas reusando cajas viejas para ahorrar y no sabes si es seguro",

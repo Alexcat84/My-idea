@@ -915,7 +915,8 @@
       ],
       "entregable_esperado": "Un metodo de acolchado especifico segun la forma de cada producto que envias.",
       "nodos_previos": [
-        "elegir_caja_correcta"
+        "elegir_caja_correcta",
+        "clasificar_tipo_paquete"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -1282,7 +1283,8 @@
       "entregable_esperado": "Proyecto de retrofit de iluminación con ahorro proyectado y periodo de retorno",
       "nodos_previos": [
         "mejora_envolvente_edificio",
-        "benchmark_auditoria_energetica"
+        "benchmark_auditoria_energetica",
+        "eficiencia_energetica_almacenes"
       ],
       "nodos_siguientes": [
         "actualizacion_hvac"
@@ -2691,7 +2693,8 @@
         "evaluacion_riesgos_legales_ia"
       ],
       "nodos_siguientes": [
-        "desafios_implementacion_ia"
+        "desafios_implementacion_ia",
+        "comprender_alineacion_etica_ia"
       ],
       "condiciones_activacion": [
         "Cuando vas a dejar que una IA tome decisiones por su cuenta que afecten directamente a tus clientes o a las personas con las que trabajas"
@@ -3677,7 +3680,8 @@
         "optimizacion_keep_retencion",
         "hablar_con_clientes_desmontar_supuestos",
         "war_room_pivot_proceed",
-        "tres_as_de_metricas"
+        "tres_as_de_metricas",
+        "customer_retention_tactics"
       ],
       "condiciones_activacion": [
         "Cuando ya tienes al menos varios miles de clientes para poder segmentar con sentido",
@@ -5225,7 +5229,8 @@
       "nodos_previos": [
         "scorecard_de_seleccion_de_proyectos",
         "actualizar_modelo_de_negocio_pivot_o_proceed",
-        "estrategia_de_innovacion_de_producto"
+        "estrategia_de_innovacion_de_producto",
+        "seleccion_arenas_estrategicas"
       ],
       "nodos_siguientes": [
         "gestion_de_portafolio_gates_go_kill",
@@ -9165,7 +9170,8 @@
         "equipo_forma_t",
         "equipos_pequenos_vs_grandes",
         "deadlines_como_herramienta_convergencia",
-        "diseno_etico_de_privacidad"
+        "diseno_etico_de_privacidad",
+        "encuadre_desafio_diseno"
       ],
       "condiciones_activacion": [
         "Al iniciar formalmente un proyecto de innovación con un cliente o stakeholder",
@@ -9556,7 +9562,8 @@
         "metrics_that_matter_framework"
       ],
       "nodos_siguientes": [
-        "customer_creation"
+        "customer_creation",
+        "cash_burn_calculation"
       ],
       "condiciones_activacion": [
         "En cualquier etapa de tu negocio donde necesites controlar el gasto de efectivo"
@@ -10052,7 +10059,8 @@
       "nodos_previos": [
         "founder_ceo_succession_process",
         "paradoja_exito_emprendedor",
-        "planificacion_sucesion_ceo"
+        "planificacion_sucesion_ceo",
+        "seleccion_ceo_fundador"
       ],
       "nodos_siguientes": [
         "evaluacion_disimilitud_sucesor",
@@ -10434,7 +10442,8 @@
       ],
       "entregable_esperado": "Hoja de cálculo con el porcentaje de RVC obtenido y comparación contra el umbral mínimo exigido por el FTA",
       "nodos_previos": [
-        "reglas_de_origen_fta_2"
+        "reglas_de_origen_fta_2",
+        "certificado_de_origen_tratados_libre_comercio"
       ],
       "nodos_siguientes": [
         "certificacion_origen_producto"
@@ -12092,7 +12101,8 @@
       "nodos_previos": [
         "metrics_that_matter_framework",
         "actualizar_modelo_de_negocio_pivot_o_proceed",
-        "diferencia_ganancia_flujo_caja"
+        "diferencia_ganancia_flujo_caja",
+        "burn_rate_por_etapa"
       ],
       "nodos_siguientes": [
         "decision_pivotar_o_proceder"
@@ -12830,7 +12840,8 @@
         "gamificacion_onboarding_visual"
       ],
       "nodos_siguientes": [
-        "fase_accomplish_experiencia_cliente"
+        "fase_accomplish_experiencia_cliente",
+        "regalos_estrategicos_personalizados"
       ],
       "condiciones_activacion": [
         "Cuando el cliente completa un proceso de implementación largo o estresante",
@@ -13476,7 +13487,8 @@
       ],
       "nodos_siguientes": [
         "foreign_trade_zones",
-        "certificacion_origen_producto"
+        "certificacion_origen_producto",
+        "calculo_contenido_valor_regional"
       ],
       "condiciones_activacion": [
         "Cuando el mercado destino forma parte de un tratado de libre comercio con EE.UU.",
@@ -13773,7 +13785,9 @@
       "entregable_esperado": "Lista de checkpoints de validación medibles y vinculados al modelo de negocio, listos para probarse en customer validation",
       "nodos_previos": [
         "pivote_o_proceder",
-        "fundadores_lideran_validacion"
+        "fundadores_lideran_validacion",
+        "customer_validation",
+        "filosofia_customer_validation"
       ],
       "nodos_siguientes": [
         "hoja_de_ruta_de_ventas"
@@ -13971,7 +13985,8 @@
         "analisis_antiguedad_cuentas_por_cobrar",
         "cultura_de_transparencia_financiera",
         "rotacion_activos",
-        "tasa_crecimiento_sostenible"
+        "tasa_crecimiento_sostenible",
+        "gestion_cuentas_por_cobrar"
       ],
       "etiqueta_arbol": "Mide tu Ciclo de Efectivo",
       "ids_alias": [
@@ -14902,7 +14917,8 @@
       "nodos_siguientes": [
         "homogeneidad_vs_diversidad_equipo",
         "cofundar_con_amigos_familia_riesgos",
-        "compatibilidad_motivaciones_riqueza_control"
+        "compatibilidad_motivaciones_riqueza_control",
+        "evaluacion_capital_para_cofundadores"
       ],
       "condiciones_activacion": [
         "Si el emprendedor está buscando cofundadores para iniciar un startup",
@@ -15554,7 +15570,10 @@
         "elegir_resistencia_caja_peso",
         "elegir_sobre_o_caja_tamano",
         "empacar_liquidos_doble_barrera",
-        "elegir_material_de_relleno_segun_producto"
+        "elegir_material_de_relleno_segun_producto",
+        "acolchado_segun_forma",
+        "elegir_caja_correcta",
+        "hacer_cajas_a_medida_del_pedido"
       ],
       "condiciones_activacion": [
         "Vendes productos de formas muy distintas y usas la misma caja para todos.",
@@ -15870,7 +15889,8 @@
       "nodos_previos": [
         "customer_journey_mapping",
         "reglas_brainstorming",
-        "analisis_y_sintesis"
+        "analisis_y_sintesis",
+        "colaboracion_creador_consumidor"
       ],
       "nodos_siguientes": [
         "rapid_prototyping",
@@ -16243,7 +16263,8 @@
         "espacios_de_diseno_superpuestos",
         "distincion_esfuerzo_energia",
         "emocion_e_imagen_en_el_pensamiento",
-        "comprension_capacidades_limitaciones_ia"
+        "comprension_capacidades_limitaciones_ia",
+        "co_creation_session"
       ],
       "condiciones_activacion": [
         "Cuando se busca innovación radical más allá de la investigación de mercado convencional",
@@ -16537,7 +16558,8 @@
       ],
       "nodos_siguientes": [
         "tipos_sitio_web_exportacion",
-        "evaluacion_preparacion_tecnologica"
+        "evaluacion_preparacion_tecnologica",
+        "internacionalizacion_sitio_web_exportacion"
       ],
       "condiciones_activacion": [
         "Si la empresa considera usar Internet como canal de exportación",
@@ -17323,7 +17345,8 @@
       ],
       "entregable_esperado": "Un informe propio donde queden anotados los sesgos y riesgos éticos que encontraste al probar el modelo de IA que piensas usar en tu producto o negocio",
       "nodos_previos": [
-        "desafios_implementacion_ia"
+        "desafios_implementacion_ia",
+        "alineacion_etica_ia_negocio"
       ],
       "nodos_siguientes": [
         "modelo_quality_by_design_juran",
@@ -17451,7 +17474,8 @@
         "centaur_cyborg_ia",
         "principio_humano_en_el_loop",
         "riesgo_sobredependencia_ia",
-        "human_in_the_loop_ia"
+        "human_in_the_loop_ia",
+        "principio_mejora_continua_ia"
       ],
       "condiciones_activacion": [
         "Cuando vas a dejarle a la IA una tarea importante de tu negocio",
@@ -20713,7 +20737,8 @@
         "desirability_feasibility_viability",
         "lean_launchpad_web_startup_process",
         "prototyping_possibilities",
-        "establecer_linea_base_mvp"
+        "establecer_linea_base_mvp",
+        "principio_calidad_mvp"
       ],
       "nodos_siguientes": [
         "prueba_mvp_problema_baja_fidelidad",
@@ -20956,7 +20981,8 @@
       "entregable_esperado": "Un balance de flujo de materiales que identifique ineficiencias y oportunidades de ahorro en los procesos de producción.",
       "nodos_previos": [
         "costeo_ciclo_de_vida",
-        "contabilidad_ambiental"
+        "contabilidad_ambiental",
+        "eco_eficiencia"
       ],
       "nodos_siguientes": [
         "priorizacion_iniciativas_sostenibilidad"
@@ -22321,7 +22347,8 @@
         "cumplimiento_acuerdos_comerciales_tanc"
       ],
       "nodos_siguientes": [
-        "licencia_exportacion_regulaciones"
+        "licencia_exportacion_regulaciones",
+        "export_administration_regulations"
       ],
       "condiciones_activacion": [
         "Cuando el producto tiene aplicaciones militares y comerciales (doble uso)",
@@ -24791,7 +24818,8 @@
         "estrategia_de_innovacion_producto"
       ],
       "nodos_siguientes": [
-        "valor_intangible_sostenibilidad"
+        "valor_intangible_sostenibilidad",
+        "principio_green_tercer_boton"
       ],
       "condiciones_activacion": [
         "Cuando buscas diferenciarte en el mercado con innovación ambiental",
@@ -28110,7 +28138,11 @@
         "verificar_product_market_fit",
         "get_out_of_the_building",
         "problem_solution_fit",
-        "customer_validation_sales_roadmap"
+        "customer_validation_sales_roadmap",
+        "voz_del_cliente_voc",
+        "prueba_solucion_con_cliente",
+        "preparar_contacto_clientes",
+        "filosofia_validacion_clientes"
       ],
       "condiciones_activacion": [
         "Cuando necesitas ubicar en que etapa de validación esta tu negocio",
@@ -28252,7 +28284,8 @@
         "preservar_efectivo_buscar_modelo",
         "sales_funnel_get_keep_grow",
         "sales_roadmap_vs_sales_force",
-        "producto_minimo_viable"
+        "producto_minimo_viable",
+        "product_market_fit"
       ],
       "condiciones_activacion": [
         "Si tu negocio se basa solo en tu visión, sin hechos reales del mercado",
@@ -28290,7 +28323,8 @@
         "verificar_product_market_fit",
         "actualizar_modelo_de_negocio_pivot_o_proceed",
         "pivote_o_proceder",
-        "sintesis_hipotesis_modelo_negocio"
+        "sintesis_hipotesis_modelo_negocio",
+        "priorizar_elementos_a_validar"
       ],
       "etiqueta_arbol": "Avanza en Cuatro Fases"
     },
@@ -28316,7 +28350,9 @@
       "nodos_siguientes": [
         "problem_solution_fit",
         "producto_minimo_viable",
-        "customer_discovery_cuatro_fases"
+        "customer_discovery_cuatro_fases",
+        "preparar_contacto_clientes",
+        "ganar_comprension_del_cliente"
       ],
       "condiciones_activacion": [
         "Cuando tienes un plan de negocio basado solo en tus propias suposiciones, sin validar",
@@ -28345,7 +28381,8 @@
       "nodos_siguientes": [
         "get_out_of_the_building",
         "earlyvangelists",
-        "identificar_earlyvangelists"
+        "identificar_earlyvangelists",
+        "customer_discovery_phase2_problem_test"
       ],
       "condiciones_activacion": [
         "Al iniciar la etapa de validación de tu negocio",
@@ -28377,7 +28414,10 @@
         "hipotesis_de_tamano_de_mercado",
         "identificar_earlyvangelists",
         "validar_modelo_negocio_hechos",
-        "prueba_solucion_con_cliente"
+        "prueba_solucion_con_cliente",
+        "fit_problema_solucion",
+        "realizar_pruebas_pasa_no_pasa",
+        "mapa_flujo_trabajo_cliente"
       ],
       "condiciones_activacion": [
         "Tienes una hipótesis de negocio pero todavia no has salido a hablar con clientes reales",
@@ -28406,7 +28446,8 @@
         "mercados_multilaterales",
         "pricing_tactics_models",
         "diseno_experimentos_pass_fail",
-        "seleccion_estrategia_pricing"
+        "seleccion_estrategia_pricing",
+        "customer_discovery_introduccion"
       ],
       "nodos_siguientes": [
         "problem_solution_fit",
@@ -28414,7 +28455,10 @@
         "product_market_fit",
         "necesidades_implicitas_vs_explicitas",
         "actualizar_business_model_canvas_tuneup",
-        "preparar_contacto_clientes"
+        "preparar_contacto_clientes",
+        "fit_problema_solucion",
+        "identificacion_problema_cliente",
+        "preguntas_ipo_dolor_cliente"
       ],
       "condiciones_activacion": [
         "Cuando el usuario ha completado sus hipótesis de modelo de negocio y necesita validar el problema con clientes reales antes de construir la solución"
@@ -28814,7 +28858,8 @@
         "cierre_satisfaccion_postventa",
         "gestion_pedidos_order_management",
         "programacion_entregas_delivery_scheduling",
-        "diseno_de_ia_antropomorfica_para_producto"
+        "diseno_de_ia_antropomorfica_para_producto",
+        "analisis_de_cohortes"
       ],
       "nodos_siguientes": [
         "retention_metrics",
@@ -28978,7 +29023,9 @@
         "pivote_startup",
         "validar_modelo_financiero",
         "prueba_mvp_alta_fidelidad",
-        "mvp_alta_fidelidad"
+        "mvp_alta_fidelidad",
+        "checkpoints_validacion",
+        "realizar_pruebas_pasa_no_pasa"
       ],
       "condiciones_activacion": [
         "Si ya terminaste el descubrimiento de clientes y confirmaste el problema y la solución",
@@ -29010,7 +29057,9 @@
         "sintesis_hipotesis_modelo_negocio",
         "vision_estrategia_producto_pivote",
         "tipos_de_pivote",
-        "catalogo_pivotes"
+        "catalogo_pivotes",
+        "hoja_de_ruta_de_ventas",
+        "refinar_sales_roadmap"
       ],
       "condiciones_activacion": [
         "Cuando el startup ya validó el problema/solución y busca confirmar que puede vender de forma repetible y escalable",
@@ -29041,7 +29090,8 @@
       "nodos_siguientes": [
         "optimizacion_embudo_get_customers",
         "customer_creation",
-        "earlyvangelists_ventas_tempranas"
+        "earlyvangelists_ventas_tempranas",
+        "prueba_solucion_con_cliente"
       ],
       "condiciones_activacion": [
         "Cuando ya tienes tu producto listo (tu primera versión o MVP) y necesitas comprobar con ventas reales si tu negocio funciona"
@@ -30187,7 +30237,8 @@
         "manifiesto_regla4_iteraciones_pivotes",
         "tipo_mercado_curva_ingresos",
         "prototipado_modelos_negocio",
-        "lienzo_modelo_negocio"
+        "lienzo_modelo_negocio",
+        "filosofia_customer_validation"
       ],
       "nodos_siguientes": [
         "customer_creation",
@@ -33017,7 +33068,8 @@
         "desarrollo_de_clientes_customer_development",
         "producto_unico_superior",
         "definicion_sprint_terminado_fisico",
-        "ejecucion_de_touchpoints"
+        "ejecucion_de_touchpoints",
+        "procesamiento_paralelo_con_espirales"
       ],
       "nodos_siguientes": [
         "modelo_contingencia_riesgo",
@@ -33088,7 +33140,9 @@
         "evaluacion_preparacion_empresa_exportar",
         "evaluacion_potencial_exportador_producto"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "estructura_plan_exportacion"
+      ],
       "condiciones_activacion": [
         "Si la empresa decide formalmente iniciar o escalar su actividad exportadora",
         "Si la empresa exporta actualmente de forma reactiva y desea adoptar un enfoque estratégico"
@@ -33869,7 +33923,8 @@
         "stage_gate_td_tecnologia",
         "asignacion_agil_de_recursos",
         "diseno_consecuencias_no_intencionadas",
-        "diseno_imperfeccion_intencional"
+        "diseno_imperfeccion_intencional",
+        "generar_insights_how_might_we"
       ],
       "condiciones_activacion": [
         "Cuando existen dificultades para pasar de la investigación de necesidades a un concepto robusto y probado",
@@ -34985,7 +35040,8 @@
       ],
       "entregable_esperado": "Matriz de materiales del producto con origen, función y nivel de necesidad/riesgo de cada componente",
       "nodos_previos": [
-        "quimicos_toxicos_en_diseno"
+        "quimicos_toxicos_en_diseno",
+        "productos_crudos"
       ],
       "nodos_siguientes": [
         "concepto_producto_plus",
@@ -35593,7 +35649,8 @@
       "nodos_siguientes": [
         "extraer_priorizar_hipotesis",
         "test_card",
-        "copy_testing"
+        "copy_testing",
+        "disenar_tests_pass_fail"
       ],
       "condiciones_activacion": [
         "Antes de comenzar cualquier ciclo de experimentación con clientes"
@@ -36135,7 +36192,8 @@
       ],
       "entregable_esperado": "Biblioteca de prompts reutilizables para simulaciones de ventas, negociación con inversionistas, o validación de propuestas de valor",
       "nodos_previos": [
-        "adoptar_co_inteligencia_ia"
+        "adoptar_co_inteligencia_ia",
+        "ingenieria_de_prompts_efectiva"
       ],
       "nodos_siguientes": [
         "prueba_hipotesis"
@@ -36167,7 +36225,8 @@
       "nodos_previos": [
         "sintesis_hipotesis_modelo_negocio",
         "diseno_experimentos_hipotesis",
-        "funnel_get_customers_optimizacion"
+        "funnel_get_customers_optimizacion",
+        "diez_principios_testing"
       ],
       "nodos_siguientes": [
         "construir_mvp_baja_fidelidad"
@@ -36312,7 +36371,8 @@
         "eco_efectividad_2"
       ],
       "nodos_siguientes": [
-        "gestion_de_aguas_pluviales_con_techos_verdes"
+        "gestion_de_aguas_pluviales_con_techos_verdes",
+        "diseno_edificio_como_arbol"
       ],
       "condiciones_activacion": [
         "Cuando el usuario diseña o remodela un espacio de trabajo, fábrica o edificio",
@@ -36953,7 +37013,8 @@
       ],
       "entregable_esperado": "Plano conceptual de edificio con sistemas integrados de energía solar, tratamiento de agua natural y paisajismo regenerativo, con proyección de balance energético positivo",
       "nodos_previos": [
-        "energia_eolica_distribuida"
+        "energia_eolica_distribuida",
+        "diseno_biomimetico_de_edificios"
       ],
       "nodos_siguientes": [
         "diversidad_en_diseno"
@@ -37675,7 +37736,8 @@
       ],
       "nodos_siguientes": [
         "equipos_multifuncionales_dfe",
-        "marcos_pensamiento_dfe"
+        "marcos_pensamiento_dfe",
+        "eco_efectividad_2"
       ],
       "condiciones_activacion": [
         "Si la empresa busca reducir el impacto ambiental de sus productos desde la fase de diseño.",
@@ -40273,7 +40335,8 @@
       "nodos_previos": [
         "critica_eco_eficiencia",
         "materiales_ciclicos_infinitamente_reciclables",
-        "triple_top_line"
+        "triple_top_line",
+        "diseno_para_el_medio_ambiente"
       ],
       "nodos_siguientes": [
         "desperdicio_es_alimento",
@@ -40385,7 +40448,9 @@
       "nodos_siguientes": [
         "crecimiento_ingresos_verdes",
         "construccion_valor_intangible",
-        "valor_intangible_sostenibilidad"
+        "valor_intangible_sostenibilidad",
+        "estrategia_edificios_verdes",
+        "contabilidad_flujo_materiales"
       ],
       "condiciones_activacion": [
         "Si la empresa busca reducir costos operativos",
@@ -40963,7 +41028,9 @@
       "nodos_previos": [
         "gestion_logistica_verde"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "actualizacion_iluminacion"
+      ],
       "condiciones_activacion": [
         "Si la empresa opera almacenes o centros de distribución propios.",
         "Si existen altos costos energéticos identificados en instalaciones logísticas."
@@ -41648,7 +41715,8 @@
       "nodos_previos": [
         "tratar_packaging_costo_marca",
         "disenar_empaque_logistica",
-        "medir_paquete_redondeando_hacia_arriba"
+        "medir_paquete_redondeando_hacia_arriba",
+        "clasificar_tipo_paquete"
       ],
       "nodos_siguientes": [
         "acolchado_segun_forma",
@@ -41658,7 +41726,8 @@
         "proteger_fragiles_caja_dentro_de_caja",
         "calcular_peso_dimensional_antes_cotizar",
         "conocer_limites_peso_tamano_courier",
-        "aplicar_regla_fija_de_colchon_de_relleno"
+        "aplicar_regla_fija_de_colchon_de_relleno",
+        "elegir_resistencia_caja_peso"
       ],
       "condiciones_activacion": [
         "Estas reusando cajas viejas para ahorrar y no sabes si es seguro",
@@ -41743,7 +41812,8 @@
       "nodos_previos": [
         "clasificar_tipo_paquete",
         "adaptar_empaque_segun_tipo_de_articulo",
-        "revisar_necesidades_de_empaque"
+        "revisar_necesidades_de_empaque",
+        "elegir_caja_correcta"
       ],
       "nodos_siguientes": [
         "hacer_cajas_a_medida_del_pedido"
@@ -43592,7 +43662,8 @@
         "integracion_deseabilidad_viabilidad_factibilidad_social",
         "search_for_business_model",
         "usuarios_extremos_edge_cases",
-        "usuarios_extremos_globales"
+        "usuarios_extremos_globales",
+        "brief_de_diseno"
       ],
       "nodos_siguientes": [
         "guia_entrevista_hcd",
@@ -47117,7 +47188,8 @@
       "entregable_esperado": "Un conjunto de métricas base reales (no proyectadas) sobre cómo se comportan hoy los clientes con tu MVP",
       "nodos_previos": [
         "contabilidad_innovacion",
-        "pivotar_o_perseverar"
+        "pivotar_o_perseverar",
+        "filosofia_customer_validation"
       ],
       "nodos_siguientes": [
         "afinar_motor_crecimiento",
@@ -48453,7 +48525,8 @@
       ],
       "entregable_esperado": "Un documento de Estrategia de Innovación que defina las arenas estratégicas seleccionadas y los objetivos de inversión para el portafolio de nuevos productos.",
       "nodos_previos": [
-        "atacar_mercados_establecidos_con_problema"
+        "atacar_mercados_establecidos_con_problema",
+        "estrategia_de_innovacion_producto"
       ],
       "nodos_siguientes": [
         "gestion_de_portafolio_arriesgado",
@@ -48525,7 +48598,8 @@
       ],
       "nodos_siguientes": [
         "gestion_de_portafolio_arriesgado",
-        "crecimiento_ingresos_verdes"
+        "crecimiento_ingresos_verdes",
+        "estrategia_de_innovacion_arenas"
       ],
       "condiciones_activacion": [
         "Si tu lista de productos en desarrollo está llena de mejoras pequeñas y le faltan innovaciones reales.",
@@ -48614,7 +48688,8 @@
         "evaluacion_vp_ventas"
       ],
       "nodos_siguientes": [
-        "plan_de_implementacion_de_venta"
+        "plan_de_implementacion_de_venta",
+        "influence_map_organizacional"
       ],
       "condiciones_activacion": [
         "Si se tienen los mapas de influencia y acceso pero falta un plan de acción concreto"
@@ -48667,7 +48742,8 @@
       ],
       "entregable_esperado": "Plan estratégico de sostenibilidad para edificios con análisis de ROI",
       "nodos_previos": [
-        "seleccion_productos_servicios_verdes"
+        "seleccion_productos_servicios_verdes",
+        "eco_eficiencia"
       ],
       "nodos_siguientes": [
         "benchmark_auditoria_energetica",
@@ -49734,7 +49810,8 @@
       "entregable_esperado": "Documento de Plan de Exportación completo con todas sus secciones (política, análisis, marketing, tácticas, presupuesto, cronograma) listo para guiar la ejecución",
       "nodos_previos": [
         "autoevaluacion_gerencial_exportacion",
-        "evaluacion_preparacion_empresa_exportar"
+        "evaluacion_preparacion_empresa_exportar",
+        "desarrollo_plan_exportacion"
       ],
       "nodos_siguientes": [
         "plan_accion_exportacion",
@@ -50754,7 +50831,8 @@
       ],
       "entregable_esperado": "Una matriz de brechas de capital humano, social y financiero, con perfil ideal de cofundador(es) necesario(s).",
       "nodos_previos": [
-        "decision_fundador_solo_vs_equipo"
+        "decision_fundador_solo_vs_equipo",
+        "circulos_busqueda_cofundadores"
       ],
       "nodos_siguientes": [
         "cuantos_cofundadores_agregar",
@@ -51281,7 +51359,8 @@
         "iota_analysis",
         "explotacion_tecnologias_disruptivas",
         "tecnologias_disruptivas_oportunidad",
-        "analisis_cadena_de_valor"
+        "analisis_cadena_de_valor",
+        "voice_of_customer_estrategico"
       ],
       "condiciones_activacion": [
         "Cuando se busca identificar necesidades emergentes o no satisfechas del cliente",
@@ -53213,7 +53292,8 @@
         "scorecard_de_seleccion_de_proyectos",
         "revision_portafolio_periodica",
         "governance_integration_gates_portfolio_roadmap",
-        "portfolio_management_triangulation"
+        "portfolio_management_triangulation",
+        "metodo_valor_presente_neto"
       ],
       "condiciones_activacion": [
         "Cuando el cálculo de NPV tradicional te hace descartar un proyecto arriesgado que en realidad podría valer mucho",
@@ -53494,7 +53574,8 @@
       ],
       "entregable_esperado": "Clasificacion ECCN de tu producto y determinacion documentada de si necesitas licencia de exportacion, junto con la licencia obtenida si aplica",
       "nodos_previos": [
-        "exportacion_de_servicios"
+        "exportacion_de_servicios",
+        "control_exportaciones_bis"
       ],
       "nodos_siguientes": [
         "antidiversion_clause",
@@ -54356,7 +54437,8 @@
         "welcome_call_cliente_veterano",
         "fase_affirm_reduccion_incertidumbre",
         "investigar_datos_cliente",
-        "fase_affirm_buyers_remorse"
+        "fase_affirm_buyers_remorse",
+        "ocho_fases_experiencia_cliente"
       ],
       "nodos_siguientes": [
         "fase_accomplish_experiencia_cliente",
@@ -54393,7 +54475,8 @@
       "nodos_previos": [
         "kit_shock_and_awe_bienvenida",
         "seis_herramientas_comunicacion_fase_activate",
-        "shock_and_awe_kit_bienvenida"
+        "shock_and_awe_kit_bienvenida",
+        "ocho_fases_experiencia_cliente"
       ],
       "nodos_siguientes": [
         "gamificacion_onboarding_visual"
@@ -55743,7 +55826,10 @@
         "fundadores_lideran_validacion",
         "priorizar_elementos_a_validar",
         "get_out_building_test_sell",
-        "customer_validation_sales_roadmap"
+        "customer_validation_sales_roadmap",
+        "decision_pivotar_o_proceder",
+        "establecer_linea_base_mvp",
+        "checkpoints_validacion"
       ],
       "condiciones_activacion": [
         "Cuando ya hablaste con clientes y confirmaste tus hipótesis, y necesitas comprobar si tu negocio realmente genera ventas"
@@ -55768,7 +55854,8 @@
         "pivote_o_proceder",
         "business_model_canvas_como_scorecard",
         "introduccion_validacion_clientes",
-        "business_model_canvas_scorecard"
+        "business_model_canvas_scorecard",
+        "customer_development_process"
       ],
       "nodos_siguientes": [
         "hoja_de_ruta_de_ventas",
@@ -56180,7 +56267,9 @@
         "value_proposition_canvas",
         "presales",
         "testing_process_completo",
-        "understanding_customers_tecnicas"
+        "understanding_customers_tecnicas",
+        "customer_discovery_overview",
+        "customer_discovery_phase2_problem_test"
       ],
       "nodos_siguientes": [
         "design_test_repeat",
@@ -58698,7 +58787,8 @@
         "scorecard_descubrimiento_cliente",
         "customer_discovery",
         "prueba_mvp_problema_baja_fidelidad",
-        "customer_development_process"
+        "customer_development_process",
+        "customer_discovery_get_out_of_building"
       ],
       "nodos_siguientes": [
         "captura_conocimiento_mercado",
@@ -59236,7 +59326,8 @@
       "nodos_previos": [
         "guia_entrevista_hcd",
         "card_sort",
-        "encuadre_desafio_diseno"
+        "encuadre_desafio_diseno",
+        "design_thinking_proceso"
       ],
       "nodos_siguientes": [
         "storyboard",
@@ -59628,7 +59719,8 @@
       "entregable_esperado": "Reporte de antigüedad de cuentas por cobrar con acciones de cobranza definidas",
       "nodos_previos": [
         "clasificacion_tipos_activos",
-        "analisis_antiguedad_cuentas_por_cobrar"
+        "analisis_antiguedad_cuentas_por_cobrar",
+        "ciclo_de_conversion_de_efectivo"
       ],
       "nodos_siguientes": [
         "gestion_dso",
@@ -60589,7 +60681,8 @@
         "ciclo_de_conversion_de_efectivo",
         "programacion_entregas_delivery_scheduling",
         "clasifica_tu_inventario",
-        "driver_de_inventario"
+        "driver_de_inventario",
+        "ratios_eficiencia_inventario"
       ],
       "condiciones_activacion": [
         "Cuando la empresa tiene exceso de inventario o capital de trabajo atado en stock"
@@ -61730,7 +61823,8 @@
         "diseno_activismo_social",
         "butterfly_test_convergencia",
         "reglas_brainstorming",
-        "pensamiento_convergente_divergente"
+        "pensamiento_convergente_divergente",
+        "pensamiento_visual_modelos_negocio"
       ],
       "condiciones_activacion": [
         "Cuando el equipo tiene dificultad para comunicar o entender una idea abstracta",
@@ -63108,7 +63202,8 @@
       ],
       "entregable_esperado": "Una tabla simple con dos o tres tamaños de caja asignados a tus productos o rangos de pedido.",
       "nodos_previos": [
-        "elegir_resistencia_caja_peso"
+        "elegir_resistencia_caja_peso",
+        "clasificar_tipo_paquete"
       ],
       "nodos_siguientes": [
         "aplicar_regla_fija_de_colchon_de_relleno",
@@ -63353,7 +63448,8 @@
       "entregable_esperado": "Mapa fractal completado del proyecto con respuestas a las preguntas clave de cada sector (Economía, Equidad, Ecología) y ajustes de diseño resultantes",
       "nodos_previos": [
         "feedforward_diseno",
-        "diversidad_en_diseno"
+        "diversidad_en_diseno",
+        "triple_top_line"
       ],
       "nodos_siguientes": [
         "reevolucion_industrial"
@@ -63465,7 +63561,8 @@
       ],
       "nodos_siguientes": [
         "business_plan_cinco_secciones",
-        "organizaciones_ambidiestras"
+        "organizaciones_ambidiestras",
+        "pensamiento_visual_modelos_negocio"
       ],
       "condiciones_activacion": [
         "Cuando el equipo trabaja de forma distribuida geográficamente",
@@ -64188,7 +64285,9 @@
         "checkpoints_validacion",
         "filosofia_validacion_clientes",
         "herramientas_de_activacion_web",
-        "mercados_multilaterales"
+        "mercados_multilaterales",
+        "customer_validation_sales_roadmap",
+        "sales_roadmap_vs_sales_force"
       ],
       "nodos_siguientes": [
         "formalizar_junta_asesora",
@@ -65435,7 +65534,8 @@
       "entregable_esperado": "Documento de hipótesis sobre el problema del cliente, clasificado por nivel de urgencia y con evidencia de intentos previos de solución por parte del cliente",
       "nodos_previos": [
         "scorecard_descubrimiento_cliente",
-        "seis_formas_innovar_perfil_cliente"
+        "seis_formas_innovar_perfil_cliente",
+        "customer_discovery_phase2_problem_test"
       ],
       "nodos_siguientes": [
         "tipos_de_clientes",
@@ -66965,7 +67065,8 @@
       ],
       "entregable_esperado": "Mapa de influencia documentado para cada cuenta objetivo, mostrando roles clave en la decisión de compra",
       "nodos_previos": [
-        "proceso_venta_b2b"
+        "proceso_venta_b2b",
+        "estrategia_de_ventas"
       ],
       "nodos_siguientes": [
         "refinar_sales_roadmap",
@@ -67201,7 +67302,9 @@
       "nodos_siguientes": [
         "prompting_cadena_de_pensamiento",
         "simulacion_clientes_ia",
-        "prompting_por_persona_ia"
+        "prompting_por_persona_ia",
+        "prompting_alta_variacion",
+        "disenar_prompts_efectivos_para_ia"
       ],
       "condiciones_activacion": [
         "Cuando el emprendedor obtiene respuestas genéricas o poco útiles de una IA",
@@ -68158,7 +68261,8 @@
       ],
       "entregable_esperado": "Sitio web actualizado con funcionalidades y contenido orientado a compradores internacionales",
       "nodos_previos": [
-        "elementos_plan_exportacion_ejemplo"
+        "elementos_plan_exportacion_ejemplo",
+        "comercio_electronico_fundamentos"
       ],
       "nodos_siguientes": [
         "fiscalidad_comercio_electronico_internacional"
@@ -69225,7 +69329,8 @@
         "green_team_oficina"
       ],
       "nodos_siguientes": [
-        "programa_reciclaje_integral"
+        "programa_reciclaje_integral",
+        "involucrar_empleados_ahorro_energetico"
       ],
       "condiciones_activacion": [
         "Si notas resistencia o poca adopcion de practicas sostenibles entre quienes trabajan contigo",
@@ -69248,7 +69353,8 @@
       ],
       "entregable_esperado": "Documento de gobernanza que defina el rol formal del fundador en el proceso de selección del nuevo CEO.",
       "nodos_previos": [
-        "busqueda_ceo_sucesor_externo"
+        "busqueda_ceo_sucesor_externo",
+        "seleccion_ceo_fundador"
       ],
       "nodos_siguientes": [
         "evaluacion_disimilitud_sucesor"
@@ -69343,7 +69449,8 @@
       ],
       "entregable_esperado": "Un programa activo de participación de empleados con métricas de ahorro energético y reducción de emisiones documentadas",
       "nodos_previos": [
-        "manufactura_verde"
+        "manufactura_verde",
+        "involucramiento_empleados_sostenibilidad"
       ],
       "nodos_siguientes": [
         "auditoria_energetica_sistematica"
@@ -71185,7 +71292,8 @@
       "entregable_esperado": "Tu letra de cambio y tu carta de instrucciones completas y firmadas, listas para enviar al banco junto con los documentos de embarque que te pidieron.",
       "nodos_previos": [
         "carta_de_credito_letter_of_credit",
-        "seleccion_de_metodo_de_pago"
+        "seleccion_de_metodo_de_pago",
+        "metodos_de_pago_internacional"
       ],
       "nodos_siguientes": [
         "gestion_riesgo_cambiario"
@@ -73759,7 +73867,8 @@
       "nodos_previos": [
         "scorecard_descubrimiento_cliente",
         "lienzo_modelo_negocio",
-        "voice_of_customer_homework"
+        "voice_of_customer_homework",
+        "customer_discovery_overview"
       ],
       "nodos_siguientes": [
         "presentacion_solucion_producto",
@@ -74792,7 +74901,8 @@
       "entregable_esperado": "Carpeta organizada con toda la documentación legal, financiera y corporativa lista para entregar rápido",
       "nodos_previos": [
         "demo_prototipo_inversion",
-        "due_diligence_adquisiciones"
+        "due_diligence_adquisiciones",
+        "preparacion_due_diligence"
       ],
       "nodos_siguientes": [
         "term_sheet_negociacion"
@@ -75407,7 +75517,8 @@
         "alineacion_con_canvas"
       ],
       "nodos_siguientes": [
-        "mejora_continua_relentless"
+        "mejora_continua_relentless",
+        "medir_comportamiento_cliente_mvp"
       ],
       "condiciones_activacion": [
         "Cuando tu producto ya está en el mercado y genera datos de operación",
@@ -75629,7 +75740,8 @@
         "construir_mvp_baja_fidelidad",
         "hipotesis_propuesta_de_valor_producto",
         "prueba_mvp_alta_fidelidad",
-        "tacticas_de_ferias_comerciales"
+        "tacticas_de_ferias_comerciales",
+        "medicion_monitoreo_desempeno"
       ],
       "nodos_siguientes": [
         "realizar_pruebas_pasa_no_pasa",
@@ -76953,7 +77065,8 @@
         "verificar_modelo_ingresos",
         "metodo_payback",
         "tasa_crecimiento_sostenible",
-        "valor_futuro"
+        "valor_futuro",
+        "expected_commercial_value_ecv"
       ],
       "nodos_siguientes": [
         "tasa_interna_retorno_irr",
@@ -77227,12 +77340,14 @@
       "entregable_esperado": "Método de pago seleccionado y formalizado en el contrato de venta con el comprador extranjero",
       "nodos_previos": [
         "documentacion_exportacion_basica",
-        "documentacion_exportacion"
+        "documentacion_exportacion",
+        "seleccion_de_metodo_de_pago"
       ],
       "nodos_siguientes": [
         "carta_de_credito_letter_of_credit",
         "gestion_riesgo_cambiario",
-        "letters_of_credit"
+        "letters_of_credit",
+        "letra_de_cambio_bill_of_exchange"
       ],
       "condiciones_activacion": [
         "Al definir las condiciones de pago de una transacción de exportación",
@@ -77358,7 +77473,8 @@
       ],
       "entregable_esperado": "Sistema de pagos electrónicos configurado y adaptado a los métodos preferidos del mercado objetivo",
       "nodos_previos": [
-        "promocion_sitio_web"
+        "promocion_sitio_web",
+        "seleccion_de_metodo_de_pago"
       ],
       "nodos_siguientes": [
         "fiscalidad_comercio_electronico_internacional"
@@ -79300,7 +79416,8 @@
         "preguntas_need_payoff",
         "preguntas_problema_2",
         "preguntas_situacion",
-        "shock_and_awe_kit_bienvenida"
+        "shock_and_awe_kit_bienvenida",
+        "venta_interna_cliente"
       ],
       "condiciones_activacion": [
         "Cuando estés preparando una llamada de venta consultiva, grande o compleja con ciclo largo",
@@ -82266,7 +82383,9 @@
         "advocacy_customer_journey",
         "estrategia_multicanal_bienvenida",
         "fase_affirm_buyers_remorse",
-        "estrategia_de_ventas"
+        "estrategia_de_ventas",
+        "fase_acclimate_experiencia_cliente",
+        "fase_acclimate_mapa_de_proceso"
       ],
       "condiciones_activacion": [
         "Cuando el usuario necesita una estructura sistemática para gestionar la experiencia del cliente después de la venta.",
@@ -83660,7 +83779,8 @@
       "nodos_previos": [
         "modelo_hibrido_agile_stage_gate",
         "portfolio_management_triangulation",
-        "ejecucion_de_touchpoints"
+        "ejecucion_de_touchpoints",
+        "procesamiento_paralelo_con_espirales"
       ],
       "nodos_siguientes": [
         "value_stream_analysis_lean",
@@ -84966,7 +85086,9 @@
       "entregable_esperado": "Canvas o storyboard visual del modelo de negocio con dibujos y Post-its que pueda usarse para explicar el modelo a stakeholders",
       "nodos_previos": [
         "lienzo_modelo_negocio",
-        "reglas_brainstorming"
+        "reglas_brainstorming",
+        "get_visual",
+        "herramientas_computacionales_business_model"
       ],
       "nodos_siguientes": [
         "prototipado_modelos_negocio",
@@ -87959,7 +88081,8 @@
       "entregable_esperado": "Estrategia de canales de venta online definida con al menos un marketplace activo",
       "nodos_previos": [
         "marco_legal_comercio_electronico_internacional",
-        "tipos_sitio_web_exportacion"
+        "tipos_sitio_web_exportacion",
+        "seleccion_canales_distribucion"
       ],
       "nodos_siguientes": [
         "seleccion_agente_carga_internacional"
@@ -88127,7 +88250,8 @@
       ],
       "nodos_siguientes": [
         "codigo_conducta_proveedores",
-        "certificaciones_ecoetiquetas"
+        "certificaciones_ecoetiquetas",
+        "seleccion_productos_servicios_verdes"
       ],
       "condiciones_activacion": [
         "Si la empresa quiere institucionalizar la sostenibilidad en sus compras",
@@ -89365,7 +89489,8 @@
       "entregable_esperado": "Lista de dolores priorizados por cliente con estimación de costo asociado a cada problema",
       "nodos_previos": [
         "desarrollo_presentacion_problema",
-        "dia_en_la_vida_del_cliente"
+        "dia_en_la_vida_del_cliente",
+        "customer_discovery_phase2_problem_test"
       ],
       "nodos_siguientes": [
         "scorecard_descubrimiento_cliente",
@@ -89656,7 +89781,8 @@
         "cierre_term_sheet"
       ],
       "nodos_siguientes": [
-        "intellectual_property_strategy"
+        "intellectual_property_strategy",
+        "materiales_due_diligence"
       ],
       "condiciones_activacion": [
         "Antes de iniciar reuniones formales con inversores",
@@ -89821,7 +89947,9 @@
       "nodos_previos": [
         "diseno_experimentos_pass_fail",
         "tacticas_cold_calling",
-        "customer_discovery_phase2_problem_test"
+        "customer_discovery_phase2_problem_test",
+        "customer_discovery_get_out_of_building",
+        "customer_development_process"
       ],
       "nodos_siguientes": [
         "desarrollo_presentacion_problema"
@@ -90882,7 +91010,8 @@
         "contabilidad_innovacion",
         "pivote_startup",
         "biblioteca_experimentos_validacion",
-        "riesgos_lanzamiento_mvp"
+        "riesgos_lanzamiento_mvp",
+        "construir_mvp_baja_fidelidad"
       ],
       "condiciones_activacion": [
         "Cuando el equipo duda en lanzar un MVP por temor a que sea de 'baja calidad'.",
@@ -90959,7 +91088,8 @@
       ],
       "entregable_esperado": "Checklist de validación de calidad y precio previo al lanzamiento del mensaje verde",
       "nodos_previos": [
-        "segmentacion_consumidor_verde"
+        "segmentacion_consumidor_verde",
+        "crecimiento_ingresos_verdes"
       ],
       "nodos_siguientes": [
         "diseno_mensaje_verde",
@@ -91040,7 +91170,8 @@
       ],
       "entregable_esperado": "Plan de revisión periódica de herramientas de IA integradas en el negocio",
       "nodos_previos": [
-        "human_in_the_loop_ia"
+        "human_in_the_loop_ia",
+        "comprension_capacidades_limitaciones_ia"
       ],
       "nodos_siguientes": [
         "desafios_implementacion_ia"
@@ -91503,7 +91634,8 @@
         "preservar_efectivo_buscar_modelo",
         "lienzo_modelo_negocio",
         "filosofia_customer_validation",
-        "multi_sided_platforms"
+        "multi_sided_platforms",
+        "customer_discovery_cuatro_fases"
       ],
       "nodos_siguientes": [
         "craft_positioning_statement",
@@ -91761,7 +91893,9 @@
       ],
       "nodos_siguientes": [
         "voz_del_cliente_voc",
-        "definicion_objetivos_proyecto_sistema"
+        "definicion_objetivos_proyecto_sistema",
+        "overlapping_stages_concurrent_execution",
+        "desarrollo_en_espiral"
       ],
       "condiciones_activacion": [
         "Cuando tu proceso actual es secuencial y lento (carrera de relevos)",
@@ -92227,7 +92361,8 @@
       ],
       "entregable_esperado": "Propuesta personalizada firmada y plan de acción de compra con fechas definidas",
       "nodos_previos": [
-        "identificar_earlyvangelists"
+        "identificar_earlyvangelists",
+        "sales_roadmap"
       ],
       "nodos_siguientes": [
         "influence_map_organizacional",
@@ -92558,7 +92693,8 @@
         "pivote_o_proceder",
         "prueba_solucion_con_cliente",
         "customer_discovery_phase2_problem_test",
-        "identificar_consejo_asesores"
+        "identificar_consejo_asesores",
+        "customer_discovery"
       ],
       "nodos_siguientes": [
         "customer_validation",
@@ -92854,7 +92990,8 @@
       "nodos_siguientes": [
         "engineering_as_marketing",
         "seo_estrategia_fat_head",
-        "seo_long_tail"
+        "seo_long_tail",
+        "diagnostico_de_productos_crudos"
       ],
       "condiciones_activacion": [
         "Cuando el usuario tiene un producto funcional pero no ha evaluado su impacto en salud/ecología",
@@ -94347,7 +94484,8 @@
       ],
       "entregable_esperado": "Conjunto de ideas de alta originalidad para innovar en producto, marketing o modelo de negocio, listas para ser refinadas por el equipo",
       "nodos_previos": [
-        "ia_generacion_ideas_negocio"
+        "ia_generacion_ideas_negocio",
+        "ingenieria_de_prompts_efectiva"
       ],
       "nodos_siguientes": [
         "pruebas_inadecuadas_prototipos"
@@ -94643,7 +94781,8 @@
       "entregable_esperado": "Registro de marca protegido en los mercados de exportación seleccionados mediante el Protocolo de Madrid",
       "nodos_previos": [
         "proteccion_patentes_internacional",
-        "proteccion_propiedad_intelectual_2"
+        "proteccion_propiedad_intelectual_2",
+        "proteccion_propiedad_intelectual_internacional"
       ],
       "nodos_siguientes": [
         "comercio_electronico_fundamentos"
@@ -94823,7 +94962,8 @@
         "paris_convention_prioridad",
         "patent_cooperation_treaty",
         "licenciamiento_tecnologico",
-        "proteccion_propiedad_intelectual_2"
+        "proteccion_propiedad_intelectual_2",
+        "proteccion_marca_madrid_protocol"
       ],
       "condiciones_activacion": [
         "Si el usuario planea licenciar tecnología o formar joint ventures en el extranjero",
@@ -95524,7 +95664,9 @@
       "nodos_previos": [
         "presentacion_solucion_producto",
         "simulacion_clientes_ia",
-        "customer_discovery_overview"
+        "customer_discovery_overview",
+        "customer_development_process",
+        "customer_validation_sell_phase"
       ],
       "nodos_siguientes": [
         "actualizar_business_model_canvas_tuneup",
@@ -96876,7 +97018,8 @@
       ],
       "entregable_esperado": "Tabla con DII y rotación de inventario comparados con benchmarks de la industria",
       "nodos_previos": [
-        "ratios_liquidez"
+        "ratios_liquidez",
+        "gestion_inventario"
       ],
       "nodos_siguientes": [
         "ciclo_de_conversion_de_efectivo"
@@ -97044,7 +97187,9 @@
         "medir_comportamiento_cliente_mvp",
         "introduccion_validacion_clientes",
         "wallas_etapa_verificacion",
-        "pivote_o_proceder"
+        "pivote_o_proceder",
+        "customer_validation",
+        "customer_discovery_overview"
       ],
       "nodos_siguientes": [
         "verificar_product_market_fit",
@@ -97739,7 +97884,8 @@
         "investigacion_mercado_primaria_secundaria_2",
         "centro_asesoria_advocacy_center",
         "programas_ex_im_bank",
-        "programas_estatales_locales_financiamiento_exportacion"
+        "programas_estatales_locales_financiamiento_exportacion",
+        "uso_del_us_commercial_service"
       ],
       "condiciones_activacion": [
         "Cuando inicias tu proceso de internacionalizacion y necesitas orientacion o financiamiento",
@@ -98825,7 +98971,8 @@
         "influence_map_organizacional",
         "get_out_building_test_sell",
         "formalizar_junta_asesora",
-        "proceso_venta_b2b"
+        "proceso_venta_b2b",
+        "customer_validation_sales_roadmap"
       ],
       "nodos_siguientes": [
         "customer_creation",
@@ -98891,7 +99038,8 @@
       "nodos_previos": [
         "enfoque_en_superfans",
         "herramientas_de_activacion_web",
-        "understanding_customers_tecnicas"
+        "understanding_customers_tecnicas",
+        "celebracion_hitos_cliente"
       ],
       "nodos_siguientes": [
         "advocacy_customer_journey",
@@ -104764,10 +104912,12 @@
       ],
       "entregable_esperado": "Un guion de ventas que detalla cómo y en qué orden contactar a cada persona clave dentro de la empresa a la que le vendes.",
       "nodos_previos": [
-        "sales_funnel_get_keep_grow"
+        "sales_funnel_get_keep_grow",
+        "sales_roadmap_vs_sales_force"
       ],
       "nodos_siguientes": [
-        "metrics_that_matter_framework"
+        "metrics_that_matter_framework",
+        "proceso_venta_b2b"
       ],
       "condiciones_activacion": [
         "Cuando necesitas un proceso de venta que puedas repetir y hacer crecer."
@@ -104797,7 +104947,9 @@
         "customer_creation",
         "pivot_o_proceder",
         "metricas_de_adquisicion_activacion",
-        "decision_pivotar_o_proceder"
+        "decision_pivotar_o_proceder",
+        "sales_roadmap",
+        "hoja_de_ruta_de_ventas"
       ],
       "condiciones_activacion": [
         "Si quieres acelerar tus ventas contratando gente antes de validar tu modelo",
@@ -106497,7 +106649,8 @@
         "busqueda_vs_ejecucion",
         "portfolio_management",
         "investigacion_etnografica_ideacion",
-        "strat_map_arenas_estrategicas"
+        "strat_map_arenas_estrategicas",
+        "apalancamiento_de_competencias_centrales"
       ],
       "condiciones_activacion": [
         "Cuando tu búsqueda de ideas de nuevos productos es difusa o no está dirigida",
@@ -106626,7 +106779,8 @@
       ],
       "nodos_siguientes": [
         "contacto_evaluacion_representantes_extranjeros",
-        "seleccion_de_distribuidor_internacional"
+        "seleccion_de_distribuidor_internacional",
+        "plataformas_comercio_electronico_marketplaces"
       ],
       "condiciones_activacion": [
         "Si la empresa ya decidió exportar directamente y necesita definir cómo llegará al cliente final en el mercado extranjero",
@@ -106704,7 +106858,10 @@
         "division_de_labor_vs_roles_superpuestos",
         "founder_ceo_succession_process",
         "reparto_inicial_equity",
-        "fundadores_en_junta_directiva"
+        "fundadores_en_junta_directiva",
+        "busqueda_ceo_sucesor_externo",
+        "involucramiento_fundador_busqueda_ceo",
+        "transicion_post_sucesion"
       ],
       "condiciones_activacion": [
         "Si tú y tu equipo fundador aún no han definido formalmente quién es el CEO, o están por definir roles formales en las primeras etapas de formación del equipo, antes de asignar títulos formales",
@@ -106856,7 +107013,9 @@
         "cash_in_advance",
         "carta_de_credito_letter_of_credit",
         "incoterms_reglas_comerciales_internacionales",
-        "seguro_de_credito_a_la_exportacion"
+        "seguro_de_credito_a_la_exportacion",
+        "metodos_pago_electronico_internacional",
+        "metodos_de_pago_internacional"
       ],
       "condiciones_activacion": [
         "Cuando tienes que decidir cómo vas a cobrar una venta internacional",
@@ -107394,7 +107553,8 @@
       "entregable_esperado": "Lista de criterios de compra verde y proveedores evaluados",
       "nodos_previos": [
         "oficina_digital_sin_papel",
-        "oficina_digital_sin_papel_2"
+        "oficina_digital_sin_papel_2",
+        "politica_compras_verdes"
       ],
       "nodos_siguientes": [
         "estrategia_edificios_verdes",
@@ -115324,7 +115484,8 @@
       "nodos_previos": [
         "evaluacion_disimilitud_sucesor",
         "riesgo_beneficio_retener_fundador",
-        "busqueda_ceo_sucesor_externo"
+        "busqueda_ceo_sucesor_externo",
+        "seleccion_ceo_fundador"
       ],
       "nodos_siguientes": [
         "founder_ceo_succession_process",
@@ -115975,7 +116136,8 @@
         "issue_spotting_ambiental"
       ],
       "nodos_siguientes": [
-        "eco_advantage"
+        "eco_advantage",
+        "triple_bottom_line_2"
       ],
       "condiciones_activacion": [
         "Cuando empiezas a definir la estrategia de sostenibilidad de tu negocio",
@@ -115997,7 +116159,8 @@
       ],
       "entregable_esperado": "Un mapeo de issues sociales relevantes complementario al análisis ambiental",
       "nodos_previos": [
-        "estrategia_edificios_verdes"
+        "estrategia_edificios_verdes",
+        "triple_bottom_line"
       ],
       "nodos_siguientes": [
         "issue_spotting_sostenibilidad"
@@ -116027,7 +116190,8 @@
       ],
       "nodos_siguientes": [
         "eco_efectividad_2",
-        "cinco_pasos_eco_efectividad"
+        "cinco_pasos_eco_efectividad",
+        "herramienta_fractal_triple_top_line"
       ],
       "condiciones_activacion": [
         "Si el usuario está definiendo los criterios iniciales de un proyecto de diseño o producto",
@@ -116628,7 +116792,8 @@
       "nodos_previos": [
         "evaluacion_mercados_objetivo",
         "fuentes_investigacion_mercado",
-        "screening_mercados_potenciales"
+        "screening_mercados_potenciales",
+        "recursos_apoyo_gubernamental_exportacion"
       ],
       "nodos_siguientes": [
         "seleccion_de_distribuidor_internacional",
@@ -117632,7 +117797,8 @@
         "customer_profile",
         "customer_pains",
         "customer_gains",
-        "value_proposition_canvas"
+        "value_proposition_canvas",
+        "value_proposition_startup"
       ],
       "nodos_siguientes": [
         "fit_value_proposition",
@@ -117787,7 +117953,8 @@
         "preframing_expectativas",
         "clasificacion_garantia_full_limited",
         "garantias_implicitas_vs_expresas",
-        "metricas_servicio_cliente_bts_bto"
+        "metricas_servicio_cliente_bts_bto",
+        "value_map"
       ],
       "condiciones_activacion": [
         "Cuando necesitas dejar claro por que tu cliente te compraria a ti"
@@ -118236,7 +118403,8 @@
       ],
       "entregable_esperado": "Un 'sponsor' interno capacitado y convencido, capaz de argumentar los beneficios de la solución ante otros tomadores de decisión sin la presencia del vendedor",
       "nodos_previos": [
-        "preguntas_need_payoff"
+        "preguntas_need_payoff",
+        "modelo_spin_preguntas"
       ],
       "nodos_siguientes": [
         "obtencion_compromiso_venta",
@@ -118437,7 +118605,8 @@
         "venture_debt_introduccion"
       ],
       "nodos_siguientes": [
-        "venture_debt_introduccion"
+        "venture_debt_introduccion",
+        "warrant_pricing_venture_debt"
       ],
       "condiciones_activacion": [
         "Si estás evaluando o negociando la propuesta de un préstamo de deuda de riesgo (venture debt term sheet).",
@@ -118794,7 +118963,8 @@
         "contratacion_experiencia_vs_potencial",
         "reasignacion_equity_fundadores",
         "reducir_playing_with_fire_gap",
-        "seesaw_salario_equity"
+        "seesaw_salario_equity",
+        "vesting_dinamico"
       ],
       "nodos_siguientes": [
         "employee_pool_esop",
@@ -118857,7 +119027,8 @@
         "encontrar_lead_vc",
         "gestion_incertidumbre_contratos",
         "reasignacion_equity_fundadores",
-        "compensacion_fundadores_cash_vs_equity"
+        "compensacion_fundadores_cash_vs_equity",
+        "vesting_acciones_fundadores"
       ],
       "etiqueta_arbol": "Ajusta el Reparto Según Aportes"
     },
@@ -119481,7 +119652,8 @@
       ],
       "entregable_esperado": "Reporte de insights de clientes con necesidades explícitas e implícitas documentadas, incluyendo hallazgos inesperados ('ahas')",
       "nodos_previos": [
-        "analisis_competitivo"
+        "analisis_competitivo",
+        "evaluacion_industria_cliente"
       ],
       "nodos_siguientes": [
         "seleccion_arenas_estrategicas",
@@ -119569,7 +119741,8 @@
         "producto_unico_superior",
         "desirability_feasibility_viability",
         "procesamiento_paralelo_con_espirales",
-        "customer_development_modelo"
+        "customer_development_modelo",
+        "customer_development_process"
       ],
       "nodos_siguientes": [
         "definicion_producto_proyecto",
@@ -120071,7 +120244,8 @@
       "nodos_previos": [
         "fuentes_financiamiento_startup",
         "convertible_debt_fundamentos",
-        "warrants_financiamiento"
+        "warrants_financiamiento",
+        "venture_debt_terminos_economicos"
       ],
       "nodos_siguientes": [
         "amortizacion_y_periodo_de_gracia",

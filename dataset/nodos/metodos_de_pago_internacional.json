@@ -14,12 +14,14 @@
   "entregable_esperado": "Método de pago seleccionado y formalizado en el contrato de venta con el comprador extranjero",
   "nodos_previos": [
     "documentacion_exportacion_basica",
-    "documentacion_exportacion"
+    "documentacion_exportacion",
+    "seleccion_de_metodo_de_pago"
   ],
   "nodos_siguientes": [
     "carta_de_credito_letter_of_credit",
     "gestion_riesgo_cambiario",
-    "letters_of_credit"
+    "letters_of_credit",
+    "letra_de_cambio_bill_of_exchange"
   ],
   "condiciones_activacion": [
     "Al definir las condiciones de pago de una transacción de exportación",

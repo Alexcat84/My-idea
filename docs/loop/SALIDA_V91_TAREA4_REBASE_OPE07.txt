@@ -1,0 +1,40 @@
+==========================================================================================
+TAREA 4.a: LA BOLSA DE OP-E-07, TALLADA DE docs/plan/COSECHA_RAZONES_D.jsonl
+==========================================================================================
+filas totales de la cosecha: 397
+bolsa OP-E-07 (nuevo=true, senales==['continua por la vara']): 101
+reparto por dominio: {'core': 74, 'entrega': 4, 'environmental': 12, 'exportacion': 11}
+
+==========================================================================================
+TAREA 4.b: LOS CUATRO FRENTES DEL DEDUPE, SOBRE EL GRAFO DE HOY
+==========================================================================================
+FRENTE 1, contra la bolsa de PASO_NODO_CALIBRADO.jsonl (468 filas hoy): quita 0
+
+FRENTE 2, contra 18 pares ya declarados en aristas_nuevas de otras operaciones: quita 0
+
+FRENTE 3, contra los 7 puestos de la cola de relectura post fusion: quita 0
+
+FRENTE 4, contra pares con arista YA en el grafo de hoy (resolviendo por alias): quita 13
+  puesto 875: errores_comunes_asignacion_roles -- fundadores_en_junta_directiva
+  puesto 884: customer_retention_metrics_webmobile -- customer_retention_tactics
+  puesto 990: build_metrics_toolset -- metricas_accionables
+  puesto 1000: customer_appreciation_soporte -- regalos_estrategicos_sorpresa
+  puesto 1001: arquetipos_de_cliente -- segmentos_de_clientes_problema_necesidad
+  puesto 1022: jerarquia_firma_vc -- proceso_decision_vc
+  puesto 1139: fase_activate_primera_impresion -- ocho_fases_experiencia_cliente
+  puesto 1194: fase_accomplish_experiencia_cliente -- fases_de_retencion_de_clientes
+  puesto 1231: fase_accomplish_experiencia_cliente -- ocho_fases_experiencia_cliente
+  puesto 1276: plan_acquire_activate -- plan_de_activacion
+  puesto 1339: human_in_the_loop_ia -- jagged_frontier_ia
+  puesto 1474: fase_admit_celebracion -- ocho_fases_experiencia_cliente
+  puesto 1855: definir_limites_huella_carbono -- medir_huella_carbono_corporativa
+
+==========================================================================================
+TAREA 4.c: EL RESULTADO
+==========================================================================================
+CIFRA VIEJA (12 ago 2026, ficha de OP-E-07): 101
+CIFRA RE-BASADA (29 ago 2026, vuelta 91, sobre el grafo de hoy): 88
+escrito: C:\Users\AlexDesk\Documents\I have an idea\docs\plan\OP_E_07_REBASE_V91.jsonl
+
+NO SE ESCRIBIO NINGUNA ARISTA. La direccion de cada fila se lee de su razon
+completa en una tarea aparte (vuelta91_tarea4_direccion_ope07.py).
