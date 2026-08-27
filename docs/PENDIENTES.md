@@ -3328,3 +3328,197 @@ escrito que la fuente es la razon y NO el par ("NO SE RELEE EL PAR: se lee su ra
 que ya esta escrita"), asi que una medicion de hoy no revoca esa eleccion de carril.
 Es una pregunta de ALCANCE (si la cola de relectura post fusion tiene que crecer) y
 esa decision es RESERVA DE FUNDADOR, no del bucle.
+
+## LAS DOS RELECTURAS CONJUNTAS DE LA VUELTA 91 (1281 y 1992): RESUELTAS, LOS DOS PARES SALEN (vuelta 94)
+
+**Origen:** acta de la vuelta 93 (`docs/loop/ACTA_AUDITOR.md`, secciones 5.1 y 5.2),
+DOS discrepancias PROPIAS del auditor sobre direcciones que el ejecutor de la vuelta
+91 confirmo en el acta 91 "por adjudicar la bolsa por muestreo en vez de barrerla con
+instrumento". Las dos van a RELECTURA CONJUNTA (`docs/loop/AUDITOR.md` seccion 1.3),
+decision reservada al ejecutor de esta vuelta. Este apartado registra esa decision,
+sin borrar nada de lo que sigue.
+
+**(a1) EL 1281** (`get_visual -> pensamiento_visual_modelos_negocio`,
+`scripts/loop/vuelta94_tarea3_relectura_1281_1992.py`, salida completa en
+`docs/loop/SALIDA_V94_TAREA3_RELECTURA.txt`). La razon completa
+(`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, puesto 1281) compara "el habito general
+contra su aplicacion a un artefacto": `get_visual` **es un habito de taller**
+(mantener notas adhesivas, dibujar sin preocuparse por la calidad, explicar los
+dibujos, intentar dibujar lo que cuesta explicar); `pensamiento_visual_modelos_
+negocio` aplica ese habito al modelo de negocio y ANADE una narrativa de
+presentacion. La razon dice, textual: *"la narrativa y el orden de presentacion son
+lo que **ningun habito general trae**"*.
+
+Medido con comando propio (barrido del "trae" en el segmento del hijo, desde su
+primera mencion): hay **UNA SOLA** aparicion de "trae" en toda la razon, y esta
+**dentro de "ningun habito general trae"**. La lookbehind vieja de `MARCA_HIJO`
+(`(?<!no )`) solo tapaba "no trae" pegado y dejaba pasar esta forma: la deteccion
+automatica de la vuelta 91 la leyo como marca de hijo cuando dice EXACTAMENTE LO
+CONTRARIO (que el habito general NO TIENE la narrativa, no que el hijo la traiga de
+la madre). Contraste contra la vara: el 1009 (que SALIO en la vuelta 93) fallaba
+porque su razon nunca nombraba una linea con su paso; el 1281 tiene el mismo
+defecto, y ademas su unico sosten en el guarda automatico es "es un habito"
+(declarada INVERIFICABLE en la vuelta 93, ver seccion de arriba: aparece UNA SOLA
+vez en las 3.388 razones). Y la propia razon declara que el hijo tiene contenido
+(la narrativa) que "ningun habito general" tiene, lo que falla el test del banco
+`9.6.2` ("el hijo cabe entero dentro de UN paso de la madre").
+
+**VEREDICTO: la razon del 1281 NO NOMBRA cual nodo es la madre. EL PAR SALE.**
+
+**(a2) EL 1992** (`seleccion_de_metodo_de_pago -> metodos_pago_electronico_
+internacional`, direccion `B_MADRE`, fijada por `DIRECCION_MANUAL` en la vuelta 91,
+`scripts/loop/vuelta91_tarea4_direccion_ope07.py` lineas 126 a 128). La razon dice:
+*"seleccion_de_metodo_de_pago compara los cinco por seguridad, costo y
+competitividad, y cierra con el contrato escrito y la consulta al banco"*: ninguna
+cita de paso ni de linea. Medido con comando propio contra sus dos hermanos de la
+misma madre y misma fuente: **el 1991 y el 1993 SI traen** *"dice en su paso 3, en
+UNA LINEA"* (verificado literal en las dos razones); **el 1992 no trae la formula**.
+El redactor escribio el paso numerado dos veces para esta misma madre, y no la
+tercera. Ademas, la direccion del 1992 nunca salio de la razon: salio de un
+comentario del ejecutor de la vuelta 91 en `DIRECCION_MANUAL`
+("la comparacion general de los cinco metodos es la madre, la infraestructura de
+uno de ellos, el hijo"), y `OP-E-07.verificacion` exige leer LA RAZON, no un
+comentario ("se lee su razon, que ya esta escrita").
+
+**VEREDICTO: la razon del 1992 NO NOMBRA cual nodo es la madre. EL PAR SALE.**
+
+**(a3) LA EJECUCION, sobre las dos:** el guarda filtro `OP_E_07_DIRECCION_V93.jsonl`
+(86 filas) y saco EXACTAMENTE `{1281, 1992}`
+(`scripts/loop/vuelta94_tarea3_relectura_1281_1992.py`), escribiendo
+`docs/plan/OP_E_07_DIRECCION_V94.jsonl` (84 filas). Las dos aristas se retiraron de
+`dataset/nodos/` en las dos vistas
+(`scripts/loop/vuelta94_tarea3b_retirar_1281_1992.py`; idempotencia probada, segunda
+corrida `NO_ESTABA` en las dos, sha256 identico antes y despues,
+`docs/loop/_v94_sha_antes_idem.txt`). El ciclo de tres se corrio entero: Gate 0 OK,
+censo IGUAL (3.853 / 3.188 / 665), motor 25/25, web 80/1030 mas 3 skipped, tsc
+limpio, guarda de `OP-C-05` VERDE (935 entradas que sobran ANTES y DESPUES), y el
+diff de la union del grafo contra el cierre de la vuelta 93 (`352b8529`) dio
+EXACTAMENTE DOS borradas (los dos pares nombrados arriba) y CERO nuevas
+(`docs/loop/SALIDA_V94_DIFF_UNION.txt`). El `ADDENDUM DE EJECUCION` de `OP-E-07` se
+reescribio con el corte nuevo (82 ESCRITA, 2 YA_ESTABA, 0 ESCALERA_ROTA). **EL
+MARCADOR NO SE TOCA**: la clase D de los dos puestos es correcta y no se discute; lo
+que se discutia era la DIRECCION.
+
+## EL DEFECTO MEDIDO DE `MARCA_HIJO`: LA LOOKBEHIND ANGOSTA, REPARADA (vuelta 94)
+
+**El defecto** (medido primero por el acta de la vuelta 93 sobre el puesto 1281, ver
+seccion de arriba): `MARCA_HIJO` en `scripts/loop/vuelta91_tarea4_direccion_ope07.py`
+es `(?<!no )trae\b(?!\s+lo\s+suyo)|desarrolla|RECORRE\s+EL\s+CAMINO`. La lookbehind
+`(?<!no )` solo tapa "no trae" PEGADO (las tres letras inmediatas), y Python `re` no
+soporta lookbehind de longitud variable, asi que una negacion a mas de dos palabras
+de distancia ("ningun ... trae", "nadie ... trae", "sin ... traer") se le cuela
+entera.
+
+**LA REPARACION** (`scripts/loop/vuelta94_tarea4_reparar_marca_hijo.py`,
+`marca_hijo_presente_v94`): en vez de un lookbehind, una VENTANA de negacion de 60
+letras antes de cada "trae" encontrado, buscando "no", "ningun", "ninguna", "nadie",
+"jamas" o "sin". Si alguna aparece en la ventana, ese "trae" NO cuenta como marca de
+hijo. "desarrolla" y "RECORRE EL CAMINO" se dejan igual: el defecto medido es
+especifico de "trae".
+
+**LA PRUEBA DE QUE NO ROMPE NADA** (`docs/loop/SALIDA_V94_TAREA4_SIN_CAMBIO.txt`):
+las 84 direcciones VIGENTES de `OP-E-07` (post relectura conjunta de arriba),
+recalculadas con el guarda y `MARCA_HIJO` reparados, dan **CERO cambios**: ninguna de
+las 84 direcciones ya escritas se mueve.
+
+**EL CASO ROJO POR MUTACION** (`docs/loop/SALIDA_V94_TAREA4_MUTACION.txt`), sobre una
+entrada REAL, no un literal disfrazado: el segmento del hijo del puesto 1281
+(`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`), que contiene el UNICO "trae" negado por
+"ningun" que motivo la reparacion. `marca_hijo_presente_v94` da `False` sobre la
+entrada real (el "trae" esta negado) y `True` al mutarla quitando la palabra
+"ningun": el criterio SI depende de su entrada.
+
+**LAS TRES VARAS OBLIGATORIAS, las tres en verde**
+(`docs/loop/SALIDA_V94_TAREA4_VARA.txt`): sobre las 88 de `OP_E_07_REBASE_V91.jsonl`,
+el guarda automatico SALE exactamente `{1009, 1098}` (el 1281 y el 1992 salen de
+`OP-E-07`, pero NO por este guarda: el 1281 sale porque, reparado `MARCA_HIJO`, su
+unica marca de hijo queda negada y `extraer_direccion_automatica` lo deja AMBIGUA
+[verificado en `docs/loop/SALIDA_V94_TAREA4E_VERIFICACION_CABLEADO.txt`: una corrida
+fresca sobre la bolsa de 88, fuera de `DIRECCION_MANUAL`, deja `AMBIGUA` exactamente
+`{1009, 1098, 1281}`]; el 1992 sale por relectura conjunta de un `DIRECCION_MANUAL`,
+no por el guarda); sobre las 114 de `OP_E_06_DIRECCION_V90.jsonl`, el 1160 sigue PASA
+y 0 SALEN (`OP-E-06` no se reabre); sobre el tercer conjunto de 81, los tres falsos
+SALE conocidos (995, 1007, 1024) PASAN.
+
+**CABLEADO POR DEFECTO**: `extraer_direccion_automatica`
+(`scripts/loop/vuelta91_tarea4_direccion_ope07.py`) ahora importa `guarda_direccion_
+v94` y `marca_hijo_presente_v94` (import perezoso, mismo patron que la vuelta 93); la
+constante `MARCA_HIJO` vieja se deja escrita sin borrar, documentando la forma
+angosta, pero ya no se usa.
+
+## LAS DOS FORMAS LIMPIAS ANADIDAS A `MARCA_MADRE_POSITIVA` (vuelta 94)
+
+El guarda acertaba el veredicto de al menos dos de las 86 (hoy 84) POR LA RAZON
+EQUIVOCADA: "trae el procedimiento de LA SEGUNDA" (puesto **960**, madre
+`value_proposition_startup`) y "trae la forma de UNA DE SUS LINEAS" (puesto **1567**,
+madre `brief_de_diseno`) son NOMBRAMIENTOS DE LA MADRE en toda regla (referencian un
+ordinal o "una de sus lineas" que solo tiene sentido si la madre enumero varias), y
+el guarda los dejaba pasar por casualidad, por una marca idiosincratica distinta que
+si conocia ("dice tres lineas" para el 960, "escribe el encargo entero" para el
+1567).
+
+**ANADIDAS**, con la MISMA lookahead negativa que excluye "linea compartida":
+`trae\s+(?:el\s+procedimiento|la\s+forma)\s+de\s+(?:la\s+(?:primera|segunda|tercera|
+cuarta|quinta)|una\s+de\s+sus\s+l[ií]neas?(?!\s*compartid))`. Frecuencia en las
+3.388 razones: **4** (puestos 960, 1567, y dos mas del mismo dominio,
+`fase_activate_primera_impresion` y `fase_activate`), no un patron sobreajustado a
+un solo caso.
+
+**EFECTO SOBRE EL SOSTEN UNICO**: al ganar una segunda marca, el 960 y el 1567 salen
+de la lista de "sosten unico" (antes cada uno solo tenia su marca idiosincratica; hoy
+tienen dos).
+
+## EL SOSTEN UNICO DE `OP-E-07`, RECONSTRUIDO (vuelta 94)
+
+**Reproduccion independiente de la medicion del auditor** (acta 93,
+`docs/loop/SALIDA_V94_TAREA1C_REPRODUCCION_86.txt`), sobre las 86 filas vigentes
+ANTES de la relectura conjunta de esta vuelta (`OP_E_07_DIRECCION_V93.jsonl`), con la
+lista de `MARCA_MADRE_POSITIVA` de la vuelta 93 (sin las dos formulas nuevas): **29 de
+86** pasan el guarda por UNA SOLA alternativa, y **7 de esas 29** por una alternativa
+con frecuencia <= 3 en las 3.388 razones. **SIN DISCREPANCIA**: coincide cifra por
+cifra y puesto por puesto con la medicion del auditor (960, 1281, 1567, 1844, 1848,
+1886, 1992).
+
+**LA CIFRA VIGENTE HOY** (`docs/loop/SALIDA_V94_TAREA4_SOSTEN_UNICO.txt`), sobre las
+84 filas que quedan tras la relectura conjunta de esta vuelta y con las dos formulas
+nuevas de `MARCA_MADRE_POSITIVA`: **25 de 84** pasan por UNA SOLA alternativa (baja de
+29: el 1281 y el 1992 salieron de la bolsa, y el 960 y el 1567 ganaron una segunda
+marca), y **3 de esas 25** por frecuencia <= 3 (puestos **1844** "nombra el problema"
+freq 1, **1848** "entre sus pasos" freq 1, **1886** "monta el marco" freq 2).
+
+**LAS OCHO ALTERNATIVAS CON FRECUENCIA 1 EN TODO EL CATALOGO** (no solo las que
+sostienen alguna fila vigente hoy), con el MISMO CRITERIO aplicado a "es un habito"
+en la vuelta 93 (declarar INVERIFICABLE, no quitar): ninguna tiene un segundo puesto
+en las 3.388 razones contra el que probar si generaliza o falla como marca de madre
+positiva, asi que las OCHO son INVERIFICABLES CONTRA OTRO PAR, y se declaran aqui en
+vez de que solo una lo lleve escrito:
+
+| formula | puesto de origen | frecuencia en las 3.388 |
+|---|---:|---:|
+| `dice\s+(?:una\|dos\|tres)\s+lineas?` | 960 | 1 |
+| `entre sus pasos` | 1848 | 1 |
+| `el paso nombra,?\s*el hijo ejecuta` | 995 | 1 |
+| `es un h[aá]bito` | 1281 | 1 |
+| `es un repertorio` | 1196 | 1 |
+| `nombra el problema` | 1844 | 1 |
+| `escribe el encargo entero` | 1567 | 1 |
+| `calcula dos indicadores` | 974 | 1 |
+
+Ninguna se quita de `MARCA_MADRE_POSITIVA` (no hay evidencia de que fallen, solo
+falta evidencia de que generalicen), salvo donde una relectura conjunta especifica
+(como la del 1281, arriba) concluya que el par que sostienen SALE por otra razon.
+
+## EL CENSO DE `DIRECCION_MANUAL` DE `OP-E-07` (vuelta 94)
+
+`scripts/loop/vuelta91_tarea4_direccion_ope07.py`, diccionario `DIRECCION_MANUAL`:
+**8 entradas** (1163, 1191, 1388, 1500, 1778, 1847, 1886, 1992), los OCHO puestos que
+la deteccion automatica de la vuelta 91 no resolvio y se leyeron a mano sobre la
+razon completa. De las 8, **7 siguen vivas** en la bolsa vigente de 84
+(`docs/plan/OP_E_07_DIRECCION_V94.jsonl`); la octava, **1992**, SALIO esta vuelta por
+relectura conjunta (ver seccion de arriba).
+
+**TRES de las 7 vivas NO tienen lectura ciega de nadie todavia: 1163, 1191 y 1847.**
+Las otras cuatro (1388, 1500, 1778, 1886) tienen su cita textual propia en el
+comentario de `DIRECCION_MANUAL`, pero eso es la lectura del propio ejecutor de la
+vuelta 91 que las escribio, no una lectura ciega independiente. Las tres sin lectura
+quedan para la TAREA 5 de esta vuelta (si queda vuelta) o para una vuelta futura.
