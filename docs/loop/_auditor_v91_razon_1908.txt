@@ -1,0 +1,7 @@
+==========================================================================================
+PUESTO 1908 | clase D | dominio environmental
+nodo_a: contabilidad_flujo_materiales
+nodo_b: eco_eficiencia
+RAZON COMPLETA:
+La auditoria de eficiencia contra el balance de masa, MISMA FUENTE y sin arista entre ellos. eco_eficiencia dice en su paso 1, en UNA LINEA, realizar una auditoria energetica y de recursos, agua y materiales, de todas las operaciones; y trae lo suyo, los marcos nombrados, la priorizacion por retorno, la revision de activos fijos, y el reporte de ahorros. contabilidad_flujo_materiales trae un procedimiento contable que el otro no tiene: MAPEAR TODOS LOS INSUMOS FISICOS que entran a produccion, RASTREAR TODAS LAS SALIDAS incluidos residuos y emisiones, CALCULAR EL BALANCE ENTRE INSUMOS Y SALIDAS para identificar ineficiencias, y evaluar la reduccion de costos asociada al desperdicio de materiales. Por la vara del banco 9.6.1, CONTINUA. Y el balance entre lo que entra y lo que sale es lo unico del dominio que descubre el material que se pierde sin que nadie lo haya registrado como residuo.
+

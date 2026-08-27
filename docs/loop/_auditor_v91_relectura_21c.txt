@@ -1,0 +1,42 @@
+==========================================================================================
+PUESTO 1318 | clase D | dominio core
+nodo_a: desarrollo_en_espiral
+nodo_b: procesamiento_paralelo_con_espirales
+RAZON COMPLETA:
+El ciclo en espiral contra el trabajo en paralelo que lo contiene, del mismo libro y sin arista entre ellos. procesamiento_paralelo_con_espirales dice en sus pasos 2, 3 y 4, en TRES LINEAS, crear versiones tempranas y baratas, hacer ciclos rapidos de prueba con clientes ajustando el diseno antes de seguir, y repetir esos ciclos en cada etapa. desarrollo_en_espiral trae el procedimiento de esas lineas con lo que ninguna dice: QUE SE MIDE en cada prueba, interes, preferencia e intencion de compra; CUANTAS VUELTAS, de tres a cuatro en promedio y hasta quince en procesos muy iterativos; y documentar cada iteracion desde la investigacion inicial de la voz del cliente hasta la prueba completa. Por la vara del banco 9.6.1, CONTINUA. SU ACTO, por la regla de la seccion 54.7: procesamiento_paralelo_con_espirales es una de las tres costuras fuera de cola con anatomia escrita, y su acto del cierre transitivo es de UNO, porque no tiene ninguna A vigente; su arreglo es un destejido solo. LA POSICION DEL SOLAPE, por el 9.9: cae ENTERO en el primer bloque, del 1 al 4, que es el de las espirales; el veredicto es INVARIANTE. En cola sin congelar.
+
+==========================================================================================
+PUESTO 1337 | clase D | dominio core
+nodo_a: customer_discovery_introduccion
+nodo_b: customer_discovery_phase2_problem_test
+RAZON COMPLETA:
+La postura contra el indice de la fase, del mismo libro y sin arista entre ellos. customer_discovery_introduccion es POSTURA en tres lineas: las cuatro preguntas clave, salir del edificio repetidamente durante semanas o meses, y no delegar la tarea. customer_discovery_phase2_problem_test trae el procedimiento de esa segunda linea para la fase concreta del problema: disenar experimentos de prueba con clientes reales, prepararse para contactos y entrevistas, probar la comprension del problema y su importancia percibida, profundizar en perfiles y comportamientos, y capturar conocimiento competitivo y de mercado durante las entrevistas. Por la vara del banco 9.6.1, CONTINUA. Nota ya registrada en el puesto 1092: los pasos de ese indice son titulos de otros nodos y no tiene arista con ninguno de ellos.
+
+==========================================================================================
+PUESTO 1567 | clase D | dominio core
+nodo_a: brief_de_diseno
+nodo_b: how_might_we_briefs
+RAZON COMPLETA:
+El documento del encargo contra la forma de su pregunta, del mismo libro y sin arista entre ellos. brief_de_diseno ESCRIBE EL ENCARGO ENTERO: definir objetivos claros pero NO SOBRE ESPECIFICADOS para no dictar la solucion final, incluir restricciones de precio, tecnologia y segmento SIN CERRAR EL ESPACIO DE EXPLORACION, AJUSTAR EL BRIEF A MITAD DE CAMINO si surgen aprendizajes nuevos, y practicar la mirada de diseno tanto del lado del cliente como del equipo. how_might_we_briefs trae la forma de una de sus lineas: identificar el objetivo macro, REFORMULARLO COMO UNA PREGUNTA DEL TIPO COMO PODRIAMOS, asegurar que sea lo bastante flexible para permitir varias soluciones, y lo bastante especifica para conectar con la vida real de los beneficiarios. Por la vara del banco 9.6.1, CONTINUA: la tension entre no cerrar y no quedar vago esta en los dos, y solo uno da la gramatica exacta para resolverla. Lo que solo tiene el brief es el ajuste a mitad de camino, que es lo unico del par que admite que el encargo se corrige mientras se trabaja.
+
+==========================================================================================
+PUESTO 1634 | clase D | dominio entrega
+nodo_a: clasificar_tipo_paquete
+nodo_b: hacer_cajas_a_medida_del_pedido
+RAZON COMPLETA:
+La categoria del bulto contra el surtido de tamanos, dos fuentes del mismo dominio y sin arista entre ellas, y es la misma relacion del puesto 1633 con el otro nodo de caja. clasificar_tipo_paquete produce una etiqueta geometrica para la lista de comprobacion. hacer_cajas_a_medida_del_pedido decide el carton: medir el producto, SUMAR CINCO O SEIS CENTIMETROS POR LADO, tener al menos TRES TAMANOS y no meter todo en la misma caja, preferir cubicas sobre cilindricas, y revisar el peso volumetrico. Por la vara del banco 9.6.1, CONTINUA: la clasificacion enuncia que despues se elige caja, y este trae los centimetros y el surtido. Y la regla de tener al menos tres tamanos es lo unico del dominio que ataca el habito de comprar una sola medida de caja.
+
+==========================================================================================
+PUESTO 1844 | clase D | dominio environmental
+nodo_a: diagnostico_de_productos_crudos
+nodo_b: productos_crudos
+RAZON COMPLETA:
+El concepto del producto crudo contra su auditoria, MISMA FUENTE y sin arista entre ellos. productos_crudos NOMBRA EL PROBLEMA: evaluar si el producto actual se diseno pensando solo en ATRACTIVO, COSTO Y REGULACION MINIMA, identificar que consideraciones de salud humana y ecologica faltan, y plantear el rediseño bajo criterios de inteligencia ecologica. diagnostico_de_productos_crudos TRAE EL PROCEDIMIENTO: INVENTARIO COMPLETO de materiales y quimicos del producto actual, preguntar por cada componente POR QUE ESTA AHI Y SI ES NECESARIO PARA LA FUNCION, RASTREAR EL ORIGEN GEOGRAFICO de cada parte y verificar las regulaciones de los paises proveedores, e identificar las sustancias toxicas conocidas, metales pesados, disruptores endocrinos y ftalatos. Por la vara del banco 9.6.1, CONTINUA. Y rastrear el origen de cada parte con la regulacion de su pais es lo unico del par que descubre lo que entro al producto por una puerta que aqui no existe.
+
+==========================================================================================
+PUESTO 1848 | clase D | dominio environmental
+nodo_a: involucramiento_empleados_sostenibilidad
+nodo_b: involucrar_empleados_ahorro_energetico
+RAZON COMPLETA:
+El canal de ideas contra la caceria del desperdicio, MISMA FUENTE y sin arista entre ellos. involucramiento_empleados_sostenibilidad dice, entre sus pasos, organizar competencias internas de ahorro energetico y disenar incentivos para quien se suma; y trae lo suyo, dar el ejemplo de forma visible y hacer las practicas visibles y rutinarias con senaletica y recordatorios. involucrar_empleados_ahorro_energetico trae el procedimiento de esa competencia: un programa de incentivos PARA QUIEN IDENTIFIQUE OPORTUNIDADES de eficiencia, organizar CACERIAS DE DESPERDICIO en toda la planta, INSPECCIONAR LOS EQUIPOS EN MODO DE REPOSO para detectar consumo innecesario, y DOCUMENTAR Y CUANTIFICAR LOS AHORROS identificados. Por la vara del banco 9.6.1, CONTINUA. Y cuantificar el ahorro que encontro cada persona es lo unico del par que convierte una actividad de participacion en una cifra defendible.
+
