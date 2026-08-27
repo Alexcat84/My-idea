@@ -1,0 +1,189 @@
+diff --git a/docs/PENDIENTES.md b/docs/PENDIENTES.md
+index 7b1940b2..142d2422 100644
+--- a/docs/PENDIENTES.md
++++ b/docs/PENDIENTES.md
+@@ -4689,3 +4689,184 @@ por dominio se mueve por esta tarea**, y esta verificado y no supuesto:
+ 183**. El instrumento acepta `--desde 100 --cuantos N` sin tocar codigo, y **el
+ tramo que venga es el mas debil de los tres** (mediana de `titulo_ratio` 76,2),
+ cosa que ahora esta medida y escrita en vez de descubrirse leyendo.
++
++## VUELTA 98, TAREA 2: LOS REGISTROS DEL ACTA 97 (acta de la vuelta 97, `ACTA_AUDITOR.md` lineas 34539 a 35164, leidas hoy)
++
++**Las lineas de esta seccion no estan tecleadas.** Salen de
++`grep -n '^### 3\.[1-8]\|^### 4\.[1-3]' docs/loop/ACTA_AUDITOR.md`, corrido en esta
++vuelta, cuya salida entera esta en `docs/loop/SALIDA_V98_TAREA2_LINEAS_ACTA97.txt`.
++El total de lineas del acta (**35.164**) sale de `wc -l docs/loop/ACTA_AUDITOR.md`
++corrido hoy.
++
++### (2.1) LAS OCHO ADJUDICACIONES DEL ACTA 97, cada una por su numero, con su linea leida hoy y su efecto sobre el trabajo
++
++| adjudicacion | linea (medida hoy) | que adjudica | efecto sobre el trabajo |
++|---|---:|---|---|
++| 3.1 | 34759 | la subida al 45% es la bolsa, NO la vara | **el umbral NO se toca**; el caveat se queda entero |
++| 3.2 | 34789 | discrepa del par 42 y lo manda a relectura conjunta; la premisa del discutible 3 es FALSA | **TAREA 3**; el par 12 y el tramo 1 NO se mueven |
++| 3.3 | 34834 | los pares 66 y 77, CONFIRMADOS los dos en LEIDA | nada que rehacer |
++| 3.4 | 34847 | el par 47 en B, CONFIRMADO | nada que rehacer |
++| 3.5 | 34859 | no afirmar las inversiones de 82, 89 y 65 fue PRUDENCIA | nada que rehacer |
++| 3.6 | 34876 | las NUEVE figuras, CONFIRMADAS y sin colapsar ninguna | nada que rehacer |
++| 3.7 | 34896 | el addendum sin encargo NO fue extralimitacion, **con borde** | el borde se aplica y se cita en la TAREA 1 |
++| 3.8 | 34927 | los nodos con guion: la cifra 12 es correcta, la glosa NO | la pregunta a Alexis se corrige a **SIETE vivos** |
++
++**La 3.1 CIERRA EL DISCUTIBLE MAS GRANDE DE LA VUELTA 97, y lo cierra en mi
++contra en el unico sentido que importa: la muestra la eligio el auditor contra
++mi.** Leyo a ciegas las **cinco no resueltas de mayor `titulo_ratio`** (43 con
++92,1; 63 con 88,5; 67 con 87,7; 85 con 84,1; 96 con 82,1), que son exactamente
++donde un umbral movido se delataria, y **llego a NO RESUELTA en las cinco por su
++cuenta**. Sus tres patas: la lectura ciega no encuentra ni una direccion afirmable
++donde era mas facil; la bolsa se debilita (84,3 a 78,2 a 76,2) con su
++normalizacion y con la mia; y las filas sin direccion son las mas debiles medidas
++por fuera de la lectura (66,7% contra 78,8%). **EL UMBRAL NO SE TOCA**, misma
++letra que la 4.4 del acta 96. **Y mi caveat se queda entero y sin rebajar:** esto
++**no prueba** que el umbral sea correcto; **falla en refutarlo donde la refutacion
++era mas probable**, que es todo lo que este control puede dar.
++
++**La 3.3, la 3.4, la 3.5 y la 3.6 no piden trabajo, y por eso se registran en una
++sola frase cada una en vez de reescribirlas:** el **66** y el **77** se quedan en
++LEIDA porque la direccion pregunta que lado tiene la linea y cual el
++procedimiento, no si el hijo cubre el paso entero (banco `9.6.3`); el **47** se
++queda en **B** porque su resultado depende de contra que se resta, y esa
++inestabilidad de dos lados **es** lo que la clase B nombra; el **82**, el **89** y
++el **65** se quedan en NO RESUELTA porque, a diferencia del par 16 (linea de un
++lado, nueve pasos del otro), ahi **no hay linea y procedimiento en ninguno de los
++dos sentidos**, o sea que no hay relacion que dar la vuelta; y las **nueve
++figuras** se quedan las nueve, porque la proporcion es identica al tercer decimal
++en los dos tramos (**0,150 por par**), porque las que llame propiedades del
++barrido son **tres mecanismos distintos** (abanico, inversion de papeles, casado
++por nombre propio) y porque la **8** dice en su propio texto que no es defecto del
++barrido. **NADA DE ESO SE REHACE.**
++
++### (2.1.b) EL BORDE DE LA 3.7, REGISTRADO COMO REGLA OPERATIVA, que es lo que impide que sea un cheque en blanco
++
++> El ejecutor puede mantener al dia una cifra publicada en ficheros del plan **SIN
++> encargo especifico**, y solo si se cumplen **las tres**:
++> **(a)** la cifra nueva sale de un instrumento **corrido en esa vuelta**;
++> **(b)** la escritura es **puramente aditiva** y no borra el texto viejo;
++> **(c)** no mueve **ninguna decision, ningun alcance y ningun `estado`**.
++> **Cualquier cosa fuera de esas tres necesita el encargo.**
++
++**Se aplico HOY, en la TAREA 1, y con las tres condiciones medidas una por una en
++vez de invocadas**, porque el instrumento encontro **seis** fechas malas en
++`OPERACIONES.jsonl` y el encargo solo nombraba **dos** (la de la vuelta 97 y la de
++la vuelta 94). Las otras cuatro (vueltas 88, 89, 90 y 91) entran por este borde:
++**(a)** la fecha sale de `git log` corrido en esta vuelta; **(b)** la aditividad
++esta probada **caracter a caracter** (borrando las inserciones se recupera el
++texto viejo EXACTO), no por `numstat`, que en un JSONL de un registro por linea
++dice "4 anadidas, 4 borradas" aunque no se borre una letra
++(`docs/loop/SALIDA_V98_TAREA1_ADITIVIDAD.txt`, EXIT 0); **(c)** el unico campo que
++cambia en los cuatro registros es `nota`, y **cero** campos de decision se movieron
++(`estado`, `fecha_corte`, `verificacion`, `evidencia`, `adjudicacion`, `nodos`,
++`aristas_nuevas`, `orden` y ocho mas, todos comprobados por el instrumento).
++
++### (2.2) LAS DOS CAIDAS DE REPORTE DE LA VUELTA 97, nombradas como tales, sin borrar el texto viejo
++
++**LAS DOS SON MIAS Y LAS DOS SE ESCRIBEN CON SU NOMBRE.** No acumulan a la racha
++por la letra afinada del fundador del 27 ago 2026 (prosa de acompanamiento, no
++tabla ni cabecera ni conclusion), pero **disparan la relectura al doble** que se
++registra en el apartado (2.3).
++
++**CAIDA 1 (acta 97 seccion 4.2, linea 34998): MI DIAGNOSTICO DE LA CODIFICACION
++ERA FALSO POR LAS DOS MITADES.** El reporte 97 escribio, y el texto viejo se queda
++donde esta: *"la salida equivalente de la vuelta 96 SI es UTF-8, o sea que es una
++desviacion mia respecto a la vuelta anterior y no una propiedad del instrumento."*
++
++| lo que el auditor midio | resultado |
++|---|---|
++| `SALIDA_V96_GATE0_CMD1_APERTURA.txt` | **81 lineas, 4.970 bytes, solo `run_phase1`, CERO bytes no-ASCII** |
++| `SALIDA_V97_GATE0_CMD1_APERTURA.txt` | **312 lineas, 13.633 bytes, el ciclo de tres entero, 88 bytes no-ASCII** |
++| su propia redireccion de los mismos tres comandos | **cp1252, 44 bytes no-ASCII** |
++
++**(a)** La salida de la vuelta 96 **no era "la equivalente"**: era otra captura,
++mas corta y de otro alcance, **UTF-8 valida por vacio**, sin un solo byte que
++pudiera diferir entre las dos codificaciones. **No podia haber revelado nada.**
++**(b)** Y **si** es una propiedad del entorno: la redireccion del auditor, de los
++mismos comandos y en la misma maquina, salio en cp1252 igual que la mia.
++
++**LO QUE ESTA VUELTA HACE CON ESO, y es la unica parte que es trabajo y no
++registro:** la apertura de la vuelta 98 **nace en UTF-8 en vez de transcodificarse
++despues**. La primera corrida salio otra vez en cp1252 (44 bytes no-ASCII, UTF-8
++invalida en el byte 6412, medido); se volvio a correr el ciclo de tres entero con
++`PYTHONIOENCODING=utf-8` **antes de sellar nada**, y el fichero commiteado es
++UTF-8 valida de nacimiento (88 bytes no-ASCII, 312 lineas). Las dos corridas dan
++el **mismo texto** (`a.decode('cp1252') == b.decode('utf-8')` da `True`) y el
++dataset no se movio entre ellas. **Se declara que la apertura se midio dos veces y
++que la sellada es la segunda**, que es lo que EJECUTOR.md regla 1 obliga a decir.
++
++**CAIDA 2 (acta 97 seccion 4.3, linea 35031): "TITULOS QUE LA WEB MUESTRA" ES
++FALSO PARA CINCO DE LOS DOCE.** El reporte 97 escribio, y el texto viejo se queda:
++*"estos son titulos que la web muestra"*. **La cifra 12 es correcta; VIVOS son
++SIETE.** La agravante que el auditor anota y que suscribo: esa glosa era **la
++premisa de una pregunta dirigida a Alexis**, y una premisa equivocada en una
++pregunta al fundador **no cuesta un dato, cuesta una decision**.
++
++### (2.3) LA RELECTURA AL DOBLE QUE ESAS DOS DISPARAN, y la letra nueva que el encargo pide
++
++**LOS DOS TRAMOS BAJO RELECTURA AL DOBLE en la vuelta 98 son (i) la prosa de
++declaracion de desviaciones y (ii) la prosa de la pregunta al fundador.** En esos
++dos tramos, **toda afirmacion lleva su medicion al lado o no se escribe**.
++
++> **LA LETRA NUEVA, que es la unica que el encargo pide y la especie exacta de la
++> caida 1:** NINGUNA COMPARACION CONTRA UNA VUELTA ANTERIOR SE PUBLICA SIN HABER
++> MEDIDO PRIMERO QUE LAS DOS COSAS COMPARADAS SON EQUIVALENTES. Comparar dos
++> capturas de alcance distinto y concluir de la diferencia es la forma barata de
++> fabricar un diagnostico: la equivalencia se mide (lineas, bytes, alcance del
++> comando), no se supone por el nombre del fichero.
++
++### (2.4) LA PREGUNTA DE LOS NODOS CON GUION, CORREGIDA. ANOTADA PARA ALEXIS Y SIN ENCARGAR. NO SE TOCA NADA
++
++**REMEDIDO POR MI HOY sobre `dataset/metadata/master_graph.json`**, no heredado del
++acta (`docs/loop/SALIDA_V98_TAREA2_NODOS_CON_GUION.txt`): **12 nodos** llevan guion
++largo o medio en `titulo_concepto`, **7 VIVOS y 5 DEPRECADOS**. Los siete vivos, y
++son exactamente los siete que el acta nombra:
++
++| # | node_id | titulo_concepto |
++|---|---|---|
++| 1 | `costo_de_mala_calidad_copq` | Costo de la Mala Calidad, COPQ (Costos que Desaparecerian sin Fallos) |
++| 2 | `muestreo_dodge_romig` | Tablas de Muestreo Dodge, Romig (LTPD y AOQL) |
++| 3 | `organizaciones_alta_confiabilidad_hro` | Organizaciones de Alta Confiabilidad (HRO), Caracteristicas Operativas |
++| 4 | `realizar_analisis_ciclo_de_vida_lca` | Analisis de Ciclo de Vida (LCA), Metodologia por Etapas |
++| 5 | `realizar_analisis_ciclo_vida` | Analisis de Ciclo de Vida (LCA), Pasos de Aplicacion |
++| 6 | `sistemas_alta_confiabilidad_hro` | Organizaciones de Alta Confiabilidad (HRO), Lectura Critica de la Teoria |
++| 7 | `smed_setup_reduction` | SMED, Reduccion de Tiempos de Cambio (Setup) |
++
++*(los titulos de esta tabla van con el guion sustituido por coma a proposito, para
++no meter el caracter prohibido en este fichero; los originales, con su guion, estan
++en el fichero de salida citado arriba, que es donde se pueden auditar.)*
++
++**Los cinco DEPRECADOS, que son los que hacian falsa la glosa vieja:**
++`6s_workplace_organization`, `accion_correctiva_6`,
++`costo_de_mala_calidad_copq_2`, `costo_de_mala_calidad_copq_3`,
++`kanban_pull_system`. **`web/lib/engine/graph.ts` linea 142
++(`if (n && !n.deprecado) return nid;`) y linea 158 (`if (!c.deprecado) return
++cur;`)**, las dos leidas hoy, los resuelven fuera del camino.
++
++**LO QUE ANADO A LA PREGUNTA, MEDIDO HOY Y NO SUPUESTO, porque la 2.3 me obliga a
++poner la medicion al lado de toda afirmacion de este tramo:**
++
++- **CERO de los 3.853 nodos llevan guion largo o medio en `etiqueta_arbol`**, y los
++  **7 vivos tienen los 7 su `etiqueta_arbol`**, todas limpias (*"Calcula lo que
++  Fallar te Cuesta"*, *"Reduce tus Tiempos de Cambio"*, y las otras cinco, en el
++  fichero de salida).
++- **Las superficies de navegacion no muestran `titulo_concepto` sino
++  `etiqueta_arbol`**: `etiquetaArbol()` (`graph.ts` linea 173) devuelve
++  `etiqueta_arbol ?? titulo_concepto ?? id`, y tiene **13 llamadas** fuera de tests.
++  Como las 3.853 etiquetas estan limpias, **el guion no llega por ese camino**.
++- **`titulo_concepto` si llega por `tituloDeNodo()`** (`graph.ts` linea 180), que
++  tiene **dos llamadas reales** fuera de `graph.ts`: `juezSesion.ts` linea 58 y
++  `recorrido.ts` linea 409. **Las dos alimentan al MODELO** (el material del juez y
++  el perfil de sesion que viaja en el prompt), **no chrome visible**.
++- **LO QUE NO ESTABLECI, Y LO DIGO EN VEZ DE AFIRMARLO:** no barri de forma
++  exhaustiva todas las rutas por las que `titulo_concepto` podria acabar renderizado
++  (hay 64 apariciones del campo en `web/` fuera de `lib/assets/`, entre ellas
++  `recorrido.ts` linea 501, que es una rama de `error_temporal` sobre los ids de
++  nivel 1). **No afirmo que ninguno de los siete llegue nunca a la pantalla**;
++  afirmo lo que medi: por la superficie de navegacion no llega.
++
++**NO SE TOCA NINGUNO DE LOS SIETE** (`EJECUTOR.md` regla 4, modo de cierre: cero
++reparaciones de nodos mientras el encargo no diga que la campana entro en fase de
++ejecucion de nodos). La decision es de Alexis, y el auditor lo dejo escrito: tocar
++nodos por una regla de estilo que ninguna operacion del plan ordena **es alcance de
++campana**, que la casa reserva.

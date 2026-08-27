@@ -1,0 +1,12 @@
+=== DONDE titulo_concepto PUEDE LLEGAR AL USUARIO ===
+
+--- llamadas a tituloDeNodo() fuera de tests ---
+web/lib/engine/graph.ts:180:export function tituloDeNodo(nid: string, graph: Grafo): string {
+web/lib/engine/graph.ts:195:  return nids.map((nid) => tituloDeNodo(nid, graph));
+web/lib/engine/juezSesion.ts:58:  const titulo = (nid: string) => tituloDeNodo(nid, graph);
+web/lib/engine/recorrido.ts:409:    const titulo = tituloDeNodo(nidActual, graph);
+
+--- llamadas a etiquetaArbol() fuera de tests ---
+13
+
+--- los 7 vivos: donde aparece su titulo en la web ---
