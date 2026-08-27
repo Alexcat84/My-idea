@@ -1,0 +1,100 @@
+==========================================================================================
+TAREA 5.a: LOS 192 Y LOS 101, TALLADOS DE docs/plan/COSECHA_RAZONES_D.jsonl
+==========================================================================================
+filas totales: 397
+nuevo=true: 293
+cubiertos (nuevo=false): 104
+nuevos con senales == ['continua por la vara'] (candidatos OP-E-07): 101
+nuevos con OTRA senal (candidatos OP-E-06): 192
+
+reparto por dominio de los candidatos OP-E-06:
+  core           146
+  entrega        15
+  environmental  15
+  exportacion    12
+  franquicias    4
+
+==========================================================================================
+TAREA 5.b: LOS CUATRO FRENTES DEL DEDUPE, SOBRE EL GRAFO DE HOY
+==========================================================================================
+FRENTE 1, contra la bolsa de PASO_NODO_CALIBRADO.jsonl (468 filas hoy): quita 0
+
+FRENTE 2, contra 18 pares ya declarados en aristas_nuevas de otras operaciones: quita 0
+
+FRENTE 3, contra los 7 puestos de la cola de relectura post fusion: quita 0
+
+FRENTE 4, contra pares con arista YA en el grafo de hoy (resolviendo por alias): quita 16
+
+MEDICION DE CONTRASTE sobre los 192 originales completos (no el remanente):
+  ya tienen arista hoy (resolviendo por alias): 16
+  tocan un nodo DEPRECADO hoy: 36
+  tocan un id que ya no existe en el grafo: 0
+  (vara del acta de la vuelta 87, definicion ESTRICTA SIN ALIAS: 6 / 36 / 0.
+   Si estos numeros difieren de esos, es diferencia de definicion (con alias
+   contra sin alias), declarada aqui y no resuelta copiando.)
+
+==========================================================================================
+TAREA 5.c: LA DIRECCION SE LEE (palabras: madre, hijo, padre, desarrolla, detalla, en una linea, en una línea, procedimiento, cuelga, enumera, menciona, nombra)
+==========================================================================================
+CON alguna palabra de direccion (siguen en la bolsa): 129
+SIN ninguna palabra de direccion (SE DESCARTAN, contados y nombrados): 47
+  de esos, frase literal 'Ninguno enlaza al otro.': 5
+
+LOS DESCARTADOS POR FALTA DE DIRECCION, TODOS NOMBRADOS (nunca silencioso):
+  puesto 393 (core): busqueda_cofundador_complementario -- evaluacion_capital_para_cofundadores | frase: Ninguno enlaza al otro.
+  puesto 396 (core): elevator_pitch_inversion -- preparacion_materiales_fundraising | frase: Ninguno enlaza al otro.
+  puesto 473 (core): distincion_esfuerzo_energia -- esfuerzo_y_energia_intelectual | frase: Ninguno enlaza al otro.
+  puesto 555 (core): etapa_pruebas_necesaria -- etapa_testing_validation | frase: Ninguno enlaza al otro.
+  puesto 557 (core): involucramiento_fundador_busqueda_ceo -- sucesion_iniciada_por_fundador | frase: Ninguno enlaza al otro.
+  puesto 577 (core): term_sheet_negociacion -- term_sheet_overview | frase: FIGURA ANOTADA, de las de la ARISTA QUE FALTA del banco 9.
+  puesto 580 (core): seis_canales_comunicacion_assess -- seis_herramientas_comunicacion_fase_activate | frase: Sin arista entre ellos, y no hace falta: cada uno enlaza a la fase que le sigue en la serie, Assess a Admit y Activate a Acclimate.
+  puesto 582 (core): business_model_canvas_scorecard -- customer_development_weekly_lessons_learned | frase: La redaccion queda asi: si no hay ni un hermano enlazado no hay mayoria de la que tirar, la silueta no dice nada y manda el contenido.
+  puesto 584 (core): plan_de_lanzamiento_al_mercado -- stage5_launch | frase: FIGURA ANOTADA, la ARISTA QUE FALTA del banco 9.
+  puesto 589 (core): contratos_de_servicio_garantia -- garantias_implicitas_vs_expresas | frase: STO 581: garantias_implicitas_vs_expresas SI enlaza a cumplimiento_magnuson_moss y a clasificacion_garantia_full_limited, o sea que la familia esta bien cableada y refuerza que la arista que falta hacia prohibicion_tie_in_sales es una omision suelta, no la forma de la familia.
+  puesto 607 (core): customer_development_process -- customer_discovery_get_out_of_building | frase: Sin arista entre ellos, y esa falta si importa porque el indice no enlaza a la practica de su propia etapa 1.
+  puesto 610 (core): acumulacion_capital_previo_fundacion -- capital_social_founder | frase: La redaccion queda asi: si no hay ni un hermano enlazado no hay mayoria de la que tirar, la silueta no dice nada y manda el contenido.
+  puesto 617 (core): plan_gestion_cambios -- scope_management_plan | frase: Dos planes distintos del mismo libro de formularios, con un solo punto de contacto y ese punto esta bien puesto. plan_gestion_cambios arma el control de cambios: que tan estricto va a ser y como se co
+  puesto 646 (core): analisis_antiguedad_cuentas_por_cobrar -- gestion_dso | frase: El promedio contra el detalle que el promedio esconde, y ese es justamente el argumento del segundo nodo. gestion_dso trabaja el indicador: calcular el DSO actual y su tendencia historica, investigar 
+  puesto 665 (core): stage_gate_td_tecnologia -- stage_gate_tipos_proyectos | frase: Los dos de Winning at New Products, sin arista entre ellos, y stage_gate_tipos_proyectos no enlaza a nada hacia adelante siendo la doctrina general, que es justo el nodo que deberia repartir.
+  puesto 700 (core): checkpoints_validacion -- medir_comportamiento_cliente_mvp | frase: El umbral contra la lectura de resultados, y con esto la familia de la medicion de validacion queda leida en tres nodos y los tres sanos entre si. checkpoints_validacion fija la vara antes de medir: m
+  puesto 814 (core): fase_activate -- fase_admit | frase: Sin arista entre ellos, aunque cada uno enlaza a la fase que le sigue: es la cadena de la serie funcionando.
+  puesto 829 (core): fase_adopt_ciclo_cliente -- ocho_fases_experiencia_cliente | frase: Sin arista entre ellos, y eso llama la atencion porque este programa SI enlaza a las otras siete fases: es una arista que falta dentro del nodo mejor cableado del archivo.
+  puesto 841 (core): customer_discovery_cuatro_fases -- realizar_pruebas_pasa_no_pasa | frase: Y es ARISTA QUE FALTA del banco 9.
+  puesto 846 (core): actualizar_modelo_de_negocio_pivot_o_proceed -- customer_discovery_overview | frase: Y es ARISTA QUE FALTA del banco 9.
+  puesto 854 (core): customer_development_modelo -- customer_validation | frase: Queda igual como arista que falta del banco 9.
+  puesto 863 (core): estrategia_de_innovacion_y_tecnologia -- estrategia_innovacion_producto | frase: Sin arista entre ellos, o sea que es tambien arista que falta del banco 9.
+  puesto 867 (core): preguntas_need_payoff -- preguntas_situacion | frase: Dos tipos de pregunta distintos de la misma secuencia SPIN, y ni un paso se solapa. preguntas_situacion son la apertura y su regla es la moderacion: investigar al cliente antes de la llamada para redu
+  puesto 876 (core): etapa_build_business_case -- etapa_scoping | frase: La etapa 1 contra la etapa 2 del Stage-Gate, y es una ESCALERA QUE SI SUBE, en el sentido del banco 9.12. etapa_scoping es la investigacion preliminar rapida: buscar informacion secundaria en internet
+  puesto 888 (core): investigacion_como_habilidad_clave -- preguntas_implicacion | frase: La tesis general contra uno de sus cuatro tipos de pregunta, del mismo libro y sin arista entre ellos. investigacion_como_habilidad_clave defiende la tesis: preparar preguntas que descubran necesidade
+  puesto 901 (core): evaluacion_capacidades_fundador -- evaluacion_capital_humano | frase: Y es arista que falta del banco 9.
+  puesto 931 (core): no_shop_agreement -- term_sheet_disposiciones_vinculantes | frase: 1, CONTINUA, y es arista que falta.
+  puesto 958 (core): onboarding_comunitario_y_lenguaje_propio -- welcome_call_cliente_veterano | frase: Es arista que falta.
+  puesto 994 (core): compartir_datos_cadena_suministro -- efecto_bullwhip | frase: Es arista que falta de las mas claras: el diagnostico termina apuntando al remedio por su nombre y el grafo no los une.
+  puesto 1016 (core): business_model_canvas_scorecard -- validar_modelo_negocio_hechos | frase: Es arista que falta de las evidentes: el segundo empieza reuniendo el producto del primero y el grafo no los une.
+  puesto 1035 (core): fase_accomplish -- fase_admit | frase: Dos fases distintas de Coleman y dos celebraciones distintas, del mismo libro y sin arista entre ellos. fase_admit celebra la COMPRA: un momento de reconocimiento inmediato tras cerrar, un mensaje de 
+  puesto 1036 (core): business_model_canvas_vs_plan -- validar_modelo_negocio_hechos | frase: Ni un paso se solapa y el segundo empieza donde termina el primero: arista que falta, la segunda del mismo nodo en veinte puestos.
+  puesto 1046 (core): efecto_bullwhip -- mitigacion_efecto_latigo | frase: Con el puesto 994, este diagnostico tiene ya DOS remedios leidos y no enlaza con ninguno.
+  puesto 1190 (core): formalize_advisory_board -- identificar_consejo_asesores | frase: CONGELADO. Identificar contra formalizar el consejo asesor, del mismo libro y sin arista entre ellos, y lo traigo porque choca de frente con una A ya registrada. identificar_consejo_asesores dice en s
+  puesto 1242 (core): flexible_go_kill_criteria -- scorecards_criterios_gate | frase: Los criterios contra la tabla que los aplica en la puerta, del mismo libro y sin arista entre ellos, y es la misma relacion del puesto 1162 con el otro nodo de tabla. flexible_go_kill_criteria dice en
+  puesto 1399 (core): sistema_gates_go_kill -- sistema_gestion_recursos_en_gates | frase: El sistema de puertas contra el compromiso de recursos en la puerta, del mismo libro y sin arista entre ellos, y es la misma relacion del puesto 302 con el otro miembro. sistema_gates_go_kill dice en 
+  puesto 1414 (core): diseno_experimentos_pass_fail -- startup_como_experimento_cientifico | frase: El experimento como postura contra el test de pasa o no pasa, libros distintos y sin arista entre ellos, y aqui la DIRECCION decide otra vez, igual que en el puesto 1395. Los cuatro pasos de startup_c
+  puesto 1432 (core): desarrollo_presentacion_problema -- presentacion_solucion_producto | frase: La reunion del problema contra la reunion de la solucion, del mismo libro y sin arista entre ellos, y son dos citas distintas del mismo recorrido. desarrollo_presentacion_problema dice en su paso 4, e
+  puesto 1478 (core): deteccion_alucinaciones_ia -- principio_humano_en_el_loop | frase: El principio de revisar contra el metodo de cazar la invencion, del mismo libro y sin arista entre ellos, y ES LA DECISION DE ABSORCION que la seccion 11 dejo planteada. principio_humano_en_el_loop di
+  puesto 1537 (core): diamante_decision_tres_partes -- sistema_gates_go_kill | frase: El sistema de puertas contra el orden de la reunion, del mismo libro y sin arista entre ellos, y este par decide si la mesa unida crece por segunda vez. sistema_gates_go_kill dice en su paso 2, en UNA
+  puesto 1550 (core): investigacion_como_habilidad_clave -- preguntas_need_payoff | frase: La habilidad contra el cuarto tipo de pregunta, del mismo libro y sin arista entre ellos, y es la misma forma del puesto 1535 con el otro tipo. investigacion_como_habilidad_clave dice en su paso 1, en
+  puesto 1558 (core): mercados_multilaterales -- optimizacion_mercado_multilado | frase: El mapa de todos los lados contra el trabajo del lado pagador, del mismo libro y sin arista entre ellos, Y ESTE PAR CIERRA LA COBERTURA DE UNA FAMILIA DE TRES. mercados_multilaterales dice en su paso 
+  puesto 1584 (core): analisis_de_ratios_financieros -- ratios_liquidez | frase: La bateria de ratios contra una de sus cuatro familias, del mismo libro y sin arista entre ellos, y es la TERCERA vez que este nodo se lee contra uno de sus propios ratios, con el puesto 1369. analisi
+  puesto 1853 (environmental): employee_mobilization_sostenibilidad -- involucrar_empleados_ahorro_energetico | frase: El canal de ideas contra el formato de la busqueda, MISMA FUENTE y sin arista entre ellos, y es la misma relacion del puesto 1848 con el otro nodo de participacion. employee_mobilization_sostenibilida
+  puesto 1907 (environmental): benchmarking_prospectivo_futuro -- estrategia_proactiva_ambiental | frase: La postura proactiva contra el metodo para mirar adelante, MISMA FUENTE y sin arista entre ellos, y es la misma relacion del puesto 1835 con el otro nodo de futuro. estrategia_proactiva_ambiental dice
+  puesto 1948 (exportacion): adaptacion_cultural_negocios_internacionales -- gestion_diferencias_culturales | frase: Adaptarse al pais contra elegir por donde empezar, MISMA FUENTE y sin arista entre ellos. Lo compartido son tres lineas: investigar antes de viajar, aprender frases basicas del idioma, y contratar a a
+  puesto 2021 (exportacion): seleccion_de_distribuidor_internacional -- seleccion_representante_extranjero | frase: La decision y el contrato contra la lista de verificacion del candidato, MISMA FUENTE y sin arista entre ellos. seleccion_de_distribuidor_internacional ENMARCA: DEFINIR SI SE NECESITA DISTRIBUIDOR, QU
+
+==========================================================================================
+TAREA 5.d: EL RESULTADO
+==========================================================================================
+CIFRA VIEJA (12 ago 2026, ficha de OP-E-06, se deja delante, no se borra): 192
+CIFRA NUEVA (28 ago 2026, vuelta 88, re-basada sobre el grafo de hoy): 129
+escrito: C:\Users\AlexDesk\Documents\I have an idea\docs\plan\OP_E_06_REBASE_V88.jsonl
+
+NO SE ESCRIBIO NINGUNA ARISTA DE OP-E-06 EN ESTA VUELTA. La vuelta 89 abre
+la operacion con esta bolsa, no con la de la ficha del 12 ago 2026.
