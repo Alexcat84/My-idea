@@ -38,6 +38,17 @@ arbol limpio, `origin/pasada-unica` igual a `HEAD` antes de empezar la
 primera tarea de codigo, verificado con `git rev-parse HEAD` y `git rev-parse
 origin/pasada-unica`).
 
+**CORRECCION DECLARADA (vuelta 80), texto viejo intacto arriba, sin
+reescribirlo.** El texto de arriba esta MAL: `43b02413` es el commit de la
+TAREA 4 de esta misma vuelta 79 (`git show --stat 43b02413` da los tres
+ficheros de esa tarea), no la apertura. **El commit de apertura real es
+`aea7cc81`** (acta de la vuelta 78 del auditor), que es exactamente lo que
+mide la columna apertura de la propia tabla de este reporte (8.949 / 8.928 /
+17.877 / 9.572). Caida de reporte con nombre, medida y adjudicada por el
+auditor (`docs/loop/ACTA_AUDITOR.md`, vuelta 79, seccion 4 y seccion 5 punto
+"la caida de reporte"): tercera tanda seguida, PARADA. Registrada sin
+remedirse en `docs/loop/REPORTE.md` de la vuelta 80, TAREA 1.
+
 **SE MANTIENE "LA TABLA SE CUENTA DE SU FICHERO"**: toda tabla o cifra de
 este reporte cita el fichero de salida del que sale.
 
