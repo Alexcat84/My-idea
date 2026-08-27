@@ -1,0 +1,27 @@
+==============================================================================
+NODO: participacion_preferente
+titulo: Tipos de Participación en Acciones Preferentes (No Participante, Participación Total, Participación con Tope)
+dominio: core | fase: planificacion | fuente: Venture Deals
+resumen_teorico: Existen tres tipos de participación tras recibir la liquidation preference: (1) No participación - el inversionista solo recibe su preferencia o convierte a común, tomando lo que sea mayor; (2) Participación total - el inversionista recibe su preferencia Y además participa proporcionalmente en el resto de los proceeds, sin necesidad de convertir ('tener el pastel y comérselo también'); (3) Participación con tope - participa hasta alcanzar cierto múltiplo del retorno, después del cual deja de participar. Estos términos impactan significativamente los retornos en escenarios de salida bajos y medios.
+PASOS (4):
+  1. Calcular escenarios de retorno bajo cada tipo de participación usando el precio de venta esperado de la empresa.
+  2. Preferir 'no participación' en rondas tempranas, ya que es más simple y justo tanto para inversionistas como fundadores.
+  3. Si se acepta participación, negociar un tope razonable (ej. 3x) para limitar el impacto negativo en fundadores y empleados.
+  4. Recordar que los términos de la ronda semilla suelen convertirse en precedente para rondas futuras, por lo que vale la pena negociarlos bien desde el inicio.
+ENTREGABLE: Claridad documentada sobre el tipo de participación acordado y su impacto modelado en distintos escenarios de salida.
+nodos_siguientes: ['preferencias_apiladas_vs_blended', 'term_sheet_negociacion']
+nodos_previos: ['preferencia_de_liquidacion']
+==============================================================================
+NODO: seed_deals_riesgos_precedente
+titulo: Riesgos de Precedente en Rondas Semilla
+dominio: core | fase: ejecucion | fuente: Venture Deals
+resumen_teorico: Las rondas semilla suelen tener los costos legales más bajos y negociaciones menos conflictivas, pero son las que más riesgo de precedente generan a largo plazo, porque los términos que aceptas hoy condicionan las rondas futuras. Conseguir una valoración muy alta o términos demasiado favorables sin respaldo real de desempeño puede volverse un problema serio: si no logras justificar una valoración mayor después, se produce dilución conflictiva y los inversionistas originales pueden bloquear el nuevo financiamiento. Por eso conviene priorizar una estructura sana, con un inversionista líder comprometido en vez de una ronda de fiesta con muchos inversionistas sin compromiso, y ser honesto con inversionistas semilla poco sofisticados sobre el riesgo de rondas a la baja.
+PASOS (5):
+  1. Evaluar si la valoración obtenida en tu ronda semilla es sostenible con el desempeño real de tu negocio
+  2. Anticipar el crecimiento necesario y cómo los términos actuales impactarán la negociación de tus rondas futuras
+  3. Preferir una estructura con un inversionista líder claro en vez de una ronda de fiesta con múltiples inversionistas sin compromiso
+  4. Comunicar expectativas realistas a tus inversionistas semilla no sofisticados sobre el riesgo de rondas a la baja
+  5. Evitar comprometerte con valoraciones infladas que generen presión de dilución futura
+ENTREGABLE: Estructura de ronda semilla con inversionista líder identificado y análisis de sostenibilidad de la valoración frente a proyecciones de crecimiento.
+nodos_siguientes: ['protective_provisions_alineacion', 'board_control_etapas_tardias', 'tecnica_anclaje_negociacion']
+nodos_previos: ['valuacion_pre_post_money', 'errores_comunes_fundraising']
