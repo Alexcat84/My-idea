@@ -1,0 +1,41 @@
+==============================================================================
+LA TABLA DE ALCANZABILIDAD (VARA DE LA CADENA) DEL TRAMO 6, TALLADA. Vuelta 80.
+Cada celda sale de SALIDA_V80_TRAMO6_FILTRO_P91_GUARDA_CADENA.txt; ninguna tecleada.
+LA COLUMNA CONTESTA UNA SOLA PREGUNTA: si hay o no camino previo, y con cuantos saltos.
+Si ese camino es o no LA CADENA PROPIA de la madre es una decision de lectura aparte.
+==============================================================================
+
+| # | par (paso) | alcanzable previo (vara de la cadena) |
+|---:|---|---|
+| 0 | `clasificacion_tipos_activos -> tipos_de_pasivos (paso 1)` | ALCANZABLE (3 saltos) |
+| 1 | `proceso_llamada_inicial_venta -> proceso_venta_franquicias (paso 6)` | ALCANZABLE (4 saltos) |
+| 2 | `equipo_customer_development -> customer_development_team (paso 1)` | ALCANZABLE (5 saltos) |
+| 3 | `extraer_priorizar_hipotesis -> value_proposition_startup (paso 1)` | ALCANZABLE (5 saltos) |
+| 4 | `preparacion_preguntas_problema_precall -> preguntas_situacion (paso 4)` | ALCANZABLE (5 saltos) |
+| 5 | `timing_solicitud_referidos -> fase_adopt_ciclo_cliente (paso 5)` | SIN CAMINO PREVIO |
+| 6 | `requisitos_numericos_calidad_lotes -> critica_acceptable_quality_level (paso 1)` | SIN CAMINO PREVIO |
+| 7 | `hipotesis_relacion_clientes_web -> mvp_alta_fidelidad (paso 4)` | ALCANZABLE (2 saltos) |
+| 8 | `producto_mercado_fit_motores -> afinar_motor_crecimiento (paso 1)` | ALCANZABLE (3 saltos) |
+| 9 | `valor_intangible_sostenibilidad -> compromiso_cliente_sostenibilidad (paso 1)` | SIN CAMINO PREVIO |
+| 10 | `analisis_valor -> customer_needs_spreadsheet (paso 1)` | SIN CAMINO PREVIO |
+| 11 | `posicionamiento_vs_competidores -> analisis_competencia_franquicias (paso 2)` | SIN CAMINO PREVIO |
+| 12 | `organizacion_interna_exportacion -> estructura_plan_exportacion (paso 3)` | SIN CAMINO PREVIO |
+| 13 | `errores_comunes_fundraising -> confidencialidad_nda_adquisicion (paso 2)` | ALCANZABLE (5 saltos) |
+| 14 | `mvp_catalogo_tecnicas -> mvp_tipo_video (paso 1)` | ALCANZABLE (5 saltos) |
+| 15 | `reporte_estado_miembro_equipo -> variance_analysis (paso 3)` | ALCANZABLE (2 saltos) |
+| 16 | `terminologia_clave_breakthrough -> analisis_sintomas (paso 2)` | SIN CAMINO PREVIO |
+| 17 | `evaluacion_actitudes_empleados -> identificar_oportunidades_sostenibilidad (paso 2)` | ALCANZABLE (6 saltos) |
+| 18 | `pre_control_estadistico -> limites_de_especificacion_vs_limites_de_control (paso 1)` | SIN CAMINO PREVIO |
+| 19 | `posicionamiento_por_tipo_de_mercado -> resegmentacion_mercado_nicho_bajo_costo (paso 5)` | ALCANZABLE (5 saltos) |
+| 20 | `control_calidad_operaciones_servicio -> descubrir_necesidades_del_cliente (paso 1)` | ALCANZABLE (6 saltos) |
+| 21 | `el_riesgo_nunca_se_acaba_se_administra -> cuando_el_riesgo_se_vuelve_realidad (paso 2)` | ALCANZABLE (6 saltos) |
+| 22 | `curva_caracteristica_operativa -> distribucion_binomial (paso 2)` | SIN CAMINO PREVIO |
+| 23 | `abolir_inspeccion_masiva -> eliminacion_inspeccion_masiva_por_control_estadistico (paso 5)` | SIN CAMINO PREVIO |
+| 24 | `recursos_apoyo_gubernamental_exportacion -> trabajo_con_bancos_comerciales (paso 3)` | SIN CAMINO PREVIO |
+| 25 | `definiciones_operacionales_de_calidad -> optimizacion_caracteristicas_diseno (paso 1)` | SIN CAMINO PREVIO |
+| 26 | `desarrollo_de_controles_de_proceso -> bucle_retroalimentacion_control (paso 2)` | SIN CAMINO PREVIO |
+| 27 | `descubrir_necesidades_del_cliente -> traduccion_necesidades_cliente (paso 2)` | ALCANZABLE (6 saltos) |
+| 28 | `qfd_matriz -> identificar_clientes_externos_e_internos (paso 2)` | SIN CAMINO PREVIO |
+| 29 | `analisis_variacion_desempeno_servicio -> pre_control_estadistico (paso 4)` | SIN CAMINO PREVIO |
+
+FIN

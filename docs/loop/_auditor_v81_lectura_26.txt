@@ -1,0 +1,25 @@
+==============================================================================
+desarrollo_de_controles_de_proceso   [quality]
+TITULO: Desarrollo de Controles de Proceso y Transferencia a Operaciones
+PASOS (6):
+  1. Identificar los controles necesarios evaluando el desempeño real contra las metas.
+  2. Diseñar el bucle de retroalimentación y definir puntos de control en el diagrama de flujo.
+  3. Establecer estándares de control y acciones correctivas ante desviaciones.
+  4. Entrenar a los trabajadores en decisiones de conformidad del producto.
+  5. Planificar y documentar la transferencia formal a operaciones incluyendo metas, procedimientos y capacitación.
+  6. Desarrollar un plan de auditoría para validar que la transferencia fue exitosa.
+ENTREGABLE_ESPERADO: Sistema de control de proceso implementado y paquete de transferencia formal a operaciones.
+SIGUIENTES (4): ['auditoria_calidad', 'six_sigma_dmaic', 'decision_conformidad_producto', 'bucle_retroalimentacion_control']
+PREVIOS (2): ['reduccion_de_tiempo_de_ciclo', 'establecer_capacidad_del_proceso']
+==============================================================================
+bucle_retroalimentacion_control   [quality]
+TITULO: El Bucle de Retroalimentación (Feedback Loop) en Control de Calidad
+PASOS (5):
+  1. Instalar un sensor adecuado (instrumento, sistema de datos o tu propia observación) para medir el sujeto de control elegido
+  2. Definir la unidad de medida y el estándar o meta de calidad contra la cual comparar
+  3. Establecer un árbitro (tú mismo o un sistema) que compare desempeño real vs meta e interprete las diferencias
+  4. Diseñar un actuador que corrija el proceso cuando exista desviación significativa
+  5. Registrar los resultados de cada ciclo para tener trazabilidad
+ENTREGABLE_ESPERADO: Diagrama de bucle de retroalimentación documentado con sensor, estándar de comparación y actuador definidos para el proceso crítico seleccionado
+SIGUIENTES (5): ['sujetos_de_control', 'autocontrol_y_controlabilidad', 'ciclo_pdca_pdsa', 'piramide_de_control', 'limites_control_estadistico_vs_tolerancias']
+PREVIOS (4): ['control_calidad_definicion', 'establecimiento_metas_de_calidad', 'auditoria_de_producto', 'desarrollo_de_controles_de_proceso']

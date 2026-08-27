@@ -24679,3 +24679,468 @@ doble** en la vuelta 81, y va escrito en el encargo.
 
 **NO HAY PARADA. EL BUCLE SIGUE.** No se escribe `PARA_ALEXIS.md`, y
 `docs/loop/PROMPT_SIGUIENTE.md` lleva el encargo completo de la vuelta 81.
+
+# ACTA DE LA VUELTA 81 DEL AUDITOR (26 ago 2026, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** La ultima acta escrita es la de la vuelta 80
+(`ACTA_AUDITOR.md` linea 24049, auditor Opus 5, commit `0f5f1e55`) y cubre la
+vuelta inmediatamente anterior a esta. Esta acta cubre UNA vuelta, la 81, y
+ninguna otra.
+
+**LO QUE SE AUDITA, Y LA NOTICIA VA DELANTE PORQUE ES LO ANORMAL DE HOY.**
+
+> **LA VUELTA 81 NO ENTREGO. NO HAY REPORTE QUE AUDITAR.** El ejecutor abrio
+> la vuelta, sello su HEAD de apertura, trabajo unos diez minutos sobre la
+> TAREA 2 y **murio sin commitear una sola linea y sin escribir REPORTE.md**.
+> Medido por mi, no supuesto: `git log 0f5f1e55..HEAD` da **CERO commits**,
+> `git rev-parse HEAD` y `git rev-parse origin/pasada-unica` dan los dos
+> `0f5f1e556027a9781faaf617e762e16f75cb8d70` (el commit de mi acta 80), y
+> `docs/loop/REPORTE.md` sigue siendo el de la vuelta 80, sin tocar desde las
+> 21:15 (`ls --time-style=full-iso`).
+>
+> **EL CATALOGO NO SE MOVIO NI UN NODO.** `git status --porcelain -- dataset/`
+> da **cero lineas**. Las ocho cifras del grafo son identicas en los tres
+> puntos que medi.
+>
+> **LO QUE SI QUEDO, Y NO ES POCO:** en el arbol de trabajo, sin commitear,
+> **304 lineas nuevas en `scripts/loop/tallar_cabecera_reporte.py`** que son
+> la TAREA 2 entera (2.a y 2.b), mas dos sellos sueltos. **Las corri yo, las
+> dos con sus casos positivos obligatorios y con dos varas de ROJO que me
+> invente para tumbarlas: pasan.** Con una falla real que encontre y que
+> adjudico en la seccion 5: **el `--comparar` de la 2.a no puede dar VERDE
+> nunca tal como esta escrito.**
+>
+> **CERO caidas de clase, CERO de cifra publicada y CERO de reporte**, por la
+> razon aritmetica de que no se publico nada. **Las rachas no se mueven.**
+> **NINGUNA condicion de parada de `AUDITOR.md` seccion 4 se cumple.** No se
+> escribe `PARA_ALEXIS.md`. El bucle sigue, y **la vuelta siguiente es la 82**
+> (la 81 gasta su numero: su acta es esta).
+
+---
+
+## 1. VERIFICACION POR CORRIDA PROPIA, AL DIGITO
+
+Todo lo de esta seccion sale de un instrumento corrido POR MI EN ESTA VUELTA.
+Los ficheros `docs/loop/_auditor_v81_*` quedan commiteados al lado.
+
+### 1.1. El estado de git, medido
+
+| que | mi comando | mi salida |
+|---|---|---|
+| rama | `git rev-parse --abbrev-ref HEAD` | `pasada-unica` |
+| HEAD | `git rev-parse HEAD` | `0f5f1e556027a9781faaf617e762e16f75cb8d70` |
+| remoto | `git rev-parse origin/pasada-unica` | **el mismo hash** |
+| commits de la vuelta 81 | `git log --oneline 0f5f1e55..HEAD` | **0** |
+| rastreados modificados | `git status --short` | **UNO**, `scripts/loop/tallar_cabecera_reporte.py` |
+| sin seguir | `git ls-files --others --exclude-standard` | `SALIDA_V80_HEAD_APERTURA.txt`, `SALIDA_V81_HEAD_APERTURA.txt` |
+| `dataset/` tocado | `git status --porcelain -- dataset/` | **cero lineas** |
+
+**Los dos sellos, leidos:** `SALIDA_V80_HEAD_APERTURA.txt` trae
+`3cdf90d1eee342ed7cdcfd9305907c8795d42aa7` (el sello RECONSTRUIDO de la
+vuelta 80, escrito a las 21:49 para el caso positivo de la 2.b) y
+`SALIDA_V81_HEAD_APERTURA.txt` trae
+`0f5f1e556027a9781faaf617e762e16f75cb8d70` (el sello EN VIVO de la apertura de
+la 81, escrito a las 21:39, y es correcto: era el HEAD de verdad). El segundo
+queda commiteado como lo que es, **el sello de una vuelta que no entrego**, y
+**NO sirve para la 82**: la 82 abre sobre el commit de ESTA acta y sella el
+suyo.
+
+### 1.2. Las ocho cifras del grafo, en tres puntos
+
+Instrumento propio `docs/loop/_auditor_v81_conteo.py` (`assert` de la clave
+contra `node_id`, duplicadas dentro de cada lista), salida en
+`_auditor_v81_conteo.txt`:
+
+| ref | nodos | vivos | depre | siguientes | previos | suma | union | auto | dup |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| `4337e951` (cierre de la vuelta 80) | 3.853 | 3.188 | 665 | 8.960 | 8.939 | 17.899 | 9.583 | 0 | 0 |
+| `0f5f1e55` (mi acta 80, HEAD de hoy) | 3.853 | 3.188 | 665 | 8.960 | 8.939 | 17.899 | 9.583 | 0 | 0 |
+| arbol de trabajo | 3.853 | 3.188 | 665 | 8.960 | 8.939 | 17.899 | 9.583 | 0 | 0 |
+
+Y `solo_sig 644` mas `solo_prev 623` iguales en los tres. **El grafo esta
+exactamente donde la vuelta 80 lo dejo.**
+
+### 1.3. Gate 0, el ciclo de tres, corrido entero por mi
+
+| # | comando | mi salida | fichero |
+|---:|---|---|---|
+| **1** | `python scripts/run_phase1.py --reaplico-curaduria` | **EXITCODE 0**, `GATE 0: OK`. **3.853 compilados, 3.188 activos, 665 deprecados**. Auto-aristas **0**, duplicadas de titulo **0**, alias con dos duenos **0**, los dos `master_graph` con **0 divergentes**, alcanzabilidad **100,0% (3.188/3.188, 85 semillas)**, enlaces rotos **0** | `_auditor_v81_gate0.txt` |
+| **2** | `python scripts/etiquetas_de_cara.py --aplicar` | **71 etiquetas cambian, 0 ya estaban en su forma final**, EXITCODE 0 | `_auditor_v81_etiquetas.txt` |
+| **3** | `python scripts/sync_assets_web.py` | EXITCODE 0, **seis assets sincronizados** | `_auditor_v81_sync.txt` |
+
+**Tras los tres, `git status` no marca un solo rastreado modificado** salvo el
+tallador del ejecutor. El ciclo es idempotente sobre el arbol de hoy.
+
+### 1.4. Las tres suites, corridas por mi
+
+| suite | comando | mi salida |
+|---|---|---|
+| motor | `python engine/run_all_tests.py` | **TODOS LOS TESTS PASARON (25/25)**, EXITCODE 0 |
+| web | `npx vitest run` desde `web/` | **80 passed (80)**, **1030 passed, 3 skipped (1033)**, EXITCODE 0 |
+| tsc | `npx tsc --noEmit` desde `web/` | **EXITCODE 0, cero lineas** |
+
+**Y un rojo mio, declarado, que no es del ejecutor:** la primera corrida del
+motor salio **ROJA con 71 nodos divergentes**. La causa fui yo: habia corrido
+el comando 1 del ciclo y **no los tres**, y las 71 etiquetas que el comando 2
+aplica estaban a medio camino entre las dos copias de `master_graph`. Cerre el
+ciclo y el motor da 25/25. La corrida de web que salio a las 21:55 cayo dentro
+de esa misma ventana intermedia; **la repeti entera sobre el arbol ya
+consistente** (`_auditor_v81_web2.txt`, 21:56) y da lo mismo. La cifra que
+publico arriba es la de la segunda corrida. Se cuenta como caida MIA de
+procedimiento, seccion 6.
+
+### 1.5. El marcador del cribado y los huecos
+
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, contado por mi
+(`_auditor_v81_marcador.txt`): **A 551, B 72, C 5, D 2.760**, n **3.388**,
+puestos del 1 al 3.388, **3.388 unicos, CERO huecos**. Sin cambio, como
+corresponde a una vuelta que no toco nada.
+
+### 1.6. Donde queda `OP-E-01`, medido y no recordado
+
+`docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V80.jsonl` tiene **157 unidades**
+(contadas por mi con `_auditor_v81_veredictos.py`). La cabeza que la vuelta 80
+leyo trae **30**. **Quedan 127 candidatos filtrados sin leer** del corte de la
+vuelta 80, y **ese corte esta vencido**: el grafo no se movio desde entonces,
+pero la bolsa se recalibra FRESCA cada tramo por regla del propio encargo.
+
+---
+
+## 2. LA RELECTURA CIEGA: QUE LEI, SI NO HUBO REPORTE
+
+No hay discutibles marcados nuevos, porque no hay reporte. **Lo digo en vez de
+fabricar una relectura:** esta vuelta no releo lectura del ejecutor porque el
+ejecutor no leyo nada. Lo que si hice, y es lo que mas valia, es **releer a
+ciegas las dos unicas aristas que la vuelta 80 escribio de verdad**, que son
+el trabajo mas reciente que movio el catalogo, y **correr entera la vara que
+la TAREA 4 del encargo pedia y que nadie corrio**.
+
+Metodo, respetado: volque los pasos y los entregables de los cuatro nodos
+PRIMERO (`_auditor_v81_lectura_22.txt`, `_auditor_v81_lectura_26.txt`),
+adjudique, y SOLO DESPUES abri la razon escrita del reporte 80.
+
+**D1 relectura, `curva_caracteristica_operativa -> distribucion_binomial`
+(paso 2).** Mi adjudicacion a ciegas: **SE ENLAZA**. El paso 2 de la madre
+dice *"Calcular la probabilidad de aceptacion para distintos niveles de p
+usando distribucion Poisson, binomial o hipergeometrica"*, y el hijo ES el
+procedimiento completo de una de las tres, con entregable *"Tabla de
+probabilidades binomiales para diseno de plan de muestreo"*, que es
+exactamente el insumo del paso. La madre conserva materia propia en sus otros
+cuatro pasos (definir el plan, graficar la curva, analizar los riesgos del
+productor y del consumidor, ajustar). La direccion es la correcta.
+**Destapada la razon escrita: coincide** ("paso 2 nombra LITERALMENTE la
+distribucion binomial como uno de tres metodos; el hijo ES el procedimiento
+completo de esa distribucion especifica"). **COINCIDE.**
+
+**D2 relectura, `desarrollo_de_controles_de_proceso ->
+bucle_retroalimentacion_control` (paso 2).** Mi adjudicacion a ciegas: **SE
+ENLAZA**. El paso 2 de la madre dice *"Disenar el bucle de retroalimentacion y
+definir puntos de control en el diagrama de flujo"*, y el entregable del hijo
+es *"Diagrama de bucle de retroalimentacion documentado con sensor, estandar
+de comparacion y actuador"*: el paso nombra el entregable del hijo casi
+palabra por palabra. La madre conserva materia propia en **cinco de sus seis
+pasos** (identificar controles, estandares y acciones correctivas, entrenar,
+transferir a operaciones, plan de auditoria). **Destapada la razon escrita:
+coincide.** **COINCIDE.**
+
+**DOS DE DOS COINCIDEN.** Y verifique ademas, en el volcado, que las dos
+aristas viven **en las dos vistas**: `distribucion_binomial` esta en
+`nodos_siguientes` de la madre y la madre esta en `nodos_previos` del hijo;
+igual para el par 26. Cero escaleras.
+
+---
+
+## 3. LA VARA DE LA TAREA 4, CORRIDA POR MI PORQUE NADIE LA CORRIO
+
+La TAREA 4 del encargo de la vuelta 81 pedia cruzar las 10 unidades frescas
+del tramo 6 contra `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` **sin direccion**, y
+contra la bolsa filtrada **buscando la reciproca**. La corri entera con
+instrumento propio (`_auditor_v81_veredictos.py`, salida
+`_auditor_v81_veredictos.txt`), con los pares **leidos del fichero del filtro**
+y no tecleados: **30 unidades leidas, 10 frescas (20 a 29)**; **3.388
+veredictos, 3.388 pares no dirigidos unicos**; **157 unidades en la bolsa
+filtrada**.
+
+| # | par | veredicto sin direccion | reciproca en la bolsa V80 |
+|---:|---|---|---|
+| 20 | `control_calidad_operaciones_servicio -> descubrir_necesidades_del_cliente` | sin veredicto | no |
+| 21 | `el_riesgo_nunca_se_acaba_se_administra -> cuando_el_riesgo_se_vuelve_realidad` | sin veredicto | no |
+| 22 | `curva_caracteristica_operativa -> distribucion_binomial` (**escrita**) | sin veredicto | no |
+| 23 | `abolir_inspeccion_masiva -> eliminacion_inspeccion_masiva_por_control_estadistico` | **D**, puesto 2560, quality | no |
+| 24 | `recursos_apoyo_gubernamental_exportacion -> trabajo_con_bancos_comerciales` | sin veredicto | no |
+| 25 | `definiciones_operacionales_de_calidad -> optimizacion_caracteristicas_diseno` | sin veredicto | no |
+| 26 | `desarrollo_de_controles_de_proceso -> bucle_retroalimentacion_control` (**escrita**) | sin veredicto | no |
+| 27 | `descubrir_necesidades_del_cliente -> traduccion_necesidades_cliente` (**discutible**) | sin veredicto | no |
+| 28 | `qfd_matriz -> identificar_clientes_externos_e_internos` | sin veredicto | no |
+| 29 | `analisis_variacion_desempeno_servicio -> pre_control_estadistico` | sin veredicto | no |
+
+**RESULTADO: NINGUN VEREDICTO CONTRADICE NINGUNA RAZON ESCRITA.** El unico
+par con veredicto es el 23, y su clase **D** apunta en el mismo sentido que la
+decision del reporte (NO SE ENLAZA), que ya lo citaba con su puesto. **Las dos
+aristas escritas no tienen veredicto propio ni reciproca en la bolsa**: nada
+las tumba por ese lado. **La relectura al doble del tramo 6 queda CUMPLIDA
+por el auditor** en su parte de medicion y en su parte de lectura (seccion 2).
+
+---
+
+## 4. EL REMEDIO QUE QUEDO SIN COMMITEAR, PROBADO POR MI PIEZA A PIEZA
+
+Las 304 lineas del arbol de trabajo son la TAREA 2 entera. Las corri.
+
+### 4.1. Sintaxis y forma
+
+`python -c "ast.parse(...)"` sobre el fichero: **SINTAXIS OK**. El modo nuevo
+`--tramo-cadena K` cuelga de `--vuelta N` y sale antes de la cabecera; el
+chequeo de la 2.b vive dentro de la rama `--fase04`. No toca ningun otro modo.
+
+### 4.2. TAREA 2.a, el caso positivo obligatorio: **PASA**
+
+`python scripts/loop/tallar_cabecera_reporte.py --vuelta 80 --tramo-cadena 6`,
+EXITCODE 0, salida en `_auditor_v81_tramo_cadena.txt`. Talla **las 30
+unidades** de la cabeza. Las dos celdas que el encargo exigia:
+
+| fila | par | lo que talla el instrumento | lo que publico el reporte 80 |
+|---:|---|---|---|
+| **27** | `descubrir_necesidades_del_cliente -> traduccion_necesidades_cliente` | **ALCANZABLE (6 saltos)** | `no (no es cadena propia)` |
+| **28** | `qfd_matriz -> identificar_clientes_externos_e_internos` | **SIN CAMINO PREVIO** | `si, en direccion inversa` |
+
+**Exactamente lo contrario de lo publicado, que es lo que el encargo pedia.**
+Y no me quede con la palabra del instrumento: fui a la fuente cruda y la
+conte. `SALIDA_V80_TRAMO6_FILTRO_P91_GUARDA_CADENA.txt` **linea 41** dice
+*"27: ... | YA ALCANZABLE (6 saltos): ..."* y **linea 42** dice *"28: ... |
+sin camino previo"*. **El instrumento talla lo que el fichero dice.**
+
+Y la columna hace lo que el encargo mandaba: **contesta una sola pregunta**.
+La cabecera impresa lo dice con todas sus letras (*"Si ese camino es o no LA
+CADENA PROPIA de la madre es una decision de lectura aparte"*), que es la
+distincion que el acta 79 dejo escrita.
+
+### 4.3. TAREA 2.b, el caso positivo obligatorio: **PASA**
+
+`--fase04 --vuelta 80`, EXITCODE 0, salida en `_auditor_v81_fase04.txt`. La
+fila de identidad sale con **los dos hashes distintos y VERDE**: *"commit del
+acta `bc9cde6f` ..., HEAD real de apertura `3cdf90d1` ..., arboles de
+`dataset/` IGUALES: VERDE"*. Y las otras seis filas siguen dando las mismas
+cifras que la vuelta 80 publico.
+
+**Verifique el hecho historico por mi cuenta**, que es de lo que depende que
+el caso positivo signifique algo: `git log bc9cde6f~1..d2f6b524` da la cadena
+**`bc9cde6f` (acta 79), `3cdf90d1` (decision del fundador), `d2f6b524` (TAREA
+1 de la 80)**, o sea que `3cdf90d1` SI era el HEAD real cuando la vuelta 80
+abrio; `git show --stat 3cdf90d1` da **tres ficheros, los tres de `docs/`**; y
+`git rev-parse bc9cde6f:dataset` con `git rev-parse 3cdf90d1:dataset` dan **el
+mismo arbol, `8445c679`**. El VERDE es verdad.
+
+### 4.4. Y las DOS VARAS DE ROJO que le puse yo
+
+El encargo no pedia estas. Las corri porque un chequeo que solo sabe decir
+verde no es un chequeo.
+
+| vara mia | que hice | resultado |
+|---|---|---|
+| **sello ausente** | move `SALIDA_V80_HEAD_APERTURA.txt` fuera y talle | **ROJO, EXITCODE 1**, *"no existe el sello ... el ejecutor debe correr `git rev-parse HEAD` antes de la 1.a operacion"*. No tallo nada |
+| **sello con arbol distinto** | puse en el sello `c25403a0` (el commit de la TAREA 3 de la 80, que tiene 8.958 aristas) y talle | **ROJO, EXITCODE 1**, *"el arbol de dataset/ del commit del acta (`bc9cde6f`, arbol `8445c679`) y el HEAD real de apertura (`c25403a0`, arbol `63ad4151`) NO COINCIDEN: las cifras de apertura no son las del commit que la fila nombra"* |
+
+**Restaure el sello y lo verifique con `cat`**: vuelve a
+`3cdf90d1eee342ed7cdcfd9305907c8795d42aa7`, identico al original.
+
+### 4.5. LA FALLA REAL: el `--comparar` de la 2.a NO PUEDE DAR VERDE
+
+`--vuelta 80 --tramo-cadena 6 --comparar docs/loop/REPORTE.md`, **EXITCODE
+1**, salida en `_auditor_v81_tramo_cadena_comparar.txt`: **30 filas cotejadas,
+10 DISTINTAS, 20 ausentes**.
+
+**Las 20 ausentes no son culpa del reporte: son de diseno.** El tallador talla
+**las 30 unidades de la cabeza**, y la tabla del reporte que `--comparar` sabe
+leer (la de cuatro celdas, `# | par | alcanzable | decision`) es por
+construccion **solo la de las lecturas frescas**, que en el tramo 6 eran
+**10**. Las otras 20 viven en una tabla hermana de **tres celdas** (`# | par |
+decidido en`), que el propio codigo **ignora a proposito** porque no lleva
+columna de alcanzabilidad. O sea: **la fila 0 nunca va a estar donde
+`--comparar` la busca**, y el modo que el encargo declaro obligatorio antes
+del commit **sale en rojo pase lo que pase**. Un chequeo que no puede
+aprobarse es un chequeo que se acaba saltando: por eso lo adjudico y no lo
+dejo pasar (seccion 5.1).
+
+**Y de las 10 DISTINTAS, OCHO NO SON CONTRADICCION, SON REDACCION.** Las
+coteje una a una: en las filas 20, 21, 23, 24, 25, 26 y 29 el reporte dice
+`si, 6 saltos, incidental` o `no` donde el tallador dice `ALCANZABLE (6
+saltos)` o `SIN CAMINO PREVIO`. **Dicen lo mismo con otras palabras**, y en
+cuanto el reporte pegue la celda tallada en vez de teclearla desaparecen
+solas. **Las dos que SI son contradiccion son la 27 y la 28**, que son
+exactamente la caida que el acta 80 nombro. **El instrumento atrapa la caida
+que lo origino.**
+
+---
+
+## 5. ADJUDICACIONES DE ESTA VUELTA
+
+**5.1. LA FALLA DEL `--comparar` DE LA 2.a SE ARREGLA, Y SE ARREGLA ASI.**
+Adjudicado por cita, sin doctrina nueva: `EJECUTOR.md` regla 1 (*"LA TABLA SE
+CUENTA DE SU FICHERO ... toda tabla o cifra del reporte cita el fichero de
+salida del que sale"*) manda sobre **lo que el reporte publica**, no sobre lo
+que el reporte omite. La vara correcta es: **toda celda de alcanzabilidad que
+el reporte publique tiene que ser identica a la del instrumento**. Que el
+reporte no publique en esa tabla las unidades ya decididas en vueltas
+anteriores no es una celda equivocada, y no puede ser un rojo. Decido, y va
+escrito en el encargo:
+  - **DISTINTA sigue siendo ROJO**, sin cambio.
+  - **AUSENTE deja de ser ROJO por si sola.** El tallador imprime, debajo de
+    la comparacion, la lista nominal de las unidades **no publicadas en esa
+    tabla** con su cuenta, para que nada se esconda callado.
+  - **ROJO NUEVO: la fila inventada.** Si la tabla del reporte publica un
+    numero de fila que el fichero del filtro no tiene, es ROJO y exit 1.
+  - El caso positivo contra la vuelta 80 se mantiene y se aprieta: **exit 1**
+    con las filas **27 y 28** nombradas como DISTINTA y con el texto del
+    instrumento al lado.
+
+**5.2. EL TRABAJO SIN COMMITEAR SE COMMITEA, NO SE TIRA.** Adjudicado por
+cita de `EJECUTOR.md` regla 3 (*"Commitea y pushea lo pendiente en la rama
+activa ANTES de tocar nada"*), que existe justamente para esto. Y no lo
+adjudico a ciegas: **lo probe entero yo** (seccion 4), sus dos casos positivos
+pasan, sus dos varas de ROJO muerden, y **no toca `dataset/`**. Se commitea
+tal como esta, con su mensaje diciendo de donde viene, y **despues** se le
+aplica el arreglo de 5.1 en un commit propio, para que el registro muestre las
+dos cosas separadas.
+
+**5.3. LA VUELTA SIGUIENTE ES LA 82, NO LA 81 OTRA VEZ.** Adjudicado. El
+numero 81 queda gastado por esta acta, y tiene consecuencia mecanica medida:
+el tallador `--fase04 --vuelta N` busca en `git log` el patron exacto *"ACTA
+DE LA VUELTA N-1 DEL AUDITOR"* y **cae en ROJO si encuentra ninguno o mas de
+uno** (leido por mi en `commit_apertura_desde_git`, lineas 470 a 497). Con la
+vuelta siguiente numerada **82**, el tallador busca *"ACTA DE LA VUELTA 81 DEL
+AUDITOR"* y encuentra **exactamente uno**, el commit de esta acta. Si se
+reusara el numero 81, la apertura de esa vuelta apuntaria a mi acta 80 cuando
+la apertura de verdad seria esta, que es precisamente la especie de mentira
+que la TAREA 2.b existe para matar. **Y el sello `SALIDA_V81_HEAD_APERTURA.txt`
+queda como pieza historica: la 82 sella el suyo,
+`SALIDA_V82_HEAD_APERTURA.txt`, y jamas reusa este.**
+
+**5.4. EL ENCARGO DE LA VUELTA 81 SIGUE EN PIE ENTERO, Y SE REEMITE.**
+Verificado, no supuesto: `docs/loop/REPORTE.md` no fue tocado (sin cambios en
+`git status`, timestamp de las 21:15, anterior al arranque de la vuelta), o
+sea que **la TAREA 1 no se hizo**; el grafo no se movio, o sea que **la TAREA
+3 no se hizo**; no hay `SALIDA_V81_*` de tramo, o sea que **la TAREA 5 no se
+hizo**. Se reemiten las cinco, con la TAREA 2 ya casi hecha en el arbol y con
+la TAREA 4 descargada por mi (seccion 3), que queda reducida a **re-correr los
+dos barridos con instrumento propio y cotejar contra mi tabla**, porque
+`EJECUTOR.md` regla 2 no admite un acta como fuente de una cifra nueva.
+
+**5.5. EL ORDEN DE LA APERTURA DE LA 82, PARA QUE LA IDENTIDAD SALGA VERDE
+SOLA.** Adjudicado: **primero se sella el HEAD, despues se commitea lo
+pendiente.** Asi el sello queda igual al commit de esta acta y la fila de
+identidad sale con los dos hashes coincidiendo. Si se commiteara primero, el
+sello seria el commit del remedio y los dos hashes saldrian distintos: verdes
+igual (el remedio no toca `dataset/`), pero por accidente y no por diseno.
+
+**5.6. LO QUE NO SE HACE, otra vez escrito para que no se improvise.**
+`descubrir_necesidades_del_cliente -> customer_needs_spreadsheet` y
+`curva_caracteristica_operativa -> distribucion_poisson` **NO se escriben**:
+estan medidas fuera de `PASO_NODO_CALIBRADO.jsonl` y `OP-E-01` no decide fuera
+de su bolsa. Siguen como observacion medida para `OP-E-03`. Adjudicacion de la
+vuelta 80 seccion 5, sin cambio, y la repito porque su encargo nunca se
+ejecuto.
+
+---
+
+## 6. MIS PROPIOS MANEJOS Y MIS PROPIOS ERRORES, DECLARADOS
+
+1. **UNA CAIDA MIA DE PROCEDIMIENTO.** Corri el comando 1 del Gate 0 y me fui
+   a correr las suites **sin cerrar el ciclo de tres**. El motor salio ROJO
+   con 71 divergentes y por un momento ese rojo parecia del arbol. Era mio.
+   Cerre el ciclo, el motor da 25/25, y repeti web entera sobre el arbol ya
+   consistente. **La cifra de web que publico es la de la segunda corrida**;
+   la primera queda en `_auditor_v81_web.txt` como contraste y da lo mismo.
+2. **Manejo declarado: toque un fichero sin seguir para probar el ROJO.**
+   Move y sobreescribi `SALIDA_V80_HEAD_APERTURA.txt` para las dos varas de la
+   seccion 4.4, con copia de respaldo, y lo restaure verificandolo con `cat`.
+   Ningun rastreado se toco en esa prueba.
+3. **Manejo declarado: cerre el ciclo de tres yo mismo**, o sea que las 71
+   etiquetas y los seis assets quedaron reaplicados por mi corrida. `git
+   status` confirma que el arbol vuelve a su sitio: cero rastreados
+   modificados salvo el tallador del ejecutor.
+4. **No releo los discutibles marcados porque no los hay**, y lo digo en vez
+   de fabricar una relectura para que la casilla no salga vacia (seccion 2).
+
+---
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda:** **dos relecturas a ciegas** con los pasos y entregables de los
+cuatro nodos volcados antes de adjudicar (**2 de 2 coinciden**); **cero
+puestos del cribado releidos**, y lo declaro en vez de inflarlo (esta vuelta
+no toco el cribado); **el tallador entero probado con dos casos positivos
+obligatorios mas dos varas de ROJO inventadas por mi**, con restauracion
+verificada; **la vara de la TAREA 4 corrida completa por mi** (los dos
+barridos sobre las 10 unidades frescas); y **cuatro varas que nadie pidio**:
+el conteo del grafo en tres puntos, la cadena `bc9cde6f`, `3cdf90d1`,
+`d2f6b524` reconstruida de `git log`, los dos arboles de `dataset/` cotejados
+por hash, y la lectura cruda de las lineas 41 y 42 del fichero del filtro.
+
+**Caidas del ejecutor en esta tanda:**
+
+| especie | cuantas | cual |
+|---|---:|---|
+| **de clase (mueve dato)** | **CERO** | no se movio un solo dato |
+| **de cifra publicada** | **CERO** | no se publico una sola cifra |
+| **de reporte** | **CERO** | no se escribio reporte |
+| **VUELTA NO ENTREGADA** (observacion con nombre, linea nueva del registro, **no de racha**) | **UNA** | la vuelta 81 corrio unos diez minutos, produjo 304 lineas buenas de instrumento y **murio sin un solo commit**, contra `EJECUTOR.md` regla 6 (*"COMMIT Y PUSH POR TRAMO ..., para que nada dependa de que la sesion aguante"*). La TAREA 2 estaba terminada y probable: un commit la habria salvado |
+
+**Sobre esa cuarta fila, y lo digo explicito para no inventar aritmetica:**
+la registro con nombre porque una vuelta que no entrega es un hecho que el
+registro tiene que poder citar, **pero NO la cuento en ninguna racha**. Las
+rachas de `AUDITOR.md` seccion 4 estan escritas sobre caidas de clase, de
+cifra publicada y de reporte, y **esto no es ninguna de las tres**: no hay
+afirmacion equivocada, porque no hay afirmacion. Contarla seria inventarme una
+especie de parada, y eso no me toca.
+
+**Caidas del auditor:** ninguna de cifra ni de clase; **UNA de procedimiento**
+(seccion 6 punto 1).
+
+**Acumulado:** **518 relecturas** (516 mas las dos ciegas), **884 puestos**
+(sin cambio), **9 caidas de clase** (sin cambio), **40 de reporte del
+ejecutor** (sin cambio), 14 de cifra publicada del ejecutor, 3 de cifra del
+auditor, 8 de acta del auditor, **7 de procedimiento del auditor** (6 mas la
+de hoy), 1 de reporte del auditor, y **1 vuelta no entregada** (linea nueva
+del registro).
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA: CERO.** Sin cambio. La parada pide **DOS
+> SEGUIDAS**: no se dispara. Van **cuatro vueltas** (78, 79, 80 y 81) sin una
+> sola caida de estas dos especies.
+>
+> **REPORTE: UNA TANDA.** Sin cambio, porque **una vuelta sin reporte no
+> suma ni resta**: no hay tanda que juzgar. La parada pide **TRES**: no se
+> dispara. La escalada automatica de `EJECUTOR.md` regla 1 pide **DOS**: no se
+> dispara.
+>
+> **CREDITO DE TANDA: sigue REBAJADO desde la vuelta 80**, y su consecuencia
+> (la relectura al doble del tramo 6) **queda cumplida por mi** en esta acta,
+> secciones 2 y 3. El tramo 7 se lee con credito normal.
+
+---
+
+## 8. LAS CONDICIONES DE PARADA, REPASADAS UNA A UNA
+
+| condicion | esta vuelta |
+|---|---|
+| Doctrina NUEVA necesaria | **NO.** Los seis puntos de la seccion 5 se adjudican citando `EJECUTOR.md` reglas 1, 2, 3 y 6, el alcance escrito de `OP-E-01` y la mecanica del propio tallador leida en su codigo |
+| Contradiccion con regla vigente o cifra publicada sin remedio | **NO.** La unica contradiccion viva sigue siendo la de las celdas 27 y 28 del reporte 80 contra su fichero, y su remedio esta escrito y probado: correccion declarada mas la tabla tallada |
+| Decision de fundador (lo que la casa reserva) | **NO.** Nada se borro, el alcance no cambia, no se gasto fuera del repo, y no se toco nada fuera de `pasada-unica` |
+| Fallo tecnico repetido | **NO.** Gate 0 con su ciclo de tres, motor 25/25, web 1.030 y 3 saltadas, `tsc` en cero, todo por corrida propia. La muerte de la sesion **no es hook ni Gate 0 en rojo**, que es lo que esta condicion nombra, y **es la primera** |
+| **Credito de tanda roto** | **NO.** Clase o cifra publicada en **CERO** (pide dos). Reporte en **UNA** (pide tres) |
+| Campana consumada | **NO.** `OP-E-01` tiene **127 candidatos filtrados sin leer**, medidos por mi hoy |
+| Credenciales ausentes | **NO.** Ninguna suite las pidio |
+| CIERRE DE LA FASE 05 | **NO APLICA.** La fase 04 sigue abierta |
+
+**NO HAY PARADA. EL BUCLE SIGUE.** No se escribe `PARA_ALEXIS.md`, y
+`docs/loop/PROMPT_SIGUIENTE.md` lleva el encargo completo de la **vuelta 82**.
+
+**Y UNA ADVERTENCIA ESCRITA, PARA QUE NO HAYA QUE DECIDIRLA CON PRISA:** si la
+vuelta 82 tampoco entrega, **dos vueltas seguidas sin entregar ya no son un
+accidente y ninguna regla escrita las cubre**. En ese caso la condicion que se
+cumple es la primera de la lista, **doctrina NUEVA necesaria**, y lo traigo
+como parada con la pregunta formulada para Alexis: si la campana necesita una
+regla de vuelta no entregada, y cual. Hoy no la invento.
