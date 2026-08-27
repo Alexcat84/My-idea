@@ -260,9 +260,16 @@ def _autoprueba_mutacion():
     """PROBAR guarda_direccion POR MUTACION. Reproduce las dos pruebas de la
     vuelta 92 (siguen validas: la lista de (a) crecio y perdio una entrada,
     pero las marcas que sostienen al 1098 SALE y al 1160 PASA no cambiaron) y
-    anade UNA TERCERA, sobre el defecto que esta vuelta repara: el 1009 REAL
-    da SALE (ya sin "prueba el problema" en la lista), y una version MUTADA
-    que le INYECTA una marca de madre con paso numerado tiene que dar PASA."""
+    anade TRES MAS, sobre los dos defectos que esta vuelta repara (CASO 3, el
+    1009 REAL da SALE ya sin "prueba el problema" en la lista, y una version
+    MUTADA que le INYECTA una marca de madre con paso numerado tiene que dar
+    PASA; CASO 4, el falso SALE del 1007 por "cierra con UNA LINEA"; CASO 5,
+    el falso SALE del 995 por "el paso nombra, el hijo ejecuta"), CINCO
+    llamadas a probar_por_mutacion en total, no seis (CORRECCION DECLARADA,
+    vuelta 94: esta docstring decia "anade UNA TERCERA" cuando anade TRES; el
+    numero correcto, CINCO llamadas reales, se cuenta mas abajo en el codigo
+    y no en esta frase; docs/loop/ACTA_AUDITOR.md seccion 2.5, lineas 32518 a
+    32549, acta de la vuelta 93)."""
     sys.path.insert(0, os.path.join(RAIZ, "scripts", "loop"))
     from verificar_caso_rojo_por_mutacion import probar_por_mutacion
 
@@ -343,7 +350,12 @@ def _autoprueba_mutacion():
         entrada_mutada=razon_995_sin_marcas, veredicto_tras_mutar="SALE",
     )
     print()
-    print("LOS SEIS CASOS: PROBADOS POR MUTACION. guarda_direccion SI depende de su entrada.")
+    # CORRECCION DECLARADA, vuelta 94: esta linea decia "LOS SEIS CASOS" cuando
+    # el codigo de arriba hace CINCO llamadas a probar_por_mutacion (CASO 1 a
+    # CASO 5); el "sexto" que se contaba era el assert intermedio del CASO 5,
+    # que verifica que el veredicto SIGUE PASA (lo contrario de una mutacion).
+    # docs/loop/ACTA_AUDITOR.md seccion 2.5, lineas 32518 a 32549.
+    print("LOS CINCO CASOS: PROBADOS POR MUTACION. guarda_direccion SI depende de su entrada.")
     return 0
 
 

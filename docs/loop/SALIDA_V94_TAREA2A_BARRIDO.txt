@@ -1,0 +1,19 @@
+VUELTA 94, TAREA 2a: barrido completo de cifras de OP-E-07 en docs/plan/ y docs/BANCO_DE_TEXTOS.md
+comando: grep -rn "85 ESCRITA\|87 con direccion\|cifra vigente" docs/plan/ docs/BANCO_DE_TEXTOS.md
+
+docs/plan/03_FUSIONES.md:748:**Una celda nueva escrita hoy con la cifra vigente y sin cadena de tachados le seria invisible.**
+docs/plan/04_ENLACES.md:704:unidades leidas en total, 99 ESCRITA, 121 NO SE ENLAZA" la cifra vigente hoy
+docs/plan/04_ENLACES.md:939:  declaradas quedan ratificadas enteras. La cifra vigente de `OP-E-01` es
+docs/plan/04_ENLACES.md:1017:| 7 | El guarda de dos condiciones (TAREA 2 de esta vuelta) filtra la bolsa de direccion | **87 con direccion**, EXACTAMENTE el 1098 sale | `scripts/loop/vuelta92_tarea2_guarda_direccion.py --vara` (los dos casos obligatorios en verde) y `scripts/loop/vuelta92_tarea3a_filtrar_ope07.py`, escrito a `docs/plan/OP_E_07_DIRECCION_V92.jsonl`, **87 filas** (`wc -l` confirmado en esta vuelta) |
+docs/plan/04_ENLACES.md:1019:| 9 | La retirada de la arista del 1098 (`scripts/loop/vuelta92_tarea3b_retirar_1098.py`), sobre los 86 `ESCRITA`: los 2 `YA_ESTABA` no se tocan porque el 1098 no era ninguno de los dos | **85 ESCRITA + 2 YA_ESTABA + 0 ESCALERA_ROTA = 87**, cifra vigente de `OP-E-07` hasta la vuelta 92 | diff de la union del grafo contra el cierre de la vuelta 91 (`0691d2257ddbbf8b26357dbd25f5b304bc984611`): EXACTAMENTE una borrada (`customer_validation_sell_phase -> prueba_solucion_con_cliente`) y cero nuevas, corrido en esta vuelta |
+docs/plan/04_ENLACES.md:1021:| 11 | El guarda filtra `OP_E_07_DIRECCION_V92.jsonl` (87 filas) y saca EXACTAMENTE el 1009 (`scripts/loop/vuelta93_tarea3a_filtrar_1009.py`); la arista se retira de `dataset/nodos/` (`scripts/loop/vuelta93_tarea3b_retirar_1009.py`, las dos vistas). El 1009 SI estaba `ESCRITA` (no es 1388 ni 1946), asi que la resta cae sobre el conteo de `ESCRITA` | **84 ESCRITA + 2 YA_ESTABA + 0 ESCALERA_ROTA = 86**, cifra vigente de `OP-E-07` desde la vuelta 93 | `docs/loop/SALIDA_V93_TAREA3A_FILTRAR.txt`, escrito a `docs/plan/OP_E_07_DIRECCION_V93.jsonl` (86 filas, `wc -l` confirmado en esta vuelta); diff de la union del grafo contra el cierre de la vuelta 92 (`85a250bee2495f4a23d89a4cf51338a5bcd8397e`): EXACTAMENTE una borrada (`customer_discovery_phase2_problem_test -> fit_problema_solucion`) y cero nuevas, `docs/loop/SALIDA_V93_DIFF_UNION.txt` |
+docs/plan/04_ENLACES.md:1027:87 con direccion; y la escritura, que ya habia dado 86 ESCRITA mas 2
+docs/plan/04_ENLACES.md:1029:`ESCRITA`, no `YA_ESTABA`) y queda en **85 ESCRITA, 2 YA_ESTABA y 0
+docs/plan/04_ENLACES.md:1030:ESCALERA_ROTA**, la cifra vigente de `OP-E-07` hasta la vuelta 92 (CORRECCION
+docs/plan/04_ENLACES.md:1031:DECLARADA, vuelta 94: la cifra vigente desde la vuelta 93 es **84 ESCRITA, 2
+docs/plan/04_ENLACES.md:1040:> -> 87 con direccion -> 85 ESCRITA + 2 YA_ESTABA (1388, 1946) + 0
+docs/plan/04_ENLACES.md:1048:> -> 87 con direccion -> (-1 guarda reparado, banco 9.6.2, el 1009, relectura
+
+=== ademas, grep sobre OP-E-07/OP_E_07 en 00_INDICE.md y 10_INVENTARIO.md (los otros dos .md que citan la operacion) ===
+docs/plan/00_INDICE.md:640:| **`OP-E-07`** | ciento un lecturas **de frase**, no de par: la clase ya esta decidida |
+docs/plan/10_INVENTARIO.md:327:| **jerarquias nombradas y sin cablear** | 293 | reparado en el plan | `OP-E-06`, `OP-E-07` |

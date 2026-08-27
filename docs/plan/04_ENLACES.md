@@ -1027,7 +1027,13 @@ guarda de dos condiciones de la TAREA 2 saca el 1098 por el banco 9.6.2 y deja
 87 con direccion; y la escritura, que ya habia dado 86 ESCRITA mas 2
 YA_ESTABA sobre los 88, pierde exactamente la arista del 1098 (que SI estaba
 `ESCRITA`, no `YA_ESTABA`) y queda en **85 ESCRITA, 2 YA_ESTABA y 0
-ESCALERA_ROTA**, la cifra vigente de `OP-E-07`.
+ESCALERA_ROTA**, la cifra vigente de `OP-E-07` hasta la vuelta 92 (CORRECCION
+DECLARADA, vuelta 94: la cifra vigente desde la vuelta 93 es **84 ESCRITA, 2
+YA_ESTABA y 0 ESCALERA_ROTA**, ver la fila 11 de la tabla de arriba y "LA
+CADENA ACTUALIZADA, VUELTA 93" mas abajo; este parrafo se quedo sin la
+salvedad que si se anadio a la fila 9 y al primer bloque citado, y por eso lo
+seguia diciendo en presente, `docs/loop/ACTA_AUDITOR.md` seccion 2.4, lineas
+32489 a 32516, acta de la vuelta 93).
 
 > **101 -> (-13 dedupe frente 4) -> 88 -> (0 excluidos 9.22, 0 sin direccion)
 > -> 88 con direccion -> (-1 guarda de dos condiciones, banco 9.6.2, el 1098)
