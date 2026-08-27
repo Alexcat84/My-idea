@@ -243,6 +243,56 @@ diferencias falsas.
 > **Lo que el ensayo si prueba es que el instrumento corre y cuadra**: 477 filas
 > igual a 2 pares repetidos mas 88 ya en cola mas 387 de diferencia. **Sin fugas.**
 
+**ADDENDUM DE EJECUCION (29 ago 2026, vuelta 94, docs/loop/PROMPT_SIGUIENTE.md TAREA
+6): OP-E-03 ABRE. EL DISPARADOR YA SE ACTIVO.** El cribado intra-dominio cerro
+COMPLETO en 3.388 de 3.388 el 13 ago 2026 (commit `9095686e`, "CIERRA EL DOMINIO
+quality en el 3255"; reconfirmado en `docs/plan/RECOMPUTO_3388.md` y en
+`docs/loop/ACTA_AUDITOR.md`, "LA FASE I DEL CRIBADO INTRA DOMINIO ESTA CERRADA Y
+VERIFICADA: 3.388 de 3.388"). Verificado en esta vuelta por conteo directo:
+`docs/INTRA_DOMINIO_PARES.jsonl` (la cola) y `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`
+(lo ya leido) tienen los DOS **3.388 filas**: la cola esta cerrada, no es un techo.
+
+**LA CUENTA REAL** (`scripts/plan/diferencia_contra_cola.py`, sin `--dominio`, todos;
+`docs/loop/SALIDA_V94_TAREA6_DIFERENCIA_CONTRA_COLA.txt`), sobre la bolsa calibrada
+vigente hoy (`docs/plan/PASO_NODO_CALIBRADO.jsonl`, **468 filas**, no las 477 del
+ensayo de agosto: la diferencia es que muchos candidatos de entonces ya tienen
+arista escrita por otras operaciones del bucle desde el 11 ago, y el instrumento los
+excluye por diseno con `--solo-sin-arista`):
+
+| dominio | filas | par repetido | ya en la cola | **DIFERENCIA** |
+|---|---:|---:|---:|---:|
+| `quality` | 93 | 0 | 13 | **80** |
+| `core` | 90 | 0 | 12 | **78** |
+| `environmental` | 10 | 0 | 0 | **10** |
+| `franquicias` | 7 | 0 | 2 | **5** |
+| `health_safety` | 7 | 0 | 3 | **4** |
+| `exportacion` | 4 | 0 | 0 | **4** |
+| `entrega` | 1 | 0 | 0 | **1** |
+| `risk_management` | 1 | 0 | 0 | **1** |
+| **TOTAL** | **213** | **0** | **30** | **183** |
+
+**LA CUENTA CUADRA SIN FUGAS**: 213 filas = 0 pares repetidos + 30 ya en cola + 183
+de diferencia. **183 pares distintos** (sin repetir por varios pasos de la misma
+madre) es la bolsa REAL de `OP-E-03`, escrita en `docs/plan/DIFERENCIA_CONTRA_COLA.
+jsonl` (sobrescribe el ensayo de agosto, que se queda arriba sin borrar como
+contraste historico: el ensayo proyectaba 387, la cuenta real es 183, casi la
+mitad, porque para entonces muchos de esos candidatos ya se habian escrito por otra
+via). Los ids pasaron por el resolutor antes de comparar (P.1, funcion `res()`
+dentro del propio instrumento). **ESTA CORRIDA ES ESTRICTAMENTE DE SOLO LECTURA**:
+no toco `dataset/`, `web/` ni `engine/` (`git status --short` antes y despues,
+unico cambio `docs/plan/DIFERENCIA_CONTRA_COLA.jsonl`), asi que el ciclo de tres no
+aplica a esta apertura: no hay nada que Gate 0 o las suites puedan invalidar.
+
+**LO QUE NO SE HIZO ESTA VUELTA, Y QUEDA PENDIENTE**: los 183 pares de la
+diferencia AUN NO SE LEYERON. `OP-E-03.verificacion` exige que la diferencia se
+marque LECTURA DIRIGIDA, no entre en la cola y no mueva el marcador del cribado;
+eso se cumple por construccion (el instrumento nunca toca `INTRA_DOMINIO_PARES.
+jsonl` ni el marcador). La LECTURA de los 183 (clasificarlos A/B/C/D y escribir sus
+veredictos, contados APARTE de la tasa por dominio del cribado) es trabajo de una
+vuelta futura, del mismo tamano que las lecturas de `OP-E-06`/`OP-E-07`: no cabia
+sin decidir apurado en esta, y `PROMPT_SIGUIENTE.md` pide parar antes que decidir
+sin texto que lo sostenga.
+
 ---
 
 ## `OP-E-01`, DONDE QUEDA EL ORDEN ADJUDICADO
