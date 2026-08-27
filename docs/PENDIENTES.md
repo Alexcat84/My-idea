@@ -3211,3 +3211,120 @@ marcador no se toca (la clase D del 1098 es correcta, lo que no sostenia era la
 DIRECCION), `OP-E-06` no se reabre (contraprueba corrida por el auditor sobre sus 114
 direcciones, un solo toque, el puesto 1160, leido entero y CONFIRMADO,
 `ACTA_AUDITOR.md` linea 31367 a 31386), y los otros 85 de `OP-E-07` se quedan.
+
+## LA RELECTURA CONJUNTA DEL PUESTO 1009 DE `OP-E-07`: RESUELTA, EL PAR SALE (vuelta 93)
+
+**Origen:** acta de la vuelta 92 (`docs/loop/ACTA_AUDITOR.md`, seccion 4, lineas 31977
+a 32106): el auditor discrepo de SU PROPIA adjudicacion de la vuelta 91 sobre el
+puesto 1009 y la mando a RELECTURA CONJUNTA (`docs/loop/AUDITOR.md` seccion 1.3), con
+la decision reservada al ejecutor de la vuelta 93. Este apartado registra esa
+decision, sin borrar nada de lo que sigue.
+
+**(a) LA RELECTURA CONJUNTA, RESUELTA: EL PAR SALE.** `scripts/loop/
+vuelta93_tarea2_relectura_1009.py` (salida completa en `docs/loop/
+SALIDA_V93_TAREA2_RELECTURA_1009.txt`) leyo la razon completa del puesto 1009
+(`customer_discovery_phase2_problem_test` contra `fit_problema_solucion`, clase D,
+core) contra la UNICA pregunta que `OP-E-07.verificacion` manda (`docs/plan/
+OPERACIONES.jsonl` linea 69): *"la razon nombra cual de los dos nodos es la madre, si
+o no"*. La razon dice:
+
+> "`customer_discovery_phase2_problem_test` **prueba el problema**: disenar
+> experimentos con clientes reales, prepararse para los contactos y las entrevistas,
+> probar la comprension del problema y su importancia percibida, profundizar en
+> perfiles y comportamientos, y capturar conocimiento competitivo durante las
+> entrevistas. `fit_problema_solucion` **trae un procedimiento QUE ESA FASE NO
+> TIENE**: identificar en cual de las tres fases esta el negocio, enviar en la fase I
+> un flujo pequeno y constante de clientes frios por canales de traccion..., y no
+> escalar la inversion en marketing hasta que la fuga sea baja. Por la vara del banco
+> 9.6.1, CONTINUA. Y por el banco 9.9 se juzga hoy: el solape cae en sus tres primeros
+> pasos, los encajes de Value Proposition Design, y **el bloque de traccion queda
+> fuera**."
+
+**CONTRASTE CONTRA LA VARA, los dos ejemplares ya adjudicados y escritos**
+(`ACTA_AUDITOR.md` seccion 4.1, lineas 32026 a 32036): el puesto **1083**
+(CONFIRMADO por el acta 91) dice *"trae un procedimiento que **LA MADRE** no
+tiene"*: nombra a la madre, literal. El puesto **1098** (que CAYO en la vuelta 92)
+dice *"trae un procedimiento de entrevista que **el otro** no tiene en ninguna
+forma"*: no nombra a nadie, solo se refiere al otro nodo. El 1009 dice *"trae un
+procedimiento que **esa fase** no tiene"*: es la misma forma que el 1098, no la del
+1083. Ademas, ninguna linea del 1009 esta nombrada con su paso (numero u ordinal):
+*"prueba el problema:"* introduce los CINCO pasos enteros del nodo, no una linea.
+Y la propia razon declara que el bloque de traccion del hijo escrito queda FUERA del
+solape, lo que hace fallar el test del banco `9.6.2` (`BANCO_DE_TEXTOS.md` lineas
+1771 a 1774: *"el hijo cabe entero dentro de UN paso de la madre"*).
+
+**VEREDICTO: la razon del 1009 NO NOMBRA cual nodo es la madre.** Por
+`OP-E-07.verificacion` ("si la razon tampoco lo dice, el par sale de la cosecha y se
+anota por que"), **EL PAR SALE**, con el mismo tratamiento que el 1098 en la vuelta
+92: sale de `docs/plan/OP_E_07_DIRECCION_V92.jsonl` (queda en 86,
+`scripts/loop/vuelta93_tarea3a_filtrar_1009.py`), su arista
+(`customer_discovery_phase2_problem_test -> fit_problema_solucion`) se retira de
+`dataset/nodos/` en las dos vistas (`scripts/loop/vuelta93_tarea3b_retirar_1009.py`),
+y el diff de la union del grafo contra el cierre de la vuelta 92
+(`85a250bee2495f4a23d89a4cf51338a5bcd8397e`) da EXACTAMENTE una borrada y cero
+nuevas (`docs/loop/SALIDA_V93_DIFF_UNION.txt`). El `ADDENDUM DE EJECUCION` de
+`OP-E-07` se reescribio con el corte nuevo (84 ESCRITA, 2 YA_ESTABA, 0
+ESCALERA_ROTA, `scripts/loop/vuelta93_tarea4_reescribir_addendum.py`). **EL MARCADOR
+NO SE TOCA**: la clase D del 1009 es correcta y no se discute (mismo criterio que el
+acta 91 aplico al 1098); lo que se discutia era la DIRECCION.
+
+**(b) LOS DOS DEFECTOS MEDIDOS DEL GUARDA DE LA VUELTA 92, REPARADOS EN LA VUELTA
+93** (`scripts/loop/vuelta93_tarea3_guarda_direccion.py`; medidos por el auditor,
+`ACTA_AUDITOR.md` seccion 3.1 y 3.2, lineas 31896 a 31976; reproducidos y reparados
+por el ejecutor, `docs/loop/SALIDA_V93_TAREA3_VARA.txt`):
+
+- **EL FALSO SALE, 3,7% sobre un TERCER CONJUNTO de 81 razones** (los pares de
+  `docs/plan/COSECHA_RAZONES_D.jsonl` con senales "formula de la vara" o
+  "procedimiento de esa linea", menos los 202 puestos de las dos bolsas oficiales;
+  reconstruido por codigo propio en la vuelta 93, `scripts/loop/
+  vuelta93_tarea3_guarda_direccion.py --tercer-conjunto`, tambien **81 filas**, sin
+  discrepancia con la cifra del auditor). Tumbaba 3 pares SANOS (puestos **995**,
+  **1007**, **1024**) porque sus razones nombran la linea con una preposicion que el
+  guarda de la vuelta 92 no traia ("termina CON UNA LINEA", "cierra CON UNA LINEA",
+  "empieza CON UNA LINEA"), y el 995 ademas cierra con "el paso nombra, el hijo
+  ejecuta", la marca de madre mas limpia del catalogo, que el guarda tampoco conocia.
+  **REPARADO**: se anadieron esas cuatro formulas a `MARCA_MADRE_POSITIVA`, cada una
+  citada con el puesto que la motivo, con la misma lookahead negativa que excluye
+  "linea compartida". Probado por mutacion (`docs/loop/SALIDA_V93_TAREA3_MUTACION.txt`,
+  casos 4 y 5).
+- **EL FALSO PASA AL REVES**: la alternativa "prueba el problema" (anadida en la
+  vuelta 92 citando SOLO el puesto 1009) hacia PASAR el 1009, el 1411 y el 1557 sin
+  merecerlo: es el UNICO sosten de los tres, y su formula es la de la clase D, no la
+  de madre e hijo (ver apartado (a) arriba). **REPARADO**: la alternativa se retiro
+  de la lista. Verificado que el 1397 (la cuarta aparicion de "prueba el problema" en
+  las 3.388 razones) sigue PASANDO por otra marca ("paso 4") y no se ve afectado.
+- **LA VARA, LOS TRES CASOS OBLIGATORIOS, los tres en verde**
+  (`docs/loop/SALIDA_V93_TAREA3_VARA.txt`, EXIT 0): sobre las 88 de
+  `OP_E_07_REBASE_V91.jsonl`, SALEN exactamente `{1009, 1098}`; sobre las 114 de
+  `OP_E_06_DIRECCION_V90.jsonl`, el 1160 sigue PASA y 0 SALEN (OP-E-06 no se reabre);
+  sobre el tercer conjunto de 81, los tres falsos SALE conocidos PASAN y ningun otro
+  sale.
+- **CABLEADO POR DEFECTO** (discutible 3 del reporte de la vuelta 92, CONFIRMADO por
+  el acta 92 seccion 2.3): `extraer_direccion_automatica`
+  (`scripts/loop/vuelta91_tarea4_direccion_ope07.py`) ahora llama al guarda ELLA
+  MISMA antes de devolver (TAREA 3.e de la vuelta 93); una llamada futura a esa
+  funcion, directa o via `main()`, ya no puede saltarse el guarda sin querer
+  (verificado en `docs/loop/SALIDA_V93_TAREA3E_VERIFICACION_CABLEADO.txt`: una
+  corrida fresca sobre la bolsa de 88 excluye 1098 y 1009 automaticamente, sin
+  filtro aparte).
+
+**(c) "ES UN HABITO" (puesto 1281): INVERIFICABLE, se queda declarado como tal.**
+Aparece **UNA SOLA VEZ** en las 3.388 razones de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`
+(medido por conteo directo en esta vuelta). No hay un segundo puesto contra el que
+probar si la formula generaliza o falla como marca de madre positiva: **es
+INVERIFICABLE CONTRA OTRO PAR**. Se queda en la lista de `MARCA_MADRE_POSITIVA` (no
+hay evidencia de que falle, solo falta evidencia de que generalice), pero la
+declaracion de que no se puede probar queda escrita aqui, no callada.
+
+**(d) OBSERVACION PARA ALEXIS, NO ES TRABAJO DEL BUCLE: LA DERIVA DE CONTENIDO**
+(medida por el auditor, `ACTA_AUDITOR.md` seccion 4.4, lineas 32077 a 32106). De los
+140 nodos que tocan los 87 pares de `OP-E-07` (bolsa previa a esta vuelta), **26**
+tienen hoy `pasos_accionables` distintos de los que tenian en el commit del
+encendido del bucle (`50f03099`), y eso afecta a **32** de los 87 pares. El ejemplar
+es el propio `fit_problema_solucion`: en `50f03099` tenia 6 pasos (3 encajes de Value
+Proposition Design mas 3 de traccion); hoy tiene 3 (el bloque de traccion se fue en
+`cadc9977`, vuelta 53, LOTE A). **NO SE TOCA**: `OP-E-07.verificacion` decide por
+escrito que la fuente es la razon y NO el par ("NO SE RELEE EL PAR: se lee su razon,
+que ya esta escrita"), asi que una medicion de hoy no revoca esa eleccion de carril.
+Es una pregunta de ALCANCE (si la cola de relectura post fusion tiene que crecer) y
+esa decision es RESERVA DE FUNDADOR, no del bucle.
