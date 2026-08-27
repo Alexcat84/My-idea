@@ -135,14 +135,27 @@ def cargar_jsonl(ruta):
 
 
 def _guarda_direccion_cableado(razon):
-    """TAREA 3.e (vuelta 93): importa el guarda de dos condiciones VIGENTE
-    (el de la vuelta 93, que ya incluye las reparaciones de las dos falsas
-    del acta 92) y lo corre sobre la razon completa. Import perezoso, dentro
-    de la funcion, para que este fichero siga sin dependencias en tiempo de
-    carga (igual que antes de esta vuelta)."""
+    """TAREA 3.e (vuelta 93) + TAREA 4.d (vuelta 94): importa el guarda de
+    dos condiciones VIGENTE (el de la vuelta 94, `guarda_direccion_v94`, que
+    incluye las dos formulas limpias nuevas de la TAREA 4.d ademas de las
+    reparaciones heredadas de la vuelta 93) y lo corre sobre la razon
+    completa. Import perezoso, dentro de la funcion, para que este fichero
+    siga sin dependencias en tiempo de carga (igual que antes de esta
+    vuelta)."""
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-    from vuelta93_tarea3_guarda_direccion import guarda_direccion
-    return guarda_direccion(razon)
+    from vuelta94_tarea4_reparar_marca_hijo import guarda_direccion_v94
+    return guarda_direccion_v94(razon)
+
+
+def _marca_hijo_presente_cableada(texto):
+    """TAREA 4.a (vuelta 94): importa `marca_hijo_presente_v94` (la version
+    reparada de MARCA_HIJO, con la ventana de negacion ampliada a "no",
+    "ningun", "ninguna", "nadie", "jamas" y "sin" en las 60 letras previas,
+    en vez de la lookbehind `(?<!no )` que solo tapaba "no trae" pegado).
+    Import perezoso, mismo patron que `_guarda_direccion_cableado`."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from vuelta94_tarea4_reparar_marca_hijo import marca_hijo_presente_v94
+    return marca_hijo_presente_v94(texto)
 
 
 def extraer_direccion_automatica(razon, id_a, id_b):
@@ -151,7 +164,12 @@ def extraer_direccion_automatica(razon, id_a, id_b):
     "A_HIJO", "B_HIJO" o "AMBIGUA" (incluye el caso de no hallar alguno de
     los dos ids en el texto, o el caso en que el guarda de dos condiciones
     dice "SALE": CABLEADO POR DEFECTO desde la vuelta 93, TAREA 3.e, para que
-    un llamador futuro no pueda saltarselo sin querer)."""
+    un llamador futuro no pueda saltarselo sin querer). MARCA_HIJO (la
+    deteccion de "trae"/"desarrolla"/"RECORRE EL CAMINO") esta CABLEADA POR
+    DEFECTO a la version reparada desde la vuelta 94, TAREA 4.a: la constante
+    MARCA_HIJO de arriba se deja SIN BORRAR (documenta la forma vieja, la que
+    la vuelta 94 encontro con la lookbehind angosta), pero ya no se usa
+    aqui."""
     pos_a = razon.find(id_a)
     pos_b = razon.find(id_b)
     if pos_a == -1 or pos_b == -1:
@@ -162,8 +180,8 @@ def extraer_direccion_automatica(razon, id_a, id_b):
         seg_a, seg_b = razon[pos_a:pos_b], razon[pos_b:]
     else:
         seg_b, seg_a = razon[pos_b:pos_a], razon[pos_a:]
-    hijo_a = bool(MARCA_HIJO.search(seg_a[len(id_a):]))
-    hijo_b = bool(MARCA_HIJO.search(seg_b[len(id_b):]))
+    hijo_a = _marca_hijo_presente_cableada(seg_a[len(id_a):])
+    hijo_b = _marca_hijo_presente_cableada(seg_b[len(id_b):])
     if hijo_a and not hijo_b:
         return "A_HIJO"
     if hijo_b and not hijo_a:

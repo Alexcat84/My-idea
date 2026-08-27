@@ -1,0 +1,10 @@
+ENTRADA REAL: el segmento del hijo del puesto 1281 (docs/INTRA_DOMINIO_VEREDICTOS.jsonl),
+que contiene el UNICO 'trae' negado por 'ningun' que motivo esta reparacion.
+
+==============================================================================
+PRUEBA DE MUTACION: marca_hijo_presente_v94 sobre el segmento real del puesto 1281 (quitar la negacion 'ningun')
+==============================================================================
+  entrada normal -> criterio da: False (esperado: False)
+  entrada MUTADA -> criterio da: True (esperado: True)
+  PROBADO POR MUTACION: el veredicto SI depende de la entrada, y los dos lados calzan con lo esperado.
+

@@ -1,0 +1,33 @@
+C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\vuelta94_tarea4_reparar_marca_hijo.py:2: SyntaxWarning: invalid escape sequence '\s'
+  """vuelta94_tarea4_reparar_marca_hijo.py . VUELTA 94, TAREA 4: LA LOOKBEHIND DE
+==========================================================================================
+VARA DURA, CASO 1: las 88 de OP_E_07_REBASE_V91.jsonl
+==========================================================================================
+CONJUNTO ESPERADO, DECIDIDO ANTES DE CORRER (TAREA 3 de esta vuelta): {1009, 1098}.
+El 1281 y el 1992 SALEN de OP-E-07 (TAREA 3), pero NO por este guarda automatico:
+  - el 1281 sale porque, tras reparar MARCA_HIJO (4.a), su unica marca de hijo (el
+    'trae' de 'ningun habito general trae') queda NEGADA, y extraer_direccion_
+    automatica_v94 lo deja AMBIGUA (verificado abajo, fuera de esta vara): no es un
+    SALE del guarda de dos condiciones, es una ausencia de direccion resoluble.
+  - el 1992 sale por relectura conjunta de un DIRECCION_MANUAL: su unica marca
+    ('compara los') SIGUE viva en la lista (TAREA 4.c: no se quita, se declara
+    inverificable si aplica), asi que guarda_direccion_v94 lo sigue marcando PASA;
+    su salida de OP-E-07 no pasa por este guarda, pasa por la relectura de la TAREA 3.
+SALEN (guarda automatico): 2 [1009, 1098]
+CASO 1 OK
+
+==========================================================================================
+VARA DURA, CASO 2: las 114 de OP_E_06_DIRECCION_V90.jsonl, el 1160 PASA, 0 SALEN
+==========================================================================================
+total: 114, SALEN: 0 [], veredicto 1160: PASA
+CASO 2 OK
+
+==========================================================================================
+VARA DURA, CASO 3: el tercer conjunto de 81, los tres falsos SALE (995, 1007, 1024) PASAN
+==========================================================================================
+tercer conjunto: 81 filas
+SALEN: 0 []
+CASO 3 OK
+
+==========================================================================================
+LA VARA ALCANZA: los tres casos obligatorios se cumplen.

@@ -1,0 +1,9 @@
+VERIFICACION DE CABLEADO, VUELTA 94: una corrida fresca de extraer_direccion_automatica
+sobre la bolsa de 88 (OP_E_07_REBASE_V91.jsonl), sin filtro aparte.
+
+de las 80 fuera de DIRECCION_MANUAL y de 9.22, la automatica resuelve 77 y deja AMBIGUA 3
+AMBIGUAS (excluidas automaticamente, guarda o marca de hijo no encontrada): [1009, 1098, 1281]
+
+el 1098 y el 1009 tienen que estar en AMBIGUAS (el guarda los saca): True
+el 1281 (fuera de DIRECCION_MANUAL) tiene que estar en AMBIGUAS ahora (MARCA_HIJO reparado,
+su unico 'trae' esta negado por 'ningun'): True
