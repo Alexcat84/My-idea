@@ -1,0 +1,37 @@
+====================================================================================================
+ADDENDUM DE OP-E-03, VUELTA 96 (SIMULACION)
+====================================================================================================
+
+--- lo que se anade a la nota de OP-E-03 (aditivo, la vieja no se toca) ---
+ADDENDUM DE EJECUCION (27 ago 2026, vuelta 96, TAREA 3): PRIMER TRAMO LEIDO. Leidas las filas 1 a 40 de las 183 de docs/plan/DIFERENCIA_CONTRA_COLA.jsonl, con la vara del banco 9.6.1 (clase), 9.6.2 (direccion) y 9.6.3 (el tamano del solape no decide). Los cinco puntos de la verificacion se cumplen y se remidieron en la vuelta, no se heredaron: el cribado cerrado (INTRA_DOMINIO_PARES.jsonl y INTRA_DOMINIO_VEREDICTOS.jsonl, 3388 filas cada uno, contadas por el instrumento); los ids por el resolutor ANTES de comparar (P.1), y en estas 40 el resolutor no movio ninguno; la cuenta sin fugas (cero de las 40 esta en la cola tras resolver, cero repetidas dentro del tramo); la marca LECTURA DIRIGIDA escrita en cada fila; y los veredictos contados APARTE de la tasa por dominio del banco 9.27, en fichero propio. RESULTADO: A 1, B 1, C 0, D 38. El unico A es el par 12 (human_error_como_sintoma contra preguntar_que_no_quien, misma fuente Dekker: lo unico que anade cabe en una linea). El unico B es el par 23 (fit_problema_solucion contra value_proposition_startup), declarado DUDOSO en vez de forzado. DIRECCION: 29 leidas y afirmadas, 11 NO RESUELTAS y declaradas como tal (pares 11, 12, 15, 22, 23, 26, 32, 34, 35, 36, 37), de ellas tres por no haber madre e hijo en absoluto (el caso 2.195 que el propio 9.6.2 nombra) y una, el par 16, con la direccion INVERTIDA respecto a la etiqueta de la bolsa, corregida en la lectura. POR DOMINIO, y no entra en la tasa del 9.27: core 20, environmental 2, franquicias 2, health_safety 2, quality 14. SEIS FIGURAS registradas en docs/PENDIENTES.md, cuatro de ellas sospechas de gemelos entre nodos (el trio Make Certain, los dos Customer Development, los dos de estrategia de innovacion y la familia de la capacidad de proceso, que ademas corrobora un aviso informativo de Gate 0), una propiedad del barrido (puede casar un paso con su propia refutacion) y la direccion invertida. CERO ARISTAS ESCRITAS O RETIRADAS: OP-E-03 es LECTURA DIRIGIDA y su producto es el juicio. Salidas: docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl (40 filas), docs/loop/SALIDA_V96_TAREA3_TRAMO1_MATERIAL.txt, docs/loop/SALIDA_V96_TAREA3_VEREDICTOS.txt, docs/loop/SALIDA_V96_TAREA3_MUTACION.txt (seis guardas probadas por mutacion, las seis caen; la clase de cada par es tabla a mano y se DECLARA que no tiene caso rojo automatico). QUEDAN 143 SIN LEER, filas 41 a 183. estado se queda en LISTA, mismo criterio que las demas.
+
+--- lo que se anade a docs/plan/04_ENLACES.md (aditivo) ---
+
+**LO QUE SI SE HIZO EN LA VUELTA 96, TAREA 3: EL PRIMER TRAMO YA ESTA LEIDO.**
+El apartado de arriba se queda entero, sin borrar una palabra: describia el estado
+de la vuelta 94, cuando la bolsa estaba establecida y sin leer. **Hoy ya no lo esta.**
+Se leyeron las filas **1 a 40** de las **183**, con la vara del banco `9.6.1` para la
+clase, la del `9.6.2` para la direccion y la del `9.6.3` para no dejar que el tamano
+del solape decida. **Los cinco puntos de `OP-E-03.verificacion` se cumplen, y los
+tres que son medibles se REMIDIERON en la vuelta en vez de heredarse.**
+
+| lo que salio | cifra |
+|---|---:|
+| pares leidos | **40** de 183 |
+| clase A, REPITE | **1** |
+| clase B, DUDOSO | **1** |
+| clase C | **0** |
+| clase D, CONTINUA | **38** |
+| direccion leida y afirmada | **29** |
+| direccion NO RESUELTA, declarada | **11** |
+| aristas escritas o retiradas | **0** |
+| pares que quedan sin leer | **143** (filas 41 a 183) |
+
+**CERO ARISTAS**: `OP-E-03` es LECTURA DIRIGIDA y su producto es el juicio, no el
+cableado. El detalle entero, con las seis figuras que la lectura destapa y las seis
+guardas probadas por mutacion, esta en `docs/PENDIENTES.md`, seccion "VUELTA 96,
+TAREA 3". Los veredictos viven en `docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl` y
+**no** en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`: se cuentan aparte de la tasa por
+dominio del banco `9.27`, como manda el punto 5 de la verificacion.
+
+SIMULACION: no se escribio nada.

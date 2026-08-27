@@ -1,0 +1,61 @@
+====================================================================================================
+OP-E-03, VEREDICTOS DEL PRIMER TRAMO (vuelta 96, TAREA 3)
+Bolsa de 183 filas; leidas 40. Vara: banco 9.6.1 (clase), 9.6.2 (direccion), 9.6.3 (el solape no decide).
+TODAS LAS FILAS: LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO .
+NO MUEVEN EL MARCADOR DEL CRIBADO.
+====================================================================================================
+
+| clase | que significa | cuantas de 40 |
+|---|---|---:|
+| A | REPITE (lo que anade cabe en una linea) | 1 |
+| B | DUDOSO (la vara no lo resuelve sola) | 1 |
+| C | figura aparte | 0 |
+| D | CONTINUA (trae procedimiento que el otro no tiene) | 38 |
+
+ENUMERACION clase A (1): 12
+ENUMERACION clase B (1): 23
+ENUMERACION clase C (0): ninguna
+ENUMERACION clase D (38): 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40
+
+DIRECCION (banco 9.6.2), contada de la misma tabla:
+| resultado | cuantas |
+|---|---:|
+| direccion LEIDA y afirmada | 29 |
+| direccion NO RESUELTA, declarada como tal | 11 |
+ENUMERACION 'direccion no resuelta' (11): 11, 12, 15, 22, 23, 26, 32, 34, 35, 36, 37
+
+POR DOMINIO, Y SE ROTULA: ESTA TABLA NO ENTRA EN LA TASA POR DOMINIO DEL BANCO 9.27.
+Se cuenta aparte, como manda el punto 5 de OP-E-03.verificacion.
+| dominio | pares del tramo | A | B | C | D |
+|---|---:|---:|---:|---:|---:|
+| core | 20 | 0 | 1 | 0 | 19 |
+| environmental | 2 | 0 | 0 | 0 | 2 |
+| franquicias | 2 | 0 | 0 | 0 | 2 |
+| health_safety | 2 | 1 | 0 | 0 | 1 |
+| quality | 14 | 0 | 0 | 0 | 14 |
+
+====================================================================================================
+FIGURAS OBSERVADAS EN EL TRAMO (6). No son veredictos de par.
+====================================================================================================
+
+1. TRES HIJOS DE UNA MISMA LINEA, y los tres del mismo libro (Crosby)
+   El paso 3 de medicion_servicios ('Implementar el programa Make Certain') tiene TRES hijos distintos en esta bolsa: make_certain_programa (par 2, 7 pasos), programa_make_certain_3 (par 3, 4 pasos) y programa_make_certain (par 14, 4 pasos). Los tres pares son D por separado, porque cada hijo trae procedimiento. LO QUE LA FIGURA SENALA NO ES EL PAR, ES EL TRIO: tres casas para el mismo programa de la misma fuente. Sospecha de gemelos ENTRE ELLOS, que es otra pregunta y otra operacion.
+
+2. DOS HIJOS DE UNA MISMA LINEA, del mismo libro (Blank)
+   El paso 3 de waterfall_vs_agile_development ('Alinear el proceso de desarrollo de producto con el proceso de Customer Development') tiene DOS hijos: desarrollo_de_clientes_customer_development (par 13) y modelo_customer_development (par 20). Los dos pares son D. Sospecha de gemelos entre esos dos hijos.
+
+3. DOS NODOS DE TITULO CASI IDENTICO, uno madre y otro hijo en pares distintos
+   estrategia_innovacion_producto es MADRE en el par 27 y estrategia_de_innovacion_de_producto es HIJO en el par 33. Mismo libro (Cooper), titulos casi iguales, y los dos hablan de objetivos, arenas y recursos. Sospecha de gemelos, y esta vez entre un nodo que hace de madre y otro que hace de hijo, que es la forma que mas cuesta ver.
+
+4. LA FAMILIA DE LA CAPACIDAD DE PROCESO, tres nodos y el Gate 0 ya avisaba
+   capacidad_de_proceso (par 9), capacidad_del_proceso (pares 18 y 25) y capacidad_de_proceso_2 (par 8) son tres nodos distintos sobre capacidad de proceso, de dos fuentes (Juran y Deming). El aviso informativo de Gate 0 de esta misma vuelta ya lista 'capacidad_de_proceso <-> capacidad_del_proceso' con 97,6 de similitud de titulo. La lectura de estos pares CORROBORA ese aviso desde otro camino.
+
+5. EL BARRIDO PUEDE CASAR UN PASO CON SU PROPIA REFUTACION
+   En el par 32 el nodo casado con el paso 'Definir indices numericos de calidad de lote (AQL)' de Juran es critica_acceptable_quality_level de Crosby, que manda ELIMINAR el AQL. El barrido casa por vocabulario y no distingue desarrollar de refutar. NO es un defecto del barrido: es una propiedad suya que conviene tener escrita antes de leer los 143 pares que quedan.
+
+6. UN PAR CON LA DIRECCION INVERTIDA respecto a la etiqueta del barrido
+   En el par 16 la bolsa etiqueta madre=proceso_llamada_inicial_venta e hijo=proceso_venta_franquicias, y la lectura da lo contrario: el flujo de ventas es la madre y el guion de la primera llamada cabe entero dentro de su paso 1. Es UNO de 40, pero es exactamente el error que el banco 9.6.2 nace para evitar, asi que se cuenta y se nombra.
+
+ESCRITO: docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl (40 filas). Unico fichero tocado por este instrumento.
+
+FIN

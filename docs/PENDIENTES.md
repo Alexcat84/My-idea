@@ -4113,3 +4113,165 @@ se toca ninguna: **se registra la pregunta y se sigue**, como manda la regla 5.
 propio criterio de verificacion escrito (para `OP-E-07`, la razon), y la lectura
 ciega del auditor sigue siendo control de calidad de la clase, no fuente de
 direccion. **Es lo que ya se hace de hecho; lo que falta es que este escrito.**
+
+## VUELTA 96, TAREA 3: `OP-E-03` EMPIEZA A LEERSE. PRIMER TRAMO, 40 DE 183, CON SUS CINCO PUNTOS DE VERIFICACION CUMPLIDOS
+
+**Origen:** encargo de la vuelta 96, TAREA 3, que recoge la parada deliberada y
+bien puesta de la vuelta 95 (seccion "VUELTA 95, TAREA 5" de este mismo fichero:
+el ejecutor leyo la nota de `OP-E-03`, vio que pedia el juicio COMPLETO del banco
+`9.6.1` mas direccion, y paro en vez de abrirlo apurado al final de una vuelta ya
+densa). **Esta vuelta lo abre con la vuelta entera por delante.**
+
+### (a) LOS CINCO PUNTOS DE `OP-E-03.verificacion`, uno por uno, con lo que los cumple
+
+Copiados literales del campo `verificacion` de la operacion
+(`docs/plan/OPERACIONES.jsonl`, `id_op` `OP-E-03`), leidos hoy:
+
+| punto de la verificacion | como se cumple, y donde se ve |
+|---|---|
+| *"se corre DESPUES del cierre de la cola del dominio, nunca antes"* | **REMEDIDO en esta vuelta**, no heredado: `docs/INTRA_DOMINIO_PARES.jsonl` **3.388 filas** y `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` **3.388 filas**, contadas por el propio instrumento. Si no cuadran, cae en ROJO y no imprime nada |
+| *"los ids pasan por el resolutor antes de comparar (regla P.1)"* | el resolutor se construye de `ids_alias` del grafo y se aplica a madre e hijo **antes** de cruzar contra la cola. Cada fila imprime el crudo al lado del resuelto cuando difieren, y una linea que dice si el resolutor movio algo. **En estas 40 no movio ninguno**, y se dice porque `P.1` obliga a declarar siempre si se resolvio |
+| *"la cuenta cuadra sin fugas"* | ninguna de las 40 se repite dentro del tramo, ninguna resuelve a un par consigo mismo, y los **2.796 pares distintos de la cola tras resolver** se cruzan contra las 40: **cero coincidencias** |
+| *"la diferencia se marca LECTURA DIRIGIDA: no entra en la cola y NO mueve el marcador del cribado"* | la marca va escrita en **cada** fila de la salida y en **cada** fila del JSONL (`marca`, `fuera_de_la_cola`, `mueve_el_marcador_del_cribado: false`). **El marcador no se toco**: sigue en A 551 / B 72 / C 5 / D 2.760, n 3.388, **remedido en esta vuelta** contando `INTRA_DOMINIO_VEREDICTOS.jsonl` por clase |
+| *"sus veredictos se cuentan aparte de la tasa por dominio"* | la tabla por dominio se imprime **rotulada** como que NO entra en la tasa del banco `9.27`, y los veredictos viven en fichero propio, `docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl`, no en `INTRA_DOMINIO_VEREDICTOS.jsonl` |
+
+### (b) LOS INSTRUMENTOS, Y QUE HACE CADA UNO
+
+- `scripts/loop/vuelta96_tarea3_tramo1_opE03.py`: imprime el material entero de
+  los 40 (par crudo y resuelto, el paso de la madre que el barrido caso con su
+  texto, y los `pasos_accionables` ENTEROS de los dos nodos con titulo, fuente y
+  entregable). Salida: `docs/loop/SALIDA_V96_TAREA3_TRAMO1_MATERIAL.txt`,
+  **1.368 lineas** contadas con `wc -l`, EXIT 0. **No juzga nada.**
+- `scripts/loop/vuelta96_tarea3_veredictos_tramo1.py`: recoge los veredictos de
+  la lectura, los cruza uno a uno contra las filas reales del tramo y cuenta.
+  Salida: `docs/loop/SALIDA_V96_TAREA3_VEREDICTOS.txt` y
+  `docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl` (**40 filas**), EXIT 0.
+- `scripts/loop/vuelta96_tarea3_prueba_mutacion.py`: las guardas, probadas.
+  Salida: `docs/loop/SALIDA_V96_TAREA3_MUTACION.txt`, EXIT 0.
+
+### (c) EL RESULTADO, TALLADO DE `SALIDA_V96_TAREA3_VEREDICTOS.txt`
+
+Vara aplicada, citada y no inventada: banco **`9.6.1`** rama contenido manda
+(*"Si lo que el hijo anade a lo que la madre ya dice CABE EN UNA LINEA, REPITE.
+Si trae un PROCEDIMIENTO que la madre no tiene, CONTINUA"*), direccion por
+**`9.6.2`**, y **`9.6.3`** para no dejar que el tamano del solape decida.
+
+| clase | que significa | cuantas de 40 |
+|---|---|---:|
+| A | REPITE (lo que anade cabe en una linea) | 1 |
+| B | DUDOSO (la vara no lo resuelve sola) | 1 |
+| C | figura aparte | 0 |
+| D | CONTINUA (trae procedimiento que el otro no tiene) | 38 |
+
+- **A (1):** el par **12**, `human_error_como_sintoma` contra
+  `preguntar_que_no_quien`, misma fuente (Dekker). Los pasos 1, 2 y 4 del segundo
+  dicen con otras palabras lo que los pasos 1 y 2 del primero ya mandan; lo unico
+  que anade es *"anota las condiciones de trabajo que rodeaban el momento"*, y
+  **eso cabe en una linea**.
+- **B (1):** el par **23**, `fit_problema_solucion` contra
+  `value_proposition_startup`. El paso 3 del segundo ES el paso 2 del primero; lo
+  que anade (identificar los problemas reales y definir que caracteristicas los
+  resuelven) **es mas que una linea y menos que un procedimiento con logica
+  propia**, y ademas son de fuentes distintas. **Se declara DUDOSO en vez de
+  forzarlo.**
+- **D (38):** el resto.
+
+**LA DIRECCION (`9.6.2`), contada de la misma tabla:**
+
+| resultado | cuantas |
+|---|---:|
+| direccion LEIDA y afirmada | **29** |
+| direccion NO RESUELTA, declarada como tal | **11** (pares 11, 12, 15, 22, 23, 26, 32, 34, 35, 36, 37) |
+
+**Las once no resueltas no son pereza y cada una dice por que en su razon**: en
+unas el hijo hace algo ADYACENTE al paso y no lo ejecuta (11 construir no es
+probar, 22 nombrar no es mandar ejecutar, 34 el MVP de alta fidelidad EMPIEZA
+donde acaba el de baja, 35 definir la metrica no es afinar el motor, 36 coinciden
+las personas y no la actividad, 37 el canal social no esta en ningun paso de la
+madre); en otras **no hay madre e hijo en absoluto**, que es el caso 2.195 que el
+propio banco `9.6.2` ya nombra (15 los dos lados del balance, 26 linea compartida
+con procedimiento propio a cada lado, 32 el hijo REFUTA el paso en vez de
+desarrollarlo); y en dos no hay pregunta de direccion porque el par no CONTINUA
+(12 es A y 23 es B).
+
+**POR DOMINIO, Y SE ROTULA: ESTA TABLA NO ENTRA EN LA TASA POR DOMINIO DEL BANCO
+`9.27`**, se cuenta aparte como manda el punto 5 de la verificacion:
+
+| dominio | pares del tramo | A | B | C | D |
+|---|---:|---:|---:|---:|---:|
+| core | 20 | 0 | 1 | 0 | 19 |
+| environmental | 2 | 0 | 0 | 0 | 2 |
+| franquicias | 2 | 0 | 0 | 0 | 2 |
+| health_safety | 2 | 1 | 0 | 0 | 1 |
+| quality | 14 | 0 | 0 | 0 | 14 |
+
+### (d) LAS SEIS FIGURAS QUE LA LECTURA DESTAPA, y no son veredictos de par
+
+Van enteras en `SALIDA_V96_TAREA3_VEREDICTOS.txt`. En corto, y las cuatro
+primeras importan porque **la nota de la operacion dice que este barrido "ES
+TAMBIEN UN DETECTOR DE GEMELOS"** y aqui se le ve haciendolo:
+
+1. **Tres hijos de una misma linea, los tres de Crosby.** El paso 3 de
+   `medicion_servicios` tiene TRES casas distintas en la bolsa:
+   `make_certain_programa`, `programa_make_certain_3` y `programa_make_certain`
+   (pares 2, 3 y 14). Los tres pares son D por separado. **La sospecha de gemelos
+   es ENTRE LOS TRES HIJOS**, que es otra pregunta y otra operacion.
+2. **Dos hijos de una misma linea, los dos de Blank.** El paso 3 de
+   `waterfall_vs_agile_development` tiene dos:
+   `desarrollo_de_clientes_customer_development` y `modelo_customer_development`
+   (pares 13 y 20).
+3. **Dos nodos de titulo casi identico, uno haciendo de madre y otro de hijo.**
+   `estrategia_innovacion_producto` (madre del par 27) y
+   `estrategia_de_innovacion_de_producto` (hijo del par 33), mismo libro
+   (Cooper). **Es la forma que mas cuesta ver**, porque los dos papeles distintos
+   disimulan el parecido.
+4. **La familia de la capacidad de proceso, y el Gate 0 ya avisaba.**
+   `capacidad_de_proceso`, `capacidad_del_proceso` y `capacidad_de_proceso_2`
+   aparecen en los pares 8, 9, 18 y 25. El aviso informativo de Gate 0 **de esta
+   misma vuelta** ya lista `capacidad_de_proceso <-> capacidad_del_proceso` con
+   **97,6** de similitud de titulo. **La lectura corrobora el aviso desde otro
+   camino**, y eso vale mas que cualquiera de los dos por separado.
+5. **El barrido puede casar un paso con su propia refutacion.** Par 32: el paso
+   *"Definir indices numericos de calidad de lote (AQL)"* de Juran quedo casado
+   con `critica_acceptable_quality_level` de Crosby, que manda **eliminar** el
+   AQL. **No es un defecto del barrido**: casa por vocabulario y el vocabulario no
+   distingue desarrollar de refutar. Conviene tenerlo escrito **antes** de leer
+   los 143 que quedan.
+6. **Un par con la direccion INVERTIDA respecto a la etiqueta de la bolsa.** Par
+   16: la bolsa etiqueta `madre=proceso_llamada_inicial_venta`, y la lectura da
+   lo contrario (el flujo de ventas es la madre, y el guion de nueve pasos de la
+   primera llamada cabe entero dentro de su paso 1). **Uno de 40, y es exactamente
+   el error que el banco `9.6.2` nace para evitar**, asi que se cuenta y se nombra.
+
+### (e) LAS GUARDAS, PROBADAS POR MUTACION, Y LA QUE SE DECLARA SIN PROBAR
+
+`docs/loop/SALIDA_V96_TAREA3_MUTACION.txt`, EXIT 0. **Seis mutaciones y las seis
+CAEN**, con el control en verde antes y despues:
+
+| mutacion | que se muta | resultado |
+|---|---|---|
+| A | bolsa EN MEMORIA con un par que **si esta en la cola** | **CAE**, nombrando el par |
+| B | corte del cribado esperado a 3389 sobre el dato real | **CAE** |
+| C | una clase fuera de `{A,B,C,D}` | **CAE** |
+| D | un veredicto renumerado a una fila que no existe | **CAE** |
+| E | una direccion que nombra un nodo ajeno a esa fila | **CAE** |
+| F | un veredicto que falta | **CAE**, nombrando la fila |
+
+La mutacion **A** es la que mas importa: es la guarda que sostiene la
+adjudicacion del 11 ago 2026 de esta operacion (*"una lectura que entra por dos
+puertas se cuenta dos veces, y entonces la tasa por dominio del banco 9.27 deja
+de significar nada"*), y ahora esta probado que dispara.
+
+**Y LO QUE NO SE PRUEBA, DICHO EN VEZ DE FABRICARLE UN ROJO** (`EJECUTOR.md`
+regla 1, parrafo final): **la CLASE A/B/C/D de cada par la pone la lectura y vive
+en una TABLA A MANO. NO HAY CASO ROJO AUTOMATICO PARA ELLA.** No se le construye
+una asercion que se apruebe sola, que es la caida 2 de la vuelta 89.
+
+### (f) LO QUE QUEDA, Y EL RITMO MEDIDO
+
+**143 de los 183 sin leer** (183 menos 40). El tramo siguiente empieza en la fila
+41 y el instrumento ya lo acepta sin tocar codigo:
+`--desde 40 --cuantos 40`. **CERO ARISTAS ESCRITAS O RETIRADAS por esta tarea**:
+`OP-E-03` es LECTURA DIRIGIDA y su producto es el juicio, no el cableado; el
+cableado de lo que estas lecturas habiliten es decision de otra operacion y de
+otra vuelta.

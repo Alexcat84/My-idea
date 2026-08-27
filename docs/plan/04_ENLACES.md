@@ -293,6 +293,34 @@ vuelta futura, del mismo tamano que las lecturas de `OP-E-06`/`OP-E-07`: no cabi
 sin decidir apurado en esta, y `PROMPT_SIGUIENTE.md` pide parar antes que decidir
 sin texto que lo sostenga.
 
+**LO QUE SI SE HIZO EN LA VUELTA 96, TAREA 3: EL PRIMER TRAMO YA ESTA LEIDO.**
+El apartado de arriba se queda entero, sin borrar una palabra: describia el estado
+de la vuelta 94, cuando la bolsa estaba establecida y sin leer. **Hoy ya no lo esta.**
+Se leyeron las filas **1 a 40** de las **183**, con la vara del banco `9.6.1` para la
+clase, la del `9.6.2` para la direccion y la del `9.6.3` para no dejar que el tamano
+del solape decida. **Los cinco puntos de `OP-E-03.verificacion` se cumplen, y los
+tres que son medibles se REMIDIERON en la vuelta en vez de heredarse.**
+
+| lo que salio | cifra |
+|---|---:|
+| pares leidos | **40** de 183 |
+| clase A, REPITE | **1** |
+| clase B, DUDOSO | **1** |
+| clase C | **0** |
+| clase D, CONTINUA | **38** |
+| direccion leida y afirmada | **29** |
+| direccion NO RESUELTA, declarada | **11** |
+| aristas escritas o retiradas | **0** |
+| pares que quedan sin leer | **143** (filas 41 a 183) |
+
+**CERO ARISTAS**: `OP-E-03` es LECTURA DIRIGIDA y su producto es el juicio, no el
+cableado. El detalle entero, con las seis figuras que la lectura destapa y las seis
+guardas probadas por mutacion, esta en `docs/PENDIENTES.md`, seccion "VUELTA 96,
+TAREA 3". Los veredictos viven en `docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl` y
+**no** en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`: se cuentan aparte de la tasa por
+dominio del banco `9.27`, como manda el punto 5 de la verificacion.
+
+
 ---
 
 ## `OP-E-01`, DONDE QUEDA EL ORDEN ADJUDICADO
