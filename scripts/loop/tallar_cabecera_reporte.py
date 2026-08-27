@@ -245,6 +245,44 @@ CASO POSITIVO OBLIGATORIO (vuelta 83): tallar el tramo 8 con
 su CABEZA tiene que dar ROJO, nombrando el par; sobre el fichero real (que
 solo trae las 30 frescas) da VERDE.
 
+--- TAREA 3.b: DOS FILAS MAS EN --fase04, LAS DOS CIFRAS DISFRAZADAS DE PROSA (vuelta 85) ---
+
+POR QUE NACE (acta de la vuelta 84, seccion 4, adjudicacion 6.4). Dos frases
+de la cabecera del reporte de la vuelta 84 vivian FUERA de la tabla tallada,
+en prosa suelta que ningun tallador cubria, y las dos eran cifras: "las
+aristas se movieron DOCE veces" (eran seis) y "el calibrado queda sin
+desfase" (quedaba con tres filas de desfase). Las dos se tallan ahora como
+filas mas de `--fase04`, con la misma mecanica de ROJO que las demas: si la
+celda no se puede leer, no se talla nada.
+
+FILA "aristas movidas en la vuelta": cierre menos apertura en las CUATRO
+cifras (`nodos_siguientes`, `nodos_previos`, suma, union), calculada de las
+MISMAS `SALIDA_V<N>_CONTEO_<LADO>.txt` que ya leen las seis filas de arriba
+(sig/prev/suma/union): ningun fichero nuevo, solo la resta de dos cifras ya
+citadas.
+
+FILA "desfase del calibrado rastreado": lee
+`SALIDA_V<N>_DESFASE_CALIBRADO_<LADO>.txt` (instrumento
+`scripts/loop/vuelta85_medir_desfase_calibrado.py <ref>`, que replica la
+MISMA definicion de "arista" que `scripts/plan/paso_contra_nodo_calibrado.py`:
+hijo en vecinos(madre) O madre en vecinos(hijo), resuelto por alias, no el
+chequeo estricto de las dos vistas), cuenta cuantas filas de
+`docs/plan/PASO_NODO_CALIBRADO.jsonl` tienen el campo `arista` distinto de lo
+que el grafo de ESE lado dice, y lista los pares cuando son pocos (10 o
+menos). Que haya desfase NO es, por si solo, una caida: es correcto y esta
+mandado (adjudicacion 5.7 del acta 82) cuando el fichero se commitea "tal
+como quedo" tras una escritura posterior a su propia recalibracion. Lo que
+esta fila remedia es que la prosa pueda NEGARLO cuando existe: la cifra
+tallada no permite esa negacion.
+
+CASO OBLIGATORIO (vuelta 85): tallar la vuelta 84 con `--fase04` tiene que
+dar, en la fila del desfase, apertura "?" (la vuelta 84 no genero ese
+fichero: no existia esta fila) salvo que se reconstruya con el instrumento
+nuevo corrido sobre el commit de esa vuelta; sobre la vuelta 85 (que si
+genera los dos lados) tiene que dar 3 en la apertura (las tres aristas de
+la TAREA 3 de la vuelta 84, heredadas) y lo que la TAREA 4 de esta vuelta
+deje en el cierre.
+
 --- TAREA 2.b: EL COTEJO LOCALIZA LA TABLA POR SU CABECERA DE SECCION (vuelta 84) ---
 
 POR QUE NACE (acta de la vuelta 83, seccion 4). `--comparar` aceptaba
@@ -525,6 +563,16 @@ def lado_fase04(vuelta, sufijo, fallos, con_miles=True):
         d["marcador_n"] = busca(mar, r"\}\s*(\d+)\s*$", "marcador n %s" % sufijo, fallos)
     else:
         d["marcador_A"] = None
+
+    # TAREA 3.b (vuelta 85): el desfase del calibrado rastreado, opcional
+    # (una vuelta que no genero el fichero no talla la fila, igual que el
+    # marcador). Cuando SI existe, ninguna de sus cifras se deja sin leer.
+    des = leer_opcional(p + "DESFASE_CALIBRADO_" + sufijo + ".txt")
+    if des is not None:
+        d["desfase_n"] = busca(des, r"DESFASE DEL CALIBRADO RASTREADO: (\d+) fila", "desfase %s" % sufijo, fallos)
+        d["desfase_lista"] = re.findall(r"^\s{2}(\S+ -> \S+) \|", des, re.MULTILINE)
+    else:
+        d["desfase_n"] = None
     return d
 
 
@@ -557,6 +605,25 @@ def filas_fase04(ap, ci, con_miles):
                                                 m(d["marcador_C"]), m(d["marcador_D"]), m(d["marcador_n"]))
         f.append(("marcador del cribado `A` / `B` / `C` / `D`, `n`",
                   celda_marcador(ap), celda_marcador(ci)))
+
+    # TAREA 3.b (vuelta 85): las dos filas que remedian las dos caidas de
+    # reporte de la vuelta 84 (acta 84, seccion 4, adjudicacion 6.4).
+    dif = lambda campo: int(ci[campo]) - int(ap[campo])
+    f.append(("aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union",
+              "(no aplica: la celda de cierre es la resta contra esta apertura)",
+              "%+d / %+d / %+d / %+d" % (dif("sig"), dif("prev"), dif("suma"), dif("union"))))
+
+    if ap.get("desfase_n") is not None or ci.get("desfase_n") is not None:
+        def celda_desfase(d):
+            if d.get("desfase_n") is None:
+                return "?"
+            n = d["desfase_n"]
+            lista = d.get("desfase_lista") or []
+            if lista and len(lista) <= 10:
+                return "%s fila(s): %s" % (m(n), ", ".join("`%s`" % p for p in lista))
+            return "%s fila(s)" % m(n)
+        f.append(("desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo)",
+                  celda_desfase(ap), celda_desfase(ci)))
     return f
 
 
