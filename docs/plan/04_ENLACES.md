@@ -506,6 +506,53 @@ y perder 73 gemelos.**
 
 ---
 
+## `OP-E-01`, CIERRE MEDIDO (27 ago 2026, vuelta 87)
+
+**No se anuncia: se talla, con instrumento propio y con los pares leidos de
+los ficheros.** El campo `estado` de `OPERACIONES.jsonl` NO SE TOCA (00_
+INDICE.md linea 111): sigue en `LISTA`, y la ejecucion queda declarada en el
+campo `nota` de `OP-E-01`, con esta misma cifra dentro.
+
+**La cola final, cuatro unidades (indices 117 a 120 de la bolsa filtrada
+V87), leida POR LO NO DECIDIDO:**
+
+| # | par (paso) | decision | discutible | alcanzable (vara de la cadena) |
+|---:|---|---|:---:|---|
+| 117 | `juran_rcca_metodo -> diseno_implementacion_remedio` (paso 3, quality) | **SE ESCRIBE** | SI | ALCANZABLE (6 saltos), ES la cadena propia de la madre |
+| 118 | `valor_intangible_sostenibilidad -> alineacion_engagement_estrategia_general` (paso 1, environmental) | NO SE ENLAZA | SI | SIN CAMINO PREVIO |
+| 119 | `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` (paso 4, core) | **SE ESCRIBE** | | ALCANZABLE (5 saltos), NO es la cadena propia de la madre |
+| 120 | `no_shop_agreement -> dividends_terms` (paso 2, core) | NO SE ENLAZA | | ALCANZABLE (4 saltos), NO es la cadena propia de la madre |
+
+Las razones completas, el volcado de las 8 fichas y la vara de la tanda
+(TAREA 4, alcance de la adjudicacion 6.5 del acta 84) estan en
+`docs/loop/REPORTE.md` de la vuelta 87 y en
+`docs/loop/SALIDA_V87_TAREA4_VARA_TRAMO12.txt`. Aristas escritas y
+verificadas en las DOS vistas
+(`scripts/loop/vuelta87_tramo12_escribir.py`,
+`scripts/loop/vuelta87_medir_tramo12.py` >
+`docs/loop/SALIDA_V87_TRAMO12_ESCRIBIR.txt`): 2 ARISTAS ESCRITAS, 0
+ESCALERA ROTA, 0 INCONSISTENTES. Aristas tras la escritura: 8.996
+`nodos_siguientes` / 8.975 `nodos_previos` / 17.971 suma / 9.619 union
+(`docs/loop/_v87_conteo_tras_tramo12.txt`), dos mas que las 8.994 / 8.973 /
+17.967 / 9.617 de la apertura de esta vuelta, en las cuatro cifras, como
+corresponde a dos aristas anadidas en las dos vistas.
+
+**LA CIFRA FINAL DE LA OPERACION**, leida de `docs/plan/OP_E_01_DECIDIDAS.
+jsonl` (nunca de la suma de reportes viejos): **220 unidades leidas en
+total, 99 ESCRITA, 121 NO SE ENLAZA**, reparto por tramo `{3: 30, 4: 30, 5:
+23, 6: 10, 7: 3, 8: 30, 9: 30, 10: 30, 11: 30, 12: 4}`.
+
+**LA GUARDA, corrida DESPUES del horneado de cierre**
+(`scripts/loop/vuelta83_guarda_decididas.py --bolsa docs/plan/PASO_NODO_
+CALIBRADO_FILTRADO_V87.jsonl`, `docs/loop/SALIDA_V87_GUARDA_CIERRE.txt`):
+**VERDE**, con el mensaje **TODA LA BOLSA ESTA DECIDIDA** sobre las 121
+unidades de la bolsa filtrada V87. Ninguna unidad queda sin decision:
+`OP-E-01` cierra sin bolsa a medias, y la recalibracion de esta vuelta no
+abrio unidades nuevas respecto de la vuelta anterior (0 de 121, medido en
+`docs/loop/SALIDA_V87_TRAMO12_FILTRO_P91_GUARDA_CADENA.txt`).
+
+---
+
 ## LOS SUELTOS DE RACIMOS, y los racimos con miembro ajeno
 
 **`OP-E-02` junta dos cosas que se parecen y no son iguales.**
