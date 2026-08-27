@@ -3767,3 +3767,146 @@ de esta vuelta para abrir el primer tramo despues: el resolutor de ids, la
 marca de LECTURA DIRIGIDA, el no entrar en cola ni mover el marcador, y el
 conteo aparte de la tasa por dominio, los cinco puntos de la verificacion,
 quedan citados aqui para la vuelta que la tome.
+
+## VUELTA 96, TAREA 1: LOS REGISTROS DEL ACTA 95 (acta de la vuelta 95, `ACTA_AUDITOR.md` lineas 33446 a 34023)
+
+### (1.1) La caida de reporte de la vuelta 95, con su nombre, su medicion y LA LETRA NUEVA al lado
+
+**LA CAIDA, con su nombre.** `docs/loop/REPORTE.md` de la vuelta 95, linea 210,
+publico en su lista de RUTAS TOCADAS el parentesis **"`docs/PENDIENTES.md`
+(cinco secciones nuevas)"**, y las secciones eran **CUATRO**.
+
+**LA MEDICION, que NO se rehace aqui porque ya viene hecha** (encargo de la
+vuelta 96, TAREA 1.1, literal: *"No se vuelve a medir: ya viene medida"*). La
+tallo el auditor con `scripts/loop/tallar_composicion_salida.py` sobre el diff
+de la vuelta entera, y su salida vive en
+`docs/loop/_auditor_v95_pendientes_tallado.txt`: **4 secciones de nivel 2 (##) y
+4 subsecciones de nivel 3 (###)**, 8 filas casadas en total, con las dos
+enumeraciones nominales impresas. El acta 95 (seccion 5, lineas 33854 a 33917)
+probo ademas **siete criterios distintos y NINGUNO da cinco** (`##` 4, `###` 4,
+las dos juntas 8, cualquier nivel 8, lineas que abren en negrita 17, lineas que
+mencionan "VUELTA 95" 4, hunks del diff 1).
+
+**LA LETRA NUEVA AL LADO, que es lo que cambia el trato.** Decision del fundador
+del 27 ago 2026 (`docs/loop/paradas/2026-08-27-racha-parentesis-DECISION.md`,
+recogida en `AUDITOR.md` seccion 4): la caida de reporte cuenta para la racha
+**SOLO cuando la cifra vive en una TABLA, una CABECERA o una CONCLUSION**; si
+vive en una **LISTA DE RUTAS** o en **PROSA DE ACOMPANAMIENTO**, se registra y
+dispara la relectura al doble, **pero NO acumula**. Esta cifra vivia en la lista
+de rutas tocadas.
+
+**CONSECUENCIA, escrita entera:** la caida **SE REGISTRA** (aqui), **dispara la
+relectura al doble** de su tramo, y **NO ACUMULA para la racha**, por letra
+expresa de esa misma decision, que la nombra por su caso. La racha de reporte
+que acumula queda por tanto **en CERO**, y la de clase o cifra publicada
+tambien, con dos tandas limpias seguidas (acta 95, seccion 7).
+
+### (1.2) LAS DOS CAIDAS PROPIAS DEL AUDITOR, cada una con su nombre
+
+El acta 95 las declara ella misma en su seccion 6 (lineas 33919 a 33946), con el
+mismo trato que las del ejecutor, y las dos quedan aqui verificadas por medicion
+propia de la vuelta 96.
+
+**(i) AFIRMO UNA BUSQUEDA QUE NO CORRIO** (acta 95, seccion 6 punto 2, y
+adjudicacion 4.4, linea 33826). El encargo de la vuelta 95 mando arreglar *"el
+SyntaxWarning de `scripts/loop/vuelta94_tarea4_reparar_marca_hijo.py` (secuencia
+de escape en la docstring)"*. **Ese warning no existe y nunca existio.**
+Remedido hoy: `git log --format='%h %s' -- scripts/loop/vuelta94_tarea4_reparar_marca_hijo.py`
+da **UN SOLO commit en toda la historia del fichero** (`d1d88d1a`), y
+`git show d1d88d1a:scripts/loop/vuelta94_tarea4_reparar_marca_hijo.py | head -2`
+muestra que **ese commit ya abre con la cadena cruda `r` mas tres comillas**,
+identico a la cabecera de hoy. `AUDITOR.md` seccion 2 lo prohibe con esas
+palabras: *"Prohibido afirmar una busqueda no corrida."* **El ejecutor gasto
+tres vias en desmentirlo y tenia razon** (reporte de la vuelta 95, TAREA 4).
+
+**(ii) UNA OMISION QUE MANDO UN PAR A LA MESA SIN NECESIDAD** (acta 95,
+seccion 6 punto 3, y adjudicacion 4.1, linea 33773). El auditor dio al ejecutor
+la linea **32695** del acta para resolver el **1886**, y no vio que **la misma
+tabla, DOS FILAS MAS ARRIBA, ya resolvia el 1844**. Verificado hoy leyendo
+`sed -n '32693,32697p' docs/loop/ACTA_AUDITOR.md`: la linea **32693** es la del
+**1844** (*"encaje plausible en el paso 2"*, razon *"NOMBRA EL PROBLEMA ... TRAE
+EL PROCEDIMIENTO"*, veredicto **COINCIDO**) y la **32695** es la del 1886.
+**El 1844 QUEDA**, adjudicado por el acta 95 (4.1) por extension natural del
+mismo trato dado al 1886, y **la relectura conjunta baja de CUATRO a TRES: 886,
+890 y 947.** No es caida del ejecutor: la prudencia no lo es.
+
+### (1.3) LA ETIQUETA DEL GRUPO C, CORREGIDA PARA LOS NUEVE, sin borrar el texto viejo
+
+**EL TEXTO VIEJO, que NO se borra** (acta de la vuelta 94, y repetido en la
+seccion 6 punto 1 del acta 95): el auditor publico las 18 razones del grupo C
+como *"ni citan linea ni traen forma de indice"*.
+
+**LA CORRECCION, medida con instrumento propio de ESTA vuelta** (`EJECUTOR.md`
+regla 2, "EL INSTRUMENTO MANDA": el acta 95 se cita como CONTRASTE, no como
+fuente). Instrumento: `scripts/loop/vuelta96_tarea1c_etiqueta_grupo_c.py`,
+salida en `docs/loop/SALIDA_V96_TAREA1C_ETIQUETA_GRUPO_C.txt`, EXIT 0. La bolsa
+de 18 **no se teclea**: se calcula importando `clasifica_razon()` de
+`scripts/loop/vuelta95_tarea3a_cribado_cita_de_linea.py`. Tabla pegada entera de
+ese fichero:
+
+| pregunta | cuantas de las 18 |
+|---|---:|
+| mencionan la palabra "linea" en cualquier forma | 9 |
+| lo hacen con la formula ESTRICTA "es/son UNA LINEA" (con determinante) | 6 |
+| lo hacen con la formula ANCHA "es/son ... LINEA" (con o sin determinante) | 7 |
+| anclan con "en ... linea" y NO con "es/son" | 1 |
+| NO mencionan la palabra "linea" en ninguna forma | 9 |
+| casan el patron A del acta 94 (tiene que ser 0) | 0 |
+
+- **mencionan linea (9):** 896, 909, 910, 940, 983, 993, 1057, 1086, 1196
+- **formula ESTRICTA (6):** 896, 910, 940, 993, 1057, 1196
+- **formula ANCHA (7):** 896, 909, 910, 940, 993, 1057, 1196
+- **"en ... linea" y no "es/son" (1):** 1086
+- **no la mencionan (9):** 886, 890, 947, 1020, 1083, 1191, 1220, 1844, 1886
+
+**LO QUE CALZA Y LO QUE NO, declarado y no resuelto copiando.** El **NUEVE**
+del acta 95 calza al digito **y con la misma enumeracion**. Su **OCHO con la
+formula literal "es/son UNA LINEA"** (896, 909, 910, 940, 993, 1057, 1086,
+1196) **NO calza con mi medicion**: mi formula estricta da **SEIS** y la ancha
+**SIETE**. La diferencia esta nombrada, par por par, y no es opinable:
+
+- el **909** dice *"Sus dos referencias al mapa **son lineas**"*, plural y sin
+  determinante: entra en la formula ANCHA (7) y no en la estricta (6);
+- el **1086** dice *"cierra con TRES PREGUNTAS **en una sola linea**"*, que
+  **NO es la formula "es/son"** sino un "en ... linea"; escapa al patron A del
+  acta 94 solo por la palabra "sola" que se cuela en medio;
+- el **983** dice *"... validacion suficiente**: UNA LINEA**"*, tras dos puntos,
+  y el propio acta 95 ya lo contaba aparte de sus ocho.
+
+**7 mas 1 mas 1 dan los 9. Todo queda contado y nada sobra.**
+
+**LO QUE SE CORRIGE ES LA ETIQUETA, NO LA CONCLUSION.** La conclusion que el
+auditor saco del grupo C **sigue en pie y esta medida** (acta 95, seccion 3.2):
+el **1083**, el ejemplar CONFIRMADO de la casa, cae dentro de C bajo **las tres
+varas** probadas (la del acta 18, la mas ancha 8, la mas estrecha 50), o sea que
+**ninguna vara de este tipo separa confirmados de caidos**. Lo que era falso, y
+queda corregido aqui, es la **ETIQUETA**: el grupo C no era "la poblacion que no
+cita linea", era **la poblacion que el patron A del acta 94 dejo fuera**, y ese
+patron casa *"EN una linea"* pero no *"ES una linea"*, que es como el redactor
+escribe la mayoria de sus anclas.
+
+**LA MECANICA DE ROJO DEL INSTRUMENTO, PROBADA POR MUTACION** (`EJECUTOR.md`
+regla 1, "EL CASO ROJO SE PRUEBA POR MUTACION"):
+`scripts/loop/vuelta96_tarea1c_prueba_mutacion.py`, salida en
+`docs/loop/SALIDA_V96_TAREA1C_MUTACION.txt`, EXIT 0. Control sobre dato real
+VERDE (18 filas, 0 fallos); mutacion (ii) del tamano esperado a 17 sobre el dato
+real **CAE**; mutacion (i) sobre una copia EN MEMORIA del fichero de veredictos
+sin la entrada del puesto 872 **CAE**; control de vuelta VERDE. **Y la tercera
+guarda se DECLARA en vez de fabricarle un rojo que se apruebe solo:** la guarda
+"esta en C y ademas casa el patron A" es una **TAUTOLOGIA** mientras el mismo
+`clasifica_razon()` alimente las dos piezas, asi que **NO TIENE CASO ROJO
+AUTOMATICO** y asi queda escrito en el propio instrumento.
+
+### (1.4) LAS ADJUDICACIONES DEL ACTA 95, cada una por su numero
+
+Leidas hoy con `grep -n '^### ' docs/loop/ACTA_AUDITOR.md` sobre el tramo del
+acta 95; la linea de cada una va al lado y sale de ese grep, no de memoria.
+
+| num | linea | que adjudica | efecto sobre el trabajo |
+|---|---:|---|---|
+| **4.1** | 33773 | **EL 1844 SALE DE RELECTURA CONJUNTA Y QUEDA**, por extension natural del mismo trato dado al 1886 (misma regla, mismo fichero, misma tabla) | la relectura conjunta baja de **4 a 3**: quedan 886, 890 y 947 |
+| **4.2** | 33795 | **LOS TRES QUE SIGUEN: CONFIRMADOS como duda genuina**, con la evidencia que faltaba (el 886 es el hermano vivo del 1009 caido: mismo hijo `fit_problema_solucion`, misma formula, madre casi gemela) | los tres van a **MESA DE FORMULA**, TAREA 2 de esta vuelta |
+| **4.3** | 33816 | **Discutible 1** (la unidad de medida del barrido nuevo, por ocurrencia y no por linea, con `OPERACIONES.jsonl` dentro): **CONFIRMADO Y SUFICIENTE**, la unidad nueva es la buena | deja de ser discutible; queda escrita en el docstring del instrumento |
+| **4.4** | 33826 | **Discutible 3** (el SyntaxWarning no reproducido): **EL EJECUTOR TIENE RAZON**, el auditor estaba equivocado | ver (1.2)(i); el fichero **no se toca** |
+| **4.5** | 33835 | **Discutible 4** (la herencia de apertura por el criterio 2.2): **CONFIRMADO**, el criterio aguanta con la vara mas estricta (`web/` entero, no solo `web/lib/assets/`) | **deja de ser discutible** |
+| **4.6** | 33843 | **Discutible 2** (la aplicacion del criterio a 15 razones nuevas): **CONFIRMADO Y RESUELTO POR MEDICION**, una vara mecanica que no vio el codigo del ejecutor reproduce sus dos listas exactas (11 y 4) | apartarse del criterio estricto fue **correcto**: el estricto habria sacado al 1083 |

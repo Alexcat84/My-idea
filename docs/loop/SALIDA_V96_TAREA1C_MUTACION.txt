@@ -1,0 +1,16 @@
+==========================================================================================
+PRUEBA DE MUTACION DE LA MECANICA DE ROJO (vuelta 96, TAREA 1.c)
+==========================================================================================
+
+CONTROL (dato real, sin mutar): filas 18, fallos 0 -> VERDE
+MUTACION (ii) tamano esperado 17 sobre dato real: fallos 1 -> CAE (correcto)
+    el grupo C trae 18 filas y se esperaban 17
+MUTACION (i) copia en memoria sin el veredicto del puesto 872: fallos 1 -> CAE (correcto)
+    puesto 872 no tiene puesto_intra en INTRA_DOMINIO_VEREDICTOS.jsonl
+GUARDA (iii) 'esta en C y casa el patron A': NO HAY CASO ROJO AUTOMATICO.
+    Es tautologia mientras clasifica_razon() alimente las dos piezas:
+    una razon que casa PATRONES_A no sale clasificada C. No se le fabrica
+    una mutacion que la apruebe sola; se declara.
+CONTROL DE VUELTA (mutacion deshecha): filas 18, fallos 0 -> VERDE
+
+VEREDICTO: VERDE, las dos guardas probadas CAEN al mutarlas y el control sigue verde
