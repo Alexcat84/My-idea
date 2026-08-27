@@ -442,6 +442,68 @@ y perder 73 gemelos.**
 > las 30 unidades de cabeza sin descartar ninguna por eso
 > (`docs/loop/SALIDA_V80_TRAMO6_FILTRO_P91_GUARDA_CADENA.txt`).
 
+> **CORRECCION DECLARADA (26 ago 2026, vuelta 82, relectura conjunta del
+> discutible 1 del reporte de la vuelta 80 seccion 5.5, con el caso escrito
+> del auditor verificado contra el grafo, acta de la vuelta 81 y encargo de
+> la vuelta 82).** El texto viejo, sin borrar, tal como el reporte de la
+> vuelta 80 lo publico en su seccion 5.3 (fila 27 de la lectura fresca del
+> tramo 6) y lo repitio en su seccion 5.5: ***"`descubrir_necesidades_del_
+> cliente -> traduccion_necesidades_cliente`, NO ESCRITA POR CAUTELA [...]
+> Se decidio NO escribir por ser la misma especie de redirect de paso que
+> D2 [...] y porque la familia ya tiene un camino establecido mas
+> especifico (`identificar_clientes_externos_e_internos ->
+> customer_needs_spreadsheet -> traduccion_necesidades_cliente`) para la
+> misma transicion."***
+>
+> **Esa razon se cae al medirla campo a campo contra `dataset/nodos/*.json`
+> en esta vuelta.** `dataset/nodos/identificar_clientes_externos_e_internos.
+> json` trae `nodos_siguientes = [descubrir_necesidades_del_cliente,
+> customer_needs_spreadsheet]`: los DOS son hijos DIRECTOS del mismo abuelo,
+> no una cadena madre-hijo. El "camino establecido de la familia" que el
+> reporte 80 cito arranca en ese abuelo y **no pasa por la madre
+> (`descubrir_necesidades_del_cliente`) en ningun salto**, y
+> `customer_needs_spreadsheet` **no esta entre los 9 `nodos_siguientes`** de
+> la madre (`qfd_matriz`, `diseno_de_procesos_por_caracteristicas`,
+> `diseno_servicio_calidad`, `gestion_de_quejas_y_fidelizacion`,
+> `herramientas_de_diseno_de_calidad`, `sistema_manejo_quejas`,
+> `desarrollar_caracteristicas_producto`, `design_for_six_sigma_dfss`,
+> `six_sigma_dmaic`). No es la misma especie de error que D2 (ahi si habia
+> una cadena propia de la madre, en su propio orden, que el hijo ya
+> colgaba): aqui la vara nueva de la cadena **no muerde**, porque el unico
+> camino previo que encuentra (`SALIDA_V80_TRAMO6_FILTRO_P91_GUARDA_CADENA.
+> txt`, fila 27) sube por `design_for_six_sigma_dfss -> innovacion_tipo_ii
+> -> juran_quality_by_design -> identificar_clientes_externos_e_internos ->
+> customer_needs_spreadsheet`, que tampoco es la cadena propia de la madre
+> en su propio orden (`customer_needs_spreadsheet` no es paso de la madre).
+>
+> **Y las dos senales que 9.6.2 pide sobran a favor.** El hijo cabe entero
+> en el paso 6 de la madre (*"Traducir las necesidades priorizadas al
+> lenguaje tecnico de la organizacion"*), casi palabra por palabra el
+> proposito entero del hijo (*"Traduccion de Necesidades del Cliente al
+> Lenguaje del Proveedor"*); la madre conserva materia propia de sobra en
+> los otros cinco pasos (recoleccion, listar, distinguir tipos de
+> necesidad, investigar usos no previstos, analizar y priorizar), ninguno
+> sobre traduccion. Los entregables (la senal que 9.6.2 declara mas
+> fiable) confirman: la madre entrega *"lista de necesidades del cliente
+> priorizadas Y traducidas al lenguaje de la organizacion"* (dos
+> productos), y el hijo entrega exactamente el segundo (*"Documento de
+> necesidades del cliente traducidas a especificaciones tecnicas claras y
+> medibles"*).
+>
+> **SE ESCRIBE**: `descubrir_necesidades_del_cliente ->
+> traduccion_necesidades_cliente`, en las DOS vistas a la vez
+> (`scripts/loop/vuelta82_tarea3_escribir.py`,
+> `docs/loop/SALIDA_V82_TAREA3_ESCRIBIR.txt`), con chequeo de escalera
+> exacto (`docs/loop/SALIDA_V82_TAREA3_ESCALERA.txt`: en `nodos_siguientes`
+> de la madre True, en `nodos_previos` del hijo True, cero inversas) y
+> recomputo tras la escritura
+> (`docs/loop/SALIDA_V82_GATE0_CMD1_TRAS_TAREA3.txt`, OK). Aristas tras la
+> escritura: 8.961 `nodos_siguientes` / 8.940 `nodos_previos` / 17.901 suma
+> / 9.584 union (`docs/loop/SALIDA_V82_CONTEO_TRAS_TAREA3.txt`), una mas
+> que las 8.960 / 8.939 / 17.899 / 9.583 de la apertura de esta vuelta, en
+> las cuatro cifras, como corresponde a una arista anadida en las dos
+> vistas.
+
 ---
 
 ## LOS SUELTOS DE RACIMOS, y los racimos con miembro ajeno
