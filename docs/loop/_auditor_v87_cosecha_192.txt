@@ -1,0 +1,11 @@
+total 397 | nuevos 293 | cubiertos 104
+nuevos con senales == ['continua por la vara'] EXACTO: 101
+nuevos con alguna OTRA senal: 192
+
+reparto por dominio de esos 192: {'core': 146, 'entrega': 15, 'environmental': 15, 'exportacion': 12, 'franquicias': 4}
+ficha dice: core 146, entrega 15, environmental 15, exportacion 12, franquicias 4 (suma 192)
+
+reparto por dominio de los 101 'solo continua':  {'core': 74, 'entrega': 4, 'environmental': 12, 'exportacion': 11}
+ficha OP-E-07 dice: core 74, environmental 12, exportacion 11, entrega 4 (suma 101)
+
+reparto de cubierto_por en los cubiertos: {('YA TIENE ARISTA en el grafo',): 92, ('ya esta en la bolsa de la fase 04',): 12}

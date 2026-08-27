@@ -1,0 +1,25 @@
+LA CADENA DE LA UNIDAD 117, NODO A NODO, CONTRA LOS 4 PASOS DE LA MADRE
+Pasos de juran_rcca_metodo, leidos de su ficha:
+   paso 1: Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema
+   paso 2: Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+   paso 3: Mejorar: diseñar e implementar el remedio
+   paso 4: Controlar: ajustar los controles para mantener las ganancias
+
+  juran_rcca_metodo                      | Método RCCA de Juran (Análisis de Causa Raíz)
+  definicion_problema_moms_2             | Definición y Selección del Problema (Criterios MOMS)
+  analisis_sintomas                      | Análisis de Síntomas del Problema
+  formulacion_teorias_causa              | Formulación de Teorías de Causa
+  prueba_teorias_causa_raiz              | Prueba de Teorías para Identificar la Causa Raíz
+  evaluacion_alternativas_solucion       | Evaluación de Alternativas de Solución
+  diseno_implementacion_remedio          | Diseño e Implementación del Remedio
+
+ARISTAS DIRECTAS DE LA MADRE (antes de esta vuelta era sin diseno_implementacion_remedio):
+   ['definicion_problema_moms_2', 'viaje_diagnostico_remedial', 'diseno_implementacion_remedio']
+
+VERIFICACION DE QUE LA CADENA YA EXISTIA ANTES DE ESTA VUELTA (ref fe24bd71):
+   juran_rcca_metodo                      -> definicion_problema_moms_2         presente en la APERTURA: True
+   definicion_problema_moms_2             -> analisis_sintomas                  presente en la APERTURA: True
+   analisis_sintomas                      -> formulacion_teorias_causa          presente en la APERTURA: True
+   formulacion_teorias_causa              -> prueba_teorias_causa_raiz          presente en la APERTURA: True
+   prueba_teorias_causa_raiz              -> evaluacion_alternativas_solucion   presente en la APERTURA: True
+   evaluacion_alternativas_solucion       -> diseno_implementacion_remedio      presente en la APERTURA: True

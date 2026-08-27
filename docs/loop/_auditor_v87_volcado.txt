@@ -1,0 +1,166 @@
+
+==============================================================================
+UNIDAD 117 | juran_rcca_metodo -> diseno_implementacion_remedio | paso 3 | dominio quality
+==============================================================================
+
+------------------------------------------------------------------------------
+MADRE: juran_rcca_metodo
+------------------------------------------------------------------------------
+  TITULO_CONCEPTO: Método RCCA de Juran (Análisis de Causa Raíz)
+  DOMINIO: quality
+  ETIQUETA_ARBOL: Halla la Causa Raíz
+  FASE_PROYECTO: ejecucion
+  RESUMEN_TEORICO: El RCCA (Root Cause Corrective Action) de Juran es un método de cuatro pasos para identificar y solucionar la causa raíz de problemas esporádicos: Definir el problema, Analizar y diagnosticar la causa, Mejorar/remediar la causa, y Controlar para mantener las ganancias. Es análogo al proceso médico de diagnóstico y tratamiento, y se enfoca en causas especiales (esporádicas), a diferencia de Six Sigma que aborda causas comunes (crónicas).
+  CONDICIONES_ACTIVACION: ['Cuando ocurre un problema esporádico de causa especial en un proceso que estaba previamente bajo control']
+  ENTREGABLE_ESPERADO: Causa raíz identificada, remedio implementado y controles ajustados para prevenir recurrencia
+  PASOS_ACCIONABLES (4):
+    1. Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema
+    2. Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+    3. Mejorar: diseñar e implementar el remedio
+    4. Controlar: ajustar los controles para mantener las ganancias
+  nodos_siguientes: ['definicion_problema_moms_2', 'viaje_diagnostico_remedial', 'diseno_implementacion_remedio']
+  nodos_previos: ['viaje_diagnostico_remedial']
+
+------------------------------------------------------------------------------
+HIJO: diseno_implementacion_remedio
+------------------------------------------------------------------------------
+  TITULO_CONCEPTO: Diseño e Implementación del Remedio
+  DOMINIO: quality
+  ETIQUETA_ARBOL: Diseña e Implementa tu Solución
+  FASE_PROYECTO: ejecucion
+  RESUMEN_TEORICO: Proceso de cuatro pasos para diseñar la solución elegida: verificar que cumple lo que buscabas, determinar los recursos que necesitas, especificar los procedimientos y cambios necesarios, y evaluar si necesitas capacitarte o capacitar a alguien. Incluye también diseñar la solución a prueba de errores antes de ponerla en marcha de forma definitiva.
+  CONDICIONES_ACTIVACION: ['Cuando ya elegiste una solución y necesitas ponerla en marcha de forma ordenada en tu negocio.']
+  ENTREGABLE_ESPERADO: Solución diseñada, documentada e implementada, con procedimientos actualizados y con la capacitación necesaria cubierta.
+  PASOS_ACCIONABLES (6):
+    1. Verifica que la solución cumple con lo que buscabas lograr.
+    2. Determina los recursos necesarios (personas, dinero, tiempo, materiales).
+    3. Especifica que procedimientos, formas de trabajar o sistemas debes modificar.
+    4. Evalua si necesitas capacitarte tu o capacitar a quien te ayuda.
+    5. Aplica técnicas de prueba de errores para que la solución sea a prueba de fallos.
+    6. Implementa la solución siguiendo un plan claro si es algo complejo.
+  nodos_siguientes: ['plan_de_control']
+  nodos_previos: ['evaluacion_alternativas_solucion', 'juran_rcca_metodo']
+
+==============================================================================
+UNIDAD 118 | valor_intangible_sostenibilidad -> alineacion_engagement_estrategia_general | paso 1 | dominio environmental
+==============================================================================
+
+------------------------------------------------------------------------------
+MADRE: valor_intangible_sostenibilidad
+------------------------------------------------------------------------------
+  TITULO_CONCEPTO: Creación de Valor Intangible mediante Sostenibilidad Corporativa
+  DOMINIO: environmental
+  ETIQUETA_ARBOL: Construye Valor con Sostenibilidad
+  FASE_PROYECTO: ejecucion
+  RESUMEN_TEORICO: El valor de una empresa va más allá de sus estados financieros: incluye intangibles como lealtad de marca, reputación corporativa y moral del equipo. Una reputación de sostenibilidad ambiental fortalece la marca, conecta emocionalmente con los clientes y crea 'stickiness' (atracción y retención), además de mejorar la capacidad de reclutar y retener talento, aumentando la productividad. Este valor es especialmente relevante para sostener la moral del equipo durante crisis económicas. También actúa como escudo ante el escrutinio de reguladores y ONGs, generando un 'aura verde' que facilita las relaciones con stakeholders. Capitalizar este valor exige medir y comunicar de forma transparente los avances, integrándolos en la cultura y la marca que proyectas como emprendedor.
+  CONDICIONES_ACTIVACION: ['Si buscas diferenciarte por reputación, cultura organizacional o relación con stakeholders', 'Si enfrentas alta rotación de talento o necesitas fortalecer el compromiso de tu equipo', 'Si ya cuentas con iniciativas de eficiencia o productos verdes y quieres capitalizar ese valor de marca', 'Si atraviesas una crisis económica y necesitas sostener la moral del equipo']
+  ENTREGABLE_ESPERADO: Estrategia de comunicación y cultura organizacional con indicadores de sostenibilidad que refuerce la marca, la reputación y la retención de talento.
+  PASOS_ACCIONABLES (5):
+    1. Incorpora métricas de sostenibilidad en tu seguimiento del negocio (satisfacción del cliente, compromiso del equipo, impacto ambiental)
+    2. Comunica de forma transparente y auténtica tus compromisos y logros ambientales
+    3. Alinea tu cultura de trabajo y propósito de sostenibilidad con la marca que quieres proyectar como empleador
+    4. Mide el impacto de tus iniciativas verdes en la retención de talento y la percepción de tus clientes
+    5. Evalúa periódicamente cómo tu reputación ambiental afecta la lealtad de clientes y la relación con reguladores
+  nodos_siguientes: ['incentivar_reconocer_recompensar', 'transparencia_datos_ambientales', 'incentivos_reconocimiento_sostenibilidad']
+  nodos_previos: ['crecimiento_ingresos_verdes', 'eco_advantage', 'eco_eficiencia', 'ventaja_competitiva_producto']
+
+------------------------------------------------------------------------------
+HIJO: alineacion_engagement_estrategia_general
+------------------------------------------------------------------------------
+  TITULO_CONCEPTO: Alinear el compromiso de tu equipo con tu estrategia de sostenibilidad
+  DOMINIO: environmental
+  ETIQUETA_ARBOL: Conecta tu Compromiso con tu Estrategia
+  FASE_PROYECTO: ejecucion
+  RESUMEN_TEORICO: Las personas que trabajan contigo notaran rapidamente cualquier desconexion entre lo que propones para involucrarlas y tu estrategia de sostenibilidad. Esta practica reune diez recomendaciones clave: ser urgentemente paciente, hacerlo personal, conectar con los objetivos del negocio, demostrar tu propio apoyo con hechos, elegir a las personas correctas para liderar, hacer la agenda clara y realista, crear herramientas de apoyo, dar flexibilidad, usar un toque personal y dar seguimiento visible.
+  CONDICIONES_ACTIVACION: ['Cuando exista riesgo de que tu equipo perciba incoherencia entre lo que dices y lo que haces']
+  ENTREGABLE_ESPERADO: Lista de verificacion cumplida que muestra que lo que propones para involucrar a tu equipo esta alineado con tu estrategia de sostenibilidad
+  PASOS_ACCIONABLES (4):
+    1. Verificar que lo que propones para involucrar a tu equipo refleje tu vision y mision de sostenibilidad
+    2. Mostrar con hechos, no solo con palabras, que tu mismo sigues lo que pides
+    3. Elegir a las personas con credibilidad dentro de tu equipo para liderar, no solo a quienes tienen mas conocimiento tecnico
+    4. Dar seguimiento constante y reconocer los errores abiertamente
+  nodos_siguientes: ['incentivos_reconocimiento_sostenibilidad']
+  nodos_previos: ['pilotos_estrategia_sostenibilidad']
+
+==============================================================================
+UNIDAD 119 | ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente | paso 4 | dominio core
+==============================================================================
+
+------------------------------------------------------------------------------
+MADRE: ganar_comprension_del_cliente
+------------------------------------------------------------------------------
+  TITULO_CONCEPTO: Ganar Comprensión Profunda del Cliente
+  DOMINIO: core
+  ETIQUETA_ARBOL: Comprende a Fondo a tu Cliente
+  FASE_PROYECTO: validacion
+  RESUMEN_TEORICO: Ve más allá de validar que el problema existe: entiende en profundidad cómo tu cliente vive su día a día. Su flujo de trabajo, cómo gasta su tiempo y su dinero, con quién interactúa, qué solución usa hoy y qué cambiaría su comportamiento actual. Lo logras saliendo a observarlo directamente: asiste a sus eventos, lee sus publicaciones, sigue a las personas que lo influencian, y hasta pasa un día haciendo lo que él hace. El objetivo es conocerlo tan bien que te perciba como 'uno de ellos', y así consigas información que va más allá de datos superficiales.
+  CONDICIONES_ACTIVACION: ['Cuando ya validaste que el problema es real e importante, y necesitas profundizar en el contexto del cliente antes de diseñar la solución completa', 'Antes de presentar cualquier solución o producto al mercado']
+  ENTREGABLE_ESPERADO: Un documento con la comprensión profunda de tu cliente: su flujo de trabajo, sus influenciadores, sus hábitos de consumo de información, su comportamiento de compra y tus criterios de validación
+  PASOS_ACCIONABLES (6):
+    1. Investiga el flujo de trabajo actual de tu cliente y sus interacciones con otras personas o áreas
+    2. Pregunta qué otras soluciones usa hoy y si el problema lo comparten más personas en su entorno de trabajo
+    3. Explora qué haría cambiar su comportamiento de compra: el precio, las características, o un nuevo estándar
+    4. Pasa un día haciendo lo que hace tu cliente (por ejemplo, detrás de un mostrador o en una feria) y asiste a sus eventos
+    5. Identifica qué publicaciones lee y a quién sigue tu cliente
+    6. Documenta todos tus hallazgos de forma ordenada, con criterios claros de qué cuenta como validado
+  nodos_siguientes: ['captura_conocimiento_mercado', 'capturar_conocimiento_de_mercado', 'actualizar_modelo_de_negocio_pivot_o_proceed', 'analisis_trafico_competitivo', 'dia_en_la_vida_del_cliente']
+  nodos_previos: ['scorecard_descubrimiento_cliente', 'customer_discovery', 'prueba_mvp_problema_baja_fidelidad']
+
+------------------------------------------------------------------------------
+HIJO: dia_en_la_vida_del_cliente
+------------------------------------------------------------------------------
+  TITULO_CONCEPTO: Un Día en la Vida del Cliente
+  DOMINIO: core
+  ETIQUETA_ARBOL: Vive un Día como tu Cliente
+  FASE_PROYECTO: validacion
+  RESUMEN_TEORICO: Ejercicio de investigación de campo para entender cómo 'vive' o 'trabaja' el cliente antes y después de usar el producto, documentando un día típico en su vida. Requiere salir a observar directamente el contexto real del cliente (por ejemplo, trabajar detrás de un mostrador o en su oficina) en vez de asumir conocimientos previos, y repetirse para cada tipo de persona relevante en la decisión de compra (usuario final, gerente, ejecutivo, área de tecnología, etc.), tanto en ventas a empresas como a consumidores.
+  CONDICIONES_ACTIVACION: ['Si el equipo no tiene experiencia directa en la industria o el entorno del cliente', 'Antes de diseñar la propuesta de valor definitiva', 'Si el equipo no tiene claridad sobre cómo el producto se integraría en la rutina real del cliente']
+  ENTREGABLE_ESPERADO: Documento narrativo o storyboard de 'antes y después' de un día típico de cada tipo de cliente relevante
+  PASOS_ACCIONABLES (5):
+    1. Observar o entrevistar directamente a los usuarios en su entorno real (oficina, tienda, hogar, planta)
+    2. Documentar cómo resuelven el problema actualmente, sin el producto
+    3. Proyectar y describir cómo cambiaría su día con el nuevo producto
+    4. Repetir el ejercicio para cada tipo de persona relevante en la decisión (usuario final, gerente, ejecutivo, tecnología, etc.)
+    5. Presentar una imagen vívida y específica del antes y el después al equipo de desarrollo de producto, en forma de narrativa o storyboard
+  nodos_siguientes: ['mapa_organizacional_influencia', 'channels_hypothesis_physical', 'preguntas_ipo_dolor_cliente']
+  nodos_previos: ['arquetipos_de_cliente', 'segmentos_de_clientes_problema_necesidad', 'verificar_clientes_y_canales', 'ganar_comprension_del_cliente']
+
+==============================================================================
+UNIDAD 120 | no_shop_agreement -> dividends_terms | paso 2 | dominio core
+==============================================================================
+
+------------------------------------------------------------------------------
+MADRE: no_shop_agreement
+------------------------------------------------------------------------------
+  TITULO_CONCEPTO: Acuerdo de Exclusividad (No-Shop Agreement)
+  DOMINIO: core
+  ETIQUETA_ARBOL: Pacta tu Exclusividad con Inversionistas
+  FASE_PROYECTO: ejecucion
+  RESUMEN_TEORICO: Es una cláusula que sí es vinculante, a diferencia de la mayoría de las condiciones de la hoja de términos (term sheet), que no lo son. Al firmarla te comprometes a no buscar, solicitar ni negociar con otros inversionistas durante un plazo definido (comúnmente 30, 60 o 90 días) mientras se completa la revisión a fondo (due diligence) y se cierra la ronda actual. Su objetivo es darle certeza al inversionista de que su tiempo y sus recursos no se van a usar para generar una subasta paralela.
+  CONDICIONES_ACTIVACION: ['Si recibiste una hoja de términos y necesitas entender tus obligaciones de exclusividad', 'Si el inversionista te pide garantía de exclusividad antes de invertir tiempo en revisar tu negocio a fondo (due diligence)', 'Cuando un inversionista te entregó una hoja de términos y quiere asegurar exclusividad durante el proceso', 'Si estás evaluando varias ofertas y necesitas entender qué implica legalmente firmar una hoja de términos']
+  ENTREGABLE_ESPERADO: Cláusula de exclusividad (no shop) firmada, con plazo, obligación de aviso y consecuencias de incumplimiento claramente definidas
+  PASOS_ACCIONABLES (4):
+    1. Define el período de exclusividad (comúnmente 30, 60 o 90 días)
+    2. Ten claro que esta cláusula es vinculante desde que firmas la hoja de términos (term sheet), a diferencia del resto de sus condiciones
+    3. Establece la obligación de avisar si alguien más se te acerca durante este periodo
+    4. Negocia qué pasa si no cierras la transacción en el plazo acordado, para que la obligación termine ahí
+  nodos_siguientes: ['proceso_decision_vc', 'term_sheet_negociacion', 'clausula_no_shop_adquisicion']
+  nodos_previos: ['term_sheet_negociacion', 'conditions_precedent_financing']
+
+------------------------------------------------------------------------------
+HIJO: dividends_terms
+------------------------------------------------------------------------------
+  TITULO_CONCEPTO: Dividendos en la hoja de términos (term sheet) de tu ronda
+  DOMINIO: core
+  ETIQUETA_ARBOL: Negocia los Dividendos Preferentes
+  FASE_PROYECTO: planificacion
+  RESUMEN_TEORICO: Es una cláusula que da a los inversionistas con acciones preferentes el derecho a cobrar dividendos (acumulados o no) antes que tú y los demás accionistas comunes, normalmente entre 5% y 15% anual sobre el precio original de compra. En rondas tempranas casi nunca cambian mucho tu retorno, pero pueden pesar si las cosas van mal o si la inversión es muy grande (más de 50 millones de dólares), como suele pasar en private equity.
+  CONDICIONES_ACTIVACION: ['Cuando el inversionista viene del mundo de private equity', 'Cuando la ronda es muy grande (más de 50 millones de dólares)']
+  ENTREGABLE_ESPERADO: Una cláusula de dividendos negociada, con protección del consejo (board) y claridad sobre cómo se paga.
+  PASOS_ACCIONABLES (4):
+    1. Revisa si el dividendo es acumulativo o no acumulativo y cuál es su porcentaje.
+    2. Calcula qué tanto te afecta ese dividendo tanto si el negocio va muy bien como si va mal.
+    3. Pide que cualquier decisión de repartir dividendos necesite el visto bueno de una mayoría amplia del consejo (board).
+    4. Fíjate si el dividendo se paga en efectivo o en más acciones, porque esto último te diluye todavía más.
+  nodos_siguientes: ['redemption_rights']
+  nodos_previos: ['automatic_conversion']

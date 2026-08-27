@@ -1,0 +1,146 @@
+
+==============================================================================
+1. LAS OCHO CIFRAS DEL GRAFO, EN TRES PUNTOS DE GIT Y EN EL ARBOL
+==============================================================================
+ref | nodos | vivos | depre | sig | prev | suma | union | auto | dupint
+fe24bd71   apertura, mi acta 86          3853  3188  665 |  8994  8973  17967  9617 | 0 0
+c3642f7f   TAREA 2, el instrumento       3853  3188  665 |  8994  8973  17967  9617 | 0 0
+b32a83bf   cierre, HEAD                  3853  3188  665 |  8996  8975  17971  9619 | 0 0
+arbol      de trabajo                    3853  3188  665 |  8996  8975  17971  9619 | 0 0
+
+MOVIDAS cierre menos apertura: sig +2, prev +2, suma +4, union +2
+
+==============================================================================
+2. EL MARCADOR DEL CRIBADO
+==============================================================================
+n=3388  A 551  B 72  C 5  D 2760
+puestos: min 1  max 3388  unicos 3388  huecos 0
+pares no dirigidos unicos: 3388
+
+==============================================================================
+3. EL REGISTRO DE DECIDIDAS, CRUZADO FILA POR FILA CONTRA EL GRAFO DE HOY
+==============================================================================
+filas 220  unicos 220  {'ESCRITA': 99, 'NO SE ENLAZA': 121}
+reparto por tramo: {3: 30, 4: 30, 5: 23, 6: 10, 7: 3, 8: 30, 9: 30, 10: 30, 11: 30, 12: 4}
+FILAS QUE NO CALZAN CON EL GRAFO: 0
+
+==============================================================================
+4. LA BOLSA, EL FILTRO Y EL DESFASE DEL CALIBRADO
+==============================================================================
+docs/plan/PASO_NODO_CALIBRADO.jsonl: 468 filas, 213 sin arista, 255 con arista
+FILTRADO_V87: 121 filas   FILTRADO_V86: 129 filas
+en V86 y ya no en V87: 8
+    determinacion_cuota_inicial -> analisis_competencia_franquicias
+    remover_barreras_orgullo_trabajo -> eliminar_slogans_y_exhortaciones
+    distribucion_poisson -> muestreo_de_aceptacion
+    personalizar_interacciones_cliente -> conexion_personal_emocional
+    customer_discovery_phase2_problem_test -> preparar_contacto_clientes
+    definicion_calidad_fitness_for_purpose -> descubrir_necesidades_del_cliente
+    definicion_y_concepto_de_aseguramiento_de_calidad -> trilogia_juran_qa_qc
+    motor_crecimiento_pago -> valor_de_vida_del_cliente
+NUEVAS en V87 que no estaban en V86: 0
+DESFASE estricto (definicion mia, sin alias): 45 fila(s)
+
+==============================================================================
+5. LA GUARDA, RECOMPUTADA DE CERO CON LAS DOS DEFINICIONES
+==============================================================================
+solo NO SE ENLAZA      -> prefijo 0..116, primera SIN DECIDIR indice 117 (juran_rcca_metodo -> diseno_implementacion_remedio, paso 3, quality), decididas por detras 2, ROJO
+cualquier decision     -> TODA LA BOLSA DECIDIDA (121 de 121), VERDE
+
+==============================================================================
+5b. LA GUARDA EN EL ESTADO PRE FILTRO (registro de la apertura, bolsa V87)
+==============================================================================
+registro en fe24bd71 (apertura): 216 filas, {'ESCRITA': 97, 'NO SE ENLAZA': 119}
+prefijo decidido de la bolsa V87 con el registro de apertura: 117
+primera sin decidir: indice 117, juran_rcca_metodo -> diseno_implementacion_remedio (paso 3, quality)
+sin decidir con el registro de apertura: 4 -> [117, 118, 119, 120]
+el registro de apertura es PREFIJO EXACTO del de hoy (nada borrado): True
+
+==============================================================================
+6. EL TRAMO 12 (INDICES 117 A 120), MEDIDO EN LAS DOS VISTAS
+==============================================================================
+117 juran_rcca_metodo                                          -> diseno_implementacion_remedio                  sig=True  prev=True  inv=False registro=ESCRITA
+118 valor_intangible_sostenibilidad                            -> alineacion_engagement_estrategia_general       sig=False prev=False inv=False registro=NO SE ENLAZA
+119 ganar_comprension_del_cliente                              -> dia_en_la_vida_del_cliente                     sig=True  prev=True  inv=False registro=ESCRITA
+120 no_shop_agreement                                          -> dividends_terms                                sig=False prev=False inv=False registro=NO SE ENLAZA
+
+ESCRITAS 2 [117, 119]
+NO ESCRITAS 2
+INCONSISTENTES 0 []
+INVERSAS presentes 0 []
+
+==============================================================================
+7. LA VARA DE LA CADENA, BFS PROPIO SOBRE EL GRAFO DE ANTES DE ESCRIBIR
+==============================================================================
+117 ALCANZABLE (6 saltos)  juran_rcca_metodo -> definicion_problema_moms -> analisis_sintomas -> formulacion_teorias_causa -> prueba_teorias_causa_raiz -> evaluacion_alternativas_solucion -> diseno_implementacion_remedio
+118 SIN CAMINO PREVIO (tope 6)   valor_intangible_sostenibilidad -> alineacion_engagement_estrategia_general
+119 ALCANZABLE (5 saltos)  ganar_comprension_del_cliente -> actualizar_modelo_de_negocio_pivot_o_proceed -> leap_of_faith_assumptions -> genchi_gembutsu_salir_del_edificio -> arquetipos_de_cliente -> dia_en_la_vida_del_cliente
+120 ALCANZABLE (4 saltos)  no_shop_agreement -> term_sheet_negociacion -> conversion_rights -> automatic_conversion -> dividends_terms
+
+ALCANZABLE 3: [(117, 6), (119, 5), (120, 4)]
+SIN CAMINO PREVIO 1: [118]
+
+HORIZONTE 30 sobre las SIN CAMINO PREVIO:
+118 9 saltos: valor_intangible_sostenibilidad -> incentivos_reconocimiento_sostenibilidad -> inversion_capacitacion_sostenibilidad -> mobilizar_empleados_cultura_ecologica -> evaluacion_actitudes_empleados -> definicion_metas_engagement -> construccion_capacidad_empleados -> estrategia_comunicacion_sostenibilidad -> pilotos_estrategia_sostenibilidad -> alineacion_engagement_estrategia_general
+
+==============================================================================
+8. LA VARA DE LA TAREA 4: VEREDICTO SIN DIRECCION Y RECIPROCA CONTRA V86
+==============================================================================
+119 ganar_comprension_del_cliente                        / dia_en_la_vida_del_cliente                   clase D puesto 1358 core         registro ESCRITA
+CON VEREDICTO: 1 de 4    CON RECIPROCA EN V86: 0 de 4
+
+==============================================================================
+9. EL PATRON HISTORICO, RECOMPUTADO DE CERO
+==============================================================================
+tramo | par | clase | puesto | dominio | decision de hoy
+ 3 | analisis_de_ratios_financieros -> retorno_sobre_capital | D | 1369 | core | ESCRITA
+ 3 | cero_defectos -> zero_defects_concepto | D | 2464 | quality | ESCRITA
+ 3 | control_exportaciones_bis -> licencia_exportacion_regulaciones | D | 1951 | exportacion | ESCRITA
+ 3 | estadistica_basica_calidad -> medidas_tendencia_dispersion | D | 2826 | quality | ESCRITA
+ 3 | fees_y_breakup_fee_adquisicion -> breakup_fee_evaluation | D | 223 | core | ESCRITA
+ 3 | identificar_si_tu_producto_necesita_proteccion_especial -> probar_empaque_antes_de_escalar_envios | D | 1746 | entrega | ESCRITA
+ 3 | mejora_calidad_crosby -> programa_mejora_calidad_14_pasos | D | 2583 | quality | ESCRITA
+ 4 | equipo_customer_development -> customer_development_team | B | 637 | core | NO SE ENLAZA
+ 4 | sujetos_de_control -> key_process_product_characteristics | D | 3205 | quality | ESCRITA
+ 5 | identificacion_evaluacion_peligros -> investigacion_incidentes | D | 2324 | health_safety | ESCRITA
+ 5 | mvp_catalogo_tecnicas -> mvp_tipo_video | D | 384 | core | NO SE ENLAZA
+ 5 | posicionamiento_vs_competidores -> analisis_competencia_franquicias | D | 2097 | franquicias | NO SE ENLAZA
+ 6 | abolir_inspeccion_masiva -> eliminacion_inspeccion_masiva_por_control_estadistico | D | 2560 | quality | NO SE ENLAZA
+ 7 | estructura_reporte_dual_estadistico -> organizacion_liderazgo_estadistico | D | 3121 | quality | NO SE ENLAZA
+ 8 | clasificacion_caracteristicas_calidad -> key_process_product_characteristics | D | 2959 | quality | NO SE ENLAZA
+ 8 | term_sheet_negociacion -> entender_term_sheet | D | 554 | core | NO SE ENLAZA
+ 9 | control_calidad_definicion -> plan_de_control | D | 3056 | quality | NO SE ENLAZA
+ 9 | formulacion_teorias_causa -> diagrama_causa_efecto | D | 2980 | quality | ESCRITA
+10 | customer_discovery_phase2_problem_test -> ganar_comprension_del_cliente | D | 1397 | core | NO SE ENLAZA
+10 | diagrama_de_flujo_proceso_map -> analisis_flujo_proceso | D | 2728 | quality | ESCRITA
+10 | estructura_equipos_innovacion_interna -> equipo_multifuncional_real | D | 1401 | core | ESCRITA
+11 | definicion_y_concepto_de_aseguramiento_de_calidad -> trilogia_juran_qa_qc | D | 2765 | quality | ESCRITA
+11 | personalizar_interacciones_cliente -> conexion_personal_emocional | D | 1396 | core | ESCRITA
+11 | remover_barreras_orgullo_trabajo -> eliminar_slogans_y_exhortaciones | D | 3174 | quality | ESCRITA
+11 | sistema_pull_push -> takt_time | D | 3231 | quality | NO SE ENLAZA
+12 | ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente | D | 1358 | core | ESCRITA
+
+RESUMEN POR TRAMO (con veredicto | clase D | ESCRITA | NO SE ENLAZA):
+  tramo  3: 7|7|7|0
+  tramo  4: 2|1|1|1
+  tramo  5: 3|3|1|2
+  tramo  6: 1|1|0|1
+  tramo  7: 1|1|0|1
+  tramo  8: 2|2|0|2
+  tramo  9: 2|2|1|1
+  tramo 10: 3|3|2|1
+  tramo 11: 4|4|3|1
+  tramo 12: 1|1|1|0
+
+==============================================================================
+10. LAS DOS QUE SIGUEN SIN ESCRIBIRSE (adjudicacion 5.9 del acta 85)
+==============================================================================
+descubrir_necesidades_del_cliente -> customer_needs_spreadsheet : en PASO_NODO_CALIBRADO = False
+curva_caracteristica_operativa -> distribucion_poisson : en PASO_NODO_CALIBRADO = False
+
+==============================================================================
+11. EL CIERRE DE OP-E-01: TODA LA BOLSA DECIDIDA
+==============================================================================
+bolsa V87 (121) toda en el registro: True
+unidades de la bolsa V87 SIN decision: 0 []
+filas del registro que NO estan en la bolsa V87: 99 (bolsas viejas de tramos anteriores)

@@ -1,0 +1,89 @@
+los 192, muestra de 14 frases enteras con sus senales:
+
+  busqueda_cofundador_complementario / evaluacion_capital_para_cofundadores  (puesto 393, core)
+  senales: ['no enlaza', 'madre e hijo']
+  frase: Ninguno enlaza al otro.
+
+  elevator_pitch_inversion / preparacion_materiales_fundraising  (puesto 396, core)
+  senales: ['no enlaza']
+  frase: Ninguno enlaza al otro.
+
+  customer_validation_sell_phase / realizar_pruebas_pasa_no_pasa  (puesto 455, core)
+  senales: ['no enlaza', 'madre e hijo']
+  frase: Ninguno enlaza al otro, aunque los dos cuelgan del mismo padre, introduccion_validacion_clientes: son hermanos que no se conocen.
+
+  modelo_spin_preguntas / preguntas_problema_2  (puesto 470, core)
+  senales: ['no enlaza']
+  frase: La madre enumera los cuatro tipos y ninguno enlaza al otro.
+
+  distincion_esfuerzo_energia / esfuerzo_y_energia_intelectual  (puesto 473, core)
+  senales: ['no enlaza']
+  frase: Ninguno enlaza al otro.
+
+  fit_problema_solucion / product_market_fit  (puesto 490, core)
+  senales: ['no enlaza']
+  frase: La madre enumera los tres tipos de encaje y ninguno enlaza al otro.
+
+  fit_problema_solucion / verificar_product_market_fit  (puesto 497, core)
+  senales: ['no enlaza']
+  frase: Es el SEGUNDO hijo sin arista de la misma madre: con el 490, fit_problema_solucion tiene dos nodos que desarrollan su paso 2 y no enlaza con ninguno.
+
+  metricas_cohortes / retention_metrics  (puesto 522, core)
+  senales: ['no enlaza']
+  frase: Ninguno enlaza al otro, aunque los dos cuelgan de la misma vecindad de retencion.
+
+  estrategia_de_innovacion_de_producto / estrategia_de_innovacion_y_tecnologia  (puesto 530, core)
+  senales: ['la arista que falta']
+  frase: Lo unico que el segundo tiene es la palabra arenas, en UNA LINEA dentro de una lista de seis que va de objetivos a roadmap: definir arenas estrategicas, mercados, tecnologias y sectores, donde enfocar los esfuerzos.
+
+  executive_summary_inversion / preparacion_materiales_fundraising  (puesto 552, core)
+  senales: ['no enlaza', 'madre e hijo']
+  frase: jo sin arista de la misma madre: con el puesto 396, preparacion_materiales_fundraising tiene DOS nodos que desarrollan sus pasos 1 y 2, el elevator pitch y el resumen ejecutivo, y no enlaza con ninguno de los dos.
+
+  etapa_pruebas_necesaria / etapa_testing_validation  (puesto 555, core)
+  senales: ['no enlaza']
+  frase: Ninguno enlaza al otro.
+
+  involucramiento_fundador_busqueda_ceo / sucesion_iniciada_por_fundador  (puesto 557, core)
+  senales: ['no enlaza']
+  frase: Ninguno enlaza al otro.
+
+  term_sheet_negociacion / term_sheet_overview  (puesto 577, core)
+  senales: ['la arista que falta']
+  frase: FIGURA ANOTADA, de las de la ARISTA QUE FALTA del banco 9.
+
+  seis_canales_comunicacion_assess / seis_herramientas_comunicacion_fase_activate  (puesto 580, core)
+  senales: ['no enlaza']
+  frase: Sin arista entre ellos, y no hace falta: cada uno enlaza a la fase que le sigue en la serie, Assess a Admit y Activate a Acclimate.
+
+==============================================================================
+LARGO DE LA FRASE en los 192:
+  min 20  max 335  media 170.8
+
+frases que NOMBRAN a alguno de los dos nodos por su id:
+  144 de 192
+
+VERIFICACION DEL DEDUPE 4 (pares que YA tienen arista hoy), recomputado sobre el grafo de HOY:
+  de los 192, YA tienen arista hoy (en cualquier direccion): 6
+  de los 192, con algun nodo que YA NO EXISTE en el grafo de hoy: 0
+  de los 192, con algun nodo DEPRECADO hoy: 36
+     metricas_cohortes (True) / retention_metrics (False)
+     term_sheet_negociacion (False) / term_sheet_overview (True)
+     estrategia_get_keep_grow (True) / keep_customers_strategy (False)
+     customer_discovery_cuatro_fases (False) / customer_segments_hypothesis (True)
+     seis_herramientas_comunicacion_celebracion (False) / seis_medios_comunicacion_cliente (True)
+     design_thinking_fundamentos (False) / triada_restricciones_diseno (True)
+     fase_activate (True) / fase_admit (True)
+     investigacion_como_habilidad_clave (True) / preguntas_implicacion (True)
+     fase_mobilizacion_equipo_multifuncional (True) / proceso_diseno_modelo_negocio_5_fases (False)
+     pivotar_o_proceder (True) / verificar_product_market_fit (False)
+     alineacion_con_canvas (False) / customer_profile_value_map (True)
+     apertura_llamada_venta_grande (False) / investigacion_como_habilidad_clave (True)
+     seis_canales_comunicacion_assess (False) / seis_medios_comunicacion_cliente (True)
+     diseno_organizacional_equipos_innovacion (True) / equipos_pequenos_vs_grandes (False)
+     fase_accomplish (True) / fase_admit (True)
+     business_model_canvas_vs_plan (True) / validar_modelo_negocio_hechos (False)
+     pivotar_o_proceder (True) / realizar_pruebas_pasa_no_pasa (False)
+     flexible_go_kill_criteria (True) / scoring_model_scorecard (True)
+     encontrar_vc_adecuado (False) / seleccion_etapa_fondo_vc (True)
+     customer_development_vs_business_plan (True) / romper_vision_en_experimentos (False)

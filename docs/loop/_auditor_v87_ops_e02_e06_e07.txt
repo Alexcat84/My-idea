@@ -1,0 +1,111 @@
+==========================================================================================
+--- id_op ---
+OP-E-02
+--- fase ---
+04_ENLACES
+--- tipo ---
+ENLACE
+--- nodos ---
+[]
+--- superviviente ---
+None
+--- preservar ---
+[]
+--- eliminar ---
+[]
+--- aristas_nuevas ---
+[]
+--- orden ---
+2
+--- depende_de ---
+[]
+--- bloquea_a ---
+[]
+--- verificacion ---
+['ningun racimo declarado conserva un miembro sin arista ni A que lo una al resto', 'ningun suelto se enlaza a un centro que no existe: si no hay centro, hay mesa', 'ningun suelto con par A se resuelve con una arista: eso es una fusion y va a la fase 03', 'toda nomina revisada por el DOMINIO de sus miembros antes de aplicar la regla', 'P.9: la arista se escribe con el ID RESUELTO al dia de su escritura, y se comprueba que NO NAZCA RESOLVIENDO POR ALIAS. Si el id escrito no es el id vivo, la arista se rehace']
+--- evidencia ---
+['INTRA_DOMINIO_INFORME.md seccion 11.bis.3: la particion 5 mas 4 mas 1 del racimo de la IA, vigente al puesto 1517', 'PENDIENTES.md, ARREGLOS MECANICOS, 2. TRES RACIMOS CON MIEMBROS DE OTRO DOMINIO', 'docs/RACIMOS_MIEMBROS.jsonl, el censo']
+--- estado ---
+HECHA
+--- fecha_corte ---
+2026-08-26
+--- adjudicacion ---
+REGLA ESCRITA PARA LOS SUELTOS, y son tres casos. 1) El suelto se ENLAZA al centro cuando el racimo TIENE centro y su par con el centro ya salio SANO. 2) Si el suelto tiene par A, no es enlace: es FUSION. 3) Si el racimo NO tiene centro, no se inventa: va a su mesa.
+--- pregunta_pendiente ---
+None
+--- nota ---
+LA REGLA EN UNA TABLA: si el racimo tiene centro y el par del suelto con ese centro salio D, se ENLAZA; si el par salio A, se FUNDE; si el racimo no tiene centro, va a MESA. EL EJEMPLAR MEDIDO: comprender_alineacion_etica_ia, el SUELTO del racimo de la supervision de la IA, cuya particion provisional es 5 mas 4 mas 1. ESE CASO CAE EN EL TERCER SUPUESTO: el racimo esta partido en dos bloques y NO tiene centro declarado, asi que el suelto VA A MESA y no se enlaza. POR QUE LA REGLA TIENE QUE NOMBRAR EL CASO SIN CENTRO: es justo donde la tentacion es inventar uno. Un racimo partido en dos bloques no tiene centro por definicion, y colgar el suelto de cualquiera de los dos bloques seria adjudicar la particion de contrabando. LA SEGUNDA MITAD DE ESTA OPERACION, sin cambios: los TRES racimos con miembro de otro dominio (desarrollo_value_proposition_usp en un racimo de core siendo de franquicias; value_stream_mapping_ambiental y analisis_flujo_de_valor en uno de quality siendo de environmental y core). O la nomina se depura, o el racimo se declara TRANSVERSAL de forma explicita. CIERRE POR DECLARACION (26 ago 2026, vuelta 76, adjudicado por el auditor, acta de la vuelta 75 seccion 4.1). Medido HOY, corrida propia de scripts/loop/vuelta75_op_e02_racimos.py: de los 32 racimos censados en docs/RACIMOS_MIEMBROS.jsonl, los 171 miembros siguen VIVOS (0 muertos/fundidos desde el censo) y 0 racimos tienen miembro ajeno tras normalizar NUCLEO contra core. EL SUELTO comprender_alineacion_etica_ia va a MESA sin arista: su racimo esta partido en dos bloques y no tiene centro, tercer supuesto de la regla del 11 ago 2026. LOS TRES EJEMPLARES DE RACIMO CON MIEMBRO AJENO, cada uno por su salida del remedio (o la nomina se depura, o el racimo se declara transversal): value_stream_mapping_ambiental y analisis_flujo_de_valor YA RESUELTOS por la segunda salida (su racimo Mapeo del flujo de valor tiene dominio_censado literal quality + environmental + nucleo, que ES la declaracion transversal explicita); desarrollo_value_proposition_usp por la primera salida, la nomina se depura (informe seccion 33.2: CAE, y ni siquiera es del dominio, CERO SOLAPE; 33.3 lo llama defecto de NOMINA, no de lectura). Con eso la ficha tiene destino en sus tres piezas y la operacion queda HECHA por el criterio de la fase: no escribio ni una arista, es lectura y declaracion.
+==========================================================================================
+--- id_op ---
+OP-E-06
+--- fase ---
+04_ENLACES
+--- tipo ---
+ENLACE CON EVIDENCIA DE LECTURA
+--- nodos ---
+[]
+--- superviviente ---
+None
+--- preservar ---
+[]
+--- eliminar ---
+[]
+--- aristas_nuevas ---
+[]
+--- orden ---
+9
+--- depende_de ---
+['OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06', 'OP-D-07']
+--- bloquea_a ---
+[]
+--- verificacion ---
+['LA DIRECCION DE CADA ARISTA SALE DE SU PROPIA RAZON, no se decide de nuevo: la razon dice cual nodo lo dice en una linea y cual trae el procedimiento. Si una razon no lo dice, el par NO entra en esta operacion', 'P.9: cada arista se escribe con el ID RESUELTO al dia de su escritura', 'UNA SOLA DIRECCION por arista, de la madre al hijo, por la regla de la escalera', 'DEDUPE COMPROBADO en cuatro frentes antes de escribir: contra la bolsa de 477 de la fase 04, contra las aristas ya escritas en otras operaciones, contra la cola de relectura post fusion, y contra los pares que YA tienen arista en el grafo resolviendo por alias', 'las aristas pasan por la guarda que RESUELVE de OP-C-04, y al terminar por la guarda OP-C-05']
+--- evidencia ---
+['scripts/plan/barrido_razones_d.py, corrida del 12 ago 2026', 'docs/plan/COSECHA_RAZONES_D.jsonl, 397 filas', 'MEDIDO: 397 D levantadas de 1.621, el 24,5%. Cubiertos 104 (92 ya tienen arista en el grafo y 12 estaban en la bolsa de la fase 04). NUEVOS 293, de los cuales 192 con direccion explicita', 'docs/plan/CONTROL_MUESTRA_D.md, que es de donde salio la sospecha']
+--- estado ---
+LISTA
+--- fecha_corte ---
+2026-08-12
+--- adjudicacion ---
+LA COSECHA DE RAZONES DE LAS D, levantada el 12 ago 2026. 192 ENLACES CON DIRECCION EXPLICITA EN SU PROPIA RAZON. DE DONDE SALEN: el control de la muestra pineada encontro sin buscarlo que NUEVE de las veintitres D que sostienen nombran una jerarquia o una arista que falta. El barrido recorrio LAS 1.621 D del archivo al corte 2.117 y levanto 397, el 24,5%. Tras el dedupe quedan 293 nuevos, y de esos 192 traen la direccion escrita en la razon. SON DE MEJOR CLASE QUE LA BOLSA DE LA FASE 04, y hay que decir por que: los 477 del barrido paso contra nodo son candidatos de un instrumento de VOCABULARIO, con 69,6% de acierto medido. Estos YA SE LEYERON PAR POR POR, y el lector escribio que faltaba la arista. SU EVIDENCIA NO ES UNA MEDIDA DE PARECIDO: ES UN VEREDICTO.
+--- pregunta_pendiente ---
+None
+--- nota ---
+REPARTO POR DOMINIO DE LOS 192: core 146, entrega 15, environmental 15, exportacion 12 y franquicias 4. En compras no levanto ninguno, y no es que no haya: es que sus razones son mas cortas y no usan la formula de la vara. EL DATO QUE MAS SORPRENDE Y QUE HAY QUE DECIR: DE LOS 397 LEVANTADOS, SOLO DOCE ESTABAN EN LA BOLSA DE 477 DE LA FASE 04. Los dos instrumentos apenas se solapan, un 3%. EL BARRIDO DE VOCABULARIO Y LA LECTURA ENCUENTRAN COSAS DISTINTAS, y eso significa que la fase 04 tenia medida solo una de sus dos mitades. Y LOS 92 QUE YA TENIAN ARISTA TAMBIEN VALEN COMO CONTROL: son razones que nombran la jerarquia sobre pares que el grafo YA cablea. El instrumento no esta inventando la figura.
+==========================================================================================
+--- id_op ---
+OP-E-07
+--- fase ---
+04_ENLACES
+--- tipo ---
+LECTURA DIRIGIDA CORTA
+--- nodos ---
+[]
+--- superviviente ---
+None
+--- preservar ---
+[]
+--- eliminar ---
+[]
+--- aristas_nuevas ---
+[]
+--- orden ---
+10
+--- depende_de ---
+['OP-E-06']
+--- bloquea_a ---
+[]
+--- verificacion ---
+['NO SE RELEE EL PAR: se lee su razon, que ya esta escrita. Si la razon tampoco lo dice, el par sale de la cosecha y se anota por que', 'cada direccion extraida cita la frase de la razon de la que sale', 'los que salgan se cuentan y se nombran: un descarte silencioso aqui seria un enlace perdido']
+--- evidencia ---
+['scripts/plan/barrido_razones_d.py, corrida del 12 ago 2026', 'docs/plan/COSECHA_RAZONES_D.jsonl, 397 filas', 'MEDIDO: 101 nuevos levantados solo por CONTINUA por la vara. Reparto: core 74, environmental 12, exportacion 11 y entrega 4']
+--- estado ---
+LISTA
+--- fecha_corte ---
+2026-08-12
+--- adjudicacion ---
+LOS 101 QUE FALTAN DE LA COSECHA, y NO son una lectura de par: son una lectura de FRASE. Se levantaron por CONTINUA POR LA VARA, que por el banco 9.6.1 significa que hay jerarquia, PERO SU RAZON NO NOMBRA CUAL NODO ES LA MADRE. La clase ya esta decidida y no se toca: lo unico que falta es LEER LA RAZON Y EXTRAER LA DIRECCION.
+--- pregunta_pendiente ---
+None
+--- nota ---
+ES LA OPERACION MAS BARATA DEL PLAN Y UNA DE LAS QUE MAS ARISTAS PUEDE DAR: ciento un textos ya escritos, y de cada uno hay que sacar una sola cosa, quien dice la linea y quien trae el procedimiento. SE SEPARA DE OP-E-06 A PROPOSITO: alli la direccion viene dada y aqui hay que extraerla. Mezclarlas haria que 192 aristas seguras esperaran a 101 lecturas de frase.
