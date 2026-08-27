@@ -1,0 +1,86 @@
+unidades leidas del filtro: 30 | frescas: 30
+veredictos leidos: 3388 | pares no dirigidos unicos: 3388
+bolsa filtrada V85: 136 unidades
+
+| # | par | veredicto sin direccion (4.a) | reciproca en la bolsa V85 (4.b) |
+|---:|---|---|---|
+| 95 | `determinacion_cuota_inicial -> analisis_competencia_franquicias` (paso 2, dominio franquicias) | sin veredicto | no |
+| 96 | `key_partners_hypothesis -> actualizar_business_model_canvas_tuneup` (paso 5, dominio core) | sin veredicto | no |
+| 97 | `clasificacion_benchmarking -> consortium_benchmarking` (paso 4, dominio quality) | sin veredicto | no |
+| 98 | `remover_barreras_orgullo_trabajo -> eliminar_slogans_y_exhortaciones` (paso 6, dominio quality) | D puesto 3174 (quality), dirigido eliminar_slogans_y_exhortaciones -> remover_barreras_orgullo_trabajo | no |
+| 99 | `sujetos_de_control -> optimizacion_caracteristicas_diseno` (paso 3, dominio quality) | sin veredicto | no |
+| 100 | `conditions_precedent_financing -> entender_term_sheet` (paso 3, dominio core) | sin veredicto | no |
+| 101 | `distribucion_poisson -> muestreo_de_aceptacion` (paso 4, dominio quality) | sin veredicto | no |
+| 102 | `transformacion_calidad_compromiso_alta_direccion_japon -> planificacion_calidad_crosby` (paso 5, dominio quality) | sin veredicto | no |
+| 103 | `personalizar_interacciones_cliente -> conexion_personal_emocional` (paso 1, dominio core) | D puesto 1396 (core), dirigido conexion_personal_emocional -> personalizar_interacciones_cliente | no |
+| 104 | `sistema_pull_push -> takt_time` (paso 3, dominio quality) | D puesto 3231 (quality), dirigido sistema_pull_push -> takt_time | no |
+| 105 | `customer_discovery_phase2_problem_test -> preparar_contacto_clientes` (paso 2, dominio core) | sin veredicto | no |
+| 106 | `formalizar_un_proceso_ad_hoc -> metricas_calidad` (paso 4, dominio core) | sin veredicto | no |
+| 107 | `medir_lo_que_importa_no_solo_lo_facil -> metricas_calidad` (paso 1, dominio core) | sin veredicto | no |
+| 108 | `plan_mejora_procesos -> metricas_calidad` (paso 3, dominio core) | sin veredicto | no |
+| 109 | `sujetos_de_control -> establecer_metas_caracteristicas` (paso 3, dominio quality) | sin veredicto | no |
+| 110 | `escenarios_diseno_modelo_negocio -> escenarios_de_evolucion_de_la_ia` (paso 5, dominio core) | sin veredicto | no |
+| 111 | `definicion_calidad_fitness_for_purpose -> descubrir_necesidades_del_cliente` (paso 2, dominio quality) | sin veredicto | no |
+| 112 | `inventario_conocimiento_estadistico_personal -> roi_proyectos_calidad` (paso 4, dominio quality) | sin veredicto | no |
+| 113 | `reconocer_mercancia_peligrosa_disfrazada -> clasificar_tipo_paquete` (paso 4, dominio entrega) | sin veredicto | no |
+| 114 | `identificacion_proveedores_criticos -> validacion_externa_reportes` (paso 4, dominio environmental) | sin veredicto | no |
+| 115 | `tipos_de_riesgo_invencion_vs_mercado -> fundadores_lideran_validacion` (paso 4, dominio core) | sin veredicto | no |
+| 116 | `definicion_y_concepto_de_aseguramiento_de_calidad -> planificacion_inicial_calidad` (paso 1, dominio quality) | sin veredicto | no |
+| 117 | `definicion_y_concepto_de_aseguramiento_de_calidad -> trilogia_juran_qa_qc` (paso 3, dominio quality) | D puesto 2765 (quality), dirigido definicion_y_concepto_de_aseguramiento_de_calidad -> trilogia_juran_qa_qc | no |
+| 118 | `planificacion_recoleccion_datos -> analisis_pareto_proyectos_elefante` (paso 7, dominio quality) | sin veredicto | no |
+| 119 | `rol_director_calidad -> circulos_calidad_qc` (paso 4, dominio quality) | sin veredicto | no |
+| 120 | `establecer_diseno_final_producto -> establecer_metas_caracteristicas` (paso 1, dominio quality) | sin veredicto | no |
+| 121 | `desarrollo_value_proposition_usp -> posicionamiento_vs_competidores` (paso 1, dominio franquicias) | sin veredicto | no |
+| 122 | `motor_crecimiento_pago -> valor_de_vida_del_cliente` (paso 1, dominio core) | sin veredicto | no |
+| 123 | `constraint_management -> caso_estudio_benchmarking_terminal` (paso 4, dominio quality) | sin veredicto | no |
+| 124 | `ingenieria_calidad_proveedores -> desarrollar_estrategias_largo_plazo` (paso 4, dominio quality) | sin veredicto | no |
+
+RESUMEN: 4 de 30 con veredicto, 0 de 30 con reciproca
+
+==============================================================================
+LA TABLA DEL PATRON HISTORICO (TAREA 2.b, escalada de EJECUTOR.md regla 1,
+adjudicacion 5.3 del acta 85). Tallada de docs/plan/OP_E_01_DECIDIDAS.jsonl
+y docs/INTRA_DOMINIO_VEREDICTOS.jsonl. CADA fila es un par del registro que
+SI tiene veredicto (cruce sin direccion); la columna decision es la de HOY.
+==============================================================================
+
+| tramo | par | clase | puesto | dominio | decision (registro de hoy) |
+|---:|---|:---:|---:|---|---|
+| 3 | `fees_y_breakup_fee_adquisicion -> breakup_fee_evaluation` | D | 223 | core | ESCRITA |
+| 3 | `analisis_de_ratios_financieros -> retorno_sobre_capital` | D | 1369 | core | ESCRITA |
+| 3 | `identificar_si_tu_producto_necesita_proteccion_especial -> probar_empaque_antes_de_escalar_envios` | D | 1746 | entrega | ESCRITA |
+| 3 | `control_exportaciones_bis -> licencia_exportacion_regulaciones` | D | 1951 | exportacion | ESCRITA |
+| 3 | `cero_defectos -> zero_defects_concepto` | D | 2464 | quality | ESCRITA |
+| 3 | `mejora_calidad_crosby -> programa_mejora_calidad_14_pasos` | D | 2583 | quality | ESCRITA |
+| 3 | `estadistica_basica_calidad -> medidas_tendencia_dispersion` | D | 2826 | quality | ESCRITA |
+| 4 | `equipo_customer_development -> customer_development_team` | B | 637 | core | NO SE ENLAZA |
+| 4 | `sujetos_de_control -> key_process_product_characteristics` | D | 3205 | quality | ESCRITA |
+| 5 | `mvp_catalogo_tecnicas -> mvp_tipo_video` | D | 384 | core | NO SE ENLAZA |
+| 5 | `posicionamiento_vs_competidores -> analisis_competencia_franquicias` | D | 2097 | franquicias | NO SE ENLAZA |
+| 5 | `identificacion_evaluacion_peligros -> investigacion_incidentes` | D | 2324 | health_safety | ESCRITA |
+| 6 | `abolir_inspeccion_masiva -> eliminacion_inspeccion_masiva_por_control_estadistico` | D | 2560 | quality | NO SE ENLAZA |
+| 7 | `estructura_reporte_dual_estadistico -> organizacion_liderazgo_estadistico` | D | 3121 | quality | NO SE ENLAZA |
+| 8 | `term_sheet_negociacion -> entender_term_sheet` | D | 554 | core | NO SE ENLAZA |
+| 8 | `clasificacion_caracteristicas_calidad -> key_process_product_characteristics` | D | 2959 | quality | NO SE ENLAZA |
+| 9 | `formulacion_teorias_causa -> diagrama_causa_efecto` | D | 2980 | quality | ESCRITA |
+| 9 | `control_calidad_definicion -> plan_de_control` | D | 3056 | quality | NO SE ENLAZA |
+| 10 | `customer_discovery_phase2_problem_test -> ganar_comprension_del_cliente` | D | 1397 | core | NO SE ENLAZA |
+| 10 | `estructura_equipos_innovacion_interna -> equipo_multifuncional_real` | D | 1401 | core | ESCRITA |
+| 10 | `diagrama_de_flujo_proceso_map -> analisis_flujo_proceso` | D | 2728 | quality | ESCRITA |
+| 11 | `personalizar_interacciones_cliente -> conexion_personal_emocional` | D | 1396 | core | ESCRITA |
+| 11 | `definicion_y_concepto_de_aseguramiento_de_calidad -> trilogia_juran_qa_qc` | D | 2765 | quality | ESCRITA |
+| 11 | `remover_barreras_orgullo_trabajo -> eliminar_slogans_y_exhortaciones` | D | 3174 | quality | ESCRITA |
+| 11 | `sistema_pull_push -> takt_time` | D | 3231 | quality | NO SE ENLAZA |
+
+RESUMEN POR TRAMO (pares con veredicto | clase D | decision ESCRITA | decision NO SE ENLAZA):
+  tramo 10: 3 con veredicto | 3 clase D | 2 ESCRITA | 1 NO SE ENLAZA
+  tramo 11: 4 con veredicto | 4 clase D | 3 ESCRITA | 1 NO SE ENLAZA
+  tramo 3: 7 con veredicto | 7 clase D | 7 ESCRITA | 0 NO SE ENLAZA
+  tramo 4: 2 con veredicto | 1 clase D | 1 ESCRITA | 1 NO SE ENLAZA
+  tramo 5: 3 con veredicto | 3 clase D | 1 ESCRITA | 2 NO SE ENLAZA
+  tramo 6: 1 con veredicto | 1 clase D | 0 ESCRITA | 1 NO SE ENLAZA
+  tramo 7: 1 con veredicto | 1 clase D | 0 ESCRITA | 1 NO SE ENLAZA
+  tramo 8: 2 con veredicto | 2 clase D | 0 ESCRITA | 2 NO SE ENLAZA
+  tramo 9: 2 con veredicto | 2 clase D | 1 ESCRITA | 1 NO SE ENLAZA
+
+CASO OBLIGATORIO (acta 85, adjudicacion 5.3): formulacion_teorias_causa -> diagrama_causa_efecto, tramo 9, clase D, decision ESCRITA

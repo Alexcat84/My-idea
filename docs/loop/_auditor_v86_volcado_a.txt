@@ -1,0 +1,476 @@
+==============================================================================
+UNIDAD 95 | determinacion_cuota_inicial -> analisis_competencia_franquicias | paso 2 | dominio franquicias | titulo_ratio 75.4 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Analizar las cuotas iniciales de competidores directos comparables.
+==============================================================================
+  [MADRE] determinacion_cuota_inicial
+     titulo: Determinación de la Cuota Inicial de Franquicia
+     dominio/fase: franquicias / planificacion
+     resumen: La cuota inicial debe tratarse principalmente como una herramienta de recuperación de costos (marketing, comisiones de venta, asesoría legal, selección de sitio, capacitación inicial) y no como centro de ganancias, ya que el verdadero retorno viene de la relación a largo plazo (regalías). Debe analizarse frente a competidores comparables y alinearse con el posicionamiento deseado (premium vs. bajo costo).
+     pasos:
+       1. Calcular los costos reales de venta, arranque y soporte por franquicia.
+       2. Analizar las cuotas iniciales de competidores directos comparables.  <<< EL PASO QUE LA UNIDAD TRAE
+       3. Definir el posicionamiento de marca (premium, estándar, bajo costo) y ajustar la cuota en consecuencia.
+       4. Evitar fijar una cuota que erija barreras de entrada innecesarias.
+     entregable: Cuota de franquicia inicial justificada con análisis de costos y competencia.
+     nodos_siguientes (2): ['determinacion_regalias', 'analisis_competencia_franquicias']
+     nodos_previos (5): ['franquicia_unidad_individual', 'franquicia_conversion', 'franquicia_desarrollo_area', 'subfranquicia_master', 'franquicia_representante_area']
+
+  [HIJO] analisis_competencia_franquicias
+     titulo: Analizar a Fondo a los Competidores Directos de Franquicia
+     dominio/fase: franquicias / validacion
+     resumen: Para desarrollar una posición única (USP), el franquiciador debe conocer profundamente a los competidores con los que realmente compite por franquiciados (no todos los 3,000 franquiciadores existentes). Esto incluye revisar sus FDDs, entrevistar a sus franquiciados y monitorear constantemente nuevos competidores mencionados por los prospectos.
+     pasos:
+       1. Identificar a los competidores directos por categoría, tamaño de inversión y mercado
+       2. Obtener y analizar los FDDs de esos competidores
+       3. Entrevistar a franquiciados de esos sistemas para entender fortalezas y debilidades
+       4. Preguntar sistemáticamente a los propios prospectos qué otras opciones están considerando
+     entregable: Informe de análisis competitivo con FDDs revisados y entrevistas a franquiciados de la competencia
+     nodos_siguientes (3): ['historia_marca_diferenciacion', 'propuesta_valor_franquicia', 'reduccion_riesgo_percibido']
+     nodos_previos (2): ['entrenar_franquiciados_validacion', 'determinacion_cuota_inicial']
+
+==============================================================================
+UNIDAD 96 | key_partners_hypothesis -> actualizar_business_model_canvas_tuneup | paso 5 | dominio core | titulo_ratio 75.0 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Actualiza el Business Model Canvas con los socios identificados
+==============================================================================
+  [MADRE] key_partners_hypothesis
+     titulo: Hipótesis de Socios Clave
+     dominio/fase: core / planificacion
+     resumen: Identifica los socios esenciales que proveen capacidades, productos o servicios que la startup no puede o no quiere desarrollar internamente. Se organizan en cuatro tipos: alianzas estratégicas, coopetición, desarrollo conjunto de negocio y relaciones con proveedores clave. Con cada uno se define el 'intercambio de valor', qué provee y qué recibe a cambio, anotado en una tabla de tres columnas junto a sus candidatos suplentes. La flexibilidad de cada proveedor se evalúa en tiempos de entrega, tamaños de pedido, crédito y precio, y se distingue con cuidado entre socios y recursos clave, que no son lo mismo. El resultado se lleva al Business Model Canvas y se planea su validación posterior con reuniones reales, porque una tabla de socios sin una reunión detrás sigue siendo una hipótesis. El ejemplo de Apple y el iPod con las discográficas muestra cómo un socio puede potenciar el modelo de negocio entero. Aplica igual cuando el producto es físico y necesita proveedores, alianzas o distribución mediante terceros.
+     pasos:
+       1. Lista los socios potenciales, los primarios y sus candidatos suplentes, clasificados en los cuatro tipos: alianzas estratégicas, coopetición, desarrollo conjunto de negocio y relaciones con proveedores clave
+       2. Define en una tabla de tres columnas qué proveerá cada socio y qué recibirá de la empresa a cambio: nombre del socio, qué provee, qué ofreces tú
+       3. Evalúa la flexibilidad de cada proveedor en tiempos de entrega, tamaños de pedido, crédito, precio y condiciones
+       4. Distingue claramente entre socios y recursos clave
+       5. Actualiza el Business Model Canvas con los socios identificados  <<< EL PASO QUE LA UNIDAD TRAE
+       6. Planea la validación posterior con reuniones reales con cada socio candidato
+     entregable: Tabla de socios clave con columnas: nombre del socio, tipo de relación, qué provee, y qué ofrece la empresa a cambio como contraprestación, con los candidatos suplentes identificados y la validación con reuniones reales ya planeada
+     nodos_siguientes (5): ['revenue_pricing_hypothesis', 'test_socios_de_trafico', 'contratar_cerrador_de_ventas', 'herramientas_de_activacion_web', 'mapa_de_canal_de_ventas']
+     nodos_previos (3): ['key_resources_hypothesis', 'dependency_analysis', 'intellectual_property_strategy']
+
+  [HIJO] actualizar_business_model_canvas_tuneup
+     titulo: Actualización Iterativa del Business Model Canvas ('Tune-up')
+     dominio/fase: core / validacion
+     resumen: El Business Model Canvas se revisa como un 'tune-up' después de cada ronda de Customer Discovery, no como una revisión exhaustiva final. La propuesta de valor suele ser el elemento más afectado, ya que el feedback de clientes revela si tu producto realmente resuelve su problema. Los segmentos de clientes también deben reevaluarse cuando el producto resuena solo con un subconjunto del mercado. Si detectas que una hipótesis del modelo de negocio no se cumple con los resultados de las pruebas, ajusta también las hipótesis de ingresos según quién mostró entusiasmo real. Documenta hallazgos, sorpresas y decepciones de cada ronda para mantener trazabilidad de tus cambios.
+     pasos:
+       1. Revisa tu propuesta de valor a la luz del feedback de clientes recibido
+       2. Reevalúa tus segmentos de clientes identificando si el producto resuena solo con un subconjunto
+       3. Ajusta tus hipótesis de ingresos según los segmentos que mostraron entusiasmo real
+       4. Documenta los cambios, sorpresas y decepciones como parte de un tune-up, no una revisión final
+     entregable: Business Model Canvas actualizado con anotaciones de cambios en propuesta de valor, segmentos de cliente e hipótesis de ingresos
+     nodos_siguientes (10): ['product_market_fit', 'identificar_advisory_board', 'genchi_gembutsu_salir_del_edificio', 'manifiesto_regla1_hechos_fuera_del_edificio', 'identificar_consejo_asesores', 'verificar_product_market_fit', 'customer_discovery_introduccion', 'testear_circulo_cuadrado_rectangulo', 'reempaquetado_producto', 'value_proposition_startup']
+     nodos_previos (7): ['prueba_solucion_con_cliente', 'categorias_entusiasmo_cliente', 'reempaquetado_producto', 'realizar_pruebas_pasa_no_pasa', 'medir_comportamiento_cliente_mvp', 'customer_discovery_phase2_problem_test', 'determinar_tipo_de_mercado']
+
+==============================================================================
+UNIDAD 97 | clasificacion_benchmarking -> consortium_benchmarking | paso 4 | dominio quality | titulo_ratio 75.0 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Evaluar el nivel de control, costo y tiempo disponible para el tipo de benchmarking elegido
+==============================================================================
+  [MADRE] clasificacion_benchmarking
+     titulo: Clasificación de Tipos de Benchmarking
+     dominio/fase: quality / planificacion
+     resumen: El benchmarking puede clasificarse según qué se está comparando (funcional, de proceso, de unidad de negocio/sitio, de proyecto, genérico, modelos de excelencia empresarial) y según quién participa (interno, externo, competitivo, no competitivo). Cada tipo tiene beneficios y limitaciones distintas relacionadas con la similitud de los participantes, el nivel de control sobre el proceso y el costo/tiempo requerido.
+     pasos:
+       1. Determinar el objeto del benchmarking: función, proceso, unidad de negocio, proyecto o modelo genérico
+       2. Decidir el tipo de participantes: internos, externos, competidores o no competidores
+       3. Seleccionar el modelo de excelencia (ej. Baldridge o EFQM) si se busca un marco holístico de comparación
+       4. Evaluar el nivel de control, costo y tiempo disponible para el tipo de benchmarking elegido  <<< EL PASO QUE LA UNIDAD TRAE
+     entregable: Definición documentada del tipo de benchmarking a realizar (qué, quién y cómo) que oriente el diseño del estudio
+     nodos_siguientes (2): ['aspectos_legales_eticos_benchmarking', 'generic_benchmarking']
+     nodos_previos (1): ['benchmarking_proceso']
+
+  [HIJO] consortium_benchmarking
+     titulo: Benchmarking de Consorcio
+     dominio/fase: quality / planificacion
+     resumen: Forma de benchmarking con el mayor potencial de generar mejoras de desempeño, en la que un grupo de participantes (frecuentemente facilitado por un tercero) acuerda conjuntamente los participantes, temas, metodología, métricas, criterios de validación y cronograma. Este alto nivel de control colectivo produce datos confiables, análisis exhaustivos y resultados de gran valor, aunque requiere mayor inversión de tiempo y recursos.
+     pasos:
+       1. Identificar organizaciones interesadas en formar un consorcio de benchmarking sobre un tema común.
+       2. Acordar colectivamente el alcance, métricas, definiciones y cronograma del estudio.
+       3. Designar un facilitador (interno o externo) para coordinar el proceso.
+       4. Establecer criterios de validación de datos compartidos por todos los participantes.
+       5. Ejecutar el estudio y compartir hallazgos y mejores prácticas entre los miembros.
+     entregable: Consorcio de benchmarking formalizado con acuerdo de alcance, métricas y cronograma definidos.
+     nodos_siguientes (2): ['proceso_benchmarking_juran_7pasos', 'benchmarking_trilogia_juran']
+     nodos_previos (1): ['fuentes_datos_benchmarking']
+
+==============================================================================
+UNIDAD 98 | remover_barreras_orgullo_trabajo -> eliminar_slogans_y_exhortaciones | paso 6 | dominio quality | titulo_ratio 75.0 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Reemplazar carteles y exhortaciones por comunicación real de avances
+==============================================================================
+  [MADRE] remover_barreras_orgullo_trabajo
+     titulo: Remover Barreras al Orgullo por el Trabajo Bien Hecho
+     dominio/fase: quality / ejecucion
+     resumen: El Punto 12 de Deming dice que tu, como responsable de tu negocio, debes eliminar las barreras que impiden a las personas que trabajan contigo sentir orgullo por lo que hacen. Estas barreras incluyen evaluaciones injustas, materiales o herramientas defectuosas, falta de mantenimiento, instrucciones poco claras, presion por cumplir cuotas en vez de cuidar la calidad, y no escuchar las sugerencias de quienes hacen el trabajo. Cuando estas barreras se mantienen, aparecen la desmotivacion, el ausentismo y la desconfianza hacia ti, y eso golpea directamente la calidad y la productividad.
+     pasos:
+       1. Conversar directamente con las personas que trabajan contigo, o preguntarles de forma sencilla, para identificar barreras especificas a su desempeño
+       2. Clasificar las barreras identificadas según su origen: materiales, equipos, supervision, comunicacion
+       3. Priorizar las barreras y definir quien se encarga de eliminar cada una
+       4. Crear un canal simple de retroalimentacion continua para dar seguimiento a las mejoras
+       5. Clasificar barreras según sean responsabilidad de gestión o del sistema
+       6. Reemplazar carteles y exhortaciones por comunicación real de avances  <<< EL PASO QUE LA UNIDAD TRAE
+     entregable: Lista priorizada de barreras identificadas, con un plan de accion y quien se encarga de resolver cada una
+     nodos_siguientes (2): ['mejora_continua_del_sistema', 'eliminar_slogans_y_exhortaciones']
+     nodos_previos (3): ['eliminar_cuotas_numericas_trabajadores', 'eliminar_metas_numericas_gerencia', 'eliminar_trabajo_a_destajo']
+
+  [HIJO] eliminar_slogans_y_exhortaciones
+     titulo: Eliminación de Lemas, Carteles y Exhortaciones
+     dominio/fase: quality / ejecucion
+     resumen: Deming plantea que los carteles y frases motivacionales que piden mejorar la calidad o el esfuerzo son ineficaces y hasta contraproducentes, porque asumen que el problema es falta de empeño cuando en realidad la mayoría de los problemas vienen del sistema, es decir, de las herramientas, procesos y decisiones que tú controlas. Estas campañas generan frustración y desconfianza, porque dejan ver que no entendiste las trabas reales que impiden un buen resultado, como materiales defectuosos, máquinas descalibradas o instrumentos poco confiables.
+     pasos:
+       1. Revisar los carteles, lemas o mensajes motivacionales que usas en tu negocio, y metas numéricas que le exiges solo a quienes ejecutan el trabajo
+       2. Eliminar toda frase que pida mejorar sin venir acompañada de un método o plan concreto
+       3. Calcular qué parte de los errores viene del sistema (herramientas, proveedores, procesos) y qué parte de las personas
+       4. Reemplazar los carteles genéricos por comunicación clara sobre qué estás haciendo para mejorar el sistema
+       5. Trabajar con tus proveedores de forma colaborativa en lugar de exigirles cambios abruptos sin apoyo
+     entregable: Revisión de tu comunicación interna con identificación de frases vacías y un plan para reemplazarlas por acciones concretas y medibles
+     nodos_siguientes (3): ['sistema_estable_variacion', 'mejora_del_sistema_responsabilidad_gerencial', 'sistema_estable_causas_comunes']
+     nodos_previos (2): ['eliminar_barreras_departamentales', 'remover_barreras_orgullo_trabajo']
+
+==============================================================================
+UNIDAD 99 | sujetos_de_control -> optimizacion_caracteristicas_diseno | paso 3 | dominio quality | titulo_ratio 74.7 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Traducir la voz del cliente en características de producto (KPC)
+==============================================================================
+  [MADRE] sujetos_de_control
+     titulo: Selección de Sujetos de Control (Control Subjects)
+     dominio/fase: quality / planificacion
+     resumen: Cada característica del producto o proceso a controlar se denomina 'sujeto de control'. Su selección es el primer paso crítico en la planificación del control, derivándose de necesidades del cliente, regulaciones, seguridad, análisis de modos de fallo (FMEA) y diseño de experimentos.
+     pasos:
+       1. Identificar los procesos y productos clave a controlar
+       2. Definir los objetivos del proceso de trabajo
+       3. Traducir la voz del cliente en características de producto (KPC)  <<< EL PASO QUE LA UNIDAD TRAE
+       4. Identificar características de control de proceso (KCC) relacionadas
+       5. Seleccionar los sujetos de control finales basados en las fuentes disponibles (FMEA, regulaciones, DOE)
+     entregable: Lista de sujetos de control (KPCs y KCCs) documentada para el proceso
+     nodos_siguientes (2): ['establecer_estandares_desempeno', 'key_process_product_characteristics']
+     nodos_previos (1): ['bucle_retroalimentacion_control']
+
+  [HIJO] optimizacion_caracteristicas_diseno
+     titulo: Optimización de Características y Metas del Producto
+     dominio/fase: quality / planificacion
+     resumen: Una vez completado el diseño preliminar, debe optimizarse para satisfacer tanto al cliente como al proveedor, minimizando costos combinados y superando a la competencia. La optimización requiere un enfoque organizado que balancee necesidades multiorganizacionales mediante técnicas como revisión de diseño, equipos multifuncionales y negociación estructurada.
+     pasos:
+       1. Realizar revisiones de diseño formales en distintas etapas del desarrollo con especialistas externos al equipo
+       2. Conformar equipos multifuncionales que incluyan a todos los interesados en el resultado del diseño
+       3. Establecer reglas básicas de negociación estructurada entre clientes y proveedores antes de las reuniones
+       4. Aplicar herramientas de optimización como análisis competitivo, de vendibilidad, de valor, crítico y FMEA
+     entregable: Diseño de producto optimizado con documentación de revisiones, decisiones de equipo multifuncional y resultados de negociaciones estructuradas
+     nodos_siguientes (3): ['establecer_diseno_final_producto', 'analisis_competitivo_calidad', 'revision_diseno']
+     nodos_previos (1): ['desarrollo_caracteristicas_producto']
+
+==============================================================================
+UNIDAD 100 | conditions_precedent_financing -> entender_term_sheet | paso 3 | dominio core | titulo_ratio 74.3 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Negocia los términos de tu contrato como fundador ANTES de firmar el term sheet y de aceptar la exclusividad.
+==============================================================================
+  [MADRE] conditions_precedent_financing
+     titulo: Condiciones previas para que el financiamiento sea firme (Conditions Precedent to Financing)
+     dominio/fase: core / planificacion
+     resumen: Parte del term sheet que establece qué requisitos debes cumplir antes de que el compromiso de inversión sea vinculante, como completar la revisión de tus números y documentos (diligencia debida), la documentación legal y la presentación de un presupuesto. Aunque el term sheet suele no ser vinculante en general, algunas cláusulas sí lo son desde que lo firmas: el pago de honorarios legales, el acuerdo de exclusividad (no-shop) y la ley que aplica.
+     pasos:
+       1. Identifica qué partes del term sheet son vinculantes desde que lo firmas (honorarios legales, exclusividad o no-shop, ley aplicable).
+       2. Pregunta directamente al inversor si el trato ya fue aprobado por los socios de su fondo.
+       3. Negocia los términos de tu contrato como fundador ANTES de firmar el term sheet y de aceptar la exclusividad.  <<< EL PASO QUE LA UNIDAD TRAE
+       4. Evita comprometerte a pagar los honorarios legales del inversor si el trato no se cierra.
+     entregable: Lista clara de condiciones previas revisadas, con la aprobación de los socios del fondo confirmada antes de aceptar exclusividad.
+     nodos_siguientes (2): ['no_shop_agreement', 'information_rights']
+     nodos_previos (2): ['redemption_rights', 'term_sheet_negociacion']
+
+  [HIJO] entender_term_sheet
+     titulo: El Arte del Term Sheet
+     dominio/fase: core / planificacion
+     resumen: El term sheet es el documento que resume los términos propuestos de una inversión de capital de riesgo. Aunque hoy puede tener 8 páginas con cláusulas complejas, en esencia solo existen dos cosas que realmente importan en la negociación: economía (cuánto vale la empresa y quién recibe qué) y control (quién toma las decisiones). Entender esto evita perderse en detalles irrelevantes durante la negociación.
+     pasos:
+       1. Antes de negociar, identificar qué cláusulas del term sheet afectan la economía (valoración, participación) y cuáles afectan el control (juntas, votos, protecciones)
+       2. Priorizar la negociación en estos dos ejes y no distraerse con cláusulas secundarias
+       3. Solicitar asesoría legal especializada en VC para revisar el documento completo
+       4. Identificar cláusulas que no afectan ni economía ni control (posibles tácticas de distracción).
+     entregable: Checklist personal de términos de economía y control identificados antes de firmar cualquier term sheet
+     nodos_siguientes (2): ['control_del_board_startup', 'valuacion_pre_post_money']
+     nodos_previos (7): ['por_que_existen_los_term_sheets', 'gestion_angel_investors', 'jerarquia_firma_vc', 'gestion_sindicato_inversores', 'seleccion_abogado_venture', 'cierre_term_sheet', 'proceso_decision_vc']
+
+==============================================================================
+UNIDAD 101 | distribucion_poisson -> muestreo_de_aceptacion | paso 4 | dominio quality | titulo_ratio 74.3 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Usar el resultado para decisiones de aceptación de lotes
+==============================================================================
+  [MADRE] distribucion_poisson
+     titulo: Distribución de Poisson para Defectos Raros
+     dominio/fase: quality / ejecucion
+     resumen: La distribución de Poisson estima la probabilidad de un número específico de ocurrencias (defectos) por unidad de tiempo o espacio, cuando la probabilidad de ocurrencia es pequeña. Es una aproximación útil de la distribución binomial cuando n≥16, la población es al menos 10 veces la muestra, y p<0.1.
+     pasos:
+       1. Determinar el tamaño de muestra (n) y la probabilidad histórica de defecto (p)
+       2. Calcular np para entrar en la tabla de probabilidades de Poisson
+       3. Obtener la probabilidad acumulada de r o menos defectos
+       4. Usar el resultado para decisiones de aceptación de lotes  <<< EL PASO QUE LA UNIDAD TRAE
+     entregable: Estimación de probabilidad de número de defectos en una muestra o lote
+     nodos_siguientes (2): ['distribucion_binomial', 'muestreo_de_aceptacion']
+     nodos_previos (1): ['distribucion_normal_probabilidad']
+
+  [HIJO] muestreo_de_aceptacion
+     titulo: Muestreo de Aceptación
+     dominio/fase: quality / ejecucion
+     resumen: Proceso de evaluar una porción de producto en un lote para decidir aceptación o rechazo del lote completo. Ofrece ventajas económicas frente a la inspección 100%, reduce daño por manejo excesivo y minimiza errores por monotonía, aunque implica riesgos de muestreo (rechazar buenos lotes o aceptar malos).
+     pasos:
+       1. Determinar si el objetivo es evaluar el lote inmediato o el proceso productivo
+       2. Definir el tamaño de muestra (n) y el criterio de aceptación (c)
+       3. Establecer los niveles de riesgo aceptables (riesgo del productor α y del consumidor β)
+       4. Seleccionar o diseñar un plan de muestreo (por atributos o variables)
+       5. Aplicar el plan y documentar decisiones de aceptación/rechazo por lote
+     entregable: Plan de muestreo de aceptación documentado con n, c, y niveles de riesgo definidos
+     nodos_siguientes (4): ['curva_caracteristica_operativa', 'niveles_calidad_muestreo_aql_lql_aoql', 'accion_correctiva_sistematica', 'tipos_planes_muestreo_atributos_variables']
+     nodos_previos (2): ['punto_equilibrio_calidad_inspeccion', 'distribucion_poisson']
+
+==============================================================================
+UNIDAD 102 | transformacion_calidad_compromiso_alta_direccion_japon -> planificacion_calidad_crosby | paso 5 | dominio quality | titulo_ratio 73.8 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Evita que la calidad quede como tarea exclusiva de un área aislada de tu negocio
+==============================================================================
+  [MADRE] transformacion_calidad_compromiso_alta_direccion_japon
+     titulo: Tu compromiso con la calidad como motor de la transformación (Caso Japón)
+     dominio/fase: quality / ideacion
+     resumen: El caso de la transformación de calidad en Japón (1950-1970), impulsado por JUSE, muestra que el factor decisivo no fue solo enseñar métodos estadísticos a los ingenieros, sino que quienes dirigían las empresas asumieran de verdad su responsabilidad sobre la calidad. Sin que tú, si diriges un negocio, participes de forma activa y sostenida en entender esa responsabilidad, los esfuerzos aislados de control estadístico, como pasó en Estados Unidos en los años cuarenta, terminan en programas fragmentados que se apagan con el tiempo.
+     pasos:
+       1. Asegúrate de que tú, y no solo quien se encarga de calidad, entiendas y asumas tu responsabilidad sobre la calidad, y busca formación para ello
+       2. Conecta la mejora de calidad con el cliente, entendiéndolo como la parte más importante de tu proceso
+       3. Extiende el aprendizaje de métodos estadísticos no solo a quien diseña o produce, sino también a quienes supervisan y ejecutan el trabajo diario
+       4. Sostén tu compromiso con la calidad durante años, no como un evento aislado
+       5. Evita que la calidad quede como tarea exclusiva de un área aislada de tu negocio  <<< EL PASO QUE LA UNIDAD TRAE
+     entregable: Un plan de sesiones sostenidas, contigo y con quienes te ayudan, enfocado en entender y asumir la responsabilidad de la calidad en todo el negocio
+     nodos_siguientes (2): ['cultura_organizacional_calidad', 'educacion_estadistica_para_la_calidad']
+     nodos_previos (1): ['reglas_deming_consultoria_calidad']
+
+  [HIJO] planificacion_calidad_crosby
+     titulo: Planificación de la Calidad en tu Negocio
+     dominio/fase: quality / planificacion
+     resumen: Un área de calidad bien pensada se paga sola con el tiempo, aunque al principio cueste. Por eso la planificación debe ser el centro de cómo manejas la calidad. Todo lo que pase en tu sistema de calidad debe salir de un plan, no de una reacción improvisada. Cada tarea debe quedar anotada y con una línea de acción clara, incluso si esa línea es decidir que no vas a hacer nada al respecto.
+     pasos:
+       1. Anota todas las actividades de calidad que existen en tu negocio, incluidas las que parecen extra, como programas de mejora
+       2. Define una línea de acción clara para cada tarea que identifiques
+       3. Incluye actividades como explicarle a alguien nuevo cómo funciona la calidad en tu negocio
+       4. Evita el modo de esperar a que suene el teléfono para reaccionar
+     entregable: Un plan escrito de las actividades de calidad de tu negocio, con quién se encarga de cada una y qué línea de acción sigue
+     nodos_siguientes (1): ['calificacion_productos_procesos']
+     nodos_previos (2): ['accion_correctiva', 'accion_correctiva_2']
+
+==============================================================================
+UNIDAD 103 | personalizar_interacciones_cliente -> conexion_personal_emocional | paso 1 | dominio core | titulo_ratio 73.7 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Usa los datos personales o emocionales que guardas de cada cliente para crear mensajes personalizados ('sorpresas personales')
+==============================================================================
+  [MADRE] personalizar_interacciones_cliente
+     titulo: Personaliza: construye interacciones que le importen a tu cliente
+     dominio/fase: core / ejecucion
+     resumen: Tercer paso del proceso de investigar, observar, personalizar y dar seguimiento (IOPS). Usa lo que investigaste y lo que observaste para crear mensajes e interacciones personalizadas y auténticas con tus clientes. La honestidad es clave: conecta solo sobre intereses genuinamente compartidos, no fingidos. Puedes escalar la personalización agrupando clientes con intereses parecidos ('grupos de interés') o con eventos de agradecimiento.
+     pasos:
+       1. Usa los datos personales o emocionales que guardas de cada cliente para crear mensajes personalizados ('sorpresas personales')  <<< EL PASO QUE LA UNIDAD TRAE
+       2. Sé honesto sobre los intereses que compartes con tu cliente; no finjas conexiones que no existen
+       3. Agrupa a los clientes con intereses en común para crear comunicaciones o regalos compartidos ('grupos de interés')
+       4. Diseña eventos de agradecimiento basados en las tendencias de interés que detectas en tu base de clientes
+     entregable: Plan de comunicaciones personalizadas organizado por cliente o por grupo de interés, con ejemplos de mensajes y acciones concretas
+     nodos_siguientes (2): ['sorprender_cliente_estrategico', 'conexion_personal_emocional']
+     nodos_previos (2): ['investigar_datos_cliente', 'observar_al_cliente_en_su_contexto']
+
+  [HIJO] conexion_personal_emocional
+     titulo: Conexión mediante Datos Personales y Emocionales
+     dominio/fase: core / ejecucion
+     resumen: No todos los datos que tienes de tus clientes valen lo mismo para la relación. Un dato personal es único de esa persona (por ejemplo, dónde estudió); un dato emocional tiene carga afectiva fuerte (por ejemplo, cómo vivió esa etapa). Cuando un dato es las dos cosas a la vez, es el que más conexión genera. Usar el nombre del cliente es la forma más simple y efectiva de lograrlo.
+     pasos:
+       1. Clasifica los datos que tienes de tus clientes en personales, emocionales, o ambos a la vez
+       2. Da prioridad a recolectar los datos que caen en ambas categorías
+       3. Usa siempre el nombre del cliente en tus interacciones, nunca un número de cliente
+       4. Crea pequeños rituales de reconocimiento con esos datos, por ejemplo felicitarlo cuando gana su equipo favorito
+       5. Prioriza datos que sean personales (únicos de cada persona) y emocionales (con una carga afectiva positiva)
+     entregable: Una lista de al menos 3 tipos de datos personales o emocionales por cada segmento de cliente, con un plan concreto de cómo vas a usarlos
+     nodos_siguientes (1): ['rediseno_procesos_negocio_cx']
+     nodos_previos (2): ['rediseno_procesos_negocio_cx', 'personalizar_interacciones_cliente']
+
+==============================================================================
+UNIDAD 104 | sistema_pull_push -> takt_time | paso 3 | dominio quality | titulo_ratio 73.5 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente
+==============================================================================
+  [MADRE] sistema_pull_push
+     titulo: Sistemas Pull versus Push en Producción
+     dominio/fase: quality / ejecucion
+     resumen: Un sistema push calcula tiempos de inicio y empuja productos hacia las operaciones basandose en pronosticos de demanda, ignorando las restricciones reales de tu proceso y generando inventario excesivo. Un sistema pull, en cambio, solo produce cuando tu proceso lo autoriza segun su estado actual y la demanda real del cliente, lo que mejora el flujo y reduce el trabajo en proceso (WIP). Antes de rediseñar, identifica los cuellos de botella que el esquema push esta ignorando en tu operacion. Migrar hacia pull implica usar mecanismos Just in Time y kanbans que autoricen la produccion segun consumo real, no segun pronostico.
+     pasos:
+       1. Evaluar si tu operacion actual funciona bajo un esquema push o pull
+       2. Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso
+       3. Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente  <<< EL PASO QUE LA UNIDAD TRAE
+       4. Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor
+       5. Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad
+       6. Implementar el sistema y capacitar a los operadores
+     entregable: Sistema de produccion rediseñado bajo logica pull con kanbans implementados y metricas de flujo mejoradas.
+     nodos_siguientes (3): ['eventos_kaizen_rie', 'constraint_management', 'smed_setup_reduction']
+     nodos_previos (5): ['mapeo_flujo_valor', 'tres_tipos_desperdicio_tps', 'constraint_management', 'inventory_analysis_lean', 'lean_manufacturing_tps']
+
+  [HIJO] takt_time
+     titulo: Takt Time y Producción en Flujo
+     dominio/fase: quality / planificacion
+     resumen: El takt time es el ritmo al cual el cliente compra una unidad de producto: el compás que marca la pauta de producción en un sistema pull. Se calcula dividiendo el tiempo disponible entre la demanda del cliente en un periodo definido. Entender el patrón, variabilidad y tendencia de esa demanda es esencial para calcularlo bien y ajustar tus recursos. Comparar el takt time con tu capacidad demostrada y teórica te permite balancear procesos, dimensionar tu dotación de trabajo y eliminar sobreproducción, avanzando hacia flujo de una sola pieza cuando sea posible. Si la demanda varía mucho, considera manejar líneas de valor separadas para no desbalancear tu operación completa.
+     pasos:
+       1. Calcular la demanda del cliente en un periodo definido
+       2. Determinar el takt time dividiendo el tiempo disponible entre la demanda
+       3. Comparar el takt time con tu capacidad demostrada y teórica
+       4. Ajustar tu dotación de trabajo y balancear las estaciones según el takt
+       5. Reducir tiempos de cambio (setup) para permitir lotes más pequeños
+       6. Si la demanda varía significativamente, separa tus líneas de valor
+     entregable: Cálculo de takt time documentado con plan de balanceo de línea y ajuste de recursos según demanda
+     nodos_siguientes (3): ['mapeo_flujo_valor', 'mapeo_flujo_valor_2', 'constraint_management']
+     nodos_previos (4): ['ocho_desperdicios', 'lean_manufacturing', 'value_stream_mapping_2', 'ocho_desperdicios_lean']
+
+==============================================================================
+UNIDAD 105 | customer_discovery_phase2_problem_test -> preparar_contacto_clientes | paso 2 | dominio core | titulo_ratio 73.3 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Prepararse para contactos y entrevistas con clientes
+==============================================================================
+  [MADRE] customer_discovery_phase2_problem_test
+     titulo: Customer Discovery Fase 2: Probar el Problema
+     dominio/fase: core / validacion
+     resumen: En esta fase el equipo sale del edificio para responder tres preguntas clave: ¿entendemos realmente el problema del cliente?, ¿le importa lo suficiente a la gente como para ser un gran negocio?, y ¿lo compartirían con sus amigos? Solo cuando problema y solución se confirman se logra el ajuste producto/mercado.
+     pasos:
+       1. Diseñar experimentos de prueba del problema con clientes reales
+       2. Prepararse para contactos y entrevistas con clientes  <<< EL PASO QUE LA UNIDAD TRAE
+       3. Probar la comprensión del problema y su importancia percibida por el cliente
+       4. Profundizar en el entendimiento del cliente (perfiles, comportamientos)
+       5. Capturar conocimiento competitivo y de mercado durante las entrevistas
+     entregable: Validación documentada de que el problema es real, importante y compartido por un segmento de clientes suficientemente grande
+     nodos_siguientes (6): ['problem_solution_fit', 'actualizar_business_model_canvas_discovery', 'product_market_fit', 'necesidades_implicitas_vs_explicitas', 'actualizar_business_model_canvas_tuneup', 'preparar_contacto_clientes']
+     nodos_previos (6): ['pass_fail_experiment_design', 'global_vs_local_maximum', 'mercados_multilaterales', 'pricing_tactics_models', 'diseno_experimentos_pass_fail', 'seleccion_estrategia_pricing']
+
+  [HIJO] preparar_contacto_clientes
+     titulo: Preparación de Contactos con Clientes Potenciales
+     dominio/fase: core / validacion
+     resumen: El primer paso de salir del edificio es que construyas una lista de al menos 50 clientes potenciales, sin importar el cargo que tengan o si encajan perfecto con tu perfil, y que desarrolles una historia de referencia (reference story): una narrativa breve que explica el problema que buscas resolver y pide tiempo de tu cliente sin intentar venderle nada. También arma en paralelo una lista de innovadores de tu industria.
+     pasos:
+       1. Construye una lista inicial de 50 clientes potenciales usando tus contactos personales, redes y referencias
+       2. Crea una lista paralela de innovadores y líderes de opinión del sector
+       3. Redacta una historia de referencia que explique el problema y pida tiempo, no venda producto
+       4. Envía mensajes introductorios (referidos, LinkedIn, correo) pidiendo reuniones breves de 15 a 20 minutos
+       5. Agenda al menos 10 conversaciones diarias hasta llenar tu agenda de reuniones
+       6. Arma un calendario maestro de citas y repártelas entre tú y quienes te acompañen en el proyecto
+     entregable: Lista de 50 clientes potenciales, historia de referencia escrita y calendario de reuniones agendadas
+     nodos_siguientes (1): ['desarrollo_presentacion_problema']
+     nodos_previos (3): ['diseno_experimentos_pass_fail', 'tacticas_cold_calling', 'customer_discovery_phase2_problem_test']
+
+==============================================================================
+UNIDAD 106 | formalizar_un_proceso_ad_hoc -> metricas_calidad | paso 4 | dominio core | titulo_ratio 73.3 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Establecer métricas de éxito en cada etapa del proceso
+==============================================================================
+  [MADRE] formalizar_un_proceso_ad_hoc
+     titulo: Formalizar un Proceso Ad Hoc que Cruza la Organizacion
+     dominio/fase: core / ejecucion
+     resumen: Los procesos que mas dano hacen cuando fallan son los que nadie escribio: los que cruzan fronteras entre areas y se sostienen porque alguien los ejecuta de memoria. Contratar es el ejemplo tipico. Formalizarlos no se hace desde afuera: se le pide a la gente que ya los ejecuta que los escriba, porque son quienes saben como funcionan de verdad. Y el orden importa: primero se define QUE tiene que producir el proceso, el resultado final concreto, y solo despues se disenan las etapas que llevan hasta ahi. Cada etapa lleva su metrica propia, que es lo que permite ver en cual se rompe en vez de saber solo que el resultado fallo, y cada paso lleva un responsable con nombre. Lo ultimo, y es lo que sostiene todo lo anterior, es hacer visible el desempeno de cada responsable.
+     pasos:
+       1. Identificar los procesos ad hoc que cruzan fronteras organizacionales y son críticos (ej. contratación)
+       2. Pedir a las personas que ya ejecutan el proceso informalmente que lo formalicen
+       3. Definir el output esperado del proceso antes de diseñar los pasos
+       4. Establecer métricas de éxito en cada etapa del proceso  <<< EL PASO QUE LA UNIDAD TRAE
+       5. Asignar responsabilidad clara (individuo/equipo) por cada paso del proceso
+       6. Define el resultado final que el proceso debe producir (ej: un empleado excelente en el proceso de contratación)
+       7. Diseña las etapas necesarias para llegar a ese resultado
+       8. Establece métricas para cada etapa del proceso (¿estás obteniendo suficientes candidatos? ¿los correctos?)
+       9. Asigna responsabilidad clara a una organización o individuo por cada paso
+       10. Aumenta la visibilidad del desempeño de cada responsable
+     entregable: El proceso escrito por quienes ya lo ejecutan, con su resultado final definido antes que las etapas, una metrica por etapa y un responsable con nombre por cada paso
+     nodos_siguientes (0): []
+     nodos_previos (1): ['plan_mejora_procesos']
+
+  [HIJO] metricas_calidad
+     titulo: Métricas de Calidad
+     dominio/fase: core / planificacion
+     resumen: Proporcionan mediciones específicas y detalladas sobre un atributo del proyecto, producto o servicio, y cómo debe medirse. Se consultan en el proceso de aseguramiento de calidad y se comparan contra los resultados reales en el proceso de control de calidad para determinar si se requiere acción correctiva.
+     pasos:
+       1. Identificar el atributo del producto o proceso a medir
+       2. Definir la métrica específica (valor objetivo)
+       3. Establecer el método de medición
+       4. Documentar en formato estandarizado con ID único
+     entregable: Tabla de métricas de calidad con atributos, valores objetivo y métodos de medición
+     nodos_siguientes (1): ['formal_acceptance']
+     nodos_previos (2): ['plan_gestion_calidad', 'embudo_get_keep_grow']
+
+==============================================================================
+UNIDAD 107 | medir_lo_que_importa_no_solo_lo_facil -> metricas_calidad | paso 1 | dominio core | titulo_ratio 73.3 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Lista las métricas actuales de éxito de tu proyecto o producto.
+==============================================================================
+  [MADRE] medir_lo_que_importa_no_solo_lo_facil
+     titulo: Medir lo que Importa, no solo lo Fácil de Medir
+     dominio/fase: core / planificacion
+     resumen: El adagio 'lo que se mide, se gestiona' esconde un problema: tendemos a diseñar métricas para aquello que es fácil de cuantificar, ignorando factores importantes pero intangibles (cuidado, diversidad, bienestar emocional, impacto ecosistémico). El concepto del 'Noble Currency Index' ficticio ilustra cómo se podrían crear nuevas métricas de valor para actividades históricamente invisibles. Para equipos de producto y negocio, esto implica revisar si las métricas de éxito (KPIs) capturan realmente el valor generado o solo lo que es cómodo de reportar.
+     pasos:
+       1. Lista las métricas actuales de éxito de tu proyecto o producto.  <<< EL PASO QUE LA UNIDAD TRAE
+       2. Pregúntate qué valores importantes (sociales, ambientales, de bienestar del usuario) no están siendo medidos.
+       3. Diseña al menos una métrica proxy para capturar un valor intangible relevante para tu modelo de negocio.
+       4. Revisa si estás optimizando por lo medible en detrimento de lo valioso pero invisible.
+     entregable: Tabla de métricas actuales vs. valores intangibles no medidos, con al menos una métrica nueva propuesta para cerrar la brecha.
+     nodos_siguientes (3): ['patron_free_business_model', 'metricas_accionables', 'vanity_metrics_vs_accionables']
+     nodos_previos (2): ['tratar_las_historias_como_herramientas', 'actividades_clave']
+
+  [HIJO] metricas_calidad
+     titulo: Métricas de Calidad
+     dominio/fase: core / planificacion
+     resumen: Proporcionan mediciones específicas y detalladas sobre un atributo del proyecto, producto o servicio, y cómo debe medirse. Se consultan en el proceso de aseguramiento de calidad y se comparan contra los resultados reales en el proceso de control de calidad para determinar si se requiere acción correctiva.
+     pasos:
+       1. Identificar el atributo del producto o proceso a medir
+       2. Definir la métrica específica (valor objetivo)
+       3. Establecer el método de medición
+       4. Documentar en formato estandarizado con ID único
+     entregable: Tabla de métricas de calidad con atributos, valores objetivo y métodos de medición
+     nodos_siguientes (1): ['formal_acceptance']
+     nodos_previos (2): ['plan_gestion_calidad', 'embudo_get_keep_grow']
+
+==============================================================================
+UNIDAD 108 | plan_mejora_procesos -> metricas_calidad | paso 3 | dominio core | titulo_ratio 73.3 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Definir métricas y límites de control actuales
+==============================================================================
+  [MADRE] plan_mejora_procesos
+     titulo: Plan de Mejora de Procesos
+     dominio/fase: core / planificacion
+     resumen: Detalla los pasos para analizar procesos de gestión de proyecto, desarrollo de producto u organizacionales para identificar actividades que mejoren su valor. Incluye descripción del proceso 'as-is', flujo con entradas/salidas, métricas actuales, objetivos de mejora ('to-be') y el enfoque para lograrlos.
+     pasos:
+       1. Documentar el proceso actual (as-is) incluyendo pasos, entradas y salidas
+       2. Identificar el punto de inicio y fin del proceso
+       3. Definir métricas y límites de control actuales  <<< EL PASO QUE LA UNIDAD TRAE
+       4. Establecer objetivos explícitos de mejora (to-be)
+       5. Diseñar el enfoque de mejora (combinar, fast-track, eliminar pasos, usar tecnología)
+     entregable: Documento de Plan de Mejora de Procesos con estado actual, objetivos y enfoque de mejora
+     nodos_siguientes (4): ['schedule_management_plan', 'estrategia_innovacion_producto', 'analisis_flujo_de_valor', 'formalizar_un_proceso_ad_hoc']
+     nodos_previos (1): ['plan_gestion_calidad']
+
+  [HIJO] metricas_calidad
+     titulo: Métricas de Calidad
+     dominio/fase: core / planificacion
+     resumen: Proporcionan mediciones específicas y detalladas sobre un atributo del proyecto, producto o servicio, y cómo debe medirse. Se consultan en el proceso de aseguramiento de calidad y se comparan contra los resultados reales en el proceso de control de calidad para determinar si se requiere acción correctiva.
+     pasos:
+       1. Identificar el atributo del producto o proceso a medir
+       2. Definir la métrica específica (valor objetivo)
+       3. Establecer el método de medición
+       4. Documentar en formato estandarizado con ID único
+     entregable: Tabla de métricas de calidad con atributos, valores objetivo y métodos de medición
+     nodos_siguientes (1): ['formal_acceptance']
+     nodos_previos (2): ['plan_gestion_calidad', 'embudo_get_keep_grow']
+
+==============================================================================
+UNIDAD 109 | sujetos_de_control -> establecer_metas_caracteristicas | paso 3 | dominio quality | titulo_ratio 73.3 | contencion 0.5
+TEXTO DEL PASO QUE LA UNIDAD TRAE: Traducir la voz del cliente en características de producto (KPC)
+==============================================================================
+  [MADRE] sujetos_de_control
+     titulo: Selección de Sujetos de Control (Control Subjects)
+     dominio/fase: quality / planificacion
+     resumen: Cada característica del producto o proceso a controlar se denomina 'sujeto de control'. Su selección es el primer paso crítico en la planificación del control, derivándose de necesidades del cliente, regulaciones, seguridad, análisis de modos de fallo (FMEA) y diseño de experimentos.
+     pasos:
+       1. Identificar los procesos y productos clave a controlar
+       2. Definir los objetivos del proceso de trabajo
+       3. Traducir la voz del cliente en características de producto (KPC)  <<< EL PASO QUE LA UNIDAD TRAE
+       4. Identificar características de control de proceso (KCC) relacionadas
+       5. Seleccionar los sujetos de control finales basados en las fuentes disponibles (FMEA, regulaciones, DOE)
+     entregable: Lista de sujetos de control (KPCs y KCCs) documentada para el proceso
+     nodos_siguientes (2): ['establecer_estandares_desempeno', 'key_process_product_characteristics']
+     nodos_previos (1): ['bucle_retroalimentacion_control']
+
+  [HIJO] establecer_metas_caracteristicas
+     titulo: Establecimiento de Metas para Características del Producto
+     dominio/fase: quality / planificacion
+     resumen: Una vez que elegiste las características principales de tu producto, tienes que fijar metas cuantificables (valores objetivo) para cada una. Estas metas deben ser medibles, óptimas, legítimas, comprensibles, aplicables y alcanzables. Para medir cada meta necesitas definir la unidad de medida, la forma de medirla y el valor objetivo, relacionándolos con lo que ya mediste sobre las necesidades de tu cliente.
+     pasos:
+       1. Para cada característica que elegiste, define la unidad de medida apropiada
+       2. Determina cómo vas a medir si se cumple la meta
+       3. Establece el valor objetivo (meta) para cada característica
+       4. Verifica que la meta cumpla estos criterios: medible, óptima, legítima, comprensible, aplicable y alcanzable
+       5. Si dividiste el diseño en partes, integra los resultados de cada una
+     entregable: Una tabla con las metas cuantificadas para cada característica de tu producto, integrada y validada por ti
+     nodos_siguientes (0): []
+     nodos_previos (3): ['criterios_diseno_producto', 'desarrollo_caracteristicas_producto', 'product_design_spreadsheet']
+

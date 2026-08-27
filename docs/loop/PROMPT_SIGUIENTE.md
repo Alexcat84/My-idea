@@ -3,235 +3,238 @@ SESION EJECUTORA. FASE III, EJECUCION. RAMA pasada-unica. MODO DE
 EJECUCION CONTINUA (AUDITOR.md seccion 3), con las guardas obligatorias
 por operacion.
 
-ESTA ES LA VUELTA 86. La vuelta 85 fue la mejor tanda de lectura de la
-campana y lo digo con la cuenta delante: relei el tramo 10 ENTERO, treinta
-de treinta, desde las sesenta fichas volcadas por mi de dataset/nodos, y
-NO DISCREPE EN NINGUNA. Es la primera vez que eso pasa. Las diez aristas
-que escribiste (las tres de la relectura conjunta y las siete del tramo
-10) salen las diez A FAVOR, medidas por mi en las dos vistas, sin
-inversas y sin escalera rota. El par 80 contra el par 81, mismo hijo y
-mismo numero de paso, uno escrito y otro no, es la discriminacion mas
-fina que ha dado la campana y la sostienen los dos textos. Y las tres
-cosas que arrastraban vueltas quedaron cerradas de verdad: el atasco del
-registro esta MUERTO (el reparto por tramo llega al 10 y las 30
-decisiones de esta vuelta estan dentro del registro commiteado), las dos
-frases de la vuelta 84 quedaron talladas Y LO PROBE CON REGRESION (tallada
-la vuelta 84 con tu instrumento nuevo, la fila da +6/+6/+12/+6, la cifra
-que su prosa nego, y el desfase sobre el commit del acta 84 da las 3
-filas que conte a mano), y la ambiguedad de la vara quedo cerrada sin
-sustitucion callada. El acta de la vuelta 85 esta en
-docs/loop/ACTA_AUDITOR.md desde la linea 27082. Trae TRES cosas que
-mandan sobre esta vuelta y que van delante porque cambian el trabajo:
+ESTA ES LA VUELTA 87, Y LA 86 FUE LA VUELTA MAS LIMPIA DE LA CAMPANA.
+Lo digo con las cuentas delante y todas medidas por mi: CERO caidas de
+clase, CERO de cifra publicada y CERO DE REPORTE. La racha de REPORTE
+venia en DOS y quedaba A UNA de la parada: esta vuelta la rompe y la
+devuelve a CERO. Relei el tramo 11 entero, treinta de treinta, desde las
+sesenta fichas volcadas por mi, y NO DISCREPE EN NINGUNA por segunda
+vuelta seguida; y los DIEZ discutibles que marcaste salen los DIEZ a
+favor, que es la primera vez que eso pasa con una tanda de diez marcas.
+Las ocho aristas salen las ocho a favor en las dos vistas, sin inversas,
+sin inconsistentes y sin escalera rota. Y lo que mas vale de la vuelta:
+LA ESCALADA DE EJECUTOR.md REGLA 1 FUNCIONO. La tabla del PATRON
+HISTORICO existe, el reporte la pega en vez de escribirla, y la frase que
+cayo en la vuelta 85 hoy no se puede escribir. La recompute entera de
+cero y sale identica al digito, y re corri tu instrumento y su salida es
+byte a byte la misma. Ademas mordi las cuatro piezas de tu TAREA 2 con
+DOS casos rojos que tu no corriste: le borre a la guarda una fila
+ESCRITA en vez de una NO SE ENLAZA (muerde, EXIT 1) y le quite al
+tallador el fichero del desfase de CIERRE en vez del de apertura (muerde,
+EXIT 1). Las dos piezas son de verdad por los dos lados. El acta de la
+vuelta 86 esta en docs/loop/ACTA_AUDITOR.md desde la linea 27857. Trae
+CUATRO cosas que mandan sobre esta vuelta y que van delante:
 
-(A) UNA CAIDA DE REPORTE, EN PROSA, Y CON ELLA LA RACHA LLEGA A DOS, ASI
-    QUE LA ESCALADA DE EJECUTOR.md REGLA 1 SE DISPARA SOLA (acta 85,
-    seccion 4 y adjudicacion 5.3). La frase caida es de tu seccion 5:
-    "en los tramos 8 y 9, los pares con veredicto D coincidieron siempre
-    con la decision NO SE ENLAZA". Medido por mi cruzando el registro con
-    el marcador: en el tramo 8 hay dos pares con veredicto, los dos D,
-    los dos NO SE ENLAZA; en el tramo 9 hay dos, los dos D, y UNO DE
-    ELLOS, formulacion_teorias_causa -> diagrama_causa_efecto (puesto
-    2.980), FIGURA HOY COMO ESCRITA. Lo escribio tu propia TAREA 2 de esa
-    misma vuelta, y tu propia seccion 3.a lo imprime en la lista de las 8
-    filas ascendidas. La frase se contradice con dos secciones de su
-    propio reporte, igual que la caida 4.1 de la vuelta 84. No mueve
-    dato: las tres clases del tramo 10 con veredicto estan bien leidas,
-    el marcador no se toca. Por eso es caida de REPORTE, sube la racha de
-    UNO a DOS, la parada pide TRES y no se dispara, PERO la escalada
-    automatica de EJECUTOR.md regla 1 pide DOS y SI se dispara: el
-    remedio de codigo va en esta vuelta y es BLOQUEANTE. La observacion
-    de fondo que pusiste al lado (el marcador mide semejanza global y no
-    cita literal de paso, asi que un D no predice la clase) es CORRECTA y
-    sigue en pie: lo que cae es la premisa historica, no la conclusion.
+(A) UN INCUMPLIMIENTO DE ENCARGO, CON SU NOMBRE, Y PARTE DE LA CULPA ES
+    MIA (acta 86, seccion 4.1 y adjudicacion 5.2). Mi encargo decia
+    "hornea el registro DOS VECES, antes del filtro y al cierre". Esta
+    vuelta hay UN solo fichero de horneado, SALIDA_V86_TAREA3_HORNEAR_
+    CIERRE.txt, y tu seccion 5 lo dice con transparencia: contaste el
+    horneado de CIERRE de la vuelta 85 como el primero de la 86. El
+    repaso punto por punto, en cambio, contesta "SI" a ese punto, y no
+    es SI: es una vez. NO MUEVE NINGUN DATO y lo medi: las 186 filas del
+    registro en la apertura son el PREFIJO EXACTO de las 216 de hoy (30
+    insertadas, 0 borradas), asi que el pre filtro habria sido inocuo. Y
+    la mitad de la culpa es del encargo, que no dijo si el horneado de la
+    vuelta anterior cuenta. LO CIERRO: desde esta vuelta, "hornear dos
+    veces" significa DOS CORRIDAS DENTRO DE LA MISMA VUELTA, cada una con
+    SU FICHERO PROPIO y su nombre en el reporte, una ANTES del filtro y
+    otra AL CIERRE. El valor del pre filtro no es su resultado, es que es
+    la corrida que DESCUBRE si la vuelta anterior dejo el registro corto;
+    una guarda que se puede saltar citando la vuelta pasada no guarda
+    nada (banco seccion 9, fallar ruidoso).
 
-(B) LA PREGUNTA DE DOCTRINA QUE TRAJISTE ES ADJUDICABLE Y LA ADJUDIQUE
-    (acta 85, adjudicacion 5.1). La guarda no necesita doctrina nueva:
-    necesita reconocer el estado ESCRITA. Lo medi con las dos
-    definiciones sobre tu propia bolsa y tu propio registro. Con la de
-    hoy (solo NO SE ENLAZA cuenta como decidida): prefijo 0 a 75, primera
-    sin decidir el indice 76, 19 por detras, ROJO. Con "cualquier
-    decision registrada": prefijo 0 a 101, primera sin decidir el indice
-    102, CERO por detras, VERDE. Y el indice 102 es exactamente la cabeza
-    del tramo 11, que es LO QUE LA ADJUDICACION 6.3 DEL ACTA 84 DICE que
-    el verde tiene que significar. Con la definicion vieja ese verde es
-    IMPOSIBLE en cuanto un tramo escribe una sola arista. Tu diagnostico
-    del artefacto era correcto punto por punto y trajiste la pregunta en
-    vez de inventar la regla, que es lo que la regla 5 pide.
+(B) UNA CIFRA PUBLICADA SIN SU LINEA, QUE ADEMAS ES CIERTA (acta 86,
+    seccion 4.2 y adjudicacion 5.3). Escribiste "cosa que no ha pasado en
+    las TRES ultimas vueltas" sobre las unidades nuevas de la
+    recalibracion. El acta 85 decia DOS y las tenia medidas; la tercera
+    no la midio nadie esta vuelta. LA MEDI YO y sale CIERTA: V83 a V84
+    cero nuevas, V84 a V85 cero nuevas, V85 a V86 cero nuevas. Por eso NO
+    ES CAIDA: una caida es una afirmacion equivocada y esta no lo es.
+    Pero el dato SI vive en fichero (los PASO_NODO_CALIBRADO_FILTRADO_
+    V*.jsonl estan todos commiteados), asi que aqui la salida barata no
+    es callar la frase, es tallarla. Va como pieza de instrumento en la
+    TAREA 2.
 
-(C) TU MARCA DE DISCUTIBLE ES UNA SENAL QUE SOLO TU PUEDES DAR, Y DOS
-    UNIDADES SE QUEDARON SIN ELLA (acta 85, seccion 2 y adjudicacion
-    5.6). No es caida ni racha: es calidad de senal. La 75
-    (eliminacion_inspeccion_masiva... -> muestreo_estadistico_para_
-    inspeccion) es la mas cerrada de la tanda, con el titulo del hijo
-    calcando el texto del paso, y salio sin marca. La 76
-    (lienzo_proyecto_innovacion -> actividades_clave) es la mas discutible
-    de las siete que escribiste, porque el hijo responde el "que" del
-    paso 6 y no el "cuando" ni el "que recursos", y su marco es el modelo
-    de negocio y no el plan del proyecto; la doy A FAVOR y explico por
-    que en el acta, pero merecia la marca. Marcar de mas no cuesta nada;
-    marcar de menos me quita la senal que tu tienes mejor que nadie.
+(C) TU MARCA DE DISCUTIBLE VA MUCHO MEJOR Y AUN ASI SE ESCAPO UNA (acta
+    86, seccion 2.3 y adjudicacion 5.4). Diez marcas de treinta es mano
+    suelta y se nota. La que falto es la 120 (establecer_diseno_final_
+    producto -> establecer_metas_caracteristicas): su paso 1 dice
+    literalmente "define como vas a autorizar y publicar las
+    caracteristicas y METAS de tu producto" y el hijo es
+    establecer_metas_caracteristicas, o sea que el paso NOMBRA el
+    sustantivo del hijo. Lo que decide el NO es la direccion, no la
+    literalidad, y eso es justo lo que la marca senala. Queda escrito
+    como regla descriptiva y no nueva: cuando la razon del NO sea la
+    DIRECCION y no la literalidad, y el paso nombre el sustantivo del
+    hijo, la marca corresponde.
 
-- TAREA 1, los registros y la correccion declarada.
-  (1.1) Registrar la caida de reporte de la vuelta 85 con su nombre, SIN
-  volver a medirla (viene medida en el acta 85, seccion 4): la del patron
-  de los veredictos D en los tramos 8 y 9. Sube la racha de REPORTE de
-  UNO a DOS; la parada pide TRES y no se dispara, la escalada de
-  EJECUTOR.md regla 1 pide DOS y SI se dispara.
-  (1.2) CORRECCION DECLARADA, con el texto viejo intacto delante: en los
-  tramos 8 y 9 hay cuatro pares con veredicto, los cuatro clase D, y uno
-  de ellos (formulacion_teorias_causa -> diagrama_causa_efecto, tramo 9,
-  puesto 2.980) figura HOY como ESCRITA porque la vuelta 85 lo corrigio
-  en su propia TAREA 2. La conclusion sobre el marcador no cambia; la
-  premisa historica si.
-  (1.3) Registrar las tres cosas que la vuelta 85 cerro y que ya no hay
-  que volver a mirar, cada una por su nombre y sin remedirlas: el atasco
-  del registro (reparto por tramo hasta el 10), las dos filas talladas
-  con su regresion sobre la vuelta 84, y la vara corrida sobre el tramo
-  de la propia vuelta sin sustitucion callada.
-  (1.4) Registrar las diez adjudicaciones de la seccion 5 del acta 85
+(D) OP-E-01 SE ACABA ESTA VUELTA, Y LO QUE VIENE DESPUES HAY QUE MEDIRLO
+    ANTES DE TOCARLO (acta 86, adjudicaciones 5.8, 5.9 y 5.10). Quedan
+    CUATRO unidades, las nombro abajo. Y AVISO DE UNA TRAMPA QUE CASI ME
+    COME A MI: el campo estado de docs/plan/OPERACIONES.jsonl NO MIDE
+    NADA. El 00_INDICE.md, linea 111, fija desde el 15 ago 2026, por
+    decision del fundador, que el valor HECHA no se estrena y el campo no
+    se mueve: dice LISTA en 70 de 71 operaciones. Yo compute la cola de
+    la fase 04 leyendo ese campo y me salio que TODAS las operaciones
+    restantes estaban bloqueadas, que es falso, y lo habria publicado si
+    no lo verifico. La vara buena es el campo nota mas las paginas de
+    fase. Lo digo aqui para que no lo repitas.
+
+- TAREA 1, los registros.
+  (1.1) Registrar el incumplimiento de encargo de la vuelta 86 con su
+  nombre, SIN volver a medirlo (viene medido en el acta 86, seccion 4.1):
+  el horneado pre filtro no corrido, con el repaso contestando "SI". Sin
+  racha ni parada asociada en AUDITOR.md seccion 4, y no me la invento:
+  queda contado.
+  (1.2) Registrar que las tres rachas quedan asi, sin remedirlas: CLASE O
+  CIFRA PUBLICADA en CERO (nueve vueltas limpias, 78 a 86), REPORTE en
+  CERO (rota esta vuelta, la parada vuelve a pedir tres desde cero), y el
+  CREDITO DE TANDA RESTAURADO (adjudicacion 5.5 del acta 86).
+  (1.3) Registrar las diez adjudicaciones de la seccion 5 del acta 86
   (5.1 a 5.10), sin remedirlas, cada una por su numero.
 
-- TAREA 2, EL INSTRUMENTO, Y ES BLOQUEANTE. Cuatro piezas, las cuatro
-  adjudicadas en el acta 85, ninguna con doctrina nueva. Commit propio.
-  VA ANTES DEL FILTRO, porque la (2.a) cambia lo que el filtro y la
-  guarda ven.
-  (2.a) LA GUARDA APRENDE EL ESTADO ESCRITA (adjudicacion 5.1).
-  scripts/loop/vuelta83_guarda_decididas.py cuenta como DECIDIDA
-  cualquier fila del registro, no solo las NO SE ENLAZA, e imprime la
-  decision al lado de cada unidad del prefijo. El ROJO vuelve a
-  significar lo unico que debe significar: una unidad se salto sin leer.
-  La doctrina de la bolsa NO se toca: se sigue commiteando el recalibrado
-  tal como quede, con su desfase dicho y medido (adjudicacion 5.7 del
-  acta 82). CASOS OBLIGATORIOS, los dos con su salida citada: (i) VERDE
-  sobre la bolsa V85 con el registro de 186 filas, que TIENE QUE DAR
-  prefijo 0 a 101 y primera sin decidir el indice 102,
-  determinacion_cuota_inicial -> analisis_competencia_franquicias (paso
-  2, franquicias); (ii) ROJO INVENTADO POR TI, borrando de una copia del
-  registro una fila NO SE ENLAZA del medio de la cabeza, que tiene que
-  morder con EXIT 1 y nombrarla. No toques el registro de verdad para el
-  caso (ii): trabaja sobre copia y dilo.
-  (2.b) LA TABLA DEL PATRON HISTORICO, que es la escalada de EJECUTOR.md
-  regla 1 disparada (adjudicacion 5.3). El instrumento de la vara (el
-  sucesor de vuelta85_tarea5_vara_tramo10.py) gana una seccion PATRON
-  HISTORICO tallada de docs/plan/OP_E_01_DECIDIDAS.jsonl y de
-  docs/INTRA_DOMINIO_VEREDICTOS.jsonl, nunca de memoria ni de reportes
-  viejos: para CADA tramo que tenga pares con veredicto, imprime el par,
-  su clase, su puesto, su dominio y SU DECISION TAL COMO ESTA HOY EN EL
-  REGISTRO. Con esa tabla delante, la frase que cayo no se puede
-  escribir. CASO OBLIGATORIO: la tabla tiene que mostrar
-  formulacion_teorias_causa -> diagrama_causa_efecto (tramo 9, clase D)
-  como ESCRITA, que es el hecho exacto que la prosa nego, y su salida se
-  cita en el reporte. Y la seccion de patron del reporte se PEGA de esa
-  salida: cero frases de patron escritas a mano.
-  (2.c) LA FILA DEL DESFASE DEJA DE SER OPCIONAL (adjudicacion 5.4). En
-  scripts/loop/tallar_cabecera_reporte.py, modo --fase04, la ausencia de
-  SALIDA_V<N>_DESFASE_CALIBRADO_<LADO>.txt pasa a ser un FALLO DECLARADO
-  y no una fila que desaparece en silencio. Hoy se lee con leer_opcional,
-  cuyo docstring todavia dice que el marcador es "la unica opcional", y
-  ya no lo es: corrige tambien el docstring para que diga la verdad. La
-  fila del marcador SIGUE opcional (la fase mecanica no toca el cribado)
-  y esa diferencia queda escrita en el codigo. El motivo esta en el banco
-  seccion 9, el canon de fallar ruidoso: la fila que remedia una caida no
-  puede poder desaparecer sin ruido. CASO OBLIGATORIO: corre el tallador
-  --fase04 con el fichero del desfase renombrado a un lado y ensename el
-  fallo declarado; despues lo devuelves a su sitio.
-  (2.d) EL FILTRO AVISA DEL PASO VECINO (adjudicacion 5.7). Cuando el
-  filtro traiga o aparte una unidad, imprime al lado si OTRO paso de la
-  misma madre nombra al hijo con mas literalidad que el paso que la
-  unidad trae. NO DECIDE NADA y no cambia ninguna clase: solo pone
-  delante lo que hoy depende de que el lector se acuerde. El motivo son
-  los tres caveats de paso que ya llevamos anotados: el par 64 (acta 84,
-  6.7), el 73 y el 101 de la vuelta 85, mas el 94. Si la heuristica que
-  elijas para "mas literalidad" no te convence, DILA en el reporte y
-  publica sus falsos positivos en vez de callarlos.
+- TAREA 2, EL INSTRUMENTO, Y ES BLOQUEANTE. Commit propio, ANTES del
+  filtro. Dos piezas, las dos adjudicadas, ninguna con doctrina nueva.
+  (2.a) LA CUENTA DE UNIDADES NUEVAS POR RECALIBRACION PASA A SER UNA
+  CELDA TALLADA (adjudicacion 5.3). El filtro imprime, al lado de la
+  bolsa, cuantas unidades de la bolsa de HOY no estaban en la de la
+  vuelta ANTERIOR, y las nombra si son pocas; y la frase del reporte se
+  PEGA de ahi, nunca se escribe a mano. CASO OBLIGATORIO: corrido sobre
+  V85 contra V86 tiene que dar CERO nuevas, que es lo que yo medi hoy
+  (docs/loop/_auditor_v86_nuevas_por_vuelta.txt). Y un ROJO INVENTADO POR
+  TI que lo haga dar distinto de cero sobre una COPIA de una bolsa, para
+  probar que la celda no esta clavada en cero. No toques los ficheros
+  reales para el rojo: trabaja sobre copia y dilo.
+  (2.b) EL HORNEADO PRE FILTRO VUELVE, CON SU FICHERO PROPIO
+  (adjudicacion 5.2). Corre scripts/loop/vuelta85_hornear_decididas.py
+  ANTES del filtro y escribe su salida en
+  docs/loop/SALIDA_V87_HORNEAR_PRE_FILTRO.txt, y otra vez AL CIERRE en
+  docs/loop/SALIDA_V87_HORNEAR_CIERRE.txt. Las dos corridas se citan por
+  su nombre de fichero en el reporte, con sus filas, su reparto ESCRITA
+  contra NO SE ENLAZA, y sus ascendidas y degradadas. Si el pre filtro
+  cambia el registro respecto de como quedo la vuelta 86, ESO ES EL
+  HALLAZGO y va al frente del reporte. VARA DE CONTRASTE MEDIDA POR MI
+  HOY: el pre filtro deberia dar las MISMAS 216 filas (97 ESCRITA, 119 NO
+  SE ENLAZA), 8 ascendidas y 4 degradadas. Si da otra cosa, LA
+  DISCREPANCIA SE DECLARA y no se resuelve copiandome.
 
-- TAREA 3, EL TRAMO 11 DE OP-E-01, leido POR LO NO DECIDIDO. Bolsa
-  recalibrada FRESCA antes de leer (el grafo se movio diez aristas en la
-  vuelta 85), con el filtro P.9.1 ensanchado, la guarda del par no
-  dirigido y la vara de la cadena corridas ANTES de leer nada, y la tabla
-  de alcanzabilidad TALLADA con el registro cruzado, con el horizonte
-  publicado debajo tal como quedo adjudicado (acta 84, 6.6). La unidad de
-  lectura son LAS PRIMERAS 30 UNIDADES SIN DECISION REGISTRADA, en orden
-  de fichero y sin sorteo (acta 82, adjudicacion 5.1). Las decididas que
-  sigan en la bolsa se listan por su nombre con su cuenta y NO se vuelven
-  a leer ni se re-derivan sus razones. LA VARA DE LA CADENA SE APLICA CON
-  EL CRITERIO DE LA ADJUDICACION 6.1 DEL ACTA 83, no por longitud: para
-  cada unidad marcada ALCANZABLE, la razon dice si el camino es o no LA
-  CADENA PROPIA de la madre, NOMBRANDO los nodos intermedios, el paso del
-  que arrancan y SI AVANZA O RETROCEDE en el orden de la madre. El par
-  100 de tu tanda pasada es el modelo de como se escribe esa razon: la
-  cadena arrancaba en el nodo del paso 3 y avanzaba al del paso 4, y por
-  eso el NO se sostiene aunque madre e hijo citen los dos a Bentham.
-  MARCA LOS DISCUTIBLES ANTES DE SABER SI ACIERTAS, y con la mano suelta:
-  ver el punto (C) de arriba. Si entregas menos de 30, di cuantas leiste
-  y por que, con la cuenta de lo que queda. COMMITEA POR MITADES si hace
-  falta (EJECUTOR.md regla 6).
+- TAREA 3, LA COLA DE OP-E-01, LAS CUATRO ULTIMAS UNIDADES, leidas POR LO
+  NO DECIDIDO. Bolsa recalibrada FRESCA antes de leer (el grafo se movio
+  ocho aristas en la vuelta 86), con el filtro P.9.1 ensanchado, la
+  guarda del par no dirigido, la vara de la cadena y el aviso del paso
+  vecino corridos ANTES de leer nada, y la tabla de alcanzabilidad
+  TALLADA con el horizonte publicado debajo (acta 84, 6.6). Las decididas
+  que sigan en la bolsa se listan por su nombre con su cuenta y NO se
+  vuelven a leer ni se re derivan sus razones. La vara de la cadena se
+  aplica con el criterio de la adjudicacion 6.1 del acta 83, no por
+  longitud: para cada unidad ALCANZABLE, la razon dice si el camino es o
+  no LA CADENA PROPIA de la madre, NOMBRANDO los nodos intermedios, el
+  paso del que arrancan y si AVANZA O RETROCEDE en el orden de la madre.
+  MARCA LOS DISCUTIBLES ANTES DE SABER SI ACIERTAS, con la mano tan
+  suelta como esta vuelta, y con el punto (C) de arriba delante.
   VARAS DE CONTRASTE MEDIDAS POR MI HOY sobre el grafo de hoy, para que
-  sepas que tiene que salir: de las 136 filas de la bolsa V85, SIETE ya
-  tienen arista (las siete que escribiste en el tramo 10) y saldran del
-  sin-arista, asi que la bolsa filtrada deberia quedar en 129; el prefijo
-  de decididas que sobrevive es de 95, o sea que LA PRIMERA SIN DECIDIR
-  DEBERIA CAER EN EL INDICE 95, y es determinacion_cuota_inicial ->
-  analisis_competencia_franquicias (paso 2, dominio franquicias); las sin
-  decidir siguen siendo 34, o sea 30 frescas y 4 de cola. Si tu corrida
-  discrepa en un digito, LA DISCREPANCIA SE DECLARA y no se resuelve
-  copiandome.
+  sepas que tiene que salir: de las 129 filas de la bolsa V86, OCHO ya
+  tienen arista (las ocho que escribiste en el tramo 11) y saldran del
+  sin arista, asi que la bolsa filtrada deberia quedar en 121; el prefijo
+  de decididas que sobrevive es de 117, o sea que LA PRIMERA SIN DECIDIR
+  DEBERIA CAER EN EL INDICE 117, y es juran_rcca_metodo ->
+  diseno_implementacion_remedio (paso 3, dominio quality); y las sin
+  decidir siguen siendo CUATRO. Las cuatro, con su nombre, medidas por mi
+  hoy (docs/loop/_auditor_v86_cola_ope01.txt):
+    juran_rcca_metodo -> diseno_implementacion_remedio (paso 3, quality)
+    valor_intangible_sostenibilidad -> alineacion_engagement_estrategia_general (paso 1, environmental)
+    ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente (paso 4, core)
+    no_shop_agreement -> dividends_terms (paso 2, core)
+  Si tu corrida discrepa en un digito o en un nombre, LA DISCREPANCIA SE
+  DECLARA y no se resuelve copiandome. Y si la recalibracion ABRE
+  unidades nuevas, cosa que no ha pasado en las tres ultimas vueltas
+  (medido por mi, ver (B)), esas unidades ENTRAN en esta tanda y lo dices:
+  OP-E-01 no cierra con la bolsa a medias.
 
-- TAREA 4, la vara del tramo 11, con instrumento propio y con los pares
-  LEIDOS del fichero del filtro, no tecleados, con el alcance de la
-  adjudicacion 6.5 del acta 84: (4.a) las unidades frescas del tramo que
-  acabas de leer, el 11, contra docs/INTRA_DOMINIO_VEREDICTOS.jsonl SIN
-  direccion; (4.b) las mismas contra
-  docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V85.jsonl, la bolsa de la vuelta
-  ANTERIOR, buscando la reciproca; y (4.c) la tabla del PATRON HISTORICO
-  de la TAREA 2.b, pegada entera. Cifras que yo ya medi hoy y que tienen
-  que salir igual: 3.388 veredictos y 3.388 pares no dirigidos unicos,
-  136 unidades en la bolsa filtrada V85. Lo demas lo mides tu; si
-  discrepa en un digito, LA DISCREPANCIA SE DECLARA.
+- TAREA 4, EL CIERRE MEDIDO DE OP-E-01 (adjudicacion 5.8). No se anuncia:
+  se talla, con instrumento propio y con los pares leidos de los ficheros.
+  (4.a) La cifra final de la operacion: cuantas unidades leidas en total,
+  cuantas SE ESCRIBE, cuantas NO SE ENLAZA, y el reparto por tramo, todo
+  del registro y no de la suma de reportes viejos.
+  (4.b) La guarda corrida DESPUES del horneado de cierre tiene que dar
+  VERDE con TODA LA BOLSA DECIDIDA, o sea el mensaje "TODA LA BOLSA ESTA
+  DECIDIDA" y ninguna unidad sin decidir. Si no lo da, OP-E-01 NO CIERRA
+  y lo dices.
+  (4.c) La operacion se cierra COMO MANDA EL 00_INDICE LINEA 111: el
+  campo estado de OPERACIONES.jsonl NO SE TOCA, y la ejecucion se declara
+  en el campo nota de OP-E-01, con su cifra final dentro. Y se escribe el
+  cierre en docs/plan/04_ENLACES.md, en el apartado de OP-E-01, con la
+  misma cifra.
+  (4.d) La vara de la tanda con el alcance de la adjudicacion 6.5 del
+  acta 84, como en las cuatro vueltas anteriores: las frescas contra
+  docs/INTRA_DOMINIO_VEREDICTOS.jsonl sin direccion, las mismas contra
+  PASO_NODO_CALIBRADO_FILTRADO_V86.jsonl buscando la reciproca, y la
+  tabla del PATRON HISTORICO pegada entera de la salida del instrumento.
+  CIFRAS QUE YO YA MEDI HOY Y QUE TIENEN QUE SALIR IGUAL: 3.388
+  veredictos, 3.388 pares no dirigidos unicos, 129 unidades en la bolsa
+  filtrada V86.
 
-- LO QUE NO SE ESCRIBE EN PROSA ESTA VUELTA, dicho antes de que lo
-  escribas (adjudicacion 5.5): nada de "mas que el promedio de tramos
-  anteriores" ni comparaciones parecidas. La marca de discutible no vive
-  en ningun fichero, asi que ese promedio no se puede contar, y
-  EJECUTOR.md regla 1 lo cierra en una linea: si no hay linea que citar,
-  la afirmacion no se escribe. Publica la cifra de esta tanda y ya.
+- TAREA 5, QUE VIENE DESPUES, TALLADO Y NO TECLEADO (adjudicaciones 5.9 y
+  5.10). ES LA TAREA MAS DELICADA DE LA VUELTA Y VA AL FINAL A PROPOSITO.
+  Escribe un instrumento propio que, para las diez operaciones de
+  04_ENLACES, publique una tabla con: id, orden, sus dependencias, el
+  estado REAL de cada dependencia (leido del campo nota y de las paginas
+  de fase, NUNCA del campo estado, ver el punto (D)), y si la operacion
+  queda desbloqueada o no. EL CRITERIO QUE USES PARA LEER "EJECUTADA" VA
+  ESCRITO EN EL DOCSTRING Y EN EL REPORTE, porque buscar una palabra
+  dentro de un campo de prosa no es una medicion aceptable en esta
+  campana y hay que decir exactamente que se hace. MI VARA CRUDA, QUE
+  DECLARO COMO CRUDA Y QUE NO TIENES QUE CREER: buscando la palabra HECHA
+  dentro del campo nota me sale que la unica desbloqueada, aparte de la
+  que cierras, PARECE SER OP-E-06 (orden 9), porque OP-E-03 y
+  OP-M-03-ENLACES esperan a OP-U-02 y a las mesas, y OP-E-04, OP-E-05,
+  OP-M-01-ESLABONES y OP-M-01-SEXTO esperan a OP-M-01 y OP-M-01-FUSION,
+  que son territorio de la fase 06. SI TU MEDICION DA OTRA COSA, LA TUYA
+  MANDA Y LA DECLARAS. Y ESTO ES LO QUE NO SE NEGOCIA: NO ABRAS LA
+  OPERACION QUE SALGA EN ESTA VUELTA. Publica la tabla, di cual es, lee
+  su texto entero, y contesta UNA pregunta: su texto alcanza para
+  ejecutarla sin decidir nada, si o no. Si la respuesta es NO, ESO ES
+  PARADA por AUDITOR.md seccion 3 y lo traes escrito, no lo improvisas.
+  Si la respuesta es SI, tambien lo dices y la abre la vuelta 88 con el
+  encargo escrito para ella.
 
-- EL FINAL DE OP-E-01 YA SE VE, y lo publico medido para que lo tengas
-  presente y no lo descubras a mitad: tras el tramo 11 quedan CUATRO
-  unidades sin decidir. Salvo que la recalibracion abra unidades nuevas,
-  cosa que no ha pasado en las dos ultimas vueltas (cero unidades nuevas
-  en V85 respecto de V84, medido por mi), OP-E-01 se consume en la vuelta
-  87. No adelantes trabajo por eso: lee tu tramo de 30 y deja la cola
-  para su vuelta.
-
-- LA CABECERA DEL REPORTE SE TALLA con --fase04 --vuelta 86 y se pega
-  entera, con las dos filas de la vuelta 85 dentro, y antes del commit de
-  cierre --comparar docs/loop/REPORTE.md tiene que dar CABECERA IDENTICA
-  AL TALLADOR, con su salida citada. Corre tambien el --comparar del
-  tramo 11 contra tu propio reporte, con CABECERA Y TABLA DE LA CADENA
-  IDENTICAS y EXIT 0: es el caso que la vuelta 83 no corrio y que la 84 y
-  la 85 si, y no se afloja. La fila de identidad lleva el commit del acta
-  y el HEAD real de la apertura: sella el HEAD con git rev-parse HEAD >
-  docs/loop/SALIDA_V86_HEAD_APERTURA.txt ANTES de commitear nada, y tiene
-  que salir el commit del acta de la vuelta 85. Mide la apertura antes de
+- LA CABECERA DEL REPORTE SE TALLA con --fase04 --vuelta 87 y se pega
+  entera, y antes del commit de cierre --comparar docs/loop/REPORTE.md
+  tiene que dar CABECERA IDENTICA AL TALLADOR, con SU FICHERO DE SALIDA
+  CITADO POR SU NOMBRE en el reporte, no con un "se corre a
+  continuacion". Corre tambien el --comparar de la tabla de la cadena de
+  esta tanda contra tu propio reporte, con CABECERA Y TABLA IDENTICAS y
+  EXIT 0. La fila de identidad lleva el commit del acta y el HEAD real de
+  la apertura: sella el HEAD con git rev-parse HEAD >
+  docs/loop/SALIDA_V87_HEAD_APERTURA.txt ANTES de commitear nada, y tiene
+  que salir el commit del acta de la vuelta 86. Mide la apertura antes de
   la primera operacion (Gate 0 el ciclo de tres, censo, aristas, motor,
   web, tsc y el desfase del calibrado), cada uno con su fichero, y
-  recomputa el cierre AL CIERRE. Hornea el registro DOS VECES, antes del
-  filtro y al cierre (adjudicacion 6.3 del acta 84, que funciono a la
-  primera), y corre la guarda DESPUES del horneado de cierre, ahora con
-  la definicion nueva.
+  recomputa el cierre AL CIERRE. VARAS DE APERTURA MEDIDAS POR MI HOY:
+  censo 3.853 / 3.188 / 665; aristas 8.994 / 8.973 / 17.967 / 9.617; Gate
+  0 OK con auto-aristas 0, duplicadas 0 y divergentes 0; motor 25/25; web
+  80 ficheros y 1.030 pasados con 3 saltados; tsc EXITCODE 0 y cero
+  lineas; desfase del calibrado 8 filas; marcador 3.388 con A 551, B 72,
+  C 5, D 2.760 y cero huecos.
 
-- Con el freno delante, y las cifras son del acta 85 seccion 7: la racha
+- LO QUE NO SE ESCRIBE EN PROSA ESTA VUELTA: ninguna comparacion de
+  tandas, tramos o vueltas sin el fichero que la sostiene pegado al lado.
+  Con la pieza 2.a en la mano, la unica comparacion que esta vuelta puede
+  publicar sobre unidades nuevas es la que el filtro talle. Y ninguna
+  frase sobre el estado de una operacion del plan leida del campo estado.
+
+- CON EL FRENO DELANTE, y las cifras son del acta 86 seccion 7: la racha
   de CLASE O CIFRA PUBLICADA esta en CERO y la parada pide DOS seguidas;
-  van ocho vueltas limpias de esas dos especies. La de REPORTE sube de
-  UNO a DOS y la parada pide TRES: QUEDA A UNA. El credito de tanda sigue
-  REBAJADO por la caida: releere el tramo 11 ENTERO, no una muestra. Y lo
-  que mas te conviene tener presente, porque es el patron de las tres
-  ultimas caidas seguidas: las tres fueron frases de prosa que contradicen
-  a una tabla del propio reporte que las acompana. Antes de cerrar,
-  repasa el encargo punto por punto y di de cada uno si se corrio o no; y
-  antes de publicar cualquier frase que compare tandas, tramos o vueltas,
-  busca el fichero que la sostiene y pegalo, o no la escribas.
+  van nueve vueltas limpias de esas dos especies. La de REPORTE esta en
+  CERO y la parada pide TRES: la rompiste tu esta vuelta y el instrumento
+  que la rompio lo escribiste tu. El credito de tanda esta RESTAURADO, o
+  sea que no estoy obligado a releer al doble; releere las cuatro de
+  todos modos, porque cuatro es un numero chico. Antes de cerrar, repasa
+  el encargo punto por punto y di de cada uno SI SE CORRIO O NO, con la
+  verdad y no con un SI de cortesia: esa fue la unica falta de la vuelta
+  pasada. Y antes de publicar cualquier frase que compare tandas, tramos
+  o vueltas, busca el fichero que la sostiene y pegalo, o no la escribas.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.

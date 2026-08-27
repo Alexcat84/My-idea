@@ -1,0 +1,253 @@
+
+==============================================================================
+1. LAS OCHO CIFRAS DEL GRAFO, EN TRES PUNTOS DE GIT Y EN EL ARBOL
+==============================================================================
+ref | nodos | vivos | depre | sig | prev | suma | union | auto | dupint
+4cc090a2   apertura, mi acta 85          3853  3188  665 |  8986  8965  17951  9609 | 0 0
+d13a951a   TAREA 2, el instrumento       3853  3188  665 |  8986  8965  17951  9609 | 0 0
+1970045a   cierre, HEAD                  3853  3188  665 |  8994  8973  17967  9617 | 0 0
+arbol      de trabajo                    3853  3188  665 |  8994  8973  17967  9617 | 0 0
+
+MOVIDAS cierre menos apertura: sig +8, prev +8, suma +16, union +8
+
+==============================================================================
+2. EL MARCADOR DEL CRIBADO
+==============================================================================
+n=3388  A 551  B 72  C 5  D 2760
+puestos: min 1  max 3388  unicos 3388  huecos 0
+pares no dirigidos unicos: 3388
+
+==============================================================================
+3. EL REGISTRO DE DECIDIDAS, CRUZADO FILA POR FILA CONTRA EL GRAFO DE HOY
+==============================================================================
+filas 216  unicos 216  {'ESCRITA': 97, 'NO SE ENLAZA': 119}
+reparto por tramo: {3: 30, 4: 30, 5: 23, 6: 10, 7: 3, 8: 30, 9: 30, 10: 30, 11: 30}
+FILAS QUE NO CALZAN CON EL GRAFO: 0
+
+==============================================================================
+4. LA BOLSA, EL FILTRO Y EL DESFASE DEL CALIBRADO
+==============================================================================
+docs/plan/PASO_NODO_CALIBRADO.jsonl: 468 filas, 221 sin arista, 247 con arista
+FILTRADO_V86: 129 filas   FILTRADO_V85: 136 filas
+en V85 y ya no en V86: 7
+    lienzo_proyecto_innovacion -> actividades_clave
+    estructura_equipos_innovacion_interna -> equipo_multifuncional_real
+    evaluacion_industria_cliente -> analisis_cadena_de_valor
+    diagrama_de_flujo_proceso_map -> analisis_flujo_proceso
+    stage_gate_system -> tipos_criterios_gate
+    waterfall_vs_agile_development -> customer_development_process
+    decidir_vender_solo_online_o_tambien_tienda_fisica -> ofrecer_puntos_recogida
+NUEVAS en V86 que no estaban en V85: 0
+DESFASE del calibrado contra el grafo de hoy: 51 fila(s)
+    rapid_prototyping -> determine_what_to_prototype  campo arista=True  sig=False prev=False
+    tasa_de_retorno_requerida -> costo_de_capital  campo arista=True  sig=False prev=False
+    tasa_interna_retorno_irr -> tasa_de_retorno_requerida  campo arista=True  sig=False prev=False
+    bullseye_framework -> canales_de_traccion_19  campo arista=True  sig=False prev=False
+    presentacion_solucion_producto -> mapa_flujo_trabajo_cliente  campo arista=True  sig=False prev=False
+    governance_integration_gates_portfolio_roadmap -> product_roadmap_estrategico  campo arista=True  sig=False prev=False
+    tasa_de_retorno_requerida -> costo_de_capital  campo arista=True  sig=False prev=False
+    tasa_de_retorno_requerida -> costo_de_oportunidad  campo arista=True  sig=False prev=False
+    histograma_calidad -> frecuencia_distribucion  campo arista=True  sig=False prev=False
+    search_for_business_model -> value_proposition_canvas  campo arista=True  sig=False prev=False
+    normas_culturales_calidad -> codigo_conducta_orientado_cliente  campo arista=True  sig=False prev=False
+    market_type_revenue_growth -> determinar_tipo_de_mercado  campo arista=True  sig=False prev=False
+    determinar_tipo_de_mercado -> lienzo_modelo_negocio  campo arista=True  sig=False prev=False
+    desarrollar_posicionamiento_empresa -> posicionamiento_por_tipo_de_mercado  campo arista=True  sig=False prev=False
+    customer_discovery_overview -> lienzo_modelo_negocio  campo arista=True  sig=False prev=False
+    unbundling_business_models -> lienzo_modelo_negocio  campo arista=True  sig=False prev=False
+    simulacion_de_operaciones_supply_chain -> definicion_alineacion_cadena_suministro  campo arista=True  sig=False prev=False
+    bullseye_framework -> canales_de_traccion_19  campo arista=True  sig=False prev=False
+    customer_validation -> producto_minimo_viable  campo arista=True  sig=False prev=False
+    ventana_oportunidad_accidente -> fallas_activas_condiciones_latentes  campo arista=True  sig=False prev=False
+    seleccion_metodo_transporte_internacional -> documentacion_exportacion  campo arista=True  sig=False prev=False
+    obtencion_compromiso_venta -> preguntas_need_payoff  campo arista=True  sig=False prev=False
+    prueba_teorias_causa_raiz -> formulacion_teorias_causa  campo arista=True  sig=False prev=False
+    pool_opciones_empleados -> valuacion_pre_post_money  campo arista=True  sig=False prev=False
+    pivote_o_proceder -> categorias_entusiasmo_cliente  campo arista=True  sig=False prev=False
+    descubrir_necesidades_del_cliente -> necesidades_reales_vs_declaradas  campo arista=True  sig=False prev=False
+    ten_un_checklist_de_clausulas_de_contrato -> pide_una_revision_externa_antes_de_firmar_cualquier_contrato  campo arista=True  sig=False prev=False
+    diseno_recordatorios_efectivos_2 -> caracteristicas_tareas_propensas_omision  campo arista=True  sig=False prev=False
+    lean_launchpad_web_startup_process -> unique_selling_proposition_statement  campo arista=True  sig=False prev=False
+    bullseye_framework -> traction_channel_bias  campo arista=True  sig=False prev=False
+    framework_caracteristicas_ventajas_beneficios -> preguntas_need_payoff  campo arista=True  sig=False prev=False
+    responsabilidad_gerencial_causas_comunes -> causas_comunes_vs_especiales  campo arista=True  sig=False prev=False
+    fit_value_proposition -> customer_profile  campo arista=True  sig=False prev=False
+    plan_gestion_recursos_humanos -> roles_responsabilidades  campo arista=True  sig=False prev=False
+    fit_value_proposition -> customer_profile  campo arista=True  sig=False prev=False
+    establecer_diseno_final_producto -> optimizacion_caracteristicas_diseno  campo arista=True  sig=False prev=False
+    control_del_board_startup -> entender_term_sheet  campo arista=True  sig=False prev=False
+    customer_needs_spreadsheet -> identificar_clientes_externos_e_internos  campo arista=True  sig=False prev=False
+    three_rs_equilibrium -> relacion_previa_y_estructura_roles  campo arista=True  sig=False prev=False
+    gate3_go_to_development -> etapa_build_business_case  campo arista=True  sig=False prev=False
+    determinacion_cuota_inicial -> analisis_competencia_franquicias  campo arista=False  sig=True prev=True
+    remover_barreras_orgullo_trabajo -> eliminar_slogans_y_exhortaciones  campo arista=False  sig=True prev=True
+    safe_simple_agreement_future_equity -> riesgo_fiduciario_insolvencia_deuda  campo arista=True  sig=False prev=False
+    distribucion_poisson -> muestreo_de_aceptacion  campo arista=False  sig=True prev=True
+    personalizar_interacciones_cliente -> conexion_personal_emocional  campo arista=False  sig=True prev=True
+    customer_discovery_phase2_problem_test -> preparar_contacto_clientes  campo arista=False  sig=True prev=True
+    ciclo_crear_medir_aprender -> producto_minimo_viable  campo arista=True  sig=False prev=False
+    definicion_calidad_fitness_for_purpose -> descubrir_necesidades_del_cliente  campo arista=False  sig=True prev=True
+    definicion_y_concepto_de_aseguramiento_de_calidad -> trilogia_juran_qa_qc  campo arista=False  sig=True prev=True
+    board_management_buyin -> buyin_customer_development  campo arista=True  sig=False prev=False
+    motor_crecimiento_pago -> valor_de_vida_del_cliente  campo arista=False  sig=True prev=True
+
+==============================================================================
+5. LA GUARDA, RECOMPUTADA DE CERO CON LAS DOS DEFINICIONES
+==============================================================================
+solo NO SE ENLAZA      -> prefijo 0..94, primera SIN DECIDIR indice 95 (determinacion_cuota_inicial -> analisis_competencia_franquicias, paso 2, franquicias), decididas por detras 22, ROJO
+cualquier decision     -> prefijo 0..124, primera SIN DECIDIR indice 125 (juran_rcca_metodo -> diseno_implementacion_remedio, paso 3, quality), decididas por detras 0, VERDE
+
+==============================================================================
+6. EL TRAMO 11 (INDICES 95 A 124), MEDIDO EN LAS DOS VISTAS
+==============================================================================
+ 95 determinacion_cuota_inicial                                -> analisis_competencia_franquicias               sig=True  prev=True  inv=False registro=ESCRITA
+ 96 key_partners_hypothesis                                    -> actualizar_business_model_canvas_tuneup        sig=False prev=False inv=False registro=NO SE ENLAZA
+ 97 clasificacion_benchmarking                                 -> consortium_benchmarking                        sig=False prev=False inv=False registro=NO SE ENLAZA
+ 98 remover_barreras_orgullo_trabajo                           -> eliminar_slogans_y_exhortaciones               sig=True  prev=True  inv=False registro=ESCRITA
+ 99 sujetos_de_control                                         -> optimizacion_caracteristicas_diseno            sig=False prev=False inv=False registro=NO SE ENLAZA
+100 conditions_precedent_financing                             -> entender_term_sheet                            sig=False prev=False inv=False registro=NO SE ENLAZA
+101 distribucion_poisson                                       -> muestreo_de_aceptacion                         sig=True  prev=True  inv=False registro=ESCRITA
+102 transformacion_calidad_compromiso_alta_direccion_japon     -> planificacion_calidad_crosby                   sig=False prev=False inv=False registro=NO SE ENLAZA
+103 personalizar_interacciones_cliente                         -> conexion_personal_emocional                    sig=True  prev=True  inv=False registro=ESCRITA
+104 sistema_pull_push                                          -> takt_time                                      sig=False prev=False inv=False registro=NO SE ENLAZA
+105 customer_discovery_phase2_problem_test                     -> preparar_contacto_clientes                     sig=True  prev=True  inv=False registro=ESCRITA
+106 formalizar_un_proceso_ad_hoc                               -> metricas_calidad                               sig=False prev=False inv=False registro=NO SE ENLAZA
+107 medir_lo_que_importa_no_solo_lo_facil                      -> metricas_calidad                               sig=False prev=False inv=False registro=NO SE ENLAZA
+108 plan_mejora_procesos                                       -> metricas_calidad                               sig=False prev=False inv=False registro=NO SE ENLAZA
+109 sujetos_de_control                                         -> establecer_metas_caracteristicas               sig=False prev=False inv=False registro=NO SE ENLAZA
+110 escenarios_diseno_modelo_negocio                           -> escenarios_de_evolucion_de_la_ia               sig=False prev=False inv=False registro=NO SE ENLAZA
+111 definicion_calidad_fitness_for_purpose                     -> descubrir_necesidades_del_cliente              sig=True  prev=True  inv=False registro=ESCRITA
+112 inventario_conocimiento_estadistico_personal               -> roi_proyectos_calidad                          sig=False prev=False inv=False registro=NO SE ENLAZA
+113 reconocer_mercancia_peligrosa_disfrazada                   -> clasificar_tipo_paquete                        sig=False prev=False inv=False registro=NO SE ENLAZA
+114 identificacion_proveedores_criticos                        -> validacion_externa_reportes                    sig=False prev=False inv=False registro=NO SE ENLAZA
+115 tipos_de_riesgo_invencion_vs_mercado                       -> fundadores_lideran_validacion                  sig=False prev=False inv=False registro=NO SE ENLAZA
+116 definicion_y_concepto_de_aseguramiento_de_calidad          -> planificacion_inicial_calidad                  sig=False prev=False inv=False registro=NO SE ENLAZA
+117 definicion_y_concepto_de_aseguramiento_de_calidad          -> trilogia_juran_qa_qc                           sig=True  prev=True  inv=False registro=ESCRITA
+118 planificacion_recoleccion_datos                            -> analisis_pareto_proyectos_elefante             sig=False prev=False inv=False registro=NO SE ENLAZA
+119 rol_director_calidad                                       -> circulos_calidad_qc                            sig=False prev=False inv=False registro=NO SE ENLAZA
+120 establecer_diseno_final_producto                           -> establecer_metas_caracteristicas               sig=False prev=False inv=False registro=NO SE ENLAZA
+121 desarrollo_value_proposition_usp                           -> posicionamiento_vs_competidores                sig=False prev=False inv=False registro=NO SE ENLAZA
+122 motor_crecimiento_pago                                     -> valor_de_vida_del_cliente                      sig=True  prev=True  inv=False registro=ESCRITA
+123 constraint_management                                      -> caso_estudio_benchmarking_terminal             sig=False prev=False inv=False registro=NO SE ENLAZA
+124 ingenieria_calidad_proveedores                             -> desarrollar_estrategias_largo_plazo            sig=False prev=False inv=False registro=NO SE ENLAZA
+
+ESCRITAS 8 [95, 98, 101, 103, 105, 111, 117, 122]
+NO ESCRITAS 22
+INCONSISTENTES (una vista si y otra no) 0 []
+INVERSAS presentes 0 []
+
+==============================================================================
+7. LA VARA DE LA CADENA, BFS PROPIO SOBRE EL GRAFO DE ANTES DE ESCRIBIR
+==============================================================================
+ 95 SIN CAMINO PREVIO (tope 6)   determinacion_cuota_inicial -> analisis_competencia_franquicias
+ 96 ALCANZABLE (4 saltos)  key_partners_hypothesis -> mapa_de_canal_de_ventas -> mercados_multilaterales -> customer_discovery_phase2_problem_test -> actualizar_business_model_canvas_tuneup
+ 97 SIN CAMINO PREVIO (tope 6)   clasificacion_benchmarking -> consortium_benchmarking
+ 98 ALCANZABLE (6 saltos)  remover_barreras_orgullo_trabajo -> mejora_continua_del_sistema -> control_estadistico_de_procesos -> causas_comunes_vs_especiales -> adopcion_liderazgo -> eliminar_barreras_departamentales -> eliminar_slogans_y_exhortaciones
+ 99 SIN CAMINO PREVIO (tope 6)   sujetos_de_control -> optimizacion_caracteristicas_diseno
+100 ALCANZABLE (3 saltos)  conditions_precedent_financing -> no_shop_agreement -> proceso_decision_vc -> entender_term_sheet
+101 SIN CAMINO PREVIO (tope 6)   distribucion_poisson -> muestreo_de_aceptacion
+102 SIN CAMINO PREVIO (tope 6)   transformacion_calidad_compromiso_alta_direccion_japon -> planificacion_calidad_crosby
+103 SIN CAMINO PREVIO (tope 6)   personalizar_interacciones_cliente -> conexion_personal_emocional
+104 SIN CAMINO PREVIO (tope 6)   sistema_pull_push -> takt_time
+105 ALCANZABLE (5 saltos)  customer_discovery_phase2_problem_test -> actualizar_business_model_canvas_discovery -> verificar_product_market_fit -> verificar_clientes_y_canales -> tacticas_cold_calling -> preparar_contacto_clientes
+106 SIN CAMINO PREVIO (tope 6)   formalizar_un_proceso_ad_hoc -> metricas_calidad
+107 ALCANZABLE (5 saltos)  medir_lo_que_importa_no_solo_lo_facil -> metricas_accionables -> analisis_de_cohortes -> optimizacion_metricas_crecimiento -> embudo_get_keep_grow -> metricas_calidad
+108 ALCANZABLE (5 saltos)  plan_mejora_procesos -> analisis_flujo_de_valor -> valor_vs_desperdicio -> producto_minimo_viable -> embudo_get_keep_grow -> metricas_calidad
+109 SIN CAMINO PREVIO (tope 6)   sujetos_de_control -> establecer_metas_caracteristicas
+110 ALCANZABLE (3 saltos)  escenarios_diseno_modelo_negocio -> lienzo_modelo_negocio -> future_scenarios_planning -> escenarios_de_evolucion_de_la_ia
+111 ALCANZABLE (4 saltos)  definicion_calidad_fitness_for_purpose -> trilogia_de_juran -> doble_significado_calidad -> fitness_for_use_purpose -> descubrir_necesidades_del_cliente
+112 SIN CAMINO PREVIO (tope 6)   inventario_conocimiento_estadistico_personal -> roi_proyectos_calidad
+113 SIN CAMINO PREVIO (tope 6)   reconocer_mercancia_peligrosa_disfrazada -> clasificar_tipo_paquete
+114 SIN CAMINO PREVIO (tope 6)   identificacion_proveedores_criticos -> validacion_externa_reportes
+115 ALCANZABLE (3 saltos)  tipos_de_riesgo_invencion_vs_mercado -> customer_development_modelo -> customer_discovery -> fundadores_lideran_validacion
+116 SIN CAMINO PREVIO (tope 6)   definicion_y_concepto_de_aseguramiento_de_calidad -> planificacion_inicial_calidad
+117 SIN CAMINO PREVIO (tope 6)   definicion_y_concepto_de_aseguramiento_de_calidad -> trilogia_juran_qa_qc
+118 SIN CAMINO PREVIO (tope 6)   planificacion_recoleccion_datos -> analisis_pareto_proyectos_elefante
+119 SIN CAMINO PREVIO (tope 6)   rol_director_calidad -> circulos_calidad_qc
+120 SIN CAMINO PREVIO (tope 6)   establecer_diseno_final_producto -> establecer_metas_caracteristicas
+121 SIN CAMINO PREVIO (tope 6)   desarrollo_value_proposition_usp -> posicionamiento_vs_competidores
+122 ALCANZABLE (6 saltos)  motor_crecimiento_pago -> producto_mercado_fit_motores -> contabilidad_innovacion -> metricas_accionables -> analisis_de_cohortes -> optimizacion_metricas_crecimiento -> valor_de_vida_del_cliente
+123 SIN CAMINO PREVIO (tope 6)   constraint_management -> caso_estudio_benchmarking_terminal
+124 SIN CAMINO PREVIO (tope 6)   ingenieria_calidad_proveedores -> desarrollar_estrategias_largo_plazo
+
+ALCANZABLE 10: [(96, 4), (98, 6), (100, 3), (105, 5), (107, 5), (108, 5), (110, 3), (111, 4), (115, 3), (122, 6)]
+SIN CAMINO PREVIO 20: [95, 97, 99, 101, 102, 103, 104, 106, 109, 112, 113, 114, 116, 117, 118, 119, 120, 121, 123, 124]
+
+HORIZONTE 30 sobre las SIN CAMINO PREVIO:
+ 95 9 saltos
+ 97 17 saltos
+ 99 12 saltos
+101 9 saltos
+102 8 saltos
+103 7 saltos
+104 11 saltos
+106 NI A 30 SALTOS   formalizar_un_proceso_ad_hoc -> metricas_calidad
+109 11 saltos
+112 7 saltos
+113 NI A 30 SALTOS   reconocer_mercancia_peligrosa_disfrazada -> clasificar_tipo_paquete
+114 16 saltos
+116 NI A 30 SALTOS   definicion_y_concepto_de_aseguramiento_de_calidad -> planificacion_inicial_calidad
+117 NI A 30 SALTOS   definicion_y_concepto_de_aseguramiento_de_calidad -> trilogia_juran_qa_qc
+118 9 saltos
+119 7 saltos
+120 10 saltos
+121 NI A 30 SALTOS   desarrollo_value_proposition_usp -> posicionamiento_vs_competidores
+123 11 saltos
+124 9 saltos
+NI A 30 SALTOS: 5 [106, 113, 116, 117, 121]
+
+==============================================================================
+8. LA VARA DE LA TAREA 4: VEREDICTO SIN DIRECCION Y RECIPROCA CONTRA V85
+==============================================================================
+ 98 remover_barreras_orgullo_trabajo                     / eliminar_slogans_y_exhortaciones             clase D puesto 3174 quality      registro ESCRITA
+103 personalizar_interacciones_cliente                   / conexion_personal_emocional                  clase D puesto 1396 core         registro ESCRITA
+104 sistema_pull_push                                    / takt_time                                    clase D puesto 3231 quality      registro NO SE ENLAZA
+117 definicion_y_concepto_de_aseguramiento_de_calidad    / trilogia_juran_qa_qc                         clase D puesto 2765 quality      registro ESCRITA
+CON VEREDICTO: 4 de 30    CON RECIPROCA EN V85: 0 de 30
+
+==============================================================================
+9. EL PATRON HISTORICO, RECOMPUTADO DE CERO
+==============================================================================
+tramo | par | clase | puesto | dominio | decision de hoy
+ 3 | analisis_de_ratios_financieros -> retorno_sobre_capital | D | 1369 | core | ESCRITA
+ 3 | cero_defectos -> zero_defects_concepto | D | 2464 | quality | ESCRITA
+ 3 | control_exportaciones_bis -> licencia_exportacion_regulaciones | D | 1951 | exportacion | ESCRITA
+ 3 | estadistica_basica_calidad -> medidas_tendencia_dispersion | D | 2826 | quality | ESCRITA
+ 3 | fees_y_breakup_fee_adquisicion -> breakup_fee_evaluation | D | 223 | core | ESCRITA
+ 3 | identificar_si_tu_producto_necesita_proteccion_especial -> probar_empaque_antes_de_escalar_envios | D | 1746 | entrega | ESCRITA
+ 3 | mejora_calidad_crosby -> programa_mejora_calidad_14_pasos | D | 2583 | quality | ESCRITA
+ 4 | equipo_customer_development -> customer_development_team | B | 637 | core | NO SE ENLAZA
+ 4 | sujetos_de_control -> key_process_product_characteristics | D | 3205 | quality | ESCRITA
+ 5 | identificacion_evaluacion_peligros -> investigacion_incidentes | D | 2324 | health_safety | ESCRITA
+ 5 | mvp_catalogo_tecnicas -> mvp_tipo_video | D | 384 | core | NO SE ENLAZA
+ 5 | posicionamiento_vs_competidores -> analisis_competencia_franquicias | D | 2097 | franquicias | NO SE ENLAZA
+ 6 | abolir_inspeccion_masiva -> eliminacion_inspeccion_masiva_por_control_estadistico | D | 2560 | quality | NO SE ENLAZA
+ 7 | estructura_reporte_dual_estadistico -> organizacion_liderazgo_estadistico | D | 3121 | quality | NO SE ENLAZA
+ 8 | clasificacion_caracteristicas_calidad -> key_process_product_characteristics | D | 2959 | quality | NO SE ENLAZA
+ 8 | term_sheet_negociacion -> entender_term_sheet | D | 554 | core | NO SE ENLAZA
+ 9 | control_calidad_definicion -> plan_de_control | D | 3056 | quality | NO SE ENLAZA
+ 9 | formulacion_teorias_causa -> diagrama_causa_efecto | D | 2980 | quality | ESCRITA
+10 | customer_discovery_phase2_problem_test -> ganar_comprension_del_cliente | D | 1397 | core | NO SE ENLAZA
+10 | diagrama_de_flujo_proceso_map -> analisis_flujo_proceso | D | 2728 | quality | ESCRITA
+10 | estructura_equipos_innovacion_interna -> equipo_multifuncional_real | D | 1401 | core | ESCRITA
+11 | definicion_y_concepto_de_aseguramiento_de_calidad -> trilogia_juran_qa_qc | D | 2765 | quality | ESCRITA
+11 | personalizar_interacciones_cliente -> conexion_personal_emocional | D | 1396 | core | ESCRITA
+11 | remover_barreras_orgullo_trabajo -> eliminar_slogans_y_exhortaciones | D | 3174 | quality | ESCRITA
+11 | sistema_pull_push -> takt_time | D | 3231 | quality | NO SE ENLAZA
+
+RESUMEN POR TRAMO (con veredicto | clase D | ESCRITA | NO SE ENLAZA):
+  tramo  3: 7|7|7|0
+  tramo  4: 2|1|1|1
+  tramo  5: 3|3|1|2
+  tramo  6: 1|1|0|1
+  tramo  7: 1|1|0|1
+  tramo  8: 2|2|0|2
+  tramo  9: 2|2|1|1
+  tramo 10: 3|3|2|1
+  tramo 11: 4|4|3|1
+
+==============================================================================
+10. LAS DOS QUE SIGUEN SIN ESCRIBIRSE (adjudicacion 5.9 del acta 85)
+==============================================================================
+descubrir_necesidades_del_cliente -> customer_needs_spreadsheet : en PASO_NODO_CALIBRADO = False
+curva_caracteristica_operativa -> distribucion_poisson : en PASO_NODO_CALIBRADO = False

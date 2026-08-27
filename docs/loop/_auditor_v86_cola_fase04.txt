@@ -1,0 +1,18 @@
+FASE 04, marca HECHA en la nota (la vara del 00_INDICE linea 111):
+  orden  1 OP-E-01            HECHA-en-nota=NO  | deps: ninguna
+  orden  2 OP-E-02            HECHA-en-nota=SI  | deps: ninguna
+  orden  3 OP-E-03            HECHA-en-nota=NO  | deps: [('OP-E-01', 'abierta'), ('OP-U-02', 'abierta')]
+  orden  4 OP-M-03-ENLACES    HECHA-en-nota=NO  | deps: [('OP-M-03-I', 'abierta'), ('OP-M-03-II', 'abierta'), ('OP-M-03-III', 'abierta')]
+  orden  5 OP-E-04            HECHA-en-nota=NO  | deps: [('OP-M-01', 'abierta'), ('OP-M-01-FUSION', 'abierta')]
+  orden  6 OP-E-05            HECHA-en-nota=NO  | deps: [('OP-M-01', 'abierta'), ('OP-M-01-FUSION', 'abierta')]
+  orden  7 OP-M-01-ESLABONES  HECHA-en-nota=NO  | deps: [('OP-M-01', 'abierta'), ('OP-M-01-FUSION', 'abierta')]
+  orden  8 OP-M-01-SEXTO      HECHA-en-nota=NO  | deps: [('OP-M-01', 'abierta'), ('OP-M-01-FUSION', 'abierta')]
+  orden  9 OP-E-06            HECHA-en-nota=NO  | deps: [('OP-D-01', 'HECHA-nota'), ('OP-D-02', 'HECHA-nota'), ('OP-D-03', 'HECHA-nota'), ('OP-D-04', 'HECHA-nota'), ('OP-D-05', 'HECHA-nota'), ('OP-D-06', 'HECHA-nota'), ('OP-D-07', 'HECHA-nota')]
+  orden 10 OP-E-07            HECHA-en-nota=NO  | deps: [('OP-E-06', 'abierta')]
+
+FASE 06 (las mesas) marca HECHA en la nota:
+  orden  1 OP-M-01              HECHA-en-nota=NO
+  orden  2 OP-M-02              HECHA-en-nota=NO
+  orden  3 OP-M-03              HECHA-en-nota=NO
+  orden  4 OP-M-04              HECHA-en-nota=NO
+  orden  5 OP-M-05              HECHA-en-nota=NO
