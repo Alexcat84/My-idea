@@ -1,0 +1,22 @@
+filas del JSONL contadas: 60
+marca LECTURA DIRIGIDA en todas: 60 de 60
+fuera_de_la_cola True en todas: 60 de 60
+fuera_de_la_tasa_por_dominio True en todas: 60 de 60
+mueve_el_marcador_del_cribado False en todas: 60 de 60
+puestos: min 41 max 100 distintos 60
+operacion unica: {'OP-E-03'}
+
+--- PUNTOS 1, 2 y 3, leidos de la cabecera del material corrido HOY ---
+====================================================================================================
+OP-E-03, PRIMER TRAMO DE LECTURA DIRIGIDA (vuelta 96, TAREA 3)
+Bolsa DIFERENCIA_CONTRA_COLA.jsonl: 183 filas. Este tramo: filas 41 a 100 (60 pares).
+Cribado remedido y cerrado en 3388 de 3388. Pares distintos en la cola tras resolver: 2796.
+MARCA DE TODAS LAS FILAS: LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO.
+Ids RESUELTOS por el resolutor ANTES de cruzar nada (P.1). Ninguna fila esta ya en la cola.
+====================================================================================================
+
+--- el cribado, RECONTADO de sus dos ficheros en esta vuelta ---
+docs/INTRA_DOMINIO_PARES.jsonl 3388 filas
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl 3388 filas
+
+(git diff --stat del cribado y de dataset/ arriba: VACIO significa que nada se movio)

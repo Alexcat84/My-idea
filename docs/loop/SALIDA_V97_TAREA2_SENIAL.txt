@@ -1,0 +1,38 @@
+====================================================================================================
+LA SENIAL DE LA BOLSA POR TRAMO (vuelta 97, TAREA 2)
+Fuente: docs/plan/DIFERENCIA_CONTRA_COLA.jsonl (183 filas) mas el grafo.
+Ids resueltos por el RESOLUTOR antes de leer la fuente de cada nodo (P.1).
+====================================================================================================
+
+| tramo | filas | mediana de titulo_ratio | madre e hijo de la MISMA fuente |
+|---|---:|---:|---:|
+| tramo 1 (filas 1 a 40) | 40 | 84.3 | 33 de 40 (82.5%) |
+| tramo 2 (filas 41 a 100) | 60 | 78.2 | 44 de 60 (73.3%) |
+| sin leer (filas 101 a 183) | 83 | 76.2 | 62 de 83 (74.7%) |
+
+====================================================================================================
+EL CRUCE: LA SENIAL DE CADA MITAD DEL TRAMO 2, PARTIDA POR LO QUE LA LECTURA DECIDIO
+Las mitades salen de docs/plan/OP_E_03_LECTURA_TRAMO2_V97.jsonl, no de una lista tecleada.
+====================================================================================================
+
+| grupo del tramo 2 | filas | mediana de titulo_ratio | madre e hijo de la MISMA fuente |
+|---|---:|---:|---:|
+| direccion LEIDA | 33 | 81.5 | 26 de 33 (78.8%) |
+| direccion NO RESUELTA | 27 | 77.3 | 18 de 27 (66.7%) |
+
+====================================================================================================
+LAS DOS AFIRMACIONES, con su veredicto COMPUTADO de las tablas de arriba
+====================================================================================================
+
+AFIRMACION 1 (la bolsa se debilita): mediana del tramo 2 (78.2) MENOR que la del tramo 1 (84.3)
+   -> VERIFICADA
+
+AFIRMACION 2 (la senial acompania a la lectura): misma fuente en NO RESUELTA (66.7%) MENOR que en LEIDA (78.8%)
+   -> VERIFICADA
+
+LO QUE ESTO NO PRUEBA, dicho aqui y no solo en el docstring: NO prueba que el umbral
+de direccion del ejecutor sea el correcto. Una vara demasiado estricta sobre una bolsa
+que se debilita daria estas dos mismas seniales. La correccion del umbral la adjudica
+el auditor.
+
+FIN

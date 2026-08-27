@@ -1,0 +1,14 @@
+TRANSCODIFICACION DECLARADA DE UNA SALIDA DE APERTURA (vuelta 97)
+================================================================
+FICHERO: docs/loop/SALIDA_V97_GATE0_CMD1_APERTURA.txt
+QUE PASO: la salida se escribio en la CODIFICACION DE CONSOLA (cp1252) y no en UTF-8,
+por una redireccion mia, no por nada del instrumento. La salida equivalente de la
+vuelta 96 (SALIDA_V96_GATE0_CMD1_APERTURA.txt) SI es UTF-8, o sea que es una
+desviacion mia respecto a la vuelta anterior y se declara como tal.
+QUE SE HIZO: transcodificar cp1252 a UTF-8. Es una conversion SIN PERDIDA: los mismos
+caracteres, escritos con otros bytes. NO se volvio a correr el ciclo de tres, porque
+la apertura ya esta sellada y volver a medirla la convertiria en estado intermedio.
+NINGUNA CIFRA DE LA CABECERA CAMBIA: las celdas del Gate 0 son cifras ASCII.
+sha256 ANTES  (cp1252): d6d89a06ba448560c745e47463dab93c5bb6271e91c1be3c3a948ad946bd546a
+sha256 DESPUES (utf-8): 10f6f1b99c849fd84e28bd1b81f02f117d5d4f8e0a4d17ce0136de358b638df7
+lineas del fichero, contadas despues: 312

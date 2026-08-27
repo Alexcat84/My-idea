@@ -1,0 +1,74 @@
+====================================================================================================
+OP-E-03, VEREDICTOS DEL SEGUNDO TRAMO (vuelta 97, TAREA 2)
+Bolsa de 183 filas; este tramo lee las filas 41 a 100 (60 pares).
+Vara: banco 9.6.1 (clase), 9.6.2 (direccion), 9.6.3 (el solape no decide).
+EL UMBRAL DE DIRECCION ES EL MISMO DEL TRAMO 1 (acta 96 seccion 4.4, linea 34367).
+TODAS LAS FILAS: LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO .
+NO MUEVEN EL MARCADOR DEL CRIBADO.
+====================================================================================================
+
+| clase | que significa | cuantas de 60 |
+|---|---|---:|
+| A | REPITE (lo que anade cabe en una linea) | 3 |
+| B | DUDOSO (la vara no lo resuelve sola) | 1 |
+| C | figura aparte | 0 |
+| D | CONTINUA (trae procedimiento que el otro no tiene) | 56 |
+
+ENUMERACION clase A (3): 42, 88, 100
+ENUMERACION clase B (1): 47
+ENUMERACION clase C (0): ninguna
+ENUMERACION clase D (56): 41, 43, 44, 45, 46, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99
+
+DIRECCION (banco 9.6.2), contada de la misma tabla:
+| resultado | cuantas |
+|---|---:|
+| direccion LEIDA y afirmada | 33 |
+| direccion NO RESUELTA, declarada como tal | 27 |
+ENUMERACION 'direccion no resuelta' (27): 41, 43, 44, 50, 51, 54, 55, 56, 60, 63, 65, 67, 68, 69, 70, 71, 72, 76, 79, 81, 82, 85, 86, 89, 90, 95, 96
+ENUMERACION 'direccion leida' (33): 42, 45, 46, 47, 48, 49, 52, 53, 57, 58, 59, 61, 62, 64, 66, 73, 74, 75, 77, 78, 80, 83, 84, 87, 88, 91, 92, 93, 94, 97, 98, 99, 100
+
+POR DOMINIO, Y SE ROTULA: ESTA TABLA NO ENTRA EN LA TASA POR DOMINIO DEL BANCO 9.27.
+Se cuenta aparte, como manda el punto 5 de OP-E-03.verificacion.
+| dominio | pares del tramo | A | B | C | D |
+|---|---:|---:|---:|---:|---:|
+| core | 22 | 1 | 1 | 0 | 20 |
+| environmental | 3 | 0 | 0 | 0 | 3 |
+| exportacion | 3 | 0 | 0 | 0 | 3 |
+| health_safety | 2 | 1 | 0 | 0 | 1 |
+| quality | 29 | 1 | 0 | 0 | 28 |
+| risk_management | 1 | 0 | 0 | 0 | 1 |
+
+====================================================================================================
+FIGURAS OBSERVADAS EN EL TRAMO (9). No son veredictos de par y NO SE ADJUDICAN.
+====================================================================================================
+
+1. LOS GEMELOS DE LA ESTRATEGIA DE INNOVACION, y el tramo los trae LOS DOS
+   estrategia_de_innovacion_de_producto es la MADRE del par 45 y estrategia_innovacion_producto es el HIJO del par 84. Los ids se diferencian en dos preposiciones, los titulos en las palabras 'y Tecnologia', el libro es el mismo (Cooper) y el contenido se solapa casi entero: metas de innovacion vinculadas a las del negocio, arenas estrategicas priorizadas y asignacion de recursos estan en los dos. CORROBORA desde un segundo camino la figura que el tramo 1 ya registro ('los dos de estrategia de innovacion, uno haciendo de madre y otro de hijo'), y esta vez los dos papeles se ven dentro del MISMO tramo.
+
+2. LOS GEMELOS DEL TIEMPO DE CICLO
+   reduccion_de_tiempo_de_ciclo (par 63, 3 pasos, 'Reduccion del Tiempo de Ciclo') y reduccion_tiempo_ciclo (par 70, 7 pasos, 'Reduccion del Tiempo de Ciclo del Proceso'). Ids que se diferencian en una preposicion, mismo libro (Juran), mismo titulo salvo dos palabras. Es la misma especie que la familia de la capacidad de proceso que el tramo 1 registro.
+
+3. LA FAMILIA CROSBY DE LOS 14 PASOS, REPARTIDA EN LA BOLSA Y MAL EMPAREJADA
+   costo_de_calidad_3 ('Paso 4'), fijacion_de_metas ('Paso 10'), dia_cero_defectos_2 (el Dia ZD) y eliminacion_causas_error_4 (ECR) son capitulos numerados del mismo programa de Crosby, cuya madre es programa_mejora_calidad_14_pasos. En la bolsa aparecen colgados de madres ajenas: el costo_de_calidad_3 sale TRES filas seguidas (81, 82 y 83) con tres madres distintas y la misma senial 84,4, y solo la del 83 es la suya; fijacion_de_metas (86) cuelga de un equipo comprador-proveedor de Juran. Quien cablee esta zona tiene la madre verdadera dentro de la propia bolsa.
+
+4. LOS NODOS IMAN: un hijo que el barrido cuelga de varias madres sin serlo
+   costo_de_calidad_3 en las filas 81, 82 y 83; optimizacion_caracteristicas_diseno en la 56 y la 72; key_process_product_characteristics en la 68 y la 90; validar_modelo_negocio_hechos en la 62 y la 69; y recursos_apoyo_gubernamental_exportacion haciendo de madre con el MISMO paso 3 en la 55 y la 65. Es una propiedad del barrido que conviene tener escrita antes de leer los 83 que quedan: un titulo fuerte atrae varias filas y como mucho una es la real.
+
+5. EL MISMO NODO DE MADRE EN UNA FILA Y DE HIJO EN OTRA, y hay que separar DOS casos
+   pre_control_estadistico es madre en la 51 e hijo en la 60, y ahi SI es figura, porque las dos filas son falsos amigos. posicionamiento_por_tipo_de_mercado es hijo en la 92 y madre en la 52, y ahi NO es figura: las dos filas juntas dibujan una CADENA de tres niveles (etapa_build_business_case, posicionamiento_por_tipo_de_mercado, resegmentacion_mercado_nicho_bajo_costo), que es la forma sana que el caveat de la 9.6.1 ya nombra. Se registran juntas para que no se confundan.
+
+6. EL TRIO DE SALIR DEL EDIFICIO, en dos libros
+   get_out_of_the_building (Blank), genchi_gembutsu_salir_del_edificio (Ries) y customer_discovery_get_out_of_building (Blank, madre del par 46) son tres casas para la misma idea. El par 88 enfrenta a dos de ellos y sale A. Misma clase de sospecha que el trio Make Certain del tramo 1, y con la agravante de que cruza dos autores.
+
+7. EL FALSO AMIGO POR NOMBRE PROPIO COMPARTIDO
+   El barrido casa por token y no por contenido: 'NDA' en la 44 (la madre dice NUNCA pidas NDA a un VC y el hijo dice EXIGE NDA bidireccional al comprador), 'Energy Star' en la 67 (comprar equipos con la etiqueta contra certificar tu propio local) y 'Business Model Canvas' en la 79. El ejemplar mas limpio es la 95: 'espacios de oportunidad' de un analisis de mega-tendencias contra 'costo de oportunidad' de un libro de finanzas. No comparten nada salvo la palabra.
+
+8. EL BARRIDO VUELVE A CASAR UN PASO CON SU REFUTACION, y ahora es una escuela contra otra
+   El tramo 1 registro el AQL de Juran contra la critica al AQL de Crosby. Aqui hay DOS filas de la misma especie y las dos entre Juran y Deming, con pre_control_estadistico en medio: la 51 (PRE-Control centra el proceso entre los limites de ESPECIFICACION, y el nodo de Deming manda no ajustar nunca por si un punto cae dentro o fuera de especificacion) y la 60 (el mismo PRE-Control colgado de un nodo de Deming sobre variacion en servicios). No es un defecto del barrido: es material real de dos escuelas en tension, y quien cablee esta zona tiene que saberlo antes de poner una arista.
+
+9. UN NODO DE QUINCE PASOS QUE PARECE DOS CASAS
+   causas_comunes_vs_especiales (par 80) tiene 15 pasos_accionables: del 1 al 9 son mecanica de control estadistico (datos cronologicos, limites, reglas de deteccion, causas comunes del sistema) y del 10 al 15 son cultura de no buscar culpables (comunicar 'el problema' y no 'quien lo causo', seguimiento de la moral del equipo, colaboracion entre turnos). Se registra SIN adjudicar: partir un nodo es otra pregunta y otra operacion.
+
+ESCRITO: docs/plan/OP_E_03_LECTURA_TRAMO2_V97.jsonl (60 filas). Unico fichero tocado por este instrumento.
+
+FIN

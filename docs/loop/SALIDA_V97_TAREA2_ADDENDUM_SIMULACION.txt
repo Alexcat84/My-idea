@@ -1,0 +1,46 @@
+====================================================================================================
+SEGUNDO ADDENDUM DE OP-E-03, VUELTA 97 (SIMULACION)
+====================================================================================================
+
+--- lo que se anade a la nota de OP-E-03 (aditivo, la vieja no se toca) ---
+ADDENDUM DE EJECUCION (30 ago 2026, vuelta 97, TAREA 2): SEGUNDO TRAMO LEIDO. Leidas las filas 41 a 100 de las 183, con la misma vara (banco 9.6.1 clase, 9.6.2 direccion, 9.6.3 el tamano del solape no decide) y con EL MISMO UMBRAL DE DIRECCION del tramo 1, que el acta 96 seccion 4.4 adjudico bien puesto y sin tocar. Los cinco puntos de la verificacion se REMIDIERON en la vuelta y no se heredaron del tramo 1: cribado cerrado en 3388 filas cada fichero, contadas; ids por el resolutor ANTES de comparar (P.1), y en estas 60 el resolutor no movio ninguno, cosa que se declara igual porque P.1 obliga; cuenta sin fugas (cero de las 60 esta en la cola tras resolver contra los 2796 pares distintos de la cola, cero repetidas dentro del tramo); marca LECTURA DIRIGIDA en las 60 filas del material y en las 60 del JSONL, contadas; y veredictos APARTE de la tasa por dominio del 9.27, en fichero propio y rotulado. RESULTADO: A 3, B 1, C 0, D 56. Los tres A son los pares 42, 88, 100. El unico B es el par 47 (reporte_estado_miembro_equipo contra variance_analysis), declarado DUDOSO en vez de forzado: la direccion si se lee y lo que la vara no resuelve sola es la clase. DIRECCION: 33 leidas y afirmadas, 27 NO RESUELTAS y declaradas como tal (pares 41, 43, 44, 50, 51, 54, 55, 56, 60, 63, 65, 67, 68, 69, 70, 71, 72, 76, 79, 81, 82, 85, 86, 89, 90, 95, 96). POR DOMINIO, y no entra en la tasa del 9.27: core 22, environmental 3, exportacion 3, health_safety 2, quality 29, risk_management 1. LA PROPORCION DE NO RESUELTAS SUBE del 27,5 por ciento del tramo 1 al 45.0 por ciento de este, y NO se explica de palabra sino que se mide con instrumento propio (scripts/loop/vuelta97_tarea2_senal_de_la_bolsa.py): la bolsa viene ORDENADA de mas fuerte a mas debil (mediana de titulo_ratio 84,3 en el tramo 1, 78,2 en el 2, 76,2 en lo que queda) y dentro del tramo 2 las filas que la lectura no resolvio son las mas debiles medidas por fuera de la lectura (misma fuente 66,7 por ciento contra 78,8 por ciento). SE DECLARA QUE ESO NO PRUEBA QUE EL UMBRAL SEA EL CORRECTO: una vara demasiado estricta sobre una bolsa que se debilita daria las mismas dos seniales. NUEVE FIGURAS registradas en docs/PENDIENTES.md y SIN ADJUDICAR, entre ellas dos parejas de gemelos casi homonimos (estrategia_de_innovacion_de_producto contra estrategia_innovacion_producto, que corrobora una figura del tramo 1, y reduccion_de_tiempo_de_ciclo contra reduccion_tiempo_ciclo), la familia Crosby de los 14 pasos repartida y mal emparejada, los nodos iman que el barrido cuelga de varias madres, y la segunda aparicion de la especie que casa un paso con su refutacion, esta vez Juran contra Deming. CERO ARISTAS ESCRITAS O RETIRADAS. Salidas: docs/plan/OP_E_03_LECTURA_TRAMO2_V97.jsonl (60 filas), docs/loop/SALIDA_V97_TAREA2_TRAMO2_MATERIAL.txt, docs/loop/SALIDA_V97_TAREA2_VEREDICTOS.txt, docs/loop/SALIDA_V97_TAREA2_SENIAL.txt, docs/loop/SALIDA_V97_TAREA2_MUTACION.txt (6 mutaciones y las 6 caen, 6 controles verdes; la clase y la direccion de cada par son tabla a mano y se DECLARA que no tienen caso rojo automatico). QUEDAN 83 SIN LEER, filas 101 a 183. estado se queda en LISTA, mismo criterio que las demas.
+
+--- lo que se anade a docs/plan/04_ENLACES.md (aditivo) ---
+
+**LO QUE SE HIZO EN LA VUELTA 97, TAREA 2: EL SEGUNDO TRAMO TAMBIEN ESTA LEIDO.**
+El apartado de arriba se queda entero, sin borrar una palabra. Lo que cambia es
+su ultima fila: decia que quedaban **143** pares sin leer, y hoy quedan **83**.
+Se leyeron las filas **41 a 100** de las **183**, con la misma vara y con **el mismo
+umbral de direccion**, que el acta de la vuelta 96 (seccion 4.4) adjudico bien
+puesto y sin tocar.
+
+| lo que salio | cifra |
+|---|---:|
+| pares leidos en este tramo | **60** (filas 41 a 100) |
+| pares leidos en total | **100** de 183 |
+| clase A, REPITE | **3** |
+| clase B, DUDOSO | **1** |
+| clase C | **0** |
+| clase D, CONTINUA | **56** |
+| direccion leida y afirmada | **33** |
+| direccion NO RESUELTA, declarada | **27** |
+| aristas escritas o retiradas | **0** |
+| pares que quedan sin leer | **83** (filas 101 a 183) |
+
+**LA PROPORCION DE DIRECCIONES NO RESUELTAS SUBE, y se mide en vez de explicarse.**
+Del **27,5%** del tramo 1 al **45.0%** de este. El encargo preveia el caso de una
+proporcion PARECIDA (*"es la bolsa, no tu vara"*); como no lo es, esa conclusion no
+se invoca: se construyo un instrumento que la pone a prueba
+(`scripts/loop/vuelta97_tarea2_senal_de_la_bolsa.py`). Lo medido es que **la bolsa
+viene ordenada de mas fuerte a mas debil** (mediana de `titulo_ratio` 84,3 en el
+tramo 1, 78,2 en el 2, 76,2 en lo que queda) y que **dentro del tramo 2 las filas sin
+direccion son las mas debiles medidas por fuera de la lectura**. **SE DECLARA QUE ESO
+NO PRUEBA QUE EL UMBRAL SEA EL CORRECTO**, y va marcado como discutible.
+
+**CERO ARISTAS**: `OP-E-03` sigue siendo LECTURA DIRIGIDA y su producto es el juicio.
+El detalle entero, con las **nueve** figuras que la lectura destapa y las guardas
+probadas por mutacion, esta en `docs/PENDIENTES.md`, seccion "VUELTA 97, TAREA 2".
+Los veredictos viven en `docs/plan/OP_E_03_LECTURA_TRAMO2_V97.jsonl` y **no** en
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`.
+
+SIMULACION: no se escribio nada.

@@ -4457,3 +4457,235 @@ adjudicacion:** las adjudicaciones ya publicadas por el carril de los **PASOS**
 (el **1886** y el **1844**, actas 93 y 95) y por el carril de la **RAZON** (el
 **1009** y el **1098**) **quedan como estan**. La adjudicacion **fija cual manda
 de aqui en adelante**; no retrocede sobre lo publicado.
+
+## VUELTA 97, TAREA 2: `OP-E-03`, SEGUNDO TRAMO. SESENTA PARES MAS, Y LA BOLSA QUEDA LEIDA HASTA LA FILA 100 DE 183
+
+Filas **41 a 100** de `docs/plan/DIFERENCIA_CONTRA_COLA.jsonl`, leidas con
+`python scripts/loop/vuelta96_tarea3_tramo1_opE03.py --desde 40 --cuantos 60`,
+que es el instrumento de la vuelta 96 **sin tocarle una linea de codigo**, como el
+encargo manda. Material entero en
+`docs/loop/SALIDA_V97_TAREA2_TRAMO2_MATERIAL.txt`, **2.070 lineas** contadas del
+fichero con `wc -l`, EXIT 0, y **60 filas** casadas por el tallador de
+composicion (`docs/loop/SALIDA_V97_TAREA2_MATERIAL_COMPOSICION.txt`, EXIT 0).
+
+**UNA HONESTIDAD SOBRE LA CABECERA DEL MATERIAL, dicha en vez de callada.** El
+instrumento se llama `..._tramo1_...` y su cabecera imprime *"PRIMER TRAMO DE
+LECTURA DIRIGIDA (vuelta 96, TAREA 3)"* tambien cuando se le pasa `--desde 40`:
+ese rotulo es del fichero de la vuelta 96 y **no depende de los argumentos**. La
+linea que si depende de ellos, y que es la que manda, dice *"Este tramo: filas 41
+a 100 (60 pares)"* y es correcta. **No se corrigio el rotulo** porque el encargo
+dice expresamente que el auditor probo que el instrumento acepta el salto **sin
+tocar codigo**, y tocarlo aqui habria cambiado la vara a mitad de la medicion.
+
+**LA LECTURA NO SE DEGRADO Y POR ESO NO SE PARO.** El encargo autoriza a parar a
+mitad del tramo si la lectura se degrada, diciendolo con la cifra. Se leyeron los
+**60** con el mismo detenimiento; no hubo parada y se dice para que el silencio
+no tenga que interpretarse.
+
+### (a) LOS CINCO PUNTOS DE `OP-E-03.verificacion`, REMEDIDOS EN ESTA VUELTA Y NO HEREDADOS DEL TRAMO 1
+
+Salida en `docs/loop/SALIDA_V97_TAREA2_CINCO_PUNTOS.txt`. Cada cifra sale de
+correr algo hoy, no de leer el reporte de la vuelta 96.
+
+| punto de la verificacion | como se cumple HOY, con su medicion |
+|---|---|
+| **1.** se corre DESPUES del cierre de la cola, nunca antes | el instrumento **recuenta** las filas de los dos ficheros del cribado y cae en ROJO si no dan 3.388. Recontado aparte en esta vuelta: `INTRA_DOMINIO_PARES.jsonl` **3.388** e `INTRA_DOMINIO_VEREDICTOS.jsonl` **3.388** |
+| **2.** los ids pasan por el RESOLUTOR antes de comparar (`P.1`) | madre e hijo se resuelven antes de cruzar nada. **En estas 60 el resolutor no movio ningun id**, y se declara igual **porque `P.1` obliga a declararlo siempre**, tambien cuando no cambia nada |
+| **3.** la cuenta cuadra sin fugas | **cero** de las 60 esta ya en la cola tras resolver, contra los **2.796** pares distintos de la cola; **cero** repetidas dentro del tramo; los 60 puestos van del 41 al 100 y son **60 distintos** |
+| **4.** se marca LECTURA DIRIGIDA, no entra en la cola y NO mueve el marcador | escrito en **las 60** filas del material y en **las 60** del JSONL, contadas: `marca` 60 de 60, `fuera_de_la_cola` 60 de 60, `mueve_el_marcador_del_cribado` false 60 de 60. Y verificado por fuera: `git diff --stat` de los dos ficheros del cribado y de `dataset/` da **VACIO** |
+| **5.** los veredictos se cuentan APARTE de la tasa por dominio | viven en fichero propio, `docs/plan/OP_E_03_LECTURA_TRAMO2_V97.jsonl` (**60 filas** contadas), y la tabla por dominio va **rotulada** en su salida como que NO entra en la tasa del banco `9.27` |
+
+### (b) LOS INSTRUMENTOS, Y QUE HACE CADA UNO
+
+| instrumento | que hace | salida |
+|---|---|---|
+| `vuelta96_tarea3_tramo1_opE03.py --desde 40 --cuantos 60` | imprime el material entero (paso casado con su texto, y los `pasos_accionables` ENTEROS de los dos nodos). **De la vuelta 96, sin tocar** | `SALIDA_V97_TAREA2_TRAMO2_MATERIAL.txt` |
+| `vuelta97_tarea2_veredictos_tramo2.py` | pone la tabla de los 60 veredictos y la cruza contra el material. **IMPORTA `construir_filas()` del hermano de la vuelta 96 en vez de copiarlo**: el armazon es literalmente el mismo codigo ya probado | `SALIDA_V97_TAREA2_VEREDICTOS.txt` y el JSONL |
+| `vuelta97_tarea2_senal_de_la_bolsa.py` | **NUEVO.** Mide la senial objetiva de la bolsa por tramo y la cruza contra los veredictos de direccion ya escritos | `SALIDA_V97_TAREA2_SENIAL.txt` |
+| `vuelta97_tarea2_prueba_mutacion.py` | muta las guardas y comprueba que CAEN | `SALIDA_V97_TAREA2_MUTACION.txt` |
+
+### (c) EL RESULTADO, TALLADO DE `SALIDA_V97_TAREA2_VEREDICTOS.txt` Y NO TECLEADO
+
+Las tres tablas se pegan enteras de ese fichero, que es quien las imprime
+contando la tabla de veredictos (`EJECUTOR.md` regla 1, "LA TABLA SE CUENTA DE SU
+FICHERO").
+
+| clase | que significa | cuantas de 60 |
+|---|---|---:|
+| A | REPITE (lo que anade cabe en una linea) | 3 |
+| B | DUDOSO (la vara no lo resuelve sola) | 1 |
+| C | figura aparte | 0 |
+| D | CONTINUA (trae procedimiento que el otro no tiene) | 56 |
+
+Enumeraciones del mismo fichero: **A (3): 42, 88, 100. B (1): 47. C (0): ninguna.**
+
+| direccion (banco `9.6.2`) | cuantas |
+|---|---:|
+| LEIDA y afirmada | 33 |
+| NO RESUELTA, declarada como tal | 27 |
+
+| dominio | pares del tramo | A | B | C | D |
+|---|---:|---:|---:|---:|---:|
+| core | 22 | 1 | 1 | 0 | 20 |
+| environmental | 3 | 0 | 0 | 0 | 3 |
+| exportacion | 3 | 0 | 0 | 0 | 3 |
+| health_safety | 2 | 1 | 0 | 0 | 1 |
+| quality | 29 | 1 | 0 | 0 | 28 |
+| risk_management | 1 | 0 | 0 | 0 | 1 |
+
+**ESTA TABLA POR DOMINIO NO ENTRA EN LA TASA DEL BANCO `9.27`** y va rotulada asi
+en su propio fichero de salida.
+
+**LOS TRES A, nombrados:** el **42** (`cultura_justa_2` contra
+`preguntar_que_no_quien`, y es el segundo par del archivo en que este hijo sale A
+contra una madre de Dekker, el primero fue el par 12 del tramo 1); el **88**
+(`genchi_gembutsu_salir_del_edificio` de Ries contra `get_out_of_the_building` de
+Blank, dos casas del mismo consejo en dos libros); y el **100**
+(`desarrollar_metas_anuales` contra `metas_negocio_calidad`, donde la madre ya
+barre las areas, ya exige meta medible con plazo y ya la mete en el plan de
+negocio).
+
+**EL UNICO B es el par 47** (`reporte_estado_miembro_equipo` contra
+`variance_analysis`), y se declara DUDOSO en vez de forzarlo: **la direccion si se
+lee**, lo que la vara no resuelve sola es la clase. Quitado lo que la madre ya
+dice, al hijo le queda extender la comparacion a cronograma y calidad y calcular
+la magnitud de la variacion: mas que una linea y menos que un procedimiento
+propio.
+
+**EL UMBRAL DE DIRECCION NO SE TOCO**, por adjudicacion expresa del acta 96
+seccion 4.4 (`ACTA_AUDITOR.md` linea **34367**, leida hoy).
+
+### (d) LA PROPORCION DE DIRECCIONES NO RESUELTAS SUBE, Y SE MIDE EN VEZ DE EXPLICARSE
+
+**LA CIFRA, primero, sin suavizarla.** El tramo 1 dejo **11 de 40** sin direccion
+(**27,5%**); el tramo 2 deja **27 de 60** (**45,0%**). **NO es "una proporcion
+parecida"**, que es el caso que el encargo previo (*"Si el segundo tramo da otra
+proporcion parecida, es la bolsa, no tu vara"*). Como la premisa de esa frase no
+se cumple, **no se puede invocar su conclusion**, y en vez de invocarla se
+construyo un instrumento que la ponga a prueba:
+`scripts/loop/vuelta97_tarea2_senal_de_la_bolsa.py`, salida en
+`docs/loop/SALIDA_V97_TAREA2_SENIAL.txt`, EXIT 0.
+
+**LA SENIAL DE LA BOLSA POR TRAMO**, tabla pegada entera de ese fichero. Los ids
+pasan por el resolutor antes de leer la fuente de cada nodo (`P.1`):
+
+| tramo | filas | mediana de `titulo_ratio` | madre e hijo de la MISMA fuente |
+|---|---:|---:|---:|
+| tramo 1 (filas 1 a 40) | 40 | 84.3 | 33 de 40 (82.5%) |
+| tramo 2 (filas 41 a 100) | 60 | 78.2 | 44 de 60 (73.3%) |
+| sin leer (filas 101 a 183) | 83 | 76.2 | 62 de 83 (74.7%) |
+
+**LA BOLSA VIENE ORDENADA DE MAS FUERTE A MAS DEBIL**, y eso no se sabia escrito
+en ningun sitio: la mediana de `titulo_ratio` baja **84,3 a 78,2 a 76,2** tramo
+tras tramo. **El tramo 2 no es una muestra equivalente al tramo 1: es un tramo mas
+debil de la misma bolsa.**
+
+**EL CRUCE, que es la parte que de verdad prueba algo**, porque parte las 60 filas
+por lo que la lectura decidio (leido del JSONL, no de una lista tecleada) y mide
+la senial OBJETIVA de cada mitad:
+
+| grupo del tramo 2 | filas | mediana de `titulo_ratio` | madre e hijo de la MISMA fuente |
+|---|---:|---:|---:|
+| direccion LEIDA | 33 | 81.5 | 26 de 33 (78.8%) |
+| direccion NO RESUELTA | 27 | 77.3 | 18 de 27 (66.7%) |
+
+**Las filas que la lectura no resolvio son, medidas por fuera de la lectura, las
+mas debiles de la bolsa.** Las dos afirmaciones que el instrumento comprueba salen
+**VERIFICADAS** las dos, y las dos **podian salir en rojo** (su mutacion esta
+probada en el apartado (f)).
+
+**LO QUE ESTO NO PRUEBA, Y SE DICE AQUI CON TODAS LAS LETRAS PARA QUE NADIE LO LEA
+DE MAS:** **no prueba que mi umbral sea el correcto.** Una vara demasiado estricta
+aplicada a una bolsa que se debilita produciria exactamente estas dos mismas
+seniales. Lo unico medido es que **la bolsa se debilita** y que **la senial
+objetiva acompania a la lectura**. Si el umbral esta bien puesto lo adjudica el
+auditor, no este fichero, y va **marcado como discutible** en el reporte.
+
+### (e) LAS NUEVE FIGURAS QUE LA LECTURA DESTAPA, REGISTRADAS Y SIN ADJUDICAR
+
+Mismo trato que las seis del tramo 1, por mandato del encargo (*"Si el tramo 2
+destapa figuras nuevas, mismo trato"*): **se registran y no se adjudican**, porque
+las sospechas de gemelos entre nodos son otra pregunta y otra operacion. Estan
+impresas enteras en `SALIDA_V97_TAREA2_VEREDICTOS.txt`. Resumidas:
+
+1. **LOS GEMELOS DE LA ESTRATEGIA DE INNOVACION, y esta vez el tramo trae LOS
+   DOS.** `estrategia_de_innovacion_de_producto` es madre del par 45 y
+   `estrategia_innovacion_producto` es hijo del par 84: ids que se diferencian en
+   dos preposiciones, mismo libro (Cooper), y arenas estrategicas, metas
+   vinculadas al negocio y asignacion de recursos en los dos. **Corrobora desde un
+   segundo camino la figura que el tramo 1 ya registro.**
+2. **LOS GEMELOS DEL TIEMPO DE CICLO.** `reduccion_de_tiempo_de_ciclo` (par 63) y
+   `reduccion_tiempo_ciclo` (par 70): una preposicion de diferencia en el id, mismo
+   libro, mismo titulo salvo dos palabras. **Misma especie que la familia de la
+   capacidad de proceso del tramo 1.**
+3. **LA FAMILIA CROSBY DE LOS 14 PASOS, REPARTIDA Y MAL EMPAREJADA.**
+   `costo_de_calidad_3` ("Paso 4"), `fijacion_de_metas` ("Paso 10"),
+   `dia_cero_defectos_2` y `eliminacion_causas_error_4` son capitulos del mismo
+   programa, cuya madre `programa_mejora_calidad_14_pasos` **esta en la propia
+   bolsa**. El `costo_de_calidad_3` sale en **tres filas seguidas** (81, 82, 83)
+   con tres madres distintas y la misma senial 84,4, y **solo la del 83 es la
+   suya**.
+4. **LOS NODOS IMAN.** Un hijo que el barrido cuelga de varias madres sin serlo:
+   `costo_de_calidad_3` (81, 82, 83), `optimizacion_caracteristicas_diseno` (56,
+   72), `key_process_product_characteristics` (68, 90),
+   `validar_modelo_negocio_hechos` (62, 69), y
+   `recursos_apoyo_gubernamental_exportacion` de madre con el MISMO paso 3 (55,
+   65). **Propiedad del barrido que conviene tener escrita antes de leer los 83 que
+   quedan.**
+5. **EL MISMO NODO DE MADRE EN UNA FILA Y DE HIJO EN OTRA, y son DOS casos
+   distintos que no hay que confundir.** `pre_control_estadistico` (madre en 51,
+   hijo en 60) **si es figura**, porque las dos filas son falsos amigos.
+   `posicionamiento_por_tipo_de_mercado` (hijo en 92, madre en 52) **NO es
+   figura**: las dos filas juntas dibujan una **cadena de tres niveles**, que es la
+   forma sana que el caveat de la `9.6.1` ya nombra.
+6. **EL TRIO DE SALIR DEL EDIFICIO, en dos libros.**
+   `get_out_of_the_building` (Blank), `genchi_gembutsu_salir_del_edificio` (Ries) y
+   `customer_discovery_get_out_of_building` (Blank, madre del par 46).
+7. **EL FALSO AMIGO POR NOMBRE PROPIO COMPARTIDO:** "NDA" (44, donde la madre dice
+   NUNCA pidas NDA a un VC y el hijo dice EXIGE NDA bidireccional al comprador),
+   "Energy Star" (67) y "Business Model Canvas" (79). **El ejemplar mas limpio es
+   el 95:** *espacios de oportunidad* de un analisis de mega-tendencias contra
+   *costo de oportunidad* de un libro de finanzas.
+8. **EL BARRIDO VUELVE A CASAR UN PASO CON SU REFUTACION, y ahora es una escuela
+   contra otra.** El tramo 1 registro el AQL de Juran contra la critica de Crosby;
+   aqui hay **dos** filas entre Juran y Deming con `pre_control_estadistico` en
+   medio (51 y 60): PRE-Control centra el proceso entre los limites de
+   ESPECIFICACION y el nodo de Deming manda **nunca** ajustar por si un punto cae
+   dentro o fuera de especificacion. **No es un defecto del barrido: es material
+   real de dos escuelas en tension**, y quien cablee esta zona tiene que saberlo.
+9. **UN NODO DE QUINCE PASOS QUE PARECE DOS CASAS.** `causas_comunes_vs_especiales`
+   (par 80): del paso 1 al 9 mecanica de control estadistico, del 10 al 15 cultura
+   de no buscar culpables. **Sin adjudicar:** partir un nodo es otra pregunta.
+
+### (f) LAS GUARDAS, PROBADAS POR MUTACION, Y LO QUE SE DECLARA SIN PROBAR
+
+`scripts/loop/vuelta97_tarea2_prueba_mutacion.py`, salida en
+`docs/loop/SALIDA_V97_TAREA2_MUTACION.txt`, EXIT 0. Cifras del pie **contadas por
+el propio instrumento y no tecleadas**: **12 de 12 comprobaciones se comportan
+como deben, 6 mutaciones que tenian que caer y 6 controles verdes.**
+
+**LAS SEIS MUTACIONES, Y LAS SEIS CAEN:** (1) una clase pasa a `X`; (2) un puesto
+aparece dos veces; (3) la direccion de un par nombra dos nodos de OTRA fila; (4)
+se quita un veredicto de los 60; (5) `normaliza_fuente` se muta a constante y la
+afirmacion 2 deja de sostenerse (los dos grupos pasan a 100,0%); (6) el
+`titulo_ratio` del tramo 2 se sube a 99,0 y la afirmacion 1 deja de sostenerse.
+**Control verde antes y despues**, con la tabla real y los datos reales.
+
+**LO QUE SE DECLARA EN VEZ DE FABRICARLE UN ROJO QUE SE APRUEBE SOLO**
+(`EJECUTOR.md` regla 1, "EL CASO ROJO SE PRUEBA POR MUTACION"): **la CLASE y la
+DIRECCION de cada uno de los 60 pares son una TABLA A MANO y NO TIENEN CASO ROJO
+AUTOMATICO.** No existe dentro del repo una segunda fuente independiente contra la
+que contrastarlas, asi que **no hay nada que mutar**. Su control es la relectura
+ciega del auditor, no un `assert`.
+
+### (g) LO QUE QUEDA, Y LO QUE NO SE MOVIO
+
+**CERO ARISTAS ESCRITAS O RETIRADAS.** `OP-E-03` es LECTURA DIRIGIDA y su producto
+es el juicio, no el cableado. **Ninguna cifra del plan, del marcador ni de la tasa
+por dominio se mueve por esta tarea**, y esta verificado y no supuesto:
+`git diff --stat` de los dos ficheros del cribado y de `dataset/` da **VACIO**.
+
+**QUEDAN 83 SIN LEER**, filas 101 a 183. La bolsa esta leida hasta la **100 de
+183**. El instrumento acepta `--desde 100 --cuantos N` sin tocar codigo, y **el
+tramo que venga es el mas debil de los tres** (mediana de `titulo_ratio` 76,2),
+cosa que ahora esta medida y escrita en vez de descubrirse leyendo.

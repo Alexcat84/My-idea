@@ -320,6 +320,42 @@ TAREA 3". Los veredictos viven en `docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl` y
 **no** en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`: se cuentan aparte de la tasa por
 dominio del banco `9.27`, como manda el punto 5 de la verificacion.
 
+**LO QUE SE HIZO EN LA VUELTA 97, TAREA 2: EL SEGUNDO TRAMO TAMBIEN ESTA LEIDO.**
+El apartado de arriba se queda entero, sin borrar una palabra. Lo que cambia es
+su ultima fila: decia que quedaban **143** pares sin leer, y hoy quedan **83**.
+Se leyeron las filas **41 a 100** de las **183**, con la misma vara y con **el mismo
+umbral de direccion**, que el acta de la vuelta 96 (seccion 4.4) adjudico bien
+puesto y sin tocar.
+
+| lo que salio | cifra |
+|---|---:|
+| pares leidos en este tramo | **60** (filas 41 a 100) |
+| pares leidos en total | **100** de 183 |
+| clase A, REPITE | **3** |
+| clase B, DUDOSO | **1** |
+| clase C | **0** |
+| clase D, CONTINUA | **56** |
+| direccion leida y afirmada | **33** |
+| direccion NO RESUELTA, declarada | **27** |
+| aristas escritas o retiradas | **0** |
+| pares que quedan sin leer | **83** (filas 101 a 183) |
+
+**LA PROPORCION DE DIRECCIONES NO RESUELTAS SUBE, y se mide en vez de explicarse.**
+Del **27,5%** del tramo 1 al **45.0%** de este. El encargo preveia el caso de una
+proporcion PARECIDA (*"es la bolsa, no tu vara"*); como no lo es, esa conclusion no
+se invoca: se construyo un instrumento que la pone a prueba
+(`scripts/loop/vuelta97_tarea2_senal_de_la_bolsa.py`). Lo medido es que **la bolsa
+viene ordenada de mas fuerte a mas debil** (mediana de `titulo_ratio` 84,3 en el
+tramo 1, 78,2 en el 2, 76,2 en lo que queda) y que **dentro del tramo 2 las filas sin
+direccion son las mas debiles medidas por fuera de la lectura**. **SE DECLARA QUE ESO
+NO PRUEBA QUE EL UMBRAL SEA EL CORRECTO**, y va marcado como discutible.
+
+**CERO ARISTAS**: `OP-E-03` sigue siendo LECTURA DIRIGIDA y su producto es el juicio.
+El detalle entero, con las **nueve** figuras que la lectura destapa y las guardas
+probadas por mutacion, esta en `docs/PENDIENTES.md`, seccion "VUELTA 97, TAREA 2".
+Los veredictos viven en `docs/plan/OP_E_03_LECTURA_TRAMO2_V97.jsonl` y **no** en
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`.
+
 
 ---
 
