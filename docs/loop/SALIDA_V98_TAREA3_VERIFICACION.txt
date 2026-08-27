@@ -1,0 +1,23 @@
+=== VERIFICACION DE LA TAREA 3 ===
+
+--- git diff --stat de dataset/ web/ engine/ (tiene que estar VACIO) ---
+(fin)
+
+--- git diff --stat de los dos ficheros del cribado (tiene que estar VACIO) ---
+(fin)
+
+--- numstat de los tres ficheros tocados ---
+3	0	docs/plan/04_ENLACES.md
+1	1	docs/plan/OPERACIONES.jsonl
+1	1	docs/plan/OP_E_03_LECTURA_TRAMO2_V97.jsonl
+
+--- aditividad caracter a caracter ---
+04_ENLACES.md  77858 -> 78760 caracteres | reconstruccion == viejo: False
+OPERACIONES    401476 -> 402018 caracteres | reconstruccion == viejo: True
+TRAMO2 filas antes 60 despues 60 | filas que cambian: [(42, ['razon', 'clase'])]
+  razon vieja del 42 sigue entera como prefijo: True
+  direccion_leida intacta: True
+lineas antes 1182, despues 1185, diferencia 3
+linea insertada con la marca: [338]
+reconstruccion quitando las 3 lineas insertadas == viejo: True
+lineas borradas por git (numstat): 0

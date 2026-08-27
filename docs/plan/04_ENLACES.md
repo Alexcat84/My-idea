@@ -335,6 +335,9 @@ puesto y sin tocar.
 | clase B, DUDOSO | **1** |
 | clase C | **0** |
 | clase D, CONTINUA | **56** |
+
+**[CORRECCION DECLARADA (vuelta 98, TAREA 3, relectura conjunta del par 42).]** La tabla de arriba se queda entera y sin borrar una celda. **LAS CIFRAS BUENAS, RECOMPUTADAS DEL PROPIO JSONL** en la vuelta 98 y no tecleadas: **clase A, REPITE: 2** (antes 3) y **clase D, CONTINUA: 57** (antes 56). El **par 42** pasa de **A** a **D** tras la relectura conjunta que pidio el acta de la vuelta 97 (seccion 3.2, linea 34789): el residuo del hijo no son dos lineas sueltas sino una secuencia con dependencia (el paso 4 consume la salida del 3), y los **entregables lo confirman** (la madre entrega un protocolo de respuesta a incidentes, el hijo un registro de incidente, que es lo que el paso 2 de la madre produce al ejecutarse). **La direccion NO cambia** y las cifras de direccion siguen en **33** afirmadas y **27** no resueltas. **Ninguna clase del tramo 1 se mueve**: el par **12** sigue en **A**.
+
 | direccion leida y afirmada | **33** |
 | direccion NO RESUELTA, declarada | **27** |
 | aristas escritas o retiradas | **0** |

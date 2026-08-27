@@ -1,0 +1,28 @@
+======================================================================================================================
+PRUEBA DE MUTACION, VUELTA 98 TAREA 3 (recomputo del par 42)
+======================================================================================================================
+BASE del estado anterior: HEAD
+
+  C1   control: el estado ANTES del cambio                        espera EXIT 0   obtiene EXIT 0   OK
+  C2   control: el arbol de trabajo de HOY, ya cambiado           espera EXIT 1   obtiene EXIT 1   OK
+  M1   mutada la fila 42 a clase D                                espera EXIT 1   obtiene EXIT 1   OK
+  M2   mutado el par 12 del tramo 1 a clase D                     espera EXIT 1   obtiene EXIT 1   OK
+  M3   duplicada la frase de RESULTADO en la nota                 espera EXIT 1   obtiene EXIT 1   OK
+  M4   borrada la fila 'clase A, REPITE 3' de 04_ENLACES.md       espera EXIT 1   obtiene EXIT 1   OK
+  M5   la marca de correccion ya presente en la razon del 42      espera EXIT 1   obtiene EXIT 1   OK
+  M6   rota la marca de LECTURA DIRIGIDA en la fila 42            espera EXIT 1   obtiene EXIT 1   OK
+  M7   mutada la guarda de direccion: el DESPUES difiere del ANTES espera EXIT 1   obtiene EXIT 1   OK
+  M7b  y ademas NO escribio nada                                  espera sin escribir   obtiene sin escribir   OK
+
+RECUENTO, contado de los propios casos corridos:
+   casos totales      10
+   controles          2, como se esperaba 2
+   mutaciones         8, como se esperaba 8
+   casos que FALLAN   0
+
+DECLARADO, y no fabricado: LA CLASE DEL PAR 42 (A contra D) es una lectura a
+mano contra el grafo y NO TIENE CASO ROJO AUTOMATICO, porque no hay en el repo
+una segunda fuente independiente contra la que contrastarla. Su control es la
+relectura ciega del auditor. Estas mutaciones prueban el RECOMPUTO, no la clase.
+
+VERDE: los 2 controles pasan y las 8 mutaciones tumban el instrumento.

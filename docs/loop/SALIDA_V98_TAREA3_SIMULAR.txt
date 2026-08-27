@@ -1,0 +1,28 @@
+====================================================================================================
+RELECTURA CONJUNTA DEL PAR 42, VUELTA 98 TAREA 3
+====================================================================================================
+FICHERO DEL TRAMO 2: 60 filas, contadas
+FICHERO DEL TRAMO 1: 40 filas, contadas
+
+ESTADO ANTES, contado del JSONL y no tecleado:
+   clases: A 3, B 1, C 0, D 56
+   los A: 42, 88, 100
+   los B: 47
+   direccion: 33 afirmadas, 27 no resueltas
+   par 12 del tramo 1: clase A, INTACTO (adjudicacion 3.2 (b) del acta 97)
+
+ESTADO DESPUES, recomputado del JSONL:
+   clases: A 2, B 1, C 0, D 57
+   los A: 88, 100
+   direccion: 33 afirmadas, 27 no resueltas (IDENTICAS, comprobado)
+
+--- lo que se anade a la razon de la fila 42 (aditivo) ---
+CORRECCION DECLARADA (vuelta 98, TAREA 3, relectura conjunta del par 42): LA CLASE PASA DE A A D. El texto de arriba se queda entero, sin borrar una letra, que es la regla de EJECUTOR.md 8. LO QUE ESTABA MAL EN MI LECTURA, verificado hoy contra dataset/metadata/master_graph.json y no contra mi recuerdo: (1) di por SOLAPE el paso 2 del hijo ('preguntate que elementos del sistema, las herramientas o las tareas influyeron'), pero el paso 2 de la madre solo dice QUE preguntar ('que es responsable en vez de quien es responsable') y NO dice DONDE mirar; nombrar los tres sitios donde mirar ya es el principio del como, o sea residuo y no solape. Con eso el residuo son TRES movimientos y no dos. (2) Y aunque el residuo fueran solo los pasos 3 y 4, no son dos lineas sueltas: el 4 CONSUME la salida del 3 ('usa LO QUE ENCUENTRES'), y una dependencia entre dos pasos es lo que hace una secuencia en vez de una lista. (3) LA SENIAL DE VERIFICACION DEL 9.6.2, la de los entregables, que no mire la primera vez y decide mas rapido que los pasos: la madre entrega 'un protocolo de respuesta a incidentes' (diseno del programa organizacional) y el hijo entrega 'un registro del incidente centrado en que condiciones lo generaron'. El producto del hijo NO es uno de los productos de la madre: es lo que el paso 2 de la madre produce al ejecutarse, que es la firma exacta de madre e hijo. (4) SE COMPROBO EL OTRO SENTIDO para descartar la figura del 9.22: cultura_justa_2 no despliega en procedimiento ninguna linea de preguntar_que_no_quien (su materia propia son los pasos 1, 3 y 4, sobre no comprar programas prediseniados, involucrar pares con credibilidad tecnica y justicia restaurativa, y ninguno expande un paso del hijo), asi que hay PROCEDIMIENTO EN UN SOLO SENTIDO: tercera fila del 9.22, madre e hijo, el par CONTINUA, D. LA DIRECCION NO CAMBIA: sigue cultura_justa_2 -> preguntar_que_no_quien. Y NINGUNA CLASE DEL TRAMO 1 SE MUEVE: el par 12 se queda en A por la adjudicacion del acta 97 seccion 3.2 (b), porque su hijo esta repartido entre los pasos 1, 2 y 4 de su madre y el test de reconocimiento del 9.6.2 no se cumple ahi.
+
+--- lo que se anade a la nota de OP-E-03 (aditivo, detras de la frase vieja) ---
+[CORRECCION DECLARADA (vuelta 98, TAREA 3, relectura conjunta del par 42): la frase de arriba se queda entera y sin borrar una letra. LA CIFRA BUENA, RECOMPUTADA DEL PROPIO JSONL en la vuelta 98 y no tecleada, es: RESULTADO: A 2, B 1, C 0, D 57. Los dos A son los pares 88, 100. El par 42 pasa de A a D tras la relectura conjunta que pidio el acta 97 seccion 3.2; la direccion del par NO cambia y las cifras de direccion (33 afirmadas, 27 no resueltas) siguen identicas, comprobado. Ninguna clase del tramo 1 se mueve: el par 12 sigue en A.]
+
+--- lo que se anade a 04_ENLACES.md (aditivo, detras de la tabla) ---
+**[CORRECCION DECLARADA (vuelta 98, TAREA 3, relectura conjunta del par 42).]** La tabla de arriba se queda entera y sin borrar una celda. **LAS CIFRAS BUENAS, RECOMPUTADAS DEL PROPIO JSONL** en la vuelta 98 y no tecleadas: **clase A, REPITE: 2** (antes 3) y **clase D, CONTINUA: 57** (antes 56). El **par 42** pasa de **A** a **D** tras la relectura conjunta que pidio el acta de la vuelta 97 (seccion 3.2, linea 34789): el residuo del hijo no son dos lineas sueltas sino una secuencia con dependencia (el paso 4 consume la salida del 3), y los **entregables lo confirman** (la madre entrega un protocolo de respuesta a incidentes, el hijo un registro de incidente, que es lo que el paso 2 de la madre produce al ejecutarse). **La direccion NO cambia** y las cifras de direccion siguen en **33** afirmadas y **27** no resueltas. **Ninguna clase del tramo 1 se mueve**: el par **12** sigue en **A**.
+
+SIMULACION: no se escribio nada.
