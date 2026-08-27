@@ -3573,3 +3573,89 @@ CRADLE... y `eco_efectividad_2` **es uno de esos modelos con su procedimiento**"
 razones nombran la madre por escrito (dos con "paso N, en UNA LINEA", una con la
 palabra literal "la madre"), y las tres coinciden con la lectura ciega independiente
 de esta vuelta.
+
+## VUELTA 95, TAREA 1: LOS CUATRO REGISTROS DEL ENCARGO (acta de la vuelta 94)
+
+### (a) La caida de reporte del "8 aciertos": medicion y regla
+
+El reporte de la vuelta 94 publico "8 aciertos... 7 mas 1" sobre
+`docs/loop/SALIDA_V94_TAREA2A_BARRIDO.txt`. El acta de la vuelta 94 (`docs/loop/
+ACTA_AUDITOR.md` lineas 33192 a 33214) lo tallo con `scripts/loop/
+tallar_composicion_salida.py`: **14 filas, 11 en `docs/plan/04_ENLACES.md` y 3 en
+OTRO fichero**, ninguna combinacion produce "8, todos en 04_ENLACES.md, 7 mas 1".
+Yo lo reproduje EN ESTA VUELTA con el mismo instrumento (`docs/loop/
+SALIDA_V95_TAREA1A_COMPOSICION_V94.txt`): **14 filas, 11 y 3, mismas
+enumeraciones** (04_ENLACES.md: 704, 939, 1017, 1019, 1021, 1027, 1029, 1030,
+1031, 1040, 1048; otro fichero: 327, 640, 748). Calza al digito con el acta.
+
+**LA REGLA QUE SALE DE ELLA** (EJECUTOR.md regla 1, "LA TABLA SE CUENTA DE SU
+FICHERO"): toda cifra que describa la composicion de un fichero de salida se
+talla con instrumento y se pega con su comando; ninguna se cuenta a ojo.
+
+**CORRECCION DECLARADA (TAREA 2.a de la vuelta 95), sin borrar la frase vieja:**
+el "8 aciertos... 7 mas 1" del reporte de la vuelta 94 se sustituye por la cifra
+real, tallada con el instrumento NUEVO `scripts/loop/tallar_barrido_cifras.py`
+(que CORRE el barrido el mismo, con las mismas raices y patrones del primer
+comando de `SALIDA_V94_TAREA2A_BARRIDO.txt`), corrido en esta vuelta
+(`docs/loop/SALIDA_V95_TAREA2A_BARRIDO_TALLADO.txt`): **18 aciertos totales**
+(por ocurrencia del patron, no por linea de grep: dos lineas de `04_ENLACES.md`
+y una de `OPERACIONES.jsonl` traen dos ocurrencias cada una), **14 en
+`docs/plan/04_ENLACES.md`, 3 en `docs/plan/OPERACIONES.jsonl`, 1 en
+`docs/plan/03_FUSIONES.md`; 9 CON salvedad y 9 SIN salvedad** (ventana de 200
+caracteres a cada lado). DISCUTIBLE: el conteo por OCURRENCIA (no por linea de
+grep) y la inclusion de `OPERACIONES.jsonl` (que el `grep -rn docs/plan/
+docs/BANCO_DE_TEXTOS.md` original SI barria por ser recursivo, aunque la salida
+vieja no mostraba coincidencias ahi) son decisiones de diseno del instrumento
+nuevo, declaradas en su docstring; se marcan para la relectura ciega.
+
+### (b) Las cuatro adjudicaciones de los discutibles (acta de la vuelta 94, secciones 2.1 a 2.4)
+
+**2.1** (`ACTA_AUDITOR.md` lineas 33109 a 33137): el sello de apertura de la
+vuelta 94 se commiteo en `a4c89ab6` (el ULTIMO commit), no antes de la primera
+operacion. El VALOR es correcto (`git rev-parse ce8767c9^` da `267365c88f...`,
+el mismo hash), asi que **NO es caida de identidad**: es **INCUMPLIMIENTO DE
+ENCARGO**, declarado por el propio ejecutor. De ahi nace la averia de instrumento
+reparada en la TAREA 2.b de esta vuelta 95 (la fila de identidad de
+`tallar_cabecera_reporte.py` imprimia un literal incondicional).
+
+**2.2** (lineas 33139 a 33160): los seis `SALIDA_V94_*_APERTURA.txt` son byte
+identicos a los `SALIDA_V93_*_CIERRE.txt`, verificado con `cmp` y con
+`git diff --stat` sobre `dataset/` y `web/lib/assets/` (cero lineas). ADJUDICADO
+SUFICIENTE, con el **CRITERIO NUEVO** escrito para que deje de ser discutible
+cada vuelta: cuando el arbol de `dataset/`, `web/` y `scripts/` del commit de
+apertura sea byte identico al del cierre de la vuelta anterior **y ese diff se
+corra y se cite EN LA VUELTA**, las salidas del cierre anterior SON la medicion
+de apertura, citadas con el comando del diff al lado.
+
+**2.3** (lineas 33162 a 33169): abrir `OP-E-03` en la TAREA 6 de la vuelta 94
+sin leer las 183 lecturas de par fue una eleccion de alcance CORRECTA y
+CONFIRMADA (183 lecturas no caben detras de cinco tareas).
+
+**2.4** (lineas 33171 a 33180): la entrada `1992: "B_MADRE"` de
+`vuelta91_tarea4_direccion_ope07.py` sigue sin nota pese a que la salida vigente
+(`OP_E_07_DIRECCION_V94.jsonl`) ya no trae el par. ADJUDICADO: no se borra, se
+anota "SUPERADO por la TAREA 3 de la vuelta 94" al lado (EJECUTOR.md regla 8).
+Ejecutado en la TAREA 4.b de esta vuelta 95.
+
+### (c) El cribado de cita de linea sobre las 84 (acta de la vuelta 94, seccion 6, lineas 33309 a 33336)
+
+Sobre `OP_E_07_DIRECCION_V94.jsonl` (84 filas vigentes), el auditor midio si la
+razon de cada par cita un paso numerado o una linea explicita: **grupo A (cita
+paso o linea): 57**; **grupo B (sin linea pero con forma de indice): 9** (872,
+1023, 1111, 1388, 1500, 1536, 1634, 1778, 2018); **grupo C (ni una ni otra):
+18** (886, 890, 896, 909, 910, 940, 947, 983, 993, 1020, 1057, 1083, 1086, 1191,
+1196, 1220, 1844, 1886). **LOS CUATRO CAIDOS de esta operacion en tres vueltas
+(1098, 1009, 1281, 1992) caen los CUATRO en el grupo C.** El **1083**, el
+ejemplar CONFIRMADO de la casa ("que LA MADRE no tiene"), **tambien esta en C**:
+el grupo C no es una lista de condenados, es la poblacion donde vive esta especie
+de error. Cribado y lectura de las 18 en la TAREA 3 de esta vuelta 95.
+
+### (d) La caida propia del auditor, declarada por el mismo (acta de la vuelta 94, seccion 7.1, lineas 33340 a 33346)
+
+`docs/loop/_auditor_v93_grafo.py`, commiteado por el auditor en la vuelta 93
+como instrumento, **no reproduce la salida que publico** (busca una clave
+`nodes` que ese JSON no tiene y revienta al correrlo). La medicion en si era
+correcta (rehecha por el auditor en la vuelta 94, mismo resultado), pero
+commitear como instrumento un fichero que no es el que se corrio es el mismo
+defecto que esta casa le exige al ejecutor. Se registra aqui como pide el
+encargo, con el mismo trato.
