@@ -154,6 +154,33 @@ de la vuelta 80 tiene que dar, en la fila 27, "ALCANZABLE (6 saltos)", y en la
 fila 28, "SIN CAMINO PREVIO"; el reporte de la vuelta 80 publico exactamente
 lo contrario en esas dos celdas.
 
+--- TAREA 2.b y 2.c: EL REMEDIO DEL REMEDIO (vuelta 82) ---
+
+POR QUE NACE (acta de la vuelta 81, seccion 4.5). `--comparar` solo sabe leer
+la tabla de CUATRO celdas (# | par | alcanzable | decision), que en el tramo
+6 eran solo las 10 lecturas frescas: las otras 20 unidades de la cabeza de la
+bolsa viven en una tabla HERMANA de tres celdas (las "ya decididas en vueltas
+anteriores"), que el codigo ignora a proposito porque no es la misma
+pregunta. Contarlas como AUSENTE y sumarlas al ROJO fabricaba un chequeo
+obligatorio que no podia aprobarse NUNCA (20 AUSENTES y exit 1 pase lo que
+pase), que es un chequeo que se acaba saltando.
+
+EL ARREGLO: (2.b) AUSENTE deja de ser ROJO por si sola. El tallador imprime
+debajo de la comparacion la lista NOMINAL de las unidades no publicadas en
+esa tabla, con su cuenta, para que nada se esconda callado, pero no tumba el
+exit code. (2.c) ROJO NUEVO, la fila inventada: si la tabla del reporte
+publica un numero de fila que el fichero del filtro no tiene, es ROJO y exit
+1 (una fila que no viene de ninguna unidad real del instrumento es peor que
+una AUSENTE: es una tabla inventando una unidad, no callando una que si
+existe). DISTINTA (2.a) sigue igual, sin cambio: sigue siendo la unica razon
+"de contenido" para el ROJO.
+
+CASO POSITIVO OBLIGATORIO (vuelta 82), contra la vuelta 80: `--vuelta 80
+--tramo-cadena 6 --comparar docs/loop/REPORTE.md` tiene que dar exit 1 (las
+filas 27 y 28 siguen DISTINTA, con el texto del instrumento al lado) y tiene
+que listar las 20 unidades de las "ya decididas" por su nombre bajo "UNIDADES
+NO PUBLICADAS EN ESA TABLA", no contarlas como rojo.
+
 --- TAREA 2.b: LA IDENTIDAD GANA EL HEAD REAL DE LA APERTURA (vuelta 81) ---
 
 POR QUE NACE (acta de la vuelta 80, seccion 1.8 y seccion 3.1). El modo
@@ -731,14 +758,13 @@ def modo_tramo_cadena(vuelta, tramo, comparar_ruta):
         return 1
     existentes = tabla_cadena_del_fichero(ruta)
     diferencias = 0
-    ausentes = 0
+    ausentes = []
     for u in unidades:
         if u["alcanzable"] is None:
             continue
         clave = u["idx"]
         if clave not in existentes:
-            print("  AUSENTE  | fila %s | %s" % (clave, u["par"]))
-            ausentes += 1
+            ausentes.append(u)
             continue
         vieja = existentes[clave]
         if limpiar(vieja) != limpiar(u["alcanzable"]):
@@ -746,13 +772,36 @@ def modo_tramo_cadena(vuelta, tramo, comparar_ruta):
             print("  DISTINTA | fila %s | %s" % (clave, u["par"]))
             print("             fichero : %s" % vieja)
             print("             tallador: %s" % u["alcanzable"])
+
+    # TAREA 2.c (vuelta 82): ROJO NUEVO, la fila inventada. Si la tabla del
+    # reporte publica un numero de fila que el fichero del filtro no tiene,
+    # es ROJO y exit 1: no es una unidad AUSENTE (que es la tabla callando
+    # algo real), es la tabla publicando algo que el instrumento nunca trajo.
+    claves_unidades = set(u["idx"] for u in unidades)
+    inventadas = sorted((k for k in existentes if k not in claves_unidades), key=int)
+
+    # TAREA 2.b (vuelta 82): AUSENTE deja de ser ROJO por si sola. Se imprime
+    # la lista NOMINAL de las unidades no publicadas en esa tabla, con su
+    # cuenta, para que nada se esconda callado, pero no tumba la comparacion.
     print()
-    print("  filas cotejadas: %d | DISTINTAS: %d | ausentes: %d" % (len(unidades), diferencias, ausentes))
-    if diferencias or ausentes:
+    if ausentes:
+        print("  UNIDADES NO PUBLICADAS EN ESA TABLA (AUSENTE, NO es rojo por si sola): %d" % len(ausentes))
+        for u in ausentes:
+            print("     fila %s | %s" % (u["idx"], u["par"]))
+    else:
+        print("  UNIDADES NO PUBLICADAS EN ESA TABLA: 0")
+    if inventadas:
+        print("  ROJO: fila(s) inventada(s) (numero que el fichero del filtro no tiene): %s"
+              % ", ".join(inventadas))
+
+    print()
+    print("  filas cotejadas: %d | DISTINTAS: %d | ausentes (no rojo): %d | inventadas (ROJO): %d"
+          % (len(unidades), diferencias, len(ausentes), len(inventadas)))
+    if diferencias or inventadas:
         print("  TABLA DE LA CADENA: NO CALZA CON EL TALLADOR")
         print("FIN")
         return 1
-    print("  TABLA DE LA CADENA: IDENTICA AL TALLADOR")
+    print("  TABLA DE LA CADENA: IDENTICA AL TALLADOR (las ausentes listadas no son rojo)")
     print("FIN")
     return 0
 
