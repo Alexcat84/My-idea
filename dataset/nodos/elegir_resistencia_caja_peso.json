@@ -14,7 +14,9 @@
   ],
   "entregable_esperado": "Una tabla propia de peso del pedido y el tipo de caja a usar, según lo que ofrece tu proveedor local.",
   "nodos_previos": [
-    "clasificar_tipo_paquete"
+    "clasificar_tipo_paquete",
+    "adaptar_empaque_segun_tipo_de_articulo",
+    "revisar_necesidades_de_empaque"
   ],
   "nodos_siguientes": [
     "hacer_cajas_a_medida_del_pedido"

@@ -13,12 +13,14 @@
   ],
   "entregable_esperado": "Una ficha por producto que indica su categoría de paquete y sus riesgos asociados en tránsito.",
   "nodos_previos": [
-    "revisar_necesidades_de_empaque"
+    "revisar_necesidades_de_empaque",
+    "identificar_si_tu_producto_necesita_proteccion_especial"
   ],
   "nodos_siguientes": [
     "elegir_resistencia_caja_peso",
     "elegir_sobre_o_caja_tamano",
-    "empacar_liquidos_doble_barrera"
+    "empacar_liquidos_doble_barrera",
+    "elegir_material_de_relleno_segun_producto"
   ],
   "condiciones_activacion": [
     "Vendes productos de formas muy distintas y usas la misma caja para todos.",

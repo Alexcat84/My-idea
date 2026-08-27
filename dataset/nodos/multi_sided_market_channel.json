@@ -13,12 +13,14 @@
   ],
   "entregable_esperado": "Una hipótesis validada de quién te va a pagar, con una estimación del tamaño y el valor de tu audiencia",
   "nodos_previos": [
-    "channels_hypothesis_web_mobile"
+    "channels_hypothesis_web_mobile",
+    "mercados_multilaterales"
   ],
   "nodos_siguientes": [
     "market_type_definicion",
     "experimentacion_iterativa_mercado_fisico",
-    "determinar_tipo_de_mercado"
+    "determinar_tipo_de_mercado",
+    "optimizacion_mercado_multilado"
   ],
   "condiciones_activacion": [
     "Si tu negocio tiene dos tipos de usuarios: unos que usan el producto gratis y otros que pagan",

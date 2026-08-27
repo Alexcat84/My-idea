@@ -14,11 +14,14 @@
   ],
   "entregable_esperado": "Una guía breve por categoría de producto con el método de empaque que le corresponde.",
   "nodos_previos": [
-    "elegir_material_de_relleno_segun_producto"
+    "elegir_material_de_relleno_segun_producto",
+    "revisar_necesidades_de_empaque"
   ],
   "nodos_siguientes": [
     "sellar_cajas_metodo_cinta_en_h",
-    "proteger_fragiles_caja_dentro_de_caja"
+    "proteger_fragiles_caja_dentro_de_caja",
+    "empacar_liquidos_doble_barrera",
+    "elegir_resistencia_caja_peso"
   ],
   "condiciones_activacion": [
     "Vendes productos de distinto tipo (líquidos, frágiles, pesados) y empacas todos igual.",

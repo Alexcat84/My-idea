@@ -17,7 +17,9 @@
     "elegir_resistencia_caja_peso"
   ],
   "nodos_siguientes": [
-    "aplicar_regla_fija_de_colchon_de_relleno"
+    "aplicar_regla_fija_de_colchon_de_relleno",
+    "calcular_peso_dimensional_antes_cotizar",
+    "conocer_limites_peso_tamano_courier"
   ],
   "condiciones_activacion": [
     "Usas la misma caja para todos tus pedidos sin importar el tamaño del producto.",

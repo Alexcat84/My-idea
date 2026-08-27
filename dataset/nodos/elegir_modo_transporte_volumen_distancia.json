@@ -17,7 +17,9 @@
     "conocer_limites_peso_tamano_courier",
     "driver_transporte"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "pagar_mas_por_velocidad"
+  ],
   "condiciones_activacion": [
     "Estas empezando a enviar a clientes lejanos y no sabes si conviene tierra, aire o mar.",
     "Un cliente pide entrega urgente y no sabes si vale la pena pagar mas por rapidez.",
