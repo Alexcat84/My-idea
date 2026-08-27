@@ -1,0 +1,152 @@
+==========================================================================================
+LA MESA DE FORMULA: LOS CINCO EJEMPLARES, ENTEROS Y JUNTOS (vuelta 96, TAREA 2)
+Ids RESUELTOS por el resolutor antes de cruzarse (P.1). Nada recortado.
+==========================================================================================
+
+##########################################################################################
+PUESTO 1083 . CONFIRMADO . dominio core . clase D
+  sitio del estado: acta 95 seccion 3.3; su razon dice 'que LA MADRE no tiene'
+  nodos crudos:    customer_discovery_cuatro_fases  |  priorizar_elementos_a_validar
+  nodos RESUELTOS: customer_discovery_cuatro_fases  |  priorizar_elementos_a_validar
+  direccion registrada en OP_E_07_DIRECCION_V94.jsonl: madre=customer_discovery_cuatro_fases  hijo=priorizar_elementos_a_validar
+##########################################################################################
+
+LA RAZON, ENTERA:
+  Las cuatro fases contra como elegir que validar, del mismo libro y sin arista entre ellos. customer_discovery_cuatro_fases ordena el descubrimiento, y su fase 1 manda desarmar la idea en las nueve partes del lienzo y escribir un resumen por cada una. priorizar_elementos_a_validar trae un procedimiento que la madre no tiene: revisar el lienzo completo, identificar las CINCO variables criticas o menos que determinan el exito, concentrar los recursos de validacion en propuesta de valor, relacion con el cliente y canales, priorizar cada lado por separado si el mercado es de varios lados, y evitar validar todo a la vez. Por la vara del banco 9.6.1, CONTINUA. El limite de cinco variables es la clase de cifra concreta que ningun nodo de proceso da.
+
+NODO A . customer_discovery_cuatro_fases
+  titulo: Las cuatro fases para descubrir a tu cliente
+  pasos_accionables (4), ENTEROS:
+    1. Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis
+    2. Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales
+    3. Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano
+    4. Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más
+
+NODO B . priorizar_elementos_a_validar
+  titulo: Priorizar Qué Elementos del Modelo de Negocio Validar
+  pasos_accionables (5), ENTEROS:
+    1. Revisar el lienzo de modelo de negocio completo
+    2. Identificar las cinco variables críticas -o menos- que determinarán el éxito del negocio
+    3. Enfocar los recursos de validación en los elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos
+    4. Si es un mercado con múltiples lados, priorizar la validación de cada lado del mercado por separado
+    5. Evitar intentar validar todas las variables del modelo de negocio de forma simultánea
+
+
+##########################################################################################
+PUESTO 1009 . CAIDO, YA SALIO . dominio core . clase D
+  sitio del estado: docs/PENDIENTES.md, seccion de la vuelta 93
+  nodos crudos:    customer_discovery_phase2_problem_test  |  fit_problema_solucion
+  nodos RESUELTOS: customer_discovery_phase2_problem_test  |  fit_problema_solucion
+  direccion registrada en OP_E_07_DIRECCION_V94.jsonl: NO ESTA (el par ya salio de la bolsa)
+##########################################################################################
+
+LA RAZON, ENTERA:
+  La fase 2 del descubrimiento contra los tres encajes, libros distintos y sin arista entre ellos. customer_discovery_phase2_problem_test prueba el problema: disenar experimentos con clientes reales, prepararse para los contactos y las entrevistas, probar la comprension del problema y su importancia percibida, profundizar en perfiles y comportamientos, y capturar conocimiento competitivo durante las entrevistas. fit_problema_solucion trae un procedimiento que esa fase no tiene: identificar en cual de las tres fases esta el negocio, enviar en la fase I un flujo pequeno y constante de clientes frios por canales de traccion para detectar por donde se FILTRA el producto, y no escalar la inversion en marketing hasta que la fuga sea baja. Por la vara del banco 9.6.1, CONTINUA. Y por el banco 9.9 se juzga hoy: el solape cae en sus tres primeros pasos, los encajes de Value Proposition Design, y el bloque de traccion queda fuera. NOVENO de los veinte leido.
+
+NODO A . customer_discovery_phase2_problem_test
+  titulo: Customer Discovery Fase 2: Probar el Problema
+  pasos_accionables (5), ENTEROS:
+    1. Diseñar experimentos de prueba del problema con clientes reales
+    2. Prepararse para contactos y entrevistas con clientes
+    3. Probar la comprensión del problema y su importancia percibida por el cliente
+    4. Profundizar en el entendimiento del cliente (perfiles, comportamientos)
+    5. Capturar conocimiento competitivo y de mercado durante las entrevistas
+
+NODO B . fit_problema_solucion
+  titulo: Los Tres Tipos de Fit (Problem-Solution, Product-Market, Business Model)
+  pasos_accionables (3), ENTEROS:
+    1. Validar que los jobs, pains y gains identificados realmente importan a los clientes.
+    2. Testear si los clientes quieren tu propuesta de valor concreta.
+    3. Evaluar si el modelo de negocio asociado es escalable y rentable.
+
+
+##########################################################################################
+PUESTO 886 . VIVO, a mesa . dominio core . clase D
+  sitio del estado: acta 95 seccion 4.2, hermano del 1009
+  nodos crudos:    customer_discovery_overview  |  fit_problema_solucion
+  nodos RESUELTOS: customer_discovery_overview  |  fit_problema_solucion
+  direccion registrada en OP_E_07_DIRECCION_V94.jsonl: madre=customer_discovery_overview  hijo=fit_problema_solucion
+##########################################################################################
+
+LA RAZON, ENTERA:
+  Las cuatro fases contra los tres encajes, libros distintos y sin arista entre ellos. customer_discovery_overview ordena el descubrimiento en cuatro fases: descomponer la vision en las nueve partes del lienzo, salir a comprobar si el problema es real y duele, mostrar el producto minimo viable y la propuesta de valor para validar la solucion, y evaluar si hay validacion suficiente para pasar a clientes reales o si toca pivotar. fit_problema_solucion trae un procedimiento que esas fases no tienen: identificar en cual de las tres fases esta el negocio, enviar en la fase I un flujo pequeno y constante de clientes frios por canales de traccion para detectar por donde se FILTRA el producto, y no escalar la inversion en marketing hasta que la fuga sea baja. Esa deteccion de fuga con trafico frio es lo mas valioso del par y no esta en el otro. Por la vara del banco 9.6.1, CONTINUA. Y por el banco 9.9 el par se juzga HOY pese a que fit_problema_solucion es una de las veinte costuras fuera de cola: sus tres primeros pasos son los encajes de Value Proposition Design y los tres ultimos el bloque de traccion de Weinberg, y el solape con las cuatro fases cae entero en los tres primeros. Septimo de los veinte leido desde que la lista se midio, y el tercero que no bloquea.
+
+NODO A . customer_discovery_overview
+  titulo: Las cuatro fases para descubrir a tu cliente (Customer Discovery)
+  pasos_accionables (4), ENTEROS:
+    1. Descompon tu visión inicial en las nueve partes de tu lienzo de modelo de negocio (Business Model Canvas)
+    2. Sal a comprobar si el problema es real y le duele a tus clientes
+    3. Muestrales tu producto minimo viable (MVP) y tu propuesta de valor para validar la solución
+    4. Evalua los resultados y decide si tienes suficiente validación para pasar a probar con clientes reales (Customer Validation) o si necesitas pivotar
+
+NODO B . fit_problema_solucion
+  titulo: Los Tres Tipos de Fit (Problem-Solution, Product-Market, Business Model)
+  pasos_accionables (3), ENTEROS:
+    1. Validar que los jobs, pains y gains identificados realmente importan a los clientes.
+    2. Testear si los clientes quieren tu propuesta de valor concreta.
+    3. Evaluar si el modelo de negocio asociado es escalable y rentable.
+
+
+##########################################################################################
+PUESTO 890 . VIVO, a mesa . dominio core . clase D
+  sitio del estado: acta 95 seccion 4.2
+  nodos crudos:    checkpoints_validacion  |  customer_validation
+  nodos RESUELTOS: checkpoints_validacion  |  customer_validation
+  direccion registrada en OP_E_07_DIRECCION_V94.jsonl: madre=customer_validation  hijo=checkpoints_validacion
+##########################################################################################
+
+LA RAZON, ENTERA:
+  La etapa contra el instrumento que define su aprobado, del mismo libro y sin arista entre ellos. customer_validation es la etapa: desplegar el producto minimo viable de alta fidelidad, disenar y probar el plan de ventas en el terreno, medir si por cada peso invertido regresan dos, confirmar con ventas reales, y evaluar si hay impulso para escalar. checkpoints_validacion trae el procedimiento para fijar esos umbrales, que la etapa da por supuestos: definir metricas cuantitativas y medibles para cada hipotesis clave, ventas, retencion y referidos; adaptar los checkpoints segun el canal, fisico y B2B contra web y movil; documentar ejemplos concretos como cerrar la venta en tres reuniones o que un tercio de los visitantes vuelva en una semana; y vincular cada checkpoint a un elemento especifico del lienzo. Por la vara del banco 9.6.1, CONTINUA.
+
+NODO A . checkpoints_validacion
+  titulo: Determinar los Checkpoints de Validación
+  pasos_accionables (4), ENTEROS:
+    1. Definir métricas cuantitativas y medibles para cada hipótesis clave (ventas, retención, referidos)
+    2. Adaptar los checkpoints según el canal: físico/B2B vs web/mobile
+    3. Documentar ejemplos concretos como 'cerrar venta en tres reuniones' o 'un tercio de visitantes regresa en una semana'
+    4. Vincular cada checkpoint a un elemento específico del Business Model Canvas
+
+NODO B . customer_validation
+  titulo: Validación con clientes (Customer Validation)
+  pasos_accionables (5), ENTEROS:
+    1. Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes
+    2. Diseña un plan de ventas y pruébalo en el terreno con tus primeros clientes
+    3. Mide si por cada peso que inviertes en ventas y marketing te regresan el doble (o la proporción que hayas definido)
+    4. Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar
+    5. Evalúa si ya alcanzaste el impulso suficiente para pasar a escalar
+
+
+##########################################################################################
+PUESTO 947 . VIVO, a mesa . dominio core . clase D
+  sitio del estado: acta 95 seccion 4.2
+  nodos crudos:    customer_discovery  |  product_market_fit
+  nodos RESUELTOS: customer_discovery  |  product_market_fit
+  direccion registrada en OP_E_07_DIRECCION_V94.jsonl: madre=customer_discovery  hijo=product_market_fit
+##########################################################################################
+
+LA RAZON, ENTERA:
+  La etapa contra el checklist de su resultado, del mismo libro y sin arista entre ellos, y es la misma relacion del puesto 930 con la otra etapa. customer_discovery manda salir: hablar con clientes potenciales en vez de quedarse encerrado con la idea, probar como percibe el cliente el problema antes de mostrarle nada del producto, construir una version minima para testear la solucion, confirmar que el problema le importa lo suficiente como para comprar, y documentar y ajustar el modelo. product_market_fit trae el checklist de seis evaluaciones que decide si eso alcanzo: si el problema es urgente y vital para muchos clientes con numero de pasa o no pasa definido, si el precio es uno que pagarian con gusto, si hay suficientes clientes para un negocio de tamano significativo, si la demografia y los arquetipos estan entendidos, si el negocio crece de forma predecible, y la decision formal con equipo e inversores. Por la vara del banco 9.6.1, CONTINUA. Nota: este nodo de encaje lleva ya dos pares leidos contra etapas y los dos sanos.
+
+NODO A . customer_discovery
+  titulo: Descubrimiento del cliente (Customer Discovery)
+  pasos_accionables (5), ENTEROS:
+    1. Sal a hablar directamente con clientes potenciales en vez de quedarte encerrado con tu idea
+    2. Prueba como percibe el cliente el problema antes de mostrarle nada del producto
+    3. Construye una versión minima del producto (MVP) para testear la solución
+    4. Confirma que el problema le importa lo suficiente como para que decida comprar
+    5. Documenta lo que aprendes y ajusta tu modelo de negocio según ese feedback
+
+NODO B . product_market_fit
+  titulo: Verificación del Product/Market Fit
+  pasos_accionables (6), ENTEROS:
+    1. Evaluar si el problema/necesidad es urgente y vital para muchos clientes (definir número pass/fail)
+    2. Evaluar si el producto resuelve el problema a un precio que los clientes pagarían con gusto
+    3. Evaluar si existen suficientes clientes para un negocio de tamaño significativo
+    4. Confirmar comprensión de la demografía y arquetipos de los clientes objetivo
+    5. Evaluar si el negocio puede crecer de forma predecible y escalable
+    6. Decidir formalmente con equipo e inversores si se avanza a Customer Validation
+
+==========================================================================================
+FIN. Cinco ejemplares impresos enteros. La VARA se escribe en el reporte,
+no aqui: este instrumento imprime el material, no juzga.
+==========================================================================================

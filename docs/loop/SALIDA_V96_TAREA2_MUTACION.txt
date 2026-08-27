@@ -1,0 +1,16 @@
+====================================================================================================
+PRUEBA DE MUTACION DE LA MESA Y DE SU VARA (vuelta 96, TAREA 2)
+====================================================================================================
+
+CONTROL (expediente real): 19 filas, CALZAN 16, CHOCAN 3, fallos 0
+    CHOCAN nominal: 1886, 1844, 1009
+    -> VERDE
+MUTACION A1 (puesto 1083, que hoy CALZA, con su publicado volteado): calza=False -> CAE (correcto)
+MUTACION A2 (puesto 1886, que hoy CHOCA, con su publicado volteado): calza=True -> PASA A CALZAR (correcto)
+MUTACION B (expediente con el puesto inventado 999999): fallos 1 -> CAE (correcto)
+    el puesto 999999 del expediente no tiene veredicto en INTRA_DOMINIO_VEREDICTOS.jsonl
+MUTACION C (mesa con el puesto inventado 999998): fallos 1 -> CAE (correcto)
+    el puesto 999998 no tiene veredicto en INTRA_DOMINIO_VEREDICTOS.jsonl
+CONTROL DE VUELTA (mutaciones deshechas): vara 19 filas / 0 fallos, mesa 5 fichas / 0 fallos -> VERDE
+
+VEREDICTO: VERDE, las cuatro mutaciones se comportan y el control vuelve a verde

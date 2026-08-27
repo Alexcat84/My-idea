@@ -3910,3 +3910,206 @@ acta 95; la linea de cada una va al lado y sale de ese grep, no de memoria.
 | **4.4** | 33826 | **Discutible 3** (el SyntaxWarning no reproducido): **EL EJECUTOR TIENE RAZON**, el auditor estaba equivocado | ver (1.2)(i); el fichero **no se toca** |
 | **4.5** | 33835 | **Discutible 4** (la herencia de apertura por el criterio 2.2): **CONFIRMADO**, el criterio aguanta con la vara mas estricta (`web/` entero, no solo `web/lib/assets/`) | **deja de ser discutible** |
 | **4.6** | 33843 | **Discutible 2** (la aplicacion del criterio a 15 razones nuevas): **CONFIRMADO Y RESUELTO POR MEDICION**, una vara mecanica que no vio el codigo del ejecutor reproduce sus dos listas exactas (11 y 4) | apartarse del criterio estricto fue **correcto**: el estricto habria sacado al 1083 |
+
+## VUELTA 96, TAREA 2: LA MESA DE FORMULA DE LOS PARES 886, 890 Y 947. NO HAY VARA CITABLE: LOS TRES QUEDAN COMO ESTAN, Y LA DUDA QUEDA SELLADA AQUI
+
+**Origen:** decision 2 del fundador, 27 ago 2026
+(`docs/loop/paradas/2026-08-27-racha-parentesis-DECISION.md`), literal: *"los
+pares 886, 890 y 947 van a MESA DE FORMULA en la reanudacion: los cinco
+ejemplares de la formula (1083, 1009 y los tres) impresos enteros y juntos, la
+vara que los separa escrita o declarada inexistente, y los tres adjudicados por
+ella con correccion declarada; si no hay vara citable, los tres quedan como
+estan y la duda va sellada a PENDIENTES."* **La mesa se sento entera. Este
+apartado es la ultima de las cuatro ramas: la que la propia decision escribio
+para el caso de que no hubiera vara.**
+
+### (a) LOS CINCO EJEMPLARES, IMPRESOS ENTEROS Y JUNTOS
+
+`scripts/loop/vuelta96_tarea2_mesa_de_formula.py`, salida completa en
+`docs/loop/SALIDA_V96_TAREA2_MESA_DE_FORMULA.txt` (**152 lineas**, contadas del
+fichero con `wc -l`), EXIT 0. De cada uno de los cinco: puesto, estado con el
+sitio que lo dice, dominio, clase, los dos nodos **crudos y RESUELTOS por el
+resolutor antes de cruzarse** (`P.1`, `BANCO_DEL_PLAN.md` linea 11; ninguno de
+los diez ids cambio al resolverse, y se dice porque `P.1` obliga a decir siempre
+si se resolvio), la direccion registrada en `OP_E_07_DIRECCION_V94.jsonl`, **la
+razon COMPLETA sin recortar**, y los `pasos_accionables` **ENTEROS** de los dos
+nodos. Los diez recuentos de pasos salen del fichero:
+
+| puesto | estado | nodo A y sus pasos | nodo B y sus pasos |
+|---:|---|---|---|
+| 1083 | CONFIRMADO | `customer_discovery_cuatro_fases` (4) | `priorizar_elementos_a_validar` (5) |
+| 1009 | CAIDO, YA SALIO | `customer_discovery_phase2_problem_test` (5) | `fit_problema_solucion` (3) |
+| 886 | VIVO, a mesa | `customer_discovery_overview` (4) | `fit_problema_solucion` (3) |
+| 890 | VIVO, a mesa | `checkpoints_validacion` (4) | `customer_validation` (5) |
+| 947 | VIVO, a mesa | `customer_discovery` (5) | `product_market_fit` (6) |
+
+**LA MECANICA DE ROJO de este instrumento, probada por mutacion** (mutacion C de
+`docs/loop/SALIDA_V96_TAREA2_MUTACION.txt`): con un puesto inventado en la lista
+de ejemplares, **CAE** y no imprime nada.
+
+### (b) LA VARA CANDIDATA, ESCRITA, Y DE DONDE SALE CADA PIEZA
+
+No se invento ninguna regla. La vara candidata sale entera de dos textos ya
+escritos, citados literalmente en el docstring del instrumento:
+
+- **banco `9.6.2`** (`docs/BANCO_DE_TEXTOS.md` linea 1737 y siguientes):
+  *"COMO SE RECONOCE UN PAR MADRE E HIJO... El hijo CABE ENTERO DENTRO DE UN
+  PASO DE LA MADRE, y la madre conserva materia propia que el hijo no toca en
+  ningun paso."*
+- **`OP-E-07.verificacion`** (`docs/plan/OPERACIONES.jsonl`, campo
+  `verificacion`): *"NO SE RELEE EL PAR: se lee su razon, que ya esta escrita.
+  Si la razon tampoco lo dice, el par sale de la cosecha y se anota por que."*
+
+De las dos juntas sale la vara: **la razon tiene que SENALAR UN PASO, FASE O
+LINEA UNICA** de uno de los dos nodos como el sitio donde el otro cabe entero.
+Si la razon solo opone el nodo ENTERO contra lo que el otro *"no tiene"*,
+*"asume"* o *"da por supuesto"*, no ha senalado madre: ha comparado dos clases.
+
+- **T1, ANCLA SINGULAR** (decide): trece familias de designacion, cada una
+  tomada de una forma que el expediente ya usa (paso numerado, paso ordinal,
+  fase numerada u ordinal, "es/son ... linea", "en N lineas", dos puntos y UNA
+  LINEA, "una de sus lineas", "termina/cierra/empieza con una linea", "entre
+  sus pasos", "el paso nombra", "una de las N", la palabra "madre" literal, "es
+  el indice").
+- **T2, SIN RESIDUO DECLARADO** (se publica al lado, NO decide sola): la razon
+  no declara ella misma que una parte del hijo *queda fuera* del solape. Se mide
+  **literal y estrecho a proposito**, para que no se pueda ensanchar hasta
+  atrapar a quien convenga.
+
+### (c) LA PRUEBA: LA VARA SE CORRE CONTRA LAS DIECINUEVE ADJUDICACIONES YA PUBLICADAS, Y CONTRADICE TRES
+
+`scripts/loop/vuelta96_tarea2_vara_de_la_mesa.py`, salida completa en
+`docs/loop/SALIDA_V96_TAREA2_VARA.txt`, EXIT 0. **Una vara que tumba lo ya
+adjudicado no separa nada: reordena.** Por eso se prueba antes de usarse, sobre
+los quince pares que el expediente publico como QUEDA y los cuatro que publico
+como SALE, cada uno con el sitio de su adjudicacion en la tabla. Cifras leidas
+de ese fichero:
+
+**EXPEDIENTE: 19 filas. CALZAN 16. CHOCAN 3, nominales: 1886, 1844 y 1009.**
+
+**LAS TRES QUE CHOCAN, cada una con su nombre y su motivo:**
+
+| puesto | publicado | la vara da | por que choca |
+|---:|---|---|---|
+| **1886** | QUEDA (acta 93, `ACTA_AUDITOR.md` linea 32695) | **SALE** | su razon **no trae NINGUNA** de las trece familias de ancla |
+| **1844** | QUEDA (acta 95, adjudicacion 4.1, linea 33773) | **SALE** | su razon **no trae NINGUNA** de las trece familias de ancla |
+| **1009** | SALE (vuelta 93) | **QUEDA** | su razon **si trae** un ordinal de fase, *"en la fase I"*, **pero esa fase es del HIJO**, no de la madre |
+
+**Y LAS TRES CHOCAN POR LA MISMA RAIZ, que es lo que hace inutil seguir
+afinando el patron.** El 1886 y el 1844 fueron adjudicados QUEDA **leyendo los
+PASOS DE LOS NODOS**, no la razon: el acta 93 dice del 1886 *"encaje limpio
+dentro del paso 1"* y la lectura ciega del acta 95 (seccion 3.3) dice del 1844
+*"madre `productos_crudos`, ancla en su paso 2"*. Las dos son lecturas del PAR.
+El 1009, en cambio, cayo **leyendo la RAZON**, que es el carril que
+`OP-E-07.verificacion` manda. **Los dos carriles dan respuestas opuestas sobre
+razones de la MISMA FORMA**, y el ejemplar esta a la vista en el fichero de la
+mesa: la razon del **1844** dice *"`productos_crudos` NOMBRA EL PROBLEMA:
+[tres cosas] ... `diagnostico_de_productos_crudos` TRAE EL PROCEDIMIENTO:
+[cinco cosas]"*, y la del **1009** dice *"`customer_discovery_phase2_problem_test`
+prueba el problema: [cinco cosas] ... `fit_problema_solucion` trae un
+procedimiento que esa fase no tiene: [tres cosas]"*. **Misma forma, veredictos
+opuestos.** Ningun patron sobre el texto de la razon puede separar dos frases
+que tienen la misma forma.
+
+**LA COMPARACION NO ES UNA TAUTOLOGIA, y esta probado en las dos direcciones**
+(`docs/loop/SALIDA_V96_TAREA2_MUTACION.txt`, EXIT 0): sobre el dato real ya sabe
+decir que NO (3 CHOCAN de 19); la **mutacion A1** voltea en memoria el veredicto
+publicado del 1083, que hoy CALZA, y **pasa a CHOCAR**; la **mutacion A2**
+voltea el del 1886, que hoy CHOCA, y **pasa a CALZAR**; la **mutacion B** mete
+un puesto inventado y la mecanica de ROJO **CAE**; y el control vuelve a verde
+con las mutaciones deshechas.
+
+### (d) LA SEGUNDA VARA POSIBLE, LA QUE SI LOS SEPARARIA, Y POR QUE NO SE APLICA
+
+**Se dice entera en vez de callarla**, porque callarla seria esconder que la
+mesa tenia una salida y no se tomo. Si en vez de leer la RAZON se leyera el PAR
+(el test de `9.6.2` aplicado a los `pasos_accionables` de hoy), los cinco SI se
+separarian. **Esto es LECTURA MIA, declarada como tal, sobre el material impreso
+en `SALIDA_V96_TAREA2_MESA_DE_FORMULA.txt`, y no es un instrumento:**
+
+- **1083:** los cinco pasos del hijo (revisar el lienzo, las cinco variables
+  criticas, enfocar recursos, priorizar cada lado, no validar todo a la vez)
+  caben **enteros dentro de la fase 1 de la madre** (*"desarma tu idea en las
+  nueve partes del lienzo"*), y la madre conserva sus fases 2, 3 y 4. **Cumple
+  9.6.2. QUEDA**, igual que lo publicado.
+- **1009:** el paso 1 del hijo solapa con la madre, pero sus pasos 2 y 3
+  (product market fit y modelo de negocio escalable) **quedan por encima de una
+  fase que solo prueba el problema**. No cabe en UN paso. **Falla 9.6.2. SALE**,
+  igual que lo publicado.
+- **886:** mismo hijo que el 1009. Sus tres pasos se reparten entre las fases
+  **2, 3 y 4** de `customer_discovery_overview`. **No cabe en UN paso. Falla.**
+- **947:** las seis evaluaciones del hijo cubren cosas que la madre no tiene en
+  ningun paso (tamano de mercado, crecimiento predecible, decision formal con
+  inversores). **No cabe en UN paso. Falla.**
+- **890:** el mas dudoso de los cinco y se dice asi. El hijo fija umbrales de
+  ventas, **retencion y referidos**, y por canal; el paso 3 de la madre solo
+  habla de la proporcion de ventas y marketing. **Se reparte entre el paso 3 y
+  el 5 y anade materia. Falla, pero por poco.**
+
+**Y NO SE APLICA, por dos razones escritas, ninguna de ellas mia:**
+
+1. **`OP-E-07.verificacion` dice literalmente lo contrario**: *"NO SE RELEE EL
+   PAR: se lee su razon, que ya esta escrita."* Cambiar el carril de decision de
+   esta operacion no es afinar una vara: es cambiar su criterio de verificacion.
+2. **LA DERIVA DE CONTENIDO lo haria ademas poco fiable**, y ya esta medida y
+   registrada en este mismo fichero (seccion de la vuelta 93, apartado **(d)**,
+   medida por el auditor en el acta 92 seccion 4.4): de los 140 nodos que tocan
+   los 87 pares de `OP-E-07`, **26** tienen hoy `pasos_accionables` distintos de
+   los del encendido del bucle, y eso afecta a **32** de los 87 pares.
+   **El ejemplar es justamente el nodo de esta mesa**: `fit_problema_solucion`
+   tenia **6** pasos en `50f03099` (3 encajes de Value Proposition Design mas 3
+   de traccion) y hoy tiene **3** (el bloque de traccion se fue en `cadc9977`,
+   vuelta 53, LOTE A). **Las razones del 886 y del 1009 describen los seis
+   pasos**, incluido el bloque de traccion que citan como lo valioso del par, y
+   ese bloque **ya no esta en el nodo**. Leer el par hoy es leer un nodo
+   distinto del que la razon describe.
+   Y ese mismo apartado (d) ya dejo escrito que ampliar el carril es **una
+   pregunta de ALCANCE y RESERVA DE FUNDADOR, no del bucle.**
+
+### (e) LO QUE SE DECIDE, Y LO QUE NO
+
+**NO HAY VARA CITABLE.** La unica que se puede escribir sin doctrina nueva
+contradice tres adjudicaciones ya publicadas; la que si separaria exige cambiar
+el criterio de verificacion escrito de la operacion, que es reserva de fundador.
+
+**POR LA DECISION 2 DEL FUNDADOR, literal** (*"si no hay vara citable, los tres
+quedan como estan y la duda va sellada a PENDIENTES"*):
+
+> **EL 886, EL 890 Y EL 947 QUEDAN COMO ESTAN.** Siguen en
+> `docs/plan/OP_E_07_DIRECCION_V94.jsonl` con su direccion registrada, sus
+> aristas no se tocan, y **NINGUNA CIFRA DEL PLAN NI DEL MARCADOR SE MUEVE POR
+> ESTA MESA.** La relectura conjunta queda **CERRADA SIN RETIRADAS**: de los
+> cuatro que traia el acta 95, el 1844 salio de ella por la adjudicacion 4.1 y
+> QUEDA, y estos tres quedan por falta de vara.
+
+**CORRECCION DECLARADA, sin borrar el texto viejo.** El acta 95 (seccion 4.2,
+linea 33795) escribio: *"Ninguna vara escrita hoy discrimina entre ellos, y por
+eso los tres son duda genuina y no pereza."* **Esa frase queda RATIFICADA y
+ahora esta MEDIDA, no solo afirmada**: la vara se escribio, se corrio contra las
+19 adjudicaciones publicadas y contradijo 3. Lo que se corrige es el alcance de
+la frase: el acta la dejo como impresion, y hoy es una medicion con fichero.
+
+**LO QUE ESTA MESA SI DEJA GANADO, y no es poco:** el motivo de que no haya vara
+ya no es *"nadie ha encontrado una"*, es **una causa nombrada y medida**: el
+expediente decide unos pares leyendo la RAZON y otros leyendo los NODOS, y sobre
+razones de la misma forma los dos carriles dan respuestas opuestas.
+
+### (f) PENDIENTE DE DOCTRINA (`EJECUTOR.md` regla 5: no se para, se registra)
+
+**LA PREGUNTA QUE NINGUNA REGLA ESCRITA CONTESTA HOY:** cuando la lectura ciega
+del auditor (`AUDITOR.md` seccion 1.2, que **manda** imprimir primero los pasos
+de los nodos y adjudicar sobre ellos) y el criterio de verificacion de la
+operacion (`OP-E-07.verificacion`, que **manda** decidir por la razon y no
+releer el par) apuntan a lados distintos, **cual manda**.
+
+Las dos reglas estan vigentes, las dos se han aplicado, y **el expediente tiene
+adjudicaciones publicadas de las dos clases**: el 1886 y el 1844 QUEDAN por
+lectura de nodos, el 1009 y el 1098 SALIERON por lectura de razon. **No es una
+contradiccion que se resuelva con las reglas de correccion existentes** (ninguna
+de las cuatro adjudicaciones esta mal bajo la regla que la produjo), asi que no
+se toca ninguna: **se registra la pregunta y se sigue**, como manda la regla 5.
+
+**Lo mejor sostenido, mientras no haya doctrina:** cada operacion decide por SU
+propio criterio de verificacion escrito (para `OP-E-07`, la razon), y la lectura
+ciega del auditor sigue siendo control de calidad de la clase, no fuente de
+direccion. **Es lo que ya se hace de hecho; lo que falta es que este escrito.**
