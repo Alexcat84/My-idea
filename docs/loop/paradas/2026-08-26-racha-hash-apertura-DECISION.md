@@ -196,3 +196,9 @@ prosa que envuelve las cifras, no las cifras.
 - El reporte que audite: `docs/loop/REPORTE.md`.
 - La decision anterior sobre esta misma racha:
   `docs/loop/paradas/2026-08-26-racha-tramo-mecanico-DECISION.md`.
+
+DECISION DEL FUNDADOR (26 ago 2026): opcion b, generalizada: el tallador talla tambien la
+PROSA DE IDENTIDAD (el commit de apertura desde git rev-parse y git log, y toda linea de
+hash, rama o fecha de apertura y cierre se lee de git, no se teclea), y --comparar la
+coteja como una fila mas. Sin cambio de modelos. La racha vuelve a cero y OP-E-01 sigue
+con el tramo 6.

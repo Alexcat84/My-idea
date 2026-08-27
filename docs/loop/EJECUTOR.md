@@ -59,6 +59,19 @@ lo que diga el encargo.
    tallada de ficheros de salida, como ya se hace con la cabecera del
    cribado) queda AUTOMATICAMENTE ENCARGADA como operacion de codigo en la
    vuelta siguiente, SIN esperar parada ni decision nueva del fundador.
+   LA IDENTIDAD SE LEE DE GIT (26 ago 2026; motivo: la racha de las vueltas
+   77, 78 y 79, tres frases sueltas seguidas, y la de la 79 entro por LA
+   PROSA DE IDENTIDAD, que queda fuera de las seis filas que el tallador
+   --fase04 ya talla: la linea del commit de apertura es prosa suelta encima
+   de la tabla y siguio tecleandose a mano. El ejemplar de la 79: el reporte
+   publica como commit de apertura 43b02413, que es el commit de la TAREA 4
+   de esa misma vuelta, escrito por el propio ejecutor a mitad del trabajo;
+   la apertura verdadera es aea7cc81, el acta de la vuelta 78, y la propia
+   tabla del reporte ya lo delataba, porque sus cifras de apertura son las
+   que mide aea7cc81 y no las del arbol del hash publicado). TODO HASH,
+   NOMBRE DE COMMIT, RAMA O FECHA DE APERTURA O DE CIERRE QUE EL REPORTE
+   PUBLIQUE SE LEE DE git rev-parse O DE git log EN ESA VUELTA Y SE TALLA;
+   UNA LINEA DE IDENTIDAD TECLEADA NO SE PUBLICA.
 2. EL INSTRUMENTO MANDA (14 ago 2026; motivo: las caidas de las vueltas 15
    y 16 fueron las dos de esta especie). Toda cifra o nombre propio que se
    publique se lee de la salida del instrumento corrido EN ESTA VUELTA. Una
