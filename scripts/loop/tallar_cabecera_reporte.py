@@ -363,6 +363,34 @@ CASO OBLIGATORIO (vuelta 86): correr `--fase04 --vuelta 86` con
 lado tiene que dar ROJO nombrando esa salida como no encontrada, y no talla
 la tabla; con el fichero de vuelta a su sitio, el mismo comando talla igual
 que antes.
+
+--- TAREA 2.b: LA FILA DE IDENTIDAD DEJA DE SER UN LITERAL (vuelta 95) ---
+
+POR QUE NACE (acta de la vuelta 94, sobre la linea 1187 de este fichero, tal
+como estaba antes de este remedio). La celda de identidad imprimia, SIEMPRE,
+"(sellado por el ejecutor antes de la 1.a operacion)", sin mirar nunca CUANDO
+se habia escrito de verdad `SALIDA_V<N>_HEAD_APERTURA.txt`: `leer_head_apertura`
+solo comprueba que el fichero exista y traiga 40 caracteres hexadecimales. En
+la vuelta 94 esa frase era FALSA (el sello se commiteo a mitad de la vuelta,
+no antes de la primera operacion) y el ejecutor tuvo que desmentir a su propio
+instrumento en prosa: la misma especie que "LOS SEIS CASOS".
+
+EL ARREGLO, `procedencia_sello_apertura()`: se busca, con `git log
+--diff-filter=A`, el commit que ANADE `docs/loop/SALIDA_V<N>_HEAD_APERTURA.txt`
+en la rama actual. Si el PADRE de ese commit es el hash que el propio fichero
+sella, la celda dice "sellado antes de la 1.a operacion" (el commit que anadio
+el sello es hijo directo del commit que el sello nombra: se escribio antes de
+tocar nada); si no, la celda dice "sello RECONSTRUIDO DESPUES (commit X)",
+nombrando sin adornos el commit que lo anadio. Nunca inventa: sin commit que
+anada el fichero, o con mas de uno (ambiguo), ROJO.
+
+CASOS OBLIGATORIOS (vuelta 95, medidos por el auditor): `--fase04 --vuelta 93`
+tiene que dar "sellado antes de la 1.a operacion" (sello 85a250be..., anadido
+en f73adb67, cuyo padre es 85a250be...); `--fase04 --vuelta 94` tiene que dar
+"sello RECONSTRUIDO DESPUES (commit a4c89ab6)" (sello 267365c8..., anadido en
+a4c89ab6, cuyo padre es 4c22a083, NO 267365c8). OJO: la cabecera YA PUBLICADA
+de la vuelta 94 es una medicion historica cerrada y NO se retoca con este
+arreglo; el instrumento reparado se estrena con la cabecera de la vuelta 95.
 """
 import argparse
 import io
@@ -728,6 +756,58 @@ def leer_head_apertura(vuelta, fallos):
         fallos.append("%s no trae un hash de 40 caracteres reconocible" % nombre)
         return None
     return m.group(1)
+
+
+def procedencia_sello_apertura(vuelta, rama, head_real, fallos):
+    """LA FILA DE IDENTIDAD SE LEE DE GIT, NUNCA TECLEADA (TAREA 2.b, vuelta
+    95, encargo del auditor, acta de la vuelta 94: el tallador imprimia, como
+    literal incondicional, "(sellado por el ejecutor antes de la 1.a
+    operacion)", y `leer_head_apertura` solo comprueba que el fichero exista
+    y traiga 40 caracteres hexadecimales, nada mira CUANDO se escribio). Este
+    remedio busca en `git log --diff-filter=A` de RAMA el commit que ANADE
+    `docs/loop/SALIDA_V<vuelta>_HEAD_APERTURA.txt`. Si el PADRE de ese commit
+    es HEAD_REAL (el hash que el propio fichero sella), el sello se escribio
+    de verdad ANTES de la primera operacion, como manda la regla; si el padre
+    es cualquier otro commit, el fichero se anadio DESPUES, a mitad o al
+    final de la vuelta, y el sello esta RECONSTRUIDO. Nunca inventa: si no
+    hay NINGUN commit que anada el fichero, o hay MAS DE UNO (ambiguo), ROJO.
+
+    CASOS OBLIGATORIOS (vuelta 95, medidos por el auditor): la vuelta 93
+    (sello 85a250be..., anadido en f73adb67, cuyo padre es 85a250be...) tiene
+    que dar "sellado antes de la 1.a operacion"; la vuelta 94 (sello
+    267365c8..., anadido en a4c89ab6, cuyo padre es 4c22a083) tiene que dar
+    "sello RECONSTRUIDO DESPUES (commit a4c89ab6)"."""
+    if rama is None or head_real is None:
+        fallos.append("sin rama o sin sello de apertura, no se puede leer la procedencia del sello")
+        return None
+    nombre_rel = "docs/loop/SALIDA_V%d_HEAD_APERTURA.txt" % vuelta
+    try:
+        r = subprocess.run(["git", "log", rama, "--diff-filter=A", "--pretty=format:%H", "--", nombre_rel],
+                           cwd=RAIZ, capture_output=True, text=True, check=True)
+    except Exception as e:
+        fallos.append("no se pudo leer git log --diff-filter=A de %s: %s" % (nombre_rel, e))
+        return None
+    hallados = [h for h in r.stdout.splitlines() if h.strip()]
+    if not hallados:
+        fallos.append("git log --diff-filter=A no trae ningun commit que anada %s: no se talla la "
+                      "procedencia del sello" % nombre_rel)
+        return None
+    if len(hallados) > 1:
+        fallos.append("git log --diff-filter=A trae %d commits que anaden %s (%s): ambiguo, no se "
+                      "talla la procedencia del sello" % (len(hallados), nombre_rel,
+                                                            ", ".join(h[:8] for h in hallados)))
+        return None
+    commit_anade = hallados[0]
+    try:
+        r2 = subprocess.run(["git", "rev-parse", "%s^" % commit_anade], cwd=RAIZ,
+                            capture_output=True, text=True, check=True)
+        padre = r2.stdout.strip()
+    except Exception as e:
+        fallos.append("no se pudo leer el padre de %s: %s" % (commit_anade, e))
+        return None
+    if padre == head_real:
+        return "sellado antes de la 1.a operacion"
+    return "sello RECONSTRUIDO DESPUES (commit %s)" % commit_anade[:8]
 
 
 def arbol_dataset(commit, etiqueta, fallos):
@@ -1158,6 +1238,7 @@ def main():
         # del commit del acta. Si no coinciden, ROJO: las cifras de apertura
         # no son fiables para el commit que la fila nombra.
         head_real = leer_head_apertura(a.vuelta, fallos)
+        procedencia_sello = procedencia_sello_apertura(a.vuelta, rama, head_real, fallos)
         arbol_verde = None
         if commit_ap and head_real:
             arbol_acta = arbol_dataset(commit_ap, "commit del acta %s" % commit_ap, fallos)
@@ -1184,9 +1265,10 @@ def main():
     if a.fase04:
         celda_identidad = (
             "rama `%s`, commit del acta `%s` (ACTA DE LA VUELTA %d DEL AUDITOR, leido de git log), "
-            "HEAD real de apertura `%s` (sellado por el ejecutor antes de la 1.a operacion), arboles "
+            "HEAD real de apertura `%s` (%s, leido de git log --diff-filter=A), arboles "
             "de `dataset/` %s"
-            % (rama, commit_ap, a.vuelta - 1, head_real[:8], "IGUALES: VERDE" if arbol_verde else "?")
+            % (rama, commit_ap, a.vuelta - 1, head_real[:8], procedencia_sello,
+               "IGUALES: VERDE" if arbol_verde else "?")
         )
         f.append(("identidad: rama y commit de apertura (leidos de git, no tecleados)",
                   celda_identidad, celda_identidad))
