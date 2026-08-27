@@ -1,0 +1,144 @@
+====================================================================================================
+PAR 43  (dominio exportacion, titulo_ratio 92.1, contencion 0.5)
+====================================================================================================
+  PASO CASADO DEL BARRIDO: paso 3 de la madre
+      texto: Definir la estructura de reporte del área de exportación
+
+  MADRE (etiquetada asi por el barrido): organizacion_interna_exportacion
+      titulo : Organización Interna para la Exportación
+      fuente : A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+      que_es : 
+      PASOS (pasos_accionables):
+      1. Evaluar el volumen actual de ventas internacionales frente a las domésticas
+      2. Determinar si se requiere un gerente de exportación de tiempo parcial o completo
+      3. Definir la estructura de reporte del área de exportación
+      4. Planificar la eventual creación de una división internacional autónoma
+
+  HIJO  (etiquetado asi por el barrido): estructura_plan_exportacion
+      titulo : Estructura del Plan de Exportación
+      fuente : A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+      que_es : 
+      PASOS (pasos_accionables):
+      1. Redactar tabla de contenido y resumen ejecutivo (1-2 páginas)
+      2. Escribir la declaración de compromiso de política de exportación
+      3. Realizar el análisis de situación: producto/servicio, operaciones, personal y recursos internos
+      4. Desarrollar el componente de marketing: selección de mercados, producto, precio, distribución y términos
+      5. Definir tácticas y pasos de acción para países meta primarios y secundarios
+      6. Elaborar el presupuesto de exportación y estados financieros pro-forma
+      7. Establecer el cronograma de implementación y seguimiento periódico
+
+====================================================================================================
+PAR 63  (dominio quality, titulo_ratio 88.5, contencion 0.5)
+====================================================================================================
+  PASO CASADO DEL BARRIDO: paso 5 de la madre
+      texto: Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad
+
+  MADRE (etiquetada asi por el barrido): sistema_pull_push
+      titulo : Sistemas Pull versus Push en Producción
+      fuente : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      que_es : 
+      PASOS (pasos_accionables):
+      1. Evaluar si tu operacion actual funciona bajo un esquema push o pull
+      2. Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso
+      3. Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente
+      4. Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor
+      5. Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad
+      6. Implementar el sistema y capacitar a los operadores
+
+  HIJO  (etiquetado asi por el barrido): reduccion_de_tiempo_de_ciclo
+      titulo : Reducción del Tiempo de Ciclo
+      fuente : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      que_es : 
+      PASOS (pasos_accionables):
+      1. Diagnosticar las causas de consumo excesivo de tiempo en el proceso.
+      2. Desarrollar remedios específicos para reducir el tiempo de ciclo.
+      3. Medir el impacto de los remedios sobre el tiempo total del proceso.
+
+====================================================================================================
+PAR 67  (dominio environmental, titulo_ratio 87.7, contencion 0.5)
+====================================================================================================
+  PASO CASADO DEL BARRIDO: paso 1 de la madre
+      texto: Pide certificación Energy Star en cada equipo que compres
+
+  MADRE (etiquetada asi por el barrido): compra_equipos_verdes
+      titulo : Cómo elegir equipos tecnológicos sostenibles al comprar
+      fuente : The Green to Gold Business Play - Daniel C. Esty
+      que_es : 
+      PASOS (pasos_accionables):
+      1. Pide certificación Energy Star en cada equipo que compres
+      2. Revisa la 'Guide to Greener Electronics' de Greenpeace antes de elegir proveedor
+      3. Pregunta al fabricante qué política tiene sobre sustancias tóxicas
+      4. Prioriza equipos diseñados para desarmarse y reciclarse fácil
+      5. Confirma si el fabricante tiene un programa para recibir el equipo de vuelta al final de su vida útil
+
+  HIJO  (etiquetado asi por el barrido): certificacion_leed_energy_star
+      titulo : Certificación LEED o Energy Star
+      fuente : The Green to Gold Business Play - Daniel C. Esty
+      que_es : 
+      PASOS (pasos_accionables):
+      1. Evalúa si tu proyecto o local califica para LEED o Energy Star
+      2. Usa Portfolio Manager para medir la eficiencia energética actual del espacio
+      3. Identifica qué puntos LEED puedes alcanzar según las categorías: sitio, agua, energía, materiales, calidad interior
+      4. Documenta y reúne la evidencia necesaria para presentar la certificación
+      5. Comunica la certificación como ventaja competitiva a tus clientes y a quienes trabajan contigo
+
+====================================================================================================
+PAR 85  (dominio core, titulo_ratio 84.1, contencion 0.5)
+====================================================================================================
+  PASO CASADO DEL BARRIDO: paso 7 de la madre
+      texto: Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante hacia la validación con clientes
+
+  MADRE (etiquetada asi por el barrido): pivote_o_proceder
+      titulo : El momento de decidir: pivotar o seguir adelante (Pivote o Proceder)
+      fuente : The Startup Owner's Manual - Steve Blank
+      que_es : 
+      PASOS (pasos_accionables):
+      1. Siéntate con quien te acompaña en esto, no lo decidas solo en tu cabeza, y si tienes inversores, súmalos también
+      2. Dibuja cómo trabaja realmente tu cliente típico, basándote en datos reales que hayas recogido
+      3. Compara ese mapa real con lo que habías supuesto al armar tu modelo de negocio
+      4. Pregúntate qué tan bien lo que estás construyendo resuelve el problema real de tu cliente
+      5. Si la respuesta es 'no del todo', decide si el problema está en que elegiste el cliente equivocado o en las funciones de tu producto
+      6. Reduce tu lista de funciones a algo que puedas contar en un párrafo y vender a miles de personas, no a una lista larguísima pensada para diez clientes
+      7. Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante hacia la validación con clientes
+      8. Revisa evidencia real, no opiniones, sobre qué tan entusiasmados están tus clientes
+      9. Clasifica las respuestas de tus clientes según su nivel de entusiasmo, desde amor total hasta indiferencia
+
+  HIJO  (etiquetado asi por el barrido): fundadores_lideran_validacion
+      titulo : Lidera Tú la Validación con tus Clientes
+      fuente : The Startup Owner's Manual - Steve Blank
+      que_es : 
+      PASOS (pasos_accionables):
+      1. Participa tú mismo, en persona, en las conversaciones de validación con tus clientes
+      2. Evita delegar la validación a equipos de ventas, marketing o desarrollo de negocios en estas primeras etapas
+      3. Escucha y anota el feedback negativo directamente de tus clientes, sin intermediarios
+      4. Forma un pequeño equipo de apoyo (análisis de datos, pruebas A/B, SEO o PPC en canales digitales) que ejecute pero no decida
+      5. Mantén tú la autoridad para decidir si pivotas o no
+
+====================================================================================================
+PAR 96  (dominio core, titulo_ratio 82.1, contencion 0.5)
+====================================================================================================
+  PASO CASADO DEL BARRIDO: paso 3 de la madre
+      texto: Probar canales de ventas y distribución
+
+  MADRE (etiquetada asi por el barrido): introduccion_validacion_clientes
+      titulo : Introducción a la Validación de Clientes (Customer Validation)
+      fuente : The Startup Owner's Manual - Steve Blank
+      que_es : 
+      PASOS (pasos_accionables):
+      1. Probar la repetibilidad del proceso de ventas o adquisición de usuarios
+      2. Buscar pedidos u órdenes reales a precio completo como prueba de validación
+      3. Probar canales de ventas y distribución
+      4. Escuchar activamente a los clientes para identificar pivotes necesarios
+      5. Posicionar correctamente el producto y la empresa
+
+  HIJO  (etiquetado asi por el barrido): hipotesis_de_canales
+      titulo : Hipótesis de Canales de Distribución
+      fuente : The Startup Owner's Manual - Steve Blank
+      que_es : 
+      PASOS (pasos_accionables):
+      1. Determinar si el producto se ajusta mejor a canal físico, digital o híbrido
+      2. Evaluar el precio del producto en relación al canal (ej. ventas enterprise vs apps de bajo costo)
+      3. Calcular todos los costos del canal (descuentos, promoción, devoluciones)
+      4. Seleccionar UN canal principal para enfocar los esfuerzos iniciales
+      5. Recalcular el modelo de ingresos neto tras costos de canal
+

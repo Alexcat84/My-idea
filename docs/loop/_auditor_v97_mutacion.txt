@@ -1,0 +1,46 @@
+====================================================================================================
+PRUEBA POR MUTACION, VUELTA 97 TAREA 2
+====================================================================================================
+
+CONTROL VERDE ANTES (la tabla real, sin tocar):
+  armazon con la tabla real                                  no cae   OK
+      fallos: 'ninguno'
+
+MUTACIONES DEL ARMAZON (cada una sobre una COPIA de la tabla, nunca sobre la real):
+  1. una clase pasa a 'X'                                    CAE   OK
+      el par 41 trae la clase 'X', que no es A, B, C ni D
+  2. el puesto 41 aparece dos veces                          CAE   OK
+      el par 41 aparece dos veces en la tabla de veredictos
+  3. la direccion del par 45 nombra otros dos nodos          CAE   OK
+      la direccion del par 45 nombra ['takt_time', 'smed_setup_reduction'], que no son los dos nodos resueltos de esa fila (estrategia_de_innovacion_de_producto, strat_map_arenas_estrategicas)
+  4. se quita el veredicto del par 71                        CAE   OK
+      hay 59 veredictos y 60 filas de material: no es uno a uno
+
+MUTACIONES DE LAS DOS AFIRMACIONES DE LA SENIAL:
+  control verde: afirmacion 1 con los datos reales           no cae   OK
+      mediana tramo 1 84.3, tramo 2 78.2
+  control verde: afirmacion 2 con los datos reales           no cae   OK
+      misma fuente LEIDA 78.8%, NO RESUELTA 66.7%
+  5. normaliza_fuente mutada a constante                     CAE   OK
+      misma fuente LEIDA 100.0%, NO RESUELTA 100.0%: ya no es estrictamente menor
+  6. el titulo_ratio del tramo 2 se sube a 99,0              CAE   OK
+      mediana tramo 1 84.3, tramo 2 mutado 99.0: ya no es menor
+
+CONTROL VERDE DESPUES (la tabla real y los datos reales, otra vez):
+  armazon con la tabla real                                  no cae   OK
+      fallos: 'ninguno'
+  afirmacion 1 con los datos reales                          no cae   OK
+  afirmacion 2 con los datos reales                          no cae   OK
+
+====================================================================================================
+LO QUE NO SE PRUEBA, Y SE DECLARA EN VEZ DE FABRICARLE UN ROJO QUE SE APRUEBE SOLO
+====================================================================================================
+LA CLASE Y LA DIRECCION DE CADA UNO DE LOS 60 PARES SON UNA TABLA A MANO.
+NO TIENEN CASO ROJO AUTOMATICO: no hay dentro del repo una segunda fuente
+independiente contra la que contrastarlas, asi que no hay nada que mutar.
+Su control es la relectura ciega del auditor, no un assert.
+
+====================================================================================================
+RESULTADO: 12 de 12 comprobaciones se comportan como deben.
+Mutaciones que TENIAN que caer: 6. Controles verdes: 6.
+====================================================================================================
