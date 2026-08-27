@@ -33442,3 +33442,582 @@ entregada.
 
 **EL BUCLE SIGUE.** `docs/loop/PROMPT_SIGUIENTE.md` lleva el encargo de la
 vuelta 95 y **no se escribe `PARA_ALEXIS.md`**.
+
+# ACTA DE LA VUELTA 95 DEL AUDITOR (27 ago 2026, reloj real, Opus 5)
+# ==========================================================================
+
+**LA FECHA, declarada y no resuelta copiando** (banco `9.21`): mi reloj real da
+`Thu, Aug 27, 2026 1:33:33 PM`, corrido por mi con `date`. Los siete commits de
+la vuelta 95 van fechados `2026-08-27` entre las 13:05:12 y las 13:31:56
+(`git log --date=iso`). **Coinciden.**
+
+**HUECO DE ACTA: NO HAY, y lo mido antes de nada** (`AUDITOR.md` seccion 1.0).
+Mi comando: `grep -n '^# ACTA DE LA VUELTA' docs/loop/ACTA_AUDITOR.md | tail -4`.
+La ultima acta escrita es la de la vuelta **94** (linea 32888, commit
+`325f537c`), y la vuelta que audito es la **95**, la inmediatamente siguiente.
+`git log --format='%h %s' 325f537c..HEAD` da **siete commits** (`b0d8c4ae`,
+`4be5bee2`, `7316cd4a`, `525826d2`, `7fae538c`, `220c07a1`, `1c721c16`),
+**los siete de la vuelta 95 y solo de la 95.**
+
+Rama `pasada-unica`. Fase III, fase 04 ENLACES, modo de ejecucion continua. Todo
+lo que sigue esta medido por instrumento corrido POR MI EN ESTA VUELTA; los
+ficheros `docs/loop/_auditor_v95_*` quedan commiteados al lado, **y los seis que
+son `.py` reproducen su propia salida, cotejado con `cmp` uno por uno** (era la
+caida propia de mi acta anterior, seccion 7.1 de la vuelta 94; queda cerrada).
+
+**EL RESUMEN, ENTERO Y AL FRENTE, Y TIENE DOS CARAS.**
+
+La primera: **el trabajo es bueno y en varios sitios es el mejor de la campana.**
+La escalada de codigo que encargue existe, corre, y la verifique de punta a
+punta: el tallador nuevo reproduce sus 18 aciertos al digito contra el arbol del
+momento en que se midio, y la propiedad que su prueba de mutacion NO ejercita
+(que el reparto con/sin se mueva sobre el fichero real) la probe yo y sale
+VERDE. La fila de identidad del tallador de cabecera ya no es un literal: los
+dos casos obligatorios los corri yo y dan exactamente lo que tenian que dar. El
+sello de apertura, que era el unico incumplimiento de la vuelta 94, esta esta
+vez en el PRIMER commit y su padre es el hash sellado. Y la lectura de las 18
+del grupo C, que era el trabajo de fondo, **la reproduje con una vara mecanica
+propia e independiente y me dio las DOS listas identicas, 11 y 4, sin una sola
+discrepancia**.
+
+La segunda: **cae una cifra de reporte, y es la TERCERA SEGUIDA DE LA MISMA
+ESPECIE, asi que el bucle PARA.** `docs/loop/REPORTE.md` linea 210 dice
+"`docs/PENDIENTES.md` (cinco secciones nuevas)". Son **CUATRO**, talladas con
+`scripts/loop/tallar_composicion_salida.py`, y **ningun criterio da cinco**.
+Es la misma especie exacta de la vuelta 93 ("SEIS casos de mutacion donde el
+instrumento corre CINCO") y de la vuelta 94 ("8 aciertos" donde el fichero
+tiene 14): **una cuenta de piezas de un artefacto, dictada a ojo, que el
+artefacto no sostiene.** `AUDITOR.md` seccion 4 es literal: *"TRES seguidas si
+son PARADA: tres de la misma especie ya no son ruido, son un patron de dictado
+suelto."* Escribo `docs/loop/PARA_ALEXIS.md` y dejo `PROMPT_SIGUIENTE.md`
+VACIO.
+
+## 1. LA VERIFICACION, CIFRA POR CIFRA, CON MIS COMANDOS
+
+### 1.1 Las ocho cifras del grafo en TRES refs, con sha256 en las tres
+
+`docs/loop/_auditor_v95_grafo.py`, escrito por mi, corrido con
+`python docs/loop/_auditor_v95_grafo.py > docs/loop/_auditor_v95_grafo.txt`:
+
+```
+{"ref": "325f537c", "sha": "f0e3993967457ed2b7a00df5aa714e39d7be6e3fa5d1763b4a9d01542f3da902", "total": 3853, "deprecado": 665, "vivos": 3188, "sig": 9190, "prev": 9169, "suma": 18359, "union": 9813, "auto": 0}
+{"ref": "220c07a1", "sha": "f0e3993967457ed2b7a00df5aa714e39d7be6e3fa5d1763b4a9d01542f3da902", ...identico...}
+{"ref": "WORK",     "sha": "f0e3993967457ed2b7a00df5aa714e39d7be6e3fa5d1763b4a9d01542f3da902", ...identico...}
+BORRADAS (apertura menos trabajo): 0
+NUEVAS (trabajo menos apertura): 0
+```
+
+**Las tres refs dan el MISMO sha256.** Censo `3.853 / 3.188 / 665`, aristas
+`9.190 / 9.169 / 18.359 / 9.813`, auto-aristas 0, y el diff de la union entera
+da **cero borradas y cero nuevas**. Calza al digito con la cabecera publicada.
+**CERO ARISTAS SE MOVIERON esta vuelta, verificado y no creido.**
+
+### 1.2 La herencia de apertura por el criterio 2.2: LEGITIMA, y con la vara mas estricta
+
+El reporte cita `git diff --stat a4c89ab6 325f537c -- dataset/ web/lib/assets/
+scripts/`. Mi criterio, escrito por mi en el acta de la vuelta 94, exige los
+arboles de `dataset/`, `web/` **entero** y `scripts/`, no solo
+`web/lib/assets/`. **Lo corri con la vara estricta y tambien pasa:**
+
+```
+a4c89ab6 dataset: 2b8826f4  web: 66aa2162  scripts: 6a5af4e7
+325f537c dataset: 2b8826f4  web: 66aa2162  scripts: 6a5af4e7
+```
+
+Los tres arboles son **byte identicos** (`git rev-parse <commit>:<ruta>`), y
+`git diff --stat a4c89ab6 325f537c -- dataset/ web/ scripts/` da **cero
+lineas**. La herencia de las celdas de apertura es correcta bajo el criterio
+2.2 leido en su version mas exigente. **Y el cierre no se heredo: se recomputo,
+y lo comprobe corriendolo yo.**
+
+### 1.3 El ciclo de tres, corrido entero por mi, con Gate 0 IDENTICO BYTE A BYTE
+
+`python scripts/run_phase1.py --reaplico-curaduria` (EXIT 0),
+`python scripts/etiquetas_de_cara.py --aplicar` (EXIT 0),
+`python scripts/sync_assets_web.py` (EXIT 0). **`git status --short` detras solo
+trae mis propios ficheros `_auditor_v95_*`; `git diff --stat -- dataset/
+web/lib/assets/` da VACIO: no movi un byte del dato.**
+
+`cmp docs/loop/_auditor_v95_gate0.txt docs/loop/SALIDA_V95_GATE0_CMD1_CIERRE.txt`
+da **IDENTICO BYTE A BYTE** (4.970 bytes los dos), y lo mismo contra
+`SALIDA_V95_GATE0_CMD1_APERTURA.txt` y contra `SALIDA_V94_GATE0_CMD1_CIERRE.txt`,
+que es la consecuencia esperada de que nada se movio.
+
+### 1.4 Las tres suites, corridas por mi
+
+| suite | mi comando | mi resultado |
+|---|---|---|
+| motor | `python engine/run_all_tests.py` | **TODOS LOS TESTS PASARON (25/25)**, EXIT 0 |
+| web | `pnpm vitest run` | **80 passed (80) / 1.030 passed, 3 skipped (1.033)**, EXIT 0 |
+| tsc | `pnpm exec tsc --noEmit` | EXIT 0, **fichero de salida de 0 bytes** |
+
+Las tres calzan con la cabecera publicada.
+
+### 1.5 El marcador, REMEDIDO por mi, contra lo que el reporte cita sin remedir
+
+`python scripts/recomputar_marcador.py 3388`
+(`docs/loop/_auditor_v95_marcador.txt`): `n = 3388 corte = 3388 huecos: []
+dups(puesto): 0`, y **A 551 / B 72 / C 5 / D 2760**. **Calza al digito con lo
+que el reporte cita de la vuelta 94.** Cero huecos, cero duplicados.
+
+**Y UNA FRASE DEL REPORTE QUE MIRE DE CERCA Y NO CUENTO COMO CAIDA, con la
+razon delante.** El reporte dice que el marcador se cita "sin remedir (no hay
+instrumento de esta vuelta que lo produzca)". `scripts/recomputar_marcador.py`
+EXISTE y tarda segundos, asi que leida como "no existe instrumento" la frase
+seria falsa. Pero en el idioma de esta casa "instrumento de esta vuelta"
+significa "instrumento corrido EN ESTA vuelta" (`AUDITOR.md` seccion 1.1 usa
+esas palabras exactas), y bajo esa lectura la frase es VERDADERA: ninguna tarea
+de la vuelta 95 lo corrio. **Y la cifra es correcta, medida hoy por mi.** NO ES
+CAIDA. Lo que si dejo dicho: la formula es ambigua y conviene escribirla
+"ningun instrumento corrido en esta vuelta lo produce".
+
+### 1.6 La cabecera, tallada por mi y cotejada contra el reporte ya escrito
+
+`python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 95` produce
+una salida **IDENTICA BYTE A BYTE** a `SALIDA_V95_CABECERA_TALLADA.txt` (`cmp`).
+Y con `--comparar docs/loop/REPORTE.md` sobre el fichero final ya escrito:
+**`filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0` . CABECERA: IDENTICA AL
+TALLADOR.** Corrido por mi, EXIT 0.
+
+### 1.7 El sello de apertura: ESTA VEZ SI, y es el remedio del unico incumplimiento de la vuelta 94
+
+```
+git log --diff-filter=A -- docs/loop/SALIDA_V95_HEAD_APERTURA.txt
+  -> b0d8c4ae (PRIMER commit de la vuelta 95, 13:05:12)
+git rev-parse b0d8c4ae^   -> 325f537c5fe7676882eb7e0c50df54e8c5751430
+cat docs/loop/SALIDA_V95_HEAD_APERTURA.txt -> 325f537c5fe7676882eb7e0c50df54e8c5751430
+```
+
+**El sello se escribio en el PRIMER commit y su padre ES el hash sellado.**
+Encargo cumplido al pie.
+
+### 1.8 El desfase del calibrado
+
+`SALIDA_V95_DESFASE_CALIBRADO_CIERRE.txt`: 468 filas en el calibrado, **1 fila
+de desfase** (`ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`,
+guardada=False, real hoy=True), identica en apertura y cierre e identica a la
+de la vuelta 94. Sin cambio, como corresponde a una vuelta que no toco el grafo.
+
+### 1.9 Higiene del expediente
+
+- `git diff --numstat 325f537c..HEAD -- docs/PENDIENTES.md` da **194 insertions,
+  0 deletions**, un solo hunk al final: **ADITIVO**, no pisa una palabra vieja.
+- JSONL validos linea a linea, corridos por mi: `OP_E_07_DIRECCION_V94.jsonl`
+  (84), `DIFERENCIA_CONTRA_COLA.jsonl` (183),
+  `DIFERENCIA_CONTRA_COLA_ENSAYO_AGOSTO.jsonl` (387), `OPERACIONES.jsonl` (71).
+- **Guiones largos y medios en el diff entero: UNO, y NO es caida.** Vive en
+  `titulo_hijo` del ensayo de agosto recuperado (`"SMED . Reduccion de Tiempos
+  de Cambio (Setup)"`, con guion medio en el original) y **es el titulo que ya
+  vive en el grafo**, verificado contra `master_graph.json`. Recuperar un
+  archivo verbatim es justamente lo que se pidio. En la prosa nueva
+  (`git diff -- '*.md' '*.py' | grep -c`): **CERO**.
+
+## 2. LA TAREA 2, QUE ERA LA BLOQUEANTE: VERIFICADA, Y CON UNA PIEZA QUE FALTA
+
+### 2.1 El tallador nuevo reproduce sus 18 aciertos AL DIGITO, contra el arbol correcto
+
+El reporte publica **18 aciertos, 1 en `03_FUSIONES.md` mas 14 en
+`04_ENLACES.md` mas 3 en `OPERACIONES.jsonl`, 9 con salvedad y 9 sin**. Corrido
+hoy sobre el arbol de trabajo me da **19**, no 18. **No es discrepancia: es que
+la TAREA 4.a anadio un "cifra vigente" mas a la fila 11 DESPUES de medirlo.** Lo
+probe extrayendo el arbol del commit de la TAREA 2 y corriendo el instrumento
+contra el:
+
+```
+git archive b0d8c4ae docs/plan docs/BANCO_DE_TEXTOS.md | tar -x -C <copia>
+python scripts/loop/tallar_barrido_cifras.py \
+  --raices "<copia>/docs/plan,<copia>/docs/BANCO_DE_TEXTOS.md" \
+  --patrones "85 ESCRITA,87 con direccion,cifra vigente"
+  -> aciertos totales: 18 | 03_FUSIONES.md 1 | 04_ENLACES.md 14 | OPERACIONES.jsonl 3
+  -> CON salvedad 9 | SIN salvedad 9
+  -> enumeraciones de linea IDENTICAS a las del ejecutor
+```
+
+**Calza al digito, enumeracion incluida** (`_auditor_v95_barrido_b0d8c4ae.txt`).
+La CORRECCION DECLARADA del "8 aciertos" es correcta y esta bien hecha.
+
+**Y la mecanica de ROJO la probe sin querer y funciono:** mi primer intento paso
+una raiz que no existia y el instrumento dio `EXIT 1` con
+`"ROJO, 1 cosa(s) no se pudieron leer y NO SE TALLA NADA"`, sin imprimir tabla.
+Es lo que el encargo pedia.
+
+### 2.2 LA MUTACION NO ES LA QUE ENCARGUE, y la hice yo: INCUMPLIMIENTO DE ENCARGO
+
+El encargo decia, con estas palabras: *"CASO ROJO PROBADO POR MUTACION sobre una
+copia EN MEMORIA del fichero real: quitas una salvedad y el reparto 'con/sin'
+TIENE que moverse"*. Lo que se entrego
+(`vuelta95_tarea2a_prueba_mutacion_barrido.py`) muta **una cadena de contexto
+tecleada** y comprueba `tiene_salvedad()` sola: nunca ejercita la ventana ni el
+reparto. Si la ventana estuviera rota, esa prueba seguiria verde.
+
+**No lo cuento como caida de reporte porque el reporte lo describe con
+exactitud** ("Probado por mutacion sobre `tiene_salvedad()` (la unica pieza de
+juicio)"): dice lo que hizo. **Es INCUMPLIMIENTO DE ENCARGO**, que no acumula
+para ninguna parada.
+
+**Y la propiedad que faltaba probar la probe yo**
+(`docs/loop/_auditor_v95_mutacion_extremo.py`), sobre el fichero real
+`04_ENLACES.md`:
+
+```
+fichero real                              -> con salvedad 10 / sin salvedad 5
+copia EN MEMORIA sin 'hasta la vuelta 92' -> con salvedad  8 / sin salvedad 7
+  VERDE: el reparto SE MOVIO (-2 con / +2 sin)
+```
+
+**VERDE: el instrumento SI mide lo que dice.** (Las otras dos frases que probe
+no mueven el reparto porque comparten ventana con otra salvedad; eso es
+redundancia del fichero, no defecto del tallador, y lo digo para no
+disfrazarlo.)
+
+### 2.3 La fila de identidad reparada: los dos casos obligatorios, corridos por mi
+
+```
+--vuelta 93 -> "HEAD real de apertura 85a250be (sellado antes de la 1.a operacion, ...)"
+--vuelta 94 -> "HEAD real de apertura 267365c8 (sello RECONSTRUIDO DESPUES (commit a4c89ab6), ...)"
+```
+
+**Exactamente lo que el encargo exigia, y lo lei ademas en el codigo:**
+`procedencia_sello_apertura()` busca el commit que anade el fichero con
+`git log --diff-filter=A`, compara su padre contra el sello, y da ROJO si no hay
+commit o si hay mas de uno. **Ya no hay boilerplate: la celda la decide git.**
+
+## 3. LA TAREA 3, EL TRABAJO DE FONDO: REPRODUCIDA CON VARA PROPIA, 11 Y 4 SIN UNA DISCREPANCIA
+
+### 3.1 El cribado 57/9/18, reproducido por una TERCERA implementacion
+
+El reporte declara que su primer intento dio 56/8/20 y que con dos ajustes
+linguisticos declarados llego a 57/9/18. **Eso podia ser afinar hasta copiar mi
+cifra, asi que no lo di por bueno: escribi mi propia implementacion**
+(`docs/loop/_auditor_v95_cribado.py`) desde la prosa del acta, sin mirar la suya
+para afinarla. Resultado:
+
+```
+VARA 'acta': A 57 / B 9 / C 18
+  B: [872, 1023, 1111, 1388, 1500, 1536, 1634, 1778, 2018]
+  C: [886, 890, 896, 909, 910, 940, 947, 983, 993, 1020, 1057, 1083, 1086, 1191, 1196, 1220, 1844, 1886]
+```
+
+**Identico, enumeraciones incluidas.** Los dos ajustes del ejecutor son
+generalizaciones linguisticas (un numero escrito, un prefijo de conjugacion), no
+llevan ningun puesto dentro, y son las que cualquiera escribiria leyendo la
+prosa del acta. **No hay afinado a la cifra: la cifra es robusta.**
+
+### 3.2 Y MEDI la estabilidad, que es lo que nadie habia hecho
+
+`_auditor_v95_cribado.txt`, tres varas sobre la misma bolsa:
+
+| vara | A | B | C |
+|---|---:|---:|---:|
+| la del acta | 57 | 9 | **18** |
+| la mas ancha que se me ocurre | 68 | 8 | **8** |
+| la mas estrecha (solo "paso N") | 33 | 1 | **50** |
+
+**El grupo C es una criatura de sus patrones: entre 8 y 50 segun la vara.** Lo
+unico invariante, y es lo que importa: **el 1083, el ejemplar CONFIRMADO de la
+casa, esta en C bajo LAS TRES varas.** O sea que ninguna vara de este tipo
+separa confirmados de caidos, y la advertencia del encargo ("el grupo C no es
+una lista de condenados") queda medida, no solo afirmada.
+
+### 3.3 MI RELECTURA CIEGA: DIECISEIS UNIDADES, y las DIECISEIS coinciden
+
+**El metodo, como manda `AUDITOR.md` seccion 1.2:** volque PRIMERO los
+`pasos_accionables` de los dos nodos de los 16 pares SIN razon y SIN direccion
+(`docs/loop/_auditor_v95_ciega_pasos.py` a `.txt`, 290 lineas), adjudique, y
+**solo despues** destape (`docs/loop/_auditor_v95_destape.py` a `.txt`).
+**Empece por los discutibles marcados**, como manda la seccion 1.2: los cuatro
+de RELECTURA CONJUNTA primero, y despues los once que QUEDAN mas el 1083.
+
+| puesto | mi adjudicacion a ciegas | la razon, destapada | veredicto |
+|---:|---|---|---|
+| 886 | dos encuadres paralelos del mismo arco, **no vi madre** | *"trae un procedimiento que ESAS FASES no tienen"* | **COINCIDO en la duda** |
+| 890 | madre `customer_validation`, pero sin ancla en UN paso | *"para fijar ESOS UMBRALES, que LA ETAPA DA POR SUPUESTOS"* | **COINCIDO en la duda** |
+| 947 | madre `customer_discovery`, ancla difusa | *"el CHECKLIST ... que decide SI ESO alcanzo"* | **COINCIDO en la duda** |
+| 1844 | madre `productos_crudos`, **ancla en su paso 2** | *"NOMBRA EL PROBLEMA ... TRAE EL PROCEDIMIENTO"* | **COINCIDO, y ver 4.1** |
+| 896 | madre `customer_validation`, su paso 3 es el umbral | *"que es UNA LINEA de umbral"* | **COINCIDO** |
+| 909 | madre `estrategia_de_ventas`, su paso 2 nombra el mapa | *"Sus dos referencias al mapa SON LINEAS"* | **COINCIDO** |
+| 910 | madre `evaluacion_industria_cliente`, su paso 1 | *"Su PRIMER PASO es UNA LINEA"* | **COINCIDO** |
+| 940 | madre `invitar_ia_a_todo`, su paso 3 | *"Ese TERCER PASO es UNA LINEA"* | **COINCIDO** |
+| 983 | madre `customer_discovery_overview`, su fase 4 | *"EN LA CUARTA ... UNA LINEA"* | **COINCIDO** |
+| 993 | madre `alineacion_etica_ia_negocio`, su paso 3 | *"Ese TERCER PASO es una linea"* | **COINCIDO** |
+| 1020 | madre `fases_de_retencion_de_clientes`, el indice contra una fase | *"desarrolla UNA de las OCHO"* | **COINCIDO** |
+| 1057 | madre `celebracion_hitos_cliente`, su paso 2 nombra el regalo | *"Ese SEGUNDO PASO es una linea"* | **COINCIDO** |
+| 1086 | madre `filosofia_customer_validation`, su paso 5 son las tres preguntas | *"cierra con TRES PREGUNTAS en una sola linea"* | **COINCIDO** |
+| 1196 | madre `colaboracion_creador_consumidor`, su paso 3 | *"Ese TERCER PASO es UNA LINEA"* | **COINCIDO** |
+| 1220 | madre `ingenieria_de_prompts_efectiva`, generico contra especializado | *"es la MADRE"* | **COINCIDO** |
+| 1083 | madre `customer_discovery_cuatro_fases`, su fase 1 | *"su fase 1 manda desarmar ... que la madre no tiene"* | **COINCIDO** |
+
+**Dieciseis de dieciseis.** La direccion escrita coincide con mi lectura ciega en
+las dieciseis, y en las cuatro dudosas mi duda es la misma duda.
+
+### 3.4 Y la vara MECANICA, que es la prueba dura: las dos listas salen identicas
+
+No me basto con coincidir leyendo. Construi una vara mecanica independiente
+(`docs/loop/_auditor_v95_hueco_patron.py`): **la razon menciona la palabra
+"linea" en cualquier forma, O trae un designador explicito ("UNA de las OCHO",
+"es la MADRE")**. Sobre las 15 leidas esta vuelta:
+
+```
+MI vara -> QUEDAN:            [896, 909, 910, 940, 983, 993, 1020, 1057, 1086, 1196, 1220]
+el ejecutor -> QUEDAN:        [896, 909, 910, 940, 983, 993, 1020, 1057, 1086, 1196, 1220]
+MI vara -> SIN ancla:         [886, 890, 947, 1844]
+el ejecutor -> RELECTURA:     [886, 890, 947, 1844]
+COINCIDEN LAS DOS LISTAS: True
+```
+
+**El 11 y el 4 no son una opinion del ejecutor: los reproduce una vara mecanica
+que no vio su codigo.** Esto es lo mejor de la vuelta y lo digo primero.
+
+## 4. LO QUE ADJUDICO
+
+### 4.1 EL 1844 SALE DE RELECTURA CONJUNTA Y QUEDA. Adjudicado, y la regla es la que el propio ejecutor uso
+
+El ejecutor pre resolvio tres sin releer y para el **1886** cito *"el acta de la
+vuelta 93, `ACTA_AUDITOR.md` linea 32695"*. **Fui a esa linea. Y en la MISMA
+tabla, DOS FILAS MAS ARRIBA, esta el 1844:**
+
+```
+| 1844 | encaje plausible en el paso 2 | "NOMBRA EL PROBLEMA ... TRAE EL PROCEDIMIENTO" | COINCIDO |
+| 1886 | encaje limpio dentro del paso 1 | "una de tres columnas ... dentro de esa columna" | COINCIDO |
+```
+
+El auditor de la vuelta 93 **ya lo leyo a ciegas y ya lo adjudico COINCIDO, con
+ancla en el paso 2**. Y mi propia lectura ciega de hoy, hecha sin saberlo,
+**cayo en el mismo paso 2**. El ejecutor leyo la fila del 1886 y no leyo la del
+1844 en la misma tabla, y lo mando a la mesa "por prudencia".
+
+**ADJUDICO, por extension natural y sin doctrina nueva** (misma regla, mismo
+fichero, misma tabla, mismo trato que el 1886): **el 1844 QUEDA.** La relectura
+conjunta baja a **TRES: 886, 890 y 947.** No es una caida del ejecutor: la
+prudencia no lo es. **Es una omision MIA, del encargo de la vuelta 94, y va en
+la seccion 6.**
+
+### 4.2 LOS TRES QUE SIGUEN EN RELECTURA CONJUNTA: CONFIRMO, y traigo la evidencia que faltaba
+
+Confirmo los tres, **y con un dato que el reporte no trae y que los refuerza**.
+Fui a las razones de los cuatro caidos de esta operacion
+(`_auditor_v95_destape.txt`):
+
+- El **1009**, que **YA SALIO**, dice: *"fit_problema_solucion trae un
+  procedimiento que ESA FASE no tiene"*.
+- El **886**, que sigue vivo, dice: *"fit_problema_solucion trae un
+  procedimiento que ESAS FASES no tienen"*.
+
+**Es el MISMO nodo hijo, la MISMA formula, y una madre casi gemela**
+(`customer_discovery_phase2_problem_test` contra `customer_discovery_overview`).
+**El 886 es el hermano vivo del 1009 caido**, y eso lo pone en la mesa por
+derecho propio, no por prudencia.
+
+**Y la razon por la que la mesa no puede evitarse:** la formula *"trae un
+procedimiento que X no tiene"* produjo **el 1083 (CONFIRMADO)** y **el 1009
+(CAIDO)**. La misma formula, los dos resultados. **Ninguna vara escrita hoy
+discrimina entre ellos**, y por eso los tres son duda genuina y no pereza.
+
+### 4.3 Discutible 1 (la unidad de medida del barrido nuevo): CONFIRMADO Y ADJUDICADO SUFICIENTE
+
+Contar por OCURRENCIA del patron y no por linea de grep, e incluir
+`OPERACIONES.jsonl`, esta **declarado en el docstring del instrumento**, es
+**mas fiel** que contar lineas (dos aciertos en una linea son dos aciertos), y
+`OPERACIONES.jsonl` **ya lo barria** el `grep -rn docs/plan/` original.
+`EJECUTOR.md` regla 1 pide que la cifra se reconstruya de su fichero, y se
+reconstruye: lo hice yo al digito. **Adjudicado: la unidad nueva es la buena, y
+queda escrita en el instrumento para que no vuelva a ser discutible.**
+
+### 4.4 Discutible 3 (el SyntaxWarning no reproducido): EL EJECUTOR TIENE RAZON Y YO ESTABA EQUIVOCADO
+
+Lo verifique por mi cuenta: el fichero abre con `r"""` **desde su unico commit
+en toda su historia** (`git log -- scripts/loop/vuelta94_tarea4_reparar_marca_hijo.py`
+da un solo commit, `d1d88d1a`, y ese commit ya trae la cadena cruda), y
+`compile()` bajo `warnings.simplefilter('always')` no emite **ningun**
+SyntaxWarning. **La advertencia que mi encargo mando arreglar NUNCA EXISTIO.**
+Va a la seccion 6 con mi nombre.
+
+### 4.5 Discutible 4 (la herencia de apertura por el criterio 2.2): CONFIRMADO, y el criterio aguanta
+
+Es la primera vuelta que completa el ciclo entero del criterio que escribi, y
+**no le encuentro el hueco**: el diff se corrio, se cito, lo re corri yo con la
+vara mas estricta (`web/` entero, no solo `web/lib/assets/`), y el cierre se
+recomputo de verdad en vez de heredarse. **El criterio se sostiene. Deja de ser
+discutible.**
+
+### 4.6 Discutible 2 (la aplicacion del criterio a 15 razones nuevas): CONFIRMADO Y RESUELTO POR MEDICION
+
+El ejecutor duda de si su criterio es lo bastante firme, y dice que con uno mas
+estricto habrian salido once en vez de cuatro. **La duda queda resuelta por la
+seccion 3.4: una vara mecanica que no vio su codigo reproduce sus dos listas
+exactas.** Y por la 3.2: el criterio estricto que temia (exigir la palabra
+literal "madre") **habria sacado al 1083, que es el CONFIRMADO de la casa**.
+**Apartarse de ese criterio fue correcto, y ahora esta medido.**
+
+## 5. LA CAIDA DE ESTA VUELTA, CON SU NOMBRE, SU MEDICION Y SU CONSECUENCIA
+
+### CAIDA DE REPORTE: "cinco secciones nuevas" en `PENDIENTES.md`, donde hay CUATRO
+
+`docs/loop/REPORTE.md` linea 210, en RUTAS TOCADAS:
+
+> `docs/PENDIENTES.md` (cinco secciones nuevas)
+
+**No lo conte a ojo.** Saque el diff de la vuelta entera a un fichero
+(`docs/loop/_auditor_v95_pendientes_diff.txt`, `git diff 325f537c..HEAD --
+docs/PENDIENTES.md`) y lo talle con el instrumento que esta casa tiene para
+esto, `scripts/loop/tallar_composicion_salida.py`
+(`docs/loop/_auditor_v95_pendientes_tallado.txt`):
+
+```
+filas totales casadas por --patron: 8
+| seccion de nivel 2 (##)      | 4 |
+| subseccion de nivel 3 (###)  | 4 |
+ENUMERACION de nivel 2 (4): VUELTA 95 TAREA 4, VUELTA 95 TAREA 5,
+                            VUELTA 95 TAREA 1, VUELTA 95 TAREA 3
+```
+
+**CUATRO secciones.** Y busque cinco por todos los criterios que se me
+ocurrieron, y lo dejo escrito para que se me pueda contradecir:
+
+| criterio | da |
+|---|---:|
+| cabeceras `##` | **4** |
+| cabeceras `###` | **4** |
+| cabeceras `##` y `###` | 8 |
+| cabeceras de cualquier nivel | 8 |
+| lineas que abren en negrita | 17 |
+| lineas que mencionan "VUELTA 95" | 4 |
+| hunks del diff | 1 |
+
+**Ninguno da cinco.** La TAREA 2 no tiene seccion propia: su registro vive
+DENTRO de la 1(a) como CORRECCION DECLARADA, que esta bien hecho, pero entonces
+las secciones son cuatro y no cinco.
+
+**Lo que NO es, y lo digo para no agrandarla:** los registros estan todos, son
+aditivos (194 insertions, 0 deletions), y el contenido de cada uno lo verifique
+y es correcto. **La cifra "cinco" vive SOLO en `REPORTE.md`**
+(`grep -rn "cinco secciones" docs/ scripts/` la encuentra en otros cuatro
+sitios, todos ajenos: un HTML de canon, el informe, una razon del cribado y una
+linea vieja de mi propia acta; **en `docs/plan/` y en el banco, CERO**).
+**No mueve un solo dato: es de REPORTE.**
+
+**Pero es la que para el bucle, y digo exactamente por que.** `AUDITOR.md`
+seccion 4: *"TRES seguidas si son PARADA: tres de la misma especie ya no son
+ruido, son un patron de dictado suelto."* Las tres, medidas:
+
+| vuelta | la frase | lo que el artefacto dice | especie |
+|---:|---|---|---|
+| 93 | "**SEIS** casos de mutacion" | el instrumento corre **CINCO** | cuenta de piezas de un artefacto, a ojo |
+| 94 | "**8** aciertos, todos en `04_ENLACES.md`" | el fichero trae **14**, 11 y 3 | cuenta de piezas de un artefacto, a ojo |
+| 95 | "**cinco** secciones nuevas" | el fichero trae **CUATRO** | cuenta de piezas de un artefacto, a ojo |
+
+**Tres seguidas y la misma especie exacta.** Y lo que la agrava es lo mismo que
+agravaba la anterior, solo que peor: **la escalada de codigo contra esta especie
+se construyo EN ESTA MISMA VUELTA**, el instrumento que la talla existe desde la
+vuelta 91, y mi encargo lo dijo en mayusculas: *"TODA CIFRA QUE DESCRIBA LA
+COMPOSICION DE UN FICHERO DE SALIDA SE TALLA Y SE PEGA CON SU COMANDO; ninguna
+se cuenta a ojo, NI SIQUIERA LAS FACILES."* La cifra que cayo es de las faciles.
+
+**Y cae FUERA de los cuatro discutibles marcados**, otra vez: ninguno de los
+cuatro apunta a la lista de rutas tocadas.
+
+## 6. MIS PROPIOS ERRORES, CON NOMBRE, Y SON TRES
+
+`AUDITOR.md` seccion 2: mis errores se declaran como los del ejecutor. Estos
+tres son del encargo y del acta de la vuelta 94, y los mido hoy.
+
+1. **CAIDA DE ACTA: la etiqueta del grupo C es FALSA para nueve de sus
+   dieciocho.** Mi acta de la vuelta 94 publico el grupo C como *"ni cita de
+   linea ni forma de indice"*. Lo remedi hoy
+   (`docs/loop/_auditor_v95_hueco_patron.txt`) y **NUEVE de las 18 mencionan la
+   palabra "linea", y OCHO lo hacen con la formula literal "es/son UNA
+   LINEA"**: 896, 909, 910, 940, 993, 1057, 1086, 1196 (mas el 983, que la trae
+   tras dos puntos). **Mi patron del grupo A casa "EN una linea" y no casa "ES
+   una linea", que es como el redactor escribe la mayoria de sus anclas.** El
+   grupo C no era la poblacion que dije que era: era la poblacion que mi regex
+   dejo fuera. La conclusion que saque de el sigue en pie (el 1083 esta dentro,
+   y la vara no separa confirmados de caidos), **pero la etiqueta era
+   incorrecta y queda corregida aqui sin borrar la vieja.**
+2. **AFIRME UNA BUSQUEDA QUE NO CORRI.** Mi encargo mando arreglar *"el
+   SyntaxWarning de `scripts/loop/vuelta94_tarea4_reparar_marca_hijo.py`
+   (secuencia de escape en la docstring)"*. **Ese warning no existe y nunca
+   existio**: el fichero abre con `r"""` desde su unico commit. `AUDITOR.md`
+   seccion 2 lo prohibe con esas palabras: *"Prohibido afirmar una busqueda no
+   corrida."* El ejecutor gasto tres vias en desmentirme y tuvo razon.
+3. **OMISION QUE MANDO UN PAR A LA MESA SIN NECESIDAD.** Le di al ejecutor la
+   linea 32695 del acta para el 1886 y no vi que **la misma tabla, dos filas mas
+   arriba, ya resolvia el 1844**. Por eso el 1844 fue a relectura conjunta.
+   Adjudicado en la seccion 4.1.
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda:** **16 relecturas de unidad a ciegas** (los cuatro discutibles
+marcados primero, luego los once que quedan y el 1083, con los pasos volcados
+antes de la razon), mas **las varas propias**: las ocho cifras del grafo en tres
+refs con sha256 en las tres y el diff de la union entera; los tres arboles por
+`rev-parse` con la vara estricta; el ciclo de tres con Gate 0 identico byte a
+byte y `dataset/` sin mover; las tres suites; el marcador remedido; el
+`--comparar` de la cabecera sobre el fichero final; el desfase; el sello y su
+padre; **el tallador de barrido re corrido contra el arbol extraido del commit
+de su medicion, con enumeracion de lineas**; **su mecanica de ROJO disparada**;
+**la mutacion extremo a extremo que su prueba no hace**; **los dos casos
+obligatorios de la fila de identidad corridos por mi**; **una TERCERA
+implementacion del cribado, mas la medicion de estabilidad con tres varas**;
+**la vara mecanica que reproduce el 11 y el 4**; el cruce del 886 contra el 1009
+caido; la aditividad de `PENDIENTES.md`; los cuatro JSONL validados linea a
+linea; el guion unico rastreado hasta el grafo; **el tallado del diff de
+`PENDIENTES.md` con `tallar_composicion_salida.py`**; y **el `cmp` de mis seis
+instrumentos contra sus propias salidas**.
+
+**Caidas del ejecutor en esta tanda:**
+
+| especie | cuantas | cual |
+|---|---:|---|
+| **de clase (mueve dato)** | **CERO** | mis 16 lecturas ciegas coinciden con lo escrito, y una vara mecanica independiente reproduce sus dos listas |
+| **de cifra publicada** | **CERO** | marcador remedido y calza; ninguna cifra de `docs/plan/` ni del banco quedo sin su corte |
+| **de reporte** | **UNA** | **"cinco secciones nuevas"** de `PENDIENTES.md`, donde el tallado da CUATRO y ningun criterio da cinco (seccion 5) |
+| **de expediente** | **CERO** | `PENDIENTES.md` aditivo (194 insertions, 0 deletions), JSONL validos, V91 a V94 intactos, ensayo de agosto recuperado byte identico |
+| **incumplimiento de encargo** | **UNO** | la prueba de mutacion es sobre la funcion suelta, no sobre una copia del fichero real con el reparto moviendose (seccion 2.2). Declarado con exactitud por el ejecutor |
+
+**Caidas del auditor en esta tanda: DOS de acta y UNA de omision** (seccion 6),
+todas del encargo y el acta de la vuelta 94, medidas hoy por mi.
+
+**Acumulado:** **741 relecturas** (725 mas 16), **886 puestos** (sin cambio),
+**11 caidas de clase** (sin cambio), **53 de reporte del ejecutor** (52 mas 1),
+**15 de cifra publicada del ejecutor** (sin cambio), **1 de expediente del
+ejecutor** (sin cambio), **3 de incumplimiento de encargo del ejecutor** (2 mas
+1), 3 de cifra del auditor, **15 de acta del auditor** (13 mas 2), **20 de
+procedimiento del auditor** (19 mas 1, la omision del 1844), 1 de reporte del
+auditor, y 1 vuelta no entregada.
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA: SIGUE EN CERO.** Dos vueltas seguidas sin una sola.
+> **El dato esta sano y hay que decirlo tan fuerte como lo otro.**
+>
+> **REPORTE: TRES DE TRES. SE ROMPE EL CREDITO Y EL BUCLE PARA.** Venia en DOS
+> desde el acta de la vuelta 94, el ejecutor escribio en su reporte que "vuelve
+> a CERO", y mi medicion dice que trae una tercera de la misma especie
+> (seccion 5). **La declaro en vez de igualarla, que es lo que la regla manda.**
+>
+> **Y NO ME ESCONDO DETRAS DE LA REGLA:** esta caida es la mas leve de las tres
+> por sus consecuencias (un parentesis en una lista de rutas, cero datos
+> movidos, y el resto de la vuelta es el mejor trabajo de instrumento de la
+> campana). **Lo digo entero para que Alexis pueda decidir que la regla es
+> demasiado apretada.** Pero la regla esta escrita, las dos partes la tenian
+> delante en mayusculas, la especie es identica tres veces seguidas, y el
+> remedio de codigo se construyo en esta misma vuelta y no se uso para la cifra
+> mas facil del reporte. **Si la dejo pasar, el freno deja de existir y el
+> siguiente auditor hereda una regla muerta.** Paro.
+
+## 8. LA PARADA, CONDICION POR CONDICION
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** Todo se adjudica citando regla escrita |
+| contradiccion con regla vigente o cifra publicada | **NO** |
+| decision de fundador reservada | **NO.** No se funde ninguna rama |
+| fallo tecnico repetido | **NO.** Gate 0 y las tres suites en verde por corrida propia |
+| credito de tanda roto (clase o cifra) | **NO.** Esa racha esta en CERO |
+| **credito de tanda roto (reporte, TRES seguidas de la misma especie)** | **SI. ESTA ES LA PARADA** (secciones 5 y 7) |
+| campana consumada | **NO.** Fase 04 abierta |
+| credenciales ausentes | **NO** |
+| cierre de la fase 05 | **NO APLICA.** Seguimos en la fase 04 |
+
+**EL BUCLE PARA.** Escribo `docs/loop/PARA_ALEXIS.md` y dejo
+`docs/loop/PROMPT_SIGUIENTE.md` VACIO.

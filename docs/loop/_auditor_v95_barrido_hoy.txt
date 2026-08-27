@@ -1,0 +1,28 @@
+==========================================================================================
+TALLA DE BARRIDO DE CIFRAS. Cada cifra sale de correr --patrones sobre --raices EN ESTA
+CORRIDA; ninguna sale de leer un fichero de salida de un barrido ajeno.
+==========================================================================================
+
+raices: docs/plan, docs/BANCO_DE_TEXTOS.md
+patrones combinados: (?:85 ESCRITA)|(?:87 con direccion)|(?:cifra vigente)
+patron de salvedad: hasta la vuelta \d+|desde la vuelta \d+|CORRECCION DECLARADA|cifra vigente hasta (ventana 200 caracteres a cada lado)
+
+aciertos totales: 19
+
+| fichero | aciertos |
+|---|---:|
+| docs/plan/03_FUSIONES.md | 1 |
+| docs/plan/04_ENLACES.md | 15 |
+| docs/plan/OPERACIONES.jsonl | 3 |
+
+ENUMERACION de docs/plan/03_FUSIONES.md (1): lineas 748
+ENUMERACION de docs/plan/04_ENLACES.md (15): lineas 754, 989, 1067, 1069, 1069, 1071, 1071, 1077, 1079, 1080, 1081, 1090, 1090, 1098, 1113
+ENUMERACION de docs/plan/OPERACIONES.jsonl (3): lineas 25, 69, 69
+
+CON salvedad: 10
+ENUMERACION CON salvedad: docs/plan/04_ENLACES.md:1069, docs/plan/04_ENLACES.md:1069, docs/plan/04_ENLACES.md:1071, docs/plan/04_ENLACES.md:1071, docs/plan/04_ENLACES.md:1079, docs/plan/04_ENLACES.md:1080, docs/plan/04_ENLACES.md:1081, docs/plan/04_ENLACES.md:1090, docs/plan/04_ENLACES.md:1090, docs/plan/04_ENLACES.md:1098
+
+SIN salvedad: 9
+ENUMERACION SIN salvedad: docs/plan/03_FUSIONES.md:748, docs/plan/04_ENLACES.md:754, docs/plan/04_ENLACES.md:989, docs/plan/04_ENLACES.md:1067, docs/plan/04_ENLACES.md:1077, docs/plan/04_ENLACES.md:1113, docs/plan/OPERACIONES.jsonl:25, docs/plan/OPERACIONES.jsonl:69, docs/plan/OPERACIONES.jsonl:69
+
+FIN

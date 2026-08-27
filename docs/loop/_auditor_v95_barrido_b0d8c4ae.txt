@@ -1,0 +1,28 @@
+==========================================================================================
+TALLA DE BARRIDO DE CIFRAS. Cada cifra sale de correr --patrones sobre --raices EN ESTA
+CORRIDA; ninguna sale de leer un fichero de salida de un barrido ajeno.
+==========================================================================================
+
+raices: _tmp_v95b/docs/plan, _tmp_v95b/docs/BANCO_DE_TEXTOS.md
+patrones combinados: (?:85 ESCRITA)|(?:87 con direccion)|(?:cifra vigente)
+patron de salvedad: hasta la vuelta \d+|desde la vuelta \d+|CORRECCION DECLARADA|cifra vigente hasta (ventana 200 caracteres a cada lado)
+
+aciertos totales: 18
+
+| fichero | aciertos |
+|---|---:|
+| _tmp_v95b/docs/plan/03_FUSIONES.md | 1 |
+| _tmp_v95b/docs/plan/04_ENLACES.md | 14 |
+| _tmp_v95b/docs/plan/OPERACIONES.jsonl | 3 |
+
+ENUMERACION de _tmp_v95b/docs/plan/03_FUSIONES.md (1): lineas 748
+ENUMERACION de _tmp_v95b/docs/plan/04_ENLACES.md (14): lineas 754, 989, 1067, 1069, 1069, 1071, 1077, 1079, 1080, 1081, 1090, 1090, 1098, 1113
+ENUMERACION de _tmp_v95b/docs/plan/OPERACIONES.jsonl (3): lineas 25, 69, 69
+
+CON salvedad: 9
+ENUMERACION CON salvedad: _tmp_v95b/docs/plan/04_ENLACES.md:1069, _tmp_v95b/docs/plan/04_ENLACES.md:1069, _tmp_v95b/docs/plan/04_ENLACES.md:1071, _tmp_v95b/docs/plan/04_ENLACES.md:1079, _tmp_v95b/docs/plan/04_ENLACES.md:1080, _tmp_v95b/docs/plan/04_ENLACES.md:1081, _tmp_v95b/docs/plan/04_ENLACES.md:1090, _tmp_v95b/docs/plan/04_ENLACES.md:1090, _tmp_v95b/docs/plan/04_ENLACES.md:1098
+
+SIN salvedad: 9
+ENUMERACION SIN salvedad: _tmp_v95b/docs/plan/03_FUSIONES.md:748, _tmp_v95b/docs/plan/04_ENLACES.md:754, _tmp_v95b/docs/plan/04_ENLACES.md:989, _tmp_v95b/docs/plan/04_ENLACES.md:1067, _tmp_v95b/docs/plan/04_ENLACES.md:1077, _tmp_v95b/docs/plan/04_ENLACES.md:1113, _tmp_v95b/docs/plan/OPERACIONES.jsonl:25, _tmp_v95b/docs/plan/OPERACIONES.jsonl:69, _tmp_v95b/docs/plan/OPERACIONES.jsonl:69
+
+FIN
