@@ -1,0 +1,25 @@
+--- NODOS CANDIDATOS HERMANOS del paso 2 (Poisson / hipergeometrica) ---
+  analisis_distribucion_poisson_para_capacidad | depre=False | Uso de la Distribución de Poisson para Planificar Capacidad ante Eventos Aleatorios
+     previos: ['analisis_variacion_desempeno_servicio']
+  distribucion_poisson | depre=False | Distribución de Poisson para Defectos Raros
+     previos: ['distribucion_normal_probabilidad']
+
+curva_caracteristica_operativa.nodos_siguientes: ['niveles_calidad_muestreo_aql_lql_aoql', 'distribucion_binomial']
+
+--- ESOS PARES, EN LA BOLSA CALIBRADA (PASO_NODO_CALIBRADO.jsonl) ---
+  curva_caracteristica_operativa -> distribucion_binomial | paso 2 | arista=False
+
+--- ESOS PARES, EN EL CRIBADO (veredictos) ---
+  puesto 2533 clase D | distribucion_binomial <-> distribucion_poisson
+
+--- DISCUTIBLE 1: el par madre->spreadsheet, en bolsa y cribado ---
+  BOLSA: necesidades_reales_vs_declaradas -> descubrir_necesidades_del_cliente | paso 2 | arista=False
+  BOLSA: descubrir_necesidades_del_cliente -> necesidades_reales_vs_declaradas | paso 3 | arista=False
+  BOLSA: control_calidad_operaciones_servicio -> descubrir_necesidades_del_cliente | paso 1 | arista=False
+  BOLSA: descubrir_necesidades_del_cliente -> traduccion_necesidades_cliente | paso 2 | arista=False
+  BOLSA: brecha_de_calidad_cuatro_gaps -> descubrir_necesidades_del_cliente | paso 1 | arista=True
+  BOLSA: descubrir_necesidades_del_cliente -> necesidades_psicologicas_cliente | paso 3 | arista=False
+  BOLSA: definicion_calidad_fitness_for_purpose -> descubrir_necesidades_del_cliente | paso 2 | arista=False
+  CRIBADO: puesto 2513 clase D | customer_needs_spreadsheet <-> product_design_spreadsheet
+  CRIBADO: puesto 2693 clase D | customer_needs_spreadsheet <-> spreadsheet_diseno_para_la_calidad
+  CRIBADO: puesto 2989 clase D | customer_needs_spreadsheet <-> qfd_matriz

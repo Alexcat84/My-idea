@@ -1,0 +1,44 @@
+=== OPERACIONES: estado ===
+total 71 {'LISTA': 70, 'HECHA': 1}
+  HECHA: None
+
+=== 04_ENLACES.md: lineas anadidas / borradas por la TAREA 3 ===
+59	0	docs/plan/04_ENLACES.md
+
+=== REPORTE.md en d2f6b524: correccion declarada, texto viejo intacto ===
+11	0	docs/loop/REPORTE.md
+
+=== filas del filtrado V80 ===
+157
+
+=== 157 - 30 ===
+127
+claves: ['id_op', 'fase', 'tipo', 'nodos', 'superviviente', 'preservar', 'eliminar', 'aristas_nuevas', 'orden', 'depende_de', 'bloquea_a', 'verificacion']
+candidatas: ['id_op', 'evidencia']
+  None HECHA
+           OP-E-01 | LISTA | fase 04_ENLACES | tipo ENLACE
+           OP-E-02 | HECHA | fase 04_ENLACES | tipo ENLACE
+           OP-E-03 | LISTA | fase 04_ENLACES | tipo LECTURA DIRIGIDA
+           OP-E-04 | LISTA | fase 04_ENLACES | tipo ENLACE
+           OP-E-05 | LISTA | fase 04_ENLACES | tipo ENLACE MUTUO
+           OP-E-06 | LISTA | fase 04_ENLACES | tipo ENLACE CON EVIDENCIA DE LECTURA
+           OP-E-07 | LISTA | fase 04_ENLACES | tipo LECTURA DIRIGIDA CORTA
+=== PASO_NODO_CALIBRADO.jsonl: HEAD contra 2e040cb6 ===
+(vacio = identico)
+
+=== FILTRADO_V80 commiteado? ===
+3d4800e0 VUELTA 80: TAREA 5, el tramo 6 de OP-E-01, bolsa recalibrada FRESCA sobre el grafo ya movido por la TAREA 3 (dos reversiones), con el filtro P.9.1 ensanchado, la guarda del par no dirigido y LA VARA NUEVA DE LA CADENA corridas antes de leer nada (scripts/loop/vuelta80_vara_cadena.py, adjudicada en el acta de la vuelta 79, seccion 5 punto 6).
+157
+
+=== ficheros que la vuelta 80 toco en dataset/ y docs/plan/ ===
+dataset/metadata/master_graph.json
+dataset/nodos/afinar_motor_crecimiento.json
+dataset/nodos/analisis_sintomas.json
+dataset/nodos/bucle_retroalimentacion_control.json
+dataset/nodos/curva_caracteristica_operativa.json
+dataset/nodos/desarrollo_de_controles_de_proceso.json
+dataset/nodos/distribucion_binomial.json
+dataset/nodos/producto_mercado_fit_motores.json
+dataset/nodos/terminologia_clave_breakthrough.json
+docs/plan/04_ENLACES.md
+docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V80.jsonl

@@ -1,0 +1,13 @@
+--- ESCALERA, sobre el grafo de c25403a0 (ANTES de escribir) ---
+  curva_caracteristica_operativa -> distribucion_binomial | ya estaba: False | INVERSA (hijo->madre) ya estaba: False
+  desarrollo_de_controles_de_proceso -> bucle_retroalimentacion_control | ya estaba: False | INVERSA (hijo->madre) ya estaba: False
+  INVERSAS: 0 de 2
+
+--- LAS 2, EN EL GRAFO DE HOY, EN LAS DOS VISTAS ---
+  curva_caracteristica_operativa -> distribucion_binomial | en siguientes de madre: True | en previos de hijo: True | inversa presente: False
+  desarrollo_de_controles_de_proceso -> bucle_retroalimentacion_control | en siguientes de madre: True | en previos de hijo: True | inversa presente: False
+
+--- PAR 28: la direccion inversa, medida ---
+  arista identificar_clientes_externos_e_internos -> qfd_matriz directa: False
+  camino identificar_clientes_externos_e_internos -> qfd_matriz: identificar_clientes_externos_e_internos -> descubrir_necesidades_del_cliente -> qfd_matriz
+  camino qfd_matriz -> identificar_clientes_externos_e_internos: NINGUNO <=6 saltos

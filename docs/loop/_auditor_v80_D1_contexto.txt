@@ -1,0 +1,65 @@
+==============================================================================
+### customer_needs_spreadsheet   [deprecado=False] dominio=quality
+TITULO: Hoja de Cálculo de Necesidades del Cliente (Customer Needs Spreadsheet)
+FUENTE: Juran's Quality Handbook_ The C - Joseph A. Defeo
+
+RESUMEN_TEORICO:
+Es una matriz de planificación que organiza tus clientes, internos y
+externos, en filas ordenadas por prioridad, y las necesidades que
+descubriste en columnas. Te permite correlacionar cada relación con
+evidencia sólida y analizar tanto la fuerza de esa relación como la
+importancia relativa del cliente, para determinar qué necesidades son más
+críticas. Es especialmente útil cuando la información de voz del cliente que
+recolectaste es demasiado amplia, vaga o voluminosa para usarla directamente
+en el diseño. Resume esos datos en un formato claro que asegura que tu
+presupuesto de desarrollo se enfoque en lo más importante. Es la base para
+convertir necesidades en características y luego en procesos, siguiendo la
+secuencia de Quality by Design.
+
+PASOS (6):
+  1. Crea una hoja de cálculo multicolumna
+  2. Lista en la primera columna a tus clientes, internos y externos, en
+     orden de prioridad
+  3. Lista en la fila superior todas las necesidades descubiertas, una por
+     columna
+  4. Correlaciona cada cliente con cada necesidad usando una leyenda basada
+     en evidencia
+  5. Analiza la fuerza de cada relación y la importancia del cliente para
+     priorizar las necesidades
+  6. Usa la matriz resultante para enfocar tus recursos de diseño en lo más
+     crítico
+
+ENTREGABLE: Una matriz completa de clientes vs necesidades, correlacionadas con
+  evidencia y priorizadas, lista para guiar el diseño de tu producto o
+  servicio.
+
+nodos_siguientes (5): ['traduccion_necesidades_cliente', 'product_design_spreadsheet', 'sipoc', 'matriz_de_seleccion', 'matriz_pugh']
+nodos_previos (3): ['identificar_clientes_externos_e_internos', 'sipoc', 'diagrama_afinidad']
+==============================================================================
+### identificar_clientes_externos_e_internos   [deprecado=False] dominio=quality
+TITULO: Identificación de Clientes Externos e Internos
+FUENTE: Juran's Quality Handbook_ The C - Joseph A. Defeo
+
+RESUMEN_TEORICO:
+El segundo paso del Diseño para la Calidad es identificar completamente a
+los clientes, que se dividen en externos (compradores, comerciantes,
+procesadores, proveedores, clientes potenciales y clientes ocultos como
+reguladores o medios) e internos (cada persona dentro de la organización que
+actúa como proveedor, procesador y cliente). Un diagrama de flujo de alto
+nivel del proceso ayuda a revelar clientes no evidentes y a distinguir roles
+como quien ordena versus quien usa el producto.
+
+PASOS (5):
+  1. Elaborar un diagrama de flujo del proceso relacionado al producto
+  2. Listar clientes externos: compradores, usuarios finales, comerciantes,
+     procesadores, proveedores, potenciales y ocultos
+  3. Identificar clientes internos analizando las relaciones proveedor-
+     procesador-cliente dentro de la organización
+  4. Distinguir entre quien ordena el producto y quien lo usa
+  5. Priorizar el elenco de clientes de forma consensuada por el equipo
+
+ENTREGABLE: Lista completa y clasificada de clientes externos e internos, con diagrama
+  de flujo del proceso
+
+nodos_siguientes (2): ['descubrir_necesidades_del_cliente', 'customer_needs_spreadsheet']
+nodos_previos (4): ['establecer_equipo_multifuncional', 'establecer_proyecto_y_metas_diseno', 'goal_statement_smart', 'juran_quality_by_design']

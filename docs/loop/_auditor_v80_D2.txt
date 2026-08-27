@@ -1,0 +1,47 @@
+==============================================================================
+### curva_caracteristica_operativa   [deprecado=False] dominio=quality
+TITULO: Curva Característica de Operación (OC)
+FUENTE: Juran's Quality Handbook_ The C - Joseph A. Defeo
+
+RESUMEN_TEORICO:
+Gráfico que cuantifica la probabilidad de aceptación de un lote en función
+de su porcentaje de defectuosos, para un plan de muestreo específico (n, c).
+Permite evaluar el riesgo del productor (rechazar buenos lotes) y del
+consumidor (aceptar malos lotes), aunque no predice la calidad real del lote
+ni brinda un nivel de confianza directo.
+
+PASOS (5):
+  1. Definir el plan de muestreo (n, c) a evaluar
+  2. Calcular la probabilidad de aceptación para distintos niveles de p
+     usando distribución Poisson, binomial o hipergeométrica
+  3. Graficar la curva OC resultante
+  4. Analizar los riesgos α (productor) y β (consumidor) en la curva
+  5. Ajustar el plan de muestreo si los riesgos no son aceptables
+
+ENTREGABLE: Curva OC graficada y documentada para el plan de muestreo seleccionado, con
+  riesgos cuantificados
+
+nodos_siguientes (2): ['niveles_calidad_muestreo_aql_lql_aoql', 'distribucion_binomial']
+nodos_previos (1): ['muestreo_de_aceptacion']
+==============================================================================
+### distribucion_binomial   [deprecado=False] dominio=quality
+TITULO: Distribución Binomial para Muestreo de Aceptación
+FUENTE: Juran's Quality Handbook_ The C - Joseph A. Defeo
+
+RESUMEN_TEORICO:
+La distribución binomial calcula la probabilidad de r ocurrencias en n
+ensayos independientes con probabilidad constante de éxito p. Se aplica
+cuando no se cumplen las condiciones para usar la aproximación de Poisson,
+típicamente cuando la población es al menos 10 veces el tamaño de muestra.
+
+PASOS (4):
+  1. Definir el tamaño de muestra n y la probabilidad de defecto histórica p
+  2. Calcular q = 1 - p
+  3. Aplicar la fórmula binomial o usar software (Minitab, Excel) para
+     obtener probabilidades
+  4. Usar los resultados para diseñar planes de muestreo de aceptación
+
+ENTREGABLE: Tabla de probabilidades binomiales para diseño de plan de muestreo
+
+nodos_siguientes (2): ['teoremas_probabilidad', 'planes_de_muestreo_de_aceptacion']
+nodos_previos (2): ['distribucion_poisson', 'curva_caracteristica_operativa']
