@@ -10,10 +10,44 @@ instrumento propio) del encargo de `docs/loop/PROMPT_SIGUIENTE.md`, escrito
 tras el acta de la vuelta 82 del auditor (`docs/loop/ACTA_AUDITOR.md`, desde
 la linea 25149).
 
-**CABECERA PENDIENTE DE TALLAR AL CIERRE.** Se pega entera al final de esta
-vuelta, con `python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 83`,
-tras la ultima operacion de codigo (regla `EJECUTOR.md`: "el estado al
-cierre se mide al cierre").
+**LA CABECERA DE ABAJO ESTA TALLADA, NO TECLEADA:**
+
+```
+python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 83
+```
+
+Salida completa en `docs/loop/SALIDA_V83_TALLADOR_FASE04.txt`, pegada entera:
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.188 / 665 | **3.853 / 3.188 / 665** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.961 / 8.940 / 17.901 / 9.584 | **8.970 / 8.949 / 17.919 / 9.593** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `0af51e43` (ACTA DE LA VUELTA 82 DEL AUDITOR, leido de git log), HEAD real de apertura `0af51e43` (sellado por el ejecutor antes de la 1.a operacion), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, commit del acta `0af51e43` (ACTA DE LA VUELTA 82 DEL AUDITOR, leido de git log), HEAD real de apertura `0af51e43` (sellado por el ejecutor antes de la 1.a operacion), arboles de `dataset/` IGUALES: VERDE** |
+
+**Verificado con `--comparar` contra este mismo fichero antes del commit de
+cierre**: la salida de esa corrida se pega en la seccion 5, DESPUES de
+escribir esta tabla, tal como manda la regla ("el estado al cierre se mide
+al cierre").
+
+**El commit del acta y el HEAD real de apertura coinciden (`0af51e43`, los
+dos): la TAREA 0 sello el HEAD ANTES de commitear nada**, asi que la
+identidad sale VERDE por diseno, no por accidente.
+
+**Correccion de higiene, declarada:** el fichero `SALIDA_V83_TSC_APERTURA.txt`
+se genero la primera vez con una linea `EXIT:0` apendizada por error (un
+`echo` de mas en el comando), lo que habria tallado la celda de apertura
+como "1 linea(s) de salida (revisar)" en vez de "EXITCODE 0, cero lineas".
+Se regenero limpio (`npx tsc --noEmit` sin apendizar nada) ANTES de tallar
+la cabecera de arriba: el `tsc` en si nunca fallo (exitcode 0 en las dos
+corridas), lo unico que estaba mal era el fichero. Ninguna cifra de la
+cabecera de arriba salio de la version sucia.
+
+**El marcador del cribado no aparece**: esta fase no lo toca, y el tallador
+omite la fila cuando no hay `SALIDA_V83_MARCADOR_*` que citar.
 
 **SE MANTIENE "LA TABLA SE CUENTA DE SU FICHERO"**: toda tabla o cifra de
 este reporte cita el fichero de salida del que sale.
@@ -307,10 +341,11 @@ esta vuelta**: `ESCRITA` si la arista esta presente en las DOS vistas
 (`nodos_siguientes` de la madre Y `nodos_previos` del hijo), `NO SE
 ENLAZA` si esta ausente en las DOS. La escalera (inversas) se mide contra
 las mismas dos vistas: cero inversas si ninguna madre aparece en
-`nodos_siguientes` de su propio hijo. Este instrumento es
-`scripts/loop/vuelta83_hornear_decididas.py` en su modo de verificacion
-(la misma funcion `arista_presente_hoy`, reusada) mas la tabla que la
-TAREA 3 arma con esos datos; su salida citable es
+`nodos_siguientes` de su propio hijo. El instrumento concreto es
+`scripts/loop/vuelta83_medir_tramo8.py` (misma mecanica de verificacion en
+las dos vistas que `arista_presente_hoy` de
+`scripts/loop/vuelta83_hornear_decididas.py`, TAREA 2.a, pero funcion
+propia: no se importa, se reimplementa igual); su salida citable es
 `docs/loop/SALIDA_V83_TRAMO8_ESCRIBIR.txt` (TAREA 3, seccion 3.3 de abajo).
 
 ### 2.d. El tallador aprende el registro
@@ -553,3 +588,89 @@ la fila 29, clase D, puesto 3121, quality) y cero reciprocas. **SIN
 DISCREPANCIA en ningun digito.**
 
 ---
+
+## 5. EL CIERRE, MEDIDO AL CIERRE
+
+Commits de esta vuelta: `9b0b76a1` (TAREA 0, sello y medicion de apertura),
+`dd760bde` (TAREA 1), `2c014da1` (TAREA 2), `dd8f539f` (TAREA 3),
+`6a643abb` (TAREA 4); este reporte se cierra en un commit posterior.
+
+La tabla de cabecera de la seccion 0 de arriba (al inicio del documento)
+**es** la medicion de cierre (columna derecha), tallada con `python
+scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 83` sobre
+`SALIDA_V83_*_CIERRE.txt`, medidos FRESCOS despues de la TAREA 3 (la unica
+operacion de codigo que movio el grafo; la TAREA 4 es medicion pura y no lo
+toca), con el ciclo de tres vuelto a correr en la propia medicion de cierre
+(`SALIDA_V83_GATE0_CMD1_CIERRE.txt`, `_ETIQUETAS_`, `_SYNC_`, cero lineas de
+`git status` sobre `dataset/` y `web/lib/assets/` tras el ciclo).
+
+**Verificacion `--comparar` de esta misma cabecera contra este fichero,
+corrida DESPUES de pegar la tabla**, salida en
+`docs/loop/SALIDA_V83_COMPARAR_CIERRE.txt`:
+
+```
+python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 83 --comparar docs/loop/REPORTE.md
+```
+
+**`filas cotejadas: 7 | DISTINTAS: 0 | ausentes: 0 | CABECERA: IDENTICA AL
+TALLADOR`, EXIT 0.**
+
+Cifras adicionales que el tallador de fase04 no cubre, contadas de su
+fichero:
+
+| | medido con |
+|---|---|
+| aristas nuevas escritas esta vuelta | **9** (TAREA 3) |
+| aristas revertidas esta vuelta | **0** |
+| pares leidos y no enlazados esta vuelta (tramo 8, con razon) | **21** |
+| discutibles marcados esta vuelta | **4** (33, 43, 44, 47) |
+| pares ya decididos citados sin re-derivar (tramo 8) | **30** |
+| operaciones cerradas esta vuelta | 0 |
+| correcciones declaradas esta vuelta | 2 (1.2 y 1.3 de este mismo `REPORTE.md`; ademas una correccion de higiene sobre `SALIDA_V83_TSC_APERTURA.txt`, declarada en la cabecera) |
+| vueltas no entregadas registradas esta vuelta | 0 |
+| bolsa de `OP-E-01` restante sin leer (filtrada por P.9.1 ensanchado + guarda, esta vuelta) | **94 de 154** (154 filtrados menos 30 saltadas menos 30 leidas) |
+| filas del registro de decididas horneadas esta vuelta | **96** (`docs/plan/OP_E_01_DECIDIDAS.jsonl`, TAREA 2.a) |
+
+---
+
+## 6. LOS DISCUTIBLES MARCADOS, para la relectura ciega del auditor
+
+**CUATRO discutibles marcados en esta vuelta**, los cuatro en la TAREA 3
+(seccion 3.4 de arriba, con su razon completa):
+
+1. **33** (`gestion_efectiva_benchmarking -> reconocimiento_publico_recompensas`):
+   NO SE ENLAZA por ser generico y ya anclado en otra familia, pese a que
+   el paso lo nombra casi literalmente.
+2. **43 y 44** (el mismo hijo `evaluacion_desempeno_proyectos` desde dos
+   madres distintas): las dos NO SE ENLAZA por la misma razon de fondo.
+3. **47** (`venture_debt_introduccion -> ratio_deuda_capital`): ESCRITA
+   pese a que la vara de la cadena marca ALCANZABLE (6 saltos), con el
+   criterio nuevo de que una cadena tematicamente incoherente (atraviesa
+   cajas ajenas del canvas) no cuenta como el patron D2. **Es el discutible
+   mas fuerte de la vuelta**: la primera vez que se escribe una arista
+   marcada ALCANZABLE sin revertirla, y el criterio que lo sostiene
+   (coherencia tematica del camino) no esta escrito en ningun banco. Vale
+   que el auditor confirme si el criterio se sostiene o si hace falta una
+   regla mas explicita (PENDIENTE DE DOCTRINA, ver seccion de abajo).
+
+---
+
+## PENDIENTES DE DOCTRINA
+
+**UNO.** La distincion entre un camino ALCANZABLE que cuenta como patron D2
+(radio sobre cadena ya tejida, NO SE ENLAZA) y uno que no cuenta porque no
+es "tematicamente coherente" (par 47 de la TAREA 3) **no esta escrita en
+ningun banco**. Esta vuelta la aplico leyendo si los nodos intermedios del
+camino comparten tema con los dos extremos (los siete casos NO SE ENLAZA de
+esta vuelta con vara de la cadena, pares 36, 40, 42, 45, 46, 57 y 59, atraviesan nodos de la
+MISMA familia tematica que sus extremos; el par 47 atraviesa cajas del
+Business Model Canvas ajenas a deuda o capital), pero es un criterio mio de
+esta vuelta, no una regla adjudicada. **Se marca PENDIENTE DE DOCTRINA y se
+registra el criterio usado, en vez de inventar una regla nueva o de
+aplicar el patron D2 a ciegas por longitud de camino.**
+
+Todo lo demas hecho esta vuelta cita reglas escritas: `EJECUTOR.md` reglas
+1, 2, 3, 6 y 9; banco `9.6`, `9.6.1` con su caveat de la cadena, `9.6.2` con
+la senal de los entregables; el patron D2 (vara de la cadena, acta 79
+seccion 5 punto 6 y acta 80 TAREA 3); el alcance escrito de `OP-E-01`; y
+las adjudicaciones del acta 82 secciones 5.1 a 5.7, citadas por numero.
