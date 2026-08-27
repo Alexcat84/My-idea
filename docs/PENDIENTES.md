@@ -3086,6 +3086,64 @@ SOLA DIRECCION por arista, de la madre al hijo").
 V90 se escriben; estas tres no). Forzar una sola direccion sobre un par que su propia
 razon declara mutuo seria leer solo la mitad de la evidencia.
 
-**RECOMENDACION QUE VIAJA CON ELLA:** los tres van a una operacion de ENLACE MUTUO (DOS
-ARISTAS cada uno, como la seccion "LAS CINCO C" de `docs/plan/04_ENLACES.md` ya trata los
-pares del banco 9.22), no a `OP-E-06`. **No bloquea nada de la fase 04.**
+**RECOMENDACION QUE VIAJA CON ELLA (texto original de la vuelta 90, NO se borra, ver
+correccion aditiva abajo):** los tres van a una operacion de ENLACE MUTUO (DOS ARISTAS
+cada uno, como la seccion "LAS CINCO C" de `docs/plan/04_ENLACES.md` ya trata los pares
+del banco 9.22), no a `OP-E-06`. **No bloquea nada de la fase 04.**
+
+### CORRECCION ADITIVA (vuelta 91, TAREA 1): LA EXCLUSION DE `OP-E-06` SE RATIFICA; LA ETIQUETA "ENLACE MUTUO" NO SOSTIENE LA RELECTURA DIRIGIDA
+
+**Origen:** acta de la vuelta 90 (`docs/loop/ACTA_AUDITOR.md`, adjudicacion 4.1, lineas
+30788 a 30811), que mide los tres en clase **D** (no C) en
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (linea 30626), los cinco enlaces mutuos vigentes
+(201, 215, 494, 1077, 1240) en clase **C** (linea 30627), y el banco `9.22`
+(`docs/BANCO_DE_TEXTOS.md` linea 2523) mandando *"el par es sano y se registra C, sano
+con figura, no D"* (acta linea 30628). Ordena una **relectura dirigida contra el test de
+las dos lineas del 9.22** antes de tocar la recomendacion (`docs/loop/PROMPT_SIGUIENTE.md`,
+encargo de la vuelta 91, TAREA 1).
+
+**LA RELECTURA DIRIGIDA, hecha en esta vuelta sobre el campo `razon` COMPLETO de
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (no la frase truncada):**
+
+**El test que exige el banco** (`docs/BANCO_DE_TEXTOS.md` linea 2539 a 2541): *"la
+figura exige DOS LINEAS DISTINTAS, una en cada nodo"*, y solo cuando la vara da
+**PROCEDIMIENTO en los dos sentidos sobre dos lineas distintas** es clase **C**
+(tabla de la linea 2577 a 2580); si lo que hay es la formula **"cada uno trae lo
+suyo"**, ese es el criterio de la **D**, fijado por el contraste del puesto **2091**
+(banco linea 2594 a 2602, tambien clase D preguntando en los dos sentidos).
+
+| puesto | linea EXPLICITA nombrada ("en UNA LINEA") en la razon | como justifica la razon el segundo sentido | sostiene el test de las dos lineas |
+|---:|---|---|---|
+| **2082** | UNA sola: paso de `validacion_con_franquiciados` (*"dice en UNA LINEA preparar al candidato explicandole que encontrara respuestas variadas"*) | *"uno trae el trabajo con la red, el otro trae el entrenamiento del que pregunta"*: formula de reparto, no una segunda linea nombrada con su paso | **NO** |
+| **2084** | UNA sola: paso 2 de `gestion_responsabilidad_vicaria` (*"redactar el manual y el contrato diferenciando estandares de marca de aspectos operativos"*) | *"uno defiende con seguros y letreros, el otro defiende con la eleccion de las palabras"*: misma formula de reparto | **NO** |
+| **2112** | UNA sola: paso 1 de `capitalizacion_adecuada_del_franquiciador` (*"estimar el presupuesto para desarrollar el sistema"*) | *"trae lo suyo, que es la pregunta que el otro no se hace"*: la formula LITERAL de la D | **NO** |
+
+**VEREDICTO DE LA RELECTURA DIRIGIDA: NO SOSTIENE, los tres.** Cada razon nombra
+**una sola linea explicita con su paso** (en un solo nodo del par) y justifica el
+"segundo sentido" con la formula de reparto que el acta de la vuelta 90 nombra como la
+de la D (*"cada uno trae lo suyo"*, `docs/loop/ACTA_AUDITOR.md` linea 30631), la misma
+que el contraste del puesto 2091 deja fijada (`docs/BANCO_DE_TEXTOS.md` linea 2594 a
+2602, tambien D preguntando en los dos sentidos), no con una segunda linea identificada
+con su paso en el otro nodo. **La cita literal de "banco 9.22" en las tres razones es
+cierta** (el ejecutor no la invento), **pero citar la doctrina no es lo mismo que
+cumplir su test**, y el test es el que decide la clase.
+
+**CONSECUENCIA, aplicando la regla del propio encargo ("si no sostiene, vuelven como
+escalera de una sola direccion por la linea que su razon ya nombra"), leyendo la
+direccion con la MISMA vara de `scripts/loop/vuelta90_tarea4_direccion_ope06.py`
+("el que dice EN UNA LINEA es la MADRE; el que trae el procedimiento de esa linea es
+el HIJO; arista MADRE -> HIJO"):**
+
+| puesto | direccion (madre -> hijo), leida de la unica linea que la razon nombra |
+|---:|---|
+| **2082** | `validacion_con_franquiciados` -> `preparar_candidato_validacion` |
+| **2084** | `gestion_responsabilidad_vicaria` -> `control_responsabilidad_manual` |
+| **2112** | `capitalizacion_adecuada_del_franquiciador` -> `estimacion_inversion_inicial_franquiciador` |
+
+**LA EXCLUSION DE `OP-E-06` NO SE TOCA: sigue siendo correcta** (ya ejecutada y
+cerrada en la vuelta 90; esta correccion no reabre `OP-E-06` ni escribe aristas).
+**LO QUE SE CORRIGE ES LA RECOMENDACION** de arriba: los tres **NO** son candidatos de
+una operacion de ENLACE MUTUO de dos aristas cada uno. Son candidatos de **escalera de
+una sola direccion**, por la direccion de la tabla de encima, en una pasada posterior
+fuera de `OP-E-06` (la misma familia de pasada que los puestos 581 y 650 de mas arriba
+en este documento). **No bloquea nada de la fase 04.**

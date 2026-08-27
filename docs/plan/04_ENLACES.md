@@ -942,3 +942,47 @@ BLOQUEANTE y va antes de tocar `OP-E-06`.
   y cuando el criterio es una lectura humana escrita a mano se declara como
   tal en vez de fabricarle una prueba automatica. Es el precedente directo de
   la regla nueva de `EJECUTOR.md` ("EL CASO ROJO SE PRUEBA POR MUTACION").
+
+---
+
+## LA CIFRA DE `OP-E-06`, ENTERA, DE 192 A 113 (TAREA 2 de la vuelta 91, adjudicacion 4.5 del acta de la vuelta 90, `ACTA_AUDITOR.md` lineas 30830 a 30835)
+
+**Por que se escribe aqui:** hoy el descenso vive repartido entre el addendum
+de `OPERACIONES.jsonl`, el acta 88 y el acta 89 del auditor. La regla contra
+el descarte silencioso que la propia `verificacion` de `OP-E-07` lleva escrita
+("un descarte silencioso aqui seria un enlace perdido") pide una sola cadena
+medida y citable. Cada eslabon trae su fuente; si alguno no se pudiera medir
+hoy se declararia "a verificar" y se diria cual, pero los ocho de abajo estan
+todos medidos en un fichero de salida existente.
+
+| # | eslabon | cifra | fuente / comando |
+|---:|---|---:|---|
+| 1 | Los candidatos con direccion explicita en su propia razon, tallados de `docs/plan/COSECHA_RAZONES_D.jsonl` (397 filas, `nuevo=true` con senal distinta de `["continua por la vara"]`) | **192** | `scripts/loop/vuelta88_tarea5_rebase_ope06.py`, TAREA 5.a, `docs/loop/SALIDA_V88_TAREA5_REBASE_OPE06.txt` linea 8 |
+| 2 | Frente 1 del dedupe: contra `PASO_NODO_CALIBRADO.jsonl` (468 filas hoy) | quita **0** | mismo instrumento, TAREA 5.b, salida citada linea 20 |
+| 3 | Frente 2 del dedupe: contra 18 pares ya declarados en `aristas_nuevas` de otras operaciones de `OPERACIONES.jsonl` | quita **0** | mismo instrumento, TAREA 5.b, salida citada linea 22 |
+| 4 | Frente 3 del dedupe: contra los 7 puestos de la cola de relectura post fusion (`00_INDICE.md` linea 409) | quita **0** | mismo instrumento, TAREA 5.b, salida citada linea 24 |
+| 5 | Frente 4 del dedupe: contra pares con arista YA en el grafo de hoy, resolviendo por alias | quita **16** | mismo instrumento, TAREA 5.b, salida citada linea 26. Remanente tras los cuatro frentes: 192 menos 16 igual a **176** |
+| 6 | Filtro de direccion sobre el remanente (frase con alguna palabra de direccion, lista CRUDA de la vuelta 87) | **129** con direccion (**47** sin, descartados y nombrados uno a uno) | mismo instrumento, TAREA 5.c, salida citada lineas 39 a 41. Escrito a `docs/plan/OP_E_06_REBASE_V88.jsonl`, **129 filas** (`wc -l` confirmado en esta vuelta) |
+| 7 | Re-base V89: las 129 frases de V88 releidas ENTERAS con el criterio nuevo ("la frase dice quien desarrolla a quien", no la lista de palabras derogada), 12 `NO_ENTRA` nombradas una a una | **117** | `scripts/loop/vuelta89_tarea3_rebase_ope06.py`, TAREA 3.a/3.b, `docs/loop/SALIDA_V89_TAREA3_REBASE_OPE06.txt` lineas 22 a 60 (cifras en lineas 60 y 61). Escrito a `docs/plan/OP_E_06_REBASE_V89.jsonl`, **117 filas** (`wc -l` confirmado en esta vuelta) |
+| 8 | LA REVERSION DEL 117 (fila de `OP-E-01`, NO un conteo de la bolsa: `juran_rcca_metodo -> diseno_implementacion_remedio`, la tercera condicion que el ejecutor le habia anadido al banco 9.6.1 no esta escrita en ninguna regla). Era el bloqueo pendiente que impedia abrir `OP-E-06` en la vuelta 89 (`ACTA_AUDITOR.md` linea 29741, adjudicacion 5.8 del acta 88) | eslabon de **bloqueo, no de resta**: se ejecuta en la vuelta 89 y libera la apertura de `OP-E-06` para la vuelta 90 | `ACTA_AUDITOR.md` lineas 29670 a 29679 (adjudicacion 5.1 del acta 88) y linea 30273 (adjudicacion 4.6 del acta 89, ratificada) |
+| 9 | Adjudicaciones 4.1 y 4.2 del acta 89 (`ACTA_AUDITOR.md` lineas 30247 y 30252) sobre la bolsa de 117 de V89: puesto **530 ENTRA**, puesto **932 SALE** | **117** (conjunto distinto, misma cuenta: +1 -1) | `scripts/loop/vuelta90_tarea2_rebase_ope06.py`, verificado por el auditor en la vuelta 90 (`ACTA_AUDITOR.md` lineas 30565 a 30572: "ENTRA solo el 530... SALE solo el 932... conjuntos distintos: SI"). Escrito a `docs/plan/OP_E_06_REBASE_V90.jsonl`, **117 filas** (`wc -l` confirmado en esta vuelta) |
+| 10 | Los 3 excluidos por el banco 9.22 (2082, 2084, 2112: su razon cita literalmente "banco 9.22" con la formula "CONTINUA en los dos sentidos") | quita **3** | `scripts/loop/vuelta90_tarea4_direccion_ope06.py`, `EXCLUIDOS_MUTUO_922`, verificado contra la razon real en tiempo de ejecucion. Ver correccion aditiva sobre la etiqueta en `docs/PENDIENTES.md`, TAREA 1 de esta vuelta |
+| 11 | Los 114 con direccion madre/hijo leida de la razon completa | **114** | `scripts/loop/vuelta90_tarea4_direccion_ope06.py`, escrito a `docs/plan/OP_E_06_DIRECCION_V90.jsonl`, **114 filas**. 117 menos 3 igual a 114 |
+| 12 | La escritura de las aristas: `ESCRITA` + `YA_ESTABA` (puesto 2023, resuelve a la misma arista del 2015) + `ESCALERA_ROTA` | **113 ESCRITA + 1 YA_ESTABA + 0 ESCALERA_ROTA = 114** | `scripts/loop/vuelta90_tarea4_escribir_ope06.py`, `docs/loop/SALIDA_V90_TAREA4_ESCRITURA.txt`, cruzado arista por arista contra el diff de la union del grafo por el auditor (`ACTA_AUDITOR.md` lineas 30516 a 30531, seccion 1.7): "CALZAN EXACTO, conjunto contra conjunto" |
+
+**LA ARITMETICA COMPLETA, eslabon por eslabon:** 192 menos 16 (frente 4 del
+dedupe, los otros tres frentes en 0) igual a 176; 176 filtradas por direccion
+dan 129 (bolsa V88) y descartan 47, nombradas todas; las 129 releidas ENTERAS
+con el criterio nuevo dan 117 (bolsa V89) y descartan 12, nombradas todas; la
+reversion del 117 de `OP-E-01` (un bloqueo de calendario, no una resta de la
+bolsa) libera la apertura; las adjudicaciones 4.1 y 4.2 del acta 89 mueven un
+puesto adentro y uno afuera sobre esos mismos 117, dando la bolsa V90 (117,
+conjunto distinto); los 3 del banco 9.22 salen por invocar el arreglo de dos
+aristas y no el de la escalera, dejando 114 con direccion; y la escritura
+sobre esos 114 da **113 ESCRITA, 1 YA_ESTABA y 0 ESCALERA_ROTA**, la cifra
+vigente de `OP-E-06`.
+
+> **192 -> (-16 dedupe) -> 176 -> (-47 sin direccion) -> 129 -> (-12 releidas
+> sin desarrollo) -> 117 -> (bloqueo de la reversion del 117 de `OP-E-01`,
+> liberado) -> 117 (+1/-1, adjudicaciones 4.1/4.2) -> (-3 banco 9.22) -> 114
+> -> 113 ESCRITA + 1 YA_ESTABA + 0 ESCALERA_ROTA.**
