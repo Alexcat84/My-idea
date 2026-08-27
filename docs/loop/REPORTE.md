@@ -1,246 +1,298 @@
-# REPORTE DE LA VUELTA 90 (EJECUTOR)
+# REPORTE DE LA VUELTA 91 (EJECUTOR)
 
 Rama `pasada-unica`. Fase III, EJECUCION, modo de ejecucion continua. Sobrescribe
-el reporte de la vuelta 89. Apertura sellada ANTES de la primera operacion en
-`docs/loop/SALIDA_V90_HEAD_APERTURA.txt`: `314ca33a5c431c74273059720a3e3988fac0e599`
-(la decision del fundador del 29 ago 2026). Cierre recomputado AL CIERRE.
+el reporte de la vuelta 90. Apertura sellada ANTES de la primera operacion en
+`docs/loop/SALIDA_V91_HEAD_APERTURA.txt`: `675b9969a93d23c92f217d4ff66f9a0357998bbc`
+(el commit del acta de la vuelta 90, medido con `git rev-parse 675b9969` en esta
+vuelta, ver nota de identidad mas abajo). Cierre recomputado AL CIERRE.
 
-**ESTA VUELTA EJECUTA LA DECISION DEL FUNDADOR DEL 29 AGO 2026** (opciones a y b,
-las dos), registrada en `docs/loop/paradas/2026-08-29-racha-y-escalada-omitida-DECISION.md`:
-la escalada del tallador a las fases mecanicas por fin se ejecuta como operacion
-de codigo (TAREA 3, BLOQUEANTE), nace el caso rojo probado por mutacion, y
-`OP-E-06` ABRE con la bolsa V90: **113 aristas ESCRITAS** (mas 1 fila `YA_ESTABA`
-por colapso de alias, 114 leidas de 117). La racha de reporte vuelve a cero al
-relanzar.
+**ESTA VUELTA EJECUTA EL ENCARGO DE LA VUELTA 90** (acta del auditor,
+`ACTA_AUDITOR.md` linea 30395 y siguientes): la TAREA 1 corrige la recomendacion
+de `PENDIENTES.md` sobre los tres pares del banco 9.22 (2082, 2084, 2112) tras
+una relectura dirigida que NO sostiene la etiqueta "enlace mutuo"; la TAREA 2
+escribe en `04_ENLACES.md` la cadena medida y citable de 192 a 113 de `OP-E-06`;
+la TAREA 3 (BLOQUEANTE) extiende el tallador a cifras de COMPOSICION de una
+salida de texto, la clase exacta que fallo en la vuelta 90; y la TAREA 4 ejecuta
+`OP-E-07`, que ABRE con **86 aristas ESCRITAS** (mas 2 filas `YA_ESTABA`, 88
+leidas de 101). La racha de reporte queda en la que trae el encargo (UNA de
+tres): **ninguna caida nueva de esta especie en esta vuelta.**
 
-## CABECERA TALLADA (--fase04 --vuelta 90), pegada entera
+## CABECERA TALLADA (--fase04 --vuelta 91), pegada entera
 
-Comando: `python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 90`.
-Salida completa en `docs/loop/SALIDA_V90_CABECERA_TALLADA.txt`, **EXIT 0**. Antes
+Comando: `python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 91`.
+Salida completa en `docs/loop/SALIDA_V91_CABECERA_TALLADA.txt`, **EXIT 0**. Antes
 del commit de cierre, `--comparar docs/loop/REPORTE.md` se corre otra vez sobre
-este mismo fichero ya escrito (seccion de cierre, mas abajo).
+este mismo fichero ya escrito (seccion "LA COMPARACION FINAL", mas abajo).
 
 | | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
 |---|---:|---:|
 | censo: nodos / vivos / deprecados | 3.853 / 3.188 / 665 | **3.853 / 3.188 / 665** |
 | Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
-| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.995 / 8.974 / 17.969 / 9.618 | **9.108 / 9.087 / 18.195 / 9.731** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 9.108 / 9.087 / 18.195 / 9.731 | **9.194 / 9.173 / 18.367 / 9.817** |
 | motor | 25/25 | **25/25** |
 | web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
 | tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
-| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+113 / +113 / +226 / +113** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+86 / +86 / +172 / +86** |
 | desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 1 fila(s): `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **1 fila(s): `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `d6e6f2eb` (ACTA DE LA VUELTA 89 DEL AUDITOR, leido de git log), HEAD real de apertura `314ca33a` (sellado por el ejecutor antes de la 1.a operacion), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, commit del acta `d6e6f2eb` (ACTA DE LA VUELTA 89 DEL AUDITOR, leido de git log), HEAD real de apertura `314ca33a` (sellado por el ejecutor antes de la 1.a operacion), arboles de `dataset/` IGUALES: VERDE** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `675b9969` (ACTA DE LA VUELTA 90 DEL AUDITOR, leido de git log), HEAD real de apertura `675b9969` (sellado por el ejecutor antes de la 1.a operacion), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, commit del acta `675b9969` (ACTA DE LA VUELTA 90 DEL AUDITOR, leido de git log), HEAD real de apertura `675b9969` (sellado por el ejecutor antes de la 1.a operacion), arboles de `dataset/` IGUALES: VERDE** |
 
-**LA FILA DEL MARCADOR NO SE IMPRIME A PROPOSITO**, y se dice por que en vez de
-callarlo: el corri `python scripts/recomputar_marcador.py 3388` en apertura y en
-cierre (los dos dan **A 551 / B 72 / C 5 / D 2.760, n 3.388, sin cambio**, guardado
-en `docs/loop/SALIDA_V90_MARCADOR_CRIBADO_APERTURA.txt` y `..._CIERRE.txt`), pero
-esa salida esta en el formato plano del cribado (`  A 551`), no en el formato de
-diccionario que el modo `--fase04` del tallador exige para esta fila
-(`'A': (\d+)`); ningun instrumento de esta vuelta produce ese segundo formato, y
-por la regla "la celda que no salga de un instrumento no se escribe" la fila
-opcional simplemente no se talla, en vez de fabricarsela a mano. **El marcador NO
-se movio esta vuelta** (la fase 04 no toca el cribado), y la cifra de arriba esta
-citada de su propio recomputo, no tecleada.
+**LA FILA DEL MARCADOR NO SE IMPRIME A PROPOSITO** (mismo motivo que la vuelta
+90): corri `python scripts/recomputar_marcador.py 3388` en apertura y en cierre
+(los dos dan **A 551 / B 72 / C 5 / D 2.760, n 3.388, sin cambio**, guardado en
+`docs/loop/SALIDA_V91_MARCADOR_CRIBADO_APERTURA.txt` y `..._CIERRE.txt`), pero el
+tallador `--fase04` exige el formato de diccionario (`'A': (\d+)`) para esa fila
+y ningun instrumento de esta vuelta lo produce; por la regla "la celda que no
+salga de un instrumento no se escribe", la fila opcional no se talla. **El
+marcador NO se movio esta vuelta** (fase 04 no toca el cribado).
 
-**LAS ARISTAS SON LA UNICA CELDA QUE CAMBIA (fuera de las filas derivadas), Y ES
-LA ESCRITURA DE `OP-E-06`, NO UNA DISCREPANCIA:** `+113 / +113 / +226 / +113` en
-`nodos_siguientes` / `nodos_previos` / suma / union, que es exactamente el numero
-de aristas ESCRITAS esta vuelta (ver TAREA 4). El sha256 del `master_graph.json`
-**cambia**: de `1671895b2a6c...` (apertura, identico al cierre de la vuelta 89) a
-`9acfc02d9c80e3ba1793de7c28ea44b499dbc79711d13dea83db4a3706484b42` (cierre de esta
-vuelta).
+**LAS ARISTAS SON LA UNICA CELDA QUE CAMBIA (fuera de las derivadas), Y ES LA
+ESCRITURA DE `OP-E-07`:** `+86 / +86 / +172 / +86`, exactamente las 86 aristas
+ESCRITAS (ver TAREA 4). El sha256 de `master_graph.json` **cambia**: de
+`9acfc02d9c80e3ba1793de7c28ea44b499dbc79711d13dea83db4a3706484b42` (apertura,
+identico al cierre de la vuelta 90) a
+`a2936350db530f80c39e07fe96c92770f26453af6c09378a74b5eb005ff12738` (cierre de
+esta vuelta), medido con `git show <ref>:dataset/metadata/master_graph.json |
+sha256sum` sobre las dos refs.
+
+**LA VARA MAS DURA, EL DIFF DE LA UNION ENTERA DEL GRAFO** entre la apertura
+(`675b9969`) y el cierre (`WORK`), `docs/loop/SALIDA_V91_DIFF_UNION.txt`: **solo
+en apertura (borradas): 0 | solo en cierre (nuevas): 86**, y esas 86 CALZAN
+EXACTO, conjunto contra conjunto, contra las 86 filas `ESCRITA` del log de
+escritura (verificado con un cotejo propio, sin diferencia).
 
 El ciclo de tres (`scripts/run_phase1.py --reaplico-curaduria`,
 `scripts/etiquetas_de_cara.py --aplicar`, `scripts/sync_assets_web.py`) se corrio
-completo dos veces (apertura y cierre), verificado con `git status --porcelain --
-dataset/ web/lib/assets/` en CERO despues del ciclo completo las dos veces (antes
-de escribir las aristas de `OP-E-06` entre medio). `etiquetas_de_cara.py` cambia
-las mismas 71 etiquetas las dos veces (no persisten en `dataset/nodos/`, son
-recalculadas por `run_phase1.py --reaplico-curaduria` cada vez que ese comando
-regenera `master_graph.json`; es comportamiento esperado, verificado igual en la
-apertura y en el cierre).
+completo en la apertura (sobre el arbol pristino, tras un `git stash` temporal de
+los cambios de la TAREA 4 para poder medir la apertura sin perderlos, restaurados
+despues con `git stash pop`) y en el cierre (sobre el arbol ya con las 86
+aristas escritas), verificado con `git status --porcelain -- dataset/
+web/lib/assets/` en CERO despues del ciclo completo las dos veces.
+`etiquetas_de_cara.py` cambia las mismas 71 etiquetas las dos veces (no
+persisten en `dataset/nodos/`, se recalculan cada vez que `run_phase1.py`
+recompila `master_graph.json`; comportamiento esperado, verificado igual en la
+apertura y en el cierre, y ya declarado en el reporte de la vuelta 90).
 
-## TAREA 1: LOS REGISTROS DEL ACTA 89
+## TAREA 1: LA RELECTURA DIRIGIDA DEL BANCO 9.22 (2082, 2084, 2112)
 
-Registrado en `docs/plan/04_ENLACES.md` (seccion nueva "REGISTRO DE LA VUELTA 89
-(ACTA DEL AUDITOR), TAREA 1 DE LA VUELTA 90"): las dos caidas de reporte de la
-vuelta 89 con su medicion (el truncado a 200 que en dos ejemplos mide 305 y 263,
-y el caso rojo que compara `"ENTRA"` consigo mismo), la caida del auditor (la
-escalada automatica no encargada, acta 89 seccion 6 punto 1), y las siete
-adjudicaciones de la seccion 4 (4.1 a 4.7), cada una con su linea de
-`ACTA_AUDITOR.md` citada. Commit `fc7fa309`.
+El encargo (acta 90, adjudicacion 4.1) pedia una relectura dirigida contra el
+test de las DOS LINEAS del banco 9.22 antes de tocar la recomendacion escrita en
+`docs/PENDIENTES.md` en la vuelta 90. La relectura, hecha en esta vuelta sobre el
+campo `razon` COMPLETO de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`: **cada una de
+las tres razones nombra UNA SOLA linea explicita con su paso**, y justifica el
+"segundo sentido" con la formula de reparto que el banco reserva para la clase D
+(*"cada uno trae lo suyo"*), no con una segunda linea identificada en el otro
+nodo. **VEREDICTO: NO SOSTIENE.** La direccion, leida con la misma vara de
+`vuelta90_tarea4_direccion_ope06.py` (quien dice la linea es la madre, quien
+trae el procedimiento de esa linea es el hijo):
 
-## TAREA 2: LA BOLSA `OP_E_06_REBASE_V90.jsonl`
+| puesto | direccion (madre -> hijo) |
+|---:|---|
+| 2082 | `validacion_con_franquiciados` -> `preparar_candidato_validacion` |
+| 2084 | `gestion_responsabilidad_vicaria` -> `control_responsabilidad_manual` |
+| 2112 | `capitalizacion_adecuada_del_franquiciador` -> `estimacion_inversion_inicial_franquiciador` |
 
-`scripts/loop/vuelta90_tarea2_rebase_ope06.py` parte de V89 (117 filas, sin
-tocar) y aplica: **ENTRA el 530** (`estrategia_de_innovacion_de_producto ->
-estrategia_de_innovacion_y_tecnologia`, tomado de V88, adjudicacion 4.1), **SALE
-el 932** (`cumplimiento_magnuson_moss -> mecanismo_resolucion_disputas`,
-adjudicacion 4.2). El instrumento verifica en tiempo de ejecucion que la cifra
-final sea **exactamente 117** y que el conjunto de puestos sea DISTINTO del de
-V89 (no solo el numero): las dos condiciones dieron VERDE (`docs/loop/
-SALIDA_V90_TAREA2_REBASE_V90.txt`). Los puestos **581 y 650** quedan anotados en
-`docs/PENDIENTES.md` como candidatos de una pasada posterior (adjudicacion 4.3):
-se caen por como quedo cosechada su frase, no por su contenido. Commit
-`fc7fa309`.
+**LA EXCLUSION DE `OP-E-06` NO SE TOCA** (los tres siguen sin escribirse: era
+correcta por la letra de la operacion, no por la etiqueta). **LO QUE SE
+CORRIGE** es la recomendacion: correccion aditiva en `docs/PENDIENTES.md`, sin
+borrar el texto viejo, citando `ACTA_AUDITOR.md` (lineas 30626 a 30638, 30788 a
+30811) y `BANCO_DE_TEXTOS.md` (lineas 2523, 2539 a 2541, 2577 a 2580, 2594 a
+2602). Los tres pasan de candidatos de ENLACE MUTUO a candidatos de escalera de
+una sola direccion, en una pasada posterior fuera de `OP-E-06` (misma familia
+que los puestos 581 y 650 ya anotados). Commit `56e0f84c`.
 
-## TAREA 3 (BLOQUEANTE): LA ESCALADA DEL TALLADOR Y EL CASO ROJO POR MUTACION
+## TAREA 2: LA CIFRA DE `OP-E-06`, 192 A 113, ESCRITA ENTERA
 
-**3.a, la escalada que quedo sin ejecutar el 26 ago.** `scripts/loop/
-tallar_conteo_campo.py`, tallador hermano de `tallar_cabecera_reporte.py`: dado
-un JSONL y un campo, cuenta la distribucion de longitud DIRECTO del fichero (no
-tecleada) y coteja una lista de puestos citables contra su `len` real. **CASO
-OBLIGATORIO, contra el ejemplar de la vuelta 89**
-(`docs/loop/SALIDA_V90_TAREA3A_CASO_OBLIGATORIO.txt`, EXIT 0): tallar
-`docs/plan/COSECHA_RAZONES_D.jsonl` con `--campo frase --longitud-exacta 200` da
-**397 filas, 270 con `len` exactamente 200, 23 por encima (maximo 335), 104 por
-debajo**, y `--verificar-puestos 1134,1149,1995,2023,2082,2106,2038` marca **2023
-(305) y 2082 (263) como DISTINTOS**, no como "verificado": es la vara que la
-decision del fundador puso ("las DOS caidas de la vuelta 89 tienen que caer
-dentro de su alcance"), y la primera cae dentro.
+Nueva seccion en `docs/plan/04_ENLACES.md` ("LA CIFRA DE `OP-E-06`, ENTERA, DE
+192 A 113"): doce eslabones, cada uno con su fuente (acta, fichero o
+instrumento), citando lineas exactas de las salidas de las vueltas 88, 89 y 90:
 
-**3.b, el caso rojo probado por mutacion.** `scripts/loop/
-verificar_caso_rojo_por_mutacion.py`: arnes generico `probar_por_mutacion()` que
-muta la ENTRADA de un criterio real (no el literal del lado derecho de un
-assert) y exige que el veredicto CAMBIE. Su autoprueba
-(`docs/loop/SALIDA_V90_TAREA3B_AUTOPRUEBA.txt`, EXIT 0) reproduce a proposito el
-defecto EXACTO de la caida 3.2 del acta 89 (`veredicto_2 = "ENTRA"` como
-constante) y confirma que **cae en rojo**, y valida en paralelo un caso positivo
-(un criterio que si depende de la entrada) que pasa. Es la vara de la segunda
-caida ("una afirmacion sobre una salida"): sin este arnes, el "caso rojo" de la
-89 se habria publicado igual; con el, cae.
+> 192 (evidencia con direccion explicita) -> (-16, frente 4 del dedupe; los
+> otros tres frentes en 0) -> 176 -> (-47, sin palabra de direccion) -> **129**
+> (bolsa V88) -> (-12, releidas enteras sin desarrollo real) -> **117** (bolsa
+> V89) -> [bloqueo: la reversion de la fila 117 de `OP-E-01`, NO un conteo de
+> la bolsa, liberado en la vuelta 89] -> **117** (bolsa V90, +1/-1 por las
+> adjudicaciones 4.1/4.2 del acta 89: ENTRA 530, SALE 932) -> (-3, banco 9.22)
+> -> **114** con direccion -> **113 ESCRITA + 1 YA_ESTABA + 0 ESCALERA_ROTA**.
 
-Aplicado sobre si mismo antes de tocar `OP-E-06`: `scripts/loop/
-vuelta90_tarea3_prueba_mutacion_tallador.py` prueba por mutacion la unica pieza
-de juicio del tallador nuevo (`clasifica_longitud()`), mutando el CAMPO real de
-una fila fabricada (200 caracteres a 305, el largo real del puesto 2023) y
-confirmando que el veredicto pasa de `IGUAL` a `MAYOR`
-(`docs/loop/SALIDA_V90_TAREA3B_MUTACION_TALLADOR.txt`, EXIT 0). Commit `919841c0`.
+Cada eslabon del 192 al 129 sale de `docs/loop/SALIDA_V88_TAREA5_REBASE_OPE06.txt`
+(TAREA 5.a/5.b/5.c de la vuelta 88, lineas citadas en `04_ENLACES.md`); el
+eslabon a 117 (V89) sale de `docs/loop/SALIDA_V89_TAREA3_REBASE_OPE06.txt`; el
+paso de V89 a V90 (117 a 117, conjunto distinto) esta verificado por el auditor
+en `ACTA_AUDITOR.md` lineas 30565 a 30572; y el cierre (113/1/0) sale de
+`docs/loop/SALIDA_V90_TAREA4_ESCRITURA.txt`, cruzado contra el diff de la union
+del grafo por el auditor en su acta 90, seccion 1.7. Commit `56e0f84c`.
 
-## TAREA 4: `OP-E-06` ABRE CON LA BOLSA V90
+## TAREA 3 (BLOQUEANTE): EL TALLADOR DE CIFRAS DE COMPOSICION
 
-**Primera mitad, la direccion.** `scripts/loop/vuelta90_tarea4_direccion_ope06.py`
-lee la direccion de las 117 filas sobre el campo `razon` COMPLETO de
-`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (no sobre la `frase` truncada a 200
-caracteres de la cosecha, que en varias filas corta justo el nombre del nodo que
-hace falta leer): el nodo que la razon describe despachando/diciendo/nombrando
-"en UNA LINEA" es la madre; el que "trae el procedimiento (de esa linea)" es el
-hijo. 108 de 117 se clasifican por expresion regular; 6 se leyeron a mano sobre
-la razon completa, cada una con su cita literal en el codigo (530, 552, 1261,
-1787, 2015, 2023). **HALLAZGO QUE MUEVE LA CUENTA, marcado DISCUTIBLE:** al leer
-la razon completa, TRES pares (**2082, 2084, 2112**) citan literalmente "banco
-9.22" con "CONTINUA en los dos sentidos": son ENLACE MUTUO, no la escalera de una
-sola direccion que `OP-E-06` exige por su propia `verificacion`. Quedan
-EXCLUIDOS de esta vuelta y anotados en `docs/PENDIENTES.md` para una operacion de
-dos aristas aparte. Verificado: **114 con direccion + 3 excluidos = 117**
-(`docs/loop/SALIDA_V90_TAREA4_DIRECCION.txt`, EXIT 0). Commit `aeb66e78`.
+**Por que era bloqueante:** la caida de reporte de la vuelta 90 (acta 90, seccion
+3.1) fue una cifra de COMPOSICION ("cuantas filas de esta salida se resolvieron
+por alias") que `tallar_conteo_campo.py` (solo mide LONGITUD de un campo de un
+JSONL) no podia tallar. El auditor lo encargo con la racha de reporte en UNA y no
+en DOS, declarando por que en su seccion 6.1: el remedio construido no cubria la
+caida que ocurrio.
 
-**Segunda mitad, la escritura, con la via de OP-C-05 cableada.**
+`scripts/loop/tallar_composicion_salida.py`, hermano nuevo: dado un fichero de
+salida y un patron de clasificacion (regex con grupos nombrados), cuenta filas
+por clase, ENUMERA los puestos de cada clase, coteja esa enumeracion contra una
+lista citada (marca SOBRAN y FALTAN), y opcionalmente cuenta pares de
+sustitucion DISTINTOS comparando el par escrito contra el par crudo, posicion a
+posicion (necesario porque "filas" y "pares distintos" son cifras DISTINTAS
+cuando una misma sustitucion de nodo se repite en varias filas).
+
+**VARA DURA, corrida y citada** (`docs/loop/SALIDA_V91_TAREA3_COMPOSICION.txt`,
+EXIT 0): sobre `docs/loop/SALIDA_V90_TAREA4_ESCRITURA.txt`, clase "resuelto por
+alias", da **CATORCE filas, ONCE pares de sustitucion distintos**, y al cotejar
+contra la lista de once que el reporte de la vuelta 90 publico marca **1207 y
+1535 como FALTAN** (ademas del 2015, que el reporte de la vuelta 90 ya trataba
+en otra seccion): exactamente el agujero que `tallar_conteo_campo.py` no podia
+ver.
+
+**Caso rojo probado por mutacion**
+(`docs/loop/SALIDA_V91_TAREA3_MUTACION.txt`, EXIT 0), sobre `clasifica_fila()`,
+la unica pieza de juicio del tallador nuevo: mutando el campo real de una fila
+fabricada (`"sin alias"` a un par real de alias), el veredicto cambia de `"sin
+alias"` a `"resuelto por alias"`, como exige el arnes de
+`verificar_caso_rojo_por_mutacion.probar_por_mutacion`.
+
+**Mecanica de ROJO verificada con tres entradas malas** (fichero inexistente,
+patron que no casa ninguna linea, campo-clase ausente de los grupos del patron):
+en los tres casos, **EXIT 1 y CERO lineas impresas antes del mensaje ROJO**
+("NO SE TALLA NADA" es literal, no hay tabla parcial delante).
+
+**Pulido del mismo paquete** (acta 90, seccion 1.11): `tallar_conteo_campo.py`
+ahora valida la existencia de `--verificar-puestos` ANTES de imprimir la tabla
+de distribucion, para que un ROJO por puesto inexistente no imprima primero una
+tabla y diga "NO SE TALLA NADA" despues (la observacion menor de la vuelta 90).
+El caso obligatorio de la vuelta 90 se reproduce identico (397/270/23/104, 2023
+y 2082 DISTINTOS de 200). Commit `5783d081`.
+
+## TAREA 4: `OP-E-07` ABRE, 86 ARISTAS ESCRITAS
+
+**Re-base de la bolsa (101 de la ficha, core 74 / environmental 12 /
+exportacion 11 / entrega 4, confirmado)** contra el grafo de hoy con los mismos
+cuatro frentes de dedupe que `OP-E-06` (`scripts/loop/
+vuelta91_tarea4_rebase_ope07.py`, la misma logica de `vuelta88_tarea5_rebase_ope06.py`
+copiada sin variar): frentes 1, 2 y 3 quitan **0**; frente 4 (arista ya en el
+grafo de hoy, resolviendo por alias) quita **13**, nombrados uno a uno. Quedan
+**88** (`docs/plan/OP_E_07_REBASE_V91.jsonl`,
+`docs/loop/SALIDA_V91_TAREA4_REBASE_OPE07.txt`, EXIT 0).
+
+**Direccion de los 88, leida de la razon COMPLETA** (`scripts/loop/
+vuelta91_tarea4_direccion_ope07.py`, `docs/loop/SALIDA_V91_TAREA4_DIRECCION.txt`,
+EXIT 0), NO de la frase truncada (la leccion de la TAREA 3.a de la vuelta 90,
+que fue justo la que dio los tres del 9.22): un criterio automatico
+(`extraer_direccion_automatica`, aislado y probado por mutacion) toma, para
+cada nodo, el segmento de texto desde su primera mencion hasta la mencion del
+otro id, y busca la marca de hijo ("trae", sin ser la formula autoreferencial
+"trae lo suyo", ni "desarrolla", ni "RECORRE EL CAMINO"); si exactamente un
+segmento la trae, ese id es el hijo. Resuelve **80 de 88**. **OCHO leidas a
+mano**, citadas con su frase literal en `DIRECCION_MANUAL` del propio script,
+porque su razon dice quien es la madre con una formula distinta a "trae" (ES EL
+INDICE / ES EL PROCEDIMIENTO DE UNA, ENUMERA / DIBUJA UNA, MONTA EL MARCO / LLENA
+LA PATA, o nombra "la madre" literalmente): puestos 1163, 1191, 1388, 1500,
+1778, 1847, 1886, 1992. **CERO excluidos por banco 9.22** (verificado en tiempo
+de ejecucion: ninguna de las 88 razones cita "9.22" ni "ENLACE MUTUO"). **CERO
+sin direccion resoluble.** Verificado: 88 con direccion + 0 excluidos + 0 sin
+direccion = 88 (`docs/plan/OP_E_07_DIRECCION_V91.jsonl`, 88 filas).
+
+**Escritura, con la via de OP-C-05 cableada:**
 
 ```
-python scripts/loop/vuelta89_tarea4_guarda_op_c05.py --vuelta 90 --antes
-python scripts/loop/vuelta90_tarea4_escribir_ope06.py
-python scripts/loop/vuelta89_tarea4_guarda_op_c05.py --vuelta 90 --despues
+python scripts/loop/vuelta89_tarea4_guarda_op_c05.py --vuelta 91 --antes
+python scripts/loop/vuelta91_tarea4_escribir_ope07.py
+python scripts/loop/vuelta89_tarea4_guarda_op_c05.py --vuelta 91 --despues
 ```
 
 `--antes`: **935 entradas que sobran, 711 nodos** (`docs/loop/
-SALIDA_V90_GUARDA_OPC05_ANTES.txt`), identico a la linea base de la vuelta 89.
-`--despues`: **935 entradas que sobran** (`docs/loop/
-SALIDA_V90_GUARDA_OPC05_DESPUES.txt`): **VERDE, la cuenta no crecio (+0)**.
+SALIDA_V91_GUARDA_OPC05_ANTES.txt`), identico a la linea base de las vueltas 89
+y 90. `--despues`: **935 entradas que sobran** (`docs/loop/
+SALIDA_V91_GUARDA_OPC05_DESPUES.txt`): **VERDE, la cuenta no crecio (+0)**.
 
-La escritura usa la semantica canonica de `resolverId` (`scripts/plan/
-aristas_duplicadas_tras_resolver.py`, camina la cadena de `ids_alias` entera,
-copiada sin variar): madre y hijo se resuelven al id vivo ANTES de escribir.
-**Dos hallazgos reales de esta resolucion, con nombre**, para que no queden
-escondidos en el diff:
+La escritura (`scripts/loop/vuelta91_tarea4_escribir_ope07.py`, misma semantica
+canonica de `resolverId` que `OP-E-06`, copiada sin variar) da **86 ESCRITA + 2
+YA_ESTABA + 0 ESCALERA_ROTA** de 88 (`docs/loop/SALIDA_V91_TAREA4_ESCRITURA.txt`,
+EXIT 0). **Los dos `YA_ESTABA`, nombrados:**
 
-1. **El puesto 2023 sale `YA_ESTABA`, no `ESCRITA`.** Su madre
-   (`certificado_de_origen_tratados_libre_comercio`) y la madre del puesto 2015
-   (`nafta_free_trade_agreements`, DEPRECADO) resuelven, por la cadena de alias,
-   al MISMO nodo vivo. Escribir los dos habria sido una entrada duplicada tras
-   resolver, la clase exacta que `scripts/plan/
-   aristas_duplicadas_tras_resolver.py` existe para contar. Procesando en orden
-   de puesto y releyendo el fichero en cada paso (como `scripts/loop/
-   vuelta87_tramo12_escribir.py`), el 2023 detecto la arista ya escrita por el
-   2015 y no la repitio.
-2. **Cinco pares mas escribieron sobre el ALIAS de la razon, no sobre el id
-   literal citado en el titulo**, porque su madre o su hijo resulto ser un id
-   deprecado con alias vivo: `pivotar_o_proceder` (deprecado) resuelve a
-   `pivote_o_proceder` (vivo, 4 aristas: puestos 956, 1160, 1345, 1472, 1546),
-   `warrants_deuda_convertible` a `warrant_pricing_venture_debt` (puesto 1286),
-   `seleccion_etapa_fondo_vc` a `embudo_secuencial_de_inversores` (puesto 1169),
-   `diseno_organizacional_equipos_innovacion` a `equipo_multifuncional_real`
-   (puesto 1013), `seis_medios_comunicacion_cliente` a
-   `estrategia_multicanal_bienvenida` (puesto 1012), `generar_multiples_opciones`
-   a `pensamiento_convergente_divergente` (puesto 1270), y `build_metrics_
-   toolset`/`metricas_cohortes` a `metricas_de_adquisicion_activacion`/
-   `analisis_de_cohortes` (puesto 1545, los dos lados por alias). **Verificado
-   uno por uno contra el `git diff` de cada fichero**: el nombre que aparece
-   modificado en `dataset/nodos/` es siempre el id VIVO, nunca el deprecado.
+1. **Puesto 1388** (`ocho_fases_experiencia_cliente -> fase_acclimate_experiencia_cliente`):
+   la misma arista que el puesto **1020** de la misma bolsa (`fases_de_retencion_de_clientes
+   -> fase_acclimate_experiencia_cliente`, resolviendo por alias) ya escribio antes en el
+   mismo orden de puesto.
+2. **Puesto 1946** (`control_exportaciones_bis -> export_administration_regulations`):
+   la misma arista que el puesto **1945** de la misma bolsa (`control_exportaciones_bis ->
+   regulaciones_exportacion_ear`, resolviendo por alias) ya escribio antes.
 
-**Resultado:** `docs/loop/SALIDA_V90_TAREA4_ESCRITURA.txt` (EXIT 0): **113
-ESCRITA, 1 YA_ESTABA, 0 ESCALERA_ROTA**, de 114 pares. Las cuatro cifras de
-aristas se movieron exactamente `+113 / +113 / +226 / +113` (verificado contra la
-cabecera tallada arriba: calzan al digito). **172 ficheros de
-`dataset/nodos/` tocados** (`git status --porcelain -- dataset/nodos/ | wc -l`),
-menos que `113 * 2` porque varios nodos son extremo de mas de un par (por
-ejemplo `pivote_o_proceder`, extremo de cinco). `OPERACIONES.jsonl` actualizada:
-`OP-E-06` gana tres lineas de `evidencia` y un ADDENDUM DE EJECUCION en `nota`
-con la cifra completa (114/113/1/0, los 3 excluidos, y el resultado de
-`OP-C-05`); `estado` se queda en `LISTA`, mismo criterio que `OP-E-01` y
-`OP-E-04` (el estado de verdad es el repo y el commit, no un campo nuevo, backlog
-del 14 ago 2026).
+**Idempotencia probada** (`docs/loop/SALIDA_V91_TAREA4_IDEMPOTENCIA.txt`, EXIT
+0): correr `vuelta91_tarea4_escribir_ope07.py` una segunda vez sobre el arbol ya
+escrito da **0 ESCRITA de 88, 88 YA_ESTABA, 0 ESCALERA_ROTA**, y `git status
+--porcelain -- dataset/` no gana ningun fichero nuevo por esa segunda corrida.
 
-## LOS TRES PARES DE ENLACE MUTUO (2082, 2084, 2112), Y POR QUE SON EL HALLAZGO MAS IMPORTANTE DE ESTA VUELTA
-
-Ninguno de los tres mueve un dato: quedaron sin escribir, y sin escribir siguen.
-**Lo que importa es que la bolsa V90, si se hubiera escrito con una sola
-direccion forzada sobre los tres, habria escrito una escalera sobre un enlace
-mutuo**, exactamente lo que `OP-C-05` (lista blanca por evidencia) y el banco
-9.22 existen para impedir. Se encontraron porque la TAREA 4 lee la `razon`
-COMPLETA, no la `frase` truncada de la cosecha (la misma leccion de la TAREA
-3.a, aplicada donde de verdad podia doler: no en una tabla de reporte, sino en
-una escritura real). Van a `docs/PENDIENTES.md` para una operacion de dos
-aristas aparte, con su cita literal cada uno.
+**139 ficheros de `dataset/nodos/` tocados** en toda la vuelta (`git diff
+--name-only 675b9969..HEAD -- dataset/nodos/ | wc -l` da 139; las dos
+correcciones aditivas de la TAREA 1 y 2 no tocan `dataset/nodos/`, asi que los
+139 son integros de la TAREA 4), menos que `86 * 2 = 172` porque varios nodos
+son extremo de mas de un par (por ejemplo `pivotar_o_proceder`, cuya alias vive
+resuelto en varias filas). `OPERACIONES.jsonl` actualizada: `OP-E-07` gana un
+ADDENDUM DE EJECUCION en `nota` con la cifra completa; `estado` se queda en
+`LISTA`, mismo criterio que `OP-E-01`, `OP-E-04` y `OP-E-06`. Commits `efb427bc`
+(TAREA 4) y `1626d81b` (addendum de `OPERACIONES.jsonl`).
 
 ## DISCUTIBLES MARCADOS, PARA LA RELECTURA CIEGA DEL AUDITOR
 
-1. **Los tres pares de enlace mutuo (2082, 2084, 2112), excluidos de OP-E-06.**
-   Marcado DISCUTIBLE no porque dude de la exclusion (la razon de los tres cita
-   "banco 9.22" literal, no hay ambiguedad de lectura), sino porque es la unica
-   decision de ESTA vuelta que cambia la FORMA de la bolsa (117 se convierten en
-   114 a escribir, no en 117): si el auditor lee la razon de los tres y
-   encuentra una lectura distinta, la cuenta de esta vuelta se mueve.
-2. **Las seis direcciones leidas a mano** (530, 552, 1261, 1787, 2015, 2023),
-   porque la clasificacion automatica no las resolvio y dependen de mi lectura
-   de la razon completa, citada en el codigo de `scripts/loop/
-   vuelta90_tarea4_direccion_ope06.py` (variable `DIRECCION_MANUAL`). Las 108
-   restantes salen de una regla mecanica (buscar el verbo de "una linea" pegado
-   al id) y no dependen de mi lectura.
-3. **El puesto 2023 como `YA_ESTABA`**, porque depende de que `nafta_free_trade_
-   agreements` resuelva de verdad a `certificado_de_origen_tratados_libre_
-   comercio` (verificado con `res()` en vivo, ver TAREA 4) y no de una lectura
-   mia: si el auditor corre el mismo `res()` y da otro nodo, la cuenta de 113
-   ESCRITA se mueve a 114.
+1. **Las OCHO direcciones de OP-E-07 leidas a mano** (puestos 1163, 1191, 1388,
+   1500, 1778, 1847, 1886, 1992), porque el criterio automatico no las resolvio
+   y dependen de mi lectura de la razon completa, citada en `DIRECCION_MANUAL`
+   de `vuelta91_tarea4_direccion_ope07.py`. Las 80 restantes salen de una regla
+   mecanica (segmento de cada id, marca de hijo) y no dependen de mi lectura.
+2. **La relectura dirigida del banco 9.22 (TAREA 1): el veredicto NO SOSTIENE,
+   y las tres direcciones de la escalera que le siguen.** Marcado porque es una
+   lectura mia sobre una figura que el propio banco reconoce como rara (dos
+   ejemplares en 1.100 pares); si el auditor lee las tres razones y encuentra
+   que si sostienen (o que la direccion es la otra), la correccion aditiva de
+   `PENDIENTES.md` se mueve.
+3. **Los dos `YA_ESTABA` de OP-E-07 (1388 y 1946)**, porque dependen de que
+   `res()` resuelva de verdad las cadenas de alias citadas (verificado en vivo,
+   ver TAREA 4) y no de una lectura mia: si el auditor corre el mismo `res()` y
+   da otro nodo, la cuenta de 86 ESCRITA se mueve.
+4. **El frente 4 del dedupe de OP-E-07 (13 quitados)**: depende de la misma
+   `existe_arista()` con resolucion por alias que OP-E-06 uso, aplicada ahora
+   sobre un grafo que YA tiene las 113 aristas de OP-E-06 dentro; si esa
+   deteccion tuviera un caso ciego, alguno de los 88 podria en realidad ya
+   tener arista y duplicarse. La via de OP-C-05 (935 antes / 935 despues) es la
+   contraprueba independiente de que no paso.
 
 ## PENDIENTES DE DOCTRINA
 
-Ninguna. Las tres adjudicaciones de esta vuelta (530 entra, 932 sale, los tres
-2082/2084/2112 excluidos por enlace mutuo) salen de la letra ya adjudicada de
-`OP-E-06` y del banco 9.22, no de una regla nueva.
+Ninguna. Las cuatro tareas de esta vuelta salen citando regla escrita: el banco
+9.22 con su test de las dos lineas (TAREA 1), la propia `verificacion` de
+`OP-E-06` contra el descarte silencioso (TAREA 2), `EJECUTOR.md` regla 1 sobre
+la escalada del tallador (TAREA 3), y la `verificacion` de `OP-E-07` mas la
+semantica canonica de `resolverId` y la via de `OP-C-05` (TAREA 4).
+
+## LA COMPARACION FINAL
+
+`python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 91 --comparar
+docs/loop/REPORTE.md`, corrida DESPUES de escribir este fichero y ANTES del
+commit de cierre: se cita su salida completa a continuacion, sin editar.
+
+```
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+  filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+```
+
+EXIT 0. Salida completa en `docs/loop/SALIDA_V91_COMPARAR_CIERRE.txt`.
 
 ## COMMITS DE LA VUELTA
 
-`git log --format='%h %s' 314ca33a..HEAD` (medido al escribir esta seccion,
-antes del commit de cierre): `fc7fa309` (TAREA 1 y 2), `919841c0` (TAREA 3),
-`aeb66e78` (TAREA 4, primera mitad, direccion). Este reporte y la escritura de
-`OP-E-06` (TAREA 4, segunda mitad) van en el commit de cierre, el siguiente
-despues de este.
+`git log --format='%h %s' 675b9969..HEAD` (medido al escribir esta seccion,
+antes del commit de cierre): `56e0f84c` (TAREA 1 y 2), `5783d081` (TAREA 3),
+`efb427bc` (TAREA 4), `1626d81b` (addendum de `OPERACIONES.jsonl`). Este
+reporte va en el commit de cierre, el siguiente despues de este.
 
 ## CON EL FRENO DELANTE
 
-La racha de reporte vuelve a CERO al relanzar (regla del acta 89, aplicada por
-el fundador). La regla de las tres seguidas sigue viva. La racha de clase o
-cifra publicada esta en CERO, no en una.
+La racha de reporte queda en UNA de tres: ninguna caida nueva de esta especie
+en esta vuelta (medido contra el propio encargo, punto por punto, y contra la
+cabecera tallada, identica al digito). La racha de clase o cifra publicada
+sigue en CERO.
