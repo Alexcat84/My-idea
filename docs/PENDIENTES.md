@@ -3065,3 +3065,27 @@ a mano los pares `cumplimiento_magnuson_moss -> prohibicion_tie_in_sales` (581) 
 hermano de familia (650) por CONTENIDO (no por frase cosechada), con el mismo criterio de
 `OP-E-06` ("la frase dice quien desarrolla a quien"). **No bloquea nada de la fase 04**:
 ninguna operacion vigente depende de estos dos puestos.
+
+## TRES PARES DE LA BOLSA V90 SON ENLACE MUTUO (banco 9.22), NO ESCALERA: EXCLUIDOS DE `OP-E-06` (TAREA 4 de la vuelta 90)
+
+Al leer la direccion de las 117 filas de `docs/plan/OP_E_06_REBASE_V90.jsonl` sobre el
+campo `razon` completo de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (no sobre la `frase`
+truncada a 200 caracteres de la cosecha), TRES citan LITERALMENTE "banco 9.22" con la
+formula "CONTINUA en los dos sentidos": la doctrina del ENLACE MUTUO
+(`docs/plan/04_ENLACES.md`, seccion "LAS CINCO C TAMBIEN SON DE ESTA FASE"), no la
+escalera de una sola direccion que `OP-E-06` exige por su propia `verificacion` ("UNA
+SOLA DIRECCION por arista, de la madre al hijo").
+
+| puesto | par | razon (cita literal) |
+|---:|---|---|
+| **2082** | `preparar_candidato_validacion <-> validacion_con_franquiciados` | "Por la vara del banco 9.6.1, CONTINUA en los dos sentidos, banco 9.22: uno trae el trabajo con la red, el otro trae el entrenamiento del que pregunta." |
+| **2084** | `control_responsabilidad_manual <-> gestion_responsabilidad_vicaria` | "Por la vara del banco 9.6.1, CONTINUA en los dos sentidos, banco 9.22: uno defiende con seguros y letreros, el otro defiende con la eleccion de las palabras." |
+| **2112** | `capitalizacion_adecuada_del_franquiciador <-> estimacion_inversion_inicial_franquiciador` | "Por eso CONTINUA en los dos sentidos, banco 9.22." |
+
+**QUEDAN FUERA de la bolsa escrita por `OP-E-06` en la vuelta 90** (114 de las 117 filas de
+V90 se escriben; estas tres no). Forzar una sola direccion sobre un par que su propia
+razon declara mutuo seria leer solo la mitad de la evidencia.
+
+**RECOMENDACION QUE VIAJA CON ELLA:** los tres van a una operacion de ENLACE MUTUO (DOS
+ARISTAS cada uno, como la seccion "LAS CINCO C" de `docs/plan/04_ENLACES.md` ya trata los
+pares del banco 9.22), no a `OP-E-06`. **No bloquea nada de la fase 04.**
