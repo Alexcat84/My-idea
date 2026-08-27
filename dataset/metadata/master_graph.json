@@ -11911,7 +11911,8 @@
       ],
       "entregable_esperado": "Carta de control implementada y en uso activo para el proceso, con criterios claros de interpretación",
       "nodos_previos": [
-        "causas_especiales_y_comunes_variacion"
+        "causas_especiales_y_comunes_variacion",
+        "eliminacion_inspeccion_masiva_por_control_estadistico"
       ],
       "nodos_siguientes": [
         "analisis_variacion_desempeno_servicio",
@@ -35133,7 +35134,8 @@
       "nodos_previos": [
         "brainstorming",
         "diagrama_afinidad",
-        "prueba_teorias_causa_raiz"
+        "prueba_teorias_causa_raiz",
+        "formulacion_teorias_causa"
       ],
       "nodos_siguientes": [
         "hojas_de_verificacion",
@@ -42208,7 +42210,9 @@
       "nodos_previos": [
         "control_estadistico_de_procesos_en_tiempo_real"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "carta_de_control_shewhart"
+      ],
       "condiciones_activacion": [
         "Cuando la organización realiza inspección al 100% pese a tener procesos estables"
       ],
@@ -57019,7 +57023,8 @@
         "dmaic_fase_measure"
       ],
       "nodos_siguientes": [
-        "prueba_teorias_causa_raiz"
+        "prueba_teorias_causa_raiz",
+        "diagrama_causa_efecto"
       ],
       "condiciones_activacion": [
         "Cuando se ha completado el análisis de síntomas y se requiere identificar posibles causas del problema."
@@ -67677,7 +67682,8 @@
         "diagnostico_antes_remedio"
       ],
       "nodos_siguientes": [
-        "revision_progreso"
+        "revision_progreso",
+        "metas_negocio_calidad"
       ],
       "condiciones_activacion": [
         "Si has logrado mejoras puntuales pero no las has sostenido en el tiempo"
@@ -76597,7 +76603,8 @@
         "modelo_shingo_evaluacion_excelencia",
         "presentaciones_alta_direccion",
         "aprobacion_alta_direccion",
-        "consejo_de_calidad_y_rol_del_director"
+        "consejo_de_calidad_y_rol_del_director",
+        "institucionalizar_breakthrough"
       ],
       "nodos_siguientes": [
         "despliegue_metas"

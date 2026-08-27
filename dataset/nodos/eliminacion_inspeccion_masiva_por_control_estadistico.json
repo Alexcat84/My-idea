@@ -15,7 +15,9 @@
   "nodos_previos": [
     "control_estadistico_de_procesos_en_tiempo_real"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "carta_de_control_shewhart"
+  ],
   "condiciones_activacion": [
     "Cuando la organización realiza inspección al 100% pese a tener procesos estables"
   ],
