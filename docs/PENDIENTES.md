@@ -3522,3 +3522,54 @@ Las otras cuatro (1388, 1500, 1778, 1886) tienen su cita textual propia en el
 comentario de `DIRECCION_MANUAL`, pero eso es la lectura del propio ejecutor de la
 vuelta 91 que las escribio, no una lectura ciega independiente. Las tres sin lectura
 quedan para la TAREA 5 de esta vuelta (si queda vuelta) o para una vuelta futura.
+
+## LAS TRES LECTURAS CIEGAS QUE FALTABAN EN `DIRECCION_MANUAL`: LAS TRES CONFIRMADAS (vuelta 94, TAREA 5)
+
+Mecanica: volcar los `pasos_accionables` de los dos nodos de cada par SIN la razon
+(`docs/loop/SALIDA_V94_TAREA5_LECTURAS_CIEGAS.txt`), adjudicar a ciegas, y SOLO
+DESPUES destapar la razon completa (`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`) y el
+comentario de `DIRECCION_MANUAL`. Si alguna resultaba ser otro 1992 (direccion que
+vive en el comentario y no en la razon), iba a relectura conjunta sin resolverse
+sola. **NINGUNA DE LAS TRES lo es**: las tres razones nombran la madre EXPLICITAMENTE
+(no solo el comentario), y las tres coinciden con mi lectura ciega.
+
+**PUESTO 1163** (`analisis_de_cohortes <-> customer_retention_tactics`). Lectura
+ciega: `analisis_de_cohortes` termina en un paso generico ("disena y ajusta tus
+estrategias de retencion") mientras que `customer_retention_tactics` son puras
+tacticas concretas de retencion (correos, programa de lealtad, notificaciones,
+Dia 1 y 100 dias, llamadas antes de renovar): **A_MADRE** (`analisis_de_cohortes`
+nombra la categoria en una linea, el otro la despliega en 6 tacticas). La razon,
+destapada: *"analisis_de_cohortes dice en su **paso 5**, en **UNA LINEA**, disenar
+y ajustar las estrategias de retencion... y `customer_retention_tactics` **trae el
+catalogo de esa linea**"*. **COINCIDE**, y la razon nombra la madre con paso
+numerado, no solo el comentario.
+
+**PUESTO 1191** (`ingenieria_de_prompts_efectiva <-> prompting_alta_variacion`).
+Lectura ciega: `ingenieria_de_prompts_efectiva` son 4 pasos GENERICOS de cualquier
+prompt (rol, contexto, restricciones, iterar); `prompting_alta_variacion` es una
+tecnica ESPECIALIZADA para generar ideas variadas (rol inusual, pedir ideas
+distintas, analogias extremas, varias tandas, filtrar a mano): **A_MADRE**
+(el marco general nombra las piezas de cualquier peticion, el otro especializa esas
+piezas para un proposito distinto). La razon, destapada: *"ingenieria_de_prompts_
+efectiva **describe las piezas** de cualquier peticion... **la madre** busca
+precision, este busca dispersion"*. **COINCIDE**, y la razon usa LITERALMENTE la
+palabra "la madre" para nombrarla (no "trae" ni "desarrolla", pero nombra
+explicitamente igual que 1191 ya documentaba en el comentario de `DIRECCION_
+MANUAL` de la vuelta 91): no es un 1992, porque el nombramiento esta EN LA RAZON,
+no solo en el comentario del ejecutor.
+
+**PUESTO 1847** (`diseno_para_el_medio_ambiente <-> eco_efectividad_2`). Lectura
+ciega: `diseno_para_el_medio_ambiente` cierra con un paso que cita modelos de
+inspiracion (biomimetica, cradle-to-cradle, ecologia industrial) en una linea;
+`eco_efectividad_2` es exactamente uno de esos modelos con su procedimiento propio
+(ciclo de vida completo, nutrientes biologicos/tecnicos, metas positivas de
+diseno): **A_MADRE** (el marco cita el modelo, el modelo desarrolla su
+procedimiento). La razon, destapada: *"diseno_para_el_medio_ambiente dice en su
+**paso 4**, en **UNA LINEA**, buscar inspiracion... en modelos como CRADLE TO
+CRADLE... y `eco_efectividad_2` **es uno de esos modelos con su procedimiento**"*.
+**COINCIDE**, y la razon nombra la madre con paso numerado.
+
+**CONCLUSION: las tres se quedan como estan, sin relectura conjunta.** Las tres
+razones nombran la madre por escrito (dos con "paso N, en UNA LINEA", una con la
+palabra literal "la madre"), y las tres coinciden con la lectura ciega independiente
+de esta vuelta.
