@@ -53,6 +53,31 @@ SALIDA: docs/plan/OP_E_07_DIRECCION_V91.jsonl (madre, hijo, puesto, dominio).
 NO ESCRIBE NINGUNA ARISTA EN dataset/: eso es una tarea aparte
 (vuelta91_tarea4_escribir_ope07.py).
 
+--- EL GUARDA QUEDA CABLEADO POR DEFECTO (vuelta 93, TAREA 3.e) ---
+
+POR QUE (discutible 3 del reporte de la vuelta 92, CONFIRMADO por el acta 92
+seccion 2.3): el guarda de dos condiciones (nacido en la vuelta 92 para sacar
+el 1098, extendido en la vuelta 93 para sacar tambien el 1009 y para los dos
+defectos medidos por el acta 92, `scripts/loop/vuelta93_tarea3_guarda_
+direccion.py`) vivia APARTE de `extraer_direccion_automatica`, como un paso
+POSTERIOR que un llamador podia olvidar encadenar. Desde esta vuelta,
+`extraer_direccion_automatica` llama al guarda ELLA MISMA, al final, antes de
+devolver: si `guarda_direccion(razon)` dice "SALE", el veredicto se fuerza a
+"AMBIGUA" sin importar lo que la deteccion de "trae" haya encontrado. Una
+operacion futura que importe esta funcion (como ya hace `scripts/loop/
+vuelta91_tarea4_prueba_mutacion_direccion.py`) o que corra este script de
+punta a punta YA NO PUEDE saltarse el guarda sin querer: esta dentro de la
+funcion, no en un filtro aparte que hay que acordarse de llamar.
+
+ESTE CAMBIO NO ALTERA `docs/plan/OP_E_07_DIRECCION_V91.jsonl` (el fichero ya
+escrito en la vuelta 91 es un artefacto historico, no se regenera solo): solo
+cambia lo que una corrida NUEVA de este script (o una importacion nueva de la
+funcion) devuelve a partir de esta vuelta. La prueba de mutacion original de
+la vuelta 91 (`vuelta91_tarea4_prueba_mutacion_direccion.py`) sigue pasando
+sin cambios: su razon fabricada trae "en su paso 2, en UNA LINEA", que el
+guarda reconoce como marca de madre positiva y no niega la jerarquia, asi que
+el guarda da PASA y no interfiere con ese caso.
+
 USO:
   python scripts/loop/vuelta91_tarea4_direccion_ope07.py
 """
@@ -60,6 +85,7 @@ import io
 import json
 import os
 import re
+import sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PLAN = os.path.join(RAIZ, "docs", "plan")
@@ -108,14 +134,29 @@ def cargar_jsonl(ruta):
         return [json.loads(l) for l in f if l.strip()]
 
 
+def _guarda_direccion_cableado(razon):
+    """TAREA 3.e (vuelta 93): importa el guarda de dos condiciones VIGENTE
+    (el de la vuelta 93, que ya incluye las reparaciones de las dos falsas
+    del acta 92) y lo corre sobre la razon completa. Import perezoso, dentro
+    de la funcion, para que este fichero siga sin dependencias en tiempo de
+    carga (igual que antes de esta vuelta)."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from vuelta93_tarea3_guarda_direccion import guarda_direccion
+    return guarda_direccion(razon)
+
+
 def extraer_direccion_automatica(razon, id_a, id_b):
     """LA UNICA PIEZA DE JUICIO AUTOMATICA, aislada a proposito para que su
     caso rojo se pueda probar por mutacion (EJECUTOR.md regla 1). Devuelve
     "A_HIJO", "B_HIJO" o "AMBIGUA" (incluye el caso de no hallar alguno de
-    los dos ids en el texto)."""
+    los dos ids en el texto, o el caso en que el guarda de dos condiciones
+    dice "SALE": CABLEADO POR DEFECTO desde la vuelta 93, TAREA 3.e, para que
+    un llamador futuro no pueda saltarselo sin querer)."""
     pos_a = razon.find(id_a)
     pos_b = razon.find(id_b)
     if pos_a == -1 or pos_b == -1:
+        return "AMBIGUA"
+    if _guarda_direccion_cableado(razon) == "SALE":
         return "AMBIGUA"
     if pos_a < pos_b:
         seg_a, seg_b = razon[pos_a:pos_b], razon[pos_b:]

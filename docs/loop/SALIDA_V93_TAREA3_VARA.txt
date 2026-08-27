@@ -1,0 +1,23 @@
+==========================================================================================
+VARA DURA, CASO 1: las 88 razones de OP_E_07_REBASE_V91.jsonl
+==========================================================================================
+total: 88, SALEN: 2 [1009, 1098]
+CASO 1 OK: el guarda tiene que marcar EXACTAMENTE [1009, 1098] como SALE (decision de la TAREA 2: el 1009 sale).
+
+==========================================================================================
+VARA DURA, CASO 2: las 114 de OP_E_06_DIRECCION_V90.jsonl, el 1160 tiene que PASAR, 0 SALEN
+==========================================================================================
+total: 114, SALEN: 0 []
+veredicto del 1160: PASA
+CASO 2 OK: el 1160 tiene que dar PASA y NINGUN otro de los 114 puede salir.
+
+==========================================================================================
+VARA DURA, CASO 3: EL TERCER CONJUNTO, reconstruido por este script
+==========================================================================================
+tercer conjunto: 81 filas (escrito en C:\Users\AlexDesk\Documents\I have an idea\docs\plan\OP_E_07_TERCER_CONJUNTO_V93.jsonl)
+SALEN: 0 []
+los tres falsos SALE conocidos (995, 1007, 1024) PASAN: OK
+NINGUN otro SALE en el tercer conjunto.
+
+==========================================================================================
+LA VARA ALCANZA: los tres casos obligatorios se cumplen.

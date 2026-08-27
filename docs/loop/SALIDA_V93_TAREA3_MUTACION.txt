@@ -1,0 +1,57 @@
+CASO 1 (heredado de la vuelta 92): el 1098 REAL da SALE. Inyectar una
+marca de madre con paso numerado tiene que cambiar el veredicto a PASA.
+==============================================================================
+PRUEBA DE MUTACION: guarda_direccion sobre el puesto 1098 (inyectar marca de madre con paso numerado)
+==============================================================================
+  entrada normal -> criterio da: 'SALE' (esperado: 'SALE')
+  entrada MUTADA -> criterio da: 'PASA' (esperado: 'PASA')
+  PROBADO POR MUTACION: el veredicto SI depende de la entrada, y los dos lados calzan con lo esperado.
+
+
+CASO 2 (heredado de la vuelta 92): el 1160 REAL da PASA. Quitarle su
+marca de paso numerado tiene que cambiar el veredicto a SALE.
+==============================================================================
+PRUEBA DE MUTACION: guarda_direccion sobre el puesto 1160 (quitar la marca de madre numerada)
+==============================================================================
+  entrada normal -> criterio da: 'PASA' (esperado: 'PASA')
+  entrada MUTADA -> criterio da: 'SALE' (esperado: 'SALE')
+  PROBADO POR MUTACION: el veredicto SI depende de la entrada, y los dos lados calzan con lo esperado.
+
+
+CASO 3 (nuevo de esta vuelta, el defecto que se repara): el 1009 REAL da
+SALE (sin 'prueba el problema' en la lista). Inyectarle una marca de
+madre con paso numerado tiene que cambiar el veredicto a PASA.
+==============================================================================
+PRUEBA DE MUTACION: guarda_direccion sobre el puesto 1009 (inyectar marca de madre con paso numerado en vez de 'prueba el problema')
+==============================================================================
+  entrada normal -> criterio da: 'SALE' (esperado: 'SALE')
+  entrada MUTADA -> criterio da: 'PASA' (esperado: 'PASA')
+  PROBADO POR MUTACION: el veredicto SI depende de la entrada, y los dos lados calzan con lo esperado.
+
+
+CASO 4 (nuevo de esta vuelta, el falso SALE): el 1007 REAL da PASA (con la
+formula nueva 'cierra con UNA LINEA', y NINGUNA otra marca en su razon,
+verificado aparte). Quitarsela tiene que cambiar el veredicto a SALE.
+==============================================================================
+PRUEBA DE MUTACION: guarda_direccion sobre el puesto 1007 (quitar la marca nueva 'cierra con UNA LINEA')
+==============================================================================
+  entrada normal -> criterio da: 'PASA' (esperado: 'PASA')
+  entrada MUTADA -> criterio da: 'SALE' (esperado: 'SALE')
+  PROBADO POR MUTACION: el veredicto SI depende de la entrada, y los dos lados calzan con lo esperado.
+
+
+CASO 5 (nuevo de esta vuelta, la otra marca nueva): el 995 REAL trae DOS
+marcas ('termina con UNA LINEA' Y 'el paso nombra, el hijo ejecuta'), asi que
+quitar una sola no basta para mover el veredicto (la otra lo sostiene sola).
+Se neutraliza primero 'termina con UNA LINEA' (el veredicto SIGUE PASA, por
+'el paso nombra, el hijo ejecuta') y ESA es la entrada del caso; mutarla de
+nuevo quitando 'el paso nombra, el hijo ejecuta' tiene que dar SALE.
+==============================================================================
+PRUEBA DE MUTACION: guarda_direccion sobre el puesto 995 (quitar la marca nueva 'el paso nombra, el hijo ejecuta', ya sin 'termina con UNA LINEA')
+==============================================================================
+  entrada normal -> criterio da: 'PASA' (esperado: 'PASA')
+  entrada MUTADA -> criterio da: 'SALE' (esperado: 'SALE')
+  PROBADO POR MUTACION: el veredicto SI depende de la entrada, y los dos lados calzan con lo esperado.
+
+
+LOS SEIS CASOS: PROBADOS POR MUTACION. guarda_direccion SI depende de su entrada.
