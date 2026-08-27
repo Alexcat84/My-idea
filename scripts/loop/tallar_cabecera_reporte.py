@@ -244,6 +244,60 @@ CASO POSITIVO OBLIGATORIO (vuelta 83): tallar el tramo 8 con
 (por error) SI trajera una de las unidades ya decididas en el registro bajo
 su CABEZA tiene que dar ROJO, nombrando el par; sobre el fichero real (que
 solo trae las 30 frescas) da VERDE.
+
+--- TAREA 2.b: EL COTEJO LOCALIZA LA TABLA POR SU CABECERA DE SECCION (vuelta 84) ---
+
+POR QUE NACE (acta de la vuelta 83, seccion 4). `--comparar` aceptaba
+CUALQUIER fila de 4 o mas celdas con la primera celda numerica, EN TODO EL
+FICHERO, como si fuera la tabla del tramo. Dos averias, medidas por el
+auditor: (i) el reporte de la vuelta 83 partio la tabla en una de TRES
+celdas (alcanzabilidad sola) y otra de CINCO (alcanzabilidad + decision +
+razon), y el cotejo viejo solo sabia leer la de cuatro o mas, asi que
+cotejaba contra la de CINCO, cuya celda de alcanzable trae PROSA
+("ALCANZABLE 3 saltos via ...") en vez del texto exacto tallado ("ALCANZABLE
+(3 saltos)"), dando 30 DISTINTAS de 30; (ii) por buscar en TODO el fichero,
+se tragaba filas de tablas AJENAS (la del horneado de la TAREA 2.a, la de la
+TAREA 4) con tal de que su primera celda fuera un numero, contandolas como
+"inventadas".
+
+EL ARREGLO: `tabla_cadena_del_fichero(ruta, tramo)` ya NO barre el fichero
+entero. Primero localiza la SECCION del tramo por su encabezado markdown (una
+linea que empieza por `#` y menciona "tramo N" y "alcanzabilidad", sin
+importar el orden ni las mayusculas); despues, DENTRO de esa seccion (hasta
+el siguiente encabezado), busca la tabla por su FILA DE TITULOS EXACTA
+(`# | par (paso) | alcanzable previo (vara de la cadena)`, la misma que este
+tallador imprime), y toma solo las filas que la siguen. Si la seccion no
+aparece, o si aparece pero no trae esa fila de titulos exacta, es ROJO (no
+calza) con el mensaje explicito de cual de las dos cosas falto: NUNCA cae de
+vuelta al barrido viejo.
+
+CONVENCION QUE EL REPORTE TIENE QUE SEGUIR para que el cotejo la encuentre:
+la tabla tallada por `--tramo-cadena` se pega ENTERA (titulos incluidos)
+bajo un encabezado markdown propio que mencione el numero de tramo y la
+palabra "alcanzabilidad" (por ejemplo, "### La tabla de alcanzabilidad
+(vara de la cadena) del tramo 9"). Una tabla de "lectura" con mas columnas
+(decision, razon) puede convivir en la misma seccion o en otra: el cotejo
+solo mira la fila de titulos exacta, no la posicion ni la cantidad de tablas
+alrededor.
+
+CASO POSITIVO OBLIGATORIO (vuelta 84): `--vuelta 83 --tramo-cadena 8
+--comparar docs/loop/REPORTE.md` (el REPORTE.md de la vuelta 83, antes de
+que este arreglo tuviera donde encontrar su tabla) tiene que seguir dando
+ROJO, y ahora con el mensaje nuevo (seccion o fila de titulos no encontrada
+con esa forma), no con "30 DISTINTAS" ni con "filas inventadas" fantasma.
+
+--- TAREA 2.c: EL HORIZONTE DE LA VARA SE PUBLICA (vuelta 84) ---
+
+POR QUE NACE (acta de la vuelta 83, seccion 1.10 y adjudicacion 6.7). La vara
+de la cadena (`scripts/loop/vuelta80_vara_cadena.py`, `marcar_alcanzables`)
+tiene un HORIZONTE de seis saltos: "SIN CAMINO PREVIO" no quiere decir
+inalcanzable, quiere decir "inalcanzable en seis saltos o menos". Ese dato
+vive en el codigo desde la vuelta 80 y no habia aparecido en un reporte. Este
+tallador no calcula el horizonte (no vuelve a correr la vara): el ejecutor lo
+publica como una linea de prosa debajo de la tabla pegada, citando el
+instrumento que la corrio sin horizonte para la vuelta de que se trate. No es
+una fila mas del tallador porque el fichero del filtro no trae esa cifra por
+defecto.
 """
 import argparse
 import io
@@ -730,24 +784,88 @@ def parse_filas_pipe(ruta):
     return filas_out
 
 
-def tabla_cadena_del_fichero(ruta):
-    """Busca filas con AL MENOS 4 celdas (# | par (paso) | alcanzable | decision)
-    cuya primera celda sea un numero entero: es la forma exacta de la tabla
-    de las lecturas frescas del reporte. Las filas de 3 celdas (la tabla de
-    las unidades "ya decididas", sin columna de alcanzabilidad) se ignoran a
-    proposito. Primera aparicion por numero gana. Devuelve dict numero ->
-    celda alcanzable (la tercera)."""
+RE_HEADING = re.compile(r"^#{1,6}\s")
+
+HEADER_TALLADA = ["#", "par (paso)", "alcanzable previo (vara de la cadena)"]
+
+
+def _es_heading_de_tramo(linea, tramo):
+    """TAREA 2.b (vuelta 84): LOCALIZA LA TABLA DEL TRAMO POR SU CABECERA DE
+    SECCION, no por la forma de sus filas (acta de la vuelta 83, seccion 4: el
+    cotejo viejo aceptaba cualquier fila de 4+ celdas con primera celda
+    numerica en TODO el fichero, y asi se tragaba filas de tablas ajenas, la
+    del horneado de la TAREA 2.a y la de la TAREA 4). Una linea de encabezado
+    markdown (empieza por 1 a 6 '#') que mencione 'tramo N' y 'alcanzabilidad'
+    (en cualquier orden, sin importar mayusculas) marca el INICIO de la
+    seccion de ese tramo."""
+    if not RE_HEADING.match(linea):
+        return False
+    if not re.search(r"(?i)\btramo\s*%d\b" % tramo, linea):
+        return False
+    return "alcanzabilidad" in linea.lower()
+
+
+def tabla_cadena_del_fichero(ruta, tramo):
+    """TAREA 2.b (vuelta 84): localiza la seccion del TRAMO por su cabecera
+    (una linea markdown que menciona 'tramo N' y 'alcanzabilidad'), y DENTRO
+    de esa seccion (hasta el siguiente encabezado) busca la tabla TALLADA por
+    su propia fila de titulos exacta (HEADER_TALLADA: '# | par (paso) |
+    alcanzable previo (vara de la cadena)'), que es la unica tabla que este
+    tallador imprime con esa forma. Toma TODAS las filas que sigan a esa fila
+    de titulos (saltando la de separadores) hasta la siguiente linea que no
+    sea de tabla. Devuelve (dict numero -> celda alcanzable, None) si se
+    encuentra, o (None, mensaje de fallo) si la seccion o la tabla no
+    aparecen: NUNCA cae de vuelta al barrido viejo de "cualquier fila con 4+
+    celdas", que es exactamente el defecto que este remedio corrige."""
+    texto = io.open(ruta, encoding="utf-8").read()
+    lineas = texto.splitlines()
+
+    inicio_seccion = None
+    for i, linea in enumerate(lineas):
+        if _es_heading_de_tramo(linea, tramo):
+            inicio_seccion = i
+            break
+    if inicio_seccion is None:
+        return None, ("no se encontro, en %s, un encabezado markdown que mencione "
+                      "'tramo %d' y 'alcanzabilidad': la tabla del tramo se localiza "
+                      "por su cabecera de seccion, no por la forma de sus filas" % (ruta, tramo))
+
+    fin_seccion = len(lineas)
+    for i in range(inicio_seccion + 1, len(lineas)):
+        if RE_HEADING.match(lineas[i]):
+            fin_seccion = i
+            break
+
+    seccion = lineas[inicio_seccion:fin_seccion]
+    idx_header_tabla = None
+    for i, linea in enumerate(seccion):
+        s = linea.strip()
+        if not (s.startswith("|") and s.endswith("|")):
+            continue
+        celdas = [limpiar(c) for c in s.split("|")[1:-1]]
+        if celdas == HEADER_TALLADA:
+            idx_header_tabla = i
+            break
+    if idx_header_tabla is None:
+        return None, ("la seccion del tramo %d (encabezado en la linea %d de %s) no trae "
+                      "la fila de titulos exacta de la tabla tallada (%s): la tabla no se "
+                      "puede localizar dentro de esa seccion"
+                      % (tramo, inicio_seccion + 1, ruta, " | ".join(HEADER_TALLADA)))
+
     resultado = {}
-    for celdas in parse_filas_pipe(ruta):
-        if len(celdas) < 4:
-            continue
-        n = celdas[0]
-        if not n.isdigit():
-            continue
-        if n in resultado:
-            continue
-        resultado[n] = celdas[2]
-    return resultado
+    j = idx_header_tabla + 1
+    while j < len(seccion):
+        s = seccion[j].strip()
+        if not (s.startswith("|") and s.endswith("|")):
+            break
+        celdas = [limpiar(c) for c in s.split("|")[1:-1]]
+        if celdas and set("".join(celdas)) <= set("-: "):
+            j += 1
+            continue  # fila separadora
+        if len(celdas) >= 3 and celdas[0].isdigit():
+            resultado[celdas[0]] = celdas[2]
+        j += 1
+    return resultado, None
 
 
 def cargar_registro_decididas(ruta_registro, fallos):
@@ -843,7 +961,12 @@ def modo_tramo_cadena(vuelta, tramo, comparar_ruta, registro_ruta=None):
     if not os.path.exists(ruta):
         print("  ROJO: no existe %s" % ruta)
         return 1
-    existentes = tabla_cadena_del_fichero(ruta)
+    existentes, fallo_seccion = tabla_cadena_del_fichero(ruta, tramo)
+    if fallo_seccion:
+        print("  ROJO: %s" % fallo_seccion)
+        print("  TABLA DE LA CADENA: NO CALZA CON EL TALLADOR")
+        print("FIN")
+        return 1
     diferencias = 0
     ausentes = []
     for u in unidades:

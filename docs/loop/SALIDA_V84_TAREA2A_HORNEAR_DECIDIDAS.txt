@@ -1,0 +1,43 @@
+==============================================================================
+HORNEADO docs/plan/OP_E_01_DECIDIDAS.jsonl, TAREA 2.a vuelta 84 (POR PATRON)
+==============================================================================
+
+--- FICHEROS ESCRIBIR DESCUBIERTOS POR PATRON (SALIDA_V*_TRAMO*_ESCRIBIR.txt) ---
+  tramo 3: SALIDA_V77_TRAMO3_ESCRIBIR.txt | 30 filas nuevas, 0 citadas, 30 sin paso | pasos de: (ninguno)
+  tramo 4: SALIDA_V78_TRAMO4_ESCRIBIR.txt | 30 filas nuevas, 0 citadas, 0 sin paso | pasos de: SALIDA_V78_TRAMO4_DOSSIER30.txt
+  tramo 5: SALIDA_V79_TRAMO5_ESCRIBIR.txt | 23 filas nuevas, 7 citadas, 0 sin paso | pasos de: SALIDA_V79_TRAMO5_DOSSIER30.txt
+  tramo 6: SALIDA_V80_TRAMO6_ESCRIBIR.txt | 10 filas nuevas, 0 citadas, 0 sin paso | pasos de: SALIDA_V80_TRAMO6_DOSSIER30.txt, SALIDA_V80_TRAMO6_FILTRO_P91_GUARDA_CADENA.txt
+  tramo 7: SALIDA_V82_TRAMO7_ESCRIBIR.txt | 3 filas nuevas, 27 citadas, 0 sin paso | pasos de: SALIDA_V82_TRAMO7_FILTRO_P91_GUARDA_CADENA.txt
+  tramo 8: SALIDA_V83_TRAMO8_ESCRIBIR.txt | 30 filas nuevas, 0 citadas, 0 sin paso | pasos de: SALIDA_V83_TRAMO8_DOSSIER30.txt, SALIDA_V83_TRAMO8_FILTRO_P91_GUARDA_CADENA.txt
+
+--- FICHEROS LECTURA CRUDA DESCUBIERTOS POR PATRON (SALIDA_V*_OPE01_TRAMO*_LECTURA.txt) ---
+  tramo 1 (SALIDA_V75_OPE01_TRAMO1_LECTURA.txt): 30 candidatos volcados, 0 filas reconstruibles
+  tramo 2 (SALIDA_V76_OPE01_TRAMO2_LECTURA.txt): 30 candidatos volcados, 0 filas reconstruibles
+
+--- DISCREPANCIAS DE DESCUBRIMIENTO (mas de un fichero para el mismo tramo) ---
+  NINGUNA
+
+--- DISCREPANCIAS DE CUENTA (cabecera del fichero vs lineas leidas) ---
+  SALIDA_V80_TRAMO6_ESCRIBIR.txt | YA DECIDIDOS EN VUELTAS ANTERIORES (citados, no re-derivados) | cabecera dice 20 | leidas 0
+
+--- PARES REPETIDOS ENTRE TRAMOS (declarados, no corregidos a mano) ---
+  NINGUNO
+
+--- VERIFICACION CONTRA EL GRAFO DE HOY (dataset/metadata/master_graph.json) ---
+  filas ASCENDIDAS (NO SE ENLAZA -> ESCRITA, arista SI presente hoy): 5
+     mejora_calidad_crosby -> programa_mejora_calidad_14_pasos (tramo 3, SALIDA_V77_TRAMO3_ESCRIBIR.txt)
+     descubrir_necesidades_del_cliente -> traduccion_necesidades_cliente (tramo 6, SALIDA_V80_TRAMO6_ESCRIBIR.txt)
+     gestion_efectiva_benchmarking -> reconocimiento_publico_recompensas (tramo 8, SALIDA_V83_TRAMO8_ESCRIBIR.txt)
+     estructura_competencias_six_sigma_lean -> evaluacion_desempeno_proyectos (tramo 8, SALIDA_V83_TRAMO8_ESCRIBIR.txt)
+     poder_a_traves_de_la_accion -> compromiso_organismico_en_la_accion (tramo 8, SALIDA_V83_TRAMO8_ESCRIBIR.txt)
+  filas DEGRADADAS (ESCRITA -> NO SE ENLAZA, arista NO presente hoy): 4
+     waterfall_vs_agile_development -> desarrollo_de_clientes_customer_development (tramo 3, SALIDA_V77_TRAMO3_ESCRIBIR.txt)
+     extraer_priorizar_hipotesis -> value_proposition_startup (tramo 4, SALIDA_V78_TRAMO4_ESCRIBIR.txt)
+     producto_mercado_fit_motores -> afinar_motor_crecimiento (tramo 5, SALIDA_V79_TRAMO5_ESCRIBIR.txt)
+     terminologia_clave_breakthrough -> analisis_sintomas (tramo 5, SALIDA_V79_TRAMO5_ESCRIBIR.txt)
+
+--- TOTALES ---
+  filas en el registro: 126 (76 ESCRITA, 50 NO SE ENLAZA)
+  candidatos de tramos 1 y 2 sin fila reconstruible: 60
+  escrito: docs/plan/OP_E_01_DECIDIDAS.jsonl (126 filas)
+FIN
