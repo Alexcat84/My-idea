@@ -617,6 +617,100 @@ que las filas 119 y 120.** La cifra final de la operacion (220 / 99 / 121,
 arriba) NO CAMBIA: la arista ya estaba escrita con la clase correcta, lo que
 cambia es la razon que la sostiene.
 
+**CORRECCION DECLARADA (29 ago 2026, vuelta 89): la correccion del 28 ago de
+arriba queda SUPERADA, y no se borra.** El auditor corrio la relectura
+conjunta del par 117 (acta de la vuelta 88, secciones 2.2 a 2.4 y
+adjudicacion 5.1) y la resolvio CONTRA el ejecutor: la clase pasa de `SE
+ESCRIBE` a **`NO SE ENLAZA`**, y la arista `juran_rcca_metodo ->
+diseno_implementacion_remedio` se revierte de las dos vistas.
+
+**(i) EL MOTIVO, citado entero y no resumido (acta de la vuelta 88, seccion
+2.2):**
+
+> El ejecutor contesta que el camino NO es la cadena propia de la madre, y
+> por lo tanto la arista sobrevive. La adjudicacion del auditor es la
+> contraria: SI es la cadena propia, y la clase es `NO SE ENLAZA`. El motivo
+> no es que el auditor lea distinto: es que la regla adjudicada tiene DOS
+> condiciones y el ejecutor le anade una TERCERA que no esta escrita.
+>
+> La regla, citada por su numero y no parafraseada (adjudicacion 6.1 del
+> acta 83, la que esta campaña lleva cinco pares citando): "un camino
+> ALCANZABLE solo cuenta como cableado establecido (o sea, solo mata la
+> arista) cuando es LA CADENA PROPIA DE LA MADRE: arranca de lo que el paso
+> nombra o de un hijo de un paso suyo, y avanza en el orden que la madre o
+> los propios nodos declaran. Un camino que no sale del paso no es cadena:
+> es alcanzabilidad."
+>
+> Las dos condiciones, medidas contra el camino del 117: (1) arranca de lo
+> que el paso nombra o de un hijo de un paso suyo: SI, arranca en
+> `definicion_problema_moms_2`, hijo directo de la madre y nodo de su paso
+> 1. (2) avanza en el orden que la madre o los propios nodos declaran: SI,
+> paso 1, luego los TRES nodos del paso 2 en el orden literal en que el paso
+> 2 los enumera, y desemboca en el nodo del paso 3. El unico tramo que la
+> madre no enumera (`prueba_teorias_causa_raiz -> evaluacion_alternativas_solucion
+> -> diseno_implementacion_remedio`) lo declaran los propios nodos, que es
+> la otra mitad literal de la condicion. Las dos se cumplen. No hay una
+> tercera condicion en la regla.
+>
+> De donde sale la tercera condicion del ejecutor, y por que no se sostiene.
+> El ejecutor la toma del banco 9.6.1, CAVEAT MEDIDO: "Si los hijos estan
+> encadenados en el orden que la madre enumera, la cadena cuenta como
+> cableado establecido. Si estan sueltos alrededor de la madre, se cuentan
+> los radios." El sujeto de esa frase son LOS HIJOS DE LA MADRE, y lo que
+> contrapone es una familia cableada en cadena contra una familia cableada
+> en radios: es una regla de como medir la silueta de una familia, no una
+> regla sobre los nodos por los que un camino pasa. `evaluacion_alternativas_solucion`
+> no es un hijo de esta madre, ni encadenado ni suelto: es un nodo ajeno a
+> la familia. Llamarlo "suelto alrededor de la madre" aplica la frase a un
+> sujeto que la frase no nombra. El ejemplar que el propio CAVEAT trae
+> (`proceso_diseno_modelo_negocio_5_fases`, cinco fases encadenadas) no
+> tiene ni un nodo intermedio ajeno: no decide este caso en ninguna
+> direccion.
+>
+> Y la prueba de proposito, que es la que el banco 9.6 pregunta de verdad:
+> el contenido queda "huerfano de camino", o sea "un nodo entero que el no
+> va a encontrar nunca, porque nada lo lleva alli"? No queda huerfano. El
+> lector que llega al paso 1 y camina hacia adelante por la escalera de la
+> propia madre desemboca en el hijo. Y el nodo que la madre no enumera no
+> es un desvio: es el tejido de un hueco que la madre se salta ella misma,
+> porque su paso 2 termina en "identificar la causa raiz" y su paso 3
+> empieza en "disenar e implementar el remedio", y elegir entre alternativas
+> es lo que va en medio. Contrastelo con el par 47 (adjudicacion 6.2 del
+> acta 83), donde el camino de seis saltos atravesaba `plan_a_b_c_soft_landing`,
+> `relaciones_con_clientes`, `flujos_de_ingresos`, `estructura_de_costos` y
+> `lectura_balance_general`: ahi si el camino se iba del tema, y por eso no
+> era la cadena de la madre.
+
+El auditor tambien reconocio, sin matiz, que la conducta del ejecutor fue la
+correcta: trajo una regla escrita, midio bien los hechos y decidio, que es
+lo que la relectura conjunta pide; lo que falla es la regla que le anadio,
+no el metodo.
+
+**(ii) EL PRECEDENTE DEL PAR 91 CITADO ARRIBA ("91: dos nodos, los dos
+pasos") ES INCORRECTO, medido con BFS (acta de la vuelta 88, seccion 2.3):
+el camino de `diseno_controles_proceso_mejorado` a
+`auditorias_calidad_proceso` tiene TRES intermedios, no dos**
+(`validacion_sistema_medicion`, el paso 5 de la madre;
+`autocontrol_y_controlabilidad`, el paso 6 de la madre; y
+`autocontrol_planificacion_servicio`, que el acta 85 no nombra y que es
+plausiblemente una segunda casa del paso 6 en el dominio de servicio, par
+395). El par 91 **no corrobora ninguna de las dos lecturas**: ni sostenia al
+ejecutor como el texto de arriba pretendia, ni sostiene al auditor. La
+adjudicacion del 117 no se apoya en el 91: se apoya en las dos condiciones
+de la 6.1 del acta 83 y en la prueba de proposito del banco 9.6, citadas
+enteras en (i).
+
+**LA CIFRA FINAL DE LA OPERACION QUEDA REESCRITA: donde arriba dice "220
+unidades leidas en total, 99 ESCRITA, 121 NO SE ENLAZA" la cifra vigente hoy
+es 220 unidades leidas en total, 98 ESCRITA, 122 NO SE ENLAZA**, rehorneada
+con `scripts/loop/vuelta85_hornear_decididas.py`
+(`docs/loop/SALIDA_V89_TAREA2_HORNEAR_OPE01.txt`) y verificada con
+`scripts/loop/vuelta83_guarda_decididas.py --bolsa docs/plan/PASO_NODO_CALIBRADO_FILTRADO_V87.jsonl`
+(`docs/loop/SALIDA_V89_TAREA2_GUARDA_DECIDIDAS.txt`): VERDE, TODA LA BOLSA
+ESTA DECIDIDA, con el indice 117 hoy `NO SE ENLAZA` (tramo 12). La fila 117
+de la tabla de arriba (columna "decision") queda tambien superada: donde
+dice `SE ESCRIBE` la decision vigente es `NO SE ENLAZA`.
+
 ---
 
 ## LOS SUELTOS DE RACIMOS, y los racimos con miembro ajeno
