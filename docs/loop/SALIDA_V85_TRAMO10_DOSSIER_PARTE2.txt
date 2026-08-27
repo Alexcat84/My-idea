@@ -1,0 +1,379 @@
+================================================================================
+NODO: analisis_flujo_proceso_servicio | dominio: quality
+titulo: Análisis del Diagrama de Flujo del Proceso de Servicio
+resumen_teorico: Los diagramas de flujo de proceso (mapas de proceso o blueprints de servicio) permiten visualizar las actividades del servicio, identificando la 'línea de interacción' (donde cliente y empleados interactúan), la 'línea de invisibilidad' (actividades visibles vs no visibles para el cliente) y los límites organizacionales. Se identifican puntos de proceso (P) donde pueden ocurrir problemas que causen insatisfacción del cliente, permitiendo implementar acciones preventivas.
+pasos_accionables:
+  1. Mapear todas las actividades del proceso de servicio incluyendo front-office y back-office
+  2. Identificar la línea de interacción cliente-empleado
+  3. Marcar la línea de invisibilidad entre actividades visibles y no visibles al cliente
+  4. Identificar puntos de proceso (P) donde pueden ocurrir problemas
+  5. Documentar problemas recurrentes conocidos (promesas no cumplidas, múltiples contactos, servicio incorrecto, etc.)
+  6. Implementar acciones preventivas en los puntos críticos identificados
+entregable_esperado: Diagrama de flujo de servicio (blueprint) completo con puntos críticos marcados y plan de acciones preventivas
+nodos_siguientes: ['reduccion_tiempo_ciclo', 'error_proofing_servicio']
+nodos_previos: ['diseno_servicio_calidad']
+================================================================================
+NODO: analisis_tco_roi_b2b | dominio: core
+titulo: Análisis de TCO y ROI en Ventas B2B
+resumen_teorico: En ventas business-to-business, los compradores evalúan no solo el precio sino el Costo Total de Propiedad (TCO: capacitación, infraestructura, cambios organizacionales) y el Retorno de Inversión (ROI: beneficios esperados frente a la inversión). Preparar estos análisis antes de reuniones de venta es clave para justificar el valor del producto frente a corporaciones.
+pasos_accionables:
+  1. Calcular el TCO estimado: costos de adopción, capacitación, infraestructura necesaria
+  2. Preparar un ROI hipotético antes de las reuniones iniciales con clientes corporativos
+  3. Comparar el ROI del producto contra la solución actual del cliente
+  4. Usar el análisis como material de apoyo (white paper) en el proceso de venta
+entregable_esperado: Documento o white paper con análisis de TCO y ROI para clientes B2B
+nodos_siguientes: ['validacion_hipotesis_ingresos', 'seleccion_de_proveedores_por_costo_total']
+nodos_previos: ['seleccion_estrategia_pricing', 'analisis_de_sensibilidad_riesgo']
+================================================================================
+NODO: auditorias_calidad_proceso | dominio: quality
+titulo: Auditorías de Calidad de Proceso
+resumen_teorico: Una auditoría de calidad de proceso es una revisión independiente in situ que compara el desempeño real de un proceso contra un estándar establecido, usando los procedimientos operativos del proceso. Estas auditorías frecuentemente revelan procedimientos inadecuados o inexistentes, más allá de verificar el cumplimiento de los existentes. Ejemplos incluyen las auditorías de aerolíneas en llegadas/salidas, interior/exterior de aviones, y las auditorías de McDonald's sobre calidad, servicio, limpieza y sanidad.
+pasos_accionables:
+  1. Definir las áreas específicas del proceso a auditar
+  2. Establecer una lista detallada de actividades y estándares numéricos a verificar
+  3. Realizar visitas anunciadas y no anunciadas para mayor objetividad
+  4. Registrar y comparar mediciones contra metas numéricas establecidas
+  5. Usar los checklists de autocontrol como fuente de temas específicos para la auditoría
+entregable_esperado: Informe de auditoría de proceso con hallazgos, comparación contra estándares y recomendaciones de mejora
+nodos_siguientes: ['six_sigma_dmaic']
+nodos_previos: ['control_calidad_operaciones_servicio', 'autocontrol_planificacion_servicio']
+================================================================================
+NODO: business_model_canvas_scorecard | dominio: core
+titulo: El Business Model Canvas como Scorecard Semanal
+resumen_teorico: El Business Model Canvas de Osterwalder, además de ser una foto estática del negocio, se usa en Customer Discovery como un scorecard semanal para rastrear el progreso en la búsqueda del modelo de negocio. Cada semana actualizas el canvas reflejando pivotes e iteraciones, resaltando en rojo los cambios respecto a la semana anterior. Esto permite ver claramente qué hipótesis cambiaron y cuáles se mantienen, generando un historial que documenta cómo evoluciona tu entendimiento del negocio con el tiempo. Es especialmente útil cuando no tienes claridad propia sobre tu modelo de negocio o necesitas visualizar tu progreso semana a semana de forma tangible.
+pasos_accionables:
+  1. Llenar el canvas inicial con tus hipótesis en las 9 áreas: segmentos, propuesta de valor, canales, relaciones, recursos, socios e ingresos
+  2. Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho, y ademas cada vez que obtengas nueva evidencia
+  3. Resaltar en rojo los cambios respecto a la semana anterior
+  4. Una vez que confirmes los cambios, integrarlos como el nuevo canvas base en negro para la siguiente semana
+  5. Repetir este proceso de forma continua durante todo tu customer discovery
+  6. Sal a validar cada hipótesis con clientes reales cara a cara.
+  7. Conserva todas las versiones del canvas como un flip book que documente la evolución de tu modelo de negocio.
+  8. Evita convertir el canvas en un plan operativo prematuro basado en suposiciones sin validar.
+entregable_esperado: Serie histórica de canvases semanales que documenta la evolución de tu modelo de negocio.
+nodos_siguientes: ['customer_validation', 'biblioteca_experimentos_validacion', 'pivote_o_proceder', 'filosofia_customer_validation', 'filosofia_validacion_clientes', 'intimacion_emocional_como_senal_de_verdad', 'startup_como_experimento_cientifico', 'usuarios_extremos_edge_cases', 'diseno_experimentos_hipotesis', 'customer_discovery', 'modelo_customer_development', 'pivote_startup']
+nodos_previos: ['problem_solution_fit', 'hipotesis_de_tamano_de_mercado', 'producto_minimo_viable', 'lienzo_modelo_negocio', 'pivotes_e_iteraciones', 'business_model_environment_mapping', 'business_plan_cinco_secciones', 'search_for_business_model']
+================================================================================
+NODO: capacidad_proceso_concepto | dominio: quality
+titulo: Capacidad de Proceso (Process Capability)
+resumen_teorico: La capacidad de proceso es la variación inherente medida del producto generado por un proceso en estado de control estadístico. Proporciona una predicción cuantificada de la adecuación del proceso, siendo fundamental para predecir variabilidad, elegir procesos, planificar secuencias de procesos, y establecer bases para control periódico y certificación de proveedores.
+pasos_accionables:
+  1. Confirmar que el proceso está en estado de control estadístico (sin causas asignables)
+  2. Definir claramente el proceso: máquina, método, material, personas involucradas
+  3. Recolectar datos representativos de mediciones de producto bajo condiciones estables
+  4. Calcular la desviación estándar del proceso (σ) a partir de datos de control
+  5. Comparar la variación de 6σ contra los límites de especificación
+  6. Utilizar la información resultante para decisiones de diseño, selección de procesos y control
+entregable_esperado: Informe de capacidad de proceso con distribución de variación cuantificada y su relación con especificaciones
+nodos_siguientes: ['planificacion_estudio_capacidad', 'indice_cp', 'indice_cpk', 'pre_control_estadistico', 'control_estadistico_de_procesos']
+nodos_previos: ['graficos_control_multivariados', 'tolerancia_estadistica_dimensiones_interactuantes', 'funcion_perdida_limites_especificacion', 'limites_especificacion_dimensiones_interactuantes']
+================================================================================
+NODO: competencias_director_calidad_bloom | dominio: quality
+titulo: Competencias del Director de Calidad basadas en Taxonomía de Bloom
+resumen_teorico: El Director de Calidad requiere competencias de liderazgo, planificación estratégica, gestión de relaciones con clientes, gestión de la cadena de suministro, sistemas de información de calidad y desarrollo de talento. Estas competencias se evalúan según los seis niveles de la Taxonomía de Bloom revisada (recordar, comprender, aplicar, analizar, evaluar, crear), siendo el Director quien debe dominar los seis niveles, a diferencia del Ingeniero de Calidad que requiere como mínimo los tres primeros.
+pasos_accionables:
+  1. Elaborar una matriz de competencias para el rol de Director de Calidad
+  2. Clasificar cada competencia según los niveles de Bloom aplicables
+  3. Evaluar al candidato o titular actual contra la matriz de competencias
+  4. Identificar brechas de conocimiento y diseñar plan de desarrollo
+entregable_esperado: Matriz de competencias del Director de Calidad con niveles de Bloom asignados y evaluación de brechas
+nodos_siguientes: ['desarrollo_capacidades_expertos_calidad', 'certificacion_profesional_calidad']
+nodos_previos: ['estructura_global_oficina_calidad']
+================================================================================
+NODO: consejo_de_calidad_y_rol_del_director | dominio: quality
+titulo: Consejo de Calidad y Rol del Director de Calidad
+resumen_teorico: El consejo de calidad es la instancia responsable de establecer visión, misión, valores y metas de calidad, revisar el progreso, integrar los objetivos de calidad en los planes de tu negocio y quitar los obstáculos del camino. Si tienes a alguien que lidera el tema calidad, esa persona cumple un doble rol: llevar el día a día de calidad y ayudarte a manejar la calidad como parte de la estrategia del negocio, así como quien lleva las finanzas te ayuda a decidir con los números.
+pasos_accionables:
+  1. Forma un consejo de calidad con las personas que toman las decisiones importantes en tu negocio
+  2. Define y comunica visión, misión, valores compartidos y tu política de calidad
+  3. Integra las metas de calidad en tus planes de negocio y de desempeño
+  4. Designa responsables para los proyectos clave de calidad
+  5. Revisa el progreso con frecuencia y elimina los obstáculos que encuentres
+entregable_esperado: Un documento simple con los roles, responsabilidades y calendario de revisiones de tu consejo de calidad
+nodos_siguientes: ['transferencia_de_actividades_a_departamentos_de_linea', 'rol_tactico_estrategico_oficina', 'metas_negocio_calidad']
+nodos_previos: ['comunicar_politicas_organizacionales']
+================================================================================
+NODO: customer_discovery_phase2_problem_test | dominio: core
+titulo: Customer Discovery Fase 2: Probar el Problema
+resumen_teorico: En esta fase el equipo sale del edificio para responder tres preguntas clave: ¿entendemos realmente el problema del cliente?, ¿le importa lo suficiente a la gente como para ser un gran negocio?, y ¿lo compartirían con sus amigos? Solo cuando problema y solución se confirman se logra el ajuste producto/mercado.
+pasos_accionables:
+  1. Diseñar experimentos de prueba del problema con clientes reales
+  2. Prepararse para contactos y entrevistas con clientes
+  3. Probar la comprensión del problema y su importancia percibida por el cliente
+  4. Profundizar en el entendimiento del cliente (perfiles, comportamientos)
+  5. Capturar conocimiento competitivo y de mercado durante las entrevistas
+entregable_esperado: Validación documentada de que el problema es real, importante y compartido por un segmento de clientes suficientemente grande
+nodos_siguientes: ['problem_solution_fit', 'actualizar_business_model_canvas_discovery', 'product_market_fit', 'necesidades_implicitas_vs_explicitas', 'actualizar_business_model_canvas_tuneup']
+nodos_previos: ['pass_fail_experiment_design', 'global_vs_local_maximum', 'mercados_multilaterales', 'pricing_tactics_models', 'diseno_experimentos_pass_fail', 'seleccion_estrategia_pricing']
+================================================================================
+NODO: decidir_vender_solo_online_o_tambien_tienda_fisica | dominio: entrega
+titulo: Decidir si vendes solo online o también en tienda física
+resumen_teorico: Un negocio puede vender solo por internet, sin local, o combinar tienda fisica y venta online. Cada opcion trae combinaciones distintas de comportamiento del comprador: alguien puede mirar en tu local y comprar en linea despues, o comprar en linea y recoger el en tu local, o reservar y pasar a retirar. Cada combinacion exige una logistica distinta de entrega y de devolucion, y afecta cuanto viaje hace el paquete y cuanto viaje hace el cliente. Decidir esto temprano evita construir una operacion de entrega pensada para un solo canal cuando en realidad terminaras atendiendo varios, cada uno con su propia forma de recibir y devolver mercancia.
+pasos_accionables:
+  1. Define si vas a operar sin local (solo online) o combinar tienda fisica y venta digital.
+  2. Si tienes local, decide si vas a ofrecer recoger en tienda ademas de entrega a domicilio.
+  3. Dibuja el recorrido que seguira tu cliente segun donde compra y donde recibe el producto.
+  4. Ajusta tu proceso de devoluciones a los canales que decidiste ofrecer, no a todos a la vez.
+entregable_esperado: Un mapa simple con los canales de venta y de entrega que tu negocio va a ofrecer.
+nodos_siguientes: ['vender_sin_stock_con_drop_shipping', 'encuestar_al_cliente_para_saber_que_valora']
+nodos_previos: ['herramientas_online_canal_fisico']
+================================================================================
+NODO: diseno_controles_proceso_mejorado | dominio: quality
+titulo: Diseño de Controles del Proceso Mejorado
+resumen_teorico: En la fase de control, el equipo diseña y documenta los controles necesarios para sostener las ganancias de la mejora. Esto incluye actualizar el FMEA, aplicar técnicas de a prueba de errores (mistake-proofing), establecer estándares de control basados en el desempeño real del nuevo proceso, y garantizar el autocontrol de los individuos mediante retroalimentación oportuna y autoridad para ajustar el proceso.
+pasos_accionables:
+  1. Actualizar el FMEA para identificar controles necesarios
+  2. Aplicar técnicas de mistake-proofing en las mejoras
+  3. Diseñar controles de calidad de proceso para Xs y Ys
+  4. Establecer estándares de control basados en el desempeño real
+  5. Determinar cómo se comparará el desempeño real con el estándar (SPC)
+  6. Establecer el autocontrol para los individuos responsables del proceso
+entregable_esperado: Plan de control de proceso actualizado con estándares, mecanismos de retroalimentación y mistake-proofing
+nodos_siguientes: ['gestion_resistencia_cultural_cambio', 'validacion_sistema_medicion']
+nodos_previos: ['diseno_de_mejoras_para_clientes']
+================================================================================
+NODO: empoderamiento_empleados | dominio: quality
+titulo: Empoderamiento e Involucramiento de Empleados
+resumen_teorico: Evolución del modelo taylorista de especialización hacia sistemas de alto desempeño donde los empleados participan activamente en la toma de decisiones. El proceso es gradual, comenzando por un entorno consultivo hasta llegar a equipos autogestionados con alta responsabilidad y sentido de pertenencia.
+pasos_accionables:
+  1. Evaluar el nivel actual de participación de los empleados en la toma de decisiones
+  2. Implementar un entorno consultivo inicial donde los líderes consulten opiniones antes de decidir
+  3. Formar equipos especiales o de proyecto para problemas específicos
+  4. Escalar gradualmente hacia equipos autodirigidos con mayor autoridad y responsabilidad
+entregable_esperado: Plan de evolución de participación de empleados con etapas definidas (consultivo, equipo de proyecto, autogestión)
+nodos_siguientes: ['equipos_blitz', 'normas_culturales_calidad', 'gestion_participativa_qc_circle_supervisores', 'intercambio_de_roles_para_motivacion']
+nodos_previos: ['sistemas_sociotecnicos']
+================================================================================
+NODO: estructura_organizacional_funcional_proceso | dominio: quality
+titulo: Estructuras Organizacionales: Funcional, por Proceso y Matricial
+resumen_teorico: Existen tres tipos básicos de organización para gestionar el trabajo: organización funcional (departamentos por especialidad, con eficiencia interna pero barreras entre áreas), organización por procesos (responsabilidad asignada a un dueño de proceso, con enfoque en cliente pero riesgo de diluir expertise funcional) y organización matricial (híbrido que combina ambos enfoques, requiriendo acuerdos negociados entre gerentes funcionales y dueños de procesos). Un enfoque emergente es la organización en red y los sistemas sociotécnicos (STS), que integran el sistema técnico y el social.
+pasos_accionables:
+  1. Evaluar ventajas y desventajas de la estructura funcional actual (eficiencia vs. silos)
+  2. Determinar si los procesos cross-funcionales requieren un dueño de proceso dedicado
+  3. Diseñar mecanismos matriciales de resolución de conflictos entre gerentes funcionales y dueños de proceso
+  4. Considerar la incorporación de equipos autodirigidos y roles de 'coach' para supervisores
+  5. Evaluar el nivel de involucramiento de empleados en equipos permanentes y ad hoc
+entregable_esperado: Diagrama de estructura organizacional seleccionada (funcional, por proceso o matricial) con roles, líneas de reporte y mecanismos de resolución de conflictos definidos
+nodos_siguientes: ['equipos_autodirigidos_servicio']
+nodos_previos: ['practicas_gerenciales_no_delegables']
+================================================================================
+NODO: fase_mobilizar_modelo_negocio | dominio: core
+titulo: Prepara el terreno antes de diseñar tu modelo de negocio (fase Mobilizar)
+resumen_teorico: Esta es la primera fase para diseñar tu modelo de negocio: pones sobre la mesa el objetivo, pruebas tus primeras ideas, planificas y armas tu equipo. El peligro más grande es que te enamores demasiado de tu idea inicial y eso te cierre la puerta a explorar otras posibilidades. Si trabajas dentro de una empresa ya establecida, además necesitas ganarte la legitimidad del proyecto, manejar los intereses de quienes ya tienen algo en juego, formar un equipo con gente de distintas áreas y guiar a quienes van a tomar la decisión final.
+pasos_accionables:
+  1. Define con claridad el objetivo, el alcance y el porqué de tu proyecto
+  2. Arma un equipo con gente de experiencias distintas, incluyendo diferentes niveles jerárquicos y áreas de expertise
+  3. Usa el Lienzo de Modelo de Negocio (Business Model Canvas) como lenguaje común para hablar del proyecto
+  4. Haz un ejercicio para poner a prueba tu idea (conocido como kill/thrill): dedica 20 minutos a buscar por qué podría fracasar y otros 20 a por qué podría funcionar
+  5. Si estás dentro de una empresa ya establecida, consigue el respaldo visible de quienes mandan y maneja los intereses de quienes podrían sentirse afectados
+  6. Educar a los tomadores de decisiones sobre modelos de negocio usando historias e imágenes, no teoría
+entregable_esperado: Tu equipo armado, el objetivo definido por escrito, y una primera validación de tu idea de negocio con el ejercicio kill/thrill
+nodos_siguientes: ['fase_entender_modelo_negocio', 'fase_entendimiento_investigacion_mercado']
+nodos_previos: ['proceso_diseno_modelo_negocio_5_fases', 'customer_development_team']
+================================================================================
+NODO: ganar_comprension_del_cliente | dominio: core
+titulo: Ganar Comprensión Profunda del Cliente
+resumen_teorico: Ve más allá de validar que el problema existe: entiende en profundidad cómo tu cliente vive su día a día. Su flujo de trabajo, cómo gasta su tiempo y su dinero, con quién interactúa, qué solución usa hoy y qué cambiaría su comportamiento actual. Lo logras saliendo a observarlo directamente: asiste a sus eventos, lee sus publicaciones, sigue a las personas que lo influencian, y hasta pasa un día haciendo lo que él hace. El objetivo es conocerlo tan bien que te perciba como 'uno de ellos', y así consigas información que va más allá de datos superficiales.
+pasos_accionables:
+  1. Investiga el flujo de trabajo actual de tu cliente y sus interacciones con otras personas o áreas
+  2. Pregunta qué otras soluciones usa hoy y si el problema lo comparten más personas en su entorno de trabajo
+  3. Explora qué haría cambiar su comportamiento de compra: el precio, las características, o un nuevo estándar
+  4. Pasa un día haciendo lo que hace tu cliente (por ejemplo, detrás de un mostrador o en una feria) y asiste a sus eventos
+  5. Identifica qué publicaciones lee y a quién sigue tu cliente
+  6. Documenta todos tus hallazgos de forma ordenada, con criterios claros de qué cuenta como validado
+entregable_esperado: Un documento con la comprensión profunda de tu cliente: su flujo de trabajo, sus influenciadores, sus hábitos de consumo de información, su comportamiento de compra y tus criterios de validación
+nodos_siguientes: ['captura_conocimiento_mercado', 'capturar_conocimiento_de_mercado', 'actualizar_modelo_de_negocio_pivot_o_proceed', 'analisis_trafico_competitivo']
+nodos_previos: ['scorecard_descubrimiento_cliente', 'customer_discovery', 'prueba_mvp_problema_baja_fidelidad']
+================================================================================
+NODO: gobierno_corporativo_y_calidad | dominio: quality
+titulo: Cómo las personas que te asesoran impactan la excelencia de tu negocio
+resumen_teorico: La forma en que tomas decisiones estratégicas, sola o acompañada por quienes te asesoran, impacta directamente el desempeño y la calidad de tu negocio. Quien te ayuda a decidir debe guiarte a desarrollar planes que beneficien a todos los que dependen de tu negocio (no solo a quien pone el dinero), cuidar que el negocio sea sostenible en el tiempo y verificar que esos planes se implementen bien. Esto incluye definir con claridad tus valores, tu visión y la mirada estratégica de largo plazo, diferenciándola de la gestión del día a día.
+pasos_accionables:
+  1. Evalúa con quién cuentas hoy para tomar decisiones importantes y qué tan preparadas están esas personas
+  2. Define con claridad tus valores (integridad, equidad, compasión), diferenciándolos de simples reglas de conducta
+  3. Define tu visión considerando el propósito más amplio de tu negocio en la sociedad
+  4. Crea una forma de comunicación en dos sentidos entre quienes dependen de tu negocio y quien te ayuda a decidir
+  5. Capacítate de forma continua en principios de excelencia y calidad
+  6. Considera armar un grupo de personas de confianza que te asesoren, o un consejo familiar si tu negocio es familiar
+entregable_esperado: Un plan sencillo con quién te ayuda a decidir, tus valores documentados y una forma de verificar que los planes se cumplan
+nodos_siguientes: ['planificacion_gobierno_organizaciones_familiares']
+nodos_previos: ['diferencia_planeacion_mejora', 'liderazgo_para_mejora_continua', 'aim_of_leadership']
+================================================================================
+NODO: guia_y_mentoria_vc | dominio: core
+titulo: Cómo aprovechar el acompañamiento de tus inversores en las reuniones de junta
+resumen_teorico: Tus inversores te dan orientación estratégica, operativa y de personal de dos formas: informal, en conversaciones uno a uno, y formal, en las reuniones de junta. Vas a necesitar menos de esa guía a medida que tu negocio madura y tu equipo y tus métricas se consolidan. Si el inversor ya fue director en otras empresas, eso vale: reconoce patrones de problemas comunes que a ti todavía te cuesta ver.
+pasos_accionables:
+  1. Agenda reuniones informales frecuentes con tus inversores en las primeras etapas de tu negocio.
+  2. Acuerda con tu inversor cada cuánto conviene reunirse en junta según qué tan maduro esté tu negocio: más seguido al principio, menos después.
+  3. Usa a tu inversor como consejero estratégico: llévale las preguntas de fondo que cuestionan tus supuestos clave, no solo el reporte del día a día.
+entregable_esperado: Un calendario de reuniones con tus inversores y una agenda de los temas estratégicos que vas a tratar en cada etapa.
+nodos_siguientes: ['composicion_board_directors']
+nodos_previos: ['capital_social_de_inversores']
+================================================================================
+NODO: materiales_due_diligence | dominio: core
+titulo: Preparar los papeles para la revisión a fondo (due diligence)
+resumen_teorico: Cuando un inversionista te ofrece una propuesta formal de inversión (term sheet), sus abogados te van a pedir documentación extensa: tabla de socios y porcentajes (cap table), contratos con clientes, contratos de empleados, actas de tus reuniones de junta, entre otros. Organiza todos estos documentos con anticipación para no frenar el proceso, y nunca escondas información problemática: la transparencia es lo que te da confianza a largo plazo con quien te está invirtiendo.
+pasos_accionables:
+  1. Armas y mantienes actualizada tu tabla de socios y porcentajes (cap table)
+  2. Reúnes los contratos con clientes, empleados y proveedores relevantes
+  3. Organizas las actas de tus reuniones de junta
+  4. Revisas un listado de documentos típicos de esta revisión a fondo, disponible en recursos como venturedeals.com
+  5. Cuentas por adelantado cualquier problema o zona gris de tu negocio
+entregable_esperado: Carpeta organizada con toda la documentación legal, financiera y corporativa lista para entregar rápido
+nodos_siguientes: ['term_sheet_negociacion']
+nodos_previos: ['demo_prototipo_inversion', 'due_diligence_adquisiciones']
+================================================================================
+NODO: medir_huella_carbono_corporativa | dominio: environmental
+titulo: Medir la Huella de Carbono de tu Negocio
+resumen_teorico: Antes de definir cualquier estrategia climática necesitas entender tu exposición de carbono, es decir, identificar y cuantificar el origen de tus emisiones de gases de efecto invernadero. El Greenhouse Gas Protocol, desarrollado por el World Resources Institute y el World Business Council for Sustainable Development, es el estándar más aceptado y divide las emisiones en tres alcances: operaciones propias y combustión de combustibles fósiles, electricidad comprada, y actividades indirectas como viajes de negocios, desplazamientos de empleados y actividades de proveedores. Organizaciones como el Carbon Disclosure Project invitan a miles de empresas a reportar sus emisiones de forma voluntaria usando estas mismas metodologías. Además, si tu negocio crece, puede quedar obligado por las regulaciones de tu país o mercado a divulgar sus emisiones.
+pasos_accionables:
+  1. Identifica todas las fuentes de emisión dentro de tu operación. Define el límite organizacional (qué divisiones, filiales o franquicias incluir)
+  2. Clasifica cada emisión según los tres alcances del GHG Protocol.
+  3. Recopila datos de consumo energético, combustibles y actividades indirectas.
+  4. Usa metodologías estandarizadas como las del GHG Protocol, CDP o WRI/WBCSD para calcular tu huella total.
+  5. Revisa si debes reportar voluntariamente ante el CDP o cumplir con las regulaciones de divulgación ambiental de tu mercado.
+  6. Convertir todos los GEI a CO2 equivalente usando factores de potencial de calentamiento global
+  7. Establecer un año base y período de medición para comparaciones futuras
+entregable_esperado: Un inventario completo de emisiones de gases de efecto invernadero clasificado por alcances (scope 1, 2 y 3).
+nodos_siguientes: ['establecer_metas_reduccion_emisiones', 'draft_plan_accion_climatico', 'realizar_analisis_ciclo_de_vida_lca', 'definir_limites_huella_carbono']
+nodos_previos: ['plan_cambio_climatico', 'metricas_impacto_ambiental', 'priorizacion_issues']
+================================================================================
+NODO: ofrecer_puntos_recogida | dominio: entrega
+titulo: Ofrecer puntos de recogida en vez de entrega a domicilio
+resumen_teorico: Cuando el cliente no esta en casa, la entrega falla y el paquete regresa al vehiculo o termina en un centro de distribucion lejano, algo costoso para ti y frustrante para el comprador. Ofrecer un punto de recogida (una tienda, un locker, un negocio aliado o una oficina cercana) evita ese vaiven y reduce el costo de la ultima milla, porque el cliente decide cuando pasar a buscar su pedido. Esta opcion tambien ayuda a que el impacto ambiental sea menor, siempre que el cliente recoja su pedido de camino a otro lugar y no haga un viaje exclusivo para eso. Cada vez mas negocios pequenos encuentran aliados locales, como tiendas de barrio, gasolineras u oficinas de correo, para ofrecer esta alternativa sin construir infraestructura propia.
+pasos_accionables:
+  1. Pregunta a couriers y negocios cercanos que puntos de recogida tienen disponibles.
+  2. Agrega la opcion de recoger en tienda o en un punto aliado al finalizar la compra.
+  3. Define un plazo realista para tener el pedido listo antes de anunciar la opcion.
+  4. Notifica al cliente con claridad donde y cuando puede recoger su pedido.
+  5. Revisa cada tres meses cuantos clientes eligen recoger frente a domicilio y ajusta la oferta.
+entregable_esperado: Una opcion de recogida activa en tu proceso de compra, con al menos un punto alterno al domicilio.
+nodos_siguientes: ['segmentar_clientes_nivel_servicio', 'decidir_cobro_velocidad_ventana_entrega']
+nodos_previos: ['disenar_empaque_logistica', 'detectar_prioridad_cliente_entrega']
+================================================================================
+NODO: personalizacion_investigacion_prospecto | dominio: core
+titulo: Investiga a tu futuro cliente antes de venderle
+resumen_teorico: Antes de vender, investiga detalles personales de la persona con la que quieres cerrar un trato: sus intereses, sus hábitos, sus gustos. Con esa información puedes crear momentos que generen una conexión emocional genuina, incluso antes de hablar de precio. Coleman explica que esto se logra en pocos minutos, escuchando con atención o revisando sus redes sociales, y que el costo del gesto no importa frente al impacto emocional que produce: un pequeño detalle, casi sin costo, puede abrir la puerta a un contrato grande. Esta forma de personalizar no tiene que ser artesanal cada vez: puedes sistematizarla con un sistema para llevar el registro de tus clientes (CRM).
+pasos_accionables:
+  1. Define qué información personal quieres guardar de cada persona con la que hablas: sus intereses, fechas importantes, su contexto.
+  2. Anota esa información en tu sistema de registro de clientes (CRM) desde el primer contacto.
+  3. Prepara una lista corta de gestos de bajo costo pero de alto impacto emocional que puedas usar.
+  4. Si trabajas con más personas, muéstrales primero cómo se siente ser sorprendido, para que puedan repetir ese gesto con tus clientes.
+entregable_esperado: Una plantilla en tu sistema de clientes con campos para personalizar cada contacto, y una lista de gestos de bajo costo para sorprender a las personas con las que hablas.
+nodos_siguientes: ['preframing_expectativas']
+nodos_previos: ['convertir_necesidad_en_demanda']
+================================================================================
+NODO: plan_de_lanzamiento_al_mercado | dominio: core
+titulo: Plan de Lanzamiento al Mercado (Market Launch Plan)
+resumen_teorico: Un producto mejor no se vende solo: necesita que planees bien el lanzamiento y lo respaldes con un plan de marketing sólido. Los que lanzan mejor son los que investigan cómo compra su cliente, prueban el mercado antes de tiempo y hacen números del negocio antes de salir, y luego ejecutan con mucha más disciplina que el resto. No dejes el plan de lanzamiento para el final: constrúyelo desde las primeras etapas del proyecto, y suma desde ya a quienes van a ejecutarlo después, como ventas y soporte tecnico.
+pasos_accionables:
+  1. Empieza a armar tu plan de lanzamiento desde las primeras etapas del proyecto, no lo dejes para el final
+  2. Investiga cómo compra tu cliente antes de diseñar el lanzamiento
+  3. Haz una prueba de mercado o una venta piloto para validar tu plan antes de lanzar en serio
+  4. Asegúrate de tener las personas y el presupuesto que el lanzamiento realmente necesita
+  5. Suma a tu equipo, desde ya, a quienes van a vender y dar soporte cuando lances
+entregable_esperado: Tu plan de marketing y lanzamiento completo, con los recursos definidos y validado con una prueba de mercado
+nodos_siguientes: ['estimate_at_completion_eac', 'plan_de_materiales_colaterales', 'reduccion_tiempo_de_mercado_velocidad']
+nodos_previos: ['estrategia_producto_global_glocal', 'spiral_development', 'reduccion_tiempo_de_mercado_velocidad', 'company_building', 'desarrollo_en_espiral', 'gate5_go_to_launch']
+================================================================================
+NODO: planificacion_inicial_calidad | dominio: quality
+titulo: Planificación Inicial de Calidad en Manufactura
+resumen_teorico: La planificación de calidad en manufactura inicia con la revisión del diseño del producto y del proceso para identificar características clave, determinar su importancia relativa, analizar el diagrama de flujo del proceso, evaluar capacidad y control del proceso, aplicar error-proofing, y validar sistemas de medición, buscando prevenir defectos y minimizar variabilidad.
+pasos_accionables:
+  1. Revisar el diseño del producto con personal de operaciones antes de su lanzamiento
+  2. Identificar características clave del producto y del proceso (KPCs)
+  3. Clasificar características por importancia (crítica, mayor, menor, incidental)
+  4. Analizar el diagrama de flujo del proceso por estación de trabajo
+  5. Validar la capacidad y los sistemas de medición del proceso
+entregable_esperado: Documento de plan de control de proceso con características clave identificadas y clasificadas
+nodos_siguientes: ['autocontrol_y_controlabilidad', 'auditoria_de_proceso', 'caracteristicas_clave_producto_proceso', 'key_process_product_characteristics', 'analisis_flujo_proceso', 'capacidad_de_proceso', 'medicion_capacidad_servicio', 'identificar_caracteristicas_metas_proceso']
+nodos_previos: ['mapeo_flujo_valor', 'mapeo_flujo_valor_2']
+================================================================================
+NODO: plataforma_colaboracion_tiempo_real | dominio: core
+titulo: Plataforma de Colaboración en Tiempo Real para Cadena de Suministro
+resumen_teorico: Una plataforma basada en la nube que ofrece visibilidad casi en tiempo real a todos los actores de la cadena de suministro (fabricantes, logística, distribuidores, retailers) permite que cada parte identifique problemas y actúe sin esperar instrucciones de una autoridad central. Se combina con sesiones de 'colaboración masiva' (crowdsourcing) donde múltiples empresas ajustan en vivo el diseño de la cadena, corren simulaciones, y llegan a consenso sobre el plan operativo, generando compromiso genuino de todas las partes.
+pasos_accionables:
+  1. Implementar un sistema visual (mapa) compartido con datos en tiempo real de inventario, rutas y costos.
+  2. Organizar sesiones de colaboración masiva con todos los socios clave de la cadena.
+  3. Permitir que cada participante edite y proponga cambios visibles para todos en vivo.
+  4. Correr simulaciones colectivas y ajustar el diseño hasta llegar a consenso.
+  5. Usar la plataforma no solo para planificar sino para monitorear operaciones diarias y resolver problemas en tiempo real.
+entregable_esperado: Plataforma o sistema de visibilidad compartida activa entre los socios de la cadena de suministro, con métricas base y alertas de desviación.
+nodos_siguientes: ['profundizacion_cadena_suministro', 'alcance_profundo_cadena_suministro']
+nodos_previos: ['sop_colaborativo', 'combinacion_humano_ia_decision', 'modelado_simulacion_cadena_suministro', 'coordinacion_colaboracion_cadena_suministro']
+================================================================================
+NODO: poder_a_traves_de_la_accion | dominio: core
+titulo: Poder a Través de la Acción: Unificar el Pensamiento Mediante el Actuar
+resumen_teorico: Frente al 'evangelio de la relajación' (que puede derivar en pasividad intelectual), Wallas propone la fórmula 'Poder a través de la Acción': actuar sobre las propias ideas y opiniones privadas genera una unidad psicológica entre el 'yo real', el 'yo ideal' y el 'yo que otros perciben', aumentando la energía disponible para el pensamiento. Cita a James: hay que actuar inmediatamente sobre cada resolución o impulso emocional, pues dejarlo evaporar sin fruto práctico entorpece futuras resoluciones. La acción debe ser voluntaria y comprometer a todo el organismo, no un mero movimiento mecánico.
+pasos_accionables:
+  1. Actuar de inmediato sobre cualquier resolución o idea prometedora en lugar de posponerla
+  2. Buscar oportunidades de expresar públicamente o poner en práctica opiniones que hasta ahora eran solo especulación privada
+  3. Asegurar que la acción sea genuina y comprometida ('significar lo que se dice/hace'), no un gesto mecánico vacío
+  4. Vincular conscientemente el trabajo intelectual cotidiano a un propósito o impacto mayor para sostener la energía a largo plazo (como hizo Bentham)
+entregable_esperado: Una lista de resoluciones o ideas pendientes convertidas en acciones concretas ya ejecutadas o programadas, junto con una declaración del propósito mayor que conecta el trabajo diario con su impacto.
+nodos_siguientes: ['wallas_etapa_verificacion', 'afinar_frente_difuso_innovacion', 'esfuerzo_voluntario_vs_urge_espontaneo', 'fracaso_como_aprendizaje_startup', 'compromiso_organismico_en_la_accion']
+nodos_previos: ['emocion_como_motor_pensamiento']
+================================================================================
+NODO: principios_mejora_continua | dominio: quality
+titulo: Principios de Mejora Continua (Shingo)
+resumen_teorico: Estos principios promueven la búsqueda incesante del cambio beneficioso, desde mejoras incrementales hasta disruptivas. Incluyen: enfocarse en el proceso (los resultados son consecuencia del proceso), adoptar pensamiento científico (ciclos de experimentación y aprendizaje), fluir y jalar valor (flujo continuo sin interrupciones), asegurar calidad en la fuente (detectar y corregir errores en el punto de origen), y buscar la perfección (meta aspiracional que genera una mentalidad de mejora constante).
+pasos_accionables:
+  1. Mapear procesos clave y evaluar su estabilidad y capacidad
+  2. Implementar ciclos de experimentación tipo PDCA para validar mejoras
+  3. Diseñar flujo continuo de valor eliminando interrupciones y esperas
+  4. Establecer controles de calidad en el origen de cada proceso
+  5. Definir metas aspiracionales de perfección como guía de mejora continua
+entregable_esperado: Plan de mejora continua con procesos priorizados, ciclos de experimentación definidos y controles de calidad en la fuente
+nodos_siguientes: ['principios_alineacion_empresarial']
+nodos_previos: ['principios_facilitadores_culturales', 'shingo_enterprise_excellence_model']
+================================================================================
+NODO: proposito_como_motor_energia | dominio: core
+titulo: El Propósito como Motor de Energía Mental
+resumen_teorico: Wallas argumenta que la energía mental de una persona se mantiene y crece cuando esta cree que sus acciones tienen una importancia que trasciende el momento inmediato, citando a Bentham, quien sostuvo su productividad durante décadas porque creía que sus escritos eran tan importantes para la humanidad como las órdenes de batalla de un general. De forma similar, el significado descubierto después del hecho (como un científico que años después entiende el impacto de su descubrimiento) puede transformar retroactivamente la energía asociada a una acción pasada. Para el emprendedor, esto sugiere que conectar el trabajo diario (por tedioso que sea) con una visión o misión más amplia es lo que sostiene la energía creativa a largo plazo, mucho más que la acción física o el 'estar ocupado' sin más.
+pasos_accionables:
+  1. Articular explícitamente por escrito la misión o impacto de largo plazo del proyecto/startup
+  2. Vincular cada tarea operativa diaria con esa narrativa de propósito mayor
+  3. Revisar y actualizar esa narrativa cuando se reciban señales (feedback de usuarios, resultados) que revelen un impacto no anticipado
+  4. Evitar sustituir el pensamiento profundo por 'mera acción física' (activismo sin reflexión) como escape de la incertidumbre
+entregable_esperado: Una declaración de propósito/misión del proyecto, revisada y conectada explícitamente con las tareas operativas del roadmap
+nodos_siguientes: ['lienzo_modelo_negocio', 'vision_estrategia_producto_pivote', 'aprender_desde_el_amor_empatia', 'restricciones_extremas_como_innovacion']
+nodos_previos: ['compromiso_organismico_en_la_accion', 'esfuerzo_y_energia_intelectual']
+================================================================================
+NODO: prueba_solucion_con_cliente | dominio: core
+titulo: Prueba de la Solución con el Cliente
+resumen_teorico: Con entrevistas estructuradas puedes medir si quien te compra cree que tu producto resuelve un problema importante. Pregunta por el presupuesto (preguntas de 'muéstrame el dinero'), pregunta por el precio, pregunta por el canal de venta, y pregunta cómo es el proceso de compra, quién lo aprueba y quién lo mantiene y hace crecer (preguntas de 'conseguir, mantener y crecer'). El objetivo no es vender todavía, es construir un mapa aproximado de tu futura cartera de ventas (pipeline).
+pasos_accionables:
+  1. Amplía tu lista de contactos a por lo menos 10 clientes potenciales (más si es consumo)
+  2. Usa preguntas de presupuesto: pregúntale '¿lo usarías si fuera gratis?' y '¿quién tiene el presupuesto?'
+  3. Explora los límites de precio proponiendo una cifra muy alta y ajustando hacia abajo hasta encontrar lo que de verdad pagaría
+  4. Pregunta qué canal de distribución prefiere: tienda física, en línea, directo o a través de un distribuidor
+  5. Pregunta cómo es el proceso interno de aprobación de compra de quien te compra
+  6. Anota cada entrevista en una ficha (report card) con el mismo formato para poder comparar
+entregable_esperado: Una ficha por cada cliente entrevistado con los datos de producto, precio, distribución y referencias, y un mapa preliminar de tu futura cartera de ventas (pipeline)
+nodos_siguientes: ['actualizar_business_model_canvas_tuneup', 'product_market_fit', 'categorias_entusiasmo_cliente', 'identificar_advisory_board', 'ecuacion_de_valor_cliente', 'identificar_consejo_asesores']
+nodos_previos: ['presentacion_solucion_producto', 'simulacion_clientes_ia']
+================================================================================
+NODO: sistema_informacion_calidad | dominio: quality
+titulo: Sistema de Información para la Toma de Decisiones de Calidad
+resumen_teorico: El control de calidad requiere una red de información que sirva a todos los niveles de toma de decisión: información en tiempo real para detección y corrección inmediata en niveles operativos, y resúmenes para que los líderes controlen los pocos vitales. Un equipo multifuncional, que incluya clientes y proveedores de información, debe diseñar este sistema, y el liderazgo debe auditar que cumpla las necesidades de todos los usuarios.
+pasos_accionables:
+  1. Conformar un equipo multifuncional para diseñar el sistema de información de calidad
+  2. Incluir en el diseño tanto a clientes como proveedores de información
+  3. Definir qué información requiere tiempo real vs. resúmenes periódicos según nivel jerárquico
+  4. Establecer scoreboards o tableros de desempeño de calidad por área/producto
+  5. Auditar periódicamente que el sistema cumpla las necesidades de los distintos usuarios
+entregable_esperado: Diseño de sistema de información de calidad con especificación de reportes por nivel jerárquico
+nodos_siguientes: ['manual_de_calidad']
+nodos_previos: ['accion_correctiva_diagnostico_remedio', 'accion_correctiva']
+================================================================================
+NODO: teletrabajo_sostenible | dominio: environmental
+titulo: Teletrabajo como Estrategia de Sostenibilidad
+resumen_teorico: El trabajo desde casa elimina emisiones de transporte y reduce el consumo de espacio, electricidad y climatización de oficinas. Además de beneficios ambientales, mejora la productividad, moral del empleado y flexibilidad laboral.
+pasos_accionables:
+  1. Identificar puestos que puedan realizarse total o parcialmente desde casa
+  2. Establecer políticas claras de telecommuting
+  3. Proveer herramientas tecnológicas de colaboración remota
+  4. Medir impacto en productividad y reducción de huella de carbono
+entregable_esperado: Política formal de teletrabajo con criterios de elegibilidad y métricas de impacto ambiental
+nodos_siguientes: ['oficina_digital_sin_papel', 'oficina_digital_sin_papel_2']
+nodos_previos: ['movilidad_verde_empleados']

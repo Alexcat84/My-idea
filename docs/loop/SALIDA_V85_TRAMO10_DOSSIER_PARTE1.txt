@@ -1,0 +1,374 @@
+================================================================================
+NODO: actividades_clave | dominio: core
+titulo: Bloque de Actividades Clave
+resumen_teorico: Son las acciones más importantes que tienes que hacer para que tu modelo de negocio funcione de verdad. Se agrupan en tres tipos: producción, resolución de problemas para tus clientes y gestión de una plataforma o red que conecte a varias partes. Cuáles te tocan depende del tipo de negocio que tengas.
+pasos_accionables:
+  1. Determinar si el negocio requiere principalmente producción, resolución de problemas o gestión de plataforma
+  2. Listar las actividades específicas necesarias para entregar la propuesta de valor
+  3. Vincular cada actividad clave con los canales, relaciones de cliente e ingresos que soporta
+  4. Priorizar actividades core vs. actividades delegables a socios
+entregable_esperado: Lista de actividades clave categorizadas y vinculadas a otros bloques del modelo
+nodos_siguientes: ['asociaciones_clave', 'estructura_de_costos', 'assumption_constraint_log', 'homework_frontend_loading', 'medir_lo_que_importa_no_solo_lo_facil', 'mercados_multilaterales', 'roles_product_owner_scrum_master', 'duration_estimating_worksheet', 'key_resources_hypothesis']
+nodos_previos: ['key_resources_hypothesis']
+================================================================================
+NODO: analisis_cadena_de_valor | dominio: core
+titulo: Análisis de Cadena de Valor
+resumen_teorico: Consiste en examinar la cadena de valor completa, tanto aguas arriba (proveedores) como aguas abajo (clientes de los clientes, usuarios finales), para identificar roles cambiantes, posibles desintermediaciones y oportunidades de negocio donde la empresa podría capturar valor que actualmente otros players se llevan.
+pasos_accionables:
+  1. Mapear todos los actores de la cadena de valor: proveedores, clientes directos, clientes de los clientes, usuario final
+  2. Analizar cómo están cambiando los roles de cada actor
+  3. Identificar quién podría ser desintermediado y quién ganará poder
+  4. Determinar si existen funciones de la cadena que la empresa podría asumir para capturar más valor
+entregable_esperado: Mapa de cadena de valor con oportunidades de desintermediación o nuevos modelos de negocio identificados
+nodos_siguientes: ['seleccion_arenas_estrategicas']
+nodos_previos: ['analisis_y_sintesis']
+================================================================================
+NODO: analisis_flujo_proceso | dominio: quality
+titulo: Análisis del Diagrama de Flujo de Proceso
+resumen_teorico: El diseño de un proceso puede revisarse mediante un diagrama de flujo que muestra la trayectoria de los materiales hasta convertirse en producto terminado. Este diagrama divide el proceso en estaciones de trabajo, para las cuales se documentan operaciones, secuencia, instalaciones e instrumentos, y condiciones de proceso a mantener.
+pasos_accionables:
+  1. Elaborar diagrama de flujo del proceso completo
+  2. Dividir el flujo en estaciones de trabajo lógicas
+  3. Documentar para cada estación las operaciones, secuencia, instrumentos y condiciones de proceso
+  4. Usar el documento como base para auditorías y control por parte de inspectores
+entregable_esperado: Diagrama de flujo de proceso con documentación formal por estación de trabajo
+nodos_siguientes: ['control_proceso_variables', 'errores_a_prueba_poka_yoke', 'error_proofing_servicio']
+nodos_previos: ['key_process_product_characteristics', 'planificacion_inicial_calidad']
+================================================================================
+NODO: control_calidad_definicion | dominio: quality
+titulo: Control de Calidad como Proceso Universal (Trilogía de Juran)
+resumen_teorico: El control de calidad es el tercer proceso universal de la Trilogía de Juran (junto con planificación y mejora). Su propósito es mantener la estabilidad del proceso mediante un bucle de retroalimentación, evitando el deterioro del desempeño una vez alcanzado un nuevo nivel tras la mejora.
+pasos_accionables:
+  1. Identificar en qué zona de control se encuentra el proceso (estable pero deficiente vs. mejorado)
+  2. Diferenciar entre necesidad de control y necesidad de mejora
+  3. Establecer nuevos controles después de cada mejora para evitar retroceso
+  4. Aplicar el concepto de control tanto a nivel de proceso como de producto
+entregable_esperado: Diagrama de la Trilogía de Juran aplicado al proceso actual con zonas de control identificadas
+nodos_siguientes: ['bucle_retroalimentacion_control']
+nodos_previos: ['entrenamiento_para_breakthrough']
+================================================================================
+NODO: coordinacion_colaboracion_cadena_suministro | dominio: core
+titulo: Coordinación y Colaboración como Ventaja Competitiva
+resumen_teorico: En economías de alto cambio, la coordinación entre empresas de una cadena de suministro es más poderosa que el control unilateral. Las ganancias vienen de conectarse a redes de cadena de suministro y desarrollar reputación de buen servicio y buenos productos a precios razonables (no necesariamente los más bajos). Sistemas diseñados para dar control excesivo a grandes empresas sobre proveedores (bajo el disfraz de 'eficiencia') desmotivan a los proveedores y destruyen la innovación colectiva, dejando a toda la cadena vulnerable cuando el mercado cambia (ejemplo iPhone: ecosistema colaborativo vs. control unilateral).
+pasos_accionables:
+  1. Evaluar si los sistemas actuales de la empresa buscan control unilateral sobre proveedores o colaboración mutua
+  2. Desarrollar reputación de buen servicio y producto en la red de cadena de suministro, no solo competir por precio
+  3. Fomentar que todos los participantes de la cadena innoven y coordinen entre sí (modelo orquesta, no solista)
+  4. Crear plataformas de colaboración online donde las partes discutan problemas y oportunidades en tiempo real
+  5. Usar simulaciones tipo 'juego' para explorar escenarios de cadena de suministro colaborativamente
+  6. Invitar a todos los socios relevantes de la cadena de suministro a una sesión de diseño conjunto
+  7. Usar simulaciones interactivas para probar distintas configuraciones y visualizar problemas en tiempo real
+  8. Iterar el diseño colectivamente hasta alcanzar niveles de desempeño aceptables a un costo operativo viable
+  9. Documentar roles, reglas y metas acordadas en los contratos de cada empresa participante
+  10. Establecer una plataforma de colaboración online para dar seguimiento en tiempo real a la implementación
+  11. Identifica qué proveedores o socios podrían ayudarte a innovar junto contigo, como parte de un mismo ecosistema
+  12. Estudia a competidores que ganaron mercado ofreciendo más valor percibido aunque les costara más producirlo
+entregable_esperado: Estrategia de relación con proveedores/socios basada en colaboración mutua, con plataforma o mecanismo de coordinación implementado
+nodos_siguientes: ['ciclo_virtuoso_datos_electronicos', 'plataforma_colaboracion_tiempo_real']
+nodos_previos: ['trade_off_responsividad_eficiencia']
+================================================================================
+NODO: customer_development_process | dominio: core
+titulo: El proceso para descubrir a tu cliente (Customer Development)
+resumen_teorico: Un proceso de cuatro pasos creado por Steve Blank para que encuentres a tu cliente antes de construir a ciegas. Primero sales a entender qué necesita tu cliente, qué le duele y qué espera ganar (jobs, pains y gains). Luego pruebas si de verdad valora tu solución. Después generas demanda real y descubres como venderla a mas gente. Y por ultimo dejas de estar buscando respuestas y pasas a tener una forma de trabajar que funciona todos los días. La idea de fondo: no hay hechos dentro de tu casa u oficina, los encuentras afuera, hablando con clientes.
+pasos_accionables:
+  1. Etapa 1, descubrir a tu cliente: sal a entender que necesita, que le duele y que espera ganar
+  2. Etapa 2, validar con tu cliente: prueba con experimentos si tu solución realmente le importa
+  3. Etapa 3, crear demanda: construye demanda real y guia a tus clientes hacia como comprarte
+  4. Etapa 4, construir tu negocio: pasa de estar buscando respuestas a tener una forma de trabajar que puedas repetir y hacer crecer
+entregable_esperado: Un mapa de en que etapa de este proceso estas tu y que preguntas todavia tienes que responder en esa etapa
+nodos_siguientes: ['build_measure_learn', 'extraer_priorizar_hipotesis']
+nodos_previos: ['search_for_business_model', 'definicion_startup']
+================================================================================
+NODO: diagrama_de_flujo_proceso_map | dominio: quality
+titulo: Flow Diagram / Process Map
+resumen_teorico: Representación gráfica de la secuencia de pasos necesarios para producir una salida (producto, servicio o información). Utiliza símbolos estandarizados para documentar el flujo del proceso, identificar puntos de decisión y detectar segmentos poco conocidos que requieren investigación adicional.
+pasos_accionables:
+  1. Discutir el uso previsto del diagrama y el resultado deseado
+  2. Definir límites del proceso (primer y último paso)
+  3. Documentar cada paso en secuencia usando símbolos apropiados
+  4. Marcar puntos de decisión y continuar por una rama
+  5. Anotar segmentos desconocidos para completarlos después
+  6. Repetir hasta completar todas las ramas
+  7. Revisar el diagrama completo verificando precisión mediante observación o entrevistas
+  8. Analizar el diagrama de flujo resultante
+entregable_esperado: Diagrama de flujo validado que documenta el proceso actual con todos los pasos, decisiones y ramas
+nodos_siguientes: ['fmea_analisis_de_modos_de_falla', 'plan_de_control']
+nodos_previos: ['sipoc']
+================================================================================
+NODO: eliminacion_inspeccion_masiva_por_control_estadistico | dominio: quality
+titulo: Sustitución de la Inspección Masiva por Control Estadístico
+resumen_teorico: La inspección al 100% de un producto (como el caso de discos de freno inspeccionados en su totalidad) es innecesaria y costosa cuando el proceso está bajo control estadístico demostrado mediante cartas de control; en ese caso basta con muestreo periódico. Insistir en inspección total ignora la evidencia estadística y desperdicia recursos, además de no mejorar la calidad, solo detecta defectos ya producidos.
+pasos_accionables:
+  1. Establecer cartas de control para verificar la estabilidad del proceso
+  2. Demostrar mediante datos que el proceso está bajo control estadístico
+  3. Reemplazar inspección 100% por muestreo estadístico para mantenimiento de la carta de control
+  4. Comunicar a las áreas de calidad y clientes el cambio y su justificación estadística
+entregable_esperado: Evidencia estadística de proceso bajo control y nuevo protocolo de muestreo aprobado
+nodos_siguientes: ['carta_de_control_shewhart']
+nodos_previos: ['control_estadistico_de_procesos_en_tiempo_real']
+================================================================================
+NODO: equipo_multifuncional_real | dominio: core
+titulo: Equipo Multifuncional Real (no un equipo de fachada)
+resumen_teorico: Para que tu equipo de innovación funcione, necesitas reunir personas comprometidas de distintas áreas (marketing, investigación y desarrollo, operaciones) con tiempo real liberado de sus tareas habituales, un líder al que le das autoridad de verdad y no solo responsabilidad, y recompensas basadas en los resultados del equipo. Esto es distinto de un equipo de fachada, donde cada persona solo asiste a reuniones como representante de su área, sin autoridad ni dedicación real.
+pasos_accionables:
+  1. Asigna un líder de proyecto dedicado y dale autoridad real, no solo la responsabilidad, y elígelo con espíritu emprendedor
+  2. Libera tiempo real de las tareas habituales de las personas que reúnas para el equipo
+  3. Define indicadores y recompensas basadas en el desempeño del equipo, no solo individual
+  4. Mantén un núcleo estable de personas comprometidas desde el inicio hasta el final del proyecto
+  5. Elige cómo vas a organizar al equipo según qué tan complejo sea: compartiendo tiempo con otras tareas, dándole prioridad al proyecto, o dedicándolo por completo
+  6. Busca que el equipo esté físicamente junto o, si no se puede, que tengan formas efectivas de comunicarse a distancia
+  7. Evita el modelo de pasar el proyecto de área en área; trabaja en paralelo y de forma colaborativa
+entregable_esperado: Carta de equipo con roles definidos, tiempo asignado, autoridad del líder y un sistema de incentivos ligado a resultados
+nodos_siguientes: ['procesamiento_paralelo_con_espirales', 'cultura_de_innovacion', 'gestion_portafolio_foco', 'reduccion_tamano_de_lote_batch_size', 'rendicion_de_cuentas_del_equipo', 'stage_gate_system']
+nodos_previos: ['sistema_gates_go_kill', 'analisis_de_capacidad_de_recursos', 'company_building', 'definicion_estable_producto', 'diseno_para_el_ciclo_completo']
+================================================================================
+NODO: estructura_equipos_innovacion_interna | dominio: core
+titulo: Estructura para Equipos de Innovación Interna (Portfolio Thinking)
+resumen_teorico: Para que equipos de innovación dentro de organizaciones grandes (o startups independientes) tengan éxito, requieren tres atributos estructurales: recursos escasos pero seguros (un presupuesto pequeño pero intocable), autoridad de desarrollo independiente (capacidad de crear y lanzar productos reales sin aprobaciones excesivas), y una participación personal en el resultado (stake financiero o de reconocimiento). La estructura correcta no garantiza el éxito, pero su ausencia casi garantiza el fracaso.
+pasos_accionables:
+  1. Asignar un presupuesto pequeño pero completamente protegido de recortes políticos
+  2. Formar un equipo multifuncional de tiempo completo con representación de todas las áreas necesarias
+  3. Minimizar aprobaciones y hand-offs que ralenticen el ciclo Construir-Medir-Aprender
+  4. Definir claramente quién es el 'dueño' o responsable visible de la iniciativa (equivalente al shusa de Toyota)
+  5. Establecer un mecanismo de reconocimiento o incentivo a largo plazo ligado al desempeño de la innovación
+entregable_esperado: Carta de constitución del equipo de innovación con presupuesto asignado, autonomía definida y responsable identificado
+nodos_siguientes: ['actitud_de_experimentacion_organizacional', 'proteccion_organizacion_matriz_experimentos']
+nodos_previos: ['innovacion_abierta', 'analisis_de_capacidad_de_recursos']
+================================================================================
+NODO: evaluacion_industria_cliente | dominio: core
+titulo: Evaluación de la Industria del Cliente
+resumen_teorico: Técnica estratégica para identificar oportunidades de nuevos productos analizando la industria del cliente. Combina investigación VoC (Voice of Customer) cara a cara, trabajo con usuarios líderes, análisis de tendencias históricas y futuras, y herramientas como Market Maps y Profit Pool Maps para identificar dónde están las ganancias en la industria y qué segmentos son más atractivos.
+pasos_accionables:
+  1. Realizar investigación VoC cara a cara con clientes
+  2. Trabajar directamente con usuarios líderes (lead users)
+  3. Analizar la cadena de valor de la industria
+  4. Crear un Market Map para ver qué jugadores tienen qué porción de ingresos
+  5. Crear un Profit Pool Map para identificar márgenes de ganancia por actividad, y cómo están cambiando
+  6. Identificar los segmentos de mercado más atractivos (arenas) para enfocar la búsqueda de ideas
+  7. Evaluar el futuro de cada actor: quién gana, quién es desintermediado
+  8. Definir escenarios futuros y detectar arenas de oportunidad
+entregable_esperado: Documento con mapa de mercado, mapa de pool de ganancias y lista de arenas/segmentos prioritarios para innovación
+nodos_siguientes: ['evaluacion_competencias_centrales', 'iota_analysis', 'explotacion_tecnologias_disruptivas', 'tecnologias_disruptivas_oportunidad']
+nodos_previos: ['emocion_como_motor_pensamiento', 'analisis_y_sintesis']
+================================================================================
+NODO: grafico_cusum | dominio: quality
+titulo: Gráfico de Suma Acumulada (CUSUM)
+resumen_teorico: El gráfico CUSUM es una representación cronológica de la suma acumulada de desviaciones de un estadístico muestral respecto a un valor de referencia (objetivo). A diferencia de los gráficos Shewhart tradicionales, cada punto contiene información de todas las observaciones anteriores, lo que lo hace especialmente sensible para detectar pequeños desplazamientos del proceso (0.5σ a 2.0σ).
+pasos_accionables:
+  1. Calcular el estadístico de control (por ejemplo, x-barra) para cada muestra
+  2. Definir el valor objetivo T y la desviación estándar del proceso
+  3. Establecer límites de control superior e inferior a ±4 desviaciones estándar
+  4. Calcular la suma acumulada superior (Cu) e inferior (CL) para cada punto muestral
+  5. Graficar Cu y CL como líneas separadas y monitorear cruces de los límites
+entregable_esperado: Gráfico CUSUM implementado para detección temprana de desplazamientos pequeños en el proceso
+nodos_siguientes: ['grafico_media_movil_ewma', 'graficos_control_multivariados']
+nodos_previos: ['graficos_control_tiradas_cortas']
+================================================================================
+NODO: herramientas_computacionales_business_model | dominio: core
+titulo: Herramientas Computacionales para el Business Model Canvas
+resumen_teorico: Complementar el enfoque tradicional de papel y Post-its con herramientas digitales (como el Business Model Toolbox) permite crear, almacenar, manipular, rastrear y comunicar modelos de negocio con mayor rapidez y sofisticación. Al igual que el CAD revolucionó la arquitectura, las herramientas computacionales para modelos de negocio facilitan la colaboración remota, simulaciones financieras, y el acceso a bases de datos de patrones de negocio, sin eliminar el valor del trabajo manual inicial en papel para la ideación creativa.
+pasos_accionables:
+  1. Iniciar la ideación del modelo de negocio con Canvas físico en papel/poster y Post-its para maximizar la creatividad grupal
+  2. Una vez validada la dirección inicial, migrar el modelo a una herramienta digital (Strategyzer, Business Model Toolbox u otra) para facilitar versionado y colaboración remota
+  3. Usar las herramientas digitales para simulaciones financieras rápidas y comparación de múltiples versiones del modelo
+  4. Aprovechar bases de datos de patrones de negocio disponibles en plataformas digitales para inspirar iteraciones
+entregable_esperado: Modelo de negocio documentado digitalmente, con historial de versiones y capacidad de colaboración remota entre el equipo
+nodos_siguientes: ['business_plan_cinco_secciones', 'organizaciones_ambidiestras']
+nodos_previos: ['ventaja_competitiva_producto', 'lienzo_modelo_negocio', 'analisis_de_capacidad_de_recursos']
+================================================================================
+NODO: identificar_clientes_externos_e_internos | dominio: quality
+titulo: Identificación de Clientes Externos e Internos
+resumen_teorico: El segundo paso del Diseño para la Calidad es identificar completamente a los clientes, que se dividen en externos (compradores, comerciantes, procesadores, proveedores, clientes potenciales y clientes ocultos como reguladores o medios) e internos (cada persona dentro de la organización que actúa como proveedor, procesador y cliente). Un diagrama de flujo de alto nivel del proceso ayuda a revelar clientes no evidentes y a distinguir roles como quien ordena versus quien usa el producto.
+pasos_accionables:
+  1. Elaborar un diagrama de flujo del proceso relacionado al producto
+  2. Listar clientes externos: compradores, usuarios finales, comerciantes, procesadores, proveedores, potenciales y ocultos
+  3. Identificar clientes internos analizando las relaciones proveedor-procesador-cliente dentro de la organización
+  4. Distinguir entre quien ordena el producto y quien lo usa
+  5. Priorizar el elenco de clientes de forma consensuada por el equipo
+entregable_esperado: Lista completa y clasificada de clientes externos e internos, con diagrama de flujo del proceso
+nodos_siguientes: ['descubrir_necesidades_del_cliente', 'customer_needs_spreadsheet']
+nodos_previos: ['establecer_equipo_multifuncional', 'establecer_proyecto_y_metas_diseno', 'goal_statement_smart', 'juran_quality_by_design']
+================================================================================
+NODO: lienzo_proyecto_innovacion | dominio: core
+titulo: Lienzo del Proyecto de Innovación (Innovation Project Canvas)
+resumen_teorico: Herramienta visual tipo canvas que guia a quien tiene menos experiencia a mapear su propio plan de accion, en lugar de seguir una lista estandar de actividades. Se usan post its para volcar hipotesis en cada area: clientes, necesidades no resueltas, tendencias de mercado, competencia, propuesta de valor, soluciones, modelo de negocio, riesgos e incertidumbres criticas. Esto revela que se sabe con certeza y que es solo suposicion, lo que permite priorizar las brechas de conocimiento a cerrar y definir actividades clave con responsable y plazo. Es una version mas estructurada del lienzo en blanco que usan los mas expertos, util para aumentar tu propio compromiso con el plan.
+pasos_accionables:
+  1. Completa el canvas con post its en una sesion dedicada
+  2. Define los segmentos de clientes objetivo y sus necesidades no resueltas
+  3. Mapea tendencias de mercado y competidores relevantes
+  4. Articula la propuesta de valor y las soluciones consideradas
+  5. Separa que es hecho comprobado y que es suposicion no probada, y prioriza las brechas criticas a cerrar
+  6. Define las actividades clave: que, cuando y que recursos necesitas
+entregable_esperado: Un canvas completo del proyecto de innovacion con hipotesis documentadas en cada area, brechas de conocimiento identificadas y un plan de proximos pasos priorizado con tiempos.
+nodos_siguientes: ['technology_platform_evaluation', 'modelo_hibrido_agile_stage_gate']
+nodos_previos: ['modelo_contingencia_riesgo', 'afinar_frente_difuso_innovacion', 'value_proposition_canvas', 'project_schedule']
+================================================================================
+NODO: metas_desmaterializacion_energia | dominio: environmental
+titulo: Metas de desmaterialización y reducción de energía
+resumen_teorico: Las empresas líderes en ventaja ecológica establecen metas cuantitativas para reducir materiales y energía en sus productos, identificando en qué etapa del ciclo de vida se concentra el mayor impacto. Ejemplos incluyen el 'Considered Boot' de Nike (61% menos material, 35% menos energía) y Tide Coldwater de P&G, que atacó el mayor impacto ambiental identificado en el uso del producto (agua caliente). El rediseño de empaques (lightweighting) también reduce insumos, desperdicio y energía en manufactura y distribución.
+pasos_accionables:
+  1. Realizar un análisis de ciclo de vida para identificar dónde se concentra el mayor uso de materiales/energía
+  2. Establecer metas cuantitativas de reducción (% de materiales, % de energía)
+  3. Rediseñar empaques para reducir peso y volumen (lightweighting)
+  4. Comunicar los ahorros de costos y beneficios ambientales generados
+entregable_esperado: Metas cuantitativas de reducción de materiales y energía definidas, con plan de rediseño de producto o empaque
+nodos_siguientes: ['quimica_verde', 'establecer_metas_reduccion_emisiones']
+nodos_previos: ['aprender_haciendo_dfe']
+================================================================================
+NODO: muestreo_estadistico_para_inspeccion | dominio: quality
+titulo: Muestreo estadístico como alternativa a la inspección al 100%
+resumen_teorico: En lugar de revisar cada transacción, reclamo o pieza de inventario (costoso e ineficiente), Deming propone usar muestreo estadístico basado en teoría de probabilidad para estimar el estado general del sistema y detectar anomalías. Ejemplos incluyen el pago inmediato de viáticos con auditoría de una muestra (ej. 1 de 50) y la evaluación del valor de planta física de una empresa mediante inspección de una fracción representativa de los activos. Este enfoque libera recursos de revisión excesiva y los redirige a trabajo productivo.
+pasos_accionables:
+  1. Definir la población total de transacciones, activos o documentos a controlar.
+  2. Diseñar un tamaño de muestra estadísticamente representativo (incluyendo 100% de casos sospechosos).
+  3. Aplicar el muestreo de forma continua o periódica en lugar de revisión exhaustiva.
+  4. Usar los resultados de la muestra para estimar el desempeño general del sistema.
+  5. Reasignar el personal liberado de la inspección total a tareas de mejora o producción.
+entregable_esperado: Un plan de muestreo estadístico documentado que reemplaza la inspección al 100% en un proceso administrativo u operativo, con estimaciones de desempeño confiables.
+nodos_siguientes: ['control_estadistico_de_inventario_en_transito']
+nodos_previos: ['retroalimentacion_inmediata_de_errores']
+================================================================================
+NODO: plataforma_colaboracion_masiva | dominio: core
+titulo: Plataforma de Colaboración Masiva Basada en la Nube
+resumen_teorico: Una plataforma tecnológica accesible vía internet (usando tecnología COTS: laptops, smartphones) que permite a miles de usuarios de distintas organizaciones colaborar simultáneamente en tiempo real, visualizando datos operativos sobre un mapa digital. Se compone de personas, procesos (OODA + S&OP/M&OP) y tecnología (APIs para intercambio de datos entre sistemas ERP, sensores, etc.). Su valor radica en la simplicidad de uso (aprendizaje en 15-30 minutos) y en habilitar consenso rápido entre actores con agendas distintas sin control centralizado.
+pasos_accionables:
+  1. Seleccionar tecnología simple y accesible (COTS) para todos los participantes, grandes y pequeños
+  2. Definir APIs seguras para importar/exportar datos entre sistemas internos (ERP, sensores, reportes)
+  3. Diseñar visualización simple (mapa digital, dashboards) que cualquier usuario entienda rápidamente
+  4. Pilotar la plataforma con un grupo reducido y expandir por incrementos (ej. ciclos de 30-60-90 días)
+entregable_esperado: Un prototipo funcional de plataforma colaborativa con al menos una integración de datos y un mapa/dashboard visible para los participantes
+nodos_siguientes: ['herramientas_de_activacion_web']
+nodos_previos: ['proceso_sop_mop', 'definicion_alineacion_cadena_suministro', 'stakeholder_mapping_wheel']
+================================================================================
+NODO: pre_control_estadistico | dominio: quality
+titulo: PRE-Control
+resumen_teorico: PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso.
+pasos_accionables:
+  1. Centrar el proceso entre los límites de especificación al iniciar
+  2. Definir zonas de PRE-Control (verde, amarilla, roja) según distancia a los límites
+  3. Tomar muestras periódicas de tres piezas consecutivas
+  4. Detener el proceso si dos de tres mediciones caen en zona amarilla del mismo lado
+  5. Ajustar el proceso y reiniciar el monitoreo
+entregable_esperado: Sistema de control simplificado en piso de planta operando sin necesidad de gráficos de control tradicionales
+nodos_siguientes: ['graficos_control_tiradas_cortas']
+nodos_previos: ['capacidad_proceso_concepto']
+================================================================================
+NODO: product_design_spreadsheet | dominio: quality
+titulo: Hoja de Cálculo de Diseño de Producto (Product Design Spreadsheet)
+resumen_teorico: Herramienta central del proceso Quality by Design que organiza en un solo documento las necesidades del cliente, su traducción, su medición, y las características/features del producto que las satisfacen. Permite verificar que cada necesidad prioritaria esté cubierta por al menos una característica, que cada característica sea necesaria, y que el impacto combinado de las características sea suficiente para satisfacer la necesidad.
+pasos_accionables:
+  1. Colocar las necesidades del cliente, su traducción y medición en el lado izquierdo de la hoja
+  2. Listar las características candidatas del producto como columnas
+  3. Marcar la relación (ninguna, moderada, fuerte, muy fuerte) entre cada característica y cada necesidad
+  4. Verificar que cada necesidad prioritaria esté cubierta por al menos una característica
+  5. Verificar que cada característica sea necesaria (removerla dejaría una necesidad sin cubrir)
+entregable_esperado: Hoja de cálculo completa de diseño de producto vinculando necesidades, mediciones y características
+nodos_siguientes: ['desarrollo_caracteristicas_producto', 'establecer_metas_caracteristicas']
+nodos_previos: ['unidades_medida_sensores', 'customer_needs_spreadsheet', 'precision_exactitud_sensores']
+================================================================================
+NODO: product_roadmap_estrategico | dominio: core
+titulo: Roadmap Estratégico de Producto y Tecnología
+resumen_teorico: Un roadmap es una representación visual de las principales iniciativas de producto y tecnología en el tiempo (típicamente 5 años), derivada del Strat-Map y los planes de ataque. Es un 'plan rodante' que se actualiza anualmente, donde solo el primer año se implementa con certeza. Se compone de un roadmap de producto (qué productos desarrollar y cuándo) y un roadmap de tecnología (qué tecnologías se necesitan para soportar esos productos). Sirve como puente entre decisiones estratégicas y tácticas across funciones organizacionales.
+pasos_accionables:
+  1. Reunir inputs: evaluación estratégica, revisión de portafolio existente, análisis competitivo, tendencias tecnológicas y de mercado, voz del cliente
+  2. Ensamblar un equipo multifuncional de roadmapping
+  3. Generar una 'wish list' de productos candidatos usando templates de una página
+  4. Presentar candidatos en una reunión 'Gate 0' y calificarlos con un scorecard simplificado (fit estratégico, beneficios únicos, atractivo de mercado, factibilidad técnica, riesgo/recompensa)
+  5. Seleccionar proyectos 'in' y definir línea de tiempo considerando recursos disponibles
+  6. Derivar el roadmap de tecnología a partir del roadmap de producto
+  7. Actualizar el roadmap anualmente como plan rodante
+entregable_esperado: Un roadmap de producto a 5 años con placemarks de proyectos mayores, y un roadmap de tecnología asociado
+nodos_siguientes: ['stage_gate_system', 'portfolio_management', 'gate_0_evaluacion_wishlist', 'governance_integration_gates_portfolio_roadmap']
+nodos_previos: ['desarrollo_attack_plans', 'strat_map_arenas_estrategicas', 'scorecard_de_seleccion_de_proyectos', 'technology_platform_evaluation', 'estrategia_captura_mercado_crecimiento', 'marco_analisis_mercado_cadena_suministro', 'estrategia_de_innovacion_arenas']
+================================================================================
+NODO: rol_de_la_fuerza_laboral_en_calidad | dominio: quality
+titulo: Rol de la Fuerza Laboral en la Gestión de Calidad
+resumen_teorico: La fuerza laboral (empleados sin roles gerenciales) tiene un papel esencial al nominar problemas de calidad, participar en equipos, identificar elementos de su trabajo que no cumplen criterios de autocontrol y conocer las necesidades de sus clientes internos y externos. Aprovechar el conocimiento y experiencia de quienes ejecutan el trabajo diario es clave para el éxito de la calidad.
+pasos_accionables:
+  1. Establecer canales para que los trabajadores nominen problemas de calidad
+  2. Formar equipos de calidad con participación voluntaria o asignada del personal operativo
+  3. Capacitar a los trabajadores en criterios de autocontrol
+  4. Fomentar el conocimiento de las necesidades de clientes internos y externos
+entregable_esperado: Mecanismo formal de participación de la fuerza laboral en la mejora de calidad
+nodos_siguientes: ['rol_del_equipo_de_trabajo_en_calidad']
+nodos_previos: ['rol_de_mandos_medios_y_supervisores']
+================================================================================
+NODO: search_for_business_model | dominio: core
+titulo: Búsqueda de un Modelo de Negocio (Search)
+resumen_teorico: La búsqueda de un modelo de negocio es la actividad central de un startup, incluso si eres una sola persona con un teléfono: una organización temporal que opera bajo incertidumbre extrema y todavía no conoce a sus clientes, su problema ni las características necesarias del producto. A diferencia de una empresa establecida que ejecuta un modelo probado, tú buscas hipótesis sobre mercado, cliente, canal, precio y producto mediante Customer Development. Esta condición no depende del tamaño ni del sector: aplica igual dentro de una gran empresa que en un garaje, y te distingue de un negocio clon financiable con un préstamo bancario, cuyo éxito depende solo de ejecutar y no de descubrir. Mientras buscas, evita estructuras de ejecución y adopta una cultura de aprendizaje y experimentación, no de miedo al fracaso.
+pasos_accionables:
+  1. Determina si tu proyecto está en modo búsqueda (hipótesis no probadas) o en modo ejecución (modelo conocido)
+  2. Lista explícitamente las hipótesis de tu modelo de negocio: mercado, cliente, producto, canal y precio, marcadas como no probadas
+  3. Aplica el proceso de Customer Development para salir a probar cada hipótesis con clientes reales
+  4. Evita montar estructuras o roles de ejecución antes de validar el modelo
+  5. Itera y pivota según la evidencia recogida hasta encontrar un modelo repetible y escalable
+  6. Adopta una mentalidad de aprendizaje y experimentación en vez de miedo al fracaso
+  7. Abandonar la idea de escribir un plan de negocio detallado al inicio
+  8. Usar el Business Model Canvas y Value Proposition Canvas como herramientas de planificación flexible
+entregable_esperado: Un lienzo de hipótesis de modelo de negocio marcado explícitamente como no probado, junto con evidencia de que el modelo es repetible y escalable o una decisión clara de pivote.
+nodos_siguientes: ['customer_development_process', 'modelo_customer_development', 'lienzo_modelo_negocio', 'business_model_canvas_vs_plan_negocio', 'customer_discovery', 'fracaso_como_aprendizaje_startup', 'aprendizaje_validado', 'emprendimiento_como_disciplina_de_gestion', 'marcos_historicos_comunidades_startup', 'antigoals_framework', 'diseno_sistemico_partes_interesadas', 'encuadre_desafio_diseno', 'mapeo_capas_diseno', 'pensamiento_espacial_mapeo', 'embudo_secuencial_de_inversores', 'value_proposition_startup', 'waterfall_vs_agile_development', 'customer_development_modelo', 'metricas_de_startup', 'eliminar_desperdicio_organizacional', 'evitar_pseudociencia_producto', 'seleccion_estructura_corporativa', 'hr_como_control_de_calidad_gerencial', 'minimizar_politica_organizacional', 'vision_estrategia_producto_pivote', 'gestion_intraemprendedora_experimentacion', 'desarrollo_de_clientes_customer_development', 'business_model_canvas_scorecard', 'diez_principios_testing']
+nodos_previos: ['lienzo_modelo_negocio', 'arenas_estrategicas', 'analisis_y_sintesis', 'diseno_consecuencias_no_intencionadas', 'ficcion_especulativa_como_metodo', 'tecnica_cambio_de_perspectiva_escala', 'vision_estrategia_producto_pivote', 'division_trabajo_humano_ia', 'buscar_armonia_diseno', 'modelo_tradicional_introduccion_producto', 'contabilidad_innovacion_pivote', 'estilos_pensamiento_intuitivo_vs_logico', 'value_proposition_canvas']
+================================================================================
+NODO: stage_gate_system | dominio: core
+titulo: Sistema Stage-Gate: Playbook para el Desarrollo de Nuevos Productos
+resumen_teorico: Stage-Gate es una metodología estructurada de idea-a-lanzamiento que organiza el desarrollo de productos en etapas (stages) separadas por puntos de decisión (gates) de Go/Kill. Integra los factores críticos de éxito y mejores prácticas identificadas en la investigación de fracasos y éxitos, traduciéndolos en un blueprint operativo. Versiones modernas incorporan enfoques híbridos con métodos Agile (Agile-Stage-Gate), modelos basados en riesgo y contexto, haciendo el sistema más flexible, rápido y adaptativo para proyectos de innovación audaz.
+pasos_accionables:
+  1. Definir las etapas (stages) del proceso de desarrollo con actividades específicas por etapa, por ejemplo Discovery, Scoping, Business Case, Development, Testing, Launch
+  2. Establecer gates de decisión Go/Kill con criterios claros basados en los factores de éxito
+  3. Incorporar prácticas ágiles donde sea apropiado para aumentar velocidad y flexibilidad
+  4. Ajustar el rigor del proceso según el riesgo y tipo de proyecto (context-based approach)
+  5. Documentar el playbook como sistema operativo replicable para toda la organización
+  6. Asegurar que cada etapa involucre equipos multifuncionales trabajando en paralelo
+  7. Establecer que cada etapa cueste progresivamente más, siguiendo la lógica de compra de opciones incrementales
+entregable_esperado: Mapa documentado del proceso Stage-Gate adaptado a la organización, con etapas, entregables y criterios de gate definidos
+nodos_siguientes: ['build_measure_learn', 'modelo_tradicional_introduccion_producto', 'estrategia_innovacion_producto', 'calidad_de_ejecucion_proceso_innovacion', 'estructura_gates', 'etapa_discovery_ideacion']
+nodos_previos: ['gestion_portafolio_foco', 'ocho_factores_exito_criticos', 'definicion_estable_producto', 'equipo_multifuncional_real', 'gate_0_evaluacion_wishlist', 'product_roadmap_estrategico', 'siete_razones_fracaso_productos', 'voice_of_customer_homework', 'cultura_de_innovacion', 'diamante_de_innovacion', 'embudo_atricion_nuevos_productos', 'innovacion_como_apuesta_incremental', 'liderazgo_ejecutivo_innovacion', 'reglas_gestion_riesgo_gambling', 'skunk_works_proyectos_paralelos']
+================================================================================
+NODO: tipos_criterios_gate | dominio: core
+titulo: Tipos de Criterios de Decisión en Gates (Must-meet, Go/Kill, Should-meet)
+resumen_teorico: Los criterios de gate se dividen en tres categorías que no deben mezclarse: Must-meet (preguntas de sí/no tipo checklist, eliminatorias, ej. alineación estratégica o ética), Go/Kill (criterios cuantitativos con umbral mínimo, ej. NPV positivo, IRR>30%, Payback<3 años), y Should-meet (criterios deseables usados para priorización relativa, evaluados en formato scorecard, ej. atractivo de mercado, ventaja competitiva). Estos criterios deben mantenerse consistentes de gate a gate cuando sea posible, aunque las subpreguntas financieras se vuelven más específicas en etapas avanzadas.
+pasos_accionables:
+  1. Definir una lista de preguntas must-meet tipo checklist para las primeras etapas (eliminatorias).
+  2. Definir umbrales financieros mínimos (NPV, IRR, Payback) para criterios Go/Kill en etapas avanzadas.
+  3. Usar un scorecard para las preguntas should-meet que evalúan atractivo relativo del proyecto.
+  4. Mantener los mismos factores principales del scorecard consistentes entre gates, ajustando solo las subpreguntas según la etapa.
+  5. Adaptar los criterios según el tipo de proyecto (mayor innovación, renovación, sales-force request, o desarrollo tecnológico).
+entregable_esperado: Un set documentado de criterios must-meet, go/kill y should-meet (scorecard) por cada gate del proceso.
+nodos_siguientes: ['seleccion_gatekeepers', 'definicion_gatekeepers']
+nodos_previos: ['diamante_decision_tres_partes', 'estructura_de_gates']
+================================================================================
+NODO: traduccion_necesidades_cliente | dominio: quality
+titulo: Traducción de Necesidades del Cliente al Lenguaje del Proveedor
+resumen_teorico: Proceso sistemático de convertir las necesidades expresadas por el cliente (en su propio lenguaje, a veces vago o ambiguo) al lenguaje técnico del proveedor, evitando malentendidos derivados de un 'lenguaje común' aparente. Se apoya en herramientas como glosarios, muestras físicas, departamentos de traducción (ej. edición de pedidos), estandarización de nomenclatura y, sobre todo, la medición numérica como el remedio más efectivo contra la vaguedad.
+pasos_accionables:
+  1. Identificar términos vagos o ambiguos en las necesidades expresadas por el cliente
+  2. Crear un glosario de términos clave con definiciones precisas acordadas
+  3. Usar muestras físicas o audiovisuales para especificar características cualitativas
+  4. Establecer un departamento o proceso de traducción para pedidos de alto volumen si aplica
+  5. Convertir descripciones cualitativas en mediciones numéricas siempre que sea posible
+entregable_esperado: Documento de necesidades del cliente traducidas a especificaciones técnicas claras y medibles
+nodos_siguientes: ['unidades_medida_sensores']
+nodos_previos: ['customer_needs_spreadsheet', 'descubrir_necesidades_del_cliente']
+================================================================================
+NODO: valoracion_costos_externos | dominio: environmental
+titulo: Valoración de Costos y Beneficios Externos (Ambientales)
+resumen_teorico: Metodologías para asignar valor monetario a impactos ambientales externos que carecen de mercado directo. Se dividen en métodos del lado de la demanda (disposición a pagar, como Hedonic Pricing, Travel Cost Method, Contingent Valuation) y métodos del lado de la oferta (costos de prevención, restauración, productividad) que estiman el costo de prevenir, restaurar o compensar el daño ambiental.
+pasos_accionables:
+  1. Determinar si el impacto ambiental a valorar tiene un mercado sustituto disponible
+  2. Elegir un método de demanda (willingness to pay/accept) o de oferta (costos de prevención/restauración) según el contexto
+  3. Recopilar datos de encuestas, mercados sustitutos o costos de restauración según el método elegido
+  4. Asignar un valor monetario estimado al costo o beneficio ambiental externo
+entregable_esperado: Una estimación monetaria documentada de al menos un costo o beneficio ambiental externo relevante para la empresa.
+nodos_siguientes: []
+nodos_previos: ['contabilidad_ambiental']
+================================================================================
+NODO: waterfall_vs_agile_development | dominio: core
+titulo: Waterfall Development vs Agile Development
+resumen_teorico: Waterfall Development es un proceso de ingeniería lineal y secuencial por etapas, donde todo el producto y sus características se especifican por adelantado y cada etapa se asigna a un equipo separado para mayor control. Es la antítesis del Agile Development, que es iterativo y flexible. Entender esta distinción es clave para elegir el enfoque de desarrollo de producto adecuado para un startup en búsqueda de su modelo de negocio.
+pasos_accionables:
+  1. Evaluar si el contexto del proyecto requiere certeza total de requisitos (waterfall) o iteración (agile).
+  2. Para startups en fase de búsqueda, preferir metodologías ágiles que permitan pivotar.
+  3. Alinear el proceso de desarrollo de producto con el proceso de Customer Development.
+entregable_esperado: Una decisión documentada sobre la metodología de desarrollo de producto a utilizar.
+nodos_siguientes: ['producto_minimo_viable', 'build_measure_learn']
+nodos_previos: ['definicion_startup', 'buy_in_customer_development', 'search_for_business_model', 'buyin_customer_development']
