@@ -1,0 +1,140 @@
+==============================================================================
+UNIDAD 67 | dominio quality | paso 1
+PAR: limites_especificacion_funcionales -> ctq_caracteristicas_criticas
+TEXTO DEL PASO (del fichero del filtro): Identifica qué características son críticas para que tu producto funcione
+------------------------------------------------------------------------------
+MADRE
+  ID: limites_especificacion_funcionales
+  TITULO: Define los límites de tus piezas según lo que el producto realmente necesita
+  DOMINIO: quality
+  RESUMEN: Cuando pones un valor deseado y un margen de tolerancia para una característica de tu producto, no lo saques de la manga ni copies un criterio arbitrario: basalo en lo que tu producto necesita para funcionar bien. Para eso, junta datos que relacionen el desempeño de tu producto con las mediciones críticas de sus componentes, usando diagramas de dispersión y ecuaciones de regresión.
+  PASOS:
+    1. Identifica qué características son críticas para que tu producto funcione
+    2. Diseña pruebas que relacionen las variaciones de un componente con el desempeño del producto
+    3. Construye diagramas de dispersión y ecuaciones de regresión con esos datos
+    4. Define tus límites de tolerancia con base en esos datos, dentro de márgenes de confianza
+    5. Verifica que tu muestra sea suficiente y que tu proceso esté bajo control estadístico
+  ENTREGABLE: Documento de especificaciones técnicas con límites de tolerancia justificados por datos funcionales
+  PREVIOS: prediccion_confiabilidad_diseno
+  SIGUIENTES: limites_tolerancia_estadistica, funcion_perdida_limites_especificacion
+------------------------------------------------------------------------------
+HIJO
+  ID: ctq_caracteristicas_criticas
+  TITULO: CTQ - Características Críticas para la Calidad
+  DOMINIO: quality
+  RESUMEN: Las CTQ son la traducción técnica y medible de lo que tu cliente te pide. Te sirven como objetivos concretos a la hora de diseñar y como criterio de decisión durante todo el proceso, para asegurarte de que lo que construyes resuelve de verdad el problema de tu cliente.
+  PASOS:
+    1. Recoge la voz de tu cliente (VOC) con entrevistas, encuestas u observación directa
+    2. Traduce lo que te dice tu cliente a términos técnicos y medibles
+    3. Define para cada CTQ una métrica, una unidad de medida y los límites aceptables
+    4. Prioriza las CTQ según su impacto en la satisfacción de tu cliente
+    5. Usa las CTQ como referencia para comparar y evaluar tus alternativas de diseño
+  ENTREGABLE: Tu lista priorizada de CTQ con métricas, objetivos y límites de especificación definidos
+  PREVIOS: dfss_metodologia, design_for_six_sigma_dfss, definiciones_operacionales_de_calidad
+  SIGUIENTES: qfd_matriz
+
+==============================================================================
+UNIDAD 70 | dominio quality | paso 3
+PAR: descubrir_necesidades_del_cliente -> necesidades_psicologicas_cliente
+TEXTO DEL PASO (del fichero del filtro): Distinguir entre necesidades declaradas, reales, percibidas y culturales, por cada segmento de cliente
+------------------------------------------------------------------------------
+MADRE
+  ID: descubrir_necesidades_del_cliente
+  TITULO: Descubrimiento de las Necesidades del Cliente
+  DOMINIO: quality
+  RESUMEN: El tercer paso del Diseño para la Calidad consiste en descubrir las necesidades reales de clientes externos e internos, diferenciando entre necesidades declaradas (lo que el cliente dice que quiere) y necesidades reales (los beneficios que realmente busca). También deben considerarse las necesidades percibidas, culturales, y las derivadas de usos no previstos. El proceso incluye planificar la recolección de necesidades, listarlas en el lenguaje del cliente, analizarlas y priorizarlas, y traducirlas al lenguaje de la organización.
+  PASOS:
+    1. Planificar métodos de recolección de necesidades: encuestas, focus groups, quejas, visitas a clientes, etc.
+    2. Recopilar la lista de necesidades en el lenguaje propio del cliente
+    3. Distinguir entre necesidades declaradas, reales, percibidas y culturales, por cada segmento de cliente
+    4. Investigar posibles usos no previstos del producto y sus riesgos de seguridad
+    5. Analizar y priorizar las necesidades identificadas, de forma consensuada, sin asumir jerarquías automáticas por tipo de cliente
+    6. Traducir las necesidades priorizadas al lenguaje técnico de la organización
+  ENTREGABLE: Lista de necesidades del cliente priorizadas y traducidas al lenguaje de la organización, lista para su análisis en spreadsheet
+  PREVIOS: identificar_clientes_externos_e_internos, brecha_de_calidad_cuatro_gaps, fitness_for_use_purpose, satisfaccion_vs_insatisfaccion_kano, necesidades_reales_vs_declaradas
+  SIGUIENTES: qfd_matriz, diseno_de_procesos_por_caracteristicas, diseno_servicio_calidad, gestion_de_quejas_y_fidelizacion, herramientas_de_diseno_de_calidad, sistema_manejo_quejas, desarrollar_caracteristicas_producto, design_for_six_sigma_dfss, six_sigma_dmaic, traduccion_necesidades_cliente, necesidades_psicologicas_cliente
+------------------------------------------------------------------------------
+HIJO
+  ID: necesidades_psicologicas_cliente
+  TITULO: Necesidades Psicológicas y Culturales del Cliente
+  DOMINIO: quality
+  RESUMEN: Más allá de las características técnicas, las necesidades del cliente incluyen aspectos psicológicos (estatus, sentido de bienestar) y culturales (preservación de estatus, hábitos). Estas necesidades explican por qué productos técnicamente idénticos pueden venderse a precios muy diferentes según el empaque, entorno de venta o experiencia asociada.
+  PASOS:
+    1. Identificar los componentes psicológicos y de estatus asociados al producto/servicio
+    2. Diseñar la experiencia de compra y presentación acorde al segmento psicológico objetivo
+    3. Detectar resistencias culturales encubiertas ante cambios propuestos (ej. pérdida de estatus)
+    4. Indagar razones reales detrás de objeciones aparentemente técnicas o de costo
+  ENTREGABLE: Perfil de necesidades psicológicas/culturales del segmento de cliente objetivo
+  PREVIOS: necesidades_reales_vs_declaradas, descubrir_necesidades_del_cliente
+  SIGUIENTES: necesidades_user_friendly
+
+==============================================================================
+UNIDAD 74 | dominio quality | paso 3
+PAR: seleccion_plan_muestreo_ansi_z14 -> planes_de_muestreo_de_aceptacion
+TEXTO DEL PASO (del fichero del filtro): Leer el plan de muestreo correspondiente (tamaño de muestra, número de aceptación y rechazo) en la tabla maestra
+------------------------------------------------------------------------------
+MADRE
+  ID: seleccion_plan_muestreo_ansi_z14
+  TITULO: Selección y Aplicación de Planes de Muestreo ANSI/ASQC Z1.4
+  DOMINIO: quality
+  RESUMEN: ANSI/ASQC Z1.4 es un sistema de muestreo por atributos basado en AQL que permite seleccionar un plan de muestreo a partir de: el AQL, el tamaño de lote, el tipo de muestreo (simple/doble/múltiple) y el nivel de inspección (I, II o III, siendo II el normal). El estándar incluye procedimientos de cambio entre inspección normal, estricta (si la calidad se deteriora) y reducida (si el historial del proveedor es bueno), permitiendo balancear costo de inspección con protección de calidad requerida.
+  PASOS:
+    1. Determinar el AQL, tamaño de lote y nivel de inspección requeridos
+    2. Consultar la tabla de letras de código de tamaño de muestra según lote y nivel de inspección
+    3. Leer el plan de muestreo correspondiente (tamaño de muestra, número de aceptación y rechazo) en la tabla maestra
+    4. Implementar reglas de cambio a inspección estricta si dos de cinco lotes consecutivos son rechazados
+    5. Aplicar inspección reducida si los últimos 10 lotes fueron aceptados bajo inspección normal
+  ENTREGABLE: Plan de muestreo ANSI/ASQC Z1.4 completamente parametrizado y procedimiento de cambio de niveles documentado
+  PREVIOS: single_double_multiple_sampling, niveles_calidad_muestreo_aql_lql_aoql, tipos_planes_muestreo_atributos_variables
+  SIGUIENTES: muestreo_dodge_romig, acceptance_control
+------------------------------------------------------------------------------
+HIJO
+  ID: planes_de_muestreo_de_aceptacion
+  TITULO: Planes de Muestreo de Aceptación
+  DOMINIO: quality
+  RESUMEN: Establecimiento de criterios de muestreo para inspección y pruebas que equilibran el riesgo del proveedor (aceptar lotes con el promedio de proceso habitual) y el riesgo del comprador (daño causado por un defecto que pasa el filtro de muestreo). El diseño debe balancear el costo de clasificación (sorting) versus muestreo, considerando también el error de medición.
+  PASOS:
+    1. Definir el promedio de proceso esperado del proveedor
+    2. Calcular el costo del daño por defectos no detectados
+    3. Balancear costo de inspección al 100% versus muestreo
+    4. Diseñar la curva característica de operación (OC curve) del plan
+    5. Considerar errores de medición en el diseño del plan
+  ENTREGABLE: Plan de muestreo documentado con niveles de aceptación, tamaños de muestra y criterios de rechazo
+  PREVIOS: clasificacion_de_seriedad_de_defectos, clasificacion_de_seriedad_de_defectos_2, distribucion_binomial
+  SIGUIENTES: establecimiento_de_niveles_de_calidad_aql_dpm
+
+==============================================================================
+UNIDAD 77 | dominio quality | paso 3
+PAR: eliminacion_inspeccion_masiva_por_control_estadistico -> carta_de_control_shewhart
+TEXTO DEL PASO (del fichero del filtro): Reemplazar inspección 100% por muestreo estadístico para mantenimiento de la carta de control
+------------------------------------------------------------------------------
+MADRE
+  ID: eliminacion_inspeccion_masiva_por_control_estadistico
+  TITULO: Sustitución de la Inspección Masiva por Control Estadístico
+  DOMINIO: quality
+  RESUMEN: La inspección al 100% de un producto (como el caso de discos de freno inspeccionados en su totalidad) es innecesaria y costosa cuando el proceso está bajo control estadístico demostrado mediante cartas de control; en ese caso basta con muestreo periódico. Insistir en inspección total ignora la evidencia estadística y desperdicia recursos, además de no mejorar la calidad, solo detecta defectos ya producidos.
+  PASOS:
+    1. Establecer cartas de control para verificar la estabilidad del proceso
+    2. Demostrar mediante datos que el proceso está bajo control estadístico
+    3. Reemplazar inspección 100% por muestreo estadístico para mantenimiento de la carta de control
+    4. Comunicar a las áreas de calidad y clientes el cambio y su justificación estadística
+  ENTREGABLE: Evidencia estadística de proceso bajo control y nuevo protocolo de muestreo aprobado
+  PREVIOS: control_estadistico_de_procesos_en_tiempo_real
+  SIGUIENTES: 
+------------------------------------------------------------------------------
+HIJO
+  ID: carta_de_control_shewhart
+  TITULO: Carta de Control de Shewhart
+  DOMINIO: quality
+  RESUMEN: Herramienta gráfica que grafica el desempeño de calidad en el tiempo junto con una línea central (promedio histórico) y límites estadísticos de control basados en probabilidad (ej. 1 en 100). Los puntos dentro de los límites sugieren causas comunes (proceso en control estadístico); los puntos fuera sugieren causas especiales que ameritan acción correctiva. Su uso debe justificarse por valor agregado (seguridad, riesgo económico, necesidades del cliente), evitando el uso excesivo e ignorado de cartas sin valor real.
+  PASOS:
+    1. Recolectar datos de desempeño del proceso en el tiempo
+    2. Calcular la línea central (promedio) y los límites de control estadísticos
+    3. Graficar los puntos y clasificar si caen dentro o fuera de los límites
+    4. Si están dentro: asumir causas comunes, no tomar acción individual
+    5. Si están fuera: investigar causa especial y tomar acción correctiva
+    6. Justificar el uso de la carta según impacto en cliente, seguridad o economía
+  ENTREGABLE: Carta de control implementada y en uso activo para el proceso, con criterios claros de interpretación
+  PREVIOS: causas_especiales_y_comunes_variacion
+  SIGUIENTES: analisis_variacion_desempeno_servicio, distincion_causas_comunes_especiales_3, causas_comunes_vs_especiales
+

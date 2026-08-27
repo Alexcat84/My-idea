@@ -1,0 +1,148 @@
+==============================================================================
+UNIDAD 64 | dominio quality | paso 2
+PAR: control_calidad_definicion -> plan_de_control
+TEXTO DEL PASO (del fichero del filtro): Diferenciar entre necesidad de control y necesidad de mejora
+------------------------------------------------------------------------------
+MADRE
+  ID: control_calidad_definicion
+  TITULO: Control de Calidad como Proceso Universal (Trilogía de Juran)
+  DOMINIO: quality
+  RESUMEN: El control de calidad es el tercer proceso universal de la Trilogía de Juran (junto con planificación y mejora). Su propósito es mantener la estabilidad del proceso mediante un bucle de retroalimentación, evitando el deterioro del desempeño una vez alcanzado un nuevo nivel tras la mejora.
+  PASOS:
+    1. Identificar en qué zona de control se encuentra el proceso (estable pero deficiente vs. mejorado)
+    2. Diferenciar entre necesidad de control y necesidad de mejora
+    3. Establecer nuevos controles después de cada mejora para evitar retroceso
+    4. Aplicar el concepto de control tanto a nivel de proceso como de producto
+  ENTREGABLE: Diagrama de la Trilogía de Juran aplicado al proceso actual con zonas de control identificadas
+  PREVIOS: entrenamiento_para_breakthrough
+  SIGUIENTES: bucle_retroalimentacion_control
+------------------------------------------------------------------------------
+HIJO
+  ID: plan_de_control
+  TITULO: Plan de Control
+  DOMINIO: quality
+  RESUMEN: El plan de control se usa para sostener las ganancias obtenidas de un proyecto de mejora de calidad. Especifica las variables de control a monitorear, cómo medirlas y las acciones a tomar según criterios explícitos, asegurando el máximo uso del autocontrol.
+  PASOS:
+    1. Identificar las variables que afectan al remedio y al cliente directa o indirectamente
+    2. Establecer el estándar que activará una acción, idealmente un límite de control de una carta de control
+    3. Definir cómo se medirá cada variable de control, especificando unidad de medida, sensor, frecuencia y tamaño de muestra
+    4. Establecer dónde, cuándo y cómo se registrarán las mediciones
+    5. Decidir quién analizará las mediciones y determinará si el proceso está fuera de control
+    6. Decidir quién actuará para diagnosticar y eliminar la causa asignable
+    7. Definir los pasos para regresar el proceso a control
+    8. Revisar la matriz para verificar completitud y efectividad, y también su cobertura de variables críticas y velocidad de respuesta
+    9. Capacitar a los dueños del proceso en el uso del plan de control.
+    10. Auditar periódicamente la efectividad del plan de control.
+  ENTREGABLE: Plan de control documentado con variables, mediciones, responsables y acciones correctivas definidas
+  PREVIOS: diagrama_barreras_ayudas, analisis_beneficio_costo, diagrama_caja, boxplot_resumen_datos, control_estadistico_de_procesos, diagrama_de_flujo_proceso_map, diseno_implementacion_remedio, fmea_analisis_de_modos_de_falla, matriz_de_planificacion_arbol
+  SIGUIENTES: ciclo_shewhart_pdsa, control_estadistico_de_procesos
+
+==============================================================================
+UNIDAD 65 | dominio core | paso 1
+PAR: business_model_canvas_scorecard -> key_partners_hypothesis
+TEXTO DEL PASO (del fichero del filtro): Llenar el canvas inicial con tus hipótesis en las 9 áreas: segmentos, propuesta de valor, canales, relaciones, recursos, socios e ingresos
+------------------------------------------------------------------------------
+MADRE
+  ID: business_model_canvas_scorecard
+  TITULO: El Business Model Canvas como Scorecard Semanal
+  DOMINIO: core
+  RESUMEN: El Business Model Canvas de Osterwalder, además de ser una foto estática del negocio, se usa en Customer Discovery como un scorecard semanal para rastrear el progreso en la búsqueda del modelo de negocio. Cada semana actualizas el canvas reflejando pivotes e iteraciones, resaltando en rojo los cambios respecto a la semana anterior. Esto permite ver claramente qué hipótesis cambiaron y cuáles se mantienen, generando un historial que documenta cómo evoluciona tu entendimiento del negocio con el tiempo. Es especialmente útil cuando no tienes claridad propia sobre tu modelo de negocio o necesitas visualizar tu progreso semana a semana de forma tangible.
+  PASOS:
+    1. Llenar el canvas inicial con tus hipótesis en las 9 áreas: segmentos, propuesta de valor, canales, relaciones, recursos, socios e ingresos
+    2. Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho, y ademas cada vez que obtengas nueva evidencia
+    3. Resaltar en rojo los cambios respecto a la semana anterior
+    4. Una vez que confirmes los cambios, integrarlos como el nuevo canvas base en negro para la siguiente semana
+    5. Repetir este proceso de forma continua durante todo tu customer discovery
+    6. Sal a validar cada hipótesis con clientes reales cara a cara.
+    7. Conserva todas las versiones del canvas como un flip book que documente la evolución de tu modelo de negocio.
+    8. Evita convertir el canvas en un plan operativo prematuro basado en suposiciones sin validar.
+  ENTREGABLE: Serie histórica de canvases semanales que documenta la evolución de tu modelo de negocio.
+  PREVIOS: problem_solution_fit, hipotesis_de_tamano_de_mercado, producto_minimo_viable, lienzo_modelo_negocio, pivotes_e_iteraciones, business_model_environment_mapping, business_plan_cinco_secciones, search_for_business_model
+  SIGUIENTES: customer_validation, biblioteca_experimentos_validacion, pivote_o_proceder, filosofia_customer_validation, filosofia_validacion_clientes, intimacion_emocional_como_senal_de_verdad, startup_como_experimento_cientifico, usuarios_extremos_edge_cases, diseno_experimentos_hipotesis, customer_discovery, modelo_customer_development, pivote_startup
+------------------------------------------------------------------------------
+HIJO
+  ID: key_partners_hypothesis
+  TITULO: Hipótesis de Socios Clave
+  DOMINIO: core
+  RESUMEN: Identifica los socios esenciales que proveen capacidades, productos o servicios que la startup no puede o no quiere desarrollar internamente. Se organizan en cuatro tipos: alianzas estratégicas, coopetición, desarrollo conjunto de negocio y relaciones con proveedores clave. Con cada uno se define el 'intercambio de valor', qué provee y qué recibe a cambio, anotado en una tabla de tres columnas junto a sus candidatos suplentes. La flexibilidad de cada proveedor se evalúa en tiempos de entrega, tamaños de pedido, crédito y precio, y se distingue con cuidado entre socios y recursos clave, que no son lo mismo. El resultado se lleva al Business Model Canvas y se planea su validación posterior con
+  PASOS:
+    1. Lista los socios potenciales, los primarios y sus candidatos suplentes, clasificados en los cuatro tipos: alianzas estratégicas, coopetición, desarrollo conjunto de negocio y relaciones con proveedores clave
+    2. Define en una tabla de tres columnas qué proveerá cada socio y qué recibirá de la empresa a cambio: nombre del socio, qué provee, qué ofreces tú
+    3. Evalúa la flexibilidad de cada proveedor en tiempos de entrega, tamaños de pedido, crédito, precio y condiciones
+    4. Distingue claramente entre socios y recursos clave
+    5. Actualiza el Business Model Canvas con los socios identificados
+    6. Planea la validación posterior con reuniones reales con cada socio candidato
+  ENTREGABLE: Tabla de socios clave con columnas: nombre del socio, tipo de relación, qué provee, y qué ofrece la empresa a cambio como contraprestación, con los candidatos suplentes identificados y la validación con reuniones reales ya planeada
+  PREVIOS: key_resources_hypothesis, dependency_analysis, intellectual_property_strategy
+  SIGUIENTES: revenue_pricing_hypothesis, test_socios_de_trafico, contratar_cerrador_de_ventas, herramientas_de_activacion_web, mapa_de_canal_de_ventas
+
+==============================================================================
+UNIDAD 66 | dominio core | paso 6
+PAR: emprendimiento_como_disciplina_de_gestion -> emprendedor_como_puesto_de_trabajo
+TEXTO DEL PASO (del fichero del filtro): Tratar el rol de emprendedor como una función formal y reconocida dentro de la organización
+------------------------------------------------------------------------------
+MADRE
+  ID: emprendimiento_como_disciplina_de_gestion
+  TITULO: El Emprendimiento como Disciplina de Gestión
+  DOMINIO: core
+  RESUMEN: Una startup es una institución, no solo un producto, y por eso requiere un tipo de gestión específicamente diseñado para su contexto de incertidumbre extrema. Ni la planificación tradicional (basada en historiales estables de negocio) ni el caos de 'simplemente hazlo' funcionan bien en este contexto: se necesita una disciplina de gestión estructurada pero flexible, que trate el rol de emprendedor como una función formal dentro de la organización, ligera en procesos pero orientada al aprendizaje rápido en vez de al control burocrático.
+  PASOS:
+    1. Evitar depender exclusivamente de planes de negocio rígidos o de investigación de mercado extensa cuando existe alta incertidumbre
+    2. Evitar también el enfoque de 'solo hazlo' sin ningún tipo de estructura o método
+    3. Abandonar la idea de que gestión y disciplina son enemigas de la innovación y la creatividad
+    4. Adoptar una disciplina de gestión específica para este contexto, que balancee estructura y adaptabilidad
+    5. Implementar procesos ligeros que permitan aprendizaje rápido en vez de control burocrático
+    6. Tratar el rol de emprendedor como una función formal y reconocida dentro de la organización
+  ENTREGABLE: Una estructura de gestión definida para el proyecto, que no dependa de la planificación tradicional ni de la improvisación total, y que permita aprendizaje rápido
+  PREVIOS: principios_lean_startup, definicion_startup, search_for_business_model
+  SIGUIENTES: ciclo_construir_medir_aprender, aprendizaje_validado
+------------------------------------------------------------------------------
+HIJO
+  ID: emprendedor_como_puesto_de_trabajo
+  TITULO: El Emprendedor como Título de Trabajo Formal
+  DOMINIO: core
+  RESUMEN: Si quieres retener a las personas más innovadoras que trabajan contigo, el emprendimiento dentro de tu negocio tiene que ser un camino profesional real, no un paso pasajero antes de volver a un puesto tradicional. Si lideras con la metodología Lean Startup, mide ese trabajo con la contabilidad de innovación, no con métricas de rendimiento comunes, y dale a esa persona el título formal de Emprendedor, para que pueda seguir incubando ideas nuevas después de lograr que un producto crezca con éxito.
+  PASOS:
+    1. Crea un puesto real de Emprendedor Interno dentro de tu equipo o negocio.
+    2. Evalúa ese trabajo con la contabilidad de innovación, no con las métricas tradicionales de un puesto operativo.
+    3. Cuando el producto haya crecido con éxito, deja que esa persona entrene a un nuevo equipo y vuelva a incubar una idea nueva.
+    4. Amplía poco a poco el espacio de experimentación (sandbox) a medida que el equipo demuestre resultados, en lugar de sacarlo de golpe.
+  ENTREGABLE: Una manera clara de reconocer el rol de emprendedor dentro de tu negocio, con su propia forma de medir resultados y su propio camino de crecimiento.
+  PREVIOS: sandbox_de_innovacion, gestion_de_las_cuatro_fases_del_negocio, afinar_motor_crecimiento
+  SIGUIENTES: paradoja_exito_emprendedor, background_startup_vs_corporativo, navegacion_politica_organizacional
+
+==============================================================================
+UNIDAD 68 | dominio quality | paso 6
+PAR: equipo_mejora_calidad_2 -> programa_auditoria_calidad
+TEXTO DEL PASO (del fichero del filtro): Orientar al equipo sobre el contenido y propósito del programa de calidad
+------------------------------------------------------------------------------
+MADRE
+  ID: equipo_mejora_calidad_2
+  TITULO: Equipo de Mejora de Calidad (Quality Improvement Team)
+  DOMINIO: quality
+  RESUMEN: El equipo de mejora de calidad es el grupo de personas que te ayudan a llevar la calidad a cada parte de tu negocio: quien produce o entrega, quien diseña, quien compra, quien atiende al cliente y quien vigila la calidad. Necesitas que alguien lo lidere (no necesariamente quien se encarga de calidad), que alguien documente y de seguimiento, y que trabajen en conjunto para identificar problemas, definir acciones correctivas y medir resultados. Es clave que quien lidera tenga libertad para elegir a quienes participan y como se organiza el trabajo.
+  PASOS:
+    1. Elige a la persona que va a liderar la mejora de calidad, idealmente alguien con visión de todo el negocio, por ejemplo quien se encarga de marketing u operaciones.
+    2. Identifica quien representa cada área clave de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad.
+    3. Asigna a alguien que documente las reuniones, de seguimiento a las acciones y mantenga el impulso del programa.
+    4. Establece una frecuencia regular de reuniones, por ejemplo semanal, con agenda y notas claras.
+    5. Define hasta dónde puede llegar este grupo para proponer y ejecutar acciones correctivas.
+    6. Orientar al equipo sobre el contenido y propósito del programa de calidad
+  ENTREGABLE: Un grupo de mejora de calidad definido, con quien lo lidera, quien participa, quien documenta y un calendario de reuniones establecido.
+  PREVIOS: programa_zero_defects, costo_de_la_no_calidad, cero_defectos, costo_de_mala_calidad_copq, compromiso_gerencial_calidad, definicion_calidad_conformidad, programa_mejora_calidad_14_pasos
+  SIGUIENTES: consejo_de_calidad, involucramiento_sindical, involucramiento_sindical_calidad, consejo_de_calidad_2, medicion_calidad
+------------------------------------------------------------------------------
+HIJO
+  ID: programa_auditoria_calidad
+  TITULO: Programa de Auditoría de Calidad
+  DOMINIO: quality
+  RESUMEN: Un programa de auditoría de calidad puede enfocarse en el cumplimiento, en la efectividad, o en ambos. Auditar por cumplimiento significa verificar que las actividades sigan un estándar o requisito establecido (por ejemplo, que existan instrucciones de trabajo escritas). Auditar por efectividad significa evaluar si ese requisito realmente logra el resultado esperado y si los recursos se usan bien. Cuando revisas tú mismo tu negocio puedes y debes mirar ambas cosas; si le pides a alguien externo que audite, esa persona suele limitarse al cumplimiento, por independencia y alcance.
+  PASOS:
+    1. Definir si el programa se orientará a cumplimiento, efectividad o ambos
+    2. Decidir si vas a auditar tú mismo tu negocio o si vas a pedirle a alguien externo que lo haga, según lo que necesites lograr
+    3. Establecer el alcance: qué partes de tu negocio, qué líneas de producto, qué sistemas de calidad o qué actividades específicas vas a revisar
+    4. Documentar el propósito y las reglas del programa en un documento que tú mismo apruebes antes de empezar
+  ENTREGABLE: Documento con el propósito, el alcance y el tipo de auditoría definidos por ti
+  PREVIOS: control_calidad_operaciones_servicio
+  SIGUIENTES: principios_auditoria_calidad, estructuracion_programa_auditoria
+

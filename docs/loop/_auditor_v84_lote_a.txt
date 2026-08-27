@@ -1,0 +1,137 @@
+==============================================================================
+UNIDAD 50 | dominio quality | paso 3
+PAR: formulacion_teorias_causa -> diagrama_causa_efecto
+TEXTO DEL PASO (del fichero del filtro): Construir un diagrama de causa-efecto (espina de pescado) para organizar las teorías.
+------------------------------------------------------------------------------
+MADRE
+  ID: formulacion_teorias_causa
+  TITULO: Formulación de Teorías de Causa
+  DOMINIO: quality
+  RESUMEN: Proceso creativo y divergente donde el equipo, mediante lluvia de ideas, genera múltiples teorías no comprobadas sobre las posibles causas del problema. Luego, estas teorías se organizan (por ejemplo, mediante el proceso de afinidad) y se refinan usando diagramas de causa-efecto y otras herramientas de priorización como FMEA.
+  PASOS:
+    1. Realizar sesiones de lluvia de ideas con el equipo y expertos en la materia.
+    2. Agrupar las teorías generadas usando el proceso de afinidad.
+    3. Construir un diagrama de causa-efecto (espina de pescado) para organizar las teorías.
+    4. Aplicar FMEA u otras herramientas de priorización para identificar las teorías más probables.
+  ENTREGABLE: Una lista organizada y priorizada de teorías de causa, respaldada por un diagrama de causa-efecto.
+  PREVIOS: analisis_sintomas, dmaic_fase_measure
+  SIGUIENTES: prueba_teorias_causa_raiz
+------------------------------------------------------------------------------
+HIJO
+  ID: diagrama_causa_efecto
+  TITULO: Diagrama Causa-Efecto (Ishikawa)
+  DOMINIO: quality
+  RESUMEN: Desarrollado por Kaoru Ishikawa, organiza y muestra las interrelaciones entre las diversas teorías sobre la causa raíz de un problema (efecto). Ayuda al equipo a estructurar su pensamiento y avanzar sistemáticamente hacia la identificación de causas raíz reales.
+  PASOS:
+    1. Definir claramente el efecto (Y) a explicar y colocarlo en una caja a la derecha
+    2. Usar brainstorming o enfoque racional para identificar posibles causas (Xs)
+    3. Agrupar las causas en 2 a 5 categorías principales conectadas a la espina central en ángulo de 70°
+    4. Añadir causas subsidiarias a cada categoría principal
+    5. Continuar añadiendo causas hasta llegar a posibles causas raíz
+    6. Verificar la validez lógica de cada cadena causal
+    7. Revisar la completitud del diagrama
+  ENTREGABLE: Diagrama causa-efecto completo con categorías principales y causas raíz potenciales identificadas
+  PREVIOS: brainstorming, diagrama_afinidad, prueba_teorias_causa_raiz
+  SIGUIENTES: hojas_de_verificacion, analisis_beneficio_costo, diagrama_barreras_ayudas
+
+==============================================================================
+UNIDAD 55 | dominio quality | paso 1
+PAR: institucionalizar_breakthrough -> metas_negocio_calidad
+TEXTO DEL PASO (del fichero del filtro): Incluir metas de mejora en tu plan de negocio anual
+------------------------------------------------------------------------------
+MADRE
+  ID: institucionalizar_breakthrough
+  TITULO: Institucionalización de la Mejora Anual
+  DOMINIO: quality
+  RESUMEN: Para que una mejora importante se sostenga año tras año, tienes que integrarla en tu plan de negocio anual, hacerla parte de las responsabilidades de cada rol, revisar su progreso con regularidad, reflejarla en cómo evalúas el desempeño, y reconocer públicamente los logros de mejora que se van consiguiendo.
+  PASOS:
+    1. Incluir metas de mejora en tu plan de negocio anual
+    2. Actualizar las responsabilidades de cada rol para incluir la mejora continua
+    3. Establecer revisiones periódicas del progreso
+    4. Revisar cómo evalúas el desempeño para que valore los logros de mejora
+    5. Crear momentos de reconocimiento público para los avances logrados
+  ENTREGABLE: Plan de negocio anual con metas de mejora integradas y forma de reconocimiento definida
+  PREVIOS: diagnostico_antes_remedio
+  SIGUIENTES: revision_progreso
+------------------------------------------------------------------------------
+HIJO
+  ID: metas_negocio_calidad
+  TITULO: Metas de Calidad en el Plan de Negocio
+  DOMINIO: quality
+  RESUMEN: Las organizaciones líderes incorporan metas de calidad cuantificadas y con plazo definido dentro de su plan de negocio estratégico (ej. reducir el costo de mala calidad en 50% en 5 años). Esto traduce amenazas y oportunidades organizacionales en objetivos concretos y medibles que guían la asignación de recursos.
+  PASOS:
+    1. Identificar amenazas y oportunidades estratégicas relacionadas con calidad
+    2. Traducir estas amenazas/oportunidades en metas cuantificadas con plazo definido
+    3. Incorporar estas metas formalmente en el plan de negocio de la organización
+  ENTREGABLE: Sección de metas de calidad incluida en el plan de negocio estratégico, con cifras y plazos concretos
+  PREVIOS: consejo_de_calidad, modelo_shingo_evaluacion_excelencia, presentaciones_alta_direccion, aprobacion_alta_direccion, consejo_de_calidad_y_rol_del_director
+  SIGUIENTES: despliegue_metas
+
+==============================================================================
+UNIDAD 58 | dominio quality | paso 1
+PAR: brecha_de_calidad_cuatro_gaps -> necesidades_reales_vs_declaradas
+TEXTO DEL PASO (del fichero del filtro): Evaluar el nivel actual de comprensión de las necesidades reales del cliente
+------------------------------------------------------------------------------
+MADRE
+  ID: brecha_de_calidad_cuatro_gaps
+  TITULO: La Brecha de Calidad (Quality Gap) - Modelo de 4 Gaps
+  DOMINIO: quality
+  RESUMEN: Explica por qué las organizaciones fallan sistemáticamente en satisfacer a sus clientes mediante cuatro brechas componentes: (1) brecha de entendimiento (falta de comprensión de necesidades del cliente), (2) brecha de diseño (diseños no alineados con lo entendido), (3) brecha de proceso (el proceso no es capaz de cumplir el diseño consistentemente), y (4) brecha de operaciones (fallas en cómo se opera y controla el proceso). Quality by Design provee las herramientas para cerrar cada una de estas brechas.
+  PASOS:
+    1. Evaluar el nivel actual de comprensión de las necesidades reales del cliente
+    2. Revisar si los diseños actuales reflejan fielmente esa comprensión
+    3. Verificar la capacidad del proceso para cumplir consistentemente el diseño
+    4. Auditar cómo se opera y controla el proceso en la práctica diaria
+  ENTREGABLE: Diagnóstico documentado de en cuál(es) de las cuatro brechas se concentran los problemas de calidad de la organización
+  PREVIOS: comprension_brechas_desempeno
+  SIGUIENTES: modelo_quality_by_design_juran, descubrir_necesidades_del_cliente, juran_quality_by_design, capacidad_del_proceso
+------------------------------------------------------------------------------
+HIJO
+  ID: necesidades_reales_vs_declaradas
+  TITULO: Necesidades Declaradas vs Necesidades Reales del Cliente
+  DOMINIO: quality
+  RESUMEN: Los clientes expresan sus necesidades en su propio lenguaje, comúnmente en forma de bienes/productos, cuando su necesidad real es el servicio que dicho bien provee. La preocupación por vender bienes puede desviar la atención de las necesidades reales del cliente (ej: 'Marketing Myopia' de Levitt: los ferrocarriles fallaron por enfocarse en trenes en vez de en transporte).
+  PASOS:
+    1. Preguntar directamente '¿por qué compra este producto/servicio?' y '¿qué servicio espera de él?'
+    2. Traducir las necesidades declaradas del cliente a necesidades reales de servicio
+    3. Evitar centrarse exclusivamente en el producto ignorando la función/servicio subyacente
+    4. Rediseñar la propuesta de valor en torno a la necesidad real identificada
+  ENTREGABLE: Documento de traducción de necesidades declaradas a necesidades reales del cliente
+  PREVIOS: costo_de_uso_life_cycle
+  SIGUIENTES: necesidades_psicologicas_cliente, descubrir_necesidades_ocultas, vacios_conocimiento_cliente, descubrir_necesidades_del_cliente
+
+==============================================================================
+UNIDAD 61 | dominio core | paso 4
+PAR: activity_attributes -> assumption_constraint_log
+TEXTO DEL PASO (del fichero del filtro): Especificar restricciones y supuestos por actividad
+------------------------------------------------------------------------------
+MADRE
+  ID: activity_attributes
+  TITULO: Activity Attributes
+  DOMINIO: core
+  RESUMEN: Detalles adicionales sobre cada actividad, incluyendo predecesores, sucesores, relaciones lógicas, adelantos/retrasos, fechas impuestas, restricciones, supuestos y requisitos de recursos. Se elabora progresivamente conforme avanza la planificación.
+  PASOS:
+    1. Identificar actividades predecesoras y sucesoras
+    2. Describir el tipo de relación lógica entre actividades
+    3. Documentar leads y lags aplicables
+    4. Especificar restricciones y supuestos por actividad
+    5. Definir requisitos de recursos y habilidades necesarias
+  ENTREGABLE: Documento de atributos detallados para cada actividad del proyecto
+  PREVIOS: activity_list, schedule_management_plan
+  SIGUIENTES: network_diagram, activity_resource_requirements, activity_duration_estimates
+------------------------------------------------------------------------------
+HIJO
+  ID: assumption_constraint_log
+  TITULO: Registro de Supuestos y Restricciones
+  DOMINIO: core
+  RESUMEN: Documento dinámico que registra los supuestos (factores considerados verdaderos sin comprobación) y las restricciones (limitaciones como presupuesto fijo o hitos obligatorios) que afectan la planificación y ejecución del proyecto. Se actualiza continuamente conforme los supuestos se validan o invalidan.
+  PASOS:
+    1. Identificar supuestos provenientes de cualquier documento o del equipo del proyecto, y categorizar cada supuesto o restricción
+    2. Documentar restricciones definidas por el charter, cliente o reguladores
+    3. Asignar responsable y fecha límite para validar cada supuesto
+    4. Registrar acciones tomadas y el estado actual de cada ítem, que puede ser activo, pendiente, cerrado
+    5. Actualizar el log conforme se validan o invalidan los supuestos
+  ENTREGABLE: Un log con identificador, categoría, descripción, responsable, fecha, acciones y estado de cada supuesto o restricción.
+  PREVIOS: project_scope_statement, estrategia_de_innovacion_arenas, actividades_clave
+  SIGUIENTES: stakeholder_register, work_breakdown_structure
+

@@ -1,0 +1,139 @@
+==============================================================================
+UNIDAD 48 | dominio quality | paso 3
+PAR: estandares_voluntarios -> definiciones_operacionales_de_calidad
+TEXTO DEL PASO (del fichero del filtro): Documentar el estándar con definiciones operacionales claras y medibles.
+------------------------------------------------------------------------------
+MADRE
+  ID: estandares_voluntarios
+  TITULO: Estándares Voluntarios vs Regulaciones Obligatorias
+  DOMINIO: quality
+  RESUMEN: Existe una diferencia esencial entre una regulación gubernamental (con penalidades legales por incumplimiento) y un estándar voluntario de industria (acordado por consenso, sin obligación legal). Los estándares voluntarios permiten mayor flexibilidad, reducen la necesidad de regulación gubernamental excesiva, y facilitan la interoperabilidad industrial (ej. voltajes, tamaños de piezas, roscas). Sin estándares voluntarios adecuados, los gobiernos terminan imponiendo regulaciones más rígidas y costosas para llenar el vacío.
+  PASOS:
+    1. Evaluar si el área en cuestión requiere regulación obligatoria o puede resolverse con consenso industrial.
+    2. Formar comités técnicos de industria para desarrollar estándares por acuerdo mutuo.
+    3. Documentar el estándar con definiciones operacionales claras y medibles.
+    4. Promover la adopción voluntaria del estándar entre empresas del sector.
+    5. Monitorear si la falta de estándares voluntarios está generando presión para regulación gubernamental.
+  ENTREGABLE: Documento de estándar de industria desarrollado por consenso, con especificaciones operacionales claras.
+  PREVIOS: definiciones_operacionales, definiciones_operacionales_3
+  SIGUIENTES: 
+------------------------------------------------------------------------------
+HIJO
+  ID: definiciones_operacionales_de_calidad
+  TITULO: Definiciones Operacionales de Calidad
+  DOMINIO: quality
+  RESUMEN: Muchas disputas entre proveedor y cliente surgen porque ambas partes no tienen una definición clara y medible de lo que constituye 'calidad aceptable' para un producto o característica. El caso del fabricante de forros de freno muestra que, tras años de conflictos, desarrollar definiciones operacionales conjuntas (medibles mediante cartas de control) eliminó las disputas y alineó expectativas.
+  PASOS:
+    1. Identificar todas las características críticas de calidad del producto según el cliente
+    2. Trabajar conjuntamente cliente-proveedor para traducir requisitos subjetivos en métricas medibles
+    3. Establecer cartas de control (X-barra y R) para cada característica clave
+    4. Compartir los resultados de las cartas de control con el cliente de forma continua
+  ENTREGABLE: Documento de definiciones operacionales acordadas entre proveedor y cliente, con métricas y cartas de control asociadas
+  PREVIOS: definiciones_operacionales
+  SIGUIENTES: control_estadistico_de_procesos_en_tiempo_real, relaciones_largo_plazo_con_proveedores, ctq_caracteristicas_criticas, key_process_product_characteristics
+
+==============================================================================
+UNIDAD 49 | dominio core | paso 5
+PAR: evaluacion_megatendencias -> costo_de_oportunidad
+TEXTO DEL PASO (del fichero del filtro): Definir espacios de oportunidad concretos para la empresa
+------------------------------------------------------------------------------
+MADRE
+  ID: evaluacion_megatendencias
+  TITULO: Evaluación de Mega-Tendencias
+  DOMINIO: core
+  RESUMEN: Lente para definir el espacio de oportunidad analizando las principales tendencias en la sociedad y en la industria. Con visión de futuro, el equipo identifica los 'grandes desafíos' de la industria que pueden abrir oportunidades. Se buscan las grandes tendencias inevitables y se pregunta dónde la empresa tiene que jugar y dónde podría jugar.
+  PASOS:
+    1. Reunir un equipo para analizar las principales tendencias sociales e industriales
+    2. Identificar los grandes desafíos (grand challenges) inevitables de la industria
+    3. Preguntar: ¿dónde tenemos que jugar? ¿dónde podríamos jugar?
+    4. Analizar disrupciones potenciales de mercado y tecnología asociadas a estas tendencias
+    5. Definir espacios de oportunidad concretos para la empresa
+  ENTREGABLE: Mapa de mega-tendencias relevantes con espacios de oportunidad definidos para la empresa
+  PREVIOS: evaluacion_competencias_centrales
+  SIGUIENTES: future_scenarios_planning, iota_analysis, ficcion_especulativa_como_metodo
+------------------------------------------------------------------------------
+HIJO
+  ID: costo_de_oportunidad
+  TITULO: Costo de Oportunidad
+  DOMINIO: core
+  RESUMEN: Representa el beneficio potencial que se pierde al no elegir la alternativa financieramente óptima. En negocios, ayuda a decidir entre diferentes usos posibles del efectivo limitado de la empresa, comparando el retorno de una inversión con lo que se podría obtener en otra alternativa de riesgo similar.
+  PASOS:
+    1. Identificar todas las alternativas posibles de uso del capital disponible
+    2. Comparar el retorno esperado de cada alternativa considerando su nivel de riesgo
+    3. Elegir la opción que maximice el valor considerando lo que se sacrifica al no elegir otras
+  ENTREGABLE: Análisis comparativo de alternativas de inversión con sus respectivos retornos y riesgos
+  PREVIOS: fundamentos_inteligencia_financiera
+  SIGUIENTES: tasa_de_retorno_requerida, evaluar_ventajas_desventajas_franquicia, evaluacion_necesidad_franquiciar
+
+==============================================================================
+UNIDAD 51 | dominio quality | paso 3
+PAR: principios_alineacion_empresarial -> desarrollar_estrategias_largo_plazo
+TEXTO DEL PASO (del fichero del filtro): Alinear estrategias, sistemas y metas de largo plazo con el propósito central
+------------------------------------------------------------------------------
+MADRE
+  ID: principios_alineacion_empresarial
+  TITULO: Principios de Alineación Empresarial (Shingo)
+  DOMINIO: quality
+  RESUMEN: La alineación empresarial sostiene que una organización desalineada, como un automóvil fuera de eje, desperdicia energía y produce resultados subóptimos. Se apoya en dos principios: crear constancia de propósito (comunicar con claridad por qué existe la organización y hacia dónde va) y pensar sistemáticamente (entender la conexión e impacto de las partes sobre el todo). Requiere unidad de propósito entre liderazgo y una masa crítica de la organización.
+  PASOS:
+    1. Definir y comunicar de forma clara la visión, propósito y valores organizacionales
+    2. Mapear interdependencias entre procesos, unidades y personas de la organización
+    3. Alinear estrategias, sistemas y metas de largo plazo con el propósito central
+    4. Evaluar y corregir silos o desalineaciones entre áreas
+  ENTREGABLE: Documento de alineación estratégica con propósito organizacional y mapa de interdependencias entre unidades
+  PREVIOS: principios_mejora_continua, shingo_enterprise_excellence_model
+  SIGUIENTES: creacion_valor_cliente
+------------------------------------------------------------------------------
+HIJO
+  ID: desarrollar_estrategias_largo_plazo
+  TITULO: Desarrollar Estrategias o Metas de Largo Plazo
+  DOMINIO: quality
+  RESUMEN: El primer paso para convertir tu visión en un plan alcanzable es dividirla en un pequeño número de estrategias clave (usualmente 4 o 5), que son las decisiones fundamentales sobre cómo vas a alcanzar tu visión. Para definirlas, evalúa cinco áreas: la lealtad y satisfacción de tus clientes, los costos de la mala calidad, tu cultura, tus procesos internos y cómo te comparas con la competencia.
+  PASOS:
+    1. Evalúa las cinco áreas clave: satisfacción de tus clientes, costos de mala calidad, tu cultura, tus procesos internos y cómo te comparas con la competencia
+    2. Analiza los datos para identificar tus fortalezas, debilidades, oportunidades y amenazas
+    3. Define de 4 a 5 estrategias clave que aporten de verdad a tu visión
+    4. Asigna a alguien concreto la responsabilidad de llevar adelante cada estrategia
+  ENTREGABLE: Documento con tus 4 o 5 estrategias clave de largo plazo, cada una con un responsable asignado
+  PREVIOS: definir_mision_organizacional, establecer_vision_organizacional_2, estrategia_de_innovacion_y_tecnologia
+  SIGUIENTES: desarrollar_metas_anuales
+
+==============================================================================
+UNIDAD 52 | dominio quality | paso 3
+PAR: control_del_proceso_del_proveedor -> buenas_practicas_manufactura_cgmp
+TEXTO DEL PASO (del fichero del filtro): Definir tareas especiales y buenas prácticas de manufactura requeridas
+------------------------------------------------------------------------------
+MADRE
+  ID: control_del_proceso_del_proveedor
+  TITULO: Plan de Control de Proceso del Proveedor
+  DOMINIO: quality
+  RESUMEN: Un plan de control de proceso es un documento que el proveedor prepara resumiendo las actividades específicas que se llevarán a cabo durante la fabricación del producto, incluyendo técnicas de control estadístico de proceso (SPC) para prevenir defectos mediante la detección temprana de problemas. También incluye tareas especiales, clasificación de seriedad de defectos y estandarización de estándares sensoriales y métodos de prueba entre proveedor y comprador.
+  PASOS:
+    1. Solicitar al proveedor un plan escrito de control del proceso de manufactura
+    2. Incluir requisitos de SPC para detección temprana de defectos
+    3. Definir tareas especiales y buenas prácticas de manufactura requeridas
+    4. Clasificar la seriedad de los defectos para priorizar esfuerzos
+    5. Establecer estándares sensoriales físicos cuando se requiera juicio humano
+    6. Estandarizar métodos y condiciones de prueba entre proveedor y comprador
+    7. Acordar el significado exacto de los requisitos de desempeño en las especificaciones
+    8. Cuantificar requisitos de confiabilidad y mantenibilidad, evitando errores como aplicar la regla de multiplicación incorrectamente
+    9. Establecer sistema de trazabilidad de lotes
+  ENTREGABLE: Documento de plan de control de proceso aprobado por proveedor y comprador con criterios de SPC, clasificación de defectos y métodos de prueba estandarizados
+  PREVIOS: planificacion_cadena_suministro, dmadv_design_for_six_sigma, design_for_six_sigma_dfss, planificacion_economica_conjunta
+  SIGUIENTES: certificacion_de_proveedores, clasificacion_de_seriedad_de_defectos, clasificacion_de_seriedad_de_defectos_2, error_proofing_servicio
+------------------------------------------------------------------------------
+HIJO
+  ID: buenas_practicas_manufactura_cgmp
+  TITULO: Buenas Prácticas de Manufactura Actuales (cGMP)
+  DOMINIO: quality
+  RESUMEN: Las cGMP son regulaciones que exige el organismo sanitario de tu país para asegurar el diseño, monitoreo y control adecuados de tus procesos e instalaciones de fabricación, garantizando identidad, potencia, calidad y pureza de tus productos farmacéuticos. Son requisitos mínimos pero flexibles: tú decides cómo implementar los controles usando un diseño científico sólido, métodos de procesamiento y procedimientos de prueba, siempre que uses tecnologías actualizadas ('current').
+  PASOS:
+    1. Establece un sistema robusto de gestión de calidad para tu manufactura
+    2. Define procedimientos operativos estandarizados y validados
+    3. Implementa una forma de detectar e investigar desviaciones de calidad en tu producto
+    4. Mantén laboratorios de prueba confiables y calibrados
+    5. Actualiza tus tecnologías y sistemas de forma continua para seguir siendo 'current'
+  ENTREGABLE: Un sistema documentado de cGMP con procedimientos, controles de calidad y registros de cumplimiento que puedas mostrar ante el organismo regulador de tu mercado si te lo pide
+  PREVIOS: adopciones_industria_especifica_iso9000
+  SIGUIENTES: modelo_madurez_capacidades_cmmi
+

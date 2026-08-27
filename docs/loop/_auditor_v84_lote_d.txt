@@ -1,0 +1,136 @@
+==============================================================================
+UNIDAD 53 | dominio quality | paso 2
+PAR: juran_rcca_metodo -> prueba_teorias_causa_raiz
+TEXTO DEL PASO (del fichero del filtro): Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+------------------------------------------------------------------------------
+MADRE
+  ID: juran_rcca_metodo
+  TITULO: Método RCCA de Juran (Análisis de Causa Raíz)
+  DOMINIO: quality
+  RESUMEN: El RCCA (Root Cause Corrective Action) de Juran es un método de cuatro pasos para identificar y solucionar la causa raíz de problemas esporádicos: Definir el problema, Analizar y diagnosticar la causa, Mejorar/remediar la causa, y Controlar para mantener las ganancias. Es análogo al proceso médico de diagnóstico y tratamiento, y se enfoca en causas especiales (esporádicas), a diferencia de Six Sigma que aborda causas comunes (crónicas).
+  PASOS:
+    1. Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema
+    2. Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+    3. Mejorar: diseñar e implementar el remedio
+    4. Controlar: ajustar los controles para mantener las ganancias
+  ENTREGABLE: Causa raíz identificada, remedio implementado y controles ajustados para prevenir recurrencia
+  PREVIOS: viaje_diagnostico_remedial
+  SIGUIENTES: definicion_problema_moms_2, viaje_diagnostico_remedial
+------------------------------------------------------------------------------
+HIJO
+  ID: prueba_teorias_causa_raiz
+  TITULO: Prueba de Teorías para Identificar la Causa Raíz
+  DOMINIO: quality
+  RESUMEN: Proceso iterativo de validación de teorías mediante datos, donde cada teoría se asume falsa hasta que los datos demuestren lo contrario. Se aplican preguntas sucesivas de '¿por qué?' hasta llegar a una causa raíz que sea controlable y no tenga teorías alternativas plausibles pendientes. El ejemplo del Jefferson Memorial ilustra cómo profundizar más allá de síntomas superficiales para hallar la verdadera causa raíz.
+  PASOS:
+    1. Seleccionar las teorías más probables del diagrama de causa-efecto.
+    2. Diseñar y recolectar datos específicos para probar cada teoría.
+    3. Analizar los datos para confirmar o descartar teorías.
+    4. Repetir la pregunta '¿por qué?' hasta llegar a una causa raíz controlable.
+    5. Verificar que no existan teorías alternativas plausibles sin descartar.
+  ENTREGABLE: Identificación validada y documentada de la(s) causa(s) raíz del problema, respaldada por datos.
+  PREVIOS: formulacion_teorias_causa
+  SIGUIENTES: evaluacion_alternativas_solucion, diagrama_causa_efecto
+
+==============================================================================
+UNIDAD 54 | dominio quality | paso 3
+PAR: desarrollar_metas_anuales -> metas_negocio_calidad
+TEXTO DEL PASO (del fichero del filtro): Filtra y prioriza las metas que entraran en tu plan de negocio
+------------------------------------------------------------------------------
+MADRE
+  ID: desarrollar_metas_anuales
+  TITULO: Desarrollar Metas Anuales Medibles
+  DOMINIO: quality
+  RESUMEN: Las metas anuales son objetivos especificos, medibles y con plazo definido que guian tus esfuerzos hacia el logro de cada estrategia. Hay siete areas minimas donde conviene fijar metas: desempeño del producto, desempeño frente a la competencia, mejora del negocio, costo de la mala calidad, desempeño de tus procesos, satisfaccion del cliente y lealtad o retencion del cliente.
+  PASOS:
+    1. Revisa las siete areas clave de metas: producto, competitividad, mejora, costo de mala calidad, procesos, satisfaccion y lealtad del cliente
+    2. Reune propuestas de metas de todas las personas que trabajan contigo, no solo las tuyas
+    3. Filtra y prioriza las metas que entraran en tu plan de negocio
+    4. Basa cada meta en tu desempeño historico, en la comparacion con la competencia o en el desempeño del mercado, según corresponda
+    5. Asegurate de que cada meta sea especifica, medible y tenga un plazo definido
+  ENTREGABLE: Una lista de metas anuales especificas, medibles y con plazo, priorizadas y decididas por ti
+  PREVIOS: desarrollar_estrategias_largo_plazo
+  SIGUIENTES: desplegar_metas_organizacion, consejo_ejecutivo_calidad
+------------------------------------------------------------------------------
+HIJO
+  ID: metas_negocio_calidad
+  TITULO: Metas de Calidad en el Plan de Negocio
+  DOMINIO: quality
+  RESUMEN: Las organizaciones líderes incorporan metas de calidad cuantificadas y con plazo definido dentro de su plan de negocio estratégico (ej. reducir el costo de mala calidad en 50% en 5 años). Esto traduce amenazas y oportunidades organizacionales en objetivos concretos y medibles que guían la asignación de recursos.
+  PASOS:
+    1. Identificar amenazas y oportunidades estratégicas relacionadas con calidad
+    2. Traducir estas amenazas/oportunidades en metas cuantificadas con plazo definido
+    3. Incorporar estas metas formalmente en el plan de negocio de la organización
+  ENTREGABLE: Sección de metas de calidad incluida en el plan de negocio estratégico, con cifras y plazos concretos
+  PREVIOS: consejo_de_calidad, modelo_shingo_evaluacion_excelencia, presentaciones_alta_direccion, aprobacion_alta_direccion, consejo_de_calidad_y_rol_del_director
+  SIGUIENTES: despliegue_metas
+
+==============================================================================
+UNIDAD 56 | dominio quality | paso 2
+PAR: rol_alta_direccion_calidad -> metas_negocio_calidad
+TEXTO DEL PASO (del fichero del filtro): Definir estrategias y metas de calidad alineadas con tu visión del negocio
+------------------------------------------------------------------------------
+MADRE
+  ID: rol_alta_direccion_calidad
+  TITULO: Tu Rol en el Liderazgo de Calidad
+  DOMINIO: quality
+  RESUMEN: Tu involucramiento directo en la calidad es el factor mas importante para lograr una ventaja real. No basta con decir que la calidad importa: necesitas participar activamente creando un espacio de revisión de calidad, definiendo estrategias y metas claras, asignando recursos, capacitando, sumandote a los equipos de mejora, revisando el progreso y creando formas de reconocer los avances. Se estima que deberias dedicar al menos el 10% de tu tiempo a actividades de calidad.
+  PASOS:
+    1. Crear y participar personalmente en un espacio de revisión de calidad
+    2. Definir estrategias y metas de calidad alineadas con tu visión del negocio
+    3. Asignar recursos concretos (tiempo, personas, presupuesto) para las actividades de calidad
+    4. Participar personalmente en los equipos que resuelven los problemas cronicos mas importantes
+    5. Revisar el progreso periodicamente y quitar los obstaculos que encuentres
+    6. Disenar formas de reconocer y recompensar la mejora de calidad
+  ENTREGABLE: Un compromiso documentado de tu parte con roles especificos, tiempo asignado y participación en las actividades de calidad
+  PREVIOS: aprobacion_alta_direccion, liderazgo_ejecutivo_innovacion, gestion_confrontacion_ejecutiva, requisitos_lider_de_rrhh
+  SIGUIENTES: consejo_de_calidad, rol_director_calidad, alineacion_estrategica_despliegue, consejo_ejecutivo_calidad
+------------------------------------------------------------------------------
+HIJO
+  ID: metas_negocio_calidad
+  TITULO: Metas de Calidad en el Plan de Negocio
+  DOMINIO: quality
+  RESUMEN: Las organizaciones líderes incorporan metas de calidad cuantificadas y con plazo definido dentro de su plan de negocio estratégico (ej. reducir el costo de mala calidad en 50% en 5 años). Esto traduce amenazas y oportunidades organizacionales en objetivos concretos y medibles que guían la asignación de recursos.
+  PASOS:
+    1. Identificar amenazas y oportunidades estratégicas relacionadas con calidad
+    2. Traducir estas amenazas/oportunidades en metas cuantificadas con plazo definido
+    3. Incorporar estas metas formalmente en el plan de negocio de la organización
+  ENTREGABLE: Sección de metas de calidad incluida en el plan de negocio estratégico, con cifras y plazos concretos
+  PREVIOS: consejo_de_calidad, modelo_shingo_evaluacion_excelencia, presentaciones_alta_direccion, aprobacion_alta_direccion, consejo_de_calidad_y_rol_del_director
+  SIGUIENTES: despliegue_metas
+
+==============================================================================
+UNIDAD 57 | dominio core | paso 5
+PAR: gate5_go_to_launch -> plan_de_lanzamiento_al_mercado
+TEXTO DEL PASO (del fichero del filtro): Aprobar el Plan de Lanzamiento al Mercado y el Plan de Operaciones para su implementación
+------------------------------------------------------------------------------
+MADRE
+  ID: gate5_go_to_launch
+  TITULO: Gate 5: Decisión de Ir al Lanzamiento
+  DOMINIO: core
+  RESUMEN: Es la última puerta de decisión antes de la comercialización completa. Aquí se evalúa la calidad de los resultados de la Etapa 4 (pruebas y validación), el retorno financiero esperado, la solidez de los planes de lanzamiento y operaciones, y se verifica que todo esté listo comercialmente. Es el último punto donde el proyecto puede ser cancelado.
+  PASOS:
+    1. Revisar los resultados de las pruebas de la Etapa 4 (positivos o negativos)
+    2. Confirmar el retorno financiero proyectado
+    3. Validar que los planes de lanzamiento al mercado y de operaciones estén sólidos
+    4. Realizar un chequeo de preparación comercial (readiness check)
+    5. Aprobar el Plan de Lanzamiento al Mercado y el Plan de Operaciones para su implementación
+  ENTREGABLE: Decisión formal Go/Kill/Hold y aprobación de los planes de lanzamiento y operaciones para la Etapa 5.
+  PREVIOS: stage4_testing_validation, etapa_testing_validation
+  SIGUIENTES: stage5_launch, plan_de_lanzamiento_al_mercado
+------------------------------------------------------------------------------
+HIJO
+  ID: plan_de_lanzamiento_al_mercado
+  TITULO: Plan de Lanzamiento al Mercado (Market Launch Plan)
+  DOMINIO: core
+  RESUMEN: Un producto mejor no se vende solo: necesita que planees bien el lanzamiento y lo respaldes con un plan de marketing sólido. Los que lanzan mejor son los que investigan cómo compra su cliente, prueban el mercado antes de tiempo y hacen números del negocio antes de salir, y luego ejecutan con mucha más disciplina que el resto. No dejes el plan de lanzamiento para el final: constrúyelo desde las primeras etapas del proyecto, y suma desde ya a quienes van a ejecutarlo después, como ventas y soporte tecnico.
+  PASOS:
+    1. Empieza a armar tu plan de lanzamiento desde las primeras etapas del proyecto, no lo dejes para el final
+    2. Investiga cómo compra tu cliente antes de diseñar el lanzamiento
+    3. Haz una prueba de mercado o una venta piloto para validar tu plan antes de lanzar en serio
+    4. Asegúrate de tener las personas y el presupuesto que el lanzamiento realmente necesita
+    5. Suma a tu equipo, desde ya, a quienes van a vender y dar soporte cuando lances
+  ENTREGABLE: Tu plan de marketing y lanzamiento completo, con los recursos definidos y validado con una prueba de mercado
+  PREVIOS: estrategia_producto_global_glocal, spiral_development, reduccion_tiempo_de_mercado_velocidad, company_building, desarrollo_en_espiral, gate5_go_to_launch
+  SIGUIENTES: estimate_at_completion_eac, plan_de_materiales_colaterales, reduccion_tiempo_de_mercado_velocidad
+
