@@ -33,6 +33,24 @@ SALIDA
 REGLA P.1 DEL BANCO DEL PLAN: todo conteo que toque ids pasa por el resolutor antes
 de contar. Aqui importa de verdad: el barrido nombra nodos vivos, pero la cola se
 escribio antes de fusiones y renombres, y comparar literal daria diferencias falsas.
+
+LA SALIDA PISA, Y ES A PROPOSITO, CON LA COSTUMBRE DECLARADA (vuelta 95, TAREA
+4.c del encargo). `--salida` por defecto siempre escribe
+`docs/plan/DIFERENCIA_CONTRA_COLA.jsonl`: es LA DIFERENCIA VIGENTE, la del
+barrido mas reciente, y cada corrida nueva reemplaza a la anterior a
+proposito (no tiene sentido leer dos veces la diferencia de dos barridos
+distintos del mismo dominio). Lo que rompio la costumbre buena de esta casa
+(una salida por vuelta, ninguna pisada) fue que la corrida de agosto (387
+filas, commit `88b3f7c6`) se perdio SIN QUEDAR CITADA en ningun lado antes de
+que la corrida de la vuelta 94 (183 filas, commit `4c22a083`) la pisara: no
+hay como reconstruir HOY que llevaba esa corrida vieja salvo yendo a git. Esa
+corrida vieja quedo recuperada, una sola vez, en
+`docs/plan/DIFERENCIA_CONTRA_COLA_ENSAYO_AGOSTO.jsonl` (fichero de contraste
+historico, con nombre propio, nunca vuelto a escribir por este script). Si
+una vuelta futura necesita conservar DOS diferencias vigentes a la vez (por
+ejemplo, dos dominios que cierran en corridas separadas y hay que comparar
+ambas), usar `--salida` (ya existe, arriba) con un nombre versionado
+explicito en vez de dejar la corrida nueva pisar la vieja en silencio.
 """
 import argparse, collections, json, io, os, sys
 from pathlib import Path

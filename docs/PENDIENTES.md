@@ -3702,3 +3702,40 @@ ninguna arista se retira esta vuelta por esta via.
 **CERO ARISTAS RETIRADAS en esta TAREA 3**: es un resultado legitimo, no una
 falta de trabajo (el encargo lo dice explicito: "cada una se decide por su
 razon", "el grupo C no es una lista de condenados").
+
+## VUELTA 95, TAREA 4: LAS TRES DE HIGIENE
+
+**(a)** `docs/plan/04_ENLACES.md`, fila 11: intervalo cerrado igual que la
+fila 9 ("desde la vuelta 93 hasta la vuelta 94"), con CORRECCION DECLARADA al
+lado remitiendo a la fila 12 (82 ESCRITA + 2 YA_ESTABA, cifra vigente desde
+la vuelta 94). Sin borrar nada.
+
+**(b)** `scripts/loop/vuelta91_tarea4_direccion_ope07.py`, entrada `1992` del
+diccionario `DIRECCION_MANUAL`: anotado al lado "SUPERADO por la TAREA 3 de
+la vuelta 94, el par salio de OP-E-07", sin borrar el comentario original de
+la vuelta 91 (EJECUTOR.md regla 8).
+
+**(c) La pisada de `DIFERENCIA_CONTRA_COLA.jsonl`.** Elegi: recuperar el
+ensayo de agosto (387 filas, commit `88b3f7c6`) a un fichero de contraste con
+nombre propio, `docs/plan/DIFERENCIA_CONTRA_COLA_ENSAYO_AGOSTO.jsonl`
+(`wc -l` confirmado, 387). La salida vigente (`DIFERENCIA_CONTRA_COLA.jsonl`,
+183 filas de la vuelta 94) sigue pisandose a proposito en cada corrida nueva
+(es la costumbre correcta: solo debe existir UNA diferencia vigente por
+dominio a la vez), y `scripts/plan/diferencia_contra_cola.py` ya trae
+`--salida` para versionar si una vuelta futura necesita conservar dos
+diferencias vigentes a la vez; se documento la decision en el docstring del
+script.
+
+**El SyntaxWarning de `scripts/loop/vuelta94_tarea4_reparar_marca_hijo.py`,
+DISCREPANCIA DECLARADA:** lo corri fresco (cache `__pycache__` borrado,
+`python -W always::SyntaxWarning`, import directo con
+`warnings.filterwarnings('error', category=SyntaxWarning)`, y `compile()`
+sobre el fuente): NINGUNA de las tres corridas produce ningun SyntaxWarning.
+El fichero tiene un solo commit en toda su historia (`d1d88d1a`, `git log`
+confirmado) y ese commit YA trae el docstring principal como `r"""` desde el
+primer caracter (linea 2); la unica linea con secuencias de escape sin
+prefijo `r` (linea 8, `` `(?<!no )trae\b...` ``) vive DENTRO de ese docstring
+ya crudo, asi que no genera advertencia. EL INSTRUMENTO MANDA (EJECUTOR.md
+regla 2): no toco el fichero porque mi propia corrida no reproduce el defecto
+que el encargo cita; declaro la discrepancia en vez de "arreglar" algo que no
+esta roto. DISCUTIBLE marcado para la relectura ciega.

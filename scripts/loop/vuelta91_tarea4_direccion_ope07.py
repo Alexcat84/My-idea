@@ -126,6 +126,12 @@ DIRECCION_MANUAL = {
     1992: "B_MADRE",  # "seleccion_de_metodo_de_pago compara los cinco... y cierra con el contrato"; "metodos_pago_
                        # electronico_internacional monta la infraestructura de cobro en linea": la comparacion
                        # general de los cinco metodos es la madre, la infraestructura de uno de ellos, el hijo.
+                       # SUPERADO por la TAREA 3 de la vuelta 94: la relectura conjunta (acta 93, seccion 5.2)
+                       # concluyo que la razon completa de INTRA_DOMINIO_VEREDICTOS.jsonl (no este comentario)
+                       # no nombra la madre, y el par SALIO de OP-E-07 (scripts/loop/
+                       # vuelta94_tarea3_relectura_1281_1992.py). La salida vigente, OP_E_07_DIRECCION_V94.jsonl,
+                       # ya no trae el 1992. Este comentario queda como archivo de la decision de la vuelta 91,
+                       # sin borrar (EJECUTOR.md regla 8, acta de la vuelta 94, adjudicacion 2.4).
 }
 
 
