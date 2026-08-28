@@ -1,0 +1,73 @@
+====================================================================================================
+PUESTO 19  (paso_casado = 3)
+  [MADRE] diseno_de_flujos_pace_layers :: Capas de Ritmo (Pace Layers) y Diseño de Flujos
+        1. Identifica las distintas 'capas' de tu proyecto/organización (ej: producto, cultura de equipo, regulación, mercado) y su velocidad de cambio relativa.
+        2. Pregunta: ¿Estoy empujando una capa (ej. producto) más rápido de lo que otra capa (ej. usuarios, regulación, cultura) puede absorber?
+      >>3. Para cualquier flujo relevante (de usuarios, dinero, datos, materiales), analiza su Propósito, Partes, Lugar y Pace (ritmo).
+        4. Diseña puntos de desaceleración intencional donde el sistema lo necesite, en vez de optimizar solo por velocidad.
+      entregable: Un diagrama de capas de ritmo del proyecto (pace layers) señalando fricciones potenciales, y un análisis de flujo (PPPP) del recurso crítico del negocio.
+
+  [HIJO] framework_ppph_flujos :: Framework PPPH: Propósito, Partes, Lugar y Pace (Ritmo)
+        1. Identifica el flujo o sistema que quieres analizar (puede ser físico, social o digital).
+        2. Define su Propósito: ¿para qué sirve, y tiene propósitos secundarios en conflicto?
+        3. Lista sus Partes: personas, objetos, infraestructura involucrados.
+        4. Analiza el Lugar: normas culturales, geografía o contexto que moldea el comportamiento del flujo.
+        5. Evalúa el Pace: ¿es constante o varía? ¿qué pasa cuando alguien opera fuera del ritmo esperado?
+      entregable: Un mapa o diagrama del sistema estudiado con los cuatro elementos (Propósito, Partes, Lugar, Pace) documentados y sus interacciones señaladas.
+
+====================================================================================================
+PUESTO 5  (paso_casado = 6)
+  [MADRE] planificacion_cero_defectos :: Planificación de Cero Defectos (Paso 7 de Crosby)
+        1. Explicar el concepto ZD a todo el personal supervisor y prepararlos para transmitirlo a sus equipos
+        2. Determinar y preparar los materiales necesarios (cartas, pines, folletos)
+        3. Elegir el método de lanzamiento adecuado a la cultura organizacional
+        4. Definir la política de reconocimiento para el desempeño mejorado
+        5. Establecer un cronograma y ensayar a quienes participarán en el evento
+      >>6. Planificar el programa de eliminación de causas de error (error-cause-removal) como continuación
+        7. Incluir representación sindical en la planificación desde el inicio
+      entregable: Cronograma completo de actividades previas al Día ZD, materiales de comunicación (carta y compromiso/pledge) y plan de involucramiento sindical
+
+  [HIJO] eliminacion_causas_error_4 :: Eliminación de Causas de Error (Error Cause Removal - ECR)
+        1. Crea un canal simple, con un formulario, para que quien te ayuda reporte causas de error sin necesidad de proponer la solución, y ponlo en cada área de trabajo, a la vista de todos
+        2. Envía un agradecimiento personal e inmediato a quien te avisa de un problema
+        3. Clasifica y prioriza cada aviso y pásalo a quien pueda resolverlo
+        4. Consigue lo necesario y actúa rápido para eliminar la causa
+        5. Si decides no actuar, justifica la decisión y revísala con alguien de más experiencia o confianza antes de cerrarla
+        6. Confirma a cada persona la decisión tomada y considera reconocer periódicamente a quienes más avisan, por ejemplo con un sorteo semanal o un reconocimiento visible
+      entregable: Sistema ECR funcionando: formulario, respuesta rápida, registro de causas reportadas y resueltas, y retroalimentación a quienes avisan.
+
+====================================================================================================
+PUESTO 61  (paso_casado = 4)
+  [MADRE] participacion_preferente :: Tipos de Participación en Acciones Preferentes (No Participante, Participación Total, Participación con Tope)
+        1. Calcular escenarios de retorno bajo cada tipo de participación usando el precio de venta esperado de la empresa.
+        2. Preferir 'no participación' en rondas tempranas, ya que es más simple y justo tanto para inversionistas como fundadores.
+        3. Si se acepta participación, negociar un tope razonable (ej. 3x) para limitar el impacto negativo en fundadores y empleados.
+      >>4. Recordar que los términos de la ronda semilla suelen convertirse en precedente para rondas futuras, por lo que vale la pena negociarlos bien desde el inicio.
+      entregable: Claridad documentada sobre el tipo de participación acordado y su impacto modelado en distintos escenarios de salida.
+
+  [HIJO] seed_deals_riesgos_precedente :: Riesgos de Precedente en Rondas Semilla
+        1. Evaluar si la valoración obtenida en tu ronda semilla es sostenible con el desempeño real de tu negocio
+        2. Anticipar el crecimiento necesario y cómo los términos actuales impactarán la negociación de tus rondas futuras
+        3. Preferir una estructura con un inversionista líder claro en vez de una ronda de fiesta con múltiples inversionistas sin compromiso
+        4. Comunicar expectativas realistas a tus inversionistas semilla no sofisticados sobre el riesgo de rondas a la baja
+        5. Evitar comprometerte con valoraciones infladas que generen presión de dilución futura
+      entregable: Estructura de ronda semilla con inversionista líder identificado y análisis de sostenibilidad de la valoración frente a proyecciones de crecimiento.
+
+====================================================================================================
+PUESTO 88  (paso_casado = 2)
+  [MADRE] genchi_gembutsu_salir_del_edificio :: Genchi Gembutsu: Salir del Edificio
+        1. Identificar las preguntas de fe (leap-of-faith questions) más críticas del negocio
+      >>2. Salir físicamente a hablar con clientes potenciales reales, no solo encuestas remotas, lo que se llama get out of the building
+        3. Observar el comportamiento real de los usuarios en su contexto natural
+        4. Evitar tomar decisiones basadas únicamente en reportes de segunda mano
+        5. Documentar los hallazgos firsthand para contrastarlos con las hipótesis iniciales
+        6. Usar estas observaciones para ajustar el diseño del producto o servicio
+      entregable: Registro de conversaciones y observaciones directas con clientes potenciales que validen o invaliden las hipótesis iniciales del negocio
+
+  [HIJO] get_out_of_the_building :: Sal del edificio (Get Out of the Building)
+        1. Programa reuniones directas y repetidas con clientes potenciales
+        2. Lidera tú mismo estas conversaciones, no las delegues en personal junior
+        3. Evita hacer listas con todas las características que te piden los clientes
+        4. Documenta lo que aprendes de cada conversación en el momento (blog, CRM)
+      entregable: Tu registro de entrevistas con clientes reales y de lo que vas aprendiendo
+
