@@ -1,0 +1,60 @@
+CENSO DE OP-S-01 CONTRA EL GRAFO DE HOY, PUNTO POR PUNTO, TAREA 4.3 VUELTA 118.
+====================================================================================================
+verificacion declarada (7 puntos), leida entera de docs/plan/OPERACIONES.jsonl:
+  1. ids_alias de certificado_de_origen_tratados_libre_comercio contiene nafta_free_trade_agreements
+  2. resolverId('nafta_free_trade_agreements') devuelve el superviviente
+  3. foreign_trade_zones e import_regulations_foreign_governments siguen resolviendo a nodo vivo
+  4. ningun nodo VIVO lleva NAFTA en su id ni en su titulo
+  5. las CINCO perdidas aparecen literalmente en el superviviente
+  6. Gate 0 verde
+  7. PASADA DE PERDIDAS RECOMPUTADAS (P.13), 12 ago 2026: cada perdida listada comprobada contra la nomina COMPLETA de esta fusion y contra el texto del superviviente. Las que viven dentro estan reclasificadas y no se injertan
+
+1. ids_alias de certificado_de_origen_tratados_libre_comercio contiene nafta_free_trade_agreements
+   comando: nodos['certificado_de_origen_tratados_libre_comercio']['ids_alias'] -> ['nafta_free_trade_agreements']
+   CUMPLE
+
+2. resolverId('nafta_free_trade_agreements') devuelve el superviviente
+   comando: resolver('nafta_free_trade_agreements') -> (certificado_de_origen_tratados_libre_comercio, vivo=True)
+   CUMPLE
+
+3. foreign_trade_zones e import_regulations_foreign_governments siguen resolviendo a nodo vivo
+   resolver('foreign_trade_zones') -> (foreign_trade_zones, vivo=True)
+   resolver('import_regulations_foreign_governments') -> (import_regulations_foreign_governments, vivo=True)
+   CUMPLE
+
+4. ningun nodo VIVO lleva NAFTA en su id ni en su titulo
+   ids vivos con 'nafta': NINGUNO
+   titulos de nodos vivos con 'NAFTA': [('certificado_de_origen_tratados_libre_comercio', 'Certificado de Origen y Tratados de Libre Comercio (NAFTA, Rules of Origin, RVC)')]
+   NO CUMPLE
+
+5. las CINCO perdidas (puesto 1955 de docs/INTRA_DOMINIO_VEREDICTOS.jsonl) aparecen literalmente en el superviviente
+   veredicto puesto 1955 hallado: True
+   grupos buscados en pasos_accionables + resumen_teorico del superviviente (6, dos de ellos ya reclasificados VIVE DENTRO por el propio campo preservar de OP-S-01): ['las CUATRO REGLAS DEL ARTICULO 401', '60% metodo de transaccion', '50% metodo de costo neto', 'nombres de formularios (CF 434 / Form B-232)', 'VIVE DENTRO: obtenido en su totalidad (wholly obtained)', 'VIVE DENTRO: conservar documentacion']
+   presentes: ['las CUATRO REGLAS DEL ARTICULO 401', '60% metodo de transaccion', '50% metodo de costo neto', 'nombres de formularios (CF 434 / Form B-232)', 'VIVE DENTRO: obtenido en su totalidad (wholly obtained)', 'VIVE DENTRO: conservar documentacion']
+   ausentes: NINGUNA
+   CUMPLE
+
+6. Gate 0 verde
+   medido en la APERTURA de esta misma vuelta: docs/loop/SALIDA_V118_GATE0_CMD1_APERTURA.txt, linea 'GATE 0: OK'
+   CUMPLE (re-citado, no re-corrido en esta tarea: TAREA 4 no toca dataset/)
+
+7. PASADA DE PERDIDAS RECOMPUTADAS (P.13): cada perdida listada comprobada contra la nomina COMPLETA de la fusion y contra el texto del superviviente
+   ESTO ES UN PROCEDIMIENTO, NO UN BOOLEANO MEDIBLE CON UN SOLO COMANDO: el campo `preservar` de OP-S-01 ya declara DOS de las cinco perdidas RECLASIFICADAS como 'VIVE DENTRO' (no perdidas), y el punto 5 de arriba confirma que las OTRAS TRES si aparecen literalmente. Con eso, LA PASADA PARECE HECHA, pero es una lectura, no una medicion binaria: SE TRAE CRUDO, sin adjudicar 'CUMPLE'.
+
+--- RESUMEN ---
+| punto | veredicto |
+|---:|---|
+| 1 | CUMPLE |
+| 2 | CUMPLE |
+| 3 | CUMPLE |
+| 4 | NO CUMPLE |
+| 5 | CUMPLE |
+| 6 | CUMPLE |
+| 7 | PROCEDIMENTAL, NO BOOLEANO (ver arriba) |
+
+CUMPLE: 5, NO CUMPLE: 1, PROCEDIMENTAL: 1, de 7 puntos totales.
+
+====================================================================================================
+TAREA 4.4, LA LETRA QUE MANDA: clasificacion de OP-S-01, SIN ADJUDICAR y SIN EJECUTAR.
+CLASIFICACION: PARCIALMENTE CUMPLIDA (5 CUMPLE, 1 NO CUMPLE, 1 PROCEDIMENTAL).
+EL PUNTO 4 (ningun nodo VIVO lleva NAFTA en su id ni en su titulo) SALE NO CUMPLE: el titulo_concepto del superviviente es 'Certificado de Origen y Tratados de Libre Comercio (NAFTA, Rules of Origin, RVC)'. LA VERIFICACION DE OP-S-01 NO DICE QUE TEXTO TIENE QUE LLEVAR EL TITULO DEL SUPERVIVIENTE tras quitar NAFTA: reescribirlo inventando la redaccion seria la improvisacion que AUDITOR.md seccion 3 prohibe. NO SE EJECUTA NADA DE OP-S-01 EN ESTA VUELTA. Cero nodos deprecados, cero alias escritos, cero titulos reescritos, cero aristas, cero cambios de estado.
