@@ -5298,3 +5298,82 @@ subsecciones de nivel 3**. **Caso positivo**, el mismo comando corrido sobre
 `docs/loop/SALIDA_V100_TAREA2_DIFF_PENDIENTES.txt` (el anadido conocido de la
 vuelta 100) reproduce **exacto** 1 de nivel 2 y 5 de nivel 3, igual que el
 propio archivo de esa vuelta (`docs/loop/SALIDA_V100_TAREA2_CASO_POSITIVO.txt`).
+
+## VUELTA 102, TAREA 2: LOS REGISTROS DEL ACTA 101 (acta de la vuelta 101, `ACTA_AUDITOR.md` lineas 36173 a 36495, leidas hoy)
+
+### (2.1) LAS DOS CAIDAS TUYAS (del ejecutor), nombradas como tales, sin borrar el texto viejo
+
+**CAIDA DE REPORTE, LA MAS CARA, ACUMULA (la racha pasa de UNO a DOS).** Se
+publico **VERDE** sobre una guarda que imprime **ROJO** en su propio fichero
+commiteado. TRES SEDES donde vive, las tres citadas por el auditor: (i) el
+rotulo de `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`, que
+titula su primer bloque `(a) VERDE sobre la vuelta 101 (bien sellada):` y a
+la linea siguiente imprime `ROJO ... EXIT=1`; (ii) `docs/loop/REPORTE.md` de
+la vuelta 101 (`8dfc4b48`), que dice de la TAREA 1.2 *"Mutacion: VERDE sobre
+la 101, ROJO sobre la 100"*; (iii) el mismo reporte remata *"(1.3) usada
+sobre esta apertura: VERDE"*. **LA CAUSA, DE UNA LINEA:** `ficheros_apertura()`
+de `scripts/loop/verificar_apertura_sellada.py` hacia `glob` de
+`SALIDA_V<N>_*_APERTURA.txt` sobre el arbol de trabajo, y el fichero de
+salida de la propia guarda CASA con el patron de la propia guarda: se
+envenena sola. Remedio de esta vuelta: TAREA 1.3.
+
+**CAIDA DE REPORTE, MISMA ESPECIE, TAMBIEN ACUMULA.** "Las CUATRO mesas de
+la fase 06" no son cuatro mesas ni son de la fase 06. El campo `fase` de
+`docs/plan/OPERACIONES.jsonl`, leido hoy: `OP-M-01` y `OP-M-03` son
+`06_MESAS`; `OP-M-01-FUSION` y `OP-M-03-III` son `03_FUSIONES`. Y
+`docs/plan/03_FUSIONES.md:9246` las nombra por su nombre: son **dos de las
+SEIS FUSIONES ENRUTADAS a la fase 06** por la remision del 26 ago 2026. LO
+QUE SI SOBREVIVE, escrito al lado y no callado: las cuatro se ejecutan en la
+fase 06 igual, asi que la conclusion de fondo (la fase 04 solo queda
+esperando trabajo de fase 06) es CORRECTA; lo que estaba mal es el nombre y
+el numero con que se publico. Remedio de esta vuelta: TAREA 1.2, con su caso
+positivo tallado en `docs/loop/SALIDA_V102_TAREA1_2_NOMBRES_FASE04.txt`.
+
+### (2.2) LO QUE ARREGLASTE Y NO QUIERO QUE SE PIERDA, registrado igual que lo que falla
+
+**LA APERTURA SE SELLO DE VERDAD, Y CIERRA UNA CAIDA QUE LLEVABA DOS
+VUELTAS.** Los tres relojes, medidos por el auditor: `SALIDA_V101_WEB_
+APERTURA.txt` trae `Start at 22:45:03`; el primer commit de la vuelta
+(`a3263243`) es de las `22:45:50`, POSTERIOR a la corrida y ANTERIOR a
+cualquier otra operacion; y `git log --diff-filter=A` pone los **nueve**
+ficheros `SALIDA_V101_*_APERTURA.txt` en `a3263243`, hijo directo de
+`c6476cb7` (el commit del acta). La caida de incumplimiento de encargo que
+arrastraban las vueltas 99 y 100 queda REMEDIADA.
+
+**LA PRUEBA DE MUTACION DE LA TAREA 1.1 (vuelta 101) YA NO ENVEJECE.** Corrida
+sobre HEAD por el auditor: EXIT 0, las tres contra el estado real del dia
+(90/93), expectativas en RELATIVO, sin ninguna cifra congelada. La CAIDA DE
+GUARDA ENVEJECIDA de la vuelta 100 queda REMEDIADA.
+
+### (2.3) MI CAIDA DE CLASE (del auditor), con su nombre igual que las del ejecutor (acta 101, seccion 4)
+
+El auditor adjudico **NO RESUELTA** el puesto **5** del tramo 1 a ciegas
+(entregable y `pasos_accionables` volcados sin clase, direccion ni razon);
+el registro del ejecutor dice **RESUELTA**. Leyo `docs/BANCO_DE_TEXTOS.md`
+9.6.2 entero antes de sostener su caso, y la regla le quita la razon con su
+propia formulacion literal: *"UNA LINEA QUE TARDA SIETE PASOS EN EJECUTARSE
+NO ES UNA LINEA: ES UN PROCEDIMIENTO NOMBRADO EN UNA LINEA. La prueba de que
+el paso de la madre es un procedimiento es que existe el hijo que lo
+ejecuta."* Madre `planificacion_cero_defectos`, paso 6 ("planificar el
+programa de eliminacion de causas de error como continuacion"); hijo
+`eliminacion_causas_error_4`, el sistema ECR entero. **CEDIO: el registro se
+queda como esta y el 90/93 no se mueve.** No hay correccion que declarar ni
+cifra que recomputar.
+
+### (2.4) LA RELECTURA AL DOBLE que esta caida del auditor dispara, con su motivo, para que quede claro que la dispara el auditor y no el ejecutor
+
+La discrepancia del puesto 5 aparecio **FUERA de los discutibles marcados**,
+y `AUDITOR.md` 1.2 no distingue quien se equivoco: el TRAMO 1 se relee AL
+DOBLE igual (es barata), y el credito de la LECTURA del ejecutor no baja,
+baja el del auditor. La relectura va en la TAREA 3 de esta misma vuelta, en
+seccion propia mas abajo.
+
+**Composicion del anadido de ESTA seccion en `PENDIENTES.md`**, tallada
+sobre `git diff HEAD -- docs/PENDIENTES.md` con
+`scripts/loop/tallar_composicion_salida.py`
+(`docs/loop/SALIDA_V102_TAREA2_COMPOSICION_PENDIENTES.txt`), mismo patron
+de cabeceras `##`/`###` de las vueltas 99, 100 y 101: **1 seccion de nivel
+2, 4 subsecciones de nivel 3**. **Caso positivo**, el mismo comando corrido
+sobre `docs/loop/SALIDA_V101_TAREA2_DIFF_PENDIENTES.txt` (el anadido
+conocido de la vuelta 101) reproduce **exacto** 1 de nivel 2 y 5 de nivel 3,
+igual que el propio archivo de esa vuelta.
