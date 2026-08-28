@@ -59,7 +59,8 @@ def main():
     print("=" * 112)
     print("PRUEBA DE MUTACION, VUELTA 99 TAREA 3 (guardas del escritor del cuarto tramo)")
     print("=" * 112)
-    print("FILAS DE PARTIDA: %d. NADA SE ESCRIBE: las mutaciones van sobre copias en memoria.")
+    print("FILAS DE PARTIDA: %d. NADA SE ESCRIBE: las mutaciones van sobre copias en memoria."
+          % len(base))
     print()
 
     _, fallos = esc.construir(base)

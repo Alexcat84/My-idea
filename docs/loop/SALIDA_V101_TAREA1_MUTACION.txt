@@ -1,0 +1,17 @@
+(a) CONTROL VERDE sobre el estado de hoy (sin cifra congelada):
+    n=183 (esperado por suma de los 4 ficheros: 183), clase A 3 B 2 C 1 D 177, direccion 90/93 (50,8%)
+    ESPERADO: VERDE, n == suma de los 4 ficheros, con_dir + sin_dir == n
+    PASA
+
+(b) SIN correccion_v99 en el 147 (copia temporal, el fichero real no se toca), RESPECTO DEL CONTROL (a):
+    n=183, direccion 91/92 (50,3%); delta con_dir=+1, delta sin_dir=-1
+    ESPERADO: delta con_dir = +1, delta sin_dir = -1 respecto de (a) (la fila 147 vuelve a DIRECCION AFIRMADA sin la correccion del 99)
+    PASA
+
+(c) correccion_vXX con campo_corregido inventado ('titulo_ratio'):
+    ROJO:
+       tmpxvckyyau.jsonl puesto_tramo 147 trae correccion con campo_corregido 'titulo_ratio', DESCONOCIDO
+    ESPERADO: ROJO citando 'titulo_ratio' como DESCONOCIDO
+    PASA
+
+RESULTADO GLOBAL: TODOS PASAN
