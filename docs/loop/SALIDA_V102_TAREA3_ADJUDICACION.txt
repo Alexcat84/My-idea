@@ -1,0 +1,86 @@
+VUELTA 102, TAREA 3: LA RELECTURA AL DOBLE DEL TRAMO 1, ADJUDICACION ESCRITA
+(disparada por la caida de clase del auditor, acta 101 seccion 4.3; puesto 5
+EXCLUIDO de la muestra, ya adjudicado y cerrado, acta 101 4.2).
+
+Muestra (8): 33, 30, 7, 27, 22, 23, 26, 12 (4 RESUELTAS de MENOR titulo_ratio,
+4 NO RESUELTA de MAYOR titulo_ratio; ver docs/loop/SALIDA_V102_TAREA3_CIEGA_BLIND.txt
+para el volcado ciego usado y docs/loop/SALIDA_V102_TAREA3_CIEGA_REVEAL.txt
+para el registro destapado despues).
+
+MI ADJUDICACION A CIEGAS (escrita ANTES de correr --modo reveal, sin clase,
+sin direccion y sin razon delante):
+
+  33 (diamante_de_innovacion -> estrategia_de_innovacion_de_producto):
+  RESUELTA, paso 1. El paso 1 de la madre ("definir estrategia clara: donde
+  enfocar esfuerzos y recursos") ya nombra "recursos", asi que los "buckets
+  de recursos" del hijo no son genero nuevo; el hijo no toca proceso
+  (compuertas) ni cultura, los otros dos pilares del diamante.
+
+  30 (tres_preguntas_carrera -> evaluacion_ventana_mercado): RESUELTA,
+  paso 3. El hijo entero es la vara de "es favorable la oportunidad y el
+  momento" del paso 3; no toca los factores de carrera ni personal.
+
+  7 (customer_development_team -> get_out_of_the_building): RESUELTA,
+  paso 2. El paso 2 de la madre nombra "get out of the building" entre
+  parentesis: es el mismo hijo con nombre compartido.
+
+  27 (estrategia_innovacion_producto -> strat_map_arenas_estrategicas):
+  RESUELTA, paso 3. El Strat-Map es el COMO del paso 3 ("identificar y
+  priorizar las arenas estrategicas"), sin tocar metas, rol de producto,
+  recursos ni planes de ataque (los otros cuatro pasos).
+
+  22 (extraer_priorizar_hipotesis -> value_proposition_startup): NO
+  RESUELTA. La madre solo LISTA y PRIORIZA hipotesis (actividad interna, sin
+  un solo paso de contacto con cliente); el hijo VALIDA hablando con
+  clientes y DEFINE caracteristicas que resuelven el problema: genero de
+  contacto/construccion que la madre no tiene en NINGUN paso.
+
+  23 (fit_problema_solucion -> value_proposition_startup): mi primera
+  lectura fue RESUELTA, paso 2 (el paso 2 de la madre, "testear si los
+  clientes quieren tu propuesta de valor concreta", calza con el paso 3 del
+  hijo). AL REVISARLO CONTRA LA LETRA tras destapar la razon del registro:
+  el paso 2 del hijo, "define que caracteristicas de tu producto o servicio
+  resuelven esos problemas", es una actividad DE DISENO/CONSTRUCCION que
+  NINGUN paso de fit_problema_solucion tiene (sus tres pasos son validar,
+  testear y evaluar escalabilidad: los tres de VERIFICACION, ninguno de
+  diseno). Es genero que la madre no tiene en ningun paso. MI LECTURA
+  INICIAL ERA APRESURADA; sostenida la vara, el registro (NO RESUELTA,
+  DUDOSO) es el correcto. NO SE MUEVE.
+
+  26 (rol_gates_agile -> gates_go_kill_decision_points): NO RESUELTA. El
+  entregable del hijo ("tu propio mapa DEL PROCESO, de la idea al
+  lanzamiento") describe mapear el proceso ENTERO, no solo el paso 1 de una
+  madre especializada en el hibrido agil/hardware-software; y el paso 1 de
+  la madre ("mantener los puntos de decision... aunque trabajes con metodos
+  agiles") no cubre por si solo el resto del hijo. Cada lado trae
+  instrucciones propias que el otro no nombra.
+
+  12 (human_error_como_sintoma -> preguntar_que_no_quien): mi primera
+  lectura, con el marco RESUELTA/NO RESUELTA, fue RESUELTA (paso 1: el
+  hijo entero cabe en "preguntar que condiciones... en vez de quien
+  fallo"). AL DESTAPAR EL REGISTRO: la clase real es A (REPITE), con
+  `direccion_leida` deliberadamente vacio, PORQUE el par no es una
+  elaboracion madre-hijo de un paso: es un CASI DUPLICADO de contenido
+  (misma fuente, Dekker; el paso 1 y el paso 2 de la madre YA dicen, con
+  otras palabras, lo mismo que los pasos 1, 2 y 4 del hijo). Mi lectura
+  identifico correctamente la correspondencia casi total; lo que fallo fue
+  el CASILLERO (RESUELTA no es la pregunta correcta cuando la vara de
+  9.6.1, rama contenido, ya clasifica el par como A/REPITE, un eje distinto
+  de la direccion). NO ES UNA DISCREPANCIA DE CONTENIDO, es un eje
+  equivocado en mi primera lectura. NO SE MUEVE (no hay campo
+  direccion_leida que mover: la clase A no lo usa).
+
+(3.3) LA CUENTA, aplicando la letra fijada (mueve un par que el hijo anada
+GENERO QUE LA MADRE NO TIENE EN NINGUN PASO; no lo mueve que el hijo
+despliegue en varios pasos lo que la madre nombra en uno solo):
+
+  De los 8, SEIS coinciden con el registro en la primera lectura (33, 30, 7,
+  27, 22, 26). DOS (23 y 12) parecieron discrepar en la primera pasada, y
+  las dos se resuelven CONTRA mi lectura inicial y A FAVOR del registro al
+  aplicar la letra con cuidado: el 23 porque el hijo si anade genero de
+  diseno que la madre no tiene en ningun paso (NO se mueve de NO RESUELTA);
+  el 12 porque no es un par de direccion, es clase A por la vara de
+  contenido del 9.6.1 (no hay campo que mover).
+
+  NINGUNO DE LOS OCHO SE MUEVE. El 90/93 (50,8% NO RESUELTA) NO CAMBIA. No
+  hay correccion_v102 que declarar ni cierre que recomputar.
