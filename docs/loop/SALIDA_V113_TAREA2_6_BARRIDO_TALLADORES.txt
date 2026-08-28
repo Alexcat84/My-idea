@@ -1,0 +1,93 @@
+BARRIDO 2.7 REHECHO ENTERO (TAREA 2.6, vuelta 113). Las tres busquedas, corridas de
+verdad, cada una con su recuento; la union se clasifica entera, sin excepcion.
+
+1. RE_CITA en scripts/loop/*.py: 14 ficheros
+2. patron de extension 'txt|md' entre backticks: 3 ficheros
+3. 'LOOP = os.path.join(' en scripts/loop/*.py: 57 ficheros
+
+UNION de las tres busquedas: 71 ficheros. Clasificados TODOS, sin excepcion:
+
+--- GRUPO A: PARSEA CITAS DE PROSA (2) ---
+   tallar_cifras_de_antes.py -- corregido en la TAREA 2.1 de la vuelta 112 (resolver_cita, linea 172)
+   tallar_veredictos_reporte.py -- EL HERMANO SANO, resuelve las dos formas desde antes
+
+--- GRUPO B: VIVOS, NOMBRES FIJOS CONSTRUIDOS POR CODIGO (11) ---
+   abrir_tramo_de_opu01.py: nombre construido por codigo (V48 = os.path.join(LOOP, "RECOMPUTO_V48_COMPONENTES.jsonl"), linea 83; ruta = os.path.join(LOOP, nombre) linea 113, nombre viene de una lista/constante interna, no de una cita de prosa).
+   caso_positivo_de_fusion_de_mesa.py: rutas de script constantes (GENERADOR/FUNDIDOR, lineas 59-60) y ruta = os.path.join(LOOP, nombre + ".py") linea 71, nombre siempre pelado, construido por codigo.
+   caso_positivo_del_contrato_de_perdidas.py: rutas fijas constantes (TMP_PLAN, TMP_SIN_CAMPO, TRAMO, lineas 57-59), nunca una cita de prosa.
+   censar_alcance_de_la_vara.py: reusa FICHEROS_VEREDICTO (lista constante) via import; ruta = os.path.join(LOOP, nombre) linea 78, nombre siempre pelado.
+   registrar_cierre_de_tramo.py: define LOOP (linea 54) pero NO lo usa para resolver ninguna cita de prosa (cero usos de os.path.join(LOOP, ...) en el resto del fichero): es un ESCRITOR de rutas construidas por codigo, no un lector de citas.
+   tallar_cabecera_reporte.py: leer()/leer_opcional() (lineas 441 y 579) y la ruta del tsc (linea 682): nombre SIEMPRE construido con "SALIDA_V%d_..." por codigo, nunca parseado de una cita en prosa.
+   tallar_perdidas_del_plan.py: rutas.append(os.path.join(LOOP, a.prefijo % (a.vuelta, L))) linea 143: nombre construido con vuelta/tramo por codigo.
+   tallar_planes_del_tramo.py: cand = os.path.join(LOOP, "%s%s.json" % (pref, L)) linea 209: nombre construido con vuelta/tramo por codigo.
+   verificar_apertura_sellada.py: glob(SALIDA_V<vuelta>_*_APERTURA.txt) linea 198 sobre el propio arbol de trabajo, y ruta = os.path.join(LOOP, nombre) linea 264 con nombre = basename real de ese glob: nunca una cita en prosa.
+   verificar_cobertura_bolsa_tres_vias.py: ruta = os.path.join(LOOP, nombre) linea 107, nombre viene de FICHEROS_VEREDICTO (lista constante, siempre pelada).
+   verificar_vuelco_de_veredicto.py: ruta = ... or os.path.join(LOOP, nombre) linea 191, nombre viene de FICHEROS_VEREDICTO (misma lista constante).
+
+--- GRUPO C: HISTORICOS DE UN SOLO USO, NOMBRES FIJOS (45) ---
+   _v111_verificar_vuelco_de_veredicto_55a48875.py
+   _v63_caso_positivo_mesa.py
+   _v63_construir_fundidor.py
+   _v70_construir_registro_lote.py
+   _v71_construir_registro_lote.py
+   _v72_construir_registro_lote.py
+   _v73_construir_registro_lote.py
+   vuelta110_tarea2_prueba_mutacion.py
+   vuelta110_tarea4_caso_construccion.py
+   vuelta111_tarea3_1_censo_satelite_no_resuelta.py
+   vuelta30_sellar_toque_unico.py
+   vuelta41_plan_acto.py
+   vuelta53_planes.py
+   vuelta54_registro_tramo.py
+   vuelta55_registro_tramo.py
+   vuelta55_tallar_planes.py
+   vuelta56_puntuacion_incisos.py
+   vuelta56_registro_tramo.py
+   vuelta56_tallar_perdidas_v55.py
+   vuelta56_tallar_planes.py
+   vuelta57_registro_tramo.py
+   vuelta57_tallar_planes.py
+   vuelta57_tramo4_nomina.py
+   vuelta58_registro_acto32.py
+   vuelta58_tallar_planes.py
+   vuelta58_tramo5_nomina.py
+   vuelta65_caso_positivo_generador.py
+   vuelta65_caso_positivo_promesas.py
+   vuelta65_registro_tramo.py
+   vuelta66_registro_lote_b.py
+   vuelta67_registro_lote_c.py
+   vuelta68_registro_lote_d.py
+   vuelta69_registro_lote_e.py
+   vuelta70_registro_lote_f.py
+   vuelta71_registro_lote_g.py
+   vuelta72_registro_lote_h.py
+   vuelta73_registro_lote_i.py
+   vuelta83_hornear_decididas.py
+   vuelta84_hornear_decididas.py
+   vuelta85_hornear_decididas.py
+   vuelta89_tarea4_guarda_op_c05.py
+   vuelta98_tarea1_prueba_mutacion.py
+   vuelta98_tarea3_prueba_mutacion.py
+   vuelta98_tarea4_prueba_mutacion.py
+   vuelta99_tarea3_prueba_mutacion.py
+
+--- GRUPO D: FUERA DE ALCANCE, DECLARADO CON SU MOTIVO (13) ---
+   _v70_construir_registrador_acta.py: RE_CITA casa "lineas **N** a **M**" (cita de NUMERO DE LINEA dentro de un acta), no un nombre de fichero. Instrumento historico de un solo uso, cerrado, sin relacion con la familia A.
+   _v71_construir_registrador_acta.py: RE_CITA casa "lineas **N** a **M**" (cita de NUMERO DE LINEA dentro de un acta), no un nombre de fichero. Instrumento historico de un solo uso, cerrado, sin relacion con la familia A.
+   _v72_construir_registrador_acta.py: RE_CITA casa "lineas **N** a **M**" (cita de NUMERO DE LINEA dentro de un acta), no un nombre de fichero. Instrumento historico de un solo uso, cerrado, sin relacion con la familia A.
+   _v73_construir_registrador_acta.py: RE_CITA casa "lineas **N** a **M**" (cita de NUMERO DE LINEA dentro de un acta), no un nombre de fichero. Instrumento historico de un solo uso, cerrado, sin relacion con la familia A.
+   _v74_construir_registrador_acta.py: RE_CITA casa "lineas **N** a **M**" (cita de NUMERO DE LINEA dentro de un acta), no un nombre de fichero. Instrumento historico de un solo uso, cerrado, sin relacion con la familia A.
+   censo_de_plantillas_talladas.py: trae el patron de extension (txt|md) pero para CLASIFICAR tokens dentro de una plantilla generica; su raiz es --raiz (argumento de linea de comandos), no LOOP/docs/loop. No es de esta familia.
+   vuelta68_registrar_acta67.py: RE_CITA casa "lineas **N** a **M**" (cita de NUMERO DE LINEA dentro de un acta), no un nombre de fichero. Instrumento historico de un solo uso, cerrado, sin relacion con la familia A.
+   vuelta69_registrar_acta68.py: RE_CITA casa "lineas **N** a **M**" (cita de NUMERO DE LINEA dentro de un acta), no un nombre de fichero. Instrumento historico de un solo uso, cerrado, sin relacion con la familia A.
+   vuelta70_registrar_acta69.py: RE_CITA casa "lineas **N** a **M**" (cita de NUMERO DE LINEA dentro de un acta), no un nombre de fichero. Instrumento historico de un solo uso, cerrado, sin relacion con la familia A.
+   vuelta71_registrar_acta70.py: RE_CITA casa "lineas **N** a **M**" (cita de NUMERO DE LINEA dentro de un acta), no un nombre de fichero. Instrumento historico de un solo uso, cerrado, sin relacion con la familia A.
+   vuelta72_registrar_acta71.py: RE_CITA casa "lineas **N** a **M**" (cita de NUMERO DE LINEA dentro de un acta), no un nombre de fichero. Instrumento historico de un solo uso, cerrado, sin relacion con la familia A.
+   vuelta73_registrar_acta72.py: RE_CITA casa "lineas **N** a **M**" (cita de NUMERO DE LINEA dentro de un acta), no un nombre de fichero. Instrumento historico de un solo uso, cerrado, sin relacion con la familia A.
+   vuelta74_registrar_acta73.py: RE_CITA casa "lineas **N** a **M**" (cita de NUMERO DE LINEA dentro de un acta), no un nombre de fichero. Instrumento historico de un solo uso, cerrado, sin relacion con la familia A.
+
+TOTAL clasificado: 71 (A 2 + B 11 + C 45 + D 13) == union 71: CUADRA
+
+LOS TRES PREVIAMENTE NO NOMBRADOS NI DESCARTADOS (acta 112): abrir_tramo_de_opu01.py,
+caso_positivo_del_contrato_de_perdidas.py y registrar_cierre_de_tramo.py -- los tres
+estan ahora en GRUPO B, arriba, con su linea.

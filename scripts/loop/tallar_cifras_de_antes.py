@@ -130,6 +130,46 @@ pasa de OK a hallazgo, ROJO EXIT 1
 (`docs/loop/SALIDA_V111_TAREA2_5_MUTACION_DESPUES.txt`)") y la evalua con la
 cita ya bien resuelta. EL REPORTE DE LA 111 NO SE REESCRIBE: es historia; lo
 que cambia es la MEDICION sobre el, y se publica tal cual sale.
+
+--- TAREA 2.4 de la vuelta 113: LA LISTA DEJA DE SER UNA ENUMERACION (acta de
+la vuelta 112, "MI CAIDA DE ENCARGO") ---
+
+POR QUE NACE, Y ES LA TERCERA VEZ DE LA MISMA ESPECIE. La 110 cerro la lista
+sin "pasa de"; la 111 la amplio enumerando ("pasa de", "queda en", "quedo
+en", "daba", "dio"); el reporte de la vuelta 112 escribio DOS afirmaciones de
+estado anterior con el verbo "sigue" ("contar_cierre_efectivo.py sigue
+74/109 (59,6%)" y "verificar_cobertura_bolsa_tres_vias.py sigue 74/74/0") y
+las dos pasaron invisibles porque "sigue" no estaba en MARCAS. Enumerar de
+nuevo (anadir solo "sigue") remedia el ejemplar de hoy y deja abierta la
+cuarta vez con el proximo verbo.
+
+LA REGLA, ESCRITA EN VEZ DE LA LISTA SOLA: TODA CONSTRUCCION QUE AFIRME UN
+ESTADO ANTERIOR O SU PERMANENCIA (que algo YA era asi, que SIGUE siendo asi,
+que NO CAMBIO, o que es IGUAL/IDENTICO a una medicion de antes) es una marca,
+tenga o no la palabra exacta que ya vive en MARCAS. La lista de abajo es la
+COBERTURA CONOCIDA de esa regla, no la regla misma: quien la lee para decidir
+si una palabra nueva entra no pregunta "esta en la lista" sino "esta oracion
+afirma un estado anterior o su permanencia". Bajo esa regla se suman ahora
+"sigue", "sigue en", "continua", "se mantiene", "sin cambio", "identico a" e
+"igual que" (presente de los mismos verbos de permanencia, mismo criterio con
+el que la 112 sumo el presente y el perfecto de "pasar/quedar").
+
+QUIEN LA AMPLIA, DICHO SIN AMBIGUEDAD PARA QUE NO VUELVA A LEERSE COMO
+LITERAL CERRADA: LA AMPLIA EL AUDITOR POR ENCARGO (como ya corrigio el acta
+111, 4.4), Y EL EJECUTOR ESTA OBLIGADO A ANADIR, EN LA MISMA VUELTA EN QUE LO
+ESCRIBE, CUALQUIER VERBO O CONSTRUCCION DE PERMANENCIA QUE SU PROPIO REPORTE
+USE Y QUE ESTA LISTA TODAVIA NO TRAIGA. Esa obligacion (no una enumeracion
+mas larga) es la que esta escrita para impedir la cuarta vez: el boquete no
+era la palabra que faltaba, era que anadir la palabra de esta vez no cerraba
+la puerta a la palabra de la proxima.
+
+MUTACION X (TAREA 2.5 del encargo de la vuelta 113, salida commiteada en
+docs/loop/SALIDA_V113_TAREA2_5_MUTACION_X.txt): sobre el reporte de la vuelta
+112 tal como quedo commiteado (`git show 87397be1:docs/loop/REPORTE.md`).
+ANTES de esta lista, NO marca ninguna de las dos oraciones con "sigue"
+(VERDE VACUO en esa parte). DESPUES, MARCA LAS DOS y las evalua con sus
+citas. EL REPORTE DE LA 112 NO SE REESCRIBE: es historia; se publica la
+medicion tal como salga, incluso si sale ROJO.
 """
 import argparse
 import glob
@@ -144,6 +184,10 @@ MARCAS = [
     "antes", "previamente", "hoy da", "ya era", "era",
     "sin el arreglo", "pasaba de", "quedaba en",
     "pasa de", "queda en", "quedo en", "daba", "dio",
+    # TAREA 2.4, vuelta 113 (acta de la vuelta 112, "MI CAIDA DE ENCARGO",
+    # tercera vez de la misma especie: ver la REGLA mas abajo).
+    "sigue", "sigue en", "continua", "se mantiene",
+    "sin cambio", "identico a", "igual que",
 ]
 
 EXCLUSIONES_ORDEN = [

@@ -391,6 +391,40 @@ en f73adb67, cuyo padre es 85a250be...); `--fase04 --vuelta 94` tiene que dar
 a4c89ab6, cuyo padre es 4c22a083, NO 267365c8). OJO: la cabecera YA PUBLICADA
 de la vuelta 94 es una medicion historica cerrada y NO se retoca con este
 arreglo; el instrumento reparado se estrena con la cabecera de la vuelta 95.
+
+--- TAREA 2.1: EL TSC DESCUENTA SU PROPIO MARCADOR DE EXIT (vuelta 113) ---
+
+POR QUE NACE (acta de la vuelta 112, seccion "TU CAIDA GRANDE ES DE GUARDA
+CEGADA"). Desde la vuelta 112 el ejecutor apenda una linea final "EXIT=<n>" a
+TODOS sus ficheros de salida, tsc incluido. La regla vieja de esta celda
+("tsc sin salida == exitcode 0", literal desde la creacion de este fichero)
+solo sabia leer un fichero VACIO como el caso bueno: un fichero con nada mas
+que "EXIT=0" (7 bytes) ya no cuenta como vacio, y la celda publicaba "1
+linea(s) de salida (revisar)", la MISMA forma que produciria un tsc con una
+linea de error real. Asi nacieron `SALIDA_V112_TSC_APERTURA.txt` y
+`_CIERRE.txt` (7 bytes cada uno, solo el marcador) y la cabecera de la vuelta
+112 publico "revisar" en sus dos columnas con el tsc realmente en exit 0 y
+cero lineas: guarda muerta, nadie lo declaro.
+
+LA DECISION (con su unica condicion, resuelta por el ejecutor: distinguir un
+tsc limpio de uno con una linea de error real), decidida en la opcion b del
+encargo en vez de volver al fichero vacio de las vueltas 110 y 111: el
+tallador APRENDE a leer el marcador en vez de que el ejecutor deje de
+escribirlo. Si la ULTIMA linea no vacia del fichero hace match con
+`^EXIT=(numero)$`, se separa del CONTENIDO (nunca cuenta como linea de salida
+del tsc) y su numero se publica en la celda con el prefijo "EXITCODE <n>, ".
+Sobre el CONTENIDO que queda (sin esa linea): vacio es tsc LIMPIO ("EXITCODE
+<n>, cero lineas", o "EXITCODE 0, cero lineas" si no habia marcador: un
+fichero totalmente vacio, como en las vueltas 110 y 111, sigue siendo el caso
+bueno); no vacio es tsc SUCIO, y la celda NOMBRA las lineas (hasta 5) para
+que nunca salga igual a la de un tsc limpio.
+
+MUTACION V (verde) y MUTACION W (rojo), vuelta 113, corridas juntas por
+`scripts/loop/vuelta113_tarea2_mutacion_tsc.py`: un fichero con SOLO "EXIT=0"
+tiene que tallar "EXITCODE 0, cero lineas" (tsc LIMPIO); un fichero con una
+linea de error real mas "EXIT=1" tiene que tallar una celda DISTINTA, con la
+linea nombrada. Salida commiteada en
+`docs/loop/SALIDA_V113_TAREA2_2_3_MUTACION_V_W.txt`.
 """
 import argparse
 import io
@@ -548,6 +582,31 @@ def leer_opcional(nombre):
     return io.open(ruta, encoding="utf-8").read()
 
 
+def interpretar_tsc(contenido_tsc):
+    """TAREA 2.1 (vuelta 113): descuenta el marcador final "EXIT=<n>" antes de
+    contar lineas del tsc, y publica el exitcode que lea. Extraida a funcion
+    propia (antes vivia inline en lado_fase04) para que la prueba de mutacion
+    V/W la llame directo, sin tener que fabricar una vuelta entera. Ver el
+    docstring del modulo, seccion 'TAREA 2.1', para el porque y la decision."""
+    lineas_tsc = contenido_tsc.split("\n")
+    if lineas_tsc and lineas_tsc[-1] == "":
+        lineas_tsc.pop()
+    exit_leido = None
+    if lineas_tsc:
+        m_exit = re.match(r"^EXIT=(\d+)\s*$", lineas_tsc[-1].strip())
+        if m_exit:
+            exit_leido = m_exit.group(1)
+            lineas_tsc = lineas_tsc[:-1]
+    while lineas_tsc and lineas_tsc[-1].strip() == "":
+        lineas_tsc.pop()
+    if not lineas_tsc:
+        return "EXITCODE %s, cero lineas" % (exit_leido if exit_leido is not None else "0")
+    prefijo = ("EXITCODE %s, " % exit_leido) if exit_leido is not None else ""
+    if len(lineas_tsc) <= 5:
+        return "%s%d linea(s) de salida (revisar): %s" % (prefijo, len(lineas_tsc), "; ".join(lineas_tsc))
+    return "%s%d linea(s) de salida (revisar)" % (prefijo, len(lineas_tsc))
+
+
 def lado_fase04(vuelta, sufijo, fallos, con_miles=True):
     """Lee TODAS las cifras de un lado (APERTURA o CIERRE) de fase 04, cada
     una de SU PROPIA salida del dia. Ninguna celda hereda del otro lado."""
@@ -597,20 +656,35 @@ def lado_fase04(vuelta, sufijo, fallos, con_miles=True):
         d["web_tests"] = ("%s passed, %s skipped (%s)" % (m(pasadas), m(saltadas), m(total))) if saltadas \
             else ("%s passed (%s)" % (m(pasadas), m(total)))
 
-    # El tsc vacio ES la senal de exito (tsc sin salida == exitcode 0), asi que
-    # se lee aparte, sin pasar por busca() (que exigiria un patron y fallaria
-    # sobre un fichero vacio que en realidad es el caso bueno).
+    # EL TSC DESCUENTA SU PROPIO MARCADOR DE EXIT ANTES DE CONTAR (TAREA 2.1,
+    # vuelta 113, encargo del auditor sobre el acta de la vuelta 112, "TU
+    # CAIDA GRANDE ES DE GUARDA CEGADA"). Desde la vuelta 112 el ejecutor
+    # empezo a apendar una linea final "EXIT=<n>" a TODOS los ficheros de
+    # salida, tsc incluido. Para el tsc eso mato la guarda: un fichero con
+    # SOLO "EXIT=0" (7 bytes) ya no esta vacio, y la vieja regla ("tsc vacio
+    # == exito") lo contaba como "1 linea(s) de salida (revisar)", la MISMA
+    # celda que produciria un tsc con una linea de error de verdad. Las dos
+    # vueltas 112 nacieron asi (docs/loop/SALIDA_V112_TSC_APERTURA.txt y
+    # _CIERRE.txt, 7 bytes cada uno) y la cabecera publico "revisar" con el
+    # tsc realmente en exit 0 y cero lineas, sin que nadie lo declarara.
+    #
+    # LA DECISION (opcion b del encargo): en vez de volver al fichero vacio,
+    # el tallador APRENDE a leer el marcador. Si la ULTIMA linea no vacia del
+    # fichero hace match con `^EXIT=(\d+)$`, esa linea se separa del CONTENIDO
+    # (nunca se cuenta como "linea de salida del tsc": es el marcador, no un
+    # error) y su numero se publica en la celda. El resto del fichero, sin esa
+    # linea, es el CONTENIDO REAL: si queda vacio, el tsc esta LIMPIO (se
+    # publica el exitcode leido, o 0 si no habia marcador: fichero totalmente
+    # vacio sigue siendo el caso bueno, como en las vueltas 110 y 111); si NO
+    # queda vacio, el tsc tiene errores de verdad, y la celda NOMBRA las
+    # lineas (hasta 5; mas de 5 se cuentan sin listarlas) para que la celda de
+    # un tsc sucio nunca sea igual, ni por accidente, a la de uno limpio.
     ruta_tsc = os.path.join(LOOP, p + "TSC_" + sufijo + ".txt")
     if not os.path.exists(ruta_tsc):
         fallos.append("no existe la salida %s" % (p + "TSC_" + sufijo + ".txt"))
         d["tsc"] = "?"
     else:
-        contenido_tsc = io.open(ruta_tsc, encoding="utf-8").read()
-        if contenido_tsc.strip() == "":
-            d["tsc"] = "EXITCODE 0, cero lineas"
-        else:
-            n = len(contenido_tsc.strip("\n").splitlines())
-            d["tsc"] = "%d linea(s) de salida (revisar)" % n
+        d["tsc"] = interpretar_tsc(io.open(ruta_tsc, encoding="utf-8").read())
 
     # TAREA 2.1 (vuelta 106, adjudicacion del auditor sobre la vuelta 105,
     # "PENDIENTE DE DOCTRINA" resuelta como GUARDA ENVEJECIDA y no como

@@ -1,0 +1,9 @@
+MUTACION V (solo el marcador EXIT=0):
+  contenido: 'EXIT=0\n'
+  celda tallada: EXITCODE 0, cero lineas
+
+MUTACION W (una linea de error real mas EXIT=1):
+  contenido: "web/lib/x.ts(3,5): error TS2304: Cannot find name 'foo'.\nEXIT=1\n"
+  celda tallada: EXITCODE 1, 1 linea(s) de salida (revisar): web/lib/x.ts(3,5): error TS2304: Cannot find name 'foo'.
+
+VERDE: V da tsc LIMPIO, W da una celda DISTINTA que nombra la linea de error.
