@@ -1,0 +1,19 @@
+==============================================================================
+TAREA 1 (vuelta 119): CASO ROJO OBLIGATORIO, SOBRE COPIA EN MEMORIA (dataset/ no se toca), LIMPIEZA MEDIDA POR CONTENIDO
+==============================================================================
+git diff --numstat -- dataset/ ANTES: ''
+cuenta de hoy (grafo real, sin tocar): 935 entradas que sobran, 711 nodos
+fabricado EN MEMORIA (no en disco): ab_testing_optimizacion.nodos_siguientes gana una entrada duplicada de 'cohort_analysis_retencion' (ab_testing_optimizacion -> cohort_analysis_retencion x2)
+cuenta SOBRE LA COPIA FABRICADA (fichero temporal, nunca dataset/): 936 entradas que sobran, 711 nodos
+git diff --numstat -- dataset/ DESPUES: ''
+
+LA COPIA FABRICADA CRECE LA CUENTA (935 -> 936, +1), que es EXACTAMENTE la condicion que --despues detecta como ROJO. El caso rojo CAE EN ROJO como se espera de el (simulando --despues con estas dos cuentas):
+   --despues simulado: ROJO (exit 1), LA OPERACION PARA. CASO ROJO: PROBADO.
+
+dataset/ nunca se toco de CONTENIDO: los dos git diff --numstat de arriba salieron vacios (la M espuria de fin de linea, si la hay, no cuenta aqui).
+
+--- PRUEBA DE MUTACION DE LA GUARDA (EJECUTOR regla 1): la variable que decide, no un literal ---
+Se muta la condicion real del codigo (sobran_fabricado > sobran_hoy) invirtiendola a mano sobre las MISMAS dos cifras medidas arriba, para comprobar que el caso CAE cuando la condicion es falsa:
+  condicion mutada (sobran_fabricado < sobran_hoy) sobre 936 contra 935: False
+  MUTACION CAE (False), como se espera: la condicion real (sobran_fabricado > sobran_hoy) es la que decide, no un literal fijo.
+EXIT=0
