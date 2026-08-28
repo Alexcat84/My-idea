@@ -35,6 +35,35 @@ MECANICA DE ROJO: si `DIFERENCIA_CONTRA_COLA.jsonl` no tiene 183 filas, si el
 cotejo puesto-a-puesto de un puesto de la muestra no casa madre/hijo contra
 `OP_E_03_LECTURA_TRAMO1_V96.jsonl`, o si falta el fichero de un nodo, NO SE
 IMPRIME NADA y sale con exit 1.
+
+--- TAREA 4.1 de la vuelta 104 (acta de la vuelta 103, seccion 5, "UN
+INSTRUMENTO QUE SE MUEVE BAJO SU PROPIO RESULTADO") ---
+
+POR QUE NACE. La muestra por el centro se calcula sobre `direccion_efectiva`
+(aplica `correccion_vNN` si la fila la trae). La TAREA 4 de la vuelta 103
+escribio `correccion_v103` sobre el puesto 31 EN LA MISMA TAREA que saco la
+muestra: el 31 salto de flanco, la mediana de cada flanco se recalculo sobre
+un conjunto distinto, y la ventana entera se movio. El auditor corrio
+`--modo blind` DESPUES y le salio una muestra distinta (13, 19, 10, 29, 15,
+35, 31, 32) de la commiteada (13, 19, 10, 31, 15, 36, 35, 32): NO SE
+REPRODUCE. Una salida que no se puede re-correr no es evidencia auditable.
+
+`--puestos P1,P2,...`: SALTA POR COMPLETO el calculo de flancos y medianas.
+Usa EXACTAMENTE la lista de `puesto_tramo` dada, EN ESE ORDEN, sin mirar
+`direccion_efectiva` de nadie: por eso la salida NO puede moverse aunque una
+`correccion_vNN` posterior (de esta vuelta o de cualquier otra) cambie el
+flanco de cualquier puesto, incluidos los de la propia lista. Sigue
+exigiendo que cada puesto exista en el tramo, no este en `EXCLUIDOS`, y case
+madre/hijo contra `DIFERENCIA_CONTRA_COLA.jsonl`; si no, ROJO igual que
+antes. Sin `--puestos`, el comportamiento es EL DE SIEMPRE (calculo por
+mediana sobre el estado efectivo de hoy): el modo congelado es opt-in, no
+reemplaza al de calculo.
+
+CASO POSITIVO (docs/loop/SALIDA_V104_TAREA4_1_MUESTRA_CONGELADA.txt):
+`--puestos 13,19,10,31,15,36,35,32 --modo reveal`, corrido HOY (con
+`correccion_v103` del 31 Y `correccion_v104` del 29 ya aplicadas al tramo),
+imprime la muestra EN ESE ORDEN: 13, 19, 10, 31, 15, 36, 35, 32, la
+commiteada en la vuelta 103, no la que el calculo por mediana daria hoy.
 """
 import argparse
 import io
@@ -65,7 +94,12 @@ def direccion_efectiva(f):
     return valor
 
 
-def muestra(fallos):
+def muestra(fallos, puestos_congelados=None):
+    """(TAREA 4.1 v104) Si PUESTOS_CONGELADOS no es None, se salta el calculo
+    de flancos/medianas por completo y se usa esa lista, EN ESE ORDEN: la
+    salida deja de depender de `direccion_efectiva` y por lo tanto de
+    cualquier `correccion_vNN` futura. Sin ella, el comportamiento es el
+    calculo por mediana de siempre."""
     tramo = cargar(TRAMO1)
     if len(tramo) != 40:
         fallos.append("%s trae %d filas, se esperaban 40" % (os.path.basename(TRAMO1), len(tramo)))
@@ -74,17 +108,38 @@ def muestra(fallos):
     if len(dc) != 183:
         fallos.append("DIFERENCIA_CONTRA_COLA.jsonl trae %d filas, se esperaban 183" % len(dc))
         return []
+    por_puesto = {f["puesto_tramo"]: f for f in tramo}
+
+    def fila_de(p):
+        f = por_puesto.get(p)
+        if f is None:
+            fallos.append("puesto_tramo %d no existe en %s" % (p, os.path.basename(TRAMO1)))
+            return None
+        if p in EXCLUIDOS:
+            fallos.append("puesto_tramo %d esta en EXCLUIDOS, no se puede pedir con --puestos" % p)
+            return None
+        d = dc[p - 1]
+        if d.get("madre") != f.get("madre_de_la_bolsa") or d.get("hijo") != f.get("hijo_de_la_bolsa"):
+            fallos.append("puesto_tramo %d no casa madre/hijo contra DIFERENCIA_CONTRA_COLA[%d]" % (p, p - 1))
+            return None
+        return (p, bool(direccion_efectiva(f)), d.get("titulo_ratio"), f)
+
+    if puestos_congelados is not None:
+        filas_congeladas = [fila_de(p) for p in puestos_congelados]
+        if fallos:
+            return []
+        return filas_congeladas
 
     filas = []
     for f in tramo:
         p = f["puesto_tramo"]
         if p in EXCLUIDOS:
             continue
-        d = dc[p - 1]
-        if d.get("madre") != f.get("madre_de_la_bolsa") or d.get("hijo") != f.get("hijo_de_la_bolsa"):
-            fallos.append("puesto_tramo %d no casa madre/hijo contra DIFERENCIA_CONTRA_COLA[%d]" % (p, p - 1))
-            continue
-        filas.append((p, bool(direccion_efectiva(f)), d.get("titulo_ratio"), f))
+        fila = fila_de(p)
+        if fila is not None:
+            filas.append(fila)
+    if fallos:
+        return []
 
     def centro4(lst):
         ratios = sorted(r[2] for r in lst)
@@ -108,11 +163,24 @@ def cargar_nodo(node_id, fallos):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--modo", choices=["blind", "reveal"], required=True)
+    ap.add_argument("--puestos", default=None,
+                    help="(TAREA 4.1 v104) lista separada por comas de puesto_tramo, EN ESE ORDEN. "
+                         "Si se da, la muestra queda CONGELADA a esa lista y no se recalcula por "
+                         "mediana ni depende de direccion_efectiva: re-correr con la misma lista "
+                         "da SIEMPRE la misma salida, pase lo que pase con correcciones futuras.")
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
 
+    puestos_congelados = None
+    if a.puestos is not None:
+        try:
+            puestos_congelados = [int(x.strip()) for x in a.puestos.split(",") if x.strip()]
+        except ValueError:
+            print("ROJO, --puestos no es una lista de enteros separados por comas: %r" % a.puestos)
+            return 1
+
     fallos = []
-    filas = muestra(fallos)
+    filas = muestra(fallos, puestos_congelados)
     if fallos:
         print("ROJO, %d cosa(s) no cuadran y NO SE IMPRIME NADA:" % len(fallos))
         for x in fallos:
@@ -121,8 +189,12 @@ def main():
 
     orden = [p for p, _, _, _ in filas]
     print("=" * 100)
-    print("MUESTRA POR EL CENTRO (8 puestos, excluidos %s): %s"
-          % (", ".join(str(x) for x in sorted(EXCLUIDOS)), ", ".join(str(p) for p in orden)))
+    if puestos_congelados is not None:
+        print("MUESTRA CONGELADA (--puestos, %d puestos, sin calculo de flancos): %s"
+              % (len(orden), ", ".join(str(p) for p in orden)))
+    else:
+        print("MUESTRA POR EL CENTRO (8 puestos, excluidos %s): %s"
+              % (", ".join(str(x) for x in sorted(EXCLUIDOS)), ", ".join(str(p) for p in orden)))
     print("=" * 100)
 
     if a.modo == "blind":
