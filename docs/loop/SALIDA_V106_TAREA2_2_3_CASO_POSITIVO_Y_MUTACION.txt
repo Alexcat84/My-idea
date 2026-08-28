@@ -25,3 +25,5 @@ CASO ROJO POR MUTACION: SALIDA_V105_MARCADOR_CIERRE.txt con A 551 -> A 999 (muta
 | marcador del cribado `A` / `B` / `C` / `D`, `n` | 551 / 72 / 5 / 2.760, n 3.388 | **999 / 72 / 5 / 2.760, n 3.388** |
 
 RESTAURADO: git diff --stat vacio confirma que el fichero real vuelve identico
+
+VERDE GENERAL: caso positivo (V105, A551/B72/C5/D2760 en los dos lados) y caso rojo por mutacion (A551 mutado a A999, la celda tallada cambia a 999) dan el resultado esperado.

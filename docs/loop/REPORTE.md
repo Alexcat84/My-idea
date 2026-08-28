@@ -1,79 +1,38 @@
-# REPORTE VUELTA 105 (MODO AUSTERO, tope 80 lineas)
+# REPORTE VUELTA 106 (MODO AUSTERO, tope 80 lineas)
 
-Apertura sellada `1b76e800` (`docs/loop/SALIDA_V105_HEAD_APERTURA.txt`, ANTES
-de la 1.a operacion, VERDE contra `verificar_apertura_sellada.py --vuelta 105`,
-`docs/loop/SALIDA_V105_APERTURA_SELLADA_VERDE.txt`, 10 ficheros nacidos en el
-primer commit, hijo directo del acta `9cf7a06a`).
+Apertura sellada `fc504151` (`docs/loop/SALIDA_V106_HEAD_APERTURA.txt`, ANTES de la 1.a operacion). PRE-TAREA hallada al sellar: `verificar_apertura_sellada.py --vuelta 106` daba ROJO porque el acta de la vuelta 105 (`fc504151`) titula su commit distinto del patron literal vigente desde la vuelta 92 ("ACTA DE LA VUELTA N DEL AUDITOR"); las dos funciones que leen ese patron (`verificar_apertura_sellada.py`, `tallar_cabecera_reporte.py`) ahora aceptan las dos formas, probado por mutacion (VERDE en 106, ROJO sin cambio en el caso real 100, VERDE sin cambio en 101). Guarda VERDE EXIT 0 (`docs/loop/SALIDA_V106_APERTURA_SELLADA_VERDE.txt`).
 
-**CABECERA, cada celda con su fichero** (rama `pasada-unica`, apertura
-`1b76e800`, HEAD `ba261321`): censo 3.853/3.188/665, Gate 0 OK,
-auto-aristas 0, alcanzabilidad 100,0% (3188/3188, 85 semillas), aristas
-9.190/9.169/18.359/9.813, motor 25/25, web 80(80)/1.030+3 skipped, tsc EXIT
-0, desfase 1 fila (`ganar_comprension_del_cliente ->
-dia_en_la_vida_del_cliente`), marcador legado A 551/B 72/C 5/D 2.760: LOS
-NUEVE IGUALES en apertura y cierre (`docs/loop/SALIDA_V105_<KIND>_APERTURA.
-txt` / `_CIERRE.txt`). sha256 identico en apertura, cierre y HEAD.
-`git diff --stat HEAD -- dataset/ web/ engine/` VACIO.
-DISCREPANCIA DECLARADA: `tallar_cabecera_reporte.py --fase04` da ROJO sobre
-el marcador (`docs/loop/SALIDA_V105_CABECERA_TALLADA.txt`): su regex espera
-`'A': N` y `recomputar_marcador.py` (vigente desde la vuelta 53) imprime
-`A 551 16.3`. La vuelta 103 no producia fichero de marcador y nunca choco
-con esto. PENDIENTE DE DOCTRINA, no la decido yo.
+**CABECERA, tallada con `tallar_cabecera_reporte.py --fase04 --vuelta 106` (VERDE EXIT 0, `docs/loop/SALIDA_V106_CABECERA_TALLADA.txt`), pegada entera:**
 
-**TAREA 1 (bloqueante).** El agujero de la oracion:
-`tallar_veredictos_reporte.py` ensancha de la oracion a la SIGUIENTE SOLO
-cuando esa oracion no trae palabra de veredicto propia
-(`docs/loop/SALIDA_V105_TAREA1_1_MUT_C_ANTES_DESPUES.txt`). Mutacion C (cita
-en la oracion siguiente) pasa de VERDE EXIT 0 a ROJO EXIT 1; A y B (misma
-oracion) siguen ROJO; el griton del reporte 102 sigue VERDE EXIT 0,
-cobertura sin cambio (3/17; 103: 1/4; 104: 2/6,
-`..._TAREA1_5_COBERTURA_*.txt`).
+| | apertura | cierre |
+|---|---:|---:|
+| censo | 3.853/3.188/665 | **3.853/3.188/665** |
+| Gate 0 | OK (auto-aristas 0, dup 0, diverg 0) | **OK (auto-aristas 0, dup 0, diverg 0)** |
+| aristas | 9.190/9.169/18.359/9.813 | **9.190/9.169/18.359/9.813** |
+| motor | 25/25 | **25/25** |
+| web | 80(80)/1.030+3 skipped | **80(80)/1.030+3 skipped** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| marcador | A551/B72/C5/D2760, n 3.388 | **A551/B72/C5/D2760, n 3.388** |
+| aristas movidas | no aplica | **+0/+0/+0/+0** |
+| desfase calibrado | 1 fila (`ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`) | **1 fila (idem)** |
+| identidad | rama `pasada-unica`, acta `fc504151` (asunto real leido de git log: "ACTA DEL AUDITOR, VUELTA 105, mas el encargo de la 106..."), arboles `dataset/` coinciden | **HEAD de cierre `d2aa753c`, leido de `SALIDA_V106_HEAD_CIERRE.txt`** |
 
-**TAREA 2.** Retirada de la bendicion en `docs/plan/04_ENLACES.md` linea
-427: "41 de 48 dan OBJETO y se sostienen" pierde el calificativo "sin
-re-lectura" que el instrumento si trae; los 41 quedan SIN ACLARAR hasta la
-TAREA 4. Cifra 79/104 sin tocar por esto.
+sha256 identico en apertura, cierre y HEAD. `git diff --stat -- dataset/ web/lib/assets/` VACIO. Nueve mediciones iguales en apertura y cierre.
 
-**TAREA 3, DISCUTIBLE.** Relectura conjunta de los pares 20
-(`waterfall_vs_agile_development` -> `modelo_customer_development`) y 93
-(`estandares_voluntarios` -> `definiciones_operacionales_de_calidad`), caso
-Y contra-caso del auditor examinados. En los dos, primer brazo del 9.6.2
-falla (paso 20: coordinacion, no ejecucion del modelo; paso 93: estandar de
-industria contra acuerdo bilateral) y los contra-casos NO ganaron. Los dos
-SE MUEVEN, `correccion_v105`.
+**TAREA 2 (bloqueante).** `lado_fase04()` leia el marcador legado con el formato viejo tipo diccionario; los cinco regex pasan al formato vigente desde la vuelta 53 (el mismo que ya usaba `lado()`), y `n` se lee de la misma salida de marcador. Caso positivo (V105, A551/B72/C5/D2760) y caso rojo por mutacion (A551 mutado a A999, la celda cambia): VERDE GENERAL, `docs/loop/SALIDA_V106_TAREA2_2_3_CASO_POSITIVO_Y_MUTACION.txt`. La celda de HEAD deja de repetir la de apertura: `leer_head_cierre()` remedia la caida 1.1 del acta 105 (talla la V105 en `275cb46c`, no `ba261321`).
 
-**TAREA 4.** (4.1/4.2) Guarda del paso mal casado mas censo: 2 puestos en
-los cuatro tramos (46, 147). (4.3) Re-barrido de los 41 con pregunta de tres
-vias (`docs/loop/SALIDA_V105_TAREA4_3_RE_BARRIDO.txt`): el 46 salta por la
-guarda; de 40, 33 OBJETO, 7 SATELITE (20, 21, 38, 66, 87, 91, 93), 0
-NO_OBJETO. (4.4, DISCUTIBLE) Lectura entera a ciegas de los 5 SATELITE
-restantes (`docs/loop/SALIDA_V105_TAREA4_4_LECTURA_ENTERA.md`): 21, 38, 66
-SE MUEVEN (el hijo no desarrolla el acto del verbo, solo el tema del
-complemento; entregables sin relacion); 87, 91 SOSTIENEN (evaluar/establecer
-CON el complemento exige desplegarlo, entregables con solape directo).
+**TAREA 3 (bloqueante).** El ensanche a oraciones siguientes pasa de un solo paso a una CADENA: avanza mientras ninguna oracion traiga veredicto propio, para en la primera que lo traiga. Mutacion E (cita dos oraciones despues, con una neutra de por medio) ahora da ROJO EXIT 1, antes daba EXIT 0 sin hallazgo, `docs/loop/SALIDA_V106_TAREA3_2_MUT_E_ANTES_DESPUES.txt`. Las mutaciones A, B y F, la mutacion D y el reporte 102 (el griton) no cambian de resultado: VERDE GENERAL, `docs/loop/SALIDA_V106_TAREA3_3_LAS_CINCO_QUE_NO_SE_MUEVEN.txt`. Cobertura republicada sin cambio sobre 102, 104 y 105 (3/17, 2/6, 3/8), `docs/loop/SALIDA_V106_TAREA3_5_COBERTURA_REPUBLICADA.txt`.
 
-**CIFRA FINAL `OP-E-03`: 74 / 109 (59,6% NO RESUELTA)**, de 79/104 (56,8%) en
-la apertura. Recomputo en los tres sitios aditivos (04_ENLACES.md,
-OPERACIONES.jsonl, tramos jsonl) tras cada correccion.
+**TAREA 4.** (4.1) Censo propio del lote de tramos 3+4 (`docs/loop/SALIDA_V106_TAREA4_1_CENSO.txt`): **28 RESUELTA, 27 sin correccion ni relectura, no 26**; DISCREPANCIA declarada contra el encargo (el 147 ya NO es RESUELTA desde `correccion_v99`; el 110 si pertenece y no estaba en la lista del encargo). (4.2) Guarda del paso mal casado en los cuatro tramos: 2 puestos (46, 147), sin cifra viva que tocar. (4.3) Pregunta de tres vias sobre los 27 (`docs/loop/SALIDA_V106_TAREA4_3_TRES_VIAS.txt`): 24 OBJETO, 3 SATELITE (123, 145, 154), 0 NO_OBJETO. (4.4, DISCUTIBLE) Lectura entera a ciegas de los 3 SATELITE (`docs/loop/SALIDA_V106_TAREA4_4_LECTURA_ENTERA.md`): **123 SOSTIENE** (entregables confirman, patron del 2.215); **145 SE MUEVE** (el paso propio del hijo tensiona con la tesis de la madre); **154 SOSTIENE** (el paso casado por si solo contiene entero al hijo). `correccion_v106` en el 145. (4.5) **CIERRE DE LA BOLSA: NO SON TODAS.** Faltan 2, ambos en tramo1 (puestos 3 y 16), fuera del alcance de este encargo.
 
-**TAREA 5.** Registros del acta 104 en `PENDIENTES.md`, 7 subapartados (5.1
-a 5.7), composicion tallada 1 nivel2/7 nivel3, cotejo limpio
-(`docs/loop/SALIDA_V105_TAREA5_COMPOSICION.txt`).
+**CIFRA FINAL `OP-E-03`: 73 / 110 (60,1% NO RESUELTA)**, de 74/109 (59,6%) en la apertura. Recomputo en los tres sitios aditivos tras la correccion.
 
-**DISCUTIBLES MARCADOS, para la relectura ciega del auditor:** las CINCO
-direcciones de juicio de esta vuelta, TODAS: 20, 93 (TAREA 3) y 21, 38, 66
-(TAREA 4.4, movidas), mas 87 y 91 (TAREA 4.4, sostenidas contra su propia
-etiqueta SATELITE). Ninguna es procedimental.
+**TAREA 1.** Registros del acta 105 en `PENDIENTES.md`, 7 subapartados (1.1 a 1.7), composicion tallada 1 nivel2/7 nivel3, cotejo limpio (`docs/loop/SALIDA_V106_TAREA1_COMPOSICION.txt`).
 
-**PENDIENTE DE DOCTRINA:** el tallador de cabecera contra el formato nuevo
-del marcador legado (arriba).
+**DISCUTIBLES MARCADOS, para la relectura ciega del auditor:** las DOS direcciones de juicio de esta vuelta: **145** (SE MUEVE, tension con la tesis de la madre) y **154** (SOSTIENE, entregable agregado de la madre distinto del entregable del paso casado). Ninguna otra.
 
-Guardas del cierre, corridas tras la ultima edicion:
-`tallar_veredictos_reporte.py` sobre este mismo reporte
-(`docs/loop/SALIDA_V105_GUARDAS_CIERRE.txt`); `tallar_nombre_de_operacion.py
-OP-E-03` EXIT 0 (`docs/loop/SALIDA_V105_TALLAR_NOMBRE_OP.txt`);
-`verificar_apertura_sellada.py --vuelta 105` VERDE EXIT 0 (arriba). Tres de
-tres VERDE.
+**PENDIENTE, no de doctrina, de cobertura:** los puestos 3 y 16 (tramo1), RESUELTA y nunca releidos por ningun barrido, quedan fuera del alcance de esta vuelta (el encargo pedia solo tramos 3 y 4); van a la siguiente vuelta que cierre tramo1, registrados en `04_ENLACES.md` y `PENDIENTES.md`.
 
-`wc -l docs/loop/REPORTE.md` AL CIERRE, tras esta misma edicion, en
-`docs/loop/SALIDA_V105_WCL_CIERRE.txt`.
+Guardas del cierre, corridas tras la ultima edicion: `tallar_veredictos_reporte.py` sobre este mismo reporte (`docs/loop/SALIDA_V106_GUARDAS_CIERRE.txt`); `tallar_nombre_de_operacion.py OP-E-03` EXIT 0 (`docs/loop/SALIDA_V106_TALLAR_NOMBRE_OP.txt`); `verificar_apertura_sellada.py --vuelta 106` VERDE EXIT 0 (arriba). Tres de tres VERDE.
+
+`wc -l docs/loop/REPORTE.md` AL CIERRE, tras esta misma edicion, en `docs/loop/SALIDA_V106_WCL_CIERRE.txt`.
