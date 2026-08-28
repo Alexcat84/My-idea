@@ -1315,3 +1315,40 @@ conjuntas, `OP-E-07.verificacion`):**
 > la vuelta 94, el 1281 y el 1992) -> 84 con direccion -> 82 ESCRITA + 2
 > YA_ESTABA (1388, 1946) + 0 ESCALERA_ROTA.** Cifra vigente desde la vuelta
 > 94.
+
+## EL ESTADO DE LA FASE 04, REGISTRADO (VUELTA 102, TAREA 4, adjudicacion del auditor, acta de la vuelta 101, secciones 5.1 a 5.3)
+
+**LA FASE 04 QUEDA EN 1 HECHA (`OP-E-02`), 2 EJECUTABLES (`OP-E-01`,
+`OP-E-03`) Y 7 BLOQUEADAS (`OP-M-03-ENLACES`, `OP-E-04`, `OP-E-05`,
+`OP-M-01-ESLABONES`, `OP-M-01-SEXTO`, `OP-E-06`, `OP-E-07`).**
+
+**LA ADJUDICACION QUE LO SOSTIENE, citada y no repetida:** el auditor
+verifico, en la vuelta 101, las SEIS operaciones de codigo y saneo de la
+fase 0 (`OP-C-01`, `OP-C-02`, `OP-C-03`, `OP-C-04`, `OP-S-06`, `OP-S-07`)
+contra el CODIGO Y EL DATO de esa vuelta, linea por linea, y no contra el
+commit ni contra el campo `estado`: **CORREN O ESTAN APLICADAS HOY**
+(`ACTA_AUDITOR.md` lineas 36396 a 36407). Esa medicion cubre, por extension
+declarada y no por regla nueva, `AUDITOR.md` preambulo (*"el estado de
+verdad es EL REPO, no tu memoria"*) mas el acta 100, seccion 4.2 (*"una
+dependencia con registro de cierre escrito NO bloquea aunque su campo diga
+`LISTA`"*). Con esas seis fuera del camino, `OP-E-01` y `OP-E-03` quedan
+**EJECUTABLES**, no `BLOQUEADAS`.
+
+**LAS SIETE BLOQUEADAS**, nombradas con el tallador (no tecleadas):
+`OP-M-01` y `OP-M-03` son **DOS mesas de la fase 06**, `OP-M-01-FUSION` y
+`OP-M-03-III` son **DOS fusiones enrutadas a la fase 06** por la remision
+del 26 ago 2026 (`docs/plan/03_FUSIONES.md:9246`), NUNCA "cuatro mesas"
+(caida de reporte de la vuelta 101, seccion 3.2 del acta; remedio:
+`scripts/loop/tallar_nombre_de_operacion.py`,
+`docs/loop/SALIDA_V102_TAREA1_2_NOMBRES_FASE04.txt`).
+
+**EL LIMITE DE ESTE REGISTRO, explicito:** `estado` de `OP-E-01` y `OP-E-03`
+**NO SE TOCA** (sigue sin voto en la aritmetica de dependencias, acta 100
+4.2, doctrina vigente). Que `OP-E-03` pase a EJECUTABLE **no destapa trabajo
+de grafo**: su propia nota dice *"CERO ARISTAS ESCRITAS O RETIRADAS EN TODA
+LA OPERACION"*, y su juicio (183 de 183) ya esta completo. No se escribe ni
+retira ninguna arista, no se abre la fase 05 ni la 06, no se mueve ninguna
+operacion de fase. Registro escrito en `docs/plan/OPERACIONES.jsonl` (nota
+de `OP-E-01` y `OP-E-03`, aditivo, medido con `difflib`,
+`docs/loop/SALIDA_V102_TAREA4_REGISTRO_OPERACIONES.txt`) y en
+`docs/PENDIENTES.md`.
