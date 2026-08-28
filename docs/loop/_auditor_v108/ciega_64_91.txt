@@ -1,0 +1,45 @@
+====================================================================================================
+PUESTO 64  (dominio quality, paso_casado 6)
+====================================================================================================
+  MADRE: medicion_calidad
+    titulo: Medición de la Calidad (Paso 3)
+    paso 1: Identifica métricas de calidad para cada área de tu negocio, como errores, reprocesos o retrasos
+    paso 2: Revisa las métricas que ya existan y crea nuevas donde falten, incluyendo áreas administrativas
+    paso 3: Involucra a las personas responsables de cada área en la definición de sus propios indicadores
+    paso 4: Registra el estado actual como línea base documentada
+    paso 5: Publica los resultados en gráficos visibles para toda la organización, semanal o mensualmente
+    paso 6: Clasificar los defectos por gravedad, causa y responsabilidad  <<< PASO CASADO
+    paso 7: Establecer metas de mejora visibles junto a los gráficos
+    paso 8: Asegurar que el ingeniero de calidad revise diariamente los defectos más frecuentes
+    entregable: Sistema de medición de calidad documentado por área, con línea base registrada y visible, listo para calcular el costo de la calidad.
+
+  HIJO: clasificacion_seriedad_defectos
+    titulo: Clasificación de Seriedad de Defectos (Características y Defectos por Gravedad)
+    paso 1: Elabora una lista de características de calidad a partir de tus especificaciones
+    paso 2: Elabora una lista aparte de defectos o síntomas de no conformidad
+    paso 3: Define categorías de seriedad (crítico, mayor, menor) con quienes te ayuden en distintas áreas
+    paso 4: Aplica la clasificación para reducir lo que necesitas verificar y el tiempo de inspección
+    paso 5: Valida con casos piloto que muestren el beneficio a quienes se resistan al cambio
+    entregable: Tabla de clasificación de seriedad de características y defectos aplicada a un producto o proceso específico
+
+====================================================================================================
+PUESTO 91  (dominio core, paso_casado 2)
+====================================================================================================
+  MADRE: gestion_de_portafolio_gates_go_kill
+    titulo: Gestión de Portafolio y Decisiones Go/Kill
+    paso 1: Diseñar un proceso de embudo (funnel) que vaya descartando proyectos débiles progresivamente
+    paso 2: Establecer gates o puntos de decisión formales con criterios visibles de Go/Kill  <<< PASO CASADO
+    paso 3: Evaluar cada proyecto con los seis criterios: estratégico, ventaja competitiva, atractivo de mercado, apalancamiento, factibilidad técnica, riesgo/retorno
+    paso 4: Tomar decisiones firmes de matar proyectos de bajo valor en lugar de reducirles recursos gradualmente
+    paso 5: Revisar el balance y mezcla de proyectos del portafolio completo, no solo proyecto por proyecto
+    entregable: Un sistema de portafolio con gates definidos, criterios de evaluación documentados y decisiones explícitas de continuidad o cancelación de proyectos
+
+  HIJO: tipos_criterios_gate
+    titulo: Tipos de Criterios de Decisión en Gates (Must-meet, Go/Kill, Should-meet)
+    paso 1: Definir una lista de preguntas must-meet tipo checklist para las primeras etapas (eliminatorias).
+    paso 2: Definir umbrales financieros mínimos (NPV, IRR, Payback) para criterios Go/Kill en etapas avanzadas.
+    paso 3: Usar un scorecard para las preguntas should-meet que evalúan atractivo relativo del proyecto.
+    paso 4: Mantener los mismos factores principales del scorecard consistentes entre gates, ajustando solo las subpreguntas según la etapa.
+    paso 5: Adaptar los criterios según el tipo de proyecto (mayor innovación, renovación, sales-force request, o desarrollo tecnológico).
+    entregable: Un set documentado de criterios must-meet, go/kill y should-meet (scorecard) por cada gate del proceso.
+
