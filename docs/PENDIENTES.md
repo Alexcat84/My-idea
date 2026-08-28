@@ -5051,3 +5051,96 @@ Aditividad verificada char a caracter: `docs/plan/OPERACIONES.jsonl` tiene
 UNA sola fila distinta (`OP-E-03`), su `nota` vieja es prefijo exacto de la
 nueva y ningun otro campo cambio; `docs/plan/04_ENLACES.md` da **26
 anadidas, 0 borradas** por `git diff --numstat`.
+
+## VUELTA 100, TAREA 2: LOS REGISTROS DEL ACTA 99 (acta de la vuelta 99, `ACTA_AUDITOR.md` lineas 35487 a 35826, leidas hoy)
+
+**Las lineas de esta seccion no estan tecleadas.** Salen de
+`grep -n '^\*\*4\.[0-9]* ' docs/loop/ACTA_AUDITOR.md`, filtradas a la vuelta 99
+(`>= 35487`), corrido en esta vuelta, salida entera en
+`docs/loop/SALIDA_V100_TAREA2_LINEAS_ACTA99.txt` (8 lineas, 4.1 a 4.8). El
+total del acta (**35.826** lineas) sale de `wc -l docs/loop/ACTA_AUDITOR.md`
+corrido hoy (`docs/loop/SALIDA_V100_TAREA2_WCL_ACTA.txt`).
+
+### (2.1) LAS ADJUDICACIONES QUE CIERRAN COSAS, cada una por su numero y con su linea leida hoy
+
+| adjudicacion | linea (medida hoy) | que adjudica |
+|---|---:|---|
+| 4.1 | 35637 | **147, 152 y el trio iman 156/157/158: CONFIRMADOS LOS CINCO.** El 147 releido desde los pasos crudos llega al mismo sitio: designar facilitador, fijar criterios de validacion y ejecutar el estudio no caben dentro de "decidir el tipo de participantes". La relectura conjunta del 147 (encargo v99) queda **CERRADA a favor del auditor**. El 152 falla el 9.6.2 por EXCESO. Del trio, el 157 se verifico contra el paso 3 de la madre (el flanco dificil) y `metricas_calidad` nunca nombra proxy ni intangible: **NO RESUELTA se sostiene**. El 158 cubre la mitad de un paso compuesto sin desbordarlo, y el propio 9.6.2 trae el ejemplar 2.338 (hijo de 6 pasos para los pasos 1 y 4 de su madre): **el "UN paso" es RECONOCIMIENTO, no TECHO** |
+| 4.7 | 35726 | **discutible 5, "ejecutable hoy": ADJUDICADO.** Cierre transitivo corrido (`_auditor_v99_cierre_transitivo_fase04.txt`): `OP-E-07` arrastra ONCE bloqueantes en cuatro fases. La unica operacion de la fase 04 con CERO bloqueantes transitivos es `OP-E-01`. **La cuenta buena de la fase 04 es 1 HECHA, 1 EJECUTABLE (`OP-E-01`), 8 BLOQUEADAS**; el reporte de la vuelta 99 comprimio el rotulo ("sin dependencia viva de OTRA fase" es la definicion debil que el propio instrumento ya usaba) |
+
+### (2.2) LA FIGURA REGISTRADA Y SIN ADJUDICAR, del 156
+
+`formalizar_un_proceso_ad_hoc` **repite su propio bloque dentro del nodo**
+(acta 99, dentro de 4.1, linea 35652): sus pasos 6, 8 y 9 dicen otra vez lo
+que dicen el 3, el 4 y el 5. El hijo cabe en el paso 4 **y** en el paso 8,
+que son el mismo paso escrito dos veces. **NO CAMBIA EL VEREDICTO y NO SE
+ADJUDICA**: es material de la deriva de contenido ya anotada para Alexis
+(acta 92, 4.4).
+
+### (2.3) LAS TRES CAIDAS DEL ACTA 99, nombradas como tales, sin borrar el texto viejo
+
+**CAIDA 1 (acta 99, 4.4, linea 35701): CIFRA PUBLICADA, EL CIERRE DE `OP-E-03`
+IGNORA LA CORRECCION DE SU PROPIA VUELTA.** Vive en `docs/plan/04_ENLACES.md`
+412 y 413, `docs/plan/OPERACIONES.jsonl` 45, `docs/PENDIENTES.md` 5042 y 5043
+(este mismo fichero, cifras vigentes hasta la TAREA 4 de esta vuelta), y
+`docs/loop/REPORTE.md` 37. Causa raiz de codigo, no de mano: la linea 124 de
+`scripts/loop/vuelta99_tarea3_addendum_cierre_opE03.py` cuenta el campo
+`direccion_leida` crudo y es ciega a `correccion_v99`. **RACHA DE CLASE O
+CIFRA PUBLICADA: DE CERO A UNO.** Remedio: TAREA 1 de esta vuelta,
+`scripts/loop/contar_cierre_efectivo.py`. LO QUE NO SE COBRA (acta 99, 4.4):
+el ejecutor hizo la correccion del 147, la recomputo bien en su tramo y la
+declaro sin borrar una letra; fallo la arquitectura de la guarda, no la
+honestidad.
+
+**CAIDA 2 (acta 99, 4.5, linea 35710): INCUMPLIMIENTO DE ENCARGO,
+AUTODECLARADA. LA APERTURA NO SE SELLO ANTES DE LA PRIMERA OPERACION.**
+`git log --diff-filter=A -- docs/loop/SALIDA_V99_HEAD_APERTURA.txt` da
+`47d456e2`, el CUARTO commit de la vuelta 99, no el primero. El auditor
+verifico que el remedio se sostiene (`git diff --name-only de4cc0e2 HEAD`
+toca 44 rutas y ninguna cae en `dataset/`, `web/` ni `engine/`), pero la
+caida no se borra: que saliera verde es suerte del caso, no merito de la
+guarda.
+
+**CAIDA 3 (acta 99, 4.6, linea 35717): REPORTE, LA CUENTA DE LA FASE 04
+ENUMERA CINCO DONDE DICE SIETE.** El reporte 99 escribio "7 esperan otra
+fase: 4 a `OP-M-01`/`FUSION`, 1 a las siete `OP-D`", que enumera cinco. Los
+dos que faltan: `OP-E-03` (por `OP-U-02`, fase 03) y `OP-M-03-ENLACES` (por
+`OP-M-03-I/II/III`, fase 03). El total de 7 es correcto, la enumeracion no.
+**Vive en prosa, NO ACUMULA** (letra del 27 ago), pero dispara relectura al
+doble sobre toda enumeracion introducida por dos puntos.
+
+### (2.4) LA CAIDA DEL PROPIO AUDITOR, registrada con su nombre igual que las del ejecutor
+
+**CAIDA DE ENCARGO, DEL AUDITOR, la primera de ese nombre (acta 99, 4.8,
+linea 35738).** El auditor pidio la cuenta de "ejecutable hoy" sobre el
+campo `estado`, en un encargo que en su propio punto 4.2 sospechaba que ese
+campo estaba rancio. La pregunta estaba mal puesta: `docs/plan/02_DESTEJIDOS.md`
+4470 y 4662 declaran el cierre de la fase 02 con registro escrito pese a que
+su campo `estado` no lo dice distinto de la fase 04; la fase 03 esta CERRADA
+CON REMISION (`00_INDICE.md` 247); y la tabla del `00_INDICE` 143 a 155
+cuenta las 71 como LISTAS con 0 pendientes. **`LISTA` en este plan no
+significa "sin ejecutar": significa "con texto decidido"**, y la ejecucion
+vive en la pagina y en el commit (politica del backlog del 14 ago). Arrastra
+tambien el "tres ficheros de tramo" del mismo encargo de la vuelta 99, cuando
+la medicion decia CUATRO: **el ejecutor lo declaro bien y tenia razon**. El
+remedio va en la TAREA 6 de esta vuelta: medir contra la evidencia de las
+paginas, no contra el campo.
+
+### (2.5) LA RELECTURA AL DOBLE que estas caidas disparan, para esta vuelta
+
+(a) **Toda cifra agregada que resuma filas con correcciones declaradas**
+lleva pegado el comando de `scripts/loop/contar_cierre_efectivo.py` (TAREA
+1). (b) **Toda enumeracion introducida por dos puntos se cuenta antes de
+escribirla**: si dice siete, se enumeran siete o se escribe "cinco de los
+siete". Aplicado en esta misma vuelta: la TAREA 4 (cifra de cierre) y la
+TAREA 6 (fase 04) de este encargo.
+
+**Composicion del anadido de ESTA seccion en `PENDIENTES.md`**, tallada sobre
+`git diff HEAD -- docs/PENDIENTES.md` (`docs/loop/SALIDA_V100_TAREA2_DIFF_PENDIENTES.txt`)
+con el mismo patron de cabeceras `##`/`###` de la vuelta 99
+(`docs/loop/SALIDA_V100_TAREA2_COMPOSICION_PENDIENTES.txt`): **1 seccion de
+nivel 2, 5 subsecciones de nivel 3**. **Caso positivo previo**, el mismo
+patron corrido sobre `docs/loop/SALIDA_V99_TAREA1_DIFF_PENDIENTES.txt` (el
+anadido conocido de la vuelta 99) reproduce **exacto** 1 seccion de nivel 2 y
+4 de nivel 3, igual que el propio archivo de esa vuelta
+(`docs/loop/SALIDA_V100_TAREA2_CASO_POSITIVO.txt`).
