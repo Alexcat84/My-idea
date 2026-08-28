@@ -43,7 +43,7 @@ USO:
   python scripts/loop/verificar_cabecera_pegada_o_condensada.py --vuelta 106 --reporte docs/loop/_v107_tarea2_reporte106_mutado.md
 
 CASO POSITIVO Y CASO ROJO: ver docs/loop/SALIDA_V107_TAREA2_3_CASO_POSITIVO_V106.txt
-(CONDENSADA, 9 de 11) y docs/loop/SALIDA_V107_TAREA2_4_CASO_ROJO_MUTACION.txt
+(CONDENSADA, 8 de 10) y docs/loop/SALIDA_V107_TAREA2_4_CASO_ROJO_MUTACION.txt
 (cifra alterada, la guarda la senala).
 """
 import argparse
