@@ -1,0 +1,13 @@
+==============================================================================
+VUELTA 119, TAREA 3.1: TITULO DEL SUPERVIVIENTE DE OP-S-01
+==============================================================================
+nodo: certificado_de_origen_tratados_libre_comercio
+titulo_concepto LEIDO HOY  : 'Certificado de Origen y Tratados de Libre Comercio (NAFTA, Rules of Origin, RVC)'
+titulo_concepto ESPERADO (viejo, decision del 28 ago 2026): 'Certificado de Origen y Tratados de Libre Comercio (NAFTA, Rules of Origin, RVC)'
+
+CORRECCION DECLARADA (28 ago 2026, decision del fundador, salida B, texto exacto):
+  VIEJO -> 'Certificado de Origen y Tratados de Libre Comercio (NAFTA, Rules of Origin, RVC)'
+  NUEVO -> 'Certificado de Origen y Tratados de Libre Comercio (T-MEC/USMCA, Rules of Origin, RVC)'
+
+ESCRITO: dataset/nodos/certificado_de_origen_tratados_libre_comercio.json, campo titulo_concepto, ningun otro campo tocado.
+El texto viejo NO se borra del expediente: vive citado arriba en este sello y en docs/PENDIENTES.md / docs/plan/OPERACIONES.jsonl (correccion declarada, TAREA 3.1).
