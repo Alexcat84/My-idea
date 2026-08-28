@@ -1,0 +1,26 @@
+GUARDAS DEL CIERRE, VUELTA 109: OCHO INSTRUMENTOS Y QUINCE CASOS DE MUTACION.
+====================================================================================================
+A (_auditor_v104_mut_A.md, tallar_veredictos_reporte.py) -- ROJO EXIT 1 [CALZA]
+B (_auditor_v104_mut_B.md) -- ROJO EXIT 1 [CALZA]
+C (_auditor_v104_mut_C.md) -- ROJO EXIT 1 [CALZA]
+D (_auditor_v105_mut_D.md) -- VERDE EXIT 0 [CALZA]
+E (_auditor_v105_mut_E.md) -- ROJO EXIT 1 [CALZA]
+F (_auditor_v105_mut_F.md) -- ROJO EXIT 1 [CALZA]
+G (_auditor_v106_mut_G.md) -- ROJO EXIT 1 [CALZA]
+H (_auditor_v106_mut_H.md) -- VERDE EXIT 0 [CALZA]
+griton (REPORTE.md de f253842b, --commit) -- VERDE EXIT 0 [CALZA]
+I (_auditor_v107_mut/mI.md, verificar_cabecera_pegada_o_condensada.py --vuelta 107) -- ROJO EXIT 1, promesa falsa (CONDENSADA 3 de 10, dice pegada entera) [CALZA]
+J (_auditor_v107_mut/mJ.md, tallar_cabecera_reporte.py --fase04 --vuelta 107 --comparar) -- ROJO EXIT 1, DISTINTA marcador D 2.761 vs 2.760, fila apertura [CALZA]
+K (_auditor_v107_mut/mK.md, mismo tallador) -- ROJO EXIT 1, AUSENTE fila motor entre 4 ausentes [CALZA]
+L (_auditor_v107_mut/mL.md, mismo tallador) -- ROJO EXIT 1 con 0 DISTINTA / 3 AUSENTE [CALZA con el entendimiento corregido de la vuelta 108]
+M (_auditor_v108_mut/mM.md, verificar_cabecera_pegada_o_condensada.py --vuelta 108) -- ROJO EXIT 1 con CUATRO celdas (filas 4 y 6, apertura y cierre, motor/tsc intercambiados) [CALZA]
+TAREA2.4 (docs/loop/_v109_mut/TRAMO3_SIN_DECLARACION_123.md, verificar_vuelco_de_veredicto.py) -- 123 DECLARADO->MUDO al borrar su declaracion, control real sigue DECLARADO [MUERDE, ver docs/loop/SALIDA_V109_TAREA2_4_CASO_ROJO_MUTACION.txt]
+
+13 mutaciones heredadas + M + la de la TAREA 2.4 = QUINCE. Las QUINCE calzan con la nomina fija del encargo.
+
+INSTRUMENTOS ADICIONALES (fuera de la tabla de mutacion):
+tallar_nombre_de_operacion.py OP-E-03 -- EXIT 0, 'UNA fase 04_ENLACES (OP-E-03)'
+verificar_cobertura_bolsa_tres_vias.py -- EXIT 0, 74 vivas / 74 con pregunta / 0 sin ella (antes de la TAREA 3 era 73/74; ya cerrada)
+contar_cierre_efectivo.py -- EXIT 0, 74/109 (59,6%), sin cambio
+verificar_apertura_sellada.py --vuelta 109 (re-corrida) -- VERDE EXIT 0, sin cambio
+verificar_vuelco_de_veredicto.py (TAREA 2, instrumento nuevo) -- VERDE EXIT 0 tras la correccion de las filas 87 y 91
