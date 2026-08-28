@@ -1,0 +1,16 @@
+docs/PENDIENTES.md                                 lineas 5782 -> 5929 | +147 insertadas / 0 borradas / 0 reemplazadas
+docs/plan/04_ENLACES.md                            lineas 1370 -> 1376 | +6 insertadas / 0 borradas / 0 reemplazadas
+docs/plan/OPERACIONES.jsonl                        lineas 71 -> 71 | +0 insertadas / 0 borradas / 1 reemplazadas
+docs/plan/OP_E_03_LECTURA_TRAMO3_V98.jsonl         lineas 50 -> 50 | +0 insertadas / 0 borradas / 1 reemplazadas
+docs/loop/CENSO_RELECTURAS_OP_E_03.jsonl           lineas 183 -> 183 | +0 insertadas / 0 borradas / 29 reemplazadas
+
+OPERACIONES.jsonl: 71 filas antes, 71 despues, mismo orden de id_op: True
+  fila OP-E-03 campos distintos: ['nota']
+    nota: 25951 -> 29461 caracteres | viejo es PREFIJO ESTRICTO del nuevo: True
+  estado, antes: {'LISTA': 70, 'HECHA': 1}  despues: {'LISTA': 70, 'HECHA': 1}
+  filas con estado cambiado: 0
+
+TRAMO3: 50 filas antes, 50 despues
+  puesto_tramo 145 (global 245) difiere en: ['correccion_v107']
+    claves ganadas: ['correccion_v107'] | claves perdidas: []
+    direccion_leida cruda: 'poder_a_traves_de_la_accion -> proposito_como_motor_energia' -> 'poder_a_traves_de_la_accion -> proposito_como_motor_energia'

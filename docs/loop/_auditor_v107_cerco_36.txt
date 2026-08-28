@@ -1,0 +1,76 @@
+RESUELTA vivas: 74 | CON via SATELITE preguntada (tres vias): 38 | SIN ella: 36
+las que le faltan: [1, 2, 4, 9, 14, 17, 18, 39, 42, 45, 46, 47, 48, 49, 53, 57, 58, 59, 61, 64, 73, 74, 75, 77, 78, 83, 84, 87, 88, 91, 92, 94, 97, 98, 99, 100]
+por tramo: {'tramo1': 8, 'tramo2': 28}
+
+  1 | segmentos_de_clientes_problema_necesidad p1: Sal del edificio (get out of the building) a observar como tus clientes viven el problema
+      HIJO get_out_of_the_building : Sal del edificio (Get Out of the Building)
+  2 | medicion_servicios p3: Implementar el programa 'Make Certain' para servicio y áreas administrativas
+      HIJO make_certain_programa : Programa Make Certain para Áreas Administrativas
+  4 | consejo_de_calidad_y_rol_del_director p3: Integra las metas de calidad en tus planes de negocio y de desempeño
+      HIJO planificacion_estrategica_despliegue_2 : Cómo integrar la calidad en tu plan de negocio
+  9 | dmadv_fase_verificacion p2: Haz un análisis de capacidad y revisa tus sistemas de medición
+      HIJO capacidad_de_proceso : Capacidad de Proceso
+ 14 | medicion_servicios p3: Implementar el programa 'Make Certain' para servicio y áreas administrativas
+      HIJO programa_make_certain : Programa Make Certain (para personal administrativo)
+ 17 | customer_discovery_overview p3: Muestrales tu producto minimo viable (MVP) y tu propuesta de valor para validar la solución
+      HIJO mvp_catalogo_tecnicas : Catálogo de MVPs (Producto Mínimo Viable)
+ 18 | dmaic_fase_measure p5: Determinar si el proceso está en control estadístico y medir su capacidad a corto plazo
+      HIJO capacidad_del_proceso : Capacidad del Proceso
+ 39 | modelos_gestion_seguridad p4: Incorporar análisis de condiciones latentes y defensas del sistema propio del modelo organizacional
+      HIJO fallas_activas_condiciones_latentes : Fallas Activas y Condiciones Latentes
+ 42 | cultura_justa_2 p2: Preguntar 'qué es responsable' en vez de 'quién es responsable' ante cada incidente
+      HIJO preguntar_que_no_quien : Preguntar 'qué pasó' en lugar de 'quién fue'
+ 45 | estrategia_de_innovacion_de_producto p3: Definir arenas estratégicas (mercados, tecnologías, sectores) donde enfocar los esfuerzos de innovación
+      HIJO strat_map_arenas_estrategicas : Strat-Map: Mapeo de Arenas Estratégicas
+ 46 | customer_discovery_get_out_of_building p1: Identifica tus hipótesis clave sobre el problema, el cliente y la solución
+      HIJO prueba_solucion_con_cliente : Prueba de la Solución con el Cliente
+ 47 | reporte_estado_miembro_equipo p3: Identificar las causas raíz de las variaciones en actividades y costos
+      HIJO variance_analysis : Análisis de Variaciones
+ 48 | concepto_proyecto_breakthrough p2: Clasificar el proyecto como parte de los 'vitales pocos' o 'útiles muchos'
+      HIJO proyectos_vitales_pocos : Priorización: Los Vitales Pocos vs los Útiles Muchos
+ 49 | terminologia_clave_breakthrough p2: Diferenciar síntomas de causas en cada problema detectado
+      HIJO analisis_sintomas : Análisis de Síntomas del Problema
+ 53 | control_calidad_operaciones_servicio p1: Identificar el proceso principal, su objetivo, y las necesidades del cliente
+      HIJO descubrir_necesidades_del_cliente : Descubrimiento de las Necesidades del Cliente
+ 57 | autocontrol_y_controlabilidad p1: Verificar que el proceso tenga capacidad real para cumplir las metas fijadas
+      HIJO capacidad_del_proceso : Capacidad del Proceso
+ 58 | qfd_matriz p2: Identifica a tus clientes internos y externos y descubre sus necesidades
+      HIJO identificar_clientes_externos_e_internos : Identificación de Clientes Externos e Internos
+ 59 | requisitos_gates_con_dientes p6: Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+      HIJO post_launch_review : Revisión Post-Lanzamiento
+ 61 | participacion_preferente p4: Recordar que los términos de la ronda semilla suelen convertirse en precedente para rondas futuras, por lo que vale la pena negociarlos bien desde el inicio.
+      HIJO seed_deals_riesgos_precedente : Riesgos de Precedente en Rondas Semilla
+ 64 | medicion_calidad p6: Clasificar los defectos por gravedad, causa y responsabilidad
+      HIJO clasificacion_seriedad_defectos : Clasificación de Seriedad de Defectos (Características y Defectos por Gravedad)
+ 73 | takt_time p5: Reducir tiempos de cambio (setup) para permitir lotes más pequeños
+      HIJO smed_setup_reduction : SMED – Reducción de Tiempos de Cambio (Setup)
+ 74 | ingenieria_calidad_proveedores p4: Desarrollar relaciones de largo plazo con proveedores que permitan conocer su cultura de calidad real
+      HIJO relaciones_largo_plazo_con_proveedores : Reducción de Proveedores y Relaciones de Largo Plazo
+ 75 | dia_cero_defectos_2 p6: Iniciar al día siguiente el programa de eliminación de causas de error
+      HIJO eliminacion_causas_error_4 : Eliminación de Causas de Error (Error Cause Removal - ECR)
+ 77 | desarrollo_expertos_capaces p4: Medir el impacto de la capacitación en el desempeño de los proyectos de mejora
+      HIJO evaluacion_desempeno_proyectos : Evaluación de Desempeño en Proyectos de Mejora
+ 78 | customer_discovery_phase2_problem_test p5: Capturar conocimiento competitivo y de mercado durante las entrevistas
+      HIJO captura_conocimiento_mercado : Captura de Conocimiento de Mercado
+ 83 | programa_mejora_calidad_14_pasos p3: Definir cómo vas a medir la calidad y el costo de la no calidad
+      HIJO costo_de_calidad_3 : Paso 4: Costo de la Calidad
+ 84 | liderazgo_ejecutivo_innovacion p1: Define y comunica tu visión y tu estrategia de innovación conectadas con hacia dónde va tu negocio.
+      HIJO estrategia_innovacion_producto : Estrategia de Innovación de Producto
+ 87 | emprendedor_como_puesto_de_trabajo p2: Evalúa ese trabajo con la contabilidad de innovación, no con las métricas tradicionales de un puesto operativo.
+      HIJO contabilidad_innovacion_pivote : Contabilidad de Innovación aplicada a Pivotes
+ 88 | genchi_gembutsu_salir_del_edificio p2: Salir físicamente a hablar con clientes potenciales reales, no solo encuestas remotas, lo que se llama get out of the building
+      HIJO get_out_of_the_building : Sal del edificio (Get Out of the Building)
+ 91 | gestion_de_portafolio_gates_go_kill p2: Establecer gates o puntos de decisión formales con criterios visibles de Go/Kill
+      HIJO tipos_criterios_gate : Tipos de Criterios de Decisión en Gates (Must-meet, Go/Kill, Should-meet)
+ 92 | etapa_build_business_case p1: Definir el mercado objetivo, posicionamiento y propuesta de valor del producto
+      HIJO posicionamiento_por_tipo_de_mercado : Posicionamiento según Tipo de Mercado
+ 94 | testear_circulo_cuadrado_rectangulo p3: Finalmente, validar que el modelo de negocio completo (socios, canales, ingresos, costos) es viable (rectángulo)
+      HIJO validar_modelo_financiero : Validar el Modelo Financiero
+ 97 | principios_alineacion_empresarial p3: Alinear estrategias, sistemas y metas de largo plazo con el propósito central
+      HIJO desarrollar_estrategias_largo_plazo : Desarrollar Estrategias o Metas de Largo Plazo
+ 98 | control_del_proceso_del_proveedor p3: Definir tareas especiales y buenas prácticas de manufactura requeridas
+      HIJO buenas_practicas_manufactura_cgmp : Buenas Prácticas de Manufactura Actuales (cGMP)
+ 99 | juran_rcca_metodo p2: Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+      HIJO prueba_teorias_causa_raiz : Prueba de Teorías para Identificar la Causa Raíz
+100 | desarrollar_metas_anuales p3: Filtra y prioriza las metas que entraran en tu plan de negocio
+      HIJO metas_negocio_calidad : Metas de Calidad en el Plan de Negocio
