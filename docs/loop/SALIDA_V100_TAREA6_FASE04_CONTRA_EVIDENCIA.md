@@ -41,6 +41,16 @@ leido hoy), BFS completo por operacion.
 
 **11 de 26 CON registro de cierre escrito; 15 SIN el.**
 
+> **CORRECCION DECLARADA (vuelta 101, acta de la vuelta 100, seccion "PRIMERA
+> CAIDA, DE REPORTE"): esta frase esta AL REVES contra su propia tabla.**
+> `awk` sobre esta misma tabla (filas 15 a 40, 26 en total) cuenta **15 filas
+> con "SI"** (`OP-D-01` a `OP-D-07`, `OP-F-01` a `OP-F-03`, `OP-U-01`,
+> `OP-U-02`, `OP-M-03-I`, `OP-M-03-II`, `OP-E-01`) y **11 filas con "NO"**
+> (`OP-C-01`, `OP-C-02`, `OP-C-03`, `OP-C-04`, `OP-S-06`, `OP-S-07`,
+> `OP-M-01`, `OP-M-01-FUSION`, `OP-M-03`, `OP-M-03-III`, `OP-E-06`). **LA
+> CIFRA CORRECTA: 15 de 26 CON registro de cierre escrito; 11 SIN el.**
+> Texto viejo intacto arriba, sin borrar.
+
 ## LAS 10 OPERACIONES DE LA FASE 04, CADA UNA CONTRA SUS DEPENDENCIAS TRANSITIVAS
 
 | operacion | deps transitivas (n) | todas con cierre escrito | bloqueantes reales (sin cierre escrito) |
@@ -85,6 +95,38 @@ bloqueantes de fase 02 y 01 que en realidad SI estan cerrados, y bajo la evidenc
 tiene UN SOLO bloqueante real, `OP-M-03`). Esta divergencia se declara aqui, sin
 resolverla y sin abrir ninguna fase nueva: que se hace con la fase 04 es decision
 del acta 100 o del fundador, por letra del propio encargo.
+
+> **CORRECCION DECLARADA (vuelta 101, acta de la vuelta 100, seccion "PRIMERA
+> CAIDA, DE REPORTE"): dos cifras mas de este mismo parrafo estan al reves,
+> por la misma causa que la de arriba (prosa que no se conto contra su
+> tabla/BFS).** Medido hoy contra `docs/plan/OPERACIONES.jsonl` (BFS
+> reproducido entero, `python -c` sobre las 26 dependencias): **las 26, sin
+> excepcion, tienen `estado = LISTA`**; `OP-E-02` esta en `HECHA` pero **NO
+> es una de las 26 dependencias transitivas** (es una de las 10 operaciones
+> de fase 04 y no depende de nadie), asi que la frase "25 tienen LISTA (solo
+> OP-E-02 en HECHA)" mezclaba las dos poblaciones. Y la cuenta de bloqueo
+> real es **11 de 26, no 15**: la lista de "las otras" son **QUINCE** ids
+> (no once, el propio parrafo se contradice: "quince nombres, once ids"
+> sobre la MISMA enumeracion de `OP-D-01` a `OP-D-07`, `OP-F-01` a `OP-F-03`,
+> `OP-U-01`, `OP-U-02`, `OP-M-03-I`, `OP-M-03-II`, `OP-E-01`, que son quince
+> ids). Texto viejo intacto arriba, sin borrar.
+>
+> **Y LA CAIDA DE PROCEDIMIENTO DEL AUDITOR SOBRE ESTA MISMA TAREA (acta de
+> la vuelta 100, seccion "MI PROPIA CAIDA... ADJUDIQUE... ACEPTANDO TU
+> CRITERIO SIN PROBARLO"): el criterio de esta tabla ("NO existe pagina con
+> registro" => bloqueante) tiene un FALSO NEGATIVO demostrado en `OP-C-04`.**
+> `docs/plan/FASE_0_CODIGO.md` (no `00_CODIGO.md`, que nunca existio) lineas
+> 109 a 122 ordena dos guardas en Gate 0 (auto-arista con resolucion, lista
+> blanca de claves); la corrida de Gate 0 de esta misma vuelta 101
+> (`docs/loop/SALIDA_V101_GATE0_CMD1_APERTURA.txt`) imprime las dos en
+> verde, y el registro de cierre de `OP-C-04` existe, solo que en OTRA sede:
+> `docs/loop/ACTA_AUDITOR.md:5056` (cabecera del acta de la vuelta 25, "la
+> fase 0 cerrada (`OP-S-07` y `OP-C-04`)"). El criterio de esta pagina solo
+> miraba `docs/plan/` y la nota propia, nunca las actas ni los commits.
+> **POR ESO LOS 11 BLOQUEANTES REALES DE ARRIBA SON UN TECHO, NO UNA
+> MEDICION CERRADA**: la TAREA 3 de la vuelta 101 mide las seis operaciones
+> de codigo contra las TRES sedes (pagina+jsonl, acta, commits) mas la vara
+> del codigo vivo, y esta correccion NO cambia esta tabla ni `estado`.
 
 ## LO QUE ESTA MEDICION NO HACE
 
