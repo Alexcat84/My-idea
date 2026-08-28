@@ -12,6 +12,7 @@ ES DE GUARDA CEGADA").
 USO:
   python scripts/loop/vuelta113_tarea2_mutacion_tsc.py
 """
+import argparse
 import os
 import sys
 
@@ -22,7 +23,27 @@ MUTACION_V = "EXIT=0\n"
 MUTACION_W = "web/lib/x.ts(3,5): error TS2304: Cannot find name 'foo'.\nEXIT=1\n"
 
 
+def solo(letra):
+    """--solo V o --solo W (vuelta 113, guardas del cierre): exit 0/1 por
+    separado, para que el arnes de vuelta113_guardas_cierre.py pueda contarlas
+    como dos casos distintos con su propio exit code esperado."""
+    celda_v = interpretar_tsc(MUTACION_V)
+    celda_w = interpretar_tsc(MUTACION_W)
+    if letra == "V":
+        ok = celda_v == "EXITCODE 0, cero lineas"
+    else:
+        ok = ("error TS2304" in celda_w) and (celda_w != celda_v)
+    print("MUTACION %s: %s" % (letra, celda_v if letra == "V" else celda_w))
+    return 0 if ok else 1
+
+
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--solo", choices=["V", "W"], default=None)
+    a = ap.parse_args()
+    if a.solo:
+        return solo(a.solo)
+
     celda_v = interpretar_tsc(MUTACION_V)
     celda_w = interpretar_tsc(MUTACION_W)
 
