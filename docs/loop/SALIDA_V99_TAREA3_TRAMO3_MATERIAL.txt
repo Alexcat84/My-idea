@@ -1,0 +1,1132 @@
+====================================================================================================
+OP-E-03, PRIMER TRAMO DE LECTURA DIRIGIDA (vuelta 96, TAREA 3)
+Bolsa DIFERENCIA_CONTRA_COLA.jsonl: 183 filas. Este tramo: filas 151 a 183 (33 pares).
+Cribado remedido y cerrado en 3388 de 3388. Pares distintos en la cola tras resolver: 2796.
+MARCA DE TODAS LAS FILAS: LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO.
+Ids RESUELTOS por el resolutor ANTES de cruzar nada (P.1). Ninguna fila esta ya en la cola.
+====================================================================================================
+
+####################################################################################################
+[151/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: conditions_precedent_financing
+  hijo:  entender_term_sheet
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 74.3 . contencion 0.5 . familia_paso CONSEGUIR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 3):
+    Negocia los términos de tu contrato como fundador ANTES de firmar el term sheet y de aceptar la exclusividad.
+
+  MADRE . conditions_precedent_financing
+    titulo: Condiciones previas para que el financiamiento sea firme (Conditions Precedent to Financing)
+    fuente: Venture Deals | fase: planificacion
+    entregable: Lista clara de condiciones previas revisadas, con la aprobación de los socios del fondo confirmada antes de aceptar exclusividad.
+    pasos_accionables (4), ENTEROS:
+      1. Identifica qué partes del term sheet son vinculantes desde que lo firmas (honorarios legales, exclusividad o no-shop, ley aplicable).
+      2. Pregunta directamente al inversor si el trato ya fue aprobado por los socios de su fondo.
+      3. Negocia los términos de tu contrato como fundador ANTES de firmar el term sheet y de aceptar la exclusividad.
+      4. Evita comprometerte a pagar los honorarios legales del inversor si el trato no se cierra.
+
+  HIJO . entender_term_sheet
+    titulo: El Arte del Term Sheet
+    fuente: Venture Deals | fase: planificacion
+    entregable: Checklist personal de términos de economía y control identificados antes de firmar cualquier term sheet
+    pasos_accionables (4), ENTEROS:
+      1. Antes de negociar, identificar qué cláusulas del term sheet afectan la economía (valoración, participación) y cuáles afectan el control (juntas, votos, protecciones)
+      2. Priorizar la negociación en estos dos ejes y no distraerse con cláusulas secundarias
+      3. Solicitar asesoría legal especializada en VC para revisar el documento completo
+      4. Identificar cláusulas que no afectan ni economía ni control (posibles tácticas de distracción).
+
+
+####################################################################################################
+[152/183] dominio quality . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: definiciones_operacionales_2
+  hijo:  muestreo_de_aceptacion
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 74.3 . contencion 0.5 . familia_paso DEFINIR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 2):
+    Establecer el criterio específico de aceptación o rechazo
+
+  MADRE . definiciones_operacionales_2
+    titulo: Definiciones Operacionales (Método, Prueba y Criterio)
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | fase: planificacion
+    entregable: Un documento de definición operacional con método de prueba y criterios claros de aceptación/rechazo
+    pasos_accionables (4), ENTEROS:
+      1. Definir claramente el método de prueba a utilizar
+      2. Establecer el criterio específico de aceptación o rechazo
+      3. Documentar la definición de forma comunicable para todo el personal involucrado
+      4. Verificar que múltiples inspectores apliquen el criterio de manera consistente
+
+  HIJO . muestreo_de_aceptacion
+    titulo: Muestreo de Aceptación
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: ejecucion
+    entregable: Plan de muestreo de aceptación documentado con n, c, y niveles de riesgo definidos
+    pasos_accionables (5), ENTEROS:
+      1. Determinar si el objetivo es evaluar el lote inmediato o el proceso productivo
+      2. Definir el tamaño de muestra (n) y el criterio de aceptación (c)
+      3. Establecer los niveles de riesgo aceptables (riesgo del productor α y del consumidor β)
+      4. Seleccionar o diseñar un plan de muestreo (por atributos o variables)
+      5. Aplicar el plan y documentar decisiones de aceptación/rechazo por lote
+
+
+####################################################################################################
+[153/183] dominio quality . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: dia_cero_defectos_3
+  hijo:  eliminacion_causas_error_4
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 81.6 . contencion 0.455 . familia_paso None . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 4):
+    Anunciar el inicio inmediato de la fase de eliminación de causas de error (ECR) al día siguiente del evento.
+
+  MADRE . dia_cero_defectos_3
+    titulo: Día de Cero Defectos (Evento Simbólico ZD)
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby | fase: ejecucion
+    entregable: Evento corporativo realizado con compromisos firmados por los empleados y lanzamiento oficial del programa ZD.
+    pasos_accionables (5), ENTEROS:
+      1. Organizar un evento que reúna a todos los empleados al mismo tiempo, con presencia de líderes significativos para ellos.
+      2. Incluir un componente de 'show business': música, discursos breves, premios, para hacer el evento memorable.
+      3. Permitir que los empleados firmen su compromiso (pledge) con sus supervisores y reciban un pin o distintivo.
+      4. Anunciar el inicio inmediato de la fase de eliminación de causas de error (ECR) al día siguiente del evento.
+      5. Reconocer públicamente al equipo organizador y a los participantes destacados.
+
+  HIJO . eliminacion_causas_error_4
+    titulo: Eliminación de Causas de Error (Error Cause Removal - ECR)
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby | fase: ejecucion
+    entregable: Sistema ECR funcionando: formulario, respuesta rápida, registro de causas reportadas y resueltas, y retroalimentación a quienes avisan.
+    pasos_accionables (6), ENTEROS:
+      1. Crea un canal simple, con un formulario, para que quien te ayuda reporte causas de error sin necesidad de proponer la solución, y ponlo en cada área de trabajo, a la vista de todos
+      2. Envía un agradecimiento personal e inmediato a quien te avisa de un problema
+      3. Clasifica y prioriza cada aviso y pásalo a quien pueda resolverlo
+      4. Consigue lo necesario y actúa rápido para eliminar la causa
+      5. Si decides no actuar, justifica la decisión y revísala con alguien de más experiencia o confianza antes de cerrarla
+      6. Confirma a cada persona la decisión tomada y considera reconocer periódicamente a quienes más avisan, por ejemplo con un sorteo semanal o un reconocimiento visible
+
+
+####################################################################################################
+[154/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: desarrollo_de_clientes_customer_development
+  hijo:  customer_development_agile_pairing
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.9 . contencion 0.5 . familia_paso None . familia_hijo CONSTRUIR
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 4):
+    Combinar el aprendizaje del cliente con ingeniería ágil para ajustar rápidamente el producto.
+
+  MADRE . desarrollo_de_clientes_customer_development
+    titulo: El Modelo de Desarrollo de Clientes (Customer Development)
+    fuente: The Startup Owner's Manual - Steve Blank | fase: validacion
+    entregable: Un ciclo de retroalimentación de clientes documentado que valide o invalide las hipótesis iniciales del modelo de negocio.
+    pasos_accionables (4), ENTEROS:
+      1. Convertir las hipótesis de negocio en preguntas específicas para el cliente.
+      2. Salir a entrevistar clientes potenciales antes de construir el producto completo.
+      3. Iterar el producto basándose en el feedback ('dos pasos adelante, uno atrás') en lugar de seguir un plan rígido.
+      4. Combinar el aprendizaje del cliente con ingeniería ágil para ajustar rápidamente el producto.
+
+  HIJO . customer_development_agile_pairing
+    titulo: Junta el aprendizaje del cliente con la construcción rápida del producto
+    fuente: The Startup Owner's Manual - Steve Blank | fase: ejecucion
+    entregable: Un proceso de construcción ágil funcionando en paralelo y conectado a lo que vas aprendiendo de los clientes, con ciclos cortos de iteración
+    pasos_accionables (5), ENTEROS:
+      1. Trabaja de forma ágil, con iteraciones cortas, desde el principio, y no en cascada con todo cerrado de antemano
+      2. Junta en un mismo ciclo de trabajo lo que aprendes hablando con clientes y lo que construyes
+      3. Saca el producto en pedazos pequeños para poder ver reacciones reales de clientes rápido
+      4. No cierres especificaciones rígidas que después no te dejen cambiar rápido
+      5. Diseña tu forma de construir alrededor de un producto mínimo viable o un conjunto mínimo de características
+
+
+####################################################################################################
+[155/183] dominio quality . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: transformacion_calidad_compromiso_alta_direccion_japon
+  hijo:  planificacion_calidad_crosby
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.8 . contencion 0.5 . familia_paso None . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 5):
+    Evita que la calidad quede como tarea exclusiva de un área aislada de tu negocio
+
+  MADRE . transformacion_calidad_compromiso_alta_direccion_japon
+    titulo: Tu compromiso con la calidad como motor de la transformación (Caso Japón)
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | fase: ideacion
+    entregable: Un plan de sesiones sostenidas, contigo y con quienes te ayudan, enfocado en entender y asumir la responsabilidad de la calidad en todo el negocio
+    pasos_accionables (5), ENTEROS:
+      1. Asegúrate de que tú, y no solo quien se encarga de calidad, entiendas y asumas tu responsabilidad sobre la calidad, y busca formación para ello
+      2. Conecta la mejora de calidad con el cliente, entendiéndolo como la parte más importante de tu proceso
+      3. Extiende el aprendizaje de métodos estadísticos no solo a quien diseña o produce, sino también a quienes supervisan y ejecutan el trabajo diario
+      4. Sostén tu compromiso con la calidad durante años, no como un evento aislado
+      5. Evita que la calidad quede como tarea exclusiva de un área aislada de tu negocio
+
+  HIJO . planificacion_calidad_crosby
+    titulo: Planificación de la Calidad en tu Negocio
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby | fase: planificacion
+    entregable: Un plan escrito de las actividades de calidad de tu negocio, con quién se encarga de cada una y qué línea de acción sigue
+    pasos_accionables (4), ENTEROS:
+      1. Anota todas las actividades de calidad que existen en tu negocio, incluidas las que parecen extra, como programas de mejora
+      2. Define una línea de acción clara para cada tarea que identifiques
+      3. Incluye actividades como explicarle a alguien nuevo cómo funciona la calidad en tu negocio
+      4. Evita el modo de esperar a que suene el teléfono para reaccionar
+
+
+####################################################################################################
+[156/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: formalizar_un_proceso_ad_hoc
+  hijo:  metricas_calidad
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.3 . contencion 0.5 . familia_paso DEFINIR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 4):
+    Establecer métricas de éxito en cada etapa del proceso
+
+  MADRE . formalizar_un_proceso_ad_hoc
+    titulo: Formalizar un Proceso Ad Hoc que Cruza la Organizacion
+    fuente: The Hard Thing About Hard Things - Ben Horowitz | fase: ejecucion
+    entregable: El proceso escrito por quienes ya lo ejecutan, con su resultado final definido antes que las etapas, una metrica por etapa y un responsable con nombre por cada paso
+    pasos_accionables (10), ENTEROS:
+      1. Identificar los procesos ad hoc que cruzan fronteras organizacionales y son críticos (ej. contratación)
+      2. Pedir a las personas que ya ejecutan el proceso informalmente que lo formalicen
+      3. Definir el output esperado del proceso antes de diseñar los pasos
+      4. Establecer métricas de éxito en cada etapa del proceso
+      5. Asignar responsabilidad clara (individuo/equipo) por cada paso del proceso
+      6. Define el resultado final que el proceso debe producir (ej: un empleado excelente en el proceso de contratación)
+      7. Diseña las etapas necesarias para llegar a ese resultado
+      8. Establece métricas para cada etapa del proceso (¿estás obteniendo suficientes candidatos? ¿los correctos?)
+      9. Asigna responsabilidad clara a una organización o individuo por cada paso
+      10. Aumenta la visibilidad del desempeño de cada responsable
+
+  HIJO . metricas_calidad
+    titulo: Métricas de Calidad
+    fuente: A Project Manager's Book of Forms | fase: planificacion
+    entregable: Tabla de métricas de calidad con atributos, valores objetivo y métodos de medición
+    pasos_accionables (4), ENTEROS:
+      1. Identificar el atributo del producto o proceso a medir
+      2. Definir la métrica específica (valor objetivo)
+      3. Establecer el método de medición
+      4. Documentar en formato estandarizado con ID único
+
+
+####################################################################################################
+[157/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: medir_lo_que_importa_no_solo_lo_facil
+  hijo:  metricas_calidad
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.3 . contencion 0.5 . familia_paso OBSERVAR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 1):
+    Lista las métricas actuales de éxito de tu proyecto o producto.
+
+  MADRE . medir_lo_que_importa_no_solo_lo_facil
+    titulo: Medir lo que Importa, no solo lo Fácil de Medir
+    fuente: Assembling Tomorrow: A Guide to Designing a Thriving Future | fase: planificacion
+    entregable: Tabla de métricas actuales vs. valores intangibles no medidos, con al menos una métrica nueva propuesta para cerrar la brecha.
+    pasos_accionables (4), ENTEROS:
+      1. Lista las métricas actuales de éxito de tu proyecto o producto.
+      2. Pregúntate qué valores importantes (sociales, ambientales, de bienestar del usuario) no están siendo medidos.
+      3. Diseña al menos una métrica proxy para capturar un valor intangible relevante para tu modelo de negocio.
+      4. Revisa si estás optimizando por lo medible en detrimento de lo valioso pero invisible.
+
+  HIJO . metricas_calidad
+    titulo: Métricas de Calidad
+    fuente: A Project Manager's Book of Forms | fase: planificacion
+    entregable: Tabla de métricas de calidad con atributos, valores objetivo y métodos de medición
+    pasos_accionables (4), ENTEROS:
+      1. Identificar el atributo del producto o proceso a medir
+      2. Definir la métrica específica (valor objetivo)
+      3. Establecer el método de medición
+      4. Documentar en formato estandarizado con ID único
+
+
+####################################################################################################
+[158/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: plan_mejora_procesos
+  hijo:  metricas_calidad
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.3 . contencion 0.5 . familia_paso DEFINIR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 3):
+    Definir métricas y límites de control actuales
+
+  MADRE . plan_mejora_procesos
+    titulo: Plan de Mejora de Procesos
+    fuente: A Project Manager's Book of Forms | fase: planificacion
+    entregable: Documento de Plan de Mejora de Procesos con estado actual, objetivos y enfoque de mejora
+    pasos_accionables (5), ENTEROS:
+      1. Documentar el proceso actual (as-is) incluyendo pasos, entradas y salidas
+      2. Identificar el punto de inicio y fin del proceso
+      3. Definir métricas y límites de control actuales
+      4. Establecer objetivos explícitos de mejora (to-be)
+      5. Diseñar el enfoque de mejora (combinar, fast-track, eliminar pasos, usar tecnología)
+
+  HIJO . metricas_calidad
+    titulo: Métricas de Calidad
+    fuente: A Project Manager's Book of Forms | fase: planificacion
+    entregable: Tabla de métricas de calidad con atributos, valores objetivo y métodos de medición
+    pasos_accionables (4), ENTEROS:
+      1. Identificar el atributo del producto o proceso a medir
+      2. Definir la métrica específica (valor objetivo)
+      3. Establecer el método de medición
+      4. Documentar en formato estandarizado con ID único
+
+
+####################################################################################################
+[159/183] dominio quality . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: sujetos_de_control
+  hijo:  establecer_metas_caracteristicas
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.3 . contencion 0.5 . familia_paso None . familia_hijo DEFINIR
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 3):
+    Traducir la voz del cliente en características de producto (KPC)
+
+  MADRE . sujetos_de_control
+    titulo: Selección de Sujetos de Control (Control Subjects)
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: planificacion
+    entregable: Lista de sujetos de control (KPCs y KCCs) documentada para el proceso
+    pasos_accionables (5), ENTEROS:
+      1. Identificar los procesos y productos clave a controlar
+      2. Definir los objetivos del proceso de trabajo
+      3. Traducir la voz del cliente en características de producto (KPC)
+      4. Identificar características de control de proceso (KCC) relacionadas
+      5. Seleccionar los sujetos de control finales basados en las fuentes disponibles (FMEA, regulaciones, DOE)
+
+  HIJO . establecer_metas_caracteristicas
+    titulo: Establecimiento de Metas para Características del Producto
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: planificacion
+    entregable: Una tabla con las metas cuantificadas para cada característica de tu producto, integrada y validada por ti
+    pasos_accionables (5), ENTEROS:
+      1. Para cada característica que elegiste, define la unidad de medida apropiada
+      2. Determina cómo vas a medir si se cumple la meta
+      3. Establece el valor objetivo (meta) para cada característica
+      4. Verifica que la meta cumpla estos criterios: medible, óptima, legítima, comprensible, aplicable y alcanzable
+      5. Si dividiste el diseño en partes, integra los resultados de cada una
+
+
+####################################################################################################
+[160/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: escenarios_diseno_modelo_negocio
+  hijo:  escenarios_de_evolucion_de_la_ia
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.2 . contencion 0.5 . familia_paso OBSERVAR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 5):
+    Evalúa si un solo modelo de negocio sirve para todos los escenarios o si necesitas adaptarlo por segmento
+
+  MADRE . escenarios_diseno_modelo_negocio
+    titulo: Escenarios para Guiar el Diseño del Modelo de Negocio
+    fuente: Business Model Generation (Osterwalder) | fase: ideacion
+    entregable: Un set de 2 a 3 escenarios narrativos, de cliente y/o de entorno futuro, con preguntas de diseño asociadas a cada bloque del Business Model Canvas.
+    pasos_accionables (6), ENTEROS:
+      1. Define el tipo de escenario que vas a construir: de cliente (uso, contexto, deseos) o de entorno futuro (competencia, tecnología, sociedad)
+      2. Identifica los segmentos de clientes relevantes para tu innovación
+      3. Escribe una historia concreta y específica para cada segmento o futuro posible, describiendo su contexto
+      4. Cierra cada escenario con preguntas abiertas sobre canales, relaciones, propuesta de valor y por qué pagaría el cliente
+      5. Evalúa si un solo modelo de negocio sirve para todos los escenarios o si necesitas adaptarlo por segmento
+      6. Usa los escenarios de entorno futuro para anticipar cómo debería evolucionar tu modelo actual
+
+  HIJO . escenarios_de_evolucion_de_la_ia
+    titulo: Escenarios de Evolución de la IA para tu Negocio
+    fuente: Co-Intelligence_ Living and Wor - Ethan Mollick | fase: planificacion
+    entregable: Dos o tres escenarios de evolución de la IA con su impacto en el modelo de negocio, su plan de contingencia y las señales de alerta que avisan hacia cuál se mueve la realidad
+    pasos_accionables (6), ENTEROS:
+      1. Definir 2-3 escenarios plausibles de evolución de la IA para el sector, desde el crecimiento lineal de mejoras incrementales anuales hasta el exponencial de capacidad multiplicada 10x-100x en pocos años.
+      2. Identificar qué tareas críticas del negocio podrían automatizarse en cada escenario.
+      3. Evaluar el impacto de cada escenario en el modelo de negocio, la fuerza laboral y la propuesta de valor.
+      4. Diseñar un plan de contingencia o pivote que contemple al menos dos de los escenarios, para no quedar desprevenido.
+      5. Establecer señales de alerta temprana (regulatorias, tecnológicas, de mercado) que indiquen hacia qué escenario se está moviendo la realidad.
+      6. Revisar el análisis y ajustar la estrategia de adopción de IA periódicamente en función de esas señales, porque el ritmo real de avance puede cambiar el escenario más probable.
+
+
+####################################################################################################
+[161/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: seis_herramientas_comunicacion_celebracion
+  hijo:  celebracion_automatizada_de_hitos
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.2 . contencion 0.5 . familia_paso CONSTRUIR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 2):
+    Diseñar un mensaje de celebración específico para el logro del cliente
+
+  MADRE . seis_herramientas_comunicacion_celebracion
+    titulo: Seis Canales para Celebrar Hitos del Cliente
+    fuente: Never Lose a Customer Again - Joey Coleman | fase: ejecucion
+    entregable: Plan de comunicación de celebración con canal(es) elegido(s) y mensaje personalizado
+    pasos_accionables (5), ENTEROS:
+      1. Evaluar qué canal(es) son coherentes con la relación y el tipo de negocio
+      2. Diseñar un mensaje de celebración específico para el logro del cliente
+      3. Personalizar el contenido con detalles del journey del cliente
+      4. Elegir el momento oportuno de envío (justo tras confirmar el logro)
+      5. Medir la reacción/respuesta del cliente al gesto
+
+  HIJO . celebracion_automatizada_de_hitos
+    titulo: Celebración Automatizada de Hitos del Cliente
+    fuente: Never Lose a Customer Again - Joey Coleman | fase: ejecucion
+    entregable: Flujo de automatización (email/notificación) que detecta el logro del cliente y dispara celebración + upsell contextual
+    pasos_accionables (5), ENTEROS:
+      1. Implementar tecnología/software que detecte automáticamente cuándo el cliente completa un hito clave
+      2. Diseñar un mensaje de celebración que se dispare inmediatamente después del logro (no antes)
+      3. Personalizar el contenido según el comportamiento o feedback previo del cliente (ej. rating dado)
+      4. Incluir una oferta de upsell relevante y bien temporizada dentro del mensaje de celebración
+      5. Usar presentación visual atractiva en lugar de solo texto plano para reforzar la experiencia emocional
+
+
+####################################################################################################
+[162/183] dominio quality . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: inventario_conocimiento_estadistico_personal
+  hijo:  roi_proyectos_calidad
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.2 . contencion 0.5 . familia_paso None . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 4):
+    Integrar a este personal en proyectos de mejora de calidad y productividad
+
+  MADRE . inventario_conocimiento_estadistico_personal
+    titulo: Inventario y Aprovechamiento del Conocimiento Estadístico Interno
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | fase: planificacion
+    entregable: Inventario documentado de talento estadístico interno con plan de desarrollo y asignación a proyectos de mejora
+    pasos_accionables (4), ENTEROS:
+      1. Realizar un mapeo del personal con formación o interés en estadística, matemáticas o teoría de probabilidad
+      2. Identificar oportunidades para que estas personas trabajen bajo la guía de un líder estadístico competente
+      3. Facilitar la continuación de su educación estadística mediante cursos y mentoría
+      4. Integrar a este personal en proyectos de mejora de calidad y productividad
+
+  HIJO . roi_proyectos_calidad
+    titulo: Retorno de Inversión (ROI) en Proyectos de Mejora de Calidad
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: validacion
+    entregable: Un cálculo de ROI documentado y validado para el proyecto de mejora propuesto, listo para que decidas si vale la pena avanzar
+    pasos_accionables (7), ENTEROS:
+      1. Estima el costo actual del desperdicio crónico asociado al proyecto que tienes en mente
+      2. Estima la reducción de costos potencial si el proyecto tiene éxito
+      3. Estima los costos de diagnóstico e implementación del remedio
+      4. Calcula el ROI como la razón entre la ganancia estimada y los recursos necesarios
+      5. Revisa el cálculo con la persona que te ayuda con las finanzas para que el número sea sólido antes de decidir
+      6. Documentar el ROI del proyecto para reportarlo a la dirección
+      7. Usar casos de éxito (benchmarks como Samsung Six Sigma) para justificar la inversión continua en breakthrough
+
+
+####################################################################################################
+[163/183] dominio entrega . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: reconocer_mercancia_peligrosa_disfrazada
+  hijo:  clasificar_tipo_paquete
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.2 . contencion 0.5 . familia_paso None . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 4):
+    Capacitate tu mismo antes de despachar el primer envio de este tipo.
+
+  MADRE . reconocer_mercancia_peligrosa_disfrazada
+    titulo: Reconocer productos que en realidad son mercancía peligrosa
+    fuente: Guia de empaque para envios (FedEx) | fase: validacion
+    entregable: Una lista de tus productos marcados como mercancia peligrosa o no, con su clasificacion oficial.
+    pasos_accionables (5), ENTEROS:
+      1. Revisa si tu producto contiene liquidos inflamables, baterias, aerosoles o quimicos.
+      2. Busca la clasificacion oficial de ese tipo de producto (numero y nombre de envio).
+      3. Pregunta a tu courier si acepta ese producto y bajo que condiciones de empaque.
+      4. Capacitate tu mismo antes de despachar el primer envio de este tipo.
+      5. Guarda la documentacion exigida junto con cada envio de mercancia peligrosa.
+
+  HIJO . clasificar_tipo_paquete
+    titulo: Clasificar el tipo de paquete antes de despachar
+    fuente: ISTA 3P, Protocolo de ensayo de empaque para paqueteria | fase: ejecucion
+    entregable: Una ficha por producto que indica su categoría de paquete y sus riesgos asociados en tránsito.
+    pasos_accionables (4), ENTEROS:
+      1. Mide las tres dimensiones y calcula el volumen de tu paquete ya armado.
+      2. Compara esas medidas contra las categorías: volumen grande con dimensión corta es plano, una dimensión mucho mayor que las otras dos es alargado.
+      3. Marca si el contenido es frágil o si puede derramarse.
+      4. Anota la categoría en tu checklist de empaque antes de elegir caja y relleno.
+
+
+####################################################################################################
+[164/183] dominio environmental . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: identificacion_proveedores_criticos
+  hijo:  validacion_externa_reportes
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.2 . contencion 0.5 . familia_paso OBSERVAR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 4):
+    Revisa los reportes de sostenibilidad de tu competencia para comparar
+
+  MADRE . identificacion_proveedores_criticos
+    titulo: Identifica a tus proveedores críticos
+    fuente: The Green to Gold Business Play - Daniel C. Esty | fase: ideacion
+    entregable: Tu lista priorizada de proveedores críticos con los criterios de riesgo e impacto documentados
+    pasos_accionables (4), ENTEROS:
+      1. Lista todos los materiales, insumos y servicios que compras
+      2. Identifica a tus proveedores por categoría (manufactura, insumos operativos, subcontratistas)
+      3. Prioriza a tus proveedores según su impacto en el valor de tu producto, el riesgo ambiental y tu reputación
+      4. Revisa los reportes de sostenibilidad de tu competencia para comparar
+
+  HIJO . validacion_externa_reportes
+    titulo: Validación Externa de Reportes de Sostenibilidad
+    fuente: The Green to Gold Business Play - Daniel C. Esty | fase: validacion
+    entregable: Sello o carta de validación de un tercero reconocido para el reporte o producto
+    pasos_accionables (4), ENTEROS:
+      1. Evaluar el costo-beneficio de una certificación externa completa vs. parcial
+      2. Considerar validar solo un subconjunto de datos críticos (ej. emisiones de carbono)
+      3. Buscar el respaldo de ONGs o líderes de opinión reconocidos en sostenibilidad
+      4. Formar comités de revisión externos con expertos reconocidos
+
+
+####################################################################################################
+[165/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: tipos_de_riesgo_invencion_vs_mercado
+  hijo:  fundadores_lideran_validacion
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.0 . contencion 0.5 . familia_paso None . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 4):
+    Si es ambos, combinar validación técnica con desarrollo de clientes
+
+  MADRE . tipos_de_riesgo_invencion_vs_mercado
+    titulo: Riesgo de Invención vs. Riesgo de Cliente/Mercado
+    fuente: The Startup Owner's Manual - Blank, Steve | fase: ideacion
+    entregable: Una clasificación clara del tipo de riesgo dominante en el proyecto, que determine la metodología a seguir
+    pasos_accionables (4), ENTEROS:
+      1. Evaluar si el riesgo principal de tu proyecto es técnico (¿puede construirse?) o de mercado (¿lo querrán los clientes?)
+      2. Si es riesgo de invención, usar herramientas de simulación y validación técnica
+      3. Si es riesgo de mercado, aplicar el proceso de Customer Development
+      4. Si es ambos, combinar validación técnica con desarrollo de clientes
+
+  HIJO . fundadores_lideran_validacion
+    titulo: Lidera Tú la Validación con tus Clientes
+    fuente: The Startup Owner's Manual - Steve Blank | fase: validacion
+    entregable: Un proceso de validación que lideras tú mismo, con el feedback de tus clientes registrado de primera mano y la decisión de pivotar en tus manos
+    pasos_accionables (5), ENTEROS:
+      1. Participa tú mismo, en persona, en las conversaciones de validación con tus clientes
+      2. Evita delegar la validación a equipos de ventas, marketing o desarrollo de negocios en estas primeras etapas
+      3. Escucha y anota el feedback negativo directamente de tus clientes, sin intermediarios
+      4. Forma un pequeño equipo de apoyo (análisis de datos, pruebas A/B, SEO o PPC en canales digitales) que ejecute pero no decida
+      5. Mantén tú la autoridad para decidir si pivotas o no
+
+
+####################################################################################################
+[166/183] dominio quality . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: definicion_y_concepto_de_aseguramiento_de_calidad
+  hijo:  planificacion_inicial_calidad
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.0 . contencion 0.5 . familia_paso DEFINIR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 1):
+    Define hasta dónde llega el aseguramiento de calidad en tu negocio (planificación, control, mejora, revisión)
+
+  MADRE . definicion_y_concepto_de_aseguramiento_de_calidad
+    titulo: Definición y Concepto de Aseguramiento de Calidad
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: planificacion
+    entregable: Documento con tu política de aseguramiento de calidad, con el alcance y las evidencias que necesitas mostrar
+    pasos_accionables (4), ENTEROS:
+      1. Define hasta dónde llega el aseguramiento de calidad en tu negocio (planificación, control, mejora, revisión)
+      2. Establece evidencias concretas: inspecciones, pruebas, revisiones de tus planes
+      3. Diferencia el aseguramiento de calidad de otras tareas de calidad relacionadas
+      4. Comunica el propósito del aseguramiento a todos los que participan en tu negocio
+
+  HIJO . planificacion_inicial_calidad
+    titulo: Planificación Inicial de Calidad en Manufactura
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: planificacion
+    entregable: Documento de plan de control de proceso con características clave identificadas y clasificadas
+    pasos_accionables (5), ENTEROS:
+      1. Revisar el diseño del producto con personal de operaciones antes de su lanzamiento
+      2. Identificar características clave del producto y del proceso (KPCs)
+      3. Clasificar características por importancia (crítica, mayor, menor, incidental)
+      4. Analizar el diagrama de flujo del proceso por estación de trabajo
+      5. Validar la capacidad y los sistemas de medición del proceso
+
+
+####################################################################################################
+[167/183] dominio quality . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: planificacion_recoleccion_datos
+  hijo:  analisis_pareto_proyectos_elefante
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.9 . contencion 0.5 . familia_paso OBSERVAR . familia_hijo OBSERVAR
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 7):
+    Evaluar supuestos del tamaño de muestra y del análisis
+
+  MADRE . planificacion_recoleccion_datos
+    titulo: Planificación para Recolección y Análisis de Datos
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: planificacion
+    entregable: Plan documentado de recolección y análisis de datos con preguntas formuladas, método de muestreo definido y plan de presentación de resultados
+    pasos_accionables (13), ENTEROS:
+      1. Establecer objetivos de recolección de datos y formular la pregunta específica
+      2. Definir puntos de recolección de datos comprensivos
+      3. Seleccionar y capacitar recolectores de datos imparciales
+      4. Diseñar, preparar y probar métodos, formularios e instrucciones de recolección (incluir MSA)
+      5. Auditar el proceso de recolección y validar resultados
+      6. Filtrar y analizar los datos
+      7. Evaluar supuestos del tamaño de muestra y del análisis
+      8. Aplicar técnicas gráficas y estadísticas al problema original
+      9. Determinar si se necesitan más datos y análisis
+      10. Considerar un análisis de sensibilidad
+      11. Revisar que las conclusiones respondan al problema técnico original
+      12. Presentar los resultados en un informe claro con resumen ejecutivo
+      13. Determinar si las conclusiones aplican a otros problemas
+
+  HIJO . analisis_pareto_proyectos_elefante
+    titulo: Proyectos Tamaño Elefante y Análisis de Pareto
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: planificacion
+    entregable: Desglose documentado del proyecto grande en sub-proyectos con metas individuales
+    pasos_accionables (5), ENTEROS:
+      1. Identificar si el proyecto es demasiado amplio para un solo equipo
+      2. Aplicar análisis de Pareto para segmentar el problema en partes manejables
+      3. Asignar un equipo coordinador para dividir el 'elefante'
+      4. Formar equipos paralelos para cada proyecto de tamaño reducido
+      5. Redactar metas separadas para el equipo coordinador y cada equipo de sub-proyecto
+
+
+####################################################################################################
+[168/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: formalizar_junta_asesora
+  hijo:  tamano_junta_directiva_vc
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.7 . contencion 0.5 . familia_paso COMUNICAR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 6):
+    Documentar el tamaño, composición y operación de la junta asesora
+
+  MADRE . formalizar_junta_asesora
+    titulo: Formalizar la Junta Asesora (Advisory Board)
+    fuente: The Startup Owner's Manual - Blank, Steve | fase: validacion
+    entregable: Documento formal que describe tamaño, composición, roles y esquema de compensación de la junta asesora de la startup
+    pasos_accionables (6), ENTEROS:
+      1. Identificar clientes potenciales clave descubiertos en customer discovery para invitarlos a la junta asesora
+      2. Reclutar expertos de industria (domain experts) que aporten credibilidad al mercado o tecnología
+      3. Buscar un asesor tipo CEO experimentado ('been there, done that') para consejo práctico
+      4. Definir esquema de compensación (stock común con vesting mensual)
+      5. Decidir si habrá reuniones formales o consultas individuales
+      6. Documentar el tamaño, composición y operación de la junta asesora
+
+  HIJO . tamano_junta_directiva_vc
+    titulo: Composición y Tamaño Óptimo de la Junta Directiva con VCs
+    fuente: The Founder's Dilemmas | fase: ejecucion
+    entregable: Estructura de gobernanza de la junta directiva definida, con número de asientos por tipo de inversionista claramente negociado.
+    pasos_accionables (4), ENTEROS:
+      1. Negociar cuidadosamente cuántos asientos de junta se otorgan a cada nuevo inversionista en cada ronda.
+      2. Evaluar si es preferible tener un solo VC líder en la junta en lugar de múltiples representantes de diferentes fondos.
+      3. Anticipar cómo el tamaño de la junta afectará la velocidad de toma de decisiones en momentos críticos.
+      4. Revisar la composición de la junta en cada evento de recapitalización como oportunidad de simplificación.
+
+
+####################################################################################################
+[169/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: modelo_customer_development
+  hijo:  diseno_experimentos_pass_fail
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.7 . contencion 0.5 . familia_paso CONSTRUIR . familia_hijo CONSTRUIR
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 3):
+    Diseñar experimentos para testear cada hipótesis fuera del edificio
+
+  MADRE . modelo_customer_development
+    titulo: Modelo de Customer Development (4 Pasos)
+    fuente: The Startup Owner's Manual - Steve Blank | fase: validacion
+    entregable: Diagrama de flujo del proceso de Customer Development con indicación clara del paso actual y evidencia de aprendizaje acumulado
+    pasos_accionables (5), ENTEROS:
+      1. Identificar en qué paso del proceso se encuentra la startup actualmente
+      2. Formular hipótesis de negocio antes de iniciar cualquier paso
+      3. Diseñar experimentos para testear cada hipótesis fuera del edificio
+      4. Evaluar en cada 'stop sign' si se alcanzó 'velocidad de escape' antes de avanzar
+      5. Estar dispuesto a retroceder a pasos anteriores si el aprendizaje lo indica
+
+  HIJO . diseno_experimentos_pass_fail
+    titulo: Diseño de Experimentos Pass/Fail para Probar Hipótesis
+    fuente: The Startup Owner's Manual - Steve Blank | fase: validacion
+    entregable: Lista de experimentos pass/fail diseñados y ejecutados, con criterios de éxito y resultados documentados para cada hipótesis crítica del modelo de negocio.
+    pasos_accionables (6), ENTEROS:
+      1. Preguntarte '¿qué quiero aprender?' para cada hipótesis antes de diseñar el test
+      2. Diseñar el test pass/fail más simple posible, usando landing pages, presentaciones o mockups según convenga
+      3. Definir de antemano el criterio numérico de éxito (ej. 9 de 30 pedidos)
+      4. Ejecutar el test con un grupo pequeño de clientes reales (ej. 10 a 30 prospectos), con rapidez y bajo costo
+      5. Extender la duración del test lo suficiente para evitar confundir un máximo local con el máximo global
+      6. Registrar no solo el resultado pass/fail sino también los insights cualitativos
+
+
+####################################################################################################
+[170/183] dominio quality . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: rol_director_calidad
+  hijo:  circulos_calidad_qc
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.7 . contencion 0.5 . familia_paso None . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 4):
+    Actuar como asesor estrategico en las decisiones de calidad que tu tomas
+
+  MADRE . rol_director_calidad
+    titulo: Quien se encarga de la calidad en tu negocio
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: planificacion
+    entregable: Un plan de transición de responsabilidades de calidad hacia quienes ejecutan el trabajo en cada area, con un programa de capacitación asociado
+    pasos_accionables (5), ENTEROS:
+      1. Definir que tareas de calidad son del día a día y cuales son nuevas responsabilidades estrategicas
+      2. Identificar que actividades de calidad pueden pasar a quienes ejecutan el trabajo en cada area
+      3. Capacitar a esas personas para que asuman las nuevas responsabilidades de calidad
+      4. Actuar como asesor estrategico en las decisiones de calidad que tu tomas
+      5. Supervisar que la estrategia de calidad se cumpla, en coordinación contigo
+
+  HIJO . circulos_calidad_qc
+    titulo: Círculos de Calidad (Tú Debes Actuar)
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | fase: ejecucion
+    entregable: Un círculo de calidad funcionando, con tu compromiso por escrito de actuar sobre lo que recomienden
+    pasos_accionables (6), ENTEROS:
+      1. Antes de lanzar el círculo, prepárate tú para entender que tu rol es apoyar, no controlar
+      2. Deja que las personas que trabajan contigo elijan los temas y proyectos que quieren resolver
+      3. Crea un mecanismo real de seguimiento para que tú actúes sobre las propuestas que surjan
+      4. Evita convertir el círculo en una estructura formal y burocrática
+      5. Reconoce los logros del grupo por encima de premios en dinero para una sola persona
+      6. Registra y comunica las acciones que tomas en respuesta a lo que el círculo identifica
+
+
+####################################################################################################
+[171/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: canales_distribucion
+  hijo:  ocho_fases_experiencia_cliente
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.5 . contencion 0.5 . familia_paso OBSERVAR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 3):
+    Evaluar la integración entre canales para generar una experiencia de cliente coherente
+
+  MADRE . canales_distribucion
+    titulo: Bloque de Canales (Channels)
+    fuente: Business Model Generation - Osterwalder | fase: planificacion
+    entregable: Mapa de canales por segmento de cliente con fases cubiertas y tipo (propio/socio, directo/indirecto)
+    pasos_accionables (4), ENTEROS:
+      1. Mapear las 5 fases del canal (conocimiento, evaluación, compra, entrega, post-venta) para cada segmento
+      2. Decidir si usar canales propios (mayor margen, mayor costo) o de socios (menor margen, mayor alcance)
+      3. Evaluar la integración entre canales para generar una experiencia de cliente coherente
+      4. Calcular costo-eficiencia de cada canal seleccionado
+
+  HIJO . ocho_fases_experiencia_cliente
+    titulo: Las Ocho Fases de la Experiencia del Cliente
+    fuente: Never Lose a Customer Again - Joey Coleman | fase: ejecucion
+    entregable: Un diagrama del recorrido del cliente con las ocho fases identificadas y el estado actual de los clientes en cada una.
+    pasos_accionables (5), ENTEROS:
+      1. Identificar en qué fase se encuentra actualmente cada segmento de clientes.
+      2. Diseñar la experiencia emocional deseada para cada una de las ocho fases.
+      3. Detectar en qué fase se están 'atascando' la mayoría de los clientes actuales.
+      4. Crear un plan de acción específico para avanzar a los clientes de una fase a la siguiente.
+      5. Priorizar el diseño de experiencia en las fases Affirm y Activate, que suelen ser las más descuidadas y donde ocurre la mayor deserción.
+
+
+####################################################################################################
+[172/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: desarrollo_en_espiral
+  hijo:  protocepto
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.5 . contencion 0.5 . familia_paso CONSTRUIR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 1):
+    Construir una versión mínima, rápida y económica del producto (prototipo, MVP, protocept), no la versión final
+
+  MADRE . desarrollo_en_espiral
+    titulo: Desarrollo en Espiral o Iterativo (Build-Test-Feedback-Revise)
+    fuente: Winning at New Products - Robert G. Cooper | fase: ejecucion
+    entregable: Una serie documentada de prototipos iterativos, con registros de feedback de cliente en cada ciclo, que culmina en una definición de producto validada y probada en campo.
+    pasos_accionables (6), ENTEROS:
+      1. Construir una versión mínima, rápida y económica del producto (prototipo, MVP, protocept), no la versión final
+      2. Probar la versión con clientes reales para medir interés, preferencia e intención de compra
+      3. Recoger feedback directo sobre qué debe cambiarse o corregirse
+      4. Revisar el diseño, propuesta de valor y beneficios en base al feedback
+      5. Repetir el ciclo varias veces (de tres a cuatro en promedio, hasta quince en procesos muy iterativos), manteniendo contacto continuo con el cliente hasta llegar a pruebas de campo formales
+      6. Documentar cada iteración, desde la investigación inicial de la voz del cliente hasta el testeo completo del producto
+
+  HIJO . protocepto
+    titulo: Versión intermedia entre idea y prototipo (protocept)
+    fuente: Winning at New Products - Robert G. Cooper | fase: ejecucion
+    entregable: Una serie de versiones intermedias de tu producto, una tras otra, con el feedback del cliente y los ajustes tecnicos que hiciste en cada ciclo.
+    pasos_accionables (4), ENTEROS:
+      1. En cada vuelta de trabajo, crea una representacion tangible de tu producto: un dibujo en 3D, un modelo impreso, un prototipo virtual
+      2. Muestra ese protocept al cliente y recoge lo que piensa sobre tu hipótesis de mercado
+      3. Usa el mismo protocept para comprobar con quien te ayuda si la idea es viable tecnicamente
+      4. Repite el ciclo en periodos cortos, de semanas, acercandote cada vez mas a un prototipo que funcione de verdad
+
+
+####################################################################################################
+[173/183] dominio quality . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: establecer_diseno_final_producto
+  hijo:  establecer_metas_caracteristicas
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.5 . contencion 0.5 . familia_paso DEFINIR . familia_hijo DEFINIR
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 1):
+    Define cómo vas a autorizar y publicar las características y metas de tu producto
+
+  MADRE . establecer_diseno_final_producto
+    titulo: Establecer y Publicar el Diseño Final del Producto
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: planificacion
+    entregable: Un paquete de documentación oficial con el diseño final de tu producto, aprobado y listo para compartir con quienes lo necesiten
+    pasos_accionables (4), ENTEROS:
+      1. Define cómo vas a autorizar y publicar las características y metas de tu producto
+      2. Documenta los procedimientos, especificaciones, diagramas de flujo y hojas de cálculo relacionadas
+      3. Pasa los resultados de tus experimentos, pruebas de campo y prototipos a quienes los van a usar
+      4. Asegúrate de que tu proceso de autorización incluya la opinión de tus clientes, tanto internos como externos
+
+  HIJO . establecer_metas_caracteristicas
+    titulo: Establecimiento de Metas para Características del Producto
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: planificacion
+    entregable: Una tabla con las metas cuantificadas para cada característica de tu producto, integrada y validada por ti
+    pasos_accionables (5), ENTEROS:
+      1. Para cada característica que elegiste, define la unidad de medida apropiada
+      2. Determina cómo vas a medir si se cumple la meta
+      3. Establece el valor objetivo (meta) para cada característica
+      4. Verifica que la meta cumpla estos criterios: medible, óptima, legítima, comprensible, aplicable y alcanzable
+      5. Si dividiste el diseño en partes, integra los resultados de cada una
+
+
+####################################################################################################
+[174/183] dominio franquicias . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: desarrollo_value_proposition_usp
+  hijo:  posicionamiento_vs_competidores
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.4 . contencion 0.5 . familia_paso OBSERVAR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 1):
+    Identificar qué hace único al negocio frente a competidores directos
+
+  MADRE . desarrollo_value_proposition_usp
+    titulo: Desarrollo de la Propuesta de Valor Única (USP)
+    fuente: Franchise Your Business - Mark Siebert | fase: validacion
+    entregable: Documento de propuesta de valor única (USP) y análisis competitivo del sector
+    pasos_accionables (5), ENTEROS:
+      1. Identificar qué hace único al negocio frente a competidores directos
+      2. Analizar estrategias de diferenciación de competidores en la industria (precio, formato, nicho)
+      3. Definir la USP en una frase clara y comunicable
+      4. Validar si existen consultas no solicitadas de interesados en franquiciar (indicador de atractivo)
+      5. Documentar los elementos de valor adicional que se ofrecerán a franquiciados (soporte, compras negociadas, software propietario)
+
+  HIJO . posicionamiento_vs_competidores
+    titulo: Posicionamiento frente a Competidores
+    fuente: Franchise Your Business - Mark Siebert | fase: ejecucion
+    entregable: Un resumen claro de cómo te comparas con tus competidores directos, con tu propuesta única de venta bien definida y lista para usar en cualquier conversación con un candidato
+    pasos_accionables (4), ENTEROS:
+      1. Pregunta directamente qué otras franquicias está considerando el candidato
+      2. Compara en detalle tu franquicia con las de tus competidores directos
+      3. Responde destacando tus diferencias, incluyendo tus propias desventajas, con una justificación clara
+      4. Si el competidor es de una industria distinta, enfoca la conversación en las ventajas de panorama general
+
+
+####################################################################################################
+[175/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: validar_modelo_financiero
+  hijo:  valor_de_vida_del_cliente
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.3 . contencion 0.5 . familia_paso CONSEGUIR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 2):
+    Calcular costos de adquisición de clientes, tasas de conversión y Customer Lifetime Value (LTV)
+
+  MADRE . validar_modelo_financiero
+    titulo: Validar el Modelo Financiero
+    fuente: The Startup Owner's Manual - Steve Blank | fase: validacion
+    entregable: Un modelo financiero completo con pruebas pass/fail identificadas que demuestre la viabilidad de escalar el negocio de forma rentable
+    pasos_accionables (6), ENTEROS:
+      1. Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable
+      2. Calcular costos de adquisición de clientes, tasas de conversión y Customer Lifetime Value (LTV)
+      3. Determinar costos operativos básicos, costos de canal y márgenes
+      4. Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año
+      5. Verificar el balance de caja disponible (runway)
+      6. Convertir las métricas validadas en un P&L, balance y flujo de caja multianual listo para inversionistas
+
+  HIJO . valor_de_vida_del_cliente
+    titulo: Valor de Vida del Cliente (Customer Lifetime Value - LTV)
+    fuente: The Startup Owner's Manual - Steve Blank | fase: validacion
+    entregable: Métrica de LTV calculada y monitoreada con tendencia de crecimiento
+    pasos_accionables (4), ENTEROS:
+      1. Calcular el LTV actual de los clientes
+      2. Monitorear la evolución del LTV en el tiempo
+      3. Implementar nuevos programas y ofertas que incrementen el LTV
+      4. Mejorar la eficiencia de los procesos de retención y crecimiento
+
+
+####################################################################################################
+[176/183] dominio quality . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: constraint_management
+  hijo:  caso_estudio_benchmarking_terminal
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.3 . contencion 0.5 . familia_paso None . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 4):
+    Elevar el desempeño de la restricción mediante inversión o mejora
+
+  MADRE . constraint_management
+    titulo: Gestión de Restricciones (Teoría de las Restricciones)
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: ejecucion
+    entregable: Restricción del sistema identificada con plan de acción de las 5 etapas de TOC
+    pasos_accionables (5), ENTEROS:
+      1. Identificar la restricción (equipo, mano de obra, información o proveedor) que limita el throughput
+      2. Decidir cómo explotar al máximo la restricción actual
+      3. Subordinar todos los demás procesos a esta decisión
+      4. Elevar el desempeño de la restricción mediante inversión o mejora
+      5. Repetir el ciclo identificando la nueva restricción
+
+  HIJO . caso_estudio_benchmarking_terminal
+    titulo: Caso de Estudio: Mejora de Desempeño mediante Benchmarking
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: ejecucion
+    entregable: Plan de acción de mejora basado en hallazgos de benchmarking, con métricas de seguimiento anual
+    pasos_accionables (6), ENTEROS:
+      1. Diferenciar costos controlables de los no controlables
+      2. Enfocar los esfuerzos de mejora en las brechas de desempeño más grandes y controlables
+      3. Rediseñar la estructura organizacional con responsabilidades claras
+      4. Implementar programas de cambio rápido (step change) en áreas críticas como mantenimiento
+      5. Adoptar mantenimiento basado en riesgo para optimizar frecuencias
+      6. Repetir el benchmarking anualmente para medir el progreso y mantenerse actualizado frente a los pares
+
+
+####################################################################################################
+[177/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: liderazgo_ejecutivo_innovacion
+  hijo:  estrategia_de_innovacion_de_producto
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.2 . contencion 0.5 . familia_paso DEFINIR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 1):
+    Define y comunica tu visión y tu estrategia de innovación conectadas con hacia dónde va tu negocio.
+
+  MADRE . liderazgo_ejecutivo_innovacion
+    titulo: Los siete hábitos para liderar bien la innovación
+    fuente: Winning at New Products - Robert G. Cooper | fase: planificacion
+    entregable: Una lista de compromisos y comportamientos que asumes como líder para sostener la innovación.
+    pasos_accionables (5), ENTEROS:
+      1. Define y comunica tu visión y tu estrategia de innovación conectadas con hacia dónde va tu negocio.
+      2. Participa activamente en las decisiones de seguir o frenar cada proyecto, como quien tiene la llave.
+      3. Revisa cada tanto el conjunto de proyectos de innovación que tienes en marcha.
+      4. No microgestiones el día a día de los equipos; acompáñalos como guía o mentor, no como jefe encima.
+      5. Ponte metas de innovación propias, como parte de lo que revisas cada año.
+
+  HIJO . estrategia_de_innovacion_de_producto
+    titulo: Estrategia de Innovación de Producto y Tecnología
+    fuente: Winning at New Products - Robert G. Cooper | fase: ideacion
+    entregable: Un documento de estrategia de innovación que incluya objetivos, arenas estratégicas, buckets de recursos y roadmap de producto
+    pasos_accionables (6), ENTEROS:
+      1. Definir objetivos claros de innovación de producto (% de ventas/ganancias de nuevos productos a 3-5 años)
+      2. Vincular explícitamente las metas de innovación con las metas generales del negocio
+      3. Definir arenas estratégicas (mercados, tecnologías, sectores) donde enfocar los esfuerzos de innovación
+      4. Asignar 'buckets estratégicos' de recursos a diferentes tipos de proyectos o arenas
+      5. Crear un roadmap de producto que proyecte iniciativas de desarrollo a 3-5 años
+      6. Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+
+
+####################################################################################################
+[178/183] dominio quality . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: ingenieria_calidad_proveedores
+  hijo:  desarrollar_estrategias_largo_plazo
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.2 . contencion 0.5 . familia_paso CONSTRUIR . familia_hijo CONSTRUIR
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 4):
+    Desarrollar relaciones de largo plazo con proveedores que permitan conocer su cultura de calidad real
+
+  MADRE . ingenieria_calidad_proveedores
+    titulo: Ingeniería de Calidad de Proveedores
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby | fase: planificacion
+    entregable: Proceso formal de evaluación temprana de proveedores integrado entre compras e ingeniería de calidad
+    pasos_accionables (4), ENTEROS:
+      1. Involucrar al personal de calidad desde las etapas de diseño conceptual, no solo en la selección final del proveedor
+      2. Actuar como catalizador entre compras e ingeniería para evaluar proveedores clave antes de la decisión de compra
+      3. Evitar depender solo de auditorías de 'visita rápida' como método de selección de proveedores
+      4. Desarrollar relaciones de largo plazo con proveedores que permitan conocer su cultura de calidad real
+
+  HIJO . desarrollar_estrategias_largo_plazo
+    titulo: Desarrollar Estrategias o Metas de Largo Plazo
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: planificacion
+    entregable: Documento con tus 4 o 5 estrategias clave de largo plazo, cada una con un responsable asignado
+    pasos_accionables (4), ENTEROS:
+      1. Evalúa las cinco áreas clave: satisfacción de tus clientes, costos de mala calidad, tu cultura, tus procesos internos y cómo te comparas con la competencia
+      2. Analiza los datos para identificar tus fortalezas, debilidades, oportunidades y amenazas
+      3. Define de 4 a 5 estrategias clave que aporten de verdad a tu visión
+      4. Asigna a alguien concreto la responsabilidad de llevar adelante cada estrategia
+
+
+####################################################################################################
+[179/183] dominio quality . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: juran_rcca_metodo
+  hijo:  diseno_implementacion_remedio
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.0 . contencion 0.5 . familia_paso CONSTRUIR . familia_hijo CONSTRUIR
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 3):
+    Mejorar: diseñar e implementar el remedio
+
+  MADRE . juran_rcca_metodo
+    titulo: Método RCCA de Juran (Análisis de Causa Raíz)
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: ejecucion
+    entregable: Causa raíz identificada, remedio implementado y controles ajustados para prevenir recurrencia
+    pasos_accionables (4), ENTEROS:
+      1. Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema
+      2. Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+      3. Mejorar: diseñar e implementar el remedio
+      4. Controlar: ajustar los controles para mantener las ganancias
+
+  HIJO . diseno_implementacion_remedio
+    titulo: Diseño e Implementación del Remedio
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo | fase: ejecucion
+    entregable: Solución diseñada, documentada e implementada, con procedimientos actualizados y con la capacitación necesaria cubierta.
+    pasos_accionables (6), ENTEROS:
+      1. Verifica que la solución cumple con lo que buscabas lograr.
+      2. Determina los recursos necesarios (personas, dinero, tiempo, materiales).
+      3. Especifica que procedimientos, formas de trabajar o sistemas debes modificar.
+      4. Evalua si necesitas capacitarte tu o capacitar a quien te ayuda.
+      5. Aplica técnicas de prueba de errores para que la solución sea a prueba de fallos.
+      6. Implementa la solución siguiendo un plan claro si es algo complejo.
+
+
+####################################################################################################
+[180/183] dominio exportacion . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: licenciamiento_tecnologico
+  hijo:  proteccion_patentes_internacional
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 75.9 . contencion 0.455 . familia_paso None . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 3):
+    Registra tus patentes y marcas en cada pais objetivo, considerando PCT y Protocolo de Madrid para proteccion multiple
+
+  MADRE . licenciamiento_tecnologico
+    titulo: Licenciamiento de Tecnología (Technology Licensing)
+    fuente: A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) | fase: planificacion
+    entregable: Contrato de licenciamiento de tecnologia firmado con terminos claros de compensacion, territorio y duracion, respaldado por el registro de tu propiedad intelectual en el pais del licenciatario.
+    pasos_accionables (6), ENTEROS:
+      1. Identifica que activos de propiedad intelectual son licenciables: patentes, marcas, tecnologia, procesos
+      2. Evalua si el licenciamiento te conviene mas que exportar directamente o instalar operaciones propias
+      3. Registra tus patentes y marcas en cada pais objetivo, considerando PCT y Protocolo de Madrid para proteccion multiple
+      4. Negocia la compensacion (regalia fija, variable o combinada) y el alcance geografico del acuerdo
+      5. Consigue asesoria legal especializada en tu pais y en el del licenciatario antes de firmar
+      6. Redacta el contrato incluyendo control de calidad, territorio, duracion y clausulas de proteccion de tu IP
+
+  HIJO . proteccion_patentes_internacional
+    titulo: Protección Internacional de Patentes
+    fuente: A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) | fase: planificacion
+    entregable: Estrategia de protección de patente definida, indicando países objetivo, tipo de solicitud (nacional, regional o PCT) y asesoría legal contratada
+    pasos_accionables (5), ENTEROS:
+      1. Determinar en qué países se necesita protección de patente para el producto a exportar
+      2. Verificar si la invención cumple los requisitos de novedad, paso inventivo y aplicación práctica en esos mercados
+      3. Evaluar la conveniencia de usar el sistema PCT para presentar una única solicitud internacional
+      4. Consultar a un abogado especializado en propiedad intelectual y a las oficinas de PI de los países objetivo
+      5. Realizar una búsqueda de patentes previas (prior art) usando bases de datos de WIPO antes de solicitar protección
+
+
+####################################################################################################
+[181/183] dominio environmental . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: valor_intangible_sostenibilidad
+  hijo:  alineacion_engagement_estrategia_general
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 74.5 . contencion 0.455 . familia_paso None . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 1):
+    Incorpora métricas de sostenibilidad en tu seguimiento del negocio (satisfacción del cliente, compromiso del equipo, impacto ambiental)
+
+  MADRE . valor_intangible_sostenibilidad
+    titulo: Creación de Valor Intangible mediante Sostenibilidad Corporativa
+    fuente: The Green to Gold Business Play - Daniel C. Esty | fase: ejecucion
+    entregable: Estrategia de comunicación y cultura organizacional con indicadores de sostenibilidad que refuerce la marca, la reputación y la retención de talento.
+    pasos_accionables (5), ENTEROS:
+      1. Incorpora métricas de sostenibilidad en tu seguimiento del negocio (satisfacción del cliente, compromiso del equipo, impacto ambiental)
+      2. Comunica de forma transparente y auténtica tus compromisos y logros ambientales
+      3. Alinea tu cultura de trabajo y propósito de sostenibilidad con la marca que quieres proyectar como empleador
+      4. Mide el impacto de tus iniciativas verdes en la retención de talento y la percepción de tus clientes
+      5. Evalúa periódicamente cómo tu reputación ambiental afecta la lealtad de clientes y la relación con reguladores
+
+  HIJO . alineacion_engagement_estrategia_general
+    titulo: Alinear el compromiso de tu equipo con tu estrategia de sostenibilidad
+    fuente: The Green to Gold Business Play - Daniel C. Esty | fase: ejecucion
+    entregable: Lista de verificacion cumplida que muestra que lo que propones para involucrar a tu equipo esta alineado con tu estrategia de sostenibilidad
+    pasos_accionables (4), ENTEROS:
+      1. Verificar que lo que propones para involucrar a tu equipo refleje tu vision y mision de sostenibilidad
+      2. Mostrar con hechos, no solo con palabras, que tu mismo sigues lo que pides
+      3. Elegir a las personas con credibilidad dentro de tu equipo para liderar, no solo a quienes tienen mas conocimiento tecnico
+      4. Dar seguimiento constante y reconocer los errores abiertamente
+
+
+####################################################################################################
+[182/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: eliminar_desperdicio_organizacional
+  hijo:  startup_como_experimento_cientifico
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 73.3 . contencion 0.455 . familia_paso EJECUTAR . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 4):
+    Usa el método científico (hipótesis, experimento, medición) para decidir sobre tu producto, en lugar de guiarte solo por intuición
+
+  MADRE . eliminar_desperdicio_organizacional
+    titulo: Eliminación del Desperdicio en la Innovación
+    fuente: The Lean Startup - Eric Ries | fase: ejecucion
+    entregable: Un diagnóstico escrito de qué estás haciendo que te genera valor o aprendizaje real, versus qué es trabajo hecho con eficiencia pero que no sirve, junto con un plan para reasignar tu esfuerzo
+    pasos_accionables (4), ENTEROS:
+      1. Antes de pulir cómo ejecutas algo, pregúntate si ese proyecto realmente vale la pena hacerse
+      2. Revisa qué tareas o proyectos estás haciendo de forma eficiente pero que no te están dejando ningún aprendizaje validado ni valor real
+      3. Redirige tu esfuerzo: deja de enfocarte solo en hacer las cosas bien y enfócate en aprender lo que todavía no sabes
+      4. Usa el método científico (hipótesis, experimento, medición) para decidir sobre tu producto, en lugar de guiarte solo por intuición
+
+  HIJO . startup_como_experimento_cientifico
+    titulo: La Startup como Experimento Científico
+    fuente: The Lean Startup - Eric Ries | fase: validacion
+    entregable: Documento de hipótesis formal con predicciones medibles y diseño del experimento a ejecutar
+    pasos_accionables (4), ENTEROS:
+      1. Formular una hipótesis clara y falsable antes de construir cualquier producto o función
+      2. Diseñar el experimento de forma que pueda fallar (si no puede fallar, no se puede aprender)
+      3. Ejecutar el experimento a pequeña escala antes de comprometer recursos grandes
+      4. Analizar los resultados empíricos y contrastarlos contra la hipótesis original
+
+
+####################################################################################################
+[183/183] dominio core . LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO
+  madre: no_shop_agreement
+  hijo:  dividends_terms
+  el resolutor cambio algun id de esta fila: no
+  senal del barrido: titulo_ratio 72.3 . contencion 0.455 . familia_paso None . familia_hijo None
+####################################################################################################
+
+  EL PASO DE LA MADRE QUE EL BARRIDO CASO (numero 2):
+    Ten claro que esta cláusula es vinculante desde que firmas la hoja de términos (term sheet), a diferencia del resto de sus condiciones
+
+  MADRE . no_shop_agreement
+    titulo: Acuerdo de Exclusividad (No-Shop Agreement)
+    fuente: Venture Deals - Brad Feld | fase: ejecucion
+    entregable: Cláusula de exclusividad (no shop) firmada, con plazo, obligación de aviso y consecuencias de incumplimiento claramente definidas
+    pasos_accionables (4), ENTEROS:
+      1. Define el período de exclusividad (comúnmente 30, 60 o 90 días)
+      2. Ten claro que esta cláusula es vinculante desde que firmas la hoja de términos (term sheet), a diferencia del resto de sus condiciones
+      3. Establece la obligación de avisar si alguien más se te acerca durante este periodo
+      4. Negocia qué pasa si no cierras la transacción en el plazo acordado, para que la obligación termine ahí
+
+  HIJO . dividends_terms
+    titulo: Dividendos en la hoja de términos (term sheet) de tu ronda
+    fuente: Venture Deals | fase: planificacion
+    entregable: Una cláusula de dividendos negociada, con protección del consejo (board) y claridad sobre cómo se paga.
+    pasos_accionables (4), ENTEROS:
+      1. Revisa si el dividendo es acumulativo o no acumulativo y cuál es su porcentaje.
+      2. Calcula qué tanto te afecta ese dividendo tanto si el negocio va muy bien como si va mal.
+      3. Pide que cualquier decisión de repartir dividendos necesite el visto bueno de una mayoría amplia del consejo (board).
+      4. Fíjate si el dividendo se paga en efectivo o en más acciones, porque esto último te diluye todavía más.
+
+====================================================================================================
+FIN DEL MATERIAL. 33 pares impresos enteros.
+El juicio A/B/C/D (banco 9.6.1) y la direccion (9.6.2) los pone la lectura,
+no este instrumento: aqui solo se imprime el material y se prueban las guardas.
+====================================================================================================

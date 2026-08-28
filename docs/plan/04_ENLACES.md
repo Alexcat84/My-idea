@@ -392,6 +392,32 @@ el encargo preveia para el tramo mas debil de la bolsa (mediana de `titulo_ratio
 **76,2** contra **84,3** del tramo 1), asi que **se publica con la cifra y sin
 maquillarla**.
 
+**EL CIERRE DE `OP-E-03`: LAS 183 DE 183, RECONTADAS DE LOS CUATRO FICHEROS DE TRAMO (2026-08-27).**
+Los apartados de arriba se quedan enteros, sin borrar una palabra. **`OP-E-03` QUEDA LEIDA ENTERA: 183 de 183**, recontadas de los CUATRO ficheros de tramo que existen (el encargo de la vuelta 99 decia "tres"; la cuenta real de hoy es cuatro, declarado como discrepancia de redaccion del encargo, no del trabajo).
+
+| ficheros de tramo | filas |
+|---|---:|
+| `OP_E_03_LECTURA_TRAMO1_V96.jsonl` | 40 (1 a 40) |
+| `OP_E_03_LECTURA_TRAMO2_V97.jsonl` | 60 (41 a 100) |
+| `OP_E_03_LECTURA_TRAMO3_V98.jsonl` | 50 (101 a 150) |
+| `OP_E_03_LECTURA_TRAMO4_V99.jsonl` | 33 (151 a 183) |
+| **total** | **183** |
+
+| cierre de la operacion entera | cifra |
+|---|---:|
+| clase A, REPITE | **3** |
+| clase B, DUDOSO | **2** |
+| clase C, SANO CON FIGURA | **1** (par 111) |
+| clase D, CONTINUA | **177** |
+| direccion leida y afirmada | **95** |
+| direccion NO RESUELTA, declarada | **88** (48,1%) |
+| direcciones invertidas y afirmadas | **2** (pares 16, 114) |
+| aristas escritas o retiradas en toda la operacion | **0** |
+
+**EL CUARTO TRAMO (filas 151 a 183, 33 pares) por si solo:** clase D **33**, direccion leida **13**, NO RESUELTA **20** (**60,6%**), mediana de `titulo_ratio` **73,2** (maximo 81,6, la mas baja de la bolsa). **CONFIRMA LA PREDICCION DEL ACTA 98**: proporcion NO RESUELTA por encima del 60,0%.
+
+**ESTADO DE `OP-E-03` SE QUEDA EN `LISTA`**: la lectura esta completa, pero mover `estado` a `HECHA` es una decision que este addendum no toma; la TAREA 4 del encargo de la vuelta 99 mide, sin resolver, que las dependencias declaradas (`OP-E-01`, `OP-U-02`) no estan en `HECHA`.
+
 **CORRECCION DECLARADA (vuelta 99, TAREA 2, relectura conjunta del par 147, acta
 98 seccion 3.2). EL PARRAFO DE ARRIBA NO SE BORRA: es el texto viejo.** El
 auditor discrepo de la unica lectura ciega de las once (`consortium_benchmarking`

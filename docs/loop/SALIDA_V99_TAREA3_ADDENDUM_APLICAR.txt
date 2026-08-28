@@ -1,0 +1,38 @@
+====================================================================================================
+ADDENDUM DE CIERRE DE OP-E-03, VUELTA 99 (APLICADO)
+====================================================================================================
+FECHA LEIDA DE GIT: 27 ago 2026 (2026-08-27).
+EL BORDE DE LA ADJUDICACION 3.7: (a) instrumentos corridos hoy: SI; (b) puramente aditiva: SI; (c) estado sigue en 'LISTA': SI
+
+--- lo que se anade a la nota de OP-E-03 (aditivo) ---
+ADDENDUM DE CIERRE (27 ago 2026, vuelta 99, TAREA 3): OP-E-03 QUEDA LEIDA ENTERA, 183 DE 183. LA FECHA SE LEYO DE GIT EN ESTA VUELTA con `git log --all --format=%ad --date=short` sobre los commits cuyo asunto empieza por "VUELTA 99", y da 2026-08-27: no esta tecleada. SE LEYERON LAS FILAS 151 A 183, LAS 33 QUE QUEDABAN, con el mismo instrumento de los tres tramos anteriores (scripts/loop/vuelta96_tarea3_tramo1_opE03.py --desde 150 --cuantos 33) sin tocarle una linea. CON ESO OP-E-03 QUEDA LEIDA ENTERA: 183 de 183. RESULTADO DE ESTE CUARTO TRAMO: A 0, B 0, C 0, D 33; direccion 13 leida y afirmada, 20 NO RESUELTA (60,6%), 0 invertidas. Mediana de titulo_ratio del tramo: 73,2 (n=33, maximo 81,6), la mas baja de toda la bolsa, confirmando la prediccion medida del acta 98: proporcion NO RESUELTA por encima del 60,0%, y asi sale (60,6%), asi que NO se marca discutible por la letra de ese mismo encargo (solo se marca si sale MAS BAJA que la tendencia). CIERRE DE LA OPERACION ENTERA, recontado de los CUATRO ficheros de tramo que existen hoy (el encargo dice tres; la medicion de esta vuelta dice cuatro, y se declara la discrepancia: TRAMO1_V96 40 + TRAMO2_V97 60 + TRAMO3_V98 50 + TRAMO4_V99 33 = 183 de 183): clase A 3, B 2, C 1, D 177; direccion leida y afirmada 95, NO RESUELTA 88 (48,1%); direcciones invertidas y afirmadas 2 (pares 16, 114); el UNICO C de toda la lectura sigue siendo el par 111 (banco 9.22, primer polo, enlace mutuo, cero aristas). ESTADO SE QUEDA EN LISTA: cambiarlo es una decision, y la TAREA 4 de este mismo encargo mide, sin resolver, que las dos dependencias declaradas de OP-E-03 (OP-E-01 y OP-U-02) no estan en HECHA. CERO ARISTAS ESCRITAS O RETIRADAS EN TODA LA OPERACION: OP-E-03 es LECTURA DIRIGIDA y su producto es el juicio, no el grafo. Salidas de esta vuelta: docs/plan/OP_E_03_LECTURA_TRAMO4_V99.jsonl (33 filas), docs/loop/SALIDA_V99_TAREA3_TRAMO3_MATERIAL.txt, docs/loop/SALIDA_V99_TAREA3_CINCO_PUNTOS.txt, docs/loop/SALIDA_V99_TAREA3_MUTACION.txt.
+
+--- lo que se anade a docs/plan/04_ENLACES.md (aditivo) ---
+
+**EL CIERRE DE `OP-E-03`: LAS 183 DE 183, RECONTADAS DE LOS CUATRO FICHEROS DE TRAMO (2026-08-27).**
+Los apartados de arriba se quedan enteros, sin borrar una palabra. **`OP-E-03` QUEDA LEIDA ENTERA: 183 de 183**, recontadas de los CUATRO ficheros de tramo que existen (el encargo de la vuelta 99 decia "tres"; la cuenta real de hoy es cuatro, declarado como discrepancia de redaccion del encargo, no del trabajo).
+
+| ficheros de tramo | filas |
+|---|---:|
+| `OP_E_03_LECTURA_TRAMO1_V96.jsonl` | 40 (1 a 40) |
+| `OP_E_03_LECTURA_TRAMO2_V97.jsonl` | 60 (41 a 100) |
+| `OP_E_03_LECTURA_TRAMO3_V98.jsonl` | 50 (101 a 150) |
+| `OP_E_03_LECTURA_TRAMO4_V99.jsonl` | 33 (151 a 183) |
+| **total** | **183** |
+
+| cierre de la operacion entera | cifra |
+|---|---:|
+| clase A, REPITE | **3** |
+| clase B, DUDOSO | **2** |
+| clase C, SANO CON FIGURA | **1** (par 111) |
+| clase D, CONTINUA | **177** |
+| direccion leida y afirmada | **95** |
+| direccion NO RESUELTA, declarada | **88** (48,1%) |
+| direcciones invertidas y afirmadas | **2** (pares 16, 114) |
+| aristas escritas o retiradas en toda la operacion | **0** |
+
+**EL CUARTO TRAMO (filas 151 a 183, 33 pares) por si solo:** clase D **33**, direccion leida **13**, NO RESUELTA **20** (**60,6%**), mediana de `titulo_ratio` **73,2** (maximo 81,6, la mas baja de la bolsa). **CONFIRMA LA PREDICCION DEL ACTA 98**: proporcion NO RESUELTA por encima del 60,0%.
+
+**ESTADO DE `OP-E-03` SE QUEDA EN `LISTA`**: la lectura esta completa, pero mover `estado` a `HECHA` es una decision que este addendum no toma; la TAREA 4 del encargo de la vuelta 99 mide, sin resolver, que las dependencias declaradas (`OP-E-01`, `OP-U-02`) no estan en `HECHA`.
+
+APLICADO. Re-lectura: OPERACIONES.jsonl 71 filas validas, addendum presente, estado sigue en 'LISTA': SI

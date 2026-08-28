@@ -4980,3 +4980,74 @@ de autor en toda cifra, y esta es del auditor, no del ejecutor ni del dato.
 pregunta al fundador y (b) toda declaracion de regimen o de cumplimiento de una
 regla.** En esta vuelta, cualquier afirmacion de esos dos tramos lleva su
 medicion pegada con el comando o no se escribe; se aplica en el REPORTE final.
+
+## VUELTA 99, TAREA 3: EL CIERRE DE OP-E-03, 183 DE 183
+
+Las 33 que quedaban (filas 151 a 183 de `docs/plan/DIFERENCIA_CONTRA_COLA.jsonl`)
+se leyeron enteras con el material de
+`scripts/loop/vuelta96_tarea3_tramo1_opE03.py --desde 150 --cuantos 33`
+(`docs/loop/SALIDA_V99_TAREA3_TRAMO3_MATERIAL.txt`, EXIT 0, cinco puntos
+remedidos en `docs/loop/SALIDA_V99_TAREA3_CINCO_PUNTOS.txt`: cribado 3.388,
+resolutor no movio ninguno de las 33, 2.796 reproducido por cuarta vez,
+marca completa, cero fugas contra la cola). Escritas en
+`docs/plan/OP_E_03_LECTURA_TRAMO4_V99.jsonl` con
+`scripts/loop/vuelta99_tarea3_escribir_tramo4.py`, cuyas guardas se probaron
+por mutacion (`docs/loop/SALIDA_V99_TAREA3_MUTACION.txt`): 1 control VERDE, 7
+mutaciones y las 7 caen. **DECLARADO Y NO FABRICADO**: la clase y la direccion
+de cada una de las 33 son lectura a mano contra el grafo, sin caso rojo
+automatico; su control es la relectura ciega del auditor.
+
+**RESULTADO DEL CUARTO TRAMO**, contado del JSONL: **33 filas, las 33 en clase
+D**, direccion **13 leida y afirmada, 20 NO RESUELTA (60,6%)**, cero
+invertidas. Mediana de `titulo_ratio` **73,2** (n=33, maximo 81,6), la mas
+baja de toda la bolsa. **CONFIRMA LA PREDICCION MEDIDA DEL ACTA 98** (tramo
+mas debil, NO RESUELTA por encima del 60,0%): sale **60,6%**, por encima, asi
+que NO se marca discutible por la letra del propio encargo (solo se marca si
+sale mas baja que la tendencia).
+
+**LAS FIGURAS DEL TROZO, REGISTRADAS Y SIN ADJUDICAR** (contadas de
+`docs/plan/OP_E_03_LECTURA_TRAMO4_V99.jsonl` por su propio texto de razon):
+
+| figura | puestos |
+|---|---|
+| NODO IMAN | 156, 157, 158 (`metricas_calidad`, hijo de tres madres distintas); 159, 173 (`establecer_metas_caracteristicas`, hijo de dos madres distintas) |
+| FALSO AMIGO POR TOKEN COMPARTIDO | 151, 157, 160, 168, 171, 178, 181 |
+| CASADO POR OBJETO Y NO POR ACCION | 163 |
+
+El nodo iman `metricas_calidad` calza limpio en dos de sus tres pares (156 y
+158, donde el paso casado nombra la operacion literal) y falla en el tercero
+(157, donde la madre busca proxies de valores intangibles y el hijo es una
+plantilla generica); el nodo iman `establecer_metas_caracteristicas` falla en
+sus dos pares (159 y 173, los dos porque la madre decide o autoriza algo
+DISTINTO de fijar metas). Ninguna figura se colapsa por ser iman: cada par se
+juzgo por su propio contenido, tal como el acta 98 3.5 nombra la frontera
+(donde cae la tension).
+
+**CIERRE DE LA OPERACION ENTERA**, addendum aplicado con
+`scripts/loop/vuelta99_tarea3_addendum_cierre_opE03.py --aplicar`
+(`docs/loop/SALIDA_V99_TAREA3_ADDENDUM_APLICAR.txt`), simulado antes
+(`docs/loop/SALIDA_V99_TAREA3_ADDENDUM_SIMULAR.txt`) e idempotente probado en
+vivo (`docs/loop/SALIDA_V99_TAREA3_ADDENDUM_IDEMPOTENCIA.txt`, EXIT 1 al
+reaplicar). Recontado de los **CUATRO** ficheros de tramo que existen hoy (el
+encargo dice "tres"; la medicion de esta vuelta dice cuatro, declarado como
+discrepancia de redaccion y no del trabajo: `TRAMO1_V96` 40 + `TRAMO2_V97` 60
++ `TRAMO3_V98` 50 + `TRAMO4_V99` 33 = **183**):
+
+| cierre de la operacion entera | cifra |
+|---|---:|
+| clase A, REPITE | **3** |
+| clase B, DUDOSO | **2** |
+| clase C, SANO CON FIGURA | **1** (par 111) |
+| clase D, CONTINUA | **177** |
+| direccion leida y afirmada | **95** |
+| direccion NO RESUELTA, declarada | **88** (48,1%) |
+| direcciones invertidas y afirmadas | **2** (pares 16, 114) |
+| aristas escritas o retiradas en toda la operacion | **0** |
+
+**ESTADO DE `OP-E-03` SE QUEDA EN `LISTA`**: cambiarlo es una decision que
+este addendum no toma; la TAREA 4 mide, sin resolver, que sus dos
+dependencias declaradas no estan en HECHA (ver seccion siguiente).
+Aditividad verificada char a caracter: `docs/plan/OPERACIONES.jsonl` tiene
+UNA sola fila distinta (`OP-E-03`), su `nota` vieja es prefijo exacto de la
+nueva y ningun otro campo cambio; `docs/plan/04_ENLACES.md` da **26
+anadidas, 0 borradas** por `git diff --numstat`.
