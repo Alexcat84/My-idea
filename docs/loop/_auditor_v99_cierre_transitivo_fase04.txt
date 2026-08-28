@@ -1,0 +1,15 @@
+operaciones totales: 71
+por estado: {'LISTA': 70, 'HECHA': 1}
+por fase: {'01_FUENTES': 7, '02_DESTEJIDOS': 9, '05_SANEO': 10, '00_CODIGO': 7, '03_FUSIONES': 16, '04_ENLACES': 10, '06_MESAS': 5, '07_ADUANA': 2, '08_VERIFICACION': 1, '09_LECTURAS_DIRIGIDAS': 3, '10_INVENTARIO': 1}
+
+--- CIERRE TRANSITIVO de las 10 de 04_ENLACES (mi vara) ---
+OP-E-01            estado=LISTA  bloqueantes transitivos= 0 fases=(ninguna)
+OP-E-02            estado=HECHA  bloqueantes transitivos= 0 fases=(ninguna)
+OP-E-03            estado=LISTA  bloqueantes transitivos=18 fases=['00_CODIGO', '01_FUENTES', '02_DESTEJIDOS', '03_FUSIONES', '04_ENLACES']
+OP-M-03-ENLACES    estado=LISTA  bloqueantes transitivos= 5 fases=['02_DESTEJIDOS', '03_FUSIONES', '06_MESAS']
+OP-E-04            estado=LISTA  bloqueantes transitivos= 6 fases=['01_FUENTES', '02_DESTEJIDOS', '03_FUSIONES', '06_MESAS']
+OP-E-05            estado=LISTA  bloqueantes transitivos= 6 fases=['01_FUENTES', '02_DESTEJIDOS', '03_FUSIONES', '06_MESAS']
+OP-M-01-ESLABONES  estado=LISTA  bloqueantes transitivos= 6 fases=['01_FUENTES', '02_DESTEJIDOS', '03_FUSIONES', '06_MESAS']
+OP-M-01-SEXTO      estado=LISTA  bloqueantes transitivos= 6 fases=['01_FUENTES', '02_DESTEJIDOS', '03_FUSIONES', '06_MESAS']
+OP-E-06            estado=LISTA  bloqueantes transitivos=10 fases=['01_FUENTES', '02_DESTEJIDOS', '06_MESAS']
+OP-E-07            estado=LISTA  bloqueantes transitivos=11 fases=['01_FUENTES', '02_DESTEJIDOS', '04_ENLACES', '06_MESAS']
