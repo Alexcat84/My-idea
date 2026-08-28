@@ -1,0 +1,31 @@
+--- CASO (a): --vuelta 101 sobre el repo real, DESPUES del arreglo ---
+VERDE: los 9 ficheros SALIDA_V101_*_APERTURA.txt nacieron todos en el primer commit de la vuelta (hijo directo del acta):
+   SALIDA_V101_CONTEO_APERTURA.txt -- nacido en a3263243, padre c6476cb7
+   SALIDA_V101_DESFASE_CALIBRADO_APERTURA.txt -- nacido en a3263243, padre c6476cb7
+   SALIDA_V101_ETIQUETAS_APERTURA.txt -- nacido en a3263243, padre c6476cb7
+   SALIDA_V101_GATE0_CMD1_APERTURA.txt -- nacido en a3263243, padre c6476cb7
+   SALIDA_V101_HEAD_APERTURA.txt -- nacido en a3263243, padre c6476cb7
+   SALIDA_V101_MOTOR_APERTURA.txt -- nacido en a3263243, padre c6476cb7
+   SALIDA_V101_SYNC_APERTURA.txt -- nacido en a3263243, padre c6476cb7
+   SALIDA_V101_TSC_APERTURA.txt -- nacido en a3263243, padre c6476cb7
+   SALIDA_V101_WEB_APERTURA.txt -- nacido en a3263243, padre c6476cb7
+CASO (a): OK (VERDE, exit 0)
+
+--- CASO (b): --vuelta 100 sobre el repo real, caso negativo sin cambios ---
+ROJO, apertura de la vuelta 100 NO sellada antes de la 1.a operacion (8 cosa(s) no cuadran):
+   SALIDA_V100_CONTEO_APERTURA.txt nacio en 592cf8bc, cuyo padre es 94ab70f3 (no el commit del acta c8827ef7): no se sello antes de la 1.a operacion
+   SALIDA_V100_DESFASE_CALIBRADO_APERTURA.txt nacio en 592cf8bc, cuyo padre es 94ab70f3 (no el commit del acta c8827ef7): no se sello antes de la 1.a operacion
+   SALIDA_V100_ETIQUETAS_APERTURA.txt nacio en 592cf8bc, cuyo padre es 94ab70f3 (no el commit del acta c8827ef7): no se sello antes de la 1.a operacion
+   SALIDA_V100_GATE0_CMD1_APERTURA.txt nacio en 592cf8bc, cuyo padre es 94ab70f3 (no el commit del acta c8827ef7): no se sello antes de la 1.a operacion
+   SALIDA_V100_MOTOR_APERTURA.txt nacio en 592cf8bc, cuyo padre es 94ab70f3 (no el commit del acta c8827ef7): no se sello antes de la 1.a operacion
+   SALIDA_V100_SYNC_APERTURA.txt nacio en 592cf8bc, cuyo padre es 94ab70f3 (no el commit del acta c8827ef7): no se sello antes de la 1.a operacion
+   SALIDA_V100_TSC_APERTURA.txt nacio en 592cf8bc, cuyo padre es 94ab70f3 (no el commit del acta c8827ef7): no se sello antes de la 1.a operacion
+   SALIDA_V100_WEB_APERTURA.txt nacio en 592cf8bc, cuyo padre es 94ab70f3 (no el commit del acta c8827ef7): no se sello antes de la 1.a operacion
+CASO (b): OK (ROJO, exit 1)
+
+--- CASO (c): fichero de apertura movido al 2.o commit, en copia temporal ---
+ROJO, apertura de la vuelta 5 NO sellada antes de la 1.a operacion (1 cosa(s) no cuadran):
+   SALIDA_V5_TARDIO_APERTURA.txt nacio en 86e3e4d1, cuyo padre es 3017c84f (no el commit del acta 94ae91d3): no se sello antes de la 1.a operacion
+CASO (c): OK (ROJO, exit 1, nombra el tardio real y calla el de MUTACION)
+
+VERDE GENERAL: los tres casos (a), (b) y (c) dan el veredicto esperado.

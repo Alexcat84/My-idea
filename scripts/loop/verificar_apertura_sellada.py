@@ -44,6 +44,48 @@ vuelta 101 (bien sellada, con TODOS sus `*_APERTURA.txt` en el primer commit
 de la vuelta); (b) ROJO sobre la vuelta 100, el caso negativo real, sin
 inventar nada: nombra los ocho ficheros que nacieron en 592cf8bc en vez de en
 300802d1.
+
+--- LA GUARDA QUE SE ENVENENA SOLA (TAREA 1.3 de la vuelta 102, acta de la
+vuelta 101, "PRIMERA, DE REPORTE, Y ACUMULA") ---
+
+POR QUE NACE. `ficheros_apertura()` hacia glob de
+`SALIDA_V<vuelta>_*_APERTURA.txt` sobre el arbol de trabajo, y ese patron
+CASA CON SU PROPIA SALIDA: la prueba de mutacion de esta guarda escribe
+`docs/loop/SALIDA_V<vuelta>_TAREA1_2_MUTACION_APERTURA.txt`, que empieza por
+`SALIDA_V<vuelta>_` y termina en `_APERTURA.txt` igual que cualquier
+medicion real. El dia que nace no esta commiteada (glob solo ve el arbol de
+trabajo, "ningun commit lo anade"), y desde el commit siguiente nace en el
+SEGUNDO commit de la vuelta, nunca en el primero: una guarda que no puede
+estar VERDE ni el dia que nace ni ningun dia despues, y que se prueba a si
+misma como si fuera una medicion de apertura.
+
+LA DECISION (declarada aqui, con su motivo): `ficheros_apertura()` DESCARTA
+todo `SALIDA_V<vuelta>_*_APERTURA.txt` cuyo segmento intermedio (el `*` del
+patron) contenga la palabra `MUTACION`. Ninguna medicion de apertura real
+(HEAD, GATE0_CMD1, ETIQUETAS, SYNC, MOTOR, WEB, TSC, CONTEO,
+DESFASE_CALIBRADO, y las que se sumen despues) lleva `MUTACION` en su
+nombre: es una palabra reservada para las propias salidas de prueba de esta
+guarda, por convencion desde esta vuelta en adelante. NO SE USO UNA NOMINA
+CERRADA de nombres de medicion porque esa lista ha crecido de verdad entre
+vueltas (ETIQUETAS y SYNC no existian antes de la vuelta 100) y una nomina
+fija se volveria ciega a una medicion nueva y legitima que alguien olvide
+anadir a la lista; excluir por la palabra `MUTACION` no tiene ese defecto,
+porque una medicion real nunca la necesita para nombrarse.
+
+LA GUARDA NO SE VUELVE CIEGA A UN FICHERO DE APERTURA QUE LLEGUE TARDE DE
+VERDAD: la exclusion es por el NOMBRE (contener `MUTACION`), no por cuando
+nacio el fichero; cualquier `SALIDA_V<vuelta>_<KIND>_APERTURA.txt` real,
+nazca en el primer commit o mas tarde, se sigue viendo y comprobando igual
+que antes. Lo unico que deja de verse es la prueba de esta misma guarda.
+
+PRUEBA DE MUTACION (con su salida commiteada,
+docs/loop/SALIDA_V102_TAREA1_3_MUTACION_APERTURA.txt): (a) VERDE sobre la
+vuelta 101 DESPUES del arreglo (con `SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`
+todavia presente en el arbol de trabajo, la guarda ya no se la come); (b)
+ROJO sobre la vuelta 100, que sigue siendo el caso negativo real, sin
+cambios; (c) ROJO si se mueve a mano un fichero de apertura real al SEGUNDO
+commit, sobre una copia temporal de repositorio (nunca sobre el repo real):
+ver scripts/loop/vuelta102_tarea1_prueba_mutacion_apertura.py, caso (c).
 """
 import argparse
 import glob
@@ -95,9 +137,21 @@ def commit_acta(vuelta, rama, fallos):
     return hallados[0]
 
 
+def es_prueba_de_esta_guarda(nombre, vuelta):
+    """Descarta las propias salidas de la prueba de mutacion de esta guarda
+    (ver docstring, 'LA GUARDA QUE SE ENVENENA SOLA'): el segmento intermedio
+    del nombre (entre el prefijo SALIDA_V<vuelta>_ y el sufijo _APERTURA.txt)
+    contiene la palabra MUTACION, que ninguna medicion real usa."""
+    prefijo = "SALIDA_V%d_" % vuelta
+    sufijo = "_APERTURA.txt"
+    medio = nombre[len(prefijo):-len(sufijo)]
+    return "MUTACION" in medio
+
+
 def ficheros_apertura(vuelta):
     patron = os.path.join(LOOP, "SALIDA_V%d_*_APERTURA.txt" % vuelta)
-    return sorted(os.path.basename(p) for p in glob.glob(patron))
+    candidatos = sorted(os.path.basename(p) for p in glob.glob(patron))
+    return [n for n in candidatos if not es_prueba_de_esta_guarda(n, vuelta)]
 
 
 def commit_de_nacimiento(nombre, rama, fallos):
