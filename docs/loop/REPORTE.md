@@ -1,80 +1,80 @@
-# REPORTE VUELTA 120 (MODO AUSTERO, tope 80 lineas)
+# REPORTE VUELTA 121 (MODO AUSTERO, tope 80 lineas)
 
-Apertura sellada en vivo: `SALIDA_V120_HEAD_APERTURA.txt` = `5bf5f786`, primer
-commit de la vuelta `bac06ba5` (hijo directo), `verificar_apertura_sellada.py
---vuelta 120` VERDE (8 ficheros, todos nacidos en `bac06ba5`).
+Apertura sellada en vivo: `SALIDA_V121_HEAD_APERTURA.txt` = `7c0ae05e`, primer
+commit de la vuelta `aae83782` (hijo directo), `verificar_apertura_sellada.py
+--vuelta 121` VERDE (8 ficheros, todos nacidos en `aae83782`).
 
-**CABECERA**, tallada con `python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 120`:
+**CABECERA: NO TALLABLE ESTA VUELTA, CAIDA DEL EJECUTOR declarada, no
+tapada.** `python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta
+121` cae en ROJO: `no se pudo leer motor APERTURA` (salida completa en
+`SALIDA_V121_CABECERA_TALLADA.txt`). Causa: al medir la apertura corri
+`run_phase1.py --reaplico-curaduria` SOLO y meddi `MOTOR` antes de completar
+el ciclo de tres, el mismo error que `ACTA_AUDITOR.md` (lineas 7060-65 y
+23790-23820) ya nombra como patron a matar ("el ciclo se corre entero o no se
+corre"): `SALIDA_V121_MOTOR_APERTURA.txt` quedo con `EXIT 1`,
+`test_gate_alias`, 71 divergentes, YA COMMITEADO Y PUSHEADO; no se reescribe
+un fichero de apertura ya sellado. Para el CIERRE si complete el ciclo ANTES
+de medir (`SALIDA_V121_GATE0_CMD1_CIERRE.txt`, luego `etiquetas_de_cara.py
+--aplicar`, luego `sync_assets_web.py`, luego las seis lecturas), y esa mitad
+SI es tallable: censo 3.853/3.188/665, Gate 0 OK (0 divergentes), aristas
+9.190/9.169/18.359/9.813, motor 25/25, web 80 ficheros/1.030 tests (3
+skipped), tsc EXITCODE 0 cero lineas, marcador A 551/B 72/C 5/D 2.760 n
+3.388, desfase 1 fila (`ganar_comprension_del_cliente ->
+dia_en_la_vida_del_cliente`), HEAD de cierre `129c6909` (`SALIDA_V121_HEAD_
+CIERRE.txt`, sellado tras la ultima operacion de contenido). El motor
+APERTURA real (no la instantanea rota) SI paso 25/25 tras completar su
+propio ciclo, minutos despues: ver `SALIDA_V121_OPS03_MOTOR_POST.txt` y el
+`git diff --numstat` en cero de las dos vueltas al ciclo.
 
-| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
-|---|---:|---:|
-| censo: nodos / vivos / deprecados | 3.853 / 3.188 / 665 | **3.853 / 3.188 / 665** |
-| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
-| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 9.190 / 9.169 / 18.359 / 9.813 | **9.190 / 9.169 / 18.359 / 9.813** |
-| motor | 25/25 | **25/25** |
-| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
-| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
-| marcador del cribado `A` / `B` / `C` / `D`, `n` | 551 / 72 / 5 / 2.760, n 3.388 | **551 / 72 / 5 / 2.760, n 3.388** |
-| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
-| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 1 fila(s): `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **1 fila(s): `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `5bf5f786` (asunto real leido de git log: 'ACTA DE LA VUELTA 119 DEL AUDITOR: dato impecable, guardas perdidas, y un universal mio que era falso.'), HEAD real de apertura `5bf5f786` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `32a03035` (leido de `SALIDA_V120_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+**TAREA 1.** Sello de apertura y cierre, siete salidas APERTURA y siete
+CIERRE con nombre canonico. Ciclo de tres corrido CUATRO veces esta vuelta
+(apertura, tras TAREA 3, cierre-primer-intento, cierre-recapturado):
+`git diff --numstat` sobre `dataset/web/engine` en cero las cuatro veces.
+Guardas por operacion: `SALIDA_V121_OPS03_*` y `SALIDA_V121_OPS04_*`
+(GATE0/MOTOR/WEB/TSC POST) miden el MISMO checkpoint acumulado tras las dos
+escrituras (declarado, no fingido aislado). Commits `aae83782`, `129c6909`.
 
-Pegada entera desde `python scripts/loop/tallar_cabecera_reporte.py --fase04
---vuelta 120`, sin editar ninguna celda.
+**TAREA 2.** Registros aditivos en `docs/PENDIENTES.md` (39/0 total, `git
+diff --numstat`, `grep -c "^-[^-]"` en 0). (2.a) SEXTA entrada de la ficha
+`vigencia-del-marco-internacional`: `seguro_exportacion` perdio "Incoterms"
+de su paso 1 en la fusion del `ACTO 16` (vuelta 57, `0481113f`); PENDIENTE DE
+DOCTRINA de `OP-S-02` ADJUDICADO por remision citando P.13 y el punto 2 de la
+decision del 28 ago 2026, sin doctrina nueva; nota de `OP-S-02` en
+`OPERACIONES.jsonl` ampliada, estado sigue HECHA. (2.b) Correccion declarada
+en R.3: el `REPORTE.md` de la 120 (`d557e431`, linea 42) aplano "ambas EXIT 1
+limpio" cuando el propio R.3 ya distinguia ROJO limpio de `ValueError` sin
+capturar. Commit `aae83782`.
 
-**TAREA 1.** Sello de apertura en vivo (guarda perdida en la 119, ahora VERDE)
-y siete salidas con nombre canonico. Ciclo de tres corrido dos veces (apertura
-y cierre): `run_phase1.py --reaplico-curaduria` revierte 71 etiquetas y NUNCA
-se dejo asi, siempre seguido de `etiquetas_de_cara.py --aplicar` y
-`sync_assets_web.py`; `git diff --numstat` sobre `dataset/web/engine` en cero
-las dos veces. Commit `bac06ba5`.
+**TAREA 3.a.** `OP-S-03` (export.gov a trade.gov) **HECHA**. Nomina
+remedida contra el grafo de hoy: intacta, 3 nodos vivos. Cuatro menciones
+(no tres) cambiadas en los cuatro puntos exactos, `scripts/loop/vuelta121_
+tarea3a_export_gov_ops03.py` con simulacion, mutacion negativa y ROJO real en
+segunda pasada (las tres pegadas, `SALIDA_V121_OPS03_SIMULACION.txt`,
+`..._MUTACION_NEGATIVA.txt`, `..._ROJO_SEGUNDA_PASADA.txt`). `git status
+--porcelain` vacio tras el rojo (sin escritura nueva). Gate 0 verde despues.
+Commit `129c6909`.
 
-**TAREA 2.** Tres registros aditivos en `docs/PENDIENTES.md` (88/0, `git diff
---numstat`, `grep -c "^-[^-]"` en 0). R.1: el "SIEMPRE" de la `M` espuria
-(acta 118 seccion 4.2, heredado por reporte 119 y docstring de
-`vuelta119_tarea1_guarda_op_c05_contenido.py`) es FALSO como universal,
-reverificado hoy: `--caso-rojo` de la guarda vieja EXIT 0, `git status
---porcelain -- dataset/` vacio antes y despues. Se corrige el diagnostico, no
-el arreglo; ningun codigo se reescribe. R.2: quinta entrada de la ficha
-`vigencia-del-marco-internacional`: el superviviente de `OP-S-01` sigue
-diciendo NAFTA en `resumen_teorico`/`pasos_accionables` pese al titulo ya
-corregido; anotado, nodo sin tocar. R.3: caso positivo que faltaba de las
-guardas de `OP-S-01`, corridas hoy: ambas EXIT 1 limpio (titulo: "no se pisa
-un estado distinto al medido"; operaciones: `ValueError` sin capturar en
-`verif.index(PUNTO4_VIEJO)`, ya fuera de lista tras la 119). Ninguna escribio
-nada. Commit `02c734ba`.
+**TAREA 3.b.** `OP-S-04` (seis herramientas muertas, REMEDIO ESPEJO)
+**HECHA**. Nomina remedida: intacta, 5 nodos vivos. Ocho campos
+generalizados con ejemplo vivo de la nomina verificada (AdRoll, Adbeat,
+BuySellAds), `scripts/loop/vuelta121_tarea3b_herramientas_muertas_ops04.py`
+con las tres guardas pegadas igual que 3.a. `OP-S-05` **HECHA por remision**:
+sin nodos propios, la adjudicacion ya escrita queda consumida. Commit
+`129c6909`.
 
-**TAREA 3.a.** `OP-S-02` (Incoterms) **CERRADA con nomina remapeada**.
-Remedida contra el grafo de hoy: de los tres nodos de la nomina (11 ago 2026),
-DOS estan deprecados. `terminos_de_venta_incoterms` resuelve por alias a
-`incoterms_reglas_comerciales_internacionales`: la cita viaja.
-`seguro_de_carga_transporte` resuelve a `seguro_exportacion`: la cita **NO**
-viaja completa (el superviviente perdio la palabra "Incoterms" de su paso 1 en
-una fusion anterior). Version "Incoterms 2020" (`docs/PENDIENTES.md`, ficha
-`vigencia-del-marco-internacional`) escrita en
-`incoterms_reglas_comerciales_internacionales.resumen_teorico`, unico campo
-tocado, con ancla-guarda + simulacion + mutacion negativa pegadas
-(`SALIDA_V120_TAREA3A_SIMULACION.txt`, `..._MUTACION_NEGATIVA.txt`,
-`..._ESCRITURA.txt`). Ciclo de tres corrido, `git diff --numstat` 1/1 en los
-dos `master_graph.json` y en el nodo; Gate 0 y las tres suites verdes
-despues. `OPERACIONES.jsonl`: `OP-S-02` LISTA a HECHA, punto 1 de
-`verificacion` acotado por correccion declarada citando el remapeo, `nota`
-ampliada sin borrar texto viejo (guardas: `..._OPS_SIMULACION.txt`,
-`..._OPS_MUTACION_NEGATIVA.txt`, `..._OPS_ESCRITURA.txt`). `seguro_exportacion`
-**NO TOCADO**: restituir la palabra perdida es decision de contenido distinta
-a "anadir version a una cita que ya existe". Commit `32a03035`.
-
-**3.b.** `OP-S-03` en adelante **NO SE ABRIO**: `OP-S-02` sola llevo
-simulacion, mutacion negativa, dos ciclos de Gate 0 mas suites, y cierre de
-registro con guarda propia; `OP-S-03` exige la misma relectura entera. Limite
-de alcance, no parada; a diferencia de la 119, esta vuelta si entrego trabajo
-de fase 05 ejecutado (operacion real cerrada), no solo registro.
-
-**DISCUTIBLES MARCADOS.** (a) La quinta entrada de la ficha (TAREA 2, R.2) es
-adjudicacion del auditor por extension, no encargo literal del fundador sobre
-ese texto especifico. (b) `seguro_de_carga_transporte`/`seguro_exportacion`
-queda fuera de `OP-S-02` por lectura de alcance del ejecutor (restituir
-palabra perdida != anadir version), no por regla escrita; PENDIENTE DE
-DOCTRINA. (c) `OP-S-03` en adelante no se abrio (3.b).
-
-Commits de la vuelta: TAREA1 `bac06ba5`, TAREA2 `02c734ba`, TAREA3.a `32a03035`.
+**DISCUTIBLES MARCADOS**, para la relectura ciega del auditor. (a) La
+cabecera de apertura no se pudo tallar por caida propia del ejecutor (ver
+arriba); no es caida de reporte (se declara, no se inventa cifra), pero
+cuenta para el conteo de racha. (b) `seo_long_tail.pasos_accionables[4]`
+(oDesk/Elance) se generalizo SIN nombre propio: la nomina de vivas verificada
+no tiene ninguna plataforma de freelancers; PENDIENTE DE DOCTRINA si
+"plataforma de trabajo remoto" satisface la clausula de verificacion de
+`OP-S-04` sin ejemplo nombrado. (c) Sexto nodo FUERA de la nomina de
+`OP-S-04`, `inteligencia_de_anuncios_de_la_competencia` (nacido de
+`OP-F-04-WEI`, 14 ago 2026, DESPUES del censo de esta operacion), tambien
+nombra `Alexa`: anotado en `docs/PENDIENTES.md`, ficha
+`vigencia-de-herramientas-nombradas`, Entrada 7, NO TOCADO; PENDIENTE DE
+DOCTRINA si reabre `OP-S-04` o nace ficha aparte. (d) MODO AUSTERO 1 pedia
+DOS operaciones si cabian: cerraron las TRES (`OP-S-03`, `OP-S-04`,
+`OP-S-05`), suelo superado.
+Commits de la vuelta: TAREA1+TAREA2 `aae83782`, TAREA3 `129c6909`.
