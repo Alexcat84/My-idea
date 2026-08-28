@@ -1,0 +1,216 @@
+====================================================================================================
+RE-BARRIDO CON LA PREGUNTA COMPLETA, TAREA 4.3 VUELTA 105: 40 de 41 puestos del pool (los que no traen nota de paso mal casado)
+====================================================================================================
+
+SALTAN 1 puesto(s) por (4.1), nota de paso mal casado (NO se emite veredicto):
+  puesto 46: customer_discovery_get_out_of_building -> prueba_solucion_con_cliente -- cipio. SE ANOTA que el barrido caso el paso 1 y el hijo ejecuta en realidad el paso 2 ('Sal a entrevistar clientes potenciales de forma repetida'
+
+--- PUESTO 1 --- segmentos_de_clientes_problema_necesidad -> get_out_of_the_building (paso 1)
+  verbo citado: 'Sal'
+  objeto citado: 'del edificio (get out of the building), a observar como tus clientes viven el problema'
+  VEREDICTO: OBJETO -- aposicion literal (glosa en ingles que ES el hijo, no complemento que lo aloja): misma especie que el 88, no la que el encargo pide reclasificar
+
+--- PUESTO 2 --- medicion_servicios -> make_certain_programa (paso 3)
+  verbo citado: 'Implementar'
+  objeto citado: "el programa 'Make Certain'"
+  VEREDICTO: OBJETO -- objeto directo, nombra el programa que el hijo desarrolla
+
+--- PUESTO 4 --- consejo_de_calidad_y_rol_del_director -> planificacion_estrategica_despliegue_2 (paso 3)
+  verbo citado: 'Integra'
+  objeto citado: 'las metas de calidad en tus planes de negocio y de desempeño'
+  VEREDICTO: OBJETO -- objeto directo primero; 'en tus planes...' es complemento ADICIONAL, no el unico lugar donde vive el hijo
+
+--- PUESTO 9 --- dmadv_fase_verificacion -> capacidad_de_proceso (paso 2)
+  verbo citado: 'Haz'
+  objeto citado: 'un analisis de capacidad'
+  VEREDICTO: OBJETO -- objeto directo del primer verbo coordinado, nombra 'capacidad' literalmente
+
+--- PUESTO 14 --- medicion_servicios -> programa_make_certain (paso 3)
+  verbo citado: 'Implementar'
+  objeto citado: "el programa 'Make Certain'"
+  VEREDICTO: OBJETO -- mismo paso y mismo razonamiento que el puesto 2
+
+--- PUESTO 17 --- customer_discovery_overview -> mvp_catalogo_tecnicas (paso 3)
+  verbo citado: 'Muestrales'
+  objeto citado: 'tu producto minimo viable (MVP) y tu propuesta de valor'
+  VEREDICTO: OBJETO -- objeto directo, el MVP esta nombrado como lo que se muestra
+
+--- PUESTO 18 --- dmaic_fase_measure -> capacidad_del_proceso (paso 5)
+  verbo citado: 'medir'
+  objeto citado: 'su capacidad a corto plazo'
+  VEREDICTO: OBJETO -- objeto directo del segundo verbo coordinado
+
+--- PUESTO 20 --- waterfall_vs_agile_development -> modelo_customer_development (paso 3)
+  verbo citado: 'Alinear'
+  objeto citado: 'el proceso de desarrollo de producto con el proceso de Customer Development'
+  VEREDICTO: SATELITE -- complemento directo 'con + N' (con el proceso de Customer Development): el hijo vive en el termino regido por 'con', no en el objeto directo del verbo 'alinear'
+
+--- PUESTO 21 --- build_measure_learn -> value_proposition_canvas (paso 1)
+  verbo citado: 'Generar'
+  objeto citado: 'una hipotesis clara a partir de los Canvas de Value Proposition y Business Model'
+  VEREDICTO: SATELITE -- complemento de origen del verbo ('a partir de los Canvas...')
+
+--- PUESTO 38 --- obtencion_compromiso -> enfoque_etapa_investigacion (paso 4)
+  verbo citado: 'Pon'
+  objeto citado: 'tu esfuerzo de mejora en las etapas de investigacion y demostracion de capacidad'
+  VEREDICTO: SATELITE -- complemento de destino directo ('en las etapas de investigacion...')
+
+--- PUESTO 39 --- modelos_gestion_seguridad -> fallas_activas_condiciones_latentes (paso 4)
+  verbo citado: 'Incorporar'
+  objeto citado: 'analisis de condiciones latentes y defensas del sistema'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'condiciones latentes' literalmente
+
+--- PUESTO 42 --- cultura_justa_2 -> preguntar_que_no_quien (paso 2)
+  verbo citado: 'Preguntar'
+  objeto citado: "'que es responsable' en vez de 'quien es responsable'"
+  VEREDICTO: OBJETO -- objeto directo, es exactamente la distincion que el hijo desarrolla
+
+--- PUESTO 45 --- estrategia_de_innovacion_de_producto -> strat_map_arenas_estrategicas (paso 3)
+  verbo citado: 'Definir'
+  objeto citado: 'arenas estrategicas (mercados, tecnologias, sectores)'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'arenas estrategicas' literalmente
+
+--- PUESTO 47 --- reporte_estado_miembro_equipo -> variance_analysis (paso 3)
+  verbo citado: 'Identificar'
+  objeto citado: 'las causas raiz de las variaciones en actividades y costos'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'variaciones' literalmente
+
+--- PUESTO 48 --- concepto_proyecto_breakthrough -> proyectos_vitales_pocos (paso 2)
+  verbo citado: 'Clasificar'
+  objeto citado: "el proyecto como parte de los 'vitales pocos' o 'utiles muchos'"
+  VEREDICTO: OBJETO -- 'como' es predicativo, no marca de ejemplo; parte del objeto
+
+--- PUESTO 49 --- terminologia_clave_breakthrough -> analisis_sintomas (paso 2)
+  verbo citado: 'Diferenciar'
+  objeto citado: 'sintomas de causas'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'sintomas' literalmente
+
+--- PUESTO 53 --- control_calidad_operaciones_servicio -> descubrir_necesidades_del_cliente (paso 1)
+  verbo citado: 'Identificar'
+  objeto citado: 'el proceso principal, su objetivo, y las necesidades del cliente'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'necesidades del cliente' literalmente
+
+--- PUESTO 57 --- autocontrol_y_controlabilidad -> capacidad_del_proceso (paso 1)
+  verbo citado: 'Verificar'
+  objeto citado: 'que el proceso tenga capacidad real'
+  VEREDICTO: OBJETO -- objeto (clausula) del verbo, nombra 'capacidad' dentro del objeto mismo
+
+--- PUESTO 58 --- qfd_matriz -> identificar_clientes_externos_e_internos (paso 2)
+  verbo citado: 'Identifica'
+  objeto citado: 'a tus clientes internos y externos'
+  VEREDICTO: OBJETO -- objeto directo con 'a' personal, nombra exactamente el hijo
+
+--- PUESTO 59 --- requisitos_gates_con_dientes -> post_launch_review (paso 6)
+  verbo citado: 'Haz'
+  objeto citado: 'una revision despues del lanzamiento'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'revision post lanzamiento' literalmente
+
+--- PUESTO 61 --- participacion_preferente -> seed_deals_riesgos_precedente (paso 4)
+  verbo citado: 'Recordar'
+  objeto citado: 'que los terminos de la ronda semilla suelen convertirse en precedente para rondas futuras'
+  VEREDICTO: OBJETO -- objeto (clausula) del verbo, es exactamente el contenido que el hijo desarrolla
+
+--- PUESTO 64 --- medicion_calidad -> clasificacion_seriedad_defectos (paso 6)
+  verbo citado: 'Clasificar'
+  objeto citado: 'los defectos por gravedad, causa y responsabilidad'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'clasificacion de seriedad de defectos' literalmente
+
+--- PUESTO 66 --- cultura_justa_3 -> cultura_de_aprendizaje (paso 3)
+  verbo citado: 'Balancear'
+  objeto citado: 'la necesidad de accountability con la proteccion al aprendizaje organizacional'
+  VEREDICTO: SATELITE -- complemento directo 'con + N' (con la proteccion al aprendizaje organizacional)
+
+--- PUESTO 73 --- takt_time -> smed_setup_reduction (paso 5)
+  verbo citado: 'Reducir'
+  objeto citado: 'tiempos de cambio (setup)'
+  VEREDICTO: OBJETO -- objeto directo, con glosa parentetica del propio objeto
+
+--- PUESTO 74 --- ingenieria_calidad_proveedores -> relaciones_largo_plazo_con_proveedores (paso 4)
+  verbo citado: 'Desarrollar'
+  objeto citado: 'relaciones de largo plazo con proveedores'
+  VEREDICTO: OBJETO -- 'con proveedores' integra el objeto directo mismo ('relaciones... con proveedores'), no gobierna el tema del hijo desde fuera
+
+--- PUESTO 75 --- dia_cero_defectos_2 -> eliminacion_causas_error_4 (paso 6)
+  verbo citado: 'Iniciar'
+  objeto citado: 'el programa de eliminacion de causas de error'
+  VEREDICTO: OBJETO -- objeto directo; 'al dia siguiente' es adverbio de tiempo, no aloja al hijo
+
+--- PUESTO 77 --- desarrollo_expertos_capaces -> evaluacion_desempeno_proyectos (paso 4)
+  verbo citado: 'Medir'
+  objeto citado: 'el impacto de la capacitacion en el desempeno de los proyectos de mejora'
+  VEREDICTO: OBJETO -- objeto directo, nombra el hijo literalmente
+
+--- PUESTO 78 --- customer_discovery_phase2_problem_test -> captura_conocimiento_mercado (paso 5)
+  verbo citado: 'Capturar'
+  objeto citado: 'conocimiento competitivo y de mercado'
+  VEREDICTO: OBJETO -- objeto directo; 'durante las entrevistas' es adverbio de tiempo, no aloja al hijo
+
+--- PUESTO 83 --- programa_mejora_calidad_14_pasos -> costo_de_calidad_3 (paso 3)
+  verbo citado: 'Definir'
+  objeto citado: 'como vas a medir la calidad y el costo de la no calidad'
+  VEREDICTO: OBJETO -- objeto (clausula) del verbo, nombra 'costo de la no calidad' literalmente
+
+--- PUESTO 84 --- liderazgo_ejecutivo_innovacion -> estrategia_innovacion_producto (paso 1)
+  verbo citado: 'Define'
+  objeto citado: 'tu vision y tu estrategia de innovacion'
+  VEREDICTO: OBJETO -- objeto directo, nombra el hijo literalmente
+
+--- PUESTO 87 --- emprendedor_como_puesto_de_trabajo -> contabilidad_innovacion_pivote (paso 2)
+  verbo citado: 'Evalua'
+  objeto citado: 'ese trabajo con la contabilidad de innovacion'
+  VEREDICTO: SATELITE -- complemento directo 'con + N' (con la contabilidad de innovacion)
+
+--- PUESTO 88 --- genchi_gembutsu_salir_del_edificio -> get_out_of_the_building (paso 2)
+  verbo citado: 'Salir'
+  objeto citado: 'fisicamente a hablar con clientes potenciales reales'
+  VEREDICTO: OBJETO -- aposicion literal ('lo que se llama get out of the building' ES el hijo)
+
+--- PUESTO 91 --- gestion_de_portafolio_gates_go_kill -> tipos_criterios_gate (paso 2)
+  verbo citado: 'Establecer'
+  objeto citado: 'gates o puntos de decision formales con criterios visibles de Go/Kill'
+  VEREDICTO: SATELITE -- 'con criterios visibles de Go/Kill' gobierna el tema del hijo desde fuera del objeto directo ('gates o puntos de decision formales')
+
+--- PUESTO 92 --- etapa_build_business_case -> posicionamiento_por_tipo_de_mercado (paso 1)
+  verbo citado: 'Definir'
+  objeto citado: 'el mercado objetivo, posicionamiento y propuesta de valor'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'posicionamiento' literalmente
+
+--- PUESTO 93 --- estandares_voluntarios -> definiciones_operacionales_de_calidad (paso 3)
+  verbo citado: 'Documentar'
+  objeto citado: 'el estandar con definiciones operacionales claras y medibles'
+  VEREDICTO: SATELITE -- complemento directo 'con + N' (con definiciones operacionales)
+
+--- PUESTO 94 --- testear_circulo_cuadrado_rectangulo -> validar_modelo_financiero (paso 3)
+  verbo citado: 'validar'
+  objeto citado: 'que el modelo de negocio completo (socios, canales, ingresos, costos) es viable'
+  VEREDICTO: OBJETO -- objeto (clausula) del verbo, es el modelo financiero completo que el hijo valida
+
+--- PUESTO 97 --- principios_alineacion_empresarial -> desarrollar_estrategias_largo_plazo (paso 3)
+  verbo citado: 'Alinear'
+  objeto citado: 'estrategias, sistemas y metas de largo plazo'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'estrategias de largo plazo' literalmente
+
+--- PUESTO 98 --- control_del_proceso_del_proveedor -> buenas_practicas_manufactura_cgmp (paso 3)
+  verbo citado: 'Definir'
+  objeto citado: 'tareas especiales y buenas practicas de manufactura requeridas'
+  VEREDICTO: OBJETO -- objeto directo, nombra cGMP literalmente
+
+--- PUESTO 99 --- juran_rcca_metodo -> prueba_teorias_causa_raiz (paso 2)
+  verbo citado: 'probarlas'
+  objeto citado: '[las teorias de causa raiz]'
+  VEREDICTO: OBJETO -- objeto directo de uno de los verbos coordinados
+
+--- PUESTO 100 --- desarrollar_metas_anuales -> metas_negocio_calidad (paso 3)
+  verbo citado: 'Filtra y prioriza'
+  objeto citado: 'las metas que entraran en tu plan de negocio'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'metas de negocio' literalmente
+
+====================================================================================================
+RESUMEN: OBJETO 33, SATELITE 7, NO_OBJETO 0 (de 40 clasificados; 1 SALTAN por 4.1)
+SATELITE (van a lectura entera, TAREA 4.4): 20, 21, 38, 66, 87, 91, 93
+EXIT=0
+
+--- PUESTO 9001 --- construccion_fabricada_v110 -> construccion_fabricada_v110_hijo (paso 1)
+  verbo citado: 'fabricar (CASO DE CONSTRUCCION, TAREA 4.2 vuelta 110, puesto que no existe en el grafo)'
+  objeto citado: '[ninguno]'
+  VEREDICTO: OBJETO -- caso fabricado sobre copia, no es un puesto real

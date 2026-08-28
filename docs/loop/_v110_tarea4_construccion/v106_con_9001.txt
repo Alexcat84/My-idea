@@ -1,0 +1,157 @@
+====================================================================================================
+VUELTA 106, TAREA 4.3: PREGUNTA DE TRES VIAS SOBRE EL LOTE DE LOS TRAMOS 3 Y 4
+====================================================================================================
+Pool: las RESUELTA de tramo3+tramo4 sin correccion ni relectura (SALIDA_V106_TAREA4_1_CENSO.txt),
+27 puestos (18 tramo3 + 9 tramo4). El 147 (tramo3) salta por la guarda de 4.2 pero NO estaba en
+este pool: su direccion ya esta anulada por correccion_v99 (NO RESUELTA), asi que su paso mal
+casado no toca ninguna cifra viva, igual que declaro el acta de la vuelta 105.
+
+DISCREPANCIA DECLARADA CONTRA EL LOTE DEL ENCARGO (4.1): mi censo de hoy da 27 puestos sin
+correccion ni relectura, no 26. Difiere del encargo en DOS miembros, no solo en la cifra total:
+el encargo cuenta el 147 entre los 19 RESUELTA del tramo3 (con correccion_v99); medido hoy, el
+147 NO ES RESUELTA (su correccion_v99 ya puso direccion_leida a null), asi que no pertenece al
+conjunto que esta pregunta cubre. En su lugar, el 110 (tramo3, RESUELTA, sin correccion ni
+relectura) SI pertenece y el encargo no lo trae. El total de RESUELTA en tramo3+tramo4 (28)
+calza con el encargo por coincidencia de cifra, no de conjunto.
+
+Formato por puesto: verbo citado, objeto citado, VEREDICTO -- motivo.
+
+--- PUESTO 101 --- rol_alta_direccion_calidad -> metas_negocio_calidad (paso 2)
+  verbo: 'Definir'  objeto: 'estrategias y metas de calidad alineadas con tu vision del negocio'
+  VEREDICTO: OBJETO -- 'metas de calidad' nombrado literalmente dentro del objeto directo
+
+--- PUESTO 102 --- brecha_de_calidad_cuatro_gaps -> necesidades_reales_vs_declaradas (paso 1)
+  verbo: 'Evaluar'  objeto: 'el nivel actual de comprension de las necesidades reales del cliente'
+  VEREDICTO: OBJETO -- 'las necesidades reales del cliente' vive DENTRO del objeto (complemento
+  de 'comprension'), no en un complemento externo que gobierne desde fuera
+
+--- PUESTO 106 --- activity_attributes -> assumption_constraint_log (paso 4)
+  verbo: 'Especificar'  objeto: 'restricciones y supuestos por actividad'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'restricciones y supuestos' literalmente
+
+--- PUESTO 107 --- juran_quality_by_design -> diseno_controles_proceso_mejorado (paso 6)
+  verbo: 'Desarrolla' (primero de tres coordinados)  objeto: 'controles de proceso'
+  VEREDICTO: OBJETO -- objeto directo del primer verbo coordinado; 'el diseno' (tercer verbo,
+  'transfiere el diseno a operaciones') refuerza el mismo objeto
+
+--- PUESTO 108 --- analisis_de_ratios_financieros -> gestion_dso (paso 4)
+  verbo: 'Calcular'  objeto: 'ratios de eficiencia: rotacion de activos y dias de ventas
+  pendientes de cobro (DSO)'
+  VEREDICTO: OBJETO -- 'DSO' nombrado literalmente dentro de la enumeracion del objeto
+
+--- PUESTO 109 --- business_model_canvas_scorecard -> key_partners_hypothesis (paso 1)
+  verbo: 'Llenar'  objeto: 'el canvas inicial con tus hipotesis en las 9 areas: segmentos,
+  propuesta de valor, canales, relaciones, recursos, socios e ingresos'
+  VEREDICTO: OBJETO -- 'socios' es uno de los items de la enumeracion dentro del objeto, no un
+  complemento que gobierne el tema del hijo desde fuera
+
+--- PUESTO 110 --- emprendimiento_como_disciplina_de_gestion -> emprendedor_como_puesto_de_trabajo (paso 6)
+  verbo: 'Tratar'  objeto: 'el rol de emprendedor' (predicativo: 'como una funcion formal y
+  reconocida dentro de la organizacion')
+  VEREDICTO: OBJETO -- objeto directo con predicativo 'como', mismo patron que el puesto 48/110
+  de la vuelta 105 ('como' es predicativo, no marca de ejemplo)
+
+--- PUESTO 111 --- limites_especificacion_funcionales -> ctq_caracteristicas_criticas (paso 1)
+  verbo: 'Identifica'  objeto: 'que caracteristicas son criticas para que tu producto funcione'
+  VEREDICTO: OBJETO -- objeto (clausula), nombra 'caracteristicas criticas' literalmente (par de
+  clase C, sin cambio por esta pregunta)
+
+--- PUESTO 114 --- ejecucion_de_touchpoints -> economia_de_la_experiencia (paso 1) [INVERTIDA]
+  verbo: 'Identificar'  objeto: 'todos los touchpoints (puntos de contacto) de la experiencia'
+  VEREDICTO: OBJETO -- 'de la experiencia' vive DENTRO del objeto (complemento del nombre
+  'touchpoints'), no gobierna desde fuera; misma distincion que descarto al 4/74/77 en la v105
+
+--- PUESTO 116 --- metodologia_spin_selling -> preguntas_need_payoff (paso 3)
+  verbo: 'Prepararse para usar'  objeto: 'preguntas de Situacion, Problema, Implicacion y
+  Necesidad-Beneficio'
+  VEREDICTO: OBJETO -- 'Necesidad-Beneficio' (Need-Payoff) nombrado literalmente dentro de la
+  enumeracion del objeto
+
+--- PUESTO 123 --- eliminacion_inspeccion_masiva_por_control_estadistico -> muestreo_estadistico_para_inspeccion (paso 3)
+  verbo: 'Reemplazar'  objeto: 'inspeccion 100%'  complemento: 'por muestreo estadistico'
+  VEREDICTO: SATELITE -- el hijo vive en el termino regido por 'por' (sustitucion/instrumento),
+  fuera del objeto directo del verbo ('inspeccion 100%'). VA A LECTURA ENTERA (4.4)
+
+--- PUESTO 127 --- coordinacion_colaboracion_cadena_suministro -> plataforma_colaboracion_masiva (paso 10)
+  verbo: 'Establecer'  objeto: 'una plataforma de colaboracion online'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'plataforma de colaboracion' literalmente
+
+--- PUESTO 128 --- product_roadmap_estrategico -> equipo_multifuncional_real (paso 2)
+  verbo: 'Ensamblar'  objeto: 'un equipo multifuncional de roadmapping'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'equipo multifuncional' literalmente
+
+--- PUESTO 129 --- product_design_spreadsheet -> traduccion_necesidades_cliente (paso 1)
+  verbo: 'Colocar'  objeto: 'las necesidades del cliente, su traduccion y medicion'
+  VEREDICTO: OBJETO -- 'su traduccion' nombrado literalmente dentro de la enumeracion del objeto
+
+--- PUESTO 130 --- testing_process_completo -> test_card (paso 3)
+  verbo: 'Disena'  objeto: 'experimentos (tarjeta de test)'
+  VEREDICTO: OBJETO -- aposicion literal, '(tarjeta de test)' glosa entre parentesis el propio
+  objeto, misma especie que el 1 y el 88 de la vuelta 105
+
+--- PUESTO 132 --- estructura_organizacional_funcional_proceso -> empoderamiento_empleados (paso 5)
+  verbo: 'Evaluar'  objeto: 'el nivel de involucramiento de empleados en equipos permanentes y ad hoc'
+  VEREDICTO: OBJETO -- 'de empleados' vive dentro del objeto (complemento del nombre
+  'involucramiento'), no gobierna desde fuera
+
+--- PUESTO 134 --- teletrabajo_sostenible -> medir_huella_carbono_corporativa (paso 4)
+  verbo: 'Medir'  objeto: 'impacto en productividad y reduccion de huella de carbono'
+  VEREDICTO: OBJETO -- 'huella de carbono' nombrada literalmente dentro del objeto
+
+--- PUESTO 145 --- poder_a_traves_de_la_accion -> proposito_como_motor_energia (paso 4)
+  verbo: 'Vincular'  objeto: 'el trabajo intelectual cotidiano'  complemento: 'a un proposito o
+  impacto mayor'
+  VEREDICTO: SATELITE -- complemento de destino ('a un proposito o impacto mayor'): el hijo vive
+  en el termino regido por 'a', fuera del objeto directo. VA A LECTURA ENTERA (4.4)
+
+--- PUESTO 153 --- dia_cero_defectos_3 -> eliminacion_causas_error_4 (paso 4)
+  verbo: 'Anunciar'  objeto: 'el inicio inmediato de la fase de eliminacion de causas de error (ECR)'
+  VEREDICTO: OBJETO -- 'fase de eliminacion de causas de error (ECR)' nombrada literalmente
+  dentro del objeto
+
+--- PUESTO 154 --- desarrollo_de_clientes_customer_development -> customer_development_agile_pairing (paso 4)
+  verbo: 'Combinar'  objeto: 'el aprendizaje del cliente'  complemento: 'con ingenieria agil'
+  VEREDICTO: SATELITE -- complemento instrumental 'con + N' (con ingenieria agil): el hijo vive
+  en el termino regido por 'con', fuera del objeto directo. VA A LECTURA ENTERA (4.4)
+
+--- PUESTO 156 --- formalizar_un_proceso_ad_hoc -> metricas_calidad (paso 4)
+  verbo: 'Establecer'  objeto: 'metricas de exito en cada etapa del proceso'
+  VEREDICTO: OBJETO -- 'metricas' es el nucleo del objeto directo
+
+--- PUESTO 158 --- plan_mejora_procesos -> metricas_calidad (paso 3)
+  verbo: 'Definir'  objeto: 'metricas y limites de control actuales'
+  VEREDICTO: OBJETO -- 'metricas' es el nucleo del objeto directo
+
+--- PUESTO 169 --- modelo_customer_development -> diseno_experimentos_pass_fail (paso 3)
+  verbo: 'Disenar'  objeto: 'experimentos'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'experimentos' literalmente
+
+--- PUESTO 177 --- liderazgo_ejecutivo_innovacion -> estrategia_de_innovacion_de_producto (paso 1)
+  verbo: 'Define y comunica'  objeto: 'tu vision y tu estrategia de innovacion'
+  VEREDICTO: OBJETO -- 'tu estrategia de innovacion' nombrada literalmente, mismo paso que el
+  puesto 84 de la vuelta 105 sobre el mismo verbo/objeto
+
+--- PUESTO 179 --- juran_rcca_metodo -> diseno_implementacion_remedio (paso 3)
+  verbo: 'disenar e implementar'  objeto: 'el remedio'
+  VEREDICTO: OBJETO -- objeto (clausula completa), coincide literal con el titulo del hijo
+
+--- PUESTO 180 --- licenciamiento_tecnologico -> proteccion_patentes_internacional (paso 3)
+  verbo: 'Registra'  objeto: 'tus patentes y marcas en cada pais objetivo, considerando PCT y
+  Protocolo de Madrid'
+  VEREDICTO: OBJETO -- objeto (clausula) del verbo: registrar patentes en cada pais via PCT y
+  Protocolo de Madrid ES la proteccion de patentes internacional que el hijo nombra; 'para
+  proteccion multiple' es el proposito del mismo acto, no un tema distinto alojado fuera
+
+--- PUESTO 182 --- eliminar_desperdicio_organizacional -> startup_como_experimento_cientifico (paso 4)
+  verbo: 'Usa'  objeto: 'el metodo cientifico (hipotesis, experimento, medicion)'
+  VEREDICTO: OBJETO -- objeto directo con aposicion parentetica, nombra 'experimento cientifico'
+  literalmente
+
+====================================================================================================
+RESUMEN: OBJETO 24, SATELITE 3 (123, 145, 154), NO_OBJETO 0 (de 27 clasificados)
+====================================================================================================
+
+--- PUESTO 9001 --- construccion_fabricada_v110 -> construccion_fabricada_v110_hijo (paso 1)
+  verbo citado: 'fabricar (CASO DE CONSTRUCCION, TAREA 4.2 vuelta 110, valor intermedio B)'
+  objeto citado: '[ninguno]'
+  VEREDICTO: SATELITE -- caso fabricado sobre copia, no es un puesto real
