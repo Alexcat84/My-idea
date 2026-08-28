@@ -612,13 +612,41 @@ def lado_fase04(vuelta, sufijo, fallos, con_miles=True):
             n = len(contenido_tsc.strip("\n").splitlines())
             d["tsc"] = "%d linea(s) de salida (revisar)" % n
 
+    # TAREA 2.1 (vuelta 106, adjudicacion del auditor sobre la vuelta 105,
+    # "PENDIENTE DE DOCTRINA" resuelta como GUARDA ENVEJECIDA y no como
+    # doctrina nueva). Los cinco regex de aqui abajo esperaban el formato
+    # VIEJO de un marcador tipo diccionario ("'A': 551 ... } 3388"), que NINGUN
+    # script vigente imprime desde la vuelta 53. `scripts/recomputar_marcador.py`
+    # (el que produce SALIDA_V<N>_MARCADOR_<LADO>.txt desde entonces) imprime:
+    #   n = 3388 corte = 3388 huecos: [] dups(puesto): 0
+    #   ...
+    #   MARCADOR GLOBAL
+    #     A 551 16.3
+    #     B 72 2.1
+    #     C 5 0.1
+    #     D 2760 81.5
+    # que es EXACTAMENTE lo que lado() (la funcion hermana del modo cribado,
+    # mas arriba en este fichero) ya lee bien con r"\n  A\s+(\d+)" y compania:
+    # ese es el ejemplar que el encargo pide seguir. A/B/C/D se leen ahora con
+    # el mismo patron que lado().
+    #
+    # LA CELDA n: lado() la lee de un fichero de ESTADO aparte
+    # (SALIDA_V<N>_APERTURA.txt/_CIERRE.txt, sin segmento intermedio) que la
+    # fase 04 NUNCA produce (esa fase no corre el ciclo del cribado, solo Gate
+    # 0 + tres suites + censo + aristas + marcador si toca). No hay ESTADO que
+    # leer aqui. Pero el propio MARCADOR_<LADO>.txt trae n en su primera
+    # linea ("n = 3388 corte = 3388 huecos: [] dups(puesto): 0"): ahi SI es
+    # una cifra suelta (a diferencia de "huecos", que en esa misma linea es
+    # una LISTA — "huecos: []" — y por eso no se talla esa celda con el mismo
+    # mecanismo). Se lee de ahi, del mismo fichero que A/B/C/D, sin inventar
+    # una fuente nueva.
     mar = leer_opcional(p + "MARCADOR_" + sufijo + ".txt")
     if mar is not None:
-        d["marcador_A"] = busca(mar, r"'A': (\d+)", "marcador A %s" % sufijo, fallos)
-        d["marcador_B"] = busca(mar, r"'B': (\d+)", "marcador B %s" % sufijo, fallos)
-        d["marcador_C"] = busca(mar, r"'C': (\d+)", "marcador C %s" % sufijo, fallos)
-        d["marcador_D"] = busca(mar, r"'D': (\d+)", "marcador D %s" % sufijo, fallos)
-        d["marcador_n"] = busca(mar, r"\}\s*(\d+)\s*$", "marcador n %s" % sufijo, fallos)
+        d["marcador_A"] = busca(mar, r"\n  A\s+(\d+)", "marcador A %s" % sufijo, fallos)
+        d["marcador_B"] = busca(mar, r"\n  B\s+(\d+)", "marcador B %s" % sufijo, fallos)
+        d["marcador_C"] = busca(mar, r"\n  C\s+(\d+)", "marcador C %s" % sufijo, fallos)
+        d["marcador_D"] = busca(mar, r"\n  D\s+(\d+)", "marcador D %s" % sufijo, fallos)
+        d["marcador_n"] = busca(mar, r"^n = (\d+)", "marcador n %s" % sufijo, fallos)
     else:
         d["marcador_A"] = None
 
@@ -757,6 +785,32 @@ def leer_head_apertura(vuelta, fallos):
     if not os.path.exists(ruta):
         fallos.append("no existe el sello %s (el ejecutor debe correr `git rev-parse HEAD` "
                       "antes de la 1.a operacion y guardarlo ahi)" % nombre)
+        return None
+    texto = io.open(ruta, encoding="utf-8").read().strip()
+    m = re.match(r"^([0-9a-f]{40})", texto)
+    if not m:
+        fallos.append("%s no trae un hash de 40 caracteres reconocible" % nombre)
+        return None
+    return m.group(1)
+
+
+def leer_head_cierre(vuelta, fallos):
+    """TAREA 2.4 (vuelta 106, adjudicacion del auditor sobre el acta de la
+    vuelta 105: "el hash de HEAD de tu cabecera contradice tu propio
+    fichero"). El reporte de la vuelta 105 publico como HEAD de cierre
+    `ba261321` (el HEAD de su TAREA 4.4, dos commits antes del cierre real),
+    mientras que `SALIDA_V105_HEAD_CIERRE.txt` -- que ya existia, escrito por
+    el ejecutor, pero que NINGUN tallador leia -- decia `275cb46c` (el commit
+    donde de verdad corrio el ciclo de cierre). Es la misma especie que
+    `leer_head_apertura`, aplicada al otro lado: el HEAD de cierre SE LEE del
+    sello que el ejecutor escribe, nunca se teclea. Fallo declarado
+    (fallos.append) si el fichero no existe: la celda de identidad de la
+    columna de cierre no se talla sin el."""
+    nombre = "SALIDA_V%d_HEAD_CIERRE.txt" % vuelta
+    ruta = os.path.join(LOOP, nombre)
+    if not os.path.exists(ruta):
+        fallos.append("no existe el sello %s (el ejecutor debe correr `git rev-parse HEAD` "
+                      "tras la ultima operacion, antes de escribir el reporte, y guardarlo ahi)" % nombre)
         return None
     texto = io.open(ruta, encoding="utf-8").read().strip()
     m = re.match(r"^([0-9a-f]{40})", texto)
@@ -1247,6 +1301,9 @@ def main():
         # no son fiables para el commit que la fila nombra.
         head_real = leer_head_apertura(a.vuelta, fallos)
         procedencia_sello = procedencia_sello_apertura(a.vuelta, rama, head_real, fallos)
+        # TAREA 2.4 (vuelta 106): el HEAD de cierre, leido de SALIDA_V<N>_HEAD_CIERRE.txt,
+        # nunca tecleado. Ver leer_head_cierre() para el motivo.
+        head_cierre = leer_head_cierre(a.vuelta, fallos)
         arbol_verde = None
         if commit_ap and head_real:
             arbol_acta = arbol_dataset(commit_ap, "commit del acta %s" % commit_ap, fallos)
@@ -1271,15 +1328,25 @@ def main():
 
     f = filas_fase04(apertura, cierre, con_miles) if a.fase04 else filas(apertura, cierre, con_miles)
     if a.fase04:
-        celda_identidad = (
+        celda_identidad_ap = (
             "rama `%s`, commit del acta `%s` (ACTA DE LA VUELTA %d DEL AUDITOR, leido de git log), "
             "HEAD real de apertura `%s` (%s, leido de git log --diff-filter=A), arboles "
             "de `dataset/` %s"
             % (rama, commit_ap, a.vuelta - 1, head_real[:8], procedencia_sello,
                "IGUALES: VERDE" if arbol_verde else "?")
         )
+        # TAREA 2.4 (vuelta 106): la columna de CIERRE ya no repite la celda de
+        # apertura. Publica su propio HEAD, leido de SALIDA_V<N>_HEAD_CIERRE.txt
+        # (leer_head_cierre), que es el remedio de la caida 1.1 del acta de la
+        # vuelta 105 ("el hash de HEAD de tu cabecera contradice tu propio
+        # fichero").
+        celda_identidad_ci = (
+            "rama `%s`, HEAD de cierre `%s` (leido de `SALIDA_V%d_HEAD_CIERRE.txt`, "
+            "sellado tras la ultima operacion)"
+            % (rama, head_cierre[:8] if head_cierre else "?", a.vuelta)
+        )
         f.append(("identidad: rama y commit de apertura (leidos de git, no tecleados)",
-                  celda_identidad, celda_identidad))
+                  celda_identidad_ap, celda_identidad_ci))
 
     print("--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---")
     print()
