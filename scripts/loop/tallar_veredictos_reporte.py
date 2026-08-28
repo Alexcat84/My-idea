@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""tallar_veredictos_reporte.py . EL TALLADOR DE VEREDICTOS (TAREA 1.1 de la
+r"""tallar_veredictos_reporte.py . EL TALLADOR DE VEREDICTOS (TAREA 1.1 de la
 vuelta 102, encargo del auditor, acta de la vuelta 101, "LA RACHA DE REPORTE
 PASA DE UNO A DOS", escalada obligada por EJECUTOR.md 1.2).
 
@@ -66,6 +66,46 @@ docs/loop/SALIDA_V102_TAREA1_1_MUTACION_VEREDICTOS.txt):
   (b) VERDE sobre `docs/loop/REPORTE.md` de la vuelta 102, una vez escrito
       bien (cada veredicto que cite un fichero calza con lo que ese fichero
       dice de verdad).
+
+--- TAREA 1.1, 1.3 y 1.4 de la vuelta 103 (acta de la vuelta 102, "AHORA LA
+CAIDA, Y NO ES DE DICTADO: ES DE GUARDA") ---
+
+POR QUE NACE. La v102 de este tallador exigia el prefijo `docs/loop/` DENTRO
+de las comillas (`RE_CITA` original: `` `([^`]*docs/loop/SALIDA_[^`]+\.(?:txt
+|md))` ``). El reporte de la 102 escribe 4 de sus 6 citas con el NOMBRE
+PELADO (sin `docs/loop/`), que es la convencion real de esta campana desde
+siempre, y el tallador las ignoraba en silencio: de 17 palabras de veredicto,
+solo vio la 1 que llevaba el prefijo. El auditor lo probo con mutacion (ver
+`SALIDA_V103_TAREA1_2_MUTACION_VEREDICTOS_DOSVARIANTES.txt`): la MISMA frase
+falsa sobre el MISMO fichero daba VERDE con el nombre pelado y ROJO con
+`docs/loop/` delante, cuando las dos formas nombran el mismo fichero real.
+
+(1.1) `RE_CITA` ahora reconoce las DOS formas: `` `SALIDA_..._.txt` `` (pelado)
+y `` `docs/loop/SALIDA_..._.txt` `` (con prefijo). Un nombre pelado se
+RESUELVE contra `docs/loop/<nombre>` antes de leerlo; si el fichero resuelto
+no existe, es hallazgo igual que cualquier otro fichero inexistente citado
+(la regla que este mismo docstring ya declaraba: "un veredicto sobre un
+fichero que no existe").
+
+(1.3) LA COBERTURA SE PUBLICA. La cabecera de la salida imprime, ademas de
+"N afirmacion(es) citan fichero", cuantas palabras de veredicto
+(VERDE/ROJO/PASA/FALLA) hay EN TOTAL en el reporte, citen fichero o no. Sin
+umbral ni rojo por baja cobertura: solo que la cifra se vea, para que un "1
+de 17" no dependa de que alguien lo cuente a mano.
+
+(1.4) EL EMPAREJAMIENTO SE DECLARA. Cuando el parrafo trae MAS de una cita,
+cada linea de salida (calce o hallazgo) dice CUANTAS citas hay en el parrafo
+y CUAL regla escogio la que se uso (`primera cita DESPUES de la palabra` o,
+si no hay ninguna despues, `cita ANTES mas cercana, unica del parrafo antes
+de la palabra`). Con una sola cita en el parrafo no hace falta declarar
+regla: no hay ambiguedad que resolver.
+
+PRUEBA DE MUTACION DE DOS VARIANTES (1.2, vuelta 103, con su salida
+commiteada, docs/loop/SALIDA_V103_TAREA1_2_MUTACION_VEREDICTOS_DOSVARIANTES.txt):
+la MISMA frase falsa sobre el MISMO fichero (VERDE citando
+`SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`, cuyo veredicto real es ROJO),
+una vez con el nombre pelado y otra con `docs/loop/` delante: DESPUES del
+arreglo, LAS DOS tienen que dar ROJO.
 """
 import argparse
 import io
@@ -78,9 +118,21 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 
 CLASE = {"VERDE": "OK", "PASA": "OK", "ROJO": "MAL", "FALLA": "MAL"}
 RE_VEREDICTO_PALABRA = re.compile(r"\b(VERDE|ROJO|PASA|FALLA)\b")
-RE_CITA = re.compile(r"`([^`]*docs/loop/SALIDA_[^`]+\.(?:txt|md))`")
+# (1.1) reconoce la cita CON prefijo docs/loop/ y PELADA (sin prefijo): las
+# dos formas que el reporte usa de verdad (4 de las 6 citas de la vuelta 102
+# iban peladas y el patron viejo, que exigia docs/loop/, no las veia).
+RE_CITA = re.compile(r"`(docs/loop/SALIDA_[^`]+\.(?:txt|md)|SALIDA_[^`/]+\.(?:txt|md))`")
 RE_LINEA_VEREDICTO = re.compile(r"^(VERDE|ROJO|PASA|FALLA)\b")
 RE_EXIT = re.compile(r"EXIT(?:CODE)?[=: ]+(\d+)", re.IGNORECASE)
+
+
+def resolver_cita(cita):
+    """(1.1) Una cita PELADA (sin docs/loop/) se resuelve contra docs/loop/,
+    que es donde vive toda esta familia de ficheros SALIDA_*. Una cita que ya
+    trae el prefijo se deja tal cual. Nunca se inventa otra carpeta."""
+    if cita.startswith("docs/loop/"):
+        return cita
+    return "docs/loop/%s" % cita
 
 
 def leer_texto(ruta_o_ref, fallos):
@@ -142,8 +194,10 @@ def veredicto_real_del_fichero(ruta_rel, fallos_locales):
 def hallar_afirmaciones(texto):
     """Para cada ocurrencia de VERDE/ROJO/PASA/FALLA, busca la cita de
     fichero MAS CERCANA (por distancia de caracteres) dentro del MISMO
-    parrafo. Devuelve una lista de (linea, palabra, fichero_citado) SOLO
-    para las ocurrencias que si citan un fichero."""
+    parrafo. Devuelve una lista de (linea, palabra, fichero_citado, regla,
+    n_citas_parrafo) SOLO para las ocurrencias que si citan un fichero.
+    (1.4) `regla` declara COMO se emparejo cuando el parrafo trae mas de una
+    cita, para que un emparejamiento no dependa de la suerte."""
     afirmaciones = []
     for offset_parrafo, parrafo in parrafos_con_offset(texto):
         citas = [(m.start(), m.group(1)) for m in RE_CITA.finditer(parrafo)]
@@ -155,10 +209,12 @@ def hallar_afirmaciones(texto):
             antes = [c for c in citas if c[0] <= pos]
             if despues:
                 mejor = min(despues, key=lambda c: c[0] - pos)
+                regla = "primera cita DESPUES de la palabra"
             else:
                 mejor = max(antes, key=lambda c: c[0])
+                regla = "cita ANTES mas cercana (sin cita despues en el parrafo)"
             linea = numero_de_linea(texto, offset_parrafo + pos)
-            afirmaciones.append((linea, m.group(1), mejor[1]))
+            afirmaciones.append((linea, m.group(1), mejor[1], regla, len(citas)))
     return afirmaciones
 
 
@@ -184,26 +240,31 @@ def main():
         return 1
 
     afirmaciones = hallar_afirmaciones(texto)
+    total_palabras = len(RE_VEREDICTO_PALABRA.findall(texto))
     print("=" * 90)
-    print("TALLA DE VEREDICTOS de %s: %d afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero."
-          % (etiqueta_fuente, len(afirmaciones)))
+    print("TALLA DE VEREDICTOS de %s: %d afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, "
+          "de %d palabra(s) de veredicto en total en el reporte."
+          % (etiqueta_fuente, len(afirmaciones), total_palabras))
     print("=" * 90)
 
     hallazgos = []
-    for linea, palabra, fichero in afirmaciones:
+    for linea, palabra, cita, regla, n_citas in afirmaciones:
+        fichero = resolver_cita(cita)
+        nota_resolucion = "" if fichero == cita else " (pelado, resuelto a `%s`)" % fichero
+        nota_emparejamiento = " [%d citas en el parrafo, se uso: %s]" % (n_citas, regla) if n_citas > 1 else ""
         clase_afirmada = CLASE[palabra]
         clase_real, motivo = veredicto_real_del_fichero(fichero, fallos)
         if motivo is not None:
-            hallazgos.append("REPORTE.md linea %d: afirma %s citando `%s`, pero %s"
-                             % (linea, palabra, fichero, motivo))
+            hallazgos.append("REPORTE.md linea %d: afirma %s citando `%s`%s, pero %s%s"
+                             % (linea, palabra, cita, nota_resolucion, motivo, nota_emparejamiento))
             continue
         if clase_real != clase_afirmada:
-            hallazgos.append("REPORTE.md linea %d: afirma %s (clase %s) citando `%s`, "
-                             "y el veredicto REAL de ese fichero es %s"
-                             % (linea, palabra, clase_afirmada, fichero, clase_real))
+            hallazgos.append("REPORTE.md linea %d: afirma %s (clase %s) citando `%s`%s, "
+                             "y el veredicto REAL de ese fichero es %s%s"
+                             % (linea, palabra, clase_afirmada, cita, nota_resolucion, clase_real, nota_emparejamiento))
         else:
-            print("   linea %d: %s citando `%s` -- calza (fichero real: %s)"
-                  % (linea, palabra, fichero, clase_real))
+            print("   linea %d: %s citando `%s`%s -- calza (fichero real: %s)%s"
+                  % (linea, palabra, cita, nota_resolucion, clase_real, nota_emparejamiento))
 
     print()
     if hallazgos:

@@ -1,0 +1,17 @@
+=== VARIANTE (a) NOMBRE PELADO: SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt ===
+==========================================================================================
+TALLA DE VEREDICTOS de docs/loop/_tmp_v103_mutacion_pelado.md: 1 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, de 1 palabra(s) de veredicto en total en el reporte.
+==========================================================================================
+
+ROJO, 1 hallazgo(s):
+   REPORTE.md linea 3: afirma VERDE (clase OK) citando `SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`), y el veredicto REAL de ese fichero es MAL
+EXIT=1
+
+=== VARIANTE (b) CON PREFIJO docs/loop/: docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt ===
+==========================================================================================
+TALLA DE VEREDICTOS de docs/loop/_tmp_v103_mutacion_prefijo.md: 1 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, de 1 palabra(s) de veredicto en total en el reporte.
+==========================================================================================
+
+ROJO, 1 hallazgo(s):
+   REPORTE.md linea 3: afirma VERDE (clase OK) citando `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`, y el veredicto REAL de ese fichero es MAL
+EXIT=1
