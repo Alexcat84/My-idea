@@ -5465,3 +5465,89 @@ por mayuscula que parecieron duplicados exactos y no lo eran para Gate 0
 calzaba contra el `titulo_ratio` real de `DIFERENCIA_CONTRA_COLA.jsonl`;
 (iii) un difflib por lineas del auditor contra el difflib por caracteres
 del ejecutor, que era la vara mas fuerte y la del ejecutor.
+
+## VUELTA 104, TAREA 1: LOS REGISTROS DEL ACTA 103
+
+### 1.1 MI CERCO GRITON (auditor, acta 103, "EL CERCO PASO DE CIEGO A
+GRITON"), CAIDA DEL AUDITOR
+
+El cerco ensanchado de la vuelta 103 (`tallar_veredictos_reporte.py` con el
+nombre pelado reconocido, la cobertura publicada, el emparejamiento
+declarado) corrido por el auditor sobre el `REPORTE.md` de la vuelta 102
+(`--commit f253842b`) dio **ROJO, 6 hallazgos, LOS SEIS FALSOS**. Los seis
+viven en el mismo parrafo (la TAREA 1 de aquel reporte, 3 citas y 17
+palabras de veredicto) y nacen de narracion de mutacion: "la afirmacion
+VERDE del reporte" describe lo que OTRO reporte afirmo, no un veredicto en
+vivo. El ensanche SI sirvio (cobertura de **1 de 17 a 14 de 17**): lo que
+fallaba era el EMPAREJAMIENTO por parrafo, no el cerco. El auditor lo trajo
+como caida SUYA ("Mi propio encargo (1.4) fue literal... hizo exactamente
+eso y lo hizo bien. El fallo de disenno es mio"), pero BLOQUEANTE al cierre
+por su propia regla 1.5 ("si alguna queda roja al cierre, NO CIERRES LA
+VUELTA"). Arreglado en la TAREA 2 de esta vuelta (emparejamiento por
+oracion mas tres filtros, `docs/loop/SALIDA_V104_TAREA2_CALIBRACION_ANTES_
+DESPUES.txt`): el reporte 102 pasa a VERDE, EXIT 0, y las dos mutaciones de
+dos variantes de la vuelta 103 SIGUEN dando ROJO.
+
+### 1.2 LA MUESTRA QUE NO SE RE-CORRE, CAIDA DEL AUDITOR, DE ENCARGO
+
+El auditor corrio `vuelta103_tarea4_relectura_ciega_centro.py --modo blind`
+hoy y le dio la muestra **13, 19, 10, 29, 15, 35, 31, 32**, distinta de la
+commiteada en la vuelta 103, **13, 19, 10, 31, 15, 36, 35, 32**. La causa,
+medida: el instrumento decide el flanco con `direccion_efectiva`, y la
+propia TAREA 4 de la 103 escribio `correccion_v103` sobre el 31 EN LA MISMA
+TAREA que saco la muestra, moviendolo de flanco y arrastrando la ventana. El
+auditor rehizo la seleccion a mano con los datos de entonces (22 elegibles
+del flanco RESUELTA, mediana 84,35, los cuatro mas cercanos 10/31/19/13; 7
+del flanco NO RESUELTA, mediana 80,0, los cuatro mas cercanos 35/15/36/32):
+**exactamente lo publicado, ninguna cifra falsa**. Registrado como
+"INSTRUMENTO QUE SE MUEVE BAJO SU PROPIO RESULTADO", caida DE ENCARGO (el
+encargo del auditor pidio sacar la muestra Y corregir dentro de ella en la
+misma tarea, sin decir que se congelara). Arreglado en la TAREA 4.1 de esta
+vuelta (`--puestos`, `docs/loop/SALIDA_V104_TAREA4_1_MUESTRA_CONGELADA.txt`):
+re-corrida hoy, con `correccion_v103` del 31 Y `correccion_v104` del 29 ya
+aplicadas, devuelve la lista commiteada, en el mismo orden.
+
+### 1.3 LO QUE EL EJECUTOR HIZO BIEN EN LA VUELTA 103, REGISTRADO IGUAL QUE
+LO QUE FALLA
+
+**Cero caidas de reporte por segunda vuelta seguida**, tras un repaso del
+auditor afirmacion por afirmacion contra su fichero (once afirmaciones, ni
+una). El arreglo del tallador de la TAREA 1 (v103) probado con la MUTACION
+PROPIA DEL AUDITOR (dos variantes, misma frase falsa, mismo fichero, nombre
+pelado y con prefijo: las DOS dieron ROJO). La cifra de los nueve pasos sin
+contraparte del puesto 31 (`causas_comunes_vs_especiales` contra
+`control_estadistico_del_proceso`) verificada A MANO por el auditor,
+cotejando los 15 pasos del hijo contra los 7 de la madre: **nueve exactas**,
+cifra publicada correcta. Y la aditividad: `04_ENLACES.md` 0 borradas/+4,
+`PENDIENTES.md` 0 borradas/+65, `OPERACIONES.jsonl` 71 filas antes y despues
+con una sola tocada y el valor viejo como prefijo estricto del nuevo, y
+**el campo `estado` sin moverse en las 71**.
+
+### 1.4 EL 29, ABIERTO Y EN RELECTURA CONJUNTA EN LA VUELTA 103, CERRADO EN
+ESTA VUELTA
+
+`abolir_inspeccion_masiva` contra `control_estadistico_del_proceso`, paso
+casado 5. El auditor trajo caso Y contra-caso (acta 103, 4.3/4.4): el primer
+brazo del test de reconocimiento del 9.6.2 falla (misma especie que el par
+28 de esta misma vuelta), pero la senal de los entregables (patron del
+2.215) apuntaba al otro lado. **RESULTADO (TAREA 3 de esta vuelta):** las
+dos patas del 9.6.2 mas el 9.6.3 examinadas enteras; el contra-caso de los
+entregables NO gano (un solo plan describiendo su estado final, no dos
+productos separados, y el hijo entrega apenas uno de sus siete pasos). SE
+SOSTIENE EL CASO DEL AUDITOR: `correccion_v104` en el puesto 29, `direccion_
+leida` a `null`. Cifra de `OP-E-03` recomputada: de 87/96 (52,5%) a 86/97
+(53,0% NO RESUELTA). Detalle en `docs/plan/04_ENLACES.md`.
+
+### 1.5 EL PUNTO CIEGO NUEVO, MEDIDO Y YA ATENDIDO
+
+El auditor midio que, de las 26 RESUELTA efectivas del tramo 1, **QUINCE
+nunca habian sido releidas** (1, 2, 4, 6, 8, 9, 14, 17, 18, 20, 21, 24, 25,
+38, 39), y que el tramo 2 tiene **33 RESUELTA** escritas todas antes de que
+la especie del par 28 existiera. La TAREA 4.2/4.3 de esta vuelta barrio las
+48 (`docs/loop/SALIDA_V104_TAREA4_2_BARRIDO.txt`, una sola pregunta por
+par): 41 dan OBJETO y se sostienen; 7 dan NO_OBJETO (6, 8, 24, 25, 52, 62,
+80) y, releidos enteros a ciegas, los SIETE se movieron (`correccion_v104`).
+Cifra final de `OP-E-03` tras la vuelta: **79/104 (56,8% NO RESUELTA)**. El
+censo de relecturas queda en fichero (`docs/loop/CENSO_RELECTURAS_OP_E_03.
+jsonl`, TAREA 4.4), para que la proxima relectura al doble no vuelva a
+elegir a ojo.
