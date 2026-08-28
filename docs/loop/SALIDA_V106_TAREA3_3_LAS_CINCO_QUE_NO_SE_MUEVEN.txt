@@ -1,0 +1,56 @@
+=== _auditor_v104_mut_A.md ===
+==========================================================================================
+TALLA DE VEREDICTOS de docs/loop/_auditor_v104_mut_A.md: 3 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, de 7 palabra(s) de veredicto en total en el reporte.
+==========================================================================================
+   linea 5: ROJO citando `docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt` -- calza (fichero real: MAL)
+   linea 73: ROJO citando `docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt` -- calza (fichero real: MAL) [3 cita(s), se uso: primera cita DESPUES de la palabra, misma oracion]
+
+ROJO, 1 hallazgo(s):
+   REPORTE.md linea 79: afirma VERDE (clase OK) citando `SALIDA_V104_APERTURA_NO_SELLADA.txt` (pelado, resuelto a `docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt`), y el veredicto REAL de ese fichero es MAL
+EXIT=1
+
+=== _auditor_v104_mut_B.md ===
+==========================================================================================
+TALLA DE VEREDICTOS de docs/loop/_auditor_v104_mut_B.md: 3 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, de 7 palabra(s) de veredicto en total en el reporte.
+==========================================================================================
+   linea 5: ROJO citando `docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt` -- calza (fichero real: MAL)
+   linea 73: ROJO citando `docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt` -- calza (fichero real: MAL) [3 cita(s), se uso: primera cita DESPUES de la palabra, misma oracion]
+
+ROJO, 1 hallazgo(s):
+   REPORTE.md linea 79: afirma VERDE (clase OK) citando `docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt`, y el veredicto REAL de ese fichero es MAL
+EXIT=1
+
+=== _auditor_v105_mut_F.md ===
+==========================================================================================
+TALLA DE VEREDICTOS de docs/loop/_auditor_v105_mut_F.md: 4 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, de 9 palabra(s) de veredicto en total en el reporte.
+==========================================================================================
+   linea 4: VERDE citando `docs/loop/SALIDA_V105_APERTURA_SELLADA_VERDE.txt` -- calza (fichero real: OK) [2 cita(s), se uso: primera cita DESPUES de la palabra, misma oracion]
+   linea 17: ROJO citando `docs/loop/SALIDA_V105_CABECERA_TALLADA.txt` -- calza (fichero real: MAL)
+   linea 75: VERDE citando `docs/loop/SALIDA_V105_TALLAR_NOMBRE_OP.txt` -- calza (fichero real: OK) [2 cita(s), se uso: cita ANTES mas cercana, misma oracion]
+
+ROJO, 1 hallazgo(s):
+   REPORTE.md linea 82: afirma VERDE (clase OK) citando `docs/loop/SALIDA_V105_CABECERA_TALLADA.txt`, y el veredicto REAL de ese fichero es MAL [1 cita(s), se uso: primera cita DESPUES de la palabra, oracion siguiente (+1) sin veredicto propio (f)]
+EXIT=1
+
+=== _auditor_v105_mut_D.md ===
+==========================================================================================
+TALLA DE VEREDICTOS de docs/loop/_auditor_v105_mut_D.md: 4 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, de 10 palabra(s) de veredicto en total en el reporte.
+==========================================================================================
+   linea 4: VERDE citando `docs/loop/SALIDA_V105_APERTURA_SELLADA_VERDE.txt` -- calza (fichero real: OK) [2 cita(s), se uso: primera cita DESPUES de la palabra, misma oracion]
+   linea 17: ROJO citando `docs/loop/SALIDA_V105_CABECERA_TALLADA.txt` -- calza (fichero real: MAL)
+   linea 75: VERDE citando `docs/loop/SALIDA_V105_TALLAR_NOMBRE_OP.txt` -- calza (fichero real: OK) [2 cita(s), se uso: cita ANTES mas cercana, misma oracion]
+   linea 82: ROJO citando `docs/loop/SALIDA_V105_CABECERA_TALLADA.txt` -- calza (fichero real: MAL)
+
+VERDE: las 4 afirmacion(es) que citan fichero calzan con el veredicto real de su fichero.
+EXIT=0
+
+=== REPORTE 102, el griton (git show f253842b:docs/loop/REPORTE.md) ===
+==========================================================================================
+TALLA DE VEREDICTOS de f253842b:docs/loop/REPORTE.md: 3 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, de 17 palabra(s) de veredicto en total en el reporte.
+==========================================================================================
+   linea 4: VERDE citando `docs/loop/SALIDA_V102_CABECERA_TALLADA.txt` -- calza (fichero real: OK) [2 cita(s), se uso: primera cita DESPUES de la palabra, parrafo, cita de la oracion no legible (d)]
+   linea 26: ROJO citando `SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`) -- calza (fichero real: MAL)
+   linea 28: ROJO citando `SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`) -- calza (fichero real: MAL)
+
+VERDE: las 3 afirmacion(es) que citan fichero calzan con el veredicto real de su fichero.
+EXIT=0

@@ -105,6 +105,45 @@ propio) EMPIEZA a dar ROJO. El reporte de la vuelta 102
 ensuciarse, SIGUE dando VERDE EXIT 0: ninguna de sus oraciones sin cita tiene
 una oracion siguiente sin veredicto propio con una cita que contradiga.
 
+--- TAREA 3 de la vuelta 106 (acta de la vuelta 105, "LA E PASA, Y ESO SI ES
+UN AGUJERO") ---
+
+POR QUE NACE, CON EL EJEMPLAR DELANTE. El ensanche (e) de la vuelta 105 solo
+miraba UNA oracion siguiente. El auditor de la vuelta 105 escribio la
+mutacion E, la misma unidad de argumentacion que la C pero con una oracion
+NEUTRA de por medio: "La cabecera tallada salio VERDE y no hubo nada que
+declarar. La corrida fue de rutina y no llevo mas de un segundo. La
+evidencia esta en `docs/loop/SALIDA_V105_CABECERA_TALLADA.txt`, pegada
+entera." La palabra VERDE vive en la primera oracion (sin cita); la segunda
+no trae cita NI veredicto propio; la cita vive en la TERCERA. (e) probaba
+solo la segunda, la encontraba sin cita, y se rendia: la mutacion E daba
+VERDE cuando el fichero citado (`SALIDA_V105_CABECERA_TALLADA.txt`) decia
+ROJO de verdad.
+
+LA REGLA (3.1 del encargo): si la oracion de la palabra no trae cita, se
+avanza EN CADENA por las oraciones del parrafo, una por una, MIENTRAS
+NINGUNA traiga su propia palabra de veredicto: se usa la cita de la PRIMERA
+de esas oraciones que traiga una, y se PARA (sin mirar mas alla) en la
+PRIMERA oracion, con o sin cita, que SI trae veredicto propio. Esto deja la
+mutacion D intacta a proposito: su oracion siguiente trae veredicto propio,
+asi que el avance se detiene ANTES de llegar a la cita (misma razon que ya
+regia en (e), extendida a una cadena en vez de a un solo paso).
+
+PRUEBA DE MUTACION (3.2, 3.3 del encargo, con sus salidas commiteadas en
+docs/loop/SALIDA_V106_TAREA3_*.txt): `_auditor_v105_mut_E.md` DESPUES del
+arreglo pasa de VERDE EXIT 0 a ROJO EXIT 1 (avanza 2 oraciones, "oracion
+siguiente (+2) sin veredicto propio (f)"). Las que NO pueden moverse, las
+cinco: `_auditor_v104_mut_A.md`, `_B.md` y `_v105_mut_F.md` SIGUEN ROJO EXIT 1
+sin cambio (A y B por misma oracion, ya rojas desde la vuelta 102; F ya
+alcanzada por (e) desde la vuelta 105, a una sola oracion de distancia);
+`_auditor_v105_mut_D.md` SIGUE VERDE EXIT 0, la condicion que impide que
+vuelvan los seis falsos de la vuelta 103. El reporte de la vuelta 102
+(`git show f253842b:docs/loop/REPORTE.md`), el griton, SIGUE VERDE EXIT 0. LA
+COBERTURA republicada sobre los reportes REALES no cambia (102: 3/17; 104:
+2/6; 105: 3/8): ninguno de los tres tenia, de verdad, una cita dos oraciones
+mas alla con una neutra de por medio; el cambio solo alcanza a las mutaciones
+sinteticas que lo probaban.
+
 --- TAREA 2 de la vuelta 104 (acta de la vuelta 103, "EL CERCO PASO DE CIEGO
 A GRITON") ---
 
@@ -435,17 +474,34 @@ def hallar_afirmaciones(texto):
             citas_oracion = [(c[0], c[2]) for c in citas_todas if oracion_de(c[0], limites) == oracion_palabra]
             ambito = "misma oracion"
             if not citas_oracion:
-                # (e) TAREA 1 v105: ensanche a la oracion SIGUIENTE, solo si
-                # esa oracion no trae su propia palabra de veredicto (si la
-                # trajera, seria la unidad de argumentacion de OTRA cosa).
-                idx_siguiente = oracion_palabra + 1
-                if idx_siguiente <= len(limites):
-                    ini_sig, fin_sig = rango_de_oracion(idx_siguiente, limites, len(parrafo))
-                    if not trae_veredicto_propio(parrafo, ini_sig, fin_sig):
-                        citas_oracion = [(c[0], c[2]) for c in citas_todas
-                                        if ini_sig <= c[0] < fin_sig]
-                        if citas_oracion:
-                            ambito = "oracion siguiente sin veredicto propio (e)"
+                # (f) TAREA 3 v106 (acta de la vuelta 105, "LA E PASA, Y ESO
+                # SI ES UN AGUJERO"): (e) de la vuelta 105 solo miraba UNA
+                # oracion siguiente. La mutacion E cita dos oraciones
+                # despues, con una oracion NEUTRA de por medio (sin cita y
+                # sin veredicto propio): "... salio VERDE ... La corrida fue
+                # de rutina ... La evidencia esta en `...`." Se avanza ahora
+                # EN CADENA por las oraciones del parrafo, una por una,
+                # MIENTRAS ninguna traiga su propia palabra de veredicto: se
+                # usa la cita de la PRIMERA de esas oraciones que traiga una,
+                # y se PARA (sin mirar mas alla) en la PRIMERA oracion, con o
+                # sin cita, que SI trae veredicto propio (podria ser la
+                # narracion de OTRA afirmacion, el mismo motivo que ya regia
+                # en (e) y que deja intacta la mutacion D: su oracion
+                # siguiente trae veredicto propio y el avance se detiene
+                # ANTES de llegar a la cita).
+                idx = oracion_palabra + 1
+                saltos = 0
+                while idx <= len(limites):
+                    saltos += 1
+                    ini_i, fin_i = rango_de_oracion(idx, limites, len(parrafo))
+                    if trae_veredicto_propio(parrafo, ini_i, fin_i):
+                        break
+                    citas_i = [(c[0], c[2]) for c in citas_todas if ini_i <= c[0] < fin_i]
+                    if citas_i:
+                        citas_oracion = citas_i
+                        ambito = "oracion siguiente (+%d) sin veredicto propio (f)" % saltos
+                        break
+                    idx += 1
             if not citas_oracion:
                 continue
             mejor, regla_base = elegir_cita(citas_oracion, pos)
