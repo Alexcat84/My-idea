@@ -1,0 +1,246 @@
+====================================================================================================
+BARRIDO DIRIGIDO POR LA ESPECIE DEL 28, TAREA 4.2 VUELTA 104: 48 pares (15 del tramo 1 nunca releidos + 33 RESUELTA del tramo 2)
+====================================================================================================
+
+--- PUESTO 1 (tramo1) --- segmentos_de_clientes_problema_necesidad -> get_out_of_the_building (paso 1)
+  verbo citado: 'Sal'
+  objeto citado: 'del edificio (get out of the building), a observar como tus clientes viven el problema'
+  VEREDICTO: OBJETO -- el hijo esta nombrado LITERAL dentro del propio paso, como glosa en ingles del verbo mismo
+
+--- PUESTO 2 (tramo1) --- medicion_servicios -> make_certain_programa (paso 3)
+  verbo citado: 'Implementar'
+  objeto citado: "el programa 'Make Certain'"
+  VEREDICTO: OBJETO -- objeto directo, nombra el programa que el hijo desarrolla
+
+--- PUESTO 4 (tramo1) --- consejo_de_calidad_y_rol_del_director -> planificacion_estrategica_despliegue_2 (paso 3)
+  verbo citado: 'Integra'
+  objeto citado: 'las metas de calidad en tus planes de negocio y de desempeño'
+  VEREDICTO: OBJETO -- objeto directo mas complemento de destino; sin marca de ejemplo/condicion/cuando
+
+--- PUESTO 6 (tramo1) --- issue_spotting_ambiental -> triple_bottom_line_2 (paso 2)
+  verbo citado: 'Decide'
+  objeto citado: 'si tu enfoque sera ambiental, o [decide] incluir tambien lo social y economico'
+  VEREDICTO: NO_OBJETO -- '(triple bottom line)' es una ETIQUETA PARENTETICA sobre UNA de las dos alternativas de una decision binaria; el objeto real del imperativo 'decide' es la eleccion de alcance, no el marco triple bottom line
+
+--- PUESTO 8 (tramo1) --- analisis_de_sistemas_de_medicion_msa -> capacidad_de_proceso_2 (paso 3)
+  verbo citado: 'Verificar'
+  objeto citado: 'que el proceso de medicion este bajo control estadistico (mediante carta de control)'
+  VEREDICTO: NO_OBJETO -- 'capacidad de proceso' (el hijo) NO APARECE en el paso en ninguna forma: ni como objeto, ni como ejemplo ni como condicion. El paso verifica control estadistico de la MEDICION, no capacidad
+
+--- PUESTO 9 (tramo1) --- dmadv_fase_verificacion -> capacidad_de_proceso (paso 2)
+  verbo citado: 'Haz'
+  objeto citado: 'un analisis de capacidad'
+  VEREDICTO: OBJETO -- objeto directo del primer verbo coordinado, nombra 'capacidad' literalmente
+
+--- PUESTO 14 (tramo1) --- medicion_servicios -> programa_make_certain (paso 3)
+  verbo citado: 'Implementar'
+  objeto citado: "el programa 'Make Certain'"
+  VEREDICTO: OBJETO -- mismo paso y mismo razonamiento que el puesto 2 (misma madre, distinto id de hijo)
+
+--- PUESTO 17 (tramo1) --- customer_discovery_overview -> mvp_catalogo_tecnicas (paso 3)
+  verbo citado: 'Muestrales'
+  objeto citado: 'tu producto minimo viable (MVP) y tu propuesta de valor'
+  VEREDICTO: OBJETO -- objeto directo, el MVP esta nombrado como lo que se muestra, no como ejemplo de otra cosa
+
+--- PUESTO 18 (tramo1) --- dmaic_fase_measure -> capacidad_del_proceso (paso 5)
+  verbo citado: 'medir'
+  objeto citado: 'su capacidad a corto plazo'
+  VEREDICTO: OBJETO -- dos imperativos coordinados por 'y'; 'capacidad' es objeto directo del SEGUNDO ('medir'), fuera de la clausula 'si' del primero
+
+--- PUESTO 20 (tramo1) --- waterfall_vs_agile_development -> modelo_customer_development (paso 3)
+  verbo citado: 'Alinear'
+  objeto citado: 'el proceso de desarrollo de producto con el proceso de Customer Development'
+  VEREDICTO: OBJETO -- complemento directo del verbo, nombra Customer Development sin marca de ejemplo/condicion
+
+--- PUESTO 21 (tramo1) --- build_measure_learn -> value_proposition_canvas (paso 1)
+  verbo citado: 'Generar'
+  objeto citado: 'una hipotesis clara a partir de los Canvas de Value Proposition y Business Model'
+  VEREDICTO: OBJETO -- complemento de origen del verbo, sin marca de ejemplo/condicion/cuando
+
+--- PUESTO 24 (tramo1) --- preparacion_preguntas_problema_precall -> preguntas_situacion (paso 4)
+  verbo citado: 'Usar'
+  objeto citado: 'estas preguntas (de problema)'
+  VEREDICTO: NO_OBJETO -- 'preguntas de situacion' (el hijo) vive DENTRO de una subordinada de FINALIDAD ('para minimizar X'), no como objeto de 'usar': el objeto de 'usar' son las preguntas de PROBLEMA, no las de situacion
+
+--- PUESTO 25 (tramo1) --- histograma_calidad -> capacidad_del_proceso (paso 4)
+  verbo citado: 'Evaluar'
+  objeto citado: 'el centrado, ancho y forma del histograma'
+  VEREDICTO: NO_OBJETO -- 'capacidad del proceso' (el hijo) vive DENTRO de una subordinada de FINALIDAD ('para determinar X'), no como objeto de 'evaluar': el objeto de 'evaluar' es el histograma
+
+--- PUESTO 38 (tramo1) --- obtencion_compromiso -> enfoque_etapa_investigacion (paso 4)
+  verbo citado: 'Pon'
+  objeto citado: 'tu esfuerzo de mejora en las etapas de investigacion y demostracion de capacidad'
+  VEREDICTO: OBJETO -- complemento de destino directo, nombra 'etapa de investigacion' sin marca de ejemplo/condicion
+
+--- PUESTO 39 (tramo1) --- modelos_gestion_seguridad -> fallas_activas_condiciones_latentes (paso 4)
+  verbo citado: 'Incorporar'
+  objeto citado: 'analisis de condiciones latentes y defensas del sistema'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'condiciones latentes' literalmente
+
+--- PUESTO 42 (tramo2) --- cultura_justa_2 -> preguntar_que_no_quien (paso 2)
+  verbo citado: 'Preguntar'
+  objeto citado: "'que es responsable' en vez de 'quien es responsable'"
+  VEREDICTO: OBJETO -- objeto directo, es exactamente la distincion que el hijo desarrolla
+
+--- PUESTO 45 (tramo2) --- estrategia_de_innovacion_de_producto -> strat_map_arenas_estrategicas (paso 3)
+  verbo citado: 'Definir'
+  objeto citado: 'arenas estrategicas (mercados, tecnologias, sectores)'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'arenas estrategicas' literalmente
+
+--- PUESTO 46 (tramo2) --- customer_discovery_get_out_of_building -> prueba_solucion_con_cliente (paso 1)
+  verbo citado: 'Identifica'
+  objeto citado: 'tus hipotesis clave sobre el problema, el cliente y la solucion'
+  VEREDICTO: OBJETO -- 'la solucion' es uno de los tres complementos del objeto directo, sin marca de ejemplo/condicion
+
+--- PUESTO 47 (tramo2) --- reporte_estado_miembro_equipo -> variance_analysis (paso 3)
+  verbo citado: 'Identificar'
+  objeto citado: 'las causas raiz de las variaciones en actividades y costos'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'variaciones' literalmente
+
+--- PUESTO 48 (tramo2) --- concepto_proyecto_breakthrough -> proyectos_vitales_pocos (paso 2)
+  verbo citado: 'Clasificar'
+  objeto citado: "el proyecto como parte de los 'vitales pocos' o 'utiles muchos'"
+  VEREDICTO: OBJETO -- 'como' es predicativo ('clasificar X como Y'), no marca de ejemplo; 'vitales pocos' es una de las dos categorias asignables, parte del objeto
+
+--- PUESTO 49 (tramo2) --- terminologia_clave_breakthrough -> analisis_sintomas (paso 2)
+  verbo citado: 'Diferenciar'
+  objeto citado: 'sintomas de causas'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'sintomas' literalmente
+
+--- PUESTO 52 (tramo2) --- posicionamiento_por_tipo_de_mercado -> resegmentacion_mercado_nicho_bajo_costo (paso 5)
+  verbo citado: 'comunicar'
+  objeto citado: 'comprension unica de un nicho o ventaja de bajo costo'
+  VEREDICTO: NO_OBJETO -- el paso ENTERO empieza con 'Si es re-segmentacion:', CONDICION explicita; el hijo solo aplica dentro de esa rama condicional de un paso que cubre varias estrategias alternativas
+
+--- PUESTO 53 (tramo2) --- control_calidad_operaciones_servicio -> descubrir_necesidades_del_cliente (paso 1)
+  verbo citado: 'Identificar'
+  objeto citado: 'el proceso principal, su objetivo, y las necesidades del cliente'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'necesidades del cliente' literalmente
+
+--- PUESTO 57 (tramo2) --- autocontrol_y_controlabilidad -> capacidad_del_proceso (paso 1)
+  verbo citado: 'Verificar'
+  objeto citado: 'que el proceso tenga capacidad real'
+  VEREDICTO: OBJETO -- objeto (clausula) del verbo, nombra 'capacidad' literalmente dentro del objeto, no en subordinada aparte
+
+--- PUESTO 58 (tramo2) --- qfd_matriz -> identificar_clientes_externos_e_internos (paso 2)
+  verbo citado: 'Identifica'
+  objeto citado: 'a tus clientes internos y externos'
+  VEREDICTO: OBJETO -- objeto directo, nombra exactamente el hijo
+
+--- PUESTO 59 (tramo2) --- requisitos_gates_con_dientes -> post_launch_review (paso 6)
+  verbo citado: 'Haz'
+  objeto citado: 'una revision despues del lanzamiento'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'revision post lanzamiento' literalmente
+
+--- PUESTO 61 (tramo2) --- participacion_preferente -> seed_deals_riesgos_precedente (paso 4)
+  verbo citado: 'Recordar'
+  objeto citado: 'que los terminos de la ronda semilla suelen convertirse en precedente para rondas futuras'
+  VEREDICTO: OBJETO -- objeto (clausula) del verbo, es exactamente el contenido que el hijo desarrolla
+
+--- PUESTO 62 (tramo2) --- preservar_efectivo_buscar_modelo -> validar_modelo_negocio_hechos (paso 1)
+  verbo citado: 'No contrates'
+  objeto citado: 'equipo de ventas ni marketing'
+  VEREDICTO: NO_OBJETO -- 'validar el modelo con hechos' (el hijo) vive DENTRO de una subordinada TEMPORAL ('hasta + infinitivo'), como limite de cuando dejar de aplicar la orden principal, no como su objeto
+
+--- PUESTO 64 (tramo2) --- medicion_calidad -> clasificacion_seriedad_defectos (paso 6)
+  verbo citado: 'Clasificar'
+  objeto citado: 'los defectos por gravedad, causa y responsabilidad'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'clasificacion de seriedad de defectos' literalmente
+
+--- PUESTO 66 (tramo2) --- cultura_justa_3 -> cultura_de_aprendizaje (paso 3)
+  verbo citado: 'Balancear'
+  objeto citado: 'la necesidad de accountability con la proteccion al aprendizaje organizacional'
+  VEREDICTO: OBJETO -- complemento directo (con + N), nombra 'aprendizaje organizacional' literalmente
+
+--- PUESTO 73 (tramo2) --- takt_time -> smed_setup_reduction (paso 5)
+  verbo citado: 'Reducir'
+  objeto citado: 'tiempos de cambio (setup)'
+  VEREDICTO: OBJETO -- objeto directo, con glosa parentetica en ingles del propio objeto, no de otra cosa
+
+--- PUESTO 74 (tramo2) --- ingenieria_calidad_proveedores -> relaciones_largo_plazo_con_proveedores (paso 4)
+  verbo citado: 'Desarrollar'
+  objeto citado: 'relaciones de largo plazo con proveedores'
+  VEREDICTO: OBJETO -- objeto directo, nombra el hijo literalmente
+
+--- PUESTO 75 (tramo2) --- dia_cero_defectos_2 -> eliminacion_causas_error_4 (paso 6)
+  verbo citado: 'Iniciar'
+  objeto citado: 'el programa de eliminacion de causas de error'
+  VEREDICTO: OBJETO -- objeto directo; 'al dia siguiente' es adverbio de tiempo sobre CUANDO iniciar, no subordina al objeto
+
+--- PUESTO 77 (tramo2) --- desarrollo_expertos_capaces -> evaluacion_desempeno_proyectos (paso 4)
+  verbo citado: 'Medir'
+  objeto citado: 'el impacto de la capacitacion en el desempeno de los proyectos de mejora'
+  VEREDICTO: OBJETO -- objeto directo, nombra el hijo literalmente
+
+--- PUESTO 78 (tramo2) --- customer_discovery_phase2_problem_test -> captura_conocimiento_mercado (paso 5)
+  verbo citado: 'Capturar'
+  objeto citado: 'conocimiento competitivo y de mercado'
+  VEREDICTO: OBJETO -- objeto directo; 'durante las entrevistas' es adverbio de tiempo, no subordina el objeto
+
+--- PUESTO 80 (tramo2) --- estudio_desempeno_run_charts_servicios -> causas_comunes_vs_especiales (paso 3)
+  verbo citado: 'Construir'
+  objeto citado: 'graficos de corrida o distribuciones'
+  VEREDICTO: NO_OBJETO -- 'causas especiales de variacion' vive DENTRO de una subordinada de FINALIDAD ('para detectar X'), no como objeto de 'construir'; ademas solo nombra 'especiales', nunca 'comunes', y el hijo es causas_comunes_vs_especiales: posible exceso/defecto de genero, misma familia que el 31
+
+--- PUESTO 83 (tramo2) --- programa_mejora_calidad_14_pasos -> costo_de_calidad_3 (paso 3)
+  verbo citado: 'Definir'
+  objeto citado: 'como vas a medir la calidad y el costo de la no calidad'
+  VEREDICTO: OBJETO -- objeto (clausula) del verbo, nombra 'costo de la no calidad' literalmente
+
+--- PUESTO 84 (tramo2) --- liderazgo_ejecutivo_innovacion -> estrategia_innovacion_producto (paso 1)
+  verbo citado: 'Define'
+  objeto citado: 'tu vision y tu estrategia de innovacion'
+  VEREDICTO: OBJETO -- objeto directo, nombra el hijo literalmente
+
+--- PUESTO 87 (tramo2) --- emprendedor_como_puesto_de_trabajo -> contabilidad_innovacion_pivote (paso 2)
+  verbo citado: 'Evalua'
+  objeto citado: 'ese trabajo con la contabilidad de innovacion'
+  VEREDICTO: OBJETO -- complemento directo (con + N), nombra 'contabilidad de innovacion' literalmente, sin marca de ejemplo/condicion
+
+--- PUESTO 88 (tramo2) --- genchi_gembutsu_salir_del_edificio -> get_out_of_the_building (paso 2)
+  verbo citado: 'Salir'
+  objeto citado: 'fisicamente a hablar con clientes potenciales reales'
+  VEREDICTO: OBJETO -- el hijo esta nombrado LITERAL como apositivo del propio verbo ('lo que se llama get out of the building')
+
+--- PUESTO 91 (tramo2) --- gestion_de_portafolio_gates_go_kill -> tipos_criterios_gate (paso 2)
+  verbo citado: 'Establecer'
+  objeto citado: 'gates o puntos de decision formales con criterios visibles de Go/Kill'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'criterios de gate' literalmente
+
+--- PUESTO 92 (tramo2) --- etapa_build_business_case -> posicionamiento_por_tipo_de_mercado (paso 1)
+  verbo citado: 'Definir'
+  objeto citado: 'el mercado objetivo, posicionamiento y propuesta de valor'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'posicionamiento' literalmente
+
+--- PUESTO 93 (tramo2) --- estandares_voluntarios -> definiciones_operacionales_de_calidad (paso 3)
+  verbo citado: 'Documentar'
+  objeto citado: 'el estandar con definiciones operacionales claras y medibles'
+  VEREDICTO: OBJETO -- complemento directo (con + N), nombra el hijo literalmente
+
+--- PUESTO 94 (tramo2) --- testear_circulo_cuadrado_rectangulo -> validar_modelo_financiero (paso 3)
+  verbo citado: 'validar'
+  objeto citado: 'que el modelo de negocio completo (socios, canales, ingresos, costos) es viable'
+  VEREDICTO: OBJETO -- objeto (clausula) del verbo, es el modelo financiero/de negocio completo que el hijo valida
+
+--- PUESTO 97 (tramo2) --- principios_alineacion_empresarial -> desarrollar_estrategias_largo_plazo (paso 3)
+  verbo citado: 'Alinear'
+  objeto citado: 'estrategias, sistemas y metas de largo plazo'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'estrategias de largo plazo' literalmente
+
+--- PUESTO 98 (tramo2) --- control_del_proceso_del_proveedor -> buenas_practicas_manufactura_cgmp (paso 3)
+  verbo citado: 'Definir'
+  objeto citado: 'tareas especiales y buenas practicas de manufactura requeridas'
+  VEREDICTO: OBJETO -- objeto directo, nombra cGMP literalmente
+
+--- PUESTO 99 (tramo2) --- juran_rcca_metodo -> prueba_teorias_causa_raiz (paso 2)
+  verbo citado: 'probarlas'
+  objeto citado: '[las teorias de causa raiz]'
+  VEREDICTO: OBJETO -- objeto directo de uno de los verbos coordinados de la enumeracion, sin marca de ejemplo/condicion
+
+--- PUESTO 100 (tramo2) --- desarrollar_metas_anuales -> metas_negocio_calidad (paso 3)
+  verbo citado: 'Filtra y prioriza'
+  objeto citado: 'las metas que entraran en tu plan de negocio'
+  VEREDICTO: OBJETO -- objeto directo, nombra 'metas de negocio' literalmente
+
+====================================================================================================
+RESUMEN: 41 de 48 pares dan OBJETO (se sostienen sin re-lectura); 7 dan NO_OBJETO y van a lectura entera (TAREA 4.3): 6, 8, 24, 25, 52, 62, 80
