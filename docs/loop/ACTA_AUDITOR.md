@@ -41308,3 +41308,289 @@ dos salidas nombradas y NINGUNA elegida, y el encargo de codigo que espera al re
 (4.2). **`docs/loop/PROMPT_SIGUIENTE.md` queda VACIO**, como manda `AUDITOR.md` seccion 4. El
 numero **118 queda gastado por esta acta**; la vuelta que el fundador relance sera la **119**.
 Los `SALIDA_V118_*` quedan como pieza historica.
+
+# ==========================================================================
+# ACTA DE LA VUELTA 119 DEL AUDITOR (28 ago 2026, fecha LEIDA DE GIT, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** La ultima acta escrita es la de la vuelta 118 (`ACTA_AUDITOR.md`
+linea 41020) y la vuelta que audito es la 119, la inmediatamente siguiente. Cubro UNA vuelta y
+la nombro: la 119, commits `fd222415`, `245ddba5`, `815481e5` y `517d7ab0`, cuatro en total,
+sobre la apertura `ed924258` (la decision del fundador que levanto la parada de la 118).
+
+**EL VEREDICTO DE UNA LINEA: LA 119 ENTREGO SUS TRES TAREAS Y TODAS SUS CIFRAS SON CIERTAS AL
+DIGITO RECOMPUTADAS POR MI. `OP-S-01` QUEDA CUMPLIDA CON REMISION Y LA RATIFICO MIDIENDO SUS
+SIETE PUNTOS UNO POR UNO. LO QUE COBRA LA VUELTA ES DE OTRA ESPECIE: DOS GUARDAS MECANICAS SE
+PERDIERON (el sello de apertura y el tallador de la cabecera, las dos ROJAS por corrida mia),
+LOS DOS INSTRUMENTOS QUE ESCRIBIERON NO TRAJERON SU CASO POSITIVO CORRIDO (y lo corri yo: los
+dos muerden), Y LA PREMISA ENTERA DE LA TAREA 1 ES FALSA COMO UNIVERSAL: la guarda vieja de
+`OP-C-05` NO esta rota siempre. Hoy corre VERDE. El "siempre" es mio, de la 118.**
+
+**EL TOPE DE 60 LINEAS NO ME ATA** (`AUDITOR.md` 6.3 lo pone *"cuando no hay caidas ni
+discutibles fuera del marcado"*, y esta acta trae una caida del ejecutor, dos mias, dos de
+guarda y **un hallazgo fuera del marcado**). El austero recorta la narracion, no la
+verificacion.
+
+## 1. VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+
+**1.1 El arbol de la apertura, comprobado.** `git rev-parse d13be5c0:dataset` y
+`ed924258:dataset` dan **el mismo arbol `2b8826f4`**: la reconstruccion que el reporte hace de
+su apertura por igualdad de arbol es CIERTA. `git diff --numstat <c>^..<c> -- dataset/ web/
+engine/` commit a commit sobre los cuatro: **solo `815481e5` mueve algo**, y mueve 1/1 en
+`dataset/metadata/master_graph.json`, 1/1 en el nodo, 1/1 en `web/lib/assets/master_graph.json`
+y **2/2 en `web/lib/assets/manifest.json`**, que el reporte no nombra (es el derivado mecanico
+del sha y los bytes del grafo; no es contenido, pero se dice).
+
+**1.2 El grafo, contado por mi** (python propio, `assert isinstance(nodos, dict)` y un `assert`
+por fila): censo **3.853 / 3.188 vivos / 665 deprecados**, `total_nodos` declarado 3.853 y
+contado 3.853; `nodos_siguientes` **9.190**, `nodos_previos` **9.169**, suma **18.359**, union
+dirigida **9.813**, **auto-aristas 0**, **cero nodos con arista duplicada**. Bytes
+**8.391.659**, `sha256=b758994057cf`. El instrumento de la casa
+(`scripts/loop/vuelta83_conteo_aristas.py WORK`) corrido por mi da **la misma linea que
+`SALIDA_V119_CONTEO_CIERRE.txt`**, y el `+6` de bytes contra la apertura es exactamente el
+titulo corregido.
+
+**1.3 El ciclo de tres, corrido entero por mi y EN SU ORDEN** (la leccion de mi 4.3 de la 118
+pagada): `run_phase1.py --reaplico-curaduria` **GATE 0: OK**, y mi salida es **IDENTICA** a
+`SALIDA_V119_TAREA3_GATE0.txt` (`diff` con fin de linea normalizado, cero diferencias): titulo
+exacto duplicado 0, divergentes 0, auto-aristas tras resolver 0, **alcanzabilidad 100,0%
+(3188/3188 activos, 85 semillas validas)**. Detras, `etiquetas_de_cara.py --aplicar` (**71
+etiquetas**) y `sync_assets_web.py` (6 assets). `git diff --numstat` sobre `dataset/`, `web/` y
+`engine/`: **CERO lineas**, y el grafo vuelve a **8.391.659 bytes, `sha256=b758994057cf`**, con
+el espejo de `web/` en el mismo sha. **Vigesima vuelta seguida en verde.**
+
+**1.4 Las tres suites, corridas por mi.** motor `python engine/run_all_tests.py` **25/25, EXIT
+0**; web `npx vitest run` **80 passed (80) / 1.030 passed, 3 skipped (1.033), EXIT 0**; `npx tsc
+--noEmit` **EXIT 0 y CERO lineas**.
+
+**1.5 Marcador y desfase, remedidos con codigo propio y con el instrumento.** Sobre
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`: **n 3.388, huecos 0, puestos unicos 3.388, pares
+duplicados 0, A 551 / B 72 / C 5 / D 2.760**, con las diez tasas por dominio (compras 0,6;
+core 22,5; entrega 1,2; environmental 16,5; exportacion 11,5; franquicias 10,1;
+health_safety 22,4; quality 14,1; risk_management 0,0; seguridad_digital 11,1).
+`scripts/recomputar_marcador.py 3388` re-corrido por mi: **salida IDENTICA** a
+`SALIDA_V119_MARCADOR_CIERRE.txt`. `vuelta85_medir_desfase_calibrado.py WORK`: **468 filas, 1 de
+desfase** (`ganar_comprension_del_cliente` hacia `dia_en_la_vida_del_cliente`).
+
+**1.6 Higiene del dictado y de las citas.** `wc -l docs/loop/REPORTE.md` **71**, su cabecera dice
+71, y 71 esta bajo el tope de 80. Barrido de guiones sobre el diff entero `ed924258..517d7ab0`:
+**CERO guiones largos y CERO guiones medios** (la caida 4.1 de la 118 no se repite). Las **21
+citas de fichero** del reporte las resolvi una por una: **todas existen**; las ocho que mi
+barrido marco son abreviaturas del propio reporte, nombres sueltos cuyo fichero vive en
+`docs/plan/`, `dataset/metadata/` o `scripts/`, un comando con argumento, un patron con
+`<N>`, y `SALIDA_V119_HEAD_APERTURA.txt`, **cuya ausencia es el discutible (a)**.
+
+**1.7 LOS SIETE PUNTOS DE `OP-S-01`, REMEDIDOS POR MI CONTRA EL GRAFO DE HOY.** **1** el
+superviviente lleva `ids_alias = ['nafta_free_trade_agreements']` y el muerto esta `deprecado`;
+**2** mi propia replica del resolvedor (con la rama del deprecado, la trampa de mi 4.6 de la
+118) devuelve el superviviente; **3** `foreign_trade_zones` e
+`import_regulations_foreign_governments` resuelven a nodo vivo; **4 CUMPLE BAJO SU ACOTAMIENTO**
+(los dos nodos de la nomina: el muerto deprecado, el superviviente sin NAFTA en id ni en
+titulo); **5** las cinco perdidas estan literalmente dentro (`articulo 401`, `tariff shift`,
+`RVC`, `wholly obtained`, `CF 434`, `B-232`, los dos porcentajes y el costo neto, sondados uno a
+uno); **6** Gate 0 verde por corrida mia; **7** procedimental. **El titulo vivo es, byte a byte,
+el texto exacto de la decision**, en el nodo, en el grafo y en el espejo de `web/`. Y sobre los
+3.188 vivos: **`nafta` en id 0, NAFTA en titulo 0**, `T-MEC` y `USMCA` en un solo titulo, el del
+superviviente. `OPERACIONES.jsonl` sigue en **71 filas**, ahora **LISTA 69 / HECHA 2**, con el
+punto 4 acotado por correccion declarada y el texto viejo intacto delante de la barra.
+
+**1.8 LA TAREA 1, RE-CORRIDA POR MI, Y AHI EMPIEZA EL HALLAZGO (4.1).** El fichero nuevo
+`--caso-rojo` reproduce **byte a byte** la salida commiteada (935 entradas que sobran en 711
+nodos, la copia fabricada sube a 936, `git diff --numstat -- dataset/` vacio antes y despues, la
+mutacion cae en False). **Y pague un doble que nadie pidio:** el caso rojo del fichero SIMULA
+`--despues` en vez de correrlo, asi que la rama roja real de `cmd_despues` seguia sin ejecutarse
+nunca. La ejecute yo, sellando un ANTES de 900 en una vuelta de banco (9119) y borrandolo
+despues: **`--despues` devuelve EXIT 1 con "ROJO: LA CUENTA CRECIO (+35). LA OPERACION PARA"**, y
+con el ANTES real de 935 devuelve **EXIT 0 con "+0"**. **Las dos ramas del instrumento nuevo
+quedan probadas, y no lo estaban.** Arbol sin mover.
+
+**1.9 LA TAREA 2, MEDIDA CONTRA SUS FUENTES.** `docs/PENDIENTES.md` **51 insertadas / 0
+borradas** y `grep -c "^-[^-]"` sobre su diff da **0**: aditivo medido, no declarado. Los tres
+`grep -ic` sobre `docs/plan/FASE_0_CODIGO.md` los corri yo hoy: **"equivalente" 0, "no crezca"
+0, "antes y despues" 0**. Y fui a la fuente de la atribucion corregida: **el acta 88, seccion
+5.4, SI dice literal *"se cumple por la via equivalente que la ficha misma autoriza"*** (esta
+partida en dos lineas, por eso un `grep` ingenuo no la ve). **La correccion de atribucion de R.1
+es exacta y la adjudicacion se sostiene.**
+
+## 2. MI RELECTURA CIEGA: EMPIEZA POR LOS DISCUTIBLES, Y EL DOBLE DE LA 118 SALE LIMPIO
+
+El encargo de la 119 **no traia lectura de nodos**: **cero relecturas de unidad y cero puestos
+releidos esta tanda**, casilla vacia declarada en vez de inventada. **Empece por los tres
+discutibles marcados y los medi antes de destapar la razon escrita**, y en los tres mi medicion
+confirma el hecho: (a) `verificar_apertura_sellada.py --vuelta 119` corrido por mi da **ROJO
+EXIT 1**, *"no existe ningun docs/loop/SALIDA_V119_*_APERTURA.txt"*; (b)
+`tallar_cabecera_reporte.py --fase04 --vuelta 119` corrido por mi da **ROJO con 37 celdas
+ilegibles**, y nombra en su propia salida los DOS sellos que faltan, el de apertura y el de
+cierre; (c) `OP-S-02` esta en `LISTA` en el fichero.
+
+**El doble que la 118 dejo mandado** (el dictado de las paginas de `docs/plan/` y toda cita que
+atribuya una autorizacion a una pagina) **se pago y sale limpio**: la unica pagina del plan que
+la vuelta escribe es la fila de `OP-S-01`, leida por mi entera, sin un solo guion largo en todo
+el diff, y **la cita de la atribucion la verifique en su linea** (1.9). **Ese tramo deja de estar
+doblado.** El tramo nuevo esta en la seccion 5.
+
+## 3. LO QUE ADJUDICO
+
+**3.1 EL DISCUTIBLE (a) Y EL (b) SON LA MISMA AVERIA Y NO SON CAIDA DE CIFRA: LA CABECERA DEL
+119 ES VERDADERA, PERO SU GUARDA MECANICA SE PERDIO.** Verifique **celda por celda** la cabecera
+publicada contra los instrumentos corridos por mi hoy (censo, Gate 0, aristas, motor, web, tsc,
+marcador, bytes y sha): **NINGUNA sale falsa**. Y `EJECUTOR.md` (regla del 20 ago 2026) es
+literal: *"Antes del commit, --comparar docs/loop/REPORTE.md tiene que dar CABECERA IDENTICA AL
+TALLADOR"*. Esa comparacion **no se pudo correr**, y no por capricho del tallador: sus entradas
+piden nombres canonicos (`SALIDA_V<N>_GATE0_CMD1_<LADO>.txt`, `_MOTOR_`, `_WEB_`, `_TSC_`,
+`_CONTEO_`, `_MARCADOR_`, `_DESFASE_CALIBRADO_`) y la vuelta las escribio con el prefijo de la
+tarea (`SALIDA_V119_TAREA3_GATE0.txt`). **Adjudico: la cabecera vale porque cada celda cita su
+fichero y yo recompute las diez (regla del 26 ago 2026), pero la guarda del 20 ago sigue siendo
+obligatoria y su reposicion es la TAREA 1 BLOQUEANTE de la 120.** Nombro tambien el matiz que el
+reporte no afina: **`SALIDA_V119_CONTEO_CIERRE.txt` y `SALIDA_V119_MARCADOR_CIERRE.txt` SI se
+produjeron con el nombre canonico** (el tallador solo reclama sus gemelos de APERTURA), asi que
+"no se produjeron con ese nombre exacto" es cierto de casi todos, no de todos.
+
+**3.2 EL DISCUTIBLE (c), `OP-S-02` SIN ABRIR: SE ACEPTA UNA VEZ, Y NO SE REPITE.** El `MODO
+AUSTERO` 1 dice *"cuando dos operaciones quepan en una vuelta con sus guardas completas, van las
+dos"*: **"cuando quepan" es un juicio del ejecutor y esta declarado, no escondido**. La 119
+gasto sus guardas en tres tareas de codigo y registro. **Adjudico: limite de alcance legitimo,
+no parada, y no vuelve a valer** en una vuelta cuyo trabajo sea la propia fase 05.
+
+**3.3 EL CUERPO DEL SUPERVIVIENTE SIGUE DICIENDO NAFTA, Y NO ESTA EN NINGUNA NOMINA. LO
+ADJUDICO POR EXTENSION, NO ES DOCTRINA NUEVA.** Medido por mi hoy sobre los 3.188 vivos:
+**CINCO nodos nombran NAFTA en algun campo**, y el quinto es **el superviviente mismo**, en
+`resumen_teorico` (*"el NAFTA Certificate of Origin"* y *"segun el tratado aplicable (NAFTA,
+CAFTA-DR, ...)"*) y en `pasos_accionables` (*"el Certificado de Origen correspondiente (ej.
+NAFTA)"*), aparte de `ids_alias` y `merged_originals`, que son procedencia y **no se barren
+nunca**. La ficha que la TAREA 2 escribio nombra **CUATRO ids y excluye al superviviente por su
+letra**: o sea que **el titulo dice T-MEC/USMCA y el cuerpo debajo sigue diciendo NAFTA, y ese
+cuerpo no esta anotado en ninguna parte**. La decision del fundador (punto 2) ordena **anotar,
+no ejecutar**, el barrido fuera de la nomina de la operacion. **Adjudico por extension natural
+de esa misma decision: el cuerpo del superviviente entra como QUINTA entrada de la ficha
+`vigencia-del-marco-internacional`, anotado y no ejecutado**, con la nota de que
+`ids_alias`/`merged_originals` quedan fuera del barrido por ser procedencia. **No se toca el
+nodo. No cambia el alcance de la campaña. No hace falta doctrina nueva.**
+
+## 4. LAS CAIDAS DE ESTA VUELTA, CON SU NOMBRE
+
+**4.1 DEL AUDITOR (MIA, DE ACTA) Y PROPAGADA AL REPORTE Y AL CODIGO: EL "SIEMPRE" DE LA `M`
+ESPURIA ES FALSO.** Mi acta 118, seccion 4.2, escribio que la guarda vieja no puede correr
+*"porque su guarda de limpieza usa `git status --porcelain -- dataset/`, que **siempre** ve la
+`M` espuria de fin de linea"*. **Lo medi hoy y no es asi.** Corri
+`scripts/loop/vuelta89_tarea4_guarda_op_c05.py --caso-rojo` **tal cual, sin tocarlo**, y sale
+**VERDE, EXIT 0**, con las mismas cifras que la guarda nueva (935 a 936, 711 nodos). Y
+`git status --porcelain -- dataset/` sale **vacio en tres mediciones**: al abrir, tras el ciclo
+de tres, y **tras reescribir el fichero byte a byte a proposito para provocarla**. El
+disparador de la `M` **no queda identificado y no lo invento**: lo que queda medido es que
+**no es permanente**, y que mi propio canon lo decia ya, porque el acta 88 seccion 5.6 exige
+*"`git status --porcelain -- dataset/ web/lib/assets/` en cero detras"* del ciclo de tres, que
+es imposible de exigir si la `M` fuera perpetua. **La caida es MIA**: el ejecutor de la 118
+encontro el sintoma, el ejecutor de la 119 lo reprodujo con su propia salida commiteada
+(`EXIT=1`, evidencia genuina de SU momento) y **heredo mi universal**. Lo que le cobro al
+ejecutor va en 4.2. **Lo que NO se toca: el remedio.** Medir CONTENIDO es estrictamente mejor
+que medir ESTADO aunque el estado hoy este limpio, la guarda nueva es correcta y sus dos ramas
+estan probadas (1.8). **Se corrige el diagnostico, no el arreglo.**
+
+**4.2 DEL EJECUTOR, DE REPORTE, Y NO ACUMULA POR LA LETRA DEL 27 AGO: PUBLICAR UN UNIVERSAL SIN
+MEDIRLO.** El reporte escribe que la guarda vieja quedo *"confirmada rota"* y que
+`git status --porcelain` *"siempre veia la `M` espuria"*, y ese "siempre" viaja ademas al
+**docstring del fichero nuevo** (*"se para SIEMPRE"*, *"ve SIEMPRE la M espuria"*), donde va a
+envejecer peor que en un reporte. La afirmacion **no mueve ningun dato** y vive en **la prosa
+del cuerpo de la TAREA 1**, no en una tabla, ni en la cabecera, ni en una conclusion: por la
+**decision del fundador del 27 ago 2026**, se **registra y dispara el doble, pero NO acumula**.
+
+**4.3 DEL EJECUTOR, DE INCUMPLIMIENTO DE ENCARGO: DOS GUARDAS MECANICAS PERDIDAS.** El sello de
+apertura y la comparacion del tallador son regla **permanente** de `EJECUTOR.md`, no cosa del
+encargo de turno, y las dos faltan (medido en la seccion 2). **Se declararon**, que es lo que
+salva el credito, y no son caida de cifra porque ninguna celda salio falsa. Y falta ademas
+**el sello de HEAD_CIERRE**, que el reporte no nombra en su discutible (a): lo doy **dentro del
+marcado por remision**, porque el ROJO del tallador que el discutible (b) declara **nombra los
+dos sellos en su propia salida**.
+
+**4.4 DE GUARDA QUE NO ALCANZA, Y ESTA SI CAE FUERA DEL MARCADO: LOS DOS INSTRUMENTOS QUE
+ESCRIBIERON NO TRAJERON SU CASO POSITIVO.** `vuelta119_tarea3_titulo_ops01.py` y
+`vuelta119_tarea3_2_3_operaciones_ops01.py` **escribieron en `dataset/nodos/` y en
+`docs/plan/OPERACIONES.jsonl`** sin simulacion previa sobre copia en memoria y **sin caso
+positivo corrido**, que el `MODO DE EJECUCION CONTINUA` pide **por operacion**, y sin marcarlo
+como discutible. **Los corri yo**, en su segunda pasada, que es su caso positivo gratis: el del
+titulo cae en **ROJO limpio, EXIT 1**, *"no se pisa un estado distinto al medido por la
+parada"*; el de las operaciones cae en **EXIT 1 con un `ValueError` sin capturar** sobre
+`verif.index(PUNTO4_VIEJO)`, que es ruidoso pero no es un ROJO dicho. **Ninguno de los dos
+escribio nada** y el arbol quedo sin mover (`git status --porcelain` vacio). **Las guardas
+muerden; lo que no existia era la prueba de que muerden.**
+
+**4.5 MIA, DE ENCARGO: EL ENCARGO DE LA 119 NO PIDIO NI EL SELLO NI EL TALLADOR.** Lo escribi yo
+y omiti las dos guardas permanentes. Son regla de `EJECUTOR.md` y el ejecutor responde de ellas
+igual (4.3), pero **el encargo es mio y las dejo caer**: por eso la reposicion va **primera y
+bloqueante** en la 120, con los nombres canonicos escritos uno por uno para que no haya que
+adivinarlos.
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda:** **cero relecturas de unidad y cero puestos**, declarado y no inflado; y las
+varas corridas por mi: los arboles de la apertura por `rev-parse`, el diff commit a commit sobre
+los cuatro, censo y aristas con codigo propio y con el instrumento, el ciclo de tres entero y en
+su orden, las tres suites, el marcador con sus huecos y sus diez tasas re-corrido con el script
+de la casa, el desfase, **los siete puntos de `OP-S-01` uno por uno con mi replica fiel del
+resolvedor**, el barrido de NAFTA y sus cuatro sustitutos sobre los 3.188 vivos, las sondas
+literales de las cinco perdidas, el `--caso-rojo` nuevo byte a byte, **las dos ramas reales de
+`cmd_despues` ejecutadas por mi**, **la guarda vieja corrida tal cual (y sale verde)**, los tres
+`grep -ic`, la cita del acta 88 leida en su linea, el sello y el tallador corridos hasta su
+ROJO, **los dos instrumentos de escritura corridos en segunda pasada**, el barrido de las 21
+citas, el de guiones y el `wc -l`.
+
+**Caidas del ejecutor en esta tanda: CERO de clase, CERO de cifra publicada, UNA de reporte que
+NO acumula (4.2), UNA de incumplimiento de encargo (4.3) y UNA de guarda que no alcanza (4.4).
+Caidas del auditor: DOS, una de acta (4.1) y una de encargo (4.5). Discrepancias abiertas:
+NINGUNA.**
+
+**Acumulado:** **858 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de
+clase del ejecutor** (sin cambio), **66 de reporte del ejecutor** (65 mas la de hoy), **19 de
+cifra publicada del ejecutor** (sin cambio), **14 de expediente** (sin cambio), **11 de
+incumplimiento de encargo** (10 mas la de hoy), **2 de guarda envejecida** (sin cambio), **12 de
+guarda que no alcanza o cegada** (10 mas dos hoy: el tallador cegado por el nombre de sus
+entradas y los dos instrumentos de escritura sin caso positivo), **8 de cifra del auditor** (sin
+cambio), **19 de acta del auditor** (18 mas la de hoy), **28 de procedimiento del auditor** (sin
+cambio), **1 de reporte del auditor** (sin cambio), **19 de encargo del auditor** (18 mas la de
+hoy), **2 de clase del auditor** (sin cambio), y **2 vueltas no entregadas enteras** (sin
+cambio).
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO.** Recompute con instrumento o codigo
+> propio TODAS las cifras que la vuelta publica: las ocho filas de la cabecera, el censo, las
+> cuatro de aristas, las tres suites, el marcador entero, los bytes y el sha, los siete puntos
+> de `OP-S-01`, las 51 lineas de `PENDIENTES.md` y las cifras del caso rojo. **Ninguna sale
+> falsa.** La parada pide DOS tandas seguidas. **NO HAY PARADA POR AQUI.**
+>
+> **REPORTE: SIGUE EN CERO.** La caida 4.2 vive en **prosa de acompañamiento del cuerpo**, no en
+> tabla, cabecera ni conclusion: por la **decision del fundador del 27 ago 2026** se registra y
+> **NO acumula**. **NO ENCARGO ESCALADA porque la racha esta en CERO, no en dos**, y dejo dicho,
+> como manda `AUDITOR.md` 1.2, que si llegara a dos la encargaria en este mismo acta como tarea
+> bloqueante y sin esperar decision nueva del fundador.
+>
+> **EL CREDITO DE LA TANDA: BAJA, Y EL TRAMO ES OTRO.** `AUDITOR.md` 1.2: la **4.4** aparecio
+> **fuera** de los tres discutibles marcados (los instrumentos que escribieron no declararon que
+> les faltaba el caso positivo), asi que el credito baja y **su tramo se relee al doble**. El
+> tramo de la 118 (el dictado de `docs/plan/` y las citas de autorizacion) **sale limpio y deja
+> de estar doblado**. **EL TRAMO NUEVO ES DOBLE Y LO NOMBRO: (i) TODO INSTRUMENTO QUE ESCRIBA
+> EN `dataset/` O EN `docs/plan/`**, que a partir de la 120 llega con su simulacion sobre copia
+> en memoria y su caso positivo CORRIDO Y PEGADO, o no se corre; **y (ii) TODA AFIRMACION
+> UNIVERSAL SOBRE EL COMPORTAMIENTO DE UNA HERRAMIENTA** ("siempre", "nunca", "no puede
+> correr"), que a partir de hoy solo se escribe con la medicion de ESA vuelta al lado, por 4.1:
+> un universal heredado de un acta vieja es exactamente la clase de frase que se pudre sin que
+> nadie la mire.
+
+## 6. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** El unico pendiente que asoma (el cuerpo del superviviente, 3.3) lo cubre **por extension natural el punto 2 de la decision del fundador del 28 ago 2026**: anotar en la ficha, no ejecutar. Se adjudica citandola |
+| contradiccion con una regla vigente o cifra publicada | **NO.** El "siempre" de 4.1 es una afirmacion de acta y de reporte, y **se resuelve con la regla de correccion declarada que la casa ya tiene**: se corrige la atribucion, no se borra el texto viejo |
+| decision de fundador reservada | **NO.** Nada se borra, el alcance no se mueve, no se gasta fuera del repo y no se toca produccion |
+| fallo tecnico repetido | **NO.** Gate 0 y las tres suites en verde por corrida propia, **vigesima vuelta seguida**. El sello y el tallador estan en ROJO por **primera** vez y **tienen regla que los resuelve** (reponer los nombres canonicos): van como TAREA 1 bloqueante. **Si la 120 vuelve con ellos en rojo, eso ya es la segunda por la misma causa** |
+| credito de tanda roto (clase o cifra) | **NO. Sigue en CERO** |
+| credito de tanda roto (reporte) | **NO. Sigue en CERO**, la de hoy no acumula por la letra del 27 ago |
+| campaña consumada | **NO.** De las **diez** operaciones de la fase 05, **una** esta HECHA |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO SE DISPARA.** `OP-S-02` a `OP-S-12` siguen en `LISTA` |
+
+**EL BUCLE SIGUE.** Escribo el encargo de la vuelta 120 en `docs/loop/PROMPT_SIGUIENTE.md`. **No
+escribo `PARA_ALEXIS.md`.** El numero **119 queda gastado por esta acta**.
