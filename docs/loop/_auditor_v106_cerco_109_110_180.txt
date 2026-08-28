@@ -1,0 +1,80 @@
+==============================================================================
+PUESTO 109   dominio=core   clase=D   paso_casado=1
+==============================================================================
+  [MADRE] id=business_model_canvas_scorecard
+    titulo   : El Business Model Canvas como Scorecard Semanal
+    dominio/fase: core / validacion
+    resumen  : El Business Model Canvas de Osterwalder, además de ser una foto estática del negocio, se usa en Customer Discovery como un scorecard semanal para rastrear el progreso en la búsqueda del modelo de negocio. Cada semana actualizas el canvas reflejando pivotes e iteraciones, resaltando en rojo los cambios respecto a la semana anterior. Esto permite ver claramente qué hipótesis cambiaron y cuáles se mantienen, generando un historial que documenta cómo evoluciona tu entendimiento del negocio con el tiempo. Es especialmente útil cuando no tienes claridad propia sobre tu modelo de negocio o necesitas visualizar tu progreso semana a semana de forma tangible.
+    entregable: Serie histórica de canvases semanales que documenta la evolución de tu modelo de negocio.
+    paso 1: Llenar el canvas inicial con tus hipótesis en las 9 áreas: segmentos, propuesta de valor, canales, relaciones, recursos, socios e ingresos  <<< PASO CASADO
+    paso 2: Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho, y ademas cada vez que obtengas nueva evidencia
+    paso 3: Resaltar en rojo los cambios respecto a la semana anterior
+    paso 4: Una vez que confirmes los cambios, integrarlos como el nuevo canvas base en negro para la siguiente semana
+    paso 5: Repetir este proceso de forma continua durante todo tu customer discovery
+    paso 6: Sal a validar cada hipótesis con clientes reales cara a cara.
+    paso 7: Conserva todas las versiones del canvas como un flip book que documente la evolución de tu modelo de negocio.
+    paso 8: Evita convertir el canvas en un plan operativo prematuro basado en suposiciones sin validar.
+
+  [HIJO] id=key_partners_hypothesis
+    titulo   : Hipótesis de Socios Clave
+    dominio/fase: core / planificacion
+    resumen  : Identifica los socios esenciales que proveen capacidades, productos o servicios que la startup no puede o no quiere desarrollar internamente. Se organizan en cuatro tipos: alianzas estratégicas, coopetición, desarrollo conjunto de negocio y relaciones con proveedores clave. Con cada uno se define el 'intercambio de valor', qué provee y qué recibe a cambio, anotado en una tabla de tres columnas junto a sus candidatos suplentes. La flexibilidad de cada proveedor se evalúa en tiempos de entrega, tamaños de pedido, crédito y precio, y se distingue con cuidado entre socios y recursos clave, que no son lo mismo. El resultado se lleva al Business Model Canvas y se planea su validación posterior con reuniones reales, porque una tabla de socios sin una reunión detrás sigue siendo una hipótesis. El ejemplo de Apple y el iPod con las discográficas muestra cómo un socio puede potenciar el modelo de negocio entero. Aplica igual cuando el producto es físico y necesita proveedores, alianzas o distribución mediante terceros.
+    entregable: Tabla de socios clave con columnas: nombre del socio, tipo de relación, qué provee, y qué ofrece la empresa a cambio como contraprestación, con los candidatos suplentes identificados y la validación con reuniones reales ya planeada
+    paso 1: Lista los socios potenciales, los primarios y sus candidatos suplentes, clasificados en los cuatro tipos: alianzas estratégicas, coopetición, desarrollo conjunto de negocio y relaciones con proveedores clave
+    paso 2: Define en una tabla de tres columnas qué proveerá cada socio y qué recibirá de la empresa a cambio: nombre del socio, qué provee, qué ofreces tú
+    paso 3: Evalúa la flexibilidad de cada proveedor en tiempos de entrega, tamaños de pedido, crédito, precio y condiciones
+    paso 4: Distingue claramente entre socios y recursos clave
+    paso 5: Actualiza el Business Model Canvas con los socios identificados
+    paso 6: Planea la validación posterior con reuniones reales con cada socio candidato
+
+==============================================================================
+PUESTO 110   dominio=core   clase=D   paso_casado=6
+==============================================================================
+  [MADRE] id=emprendimiento_como_disciplina_de_gestion
+    titulo   : El Emprendimiento como Disciplina de Gestión
+    dominio/fase: core / planificacion
+    resumen  : Una startup es una institución, no solo un producto, y por eso requiere un tipo de gestión específicamente diseñado para su contexto de incertidumbre extrema. Ni la planificación tradicional (basada en historiales estables de negocio) ni el caos de 'simplemente hazlo' funcionan bien en este contexto: se necesita una disciplina de gestión estructurada pero flexible, que trate el rol de emprendedor como una función formal dentro de la organización, ligera en procesos pero orientada al aprendizaje rápido en vez de al control burocrático.
+    entregable: Una estructura de gestión definida para el proyecto, que no dependa de la planificación tradicional ni de la improvisación total, y que permita aprendizaje rápido
+    paso 1: Evitar depender exclusivamente de planes de negocio rígidos o de investigación de mercado extensa cuando existe alta incertidumbre
+    paso 2: Evitar también el enfoque de 'solo hazlo' sin ningún tipo de estructura o método
+    paso 3: Abandonar la idea de que gestión y disciplina son enemigas de la innovación y la creatividad
+    paso 4: Adoptar una disciplina de gestión específica para este contexto, que balancee estructura y adaptabilidad
+    paso 5: Implementar procesos ligeros que permitan aprendizaje rápido en vez de control burocrático
+    paso 6: Tratar el rol de emprendedor como una función formal y reconocida dentro de la organización  <<< PASO CASADO
+
+  [HIJO] id=emprendedor_como_puesto_de_trabajo
+    titulo   : El Emprendedor como Título de Trabajo Formal
+    dominio/fase: core / ejecucion
+    resumen  : Si quieres retener a las personas más innovadoras que trabajan contigo, el emprendimiento dentro de tu negocio tiene que ser un camino profesional real, no un paso pasajero antes de volver a un puesto tradicional. Si lideras con la metodología Lean Startup, mide ese trabajo con la contabilidad de innovación, no con métricas de rendimiento comunes, y dale a esa persona el título formal de Emprendedor, para que pueda seguir incubando ideas nuevas después de lograr que un producto crezca con éxito.
+    entregable: Una manera clara de reconocer el rol de emprendedor dentro de tu negocio, con su propia forma de medir resultados y su propio camino de crecimiento.
+    paso 1: Crea un puesto real de Emprendedor Interno dentro de tu equipo o negocio.
+    paso 2: Evalúa ese trabajo con la contabilidad de innovación, no con las métricas tradicionales de un puesto operativo.
+    paso 3: Cuando el producto haya crecido con éxito, deja que esa persona entrene a un nuevo equipo y vuelva a incubar una idea nueva.
+    paso 4: Amplía poco a poco el espacio de experimentación (sandbox) a medida que el equipo demuestre resultados, en lugar de sacarlo de golpe.
+
+==============================================================================
+PUESTO 180   dominio=exportacion   clase=D   paso_casado=3
+==============================================================================
+  [MADRE] id=licenciamiento_tecnologico
+    titulo   : Licenciamiento de Tecnología (Technology Licensing)
+    dominio/fase: exportacion / planificacion
+    resumen  : Es un acuerdo contractual donde permites a un licenciatario extranjero usar tus patentes, marcas, derechos de autor, secretos comerciales u otra propiedad intelectual a cambio de una compensación negociada. Te deja entrar a un mercado extranjero rapido, con menor riesgo financiero y legal que instalar una planta propia o participar en una joint venture. A cambio, pierdes parte del control sobre tu tecnologia y suele generar menores ganancias que la exportacion directa, asi que conviene compararlo antes de decidir. Requiere registrar tu propiedad intelectual en cada pais objetivo (herramientas como PCT o el Protocolo de Madrid facilitan proteccion multiple) y contar con asesoria legal especializada tanto en tu pais como en el del licenciatario antes de firmar.
+    entregable: Contrato de licenciamiento de tecnologia firmado con terminos claros de compensacion, territorio y duracion, respaldado por el registro de tu propiedad intelectual en el pais del licenciatario.
+    paso 1: Identifica que activos de propiedad intelectual son licenciables: patentes, marcas, tecnologia, procesos
+    paso 2: Evalua si el licenciamiento te conviene mas que exportar directamente o instalar operaciones propias
+    paso 3: Registra tus patentes y marcas en cada pais objetivo, considerando PCT y Protocolo de Madrid para proteccion multiple  <<< PASO CASADO
+    paso 4: Negocia la compensacion (regalia fija, variable o combinada) y el alcance geografico del acuerdo
+    paso 5: Consigue asesoria legal especializada en tu pais y en el del licenciatario antes de firmar
+    paso 6: Redacta el contrato incluyendo control de calidad, territorio, duracion y clausulas de proteccion de tu IP
+
+  [HIJO] id=proteccion_patentes_internacional
+    titulo   : Protección Internacional de Patentes
+    dominio/fase: exportacion / planificacion
+    resumen  : No existen patentes mundiales; la protección debe solicitarse país por país según su legislación nacional, aunque tratados como el PCT (administrado por WIPO) permiten presentar una única solicitud internacional con efecto en múltiples estados firmantes. Para ser patentable, una invención debe ser novedosa, tener un paso inventivo y aplicación práctica, y no estar excluida por ley (teorías científicas, métodos comerciales, etc.). Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.
+    entregable: Estrategia de protección de patente definida, indicando países objetivo, tipo de solicitud (nacional, regional o PCT) y asesoría legal contratada
+    paso 1: Determinar en qué países se necesita protección de patente para el producto a exportar
+    paso 2: Verificar si la invención cumple los requisitos de novedad, paso inventivo y aplicación práctica en esos mercados
+    paso 3: Evaluar la conveniencia de usar el sistema PCT para presentar una única solicitud internacional
+    paso 4: Consultar a un abogado especializado en propiedad intelectual y a las oficinas de PI de los países objetivo
+    paso 5: Realizar una búsqueda de patentes previas (prior art) usando bases de datos de WIPO antes de solicitar protección
+

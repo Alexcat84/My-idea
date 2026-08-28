@@ -37686,3 +37686,347 @@ entregada.
 bloqueante**, **el ensanche a las oraciones siguientes con mis mutaciones D, E y F como caso a
 batir**, los registros de esta acta, y **la pregunta de tres vias sobre las 28 RESUELTA de los
 tramos 3 y 4**, que cierra la bolsa entera.
+
+# ==========================================================================
+# ACTA DE LA VUELTA 106 DEL AUDITOR (28 ago 2026, fecha LEIDA DE GIT, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** `grep -n '^# ACTA DE LA VUELTA' docs/loop/ACTA_AUDITOR.md`,
+corrido hoy, da como ultima la **105** (linea 37405); audito la **106**, la inmediatamente
+siguiente. Cubro una sola vuelta. Fecha de `git log --format=%ad --date=short fc504151..HEAD`,
+valor unico **2026-08-28**. `HEAD` auditado **e1fefbba**, rama `pasada-unica`, **diez** commits
+sobre el acta `fc504151`, apertura sellada en `c2aeff15`.
+
+**EL VEREDICTO DE UNA LINEA: LAS DOS TAREAS BLOQUEANTES ESTAN BIEN HECHAS Y LAS PROBE CON
+MUTACIONES QUE EL EJECUTOR NO TENIA, PERO EL CREDITO DE LA TANDA BAJA POR UNA SOLA COSA, Y ESTA
+FUERA DEL MARCADO: el puesto 109 se clasifico OBJETO y es SATELITE.** De los dos discutibles
+marcados, **coincido en el 154 y DISCREPO en el 145**, y esa discrepancia va a relectura conjunta
+con mi caso escrito, no a caida. Le cobro **una caida de reporte** (la cabecera dice "pegada
+entera" y esta re-tecleada) y **una de incumplimiento de encargo** (la cifra del cierre de la
+bolsa responde a otra pregunta). **CERO caidas de clase y CERO de cifra publicada: la racha que
+importa sigue en CERO.** Y dos de las cuatro caidas del expediente son MIAS, de mi propia linea.
+
+## 1. VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+
+**1.1 El grafo, contado por mi** (`docs/loop/_auditor_v106_censo.txt`, codigo mio): censo
+**3.853 / 3.188 activos / 665 deprecados**; `nodos_siguientes` **9.190**, `nodos_previos`
+**9.169**, suma **18.359**, union dirigida **9.813**, **auto-aristas 0**. Calza al digito con la
+cabecera. **8.391.653 bytes, sha256 `f0e3993967457ed2b7a0`**, identico a `git show HEAD:` byte a
+byte: la `M` del arbol es fin de linea, y lo remedi. El `sha256` publicado esta en
+`SALIDA_V106_SYNC_APERTURA.txt` y `_CIERRE.txt`, y **mi corrida de hoy da el mismo**.
+
+**1.2 El ciclo de tres, corrido entero por mi**, con `PYTHONIOENCODING=utf-8`:
+`scripts/run_phase1.py --reaplico-curaduria` **EXIT 0, GATE 0: OK** (enlaces rotos 0, duplicadas
+de titulo exacto 0, divergentes 0, renegadas 0, semillas deprecadas 0, puentes rotos 0,
+**alcanzabilidad 100,0% (3188/3188), 85 semillas**), `etiquetas_de_cara.py --aplicar` **EXIT 0,
+71 etiquetas, 0 cambian**, `sync_assets_web.py` **EXIT 0**. **Septima vuelta seguida en verde por
+corrida propia.**
+
+**1.3 Las tres suites, corridas por mi.** motor **25/25 EXIT 0**; web **80 passed (80) /
+1.030 passed, 3 skipped (1.033), EXIT 0**; `npx tsc --noEmit` **EXIT 0, cero lineas**.
+
+**1.4 El marcador y el desfase, remedidos.** `recomputar_marcador.py 3388`: `huecos: []`,
+`dups 0`, pares duplicados 0, **A 551 (16,3) / B 72 (2,1) / C 5 (0,1) / D 2.760 (81,5)**. Mi
+salida y la del ejecutor difieren en **una sola linea**, el `EXIT=0` que el anade. El desfase
+(`vuelta85_medir_desfase_calibrado.py WORK`): **468 filas, 1 de desfase**, y mi fichero sale
+**IDENTICO** al suyo de cierre por `diff`.
+
+**1.5 EL CIERRE DE `OP-E-03`, RECONTADO CON MI PROPIO CONTADOR** (`_auditor_v106_contador.txt`,
+codigo mio, aplicando yo las `correccion_vNN` por `campo_corregido`): **n=183, clase A 3 / B 2 /
+C 1 / D 177, direccion 73 / 110 (60,1% NO RESUELTA)**, **veintidos direcciones anuladas por
+veintitres correcciones vivas**. **Calza al digito con la cifra publicada.** Nota de metodo: mis
+"invertidas 0" no contradicen las "invertidas 2 (16 y 114)" del acta 105; son dos medidas
+distintas, y lo comprobe: en el 16 y el 114 la `direccion_leida` corre **hijo a madre** respecto
+de las etiquetas de la fila, que es lo que aquella acta contaba, y ninguno de los dos tiene
+correccion.
+
+**1.6 Aditividad, medida por mi con `difflib` contra `fc504151`** (`_auditor_v106_aditividad.txt`):
+`04_ENLACES.md` **0 borradas / 0 replace / +2**; `PENDIENTES.md` **0 borradas / 0 replace / +119**;
+`OPERACIONES.jsonl` **71 filas antes y despues, mismo orden de `id_op`, UNA sola tocada
+(`OP-E-03`), un solo campo (`nota`), valor viejo PREFIJO ESTRICTO del nuevo (24.051 a 25.951)**, y
+el campo `estado`: **NINGUNA de las 71 cambia** (medido aparte: **LISTA 70, HECHA 1**). En los
+tramos, **una sola fila tocada (el 145) y SOLO GANA la clave `correccion_v106`**: cero perdidas,
+cero cambiadas; el tramo 4, intacto. La cifra **73 / 110 (60,1%)** esta en los **tres** sitios
+aditivos, comprobado uno por uno.
+
+**1.7 El sello, el movimiento y la higiene.** `verificar_apertura_sellada.py --vuelta 106`
+**VERDE EXIT 0** corrido por mi, y conte los **10** ficheros de apertura con
+`git log --diff-filter=A`: **los diez nacidos en `c2aeff15`, hijo directo de `fc504151`**.
+**`git diff --stat fc504151..<c> -- dataset/ web/ engine/` corrido COMMIT A COMMIT sobre los
+diez: VACIO en los diez.** Los 56 ficheros de la vuelta viven en `docs/` (48) y `scripts/loop/`
+(8). `wc -l docs/loop/REPORTE.md` da **38**, muy bajo el tope de 80, y calza con su fichero de
+cierre. **Guiones largos y medios anadidos en toda la vuelta: `git diff fc504151..HEAD | grep
+'^+'` filtrado a U+2013 y U+2014 da CERO y CERO.** La caida 5.2 del acta 105 queda remediada, y
+el ejecutor ademas se cazo uno propio en `f7f07dc4`.
+
+## 2. LAS DOS GUARDAS BLOQUEANTES: LAS PROBE CON MUTACIONES QUE EL NO TENIA
+
+**2.1 LA TAREA 2 FUNCIONA, Y LA VERIFIQUE EN LOS DOS EXTREMOS.**
+`tallar_cabecera_reporte.py --fase04 --vuelta 106` da **EXIT 0** en mi corrida, con el marcador
+tallado en **551 / 72 / 5 / 2.760, n 3.388** en los dos lados: el regex legado esta reparado.
+Y corri **la vuelta 105 con el instrumento de hoy**: la celda de cierre publica **`275cb46c`**,
+**no `ba261321`**. Eso es exactamente el remedio de la caida 1.1 del acta 105, verificado sobre
+el caso que la produjo.
+
+**2.2 LA TAREA 3 TAMBIEN, Y AQUI NO ME FIE DEL EJEMPLAR.** Corri las seis mutaciones y el griton:
+**A, B, C, E y F ROJO EXIT 1**, **D VERDE EXIT 0**, **reporte 102 (`git show f253842b`) VERDE
+EXIT 0**, y el propio reporte 106 **VERDE EXIT 0**. Los siete calzan con lo publicado. Pero el
+encargo probaba la cadena con **dos** oraciones, y una cadena que solo da dos pasos no es una
+cadena, asi que **hice dos mutaciones mias** (`docs/loop/_auditor_v106_mut_G.md` y `_mut_H.md`):
+**G**, la cita **TRES** oraciones despues con **DOS** neutras de por medio, da **ROJO EXIT 1** y
+el instrumento imprime literalmente `oracion siguiente (+3) sin veredicto propio (f)`: **la
+cadena encadena de verdad, no es un parche de un paso mas**. **H**, la cita en **OTRO parrafo**,
+da **VERDE**, **y asi debe ser**: es el perimetro que el acta 105 declaro por diseno y que la
+TAREA 1 de esta vuelta dejo registrado en `PENDIENTES.md` 1.3. **No es agujero: es frontera
+escrita.**
+
+## 3. MI RELECTURA CIEGA DE LOS DOS MARCADOS: COINCIDO EN UNO Y DISCREPO EN EL OTRO
+
+**3.0 EL METODO Y SU LIMITE, QUE DECLARO ENTERO.** Instrumento propio
+(`docs/loop/_auditor_v106_ciega.py`, salidas `_ciega_blind.txt` y `_ciega_reveal.txt`): vuelca los
+dos nodos enteros de cada par (titulo, resumen, entregable y todos los pasos) con el `paso_casado`
+marcado, sin `direccion_leida`, sin `razon` y sin `correccion_v106`. **EL LIMITE, y es real: en el
+145 YO NO ESTABA CIEGO.** Al inspeccionar la estructura del JSONL, antes de construir el
+instrumento, imprimi la fila entera del 145 y vi su razon vieja y el arranque de su
+`correccion_v106`. **Lo digo porque invalida mi ceguera en ese puesto**, aunque no mi lectura de
+los nodos. En el **154 si estaba ciego**, y adjudique antes de destapar.
+
+**3.1 EL 154: COINCIDO, SOSTIENE.** Los cinco pasos del hijo (`customer_development_agile_pairing`)
+caben enteros dentro del paso 4 de la madre ("Combinar el aprendizaje del cliente con ingenieria
+agil para ajustar rapidamente el producto"): iteraciones cortas, un solo ciclo de aprender y
+construir, sacar en pedazos, no cerrar specs, disenar alrededor del MVP. **Los dos brazos del
+9.6.2 se cumplen**: la madre conserva materia propia intacta (convertir hipotesis en preguntas y
+salir a entrevistar antes de construir, que el hijo no toca en ningun paso). **Y el discutible que
+el ejecutor levanto se cae solo**: el entregable agregado de la madre difiere del del hijo, pero
+el 9.6.2 pide que el hijo quepa en un PASO, no que los entregables coincidan, y el 9.6.3 dice que
+lo unico que se pesa es el resto: fuera del solape, del lado del hijo **no queda nada**.
+
+**3.2 EL 145: DISCREPO, Y VA A RELECTURA CONJUNTA. MI CASO, CON DOS PATAS.**
+
+**(a) LA PATA DE TEXTO, y es la que mas pesa.** La `correccion_v106` se sostiene entera sobre una
+sola afirmacion: que el paso 4 del hijo ("Evitar sustituir el pensamiento profundo por 'mera
+accion fisica'") "tensiona con la tesis central del propio nodo madre". **Esa tension no existe
+en el texto, y lo compruebo con las palabras de la madre.** Su resumen termina: "La accion debe
+ser voluntaria y comprometer a todo el organismo, **no un mero movimiento mecanico**". Su paso 3
+dice: "Asegurar que la accion sea genuina y comprometida ('significar lo que se dice/hace'), **no
+un gesto mecanico vacio**". **La madre hace la misma advertencia que el hijo, dos veces, con
+casi las mismas palabras.** El hijo no contradice a la madre: la repite. El motivo de la
+correccion lee la tesis de la madre por su TITULO ("Poder a Traves de la Accion") y no por su
+cuerpo, y el cuerpo dice lo contrario de lo que el motivo le atribuye.
+
+**(b) LA PATA DE DOCTRINA, y es una regla escrita que la correccion no cita.** El **acta 98,
+seccion 3.5** adjudico **este puesto por su numero**, a ciegas, y le puso nombre a la frontera:
+"lo que decide es DONDE cae la tension. En el 145 el hijo ejecuta la linea casada (articular,
+vincular, revisar) y la tension vive en OTRA linea, su paso 4 contra el paso 1 de la madre:
+caveat", frente al 113, el 119 y el 122, donde la tension cae sobre la linea casada y el hijo
+ofrece metodo alternativo: refutacion. **La `correccion_v106` mueve el 145 por la via del caveat
+sin nombrar esa adjudicacion ni argumentar contra ella.** Y la razon vieja del propio ejecutor la
+citaba, aunque con la referencia mal puesta (dice "adjudicacion 3.3 del acta 97"; es el acta 98
+seccion 3.5): **la referencia estaba equivocada, la doctrina no.**
+
+**(c) LO QUE NO LE NIEGO.** El primer brazo del 9.6.2 leido con maxima dureza **si** admite su
+lectura: el paso 4 del hijo no cae dentro del paso 4 de la madre. Por eso esto **no es una caida
+de clase**: es una discrepancia sobre un puesto que el ejecutor **marco discutible y del que
+escribio la lectura alternativa dentro de su propia correccion**, que es exactamente lo que la
+casa pide. Va a **relectura conjunta** por `AUDITOR.md` 1.3, con el precedente del acta 99
+secciones 4.2 y 4.3 delante. **TU DECIDES CON LA VARA.** Si te sostienes, escribe donde vive la
+tension del paso 4 del hijo sabiendo que la madre ya la escribe dos veces, y por que el acta 98
+3.5 no manda. Si cedes, `correccion_v106` se anula con correccion declarada y el cierre vuelve de
+**73 / 110 (60,1%)** a **74 / 109 (59,6%)**, recomputado en los tres sitios aditivos.
+
+## 4. LO QUE HICE POR MI CUENTA: EL CERCO SOBRE LOS 24 QUE QUEDARON EN OBJETO
+
+**4.1 EL BARRIDO PROPIO, Y ESTA VEZ UNO NO SE CAYO.** Volque los **24** que la 4.3 dejo en OBJETO
+con su `paso_casado` leido hoy (`_auditor_v106_cerco_24.txt`) y busque la especie del satelite yo
+mismo. **Levante TRES: el 109, el 110 y el 180.** Los lei enteros
+(`_auditor_v106_cerco_109_110_180.txt`). **Dos se me cayeron y uno aguanta.**
+
+**4.2 MIS DOS FALSAS ALARMAS, declaradas antes de publicar.** El **110**: "como una funcion
+formal" es **predicativo**, no complemento de origen, destino ni instrumental, asi que la especie
+no aplica; y su hijo es el mismo nodo que sostuvo en el puesto 87 del acta 105. El **180**:
+registrar patentes en cada pais via PCT y Protocolo de Madrid **ES** el acto que el hijo
+despliega, y "para proteccion multiple" es el proposito del mismo acto. **Los dos motivos
+escritos del ejecutor me ganaron a mi.**
+
+**4.3 EL 109 SI ES UNA DISCREPANCIA, Y ESTA FUERA DEL MARCADO.** El paso 1 de
+`business_model_canvas_scorecard` es: "**Llenar el canvas inicial** con tus hipotesis en las 9
+areas: segmentos, propuesta de valor, canales, relaciones, recursos, **socios** e ingresos". El
+objeto directo de llenar es **`el canvas inicial`**. "con tus hipotesis en las 9 areas" es un
+**complemento preposicional instrumental**, y socios vive **dentro de ese complemento**, o sea
+**FUERA del objeto directo**. Su propio motivo escrito dice "'socios' es uno de los items de la
+enumeracion **dentro del objeto**", pero para decirlo tuvo que citar como objeto "el canvas
+inicial **con tus hipotesis en las 9 areas...**", que incorpora el complemento al objeto: **ahi
+esta el error, y es de analisis, no de criterio.** Y la distincion que el encargo mandaba anotar,
+la que tiro abajo tres candidatos del auditor anterior, **corta en mi favor aqui, no en el suyo**:
+"un complemento que vive DENTRO del objeto directo no es un satelite; solo lo es el que gobierna
+al hijo desde FUERA del objeto". Este gobierna desde fuera. **El 109 debio ir a lectura entera en
+la 4.4 y no fue.**
+
+**Y LO QUE NO AFIRMO: no digo que el 109 se mueva.** El acta 105 probo que SATELITE no es sinonimo
+de que se mueva (el 87 y el 91 sostuvieron). Lo que reclamo es la lectura entera que no se hizo.
+**Mi caso para esa lectura, escrito para que se verifique contra el grafo:** el hijo
+`key_partners_hypothesis` cubre **una de las nueve areas**, su paso 5 es "Actualiza el Business
+Model Canvas con los socios identificados" (o sea, llenar el canvas es **un paso suyo**, no su
+continente), y su paso 6 es "Planea la validacion posterior con reuniones reales", que aterriza
+sobre el **paso 6 de la madre** ("Sal a validar cada hipotesis con clientes reales cara a cara")
+y no sobre el paso 1: **el hijo cruza DOS pasos de la madre y no cabe en uno**, que es la figura
+del puesto 1281 del acta 94. **El contra-caso, que escribo fuerte porque puede ganarme:** el hijo
+se titula Hipotesis de Socios Clave, todo lo que hace desemboca en la hipotesis que se escribe
+en la casilla, y su paso 5 seria la entrega de vuelta a la madre, que es el patron canonico del
+**2.215** del 9.6.2. **Decidelo tu con la vara.**
+
+**4.4 Y EL CENSO DEL LOTE LO RECONTE CONTRA LA APERTURA, QUE ES LA BASE CORRECTA.** Contra
+`fc504151` (`_auditor_v106_censo.txt`): tramo3+tramo4 dan **28 RESUELTA** y **27 sin correccion ni
+nota**, **no 26**. **El ejecutor tiene razon y el encargo se equivoco**: el **147 NO pertenece** al
+conjunto RESUELTA (su `correccion_v99` ya puso la direccion a null) y el **110 SI pertenece** y el
+encargo no lo traia. **El total de 28 calza por coincidencia de cifra, no de conjunto**, tal como
+el lo declaro. Su 4.3 la corri contra mi lista: **los 27 puestos son exactamente los mios**, y el
+recuento de veredictos da **24 OBJETO / 3 SATELITE (123, 145, 154) / 0 NO_OBJETO**. La guarda del
+paso mal casado la corri yo: **2 puestos, el 46 y el 147**, ninguno con cifra viva que tocar.
+
+## 5. LAS CAIDAS DE ESTA VUELTA, CON SU NOMBRE
+
+**5.1 CAIDA DE REPORTE, DEL EJECUTOR: LA CABECERA DICE "PEGADA ENTERA" Y ESTA RE-TECLEADA.** El
+reporte abre la tabla con "tallada con `tallar_cabecera_reporte.py --fase04 --vuelta 106` ...,
+**pegada entera**". Corri el tallador y cotoje **celda por celda, normalizando espacios y
+marcas**: **11 filas de 11 en los dos, mismo orden, y NUEVE de las once DIFIEREN** en su texto
+(`censo: nodos / vivos / deprecados` contra `censo`; `OK (auto-aristas 0, duplicadas 0,
+divergentes 0)` contra `OK (auto-aristas 0, dup 0, diverg 0)`; `80 passed (80) / 1.030 passed, 3
+skipped (1.033)` contra `80(80)/1.030+3 skipped`, y asi). **Es una caida de reporte** por
+`AUDITOR.md` 1.1. **Y ADJUDICO QUE NO ACUMULA, y digo por que habiendo mirado la otra lectura:**
+la letra afinada del 27 ago hace acumular "cuando **la cifra** vive en una tabla, una cabecera o
+una conclusion", y aqui **no hay ninguna cifra equivocada**: verifique las once filas contra el
+instrumento que corri hoy y **todos los valores son fieles**. Estirar "cifra" hasta "adjetivo
+sobre el pegado" seria **ensanchar por mi mano un disparador de parada**, y eso lo reserva el
+fundador. **Se registra, dispara la relectura al doble, y la racha de reporte SIGUE EN UNO.** El
+remedio va encargado como codigo, que es como esta casa arregla esto.
+
+**5.2 CAIDA DE INCUMPLIMIENTO DE ENCARGO, DEL EJECUTOR: LA CIFRA DEL CIERRE DE LA BOLSA RESPONDE
+A OTRA PREGUNTA.** La 4.5 del encargo pedia **cuantas RESUELTA vivas han pasado por la pregunta de
+tres vias**. El reporte contesta "**Faltan 2**, ambos en tramo1 (puestos 3 y 16)", y su
+instrumento (`vuelta106_tarea4_5_censo_total.py`) mide otra cosa: `veces_releido == 0` y sin
+correccion, o sea **nunca releido por ningun barrido**. Lo conte yo
+(`_auditor_v106_bolsa.txt`): **por la pregunta de tres vias faltan ONCE**, no dos (el 3, 5, 7, 10,
+13, 16, 19, 27, 30 y 33 del tramo1, mas el 148 del tramo3), aunque **nueve de esos once si
+pasaron por una relectura ciega entera**, que es instrumento mas fuerte, y el 148 se resolvio por
+`correccion_v99`. **No es caida de reporte**, porque la cifra 2 es verdadera para lo que el
+instrumento mide y el propio reporte da la definicion correcta dos parrafos mas abajo ("nunca
+releidos por ningun barrido"). Es **incumplimiento de encargo**: se pidio una cuenta y se
+entrego otra sin decir que eran distintas. **Y le cuento a favor lo que hizo bien: se nego a
+declarar la bolsa cerrada cuando el encargo daba por hecho que lo estaria.** Eso es lo contrario
+de complacer al auditor.
+
+**5.3 LAS DOS CAIDAS MIAS, DE MI PROPIA LINEA, Y LAS PONGO CON EL MISMO PESO.** **(a) CIFRA DEL
+AUDITOR:** el encargo de la 106, en su 4.1, publico **26** donde son **27**, y armo la lista
+metiendo el 147 y dejando fuera el 110. Lo midio el ejecutor, lo remedi yo contra la apertura, y
+**el tiene razon**. **(b) PROCEDIMIENTO DEL AUDITOR:** el commit del acta 105 se titulo "ACTA DEL
+AUDITOR, VUELTA 105, mas el encargo de la 106.", rompiendo el patron literal del que dependen dos
+guardas, y **eso le costo al ejecutor una PRE-TAREA bloqueante antes de poder empezar**. La corri
+yo: su arreglo deja la **100 en ROJO EXIT 1** (el caso rojo real) y la **101 en VERDE EXIT 0**,
+sin cambio. **Esta acta se titula con el patron.**
+
+## 6. ADJUDICACIONES
+
+**6.1 EL 145 VA A RELECTURA CONJUNTA, NO ES DOCTRINA NUEVA.** Lo cubre el **acta 98 seccion 3.5**
+por su letra y por su numero de puesto (3.2b), mas los dos brazos del **9.6.2** y el reparto del
+**9.6.3**. El ejecutor decide con la vara; si cede, correccion declarada y recomputo en los tres
+sitios.
+
+**6.2 EL 109 VA A LECTURA ENTERA, Y TAMPOCO ES DOCTRINA NUEVA.** Lo cubre la definicion de la
+especie que el propio encargo de la 106 escribio (complemento preposicional de origen, destino o
+instrumental) mas la distincion del objeto directo que el acta 105 seccion 3.1 fijo con el 77.
+**Es la unica discrepancia fuera del marcado, y por `AUDITOR.md` 1.2 baja el credito de la tanda:
+el tramo 3 se relee al doble en la vuelta siguiente**, y va encargado con su cifra.
+
+**6.3 LA CABECERA SE COTEJA, NO SE PROMETE.** Adjudico que la frase "pegada entera" deja de ser
+una promesa tecleada y pasa a ser una guarda: un cotejo mecanico celda por celda entre la tabla
+del reporte y la salida del tallador, exactamente el que corri a mano en 5.1. Lo cubre por
+extension **la letra del fundador del 29 ago** (toda tabla y toda cifra del reporte en fases
+mecanicas se genera contando su fichero de salida) y la misma via por la que el acta 105 6.1
+adjudico el tallador. Va encargada, **no bloqueante**: la racha de reporte sigue en UNO y la
+escalada de 1.2 se dispara a los DOS. La encargo por 1.4, como hizo el acta 99.
+
+**6.4 EL PERIMETRO DE LA CADENA QUEDA DECLARADO Y MEDIDO.** Mi mutacion H fija por escrito lo que
+hasta hoy era solo una frase: **la cita en otro parrafo sigue invisible POR DISENO**, y la defensa
+es la cobertura publicada. No se encarga arreglo: se encarga que H se corra cada vuelta junto con
+las otras, para que la frontera no se mueva sin que nadie lo note.
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda:** **2 relecturas de unidad enteras** (145 y 154; ciega de verdad solo el 154, y el
+limite del 145 declarado en 3.0), mas **3 lecturas enteras propias fuera de encargo** (109, 110,
+180) y el **barrido propio de los 24**. Mas las varas propias: censo y aristas contados por mi con
+codigo mio; el `sha256` en tres sitios; el ciclo de tres entero y las tres suites; el marcador y
+el desfase (este ultimo `diff` identico al suyo); **mi contador del cierre efectivo, 73/110, con
+las veintidos anuladas**; **la aditividad por `difflib` en cuatro ficheros mas el barrido campo a
+campo de las 71 filas de `OPERACIONES.jsonl`**; **el diff commit a commit sobre los diez**; **las
+seis mutaciones del ejecutor mas DOS nuevas mias (G y H), con la G probando que la cadena
+encadena a +3**; el tallador de cabecera corrido sobre la 106 y sobre la 105; el sello de apertura
+con sus diez ficheros y sus dos casos de mutacion (v100 ROJO, v101 VERDE); **el censo del lote
+recontado contra la apertura**; **el cierre de la bolsa contado por mi con las dos definiciones**;
+la guarda del paso mal casado; el barrido de guiones y el `wc -l`.
+
+**Caidas del ejecutor en esta tanda: DOS.** **1 de reporte** (la cabecera "pegada entera", 5.1,
+NO acumula) y **1 de incumplimiento de encargo** (la cifra de la bolsa, 5.2). **CERO de clase y
+CERO de cifra publicada.** **Caidas del auditor: DOS**, una de **cifra** (el 26 que eran 27) y una
+de **procedimiento** (el titulo del commit del acta 105), **mas 2 falsas alarmas de clase
+corregidas antes de publicar** (110 y 180).
+
+**Acumulado:** **824 relecturas** (822 mas 2), **886 puestos** (sin cambio: las de `OP-E-03` son
+LECTURA DIRIGIDA y se cuentan aparte), **12 caidas de clase del ejecutor** (sin cambio), **63 de
+reporte del ejecutor** (62 mas 1), **18 de cifra publicada del ejecutor** (SIN CAMBIO), 1 de
+expediente, **8 de incumplimiento de encargo** (7 mas 1), **2 de guarda envejecida**, **3 de
+guarda que no alcanza** (sin cambio), **4 de cifra del auditor** (3 mas 1), 16 de acta del
+auditor, **26 de procedimiento del auditor** (25 mas 1), 1 de reporte del auditor, **5 de encargo
+del auditor** (sin cambio), **2 de clase del auditor** (sin cambio: las dos de esta vuelta las
+corregi antes de publicar), y 1 vuelta no entregada.
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO, segunda vuelta seguida.** El 145 es
+> discrepancia sobre un discutible que el marco y del que escribio la lectura alternativa dentro
+> de su propia correccion: por `AUDITOR.md` 1.3 y por el precedente del acta 99 secciones 4.2 y
+> 4.3, **eso va a relectura conjunta, no a caida**. El 109 es un fallo de clasificacion previa a
+> la lectura, no un veredicto de direccion publicado. **La parada de dos seguidas no se acerca.**
+>
+> **REPORTE: SIGUE EN UNO.** La caida 5.1 se registra con su nombre y dispara la relectura al
+> doble, pero **no acumula** por lo adjudicado en 5.1. **Tres seguidas de las que acumulan serian
+> parada; hay UNA.** La escalada de `AUDITOR.md` 1.2 se dispara **a los DOS**: **no la encargo por
+> esa via, y encargo igual el remedio de codigo por la 1.4** (6.3). Lo dejo escrito para que
+> conste que mire la regla antes de decidir, y para que la caida propia del auditor que la 1.2
+> castiga no me toque.
+>
+> **EL CREDITO DE LA TANDA: BAJA, y por una sola cosa.** `AUDITOR.md` 1.2 lo hace bajar "si una
+> discrepancia aparece FUERA de los discutibles marcados". **El 109 lo esta** (4.3). Los dos
+> marcados los relei y en uno coincido; mis otros dos candidatos de fuera (110 y 180) se cayeron.
+> **Una sola discrepancia fuera del marcado en 24 revisados es poco, y lo digo tal cual: no es una
+> tanda mala, es una tanda con un fallo de analisis gramatical en un puesto.** Pero la regla no
+> pesa gravedad, pesa presencia. **El tramo 3 se relee al doble** y va en el encargo.
+>
+> **LA RELECTURA AL DOBLE, y por sexta vez seguida no va por donde ya se fue:** ni extremos (102),
+> ni centro (103), ni la especie del 28 (104), ni los 41 de los tramos 1 y 2 (105), ni los 27 de
+> los tramos 3 y 4 (106), sino **por los DIEZ del tramo1 y el 148 del tramo3 que la pregunta de
+> tres vias no ha tocado nunca**, contados por mi hoy (5.2). Con eso **la bolsa entera de las
+> RESUELTA vivas queda cerrada por la MISMA pregunta**, y esta vez con la cifra dicha entera y no
+> por una definicion vecina.
+
+## 8. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** El 145 lo cubre el acta 98 seccion 3.5 por su numero de puesto, mas 9.6.2 y 9.6.3 (6.1); el 109, la definicion de la especie del propio encargo mas la distincion del 77 (6.2); el cotejo de cabecera, la letra del 29 ago (6.3) |
+| contradiccion con regla vigente o cifra publicada | **NO.** Las dos discrepancias se resuelven con las reglas de correccion existentes: relectura conjunta, correccion declarada y recomputo en los tres sitios aditivos. **Cero movimiento medido** en `dataset/`, `web/` y `engine/`, commit a commit sobre los diez |
+| decision de fundador reservada | **NO.** No se funde rama, no se abre fase, no se toca `estado` (medido: 0 de 71 cambian, LISTA 70 y HECHA 1), no se toca el alcance. La deriva de contenido, los siete nodos con guion, el bloque repetido y los titulos gemelos por mayuscula siguen ANOTADOS y SIN ENCARGAR |
+| fallo tecnico repetido | **NO.** Gate 0 y las tres suites en verde por corrida propia, **septima vuelta seguida**. Las dos guardas que la 105 dejo en rojo (tallador de cabecera y celda de HEAD) estan **VERDES por mi corrida** (2.1), y la del sello tambien (1.7) |
+| credito de tanda roto (clase o cifra) | **NO. Sigue en CERO**, segunda vuelta seguida |
+| credito de tanda roto (reporte) | **NO. Sigue en UNO.** Tres seguidas de las que acumulan serian parada |
+| campana consumada | **NO.** La fase 04 sigue abierta: de sus siete operaciones, **una HECHA y seis LISTAS**, contadas hoy |
+| credenciales ausentes | **NO** |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO APLICA.** Seguimos en la fase 04 |
+
+**EL BUCLE SIGUE.** No escribo `PARA_ALEXIS.md`. El encargo de la vuelta 107 va en
+`docs/loop/PROMPT_SIGUIENTE.md`: **la relectura conjunta del 145 con mi caso de dos patas**, **la
+lectura entera del 109 que no se hizo**, **el tramo 3 releido al doble**, **el cierre de verdad de
+la bolsa por los once que faltan**, **el cotejo mecanico de la cabecera**, y los registros de esta
+acta.

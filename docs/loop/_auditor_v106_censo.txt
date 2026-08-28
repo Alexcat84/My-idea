@@ -1,0 +1,34 @@
+TRAMO1: filas 40 | RESUELTA vivas 18 | con correccion 0 | sin correccion ni nota 18
+   RESUELTA: [1, 2, 3, 4, 5, 7, 9, 10, 13, 14, 16, 17, 18, 19, 27, 30, 33, 39]
+   sin correccion ni nota: [1, 2, 3, 4, 5, 7, 9, 10, 13, 14, 16, 17, 18, 19, 27, 30, 33, 39]
+TRAMO2: filas 60 | RESUELTA vivas 28 | con correccion 0 | sin correccion ni nota 28
+   RESUELTA: [42, 45, 46, 47, 48, 49, 53, 57, 58, 59, 61, 64, 73, 74, 75, 77, 78, 83, 84, 87, 88, 91, 92, 94, 97, 98, 99, 100]
+   sin correccion ni nota: [42, 45, 46, 47, 48, 49, 53, 57, 58, 59, 61, 64, 73, 74, 75, 77, 78, 83, 84, 87, 88, 91, 92, 94, 97, 98, 99, 100]
+TRAMO3: filas 50 | RESUELTA vivas 18 | con correccion 1 | sin correccion ni nota 17
+   RESUELTA: [101, 102, 106, 107, 108, 109, 110, 111, 114, 116, 123, 127, 128, 129, 130, 132, 134, 148]
+   sin correccion ni nota: [101, 102, 106, 107, 108, 109, 110, 111, 114, 116, 123, 127, 128, 129, 130, 132, 134]
+TRAMO4: filas 33 | RESUELTA vivas 9 | con correccion 0 | sin correccion ni nota 9
+   RESUELTA: [153, 154, 156, 158, 169, 177, 179, 180, 182]
+   sin correccion ni nota: [153, 154, 156, 158, 169, 177, 179, 180, 182]
+
+TRAMO3+TRAMO4 RESUELTA vivas: 27
+  tramo3 18  tramo4 9
+  sin correccion ni nota: 26 -> [101, 102, 106, 107, 108, 109, 110, 111, 114, 116, 123, 127, 128, 129, 130, 132, 134, 153, 154, 156, 158, 169, 177, 179, 180, 182]
+
+LISTA DEL ENCARGO (28): [101, 102, 106, 107, 108, 109, 111, 114, 116, 123, 127, 128, 129, 130, 132, 134, 145, 147, 148, 153, 154, 156, 158, 169, 177, 179, 180, 182]
+EN EL ENCARGO Y NO EN MI CONJUNTO: [145, 147]
+EN MI CONJUNTO Y NO EN EL ENCARGO: [110]
+
+======================================================================
+CENSO CONTRA LA APERTURA fc504151
+======================================================================
+TRAMO1: RESUELTA vivas 18 | sin correccion 18
+TRAMO2: RESUELTA vivas 28 | sin correccion 28
+TRAMO3: RESUELTA vivas 19 | sin correccion 18
+TRAMO4: RESUELTA vivas 9 | sin correccion 9
+TRAMO3+4 en la apertura: 28 RESUELTA -> [101, 102, 106, 107, 108, 109, 110, 111, 114, 116, 123, 127, 128, 129, 130, 132, 134, 145, 148, 153, 154, 156, 158, 169, 177, 179, 180, 182]
+   sin correccion ni nota: 27 -> [101, 102, 106, 107, 108, 109, 110, 111, 114, 116, 123, 127, 128, 129, 130, 132, 134, 145, 153, 154, 156, 158, 169, 177, 179, 180, 182]
+   encargo dice 28 y 26; yo mido 28 y 27
+   en el encargo y NO en mi conjunto: [147]
+   en mi conjunto y NO en el encargo: [110]
+   TRAMO1 sin correccion ni nota (bolsa pendiente): [1, 2, 3, 4, 5, 7, 9, 10, 13, 14, 16, 17, 18, 19, 27, 30, 33, 39]
