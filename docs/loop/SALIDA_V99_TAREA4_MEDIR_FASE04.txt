@@ -1,0 +1,98 @@
+====================================================================================================
+MEDICION DEL ESTADO REAL DE LA FASE 04_ENLACES (vuelta 99, TAREA 4)
+NINGUN ESTADO SE TOCA. Todo lo de abajo se lee de OPERACIONES.jsonl y 04_ENLACES.md tal como estan hoy.
+====================================================================================================
+
+--- (4.1) LAS DIEZ OPERACIONES ---
+
+OP-E-01            orden=1  estado=LISTA  depende_de=[]
+   NO HECHA: (ninguna; sin dependencias o todas HECHA)
+OP-E-02            orden=2  estado=HECHA  depende_de=[]
+   NO HECHA: (ninguna; sin dependencias o todas HECHA)
+OP-E-03            orden=3  estado=LISTA  depende_de=['OP-E-01', 'OP-U-02']
+   NO HECHA: OP-E-01 (fase 04_ENLACES, estado LISTA), OP-U-02 (fase 03_FUSIONES, estado LISTA)
+OP-M-03-ENLACES    orden=4  estado=LISTA  depende_de=['OP-M-03-I', 'OP-M-03-II', 'OP-M-03-III']
+   NO HECHA: OP-M-03-I (fase 03_FUSIONES, estado LISTA), OP-M-03-II (fase 03_FUSIONES, estado LISTA), OP-M-03-III (fase 03_FUSIONES, estado LISTA)
+OP-E-04            orden=5  estado=LISTA  depende_de=['OP-M-01', 'OP-M-01-FUSION']
+   NO HECHA: OP-M-01 (fase 06_MESAS, estado LISTA), OP-M-01-FUSION (fase 03_FUSIONES, estado LISTA)
+OP-E-05            orden=6  estado=LISTA  depende_de=['OP-M-01', 'OP-M-01-FUSION']
+   NO HECHA: OP-M-01 (fase 06_MESAS, estado LISTA), OP-M-01-FUSION (fase 03_FUSIONES, estado LISTA)
+OP-M-01-ESLABONES  orden=7  estado=LISTA  depende_de=['OP-M-01', 'OP-M-01-FUSION']
+   NO HECHA: OP-M-01 (fase 06_MESAS, estado LISTA), OP-M-01-FUSION (fase 03_FUSIONES, estado LISTA)
+OP-M-01-SEXTO      orden=8  estado=LISTA  depende_de=['OP-M-01', 'OP-M-01-FUSION']
+   NO HECHA: OP-M-01 (fase 06_MESAS, estado LISTA), OP-M-01-FUSION (fase 03_FUSIONES, estado LISTA)
+OP-E-06            orden=9  estado=LISTA  depende_de=['OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06', 'OP-D-07']
+   NO HECHA: OP-D-01 (fase 02_DESTEJIDOS, estado LISTA), OP-D-02 (fase 02_DESTEJIDOS, estado LISTA), OP-D-03 (fase 02_DESTEJIDOS, estado LISTA), OP-D-04 (fase 02_DESTEJIDOS, estado LISTA), OP-D-05 (fase 02_DESTEJIDOS, estado LISTA), OP-D-06 (fase 02_DESTEJIDOS, estado LISTA), OP-D-07 (fase 02_DESTEJIDOS, estado LISTA)
+OP-E-07            orden=10 estado=LISTA  depende_de=['OP-E-06']
+   NO HECHA: OP-E-06 (fase 04_ENLACES, estado LISTA)
+
+--- (4.2) CAMPO ESTADO CONTRA LA EVIDENCIA DE SU NOTA Y DE 04_ENLACES.md ---
+
+##########################################################################################
+OP-E-01 . estado=LISTA . nota=7502 caracteres . seccion propia en 04_ENLACES.md: SI
+  nota, primeros 220: PASO 1, LA CALIBRACION: extraer el verbo principal del paso y el del titulo del hijo, y PENALIZAR el candidato cuando los verbos pertenecen a familias distintas (observar contra construir, listar contra definir). NO SE T
+  nota, ultimos 220:  IDA_V89_TAREA2_GUARDA_DECIDIDAS.txt), es 220 / 98 ESCRITA / 122 NO SE ENLAZA. Razon completa en docs/plan/04_ENLACES.md, apartado OP-E-01 CIERRE MEDIDO, correccion declarada del 29 ago 2026. Nada de lo anterior se borra.
+
+##########################################################################################
+OP-E-02 . estado=HECHA . nota=2363 caracteres . seccion propia en 04_ENLACES.md: no
+  nota, primeros 220: LA REGLA EN UNA TABLA: si el racimo tiene centro y el par del suelto con ese centro salio D, se ENLAZA; si el par salio A, se FUNDE; si el racimo no tiene centro, va a MESA. EL EJEMPLAR MEDIDO: comprender_alineacion_etic
+  nota, ultimos 220:   CERO SOLAPE; 33.3 lo llama defecto de NOMINA, no de lectura). Con eso la ficha tiene destino en sus tres piezas y la operacion queda HECHA por el criterio de la fase: no escribio ni una arista, es lectura y declaracion.
+
+##########################################################################################
+OP-E-03 . estado=LISTA . nota=14797 caracteres . seccion propia en 04_ENLACES.md: SI
+  nota, primeros 220: HALLAZGO NO PREVISTO QUE LA ORIGINA: 7 de 46 lecturas de la bolsa calibrada son madre que repite, y 6 de esos 7 estan en quality, que no ha entrado nunca al cribado intra. Cinco de los siete son familias de ids o titulos
+  nota, ultimos 220:  afo. Salidas de esta vuelta: docs/plan/OP_E_03_LECTURA_TRAMO4_V99.jsonl (33 filas), docs/loop/SALIDA_V99_TAREA3_TRAMO3_MATERIAL.txt, docs/loop/SALIDA_V99_TAREA3_CINCO_PUNTOS.txt, docs/loop/SALIDA_V99_TAREA3_MUTACION.txt.
+
+##########################################################################################
+OP-M-03-ENLACES . estado=LISTA . nota=248 caracteres . seccion propia en 04_ENLACES.md: no
+  nota, primeros 220: ES LA PARTE MAS BARATA DE LA MESA Y LA QUE MAS CAMBIA LO QUE EL LECTOR VE. Siete nodos sin ninguna arista entre ellos se convierten en TRES nodos y DOS aristas: dos puertas y el acto al que las dos llevan. LA FORMA FINAL
+  nota, ultimos 220:   MESA Y LA QUE MAS CAMBIA LO QUE EL LECTOR VE. Siete nodos sin ninguna arista entre ellos se convierten en TRES nodos y DOS aristas: dos puertas y el acto al que las dos llevan. LA FORMA FINAL DEL RACIMO ES SIETE A TRES.
+
+##########################################################################################
+OP-E-04 . estado=LISTA . nota=760 caracteres . seccion propia en 04_ENLACES.md: no
+  nota, primeros 220: CORRECCION DECLARADA: la cuenta publicada ayer decia CATORCE enlaces de madre e hijo. SON ONCE, y de esos once DOS son los eslabones que van a OP-M-01-ESLABONES. Aqui van NUEVE. CINCO DE LOS NUEVE APUNTAN AL MISMO HIJO, 
+  nota, ultimos 220:  ago 2026: el depende_de ya llevaba las dos fusiones y ahora lleva ademas la razon escrita. SEIS de los nueve destinos mueren el mismo dia, asi que esta operacion NO PUEDE correr antes que ellas ni escribir ids literales.
+
+##########################################################################################
+OP-E-05 . estado=LISTA . nota=444 caracteres . seccion propia en 04_ENLACES.md: no
+  nota, primeros 220: ES LA UNICA OPERACION DEL PLAN QUE ESCRIBE ARISTAS EN LOS DOS SENTIDOS A PROPOSITO, y por eso lleva su propia advertencia: la contraorden del 12 ago 2026 sobre la vuelta vale para LAS ESCALERAS, donde la vuelta es una in
+  nota, ultimos 220:  ccion falsa. EN UN ENLACE MUTUO NO HAY ESCALERA: hay dos nodos que se necesitan en las dos direcciones, cada uno por una linea distinta. SI LA GUARDA DE GATE 0 SE ESCRIBE SIN ESTA EXCEPCION, BORRARA ESTAS CUATRO ARISTAS.
+
+##########################################################################################
+OP-M-01-ESLABONES . estado=LISTA . nota=490 caracteres . seccion propia en 04_ENLACES.md: no
+  nota, primeros 220: TRES ESLABONES, Y SOLO UNA ARISTA NUEVA: el segundo peldano ya estaba puesto y nadie lo habia leido como tal. ES EL MEJOR EJEMPLO DE LO QUE ESTA MESA ENCONTRO: no habia que construir la jerarquia, habia que LEERLA, porqu
+  nota, ultimos 220:  mer peldano se escribe hacia el id VIVO de sistema_gates_go_kill el dia de la escritura, que depende de como quede la fusion de seis. Si esa fusion cambia el superviviente, este peldano cambia de destino y NO de sentido.
+
+##########################################################################################
+OP-M-01-SEXTO . estado=LISTA . nota=424 caracteres . seccion propia en 04_ENLACES.md: no
+  nota, primeros 220: ES LA PRIMERA OPERACION DEL PLAN QUE COBRA UNA A SIN FUNDIR. Las dos A del sexto son ciertas y no se tiran a la basura: se ejecutan como PODA. Lo que repite se poda; lo que no repite se queda; y la arista sustituye al bl
+  nota, ultimos 220:   sustituye al bloque podado. SI ESTA OPERACION NO SE HACE, EL PLAN PIERDE POR PARTIDA DOBLE: se queda con el bloque repetido Y sin la arista, que es exactamente el estado en el que la mesa unida encontro sus dos mitades.
+
+##########################################################################################
+OP-E-06 . estado=LISTA . nota=2479 caracteres . seccion propia en 04_ENLACES.md: SI
+  nota, primeros 220: REPARTO POR DOMINIO DE LOS 192: core 146, entrega 15, environmental 15, exportacion 12 y franquicias 4. En compras no levanto ninguno, y no es que no haya: es que sus razones son mas cortas y no usan la formula de la var
+  nota, ultimos 220:  SPUES: VERDE, la cuenta no crecio. estado se queda en LISTA por el mismo criterio que OP-E-01 y OP-E-04: el estado de verdad es el repo y el commit, no un campo nuevo (backlog del 14 ago 2026, decidido SIN estado nuevo).
+
+##########################################################################################
+OP-E-07 . estado=LISTA . nota=12624 caracteres . seccion propia en 04_ENLACES.md: SI
+  nota, primeros 220: ES LA OPERACION MAS BARATA DEL PLAN Y UNA DE LAS QUE MAS ARISTAS PUEDE DAR: ciento un textos ya escritos, y de cada uno hay que sacar una sola cosa, quien dice la linea y quien trae el procedimiento. SE SEPARA DE OP-E-06
+  nota, ultimos 220:  1388 y 1946, verificados presentes en OP_E_07_DIRECCION_V94.jsonl), 0 ESCALERA_ROTA. estado se queda en LISTA, mismo criterio que OP-E-01, OP-E-04 y OP-E-06: el estado de verdad es el repo y el commit, no un campo nuevo.
+
+--- (4.3) LA CUENTA: EJECUTABLE HOY CONTRA ESPERA OTRA FASE ---
+
+YA HECHA (1): OP-E-02
+
+EJECUTABLE HOY, sin dependencia viva de OTRA fase (2):
+   OP-E-01 (sin ninguna dependencia)
+   OP-E-07 (depende dentro de la propia fase de ['OP-E-06'], no HECHA todavia)
+
+ESPERA DEPENDENCIA VIVA DE OTRA FASE (7):
+   OP-E-03 -> ['OP-U-02'] (fase(s) 03_FUSIONES)
+   OP-M-03-ENLACES -> ['OP-M-03-I', 'OP-M-03-II', 'OP-M-03-III'] (fase(s) 03_FUSIONES)
+   OP-E-04 -> ['OP-M-01', 'OP-M-01-FUSION'] (fase(s) 03_FUSIONES, 06_MESAS)
+   OP-E-05 -> ['OP-M-01', 'OP-M-01-FUSION'] (fase(s) 03_FUSIONES, 06_MESAS)
+   OP-M-01-ESLABONES -> ['OP-M-01', 'OP-M-01-FUSION'] (fase(s) 03_FUSIONES, 06_MESAS)
+   OP-M-01-SEXTO -> ['OP-M-01', 'OP-M-01-FUSION'] (fase(s) 03_FUSIONES, 06_MESAS)
+   OP-E-06 -> ['OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06', 'OP-D-07'] (fase(s) 02_DESTEJIDOS)
+
+TOTAL: 10 = 1 hechas + 2 ejecutables + 7 que esperan
