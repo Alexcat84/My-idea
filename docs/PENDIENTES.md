@@ -1545,6 +1545,32 @@ operacion** (los dos nodos de la fusion, ya fundidos en la vuelta 57, commit
 ficha y fuera de esta pasada, hasta que el fundador decida abrir una operacion
 nueva para el.
 
+### QUINTA entrada (vuelta 120, adjudicacion del auditor por extension natural del punto 2 de la decision del 28 ago 2026): el CUERPO del superviviente mismo sigue diciendo NAFTA
+
+**Medido contra el nodo de hoy**, `dataset/nodos/certificado_de_origen_tratados_libre_comercio.json`:
+el `titulo_concepto` ya dice T-MEC/USMCA (correccion de `OP-S-01`, vuelta 119),
+**pero el cuerpo debajo del titulo sigue nombrando NAFTA, sin anotar**:
+
+- `resumen_teorico`: *"el NAFTA Certificate of Origin"*, y *"segun el tratado
+  aplicable (**NAFTA**, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia,
+  Panama, Peru, entre otros)"*.
+- `pasos_accionables`, paso 4: *"el Certificado de Origen correspondiente
+  (ej. **NAFTA**)"*.
+
+**Por que es una QUINTA entrada y no una correccion de las cuatro de arriba**:
+la lista de arriba cuenta los CUATRO nodos vivos que nombran NAFTA **y no son
+el superviviente de `OP-S-01`**; este es **el superviviente mismo**, que el
+punto 4 de la `verificacion` de `OP-S-01` ya excluyo por su id (es el nodo, no
+uno que lo cita). El titulo cambio y el cuerpo no: **hoy el titulo dice
+T-MEC/USMCA y el cuerpo debajo sigue diciendo NAFTA**, y ese cuerpo no estaba
+anotado en ninguna parte hasta esta entrada.
+
+**`ids_alias` (`nafta_free_trade_agreements`) y `merged_originals` quedan FUERA
+de este barrido a proposito**: son PROCEDENCIA (registran de que nodo fundido
+viene este superviviente), no CONTENIDO que el lector vea como vigencia de
+marco. **El nodo no se toca en esta vuelta**: queda anotado, igual que los
+otros cuatro, como trabajo post campaña.
+
 ---
 
 ## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
@@ -7207,3 +7233,65 @@ Ver la entrada nueva dentro de la ficha "Ficha permanente:
 cuatro nodos vivos que nombran NAFTA y no son el superviviente de `OP-S-01`
 quedan anotados como trabajo post campaña, por decision del fundador
 (`docs/loop/paradas/2026-08-28-titulo-nafta-ops01-DECISION.md`, punto 2).
+
+## VUELTA 120, TAREA 2: LOS REGISTROS DEL ACTA 119
+
+### R.1 CORRECCION DEL "SIEMPRE" DE LA M ESPURIA, caida del AUDITOR (acta de la vuelta 119)
+
+El acta de la vuelta 118 (seccion 4.2) escribio que
+`scripts/loop/vuelta89_tarea4_guarda_op_c05.py --caso-rojo` "no puede correr
+porque `git status --porcelain` ve **SIEMPRE** la `M` espuria de fin de linea",
+y el reporte de la vuelta 119 y el docstring de
+`vuelta119_tarea1_guarda_op_c05_contenido.py` (lineas 5 a 12: *"se para SIEMPRE
+con... porque... ese comando ve SIEMPRE la M espuria"*) heredaron ese
+universal. **ES FALSO COMO UNIVERSAL**, medido por el auditor en la vuelta 119
+y **reverificado hoy, vuelta 120**: la guarda vieja corrida tal cual, sin
+tocarla (`python scripts/loop/vuelta89_tarea4_guarda_op_c05.py --caso-rojo`),
+sale **VERDE EXIT 0** hoy tambien, con las mismas cifras (935 a 936 entradas
+que sobran, 711 nodos), y `git status --porcelain -- dataset/` sale **vacio**
+antes y despues del caso rojo, medido en esta misma vuelta.
+
+**El disparador de la `M` NO queda identificado y NO se inventa**: lo que se
+registra es que **no es permanente**, y que el acta 88 (seccion 5.6) ya exigia
+"`git status --porcelain -- dataset/ web/lib/assets/` en cero detras" del
+ciclo de tres, cosa que seria imposible de exigir si la `M` fuera perpetua.
+
+**LO QUE NO SE TOCA ES EL REMEDIO**: medir CONTENIDO (`git diff --numstat`) es
+estrictamente mejor que medir ESTADO aunque hoy el estado ya salga limpio; la
+guarda nueva (`vuelta119_tarea1_guarda_op_c05_contenido.py`) es correcta y
+sigue sin tocarse. **Se corrige el DIAGNOSTICO, no el arreglo.** Texto viejo
+intacto en las dos vueltas (118 y 119), correccion declarada aqui al lado, sin
+borrar nada; ninguno de los dos ficheros de codigo se reescribe.
+
+### R.2 LA QUINTA ENTRADA DE LA FICHA `vigencia-del-marco-internacional`
+
+Ver la entrada nueva ("QUINTA entrada (vuelta 120)...") dentro de la ficha
+"Ficha permanente: `vigencia-del-marco-internacional`", mas arriba en este
+mismo fichero, seccion "Entrada del cierre de `OP-S-01`": el CUERPO del
+superviviente de `OP-S-01`, `certificado_de_origen_tratados_libre_comercio`,
+sigue nombrando NAFTA en `resumen_teorico` y `pasos_accionables` pese a que su
+`titulo_concepto` ya dice T-MEC/USMCA. Anotado como trabajo post campaña, no
+ejecutado; `ids_alias` y `merged_originals` fuera del barrido por ser
+procedencia. El nodo no se toca en esta vuelta.
+
+### R.3 EL CASO POSITIVO QUE FALTABA, corrido en esta vuelta
+
+`vuelta119_tarea3_titulo_ops01.py` y `vuelta119_tarea3_2_3_operaciones_ops01.py`
+escribieron en la vuelta 119 sin simulacion previa ni caso positivo corrido.
+Corridos hoy, en segunda pasada, SIN tocar nada (los dos escriben solo si el
+estado calza con lo que esperan, y hoy el nodo y `OPERACIONES.jsonl` ya llevan
+la correccion de la vuelta 119 aplicada):
+
+- `vuelta119_tarea3_titulo_ops01.py`: **ROJO limpio, EXIT 1**, "el titulo vivo
+  de hoy no es el titulo viejo que la decision describe. NO SE ESCRIBE nada:
+  no se pisa un estado distinto al medido por la parada."
+- `vuelta119_tarea3_2_3_operaciones_ops01.py`: **EXIT 1**, con un `ValueError`
+  SIN CAPTURAR sobre `verif.index(PUNTO4_VIEJO)` ("'ningun nodo VIVO lleva
+  NAFTA en su id ni en su titulo' is not in list"): el punto 4 viejo de la
+  `verificacion` ya no esta en la lista (la vuelta 119 lo acoto), asi que el
+  `.index()` revienta en vez de devolver un ROJO limpio.
+
+**Ninguno de los dos escribio nada** (`git status --porcelain -- docs/plan/`
+vacio tras las dos corridas): las guardas muerden, lo que faltaba era la
+prueba. La regla que rige desde esta vuelta (EJECUTOR.md, "EL CASO ROJO SE
+PRUEBA POR MUTACION") ya esta en vigor y se aplica en la TAREA 3 de abajo.
