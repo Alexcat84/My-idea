@@ -1,0 +1,10 @@
+==============================================================================
+VUELTA 121, TAREA 3.a: OP-S-03, export.gov A trade.gov
+==============================================================================
+nomina: calculo_de_aranceles_importacion (x2), evaluacion_preparacion_empresa_exportar (x1), reglas_de_origen_fta_2 (x1)
+MUTACION NEGATIVA: ancla deliberadamente distinta de la real, en los cuatro puntos.
+  calculo_de_aranceles_importacion.resumen_teorico calza (deberia ser False): False
+  calculo_de_aranceles_importacion.pasos_accionables[1] calza (deberia ser False): False
+  evaluacion_preparacion_empresa_exportar.pasos_accionables[5] calza (deberia ser False): False
+  reglas_de_origen_fta_2.pasos_accionables[3] calza (deberia ser False): False
+VERDE DE LA PRUEBA: ningun punto calza con el ancla mutada, como se espera; el caso real (mas abajo) no se corrio con este ancla, asi que no se escribio nada.

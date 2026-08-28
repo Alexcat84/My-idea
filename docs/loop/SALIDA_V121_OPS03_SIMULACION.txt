@@ -1,0 +1,24 @@
+==============================================================================
+VUELTA 121, TAREA 3.a: OP-S-03, export.gov A trade.gov
+==============================================================================
+nomina: calculo_de_aranceles_importacion (x2), evaluacion_preparacion_empresa_exportar (x1), reglas_de_origen_fta_2 (x1)
+calculo_de_aranceles_importacion.resumen_teorico calza con el ANCLA esperada: True
+calculo_de_aranceles_importacion.pasos_accionables[1] calza con el ANCLA esperada: True
+evaluacion_preparacion_empresa_exportar.pasos_accionables[5] calza con el ANCLA esperada: True
+reglas_de_origen_fta_2.pasos_accionables[3] calza con el ANCLA esperada: True
+
+CORRECCION DECLARADA (vuelta 121, OP-S-03, docs/plan/05_SANEO.md): domain swap export.gov -> trade.gov en los cuatro puntos exactos, ningun otro campo tocado.
+  calculo_de_aranceles_importacion.resumen_teorico
+    VIEJO -> 'Los aranceles, tarifas portuarias e impuestos afectan significativamente el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de export.gov para determinar la viabilidad y competitividad del precio final. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.'
+    NUEVO -> 'Los aranceles, tarifas portuarias e impuestos afectan significativamente el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de trade.gov para determinar la viabilidad y competitividad del precio final. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.'
+  calculo_de_aranceles_importacion.pasos_accionables[1]
+    VIEJO -> 'Consultar la base de datos de aranceles en export.gov para el país de destino específico.'
+    NUEVO -> 'Consultar la base de datos de aranceles en trade.gov para el país de destino específico.'
+  evaluacion_preparacion_empresa_exportar.pasos_accionables[5]
+    VIEJO -> 'Realiza la evaluación formal de preparación exportadora en export.gov/begin/assessment.asp'
+    NUEVO -> 'Realiza la evaluación formal de preparación exportadora en trade.gov/begin/assessment.asp'
+  reglas_de_origen_fta_2.pasos_accionables[3]
+    VIEJO -> 'Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente (export.gov/fta)'
+    NUEVO -> 'Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente (trade.gov/fta)'
+
+SIMULACION: no se escribe nada (--simular).

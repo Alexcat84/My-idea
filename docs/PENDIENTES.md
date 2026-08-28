@@ -2186,6 +2186,30 @@ Los tres nodos-frontera condicionales (EAR, antiboicot, cláusula antidesviació
 viven aquí también: su condición honesta —*"si tu producto lleva componentes de
 EE.UU. o tu ruta lo toca"*— depende de acuerdos que cambian.
 
+### Entrada 7 (vuelta 121, hallazgo FUERA de la nomina de `OP-S-04`): `inteligencia_de_anuncios_de_la_competencia` tambien nombra `Alexa`
+
+**Medido al escribir `OP-S-04`** (nomina fija de cinco nodos del 11 ago 2026:
+`analisis_trafico_competitivo`, `capturar_conocimiento_de_mercado`,
+`medicion_resultados_marketing_franquicia`, `retargeting_display`,
+`seo_long_tail`): un `grep` de las seis muertas sobre `dataset/nodos/` DESPUES
+de escribir esos cinco encuentra un SEXTO nodo vivo con la marca,
+`inteligencia_de_anuncios_de_la_competencia`, `pasos_accionables[1]`:
+*"Analizar con Alexa o Quantcast el perfil de audiencia de esos sitios"*.
+
+**Por que queda FUERA de `OP-S-04` y no se toca en esta vuelta**: no es un
+caso de deprecacion (el nodo esta vivo, `deprecado` None) sino un nodo NUEVO,
+nacido de `OP-F-04-WEI` el 14 ago 2026
+(`docs/plan/INDICE_ROJO_DECLARADO.jsonl`), DESPUES del censo del 11 ago 2026
+que fijo la nomina de cinco de `OP-S-04`. El texto de `Alexa` viajo con el
+contenido heredado de `analisis_trafico_competitivo` al partirse
+(`docs/plan/01_FUENTES.md:981`) y el censo de `OP-S-04` no pudo verlo porque
+el nodo aun no existia. La nomina de `OP-S-04` es literal y fija; ampliarla
+es una decision de alcance que esta ficha no toma por su cuenta.
+
+**El nodo no se toca en esta vuelta**: queda anotado como trabajo post
+campaña, PENDIENTE DE DOCTRINA sobre si `OP-S-04` se reabre para este septimo
+caso o si nace ficha aparte, traido a la mesa en el reporte de la vuelta 121.
+
 ## DOCTRINA DE LA CLASE (ago 2026)
 
 **"Los programas de tu estado no significan nada donde no hay estados con

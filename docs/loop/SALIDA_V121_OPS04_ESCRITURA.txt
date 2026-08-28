@@ -1,0 +1,40 @@
+==============================================================================
+VUELTA 121, TAREA 3.b: OP-S-04, LAS SEIS HERRAMIENTAS MUERTAS (REMEDIO ESPEJO)
+==============================================================================
+nomina: analisis_trafico_competitivo, capturar_conocimiento_de_mercado, medicion_resultados_marketing_franquicia, retargeting_display, seo_long_tail
+analisis_trafico_competitivo.resumen_teorico calza con el ANCLA esperada: True
+analisis_trafico_competitivo.pasos_accionables[0] calza con el ANCLA esperada: True
+capturar_conocimiento_de_mercado.resumen_teorico calza con el ANCLA esperada: True
+medicion_resultados_marketing_franquicia.pasos_accionables[2] calza con el ANCLA esperada: True
+retargeting_display.resumen_teorico calza con el ANCLA esperada: True
+retargeting_display.pasos_accionables[0] calza con el ANCLA esperada: True
+retargeting_display.pasos_accionables[3] calza con el ANCLA esperada: True
+seo_long_tail.pasos_accionables[4] calza con el ANCLA esperada: True
+
+CORRECCION DECLARADA (vuelta 121, OP-S-04, docs/plan/05_SANEO.md, REMEDIO ESPEJO): las seis herramientas muertas se generalizan con ejemplo vivo, ningun otro campo tocado. DISCUTIBLE en el punto 8 (seo_long_tail): sin ejemplo vivo verificado de su categoria, ver docstring.
+  analisis_trafico_competitivo.resumen_teorico
+    VIEJO -> 'Consiste en usar herramientas gratuitas de medición de tráfico (Alexa, Compete) y tiendas de aplicaciones para entender cómo los competidores atraen y retienen usuarios, identificando tendencias, fuentes de tráfico y posicionamiento en el mercado.'
+    NUEVO -> 'Consiste en usar herramientas de medición de tráfico (por ejemplo, AdRoll o Adbeat) y tiendas de aplicaciones para entender cómo los competidores atraen y retienen usuarios, identificando tendencias, fuentes de tráfico y posicionamiento en el mercado.'
+  analisis_trafico_competitivo.pasos_accionables[0]
+    VIEJO -> 'Buscar y comparar tráfico de competidores con herramientas como Alexa o Compete'
+    NUEVO -> 'Buscar y comparar tráfico de competidores con herramientas como AdRoll o Adbeat'
+  capturar_conocimiento_de_mercado.resumen_teorico
+    VIEJO -> 'Una vez entendido el cliente, hay que entender el mercado completo: tendencias, jugadores clave, necesidades no resueltas e innovadores. Para canales físicos esto implica reunirse con actores de mercados adyacentes, analistas y asistir a ferias. Para web/mobile, se usan herramientas de medición de tráfico (Alexa, Compete), tiendas de apps y sitios como Quora para mapear competencia y posicionarse mediante una grilla competitiva y un mapa de mercado.'
+    NUEVO -> 'Una vez entendido el cliente, hay que entender el mercado completo: tendencias, jugadores clave, necesidades no resueltas e innovadores. Para canales físicos esto implica reunirse con actores de mercados adyacentes, analistas y asistir a ferias. Para web/mobile, se usan herramientas de medición de tráfico (por ejemplo, AdRoll o Adbeat), tiendas de apps y sitios como Quora para mapear competencia y posicionarse mediante una grilla competitiva y un mapa de mercado.'
+  medicion_resultados_marketing_franquicia.pasos_accionables[2]
+    VIEJO -> 'Usa herramientas como TrafficEstimate.com, Alexa y Google Analytics para estimar la calidad del tráfico que llega a tu web'
+    NUEVO -> 'Usa herramientas como TrafficEstimate.com, AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web'
+  retargeting_display.resumen_teorico
+    VIEJO -> 'El retargeting muestra anuncios a personas que ya visitaron el sitio pero no completaron una conversión (ej. carrito abandonado), aprovechando que ya tienen interés previo, lo que genera CTRs 3x a 10x más altos que anuncios normales. La publicidad display, por su parte, se distribuye a través de redes de anuncios (Google Display Network, AdRoll, Perfect Audience) que permiten llegar a audiencias amplias basadas en intereses relacionados, no solo búsquedas directas. Ambos canales complementan al SEM tradicional para reforzar la conversión y el reconocimiento de marca.'
+    NUEVO -> 'El retargeting muestra anuncios a personas que ya visitaron el sitio pero no completaron una conversión (ej. carrito abandonado), aprovechando que ya tienen interés previo, lo que genera CTRs 3x a 10x más altos que anuncios normales. La publicidad display, por su parte, se distribuye a través de redes de anuncios (por ejemplo, Google Display Network o AdRoll) que permiten llegar a audiencias amplias basadas en intereses relacionados, no solo búsquedas directas. Ambos canales complementan al SEM tradicional para reforzar la conversión y el reconocimiento de marca.'
+  retargeting_display.pasos_accionables[0]
+    VIEJO -> 'Instalar píxeles de retargeting (Google AdWords, AdRoll, Perfect Audience) en el sitio'
+    NUEVO -> 'Instalar píxeles de retargeting (por ejemplo, Google AdWords o AdRoll) en el sitio'
+  retargeting_display.pasos_accionables[3]
+    VIEJO -> 'Evaluar redes de display generales (Google Display Network) vs nicho (The Deck, BuySellAds)'
+    NUEVO -> 'Evaluar redes de display generales (Google Display Network) vs nicho (por ejemplo, BuySellAds)'
+  seo_long_tail.pasos_accionables[4]
+    VIEJO -> 'Contratar freelancers (oDesk/Elance) para crear contenido específico por término'
+    NUEVO -> 'Contratar freelancers en una plataforma de trabajo remoto para crear contenido específico por término'
+
+ESCRITO: los cinco nodos de la nomina, ocho campos en total, ningun otro campo tocado.
