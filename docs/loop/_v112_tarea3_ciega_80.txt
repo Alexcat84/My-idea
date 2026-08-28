@@ -1,0 +1,1040 @@
+====================================================================================================
+PUESTO 11 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE introduccion_validacion_clientes -- paso 3 casado: Probar canales de ventas y distribución
+   (todos los pasos de la madre, para contexto: ['Probar la repetibilidad del proceso de ventas o adquisición de usuarios', 'Buscar pedidos u órdenes reales a precio completo como prueba de validación', 'Probar canales de ventas y distribución', 'Escuchar activamente a los clientes para identificar pivotes necesarios', 'Posicionar correctamente el producto y la empresa'])
+   entregable_esperado de la madre: Plan de pruebas de venta con métricas de validación claras para escalar el modelo de negocio
+----------------------------------------------------------------------------------------------------
+HIJO herramientas_online_canal_fisico
+   titulo: Herramientas Online para Canales de Distribución Física
+   resumen_teorico: Incluso los productos vendidos exclusivamente en canales físicos requieren presencia online (sitio web, redes sociales, email marketing) porque los clientes buscan información en internet antes de comprar. El marketing moderno combina 'push' (empujar el producto al cliente) y 'pull' (atraer al cliente mediante interés genuino).
+   pasos_accionables: ['Crear un sitio web que comunique claramente la visión y el problema que resuelve el producto', 'Establecer presencia en redes sociales (Facebook, Twitter) para generar boca a boca', 'Diseñar campañas de email personalizadas y multi-etapa', 'Balancear estrategias de push (venta directa) y pull (atracción orgánica)']
+   entregable_esperado: Presencia online mínima viable (sitio web, redes sociales, campañas de email) que apoye el canal físico de ventas
+
+====================================================================================================
+PUESTO 12 | dominio health_safety | clase A
+----------------------------------------------------------------------------------------------------
+MADRE human_error_como_sintoma -- paso 1 casado: Ante un incidente, preguntar '¿qué condiciones de trabajo, herramientas o presiones contribuyeron a esta acción?' en lugar de '¿quién falló?'.
+   (todos los pasos de la madre, para contexto: ["Ante un incidente, preguntar '¿qué condiciones de trabajo, herramientas o presiones contribuyeron a esta acción?' en lugar de '¿quién falló?'.", 'Rediseñar herramientas, procedimientos o entornos de trabajo identificados como fuente de dificultad, en vez de solo entrenar o sancionar a las personas.', 'Revisar investigaciones pasadas para reformular las conclusiones desde una perspectiva sistémica.'])
+   entregable_esperado de la madre: Informe de investigación de incidente reformulado que identifique condiciones sistémicas (herramientas, entorno, presión operativa) en lugar de solo el error individual.
+----------------------------------------------------------------------------------------------------
+HIJO preguntar_que_no_quien
+   titulo: Preguntar 'qué pasó' en lugar de 'quién fue'
+   resumen_teorico: Desde los años 40 se descubrió que las acciones de las personas tienen sentido cuando entiendes las características críticas del entorno en que trabajan. En lugar de buscar quién cometió el error, investiga qué de las herramientas, las tareas o el sistema llevó a esa acción. Ahí está el aprendizaje real y la posibilidad de mejorar.
+   pasos_accionables: ['Ante un problema, evita preguntar primero quién lo hizo', 'Pregúntate qué elementos del sistema, las herramientas o las tareas influyeron en esa decisión', 'Anota las condiciones de trabajo que rodeaban el momento en que ocurrió', 'Usa lo que encuentres para cambiar el sistema, no para señalar a alguien']
+   entregable_esperado: Un registro del incidente centrado en qué condiciones lo generaron, no en quién tiene la culpa
+
+====================================================================================================
+PUESTO 15 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE clasificacion_tipos_activos -- paso 1 casado: Clasificar los activos de la empresa en corrientes y de largo plazo
+   (todos los pasos de la madre, para contexto: ['Clasificar los activos de la empresa en corrientes y de largo plazo', 'Revisar el saldo de cuentas por cobrar y la reserva para cuentas incobrables', 'Evaluar los niveles de inventario (materia prima, en proceso, terminado) y su impacto en el flujo de caja', 'Identificar el valor de PPE (propiedad, planta y equipo) registrado al costo de adquisición, no al valor de mercado', 'Monitorear que el inventario se mantenga en el nivel mínimo necesario para operar'])
+   entregable_esperado de la madre: Inventario clasificado de todos los activos de la empresa con su categoría (corriente/largo plazo) y notas sobre supuestos contables aplicados
+----------------------------------------------------------------------------------------------------
+HIJO tipos_de_pasivos
+   titulo: Tipos de Pasivos (Corrientes y Largo Plazo)
+   resumen_teorico: Los pasivos son obligaciones financieras de la empresa, divididos en corrientes (pagaderos en menos de un año: porción corriente de deuda largo plazo, préstamos de corto plazo, cuentas por pagar, gastos acumulados) y de largo plazo (préstamos, compensación diferida, impuestos diferidos). Entender esta clasificación es clave para evaluar la liquidez y estructura de financiamiento del negocio.
+   pasos_accionables: ['Clasificar todas las deudas de la empresa en corrientes vs largo plazo.', 'Separar la porción corriente de préstamos largo plazo que vence este año.', 'Registrar cuentas por pagar a proveedores y gastos acumulados (como nómina).', 'Revisar periódicamente el peso relativo de cada categoría de pasivo.']
+   entregable_esperado: Balance general con sección de pasivos correctamente segmentada por plazo.
+
+====================================================================================================
+PUESTO 22 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE extraer_priorizar_hipotesis -- paso 1 casado: Lista todo lo que tiene que ser cierto sobre tu modelo de negocio, tu propuesta de valor y tu cliente
+   (todos los pasos de la madre, para contexto: ['Lista todo lo que tiene que ser cierto sobre tu modelo de negocio, tu propuesta de valor y tu cliente', 'Escribe cada hipótesis por separado, una por nota', 'Elimina las que estén repetidas', 'Identifica cuáles son capaces de acabar con tu proyecto si fallan', 'Ordena todas tus hipótesis según qué tan crítica es cada una para que tu proyecto funcione'])
+   entregable_esperado de la madre: Tu lista de hipótesis ordenada por prioridad, con las que pueden matar tu negocio arriba de todo
+----------------------------------------------------------------------------------------------------
+HIJO value_proposition_startup
+   titulo: Propuesta de Valor
+   resumen_teorico: Tu propuesta de valor describe el trabajo (job) que resuelves para tu cliente. Son las caracteristicas de tu producto o servicio que responden a un problema o una necesidad real: ahorrar tiempo, ganar estatus, simplificar algo, dar comodidad. Para que funcione, tiene que encajar con precisión en el segmento de clientes al que se la ofreces.
+   pasos_accionables: ['Identifica los problemas o necesidades reales de tu segmento de clientes.', 'Define que caracteristicas de tu producto o servicio resuelven esos problemas.', 'Verifica el encaje entre tu propuesta de valor y tu segmento de clientes hablando directamente con ellos.']
+   entregable_esperado: Una propuesta de valor validada y alineada con un segmento de clientes especifico.
+
+====================================================================================================
+PUESTO 23 | dominio core | clase B
+----------------------------------------------------------------------------------------------------
+MADRE fit_problema_solucion -- paso 2 casado: Testear si los clientes quieren tu propuesta de valor concreta.
+   (todos los pasos de la madre, para contexto: ['Validar que los jobs, pains y gains identificados realmente importan a los clientes.', 'Testear si los clientes quieren tu propuesta de valor concreta.', 'Evaluar si el modelo de negocio asociado es escalable y rentable.'])
+   entregable_esperado de la madre: Evidencia documentada de al menos el problem-solution fit antes de escalar.
+----------------------------------------------------------------------------------------------------
+HIJO value_proposition_startup
+   titulo: Propuesta de Valor
+   resumen_teorico: Tu propuesta de valor describe el trabajo (job) que resuelves para tu cliente. Son las caracteristicas de tu producto o servicio que responden a un problema o una necesidad real: ahorrar tiempo, ganar estatus, simplificar algo, dar comodidad. Para que funcione, tiene que encajar con precisión en el segmento de clientes al que se la ofreces.
+   pasos_accionables: ['Identifica los problemas o necesidades reales de tu segmento de clientes.', 'Define que caracteristicas de tu producto o servicio resuelven esos problemas.', 'Verifica el encaje entre tu propuesta de valor y tu segmento de clientes hablando directamente con ellos.']
+   entregable_esperado: Una propuesta de valor validada y alineada con un segmento de clientes especifico.
+
+====================================================================================================
+PUESTO 26 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE rol_gates_agile -- paso 1 casado: Mantén los puntos de decisión para seguir o parar en los momentos clave del proyecto, aunque trabajes con métodos ágiles
+   (todos los pasos de la madre, para contexto: ['Mantén los puntos de decisión para seguir o parar en los momentos clave del proyecto, aunque trabajes con métodos ágiles', 'Usa cada punto de decisión para revisar también los recursos disponibles, no solo la calidad de lo entregado', 'Evita separar los puntos de decisión de hardware y de software cuando ambas partes dependen entre sí', 'Define un cronograma general con hitos que se mantenga estable, aunque el detalle de cada sprint cambie'])
+   entregable_esperado de la madre: Un calendario con los puntos de decisión definidos, con criterios claros para seguir o parar el proyecto y para asignar recursos en cada uno.
+----------------------------------------------------------------------------------------------------
+HIJO gates_go_kill_decision_points
+   titulo: Puntos de decisión: seguir o parar (gates)
+   resumen_teorico: Los puntos de decisión son momentos en los que te detienes a revisar un proyecto y decides si sigues invirtiendo en él o lo cierras. No los confundas con una simple puesta al día de cómo va todo: aquí decides con dinero real, según lo que sabes hasta ese momento. Piénsalo como ir soltando apuestas pequeñas: lo que decides hoy lo puedes revisar y cambiar en el siguiente punto de decisión.
+   pasos_accionables: ['Define con claridad cada punto de decisión en tu camino de la idea al lanzamiento', 'En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto', 'No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir', 'Anota qué decidiste: seguir, parar, dejarlo en espera, replantearlo, o seguir pero con condiciones']
+   entregable_esperado: Tu propio mapa del proceso, de la idea al lanzamiento, con los puntos de decisión marcados con claridad
+
+====================================================================================================
+PUESTO 32 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE requisitos_numericos_calidad_lotes -- paso 1 casado: Definir índices numéricos de calidad de lote (ej. AQL, nivel de calidad aceptable)
+   (todos los pasos de la madre, para contexto: ['Definir índices numéricos de calidad de lote (ej. AQL, nivel de calidad aceptable)', 'Seleccionar un plan de muestreo de aceptación basado en consideraciones probabilísticas', 'Comunicar y capacitar al proveedor en la interpretación correcta de estos criterios estadísticos', 'Para productos complejos, definir requisitos numéricos de confiabilidad (ej. tiempo medio entre fallas)'])
+   entregable_esperado de la madre: Plan de muestreo de aceptación con índices numéricos de calidad y confiabilidad definidos y comunicados al proveedor
+----------------------------------------------------------------------------------------------------
+HIJO critica_acceptable_quality_level
+   titulo: Crítica al Nivel de Calidad Aceptable (AQL)
+   resumen_teorico: El Nivel de Calidad Aceptable (AQL) es un término estadístico de control de calidad que, mal usado, se convierte en una autorización previa para fallar: al aceptar que un porcentaje de tu producto sea no conforme, estás planificando el fracaso desde el inicio. Crosby argumenta que no hay evidencia real de que los últimos puntos porcentuales de mejora cuesten más que los primeros, y que la economía de la calidad debe entenderse como la economía de hacer las cosas bien la primera vez, no como la excusa para tolerar defectos.
+   pasos_accionables: ['Revisa si estás usando estándares de AQL que toleran un porcentaje fijo de defectos.', 'Cuestiona el origen de esos estándares: casi siempre nacen de la operación diaria, no de un análisis técnico riguroso.', "Cambia la mentalidad de 'nivel aceptable de fallas' por el objetivo de conformidad total (Cero Defectos).", 'Calcula el costo real de hacer las cosas mal frente al costo de hacerlas bien la primera vez.']
+   entregable_esperado: Una comparación del costo de tus reprocesos actuales frente al costo estimado de prevenir esos errores, y la eliminación de los estándares AQL que toleran el defecto.
+
+====================================================================================================
+PUESTO 34 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE hipotesis_relacion_clientes_web -- paso 4 casado: Probar tácticas a pequeña escala (cientos de usuarios) con un MVP de baja fidelidad
+   (todos los pasos de la madre, para contexto: ['Diseñar el embudo de adquisición: cómo llevar tráfico a la landing page', "Definir el paso de activación: cuándo se considera un cliente 'activado' (descarga, registro, permiso de recontacto)", 'Si es un mercado multi-sided (como Google/Facebook), crear hipótesis separadas para usuarios y para pagadores', 'Probar tácticas a pequeña escala (cientos de usuarios) con un MVP de baja fidelidad', 'Mapear el customer journey: descubrimiento de necesidad, búsqueda, y decisión rápida (primera página de resultados)'])
+   entregable_esperado de la madre: Embudo Get-Keep-Grow documentado con tácticas específicas para cada etapa y plan de prueba a pequeña escala
+----------------------------------------------------------------------------------------------------
+HIJO mvp_alta_fidelidad
+   titulo: MVP de Alta Fidelidad
+   resumen_teorico: Es una versión más completa y pulida del MVP usado en customer discovery, diseñada específicamente para probar tácticas de adquisición y activación con más usuarios. No incluye todas las funcionalidades finales, pero no debe sentirse como un producto de segunda clase. Debe estar instrumentado para capturar datos de comportamiento de clientes y producto continuamente.
+   pasos_accionables: ['Partir del MVP de baja fidelidad usado en customer discovery', 'Pulir funcionalidades limitadas pero completas (ej. solo una categoría de producto)', "Evitar mostrar demasiado contenido 'coming soon' que desincentive la compra actual", 'Instrumentar el MVP para capturar datos de comportamiento de usuario en tiempo real', 'Iterar continuamente mediante desarrollo ágil y despliegue continuo']
+   entregable_esperado: Un MVP funcional, pulido e instrumentado, listo para atraer y medir el comportamiento de un volumen mayor de usuarios reales
+
+====================================================================================================
+PUESTO 35 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE producto_mercado_fit_motores -- paso 1 casado: Define la métrica concreta de tu motor de crecimiento elegido
+   (todos los pasos de la madre, para contexto: ['Define la métrica concreta de tu motor de crecimiento elegido', 'Registra cómo cambia esa métrica con el tiempo, no solo su valor en un momento dado', 'Compara tu ritmo de progreso con otros negocios o referencias del mercado, no solo el número actual', 'Usa la contabilidad de la innovación (innovation accounting) para decidir si estás cerca de encajar con el mercado o necesitas pivotar'])
+   entregable_esperado de la madre: Un tablero de seguimiento (dashboard) que muestre la tendencia de tu métrica clave a lo largo de varios períodos
+----------------------------------------------------------------------------------------------------
+HIJO afinar_motor_crecimiento
+   titulo: Afinar el motor de crecimiento
+   resumen_teorico: Es el segundo paso de la contabilidad de la innovación. Cada cosa que hagas en producto, marketing o cualquier otra área debe apuntar a mejorar uno de los motores de tu crecimiento. Formula hipótesis claras sobre qué mejorará una métrica específica y diseña experimentos para probarlas, en lugar de meter varios cambios a la vez sin saber qué vas a medir.
+   pasos_accionables: ['Elige un motor específico de tu crecimiento que quieras mejorar (por ejemplo, cuántos usuarios se activan)', 'Formula una hipótesis clara sobre qué cambio va a mejorar esa métrica', 'Diseña y corre experimentos enfocados solo en esa hipótesis', 'Mide si el cambio realmente mejoró la métrica que buscabas', 'Descarta los cambios que no den una mejora medible, aunque te parezcan bonitos o te haya costado hacerlos']
+   entregable_esperado: Evidencia con números de que los cambios que hiciste mejoran o no los motores clave de tu crecimiento
+
+====================================================================================================
+PUESTO 36 | dominio franquicias | clase D
+----------------------------------------------------------------------------------------------------
+MADRE relaciones_publicas_leads_franquicia -- paso 5 casado: Extender el beneficio de PR también a los franquiciados existentes
+   (todos los pasos de la madre, para contexto: ['Desarrollar una historia o ángulo único y atractivo sobre la marca para los medios', 'Contratar una firma de PR especializada en franquicias cuando el presupuesto lo permita', 'Buscar oportunidades de exposición en medios nacionales y locales, así como programas de TV relevantes', 'Aprovechar los backlinks generados por cobertura digital para mejorar el SEO', 'Extender el beneficio de PR también a los franquiciados existentes'])
+   entregable_esperado de la madre: Plan de relaciones públicas con historias definidas, calendario de pitches y métricas de cobertura obtenida
+----------------------------------------------------------------------------------------------------
+HIJO referidos_franquiciados_existentes
+   titulo: Red de Referidos de Franquiciados Existentes
+   resumen_teorico: Los franquiciados actuales son una de las fuentes más valiosas y económicas de nuevos leads de franquicia. Al estar orgullosos de su decisión de negocio, suelen ser entusiastas embajadores con credibilidad instantánea ante prospectos, especialmente si conocen a personas en otras regiones. Contactarlos proactivamente antes de vender territorios adyacentes también previene conflictos de invasión de territorio (encroachment) y puede motivarlos a expandirse ellos mismos a multi-unidad.
+   pasos_accionables: ['Llamar a franquiciados existentes antes de identificar prospectos en su región para discutir planes de expansión', 'Educar a los franquiciados sobre los beneficios del crecimiento del sistema (poder de compra, publicidad, marca)', 'Preguntar directamente si conocen referidos calificados para el territorio', 'Entrenar al equipo de soporte de campo para discutir opciones de expansión multi-unidad regularmente', 'Evaluar cuidadosamente con el abogado franquiciador la posibilidad de pagar comisiones por referidos, dado el riesgo de conflicto de interés']
+   entregable_esperado: Sistema formal de solicitud y seguimiento de referidos de franquiciados actuales, con protocolo de comunicación previo a la venta de territorios adyacentes
+
+====================================================================================================
+PUESTO 37 | dominio environmental | clase D
+----------------------------------------------------------------------------------------------------
+MADRE valor_intangible_sostenibilidad -- paso 1 casado: Incorpora métricas de sostenibilidad en tu seguimiento del negocio (satisfacción del cliente, compromiso del equipo, impacto ambiental)
+   (todos los pasos de la madre, para contexto: ['Incorpora métricas de sostenibilidad en tu seguimiento del negocio (satisfacción del cliente, compromiso del equipo, impacto ambiental)', 'Comunica de forma transparente y auténtica tus compromisos y logros ambientales', 'Alinea tu cultura de trabajo y propósito de sostenibilidad con la marca que quieres proyectar como empleador', 'Mide el impacto de tus iniciativas verdes en la retención de talento y la percepción de tus clientes', 'Evalúa periódicamente cómo tu reputación ambiental afecta la lealtad de clientes y la relación con reguladores'])
+   entregable_esperado de la madre: Estrategia de comunicación y cultura organizacional con indicadores de sostenibilidad que refuerce la marca, la reputación y la retención de talento.
+----------------------------------------------------------------------------------------------------
+HIJO compromiso_cliente_sostenibilidad
+   titulo: Compromiso del Cliente en Sostenibilidad mediante TI
+   resumen_teorico: El uso de redes sociales y plataformas digitales permite a las empresas involucrar a los clientes en sus esfuerzos de sostenibilidad, generando lealtad de marca y visibilidad de sus iniciativas ambientales. Ejemplos incluyen campañas de donación vinculadas a acciones sociales y promociones que incentivan comportamientos sostenibles entre los consumidores.
+   pasos_accionables: ['Identificar plataformas sociales relevantes para el público objetivo de la empresa.', 'Diseñar campañas que vinculen la interacción del cliente con acciones ambientales concretas (donaciones, compensaciones de carbono).', 'Medir el impacto de las campañas en engagement y percepción de marca.', 'Comunicar resultados de sostenibilidad de forma transparente a través de estos canales.']
+   entregable_esperado: Campaña de engagement digital vinculada a sostenibilidad con métricas de participación e impacto ambiental.
+
+====================================================================================================
+PUESTO 41 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE desarrollo_caracteristicas_producto -- paso 6 casado: Desarrollar características y metas detalladas para cada componente
+   (todos los pasos de la madre, para contexto: ['Agrupar las necesidades del cliente relacionadas por funcionalidad similar', 'Seleccionar métodos de identificación de características (benchmarking, investigación, experimentos de mercado, creatividad)', 'Aplicar técnicas creativas (cambio de palabras clave, asociación aleatoria, ponerse en el lugar del otro) para generar alternativas', 'Verificar cumplimiento de estándares, regulaciones y políticas aplicables', 'Seleccionar características de alto nivel usando criterios explícitos de diseño', 'Desarrollar características y metas detalladas para cada componente'])
+   entregable_esperado de la madre: Diseño de características de producto/servicio de alto nivel y detallado, validado contra estándares y necesidades del cliente
+----------------------------------------------------------------------------------------------------
+HIJO desarrollar_caracteristicas_proceso
+   titulo: Desarrollar las Características del Proceso
+   resumen_teorico: Quinto paso del modelo: identificar y seleccionar los procesos (actuales o alternativos) capaces de producir las características definidas para el producto. Principio clave: la capacidad del proceso debe reconciliarse con los requisitos del producto; la variación proviene de los procesos, las metas provienen de las personas.
+   pasos_accionables: ['Listar los procesos posibles capaces de generar cada característica del producto', 'Evaluar la capacidad actual de los procesos frente a los requisitos definidos', 'Seleccionar el proceso óptimo con su justificación', 'Establecer metas de proceso alineadas con las metas de producto']
+   entregable_esperado: Selección documentada del proceso (o procesos) con metas de capacidad alineadas a los requisitos del producto
+
+====================================================================================================
+PUESTO 43 | dominio exportacion | clase D
+----------------------------------------------------------------------------------------------------
+MADRE organizacion_interna_exportacion -- paso 3 casado: Definir la estructura de reporte del área de exportación
+   (todos los pasos de la madre, para contexto: ['Evaluar el volumen actual de ventas internacionales frente a las domésticas', 'Determinar si se requiere un gerente de exportación de tiempo parcial o completo', 'Definir la estructura de reporte del área de exportación', 'Planificar la eventual creación de una división internacional autónoma'])
+   entregable_esperado de la madre: Organigrama actualizado que refleje la estructura de gestión de exportación (departamento o división) y sus líneas de reporte.
+----------------------------------------------------------------------------------------------------
+HIJO estructura_plan_exportacion
+   titulo: Estructura del Plan de Exportación
+   resumen_teorico: Un plan de exportación formal es una herramienta estratégica y operativa que documenta la declaración de política de exportación, el análisis de situación, el componente de marketing, las tácticas de acción, el presupuesto de exportación y el cronograma de implementación. Contar con un plan escrito ayuda a la empresa a mantener el compromiso a largo plazo, dado que la exportación puede tardar meses o años en generar retorno.
+   pasos_accionables: ['Redactar tabla de contenido y resumen ejecutivo (1-2 páginas)', 'Escribir la declaración de compromiso de política de exportación', 'Realizar el análisis de situación: producto/servicio, operaciones, personal y recursos internos', 'Desarrollar el componente de marketing: selección de mercados, producto, precio, distribución y términos', 'Definir tácticas y pasos de acción para países meta primarios y secundarios', 'Elaborar el presupuesto de exportación y estados financieros pro-forma', 'Establecer el cronograma de implementación y seguimiento periódico']
+   entregable_esperado: Documento de Plan de Exportación completo con todas sus secciones (política, análisis, marketing, tácticas, presupuesto, cronograma) listo para guiar la ejecución
+
+====================================================================================================
+PUESTO 44 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE errores_comunes_fundraising -- paso 2 casado: Nunca solicitar un acuerdo de confidencialidad (NDA) a un VC
+   (todos los pasos de la madre, para contexto: ['Construir una relación genuina y humana con el VC, no solo presentar el pitch', 'Nunca solicitar un acuerdo de confidencialidad (NDA) a un VC', 'Personalizar cada contacto con inversionistas, evitando envíos masivos', "Aceptar un 'no' sin insistir ni pedir referencias inmediatamente después", 'Formar un equipo cofundador antes de buscar financiamiento serio', 'En startups de software, enfocar el pitch en ejecución y equipo, no en estrategia de patentes'])
+   entregable_esperado de la madre: Checklist de buenas prácticas de fundraising revisado antes de contactar VCs
+----------------------------------------------------------------------------------------------------
+HIJO confidencialidad_nda_adquisicion
+   titulo: Acuerdo de Confidencialidad (NDA) en Procesos de Adquisición
+   resumen_teorico: A diferencia de las rondas de inversión, en procesos de M&A los NDAs son prácticamente obligatorios, ya que ambas partes comparten información sensible durante el due diligence. Un NDA débil o unilateral puede ser señal de que el comprador busca información competitiva más que cerrar un trato genuino.
+   pasos_accionables: ['Exigir un NDA bidireccional y robusto antes de compartir información sensible.', 'Evaluar si el NDA es unilateral como señal de alerta sobre las intenciones reales del comprador.', 'Asegurar que el NDA cubra el escenario de que la transacción no se cierre.']
+   entregable_esperado: NDA firmado y bidireccional antes de iniciar el due diligence detallado.
+
+====================================================================================================
+PUESTO 50 | dominio environmental | clase D
+----------------------------------------------------------------------------------------------------
+MADRE evaluacion_actitudes_empleados -- paso 2 casado: Identificar reacciones a palabras como 'verde', 'ambiental', 'sostenibilidad'
+   (todos los pasos de la madre, para contexto: ['Diseñar encuestas anónimas o entrevistas sobre percepciones de sostenibilidad', "Identificar reacciones a palabras como 'verde', 'ambiental', 'sostenibilidad'", 'Detectar escépticos y líderes potenciales dentro de la organización', 'Analizar qué aspectos de iniciativas previas (TQM, salud, diversidad) funcionaron y cuáles no'])
+   entregable_esperado de la madre: Informe de diagnóstico de actitudes y percepciones de los empleados sobre sostenibilidad
+----------------------------------------------------------------------------------------------------
+HIJO identificar_oportunidades_sostenibilidad
+   titulo: Identificar Oportunidades de Sostenibilidad
+   resumen_teorico: Antes de lanzar cualquier campaña de marketing verde, mira cómo la sostenibilidad encaja en tu estrategia de negocio y de crecimiento. Entiende por qué tus clientes quieren que seas más verde y cuál es tu propuesta de valor sostenible. Revisa, línea de producto por línea de producto, tus fortalezas, debilidades, oportunidades y amenazas en el tema ambiental (análisis FODA), y compara tu posición frente a la competencia.
+   pasos_accionables: ['Define por qué tú y tus clientes quieren una oferta más verde', 'Revisa tus fortalezas, debilidades, oportunidades y amenazas ambientales, línea de producto por línea de producto', 'Compara tu desempeño ambiental con el de tus competidores', 'Detecta los atributos verdes que ya tienes pero que todavía no le has contado al mercado']
+   entregable_esperado: Un resumen por línea de producto de tus fortalezas, debilidades, oportunidades y amenazas en sostenibilidad, con lo que encuentres sobre tu posición frente a la competencia
+
+====================================================================================================
+PUESTO 51 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE pre_control_estadistico -- paso 1 casado: Centrar el proceso entre los límites de especificación al iniciar
+   (todos los pasos de la madre, para contexto: ['Centrar el proceso entre los límites de especificación al iniciar', 'Definir zonas de PRE-Control (verde, amarilla, roja) según distancia a los límites', 'Tomar muestras periódicas de tres piezas consecutivas', 'Detener el proceso si dos de tres mediciones caen en zona amarilla del mismo lado', 'Ajustar el proceso y reiniciar el monitoreo'])
+   entregable_esperado de la madre: Sistema de control simplificado en piso de planta operando sin necesidad de gráficos de control tradicionales
+----------------------------------------------------------------------------------------------------
+HIJO limites_de_especificacion_vs_limites_de_control
+   titulo: Diferencia entre Límites de Especificación y Límites de Control
+   resumen_teorico: Los límites de especificación son requisitos externos impuestos al producto (lo que el cliente acepta), mientras que los límites de control son calculados estadísticamente a partir del propio comportamiento del proceso. Confundirlos lleva a ajustar el proceso constantemente para 'cumplir especificaciones', lo cual introduce más variación y pérdidas económicas severas (sobre-ajuste).
+   pasos_accionables: ['Calcular los límites de control a partir de datos reales del proceso (no de especificaciones deseadas)', 'Nunca ajustar el proceso basándose en si un punto individual cae dentro o fuera de especificación', 'Ajustar el proceso solo cuando el gráfico de control señale una causa especial', 'Capacitar a supervisores para distinguir ambos conceptos']
+   entregable_esperado: Documento que distinga claramente los límites de especificación del cliente frente a los límites de control calculados del proceso, evitando ajustes reactivos innecesarios.
+
+====================================================================================================
+PUESTO 54 | dominio risk_management | clase D
+----------------------------------------------------------------------------------------------------
+MADRE el_riesgo_nunca_se_acaba_se_administra -- paso 2 casado: Convierte la gestión de riesgo en un hábito permanente, no en una tarea que se termina.
+   (todos los pasos de la madre, para contexto: ['Acepta que siempre habrá riesgo: la meta no es cero riesgo, sino riesgo administrado.', 'Convierte la gestión de riesgo en un hábito permanente, no en una tarea que se termina.', 'Cada tanto, celebra los golpes que evitaste o amortiguaste por haberte preparado.', 'Sigue arriesgando con valentía, ahora con método debajo del brazo.'])
+   entregable_esperado de la madre: Un compromiso personal de llevar la gestión de riesgo como hábito permanente, no como un pendiente que se cierra.
+----------------------------------------------------------------------------------------------------
+HIJO cuando_el_riesgo_se_vuelve_realidad
+   titulo: La Gestión de la Crisis
+   resumen_teorico: Hay un momento en que un riesgo deja de ser posibilidad y se vuelve un hecho: la crisis. Es un punto de quiebre, un tiempo de peligro donde ya no sirve prevenir porque el problema ya está aquí. Ahí cambias de modo: pasas de gestionar el riesgo, que es pensar con calma antes, a gestionar la crisis, que es responder bajo presión. La buena noticia es que si hiciste tu tarea antes, la crisis no te agarra en blanco: tienes tu plan B pensado y tus alertas te avisaron a tiempo. La mala gestión de crisis es la de quien nunca preparó nada y ahora improvisa con miedo. Para el emprendedor solo, saber reconocer cuándo cruzaste a modo crisis, y ejecutar el plan que ya tenías en vez de congelarte, es lo que convierte un golpe en un susto y no en el final.
+   pasos_accionables: ['Reconoce cuándo un riesgo ya se volvió hecho: es momento de responder, no de prevenir.', 'Cambia a modo crisis: ejecuta el plan B que preparaste, sin buscar culpables ahora.', 'Concéntrate en contener el daño primero y en resolver la causa después.', 'Anota lo que pasó y cómo respondiste, para revisarlo con calma cuando pase el fuego.']
+   entregable_esperado: Una respuesta a la crisis basada en tu plan B, con el daño contenido y una nota de lo ocurrido para revisar después.
+
+====================================================================================================
+PUESTO 55 | dominio exportacion | clase D
+----------------------------------------------------------------------------------------------------
+MADRE recursos_apoyo_gubernamental_exportacion -- paso 3 casado: Evalua financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantias de exportacion
+   (todos los pasos de la madre, para contexto: ['Contacta la oficina local del U.S. Commercial Service para asesoria inicial y estudios de mercado', 'Consulta con un SBDC cercano si es tu primera experiencia exportadora', 'Evalua financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantias de exportacion', 'Verifica si tu producto o servicio califica para financiamiento de USTDA o asistencia de FAS/USAID según tu sector', 'Registrate en Federal Business Opportunities (FedBizOpps) y en la base BIDS de Estado para monitorear contratos y leads comerciales', 'Contacta la oficina estatal de comercio internacional para obtener leads y participar en misiones comerciales'])
+   entregable_esperado de la madre: Lista de agencias y programas de apoyo que contactaste, con registro en plataformas de oportunidades (FedBizOpps, BIDS) y reuniones o solicitudes iniciadas.
+----------------------------------------------------------------------------------------------------
+HIJO trabajo_con_bancos_comerciales
+   titulo: Trabajo con Bancos Comerciales para Financiamiento de Exportación
+   resumen_teorico: Los bancos comerciales, especialmente los que cuentan con departamento internacional, pueden ofrecer líneas de crédito de capital de trabajo adaptadas a exportación, servicios de cartas de crédito y cobranzas documentarias. Es clave establecer una relación continua con el banco, ya que estos prefieren financiar relaciones comerciales estables antes que órdenes individuales.
+   pasos_accionables: ['Acercarse primero al banco comercial habitual de la empresa', 'Solicitar ampliación de la línea de crédito de capital de trabajo para cubrir exportación', 'Buscar un banco con departamento internacional si es necesario', 'Consultar tarifas por confirmación de cartas de crédito y procesamiento de letras']
+   entregable_esperado: Relación bancaria establecida con línea de crédito para exportación
+
+====================================================================================================
+PUESTO 56 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE definiciones_operacionales_de_calidad -- paso 1 casado: Identificar todas las características críticas de calidad del producto según el cliente
+   (todos los pasos de la madre, para contexto: ['Identificar todas las características críticas de calidad del producto según el cliente', 'Trabajar conjuntamente cliente-proveedor para traducir requisitos subjetivos en métricas medibles', 'Establecer cartas de control (X-barra y R) para cada característica clave', 'Compartir los resultados de las cartas de control con el cliente de forma continua'])
+   entregable_esperado de la madre: Documento de definiciones operacionales acordadas entre proveedor y cliente, con métricas y cartas de control asociadas
+----------------------------------------------------------------------------------------------------
+HIJO optimizacion_caracteristicas_diseno
+   titulo: Optimización de Características y Metas del Producto
+   resumen_teorico: Una vez completado el diseño preliminar, debe optimizarse para satisfacer tanto al cliente como al proveedor, minimizando costos combinados y superando a la competencia. La optimización requiere un enfoque organizado que balancee necesidades multiorganizacionales mediante técnicas como revisión de diseño, equipos multifuncionales y negociación estructurada.
+   pasos_accionables: ['Realizar revisiones de diseño formales en distintas etapas del desarrollo con especialistas externos al equipo', 'Conformar equipos multifuncionales que incluyan a todos los interesados en el resultado del diseño', 'Establecer reglas básicas de negociación estructurada entre clientes y proveedores antes de las reuniones', 'Aplicar herramientas de optimización como análisis competitivo, de vendibilidad, de valor, crítico y FMEA']
+   entregable_esperado: Diseño de producto optimizado con documentación de revisiones, decisiones de equipo multifuncional y resultados de negociaciones estructuradas
+
+====================================================================================================
+PUESTO 60 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE analisis_variacion_desempeno_servicio -- paso 4 casado: Si el sistema está en control pero no cumple especificaciones, revisar el diseño del proceso o la especificación misma
+   (todos los pasos de la madre, para contexto: ['Recolectar datos de desempeño del servicio a lo largo del tiempo (ej. tiempos de llegada)', 'Construir un gráfico de corrida o histograma de distribución de tiempos', 'Clasificar el tipo de desempeño según la forma de la distribución (centrado con alta/baja variabilidad, desalineado, caótico)', 'Si el sistema está en control pero no cumple especificaciones, revisar el diseño del proceso o la especificación misma', 'Comunicar resultados usando visualizaciones claras a los responsables del servicio'])
+   entregable_esperado de la madre: Gráfico de distribución de tiempos de desempeño con diagnóstico del tipo de variación presente
+----------------------------------------------------------------------------------------------------
+HIJO pre_control_estadistico
+   titulo: PRE-Control
+   resumen_teorico: PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso.
+   pasos_accionables: ['Centrar el proceso entre los límites de especificación al iniciar', 'Definir zonas de PRE-Control (verde, amarilla, roja) según distancia a los límites', 'Tomar muestras periódicas de tres piezas consecutivas', 'Detener el proceso si dos de tres mediciones caen en zona amarilla del mismo lado', 'Ajustar el proceso y reiniciar el monitoreo']
+   entregable_esperado: Sistema de control simplificado en piso de planta operando sin necesidad de gráficos de control tradicionales
+
+====================================================================================================
+PUESTO 63 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE sistema_pull_push -- paso 5 casado: Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad
+   (todos los pasos de la madre, para contexto: ['Evaluar si tu operacion actual funciona bajo un esquema push o pull', 'Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso', 'Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente', 'Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor', 'Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad', 'Implementar el sistema y capacitar a los operadores'])
+   entregable_esperado de la madre: Sistema de produccion rediseñado bajo logica pull con kanbans implementados y metricas de flujo mejoradas.
+----------------------------------------------------------------------------------------------------
+HIJO reduccion_de_tiempo_de_ciclo
+   titulo: Reducción del Tiempo de Ciclo
+   resumen_teorico: El tiempo de ciclo es el tiempo total transcurrido desde el inicio hasta el fin de un proceso. La presión competitiva y de costos impulsa a las organizaciones a reducir este tiempo mediante diagnóstico de causas de demora y remedios específicos, siguiendo el proceso de mejora de calidad.
+   pasos_accionables: ['Diagnosticar las causas de consumo excesivo de tiempo en el proceso.', 'Desarrollar remedios específicos para reducir el tiempo de ciclo.', 'Medir el impacto de los remedios sobre el tiempo total del proceso.']
+   entregable_esperado: Plan de reducción de tiempo de ciclo con métricas de mejora documentadas.
+
+====================================================================================================
+PUESTO 65 | dominio exportacion | clase D
+----------------------------------------------------------------------------------------------------
+MADRE recursos_apoyo_gubernamental_exportacion -- paso 3 casado: Evalua financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantias de exportacion
+   (todos los pasos de la madre, para contexto: ['Contacta la oficina local del U.S. Commercial Service para asesoria inicial y estudios de mercado', 'Consulta con un SBDC cercano si es tu primera experiencia exportadora', 'Evalua financiamiento de la SBA o Ex-Im Bank para capital de trabajo o garantias de exportacion', 'Verifica si tu producto o servicio califica para financiamiento de USTDA o asistencia de FAS/USAID según tu sector', 'Registrate en Federal Business Opportunities (FedBizOpps) y en la base BIDS de Estado para monitorear contratos y leads comerciales', 'Contacta la oficina estatal de comercio internacional para obtener leads y participar en misiones comerciales'])
+   entregable_esperado de la madre: Lista de agencias y programas de apoyo que contactaste, con registro en plataformas de oportunidades (FedBizOpps, BIDS) y reuniones o solicitudes iniciadas.
+----------------------------------------------------------------------------------------------------
+HIJO decisiones_de_financiamiento_exportacion
+   titulo: Factores para Decisiones de Financiamiento de Exportación
+   resumen_teorico: Antes de elegir cómo financiar una exportación, necesitas considerar si ese financiamiento es lo que puede cerrar la venta, qué plazo te exige el comprador, cuánto cuesta cada opción, qué riesgos hay detrás y cuánto capital de trabajo vas a necesitar antes y después de embarcar la mercancía. Para asesorarte puedes acudir a tu banco, a organismos de apoyo al comercio exterior o a agencias de financiamiento para exportadores que existan en tu mercado.
+   pasos_accionables: ['Evalúa si el financiamiento es lo que puede definir si cierras o no la venta', 'Determina el plazo de financiamiento que te pide el comprador', 'Compara costos (tasas de interés y comisiones) de las opciones que tengas disponibles', 'Analiza los riesgos políticos y económicos del país de tu comprador', 'Calcula cuánto capital de trabajo vas a necesitar antes y después del embarque']
+   entregable_esperado: Plan de financiamiento de exportación con opciones evaluadas y seleccionadas
+
+====================================================================================================
+PUESTO 67 | dominio environmental | clase D
+----------------------------------------------------------------------------------------------------
+MADRE compra_equipos_verdes -- paso 1 casado: Pide certificación Energy Star en cada equipo que compres
+   (todos los pasos de la madre, para contexto: ['Pide certificación Energy Star en cada equipo que compres', "Revisa la 'Guide to Greener Electronics' de Greenpeace antes de elegir proveedor", 'Pregunta al fabricante qué política tiene sobre sustancias tóxicas', 'Prioriza equipos diseñados para desarmarse y reciclarse fácil', 'Confirma si el fabricante tiene un programa para recibir el equipo de vuelta al final de su vida útil'])
+   entregable_esperado de la madre: Tu propia lista de criterios de compra sostenible para equipos tecnológicos, lista para usar cada vez que compres
+----------------------------------------------------------------------------------------------------
+HIJO certificacion_leed_energy_star
+   titulo: Certificación LEED o Energy Star
+   resumen_teorico: LEED es un sistema de referencia reconocido que otorga puntos según atributos ambientales (ubicación, eficiencia hídrica, uso de energía, materiales, calidad ambiental interior). Energy Star certifica edificios que están entre el 25% más eficiente energéticamente, usando la herramienta Portfolio Manager. Los edificios certificados suelen mostrar mayor ocupación y mejores precios de renta y venta.
+   pasos_accionables: ['Evalúa si tu proyecto o local califica para LEED o Energy Star', 'Usa Portfolio Manager para medir la eficiencia energética actual del espacio', 'Identifica qué puntos LEED puedes alcanzar según las categorías: sitio, agua, energía, materiales, calidad interior', 'Documenta y reúne la evidencia necesaria para presentar la certificación', 'Comunica la certificación como ventaja competitiva a tus clientes y a quienes trabajan contigo']
+   entregable_esperado: Solicitud de certificación LEED o Energy Star presentada con la documentación de soporte
+
+====================================================================================================
+PUESTO 68 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE graficos_control_multivariados -- paso 1 casado: Identificar las múltiples características de calidad correlacionadas del producto
+   (todos los pasos de la madre, para contexto: ['Identificar las múltiples características de calidad correlacionadas del producto', 'Calcular la matriz de covarianza entre las características', 'Construir el estadístico multivariado (por ejemplo, T² de Hotelling)', 'Establecer límites de control multivariados apropiados', 'Monitorear el estadístico combinado en lugar de gráficos independientes'])
+   entregable_esperado de la madre: Sistema de control multivariado implementado para características de calidad correlacionadas
+----------------------------------------------------------------------------------------------------
+HIJO key_process_product_characteristics
+   titulo: Características Clave de Producto y Proceso (KPC)
+   resumen_teorico: Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las especificaciones correspondientes, asegura que el esfuerzo de control se dirija a lo que el cliente valora y a lo que realmente afecta el resultado final.
+   pasos_accionables: ['Recolecta inputs de investigación de mercado, QFD, revisión de diseño y AMFE', 'Clasifica las características del producto según su importancia relativa: crítica, mayor, menor o incidental', 'Identifica las partes sensibles a calidad usando criterios de complejidad y tasa de fallos', 'Documenta la relación entre las características de proceso y los resultados de producto', 'Registra las características clave en planos y especificaciones']
+   entregable_esperado: Listado clasificado de características clave de producto y proceso, con su nivel de criticidad y su relación causal documentada.
+
+====================================================================================================
+PUESTO 69 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE verificar_clientes_y_canales -- paso 6 casado: Actualizar el modelo de negocio con los costos de adquisición reales descubiertos
+   (todos los pasos de la madre, para contexto: ['Dibujar un arquetipo de cliente para cada segmento clave', "Crear un 'día en la vida' del cliente antes y después del producto", 'Mapear el canal completo desde la empresa hasta el usuario final, con costos y roles en cada paso', 'Medir el costo real, todo incluido, de adquirir o activar un grupo de clientes (por ejemplo, 50 clientes)', 'Identificar qué programas de adquisición son más rentables y si escalan linealmente', 'Actualizar el modelo de negocio con los costos de adquisición reales descubiertos'])
+   entregable_esperado de la madre: Arquetipos de cliente, mapa de canal con costos, y actualización del lienzo de modelo de negocio con los costos de adquisición reales medidos
+----------------------------------------------------------------------------------------------------
+HIJO validar_modelo_negocio_hechos
+   titulo: Validar el Modelo de Negocio con Hechos
+   resumen_teorico: Se trata de convertir las hipótesis originales del business model canvas (propuesta de valor, segmentos de clientes, canales, relaciones con clientes, estructura de costos, flujos de ingresos) en hechos comprobados mediante pruebas extensivas cara a cara con cientos o miles de clientes reales. El canvas actúa como un 'scorecard' que documenta la evolución del negocio a través de iteraciones y pivotes.
+   pasos_accionables: ['Reunir todas las snapshots semanales o por pivote del business model canvas', 'Revisar cada componente del canvas y verificar que tenga respuestas fácticas, no hipotéticas', 'Usar el checklist del modelo de negocio para recorrer cada casilla sistemáticamente', 'Identificar pruebas pass/fail para cada hipótesis', 'Determinar si los resultados cumplen los objetivos de tráfico o financieros']
+   entregable_esperado: Business Model Canvas actualizado con cada componente respaldado por datos fácticos de clientes reales, con pruebas pass/fail identificadas
+
+====================================================================================================
+PUESTO 70 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE carta_de_control_shewhart -- paso 1 casado: Recolectar datos de desempeño del proceso en el tiempo
+   (todos los pasos de la madre, para contexto: ['Recolectar datos de desempeño del proceso en el tiempo', 'Calcular la línea central (promedio) y los límites de control estadísticos', 'Graficar los puntos y clasificar si caen dentro o fuera de los límites', 'Si están dentro: asumir causas comunes, no tomar acción individual', 'Si están fuera: investigar causa especial y tomar acción correctiva', 'Justificar el uso de la carta según impacto en cliente, seguridad o economía'])
+   entregable_esperado de la madre: Carta de control implementada y en uso activo para el proceso, con criterios claros de interpretación
+----------------------------------------------------------------------------------------------------
+HIJO reduccion_tiempo_ciclo
+   titulo: Reducción del Tiempo de Ciclo del Proceso
+   resumen_teorico: El tiempo es una de las métricas más utilizadas para medir la entrega de servicios. Los clientes demandan continuamente tiempos de entrega más cortos. Mediante el análisis del diagrama de flujo y técnicas Lean, se pueden eliminar desperdicios y reducir el tiempo de ciclo mediante acciones como eliminar reprocesos, simplificar pasos, combinar actividades, transferir aprobaciones a niveles más bajos, y usar tecnología.
+   pasos_accionables: ['Eliminar bucles de reproceso para corregir errores del proceso', 'Eliminar o simplificar pasos de valor marginal para el cliente', 'Eliminar pasos redundantes como inspecciones (solo tras eliminar causas de error)', 'Combinar pasos realizados por un mismo trabajador', 'Transferir pasos de aprobación a niveles inferiores', 'Cambiar la secuencia de actividades de consecutivas a simultáneas', 'Usar tecnología para realizar pasos rutinarios y complejos']
+   entregable_esperado: Proceso de servicio rediseñado con tiempo de ciclo reducido, documentado con datos de antes/después
+
+====================================================================================================
+PUESTO 71 | dominio environmental | clase D
+----------------------------------------------------------------------------------------------------
+MADRE establecer_metas_reduccion_emisiones -- paso 3 casado: Establece metas de reducción a corto y largo plazo.
+   (todos los pasos de la madre, para contexto: ['Analiza el inventario de emisiones que ya tienes.', 'Define un año base para la comparación.', 'Establece metas de reducción a corto y largo plazo.', 'Comunica públicamente las metas alcanzables, y guarda para ti las más ambiciosas.', 'Prepara explicaciones para posibles incumplimientos.'])
+   entregable_esperado de la madre: Un documento con metas cuantificables y con plazos definidos de reducción de emisiones.
+----------------------------------------------------------------------------------------------------
+HIJO plan_accion_corto_mediano_largo_plazo
+   titulo: Plan de Acción a Corto, Mediano y Largo Plazo
+   resumen_teorico: Metodología para estructurar la implementación de sostenibilidad en tres horizontes temporales: un plan a un año enfocado en 'quick wins' fáciles de lograr y con alta visibilidad interna; un plan a tres años que incorpora iniciativas que requieren mayor inversión o construcción de capacidades, como rediseño de procesos de manufactura o edificios más verdes; y un plan a cinco años orientado a transformar la industria o línea de negocio mediante rediseño profundo de productos y estrategia.
+   pasos_accionables: ["Identificar 'quick wins' de bajo costo y alta visibilidad para el plan de un año", 'Realizar proyectos piloto para iniciativas de alto ROI potencial pero incertidumbre significativa', 'Expandir a nivel de toda la empresa los pilotos exitosos en el plan de tres años', 'Incluir en el plan de tres años la responsabilidad de cada función de negocio en desarrollar su propia agenda de sostenibilidad', 'Reservar para el plan de largo plazo (cinco años) las iniciativas de rediseño profundo de producto o transformación de industria']
+   entregable_esperado: Tres planes de acción documentados (uno, tres y cinco años) con iniciativas específicas, responsables y métricas de éxito.
+
+====================================================================================================
+PUESTO 72 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE herramientas_de_diseno_de_calidad -- paso 4 casado: Emplear hojas de cálculo de necesidades del cliente y de diseño de producto para vincular necesidades con características.
+   (todos los pasos de la madre, para contexto: ['Seleccionar las herramientas adecuadas según la fase del diseño (recolección de datos, análisis, diseño o verificación).', 'Aplicar diagramas de afinidad o lluvia de ideas para agrupar necesidades o causas.', 'Usar FMEA y análisis de árbol de fallas para priorizar riesgos.', 'Emplear hojas de cálculo de necesidades del cliente y de diseño de producto para vincular necesidades con características.'])
+   entregable_esperado de la madre: Selección documentada de herramientas aplicadas en cada fase del proyecto de diseño.
+----------------------------------------------------------------------------------------------------
+HIJO optimizacion_caracteristicas_diseno
+   titulo: Optimización de Características y Metas del Producto
+   resumen_teorico: Una vez completado el diseño preliminar, debe optimizarse para satisfacer tanto al cliente como al proveedor, minimizando costos combinados y superando a la competencia. La optimización requiere un enfoque organizado que balancee necesidades multiorganizacionales mediante técnicas como revisión de diseño, equipos multifuncionales y negociación estructurada.
+   pasos_accionables: ['Realizar revisiones de diseño formales en distintas etapas del desarrollo con especialistas externos al equipo', 'Conformar equipos multifuncionales que incluyan a todos los interesados en el resultado del diseño', 'Establecer reglas básicas de negociación estructurada entre clientes y proveedores antes de las reuniones', 'Aplicar herramientas de optimización como análisis competitivo, de vendibilidad, de valor, crítico y FMEA']
+   entregable_esperado: Diseño de producto optimizado con documentación de revisiones, decisiones de equipo multifuncional y resultados de negociaciones estructuradas
+
+====================================================================================================
+PUESTO 76 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE depreciacion_y_amortizacion -- paso 6 casado: Entiende el impacto de la depreciación y amortización en tu estado de resultados y tu balance
+   (todos los pasos de la madre, para contexto: ['Identifica todos los activos de capital de tu negocio (equipos, vehículos, sistemas, propiedad, planta y equipo) que se deprecian', 'Revisa con tu contador qué método de depreciación usas (línea recta u otro) y la vida útil estimada de cada tipo de activo', 'Evalúa si esa vida útil estimada es razonable comparada con lo que es normal en tu sector', 'Calcula la depreciación acumulada y su efecto en el valor neto en libros de tus activos', 'Detecta cambios año tras año en los supuestos de vida útil que puedan indicar que se está maquillando la utilidad', 'Entiende el impacto de la depreciación y amortización en tu estado de resultados y tu balance', 'Piensa cómo un cambio en tu política de depreciación afectaría las ganancias que reportas, antes de pedir un préstamo o presentar resultados a inversionistas'])
+   entregable_esperado de la madre: Una tabla de tus activos de capital con el método y el cronograma de depreciación o amortización, la vida útil que asumes, el valor neto en libros y el impacto en tu estado de resultados
+----------------------------------------------------------------------------------------------------
+HIJO impacto_estado_resultados_en_balance
+   titulo: Cómo el Estado de Resultados Impacta el Balance General
+   resumen_teorico: Todo cambio en el estado de resultados repercute en el balance: las ventas generan efectivo o cuentas por cobrar, los gastos reducen efectivo o aumentan pasivos acumulados, y la utilidad neta incrementa el patrimonio (vía utilidades retenidas) mientras una pérdida lo reduce. Decisiones operativas aparentemente simples (comprar inventario, atender nuevos clientes, adquirir equipo) tienen efectos complejos y a veces contradictorios sobre activos, pasivos y liquidez que deben analizarse integralmente.
+   pasos_accionables: ['Analizar cada decisión operativa (compras, ventas, nuevas contrataciones) por su efecto simultáneo en balance y estado de resultados.', 'Antes de aprobar compras grandes de inventario, evaluar impacto en cuentas por pagar y flujo de caja.', 'Al expandir a nuevos segmentos de clientes, evaluar riesgo de cobranza y su efecto en cuentas por cobrar.', 'Entrenar a gerentes de área para pensar más allá de su línea de P&L y considerar el balance completo.']
+   entregable_esperado: Análisis de impacto cruzado de una decisión operativa sobre el estado de resultados y el balance general.
+
+====================================================================================================
+PUESTO 79 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE unbundling_business_models -- paso 4 casado: Dibuja el modelo de negocio (Business Model Canvas) de cada parte separada, como si fuera su propio negocio.
+   (todos los pasos de la madre, para contexto: ['Mira tus actividades y marca cuáles son relación con el cliente, cuáles son crear producto nuevo y cuáles son infraestructura que sostiene la operación.', 'Detecta dónde estas tres cosas chocan entre sí dentro de tu día a día o te obligan a elegir una en contra de otra.', 'Decide si te conviene separar alguna de estas partes en algo independiente para ganar foco y eficiencia.', 'Dibuja el modelo de negocio (Business Model Canvas) de cada parte separada, como si fuera su propio negocio.'])
+   entregable_esperado de la madre: Tienes claro cuáles de los tres tipos de negocio conviven en lo que haces, y decidiste si separarlos o convivir con las concesiones que eso implica.
+----------------------------------------------------------------------------------------------------
+HIJO business_model_canvas_scorecard
+   titulo: El Business Model Canvas como Scorecard Semanal
+   resumen_teorico: El Business Model Canvas de Osterwalder, además de ser una foto estática del negocio, se usa en Customer Discovery como un scorecard semanal para rastrear el progreso en la búsqueda del modelo de negocio. Cada semana actualizas el canvas reflejando pivotes e iteraciones, resaltando en rojo los cambios respecto a la semana anterior. Esto permite ver claramente qué hipótesis cambiaron y cuáles se mantienen, generando un historial que documenta cómo evoluciona tu entendimiento del negocio con el tiempo. Es especialmente útil cuando no tienes claridad propia sobre tu modelo de negocio o necesitas visualizar tu progreso semana a semana de forma tangible.
+   pasos_accionables: ['Llenar el canvas inicial con tus hipótesis en las 9 áreas: segmentos, propuesta de valor, canales, relaciones, recursos, socios e ingresos', 'Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho, y ademas cada vez que obtengas nueva evidencia', 'Resaltar en rojo los cambios respecto a la semana anterior', 'Una vez que confirmes los cambios, integrarlos como el nuevo canvas base en negro para la siguiente semana', 'Repetir este proceso de forma continua durante todo tu customer discovery', 'Sal a validar cada hipótesis con clientes reales cara a cara.', 'Conserva todas las versiones del canvas como un flip book que documente la evolución de tu modelo de negocio.', 'Evita convertir el canvas en un plan operativo prematuro basado en suposiciones sin validar.']
+   entregable_esperado: Serie histórica de canvases semanales que documenta la evolución de tu modelo de negocio.
+
+====================================================================================================
+PUESTO 81 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE definir_metas_smart_de_proyecto -- paso 2 casado: Verificar que la meta sea medible definiendo indicadores de calidad, cantidad, costo y tiempo
+   (todos los pasos de la madre, para contexto: ['Redactar la meta del proyecto especificando qué se hará y cuándo', 'Verificar que la meta sea medible definiendo indicadores de calidad, cantidad, costo y tiempo', 'Validar que la meta sea realista pero desafiante', 'Obtener acuerdo de todos los afectados sobre la meta final'])
+   entregable_esperado de la madre: Enunciado de meta de proyecto redactado en formato SMART, validado por el equipo y stakeholders
+----------------------------------------------------------------------------------------------------
+HIJO costo_de_calidad_3
+   titulo: Paso 4: Costo de la Calidad
+   resumen_teorico: El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, sumando también fallos internos, fallos externos, prevención y evaluación. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Crosby marca como referencia que no debería superar el 2.5% al 4% de las ventas; si estás muy por encima, hay una oportunidad clara de ahorro. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.
+   pasos_accionables: ['Dale a quien te lleva las cuentas información detallada sobre qué constituye el costo de calidad', 'Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, auditorías, cambios de ingeniería, fallos internos, fallos externos, prevención y evaluación, incluyendo tu tiempo o salario, sin minimizar cifras', 'Calcula el costo de calidad total como porcentaje de tus ventas y compáralo con el estándar de referencia del 2.5% al 4%', 'Usa las cifras para priorizar acciones correctivas enfocadas en prevención más que en inspección', 'Establece una meta de reducción progresiva del costo de calidad', 'Convierte este cálculo en una medición recurrente de cómo va tu gestión de calidad']
+   entregable_esperado: Reporte desglosado por categoría del costo de calidad actual, elaborado por quien te lleva las cuentas, expresado como porcentaje de tus ventas y con una meta de reducción definida.
+
+====================================================================================================
+PUESTO 82 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE estrategias_estimacion_costos -- paso 2 casado: Para recursos totales: identificar el costo total de la categoría y estimar el porcentaje atribuible a mala calidad
+   (todos los pasos de la madre, para contexto: ['Determinar si la actividad a medir es mejor evaluada por recursos totales o por costo unitario', 'Para recursos totales: identificar el costo total de la categoría y estimar el porcentaje atribuible a mala calidad', 'Para costo unitario: estimar el costo de corregir una ocurrencia promedio y multiplicarlo por la frecuencia anual', 'Usar fuentes de datos como sistemas de reporte de tiempo, contabilidad de costos, o juicio informado de supervisores', 'Incluir en el cálculo beneficios, salarios, costos de capital asignado y penalizaciones por pagos tardíos'])
+   entregable_esperado de la madre: Una estimación documentada y justificada del costo de cada actividad de mala calidad identificada
+----------------------------------------------------------------------------------------------------
+HIJO costo_de_calidad_3
+   titulo: Paso 4: Costo de la Calidad
+   resumen_teorico: El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, sumando también fallos internos, fallos externos, prevención y evaluación. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Crosby marca como referencia que no debería superar el 2.5% al 4% de las ventas; si estás muy por encima, hay una oportunidad clara de ahorro. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.
+   pasos_accionables: ['Dale a quien te lleva las cuentas información detallada sobre qué constituye el costo de calidad', 'Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, auditorías, cambios de ingeniería, fallos internos, fallos externos, prevención y evaluación, incluyendo tu tiempo o salario, sin minimizar cifras', 'Calcula el costo de calidad total como porcentaje de tus ventas y compáralo con el estándar de referencia del 2.5% al 4%', 'Usa las cifras para priorizar acciones correctivas enfocadas en prevención más que en inspección', 'Establece una meta de reducción progresiva del costo de calidad', 'Convierte este cálculo en una medición recurrente de cómo va tu gestión de calidad']
+   entregable_esperado: Reporte desglosado por categoría del costo de calidad actual, elaborado por quien te lleva las cuentas, expresado como porcentaje de tus ventas y con una meta de reducción definida.
+
+====================================================================================================
+PUESTO 85 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE pivote_o_proceder -- paso 7 casado: Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante hacia la validación con clientes
+   (todos los pasos de la madre, para contexto: ['Siéntate con quien te acompaña en esto, no lo decidas solo en tu cabeza, y si tienes inversores, súmalos también', 'Dibuja cómo trabaja realmente tu cliente típico, basándote en datos reales que hayas recogido', 'Compara ese mapa real con lo que habías supuesto al armar tu modelo de negocio', 'Pregúntate qué tan bien lo que estás construyendo resuelve el problema real de tu cliente', "Si la respuesta es 'no del todo', decide si el problema está en que elegiste el cliente equivocado o en las funciones de tu producto", 'Reduce tu lista de funciones a algo que puedas contar en un párrafo y vender a miles de personas, no a una lista larguísima pensada para diez clientes', 'Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante hacia la validación con clientes', 'Revisa evidencia real, no opiniones, sobre qué tan entusiasmados están tus clientes', 'Clasifica las respuestas de tus clientes según su nivel de entusiasmo, desde amor total hasta indiferencia'])
+   entregable_esperado de la madre: Una decisión clara y por escrito: pivotar o seguir, con tu modelo de negocio actualizado y tu lista de funciones ordenada y reducida
+----------------------------------------------------------------------------------------------------
+HIJO fundadores_lideran_validacion
+   titulo: Lidera Tú la Validación con tus Clientes
+   resumen_teorico: Delegar la validación de clientes a ventas, marketing o desarrollo de negocios es un error común. Solo tú, como fundador, tienes la autoridad para decidir un cambio de rumbo (pivote) y el coraje de escuchar y transmitir el feedback negativo directamente de tus clientes, sin intermediarios; quienes ejecutan procesos ya conocidos no están preparados para la búsqueda creativa y el ajuste constante que exige esta etapa temprana. Sal tú mismo a hablar con tus clientes, apóyate en un pequeño equipo de datos y análisis (por ejemplo para pruebas A/B o canales digitales), pero no les delegues la decisión final de pivotar.
+   pasos_accionables: ['Participa tú mismo, en persona, en las conversaciones de validación con tus clientes', 'Evita delegar la validación a equipos de ventas, marketing o desarrollo de negocios en estas primeras etapas', 'Escucha y anota el feedback negativo directamente de tus clientes, sin intermediarios', 'Forma un pequeño equipo de apoyo (análisis de datos, pruebas A/B, SEO o PPC en canales digitales) que ejecute pero no decida', 'Mantén tú la autoridad para decidir si pivotas o no']
+   entregable_esperado: Un proceso de validación que lideras tú mismo, con el feedback de tus clientes registrado de primera mano y la decisión de pivotar en tus manos
+
+====================================================================================================
+PUESTO 86 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE equipo_conjunto_de_mejora_con_proveedores -- paso 4 casado: Fijar metas conjuntas de mejora (ej. reducción de costos en X%)
+   (todos los pasos de la madre, para contexto: ['Formar un equipo multifuncional con representantes del comprador y del proveedor', 'Alinear objetivos y analizar el proceso de negocio de la cadena de suministro', "Establecer la 'prueba de la necesidad' con datos concretos (ej. costos de garantía)", 'Fijar metas conjuntas de mejora (ej. reducción de costos en X%)', 'Proveer entrenamiento y asistencia técnica al proveedor', 'Realizar reuniones de seguimiento entre equipos directivos de ambas partes', 'Establecer reconocimientos para proveedores destacados'])
+   entregable_esperado de la madre: Plan de mejora conjunta documentado con metas, roles y mecanismos de seguimiento entre comprador y proveedor
+----------------------------------------------------------------------------------------------------
+HIJO fijacion_de_metas
+   titulo: Fijar metas de mejora (Paso 10)
+   resumen_teorico: Después del Día Cero Defectos (Día ZD), tienes que convertir los compromisos verbales en acciones concretas: pon metas de mejora específicas y medibles, y mejor si las define quien hace el trabajo, no tú desde arriba. Evita metas de cronograma y enfócate en reducir defectos, porque la mejora en los tiempos llega sola cuando bajan los errores.
+   pasos_accionables: ['Una semana después del Día ZD, pide a cada grupo que proponga dos metas específicas y medibles. Fíjalas a 30, 60 y 90 días', 'Asegúrate de que las metas sean retadoras, no fáciles de alcanzar.', 'Publica las metas en un lugar visible para todo el equipo.', 'Reconoce públicamente a los grupos que logran mejoras (por ejemplo, bordes dorados en las pizarras o un lugar de estacionamiento preferencial).', 'Usa medidas de corto plazo (por ejemplo, horas sin defectos) en lugar de métricas mensuales, para mantener el enfoque diario.']
+   entregable_esperado: Lista de metas de mejora específicas, medibles y publicadas por cada equipo o área de trabajo.
+
+====================================================================================================
+PUESTO 89 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE riesgo_fiduciario_insolvencia_deuda -- paso 2 casado: Minimizar el tiempo entre la emisión de deuda convertible y su conversión a equity
+   (todos los pasos de la madre, para contexto: ['Consultar con un abogado corporativo sobre las leyes estatales de responsabilidad fiduciaria hacia acreedores', 'Minimizar el tiempo entre la emisión de deuda convertible y su conversión a equity', 'Mantener registros claros de decisiones de la junta durante el período de insolvencia técnica', 'Considerar seguros D&O (directors and officers) que cubran este período de riesgo'])
+   entregable_esperado de la madre: Evaluación legal documentada del riesgo fiduciario y, si aplica, póliza D&O actualizada
+----------------------------------------------------------------------------------------------------
+HIJO convertible_debt_fundamentos
+   titulo: Fundamentos de la Deuda Convertible (Convertible Debt)
+   resumen_teorico: La deuda convertible es un instrumento de financiamiento en el que el inversionista presta dinero a la empresa como deuda, la cual se convierte en acciones (equity) en una ronda de financiamiento futura, evitando así la difícil negociación de valuación temprana. Es popular entre inversionistas ángeles y aceleradoras en rondas semilla, porque reduce la complejidad legal y los costos frente a una ronda de equity preferente. A cambio del riesgo temprano que asumen, los inversionistas reciben una tasa de interés modesta (típicamente 5%-12%, con 8% como promedio, cercana a las tasas federales aplicables) y un descuento sobre el precio de la siguiente ronda (típicamente 10%-30%, siendo 20% el más común), o bien un 'valuation cap' como mecanismo alternativo o complementario al descuento.
+   pasos_accionables: ['Evaluar si conviene evitar la negociación de valuación temprana usando deuda convertible en vez de una ronda de equity', 'Definir el porcentaje de descuento que recibirán los inversionistas en la conversión (típicamente 10%-30%, siendo 20% el más común)', 'Considerar el uso de un valuation cap, solo o combinado con el descuento, y a qué monto, evaluando su impacto en rondas futuras', 'Fijar una tasa de interés baja (5%-12%, promedio 8%), cercana a las tasas federales aplicables', "Establecer el plazo de maduración (fecha límite) y el monto mínimo de la siguiente ronda ('Qualified Financing') que dispara la conversión automática", 'Comparar los costos legales de una ronda de deuda convertible frente a una ronda de equity semilla preferente']
+   entregable_esperado: Term sheet o nota convertible con términos claros: descuento, valuation cap, tasa de interés, plazo de maduración y monto mínimo de conversión
+
+====================================================================================================
+PUESTO 90 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE gestion_para_la_calidad -- paso 1 casado: Definir la calidad tanto en términos de características del producto como en términos de ausencia de fallos
+   (todos los pasos de la madre, para contexto: ['Definir la calidad tanto en términos de características del producto como en términos de ausencia de fallos', 'Extender la responsabilidad de la calidad a toda la jerarquía organizacional, no solo al departamento de calidad', "Adaptar el concepto de 'fit for purpose' considerando a todos los afectados por el producto (compradores, usuarios, reguladores, proveedores)", 'Establecer métodos universales aplicables a cualquier industria o función'])
+   entregable_esperado de la madre: Marco organizacional documentado que defina cómo se gestionará la calidad a nivel de toda la empresa
+----------------------------------------------------------------------------------------------------
+HIJO key_process_product_characteristics
+   titulo: Características Clave de Producto y Proceso (KPC)
+   resumen_teorico: Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las especificaciones correspondientes, asegura que el esfuerzo de control se dirija a lo que el cliente valora y a lo que realmente afecta el resultado final.
+   pasos_accionables: ['Recolecta inputs de investigación de mercado, QFD, revisión de diseño y AMFE', 'Clasifica las características del producto según su importancia relativa: crítica, mayor, menor o incidental', 'Identifica las partes sensibles a calidad usando criterios de complejidad y tasa de fallos', 'Documenta la relación entre las características de proceso y los resultados de producto', 'Registra las características clave en planos y especificaciones']
+   entregable_esperado: Listado clasificado de características clave de producto y proceso, con su nivel de criticidad y su relación causal documentada.
+
+====================================================================================================
+PUESTO 95 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE evaluacion_megatendencias -- paso 5 casado: Definir espacios de oportunidad concretos para la empresa
+   (todos los pasos de la madre, para contexto: ['Reunir un equipo para analizar las principales tendencias sociales e industriales', 'Identificar los grandes desafíos (grand challenges) inevitables de la industria', 'Preguntar: ¿dónde tenemos que jugar? ¿dónde podríamos jugar?', 'Analizar disrupciones potenciales de mercado y tecnología asociadas a estas tendencias', 'Definir espacios de oportunidad concretos para la empresa'])
+   entregable_esperado de la madre: Mapa de mega-tendencias relevantes con espacios de oportunidad definidos para la empresa
+----------------------------------------------------------------------------------------------------
+HIJO costo_de_oportunidad
+   titulo: Costo de Oportunidad
+   resumen_teorico: Representa el beneficio potencial que se pierde al no elegir la alternativa financieramente óptima. En negocios, ayuda a decidir entre diferentes usos posibles del efectivo limitado de la empresa, comparando el retorno de una inversión con lo que se podría obtener en otra alternativa de riesgo similar.
+   pasos_accionables: ['Identificar todas las alternativas posibles de uso del capital disponible', 'Comparar el retorno esperado de cada alternativa considerando su nivel de riesgo', 'Elegir la opción que maximice el valor considerando lo que se sacrifica al no elegir otras']
+   entregable_esperado: Análisis comparativo de alternativas de inversión con sus respectivos retornos y riesgos
+
+====================================================================================================
+PUESTO 96 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE introduccion_validacion_clientes -- paso 3 casado: Probar canales de ventas y distribución
+   (todos los pasos de la madre, para contexto: ['Probar la repetibilidad del proceso de ventas o adquisición de usuarios', 'Buscar pedidos u órdenes reales a precio completo como prueba de validación', 'Probar canales de ventas y distribución', 'Escuchar activamente a los clientes para identificar pivotes necesarios', 'Posicionar correctamente el producto y la empresa'])
+   entregable_esperado de la madre: Plan de pruebas de venta con métricas de validación claras para escalar el modelo de negocio
+----------------------------------------------------------------------------------------------------
+HIJO hipotesis_de_canales
+   titulo: Hipótesis de Canales de Distribución
+   resumen_teorico: El canal describe cómo el producto llega de la empresa al cliente. Existen canales físicos (con costos e intermediarios significativos) y canales web/móvil (venta directa online). La mayoría de empresas usan ambos. Es crucial elegir un canal enfocado durante la validación de clientes en lugar de dispersar esfuerzos en múltiples canales simultáneamente.
+   pasos_accionables: ['Determinar si el producto se ajusta mejor a canal físico, digital o híbrido', 'Evaluar el precio del producto en relación al canal (ej. ventas enterprise vs apps de bajo costo)', 'Calcular todos los costos del canal (descuentos, promoción, devoluciones)', 'Seleccionar UN canal principal para enfocar los esfuerzos iniciales', 'Recalcular el modelo de ingresos neto tras costos de canal']
+   entregable_esperado: Hipótesis de canal seleccionado con diagrama de distribución y cálculo de ingresos netos tras costos de canal
+
+====================================================================================================
+PUESTO 103 | dominio franquicias | clase D
+----------------------------------------------------------------------------------------------------
+MADRE estimacion_inversion_inicial_franquiciador -- paso 3 casado: Presupuesta el desarrollo de tu manual de operaciones y de los materiales de entrenamiento
+   (todos los pasos de la madre, para contexto: ['Lista todas las áreas donde vas a necesitar invertir: legal, marketing, manual, entidad, entrenamiento', 'Cotiza el costo de armar los documentos legales de tu franquicia (por ejemplo el contrato y el documento de divulgación conocido como FDD)', 'Presupuesta el desarrollo de tu manual de operaciones y de los materiales de entrenamiento', 'Calcula cuánto vas a necesitar en marketing para atraer a tus futuros franquiciados', 'Define el capital total que necesitas antes de lanzar tu programa de franquicia', 'Define cuántas franquicias quieres vender en tu primer año.', 'Presupuesta los costos de personal según cuánta gente necesitas contratar y si puedes aprovechar al equipo que ya tienes.', 'Presupuesta los costos de preparación: crear la nueva entidad legal, duplicar materiales, viajes y equipo nuevo.'])
+   entregable_esperado de la madre: Un presupuesto detallado de la inversión inicial que necesitas para lanzar tu sistema de franquicia
+----------------------------------------------------------------------------------------------------
+HIJO desarrollar_manual_operaciones
+   titulo: Desarrollo del Manual de Operaciones de Franquicia
+   resumen_teorico: El manual de operaciones es el documento central que traduce tu sistema de negocio probado en instrucciones replicables para franquiciados. Funciona como herramienta de ventas, texto de capacitacion, referencia diaria y documento legal exigible de estandares de marca. Debe cubrir desde la apertura de una unidad (seleccion de sitio, cuenta bancaria, EIN, seguros) hasta la operacion diaria, e incluir politicas de cumplimiento legal (leyes laborales, EEOC, ADA) sin dictar politicas internas de empleo del franquiciado. Redactalo evitando lenguaje absoluto de obligaciones y mantenlo fuera del contrato de franquicia para preservarlo como secreto comercial y poder modificarlo con el tiempo. Solo el indice se divulga en el FDD, nunca el contenido completo.
+   pasos_accionables: ['Documenta exhaustivamente todos los procesos operativos, desde la apertura de una unidad (sitio, cuenta bancaria, EIN, seguros) hasta la operacion diaria, incluyendo compras, marketing local, guiones de venta y control de inventario', 'Diferencia claramente los estandares de marca de control estricto de las areas operativas flexibles', 'Incluye politicas de cumplimiento legal como leyes laborales, EEOC y ADA, sin dictar politicas internas de empleo del franquiciado', 'Redacta el manual evitando lenguaje absoluto de obligaciones, sustituyendolo por terminos flexibles', 'Vincula legalmente el manual al contrato de franquicia como estandar de cumplimiento obligatorio, manteniendolo fuera del contrato mismo y confidencial, divulgando solo el indice en el FDD, exigiendo a los franquiciados mantener el manual bajo resguardo controlado, y limitando su divulgacion a los empleados solo según necesidad de entrenamiento', 'Contrata a un profesional con experiencia legal en franquicias para redactarlo y haz que tu abogado lo revise antes de implementarlo']
+   entregable_esperado: Un manual de operaciones completo, redactado y revisado legalmente, vinculado al contrato de franquicia y listo para servir como base de capacitacion y estandar de cumplimiento.
+
+====================================================================================================
+PUESTO 104 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE mapa_de_canal_de_ventas -- paso 1 casado: Enfócate en validar un solo canal de distribución antes de expandirte a otros
+   (todos los pasos de la madre, para contexto: ['Enfócate en validar un solo canal de distribución antes de expandirte a otros', 'Dibuja la cadena completa de organizaciones entre tu empresa y el cliente final', 'Documenta las responsabilidades de cada eslabón (quién genera demanda vs quién solo distribuye)', 'Calcula los descuentos y márgenes que cada nivel del canal requiere', 'Diseña un plan de gestión de canal para monitorear inventario, ventas y posibles retornos'])
+   entregable_esperado de la madre: Un diagrama de canal de ventas con mapa de responsabilidades, descuentos financieros y plan de gestión
+----------------------------------------------------------------------------------------------------
+HIJO seleccion_canal_distribucion
+   titulo: Selección de Canal de Distribución
+   resumen_teorico: Elegir el canal de ventas adecuado (físico, web/mobile o híbrido) es crítico y debe alinearse con el precio del producto, los hábitos de compra existentes y los costos asociados. Un error común de las startups es intentar lanzar por múltiples canales simultáneamente antes de validar cuál funciona mejor.
+   pasos_accionables: ['Identificar los hábitos de compra establecidos en la categoría de tu producto', 'Evaluar si el canal fortalece el proceso de venta y a qué costo', 'Analizar la complejidad y precio del producto respecto al canal elegido', 'Recalcular la hipótesis de ingresos netos considerando costos del canal (distribución, promoción, devoluciones)', 'Enfocarse en UN canal principal durante el customer discovery, evitando lanzar por múltiples canales a la vez']
+   entregable_esperado: Hipótesis de canal documentada con análisis de costos netos y justificación de por qué ese canal es el más adecuado para el producto
+
+====================================================================================================
+PUESTO 105 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE abolir_inspeccion_masiva -- paso 4 casado: Rediseña tu proceso de producción para construir calidad desde el origen
+   (todos los pasos de la madre, para contexto: ['Identifica los puntos donde hoy inspeccionas al 100% o 200% y mide su costo junto con el retrabajo asociado', 'Analiza la causa raíz de los defectos que detectas en inspección, no te limites a separarlos', 'Implementa muestreo aleatorio con números aleatorios en lugar de inspección exhaustiva', 'Rediseña tu proceso de producción para construir calidad desde el origen', 'Reduce gradualmente la inspección masiva a medida que tu proceso demuestre estar en control estadístico', 'Reserva la inspección al 100% solo para casos excepcionales de bajo rendimiento crítico'])
+   entregable_esperado de la madre: Plan de transición de inspección masiva a inspección por muestreo aleatorio y control estadístico de proceso, con métricas de reducción de costos e incremento de calidad
+----------------------------------------------------------------------------------------------------
+HIJO calidad_de_diseno_vs_produccion
+   titulo: Calidad de Diseño vs. Calidad de Producción
+   resumen_teorico: Deming distingue dos tipos de calidad presentes en cualquier sistema: la calidad de diseño, que son los programas y procedimientos específicos que prometen producir un servicio o producto vendible (lo que el cliente requiere), y la calidad de producción, que es el logro de resultados acordes a la calidad prometida en el diseño. El control de calidad debe trabajar simultáneamente sobre ambos aspectos: no basta con encontrar el error, es necesario encontrar la causa detrás del error y construir un sistema que minimice errores futuros.
+   pasos_accionables: ['Definir claramente los requisitos del cliente antes de diseñar el producto o servicio', 'Documentar los procedimientos y programas que garantizan ese diseño', 'Medir la brecha entre lo diseñado y lo efectivamente producido', 'Investigar causas raíz de las desviaciones, no solo los síntomas']
+   entregable_esperado: Especificación de diseño validada contra necesidades del cliente y sistema de medición de conformidad en producción
+
+====================================================================================================
+PUESTO 112 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE equipo_mejora_calidad_2 -- paso 6 casado: Orientar al equipo sobre el contenido y propósito del programa de calidad
+   (todos los pasos de la madre, para contexto: ['Elige a la persona que va a liderar la mejora de calidad, idealmente alguien con visión de todo el negocio, por ejemplo quien se encarga de marketing u operaciones.', 'Identifica quien representa cada área clave de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad.', 'Asigna a alguien que documente las reuniones, de seguimiento a las acciones y mantenga el impulso del programa.', 'Establece una frecuencia regular de reuniones, por ejemplo semanal, con agenda y notas claras.', 'Define hasta dónde puede llegar este grupo para proponer y ejecutar acciones correctivas.', 'Orientar al equipo sobre el contenido y propósito del programa de calidad'])
+   entregable_esperado de la madre: Un grupo de mejora de calidad definido, con quien lo lidera, quien participa, quien documenta y un calendario de reuniones establecido.
+----------------------------------------------------------------------------------------------------
+HIJO programa_auditoria_calidad
+   titulo: Programa de Auditoría de Calidad
+   resumen_teorico: Un programa de auditoría de calidad puede enfocarse en el cumplimiento, en la efectividad, o en ambos. Auditar por cumplimiento significa verificar que las actividades sigan un estándar o requisito establecido (por ejemplo, que existan instrucciones de trabajo escritas). Auditar por efectividad significa evaluar si ese requisito realmente logra el resultado esperado y si los recursos se usan bien. Cuando revisas tú mismo tu negocio puedes y debes mirar ambas cosas; si le pides a alguien externo que audite, esa persona suele limitarse al cumplimiento, por independencia y alcance.
+   pasos_accionables: ['Definir si el programa se orientará a cumplimiento, efectividad o ambos', 'Decidir si vas a auditar tú mismo tu negocio o si vas a pedirle a alguien externo que lo haga, según lo que necesites lograr', 'Establecer el alcance: qué partes de tu negocio, qué líneas de producto, qué sistemas de calidad o qué actividades específicas vas a revisar', 'Documentar el propósito y las reglas del programa en un documento que tú mismo apruebes antes de empezar']
+   entregable_esperado: Documento con el propósito, el alcance y el tipo de auditoría definidos por ti
+
+====================================================================================================
+PUESTO 113 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE customer_validation -- paso 1 casado: Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes
+   (todos los pasos de la madre, para contexto: ['Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes', 'Diseña un plan de ventas y pruébalo en el terreno con tus primeros clientes', 'Mide si por cada peso que inviertes en ventas y marketing te regresan el doble (o la proporción que hayas definido)', 'Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar', 'Evalúa si ya alcanzaste el impulso suficiente para pasar a escalar'])
+   entregable_esperado de la madre: Evidencia con números de que tienes un modelo de negocio que se puede repetir y escalar, incluyendo qué tanto te regresa lo que inviertes en ventas y marketing
+----------------------------------------------------------------------------------------------------
+HIJO establecer_linea_base_mvp
+   titulo: Mide tu punto de partida con tu producto mínimo viable (MVP)
+   resumen_teorico: Este es el primer paso para llevar la cuenta real de tu avance. Usa un producto mínimo viable (MVP) para conseguir datos reales sobre dónde estás hoy, sin importar qué tan lejos te encuentres de tu objetivo. Sin esta foto clara de tu punto de partida, no puedes medir si avanzas después. Prueba primero la suposición más riesgosa de tu plan de negocio.
+   pasos_accionables: ['Construye un MVP completo o parcial que ponga a prueba las suposiciones clave de tu negocio', 'Considera hacer antes una prueba rápida de interés (smoke test) para validar si al cliente le importa, antes de invertir más recursos', 'Identifica cuál es la suposición más riesgosa de tu plan de negocio y pruébala primero', 'Recolecta tus métricas base: tasas de conversión, de registro, de prueba, valor de vida del cliente, etc.']
+   entregable_esperado: Un conjunto de métricas base reales (no proyectadas) sobre cómo se comportan hoy los clientes con tu MVP
+
+====================================================================================================
+PUESTO 115 | dominio environmental | clase D
+----------------------------------------------------------------------------------------------------
+MADRE diversidad_activa -- paso 2 casado: Evaluar si las soluciones actuales tienden a la estandarización que erosiona esa diversidad
+   (todos los pasos de la madre, para contexto: ['Identificar elementos de diversidad (biológica, cultural o material) relevantes al proyecto', 'Evaluar si las soluciones actuales tienden a la estandarización que erosiona esa diversidad', 'Diseñar mecanismos activos de soporte científico y logístico para preservar la diversidad identificada'])
+   entregable_esperado de la madre: Un informe de impacto en diversidad con medidas concretas de soporte activo, no solo declarativas
+----------------------------------------------------------------------------------------------------
+HIJO respeto_a_la_diversidad
+   titulo: Respeto a la Diversidad
+   resumen_teorico: Inspirado en la biodiversidad de los ecosistemas naturales (como la selva tropical o los hormigueros), este principio sostiene que las soluciones sostenibles deben respetar y adaptarse a las particularidades locales (culturales, ecológicas, económicas) en lugar de imponer soluciones estandarizadas y homogéneas. La monocultura, tanto agrícola como industrial, es frágil; la diversidad genera resiliencia y productividad a largo plazo.
+   pasos_accionables: ['Analizar el contexto local (clima, cultura, recursos disponibles) antes de aplicar una solución de diseño', "Evitar soluciones universales 'talla única' que ignoren las condiciones específicas del lugar", 'Diseñar sistemas con múltiples funciones y relaciones (como policultivos) en vez de sistemas de un solo propósito', 'Evaluar la resiliencia del sistema propuesto ante cambios o perturbaciones', "Identificar los 'nichos' funcionales que un producto o servicio puede ocupar sin desplazar recursos existentes.", 'Diseñar considerando flujos de energía y materiales propios del entorno específico']
+   entregable_esperado: Un análisis de contexto local y una propuesta de diseño adaptada a las condiciones específicas del entorno, evitando la estandarización excesiva.
+
+====================================================================================================
+PUESTO 117 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE seleccion_plan_muestreo_ansi_z14 -- paso 3 casado: Leer el plan de muestreo correspondiente (tamaño de muestra, número de aceptación y rechazo) en la tabla maestra
+   (todos los pasos de la madre, para contexto: ['Determinar el AQL, tamaño de lote y nivel de inspección requeridos', 'Consultar la tabla de letras de código de tamaño de muestra según lote y nivel de inspección', 'Leer el plan de muestreo correspondiente (tamaño de muestra, número de aceptación y rechazo) en la tabla maestra', 'Implementar reglas de cambio a inspección estricta si dos de cinco lotes consecutivos son rechazados', 'Aplicar inspección reducida si los últimos 10 lotes fueron aceptados bajo inspección normal'])
+   entregable_esperado de la madre: Plan de muestreo ANSI/ASQC Z1.4 completamente parametrizado y procedimiento de cambio de niveles documentado
+----------------------------------------------------------------------------------------------------
+HIJO planes_de_muestreo_de_aceptacion
+   titulo: Planes de Muestreo de Aceptación
+   resumen_teorico: Establecimiento de criterios de muestreo para inspección y pruebas que equilibran el riesgo del proveedor (aceptar lotes con el promedio de proceso habitual) y el riesgo del comprador (daño causado por un defecto que pasa el filtro de muestreo). El diseño debe balancear el costo de clasificación (sorting) versus muestreo, considerando también el error de medición.
+   pasos_accionables: ['Definir el promedio de proceso esperado del proveedor', 'Calcular el costo del daño por defectos no detectados', 'Balancear costo de inspección al 100% versus muestreo', 'Diseñar la curva característica de operación (OC curve) del plan', 'Considerar errores de medición en el diseño del plan']
+   entregable_esperado: Plan de muestreo documentado con niveles de aceptación, tamaños de muestra y criterios de rechazo
+
+====================================================================================================
+PUESTO 118 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE control_del_board_startup -- paso 2 casado: Evalúa cómo queda compuesta la junta en cada ronda antes de firmar los términos del acuerdo (term sheet)
+   (todos los pasos de la madre, para contexto: ['Negocia si tu asiento en la junta es un asiento de fundador (founder seat), que permanece aunque te reemplacen como director general, o un asiento de CEO (CEO seat), que se pierde si te reemplazan', 'Evalúa cómo queda compuesta la junta en cada ronda antes de firmar los términos del acuerdo (term sheet)', 'Considera dividir la ronda entre varios inversionistas (VCs) para evitar que uno solo controle dos asientos', 'Negocia quién nomina al director independiente cuando la junta queda dividida en partes iguales'])
+   entregable_esperado de la madre: Estructura de tu junta directiva definida por escrito, con claridad sobre los tipos de asientos y quién los ocupa en cada ronda de financiamiento
+----------------------------------------------------------------------------------------------------
+HIJO dividends_terms
+   titulo: Dividendos en la hoja de términos (term sheet) de tu ronda
+   resumen_teorico: Es una cláusula que da a los inversionistas con acciones preferentes el derecho a cobrar dividendos (acumulados o no) antes que tú y los demás accionistas comunes, normalmente entre 5% y 15% anual sobre el precio original de compra. En rondas tempranas casi nunca cambian mucho tu retorno, pero pueden pesar si las cosas van mal o si la inversión es muy grande (más de 50 millones de dólares), como suele pasar en private equity.
+   pasos_accionables: ['Revisa si el dividendo es acumulativo o no acumulativo y cuál es su porcentaje.', 'Calcula qué tanto te afecta ese dividendo tanto si el negocio va muy bien como si va mal.', 'Pide que cualquier decisión de repartir dividendos necesite el visto bueno de una mayoría amplia del consejo (board).', 'Fíjate si el dividendo se paga en efectivo o en más acciones, porque esto último te diluye todavía más.']
+   entregable_esperado: Una cláusula de dividendos negociada, con protección del consejo (board) y claridad sobre cómo se paga.
+
+====================================================================================================
+PUESTO 119 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE customer_validation -- paso 1 casado: Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes
+   (todos los pasos de la madre, para contexto: ['Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes', 'Diseña un plan de ventas y pruébalo en el terreno con tus primeros clientes', 'Mide si por cada peso que inviertes en ventas y marketing te regresan el doble (o la proporción que hayas definido)', 'Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar', 'Evalúa si ya alcanzaste el impulso suficiente para pasar a escalar'])
+   entregable_esperado de la madre: Evidencia con números de que tienes un modelo de negocio que se puede repetir y escalar, incluyendo qué tanto te regresa lo que inviertes en ventas y marketing
+----------------------------------------------------------------------------------------------------
+HIJO mvp_catalogo_tecnicas
+   titulo: Catálogo de MVPs (Producto Mínimo Viable)
+   resumen_teorico: Un MVP es una representación o prototipo de una propuesta de valor diseñado específicamente para probar la validez de una o más hipótesis, de la forma más rápida, barata y eficiente posible. Existen múltiples niveles de sofisticación: desde data sheets y brochures (bajo esfuerzo) hasta prototipos funcionales y Wizard of Oz (alto esfuerzo), pasando por landing pages, videos y product boxes.
+   pasos_accionables: ['Identifica la hipótesis específica que necesitas validar antes de elegir el tipo de MVP.', 'Comienza con el MVP más barato posible (data sheet, brochure, storyboard).', 'Escala la sofisticación del MVP solo si los resultados iniciales son prometedores.', 'Usa herramientas accesibles (ej. smartphone) antes de invertir en producción profesional.']
+   entregable_esperado: Un prototipo tangible (documento, video, landing page o maqueta) listo para ser mostrado a clientes potenciales.
+
+====================================================================================================
+PUESTO 120 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE search_for_business_model -- paso 8 casado: Usar el Business Model Canvas y Value Proposition Canvas como herramientas de planificación flexible
+   (todos los pasos de la madre, para contexto: ['Determina si tu proyecto está en modo búsqueda (hipótesis no probadas) o en modo ejecución (modelo conocido)', 'Lista explícitamente las hipótesis de tu modelo de negocio: mercado, cliente, producto, canal y precio, marcadas como no probadas', 'Aplica el proceso de Customer Development para salir a probar cada hipótesis con clientes reales', 'Evita montar estructuras o roles de ejecución antes de validar el modelo', 'Itera y pivota según la evidencia recogida hasta encontrar un modelo repetible y escalable', 'Adopta una mentalidad de aprendizaje y experimentación en vez de miedo al fracaso', 'Abandonar la idea de escribir un plan de negocio detallado al inicio', 'Usar el Business Model Canvas y Value Proposition Canvas como herramientas de planificación flexible'])
+   entregable_esperado de la madre: Un lienzo de hipótesis de modelo de negocio marcado explícitamente como no probado, junto con evidencia de que el modelo es repetible y escalable o una decisión clara de pivote.
+----------------------------------------------------------------------------------------------------
+HIJO herramientas_computacionales_business_model
+   titulo: Herramientas Computacionales para el Business Model Canvas
+   resumen_teorico: Complementar el enfoque tradicional de papel y Post-its con herramientas digitales (como el Business Model Toolbox) permite crear, almacenar, manipular, rastrear y comunicar modelos de negocio con mayor rapidez y sofisticación. Al igual que el CAD revolucionó la arquitectura, las herramientas computacionales para modelos de negocio facilitan la colaboración remota, simulaciones financieras, y el acceso a bases de datos de patrones de negocio, sin eliminar el valor del trabajo manual inicial en papel para la ideación creativa.
+   pasos_accionables: ['Iniciar la ideación del modelo de negocio con Canvas físico en papel/poster y Post-its para maximizar la creatividad grupal', 'Una vez validada la dirección inicial, migrar el modelo a una herramienta digital (Strategyzer, Business Model Toolbox u otra) para facilitar versionado y colaboración remota', 'Usar las herramientas digitales para simulaciones financieras rápidas y comparación de múltiples versiones del modelo', 'Aprovechar bases de datos de patrones de negocio disponibles en plataformas digitales para inspirar iteraciones']
+   entregable_esperado: Modelo de negocio documentado digitalmente, con historial de versiones y capacidad de colaboración remota entre el equipo
+
+====================================================================================================
+PUESTO 121 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE control_calidad_definicion -- paso 2 casado: Diferenciar entre necesidad de control y necesidad de mejora
+   (todos los pasos de la madre, para contexto: ['Identificar en qué zona de control se encuentra el proceso (estable pero deficiente vs. mejorado)', 'Diferenciar entre necesidad de control y necesidad de mejora', 'Establecer nuevos controles después de cada mejora para evitar retroceso', 'Aplicar el concepto de control tanto a nivel de proceso como de producto'])
+   entregable_esperado de la madre: Diagrama de la Trilogía de Juran aplicado al proceso actual con zonas de control identificadas
+----------------------------------------------------------------------------------------------------
+HIJO pre_control_estadistico
+   titulo: PRE-Control
+   resumen_teorico: PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso.
+   pasos_accionables: ['Centrar el proceso entre los límites de especificación al iniciar', 'Definir zonas de PRE-Control (verde, amarilla, roja) según distancia a los límites', 'Tomar muestras periódicas de tres piezas consecutivas', 'Detener el proceso si dos de tres mediciones caen en zona amarilla del mismo lado', 'Ajustar el proceso y reiniciar el monitoreo']
+   entregable_esperado: Sistema de control simplificado en piso de planta operando sin necesidad de gráficos de control tradicionales
+
+====================================================================================================
+PUESTO 122 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE grafico_cusum -- paso 1 casado: Calcular el estadístico de control (por ejemplo, x-barra) para cada muestra
+   (todos los pasos de la madre, para contexto: ['Calcular el estadístico de control (por ejemplo, x-barra) para cada muestra', 'Definir el valor objetivo T y la desviación estándar del proceso', 'Establecer límites de control superior e inferior a ±4 desviaciones estándar', 'Calcular la suma acumulada superior (Cu) e inferior (CL) para cada punto muestral', 'Graficar Cu y CL como líneas separadas y monitorear cruces de los límites'])
+   entregable_esperado de la madre: Gráfico CUSUM implementado para detección temprana de desplazamientos pequeños en el proceso
+----------------------------------------------------------------------------------------------------
+HIJO pre_control_estadistico
+   titulo: PRE-Control
+   resumen_teorico: PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso.
+   pasos_accionables: ['Centrar el proceso entre los límites de especificación al iniciar', 'Definir zonas de PRE-Control (verde, amarilla, roja) según distancia a los límites', 'Tomar muestras periódicas de tres piezas consecutivas', 'Detener el proceso si dos de tres mediciones caen en zona amarilla del mismo lado', 'Ajustar el proceso y reiniciar el monitoreo']
+   entregable_esperado: Sistema de control simplificado en piso de planta operando sin necesidad de gráficos de control tradicionales
+
+====================================================================================================
+PUESTO 124 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE rol_de_la_fuerza_laboral_en_calidad -- paso 4 casado: Fomentar el conocimiento de las necesidades de clientes internos y externos
+   (todos los pasos de la madre, para contexto: ['Establecer canales para que los trabajadores nominen problemas de calidad', 'Formar equipos de calidad con participación voluntaria o asignada del personal operativo', 'Capacitar a los trabajadores en criterios de autocontrol', 'Fomentar el conocimiento de las necesidades de clientes internos y externos'])
+   entregable_esperado de la madre: Mecanismo formal de participación de la fuerza laboral en la mejora de calidad
+----------------------------------------------------------------------------------------------------
+HIJO identificar_clientes_externos_e_internos
+   titulo: Identificación de Clientes Externos e Internos
+   resumen_teorico: El segundo paso del Diseño para la Calidad es identificar completamente a los clientes, que se dividen en externos (compradores, comerciantes, procesadores, proveedores, clientes potenciales y clientes ocultos como reguladores o medios) e internos (cada persona dentro de la organización que actúa como proveedor, procesador y cliente). Un diagrama de flujo de alto nivel del proceso ayuda a revelar clientes no evidentes y a distinguir roles como quien ordena versus quien usa el producto.
+   pasos_accionables: ['Elaborar un diagrama de flujo del proceso relacionado al producto', 'Listar clientes externos: compradores, usuarios finales, comerciantes, procesadores, proveedores, potenciales y ocultos', 'Identificar clientes internos analizando las relaciones proveedor-procesador-cliente dentro de la organización', 'Distinguir entre quien ordena el producto y quien lo usa', 'Priorizar el elenco de clientes de forma consensuada por el equipo']
+   entregable_esperado: Lista completa y clasificada de clientes externos e internos, con diagrama de flujo del proceso
+
+====================================================================================================
+PUESTO 125 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE transformacion_calidad_compromiso_alta_direccion_japon -- paso 5 casado: Evita que la calidad quede como tarea exclusiva de un área aislada de tu negocio
+   (todos los pasos de la madre, para contexto: ['Asegúrate de que tú, y no solo quien se encarga de calidad, entiendas y asumas tu responsabilidad sobre la calidad, y busca formación para ello', 'Conecta la mejora de calidad con el cliente, entendiéndolo como la parte más importante de tu proceso', 'Extiende el aprendizaje de métodos estadísticos no solo a quien diseña o produce, sino también a quienes supervisan y ejecutan el trabajo diario', 'Sostén tu compromiso con la calidad durante años, no como un evento aislado', 'Evita que la calidad quede como tarea exclusiva de un área aislada de tu negocio'])
+   entregable_esperado de la madre: Un plan de sesiones sostenidas, contigo y con quienes te ayudan, enfocado en entender y asumir la responsabilidad de la calidad en todo el negocio
+----------------------------------------------------------------------------------------------------
+HIJO planificacion_estrategica_despliegue_2
+   titulo: Cómo integrar la calidad en tu plan de negocio
+   resumen_teorico: Es el proceso sistemático mediante el cual tú defines tus metas de largo plazo relacionadas con la calidad y los clientes, integrándolas de forma equitativa con las metas financieras, de la gente que trabaja contigo, marketing y desarrollo, en un solo plan de negocio cohesivo. Ese plan luego se baja a metas más pequeñas, proyectos y acciones concretas en cada área. Integrarlo evita que tengas planes que se contradicen entre sí (dinero contra calidad) y asegura que elimines o cambies las actividades que no estén alineadas con tus metas.
+   pasos_accionables: ['Definir tu visión, misión, estrategias y metas anuales de forma integrada', 'Poner la voz del cliente y las metas de calidad al mismo nivel que las metas financieras', 'Reconocer y premiar el desempeño de acuerdo a las metas de mejora que te propongas', 'Asegurarte de que participen todos los que te ayudan, sin importar su rol o nivel', 'Usar el mismo lenguaje para los términos clave, como calidad, comparación con el mercado o cómo bajas la estrategia a lo concreto', 'Enseñar estos conceptos y herramientas a todos los que trabajan contigo, no solo a quien se encarga de la calidad', 'Eliminar las iniciativas que no estén alineadas con tu plan estratégico']
+   entregable_esperado: Un plan estratégico anual único que integra tus metas de calidad, financieras y operativas, con proyectos concretos y quién se encarga de cada uno
+
+====================================================================================================
+PUESTO 126 | dominio environmental | clase D
+----------------------------------------------------------------------------------------------------
+MADRE metas_desmaterializacion_energia -- paso 4 casado: Comunicar los ahorros de costos y beneficios ambientales generados
+   (todos los pasos de la madre, para contexto: ['Realizar un análisis de ciclo de vida para identificar dónde se concentra el mayor uso de materiales/energía', 'Establecer metas cuantitativas de reducción (% de materiales, % de energía)', 'Rediseñar empaques para reducir peso y volumen (lightweighting)', 'Comunicar los ahorros de costos y beneficios ambientales generados'])
+   entregable_esperado de la madre: Metas cuantitativas de reducción de materiales y energía definidas, con plan de rediseño de producto o empaque
+----------------------------------------------------------------------------------------------------
+HIJO valoracion_costos_externos
+   titulo: Valoración de Costos y Beneficios Externos (Ambientales)
+   resumen_teorico: Metodologías para asignar valor monetario a impactos ambientales externos que carecen de mercado directo. Se dividen en métodos del lado de la demanda (disposición a pagar, como Hedonic Pricing, Travel Cost Method, Contingent Valuation) y métodos del lado de la oferta (costos de prevención, restauración, productividad) que estiman el costo de prevenir, restaurar o compensar el daño ambiental.
+   pasos_accionables: ['Determinar si el impacto ambiental a valorar tiene un mercado sustituto disponible', 'Elegir un método de demanda (willingness to pay/accept) o de oferta (costos de prevención/restauración) según el contexto', 'Recopilar datos de encuestas, mercados sustitutos o costos de restauración según el método elegido', 'Asignar un valor monetario estimado al costo o beneficio ambiental externo']
+   entregable_esperado: Una estimación monetaria documentada de al menos un costo o beneficio ambiental externo relevante para la empresa.
+
+====================================================================================================
+PUESTO 131 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE competencias_director_calidad_bloom -- paso 1 casado: Elaborar una matriz de competencias para el rol de Director de Calidad
+   (todos los pasos de la madre, para contexto: ['Elaborar una matriz de competencias para el rol de Director de Calidad', 'Clasificar cada competencia según los niveles de Bloom aplicables', 'Evaluar al candidato o titular actual contra la matriz de competencias', 'Identificar brechas de conocimiento y diseñar plan de desarrollo'])
+   entregable_esperado de la madre: Matriz de competencias del Director de Calidad con niveles de Bloom asignados y evaluación de brechas
+----------------------------------------------------------------------------------------------------
+HIJO consejo_de_calidad_y_rol_del_director
+   titulo: Consejo de Calidad y Rol del Director de Calidad
+   resumen_teorico: El consejo de calidad es la instancia responsable de establecer visión, misión, valores y metas de calidad, revisar el progreso, integrar los objetivos de calidad en los planes de tu negocio y quitar los obstáculos del camino. Si tienes a alguien que lidera el tema calidad, esa persona cumple un doble rol: llevar el día a día de calidad y ayudarte a manejar la calidad como parte de la estrategia del negocio, así como quien lleva las finanzas te ayuda a decidir con los números.
+   pasos_accionables: ['Forma un consejo de calidad con las personas que toman las decisiones importantes en tu negocio', 'Define y comunica visión, misión, valores compartidos y tu política de calidad', 'Integra las metas de calidad en tus planes de negocio y de desempeño', 'Designa responsables para los proyectos clave de calidad', 'Revisa el progreso con frecuencia y elimina los obstáculos que encuentres']
+   entregable_esperado: Un documento simple con los roles, responsabilidades y calendario de revisiones de tu consejo de calidad
+
+====================================================================================================
+PUESTO 133 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE sistema_pull_push -- paso 5 casado: Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad
+   (todos los pasos de la madre, para contexto: ['Evaluar si tu operacion actual funciona bajo un esquema push o pull', 'Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso', 'Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente', 'Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor', 'Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad', 'Implementar el sistema y capacitar a los operadores'])
+   entregable_esperado de la madre: Sistema de produccion rediseñado bajo logica pull con kanbans implementados y metricas de flujo mejoradas.
+----------------------------------------------------------------------------------------------------
+HIJO reduccion_tiempo_ciclo
+   titulo: Reducción del Tiempo de Ciclo del Proceso
+   resumen_teorico: El tiempo es una de las métricas más utilizadas para medir la entrega de servicios. Los clientes demandan continuamente tiempos de entrega más cortos. Mediante el análisis del diagrama de flujo y técnicas Lean, se pueden eliminar desperdicios y reducir el tiempo de ciclo mediante acciones como eliminar reprocesos, simplificar pasos, combinar actividades, transferir aprobaciones a niveles más bajos, y usar tecnología.
+   pasos_accionables: ['Eliminar bucles de reproceso para corregir errores del proceso', 'Eliminar o simplificar pasos de valor marginal para el cliente', 'Eliminar pasos redundantes como inspecciones (solo tras eliminar causas de error)', 'Combinar pasos realizados por un mismo trabajador', 'Transferir pasos de aprobación a niveles inferiores', 'Cambiar la secuencia de actividades de consecutivas a simultáneas', 'Usar tecnología para realizar pasos rutinarios y complejos']
+   entregable_esperado: Proceso de servicio rediseñado con tiempo de ciclo reducido, documentado con datos de antes/después
+
+====================================================================================================
+PUESTO 135 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE diseno_controles_proceso_mejorado -- paso 3 casado: Diseñar controles de calidad de proceso para Xs y Ys
+   (todos los pasos de la madre, para contexto: ['Actualizar el FMEA para identificar controles necesarios', 'Aplicar técnicas de mistake-proofing en las mejoras', 'Diseñar controles de calidad de proceso para Xs y Ys', 'Establecer estándares de control basados en el desempeño real', 'Determinar cómo se comparará el desempeño real con el estándar (SPC)', 'Establecer el autocontrol para los individuos responsables del proceso'])
+   entregable_esperado de la madre: Plan de control de proceso actualizado con estándares, mecanismos de retroalimentación y mistake-proofing
+----------------------------------------------------------------------------------------------------
+HIJO auditorias_calidad_proceso
+   titulo: Auditorías de Calidad de Proceso
+   resumen_teorico: Una auditoría de calidad de proceso es una revisión independiente in situ que compara el desempeño real de un proceso contra un estándar establecido, usando los procedimientos operativos del proceso. Estas auditorías frecuentemente revelan procedimientos inadecuados o inexistentes, más allá de verificar el cumplimiento de los existentes. Ejemplos incluyen las auditorías de aerolíneas en llegadas/salidas, interior/exterior de aviones, y las auditorías de McDonald's sobre calidad, servicio, limpieza y sanidad.
+   pasos_accionables: ['Definir las áreas específicas del proceso a auditar', 'Establecer una lista detallada de actividades y estándares numéricos a verificar', 'Realizar visitas anunciadas y no anunciadas para mayor objetividad', 'Registrar y comparar mediciones contra metas numéricas establecidas', 'Usar los checklists de autocontrol como fuente de temas específicos para la auditoría']
+   entregable_esperado: Informe de auditoría de proceso con hallazgos, comparación contra estándares y recomendaciones de mejora
+
+====================================================================================================
+PUESTO 136 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE principios_mejora_continua -- paso 4 casado: Establecer controles de calidad en el origen de cada proceso
+   (todos los pasos de la madre, para contexto: ['Mapear procesos clave y evaluar su estabilidad y capacidad', 'Implementar ciclos de experimentación tipo PDCA para validar mejoras', 'Diseñar flujo continuo de valor eliminando interrupciones y esperas', 'Establecer controles de calidad en el origen de cada proceso', 'Definir metas aspiracionales de perfección como guía de mejora continua'])
+   entregable_esperado de la madre: Plan de mejora continua con procesos priorizados, ciclos de experimentación definidos y controles de calidad en la fuente
+----------------------------------------------------------------------------------------------------
+HIJO auditorias_calidad_proceso
+   titulo: Auditorías de Calidad de Proceso
+   resumen_teorico: Una auditoría de calidad de proceso es una revisión independiente in situ que compara el desempeño real de un proceso contra un estándar establecido, usando los procedimientos operativos del proceso. Estas auditorías frecuentemente revelan procedimientos inadecuados o inexistentes, más allá de verificar el cumplimiento de los existentes. Ejemplos incluyen las auditorías de aerolíneas en llegadas/salidas, interior/exterior de aviones, y las auditorías de McDonald's sobre calidad, servicio, limpieza y sanidad.
+   pasos_accionables: ['Definir las áreas específicas del proceso a auditar', 'Establecer una lista detallada de actividades y estándares numéricos a verificar', 'Realizar visitas anunciadas y no anunciadas para mayor objetividad', 'Registrar y comparar mediciones contra metas numéricas establecidas', 'Usar los checklists de autocontrol como fuente de temas específicos para la auditoría']
+   entregable_esperado: Informe de auditoría de proceso con hallazgos, comparación contra estándares y recomendaciones de mejora
+
+====================================================================================================
+PUESTO 137 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE materiales_due_diligence -- paso 3 casado: Organizas las actas de tus reuniones de junta
+   (todos los pasos de la madre, para contexto: ['Armas y mantienes actualizada tu tabla de socios y porcentajes (cap table)', 'Reúnes los contratos con clientes, empleados y proveedores relevantes', 'Organizas las actas de tus reuniones de junta', 'Revisas un listado de documentos típicos de esta revisión a fondo, disponible en recursos como venturedeals.com', 'Cuentas por adelantado cualquier problema o zona gris de tu negocio'])
+   entregable_esperado de la madre: Carpeta organizada con toda la documentación legal, financiera y corporativa lista para entregar rápido
+----------------------------------------------------------------------------------------------------
+HIJO guia_y_mentoria_vc
+   titulo: Cómo aprovechar el acompañamiento de tus inversores en las reuniones de junta
+   resumen_teorico: Tus inversores te dan orientación estratégica, operativa y de personal de dos formas: informal, en conversaciones uno a uno, y formal, en las reuniones de junta. Vas a necesitar menos de esa guía a medida que tu negocio madura y tu equipo y tus métricas se consolidan. Si el inversor ya fue director en otras empresas, eso vale: reconoce patrones de problemas comunes que a ti todavía te cuesta ver.
+   pasos_accionables: ['Agenda reuniones informales frecuentes con tus inversores en las primeras etapas de tu negocio.', 'Acuerda con tu inversor cada cuánto conviene reunirse en junta según qué tan maduro esté tu negocio: más seguido al principio, menos después.', 'Usa a tu inversor como consejero estratégico: llévale las preguntas de fondo que cuestionan tus supuestos clave, no solo el reporte del día a día.']
+   entregable_esperado: Un calendario de reuniones con tus inversores y una agenda de los temas estratégicos que vas a tratar en cada etapa.
+
+====================================================================================================
+PUESTO 138 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE fase_mobilizar_modelo_negocio -- paso 3 casado: Usa el Lienzo de Modelo de Negocio (Business Model Canvas) como lenguaje común para hablar del proyecto
+   (todos los pasos de la madre, para contexto: ['Define con claridad el objetivo, el alcance y el porqué de tu proyecto', 'Arma un equipo con gente de experiencias distintas, incluyendo diferentes niveles jerárquicos y áreas de expertise', 'Usa el Lienzo de Modelo de Negocio (Business Model Canvas) como lenguaje común para hablar del proyecto', 'Haz un ejercicio para poner a prueba tu idea (conocido como kill/thrill): dedica 20 minutos a buscar por qué podría fracasar y otros 20 a por qué podría funcionar', 'Si estás dentro de una empresa ya establecida, consigue el respaldo visible de quienes mandan y maneja los intereses de quienes podrían sentirse afectados', 'Educar a los tomadores de decisiones sobre modelos de negocio usando historias e imágenes, no teoría'])
+   entregable_esperado de la madre: Tu equipo armado, el objetivo definido por escrito, y una primera validación de tu idea de negocio con el ejercicio kill/thrill
+----------------------------------------------------------------------------------------------------
+HIJO business_model_canvas_scorecard
+   titulo: El Business Model Canvas como Scorecard Semanal
+   resumen_teorico: El Business Model Canvas de Osterwalder, además de ser una foto estática del negocio, se usa en Customer Discovery como un scorecard semanal para rastrear el progreso en la búsqueda del modelo de negocio. Cada semana actualizas el canvas reflejando pivotes e iteraciones, resaltando en rojo los cambios respecto a la semana anterior. Esto permite ver claramente qué hipótesis cambiaron y cuáles se mantienen, generando un historial que documenta cómo evoluciona tu entendimiento del negocio con el tiempo. Es especialmente útil cuando no tienes claridad propia sobre tu modelo de negocio o necesitas visualizar tu progreso semana a semana de forma tangible.
+   pasos_accionables: ['Llenar el canvas inicial con tus hipótesis en las 9 áreas: segmentos, propuesta de valor, canales, relaciones, recursos, socios e ingresos', 'Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho, y ademas cada vez que obtengas nueva evidencia', 'Resaltar en rojo los cambios respecto a la semana anterior', 'Una vez que confirmes los cambios, integrarlos como el nuevo canvas base en negro para la siguiente semana', 'Repetir este proceso de forma continua durante todo tu customer discovery', 'Sal a validar cada hipótesis con clientes reales cara a cara.', 'Conserva todas las versiones del canvas como un flip book que documente la evolución de tu modelo de negocio.', 'Evita convertir el canvas en un plan operativo prematuro basado en suposiciones sin validar.']
+   entregable_esperado: Serie histórica de canvases semanales que documenta la evolución de tu modelo de negocio.
+
+====================================================================================================
+PUESTO 139 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE plan_de_lanzamiento_al_mercado -- paso 2 casado: Investiga cómo compra tu cliente antes de diseñar el lanzamiento
+   (todos los pasos de la madre, para contexto: ['Empieza a armar tu plan de lanzamiento desde las primeras etapas del proyecto, no lo dejes para el final', 'Investiga cómo compra tu cliente antes de diseñar el lanzamiento', 'Haz una prueba de mercado o una venta piloto para validar tu plan antes de lanzar en serio', 'Asegúrate de tener las personas y el presupuesto que el lanzamiento realmente necesita', 'Suma a tu equipo, desde ya, a quienes van a vender y dar soporte cuando lances'])
+   entregable_esperado de la madre: Tu plan de marketing y lanzamiento completo, con los recursos definidos y validado con una prueba de mercado
+----------------------------------------------------------------------------------------------------
+HIJO personalizacion_investigacion_prospecto
+   titulo: Investiga a tu futuro cliente antes de venderle
+   resumen_teorico: Antes de vender, investiga detalles personales de la persona con la que quieres cerrar un trato: sus intereses, sus hábitos, sus gustos. Con esa información puedes crear momentos que generen una conexión emocional genuina, incluso antes de hablar de precio. Coleman explica que esto se logra en pocos minutos, escuchando con atención o revisando sus redes sociales, y que el costo del gesto no importa frente al impacto emocional que produce: un pequeño detalle, casi sin costo, puede abrir la puerta a un contrato grande. Esta forma de personalizar no tiene que ser artesanal cada vez: puedes sistematizarla con un sistema para llevar el registro de tus clientes (CRM).
+   pasos_accionables: ['Define qué información personal quieres guardar de cada persona con la que hablas: sus intereses, fechas importantes, su contexto.', 'Anota esa información en tu sistema de registro de clientes (CRM) desde el primer contacto.', 'Prepara una lista corta de gestos de bajo costo pero de alto impacto emocional que puedas usar.', 'Si trabajas con más personas, muéstrales primero cómo se siente ser sorprendido, para que puedan repetir ese gesto con tus clientes.']
+   entregable_esperado: Una plantilla en tu sistema de clientes con campos para personalizar cada contacto, y una lista de gestos de bajo costo para sorprender a las personas con las que hablas.
+
+====================================================================================================
+PUESTO 140 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE planificacion_inicial_calidad -- paso 4 casado: Analizar el diagrama de flujo del proceso por estación de trabajo
+   (todos los pasos de la madre, para contexto: ['Revisar el diseño del producto con personal de operaciones antes de su lanzamiento', 'Identificar características clave del producto y del proceso (KPCs)', 'Clasificar características por importancia (crítica, mayor, menor, incidental)', 'Analizar el diagrama de flujo del proceso por estación de trabajo', 'Validar la capacidad y los sistemas de medición del proceso'])
+   entregable_esperado de la madre: Documento de plan de control de proceso con características clave identificadas y clasificadas
+----------------------------------------------------------------------------------------------------
+HIJO analisis_flujo_proceso_servicio
+   titulo: Análisis del Diagrama de Flujo del Proceso de Servicio
+   resumen_teorico: Los diagramas de flujo de proceso (mapas de proceso o blueprints de servicio) permiten visualizar las actividades del servicio, identificando la 'línea de interacción' (donde cliente y empleados interactúan), la 'línea de invisibilidad' (actividades visibles vs no visibles para el cliente) y los límites organizacionales. Se identifican puntos de proceso (P) donde pueden ocurrir problemas que causen insatisfacción del cliente, permitiendo implementar acciones preventivas.
+   pasos_accionables: ['Mapear todas las actividades del proceso de servicio incluyendo front-office y back-office', 'Identificar la línea de interacción cliente-empleado', 'Marcar la línea de invisibilidad entre actividades visibles y no visibles al cliente', 'Identificar puntos de proceso (P) donde pueden ocurrir problemas', 'Documentar problemas recurrentes conocidos (promesas no cumplidas, múltiples contactos, servicio incorrecto, etc.)', 'Implementar acciones preventivas en los puntos críticos identificados']
+   entregable_esperado: Diagrama de flujo de servicio (blueprint) completo con puntos críticos marcados y plan de acciones preventivas
+
+====================================================================================================
+PUESTO 141 | dominio franquicias | clase D
+----------------------------------------------------------------------------------------------------
+MADRE pasivos_vs_operadores -- paso 3 casado: Evaluar qué modelo se ajusta mejor a la velocidad de crecimiento deseada
+   (todos los pasos de la madre, para contexto: ['Definir la política del sistema respecto a inversionistas pasivos', 'Si se permiten inversionistas grupales, exigir designación de un socio operador con equity', 'Evaluar qué modelo se ajusta mejor a la velocidad de crecimiento deseada', 'Considerar el impacto en calidad de servicio a nivel unitario'])
+   entregable_esperado de la madre: Política definida sobre estructura de propiedad aceptada en el sistema de franquicia
+----------------------------------------------------------------------------------------------------
+HIJO velocidad_crecimiento_franquicia
+   titulo: Velocidad de Crecimiento vía Franquicia
+   resumen_teorico: La franquicia permite expandirse más rápido que el crecimiento corporativo porque el franquiciado ejecuta la mayoría de las tareas operativas (búsqueda de sitio, negociación de arriendo, contratación, etc.), permitiendo al franquiciante capturar posiciones de liderazgo de mercado antes que la competencia y saturar mercados con mayor rapidez.
+   pasos_accionables: ['Estimar el tiempo necesario para abrir una unidad propia (sitio, diseño, contratación, etc.)', 'Comparar ese tiempo con el potencial de apertura simultánea de múltiples franquicias', 'Evaluar el riesgo competitivo de no expandirse rápidamente en el mercado actual', 'Diseñar una estrategia de expansión territorial basada en velocidad de saturación']
+   entregable_esperado: Plan de velocidad de expansión comparado entre modelo propio y modelo de franquicia
+
+====================================================================================================
+PUESTO 142 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE analisis_tco_roi_b2b -- paso 3 casado: Comparar el ROI del producto contra la solución actual del cliente
+   (todos los pasos de la madre, para contexto: ['Calcular el TCO estimado: costos de adopción, capacitación, infraestructura necesaria', 'Preparar un ROI hipotético antes de las reuniones iniciales con clientes corporativos', 'Comparar el ROI del producto contra la solución actual del cliente', 'Usar el análisis como material de apoyo (white paper) en el proceso de venta'])
+   entregable_esperado de la madre: Documento o white paper con análisis de TCO y ROI para clientes B2B
+----------------------------------------------------------------------------------------------------
+HIJO prueba_solucion_con_cliente
+   titulo: Prueba de la Solución con el Cliente
+   resumen_teorico: Con entrevistas estructuradas puedes medir si quien te compra cree que tu producto resuelve un problema importante. Pregunta por el presupuesto (preguntas de 'muéstrame el dinero'), pregunta por el precio, pregunta por el canal de venta, y pregunta cómo es el proceso de compra, quién lo aprueba y quién lo mantiene y hace crecer (preguntas de 'conseguir, mantener y crecer'). El objetivo no es vender todavía, es construir un mapa aproximado de tu futura cartera de ventas (pipeline).
+   pasos_accionables: ['Amplía tu lista de contactos a por lo menos 10 clientes potenciales (más si es consumo)', "Usa preguntas de presupuesto: pregúntale '¿lo usarías si fuera gratis?' y '¿quién tiene el presupuesto?'", 'Explora los límites de precio proponiendo una cifra muy alta y ajustando hacia abajo hasta encontrar lo que de verdad pagaría', 'Pregunta qué canal de distribución prefiere: tienda física, en línea, directo o a través de un distribuidor', 'Pregunta cómo es el proceso interno de aprobación de compra de quien te compra', 'Anota cada entrevista en una ficha (report card) con el mismo formato para poder comparar']
+   entregable_esperado: Una ficha por cada cliente entrevistado con los datos de producto, precio, distribución y referencias, y un mapa preliminar de tu futura cartera de ventas (pipeline)
+
+====================================================================================================
+PUESTO 143 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE capacidad_proceso_concepto -- paso 6 casado: Utilizar la información resultante para decisiones de diseño, selección de procesos y control
+   (todos los pasos de la madre, para contexto: ['Confirmar que el proceso está en estado de control estadístico (sin causas asignables)', 'Definir claramente el proceso: máquina, método, material, personas involucradas', 'Recolectar datos representativos de mediciones de producto bajo condiciones estables', 'Calcular la desviación estándar del proceso (σ) a partir de datos de control', 'Comparar la variación de 6σ contra los límites de especificación', 'Utilizar la información resultante para decisiones de diseño, selección de procesos y control'])
+   entregable_esperado de la madre: Informe de capacidad de proceso con distribución de variación cuantificada y su relación con especificaciones
+----------------------------------------------------------------------------------------------------
+HIJO sistema_informacion_calidad
+   titulo: Sistema de Información para la Toma de Decisiones de Calidad
+   resumen_teorico: El control de calidad requiere una red de información que sirva a todos los niveles de toma de decisión: información en tiempo real para detección y corrección inmediata en niveles operativos, y resúmenes para que los líderes controlen los pocos vitales. Un equipo multifuncional, que incluya clientes y proveedores de información, debe diseñar este sistema, y el liderazgo debe auditar que cumpla las necesidades de todos los usuarios.
+   pasos_accionables: ['Conformar un equipo multifuncional para diseñar el sistema de información de calidad', 'Incluir en el diseño tanto a clientes como proveedores de información', 'Definir qué información requiere tiempo real vs. resúmenes periódicos según nivel jerárquico', 'Establecer scoreboards o tableros de desempeño de calidad por área/producto', 'Auditar periódicamente que el sistema cumpla las necesidades de los distintos usuarios']
+   entregable_esperado: Diseño de sistema de información de calidad con especificación de reportes por nivel jerárquico
+
+====================================================================================================
+PUESTO 144 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE gobierno_corporativo_y_calidad -- paso 5 casado: Capacítate de forma continua en principios de excelencia y calidad
+   (todos los pasos de la madre, para contexto: ['Evalúa con quién cuentas hoy para tomar decisiones importantes y qué tan preparadas están esas personas', 'Define con claridad tus valores (integridad, equidad, compasión), diferenciándolos de simples reglas de conducta', 'Define tu visión considerando el propósito más amplio de tu negocio en la sociedad', 'Crea una forma de comunicación en dos sentidos entre quienes dependen de tu negocio y quien te ayuda a decidir', 'Capacítate de forma continua en principios de excelencia y calidad', 'Considera armar un grupo de personas de confianza que te asesoren, o un consejo familiar si tu negocio es familiar'])
+   entregable_esperado de la madre: Un plan sencillo con quién te ayuda a decidir, tus valores documentados y una forma de verificar que los planes se cumplan
+----------------------------------------------------------------------------------------------------
+HIJO principios_mejora_continua
+   titulo: Principios de Mejora Continua (Shingo)
+   resumen_teorico: Estos principios promueven la búsqueda incesante del cambio beneficioso, desde mejoras incrementales hasta disruptivas. Incluyen: enfocarse en el proceso (los resultados son consecuencia del proceso), adoptar pensamiento científico (ciclos de experimentación y aprendizaje), fluir y jalar valor (flujo continuo sin interrupciones), asegurar calidad en la fuente (detectar y corregir errores en el punto de origen), y buscar la perfección (meta aspiracional que genera una mentalidad de mejora constante).
+   pasos_accionables: ['Mapear procesos clave y evaluar su estabilidad y capacidad', 'Implementar ciclos de experimentación tipo PDCA para validar mejoras', 'Diseñar flujo continuo de valor eliminando interrupciones y esperas', 'Establecer controles de calidad en el origen de cada proceso', 'Definir metas aspiracionales de perfección como guía de mejora continua']
+   entregable_esperado: Plan de mejora continua con procesos priorizados, ciclos de experimentación definidos y controles de calidad en la fuente
+
+====================================================================================================
+PUESTO 146 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE key_partners_hypothesis -- paso 5 casado: Actualiza el Business Model Canvas con los socios identificados
+   (todos los pasos de la madre, para contexto: ['Lista los socios potenciales, los primarios y sus candidatos suplentes, clasificados en los cuatro tipos: alianzas estratégicas, coopetición, desarrollo conjunto de negocio y relaciones con proveedores clave', 'Define en una tabla de tres columnas qué proveerá cada socio y qué recibirá de la empresa a cambio: nombre del socio, qué provee, qué ofreces tú', 'Evalúa la flexibilidad de cada proveedor en tiempos de entrega, tamaños de pedido, crédito, precio y condiciones', 'Distingue claramente entre socios y recursos clave', 'Actualiza el Business Model Canvas con los socios identificados', 'Planea la validación posterior con reuniones reales con cada socio candidato'])
+   entregable_esperado de la madre: Tabla de socios clave con columnas: nombre del socio, tipo de relación, qué provee, y qué ofrece la empresa a cambio como contraprestación, con los candidatos suplentes identificados y la validación con reuniones reales ya planeada
+----------------------------------------------------------------------------------------------------
+HIJO actualizar_business_model_canvas_tuneup
+   titulo: Actualización Iterativa del Business Model Canvas ('Tune-up')
+   resumen_teorico: El Business Model Canvas se revisa como un 'tune-up' después de cada ronda de Customer Discovery, no como una revisión exhaustiva final. La propuesta de valor suele ser el elemento más afectado, ya que el feedback de clientes revela si tu producto realmente resuelve su problema. Los segmentos de clientes también deben reevaluarse cuando el producto resuena solo con un subconjunto del mercado. Si detectas que una hipótesis del modelo de negocio no se cumple con los resultados de las pruebas, ajusta también las hipótesis de ingresos según quién mostró entusiasmo real. Documenta hallazgos, sorpresas y decepciones de cada ronda para mantener trazabilidad de tus cambios.
+   pasos_accionables: ['Revisa tu propuesta de valor a la luz del feedback de clientes recibido', 'Reevalúa tus segmentos de clientes identificando si el producto resuena solo con un subconjunto', 'Ajusta tus hipótesis de ingresos según los segmentos que mostraron entusiasmo real', 'Documenta los cambios, sorpresas y decepciones como parte de un tune-up, no una revisión final']
+   entregable_esperado: Business Model Canvas actualizado con anotaciones de cambios en propuesta de valor, segmentos de cliente e hipótesis de ingresos
+
+====================================================================================================
+PUESTO 149 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE validacion_sistema_medicion -- paso 1 casado: Evalúa la capacidad de tu sistema de medición usando el análisis MSA
+   (todos los pasos de la madre, para contexto: ['Evalúa la capacidad de tu sistema de medición usando el análisis MSA', 'Usa un software estadístico (como Minitab) para hacer el análisis', 'Confirma que tus mediciones son confiables antes de fijar los estándares de control'])
+   entregable_esperado de la madre: Un reporte que valida tu sistema de medición y confirma su capacidad
+----------------------------------------------------------------------------------------------------
+HIJO capacidad_de_proceso
+   titulo: Capacidad de Proceso
+   resumen_teorico: La capacidad de proceso mide la uniformidad inherente de un proceso para producir dentro de especificaciones. Se cuantifica desde la etapa de planificación y sirve para decidir sobre la adecuación de procesos, elección de alternativas, necesidad de rediseño y, en control, para definir la frecuencia de medición y mantenimiento: a mayor estabilidad, menor necesidad de medición frecuente.
+   pasos_accionables: ['Recolectar datos históricos de desempeño del proceso', 'Calcular índices de capacidad (uniformidad) del proceso frente a especificaciones', 'Usar los resultados para decidir frecuencia de medición y mantenimiento', 'Determinar si el proceso requiere rediseño o si es apto para producción']
+   entregable_esperado: Análisis de capacidad de proceso con recomendación sobre frecuencia de control y necesidad de ajuste
+
+====================================================================================================
+PUESTO 150 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE sujetos_de_control -- paso 3 casado: Traducir la voz del cliente en características de producto (KPC)
+   (todos los pasos de la madre, para contexto: ['Identificar los procesos y productos clave a controlar', 'Definir los objetivos del proceso de trabajo', 'Traducir la voz del cliente en características de producto (KPC)', 'Identificar características de control de proceso (KCC) relacionadas', 'Seleccionar los sujetos de control finales basados en las fuentes disponibles (FMEA, regulaciones, DOE)'])
+   entregable_esperado de la madre: Lista de sujetos de control (KPCs y KCCs) documentada para el proceso
+----------------------------------------------------------------------------------------------------
+HIJO optimizacion_caracteristicas_diseno
+   titulo: Optimización de Características y Metas del Producto
+   resumen_teorico: Una vez completado el diseño preliminar, debe optimizarse para satisfacer tanto al cliente como al proveedor, minimizando costos combinados y superando a la competencia. La optimización requiere un enfoque organizado que balancee necesidades multiorganizacionales mediante técnicas como revisión de diseño, equipos multifuncionales y negociación estructurada.
+   pasos_accionables: ['Realizar revisiones de diseño formales en distintas etapas del desarrollo con especialistas externos al equipo', 'Conformar equipos multifuncionales que incluyan a todos los interesados en el resultado del diseño', 'Establecer reglas básicas de negociación estructurada entre clientes y proveedores antes de las reuniones', 'Aplicar herramientas de optimización como análisis competitivo, de vendibilidad, de valor, crítico y FMEA']
+   entregable_esperado: Diseño de producto optimizado con documentación de revisiones, decisiones de equipo multifuncional y resultados de negociaciones estructuradas
+
+====================================================================================================
+PUESTO 151 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE conditions_precedent_financing -- paso 3 casado: Negocia los términos de tu contrato como fundador ANTES de firmar el term sheet y de aceptar la exclusividad.
+   (todos los pasos de la madre, para contexto: ['Identifica qué partes del term sheet son vinculantes desde que lo firmas (honorarios legales, exclusividad o no-shop, ley aplicable).', 'Pregunta directamente al inversor si el trato ya fue aprobado por los socios de su fondo.', 'Negocia los términos de tu contrato como fundador ANTES de firmar el term sheet y de aceptar la exclusividad.', 'Evita comprometerte a pagar los honorarios legales del inversor si el trato no se cierra.'])
+   entregable_esperado de la madre: Lista clara de condiciones previas revisadas, con la aprobación de los socios del fondo confirmada antes de aceptar exclusividad.
+----------------------------------------------------------------------------------------------------
+HIJO entender_term_sheet
+   titulo: El Arte del Term Sheet
+   resumen_teorico: El term sheet es el documento que resume los términos propuestos de una inversión de capital de riesgo. Aunque hoy puede tener 8 páginas con cláusulas complejas, en esencia solo existen dos cosas que realmente importan en la negociación: economía (cuánto vale la empresa y quién recibe qué) y control (quién toma las decisiones). Entender esto evita perderse en detalles irrelevantes durante la negociación.
+   pasos_accionables: ['Antes de negociar, identificar qué cláusulas del term sheet afectan la economía (valoración, participación) y cuáles afectan el control (juntas, votos, protecciones)', 'Priorizar la negociación en estos dos ejes y no distraerse con cláusulas secundarias', 'Solicitar asesoría legal especializada en VC para revisar el documento completo', 'Identificar cláusulas que no afectan ni economía ni control (posibles tácticas de distracción).']
+   entregable_esperado: Checklist personal de términos de economía y control identificados antes de firmar cualquier term sheet
+
+====================================================================================================
+PUESTO 152 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE definiciones_operacionales_2 -- paso 2 casado: Establecer el criterio específico de aceptación o rechazo
+   (todos los pasos de la madre, para contexto: ['Definir claramente el método de prueba a utilizar', 'Establecer el criterio específico de aceptación o rechazo', 'Documentar la definición de forma comunicable para todo el personal involucrado', 'Verificar que múltiples inspectores apliquen el criterio de manera consistente'])
+   entregable_esperado de la madre: Un documento de definición operacional con método de prueba y criterios claros de aceptación/rechazo
+----------------------------------------------------------------------------------------------------
+HIJO muestreo_de_aceptacion
+   titulo: Muestreo de Aceptación
+   resumen_teorico: Proceso de evaluar una porción de producto en un lote para decidir aceptación o rechazo del lote completo. Ofrece ventajas económicas frente a la inspección 100%, reduce daño por manejo excesivo y minimiza errores por monotonía, aunque implica riesgos de muestreo (rechazar buenos lotes o aceptar malos).
+   pasos_accionables: ['Determinar si el objetivo es evaluar el lote inmediato o el proceso productivo', 'Definir el tamaño de muestra (n) y el criterio de aceptación (c)', 'Establecer los niveles de riesgo aceptables (riesgo del productor α y del consumidor β)', 'Seleccionar o diseñar un plan de muestreo (por atributos o variables)', 'Aplicar el plan y documentar decisiones de aceptación/rechazo por lote']
+   entregable_esperado: Plan de muestreo de aceptación documentado con n, c, y niveles de riesgo definidos
+
+====================================================================================================
+PUESTO 155 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE transformacion_calidad_compromiso_alta_direccion_japon -- paso 5 casado: Evita que la calidad quede como tarea exclusiva de un área aislada de tu negocio
+   (todos los pasos de la madre, para contexto: ['Asegúrate de que tú, y no solo quien se encarga de calidad, entiendas y asumas tu responsabilidad sobre la calidad, y busca formación para ello', 'Conecta la mejora de calidad con el cliente, entendiéndolo como la parte más importante de tu proceso', 'Extiende el aprendizaje de métodos estadísticos no solo a quien diseña o produce, sino también a quienes supervisan y ejecutan el trabajo diario', 'Sostén tu compromiso con la calidad durante años, no como un evento aislado', 'Evita que la calidad quede como tarea exclusiva de un área aislada de tu negocio'])
+   entregable_esperado de la madre: Un plan de sesiones sostenidas, contigo y con quienes te ayudan, enfocado en entender y asumir la responsabilidad de la calidad en todo el negocio
+----------------------------------------------------------------------------------------------------
+HIJO planificacion_calidad_crosby
+   titulo: Planificación de la Calidad en tu Negocio
+   resumen_teorico: Un área de calidad bien pensada se paga sola con el tiempo, aunque al principio cueste. Por eso la planificación debe ser el centro de cómo manejas la calidad. Todo lo que pase en tu sistema de calidad debe salir de un plan, no de una reacción improvisada. Cada tarea debe quedar anotada y con una línea de acción clara, incluso si esa línea es decidir que no vas a hacer nada al respecto.
+   pasos_accionables: ['Anota todas las actividades de calidad que existen en tu negocio, incluidas las que parecen extra, como programas de mejora', 'Define una línea de acción clara para cada tarea que identifiques', 'Incluye actividades como explicarle a alguien nuevo cómo funciona la calidad en tu negocio', 'Evita el modo de esperar a que suene el teléfono para reaccionar']
+   entregable_esperado: Un plan escrito de las actividades de calidad de tu negocio, con quién se encarga de cada una y qué línea de acción sigue
+
+====================================================================================================
+PUESTO 157 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE medir_lo_que_importa_no_solo_lo_facil -- paso 1 casado: Lista las métricas actuales de éxito de tu proyecto o producto.
+   (todos los pasos de la madre, para contexto: ['Lista las métricas actuales de éxito de tu proyecto o producto.', 'Pregúntate qué valores importantes (sociales, ambientales, de bienestar del usuario) no están siendo medidos.', 'Diseña al menos una métrica proxy para capturar un valor intangible relevante para tu modelo de negocio.', 'Revisa si estás optimizando por lo medible en detrimento de lo valioso pero invisible.'])
+   entregable_esperado de la madre: Tabla de métricas actuales vs. valores intangibles no medidos, con al menos una métrica nueva propuesta para cerrar la brecha.
+----------------------------------------------------------------------------------------------------
+HIJO metricas_calidad
+   titulo: Métricas de Calidad
+   resumen_teorico: Proporcionan mediciones específicas y detalladas sobre un atributo del proyecto, producto o servicio, y cómo debe medirse. Se consultan en el proceso de aseguramiento de calidad y se comparan contra los resultados reales en el proceso de control de calidad para determinar si se requiere acción correctiva.
+   pasos_accionables: ['Identificar el atributo del producto o proceso a medir', 'Definir la métrica específica (valor objetivo)', 'Establecer el método de medición', 'Documentar en formato estandarizado con ID único']
+   entregable_esperado: Tabla de métricas de calidad con atributos, valores objetivo y métodos de medición
+
+====================================================================================================
+PUESTO 159 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE sujetos_de_control -- paso 3 casado: Traducir la voz del cliente en características de producto (KPC)
+   (todos los pasos de la madre, para contexto: ['Identificar los procesos y productos clave a controlar', 'Definir los objetivos del proceso de trabajo', 'Traducir la voz del cliente en características de producto (KPC)', 'Identificar características de control de proceso (KCC) relacionadas', 'Seleccionar los sujetos de control finales basados en las fuentes disponibles (FMEA, regulaciones, DOE)'])
+   entregable_esperado de la madre: Lista de sujetos de control (KPCs y KCCs) documentada para el proceso
+----------------------------------------------------------------------------------------------------
+HIJO establecer_metas_caracteristicas
+   titulo: Establecimiento de Metas para Características del Producto
+   resumen_teorico: Una vez que elegiste las características principales de tu producto, tienes que fijar metas cuantificables (valores objetivo) para cada una. Estas metas deben ser medibles, óptimas, legítimas, comprensibles, aplicables y alcanzables. Para medir cada meta necesitas definir la unidad de medida, la forma de medirla y el valor objetivo, relacionándolos con lo que ya mediste sobre las necesidades de tu cliente.
+   pasos_accionables: ['Para cada característica que elegiste, define la unidad de medida apropiada', 'Determina cómo vas a medir si se cumple la meta', 'Establece el valor objetivo (meta) para cada característica', 'Verifica que la meta cumpla estos criterios: medible, óptima, legítima, comprensible, aplicable y alcanzable', 'Si dividiste el diseño en partes, integra los resultados de cada una']
+   entregable_esperado: Una tabla con las metas cuantificadas para cada característica de tu producto, integrada y validada por ti
+
+====================================================================================================
+PUESTO 160 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE escenarios_diseno_modelo_negocio -- paso 5 casado: Evalúa si un solo modelo de negocio sirve para todos los escenarios o si necesitas adaptarlo por segmento
+   (todos los pasos de la madre, para contexto: ['Define el tipo de escenario que vas a construir: de cliente (uso, contexto, deseos) o de entorno futuro (competencia, tecnología, sociedad)', 'Identifica los segmentos de clientes relevantes para tu innovación', 'Escribe una historia concreta y específica para cada segmento o futuro posible, describiendo su contexto', 'Cierra cada escenario con preguntas abiertas sobre canales, relaciones, propuesta de valor y por qué pagaría el cliente', 'Evalúa si un solo modelo de negocio sirve para todos los escenarios o si necesitas adaptarlo por segmento', 'Usa los escenarios de entorno futuro para anticipar cómo debería evolucionar tu modelo actual'])
+   entregable_esperado de la madre: Un set de 2 a 3 escenarios narrativos, de cliente y/o de entorno futuro, con preguntas de diseño asociadas a cada bloque del Business Model Canvas.
+----------------------------------------------------------------------------------------------------
+HIJO escenarios_de_evolucion_de_la_ia
+   titulo: Escenarios de Evolución de la IA para tu Negocio
+   resumen_teorico: Nadie sabe a qué velocidad va a avanzar la IA, y esperar a saberlo es una forma de decidir. En vez de apostar por un solo futuro, se trabaja con dos o tres escenarios plausibles de evolución, desde el avance lento y gradual hasta el salto de capacidad en pocos años, y se mira qué le pasa al negocio en cada uno. Lo que se busca no es acertar el futuro, sino tener escrito de antemano qué se hace en cada caso y qué señales avisan de hacia cuál se está moviendo la realidad.
+   pasos_accionables: ['Definir 2-3 escenarios plausibles de evolución de la IA para el sector, desde el crecimiento lineal de mejoras incrementales anuales hasta el exponencial de capacidad multiplicada 10x-100x en pocos años.', 'Identificar qué tareas críticas del negocio podrían automatizarse en cada escenario.', 'Evaluar el impacto de cada escenario en el modelo de negocio, la fuerza laboral y la propuesta de valor.', 'Diseñar un plan de contingencia o pivote que contemple al menos dos de los escenarios, para no quedar desprevenido.', 'Establecer señales de alerta temprana (regulatorias, tecnológicas, de mercado) que indiquen hacia qué escenario se está moviendo la realidad.', 'Revisar el análisis y ajustar la estrategia de adopción de IA periódicamente en función de esas señales, porque el ritmo real de avance puede cambiar el escenario más probable.']
+   entregable_esperado: Dos o tres escenarios de evolución de la IA con su impacto en el modelo de negocio, su plan de contingencia y las señales de alerta que avisan hacia cuál se mueve la realidad
+
+====================================================================================================
+PUESTO 162 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE inventario_conocimiento_estadistico_personal -- paso 4 casado: Integrar a este personal en proyectos de mejora de calidad y productividad
+   (todos los pasos de la madre, para contexto: ['Realizar un mapeo del personal con formación o interés en estadística, matemáticas o teoría de probabilidad', 'Identificar oportunidades para que estas personas trabajen bajo la guía de un líder estadístico competente', 'Facilitar la continuación de su educación estadística mediante cursos y mentoría', 'Integrar a este personal en proyectos de mejora de calidad y productividad'])
+   entregable_esperado de la madre: Inventario documentado de talento estadístico interno con plan de desarrollo y asignación a proyectos de mejora
+----------------------------------------------------------------------------------------------------
+HIJO roi_proyectos_calidad
+   titulo: Retorno de Inversión (ROI) en Proyectos de Mejora de Calidad
+   resumen_teorico: El ROI es la razón entre la ganancia estimada y los recursos estimados necesarios para un proyecto de mejora. Calcular el ROI de proyectos que buscan reducir el desperdicio crónico requiere estimar los costos actuales de mala calidad, la reducción potencial de costos si el proyecto tiene éxito, y los costos del diagnóstico y remedio necesarios. Muchas propuestas de mejora se quedan en el cajón porque nadie cuantificó su ROI, lo que impide comparar esta oportunidad con otras formas de usar el mismo dinero en tu negocio.
+   pasos_accionables: ['Estima el costo actual del desperdicio crónico asociado al proyecto que tienes en mente', 'Estima la reducción de costos potencial si el proyecto tiene éxito', 'Estima los costos de diagnóstico e implementación del remedio', 'Calcula el ROI como la razón entre la ganancia estimada y los recursos necesarios', 'Revisa el cálculo con la persona que te ayuda con las finanzas para que el número sea sólido antes de decidir', 'Documentar el ROI del proyecto para reportarlo a la dirección', 'Usar casos de éxito (benchmarks como Samsung Six Sigma) para justificar la inversión continua en breakthrough']
+   entregable_esperado: Un cálculo de ROI documentado y validado para el proyecto de mejora propuesto, listo para que decidas si vale la pena avanzar
+
+====================================================================================================
+PUESTO 163 | dominio entrega | clase D
+----------------------------------------------------------------------------------------------------
+MADRE reconocer_mercancia_peligrosa_disfrazada -- paso 4 casado: Capacitate tu mismo antes de despachar el primer envio de este tipo.
+   (todos los pasos de la madre, para contexto: ['Revisa si tu producto contiene liquidos inflamables, baterias, aerosoles o quimicos.', 'Busca la clasificacion oficial de ese tipo de producto (numero y nombre de envio).', 'Pregunta a tu courier si acepta ese producto y bajo que condiciones de empaque.', 'Capacitate tu mismo antes de despachar el primer envio de este tipo.', 'Guarda la documentacion exigida junto con cada envio de mercancia peligrosa.'])
+   entregable_esperado de la madre: Una lista de tus productos marcados como mercancia peligrosa o no, con su clasificacion oficial.
+----------------------------------------------------------------------------------------------------
+HIJO clasificar_tipo_paquete
+   titulo: Clasificar el tipo de paquete antes de despachar
+   resumen_teorico: Antes de empacar y despachar conviene identificar en qué categoría cae tu paquete: estándar, plano, alargado o pequeño, según sus dimensiones y volumen. Esto importa porque cada tipo enfrenta riesgos distintos en tránsito, como caídas, rotación o golpes concentrados en una esquina, y por eso pide refuerzos diferentes. También hay que anotar si el contenido es frágil o si puede derramarse, porque eso suma necesidades de protección adicionales. Esta clasificación no es un capricho de laboratorio: es una guía práctica para decidir cuánto acolchado usar, qué tipo de caja elegir y qué refuerzos aplicar antes de que el paquete salga de tus manos, evitando adivinar la protección al ojo cada vez que empacas algo nuevo.
+   pasos_accionables: ['Mide las tres dimensiones y calcula el volumen de tu paquete ya armado.', 'Compara esas medidas contra las categorías: volumen grande con dimensión corta es plano, una dimensión mucho mayor que las otras dos es alargado.', 'Marca si el contenido es frágil o si puede derramarse.', 'Anota la categoría en tu checklist de empaque antes de elegir caja y relleno.']
+   entregable_esperado: Una ficha por producto que indica su categoría de paquete y sus riesgos asociados en tránsito.
+
+====================================================================================================
+PUESTO 164 | dominio environmental | clase D
+----------------------------------------------------------------------------------------------------
+MADRE identificacion_proveedores_criticos -- paso 4 casado: Revisa los reportes de sostenibilidad de tu competencia para comparar
+   (todos los pasos de la madre, para contexto: ['Lista todos los materiales, insumos y servicios que compras', 'Identifica a tus proveedores por categoría (manufactura, insumos operativos, subcontratistas)', 'Prioriza a tus proveedores según su impacto en el valor de tu producto, el riesgo ambiental y tu reputación', 'Revisa los reportes de sostenibilidad de tu competencia para comparar'])
+   entregable_esperado de la madre: Tu lista priorizada de proveedores críticos con los criterios de riesgo e impacto documentados
+----------------------------------------------------------------------------------------------------
+HIJO validacion_externa_reportes
+   titulo: Validación Externa de Reportes de Sostenibilidad
+   resumen_teorico: Obtener validación de terceros sobre resultados reportados o atributos ambientales de productos puede aumentar la credibilidad de una empresa. Aunque el costo puede ser prohibitivo para pequeñas empresas, alternativas como el respaldo de ONGs reconocidas (ej. Sierra Club validando Clorox Green Works) pueden ser más significativas que una certificación contable tradicional.
+   pasos_accionables: ['Evaluar el costo-beneficio de una certificación externa completa vs. parcial', 'Considerar validar solo un subconjunto de datos críticos (ej. emisiones de carbono)', 'Buscar el respaldo de ONGs o líderes de opinión reconocidos en sostenibilidad', 'Formar comités de revisión externos con expertos reconocidos']
+   entregable_esperado: Sello o carta de validación de un tercero reconocido para el reporte o producto
+
+====================================================================================================
+PUESTO 165 | dominio core | clase D
+----------------------------------------------------------------------------------------------------
+MADRE tipos_de_riesgo_invencion_vs_mercado -- paso 4 casado: Si es ambos, combinar validación técnica con desarrollo de clientes
+   (todos los pasos de la madre, para contexto: ['Evaluar si el riesgo principal de tu proyecto es técnico (¿puede construirse?) o de mercado (¿lo querrán los clientes?)', 'Si es riesgo de invención, usar herramientas de simulación y validación técnica', 'Si es riesgo de mercado, aplicar el proceso de Customer Development', 'Si es ambos, combinar validación técnica con desarrollo de clientes'])
+   entregable_esperado de la madre: Una clasificación clara del tipo de riesgo dominante en el proyecto, que determine la metodología a seguir
+----------------------------------------------------------------------------------------------------
+HIJO fundadores_lideran_validacion
+   titulo: Lidera Tú la Validación con tus Clientes
+   resumen_teorico: Delegar la validación de clientes a ventas, marketing o desarrollo de negocios es un error común. Solo tú, como fundador, tienes la autoridad para decidir un cambio de rumbo (pivote) y el coraje de escuchar y transmitir el feedback negativo directamente de tus clientes, sin intermediarios; quienes ejecutan procesos ya conocidos no están preparados para la búsqueda creativa y el ajuste constante que exige esta etapa temprana. Sal tú mismo a hablar con tus clientes, apóyate en un pequeño equipo de datos y análisis (por ejemplo para pruebas A/B o canales digitales), pero no les delegues la decisión final de pivotar.
+   pasos_accionables: ['Participa tú mismo, en persona, en las conversaciones de validación con tus clientes', 'Evita delegar la validación a equipos de ventas, marketing o desarrollo de negocios en estas primeras etapas', 'Escucha y anota el feedback negativo directamente de tus clientes, sin intermediarios', 'Forma un pequeño equipo de apoyo (análisis de datos, pruebas A/B, SEO o PPC en canales digitales) que ejecute pero no decida', 'Mantén tú la autoridad para decidir si pivotas o no']
+   entregable_esperado: Un proceso de validación que lideras tú mismo, con el feedback de tus clientes registrado de primera mano y la decisión de pivotar en tus manos
+
+====================================================================================================
+PUESTO 166 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE definicion_y_concepto_de_aseguramiento_de_calidad -- paso 1 casado: Define hasta dónde llega el aseguramiento de calidad en tu negocio (planificación, control, mejora, revisión)
+   (todos los pasos de la madre, para contexto: ['Define hasta dónde llega el aseguramiento de calidad en tu negocio (planificación, control, mejora, revisión)', 'Establece evidencias concretas: inspecciones, pruebas, revisiones de tus planes', 'Diferencia el aseguramiento de calidad de otras tareas de calidad relacionadas', 'Comunica el propósito del aseguramiento a todos los que participan en tu negocio'])
+   entregable_esperado de la madre: Documento con tu política de aseguramiento de calidad, con el alcance y las evidencias que necesitas mostrar
+----------------------------------------------------------------------------------------------------
+HIJO planificacion_inicial_calidad
+   titulo: Planificación Inicial de Calidad en Manufactura
+   resumen_teorico: La planificación de calidad en manufactura inicia con la revisión del diseño del producto y del proceso para identificar características clave, determinar su importancia relativa, analizar el diagrama de flujo del proceso, evaluar capacidad y control del proceso, aplicar error-proofing, y validar sistemas de medición, buscando prevenir defectos y minimizar variabilidad.
+   pasos_accionables: ['Revisar el diseño del producto con personal de operaciones antes de su lanzamiento', 'Identificar características clave del producto y del proceso (KPCs)', 'Clasificar características por importancia (crítica, mayor, menor, incidental)', 'Analizar el diagrama de flujo del proceso por estación de trabajo', 'Validar la capacidad y los sistemas de medición del proceso']
+   entregable_esperado: Documento de plan de control de proceso con características clave identificadas y clasificadas
+
+====================================================================================================
+PUESTO 167 | dominio quality | clase D
+----------------------------------------------------------------------------------------------------
+MADRE planificacion_recoleccion_datos -- paso 7 casado: Evaluar supuestos del tamaño de muestra y del análisis
+   (todos los pasos de la madre, para contexto: ['Establecer objetivos de recolección de datos y formular la pregunta específica', 'Definir puntos de recolección de datos comprensivos', 'Seleccionar y capacitar recolectores de datos imparciales', 'Diseñar, preparar y probar métodos, formularios e instrucciones de recolección (incluir MSA)', 'Auditar el proceso de recolección y validar resultados', 'Filtrar y analizar los datos', 'Evaluar supuestos del tamaño de muestra y del análisis', 'Aplicar técnicas gráficas y estadísticas al problema original', 'Determinar si se necesitan más datos y análisis', 'Considerar un análisis de sensibilidad', 'Revisar que las conclusiones respondan al problema técnico original', 'Presentar los resultados en un informe claro con resumen ejecutivo', 'Determinar si las conclusiones aplican a otros problemas'])
+   entregable_esperado de la madre: Plan documentado de recolección y análisis de datos con preguntas formuladas, método de muestreo definido y plan de presentación de resultados
+----------------------------------------------------------------------------------------------------
+HIJO analisis_pareto_proyectos_elefante
+   titulo: Proyectos Tamaño Elefante y Análisis de Pareto
+   resumen_teorico: Algunos proyectos son demasiado amplios ('elephant-sized') y deben subdividirse en proyectos más manejables ('bite-sized') usando el análisis de Pareto como herramienta principal. Un equipo coordinador 'corta al elefante' y luego equipos separados atacan cada parte concurrentemente, acortando el tiempo total y evitando la frustración y pérdida de moral que ocurre cuando un solo equipo se extiende por años en un proyecto demasiado grande.
+   pasos_accionables: ['Identificar si el proyecto es demasiado amplio para un solo equipo', 'Aplicar análisis de Pareto para segmentar el problema en partes manejables', "Asignar un equipo coordinador para dividir el 'elefante'", 'Formar equipos paralelos para cada proyecto de tamaño reducido', 'Redactar metas separadas para el equipo coordinador y cada equipo de sub-proyecto']
+   entregable_esperado: Desglose documentado del proyecto grande en sub-proyectos con metas individuales
+
