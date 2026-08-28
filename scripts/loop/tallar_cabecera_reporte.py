@@ -637,7 +637,7 @@ def lado_fase04(vuelta, sufijo, fallos, con_miles=True):
     # leer aqui. Pero el propio MARCADOR_<LADO>.txt trae n en su primera
     # linea ("n = 3388 corte = 3388 huecos: [] dups(puesto): 0"): ahi SI es
     # una cifra suelta (a diferencia de "huecos", que en esa misma linea es
-    # una LISTA — "huecos: []" — y por eso no se talla esa celda con el mismo
+    # una LISTA (huecos: []) y por eso no se talla esa celda con el mismo
     # mecanismo). Se lee de ahi, del mismo fichero que A/B/C/D, sin inventar
     # una fuente nueva.
     mar = leer_opcional(p + "MARCADOR_" + sufijo + ".txt")
