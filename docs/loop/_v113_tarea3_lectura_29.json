@@ -1,0 +1,489 @@
+[
+ {
+  "puesto": 168,
+  "dominio": "core",
+  "madre": "formalizar_junta_asesora",
+  "hijo": "tamano_junta_directiva_vc",
+  "paso_casado": 6,
+  "clase": "D",
+  "direccion_leida": null,
+  "razon": "FALSO AMIGO POR TOKEN COMPARTIDO ('junta'): la madre formaliza la JUNTA ASESORA (advisors sin voto); el hijo decide el tamano de la JUNTA DIRECTIVA con inversionistas (board con voto y control). Son dos organos de gobierno distintos en una startup; el paso 6 (documentar tamano/composicion/operacion de la junta asesora) no lo ejecuta el hijo. NO RESUELTA. Test del banco 9.6.2 (el hijo cabe entero dentro de este paso, la madre conserva material propio): NO SE CUMPLE.",
+  "correcciones": {}
+ },
+ {
+  "puesto": 170,
+  "dominio": "quality",
+  "madre": "rol_director_calidad",
+  "hijo": "circulos_calidad_qc",
+  "paso_casado": 4,
+  "clase": "D",
+  "direccion_leida": null,
+  "razon": "El paso 4 (actuar como asesor estrategico en las decisiones de calidad que tu tomas) describe el ROL GENERAL del director; el hijo es la practica ESPECIFICA de circulos de calidad (dejar elegir tema, no controlar, reconocer al grupo), una tecnica participativa concreta que no es la ejecucion de ese rol asesor sino una practica distinta con su propia logica. NO RESUELTA. Test del banco 9.6.2 (el hijo cabe entero dentro de este paso, la madre conserva material propio): NO SE CUMPLE.",
+  "correcciones": {}
+ },
+ {
+  "puesto": 171,
+  "dominio": "core",
+  "madre": "canales_distribucion",
+  "hijo": "ocho_fases_experiencia_cliente",
+  "paso_casado": 3,
+  "clase": "D",
+  "direccion_leida": null,
+  "razon": "El paso 3 (evaluar la integracion entre canales para una experiencia coherente) es sobre CANALES DE DISTRIBUCION (Osterwalder); el hijo es el marco de las OCHO FASES DE EXPERIENCIA DEL CLIENTE (Coleman), un framework distinto de otro autor que no ejecuta la integracion de canales. FALSO AMIGO POR TOKEN COMPARTIDO ('experiencia de cliente'). NO RESUELTA. Test del banco 9.6.2 (el hijo cabe entero dentro de este paso, la madre conserva material propio): NO SE CUMPLE.",
+  "correcciones": {}
+ },
+ {
+  "puesto": 173,
+  "dominio": "quality",
+  "madre": "establecer_diseno_final_producto",
+  "hijo": "establecer_metas_caracteristicas",
+  "paso_casado": 1,
+  "clase": "D",
+  "direccion_leida": null,
+  "razon": "El paso 1 (definir como autorizar y publicar el diseno final ya terminado) es un paso de GOBERNANZA Y CIERRE; el hijo fija METAS para caracteristicas, una actividad de planificacion TEMPRANA que logicamente precede a publicar un diseno final, no su ejecucion. Segundo ejemplar del NODO IMAN establecer_metas_caracteristicas (ver 159): aqui tampoco calza. NO RESUELTA. Test del banco 9.6.2 (el hijo cabe entero dentro de este paso, la madre conserva material propio): NO SE CUMPLE.",
+  "correcciones": {}
+ },
+ {
+  "puesto": 176,
+  "dominio": "quality",
+  "madre": "constraint_management",
+  "hijo": "caso_estudio_benchmarking_terminal",
+  "paso_casado": 4,
+  "clase": "D",
+  "direccion_leida": null,
+  "razon": "El paso 4 (elevar el desempeno de la restriccion mediante inversion o mejora) es un principio GENERICO de la Teoria de las Restricciones; el hijo es un CASO DE ESTUDIO DE BENCHMARKING con una metodologia distinta (costos controlables, rediseno organizacional, mantenimiento por riesgo, repetir benchmarking anual) que no ejecuta ese principio TOC. NO RESUELTA. Test del banco 9.6.2 (el hijo cabe entero dentro de este paso, la madre conserva material propio): NO SE CUMPLE.",
+  "correcciones": {}
+ },
+ {
+  "puesto": 178,
+  "dominio": "quality",
+  "madre": "ingenieria_calidad_proveedores",
+  "hijo": "desarrollar_estrategias_largo_plazo",
+  "paso_casado": 4,
+  "clase": "D",
+  "direccion_leida": null,
+  "razon": "El paso 4 (desarrollar relaciones de largo plazo con PROVEEDORES para conocer su cultura de calidad) es especifico de ingenieria de proveedores; el hijo es un ejercicio de ESTRATEGIA GENERAL DEL NEGOCIO (cinco areas clave, FODA, 4 a 5 estrategias), sin relacion con proveedores. FALSO AMIGO POR TOKEN COMPARTIDO ('largo plazo' / 'estrategias'). NO RESUELTA. Test del banco 9.6.2 (el hijo cabe entero dentro de este paso, la madre conserva material propio): NO SE CUMPLE.",
+  "correcciones": {}
+ },
+ {
+  "puesto": 181,
+  "dominio": "environmental",
+  "madre": "valor_intangible_sostenibilidad",
+  "hijo": "alineacion_engagement_estrategia_general",
+  "paso_casado": 1,
+  "clase": "D",
+  "direccion_leida": null,
+  "razon": "El paso 1 (incorporar metricas de sostenibilidad en el seguimiento del negocio) es sobre MEDICION Y TRACKING; el hijo es sobre ALINEAR AL EQUIPO Y LIDERAR CON EL EJEMPLO (mostrar con hechos, elegir lideres creibles, reconocer errores), una practica de cultura y liderazgo que no ejecuta la incorporacion de metricas. FALSO AMIGO POR TOKEN COMPARTIDO ('engagement'/'compromiso'). NO RESUELTA. Test del banco 9.6.2 (el hijo cabe entero dentro de este paso, la madre conserva material propio): NO SE CUMPLE.",
+  "correcciones": {}
+ },
+ {
+  "puesto": 183,
+  "dominio": "core",
+  "madre": "no_shop_agreement",
+  "hijo": "dividends_terms",
+  "paso_casado": 2,
+  "clase": "D",
+  "direccion_leida": null,
+  "razon": "Las dos son clausulas del mismo libro (Venture Deals) y del mismo term sheet, pero SIN NINGUNA RELACION DE CONTENIDO: la madre es la clausula de exclusividad (no shop) y el hijo la clausula de dividendos. El paso 2 (esta clausula es vinculante desde la firma, a diferencia del resto) no lo ejecuta el hijo, que habla de porcentaje acumulativo, impacto en escenarios y aprobacion del consejo. Es el emparejamiento mas debil del tramo: mismo objeto general (term sheet) y ninguna accion compartida. NO RESUELTA. Test del banco 9.6.2 (el hijo cabe entero dentro de este paso, la madre conserva material propio): NO SE CUMPLE.",
+  "correcciones": {}
+ },
+ {
+  "puesto": 6,
+  "dominio": "environmental",
+  "madre": "issue_spotting_ambiental",
+  "hijo": "triple_bottom_line_2",
+  "paso_casado": 2,
+  "clase": "D",
+  "direccion_leida": "issue_spotting_ambiental -> triple_bottom_line_2",
+  "razon": "Su paso 2, 'Decide si tu enfoque sera solo ambiental o si vas a incluir tambien lo social y economico', es UNA LINEA de decision, y triple_bottom_line_2 trae el procedimiento del lado social: identificar los asuntos sociales, evaluar practicas laborales, de diversidad y de derechos humanos en la cadena de valor, e integrar metricas sociales junto a las ambientales.",
+  "correcciones": {
+   "correccion_v104": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "issue_spotting_ambiental -> triple_bottom_line_2",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (primer brazo: el hijo no cabe entero en el paso 2, que es una DECISION de alcance, no un procedimiento de deteccion social; 'triple bottom line' es etiqueta parentetica de una de las dos alternativas de esa decision) y banco 9.6.3 (procedimiento en los dos lados: el par es SANO), no la mencion literal de 'triple bottom line'",
+    "razon": "CORRECCION DECLARADA (vuelta 104, TAREA 4.3, barrido dirigido por la especie del 28, lectura a ciegas propia). El texto viejo de razon y direccion_leida NO SE BORRA. Leidos hoy enteros dataset/nodos/issue_spotting_ambiental.json y dataset/nodos/triple_bottom_line_2.json y 9.6.2/9.6.3 del banco enteros: el paso 2 de la madre ('Decide si tu enfoque sera solo ambiental o si vas a incluir tambien lo social y economico') es una DECISION binaria de alcance; su objeto es la eleccion misma, no un procedimiento de deteccion social. Los tres pasos del hijo (identificar issues sociales, evaluar practicas laborales/diversidad/derechos humanos, integrar metricas sociales) no aparecen en ningun paso de la madre: los pasos 3 y 4 de la madre son especificamente AMBIENTALES (inside-out/outside-in de recursos naturales y toxicos), nunca sociales. La senal de los entregables no salva la direccion: el entregable de la madre pide una lista 'segun si el impacto viene de adentro hacia afuera o de afuera hacia adentro' (ejes ambientales), no menciona practicas laborales ni cadena de valor. El 9.6.3 muestra PROCEDIMIENTO EN LOS DOS LADOS: la madre conserva el suyo (revisar los 12 problemas, inside-out, outside-in, anotar y priorizar) y el hijo el suyo (identificar issues sociales, evaluar practicas, integrar metricas), sin que ninguno toque al otro: SANO. SE MUEVE: el par 6 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia."
+   }
+  }
+ },
+ {
+  "puesto": 8,
+  "dominio": "quality",
+  "madre": "analisis_de_sistemas_de_medicion_msa",
+  "hijo": "capacidad_de_proceso_2",
+  "paso_casado": 3,
+  "clase": "D",
+  "direccion_leida": "analisis_de_sistemas_de_medicion_msa -> capacidad_de_proceso_2",
+  "razon": "Su paso 3, 'Verificar que el proceso de medicion este bajo control estadistico mediante carta de control', es UNA LINEA, y capacidad_de_proceso_2 trae el procedimiento de la carta: elegir la unidad, recolectar unos tres meses de datos, construir las cartas, decidir si esta dentro de limites e intervenir SOBRE EL SISTEMA y no sobre el individuo, que es materia propia del hijo y queda fuera de la madre.",
+  "correcciones": {
+   "correccion_v104": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "analisis_de_sistemas_de_medicion_msa -> capacidad_de_proceso_2",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (primer brazo: 'capacidad de proceso' NO aparece en el paso 3 en ninguna forma, ni como objeto ni como ejemplo/condicion; el paso verifica el control estadistico del SISTEMA DE MEDICION, un topico distinto de la capacidad del PROCESO DE PRODUCCION) y banco 9.6.3 (procedimiento en los dos lados: SANO), no el vocabulario compartido 'control estadistico'/'carta de control'",
+    "razon": "CORRECCION DECLARADA (vuelta 104, TAREA 4.3, barrido dirigido por la especie del 28, lectura a ciegas propia). El texto viejo NO SE BORRA. Leidos hoy enteros dataset/nodos/analisis_de_sistemas_de_medicion_msa.json y dataset/nodos/capacidad_de_proceso_2.json y 9.6.2/9.6.3 enteros: la madre es un estudio MSA/Gauge R&R (validar que el INSTRUMENTO DE MEDICION es confiable); el paso 3 verifica que el PROCESO DE MEDICION este en control ANTES de confiar en el Gauge R&R, un paso interno de esa validacion. El hijo es un estudio de CAPACIDAD DEL PROCESO DE PRODUCCION (seleccionar unidad, recolectar ~3 meses de datos, construir cartas, decidir limites, intervenir sobre el sistema): un topico distinto (el proceso productivo, no el sistema de medicion) que ningun paso de la madre desarrolla. La senal de los entregables lo confirma: la madre entrega un 'informe de estudio MSA/Gauge R&R con repetibilidad, reproducibilidad y aceptabilidad del sistema de medicion'; el hijo entrega una 'carta de control con limites de capacidad del proceso', un producto distinto que la madre nunca pide. El 9.6.3 muestra PROCEDIMIENTO EN LOS DOS LADOS: la madre conserva el suyo entero (metodo de prueba, fuentes de variabilidad, Gauge R&R, 5,15 sigma, calibracion) y el hijo el suyo (seleccion de unidad, recoleccion, cartas, limites, intervencion): SANO. SE MUEVE: el par 8 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia."
+   }
+  }
+ },
+ {
+  "puesto": 20,
+  "dominio": "core",
+  "madre": "waterfall_vs_agile_development",
+  "hijo": "modelo_customer_development",
+  "paso_casado": 3,
+  "clase": "D",
+  "direccion_leida": "waterfall_vs_agile_development -> modelo_customer_development",
+  "razon": "Mismo paso 3 que el par 13, SEGUNDO hijo de esa misma linea, con procedimiento propio: identificar en que paso esta la startup, formular hipotesis antes de cada paso, disenar experimentos fuera del edificio, evaluar en cada senal de alto si hay velocidad de escape, y estar dispuesto a retroceder. Ver la nota de figuras.",
+  "correcciones": {
+   "correccion_v105": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "waterfall_vs_agile_development -> modelo_customer_development",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (test de reconocimiento, señal de entregables)",
+    "razon": "CORRECCION DECLARADA (vuelta 105, TAREA 3, relectura conjunta con el auditor, acta de la vuelta 104, discutible 1). El texto viejo de razon y direccion_leida NO SE BORRA: esta correccion se anade aparte. Leidos hoy los dos nodos enteros y el banco 9.6.2 y 9.6.3 enteros. El primer brazo del test de reconocimiento del 9.6.2 falla: el paso 3 de la madre (\"Alinear el proceso de desarrollo de producto con el proceso de Customer Development\") pide una accion de COORDINACION (alinear), no la ejecucion de los cinco pasos internos que modelo_customer_development trae (identificar el paso actual, formular hipotesis, disenar experimentos, evaluar senales de alto, estar dispuesto a retroceder): ese contenido es el MODELO en si, no el acto de alinearse con el, y ya existe un hijo que si despliega literalmente la alineacion (par 13, desarrollo_de_clientes_customer_development, cuyo procedimiento combina el aprendizaje de Customer Development CON ingenieria agil). La senal de los entregables (9.6.2, la que decide mas rapido) confirma: la madre entrega \"una decision documentada sobre la metodologia de desarrollo de producto a utilizar\" (una eleccion waterfall/agile); el hijo entrega \"diagrama de flujo del proceso de Customer Development con indicacion clara del paso actual\" (un estado del proceso de CD): dos productos sin relacion de contenido en comun. El contra-caso del auditor (\"alinearse con el exige recorrerlo\") se examino y NO gano: alinear dos procesos es una accion de coordinacion que no exige ejecutar los pasos internos del proceso ajeno, y la nota de figuras que declara a este puesto SEGUNDO hijo de la linea del par 13 no valida por si sola que ESTE hijo en particular pase el test; solo el par 13 lo pasa. SE SOSTIENE EL CASO DEL AUDITOR: el par pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia. Por TAREA 3.4 del encargo: no toca al par 13 (esta correccion NO decide contra el auditor, asi que la clausula condicional del encargo no aplica; el par 13 sigue RESUELTA sin tocar)."
+   }
+  }
+ },
+ {
+  "puesto": 21,
+  "dominio": "core",
+  "madre": "build_measure_learn",
+  "hijo": "value_proposition_canvas",
+  "paso_casado": 1,
+  "clase": "D",
+  "direccion_leida": "build_measure_learn -> value_proposition_canvas",
+  "razon": "Su paso 1, 'Paso 0: Generar una hipotesis clara a partir de los Canvas de Value Proposition y Business Model', es UNA LINEA que nombra el artefacto, y value_proposition_canvas trae el procedimiento de construirlo: descargar la plantilla, dibujar el perfil del cliente, dibujar el mapa de valor, iterar los dos lados hasta el encaje, comunicarlo y usarlo como marcador en las conversaciones.",
+  "correcciones": {
+   "correccion_v105": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "build_measure_learn -> value_proposition_canvas",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (test de reconocimiento, senal de entregables)",
+    "razon": "CORRECCION DECLARADA (vuelta 105, TAREA 4.4, lectura entera a ciegas de los SATELITE de la TAREA 4.3). El texto viejo de razon y direccion_leida NO SE BORRA. Leidos hoy los dos nodos enteros y el banco 9.6.2 y 9.6.3 enteros. El paso 0 de la madre (\"Generar una hipotesis clara a partir de los Canvas de Value Proposition y Business Model\") usa el Value Proposition Canvas como INSUMO ya construido (complemento de origen, 'a partir de X') para el acto de GENERAR UNA HIPOTESIS; el hijo value_proposition_canvas describe en cambio como CONSTRUIR ese canvas (descargar plantilla, dibujar Customer Profile y Value Map, iterar hasta el Fit, comunicar y usar como scoreboard): es el procedimiento que PRODUCE el insumo, no el acto de generar una hipotesis a partir de el. Primer brazo del 9.6.2 falla. La senal de entregables lo confirma: la madre entrega 'un ciclo completo documentado de Build-Measure-Learn con hipotesis, artefacto de prueba, metricas y aprendizajes' (el ciclo completo); el hijo entrega 'Canvas completo con Customer Profile y Value Map mapeados' (un insumo previo, no el ciclo ni la hipotesis). La madre conserva materia propia intacta: pasos 1 (construir el artefacto), 2 (medir) y 3 (aprender). SE MUEVE: el par pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia."
+   }
+  }
+ },
+ {
+  "puesto": 24,
+  "dominio": "core",
+  "madre": "preparacion_preguntas_problema_precall",
+  "hijo": "preguntas_situacion",
+  "paso_casado": 4,
+  "clase": "D",
+  "direccion_leida": "preparacion_preguntas_problema_precall -> preguntas_situacion",
+  "razon": "Su paso 4, 'Usar estas preguntas para minimizar preguntas de situacion irrelevantes', es UNA LINEA, y preguntas_situacion trae el procedimiento de esa minimizacion: investigar al cliente antes para reducir preguntas innecesarias, limitarlas a lo estrictamente necesario, y usarlas como apertura breve antes de pasar al problema.",
+  "correcciones": {
+   "correccion_v104": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "preparacion_preguntas_problema_precall -> preguntas_situacion",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (primer brazo: el hijo vive DENTRO de una subordinada de finalidad 'para minimizar X', no como objeto de 'usar'; el objeto real de 'usar' son las preguntas de PROBLEMA, tema propio de la madre) y banco 9.6.3 (procedimiento en los dos lados: SANO), no la palabra compartida 'preguntas de situacion'",
+    "razon": "CORRECCION DECLARADA (vuelta 104, TAREA 4.3, barrido dirigido por la especie del 28, lectura a ciegas propia). El texto viejo NO SE BORRA. Leidos hoy enteros dataset/nodos/preparacion_preguntas_problema_precall.json y dataset/nodos/preguntas_situacion.json y 9.6.2/9.6.3 enteros: el paso 4 de la madre ('Usar estas preguntas para minimizar preguntas de situacion irrelevantes') tiene como OBJETO 'estas preguntas' (las preguntas de PROBLEMA, tema entero de la madre); 'preguntas de situacion' aparece solo dentro de una subordinada de FINALIDAD ('para minimizar X'), no como lo que el paso manda construir. Los tres pasos del hijo (investigar al cliente antes, limitar preguntas de situacion a lo necesario, usarlas como apertura breve) no aparecen en ningun otro paso de la madre, que trata solo preguntas de problema (listar problemas, redactar preguntas de problema, revisar antes de la llamada, identificar problemas tipicos, formular preguntas de insatisfaccion, escuchar). La senal de los entregables lo confirma: el entregable de la madre es una 'lista de problemas con preguntas de PROBLEMA asociadas'; el del hijo es una 'lista corta y priorizada de preguntas de SITUACION', producto distinto. El 9.6.3 muestra PROCEDIMIENTO EN LOS DOS LADOS: SANO. SE MUEVE: el par 24 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia."
+   }
+  }
+ },
+ {
+  "puesto": 25,
+  "dominio": "quality",
+  "madre": "histograma_calidad",
+  "hijo": "capacidad_del_proceso",
+  "paso_casado": 4,
+  "clase": "D",
+  "direccion_leida": "histograma_calidad -> capacidad_del_proceso",
+  "razon": "Su paso 4, 'Evaluar el centrado, ancho y forma del histograma para determinar capacidad del proceso', es UNA LINEA, y capacidad_del_proceso trae el procedimiento de determinarla. Mismo hijo que el par 18 con otra madre; las dos madres lo nombran en una linea y ninguna lo desarrolla.",
+  "correcciones": {
+   "correccion_v104": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "histograma_calidad -> capacidad_del_proceso",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (primer brazo: 'capacidad del proceso' vive DENTRO de una subordinada de finalidad 'para determinar X', no como objeto de 'evaluar'; ademas el hijo usa un metodo DISTINTO al de la madre, formulas de control estadistico contra lectura visual de histograma) y banco 9.6.3 (procedimiento en los dos lados: SANO), no la meta compartida 'capacidad del proceso'",
+    "razon": "CORRECCION DECLARADA (vuelta 104, TAREA 4.3, barrido dirigido por la especie del 28, lectura a ciegas propia). El texto viejo NO SE BORRA (incluida la nota vieja 'mismo hijo que el par 18 con otra madre', que ya admitia que 'ninguna lo desarrolla', sintoma que esta correccion resuelve). Leidos hoy enteros dataset/nodos/histograma_calidad.json y dataset/nodos/capacidad_del_proceso.json y 9.6.2/9.6.3 enteros: el paso 4 de la madre ('Evaluar el centrado, ancho y forma del histograma para determinar capacidad del proceso') tiene como OBJETO 'el centrado, ancho y forma del histograma'; 'capacidad del proceso' aparece solo dentro de una subordinada de FINALIDAD. Ademas el METODO es distinto: la madre evalua capacidad LEYENDO LA FORMA DE UN HISTOGRAMA (visual/grafico); el hijo la calcula con formulas de control estadistico (constantes d2, A2) sobre un proceso YA verificado en control via graficos de corrida o X-barra/R, un metodo cuantitativo distinto que ningun paso de la madre desarrolla. La senal de los entregables lo confirma: la madre entrega 'histograma graficado ... y analisis de capacidad DEL PROCESO', autosuficiente por su propio metodo; el hijo entrega un 'informe de capacidad con limites naturales calculados a partir de datos en control estadistico', metodo paralelo, no un desarrollo del histograma. El 9.6.3 muestra PROCEDIMIENTO EN LOS DOS LADOS: la madre conserva construir la distribucion, graficar barras y agregar limites de especificacion; el hijo conserva verificar control, calcular media/rango, aplicar formulas y comunicar a diseno: SANO. SE MUEVE: el par 25 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia. NOTA: el par 18 (dmaic_fase_measure -> capacidad_del_proceso) no se toca aqui, ya fue evaluado por separado en la TAREA 4.2 de esta misma vuelta y dio OBJETO (objeto directo del segundo verbo coordinado 'medir su capacidad', sin subordinada)."
+   }
+  }
+ },
+ {
+  "puesto": 28,
+  "dominio": "core",
+  "madre": "timing_solicitud_referidos",
+  "hijo": "fase_adopt_ciclo_cliente",
+  "paso_casado": 5,
+  "clase": "D",
+  "direccion_leida": "timing_solicitud_referidos -> fase_adopt_ciclo_cliente",
+  "razon": "Su paso 5, 'Comunica el programa en momentos clave del ciclo de vida, por ejemplo la fase Adopt', es UNA LINEA que NOMBRA la fase, y fase_adopt_ciclo_cliente trae el procedimiento de esa fase: definir que comportamientos indican adopcion, disenar interacciones para los seis canales, implementar la encuesta de exito y establecer el ritual de hitos. Es la formula del 9.6.2: un procedimiento nombrado en una linea.",
+  "correcciones": {
+   "correccion_v103": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "timing_solicitud_referidos -> fase_adopt_ciclo_cliente",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (primer brazo del test de reconocimiento: el hijo no cabe entero en el paso 5, 'fase Adopt' es ejemplo de CUANDO, no objeto del imperativo) y banco 9.6.3 (procedimiento en los dos lados: el par es SANO), no la mencion literal de 'fase Adopt' dentro del paso 5",
+    "razon": "CORRECCION DECLARADA (vuelta 103, TAREA 2, relectura conjunta con el auditor, acta de la vuelta 102, caso escrito sobre el par 28). El texto viejo de razon y direccion_leida NO SE BORRA. Leidos hoy dataset/nodos/timing_solicitud_referidos.json y dataset/nodos/fase_adopt_ciclo_cliente.json, y 9.6.2 y 9.6.3 del banco enteros: el test de reconocimiento del 9.6.2 falla en su PRIMER BRAZO. El paso 5 de la madre ('Comunica el programa en momentos clave del ciclo de vida (ej: fase Adopt/Advocate)') tiene como OBJETO del imperativo 'el programa' (de referidos/testimonios); 'fase Adopt' entra solo como EJEMPLO PARENTETICO de CUANDO comunicarlo, no como lo que se comunica. Los cuatro pasos del hijo (definir metricas de adopcion, disenar interacciones para seis canales, implementar encuesta de exito, establecer ritual de hitos) no comunican ningun programa de referidos en ningun paso: el hijo NO cabe entero dentro del paso 5. La senal de los entregables (9.6.2) lo confirma: la madre entrega 'definicion documentada del punto de activacion optimo... con automatizacion configurada'; el hijo entrega 'mapa de touchpoints de la fase Adopt con al menos una accion por canal', que no es parte de aquello ni es 'el primero de dos productos' como en el ejemplar del 2.215. Y el 9.6.3 (que queda fuera del solape, en que lado) muestra PROCEDIMIENTO EN LOS DOS LADOS: la madre conserva entero el suyo (identificar punto de logro, configurar disparador automatizado, evitar solicitud inmediata, validar con datos) y el hijo el suyo (metricas de adopcion, seis canales, encuesta, ritual de hitos), sin que ninguno toque al otro: 'procedimiento en los dos lados, el par es SANO'. SE SOSTIENE EL CASO DEL AUDITOR (acta 102): el par 28 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia (banco 9.6.1 rama contenido, tercera fila del 9.22: CONTINUA)."
+   }
+  }
+ },
+ {
+  "puesto": 29,
+  "dominio": "quality",
+  "madre": "abolir_inspeccion_masiva",
+  "hijo": "control_estadistico_del_proceso",
+  "paso_casado": 5,
+  "clase": "D",
+  "direccion_leida": "abolir_inspeccion_masiva -> control_estadistico_del_proceso",
+  "razon": "Su paso 5, 'Reduce gradualmente la inspeccion masiva a medida que tu proceso demuestre estar en control estadistico', es UNA LINEA que nombra el control estadistico, y control_estadistico_del_proceso trae sus siete pasos. La madre conserva medir el costo de la inspeccion al 100%, el muestreo aleatorio y la reserva de la inspeccion total para casos criticos.",
+  "correcciones": {
+   "correccion_v104": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "abolir_inspeccion_masiva -> control_estadistico_del_proceso",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (primer brazo del test de reconocimiento: el hijo no cabe entero en el paso 5, 'a medida que ... control estadistico' es subordinada de CUANDO, no objeto del imperativo; el contra-caso de la senal de entregables, patron del 2.215, examinado y rechazado: un solo plan describiendo su estado final, no dos entregables separados) y banco 9.6.3 (procedimiento en los dos lados: el par es SANO), no la mencion literal de 'control estadistico' dentro del paso 5",
+    "razon": "CORRECCION DECLARADA (vuelta 104, TAREA 3, relectura conjunta con el auditor, acta de la vuelta 103, caso Y contra-caso escritos por el auditor sobre el par 29). El texto viejo de razon y direccion_leida NO SE BORRA. Leidos hoy enteros dataset/nodos/abolir_inspeccion_masiva.json y dataset/nodos/control_estadistico_del_proceso.json, y 9.6.2 y 9.6.3 del banco enteros: el test de reconocimiento del 9.6.2 falla en su PRIMER BRAZO, la misma especie que el par 28 de esta misma vuelta. El paso 5 de la madre ('Reduce gradualmente la inspeccion masiva a medida que tu proceso demuestre estar en control estadistico') tiene como OBJETO del imperativo 'la inspeccion masiva' (reducirla); 'estar en control estadistico' entra como SUBORDINADA DE CUANDO ('a medida que'), no como lo que el paso manda hacer, igual que 'fase Adopt' en el 28. Los siete pasos del hijo (recolectar datos, construir graficos X-barra y R, identificar y eliminar causas especiales, calcular capacidad, distinguir control de cumplir especificaciones, iniciar intervencion en el sistema, distinguir cambiar el nivel de reducir la dispersion) no reducen ninguna inspeccion en ningun paso: el hijo NO cabe entero dentro del paso 5. EL CONTRA-CASO DEL AUDITOR (senal de los entregables, patron del 2.215) SE EXAMINA Y NO GANA: la madre entrega 'Plan de transicion de inspeccion masiva a inspeccion por muestreo aleatorio y control estadistico de proceso'; a diferencia del 2.215 ('presupuesto MAS fuente de fondos', dos sustantivos-producto distintos separados por 'mas'), aqui 'muestreo aleatorio y control estadistico de proceso' nombra el ESTADO FINAL al que transita UN solo plan, no dos entregables separados de los que el hijo produzca 'el primero de dos'. Y el hijo entrega 'grafico de control validado ... con causas especiales documentadas y eliminadas', que es apenas UNO de los siete pasos del hijo (el paso 2): los otros seis (recoleccion de datos, capacidad, la distincion control/especificaciones, intervencion en el sistema, nivel vs dispersion) no aparecen en el entregable de la madre en ninguna forma. El 9.6.3 (que queda fuera del solape, en que lado) muestra PROCEDIMIENTO EN LOS DOS LADOS, mas marcado que en el 28: la madre conserva entero el suyo (medir costo de inspeccion al 100%, analizar causa raiz, implementar muestreo aleatorio, redisenar el proceso, reservar inspeccion total para casos criticos) y el hijo el suyo (los siete pasos de arriba), sin que ninguno toque al otro: 'procedimiento en los dos lados, el par es SANO'. SE SOSTIENE EL CASO DEL AUDITOR (acta 103, 4.3): el par 29 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia (banco 9.6.1 rama contenido, tercera fila del 9.22: CONTINUA). Por 3.4 del encargo: el argumento de los entregables NO gano aqui, asi que los pares 28 y 40 (ya NO RESUELTA por ese mismo argumento en la vuelta 103) no quedan tocados por esta decision."
+   }
+  }
+ },
+ {
+  "puesto": 31,
+  "dominio": "quality",
+  "madre": "control_estadistico_del_proceso",
+  "hijo": "causas_comunes_vs_especiales",
+  "paso_casado": 3,
+  "clase": "D",
+  "direccion_leida": "control_estadistico_del_proceso -> causas_comunes_vs_especiales",
+  "razon": "Su paso 3, 'Identificar y eliminar causas especiales de variacion hasta que el proceso muestre estabilidad', es UNA LINEA, y causas_comunes_vs_especiales trae QUINCE pasos para esa distincion. Nota de forma: el SPC es HIJO en el par 29 y MADRE aqui, o sea cadena de tres.",
+  "correcciones": {
+   "correccion_v103": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "control_estadistico_del_proceso -> causas_comunes_vs_especiales",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (exceso de genero: comunicacion sin culpa, moral de equipo y colaboracion entre turnos no estan en ningun paso de la madre; ademas el hijo cubre pasos 3 Y 6 de la madre, no uno solo), no el titulo compartido 'causas especiales/comunes'",
+    "razon": "CORRECCION DECLARADA (vuelta 103, TAREA 4, relectura ciega al doble del tramo 1 por el centro, discutible NUEVO, fuera de lo marcado). El texto viejo de razon y direccion_leida NO SE BORRA. Leido a ciegas hoy (sin clase, direccion, razon ni paso casado) el par control_estadistico_del_proceso contra causas_comunes_vs_especiales: el hijo trae QUINCE pasos, y de ellos NUEVE (documentar hallazgos, comunicar enfocandose en 'el problema' y no en 'quien', dar seguimiento a la moral del equipo y la tasa de errores, comunicar que el objetivo es identificar problemas no culpables, dar seguimiento y apoyo a quienes caen fuera de tolerancias, fomentar la colaboracion entre turnos y departamentos, analizar la distribucion de errores entre personas) son territorio de CULTURA DE COMUNICACION SIN CULPA Y MORAL DE EQUIPO que control_estadistico_del_proceso NO TIENE EN NINGUNO de sus siete pasos. Ademas el hijo no cabe en el paso 3 casado ('identificar y eliminar causas especiales'): tambien trata las causas COMUNES (pasos 5 a 7 del hijo), que en la madre viven en un paso DISTINTO, el 6 ('iniciar intervencion en el sistema... para reducir el nivel de defectos'). El test del 9.6.2 falla POR EXCESO DE GENERO, la misma especie que movio los pares 172 y 161 (acta 99, vuelta 100), y NO la especie que el puesto 5 dejo a salvo (desplegar en varios pasos lo que la madre nombra en uno solo, sin anadir genero nuevo): aqui SI hay genero nuevo (comunicacion sin culpa, moral, colaboracion entre turnos) en ningun paso de la madre. SE MUEVE: el par 31 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia (banco 9.6.1 rama contenido, tercera fila del 9.22: CONTINUA)."
+   }
+  }
+ },
+ {
+  "puesto": 38,
+  "dominio": "core",
+  "madre": "obtencion_compromiso",
+  "hijo": "enfoque_etapa_investigacion",
+  "paso_casado": 4,
+  "clase": "D",
+  "direccion_leida": "obtencion_compromiso -> enfoque_etapa_investigacion",
+  "razon": "Su paso 4, 'Pon tu esfuerzo de mejora en las etapas de investigacion y demostracion de capacidad, no en el cierre', es UNA LINEA, y enfoque_etapa_investigacion trae el procedimiento de ese esfuerzo: dedicar mas tiempo a disenar preguntas que discurso, no mostrar beneficios antes de desarrollar el problema, auditar las llamadas pasadas, entrenar primero Situacion y Problema, y practicar escuchar lo no dicho.",
+  "correcciones": {
+   "correccion_v105": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "obtencion_compromiso -> enfoque_etapa_investigacion",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (test de reconocimiento, senal de entregables)",
+    "razon": "CORRECCION DECLARADA (vuelta 105, TAREA 4.4, lectura entera a ciegas de los SATELITE de la TAREA 4.3). El texto viejo de razon y direccion_leida NO SE BORRA. Leidos hoy los dos nodos enteros y el banco 9.6.2 y 9.6.3 enteros. El paso 4 de la madre (\"Pon tu esfuerzo de mejora en las etapas de investigacion Y demostracion de capacidad, no en el cierre\") nombra DOS etapas como destino del esfuerzo; el hijo enfoque_etapa_investigacion cubre SOLO la etapa de investigacion, y su propia tesis (\"si el vendedor desarrolla necesidades genuinas... las etapas de Demostracion de Capacidad y Obtencion de Compromiso fluyen naturalmente\") argumenta EXPLICITAMENTE que no hace falta invertir esfuerzo en demostracion, lo contrario de lo que el paso pide para esa mitad. Primer brazo del 9.6.2 falla: el hijo no cabe entero dentro del destino nombrado por el paso. La senal de entregables lo confirma: la madre entrega 'una lista clara de que cuenta como avance valido en CADA ETAPA de tu proceso de venta' (las cuatro etapas); el hijo entrega 'una checklist de planificacion de llamada... con metricas de tiempo dedicado a cada etapa', centrada en preguntas, no en avances validos. Los dos nodos comparten precursor comun (cuatro_etapas_llamada_de_ventas) sin que uno sea hijo del otro: 9.6.3, procedimiento propio a cada lado dentro del mismo libro (SPIN Selling), SANO. La madre conserva materia propia intacta: pasos 1 (objetivo de avance), 2 (evitar cierre de presion) y 3 (medir por avances). SE MUEVE: el par pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia."
+   }
+  }
+ },
+ {
+  "puesto": 40,
+  "dominio": "quality",
+  "madre": "analisis_valor",
+  "hijo": "customer_needs_spreadsheet",
+  "paso_casado": 1,
+  "clase": "D",
+  "direccion_leida": "analisis_valor -> customer_needs_spreadsheet",
+  "razon": "Su paso 1, 'Elaborar una hoja de calculo que relacione costos con necesidades del cliente por prioridad', es UNA LINEA que nombra el artefacto, y customer_needs_spreadsheet trae los seis pasos de construirlo. SALVEDAD DECLARADA: la matriz del hijo cruza clientes contra necesidades y la de la madre cruza costos contra necesidades, asi que el artefacto no es identico; la direccion se sostiene porque la madre lo pide en una linea y el hijo es el unico de los dos que ensena a construirlo.",
+  "correcciones": {
+   "correccion_v103": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "analisis_valor -> customer_needs_spreadsheet",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (primer brazo del test de reconocimiento: el hijo no cruza costos en ningun paso, la salvedad ya declarada ERA la falla) y banco 9.6.3 (procedimiento en los dos lados: el par es SANO), no la coincidencia de patron 'hoja de calculo que relaciona X con necesidades'",
+    "razon": "CORRECCION DECLARADA (vuelta 103, TAREA 2, relectura conjunta con el auditor, acta de la vuelta 102, caso escrito sobre el par 40). El texto viejo de razon y direccion_leida NO SE BORRA, incluida su SALVEDAD ya declarada. Leidos hoy dataset/nodos/analisis_valor.json y dataset/nodos/customer_needs_spreadsheet.json, y 9.6.2 y 9.6.3 del banco enteros: el test de reconocimiento del 9.6.2 falla en su PRIMER BRAZO, por una via distinta a la del 28. El paso 1 de la madre pide una hoja que cruce COSTOS con necesidades del cliente por prioridad; los seis pasos del hijo construyen una matriz que cruza CLIENTES (internos y externos, por prioridad) con necesidades, correlacionada por evidencia y fuerza de relacion: en ningun paso del hijo aparece un costo. La propia razon original ya concedia esto como SALVEDAD ('la matriz del hijo cruza clientes contra necesidades y la de la madre cruza costos contra necesidades, asi que el artefacto no es identico') pero sostuvo la direccion igual; releida contra el 9.6.2, esa salvedad ES la falla del primer brazo, no un detalle aparte: el hijo no cabe entero dentro de un paso cuyo eje es el costo. La senal de los entregables lo confirma: la madre entrega 'hoja de analisis de valor con costos por necesidad y decisiones de reasignacion de recursos'; el hijo entrega 'matriz de clientes vs necesidades, correlacionadas con evidencia y priorizadas', un producto distinto que alimenta un tramo distinto del proceso (customer_needs_spreadsheet es fase_proyecto planificacion y sigue a traduccion_necesidades_cliente/product_design_spreadsheet; analisis_valor es fase_proyecto validacion y sigue a establecer_diseno_final_producto). El 9.6.3 muestra PROCEDIMIENTO EN LOS DOS LADOS: la madre conserva su procedimiento de identificar necesidades de baja prioridad y alto costo, verificar recursos en las de alta prioridad y evitar gasto en funciones de bajo valor; el hijo conserva el suyo, de construir la hoja multicolumna, listar clientes por prioridad, listar necesidades, correlacionar con evidencia y priorizar. Ninguno toca al otro: SANO. SE SOSTIENE EL CASO DEL AUDITOR (acta 102), pese a la salvedad ya puesta: el par 40 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia (banco 9.6.1 rama contenido, tercera fila del 9.22: CONTINUA)."
+   }
+  }
+ },
+ {
+  "puesto": 52,
+  "dominio": "core",
+  "madre": "posicionamiento_por_tipo_de_mercado",
+  "hijo": "resegmentacion_mercado_nicho_bajo_costo",
+  "paso_casado": 5,
+  "clase": "D",
+  "direccion_leida": "posicionamiento_por_tipo_de_mercado -> resegmentacion_mercado_nicho_bajo_costo",
+  "razon": "Su paso 5, 'Si es re-segmentacion: comunicar comprension unica de un nicho o ventaja de bajo costo', es UNA LINEA, y el hijo trae el metodo entero: de que mercados existentes vendrian los clientes desatendidos, si pagarian mas o aceptarian menor desempenio por menor precio, que caracteristicas los harian abandonar a su proveedor, el mapa de mercado y la prueba cuantitativa del costo de cambio. La madre conserva los otros tres tipos de mercado (existente, nuevo y clon), que el hijo no toca.",
+  "correcciones": {
+   "correccion_v104": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "posicionamiento_por_tipo_de_mercado -> resegmentacion_mercado_nicho_bajo_costo",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (primer brazo: el paso 5 es CONDICIONAL explicito ('Si es re-segmentacion:'), una de cuatro ramas paralelas de un mismo paso-menu; el hijo excede ampliamente esa rama, seis pasos contra una linea) y banco 9.6.3 (procedimiento en los dos lados: SANO), no la palabra compartida 're-segmentacion'",
+    "razon": "CORRECCION DECLARADA (vuelta 104, TAREA 4.3, barrido dirigido por la especie del 28, lectura a ciegas propia). El texto viejo NO SE BORRA. Leidos hoy enteros dataset/nodos/posicionamiento_por_tipo_de_mercado.json y dataset/nodos/resegmentacion_mercado_nicho_bajo_costo.json y 9.6.2/9.6.3 enteros: el paso 5 de la madre ('Si es re-segmentacion: comunicar comprension unica de un nicho o ventaja de bajo costo') es UNA RAMA CONDICIONAL EXPLICITA, una de cuatro alternativas paralelas (pasos 2 a 5, cada una 'Si es mercado X: ...') para distintos tipos de mercado; su imperativo real, dentro de esa rama, es 'comunicar', no ejecutar el metodo de re-segmentacion. Los seis pasos del hijo (identificar de que mercados vendrian los clientes desatendidos, evaluar disposicion a pagar, definir caracteristicas unicas, determinar que los haria cambiar de proveedor, dibujar mapa de mercado, probar cuantitativamente el costo de cambio) exceden ampliamente 'comunicar': son la metodologia ENTERA para llegar a esa comprension, que la madre no desarrolla en ningun paso. La senal de los entregables lo confirma: la madre entrega un 'posicionamiento ajustado y coherente con el tipo de mercado elegido', generico para los cuatro tipos; el hijo entrega 'un mapa de mercado y un brief de re-segmentacion con hipotesis validables', producto especifico que el paso 5 no menciona. El 9.6.3 muestra PROCEDIMIENTO EN LOS DOS LADOS: la madre conserva enteras las otras tres ramas (mercado existente, nuevo y clon) mas la identificacion del tipo; el hijo conserva su metodologia de seis pasos: SANO. SE MUEVE: el par 52 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia."
+   }
+  }
+ },
+ {
+  "puesto": 62,
+  "dominio": "core",
+  "madre": "preservar_efectivo_buscar_modelo",
+  "hijo": "validar_modelo_negocio_hechos",
+  "paso_casado": 1,
+  "clase": "D",
+  "direccion_leida": "preservar_efectivo_buscar_modelo -> validar_modelo_negocio_hechos",
+  "razon": "Su paso 1, 'No contrates equipo de ventas ni marketing hasta validar el modelo con hechos, no hipotesis', nombra en una linea una validacion que el hijo ejecuta entera: reunir las snapshots semanales del canvas, verificar casilla por casilla que cada componente tenga respuesta factica, recorrerlo con el checklist, identificar pruebas pass/fail por hipotesis y comprobar si se cumplen los objetivos de trafico o financieros. La madre conserva el test de escalabilidad, el burn rate, el presupuesto por experimento y la reserva para multiples pivotes.",
+  "correcciones": {
+   "correccion_v104": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "preservar_efectivo_buscar_modelo -> validar_modelo_negocio_hechos",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (primer brazo: el hijo vive DENTRO de una subordinada TEMPORAL 'hasta + infinitivo', limite de cuando dejar de aplicar la orden principal 'no contrates', no su objeto; los entregables son productos distintos, plan de gasto contra canvas actualizado) y banco 9.6.3 (procedimiento en los dos lados: SANO), no la palabra compartida 'validar'",
+    "razon": "CORRECCION DECLARADA (vuelta 104, TAREA 4.3, barrido dirigido por la especie del 28, lectura a ciegas propia, misma especie exacta que el par 29 y el 28 de esta campana: subordinada temporal en vez de objeto). El texto viejo NO SE BORRA. Leidos hoy enteros dataset/nodos/preservar_efectivo_buscar_modelo.json y dataset/nodos/validar_modelo_negocio_hechos.json y 9.6.2/9.6.3 enteros: el paso 1 de la madre ('No contrates equipo de ventas ni marketing HASTA validar el modelo con hechos, no hipotesis') tiene como OBJETO del imperativo 'equipo de ventas ni marketing' (no contratarlo); 'validar el modelo con hechos' entra como SUBORDINADA TEMPORAL ('hasta + infinitivo'), el limite de cuando se levanta la prohibicion, no lo que el paso manda hacer. Los cinco pasos del hijo (reunir snapshots del canvas, revisar cada componente buscando respuestas facticas, usar el checklist, identificar pruebas pass/fail, determinar si se cumplen objetivos) no aparecen en ningun otro paso de la madre. La senal de los entregables lo confirma: la madre entrega un 'plan de gasto condicionado a hitos de validacion, CON UN CRITERIO EXPLICITO Y DOCUMENTADO' (que coincide con su propio paso 4, 'documenta tu propio criterio explicito'); el hijo entrega un 'Business Model Canvas actualizado con cada componente respaldado por datos facticos', un artefacto distinto que la madre no pide. El 9.6.3 muestra PROCEDIMIENTO EN LOS DOS LADOS: la madre conserva buscar patrones repetibles, el test de escalabilidad con burn rate, su propio criterio documentado, invertir tras el fit, retrasar infraestructura, presupuesto por experimento y reserva de caja; el hijo conserva su metodologia de canvas: SANO. SE MUEVE: el par 62 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia."
+   }
+  }
+ },
+ {
+  "puesto": 66,
+  "dominio": "health_safety",
+  "madre": "cultura_justa_3",
+  "hijo": "cultura_de_aprendizaje",
+  "paso_casado": 3,
+  "clase": "D",
+  "direccion_leida": "cultura_justa_3 -> cultura_de_aprendizaje",
+  "razon": "La clausula 'la proteccion al aprendizaje organizacional' de su paso 3 es UNA LINEA, y el hijo trae la maquinaria entera de esa clausula: mecanismos formales de analisis de los datos del sistema de reporte, procesos de decision para implementar reformas con tiempo y recursos comprometidos, medicion de la efectividad de las reformas e institucionalizacion de la revision de lecciones. La madre conserva las politicas de reporte que no penalizan la honestidad, el apoyo a segundas victimas y los criterios de conducta sancionable. ES UNA LECTURA DE FRONTERA y va marcada como discutible: el paso pide BALANCEAR dos cosas y el hijo solo entrega una de las dos.",
+  "correcciones": {
+   "correccion_v105": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "cultura_justa_3 -> cultura_de_aprendizaje",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (test de reconocimiento, senal de entregables) y 9.6.3 (raiz comun, SANO)",
+    "razon": "CORRECCION DECLARADA (vuelta 105, TAREA 4.4, lectura entera a ciegas de los SATELITE de la TAREA 4.3). El texto viejo de razon y direccion_leida NO SE BORRA. Leidos hoy los dos nodos enteros y el banco 9.6.2 y 9.6.3 enteros. El paso 3 de la madre (\"Balancear la necesidad de accountability CON la proteccion al aprendizaje organizacional\") pide un acto de EQUILIBRIO entre dos fuerzas en tension (accountability y aprendizaje); el hijo cultura_de_aprendizaje (establecer mecanismos de analisis de datos, definir procesos de reforma, medir efectividad, institucionalizar la revision) desarrolla SOLO el lado del aprendizaje, sin una sola linea sobre accountability, sanciones o la tension entre los dos: no desarrolla el acto de balancear, solo el tema de uno de los dos platillos. Primer brazo del 9.6.2 falla. Ademas los dos nodos son de LIBROS DISTINTOS (Dekker vs Reason) y cultura_de_aprendizaje declara a 'cultura_justa' (componente hermano, no cultura_justa_3) entre sus nodos_previos: son DOS COMPONENTES PARES del modelo de cultura de seguridad de Reason (reporte, justicia, flexibilidad, aprendizaje), no madre e hijo por este paso. La senal de entregables lo confirma: la madre entrega una 'politica de cultura justa... con protocolos de segundas victimas y criterios de accountability'; el hijo entrega un 'proceso institucionalizado de revision y aplicacion de lecciones aprendidas', sin relacion con accountability. 9.6.3: raiz comun (cultura de seguridad organizacional), procedimiento propio a cada lado, SANO. La madre conserva materia propia intacta: pasos 1 (politicas de reporte sin penalizar), 2 (apoyo a segundas victimas) y 4 (criterios de conducta sancionable). SE MUEVE: el par pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia."
+   }
+  }
+ },
+ {
+  "puesto": 80,
+  "dominio": "quality",
+  "madre": "estudio_desempeno_run_charts_servicios",
+  "hijo": "causas_comunes_vs_especiales",
+  "paso_casado": 3,
+  "clase": "D",
+  "direccion_leida": "estudio_desempeno_run_charts_servicios -> causas_comunes_vs_especiales",
+  "razon": "Su paso 3, 'Construir graficos de corrida o distribuciones para detectar causas especiales de variacion', es UNA LINEA, y el hijo trae quince pasos que la ejecutan y la exceden: datos en orden cronologico, limites estadisticos, reglas de deteccion, investigacion inmediata de la senial, listado de causas comunes propias del sistema, accion distinta por tipo de causa y redisenio en vez de sancion. La madre conserva la identificacion de variables criticas del servicio y el dirigir recursos de capacitacion a las areas fuera de control.",
+  "correcciones": {
+   "correccion_v104": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "estudio_desempeno_run_charts_servicios -> causas_comunes_vs_especiales",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (primer brazo: el hijo vive DENTRO de una subordinada de finalidad 'para detectar X', y solo nombra 'especiales', nunca 'comunes'; exceso de genero de la misma especie que movio el par 31, con el MISMO hijo) y banco 9.6.3 (procedimiento en los dos lados: SANO), no el vocabulario compartido 'causas especiales'",
+    "razon": "CORRECCION DECLARADA (vuelta 104, TAREA 4.3, barrido dirigido por la especie del 28, lectura a ciegas propia). El texto viejo NO SE BORRA. Leidos hoy enteros dataset/nodos/estudio_desempeno_run_charts_servicios.json y dataset/nodos/causas_comunes_vs_especiales.json y 9.6.2/9.6.3 enteros: causas_comunes_vs_especiales es el MISMO hijo que el par 31 de la vuelta 103 (alli movido a NO RESUELTA contra otra madre, control_estadistico_del_proceso, por exceso de genero). Aqui el paso 3 de la madre ('Construir graficos de corrida o distribuciones para detectar causas especiales de variacion') tiene como OBJETO 'graficos de corrida o distribuciones'; 'causas especiales' vive DENTRO de una subordinada de FINALIDAD ('para detectar X'), y SOLO nombra especiales, nunca comunes. Los quince pasos del hijo cubren AMBAS clases (comunes Y especiales) mas material de CULTURA (comunicar sin culpar, dar seguimiento a la moral del equipo, fomentar colaboracion entre turnos) que la madre no toca en ningun paso: sus cuatro pasos son identificar variables criticas del servicio, recolectar datos, construir graficos y dirigir recursos de capacitacion a areas fuera de control, nada de cultura ni de causas comunes. La senal de los entregables lo confirma: la madre entrega un 'tablero de indicadores con graficos de corrida', un producto de monitoreo; el hijo entrega un 'grafico ... con los puntos clasificados como causa comun o especial y un plan de accion diferenciado para cada tipo', que cubre ambas clases y excede lo que la madre pide. El 9.6.3 muestra PROCEDIMIENTO EN LOS DOS LADOS: SANO. SE MUEVE: el par 80 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia."
+   }
+  }
+ },
+ {
+  "puesto": 93,
+  "dominio": "quality",
+  "madre": "estandares_voluntarios",
+  "hijo": "definiciones_operacionales_de_calidad",
+  "paso_casado": 3,
+  "clase": "D",
+  "direccion_leida": "estandares_voluntarios -> definiciones_operacionales_de_calidad",
+  "razon": "Su paso 3, 'Documentar el estandar con definiciones operacionales claras y medibles', es UNA LINEA, y el hijo trae el procedimiento: identificar las caracteristicas criticas segun el cliente, traducir con el cliente los requisitos subjetivos a metricas medibles, establecer cartas X-barra y R por caracteristica clave y compartir sus resultados de forma continua. La madre conserva la evaluacion de si hace falta regulacion obligatoria, la formacion de comites tecnicos, la promocion de la adopcion y el monitoreo de la presion regulatoria.",
+  "correcciones": {
+   "correccion_v105": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "estandares_voluntarios -> definiciones_operacionales_de_calidad",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (test de reconocimiento, señal de entregables) y 9.6.3 (raiz comun, SANO)",
+    "razon": "CORRECCION DECLARADA (vuelta 105, TAREA 3, relectura conjunta con el auditor, acta de la vuelta 104, discutible 2). El texto viejo de razon y direccion_leida NO SE BORRA: esta correccion se anade aparte. Leidos hoy los dos nodos enteros y el banco 9.6.2 y 9.6.3 enteros. El primer brazo del test de reconocimiento del 9.6.2 falla: el hijo NO cabe entero dentro del paso 3 de la madre (\"Documentar el estandar con definiciones operacionales claras y medibles\"). El paso de la madre pide un acto de DOCUMENTACION de un estandar de INDUSTRIA por CONSENSO DE COMITES (para interoperabilidad, voltajes, tamanos de pieza, roscas); el hijo es un procedimiento BILATERAL cliente-proveedor (identificar caracteristicas criticas segun el cliente, traducir requisitos CON el cliente, establecer cartas X-barra y R, COMPARTIR resultados de forma CONTINUA con el cliente) para resolver disputas de calidad en una relacion comercial concreta: la accion de COMPARTIR RESULTADOS DE FORMA CONTINUA no tiene contraparte en NINGUN paso de la madre (ni en el paso 3 que documenta, ni en el paso 5 que monitorea presion REGULATORIA, cosa distinta de monitorear cartas de control). La madre conserva materia propia que el hijo no toca: evaluar si hace falta regulacion obligatoria, formar comites tecnicos DE INDUSTRIA, y promover la adopcion voluntaria entre EMPRESAS del sector (plural, multi-parte); el hijo es estrictamente bilateral, una sola relacion cliente-proveedor. La senal de los entregables (9.6.2) confirma: la madre entrega un \"documento de estandar de industria desarrollado por consenso\"; el hijo entrega un \"documento de definiciones operacionales acordadas ENTRE PROVEEDOR Y CLIENTE, con metricas y cartas de control\": distinta escala (industria vs relacion bilateral) y distinto proceso de formacion (consenso de comites vs acuerdo de dos partes). El contra-caso del auditor (\"una definicion operacional sin su medicion no es operacional, las cartas pueden leerse como el despliegue\") se examino: es cierto que Deming (fuente comun a los dos nodos) exige medicion para que una definicion sea \"operacional\", pero eso solo cubre LA PALABRA \"medibles\" del paso, no el marco BILATERAL Y CONTINUO que es el nucleo del hijo; \"medibles\" no exige, por si sola, un acuerdo cliente-proveedor con cartas compartidas sin cesar. El 9.6.3 (raiz comun, no repeticion) SI aplica: los dos nodos comparten la RAIZ del concepto de definicion operacional del mismo libro, pero divergen en direcciones distintas (estandar de industria por consenso vs acuerdo bilateral operativo), cada uno con materia propia sustancial que el otro no toca: SANO. SE SOSTIENE EL CASO DEL AUDITOR: el par pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia."
+   }
+  }
+ },
+ {
+  "puesto": 147,
+  "dominio": "quality",
+  "madre": "clasificacion_benchmarking",
+  "hijo": "consortium_benchmarking",
+  "paso_casado": 4,
+  "clase": "D",
+  "direccion_leida": "clasificacion_benchmarking -> consortium_benchmarking",
+  "razon": "SE AFIRMA, PERO NO SOBRE EL PASO QUE EL BARRIDO CASO, y se dice para que se pueda auditar. El barrido caso el paso 4 ('Evaluar el nivel de control, costo y tiempo disponible para el tipo elegido'), y el hijo no evalua nada de eso. La linea que si se despliega es el paso 2 ('Decidir el tipo de participantes: internos, externos, competidores o no competidores'): el consorcio es una de esas configuraciones de participantes, y el hijo entero es su procedimiento (identificar organizaciones interesadas en un tema comun, acordar colectivamente alcance, metricas, definiciones y cronograma, designar facilitador, fijar criterios de validacion de los datos compartidos y ejecutar el estudio compartiendo hallazgos). EL 9.6.3 AUTORIZA ESTA LECTURA de forma explicita: la vara no cuenta cuantos pasos comparten dos nodos ni cual, pregunta que queda FUERA del solape y de que lado, y fuera queda un procedimiento entero de un lado y la taxonomia con su evaluacion de costo del otro. Mismo libro. Tercera fila del 9.22: CONTINUA. FIGURA REGISTRADA: el barrido caso el paso equivocado del nodo correcto, especie nueva en esta lectura. SIN ADJUDICAR.",
+  "correcciones": {
+   "correccion_v99": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "clasificacion_benchmarking -> consortium_benchmarking",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (test de reconocimiento), no 9.6.3 (correccion de cita del discutible 2, acta 98 seccion 3.2)",
+    "razon": "CORRECCION DECLARADA (vuelta 99, TAREA 2, relectura conjunta con el auditor sobre el discutible 2 del acta 98, seccion 3.2). El texto viejo de razon y direccion_leida NO SE BORRA: esta correccion se anade aparte. El test de reconocimiento del banco 9.6.2 (\"el hijo cabe entero dentro de UN paso de la madre, y la madre conserva materia propia que el hijo no toca en ningun paso\") FALLA sobre el paso 2 de clasificacion_benchmarking (\"decidir el tipo de participantes: internos, externos, competidores o no competidores\"): los pasos 2 a 5 de consortium_benchmarking (acordar alcance/metricas/cronograma, designar facilitador, fijar criterios de validacion de datos, ejecutar el estudio) son diseno y ejecucion aguas abajo de esa decision, no la decision misma. El entregable de la madre es una definicion documentada que ORIENTA el diseno; el entregable del hijo es un consorcio YA FORMALIZADO con acuerdo de alcance, metricas y cronograma definidos: eso ya excede lo que el paso 2 decide. SE SOSTIENE EL CASO DEL AUDITOR (acta 98, 3.2): el par pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia (banco 9.6.1 rama contenido, tercera fila del 9.22: CONTINUA)."
+   }
+  }
+ },
+ {
+  "puesto": 161,
+  "dominio": "core",
+  "madre": "seis_herramientas_comunicacion_celebracion",
+  "hijo": "celebracion_automatizada_de_hitos",
+  "paso_casado": 2,
+  "clase": "D",
+  "direccion_leida": "seis_herramientas_comunicacion_celebracion -> celebracion_automatizada_de_hitos",
+  "razon": "El paso 2 ('disenar un mensaje de celebracion especifico para el logro del cliente') es casi verbatim el paso 2 del hijo ('disenar un mensaje de celebracion que se dispare inmediatamente despues del logro'). El hijo es la version AUTOMATIZADA y con upsell de la misma practica de celebracion; la madre conserva la evaluacion de canal y la medicion de reaccion, que el hijo no toca. RESUELTA. Test del banco 9.6.2 (el hijo cabe entero dentro de este paso, la madre conserva material propio): SE CUMPLE.",
+  "correcciones": {
+   "correccion_v100": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "seis_herramientas_comunicacion_celebracion -> celebracion_automatizada_de_hitos",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (exceso de genero: automatizacion de deteccion y upsell no estan en ningun paso de la madre), no la coincidencia casi verbatim del paso 2",
+    "razon": "CORRECCION DECLARADA (vuelta 100, TAREA 5, relectura al doble del tramo 4, discutible NUEVO, sin marcar previamente). El texto viejo de razon y direccion_leida NO SE BORRA. Leidos hoy dataset/nodos/seis_herramientas_comunicacion_celebracion.json y dataset/nodos/celebracion_automatizada_de_hitos.json: la propia razon original ya concede el punto sin verlo ('el hijo es la version AUTOMATIZADA y CON UPSELL de la misma practica de celebracion'). Ni la deteccion automatica del hito (implementar tecnologia/software) ni la oferta de upsell relevante estan en NINGUN paso de la madre (evaluar canal, disenar mensaje, personalizar por journey, elegir momento, medir reaccion): el hijo no cabe entero dentro del paso 2, anade territorio que la madre ENTERA no cubre en ningun paso. El test del 9.6.2 falla POR EXCESO DE GENERO. SE MUEVE: el par 161 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia. DISCUTIBLE NUEVO, fuera de los marcados del acta 99: se registra para la relectura ciega del auditor en la vuelta siguiente."
+   }
+  }
+ },
+ {
+  "puesto": 172,
+  "dominio": "core",
+  "madre": "desarrollo_en_espiral",
+  "hijo": "protocepto",
+  "paso_casado": 1,
+  "clase": "D",
+  "direccion_leida": "desarrollo_en_espiral -> protocepto",
+  "razon": "El paso 1 nombra literalmente el termino 'protocept' entre sus sinonimos (prototipo, MVP, protocept); el hijo, titulado 'protocept', es la elaboracion completa de como construirlo y usarlo con el cliente cada ciclo. Los otros pasos de la madre (probar con clientes reales para medir intencion de compra, revisar propuesta de valor, repetir 3 a 15 ciclos, documentar) quedan enteros y sin tocar por el hijo. RESUELTA. Test del banco 9.6.2 (el hijo cabe entero dentro de este paso, la madre conserva material propio): SE CUMPLE.",
+  "correcciones": {
+   "correccion_v100": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "desarrollo_en_espiral -> protocepto",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (senal del entregable: el del hijo reproduce serie iterativa + feedback de cliente, la mitad del entregable de la madre, no solo el resultado del paso 1)",
+    "razon": "CORRECCION DECLARADA (vuelta 100, TAREA 5, relectura al doble del tramo 4, discutible NUEVO, sin marcar previamente). El texto viejo de razon y direccion_leida NO SE BORRA. Leidos hoy dataset/nodos/desarrollo_en_espiral.json y dataset/nodos/protocepto.json: el hijo tiene CUATRO pasos y NO cabe entero en el paso 1 de la madre ('construir una version minima, rapida y economica'). Su paso 2 ('muestra ese protocept al cliente y recoge lo que piensa sobre tu hipotesis de mercado') es el paso 2 de la madre ('probar la version con clientes reales para medir interes, preferencia e intencion de compra'); su paso 4 ('repite el ciclo en periodos cortos... acercandote cada vez mas a un prototipo que funcione de verdad') es el paso 5 de la madre ('repetir el ciclo varias veces... hasta llegar a pruebas de campo formales'). La senal del entregable (banco 9.6.2) lo confirma: la madre entrega 'una serie documentada de prototipos iterativos, con registros de feedback de cliente en cada ciclo, que culmina en una definicion validada'; el hijo entrega 'una serie de versiones intermedias... con el feedback del cliente y los ajustes tecnicos en cada ciclo', que reproduce la MITAD del entregable de la madre (serie mas feedback), no solo el resultado de construir. El test del 9.6.2 falla POR EXCESO DE GENERO: la razon original declaraba que 'los otros pasos de la madre... quedan enteros y sin tocar por el hijo', y esa afirmacion no se sostiene contra el texto de los pasos 2 y 4 del hijo. SE MUEVE: el par 172 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia. DISCUTIBLE NUEVO, fuera de los marcados del acta 99: se registra para la relectura ciega del auditor en la vuelta siguiente."
+   }
+  }
+ },
+ {
+  "puesto": 174,
+  "dominio": "franquicias",
+  "madre": "desarrollo_value_proposition_usp",
+  "hijo": "posicionamiento_vs_competidores",
+  "paso_casado": 1,
+  "clase": "D",
+  "direccion_leida": "desarrollo_value_proposition_usp -> posicionamiento_vs_competidores",
+  "razon": "El paso 1 (identificar que hace unico al negocio frente a competidores directos) se ejecuta entero en el hijo, que es la conversacion aplicada de ese analisis con un candidato a franquiciado (preguntar que otras franquicias considera, comparar en detalle, responder con las diferencias). Los otros pasos de la madre (analizar estrategias de diferenciacion del sector, definir la USP en una frase, validar consultas no solicitadas, documentar valor adicional) no los toca el hijo. RESUELTA. Test del banco 9.6.2 (el hijo cabe entero dentro de este paso, la madre conserva material propio): SE CUMPLE.",
+  "correcciones": {
+   "correccion_v100": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "desarrollo_value_proposition_usp -> posicionamiento_vs_competidores",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (test de reconocimiento: el hijo cabe entero dentro de UN paso de la madre; la prueba lexica no sirve, 34/46 marcados por vocabulario, 3% de precision), no el nombre literal del paso",
+    "razon": "CORRECCION DECLARADA (vuelta 100, TAREA 3, relectura conjunta con el auditor, encargo de la vuelta 99 seccion 3.2, discutible fuera de lo marcado por el ejecutor). El texto viejo de razon y direccion_leida NO SE BORRA. Leidos hoy dataset/nodos/desarrollo_value_proposition_usp.json y dataset/nodos/posicionamiento_vs_competidores.json: el paso 1 de la madre es 'Identificar que hace unico al negocio frente a competidores directos' (analisis interno). Los CUATRO pasos del hijo son movimientos de una CONVERSACION DE VENTA con un candidato a franquiciado (preguntar que otras franquicias considera, comparar en detalle, responder destacando diferencias incluyendo desventajas propias, redirigir si el competidor es de otra industria), y su propio entregable lo declara: 'listo para usar en cualquier conversacion con un candidato'. TRES de los cuatro pasos son movimientos que el paso 1 de la madre no contempla: el hijo no IDENTIFICA lo que hace unico al negocio, PRESUPONE que ya esta identificado y lo despliega contra las objeciones de un prospecto. La razon original concede el punto sin verlo ('la conversacion APLICADA de ese analisis'): aplicar un analisis en una venta no es ejecutar el analisis, es el mismo patron que el propio ejecutor nombro CASADO POR OBJETO Y NO POR ACCION (par 163 de este mismo tramo). SE SOSTIENE EL CASO DEL AUDITOR: el par 174 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia (banco 9.6.1 rama contenido, tercera fila del 9.22: CONTINUA)."
+   }
+  }
+ },
+ {
+  "puesto": 175,
+  "dominio": "core",
+  "madre": "validar_modelo_financiero",
+  "hijo": "valor_de_vida_del_cliente",
+  "paso_casado": 2,
+  "clase": "D",
+  "direccion_leida": "validar_modelo_financiero -> valor_de_vida_del_cliente",
+  "razon": "El paso 2 nombra literalmente 'Customer Lifetime Value (LTV)' junto a CAC y tasa de conversion; el hijo, titulado exactamente 'Valor de Vida del Cliente (Customer Lifetime Value - LTV)', desarrolla ese termino entero: calcularlo, monitorearlo, implementar programas para subirlo, mejorar retencion. La madre conserva CAC, tasa de conversion, costos operativos, runway y el P&L completo, que el hijo no toca. RESUELTA. Test del banco 9.6.2 (el hijo cabe entero dentro de este paso, la madre conserva material propio): SE CUMPLE.",
+  "correcciones": {
+   "correccion_v100": {
+    "campo_corregido": "direccion_leida",
+    "valor_anterior": "validar_modelo_financiero -> valor_de_vida_del_cliente",
+    "valor_nuevo": null,
+    "cita_corregida": "banco 9.6.2 (test de reconocimiento: el hijo cabe entero dentro de UN paso de la madre), no la coincidencia lexica del termino 'Customer Lifetime Value'",
+    "razon": "CORRECCION DECLARADA (vuelta 100, TAREA 3, relectura conjunta con el auditor, encargo de la vuelta 99 seccion 3.1, discutible marcado 4 del acta 99). El texto viejo de razon y direccion_leida NO SE BORRA. Leidos hoy dataset/nodos/validar_modelo_financiero.json y dataset/nodos/valor_de_vida_del_cliente.json: el paso 2 de la madre es 'Calcular costos de adquisicion de clientes, tasas de conversion y Customer Lifetime Value (LTV)', un paso de CALCULO. El hijo tiene CUATRO pasos y SOLO EL PRIMERO calcula ('Calcular el LTV actual de los clientes'); el segundo monitorea, y el tercero y el cuarto son INTERVENCION OPERATIVA ('Implementar nuevos programas y ofertas que incrementen el LTV', 'Mejorar la eficiencia de los procesos de retencion y crecimiento'). Subir el LTV con programas nuevos no es un sub-paso de calcularlo: es otra actividad que el paso 2 de la madre no contempla; la madre no interviene sobre nada en ningun paso, solo mide y proyecta hasta el P&L. El test del 9.6.2 falla POR EXCESO DE GENERO: el nombre literal 'Customer Lifetime Value' en el paso 2 es real, pero el 9.6.2 dice EXPRESAMENTE que la prueba lexica no sirve (34 de 46 marcados por vocabulario y solo 1 lo era, 3% de precision): coincidir el termino no es caber dentro del paso. SE SOSTIENE EL CASO DEL AUDITOR: el par 175 pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia (banco 9.6.1 rama contenido, tercera fila del 9.22: CONTINUA)."
+   }
+  }
+ }
+]
