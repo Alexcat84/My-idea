@@ -1,0 +1,25 @@
+BARRIDO TAREA 2.1, VUELTA 114 (publica sus propias exclusiones).
+MODO --sin-exclusion (MUTACION Y): la exclusion de PROPIO_NOMBRE esta DESACTIVADA.
+==============================================================================
+
+RE_CITA en scripts/loop/*.py:
+   RECUENTO CRUDO (sin excluir nada, este fichero incluido): 16
+   RECUENTO NETO (tras EXCLUSIONES, ver abajo): 16
+
+patron de extension 'txt|md' entre backticks:
+   RECUENTO CRUDO (sin excluir nada, este fichero incluido): 5
+   RECUENTO NETO (tras EXCLUSIONES, ver abajo): 5
+
+'LOOP = os.path.join(' en scripts/loop/*.py:
+   RECUENTO CRUDO (sin excluir nada, este fichero incluido): 59
+   RECUENTO NETO (tras EXCLUSIONES, ver abajo): 59
+
+UNION crudo: 73 ficheros. UNION neto: 73 ficheros.
+
+--- EXCLUSIONES ---
+NINGUNA (modo --sin-exclusion): vuelta114_tarea2_1_barrido_talladores.py permanece en la union, aunque motivaria la exclusion de arriba.
+
+COMPARABLE AL CONTRASTE DEL AUDITOR (RE_CITA 15, txt|md 4, LOOP= 58, union 72), medido por el ANTES de que este fichero existiera: el NETO de arriba, no el crudo de hoy
+(el crudo de hoy incluye este mismo fichero, recien creado, y por eso puede diferir).
+
+Crudo == neto: True (esperado True con --sin-exclusion: ninguna exclusion aplicada).

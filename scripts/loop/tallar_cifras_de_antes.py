@@ -170,6 +170,15 @@ ANTES de esta lista, NO marca ninguna de las dos oraciones con "sigue"
 (VERDE VACUO en esa parte). DESPUES, MARCA LAS DOS y las evalua con sus
 citas. EL REPORTE DE LA 112 NO SE REESCRIBE: es historia; se publica la
 medicion tal como salga, incluso si sale ROJO.
+
+CORRECCION DE RUTA (TAREA 1.3 / 2.5 del encargo de la vuelta 114, acta 113
+seccion 4.3, "UN DOCSTRING CITA UN FICHERO QUE NO EXISTE"): el parrafo de
+arriba cita `docs/loop/SALIDA_V113_TAREA2_5_MUTACION_X.txt`, que NUNCA
+existio. Los DOS ficheros reales, commiteados, son
+`docs/loop/SALIDA_V113_TAREA2_5_MUTACION_X_ANTES.txt` (el estado ANTES) y
+`docs/loop/SALIDA_V113_TAREA2_5_MUTACION_X_DESPUES.txt` (el estado DESPUES).
+Se corrige aqui, de forma aditiva, sin borrar el texto viejo de arriba, y se
+deja dicho que se corrige.
 """
 import argparse
 import glob

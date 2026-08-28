@@ -1,0 +1,24 @@
+BARRIDO TAREA 2.1, VUELTA 114 (publica sus propias exclusiones).
+==============================================================================
+
+RE_CITA en scripts/loop/*.py:
+   RECUENTO CRUDO (sin excluir nada, este fichero incluido): 16
+   RECUENTO NETO (tras EXCLUSIONES, ver abajo): 15
+
+patron de extension 'txt|md' entre backticks:
+   RECUENTO CRUDO (sin excluir nada, este fichero incluido): 5
+   RECUENTO NETO (tras EXCLUSIONES, ver abajo): 4
+
+'LOOP = os.path.join(' en scripts/loop/*.py:
+   RECUENTO CRUDO (sin excluir nada, este fichero incluido): 59
+   RECUENTO NETO (tras EXCLUSIONES, ver abajo): 58
+
+UNION crudo: 73 ficheros. UNION neto: 72 ficheros.
+
+--- EXCLUSIONES ---
+vuelta114_tarea2_1_barrido_talladores.py: PROPIO_NOMBRE: este mismo fichero cita, en su docstring y en su codigo, las tres cadenas literales que busca (RE_CITA, 'txt|md', 'LOOP = os.path.join('), asi que sin esta exclusion se envenenaria a si mismo en las tres busquedas (misma trampa que verificar_apertura_sellada.py ya documenta como 'LA GUARDA QUE SE ENVENENA SOLA'). Declarada aqui, con su motivo, EN LA PROPIA SALIDA: la caida de la vuelta 113 (acta 113, 4.1) no fue excluir, fue callarlo.
+
+COMPARABLE AL CONTRASTE DEL AUDITOR (RE_CITA 15, txt|md 4, LOOP= 58, union 72), medido por el ANTES de que este fichero existiera: el NETO de arriba, no el crudo de hoy
+(el crudo de hoy incluye este mismo fichero, recien creado, y por eso puede diferir).
+
+Crudo != neto en al menos una busqueda: True (esperado True: la exclusion cura algo).
