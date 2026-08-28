@@ -67,6 +67,44 @@ docs/loop/SALIDA_V102_TAREA1_1_MUTACION_VEREDICTOS.txt):
       bien (cada veredicto que cite un fichero calza con lo que ese fichero
       dice de verdad).
 
+--- TAREA 1 de la vuelta 105 (acta de la vuelta 104, "EL AGUJERO DE LA
+ORACION"): LA CITA DE LA ORACION SIGUIENTE ---
+
+POR QUE NACE, CON EL EJEMPLAR DELANTE. El auditor de la vuelta 104 escribio
+tres mutaciones sobre la MISMA frase falsa (VERDE citando
+`SALIDA_V104_APERTURA_NO_SELLADA.txt`, cuyo veredicto real es ROJO). Las
+formas A y B (cita en la MISMA oracion que la palabra) ya daban ROJO. La
+forma C, "la manera mas natural que hay de escribir un reporte" (se afirma
+en una oracion y se cita en la siguiente), daba VERDE: "... salio VERDE y no
+hubo nada que declarar. La evidencia esta en `SALIDA_V104_APERTURA_NO_
+SELLADA.txt`, pegada entera." La palabra VERDE vive en la primera oracion;
+la cita, en la segunda. El cerco de la 104 solo miraba la MISMA oracion (o,
+si esa cita no era legible, el PARRAFO entero): una cita que vive en la
+oracion siguiente, con la oracion de la palabra SIN NINGUNA cita, quedaba
+fuera de las dos reglas y la afirmacion se ignoraba en silencio (ni hallazgo
+ni cobertura): una guarda que no ve la mentira no esta contando.
+
+LA REGLA (1.4 del encargo, la via mas corta que no ataba a otro patron): si
+la oracion de la palabra NO trae ninguna cita, se prueba la ORACION
+SIGUIENTE del mismo parrafo, PERO SOLO SI esa oracion siguiente no trae
+NINGUNA palabra de veredicto propia. Esa condicion es la que evita que vuelva
+el emparejamiento por parrafo que produjo los seis falsos de la 103: una
+oracion siguiente que SI trae su propia palabra de veredicto puede ser la
+narracion de OTRA afirmacion (el patron exacto de las mutaciones A y B, y de
+la enumeracion "(a) VERDE ..., (b) ROJO ..." de la vuelta 102), asi que su
+cita no se le presta a la palabra de antes. Si la cita de la oracion
+siguiente resulta NO LEGIBLE, sigue rigiendo (d): se ensancha al parrafo
+entero antes de darla por buena.
+
+PRUEBA DE MUTACION (1.1, 1.2, 1.3 del encargo, con sus salidas commiteadas
+en docs/loop/SALIDA_V105_TAREA1_*.txt): las tres mutaciones de la vuelta 104
+(`docs/loop/_auditor_v104_mut_A.md`, `_B.md`, `_C.md`) DESPUES del arreglo:
+A y B (misma oracion) SIGUEN dando ROJO; C (oracion siguiente, sin veredicto
+propio) EMPIEZA a dar ROJO. El reporte de la vuelta 102
+(`git show f253842b:docs/loop/REPORTE.md`), el caso VERDE que no puede
+ensuciarse, SIGUE dando VERDE EXIT 0: ninguna de sus oraciones sin cita tiene
+una oracion siguiente sin veredicto propio con una cita que contradiga.
+
 --- TAREA 2 de la vuelta 104 (acta de la vuelta 103, "EL CERCO PASO DE CIEGO
 A GRITON") ---
 
@@ -314,6 +352,26 @@ def oracion_de(pos, limites):
     return bisect.bisect_left(limites, pos)
 
 
+def rango_de_oracion(idx, limites, largo):
+    """(TAREA 1 v105) Rango [inicio, fin) de caracteres de la oracion de
+    indice IDX dentro del parrafo, con los mismos limites que usa
+    oracion_de(). La oracion 0 empieza en 0; la oracion i (i>0) empieza justo
+    despues del limite i-1; la ultima oracion termina en LARGO (fin del
+    parrafo) aunque no haya un fin de oracion detras (parrafo sin punto
+    final)."""
+    inicio = 0 if idx == 0 else limites[idx - 1] + 1
+    fin = limites[idx] + 1 if idx < len(limites) else largo
+    return inicio, fin
+
+
+def trae_veredicto_propio(parrafo, inicio, fin):
+    """(TAREA 1 v105) True si el tramo parrafo[inicio:fin] trae AL MENOS una
+    palabra VERDE/ROJO/PASA/FALLA propia (sin filtrar por (b) ni (c): basta
+    que la palabra este ahi para que la oracion pueda ser la narracion de
+    OTRA cosa, y entonces no se le presta la cita)."""
+    return bool(RE_VEREDICTO_PALABRA.search(parrafo[inicio:fin]))
+
+
 def es_adjetivo_de_afirmacion(parrafo, pos):
     """(b) TAREA 2 v104: True si la palabra inmediatamente anterior a la de
     veredicto (en POS) es "afirmacion" o "afirmaciones", sin distinguir
@@ -348,15 +406,20 @@ def elegir_cita(citas, pos):
 def hallar_afirmaciones(texto):
     """(TAREA 2 v104) Para cada ocurrencia de VERDE/ROJO/PASA/FALLA que no
     sea adjetivo de "afirmacion" (b) ni etiqueta de lista (c), busca la cita
-    de fichero mas cercana que viva EN LA MISMA ORACION (a). (d) Si esa cita
-    resulta NO LEGIBLE (fichero inexistente o sin veredicto legible), se
-    ensancha la busqueda al PARRAFO entero antes de darla por buena: una cita
-    de oracion no legible es senal de que esa cita es evidencia de OTRA cosa
-    (un hash, un nombre de comando) y la evidencia real vive al lado, en el
-    mismo parrafo, que es la convencion de cabecera de esta campana. Devuelve
-    (linea, palabra, fichero_citado, regla, n_citas) SOLO para las
-    ocurrencias que si citan un fichero bajo estas reglas; el resto cuenta en
-    la cobertura total pero no aqui."""
+    de fichero mas cercana que viva EN LA MISMA ORACION (a). (e, TAREA 1
+    v105) Si la ORACION de la palabra no trae ninguna cita, se prueba la
+    ORACION SIGUIENTE del mismo parrafo, PERO SOLO SI esa oracion siguiente
+    no trae ninguna palabra de veredicto propia (si la trajera, podria ser la
+    narracion de OTRA afirmacion, no la evidencia de esta). (d) Si la cita
+    elegida (de la oracion o de la siguiente) resulta NO LEGIBLE (fichero
+    inexistente o sin veredicto legible), se ensancha la busqueda al PARRAFO
+    entero antes de darla por buena: una cita de oracion no legible es senal
+    de que esa cita es evidencia de OTRA cosa (un hash, un nombre de comando)
+    y la evidencia real vive al lado, en el mismo parrafo, que es la
+    convencion de cabecera de esta campana. Devuelve (linea, palabra,
+    fichero_citado, regla, n_citas) SOLO para las ocurrencias que si citan un
+    fichero bajo estas reglas; el resto cuenta en la cobertura total pero no
+    aqui."""
     afirmaciones = []
     for offset_parrafo, parrafo in parrafos_con_offset(texto):
         citas_todas = [(m.start(), m.end(), m.group(1)) for m in RE_CITA.finditer(parrafo)]
@@ -370,10 +433,23 @@ def hallar_afirmaciones(texto):
                 continue
             oracion_palabra = oracion_de(pos, limites)
             citas_oracion = [(c[0], c[2]) for c in citas_todas if oracion_de(c[0], limites) == oracion_palabra]
+            ambito = "misma oracion"
+            if not citas_oracion:
+                # (e) TAREA 1 v105: ensanche a la oracion SIGUIENTE, solo si
+                # esa oracion no trae su propia palabra de veredicto (si la
+                # trajera, seria la unidad de argumentacion de OTRA cosa).
+                idx_siguiente = oracion_palabra + 1
+                if idx_siguiente <= len(limites):
+                    ini_sig, fin_sig = rango_de_oracion(idx_siguiente, limites, len(parrafo))
+                    if not trae_veredicto_propio(parrafo, ini_sig, fin_sig):
+                        citas_oracion = [(c[0], c[2]) for c in citas_todas
+                                        if ini_sig <= c[0] < fin_sig]
+                        if citas_oracion:
+                            ambito = "oracion siguiente sin veredicto propio (e)"
             if not citas_oracion:
                 continue
             mejor, regla_base = elegir_cita(citas_oracion, pos)
-            ambito, n_citas = "misma oracion", len(citas_oracion)
+            n_citas = len(citas_oracion)
             _, motivo_probe = veredicto_real_del_fichero(resolver_cita(mejor[1]), [])
             if motivo_probe is not None:
                 citas_parrafo = [(c[0], c[2]) for c in citas_todas]
@@ -420,7 +496,8 @@ def main():
     for linea, palabra, cita, regla, n_citas in afirmaciones:
         fichero = resolver_cita(cita)
         nota_resolucion = "" if fichero == cita else " (pelado, resuelto a `%s`)" % fichero
-        nota_emparejamiento = " [%d citas en la oracion, se uso: %s]" % (n_citas, regla) if n_citas > 1 else ""
+        nota_emparejamiento = (" [%d cita(s), se uso: %s]" % (n_citas, regla)
+                               if n_citas > 1 or "misma oracion" not in regla else "")
         clase_afirmada = CLASE[palabra]
         clase_real, motivo = veredicto_real_del_fichero(fichero, fallos)
         if motivo is not None:

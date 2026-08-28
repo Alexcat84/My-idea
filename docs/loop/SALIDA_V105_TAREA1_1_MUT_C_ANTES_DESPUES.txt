@@ -1,0 +1,42 @@
+=== ANTES DEL ARREGLO (control, git stash del cambio) ===
+Saved working directory and index state WIP on pasada-unica: 180d5e37 VUELTA 105: guarda verificar_apertura_sellada.py --vuelta 105 corrida, VERDE EXIT 0.
+==========================================================================================
+TALLA DE VEREDICTOS de docs/loop/_auditor_v104_mut_C.md: 2 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, de 7 palabra(s) de veredicto en total en el reporte.
+==========================================================================================
+   linea 5: ROJO citando `docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt` -- calza (fichero real: MAL)
+   linea 73: ROJO citando `docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt` -- calza (fichero real: MAL) [3 citas en la oracion, se uso: primera cita DESPUES de la palabra, misma oracion]
+
+VERDE: las 2 afirmacion(es) que citan fichero calzan con el veredicto real de su fichero.
+EXIT=0
+On branch pasada-unica
+Your branch is ahead of 'origin/pasada-unica' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   scripts/loop/tallar_veredictos_reporte.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	docs/loop/SALIDA_V105_TAREA1_1_MUT_C_ANTES_DESPUES.txt
+	docs/loop/SALIDA_V105_TAREA1_1_MUT_C_DESPUES.txt
+	docs/loop/SALIDA_V105_TAREA1_2_MUT_A_DESPUES.txt
+	docs/loop/SALIDA_V105_TAREA1_2_MUT_B_DESPUES.txt
+	docs/loop/SALIDA_V105_TAREA1_5_COBERTURA_103.txt
+	docs/loop/SALIDA_V105_TAREA1_5_COBERTURA_104.txt
+	docs/loop/SALIDA_V105_TAREA1_5_GRITON_REPORTE102.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (f6828cde10187a136cf078f06d14698427ca2b49)
+
+=== DESPUES DEL ARREGLO ===
+==========================================================================================
+TALLA DE VEREDICTOS de docs/loop/_auditor_v104_mut_C.md: 3 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, de 7 palabra(s) de veredicto en total en el reporte.
+==========================================================================================
+   linea 5: ROJO citando `docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt` -- calza (fichero real: MAL)
+   linea 73: ROJO citando `docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt` -- calza (fichero real: MAL) [3 cita(s), se uso: primera cita DESPUES de la palabra, misma oracion]
+
+ROJO, 1 hallazgo(s):
+   REPORTE.md linea 80: afirma VERDE (clase OK) citando `docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt`, y el veredicto REAL de ese fichero es MAL [1 cita(s), se uso: primera cita DESPUES de la palabra, oracion siguiente sin veredicto propio (e)]
+EXIT=1
