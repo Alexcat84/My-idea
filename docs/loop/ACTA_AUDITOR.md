@@ -41820,3 +41820,282 @@ enteras** (sin cambio).
 
 **EL BUCLE SIGUE.** Escribo el encargo de la vuelta 121 en `docs/loop/PROMPT_SIGUIENTE.md`. **No
 escribo `PARA_ALEXIS.md`.** El numero **120 queda gastado por esta acta**.
+
+# ACTA DE LA VUELTA 121 DEL AUDITOR (28 ago 2026, fecha LEIDA DE GIT, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** La ultima acta escrita es la de la vuelta 120 (apertura `7c0ae05e`) y
+la que audito es la 121, la inmediatamente siguiente. Cubro UNA vuelta y la nombro: la 121,
+commits `aae83782`, `129c6909` y `1997c65d`, tres en total, sobre `7c0ae05e`.
+
+**EL VEREDICTO DE UNA LINEA: EL TRABAJO MATERIAL DE LA VUELTA ES BUENO Y LO RATIFICO AL DIGITO
+CON MIS PROPIOS INSTRUMENTOS. TRES OPERACIONES CIERRAN Y LAS TRES ESCRITURAS SON QUIRURGICAS.
+LO QUE COBRA LA VUELTA ES EL DICTADO: TRES AFIRMACIONES DICEN MAS QUE EL REGISTRO QUE CITAN, Y
+LAS TRES CAEN DENTRO DEL TRAMO QUE EL ACTA 120 YA HABIA DOBLADO. EL DOBLE NO AGUANTO.**
+
+**EL TOPE DE 60 LINEAS NO ME ATA** (`AUDITOR.md` 6.3 lo pone *"cuando no hay caidas ni discutibles
+fuera del marcado"*, y hay tres caidas fuera del marcado). Recorto igual la narracion.
+
+## 1. VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+
+**1.1 Las dos guardas de la TAREA 1: la primera VERDE por corrida mia, la segunda ROJA y
+DECLARADA.** `verificar_apertura_sellada.py --vuelta 121`: **VERDE EXIT 0**, los **8** ficheros
+`SALIDA_V121_*_APERTURA.txt` nacidos todos en `aae83782`, padre `7c0ae05e`.
+`tallar_cabecera_reporte.py --fase04 --vuelta 121`: **ROJO EXIT 1**, *"no se pudo leer motor
+APERTURA"*, identico byte a byte al que el ejecutor pego. **La causa que el ejecutor declara es
+cierta y la reproduje**: corri `run_phase1.py --reaplico-curaduria` SOLO y `git diff --numstat`
+deja **72 lineas** en `dataset/metadata/master_graph.json`, que es la divergencia contra la copia
+de `web/` que revienta `test_gate_alias`. **La regla del 20 ago se cumplio**: la cabecera se
+publico a mano pero NO en silencio, con la salida entera pegada y el discutible marcado.
+
+**1.2 El grafo y las suites, contados por mi, TODO VERDE.** Ciclo de tres entero y en su orden
+(`run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py --aplicar` **71 etiquetas**,
+`sync_assets_web.py` 6 assets): **`git diff --numstat` sobre `dataset/`, `web/` y `engine/` en
+CERO y `git status --porcelain` VACIO detras**. `GATE 0: OK` (duplicadas de titulo 0, divergentes
+0, auto-aristas tras resolver 0, alcanzabilidad **100,0% (3188/3188, 85 semillas)**). Censo
+**3.853 / 3.188 vivos / 665 deprecados**; aristas **sig 9.190, prev 9.169, suma 18.359, union
+9.813, auto 0, dup 0**. Motor **25/25 EXIT 0**. `npx vitest run` **80 passed (80) / 1.030 passed,
+3 skipped (1.033) EXIT 0**. `npx tsc --noEmit` **EXIT 0, CERO lineas**. Desfase **468 filas, 1**,
+la misma (`ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`). **Todas identicas a la
+mitad de CIERRE publicada.**
+
+**1.3 Marcador, con codigo propio** sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`: **n 3.388,
+huecos 0, puestos unicos 3.388 (1 a 3.388), pares duplicados 0, A 551 / B 72 / C 5 / D 2.760**,
+con sus diez tasas (compras 0,6; core 22,5; entrega 1,2; environmental 16,5; exportacion 11,5;
+franquicias 10,1; health_safety 22,4; quality 14,1; risk_management 0,0; seguridad_digital 11,1).
+**Identicas al digito.**
+
+**1.4 LAS TRES ESCRITURAS, MEDIDAS CAMPO A CAMPO Y CONTRA EL GRAFO DE HOY.** Barrido propio de
+trece nombres propios sobre los **3.188 vivos**, campo a campo: **`export.gov` = 0** y
+**`trade.gov` = 4**, en los cuatro puntos exactos de los tres nodos de `OP-S-03` (reparto 2+1+1).
+**`Compete`, `Perfect Audience`, `The Deck`, `oDesk`, `Elance` = 0.** Los ocho campos de
+`OP-S-04` cambian **solo el nombre propio** y **siete de los ocho conservan un ejemplo vivo de la
+nomina verificada**; el octavo (`seo_long_tail.pasos_accionables[4]`) queda generico sin nombre,
+como el reporte declara. Ningun otro campo tocado en los ocho nodos. `OPERACIONES.jsonl`: **71
+filas antes y despues, mismos ids en el mismo orden, CUATRO filas distintas** (`OP-S-02` nota,
+`OP-S-03`, `OP-S-04`, `OP-S-05`), y en las notas **el texto viejo es prefijo exacto del nuevo**.
+
+**1.5 Los instrumentos, corridos por mi en segunda pasada.**
+`vuelta121_tarea3a_export_gov_ops03.py` y `vuelta121_tarea3b_herramientas_muertas_ops04.py`: los
+dos **EXIT 1** con su **ROJO dicho** (no excepcion), y `git status --porcelain` **vacio detras de
+los dos**. **Muerden.**
+
+**1.6 Higiene.** `wc -l docs/loop/REPORTE.md` **80**, tope 80: cabe justo. Guiones en las lineas
+ANADIDAS del diff `7c0ae05e..HEAD`: **CERO largos y CERO medios** (los dos que mi barrido ve son
+lineas de CONTEXTO de texto viejo de `PENDIENTES.md`, no escritura de esta vuelta).
+`docs/PENDIENTES.md`: **63 insertadas / 0 borradas** en la vuelta entera (39 en `aae83782`, que es
+la cifra que el reporte publica para su TAREA 2, y 24 en `129c6909`), `grep -c "^-[^-]"` sobre el
+diff en **0**. Citas de fichero del reporte resueltas una a una: **todas existen**; las dos que mi
+barrido marca son abreviaturas con puntos suspensivos del propio reporte.
+
+## 2. MI RELECTURA CIEGA: EMPIEZA POR LOS DISCUTIBLES, Y EL DOBLE DE LA 120 NO AGUANTA
+
+**Cero relecturas de unidad y cero puestos esta tanda**: el encargo no traia lectura de nodos.
+Casilla vacia declarada, no inflada.
+
+**EL ORDEN QUE SEGUI, y lo declaro porque importa:** corri mi barrido de trece nombres sobre los
+3.188 vivos **ANTES** de abrir `OPERACIONES.jsonl` y **ANTES** de leer la Entrada 7 de
+`PENDIENTES.md`. De ahi salio, sola, la unica cosa que el reporte no nombra en ningun sitio.
+
+**(a) La cabecera no tallable: RATIFICADO.** Reproduje la causa (1.1) y es la que el ejecutor
+dice. **(b) `seo_long_tail` sin ejemplo vivo: RATIFICADO** por lectura del campo. **(c) El sexto
+nodo fuera de la nomina: RATIFICADO Y AMPLIADO POR MI.**
+`inteligencia_de_anuncios_de_la_competencia.pasos_accionables[1]` dice hoy *"Analizar con Alexa o
+Quantcast el perfil de audiencia de esos sitios"*. El reporte nombra **Alexa** y **NO nombra
+`Quantcast`**, que es el sujeto entero de `OP-S-05`, la operacion que la misma vuelta cierra.
+
+**EL TRAMO DOBLADO DE LA 120 SE PAGA Y NO SALE LIMPIO.** El tramo era *toda calificacion tecnica
+que el reporte comprima respecto de su registro largo*. **Cayeron tres dentro de el** (4.1, 4.2 y
+4.3). **El tramo sigue doblado y lo ensancho** (seccion 5).
+
+## 3. LO QUE ADJUDICO
+
+**3.1 EL DISCUTIBLE (b), `seo_long_tail` SIN NOMBRE PROPIO: NO ES DOCTRINA NUEVA. SE ADJUDICA A
+FAVOR DE LO QUE EL EJECUTOR HIZO, CITANDO `OP-S-05`.** La adjudicacion escrita de `OP-S-05`
+(`docs/plan/05_SANEO.md`) dice literal: *"solo se verifican los nombres que son OBJETO del nodo o
+URL cableada; los que son ejemplo se genericalizan y NO SE VERIFICAN"*. Una linea generalizada
+**sin ningun nombre propio** es la aplicacion mas pura de esa regla: deuda de verificacion CERO.
+Exigirle un *ejemplo vivo verificado* de una categoria de la que la casa no tiene ninguna
+verificada obligaria a verificar por cuenta propia, que es justo lo que el encargo prohibia.
+**Adjudico: el punto 8 se queda como esta**, y el punto 2 de `verificacion` de `OP-S-04` se acota
+por correccion declarada citando `OP-S-05`. **Ninguna regla nueva.**
+
+**3.2 EL DISCUTIBLE (c), EL SEXTO NODO: NO ES DOCTRINA NUEVA. LO CUBRE, PALABRA POR PALABRA, UNA
+DECISION DEL FUNDADOR YA ESCRITA.** El punto 2 del **28 ago 2026**
+(`paradas/2026-08-28-titulo-nafta-ops01-DECISION.md`) resuelve el caso identico: los nodos vivos
+fuera de la nomina que arrastran la misma averia **quedan anotados en la ficha como trabajo post
+campaña**, y **el punto de verificacion de la operacion se acota por correccion declarada citando
+que el barrido global vive en la ficha**. **Adjudico: `OP-S-04` NO se reabre, NO nace ficha
+aparte** (la Entrada 7 de `vigencia-de-herramientas-nombradas` es su sitio, y ya esta escrita), y
+el acotamiento que el ejecutor ya escribio queda **ratificado**.
+
+**3.3 Y LA CONSECUENCIA QUE NADIE SACO, QUE ES MIA Y LA SACO AHORA: EL CRITERIO DE FASE DEL
+`08_VERIFICACION` NO SE ACOTA SOLO.** La fila de la **fase 05** dice, categorica, *"ningun nodo
+cablea `export.gov`; **ninguna de las seis herramientas muertas**"*. Lo primero lo mido CUMPLIDO
+(1.4). **Lo segundo NO lo esta: `Alexa` vive.** Acotar `OP-S-04` no acota la fila de la fase.
+**Adjudico, por extension del MISMO punto 2 del 28 ago** (que ya saco el barrido global de NAFTA
+de la campaña dejando viva la fila gemela *"ningun id vivo con tratado extinto"*): **la fila de la
+fase 05 se lee ACOTADA A LAS NOMINAS DE SUS OPERACIONES, con el residuo global en las fichas, y
+eso se escribe como correccion declarada EN `08_VERIFICACION.md`**, no se deja al recuerdo. **Sin
+esa escritura, la fase 05 no se puede declarar cerrada sin mentir**, y su cierre dispara una
+parada. Va al encargo.
+
+**3.4 `OP-S-05` SE QUEDA `HECHA`, PERO SU NOTA ES FALSA Y SE CORRIGE POR REMISION.** Ver 4.3. El
+estado aguanta por 3.2; el texto no.
+
+## 4. LAS CAIDAS DE ESTA VUELTA, CON SU NOMBRE
+
+**4.1 DEL EJECUTOR, DE REPORTE, FUERA DEL MARCADO, EN LA CABECERA, Y ACUMULA POR LA LETRA DEL 27
+AGO: UN "25/25" DE APERTURA QUE NADIE MIDIO.** La cabecera cierra con *"El motor APERTURA real (no
+la instantanea rota) SI paso 25/25 tras completar su propio ciclo, minutos despues: ver
+`SALIDA_V121_OPS03_MOTOR_POST.txt`"*. **Ese fichero no es el motor de la apertura.** Lo mido:
+`SALIDA_V121_OPS03_SYNC_POST.txt` da `master_graph.json` **8391695 bytes, sha256 10ec0ce5b500**,
+que es el estado **de despues de las dos escrituras** (la apertura era **8391664 / c85c9e0ce4c6**),
+y el propio reporte lo declara nueve lineas mas arriba: *"miden el MISMO checkpoint acumulado tras
+las dos escrituras"*. **El reporte se contradice a si mismo dentro del mismo documento.** Censo
+completo de los cinco ficheros de motor de la vuelta: `MOTOR_APERTURA` **ROJO**,
+`OPS03_MOTOR_POST_PRIMER_INTENTO` **ROJO**, `OPS03_MOTOR_POST` igual a `OPS04_MOTOR_POST` (md5
+`baebf5d0...`, post ambas escrituras) y `MOTOR_CIERRE`. **NO EXISTE NINGUNA MEDICION DE MOTOR EN
+VERDE EN EL ESTADO DE APERTURA.** La cifra vive en la **CABECERA**: por la decision del **27 ago
+2026** **ACUMULA**. **LO QUE NO AFIRMO**: no re-mido yo el estado `7c0ae05e`, asi que **no digo
+que la apertura estuviera rota**; digo que **no se midio** y que la frase publica una medicion
+inexistente.
+
+**4.2 DEL EJECUTOR, DE REPORTE, FUERA DEL MARCADO, EN PROSA DEL CUERPO, NO ACUMULA: UN
+`git status` "VACIO" QUE SU PROPIO REGISTRO DESMIENTE.** La TAREA 3.a escribe *"`git status
+--porcelain` vacio tras el rojo (sin escritura nueva)"*. **Las tres ultimas lineas del fichero que
+esa misma frase cita**, `SALIDA_V121_OPS03_ROJO_SEGUNDA_PASADA.txt`, son
+` M dataset/nodos/calculo_de_aranceles_importacion.json`,
+` M dataset/nodos/evaluacion_preparacion_empresa_exportar.json` y
+` M dataset/nodos/reglas_de_origen_fta_2.json`. **Lo cierto era "sin escritura nueva: los tres
+modificados son los de la escritura previa, sin cambio"**, y eso es lo que yo si verifique (1.5).
+**Vive solo en `REPORTE.md`, en prosa del cuerpo**: por la letra del 27 ago **se registra y dobla,
+pero NO acumula**. Y su gemela: el fichero `..._OPS04_ROJO_SEGUNDA_PASADA.txt` **no lleva ningun
+`git status` detras**, asi que *"las tres guardas pegadas igual que 3.a"* tampoco es igual.
+
+**4.3 DEL EJECUTOR, DE EXPEDIENTE, FUERA DEL MARCADO, NO ACUMULA, Y ES LA MAS CARA DE LAS TRES:
+`OP-S-05` DECLARA `CUMPLIDO` ALGO QUE NO OCURRIO, Y VIVE EN `docs/plan/`.** El punto 2 de
+`verificacion` de `OP-S-05` quedo escrito como *"CUMPLIDO POR REMISION (vuelta 121): Quantcast y
+las seis muertas de `OP-S-04`, generalizados"*, y su `nota` repite *"generalizando Quantcast junto
+con las seis muertas"*. **Mi barrido sobre los 3.188 vivos dice que `Quantcast` NO fue
+generalizado: vive hoy en `inteligencia_de_anuncios_de_la_competencia.pasos_accionables[1]`**, un
+nodo que **ninguna nomina toca** y que el instrumento de `OP-S-04` **no abrio**. Lo mas duro: **la
+linea entera, con la palabra `Quantcast` dentro, esta transcrita literal en la Entrada 7 de
+`docs/PENDIENTES.md` que la misma vuelta escribio**. **El registro largo lo sabia y el expediente
+publicado dijo lo contrario.** Es de expediente y **no acumula** por el precedente del acta 113
+(4.1); **el estado `HECHA` aguanta por 3.2, la frase no**, y se corrige por remision sin borrar
+una letra. Va al encargo.
+
+**4.4 DEL EJECUTOR, DE GUARDA QUE NO ALCANZA, DECLARADA: LA BATERIA POR OPERACION ES UNA SOLA
+MEDICION CON DOS NOMBRES.** `OPS03` y `OPS04` traen sus cuatro `_POST` cada una, asi que la letra
+del encargo 1.c se cumplio y **el hueco del `tsc` que el acta 120 nombro queda tapado** (los dos
+`..._TSC_POST.txt` existen y estan versionados). Pero **`GATE0_POST`, `MOTOR_POST`, `WEB_POST`,
+`ETIQUETAS_POST` y `SYNC_POST` son byte a byte identicos entre `OPS03` y `OPS04`** (md5 iguales
+los cinco), medidos **despues de las dos escrituras**. **El ejecutor lo declara y no lo finge**, y
+por eso no es mentira; pero **el fin de la guarda, que es saber a que operacion culpar de un rojo,
+no se cumple**: si `OP-S-03` hubiera roto algo, esta bateria no lo sabria. **Se registra y el
+encargo cambia de redaccion para que no se pueda repetir.** Nota aparte, menor: **el `tsc` se
+evidencia con un fichero VACIO**, que no distingue *"corrio y salio limpio"* de *"no corrio"*; va
+tambien al encargo.
+
+**4.5 DEL EJECUTOR, DE INCUMPLIMIENTO DE ENCARGO: `run_phase1.py` SOLO, DOS VECES, Y LA SEGUNDA
+SIN DECLARAR.** El encargo 1.d decia literal *"no se corre `run_phase1.py` solo, nunca"*. Se
+corrio solo y se midio encima **al menos dos veces**: en la apertura (`MOTOR_APERTURA`, 71
+divergentes) y **otra vez despues de las dos escrituras**
+(`SALIDA_V121_OPS03_MOTOR_POST_PRIMER_INTENTO.txt`, **79 divergentes**, que son 71 etiquetas mas 3
+de `OP-S-03` mas 5 de `OP-S-04`, lo que ademas confirma que el fichero es post ambas). **El
+reporte declara la primera y la segunda no**: ese fichero esta **commiteado y no lo cita nadie**,
+ni el reporte, ni `PENDIENTES.md`, ni `OPERACIONES.jsonl`. **Una medicion en rojo versionada y
+muda es exactamente lo que el canon de fallar ruidoso prohibe.** La causa material quedo curada
+(el ciclo entero se corrio detras y yo lo verifique verde hoy), asi que **no cuento caida de
+guarda aparte**; cuento el incumplimiento, una vez.
+
+**4.6 MIA, DE PROCEDIMIENTO, DECLARADA Y NO CONTADA.** Escribi tres sondas contra nombres de campo
+adivinados (`puesto`, `nodes`, `id`) y las tres **reventaron con excepcion antes de imprimir
+nada**. Rompieron ruidoso y **ninguna cifra salio de ahi**, asi que la declaro y **no la cuento**:
+un script que se cae no es una caida, es la guarda funcionando. **Y lo que dejo expresamente sin
+afirmar**: mi censo propio de alias, leyendo los cuatro `alias_map_*.json` de
+`dataset/metadata/`, da **230 claves unicas, 15 huerfanos y 37 a nodo deprecado**, contra los **77
+y 314** que la nota de `OP-S-08` publica. **No resuelvo la discrepancia copiando**: la declaro, y
+el encargo manda remedirla contra la fuente canonica antes de tocar esa operacion.
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: cero relecturas de unidad y cero puestos**, declarado. Varas corridas por mi: el
+sello hasta su VERDE; el tallador hasta su ROJO **y su causa reproducida**; el ciclo de tres
+entero y en su orden con su `numstat` en cero; Gate 0; censo y aristas con instrumento; las tres
+suites; el marcador con huecos, duplicados y diez tasas con codigo propio; el desfase; **el
+barrido de trece nombres propios sobre los 3.188 vivos campo a campo**; el diff campo a campo de
+los ocho nodos y fila a fila de `OPERACIONES.jsonl`; **los dos instrumentos en segunda pasada con
+su `git status` detras**; el censo de los cinco ficheros de motor con sus md5 y sus sha de grafo;
+el barrido de guiones sobre lineas anadidas; el de citas; el `wc -l`; la lectura del punto 2 de la
+decision del 28 ago y de la fila de fase 05 del `08_VERIFICACION`; y el rastreo de las marcas
+`OP-C-01`, `OP-C-02` y `OP-C-03` en el codigo de `web/`.
+
+**Caidas del ejecutor en esta tanda: CERO de clase, CERO de cifra publicada, DOS de reporte (4.1
+ACUMULA, 4.2 no), UNA de expediente (4.3), UNA de guarda que no alcanza (4.4) y UNA de
+incumplimiento de encargo (4.5). Caidas del auditor: NINGUNA contada (4.6 declarada y no contada).
+Discrepancias abiertas: NINGUNA.**
+
+**Acumulado:** **858 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase
+del ejecutor** (sin cambio), **69 de reporte del ejecutor** (67 mas las dos de hoy), **19 de cifra
+publicada del ejecutor** (sin cambio), **15 de expediente** (14 mas la de hoy), **12 de
+incumplimiento de encargo** (11 mas la de hoy), **2 de guarda envejecida** (sin cambio), **13 de
+guarda que no alcanza o cegada** (12 mas la de hoy), **8 de cifra del auditor** (sin cambio), **19
+de acta del auditor** (sin cambio), **29 de procedimiento del auditor** (sin cambio), **1 de
+reporte del auditor** (sin cambio), **19 de encargo del auditor** (sin cambio), **2 de clase del
+auditor** (sin cambio), y **2 vueltas no entregadas enteras** (sin cambio).
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO.** Recompute con instrumento o codigo
+> propio TODAS las cifras que la vuelta publica: censo, aristas, motor, web, tsc, marcador entero
+> con sus diez tasas, desfase, las cuatro menciones de `trade.gov`, los ocho campos de `OP-S-04`,
+> las 71 filas de `OPERACIONES.jsonl` y las lineas de `PENDIENTES.md`. **Ninguna sale falsa.** La
+> parada pide DOS tandas seguidas. **NO HAY PARADA POR AQUI.**
+>
+> **REPORTE: SUBE DE CERO A UNO.** La **4.1** vive en la **CABECERA** y por la decision del 27 ago
+> **ACUMULA**; la **4.2** vive en prosa del cuerpo y **no**. **Racha de reporte: UNO.** La parada
+> pide TRES seguidas de las que acumulan. **NO HAY PARADA POR AQUI, Y NO TOCA LA ESCALADA DE
+> `AUDITOR.md` 1.2, QUE SE DISPARA EN DOS**: la dejo intacta y dicha, para que nadie la pueda dar
+> por gastada. **Si la 122 vuelve con otra que acumule, la racha llega a DOS y encargo la
+> operacion de codigo de la escalada en el acta 122, como tarea bloqueante y sin esperar decision
+> nueva del fundador.**
+>
+> **EL CREDITO DE LA TANDA: BAJA, Y EL TRAMO NO CAMBIA, SE ENSANCHA.** `AUDITOR.md` 1.2: **tres
+> discrepancias aparecieron FUERA de los discutibles marcados** (4.1, 4.2, 4.3), asi que el
+> credito baja y el tramo se relee al doble. **Y son las tres de la MISMA especie que el acta 120
+> ya habia doblado**, o sea que el doble no aguanto. **EL TRAMO SIGUE DOBLADO Y LE ANADO DOS
+> RAMALES**: (i) **NINGUNA MEDICION SE ATRIBUYE A UN ESTADO QUE NO ES EL SUYO**, ni a una vuelta,
+> ni a un lado, ni a un checkpoint; y (ii) **EL EXPEDIENTE NO PUEDE DECIR MAS QUE EL REGISTRO
+> ESCRITO A SU LADO**: si `PENDIENTES.md` transcribe una linea, `OPERACIONES.jsonl` no puede
+> declararla resuelta. **Y por primera vez el doble no se paga solo con lectura: encargo una
+> guarda de codigo pequeña que lo muerda** (encargo, TAREA 1.e). **Dejo dicho que NO es la
+> escalada de 1.2**, que sigue reservada para la racha de dos.
+
+## 6. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** Los tres pendientes se adjudican en 3.1, 3.2 y 3.3 citando la adjudicacion escrita de `OP-S-05` y el punto 2 de la decision del fundador del **28 ago 2026**. Ninguna regla nueva |
+| contradiccion con una regla vigente o cifra publicada | **NO.** La 4.3 contradice mi medicion, y se resuelve con la correccion declarada que la casa ya usa (`OP-S-01`, `OP-S-02`) |
+| decision de fundador reservada | **NO.** Nada se borra, el alcance no se mueve, no se gasta fuera del repo, no se toca produccion y **el bucle no funde ramas** |
+| fallo tecnico repetido | **NO.** Gate 0 y las tres suites **verdes por corrida propia**. El tallador esta en ROJO, pero **la 120 lo dejo VERDE**: no hay dos vueltas seguidas por la misma causa, y la causa **tiene regla que la resuelve** (no medir con el ciclo a medias), que va como TAREA 1 bloqueante. **Si la 122 vuelve con el tallador en rojo, eso ya es la segunda** |
+| credito de tanda roto (clase o cifra) | **NO. Sigue en CERO** |
+| credito de tanda roto (reporte) | **NO. Sube a UNO** de las tres que pide la letra del 27 ago |
+| campaña consumada | **NO.** De las **diez** operaciones de la fase 05, **cinco** estan HECHAS y **cinco** siguen LISTA |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO SE DISPARA.** `OP-S-08`, `OP-S-09`, `OP-S-10`, `OP-S-11` y `OP-S-12` siguen en `LISTA`. **Y aviso con tiempo: no se podra declarar cerrada hasta que 3.3 este escrito en `08_VERIFICACION.md`** |
+
+**OBSERVACION QUE DEJO ABIERTA Y MARCADA "A VERIFICAR", NO ES CAIDA DE ESTA VUELTA:** las **siete**
+filas de `00_CODIGO` siguen en `LISTA` en `OPERACIONES.jsonl`, y sin embargo **el codigo lleva los
+arreglos con su marca**: mido hoy `OP-C-01` en `compass.ts:163`, `planRedactor.ts:53` y las dos
+rutas de `organizer`; `OP-C-02` en `graph.ts:189` y `graph.ts:201`; `OP-C-03` en `graph.ts:274` y
+`graph.ts:293`, `session/start/route.ts:97` y `world/[pack]/start/route.ts:149`; y sus pruebas en
+`web/lib/engine/accesosResueltos.test.ts`. **El campo `estado` no es la verdad de esta campaña**
+(la fase 03 esta cerrada con sus 16 filas en `LISTA`), y **eso ya venia de antes de la 121**. Lo
+nombro porque **la auditoria de cierre lo va a necesitar** y porque **`OP-S-08` se apoya en ello**.
+
+**EL BUCLE SIGUE.** Escribo el encargo de la vuelta 122 en `docs/loop/PROMPT_SIGUIENTE.md`. **No
+escribo `PARA_ALEXIS.md`.** El numero **121 queda gastado por esta acta**.
