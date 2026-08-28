@@ -67,6 +67,7 @@ FICHEROS_VEREDICTO = [
     ("SALIDA_V107_TAREA4_3_TRAMO3_TRES_VIAS.md", "tabla"),
     ("SALIDA_V107_TAREA5_3_TRAMO1_TRES_VIAS.md", "tabla"),
     ("SALIDA_V108_TAREA3_3_TRES_VIAS_46.md", "tabla"),
+    ("SALIDA_V108_TAREA5_2_TRAMO2_TRES_VIAS.md", "tabla"),
 ]
 
 RE_BLOQUE_CABECERA = re.compile(r"^--- PUESTO (\d+) ---")
