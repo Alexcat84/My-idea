@@ -1,0 +1,62 @@
+CRITERIO DE HECHO DE LA FASE 04 SOBRE TRES FUENTES, TAREA 3.1 VUELTA 117.
+Resolvedor: replica de _resolver() en scripts/run_phase1.py:989-1009
+(copia fiel declarada de resolverId, web/lib/engine/graph.ts); NO importable
+tal cual por ser funcion anidada, replicada aqui con la misma cadena de alias_de.
+====================================================================================================
+
+--- FUENTE: OP-E-01 ESCRITA (docs/plan/OP_E_01_DECIDIDAS.jsonl) (98 pares) ---
+ids vivos DIRECTO (los dos extremos, sin cadena de alias): 98
+resueltos POR ALIAS (al menos un extremo): 0
+ROTAS (al menos un extremo sin id vivo, ni directo ni por alias): 0
+PRESENTES hoy en el grafo por las DOS vistas: 98 de 98 (con extremos vivos)
+AUSENTES (con extremos vivos, pero la arista resuelta no esta completa hoy): 0
+pares con las DOS direcciones escritas EN ESTA FUENTE: 0
+
+--- FUENTE: OP-E-06 direccion (docs/plan/OP_E_06_DIRECCION_V90.jsonl) (114 pares) ---
+ids vivos DIRECTO (los dos extremos, sin cadena de alias): 100
+resueltos POR ALIAS (al menos un extremo): 14
+   ALIAS: pivotar_o_proceder (->pivote_o_proceder) -- verificar_product_market_fit (->=)
+   ALIAS: seis_medios_comunicacion_cliente (->estrategia_multicanal_bienvenida) -- seis_canales_comunicacion_assess (->=)
+   ALIAS: diseno_organizacional_equipos_innovacion (->equipo_multifuncional_real) -- equipos_pequenos_vs_grandes (->=)
+   ALIAS: pivotar_o_proceder (->pivote_o_proceder) -- realizar_pruebas_pasa_no_pasa (->=)
+   ALIAS: encontrar_vc_adecuado (->=) -- seleccion_etapa_fondo_vc (->embudo_secuencial_de_inversores)
+   ALIAS: customer_development_vs_business_plan (->search_for_business_model) -- romper_vision_en_experimentos (->=)
+   ALIAS: generar_multiples_opciones (->pensamiento_convergente_divergente) -- deadlines_como_herramienta_convergencia (->=)
+   ALIAS: warrants_deuda_convertible (->warrant_pricing_venture_debt) -- original_issue_discount_oid (->=)
+   ALIAS: customer_discovery_cuatro_fases (->=) -- pivotar_o_proceder (->pivote_o_proceder)
+   ALIAS: pivotar_o_proceder (->pivote_o_proceder) -- pivot_post_ventas (->=)
+   ALIAS: investigacion_como_habilidad_clave (->enfoque_etapa_investigacion) -- preguntas_problema_2 (->=)
+   ALIAS: build_metrics_toolset (->metricas_de_adquisicion_activacion) -- metricas_cohortes (->analisis_de_cohortes)
+   ALIAS: pivotar_o_proceder (->pivote_o_proceder) -- catalogo_pivotes (->=)
+   ALIAS: nafta_free_trade_agreements (->certificado_de_origen_tratados_libre_comercio) -- certificacion_origen_producto (->=)
+ROTAS (al menos un extremo sin id vivo, ni directo ni por alias): 0
+PRESENTES hoy en el grafo por las DOS vistas: 114 de 114 (con extremos vivos)
+AUSENTES (con extremos vivos, pero la arista resuelta no esta completa hoy): 0
+pares con las DOS direcciones escritas EN ESTA FUENTE: 0
+
+--- FUENTE: OP-E-07 direccion, ULTIMO (docs/plan/OP_E_07_DIRECCION_V94.jsonl) (84 pares) ---
+ids vivos DIRECTO (los dos extremos, sin cadena de alias): 74
+resueltos POR ALIAS (al menos un extremo): 10
+   ALIAS: invitar_ia_a_todo (->comprension_capacidades_limitaciones_ia) -- principio_mejora_continua_ia (->=)
+   ALIAS: dso_dpo_gestion_capital_trabajo (->ciclo_de_conversion_de_efectivo) -- gestion_cuentas_por_cobrar (->=)
+   ALIAS: fases_de_retencion_de_clientes (->ocho_fases_experiencia_cliente) -- fase_acclimate_experiencia_cliente (->=)
+   ALIAS: celebracion_hitos_cliente (->=) -- regalos_estrategicos_sorpresa (->regalos_estrategicos_personalizados)
+   ALIAS: modelo_spin (->modelo_spin_preguntas) -- venta_interna_cliente (->=)
+   ALIAS: venture_debt_terminos_economicos (->=) -- warrants_deuda_convertible (->warrant_pricing_venture_debt)
+   ALIAS: brief_de_diseno (->=) -- how_might_we_briefs (->encuadre_desafio_diseno)
+   ALIAS: generacion_ingresos_verdes (->crecimiento_ingresos_verdes) -- principio_green_tercer_boton (->=)
+   ALIAS: control_exportaciones_bis (->=) -- regulaciones_exportacion_ear (->export_administration_regulations)
+   ALIAS: seleccion_canales_exportacion (->seleccion_canales_distribucion) -- plataformas_comercio_electronico_marketplaces (->=)
+ROTAS (al menos un extremo sin id vivo, ni directo ni por alias): 0
+PRESENTES hoy en el grafo por las DOS vistas: 84 de 84 (con extremos vivos)
+AUSENTES (con extremos vivos, pero la arista resuelta no esta completa hoy): 0
+pares con las DOS direcciones escritas EN ESTA FUENTE: 0
+
+--- TOTAL (296 pares, suma de las tres fuentes, sin deduplicar) ---
+total: 296
+ids_vivos: 272
+por_alias: 24
+rotas: 0
+presentes: 296
+ausentes: 0
+bidireccionales: 0
