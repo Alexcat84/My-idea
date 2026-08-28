@@ -5400,3 +5400,68 @@ fase 06 por la remision del 26 ago 2026), nunca "cuatro mesas"
 **EL LIMITE:** `estado` NO SE TOCA (acta 100 4.2, doctrina vigente); cero
 aristas escritas o retiradas; no se abre la fase 05 ni la 06; no se mueve
 ninguna operacion de fase. Es un REGISTRO, no una cirugia.
+
+## VUELTA 103, TAREA 3: LOS REGISTROS DEL ACTA 102
+
+### 3.1 LA CAIDA DE GUARDA DEL EJECUTOR (acta 102: "AHORA LA CAIDA, Y NO ES
+DE DICTADO: ES DE GUARDA")
+
+El tallador de veredictos (`scripts/loop/tallar_veredictos_reporte.py`,
+`RE_CITA` de la vuelta 102) exigia el prefijo `docs/loop/` DENTRO de las
+comillas. El reporte de la 102 escribio 17 palabras de veredicto y 6 citas
+`SALIDA_...`, y solo 2 de esas 6 llevaban el prefijo: el tallador veia **1
+de 17**. El auditor lo probo con mutacion de dos variantes: la MISMA frase
+falsa (VERDE citando `SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`, cuyo
+veredicto real es ROJO) daba VERDE con el nombre pelado y ROJO con
+`docs/loop/` delante. Y un segundo filo: el emparejamiento del par que si
+comprobaba paso por SUERTE (cita ANTES de la palabra, preferida por casarse
+con la cabecera). NO fue caida de reporte (nada falso se publico): fue CAIDA
+DE GUARDA, un cerco mal puesto. Arreglado en la TAREA 1 de esta vuelta
+(`docs/loop/SALIDA_V103_TAREA1_2_MUTACION_VEREDICTOS_DOSVARIANTES.txt`): las
+dos variantes dan ROJO tras el arreglo, la cobertura total se publica, y el
+emparejamiento con mas de una cita por parrafo se declara en la salida.
+
+### 3.2 LO QUE EL EJECUTOR HIZO BIEN EN LA VUELTA 102, REGISTRADO IGUAL QUE
+LO QUE FALLA
+
+La racha de reporte cayo de DOS a CERO tras un repaso del auditor
+afirmacion por afirmacion contra su fichero. Las dos guardas buenas de la
+TAREA 1 (1.2, el tallador de nombres de operacion; 1.3, el arreglo de
+`verificar_apertura_sellada.py`) se corrieron con sus cinco casos reales por
+el auditor, las dos VERDE. El limite de la TAREA 4 se respeto: `estado` sin
+tocar en las 71 filas de `OPERACIONES.jsonl`, aditividad con el valor viejo
+como prefijo estricto del nuevo.
+
+### 3.3 LAS DOS DISCREPANCIAS DEL 28 Y EL 40, CERRADAS EN ESTA VUELTA
+
+Registradas por el auditor como ABIERTAS Y EN RELECTURA CONJUNTA (acta 102).
+La TAREA 2 de esta vuelta las cerro: leidos los cuatro nodos enteros
+(`timing_solicitud_referidos`, `fase_adopt_ciclo_cliente`, `analisis_valor`,
+`customer_needs_spreadsheet`) y el banco 9.6.2 y 9.6.3 enteros, EN LOS DOS
+el primer brazo del test de reconocimiento del 9.6.2 falla y el 9.6.3
+muestra procedimiento propio a cada lado (SANO). **SE SOSTIENE EL CASO DEL
+AUDITOR EN LOS DOS**: `correccion_v103` en `docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl`,
+puestos 28 y 40, campo `direccion_leida` a `null`. Cifra de `OP-E-03`
+recomputada con `scripts/loop/contar_cierre_efectivo.py`: de 90/93 (50,8%) a
+88/95 (51,9% NO RESUELTA). Detalle en `docs/plan/04_ENLACES.md`.
+
+### 3.4 EL PUNTO CIEGO DEL MUESTREO, MEDIDO Y YA ATENDIDO
+
+El auditor midio que el 28 (ratio 87,5) y el 40 (ratio 74,3) caen los dos EN
+MITAD del flanco RESUELTA, donde la seleccion por extremos (4 RESUELTA de
+menor ratio, 4 NO RESUELTA de mayor) no llega nunca. La TAREA 4 de esta
+vuelta fue AL CENTRO en vez de a los extremos (8 puestos: 13, 19, 10, 31 y
+15, 36, 35, 32, `scripts/loop/vuelta103_tarea4_relectura_ciega_centro.py`).
+7 de 8 coincidieron con el registro; el 31 discrepo y se movio
+(`correccion_v103`, exceso de genero). Cifra tras la TAREA 4: **87/96
+(52,5% NO RESUELTA)**.
+
+### 3.5 LAS TRES FALSAS ALARMAS DEL AUDITOR (acta 102, seccion 5.3),
+REGISTRADAS PORQUE EL AUDITOR SE COBRA COMO EL EJECUTOR
+
+Cazadas por el propio auditor antes de publicarlas: (i) los titulos gemelos
+por mayuscula que parecieron duplicados exactos y no lo eran para Gate 0
+(`titulo_concepto` EXACTO); (ii) un ratio inventado por el auditor que no
+calzaba contra el `titulo_ratio` real de `DIFERENCIA_CONTRA_COLA.jsonl`;
+(iii) un difflib por lineas del auditor contra el difflib por caracteres
+del ejecutor, que era la vara mas fuerte y la del ejecutor.
