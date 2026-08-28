@@ -1,0 +1,39 @@
+CENSO DE LA FASE 04_ENLACES, TALLADO de docs/plan/OPERACIONES.jsonl (71 filas totales).
+====================================================================================================
+filas de fase 04_ENLACES: 10
+
+OP-E-01 | ENLACE | LISTA | orden 1
+   depende_de: (ninguna)
+OP-E-02 | ENLACE | HECHA | orden 2
+   depende_de: (ninguna)
+OP-E-03 | LECTURA DIRIGIDA | LISTA | orden 3
+   depende_de: OP-E-01 (fase 04_ENLACES, estado LISTA)
+   depende_de: OP-U-02 (fase 03_FUSIONES, estado LISTA)
+OP-M-03-ENLACES | ENLACE | LISTA | orden 4
+   depende_de: OP-M-03-I (fase 03_FUSIONES, estado LISTA)
+   depende_de: OP-M-03-II (fase 03_FUSIONES, estado LISTA)
+   depende_de: OP-M-03-III (fase 03_FUSIONES, estado LISTA)
+OP-E-04 | ENLACE | LISTA | orden 5
+   depende_de: OP-M-01 (fase 06_MESAS, estado LISTA)
+   depende_de: OP-M-01-FUSION (fase 03_FUSIONES, estado LISTA)
+OP-E-05 | ENLACE MUTUO | LISTA | orden 6
+   depende_de: OP-M-01 (fase 06_MESAS, estado LISTA)
+   depende_de: OP-M-01-FUSION (fase 03_FUSIONES, estado LISTA)
+OP-M-01-ESLABONES | ENLACE | LISTA | orden 7
+   depende_de: OP-M-01 (fase 06_MESAS, estado LISTA)
+   depende_de: OP-M-01-FUSION (fase 03_FUSIONES, estado LISTA)
+OP-M-01-SEXTO | ENLACE MAS PODA DEL SOLAPE | LISTA | orden 8
+   depende_de: OP-M-01 (fase 06_MESAS, estado LISTA)
+   depende_de: OP-M-01-FUSION (fase 03_FUSIONES, estado LISTA)
+OP-E-06 | ENLACE CON EVIDENCIA DE LECTURA | LISTA | orden 9
+   depende_de: OP-D-01 (fase 02_DESTEJIDOS, estado LISTA)
+   depende_de: OP-D-02 (fase 02_DESTEJIDOS, estado LISTA)
+   depende_de: OP-D-03 (fase 02_DESTEJIDOS, estado LISTA)
+   depende_de: OP-D-04 (fase 02_DESTEJIDOS, estado LISTA)
+   depende_de: OP-D-05 (fase 02_DESTEJIDOS, estado LISTA)
+   depende_de: OP-D-06 (fase 02_DESTEJIDOS, estado LISTA)
+   depende_de: OP-D-07 (fase 02_DESTEJIDOS, estado LISTA)
+OP-E-07 | LECTURA DIRIGIDA CORTA | LISTA | orden 10
+   depende_de: OP-E-06 (fase 04_ENLACES, estado LISTA)
+
+FIN
