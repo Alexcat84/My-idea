@@ -1,0 +1,150 @@
+====================================================================================================
+MUESTRA POR EL CENTRO (8 puestos, excluidos 5, 7, 12, 22, 23, 26, 27, 28, 30, 33, 40): 13, 19, 10, 31, 15, 36, 35, 32
+====================================================================================================
+
+--- PUESTO 13 ---
+MADRE: waterfall_vs_agile_development
+  entregable_esperado: Una decisión documentada sobre la metodología de desarrollo de producto a utilizar.
+  pasos_accionables:
+    1. Evaluar si el contexto del proyecto requiere certeza total de requisitos (waterfall) o iteración (agile).
+    2. Para startups en fase de búsqueda, preferir metodologías ágiles que permitan pivotar.
+    3. Alinear el proceso de desarrollo de producto con el proceso de Customer Development.
+HIJO: desarrollo_de_clientes_customer_development
+  entregable_esperado: Un ciclo de retroalimentación de clientes documentado que valide o invalide las hipótesis iniciales del modelo de negocio.
+  pasos_accionables:
+    1. Convertir las hipótesis de negocio en preguntas específicas para el cliente.
+    2. Salir a entrevistar clientes potenciales antes de construir el producto completo.
+    3. Iterar el producto basándose en el feedback ('dos pasos adelante, uno atrás') en lugar de seguir un plan rígido.
+    4. Combinar el aprendizaje del cliente con ingeniería ágil para ajustar rápidamente el producto.
+
+--- PUESTO 19 ---
+MADRE: diseno_de_flujos_pace_layers
+  entregable_esperado: Un diagrama de capas de ritmo del proyecto (pace layers) señalando fricciones potenciales, y un análisis de flujo (PPPP) del recurso crítico del negocio.
+  pasos_accionables:
+    1. Identifica las distintas 'capas' de tu proyecto/organización (ej: producto, cultura de equipo, regulación, mercado) y su velocidad de cambio relativa.
+    2. Pregunta: ¿Estoy empujando una capa (ej. producto) más rápido de lo que otra capa (ej. usuarios, regulación, cultura) puede absorber?
+    3. Para cualquier flujo relevante (de usuarios, dinero, datos, materiales), analiza su Propósito, Partes, Lugar y Pace (ritmo).
+    4. Diseña puntos de desaceleración intencional donde el sistema lo necesite, en vez de optimizar solo por velocidad.
+HIJO: framework_ppph_flujos
+  entregable_esperado: Un mapa o diagrama del sistema estudiado con los cuatro elementos (Propósito, Partes, Lugar, Pace) documentados y sus interacciones señaladas.
+  pasos_accionables:
+    1. Identifica el flujo o sistema que quieres analizar (puede ser físico, social o digital).
+    2. Define su Propósito: ¿para qué sirve, y tiene propósitos secundarios en conflicto?
+    3. Lista sus Partes: personas, objetos, infraestructura involucrados.
+    4. Analiza el Lugar: normas culturales, geografía o contexto que moldea el comportamiento del flujo.
+    5. Evalúa el Pace: ¿es constante o varía? ¿qué pasa cuando alguien opera fuera del ritmo esperado?
+
+--- PUESTO 10 ---
+MADRE: validacion_sistema_medicion
+  entregable_esperado: Un reporte que valida tu sistema de medición y confirma su capacidad
+  pasos_accionables:
+    1. Evalúa la capacidad de tu sistema de medición usando el análisis MSA
+    2. Usa un software estadístico (como Minitab) para hacer el análisis
+    3. Confirma que tus mediciones son confiables antes de fijar los estándares de control
+HIJO: analisis_de_sistemas_de_medicion_msa
+  entregable_esperado: Informe de estudio MSA/Gauge R&R con estimaciones de repetibilidad, reproducibilidad y determinación de aceptabilidad del sistema de medición
+  pasos_accionables:
+    1. Definir el método de prueba con procedimiento paso a paso, equipo y condiciones
+    2. Identificar el sistema de causas de variabilidad (material, analistas, aparatos, días)
+    3. Verificar que el proceso de medición esté bajo control estadístico mediante carta de control
+    4. Realizar un estudio Gauge R&R con múltiples apraisers, partes y repeticiones
+    5. Calcular 5.15σ y compararlo con el rango de especificación (aceptable si es ≤10%)
+    6. Ajustar o calibrar el instrumento si se detecta sesgo sistemático, respecto a estándares de medida reconocidos
+
+--- PUESTO 31 ---
+MADRE: control_estadistico_del_proceso
+  entregable_esperado: Gráfico de control validado que demuestre estabilidad estadística del proceso, con causas especiales documentadas y eliminadas.
+  pasos_accionables:
+    1. Recolectar datos secuenciales del proceso (por hora, por lote, etc.)
+    2. Construir gráficos de control (X-barra y R) con los datos
+    3. Identificar y eliminar causas especiales de variación hasta que el proceso muestre estabilidad
+    4. Una vez estable, calcular la capacidad real del proceso
+    5. Aceptar que estar en control no equivale a cumplir especificaciones
+    6. Iniciar intervención en el sistema (cambio de diseño, método, materiales) para reducir el nivel de defectos una vez confirmado el control
+    7. Distinguir entre cambiar el nivel promedio (más simple) y reducir la dispersión (usualmente más difícil)
+HIJO: causas_comunes_vs_especiales
+  entregable_esperado: Gráfico de corrida o de control con los puntos clasificados como causa común o especial y un plan de acción diferenciado para cada tipo.
+  pasos_accionables:
+    1. Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes
+    2. Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos
+    3. Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales
+    4. Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla
+    5. Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas
+    6. Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales
+    7. Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo
+    8. Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+    9. Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).
+    10. Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.
+    11. Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.
+    12. Comunicar a los equipos que el objetivo es identificar problemas, no culpables
+    13. Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo
+    14. Fomentar la colaboración entre turnos y departamentos para resolver causas comunes
+    15. Analizar la distribución de errores o defectos entre todas las personas usando limites de control
+
+--- PUESTO 15 ---
+MADRE: clasificacion_tipos_activos
+  entregable_esperado: Inventario clasificado de todos los activos de la empresa con su categoría (corriente/largo plazo) y notas sobre supuestos contables aplicados
+  pasos_accionables:
+    1. Clasificar los activos de la empresa en corrientes y de largo plazo
+    2. Revisar el saldo de cuentas por cobrar y la reserva para cuentas incobrables
+    3. Evaluar los niveles de inventario (materia prima, en proceso, terminado) y su impacto en el flujo de caja
+    4. Identificar el valor de PPE (propiedad, planta y equipo) registrado al costo de adquisición, no al valor de mercado
+    5. Monitorear que el inventario se mantenga en el nivel mínimo necesario para operar
+HIJO: tipos_de_pasivos
+  entregable_esperado: Balance general con sección de pasivos correctamente segmentada por plazo.
+  pasos_accionables:
+    1. Clasificar todas las deudas de la empresa en corrientes vs largo plazo.
+    2. Separar la porción corriente de préstamos largo plazo que vence este año.
+    3. Registrar cuentas por pagar a proveedores y gastos acumulados (como nómina).
+    4. Revisar periódicamente el peso relativo de cada categoría de pasivo.
+
+--- PUESTO 36 ---
+MADRE: relaciones_publicas_leads_franquicia
+  entregable_esperado: Plan de relaciones públicas con historias definidas, calendario de pitches y métricas de cobertura obtenida
+  pasos_accionables:
+    1. Desarrollar una historia o ángulo único y atractivo sobre la marca para los medios
+    2. Contratar una firma de PR especializada en franquicias cuando el presupuesto lo permita
+    3. Buscar oportunidades de exposición en medios nacionales y locales, así como programas de TV relevantes
+    4. Aprovechar los backlinks generados por cobertura digital para mejorar el SEO
+    5. Extender el beneficio de PR también a los franquiciados existentes
+HIJO: referidos_franquiciados_existentes
+  entregable_esperado: Sistema formal de solicitud y seguimiento de referidos de franquiciados actuales, con protocolo de comunicación previo a la venta de territorios adyacentes
+  pasos_accionables:
+    1. Llamar a franquiciados existentes antes de identificar prospectos en su región para discutir planes de expansión
+    2. Educar a los franquiciados sobre los beneficios del crecimiento del sistema (poder de compra, publicidad, marca)
+    3. Preguntar directamente si conocen referidos calificados para el territorio
+    4. Entrenar al equipo de soporte de campo para discutir opciones de expansión multi-unidad regularmente
+    5. Evaluar cuidadosamente con el abogado franquiciador la posibilidad de pagar comisiones por referidos, dado el riesgo de conflicto de interés
+
+--- PUESTO 35 ---
+MADRE: producto_mercado_fit_motores
+  entregable_esperado: Un tablero de seguimiento (dashboard) que muestre la tendencia de tu métrica clave a lo largo de varios períodos
+  pasos_accionables:
+    1. Define la métrica concreta de tu motor de crecimiento elegido
+    2. Registra cómo cambia esa métrica con el tiempo, no solo su valor en un momento dado
+    3. Compara tu ritmo de progreso con otros negocios o referencias del mercado, no solo el número actual
+    4. Usa la contabilidad de la innovación (innovation accounting) para decidir si estás cerca de encajar con el mercado o necesitas pivotar
+HIJO: afinar_motor_crecimiento
+  entregable_esperado: Evidencia con números de que los cambios que hiciste mejoran o no los motores clave de tu crecimiento
+  pasos_accionables:
+    1. Elige un motor específico de tu crecimiento que quieras mejorar (por ejemplo, cuántos usuarios se activan)
+    2. Formula una hipótesis clara sobre qué cambio va a mejorar esa métrica
+    3. Diseña y corre experimentos enfocados solo en esa hipótesis
+    4. Mide si el cambio realmente mejoró la métrica que buscabas
+    5. Descarta los cambios que no den una mejora medible, aunque te parezcan bonitos o te haya costado hacerlos
+
+--- PUESTO 32 ---
+MADRE: requisitos_numericos_calidad_lotes
+  entregable_esperado: Plan de muestreo de aceptación con índices numéricos de calidad y confiabilidad definidos y comunicados al proveedor
+  pasos_accionables:
+    1. Definir índices numéricos de calidad de lote (ej. AQL, nivel de calidad aceptable)
+    2. Seleccionar un plan de muestreo de aceptación basado en consideraciones probabilísticas
+    3. Comunicar y capacitar al proveedor en la interpretación correcta de estos criterios estadísticos
+    4. Para productos complejos, definir requisitos numéricos de confiabilidad (ej. tiempo medio entre fallas)
+HIJO: critica_acceptable_quality_level
+  entregable_esperado: Una comparación del costo de tus reprocesos actuales frente al costo estimado de prevenir esos errores, y la eliminación de los estándares AQL que toleran el defecto.
+  pasos_accionables:
+    1. Revisa si estás usando estándares de AQL que toleran un porcentaje fijo de defectos.
+    2. Cuestiona el origen de esos estándares: casi siempre nacen de la operación diaria, no de un análisis técnico riguroso.
+    3. Cambia la mentalidad de 'nivel aceptable de fallas' por el objetivo de conformidad total (Cero Defectos).
+    4. Calcula el costo real de hacer las cosas mal frente al costo de hacerlas bien la primera vez.

@@ -1,0 +1,59 @@
+====================================================================================================
+MUESTRA POR EL CENTRO (8 puestos, excluidos 5, 7, 12, 22, 23, 26, 27, 28, 30, 33, 40): 13, 19, 10, 31, 15, 36, 35, 32
+====================================================================================================
+
+--- PUESTO 13 ---
+madre: waterfall_vs_agile_development -- hijo: desarrollo_de_clientes_customer_development
+titulo_ratio: 82.2
+paso_casado: 3
+direccion_leida (registro efectivo): RESUELTA (waterfall_vs_agile_development -> desarrollo_de_clientes_customer_development)
+razon: Su paso 3, 'Alinear el proceso de desarrollo de producto con el proceso de Customer Development', es UNA LINEA que nombra el otro proceso, y desarrollo_de_clientes_customer_development lo trae entero: convertir hipotesis en preguntas, entrevistar antes de construir, iterar con el feedback, y combinar el aprendizaje con ingenieria agil.
+
+--- PUESTO 19 ---
+madre: diseno_de_flujos_pace_layers -- hijo: framework_ppph_flujos
+titulo_ratio: 82.4
+paso_casado: 3
+direccion_leida (registro efectivo): RESUELTA (diseno_de_flujos_pace_layers -> framework_ppph_flujos)
+razon: Ejemplar limpio del 9.6.2. Su paso 3, 'Para cualquier flujo relevante analiza su Proposito, Partes, Lugar y Pace', es UNA LINEA que enuncia cuatro nombres, y framework_ppph_flujos dedica UN paso a cada uno mas el de identificar el flujo. La madre conserva las capas de ritmo y los puntos de desaceleracion intencional, que el hijo no toca.
+
+--- PUESTO 10 ---
+madre: validacion_sistema_medicion -- hijo: analisis_de_sistemas_de_medicion_msa
+titulo_ratio: 84.2
+paso_casado: 1
+direccion_leida (registro efectivo): RESUELTA (validacion_sistema_medicion -> analisis_de_sistemas_de_medicion_msa)
+razon: Su paso 1, 'Evalua la capacidad de tu sistema de medicion usando el analisis MSA', es UNA LINEA que nombra el metodo, y el MSA trae sus seis pasos. Nota de forma: el MSA es HIJO aqui y MADRE en el par 8, o sea cadena de tres y no dos madres del mismo nivel.
+
+--- PUESTO 31 ---
+madre: control_estadistico_del_proceso -- hijo: causas_comunes_vs_especiales
+titulo_ratio: 84.5
+paso_casado: 3
+direccion_leida (registro efectivo): RESUELTA (control_estadistico_del_proceso -> causas_comunes_vs_especiales)
+razon: Su paso 3, 'Identificar y eliminar causas especiales de variacion hasta que el proceso muestre estabilidad', es UNA LINEA, y causas_comunes_vs_especiales trae QUINCE pasos para esa distincion. Nota de forma: el SPC es HIJO en el par 29 y MADRE aqui, o sea cadena de tres.
+
+--- PUESTO 15 ---
+madre: clasificacion_tipos_activos -- hijo: tipos_de_pasivos
+titulo_ratio: 79.4
+paso_casado: 1
+direccion_leida (registro efectivo): NO RESUELTA
+razon: CONTINUA y la DIRECCION ES NINGUNA: no son madre e hijo, son los DOS LADOS DEL BALANCE. clasificacion_tipos_activos clasifica ACTIVOS en corrientes y de largo plazo; tipos_de_pasivos clasifica DEUDAS con el mismo corte. El barrido caso la forma de la frase, no la materia. Es el caso 2.195 que el banco 9.6.2 ya nombra: linea compartida y procedimiento propio a cada lado.
+
+--- PUESTO 36 ---
+madre: relaciones_publicas_leads_franquicia -- hijo: referidos_franquiciados_existentes
+titulo_ratio: 79.4
+paso_casado: 5
+direccion_leida (registro efectivo): NO RESUELTA
+razon: CONTINUA, pero la DIRECCION NO SE RESUELVE. El paso 5 de relaciones_publicas_leads_franquicia manda extender el beneficio de RELACIONES PUBLICAS a los franquiciados existentes; referidos_franquiciados_existentes monta un programa de REFERIDOS con esos mismos franquiciados. Coinciden las personas, no la actividad.
+
+--- PUESTO 35 ---
+madre: producto_mercado_fit_motores -- hijo: afinar_motor_crecimiento
+titulo_ratio: 80.0
+paso_casado: 1
+direccion_leida (registro efectivo): NO RESUELTA
+razon: CONTINUA, pero la DIRECCION NO SE RESUELVE y se dice en vez de forzarla. El paso 1 de producto_mercado_fit_motores manda DEFINIR LA METRICA del motor elegido; afinar_motor_crecimiento no define la metrica: corre el ciclo de experimentos para MEJORARLA. Comparten el motor y se reparten el trabajo, pero el hijo no cabe dentro de ese paso.
+
+--- PUESTO 32 ---
+madre: requisitos_numericos_calidad_lotes -- hijo: critica_acceptable_quality_level
+titulo_ratio: 84.5
+paso_casado: 1
+direccion_leida (registro efectivo): NO RESUELTA
+razon: CONTINUA y la DIRECCION ES NINGUNA, y el motivo merece registro aparte: el hijo no desarrolla el paso de la madre, LO REFUTA. requisitos_numericos_calidad_lotes manda definir indices AQL (Juran); critica_acceptable_quality_level manda revisar si usas AQL, cuestionar su origen y cambiar la mentalidad por Cero Defectos (Crosby). Dos doctrinas opuestas sobre la misma linea. Ver la nota de figuras.
