@@ -1571,6 +1571,32 @@ viene este superviviente), no CONTENIDO que el lector vea como vigencia de
 marco. **El nodo no se toca en esta vuelta**: queda anotado, igual que los
 otros cuatro, como trabajo post campaña.
 
+### SEXTA entrada (vuelta 121, adjudicacion del auditor en el acta 120 seccion 3.1 sobre OP-S-02): `seguro_exportacion` perdio la palabra "Incoterms" de su paso 1 en la fusion del `ACTO 16`
+
+**Medido contra el nodo de hoy**, `dataset/nodos/seguro_exportacion.json`:
+`seguro_exportacion` absorbio a `seguro_de_carga_transporte` en la fusion del
+`ACTO 16 DEL LOTE A` (`docs/plan/03_FUSIONES.md`, vuelta 57, commit `0481113f`).
+El paso 1 del muerto decia *"segun los terminos de venta (Incoterms)"* y el
+paso 1 del superviviente, **su texto vivo hoy**, dice:
+
+> *"Determinar segun terminos de venta quien es responsable del seguro de carga"*
+
+**Por que queda FUERA de `OP-S-02`**: el reparto de la fusion 16 conto el paso 1
+del muerto como pieza **"ya dicha"** (`P.13` del `BANCO_DEL_PLAN`, clase VIVE
+DENTRO), de 6 piezas repartidas en 2 enteras, 3 ya dichas y 1 `INCISO`, con una
+UNICA perdida nombrada, **DE CONDICIONES, no de pasos** (ver linea 2348 de
+`03_FUSIONES.md`). La unidad del reparto es el PASO, no la palabra, y el
+parentesis "(Incoterms)" cayo por debajo de esa granularidad: NO HAY PERDIDA
+SIN DECLARAR en la fusion 16. Restituir la palabra no cabe en `OP-S-02`, cuyo
+acto literal es anadir version a una cita que YA existe, no reponer una palabra
+que la fusion nunca declaro perdida como pieza propia.
+
+**Adjudicado citando ademas el punto 2 de la decision del fundador del 28 ago
+2026** (`docs/loop/paradas/2026-08-28-titulo-nafta-ops01-DECISION.md`): el
+contenido que la operacion no alcanza se anota en la ficha y no se ejecuta. **El
+nodo no se toca en esta vuelta**: queda anotado como trabajo post campaña, igual
+que las entradas de arriba.
+
 ---
 
 ## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
@@ -7295,3 +7321,16 @@ la correccion de la vuelta 119 aplicada):
 vacio tras las dos corridas): las guardas muerden, lo que faltaba era la
 prueba. La regla que rige desde esta vuelta (EJECUTOR.md, "EL CASO ROJO SE
 PRUEBA POR MUTACION") ya esta en vigor y se aplica en la TAREA 3 de abajo.
+
+**CORRECCION DECLARADA (vuelta 121, caida 4.1 del acta 120): `docs/loop/REPORTE.md`
+de la vuelta 120 (commit `d557e431`, linea 42) comprimio esta misma R.3 en
+"ambas EXIT 1 limpio", cuando el parrafo de arriba, escrito el mismo dia, YA
+distinguia las dos especies: la de `vuelta119_tarea3_titulo_ops01.py` es un
+ROJO limpio de verdad (EXIT 1 sin excepcion sin capturar); la de
+`vuelta119_tarea3_2_3_operaciones_ops01.py` es EXIT 1 tambien, pero por un
+`ValueError` SIN CAPTURAR, que no es un rojo limpio. El registro largo aqui
+arriba estaba bien escrito; fue el reporte el que aplano. Texto viejo de este
+R.3 intacto. De aqui sale la regla vigente desde esta vuelta (`EJECUTOR.md`,
+20 ago 2026 en adelante): EL REPORTE NO PUEDE DECIR MENOS PRECISO QUE EL
+REGISTRO QUE CITA; si el registro distingue dos especies, el reporte las
+distingue tambien o no las nombra.
