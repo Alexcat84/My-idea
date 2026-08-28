@@ -1,71 +1,80 @@
-# REPORTE VUELTA 119 (MODO AUSTERO, tope 80 lineas)
+# REPORTE VUELTA 120 (MODO AUSTERO, tope 80 lineas)
 
-Apertura real: HEAD `ed924258` (decision del fundador, ya en `git log` al abrir),
-arbol `dataset/` IDENTICO al cierre de la 118 (`git rev-parse d13be5c0:dataset` ==
-`git rev-parse ed924258:dataset`): las cifras de cierre de la 118 valen como
-apertura de esta, recomputadas donde hizo falta.
+Apertura sellada en vivo: `SALIDA_V120_HEAD_APERTURA.txt` = `5bf5f786`, primer
+commit de la vuelta `bac06ba5` (hijo directo), `verificar_apertura_sellada.py
+--vuelta 120` VERDE (8 ficheros, todos nacidos en `bac06ba5`).
 
-**CABECERA** (cada celda citada de su fichero, comando al lado):
+**CABECERA**, tallada con `python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 120`:
 
-| | apertura (= cierre v118, arbol identico) | cierre v119 |
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
 |---|---:|---:|
-| censo nodos/vivos/deprecados | 3.853/3.188/665 | **3.853/3.188/665** (`SALIDA_V119_TAREA3_GATE0.txt`) |
-| Gate 0 | OK (auto-aristas 0, dup titulo 0, divergentes 0, alcanzabilidad 100,0%, 85 semillas) | **OK identico** (`SALIDA_V119_TAREA3_GATE0.txt`) |
-| aristas sig/prev/suma/union | 9.190/9.169/18.359/9.813 | **9.190/9.169/18.359/9.813** (`scripts/loop/vuelta83_conteo_aristas.py WORK`, `SALIDA_V119_CONTEO_CIERRE.txt`) |
-| motor | 25/25 | **25/25** (`SALIDA_V119_TAREA3_MOTOR.txt`) |
-| web | 80 passed (80) / 1.030 passed, 3 skipped | **identico** (`SALIDA_V119_TAREA3_WEB.txt`) |
-| tsc | EXIT 0, cero lineas | **EXIT 0, cero lineas** (`SALIDA_V119_TAREA3_TSC.txt`) |
-| marcador `A`/`B`/`C`/`D`, `n` | 551/72/5/2.760, n 3.388 | **identico**, recomputado (`recomputar_marcador.py 3388`, `SALIDA_V119_MARCADOR_CIERRE.txt`) |
-| `master_graph.json` | `sha256=f0e399396745`, 8.391.653 bytes | `sha256=b758994057cf`, 8.391.659 bytes (**+6**: "NAFTA" a "T-MEC/USMCA" en una linea) |
+| censo: nodos / vivos / deprecados | 3.853 / 3.188 / 665 | **3.853 / 3.188 / 665** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 9.190 / 9.169 / 18.359 / 9.813 | **9.190 / 9.169 / 18.359 / 9.813** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| marcador del cribado `A` / `B` / `C` / `D`, `n` | 551 / 72 / 5 / 2.760, n 3.388 | **551 / 72 / 5 / 2.760, n 3.388** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 1 fila(s): `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **1 fila(s): `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `5bf5f786` (asunto real leido de git log: 'ACTA DE LA VUELTA 119 DEL AUDITOR: dato impecable, guardas perdidas, y un universal mio que era falso.'), HEAD real de apertura `5bf5f786` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `32a03035` (leido de `SALIDA_V120_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
 
-**TAREA 1.** Fichero nuevo `vuelta119_tarea1_guarda_op_c05_contenido.py`: via
-equivalente de `OP-C-05` con la limpieza de `dataset/` medida por CONTENIDO
-(`git diff --numstat`) en vez de ESTADO (`git status --porcelain`), que siempre
-veia la `M` espuria de fin de linea. Guarda vieja intacta y confirmada rota
-(EXIT=1, `SALIDA_V119_TAREA1_CASO_ROJO_VIEJO_SIGUE_ROTO.txt`); la nueva pasa
-(EXIT=0, `..._NUEVO.txt`) con caso rojo por mutacion sobre la variable que
-decide (935 a 936, condicion invertida cae en False). `dataset/` sin contenido
-tocado en los dos, medido por `git diff --numstat`.
+Pegada entera desde `python scripts/loop/tallar_cabecera_reporte.py --fase04
+--vuelta 120`, sin editar ninguna celda.
 
-**TAREA 2.** Registros del acta 118 en `docs/PENDIENTES.md`, aditivo puro
-(51/0, `git diff --numstat`). R.1: correccion de atribucion, verificada de
-nuevo hoy (`grep -ic` sobre `FASE_0_CODIGO.md`: "equivalente", "no crezca" y
-"antes y despues", las tres en cero), cita correcta acta 88 seccion 5.4, no la
-ficha; adjudicacion sostenida, atribucion corregida, texto viejo intacto. R.2:
-entrada nueva en la ficha `vigencia-del-marco-internacional`, los cuatro nodos
-vivos que nombran NAFTA (`certificado_de_origen_coo`,
-`documentacion_exportacion`, `regla_de_minimis`, `reglas_origen_sectoriales`)
-anotados como trabajo post campaña por decision 2 del fundador.
+**TAREA 1.** Sello de apertura en vivo (guarda perdida en la 119, ahora VERDE)
+y siete salidas con nombre canonico. Ciclo de tres corrido dos veces (apertura
+y cierre): `run_phase1.py --reaplico-curaduria` revierte 71 etiquetas y NUNCA
+se dejo asi, siempre seguido de `etiquetas_de_cara.py --aplicar` y
+`sync_assets_web.py`; `git diff --numstat` sobre `dataset/web/engine` en cero
+las dos veces. Commit `bac06ba5`.
 
-**TAREA 3.** `OP-S-01` **CUMPLIDA CON REMISION**. 3.1: `titulo_concepto`
-corregido al texto exacto de la decision (`vuelta119_tarea3_titulo_ops01.py`,
-guarda contra pisar un titulo distinto al esperado, correccion declarada con
-el viejo citado). Ciclo de tres corrido (`run_phase1.py --reaplico-curaduria`
-GATE 0 OK, `etiquetas_de_cara.py --aplicar` 71 etiquetas,
-`sync_assets_web.py` 6 assets): unico cambio de contenido en `dataset/` y su
-espejo `web/` es esa linea (`git diff --numstat` 1/1 en los dos
-`master_graph.json` y en el nodo). Suites verdes despues (cabecera). 3.2:
-punto 4 de `verificacion` acotado por correccion declarada a la nomina de la
-operacion, citando la ficha; texto viejo intacto. 3.3: `estado` LISTA a HECHA,
-`fecha_corte` 2026-08-28, `nota` con parrafo de CIERRE CON REMISION citando el
-acto material de la vuelta 57 (`a1d7269d`). Todo por
-`vuelta119_tarea3_2_3_operaciones_ops01.py`, solo la fila de `OP-S-01` tocada
-(`git diff --numstat` 1/1 sobre `OPERACIONES.jsonl`).
+**TAREA 2.** Tres registros aditivos en `docs/PENDIENTES.md` (88/0, `git diff
+--numstat`, `grep -c "^-[^-]"` en 0). R.1: el "SIEMPRE" de la `M` espuria
+(acta 118 seccion 4.2, heredado por reporte 119 y docstring de
+`vuelta119_tarea1_guarda_op_c05_contenido.py`) es FALSO como universal,
+reverificado hoy: `--caso-rojo` de la guarda vieja EXIT 0, `git status
+--porcelain -- dataset/` vacio antes y despues. Se corrige el diagnostico, no
+el arreglo; ningun codigo se reescribe. R.2: quinta entrada de la ficha
+`vigencia-del-marco-internacional`: el superviviente de `OP-S-01` sigue
+diciendo NAFTA en `resumen_teorico`/`pasos_accionables` pese al titulo ya
+corregido; anotado, nodo sin tocar. R.3: caso positivo que faltaba de las
+guardas de `OP-S-01`, corridas hoy: ambas EXIT 1 limpio (titulo: "no se pisa
+un estado distinto al medido"; operaciones: `ValueError` sin capturar en
+`verif.index(PUNTO4_VIEJO)`, ya fuera de lista tras la 119). Ninguna escribio
+nada. Commit `02c734ba`.
 
-3.4. `OP-S-02` **NO SE ABRIO** esta vuelta: las TAREAS 1 a 3 ya llevan cuatro
-ficheros nuevos, dos ciclos de Gate 0 y tres corridas completas de suites;
-abrir una operacion nueva (Incoterms, tres nodos) exige su propia lectura y
-verificacion enteras. Queda para el relanzamiento siguiente. Limite de
-alcance, no parada.
+**TAREA 3.a.** `OP-S-02` (Incoterms) **CERRADA con nomina remapeada**.
+Remedida contra el grafo de hoy: de los tres nodos de la nomina (11 ago 2026),
+DOS estan deprecados. `terminos_de_venta_incoterms` resuelve por alias a
+`incoterms_reglas_comerciales_internacionales`: la cita viaja.
+`seguro_de_carga_transporte` resuelve a `seguro_exportacion`: la cita **NO**
+viaja completa (el superviviente perdio la palabra "Incoterms" de su paso 1 en
+una fusion anterior). Version "Incoterms 2020" (`docs/PENDIENTES.md`, ficha
+`vigencia-del-marco-internacional`) escrita en
+`incoterms_reglas_comerciales_internacionales.resumen_teorico`, unico campo
+tocado, con ancla-guarda + simulacion + mutacion negativa pegadas
+(`SALIDA_V120_TAREA3A_SIMULACION.txt`, `..._MUTACION_NEGATIVA.txt`,
+`..._ESCRITURA.txt`). Ciclo de tres corrido, `git diff --numstat` 1/1 en los
+dos `master_graph.json` y en el nodo; Gate 0 y las tres suites verdes
+despues. `OPERACIONES.jsonl`: `OP-S-02` LISTA a HECHA, punto 1 de
+`verificacion` acotado por correccion declarada citando el remapeo, `nota`
+ampliada sin borrar texto viejo (guardas: `..._OPS_SIMULACION.txt`,
+`..._OPS_MUTACION_NEGATIVA.txt`, `..._OPS_ESCRITURA.txt`). `seguro_exportacion`
+**NO TOCADO**: restituir la palabra perdida es decision de contenido distinta
+a "anadir version a una cita que ya existe". Commit `32a03035`.
 
-**DISCUTIBLES MARCADOS.** (a) Esta vuelta no sello `SALIDA_V119_HEAD_APERTURA.txt`
-antes de la TAREA 1 (TAREA 1 y 2 no tocan `dataset/`, asi que es inocuo, pero
-rompe la letra de "la apertura se mide antes de la primera operacion");
-reconstruido aqui por igualdad de arbol contra el cierre de la 118, no por
-sello en vivo. (b) No se corrio `tallar_cabecera_reporte.py --fase04`: sus
-ficheros de entrada (`SALIDA_V<N>_GATE0_CMD1_<LADO>.txt` y hermanos) no se
-produjeron con ese nombre exacto esta vuelta; la cabecera de arriba se armo
-citando cada celda de su fichero de origen a mano, con el comando al lado, no
-con ese tallador. (c) `OP-S-02` no se abrio (3.4).
+**3.b.** `OP-S-03` en adelante **NO SE ABRIO**: `OP-S-02` sola llevo
+simulacion, mutacion negativa, dos ciclos de Gate 0 mas suites, y cierre de
+registro con guarda propia; `OP-S-03` exige la misma relectura entera. Limite
+de alcance, no parada; a diferencia de la 119, esta vuelta si entrego trabajo
+de fase 05 ejecutado (operacion real cerrada), no solo registro.
 
-Commits de la vuelta: TAREA1 `fd222415`, TAREA2 `245ddba5`, TAREA3 `815481e5`.
+**DISCUTIBLES MARCADOS.** (a) La quinta entrada de la ficha (TAREA 2, R.2) es
+adjudicacion del auditor por extension, no encargo literal del fundador sobre
+ese texto especifico. (b) `seguro_de_carga_transporte`/`seguro_exportacion`
+queda fuera de `OP-S-02` por lectura de alcance del ejecutor (restituir
+palabra perdida != anadir version), no por regla escrita; PENDIENTE DE
+DOCTRINA. (c) `OP-S-03` en adelante no se abrio (3.b).
+
+Commits de la vuelta: TAREA1 `bac06ba5`, TAREA2 `02c734ba`, TAREA3.a `32a03035`.
