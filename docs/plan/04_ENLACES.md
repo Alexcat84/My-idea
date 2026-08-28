@@ -1377,6 +1377,100 @@ de `OP-E-01` y `OP-E-03`, aditivo, medido con `difflib`,
 `docs/loop/SALIDA_V102_TAREA4_REGISTRO_OPERACIONES.txt`) y en
 `docs/PENDIENTES.md`.
 
+### CORRECCION DECLARADA DEL REGISTRO DE ARRIBA (VUELTA 117, TAREA 4.1, adjudicacion del auditor, acta de la vuelta 116)
+
+**EL TEXTO DE ARRIBA SE QUEDA ENTERO Y SIN BORRAR UNA LETRA.** La cuenta "7
+BLOQUEADAS" incluia a `OP-E-06` y `OP-E-07` como si estuvieran a la espera de
+que sus dependencias se resolvieran. Eso era falso desde antes de escribirse:
+las dos llevan un `ADDENDUM DE EJECUCION` en su propio campo `nota`, escrito
+en las vueltas 90 y 91, con sus aristas YA en el grafo. Doctrina adjudicada
+por el auditor en el acta de la vuelta 116 (dos piezas, ninguna nueva): (1)
+"una operacion con ADDENDUM DE EJECUCION escrito y sus aristas en el grafo
+esta EJECUTADA aunque su campo `estado` diga LISTA" (acta 100, seccion 4.2,
+mas el preambulo de `AUDITOR.md`, "el estado de verdad es EL REPO"); (2) "el
+registro de cierre cuenta viva donde viva dentro de `docs/plan/`", aplicada
+en la TAREA 3.2 de esta misma vuelta.
+
+**LA CITA LITERAL DE LOS DOS ADDENDA**, leida hoy de `docs/plan/OPERACIONES.jsonl`
+(campo `nota`, `docs/loop/SALIDA_V117_TAREA3_3_CENSO_EJECUCION_FASE04.txt`):
+`OP-E-06`: *"ADDENDUM DE EJECUCION (29 ago 2026, vuelta 90) [CORRECCION
+DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026" de este
+addendum estaba TECLEADA y es FALSA..."* (la fecha real corregida es 27 ago
+2026, vuelta 90). `OP-E-07`: *"ADDENDUM DE EJECUCION (29 ago 2026, vuelta 91)
+[CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026"
+de este addendum estaba TECLEADA y es FALSA..."* (la fecha real corregida es
+27 ago 2026, vuelta 91).
+
+**LAS CIFRAS DE LA TAREA 3.1 DE ESTA VUELTA, DELANTE:** las 114 filas de
+`docs/plan/OP_E_06_DIRECCION_V90.jsonl` estan **114 de 114 PRESENTES** hoy en
+el grafo por las dos vistas (`nodos_siguientes` y `nodos_previos`), 100 con
+los dos extremos vivos directo y 14 resueltas por alias, cero rotas; las 84
+filas del ULTIMO `docs/plan/OP_E_07_DIRECCION_V94.jsonl` (de cuatro ficheros
+V91 a V94, la nomina de verdad es la del ultimo) estan **84 de 84 PRESENTES**
+hoy, 74 directo y 10 por alias, cero rotas
+(`docs/loop/SALIDA_V117_TAREA3_1_CRITERIO_HECHO_TRES_FUENTES.txt`).
+
+**LA CUENTA CORREGIDA:** `OP-E-06` y `OP-E-07` **SALEN de las "7 BLOQUEADAS"**
+y pasan a EJECUTADAS. Quedan **CINCO** operaciones que de verdad esperan mesa
+de la fase 06 (`OP-M-03-ENLACES`, `OP-E-04`, `OP-E-05`, `OP-M-01-ESLABONES`,
+`OP-M-01-SEXTO`), medidas con sus tres criterios de remision en la TAREA 3.4
+de esta vuelta (ver censo completo debajo). El campo `estado` de `OP-E-06` y
+`OP-E-07` **NO SE TOCA** en este registro (sigue diciendo `LISTA`, igual que
+`OP-E-01` y `OP-E-03` no se tocaron en la correccion original): la cifra que
+se corrige es la CUENTA DE LA FASE, no el campo `estado` de ninguna
+operacion. Esa es la adjudicacion final del auditor en la 118, con este censo
+delante.
+
+### EL CENSO DE CIERRE DE LA FASE 04, DOS MITADES (VUELTA 117, TAREA 4.2)
+
+**PRIMERA MITAD, LAS QUE TIENEN SU DESTINO CUMPLIDO** (medidas por la TAREA
+3.3 de esta vuelta, `docs/loop/SALIDA_V117_TAREA3_3_CENSO_EJECUCION_FASE04.txt`):
+
+| operacion | senal | aristas presentes/total |
+|---|---|---:|
+| `OP-E-02` | estado `HECHA` | 0/0 (`aristas_nuevas` vacio, sin aristas propias) |
+| `OP-E-03` | `ADDENDUM DE EJECUCION` (29 ago 2026 corregido a 27 ago, vuelta 94); es LECTURA, no escritura | 0/0 (nada que resolver por esta via) |
+| `OP-E-06` | `ADDENDUM DE EJECUCION` (vuelta 90) | 114/114 |
+| `OP-E-07` | `ADDENDUM DE EJECUCION` (vuelta 91) | 84/84 |
+
+`OP-E-01` queda APARTE de esta tabla, sin categoria adjudicada aqui: no trae
+la frase `ADDENDUM DE EJECUCION` en su `nota`, pero sus 98 de 98 aristas YA
+estan presentes en el grafo hoy por las dos vistas (TAREA 3.1 y 3.3). Se
+mide, no se adjudica: la categoria final es del auditor en la 118.
+
+**SEGUNDA MITAD, LAS CINCO REMITIDAS A LAS MESAS DE LA FASE 06** (TAREA 3.4
+de esta vuelta, `docs/loop/SALIDA_V117_TAREA3_4_CRITERIOS_REMISION_CINCO.txt`,
+acotando `vuelta116_tarea3_4_tres_criterios_remision.py` corrido tal cual
+sobre las siete originales primero,
+`docs/loop/SALIDA_V117_TAREA3_4_CRITERIOS_REMISION_SIETE_TAL_CUAL.txt`), con
+sus TRES criterios de remision (docs/plan/00_INDICE.md, "LA FASE 03 QUEDA
+CERRADA CON REMISION"):
+
+| operacion | destino (mesa fase 06) | nomina (`aristas_nuevas`) | `pregunta_pendiente` | `adjudicacion` escrita |
+|---|---|---:|---|---|
+| `OP-M-03-ENLACES` | `OP-M-03` | 2 | NINGUNA | SI |
+| `OP-E-04` | `OP-M-01` | 9 | NINGUNA | SI |
+| `OP-E-05` | `OP-M-01` | 2 | NINGUNA | SI |
+| `OP-M-01-ESLABONES` | `OP-M-01` | 2 | NINGUNA | SI |
+| `OP-M-01-SEXTO` | `OP-M-01` | 1 | NINGUNA | SI |
+
+Destino: **4 a `OP-M-01`, 1 a `OP-M-03`**. Nomina total: **16** (2+9+2+2+1).
+`pregunta_pendiente` NINGUNA en las cinco; `adjudicacion` escrita en las
+cinco: los TRES criterios de la remision estan cumplidos en las cinco. De
+estas cinco, la TAREA 3.3 mide que solo `OP-E-05` tiene alguna arista YA
+presente hoy (1 de 4, una direccion del enlace mutuo `LD-41` del banco 9.22);
+las demas (`OP-E-04` 0/9, `OP-M-01-ESLABONES` 0/2, `OP-M-01-SEXTO` 0/1,
+`OP-M-03-ENLACES` 0/2) estan enteras sin escribir: son propuestas, no
+ejecuciones.
+
+### EL LIMITE DE ESTE REGISTRO (VUELTA 117, TAREA 4.3)
+
+**ESTE REGISTRO NO CIERRA LA FASE 04.** Es la medicion con la que el auditor
+la cerrara en la vuelta 118. El campo `estado` no se toca en ninguna de las
+diez operaciones, no se abre la fase 05 ni la fase 06, y no se escribe ni se
+retira ninguna arista. El diff sobre `dataset/`, `web/` y `engine/` de esta
+vuelta da CERO lineas, medido commit a commit.
+
 ## EL CIERRE DE LA LECTURA DE `OP-E-03`, EL TERRITORIO SE ACABO (VUELTA 115, TAREA 3.3)
 
 **EL TERRITORIO DE LECTURA QUEDA ENTERO: 109 = 80 + 8 + 21, COSECHA CERO EN
