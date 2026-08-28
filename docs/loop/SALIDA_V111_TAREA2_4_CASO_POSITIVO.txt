@@ -1,0 +1,11 @@
+EXCLUSIONES (4), letra del encargo 'no se esconden':
+   linea 3, motivo 'ANTES de la 1.a operacion': Apertura sellada `55a48875` (`docs/loop/SALIDA_V110_HEAD_APERTURA.txt`, ANTES de la 1.a operacion), `verificar_apertura_sellada.py --vuelta 110` VERDE EXIT 0 en la apertura y re-corrida al cierre sin cambio (`docs/loop/SALIDA_V110_GUARDAS_CIERRE_MUTACIONES.txt`).
+   linea 7, motivo 'antes de la 1.a operacion': | | **apertura**, antes de la 1.a operacion | **cierre, RECOMPUTADO al cierre** |
+   linea 18, motivo 'antes de la 1.a operacion': | identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `55a48875` (asunto real leido de git log: 'ACTA DE LA VUELTA 109 DEL AUDITOR, mas el encargo de la 110.'), HEAD real de apertura `55a48875` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `70f290d5` (leido de `SALIDA_V110_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+   linea 24, motivo 'antes de decidir': Contra-caso propio escrito antes de decidir (el hijo podria desarrollar solo el argumento B, agilidad, en 4 de sus 5 pasos): se cae porque titulo, paso 2 y entregable del hijo anclan el argumento A (aprendizaje del cliente) por separado, igual que el contra-caso del auditor.
+
+ORACIONES QUE CUMPLEN LA VARA (1):
+   linea 22, 2/2 citas (SALIDA_V110_TAREA2_4_CASO_N_ANTES.txt, SALIDA_V110_TAREA2_4_CASO_N_DESPUES.txt): Caso N (`tramo2_sin_decl_87.md`, del auditor): ANTES del arreglo, VERDE con 4 vuelcos y el 87 ausente, el boquete (`SALIDA_V110_TAREA2_4_CASO_N_ANTES.txt`); DESPUES, ROJO EXIT 1 nombrando 87 (`SALIDA_V110_TAREA2_4_CASO_N_DESPUES.txt`).
+
+ROJO, 1 hallazgo(s):
+   linea 22, 1/2 citas (SALIDA_V110_TAREA2_5_CASO_O_DESPUES.txt): Caso O (`tramo2_sin_decl_91.md`): ROJO EXIT 1 nombrando 91, antes y despues, sin apagarse (`SALIDA_V110_TAREA2_5_CASO_O_DESPUES.txt`).
