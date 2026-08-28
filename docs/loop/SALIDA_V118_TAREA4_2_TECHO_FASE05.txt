@@ -1,0 +1,21 @@
+TECHO DE LA FASE 05_SANEO, TAREA 4.2 VUELTA 118.
+====================================================================================================
+numero de operaciones: 10
+
+| id_op | orden | pregunta_pendiente | depende_de |
+|---|---:|---|---|
+| OP-S-01 | 1 | None | NINGUNA |
+| OP-S-02 | 2 | None | NINGUNA |
+| OP-S-03 | 3 | None | NINGUNA |
+| OP-S-04 | 4 | None | NINGUNA |
+| OP-S-05 | 5 | None | NINGUNA |
+| OP-S-08 | 7 | None | NINGUNA |
+| OP-S-09 | 8 | None | NINGUNA |
+| OP-S-10 | 9 | None | NINGUNA |
+| OP-S-11 | 11 | None | NINGUNA |
+| OP-S-12 | 12 | None | OP-S-01, OP-S-09, OP-D-01, OP-D-02, OP-D-03, OP-D-04, OP-D-05, OP-D-06, OP-U-01 |
+
+con pregunta_pendiente distinta de None: 0 de 10: NINGUNA
+con depende_de no vacio: 1 de 10: ['OP-S-12']
+
+ordenes, en el orden en que aparecen tras ordenar: [1, 2, 3, 4, 5, 7, 8, 9, 11, 12]
