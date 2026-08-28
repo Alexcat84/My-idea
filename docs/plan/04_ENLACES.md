@@ -392,6 +392,26 @@ el encargo preveia para el tramo mas debil de la bolsa (mediana de `titulo_ratio
 **76,2** contra **84,3** del tramo 1), asi que **se publica con la cifra y sin
 maquillarla**.
 
+**CORRECCION DECLARADA (vuelta 99, TAREA 2, relectura conjunta del par 147, acta
+98 seccion 3.2). EL PARRAFO DE ARRIBA NO SE BORRA: es el texto viejo.** El
+auditor discrepo de la unica lectura ciega de las once (`consortium_benchmarking`
+contra `clasificacion_benchmarking`), y `AUDITOR.md` 1.3 pone la decision en el
+ejecutor. Aplicado el test de reconocimiento del banco **9.6.2** ("el hijo cabe
+entero dentro de UN paso de la madre, y la madre conserva materia propia que el
+hijo no toca en ningun paso") sobre el paso 2 de la madre ("decidir el tipo de
+participantes: internos, externos, competidores o no competidores"): **el test
+FALLA**. Los pasos 2 a 5 de `consortium_benchmarking` (acordar alcance, metricas
+y cronograma; designar facilitador; fijar criterios de validacion de datos;
+ejecutar el estudio) son diseno y ejecucion aguas abajo de esa decision, no la
+decision misma; el entregable del hijo es un consorcio YA FORMALIZADO, no una
+definicion de tipo de participantes. **SE SOSTIENE EL CASO DEL AUDITOR: el par
+147 pasa de DIRECCION AFIRMADA a NO RESUELTA.** La clase D no cambia. Recomputado
+con `scripts/loop/vuelta99_tarea2_relectura147.py`
+(`docs/loop/SALIDA_V99_TAREA2_RELECTURA147.txt`): **direccion leida y afirmada
+20 a 19, direccion NO RESUELTA 30 a 31, proporcion NO RESUELTA 60,0% a 62,0%**.
+La fila 147 de `docs/plan/OP_E_03_LECTURA_TRAMO3_V98.jsonl` queda con su
+`direccion_leida` y `razon` viejas intactas y un campo `correccion_v99` anadido
+aparte.
 
 ---
 

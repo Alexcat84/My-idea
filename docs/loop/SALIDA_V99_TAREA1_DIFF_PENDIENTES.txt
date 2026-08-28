@@ -1,0 +1,118 @@
+diff --git a/docs/PENDIENTES.md b/docs/PENDIENTES.md
+index 142d2422..2971f115 100644
+--- a/docs/PENDIENTES.md
++++ b/docs/PENDIENTES.md
+@@ -4870,3 +4870,113 @@ reparaciones de nodos mientras el encargo no diga que la campana entro en fase d
+ ejecucion de nodos). La decision es de Alexis, y el auditor lo dejo escrito: tocar
+ nodos por una regla de estilo que ninguna operacion del plan ordena **es alcance de
+ campana**, que la casa reserva.
++
++## VUELTA 99, TAREA 1: LOS REGISTROS DEL ACTA 98 (acta de la vuelta 98, `ACTA_AUDITOR.md` lineas 35166 a 35485, leidas hoy)
++
++**Las lineas de esta seccion no estan tecleadas.** Salen de
++`grep -n '^\*\*3\.[1-7] \|^\*\*4\.[1-3] ' docs/loop/ACTA_AUDITOR.md`, filtradas a
++la vuelta 98 (`>= 35166`), corrido en esta vuelta, salida entera en
++`docs/loop/SALIDA_V99_TAREA1_LINEAS_ACTA98.txt`. El total del acta (**35.485**
++lineas) sale de `wc -l docs/loop/ACTA_AUDITOR.md` corrido hoy.
++
++### (1.1) LAS SIETE ADJUDICACIONES DEL ACTA 98, cada una por su numero, con su linea leida hoy y su efecto sobre el trabajo
++
++| adjudicacion | linea (medida hoy) | que adjudica | efecto sobre el trabajo |
++|---|---:|---|---|
++| 3.1 | 35278 | el `C` del par 111, CONFIRMADO (figura del banco 9.22, primer polo) | **enlace mutuo, cero aristas escritas**; nada que rehacer |
++| 3.2 | 35288 | leer contra un paso distinto del casado SE AUTORIZA, pero la cita del 9.6.3 esta mal: la cubre el 9.6.2 | **correccion de cita en 147 y 148**, ver (1.2) |
++| 3.3 | 35314 | el 60,0% es LA BOLSA y no la vara, CONFIRMADO (tercera vez seguida) | **el umbral NO se toca** |
++| 3.4 | 35325 | la inversion del par 114, CONFIRMADA | nada que rehacer |
++| 3.5 | 35332 | el 145 CONFIRMADO y la frontera caveat/refutacion nombrada: **DONDE CAE LA TENSION** | usar la frontera para leer las 33 que quedan (TAREA 3) |
++| 3.6 | 35343 | las siete fechas fuera del encargo NO fueron extralimitacion (borde 3.7 de la 2.1.b) | nada que rehacer |
++| 3.7 | 35355 | adoptar el austero una vuelta antes NO fue infraccion; la etiqueta si fue caida | la caida va en (1.3) |
++
++**Las siete lineas citadas de la tabla de arriba, talladas y cotejadas**
++(`docs/loop/SALIDA_V99_TAREA1_COMPOSICION.txt`, patron sobre
++`docs/loop/SALIDA_V99_TAREA1_LINEAS_ACTA98.txt`): **7 filas en 'adjudicacion
++(3.x)' (35278, 35288, 35314, 35325, 35332, 35343, 35355), 3 en 'caida (4.x)'
++(35362, 35380, 35395)**, cotejadas contra la misma lista que cito arriba: **cero
++sobran, cero faltan**.
++
++**Composicion del anadido de ESTA seccion en `PENDIENTES.md`**, tallada sobre
++`git diff HEAD -- docs/PENDIENTES.md` (`docs/loop/SALIDA_V99_TAREA1_DIFF_PENDIENTES.txt`)
++con el mismo patron de cabeceras `##`/`###`
++(`docs/loop/SALIDA_V99_TAREA1_COMPOSICION_PENDIENTES.txt`): **1 seccion de nivel
++2, 4 subsecciones de nivel 3**. **Caso positivo previo**, para que el tallador no
++se acepte sin control: el mismo patron corrido sobre
++`docs/loop/SALIDA_V98_TAREA2_DIFF_PENDIENTES.txt` (el anadido conocido de la
++vuelta 98) reproduce **exacto** 1 seccion de nivel 2 y 5 de nivel 3, igual que ya
++media el propio archivo de esa vuelta (`docs/loop/SALIDA_V99_TAREA1_CASO_POSITIVO.txt`).
++
++**La 3.3 es la tercera adjudicacion seguida en el mismo sentido** (acta 96 4.4,
++acta 97 3.1, acta 98 3.3): el auditor leyo a ciegas las cinco no resueltas de
++mayor `titulo_ratio` de esta vuelta, la muestra elegida en su contra, y llego a
++NO RESUELTA en las cinco. **EL UMBRAL SIGUE SIN TOCARSE**, con el mismo caveat de
++siempre: no prueba que sea correcto, falla en refutarlo donde era mas facil.
++
++**La 3.5 nombra la frontera que hasta ahora no tenia nombre: LO QUE DECIDE ES
++DONDE CAE LA TENSION.** Si el hijo ejecuta la linea casada y la tension vive en
++OTRA linea, es **caveat** (el 145). Si la tension cae SOBRE la linea casada y el
++hijo ofrece un metodo alternativo en vez de ejecutarla, es **refutacion** (el
++113, el 119, el 122). Se usa para leer las 33 que quedan de `OP-E-03` (TAREA 3).
++
++### (1.2) LA CORRECCION DE CITA DE LA 3.2, EN LAS FILAS 147 Y 148, sin borrar el texto viejo, MAS EL RESULTADO DE LA RELECTURA CONJUNTA DEL 147
++
++**El 9.6.3 no cubre la licencia de leer contra un paso distinto del casado**
++(habla del TAMANO del solape, no de que linea mirar); **el 9.6.2 si la cubre**,
++por su test de reconocimiento ("el hijo cabe entero dentro de UN paso de la
++madre", **UN**, sin decir cual). Corregido en `docs/plan/OP_E_03_LECTURA_TRAMO3_V98.jsonl`,
++filas `puesto_tramo` 147 y 148, con un campo `correccion_v99` **anadido aparte**:
++`razon`, `direccion_leida` y `clase` originales **quedan intactos**.
++
++**148: la lectura NO se toca.** Confirmada a ciegas por el auditor (capacidad del
++sistema de medicion contra capacidad del proceso, falso amigo real; el paso 5 de
++`dmaic_fase_measure` si es la linea que el hijo ejecuta entera). Solo cambia la
++cita.
++
++**147: relectura conjunta (TAREA 2 del encargo), y SE MUEVE.** El test del 9.6.2
++aplicado al paso 2 de `clasificacion_benchmarking` ("decidir el tipo de
++participantes: internos, externos, competidores o no competidores") **falla**:
++los pasos 2 a 5 de `consortium_benchmarking` (acordar alcance/metricas/cronograma,
++designar facilitador, fijar criterios de validacion de datos, ejecutar el
++estudio) son diseno y ejecucion aguas abajo de esa decision, no la decision
++misma, y el entregable del hijo (consorcio YA FORMALIZADO) excede lo que el
++paso 2 decide. **SE SOSTIENE EL CASO DEL AUDITOR**: el par pasa de DIRECCION
++AFIRMADA a NO RESUELTA; la clase D no cambia. Recomputado con
++`scripts/loop/vuelta99_tarea2_relectura147.py`
++(`docs/loop/SALIDA_V99_TAREA2_RELECTURA147.txt`), guardado con su caso de
++partida verde (reproduce 20/30/60,0% del acta 98 antes de aplicar la
++correccion): **direccion leida y afirmada 20 a 19, direccion NO RESUELTA 30 a
++31, proporcion NO RESUELTA 60,0% a 62,0%**. Recomputado tambien en
++`docs/plan/04_ENLACES.md` (correccion declarada, texto viejo intacto) y en este
++mismo registro.
++
++### (1.3) LAS TRES CAIDAS DEL ACTA 98, nombradas como tales, sin borrar el texto viejo
++
++**CAIDA 1 (acta 98, 4.1, linea 35362): EL REPORTE SE DECLARO AUSTERO Y
++TRIPLICO SU TOPE.** El reporte 98 abrio con *"ESTE REPORTE VA EN MODO
++AUSTERO"* y `wc -l docs/loop/REPORTE.md` de esa vuelta daba **233** lineas
++(199 no vacias), **2,9 veces** el tope de 80. **NO ACUMULA** (letra del 27 ago:
++es una etiqueta de regimen, no una cifra en tabla, cabecera o conclusion), pero
++**dispara relectura al doble** sobre toda declaracion de regimen o cumplimiento
++de regla, registrada en (1.4).
++
++**CAIDA 2 (acta 98, 4.2, linea 35380): DOS CITAS TORCIDAS EN LA PREGUNTA AL
++FUNDADOR.** El reporte 98 escribio *"`graph.ts` 173, 13 llamadas"* para
++`etiquetaArbol()`, y el texto viejo se queda donde esta. `grep -n` pone la
++definicion en la **172**, y fuera de tests hay **12** llamadas mas la linea de
++la definicion. **Vive en prosa, no acumula**, pero cae justo en el tramo que ya
++estaba bajo relectura al doble.
++
++**CAIDA 3 (acta 98, 4.3, linea 35395): DEL PROPIO AUDITOR, Y LA REGISTRO CON SU
++NOMBRE IGUAL QUE LAS DEL EJECUTOR.** Corrio `run_phase1.py` solo y la suite del
++motor le salio ROJA con 71 nodos divergentes; el ciclo son tres comandos y solo
++habia corrido uno. Se declara aqui porque `EJECUTOR.md` regla 8 pide atribucion
++de autor en toda cifra, y esta es del auditor, no del ejecutor ni del dato.
++
++### (1.4) LA RELECTURA AL DOBLE QUE ESAS TRES DISPARAN, para esta vuelta
++
++**LOS DOS TRAMOS BAJO RELECTURA AL DOBLE EN LA VUELTA 99 son (a) la prosa de la
++pregunta al fundador y (b) toda declaracion de regimen o de cumplimiento de una
++regla.** En esta vuelta, cualquier afirmacion de esos dos tramos lleva su
++medicion pegada con el comando o no se escribe; se aplica en el REPORTE final.

@@ -1,0 +1,16 @@
+==========================================================================================
+RELECTURA CONJUNTA DEL PAR 147 (vuelta 99, TAREA 2). Fichero: OP_E_03_LECTURA_TRAMO3_V98.jsonl
+==========================================================================================
+
+ANTES (texto viejo, SIN TOCAR): direccion_leida = 'clasificacion_benchmarking -> consortium_benchmarking'
+  clase (SIN TOCAR, no cambia): 'D'
+
+correccion_v99 (anadida, campo viejo intacto): {'campo_corregido': 'direccion_leida', 'valor_anterior': 'clasificacion_benchmarking -> consortium_benchmarking', 'valor_nuevo': None, 'cita_corregida': 'banco 9.6.2 (test de reconocimiento), no 9.6.3 (correccion de cita del discutible 2, acta 98 seccion 3.2)', 'razon': 'CORRECCION DECLARADA (vuelta 99, TAREA 2, relectura conjunta con el auditor sobre el discutible 2 del acta 98, seccion 3.2). El texto viejo de razon y direccion_leida NO SE BORRA: esta correccion se anade aparte. El test de reconocimiento del banco 9.6.2 ("el hijo cabe entero dentro de UN paso de la madre, y la madre conserva materia propia que el hijo no toca en ningun paso") FALLA sobre el paso 2 de clasificacion_benchmarking ("decidir el tipo de participantes: internos, externos, competidores o no competidores"): los pasos 2 a 5 de consortium_benchmarking (acordar alcance/metricas/cronograma, designar facilitador, fijar criterios de validacion de datos, ejecutar el estudio) son diseno y ejecucion aguas abajo de esa decision, no la decision misma. El entregable de la madre es una definicion documentada que ORIENTA el diseno; el entregable del hijo es un consorcio YA FORMALIZADO con acuerdo de alcance, metricas y cronograma definidos: eso ya excede lo que el paso 2 decide. SE SOSTIENE EL CASO DEL AUDITOR (acta 98, 3.2): el par pasa de DIRECCION AFIRMADA a NO RESUELTA. Clase D no cambia (banco 9.6.1 rama contenido, tercera fila del 9.22: CONTINUA).'}
+
+| medida | antes | despues |
+|---|---:|---:|
+| direccion leida y afirmada | 20 | 19 |
+| direccion NO RESUELTA | 30 | 31 |
+| proporcion NO RESUELTA | 60.0% | 62.0% |
+
+FIN
