@@ -1,0 +1,5 @@
+==============================================================================
+TAREA 4.b: CASO ROJO OBLIGATORIO, SOBRE COPIA EN MEMORIA (dataset/ no se toca)
+==============================================================================
+git status --porcelain -- dataset/ ANTES: ' M dataset/metadata/master_graph.json\n'
+ROJO: dataset/ ya tenia cambios antes del caso rojo: no se corre sobre un arbol sucio

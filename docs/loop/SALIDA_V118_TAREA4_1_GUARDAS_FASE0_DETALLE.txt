@@ -1,0 +1,91 @@
+TAREA 4.1 VUELTA 118: DETALLE DE LAS CINCO GUARDAS DE LA FASE 0, MEDIDO HOY.
+Guardas nombradas por el tallador: docs/loop/SALIDA_V118_TAREA4_1_GUARDAS_FASE0.txt
+(cinco confirmadas: OP-C-01, OP-C-02, OP-C-03, OP-C-04, OP-C-05).
+====================================================================================================
+
+OP-C-01 (LOS TRES ARREGLOS QUE CUBREN CATORCE)
+  codigo: web/lib/engine/planRedactor.ts:53,183,194 (resolver en aMaterial);
+          web/app/api/organizer/route.ts y web/app/api/organizer/stream/route.ts
+          (cargarEntrySeeds(graph)); web/lib/compass.ts:153 (resolver antes de puntuar).
+  pasa hoy en verde: SI. web/lib/engine/accesosResueltos.test.ts corrido hoy en
+          aislado: docs/loop/SALIDA_V118_TAREA4_1_TEST_ACCESOSRESUELTOS.txt,
+          27 tests, TODOS pasan (incluye los describe "OP-C-01 - ...").
+  caso positivo localizable: SI, en el mismo fichero (describe "OP-C-01 - aMaterial...",
+          "OP-C-01 - las semillas del organizador...", "OP-C-01 - el indice
+          semantico...").
+
+OP-C-02 (LOS DOS SILENCIOSOS)
+  codigo: web/app/api/session/plan (linea 267 y 405 segun la ficha).
+  pasa hoy en verde: SI, mismo fichero de test de arriba (describe "OP-C-02 -
+          el plan de la sesion no pierde conceptos ni retrasa la fase").
+  caso positivo localizable: SI, mismo fichero, casos "267:" y "405:".
+
+OP-C-03 (LOS SEIS RESTANTES)
+  codigo: web/lib/engine/graph.ts:244 (resumenNodo), recorrido.ts:271,649,
+          clasificar.ts:34-36, web/app/api/session/start/route.ts:255.
+  pasa hoy en verde: SI, mismo fichero de test (describe "OP-C-03 - resumenNodo,
+          la pregunta del recorrido y el arranque de mundo").
+  caso positivo localizable: SI, mismo fichero.
+
+OP-C-04 (LA GUARDA DE GATE 0 QUE RESUELVE)
+  codigo: scripts/run_phase1.py, las dos comprobaciones citadas por su nombre
+          exacto en la salida de Gate 0: "Ningun nodo VIVO se cita a si mismo
+          tras RESOLVER (auto-arista via alias)" y "Ninguna clave de nodo fuera
+          de la lista blanca del esquema" (scripts/run_phase1.py ~lineas 1011-1047).
+  pasa hoy en verde: SI, [OK] en las dos, en el Gate 0 de la APERTURA de esta
+          misma vuelta: docs/loop/SALIDA_V118_GATE0_CMD1_APERTURA.txt lineas 51-52.
+          Reconfirmado con engine/test_gate_alias.py (7/7 OK), aunque ese fichero
+          cubre las TRES barandas del alias (auto-alias, doble dueno, divergencia
+          de gemelos), un origen relacionado pero DISTINTO del que OP-C-04 nombra
+          por su nombre exacto (docs/loop/SALIDA_V118_TAREA4_1_TEST_GATE_ALIAS.txt).
+  caso positivo localizable: SI, scripts/loop/vuelta24_opc04_caso_positivo.py
+          (inyecta la auto-arista `analisis_flujo_de_valor -> value_stream_analysis_lean`
+          y la clave cirilica `fase_проekto` en `crosby_habilidad_transmision`).
+          Evidencia HISTORICA de que la inyeccion se logro:
+          docs/loop/SALIDA_V24_OPC04_CASO_POSITIVO.txt ("auto arista via alias
+          presente: True", "clave cirilica presente: True"). NO SE RE-CORRIO HOY:
+          el script escribe en dataset/nodos/ (mutacion real, con `git checkout --
+          dataset/` como paso de restauracion), y esta vuelta esta en MODO DE
+          CIERRE / TAREA 4 "MIDE, NO EJECUTA": re-inyectar hoy seria tocar
+          dataset/ fuera del permiso de esta tarea. PENDIENTE DE DOCTRINA si se
+          quiere una re-verificacion en vivo: se trae como pregunta.
+
+OP-C-05 (LA GUARDA QUE NO DEJA VOLVER LA BASURA)
+  codigo: NO EXISTE COMO GUARDA DE GATE 0. Confirmado hoy: scripts/run_phase1.py
+          no tiene ningun chequeo de "aristas duplicadas tras resolver" entre sus
+          checks (grep sin resultados). La propia ficha (docs/plan/FASE_0_CODIGO.md,
+          seccion OP-C-05) declara, por escrito, que "esta guarda se enciende
+          DESPUES del saneo final [OP-S-12]" y que "el grafo de hoy la falla 1.056
+          veces... y eso no es una regresion, es el estado conocido". LA VIA
+          EQUIVALENTE que su propia ficha autoriza (correr el instrumento antes y
+          despues de escribir una operacion y exigir que la cuenta no crezca) esta
+          cableada en scripts/loop/vuelta89_tarea4_guarda_op_c05.py, que usa
+          scripts/plan/aristas_duplicadas_tras_resolver.py.
+  pasa hoy en verde: NO, EN EL SENTIDO LITERAL DE "CERO DUPLICADAS". Corrido hoy,
+          scripts/plan/aristas_duplicadas_tras_resolver.py da 935 entradas que
+          sobran sobre 711 nodos (menos que las 1.056 de la ficha: hubo progreso
+          parcial en vueltas intermedias, pero sigue muy lejos de cero). SI pasa
+          en el sentido de "la via equivalente no ve crecimiento" porque no hay
+          ninguna operacion en curso hoy que comparar (no aplica un antes/despues
+          sin una escritura en medio).
+  caso positivo localizable: SI, EN PRINCIPIO: scripts/loop/vuelta89_tarea4_guarda_op_c05.py
+          --caso-rojo esta escrito para fabricar el caso EN MEMORIA (nunca en
+          dataset/) y comprobar que la cuenta crece. CORRIDO HOY, SALE ROJO POR UN
+          MOTIVO AJENO: la guarda de seguridad del propio script exige un
+          `git status --porcelain -- dataset/` VACIO antes de empezar, y
+          dataset/metadata/master_graph.json SIEMPRE trae una "M" espuria de fin de
+          linea (la nota de higiene de siempre, docs/loop/PROMPT_SIGUIENTE.md): el
+          caso positivo NO PUDO CORRER HOY. Salida completa:
+          docs/loop/SALIDA_V118_TAREA4_1_CASO_ROJO_OPC05.txt.
+
+RESUMEN: LAS CINCO GUARDAS ESTAN NOMBRADAS Y LAS CINCO TIENEN CASO POSITIVO
+LOCALIZABLE (ninguna dispara el "PARAS Y LO TRAES" de la letra 4.1 por esas dos
+condiciones), PERO OP-C-04 no se re-corrio hoy (mutaria dataset/) y OP-C-05 NO
+PASA HOY EN VERDE en el sentido literal de su propia guarda (935 duplicadas), ni
+se pudo correr su caso positivo hoy (bloqueado por la M espuria). LA FICHA DE
+OP-C-05 DECLARA ESTO A PROPOSITO ("no es una regresion") y remite su encendido a
+DESPUES de OP-S-12 (fase 05): el criterio de HECHO de la fase 0 escrito en
+00_INDICE.md ("las cinco guardas pasan en verde") NO SE CUMPLE HOY EN SENTIDO
+LITERAL para OP-C-05. SE TRAE COMO PREGUNTA PARA EL AUDITOR, no se adjudica aqui
+si esto basta para dejar pasar a OP-S-01/OP-S-09 o si es una PARADA real de la
+atadura 1.
