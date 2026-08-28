@@ -6148,3 +6148,103 @@ que el ejecutor escribe, no el texto pegado literal de un tallador.
 Remediado en la TAREA 4 de esta misma vuelta: el instrumento corre
 `tallar_cabecera_reporte.py` de verdad y excluye del cerco toda linea
 IDENTICA a la que ese comando imprime, diciendo cuantas excluye.
+
+## VUELTA 110, TAREA 1: LOS REGISTROS DEL ACTA 109
+
+### 1.1 LA GUARDA CIEGA AL VOLTEO EN SITIO, CAIDA DEL AUDITOR, DE ENCARGO
+
+El diseno de `verificar_vuelco_de_veredicto.py` encargado en la TAREA 2 de
+la vuelta 109 solo cruzaba los seis ficheros de veredicto ENTRE SI (primer
+vs ultimo puesto que aparece en dos o mas ficheros de HOY). El auditor lo
+probo por mutacion propia: borro ENTERA la declaracion del vuelco del 87 y
+el instrumento siguio dando VERDE, cuatro vuelcos, los cuatro declarados
+(salida de esa mutacion: `docs/loop/SALIDA_V110_TAREA2_4_CASO_N_ANTES.txt`,
+corrida hoy sobre el codigo previo al arreglo de esta vuelta). El motivo es
+de diseno, dictado por el propio encargo de la vuelta 109 (TAREA 2.1 la
+guarda solo cruza ficheros; TAREA 3.3 permite que el 87 vuelva a SATELITE):
+cuando el 87 volvio a SATELITE, su veredicto de HOY volvio a coincidir con
+el de la vuelta 105 (SATELITE en los dos extremos del cruce) y el volteo
+intermedio (OBJETO en la vuelta 108, dentro del MISMO fichero) desaparecio
+sin dejar rastro para el cruce entre ficheros. **La caida es del encargo
+del auditor, no del codigo del ejecutor.** Remedio: TAREA 2 de esta vuelta
+(el volteo EN SU PROPIO SITIO, leido de la historia en git de cada
+fichero).
+
+### 1.2 LAS DOS CAIDAS DE EXPEDIENTE DEL EJECUTOR, LA MISMA ESPECIE: UNA CIFRA QUE NO SE MIDIO
+
+**La del 73/74:** `docs/loop/SALIDA_V109_GUARDAS_CIERRE_MUTACIONES.txt`
+publico de la bolsa "(antes de la TAREA 3 era 73/74; ya cerrada)". Medido
+por el auditor: `verificar_cobertura_bolsa_tres_vias.py` sobre el fichero
+del tramo 2 en su version de `d696fde8` (antes de la TAREA 3 de la vuelta
+109) da **74/74/0**, no 73/74. El 73/74 era el estado de la vuelta 108 CON
+CUATRO FICHEROS (acta 108, seccion 1.5), importado a otra frontera sin
+remedirlo: exactamente lo que EJECUTOR.md 1.1 ("EL INSTRUMENTO MANDA")
+prohibe.
+
+**La del mensaje de commit:** el commit `21e1bc20` de la vuelta 109 afirma
+"el trabajo toco docs/plan, docs/loop y scripts/loop". Medido commit a
+commit por el auditor: `docs/plan` NO se toca en NINGUNO de los once
+commits de esa vuelta; lo tocado es `docs/PENDIENTES.md`, `docs/loop/` y
+`scripts/loop/`. El mensaje de commit cuenta como expediente (EJECUTOR.md,
+"Y UNA DEL DICTADO"): lo que afirma se mide igual que lo que afirma el
+reporte.
+
+**Constancia:** por la letra del fundador del 27 ago, ninguna de las dos
+acumula (no son caidas de cifra publicada ni de reporte). Las dos son la
+misma especie: una cifra citada de un origen distinto al instrumento
+corrido en la propia vuelta, sin remedirla.
+
+### 1.3 LA RAMA MUDA DE `verificar_vuelco_de_veredicto.py`
+
+El caso "el primero y el ultimo coinciden pero algo intermedio distinto"
+llevaba el comentario "no se calla" y a continuacion hacia `continue` sin
+imprimir nada: una promesa escrita que el codigo no cumplia (BANCO
+seccion 9). Medido por el auditor hoy: **cero puestos aparecen en tres o
+mas ficheros** de `FICHEROS_VEREDICTO`, asi que la rama no habia mentido
+todavia, pero tampoco podia probarse. Remedio: TAREA 4 de esta vuelta (la
+rama pasa a imprimirse como OSCILACION, con la misma exigencia de
+declaracion, probada por construccion sobre copias).
+
+### 1.4 LA DISCREPANCIA DEL 154, A RELECTURA CONJUNTA
+
+En la relectura al doble de la vuelta 109 (sin marcado, sin vara, sin
+veredicto propio) el auditor leyo OBJETO sobre el 154
+(`desarrollo_de_clientes_customer_development` -> `customer_development_agile_pairing`,
+paso 4) y el registro decia SATELITE. Su caso: "combinar A con B" es
+construccion de dos argumentos, misma especie que el 123 ("reemplazar X
+por Y") y el 145 ("vincular A a B"), frente a verbos que se completan con
+su objeto directo solo (109, 87). Su contra-caso, escrito antes de
+decidir: el hijo podria desarrollar solo uno de los dos argumentos (cuatro
+de sus cinco pasos hablan solo de agilidad); se cae porque el titulo, el
+paso 2 y el entregable del hijo anclan el otro argumento (el aprendizaje
+del cliente) por separado. Por el precedente del acta 107 con el 46
+(AUDITOR.md 1.3), esta discrepancia NO se cuenta como caida de nadie hasta
+que la relectura conjunta la resuelva: va a la TAREA 3 de esta vuelta, que
+la resolvio (OBJETO, `correccion_v110`, ver
+`docs/loop/SALIDA_V106_TAREA4_3_TRES_VIAS.txt`, bloque del PUESTO 154).
+
+### 1.5 LO QUE NO SE MUEVE
+
+Ninguna cifra publicada cambia con el 154: esta RESUELTA con los dos
+veredictos (SATELITE u OBJETO), y `contar_cierre_efectivo.py` da 74/109
+(59,6%) con cualquiera de ellos. Confirmado tras la correccion de la TAREA
+3 de esta vuelta: sigue en 74/109, 59,6%, invertidas 2 (pares 16, 114);
+`docs/loop/SALIDA_V110_TAREA3_4_CIERRE_EFECTIVO_154.txt`.
+
+### 1.6 LA COMPOSICION DEL ANADIDO, TALLADA
+
+`python scripts/loop/tallar_composicion_salida.py --fichero docs/PENDIENTES.md --patron "^\| (?P<sub>1\.\d) \| (?P<clase>[A-Z_]+) \| (?P<atrib>[A-Z]+) \|$" --clave sub --campo-clase clase --valor-base SIN_CAIDA --etiqueta-base "sin caida" --etiqueta-otra "caida" --clase-cotejo "caida" --lista-citada 1.1,1.2`
+(salida completa en `docs/loop/SALIDA_V110_TAREA1_6_COMPOSICION.txt`): de
+los cinco subapartados de arriba, DOS son CAIDA (1.1, atribuida al
+AUDITOR por defecto de encargo; 1.2, atribuida al EJECUTOR, de
+expediente) y TRES son SIN CAIDA (1.3 rama muda inalcanzable, 1.4
+discrepancia pendiente de relectura, 1.5 ninguna cifra se mueve). Cotejo
+contra la lista citada arriba: SOBRAN NINGUNO, FALTAN NINGUNO.
+
+| sub | clase | atribucion |
+|---|---|---|
+| 1.1 | CAIDA | AUDITOR |
+| 1.2 | CAIDA | EJECUTOR |
+| 1.3 | SIN_CAIDA | NINGUNO |
+| 1.4 | SIN_CAIDA | NINGUNO |
+| 1.5 | SIN_CAIDA | NINGUNO |
