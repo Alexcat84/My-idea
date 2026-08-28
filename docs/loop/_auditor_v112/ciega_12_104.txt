@@ -1,0 +1,57 @@
+================================================================================================
+PUESTO 12   (fichero OP_E_03_LECTURA_TRAMO1_V96.jsonl)
+MADRE: human_error_como_sintoma  |  titulo: El 'Error Humano' como Síntoma, no como Causa
+  PASO CASADO n.1 de 3: Ante un incidente, preguntar '¿qué condiciones de trabajo, herramientas o presiones contribuyeron a esta acción?' en lugar de '¿quién falló?'.
+  TODOS LOS PASOS DE LA MADRE:
+    1. Ante un incidente, preguntar '¿qué condiciones de trabajo, herramientas o presiones contribuyeron a esta acción?' en lugar de '¿quién falló?'.
+    2. Rediseñar herramientas, procedimientos o entornos de trabajo identificados como fuente de dificultad, en vez de solo entrenar o sancionar a las personas.
+    3. Revisar investigaciones pasadas para reformular las conclusiones desde una perspectiva sistémica.
+HIJO: preguntar_que_no_quien  |  titulo: Preguntar 'qué pasó' en lugar de 'quién fue'
+  descripcion: None
+  PASOS DEL HIJO:
+    1. Ante un problema, evita preguntar primero quién lo hizo
+    2. Pregúntate qué elementos del sistema, las herramientas o las tareas influyeron en esa decisión
+    3. Anota las condiciones de trabajo que rodeaban el momento en que ocurrió
+    4. Usa lo que encuentres para cambiar el sistema, no para señalar a alguien
+  entregable_esperado: Un registro del incidente centrado en qué condiciones lo generaron, no en quién tiene la culpa
+  CAMPOS DE LA FILA (censurados los prohibidos):
+    puesto_tramo = 12
+    operacion = "OP-E-03"
+    marca = "LECTURA DIRIGIDA"
+    fuera_de_la_cola = true
+    fuera_de_la_tasa_por_dominio = true
+    mueve_el_marcador_del_cribado = false
+    dominio = "health_safety"
+    madre_de_la_bolsa = "human_error_como_sintoma"
+    hijo_de_la_bolsa = "preguntar_que_no_quien"
+    paso_casado = 1
+================================================================================================
+PUESTO 104   (fichero OP_E_03_LECTURA_TRAMO3_V98.jsonl)
+MADRE: mapa_de_canal_de_ventas  |  titulo: Mapa de Canal de Ventas (Sales Channel Food Chain)
+  PASO CASADO n.1 de 5: Enfócate en validar un solo canal de distribución antes de expandirte a otros
+  TODOS LOS PASOS DE LA MADRE:
+    1. Enfócate en validar un solo canal de distribución antes de expandirte a otros
+    2. Dibuja la cadena completa de organizaciones entre tu empresa y el cliente final
+    3. Documenta las responsabilidades de cada eslabón (quién genera demanda vs quién solo distribuye)
+    4. Calcula los descuentos y márgenes que cada nivel del canal requiere
+    5. Diseña un plan de gestión de canal para monitorear inventario, ventas y posibles retornos
+HIJO: seleccion_canal_distribucion  |  titulo: Selección de Canal de Distribución
+  descripcion: None
+  PASOS DEL HIJO:
+    1. Identificar los hábitos de compra establecidos en la categoría de tu producto
+    2. Evaluar si el canal fortalece el proceso de venta y a qué costo
+    3. Analizar la complejidad y precio del producto respecto al canal elegido
+    4. Recalcular la hipótesis de ingresos netos considerando costos del canal (distribución, promoción, devoluciones)
+    5. Enfocarse en UN canal principal durante el customer discovery, evitando lanzar por múltiples canales a la vez
+  entregable_esperado: Hipótesis de canal documentada con análisis de costos netos y justificación de por qué ese canal es el más adecuado para el producto
+  CAMPOS DE LA FILA (censurados los prohibidos):
+    puesto_tramo = 104
+    operacion = "OP-E-03"
+    marca = "LECTURA DIRIGIDA"
+    fuera_de_la_cola = true
+    fuera_de_la_tasa_por_dominio = true
+    mueve_el_marcador_del_cribado = false
+    dominio = "core"
+    madre_de_la_bolsa = "mapa_de_canal_de_ventas"
+    hijo_de_la_bolsa = "seleccion_canal_distribucion"
+    paso_casado = 1

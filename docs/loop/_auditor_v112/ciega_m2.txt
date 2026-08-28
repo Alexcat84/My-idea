@@ -1,0 +1,119 @@
+================================================================================================
+PUESTO 96   (fichero OP_E_03_LECTURA_TRAMO2_V97.jsonl)
+MADRE: introduccion_validacion_clientes  |  titulo: Introducción a la Validación de Clientes (Customer Validation)
+  PASO CASADO n.3 de 5: Probar canales de ventas y distribución
+  TODOS LOS PASOS DE LA MADRE:
+    1. Probar la repetibilidad del proceso de ventas o adquisición de usuarios
+    2. Buscar pedidos u órdenes reales a precio completo como prueba de validación
+    3. Probar canales de ventas y distribución
+    4. Escuchar activamente a los clientes para identificar pivotes necesarios
+    5. Posicionar correctamente el producto y la empresa
+HIJO: hipotesis_de_canales  |  titulo: Hipótesis de Canales de Distribución
+  descripcion: None
+  PASOS DEL HIJO:
+    1. Determinar si el producto se ajusta mejor a canal físico, digital o híbrido
+    2. Evaluar el precio del producto en relación al canal (ej. ventas enterprise vs apps de bajo costo)
+    3. Calcular todos los costos del canal (descuentos, promoción, devoluciones)
+    4. Seleccionar UN canal principal para enfocar los esfuerzos iniciales
+    5. Recalcular el modelo de ingresos neto tras costos de canal
+  entregable_esperado: Hipótesis de canal seleccionado con diagrama de distribución y cálculo de ingresos netos tras costos de canal
+  CAMPOS DE LA FILA (censurados los prohibidos):
+    puesto_tramo = 96
+    operacion = "OP-E-03"
+    marca = "LECTURA DIRIGIDA"
+    fuera_de_la_cola = true
+    fuera_de_la_tasa_por_dominio = true
+    mueve_el_marcador_del_cribado = false
+    dominio = "core"
+    madre_de_la_bolsa = "introduccion_validacion_clientes"
+    hijo_de_la_bolsa = "hipotesis_de_canales"
+    paso_casado = 3
+================================================================================================
+PUESTO 120   (fichero OP_E_03_LECTURA_TRAMO3_V98.jsonl)
+MADRE: search_for_business_model  |  titulo: Búsqueda de un Modelo de Negocio (Search)
+  PASO CASADO n.8 de 8: Usar el Business Model Canvas y Value Proposition Canvas como herramientas de planificación flexible
+  TODOS LOS PASOS DE LA MADRE:
+    1. Determina si tu proyecto está en modo búsqueda (hipótesis no probadas) o en modo ejecución (modelo conocido)
+    2. Lista explícitamente las hipótesis de tu modelo de negocio: mercado, cliente, producto, canal y precio, marcadas como no probadas
+    3. Aplica el proceso de Customer Development para salir a probar cada hipótesis con clientes reales
+    4. Evita montar estructuras o roles de ejecución antes de validar el modelo
+    5. Itera y pivota según la evidencia recogida hasta encontrar un modelo repetible y escalable
+    6. Adopta una mentalidad de aprendizaje y experimentación en vez de miedo al fracaso
+    7. Abandonar la idea de escribir un plan de negocio detallado al inicio
+    8. Usar el Business Model Canvas y Value Proposition Canvas como herramientas de planificación flexible
+HIJO: herramientas_computacionales_business_model  |  titulo: Herramientas Computacionales para el Business Model Canvas
+  descripcion: None
+  PASOS DEL HIJO:
+    1. Iniciar la ideación del modelo de negocio con Canvas físico en papel/poster y Post-its para maximizar la creatividad grupal
+    2. Una vez validada la dirección inicial, migrar el modelo a una herramienta digital (Strategyzer, Business Model Toolbox u otra) para facilitar versionado y colaboración remota
+    3. Usar las herramientas digitales para simulaciones financieras rápidas y comparación de múltiples versiones del modelo
+    4. Aprovechar bases de datos de patrones de negocio disponibles en plataformas digitales para inspirar iteraciones
+  entregable_esperado: Modelo de negocio documentado digitalmente, con historial de versiones y capacidad de colaboración remota entre el equipo
+  CAMPOS DE LA FILA (censurados los prohibidos):
+    puesto_tramo = 120
+    operacion = "OP-E-03"
+    marca = "LECTURA DIRIGIDA"
+    fuera_de_la_cola = true
+    fuera_de_la_tasa_por_dominio = true
+    mueve_el_marcador_del_cribado = false
+    dominio = "core"
+    madre_de_la_bolsa = "search_for_business_model"
+    hijo_de_la_bolsa = "herramientas_computacionales_business_model"
+    paso_casado = 8
+================================================================================================
+PUESTO 141   (fichero OP_E_03_LECTURA_TRAMO3_V98.jsonl)
+MADRE: pasivos_vs_operadores  |  titulo: Inversionistas Pasivos vs. Propietarios-Operadores
+  PASO CASADO n.3 de 4: Evaluar qué modelo se ajusta mejor a la velocidad de crecimiento deseada
+  TODOS LOS PASOS DE LA MADRE:
+    1. Definir la política del sistema respecto a inversionistas pasivos
+    2. Si se permiten inversionistas grupales, exigir designación de un socio operador con equity
+    3. Evaluar qué modelo se ajusta mejor a la velocidad de crecimiento deseada
+    4. Considerar el impacto en calidad de servicio a nivel unitario
+HIJO: velocidad_crecimiento_franquicia  |  titulo: Velocidad de Crecimiento vía Franquicia
+  descripcion: None
+  PASOS DEL HIJO:
+    1. Estimar el tiempo necesario para abrir una unidad propia (sitio, diseño, contratación, etc.)
+    2. Comparar ese tiempo con el potencial de apertura simultánea de múltiples franquicias
+    3. Evaluar el riesgo competitivo de no expandirse rápidamente en el mercado actual
+    4. Diseñar una estrategia de expansión territorial basada en velocidad de saturación
+  entregable_esperado: Plan de velocidad de expansión comparado entre modelo propio y modelo de franquicia
+  CAMPOS DE LA FILA (censurados los prohibidos):
+    puesto_tramo = 141
+    operacion = "OP-E-03"
+    marca = "LECTURA DIRIGIDA"
+    fuera_de_la_cola = true
+    fuera_de_la_tasa_por_dominio = true
+    mueve_el_marcador_del_cribado = false
+    dominio = "franquicias"
+    madre_de_la_bolsa = "pasivos_vs_operadores"
+    hijo_de_la_bolsa = "velocidad_crecimiento_franquicia"
+    paso_casado = 3
+================================================================================================
+PUESTO 165   (fichero OP_E_03_LECTURA_TRAMO4_V99.jsonl)
+MADRE: tipos_de_riesgo_invencion_vs_mercado  |  titulo: Riesgo de Invención vs. Riesgo de Cliente/Mercado
+  PASO CASADO n.4 de 4: Si es ambos, combinar validación técnica con desarrollo de clientes
+  TODOS LOS PASOS DE LA MADRE:
+    1. Evaluar si el riesgo principal de tu proyecto es técnico (¿puede construirse?) o de mercado (¿lo querrán los clientes?)
+    2. Si es riesgo de invención, usar herramientas de simulación y validación técnica
+    3. Si es riesgo de mercado, aplicar el proceso de Customer Development
+    4. Si es ambos, combinar validación técnica con desarrollo de clientes
+HIJO: fundadores_lideran_validacion  |  titulo: Lidera Tú la Validación con tus Clientes
+  descripcion: None
+  PASOS DEL HIJO:
+    1. Participa tú mismo, en persona, en las conversaciones de validación con tus clientes
+    2. Evita delegar la validación a equipos de ventas, marketing o desarrollo de negocios en estas primeras etapas
+    3. Escucha y anota el feedback negativo directamente de tus clientes, sin intermediarios
+    4. Forma un pequeño equipo de apoyo (análisis de datos, pruebas A/B, SEO o PPC en canales digitales) que ejecute pero no decida
+    5. Mantén tú la autoridad para decidir si pivotas o no
+  entregable_esperado: Un proceso de validación que lideras tú mismo, con el feedback de tus clientes registrado de primera mano y la decisión de pivotar en tus manos
+  CAMPOS DE LA FILA (censurados los prohibidos):
+    puesto_tramo = 165
+    operacion = "OP-E-03"
+    marca = "LECTURA DIRIGIDA"
+    fuera_de_la_cola = true
+    fuera_de_la_tasa_por_dominio = true
+    mueve_el_marcador_del_cribado = false
+    dominio = "core"
+    madre_de_la_bolsa = "tipos_de_riesgo_invencion_vs_mercado"
+    hijo_de_la_bolsa = "fundadores_lideran_validacion"
+    paso_casado = 4

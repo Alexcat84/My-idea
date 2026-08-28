@@ -1,0 +1,61 @@
+================================================================================================
+PUESTO 120   (fichero OP_E_03_LECTURA_TRAMO3_V98.jsonl)
+MADRE: search_for_business_model  |  titulo: Búsqueda de un Modelo de Negocio (Search)
+  PASO CASADO n.8 de 8: Usar el Business Model Canvas y Value Proposition Canvas como herramientas de planificación flexible
+  TODOS LOS PASOS DE LA MADRE:
+    1. Determina si tu proyecto está en modo búsqueda (hipótesis no probadas) o en modo ejecución (modelo conocido)
+    2. Lista explícitamente las hipótesis de tu modelo de negocio: mercado, cliente, producto, canal y precio, marcadas como no probadas
+    3. Aplica el proceso de Customer Development para salir a probar cada hipótesis con clientes reales
+    4. Evita montar estructuras o roles de ejecución antes de validar el modelo
+    5. Itera y pivota según la evidencia recogida hasta encontrar un modelo repetible y escalable
+    6. Adopta una mentalidad de aprendizaje y experimentación en vez de miedo al fracaso
+    7. Abandonar la idea de escribir un plan de negocio detallado al inicio
+    8. Usar el Business Model Canvas y Value Proposition Canvas como herramientas de planificación flexible
+HIJO: herramientas_computacionales_business_model  |  titulo: Herramientas Computacionales para el Business Model Canvas
+  descripcion: None
+  PASOS DEL HIJO:
+    1. Iniciar la ideación del modelo de negocio con Canvas físico en papel/poster y Post-its para maximizar la creatividad grupal
+    2. Una vez validada la dirección inicial, migrar el modelo a una herramienta digital (Strategyzer, Business Model Toolbox u otra) para facilitar versionado y colaboración remota
+    3. Usar las herramientas digitales para simulaciones financieras rápidas y comparación de múltiples versiones del modelo
+    4. Aprovechar bases de datos de patrones de negocio disponibles en plataformas digitales para inspirar iteraciones
+  entregable_esperado: Modelo de negocio documentado digitalmente, con historial de versiones y capacidad de colaboración remota entre el equipo
+  CAMPOS DE LA FILA (censurados los prohibidos):
+    puesto_tramo = 120
+    operacion = "OP-E-03"
+    marca = "LECTURA DIRIGIDA"
+    fuera_de_la_cola = true
+    fuera_de_la_tasa_por_dominio = true
+    mueve_el_marcador_del_cribado = false
+    dominio = "core"
+    madre_de_la_bolsa = "search_for_business_model"
+    hijo_de_la_bolsa = "herramientas_computacionales_business_model"
+    paso_casado = 8
+================================================================================================
+PUESTO 124   (fichero OP_E_03_LECTURA_TRAMO3_V98.jsonl)
+MADRE: rol_de_la_fuerza_laboral_en_calidad  |  titulo: Rol de la Fuerza Laboral en la Gestión de Calidad
+  PASO CASADO n.4 de 4: Fomentar el conocimiento de las necesidades de clientes internos y externos
+  TODOS LOS PASOS DE LA MADRE:
+    1. Establecer canales para que los trabajadores nominen problemas de calidad
+    2. Formar equipos de calidad con participación voluntaria o asignada del personal operativo
+    3. Capacitar a los trabajadores en criterios de autocontrol
+    4. Fomentar el conocimiento de las necesidades de clientes internos y externos
+HIJO: identificar_clientes_externos_e_internos  |  titulo: Identificación de Clientes Externos e Internos
+  descripcion: None
+  PASOS DEL HIJO:
+    1. Elaborar un diagrama de flujo del proceso relacionado al producto
+    2. Listar clientes externos: compradores, usuarios finales, comerciantes, procesadores, proveedores, potenciales y ocultos
+    3. Identificar clientes internos analizando las relaciones proveedor-procesador-cliente dentro de la organización
+    4. Distinguir entre quien ordena el producto y quien lo usa
+    5. Priorizar el elenco de clientes de forma consensuada por el equipo
+  entregable_esperado: Lista completa y clasificada de clientes externos e internos, con diagrama de flujo del proceso
+  CAMPOS DE LA FILA (censurados los prohibidos):
+    puesto_tramo = 124
+    operacion = "OP-E-03"
+    marca = "LECTURA DIRIGIDA"
+    fuera_de_la_cola = true
+    fuera_de_la_tasa_por_dominio = true
+    mueve_el_marcador_del_cribado = false
+    dominio = "quality"
+    madre_de_la_bolsa = "rol_de_la_fuerza_laboral_en_calidad"
+    hijo_de_la_bolsa = "identificar_clientes_externos_e_internos"
+    paso_casado = 4

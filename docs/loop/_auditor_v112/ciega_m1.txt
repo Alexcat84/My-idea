@@ -1,0 +1,117 @@
+================================================================================================
+PUESTO 11   (fichero OP_E_03_LECTURA_TRAMO1_V96.jsonl)
+MADRE: introduccion_validacion_clientes  |  titulo: Introducción a la Validación de Clientes (Customer Validation)
+  PASO CASADO n.3 de 5: Probar canales de ventas y distribución
+  TODOS LOS PASOS DE LA MADRE:
+    1. Probar la repetibilidad del proceso de ventas o adquisición de usuarios
+    2. Buscar pedidos u órdenes reales a precio completo como prueba de validación
+    3. Probar canales de ventas y distribución
+    4. Escuchar activamente a los clientes para identificar pivotes necesarios
+    5. Posicionar correctamente el producto y la empresa
+HIJO: herramientas_online_canal_fisico  |  titulo: Herramientas Online para Canales de Distribución Física
+  descripcion: None
+  PASOS DEL HIJO:
+    1. Crear un sitio web que comunique claramente la visión y el problema que resuelve el producto
+    2. Establecer presencia en redes sociales (Facebook, Twitter) para generar boca a boca
+    3. Diseñar campañas de email personalizadas y multi-etapa
+    4. Balancear estrategias de push (venta directa) y pull (atracción orgánica)
+  entregable_esperado: Presencia online mínima viable (sitio web, redes sociales, campañas de email) que apoye el canal físico de ventas
+  CAMPOS DE LA FILA (censurados los prohibidos):
+    puesto_tramo = 11
+    operacion = "OP-E-03"
+    marca = "LECTURA DIRIGIDA"
+    fuera_de_la_cola = true
+    fuera_de_la_tasa_por_dominio = true
+    mueve_el_marcador_del_cribado = false
+    dominio = "core"
+    madre_de_la_bolsa = "introduccion_validacion_clientes"
+    hijo_de_la_bolsa = "herramientas_online_canal_fisico"
+    paso_casado = 3
+================================================================================================
+PUESTO 26   (fichero OP_E_03_LECTURA_TRAMO1_V96.jsonl)
+MADRE: rol_gates_agile  |  titulo: El papel de los puntos de decisión (gates) cuando trabajas ágil
+  PASO CASADO n.1 de 4: Mantén los puntos de decisión para seguir o parar en los momentos clave del proyecto, aunque trabajes con métodos ágiles
+  TODOS LOS PASOS DE LA MADRE:
+    1. Mantén los puntos de decisión para seguir o parar en los momentos clave del proyecto, aunque trabajes con métodos ágiles
+    2. Usa cada punto de decisión para revisar también los recursos disponibles, no solo la calidad de lo entregado
+    3. Evita separar los puntos de decisión de hardware y de software cuando ambas partes dependen entre sí
+    4. Define un cronograma general con hitos que se mantenga estable, aunque el detalle de cada sprint cambie
+HIJO: gates_go_kill_decision_points  |  titulo: Puntos de decisión: seguir o parar (gates)
+  descripcion: None
+  PASOS DEL HIJO:
+    1. Define con claridad cada punto de decisión en tu camino de la idea al lanzamiento
+    2. En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+    3. No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+    4. Anota qué decidiste: seguir, parar, dejarlo en espera, replantearlo, o seguir pero con condiciones
+  entregable_esperado: Tu propio mapa del proceso, de la idea al lanzamiento, con los puntos de decisión marcados con claridad
+  CAMPOS DE LA FILA (censurados los prohibidos):
+    puesto_tramo = 26
+    operacion = "OP-E-03"
+    marca = "LECTURA DIRIGIDA"
+    fuera_de_la_cola = true
+    fuera_de_la_tasa_por_dominio = true
+    mueve_el_marcador_del_cribado = false
+    dominio = "core"
+    madre_de_la_bolsa = "rol_gates_agile"
+    hijo_de_la_bolsa = "gates_go_kill_decision_points"
+    paso_casado = 1
+================================================================================================
+PUESTO 44   (fichero OP_E_03_LECTURA_TRAMO2_V97.jsonl)
+MADRE: errores_comunes_fundraising  |  titulo: Errores Comunes al Levantar Capital de VCs
+  PASO CASADO n.2 de 6: Nunca solicitar un acuerdo de confidencialidad (NDA) a un VC
+  TODOS LOS PASOS DE LA MADRE:
+    1. Construir una relación genuina y humana con el VC, no solo presentar el pitch
+    2. Nunca solicitar un acuerdo de confidencialidad (NDA) a un VC
+    3. Personalizar cada contacto con inversionistas, evitando envíos masivos
+    4. Aceptar un 'no' sin insistir ni pedir referencias inmediatamente después
+    5. Formar un equipo cofundador antes de buscar financiamiento serio
+    6. En startups de software, enfocar el pitch en ejecución y equipo, no en estrategia de patentes
+HIJO: confidencialidad_nda_adquisicion  |  titulo: Acuerdo de Confidencialidad (NDA) en Procesos de Adquisición
+  descripcion: None
+  PASOS DEL HIJO:
+    1. Exigir un NDA bidireccional y robusto antes de compartir información sensible.
+    2. Evaluar si el NDA es unilateral como señal de alerta sobre las intenciones reales del comprador.
+    3. Asegurar que el NDA cubra el escenario de que la transacción no se cierre.
+  entregable_esperado: NDA firmado y bidireccional antes de iniciar el due diligence detallado.
+  CAMPOS DE LA FILA (censurados los prohibidos):
+    puesto_tramo = 44
+    operacion = "OP-E-03"
+    marca = "LECTURA DIRIGIDA"
+    fuera_de_la_cola = true
+    fuera_de_la_tasa_por_dominio = true
+    mueve_el_marcador_del_cribado = false
+    dominio = "core"
+    madre_de_la_bolsa = "errores_comunes_fundraising"
+    hijo_de_la_bolsa = "confidencialidad_nda_adquisicion"
+    paso_casado = 2
+================================================================================================
+PUESTO 69   (fichero OP_E_03_LECTURA_TRAMO2_V97.jsonl)
+MADRE: verificar_clientes_y_canales  |  titulo: Verificar Quiénes Son los Clientes y Cómo Alcanzarlos
+  PASO CASADO n.6 de 6: Actualizar el modelo de negocio con los costos de adquisición reales descubiertos
+  TODOS LOS PASOS DE LA MADRE:
+    1. Dibujar un arquetipo de cliente para cada segmento clave
+    2. Crear un 'día en la vida' del cliente antes y después del producto
+    3. Mapear el canal completo desde la empresa hasta el usuario final, con costos y roles en cada paso
+    4. Medir el costo real, todo incluido, de adquirir o activar un grupo de clientes (por ejemplo, 50 clientes)
+    5. Identificar qué programas de adquisición son más rentables y si escalan linealmente
+    6. Actualizar el modelo de negocio con los costos de adquisición reales descubiertos
+HIJO: validar_modelo_negocio_hechos  |  titulo: Validar el Modelo de Negocio con Hechos
+  descripcion: None
+  PASOS DEL HIJO:
+    1. Reunir todas las snapshots semanales o por pivote del business model canvas
+    2. Revisar cada componente del canvas y verificar que tenga respuestas fácticas, no hipotéticas
+    3. Usar el checklist del modelo de negocio para recorrer cada casilla sistemáticamente
+    4. Identificar pruebas pass/fail para cada hipótesis
+    5. Determinar si los resultados cumplen los objetivos de tráfico o financieros
+  entregable_esperado: Business Model Canvas actualizado con cada componente respaldado por datos fácticos de clientes reales, con pruebas pass/fail identificadas
+  CAMPOS DE LA FILA (censurados los prohibidos):
+    puesto_tramo = 69
+    operacion = "OP-E-03"
+    marca = "LECTURA DIRIGIDA"
+    fuera_de_la_cola = true
+    fuera_de_la_tasa_por_dominio = true
+    mueve_el_marcador_del_cribado = false
+    dominio = "core"
+    madre_de_la_bolsa = "verificar_clientes_y_canales"
+    hijo_de_la_bolsa = "validar_modelo_negocio_hechos"
+    paso_casado = 6
