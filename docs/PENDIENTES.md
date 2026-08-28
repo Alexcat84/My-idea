@@ -5044,6 +5044,8 @@ discrepancia de redaccion y no del trabajo: `TRAMO1_V96` 40 + `TRAMO2_V97` 60
 | direcciones invertidas y afirmadas | **2** (pares 16, 114) |
 | aristas escritas o retiradas en toda la operacion | **0** |
 
+**CORRECCION DECLARADA (vuelta 100, TAREA 4, encargo de la vuelta 99 acta seccion 2 y 4.4.) LA TABLA DE ARRIBA NO SE BORRA: es el texto viejo, y era la cifra CRUDA (campo `direccion_leida` sin corregir).** Recontado con `scripts/loop/contar_cierre_efectivo.py` (aplica `correccion_v99` del par 147 y `correccion_v100` de los pares 174 y 175, TAREA 3 de esta vuelta): **clase A 3, B 2, C 1 (par 111), D 177; direccion leida y afirmada 92, NO RESUELTA 91 (49,7%); invertidas 2 (pares 16, 114).** LA CIFRA BUENA ES **92 / 91 (49,7%)**.
+
 **ESTADO DE `OP-E-03` SE QUEDA EN `LISTA`**: cambiarlo es una decision que
 este addendum no toma; la TAREA 4 mide, sin resolver, que sus dos
 dependencias declaradas no estan en HECHA (ver seccion siguiente).

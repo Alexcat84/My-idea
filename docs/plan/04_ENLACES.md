@@ -414,6 +414,8 @@ Los apartados de arriba se quedan enteros, sin borrar una palabra. **`OP-E-03` Q
 | direcciones invertidas y afirmadas | **2** (pares 16, 114) |
 | aristas escritas o retiradas en toda la operacion | **0** |
 
+**CORRECCION DECLARADA (vuelta 100, TAREA 4, encargo de la vuelta 99 acta seccion 2 y 4.4.) LA TABLA DE ARRIBA NO SE BORRA: es el texto viejo, y era la cifra CRUDA (campo `direccion_leida` sin corregir).** Recontado con `scripts/loop/contar_cierre_efectivo.py` (aplica `correccion_v99` del par 147 y `correccion_v100` de los pares 174 y 175, TAREA 3 de esta vuelta): **clase A 3, B 2, C 1 (par 111), D 177; direccion leida y afirmada 92, NO RESUELTA 91 (49,7%); invertidas 2 (pares 16, 114).** LA CIFRA BUENA ES **92 / 91 (49,7%)**.
+
 **EL CUARTO TRAMO (filas 151 a 183, 33 pares) por si solo:** clase D **33**, direccion leida **13**, NO RESUELTA **20** (**60,6%**), mediana de `titulo_ratio` **73,2** (maximo 81,6, la mas baja de la bolsa). **CONFIRMA LA PREDICCION DEL ACTA 98**: proporcion NO RESUELTA por encima del 60,0%.
 
 **ESTADO DE `OP-E-03` SE QUEDA EN `LISTA`**: la lectura esta completa, pero mover `estado` a `HECHA` es una decision que este addendum no toma; la TAREA 4 del encargo de la vuelta 99 mide, sin resolver, que las dependencias declaradas (`OP-E-01`, `OP-U-02`) no estan en `HECHA`.
