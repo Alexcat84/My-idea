@@ -1,0 +1,12 @@
+=== ANTES (fichero real, sin mutar) ===
+EXIT guarda entera: 1
+instrumentos en la apertura: 9
+instrumentos en el bloque 'LOS N INSTRUMENTOS': 9
+
+=== DESPUES (copia mutada, entrada 9 de INSTRUMENTOS quitada) ===
+EXIT guarda entera: 1
+instrumentos en la apertura: 8
+instrumentos en el bloque 'LOS N INSTRUMENTOS': 8
+
+VARA: ANTES dice 9 en las dos lineas (True); DESPUES de quitar una entrada dice 8 en las dos, un numero MENOR que antes, no el mismo (True).
+PASA: el conteo de instrumentos SI se mueve cuando la lista se mueve; no queda tecleado.
