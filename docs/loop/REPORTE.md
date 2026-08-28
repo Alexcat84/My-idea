@@ -1,12 +1,9 @@
-# REPORTE, VUELTA 99 (MODO AUSTERO, 27 ago 2026)
+# REPORTE VUELTA 100 (MODO AUSTERO, tope 80 lineas)
 
-**CAIDA PROPIA DE PROCEDIMIENTO, DECLARADA:** la apertura NO se sello antes
-de la 1.ª operacion. Remedio: `git diff --stat de4cc0e2 HEAD` excluyendo
-`docs/plan`, `docs/loop`, `docs/PENDIENTES.md` y `scripts/loop` da VACIO, asi
-que `dataset/`, `web/` y `engine/` son BYTE A BYTE IGUALES entre la apertura
-real y ahora; las salidas de apertura del ciclo son copias declaradas de las
-de cierre, no mediciones independientes.
-## Cabecera, tallada y pegada entera (`scripts/loop/tallar_cabecera_reporte.py --vuelta 99 --fase04`)
+Apertura sellada `c8827ef7` (`docs/loop/SALIDA_V100_HEAD_APERTURA.txt`, leida
+ANTES de la 1.a operacion). Cabecera tallada con
+`tallar_cabecera_reporte.py --fase04 --vuelta 100`:
+
 | | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
 |---|---:|---:|
 | censo: nodos / vivos / deprecados | 3.853 / 3.188 / 665 | **3.853 / 3.188 / 665** |
@@ -17,42 +14,55 @@ de cierre, no mediciones independientes.
 | tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
 | aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
 | desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 1 fila(s): `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **1 fila(s): `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `de4cc0e2` (ACTA DE LA VUELTA 98 DEL AUDITOR, leido de git log), HEAD real de apertura `de4cc0e2` (sello RECONSTRUIDO DESPUES (commit 47d456e2), leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, commit del acta `de4cc0e2` (ACTA DE LA VUELTA 98 DEL AUDITOR, leido de git log), HEAD real de apertura `de4cc0e2` (sello RECONSTRUIDO DESPUES (commit 47d456e2), leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE** |
-`--comparar docs/loop/REPORTE.md` da **CABECERA IDENTICA AL TALLADOR**
-(`docs/loop/SALIDA_V99_COMPARAR_CIERRE.txt`).
-## TAREA 1, acta 98 en `docs/PENDIENTES.md`
-Siete adjudicaciones (3.1 a 3.7) por numero y linea de `ACTA_AUDITOR.md`
-(35278 a 35395), tres caidas nombradas, correccion de cita 9.6.3 a 9.6.2 en
-filas 147/148. Composicion tallada 7/3, 0 sobran/faltan; anadido 1 nivel 2 +
-4 nivel 3, caso positivo reproduce 1/5 de la vuelta 98.
-## TAREA 2, relectura conjunta del 147
-`consortium_benchmarking` NO cabe entero en el paso 2 de
-`clasificacion_benchmarking` (9.6.2). Se sostiene el auditor: AFIRMADA a NO
-RESUELTA. Recomputado: **20/30/60,0% a 19/31/62,0%**. Correccion declarada
-en el JSONL (`correccion_v99`, texto viejo intacto) y en `04_ENLACES.md`.
-## TAREA 3, `OP-E-03` CIERRA, 183 de 183
-33 filas nuevas (151 a 183): D las 33, direccion 13/20 (60,6% NO RESUELTA),
-mediana `titulo_ratio` 73,2, confirma la prediccion del acta 98. Cierre
-entero (4 ficheros de tramo, no 3 como decia el encargo, discrepancia
-declarada): A 3, B 2, C 1 (par 111), D 177; direccion 95/88 (48,1%);
-invertidas 2 (16, 114). Mutacion: 1 verde, 7 caen. Addendum simulado,
-aplicado, idempotente (reaplicar EXIT 1). `estado` se queda en LISTA.
-## TAREA 4, estado real de la fase 04 (medicion, nada tocado)
-1 HECHA (`OP-E-02`), 2 ejecutables hoy sin dependencia externa viva
-(`OP-E-01` sin dependencias; `OP-E-07` solo depende de `OP-E-06`, misma
-fase), 7 esperan otra fase: 4 a `OP-M-01`/`FUSION` (fases 06/03), 1 a las
-siete `OP-D` (fase 02). `OP-E-01` y `OP-E-03` tienen cierre citado en su
-nota y siguen en LISTA por politica declarada (backlog 14 ago: "el estado
-de verdad es el repo"). Detalle: `docs/loop/SALIDA_V99_TAREA4_ESTADO_FASE04.md`.
-## DISCUTIBLES MARCADOS, para la relectura ciega
-1. TAREA 2 (147): muevo mi propia lectura original a NO RESUELTA.
-2. Puesto 152: NO RESUELTA por exceso del hijo; frontera fina con RESUELTA.
-3. Puestos 156/157/158 (iman `metricas_calidad`): dos RESUELTA, una no.
-4. Puesto 175 (`valor_de_vida_del_cliente`): RESUELTA por nombre literal,
-   pero el hijo anade material fuera de la madre.
-5. TAREA 4: "ejecutable hoy" de `OP-E-07` es formal, no practico.
-## PENDIENTE DE DOCTRINA
-Ninguno nuevo. "Tres ficheros de tramo" (encargo) contra "cuatro" (medido)
-queda declarada en TAREA 3, no resuelta por mi.
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `c8827ef7` (ACTA DE LA VUELTA 99 DEL AUDITOR, leido de git log), HEAD real de apertura `c8827ef7` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, commit del acta `c8827ef7` (ACTA DE LA VUELTA 99 DEL AUDITOR, leido de git log), HEAD real de apertura `c8827ef7` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE** |
 
-**Lineas:** `wc -l docs/loop/REPORTE.md`, corrido tras escribirlo, da **58**.
+Cero movimiento en dataset/web/engine en toda la vuelta: LECTURA DIRIGIDA y
+medicion, no cirugia (`EJECUTOR.md` 4).
+
+**TAREA 1 (bloqueante).** `scripts/loop/contar_cierre_efectivo.py`: aplica
+`correccion_vNN` por fila, cae ROJO si un `campo_corregido` es desconocido.
+Mutacion en verde las 3 (control, quitar 147, campo inventado),
+`SALIDA_V100_TAREA1_MUTACION.txt`.
+
+**TAREA 2.** Registros del acta 99 en `PENDIENTES.md`, composicion tallada
+1 nivel2/5 nivel3, caso positivo verde contra la vuelta 99.
+
+**TAREA 3.** Relectura conjunta 174 y 175: SE SOSTIENE el caso del auditor
+en las dos (NO RESUELTA), `correccion_v100`. Tramo4 60,6% a 66,7%.
+
+**TAREA 4.** Cifra de cierre corregida en `04_ENLACES.md`, `OPERACIONES.jsonl`
+y `PENDIENTES.md`: 95/88 (48,1%) crudo -> 92/91 (49,7%) tras TAREA 3. Bug de
+anclaje de tabla detectado y corregido en el mismo paso.
+
+**TAREA 5.** Relectura al doble, dos flancos (5 afirmadas menor
+`titulo_ratio`, 5 no resueltas mayor). 8 sostenidas. **2 discutibles NUEVOS,
+sin marcar antes** (172 `desarrollo_en_espiral->protocepto`, 161
+`seis_herramientas_comunicacion_celebracion->celebracion_automatizada_de_hitos`),
+las dos NO RESUELTA por exceso de genero del 9.6.2. Recomputado OTRA VEZ en
+vivo para no repetir la caida de la vuelta 99: **92/91 -> 90/93 (50,8%)**.
+
+**TAREA 6.** `docs/loop/SALIDA_V100_TAREA6_FASE04_CONTRA_EVIDENCIA.md`: 26
+dependencias transitivas unicas de las 10 ops de fase 04 (BFS,
+`vuelta100_tarea6_transitivas_fase04.py`), 11 con registro de cierre escrito
+y 15 sin el, cada una citada fichero:linea. Cuenta: **1 HECHA, 1 EJECUTABLE
+(`OP-E-01`), 8 BLOQUEADAS**. Coincide en TOTAL con la 4.7 del acta 99, pero
+la COMPOSICION diverge (el campo `estado` marcaba bloqueante lo que ya
+tenia cierre escrito: 11 de las 26). Declarado, sin tocar `estado`, sin
+abrir fase nueva.
+
+**LA CIFRA VIGENTE DE `OP-E-03`: 90 / 93 (50,8% NO RESUELTA), n=183**, clase
+A 3 B 2 C 1 D 177, invertidas 2 (pares 16, 114).
+
+**DISCUTIBLES MARCADOS para la relectura ciega del auditor:** el **172** y
+el **161** (TAREA 5), unica fuente de direccion la lectura del ejecutor
+contra el grafo, sin auditor con quien contrastar en vivo esta vuelta.
+
+**PENDIENTE DE DOCTRINA:** ninguno nuevo esta vuelta.
+
+**NOTA DE INSTRUMENTO:** `vuelta99_tarea3_addendum_cierre_opE03.py` sigue
+imprimiendo `FILAS DE PARTIDA: %d.` sin interpolar (acta 99, 1.11); no se
+toco por regla 1.4 de `vuelta99_tarea3_addendum_cierre_opE03.py` NO
+reescribirse.
+
+`wc -l docs/loop/REPORTE.md` medido tras la penultima edicion: **65**, bajo
+el tope de 80 del austero.
