@@ -1,0 +1,85 @@
+CENSO DE EJECUCION DE LA FASE 04, LEYENDO LA NOTA DE CADA UNA DE LAS DIEZ, TAREA 3.3 VUELTA 117.
+====================================================================================================
+
+--- OP-E-01 (estado=LISTA) ---
+(1) ADDENDUM DE EJECUCION: NO
+(2) registro de cierre en docs/plan/04_ENLACES.md: SI, 2 cita(s):
+    docs/plan/04_ENLACES.md:60 -- ## LA CALIBRACION DEL VERBO, YA CORRIDA. **PASO 1 DE `OP-E-01`, HECHO**
+    docs/plan/04_ENLACES.md:139 -- ## LA TASA MEDIDA. **PASO 2 DE `OP-E-01`, HECHO**
+(3) aristas segun el grafo: 98 de 98 PRESENTES hoy -- fuente: docs/plan/OP_E_01_DECIDIDAS.jsonl (98 ESCRITA)
+
+--- OP-E-02 (estado=HECHA) ---
+(1) ADDENDUM DE EJECUCION: NO
+(2) registro de cierre en docs/plan/04_ENLACES.md: NO
+(3) aristas segun el grafo: 0 par(es) a resolver -- fuente: aristas_nuevas vacio en OPERACIONES.jsonl (OP-E-02 sin aristas propias)
+
+--- OP-E-03 (estado=LISTA) ---
+(1) ADDENDUM DE EJECUCION: SI (fecha/vuelta no parseada del texto) -- "ADDENDUM DE EJECUCION (29 ago 2026, vuelta 94, docs/loop/PROMPT_SIGUIENTE.md TAREA 6) [CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026" de este addendum estaba TECLEADA y es"
+(2) registro de cierre en docs/plan/04_ENLACES.md: NO
+(3) aristas segun el grafo: 0 par(es) a resolver -- fuente: aristas_nuevas vacio en OPERACIONES.jsonl (OP-E-03 es LECTURA, no escritura de aristas)
+
+--- OP-E-04 (estado=LISTA) ---
+(1) ADDENDUM DE EJECUCION: NO
+(2) registro de cierre en docs/plan/04_ENLACES.md: NO
+(3) aristas segun el grafo: 0 de 9 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 9 entrada(s), 9 par(es) extraidos por regex
+    AUSENTE: gestion_portafolio_dos_niveles -> estructura_gates (sig=False prev=False)
+    AUSENTE: requisitos_gates_con_dientes -> portfolio_management (sig=False prev=False)
+    AUSENTE: requisitos_gates_con_dientes -> revision_portafolio_periodica (sig=False prev=False)
+    AUSENTE: requisitos_gates_con_dientes -> gestion_portafolio_foco (sig=False prev=False)
+    AUSENTE: portfolio_management -> gates_go_kill_decision_points (sig=False prev=False)
+    AUSENTE: gestion_portafolio_formal -> gates_go_kill_decision_points (sig=False prev=False)
+    AUSENTE: gestion_portafolio_dos_niveles -> gates_go_kill_decision_points (sig=False prev=False)
+    AUSENTE: gestion_portafolio_foco -> gates_go_kill_decision_points (sig=False prev=False)
+    AUSENTE: decision_factory_mentality -> gates_go_kill_decision_points (sig=False prev=False)
+
+--- OP-E-05 (estado=LISTA) ---
+(1) ADDENDUM DE EJECUCION: NO
+(2) registro de cierre en docs/plan/04_ENLACES.md: NO
+(3) aristas segun el grafo: 1 de 4 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 4 par(es) extraidos por regex
+    AUSENTE: gestion_portafolio_formal -> requisitos_gates_con_dientes (sig=False prev=False)
+    AUSENTE: requisitos_gates_con_dientes -> gestion_portafolio_dos_niveles (sig=False prev=False)
+    AUSENTE: gestion_portafolio_dos_niveles -> requisitos_gates_con_dientes (sig=False prev=False)
+
+--- OP-E-06 (estado=LISTA) ---
+(1) ADDENDUM DE EJECUCION: SI (fecha/vuelta no parseada del texto) -- "ADDENDUM DE EJECUCION (29 ago 2026, vuelta 90) [CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026" de este addendum estaba TECLEADA y es FALSA. El texto viejo se queda entero y"
+(2) registro de cierre en docs/plan/04_ENLACES.md: NO
+(3) aristas segun el grafo: 114 de 114 PRESENTES hoy -- fuente: docs/plan/OP_E_06_DIRECCION_V90.jsonl
+
+--- OP-E-07 (estado=LISTA) ---
+(1) ADDENDUM DE EJECUCION: SI (fecha/vuelta no parseada del texto) -- "ADDENDUM DE EJECUCION (29 ago 2026, vuelta 91) [CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026" de este addendum estaba TECLEADA y es FALSA. El texto viejo se queda entero y"
+(2) registro de cierre en docs/plan/04_ENLACES.md: NO
+(3) aristas segun el grafo: 84 de 84 PRESENTES hoy -- fuente: docs/plan/OP_E_07_DIRECCION_V94.jsonl (ULTIMO de 4 ficheros V91-V94)
+
+--- OP-M-01-ESLABONES (estado=LISTA) ---
+(1) ADDENDUM DE EJECUCION: NO
+(2) registro de cierre en docs/plan/04_ENLACES.md: NO
+(3) aristas segun el grafo: 0 de 2 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 2 par(es) extraidos por regex
+    AUSENTE: sistema_stage_gate -> sistema_gates_go_kill (sig=False prev=False)
+    AUSENTE: sistema_gates_go_kill -> asignacion_recursos_en_gates (sig=False prev=False)
+
+--- OP-M-01-SEXTO (estado=LISTA) ---
+(1) ADDENDUM DE EJECUCION: NO
+(2) registro de cierre en docs/plan/04_ENLACES.md: NO
+(3) aristas segun el grafo: 0 de 1 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 1 entrada(s), 1 par(es) extraidos por regex
+    AUSENTE: gestion_de_portafolio_gates_go_kill -> sistema_gates_go_kill (sig=False prev=False)
+
+--- OP-M-03-ENLACES (estado=LISTA) ---
+(1) ADDENDUM DE EJECUCION: NO
+(2) registro de cierre en docs/plan/04_ENLACES.md: NO
+(3) aristas segun el grafo: 0 de 2 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 2 par(es) extraidos por regex
+    AUSENTE: pivotar_o_perseverar -> pivote_estrategico (sig=False prev=False)
+    AUSENTE: pivote_o_proceder -> pivote_estrategico (sig=False prev=False)
+
+--- RESUMEN ---
+| operacion | estado | addendum ejecucion | registro en pagina | aristas presentes/total |
+|---|---|---|---|---|
+| OP-E-01 | LISTA | NO | SI | 98/98 |
+| OP-E-02 | HECHA | NO | NO | 0/0 |
+| OP-E-03 | LISTA | SI | NO | 0/0 |
+| OP-E-04 | LISTA | NO | NO | 0/9 |
+| OP-E-05 | LISTA | NO | NO | 1/4 |
+| OP-E-06 | LISTA | SI | NO | 114/114 |
+| OP-E-07 | LISTA | SI | NO | 84/84 |
+| OP-M-01-ESLABONES | LISTA | NO | NO | 0/2 |
+| OP-M-01-SEXTO | LISTA | NO | NO | 0/1 |
+| OP-M-03-ENLACES | LISTA | NO | NO | 0/2 |
