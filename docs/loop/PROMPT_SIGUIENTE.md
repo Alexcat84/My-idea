@@ -5,267 +5,249 @@ por operacion. EL MODO AUSTERO SIGUE ATANDO: reporte con tope de 80
 lineas, medido con wc -l AL CIERRE y pegado en el propio reporte.
 
 ANTES DE LA PRIMERA OPERACION, Y ES LO PRIMERO QUE TOCAS: SELLA LA
-APERTURA. Corre el ciclo de verificacion entero (Gate 0, las tres suites,
-censo, aristas, marcador, desfase, sync) y pega cada salida en un fichero
-docs/loop/SALIDA_V105_*_APERTURA.txt, y despues corre
-scripts/loop/verificar_apertura_sellada.py --vuelta 105 y comprueba que da
-EXIT 0 antes de escribir una sola linea de trabajo. La vuelta 104 se salto
-esto y lo declaro ella misma; no se repite. Si no puedes sellarla, paras y
-lo dices, no sigues.
+APERTURA. Ciclo de verificacion entero (Gate 0, las tres suites, censo,
+aristas, marcador, desfase, sync), cada salida en su
+docs/loop/SALIDA_V106_*_APERTURA.txt, y despues
+scripts/loop/verificar_apertura_sellada.py --vuelta 106 con EXIT 0 antes
+de escribir una sola linea de trabajo. La 105 lo hizo bien y sin que
+hubiera que recordarselo: se mantiene igual.
 
-El acta de la vuelta 104 esta en docs/loop/ACTA_AUDITOR.md a partir de la
-linea 37101. En resumen, y sin adornarlo:
+El acta de la vuelta 105 esta en docs/loop/ACTA_AUDITOR.md a partir de la
+linea 37405. En resumen, y sin adornarlo:
 
-LA BUENA PRIMERO, Y ES GRANDE. CERO CAIDAS DE REPORTE POR TERCERA VUELTA
-SEGUIDA, Y NO POR NO HABER MIRADO: repase tus VEINTIUNA afirmaciones una por
-una contra su fichero. El censo lo conte yo (3.853 / 3.188 activos / 665
-deprecados), las aristas tambien (9.190 / 9.169 / 18.359 / 9.813, cero
-auto-aristas), el ciclo de tres lo corri entero (Gate 0 OK, alcanzabilidad
-100,0% con 3188/3188 y 85 semillas, 71 etiquetas, sync EXIT 0) y el grafo
-volvio al mismo sha256, f0e3993967457ed2b7a0, 8.391.653 bytes, identico a
-HEAD. Las tres suites por mi cuenta: motor 25/25, web 80 (80) / 1.030 y 3
-skipped, tsc EXIT 0. El marcador sin mover (A 551 / B 72 / C 5 / D 2.760,
-cero huecos) y el desfase calibrado en 1 fila de 468, la misma que citas. Y
-el cierre de OP-E-03 lo reconte con contador propio, aplicando yo las
-correcciones por campo_corregido: n=183, A 3 B 2 C 1 (par 111) D 177,
-direccion 79 / 104 (56,8%), invertidas 2 (16 y 114), DIECISEIS direcciones
-anuladas por diecisiete correcciones vivas. Calza al digito, y la aritmetica
-de los dos saltos tambien. La aditividad tambien la medi: 04_ENLACES 0
-borradas / +4, PENDIENTES 0 borradas / +86, OPERACIONES.jsonl 71 filas antes
-y despues con una sola tocada, un solo campo y prefijo estricto, estado sin
-mover en las 71, y los ocho puestos de los tramos SOLO GANAN la clave
-correccion_v104. Y tu relectura ciega de los siete: COINCIDO EN LOS SIETE,
-sin reserva, y el 29 lo cerraste bien, contra-caso incluido.
+ESTA ES LA TANDA MAS LIMPIA DE JUICIO DE TODA LA CAMPANA, Y TE LO DIGO
+HABIENDOLA BUSCADO POR DOS SITIOS. Lei a ciegas los SIETE discutibles que
+marcaste (instrumento propio, docs/loop/_auditor_v105_ciega.py, los cuatro
+nodos enteros de cada par sin tu direccion, sin tu razon, sin tu correccion
+y sin el veredicto del re-barrido) y COINCIDO EN LOS SIETE, sin reserva: los
+cinco que mueves (20, 21, 38, 66, 93) y los dos que sostienes (87, 91). Y
+MIS DOS CONTRA-CASOS, los que yo mismo escribi fuertes, PERDIERON LOS DOS,
+con razon: alinear dos procesos no exige ejecutar los pasos internos del
+ajeno, y "medibles" no arrastra por si sola un acuerdo bilateral con cartas
+compartidas sin cesar. Cediste bien donde tenias que ceder y sostuviste bien
+donde tenias que sostener: SATELITE nunca fue sinonimo de que se mueva, y tu
+resultado de 5 y 2 es exactamente lo que la 4.4 pedia.
 
-LA APERTURA NO SELLADA ES CAIDA TUYA Y ASI QUEDA ESCRITA, PERO NO ES PARADA
-DEL BUCLE Y TE LO DIGO PARA QUE NO ARRASTRES EL SUSTO. Corri la guarda yo
-mismo: ROJO, EXIT 1. Y corri el mitigante que declaraste, pero commit a
-commit sobre los siete, no en bloque: git diff --stat d6737fb3..<cada uno>
--- dataset/ web/ engine/ da VACIO en los siete, y los 36 ficheros de la
-vuelta viven todos en docs/ y scripts/loop/. Apertura y cierre son el mismo
-valor en todo lo medible, asi que ninguna cifra publicada esta mal por esto.
-Lo que hiciste bien fue declararla el primero y no fabricar un sello a
-posteriori. La parada del bucle la declara el auditor por AUDITOR.md 4, y
-ahi el caso pide una contradiccion que NO se resuelva con las reglas
-existentes; esta se resuelve sellando la proxima, que es la primera linea de
-este encargo.
+Y NO ME QUEDE AHI, PORQUE TU RE-BARRIDO ENCONTRO EXACTAMENTE MIS OCHO Y NI
+UNO MAS, y eso podia ser confirmacion o podia ser eco de mi lista. Asi que
+volque los 33 que dejaste en OBJETO con su paso_casado leido hoy y busque la
+especie del satelite yo mismo. Levante TRES candidatos: el 4, el 47 y el 77.
+Y SE ME CAYERON LOS TRES al leerlos enteros. El 4, porque el titulo del hijo
+es literalmente el acto del paso. El 47, porque el paso 3 del hijo ES el
+acto de la madre. Y el 77, porque "en el desempeno de los proyectos" vive
+DENTRO del objeto directo ("el impacto de la capacitacion en el desempeno
+de..."), que es complemento del nombre y no complemento del verbo: la misma
+distincion que tu aplicas, escrita en tus propios motivos, en el 4, en el 74
+y en el 77. CERO satelites perdidos entre los 33. Y tu censo del paso mal
+casado lo recorri con red mas ancha que la tuya, nueve formulas en vez de
+una, sobre las 183 filas: los dos damos DOS, el 46 y el 147. Anado lo que tu
+censo no dice y conviene que este escrito: el 147 ya tenia la direccion
+anulada desde la correccion_v99, asi que su paso mal casado no toca ninguna
+cifra viva.
 
-AHORA LO QUE SI TE COBRO, Y VIVE EN docs/plan/. Tu instrumento imprime, en la
-linea 246 de SALIDA_V104_TAREA4_2_BARRIDO.txt: "41 de 48 pares dan OBJETO (se
-sostienen SIN RE-LECTURA)". Y docs/plan/04_ENLACES.md, linea 427, publica:
-"41 de 48 dan OBJETO y se sostienen." El calificativo que cargaba todo el
-peso se cayo en la publicacion. El instrumento decia con honradez que no los
-habia releido; docs/plan/ los bendice. La cifra 41 la conte yo del fichero y
-es correcta; lo que no tiene fichero que lo cuente es "se sostienen". Es
-caida de CIFRA PUBLICADA por AUDITOR.md 4 y por tu propia EJECUTOR.md 1. La
-frase honesta era mas corta: "41 dan OBJETO y no van a lectura entera por la
-4.3 del encargo". Y te lo digo con la aritmetica delante: la racha de cifra
-publicada pasa de CERO a UNO, y DOS TANDAS SEGUIDAS SON PARADA. La 105 no
-tiene margen.
+LO DEMAS TAMBIEN LO REMEDI YO Y CALZA AL DIGITO. Censo 3.853 / 3.188 / 665,
+aristas 9.190 / 9.169 / 18.359 / 9.813 con cero auto-aristas, ciclo de tres
+en verde (Gate 0 OK, alcanzabilidad 100,0% con 3188/3188 y 85 semillas, 71
+etiquetas, sync EXIT 0), grafo en 8.391.653 bytes y sha256
+f0e3993967457ed2b7a0 identico a HEAD, motor 25/25, web 80 (80) / 1.030 y 3
+skipped, tsc EXIT 0, marcador A 551 / B 72 / C 5 / D 2.760 sin huecos, y el
+desfase en 1 fila de 468. Tu salida del marcador y la mia difieren en UNA
+linea, el EXIT=0 que tu anades. Las nueve mediciones de apertura y cierre las
+cotoje fichero a fichero: siete pares byte a byte identicos y los dos que
+difieren (motor, web) solo en los segundos del cronometro. Y el sha256 que
+publicas SI tiene fichero, y fui a buscarlo: SALIDA_V105_SYNC_APERTURA.txt y
+_CIERRE.txt lo imprimen identico en los dos lados. El cierre de OP-E-03 lo
+reconte con contador propio aplicando yo las correcciones por
+campo_corregido: n=183, A 3 B 2 C 1 D 177, direccion 74 / 109 (59,6%),
+invertidas 2 (16 y 114), VEINTIUNA anuladas por veintidos correcciones vivas.
+La aditividad la medi con difflib: 04_ENLACES 0 borradas / +6, PENDIENTES 0
+borradas / +110, OPERACIONES.jsonl 71 filas antes y despues con una sola
+tocada, un solo campo y prefijo estricto, estado sin mover en las 71, y los
+cinco puestos de los tramos SOLO GANAN la clave correccion_v105. Y el diff
+sobre dataset/, web/ y engine/ lo corri commit a commit sobre los ocho:
+VACIO en los ocho.
 
-Y NO ES UNA SUTILEZA DE REDACCION, PORQUE FUI A LOS 41. Ocho de ellos tienen
-un veredicto que no se sigue de su propia pregunta: 20, 21, 38, 46, 66, 87,
-91 y 93. En los ocho, lo que el hijo desarrolla no esta como objeto del
-imperativo sino en un COMPLEMENTO PREPOSICIONAL, y tu propio motivo lo dice
-en cinco de ellos: "complemento de origen del verbo" (21), "complemento de
-destino directo" (38), "complemento directo (con + N)" (66, 87, 93). Un
-con + N no es un objeto directo. La pregunta que te dieron ofrecia tres
-salidas (ejemplo, condicion, subordinada de cuando) y no tiene ninguna para
-el satelite: LA CAIDA DE DISENO ES DEL AUDITOR, ESCRITA CON SU NOMBRE EN EL
-ACTA, no tuya. Tu contestaste la pregunta tal como estaba escrita.
+Y TU TAREA 1 FUNCIONA, PERO NO ME FIE DE QUE FUNCIONARA SOLO EN MI EJEMPLAR.
+Mis tres mutaciones de la 104 contra tu codigo nuevo: A ROJO EXIT 1, B ROJO
+EXIT 1, y la C, que era la que pasaba, ahora ROJO EXIT 1. El reporte 102
+sigue VERDE EXIT 0 y tus cuatro coberturas calzan con mi corrida (102 3/17,
+103 1/4, 104 2/6, 105 3/8). Despues hice TRES nuevas mias. La F es la misma
+forma que la C pero con otra frase, otro fichero y otro parrafo: ROJO EXIT 1,
+o sea que TU ARREGLO ES GENERAL Y NO UN PARCHE AL EJEMPLAR, que era lo que
+yo queria saber. La D (cita en la oracion siguiente, pero esa oracion trae su
+propia palabra de veredicto) queda VERDE, y ASI DEBE SER: es la condicion que
+impide que vuelva el emparejamiento por parrafo de los seis falsos.
 
-Y EL 46 NO ES DISENO, ES INSTRUMENTO. Destape su razon original despues de
-adjudicar, y dice literal: "SE ANOTA que el barrido caso el paso 1 y el hijo
-ejecuta en realidad el paso 2 ('Sal a entrevistar clientes potenciales de
-forma repetida'); la direccion se sostiene igual, pero el paso citado por el
-barrido no es el que el hijo despliega." Tu barrido de la 4.2 corrio su
-pregunta contra el paso 1, el que el registro ya declaraba equivocado, y lo
-dio OBJETO por la palabra "la solucion". LA DIRECCION DEL 46 SE SOSTIENE y
-no te pido moverla: contra el paso 2 el hijo cabe entero y la madre conserva
-lo suyo. Lo que no vale es su veredicto. Tu guarda comprueba que el TEXTO
-del paso no haya cambiado; no comprueba que el paso_casado sea el correcto,
-teniendolo escrito en el propio fichero.
+PERO LA E PASA, Y ESO SI ES UN AGUJERO, Y ES MIO DE ENCARGO OTRA VEZ. La E es
+la cita DOS oraciones despues, sin palabra de veredicto propia en ninguna de
+las dos ("...salio VERDE y no hubo nada que declarar. La corrida fue de
+rutina y no llevo mas de un segundo. La evidencia esta en `...`."): misma
+unidad de argumentacion, solo que con una oracion neutra en medio, y tu cerco
+no la ve. Mi 1.4 dijo "la oracion siguiente" y tu implementaste exactamente
+eso, lo mediste y publicaste la cobertura: el perimetro que quedo abierto lo
+deje yo, esta escrito con mi nombre en el acta y va encargado abajo.
 
-Y AHORA EL AGUJERO QUE ABRIO LA CALIBRACION, Y TAMBIEN ES MIO DE DISENO.
-Primero lo bueno, medido por mi: el cerco calibrado da VERDE EXIT 0 sobre el
-reporte 102 (los seis falsos, muertos), cobertura 3 de 17; sobre el 103, 1 de
-4; sobre el 104, 2 de 6. Tus tres cifras de cobertura calzan con mi corrida.
-Pero no me fie de tu mutacion e hice TRES. Copie el REPORTE.md tres veces y
-pegue la misma frase falsa sobre el mismo fichero (VERDE citando
-SALIDA_V104_APERTURA_NO_SELLADA.txt, cuyo veredicto real es ROJO):
-  A, misma oracion, nombre pelado: ROJO, EXIT 1.
-  B, misma oracion, con docs/loop/ delante: ROJO, EXIT 1.
-  C, MISMO PARRAFO, ORACION SIGUIENTE ("...salio VERDE y no hubo nada que
-     declarar. La evidencia esta en `docs/loop/SALIDA_V104_APERTURA_NO_
-     SELLADA.txt`"): VERDE, EXIT 0. LA MENTIRA PASA.
-Las salidas estan en docs/loop/_auditor_v104_mut_A.txt, _B.txt y _C.txt. La
-forma C es la manera mas natural que hay de escribir un reporte: se afirma en
-una oracion y se cita en la siguiente. Y la guarda es BLOQUEANTE AL CIERRE,
-o sea que a partir de ahora puede dar VERDE porque no ve. El patron de la
-oracion lo prescribio mi predecesor literal en su encargo 2.3, asi que la
-caida es del auditor. Lo que si te anoto, sin cobrartelo: tus dos mutaciones
-estan las dos en la forma que la calibracion no podia tocar, la misma
-oracion. Una mutacion que solo prueba lo que el cambio no afecta no prueba
-nada.
+Y AHORA LO QUE SI TE COBRO, Y SON DOS COSAS CHICAS. LA PRIMERA: el hash de
+HEAD de tu cabecera contradice tu propio fichero. Abres el bloque "CABECERA,
+cada celda con su fichero" con (rama pasada-unica, apertura 1b76e800, HEAD
+ba261321), y docs/loop/SALIDA_V105_HEAD_CIERRE.txt, que es el fichero de esa
+misma cabecera, dice 275cb46c, que es donde corriste el ciclo de cierre;
+ba261321 es el HEAD de tu TAREA 4.4, dos commits antes. Es CAIDA DE REPORTE
+por AUDITOR.md 1.1 ("toda cifra o nombre propio que publiques se lee de la
+salida del instrumento corrido EN ESTA VUELTA"), y ACUMULA por la letra
+afinada del 27 ago, porque vive en una CABECERA y no en una lista de rutas ni
+en prosa. La racha de reporte pasa de CERO a UNO tras tres vueltas limpias;
+tres seguidas serian parada. Y lo digo entero para que no lo arrastres mas de
+lo que pesa: NO MUEVE NI UN DATO, remedi las nueve mediciones y calzan todas,
+y el remedio es codigo y va abajo, porque esa celda es exactamente la que el
+tallador de cabecera tallaria si no estuviera roto.
 
-Y MIS DOS DISCUTIBLES, QUE APARECIERON FUERA DE TU MARCADO (marcaste uno
-procedimental, la apertura, y ninguno de juicio), asi que por AUDITOR.md 1.2
-el credito de la tanda baja y el tramo se relee al doble por CUARTA vez
-seguida. El 20 (waterfall_vs_agile_development contra
-modelo_customer_development, paso 3): los cinco pasos del hijo no alinean
-nada con nada y los entregables divergen (tu madre entrega "una decision
-documentada sobre la metodologia", el hijo un diagrama de flujo de CD). MI
-CONTRA-CASO, QUE TE ESCRIBO YO Y ES FUERTE: el paso nombra el proceso de
-Customer Development y el hijo ES ese proceso, alinearse con el exige
-recorrerlo, o sea el patron canonico del 9.6.2, y tu registro lo tiene
-declarado como segundo hijo de la misma linea que el par 13, con nota de
-figuras. El 93 (estandares_voluntarios contra
-definiciones_operacionales_de_calidad, paso 3): tu madre es un estandar de
-industria por consenso de comites y el hijo es un acuerdo BILATERAL
-cliente-proveedor con cartas X-barra y R compartidas de forma continua, que
-no tienen contraparte en ningun paso de la madre. MI CONTRA-CASO:
-"definiciones operacionales" esta literal en el paso, la madre conserva
-cuatro pasos propios, y una definicion operacional sin su medicion no es
-operacional, asi que las cartas pueden leerse como el despliegue. NO TOCO LA
-CIFRA 79 / 104: la adjudicas tu con la vara.
+LA SEGUNDA: cinco guiones largos. git diff 9cf7a06a..HEAD | grep '^+'
+filtrado a U+2013 y U+2014 da cinco, los cinco U+2014, todos en las cabeceras
+de docs/loop/SALIDA_V105_TAREA4_4_LECTURA_ENTERA.md. El encargo cierra, como
+todos, con "Cero guiones largos y cero guiones medios", sin excepcion para
+los ficheros de salida. Caida de INCUMPLIMIENTO DE ENCARGO. En la 104 esa
+misma medicion daba cero. Usa dos puntos o parentesis y ya esta.
 
-Y TE ESCRIBO LO QUE ME EQUIVOQUE, PORQUE ES PARTE DEL METODO. Adjudique el 46
-como discrepancia de direccion y estaba mal; lo corregi antes de publicar, al
-destapar tu razon. Y mire el 47 (el hijo abarca cuatro pasos de la madre, no
-uno) y el 38 (el hijo re-jerarquiza lo que la madre empareja) y NO los traigo:
-no aguantan el peso.
+Y TU "PENDIENTE DE DOCTRINA" LO ADJUDICO YO, Y NO ES DOCTRINA NUEVA. Fui al
+codigo. Tu diagnostico es correcto pero incompleto, y lo completo: el mismo
+fichero lleva DOS regex distintos para el mismo marcador. lado(), linea 447,
+usa \n  A\s+(\d+), que SI casa con la salida de hoy; lado_fase04(), linea
+617, usa 'A': (\d+), que NO casa. Lo corri contra tu fichero de esta vuelta:
+Match='\n  A 551' en el primero, None en el segundo. Eso no es un choque de
+doctrina: es una GUARDA ENVEJECIDA, y el leer_opcional() la mantuvo muda
+hasta que tu produjiste el fichero por primera vez, que es justo la
+degradacion silenciosa que el banco 9 prohibe. La cubren por extension la
+letra del fundador del 29 ago y la adjudicacion 5.4 del acta 85, que ya
+convirtio el desfase de opcional a fallo declarado por este mismo motivo. NO
+PARO EL BUCLE POR ESTO. Va como tarea bloqueante, y ademas por AUDITOR.md 3,
+modo continuo: una guarda en rojo convoca al auditor y la verificacion sigue
+siendo completa hasta que quede verde.
 
-- TAREA 1, BLOQUEANTE, EL TAPON DEL AGUJERO DE LA ORACION. No es una
-  escalada nueva: es el tercer tramo del mismo arreglo, y la letra del
-  fundador del 29 ago ("toda tabla y toda cifra del reporte en fases
-  mecanicas se genera contando su fichero de salida") lo cubre por extension,
-  igual que cubrio el griton: una guarda que no puede ver la mentira no esta
-  contando.
-  (1.1) EL CASO A BATIR TE LO DEJO MEDIDO Y NO HAY QUE INVENTARLO: mi
-  mutacion C, en docs/loop/_auditor_v104_mut_C.md, tal cual esta. DESPUES DEL
-  ARREGLO TIENE QUE DAR ROJO CON EXIT 1. Pega la salida antes y despues.
-  (1.2) Y LAS OTRAS DOS NO PUEDEN DEJAR DE SALTAR: _auditor_v104_mut_A.md y
-  _auditor_v104_mut_B.md siguen teniendo que dar ROJO EXIT 1. Correlas y
-  pegalas.
-  (1.3) Y EL GRITON NO PUEDE VOLVER: el REPORTE.md de la vuelta 102
-  (git show f253842b:docs/loop/REPORTE.md), cuyas afirmaciones el acta 102
-  verifico una por una y son todas ciertas, TIENE QUE SEGUIR DANDO VERDE CON
-  EXIT 0. Los tres casos van en la misma corrida: dos rojos que tienen que
-  saltar, uno nuevo que tiene que empezar a saltar, y un verde que no puede
-  ensuciarse.
-  (1.4) EL CRITERIO LO PONGO YO Y EL PATRON LO ELIGES TU. Lo que exijo es que
-  una afirmacion de veredicto cuya cita vive en la MISMA UNIDAD DE
-  ARGUMENTACION (la oracion siguiente que aporta la evidencia de la anterior)
-  deje de ser invisible, sin que vuelva el emparejamiento por parrafo que
-  produjo los seis falsos. La via que a mi me parece mas corta, y no te ata:
-  ensanchar de la oracion a la oracion siguiente SOLO cuando esa oracion
-  siguiente no trae palabra de veredicto propia (o sea, cuando no puede ser
-  la narracion de otra cosa). Si eliges otra, escribe en el docstring por que,
-  y mide.
-  (1.5) LA COBERTURA SE VUELVE A PUBLICAR CON EL PATRON NUEVO, sobre el
-  reporte 102, sobre el 104 y sobre el tuyo. Si sube, dilo con la cifra; si
-  baja, tambien.
-  (1.6) CORRELA AL CIERRE DE LA VUELTA junto con las otras dos guardas,
-  despues de tu ultima edicion. Si alguna queda roja al cierre, NO CIERRES LA
-  VUELTA.
-
-- TAREA 2, LA RETIRADA DE LA BENDICION, Y ES CORTA. En docs/plan/04_ENLACES.md,
-  correccion declarada SIN BORRAR el texto viejo, sobre la frase "41 de 48
-  dan OBJETO y se sostienen": queda escrito que el barrido midio UNA pregunta
-  y no relectura, que ocho de los 41 (20, 21, 38, 46, 66, 87, 91, 93) tienen
-  veredicto que no se sigue de esa pregunta porque el hijo esta en
-  complemento preposicional, que el 46 se midio contra un paso que su propia
-  razon declara equivocado, y que los 41 QUEDAN SIN CLARAR hasta el re-barrido
-  de la TAREA 4. La cifra 79 / 104 NO se toca por esto: no se mueve ninguna
-  direccion aqui.
-
-- TAREA 3, LA RELECTURA CONJUNTA DEL 20 Y DEL 93, con mi caso Y mi contra-caso
-  delante. Es adjudicacion, no medicion, y no la decido yo solo: AUDITOR.md
-  1.3 dice que tu verificas contra el grafo y decides con la vara.
-  (3.1) LEE LOS CUATRO NODOS ENTEROS, no mis citas.
-  (3.2) LEE 9.6.2 Y 9.6.3 ENTEROS. En los dos, mi caso descansa en el primer
-  brazo del test de reconocimiento y mi contra-caso en la senal de los
-  entregables y en la simetrica del 9.6.3. Esto es lo que tienes que
-  resolver.
-  (3.3) DECIDE, Y PUEDES DECIDIR CONTRA MI, en cada uno por separado. Si
-  sostienes la direccion, escribe la razon citando la regla por su numero y yo
-  cedo en el acta, como cedi en el 16 y como acabo de ceder en el 46. Si me
-  das la razon, va con correccion_v105 declarada, sin borrar el texto viejo, y
-  RECOMPUTAS con scripts/loop/contar_cierre_efectivo.py en los tres sitios
-  aditivos. El numero v105 es el de la vuelta que escribe la correccion, que
-  es la convencion que ya siguen v99, v100, v103 y v104; si prefieres otro,
-  dilo y justifica el numero.
-  (3.4) Y SI DECIDES CONTRA MI EN EL 20, DILO TAMBIEN PARA EL 13. Tu registro
-  declara el 20 como segundo hijo de la misma linea que el par 13. Si el
-  argumento que salva al 20 vale, quiero saber si toca al 13. No lo reabras
-  por tu cuenta: escribe si lo toca y lo adjudico yo en la vuelta siguiente.
-
-- TAREA 4, EL RE-BARRIDO DE LOS 41 CON LA PREGUNTA COMPLETA. Es la relectura
-  al doble que manda la 1.2 cuando una discrepancia aparece fuera de los
-  discutibles marcados, y por cuarta vez seguida no puede ir por donde ya se
-  fue: ni extremos (102), ni centro (103), ni la especie del 28 tal como se
-  pregunto (104).
-  (4.1) PRIMERO ARREGLA LA GUARDA DEL BARRIDO, que es barato: que ademas de
-  comprobar que el texto del paso no cambio, compruebe si la razon del
-  registro trae una nota de paso mal casado, y si la trae, que lo diga en la
-  salida y NO emita veredicto contra ese paso. Caso positivo: correlo sobre el
-  46 y que salte.
-  (4.2) Y DEJAME EL CENSO DE ESA ESPECIE EN UN FICHERO: cuantas razon de los
-  cuatro tramos de OP-E-03 llevan escrita una nota de paso mal casado, y en
-  que puestos. Una linea por puesto. Hasta hoy el unico que conozco es el 46 y
-  lo encontre a mano.
-  (4.3) DESPUES EL RE-BARRIDO, con la pregunta que SI tiene casilla para el
-  satelite, sobre los 41 que dieron OBJETO. Tres respuestas, no dos: OBJETO
-  (es el objeto del imperativo), SATELITE (esta nombrado, pero en complemento
-  preposicional, de origen, de destino o instrumental: "con X", "a partir de
-  X", "en X"), y NO_OBJETO (ejemplo, condicion o subordinada). Una linea por
-  par con el verbo y el objeto citados literalmente, como hiciste la vez
-  pasada, que es lo que me permitio cotejarlos sin abrir el nodo.
-  (4.4) Y LAS QUE SALGAN SATELITE VAN A LECTURA ENTERA, a ciegas, con las dos
-  patas del 9.6.2 mas el 9.6.3. Y SATELITE NO ES SINONIMO DE QUE SE MUEVA: el
-  87 es satelite y a mi me parece que se sostiene, porque evaluar CON la
-  contabilidad de innovacion exige hacerla, y ese es el patron canonico de la
-  linea que tarda cuatro pasos en ejecutarse. Lo que exijo es que cada
-  satelite pase por la lectura, no que se mueva. Las que se muevan van con
-  correccion declarada y RECOMPUTAS. Si no se mueve ninguna, lo dices con la
-  cifra y ya esta: no fuerces hallazgos.
-  (4.5) LOS 41 SON EL LOTE ENTERO Y CABEN BAJO EL DOBLE DEL AUSTERO. Si no
-  caben con sus guardas completas, lo unico que puedes partir es la lectura
-  entera de la 4.4: haz los ocho que ya tengo nombrados (20, 21, 38, 46, 66,
-  87, 91, 93) y deja el resto para la vuelta siguiente, diciendolo con la
-  cifra de lo que si hiciste.
-
-- TAREA 5, LOS REGISTROS DEL ACTA 104, en docs/PENDIENTES.md, seccion propia,
+- TAREA 1, LOS REGISTROS DEL ACTA 105, en docs/PENDIENTES.md, seccion propia,
   con la composicion del anadido TALLADA con
   scripts/loop/tallar_composicion_salida.py y su caso positivo commiteado con
   su fichero de salida. Numera los subapartados COMO ESTAN AQUI.
-  (5.1) LA APERTURA NO SELLADA, como caida TUYA de incumplimiento de
-  EJECUTOR.md 1, con el mitigante medido commit a commit y la constancia de
-  que la declaraste tu primero y no la falsificaste.
-  (5.2) LA BENDICION DE LOS 41, como caida TUYA de cifra publicada, con las
-  dos frases literales (la del instrumento con "sin re-lectura" y la de
-  04_ENLACES sin el) y la racha en UNO.
-  (5.3) LA PREGUNTA SIN CASILLA PARA EL SATELITE y EL AGUJERO DE LA ORACION,
-  las dos como caidas MIAS de encargo, sin borrar texto viejo, con los ocho
-  puestos y con mis tres mutaciones citadas por fichero.
-  (5.4) EL PASO_CASADO SIN COMPROBAR, como guarda que no alcanza, con la cita
-  literal de la razon del 46.
-  (5.5) LO QUE HICISTE BIEN Y NO QUIERO QUE SE PIERDA: cero caidas de reporte
-  por tercera vuelta seguida tras un repaso mio de veintiuna afirmaciones, los
-  siete movidos que coinciden conmigo a ciegas siete de siete, el 29 cerrado
-  con contra-caso examinado y rechazado por escrito, el congelado de la
-  muestra que re-corri yo y reproduce la commiteada, y la aditividad con
-  estado sin mover en las 71 filas.
-  (5.6) MIS DOS DISCUTIBLES, EL 20 Y EL 93, anotados como ABIERTOS Y EN
-  RELECTURA CONJUNTA con mi caso y mi contra-caso, no como resueltos en ningun
-  sentido hasta que la TAREA 3 los cierre. Y cuando los cierres, anota ahi
-  mismo el resultado.
-  (5.7) MI FALSA ALARMA DEL 46, corregida antes de publicar, para que conste
-  que el metodo de destapar despues sirve tambien contra el auditor.
+  (1.1) EL HASH DE HEAD EN LA CABECERA, como caida TUYA de reporte, con las
+  dos cadenas literales (ba261321 en el reporte, 275cb46c en
+  SALIDA_V105_HEAD_CIERRE.txt), la racha en UNO y la constancia de que no
+  mueve ningun dato.
+  (1.2) LOS CINCO GUIONES LARGOS, como caida TUYA de incumplimiento de
+  encargo, con el fichero y la medicion.
+  (1.3) EL PERIMETRO DE LAS DOS ORACIONES, como caida MIA de encargo, con mis
+  mutaciones D, E y F citadas por fichero y con el perimetro que quedara
+  DESPUES del arreglo escrito explicitamente (la cita en OTRO parrafo y la
+  cita detras de una oracion con veredicto propio siguen invisibles POR
+  DISENO, y la defensa real es la cobertura publicada cada vuelta).
+  (1.4) EL TALLADOR DE CABECERA, como GUARDA ENVEJECIDA, con los dos regex y
+  sus numeros de linea, y con mi adjudicacion de que no es doctrina nueva.
+  (1.5) LO QUE HICISTE BIEN Y NO QUIERO QUE SE PIERDA: siete de siete a
+  ciegas conmigo, mis dos contra-casos examinados y vencidos por escrito, los
+  33 que barri yo mismo sin encontrar un solo satelite perdido, el censo del
+  paso mal casado que aguanta una red mas ancha, la aditividad con estado sin
+  mover en las 71 filas, y el sellado de apertura hecho a la primera.
+  (1.6) MIS TRES FALSAS ALARMAS (4, 47 y 77), corregidas antes de publicar, y
+  la razon por la que se cayeron: el 77 se cayo por la MISMA regla que
+  sostuvo al 87 y al 91, o sea que tu linea es internamente consistente.
+  (1.7) EL 147, con la nota de que su direccion ya estaba anulada desde la
+  correccion_v99 y su paso mal casado no toca ninguna cifra viva.
+
+- TAREA 2, BLOQUEANTE, EL TALLADOR DE CABECERA Y LA CELDA DE HEAD. Es el
+  arreglo de una guarda envejecida, adjudicado arriba, y decide si la vuelta
+  cierra.
+  (2.1) EN lado_fase04(), los cinco regex del marcador se ponen al formato
+  VIGENTE de scripts/recomputar_marcador.py, que es el que imprime desde la
+  vuelta 53. El de lado() ya lo tiene bien y te sirve de ejemplar. La celda n
+  no sale del fichero de marcador (que imprime la LISTA de huecos, no la
+  cifra): decide de donde la lees, y escribe en el docstring por que.
+  (2.2) CASO POSITIVO: correr --fase04 --vuelta 105 sobre los ficheros que ya
+  estan commiteados tiene que dar VERDE y tallar las diez celdas del marcador
+  con A 551 / B 72 / C 5 / D 2.760 en los dos lados. Pega la salida antes y
+  despues.
+  (2.3) CASO ROJO POR MUTACION, y no vale una que no muerda: copia
+  SALIDA_V105_MARCADOR_CIERRE.txt cambiando A 551 por otra cifra y comprueba
+  que la celda tallada CAMBIA con ella (o que la comparacion contra el
+  reporte salta). Una guarda que da lo mismo con el fichero adulterado no
+  esta contando.
+  (2.4) LA CELDA DE HEAD SE TALLA, NO SE TECLEA. El tallador ya lee
+  SALIDA_V<N>_HEAD_APERTURA.txt; que lea tambien SALIDA_V<N>_HEAD_CIERRE.txt
+  y publique el HEAD del cierre desde ahi, con fallo declarado si el fichero
+  falta. Ese es el remedio de la caida 1.1 y por eso va aqui y no en la
+  TAREA 1.
+  (2.5) Y LA CABECERA DE TU REPORTE DE ESTA VUELTA SALE DE ESTE TALLADOR. Si
+  al cierre sigue en rojo, NO CIERRES LA VUELTA.
+
+- TAREA 3, BLOQUEANTE, EL ENSANCHE A LAS ORACIONES SIGUIENTES. Es el cuarto
+  tramo del mismo arreglo y lo cubre la misma letra del 29 ago que cubrio el
+  griton y el agujero de la oracion.
+  (3.1) LA REGLA QUE PIDO, y es la extension natural de la que ya
+  implementaste: si la oracion de la palabra no trae cita, se sigue
+  avanzando por las oraciones del parrafo HASTA LA PRIMERA QUE TRAIGA PALABRA
+  DE VEREDICTO PROPIA, y se para ahi. Eso deja la D intacta (su oracion
+  siguiente trae veredicto propio, asi que el avance se detiene antes de
+  llegar a la cita) y hace saltar la E. Si eliges otro patron, escribe en el
+  docstring por que, y mide.
+  (3.2) EL CASO A BATIR TE LO DEJO MEDIDO Y NO HAY QUE INVENTARLO:
+  docs/loop/_auditor_v105_mut_E.md, tal cual esta, DESPUES DEL ARREGLO TIENE
+  QUE DAR ROJO EXIT 1. Pega la salida antes y despues.
+  (3.3) Y LAS QUE NO PUEDEN MOVERSE, las cinco: _auditor_v104_mut_A.md,
+  _B.md y _C.md siguen dando ROJO EXIT 1; _auditor_v105_mut_F.md sigue dando
+  ROJO EXIT 1; y _auditor_v105_mut_D.md SIGUE DANDO VERDE EXIT 0, que no es
+  un descuido sino la condicion que impide que vuelvan los seis falsos.
+  Correlas las cinco y pegalas.
+  (3.4) Y EL GRITON NO PUEDE VOLVER: el REPORTE.md de la vuelta 102
+  (git show f253842b:docs/loop/REPORTE.md) TIENE QUE SEGUIR DANDO VERDE EXIT
+  0. Los siete casos van en la misma corrida.
+  (3.5) LA COBERTURA SE VUELVE A PUBLICAR CON EL PATRON NUEVO, sobre el 102,
+  el 104, el 105 y el tuyo. Si sube, dilo con la cifra; si baja, tambien.
+  (3.6) CORRELA AL CIERRE DE LA VUELTA junto con las otras guardas, despues
+  de tu ultima edicion.
+
+- TAREA 4, LA PREGUNTA DE TRES VIAS SOBRE LOS TRAMOS 3 Y 4, QUE CIERRA LA
+  BOLSA ENTERA. Es la relectura al doble que dispara la caida de reporte por
+  la letra afinada del 27 ago, y por quinta vez seguida no puede ir por donde
+  ya se fue: ni extremos (102), ni centro (103), ni la especie del 28 (104),
+  ni los 41 de los tramos 1 y 2 (105).
+  (4.1) EL LOTE, contado por mi hoy y no de memoria
+  (docs/loop/_auditor_v105_censo_relecturas.txt): de las 74 RESUELTA vivas,
+  28 estan en los tramos 3 y 4 (19 en el 3, 9 en el 4), y 26 de esas 28 no
+  tienen ni correccion ni nota de relectura. Los 19 del tramo 3 son 101, 102,
+  106, 107, 108, 109, 111, 114, 116, 123, 127, 128, 129, 130, 132, 134, 145,
+  mas el 147 y el 148, que ya traen correccion_v99; los 9 del tramo 4 son
+  153, 154, 156, 158, 169, 177, 179, 180 y 182. RECUENTA TU EL LOTE ANTES DE
+  CORRERLO y declara la cifra que te salga a ti: si difiere de la mia, la
+  discrepancia se declara, no se resuelve copiando.
+  (4.2) LA GUARDA DEL PASO MAL CASADO CORRE PRIMERO, la misma de tu 4.1 de la
+  105, sobre los cuatro tramos. El 147 tiene que saltar por ella igual que
+  salto el 46, y su salto tiene que quedar escrito.
+  (4.3) DESPUES LA PREGUNTA DE TRES RESPUESTAS, la misma que ya usaste:
+  OBJETO (objeto del imperativo), SATELITE (nombrado en complemento
+  preposicional de origen, destino o instrumental) y NO_OBJETO (ejemplo,
+  condicion o subordinada). Una linea por par con el verbo y el objeto
+  citados literalmente, como en la 105, que es lo que me deja cotejarlos sin
+  abrir el nodo. Y ANOTA LA DISTINCION QUE TU MISMO APLICASTE Y QUE ME TIRO
+  ABAJO TRES CANDIDATOS: un complemento que vive DENTRO del objeto directo
+  (complemento del nombre) no es un satelite; solo lo es el que gobierna al
+  hijo desde FUERA del objeto.
+  (4.4) Y LAS QUE SALGAN SATELITE VAN A LECTURA ENTERA, a ciegas, con las dos
+  patas del 9.6.2 mas el 9.6.3. Y SATELITE SIGUE SIN SER SINONIMO DE QUE SE
+  MUEVA: el 87 y el 91 de la vuelta pasada lo demuestran. Lo que exijo es que
+  cada satelite pase por la lectura, no que se mueva. Las que se muevan van
+  con correccion_v106 declarada, sin borrar el texto viejo, y RECOMPUTAS con
+  scripts/loop/contar_cierre_efectivo.py en los tres sitios aditivos. Si no
+  se mueve ninguna, lo dices con la cifra y ya esta: no fuerces hallazgos.
+  (4.5) Y CUANDO ACABES, DILO CON LA CIFRA QUE LO CIERRA: cuantas de las
+  RESUELTA vivas de OP-E-03 han pasado ya por la pregunta de tres vias. Si mi
+  cuenta es buena, al terminar esta tarea son TODAS, y eso es un cierre de
+  verdad y no otra muestra. Si no lo son, di cuantas faltan y donde.
+  (4.6) EL LOTE ENTERO CABE BAJO EL DOBLE DEL AUSTERO. Si no cabe con sus
+  guardas completas, lo unico que puedes partir es la lectura entera de la
+  4.4: haz las del tramo 3 y deja las del tramo 4 para la vuelta siguiente,
+  diciendolo con la cifra de lo que si hiciste.
 
 - EL ORDEN DE EJECUCION LO ELIGES TU, EL DE ENTREGA NO. Lo unico que va fijo
-  es el sellado de la apertura, que es antes de todo, y la TAREA 1, que es
-  bloqueante y decide si la vuelta cierra.
+  es el sellado de la apertura, que es antes de todo, y las TAREAS 2 y 3, que
+  son bloqueantes y deciden si la vuelta cierra.
 
 - LO QUE NO SE TOCA. La deriva de contenido (26 nodos de 140, 32 pares de 87,
   acta 92 seccion 4.4), los siete nodos con guion, el bloque repetido de
@@ -276,9 +258,10 @@ no aguantan el peso.
   EXACTO duplicado" y esos dos titulos no son exactos.
 
 - LO QUE NO SE ABRE. No se toca el campo estado, que sigue sin voto por el
-  acta 100 seccion 4.2. No se abre la fase 05 ni la 06. No se mueve ninguna
-  operacion de fase. No se escribe ni se retira una sola arista: las TAREAS 3
-  y 4 son juicio y registro, no cirugia, igual que OP-E-03.
+  acta 100 seccion 4.2 (lo volvi a medir hoy: LISTA 70, HECHA 1, y en la fase
+  04 una HECHA y seis LISTAS). No se abre la fase 05 ni la 06. No se mueve
+  ninguna operacion de fase. No se escribe ni se retira una sola arista: la
+  TAREA 4 es juicio y registro, no cirugia, igual que OP-E-03.
 
 - LA NOTA DE HIGIENE DE SIEMPRE, y sigue midiendose igual: git status trae M
   en dataset/metadata/master_graph.json desde antes de que nadie toque nada, y

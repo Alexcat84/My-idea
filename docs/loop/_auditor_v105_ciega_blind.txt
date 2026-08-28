@@ -1,0 +1,155 @@
+MODO BLIND . 7 pares
+
+================================================================================================
+PUESTO 20 (TRAMO1)  paso_casado=3  clase_registrada=D
+--- MADRE: waterfall_vs_agile_development
+    titulo: Waterfall Development vs Agile Development
+    entregable: Una decisión documentada sobre la metodología de desarrollo de producto a utilizar.
+    resumen: Waterfall Development es un proceso de ingeniería lineal y secuencial por etapas, donde todo el producto y sus características se especifican por adelantado y cada etapa se asigna a un equipo separado para mayor control. Es la antítesis del Agile Development, que es iterativo y flexible. Entender esta distinción es clave para elegir el enfoque de desarrollo de producto adecuado para un startup en búsqueda de su modelo de negocio.
+    PASOS:
+        1) Evaluar si el contexto del proyecto requiere certeza total de requisitos (waterfall) o iteración (agile).
+        2) Para startups en fase de búsqueda, preferir metodologías ágiles que permitan pivotar.
+      >>3) Alinear el proceso de desarrollo de producto con el proceso de Customer Development.
+--- HIJO: modelo_customer_development
+    titulo: Modelo de Customer Development (4 Pasos)
+    entregable: Diagrama de flujo del proceso de Customer Development con indicación clara del paso actual y evidencia de aprendizaje acumulado
+    resumen: Marco metodológico que organiza las actividades relacionadas con el cliente en una startup en cuatro pasos iterativos: Customer Discovery, Customer Validation, Customer Creation y Company-Building. Los dos primeros pasos constituyen la 'búsqueda' del modelo de negocio, mientras que los dos últimos son la 'ejecución' del modelo ya validado. A diferencia de los planes de producto tradicionales lineales, este modelo es cíclico y acepta retrocesos como parte natural del aprendizaje.
+    PASOS:
+      1) Identificar en qué paso del proceso se encuentra la startup actualmente
+      2) Formular hipótesis de negocio antes de iniciar cualquier paso
+      3) Diseñar experimentos para testear cada hipótesis fuera del edificio
+      4) Evaluar en cada 'stop sign' si se alcanzó 'velocidad de escape' antes de avanzar
+      5) Estar dispuesto a retroceder a pasos anteriores si el aprendizaje lo indica
+
+================================================================================================
+PUESTO 21 (TRAMO1)  paso_casado=1  clase_registrada=D
+--- MADRE: build_measure_learn
+    titulo: Ciclo Build-Measure-Learn (Lean Startup)
+    entregable: Un ciclo completo documentado de Build-Measure-Learn con hipótesis, artefacto de prueba, métricas y aprendizajes registrados
+    resumen: Ciclo iterativo de Eric Ries que elimina el desperdicio del desarrollo de producto mediante construcción, medición y aprendizaje continuos. Se parte de una hipótesis (paso 0), se diseña/construye un artefacto para testearla (prototipo o MVP), se mide su desempeño, y se analizan los resultados para derivar aprendizajes y decidir el siguiente paso.
+    PASOS:
+      >>1) Paso 0: Generar una hipótesis clara a partir de los Canvas de Value Proposition y Business Model
+        2) Paso 1: Diseñar/construir un artefacto (prototipo conceptual, experimento o MVP) para testear la hipótesis
+        3) Paso 2: Medir el desempeño del artefacto
+        4) Paso 3: Aprender comparando lo esperado vs lo ocurrido y definir qué cambiar
+--- HIJO: value_proposition_canvas
+    titulo: Value Proposition Canvas
+    entregable: Canvas completo con Customer Profile y Value Map mapeados para un segmento específico
+    resumen: Herramienta con dos lados: el Perfil del Cliente (Customer Profile) que clarifica el entendimiento del cliente, y el Mapa de Valor (Value Map) que describe cómo se pretende crear valor para ese cliente. Se logra Fit (encaje) cuando el mapa de valor satisface el perfil del cliente. Es un plug-in que hace zoom en dos bloques del Business Model Canvas: Segmentos de Clientes y Propuesta de Valor.
+    PASOS:
+      1) Descargar el template del Value Proposition Canvas
+      2) Dibujar el círculo del Customer Profile a la derecha, especificando en él los jobs, pains y gains del cliente
+      3) Dibujar el cuadrado del Value Map a la izquierda, documentando en él cómo tu producto/servicio alivia pains y crea gains
+      4) Trabajar ambos lados iterativamente hasta encontrar Fit
+      5) Comunicar ambos documentos a toda la organización para crear entendimiento compartido.
+      6) Usar los documentos como scoreboard durante conversaciones reales con clientes.
+
+================================================================================================
+PUESTO 38 (TRAMO1)  paso_casado=4  clase_registrada=D
+--- MADRE: obtencion_compromiso
+    titulo: Cómo lograr un compromiso (más allá del cierre de venta tradicional)
+    entregable: Una lista clara de qué cuenta como avance válido en cada etapa de tu proceso de venta
+    resumen: Cuando vendes algo grande, casi nunca consigues el compromiso final con un pedido directo. Lo normal es lograr un avance (Advance) hacia la decisión, como conseguir una demostración o pasar al siguiente nivel de decisión. La investigación de Huthwaite muestra que las técnicas de cierre clásicas (cierre asumido, alternativo, de última oportunidad, etc.) no aumentan tu éxito en ventas grandes y hasta pueden perjudicarlo, al contrario de lo que suele creerse sobre que 'cerrar más' siempre es mejor.
+    PASOS:
+        1) Define para cada llamada un objetivo de avance realista en vez de buscar el cierre inmediato
+        2) Evita las técnicas de cierre de presión (cierre asumido, alternativo, última oportunidad) cuando la venta es compleja
+        3) Mide el éxito de tus llamadas por los avances que logras, no solo por los pedidos que cierras
+      >>4) Pon tu esfuerzo de mejora en las etapas de investigación y demostración de capacidad, no en el cierre
+--- HIJO: enfoque_etapa_investigacion
+    titulo: Priorizar la Etapa de Investigación sobre Demostración de Capacidad
+    entregable: Una checklist de planificación de llamada de ventas centrada en preguntas de investigación, con métricas de tiempo dedicado a cada etapa del call.
+    resumen: Un error común de los vendedores es planificar la llamada pensando en qué van a decir sobre su producto, en lugar de qué van a preguntar. Sin embargo, la investigación de Huthwaite muestra que la habilidad clave en la venta grande está en la etapa de Investigación: si el vendedor logra desarrollar necesidades genuinas mediante preguntas SPIN, las etapas de Demostración de Capacidad y Obtención de Compromiso fluyen naturalmente. Enfocar el esfuerzo de preparación y práctica en las preguntas, no en el discurso de venta, es la estrategia de mayor impacto.
+    PASOS:
+      1) Al planificar una llamada, dedica más tiempo a diseñar preguntas que a preparar el discurso de producto.
+      2) Evita mostrar beneficios o capacidades hasta haber desarrollado suficientemente el problema y su implicación.
+      3) Evalúa tus llamadas pasadas: ¿cuánto tiempo hablaste de tu producto en la primera mitad? Si es mucho, ajusta tu enfoque.
+      4) Entrena primero en preguntas de Situación y Problema antes de avanzar a Implicación y Necesidad-beneficio.
+      5) Usa las respuestas del cliente para desarrollar y ampliar la percepción de sus propias necesidades
+      6) Practica escuchar de verdad para detectar problemas que el cliente no dice de manera directa
+
+================================================================================================
+PUESTO 66 (TRAMO2)  paso_casado=3  clase_registrada=D
+--- MADRE: cultura_justa_3
+    titulo: Cultura Justa (Just Culture) y segundas víctimas
+    entregable: Política de cultura justa documentada, incluyendo protocolos de apoyo a segundas víctimas y criterios de accountability
+    resumen: La seguridad está ligada a la rendición de cuentas, el aprendizaje y la justicia organizacional. Crear una 'cultura justa' es difícil pero necesario: implica equilibrar accountability y aprendizaje sin desincentivar que las personas compartan honestamente sus preocupaciones de seguridad. Incluye atención a las 'segundas víctimas': practicantes involucrados en incidentes que se sienten personalmente responsables por daños a otros, y cuya resiliencia individual está ligada a la resiliencia organizacional.
+    PASOS:
+        1) Diseñar políticas de reporte de incidentes que no penalicen la honestidad
+        2) Establecer procesos de apoyo psicológico y profesional para 'segundas víctimas'
+      >>3) Balancear la necesidad de accountability con la protección al aprendizaje organizacional
+        4) Definir criterios claros y consensuados de qué constituye una conducta sancionable vs. un error del sistema
+--- HIJO: cultura_de_aprendizaje
+    titulo: Cultura de Aprendizaje Organizacional
+    entregable: Proceso institucionalizado de revisión y aplicación de lecciones aprendidas con evidencia de reformas implementadas
+    resumen: Una cultura de aprendizaje es la voluntad y competencia de una organización para extraer las conclusiones correctas de su sistema de información de seguridad, y la disposición a implementar reformas importantes cuando se indica su necesidad. Es el subcomponente final que cierra el ciclo de la cultura de seguridad, transformando la información recolectada en acciones concretas de mejora del sistema.
+    PASOS:
+      1) Establecer mecanismos formales de análisis de datos del sistema de reporte de seguridad, incluida una forma sistematica de observar incidentes y condiciones de riesgo, y momentos regulares para analizar y diagnosticar
+      2) Definir procesos de decisión para implementar reformas basadas en hallazgos, comprometiendo tu tiempo y tus recursos explícitamente para IMPLEMENTAR las mejoras encontradas, no solo hablar de ellas
+      3) Medir la efectividad de las reformas implementadas mediante seguimiento continuo
+      4) Institucionalizar la revisión periódica de lecciones aprendidas
+
+================================================================================================
+PUESTO 87 (TRAMO2)  paso_casado=2  clase_registrada=D
+--- MADRE: emprendedor_como_puesto_de_trabajo
+    titulo: El Emprendedor como Título de Trabajo Formal
+    entregable: Una manera clara de reconocer el rol de emprendedor dentro de tu negocio, con su propia forma de medir resultados y su propio camino de crecimiento.
+    resumen: Si quieres retener a las personas más innovadoras que trabajan contigo, el emprendimiento dentro de tu negocio tiene que ser un camino profesional real, no un paso pasajero antes de volver a un puesto tradicional. Si lideras con la metodología Lean Startup, mide ese trabajo con la contabilidad de innovación, no con métricas de rendimiento comunes, y dale a esa persona el título formal de Emprendedor, para que pueda seguir incubando ideas nuevas después de lograr que un producto crezca con éxito.
+    PASOS:
+        1) Crea un puesto real de Emprendedor Interno dentro de tu equipo o negocio.
+      >>2) Evalúa ese trabajo con la contabilidad de innovación, no con las métricas tradicionales de un puesto operativo.
+        3) Cuando el producto haya crecido con éxito, deja que esa persona entrene a un nuevo equipo y vuelva a incubar una idea nueva.
+        4) Amplía poco a poco el espacio de experimentación (sandbox) a medida que el equipo demuestre resultados, en lugar de sacarlo de golpe.
+--- HIJO: contabilidad_innovacion_pivote
+    titulo: Contabilidad de Innovación aplicada a Pivotes
+    entregable: Un reporte de métricas accionables con predicciones cuantitativas explícitas por cada hipótesis de salto de fe
+    resumen: El 95% del trabajo real en una startup no es la idea inicial sino el trabajo diario medido por la contabilidad de innovación: decisiones de priorización de producto, elección de clientes, y someter la visión a pruebas constantes. Esta disciplina permite tomar decisiones informadas sobre pivotar o perseverar en lugar de basarse en historias mitificadas del éxito.
+    PASOS:
+      1) Documentar de forma explícita las hipótesis de salto de fe (leaps of faith) al inicio del proyecto
+      2) Medir métricas accionables (registro, activación, retención, referencia) en cada iteración
+      3) Comparar resultados actuales contra predicciones cuantitativas hechas previamente
+      4) Evitar declarar éxito retroactivamente basándose en métricas de vanidad
+
+================================================================================================
+PUESTO 91 (TRAMO2)  paso_casado=2  clase_registrada=D
+--- MADRE: gestion_de_portafolio_gates_go_kill
+    titulo: Gestión de Portafolio y Decisiones Go/Kill
+    entregable: Un sistema de portafolio con gates definidos, criterios de evaluación documentados y decisiones explícitas de continuidad o cancelación de proyectos
+    resumen: Las empresas exitosas hacen menos proyectos, pero mejores y con la mezcla adecuada, mediante un sistema sistemático de gestión de portafolio y puntos de decisión Go/Kill rigurosos ('gates con dientes'). La falta de criterios claros y la reticencia a matar proyectos débiles genera dispersión de recursos y baja calidad de ejecución en todos los proyectos. Se recomiendan seis criterios de evaluación: alineación estratégica, ventaja competitiva del producto, atractivo de mercado, apalancamiento de competencias core, viabilidad técnica, y riesgo/retorno financiero.
+    PASOS:
+        1) Diseñar un proceso de embudo (funnel) que vaya descartando proyectos débiles progresivamente
+      >>2) Establecer gates o puntos de decisión formales con criterios visibles de Go/Kill
+        3) Evaluar cada proyecto con los seis criterios: estratégico, ventaja competitiva, atractivo de mercado, apalancamiento, factibilidad técnica, riesgo/retorno
+        4) Tomar decisiones firmes de matar proyectos de bajo valor en lugar de reducirles recursos gradualmente
+        5) Revisar el balance y mezcla de proyectos del portafolio completo, no solo proyecto por proyecto
+--- HIJO: tipos_criterios_gate
+    titulo: Tipos de Criterios de Decisión en Gates (Must-meet, Go/Kill, Should-meet)
+    entregable: Un set documentado de criterios must-meet, go/kill y should-meet (scorecard) por cada gate del proceso.
+    resumen: Los criterios de gate se dividen en tres categorías que no deben mezclarse: Must-meet (preguntas de sí/no tipo checklist, eliminatorias, ej. alineación estratégica o ética), Go/Kill (criterios cuantitativos con umbral mínimo, ej. NPV positivo, IRR>30%, Payback<3 años), y Should-meet (criterios deseables usados para priorización relativa, evaluados en formato scorecard, ej. atractivo de mercado, ventaja competitiva). Estos criterios deben mantenerse consistentes de gate a gate cuando sea posible, aunque las subpreguntas financieras se vuelven más específicas en etapas avanzadas.
+    PASOS:
+      1) Definir una lista de preguntas must-meet tipo checklist para las primeras etapas (eliminatorias).
+      2) Definir umbrales financieros mínimos (NPV, IRR, Payback) para criterios Go/Kill en etapas avanzadas.
+      3) Usar un scorecard para las preguntas should-meet que evalúan atractivo relativo del proyecto.
+      4) Mantener los mismos factores principales del scorecard consistentes entre gates, ajustando solo las subpreguntas según la etapa.
+      5) Adaptar los criterios según el tipo de proyecto (mayor innovación, renovación, sales-force request, o desarrollo tecnológico).
+
+================================================================================================
+PUESTO 93 (TRAMO2)  paso_casado=3  clase_registrada=D
+--- MADRE: estandares_voluntarios
+    titulo: Estándares Voluntarios vs Regulaciones Obligatorias
+    entregable: Documento de estándar de industria desarrollado por consenso, con especificaciones operacionales claras.
+    resumen: Existe una diferencia esencial entre una regulación gubernamental (con penalidades legales por incumplimiento) y un estándar voluntario de industria (acordado por consenso, sin obligación legal). Los estándares voluntarios permiten mayor flexibilidad, reducen la necesidad de regulación gubernamental excesiva, y facilitan la interoperabilidad industrial (ej. voltajes, tamaños de piezas, roscas). Sin estándares voluntarios adecuados, los gobiernos terminan imponiendo regulaciones más rígidas y costosas para llenar el vacío.
+    PASOS:
+        1) Evaluar si el área en cuestión requiere regulación obligatoria o puede resolverse con consenso industrial.
+        2) Formar comités técnicos de industria para desarrollar estándares por acuerdo mutuo.
+      >>3) Documentar el estándar con definiciones operacionales claras y medibles.
+        4) Promover la adopción voluntaria del estándar entre empresas del sector.
+        5) Monitorear si la falta de estándares voluntarios está generando presión para regulación gubernamental.
+--- HIJO: definiciones_operacionales_de_calidad
+    titulo: Definiciones Operacionales de Calidad
+    entregable: Documento de definiciones operacionales acordadas entre proveedor y cliente, con métricas y cartas de control asociadas
+    resumen: Muchas disputas entre proveedor y cliente surgen porque ambas partes no tienen una definición clara y medible de lo que constituye 'calidad aceptable' para un producto o característica. El caso del fabricante de forros de freno muestra que, tras años de conflictos, desarrollar definiciones operacionales conjuntas (medibles mediante cartas de control) eliminó las disputas y alineó expectativas.
+    PASOS:
+      1) Identificar todas las características críticas de calidad del producto según el cliente
+      2) Trabajar conjuntamente cliente-proveedor para traducir requisitos subjetivos en métricas medibles
+      3) Establecer cartas de control (X-barra y R) para cada característica clave
+      4) Compartir los resultados de las cartas de control con el cliente de forma continua
