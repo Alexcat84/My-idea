@@ -21,8 +21,14 @@ QUE MIDE. Cruza dos fuentes:
   - los seis ficheros de `FICHEROS_VEREDICTO` (reusados de
     `verificar_cobertura_bolsa_tres_vias.py`), que dan el veredicto de la
     pregunta de tres vias (OBJETO / SATELITE / NO_OBJETO) puesto por puesto,
-    el MAS VIEJO si un puesto aparece en mas de un fichero (mismo orden que
-    `verificar_vuelco_de_veredicto.py`).
+    el MAS NUEVO si un puesto aparece en mas de un fichero (mismo orden que
+    `verificar_vuelco_de_veredicto.py`, que fija `apariciones[-1]` como el
+    veredicto de HOY). CORREGIDO en la vuelta 112 (acta de la vuelta 111,
+    4.1 "CAIDA DE EXPEDIENTE"): esta cabecera decia lo CONTRARIO de lo que
+    el codigo siempre hizo. El codigo esta y estaba bien: tomar el MAS VIEJO
+    da 70 OBJETO / 4 SATELITE, y ese fue el error de la PRIMERA VERSION de
+    este censo (ver `veredicto_de_hoy_por_puesto` mas abajo); tomar el MAS
+    NUEVO da 72 / 2, que es lo unico que calza con la cifra publicada.
 
 Publica, por cada uno de los dos grupos (RESUELTA, NO RESUELTA): n del
 grupo, y cuantos traen OBJETO, SATELITE, NO_OBJETO o SIN VEREDICTO. Los

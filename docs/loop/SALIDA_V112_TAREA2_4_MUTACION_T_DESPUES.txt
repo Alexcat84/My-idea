@@ -1,0 +1,13 @@
+EXCLUSIONES (6), letra del encargo 'no se esconden':
+   linea 3, motivo 'ANTES de la 1.a operacion': Apertura sellada `29aeb819` (`docs/loop/SALIDA_V111_HEAD_APERTURA.txt`, ANTES de la 1.a operacion), `verificar_apertura_sellada.py --vuelta 111` VERDE EXIT 0 en la apertura y re-corrida al cierre sin cambio (`docs/loop/SALIDA_V111_GUARDAS_CIERRE_MUTACIONES.txt`).
+   linea 7, motivo 'antes de la 1.a operacion': | | **apertura**, antes de la 1.a operacion | **cierre, RECOMPUTADO al cierre** |
+   linea 18, motivo 'antes de la 1.a operacion': | identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `29aeb819` (asunto real leido de git log: 'ACTA DE LA VUELTA 110 DEL AUDITOR, mas el encargo de la 111.'), HEAD real de apertura `29aeb819` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `4b199d6c` (leido de `SALIDA_V111_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+   linea 24, motivo 'antes de leer': **TAREA 3, BLOQUEANTE: los cinco SATELITE releidos.** Recuento propio antes de leer: 109 NO RESUELTA, 5 con pregunta de tres vias (20, 21, 38, 66, 93), los cinco SATELITE, VERDE contra la nomina del encargo (`docs/loop/SALIDA_V111_TAREA3_1_CENSO.txt`).
+   linea 24, motivo 'antes de decidir': Los cinco leidos enteros HOY contra el grafo, con contra-caso escrito antes de decidir por cada uno (`docs/loop/SALIDA_V111_TAREA3_2_4_RELECTURA.md`): en los cinco, la DIRECCION (NO RESUELTA) ya estaba decidida por `correccion_v105` sobre una razon de 9.6.2 independiente del veredicto SATELITE (3.3 del encargo); los cinco SIGUEN SATELITE.
+   linea 26, motivo 'antes de correr': Desde esta vuelta, toda vara sobre este expediente declara su techo antes de correrse.
+
+ORACIONES QUE CUMPLEN LA VARA (1):
+   linea 22, 1/1 citas (docs/loop/SALIDA_V111_TAREA2_5_MUTACION_DESPUES.txt): Mutacion: quitar una cita a la oracion del caso N la pasa de OK a hallazgo, ROJO EXIT 1 (`docs/loop/SALIDA_V111_TAREA2_5_MUTACION_DESPUES.txt`).
+
+VERDE: ninguna oracion marcada incumple la vara.
+EXIT=0

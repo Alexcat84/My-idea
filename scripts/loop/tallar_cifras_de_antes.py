@@ -81,6 +81,55 @@ docs/loop/SALIDA_V111_TAREA2_5_MUTACION_ANTES.txt y
 docs/loop/SALIDA_V111_TAREA2_5_MUTACION_DESPUES.txt): sobre una copia del
 reporte 110 a la que se le quita, a la oracion del caso N, una de sus dos
 citas, la oracion tiene que pasar de NO nombrada a NOMBRADA, ROJO EXIT 1.
+
+--- TAREA 2 de la vuelta 112 (acta de la vuelta 111, 4.2 "LA CAIDA GRANDE ES
+DE GUARDA QUE NO ALCANZA") ---
+
+POR QUE NACE, CON EL EJEMPLAR DELANTE. Este instrumento resolvia CADA cita
+con `os.path.join(LOOP, nombre)`, sin aceptar la forma `carpeta/NOMBRE.md`
+que el propio docstring de arriba ya prometia. Esa es la forma que usan
+TODAS Y CADA UNA de las citas del reporte de la vuelta 111
+(`docs/loop/SALIDA_V111_...txt`): la ruta se resolvia a
+`docs/loop/docs/loop/SALIDA_...`, nunca existe, y la cita se descartaba EN
+SILENCIO. El hermano mayor `tallar_veredictos_reporte.py` resuelve bien
+contra RAIZ y por eso si encontraba esos mismos ficheros: el VERDE de este
+instrumento sobre el reporte de la vuelta 111 era VACUO (cero oraciones
+marcadas, cero citas evaluadas).
+
+(2.1) `resolver_cita()` ahora acepta LAS DOS FORMAS, copiando la mecanica
+del hermano `tallar_veredictos_reporte.py:resolver_cita`: un nombre pelado
+(`SALIDA_...txt`) se resuelve contra `docs/loop/`; una ruta que ya trae el
+prefijo (`docs/loop/SALIDA_...txt`) se deja tal cual. LOS DOS TALLADORES
+RESUELVEN IGUAL desde esta vuelta.
+
+MUTACION S (2.3 del encargo, salidas commiteadas en
+docs/loop/SALIDA_V112_TAREA2_3_MUTACION_S_ANTES.txt y
+docs/loop/SALIDA_V112_TAREA2_3_MUTACION_S_DESPUES.txt), sobre
+`docs/loop/_auditor_v111_mut/sonda_backticks.md` (la sonda del auditor): la
+misma oracion, con el mismo fichero citado con el nombre pelado y con la
+ruta `docs/loop/` delante. ANTES del arreglo: ROJO, la linea 4 (la de la
+ruta con prefijo) sale en "0/1 citas ()" siendo la cita real y existente.
+DESPUES: VERDE, las lineas 3 y 4 contadas IGUAL (1/1 cada una).
+
+(2.2) LA LISTA DE MARCAS SE AMPLIA, con el presente y el perfecto de los
+mismos verbos que ya traia: "pasa de", "queda en", "quedo en", "daba",
+"dio". LA AMPLIA EL AUDITOR POR ENCARGO (acta de la vuelta 111, 4.4): la
+letra vieja de este docstring, "es la lista literal del encargo, no se
+amplia sin decision del fundador", era de un antecesor y quedo corregida en
+esa acta, seccion 4.4 -- la lista la habia cerrado un ENCARGO DEL AUDITOR
+(vuelta 110), no una decision del fundador, asi que ampliarla es tambien
+del auditor.
+
+MUTACION T (2.4 del encargo, salidas commiteadas en
+docs/loop/SALIDA_V112_TAREA2_4_MUTACION_T_ANTES.txt y
+docs/loop/SALIDA_V112_TAREA2_4_MUTACION_T_DESPUES.txt), sobre el reporte de
+la vuelta 111 tal como quedo commiteado (`git show 9aea9f43:docs/loop/
+REPORTE.md`): ANTES del arreglo, VERDE VACUO (cero oraciones marcadas: "pasa
+de" no estaba en la lista). DESPUES, MARCA la oracion de la TAREA 2.5 ("la
+pasa de OK a hallazgo, ROJO EXIT 1
+(`docs/loop/SALIDA_V111_TAREA2_5_MUTACION_DESPUES.txt`)") y la evalua con la
+cita ya bien resuelta. EL REPORTE DE LA 111 NO SE REESCRIBE: es historia; lo
+que cambia es la MEDICION sobre el, y se publica tal cual sale.
 """
 import argparse
 import glob
@@ -94,6 +143,7 @@ LOOP = os.path.join(RAIZ, "docs", "loop")
 MARCAS = [
     "antes", "previamente", "hoy da", "ya era", "era",
     "sin el arreglo", "pasaba de", "quedaba en",
+    "pasa de", "queda en", "quedo en", "daba", "dio",
 ]
 
 EXCLUSIONES_ORDEN = [
@@ -117,6 +167,22 @@ _RE_EXCLUSIONES = re.compile(r"(" + "|".join(re.escape(e) for e in
 _RE_INDICIO = re.compile(r"\b(" + "|".join(re.escape(i) for i in INDICIOS_DEL_OTRO_LADO) + r")\b",
                          re.IGNORECASE)
 _RE_CITA = re.compile(r"`([^`]+\.(?:txt|md))`")
+
+
+def resolver_cita(nombre):
+    """(2.1, vuelta 112) Devuelve la ruta relativa a RAIZ para NOMBRE,
+    aceptando las DOS formas que el docstring de este modulo ya prometia: el
+    nombre pelado (SALIDA_...txt, resuelto contra docs/loop/) y la ruta ya
+    relativa a la raiz (docs/loop/SALIDA_...txt, dejada tal cual). Antes de
+    esta vuelta el codigo hacia SIEMPRE os.path.join(LOOP, nombre), asi que
+    una cita con el prefijo se resolvia a docs/loop/docs/loop/SALIDA_...,
+    que nunca existe: TODAS las citas del reporte de la vuelta 111 usaban esa
+    forma y se descartaban en silencio (acta de la vuelta 111, 4.2). Mismo
+    mecanismo que el hermano tallar_veredictos_reporte.py:resolver_cita: los
+    dos talladores resuelven igual."""
+    if nombre.startswith("docs/loop/"):
+        return nombre
+    return "docs/loop/%s" % nombre
 
 
 def _normalizar(texto):
@@ -166,7 +232,7 @@ def clasificar(oracion):
     citas = []
     for m in _RE_CITA.finditer(oracion):
         nombre = m.group(1)
-        ruta = os.path.join(LOOP, nombre)
+        ruta = os.path.join(RAIZ, resolver_cita(nombre))
         if os.path.exists(ruta) and nombre not in citas:
             citas.append(nombre)
 

@@ -1,0 +1,63 @@
+BARRIDO 2.7: todos los scripts de scripts/loop/ que resuelven CITAS de texto
+libre (backticks) o RUTAS FIJAS de docs/loop, contra que raiz resuelve cada
+uno, uno por uno, con su linea. Ninguno omitido de la lista.
+
+BUSQUEDA: grep de "RE_CITA", del patron de extension "txt|md" entre
+backticks, y de "LOOP = os.path.join(" en scripts/loop/*.py.
+
+--- FAMILIA QUE PARSEA CITAS DE TEXTO LIBRE (backticks en prosa, dos formas
+posibles: pelado o con docs/loop/ delante) ---
+
+1. tallar_cifras_de_antes.py, resolver_cita() linea 172: ANTES de esta
+   vuelta solo resolvia contra LOOP con os.path.join(LOOP, nombre), ciego a
+   la forma con prefijo (docs/loop/docs/loop/... nunca existe). CORREGIDO en
+   la TAREA 2.1 de esta vuelta: acepta las dos formas, resuelve contra RAIZ.
+   Mutacion S como prueba.
+
+2. tallar_veredictos_reporte.py, resolver_cita() linea 314: YA aceptaba las
+   dos formas desde la vuelta 103 (1.1 de aquella vuelta), resuelve contra
+   RAIZ. Es EL HERMANO SANO que el encargo cita como modelo. Sin cambios.
+
+--- FAMILIA QUE RESUELVE NOMBRES FIJOS (construidos por codigo o listados
+como constante, SIEMPRE pelados: nunca parsean una cita de prosa con dos
+formas posibles, asi que la especie de boquete de 1 y 2 no puede darse) ---
+
+3. verificar_vuelco_de_veredicto.py linea 191: `os.path.join(LOOP, nombre)`,
+   nombre viene de FICHEROS_VEREDICTO (lista constante, siempre pelada). Sin
+   boquete: nunca recibe una ruta con prefijo.
+
+4. verificar_cobertura_bolsa_tres_vias.py linea 107: mismo mecanismo que 3,
+   misma lista FICHEROS_VEREDICTO. Sin boquete.
+
+5. censar_alcance_de_la_vara.py linea 78: reusa FICHEROS_VEREDICTO de 4 via
+   import. Sin boquete.
+
+6. tallar_cabecera_reporte.py, leer() linea 407 y leer_opcional() linea 545:
+   `os.path.join(LOOP, nombre)`, nombre siempre construido por codigo con
+   "SALIDA_V%d_..." (nunca parseado de una cita en prosa). Sin boquete.
+
+7. verificar_apertura_sellada.py linea 264 (y el glob de linea 198): nombre
+   viene de glob() sobre el propio LOOP (basename real del arbol de
+   trabajo), nunca de una cita en prosa. Sin boquete.
+
+8. tallar_perdidas_del_plan.py linea 143 y tallar_planes_del_tramo.py linea
+   209: rutas construidas con vuelta/tramo por codigo, nunca parseadas de
+   una cita. Sin boquete.
+
+--- FUERA DE ALCANCE, DECLARADO CON SU MOTIVO ---
+
+9. censo_de_plantillas_talladas.py linea 132: trae el mismo patron de
+   extension (txt|md) pero para CLASIFICAR tokens dentro de una plantilla
+   generica, no para resolver una cita contra docs/loop; su raiz es
+   --raiz (parametro de linea de comandos), no LOOP. No es de esta familia.
+
+10. Los RE_CITA de vuelta68_registrar_acta67.py a vuelta74_registrar_acta73.py
+    y sus _vNN_construir_registrador_acta.py: casan "lineas **N** a **M**"
+    (citas de NUMERO DE LINEA dentro de un acta), no nombres de fichero.
+    Instrumentos historicos de un solo uso (vueltas 68 a 74), cerrados, sin
+    relacion con esta familia.
+
+CONCLUSION: el UNICO boquete real de la especie (citas de prosa con dos
+formas posibles resueltas contra la raiz equivocada) vivia en el
+instrumento 1, ya corregido. Los instrumentos 3 a 8 no pueden tener ese
+boquete por construccion (nombre siempre pelado, nunca una cita libre).
