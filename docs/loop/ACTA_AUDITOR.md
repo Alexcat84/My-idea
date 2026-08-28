@@ -40042,3 +40042,283 @@ acta). Los diez `SALIDA_V114_*_APERTURA.txt` **quedan como pieza historica** y l
 suyos. El encargo de la vuelta 115 va en `docs/loop/PROMPT_SIGUIENTE.md`: **las siete tareas que la
 114 dejo sin hacer**, con el orden de entrega atado tramo a tramo para que una muerte de sesion
 cueste como mucho una tarea.
+
+# ACTA DE LA VUELTA 115 DEL AUDITOR (28 ago 2026, fecha LEIDA DE GIT, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** `grep -n '^# ACTA DE LA VUELTA' docs/loop/ACTA_AUDITOR.md`, corrido hoy,
+da como ultima la **114** (linea 39830); audito la **115**, la inmediatamente siguiente. Cubro una
+sola vuelta. Fecha de `git log --date=format:%Y-%m-%d` sobre `5b58a6c4..HEAD`, valor unico
+**2026-08-28**. `HEAD` auditado **e73b35a4**, rama `pasada-unica`, **ONCE** commits sobre el acta
+`5b58a6c4`, apertura sellada en `73b72787`, cierre sellado en `9420db0d` (sello en `277d9b0a`).
+
+**EL TOPE DE 60 LINEAS NO ME ATA** (`AUDITOR.md` 6.3 lo pone *"cuando no hay caidas ni discutibles
+fuera del marcado"*, y esta acta trae dos caidas del ejecutor, una mia y un hallazgo de orden que
+mueve trabajo). Punto 3 del austero: la verificacion va entera, lo que se recorta es su narracion.
+
+**EL VEREDICTO DE UNA LINEA: LA 115 ENTREGO ENTERA LO QUE LA 114 DEJO A MEDIAS Y CADA CIFRA QUE
+PUBLICA ES CIERTA, MEDIDA POR MI CON CODIGO PROPIO, INCLUIDAS LAS DOS QUE ENTRAN A `docs/plan/`.
+CERO de clase, CERO de cifra publicada. LO QUE COBRO SON DOS COSAS PEQUENAS Y UNA GRANDE QUE NO ES
+SUYA: un parentesis del reporte que atribuye a `T` un `EXIT 1` que su propio fichero no le atribuye;
+una capa de motivo que cubre veintidos de los veintiocho casos sin decir que no cubre los otros
+seis; y un HALLAZGO DE ORDEN, medido hoy, que puede desbloquear dos operaciones de la fase 04 antes
+de que la fase 06 llegue.**
+
+## 1. VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+
+**1.1 El grafo, contado por mi** (python propio sobre `dataset/metadata/master_graph.json`, clave
+real `nodos`, campo real `node_id`): censo **3.853 / 3.188 vivos / 665 deprecados**;
+`nodos_siguientes` **9.190**, `nodos_previos` **9.169**, suma **18.359**, union dirigida **9.813**,
+**auto-aristas 0**, **cero nodos con arista duplicada**. Calza al digito con la cabecera del reporte
+y con `SALIDA_V115_CONTEO_APERTURA.txt`. Bytes **8.391.653**, `sha256=f0e399396745`.
+
+**1.2 El ciclo de tres, corrido entero por mi.** `scripts/run_phase1.py` **GATE 0: OK** (titulo
+exacto duplicado 0, divergentes 0, auto-aristas 0, semillas deprecadas 0, **alcanzabilidad 100,0%
+(3188/3188 activos, semillas validas 85)**), `etiquetas_de_cara.py` **`--aplicar`** (71 etiquetas) y
+`sync_assets_web.py`. Despues del ciclo, `git diff` sobre `dataset/`, `web/` y `engine/`: **CERO
+lineas**. **Decimosexta vuelta seguida en verde.**
+
+**1.3 Las tres suites, corridas por mi.** motor `python engine/run_all_tests.py` **25/25, EXIT 0**;
+web `npx vitest run` **80 passed (80) / 1.030 passed, 3 skipped (1.033), EXIT 0**; `npx tsc
+--noEmit` **EXIT 0 y CERO lineas**.
+
+**1.4 Marcador, desfase, cierre efectivo y bolsa, remedidos con codigo propio.** Marcador sobre
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` con corte 3.388: **n 3.388, huecos 0, duplicados de puesto 0,
+pares duplicados 0, A 551 / B 72 / C 5 / D 2.760**, y las diez tasas por dominio (compras 0,6;
+core 22,5; entrega 1,2; environmental 16,5; exportacion 11,5; franquicias 10,1; health_safety 22,4;
+quality 14,1; risk_management 0,0; seguridad_digital 11,1). `vuelta85_medir_desfase_calibrado.py
+WORK`: **468 filas, 1 de desfase** (`ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`).
+`contar_cierre_efectivo.py`: **n=183, direccion 74 / 109 (59,6%), invertidas 2 (pares 16, 114)**.
+`verificar_cobertura_bolsa_tres_vias.py` **74 / 74 / 0**.
+
+**1.5 Sello, movimiento e higiene.** `verificar_apertura_sellada.py --vuelta 115` corrido por mi:
+**VERDE EXIT 0**, sus diez ficheros nacidos todos en `73b72787`, hijo directo de `5b58a6c4`, y mi
+salida **IDENTICA** a la commiteada en `SALIDA_V115_APERTURA_SELLADA.txt` (la observacion B.4 del
+acta 114 queda cerrada). **`git diff <c>^..<c> -- dataset/ web/ engine/` commit a commit sobre los
+ONCE: CERO lineas en los once**, y cero en el tramo entero. `docs/plan/` se toca **en un solo
+commit y en un solo fichero** (`95367a1f`, `04_ENLACES.md`, **27 anadidas y 0 borradas**);
+`OPERACIONES.jsonl` **no se toca** y sigue en **71 filas, LISTA 70 / HECHA 1**. **Guiones largos y
+medios en todo el diff: CERO.** `wc -l docs/loop/REPORTE.md` **34**, bajo el tope de 80. La `M` de
+`master_graph.json` sigue siendo final de linea: `git diff` sobre ese fichero, **cero lineas**.
+
+**1.6 EL TECHO Y LAS DOS MEDICIONES DE LA TAREA 3, REHECHOS CON CODIGO MIO.** Fase `04_ENLACES`
+**10 filas** (1 HECHA, 9 LISTAS), fase `05_SANEO` **10 filas** (10 LISTAS), `OP_E_01_DECIDIDAS.jsonl`
+**220 filas**, total **71**. `SALIDA_V115_TAREA3_0_TECHO.txt` es **IDENTICO** al de la 114. De las
+220 decididas: **98 ESCRITA / 122 NO SE ENLAZA**, y las **98 PRESENTES, CERO ausentes**, y ademas
+**las 98 calzan en LAS DOS vistas** (0 solo en `nodos_siguientes`, 0 solo en `nodos_previos`).
+Mi censo de la fase 04 y el de la fase 05 salen **identicos al digito** a los dos talladores del
+ejecutor, dependencia por dependencia, incluidos los nueve `depende_de` de `OP-S-12` y los
+`bloquea_a` de `OP-S-11` y `OP-S-12`.
+
+**1.7 LAS GUARDAS, RE-CORRIDAS POR MI.** `vuelta115_guardas_cierre.py` da **EXIT 0** y salida
+**IDENTICA BYTE A BYTE** a las 45 lineas commiteadas; las diez restantes del fichero son el
+INSTRUMENTO 1 corrido aparte, y **lo reproduje tambien byte a byte**. Veintiocho casos, nueve
+instrumentos. **Y NO ME CREI LA `Y`: la recontee con codigo mio** sobre los **626** ficheros `.py`
+de `scripts/loop` (eran 620 en la 114, mas los seis que nacen esta vuelta): **crudo 16 / 5 / 59,
+union 73; neto 15 / 4 / 58, union 72**, identico a la salida y a mi contraste. **Ningun absoluto
+BAJA**, y medi el motivo de que tampoco suban: **ninguno de los seis ficheros nuevos casa ninguno de
+los tres patrones**. `vuelta113_guardas_cierre.py` no se toco.
+
+## 2. LO QUE LA 115 ENTREGO, VERIFICADO PIEZA POR PIEZA
+
+**(a) TAREA 1, LOS DOS BLOQUES: ENTEROS Y BIEN NUMERADOS.** A.1 a A.6 y B.1 a B.4 estan los diez,
+con lo que el encargo pedia dentro de cada uno: las dos ternas de A.1 (15/4/58/72 contra
+14/3/57/71), los ocho puestos de A.5 (20, 31, 93, 147, 161, 172, 174, 175), la lista literal de lo
+que la 114 no hizo en B.1 y las dos doctrinas adjudicadas escritas enteras en A.4 y B.3.
+Composicion tallada **10 filas, 6 CAIDA / 4 SIN_CAIDA**, cotejo SOBRAN/FALTAN **NINGUNO**, y el
+diff de fidelidad es un fichero de **cero bytes**.
+
+**(b) TAREA 2.3, LA CAPA DE MOTIVO: BIEN CONSTRUIDA.** `ESPERADO_BASE` es un diccionario literal
+**anclado aparte de `CASOS`**, no derivado de el; `imprimir_caso` compara esperado contra base y,
+si difieren, imprime `MOTIVO` si esta en `MOTIVOS` o **`ALERTA` y anade el caso a `fallos`** si no.
+`T` arrastra su motivo desde la 113 y la caida A.2 queda cerrada por construccion.
+
+**(c) TAREA 2.4, MUTACION Z: MUERDE.** La copia mutada mueve el comportamiento real de `Z_SONDA`
+**y** su esperado, para que siga en `[CALZA]`, y no le escribe motivo. La salida **no calla**:
+imprime `ALERTA: ESPERADO CAMBIADO SIN MOTIVO DECLARADO (base 0, actual 1)` nombrando el caso, y la
+lista de ROJO pasa de **2 a 3** con `Z_SONDA (control 2.3/2.4) (esperado sin motivo)` dentro. Lei el
+codigo del guardas y confirmo que el `EXIT` sale de `fallos` y de nada mas.
+
+**(d) TAREA 3.3, EL REGISTRO EN `docs/plan/`: ADITIVO Y CIERTO EN CADA CIFRA.** 27 anadidas, 0
+borradas, medido por `git diff` y por el `difflib` del ejecutor. Y no me quede en el acta que lo
+afirmaba: **fui al instrumento de la 112**. `SALIDA_V112_TAREA3_1_CENSO_88.txt` dice **109 = 21 con
+correccion + 88 sin reabrir**, y los **21 puestos** que el registro nuevo enumera son exactamente
+esos 21, y los **8** que enumera (168, 170, 171, 173, 176, 178, 181, 183) son exactamente **los ocho
+ultimos de la lista de 88**. **80 + 8 + 21 = 109** cuadra contra la fuente, no contra un recuerdo.
+La cifra **74 / 109 (59,6%)** la remedi hoy y no se movio.
+
+**(e) LOS ONCE ASUNTOS DE COMMIT PUBLICAN CIFRAS Y TODAS LAS QUE COMPROBE SON CIERTAS** (10 fase 04,
+220 OP-E-01, 10 fase 05, 71 total; 98/122; 109 = 80+8+21; 0 borradas y 27 anadidas; 6 CAIDA /
+4 SIN_CAIDA; 28 casos y 9 instrumentos). El dictado tercero (el commit es expediente) se cumple.
+
+## 3. MI RELECTURA CIEGA: NO LA HAY, Y EL DOBLE QUE SI PAGUE
+
+El encargo de la 115 **no traia lectura de nodos**: su TAREA 3 era censo y medicion, con "cero
+aristas escritas o retiradas" en la 3.5, y el reporte declara **DISCUTIBLES MARCADOS: NINGUNO**, que
+es cierto. **Cero relecturas de unidad y cero puestos releidos esta tanda**, casilla vacia declarada
+en vez de inventada, como el acta 81 y el acta 114 por el mismo motivo. **El doble fue a los
+instrumentos**, que es donde estaba la carga: recontee la `Y` con codigo propio, reproduje las dos
+salidas de guardas byte a byte, lei la logica de `EXIT` y de la capa de motivo linea a linea, y fui
+a la fuente de la 112 en vez de al acta que la citaba.
+
+## 4. LAS CAIDAS DE ESTA VUELTA, CON SU NOMBRE
+
+**4.1 CAIDA DE REPORTE DEL EJECUTOR: EL PARENTESIS LE ATRIBUYE A `T` UN `EXIT 1` QUE SU PROPIO
+FICHERO NO LE ATRIBUYE.** El reporte dice, de la mutacion Z: *"ANTES (real,
+`SALIDA_V115_TAREA2_4_MUTACION_Z_ANTES.txt`): `[CALZA]` sin alerta, EXIT 1 (**por T** y por los dos
+instrumentos que dependian del reporte, ver abajo)"*. En ese fichero **`T` sale `EXIT 1 (esperado 1)
+[CALZA]`**, o sea que **calza**, y la ultima linea del propio fichero enumera las causas: *"ROJO: 2
+caso(s) NO CALZAN: 4. `verificar_cabecera_pegada_o_condensada.py`, 8. `tallar_cabecera_reporte.py`"*.
+**Son DOS y `T` no es una de ellas**, y lo confirme leyendo el codigo: el `EXIT` sale de la lista
+`fallos` y `T` no entra en ella. **NO ACUMULA PARA LA RACHA**, y cito la letra que lo decide (letra
+del **27 ago 2026**, `paradas/2026-08-27-racha-parentesis-DECISION.md`): la caida de reporte cuenta
+para la racha **solo cuando la cifra vive en una tabla, una cabecera o una conclusion**, y esta vive
+en un **parentesis de prosa de acompanamiento** dentro del cuerpo de la TAREA 2, no en la cabecera
+tallada ni en la conclusion del parrafo (que es *"no dice CALZA en silencio"*, y esa **si** es
+cierta y la verifique). **Se registra con su nombre y dispara la relectura al doble del tramo**, que
+es lo que hice en 1.7 y 3. Lo que **no** cobro, y lo digo para que no se cobre despues: el *"ver
+abajo"* del mismo parentesis **si** tiene abajo su explicacion, en el parrafo de GUARDAS DEL CIERRE
+(*"corrido AL CIERRE, con `REPORTE.md` ya escrito"*), que es exactamente por que esos dos
+instrumentos fallaban antes y calzan despues.
+
+**4.2 CAIDA DE GUARDA QUE NO ALCANZA, DEL EJECUTOR: LA CAPA DE MOTIVO CUBRE 22 DE LOS 28 CASOS Y LA
+SALIDA NO LO DICE.** `ESPERADO_BASE` tiene **22 entradas** y solo los casos que pasan por
+`imprimir_caso` (los 22 de `CASOS`) reciben la comparacion contra la base. Los **otros seis** (`X`,
+`Y`, `TAREA2.4-v109`, `N`, `O`, `P`) llevan su esperado **cableado en su propia funcion** y **no
+tienen `ESPERADO_BASE` ni pueden disparar la `ALERTA`**: si alguien voltea en silencio el esperado
+de `X`, la guarda **no lo delata**, que es justo el agujero que la 2.3 vino a tapar. La salida, en
+cambio, se abre con *"NUEVE INSTRUMENTOS Y VEINTIOCHO CASOS"* y se cierra con *"VERDE: los
+VEINTIOCHO casos ... calzan"*, **un veredicto uniforme sobre veintiocho cuando la proteccion llega a
+veintidos**. No es mala fe y no mueve ninguna cifra: es una guarda que no alcanza y **no declara su
+limite**, cuando la propia vuelta sabia hacerlo (la 3.4 declara el limite del campo `estado` en su
+propia salida). **No acumula en ninguna racha** (no es clase, ni cifra publicada, ni reporte), y su
+remedio va **BLOQUEANTE** en la 116.
+
+**4.3 CAIDA DE PROCEDIMIENTO, MIA: MI PRIMER CONTADOR LEYO EL CAMPO EQUIVOCADO.** Mi primer script
+de censo pidio `n.get('id')` en un grafo cuyo campo real es `node_id`, y me dio una union de
+**6.954**, falsa. La cace **por aritmetica y no por suerte** (la union no puede ser menor que las
+9.190 aristas de `nodos_siguientes`, porque esa lista no tiene duplicados) y la corregi **antes de
+publicar una sola cifra**. La declaro porque la casa mide los errores del auditor como los del
+ejecutor, y porque el acta 101 ya dejo escrito, en su 1.1, cual es el campo real: **lo tenia escrito
+y no lo lei**.
+
+**4.4 OBSERVACION, NO CAIDA: LOS ABSOLUTOS DE LA `Y` NO SE PUBLICAN EN EL REPORTE.** El encargo
+decia *"Publica los absolutos que te salgan y di contra que cifra de las mias los comparas"*. El
+reporte no los trae y no dice contra que se comparan; **si** los trae la salida de guardas que el
+reporte cita, y **son correctos** (los recontee yo, 1.7). Como la cifra existe, es cierta y vive en
+el fichero citado, **no lo cobro como caida**: aprieto la letra en la 116 para que el reporte diga
+la comparacion en una linea, que bajo el austero cabe.
+
+## 5. LO QUE ADJUDICO
+
+**5.1 EL ORDEN DE LA FASE 05, QUE MI ANTECESOR ME DEJO PARA HOY, CON SU CENSO DELANTE.** Adjudico, y
+las tres piezas estan escritas, ninguna es doctrina nueva:
+(a) **`OP-S-12` NO CORRE EN LA FASE 05: VA AL FINAL DE LA CAMPANA.** Lo dice `AUDITOR.md` seccion 3
+con esas palabras (*"OP-S-12 al final"*) y lo dice la **atadura 2 de `00_INDICE.md`** (*"`OP-S-12` va
+AL FINAL, despues de la ultima fusion ... las mesas fabrican once entre todas"*). La ultima fusion
+vive en la fase 06 (las seis enrutadas por la remision del 26 ago 2026), asi que **la fase 05 cerrara
+CON REMISION de `OP-S-12`**, y eso ya lo daba por supuesto la propia condicion de parada del cierre
+de la fase 05, que manda subir el ejecutor *"para las mesas y las seis fusiones diferidas"*.
+(b) **`OP-S-01` ANTES DE `OP-S-09`**, por el mapa de fases de `00_INDICE.md`
+(*"05 SANEO OP-S-01 precede OP-S-09"*).
+(c) **LAS OTRAS SIETE VAN EN SU `orden` DECLARADO**: `OP-S-02` (2), `OP-S-03` (3), `OP-S-04` (4),
+`OP-S-05` (5), `OP-S-08` (7), `OP-S-10` (9), `OP-S-11` (11); las nueve no declaran dependencia.
+(d) **Y UNA GUARDA DE ENTRADA**: `OP-S-01` deprecar y `OP-S-09` renombrar **mueven ids**, y el mapa
+pone la fase 0 bloqueando *"TODO lo que mueve un id"* nombrando esas dos. La fase 0 se re-verifica
+con su criterio de HECHO escrito (*"las cinco guardas pasan en verde y cada una fallo primero en su
+caso positivo"*) **antes** de tocarlas, no se hereda del registro de la vuelta 102.
+**LA FASE 05 NO SE ABRE HOY**: el orden escrito la pone detras de *"las fases 1 a 4 enteras"*, y la
+04 todavia no esta cerrada. Lo de arriba queda adjudicado y esperando.
+
+**5.2 EL HALLAZGO DE ORDEN, MEDIDO HOY, Y ES EL TRABAJO DE LA 116.** El registro vigente dice que la
+fase 04 esta en **1 HECHA, 2 EJECUTABLES y 7 BLOQUEADAS**, y que las siete esperan `OP-M-01`,
+`OP-M-03`, `OP-M-01-FUSION` y `OP-M-03-III`. **Lo comprobe con codigo mio y por dependencia DIRECTA
+no se sostiene**: `OP-E-06` declara `OP-D-01` a `OP-D-07` (fase 02) y `OP-E-07` declara `OP-E-06`;
+**ninguna de las dos nombra una mesa ni una fusion**. Por **cierre transitivo si** llegan, y por eso
+**no lo cobro como caida a nadie**: las siete alcanzan la fase 06, cinco por `OP-M-01` y tres por
+`OP-M-03`. **PERO EL CAMINO DE ESAS DOS ES UNO SOLO Y PASA POR UN ESLABON YA CERRADO**, y esto es
+medicion de hoy: `OP-E-06 -> OP-D-07 -> OP-M-03`, y `OP-D-07` es **el unico** de los siete `OP-D`
+que declara dependencia de fase 06. Lei `OP-D-07` entero: trae **"REGISTRO DE CIERRE, 19 ago 2026
+(vuelta 47) ... OP-D-07 QUEDA SELLADA POR LA VIA DE OP-D-05 SELLADA"**, con **sus tres
+verificaciones cerradas** (1 CUMPLE medida, 3 CUMPLE medida, 2 SATISFECHA ENTERA) y **cero nodos
+tocados**. **ADJUDICO LA DOCTRINA, que es la del acta 100 4.2 y no una nueva:** *una dependencia con
+registro de cierre escrito NO bloquea aunque su campo `estado` diga LISTA*; aplicada a `OP-D-07`,
+**corta la cadena**, y con ella se cae el unico camino de `OP-E-06` y `OP-E-07` hacia la fase 06.
+**NO ADJUDICO TODAVIA QUE LAS DOS SEAN EJECUTABLES**, porque para eso falta medir si `OP-D-01` a
+`OP-D-06` (y `OP-F-02` y `OP-F-03`, que cuelgan de ellas) llevan tambien su registro de cierre
+escrito, y eso es lectura de nueve notas largas que no he hecho. **VA ENCARGADO EN LA 116 COMO
+MEDICION, no como adjudicacion**, y con su censo delante lo adjudico en el acta siguiente. Si las
+dos quedan ejecutables, la fase 04 pasa a **1 HECHA, 4 sin bloqueo y 5 BLOQUEADAS**, y eso es
+trabajo de la fase 04 que se puede hacer **antes** de que la fase 06 llegue, no despues.
+
+## 6. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda:** **cero relecturas de unidad y cero puestos**, declarado y no inflado (seccion 3); y
+las varas corridas por mi: censo y aristas con codigo propio, el ciclo de tres entero con el arbol
+devuelto a identico, las tres suites, el marcador con sus huecos y sus diez tasas, el desfase, el
+cierre efectivo, la bolsa, las 71 filas de `OPERACIONES.jsonl`, el techo de las cuatro cifras, las
+220 decididas contra el grafo por las dos vistas, los dos censos de fase dependencia por
+dependencia, el recuento propio de la `Y` sobre los 626 ficheros, las dos salidas de guardas byte a
+byte, el sello, el diff commit a commit sobre los once, el barrido de guiones, el `wc -l`, la fuente
+de la 112 y el cierre transitivo de las siete bloqueadas.
+
+**Caidas del ejecutor en esta tanda: CERO de clase, CERO de cifra publicada, UNA de reporte (4.1) y
+UNA de guarda que no alcanza (4.2).** **Caidas del auditor: UNA, de procedimiento (4.3).**
+**Discrepancias abiertas: NINGUNA.**
+
+**Acumulado:** **858 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase
+del ejecutor** (sin cambio), **64 de reporte del ejecutor** (63 mas la de hoy), **19 de cifra
+publicada del ejecutor** (sin cambio), **12 de expediente** (sin cambio), **8 de incumplimiento de
+encargo** (sin cambio), **2 de guarda envejecida** (sin cambio), **7 de guarda que no alcanza o
+cegada** (6 mas la de hoy), **6 de cifra del auditor** (sin cambio), **17 de acta del auditor** (sin
+cambio), **27 de procedimiento del auditor** (26 mas la de hoy), **1 de reporte del auditor** (sin
+cambio), **14 de encargo del auditor** (sin cambio), **2 de clase del auditor** (sin cambio), y **2
+vueltas no entregadas enteras** (sin cambio).
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO.** Verifique todas las cifras de la vuelta,
+> incluidas las **dos que entran a `docs/plan/`** (el 109 = 80 + 8 + 21 y el 74 / 109), y **ninguna
+> sale falsa**. La parada pide DOS seguidas. **NO HAY PARADA.**
+>
+> **REPORTE: SIGUE EN CERO.** La caida 4.1 **no acumula** por la letra del 27 ago 2026, citada
+> entera en su sitio: vive en un parentesis de prosa, no en tabla, cabecera ni conclusion. **NO
+> ENCARGO ESCALADA porque la racha esta en CERO, no en dos**, y dejo dicho, como manda `AUDITOR.md`
+> 1.2, que si llegara a dos la encargaria en este mismo acta como tarea bloqueante y sin esperar
+> decision nueva del fundador.
+>
+> **EL CREDITO DE LA TANDA: BAJA, Y POR LOS INSTRUMENTOS OTRA VEZ.** `AUDITOR.md` 1.2: la
+> discrepancia aparecio **fuera** del marcado (no habia marcado), asi que el credito de la tanda
+> baja y **su tramo se relee al doble**. El tramo es el de las guardas y el dictado que las cita, y
+> **el doble lo pague en esta vuelta** (1.7 y seccion 3), **y lo extiendo a la 116**: la capa de
+> motivo se completa o declara su limite, con mutacion propia que lo pruebe, y el reporte se cuenta
+> contra su propio fichero antes de publicar una causa.
+>
+> **DONDE VA EL TRABAJO, MEDIDO HOY: LA 116 MIDE EL CIERRE DE LA FASE 04.** El territorio de lectura
+> de `OP-E-03` sigue agotado y su registro ya esta escrito en `docs/plan/`. `OP-E-01` no deja
+> escritura pendiente (98 de 98 presentes por las dos vistas). Lo que queda por saber, y es lo unico
+> que separa a la fase 04 de su cierre, es **cuantas de sus diez tienen de verdad destino y cuantas
+> tienen trabajo**, y eso se decide con el hallazgo de la 5.2 medido. **La 116 no abre ninguna
+> fase**: mide, y yo adjudico con su censo delante.
+
+## 7. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** La 5.1 se adjudica citando `AUDITOR.md` 3 y las ataduras de `00_INDICE`; la 5.2 se adjudica con el acta 100 4.2, que es doctrina vigente, y lo que no alcanza a cubrir queda **encargado como medicion**, no resuelto a ojo |
+| contradiccion con regla vigente o cifra publicada | **NO.** Sospeche una en el registro de las siete bloqueadas y **la mate con mi propia medicion**: por cierre transitivo el registro se sostiene, y lo digo en la 5.2 en vez de callarlo |
+| decision de fundador reservada | **NO.** No se funde rama, no se abre fase, `estado` no se toca (71 filas, LISTA 70 / HECHA 1), no se borra nada, no se toca el alcance |
+| fallo tecnico repetido | **NO.** Gate 0 y las tres suites en verde por corrida propia, **decimosexta vuelta seguida**; los veintiocho casos y los nueve instrumentos calzan hoy byte a byte |
+| credito de tanda roto (clase o cifra) | **NO. Sigue en CERO** |
+| credito de tanda roto (reporte) | **NO. Sigue en CERO**, por la letra del 27 ago 2026 |
+| campana consumada | **NO.** La fase 04 sigue abierta y la 05 ni se ha abierto |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO APLICA.** La fase 05 no esta abierta, y su orden queda adjudicado en la 5.1 esperando |
+
+**EL BUCLE SIGUE.** No escribo `PARA_ALEXIS.md`. El numero **115 queda gastado por esta acta** y la
+vuelta siguiente es la **116** (precedente del acta 81 seccion 5.3, con su consecuencia mecanica:
+`tallar_cabecera_reporte.py --fase04 --vuelta 116` busca *"ACTA DE LA VUELTA 115 DEL AUDITOR"* en
+`git log` y tiene que encontrar **exactamente uno**, que es el commit de esta acta). Los once
+`SALIDA_V115_*` quedan como pieza historica y la 116 sella los suyos. El encargo de la vuelta 116 va
+en `docs/loop/PROMPT_SIGUIENTE.md`.
