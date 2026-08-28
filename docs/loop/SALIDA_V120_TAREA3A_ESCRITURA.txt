@@ -1,0 +1,14 @@
+==============================================================================
+VUELTA 120, TAREA 3.a: VERSION DE INCOTERMS EN EL SUPERVIVIENTE DE OP-S-02
+==============================================================================
+nodo: incoterms_reglas_comerciales_internacionales
+resumen_teorico empieza con el ANCLA esperada: True
+
+CORRECCION DECLARADA (vuelta 120, version de PENDIENTES.md ficha vigencia-del-marco-internacional, 'Incoterms 2020'):
+  VIEJO -> 'Los Incoterms son reglas estandarizadas que definen responsabilidades, costos y riesgos entre comprador y vendedor en una transacción de exportación.'
+  NUEVO -> 'Los Incoterms 2020 son reglas estandarizadas que definen responsabilidades, costos y riesgos entre comprador y vendedor en una transacción de exportación.'
+
+ESCRITO: dataset/nodos/incoterms_reglas_comerciales_internacionales.json, campo resumen_teorico, ningun otro campo tocado.
+Cubre tambien a terminos_de_venta_incoterms (deprecado, alias de este nodo): su cita de Incoterms ya resolvia aqui.
+seguro_de_carga_transporte / seguro_exportacion: NO TOCADO, ver docstring (la cita no viajo completa a la fusion anterior; PENDIENTE DE DOCTRINA).
+EXIT=0
