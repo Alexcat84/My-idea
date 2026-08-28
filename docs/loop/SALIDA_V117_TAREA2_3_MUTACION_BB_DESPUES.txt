@@ -1,0 +1,47 @@
+GUARDAS DEL CIERRE, VUELTA 117: 8 INSTRUMENTOS Y 29 CASOS DE MUTACION.
+====================================================================================================
+A -- EXIT 1 (esperado 1) [CALZA]
+B -- EXIT 1 (esperado 1) [CALZA]
+C -- EXIT 1 (esperado 1) [CALZA]
+D -- EXIT 0 (esperado 0) [CALZA]
+E -- EXIT 1 (esperado 1) [CALZA]
+F -- EXIT 1 (esperado 1) [CALZA]
+G -- EXIT 1 (esperado 1) [CALZA]
+H -- EXIT 0 (esperado 0) [CALZA]
+griton (reporte 102, f253842b) -- EXIT 0 (esperado 0) [CALZA]
+I (mI.md, cabecera pegada/condensada v107) -- EXIT 1 (esperado 1) [CALZA]
+J (mJ.md, tallar_cabecera --comparar v107) -- EXIT 1 (esperado 1) [CALZA]
+K (mK.md, mismo tallador v107) -- EXIT 1 (esperado 1) [CALZA]
+L (mL.md, mismo tallador v107) -- EXIT 1 (esperado 1) [CALZA]
+M (mM.md, cabecera pegada/condensada v108) -- EXIT 1 (esperado 1) [CALZA]
+Q (reporte 110 real, git show 27ecfe43) -- EXIT 1 (esperado 1) [CALZA]
+R (reporte 110, cita quitada al caso N) -- EXIT 1 (esperado 1) [CALZA]
+S (sonda de backticks, DESPUES del arreglo) -- EXIT 0 (esperado 0) [CALZA]
+T (reporte 111 real, git show 9aea9f43) -- EXIT 1 (esperado 1) [CALZA]
+   MOTIVO: esperado paso de 0 a 1 en la vuelta 113 (acta 113 seccion 4.4): el reporte 111, linea 30, trae "verificar_cobertura_bolsa_tres_vias.py sigue 74/74/0" SIN NINGUNA CITA, hallazgo real y mas viejo que la vuelta, destapado por la extension de MARCAS con el verbo "sigue" en la TAREA 2.4 de la propia vuelta 113.
+U (censo por las dos reglas, 72/2 vs 70/4) -- EXIT 0 (esperado 0) [CALZA]
+V (tsc solo EXIT=0, celda LIMPIA) -- EXIT 0 (esperado 0) [CALZA]
+W (tsc con una linea de error real, celda DISTINTA) -- EXIT 0 (esperado 0) [CALZA]
+Z_SONDA (control 2.3/2.4 v115) -- EXIT 0 (esperado 0) [CALZA]
+X (reporte 112 por git show 87397be1, marca las dos con "sigue") -- EXIT 1 [CALZA]
+Y (barrido 114 --sin-exclusion, verificado por PROPIEDAD) -- [CALZA] :: con exclusion: netos [15, 4, 58], UNION crudo: 73 ficheros. UNION neto: 72 ficheros. | sin exclusion (=crudo): netos [16, 5, 59]
+TAREA2.4-v109 (123 sin declaracion) -- 123 MUDO [CALZA]
+N (tramo2_sin_decl_87.md) -- 87 en_sitio MUDO [CALZA]
+O (tramo2_sin_decl_91.md) -- 91 cruce MUDO [CALZA]
+P (v106_sin_decl_154.txt) -- 154 en_sitio MUDO [CALZA]
+AA (control 2.3, ancla de X sin mutar en este fichero) -- [CALZA]
+
+22 en CASOS (A-M,Q,R,S,T,U,V,W,Z_SONDA) + X + Y + TAREA2.4-v109 + N,O,P + AA = 29.
+capa de motivo: 28 de 28 casos anclados (AA es el control, no cuenta anclas propias).
+
+LOS 8 INSTRUMENTOS:
+1. tallar_veredictos_reporte.py --reporte docs/loop/REPORTE.md (sobre el PROPIO REPORTE.md de esta vuelta) -- EXIT 0 (esperado 0) [CALZA] :: ==========================================================================================
+2. tallar_nombre_de_operacion.py OP-E-03 -- EXIT 0 (esperado 0) [CALZA] :: OP-E-03 -- fase real: 04_ENLACES -- tipo real: LECTURA DIRIGIDA -- clase: fase 04_ENLACES
+3. verificar_apertura_sellada.py --vuelta 117 -- EXIT 0 (esperado 0) [CALZA] :: VERDE: los 10 ficheros SALIDA_V117_*_APERTURA.txt nacieron todos en el primer commit de la vuelta (hijo directo del acta
+4. verificar_cabecera_pegada_o_condensada.py --vuelta 117 -- EXIT 1 (esperado 0) [NO CALZA] :: ROJO: la cabecera no se pudo tallar (19 fallo(s)):
+5. verificar_cobertura_bolsa_tres_vias.py -- EXIT 0 (esperado 0) [CALZA] :: FICHEROS DE ENTRADA (declarados en FICHEROS_VEREDICTO, 6):
+6. contar_cierre_efectivo.py -- EXIT 0 (esperado 0) [CALZA] :: ====================================================================================================
+7. verificar_vuelco_de_veredicto.py -- EXIT 0 (esperado 0) [CALZA] :: FICHEROS DE ENTRADA (declarados en FICHEROS_VEREDICTO, 6, reusada de verificar_cobertura_bolsa_tres_vias.py):
+8. tallar_cabecera_reporte.py --fase04 --vuelta 117 --comparar REPORTE.md -- EXIT 1 (esperado 0) [NO CALZA] :: ==============================================================================
+
+ROJO: 2 caso(s) NO CALZAN: 4. verificar_cabecera_pegada_o_condensada.py --vuelta 117, 8. tallar_cabecera_reporte.py --fase04 --vuelta 117 --comparar REPORTE.md
