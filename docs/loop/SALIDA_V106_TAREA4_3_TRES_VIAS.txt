@@ -111,8 +111,29 @@ Formato por puesto: verbo citado, objeto citado, VEREDICTO -- motivo.
 
 --- PUESTO 154 --- desarrollo_de_clientes_customer_development -> customer_development_agile_pairing (paso 4)
   verbo: 'Combinar'  objeto: 'el aprendizaje del cliente'  complemento: 'con ingenieria agil'
-  VEREDICTO: SATELITE -- complemento instrumental 'con + N' (con ingenieria agil): el hijo vive
-  en el termino regido por 'con', fuera del objeto directo. VA A LECTURA ENTERA (4.4)
+  VEREDICTO: OBJETO (CORRECCION_V110, TAREA 3 de la vuelta 110, relectura conjunta con el
+  auditor tras su discrepancia del acta de la vuelta 109, leida hoy contra los dos nodos:
+  "combinar A con B" es construccion de dos argumentos, misma especie que 123 ("reemplazar X
+  por Y") y 145 ("vincular A a B"): el complemento regido por 'con' no es satelite removible,
+  es el segundo termino esencial del verbo, no un aditamento que se pueda quitar sin romper el
+  verbo. El hijo desarrolla LOS DOS argumentos, no solo uno, y eso es lo que decide, no los dos
+  brazos del 9.6.2: se TITULA "Junta el aprendizaje del cliente con la construccion rapida del
+  producto" (los dos brazos ya en el titulo), su paso 2 junta literalmente "lo que aprendes
+  hablando con clientes y lo que construyes", y su entregable es un proceso agil "conectado a
+  lo que vas aprendiendo de los clientes": tres lugares distintos anclan el argumento A
+  (aprendizaje del cliente) ademas del B (ingenieria agil/ajuste rapido), pese a que 4 de sus 5
+  pasos solo detallan B. CONTRA-CASO PROPIO, escrito antes de decidir: el hijo podria haber
+  desarrollado solo el argumento B (la mayoria de sus pasos hablan de agilidad, y eso bastaria
+  para leerlo SATELITE si el verbo se completara con su objeto directo solo, como 109 o 87); se
+  cae porque titulo, paso 2 y entregable anclan el argumento A por separado del desarrollo paso
+  a paso, y "combinar" (a diferencia de "llenar" o "evaluar") no se completa sin su segundo
+  termino. La lectura entera SOSTIENE (DISCUTIBLE) de docs/loop/SALIDA_V106_TAREA4_4_LECTURA_ENTERA.md,
+  PUESTO 154, confirmo los dos brazos del 9.6.2 (madre e hijo son el mismo par, ninguno de los
+  dos brazos lo discute), que es pregunta DISTINTA de OBJETO contra SATELITE: ese precedente
+  contesta si el par es madre e hijo, no si el complemento es satelite. La direccion (RESUELTA)
+  no se mueve: contar_cierre_efectivo.py sigue en 74/109, 59,6%. RAZON VIEJA DE ESTA FILA, NO
+  BORRADA: "SATELITE -- complemento instrumental 'con + N' (con ingenieria agil): el hijo vive
+  en el termino regido por 'con', fuera del objeto directo. VA A LECTURA ENTERA (4.4)")
 
 --- PUESTO 156 --- formalizar_un_proceso_ad_hoc -> metricas_calidad (paso 4)
   verbo: 'Establecer'  objeto: 'metricas de exito en cada etapa del proceso'
@@ -149,4 +170,9 @@ Formato por puesto: verbo citado, objeto citado, VEREDICTO -- motivo.
 
 ====================================================================================================
 RESUMEN: OBJETO 24, SATELITE 3 (123, 145, 154), NO_OBJETO 0 (de 27 clasificados)
+NOTA ADITIVA (no se edita la cifra de arriba, es la tabla ORIGINAL de esta vuelta 106): de los
+tres SATELITE de este resumen, 123 volteo a OBJETO en la vuelta 107 (declarado, ver
+SALIDA_V107_TAREA4_3_TRAMO3_TRES_VIAS.md), 145 igual en la vuelta 107 (correccion_v107), y 154
+volteo a OBJETO en la vuelta 110 (CORRECCION_V110, ver el bloque del PUESTO 154 arriba en este
+mismo fichero). Hoy los tres son OBJETO; ninguno queda SATELITE de este resumen.
 ====================================================================================================
