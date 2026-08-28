@@ -1,0 +1,42 @@
+================================================================================================
+PAR 147 . dominio quality . titulo_ratio 75.0 . contencion 0.5
+PASO QUE EL BARRIDO CASO (de la madre): 4
+TEXTO DEL PASO CASADO: Evaluar el nivel de control, costo y tiempo disponible para el tipo de benchmarking elegido
+------------------------------------------------------------------------------------------------
+  MADRE segun la bolsa: Clasificación de Tipos de Benchmarking   [id clasificacion_benchmarking]
+     entregable: Definición documentada del tipo de benchmarking a realizar (qué, quién y cómo) que oriente el diseño del estudio
+     paso 1: Determinar el objeto del benchmarking: función, proceso, unidad de negocio, proyecto o modelo genérico
+     paso 2: Decidir el tipo de participantes: internos, externos, competidores o no competidores
+     paso 3: Seleccionar el modelo de excelencia (ej. Baldridge o EFQM) si se busca un marco holístico de comparación
+     paso 4: Evaluar el nivel de control, costo y tiempo disponible para el tipo de benchmarking elegido
+
+  HIJO  segun la bolsa: Benchmarking de Consorcio   [id consortium_benchmarking]
+     entregable: Consorcio de benchmarking formalizado con acuerdo de alcance, métricas y cronograma definidos.
+     paso 1: Identificar organizaciones interesadas en formar un consorcio de benchmarking sobre un tema común.
+     paso 2: Acordar colectivamente el alcance, métricas, definiciones y cronograma del estudio.
+     paso 3: Designar un facilitador (interno o externo) para coordinar el proceso.
+     paso 4: Establecer criterios de validación de datos compartidos por todos los participantes.
+     paso 5: Ejecutar el estudio y compartir hallazgos y mejores prácticas entre los miembros.
+
+================================================================================================
+PAR 148 . dominio quality . titulo_ratio 75.0 . contencion 0.5
+PASO QUE EL BARRIDO CASO (de la madre): 4
+TEXTO DEL PASO CASADO: Evaluar la capacidad del sistema de medición (Gage R&R)
+------------------------------------------------------------------------------------------------
+  MADRE segun la bolsa: DMAIC - Fase Measure (Medición del Proceso)   [id dmaic_fase_measure]
+     entregable: Métricas de línea base, FMEA completado, capacidad del sistema de medición validada y lista de teorías de causa priorizada
+     paso 1: Mapear el proceso en detalle mediante diagramas de flujo
+     paso 2: Medir el desempeño base (Ys) usando análisis Pareto
+     paso 3: Realizar un FMEA para identificar modos de falla potenciales (Xs)
+     paso 4: Evaluar la capacidad del sistema de medición (Gage R&R)
+     paso 5: Determinar si el proceso está en control estadístico y medir su capacidad a corto plazo
+     paso 6: Confirmar o modificar el objetivo del proyecto según los datos obtenidos
+     paso 7: Generar una lista priorizada de teorías de causa raíz usando diagramas causa-efecto
+
+  HIJO  segun la bolsa: Capacidad de Proceso   [id capacidad_de_proceso]
+     entregable: Análisis de capacidad de proceso con recomendación sobre frecuencia de control y necesidad de ajuste
+     paso 1: Recolectar datos históricos de desempeño del proceso
+     paso 2: Calcular índices de capacidad (uniformidad) del proceso frente a especificaciones
+     paso 3: Usar los resultados para decidir frecuencia de medición y mantenimiento
+     paso 4: Determinar si el proceso requiere rediseño o si es apto para producción
+

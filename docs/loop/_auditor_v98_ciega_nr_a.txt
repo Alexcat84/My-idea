@@ -1,0 +1,67 @@
+================================================================================================
+PAR 117 . dominio quality . titulo_ratio 86.3 . contencion 0.455
+PASO QUE EL BARRIDO CASO (de la madre): 3
+TEXTO DEL PASO CASADO: Leer el plan de muestreo correspondiente (tamaño de muestra, número de aceptación y rechazo) en la tabla maestra
+------------------------------------------------------------------------------------------------
+  MADRE segun la bolsa: Selección y Aplicación de Planes de Muestreo ANSI/ASQC Z1.4   [id seleccion_plan_muestreo_ansi_z14]
+     entregable: Plan de muestreo ANSI/ASQC Z1.4 completamente parametrizado y procedimiento de cambio de niveles documentado
+     paso 1: Determinar el AQL, tamaño de lote y nivel de inspección requeridos
+     paso 2: Consultar la tabla de letras de código de tamaño de muestra según lote y nivel de inspección
+     paso 3: Leer el plan de muestreo correspondiente (tamaño de muestra, número de aceptación y rechazo) en la tabla maestra
+     paso 4: Implementar reglas de cambio a inspección estricta si dos de cinco lotes consecutivos son rechazados
+     paso 5: Aplicar inspección reducida si los últimos 10 lotes fueron aceptados bajo inspección normal
+
+  HIJO  segun la bolsa: Planes de Muestreo de Aceptación   [id planes_de_muestreo_de_aceptacion]
+     entregable: Plan de muestreo documentado con niveles de aceptación, tamaños de muestra y criterios de rechazo
+     paso 1: Definir el promedio de proceso esperado del proveedor
+     paso 2: Calcular el costo del daño por defectos no detectados
+     paso 3: Balancear costo de inspección al 100% versus muestreo
+     paso 4: Diseñar la curva característica de operación (OC curve) del plan
+     paso 5: Considerar errores de medición en el diseño del plan
+
+================================================================================================
+PAR 103 . dominio franquicias . titulo_ratio 81.0 . contencion 0.5
+PASO QUE EL BARRIDO CASO (de la madre): 3
+TEXTO DEL PASO CASADO: Presupuesta el desarrollo de tu manual de operaciones y de los materiales de entrenamiento
+------------------------------------------------------------------------------------------------
+  MADRE segun la bolsa: Cuánto Necesitas Invertir para Convertirte en Franquiciador   [id estimacion_inversion_inicial_franquiciador]
+     entregable: Un presupuesto detallado de la inversión inicial que necesitas para lanzar tu sistema de franquicia
+     paso 1: Lista todas las áreas donde vas a necesitar invertir: legal, marketing, manual, entidad, entrenamiento
+     paso 2: Cotiza el costo de armar los documentos legales de tu franquicia (por ejemplo el contrato y el documento de divulgación conocido como FDD)
+     paso 3: Presupuesta el desarrollo de tu manual de operaciones y de los materiales de entrenamiento
+     paso 4: Calcula cuánto vas a necesitar en marketing para atraer a tus futuros franquiciados
+     paso 5: Define el capital total que necesitas antes de lanzar tu programa de franquicia
+     paso 6: Define cuántas franquicias quieres vender en tu primer año.
+     paso 7: Presupuesta los costos de personal según cuánta gente necesitas contratar y si puedes aprovechar al equipo que ya tienes.
+     paso 8: Presupuesta los costos de preparación: crear la nueva entidad legal, duplicar materiales, viajes y equipo nuevo.
+
+  HIJO  segun la bolsa: Desarrollo del Manual de Operaciones de Franquicia   [id desarrollar_manual_operaciones]
+     entregable: Un manual de operaciones completo, redactado y revisado legalmente, vinculado al contrato de franquicia y listo para servir como base de capacitacion y estandar de cumplimiento.
+     paso 1: Documenta exhaustivamente todos los procesos operativos, desde la apertura de una unidad (sitio, cuenta bancaria, EIN, seguros) hasta la operacion diaria, incluyendo compras, marketing local, guiones de venta y control de inventario
+     paso 2: Diferencia claramente los estandares de marca de control estricto de las areas operativas flexibles
+     paso 3: Incluye politicas de cumplimiento legal como leyes laborales, EEOC y ADA, sin dictar politicas internas de empleo del franquiciado
+     paso 4: Redacta el manual evitando lenguaje absoluto de obligaciones, sustituyendolo por terminos flexibles
+     paso 5: Vincula legalmente el manual al contrato de franquicia como estandar de cumplimiento obligatorio, manteniendolo fuera del contrato mismo y confidencial, divulgando solo el indice en el FDD, exigiendo a los franquiciados mantener el manual bajo resguardo controlado, y limitando su divulgacion a los empleados solo según necesidad de entrenamiento
+     paso 6: Contrata a un profesional con experiencia legal en franquicias para redactarlo y haz que tu abogado lo revise antes de implementarlo
+
+================================================================================================
+PAR 105 . dominio quality . titulo_ratio 80.8 . contencion 0.5
+PASO QUE EL BARRIDO CASO (de la madre): 4
+TEXTO DEL PASO CASADO: Rediseña tu proceso de producción para construir calidad desde el origen
+------------------------------------------------------------------------------------------------
+  MADRE segun la bolsa: Abolición de la Inspección Masiva como Estrategia de Calidad   [id abolir_inspeccion_masiva]
+     entregable: Plan de transición de inspección masiva a inspección por muestreo aleatorio y control estadístico de proceso, con métricas de reducción de costos e incremento de calidad
+     paso 1: Identifica los puntos donde hoy inspeccionas al 100% o 200% y mide su costo junto con el retrabajo asociado
+     paso 2: Analiza la causa raíz de los defectos que detectas en inspección, no te limites a separarlos
+     paso 3: Implementa muestreo aleatorio con números aleatorios en lugar de inspección exhaustiva
+     paso 4: Rediseña tu proceso de producción para construir calidad desde el origen
+     paso 5: Reduce gradualmente la inspección masiva a medida que tu proceso demuestre estar en control estadístico
+     paso 6: Reserva la inspección al 100% solo para casos excepcionales de bajo rendimiento crítico
+
+  HIJO  segun la bolsa: Calidad de Diseño vs. Calidad de Producción   [id calidad_de_diseno_vs_produccion]
+     entregable: Especificación de diseño validada contra necesidades del cliente y sistema de medición de conformidad en producción
+     paso 1: Definir claramente los requisitos del cliente antes de diseñar el producto o servicio
+     paso 2: Documentar los procedimientos y programas que garantizan ese diseño
+     paso 3: Medir la brecha entre lo diseñado y lo efectivamente producido
+     paso 4: Investigar causas raíz de las desviaciones, no solo los síntomas
+
