@@ -1,0 +1,16 @@
+====================================================================================================
+DEPENDENCIAS TRANSITIVAS DE LAS 10 OPERACIONES DE LA FASE 04 (BFS sobre depende_de)
+====================================================================================================
+OP-E-01 (estado=LISTA): 0 deps -> []
+OP-E-02 (estado=HECHA): 0 deps -> []
+OP-E-03 (estado=LISTA): 18 deps -> ['OP-C-01', 'OP-C-02', 'OP-C-03', 'OP-C-04', 'OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06', 'OP-E-01', 'OP-F-01', 'OP-F-02', 'OP-F-03', 'OP-S-06', 'OP-S-07', 'OP-U-01', 'OP-U-02']
+OP-E-04 (estado=LISTA): 6 deps -> ['OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-F-03', 'OP-M-01', 'OP-M-01-FUSION']
+OP-E-05 (estado=LISTA): 6 deps -> ['OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-F-03', 'OP-M-01', 'OP-M-01-FUSION']
+OP-E-06 (estado=LISTA): 10 deps -> ['OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06', 'OP-D-07', 'OP-F-02', 'OP-F-03', 'OP-M-03']
+OP-E-07 (estado=LISTA): 11 deps -> ['OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06', 'OP-D-07', 'OP-E-06', 'OP-F-02', 'OP-F-03', 'OP-M-03']
+OP-M-01-ESLABONES (estado=LISTA): 6 deps -> ['OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-F-03', 'OP-M-01', 'OP-M-01-FUSION']
+OP-M-01-SEXTO (estado=LISTA): 6 deps -> ['OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-F-03', 'OP-M-01', 'OP-M-01-FUSION']
+OP-M-03-ENLACES (estado=LISTA): 5 deps -> ['OP-D-07', 'OP-M-03', 'OP-M-03-I', 'OP-M-03-II', 'OP-M-03-III']
+
+TOTAL DE DEPENDENCIAS TRANSITIVAS UNICAS ENTRE LAS 10: 26
+['OP-C-01', 'OP-C-02', 'OP-C-03', 'OP-C-04', 'OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06', 'OP-D-07', 'OP-E-01', 'OP-E-06', 'OP-F-01', 'OP-F-02', 'OP-F-03', 'OP-M-01', 'OP-M-01-FUSION', 'OP-M-03', 'OP-M-03-I', 'OP-M-03-II', 'OP-M-03-III', 'OP-S-06', 'OP-S-07', 'OP-U-01', 'OP-U-02']
