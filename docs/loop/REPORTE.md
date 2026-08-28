@@ -1,77 +1,79 @@
-# REPORTE VUELTA 104 (MODO AUSTERO, tope 80 lineas)
+# REPORTE VUELTA 105 (MODO AUSTERO, tope 80 lineas)
 
-**PARADA DECLARADA, DE ENCARGO PROPIO: LA APERTURA NO SE SELLO ANTES DE LA
-1.a OPERACION.** `verificar_apertura_sellada.py --vuelta 104`,
-`docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt`: ROJO, "no existe ningun
-SALIDA_V104_*_APERTURA.txt", EXIT 1. Empece la TAREA 2
-directamente. No se inventa un sello a posteriori. Mitigante, no excusa:
-`git diff --stat d6737fb3..HEAD -- dataset/ web/ engine/` VACIO en cada
-commit de la vuelta (confirmado otra vez ahora), asi que apertura y cierre
-son el mismo valor en todo lo medible; lo que falta es la EVIDENCIA sellada
-a tiempo, no el dato. CAIDA MIA, de incumplimiento de EJECUTOR.md 1.
+Apertura sellada `1b76e800` (`docs/loop/SALIDA_V105_HEAD_APERTURA.txt`, ANTES
+de la 1.a operacion, VERDE contra `verificar_apertura_sellada.py --vuelta 105`,
+`docs/loop/SALIDA_V105_APERTURA_SELLADA_VERDE.txt`, 10 ficheros nacidos en el
+primer commit, hijo directo del acta `9cf7a06a`).
 
-**CIERRE, medido ahora, cada celda con su fichero** (identidad por git:
-rama `pasada-unica`, apertura `d6737fb3`, HEAD `e4074be6`, 6 commits):
-censo 3.853/3.188/665 y Gate 0 OK, auto-aristas 0, alcanzabilidad 100,0%
-(`docs/loop/SALIDA_V104_GATE0_CIERRE.txt`); aristas 9.190/9.169/18.359/9.813
-(`docs/loop/SALIDA_V104_CENSO_ARISTAS_CIERRE.txt`); motor 25/25
-(`docs/loop/SALIDA_V104_MOTOR_CIERRE.txt`); web 80(80)/1.030+3 skipped
-(`docs/loop/SALIDA_V104_WEB_CIERRE.txt`); tsc EXITCODE 0
-(`docs/loop/SALIDA_V104_TSC_CIERRE.txt`); marcador A 551/B 72/C 5/D 2.760,
-cero huecos (`docs/loop/SALIDA_V104_MARCADOR_CIERRE.txt`); desfase 1 fila,
-`ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`
-(`docs/loop/SALIDA_V104_DESFASE_CALIBRADO_CIERRE.txt`). sha256 de
-`master_graph.json` identico a HEAD.
+**CABECERA, cada celda con su fichero** (rama `pasada-unica`, apertura
+`1b76e800`, HEAD `ba261321`): censo 3.853/3.188/665, Gate 0 OK,
+auto-aristas 0, alcanzabilidad 100,0% (3188/3188, 85 semillas), aristas
+9.190/9.169/18.359/9.813, motor 25/25, web 80(80)/1.030+3 skipped, tsc EXIT
+0, desfase 1 fila (`ganar_comprension_del_cliente ->
+dia_en_la_vida_del_cliente`), marcador legado A 551/B 72/C 5/D 2.760: LOS
+NUEVE IGUALES en apertura y cierre (`docs/loop/SALIDA_V105_<KIND>_APERTURA.
+txt` / `_CIERRE.txt`). sha256 identico en apertura, cierre y HEAD.
+`git diff --stat HEAD -- dataset/ web/ engine/` VACIO.
+DISCREPANCIA DECLARADA: `tallar_cabecera_reporte.py --fase04` da ROJO sobre
+el marcador (`docs/loop/SALIDA_V105_CABECERA_TALLADA.txt`): su regex espera
+`'A': N` y `recomputar_marcador.py` (vigente desde la vuelta 53) imprime
+`A 551 16.3`. La vuelta 103 no producia fichero de marcador y nunca choco
+con esto. PENDIENTE DE DOCTRINA, no la decido yo.
 
-**TAREA 2 (bloqueante).** Cerco griton calibrado: emparejamiento por
-ORACION mas tres filtros (afirmacion, etiqueta de lista, ensanche a
-parrafo si la cita de la oracion no es legible),
-`docs/loop/SALIDA_V104_TAREA2_CALIBRACION_ANTES_DESPUES.txt`. Reporte 102
-pasa de ROJO 6 falsos a VERDE EXIT 0; las dos mutaciones de la 103 SIGUEN
-ROJO (`..._MUTACION_DOSVARIANTES.txt`). Cobertura publicada
-(`..._COBERTURA.txt`): 102 de 14/17 a 3/17; 103 de 2/4 a 1/4 (causa
-declarada en el docstring).
+**TAREA 1 (bloqueante).** El agujero de la oracion:
+`tallar_veredictos_reporte.py` ensancha de la oracion a la SIGUIENTE SOLO
+cuando esa oracion no trae palabra de veredicto propia
+(`docs/loop/SALIDA_V105_TAREA1_1_MUT_C_ANTES_DESPUES.txt`). Mutacion C (cita
+en la oracion siguiente) pasa de VERDE EXIT 0 a ROJO EXIT 1; A y B (misma
+oracion) siguen ROJO; el griton del reporte 102 sigue VERDE EXIT 0,
+cobertura sin cambio (3/17; 103: 1/4; 104: 2/6,
+`..._TAREA1_5_COBERTURA_*.txt`).
 
-**TAREA 3.** Relectura conjunta del par 29 (`abolir_inspeccion_masiva` ->
-`control_estadistico_del_proceso`, paso 5): primer brazo del 9.6.2 falla
-(subordinada de CUANDO, especie del 28); el contra-caso de entregables del
-auditor examinado y rechazado (un plan describe su estado final, no dos
-productos). `correccion_v104`, 9.6.3 SANO. Cifra: 87/96 a 86/97 (53,0%).
+**TAREA 2.** Retirada de la bendicion en `docs/plan/04_ENLACES.md` linea
+427: "41 de 48 dan OBJETO y se sostienen" pierde el calificativo "sin
+re-lectura" que el instrumento si trae; los 41 quedan SIN ACLARAR hasta la
+TAREA 4. Cifra 79/104 sin tocar por esto.
 
-**TAREA 4.1.** Muestra congelada: `--puestos` salta el calculo de
-flancos; re-corrida hoy da la lista commiteada en 103 (13,19,10,31,15,
-36,35,32), `docs/loop/SALIDA_V104_TAREA4_1_MUESTRA_CONGELADA.txt`.
+**TAREA 3, DISCUTIBLE.** Relectura conjunta de los pares 20
+(`waterfall_vs_agile_development` -> `modelo_customer_development`) y 93
+(`estandares_voluntarios` -> `definiciones_operacionales_de_calidad`), caso
+Y contra-caso del auditor examinados. En los dos, primer brazo del 9.6.2
+falla (paso 20: coordinacion, no ejecucion del modelo; paso 93: estandar de
+industria contra acuerdo bilateral) y los contra-casos NO ganaron. Los dos
+SE MUEVEN, `correccion_v105`.
 
-**TAREA 4.2/4.3.** Barrido de una pregunta sobre 48 RESUELTA nunca
-releidas (`docs/loop/SALIDA_V104_TAREA4_2_BARRIDO.txt`): 41 OBJETO, 7
-NO_OBJETO. Los 7 releidos enteros a ciegas
-(`..._TAREA4_3_CIEGA_BLIND/REVEAL.txt`): los SIETE se mueven (6, 8, 24,
-25, 52, 62, 80), `correccion_v104` en cada uno. Cifra final: **79/104
-(56,8% NO RESUELTA)**.
+**TAREA 4.** (4.1/4.2) Guarda del paso mal casado mas censo: 2 puestos en
+los cuatro tramos (46, 147). (4.3) Re-barrido de los 41 con pregunta de tres
+vias (`docs/loop/SALIDA_V105_TAREA4_3_RE_BARRIDO.txt`): el 46 salta por la
+guarda; de 40, 33 OBJETO, 7 SATELITE (20, 21, 38, 66, 87, 91, 93), 0
+NO_OBJETO. (4.4, DISCUTIBLE) Lectura entera a ciegas de los 5 SATELITE
+restantes (`docs/loop/SALIDA_V105_TAREA4_4_LECTURA_ENTERA.md`): 21, 38, 66
+SE MUEVEN (el hijo no desarrolla el acto del verbo, solo el tema del
+complemento; entregables sin relacion); 87, 91 SOSTIENEN (evaluar/establecer
+CON el complemento exige desplegarlo, entregables con solape directo).
 
-**TAREA 4.4.** Censo de relecturas por puesto,
-`docs/loop/CENSO_RELECTURAS_OP_E_03.jsonl` (183 filas): 74 con al menos
-una relectura, 109 nunca releidas.
+**CIFRA FINAL `OP-E-03`: 74 / 109 (59,6% NO RESUELTA)**, de 79/104 (56,8%) en
+la apertura. Recomputo en los tres sitios aditivos (04_ENLACES.md,
+OPERACIONES.jsonl, tramos jsonl) tras cada correccion.
 
-**TAREA 1.** Registros del acta 103 en `PENDIENTES.md`, 5 subapartados
-(1.1 a 1.5), composicion tallada 1 nivel2/5 nivel3
-(`docs/loop/SALIDA_V104_TAREA1_COMPOSICION.txt`).
+**TAREA 5.** Registros del acta 104 en `PENDIENTES.md`, 7 subapartados (5.1
+a 5.7), composicion tallada 1 nivel2/7 nivel3, cotejo limpio
+(`docs/loop/SALIDA_V105_TAREA5_COMPOSICION.txt`).
 
-**DISCUTIBLES MARCADOS, para la relectura ciega del auditor:** ninguno de
-juicio (las 8 direcciones movidas esta vuelta, 29+6+8+24+25+52+62+80, se
-resolvieron dentro de la propia vuelta con `correccion_v104`, con caso y
-contra-caso escritos). El UNICO discutible es procedimental: la PARADA de
-apertura de arriba.
+**DISCUTIBLES MARCADOS, para la relectura ciega del auditor:** las CINCO
+direcciones de juicio de esta vuelta, TODAS: 20, 93 (TAREA 3) y 21, 38, 66
+(TAREA 4.4, movidas), mas 87 y 91 (TAREA 4.4, sostenidas contra su propia
+etiqueta SATELITE). Ninguna es procedimental.
 
-**PENDIENTE DE DOCTRINA:** ninguno nuevo.
+**PENDIENTE DE DOCTRINA:** el tallador de cabecera contra el formato nuevo
+del marcador legado (arriba).
 
 Guardas del cierre, corridas tras la ultima edicion:
 `tallar_veredictos_reporte.py` sobre este mismo reporte
-(`docs/loop/SALIDA_V104_GUARDAS_CIERRE.txt`); `tallar_nombre_de_operacion.py
-OP-E-03` (sin claim de fusion/mesa esta vuelta, EXIT 0,
-`docs/loop/SALIDA_V104_TALLAR_NOMBRE_OP.txt`); `verificar_apertura_sellada.py
---vuelta 104` ROJO, `docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt` (arriba,
-la PARADA). Dos de tres VERDE.
+(`docs/loop/SALIDA_V105_GUARDAS_CIERRE.txt`); `tallar_nombre_de_operacion.py
+OP-E-03` EXIT 0 (`docs/loop/SALIDA_V105_TALLAR_NOMBRE_OP.txt`);
+`verificar_apertura_sellada.py --vuelta 105` VERDE EXIT 0 (arriba). Tres de
+tres VERDE.
 
 `wc -l docs/loop/REPORTE.md` AL CIERRE, tras esta misma edicion, en
-`docs/loop/SALIDA_V104_WCL_CIERRE.txt`.
+`docs/loop/SALIDA_V105_WCL_CIERRE.txt`.
