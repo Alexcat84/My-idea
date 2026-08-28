@@ -86,9 +86,40 @@ ROJO sobre la vuelta 100, que sigue siendo el caso negativo real, sin
 cambios; (c) ROJO si se mueve a mano un fichero de apertura real al SEGUNDO
 commit, sobre una copia temporal de repositorio (nunca sobre el repo real):
 ver scripts/loop/vuelta102_tarea1_prueba_mutacion_apertura.py, caso (c).
+
+--- EL SELLO FIJA CONTENIDO, NO SOLO NACIMIENTO (TAREA 4, vuelta 108) ---
+
+POR QUE NACE (acta de la vuelta 107, seccion 1.7). Esta guarda comprobaba EN
+QUE COMMIT NACIO cada salida de apertura, pero nunca si su CONTENIDO DE HOY
+seguia siendo el mismo con el que nacio. La vuelta 107 lo demostro sin
+querer: el commit 87b4753d reescribio SALIDA_V107_TSC_APERTURA.txt (nacida
+en fcb90afc con la linea "EXIT=0", hoy vacia) y la guarda siguio VERDE
+porque solo miraba el commit de nacimiento, nunca el contenido de hoy.
+
+QUE COMPRUEBA, DE MAS. Para cada `SALIDA_V<vuelta>_*_APERTURA.txt`, el
+sha256 NORMALIZADO (CRLF y CR sueltos igualados a LF antes de hashear: el
+repo tiene `core.autocrlf=true`, asi que el blob de git siempre trae LF
+mientras el arbol de trabajo en Windows trae CRLF, y esa diferencia de
+sistema operativo NO es un cambio de contenido) del blob del commit de
+nacimiento (`git show <nacido_en>:docs/loop/<nombre>`) contra el sha256
+NORMALIZADO del fichero de HOY en el arbol de trabajo. Si difieren, ROJO,
+nombrando el fichero y los dos hashes completos: nunca se calla cual
+cambio ni se resume "algo no cuadra".
+
+Que sea legitimo corregir un artefacto (como la vuelta 107 corrigio el
+`EXIT=0` espurio del tsc) no quita que tenga que VERSE: si hay que
+reescribir una salida de apertura, se reescribe y esta guarda lo canta, y
+el reporte lo explica. Es lo contrario de degradarse en silencio (banco
+9, "fallar ruidoso").
+
+CASO POSITIVO OBLIGATORIO (vuelta 108): `--vuelta 107` da ROJO nombrando
+`SALIDA_V107_TSC_APERTURA.txt` con sus dos sha256 (docs/loop/
+SALIDA_V108_TAREA4_3_CASO_VUELTA107_ROJO.txt, el caso real que lo produjo);
+`--vuelta 108`, corrida al cierre de esta misma vuelta, da VERDE.
 """
 import argparse
 import glob
+import hashlib
 import os
 import re
 import subprocess
@@ -186,6 +217,64 @@ def commit_de_nacimiento(nombre, rama, fallos):
     return hallados[0]
 
 
+def _normalizar_finales_de_linea(datos):
+    """CRLF/LF no es cambio de CONTENIDO (TAREA 4, vuelta 108): este repo
+    tiene core.autocrlf=true, asi que el arbol de trabajo en Windows trae
+    CRLF mientras que el blob de git (lo que `git show <commit>:ruta`
+    devuelve) siempre trae LF. Comparar los bytes crudos daria ROJO en
+    TODO fichero de mas de una linea, sin que nadie lo haya tocado de
+    verdad. Se normaliza CRLF y CR sueltos a LF en los dos lados antes de
+    hashear, para que la guarda mida CONTENIDO y no la convencion de fin de
+    linea del sistema operativo."""
+    return datos.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+
+
+def sha256_normalizado(datos):
+    return hashlib.sha256(_normalizar_finales_de_linea(datos)).hexdigest()
+
+
+def blob_de_nacimiento(nombre, nacido_en, fallos):
+    """El contenido del fichero TAL COMO QUEDO en el commit que lo anadio
+    (TAREA 4.1, vuelta 108): `git show <nacido_en>:docs/loop/<nombre>`."""
+    rel = "docs/loop/%s" % nombre
+    try:
+        r = subprocess.run(["git", "show", "%s:%s" % (nacido_en, rel)], cwd=RAIZ,
+                           capture_output=True, check=True)
+        return r.stdout
+    except Exception as e:
+        fallos.append("no se pudo leer el blob de nacimiento de %s en %s: %s"
+                      % (nombre, nacido_en[:8], e))
+        return None
+
+
+def contenido_igual_al_nacer(nombre, nacido_en, fallos):
+    """TAREA 4 de la vuelta 108 (encargo del auditor, acta de la vuelta 107,
+    seccion 1.7: "LA GUARDA DEL SELLO QUE NO ALCANZA"). El sello de
+    verificar_apertura_sellada.py comprobaba EN QUE COMMIT NACIO cada salida
+    de apertura, pero nunca si su CONTENIDO DE HOY seguia siendo el mismo con
+    el que nacio. La vuelta 107 lo demostro sin querer: el commit 87b4753d
+    reescribio SALIDA_V107_TSC_APERTURA.txt (nacida en fcb90afc con la linea
+    "EXIT=0", hoy vacia) y la guarda siguio VERDE.
+
+    Compara el sha256 NORMALIZADO (ver _normalizar_finales_de_linea) del blob
+    del commit de nacimiento contra el sha256 NORMALIZADO del fichero de HOY
+    en el arbol de trabajo. Devuelve (iguales, hash_nacimiento, hash_hoy);
+    (None, None, None) si el fichero de hoy no existe o el blob no se pudo
+    leer (fallo ya registrado en `fallos` por el llamador)."""
+    ruta = os.path.join(LOOP, nombre)
+    if not os.path.exists(ruta):
+        fallos.append("%s no existe en el arbol de trabajo (no se puede comparar contenido)" % nombre)
+        return None, None, None
+    blob = blob_de_nacimiento(nombre, nacido_en, fallos)
+    if blob is None:
+        return None, None, None
+    with open(ruta, "rb") as f:
+        hoy = f.read()
+    h_nac = sha256_normalizado(blob)
+    h_hoy = sha256_normalizado(hoy)
+    return h_nac == h_hoy, h_nac, h_hoy
+
+
 def verificar(vuelta):
     fallos = []
     rama = rama_actual(fallos)
@@ -213,6 +302,13 @@ def verificar(vuelta):
             fallos.append("%s nacio en %s, cuyo padre es %s (no el commit del acta %s): "
                           "no se sello antes de la 1.a operacion" %
                           (nombre, nacido_en[:8], padre[:8], acta[:8]))
+
+        # TAREA 4 (vuelta 108): el sello fija CONTENIDO, no solo nacimiento.
+        iguales, h_nac, h_hoy = contenido_igual_al_nacer(nombre, nacido_en, fallos)
+        if iguales is False:
+            fallos.append("%s CAMBIO DE CONTENIDO despues de nacer en %s: sha256 de nacimiento "
+                          "%s, sha256 de hoy %s" % (nombre, nacido_en[:8], h_nac, h_hoy))
+
         detalle.append((nombre, nacido_en[:8], padre[:8] if padre else "?", padre == acta))
     return fallos, detalle
 
