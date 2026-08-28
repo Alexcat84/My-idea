@@ -1,0 +1,9 @@
+==========================================================================================
+TALLA DE VEREDICTOS de docs/loop/_auditor_v106_mut_G.md: 4 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, de 9 palabra(s) de veredicto en total en el reporte.
+==========================================================================================
+   linea 4: VERDE citando `docs/loop/SALIDA_V105_APERTURA_SELLADA_VERDE.txt` -- calza (fichero real: OK) [2 cita(s), se uso: primera cita DESPUES de la palabra, misma oracion]
+   linea 17: ROJO citando `docs/loop/SALIDA_V105_CABECERA_TALLADA.txt` -- calza (fichero real: MAL)
+   linea 75: VERDE citando `docs/loop/SALIDA_V105_TALLAR_NOMBRE_OP.txt` -- calza (fichero real: OK) [2 cita(s), se uso: cita ANTES mas cercana, misma oracion]
+
+ROJO, 1 hallazgo(s):
+   REPORTE.md linea 82: afirma VERDE (clase OK) citando `docs/loop/SALIDA_V105_CABECERA_TALLADA.txt`, y el veredicto REAL de ese fichero es MAL [1 cita(s), se uso: primera cita DESPUES de la palabra, oracion siguiente (+3) sin veredicto propio (f)]

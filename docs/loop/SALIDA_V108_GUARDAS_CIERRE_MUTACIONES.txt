@@ -1,0 +1,20 @@
+GUARDAS DEL CIERRE, VUELTA 108: LOS 13 CASOS DE MUTACION EN UNA SOLA PASADA.
+====================================================================================================
+A (_auditor_v104_mut_A.md, tallar_veredictos_reporte.py) -- ROJO EXIT 1 [CALZA]
+B (_auditor_v104_mut_B.md) -- ROJO EXIT 1 [CALZA]
+C (_auditor_v104_mut_C.md) -- ROJO EXIT 1 [CALZA]
+D (_auditor_v105_mut_D.md) -- VERDE EXIT 0 [CALZA]
+E (_auditor_v105_mut_E.md) -- ROJO EXIT 1 [CALZA]
+F (_auditor_v105_mut_F.md) -- ROJO EXIT 1 [CALZA]
+G (_auditor_v106_mut_G.md) -- ROJO EXIT 1 [CALZA]
+H (_auditor_v106_mut_H.md) -- VERDE EXIT 0 [CALZA]
+griton (REPORTE.md de f253842b, --commit) -- VERDE EXIT 0 [CALZA]
+I (_auditor_v107_mut/mI.md, verificar_cabecera_pegada_o_condensada.py --vuelta 107) -- ROJO EXIT 1, promesa falsa (CONDENSADA 3 de 10, dice pegada entera) [CALZA]
+J (_auditor_v107_mut/mJ.md, tallar_cabecera_reporte.py --fase04 --vuelta 107 --comparar) -- ROJO EXIT 1, DISTINTA marcador D 2.761 vs 2.760, fila 7 apertura [CALZA]
+K (_auditor_v107_mut/mK.md, mismo tallador) -- ROJO EXIT 1, AUSENTE fila motor (4 ausentes contra 3 de linea base), numero de filas [CALZA]
+L (_auditor_v107_mut/mL.md, mismo tallador) -- ROJO EXIT 1, pero 0 DISTINTA / 3 AUSENTE (linea base por etiquetas condensadas), NO 4 celdas DISTINTA como narra el acta 107: DISCREPANCIA DECLARADA, --comparar empareja por ETIQUETA de texto, no por POSICION, asi que intercambiar motor y tsc de sitio sin tocar su texto ni su valor no dispara DISTINTA en esta version del instrumento [DISCREPANCIA]
+
+12 de 13 calzan exactamente con lo publicado en el acta de la vuelta 107.
+1 discrepancia declarada (L): el verdicto ROJO EXIT 1 SI calza; el detalle de
+cuatro celdas DISTINTA no se reprodujo, medido hoy contra la salida real del
+instrumento (docs/loop/_v108_mut/out_mL.txt).
