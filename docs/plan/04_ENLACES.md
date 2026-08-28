@@ -359,6 +359,39 @@ probadas por mutacion, esta en `docs/PENDIENTES.md`, seccion "VUELTA 97, TAREA 2
 Los veredictos viven en `docs/plan/OP_E_03_LECTURA_TRAMO2_V97.jsonl` y **no** en
 `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`.
 
+**LO QUE SE HIZO EN LA VUELTA 98, TAREA 4: EL TERCER TRAMO SE ABRE Y SE LEE HASTA LA MITAD.**
+Los dos apartados de arriba se quedan enteros, sin borrar una palabra. **`OP-E-03`
+NO CIERRA**: se leyeron las filas **101 a 150** de las **183** y **quedan 33 sin
+leer**, filas 151 a 183. La fecha de este apartado **se leyo de git en esta vuelta**
+(`git log --all --format=%ad --date=short` sobre los commits cuyo asunto empieza
+por "VUELTA 98"): **2026-08-27**. No esta tecleada.
+
+| lo que salio | cifra |
+|---|---:|
+| pares leidos en esta mitad del tramo 3 | **50** (filas 101 a 150) |
+| pares leidos en total | **150** de 183 |
+| clase A, REPITE | **0** |
+| clase B, DUDOSO | **0** |
+| clase C, SANO CON FIGURA | **1** |
+| clase D, CONTINUA | **49** |
+| direccion leida y afirmada | **20** |
+| direccion NO RESUELTA, declarada | **30** |
+| direcciones invertidas y afirmadas | **1** |
+| aristas escritas o retiradas | **0** |
+| pares que quedan sin leer | **33** (filas 151 a 183) |
+
+**EL PRIMER `C` DE TODA LA LECTURA DE `OP-E-03`.** El tramo 1 dio **C 0** y el
+tramo 2 tambien. El par **111** es la figura del banco **9.22**, primer polo:
+procedimiento en los **dos** sentidos sobre **dos lineas distintas**, cuyo arreglo
+prescrito es **enlace mutuo** y no fusion. **NO se escribio ninguna arista**:
+`OP-E-03` es LECTURA DIRIGIDA y su producto es el juicio.
+
+**LA PROPORCION DE DIRECCIONES NO RESUELTAS SUBE OTRA VEZ**, del **27,5%** del
+tramo 1 y el **45,0%** del tramo 2 al **60,0%** de esta mitad. Es la direccion que
+el encargo preveia para el tramo mas debil de la bolsa (mediana de `titulo_ratio`
+**76,2** contra **84,3** del tramo 1), asi que **se publica con la cifra y sin
+maquillarla**.
+
 
 ---
 

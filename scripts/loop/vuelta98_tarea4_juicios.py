@@ -668,4 +668,341 @@ JUICIOS = {
         ),
     },
 
+    133: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA por casado por el OBJETO y no por la ACCION, tercera aparicion de "
+            "esa especie en este tramo tras los pares 103 y 126. El paso 5 de la madre es "
+            "MONITOREAR ('Monitorear la reduccion del tiempo de entrega y la mejora en "
+            "confiabilidad') y el hijo es un metodo de REDUCIR en siete movimientos "
+            "(eliminar bucles de reproceso, eliminar o simplificar pasos de valor marginal, "
+            "quitar inspecciones redundantes solo tras eliminar las causas de error, "
+            "combinar pasos del mismo trabajador, bajar de nivel las aprobaciones, pasar de "
+            "consecutivo a simultaneo y automatizar lo rutinario). Reducir no es "
+            "monitorear: el hijo produce la reduccion que la madre despues vigila, y eso es "
+            "dependencia de flujo, no linea contra procedimiento, con lo cual el 9.6.2 no "
+            "entrega direccion. Ni figura del 9.22. CONTINUA. Se anota que "
+            "reduccion_tiempo_ciclo ya venia senalado en el tramo 2 como sospecha de gemelo "
+            "con reduccion_de_tiempo_de_ciclo: SIN ADJUDICAR."
+        ),
+    },
+
+    134: {
+        "clase": "D",
+        "direccion": "teletrabajo_sostenible -> medir_huella_carbono_corporativa",
+        "razon": (
+            "El paso 4 de la madre ('Medir impacto en productividad y reduccion de huella "
+            "de carbono') nombra la medicion sin decir como se hace, y el hijo es ese "
+            "procedimiento en siete pasos: definir el limite organizacional e identificar "
+            "todas las fuentes de emision, clasificarlas por los tres alcances del GHG "
+            "Protocol, recopilar consumos y actividades indirectas, calcular con metodologia "
+            "estandarizada, revisar la obligacion de reportar, convertir todos los gases a "
+            "CO2 equivalente y fijar un ano base para comparar. Ese ano base es justo lo que "
+            "hace posible medir una REDUCCION. La madre conserva materia propia entera: "
+            "identificar puestos teletrabajables, fijar politicas y proveer herramientas. "
+            "QUE EL HIJO CUBRA SOLO UNA MITAD DEL PASO (la huella, no la productividad) NO "
+            "quita la direccion: es laguna de cobertura del hijo, no ambiguedad de "
+            "direccion, que es la letra con la que la adjudicacion 3.3 del acta 97 confirmo "
+            "los pares 66 y 77 del tramo 2, y el 9.6.3 dice lo mismo por el otro lado. "
+            "Tercera fila del 9.22: CONTINUA."
+        ),
+    },
+
+    135: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA. El paso 3 de la madre es DISENAR controles ('Disenar controles de "
+            "calidad de proceso para Xs y Ys') y el hijo es AUDITAR el proceso (definir las "
+            "areas a auditar, listar actividades y estandares numericos, hacer visitas "
+            "anunciadas y no anunciadas, registrar y comparar contra metas, y usar los "
+            "checklists de autocontrol como fuente de temas). Disenar el control y auditar "
+            "que se cumple son dos actos distintos, y el hijo no despliega ningun paso de "
+            "la madre, con lo cual el test de reconocimiento del 9.6.2 no se cumple; "
+            "tampoco la madre despliega una linea del hijo, asi que no es la figura del "
+            "9.22. CONTINUA. FIGURA REGISTRADA: diseno_controles_proceso_mejorado es el "
+            "HIJO del par 107 y la MADRE de este. Habria cadena de tres niveles "
+            "(juran_quality_by_design, diseno_controles, auditorias) si este eslabon "
+            "sostuviera, y NO sostiene. SIN ADJUDICAR."
+        ),
+    },
+
+    136: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA, misma especie que el par 135 y con el mismo hijo. El paso 4 de la "
+            "madre es ESTABLECER controles en el origen ('Establecer controles de calidad "
+            "en el origen de cada proceso') y el hijo AUDITA lo ya establecido. Establecer "
+            "no es auditar. Ninguno despliega una linea del otro: la madre sigue hacia el "
+            "mapeo de procesos, los ciclos PDCA, el flujo continuo y las metas "
+            "aspiracionales, y el hijo hacia el informe de auditoria. Ni reconocimiento del "
+            "9.6.2 ni figura del 9.22. CONTINUA. FIGURA REGISTRADA: "
+            "auditorias_calidad_proceso es NODO IMAN, cuelga como hijo de dos madres "
+            "distintas en este tramo (pares 135 y 136), y es la segunda vez que la figura "
+            "del iman aparece aqui tras pre_control_estadistico."
+        ),
+    },
+
+    137: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA por FALSO AMIGO, y de dos libros distintos. El paso 3 de la madre "
+            "('Organizas las actas de tus reuniones de junta') es una tarea de ARCHIVO "
+            "dentro de la carpeta de due diligence; el hijo trata de COMO APROVECHAR al "
+            "inversor en esas reuniones (agendar encuentros informales frecuentes al "
+            "principio, acordar la cadencia de junta segun la madurez del negocio, y llevarle "
+            "las preguntas de fondo en vez del reporte del dia a dia). Organizar las actas y "
+            "sacarle partido a la junta no comparten nada mas que el nombre del lugar donde "
+            "pasan. Ni reconocimiento del 9.6.2 ni figura del 9.22. CONTINUA."
+        ),
+    },
+
+    138: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA. El paso 3 de la madre usa el lienzo como LENGUAJE COMUN del equipo "
+            "('Usa el Lienzo de Modelo de Negocio como lenguaje comun para hablar del "
+            "proyecto') y el hijo, de otro libro, lo usa como MARCADOR SEMANAL que documenta "
+            "la evolucion del modelo (llenar hipotesis, actualizar cada semana, resaltar los "
+            "cambios en rojo, integrarlos al canvas base, conservar el flip book). Son dos "
+            "usos distintos del mismo artefacto, no una linea y su procedimiento: el hijo no "
+            "hace de nada un lenguaje comun. El test de reconocimiento del 9.6.2 no se "
+            "cumple. CONTINUA. FIGURA REGISTRADA: business_model_canvas_scorecard es la "
+            "MADRE del par 109 y el HIJO de este. Es la inversion de papeles entre filas, la "
+            "misma que el tramo 2 registro como figura 5 y que el acta 97 seccion 3.6 "
+            "confirmo como mecanismo propio. SIN ADJUDICAR."
+        ),
+    },
+
+    139: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA por FALSO AMIGO sobre dos titulos casi gemelos. El paso 2 de la "
+            "madre ('Investiga como COMPRA tu cliente antes de disenar el lanzamiento') pide "
+            "entender el PROCESO DE COMPRA; el hijo, de otro libro, investiga a la PERSONA "
+            "(que informacion personal guardar, anotarla en el CRM desde el primer contacto, "
+            "preparar gestos de bajo costo y alto impacto emocional, y ensenar al equipo como "
+            "se siente ser sorprendido). Proceso de compra y datos personales del interlocutor "
+            "no son lo mismo, y el hijo no despliega en ningun paso como compra el cliente. "
+            "Ni reconocimiento del 9.6.2 ni figura del 9.22. CONTINUA. Se anota que los "
+            "titulos ('Investiga como compra tu cliente' contra 'Investiga a tu futuro "
+            "cliente antes de venderle') son casi sinonimos y el contenido no: segundo falso "
+            "gemelo por titulo del tramo, tras el par 117."
+        ),
+    },
+
+    140: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA. El paso 4 de la madre dice 'Analizar el diagrama de flujo del "
+            "proceso POR ESTACION DE TRABAJO', y la madre entera es planificacion de calidad "
+            "en MANUFACTURA; el hijo es el blueprint de un proceso de SERVICIO (mapear front "
+            "y back office, marcar la linea de interaccion cliente-empleado, marcar la linea "
+            "de invisibilidad, senalar los puntos donde pueden ocurrir problemas, documentar "
+            "los problemas recurrentes conocidos e implantar acciones preventivas). Es el "
+            "analogo de servicio, no la ejecucion del paso de manufactura: ninguno de sus "
+            "seis pasos analiza estacion de trabajo alguna. El barrido caso por la frase "
+            "'diagrama de flujo del proceso', identica en los dos y aplicada a dominios "
+            "distintos. El test de reconocimiento del 9.6.2 no se cumple. CONTINUA."
+        ),
+    },
+
+    141: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA. El verbo del paso 3 de la madre es EVALUAR EL MODELO DE PROPIEDAD "
+            "('Evaluar que modelo se ajusta mejor a la velocidad de crecimiento deseada'), "
+            "donde los modelos son inversionista pasivo contra propietario-operador; el hijo "
+            "compara la VELOCIDAD entre unidad propia y franquicia (estimar el tiempo de "
+            "abrir una unidad propia, compararlo con la apertura simultanea de varias "
+            "franquicias, evaluar el riesgo competitivo de no expandirse rapido y disenar la "
+            "expansion territorial por saturacion). El hijo no evalua en ningun paso pasivo "
+            "contra operador: produce la cifra de velocidad que la madre despues usa, y eso "
+            "es dependencia de flujo, no linea contra procedimiento, con lo cual el 9.6.2 no "
+            "entrega direccion. Mismo libro. CONTINUA."
+        ),
+    },
+
+    142: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA. El paso 3 de la madre es un ANALISIS DE ESCRITORIO ('Comparar el "
+            "ROI del producto contra la solucion actual del cliente') y el hijo es TRABAJO "
+            "DE CAMPO con clientes (ampliar la lista a diez o mas, preguntas de presupuesto, "
+            "explorar el limite de precio bajando desde una cifra alta, preguntar el canal "
+            "preferido y el proceso interno de aprobacion, y anotar cada entrevista en una "
+            "ficha comparable). En ningun paso el hijo compara el ROI contra la solucion "
+            "actual: recoge precio, canal y proceso de compra. Mismo libro, pero el test de "
+            "reconocimiento del 9.6.2 no se cumple y ninguno despliega una linea del otro. "
+            "CONTINUA."
+        ),
+    },
+
+    143: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA por FALSO AMIGO sobre un token generico. El paso 6 de la madre "
+            "('Utilizar la informacion resultante para decisiones de diseno, seleccion de "
+            "procesos y control') habla de USAR la informacion de capacidad que la propia "
+            "madre acaba de producir; el hijo DISENA UN SISTEMA de informacion de calidad "
+            "(equipo multifuncional para disenarlo, incluir a clientes y proveedores de "
+            "informacion, decidir que necesita tiempo real y que resumen periodico segun "
+            "nivel jerarquico, montar tableros por area y auditar que el sistema sirva). "
+            "Usar una informacion concreta y construir el sistema que la distribuye no son "
+            "la misma linea. El barrido caso por 'informacion' y 'decisiones'. Ni "
+            "reconocimiento del 9.6.2 ni figura del 9.22. CONTINUA."
+        ),
+    },
+
+    144: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA. El paso 5 de la madre pide CAPACITARSE ('Capacitate de forma "
+            "continua en principios de excelencia y calidad') y el hijo IMPLANTA los "
+            "principios de mejora continua de Shingo (mapear procesos clave y evaluar su "
+            "estabilidad, ciclos PDCA, flujo continuo sin interrupciones, controles en el "
+            "origen y metas aspiracionales de perfeccion). Formarse en unos principios y "
+            "ponerlos en obra son dos actos distintos, y el hijo no capacita a nadie. El "
+            "barrido caso por la palabra 'principios'. Ni reconocimiento del 9.6.2 ni figura "
+            "del 9.22. CONTINUA. FIGURA REGISTRADA: principios_mejora_continua es la MADRE "
+            "del par 136 y el HIJO de este. Es la TERCERA inversion de papeles entre filas "
+            "del tramo, tras business_model_canvas_scorecard y "
+            "diseno_controles_proceso_mejorado, y con tres casos deja de parecer accidente. "
+            "SIN ADJUDICAR."
+        ),
+    },
+
+    145: {
+        "clase": "D",
+        "direccion": "poder_a_traves_de_la_accion -> proposito_como_motor_energia",
+        "razon": (
+            "El paso 4 de la madre ('Vincular conscientemente el trabajo intelectual "
+            "cotidiano a un proposito o impacto mayor para sostener la energia a largo "
+            "plazo') nombra el vinculo sin decir como se hace, y el hijo lo ejecuta en tres "
+            "movimientos encadenados: articular por escrito la mision o impacto de largo "
+            "plazo, vincular cada tarea operativa diaria con esa narrativa, y revisar la "
+            "narrativa cuando llegan senales que revelan un impacto no anticipado. Escribir, "
+            "vincular y revisar, cada uno consumiendo lo anterior. Mismo libro. La madre "
+            "conserva materia propia que el hijo no toca: actuar de inmediato sobre toda "
+            "resolucion, expresar publicamente lo que era especulacion privada, y que la "
+            "accion sea genuina. SE ANOTA UNA TENSION Y NO SE DEJA CALLADA: el paso 4 del "
+            "hijo ('Evitar sustituir el pensamiento profundo por mera accion fisica') matiza "
+            "el paso 1 de la madre. No es la especie del paso casado con su refutacion (ahi "
+            "el hijo ofrece un metodo alternativo y aqui ejecuta el de la madre y le pone un "
+            "caveat), y por la adjudicacion 3.3 del acta 97 un caveat es cobertura, no "
+            "ambiguedad de direccion. Tercera fila del 9.22: CONTINUA."
+        ),
+    },
+
+    146: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA, y es fina. El paso 5 de la madre ('Actualiza el Business Model "
+            "Canvas con LOS SOCIOS identificados') y el hijo es el tune-up del canvas, pero "
+            "sobre OTROS BLOQUES: revisar la propuesta de valor a la luz del feedback, "
+            "reevaluar los segmentos de cliente, ajustar las hipotesis de ingresos y "
+            "documentar los cambios como afinacion y no como revision final. El hijo NO toca "
+            "el bloque de socios en ninguno de sus cuatro pasos, que es justo lo que la linea "
+            "de la madre pide actualizar. Casado por el objeto ('actualiza el Business Model "
+            "Canvas') y no por la parte, con lo cual el test de reconocimiento del 9.6.2 no "
+            "se cumple. Mismo libro. CONTINUA. FIGURA REGISTRADA: key_partners_hypothesis es "
+            "el HIJO del par 109 y la MADRE de este. CUARTA inversion de papeles del tramo. "
+            "SIN ADJUDICAR."
+        ),
+    },
+
+    147: {
+        "clase": "D",
+        "direccion": "clasificacion_benchmarking -> consortium_benchmarking",
+        "razon": (
+            "SE AFIRMA, PERO NO SOBRE EL PASO QUE EL BARRIDO CASO, y se dice para que se "
+            "pueda auditar. El barrido caso el paso 4 ('Evaluar el nivel de control, costo y "
+            "tiempo disponible para el tipo elegido'), y el hijo no evalua nada de eso. La "
+            "linea que si se despliega es el paso 2 ('Decidir el tipo de participantes: "
+            "internos, externos, competidores o no competidores'): el consorcio es una de "
+            "esas configuraciones de participantes, y el hijo entero es su procedimiento "
+            "(identificar organizaciones interesadas en un tema comun, acordar colectivamente "
+            "alcance, metricas, definiciones y cronograma, designar facilitador, fijar "
+            "criterios de validacion de los datos compartidos y ejecutar el estudio "
+            "compartiendo hallazgos). EL 9.6.3 AUTORIZA ESTA LECTURA de forma explicita: la "
+            "vara no cuenta cuantos pasos comparten dos nodos ni cual, pregunta que queda "
+            "FUERA del solape y de que lado, y fuera queda un procedimiento entero de un lado "
+            "y la taxonomia con su evaluacion de costo del otro. Mismo libro. Tercera fila "
+            "del 9.22: CONTINUA. FIGURA REGISTRADA: el barrido caso el paso equivocado del "
+            "nodo correcto, especie nueva en esta lectura. SIN ADJUDICAR."
+        ),
+    },
+
+    148: {
+        "clase": "D",
+        "direccion": "dmaic_fase_measure -> capacidad_de_proceso",
+        "razon": (
+            "SE AFIRMA, Y OTRA VEZ NO SOBRE EL PASO CASADO. El paso 4 que el barrido eligio "
+            "('Evaluar la capacidad del SISTEMA DE MEDICION, Gage R&R') es un FALSO AMIGO "
+            "tecnico: la capacidad del sistema de medicion y la capacidad del proceso son dos "
+            "cosas distintas que comparten la palabra capacidad, y el hijo trata de la "
+            "segunda. Pero la madre SI trae la linea buena en otro paso, el 5 ('Determinar si "
+            "el proceso esta en control estadistico y medir su capacidad a corto plazo'), y "
+            "el hijo es su procedimiento: recolectar datos historicos de desempeno, calcular "
+            "los indices de capacidad frente a especificaciones, decidir con ellos la "
+            "frecuencia de medicion y mantenimiento, y determinar si el proceso necesita "
+            "rediseno o sirve para produccion. El 9.6.3 autoriza mirar la otra linea, porque "
+            "lo que decide es que queda fuera del solape y de que lado. La madre conserva "
+            "materia propia entera: mapeo del proceso, Pareto de las Ys, FMEA, Gage R&R, "
+            "confirmacion del objetivo y lista priorizada de teorias de causa. Tercera fila "
+            "del 9.22: CONTINUA."
+        ),
+    },
+
+    149: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA, y es el CONTRASTE que fija el limite del par 148, asi que se lee "
+            "junto a el. Mismo falso amigo ('capacidad'), mismo hijo, y aqui la madre NO "
+            "tiene la linea buena en ningun sitio: sus TRES pasos son todos sobre el sistema "
+            "de medicion (evaluar su capacidad con MSA, usar software estadistico, confirmar "
+            "que las mediciones son confiables antes de fijar los estandares). No hay una "
+            "sola linea sobre capacidad de proceso que el hijo pueda desplegar, con lo cual "
+            "el test de reconocimiento del 9.6.2 no se cumple por ningun lado. Mismo libro. "
+            "CONTINUA. FIGURA REGISTRADA, y es la mas util del tramo: el MISMO falso amigo "
+            "produce un par afirmable (el 148, porque aquella madre traia la linea correcta "
+            "en otro paso) y uno no resuelto (este). El falso amigo por si solo no decide "
+            "nada: lo que decide es si en el nodo hay una linea que el hijo despliegue. "
+            "Ademas capacidad_de_proceso es NODO IMAN (hijo en 148 y 149) y corrobora la "
+            "sospecha de gemelos que la propia evidencia de OP-E-03 ya traia escrita sobre "
+            "la familia de la capacidad de proceso. SIN ADJUDICAR."
+        ),
+    },
+
+    150: {
+        "clase": "D",
+        "direccion": None,
+        "razon": (
+            "NO RESUELTA. El paso 3 de la madre es TRADUCIR ('Traducir la voz del cliente en "
+            "caracteristicas de producto, KPC') y el hijo OPTIMIZA caracteristicas que ya "
+            "existen (revisiones de diseno formales con especialistas externos, equipos "
+            "multifuncionales con todos los interesados, reglas de negociacion estructurada "
+            "entre clientes y proveedores, y herramientas de optimizacion como analisis "
+            "competitivo, de vendibilidad, de valor, critico y FMEA). Traducir la voz del "
+            "cliente y optimizar el diseno son dos etapas distintas sobre el mismo objeto: "
+            "el hijo empieza donde el paso de la madre termina, que es dependencia de flujo "
+            "y no linea contra procedimiento. Ninguna de las otras lineas de la madre "
+            "(identificar procesos y productos clave, definir objetivos, identificar KCC, "
+            "seleccionar los sujetos finales) la despliega el hijo tampoco. Mismo libro. "
+            "El 9.6.2 no entrega direccion aqui. CONTINUA."
+        ),
+    },
+
 }

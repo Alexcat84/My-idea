@@ -1,0 +1,48 @@
+====================================================================================================
+TERCER ADDENDUM DE OP-E-03, VUELTA 98 (APLICADO)
+====================================================================================================
+FECHA LEIDA DE GIT: 27 ago 2026 (2026-08-27). Ninguna cifra de abajo esta tecleada: todas se leen del JSONL.
+EL BORDE DE LA ADJUDICACION 3.7 DEL ACTA 97, verificado:
+   (a) las cifras salen de instrumentos corridos en esta vuelta: SI
+   (b) la escritura es puramente aditiva: SI, se mide con --numstat en el commit
+   (c) no mueve decision, alcance ni estado: SI, estado sigue en 'LISTA'
+
+--- lo que se anade a la nota de OP-E-03 (aditivo) ---
+ADDENDUM DE EJECUCION (27 ago 2026, vuelta 98, TAREA 4): TERCER TRAMO ABIERTO Y LEIDO HASTA LA MITAD. LA FECHA DE ESTE ADDENDUM SE LEYO DE GIT EN ESTA VUELTA con `git log --all --format=%ad --date=short` sobre los commits cuyo asunto empieza por "VUELTA 98", y da 2026-08-27: NO esta tecleada, que es la caida 4.1 del acta 97 y su remedio. OP-E-03 NO CIERRA: se leyeron las filas 101 a 150 de las 183 con el mismo instrumento del tramo 1 y del tramo 2 (scripts/loop/vuelta96_tarea3_tramo1_opE03.py --desde 100 --cuantos 83) sin tocarle una linea, y QUEDAN 33 SIN LEER, filas 151 a 183. El encargo autoriza parar donde se vaya y decirlo con la cifra, y es lo que se hace. Los cinco puntos de la verificacion se REMIDIERON en la vuelta y no se heredaron: cribado cerrado en 3388 filas cada fichero, contadas; ids por el RESOLUTOR antes de cruzar nada (P.1), y en las 83 del tramo el resolutor no movio NINGUNO, cosa que se declara igual porque P.1 obliga y porque una busqueda negativa no se cita sin medirla; cuenta sin fugas contra los 2796 pares distintos de la cola tras resolver, y ninguna fila del tramo esta en ella; marca LECTURA DIRIGIDA en las 50 filas del JSONL, contadas una por una; y veredictos APARTE de la tasa por dominio del 9.27, en fichero propio y rotulado. RESULTADO: A 0, B 0, C 1, D 49. EL PRIMER C DE TODA LA LECTURA DE OP-E-03 (el tramo 1 dio C 0 y el tramo 2 tambien): el par 111, figura del banco 9.22 primer polo, procedimiento en los DOS sentidos sobre DOS lineas distintas, cuyo arreglo prescrito es ENLACE MUTUO y no fusion. NO SE ESCRIBIO NINGUNA ARISTA. DIRECCION: 20 leidas y afirmadas, 30 NO RESUELTAS y declaradas como tal (pares 103, 104, 105, 112, 113, 115, 117, 118, 119, 120, 121, 122, 124, 125, 126, 131, 133, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 146, 149, 150). LA PROPORCION DE NO RESUELTAS SUBE OTRA VEZ, del 27,5 por ciento del tramo 1 y el 45,0 del tramo 2 al 60,0 por ciento de esta mitad, que es la direccion que el encargo preveia para el tramo mas debil de la bolsa (mediana de titulo_ratio 76,2 contra 84,3 del tramo 1) y por eso se publica con la cifra y sin maquillarla. UNA DIRECCION INVERTIDA respecto a la etiqueta de la bolsa y AFIRMADA (par 114), la segunda de toda la lectura tras el par 16 del tramo 1, y afirmada porque aqui SI hay linea de un lado y procedimiento del otro, que es lo que faltaba en los pares 82, 89 y 65 del tramo 2. POR DOMINIO, y no entra en la tasa del 9.27: core 20, environmental 3, franquicias 2, quality 25. CERO ARISTAS ESCRITAS O RETIRADAS. Salidas: docs/plan/OP_E_03_LECTURA_TRAMO3_V98.jsonl (50 filas), docs/loop/SALIDA_V98_TAREA4_TRAMO3_MATERIAL.txt, docs/loop/SALIDA_V98_TAREA4_VEREDICTOS.txt, docs/loop/SALIDA_V98_TAREA4_CINCO_PUNTOS.txt, docs/loop/SALIDA_V98_TAREA4_MUTACION.txt (1 control y 7 mutaciones, las 7 caen; la clase y la direccion de cada par son lectura a mano y se DECLARA que no tienen caso rojo automatico). estado se queda en LISTA, mismo criterio que las demas.
+
+--- lo que se anade a docs/plan/04_ENLACES.md (aditivo) ---
+
+**LO QUE SE HIZO EN LA VUELTA 98, TAREA 4: EL TERCER TRAMO SE ABRE Y SE LEE HASTA LA MITAD.**
+Los dos apartados de arriba se quedan enteros, sin borrar una palabra. **`OP-E-03`
+NO CIERRA**: se leyeron las filas **101 a 150** de las **183** y **quedan 33 sin
+leer**, filas 151 a 183. La fecha de este apartado **se leyo de git en esta vuelta**
+(`git log --all --format=%ad --date=short` sobre los commits cuyo asunto empieza
+por "VUELTA 98"): **2026-08-27**. No esta tecleada.
+
+| lo que salio | cifra |
+|---|---:|
+| pares leidos en esta mitad del tramo 3 | **50** (filas 101 a 150) |
+| pares leidos en total | **150** de 183 |
+| clase A, REPITE | **0** |
+| clase B, DUDOSO | **0** |
+| clase C, SANO CON FIGURA | **1** |
+| clase D, CONTINUA | **49** |
+| direccion leida y afirmada | **20** |
+| direccion NO RESUELTA, declarada | **30** |
+| direcciones invertidas y afirmadas | **1** |
+| aristas escritas o retiradas | **0** |
+| pares que quedan sin leer | **33** (filas 151 a 183) |
+
+**EL PRIMER `C` DE TODA LA LECTURA DE `OP-E-03`.** El tramo 1 dio **C 0** y el
+tramo 2 tambien. El par **111** es la figura del banco **9.22**, primer polo:
+procedimiento en los **dos** sentidos sobre **dos lineas distintas**, cuyo arreglo
+prescrito es **enlace mutuo** y no fusion. **NO se escribio ninguna arista**:
+`OP-E-03` es LECTURA DIRIGIDA y su producto es el juicio.
+
+**LA PROPORCION DE DIRECCIONES NO RESUELTAS SUBE OTRA VEZ**, del **27,5%** del
+tramo 1 y el **45,0%** del tramo 2 al **60,0%** de esta mitad. Es la direccion que
+el encargo preveia para el tramo mas debil de la bolsa (mediana de `titulo_ratio`
+**76,2** contra **84,3** del tramo 1), asi que **se publica con la cifra y sin
+maquillarla**.
+
+APLICADO. Re-lectura: OPERACIONES.jsonl 71 filas validas, addendum presente, estado sigue en 'LISTA': SI

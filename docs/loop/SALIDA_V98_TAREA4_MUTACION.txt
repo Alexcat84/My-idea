@@ -1,0 +1,26 @@
+================================================================================================================
+PRUEBA DE MUTACION, VUELTA 98 TAREA 4 (guardas del escritor de veredictos)
+================================================================================================================
+MATERIAL: 83 pares parseados. JUICIOS: 50. Puesto que se muta: 101.
+NADA SE ESCRIBE EN NINGUN CASO: las mutaciones van sobre copias en memoria.
+
+  C1   control: los juicios reales                          espera VERDE  obtiene VERDE  (0 fallo/s) OK
+  M1   clase 'Z', que no es A, B, C ni D                    espera ROJO   obtiene ROJO   (1 fallo/s) OK
+  M2   razon vacia                                          espera ROJO   obtiene ROJO   (1 fallo/s) OK
+  M3   razon sin ninguna cita del banco                     espera ROJO   obtiene ROJO   (1 fallo/s) OK
+  M4   direccion con un id ajeno al par (la guarda clave)   espera ROJO   obtiene ROJO   (1 fallo/s) OK
+  M5   direccion sin la forma 'a -> b'                      espera ROJO   obtiene ROJO   (1 fallo/s) OK
+  M6   un puesto juzgado que el material no trae            espera ROJO   obtiene ROJO   (1 fallo/s) OK
+  M7   direccion que apunta a si misma                      espera ROJO   obtiene ROJO   (1 fallo/s) OK
+
+RECUENTO, contado de los propios casos corridos:
+   casos totales     8
+   controles         1, verdes 1
+   mutaciones        7, caen 7
+   casos que FALLAN  0
+
+DECLARADO Y NO FABRICADO: la CLASE y la DIRECCION de cada par son lectura a mano
+contra el grafo y NO TIENEN CASO ROJO AUTOMATICO. Su control es la relectura
+ciega del auditor. Estas mutaciones prueban EL ESCRITOR, no las lecturas.
+
+VERDE: el control pasa y las 7 mutaciones caen. Ninguna guarda del escritor es una constante que se apruebe sola.

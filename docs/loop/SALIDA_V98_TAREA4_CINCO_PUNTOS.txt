@@ -1,0 +1,26 @@
+== punto 1: cribado cerrado, contado de los dos ficheros ==
+   3388 docs/INTRA_DOMINIO_PARES.jsonl
+   3388 docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   6776 total
+
+== punto 4 y 5: el cribado y la tasa NO se mueven (git diff --stat vacio) ==
+(fin)
+
+== punto 4: marca completa en las 50 filas del JSONL, contada ==
+filas: 50
+con marca LECTURA DIRIGIDA: 50
+fuera_de_la_cola: 50
+fuera_de_la_tasa_por_dominio: 50
+mueve_el_marcador_del_cribado False: 50
+
+== punto 2 y 3: lo que el instrumento de lectura remidio, leido de su cabecera ==
+Bolsa DIFERENCIA_CONTRA_COLA.jsonl: 183 filas. Este tramo: filas 101 a 183 (83 pares).
+Cribado remedido y cerrado en 3388 de 3388. Pares distintos en la cola tras resolver: 2796.
+MARCA DE TODAS LAS FILAS: LECTURA DIRIGIDA . FUERA DE LA COLA . FUERA DE LA TASA POR DOMINIO.
+Ids RESUELTOS por el resolutor ANTES de cruzar nada (P.1). Ninguna fila esta ya en la cola.
+
+== punto 2 (P.1): filas en que el resolutor movio algun id, contadas del material ==
+0
+0
+== filas en que NO movio ninguno ==
+83
