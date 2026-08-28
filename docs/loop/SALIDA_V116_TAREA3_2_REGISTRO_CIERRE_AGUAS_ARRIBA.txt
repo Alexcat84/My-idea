@@ -1,0 +1,36 @@
+REGISTRO DE CIERRE EN LAS NUEVE DEPENDENCIAS DE AGUAS ARRIBA, TAREA 3.2 VUELTA 116.
+====================================================================================================
+Fuente: docs/plan/OPERACIONES.jsonl, campo `nota` (leido entero, buscando la frase literal 'REGISTRO DE CIERRE').
+
+OP-D-01 (fase 02_DESTEJIDOS)
+  NO trae 'REGISTRO DE CIERRE'.
+
+OP-D-02 (fase 02_DESTEJIDOS)
+  NO trae 'REGISTRO DE CIERRE'.
+
+OP-D-03 (fase 02_DESTEJIDOS)
+  SI trae 'REGISTRO DE CIERRE'. fecha/vuelta: 18 ago 2026, vuelta 36
+  CITA LITERAL: "REGISTRO DE CIERRE, 18 ago 2026 (vuelta 36). CORRECCION DECLARADA, y el texto viejo se queda entero arriba: LA OPERACION CIERRA CON SU DESTEJIDO HECHO Y SIN FUSION, y el paso 2 de su orden interno (decidir sobre los SEIS nodos) SE RESUELVE SIN FUNDIR NADA porque el acto DEJO DE EXISTIR. COMO PASO, con la medicion del dia al lado y no de memoria. El paso 2 exigia por P.5 leer el acto ENTERO antes de fundirlo."
+
+OP-D-04 (fase 02_DESTEJIDOS)
+  SI trae 'REGISTRO DE CIERRE'. fecha/vuelta: 19 ago 2026, vuelta 39
+  CITA LITERAL: "REGISTRO DE CIERRE, 19 ago 2026 (vuelta 39). CORRECCION DECLARADA, y el texto viejo se queda entero delante porque una correccion que tapa lo que corrige no se puede auditar: todo lo de arriba se escribio con la fusion EN ESPERA, y la fusion YA ESTA HECHA. OP-D-04 CIERRA CON LAS DOS FUSIONES EJECUTADAS, no con una."
+
+OP-D-05 (fase 02_DESTEJIDOS)
+  NO trae 'REGISTRO DE CIERRE'.
+
+OP-D-06 (fase 02_DESTEJIDOS)
+  NO trae 'REGISTRO DE CIERRE'.
+
+OP-D-07 (fase 02_DESTEJIDOS)
+  SI trae 'REGISTRO DE CIERRE'. fecha/vuelta: 19 ago 2026, vuelta 47
+  CITA LITERAL: "REGISTRO DE CIERRE, 19 ago 2026 (vuelta 47). CORRECCION DECLARADA, y el texto viejo se queda entero delante: OP-D-07 QUEDA SELLADA POR LA VIA DE OP-D-05 SELLADA, citada por su nombre. LA VIA, escrita en docs/plan/02_DESTEJIDOS.md linea 1765 (encabezado OP-D-05 SELLADA: LA FUSION UNICA DE LA SELECCION DEL CEO, 19 ago 2026, vuelta 40) y en su linea 1773: un destejido CONSUMIDO POR LA FASE 01, medido contra el nodo de hoy y con el commit que se lo llevo nombrado, es una forma YA ESCRITA de cerrar, y OP-D-05 la uso para quedar SELLADA."
+
+OP-F-02 (fase 01_FUENTES)
+  NO trae 'REGISTRO DE CIERRE'.
+
+OP-F-03 (fase 01_FUENTES)
+  NO trae 'REGISTRO DE CIERRE'.
+
+RESUMEN: 3 de 9 traen 'REGISTRO DE CIERRE' escrito: ['OP-D-03', 'OP-D-04', 'OP-D-07']
+Las otras 6 NO la traen: ['OP-D-01', 'OP-D-02', 'OP-D-05', 'OP-D-06', 'OP-F-02', 'OP-F-03']
