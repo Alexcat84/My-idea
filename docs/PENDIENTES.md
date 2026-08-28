@@ -1523,6 +1523,28 @@ encargos**. Con dos condiciones verificadas:
 **No se adjudica la direccion de la fusion.** Queda medido que **una de las dos
 cierra los tres encargos y la otra no**, y va a la mesa.
 
+### Entrada del cierre de `OP-S-01` (28 ago 2026): el barrido de NAFTA queda anotado, no ejecutado
+
+**Decision del fundador, punto 2 de
+`docs/loop/paradas/2026-08-28-titulo-nafta-ops01-DECISION.md`: el barrido de NAFTA
+sobre el resto del catalogo NO entra a esta pasada.** Los CUATRO nodos vivos que
+nombran NAFTA en su texto y que no son el superviviente de `OP-S-01` (medido en el
+acta de la vuelta 118, `ACTA_AUDITOR.md` secciones 1.9 y 3.3, sobre los 3.188
+vivos) quedan anotados aqui como **TRABAJO POST CAMPAÑA**, por su id:
+
+- `certificado_de_origen_coo` (paso 3)
+- `documentacion_exportacion` (la lista de documentos)
+- `regla_de_minimis` (el porcentaje, "7% para NAFTA")
+- `reglas_origen_sectoriales` (dos pasos, con el metodo de trazabilidad automotriz)
+
+**El punto 4 de la `verificacion` de `OP-S-01`** ("ningun nodo VIVO lleve NAFTA en
+su id ni en su titulo") **se acota por correccion declarada a la nomina de esa
+operacion** (los dos nodos de la fusion, ya fundidos en la vuelta 57, commit
+`a1d7269d`): ver el campo `verificacion` y la `nota` de `OP-S-01` en
+`docs/plan/OPERACIONES.jsonl`. El barrido de estos cuatro sigue vivo en esta
+ficha y fuera de esta pasada, hasta que el fundador decida abrir una operacion
+nueva para el.
+
 ---
 
 ## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
@@ -7156,3 +7178,32 @@ lista citada E.1,E.2,E.3), salida completa en
 | E.6 | SIN_CAIDA | NINGUNO |
 | E.7 | SIN_CAIDA | NINGUNO |
 | E.8 | SIN_CAIDA | NINGUNO |
+
+## VUELTA 119, TAREA 2: LOS REGISTROS DEL ACTA 118
+
+### R.1 CORRECCION DE ATRIBUCION, declarada por el auditor con treinta vueltas de retraso (acta de la vuelta 118, `ACTA_AUDITOR.md` seccion 4.4)
+
+El acta de la vuelta 88 (`ACTA_AUDITOR.md`, adjudicacion 5.4) escribio que la
+verificacion de `OP-E-06` ("al terminar por la guarda `OP-C-05`") "se cumple por
+la via equivalente que la ficha misma autoriza". **ES FALSO**: verificado de nuevo
+hoy con `grep -ic` sobre `docs/plan/FASE_0_CODIGO.md` completo, las tres frases
+"equivalente", "no crezca" y "antes y despues" dan **cero** apariciones. La ficha
+autoriza el DIFERIMIENTO de la guarda ("esta guarda se enciende DESPUES del saneo
+final"), no la via equivalente. **LA VIA EQUIVALENTE ES UNA ADJUDICACION DEL
+AUDITOR POR EXTENSION**, y su cita correcta es `ACTA_AUDITOR.md`, acta de la
+vuelta 88, seccion 5.4, no la ficha `FASE_0_CODIGO.md`. **LA ADJUDICACION SE
+SOSTIENE** (la via sigue vigente y cableada en
+`scripts/loop/vuelta89_tarea4_guarda_op_c05.py` y, desde hoy, en
+`scripts/loop/vuelta119_tarea1_guarda_op_c05_contenido.py`); **LO QUE SE CORRIGE
+ES LA ATRIBUCION**. El docstring de `vuelta89_tarea4_guarda_op_c05.py` y el
+detalle de la TAREA 4.1 de la vuelta 118 repiten la frase incorrecta: quedan
+como estan, texto viejo intacto, correccion declarada aqui al lado sin borrar
+nada.
+
+### R.2 EL BARRIDO DE NAFTA QUEDA ANOTADO, NO EJECUTADO (decision del fundador, 28 ago 2026)
+
+Ver la entrada nueva dentro de la ficha "Ficha permanente:
+`vigencia-del-marco-internacional`", mas arriba en este mismo fichero: los
+cuatro nodos vivos que nombran NAFTA y no son el superviviente de `OP-S-01`
+quedan anotados como trabajo post campaña, por decision del fundador
+(`docs/loop/paradas/2026-08-28-titulo-nafta-ops01-DECISION.md`, punto 2).
