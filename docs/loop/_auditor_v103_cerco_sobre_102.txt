@@ -1,0 +1,21 @@
+=== tallador ARREGLADO sobre el REPORTE 102 (f253842b): cobertura 14 de 17 y 6 hallazgos ===
+==========================================================================================
+TALLA DE VEREDICTOS de f253842b:docs/loop/REPORTE.md: 14 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, de 17 palabra(s) de veredicto en total en el reporte.
+==========================================================================================
+   linea 4: VERDE citando `docs/loop/SALIDA_V102_CABECERA_TALLADA.txt` -- calza (fichero real: OK) [2 citas en el parrafo, se uso: primera cita DESPUES de la palabra]
+   linea 25: ROJO citando `SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`) -- calza (fichero real: MAL) [3 citas en el parrafo, se uso: primera cita DESPUES de la palabra]
+   linea 25: FALLA citando `SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`) -- calza (fichero real: MAL) [3 citas en el parrafo, se uso: primera cita DESPUES de la palabra]
+   linea 26: ROJO citando `SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`) -- calza (fichero real: MAL) [3 citas en el parrafo, se uso: primera cita DESPUES de la palabra]
+   linea 35: VERDE citando `SALIDA_V102_TAREA1_3_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V102_TAREA1_3_MUTACION_APERTURA.txt`) -- calza (fichero real: OK) [3 citas en el parrafo, se uso: primera cita DESPUES de la palabra]
+   linea 39: VERDE citando `SALIDA_V102_TAREA1_3_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V102_TAREA1_3_MUTACION_APERTURA.txt`) -- calza (fichero real: OK) [3 citas en el parrafo, se uso: cita ANTES mas cercana (sin cita despues en el parrafo)]
+   linea 39: VERDE citando `SALIDA_V102_TAREA1_3_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V102_TAREA1_3_MUTACION_APERTURA.txt`) -- calza (fichero real: OK) [3 citas en el parrafo, se uso: cita ANTES mas cercana (sin cita despues en el parrafo)]
+   linea 39: VERDE citando `SALIDA_V102_TAREA1_3_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V102_TAREA1_3_MUTACION_APERTURA.txt`) -- calza (fichero real: OK) [3 citas en el parrafo, se uso: cita ANTES mas cercana (sin cita despues en el parrafo)]
+
+ROJO, 6 hallazgo(s):
+   REPORTE.md linea 25: afirma VERDE (clase OK) citando `SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`), y el veredicto REAL de ese fichero es MAL [3 citas en el parrafo, se uso: primera cita DESPUES de la palabra]
+   REPORTE.md linea 25: afirma PASA (clase OK) citando `SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`), y el veredicto REAL de ese fichero es MAL [3 citas en el parrafo, se uso: primera cita DESPUES de la palabra]
+   REPORTE.md linea 28: afirma ROJO citando `SALIDA_V102_TAREA1_2_NOMBRES_FASE04.txt` (pelado, resuelto a `docs/loop/SALIDA_V102_TAREA1_2_NOMBRES_FASE04.txt`), pero el fichero no trae ninguna linea VERDE/ROJO/PASA/FALLA ni EXIT=N: veredicto no legible [3 citas en el parrafo, se uso: primera cita DESPUES de la palabra]
+   REPORTE.md linea 28: afirma VERDE citando `SALIDA_V102_TAREA1_2_NOMBRES_FASE04.txt` (pelado, resuelto a `docs/loop/SALIDA_V102_TAREA1_2_NOMBRES_FASE04.txt`), pero el fichero no trae ninguna linea VERDE/ROJO/PASA/FALLA ni EXIT=N: veredicto no legible [3 citas en el parrafo, se uso: primera cita DESPUES de la palabra]
+   REPORTE.md linea 36: afirma ROJO (clase MAL) citando `SALIDA_V102_TAREA1_3_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V102_TAREA1_3_MUTACION_APERTURA.txt`), y el veredicto REAL de ese fichero es OK [3 citas en el parrafo, se uso: primera cita DESPUES de la palabra]
+   REPORTE.md linea 36: afirma ROJO (clase MAL) citando `SALIDA_V102_TAREA1_3_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V102_TAREA1_3_MUTACION_APERTURA.txt`), y el veredicto REAL de ese fichero es OK [3 citas en el parrafo, se uso: primera cita DESPUES de la palabra]
+EXIT=1
