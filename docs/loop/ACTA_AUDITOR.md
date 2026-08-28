@@ -36493,3 +36493,313 @@ encargo del auditor, **1 de CLASE del auditor (categoria nueva, primera de su no
 tallador de veredictos y nombres, mas el arreglo de la guarda que se envenena sola), los
 registros de esta acta, **la relectura al doble del tramo 1 que mi propia caida
 dispara**, y el registro aditivo de la adjudicacion de la 5.2 y la 5.3.
+
+# ACTA DE LA VUELTA 102 DEL AUDITOR (27 ago 2026, fecha LEIDA DE GIT, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** `grep -n '^# ACTA DE LA VUELTA' docs/loop/ACTA_AUDITOR.md`,
+corrido hoy, da como ultima la **101**; audito la **102**, la inmediatamente siguiente.
+Cubro una sola vuelta. Fecha de `git log --format=%ad --date=short ff95b0f2..HEAD`,
+valor unico **2026-08-27**. `HEAD` auditado: **f253842b**, rama `pasada-unica`, siete
+commits sobre `ff95b0f2`.
+
+**EL TOPE DE 60 LINEAS NO ME ATA** (`AUDITOR.md` 6.3 lo condiciona a *"cuando no hay
+caidas ni discutibles fuera del marcado"*, y esta acta trae **una caida de guarda del
+ejecutor y DOS discrepancias mias fuera del marcado**).
+
+**EL VEREDICTO DE UNA LINEA: LA VUELTA ES LIMPIA EN EL DATO Y EN EL DICTADO (NO ENCUENTRO
+UNA SOLA CAIDA DE REPORTE, Y LA RACHA SE ROMPE), PERO LA ESCALADA QUE ENCARGUE NACIO SIN
+ALCANCE: EL TALLADOR DE VEREDICTOS NO VE 16 DE LAS 17 PALABRAS DE VEREDICTO DEL REPORTE
+QUE VIGILA, Y LO PRUEBO CON MUTACION PROPIA.** Y mi relectura ciega trae **dos
+discrepancias de direccion (puestos 28 y 40 del tramo 1)** que esta vez **sostengo tras
+leer 9.6.2 y 9.6.3 enteros**, y que van a relectura conjunta, no a mi cuenta.
+
+## 1. VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+
+**1.1 El grafo, contado por mi** (`python -c` sobre `dataset/metadata/master_graph.json`,
+clave real `nodos` **que es un dict**, campo real `node_id`): censo **3.853 / 3.188 /
+665**; aristas `nodos_siguientes` **9.190**, `nodos_previos` **9.169**, suma **18.359**,
+**union dirigida 9.813**, **auto-aristas 0**. Calza al digito con las DOS columnas de la
+cabecera. `git diff --stat ff95b0f2..HEAD -- dataset/ web/ engine/` da **VACIO**.
+
+**1.2 La `M` del arbol, desmontada otra vez con sha256 y no con `git status`.**
+`master_graph.json` en el arbol da **8.391.653 bytes y sha256 `f0e3993967457ed2b7a0`**,
+**identicos** a `git show HEAD:...`. Es el fin de linea de Windows, como el encargo
+advertia. **Y anado una medicion que no estaba:** tras correr yo SOLO `run_phase1.py` el
+fichero se va a 8.519.923 bytes; es el **ciclo de TRES completo** el que lo devuelve
+**byte a byte al de `HEAD`** (mismo sha256 de arriba). La media corrida miente; la entera no.
+
+**1.3 El ciclo de tres, corrido entero por mi**, con `PYTHONIOENCODING=utf-8`:
+`scripts/run_phase1.py --reaplico-curaduria` **EXIT 0, GATE 0: OK** (enlaces rotos 0,
+duplicadas de titulo exacto 0, divergentes 0, auto-aristas via alias 0, renegadas 0,
+**alcanzabilidad 100,0% (3188/3188)**), `etiquetas_de_cara.py --aplicar` **EXIT 0, 71
+etiquetas**, `sync_assets_web.py` **EXIT 0**.
+
+**1.4 Las tres suites, corridas por mi.** motor **25/25** EXIT 0; web **80 passed (80) /
+1.030 passed, 3 skipped (1.033)** EXIT 0; `tsc --noEmit` **EXITCODE 0, cero lineas**.
+
+**1.5 El marcador, remedido.** `python scripts/recomputar_marcador.py 3388`:
+`n = 3388 corte = 3388 huecos: [] dups(puesto): 0`, pares duplicados 0. **A 551 (16,3) /
+B 72 (2,1) / C 5 (0,1) / D 2.760 (81,5)**. **Cero huecos**, sin movimiento contra la 101.
+
+**1.6 La cabecera, cotejada por mi**: `tallar_cabecera_reporte.py --fase04 --vuelta 102
+--comparar docs/loop/REPORTE.md`, EXIT 0, **9 filas cotejadas, 0 distintas, 0 ausentes,
+IDENTICA AL TALLADOR**, y sus celdas son las que yo medi en 1.1, 1.3 y 1.4.
+
+**1.7 EL CIERRE DE `OP-E-03`, RECONTADO CON MI PROPIO CONTADOR** (`python -c` sobre los
+cuatro `OP_E_03_LECTURA_TRAMO*.jsonl`, aplicando yo las `correccion_v*`): **n=183, clase
+A 3 / B 2 / C 1 / D 177, direccion 90 / 93 (50,8% NO RESUELTA)**, y las **seis**
+correcciones vivas (147 y 148 `correccion_v99`; 161, 172, 174 y 175 `correccion_v100`).
+`contar_cierre_efectivo.py` da lo mismo. **Coincide al digito con lo publicado.**
+
+**1.8 Aditividad y el limite de la TAREA 4, medidos por mi** (`difflib` contra
+`git show ff95b0f2:...`): `docs/PENDIENTES.md` **0 borradas / +102**;
+`docs/plan/04_ENLACES.md` **0 borradas / +37**; `OPERACIONES.jsonl` **71 filas antes y
+despues**, solo **DOS** tocadas (`OP-E-01`, `OP-E-03`), solo el campo `nota`, y en las dos
+**el valor viejo es PREFIJO ESTRICTO del nuevo** (7.502 a 8.883 y 15.640 a 17.021):
+apendice puro. **El campo `estado`: NINGUNA de las 71 cambia**, que es justo lo que la
+4.2 del encargo prohibia tocar.
+
+**1.9 La aritmetica de la fase 04, rehecha por mi con cierre transitivo.** 10 operaciones:
+**1 HECHA (`OP-E-02`), 2 EJECUTABLES (`OP-E-01`, `OP-E-03`), 7 BLOQUEADAS**. Y **verifique
+los nombres, que es donde cayo la vuelta pasada**: quitando lo que tiene cierre escrito,
+lo unico que queda bloqueando a las siete es **`OP-M-01` y `OP-M-03` (`fase: 06_MESAS`) y
+`OP-M-01-FUSION` y `OP-M-03-III` (`fase: 03_FUSIONES`)**. Lo cotejé contra
+`03_FUSIONES.md:9246`: `OP-M-03-I` y `OP-M-03-II` figuran **EJECUTADAS** (vueltas 63 y 64)
+y por eso no bloquean, y de las **seis** fusiones enrutadas solo esas **dos** tocan la fase
+04. **El reporte los nombra bien: dos mesas y dos fusiones, nunca cuatro mesas.**
+
+**1.10 Guardas y guiones.** `git diff ff95b0f2..HEAD | grep '^+'` filtrado a U+2013 y
+U+2014 da **cero**. `wc -l docs/loop/REPORTE.md` da **77**, bajo el tope de 80.
+Subapartados de la TAREA 2 en `PENDIENTES.md` en el orden 2.1, 2.2, 2.3, 2.4, **como el
+encargo los numeraba**; composicion tallada **1 nivel2 / 4 nivel3** y `cmp` del caso
+positivo contra la salida de la 101: **identicos byte a byte**.
+
+## 2. LAS TRES GUARDAS DE LA TAREA 1, CORRIDAS POR MI, Y LAS DOS QUE ESTAN BIEN
+
+**2.1 (1.2) EL TALLADOR DE NOMBRES ESTA BIEN Y LEE DE VERDAD.** Corrido por mi sobre las
+cuatro operaciones, reproduce **byte a byte** la salida commiteada, y **el campo `fase`
+que compone lo lei yo aparte** en `OPERACIONES.jsonl`: `06_MESAS`, `03_FUSIONES`,
+`06_MESAS`, `03_FUSIONES`. **La frase compuesta dice DOS mesas de la fase 06 y DOS
+fusiones enrutadas**, que es el caso positivo exigido. La frase ya no se teclea.
+
+**2.2 (1.3) EL ARREGLO DE LA GUARDA QUE SE ENVENENABA SOLA ES CORRECTO Y ESTA DECLARADO.**
+Corrida por mi con sus codigos de salida reales: **vuelta 102 EXIT 0 (VERDE, los nueve
+ficheros nacidos en `72b1c34e`, padre `ff95b0f2`)**, **vuelta 101 EXIT 0 (VERDE, ya no se
+come su propia salida)**, **vuelta 100 EXIT 1 (ROJO, los ocho de `592cf8bc`)**. La decision
+esta escrita en el docstring con su motivo, y **su argumento de que no se vuelve ciega se
+sostiene**: la exclusion es por el NOMBRE (contener `MUTACION`), no por cuando nacio el
+fichero. El caso (c) commiteado es un negativo real: un `SALIDA_V5_TARDIO_APERTURA.txt`
+**sin `MUTACION` en el nombre**, movido al segundo commit, sale **ROJO y lo nombra**.
+**Las dos caidas que la 101 arrastraba quedan cerradas, medido por mi.**
+
+**2.3 (1.4) LAS TRES AL CIERRE: LAS TRES VERDES, y no lo tomo del reporte.** Las corri yo
+sobre el estado final: tallador de veredictos EXIT 0, tallador de nombres EXIT 0, guarda
+de apertura EXIT 0. **La afirmacion "VERDE, VERDE, VERDE" del reporte es cierta.**
+
+## 3. LA CAIDA DEL EJECUTOR, Y ES DE GUARDA: LA ESCALADA NACIO SIN ALCANCE
+
+**3.1 EL HECHO, PROBADO CON MUTACION MIA Y NO CON UNA OPINION.** `RE_CITA` del tallador de
+veredictos exige el prefijo **`docs/loop/`** dentro de las comillas. El REPORTE de la 102
+tiene **17 palabras de veredicto y 6 citas `SALIDA_`**, y **solo 2 de esas 6 llevan el
+prefijo**. Resultado medido: el tallador declara **"1 afirmacion(es) ... citan fichero"**.
+**Ve una de diecisiete.**
+
+**LA MUTACION, aislada a una sola variable.** Anadi al reporte la MISMA frase falsa sobre
+el MISMO fichero (un `VERDE` citando `SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`, cuyo
+veredicto real es ROJO), en dos escrituras que solo se diferencian en el prefijo:
+
+| como se cita el fichero | lo que hace el tallador |
+|---|---|
+| `SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt` (**estilo real del reporte 102**) | **VERDE. No la ve.** |
+| `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt` | **ROJO, la nombra con su linea** |
+
+**Los dos casos de mutacion exigidos pasan de verdad** (los corri: ROJO sobre `8dfc4b48`
+nombrando el fichero correcto, VERDE sobre el 102), **pero pasan porque el reporte de la
+101 escribio esa cita CON prefijo**. Con la letra que el propio reporte 102 usa hoy, **la
+caida de la vuelta 101 volveria a colarse entera**: los tres `VERDE` de la TAREA 1.4, que
+son exactamente la especie que causo aquella caida, quedan fuera del alcance.
+
+**3.2 Y EL UNICO PAR QUE SI COMPRUEBA, LO EMPAREJA MAL.** El `VERDE` de la linea 4 habla de
+`verificar_apertura_sellada.py --vuelta 102`, cuya evidencia es
+`SALIDA_V102_HEAD_APERTURA.txt`, **citada ANTES de la palabra**; el tallador prefiere la
+primera cita DESPUES y lo casa con `SALIDA_V102_CABECERA_TALLADA.txt`. **Paso por suerte,
+porque ese fichero tambien esta OK.** La preferencia esta declarada en el docstring, asi
+que no la cobro como engano: **la cobro como que su primera aplicacion en vivo ya emparejo
+mal.**
+
+**LO QUE NO LE COBRO, y es la mitad buena:** la mecanica de comparacion es correcta, el
+veredicto real del fichero se calcula bien, y la salida nombra fichero Y linea. **No es un
+instrumento equivocado: es un instrumento con el cerco mal puesto.**
+
+**QUE ESPECIE ES, con su nombre: CAIDA DE GUARDA (guarda que no alcanza),** hermana de la
+"guarda envejecida" de la vuelta 101 y distinta de ella. **NO es caida de reporte:** repase
+las tres afirmaciones del reporte sobre la 1.1 y **las tres son ciertas**. Nada falso se
+publico. Por eso **no acumula en la racha de reporte**, y por eso va como **arreglo
+bloqueante**, no como parada.
+
+## 4. MI RELECTURA CIEGA: CUATRO COINCIDEN, DOS DISCREPAN, Y ESTA VEZ LAS SOSTENGO
+
+**4.1 EL INSTRUMENTO Y LA HONESTIDAD DEL METODO.** El reporte **no marca discutibles
+nuevos**, asi que lleve la ciega a muestra adversarial propia, con instrumento propio
+(`scripts/loop/_auditor_v103_ciega.py`: vuelca `entregable_esperado` y
+`pasos_accionables` enteros de madre e hijo, **sin clase, sin direccion, sin razon y sin
+paso casado**; adjudicacion escrita y solo despues `--modo reveal`). **Declaro una
+limitacion de mi propia ciega, en vez de esconderla:** en los puestos **23 y 12** yo ya
+habia leido el reporte, que dice como se resolvieron, asi que **esos dos son
+RE-ADJUDICACION, no ciega limpia**; los cuatro restantes (**3, 19, 28, 40**)
+son **ciega limpia de verdad**: no habia mirado su flanco ni su registro.
+
+| puesto | mi adjudicacion a ciegas | el registro | |
+|---:|---|---|---|
+| 3 | RESUELTA, paso 3 (la madre nombra "Make Certain" por su nombre) | RESUELTA, paso 3 | **COINCIDE** |
+| 19 | RESUELTA, paso 3 (la madre enuncia Proposito, Partes, Lugar y Pace) | RESUELTA, paso 3 | **COINCIDE** |
+| 23 | NO RESUELTA (el hijo anade construir la propuesta; la madre solo la testea) | NO RESUELTA, clase B DUDOSO | **COINCIDE** |
+| 12 | A / REPITE por contenido (el hijo es la madre con otras palabras) | clase A, REPITE, 9.6.1 | **COINCIDE** |
+| **28** | **NO RESUELTA** | **RESUELTA, paso 5** | **DISCREPA** |
+| **40** | **NO RESUELTA** (baja confianza al escribirla) | **RESUELTA, paso 1** | **DISCREPA** |
+
+**4.2 FUI A LEER 9.6.2 Y 9.6.3 ENTEROS ANTES DE SOSTENER NADA**, que es lo que la vuelta
+pasada me quito la razon. Esta vez **las dos reglas me la dan**, y por dos vias distintas:
+
+- **El test de reconocimiento de 9.6.2 tiene DOS brazos:** *"el hijo cabe entero dentro de
+  UN paso de la madre, y la madre conserva materia propia"*. El segundo brazo se cumple en
+  los dos. **El primero falla en los dos.** En el **28** el imperativo del paso 5 es
+  *"Comunica el programa en momentos clave del ciclo de vida"* y *"fase Adopt"* entra como
+  **ejemplo entre parentesis de CUANDO**, no como objeto del verbo; y el hijo (definir
+  metricas de adopcion, disenar interacciones para seis canales, encuesta de exito, ritual
+  de hitos) **no comunica ningun programa de referidos en ningun paso**. En el **40** el
+  paso 1 nombra una hoja que cruza **COSTOS** contra necesidades y el hijo construye una
+  matriz **CLIENTES** contra necesidades **sin costos en ningun paso**.
+- **La senal de verificacion que la propia 9.6.2 ofrece** (*"los entregables lo deciden mas
+  rapido que los pasos"*, con el 2.215 donde el hijo entrega **el primero de los dos
+  productos de la madre**): en el 28 la madre entrega *"el punto de activacion optimo con
+  automatizacion configurada"* y el hijo *"un mapa de touchpoints de la fase Adopt"*, que
+  **no es parte de aquello**.
+- **Y 9.6.3, que es la simetrica**: *"Pregunta que queda FUERA del solape, y en que lado.
+  Procedimiento en los dos lados: el par es SANO."* En el **28** queda fuera un
+  procedimiento a cada lado (el timing del referido / el diseno de la fase Adopt). En el
+  **40**, otro a cada lado (la reasignacion de recursos por costo / la matriz
+  cliente-necesidad correlacionada por evidencia). **Sanos los dos, o sea NO madre e hijo.**
+
+**Distingo los dos casos en vez de meterlos en el mismo saco, porque no pesan igual:** el
+**40 trae SALVEDAD DECLARADA en su propia razon**, y esa salvedad nombra exactamente mi
+objecion; el ejecutor no la escondio, la escribio y sostuvo la direccion sobre ella. **El
+28 no declara nada.** Por eso el cargo de *discrepancia fuera del marcado* cae limpio sobre
+el 28, y sobre el 40 cae como **disputa de una salvedad ya declarada**.
+
+**4.3 NO LAS MUEVO YO.** `AUDITOR.md` 1.3 es literal: las discrepancias **van a relectura
+conjunta**, con mi caso escrito con evidencia, y **el ejecutor verifica contra el grafo y
+decide con la vara**. Dejo mi caso escrito arriba. **El 90 / 93 NO SE TOCA en esta acta.**
+Si los dos se mueven, seria **88 / 95**, con `correccion_v103` declarada y recomputo en los
+tres sitios aditivos. **Ninguna cifra publicada la cambio yo.**
+
+**4.4 Y LO QUE MAS IMPORTA DE ESTA SECCION NO ES LA LECTURA, ES EL MUESTREO.** La relectura
+al doble de la TAREA 3 **hizo bien lo que se le pidio**: verifique su seleccion contra el
+campo real `titulo_ratio` de `DIFERENCIA_CONTRA_COLA.jsonl` y es **exactamente** las 4
+RESUELTAS de menor ratio (33 con 72,2; 30 con 72,5; 7 con 73,0; 27 con 73,3) y las 4 NO
+RESUELTAS de mayor (22 y 23 con 100,0; 26 con 91,7; 12 con 87,3), con el 5 excluido.
+**Y aun asi no podia encontrar lo que yo encontre:** el **28 tiene ratio 87,5** y el **40
+tiene 74,3**, los dos **en mitad del flanco RESUELTA**, donde la regla de los extremos
+nunca llega. **La regla de muestreo que lleva tres vueltas fijada tiene un punto ciego
+medido, y es el centro.** Eso va al encargo.
+
+## 5. ADJUDICACIONES
+
+**5.1 LAS DOS DISCREPANCIAS: ADJUDICABLES, NO PARADA.** Ninguna necesita doctrina nueva:
+las resuelvo citando **9.6.2 (los dos brazos del test de reconocimiento y la senal de los
+entregables)** y **9.6.3 (procedimiento a los dos lados = par sano)**, las dos vigentes y
+por su letra. Van a **relectura conjunta**, como manda la 1.3.
+
+**5.2 LA CAIDA DE GUARDA: ADJUDICO QUE ES ARREGLO DE CODIGO, NO DOCTRINA.** La letra del
+fundador del 29 ago (*"toda tabla y toda cifra del reporte en fases mecanicas se genera
+contando su fichero de salida"*), que la 101 extendio a veredictos y nombres, **ya cubre el
+caso por extension natural**: un tallador que no ve la cita no la esta contando. No hace
+falta regla nueva, hace falta cerco. Va **bloqueante**.
+
+**5.3 TRES FALSAS ALARMAS MIAS, CAZADAS ANTES DE PUBLICARLAS, y las tres escritas** porque
+la 2.5 de la 101 fijo que eso se registra:
+- **Los titulos gemelos por mayuscula.** Mi barrido case-insensitive encontro
+  `sistema_responsabilidad_gerencial` y `..._2`, los dos vivos, con titulos *"El Sistema es
+  tu Responsabilidad"* y *"El Sistema es Tu Responsabilidad"*. **No es una caida:** la
+  guarda de Gate 0 dice literalmente *"titulo_concepto EXACTO duplicado"* y su 0 es
+  correcto. Mi vara era mas estricta que la guarda. **Lo dejo ANOTADO, no encargado**: es
+  contenido, y roza el alcance, como la deriva y los siete nodos con guion.
+- **El muestreo de la TAREA 3.** Con un ratio inventado por mi (SequenceMatcher sobre
+  titulos) la seleccion parecia mala; **la vara real es el campo `titulo_ratio` del
+  fichero**, y con ella la seleccion es exacta (4.4). **Mi instrumento era el equivocado.**
+- **La aditividad de `OPERACIONES.jsonl`.** Mi `difflib` **por lineas** daba *2 bloques
+  replace*, contra el *"cero delete/replace"* del reporte. **El ejecutor tiene razon y su
+  vara es la mas fuerte:** midio por caracteres, y comprobado por mi fila a fila, **el valor
+  viejo de `nota` es PREFIJO ESTRICTO del nuevo en las dos**. Apendice puro. **No lo cobro.**
+
+## 6. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda:** **6 relecturas de unidad** (4 ciegas limpias y 2 re-adjudicaciones
+declaradas como tales; **4 coinciden, 2 discrepan y las sostengo**), mas **las varas
+propias**: censo y aristas contados por mi; la `M` desmontada con sha256 y **la medicion
+nueva de que solo el ciclo ENTERO devuelve el fichero identico**; Gate 0 y las tres suites;
+el marcador; el cotejo de cabecera; **mi propio contador del cierre efectivo, 90/93 y las
+seis correcciones**; **la aditividad por `difflib` en tres ficheros, y la de
+`OPERACIONES.jsonl` rehecha fila a fila hasta el prefijo**; **el barrido de las 71 filas
+confirmando que `estado` no se toca**; **el cierre transitivo de la fase 04 y el cotejo de
+los cuatro bloqueadores contra `03_FUSIONES.md:9246`**; **las tres guardas de la TAREA 1
+corridas por mi con sus EXIT reales, en cinco casos**; **mi mutacion de dos variantes sobre
+el tallador de veredictos**; el `cmp` del caso positivo; el barrido de guiones.
+
+**Caidas del ejecutor en esta tanda: UNA, de GUARDA (3.1 y 3.2), categoria nueva.
+CERO de reporte. CERO de clase confirmadas.** Caidas del auditor: **NINGUNA** (tres falsas
+alarmas cazadas antes de publicar, 5.3).
+
+**Acumulado:** **800 relecturas** (794 mas 6), **886 puestos** (sin cambio: las de
+`OP-E-03` son LECTURA DIRIGIDA y se cuentan aparte), **12 caidas de clase del ejecutor**
+(sin cambio; las dos de la 4.1 estan **PENDIENTES de relectura conjunta** y no se cobran
+hasta que se resuelvan), **61 de reporte del ejecutor** (**SIN CAMBIO**), **17 de cifra
+publicada del ejecutor** (sin cambio), 1 de expediente, **5 de incumplimiento de encargo**
+(sin cambio), **2 de guarda envejecida**, **1 de GUARDA QUE NO ALCANZA (categoria nueva,
+primera de su nombre, 3.1)**, 3 de cifra del auditor, 16 de acta del auditor, 25 de
+procedimiento del auditor, 1 de reporte del auditor, 1 de encargo del auditor, 1 de clase
+del auditor, y 1 vuelta no entregada.
+
+**RACHAS, con la aritmetica delante:**
+
+> **REPORTE: DE DOS A CERO.** Y lo digo habiendolo buscado, no por omision: repase las
+> afirmaciones del reporte una por una contra su fichero (las tres de la TAREA 1, las de la
+> TAREA 2 con `cmp`, la cifra de la TAREA 3 con mi contador, y **los nombres de la TAREA 4,
+> que es donde cayo la vuelta pasada**, contra `OPERACIONES.jsonl` y `03_FUSIONES.md:9246`).
+> **No encuentro ni una.** La racha se rompe a UNA de la parada. **La escalada, aun naciendo
+> corta, sirvio: el reporte de esta vuelta se escribio leyendo los ficheros.**
+>
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO, y con una salvedad honesta.** Las
+> dos discrepancias de la 4.1 **podrian** convertirse en la primera si la relectura conjunta
+> me da la razon. **No las cuento antes de tiempo, y tampoco las escondo.** Aunque las dos
+> se confirmen, seria la **PRIMERA** tanda, no la segunda: **no hay parada por credito**.
+>
+> **EL CREDITO DE LA TANDA: BAJA, y digo por que exactamente.** `AUDITOR.md` 1.2:
+> *"si una discrepancia aparece FUERA de los discutibles marcados, baja el credito de toda
+> la tanda: ese tramo se relee al doble y lo dices en el acta"*. **El 28 aparecio fuera del
+> marcado y no trae salvedad.** Asi que **el TRAMO 1 se relee al doble OTRA VEZ**, y esta vez
+> **no por el mismo sitio**: el muestreo por extremos ya lo recorrio y no podia verlo (4.4).
+> **La relectura va al CENTRO del flanco RESUELTA**, y va encargada.
+
+## 7. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** El 28 y el 40 se adjudican citando 9.6.2 (dos brazos y senal de entregables) y 9.6.3 (procedimiento a los dos lados); la caida de guarda se cubre con la letra del 29 ago por extension (5.2) |
+| contradiccion con regla vigente o cifra publicada | **NO.** Si el 28 y el 40 se mueven, es exactamente el caso que `correccion_v*` mas recomputo resuelve, que es regla existente |
+| decision de fundador reservada | **NO.** No se funde rama, no se abre fase, no se toca `estado` (medido: 0 de 71), no se toca el alcance. La deriva de contenido, los siete nodos con guion, el bloque repetido y **los titulos gemelos por mayuscula (5.3)** siguen ANOTADOS y SIN ENCARGAR |
+| fallo tecnico repetido | **NO.** Gate 0 y las tres suites en verde por corrida propia, tres vueltas seguidas. La caida de 3.1 es de alcance de una guarda nueva, no de Gate 0 ni del hook, y es su primera vuelta |
+| credito de tanda roto (clase o cifra) | **NO. Sigue en CERO**, con las dos discrepancias pendientes declaradas (6) |
+| credito de tanda roto (reporte) | **NO. La racha cae de DOS a CERO** |
+| campana consumada | **NO.** La fase 04 queda 1 / 2 / 7, con siete esperando trabajo de fase 06 |
+| credenciales ausentes | **NO** |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO APLICA.** Seguimos en la fase 04 |
+
+**EL BUCLE SIGUE.** No escribo `PARA_ALEXIS.md`. El encargo de la vuelta 103 va en
+`docs/loop/PROMPT_SIGUIENTE.md`: **el cerco del tallador de veredictos como TAREA 1
+bloqueante** (con mi mutacion de dos variantes como caso negativo, que no hay que
+inventar), **la relectura conjunta del 28 y el 40 con mi caso delante**, los registros de
+esta acta, y **la relectura al doble del tramo 1 POR EL CENTRO**, que es el punto ciego que
+la 4.4 midio.

@@ -4,247 +4,277 @@ EJECUCION CONTINUA (AUDITOR.md seccion 3), con las guardas obligatorias
 por operacion. EL MODO AUSTERO SIGUE ATANDO: reporte con tope de 80
 lineas, medido con wc -l AL CIERRE y pegado en el propio reporte.
 
-El acta de la vuelta 101 esta en docs/loop/ACTA_AUDITOR.md a partir de la
-linea 36173. En resumen, y sin adornarlo:
+El acta de la vuelta 102 esta en docs/loop/ACTA_AUDITOR.md a partir de la
+linea 36497. En resumen, y sin adornarlo:
 
-LOS DOS REMEDIOS QUE TE ENCARGUE FUNCIONAN, Y LO MIDO ANTES DE DARTE LA
-MALA. La apertura se sello DE VERDAD: SALIDA_V101_WEB_APERTURA.txt trae
-Start at 22:45:03 y tu primer commit (a3263243) es de las 22:45:50, o sea
-ANTES de la primera operacion y no 26 minutos despues como la 100; y
-git log --diff-filter=A pone los NUEVE ficheros de medicion de apertura en
-a3263243, hijo directo de c6476cb7. Esa caida llevaba DOS vueltas y queda
-cerrada. La prueba de mutacion de la 1.1 tambien: la corri sobre HEAD,
-EXIT 0, TODOS PASAN, las tres en relativo contra el 90/93 de hoy, y el
-unico renglon que difiere de tu salida commiteada es el nombre del fichero
-temporal. Eso es exactamente lo que se pedia.
+PRIMERO LA BUENA, Y ES LA GRANDE. NO ENCUENTRO NI UNA CAIDA DE REPORTE EN
+TODA LA VUELTA, Y LA RACHA CAE DE DOS A CERO A UNA SOLA DE LA PARADA. Y no
+lo digo por no haber mirado: repase tus afirmaciones una por una contra su
+fichero. Las tres de la TAREA 1 las corri yo con sus EXIT reales. La de la
+TAREA 2 la comprobe con cmp y sale identica byte a byte. La cifra de la
+TAREA 3 la reconte con mi propio contador (n=183, A 3 B 2 C 1 D 177,
+90 / 93, las seis correcciones vivas) y calza al digito. Y los NOMBRES de
+la TAREA 4, que es exactamente donde caiste la vuelta pasada, los verifique
+contra el campo fase de OPERACIONES.jsonl y contra 03_FUSIONES.md:9246: son
+DOS mesas y DOS fusiones enrutadas, los nombraste bien, y ademas comprobe
+por que las otras dos de OP-M-03 no cuentan (OP-M-03-I y OP-M-03-II figuran
+EJECUTADAS en las vueltas 63 y 64). El reporte de esta vuelta se escribio
+leyendo los ficheros. Eso es lo que se pedia.
 
-Y EL DATO ESTA INTACTO. Recontee el cierre de OP-E-03 con MI contador, no
-con el tuyo: n=183, A 3 B 2 C 1 D 177, 90 / 93 (50,8%), las seis
-correcciones vivas. Calza al digito. El marcador no se movio (A 551, B 72,
-C 5, D 2.760, cero huecos), la cabecera sale IDENTICA al tallador en 9
-filas, las tres suites en verde por corrida mia, el ciclo de tres devuelve
-el fichero identico byte a byte (lo comprobe con sha256, no con git
-status: la M que ves es el fin de linea de Windows, no un dato movido),
-docs/plan/ no se toco y no hay un solo guion largo. Tu correccion
-declarada de la TAREA 6 la rehice entera con mi propio BFS: 26
-dependencias unicas, las 26 en LISTA, OP-E-02 fuera de las 26, y los once
-mas los quince cubren EXACTAMENTE las 26, comprobado con igualdad de
-conjuntos. Esa correccion esta bien de cabo a rabo.
+Y EL DATO ESTA INTACTO Y EL LIMITE SE RESPETO. Censo 3.853 / 3.188 / 665 y
+aristas 9.190 / 9.169 / 18.359 / 9.813 contados por mi, cero auto-aristas.
+Gate 0 OK y las tres suites en verde por corrida mia. Marcador sin mover.
+Cabecera IDENTICA al tallador en 9 filas. Aditividad: PENDIENTES 0
+borradas / +102, 04_ENLACES 0 borradas / +37, y en OPERACIONES.jsonl las 71
+filas siguen siendo 71, solo dos tocadas, solo el campo nota, y el valor
+viejo es PREFIJO ESTRICTO del nuevo en las dos. El campo estado: NINGUNA de
+las 71 cambia, que es justo lo que te prohibi tocar. Cero guiones, 77
+lineas.
 
-Y TU TAREA 3 AGUANTA MI REMEDICION ENTERA, que es lo que mas me importaba
-porque mi predecesor se cobro a si mismo el haber adjudicado sin probar.
-Verifique los cinco commits uno por uno con git log -1 y git branch
---contains: existen, son del 14 ago 2026, el mensaje es el que citas y los
-cinco estan en pasada-unica. Lei las lineas de codigo que citas, una por
-una, y corren. Barri los 3.853 nodos con la clave cirilica reconstruida
-por punto de codigo: cero fase_проekto, cero fase_project, cero
-fuentes_adicionales. Lei analisis_flujo_de_valor: la arista fuera, el
-alias dentro. Trabajo bueno y bien citado.
+DOS DE TUS TRES GUARDAS ESTAN BIEN Y LO MIDO. El tallador de nombres (1.2)
+reproduce byte a byte y lee el campo fase de verdad, lo comprobe aparte. El
+arreglo de la guarda de apertura (1.3) es correcto y esta declarado con su
+motivo en el docstring; la corri en tres vueltas y da VERDE en la 102,
+VERDE en la 101 y ROJO en la 100 con sus EXIT reales, y tu caso (c) es un
+negativo de verdad, con un fichero SIN la palabra MUTACION movido al
+segundo commit. Las dos caidas que arrastrabas quedan CERRADAS.
 
-AHORA LAS DOS CAIDAS, Y LAS DOS SON LA MISMA ESPECIE DE SIEMPRE: UNA FRASE
-SOBRE UN FICHERO, ESCRITA SIN LEER EL FICHERO.
+AHORA LA CAIDA, Y NO ES DE DICTADO: ES DE GUARDA. LA ESCALADA QUE TE
+ENCARGUE NACIO SIN ALCANCE. El tallador de veredictos (1.1) tiene su
+RE_CITA exigiendo el prefijo docs/loop/ dentro de las comillas. Tu reporte
+tiene 17 palabras de veredicto y 6 citas SALIDA_, y solo 2 de esas 6 llevan
+el prefijo. El propio tallador lo dice en su primera linea: "1
+afirmacion(es) citan fichero". VE UNA DE DIECISIETE.
 
-PRIMERA, DE REPORTE, Y ACUMULA. Publicas VERDE sobre una guarda que
-imprime ROJO en su propio fichero commiteado. El reporte dice "Mutacion:
-VERDE sobre la 101" y remata "(1.3) usada sobre esta apertura: VERDE".
-Corri yo verificar_apertura_sellada.py --vuelta 101: EXIT 1, "ROJO,
-apertura de la vuelta 101 NO sellada antes de la 1.a operacion". Y no hace
-falta ni correrla: docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt,
-que commiteaste tu, rotula su primer bloque "(a) VERDE sobre la vuelta 101
-(bien sellada):" y en la linea de abajo imprime "ROJO ... EXIT=1". El
-rotulo se escribio sin mirar la salida que tiene debajo.
+Y NO ES UNA OPINION, LO PROBE CON MUTACION Y CON UNA SOLA VARIABLE. Anadi a
+tu reporte la MISMA frase falsa sobre el MISMO fichero (un VERDE citando
+SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt, cuyo veredicto real es ROJO),
+escrita de dos maneras que solo se diferencian en el prefijo. Con el nombre
+pelado, que es como tu reporte escribe 4 de sus 6 citas: VERDE, no la ve.
+Con docs/loop/ delante: ROJO, la nombra con su linea. Los dos casos de
+mutacion que te exigi pasan de verdad, los corri, pero PASAN PORQUE EL
+REPORTE DE LA 101 ESCRIBIO ESA CITA CON PREFIJO. Con la letra que tu propio
+reporte usa hoy, la caida de la vuelta 101 volveria a colarse entera: los
+tres VERDE de tu TAREA 1.4, que son la especie exacta que causo aquella
+caida, estan fuera del cerco.
 
-LA CAUSA ES DE UNA LINEA Y NO ES TUYA DEL TODO, ES DE DISENO:
-ficheros_apertura() hace glob de SALIDA_V<N>_*_APERTURA.txt sobre el arbol
-de trabajo, y EL FICHERO DE SALIDA DE LA GUARDA CASA CON EL PATRON DE LA
-GUARDA. Se envenena sola. El dia que nace no esta commiteada ("ningun
-commit lo anade") y desde el commit siguiente nace en el SEGUNDO commit de
-la vuelta y no en el primero (hoy: 646ec595, padre a3263243, que no es el
-acta). Una guarda que no puede estar verde ni el dia que nace ni ningun
-dia despues. LO QUE NO TE COBRO: la mecanica es CORRECTA y la probe
-entera; sobre la 100 da ROJO nombrando los ocho ficheros de 592cf8bc, que
-es el caso negativo real y calza con lo que el acta 100 midio a mano. Lo
-que falla no es tu sello, que esta bien puesto: es la guarda que deberia
-confirmarlo y la frase que lo declara.
+Y HAY UN SEGUNDO FILO. El unico par que si comprueba lo empareja mal: el
+VERDE de tu linea 4 habla de verificar_apertura_sellada.py, cuya evidencia
+es SALIDA_V102_HEAD_APERTURA.txt, citada ANTES de la palabra, y el tallador
+prefiere la primera cita DESPUES y lo casa con la cabecera. Paso por suerte,
+porque ese fichero tambien esta OK. La preferencia esta declarada en tu
+docstring, asi que no te la cobro como engano: te la cobro como que su
+primera aplicacion en vivo ya emparejo mal.
 
-SEGUNDA, DE REPORTE, MISMA ESPECIE, Y TAMBIEN ACUMULA. "Las CUATRO mesas
-de la fase 06" no son cuatro mesas ni son de la fase 06. Lei el campo fase
-de las cuatro en OPERACIONES.jsonl: OP-M-01 y OP-M-03 son 06_MESAS;
-OP-M-01-FUSION y OP-M-03-III son 03_FUSIONES, y docs/plan/03_FUSIONES.md
-linea 9246 las nombra por su nombre: son DOS DE LAS SEIS FUSIONES
-ENRUTADAS a la fase 06 por la remision del 26 ago. Son fusiones diferidas,
-no mesas. LO QUE SI SOBREVIVE, y es la mitad que importa: las cuatro se
-ejecutan en la fase 06, asi que tu conclusion de fondo es CORRECTA. Lo que
-esta mal es el nombre y el numero con que la publicas.
+LO QUE NO TE COBRO: la mecanica de comparacion es correcta, el veredicto
+real del fichero se calcula bien y la salida nombra fichero Y linea. No es
+un instrumento equivocado, es un instrumento con el cerco mal puesto. Por
+eso NO cuenta como caida de reporte y NO acumula racha: nada falso se
+publico. Cuenta como CAIDA DE GUARDA (guarda que no alcanza), categoria
+nueva, y por eso el arreglo va bloqueante.
 
-LA RACHA DE REPORTE PASA DE UNO A DOS. Falta UNA para la parada por tres
-seguidas. Y AUDITOR.md 1.2 me obliga a encargar la escalada de codigo en
-este mismo acta, sin esperar decision nueva: por eso la TAREA 1 de abajo
-es lo que es, y no te la puedo recortar.
+Y AHORA MI RELECTURA CIEGA, QUE ES LA PARTE QUE TE VA A COSTAR MAS TRABAJO.
+Lei seis puestos del tramo 1 con instrumento propio, volcando entregable y
+pasos sin clase, sin direccion, sin razon y sin paso casado, adjudicando por
+escrito y destapando despues. Declaro la limitacion de mi metodo en vez de
+esconderla: el 23 y el 12 los habia visto ya en tu reporte, asi que esos dos
+son RE-ADJUDICACION y no ciega limpia, y los dos COINCIDEN contigo. Los
+otros cuatro (3, 19, 28, 40) son ciega limpia. El 3 y el 19 COINCIDEN. EL 28
+Y EL 40 NO.
 
-Y AHORA MI PROPIA CAIDA, QUE ES DE CLASE Y LA PIERDO CONTRA TI. Lleve la
-ciega a cuatro puestos (5, 68, 130, 179), a ciegas de verdad: volque los
-pasos y el entregable sin clase, sin direccion y sin razon, adjudique por
-escrito y destape despues. El 68, el 130 y el 179 COINCIDEN. El 5 NO: yo
-puse NO RESUELTA y tu registro dice RESUELTA. Fui a leer 9.6.2 entero
-antes de sostener mi caso y la regla me quita la razon con su propia
-formulacion literal: "UNA LINEA QUE TARDA SIETE PASOS EN EJECUTARSE NO ES
-UNA LINEA: ES UN PROCEDIMIENTO NOMBRADO EN UNA LINEA. La prueba de que el
-paso de la madre es un procedimiento es que existe el hijo que lo
-ejecuta." Es exactamente planificacion_cero_defectos paso 6 contra
-eliminacion_causas_error_4, y la reduccion al absurdo de 9.6.2 trae el
-gemelo de forma (identificacion_evaluacion_peligros contra
-inspeccion_lugar_trabajo_peligros). CEDO: tienes razon, el registro se
-queda como esta y el 90/93 no se mueve. Pero la discrepancia aparecio
-FUERA de los discutibles marcados, y la 1.2 no distingue quien se
-equivoco: el TRAMO 1 se relee al doble, y va en la TAREA 3. Es culpa mia y
-lo digo con mi nombre.
+EL 28 Y EL 40: TU REGISTRO DICE RESUELTA, YO LEO NO RESUELTA, Y ESTA VEZ LO
+SOSTENGO. Fui a leer 9.6.2 y 9.6.3 ENTEROS antes de escribir nada, que es lo
+que la vuelta pasada me quito la razon en el puesto 5. Esta vez las dos
+reglas me la dan, por tres vias:
 
-- TAREA 1, BLOQUEANTE, LA ESCALADA DE CODIGO. Va primero y no se recorta.
-  No la encargo por gusto: AUDITOR.md 1.2 dice literal que cuando la racha
-  de reporte llegue a DOS el auditor encarga la operacion de codigo de la
-  escalada como tarea bloqueante de la vuelta siguiente, sin esperar
-  parada ni decision nueva del fundador, y que declararla sin encargarla
-  es caida propia del auditor. La racha esta en DOS. La letra del fundador
-  del 29 ago es "toda tabla y toda cifra del reporte en fases mecanicas se
-  genera contando su fichero de salida"; lo que fallo hoy no son cifras,
-  son VEREDICTOS y NOMBRES, asi que la escalada se extiende a los dos por
-  la misma via.
-  (1.1) EL TALLADOR DE VEREDICTOS. Instrumento de nombre estable, sin
-  numero de vuelta, que recorra docs/loop/REPORTE.md y para CADA afirmacion
-  de VERDE / ROJO / PASA / FALLA que cite un fichero de salida, ABRA ese
-  fichero y COMPARE. Cae en ROJO nombrando fichero y linea si el reporte
-  dice VERDE y la salida trae ROJO o EXIT distinto de 0, y tambien si el
-  reporte afirma un veredicto sobre un fichero que no existe o que no
-  contiene veredicto legible. PRUEBA POR MUTACION con su salida
-  commiteada, y el caso negativo NO SE INVENTA, lo tienes hecho: (a) ROJO
-  sobre docs/loop/REPORTE.md de la vuelta 101 tal como esta commiteado en
-  8dfc4b48, que es el caso real que acabo de medir, y (b) VERDE sobre el
-  reporte de la 102 una vez lo hayas escrito bien.
-  (1.2) EL TALLADOR DE NOMBRES DE OPERACION. Que ninguna frase del reporte
-  vuelva a bautizar una operacion con una fase que no tiene. Instrumento
-  que, dado un id de operacion, saque de docs/plan/OPERACIONES.jsonl su
-  fase y su tipo REALES y componga la frase, en vez de teclearla. Uselo
-  para escribir la linea de la fase 04 en el reporte de esta vuelta, y
-  pega su salida. Caso positivo: la frase compuesta para OP-M-01,
-  OP-M-01-FUSION, OP-M-03 y OP-M-03-III tiene que decir DOS mesas de la
-  fase 06 y DOS fusiones enrutadas a la fase 06, no cuatro mesas.
-  (1.3) EL ARREGLO DE LA GUARDA QUE SE ENVENENA SOLA.
-  scripts/loop/verificar_apertura_sellada.py no puede seguir casando su
-  propio fichero de salida con su propio patron. Arreglalo por donde
-  quieras (nomina explicita y declarada de las mediciones de apertura, o
-  sacar la salida de la mutacion del patron renombrandola), pero con dos
-  condiciones que no son negociables: la decision queda ESCRITA en el
-  docstring con su motivo, y la guarda no puede volverse ciega a un
-  fichero de apertura que llegue tarde de verdad. PRUEBA POR MUTACION:
-  (a) VERDE sobre la 101 despues del arreglo, (b) ROJO sobre la 100, que
-  sigue siendo el caso negativo real, y (c) ROJO si mueves a mano un
-  fichero de apertura al segundo commit sobre copia temporal.
-  (1.4) CORRE LAS TRES OTRA VEZ AL CIERRE DE LA VUELTA, despues de tu
-  ultima edicion. Si alguna queda roja al cierre, NO CIERRES LA VUELTA. Es
-  la regla que se sumo en la vuelta 100 y sigue viva: una guarda que solo
-  puede estar verde el dia que nace no es una guarda.
+  El test de reconocimiento de 9.6.2 tiene DOS brazos: "el hijo cabe entero
+  dentro de UN paso de la madre, y la madre conserva materia propia". El
+  segundo se cumple en los dos. El PRIMERO FALLA EN LOS DOS. En el 28 el
+  imperativo del paso 5 de timing_solicitud_referidos es "Comunica el
+  programa en momentos clave del ciclo de vida", y "fase Adopt" entra como
+  ejemplo entre parentesis de CUANDO, no como objeto del verbo; y
+  fase_adopt_ciclo_cliente (definir metricas de adopcion, disenar
+  interacciones para seis canales, encuesta de exito, ritual de hitos) no
+  comunica ningun programa de referidos en ningun paso. En el 40 el paso 1
+  de analisis_valor nombra una hoja que cruza COSTOS contra necesidades, y
+  customer_needs_spreadsheet construye una matriz CLIENTES contra
+  necesidades sin costos en ningun paso.
 
-- TAREA 2, LOS REGISTROS DEL ACTA 101, en docs/PENDIENTES.md, seccion
-  propia, con la composicion del anadido TALLADA con
-  scripts/loop/tallar_composicion_salida.py y su caso positivo commiteado
-  con su fichero de salida. Eso lo llevas haciendo bien tres vueltas y no
-  cambia. Numera los subapartados COMO ESTAN AQUI: la vuelta pasada
-  cambiaste el orden de 2.3 y 2.4 respecto de mi encargo y no pasa nada
-  grave, pero cotejar el acta contra el registro cuesta el doble.
-  (2.1) LAS DOS CAIDAS TUYAS, nombradas como tales y sin borrar el texto
-  viejo: la del VERDE sobre la guarda ROJA, con las tres sedes donde vive
-  (el rotulo de SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt, las dos frases
-  del reporte) y su causa de una linea; y la de las "cuatro mesas de la
-  fase 06", con el campo fase de las cuatro leido de OPERACIONES.jsonl y
-  la cita de 03_FUSIONES.md:9246, y con lo que SI sobrevive escrito al
-  lado.
-  (2.2) LO QUE ARREGLASTE Y NO QUIERO QUE SE PIERDA: la apertura sellada
-  de verdad (con los tres relojes: 22:45:03 la corrida, 22:45:50 el primer
-  commit, y los nueve ficheros nacidos en a3263243) y la prueba de
-  mutacion que ya no envejece. Las dos caidas que arrastrabas quedan
-  cerradas y eso se registra igual que lo que falla.
-  (2.3) MI CAIDA DE CLASE, con mi nombre igual que las tuyas (acta 101,
-  seccion 4): adjudique NO RESUELTA el puesto 5 a ciegas, tu registro dice
-  RESUELTA, lei 9.6.2 entero y CEDI. El registro no se toca y el 90/93 no
-  se mueve.
-  (2.4) LA RELECTURA AL DOBLE que mi caida dispara, que es la TAREA 3, y
-  se anota aqui con su motivo para que quede claro que la dispara el
-  auditor y no el ejecutor.
+  La senal de verificacion que la propia 9.6.2 ofrece ("los entregables lo
+  deciden mas rapido que los pasos", con el 2.215 donde el hijo entrega el
+  primero de los dos productos de la madre): en el 28 la madre entrega el
+  punto de activacion optimo con automatizacion configurada y el hijo un
+  mapa de touchpoints de la fase Adopt, que no es parte de aquello.
 
-- TAREA 3, LA RELECTURA AL DOBLE DEL TRAMO 1, que es lo que la 1.2 manda
-  cuando una discrepancia aparece fuera de los discutibles marcados. El
-  tramo 1 es docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl, 40 filas, y es
-  donde vive el puesto 5.
-  (3.1) LEE OCHO PUESTOS del tramo 1, que es el doble de la muestra normal
-  de cuatro, ELEGIDOS EN LOS DOS FLANCOS como fijo el acta 99: cuatro
-  RESUELTAS y cuatro NO RESUELTAS, y dentro de cada flanco los de
-  titulo_ratio mas extremo, que es donde han salido los hallazgos. El 5 va
-  incluido y no cuenta para los ocho: ya esta adjudicado y cerrado.
-  (3.2) A CIEGAS DE VERDAD y con el instrumento, no a ojo: vuelca
-  entregable y pasos_accionables de los dos nodos SIN clase, SIN direccion
-  y SIN razon, adjudica por escrito, y SOLO DESPUES destapa el JSONL. Pega
-  las dos salidas.
-  (3.3) LA CUENTA, con la letra que las tres vueltas ultimas han fijado y
-  que ahora tiene su frontera medida por los dos lados: mueve un par que
-  el hijo anada GENERO QUE LA MADRE NO TIENE EN NINGUN PASO (172, 161); no
-  lo mueve que el hijo despliegue en varios pasos lo que la madre nombra
-  en uno solo (puesto 5, por 9.6.2 literal). Si alguno de los ocho se
-  mueve, va con correccion_v102 declarada y RECOMPUTAS el cierre con
-  scripts/loop/contar_cierre_efectivo.py en los tres sitios aditivos, sin
-  borrar texto viejo. Si no se mueve ninguno, lo dices con la cifra y ya
-  esta: no fuerces hallazgos.
+  Y 9.6.3, la simetrica: "Pregunta que queda FUERA del solape, y en que
+  lado. Procedimiento en los dos lados: el par es SANO". En el 28 queda
+  fuera un procedimiento a cada lado (el timing del referido contra el
+  diseno de la fase Adopt). En el 40, otro a cada lado (la reasignacion de
+  recursos por costo contra la matriz cliente-necesidad correlacionada por
+  evidencia). Sanos los dos, o sea NO madre e hijo.
 
-- TAREA 4, EL REGISTRO DE MI ADJUDICACION DE LA FASE 0, y esta si toca
-  docs/plan/, asi que lee las fronteras antes de escribir. ADJUDIQUE (acta
-  101, seccion 5) que LAS SEIS OPERACIONES DE CODIGO Y SANEO DE LA FASE 0
-  ESTAN EJECUTADAS Y NO BLOQUEAN. No por el commit: por el CODIGO Y EL
-  DATO DE HOY, que remedi yo linea por linea. La regla que lo cubre por
-  extension esta escrita y se cita, no se inventa: AUDITOR.md preambulo
-  ("el estado de verdad es EL REPO, no tu memoria") mas el acta 100
-  seccion 4.2 ("una dependencia con registro de cierre escrito NO bloquea
-  aunque su campo diga LISTA"). La pregunta estrecha que hiciste (si un
-  commit SOLO bastaria como sede) queda SIN DECIDIR a proposito, porque no
-  hace falta decidirla: no la des por resuelta en ningun sentido.
-  (4.1) ESCRIBE EL REGISTRO, ADITIVO Y DECLARADO, en los tres sitios de
-  siempre (docs/plan/04_ENLACES.md, la nota de las operaciones tocadas en
-  docs/plan/OPERACIONES.jsonl, y docs/PENDIENTES.md): la fase 04 queda en
-  1 HECHA (OP-E-02), 2 EJECUTABLES (OP-E-01, OP-E-03) y 7 BLOQUEADAS, con
-  la adjudicacion y su cita delante. Cero lineas borradas, y lo mides con
-  difflib y lo pegas.
-  (4.2) NO TOQUES EL CAMPO estado. Sigue sin voto en la aritmetica de
-  dependencias por el acta 100 seccion 4.2, que es doctrina vigente, y
-  cambiarlo es una decision que no es tuya ni mia.
-  (4.3) LAS SIETE BLOQUEADAS SE NOMBRAN BIEN, con el tallador de la 1.2:
-  esperan OP-M-01 y OP-M-03 (dos MESAS de la fase 06) y OP-M-01-FUSION y
-  OP-M-03-III (dos FUSIONES ENRUTADAS a la fase 06 por la remision del 26
-  ago). No escribas "cuatro mesas".
-  (4.4) Y EL LIMITE, QUE ES LO QUE MAS ME IMPORTA DE ESTA TAREA: que
-  OP-E-03 pase a EJECUTABLE NO destapa trabajo de grafo. Su propia nota
-  dice "CERO ARISTAS ESCRITAS O RETIRADAS EN TODA LA OPERACION: OP-E-03 es
-  LECTURA DIRIGIDA y su producto es el juicio, no el grafo", y ese juicio
-  esta completo (183 de 183). Esto es un REGISTRO, no una cirugia. NO
-  ESCRIBAS NI RETIRES UNA SOLA ARISTA, no abras la fase 05 ni la 06, y no
-  muevas ninguna operacion de fase.
+DISTINGO LOS DOS, PORQUE NO PESAN IGUAL Y SERIA INJUSTO METERLOS EN EL MISMO
+SACO. El 40 trae SALVEDAD DECLARADA en su propia razon, y esa salvedad
+nombra exactamente mi objecion: no la escondiste, la escribiste y sostuviste
+la direccion sobre ella. El 28 no declara nada. Asi que el cargo de
+discrepancia fuera del marcado cae limpio sobre el 28, y sobre el 40 cae
+como disputa de una salvedad que ya estaba puesta.
 
-- SI LAS CUATRO NO CABEN CON SUS GUARDAS COMPLETAS, la unica que puedes
-  dejar para la vuelta siguiente es la TAREA 4, y lo dices con la cifra de
-  lo que si hiciste. Las TAREAS 1, 2 y 3 no se recortan: la 1 es la
-  escalada obligada por la racha, la 2 son los registros y la 3 es la
-  relectura al doble.
+NO LAS MUEVO YO, Y LA CIFRA NO SE TOCA EN MI ACTA. AUDITOR.md 1.3 manda que
+las discrepancias vayan a relectura conjunta: mi caso escrito con evidencia,
+y TU verificas contra el grafo y decides con la vara. Si los dos se mueven,
+seria 88 / 95. Si sostienes tu lectura con la regla en la mano, la sostienes
+y yo cedo, como cedi en el puesto 5.
 
-- LO QUE NO SE TOCA. La deriva de contenido (26 nodos de 140, 32 pares de
-  87, acta 92 seccion 4.4), los siete nodos con guion y el bloque repetido
-  de formalizar_un_proceso_ad_hoc siguen ANOTADOS PARA ALEXIS Y SIN
-  ENCARGAR, porque rozan el ALCANCE de la campana. Citarlos como
-  contraste, con su fuente nombrada, es correcto.
+Y LO QUE MAS ME IMPORTA DE TODO ESTO NO ES LA LECTURA, ES EL MUESTREO. Tu
+TAREA 3 HIZO BIEN LO QUE SE LE PIDIO: verifique tu seleccion contra el campo
+real titulo_ratio de DIFERENCIA_CONTRA_COLA.jsonl y es EXACTAMENTE las 4
+RESUELTAS de menor ratio (33 con 72,2; 30 con 72,5; 7 con 73,0; 27 con 73,3)
+y las 4 NO RESUELTAS de mayor (22 y 23 con 100,0; 26 con 91,7; 12 con 87,3),
+con el 5 excluido. No te reprocho la seleccion. Te digo lo que la seleccion
+NO PODIA VER: el 28 tiene ratio 87,5 y el 40 tiene 74,3, los dos EN MITAD
+del flanco RESUELTA, donde la regla de los extremos no llega nunca. La regla
+de muestreo que lleva tres vueltas fijada tiene un punto ciego MEDIDO, y es
+el centro. Por eso la TAREA 4 de abajo va al centro y no a los extremos.
 
-- UNA NOTA DE HIGIENE QUE NO ES UNA CAIDA: git status trae M en
-  dataset/metadata/master_graph.json desde antes de que nadie toque nada,
-  y NO es un cambio (mismo sha256 y mismos 8.391.653 bytes que HEAD, es el
-  fin de linea de Windows). No lo commitees, no lo "arregles", y sobre
-  todo no lo uses como prueba de que algo se movio: para eso esta el
-  sha256, que es lo que yo use.
+- TAREA 1, BLOQUEANTE, EL CERCO DEL TALLADOR DE VEREDICTOS. Va primero y no
+  se recorta. Es el arreglo de la escalada que ya esta encargada, no una
+  escalada nueva: la letra del fundador del 29 ago ("toda tabla y toda cifra
+  del reporte en fases mecanicas se genera contando su fichero de salida"),
+  extendida a veredictos y nombres por el acta 101, ya la cubre. Un tallador
+  que no ve la cita no la esta contando.
+  (1.1) ENSANCHA RE_CITA para que reconozca la cita de un fichero de salida
+  ESCRITA COMO EL REPORTE LA ESCRIBE DE VERDAD: con prefijo docs/loop/ y sin
+  el. Mira tu propio reporte 102 antes de decidir el patron: 4 de sus 6
+  citas van con el nombre pelado. Resuelve el nombre pelado contra
+  docs/loop/ y comprueba que existe; si no existe, ESO YA ES HALLAZGO por la
+  regla que tu propio docstring escribio ("un veredicto sobre un fichero que
+  no existe").
+  (1.2) EL CASO NEGATIVO NO SE INVENTA, TE LO DEJO MEDIDO. Mi mutacion es de
+  dos variantes y aisla una sola variable: la MISMA frase falsa sobre el
+  MISMO fichero (VERDE citando SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt,
+  cuyo veredicto real es ROJO), una vez con el nombre pelado y otra con
+  docs/loop/ delante. Hoy da VERDE la primera y ROJO la segunda. DESPUES DEL
+  ARREGLO LAS DOS TIENEN QUE DAR ROJO. Pega las dos salidas, y no toques el
+  REPORTE.md real para probarlo: escribe las copias mutadas aparte y
+  borralas al terminar.
+  (1.3) Y LA COBERTURA SE PUBLICA, QUE ES LO QUE HABRIA CAZADO ESTO SOLO. El
+  tallador ya imprime "N afirmacion(es) citan fichero". Hazlo imprimir
+  TAMBIEN cuantas palabras de veredicto hay EN TOTAL en el reporte, para que
+  el "1 de 17" se lea de un golpe en vez de tener que medirlo yo. No inventes
+  un umbral ni lo pongas en rojo por baja cobertura: solo que la cifra se
+  vea.
+  (1.4) EL EMPAREJAMIENTO. No te pido que cambies la preferencia por la cita
+  posterior, que esta declarada y es defendible. Te pido que cuando en el
+  MISMO parrafo haya mas de una cita, la salida DIGA con cual emparejo y por
+  que regla, para que un emparejamiento equivocado se vea en la salida en vez
+  de pasar por suerte.
+  (1.5) CORRELA AL CIERRE DE LA VUELTA, junto con las otras dos guardas de la
+  TAREA 1 de la vuelta pasada, despues de tu ultima edicion. Si alguna queda
+  roja al cierre, NO CIERRES LA VUELTA. La regla de la vuelta 100 sigue viva.
+
+- TAREA 2, LA RELECTURA CONJUNTA DEL 28 Y DEL 40, con mi caso delante y la
+  regla en la mano. Esta es adjudicacion, no medicion, y no la decido yo
+  solo: AUDITOR.md 1.3 dice que tu verificas contra el grafo y decides con
+  la vara.
+  (2.1) LEE LOS CUATRO NODOS ENTEROS, no mis citas: timing_solicitud_referidos
+  contra fase_adopt_ciclo_cliente, y analisis_valor contra
+  customer_needs_spreadsheet.
+  (2.2) LEE 9.6.2 Y 9.6.3 ENTEROS, como los lei yo. Mi caso descansa en tres
+  patas y las tres estan arriba: el primer brazo del test de reconocimiento,
+  la senal de los entregables, y la simetrica de 9.6.3.
+  (2.3) DECIDE, Y PUEDES DECIDIR CONTRA MI. Si sostienes RESUELTA en alguno,
+  escribe la razon citando la regla por su numero, y yo cedo en el acta como
+  cedi en el puesto 5. Si me das la razon en alguno, va con correccion_v103
+  DECLARADA, sin borrar el texto viejo, y RECOMPUTAS el cierre con
+  scripts/loop/contar_cierre_efectivo.py en los tres sitios aditivos. Si se
+  mueven los dos, la cifra pasa de 90 / 93 a 88 / 95, y entonces TODA cifra
+  publicada que dependa de ella se vuelve a tallar, no se edita a mano.
+  (2.4) NO FUERCES LA SIMETRIA. Que yo traiga dos no significa que tengan que
+  caer los dos ni ninguno. El 40 trae salvedad declarada y el 28 no; es
+  perfectamente posible que uno se mueva y el otro no.
+
+- TAREA 3, LOS REGISTROS DEL ACTA 102, en docs/PENDIENTES.md, seccion propia,
+  con la composicion del anadido TALLADA con
+  scripts/loop/tallar_composicion_salida.py y su caso positivo commiteado con
+  su fichero de salida. Numera los subapartados COMO ESTAN AQUI.
+  (3.1) MI CAIDA DE GUARDA CONTRA TI, nombrada como tal y sin borrar texto
+  viejo: el tallador que ve 1 de 17, con la cifra, con el patron que la causa
+  y con mi mutacion de dos variantes escrita al lado, mas el emparejamiento
+  que paso por suerte.
+  (3.2) LO QUE HICISTE BIEN Y NO QUIERO QUE SE PIERDA, registrado igual que
+  lo que falla: la racha de reporte cayendo de DOS a CERO tras un repaso mio
+  afirmacion por afirmacion, las dos guardas buenas (1.2 y 1.3) con sus cinco
+  casos corridos por mi, y el limite de la TAREA 4 respetado (estado sin
+  tocar en las 71 filas, aditividad con el valor viejo como prefijo estricto).
+  (3.3) LAS DOS DISCREPANCIAS DEL 28 Y EL 40, anotadas como ABIERTAS Y EN
+  RELECTURA CONJUNTA, no como resueltas en ningun sentido, hasta que la
+  TAREA 2 las cierre. Y cuando la cierres, anota el resultado ahi mismo.
+  (3.4) EL PUNTO CIEGO DEL MUESTREO, con sus cifras: el 28 en 87,5 y el 40 en
+  74,3, los dos en mitad del flanco RESUELTA, y la seleccion por extremos
+  incapaz de alcanzarlos aunque se ejecute perfecta.
+  (3.5) MIS TRES FALSAS ALARMAS, cazadas antes de publicarlas y escritas
+  igual (acta 102, seccion 5.3): los titulos gemelos por mayuscula, mi ratio
+  inventado contra el titulo_ratio real, y mi difflib por lineas contra tu
+  difflib por caracteres, que era la vara mas fuerte y la tuya. Se registran
+  porque el auditor se cobra como el ejecutor.
+
+- TAREA 4, LA RELECTURA AL DOBLE DEL TRAMO 1 POR EL CENTRO, que es lo que la
+  1.2 manda cuando una discrepancia aparece fuera de los discutibles marcados
+  (el 28), y que esta vez NO puede ir por donde ya se fue.
+  (4.1) LEE OCHO PUESTOS del tramo 1, de nuevo el doble de la muestra normal,
+  pero ELEGIDOS POR EL CENTRO del titulo_ratio y no por los extremos: los que
+  quedan a mitad de cada flanco, leyendo titulo_ratio de
+  DIFERENCIA_CONTRA_COLA.jsonl indexado por puesto_tramo - 1, como ya haces.
+  Reparte cuatro y cuatro entre RESUELTA y NO RESUELTA. QUEDAN FUERA y no
+  cuentan para los ocho: el 5 (cerrado en la 101), los ocho de tu TAREA 3 de
+  la vuelta 102 (33, 30, 7, 27, 22, 23, 26, 12), y el 28 y el 40, que se
+  resuelven en la TAREA 2. Di en el reporte, con sus numeros, cuales
+  excluiste y por que, para que el siguiente auditor no tenga que deducirlo.
+  (4.2) A CIEGAS DE VERDAD y con el instrumento, como la vuelta pasada:
+  vuelca entregable y pasos_accionables de los dos nodos SIN clase, SIN
+  direccion, SIN razon y SIN paso casado, adjudica por escrito, y SOLO
+  DESPUES destapa. Pega las dos salidas.
+  (4.3) LA CUENTA, con la letra que ahora tiene sus dos fronteras medidas:
+  mueve un par si el hijo anade GENERO QUE LA MADRE NO TIENE EN NINGUN PASO
+  (172, 161); NO lo mueve que el hijo despliegue en varios pasos lo que la
+  madre nombra en uno solo (puesto 5, por 9.6.2 literal); y ojo con el filo
+  que el 28 pone sobre la mesa, que es distinto de los dos anteriores: una
+  cosa NOMBRADA COMO EJEMPLO dentro de un paso no es lo mismo que una cosa
+  que es el OBJETO del imperativo de ese paso. Si alguno de los ocho se
+  mueve, va con correccion_v103 declarada y RECOMPUTAS. Si no se mueve
+  ninguno, lo dices con la cifra y ya esta: no fuerces hallazgos.
+
+- SI LAS CUATRO NO CABEN CON SUS GUARDAS COMPLETAS, la unica que puedes dejar
+  para la vuelta siguiente es la TAREA 4, y lo dices con la cifra de lo que
+  si hiciste. Las TAREAS 1, 2 y 3 no se recortan: la 1 es el arreglo de la
+  escalada, la 2 es la adjudicacion que tiene una cifra publicada colgando, y
+  la 3 son los registros.
+
+- LO QUE NO SE TOCA. La deriva de contenido (26 nodos de 140, 32 pares de 87,
+  acta 92 seccion 4.4), los siete nodos con guion, el bloque repetido de
+  formalizar_un_proceso_ad_hoc y AHORA TAMBIEN los titulos gemelos por
+  mayuscula que encontre yo (sistema_responsabilidad_gerencial y su _2, "El
+  Sistema es tu Responsabilidad" contra "El Sistema es Tu Responsabilidad",
+  los dos vivos) siguen ANOTADOS PARA ALEXIS Y SIN ENCARGAR, porque rozan el
+  ALCANCE de la campana. Que conste ademas que Gate 0 tiene razon al dar 0:
+  su guarda dice "titulo_concepto EXACTO duplicado" y esos dos titulos no son
+  exactos. Citarlos como contraste, con su fuente nombrada, es correcto.
+
+- LO QUE NO SE ABRE. No se toca el campo estado, que sigue sin voto por el
+  acta 100 seccion 4.2. No se abre la fase 05 ni la 06. No se mueve ninguna
+  operacion de fase. No se escribe ni se retira una sola arista: la TAREA 2 y
+  la TAREA 4 son juicio y registro, no cirugia, igual que OP-E-03.
+
+- UNA NOTA DE HIGIENE QUE NO ES UNA CAIDA, y que amplio con una medicion
+  nueva: git status trae M en dataset/metadata/master_graph.json desde antes
+  de que nadie toque nada, y NO es un cambio (mismos 8.391.653 bytes y mismo
+  sha256 que HEAD, es el fin de linea de Windows). No lo commitees y no lo
+  "arregles". Y lo que anado: si corres SOLO run_phase1.py, el fichero se va
+  a 8.519.923 bytes y parece que has movido algo. Es el CICLO DE TRES ENTERO
+  (run_phase1.py, etiquetas_de_cara.py --aplicar, sync_assets_web.py) el que
+  lo devuelve identico byte a byte. La media corrida miente; mide con sha256
+  al final del ciclo, no en mitad.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
