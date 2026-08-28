@@ -1,0 +1,52 @@
+CENSO DE LA FASE 05_SANEO, TALLADO de docs/plan/OPERACIONES.jsonl (71 filas totales).
+SOLO MEDIR: no se adjudica orden, no se abre la fase, no se toca ningun campo.
+====================================================================================================
+filas de fase 05_SANEO: 10
+
+OP-S-01 | FUSION | estado LISTA | orden 1
+   depende_de: (ninguna)
+   bloquea_a: (ninguna)
+OP-S-02 | VIGENCIA | estado LISTA | orden 2
+   depende_de: (ninguna)
+   bloquea_a: (ninguna)
+OP-S-03 | VIGENCIA | estado LISTA | orden 3
+   depende_de: (ninguna)
+   bloquea_a: (ninguna)
+OP-S-04 | HERRAMIENTA | estado LISTA | orden 4
+   depende_de: (ninguna)
+   bloquea_a: (ninguna)
+OP-S-05 | HERRAMIENTA | estado LISTA | orden 5
+   depende_de: (ninguna)
+   bloquea_a: (ninguna)
+OP-S-08 | CAMPO_SUCIO | estado LISTA | orden 7
+   depende_de: (ninguna)
+   bloquea_a: (ninguna)
+OP-S-09 | RENOMBRE_CON_ALIAS | estado LISTA | orden 8
+   depende_de: (ninguna)
+   bloquea_a: (ninguna)
+OP-S-10 | REENCUADRE_DE_MARCO | estado LISTA | orden 9
+   depende_de: (ninguna)
+   bloquea_a: (ninguna)
+OP-S-11 | CAMPO_SUCIO | estado LISTA | orden 11
+   depende_de: (ninguna)
+   bloquea_a: OP-A-01, OP-A-02
+OP-S-12 | SANEO MECANICO | estado LISTA | orden 12
+   depende_de: OP-S-01 (fase 05_SANEO, campo estado LISTA)
+   depende_de: OP-S-09 (fase 05_SANEO, campo estado LISTA)
+   depende_de: OP-D-01 (fase 02_DESTEJIDOS, campo estado LISTA)
+   depende_de: OP-D-02 (fase 02_DESTEJIDOS, campo estado LISTA)
+   depende_de: OP-D-03 (fase 02_DESTEJIDOS, campo estado LISTA)
+   depende_de: OP-D-04 (fase 02_DESTEJIDOS, campo estado LISTA)
+   depende_de: OP-D-05 (fase 02_DESTEJIDOS, campo estado LISTA)
+   depende_de: OP-D-06 (fase 02_DESTEJIDOS, campo estado LISTA)
+   depende_de: OP-U-01 (fase 03_FUSIONES, campo estado LISTA)
+   bloquea_a: OP-C-05
+
+LIMITE DECLARADO EN LA PROPIA SALIDA: el campo `estado` de arriba se publica TAL COMO
+ESTA ESCRITO, sin resolver 'que depende de algo cerrado'. Doctrina vigente (acta de la
+vuelta 100, seccion 4.2): `estado` NO SE TOCA y sigue en LISTA para las operaciones de
+fases ya cerradas (p.ej. la fase 03, CERRADA CON REMISION desde la vuelta 74), asi que
+leer solo este campo NO responde correctamente esa pregunta. Esta salida NO la resuelve:
+la resolucion es adjudicacion del auditor, no de este censo.
+
+FIN
