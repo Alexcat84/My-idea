@@ -205,9 +205,21 @@ def cotejar(f_tallada, f_reporte):
     return {"veredicto": "CONDENSADA", "n": n_t, "m": filas_retecleadas, "filas": detalle}
 
 
+RE_ANUNCIO_CABECERA = re.compile(r"^\*{0,2}CABECERA\b", re.IGNORECASE)
+
+
 def reporte_afirma_pegada_entera(ruta):
-    texto = io.open(ruta, encoding="utf-8").read().lower()
-    return "pegada entera" in texto
+    """Busca 'pegada entera' SOLO en la linea que ANUNCIA la cabecera (la
+    que EMPIEZA, tras quitar el resaltado, con la palabra CABECERA: el
+    patron `**CABECERA, tallada con...`), no en cualquier linea que
+    mencione la palabra de pasada (por ejemplo, el nombre del propio
+    script `tallar_cabecera_reporte.py` la contiene) ni en el reporte
+    entero, donde puede EXPLICAR la guarda citando la frase entre
+    comillas sin que eso sea una promesa sobre su propia tabla."""
+    for l in io.open(ruta, encoding="utf-8").read().splitlines():
+        if RE_ANUNCIO_CABECERA.match(l.strip()):
+            return "pegada entera" in l.lower()
+    return False
 
 
 def main():
