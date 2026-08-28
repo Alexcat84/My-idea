@@ -1,0 +1,17 @@
+(a) ROJO esperado sobre docs/loop/REPORTE.md de la vuelta 101 tal como esta commiteado en 8dfc4b48:
+==========================================================================================
+TALLA DE VEREDICTOS de 8dfc4b48:docs/loop/REPORTE.md: 1 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero.
+==========================================================================================
+
+ROJO, 1 hallazgo(s):
+   REPORTE.md linea 4: afirma VERDE (clase OK) citando `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`, y el veredicto REAL de ese fichero es MAL
+EXIT=1
+
+(b) VERDE esperado sobre docs/loop/REPORTE.md de la vuelta 102, ya escrito:
+==========================================================================================
+TALLA DE VEREDICTOS de docs/loop/REPORTE.md: 1 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero.
+==========================================================================================
+   linea 4: VERDE citando `docs/loop/SALIDA_V102_CABECERA_TALLADA.txt` -- calza (fichero real: OK)
+
+VERDE: las 1 afirmacion(es) que citan fichero calzan con el veredicto real de su fichero.
+EXIT=0
