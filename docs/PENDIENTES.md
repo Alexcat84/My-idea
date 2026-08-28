@@ -5188,3 +5188,113 @@ de arriba.
 
 **DISCUTIBLES MARCADOS PARA LA RELECTURA CIEGA DEL AUDITOR EN LA VUELTA
 SIGUIENTE:** 172 y 161, los dos NUEVOS y sin contraste previo.
+
+## VUELTA 101, TAREA 2: LOS REGISTROS DEL ACTA 100 (acta de la vuelta 100, `ACTA_AUDITOR.md` lineas 35828 a 36171, leidas hoy)
+
+### (2.1) LAS ADJUDICACIONES, cada una por su numero y con su linea leida en esta vuelta
+
+**4.1 CONFIRMA los dos discutibles del ejecutor, 172 y 161, los dos NO
+RESUELTA, a ciegas y sin relectura conjunta que abrir** (la adjudicacion del
+auditor llego por el mismo camino sin destapar la razon del ejecutor
+primero, acta 100, seccion sobre "LA LECTURA ESTA SANA"). **172**
+(`desarrollo_en_espiral` -> `protocepto`): NO RESUELTA. **161**
+(`seis_herramientas_comunicacion_celebracion` ->
+`celebracion_automatizada_de_hitos`): NO RESUELTA. La letra que los dos
+comparten, y que vale para lo que venga: **LO QUE MUEVE UN PAR NO ES QUE EL
+HIJO DESBORDE UN PASO, SINO QUE ANADE GENERO QUE LA MADRE NO TIENE EN NINGUN
+PASO.** El 172 prueba con clientes y repite ciclos (genero que la madre no
+tiene en ningun paso); el 161 automatiza la deteccion y vende (idem).
+Contraste: las tres del flanco nuevo del auditor (33, 30, 91) se sostienen
+en RESUELTA aunque tambien rozan un segundo paso de su madre, porque NO
+anaden genero. **Esa es la frontera entre el 9.6.2 y el 9.6.3.**
+
+### (2.2) LAS TRES CAIDAS DEL EJECUTOR (acta 100), nombradas como tales, sin borrar el texto viejo
+
+**CAIDA DE REPORTE, ACUMULA (la racha pasa de CERO a UNO).** La prosa de la
+TAREA 6 de la vuelta 100 invierte su propia tabla:
+`docs/loop/SALIDA_V100_TAREA6_FASE04_CONTRA_EVIDENCIA.md` linea 42 publico
+"11 de 26 CON registro... 15 SIN el" cuando la tabla dice 15 CON / 11 SIN; la
+linea 74 publico "25 tienen LISTA (solo OP-E-02 en HECHA)" cuando el BFS
+propio del auditor da 26 de 26 en LISTA con `OP-E-02` FUERA de las 26; la
+linea 77 publico "SOLO 15 DE LAS 26 SON BLOQUEO REAL" (son 11); la linea 79
+rotula "11" una enumeracion de quince ids y se contradice sola ("quince
+nombres, once ids"). **Las cuatro corregidas, declaradas, sin borrar texto
+viejo, en el propio fichero** (vuelta 101). El instrumento (BFS de
+transitivas) es correcto; no se toco `estado` ni se abrio fase.
+
+**CAIDA DE INCUMPLIMIENTO DE ENCARGO, SEGUNDA VUELTA SEGUIDA CON LA MISMA
+ESPECIE.** La apertura de la vuelta 100 se midio DESPUES de la ultima
+operacion: `docs/loop/SALIDA_V100_WEB_APERTURA.txt` trae "Start at 22:09:57",
+la TAREA 6 (`94ab70f3`) es de las 22:07:41, y la primera operacion
+(`300802d1`) de las 21:43:48. Los tres relojes delante:
+**21:43:48 (primera operacion) < 22:07:41 (TAREA 6) < 22:09:57 (apertura
+medida)**. `git log --diff-filter=A` pone los ocho
+`SALIDA_V100_*_APERTURA.txt` (salvo `HEAD_APERTURA`) en `592cf8bc`, el
+ULTIMO commit de la vuelta. **LO QUE SI SE ARREGLO respecto de la vuelta 99:**
+`SALIDA_V100_HEAD_APERTURA.txt` SI nacio en el primer commit (`300802d1`,
+hijo directo de `c8827ef7`). Remedio de esta vuelta: TAREA 1.2/1.3
+(`scripts/loop/verificar_apertura_sellada.py`) y la apertura de la 101
+sellada ANTES de la primera operacion (`docs/loop/SALIDA_V101_HEAD_APERTURA.txt`,
+commit `a3263243`, verde contra la guarda).
+
+**CAIDA DE GUARDA ENVEJECIDA, ESPECIE NUEVA.** El remedio bloqueante de la
+TAREA 1 de la vuelta 100
+(`scripts/loop/prueba_mutacion_contar_cierre_efectivo.py`) quedo en **EXIT 1**
+contra el estado de cierre de su propia vuelta: sus expectativas eran
+literales congelados ("94/89 (48,6%)" y "95/88 (48,1%)"), y las TAREAS 3 y 5
+de esa misma vuelta movieron el cierre a 90/93. Causa de una linea: **medir
+temprano y publicar tarde sin remedir es la misma especie de caida que citar
+sin mirar** (`EJECUTOR.md` 1). Remedio de esta vuelta: TAREA 1.1, la prueba
+reescrita en relativo (delta contra su propio control, sin ninguna cifra
+congelada), verde hoy contra 90/93.
+
+### (2.3) LA CORRECCION DECLARADA DE LA CIFRA DE LA TAREA 6, sin borrar el texto viejo
+
+En `docs/loop/SALIDA_V100_TAREA6_FASE04_CONTRA_EVIDENCIA.md`, mismo mecanismo
+de correccion declarada que la cifra de cierre ya uso bien tres veces: **15
+CON registro de cierre escrito y 11 SIN el** (las once: `OP-C-01`,
+`OP-C-02`, `OP-C-03`, `OP-C-04`, `OP-S-06`, `OP-S-07`, `OP-M-01`,
+`OP-M-01-FUSION`, `OP-M-03`, `OP-M-03-III` y `OP-E-06`). Anadido en la misma
+correccion: el criterio de esa tabla (pagina + nota propia, sin mirar acta ni
+commits) quedo PROBADO INCOMPLETO (falso negativo demostrado en `OP-C-04`,
+acta 100 seccion 7), asi que esos 11 son un TECHO, no una medicion cerrada.
+Esta correccion vive en `docs/loop/`, no se toco `docs/plan/` por ella.
+
+### (2.4) LA CAIDA DE PROCEDIMIENTO DEL AUDITOR (acta 100, seccion 7), registrada con su nombre igual que las del ejecutor
+
+El auditor adjudico la TAREA 6 del ejecutor **aceptando su criterio de
+evidencia sin probarlo**: la tabla de esa TAREA justifica el NO de
+`OP-C-01/02/03` con "no existe pagina `00_CODIGO.md` con registro", y bastaba
+`ls docs/plan/` para ver que esa pagina nunca existio (la real es
+`FASE_0_CODIGO.md`). Leida la pagina de verdad, la celda acertaba igual (sus
+cinco cabeceras dicen LISTA, cero frase de cierre), **pero por una via que no
+la sostiene**: `OP-C-04` SI tiene registro de cierre, solo que en otra sede
+(`ACTA_AUDITOR.md:5056`, acta de la vuelta 25). Remedio de esta vuelta: TAREA
+3, midiendo las seis operaciones de codigo contra las TRES sedes
+(pagina+jsonl, acta, commits) mas la vara del codigo vivo
+(`docs/loop/SALIDA_V101_TAREA3_FASE0_TRES_SEDES.md`): las cuatro que el
+auditor dejo "a verificar" (`OP-C-01`, `OP-C-02`, `OP-C-03`, `OP-S-06`) SI
+tienen registro de cierre, en la sede que nadie habia mirado (el mensaje del
+commit, "FASE 0, OP-X EJECUTADA", 14 ago 2026), y las seis reparaciones
+corren o estan aplicadas hoy contra el codigo y el dato de esta vuelta.
+Declarado sin tocar `estado` ni abrir fase.
+
+### (2.5) LA RELECTURA AL DOBLE que estas caidas disparan, para esta vuelta, y NO ES DE NODOS
+
+Es de prosa: **TODA FRASE QUE RESUMA UNA TABLA SE CUENTA CONTRA ESA TABLA CON
+UN COMANDO ANTES DE ESCRIBIRSE**, y el comando se pega al lado. Aplicado en
+esta misma vuelta sobre la propia tabla de la TAREA 6 de la vuelta 100:
+`awk -F'|' 'NR>=15 && NR<=40 {...}' docs/loop/SALIDA_V100_TAREA6_FASE04_CONTRA_EVIDENCIA.md`
+da `SI=15 NO=11`, contra el "11 de 26 CON... 15 SIN" publicado. Es la hermana
+de la regla de las enumeraciones por dos puntos del acta 99, de la misma
+familia de caidas.
+
+**Composicion del anadido de ESTA seccion en `PENDIENTES.md`**, tallada sobre
+`git diff HEAD -- docs/PENDIENTES.md` con
+`scripts/loop/tallar_composicion_salida.py`
+(`docs/loop/SALIDA_V101_TAREA2_COMPOSICION_PENDIENTES.txt`), mismo patron de
+cabeceras `##`/`###` de las vueltas 99 y 100: **1 seccion de nivel 2, 5
+subsecciones de nivel 3**. **Caso positivo**, el mismo comando corrido sobre
+`docs/loop/SALIDA_V100_TAREA2_DIFF_PENDIENTES.txt` (el anadido conocido de la
+vuelta 100) reproduce **exacto** 1 de nivel 2 y 5 de nivel 3, igual que el
+propio archivo de esa vuelta (`docs/loop/SALIDA_V100_TAREA2_CASO_POSITIVO.txt`).
