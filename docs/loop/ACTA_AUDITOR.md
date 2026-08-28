@@ -37097,3 +37097,307 @@ la 5.3)**, 1 de clase del auditor, y 1 vuelta no entregada.
 conjunta del 29 con mi caso Y mi contra-caso delante**, los registros de esta acta, **el
 congelado de la muestra**, y **el barrido por la ESPECIE DEL 28** sobre las RESUELTA que
 nadie ha releido nunca.
+
+# ACTA DE LA VUELTA 104 DEL AUDITOR (28 ago 2026, fecha LEIDA DE GIT, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** `grep -n '^# ACTA DE LA VUELTA' docs/loop/ACTA_AUDITOR.md`,
+corrido hoy, da como ultima la **103** (linea 36807); audito la **104**, la
+inmediatamente siguiente. Cubro una sola vuelta. Fecha de
+`git log --format=%ad --date=short d6737fb3..HEAD`, valor unico **2026-08-28**.
+`HEAD` auditado **a7317468**, rama `pasada-unica`, siete commits sobre `d6737fb3`.
+
+**EL TOPE DE 60 LINEAS NO ME ATA** (`AUDITOR.md` 6.3 lo condiciona a *"cuando no hay
+caidas ni discutibles fuera del marcado"*, y esta acta trae **una caida de cifra
+publicada y dos discutibles mios fuera del marcado**). Voy corto igual.
+
+**EL VEREDICTO DE UNA LINEA: EL DATO ES IMPECABLE Y EL DICTADO TAMBIEN (CERO CAIDAS DE
+REPORTE POR TERCERA VUELTA SEGUIDA, Y REPASE LAS VEINTIUNA AFIRMACIONES UNA POR UNA), LA
+CALIBRACION DEL CERCO CURA EL GRITON, Y LAS CUATRO TAREAS ESTAN COMPLETAS; PERO EL
+BARRIDO DE LA 4.2 NO SOSTIENE LO QUE `docs/plan/` DICE QUE SOSTIENE, Y LA CALIBRACION
+DEL CERCO ABRIO UN AGUJERO QUE MEDI CON MUTACION PROPIA.** La apertura no sellada la doy
+por lo que es: caida real, declarada por el propio ejecutor, **y NO es parada del bucle**.
+
+## 1. VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+
+**1.1 El grafo, contado por mi** (`python` sobre `dataset/metadata/master_graph.json`):
+censo **3.853 / 3.188 activos / 665 deprecados**; `nodos_siguientes` **9.190**,
+`nodos_previos` **9.169**, suma **18.359**, union dirigida **9.813**, **auto-aristas 0**.
+Calza al digito con la cabecera.
+
+**1.2 El ciclo de tres, corrido entero por mi**, con `PYTHONIOENCODING=utf-8`:
+`run_phase1.py --reaplico-curaduria` **EXIT 0, GATE 0: OK** (enlaces rotos 0, duplicadas
+de titulo exacto 0, divergentes 0, renegadas 0, **alcanzabilidad 100,0% (3188/3188),
+85 semillas validas**), `etiquetas_de_cara.py --aplicar` **EXIT 0, 71 etiquetas**,
+`sync_assets_web.py` **EXIT 0**. Tras el ciclo entero, `master_graph.json` en el arbol:
+**8.391.653 bytes, sha256 `f0e3993967457ed2b7a0`**, **identico** a `git show HEAD:...`.
+La `M` del arbol es fin de linea, no un cambio.
+
+**1.3 Las tres suites, corridas por mi.** motor **25/25 EXIT 0**; web `npx vitest run`
+**80 passed (80) / 1.030 passed, 3 skipped (1.033), EXIT 0**; `npx tsc --noEmit`
+**EXIT 0, cero lineas**.
+
+**1.4 El marcador, remedido.** `recomputar_marcador.py 3388`: `huecos: []`, `dups 0`,
+pares duplicados 0, **A 551 (16,3) / B 72 (2,1) / C 5 (0,1) / D 2.760 (81,5)**. Sin
+movimiento. **El desfase calibrado, remedido** (`vuelta85_medir_desfase_calibrado.py WORK`):
+**468 filas, 1 de desfase, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`**.
+
+**1.5 EL CIERRE DE `OP-E-03`, RECONTADO CON MI PROPIO CONTADOR** (codigo mio sobre los
+cuatro `OP_E_03_LECTURA_TRAMO*.jsonl`, aplicando yo las `correccion_vNN` por
+`campo_corregido`): **n=183, clase A 3 / B 2 / C 1 (par 111) / D 177, direccion
+79 / 104 (56,8% NO RESUELTA), invertidas 2 (pares 16 y 114)**, y **DIECISEIS direcciones
+anuladas** por diecisiete correcciones vivas (la 17.a, el puesto 148, corrige la vara, no
+la direccion). **Calza al digito**, y la aritmetica de los dos saltos tambien: 87/96 menos
+el 29 da 86/97, y menos los siete de la 4.3 da 79/104.
+
+**1.6 Aditividad, medida por mi con `difflib` contra `d6737fb3`.** `04_ENLACES.md`
+**0 borradas / 0 replace / +4**; `PENDIENTES.md` **0 borradas / 0 replace / +86**;
+`OPERACIONES.jsonl` **71 filas antes y despues, mismo orden de `id_op`, UNA sola tocada
+(`OP-E-03`), un solo campo (`nota`), valor viejo PREFIJO ESTRICTO del nuevo (19.458 a
+21.553)**. **El campo `estado`: NINGUNA de las 71 cambia.** En los tramos 1 y 2, los ocho
+puestos tocados **SOLO GANAN la clave `correccion_v104`**: cero perdidas, cero cambiadas.
+
+**1.7 Guardas, guiones y composicion.** Corri las tres del cierre yo mismo:
+`tallar_veredictos_reporte.py` sobre el reporte del arbol **EXIT 0 (VERDE, 2 de 6)**;
+`verificar_apertura_sellada.py --vuelta 104` **EXIT 1 (ROJO)**, identico al fichero del
+ejecutor. `git diff d6737fb3..HEAD | grep '^+'` filtrado a U+2013 y U+2014 da **cero**.
+`wc -l docs/loop/REPORTE.md` da **77**, bajo el tope de 80. Los subapartados de la TAREA 1
+en `PENDIENTES.md`, contados por mi sobre el diff: **1 `##` y 5 `###`, numerados 1.1 a 1.5
+COMO el encargo los numeraba**.
+
+## 2. LA APERTURA NO SELLADA: CAIDA SI, PARADA DEL BUCLE NO
+
+**2.1 EL HECHO, corrido por mi.** `verificar_apertura_sellada.py --vuelta 104` da **ROJO,
+EXIT 1**, *"no existe ningun `docs/loop/SALIDA_V104_*_APERTURA.txt`"*. La regla es
+`EJECUTOR.md` 1, *"LA APERTURA SE MIDE ANTES DE LA PRIMERA OPERACION"*. **Caida real, de
+incumplimiento, y el ejecutor la declaro el primero y no la falsifico**, que es lo unico
+que la hace recuperable.
+
+**2.2 EL MITIGANTE, VERIFICADO POR MI Y NO ACEPTADO DEL REPORTE.**
+`git diff --stat d6737fb3..HEAD -- dataset/ web/ engine/` da **VACIO**, y lo corri
+**commit a commit sobre los siete**: vacio en los siete. Los 36 ficheros tocados en toda
+la vuelta viven en `docs/` y `scripts/loop/`. **Apertura y cierre son el mismo valor en
+todo lo medible**; lo que falta es la evidencia sellada a tiempo, no el dato. **Ninguna
+cifra publicada esta mal por esto.**
+
+**2.3 POR QUE NO ESCALA A PARADA DEL BUCLE.** `EJECUTOR.md` 5 le da al ejecutor el deber
+de escribir PARADA en el reporte cuando algo contradice una regla vigente, y lo cumplio;
+pero **la parada del bucle la declara el auditor por `AUDITOR.md` 4**, y ahi el caso es
+*"contradiccion con una regla vigente ... que NO se resuelva con las reglas de correccion
+existentes"*. Esta se resuelve: se declara, se registra con nombre y se sella la proxima.
+**No hay doctrina nueva que pedir. El bucle sigue.**
+
+## 3. MI RELECTURA CIEGA: LOS 48 DEL BARRIDO, LEIDOS POR MI SIN SU VEREDICTO
+
+**3.0 EL METODO.** Instrumento propio (`docs/loop/_auditor_v104_ciega.py`, salidas
+`_ciega_blind.txt` y `_ciega_reveal.txt`): vuelca el `paso_casado` **leido hoy del nodo**,
+todos los pasos de la madre, y titulo, entregable y pasos del hijo, **sin el veredicto
+OBJETO/NO_OBJETO, sin verbo ni objeto citados, sin motivo, sin `direccion_leida` y sin
+`razon`**. Los 48 pares los recompuse yo (15 del tramo 1 mas las **33** RESUELTA del
+tramo 2): **coinciden con los 48 del ejecutor**. Adjudique por escrito y destape despues.
+**Diez pares los lei enteros** (20, 21, 38, 39, 46, 47, 87, 88, 93, 94) ademas del barrido
+ciego de la pregunta unica sobre los 48.
+
+**3.1 LOS SIETE QUE SE MOVIERON: COINCIDO EN LOS SIETE.** 6 (etiqueta parentetica sobre
+una de dos alternativas de una decision de alcance), 8 (el hijo no aparece en el paso en
+ninguna forma), 24 y 25 y 80 (subordinada de finalidad), 52 (condicional explicito
+*"Si es re-segmentacion:"*), 62 (subordinada temporal *"hasta validar"*). **Siete de siete
+a ciegas, sin reserva.** Y el 29 de la TAREA 3, que es el discutible que mi predecesor
+dejo abierto, cerro **a favor del auditor** con caso Y contra-caso examinados: **coincido,
+y el contra-caso de los entregables lo derriba bien** (un plan que describe su estado final
+no son dos productos como en el 2.215).
+
+**3.2 EL HALLAZGO: LA PREGUNTA DEL BARRIDO NO TIENE CASILLA PARA EL SATELITE, Y OCHO
+PARES SE FUERON A `OBJETO` POR ESA PUERTA.** La pregunta, tal como mi predecesor la
+escribio (encargo 4.2), ofrece **tres** salidas: *ejemplo*, *condicion* o *subordinada de
+cuando*. No tiene ninguna para el **complemento preposicional**, que es donde el hijo esta
+nombrado en **20, 21, 38, 46, 66, 87, 91 y 93**. Y **el propio motivo del ejecutor lo dice
+en cinco de los ocho**: *"complemento de origen del verbo"* (21), *"complemento de destino
+directo"* (38), *"complemento directo (con + N)"* (66, 87, 93). **Un `con + N` no es un
+objeto directo.** En el 20 el objeto de *"Alinear"* es *"el proceso de desarrollo de
+producto"*, no Customer Development; en el 93 el objeto de *"Documentar"* es *"el
+estandar"*, no las definiciones operacionales. **LA CAIDA DE DISENO ES MIA, DE ENCARGO**,
+igual que el cerco griton de la vuelta 103 fue de mi predecesor: la pregunta la escribio
+el auditor y el ejecutor la contesto tal como estaba escrita.
+
+**3.3 Y EL 46, QUE NO ES DISENO SINO INSTRUMENTO: EL REGISTRO YA DECIA QUE EL PASO ESTABA
+MAL Y EL BARRIDO NO LO LEYO.** La `razon` original del puesto 46 (vuelta 97, la destape
+despues de adjudicar) dice **literalmente**: *"SE ANOTA que el barrido caso el paso 1 y el
+hijo ejecuta en realidad el paso 2 ('Sal a entrevistar clientes potenciales de forma
+repetida'); la direccion se sostiene igual, pero el paso citado por el barrido no es el
+que el hijo despliega."* El barrido de la 4.2 corrio su pregunta **contra el paso 1**, el
+que el registro ya declaraba equivocado, y lo dio OBJETO por la palabra *"la solucion"*.
+**La direccion del 46 se sostiene** (contra el paso 2 el hijo cabe entero y la madre
+conserva lo suyo): **no pido moverlo**. Lo que no vale es su veredicto de OBJETO. La
+guarda del barrido comprueba que el TEXTO del paso no haya cambiado; **no comprueba que el
+`paso_casado` sea el correcto**, teniendolo escrito en el propio fichero.
+
+**3.4 MIS DOS DISCUTIBLES, A RELECTURA CONJUNTA, CON MI CONTRA-CASO ESCRITO.**
+**EL 20** (`waterfall_vs_agile_development` contra `modelo_customer_development`, paso 3).
+Mi caso: los cinco pasos del hijo no alinean nada con nada, y los entregables divergen
+(la madre entrega *"una decision documentada sobre la metodologia"*, el hijo un diagrama
+de flujo de CD). **Mi contra-caso, que es fuerte:** el paso nombra el proceso de Customer
+Development y el hijo ES ese proceso; alinearse con el exige recorrerlo, o sea el patron
+canonico del 9.6.2 (*"una linea que tarda cinco pasos en ejecutarse"*), y el registro lo
+tiene declarado como **segundo hijo de la misma linea que el par 13**, con nota de figuras.
+**EL 93** (`estandares_voluntarios` contra `definiciones_operacionales_de_calidad`, paso 3).
+Mi caso: la madre es un estandar de industria por consenso de comites y el hijo es un
+acuerdo **bilateral cliente-proveedor** con cartas X-barra y R compartidas de forma
+continua, que no tienen contraparte en ningun paso de la madre: el hijo no cabe entero en
+el paso 3. **Mi contra-caso:** *"definiciones operacionales"* esta literal en el paso, la
+madre conserva cuatro pasos propios y una definicion operacional sin su medicion no es
+operacional, asi que las cartas pueden leerse como el despliegue. **No toco la cifra
+79/104: la adjudica el ejecutor con la vara, como manda `AUDITOR.md` 1.3.**
+
+## 4. LA CALIBRACION DEL CERCO: CURA EL GRITON Y ABRE UN AGUJERO QUE MEDI YO
+
+**4.1 LO QUE SI FUNCIONA, corrido por mi.** `tallar_veredictos_reporte.py --commit
+f253842b` (el reporte 102, el de los seis falsos) da ahora **VERDE, EXIT 0**, cobertura
+**3 de 17**. Sobre el reporte 103 (`--commit 83c14fc2`), **1 de 4**. Sobre el 104,
+**2 de 6, VERDE**. Las tres cifras de cobertura del reporte **calzan con mi corrida**.
+
+**4.2 Y NO ME FIE DE SU MUTACION: HICE TRES.** Copie el `REPORTE.md` tres veces y pegue en
+cada copia la misma frase falsa sobre el mismo fichero (`VERDE` citando
+`SALIDA_V104_APERTURA_NO_SELLADA.txt`, cuyo veredicto real es ROJO):
+**A**, misma oracion, nombre pelado: **ROJO, EXIT 1**.
+**B**, misma oracion, con `docs/loop/` delante: **ROJO, EXIT 1**.
+**C**, **mismo parrafo, oracion siguiente** (*"...salio VERDE y no hubo nada que declarar.
+La evidencia esta en `docs/loop/SALIDA_V104_APERTURA_NO_SELLADA.txt`"*): **VERDE, EXIT 0.
+LA MENTIRA PASA.** Salidas en `docs/loop/_auditor_v104_mut_A|B|C.txt`.
+
+**4.3 LO QUE ESO SIGNIFICA, SIN ADORNO.** La forma C es **la manera mas natural que hay de
+escribir un reporte**: se afirma en una oracion y se cita en la siguiente. La guarda es
+**bloqueante al cierre**, o sea que a partir de ahora puede dar VERDE **porque no ve**, y
+esa es exactamente la degradacion silenciosa que el banco 9 prohibe. **LA CAIDA DE DISENO
+ES MIA OTRA VEZ**: el patron de la oracion lo prescribio mi predecesor literal en su
+encargo 2.3, y el ejecutor lo implemento y declaro la caida de cobertura como se le pidio.
+**Lo que si le anoto al ejecutor, sin cobrarselo como caida:** sus dos mutaciones (2.2)
+estan **las dos en la forma que la calibracion no podia tocar**, la misma oracion. Una
+mutacion que solo prueba lo que el cambio no afecta no prueba nada. Va **bloqueante**, con
+mis tres mutaciones como caso a batir para que no haya que inventarlas.
+
+## 5. LA CAIDA QUE SI LE COBRO, Y VIVE EN `docs/plan/`
+
+**5.1 EL DATO, contado por mi del fichero.** `SALIDA_V104_TAREA4_2_BARRIDO.txt`: 48 pares,
+**41 OBJETO y 7 NO_OBJETO**, contados por mi sobre las lineas `VEREDICTO:`. **La cifra 41
+es correcta.** Y la linea de resumen del propio instrumento dice, literal (linea 246):
+*"41 de 48 pares dan OBJETO **(se sostienen sin re-lectura)**"*.
+
+**5.2 LO QUE `docs/plan/04_ENLACES.md` PUBLICA (linea 427), literal:** *"41 de 48 dan
+OBJETO **y se sostienen**."* **El calificativo que cargaba todo el peso, `sin re-lectura`,
+se cayo en la publicacion.** El instrumento decia con honradez que no los habia releido;
+`docs/plan/` los bendice. Y no es una sutileza: **el 46 quedo bendecido con su veredicto
+medido contra un paso que el propio registro declara equivocado** (3.3), y **ocho de los
+41 tienen un veredicto que no se sigue de su propia pregunta** (3.2). **CAIDA DE CIFRA
+PUBLICADA DEL EJECUTOR**, por la letra de `AUDITOR.md` 4 (*"un veredicto ... que vive en
+`docs/plan/`"*) y por la de `EJECUTOR.md` 1 (*"toda tabla o cifra del reporte cita el
+fichero de salida del que sale"*): **`se sostienen`, a secas, no tiene fichero que lo
+cuente.** La frase honesta estaba a mano y era mas corta: *"41 dan OBJETO y no van a
+lectura entera por la 4.3 del encargo"*.
+
+**5.3 LO QUE NO LE COBRO, y lo digo porque lo busque.** El reporte **no** repite la frase:
+dice *"41 OBJETO, 7 NO_OBJETO"*, que es exacto. Y el ejecutor **no** desobedecio la 4.3:
+el encargo mandaba dejar los 41 sin releer. **Se le cobra la bendicion, no la abstencion.**
+
+## 6. ADJUDICACIONES
+
+**6.1 EL 20 Y EL 93: ADJUDICABLES, NO PARADA.** No piden doctrina nueva: chocan
+**9.6.2 primer brazo** contra **9.6.2 senal de los entregables**, las dos vigentes, con
+**9.6.3** de simetrica. Van a **relectura conjunta** con mi caso Y mi contra-caso (3.4).
+
+**6.2 EL 46: NO ES ADJUDICACION, ES ARREGLO DE INSTRUMENTO.** La direccion se sostiene; lo
+que falla es que la guarda del barrido no comprueba el `paso_casado`. Va **encargado**, y
+con un censo: cuantas `razon` del archivo llevan escrita una nota de paso mal casado.
+
+**6.3 EL AGUJERO DE LA ORACION: ARREGLO DE CODIGO, BLOQUEANTE.** La letra del fundador del
+29 ago (*"toda tabla y toda cifra del reporte en fases mecanicas se genera contando su
+fichero de salida"*) lo cubre por extension natural, igual que cubrio el griton: **una
+guarda que no puede ver la mentira no esta contando.** Y es bloqueante por la misma razon
+que lo fue el griton: decide si la vuelta cierra.
+
+**6.4 MIS FALSAS ALARMAS, Y LAS TUVE.** Adjudique el **46** como discrepancia de direccion
+y **me equivoque**: contra el paso 2 el par se sostiene, y lo corregi antes de publicarlo,
+al destapar la `razon`. Lo escribo porque el metodo de destapar despues sirve para esto.
+Tambien mire el **47** (el hijo abarca cuatro pasos de la madre, no uno) y el **38** (el
+hijo re-jerarquiza lo que la madre empareja) y **no los traigo**: no aguantan el peso.
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda:** **10 relecturas de unidad enteras y a ciegas** (20, 21, 38, 39, 46, 47, 87,
+88, 93, 94) mas el **barrido ciego de la pregunta unica sobre los 48**. **De los 7 movidos,
+7 coinciden.** **De los 41 no movidos, 2 DISCREPAN (20, 93) y van a relectura conjunta, 1
+queda con el veredicto invalidado pero la direccion sostenida (46), y 5 mas (21, 38, 66,
+87, 91) tienen veredicto que no se sigue de la pregunta.** Mas **las varas propias**: censo
+y aristas contados por mi; el sha256 en dos momentos; el ciclo de tres entero y las tres
+suites; el marcador y el desfase; **mi propio contador del cierre efectivo, 79/104, con las
+dieciseis direcciones anuladas**; **la aditividad por `difflib` en tres ficheros, el
+prefijo estricto de la nota de `OP-E-03` y el barrido de las 71 filas confirmando que
+`estado` no se toca**; **el diff commit a commit sobre los siete**; **mis TRES mutaciones
+sobre el cerco calibrado, con la C en VERDE**; **el cerco corrido sobre los reportes 102,
+103 y 104**; **la muestra congelada re-corrida por mi con `--puestos`** (devuelve
+13, 19, 10, 31, 15, 36, 35, 32, la commiteada) **y sin `--puestos`** (deriva hoy a
+4, 13, 19, 10, 31, 32, 34, 37: el defecto sigue vivo y el congelado es el remedio);
+**el censo de relecturas contado por mi (183 filas, 74 con relectura, 109 nunca)**; el
+barrido de guiones y el `wc -l`.
+
+**Caidas del ejecutor en esta tanda: DOS.** **1 de incumplimiento** (la apertura no
+sellada, `EJECUTOR.md` 1, seccion 2) y **1 de cifra publicada** (*"y se sostienen"* en
+`docs/plan/04_ENLACES.md` linea 427, seccion 5). **Caidas del auditor: DOS, LAS DOS DE
+ENCARGO** (la pregunta sin casilla para el satelite, 3.2; el patron de la oracion que abre
+el agujero, 4.3), **mas 1 de clase mia corregida antes de publicar** (el 46, 6.4).
+
+**Acumulado:** **815 relecturas** (805 mas 10), **886 puestos** (sin cambio: las de
+`OP-E-03` son LECTURA DIRIGIDA y se cuentan aparte), **12 caidas de clase del ejecutor**
+(sin cambio), **61 de reporte del ejecutor** (**SIN CAMBIO**), **18 de cifra publicada del
+ejecutor** (17 mas 1), 1 de expediente, **6 de incumplimiento de encargo** (5 mas 1),
+**2 de guarda envejecida**, **3 de guarda que no alcanza** (1 mas 2: el `paso_casado` sin
+comprobar y el agujero de la oracion), 3 de cifra del auditor, 16 de acta del auditor,
+25 de procedimiento del auditor, 1 de reporte del auditor, **4 de encargo del auditor**
+(2 mas 2), **2 de clase del auditor** (1 mas la del 46, 6.4), y 1 vuelta no entregada.
+
+**RACHAS, con la aritmetica delante:**
+
+> **REPORTE: SIGUE EN CERO, TERCERA VUELTA SEGUIDA.** Y lo digo habiendolo buscado: repase
+> las **veintiuna** afirmaciones del reporte una por una contra su fichero (la apertura
+> roja con mi corrida, el diff commit a commit, las siete celdas del cierre con mis
+> mediciones, el sha256, el desfase, las tres cifras de cobertura, las dos mutaciones, las
+> dos cifras de `OP-E-03` con mi contador, los 41/7 contados del fichero, el censo de 183,
+> la composicion 1/5 sobre el diff, las tres guardas con sus EXIT y el `wc -l`). **Ni una.**
+> Por eso **la escalada de `AUDITOR.md` 1.2 NO se dispara**, y lo declaro para que conste
+> que la mire.
+>
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: PASA DE CERO A UNO** (5.2). **Dos tandas seguidas
+> son PARADA**, asi que la vuelta 105 no tiene margen, y lo escribo en el encargo.
+>
+> **EL CREDITO DE LA TANDA: BAJA, y digo por que exactamente.** `AUDITOR.md` 1.2: *"si una
+> discrepancia aparece FUERA de los discutibles marcados, baja el credito de toda la tanda:
+> ese tramo se relee al doble y lo dices en el acta"*. El reporte **no marco ningun
+> discutible de juicio** (marco uno procedimental, la apertura) y **el 20 y el 93
+> aparecieron fuera**. Asi que **el tramo se relee al doble por CUARTA vez consecutiva**, y
+> otra vez **no por donde ya se fue**: ni extremos (102), ni centro (103), ni la especie del
+> 28 tal como se pregunto (104), sino **POR LOS 41 QUE EL BARRIDO NUNCA CLARO**, empezando
+> por los ocho del satelite. Y va con su cifra medida: de las **41 OBJETO**, **ocho tienen
+> veredicto que no se sigue de la pregunta** (20, 21, 38, 46, 66, 87, 91, 93) y **treinta y
+> tres estan sin tocar**.
+
+## 8. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** El 20 y el 93 se adjudican con 9.6.2 (dos brazos) y 9.6.3; el agujero de la oracion, el `paso_casado` sin comprobar y la casilla del satelite se cubren con la letra del 29 ago por extension (6.2, 6.3) |
+| contradiccion con regla vigente o cifra publicada | **NO.** La apertura no sellada contradice `EJECUTOR.md` 1, pero se resuelve con las reglas existentes (declarar, registrar, sellar la proxima) y **cero movimiento medido** en `dataset/`, `web/` y `engine/` (2.2). El *"se sostienen"* se resuelve retirando la bendicion y releyendo, que es lo encargado |
+| decision de fundador reservada | **NO.** No se funde rama, no se abre fase, no se toca `estado` (medido: 0 de 71), no se toca el alcance. La deriva de contenido, los siete nodos con guion, el bloque repetido y los titulos gemelos por mayuscula siguen ANOTADOS y SIN ENCARGAR |
+| fallo tecnico repetido | **NO.** Gate 0 y las tres suites en verde por corrida propia, **cinco vueltas seguidas**. La guarda de apertura en rojo es **la primera vez**, no la segunda |
+| credito de tanda roto (clase o cifra) | **NO. Pasa a UNO** (5.2). Dos seguidas serian parada |
+| credito de tanda roto (reporte) | **NO. Sigue en CERO, tercera vuelta seguida** |
+| campana consumada | **NO.** La fase 04 sigue abierta |
+| credenciales ausentes | **NO** |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO APLICA.** Seguimos en la fase 04 |
+
+**EL BUCLE SIGUE.** No escribo `PARA_ALEXIS.md`. El encargo de la vuelta 105 va en
+`docs/loop/PROMPT_SIGUIENTE.md`: **el sellado de la apertura como primerisima cosa**, **el
+tapon del agujero de la oracion como TAREA bloqueante** (con mis tres mutaciones medidas
+como caso a batir), **la retirada de la bendicion en `04_ENLACES.md`**, **la relectura
+conjunta del 20 y del 93**, los registros de esta acta, y **el re-barrido de los 41 con la
+pregunta que si tiene casilla para el satelite y con el `paso_casado` comprobado**.
