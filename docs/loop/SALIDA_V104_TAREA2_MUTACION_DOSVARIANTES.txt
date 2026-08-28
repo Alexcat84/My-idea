@@ -1,0 +1,21 @@
+=== TAREA 2.2, MUTACION DE DOS VARIANTES (misma frase falsa, mismo fichero: VERDE citando SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt, cuyo veredicto real es ROJO) ===
+
+--- VARIANTE PELADA (sin docs/loop/ delante) ---
+==========================================================================================
+TALLA DE VEREDICTOS de docs/loop/_scratch_mut_pelado.md: 2 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, de 5 palabra(s) de veredicto en total en el reporte.
+==========================================================================================
+   linea 4: VERDE citando `docs/loop/SALIDA_V103_APERTURA_SELLADA_VERDE.txt` -- calza (fichero real: OK) [2 citas en la oracion, se uso: primera cita DESPUES de la palabra, misma oracion]
+
+ROJO, 1 hallazgo(s):
+   REPORTE.md linea 73: afirma VERDE (clase OK) citando `SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt` (pelado, resuelto a `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`), y el veredicto REAL de ese fichero es MAL
+EXIT=1
+
+--- VARIANTE CON PREFIJO (docs/loop/ delante) ---
+==========================================================================================
+TALLA DE VEREDICTOS de docs/loop/_scratch_mut_prefijo.md: 2 afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, de 5 palabra(s) de veredicto en total en el reporte.
+==========================================================================================
+   linea 4: VERDE citando `docs/loop/SALIDA_V103_APERTURA_SELLADA_VERDE.txt` -- calza (fichero real: OK) [2 citas en la oracion, se uso: primera cita DESPUES de la palabra, misma oracion]
+
+ROJO, 1 hallazgo(s):
+   REPORTE.md linea 73: afirma VERDE (clase OK) citando `docs/loop/SALIDA_V101_TAREA1_2_MUTACION_APERTURA.txt`, y el veredicto REAL de ese fichero es MAL
+EXIT=1

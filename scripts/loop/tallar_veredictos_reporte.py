@@ -67,6 +67,90 @@ docs/loop/SALIDA_V102_TAREA1_1_MUTACION_VEREDICTOS.txt):
       bien (cada veredicto que cite un fichero calza con lo que ese fichero
       dice de verdad).
 
+--- TAREA 2 de la vuelta 104 (acta de la vuelta 103, "EL CERCO PASO DE CIEGO
+A GRITON") ---
+
+POR QUE NACE. El cerco ensanchado de la 103 (ver bloque de abajo) empareja
+por PARRAFO, y el auditor lo corrio sobre el REPORTE.md de la vuelta 102
+(`--commit f253842b`): ROJO, 6 hallazgos, LOS SEIS FALSOS. Los seis viven en
+el mismo parrafo (la TAREA 1 de aquel reporte, 3 citas y 17 palabras de
+veredicto) y nacen de narracion de mutacion: "la afirmacion VERDE del
+reporte" describe lo que OTRO reporte afirmo, no un veredicto en vivo sobre
+el fichero citado despues en el mismo parrafo.
+
+EL EMPAREJAMIENTO AHORA ES POR ORACION, NO POR PARRAFO, MAS TRES FILTROS. Se
+midieron EN ORDEN, contra el mismo caso real (REPORTE.md de la vuelta 102,
+`--commit f253842b`), y cada uno se anadio SOLO porque el anterior no bastaba
+(la traza queda escrita para que no haya que redescubrirla):
+
+  (a) LA CITA TIENE QUE VIVIR EN LA MISMA ORACION que la palabra de
+      veredicto (una oracion es el texto entre dos finales de oracion:
+      `.`, `!` o `?` seguidos de espacio o fin de texto; un punto DENTRO de
+      una cita entre comillas invertidas, por ejemplo el `.txt` de un
+      nombre de fichero, se enmascara antes de buscar finales, para que no
+      corte una oracion por la mitad). Si no hay ninguna cita en la
+      oracion, la palabra NO CITA FICHERO: cuenta en la cobertura, no
+      levanta hallazgo. MEDIDO: soluciona la enumeracion "VERDE/ROJO/PASA/
+      FALLA que cite fichero" (ninguna cita SALIDA_ en esa oracion), pero
+      SOLO (a) deja el reporte 102 en ROJO igual: la oracion "Mutacion:
+      ROJO sobre el REPORTE.md de la 101 ..., nombrando
+      `SALIDA_V101_..._txt` como el fichero cuyo veredicto real (ROJO)
+      contradice la afirmacion VERDE del reporte." trae la cita Y los tres
+      veredictos EN LA MISMA ORACION.
+
+  (b) LA PALABRA NO PUEDE IR PRECEDIDA POR "la afirmacion" O "afirmacion"
+      (sin distinguir mayusculas, en la palabra inmediatamente anterior,
+      quitando puntuacion). Es la marca literal que el propio acta de la
+      103 senala como el sintoma: "la palabra VERDE de 'contradice LA
+      AFIRMACION VERDE del reporte' es NARRACION DE UNA MUTACION". Con
+      (a)+(b) la oracion de arriba ya no levanta hallazgo (sus dos ROJO
+      calzan de verdad con el fichero citado; el VERDE, adjetivo de
+      "afirmacion", queda fuera). MEDIDO: (a)+(b) bajan el reporte 102 de 6
+      a 2 hallazgos, no a cero: quedan la oracion "(a) VERDE ..., (b) ROJO
+      ..., (c) ROJO ... con un fichero de apertura real movido al segundo
+      commit (`SALIDA_..._txt`)." (dos hallazgos, linea 36) y la del apertura
+      sellada (linea 4, un fichero citado en la misma oracion que no trae
+      veredicto legible, ver (d)).
+
+  (c) LA PALABRA NO PUEDE IR JUSTO DESPUES DE UNA ETIQUETA DE LISTA DE UN
+      SOLO CARACTER ENTRE PARENTESIS, "(a)", "(b)", "(c)"... Narra UN caso
+      de una enumeracion de varios (los "tres casos" de una mutacion); el
+      veredicto de conjunto del fichero citado al final de la enumeracion es
+      su ULTIMA linea VERDE/ROJO ("VERDE GENERAL: los tres casos ... dan el
+      veredicto esperado"), que casi nunca coincide con lo que UN caso
+      aislado narra. MEDIDO: con (a)+(b)+(c) el reporte 102 baja a 1
+      hallazgo.
+
+  (d) SI LA CITA ELEGIDA EN LA ORACION RESULTA NO LEGIBLE (fichero
+      inexistente o sin linea VERDE/ROJO/PASA/FALLA ni EXIT=N), se ensancha
+      la busqueda al PARRAFO entero antes de darla por buena: una cita de
+      oracion no legible es senal de que esa cita es evidencia de OTRA cosa
+      (aqui, un hash de apertura, `docs/loop/SALIDA_V102_HEAD_APERTURA.txt`
+      solo trae el hash), y la evidencia real del VERDE vive al lado, en el
+      mismo parrafo (`docs/loop/SALIDA_V102_CABECERA_TALLADA.txt`), que es
+      la convencion de cabecera de esta campana. MEDIDO: con (a)+(b)+(c)+(d)
+      el reporte 102 da VERDE, EXIT 0.
+
+LA COBERTURA CAE, Y SE PUBLICA CON SU CIFRA EN VEZ DE ESCONDERLA (2.4 del
+encargo, docs/loop/SALIDA_V104_TAREA2_COBERTURA.txt): sobre el REPORTE.md de
+la vuelta 102 pasa de 14 de 17 a 3 de 17; sobre el de la vuelta 103 (HEAD) de
+2 de 4 a 1 de 4. Es la exigencia de la vuelta 103: una cobertura menor y
+honesta vale mas que catorce emparejamientos de los que seis mienten. La
+caida del 2 a 1 en el reporte 103 tiene causa medida y declarada: el ROJO de
+"Las dos variantes de la mutacion ... dan ROJO tras el arreglo." pierde su
+cita porque el punto de cierre del titulo en negrita anterior ("acta
+102).**") no cuenta como fin de oracion (el asterisco pegado al punto no es
+espacio), asi que la cita que de verdad evidencia ese ROJO queda en la
+oracion anterior. Es perdida real, no oculta: se prefiere no contar esa
+afirmacion antes que arriesgar el falso positivo que el cerco griton probo.
+
+PRUEBA DE MUTACION (2.2 del encargo, con su salida commiteada,
+docs/loop/SALIDA_V104_TAREA2_MUTACION_DOSVARIANTES.txt): la MISMA mutacion de
+dos variantes de la vuelta 103 (misma frase falsa, mismo fichero, nombre
+pelado y con `docs/loop/` delante) SIGUE dando ROJO en las dos: el filtro (b)
+no apaga el positivo real, porque en esa frase la palabra de veredicto no va
+precedida de "afirmacion".
+
 --- TAREA 1.1, 1.3 y 1.4 de la vuelta 103 (acta de la vuelta 102, "AHORA LA
 CAIDA, Y NO ES DE DICTADO: ES DE GUARDA") ---
 
@@ -108,6 +192,7 @@ una vez con el nombre pelado y otra con `docs/loop/` delante: DESPUES del
 arreglo, LAS DOS tienen que dar ROJO.
 """
 import argparse
+import bisect
 import io
 import os
 import re
@@ -124,6 +209,20 @@ RE_VEREDICTO_PALABRA = re.compile(r"\b(VERDE|ROJO|PASA|FALLA)\b")
 RE_CITA = re.compile(r"`(docs/loop/SALIDA_[^`]+\.(?:txt|md)|SALIDA_[^`/]+\.(?:txt|md))`")
 RE_LINEA_VEREDICTO = re.compile(r"^(VERDE|ROJO|PASA|FALLA)\b")
 RE_EXIT = re.compile(r"EXIT(?:CODE)?[=: ]+(\d+)", re.IGNORECASE)
+# (a) TAREA 2 v104: fin de oracion, punto/exclamacion/interrogacion seguido de
+# espacio o de fin de texto (un punto pegado a un digito, como en "3.853" o
+# en un nombre de fichero enmascarado, no cuenta).
+RE_FIN_ORACION = re.compile(r"[.!?](?=\s|$)")
+# (b) TAREA 2 v104: la palabra inmediatamente anterior a la de veredicto, tras
+# quitar puntuacion, es "afirmacion" (con o sin tilde): senala que la palabra
+# de veredicto es el ADJETIVO de una afirmacion ajena, no un veredicto propio.
+RE_PALABRA_ANTERIOR = re.compile(r"([A-Za-zÁÉÍÓÚáéíóúÑñ]+)[^A-Za-zÁÉÍÓÚáéíóúÑñ]*$")
+# (c) TAREA 2 v104: la palabra va justo despues de una etiqueta de lista de un
+# solo caracter entre parentesis, "(a)", "(b)", "(c)"...: es narracion de UN
+# caso entre varios de una enumeracion (los "tres casos" de una mutacion), no
+# el veredicto general del fichero citado, que se lee aparte (linea de cierre
+# tipo "VERDE GENERAL").
+RE_ETIQUETA_LISTA = re.compile(r"\([a-zA-Z]\)\s*$")
 
 
 def resolver_cita(cita):
@@ -191,30 +290,100 @@ def veredicto_real_del_fichero(ruta_rel, fallos_locales):
     return None, "el fichero no trae ninguna linea VERDE/ROJO/PASA/FALLA ni EXIT=N: veredicto no legible"
 
 
+def enmascarar_citas(parrafo, spans):
+    """(a) TAREA 2 v104: devuelve una copia de PARRAFO con el texto de cada
+    cita (comillas invertidas incluidas) sustituido por 'x', para que un
+    punto DENTRO de un nombre de fichero no se lea como fin de oracion. La
+    longitud no cambia: los offsets siguen sirviendo para todo lo demas."""
+    lista = list(parrafo)
+    for inicio, fin in spans:
+        for i in range(inicio, fin):
+            if lista[i] != "\n":
+                lista[i] = "x"
+    return "".join(lista)
+
+
+def limites_de_oracion(parrafo_enmascarado):
+    return [m.start() for m in RE_FIN_ORACION.finditer(parrafo_enmascarado)]
+
+
+def oracion_de(pos, limites):
+    """Indice de oracion de POS: cuenta cuantos finales de oracion caen
+    ANTES de POS. Una posicion que cae justo EN el punto de cierre sigue en
+    la misma oracion que lo precede."""
+    return bisect.bisect_left(limites, pos)
+
+
+def es_adjetivo_de_afirmacion(parrafo, pos):
+    """(b) TAREA 2 v104: True si la palabra inmediatamente anterior a la de
+    veredicto (en POS) es "afirmacion" o "afirmaciones", sin distinguir
+    tilde ni mayuscula. Marca que la palabra de veredicto describe una
+    afirmacion AJENA (narracion), no un veredicto propio."""
+    m = RE_PALABRA_ANTERIOR.search(parrafo[:pos])
+    if not m:
+        return False
+    palabra = m.group(1).lower().replace("ó", "o")
+    return palabra in ("afirmacion", "afirmaciones")
+
+
+def es_etiqueta_de_lista(parrafo, pos):
+    """(c) TAREA 2 v104: True si justo antes de la palabra (solo espacio de
+    por medio) hay una etiqueta de un caracter entre parentesis, "(a)",
+    "(b)", "(c)"... Marca que la palabra narra UN caso de una enumeracion de
+    varios (p.ej. "Tres casos: (a) VERDE ..., (b) ROJO ..."), cuyo veredicto
+    de conjunto se lee aparte, en la linea de cierre del fichero citado."""
+    return bool(RE_ETIQUETA_LISTA.search(parrafo[:pos]))
+
+
+def elegir_cita(citas, pos):
+    """Preferencia declarada (1.4 de la vuelta 103): la primera cita DESPUES
+    de la palabra: si no hay ninguna, la cita ANTES mas cercana."""
+    despues = [c for c in citas if c[0] > pos]
+    antes = [c for c in citas if c[0] <= pos]
+    if despues:
+        return min(despues, key=lambda c: c[0] - pos), "primera cita DESPUES de la palabra"
+    return max(antes, key=lambda c: c[0]), "cita ANTES mas cercana"
+
+
 def hallar_afirmaciones(texto):
-    """Para cada ocurrencia de VERDE/ROJO/PASA/FALLA, busca la cita de
-    fichero MAS CERCANA (por distancia de caracteres) dentro del MISMO
-    parrafo. Devuelve una lista de (linea, palabra, fichero_citado, regla,
-    n_citas_parrafo) SOLO para las ocurrencias que si citan un fichero.
-    (1.4) `regla` declara COMO se emparejo cuando el parrafo trae mas de una
-    cita, para que un emparejamiento no dependa de la suerte."""
+    """(TAREA 2 v104) Para cada ocurrencia de VERDE/ROJO/PASA/FALLA que no
+    sea adjetivo de "afirmacion" (b) ni etiqueta de lista (c), busca la cita
+    de fichero mas cercana que viva EN LA MISMA ORACION (a). (d) Si esa cita
+    resulta NO LEGIBLE (fichero inexistente o sin veredicto legible), se
+    ensancha la busqueda al PARRAFO entero antes de darla por buena: una cita
+    de oracion no legible es senal de que esa cita es evidencia de OTRA cosa
+    (un hash, un nombre de comando) y la evidencia real vive al lado, en el
+    mismo parrafo, que es la convencion de cabecera de esta campana. Devuelve
+    (linea, palabra, fichero_citado, regla, n_citas) SOLO para las
+    ocurrencias que si citan un fichero bajo estas reglas; el resto cuenta en
+    la cobertura total pero no aqui."""
     afirmaciones = []
     for offset_parrafo, parrafo in parrafos_con_offset(texto):
-        citas = [(m.start(), m.group(1)) for m in RE_CITA.finditer(parrafo)]
-        if not citas:
+        citas_todas = [(m.start(), m.end(), m.group(1)) for m in RE_CITA.finditer(parrafo)]
+        if not citas_todas:
             continue
+        enmascarado = enmascarar_citas(parrafo, [(c[0], c[1]) for c in citas_todas])
+        limites = limites_de_oracion(enmascarado)
         for m in RE_VEREDICTO_PALABRA.finditer(parrafo):
             pos = m.start()
-            despues = [c for c in citas if c[0] > pos]
-            antes = [c for c in citas if c[0] <= pos]
-            if despues:
-                mejor = min(despues, key=lambda c: c[0] - pos)
-                regla = "primera cita DESPUES de la palabra"
-            else:
-                mejor = max(antes, key=lambda c: c[0])
-                regla = "cita ANTES mas cercana (sin cita despues en el parrafo)"
+            if es_adjetivo_de_afirmacion(parrafo, pos) or es_etiqueta_de_lista(parrafo, pos):
+                continue
+            oracion_palabra = oracion_de(pos, limites)
+            citas_oracion = [(c[0], c[2]) for c in citas_todas if oracion_de(c[0], limites) == oracion_palabra]
+            if not citas_oracion:
+                continue
+            mejor, regla_base = elegir_cita(citas_oracion, pos)
+            ambito, n_citas = "misma oracion", len(citas_oracion)
+            _, motivo_probe = veredicto_real_del_fichero(resolver_cita(mejor[1]), [])
+            if motivo_probe is not None:
+                citas_parrafo = [(c[0], c[2]) for c in citas_todas]
+                mejor_p, regla_p = elegir_cita(citas_parrafo, pos)
+                if mejor_p[1] != mejor[1]:
+                    mejor, regla_base = mejor_p, regla_p
+                    ambito, n_citas = "parrafo, cita de la oracion no legible (d)", len(citas_parrafo)
+            regla = "%s, %s" % (regla_base, ambito)
             linea = numero_de_linea(texto, offset_parrafo + pos)
-            afirmaciones.append((linea, m.group(1), mejor[1], regla, len(citas)))
+            afirmaciones.append((linea, m.group(1), mejor[1], regla, n_citas))
     return afirmaciones
 
 
@@ -251,7 +420,7 @@ def main():
     for linea, palabra, cita, regla, n_citas in afirmaciones:
         fichero = resolver_cita(cita)
         nota_resolucion = "" if fichero == cita else " (pelado, resuelto a `%s`)" % fichero
-        nota_emparejamiento = " [%d citas en el parrafo, se uso: %s]" % (n_citas, regla) if n_citas > 1 else ""
+        nota_emparejamiento = " [%d citas en la oracion, se uso: %s]" % (n_citas, regla) if n_citas > 1 else ""
         clase_afirmada = CLASE[palabra]
         clase_real, motivo = veredicto_real_del_fichero(fichero, fallos)
         if motivo is not None:
