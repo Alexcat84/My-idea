@@ -717,13 +717,21 @@ def commit_apertura_desde_git(vuelta, rama, fallos):
     except Exception as e:
         fallos.append("no se pudo leer git log de la rama %s: %s" % (rama, e))
         return None
-    patron = re.compile(r"^ACTA DE LA VUELTA %d DEL AUDITOR\b" % (vuelta - 1))
+    # LAS DOS FORMAS DEL TITULO DEL ACTA (vuelta 106): 'ACTA DE LA VUELTA N DEL
+    # AUDITOR' (vigente 92 a 104) y 'ACTA DEL AUDITOR, VUELTA N' (nacida en el
+    # acta de la vuelta 105, commit fc504151, que rompio el patron literal sin
+    # avisar). Mismo remedio y mismo motivo que en
+    # verificar_apertura_sellada.py:commit_acta.
+    patrones = [
+        re.compile(r"^ACTA DE LA VUELTA %d DEL AUDITOR\b" % (vuelta - 1)),
+        re.compile(r"^ACTA DEL AUDITOR,\s*VUELTA %d\b" % (vuelta - 1)),
+    ]
     hallados = []
     for linea in r.stdout.splitlines():
         if "\x01" not in linea:
             continue
         h, s = linea.split("\x01", 1)
-        if patron.match(s):
+        if any(p.match(s) for p in patrones):
             hallados.append(h)
     if not hallados:
         fallos.append("git log de la rama %s no trae ningun commit 'ACTA DE LA VUELTA %d "

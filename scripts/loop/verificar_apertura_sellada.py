@@ -113,17 +113,32 @@ def rama_actual(fallos):
 
 def commit_acta(vuelta, rama, fallos):
     """Commit cuyo mensaje empieza por 'ACTA DE LA VUELTA <vuelta-1> DEL
-    AUDITOR', igual que tallar_cabecera_reporte.py:commit_apertura_desde_git."""
+    AUDITOR' O por 'ACTA DEL AUDITOR, VUELTA <vuelta-1>', igual que
+    tallar_cabecera_reporte.py:commit_apertura_desde_git.
+
+    LA SEGUNDA FORMA SE SUMA EN LA VUELTA 106 (guarda envejecida, hallada al
+    sellar la apertura: verificar_apertura_sellada.py --vuelta 106 daba ROJO
+    pese a que los diez SALIDA_V106_*_APERTURA.txt nacieron todos, medido a
+    mano, como hijos directos de fc504151). El acta de la vuelta 105
+    (fc504151) titula su commit 'ACTA DEL AUDITOR, VUELTA 105, mas el
+    encargo de la 106.', que rompe por primera vez el patron literal
+    'ACTA DE LA VUELTA N DEL AUDITOR' vigente sin excepcion desde la vuelta
+    92 (ver git log: 92 a 104 usan la forma vieja). Las dos formas nombran
+    lo mismo (el commit del acta que cierra la vuelta N-1); se aceptan las
+    dos en vez de renombrar el commit ya publicado."""
     out = _git(["log", rama, "--pretty=format:%H\x01%s"], fallos, "git log de la rama")
     if out is None:
         return None
-    patron = re.compile(r"^ACTA DE LA VUELTA %d DEL AUDITOR\b" % (vuelta - 1))
+    patrones = [
+        re.compile(r"^ACTA DE LA VUELTA %d DEL AUDITOR\b" % (vuelta - 1)),
+        re.compile(r"^ACTA DEL AUDITOR,\s*VUELTA %d\b" % (vuelta - 1)),
+    ]
     hallados = []
     for linea in out.splitlines():
         if "\x01" not in linea:
             continue
         h, s = linea.split("\x01", 1)
-        if patron.match(s):
+        if any(p.match(s) for p in patrones):
             hallados.append(h)
     if not hallados:
         fallos.append("git log de la rama %s no trae ningun commit 'ACTA DE LA VUELTA %d "
