@@ -2210,6 +2210,18 @@ es una decision de alcance que esta ficha no toma por su cuenta.
 campaña, PENDIENTE DE DOCTRINA sobre si `OP-S-04` se reabre para este septimo
 caso o si nace ficha aparte, traido a la mesa en el reporte de la vuelta 121.
 
+**AMPLIACION (vuelta 122, aditiva): la misma linea arrastra DOS averias, no
+una.** La frase citada arriba, `pasos_accionables[1]` de
+`inteligencia_de_anuncios_de_la_competencia`, nombra `Alexa` (la averia de
+`OP-S-04`: **MUERTA**, ver Entrada 3 de esta misma ficha) Y `Quantcast` (la
+averia de `OP-S-05`: **SIN VERIFICAR**, el sujeto entero de esa operacion). Las
+dos quedan anotadas como trabajo post campaña por el punto 2 de la decision
+del fundador del 28 ago 2026
+(`docs/loop/paradas/2026-08-28-titulo-nafta-ops01-DECISION.md`), el mismo
+punto que ya acoto `OP-S-01`. El nodo NO SE TOCA: ninguna de las dos
+operaciones lo cablea en su nomina, las dos nominas quedaron fijas el 11 ago
+2026 y el nodo nacio el 14 ago 2026, despues de las dos.
+
 ## DOCTRINA DE LA CLASE (ago 2026)
 
 **"Los programas de tu estado no significan nada donde no hay estados con
@@ -7358,3 +7370,46 @@ R.3 intacto. De aqui sale la regla vigente desde esta vuelta (`EJECUTOR.md`,
 20 ago 2026 en adelante): EL REPORTE NO PUEDE DECIR MENOS PRECISO QUE EL
 REGISTRO QUE CITA; si el registro distingue dos especies, el reporte las
 distingue tambien o no las nombra.
+
+### R.4 LAS DOS CAIDAS DE REPORTE DE LA VUELTA 121 (acta de la vuelta 121,
+seccion 4.1 y 4.2), REGISTRO LARGO, CORRECCIONES DECLARADAS
+
+**(1) LA CABECERA DE LA 121 LLAMO "MOTOR APERTURA REAL" A UN FICHERO POST
+ESCRITURA.** `docs/loop/REPORTE.md` de la vuelta 121 (commit `ed916471`,
+parrafo de la cabecera) escribe: *"El motor APERTURA real (no la instantanea
+rota) SI paso 25/25 tras completar su propio ciclo, minutos despues: ver
+`SALIDA_V121_OPS03_MOTOR_POST.txt`"*. Es FALSO llamarlo "APERTURA real":
+`SALIDA_V121_OPS03_MOTOR_POST.txt` es, por declaracion del propio reporte
+(TAREA 1, mismo fichero: *"Guardas por operacion:
+`SALIDA_V121_OPS03_*`... miden el MISMO checkpoint acumulado tras las dos
+escrituras"*), una medicion POST OPS03 Y OPS04, no una medicion de apertura.
+No existe, en la vuelta 121, ninguna medicion de motor en verde en el estado
+de APERTURA (`SALIDA_V121_MOTOR_APERTURA.txt` es la instantanea rota, EXIT 1,
+71 divergentes). Este es el ramal (i) del tramo doblado de esta vuelta
+(`docs/loop/PROMPT_SIGUIENTE.md`, vuelta 122): NINGUNA MEDICION SE ATRIBUYE A
+UN ESTADO QUE NO ES EL SUYO.
+
+**(2) LA TAREA 3.a DE LA 121 ESCRIBIO "VACIO" SOBRE UN FICHERO QUE TRAE TRES
+LINEAS DE ESTADO GIT.** El mismo `REPORTE.md`, TAREA 3.a: *"`git status
+--porcelain` vacio tras el rojo (sin escritura nueva)"*, citando (abreviado)
+`SALIDA_V121_OPS03_ROJO_SEGUNDA_PASADA.txt`. Leido hoy, ese fichero trae, en
+sus tres ultimas lineas, tres ficheros modificados (` M
+dataset/nodos/calculo_de_aranceles_importacion.json`, ` M
+dataset/nodos/evaluacion_preparacion_empresa_exportar.json`, ` M
+dataset/nodos/reglas_de_origen_fta_2.json`): NO esta vacio; esas tres lineas
+son el `git status` de la escritura PREVIA de la propia vuelta 121 (TAREA 3.a,
+primer intento), capturado sin querer dentro del fichero del rojo de la
+segunda pasada. **RE VERIFICADO HOY, en segunda pasada real**: corriendo de
+nuevo `scripts/loop/vuelta121_tarea3a_export_gov_ops03.py` (sin flags) y
+`scripts/loop/vuelta121_tarea3b_herramientas_muertas_ops04.py` (sin flags), los
+dos instrumentos caen en ROJO EXIT 1 sin escribir nada
+(`docs/loop/SALIDA_V122_TAREA2D_VERIFICO_OPS03_ROJO.txt`,
+`docs/loop/SALIDA_V122_TAREA2D_VERIFICO_OPS04_ROJO.txt`), y `git status
+--porcelain -- dataset/` da vacio de verdad, una vez commiteado el estado. Lo
+que el reporte de la 121 debio decir es que el fichero citado traia arrastre
+de la escritura anterior, no que el `git status` estuviera vacio. Este es el
+ramal (ii) del tramo doblado de esta vuelta: EL EXPEDIENTE NO PUEDE DECIR MAS
+QUE EL REGISTRO ESCRITO A SU LADO.
+
+Texto viejo de `REPORTE.md` de la vuelta 121 intacto (no se reescribe un
+reporte ya commiteado y pusheado); las dos correcciones viven aqui, aditivas.

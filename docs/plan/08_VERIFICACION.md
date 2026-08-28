@@ -29,6 +29,31 @@ nada.**
 | **06 MESAS** | cada decision escrita **con su motivo y su cobertura al lado** (banco 9.26) |
 | **07 ADUANA** | los cuatro controles mecanicos **corriendo en Gate 0** |
 
+**CORRECCION DECLARADA (vuelta 122, aditiva, la tabla vieja no se toca): LA
+CELDA DE LA FILA 05 SANEO SE LEE ACOTADA A LAS NOMINAS DE SUS OPERACIONES.**
+Medido hoy (acta de la vuelta 121, seccion 3.3, adjudicacion del auditor):
+"ningun nodo cablea `export.gov`" esta CUMPLIDO (`OP-S-03`, HECHA); "ninguna
+de las seis herramientas muertas" NO esta cumplido en su forma literal y
+categorica: `Alexa` vive en `inteligencia_de_anuncios_de_la_competencia`, un
+sexto nodo FUERA de la nomina fija de `OP-S-04` (nacido de `OP-F-04-WEI` el 14
+ago 2026, DESPUES del censo del 11 ago 2026 que fijo esa nomina). Citando el
+punto 2 de la decision del fundador del 28 ago 2026
+(`docs/loop/paradas/2026-08-28-titulo-nafta-ops01-DECISION.md`, el mismo punto
+que ya saco el barrido global de NAFTA de la campaña dejando viva la fila
+gemela "ningun id vivo con tratado extinto"): esta celda se lee cumplida
+CUANDO LAS OPERACIONES DE SU NOMINA CIERRAN (`OP-S-03`, `OP-S-04`, `OP-S-05`),
+no cuando el catalogo entero queda barrido; el residuo global fuera de esas
+nominas queda anotado como trabajo post campaña en las fichas de
+`docs/PENDIENTES.md`: `vigencia-del-marco-internacional` (6 entradas medidas
+hoy por su numeracion ordinal explicita: PRIMERA a SEXTA, la SEXTA de la
+vuelta 121; fisicamente solo 3 encabezados `### ` viven bajo su propio `## `
+de apertura, los otros 4 quedaron anidados sin mudarse bajo el `## ` de
+`campos-sucios-dataset`) y `vigencia-de-herramientas-nombradas` (7 entradas
+medidas hoy por la secuencia numerada `Entrada 1` a `Entrada 7`, la 7 de la
+vuelta 121; su propio bloque `## ` trae 13 encabezados `### ` en total, con 6
+mas que usan otra numeracion, "de herramientas" y "de marco-pais", ajena a esa
+secuencia).
+
 ---
 
 ## LA VERIFICACION TRANSVERSAL, y su orden importa
