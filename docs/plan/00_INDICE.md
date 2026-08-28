@@ -437,6 +437,19 @@ orden, que espera a que, y **como se sabe que cada una esta HECHA.**
 | **9** | **LECTURAS DIRIGIDAS** | **cada una a su fase** | las cinco tandas **con su veredicto escrito** y **el marcador del cribado sin mover** |
 | **10** | **INVENTARIO** | todas | **cada cifra con su fecha de corte**, y **ningun hueco sin nombre** |
 
+> **ACTUALIZACION ADITIVA (28 ago 2026, vuelta 118), sin tocar la fila 4 ni el
+> campo `estado` de ninguna operacion:** la fase **4 (ENLACES) queda CERRADA
+> CON REMISION**. Las tres clausulas de la columna "HECHO cuando" de la fila
+> 4, medidas hoy: **296 de 296 ids RESUELTOS** (272 directo, 24 por alias,
+> cero rotas); **una sola direccion** en las tres fuentes medidas, los dos
+> enlaces mutuos (`LD-41`, `LD-43`) viven en `OP-E-05`, REMITIDA; **cero
+> aristas por alias nuevas**. Las diez operaciones se reparten en **CINCO
+> con destino cumplido** (`OP-E-01`, `OP-E-02`, `OP-E-03`, `OP-E-06`,
+> `OP-E-07`) y **CINCO remitidas a la fase 6** (`OP-E-04`, `OP-E-05`,
+> `OP-M-01-ESLABONES`, `OP-M-01-SEXTO`, `OP-M-03-ENLACES`). Registro
+> completo, con sus citas, en `docs/plan/04_ENLACES.md`, seccion "LA FASE 04
+> QUEDA CERRADA CON REMISION (VUELTA 118, TAREA 3.1)".
+
 ### LAS TRES ATADURAS QUE NO SE PUEDEN SOLTAR
 
 | | la atadura | por que |

@@ -1497,3 +1497,95 @@ de `OP-E-03` **NO SE TOCA** y sigue en `LISTA` (acta de la vuelta 100, seccion
 decision aparte que este registro no toma). Esta vuelta **no escribe ni
 retira ninguna arista, no abre la fase 05 ni la 06, no mueve ninguna
 operacion de fase**.
+
+## LA FASE 04 QUEDA CERRADA CON REMISION (VUELTA 118, TAREA 3.1)
+
+**LAS TRES CLAUSULAS DEL CRITERIO DE HECHO** (`00_INDICE.md`, tabla EL
+ORDEN, fila 4: "las aristas escritas **con ids RESUELTOS**, **una sola
+direccion** salvo los dos enlaces mutuos, y **cero aristas por alias
+nuevas**"), medidas hoy sobre las TRES fuentes (`OP-E-01` ESCRITA 98 pares,
+`OP-E-06` direccion `V90` 114 pares, `OP-E-07` direccion `V94`, el ULTIMO de
+cuatro ficheros, 84 pares; **296 pares en total**):
+
+1. **IDS RESUELTOS: 296 de 296.** 272 DIRECTO (sin cadena de alias) y 24 POR
+   ALIAS (al menos un extremo), cero ROTAS, las 296 presentes hoy en el
+   grafo por las dos vistas (`docs/loop/SALIDA_V117_TAREA3_1_CRITERIO_HECHO_TRES_FUENTES.txt`,
+   re-citada por no haber cambiado su base entre la 117 y la 118).
+2. **UNA SOLA DIRECCION, SALVO LOS DOS ENLACES MUTUOS.** Ninguna de las
+   TRES fuentes trae un par con las dos direcciones escritas en si misma
+   (0 de 0 en cada una, mismo fichero de arriba); los dos enlaces mutuos del
+   banco 9.22 (`LD-41`, `LD-43`) viven en `OP-E-05` (REMITIDA, fuera de
+   estos 296) y no en estas tres fuentes.
+3. **CERO ARISTAS POR ALIAS NUEVAS.** De los 24 pares que solo resuelven por
+   alias, CERO tienen su forma CRUDA (sin resolver) ya escrita como arista
+   en el grafo de hoy, medido expresamente hoy con
+   `scripts/loop/vuelta118_tarea3_verificar_alias_nuevas.py`
+   (`docs/loop/SALIDA_V118_TAREA3_1_ALIAS_NUEVAS.txt`).
+
+**LAS DIEZ OPERACIONES SE REPARTEN SIN QUE SOBRE NI FALTE UNA, medido con el
+censo reparado de la TAREA 2 de esta vuelta**
+(`docs/loop/SALIDA_V118_TAREA2_2_CENSO_EJECUCION_FASE04.txt`):
+
+**CINCO CON DESTINO CUMPLIDO:**
+
+| operacion | como quedo cumplida |
+|---|---|
+| `OP-E-01` | ADJUDICADA EJECUTADA por el auditor (ver mas abajo), 98/98 aristas presentes |
+| `OP-E-02` | `estado` `HECHA` |
+| `OP-E-03` | ADDENDUM DE EJECUCION (vuelta 94) y encabezado de cierre en `04_ENLACES.md:1474` ("## EL CIERRE DE LA LECTURA DE `OP-E-03`, EL TERRITORIO SE ACABO") |
+| `OP-E-06` | ADDENDUM DE EJECUCION, 114/114 aristas presentes |
+| `OP-E-07` | ADDENDUM DE EJECUCION, 84/84 aristas presentes |
+
+**CINCO REMITIDAS a la fase 06 (mesas):**
+
+| operacion | remitida a | aristas propuestas presentes hoy |
+|---|---|---|
+| `OP-E-04` | `OP-M-01` | 0/9 |
+| `OP-E-05` | `OP-M-01` | 1/4 |
+| `OP-M-01-ESLABONES` | `OP-M-01` | 0/2 |
+| `OP-M-01-SEXTO` | `OP-M-01` | 0/1 |
+| `OP-M-03-ENLACES` | `OP-M-03` | 0/2 |
+
+**EL CAMPO `estado` NO SE TOCA EN NINGUNA DE LAS DIEZ.**
+
+### LA ADJUDICACION DE `OP-E-01`, EJECUTADA
+
+`OP-E-01` TIENE SU DESTINO CUMPLIDO Y ESTA EJECUTADA, con cuatro apoyos, dos
+citas de linea RE-MEDIDAS HOY: (1) su propia nota (`docs/plan/OPERACIONES.jsonl`)
+trae "CIERRE MEDIDO (27 ago 2026, vuelta 87)" y dice literal "esta nota es
+la unica declaracion de que quedo ejecutada"; (2) `04_ENLACES.md:783` lleva
+el encabezado "## `OP-E-01`, CIERRE MEDIDO (27 ago 2026, vuelta 87)",
+re-medido hoy en `docs/loop/SALIDA_V118_TAREA2_2_CENSO_EJECUCION_FASE04.txt`
+(citas que las dos viejas de PASO 1/PASO 2, lineas 60 y 139, no traian: son
+encabezados de paso, no del cierre de la operacion entera); (3) sus 98 de 98
+aristas estan presentes en el grafo de hoy por las dos vistas; (4) la nota
+de `OP-E-06` la cita como precedente de operacion ejecutada. Doctrina de
+base: acta de la vuelta 116, secciones 3.1 y 3.2.
+
+### CORRECCION DECLARADA DE DOS CELDAS FALSAS DE LA VUELTA 117 (el texto viejo, arriba, se queda entero)
+
+Las tablas que estas dos celdas poblaban viven en salidas de la vuelta 117
+(`docs/loop/SALIDA_V117_TAREA3_2_REGISTRO_CIERRE_TRES_SUPERFICIES.txt` y
+`docs/loop/SALIDA_V117_TAREA3_3_CENSO_EJECUCION_FASE04.txt`), que son pieza
+historica y NO SE TOCAN: la correccion vive aqui y en `docs/PENDIENTES.md`
+(registros E.1 y E.2 de la vuelta 118).
+
+1. **`OP-D-07`, superficie (C) ("frase `REGISTRO DE OPERACION HECHA`")**: la
+   vuelta 117 publico **SI**, citando `02_DESTEJIDOS.md:4461`. La linea real
+   de esa cita, re-medida hoy, dice: "**Por eso este registro NO dice
+   `REGISTRO DE OPERACION HECHA`.**" — una negacion. La celda correcta es
+   **NO** (`docs/loop/SALIDA_V118_TAREA2_1_CENSO_TRES_SUPERFICIES.txt`).
+   Ninguna conclusion se mueve: `OP-D-07` sigue con registro de cierre por
+   las superficies (A) y (B).
+2. **`OP-E-03`, columna "registro en pagina"**: la vuelta 117 publico **NO**.
+   Con la lista de palabras de cierre ampliada (que ahora incluye
+   `CIERRE`), la celda correcta es **SI**, por `04_ENLACES.md:1474` ("## EL
+   CIERRE DE LA LECTURA DE `OP-E-03`, EL TERRITORIO SE ACABO"), re-medida
+   hoy (`docs/loop/SALIDA_V118_TAREA2_2_CENSO_EJECUCION_FASE04.txt`).
+
+### EL LIMITE DE ESTE REGISTRO (VUELTA 118, TAREA 3.1)
+
+Cero aristas escritas o retiradas por esta tarea, cero cambios de `estado`
+en ninguna de las diez operaciones, y la fase 06 NO SE ABRE. La fase 05 se
+abre por separado, en la TAREA 4 de esta misma vuelta, con su propia guarda
+de entrada.
