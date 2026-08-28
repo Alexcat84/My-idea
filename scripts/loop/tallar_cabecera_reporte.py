@@ -735,16 +735,24 @@ def commit_apertura_desde_git(vuelta, rama, fallos):
     80): busca en `git log` de RAMA el commit cuyo mensaje EMPIEZA por 'ACTA
     DE LA VUELTA <vuelta-1> DEL AUDITOR', que es el patron exacto y estable
     que todo acta de auditor usa para nombrar la vuelta que cierra. Si no hay
-    NINGUNO o hay MAS DE UNO, ROJO: jamas inventa un hash."""
+    NINGUNO o hay MAS DE UNO, ROJO: jamas inventa un hash.
+
+    Devuelve (hash_corto, asunto_real) y no solo el hash (vuelta 106): el
+    asunto real se publica en la celda de identidad en vez de repetir SIEMPRE
+    la frase 'ACTA DE LA VUELTA N DEL AUDITOR', que dejo de ser literalmente
+    cierta el dia (vuelta 106) que un acta empezo a titularse distinto (ver
+    abajo) y una celda que repite una frase fija sin mirar cual de los dos
+    patrones caso en realidad es, en si misma, el tipo de afirmacion no
+    tallada que este fichero existe para evitar."""
     if rama is None:
         fallos.append("sin rama, no se busca el commit de apertura")
-        return None
+        return None, None
     try:
         r = subprocess.run(["git", "log", rama, "--pretty=format:%H\x01%s"], cwd=RAIZ,
                            capture_output=True, text=True, check=True)
     except Exception as e:
         fallos.append("no se pudo leer git log de la rama %s: %s" % (rama, e))
-        return None
+        return None, None
     # LAS DOS FORMAS DEL TITULO DEL ACTA (vuelta 106): 'ACTA DE LA VUELTA N DEL
     # AUDITOR' (vigente 92 a 104) y 'ACTA DEL AUDITOR, VUELTA N' (nacida en el
     # acta de la vuelta 105, commit fc504151, que rompio el patron literal sin
@@ -760,17 +768,19 @@ def commit_apertura_desde_git(vuelta, rama, fallos):
             continue
         h, s = linea.split("\x01", 1)
         if any(p.match(s) for p in patrones):
-            hallados.append(h)
+            hallados.append((h, s))
     if not hallados:
         fallos.append("git log de la rama %s no trae ningun commit 'ACTA DE LA VUELTA %d "
-                      "DEL AUDITOR': no se talla el commit de apertura" % (rama, vuelta - 1))
-        return None
+                      "DEL AUDITOR' ni 'ACTA DEL AUDITOR, VUELTA %d': no se talla el commit "
+                      "de apertura" % (rama, vuelta - 1, vuelta - 1))
+        return None, None
     if len(hallados) > 1:
         fallos.append("git log de la rama %s trae %d commits 'ACTA DE LA VUELTA %d DEL "
                       "AUDITOR' (%s): ambiguo, no se talla el commit de apertura"
-                      % (rama, len(hallados), vuelta - 1, ", ".join(h[:8] for h in hallados)))
-        return None
-    return hallados[0][:8]
+                      % (rama, len(hallados), vuelta - 1, ", ".join(h[:8] for h, _ in hallados)))
+        return None, None
+    h, s = hallados[0]
+    return h[:8], s
 
 
 def leer_head_apertura(vuelta, fallos):
@@ -1294,7 +1304,7 @@ def main():
         apertura = lado_fase04(a.vuelta, "APERTURA", fallos, con_miles)
         cierre = lado_fase04(a.vuelta, "CIERRE", fallos, con_miles)
         rama = rama_actual(fallos)
-        commit_ap = commit_apertura_desde_git(a.vuelta, rama, fallos)
+        commit_ap, asunto_acta = commit_apertura_desde_git(a.vuelta, rama, fallos)
         # TAREA 2.b (vuelta 81): el HEAD real de la apertura, sellado por el
         # ejecutor, mas el chequeo de que su arbol de dataset/ coincide con el
         # del commit del acta. Si no coinciden, ROJO: las cifras de apertura
@@ -1329,10 +1339,10 @@ def main():
     f = filas_fase04(apertura, cierre, con_miles) if a.fase04 else filas(apertura, cierre, con_miles)
     if a.fase04:
         celda_identidad_ap = (
-            "rama `%s`, commit del acta `%s` (ACTA DE LA VUELTA %d DEL AUDITOR, leido de git log), "
+            "rama `%s`, commit del acta `%s` (asunto real leido de git log: %r), "
             "HEAD real de apertura `%s` (%s, leido de git log --diff-filter=A), arboles "
             "de `dataset/` %s"
-            % (rama, commit_ap, a.vuelta - 1, head_real[:8], procedencia_sello,
+            % (rama, commit_ap, asunto_acta, head_real[:8], procedencia_sello,
                "IGUALES: VERDE" if arbol_verde else "?")
         )
         # TAREA 2.4 (vuelta 106): la columna de CIERRE ya no repite la celda de
