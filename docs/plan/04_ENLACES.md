@@ -439,6 +439,37 @@ La fila 147 de `docs/plan/OP_E_03_LECTURA_TRAMO3_V98.jsonl` queda con su
 `direccion_leida` y `razon` viejas intactas y un campo `correccion_v99` anadido
 aparte.
 
+**CORRECCION DECLARADA (vuelta 100, TAREA 3, dos relecturas conjuntas con el
+auditor, encargo de la vuelta 99 secciones 3.1 y 3.2, acta 99). LOS PARRAFOS
+DE ARRIBA NO SE BORRAN: son el texto viejo.** Sobre el **par 175**
+(`validar_modelo_financiero` -> `valor_de_vida_del_cliente`, paso 2, "Calcular
+costos de adquisicion de clientes, tasas de conversion y Customer Lifetime
+Value (LTV)"): leidos hoy los dos nodos, el hijo tiene CUATRO pasos y SOLO EL
+PRIMERO calcula; el tercero y el cuarto ("Implementar nuevos programas y
+ofertas que incrementen el LTV", "Mejorar la eficiencia de los procesos de
+retencion y crecimiento") son INTERVENCION OPERATIVA que el paso 2 de la
+madre no contempla. El test del **9.6.2** falla POR EXCESO DE GENERO: el
+nombre literal "Customer Lifetime Value" coincide, pero el propio 9.6.2 dice
+que la prueba lexica no sirve (34 de 46 marcados por vocabulario, 3% de
+precision). **SE SOSTIENE EL CASO DEL AUDITOR: NO RESUELTA.** Sobre el **par
+174** (`desarrollo_value_proposition_usp` -> `posicionamiento_vs_competidores`,
+paso 1, "Identificar que hace unico al negocio frente a competidores
+directos"): los CUATRO pasos del hijo son movimientos de una conversacion de
+venta con un candidato a franquiciado, y su propio entregable lo dice
+("listo para usar en cualquier conversacion con un candidato"); el hijo no
+IDENTIFICA lo unico del negocio, lo PRESUPONE identificado y lo despliega
+contra un prospecto: es el patron CASADO POR OBJETO Y NO POR ACCION (par 163
+del mismo tramo). **SE SOSTIENE EL CASO DEL AUDITOR: NO RESUELTA.** Los dos
+pares pasan de DIRECCION AFIRMADA a NO RESUELTA; la clase D no cambia en
+ninguno de los dos. Recomputado con
+`scripts/loop/vuelta100_tarea3_relectura_174_175.py`
+(`docs/loop/SALIDA_V100_TAREA3_RELECTURA.txt`): **el cuarto tramo pasa de
+direccion afirmada 13 / NO RESUELTA 20 (60,6%) a afirmada 11 / NO RESUELTA 22
+(66,7%)**. Las filas 174 y 175 de
+`docs/plan/OP_E_03_LECTURA_TRAMO4_V99.jsonl` quedan con su `direccion_leida`
+y `razon` viejas intactas y un campo `correccion_v100` anadido aparte en cada
+una.
+
 ---
 
 ## `OP-E-01`, DONDE QUEDA EL ORDEN ADJUDICADO
