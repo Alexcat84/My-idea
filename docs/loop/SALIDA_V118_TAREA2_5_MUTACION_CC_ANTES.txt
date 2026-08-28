@@ -1,0 +1,80 @@
+REGISTRO DE CIERRE EN TRES SUPERFICIES, REPARADO, TAREA 2 VUELTA 118.
+====================================================================================================
+CRITERIO IMPRESO (TAREA 2.1):
+  (A) campo `nota` de docs/plan/OPERACIONES.jsonl -- frase 'REGISTRO DE CIERRE'
+  (B) encabezado de seccion en la pagina de la fase -- cita el id Y una palabra de ('CERRADA', 'SELLADA', 'EJECUTADA ENTERA')
+  (C) frase literal 'REGISTRO DE OPERACION HECHA' en la pagina de la fase, atribuida al encabezado mas cercano por arriba
+  MARCAS_NEGACION (TAREA 2.3, comparadas en minusculas, ventana de 40 caracteres antes del patron): ('no dice', 'no lleva', 'sin')
+
+--- OP-D-01 (pagina docs/plan/02_DESTEJIDOS.md) ---
+(A) nota: NO
+(B) encabezado: NO
+(C) frase 'REGISTRO DE OPERACION HECHA': SI, 1 cita(s):
+    docs/plan/02_DESTEJIDOS.md:3585 -- ## `OP-D-01` Y `OP-D-02`: **LA VERIFICACION PUNTO POR PUNTO Y EL REGISTRO DE OPERACION HECHA** (19 ago 2026, vuelta 45)  (bajo encabezado docs/plan/02_DESTEJIDOS.md:3585 -- ## `OP-D-01` Y `OP-D-02`: **LA VERIFICACION PUNTO POR PUNTO Y EL REGISTRO DE OPERACION HECHA** (19 ago 2026, vuelta 45))
+
+--- OP-D-02 (pagina docs/plan/02_DESTEJIDOS.md) ---
+(A) nota: NO
+(B) encabezado: NO
+(C) frase 'REGISTRO DE OPERACION HECHA': SI, 1 cita(s):
+    docs/plan/02_DESTEJIDOS.md:3585 -- ## `OP-D-01` Y `OP-D-02`: **LA VERIFICACION PUNTO POR PUNTO Y EL REGISTRO DE OPERACION HECHA** (19 ago 2026, vuelta 45)  (bajo encabezado docs/plan/02_DESTEJIDOS.md:3585 -- ## `OP-D-01` Y `OP-D-02`: **LA VERIFICACION PUNTO POR PUNTO Y EL REGISTRO DE OPERACION HECHA** (19 ago 2026, vuelta 45))
+
+--- OP-D-03 (pagina docs/plan/02_DESTEJIDOS.md) ---
+(A) nota: SI -- docs/plan/OPERACIONES.jsonl:6 -- uperviviente sigue en null a proposito. REGISTRO DE CIERRE, 18 ago 2026 (vuelta 36). CORRECCION DECLARADA, y el texto viejo se queda entero arriba: LA OPERACION CIERRA CON SU DESTEJIDO HECHO Y SIN FUSION, y el paso 2 de su orden interno (decidir sobre los SEIS nodos) SE RESUELVE SIN FUNDIR NADA porque el acto DEJO DE EXISTIR. COMO PASO, c
+(B) encabezado: SI, 1 cita(s):
+    docs/plan/02_DESTEJIDOS.md:1197 -- ## `OP-D-03` CERRADA: **DESTEJIDO HECHO Y SIN FUSION** (18 ago 2026, vuelta 36)
+(C) frase 'REGISTRO DE OPERACION HECHA': NO
+
+--- OP-D-04 (pagina docs/plan/02_DESTEJIDOS.md) ---
+(A) nota: SI -- docs/plan/OPERACIONES.jsonl:7 -- es alcance de campaña, no de operacion. REGISTRO DE CIERRE, 19 ago 2026 (vuelta 39). CORRECCION DECLARADA, y el texto viejo se queda entero delante porque una correccion que tapa lo que corrige no se puede auditar: todo lo de arriba se escribio con la fusion EN ESPERA, y la fusion YA ESTA HECHA. OP-D-04 CIERRA CON LAS DOS FUSIONES EJECUTA
+(B) encabezado: SI, 1 cita(s):
+    docs/plan/02_DESTEJIDOS.md:1614 -- ## `OP-D-04` CERRADA: **LAS DOS FUSIONES EJECUTADAS Y EL RESTO ENLAZADO** (19 ago 2026, vuelta 39)
+(C) frase 'REGISTRO DE OPERACION HECHA': NO
+
+--- OP-D-05 (pagina docs/plan/02_DESTEJIDOS.md) ---
+(A) nota: NO
+(B) encabezado: SI, 3 cita(s):
+    docs/plan/02_DESTEJIDOS.md:1765 -- ## `OP-D-05` SELLADA: **LA FUSION UNICA DE LA SELECCION DEL CEO** (19 ago 2026, vuelta 40)
+    docs/plan/02_DESTEJIDOS.md:1839 -- ### `OP-D-05` CERRADA: **LA FUSION EJECUTADA** (19 ago 2026, vuelta 40)
+    docs/plan/02_DESTEJIDOS.md:4604 -- ### LA VIA, CITADA POR SU NOMBRE: **`OP-D-05` SELLADA**
+(C) frase 'REGISTRO DE OPERACION HECHA': NO
+
+--- OP-D-06 (pagina docs/plan/02_DESTEJIDOS.md) ---
+(A) nota: NO
+(B) encabezado: SI, 1 cita(s):
+    docs/plan/02_DESTEJIDOS.md:3407 -- ## `OP-D-06` CERRADA: **LOS NUEVE ACTOS, OCHO FUNDIDOS Y UNO DECLARADO** (19 ago 2026, vuelta 44)
+(C) frase 'REGISTRO DE OPERACION HECHA': NO
+
+--- OP-D-07 (pagina docs/plan/02_DESTEJIDOS.md) ---
+(A) nota: SI -- docs/plan/OPERACIONES.jsonl:55 -- ies sin que nadie lo hubiera declarado. REGISTRO DE CIERRE, 19 ago 2026 (vuelta 47). CORRECCION DECLARADA, y el texto viejo se queda entero delante: OP-D-07 QUEDA SELLADA POR LA VIA DE OP-D-05 SELLADA, citada por su nombre. LA VIA, escrita en docs/plan/02_DESTEJIDOS.md linea 1765 (encabezado OP-D-05 SELLADA: LA FUSION UNICA DE LA SELECCIO
+(B) encabezado: SI, 1 cita(s):
+    docs/plan/02_DESTEJIDOS.md:4597 -- ## `OP-D-07` SELLADA: **LA RUTA DECIDIDA POR EL FUNDADOR Y LA CIRUGIA CONSUMIDA** (19 ago 2026, vuelta 47)
+(C) frase 'REGISTRO DE OPERACION HECHA': NO
+    DESCARTADA POR NEGACION (marca 'no dice'): docs/plan/02_DESTEJIDOS.md:4461 -- que era materia del acto I). **Por eso este registro NO dice `REGISTRO DE OPERACION HECHA`.**  (bajo encabezado docs/plan/02_DESTEJIDOS.md:4457 -- ### EL REGISTRO DE `OP-D-07`, ESCRITO CON LO QUE HAY Y NO CON LO QUE SE ESPERABA)
+
+--- OP-F-02 (pagina docs/plan/01_FUENTES.md) ---
+(A) nota: NO
+(B) encabezado: SI, 1 cita(s):
+    docs/plan/01_FUENTES.md:617 -- ### `OP-F-02` EJECUTADA ENTERA y `OP-F-03` CERRADA: EL MURO CAYO (14 ago 2026, vuelta 29)
+(C) frase 'REGISTRO DE OPERACION HECHA': NO
+
+--- OP-F-03 (pagina docs/plan/01_FUENTES.md) ---
+(A) nota: NO
+(B) encabezado: SI, 1 cita(s):
+    docs/plan/01_FUENTES.md:617 -- ### `OP-F-02` EJECUTADA ENTERA y `OP-F-03` CERRADA: EL MURO CAYO (14 ago 2026, vuelta 29)
+(C) frase 'REGISTRO DE OPERACION HECHA': NO
+
+--- RESUMEN, alguna de las tres superficies ---
+con AL MENOS UNA superficie de registro de cierre: 9 de 9: ['OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06', 'OP-D-07', 'OP-F-02', 'OP-F-03']
+SIN NINGUNA superficie de registro de cierre: 0: []
+
+| operacion | (A) nota | (B) encabezado | (C) frase OPERACION HECHA |
+|---|---|---|---|
+| OP-D-01 | NO | NO | SI |
+| OP-D-02 | NO | NO | SI |
+| OP-D-03 | SI | SI | NO |
+| OP-D-04 | SI | SI | NO |
+| OP-D-05 | NO | SI | NO |
+| OP-D-06 | NO | SI | NO |
+| OP-D-07 | SI | SI | NO |
+| OP-F-02 | NO | SI | NO |
+| OP-F-03 | NO | SI | NO |
