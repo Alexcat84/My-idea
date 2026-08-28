@@ -5046,6 +5046,8 @@ discrepancia de redaccion y no del trabajo: `TRAMO1_V96` 40 + `TRAMO2_V97` 60
 
 **CORRECCION DECLARADA (vuelta 100, TAREA 4, encargo de la vuelta 99 acta seccion 2 y 4.4.) LA TABLA DE ARRIBA NO SE BORRA: es el texto viejo, y era la cifra CRUDA (campo `direccion_leida` sin corregir).** Recontado con `scripts/loop/contar_cierre_efectivo.py` (aplica `correccion_v99` del par 147 y `correccion_v100` de los pares 174 y 175, TAREA 3 de esta vuelta): **clase A 3, B 2, C 1 (par 111), D 177; direccion leida y afirmada 92, NO RESUELTA 91 (49,7%); invertidas 2 (pares 16, 114).** LA CIFRA BUENA ES **92 / 91 (49,7%)**.
 
+**CORRECCION DECLARADA (vuelta 100, TAREA 5, LA TAREA 5 DE LA MISMA VUELTA ENCONTRO DOS DISCUTIBLES NUEVOS (172 y 161) DESPUES DE ESTA CORRECCION.) LO DE ARRIBA NO SE BORRA: era la cifra buena SOLO con la TAREA 3 aplicada.** Recontado otra vez con `scripts/loop/contar_cierre_efectivo.py` (aplica tambien `correccion_v100` de los pares 172 y 161, TAREA 5 de esta vuelta): **clase A 3, B 2, C 1 (par 111), D 177; direccion leida y afirmada 90, NO RESUELTA 93 (50,8%); invertidas 2 (pares 16, 114).** LA CIFRA VIGENTE AL CIERRE DE ESTA VUELTA ES **90 / 93 (50,8%)**.
+
 **ESTADO DE `OP-E-03` SE QUEDA EN `LISTA`**: cambiarlo es una decision que
 este addendum no toma; la TAREA 4 mide, sin resolver, que sus dos
 dependencias declaradas no estan en HECHA (ver seccion siguiente).
@@ -5146,3 +5148,43 @@ patron corrido sobre `docs/loop/SALIDA_V99_TAREA1_DIFF_PENDIENTES.txt` (el
 anadido conocido de la vuelta 99) reproduce **exacto** 1 seccion de nivel 2 y
 4 de nivel 3, igual que el propio archivo de esa vuelta
 (`docs/loop/SALIDA_V100_TAREA2_CASO_POSITIVO.txt`).
+
+## VUELTA 100, TAREA 5: LA RELECTURA AL DOBLE DEL TRAMO 4, EN LOS DOS FLANCOS
+
+Credito de tanda bajado por la discrepancia del 174 (acta 99, seccion 5,
+`AUDITOR.md` 1.2): 5 AFIRMADAS de menor `titulo_ratio` (flanco nuevo) mas 5
+NO RESUELTAS de mayor `titulo_ratio` (flanco de siempre), `titulo_ratio`
+leido de `docs/plan/DIFERENCIA_CONTRA_COLA.jsonl` (`scripts/loop/vuelta100_tarea5_relectura_doble_tramo4.py`,
+`docs/loop/SALIDA_V100_TAREA5_RELECTURA.txt`).
+
+**SOSTENIDAS (8), una linea cada una:** 179 (`juran_rcca_metodo` -> `diseno_implementacion_remedio`, paso 3, hijo entero en "disenar e implementar el remedio"); 177 (`liderazgo_ejecutivo_innovacion` -> `estrategia_de_innovacion_de_producto`, paso 1, hijo entero en "definir y comunicar tu estrategia"); 169 (`modelo_customer_development` -> `diseno_experimentos_pass_fail`, paso 3, hijo entero en "disenar experimentos"); 181 (ya confirmada hoy en la ciega del auditor); 151 (falso amigo por objeto compartido, confirmado); 152 (ya adjudicada hoy, 4.1); 155 (dos autores, dos marcos, cero pasos en comun); 157 (ya adjudicada hoy, 4.1, flanco dificil).
+
+**SE MUEVEN (2), DISCUTIBLES NUEVOS sin marcar previamente, con correccion
+declarada (`correccion_v100`, texto viejo intacto):**
+
+**172** (`desarrollo_en_espiral` -> `protocepto`, paso 1). El hijo no cabe
+entero en "construir una version minima": su paso 2 (mostrar el protocept al
+cliente y recoger su opinion) es el paso 2 de la madre (probar con clientes
+reales), y su paso 4 (repetir el ciclo) es el paso 5 de la madre. La senal
+del entregable (9.6.2) lo confirma: el entregable del hijo reproduce la
+mitad del entregable de la madre (serie iterativa mas feedback), no solo el
+resultado de construir. **NO RESUELTA.**
+
+**161** (`seis_herramientas_comunicacion_celebracion` -> `celebracion_automatizada_de_hitos`,
+paso 2). La propia razon original ya lo concedia: "el hijo es la version
+AUTOMATIZADA y CON UPSELL". Ni la deteccion automatica ni el upsell estan en
+NINGUN paso de la madre. **NO RESUELTA.**
+
+**RECOMPUTO DEL TRAMO 4** (`scripts/loop/vuelta100_tarea5_relectura_doble_tramo4.py`):
+efectivo tras la TAREA 3 era 11 afirmada / 22 NO RESUELTA; con estos dos
+movimientos pasa a **9 afirmada / 24 NO RESUELTA (72,7%)**.
+
+**RECOMPUTO DEL CIERRE ENTERO**, para no repetir la caida que origino esta
+vuelta (medir, corregir, y no recomputar el agregado):
+`scripts/loop/contar_cierre_efectivo.py`
+(`docs/loop/SALIDA_V100_TAREA5_CIERRE_TRAS_172_161.txt`): **90 / 93 (50,8%
+NO RESUELTA)**, ver correccion declarada en la seccion "VUELTA 99, TAREA 3"
+de arriba.
+
+**DISCUTIBLES MARCADOS PARA LA RELECTURA CIEGA DEL AUDITOR EN LA VUELTA
+SIGUIENTE:** 172 y 161, los dos NUEVOS y sin contraste previo.

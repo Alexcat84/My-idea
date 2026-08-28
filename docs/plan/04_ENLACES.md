@@ -416,6 +416,8 @@ Los apartados de arriba se quedan enteros, sin borrar una palabra. **`OP-E-03` Q
 
 **CORRECCION DECLARADA (vuelta 100, TAREA 4, encargo de la vuelta 99 acta seccion 2 y 4.4.) LA TABLA DE ARRIBA NO SE BORRA: es el texto viejo, y era la cifra CRUDA (campo `direccion_leida` sin corregir).** Recontado con `scripts/loop/contar_cierre_efectivo.py` (aplica `correccion_v99` del par 147 y `correccion_v100` de los pares 174 y 175, TAREA 3 de esta vuelta): **clase A 3, B 2, C 1 (par 111), D 177; direccion leida y afirmada 92, NO RESUELTA 91 (49,7%); invertidas 2 (pares 16, 114).** LA CIFRA BUENA ES **92 / 91 (49,7%)**.
 
+**CORRECCION DECLARADA (vuelta 100, TAREA 5, LA TAREA 5 DE LA MISMA VUELTA ENCONTRO DOS DISCUTIBLES NUEVOS (172 y 161) DESPUES DE ESTA CORRECCION.) LO DE ARRIBA NO SE BORRA: era la cifra buena SOLO con la TAREA 3 aplicada.** Recontado otra vez con `scripts/loop/contar_cierre_efectivo.py` (aplica tambien `correccion_v100` de los pares 172 y 161, TAREA 5 de esta vuelta): **clase A 3, B 2, C 1 (par 111), D 177; direccion leida y afirmada 90, NO RESUELTA 93 (50,8%); invertidas 2 (pares 16, 114).** LA CIFRA VIGENTE AL CIERRE DE ESTA VUELTA ES **90 / 93 (50,8%)**.
+
 **EL CUARTO TRAMO (filas 151 a 183, 33 pares) por si solo:** clase D **33**, direccion leida **13**, NO RESUELTA **20** (**60,6%**), mediana de `titulo_ratio` **73,2** (maximo 81,6, la mas baja de la bolsa). **CONFIRMA LA PREDICCION DEL ACTA 98**: proporcion NO RESUELTA por encima del 60,0%.
 
 **ESTADO DE `OP-E-03` SE QUEDA EN `LISTA`**: la lectura esta completa, pero mover `estado` a `HECHA` es una decision que este addendum no toma; la TAREA 4 del encargo de la vuelta 99 mide, sin resolver, que las dependencias declaradas (`OP-E-01`, `OP-U-02`) no estan en `HECHA`.
@@ -471,6 +473,25 @@ direccion afirmada 13 / NO RESUELTA 20 (60,6%) a afirmada 11 / NO RESUELTA 22
 `docs/plan/OP_E_03_LECTURA_TRAMO4_V99.jsonl` quedan con su `direccion_leida`
 y `razon` viejas intactas y un campo `correccion_v100` anadido aparte en cada
 una.
+
+**RELECTURA AL DOBLE DEL TRAMO 4 (vuelta 100, TAREA 5), credito de tanda
+bajado por la discrepancia del 174 fuera de los discutibles marcados
+(`AUDITOR.md` 1.2).** Muestra en los dos flancos: 5 AFIRMADAS de menor
+`titulo_ratio` (179, 177, 172, 169, 161) y 5 NO RESUELTAS de mayor
+`titulo_ratio` (181, 151, 152, 155, 157). **8 SOSTENIDAS**, una linea cada
+una en `docs/PENDIENTES.md` (seccion "VUELTA 100, TAREA 5"). **2 SE MUEVEN,
+DISCUTIBLES NUEVOS sin marcar previamente:** el **172**
+(`desarrollo_en_espiral` -> `protocepto`, paso 1: el hijo no cabe entero en
+"construir una version minima", sus pasos 2 y 4 son los pasos 2 y 5 de la
+madre, y la senal del entregable del 9.6.2 lo confirma) y el **161**
+(`seis_herramientas_comunicacion_celebracion` -> `celebracion_automatizada_de_hitos`,
+paso 2: la propia razon original ya concedia que el hijo anade automatizacion
+y upsell, territorio que la madre entera no cubre). Los dos pasan de
+DIRECCION AFIRMADA a NO RESUELTA, `correccion_v100`, texto viejo intacto.
+Recomputado con `scripts/loop/vuelta100_tarea5_relectura_doble_tramo4.py`
+(`docs/loop/SALIDA_V100_TAREA5_RELECTURA.txt`): **el cuarto tramo pasa de
+afirmada 11 / NO RESUELTA 22 (66,7%) a afirmada 9 / NO RESUELTA 24 (72,7%)**.
+**DISCUTIBLES MARCADOS PARA LA RELECTURA CIEGA DEL AUDITOR: 172 y 161.**
 
 ---
 
