@@ -1376,3 +1376,30 @@ operacion de fase. Registro escrito en `docs/plan/OPERACIONES.jsonl` (nota
 de `OP-E-01` y `OP-E-03`, aditivo, medido con `difflib`,
 `docs/loop/SALIDA_V102_TAREA4_REGISTRO_OPERACIONES.txt`) y en
 `docs/PENDIENTES.md`.
+
+## EL CIERRE DE LA LECTURA DE `OP-E-03`, EL TERRITORIO SE ACABO (VUELTA 115, TAREA 3.3)
+
+**EL TERRITORIO DE LECTURA QUEDA ENTERO: 109 = 80 + 8 + 21, COSECHA CERO EN
+LAS TRES TANDAS.** Las **109 NO RESUELTA** (cifra fija desde la vuelta 107,
+sin correccion en ningun puesto desde entonces) quedaron releidas por
+completo en tres tandas: **80** en la vuelta 112 (censo del territorio
+88 nunca reabiertas menos las 8 ya cubiertas, mas el spot check declarado),
+**8** en la vuelta 113 (territorio viejo, puestos 168, 170, 171, 173, 176,
+178, 181, 183) mas **21** en la propia vuelta 113 (territorio nuevo, las
+correcciones que anulan a `None`: 6, 8, 20, 21, 24, 25, 28, 29, 31, 38, 40,
+52, 62, 66, 80, 93, 147, 161, 172, 174, 175). **80 + 8 + 21 = 109**, cuadrado
+contra el censo del techo (`docs/loop/SALIDA_V115_TAREA3_0_TECHO.txt`, 3.0 de
+esta misma vuelta). Las tres tandas dieron **COSECHA CERO**: ningun puesto
+cambio de clase en ninguna de las tres relecturas.
+
+**LA CIFRA DE CIERRE SIGUE SIN CAMBIO: `74 / 109 (59,6%)`**, medida hoy con
+`scripts/loop/contar_cierre_efectivo.py`
+(`docs/loop/SALIDA_V115_TAREA3_3_CIERRE_EFECTIVO.txt`) e IDENTICA a la de la
+vuelta 113 (`docs/loop/SALIDA_V113_TAREA3_7_CIERRE_EFECTIVO_NUEVA.txt`).
+
+**LA CONSTANCIA EXPRESA, para que nadie la de por hecha sin leerla:** `estado`
+de `OP-E-03` **NO SE TOCA** y sigue en `LISTA` (acta de la vuelta 100, seccion
+4.2, doctrina vigente: una lectura completa no mueve `estado`, esa es una
+decision aparte que este registro no toma). Esta vuelta **no escribe ni
+retira ninguna arista, no abre la fase 05 ni la 06, no mueve ninguna
+operacion de fase**.
