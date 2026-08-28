@@ -1,0 +1,17 @@
+(a) CONTROL VERDE, 183 reales:
+    VERDE: n=183 clase A 3 B 2 C 1 D 177, direccion 94/89 (48,6%)
+    ESPERADO: VERDE: n=183 clase A 3 B 2 C 1 D 177, direccion 94/89 (48,6%)
+    PASA
+
+(b) SIN correccion_v99 en el 147 (copia temporal, el fichero real no se toca):
+    VERDE: n=183 clase A 3 B 2 C 1 D 177, direccion 95/88 (48,1%)
+    ESPERADO: VERDE: n=183 clase A 3 B 2 C 1 D 177, direccion 95/88 (48,1%)
+    PASA
+
+(c) correccion_vXX con campo_corregido inventado ('titulo_ratio'):
+    ROJO:
+   tmp1_v0xvlr.jsonl puesto_tramo 147 trae correccion con campo_corregido 'titulo_ratio', DESCONOCIDO
+    ESPERADO: ROJO citando 'titulo_ratio' como DESCONOCIDO
+    PASA
+
+RESULTADO GLOBAL: TODOS PASAN
