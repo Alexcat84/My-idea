@@ -276,6 +276,15 @@ import re
 import subprocess
 import sys
 
+# --- TAREA 4 de la vuelta 109 (acta de la vuelta 108, "EL CHOQUE DE LAS DOS
+# GUARDAS DE CABECERA", adjudicado por el auditor como choque entre dos
+# reglas escritas, no doctrina nueva: este cerco pesa la PROSA que el
+# ejecutor escribe, NUNCA el texto pegado literal de un tallador). Ver
+# `lineas_de_tabla_tallada` mas abajo.
+RE_VUELTA_DEL_REPORTE = re.compile(r"VUELTA (\d+)")
+RE_INICIO_TABLA_TALLADA = re.compile(
+    r"^-{3} LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE -{3}$")
+
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 CLASE = {"VERDE": "OK", "PASA": "OK", "ROJO": "MAL", "FALLA": "MAL"}
@@ -442,7 +451,85 @@ def elegir_cita(citas, pos):
     return max(antes, key=lambda c: c[0]), "cita ANTES mas cercana"
 
 
-def hallar_afirmaciones(texto):
+def vuelta_del_reporte(texto):
+    """(TAREA 4 v109) La vuelta que el propio REPORTE.md declara en su
+    cabecera ('# REPORTE VUELTA 109 (...)'), leida del texto, nunca pedida
+    por argumento (asi no se puede teclear una vuelta distinta de la que el
+    reporte dice ser). None si no se encuentra."""
+    m = RE_VUELTA_DEL_REPORTE.search(texto[:200])
+    return int(m.group(1)) if m else None
+
+
+def tabla_tallada_de(vuelta, fase04):
+    """Corre tallar_cabecera_reporte.py DE VERDAD (subprocess, nunca se
+    supone su salida) y devuelve (lineas, motivo_fallo). `lineas` es el
+    bloque exacto que ese instrumento imprime bajo '--- LA TABLA, PARA PEGAR
+    ENTERA EN LA CABECERA DEL REPORTE ---', linea a linea, SIN strip (para
+    comparar caracter a caracter contra lo que el reporte pego)."""
+    args = [sys.executable, os.path.join(RAIZ, "scripts", "loop", "tallar_cabecera_reporte.py"),
+            "--vuelta", str(vuelta)]
+    if fase04:
+        args.append("--fase04")
+    try:
+        r = subprocess.run(args, cwd=RAIZ, capture_output=True, text=True)
+    except Exception as e:
+        return None, "no se pudo correr tallar_cabecera_reporte.py: %s" % e
+    lineas_salida = r.stdout.splitlines()
+    inicio = None
+    for i, linea in enumerate(lineas_salida):
+        if RE_INICIO_TABLA_TALLADA.match(linea.strip()):
+            inicio = i + 1
+            break
+    if inicio is None:
+        return None, ("tallar_cabecera_reporte.py --vuelta %d%s no imprimio la tabla "
+                      "('%s' no aparece en su salida; exit=%d)"
+                      % (vuelta, " --fase04" if fase04 else "", RE_INICIO_TABLA_TALLADA.pattern, r.returncode))
+    # el propio tallador imprime un print() (una linea EN BLANCO) justo
+    # DESPUES del marcador y ANTES de la primera fila de la tabla: se salta
+    # esa unica linea separadora antes de empezar a recoger filas, si no la
+    # tabla parece vacia desde la primera vuelta (la propia linea en blanco
+    # corta la recoleccion antes de leer una sola fila).
+    while inicio < len(lineas_salida) and lineas_salida[inicio].strip() == "":
+        inicio += 1
+    tabla = []
+    for linea in lineas_salida[inicio:]:
+        if linea.strip() == "":
+            break
+        tabla.append(linea)
+    if not tabla:
+        return None, ("tallar_cabecera_reporte.py --vuelta %d%s marco el inicio de la tabla "
+                      "pero no imprimio ninguna fila detras" % (vuelta, " --fase04" if fase04 else ""))
+    return tabla, None
+
+
+def lineas_de_tabla_tallada(vuelta, fallos_verificacion):
+    """(TAREA 4.1 v109) COMPRUEBA, corriendo tallar_cabecera_reporte.py de
+    verdad (--fase04 primero, --vuelta pelado si esa fase no talla), que un
+    bloque de texto SI es la tabla que ese instrumento pega, en vez de
+    suponerlo por forma ('empieza por |'). Prueba --fase04 primero porque es
+    el modo vigente de la campana (tramo mecanico); cae a modo cribado solo
+    si --fase04 no logra tallar nada, para no quedar ciego a vueltas viejas.
+    Devuelve el SET de lineas EXACTAS (sin strip, tal como el tallador las
+    imprime) que forman esa tabla, o vacio con el motivo en
+    `fallos_verificacion` si NINGUNO de los dos modos la produjo (nunca se
+    inventa una tabla que el tallador no dio)."""
+    if vuelta is None:
+        fallos_verificacion.append("el reporte no declara su numero de vuelta ('VUELTA N'): "
+                                   "no se puede correr el tallador para comprobar su tabla")
+        return set()
+    tabla, motivo = tabla_tallada_de(vuelta, fase04=True)
+    if tabla is None:
+        tabla, motivo2 = tabla_tallada_de(vuelta, fase04=False)
+        if tabla is None:
+            fallos_verificacion.append("no se pudo comprobar la tabla de cabecera de la vuelta %d "
+                                       "(--fase04: %s; sin --fase04: %s): el cerco NO excluye nada, "
+                                       "queda tan estrecho como si la tabla no existiera"
+                                       % (vuelta, motivo, motivo2))
+            return set()
+    return set(tabla)
+
+
+def hallar_afirmaciones(texto, excluidas_lineas=None):
     """(TAREA 2 v104) Para cada ocurrencia de VERDE/ROJO/PASA/FALLA que no
     sea adjetivo de "afirmacion" (b) ni etiqueta de lista (c), busca la cita
     de fichero mas cercana que viva EN LA MISMA ORACION (a). (e, TAREA 1
@@ -458,7 +545,17 @@ def hallar_afirmaciones(texto):
     convencion de cabecera de esta campana. Devuelve (linea, palabra,
     fichero_citado, regla, n_citas) SOLO para las ocurrencias que si citan un
     fichero bajo estas reglas; el resto cuenta en la cobertura total pero no
-    aqui."""
+    aqui.
+
+    (TAREA 4 v109) `excluidas_lineas` (set de texto de linea EXACTO, tal
+    como tallar_cabecera_reporte.py lo imprime) pesa la PROSA que el
+    ejecutor escribe, nunca el texto pegado literal de un tallador: toda
+    palabra de veredicto cuya LINEA ENTERA coincide, caracter a caracter, con
+    una linea de ese set se salta por completo (ni afirmacion ni hallazgo),
+    y se cuenta aparte para que la exclusion se vea (nunca se calla)."""
+    lineas_del_texto = texto.splitlines()
+    excluidas_lineas = excluidas_lineas or set()
+    excluidas_halladas = []
     afirmaciones = []
     for offset_parrafo, parrafo in parrafos_con_offset(texto):
         citas_todas = [(m.start(), m.end(), m.group(1)) for m in RE_CITA.finditer(parrafo)]
@@ -468,6 +565,11 @@ def hallar_afirmaciones(texto):
         limites = limites_de_oracion(enmascarado)
         for m in RE_VEREDICTO_PALABRA.finditer(parrafo):
             pos = m.start()
+            linea_num = numero_de_linea(texto, offset_parrafo + pos)
+            texto_linea = lineas_del_texto[linea_num - 1] if 0 < linea_num <= len(lineas_del_texto) else ""
+            if texto_linea in excluidas_lineas:
+                excluidas_halladas.append((linea_num, m.group(1)))
+                continue
             if es_adjetivo_de_afirmacion(parrafo, pos) or es_etiqueta_de_lista(parrafo, pos):
                 continue
             oracion_palabra = oracion_de(pos, limites)
@@ -516,7 +618,7 @@ def hallar_afirmaciones(texto):
             regla = "%s, %s" % (regla_base, ambito)
             linea = numero_de_linea(texto, offset_parrafo + pos)
             afirmaciones.append((linea, m.group(1), mejor[1], regla, n_citas))
-    return afirmaciones
+    return afirmaciones, excluidas_halladas
 
 
 def main():
@@ -540,12 +642,30 @@ def main():
             print("   %s" % f)
         return 1
 
-    afirmaciones = hallar_afirmaciones(texto)
+    # TAREA 4 v109: el cerco pesa la PROSA del ejecutor, no el texto pegado
+    # literal de un tallador. Se COMPRUEBA (subprocess real de
+    # tallar_cabecera_reporte.py), nunca se supone por forma de la linea.
+    fallos_tallador = []
+    vuelta = vuelta_del_reporte(texto)
+    excluidas_lineas = lineas_de_tabla_tallada(vuelta, fallos_tallador)
+
+    afirmaciones, excluidas_halladas = hallar_afirmaciones(texto, excluidas_lineas)
     total_palabras = len(RE_VEREDICTO_PALABRA.findall(texto))
     print("=" * 90)
     print("TALLA DE VEREDICTOS de %s: %d afirmacion(es) VERDE/ROJO/PASA/FALLA citan fichero, "
           "de %d palabra(s) de veredicto en total en el reporte."
           % (etiqueta_fuente, len(afirmaciones), total_palabras))
+    if fallos_tallador:
+        for f in fallos_tallador:
+            print("   AVISO: %s" % f)
+    if excluidas_halladas:
+        print("   %d palabra(s) de veredicto EXCLUIDAS del cerco por vivir en una linea IDENTICA "
+              "a la que tallar_cabecera_reporte.py --vuelta %s imprime (texto pegado de tallador, "
+              "no prosa del ejecutor): %s"
+              % (len(excluidas_halladas), vuelta,
+                 ", ".join("linea %d (%s)" % (l, p) for l, p in excluidas_halladas)))
+    else:
+        print("   0 palabra(s) de veredicto excluidas por texto de tallador.")
     print("=" * 90)
 
     hallazgos = []
