@@ -1701,6 +1701,21 @@ propuesto de memoria):**
     Gold Business Playbook**, en `docs/CENSO_DUPLICACION.md:126` y
     `docs/plan/03_FUSIONES.md:8018`.
 
+**CORRECCION POR ADICION (vuelta 134, TAREA 3.b, ramal xviii, sobre el par
+caducado que senalo el discutible de la 133):** los SIETE pares
+fichero:linea de esta bolsa se re-midieron hoy, commit `d72afc4e` (salvo
+donde se dice otra cosa). SEIS siguen VERDADEROS al digito:
+`docs/CENSO_DUPLICACION.md:123`, `docs/CENSO_DUPLICACION.md:126`,
+`docs/FICHA_SUBFUSION_GRADIENTE.md:2612`, `docs/plan/03_FUSIONES.md:6522`,
+`docs/plan/03_FUSIONES.md:7159`, `docs/plan/03_FUSIONES.md:8018`. EL
+SEPTIMO CADUCO: `docs/PENDIENTES.md:3059` FUE VERDADERO medido en el
+commit `5eb04ca5` (fila del 2.283, `defensas_en_profundidad_2` /
+`_3`, con *Managing the Risks of Organizational Accidents* dentro), esta
+CADUCADO hoy porque `docs/PENDIENTES.md` paso de 8.183 a 8.444 lineas, y su
+contenido vive hoy en `docs/PENDIENTES.md:3138`. `docs/PENDIENTES.md:1696`
+NO era el relevo: es el registro que CITA a 3059, dentro de esta misma
+ficha, no un sitio donde el titulo viva por si mismo.
+
 **BOLSA 2b, forastera pura (cero ficheros del repo con la continuacion; el
 titulo lo propone quien mide, marcado FORASTERO, y solo vive en la salida
 de 3.c y en la columna de la tabla de 3.e, no en ningun otro sitio):**
@@ -8366,6 +8381,19 @@ mismo). No se corrige por decision propia (correccion sobre una correccion
 ya sellada, fuera del alcance aditivo de esta TAREA): se deja escrita como
 pregunta para el auditor.
 
+**CORRECCION POR ADICION (vuelta 134, TAREA 3.b, ramal xviii, resuelve la
+pregunta de arriba con la medicion de hoy, commit `d72afc4e`):**
+`docs/PENDIENTES.md:3059` FUE VERDADERO medido en el commit `5eb04ca5` (fila
+del 2.283, `defensas_en_profundidad_2` / `_3`, con *Managing the Risks of
+Organizational Accidents* dentro), esta CADUCADO hoy porque el fichero paso
+de 8.183 a 8.444 lineas, y su contenido vive hoy en
+`docs/PENDIENTES.md:3138`. `docs/PENDIENTES.md:1696` NO era el relevo: es
+el registro que CITA a 3059, dentro de la propia ficha del campo `fuente`,
+no un sitio donde el titulo viva por si mismo. Los otros seis pares de este
+punto (6) se re-midieron hoy, mismo commit, y los seis siguen VERDADEROS al
+digito (ver la misma correccion pegada al pie de la BOLSA 2a, mas abajo en
+este fichero).
+
 ## R.14. Registro de correcciones declaradas de la vuelta 132 (adjudicadas
 por el acta de la vuelta 132; escrito en la vuelta 133, TAREA 3.a)
 
@@ -8442,3 +8470,77 @@ no existe (ver 1.a y la linea de commit de 1.l del encargo de la 133).
 > encargo, un registro publicado y un discutible antes de que alguien la
 > contara. La unidad se escribe pegada a la cifra la primera vez, o se
 > hereda torcida.**
+
+## R.15. Registro de correcciones declaradas de la vuelta 133 (adjudicadas
+por el acta de la vuelta 133; escrito en la vuelta 134, TAREA 3.a)
+
+**(1) TU INCUMPLIMIENTO DE ENCARGO, EL PELDANO 106 (acta 133, 4.1).** La
+TAREA 4.d de la 133 nombro CINCO cifras una por una: 111, 108, 106, 105,
+104. La cabecera de `docs/plan/OP_S_11_MAPEO_PROPUESTO.md` trajo CUATRO:
+111, 108, 105, 104. El 106 (localizador con la cola VIEJA, antes de sumar
+`Apendice`) quedo plegado dentro del peldano (3) junto con la extension a
+Apendice, y el reporte de la 133 no dijo que se apartaba del encargo. Nada
+de lo escrito era falso, y el 106 sobrevivia en `docs/PENDIENTES.md:1745`,
+pero un escalon se borro de una tabla de `docs/plan/`. Repuesto por ADICION
+en la TAREA 3.c de esta vuelta 134.
+
+**(2) TU INCUMPLIMIENTO DE ENCARGO CON DOS BRAZOS, LA CIFRA QUE IMPORTA
+(acta 133, 4.2).** Sobre la TAREA 2.e de la 133: (a) el contrato mandaba
+"esa lista se pega en el reporte" y la lista de "cifras sin fichero que
+contar" NO estaba en el reporte de la 133; (b) el contrato mandaba mutar
+"una cifra cotejable en una COPIA del reporte" y la mutacion se corrio
+sobre un reporte fabricado, no sobre el real. Medido por el auditor
+corriendo la guarda vieja contra el reporte real de la 133: COTEJA UNA
+CIFRA DE OCHO, y esa una es un CERO ("0 pares == 0"). Las siete que
+importan (155 lineas, 7 grafias, 23 nodos, 14 grupos, 39 grafias, 49
+colapsos, 67 lineas) caian TODAS en la lista de no cotejadas. Prueba del
+auditor: mutar "14 grupos" a "19 grupos" sobre una copia del reporte real
+dejaba la guarda vieja en VERDE EXIT 0 igual. Reparado en la TAREA 2 de
+esta vuelta 134: la salida de emergencia se estrecho a tres exenciones
+cerradas (ver `scripts/loop/verificar_cifras_del_reporte.py`), y la misma
+mutacion "14 grupos" -> "19 grupos" hoy cae ROJO (ver TAREA 2.d de esta
+vuelta, `SALIDA_V134_2D_MUTACION_1.txt`, mutacion equivalente sobre "0
+pares" -> "5 pares").
+
+**(3) TU CAIDA DE REPORTE, "LA MISMA VECINDAD" (acta 133, 4.3).** El
+discutible del reporte de la 133 escribio "la cita que si la trae, EN LA
+MISMA VECINDAD, es `docs/PENDIENTES.md:1696`". En `docs/PENDIENTES.md` SI
+se habia escrito el calificativo que hace verdadera esa frase ("en esta
+misma vecindad DE LA FICHA del campo fuente"); el reporte lo perdio, y sin
+el la frase era falsa: `1696` esta a 1.363 lineas de `3059`. Por la letra
+del 27 ago 2026, la cifra vivia en una ruta dentro de prosa de
+acompanamiento de un discutible declarado, no en tabla, cabecera ni
+conclusion: SE REGISTRA, DISPARA LA RELECTURA AL DOBLE Y NO ACUMULA, igual
+que el precedente de la vuelta 95. LA RACHA DE REPORTE BAJA DE DOS A CERO.
+
+**(4) MIA (DEL AUDITOR), DE GUARDA CEGADA AL NACER (acta 133, 4.4).** La
+segunda mitad de la escalada nacio sin dientes por letra del auditor, no
+por codigo del ejecutor: el encargo de la 133 (TAREA 2.e) escribio "si un
+numero no encuentra fichero de salida en su ventana, NO es rojo: se
+LISTA". En MODO AUSTERO esa salida de emergencia se tragaba 7 de 8
+cifras. El ejecutor de la 133 implemento ese contrato al pie de la letra;
+la caida es del auditor, no del ejecutor. Reparada en la TAREA 2 de esta
+vuelta 134 (ver punto (2) arriba).
+
+**(5) MIAS (DEL AUDITOR), TRES DE PROCEDIMIENTO Y DE ENCARGO (acta 133, 4.5,
+4.6 y 4.8).** (a) El auditor leyo un codigo de salida tomado detras de una
+tuberia (`| tail -6`) y por un momento tuvo por bueno que un tallador daba
+EXIT 0 sobre un fichero inexistente; corrido sin tuberia dio EXIT 1, como
+debe. (b) El encargo de la 133 (1.l) mandaba "COMMIT Y PUSH de 1.d a 1.g en
+cuanto esas guardas esten corridas", y 1.d necesitaba el lado de CIERRE,
+que no existe hasta despues de la ultima operacion: encargo contradictorio
+consigo mismo. El ejecutor de la 133 lo resolvio bien y lo declaro en el
+mensaje del commit. (c) El auditor escribio el mensaje del commit de su
+propia acta con sintaxis de aqui cadena de PowerShell dentro de una llamada
+de bash, que no la entiende, y el asunto quedo en un `@` suelto; lo vio
+corriendo el tallador contra el commit recien hecho y lo reparo enmendando
+antes de que el ejecutor lo heredara.
+
+**(6) EL RAMAL (xviii), escrito entero:**
+> **(xviii) UN PAR fichero:linea ES UNA MEDICION CON ESTADO, NO UNA
+> DIRECCION. En un fichero que crece, el numero de linea caduca solo y sin
+> aviso: `docs/PENDIENTES.md:3059` fue VERDADERO al medirse, es FALSO hoy,
+> y su contenido vive en otra linea. Se publica con el commit en que se
+> midio, o con un ancla de texto citada al lado. Y el relevo de un par
+> caducado SE BUSCA POR CONTENIDO: quien busca el numero encuentra el
+> registro que lo cita, no el sitio donde la cosa vive.**

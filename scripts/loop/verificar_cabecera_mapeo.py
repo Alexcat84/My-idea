@@ -55,9 +55,43 @@ def leer(ruta):
         return f.read()
 
 
+# Estos scripts viejos, reusados aqui SOLO por su stdout, tienen efectos
+# secundarios de escritura: vuelta133_cola_localizador_apendice.py y
+# vuelta133_prefijo_sobre_recortada.py pisan su propio SALIDA_V133_*.txt
+# sellado, y vuelta133_tabla_mapeo_propuesto.py REGENERA ENTERO
+# docs/plan/OP_S_11_MAPEO_PROPUESTO.md (su DESTINO declarado), que es
+# precisamente el fichero que esta guarda tiene que LEER tal como esta en
+# el arbol, con la edicion de la 3.c puesta y no regenerada desde cero. Se
+# toma una foto de bytes ANTES de cada corrida y se restaura DESPUES (no con
+# git checkout, que perderia una edicion todavia sin commitear): asi esta
+# guarda nunca ensucia nada con solo ejecutarse, este o no comiteado.
+FICHEROS_CON_EFECTO_SECUNDARIO = [
+    os.path.join(RAIZ, "docs", "loop", "SALIDA_V133_4A_COLA_CON_APENDICE.txt"),
+    os.path.join(RAIZ, "docs", "loop", "SALIDA_V133_4B_PREFIJO_APLICADO.txt"),
+    RUTA_TABLA,
+]
+
+
+def _foto_sellados():
+    foto = {}
+    for ruta in FICHEROS_CON_EFECTO_SECUNDARIO:
+        if os.path.exists(ruta):
+            with io.open(ruta, "rb") as f:
+                foto[ruta] = f.read()
+    return foto
+
+
+def _restaurar_sellados(foto):
+    for ruta, contenido in foto.items():
+        with io.open(ruta, "wb") as f:
+            f.write(contenido)
+
+
 def correr(script, *args):
+    foto = _foto_sellados()
     r = subprocess.run([sys.executable, os.path.join(LOOP_SCRIPTS, script)] + list(args),
                         capture_output=True, text=True, cwd=RAIZ)
+    _restaurar_sellados(foto)
     return r.stdout + "\n" + r.stderr
 
 

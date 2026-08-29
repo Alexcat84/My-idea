@@ -4,7 +4,12 @@
 
 Separador elegido para identificar declaraciones dentro de `fuente`: **` | ` (pipe) unicamente**, medido y argumentado en `scripts/loop/vuelta130_censo_fuente.py` (`docs/loop/SALIDA_V130_3B_CENSO_FUENTE.txt`). El `;` NO se usa como separador de declaraciones. Corte del catalogo: 2026-08-29, 3.184 nodos vivos con `fuente`, 129 grafias distintas en primera posicion con este separador.
 
-**LAS REGLAS MECANICAS, ACUMULADAS Y POR SEPARADO:** (1) `vuelta131_grupos_por_titulo.py`, prefijo estricto sobre CADENA ENTERA: **111 grupos**. (2) sumando prefijo sobre TITULO (>=20 caracteres, guarda de RESTO): **108 grupos**. (3) sumando `vuelta132_grupos_por_localizador.py` MAS la extension a `Apendice` de esta vuelta (`vuelta133_cola_localizador_apendice.py`, TAREA 4.a), igualdad EXACTA de la forma recortada: **105 grupos**. (4) sumando `vuelta133_prefijo_sobre_recortada.py` (TAREA 4.b, prefijo ESTRICTO sobre esa misma forma recortada, guarda de longitud y guarda de RESTO): **104 grupos**. La canonica de cada grupo: forma mas larga que sigue siendo libro, o, si ninguna lo es, la forma recortada del miembro mas largo marcada SINTETICA (regla vigente desde la vuelta 131, TAREA 3.b; VIGENTE Y SIN CASO en este corte: 0 canonicas SINTETICAS).
+**LAS REGLAS MECANICAS, ACUMULADAS Y POR SEPARADO:** (1) `vuelta131_grupos_por_titulo.py`, prefijo estricto sobre CADENA ENTERA: **111 grupos**. (2) sumando prefijo sobre TITULO (>=20 caracteres, guarda de RESTO): **108 grupos**. (3) sumando `vuelta132_grupos_por_localizador.py` MAS la extension a `Apendice` de esta vuelta (`vuelta133_cola_localizador_apendice.py`, TAREA 4.a), igualdad EXACTA de la forma recortada: **105 grupos**. (4) sumando `vuelta133_prefijo_sobre_recortada.py` (TAREA 4.b, prefijo ESTRICTO sobre esa misma forma recortada, guarda de longitud y guarda de RESTO): **104 grupos**. La canonica de cada grupo: forma mas larga que sigue siendo libro, o, si ninguna lo es, la forma recortada del miembro mas largo marcada SINTETICA (regla vigente desde la vuelta 131, TAREA 3.b; VIGENTE Y SIN CASO en este corte: 0 canonicas SINTETICAS). PELDANO
+INTERMEDIO REPUESTO EN LA VUELTA 134 (adjudicado por el auditor, acta 133,
+4.1: el 106 quedaba plegado dentro del peldano (3) y el reporte no declaro
+el apartamiento del encargo): entre (2) y (3), SOLO
+`vuelta132_grupos_por_localizador.py` (localizador con la cola VIEJA, SIN
+la extension a `Apendice` de la 133): **106 grupos**.
 
 **CON LAS CUATRO REGLAS MECANICAS: 104 grupos** (14 con 2 o mas miembros / 39 en grupo, 90 sin agrupar), sobre 129 grafias. Meta de `05_SANEO.md` (11 ago 2026): 55 libros canonicos. **Quedan 49 colapsos para decision humana.**
 
