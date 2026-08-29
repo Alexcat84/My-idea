@@ -1,12 +1,35 @@
-Comparacion por familia, APERTURA vs OPS10REP1_POST (una sola operacion esta vuelta).
+Comparacion completa por familia, entre los TRES lados de la vuelta: APERTURA, OPS10REP1 (post-operacion) y CIERRE.
 
-GATE0: SALIDA_V130_GATE0_CMD1_APERTURA.txt <-> SALIDA_V130_OPS10REP1_GATE0_POST.txt = IDENTICOS
-CONTEO: SALIDA_V130_CONTEO_APERTURA.txt <-> SALIDA_V130_OPS10REP1_CONTEO_POST.txt = IDENTICOS
-MOTOR: SALIDA_V130_MOTOR_APERTURA.txt <-> SALIDA_V130_OPS10REP1_MOTOR_POST.txt = DISTINTOS (solo timing por test, 25/25 en las dos)
-WEB: SALIDA_V130_WEB_APERTURA.txt <-> SALIDA_V130_OPS10REP1_WEB_POST.txt = DISTINTOS (solo Start/Duration, 80 passed (80) / 1030 passed 3 skipped en las dos)
-TSC: SALIDA_V130_TSC_APERTURA.txt <-> SALIDA_V130_OPS10REP1_TSC_POST.txt = IDENTICOS (EXIT=0 en las dos, cero lineas)
-ETIQUETAS: SALIDA_V130_CICLO_ETIQUETAS_APERTURA.txt <-> SALIDA_V130_CICLO_ETIQUETAS_OPS10REP1.txt = IDENTICOS
-SYNC: SALIDA_V130_CICLO_SYNC_APERTURA.txt <-> SALIDA_V130_CICLO_SYNC_OPS10REP1.txt = DISTINTOS (sha256 de master_graph.json cambio: OPS10REP1 SI escribio la condicion nueva)
-NUMSTAT: SALIDA_V130_CICLO_NUMSTAT_APERTURA.txt <-> SALIDA_V130_CICLO_NUMSTAT_OPS10REP1.txt = DISTINTOS (apertura vacio; OPS10REP1 trae los 4 ficheros que la operacion escribio: dataset/metadata/master_graph.json, dataset/nodos/prevenir_franquicias_inadvertidas.json, web/lib/assets/manifest.json, web/lib/assets/master_graph.json)
+GATE0: APERTURA vs OPS10REP1: IDENTICOS
+GATE0: APERTURA vs CIERRE: IDENTICOS
+GATE0: OPS10REP1 vs CIERRE: IDENTICOS
+CONTEO: APERTURA vs OPS10REP1: IDENTICOS
+CONTEO: APERTURA vs CIERRE: IDENTICOS
+CONTEO: OPS10REP1 vs CIERRE: IDENTICOS
+MOTOR: APERTURA vs OPS10REP1: DISTINTOS
+MOTOR: APERTURA vs CIERRE: DISTINTOS
+MOTOR: OPS10REP1 vs CIERRE: DISTINTOS
+WEB: APERTURA vs OPS10REP1: DISTINTOS
+WEB: APERTURA vs CIERRE: DISTINTOS
+WEB: OPS10REP1 vs CIERRE: DISTINTOS
+TSC: APERTURA vs OPS10REP1: IDENTICOS
+TSC: APERTURA vs CIERRE: IDENTICOS
+TSC: OPS10REP1 vs CIERRE: IDENTICOS
+ETIQUETAS: APERTURA vs OPS10REP1: IDENTICOS
+ETIQUETAS: APERTURA vs CIERRE: IDENTICOS
+ETIQUETAS: OPS10REP1 vs CIERRE: IDENTICOS
+SYNC: APERTURA vs OPS10REP1: DISTINTOS
+SYNC: APERTURA vs CIERRE: DISTINTOS
+SYNC: OPS10REP1 vs CIERRE: IDENTICOS
+NUMSTAT: APERTURA vs OPS10REP1: DISTINTOS
+NUMSTAT: APERTURA vs CIERRE: IDENTICOS
+NUMSTAT: OPS10REP1 vs CIERRE: DISTINTOS
 
-RESUMEN POR FAMILIA: GATE0 1/1 IDENTICOS. CONTEO 1/1 IDENTICOS (0 aristas movidas, confirmado tambien por verificar_aristas_vivas.py: PERDIDAS 0 NUEVAS 0). MOTOR 0/1 (timing). WEB 0/1 (timing). TSC 1/1 IDENTICOS. ETIQUETAS 1/1 IDENTICOS. SYNC 0/1 (escritura real). NUMSTAT 0/1 (escritura real).
+RESUMEN GATE0: 3 IDENTICOS, 0 DISTINTOS.
+RESUMEN CONTEO: 3 IDENTICOS, 0 DISTINTOS (0 aristas movidas en toda la vuelta, confirmado tambien por verificar_aristas_vivas.py: PERDIDAS 0 NUEVAS 0).
+RESUMEN MOTOR: 0 IDENTICOS, 3 DISTINTOS (timing por test, 25/25 en los tres).
+RESUMEN WEB: 0 IDENTICOS, 3 DISTINTOS (timing de Start/Duration, 80 passed (80) / 1030 passed 3 skipped en los tres).
+RESUMEN TSC: 3 IDENTICOS, 0 DISTINTOS (EXIT=0, cero lineas, en los tres).
+RESUMEN ETIQUETAS: 3 IDENTICOS, 0 DISTINTOS.
+RESUMEN SYNC: 1 IDENTICOS, 2 DISTINTOS. EL UNICO IDENTICO ES OPS10REP1 vs CIERRE: sha256 de master_graph.json igual porque no hubo escritura de dataset entre OPS10REP1 y el cierre (3.b es REGIMEN A estricto, no toca dataset). APERTURA difiere de los otros dos porque su sha256 es previo a la escritura de la condicion nueva en prevenir_franquicias_inadvertidas.
+RESUMEN NUMSTAT: 1 IDENTICOS, 2 DISTINTOS. EL UNICO IDENTICO ES APERTURA vs CIERRE: los dos se miden sobre un arbol ya committeado y sin escritura pendiente (`git diff --numstat` vacio en los dos), mientras que OPS10REP1 mide justo despues de escribir el nodo, antes de su propio commit, y por eso trae los 4 ficheros que esa operacion toco.

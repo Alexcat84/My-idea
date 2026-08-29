@@ -18,3 +18,6 @@ VERDE GENERAL: los dos casos positivos (a) y (b) dan el veredicto ROJO esperado.
 === verificar_cierre_sellado.py --vuelta 130 (precheck, ROJO esperado: SALIDA_V130_HEAD_CIERRE.txt aun no existe) ===
 ROJO, cierre de la vuelta 130 NO sellado (1 cosa(s) no cuadran):
    SALIDA_V130_HEAD_CIERRE.txt no existe en el arbol de trabajo
+
+=== verificar_cierre_sellado.py --vuelta 130 (FINAL, tras escribir SALIDA_V130_HEAD_CIERRE.txt) ===
+VERDE: SALIDA_V130_HEAD_CIERRE.txt sella c602089951bf805ce9eaeedfeccc032ff1363bab, un commit valido, en la rama, descendiente del acta anterior y distinto de la apertura.
