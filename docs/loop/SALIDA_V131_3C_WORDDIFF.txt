@@ -1,0 +1,381 @@
+diff --git a/docs/plan/OP_S_11_MAPEO_PROPUESTO.md b/docs/plan/OP_S_11_MAPEO_PROPUESTO.md
+index d25d42d4..22bdf248 100644
+--- a/docs/plan/OP_S_11_MAPEO_PROPUESTO.md
++++ b/docs/plan/OP_S_11_MAPEO_PROPUESTO.md
+@@ -1,26 +1,31 @@
+ # OP-S-11: tabla de mapeo PROPUESTA del campo `fuente`
+~
+ 
+~
+ **PROPUESTA MEDIDA, escrita en la vuelta 130 (TAREA 
+-3.b).
++3.b) y REHECHA en la vuelta 131 (TAREA 3.c) con dos reglas mecanicas nuevas.
+  NO se ha aplicado a ningun nodo: 
+-OP-S-11
++`OP-S-11`
+  sigue LISTA, sin tocar, y esta tabla no cambia su estado. La adjudica el auditor.**
+~
+ 
+~
+ Separador elegido para identificar declaraciones dentro de `fuente`: **` | ` (pipe) unicamente**, medido y argumentado en `scripts/loop/vuelta130_censo_fuente.py` (`docs/loop/SALIDA_V130_3B_CENSO_FUENTE.txt`). El `;` NO se usa como separador de declaraciones: en los 264 nodos vivos que lo traen, junta coautores del mismo libro, listas de capitulos del mismo libro, o (en un punado de casos del dominio `risk_management`) dos citas academicas pegadas sin ambiguedad de autoria; partir por `;` fabricaria grafias que son apellidos sueltos o fragmentos de titulo, no declaraciones nuevas. Corte del catalogo: 2026-08-29, 3.184 nodos vivos con `fuente`, 129 grafias distintas en primera posicion con este separador.
+~
+ 
+~
++**LAS DOS REGLAS NUEVAS DE ESTA VUELTA (revocan la vieja "prefijo sobre cadena entera" que perdia a Hugos y elegia localizadores como canonica):** (1) `scripts/loop/vuelta131_grupos_por_titulo.py`, prefijo estricto sobre el TITULO (segmento antes del primer " - "), titulo corto >= 20 caracteres, con guarda de RESTO (no funde autores distintos); (2) `scripts/loop/vuelta131_canonica_sin_localizador.py`, la canonica de un grupo es la forma mas larga que sigue siendo un libro tras recortar cola de localizador (capitulo/capitulos/seccion/Anexo) y puntuacion final, no la mas larga a ciegas.
+~
+~
++**CON LAS TRES REGLAS MECANICAS (cadena entera + titulo + localizador): 108 grupos** (14 con 2 o mas miembros / 35 en grupo, 94 sin agrupar), sobre 129 grafias. Meta de `05_SANEO.md` (11 ago 2026): 55 libros canonicos. **Quedan 53 colapsos para decision humana.**
+~
+~
+ | grafia | canonica propuesta | motivo |
+~
+ |---|---|---|
+~
+ | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) | A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) | SIN AGRUPAR (pide decision) |
+~
+ | A Project Manager's Book of Forms | A Project Manager's Book of Forms - Cynthia Stackpole Snyder | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | A Project Manager's Book of Forms - Cynthia Stackpole Snyder | A Project Manager's Book of Forms - Cynthia Stackpole Snyder | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | Assembling Tomorrow: A Guide to Designing a Thriving Future | Assembling Tomorrow: A Guide to Designing a Thriving Future | SIN AGRUPAR (pide decision) |
+~
+ | Business Model Generation (Osterwalder) | Business Model Generation 
+-(Osterwalder)
++- Osterwalder, Alexander
+  | 
+-SIN AGRUPAR (pide decision)
++MECANICO: prefijo sobre titulo
+  |
+~
+ | Business Model Generation - Osterwalder | Business Model Generation - Osterwalder, Alexander | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | Business Model Generation - Osterwalder, Alexander | Business Model Generation - Osterwalder, Alexander | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | Businessperson's Guide to Federal Warranty Law | Businessperson's Guide to Federal Warranty Law | SIN AGRUPAR (pide decision) |
+~
+ | Change by Design | Change by Design, Revised and U - Tim Brown | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | Change by Design - Tim Brown | Change by Design, Revised and U - Tim Brown | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | Change by Design, Revised and U - Tim Brown | Change by Design, Revised and U - Tim Brown | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | Chris Voss, Rompe la barrera del no | Chris Voss, Rompe la barrera del no | SIN AGRUPAR (pide decision) |
+~
+ | Co-Intelligence_ Living and Wor - Ethan Mollick | Co-Intelligence_ Living and Wor - Ethan Mollick | SIN AGRUPAR (pide decision) |
+~
+ | Cradle to Cradle - Michael Braungart | Cradle to Cradle - Michael Braungart | SIN AGRUPAR (pide decision) |
+~
+ | Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC) | Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC) | SIN AGRUPAR (pide decision) |
+~
++| DHL Express, Guia de empaque | DHL Express, Guia de empaque | SIN AGRUPAR (pide decision) |
+~
+ | DeMarco y Lister, Waltzing with Bears, Cap. 1 (Running Toward Risk) | DeMarco y Lister, Waltzing with Bears, Cap. 1 (Running Toward Risk) | SIN AGRUPAR (pide decision) |
+~
+ | DeMarco y Lister, Waltzing with Bears, Cap. 1-2 (Ignoring Risk; Decriminalize Risk) | DeMarco y Lister, Waltzing with Bears, Cap. 1-2 (Ignoring Risk; Decriminalize Risk) | SIN AGRUPAR (pide decision) |
+~
+ | DeMarco y Lister, Waltzing with Bears, Cap. 13 (Core Risks) | DeMarco y Lister, Waltzing with Bears, Cap. 13 (Core Risks) | SIN AGRUPAR (pide decision) |
+~
+@@ -34,10 +39,9 @@ Separador elegido para identificar declaraciones dentro de `fuente`: **` | ` (pi
+ | DeMarco y Lister, Waltzing with Bears, Cap. 2; Edwards et al., Managing Project Risks, Cap. 6 | DeMarco y Lister, Waltzing with Bears, Cap. 2; Edwards et al., Managing Project Risks, Cap. 6 | SIN AGRUPAR (pide decision) |
+~
+ | DeMarco y Lister, Waltzing with Bears, Cap. 3 (Sources of Uncertainty) | DeMarco y Lister, Waltzing with Bears, Cap. 3 (Sources of Uncertainty) | SIN AGRUPAR (pide decision) |
+~
+ | DeMarco y Lister, Waltzing with Bears, Cap. 9; Edwards et al., Managing Project Risks, Cap. 10 | DeMarco y Lister, Waltzing with Bears, Cap. 9; Edwards et al., Managing Project Risks, Cap. 10 | SIN AGRUPAR (pide decision) |
+~
+ |
+-DHL Express, Guia de empaque | DHL Express, Guia de empaque | SIN AGRUPAR (pide decision) |
+~
+-|
+  Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 
+-2014), Anexo de aviso de no participación
++2014)
+  | MECANICO: 
+-prefijo estricto (truncamiento)
++localizador (revoca canonica=mas larga)
+  |
+~
+ | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014), Anexo de aviso de no participación | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 
+-2014), Anexo de aviso de no participación
++2014)
+  | MECANICO: 
+-prefijo estricto (truncamiento)
++localizador (revoca canonica=mas larga)
+  |
+~
+ | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014), Capitulo 8: Negociaciones | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 
+-2014), Anexo de aviso de no participación
++2014)
+  | MECANICO: 
+-prefijo estricto (truncamiento)
++localizador (revoca canonica=mas larga)
+  |
+~
+ | Diana L. Lindstrom, Procurement Project Management Success, Apendice B (RFPS) | Diana L. Lindstrom, Procurement Project Management Success, Apendice B (RFPS) | SIN AGRUPAR (pide decision) |
+~
+ | Diana L. Lindstrom, Procurement Project Management Success, capitulo 11 | Diana L. Lindstrom, Procurement Project Management Success, capitulo 11 | SIN AGRUPAR (pide decision) |
+~
+ | Diana L. Lindstrom, Procurement Project Management Success, capitulo 3 y Apendice C | Diana L. Lindstrom, Procurement Project Management Success, capitulo 3 y Apendice C | SIN AGRUPAR (pide decision) |
+~
+@@ -72,14 +76,14 @@ Separador elegido para identificar declaraciones dentro de `fuente`: **` | ` (pi
+ | Edwards et al., Managing Project Risks, Cap. 9 (Risk Response Options) | Edwards et al., Managing Project Risks, Cap. 9 (Risk Response Options) | SIN AGRUPAR (pide decision) |
+~
+ | Edwards et al., Managing Project Risks, Cap. 9 (Risk Transfer) | Edwards et al., Managing Project Risks, Cap. 9 (Risk Transfer) | SIN AGRUPAR (pide decision) |
+~
+ | Edwards et al., Managing Project Risks, Cap. 9 (Risk Treatment); DeMarco y Lister, Waltzing with Bears | Edwards et al., Managing Project Risks, Cap. 9 (Risk Treatment); DeMarco y Lister, Waltzing with Bears | SIN AGRUPAR (pide decision) |
+~
+ | Essentials of Supply Chain Mana - Michael H. Hugos | Essentials of Supply Chain 
+-Mana
++Management
+  - Michael H. Hugos | 
+-SIN AGRUPAR (pide decision)
++MECANICO: prefijo sobre titulo
+  |
+~
+ | Essentials of Supply Chain Management - Michael H. Hugos | Essentials of Supply Chain Management - Michael H. Hugos | 
+-SIN AGRUPAR (pide decision)
++MECANICO: prefijo sobre titulo
+  |
+~
+ | Financial Intelligence for Entrepreneurs | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe | Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | Franchise Your Business - Mark Siebert | Franchise Your Business - Mark Siebert | SIN AGRUPAR (pide decision) |
+~
+ | Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses | Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses | SIN AGRUPAR (pide decision) |
+~
+ | Guia de empaque para envios (FedEx) | Guia de empaque para envios 
+-(FedEx), seccion Packaging Flowers and Plants
++(FedEx)
+  | MECANICO: 
+-prefijo estricto (truncamiento)
++localizador (revoca canonica=mas larga)
+  |
+~
+ | Guia de empaque para envios (FedEx), seccion Packaging Flowers and Plants | Guia de empaque para envios 
+-(FedEx), seccion Packaging Flowers and Plants
++(FedEx)
+  | MECANICO: 
+-prefijo estricto (truncamiento)
++localizador (revoca canonica=mas larga)
+  |
+~
+ | Guia de empaque para transporte | Guia de empaque para transporte | SIN AGRUPAR (pide decision) |
+~
+ | Guia visual de empaque | Guia visual de empaque | SIN AGRUPAR (pide decision) |
+~
+ | Hubbard, The Failure of Risk Management, Cap. 1 (Analysis Placebo; Common Mode Failure) | Hubbard, The Failure of Risk Management, Cap. 1 (Analysis Placebo; Common Mode Failure) | SIN AGRUPAR (pide decision) |
+~
+@@ -95,45 +99,45 @@ Separador elegido para identificar declaraciones dentro de `fuente`: **` | ` (pi
+ | ISTA 3P, Protocolo de ensayo de empaque para paqueteria | ISTA 3P, Protocolo de ensayo de empaque para paqueteria | SIN AGRUPAR (pide decision) |
+~
+ | Juran's Quality Handbook_ The C - Joseph A. Defeo | Juran's Quality Handbook_ The C - Joseph A. Defeo | SIN AGRUPAR (pide decision) |
+~
+ | Managing the Risks of Organizat - Reason, J. T_ | Managing the Risks of Organizat - Reason, J. T_ | SIN AGRUPAR (pide decision) |
+~
+ | Max Muller, Essentials of Inventory Management | Max Muller, Essentials of Inventory 
+-Management, capitulos 1 y 2
++Management
+  | MECANICO: 
+-prefijo estricto (truncamiento)
++localizador (revoca canonica=mas larga)
+  |
+~
+ | Max Muller, Essentials of Inventory Management, capitulo 1 | Max Muller, Essentials of Inventory 
+-Management, capitulos 1 y 2
++Management
+  | MECANICO: 
+-prefijo estricto (truncamiento)
++localizador (revoca canonica=mas larga)
+  |
+~
+ | Max Muller, Essentials of Inventory Management, capitulos 1 y 2 | Max Muller, Essentials of Inventory 
+-Management, capitulos 1 y 2
++Management
+  | MECANICO: 
+-prefijo estricto (truncamiento) |
+~
+-| Never Lose a Customer Again - Joey Coleman | Never Lose a Customer Again - Joey Coleman | SIN AGRUPAR (pide decision)
++localizador (revoca canonica=mas larga)
+  |
+~
+ | NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide | NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide | SIN AGRUPAR (pide decision) |
+~
+ | NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide | NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide | SIN AGRUPAR (pide decision) |
+~
+ | NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer | NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer | SIN AGRUPAR (pide decision) |
+~
++| Never Lose a Customer Again - Joey Coleman | Never Lose a Customer Again - Joey Coleman | SIN AGRUPAR (pide decision) |
+~
+ | OSHA3885 | OSHA3885 | SIN AGRUPAR (pide decision) |
+~
+ | OSHA3886 | OSHA3886 | SIN AGRUPAR (pide decision) |
+~
+ | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | SIN AGRUPAR (pide decision) |
+~
+ | Quality is free _ the art of making quality certain -- Philip B_ Crosby | Quality is free _ the art of making quality certain -- Philip B_ Crosby | SIN AGRUPAR (pide decision) |
+~
+ | Requisitos de empaque de los couriers | Requisitos de empaque de los couriers | SIN AGRUPAR (pide decision) |
+~
+ | Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management | Rushton, Croucher y Baker, The Handbook of Logistics and Distribution 
+-Management, capitulo 25
++Management
+  | MECANICO: 
+-prefijo estricto (truncamiento)
++localizador (revoca canonica=mas larga)
+  |
+~
+ | Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management, capitulo 25 | Rushton, Croucher y Baker, The Handbook of Logistics and Distribution 
+-Management, capitulo 25
++Management
+  | MECANICO: 
+-prefijo estricto (truncamiento)
++localizador (revoca canonica=mas larga)
+  |
+~
+ | Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management, capitulo 3 | Rushton, Croucher y Baker, The Handbook of Logistics and Distribution 
+-Management, capitulo 25
++Management
+  | MECANICO: 
+-prefijo estricto (truncamiento) |
+~
+-| Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment) | Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment) | SIN AGRUPAR (pide decision)
++localizador (revoca canonica=mas larga)
+  |
+~
+ | SMALL_BUSINESS | SMALL_BUSINESS | SIN AGRUPAR (pide decision) |
+~
+ | SPIN Selling - Neil Rackham | SPIN Selling - Neil Rackham | SIN AGRUPAR (pide decision) |
+~
++| Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment) | Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment) | SIN AGRUPAR (pide decision) |
+~
+ | Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack) | Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack) | SIN AGRUPAR (pide decision) |
+~
+ | Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona) | Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona) | SIN AGRUPAR (pide decision) |
+~
+ | The Art of Thought - Graham Wallas | The Art of Thought - Graham Wallas | SIN AGRUPAR (pide decision) |
+~
+ | The Art of Thought - Wallas, Graham | The Art of Thought - Wallas, Graham | SIN AGRUPAR (pide decision) |
+~
+ | The
+-field guide to human-centered design | The field guide to human-centered design | SIN AGRUPAR (pide decision) |
+~
+-| The
+  Field Guide to Understandin - Dekker, Sidney | The Field Guide to Understandin - Dekker, 
+-Sidney;
++Sidney
+  | MECANICO: 
+-prefijo estricto (truncamiento)
++localizador (revoca canonica=mas larga)
+  |
+~
+ | The Field Guide to Understandin - Dekker, Sidney; | The Field Guide to Understandin - Dekker, 
+-Sidney;
++Sidney
+  | MECANICO: 
+-prefijo estricto (truncamiento)
++localizador (revoca canonica=mas larga)
+  |
+~
+ | The Founder's Dilemmas | The Founder's Dilemmas - Wasserman, Noam | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | The Founder's Dilemmas - Wasserman, Noam | The Founder's Dilemmas - Wasserman, Noam | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | The Green to Gold Business Play - Daniel C. Esty | The Green to Gold Business Play - Daniel C. Esty | SIN AGRUPAR (pide decision) |
+~
+ | The Hard Thing About Hard Thing - Ben Horowitz | The Hard Thing About Hard 
+-Thing
++Things
+  - Ben Horowitz | 
+-SIN AGRUPAR (pide decision)
++MECANICO: prefijo sobre titulo
+  |
+~
+ | The Hard Thing About Hard Things | The Hard Thing About Hard Things - Ben Horowitz | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | The Hard Thing About Hard Things - Ben Horowitz | The Hard Thing About Hard Things - Ben Horowitz | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | The Lean Startup - Eric Ries | The Lean Startup - Eric Ries | SIN AGRUPAR (pide decision) |
+~
+ | The Startup Owner's Manual | The Startup Owner's Manual - Blank, Steve | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | The Startup Owner's Manual - Blank, Steve | The Startup Owner's Manual - Blank, Steve | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | The Startup Owner's Manual - Steve Blank | The Startup Owner's Manual - Blank, Steve | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera |
+~
++| The field guide to human-centered design | The field guide to human-centered design | SIN AGRUPAR (pide decision)
+  |
+~
+ | Traction - Gabriel Weinberg | Traction - Gabriel Weinberg | SIN AGRUPAR (pide decision) |
+~
+ | Value Proposition Design | Value Proposition Design | SIN AGRUPAR (pide decision) |
+~
+ | Venture Deals | Venture Deals - Brad Feld | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | Venture Deals - Brad Feld | Venture Deals - Brad Feld | MECANICO: prefijo 
+-estricto (truncamiento)
++sobre cadena entera
+  |
+~
+ | Winning at New Products - Robert G. Cooper | Winning at New Products - Robert G. Cooper | SIN AGRUPAR (pide decision) |
+~
+ 
+~
+ TOTAL filas: 129 
+-(31
++(35
+  grafias en grupos 
+-mecanicos, 98
++mecanicos de 2 o mas, 94
+  sin agrupar), contra 129 grafias del censo.
+~
