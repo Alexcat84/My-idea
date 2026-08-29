@@ -54,6 +54,21 @@ del repo, cada uno corrido y pegado en su propia salida):
       tiene que salir ROJO nombrando el motivo "no esta en la rama".
   (b) el hash de la apertura de la vuelta puesto como cierre: tiene que salir
       ROJO por la ultima condicion ("igual a la apertura").
+
+CORRECCION DECLARADA (29 ago 2026, vuelta 130, TAREA 2.d, caida de
+expediente de la vuelta 129, acta 129, 4.3). EL CASO (a) NO SE CORRIO CON
+`74d55f9e`: el registro pegado a su lado
+(`docs/loop/SALIDA_V129_1H_CIERRE_SELLADO_MUTACION.txt`) usa
+`ce51aa27a4564559491890f84995884f5ae2e1f9`, un commit SINTETICO de un repo
+temporal construido con `git init`, con una rama lateral divergente del
+commit del acta. Ese hash cambia en cada corrida por diseno (comprobado en
+la vuelta 130: la misma prueba, corrida hoy, produjo otro commit lateral
+distinto, `8f5840bc...`). `74d55f9e` SI es un commit real de la rama `main`,
+ajeno a `pasada-unica` (comprobado hoy: `git cat-file -t 74d55f9e` da
+`commit`, `git merge-base --is-ancestor 74d55f9e pasada-unica` da exit 1),
+pero NO SE USO en la corrida real: la cabecera describia una prueba que no
+se corrio asi. Este parrafo lo declara sin reescribir lo de arriba; el
+codigo de la guarda no se toca.
 """
 import argparse
 import os

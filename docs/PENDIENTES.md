@@ -7898,6 +7898,21 @@ FABRICADAS 3 a FABRICADAS 0
 TOCAN**: siguen siendo pasivo historico, trabajo POST CAMPANA por la misma
 letra de P.16.
 
+### TERCERA entrada (vuelta 130, TAREA 2.c): constancia de contraste, remedido
+otra vez y sigue cuadrando
+
+El auditor remidio las cifras del PAR VIVO RESUELTO en WORK dos veces mas:
+**29 / 29 / 1 / 0** (total / heredadas / reparadas de rebote / fabricadas)
+en la vuelta 128 y otra vez en la vuelta 129, ademas del PAR RESUELTO en
+`9ef3705d` (32 / 29) y el PAR CRUDO en `7150339f` (39). Esta vuelta (130) lo
+volvio a correr sobre WORK antes de la operacion de TAREA 3.a
+(`docs/loop/SALIDA_V130_1G_FUSION_ARISTAS.txt`): **TOTAL 29, HEREDADAS 29,
+REPARADAS DE REBOTE 1, FABRICADAS 0**, y otra vez despues de la operacion
+(`docs/loop/SALIDA_V130_OPS10REP1_HUERFANAS.txt`), sin cambio: la operacion
+de esta vuelta no toca aristas (solo `condiciones_activacion`). Cuadran al
+digito con las dos vueltas anteriores. Es constancia de contraste, no
+correccion: nada se retracta.
+
 ## R.9. Registro de correcciones declaradas de la vuelta 126 (adjudicadas
 por el acta de la vuelta 126, seccion 4 y 5; escrito en la vuelta 128,
 TAREA 2.b)
@@ -7992,6 +8007,71 @@ escrito entero:**
 > LIMPIO ANTES DE MANDARLO. Medir un paso del orden y dar por bueno el
 > orden es la misma especie de error que medir un tramo y dar por buena la
 > tanda: la guarda que cae no es la que se probo, es la que venia detras.**
+
+## R.11. Registro de correcciones declaradas de la vuelta 128 (adjudicadas
+por el acta de la vuelta 128; escrito en la vuelta 130, TAREA 2.a, porque la
+129 no entrego)
+
+**(1) LA CAIDA DE REPORTE DEL PARRAFO DE BATERIAS DE LA 128.** El
+`REPORTE.md` de la 128 escribio *"SYNC/NUMSTAT identicos solo OPS10 vs
+CIERRE"*, aplicando el mismo par a las dos familias. Leido hoy de
+`SALIDA_V128_BATERIAS_CMP.txt` (commit `a77f67f7`): `SYNC: OPS10 vs CIERRE:
+IDENTICOS` SI cuadra, pero el par IDENTICO de NUMSTAT es OTRO:
+`NUMSTAT: APERTURA vs CIERRE: IDENTICOS` (no `OPS10 vs CIERRE`, que ahi da
+`DISTINTOS`). Razon correcta del identico: NUMSTAT mide `git diff --numstat`
+contra el ULTIMO COMMIT, no contra un baseline fijo; APERTURA y CIERRE se
+miden los dos sobre un arbol ya committeado y sin escritura pendiente (arbol
+limpio), por eso ambos dan vacio e IDENTICOS entre si, mientras OPS09REP3 y
+OPS10 si tenian escritura propia sin commitear en el momento de medirse.
+Adjudicado en el acta 128 como caida de reporte, NO ACUMULA (letra del 27
+ago).
+
+**(2) LA CAIDA DE EXPEDIENTE DEL FICHERO DE REBASE.**
+`SALIDA_V128_REBASE_ARBOL_IDENTICO.txt` trae una sola linea, `EXITCODE: 0`
+(verificado hoy leyendolo del commit `a77f67f7`), sin registrar el hash
+viejo que el rebase saco de la rama. Se deja escrito aqui para que no viva
+solo en un reflog: el hash viejo es `9c222986`. Verificado hoy con mis
+propios comandos: `git cat-file -t 9c222986` da `commit` (sigue vivo en la
+base de objetos) y `git merge-base --is-ancestor 9c222986 pasada-unica` da
+exit 1 (no esta en la rama). El auditor ya habia verificado en su acta 129
+el arbol identico entre el HEAD viejo y el nuevo del rebase, y que no habia
+nada pusheado antes de reescribir: esa constancia queda aqui repetida como
+contraste, no vuelta a medir por el ejecutor.
+
+**(3) LA CAIDA DE PROCEDIMIENTO DEL PUSH UNICO AL FINAL, CON LA REGLA
+COMPUESTA (acta 128, 3.4).** La 128 commiteo catorce veces pero pusheo una
+sola vez al final, dejando todo el tramo dependiente de que la sesion
+aguantara hasta el ultimo commit. Regla compuesta adjudicada: EL BLOQUE DE
+APERTURA (1.a mas 1.b mas 1.c) va en un solo commit SIN push (para no
+interponerse entre el commit del acta y el bloque de apertura de la vuelta
+siguiente, guarda de `verificar_apertura_sellada.py`); el push por tramo
+empieza DESPUES de ese bloque, con el primer commit de operacion. Es la
+UNICA excepcion a "commit y push por tramo", y esta vuelta (130) la aplica
+tal cual en su TAREA 1.
+
+**(4) LAS DOS GUARDAS QUE NO ALCANZABAN, YA ESCRITAS.** La guarda de citas
+pasaba un fichero sin medicion debajo (excepcion no declarada para los
+`_TSC_`) y el sello de cierre no tenia guarda propia. Las dos quedaron
+escritas y VERDES en la vuelta 129 (`verificar_cierre_sellado.py` con sus
+dos casos positivos por mutacion, y el ensanche de
+`verificar_citas_del_reporte.py`) y RESCATADAS por el auditor en commit
+propio antes de su acta 129, porque la 129 no llego a commitearlas. Esta
+vuelta (130) las corrio de nuevo enteras: `SALIDA_V130_1E_VERIFICAR_CITAS.txt`
+y `SALIDA_V130_1H_CIERRE_SELLADO.txt`, las dos VERDE.
+
+**(5) LA CAIDA DEL AUDITOR, DE ENCARGO.** El encargo de la 128 pidio medir
+"los 31" ids de la nomina de OP-S-10 sin mandar resolverla primero por el
+resolutor (P.1), y por eso la lectura corta ("28/28 vivos VERDE") llego al
+reporte de esa vuelta sin pasar por el resolutor. Corregido desde la 129:
+todo encargo que toque la nomina de OP-S-10 manda resolver por P.1 antes de
+contar, y esta vuelta (130) lo hizo (`SALIDA_V130_3A_VERIFICACION1_ANTES.txt`
+y `SALIDA_V130_3A_VERIFICACION1_REMEDIDA.txt`).
+
+**(6) EL RAMAL (xi) DEL TRAMO QUE SE RELEE AL DOBLE (acta 128, seccion 5),
+escrito entero:**
+> **(xi) UNA NOMINA DE IDS SE RESUELVE ANTES DE DECLARARLA COMPLETA. Contar
+> ids literales en vez de ids resueltos por P.1 no es un atajo: es contar
+> otra cosa y publicarla con el nombre de la cifra que se pidio.**
 
 ## Ficha permanente: `ventana-truncada-de-condiciones-activacion`
 

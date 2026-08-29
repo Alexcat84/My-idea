@@ -533,6 +533,27 @@ dominio que condiciona con un adjetivo en vez de con un pais.**
 > operacion: mide y publica, la adjudica el auditor con las cinco
 > verificaciones medidas (TAREA 3.d).
 
+> **CORRECCION DECLARADA (29 ago 2026, vuelta 130, TAREA 3.a).** Medicion
+> propia de la verificacion 1 de esta operacion, resuelta por el resolutor de
+> la historia (P.1, `docs/plan/BANCO_DEL_PLAN.md:11`, la misma frase que ya
+> invocaba esta nota), con
+> `scripts/loop/vuelta130_tarea3a_medir_nomina_ops10.py`
+> (`docs/loop/SALIDA_V130_3A_VERIFICACION1_ANTES.txt` y
+> `docs/loop/SALIDA_V130_3A_VERIFICACION1_REMEDIDA.txt`): de los **31 ids**
+> de la nomina, resuelven a **29 vivos distintos** (el resolutor mueve tres:
+> `cinco_categorias_costos_franquicia` -> `estimacion_inversion_inicial_franquiciador`,
+> `elaboracion_fdd` -> `preparar_fdd`, `estructuras_combinadas_franquicia` ->
+> `prevenir_franquicias_inadvertidas`). ANTES de esta vuelta, **28 de 29**
+> nombraban el pais en `condiciones_activacion`; el UNICO sin cubrir era
+> `prevenir_franquicias_inadvertidas` (superviviente de
+> `estructuras_combinadas_franquicia`, uno de los tres deprecados que la
+> propia acta 128 declaro NO fuera de alcance), con sus cuatro condiciones
+> viejas y ninguna nombrando el pais. Escrita la condicion nueva en esta
+> vuelta (TAREA 3.a, tres guardas REGIMEN B), la remedicion da **29 de 29
+> cubiertos**. **VERIFICACION 1 PASA A VERDE tras 3.a**, medida y publicada
+> por el ejecutor; el cierre de la operacion lo adjudica el auditor (no esta
+> vuelta), por la misma letra que ya regia la verificacion 3.
+
 ---
 
 ## VERIFICACION DE LA FASE
