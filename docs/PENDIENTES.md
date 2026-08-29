@@ -1632,6 +1632,34 @@ mañana.
 
 ---
 
+### OCTAVA entrada (vuelta 125, TAREA 2.c): el residuo de sufijos numericos que `OP-S-09` NO toca
+
+**La clausula "ningun id vivo lleva sufijo numerico de duplicado" de `OP-S-09`
+queda ACOTADA A LA NOMINA de esa operacion** (correccion declarada en la propia
+fila, `docs/plan/OPERACIONES.jsonl`, TAREA 2.a de esta vuelta): quien es
+duplicado lo decide la lectura `continua-o-repite` de `MESA_RACIMOS.md`
+DECISION 4, no la forma del id, y un nodo `CONTINUA` no es un duplicado.
+
+**Medido HOY con codigo propio** (`docs/loop/SALIDA_V125_OPS09_SUFIJO_NUMERICO.txt`),
+DESPUES de ejecutar los cuatro pares `REPITE` de esta vuelta: **48 ids VIVOS
+del grafo entero llevan sufijo numerico; 26 estan dentro de la nomina de
+`OP-S-09` (67 ids) y 22 quedan FUERA de esa nomina**, sin operacion propia que
+los lea.
+
+**El unico id DENTRO de la nomina cuyo sufijo hoy nombra a un gemelo muerto
+tras la fusion de esta vuelta: `eliminacion_causas_error_4`** (el gemelo
+`eliminacion_causas_error`, sin sufijo, quedo `DEPRECADO CON ALIAS` hacia el).
+Su numero ya no distingue nada, pero elegirle un id nuevo es juicio editorial
+sin regla escrita que lo derive.
+
+**El arreglo de los 22 de fuera y del residuo de dentro es trabajo POST
+CAMPAÑA**, porque exige una regla de nomenclatura (como se numera, o se
+renombra, un superviviente unico) que hoy **NO EXISTE en ninguna pagina del
+repo**, y crear doctrina no lo decide el bucle. **NADA SE RENOMBRA en esta
+vuelta.**
+
+---
+
 ## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
 
 **Nace del lote 8 del gradiente (puesto 69).** Es **hermana** de la de arriba, no
@@ -7626,3 +7654,62 @@ Texto viejo de `docs/loop/PROMPT_SIGUIENTE.md` y `docs/loop/ACTA_AUDITOR.md`
 de la vuelta 123 intacto (no se reescribe nada ya commiteado); las tres
 correcciones viven aqui, aditivas. Las dos primeras SON DEL AUDITOR, no del
 ejecutor; la tercera es del ejecutor.
+
+### R.7 LAS DOS CAIDAS DEL ACTA 124 (seccion 4) Y LAS DOS DISCREPANCIAS DE SU
+RELECTURA CIEGA, REGISTRO LARGO, CORRECCIONES DECLARADAS
+
+**(1) LA CAIDA DE REPORTE DE LOS "~61 NODOS VIVOS", QUE NO ACUMULA.** El acta
+124 (seccion 4.1) midio los ids VIVOS de la nomina de `OP-S-09` con sufijo
+numerico contra el grafo de esa fecha: **27 en la nomina, 49 en el grafo vivo
+entero**, ninguno de los dos 61. El **61** que vivio en prosa y en reportes
+anteriores es **67 menos los 6 nodos de las tres fusiones ya ejecutadas a esa
+fecha**, o sea "el resto de la nomina": es el alcance de un
+`RENOMBRE_CON_ALIAS` **entero**, no el de la clausula del sufijo. Medido HOY,
+DESPUES de ejecutar los cuatro pares `REPITE` de esta vuelta 125
+(`docs/loop/SALIDA_V125_OPS09_SUFIJO_NUMERICO.txt`): **26 en la nomina, 48 en
+el grafo entero** (la diferencia de uno contra el acta 124 es
+`dia_cero_defectos_3`, que esta vuelta fundio hacia `dia_cero_defectos_2` y
+dejo de estar vivo). Ninguna de las dos mediciones es el 61.
+
+**(2) LA CAIDA MIA, DE ENCARGO: DOS VARAS PARA EL MISMO ACTO, Y ES DEL
+AUDITOR, NO DEL EJECUTOR.** El acta 124 (seccion 4.2) declara que el auditor
+dicto dos varas distintas para la correccion de `OP-S-09` en `docs/plan/`: la
+TAREA 2 de la 124 pedia medirla con `numstat` y borrados en cero (REGIMEN A),
+y la TAREA 3 de la misma vuelta abria con "las tres guardas de todo
+instrumento que escriba en dataset/ o en docs/plan/" (REGIMEN B). El ejecutor
+siguio la TAREA 2, igual que en la 123, que el propio acta del auditor dio por
+buena. **La practica de la casa era la de la TAREA 2 y la letra que sobraba
+era la del auditor.** Queda remediada por el punto **1.j** del encargo de la
+vuelta 125 (`docs/loop/PROMPT_SIGUIENTE.md`), que separa por escrito REGIMEN A
+(texto aditivo en `docs/plan/` o `docs/`) de REGIMEN B (escritura en
+`dataset/` o ejecucion de una operacion), con el reporte declarando bajo cual
+regimen corrio cada instrumento.
+
+**(3) LAS DOS DISCREPANCIAS DE LA RELECTURA CIEGA DEL AUDITOR (acta 124,
+seccion 2), ABIERTAS ENTONCES Y CERRADAS EN LA TAREA 3.a DE ESTA VUELTA.**
+Registro completo en `docs/loop/SALIDA_V125_OPS09_RELECTURA_CONJUNTA.jsonl`.
+
+- **Discrepancia 1, de clase**: `auditoria_de_producto` contra
+  `auditoria_producto`. Abierta como CONTINUA (ejecutor, vueltas 123/124)
+  contra REPITE (auditor, acta 124). **Cerrada: REPITE.** Releido hoy contra
+  el grafo: los 4 pasos de `auditoria_producto` caen uno a uno dentro de los 7
+  de `auditoria_de_producto`, y su unico proposito no cubierto duplica al
+  nodo hermano vivo `auditoria_de_producto_2`; cableado real resuelto medido
+  con `scripts/loop/vuelta125_medir_cableado.py`
+  (`docs/loop/SALIDA_V125_OPS09_CABLEADO.txt`): 7 contra 1. Vara citada:
+  `docs/BANCO_DE_TEXTOS.md:1658` (si lo que el hijo añade cabe en una linea,
+  REPITE). Superviviente `auditoria_de_producto`, alias hereda
+  `auditoria_producto`. Ejecutado en esta vuelta (REGIMEN B).
+- **Discrepancia 2, de superviviente**: `estrategia_de_innovacion_de_producto`
+  contra `estrategia_innovacion_producto`. La clase no discrepaba (REPITE, ya
+  acordado). Abierta sobre CUAL sobrevive: la nota de `OP-S-09` de la vuelta
+  124 nombraba a `estrategia_de_innovacion_de_producto`. **Cerrada: sobrevive
+  `estrategia_innovacion_producto`.** Cableado real resuelto medido hoy
+  (`docs/loop/SALIDA_V125_OPS09_CABLEADO.txt`): `estrategia_innovacion_producto`
+  14 (6 salientes, 8 entrantes) contra `estrategia_de_innovacion_de_producto`
+  7 (6 salientes, 1 entrante), identico a la cifra que cito el auditor en el
+  acta 124. Vara citada: `docs/BANCO_DE_TEXTOS.md:1834` (banco 9.8, a
+  contenido empatado desempata el grafo, sobrevive el mejor cableado). La
+  nota de `OP-S-09` en `docs/plan/OPERACIONES.jsonl` queda corregida por
+  remision (correccion declarada, vuelta 124, texto viejo intacto delante).
+  Ejecutado en esta vuelta (REGIMEN B).
