@@ -1597,6 +1597,39 @@ contenido que la operacion no alcanza se anota en la ficha y no se ejecuta. **El
 nodo no se toca en esta vuelta**: queda anotado como trabajo post campaña, igual
 que las entradas de arriba.
 
+### SEPTIMA entrada (vuelta 124, TAREA 2.c, medicion del auditor en el acta 123 seccion 3.4): la celda "duplicadas de titulo 0" de la cabecera es case-sensitive y no ve un titulo repetido con distinta mayuscula o acento
+
+**Leido el codigo, no copiado del acta.** `find_exact_title_duplicates`
+(`scripts/run_phase1.py:671`) agrupa por `titulo_concepto` **CRUDO**, sin
+normalizar (`by_title[data.get("titulo_concepto")]`). `find_near_duplicate_titles`
+(`scripts/run_phase1.py:688`) SI normaliza (`normalize_title`, NFKD sin
+diacriticos, minusculas), pero en la linea 700 **EXCLUYE A PROPOSITO** los pares
+cuyo titulo normalizado sale IGUAL (`if not ta or not tb or ta == tb: continue`),
+porque nacio para candidatos de fusion SEMANTICA, no para el mismo titulo escrito
+dos veces. Un par que solo difiere en mayuscula o acento **se cae por las dos
+rendijas** y la cabecera lo publica como si no existiera.
+
+**El censo (TAREA 1.g, `scripts/loop/verificar_titulos_normalizados.py`, medido
+sobre `dataset/metadata/master_graph.json` de hoy): 3.188 nodos vivos, 0
+duplicados de titulo exacto, 1 duplicado de titulo normalizado.** El unico par es
+`sistema_responsabilidad_gerencial` / `sistema_responsabilidad_gerencial_2`
+("El Sistema es tu Responsabilidad" / "El Sistema es Tu Responsabilidad").
+
+**Ese par es una de las 28 familias de `OP-S-09` y quedo `CONTINUA` por
+contenido** en la lectura par a par de la vuelta 123
+(`docs/loop/SALIDA_V123_OPS09_LECTURA.jsonl`): **el veredicto NO se reabre aqui**,
+la vara de `OP-S-09` es el contenido, no el titulo. Lo que hay que arreglar **es
+el TITULO**, no el veredicto: dos nodos vivos con veredicto CONTINUA no deberian
+compartir titulo salvo por mayuscula o acento, y hoy lo comparten por accidente de
+transcripcion. **El arreglo del titulo queda anotado como trabajo POST CAMPAÑA**,
+salvo que una operacion escrita del plan lo ordene expresamente: cambiar un
+titulo ya publicado no lo decide el bucle por su cuenta. **Ni `run_phase1.py` ni
+ningun titulo se tocan en esta vuelta.** La guarda nueva
+(`scripts/loop/verificar_titulos_normalizados.py`) arranca con este unico par
+como EXCEPCION declarada (con su motivo y la vuelta que la declara, dentro del
+propio script) para nacer en VERDE hoy y morder cualquier par NUEVO a partir de
+mañana.
+
 ---
 
 ## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
@@ -7520,3 +7553,76 @@ es uno de los veinte de `OP-S-08`** (censo del 11 ago 2026, accesos directos
 y **NO se toca el codigo esta vuelta** (fase 0, CERRADA). Queda anotado para
 que la auditoria de cierre de la fase 05 lo tenga con su censo completo, no
 solo el sitio suelto.
+
+### R.6 LAS TRES CAIDAS DE LA VUELTA 123 (acta de la vuelta 123, secciones
+4.1, 4.2 y 4.3), REGISTRO LARGO, CORRECCIONES DECLARADAS
+
+**(1) LA VARA DE "PAR A PAR" DE `OP-S-09` SE ESTRECHO A PARES CONSECUTIVOS, Y
+ES CAIDA DEL AUDITOR, NO DEL EJECUTOR.** El encargo de la vuelta 123 fijo la
+cifra "39 pares" (las 28 familias enteras) para la lectura dirigida de
+`OP-S-09`, cifra que el propio auditor calculo como suma de (n-1) por
+familia, es decir **pares CONSECUTIVOS** segun el orden alfabetico de los
+ids. `docs/MESA_RACIMOS.md:214` dice *"dentro del racimo se lee par a par"*
+**sin decir consecutivos**, y el orden alfabetico de los ids es un accidente
+del listado, no una relacion del contenido: en una familia de tres o de
+cuatro deja pares sin confrontar. Los pares TOTALES del racimo son **51**
+(suma de C(n,2)), medido por el auditor en el acta 123 seccion 2 y
+remedido con codigo propio del ejecutor en la vuelta 124
+(`scripts/loop/vuelta124_tarea2a_contar_pares_racimo.py`,
+`docs/loop/SALIDA_V124_TAREA2A_CONTEO_PARES.txt`): coincide, **51 pares, 39
+ya leidos, 12 faltantes**. El ejecutor **obedecio exacto** el encargo de la
+123 y por eso la caida es del auditor (acta 123, seccion 4.2), que la
+adjudica el mismo con el ramal nuevo **(v) NINGUNA VARA SE ESTRECHA EN EL
+ENCARGO**: si un encargo convierte un criterio escrito en una cuenta
+mecanica, se remide ese numero contra la vara escrita ANTES de trabajar y
+se declara la diferencia si la hay; una cifra de alcance dictada por el
+auditor NO ES LA VARA, la vara es el texto que la cifra dice representar.
+**Los 12 pares que faltaban se leyeron en la vuelta 124**
+(`docs/loop/SALIDA_V124_OPS09_LECTURA_RESTO.jsonl`) y los 51 quedan
+completos (`docs/loop/SALIDA_V124_TAREA3A_51_COMPLETOS.txt`). Los 39 leidos
+en la 123 quedan firmes y no se releen.
+
+**(2) EL CONTRATO DE `verificar_cifras_del_plan.py` NO COTEJABA LA
+CORRECCION QUE LA PROPIA VUELTA 123 ESCRIBIO, Y ES CAIDA DEL AUDITOR (SU
+CONTRATO ES CORTO), NO DEL CODIGO DEL EJECUTOR.** El encargo de la 123 pedia
+el par (numero, ruta `.test.ts`) **en la MISMA frase**. La correccion 2.a
+que el ejecutor escribio en `OP-S-08` quedo partida en dos frases: *"la
+cifra real es 27 casos, no 32."* y *"Medido con `npx vitest run
+lib/engine/accesosResueltos.test.ts` desde web/..."*. Mutacion propia del
+auditor: cambiando 27 por 99 DENTRO de esa correccion, la guarda seguia
+dando VERDE con "0 pares"; con la misma cifra falsa en la misma frase que
+la ruta, caia en ROJO. **La guarda hacia exactamente lo que su contrato
+decia; el contrato era corto.** Ensanchado en la vuelta 124
+(`scripts/loop/verificar_cifras_del_plan.py`, TAREA 1.f): el par ahora
+coteja contra la primera ruta de la MISMA frase o las DOS SIGUIENTES, con
+ROJO por ambiguo si hay mas de una ruta DISTINTA en la ventana (dos citas
+de la misma ruta que solo difieren en el prefijo `web/` cuentan como la
+MISMA) y listado de "numero sin ruta en ventana" cuando no hay ninguna.
+Probado (`scripts/loop/vuelta124_tarea1f_caso_positivo_ventana.py`): la
+copia con 27 cambiado a 99 (`--base 128d0e5b`) da ROJO nombrando 99 contra
+27; el fichero real, con el mismo `--base`, ahora da VERDE cotejando 27 ==
+27 (antes daba VERDE con "0 pares"); y el caso positivo viejo de la 123
+(`--base ed916471`) sigue dando ROJO 32 contra 27.
+
+**(3) CINCO BATERIAS DE LA VUELTA 123 SALIERON IDENTICAS BYTE A BYTE Y EL
+`REPORTE.md` NO LO DIJO, Y ES CAIDA DEL EJECUTOR (INCUMPLIMIENTO DE
+ENCARGO), SEGUNDA VEZ SEGUIDA.** El encargo de la 123 ordenaba, literal:
+*"Si dos baterias salen identicas byte a byte, EL REPORTE LO DICE Y EXPLICA
+POR QUE"*, avisando que la 122 ya se lo habia saltado. Medido por el
+auditor con `cmp`: fueron **IDENTICOS** `GATE0_CMD1`, `CONTEO`, `TSC`,
+`DESFASE_CALIBRADO` y `MARCADOR`; distintos solo `MOTOR` y `WEB` (traen
+tiempos). `grep -in "identic\|determinis\|byte" docs/loop/REPORTE.md` de la
+123 dio cero aciertos. **El determinismo era legitimo** (no se escribio
+nada en `dataset/` esa vuelta, y el Gate 0 del auditor reproducia el del
+ejecutor byte a byte), **pero el encargo pedia nombrarlo y no se nombro**.
+No es cifra falsa ni afirmacion equivocada: es silencio donde el encargo
+mandaba hablar, y no acumula para ninguna racha (acta 123, seccion 4.1).
+**Remediado en la vuelta 124 con comprobacion mecanica** (TAREA 1.d): antes
+de escribir el reporte se corre `cmp -s` sobre cada par de salidas
+homologas de la vuelta y se vuelca a `docs/loop/SALIDA_V124_BATERIAS_CMP.txt`,
+con el reporte listando los IDENTICOS y explicando por que.
+
+Texto viejo de `docs/loop/PROMPT_SIGUIENTE.md` y `docs/loop/ACTA_AUDITOR.md`
+de la vuelta 123 intacto (no se reescribe nada ya commiteado); las tres
+correcciones viven aqui, aditivas. Las dos primeras SON DEL AUDITOR, no del
+ejecutor; la tercera es del ejecutor.
