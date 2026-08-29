@@ -74,6 +74,38 @@ afirmando "25/25" (ese fichero es el tsc, EXIT=0, y NUNCA contiene la cadena
 nombrando el par. Y la mutacion vieja de la 122
 (`vuelta122_tarea1e_mutacion_citas.py`) tiene que SEGUIR dando ROJO: si el
 arreglo de la fila de tabla rompiera esa mutacion, el arreglo estaria mal.
+
+--- EL ENSANCHE: UN FICHERO CITADO TIENE QUE TRAER MEDICION, NO SOLO CODIGO
+DE SALIDA (TAREA 1.i de la vuelta 129, acta de la vuelta 128, seccion "DOS
+GUARDAS QUE NO ALCANZAN", ramal (a)) ---
+
+POR QUE NACE. Esta guarda cotejaba el VEREDICTO ("vacio", "ROJO", "EXIT 0")
+contra el fichero citado, pero nunca exigia que el fichero trajera una
+medicion debajo: `SALIDA_V128_REBASE_ARBOL_IDENTICO.txt` (acta 128, 4.2)
+tiene como contenido ENTERO la unica linea `EXITCODE: 0`, sin el comando, sin
+los dos refs ni la salida de `git diff`, y el reporte lo citaba como prueba
+de "vacio". La afirmacion resulto CIERTA (el auditor la verifico aparte con
+sus propios comandos), pero la PRUEBA no era reproducible por nadie desde el
+propio fichero: un fichero que no dice mas que su codigo de salida no prueba
+nada por si mismo.
+
+QUE COMPRUEBA, DE MAS. Para cada par (afirmacion, fichero) que ya coteja
+`cumple()` y que CUADRA, ademas exige que el fichero tenga AL MENOS UNA
+linea de contenido ademas de su linea de codigo de salida (`EXITCODE: <n>` o
+`EXIT=<n>`, sin mas texto en esa linea). Si el contenido ENTERO del fichero
+es esa unica linea, ROJO, nombrando el fichero y la afirmacion ("la palabra
+que el reporte le colgo") que lo cita. EXCEPCION DECLARADA, UNA SOLA: los
+ficheros cuyo nombre trae el segmento `_TSC_` (`SALIDA_V<vuelta>_TSC_
+<LADO>.txt` y sus variantes `_POST`), cuyo formato canonico de esta casa es
+EXACTAMENTE la linea `EXIT=<n>` y nada mas (docs/loop/PROMPT_SIGUIENTE.md,
+seccion 1.c). Ningun otro nombre esta exento.
+
+CASO POSITIVO REAL, SIN INVENTAR NADA (vuelta 129): esta guarda, corrida
+sobre `docs/loop/REPORTE.md` DE LA VUELTA 128 (que sigue en el arbol de
+trabajo hasta que la 129 lo sobrescribe), da ROJO nombrando
+`SALIDA_V128_REBASE_ARBOL_IDENTICO.txt` con la afirmacion "vacio": ese es su
+caso positivo real (`SALIDA_V129_1I_CASO_POSITIVO_REPORTE128.txt`). Sobre el
+`REPORTE.md` de la vuelta 129 (una vez escrito) tiene que dar VERDE.
 """
 import argparse
 import io
@@ -97,6 +129,25 @@ VOCABULARIO = [
 
 PATRON_FICHERO = re.compile(r"`([A-Za-z0-9_./\\-]+\.(?:txt|py|md|jsonl|json))`")
 PATRON_GIT_STATUS_LINEA = re.compile(r"(?m)^ [MADR] ")
+RE_SOLO_EXITCODE = re.compile(r"^\s*(EXITCODE:\s*\d+|EXIT=\d+)\s*$")
+
+
+def es_excepcion_tsc(nombre_fichero):
+    """La unica excepcion declarada del ensanche 1.i (vuelta 129): los
+    ficheros de tsc, cuyo formato canonico de esta casa es EXACTAMENTE la
+    linea `EXIT=<n>` y nada mas."""
+    return "_TSC_" in nombre_fichero.upper()
+
+
+def fichero_es_solo_codigo_de_salida(contenido):
+    """True si el contenido ENTERO del fichero (ignorando lineas en blanco)
+    es una unica linea con el codigo de salida (`EXITCODE: <n>` o
+    `EXIT=<n>`) y nada mas: el caso que el ensanche 1.i de la vuelta 129
+    prohibe fuera de la excepcion de tsc."""
+    lineas = [l for l in contenido.splitlines() if l.strip() != ""]
+    if len(lineas) != 1:
+        return False
+    return bool(RE_SOLO_EXITCODE.match(lineas[0].strip()))
 
 
 def dividir_frases(texto):
@@ -216,11 +267,18 @@ def cotejar(texto, fallos, pares_ok):
                                   % (ln, fichero, afirmacion))
                     continue
                 contenido = io.open(ruta, encoding="utf-8", errors="replace").read()
-                if cumple(afirmacion, contenido):
-                    pares_ok.append((afirmacion, fichero, ln))
-                else:
+                if not cumple(afirmacion, contenido):
                     fallos.append('linea %d: NO CUADRA "%s" <-> `%s`. frase: %s'
                                   % (ln, afirmacion, fichero, frase.strip()[:200]))
+                    continue
+                # ENSANCHE 1.i (vuelta 129): el fichero citado tiene que
+                # traer medicion, no solo su codigo de salida.
+                if fichero_es_solo_codigo_de_salida(contenido) and not es_excepcion_tsc(fichero):
+                    fallos.append('linea %d: `%s` citado con "%s" pero su contenido ENTERO es '
+                                  'la linea de codigo de salida, sin medicion debajo (excepcion '
+                                  'solo para ficheros _TSC_)' % (ln, fichero, afirmacion))
+                    continue
+                pares_ok.append((afirmacion, fichero, ln))
 
 
 def main():
