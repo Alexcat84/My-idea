@@ -1,23 +1,22 @@
 # -*- coding: utf-8 -*-
-"""verificar_cabecera_mapeo.py . TAREA 2.f de la vuelta 134 (acta 133, 4.7:
-la guarda que faltaba y que esta vuelta tiene caso, el peldano 106 que
-desaparecio de la cabecera de docs/plan/OP_S_11_MAPEO_PROPUESTO.md).
+r"""verificar_cabecera_mapeo.py . TAREA 2.f de la vuelta 134 (acta 133,
+4.7), EXTENDIDA A SEIS PELDANOS en la TAREA 4.c de la vuelta 135 (acta
+134, 3.3: la extension de la cola a `Caps?.` reordena el peldano de
+localizador y el de prefijo, y esta guarda tiene que verlos los seis).
 
 CONTRATO:
-  - Recomputa desde dataset/ los CINCO peldanos de la cadena (cadena entera;
-    mas titulo; mas localizador con la cola VIEJA; mas Apendice en la cola;
-    mas prefijo sobre recortada), REUSANDO los scripts existentes
-    (vuelta131_grupos_por_titulo.py, vuelta133_cola_localizador_apendice.py,
-    vuelta133_prefijo_sobre_recortada.py, vuelta133_tabla_mapeo_propuesto.py
-    para las cifras de cierre), sin reimplementar su union-find.
+  - Recomputa desde dataset/ los SEIS peldanos de la cadena (cadena
+    entera; mas titulo; mas localizador con la cola VIEJA; mas Apendice
+    en la cola; mas prefijo sobre recortada con Apendice; mas abreviatura
+    `Caps?.` en la cola Y en el prefijo), REUSANDO
+    `vuelta135_tabla_mapeo_propuesto.py` (que ya recomputa e IMPRIME los
+    seis en su stdout), sin reimplementar el union-find.
   - Lee la cabecera de docs/plan/OP_S_11_MAPEO_PROPUESTO.md (todo el texto
     antes de la fila `| grafia | canonica propuesta | ...`), extrae CADA
     cifra `**N grupos**` que declara (multiconjunto, sin importar el orden
-    en que aparezcan en la prosa: la reposicion del 106 puede llegar por
-    ADICION al final del parrafo, no necesariamente en su posicion logica)
-    y coteja contra el recomputo. Si la cabecera declara MENOS peldanos de
-    los que el recomputo produce, ES ROJO EXIT 1 nombrando el peldano que
-    falta (numero y etiqueta).
+    en que aparezcan en la prosa) y coteja contra el recomputo. Si la
+    cabecera declara MENOS peldanos de los que el recomputo produce, ES
+    ROJO EXIT 1 nombrando el peldano que falta (numero y etiqueta).
   - Coteja tambien las cifras de cierre de la cabecera (grupos totales,
     grupos de 2+, grafias en grupo, sin agrupar, colapsos que faltan,
     canonicas SINTETICAS) y el TOTAL filas del pie contra las filas reales
@@ -27,8 +26,10 @@ USO:
   python scripts/loop/verificar_cabecera_mapeo.py
   python scripts/loop/verificar_cabecera_mapeo.py --tabla RUTA
 
-PRUEBA DE MUTACION (obligatoria): scripts/loop/vuelta134_2f_mutacion.py,
-salida a docs/loop/SALIDA_V134_2F_MUTACION.txt.
+PRUEBA DE MUTACION (obligatoria): scripts/loop/vuelta134_2f_mutacion.py
+(vieja, cinco peldanos, se queda commiteada) y
+scripts/loop/vuelta135_4c_mutacion.py (nueva, seis peldanos), salida a
+docs/loop/SALIDA_V135_4C_MUTACION.txt.
 """
 import argparse
 import io
@@ -46,7 +47,8 @@ ETIQUETAS = {
     108: "mas titulo",
     106: "mas localizador con la cola VIEJA",
     105: "mas Apendice en la cola",
-    104: "mas prefijo sobre recortada",
+    104: "mas prefijo sobre recortada con Apendice",
+    54: "mas abreviatura Caps?. en la cola y en el prefijo",
 }
 
 
@@ -55,19 +57,13 @@ def leer(ruta):
         return f.read()
 
 
-# Estos scripts viejos, reusados aqui SOLO por su stdout, tienen efectos
-# secundarios de escritura: vuelta133_cola_localizador_apendice.py y
-# vuelta133_prefijo_sobre_recortada.py pisan su propio SALIDA_V133_*.txt
-# sellado, y vuelta133_tabla_mapeo_propuesto.py REGENERA ENTERO
+# vuelta135_tabla_mapeo_propuesto.py REGENERA ENTERO
 # docs/plan/OP_S_11_MAPEO_PROPUESTO.md (su DESTINO declarado), que es
 # precisamente el fichero que esta guarda tiene que LEER tal como esta en
-# el arbol, con la edicion de la 3.c puesta y no regenerada desde cero. Se
-# toma una foto de bytes ANTES de cada corrida y se restaura DESPUES (no con
-# git checkout, que perderia una edicion todavia sin commitear): asi esta
-# guarda nunca ensucia nada con solo ejecutarse, este o no comiteado.
+# el arbol. Se toma una foto de bytes ANTES de cada corrida y se restaura
+# DESPUES (no con git checkout, que perderia una edicion todavia sin
+# commitear): asi esta guarda nunca ensucia nada con solo ejecutarse.
 FICHEROS_CON_EFECTO_SECUNDARIO = [
-    os.path.join(RAIZ, "docs", "loop", "SALIDA_V133_4A_COLA_CON_APENDICE.txt"),
-    os.path.join(RAIZ, "docs", "loop", "SALIDA_V133_4B_PREFIJO_APLICADO.txt"),
     RUTA_TABLA,
 ]
 
@@ -96,34 +92,33 @@ def correr(script, *args):
 
 
 def recomputar():
-    out1 = correr("vuelta131_grupos_por_titulo.py")
-    cadena_entera = int(re.search(r"grupos base \(cadena entera, vuelta 130\): (\d+)", out1).group(1))
-    titulo = int(re.search(r"grupos tras anadir regla de titulo: (\d+)", out1).group(1))
+    out = correr("vuelta135_tabla_mapeo_propuesto.py")
 
-    out2 = correr("vuelta133_cola_localizador_apendice.py")
-    localizador_vieja = int(re.search(r"grupos cola vieja \(solo Anexo\): (\d+)", out2).group(1))
-    apendice = int(re.search(r"grupos cola extendida \(mas Apendice\): (\d+)", out2).group(1))
+    n_cadena = int(re.search(r"peldano 1 \(cadena entera\): (\d+)", out).group(1))
+    n_titulo = int(re.search(r"peldano 2 \(\+ titulo\): (\d+)", out).group(1))
+    n_localizador_vieja = int(re.search(r"peldano 3 \(\+ localizador cola VIEJA\): (\d+)", out).group(1))
+    n_apendice = int(re.search(r"peldano 4 \(\+ Apendice\): (\d+)", out).group(1))
+    n_prefijo_apendice = int(re.search(r"peldano 5 \(\+ prefijo sobre recortada con Apendice\): (\d+)", out).group(1))
+    n_cap = int(re.search(r"peldano 6 \(\+ Caps\?\. en cola y en prefijo\): (\d+)", out).group(1))
 
-    out3 = correr("vuelta133_prefijo_sobre_recortada.py")
-    prefijo = int(re.search(r"grupos tras prefijo sobre recortada: (\d+)", out3).group(1))
-
-    out4 = correr("vuelta133_tabla_mapeo_propuesto.py")
-    dos_mas = int(re.search(r"grupos con 2\+ miembros: (\d+)", out4).group(1))
-    en_grupo = int(re.search(r"^en grupo: (\d+)", out4, re.MULTILINE).group(1))
-    sin_agrupar = int(re.search(r"^sin agrupar: (\d+)", out4, re.MULTILINE).group(1))
-    sinteticas = int(re.search(r"canonicas SINTETICAS: (\d+)", out4).group(1))
-    colapsos = int(re.search(r"colapsos que faltan para 55: (\d+)", out4).group(1))
-    total_grupos = int(re.search(r"grupos totales \(4 reglas\): (\d+)", out4).group(1))
-    grafias = int(re.search(r"^grafias: (\d+)", out4, re.MULTILINE).group(1))
+    total_grupos = int(re.search(r"grupos totales \(6 peldanos\): (\d+)", out).group(1))
+    dos_mas = int(re.search(r"grupos con 2\+ miembros: (\d+)", out).group(1))
+    sin_agrupar = int(re.search(r"^sin agrupar: (\d+)", out, re.MULTILINE).group(1))
+    en_grupo = int(re.search(r"^en grupo: (\d+)", out, re.MULTILINE).group(1))
+    sinteticas = int(re.search(r"canonicas SINTETICAS: (\d+)", out).group(1))
+    colapsos = int(re.search(r"colapsos que faltan para 55: (\d+)", out).group(1))
+    grafias = int(re.search(r"^grafias: (\d+)", out, re.MULTILINE).group(1))
+    rebase = max(0, 55 - total_grupos)
 
     return {
-        "peldanos": [cadena_entera, titulo, localizador_vieja, apendice, prefijo],
+        "peldanos": [n_cadena, n_titulo, n_localizador_vieja, n_apendice, n_prefijo_apendice, n_cap],
         "total_grupos": total_grupos,
         "dos_mas": dos_mas,
         "en_grupo": en_grupo,
         "sin_agrupar": sin_agrupar,
         "sinteticas": sinteticas,
         "colapsos": colapsos,
+        "rebase": rebase,
         "grafias": grafias,
     }
 
@@ -161,9 +156,10 @@ def leer_declarado(ruta_tabla):
     peldanos = [int(x) for x in re.findall(r"\*\*(\d+) grupos\*\*", cab)]
 
     m_total = re.search(
-        r"CON LAS CUATRO REGLAS MECANICAS: (\d+) grupos\*\*\s*\((\d+) con 2 o mas miembros / (\d+) en grupo, (\d+) sin agrupar\)",
+        r"CON LA CADENA COMPLETA \(peldano 6\): (\d+) grupos\*\*\s*\((\d+) con 2 o mas miembros / (\d+) en grupo, (\d+) sin agrupar\)",
         cab)
     m_colapsos = re.search(r"Quedan (\d+) colapsos para decision humana", cab)
+    m_rebase = re.search(r"la meta de 55 queda REBASADA POR (\d+)", cab)
     m_sinteticas = re.search(r"en este corte: (\d+) canonicas SINTETICAS", cab)
     m_pie = re.search(
         r"TOTAL filas: (\d+) \((\d+) grafias en grupos mecanicos de 2 o mas, (\d+) sin agrupar\), contra (\d+) grafias del censo",
@@ -176,6 +172,7 @@ def leer_declarado(ruta_tabla):
         "en_grupo": int(m_total.group(3)) if m_total else None,
         "sin_agrupar": int(m_total.group(4)) if m_total else None,
         "colapsos": int(m_colapsos.group(1)) if m_colapsos else None,
+        "rebase": int(m_rebase.group(1)) if m_rebase else None,
         "sinteticas": int(m_sinteticas.group(1)) if m_sinteticas else None,
         "pie_total_filas": int(m_pie.group(1)) if m_pie else None,
         "pie_en_grupo": int(m_pie.group(2)) if m_pie else None,
@@ -202,6 +199,7 @@ def verificar(ruta_tabla):
         ("en_grupo", "grafias en grupo"),
         ("sin_agrupar", "grafias sin agrupar"),
         ("colapsos", "colapsos que faltan para 55"),
+        ("rebase", "meta de 55 rebasada por"),
         ("sinteticas", "canonicas SINTETICAS"),
     ]:
         if dec[campo] is None:
@@ -241,17 +239,18 @@ def main():
         for f in fallos:
             print("  %s" % f)
         print("recomputado: peldanos %s, total %d, 2+ %d, en_grupo %d, sin_agrupar %d, "
-              "sinteticas %d, colapsos %d, grafias %d, filas reales %d" %
+              "sinteticas %d, colapsos %d, rebase %d, grafias %d, filas reales %d" %
               (rec["peldanos"], rec["total_grupos"], rec["dos_mas"], rec["en_grupo"],
-               rec["sin_agrupar"], rec["sinteticas"], rec["colapsos"], rec["grafias"], filas_reales))
+               rec["sin_agrupar"], rec["sinteticas"], rec["colapsos"], rec["rebase"],
+               rec["grafias"], filas_reales))
         return 1
 
     print("VERDE EXIT 0: cabecera de %s cuadra con el recomputo:" % a.tabla)
     print("  peldanos declarados %s == recomputados %s" % (sorted(dec["peldanos"]), sorted(rec["peldanos"])))
-    print("  total %d, 2+ %d, en_grupo %d, sin_agrupar %d, sinteticas %d, colapsos %d, "
+    print("  total %d, 2+ %d, en_grupo %d, sin_agrupar %d, sinteticas %d, colapsos %d, rebase %d, "
           "filas reales %d == pie %d" %
           (rec["total_grupos"], rec["dos_mas"], rec["en_grupo"], rec["sin_agrupar"],
-           rec["sinteticas"], rec["colapsos"], filas_reales, dec["pie_total_filas"]))
+           rec["sinteticas"], rec["colapsos"], rec["rebase"], filas_reales, dec["pie_total_filas"]))
     return 0
 
 
