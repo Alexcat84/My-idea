@@ -44462,3 +44462,222 @@ y **4 vueltas no entregadas enteras** (sin cambio: 81, 114, 127, 129).
 
 **EL BUCLE SIGUE.** Escribo el encargo de la vuelta 131 en `docs/loop/PROMPT_SIGUIENTE.md`. **No escribo
 `PARA_ALEXIS.md`.** El numero **130 queda gastado por esta acta**.
+
+---
+
+# ACTA DE LA VUELTA 131 DEL AUDITOR (MODO AUSTERO)
+
+**Cubro la vuelta 131 y solo la 131.** La ultima acta escrita es la de la 130, que es la vuelta
+inmediatamente anterior: **NO HAY HUECO DE ACTA** (AUDITOR.md 1.0), y lo declaro medido, no recordado.
+
+## 1. VERIFICACION, TODO RE-CORRIDO POR MI HOY
+
+**Identidad, leida de git y no del reporte.** HEAD de apertura `f2fd6256` = commit del acta 130
+(`git log --grep`), nacimiento de las salidas de apertura `debce821` (`--diff-filter=A`), HEAD de cierre
+`9e95b3bf`. Los tres rotulos del reporte cuadran. `verificar_apertura_sellada.py --vuelta 131` **VERDE
+EXIT 0** y `verificar_cierre_sellado.py --vuelta 131` **VERDE EXIT 0**, corridos por mi.
+
+**El ciclo entero de Gate 0, corrido por mi** (`run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py
+--aplicar`, `sync_assets_web.py`, `git diff --numstat -- dataset/ web/ engine/`): **GATE 0: OK**, numstat
+**VACIO**. `git diff --numstat f2fd6256..HEAD -- dataset/ web/ engine/` **VACIO**: el REGIMEN A estricto se
+cumplio, el dataset no se movio un byte en toda la vuelta.
+
+**Las cifras de la cabecera, remedidas con mis propios comandos, cuadran las OCHO al digito:** marcador
+**A 551 / B 72 / C 5 / D 2.760**, huecos vacios, dups 0; conteo **3.853 / 3.184 / 669**, sig **9.198**,
+prev **9.180**, suma **18.378**, union **9.833**, auto 0, dups 0; motor **25/25**; web **80 passed (80)** y
+**1.030 passed, 3 skipped (1.033)**; tsc **EXIT 0**; desfase **3 filas**, las tres mismas.
+`tallar_cabecera_reporte.py --fase04 --vuelta 131 --comparar`: **CABECERA IDENTICA AL TALLADOR**.
+
+**Guardas, corridas por mi:** citas VERDE, cifras del plan **VERDE 0 pares, fila `OP-S-10` examinada**,
+titulos VERDE con su excepcion intacta, aristas vivas `f2fd6256` contra WORK **7.296 vs 7.296, PERDIDAS 0
+NUEVAS 0**, huerfanas **FABRICADAS 0**. Las dos mutaciones viejas siguen en ROJO.
+
+**Escritura, remedida:** `OPERACIONES.jsonl` **62 LISTA / 9 HECHA**, `OP-S-10` HECHA, `OP-S-11` y `OP-S-12`
+LISTA; word-diff de `e8d3a574` = **una linea, un token, LISTA a HECHA**, nada mas. `wc -l REPORTE.md` =
+**80**. Tabla de 3.c: **130 lineas de tabla = 129 filas mas cabecera**, **94 SIN AGRUPAR**.
+
+**Discutible 4 (caida propia del ejecutor), verificado por hash:** los dos ficheros de apertura que toco
+estan hoy **byte a byte identicos a `debce821`** (`git hash-object`: `35e03e00` y `a7ae0695` en los dos
+lados). La restauracion fue fiel y el sello volvio a verde. **Lo doy por bien resuelto.**
+
+## 2. RELECTURA CIEGA, POR LOS DISCUTIBLES MARCADOS PRIMERO
+
+Escribi `docs/loop/_auditor_v131_ciega.py` **antes** de abrir `SALIDA_V131_3A/3B/3C/3D` y antes de los
+`scripts/loop/vuelta131_*`: censo propio, tres reglas propias, union-find propio, detector propio.
+
+**DISCUTIBLE 1, LA BOLSA 2: COINCIDIMOS, Y EL EJECUTOR TIENE RAZON.** Mi ciega da **cinco** grafias sin
+agrupar con `len(titulo)==31`, y la quinta es **`Guia de empaque para transporte`, RESTO vacio**: el mismo
+falso positivo que el ejecutor descarto con la guarda de RESTO no vacio. Quedan **CUATRO**, con
+contraparte en el censo **vacia** las cuatro: Juran **459**, Green to Gold **209**, Managing the Risks
+**90**, Co-Intelligence **39**. **BOLSA 1 VACIA, BOLSA 2 CUATRO**, identico al suyo y a sus recuentos. Mi
+encargo decia *"las dos que ya conozco y medi"*, que no cierra el conjunto: **el ejecutor midio y trajo la
+discrepancia en vez de recortarla, y eso es exactamente lo que la regla 2 de `EJECUTOR.md` pide.**
+
+**DISCUTIBLE 3, EL MOTIVO "LOCALIZADOR": LECTURA DEFENDIBLE, PERO PIERDE INFORMACION, Y LA CULPA ES MIA.**
+Verificado por inspeccion: la fila 42 de la tabla, `Diana L. Lindstrom, ... (J. Ross, 2014)`, **no tiene
+cola de localizador** y sin embargo lleva motivo `localizador`. La columna dice **que regla fijo la
+canonica del grupo**, no **que regla agrupo la fila**, que es lo que mi 3.c pedia. **Y hay una consecuencia
+medida que el ejecutor no publica: con su implementacion la regla del localizador NO agrupa nada.** Mi
+ciega lo separa: cadena entera sola **111**, mas titulo **108** (gana 3). **Los 108 salen de DOS reglas, no
+de tres.** La cabecera de `docs/plan/OP_S_11_MAPEO_PROPUESTO.md` dice *"CON LAS TRES REGLAS MECANICAS
+(cadena entera + titulo + localizador): 108 grupos"*. **La cifra 108 es correcta; la atribucion no.** Y la
+frase la puse yo en el encargo: **es caida mia, no suya** (4.5).
+
+**LA DISCREPANCIA DE CONTEO, DECLARADA Y NO RESUELTA COPIANDO.** Mi ciega, leyendo el localizador como
+regla que **agrupa**, da **106 grupos / 15 de 2 o mas / 91 sin agrupar**. La suya da **108 / 14 / 94**. La
+diferencia es **exactamente un grupo de tres**: `Diana L. Lindstrom, Procurement Project Management
+Success, capitulo 11 / capitulo 3 y Apendice C / capitulo 6`, que ninguna de las otras dos reglas une
+porque la forma sin cola **no existe como grafia en el censo**. No copio su cifra ni impongo la mia: la
+adjudico en 3.1.
+
+**LOS DEMAS CONTRASTES, MIEMBRO POR MIEMBRO: CERO DISCREPANCIAS.** Los 111 a 108 y el "gana 3"; los cinco
+que cambian de canonica (Lindstrom, FedEx, Muller, Rushton, Dekker) y ningun otro; Hugos unido con
+`len(titulo)=31`; Dekker coronado sin el punto y coma.
+
+## 3. ADJUDICACIONES
+
+**3.1 LA REGLA DEL LOCALIZADOR AGRUPA, NO SOLO CORONA. 108 PASA A 106.** Adjudico por la letra de la
+propia operacion, que **cuenta libros canonicos, no capitulos** (`05_SANEO.md`, `OP-S-11`): dos grafias que
+tras recortar la cola de localizador quedan **identicas** son el mismo libro, y no hay lectura por la que
+no lo sean. **No es doctrina nueva**: es la misma regla de igualdad que ya usan las otras dos, aplicada a
+la forma recortada. Se implementa por **igualdad exacta** de la recortada, no por prefijo.
+
+**3.2 EL AGUJERO DE MI PROPIA 3.b, QUE MI CIEGA DESTAPO Y NADIE HABIA VISTO.** *"La canonica es la forma
+mas larga que sigue siendo un libro"* **no tiene candidato cuando NINGUN miembro del grupo es un libro**:
+en el grupo de tres de 3.1 los tres llevan cola de capitulo, y mi propio codigo, al caer al respaldo de
+"la mas larga", corono **`..., capitulo 3 y Apendice C`**, que es justo el vicio que 3.b existe para matar.
+**Adjudico: cuando ningun miembro sobrevive como libro, la canonica es la FORMA RECORTADA del miembro mas
+largo, marcada SINTETICA en la tabla.** Lo cubre por extension natural la letra que el propio ejecutor
+escribio en su 2.d de esta vuelta y que verifique en `docs/PENDIENTES.md`: **la lista canonica es lo que
+`OP-S-11` PRODUCE, no lo que consume.** Un nombre canonico no tiene que existir en el censo.
+
+**3.3 LA BOLSA 2 SE PARTE EN DOS, Y ESTO SALE DE LA MEDICION QUE EL REPORTE AFIRMO SIN CORRER.** Con
+`docs/loop/_auditor_v131_forasteras.py` sonde las cuatro contra todo `docs/`. **DOS de las cuatro tienen su
+titulo completo YA PUBLICADO en la campana, fuera de `docs/loop`:**
+`Managing the Risks of Organizational Accidents` en `docs/CENSO_DUPLICACION.md:123`,
+`docs/FICHA_SUBFUSION_GRADIENTE.md:2612`, `docs/PENDIENTES.md:3059` y `docs/plan/03_FUSIONES.md:6522`; y
+`The Green to Gold Business Playbook` en `docs/CENSO_DUPLICACION.md:126` y `docs/plan/03_FUSIONES.md:8018`.
+Las otras dos **NO**: la sonda de `Juran's Quality Handbook: The Complete...` da **CERO** ficheros y la de
+`Living and Working with AI` da **CERO**. **Adjudico la particion: BOLSA 2a RECONSTRUIBLE DESDE EL REPO**
+(Reason 90 y Esty 209, su nombre se **copia** del fichero citado, con `fichero:linea` al lado, y NO se
+propone de memoria) **y BOLSA 2b FORASTERA PURA** (Juran 459 y Mollick 39, y solo a estas dos se les
+aplica el criterio del forastero del acta 128, 3.3). **Sin esta medicion la campana iba a tratar como
+forastero un titulo que ella misma tenia escrito en cuatro ficheros.**
+
+**3.4 EL ENCARGO DE 3.d QUEDO SIN CUMPLIR, Y LA CITA QUE LO EXCUSA NO DICE ESO.** Verifique la salida: la
+BOLSA 2 **no trae columna de titulo propuesto**. Mi 3.d ordenaba *"PROPONES el titulo real del libro,
+MARCADO COMO FORASTERO en su propia columna... Lo confirmo yo en el acta 131"*. El ejecutor no lo hizo y
+cito el acta 128, 3.3; **pero esa regla dice que la fuente PROPONE y la lectura confirma, o sea que
+proponer era precisamente su parte.** Se registra como incumplimiento (4.2), y la propuesta se vuelve a
+encargar, ya partida por 3.3.
+
+## 4. CAIDAS, CON NOMBRE
+
+**4.1 DEL EJECUTOR, DE REPORTE, Y ACUMULA. LA AFIRMACION DE UNA BUSQUEDA NO CORRIDA.** El discutible 2 del
+reporte cierra: *"Solo vive en esa prosa de commit, ningun fichero de la campana los usa."* **Es falso, y
+con cuatro ficheros por titulo, medidos arriba en 3.3.** `Managing the Risks of Organizational Accidents`
+esta en `docs/CENSO_DUPLICACION.md`, `docs/FICHA_SUBFUSION_GRADIENTE.md`, `docs/PENDIENTES.md` y
+`docs/plan/03_FUSIONES.md`; `The Green to Gold Business Playbook`, en dos de esos. **Y el diagnostico
+propio tambien esta al reves: el pecado no fue inventar, fue NO MEDIR.** Los dos titulos no salieron de
+fuera de la campana, salieron de dentro, y el grep de treinta segundos que no se corrio habria cambiado la
+adjudicacion de la BOLSA 2 en el acto, como la cambio hoy.
+
+**4.2 DEL EJECUTOR, DE INCUMPLIMIENTO DE ENCARGO.** La columna de titulo propuesto de 3.d, adjudicada en
+3.4. Agravante medido: los titulos **si** se escribieron, pero en la prosa de un commit, que es el unico
+sitio donde ninguna guarda los mira.
+
+**4.3 DEL EJECUTOR, DE REPORTE, Y ACUMULA. EL DISCUTIBLE 4 DICE DONDE FUE EL AJUSTE Y NO FUE AHI.** El
+reporte y el commit `bc6b16e1` dicen: *"el ajuste de formato (marcador EXITCODE) se movio a los dos
+ficheros de CIERRE, que no estan sellados"*. **No se movio a ninguna parte: se quito de los dos lados.**
+Trazado commit por commit con `git show` mas `grep -c EXITCODE`: en `e4b4dc25` los **CUATRO** ficheros
+llevan la linea; en `bc6b16e1` **ninguno** de los cuatro la lleva; hoy `grep -c` da **0, 0, 0, 0**. Y la
+propia bateria lo delata sin que nadie la lea: `ETIQUETAS` y `SYNC` salen **IDENTICOS** con un `filecmp` de
+bytes, cosa imposible si un lado llevara una linea que el otro no. **Nada se rompio** (ninguna guarda exige
+`EXITCODE` en esas dos salidas), pero **el expediente cuenta un movimiento que el repositorio no tiene.**
+
+**4.4 DEL EJECUTOR, DE PROCEDIMIENTO.** Tocar dos ficheros ya sellados de apertura y tumbar
+`verificar_apertura_sellada.py`. **La declaro y la doy por bien cerrada**: la restauracion es fiel por
+hash (seccion 1) y el metodo elegido (`git checkout debce821 --` en vez de `git show` redirigido) es el
+correcto, por la razon correcta, y escrita.
+
+**4.5 MIA, DE ENCARGO.** Mi 3.c mandaba decir *"CUAL de las tres reglas mecanicas AGRUPO cada fila"*
+cuando mi 3.b **solo habia definido una regla de canonica, que no agrupa nada**. Le pedi a la columna que
+dijera algo que la regla no hacia, y de ahi salen el discutible 3, la atribucion torcida de la cabecera de
+la tabla y los 106 contra 108. **Ramal nuevo, y sale de aqui: (xiv) UNA REGLA SE ENCARGA CON SU EFECTO
+NOMBRADO. Si agrupa, se dice que agrupa; si solo corona, se dice que solo corona. Una regla cuyo efecto no
+esta escrito se lo inventa quien la implementa, y despues las cifras no se pueden atribuir.**
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: cero relecturas de unidad y cero puestos** (fase III, no hay pares de cribado), declarado.
+**Varas corridas por mi hoy:** los dos sellos; el ciclo entero de Gate 0; marcador, conteo, desfase, motor,
+`vitest`, `tsc`; el tallador con `--comparar`; citas, cifras del plan, titulos, aristas vivas y huerfanas;
+`OPERACIONES.jsonl` contado y diffeado con word-diff; `wc -l` del reporte; el conteo de filas y de motivos
+de la tabla; **la restauracion de los dos sellados verificada por `git hash-object` a los dos lados**; **la
+traza del marcador EXITCODE commit por commit sobre los cuatro ficheros**; **la ciega entera con censo,
+tres reglas y union-find propios**; y **la sonda de las cuatro forasteras contra todo `docs/`**.
+
+**Caidas del ejecutor en esta tanda: CERO de clase, CERO de cifra publicada, DOS de reporte (4.1 y 4.3,
+las dos ACUMULAN), UNA de incumplimiento de encargo (4.2) y UNA de procedimiento (4.4). Caidas del
+auditor: UNA de encargo (4.5). Guardas que no alcanzan: CERO. Discrepancias abiertas: CERO** (la de 106
+contra 108 queda adjudicada en 3.1, no abierta).
+
+**Acumulado:** **858 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase del
+ejecutor** (sin cambio), **77 de reporte del ejecutor** (75 mas las dos de hoy), **20 de cifra publicada
+del ejecutor** (sin cambio), **20 de expediente** (sin cambio), **16 de incumplimiento de encargo** (15 mas
+la de hoy), **3 de procedimiento del ejecutor** (2 mas la de hoy), **2 de guarda envejecida** (sin cambio),
+**18 de guarda que no alcanza o cegada** (sin cambio), **11 de cifra del auditor** (sin cambio), **19 de
+acta del auditor** (sin cambio), **31 de procedimiento del auditor** (sin cambio), **1 de reporte del
+auditor** (sin cambio), **30 de encargo del auditor** (29 mas la de hoy), **2 de clase del auditor** (sin
+cambio), y **4 vueltas no entregadas enteras** (sin cambio: 81, 114, 127, 129).
+
+**RACHAS, CON LA ARITMETICA Y LA ADJUDICACION DELANTE:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO.** Ninguna cifra equivocada entro en `docs/plan/`
+> ni en el banco: las remedi todas con codigo propio, `OPERACIONES.jsonl` cambio un token y el dataset no
+> se movio un byte. El 108 de la tabla es correcto; lo torcido es su atribucion, y es caida mia.
+>
+> **REPORTE: PASA DE CERO A UNO, Y AQUI VA POR QUE, PORQUE ES ADJUDICACION Y NO ARITMETICA.** Las dos
+> caidas de hoy (4.1 y 4.3) viven en la seccion **DISCUTIBLES MARCADOS**. La letra del fundador del 27 ago
+> 2026 hace acumular lo que vive en **tabla, cabecera o conclusion**, y no acumular lo que vive en lista de
+> rutas o prosa de acompanamiento. **Adjudico que un DISCUTIBLE no es prosa de acompanamiento: es la carga
+> util del reporte hacia el auditor, y la frase que cierra una caida declarada con su contencion es una
+> CONCLUSION por extension natural**, porque es exactamente la frase sobre la que el auditor decide dejar
+> de mirar. Las dos de hoy lo prueban: la una me habria hecho dar por forastero un titulo que la campana
+> tenia escrito en cuatro ficheros. **Dejo la lectura contraria dicha para que el fundador la tumbe con una
+> linea si quiere: si "conclusion" se lee estricto como el cierre del reporte, la racha vuelve a CERO.**
+> **Y la racha cuenta VUELTAS, no caidas** (asi la llevo el acta 130 y asi habla la letra hermana, "dos
+> tandas seguidas"): **dos caidas en UNA vuelta son UNO en la racha.**
+>
+> **LA ESCALADA de `AUDITOR.md` 1.2 SE DISPARA EN DOS Y ESTAMOS EN UNO: NO TOCA TODAVIA, Y ESTA A UNA
+> VUELTA.** La dejo dicha entera y con el aviso del acta 88 delante: **si la 132 trae otra caida de reporte
+> que acumule, la operacion de codigo de la escalada se encarga EN EL MISMO ACTA, sin esperar decision
+> nueva del fundador, y declararla sin encargarla seria caida propia mia.** Lo escribo aqui para que el
+> auditor de la 132 no tenga que descubrirlo.
+>
+> **EL CREDITO DE LA TANDA: EL TRAMO SE RELEE AL DOBLE POR DUODECIMA VUELTA**, disparado por 4.1 y 4.3.
+> Siguen los ramales (i) a (iv) de la 120, el (v) de la 123, el (vi) de la 124, el (vii) de la 125, el
+> (viii) y el (ix) de la 126, el (x) de la 127, el (xi) de la 128, el (xii) de la 129 y el (xiii) de la
+> 130. **Le anado el (xiv) de mi 4.5**, y le anado un segundo que sale de 4.1 y de 4.3 juntas:
+> **(xv) UNA FRASE DE CONTENCION ES UNA MEDICION, NO UN ALIVIO. "Solo vive aqui", "ningun fichero lo usa",
+> "se movio alla": las tres son afirmaciones sobre el estado del repositorio y las tres se pegan con la
+> salida del comando que las midio, o no se escriben. Son las mas peligrosas del reporte porque su unico
+> oficio es convencer al auditor de que no mire.**
+
+## 6. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** 3.1 es la igualdad de las otras dos reglas sobre la forma recortada; 3.2 se apoya en "la lista canonica es lo que `OP-S-11` produce"; 3.3 usa el criterio del forastero del acta 128 (3.3) y solo lo estrecha con una medicion |
+| contradiccion con una regla vigente o cifra publicada | **NO.** Las dos caidas de hoy son de reporte y no mueven dato; el 106 contra 108 queda adjudicado, no abierto |
+| decision de fundador reservada | **NO.** Cero borrados, alcance intacto, nada fuera de `pasada-unica`, cero gasto fuera del repo |
+| fallo tecnico repetido | **NO.** Gate 0, motor, web y tsc verdes en apertura, en cierre y hoy en mi remedicion; cero rojos no buscados |
+| credito de tanda roto (clase o cifra) | **NO. SIGUE EN CERO** |
+| credito de tanda roto (reporte) | **NO. EN UNO de tres.** Registrado, tramo al doble, escalada a una vuelta |
+| campana consumada | **NO.** Sesenta y dos operaciones en `LISTA` hoy, medido |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO SE DISPARA HOY, y sigue a UNA operacion.** `OP-S-10` quedo HECHA (62/9, remedido). `OP-S-11` sigue LISTA con su segunda mitad viva: 3.1, 3.2 y 3.3 le dan trabajo mecanico nuevo y los colapsos que faltan siguen pidiendo decision. `OP-S-12` va al final por la atadura 2. **Aviso por octava vuelta: sigue encima** |
+
+**EL BUCLE SIGUE.** Escribo el encargo de la vuelta 132 en `docs/loop/PROMPT_SIGUIENTE.md`. **No escribo
+`PARA_ALEXIS.md`.** El numero **131 queda gastado por esta acta**.

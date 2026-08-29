@@ -1,0 +1,79 @@
+CENSO: 3184 nodos vivos, 3184 con fuente, 129 grafias distintas
+GRUPOS: R1 sola 111 | +R2 titulo 108 (gana 3) | +R3 localizador 106 (gana 2)
+TOTAL GRUPOS 106 | de 2+ miembros 15 (38 grafias) | SIN AGRUPAR 91
+COLAPSOS: 23 logrados; para la meta de 55 faltan 51
+
+--- LOS GRUPOS DE 2+ MIEMBROS, CON MI CANONICA ---
+  [ 177n] canonica="The Startup Owner's Manual - Blank, Steve"
+            6  "The Startup Owner's Manual"
+           38  "The Startup Owner's Manual - Blank, Steve"
+          133  "The Startup Owner's Manual - Steve Blank"
+  [ 133n] canonica='Venture Deals - Brad Feld'
+           70  'Venture Deals'
+           63  'Venture Deals - Brad Feld'
+  [ 117n] canonica="The Founder's Dilemmas - Wasserman, Noam"
+          115  "The Founder's Dilemmas"
+            2  "The Founder's Dilemmas - Wasserman, Noam"
+  [ 102n] canonica='The Field Guide to Understandin - Dekker, Sidney'
+           26  'The Field Guide to Understandin - Dekker, Sidney'
+           76  'The Field Guide to Understandin - Dekker, Sidney;'
+  [  95n] canonica='Essentials of Supply Chain Management - Michael H. Hugos'
+           13  'Essentials of Supply Chain Mana - Michael H. Hugos'
+           82  'Essentials of Supply Chain Management - Michael H. Hugos'
+  [  85n] canonica='The Hard Thing About Hard Things - Ben Horowitz'
+           48  'The Hard Thing About Hard Thing - Ben Horowitz'
+           15  'The Hard Thing About Hard Things'
+           22  'The Hard Thing About Hard Things - Ben Horowitz'
+  [  76n] canonica='Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe'
+           51  'Financial Intelligence for Entrepreneurs'
+           25  'Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe'
+  [  73n] canonica='Change by Design, Revised and U - Tim Brown'
+           30  'Change by Design'
+            5  'Change by Design - Tim Brown'
+           38  'Change by Design, Revised and U - Tim Brown'
+  [  61n] canonica="A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+           53  "A Project Manager's Book of Forms"
+            8  "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  [  48n] canonica='Business Model Generation - Osterwalder, Alexander'
+           34  'Business Model Generation (Osterwalder)'
+            8  'Business Model Generation - Osterwalder'
+            6  'Business Model Generation - Osterwalder, Alexander'
+  [  19n] canonica='Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)'
+           17  'Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)'
+            1  'Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014), Anexo de aviso de no participación'
+            1  'Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014), Capitulo 8: Negociaciones'
+  [  14n] canonica='Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management'
+           10  'Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management'
+            1  'Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management, capitulo 25'
+            3  'Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management, capitulo 3'
+  [   9n] canonica='Guia de empaque para envios (FedEx)'
+            8  'Guia de empaque para envios (FedEx)'
+            1  'Guia de empaque para envios (FedEx), seccion Packaging Flowers and Plants'
+  [   5n] canonica='Max Muller, Essentials of Inventory Management'
+            3  'Max Muller, Essentials of Inventory Management'
+            1  'Max Muller, Essentials of Inventory Management, capitulo 1'
+            1  'Max Muller, Essentials of Inventory Management, capitulos 1 y 2'
+  [   3n] canonica='Diana L. Lindstrom, Procurement Project Management Success, capitulo 3 y Apendice C'
+            1  'Diana L. Lindstrom, Procurement Project Management Success, capitulo 11'
+            1  'Diana L. Lindstrom, Procurement Project Management Success, capitulo 3 y Apendice C'
+            1  'Diana L. Lindstrom, Procurement Project Management Success, capitulo 6'
+
+--- DETECTOR DE TRUNCAMIENTO SOBRE EL RESIDUO ---
+grafias sin agrupar con len(titulo)==31: 5
+   459  resto='Joseph A. Defeo'                   contraparte_en_censo=[]  "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+   209  resto='Daniel C. Esty'                    contraparte_en_censo=[]  'The Green to Gold Business Play - Daniel C. Esty'
+    90  resto='Reason, J. T_'                     contraparte_en_censo=[]  'Managing the Risks of Organizat - Reason, J. T_'
+    39  resto='Ethan Mollick'                     contraparte_en_censo=[]  'Co-Intelligence_ Living and Wor - Ethan Mollick'
+     1  resto=''                                  contraparte_en_censo=[]  'Guia de empaque para transporte'
+
+--- toda grafia del censo con len(titulo)==31 (agrupada o no) ---
+   459  solo=True  resto='Joseph A. Defeo'                    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+   209  solo=True  resto='Daniel C. Esty'                     'The Green to Gold Business Play - Daniel C. Esty'
+    90  solo=True  resto='Reason, J. T_'                      'Managing the Risks of Organizat - Reason, J. T_'
+    76  solo=False  resto='Dekker, Sidney;'                    'The Field Guide to Understandin - Dekker, Sidney;'
+    48  solo=False  resto='Ben Horowitz'                       'The Hard Thing About Hard Thing - Ben Horowitz'
+    39  solo=True  resto='Ethan Mollick'                      'Co-Intelligence_ Living and Wor - Ethan Mollick'
+    38  solo=False  resto='Tim Brown'                          'Change by Design, Revised and U - Tim Brown'
+    26  solo=False  resto='Dekker, Sidney'                     'The Field Guide to Understandin - Dekker, Sidney'
+    13  solo=False  resto='Michael H. Hugos'                   'Essentials of Supply Chain Mana - Michael H. Hugos'
+     1  solo=True  resto=''                                   'Guia de empaque para transporte'
