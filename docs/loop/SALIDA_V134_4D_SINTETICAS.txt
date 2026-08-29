@@ -1,0 +1,28 @@
+1. grafia: 'Edwards et al., Managing Project Risks, Cap. 12; Hubbard, The Failure of Risk Management, Cap. 13; DeMarco y Lister, Waltzing with Bears'
+   canonica que produciria: 'Edwards et al., Managing Project Risks'
+   LEGIBLE: titulo de libro legible
+
+2. grafia: 'DeMarco y Lister, Waltzing with Bears, Cap. 14 y 20-21 (Risk Reserve)'
+   canonica que produciria: 'DeMarco y Lister, Waltzing with Bears'
+   LEGIBLE: titulo de libro legible
+
+3. grafia: 'Hubbard, The Failure of Risk Management, Cap. 3, 11 y 12 (Measuring and Improving Risk Management)'
+   canonica que produciria: 'Hubbard, The Failure of Risk Management'
+   LEGIBLE: titulo de libro legible
+
+4. grafia: 'Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)'
+   canonica que produciria: 'Sharon Cullinane, E-Logistics'
+   LEGIBLE: titulo de libro legible
+
+5. grafia: 'Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)'
+   canonica que produciria: 'Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears'
+   NO LEGIBLE: parentesis desbalanceado (1 '(' contra 0 ')')
+
+QUINTA, LAS DOS PREGUNTAS MEDIDAS (no supuestas):
+  (1) canonica si la cola la cortase: 'Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears'
+  (2) acentos en el dato, medido en `C:\Users\AlexDesk\Documents\I have an idea\dataset\nodos\el_riesgo_eres_tu.json` (bytes crudos y texto decodificado con utf-8 explicito, no por como se ve en una consola):
+      bytes crudos traen la codificacion UTF-8 de U+FFFD: False
+      texto decodificado trae el codepoint U+FFFD: False
+      CONCLUSION: los acentos estan BIEN en el dato; el '?' visto en consola sin reconfigurar a utf-8 era un artefacto de terminal, no del dato
+
+EXITCODE: 0
