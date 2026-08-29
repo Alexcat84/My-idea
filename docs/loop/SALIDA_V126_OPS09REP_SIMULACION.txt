@@ -1,0 +1,15 @@
+==============================================================================
+REPOSICION DE ARISTA UNICA, OP-S-09 (vuelta 126) . MODO SIMULAR
+arista: dia_cero_defectos_2 -> eliminacion_causas_error_4
+==============================================================================
+guarda 1, los dos nodos existen y siguen VIVOS: OK
+guarda 2, la arista NO estaba puesta todavia: OK
+guarda 3, cero auto-aristas nuevas: OK
+guarda 4, cero duplicadas nuevas (nodos_siguientes de dia_cero_defectos_2, nodos_previos de eliminacion_causas_error_4): OK
+guarda 5, ningun otro campo cambia: OK
+
+dia_cero_defectos_2.nodos_siguientes: ['entrenamiento_supervisores', 'fijacion_de_metas', 'eliminacion_causas_error_4']
+eliminacion_causas_error_4.nodos_previos   : ['cero_defectos', 'accion_correctiva', 'zero_defects_concepto', 'accion_correctiva_crosby', 'analisis_datos_atributos', 'dia_cero_defectos', 'fijacion_de_metas', 'accion_correctiva_sistematica', 'entrenamiento_supervisores_calidad', 'make_certain_programa', 'programa_mejora_calidad_14_pasos', 'dia_cero_defectos_2']
+
+SIMULACION: cero escrituras.
+EXIT: 0

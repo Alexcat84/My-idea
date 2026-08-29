@@ -1,0 +1,17 @@
+==============================================================================
+REPOSICION DE ARISTA UNICA, OP-S-09 (vuelta 126) . MODO EJECUTAR
+arista: dia_cero_defectos_2 -> eliminacion_causas_error_4
+==============================================================================
+guarda 1, los dos nodos existen y siguen VIVOS: OK
+guarda 2, la arista NO estaba puesta todavia: ROJO
+
+SE ABORTA SIN ESCRIBIR, 1 fallo(s):
+  [ROJO] la arista dia_cero_defectos_2 -> eliminacion_causas_error_4 YA esta puesta (nodos_siguientes=True, nodos_previos=True): no hay nada que reponer
+EXIT: 1
+--- git status --porcelain ---
+ M dataset/nodos/dia_cero_defectos_2.json
+ M dataset/nodos/eliminacion_causas_error_4.json
+?? docs/loop/SALIDA_V126_OPS09REP_MUTACION_NEGATIVA.txt
+?? docs/loop/SALIDA_V126_OPS09REP_ROJO_SEGUNDA_PASADA.txt
+?? docs/loop/SALIDA_V126_OPS09REP_SIMULACION.txt
+?? scripts/loop/vuelta126_reponer_arista_ops09.py
