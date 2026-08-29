@@ -627,9 +627,8 @@
       ],
       "nodos_siguientes": [
         "zero_defects_concepto",
-        "eliminacion_causas_error",
-        "eliminacion_causas_error_3",
-        "eliminacion_causas_error_4"
+        "eliminacion_causas_error_4",
+        "eliminacion_causas_error_3"
       ],
       "condiciones_activacion": [
         "Cuando se detectan problemas recurrentes sin solución clara",
@@ -699,7 +698,7 @@
         "auditoria_calidad_proveedores",
         "cero_defectos",
         "consejo_de_calidad",
-        "eliminacion_causas_error"
+        "eliminacion_causas_error_4"
       ],
       "condiciones_activacion": [
         "Cuando se detectan defectos que se repiten y no se resuelven de forma definitiva",
@@ -5229,7 +5228,7 @@
       "nodos_previos": [
         "scorecard_de_seleccion_de_proyectos",
         "actualizar_modelo_de_negocio_pivot_o_proceed",
-        "estrategia_de_innovacion_de_producto",
+        "estrategia_innovacion_producto",
         "seleccion_arenas_estrategicas"
       ],
       "nodos_siguientes": [
@@ -6844,7 +6843,8 @@
       "nodos_previos": [
         "planificacion_de_la_inspeccion",
         "diferencia_planeacion_mejora",
-        "auditoria_de_proceso"
+        "auditoria_de_proceso",
+        "seguimiento_accion_correctiva"
       ],
       "nodos_siguientes": [
         "mejora_continua_del_proceso",
@@ -6858,7 +6858,17 @@
         "Cuando necesitas confirmar que tu inspeccion habitual esta funcionando",
         "Cuando tu producto es delicado y quieres una segunda capa de control"
       ],
-      "etiqueta_arbol": "Compara tu Producto contra la Realidad"
+      "etiqueta_arbol": "Compara tu Producto contra la Realidad",
+      "ids_alias": [
+        "auditoria_producto"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "auditoria_producto",
+          "titulo": "Auditoría de Producto (Aptitud de Uso y Conformidad)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "auditoria_de_producto_2": {
       "node_id": "auditoria_de_producto_2",
@@ -7023,7 +7033,8 @@
       "condiciones_activacion": [
         "Cuando se necesita validar la calidad real entregada al cliente más allá de la inspección rutinaria"
       ],
-      "etiqueta_arbol": "Verifica que tu Producto Sirva"
+      "etiqueta_arbol": "Verifica que tu Producto Sirva",
+      "deprecado": true
     },
     "auditoria_responsabilidad": {
       "node_id": "auditoria_responsabilidad",
@@ -10716,7 +10727,7 @@
       ],
       "entregable_esperado": "Un mapa de proceso de innovación con checklist de completitud, controles de calidad por etapa y métricas de cumplimiento.",
       "nodos_previos": [
-        "estrategia_de_innovacion_de_producto",
+        "estrategia_innovacion_producto",
         "cultura_de_optimismo",
         "stage_gate_system",
         "storytelling_como_herramienta_diseno"
@@ -13049,10 +13060,9 @@
         "perfeccionismo_vs_valor"
       ],
       "nodos_siguientes": [
-        "eliminacion_causas_error",
+        "eliminacion_causas_error_4",
         "accion_correctiva",
         "accion_correctiva_sistematica",
-        "eliminacion_causas_error_4",
         "programa_make_certain_3",
         "medicion_calidad",
         "concepto_reconocimiento_ring_of_quality",
@@ -18817,7 +18827,7 @@
         "accion_correctiva_4",
         "accion_correctiva_3",
         "accion_correctiva_sistematica",
-        "dia_cero_defectos_3",
+        "dia_cero_defectos_2",
         "entrenamiento_supervisores_calidad",
         "rework_por_el_causante"
       ],
@@ -19872,7 +19882,7 @@
       "entregable_esperado": "Consejo de calidad establecido con reuniones periódicas y mecanismo de repetición del ciclo de mejora",
       "nodos_previos": [
         "programa_mejora_calidad_14_pasos",
-        "eliminacion_causas_error",
+        "eliminacion_causas_error_4",
         "reconocimiento_al_desempeno"
       ],
       "nodos_siguientes": [
@@ -34918,20 +34928,34 @@
         "Realizar el evento con tu participación y la de invitados relevantes para tu contexto, con actividades para todos los que forman parte del negocio",
         "Explicar el concepto y firmar el compromiso junto con cada persona que te ayuda, uno a uno",
         "Distribuir materiales visuales (pines, botones) de forma voluntaria",
-        "Iniciar al día siguiente el programa de eliminación de causas de error"
+        "Iniciar al día siguiente el programa de eliminación de causas de error",
+        "Reconocer públicamente al equipo organizador y a los participantes destacados."
       ],
       "entregable_esperado": "Evento Cero Defectos realizado con compromisos firmados por ti y por quienes te ayudan, y transición inmediata al programa de eliminación de causas de error",
       "nodos_previos": [
-        "planificacion_cero_defectos"
+        "planificacion_cero_defectos",
+        "conciencia_calidad",
+        "entrenamiento_supervisores_calidad"
       ],
       "nodos_siguientes": [
-        "entrenamiento_supervisores"
+        "entrenamiento_supervisores",
+        "fijacion_de_metas"
       ],
       "condiciones_activacion": [
         "Cuando la planificación de Cero Defectos está completa y quieres lanzar el compromiso formalmente",
         "Si buscas instalar un estándar de trabajo de largo plazo en lugar de una campaña motivacional temporal"
       ],
-      "etiqueta_arbol": "Comprométete con Cero Defectos"
+      "etiqueta_arbol": "Comprométete con Cero Defectos",
+      "ids_alias": [
+        "dia_cero_defectos_3"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "dia_cero_defectos_3",
+          "titulo": "Día de Cero Defectos (Evento Simbólico ZD)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        }
+      ]
     },
     "dia_cero_defectos_3": {
       "node_id": "dia_cero_defectos_3",
@@ -34961,7 +34985,8 @@
         "Cuando la organización ha completado la fase de preparación (conciencia y entrenamiento) y necesita un lanzamiento formal y visible del programa de calidad.",
         "Si se requiere generar un cambio cultural perceptible y compartido en toda la plantilla."
       ],
-      "etiqueta_arbol": "Vive el Día de Cero Defectos"
+      "etiqueta_arbol": "Vive el Día de Cero Defectos",
+      "deprecado": true
     },
     "dia_en_la_vida_del_cliente": {
       "fase_proyecto": "validacion",
@@ -42088,7 +42113,8 @@
       "condiciones_activacion": [
         "Cuando los empleados identifican obstáculos recurrentes para el trabajo sin errores"
       ],
-      "etiqueta_arbol": "Reporta tus Obstáculos de Calidad"
+      "etiqueta_arbol": "Reporta tus Obstáculos de Calidad",
+      "deprecado": true
     },
     "eliminacion_causas_error_2": {
       "node_id": "eliminacion_causas_error_2",
@@ -42171,12 +42197,17 @@
         "accion_correctiva_crosby",
         "analisis_datos_atributos",
         "dia_cero_defectos",
-        "fijacion_de_metas"
+        "fijacion_de_metas",
+        "accion_correctiva_sistematica",
+        "entrenamiento_supervisores_calidad",
+        "make_certain_programa",
+        "programa_mejora_calidad_14_pasos"
       ],
       "nodos_siguientes": [
         "consejo_de_calidad",
         "reconocimiento_al_desempeno",
-        "consejos_de_calidad"
+        "consejos_de_calidad",
+        "consejo_de_calidad_3"
       ],
       "condiciones_activacion": [
         "Cuando quienes te ayudan entienden que la mejora es necesaria y ya tienes clara la meta de cero errores",
@@ -42187,7 +42218,8 @@
       "ids_alias": [
         "eliminacion_causas_error_3",
         "programa_ecr_causa_de_error",
-        "eliminacion_causas_error_2"
+        "eliminacion_causas_error_2",
+        "eliminacion_causas_error"
       ],
       "merged_originals": [
         {
@@ -42203,6 +42235,11 @@
         {
           "node_id": "eliminacion_causas_error_2",
           "titulo": "Eliminación de Causas de Error - ECR (Paso 11)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        },
+        {
+          "node_id": "eliminacion_causas_error",
+          "titulo": "Eliminación de Causas de Error (Paso 11)",
           "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
         }
       ]
@@ -45007,8 +45044,8 @@
       ],
       "nodos_siguientes": [
         "dia_cero_defectos",
-        "eliminacion_causas_error",
-        "dia_cero_defectos_3",
+        "eliminacion_causas_error_4",
+        "dia_cero_defectos_2",
         "identificacion_empleado_con_el_trabajo"
       ],
       "condiciones_activacion": [
@@ -48576,7 +48613,8 @@
         "Al iniciar el proceso de planificación de innovación de una unidad de negocio",
         "Cuando la empresa carece de dirección clara para decidir en qué proyectos invertir"
       ],
-      "etiqueta_arbol": "Define tu Estrategia de Innovación"
+      "etiqueta_arbol": "Define tu Estrategia de Innovación",
+      "deprecado": true
     },
     "estrategia_de_innovacion_producto": {
       "node_id": "estrategia_de_innovacion_producto",
@@ -48622,7 +48660,7 @@
       "entregable_esperado": "Documento de estrategia de innovación con arenas estratégicas claramente definidas y priorizadas",
       "nodos_previos": [
         "producto_unico_superior",
-        "estrategia_de_innovacion_de_producto"
+        "estrategia_innovacion_producto"
       ],
       "nodos_siguientes": [
         "sistema_captura_ideas",
@@ -48913,7 +48951,8 @@
         "Establecer el rol que jugarán los nuevos productos en el logro de las metas generales del negocio",
         "Identificar y priorizar las arenas estratégicas (mercados, tecnologías, categorías de producto) en las que se enfocará el esfuerzo de I+D",
         "Decidir la asignación de recursos (personas, presupuesto de I+D, marketing) entre las arenas seleccionadas",
-        "Definir los planes de ataque para ganar en cada arena (ser innovador, seguidor rápido, proveedor de bajo costo)"
+        "Definir los planes de ataque para ganar en cada arena (ser innovador, seguidor rápido, proveedor de bajo costo)",
+        "Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso"
       ],
       "entregable_esperado": "Un documento de estrategia de innovación de producto que contenga metas medibles, arenas estratégicas priorizadas, asignación de recursos y planes de ataque claros.",
       "nodos_previos": [
@@ -48924,7 +48963,8 @@
         "definicion_tipos_nuevo_producto",
         "mrg_event",
         "patent_mapping",
-        "plan_mejora_procesos"
+        "plan_mejora_procesos",
+        "producto_unico_superior"
       ],
       "nodos_siguientes": [
         "arenas_estrategicas",
@@ -48933,14 +48973,30 @@
         "metodo_strategic_buckets",
         "innovacion_abierta",
         "tecnologia_como_medio_no_fin",
-        "seleccion_arenas_estrategicas"
+        "seleccion_arenas_estrategicas",
+        "apalancamiento_de_competencias_centrales",
+        "calidad_de_ejecucion_proceso_innovacion",
+        "estrategia_de_innovacion_y_tecnologia",
+        "gestion_de_portafolio_gates_go_kill",
+        "hipotesis_de_tamano_de_mercado",
+        "producto_minimo_viable"
       ],
       "condiciones_activacion": [
         "Cuando el negocio tiene un sistema Stage-Gate pero carece de dirección estratégica general",
         "Cuando los proyectos de nuevos productos se seleccionan sin criterio de alineación estratégica",
         "Cuando la empresa atraviesa una crisis y necesita reorientar su innovación"
       ],
-      "etiqueta_arbol": "Define tu Estrategia de Producto"
+      "etiqueta_arbol": "Define tu Estrategia de Producto",
+      "ids_alias": [
+        "estrategia_de_innovacion_de_producto"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "estrategia_de_innovacion_de_producto",
+          "titulo": "Estrategia de Innovación de Producto y Tecnología",
+          "fuente": "Winning at New Products - Robert G. Cooper"
+        }
+      ]
     },
     "estrategia_marca_segun_tamano": {
       "node_id": "estrategia_marca_segun_tamano",
@@ -55715,10 +55771,9 @@
       "entregable_esperado": "Lista de metas de mejora específicas, medibles y publicadas por cada equipo o área de trabajo.",
       "nodos_previos": [
         "dia_cero_defectos",
-        "dia_cero_defectos_3"
+        "dia_cero_defectos_2"
       ],
       "nodos_siguientes": [
-        "eliminacion_causas_error",
         "eliminacion_causas_error_4",
         "reconocimiento_al_desempeno",
         "brainstorming"
@@ -60016,7 +60071,7 @@
       ],
       "entregable_esperado": "Un sistema de portafolio con gates definidos, criterios de evaluación documentados y decisiones explícitas de continuidad o cancelación de proyectos",
       "nodos_previos": [
-        "estrategia_de_innovacion_de_producto",
+        "estrategia_innovacion_producto",
         "apalancamiento_de_competencias_centrales"
       ],
       "nodos_siguientes": [],
@@ -63789,7 +63844,7 @@
       ],
       "node_id": "hipotesis_de_tamano_de_mercado",
       "nodos_previos": [
-        "estrategia_de_innovacion_de_producto",
+        "estrategia_innovacion_producto",
         "customer_discovery_overview"
       ],
       "nodos_siguientes": [
@@ -72885,7 +72940,7 @@
         "programa_mejora_calidad_14_pasos"
       ],
       "nodos_siguientes": [
-        "eliminacion_causas_error"
+        "eliminacion_causas_error_4"
       ],
       "condiciones_activacion": [
         "Cuando la organización desea extender la cultura de calidad a áreas administrativas y de servicio",
@@ -92846,7 +92901,7 @@
         "leap_of_faith_assumptions",
         "arquetipos_de_cliente",
         "earlyvangelists",
-        "estrategia_de_innovacion_de_producto",
+        "estrategia_innovacion_producto",
         "hipotesis_propuesta_de_valor_producto",
         "problem_solution_fit",
         "earlyvangelists_identificacion",
@@ -92940,7 +92995,7 @@
         "voice_of_customer_homework",
         "fit_value_proposition",
         "cliente_disena_producto",
-        "estrategia_de_innovacion_de_producto",
+        "estrategia_innovacion_producto",
         "estrategia_de_innovacion_y_tecnologia",
         "desarrollo_en_espiral",
         "lanzamiento_nuevos_productos_enfoque_problema",
@@ -93586,7 +93641,7 @@
       "nodos_siguientes": [
         "cero_defectos",
         "consejo_de_calidad",
-        "eliminacion_causas_error",
+        "eliminacion_causas_error_4",
         "accion_correctiva_sistematica",
         "consejo_de_calidad_3",
         "accion_correctiva",
@@ -97552,7 +97607,6 @@
         "fijacion_de_metas",
         "programa_ecr_causa_de_error",
         "eliminacion_causas_error_4",
-        "eliminacion_causas_error",
         "seminario_de_exito_para_gerencia"
       ],
       "nodos_siguientes": [
@@ -105956,7 +106010,7 @@
         "auditoria_de_proceso"
       ],
       "nodos_siguientes": [
-        "auditoria_producto"
+        "auditoria_de_producto"
       ],
       "condiciones_activacion": [
         "Cuando emitiste un reporte de auditoría con hallazgos pendientes de corrección"
@@ -120641,10 +120695,9 @@
       ],
       "nodos_siguientes": [
         "programa_catorce_pasos_crosby",
-        "eliminacion_causas_error",
+        "eliminacion_causas_error_4",
         "eliminacion_causas_error_3",
         "make_certain_programa",
-        "eliminacion_causas_error_4",
         "programa_mejora_calidad_14_pasos"
       ],
       "condiciones_activacion": [
@@ -128396,7 +128449,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 268,
+    "nodos_sin_enlaces_entrantes": 270,
     "enlaces_rotos_en_grafo": 0
   }
 }

@@ -1,0 +1,13 @@
+auditoria_de_producto | deprecado=False | salientes=4 entrantes=3 total=7
+   salientes: ['bucle_retroalimentacion_control', 'clasificacion_de_seriedad_de_defectos', 'medicion_de_calidad_en_manufactura', 'mejora_continua_del_proceso']
+   entrantes: ['auditoria_de_proceso', 'diferencia_planeacion_mejora', 'planificacion_de_la_inspeccion']
+auditoria_producto | deprecado=False | salientes=0 entrantes=1 total=1
+   salientes: []
+   entrantes: ['seguimiento_accion_correctiva']
+estrategia_innovacion_producto | deprecado=False | salientes=6 entrantes=8 total=14
+   salientes: ['innovacion_abierta', 'metas_objetivos_smart_innovacion', 'metodo_strategic_buckets', 'portfolio_management', 'seleccion_arenas_estrategicas', 'tecnologia_como_medio_no_fin']
+   entrantes: ['aceleracion_de_gates', 'benchmark_inversion_rd_industria', 'definicion_tipos_nuevo_producto', 'diamante_de_innovacion', 'mrg_event', 'patent_mapping', 'plan_mejora_procesos', 'stage_gate_system']
+estrategia_de_innovacion_de_producto | deprecado=False | salientes=6 entrantes=1 total=7
+   salientes: ['apalancamiento_de_competencias_centrales', 'calidad_de_ejecucion_proceso_innovacion', 'estrategia_de_innovacion_y_tecnologia', 'gestion_de_portafolio_gates_go_kill', 'hipotesis_de_tamano_de_mercado', 'producto_minimo_viable']
+   entrantes: ['producto_unico_superior']
+EXITCODE: 0

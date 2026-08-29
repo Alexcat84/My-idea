@@ -1,0 +1,112 @@
+{
+ "operacion": "OP-S-09",
+ "rotulo": "RENOMBRE_CON_ALIAS, racimo de 28 familias, cuatro pares REPITE (vuelta 125)",
+ "fecha": "2026-08-28",
+ "estado": "SELLADO",
+ "vuelta": 125,
+ "tramo": "NO ES UN TRAMO: son los cuatro pares REPITE del racimo de OP-S-09",
+ "actos": [
+  {
+   "orden": 1,
+   "miembros": [
+    "auditoria_de_producto",
+    "auditoria_producto"
+   ],
+   "superviviente": "auditoria_de_producto",
+   "absorbidos": [
+    "auditoria_producto"
+   ],
+   "pasos": {
+    "auditoria_producto": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:5",
+     "4": "CUBIERTO:3"
+    }
+   },
+   "condiciones": {
+    "auditoria_producto": {
+     "1": "CUBIERTO:2"
+    }
+   }
+  },
+  {
+   "orden": 2,
+   "miembros": [
+    "dia_cero_defectos_2",
+    "dia_cero_defectos_3"
+   ],
+   "superviviente": "dia_cero_defectos_2",
+   "absorbidos": [
+    "dia_cero_defectos_3"
+   ],
+   "pasos": {
+    "dia_cero_defectos_3": {
+     "1": "CUBIERTO:3",
+     "2": "CUBIERTO:3",
+     "3": "CUBIERTO:4",
+     "4": "CUBIERTO:6",
+     "5": "APPEND"
+    }
+   },
+   "condiciones": {
+    "dia_cero_defectos_3": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2"
+    }
+   }
+  },
+  {
+   "orden": 3,
+   "miembros": [
+    "eliminacion_causas_error_4",
+    "eliminacion_causas_error"
+   ],
+   "superviviente": "eliminacion_causas_error_4",
+   "absorbidos": [
+    "eliminacion_causas_error"
+   ],
+   "pasos": {
+    "eliminacion_causas_error": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:3",
+     "3": "CUBIERTO:2",
+     "4": "CUBIERTO:6"
+    }
+   },
+   "condiciones": {
+    "eliminacion_causas_error": {
+     "1": "CUBIERTO:2"
+    }
+   }
+  },
+  {
+   "orden": 4,
+   "miembros": [
+    "estrategia_innovacion_producto",
+    "estrategia_de_innovacion_de_producto"
+   ],
+   "superviviente": "estrategia_innovacion_producto",
+   "absorbidos": [
+    "estrategia_de_innovacion_de_producto"
+   ],
+   "pasos": {
+    "estrategia_de_innovacion_de_producto": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:3",
+     "4": "CUBIERTO:4",
+     "5": "CUBIERTO:5",
+     "6": "APPEND"
+    }
+   },
+   "condiciones": {
+    "estrategia_de_innovacion_de_producto": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2"
+    }
+   }
+  }
+ ],
+ "declarados_y_no_fundidos": []
+}

@@ -1,0 +1,160 @@
+==============================================================================
+OP-S-09 . RENOMBRE_CON_ALIAS, racimo de 28 familias, cuatro pares REPITE (vuelta 125) . MODO SIMULAR
+plan: docs/loop/PLAN_V125_OPS09.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3188 vivos, 665 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive auditoria_de_producto . absorbe auditoria_producto
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 7 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['auditoria_producto']
+
+------------------------------------------------------------------------------
+ACTO 2 . sobrevive dia_cero_defectos_2 . absorbe dia_cero_defectos_3
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 7 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['dia_cero_defectos_3']
+
+------------------------------------------------------------------------------
+ACTO 3 . sobrevive eliminacion_causas_error_4 . absorbe eliminacion_causas_error
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['eliminacion_causas_error_3', 'programa_ecr_causa_de_error', 'eliminacion_causas_error_2', 'eliminacion_causas_error']
+
+------------------------------------------------------------------------------
+ACTO 4 . sobrevive estrategia_innovacion_producto . absorbe estrategia_de_innovacion_de_producto
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['estrategia_de_innovacion_de_producto']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 21
+   accion_correctiva_crosby                             nodos_siguientes  eliminacion_causas_error -> eliminacion_causas_error_4
+   accion_correctiva_sistematica                        nodos_siguientes  eliminacion_causas_error -> eliminacion_causas_error_4
+   apalancamiento_de_competencias_centrales             nodos_previos     estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto
+   calidad_de_ejecucion_proceso_innovacion              nodos_previos     estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto
+   cero_defectos                                        nodos_siguientes  eliminacion_causas_error -> eliminacion_causas_error_4
+   conciencia_calidad                                   nodos_siguientes  dia_cero_defectos_3 -> dia_cero_defectos_2
+   consejo_de_calidad_3                                 nodos_previos     eliminacion_causas_error -> eliminacion_causas_error_4
+   entrenamiento_supervisores_calidad                   nodos_siguientes  dia_cero_defectos_3 -> dia_cero_defectos_2
+   entrenamiento_supervisores_calidad                   nodos_siguientes  eliminacion_causas_error -> eliminacion_causas_error_4
+   estrategia_de_innovacion_y_tecnologia                nodos_previos     estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto
+   fijacion_de_metas                                    nodos_previos     dia_cero_defectos_3 -> dia_cero_defectos_2
+   fijacion_de_metas                                    nodos_siguientes  eliminacion_causas_error -> eliminacion_causas_error_4
+   gestion_de_portafolio_gates_go_kill                  nodos_previos     estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto
+   hipotesis_de_tamano_de_mercado                       nodos_previos     estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto
+   make_certain_programa                                nodos_siguientes  eliminacion_causas_error -> eliminacion_causas_error_4
+   producto_minimo_viable                               nodos_previos     estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto
+   producto_unico_superior                              nodos_siguientes  estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto
+   programa_mejora_calidad_14_pasos                     nodos_siguientes  eliminacion_causas_error -> eliminacion_causas_error_4
+   reconocimiento_al_desempeno                          nodos_previos     eliminacion_causas_error -> eliminacion_causas_error_4
+   seguimiento_accion_correctiva                        nodos_siguientes  auditoria_producto -> auditoria_de_producto
+   zero_defects_concepto                                nodos_siguientes  eliminacion_causas_error -> eliminacion_causas_error_4
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 7
+   accion_correctiva_6                                  nodos_siguientes  eliminacion_causas_error (registro historico)
+   conciencia_de_calidad                                nodos_siguientes  dia_cero_defectos_3 (registro historico)
+   establecimiento_metas                                nodos_siguientes  eliminacion_causas_error (registro historico)
+   programa_catorce_pasos_crosby                        nodos_siguientes  eliminacion_causas_error (registro historico)
+   programa_de_mejora_de_calidad                        nodos_siguientes  eliminacion_causas_error (registro historico)
+   reconocimiento                                       nodos_previos     eliminacion_causas_error (registro historico)
+   reconocimiento_crosby                                nodos_previos     eliminacion_causas_error (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 5
+   accion_correctiva_crosby                             nodos_siguientes
+   cero_defectos                                        nodos_siguientes
+   fijacion_de_metas                                    nodos_siguientes
+   reconocimiento_al_desempeno                          nodos_previos
+   zero_defects_concepto                                nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 876   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 875   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 1, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 20 de 20
+guarda D, los 4 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (25 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 auditoria_producto                           paso         1  ya lo dice el PASO 1 del superviviente
+        Definir el propósito de la auditoría de producto (estimar calidad entregada, evaluar inspección, etc.)
+    1 auditoria_producto                           paso         2  ya lo dice el PASO 2 del superviviente
+        Seleccionar la etapa de evaluación más económica y representativa (fábrica, distribuidor, campo)
+    1 auditoria_producto                           paso         3  ya lo dice el PASO 5 del superviviente
+        Validar que las características auditadas correspondan a lo que realmente importa al cliente (contrastar con estudios de mercado)
+    1 auditoria_producto                           paso         4  ya lo dice el PASO 3 del superviviente
+        Tomar muestras representativas de productos terminados para verificar conformidad y aptitud de uso
+    1 auditoria_producto                           condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando se necesita validar la calidad real entregada al cliente más allá de la inspección rutinaria
+    2 dia_cero_defectos_3                          paso         1  ya lo dice el PASO 3 del superviviente
+        Organizar un evento que reúna a todos los empleados al mismo tiempo, con presencia de líderes significativos para ellos.
+    2 dia_cero_defectos_3                          paso         2  ya lo dice el PASO 3 del superviviente
+        Incluir un componente de 'show business': música, discursos breves, premios, para hacer el evento memorable.
+    2 dia_cero_defectos_3                          paso         3  ya lo dice el PASO 4 del superviviente
+        Permitir que los empleados firmen su compromiso (pledge) con sus supervisores y reciban un pin o distintivo.
+    2 dia_cero_defectos_3                          paso         4  ya lo dice el PASO 6 del superviviente
+        Anunciar el inicio inmediato de la fase de eliminación de causas de error (ECR) al día siguiente del evento.
+    2 dia_cero_defectos_3                          paso         5  PASO 7 del superviviente
+        Reconocer públicamente al equipo organizador y a los participantes destacados.
+    2 dia_cero_defectos_3                          condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la organización ha completado la fase de preparación (conciencia y entrenamiento) y necesita un lanzamiento formal y visible del programa de ca
+    2 dia_cero_defectos_3                          condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si se requiere generar un cambio cultural perceptible y compartido en toda la plantilla.
+    3 eliminacion_causas_error                     paso         1  ya lo dice el PASO 1 del superviviente
+        Crear un formulario simple de una página para reportar obstáculos al trabajo sin errores
+    3 eliminacion_causas_error                     paso         2  ya lo dice el PASO 3 del superviviente
+        Asignar grupos funcionales responsables de resolver cada tipo de problema
+    3 eliminacion_causas_error                     paso         3  ya lo dice el PASO 2 del superviviente
+        Garantizar reconocimiento del reporte dentro de 24 horas
+    3 eliminacion_causas_error                     paso         4  ya lo dice el PASO 6 del superviviente
+        Dar seguimiento y comunicar las soluciones implementadas
+    3 eliminacion_causas_error                     condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando los empleados identifican obstáculos recurrentes para el trabajo sin errores
+    4 estrategia_de_innovacion_de_producto         paso         1  ya lo dice el PASO 1 del superviviente
+        Definir objetivos claros de innovación de producto (% de ventas/ganancias de nuevos productos a 3-5 años)
+    4 estrategia_de_innovacion_de_producto         paso         2  ya lo dice el PASO 2 del superviviente
+        Vincular explícitamente las metas de innovación con las metas generales del negocio
+    4 estrategia_de_innovacion_de_producto         paso         3  ya lo dice el PASO 3 del superviviente
+        Definir arenas estratégicas (mercados, tecnologías, sectores) donde enfocar los esfuerzos de innovación
+    4 estrategia_de_innovacion_de_producto         paso         4  ya lo dice el PASO 4 del superviviente
+        Asignar 'buckets estratégicos' de recursos a diferentes tipos de proyectos o arenas
+    4 estrategia_de_innovacion_de_producto         paso         5  ya lo dice el PASO 5 del superviviente
+        Crear un roadmap de producto que proyecte iniciativas de desarrollo a 3-5 años
+    4 estrategia_de_innovacion_de_producto         paso         6  PASO 6 del superviviente
+        Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+    4 estrategia_de_innovacion_de_producto         condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Al iniciar el proceso de planificación de innovación de una unidad de negocio
+    4 estrategia_de_innovacion_de_producto         condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando la empresa carece de dirección clara para decidir en qué proyectos invertir
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 4
+  nodos implicados    : 8
+  nodos que MUEREN    : 4
+  piezas repartidas   : 25 (2 viajan enteras, 23 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.

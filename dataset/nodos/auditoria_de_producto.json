@@ -18,7 +18,8 @@
   "nodos_previos": [
     "planificacion_de_la_inspeccion",
     "diferencia_planeacion_mejora",
-    "auditoria_de_proceso"
+    "auditoria_de_proceso",
+    "seguimiento_accion_correctiva"
   ],
   "nodos_siguientes": [
     "mejora_continua_del_proceso",
@@ -32,5 +33,15 @@
     "Cuando necesitas confirmar que tu inspeccion habitual esta funcionando",
     "Cuando tu producto es delicado y quieres una segunda capa de control"
   ],
-  "etiqueta_arbol": "Compara tu Producto contra la Realidad"
+  "etiqueta_arbol": "Compara tu Producto contra la Realidad",
+  "ids_alias": [
+    "auditoria_producto"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "auditoria_producto",
+      "titulo": "Auditoría de Producto (Aptitud de Uso y Conformidad)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }
