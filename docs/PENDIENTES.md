@@ -1677,6 +1677,42 @@ dentro; (2) su cifra de 55 libros canonicos es de OTRO CORTE, **3.521
 nodos vivos** (linea 15 de ese fichero), no el corte de hoy de `OP-S-11`.
 **La lista canonica es lo que `OP-S-11` PRODUCE, no lo que consume.**
 
+### DECIMA entrada (vuelta 132, TAREA 2.b): una grafia truncada puede tener su TITULO COMPLETO publicado en la propia campana aunque NO sea reconstruible desde `dataset/`
+
+**Lo que hoy se sabe y no se sabia.** Una grafia truncada a 31 caracteres
+puede tener su continuacion, EL TITULO COMPLETO DEL LIBRO, escrita en algun
+fichero de `docs/` (fuera de `docs/loop/`), aunque esa continuacion NUNCA
+aparezca como grafia propia en `dataset/nodos/` (el campo `fuente` de
+ningun nodo la trae). Eso NO la hace reconstruible desde el dataset: la
+hace reconstruible desde EL REPOSITORIO, que es un conjunto mas amplio. Por
+eso la BOLSA 2 de la vuelta 131 (las cuatro truncadas residuales que
+ninguna de las tres reglas mecanicas agrupa: Juran 459, Green to Gold 209,
+Managing the Risks 90, Co-Intelligence 39) se parte en DOS, medido en la
+vuelta 132 (TAREA 3.c, `scripts/loop/vuelta132_bolsa2_particion.py`,
+`docs/loop/SALIDA_V132_3C_BOLSA2_PARTIDA.txt`):
+
+**BOLSA 2a, reconstruible desde el repo (titulo copiado del fichero, no
+propuesto de memoria):**
+  - `Managing the Risks of Organizat - Reason, J. T_` -> **Managing the
+    Risks of Organizational Accidents**, en `docs/CENSO_DUPLICACION.md:123`,
+    `docs/FICHA_SUBFUSION_GRADIENTE.md:2612`, `docs/PENDIENTES.md:3059`,
+    `docs/plan/03_FUSIONES.md:6522` y `docs/plan/03_FUSIONES.md:7159`.
+  - `The Green to Gold Business Play - Daniel C. Esty` -> **The Green to
+    Gold Business Playbook**, en `docs/CENSO_DUPLICACION.md:126` y
+    `docs/plan/03_FUSIONES.md:8018`.
+
+**BOLSA 2b, forastera pura (cero ficheros del repo con la continuacion; el
+titulo lo propone quien mide, marcado FORASTERO, y solo vive en la salida
+de 3.c y en la columna de la tabla de 3.e, no en ningun otro sitio):**
+  - `Juran's Quality Handbook_ The C - Joseph A. Defeo` (459 nodos).
+  - `Co-Intelligence_ Living and Wor - Ethan Mollick` (39 nodos).
+
+**El detector mecanico de truncamiento vigente**, corregido en la vuelta
+131 (acta 130, discutible del 130) y medido de nuevo hoy: `len(titulo) ==
+31` CON RESTO NO VACIO. La sola longitud fichaba un falso positivo, `Guia
+de empaque para transporte`, titulo completo sin autor, RESTO vacio, que
+no esta truncado: simplemente su titulo real mide 31 caracteres.
+
 ---
 
 ## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
@@ -8181,3 +8217,73 @@ grupos, cortas por la misma razon.
 > **(xiii) UNA REGLA MECANICA SE PRUEBA CONTRA EL CASO QUE LA OPERACION YA
 > DOCUMENTA, ANTES DE MANDARLA. Si la regla no caza el ejemplo que el plan
 > escribio como sintoma, la regla no es mecanica: es decorativa.**
+
+## R.13. Registro de correcciones declaradas de la vuelta 131 (adjudicadas
+por el acta de la vuelta 131; escrito en la vuelta 132, TAREA 2.a)
+
+**(1) LA CAIDA DE REPORTE DEL "NINGUN FICHERO DE LA CAMPANA LOS USA" (acta
+131, 4.1).** El discutible 2 del reporte de la 131 cerraba: "Solo vive en
+esa prosa de commit, ningun fichero de la campana los usa". Falso, medido
+por el auditor con SEIS pares fichero:linea que lo desmienten:
+  - `Managing the Risks of Organizational Accidents`: en
+    `docs/CENSO_DUPLICACION.md:123`, `docs/FICHA_SUBFUSION_GRADIENTE.md:2612`,
+    `docs/PENDIENTES.md:3059` y `docs/plan/03_FUSIONES.md:6522`.
+  - `The Green to Gold Business Playbook`: en
+    `docs/CENSO_DUPLICACION.md:126` y `docs/plan/03_FUSIONES.md:8018`.
+El diagnostico del reporte estaba al reves: los dos titulos ya estaban
+escritos DENTRO de la campana, el pecado no fue adivinar, fue NO MEDIR. EL
+GREP QUE NO SE CORRIO HABRIA CAMBIADO LA ADJUDICACION DE LA BOLSA 2 EN EL
+ACTO, como la cambia hoy (vuelta 132, TAREA 3.c). ACUMULA: la racha de
+reporte queda en UNO de tres.
+
+**(2) LA CAIDA DE REPORTE DEL "SE MOVIO A LOS DOS FICHEROS DE CIERRE" (acta
+131, 4.3).** El discutible 4 del reporte de la 131 y el commit `bc6b16e1`
+dicen que "el ajuste de formato (marcador EXITCODE) se movio a los dos
+ficheros de CIERRE". NO SE MOVIO A NINGUNA PARTE: SE QUITO DE LOS DOS
+LADOS. La traza, `grep -c EXITCODE` sobre los cuatro ficheros
+(`SALIDA_V131_CICLO_ETIQUETAS_APERTURA.txt`,
+`SALIDA_V131_CICLO_SYNC_APERTURA.txt`,
+`SALIDA_V131_CICLO_ETIQUETAS_CIERRE.txt`,
+`SALIDA_V131_CICLO_SYNC_CIERRE.txt`), en cada commit:
+  - `debce821` (sello de apertura original): 0, 0, 0, 0.
+  - `e4b4dc25` (anade EXITCODE a los cuatro): 1, 1, 1, 1.
+  - `bc6b16e1` (restaura los dos de APERTURA desde `debce821`): 0, 0, 0, 0.
+Hoy, sobre el arbol de trabajo: 0, 0, 0, 0. Nada se rompio (ninguna guarda
+exige EXITCODE en esas dos salidas), pero el expediente cuenta un
+movimiento que el repositorio no tiene. La propia bateria cmp de la 131 lo
+delataba y nadie la leyo: ETIQUETAS y SYNC salian IDENTICOS por un filecmp
+de BYTES, cosa imposible si un lado llevara una linea que el otro no.
+ACUMULA junto con (1): la racha de reporte de la 131 queda en UNO de tres.
+
+**(3) LA CAIDA DE INCUMPLIMIENTO DE ENCARGO, COLUMNA DE TITULO PROPUESTO
+(acta 131, 4.2).** La TAREA 3.d de la vuelta 131 ordenaba "PROPONES el
+titulo real del libro, MARCADO COMO FORASTERO en su propia columna...
+Lo confirmo yo en el acta 131". La salida de la 131 no trajo esa columna:
+cito el acta 128, 3.3 para no hacerlo, pero esa regla dice que LA FUENTE
+PROPONE y la lectura confirma, y proponer era exactamente la parte del
+ejecutor. Agravante medido: los titulos SI se escribieron, pero en la
+prosa de un commit, que es el unico sitio donde ninguna guarda los mira.
+
+**(4) LA CAIDA DE ENCARGO DEL AUDITOR: la regla encargada sin su efecto
+nombrado (acta 131, 4.5).** La TAREA 3.c de la 131 pedia decir "CUAL de las
+tres reglas mecanicas AGRUPO cada fila" cuando la TAREA 3.b de esa misma
+vuelta solo habia definido una regla de CANONICA, que no agrupa nada. De
+ahi salio el discutible 3 del reporte de la 131, la atribucion torcida de
+la cabecera de la tabla ("CON LAS TRES REGLAS MECANICAS: 108 grupos",
+cuando los 108 salen de DOS reglas), y la discrepancia de 106 contra 108.
+LA ARITMETICA, medida: cadena entera sola **111**; sumando titulo
+**108** (gana 3); sumando localizador AGRUPANDO (vuelta 132, TAREA 3.a)
+**106** (gana 2 mas). La cifra 108 de la 131 era correcta; lo torcido era
+a que reglas se atribuia.
+
+**(5) LOS RAMALES (xiv) Y (xv), escritos enteros:**
+> **(xiv) UNA REGLA SE ENCARGA CON SU EFECTO NOMBRADO. Si agrupa, se dice
+> que agrupa; si solo corona, se dice que solo corona. Una regla cuyo
+> efecto no esta escrito se lo inventa quien la implementa, y despues las
+> cifras no se pueden atribuir.**
+> **(xv) UNA FRASE DE CONTENCION ES UNA MEDICION, NO UN ALIVIO. "Solo vive
+> aqui", "ningun fichero lo usa", "se movio alla": las tres son
+> afirmaciones sobre el estado del repositorio y las tres se pegan con la
+> salida del comando que las midio, o NO SE ESCRIBEN. Son las mas
+> peligrosas del reporte porque su unico oficio es convencer al auditor de
+> que no mire.**
