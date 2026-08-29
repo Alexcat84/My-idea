@@ -1,0 +1,19 @@
+ALIAS EN EL RESOLUTOR: 746
+NOMINA (campo nodos): 31 unicos: 31
+IDS QUE EL RESOLUTOR MUEVE: 3
+    cinco_categorias_costos_franquicia -> estimacion_inversion_inicial_franquiciador
+    elaboracion_fdd -> preparar_fdd
+    estructuras_combinadas_franquicia -> prevenir_franquicias_inadvertidas
+RESUELVEN A 29 IDS DISTINTOS
+  vivos: 29  deprecados: 0  ausentes: ninguno
+
+VERIFICACION 1 (todo vivo de la nomina resuelta nombra el pais):
+  CUBIERTOS: 28 de 29
+  SIN CUBRIR: ['prevenir_franquicias_inadvertidas']
+  con el literal exacto en PRIMERA posicion: 27
+
+  ---  prevenir_franquicias_inadvertidas ---
+   titulo: None
+   dominio: franquicias | fuente: Franchise Your Business - Mark Siebert
+   deprecado: None
+   condiciones_activacion: ['Si la empresa tiene acuerdos de distribución, licencia o agencia con terceros que usan su marca', "Si se está evitando intencionalmente llamar 'franquicia' a una relación comercial para eludir regulaciones", 'Al diseñar cualquier estructura alternativa a la franquicia tradicional', 'Si existe riesgo de haber creado inadvertidamente una franquicia no declarada']
