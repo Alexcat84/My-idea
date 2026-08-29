@@ -1,0 +1,29 @@
+ROJO EXIT 1: 27 comprobacion(es) caida(s) sobre 4 par(es) REPITE (ref c9ac2fb8):
+  auditoria_producto -> auditoria_de_producto: (1) auditoria_producto NO esta DEPRECADO
+  auditoria_producto -> auditoria_de_producto: (2) auditoria_producto NO aparece en ids_alias de auditoria_de_producto
+  auditoria_producto -> auditoria_de_producto: (4) falta la arista seguimiento_accion_correctiva -> auditoria_de_producto hoy (venia de auditoria_producto.nodos_previos, entrada cruda 'seguimiento_accion_correctiva')
+  dia_cero_defectos_3 -> dia_cero_defectos_2: (1) dia_cero_defectos_3 NO esta DEPRECADO
+  dia_cero_defectos_3 -> dia_cero_defectos_2: (2) dia_cero_defectos_3 NO aparece en ids_alias de dia_cero_defectos_2
+  dia_cero_defectos_3 -> dia_cero_defectos_2: (4) falta la arista dia_cero_defectos_2 -> fijacion_de_metas hoy (venia de dia_cero_defectos_3.nodos_siguientes, entrada cruda 'fijacion_de_metas')
+  dia_cero_defectos_3 -> dia_cero_defectos_2: (4) falta la arista dia_cero_defectos_2 -> eliminacion_causas_error hoy (venia de dia_cero_defectos_3.nodos_siguientes, entrada cruda 'eliminacion_causas_error')
+  dia_cero_defectos_3 -> dia_cero_defectos_2: (4) falta la arista entrenamiento_supervisores_calidad -> dia_cero_defectos_2 hoy (venia de dia_cero_defectos_3.nodos_previos, entrada cruda 'entrenamiento_supervisores_calidad')
+  dia_cero_defectos_3 -> dia_cero_defectos_2: (4) falta la arista conciencia_calidad -> dia_cero_defectos_2 hoy (venia de dia_cero_defectos_3.nodos_previos, entrada cruda 'conciencia_de_calidad')
+  dia_cero_defectos_3 -> dia_cero_defectos_2: (4) falta la arista conciencia_calidad -> dia_cero_defectos_2 hoy (venia de dia_cero_defectos_3.nodos_previos, entrada cruda 'conciencia_calidad')
+  eliminacion_causas_error -> eliminacion_causas_error_4: (1) eliminacion_causas_error NO esta DEPRECADO
+  eliminacion_causas_error -> eliminacion_causas_error_4: (2) eliminacion_causas_error NO aparece en ids_alias de eliminacion_causas_error_4
+  eliminacion_causas_error -> eliminacion_causas_error_4: (4) falta la arista eliminacion_causas_error_4 -> consejo_de_calidad_3 hoy (venia de eliminacion_causas_error.nodos_siguientes, entrada cruda 'consejo_de_calidad_3')
+  eliminacion_causas_error -> eliminacion_causas_error_4: (4) falta la arista accion_correctiva_sistematica -> eliminacion_causas_error_4 hoy (venia de eliminacion_causas_error.nodos_previos, entrada cruda 'accion_correctiva_sistematica')
+  eliminacion_causas_error -> eliminacion_causas_error_4: (4) falta la arista dia_cero_defectos_3 -> eliminacion_causas_error_4 hoy (venia de eliminacion_causas_error.nodos_previos, entrada cruda 'dia_cero_defectos_3')
+  eliminacion_causas_error -> eliminacion_causas_error_4: (4) falta la arista entrenamiento_supervisores_calidad -> eliminacion_causas_error_4 hoy (venia de eliminacion_causas_error.nodos_previos, entrada cruda 'entrenamiento_supervisores_calidad')
+  eliminacion_causas_error -> eliminacion_causas_error_4: (4) falta la arista make_certain_programa -> eliminacion_causas_error_4 hoy (venia de eliminacion_causas_error.nodos_previos, entrada cruda 'make_certain_programa')
+  eliminacion_causas_error -> eliminacion_causas_error_4: (4) falta la arista programa_mejora_calidad_14_pasos -> eliminacion_causas_error_4 hoy (venia de eliminacion_causas_error.nodos_previos, entrada cruda 'programa_mejora_calidad_14_pasos')
+  estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto: (1) estrategia_de_innovacion_de_producto NO esta DEPRECADO
+  estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto: (2) estrategia_de_innovacion_de_producto NO aparece en ids_alias de estrategia_innovacion_producto
+  estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto: (4) falta la arista estrategia_innovacion_producto -> gestion_de_portafolio_gates_go_kill hoy (venia de estrategia_de_innovacion_de_producto.nodos_siguientes, entrada cruda 'gestion_de_portafolio_gates_go_kill')
+  estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto: (4) falta la arista estrategia_innovacion_producto -> apalancamiento_de_competencias_centrales hoy (venia de estrategia_de_innovacion_de_producto.nodos_siguientes, entrada cruda 'apalancamiento_de_competencias_centrales')
+  estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto: (4) falta la arista estrategia_innovacion_producto -> calidad_de_ejecucion_proceso_innovacion hoy (venia de estrategia_de_innovacion_de_producto.nodos_siguientes, entrada cruda 'calidad_de_ejecucion_proceso_innovacion')
+  estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto: (4) falta la arista estrategia_innovacion_producto -> hipotesis_de_tamano_de_mercado hoy (venia de estrategia_de_innovacion_de_producto.nodos_siguientes, entrada cruda 'hipotesis_de_tamano_de_mercado')
+  estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto: (4) falta la arista estrategia_innovacion_producto -> producto_minimo_viable hoy (venia de estrategia_de_innovacion_de_producto.nodos_siguientes, entrada cruda 'producto_minimo_viable')
+  estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto: (4) falta la arista estrategia_innovacion_producto -> estrategia_de_innovacion_y_tecnologia hoy (venia de estrategia_de_innovacion_de_producto.nodos_siguientes, entrada cruda 'estrategia_de_innovacion_y_tecnologia')
+  estrategia_de_innovacion_de_producto -> estrategia_innovacion_producto: (4) falta la arista producto_unico_superior -> estrategia_innovacion_producto hoy (venia de estrategia_de_innovacion_de_producto.nodos_previos, entrada cruda 'producto_unico_superior')
+EXIT: 1
