@@ -70,17 +70,51 @@ PATRON_GIT_STATUS_LINEA = re.compile(r"(?m)^ [MADR] ")
 
 def dividir_frases(texto):
     """Parte el texto en frases (con su posicion de inicio), por punto seguido
-    de espacio o salto de linea. NO parte un punto entre digitos (miles, tipo
-    3.853), con lookaround negativo a los dos lados."""
+    de espacio o salto de linea. NO parte un punto de miles (tipo 3.853): ese
+    punto SIEMPRE trae otro digito pegado despues, asi que el lookahead negativo
+    solo (sin lookbehind) ya lo protege, y un lookbehind de digito de mas
+    tambien tapaba el punto real de cierre de "25/25." (vuelta 122, hallado al
+    probar la guarda sobre su propio reporte)."""
+    # Las filas de tabla markdown ("| ... |") son unidades de dato, no prosa:
+    # no llevan punto final y, sin este corte, una fila con "25/25" quedaria
+    # en la MISMA "frase" que una cita de fichero de una fila vecina (vuelta
+    # 122, hallado al probar la guarda sobre su propio reporte). Cada linea de
+    # tabla se trata como su propia frase atomica, cortando el bloque de prosa
+    # alrededor.
     frases = []
     pos = 0
-    for m in re.finditer(r"(?<!\d)\.(?!\d)(?:\s+|\n|$)", texto):
-        frase = texto[pos:m.end()]
-        if frase.strip():
-            frases.append((pos, frase))
-        pos = m.end()
-    if pos < len(texto) and texto[pos:].strip():
-        frases.append((pos, texto[pos:]))
+    lineas = texto.split("\n")
+    cursor = 0
+    bloque_ini = None
+    bloque = []
+
+    def cerrar_bloque():
+        if not bloque:
+            return
+        sub = "\n".join(bloque)
+        base = bloque_ini
+        p = 0
+        for m in re.finditer(r"\.(?!\d)(?:\s+|\n|$)", sub):
+            frase = sub[p:m.end()]
+            if frase.strip():
+                frases.append((base + p, frase))
+            p = m.end()
+        if p < len(sub) and sub[p:].strip():
+            frases.append((base + p, sub[p:]))
+
+    for linea in lineas:
+        if linea.strip().startswith("|"):
+            cerrar_bloque()
+            bloque, bloque_ini = [], None
+            if linea.strip():
+                frases.append((cursor, linea))
+        else:
+            if bloque_ini is None:
+                bloque_ini = cursor
+            bloque.append(linea)
+        cursor += len(linea) + 1
+    cerrar_bloque()
+    frases.sort(key=lambda t: t[0])
     return frases
 
 
@@ -111,8 +145,22 @@ def cumple(afirmacion, contenido):
 def cotejar(texto, fallos, pares_ok):
     frases = dividir_frases(texto)
     for i, (offset, frase) in enumerate(frases):
+        # Una fila de tabla markdown ("| ... |") es dato ya validado por OTRA
+        # guarda (tallar_cabecera_reporte.py --comparar): sus celdas no llevan
+        # cita propia por diseno (la cita vive una sola vez, en el parrafo que
+        # abre la tabla). Exigirle una cita a cada celda con "25/25" o similar
+        # es imposible de cumplir sin romper la pega verbatim que la otra
+        # guarda exige: se excluye del vocabulario, no del cotejo de prosa.
+        if frase.strip().startswith("|"):
+            continue
+        # El vocabulario se busca FUERA de los nombres de fichero citados: un
+        # fichero como `SALIDA_V121_OPS03_ROJO_SEGUNDA_PASADA.txt` trae la
+        # palabra "ROJO" en su propio nombre, y sin este enmascarado el
+        # cotejo la tomaba como una AFIRMACION en prosa (vuelta 122, hallado
+        # al probar la guarda sobre su propio reporte).
+        frase_sin_ficheros = PATRON_FICHERO.sub(lambda m: "`" + " " * len(m.group(1)) + "`", frase)
         for afirmacion in VOCABULARIO:
-            if afirmacion not in frase:
+            if afirmacion not in frase_sin_ficheros:
                 continue
             ficheros = ficheros_citados(frase)
             if not ficheros and i > 0:
