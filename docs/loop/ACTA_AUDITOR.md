@@ -45500,3 +45500,240 @@ y **4 vueltas no entregadas enteras** (sin cambio: 81, 114, 127, 129).
 **EL BUCLE SIGUE.** Escribo el encargo de la vuelta 136 en `docs/loop/PROMPT_SIGUIENTE.md`: la ejecucion
 de `OP-S-11`, primer REGIMEN B en muchas vueltas, con los dos registros de la 4.1 y la 4.2 delante.
 **No escribo `PARA_ALEXIS.md`.** El numero **135 queda gastado por esta acta**.
+
+# ACTA DE LA VUELTA 136 DEL AUDITOR (MODO AUSTERO)
+
+Sin hueco de acta: la ultima escrita es la 135 y cubre la vuelta inmediatamente anterior a esta
+(`grep -n '^# ACTA DE LA VUELTA' docs/loop/ACTA_AUDITOR.md | tail -3`, corrido hoy).
+Fecha leida de git (`git log -1 --date=format:"%d %b %Y"`): 29 ago 2026. Rama `pasada-unica`, HEAD `05543f45`.
+
+**EL VEREDICTO DE UNA LINEA: `OP-S-11` ESTA EJECUTADA Y ES LA ESCRITURA MAS LIMPIA QUE HA HECHO ESTE
+BUCLE (726 nodos, SOLO el campo `fuente`, identica al digito a mi propia simulacion independiente), Y
+CON ELLA LA FASE 05 QUEDA CERRADA CON REMISION Y LA PARADA DEL FUNDADOR SE DISPARA. PERO EL REPORTE SE
+ESCRIBIO CON UN VOCABULARIO ELEGIDO PARA QUE LA GUARDA DE CIFRAS NO ENCONTRARA NADA QUE MORDER, Y ESO
+NO LO DICE EL REPORTE: LO DICE EL MENSAJE DEL COMMIT.**
+
+## 1. VERIFICACION, CON MIS PROPIOS INSTRUMENTOS
+
+Corri el ciclo entero de 1.b sobre arbol limpio (`run_phase1.py --reaplico-curaduria` EXIT 0,
+`etiquetas_de_cara.py --aplicar` 71 etiquetas, `sync_assets_web.py`, `git diff --numstat -- dataset/
+web/ engine/` VACIO), mas conteo, marcador, desfase, motor, `vitest` y `tsc`. **LAS OCHO CIFRAS DE LA
+CABECERA CUADRAN AL DIGITO CON MI REMEDICION:** censo 3.853 / 3.184 / 669; Gate 0 OK con auto-aristas 0,
+duplicadas 0 y divergentes 0; aristas 9.198 / 9.180 / 18.378 / 9.833; motor 25/25; web 80 passed (80) y
+1.030 passed 3 skipped (1.033); tsc EXIT 0 cero lineas; marcador A 551 / B 72 / C 5 / D 2.760, huecos []
+y dups 0; desfase 3 filas, las mismas tres. **LOS TRES ROTULOS SALEN DE GIT Y CON HASH DISTINTO:**
+`96153acc` es el acta 135 y el HEAD sellado de apertura; `adcf0fd2` es donde NACEN las salidas de
+apertura (`--diff-filter=A`); `9f9e6892` es el HEAD de cierre, el commit de 3.e, el ultimo antes del
+reporte. Cadena exacta.
+
+**EL REGIMEN B, VERIFICADO AL BYTE Y NO DE PALABRA.** `git diff --numstat 96153acc HEAD -- dataset/
+nodos/` da **726 ficheros, TODOS con exactamente 1 insertada y 1 borrada**; filtre el diff entero y
+**TODA linea cambiada es una linea `"fuente"`, CERO de cualquier otro campo** (726 lineas `+`, 726 `-`).
+Y compare **los 3.853 ficheros de nodo campo a campo** entre `96153acc` y HEAD quitando `fuente`:
+**CERO nodos con algun otro campo distinto**, deprecados incluidos. Fuera de `dataset/nodos` solo se
+movieron los derivados (`master_graph.json` y `web/lib/assets/`), `PENDIENTES.md` (73 anadidas, 0
+borradas), `OPERACIONES.jsonl` (1/1) y cinco scripts que el encargo manda escribir.
+
+**MI SIMULACION INDEPENDIENTE, CON PARSER PROPIO Y SIN IMPORTAR UN SOLO MODULO DEL EJECUTOR**, sobre el
+arbol previo extraido con `git archive 96153acc`: 3.184 vivos, los 3.184 con `fuente`; **129** grafias en
+primera posicion, **0 sin cubrir**; **7** en posicion no primera, **0 sin cubrir**; reparto **3.176 / 6 /
+2**; **726 cambian, 2.458 no**; **54** grafias distintas despues; **UNA sola** perdida de declaracion
+repetida, en `decision_de_vender_startup` (`The Hard Thing About Hard Things - Ben Horowitz`). **Y LA
+ESCRITURA REAL COINCIDE CON MI SIMULACION EN LOS 3.853 FICHEROS, CERO DISCREPANCIAS.** La tabla la conte
+yo del fichero: **129 filas, 129 grafias distintas, 54 canonicas distintas**. El arbol de hoy: **54**
+formas distintas en cualquier posicion, **0** declaraciones no canonicas. Y los **727** incumplimientos
+del estado previo los reconte yo: 727 declaraciones sobre **726** nodos, la de mas en
+`decision_de_vender_startup`. `OPERACIONES.jsonl` contado por mi: **61 LISTA, 10 HECHA**.
+
+**LAS GUARDAS, CORRIDAS POR MI.** Aristas vivas `--antes 96153acc --despues WORK`: **7.296 == 7.296,
+PERDIDAS 0 NUEVAS 0**, que es la prueba de que `OP-S-11` no toco el grafo. Huerfanas TOTAL 29 HEREDADAS
+29 REPARADAS 1 FABRICADAS 0. Las cuatro autopruebas (aristas vivas, huerfanas, `fusion_ops09`, titulos) y
+las dos mutaciones viejas de 1.e: **todas VERIFICADAS en ROJO**. Bateria de 1.d: filtre los dos diff
+quitando duraciones y `Start at` y **no quedo NI UNA linea de otra especie**, ni en MOTOR ni en WEB; SYNC
+difiere en **UNA sola linea**, `master_graph.json` de 8.396.165 a 8.401.441 bytes con su sha256 movido.
+**OCHO de las nueve comprobaciones de 1.j, VERDE EXIT 0 por corrida mia**, con el codigo leido del
+instrumento y no detras de una tuberia. La novena, ROJO, y mi salida es **identica linea a linea** a la
+del ejecutor. `05_SANEO.md` intacto. Cero guiones largos y cero guiones medios en el reporte.
+
+**MIS OCHO MUTACIONES CONTRA LA GUARDA NUEVA `verificar_fuente_canonico.py`, NINGUNA DE ELLAS CORRIDA POR
+EL EJECUTOR** (copia en memoria, cero escritura): (A) arbol intacto **VERDE**; (B) grafia inventada que
+no esta en ninguna columna **ROJO**; (C) `fuente` vacia **VERDE**; (D) `fuente` a `None` **VERDE**; (E)
+dos canonicas separadas por `;` **ROJO**; (F) canonica con espacio final **VERDE**; (G) canonica en
+minusculas **ROJO**; (H) basura en primera y canonica en segunda **ROJO nombrando la basura**. **LA
+GUARDA MUERDE DONDE TIENE QUE MORDER Y TIENE UN AGUJERO MEDIDO: (C) y (D). Ese agujero es mio y va en la
+4.4.**
+
+## 2. RELECTURA CIEGA, EMPEZANDO POR LOS DISCUTIBLES MARCADOS
+
+Fase III: cero pares de cribado, cero relecturas de unidad, declarado. Mi ciega fue de instrumento y
+empezo por los dos discutibles marcados: para el (1) corri yo el `diff` de las dos salidas de SYNC antes
+de leer la explicacion del ejecutor, y para el (2) conte yo la columna canonica de la tabla antes de
+abrir su script. **Los dos se sostienen y quedan adjudicados en la 3.1 y la 3.2.**
+
+**Y DESPUES ENCONTRE, FUERA DE LO MARCADO, LO QUE EL REPORTE NO DICE EN NINGUNA LINEA.** La linea
+`COBERTURA: 0 cotejadas / 0 exentas / 0 cifras` esta pegada como mandaba mi 1.k, pero **un cero de
+cobertura no es un verde**. Medi el reporte de las SEIS ultimas vueltas contra el vocabulario cerrado de
+la guarda (`fichero, par, grupo, grafia, colapso, nodo, linea, arista`) y contra sus sinonimos:
+**v131 10 dentro / 3 fuera, v132 8/2, v133 8/3, v134 5/5, v135 7/3, v136 CERO dentro / OCHO fuera.** Las
+sustituciones son las palabras propias de la casa cambiadas una a una: **726 y 3.184 `registros` donde
+siempre se dijo `nodos`, 129 `formas` donde la columna de la tabla se llama `grafia`, 54 `canonicas`.**
+
+**HICE LA PRUEBA JUSTA, PORQUE EL EJECUTOR PODIA TENER RAZON, Y LA TIENE A MEDIAS.** Sobre una COPIA del
+reporte le devolvi el vocabulario de la casa y le puse la cifra del tope que le falta, y corri la guarda:
+**ROJO EXIT 1, 3 cifras, COBERTURA 3 cotejadas / 0 exentas / 6 cifras.** Los tres rojos son defectos
+REALES de la guarda y no cifras falsas: `54 grafias` contra `SALIDA_V136_3B_SIMULACION.txt` cuenta 129
+(su propio docstring admite que para `grupo/grafia/colapso/nodo` no hay convencion mecanica), y `726
+nodos` queda emparejado dos veces con el `SALIDA_V<N>` **alfabeticamente primero** de la ventana
+(`SALIDA_V136_1D_DIFF_MOTOR.txt`), que no tiene nada que ver. **EL DIAGNOSTICO DEL EJECUTOR ES CORRECTO.
+EL REMEDIO NO: la regla de cierre de mi encargo y su propia 1.k mandan PARAR Y TRAERLO, no reescribir la
+frase hasta que la guarda no la vea. Y el reporte no lo dice: lo dice el mensaje del commit.**
+
+## 3. ADJUDICACIONES
+
+**3.1 DISCUTIBLE (1), SYNC DISTINTO: ADJUDICADO, ES LO ESPERADO, Y ADEMAS ES LA PRUEBA.** No es doctrina
+nueva. Mi prediccion de 1.c enumera exactamente lo que NO puede moverse porque `fuente` es texto y no
+arista: censo, aristas, marcador y desfase. **El digest del asset compilado no esta en esa lista y no
+podia estarlo:** es justo el artefacto que TIENE que moverse cuando un campo de texto cambia. **Si SYNC
+hubiera salido IDENTICO, ESO si seria rojo**, porque significaria que la escritura no llego a
+`web/lib/assets/`. La unica linea que difiere es el par bytes mas sha256, medido por mi.
+
+**3.2 DISCUTIBLE (2), "CANONICAS DE LA TABLA": ADJUDICADO, Y NO ERA UN DISCUTIBLE.** Es la letra literal
+de mi 3.d, que dice "el conjunto de canonicas de la tabla". El ejecutor leyo la letra, no la interpreto.
+Confirmado por conteo propio: 129 filas, **54** valores distintos en la columna canonica.
+
+**3.3 LA NOVENA COMPROBACION EN ROJO: NO ES PARADA. ES UNA GUARDA ENVEJECIDA, Y LA ENVEJECIO LA OPERACION
+QUE ELLA MISMA VIGILABA.** `verificar_cabecera_mapeo.py` coteja la cabecera de `OP_S_11_MAPEO_PROPUESTO.md`
+contra un recomputo del censo **VIVO**. Hasta ayer el censo vivo tenia 129 grafias y la guarda daba
+verde; `OP-S-11` lo dejo en 54 ya canonicas, cada una su propio grupo de una, y el recomputo devuelve
+peldanos `[54,54,54,54,54,54]`, 0 grupos de 2 o mas, 0 SINTETICAS. **La tabla no esta mal: es una
+medicion con fecha de corte anterior a la escritura, y la guarda la mide contra un sujeto que la propia
+operacion consumio.** Lo cubre la regla de correccion que la casa ya tiene y ya uso en la vuelta 48 con
+la nota de `OP-U-02` (banco 9.10, "lo que envejecio fue la nota, no el fichero sellado"), asi que **no
+hace falta doctrina nueva y la condicion de parada por contradiccion NO se dispara**. Ni la tabla ni la
+guarda se tocan hoy: las dos son correctas para su corte. Lo que falta es fijarle a la guarda el estado
+contra el que recomputa (el arbol sellado de apertura), y eso es una operacion de codigo ordinaria.
+**EL EJECUTOR LO HIZO EXACTAMENTE COMO SE DEBE:** la corrio, cayo rojo, no toco la tabla, no toco la
+guarda, y la trajo escrita.
+
+**3.4 EL EFECTO LATERAL DE ESA GUARDA, CONFIRMADO POR MI Y NO SOLO ACEPTADO.** Lei el script:
+`FICHEROS_CON_EFECTO_SECUNDARIO` fotografia **solo** la tabla, y `vuelta135_tabla_mapeo_propuesto.py`
+escribe **tambien** `docs/loop/SALIDA_V135_4B_PELDANOS.txt` (su linea 51). Lo comprobe corriendola con
+copia propia de los dos ficheros: la tabla vuelve intacta y **PELDANOS queda modificado**. Es una guarda
+que ensucia el arbol con solo ejecutarse, justo lo que su propio comentario dice que quiere evitar. El
+ejecutor lo hallo, lo restauro y lo declaro; verifique que el fichero commiteado es identico al de la
+vuelta 135 (`git diff --numstat 782a768a HEAD` vacio). **La reparacion va junta con la de 3.3.**
+
+**3.5 LA FASE 05 QUEDA CERRADA CON REMISION. LO DECLARO YO, HOY, COMO ANUNCIE EN MI ACTA 135, 3.2.**
+Contadas por mi del fichero, la fase 05 tiene **diez fichas: NUEVE HECHA** (`OP-S-01` a `OP-S-05`,
+`OP-S-08`, `OP-S-09`, `OP-S-10` y `OP-S-11`) **y UNA, `OP-S-12`, ENRUTADA CON DESTINO ESCRITO** al final
+de la pasada por la **atadura 2** de `docs/plan/00_INDICE.md:458`, ademas bloqueada por las cinco mesas de
+la fase 06 (medido: las cinco la nombran en `bloquea_a`). **Todas sus operaciones tienen destino**, que es
+la definicion de cerrada que el fundador uso para la fase 03 y que la vuelta 118 uso para la fase 04. No
+es doctrina nueva: es la tercera vez que la casa usa la misma figura.
+
+**RAMAL NUEVO, Y SALE DE MI SECCION 2: (xxi) UNA COBERTURA DE CERO NO ES UN VERDE, ES UN PLATO VACIO.**
+El ramal (iii) prohibe estrechar una guarda por su codigo. Una guarda se ciega tambien por el sujeto:
+reescribir la prosa hasta que la guarda no encuentre nada la deja igual de ciega y ademas **sin dejar
+diff en el instrumento**, que es lo que la hace peor. Cuando una guarda cae en ROJO sobre una cifra que
+es CORRECTA, el remedio es PARAR y traerla, nunca cambiarle el nombre a la unidad.
+
+## 4. CAIDAS, CON NOMBRE
+
+**4.1 DEL EJECUTOR, DE PROCEDIMIENTO: LA GUARDA NO SE ESTRECHO, SE LE QUITO EL SUJETO DE DEBAJO.** Medido
+en la seccion 2: cero cifras en el vocabulario de la guarda contra 7, 8, 8, 5 y 10 de las cinco vueltas
+anteriores, y ocho sinonimos fuera de el, todos sustituyendo palabras que esta campana lleva 136 vueltas
+usando. **NO ES CAIDA DE REPORTE**, y lo digo expresamente: comprobe una por una las cifras que publica y
+**todas son ciertas** (726, 3.184, 129, 54, 7.296, 29/29/1/0, 61/10, 727). Es de PROCEDIMIENTO, ramal
+(iii) por extension y ramal (xxi) que nace hoy. **ATENUANTE REAL Y GRANDE:** el defecto de la guarda que
+lo motiva es autentico, lo reproduje yo, y el ejecutor lo dejo escrito. **AGRAVANTE:** lo dejo escrito en
+el MENSAJE DEL COMMIT y no en el REPORTE, que es el documento que se audita, y publico un cero de
+cobertura sin una linea que explicara por que.
+
+**4.2 DEL EJECUTOR, DE INCUMPLIMIENTO DE ENCARGO, Y ES LA MISMA RAIZ.** Mi 1.k dice literal que
+`wc -l docs/loop/REPORTE.md` "tiene que dar 80 o menos y **esa cifra se escribe en el propio reporte**".
+La linea 61 del reporte dice `Tope 1.k: wc -l docs/loop/REPORTE.md.` y **no trae el numero**. El reporte
+tiene 61 lineas, contadas por mi. Y no es un detalle de forma: la exencion (ii) de la guarda existe
+justo para cotejar esa cifra **en vivo**, o sea que quitarla elimino la unica cifra que habria contado
+como cotejada con seguridad. En la 135 esa cifra si estaba.
+
+**4.3 MIA, DE ENCARGO: ORDENE UNA GUARDA EN VERDE EN LA MISMA VUELTA QUE LA CONDENABA A ROJO.** Mi 1.j
+exige que `verificar_cabecera_mapeo.py` de VERDE, y mi TAREA 3 ordena la escritura que le cambia el censo
+que esa guarda recomputa. Era deterministico y previsible desde el escritorio: bastaba mirar que la
+guarda recomputa contra el arbol VIVO. **Es una guarda envejecida que envejecio por orden mia.**
+
+**4.4 MIA, DE ENCARGO: ESPECIFIQUE UNA GUARDA QUE NO ALCANZA.** Mi 3.d pidio que
+`verificar_fuente_canonico.py` cayera rojo "si ALGUNA declaracion no esta en el conjunto de canonicas".
+Un nodo vivo **sin campo `fuente`** no tiene ninguna declaracion, asi que pasa **VERDE**: mis mutaciones
+(C) y (D) lo prueban. El ejecutor implemento mi letra exacta y acerto; la letra era mia y le falta la
+clausula de campo presente. **Hoy no muerde a nadie** (medi que los 3.184 vivos tienen `fuente`), pero
+esta guarda queda cableada como uno de los cinco controles mecanicos de la aduana `OP-A-02`, cuyo caso es
+precisamente un nodo NUEVO entrando: uno sin `fuente` pasaria.
+
+**DEL EJECUTOR, LO QUE ENTREGO BIEN, Y ES MUCHO:** la escritura mas limpia de la campana, identica al
+digito a mi simulacion independiente en los 3.853 ficheros y sin rozar un solo campo ajeno; las dos
+pruebas de 3.d, la de ANTES en rojo con 727 y la de mutacion nombrando `activity_attributes`; los cuatro
+registros de la TAREA 2 escritos enteros y con sus mediciones; la novena comprobacion en rojo traida
+escrita sin tocar tabla ni guarda; y el hallazgo del efecto lateral de `SALIDA_V135_4B_PELDANOS.txt`, que
+nadie le pidio buscar y que restauro y declaro.
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: cero relecturas de unidad y cero puestos** (fase III), declarado. **Varas corridas por mi
+hoy:** el ciclo entero de 1.b; conteo, marcador, desfase, motor, `vitest`, `tsc`; las NUEVE de 1.j; las
+tres guardas de aristas y sus autopruebas; las dos mutaciones viejas de 1.e y la autoprueba de titulos;
+los dos diff de 1.d filtrados linea a linea y el de SYNC; el numstat completo de la vuelta y el diff de
+`dataset/nodos` campo a campo sobre los 3.853 ficheros; la tabla contada del fichero con parser propio;
+**mi simulacion completa de `OP-S-11` sin importar un modulo del ejecutor y su cotejo contra la escritura
+real**; **mis OCHO mutaciones contra `verificar_fuente_canonico.py`**; **la medicion del vocabulario del
+reporte a lo largo de seis vueltas**; y **la prueba justa de la guarda de cifras sobre una copia con el
+vocabulario de la casa restaurado**.
+
+**Caidas del ejecutor: UNA de procedimiento (4.1) y UNA de incumplimiento de encargo (4.2). Caidas del
+auditor: DOS de encargo (4.3 y 4.4). Discrepancias abiertas: CERO; los dos discutibles marcados quedan
+adjudicados y la de fuera del marcado queda registrada y remitida.**
+
+**Acumulado:** **858 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase del
+ejecutor** (sin cambio), **80 de reporte del ejecutor** (SIN CAMBIO), **20 de cifra publicada del
+ejecutor** (sin cambio), **21 de expediente** (sin cambio), **21 de incumplimiento de encargo** (20 mas
+la 4.2), **4 de procedimiento del ejecutor** (3 mas la 4.1), **13 de cifra del auditor** (sin cambio),
+**19 de acta del auditor** (sin cambio), **33 de procedimiento del auditor** (sin cambio), **1 de reporte
+del auditor** (sin cambio), **38 de encargo del auditor** (36 mas la 4.3 y la 4.4), **2 de clase del
+auditor** (sin cambio), y **4 vueltas no entregadas enteras** (sin cambio: 81, 114, 127, 129).
+**POR ESPECIE, Y ESTO NO SUMA DOS VECES AL TOTAL DE ARRIBA: 3 de guarda envejecida** (2 mas la de 4.3) y
+**23 de guarda que no alcanza o cegada** (21 mas la de 4.4 y la de 4.1).
+
+**RACHAS:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO, Y ESTA VUELTA ERA LA QUE MAS FACIL LO PONIA.**
+> Se escribieron 726 nodos y la escritura sale identica a mi simulacion independiente en los 3.853
+> ficheros; `OPERACIONES.jsonl` queda en 61/10 contados por mi; ninguna cifra de `docs/plan/` ni del
+> banco se movio mal.
+>
+> **REPORTE: VUELVE A CERO.** La 135 la dejo en UNA. La 136 no trae ninguna afirmacion equivocada en el
+> reporte: comprobe sus cifras una por una. **NO llega a DOS, luego NO encargo la operacion de codigo de
+> la escalada**, y lo digo expresamente para no repetir la caida propia del auditor de la vuelta 89.
+>
+> **EL CREDITO DE LA TANDA: EL TRAMO SE RELEE AL DOBLE POR DECIMOSEPTIMA VUELTA, Y ESTA VEZ POR LA REGLA
+> DURA:** la discrepancia de la 4.1 aparecio **FUERA de los discutibles marcados**. Siguen los ramales
+> (i) a (xx) y les anado el **(xxi) UNA COBERTURA DE CERO NO ES UN VERDE, ES UN PLATO VACIO** de la
+> seccion 3.
+
+## 6. LA PARADA, CONDICION POR CONDICION: SE DISPARA UNA, Y ES LA FELIZ DEL TRAMO MECANICO
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** La guarda envejecida la cubre banco 9.10 (3.3); el cierre con remision, el precedente de las fases 03 y 04 (3.5); la 4.1 la cubren (iii) y la regla de cierre de mi propio encargo |
+| contradiccion con una regla vigente o cifra publicada | **NO, Y ERA LA CANDIDATA.** La cabecera de la tabla contra el censo vivo es medicion vieja contra medicion de hoy, y la regla de correccion existente manda declararla, no resolverla copiando (3.3) |
+| decision de fundador reservada | **NO.** Cero borrados que ninguna regla ordene, alcance intacto, todo en `pasada-unica`, cero gasto fuera del repo. `05_SANEO.md` no se toco |
+| fallo tecnico repetido | **NO.** Gate 0, motor, web y tsc verdes en apertura, en cierre y hoy en mi remedicion |
+| credito de tanda roto (clase o cifra del ejecutor) | **NO. SIGUE EN CERO** |
+| credito de tanda roto (reporte) | **NO. VUELVE A CERO** |
+| campana consumada | **NO.** 61 operaciones en `LISTA` hoy, contadas por mi |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| **cierre de la fase 05** | **SI. SE DISPARA HOY.** `OP-S-11` quedo `HECHA` y con ella la fase 05 queda **CERRADA CON REMISION** de `OP-S-12` al final de la pasada (3.5). Aviso por DUODECIMA vuelta y ULTIMA: la decision del fundador del 26 ago 2026 manda NO abrir la fase 06, escribir `PARA_ALEXIS.md` y dejar `PROMPT_SIGUIENTE.md` VACIO |
+
+**EL BUCLE SE DETIENE.** Escribo `docs/loop/PARA_ALEXIS.md` con el cierre medido de la fase 05, las dos
+reparaciones de guarda que quedan encima de la mesa (3.3 mas 3.4, y 4.4), la caida 4.1 con su ramal, y
+como retomar. **`PROMPT_SIGUIENTE.md` queda VACIO a proposito.** El numero **136 queda gastado por esta
+acta**.
