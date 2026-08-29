@@ -1,12 +1,12 @@
 # OP-S-11: tabla de mapeo PROPUESTA del campo `fuente`
 
-**PROPUESTA MEDIDA, escrita en la vuelta 130 (TAREA 3.b), REHECHA en la vuelta 131 (TAREA 3.c) y REHECHA OTRA VEZ en la vuelta 132 (TAREA 3.e) con la regla del localizador agrupando y la canonica sintetica. NO se ha aplicado a ningun nodo: `OP-S-11` sigue LISTA, sin tocar, y esta tabla no cambia su estado. La adjudica el fundador.**
+**PROPUESTA MEDIDA, escrita en la vuelta 130 (TAREA 3.b), REHECHA en la vuelta 131 (TAREA 3.c), REHECHA en la vuelta 132 (TAREA 3.e) y REHECHA OTRA VEZ en la vuelta 133 (TAREA 4.d) con la cola de localizador extendida a `Apendice` y el prefijo sobre la forma recortada APLICADO. NO se ha aplicado a ningun nodo: `OP-S-11` sigue LISTA, sin tocar, y esta tabla no cambia su estado. LAS REGLAS MECANICAS LAS ADJUDICA EL AUDITOR EN SU ACTA (asi lo hizo con 3.1 y con esta extension, acta 132); lo que queda para decision humana del fundador son los colapsos que ninguna regla mecanica alcanza.**
 
 Separador elegido para identificar declaraciones dentro de `fuente`: **` | ` (pipe) unicamente**, medido y argumentado en `scripts/loop/vuelta130_censo_fuente.py` (`docs/loop/SALIDA_V130_3B_CENSO_FUENTE.txt`). El `;` NO se usa como separador de declaraciones. Corte del catalogo: 2026-08-29, 3.184 nodos vivos con `fuente`, 129 grafias distintas en primera posicion con este separador.
 
-**LAS REGLAS MECANICAS, ACUMULADAS:** (1) `vuelta131_grupos_por_titulo.py`, prefijo estricto sobre CADENA ENTERA: 111 grupos. (2) sumando prefijo sobre TITULO (>=20 caracteres, guarda de RESTO): 108 grupos. (3) sumando `vuelta132_grupos_por_localizador.py`, igualdad EXACTA de la forma recortada de localizador (AGRUPA, ramal xiv): 106 grupos. La canonica de cada grupo la fija `vuelta132_canonica_sintetica.py` (SOLO CORONA, ramal xiv): forma mas larga que sigue siendo libro, o, si ninguna lo es, la forma recortada del miembro mas largo marcada SINTETICA.
+**LAS REGLAS MECANICAS, ACUMULADAS Y POR SEPARADO:** (1) `vuelta131_grupos_por_titulo.py`, prefijo estricto sobre CADENA ENTERA: **111 grupos**. (2) sumando prefijo sobre TITULO (>=20 caracteres, guarda de RESTO): **108 grupos**. (3) sumando `vuelta132_grupos_por_localizador.py` MAS la extension a `Apendice` de esta vuelta (`vuelta133_cola_localizador_apendice.py`, TAREA 4.a), igualdad EXACTA de la forma recortada: **105 grupos**. (4) sumando `vuelta133_prefijo_sobre_recortada.py` (TAREA 4.b, prefijo ESTRICTO sobre esa misma forma recortada, guarda de longitud y guarda de RESTO): **104 grupos**. La canonica de cada grupo: forma mas larga que sigue siendo libro, o, si ninguna lo es, la forma recortada del miembro mas largo marcada SINTETICA (regla vigente desde la vuelta 131, TAREA 3.b; VIGENTE Y SIN CASO en este corte: 0 canonicas SINTETICAS).
 
-**CON LAS TRES REGLAS MECANICAS: 106 grupos** (15 con 2 o mas miembros / 38 en grupo, 91 sin agrupar), sobre 129 grafias. Meta de `05_SANEO.md` (11 ago 2026): 55 libros canonicos. **Quedan 51 colapsos para decision humana.**
+**CON LAS CUATRO REGLAS MECANICAS: 104 grupos** (14 con 2 o mas miembros / 39 en grupo, 90 sin agrupar), sobre 129 grafias. Meta de `05_SANEO.md` (11 ago 2026): 55 libros canonicos. **Quedan 49 colapsos para decision humana.**
 
 | grafia | canonica propuesta | motivo | bolsa |
 |---|---|---|---|
@@ -42,10 +42,10 @@ Separador elegido para identificar declaraciones dentro de `fuente`: **` | ` (pi
 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) | MECANICO: agrupa por cadena entera, canonica recorte de localizador |  |
 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014), Anexo de aviso de no participación | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) | MECANICO: agrupa por cadena entera, canonica recorte de localizador |  |
 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014), Capitulo 8: Negociaciones | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) | MECANICO: agrupa por cadena entera, canonica recorte de localizador |  |
-| Diana L. Lindstrom, Procurement Project Management Success, Apendice B (RFPS) | Diana L. Lindstrom, Procurement Project Management Success, Apendice B (RFPS) | SIN AGRUPAR (pide decision) |  |
-| Diana L. Lindstrom, Procurement Project Management Success, capitulo 11 | Diana L. Lindstrom, Procurement Project Management Success | MECANICO: agrupa por localizador, canonica SINTETICA |  |
-| Diana L. Lindstrom, Procurement Project Management Success, capitulo 3 y Apendice C | Diana L. Lindstrom, Procurement Project Management Success | MECANICO: agrupa por localizador, canonica SINTETICA |  |
-| Diana L. Lindstrom, Procurement Project Management Success, capitulo 6 | Diana L. Lindstrom, Procurement Project Management Success | MECANICO: agrupa por localizador, canonica SINTETICA |  |
+| Diana L. Lindstrom, Procurement Project Management Success, Apendice B (RFPS) | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) | MECANICO: agrupa por localizador, canonica recorte de localizador |  |
+| Diana L. Lindstrom, Procurement Project Management Success, capitulo 11 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) | MECANICO: agrupa por localizador, canonica recorte de localizador |  |
+| Diana L. Lindstrom, Procurement Project Management Success, capitulo 3 y Apendice C | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) | MECANICO: agrupa por localizador, canonica recorte de localizador |  |
+| Diana L. Lindstrom, Procurement Project Management Success, capitulo 6 | Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) | MECANICO: agrupa por localizador, canonica recorte de localizador |  |
 | Edwards et al., Managing Project Risks, Cap. 10 (Assigning Responsibility) | Edwards et al., Managing Project Risks, Cap. 10 (Assigning Responsibility) | SIN AGRUPAR (pide decision) |  |
 | Edwards et al., Managing Project Risks, Cap. 10 (Dealing with New Risks) | Edwards et al., Managing Project Risks, Cap. 10 (Dealing with New Risks) | SIN AGRUPAR (pide decision) |  |
 | Edwards et al., Managing Project Risks, Cap. 10 (Monitoring Procedures) | Edwards et al., Managing Project Risks, Cap. 10 (Monitoring Procedures) | SIN AGRUPAR (pide decision) |  |
@@ -140,4 +140,4 @@ Separador elegido para identificar declaraciones dentro de `fuente`: **` | ` (pi
 | Venture Deals - Brad Feld | Venture Deals - Brad Feld | MECANICO: agrupa por cadena entera, canonica la propia grafia |  |
 | Winning at New Products - Robert G. Cooper | Winning at New Products - Robert G. Cooper | SIN AGRUPAR (pide decision) |  |
 
-TOTAL filas: 129 (38 grafias en grupos mecanicos de 2 o mas, 91 sin agrupar), contra 129 grafias del censo.
+TOTAL filas: 129 (39 grafias en grupos mecanicos de 2 o mas, 90 sin agrupar), contra 129 grafias del censo.
