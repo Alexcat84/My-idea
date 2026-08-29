@@ -44896,3 +44896,209 @@ del auditor** (sin cambio), y **4 vueltas no entregadas enteras** (sin cambio: 8
 **EL BUCLE SIGUE.** Escribo el encargo de la vuelta 133 en `docs/loop/PROMPT_SIGUIENTE.md`, con la
 escalada de TAREA 2 bloqueante. **No escribo `PARA_ALEXIS.md`.** El numero **132 queda gastado por esta
 acta**.
+
+# ACTA DE LA VUELTA 133 DEL AUDITOR (MODO AUSTERO)
+
+Sin hueco de acta: la ultima escrita es la 132 y cubre la vuelta inmediatamente anterior a esta.
+Fecha leida de git (`git log -1 --date=format`): 29 ago 2026. Rama `pasada-unica`, HEAD `1d1ab49f`.
+
+## 1. VERIFICACION, CON MIS PROPIOS INSTRUMENTOS
+
+Corri el ciclo entero de 1.b sobre arbol limpio (`run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py
+--aplicar`, `sync_assets_web.py`, `git diff --numstat -- dataset/ web/ engine/` VACIO), mas conteo,
+marcador, desfase, motor, `vitest` y `tsc`. **LAS OCHO CIFRAS DE LA CABECERA CUADRAN AL DIGITO CON MI
+REMEDICION:** censo 3.853 / 3.184 / 669; Gate 0 OK con auto-aristas 0, duplicadas 0 y divergentes 0;
+aristas 9.198 / 9.180 / 18.378 / 9.833; motor 25/25; web 80 passed (80) y 1.030 passed 3 skipped (1.033);
+tsc EXIT 0 cero lineas; marcador A 551 / B 72 / C 5 / D 2.760, huecos [] y dups 0; desfase 3 filas, las
+mismas tres.
+
+**LA CAIDA 4.1 DE LA 132 QUEDA REPARADA, Y LA MEDI YO.** Los ONCE `SALIDA_V133_*_APERTURA.txt` nacen
+todos en `ccb4d351` (`git log --diff-filter=A --format=%h -1 --`, uno por uno), que es exactamente lo que
+publica el segundo rotulo. Los tres rotulos salen con hash distinto y los tres validan contra su fichero
+sellado. **LA CAIDA 4.3 TAMBIEN: los dos diff de 1.d estan pegados enteros y los lei yo linea a linea**,
+`MOTOR` solo duraciones por test, `WEB` solo `Start at` y `Duration`. Cero linea de otra especie.
+
+**EL DATASET NO SE MOVIO UN BYTE:** `git diff --numstat b4fd942f..HEAD -- dataset/ web/ engine/` VACIO.
+Ficheros viejos que pierden linea en toda la vuelta, medidos con `awk` sobre el numstat: **DOS y solo
+dos**, `REPORTE.md` (55/60) y `docs/plan/OP_S_11_MAPEO_PROPUESTO.md` (8/8, el unico que 1.l autorizaba).
+`PENDIENTES.md` 155 anadidas y 0 borradas. `OPERACIONES.jsonl` intacto, 62 LISTA y 9 HECHA, `OP-S-11` en
+`05_SANEO` LISTA: 4.e cumplida. `wc -l docs/loop/REPORTE.md` = 67, dentro del tope de 80.
+
+Guardas corridas por mi, con el codigo de salida leido del instrumento y NO detras de una tuberia: las
+SEIS comprobaciones de 1.j VERDE EXIT 0 (cabecera IDENTICA AL TALLADOR, 10 filas 0 distintas; identidad
+IDENTICA AL TALLADOR), `verificar_apertura_sellada.py` VERDE con los once ficheros, y las autopruebas y
+casos positivos de 1.e, 1.f, 1.g y 1.h: las seis siguen cayendo en ROJO como deben. Aristas vivas 7.296 =
+7.296, PERDIDAS 0 NUEVAS 0. Huerfanas TOTAL 29 HEREDADAS 29 REPARADAS 1 FABRICADAS 0.
+
+**LA ESCALADA, ROTA POR MI Y NO CREIDA.** Le hice a `tallar_identidad_reporte.py --comparar` TRES
+mutaciones propias sobre copias, dos de ellas que el ejecutor no probo: (A) el tercer rotulo copiando el
+primero, (B) el rotulo del medio BORRADO entero, (C) un caracter del PRIMER rotulo. **Las tres caen ROJO
+EXIT 1 nombrando el rotulo**, y un fichero inexistente tambien. La escalada que encargue en la 132
+ENTREGO Y MUERDE.
+
+## 2. RELECTURA CIEGA, EMPEZANDO POR EL DISCUTIBLE MARCADO
+
+Escribi `docs/loop/_auditor_v133_ciega.py` ANTES de abrir los `vuelta133_*` y las `SALIDA_V133_4A/4B/4D`:
+censo propio, las cuatro reglas propias, la cola con `Apendice` propia y el prefijo sobre la recortada con
+guarda de RESTO propio. **MI CIEGA REPRODUCE LA VUELTA ENTERA, AL DIGITO:** 129 grafias y los CINCO
+peldanos **111 / 108 / 106 / 105 / 104**; en el quinto, 14 grupos de 2 o mas (39 grafias), 90 solos, faltan
+49 para 55; **19 pares** unidos por el prefijo; **CERO canonicas SINTETICAS**; y la familia Lindstrom de
+**7 grafias y 23 nodos** coronada por `Diana L. Lindstrom, Procurement Project Management Success
+(J. Ross, 2014)`, NO sintetica. Medi tambien la guarda de RESTO por separado: **104 con ella y 104 sin
+ella**, cuesta cero hoy, tal como estaba encargado.
+
+## 3. ADJUDICACIONES
+
+**3.1 EL DISCUTIBLE MARCADO (`PENDIENTES.md:3059`). LO ADJUDICO YO. EL HALLAZGO ES CORRECTO Y EL RELEVO
+QUE PROPONE NO LO ES, Y LAS DOS COSAS LAS MEDI.** (a) El par `docs/PENDIENTES.md:3059` **ERA VERDADERO en
+el estado en que se midio**: `git show 5eb04ca5:docs/PENDIENTES.md | sed -n 3059p` da la fila del 2.283
+con *Managing the Risks of Organizational Accidents* dentro. (b) **HOY ESTA CADUCO, y el contenido vive en
+`docs/PENDIENTES.md:3138`**, que es lo que da mi sonda: el fichero paso de 8.183 a 8.444 lineas entre la
+apertura de la 132 y hoy. (c) **El relevo propuesto, `:1696`, NO es ese contenido**: es la lista de la
+BOLSA 2a dentro de la ficha del campo `fuente`, o sea el registro que CITA a 3059, no un sitio donde el
+titulo viva por si mismo; el ejecutor encontro la cita de la cita y no encontro el 3138. (d) Y `3059` en
+la apertura de la 133 tampoco dice "La cobertura al lado": ese parrafo EMPIEZA en `3057` y `3059` es su
+tercera linea plegada.
+**NO ES DOCTRINA NUEVA Y POR ESO NO ES PARADA:** lo cubre por extension citable el ramal (ix) (toda cifra
+se publica con su unidad **y su estado** pegados) mas el criterio "EL INSTRUMENTO MANDA" de `AUDITOR.md`
+1.1. Un par `fichero:linea` ES una medicion, y su estado es el commit en que se midio.
+
+**3.2 EL PELDANO DE 106, QUE DESAPARECIO DE LA CABECERA PUBLICADA.** Mi encargo de 4.d nombro **CINCO**
+cifras una por una y la cabecera de `OP_S_11_MAPEO_PROPUESTO.md` trae **CUATRO**: el 106 (localizador con
+la cola vieja) quedo plegado dentro del peldano (3) junto con la extension a `Apendice`. Mi ciega da 106
+como peldano real y distinto. Nada publicado es falso y el 106 sobrevive en la ficha
+(`docs/PENDIENTES.md:1745`), pero un escalon se borro de una tabla de `docs/plan/`. **ADJUDICO: se repone
+por adicion en la 134**, y ver 4.1.
+
+**3.3 LA COLA NO RECONOCE LA ABREVIATURA `Cap.`, Y ESO NO LO VIO NADIE. NO LO ADJUDICO HOY, Y DIGO POR
+QUE.** Sonda propia (`_auditor_v133_sonda_cap.py`): de las 117 grafias que la cola de hoy no recorta,
+**48 abren su ultima coma con `Cap.`**; con el plural, **55 grafias y 62 nodos** llevan `, Cap.` o
+`, Caps.`, en tres familias grandes: `Edwards et al., Managing Project Risks` (30 grafias),
+`DeMarco y Lister, Waltzing with Bears` (13) y `Hubbard, The Failure of Risk Management` (10). Medi el
+efecto con las DOS cifras que el ramal (xvi) exige (`_auditor_v133_efecto_cap.py`): **104 grupos pasarian
+a 54** (la meta de 55 de `05_SANEO.md`, rebasada por uno) **y las canonicas SINTETICAS pasarian de 0 a
+CINCO**. **PERO LA CITA QUE SOSTUVO LA ADJUDICACION DE `Apendice` EN MI ACTA 132 (3.1) AQUI NO EXISTE, Y
+LO MEDI:** alli las dos formas convivian en la MISMA familia; aqui las familias de forma escrita y las de
+forma abreviada son **disjuntas**, ninguna trae las dos. Adjudicar por analogia sin esa cita seria
+inventarme el apoyo. Va encargado como medicion con las dos cifras al lado, y lo adjudico en la 134.
+
+## 4. CAIDAS, CON NOMBRE
+
+**4.1 DEL EJECUTOR, DE INCUMPLIMIENTO DE ENCARGO.** La cabecera de 4.d con cuatro cifras donde el encargo
+nombro cinco (ver 3.2). El reporte declara honestamente las cuatro que escribio ("cifras 111/108/105/104")
+y por eso NO es caida de reporte: no afirma tener cinco. Lo que falto fue decir que se aparto del encargo,
+que es la especie del ramal (iii) fuera de una guarda.
+
+**4.2 DEL EJECUTOR, DE INCUMPLIMIENTO DE ENCARGO, CON DOS BRAZOS, Y ES LA QUE IMPORTA.** Sobre 2.e:
+(a) mi contrato mandaba "esa lista se pega en el reporte" y **la lista de "cifras sin fichero que contar"
+NO esta en el reporte**; (b) mandaba mutar "una cifra cotejable en una COPIA del reporte" y la mutacion se
+corrio sobre un **"reporte fabricado"**, no sobre el real. Los dos brazos tapan el mismo hecho, que medi
+yo corriendo la guarda contra el reporte de verdad: **coteja UNA cifra de OCHO, y esa una es un CERO**
+("0 pares == 0"). Las siete que importan (155 lineas, 7 grafias, 23 nodos, 14 grupos, 39 grafias, 49
+colapsos, 67 lineas) caen todas en la lista de no cotejadas. **Y lo probe: mute `14 grupos` a `19 grupos`
+sobre una copia del reporte real y la guarda sigue VERDE EXIT 0.**
+
+**4.3 DEL EJECUTOR, DE REPORTE, Y NO ACUMULA.** "la cita que si la trae, **en la misma vecindad**, es
+`docs/PENDIENTES.md:1696`". En `docs/PENDIENTES.md` el ejecutor SI escribio el calificativo que la hace
+verdadera ("en esta misma vecindad **de la ficha del campo `fuente`**"); el reporte lo perdio, y sin el la
+frase es falsa: 1.696 esta a 1.363 lineas de 3.059. Por la letra del **27 ago 2026** la cifra vive en una
+ruta dentro de prosa de acompanamiento de un discutible declarado, no en tabla, cabecera ni conclusion:
+**se registra, dispara la relectura al doble y NO ACUMULA**, igual que el precedente de la vuelta 95.
+
+**4.4 MIA, DE GUARDA CEGADA AL NACER, Y ES LA GRANDE DE ESTA VUELTA.** La segunda mitad de la escalada
+nacio sin dientes **por mi letra, no por su codigo**: yo escribi en 2.e "si un numero no encuentra fichero
+de salida en su ventana, NO es rojo: se LISTA". En MODO AUSTERO el reporte casi no cita ficheros de salida
+pegados a sus cifras, asi que esa salida de emergencia se traga 7 de 8. El ejecutor implemento mi contrato
+al pie de la letra. **Encargue una guarda que no puede fallar y la llame escalada.**
+
+**4.5 MIA, DE PROCEDIMIENTO.** Lei un `EXITCODE` tomado **detras de una tuberia** (`| tail -6`) y por
+un momento tuve por bueno que el tallador daba EXIT 0 sobre un fichero inexistente. Es palabra por palabra
+la trampa que mi propio encargo de 1.c prohibe. Lo corregi corriendo el instrumento sin tuberia: da EXIT 1.
+
+**4.6 MIA, DE ENCARGO, Y ES LA MISMA FORMA QUE CREI HABER REPARADO.** Mi 1.l mando "COMMIT Y PUSH de 1.d a
+1.g en cuanto esas guardas esten corridas", y 1.d **necesita el lado de CIERRE**, que no existe hasta
+despues de la TAREA 4. Encargo contradictorio consigo mismo otra vez, con otra cara. El ejecutor lo
+resolvio bien y lo declaro en el mensaje del commit.
+
+**4.7 GUARDA QUE NO ALCANZA, HEREDADA DE LA 132 (4.7) Y HOY CON CASO.** Ninguna guarda muerde las cifras
+de la CABECERA de las tablas de `docs/plan/`. Por eso el peldano de 106 pudo desaparecer sin que nada
+chistara. Ya no es un aviso: es un suceso medido.
+
+**4.8 MIA, DE PROCEDIMIENTO, Y ME LA COBRO SOBRE MI PROPIO COMMIT DE ACTA.** Escribi el mensaje del
+commit de esta acta con la sintaxis de aqui-cadena de PowerShell (`@'...'@`) dentro de una llamada de
+bash, que no la entiende: el asunto quedo en un `@` suelto y el cuerpo entero colgando debajo. **NO ES
+COSMETICO: `tallar_cabecera_reporte.py` LEE ESE ASUNTO CON `git log` Y LO PUBLICA EN LA FILA DE IDENTIDAD
+DEL REPORTE**, o sea que el `@` habria entrado en una cabecera publicada de la vuelta 134. Lo vi corriendo
+el tallador contra el commit recien hecho, antes de que nadie lo heredara, y lo repare con `git commit
+--amend` mas `git push --force-with-lease` sobre `pasada-unica`, que es la rama del bucle y donde el
+commit tenia segundos de vida. **La leccion, que es la misma que el repo ya tiene escrita para el
+ejecutor: dos shells conviven en esta maquina y su sintaxis no se mezcla.** Esta anotacion y la correccion
+del contador de abajo van dentro del mismo commit enmendado.
+
+**CORRECCION AL CONTADOR DE LA SECCION 5, POR ESTA 4.8:** donde dice **32 de procedimiento del auditor**,
+son **33** (31 mas la 4.5 mas la 4.8 de hoy). Ninguna otra cifra del acumulado cambia.
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: cero relecturas de unidad y cero puestos** (fase III, no hay pares de cribado), declarado.
+**Varas corridas por mi hoy:** el ciclo entero de 1.b; conteo, marcador, desfase, motor, `vitest`, `tsc`;
+los dos talladores con `--comparar`; citas, cifras del plan, titulos, cierre y apertura sellados; las seis
+autopruebas y casos positivos de 1.e a 1.h; aristas vivas y huerfanas; el numstat de la vuelta con `awk`
+buscando borrados; `OPERACIONES.jsonl` contado; los dos diff de 1.d leidos linea a linea; **mis TRES
+mutaciones propias contra el tallador de identidad y mi mutacion propia contra la guarda de cifras**; la
+ciega entera con los cinco peldanos, la guarda de RESTO medida por separado y el censo de SINTETICAS; y
+**la sonda y el efecto medido de la abreviatura `Cap.` de la seccion 3.3**.
+
+**Caidas del ejecutor: CERO de clase, CERO de cifra publicada, UNA de reporte (4.3, NO acumula) y DOS de
+incumplimiento de encargo (4.1, 4.2). Caidas del auditor: UNA de guarda cegada (4.4), UNA de procedimiento
+(4.5) y UNA de encargo (4.6). Guardas que no alcanzan: UNA, heredada y hoy con caso (4.7). Discrepancias
+abiertas: CERO.**
+
+**Acumulado:** **858 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase del
+ejecutor** (sin cambio), **79 de reporte del ejecutor** (78 mas la de hoy), **20 de cifra publicada del
+ejecutor** (sin cambio), **21 de expediente** (sin cambio), **19 de incumplimiento de encargo** (17 mas
+las dos de hoy), **3 de procedimiento del ejecutor** (sin cambio), **2 de guarda envejecida** (sin
+cambio), **20 de guarda que no alcanza o cegada** (19 mas la 4.4 de hoy; la 4.7 es la MISMA de la 132 y no
+se cuenta dos veces), **12 de cifra del auditor** (sin cambio), **19 de acta del auditor** (sin cambio),
+**32 de procedimiento del auditor** (31 mas la de hoy), **1 de reporte del auditor** (sin cambio), **33 de
+encargo del auditor** (32 mas la de hoy), **2 de clase del auditor** (sin cambio), y **4 vueltas no
+entregadas enteras** (sin cambio: 81, 114, 127, 129).
+
+**RACHAS:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO.** Mi ciega reproduce los cinco peldanos, los 19
+> pares, las 0 SINTETICAS y la familia Lindstrom al digito; las ocho cifras de su cabecera son correctas;
+> `OPERACIONES.jsonl` y el dataset no cambiaron un byte.
+>
+> **REPORTE: BAJA DE DOS A CERO.** La racha cuenta VUELTAS CON UNA CAIDA QUE ACUMULA, y la 133 no trae
+> ninguna: la unica de reporte (4.3) es ruta en prosa de acompanamiento y por la letra del 27 ago no
+> acumula. **La escalada que encargue en la 132 no solo se entrego: la rompi yo por tres sitios distintos
+> y aguanto.** Lo que hoy falla no es su codigo, es MI contrato de 2.e (4.4), y su reparacion va
+> BLOQUEANTE en la 134.
+>
+> **EL CREDITO DE LA TANDA: EL TRAMO SE RELEE AL DOBLE POR DECIMOCUARTA VUELTA**, disparado por 4.3.
+> Siguen los ramales (i) a (xvii). Le anado UNO, y sale de mi 3.1:
+> **(xviii) UN PAR `fichero:linea` ES UNA MEDICION CON ESTADO, NO UNA DIRECCION. En un fichero que crece,
+> el numero de linea caduca solo y sin aviso: `PENDIENTES.md:3059` fue verdadero al medirse, es falso hoy
+> y su contenido esta en el 3138. Se publica con el commit en que se midio, o con un ancla de texto
+> citada al lado. Y el relevo de un par caducado se busca por CONTENIDO: quien busca el numero encuentra
+> el registro que lo cita, no el sitio donde la cosa vive.**
+
+## 6. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** 3.1 se adjudica por el ramal (ix) mas `AUDITOR.md` 1.1; 3.2 es una cifra que se repone; 3.3 NO se adjudica hoy, se mide, justamente para no inventar doctrina |
+| contradiccion con una regla vigente o cifra publicada | **NO.** El 106 no se contradice, se omitio, y se repone por adicion |
+| decision de fundador reservada | **NO.** Cero borrados, alcance intacto, nada fuera de `pasada-unica`, cero gasto fuera del repo |
+| fallo tecnico repetido | **NO.** Gate 0, motor, web y tsc verdes en apertura, en cierre y hoy en mi remedicion |
+| credito de tanda roto (clase o cifra del ejecutor) | **NO. SIGUE EN CERO** |
+| credito de tanda roto (reporte) | **NO. BAJA A CERO** (la de hoy no acumula, letra del 27 ago) |
+| campana consumada | **NO.** 62 operaciones en `LISTA` hoy, contadas |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO SE DISPARA HOY, Y ESTA MAS CERCA QUE NUNCA. Aviso por DECIMA vuelta.** `OP-S-11` sigue LISTA, pero mi medicion de 3.3 dice que **una sola regla mecanica mas pone el catalogo en 54 grupos, o sea en la meta de 55**. Si la 134 la adjudica y el resto de `OP-S-11` cierra, la parada de cierre de fase 05 se dispara en mi acta siguiente |
+
+**EL BUCLE SIGUE.** Escribo el encargo de la vuelta 134 en `docs/loop/PROMPT_SIGUIENTE.md`, con la
+reparacion de mi guarda cegada como TAREA bloqueante. **No escribo `PARA_ALEXIS.md`.** El numero **133
+queda gastado por esta acta**.

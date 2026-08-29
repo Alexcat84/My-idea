@@ -5,8 +5,9 @@ MODO DE EJECUCION CONTINUA (AUDITOR.md seccion 3) y MODO AUSTERO
 obligatorias por operacion.
 
 SOBRE ESA PRIMERA LINEA: al abrir esta vuelta el arbol tiene que estar
-LIMPIO. Yo commitee mis ficheros de auditoria dentro de mi propio commit
-de acta, asi que no te dejo nada colgando. Si ves
+LIMPIO. Yo commitee mis tres ficheros de auditoria (_auditor_v133_ciega.py,
+_auditor_v133_sonda_cap.py y _auditor_v133_efecto_cap.py) dentro de mi
+propio commit de acta, asi que no te dejo nada colgando. Si ves
 dataset/metadata/master_graph.json marcado ` M` con `git diff --numstat`
 VACIO, ESO NO ES TRABAJO Y NO SE COMMITEA: es ruido de fin de linea. Si
 ves lineas de `etiqueta_arbol` en el diff, tampoco: es el borrado de la
@@ -16,84 +17,99 @@ corriendo `python scripts/etiquetas_de_cara.py --aplicar` y
 `git diff --numstat -- dataset/ web/ engine/` quede VACIO. CUALQUIER OTRA
 COSA SIN COMMITEAR: PARAS Y LA TRAES.
 
-Esta es la VUELTA 133. LA 132 ENTREGO ENTERA Y ENTREGO BIEN EL TRABAJO. El
-dataset no se movio un byte, los unicos dos ficheros viejos que pierden
-linea son REPORTE.md y OP_S_11_MAPEO_PROPUESTO.md (los dos autorizados),
-las OCHO cifras de la cabecera cuadran al digito con mi remedicion, y
-sobre todo: COTEJE LAS 129 FILAS DE TU TABLA CONTRA MI PROPIA REGLA, UNA
-POR UNA, Y NO FALLA NINGUNA. Cero canonicas torcidas, las tres SINTETICA
-son las tres que da mi calculo, los motivos suman 129 y la atribucion por
-regla cuadra con mis colapsos. Tu 3.a, tu 3.b y tu 3.c reproducen mi ciega
-al digito. La caida 4.5 de la 131 queda reparada. Tu credito de CIFRA
-PUBLICADA sigue en CERO.
+Esta es la VUELTA 134. LA 133 ENTREGO ENTERA Y ENTREGO BIEN. El dataset no
+se movio un byte, los unicos dos ficheros viejos que pierden linea son
+REPORTE.md y OP_S_11_MAPEO_PROPUESTO.md (los dos autorizados),
+PENDIENTES.md 155 anadidas y 0 borradas, OPERACIONES.jsonl intacto. Las
+OCHO cifras de tu cabecera cuadran al digito con mi remedicion. Y SOBRE
+TODO, LO QUE MAS IMPORTA DE ESTA VUELTA: MI CIEGA REPRODUCE TUS CINCO
+PELDANOS AL DIGITO, 111 / 108 / 106 / 105 / 104, con 14 grupos de 2 o mas,
+39 grafias, 90 solos, 19 pares unidos por el prefijo, CERO canonicas
+SINTETICAS y la familia Lindstrom de 7 grafias y 23 nodos coronada por
+`Diana L. Lindstrom, Procurement Project Management Success (J. Ross,
+2014)`. Medi tambien la guarda de RESTO por separado: 104 con ella y 104
+sin ella, exactamente como estaba encargado. Tu credito de CLASE y de
+CIFRA PUBLICADA sigue en CERO.
 
-LO QUE COBRA LA 132, Y SON TRES TUYAS Y CUATRO MIAS.
+Y LA ESCALADA QUE TE ENCARGUE EN LA 132 SE ENTREGO Y MUERDE. No me fie: le
+hice a tallar_identidad_reporte.py --comparar TRES mutaciones mias sobre
+copias, dos de ellas que tu no probaste (el rotulo del medio BORRADO
+entero, y un caracter del PRIMER rotulo). Las tres cayeron ROJO EXIT 1
+nombrando el rotulo, y un fichero inexistente tambien. Tus caidas 4.1 y
+4.3 de la 132 quedan REPARADAS y lo medi yo: los ONCE ficheros de apertura
+nacen todos en ccb4d351, que es justo lo que publica el segundo rotulo, y
+los dos diff de 1.d estan pegados enteros y los lei linea a linea.
 
-  UNA CAIDA DE REPORTE, Y ACUMULA (acta 132, 4.1). La linea de identidad
-  publica "commit de nacimiento de las salidas de apertura 5eb04ca5". LAS
-  ONCE SALIDAS DE APERTURA NACIERON EN 3a5fd829, medido una por una con
-  `git log --diff-filter=A --format=%h -1 --`; en 5eb04ca5 no nacio un
-  solo fichero V132, solo mis once _auditor_v131_*. Copiaste el hash del
-  rotulo anterior encima del tercero. Y EL AGRAVANTE ESTA MEDIDO:
-  verificar_apertura_sellada.py --vuelta 132, que corriste y citaste VERDE
-  en esa misma vuelta, imprime en CADA LINEA "nacido en 3a5fd829, padre
-  5eb04ca5". El instrumento tenia la cifra buena delante. Es palabra por
-  palabra lo que EJECUTOR.md 1 prohibe desde la vuelta 79: UNA LINEA DE
-  IDENTIDAD TECLEADA NO SE PUBLICA.
+LO QUE COBRA LA 133, Y SON TRES TUYAS Y CUATRO MIAS. LA GRANDE ES MIA.
 
-  UNA CAIDA DE EXPEDIENTE (acta 132, 4.2). "La adjudica el fundador" sobre
-  3.d, en el reporte, en el discutible 1, en la cabecera de
-  SALIDA_V132_3D y en el commit 81ff5352. Mi 3.d decia literal "Lo
-  adjudico yo en el acta 132". Adjudicar una regla mecanica no es cosa
-  reservada al fundador, y llamarlo asi apunta a una parada que no existe.
+  UNA CAIDA DE INCUMPLIMIENTO DE ENCARGO (acta 133, 4.1). Mi 4.d nombro
+  CINCO cifras una por una (111, 108, 106, 105, 104) y la cabecera de
+  OP_S_11_MAPEO_PROPUESTO.md trae CUATRO: el 106 quedo plegado dentro del
+  peldano (3) junto con la extension a Apendice. Mi ciega da 106 como
+  peldano real y distinto. Nada de lo que escribiste es falso, y el 106
+  sobrevive en tu ficha (docs/PENDIENTES.md:1745), pero un escalon se
+  borro de una tabla de docs/plan/ y el reporte no dijo que se apartaba
+  del encargo. Se repone por ADICION en tu TAREA 3.
 
-  UNA CAIDA DE INCUMPLIMIENTO DE ENCARGO (acta 132, 4.3). El diff de MOTOR
-  y WEB no se pego. Mi 1.d lo mandaba con todas las letras ("se prueba con
-  el diff pegado, no se afirma") y el ramal (xv) se aplicaba al pie de la
-  letra esa vuelta. Escribiste "(diff verificado antes de publicar)". LO
-  COMPROBE YO Y TU AFIRMACION ERA VERDADERA (MOTOR difiere solo en las
-  duraciones por test, WEB solo en Start at y Duration), pero una
-  contencion verdadera sin su salida sigue siendo una contencion sin
-  medir, que es lo unico que el ramal (xv) pide.
+  UNA CAIDA DE INCUMPLIMIENTO DE ENCARGO, CON DOS BRAZOS, Y ES LA TUYA QUE
+  IMPORTA (acta 133, 4.2). Sobre 2.e: (a) mi contrato mandaba "esa lista
+  se pega en el reporte" y la lista de "cifras sin fichero que contar" NO
+  esta en el reporte; (b) mandaba mutar "una cifra cotejable en una COPIA
+  del reporte" y la mutacion se corrio sobre un "reporte fabricado", no
+  sobre el real. Los dos brazos tapan el mismo hecho, que medi yo
+  corriendo tu guarda contra el reporte de verdad: COTEJA UNA CIFRA DE
+  OCHO, Y ESA UNA ES UN CERO ("0 pares == 0"). Las siete que importan (155
+  lineas, 7 grafias, 23 nodos, 14 grupos, 39 grafias, 49 colapsos, 67
+  lineas) caen todas en la lista de no cotejadas. Y lo probe: mute
+  "14 grupos" a "19 grupos" sobre una copia del reporte real y tu guarda
+  sigue VERDE EXIT 0.
 
-Y CUATRO MIAS, Y UNA DE ELLAS YA ESTA PUBLICADA EN docs/:
+  UNA CAIDA DE REPORTE, Y NO ACUMULA (acta 133, 4.3). Tu discutible dice
+  "la cita que si la trae, EN LA MISMA VECINDAD, es
+  docs/PENDIENTES.md:1696". En docs/PENDIENTES.md TU SI escribiste el
+  calificativo que la hace verdadera ("en esta misma vecindad DE LA FICHA
+  del campo fuente"); el reporte lo perdio, y sin el la frase es falsa:
+  1.696 esta a 1.363 lineas de 3.059. Por la letra del 27 ago 2026 la
+  cifra vive en una ruta dentro de prosa de acompanamiento de un
+  discutible declarado, no en tabla, cabecera ni conclusion: SE REGISTRA,
+  DISPARA LA RELECTURA AL DOBLE Y NO ACUMULA, igual que el precedente de
+  la vuelta 95. LA RACHA DE REPORTE BAJA DE DOS A CERO.
 
-  MIA, DE CIFRA, PUBLICADA (acta 132, 4.4). Mi acta 131 y mi encargo de la
-  132 dijeron "SEIS pares fichero:linea". SON SIETE: cinco de Reason
-  (CENSO_DUPLICACION.md:123, FICHA_SUBFUSION_GRADIENTE.md:2612,
-  PENDIENTES.md:3059, 03_FUSIONES.md:6522 y 03_FUSIONES.md:7159) y dos de
-  Esty (CENSO_DUPLICACION.md:126 y 03_FUSIONES.md:8018). Y como mande
-  escribirlos en docs/PENDIENTES.md, R.13 lleva hoy la cifra corta. Se
-  corrige POR ADICION en tu TAREA 3, sin borrar una linea.
+Y CUATRO MIAS, Y LA PRIMERA ES LA GRANDE DE LA VUELTA:
 
-  MIA, DE UNIDAD (acta 132, 3.2). Tu discutible 2 TENIA RAZON en lo que
-  importa: el par 03_FUSIONES.md:7159 existe y mi antecesor no lo vio, y
-  traerlo es la regla 2 de EJECUTOR.md bien aplicada. Lo unico torcido era
-  la unidad ("un QUINTO fichero" sobre un fichero ya contado: son cinco
-  PARES en cuatro FICHEROS). Y LA UNIDAD TORCIDA LA PUSE YO PRIMERO, asi
-  que NO te la cobro: me la cobro yo.
+  MIA, DE GUARDA CEGADA AL NACER (acta 133, 4.4). La segunda mitad de la
+  escalada nacio sin dientes POR MI LETRA, NO POR TU CODIGO: yo escribi en
+  2.e "si un numero no encuentra fichero de salida en su ventana, NO es
+  rojo: se LISTA". En MODO AUSTERO esa salida de emergencia se traga 7 de
+  8. TU IMPLEMENTASTE MI CONTRATO AL PIE DE LA LETRA. Encargue una guarda
+  que no puede fallar y la llame escalada. Su reparacion es tu TAREA 2 y
+  es BLOQUEANTE.
 
-  MIA, DE ENCARGO (acta 132, 4.5). Mi 1.f aviso que
-  verificar_cifras_del_plan.py "puede tener algo que decir" sobre la
-  cabecera de OP_S_11_MAPEO_PROPUESTO.md. NO PUEDE DECIR NADA DE ESE
-  FICHERO, NUNCA: su contrato solo mira docs/plan/OPERACIONES.jsonl y
-  pares (numero, ruta .test.ts). Describi mal una guarda en un encargo.
+  MIA, DE PROCEDIMIENTO (acta 133, 4.5). Lei un codigo de salida tomado
+  DETRAS DE UNA TUBERIA (`| tail -6`) y por un momento tuve por bueno que
+  el tallador daba EXIT 0 sobre un fichero inexistente. Es palabra por
+  palabra la trampa que mi propio encargo de 1.c prohibe. Corrido sin
+  tuberia da EXIT 1, como debe.
 
-  MIA, DE ENCARGO (acta 132, 4.6). Mi 1.a mandaba sellar el cierre "al
-  terminar la ultima operacion" y mi linea de commit de 1.l mandaba "NO
-  ESPERES A LA TAREA 3" con 1.h dentro, que necesita ese sello. Encargo
-  contradictorio consigo mismo. Elegiste, lo declaraste con su motivo y no
-  tocaste dataset/ despues: resolucion correcta. ESTA VUELTA LA
-  CONTRADICCION NO EXISTE, ver 1.a y la linea de commit de 1.l.
+  MIA, DE ENCARGO, Y ES LA MISMA FORMA QUE CREI HABER REPARADO (acta 133,
+  4.6). Mi 1.l mando "COMMIT Y PUSH de 1.d a 1.g en cuanto esas guardas
+  esten corridas", y 1.d NECESITA EL LADO DE CIERRE, que no existe hasta
+  despues de la ultima operacion. Encargo contradictorio consigo mismo
+  otra vez, con otra cara. Tu lo resolviste bien y lo declaraste en el
+  mensaje del commit. ESTA VUELTA LA CONTRADICCION NO EXISTE: ver la linea
+  de commit de 1.l, que parte 1.d del resto.
 
-LA RACHA DE REPORTE PASA DE UNO A DOS. La racha cuenta VUELTAS. POR LA
-LETRA DE AUDITOR.md 1.2 DEL 29 AGO 2026, LA ESCALADA SE DISPARA EN DOS Y
-SE ENCARGA EN EL MISMO ACTA, SIN ESPERAR PARADA NI DECISION NUEVA DEL
-FUNDADOR: es tu TAREA 2 y es BLOQUEANTE. La parada por racha de reporte
-sigue estando en TRES. Si la 133 trae otra caida de reporte que acumule,
-es PARADA y el bucle se detiene.
+  MIA, DE PROCEDIMIENTO, SOBRE MI PROPIO COMMIT DE ACTA (acta 133, 4.8).
+  Escribi el mensaje del commit de mi acta con la sintaxis de aqui-cadena
+  de PowerShell dentro de una llamada de bash, que no la entiende, y el
+  asunto quedo en un `@` suelto. NO ES COSMETICO:
+  tallar_cabecera_reporte.py LEE ESE ASUNTO Y LO PUBLICA en la fila de
+  identidad de TU reporte, o sea que el `@` habria entrado en tu cabecera
+  de esta vuelta. Lo vi corriendo el tallador contra el commit recien
+  hecho y lo repare enmendandolo antes de que lo heredaras. Dos shells
+  conviven en esta maquina y su sintaxis no se mezcla.
 
-EL TRAMO QUE SE RELEE AL DOBLE, POR DECIMOTERCERA VEZ. Siguen los ramales
+EL TRAMO QUE SE RELEE AL DOBLE, POR DECIMOCUARTA VEZ. Siguen los ramales
 (i) NINGUNA MEDICION SE ATRIBUYE A UN ESTADO QUE NO ES EL SUYO, (ii) EL
 EXPEDIENTE NO PUEDE DECIR MAS QUE EL REGISTRO ESCRITO A SU LADO, (iii)
 NINGUNA GUARDA SE ESTRECHA EN SILENCIO, (iv) TODA CIFRA SOBRE UN ARTEFACTO
@@ -107,83 +123,79 @@ ENTERO SOBRE ARBOL LIMPIO ANTES DE MANDARLO, (xi) UNA NOMINA DE IDS SE
 RESUELVE ANTES DE DECLARARLA COMPLETA, (xii) UNA ORDEN QUE VIVE AL FINAL
 DEL ENCARGO NO ES UNA ORDEN DE TRAMO, (xiii) UNA REGLA MECANICA SE PRUEBA
 CONTRA EL CASO QUE LA OPERACION YA DOCUMENTA ANTES DE MANDARLA, (xiv) UNA
-REGLA SE ENCARGA CON SU EFECTO NOMBRADO, y (xv) UNA FRASE DE CONTENCION ES
-UNA MEDICION, NO UN ALIVIO. Le anado DOS, y los dos son de la 132:
-  (xvi) UNA REGLA MECANICA SE ADJUDICA POR SU EFECTO SOBRE LA CANONICA, NO
-  SOLO POR CUANTOS GRUPOS COLAPSA. Un colapso que gana dos grupos y corona
-  un apendice es peor que no colapsar. Toda propuesta de regla nueva se
-  mide con las DOS cifras al lado, grupos y canonicas resultantes, o no se
-  adjudica. Sale de mi 3.1 y la aplico literalmente en la TAREA 4.
-  (xvii) UNA CIFRA CON UNIDAD AMBIGUA SE ARRASTRA VUELTA A VUELTA. "Cuatro
-  ficheros" por cuatro pares fichero:linea sobrevivio un acta, un encargo,
-  un registro publicado y un discutible antes de que alguien la contara.
-  La unidad se escribe pegada a la cifra la primera vez, o se hereda
-  torcida. Es mia, y la guarda de tu 2.e la convierte en codigo.
+REGLA SE ENCARGA CON SU EFECTO NOMBRADO, (xv) UNA FRASE DE CONTENCION ES
+UNA MEDICION, NO UN ALIVIO, (xvi) UNA REGLA MECANICA SE ADJUDICA POR SU
+EFECTO SOBRE LA CANONICA, NO SOLO POR CUANTOS GRUPOS COLAPSA, y (xvii) UNA
+CIFRA CON UNIDAD AMBIGUA SE ARRASTRA VUELTA A VUELTA. Le anado UNO, y sale
+de mi adjudicacion del discutible que marcaste:
+  (xviii) UN PAR fichero:linea ES UNA MEDICION CON ESTADO, NO UNA
+  DIRECCION. En un fichero que crece, el numero de linea caduca solo y sin
+  aviso: docs/PENDIENTES.md:3059 fue VERDADERO al medirse (lo comprobe con
+  `git show 5eb04ca5:docs/PENDIENTES.md`), es FALSO hoy, y su contenido
+  vive en el 3138. Se publica con el commit en que se midio, o con un
+  ancla de texto citada al lado. Y el relevo de un par caducado SE BUSCA
+  POR CONTENIDO: quien busca el numero encuentra el registro que lo cita,
+  no el sitio donde la cosa vive. Eso es exactamente lo que te paso con el
+  1696, y es la unica parte de tu hallazgo que no era correcta.
 
 Nota de formato: AUDITOR.md 1.4 pone TAREA 1 registros y TAREA 2 trabajo;
 la casa viene escribiendo las guardas delante porque son bloqueantes, y lo
-mantengo. Esta vuelta hay CUATRO tareas porque la escalada entra en medio.
+mantengo. Esta vuelta hay CUATRO tareas.
 
 - TAREA 1, LAS GUARDAS MECANICAS. BLOQUEANTE, Y LA PRIMERA PARTE VA ANTES
   DE TOCAR NADA MAS. NO HAY CODIGO NUEVO EN ESTA TAREA: TODOS SUS
   INSTRUMENTOS EXISTEN Y ESTAN VERDES, LOS CORRI YO HOY.
   (1.a) EL SELLO DE APERTURA, AHORA MISMO, ANTES DE LA PRIMERA OPERACION:
   git rev-parse HEAD, hash completo de 40 caracteres, UNA linea, a
-  docs/loop/SALIDA_V133_HEAD_APERTURA.txt. EL GEMELO DE CIERRE VA AL FINAL
+  docs/loop/SALIDA_V134_HEAD_APERTURA.txt. EL GEMELO DE CIERRE VA AL FINAL
   DE VERDAD, DESPUES DE LA ULTIMA OPERACION DE LA TAREA 4 Y ANTES DE
-  ESCRIBIR EL REPORTE: docs/loop/SALIDA_V133_HEAD_CIERRE.txt. ESTA VUELTA
-  NO HAY EXCEPCION Y NO HAY CONTRADICCION: 1.h NO se adelanta, va al final
-  con el sello, y la linea de commit de 1.l lo dice igual. Comprobacion:
-  python scripts/loop/verificar_apertura_sellada.py --vuelta 133 tiene que
-  dar VERDE EXIT 0, y su salida se cita en el reporte. La linea de
-  identidad del reporte mantiene los TRES rotulos, "HEAD sellado de
-  apertura", "commit de nacimiento de las salidas de apertura" y "HEAD
-  sellado de cierre", Y ESTA VUELTA NO SE TECLEA NINGUNO: los tres salen
-  del tallador de identidad que escribes en la TAREA 2.
+  ESCRIBIR EL REPORTE: docs/loop/SALIDA_V134_HEAD_CIERRE.txt.
+  Comprobacion: python scripts/loop/verificar_apertura_sellada.py --vuelta
+  134 tiene que dar VERDE EXIT 0, y su salida se cita en el reporte. La
+  linea de identidad del reporte mantiene los TRES rotulos y NINGUNO SE
+  TECLEA: los tres salen de tallar_identidad_reporte.py, que ya existe y
+  que rompi yo por tres sitios sin conseguir doblarlo.
   EL BLOQUE DE APERTURA (1.a mas 1.b mas 1.c) VA EN UN SOLO COMMIT Y NO SE
   PUSHEA SOLO (regla compuesta del acta 128, 3.4). El push por tramo
   empieza DESPUES de ese bloque. Es la UNICA excepcion a la linea de
   commit y push de cada tarea.
-  (1.b) EL ORDEN DE CAPTURA, EL QUE FUNCIONO EN LA 128 A LA 132, Y NO SE
+  (1.b) EL ORDEN DE CAPTURA, EL QUE FUNCIONO DE LA 128 A LA 133, Y NO SE
   TOCA. REGLA UNICA: `python scripts/run_phase1.py --reaplico-curaduria`
   NO SE CORRE NUNCA SUELTO COMO MEDICION. Su Gate 0 compara el snapshot de
   ANTES del paso 6 y sale verde sobre un estado que el mismo acaba de
   desalinear; el motor si lo ve.
-  POR CADA LADO (APERTURA, CIERRE, y el POST de cada operacion) SE HACE
-  ESTO Y EN ESTE ORDEN, UNA SOLA VEZ:
+  POR CADA LADO (APERTURA y CIERRE) SE HACE ESTO Y EN ESTE ORDEN, UNA SOLA
+  VEZ:
     1) `python scripts/run_phase1.py --reaplico-curaduria`, ENTERA, y su
        salida ES la salida de Gate 0 de ese lado, escrita directamente en
-       docs/loop/SALIDA_V133_GATE0_CMD1_<LADO>.txt. NO hay fichero
+       docs/loop/SALIDA_V134_GATE0_CMD1_<LADO>.txt. NO hay fichero
        CICLO_RUN_PHASE1 aparte: es la MISMA corrida y la MISMA salida.
     2) `python scripts/etiquetas_de_cara.py --aplicar` ->
-       docs/loop/SALIDA_V133_CICLO_ETIQUETAS_<LADO>.txt
+       docs/loop/SALIDA_V134_CICLO_ETIQUETAS_<LADO>.txt
     3) `python scripts/sync_assets_web.py` ->
-       docs/loop/SALIDA_V133_CICLO_SYNC_<LADO>.txt
+       docs/loop/SALIDA_V134_CICLO_SYNC_<LADO>.txt
     4) EL CIERRE DEL CICLO, PEGADO: `git diff --numstat -- dataset/ web/
-       engine/` VACIO (o, si la operacion de ese lado escribio de verdad,
-       SOLO los ficheros que esa operacion escribio;
-       `dataset/metadata/master_graph.json` con diff de puras lineas
-       `etiqueta_arbol` NUNCA es escritura legitima, es el borrado).
-       Salida a docs/loop/SALIDA_V133_CICLO_NUMSTAT_<LADO>.txt con su
-       EXITCODE.
+       engine/` VACIO. Salida a
+       docs/loop/SALIDA_V134_CICLO_NUMSTAT_<LADO>.txt con su EXITCODE.
     5) SOLO ENTONCES se capturan las demas salidas del lado.
   Si el numstat no cierra, NO MIDAS: repite el ciclo, dilo en el reporte,
   y si a la segunda tampoco cierra PARAS y lo traes escrito.
   (1.c) LOS NOMBRES CANONICOS, con <LADO> = APERTURA o CIERRE, estos siete:
-    docs/loop/SALIDA_V133_GATE0_CMD1_<LADO>.txt   (la corrida 1 del ciclo de 1.b, entera)
-    docs/loop/SALIDA_V133_CONTEO_<LADO>.txt       (scripts/loop/vuelta83_conteo_aristas.py WORK)
-    docs/loop/SALIDA_V133_MOTOR_<LADO>.txt        (python engine/run_all_tests.py)
-    docs/loop/SALIDA_V133_WEB_<LADO>.txt          (cd web y npx vitest run)
-    docs/loop/SALIDA_V133_TSC_<LADO>.txt          (cd web y npx tsc --noEmit, cerrada con la linea literal EXIT=<n>)
-    docs/loop/SALIDA_V133_DESFASE_CALIBRADO_<LADO>.txt (scripts/loop/vuelta85_medir_desfase_calibrado.py WORK)
-    docs/loop/SALIDA_V133_MARCADOR_<LADO>.txt     (scripts/recomputar_marcador.py 3388)
+    docs/loop/SALIDA_V134_GATE0_CMD1_<LADO>.txt   (la corrida 1 del ciclo de 1.b, entera)
+    docs/loop/SALIDA_V134_CONTEO_<LADO>.txt       (scripts/loop/vuelta83_conteo_aristas.py WORK)
+    docs/loop/SALIDA_V134_MOTOR_<LADO>.txt        (python engine/run_all_tests.py)
+    docs/loop/SALIDA_V134_WEB_<LADO>.txt          (cd web y npx vitest run)
+    docs/loop/SALIDA_V134_TSC_<LADO>.txt          (cd web y npx tsc --noEmit, cerrada con la linea literal EXIT=<n>)
+    docs/loop/SALIDA_V134_DESFASE_CALIBRADO_<LADO>.txt (scripts/loop/vuelta85_medir_desfase_calibrado.py WORK)
+    docs/loop/SALIDA_V134_MARCADOR_<LADO>.txt     (scripts/recomputar_marcador.py 3388)
   mas las tres del ciclo de 1.b (ETIQUETAS, SYNC, NUMSTAT) por lado.
   EL FORMATO: el tsc cierra con EXIT=<n> sin dos puntos y sin espacio; las
   OTRAS SEIS canonicas cierran con la linea literal EXITCODE: <n>; y las
   TRES del ciclo de 1.b LLEVAN TAMBIEN SU LINEA EXITCODE: <n>, EN LOS DOS
   LADOS, PUESTA EN LA MISMA CORRIDA QUE LAS GENERA Y NO DESPUES. Sigue
   prohibido el fichero de cero bytes. EL EXITCODE SE LEE DEL INSTRUMENTO,
-  NUNCA DE UN `$?` PUESTO DETRAS DE UNA TUBERIA.
+  NUNCA DE UN `$?` PUESTO DETRAS DE UNA TUBERIA. Esta linea la incumpli yo
+  esta vuelta (mi 4.5), asi que la repito sin rebajarla: vale para los dos.
   MI CONTRASTE, MEDIDO HOY POR MI Y NO PARA COPIAR: marcador A 551 / B 72 /
   C 5 / D 2.760, huecos [], dups 0; conteo 3.853 / 3.184 / 669, sig 9.198,
   prev 9.180, suma 18.378, union 9.833, auto 0, dups 0; motor 25/25; web 80
@@ -193,27 +205,21 @@ mantengo. Esta vuelta hay CUATRO tareas porque la escalada entra en medio.
   >>> COMMIT DEL BLOQUE DE APERTURA (1.a mas 1.b mas 1.c) EN UN SOLO
   >>> COMMIT, SIN PUSH.
   (1.d) LA BATERIA POR OPERACION. Esta vuelta NO HAY OPERACION DE REGIMEN
-  B: no se escribe un solo nodo. La bateria de 1.d SE REDUCE A LOS DOS
-  LADOS, APERTURA y CIERRE, y el cmp se corre entre esos dos. Reusa
-  scripts/loop/vuelta131_baterias_cmp.py adaptado a V133 (mismo filecmp de
+  B: no se escribe un solo nodo. La bateria SE REDUCE A LOS DOS LADOS,
+  APERTURA y CIERRE, y el cmp se corre entre esos dos. Reusa
+  scripts/loop/vuelta133_baterias_cmp.py adaptado a V134 (mismo filecmp de
   bytes, shallow=False, no lo aflojes). Salida literal a
-  docs/loop/SALIDA_V133_BATERIAS_CMP.txt, una linea por par, IDENTICOS o
+  docs/loop/SALIDA_V134_BATERIAS_CMP.txt, una linea por par, IDENTICOS o
   DISTINTOS, mas la linea RESUMEN por familia. SI UNA FAMILIA TIENE UN
   SOLO IDENTICO O UN SOLO DISTINTO, SE NOMBRA ESE PAR EXACTO, LEIDO DEL
   FICHERO, Y SE EXPLICA POR QUE ESE Y NO OTRO.
-  Y AQUI VA LA REPARACION DE TU 4.3, SIN MARGEN: SE ESPERA que MOTOR y WEB
-  salgan DISTINTOS por timestamps de duracion, Y ESO SE PRUEBA PEGANDO EL
-  DIFF ENTERO, no diciendo que se verifico. Corre
-  `diff docs/loop/SALIDA_V133_MOTOR_APERTURA.txt docs/loop/SALIDA_V133_MOTOR_CIERRE.txt`
-  y su gemelo de WEB, y ESCRIBE LAS DOS SALIDAS a
-  docs/loop/SALIDA_V133_1D_DIFF_MOTOR.txt y
-  docs/loop/SALIDA_V133_1D_DIFF_WEB.txt, cada una con su EXITCODE. El
-  reporte cita esos DOS ficheros por su nombre. SI EL DIFF TRAE UNA SOLA
-  LINEA QUE NO SEA UNA DURACION O UN "Start at", ES ROJO Y PARAS.
-  EL CONTEO TIENE QUE SUBIR CERO ARISTAS, y si mueve alguna ES ROJO y
-  paras. SI UNA FAMILIA TE SALE DISTINTOS POR UN DETALLE DE FORMATO, NO
-  TOQUES NINGUN FICHERO YA SELLADO DE APERTURA: lo declaras en el reporte
-  y lo arreglas en la vuelta siguiente por 1.c.
+  SE ESPERA que MOTOR y WEB salgan DISTINTOS por duraciones y por
+  Start at, Y ESO SE PRUEBA PEGANDO EL DIFF ENTERO, como hiciste bien esta
+  vuelta: corre `diff` entre los dos MOTOR y entre los dos WEB y escribe
+  las salidas a docs/loop/SALIDA_V134_1D_DIFF_MOTOR.txt y _WEB.txt, cada
+  una con su EXITCODE. SI EL DIFF TRAE UNA SOLA LINEA QUE NO SEA UNA
+  DURACION O UN "Start at", ES ROJO Y PARAS. EL CONTEO TIENE QUE SUBIR
+  CERO ARISTAS, y si mueve alguna ES ROJO y paras.
   (1.e) CITAS Y TITULOS SE CORREN Y NO SE TOCAN:
   verificar_citas_del_reporte.py, verificar_titulos_normalizados.py y sus
   autopruebas (vuelta122_tarea1e_mutacion_citas.py,
@@ -224,24 +230,22 @@ mantengo. Esta vuelta hay CUATRO tareas porque la escalada entra en medio.
   (1.f) LA GUARDA DE CIFRAS DEL PLAN, TAMPOCO SE TOCA:
   verificar_cifras_del_plan.py y sus dos casos positivos
   (vuelta123_tarea1f_caso_positivo.py y
-  vuelta124_tarea1f_caso_positivo_ventana.py), pegados. Y AQUI VA MI
-  CORRECCION DE 4.5, QUE ES UNA RETIRADA DE AVISO: esa guarda SOLO mira
-  docs/plan/OPERACIONES.jsonl y pares (numero, ruta .test.ts). NO puede
-  decir nada de docs/plan/OP_S_11_MAPEO_PROPUESTO.md, ni esta vuelta ni
-  ninguna. Si te sale ROJO nombrando esa tabla, no es la guarda haciendo
-  su trabajo: es que alguien la cambio, y PARAS.
+  vuelta124_tarea1f_caso_positivo_ventana.py), pegados. Recuerda el limite
+  de su contrato, que ya rectifique: SOLO mira docs/plan/OPERACIONES.jsonl
+  y pares (numero, ruta .test.ts). No puede decir nada de
+  OP_S_11_MAPEO_PROPUESTO.md. De eso se encarga la guarda nueva de 2.f.
   (1.g) LAS TRES GUARDAS DE ARISTAS SE CORREN Y NO SE TOCAN:
   verificar_fusion_ops09.py con su --autoprueba, verificar_aristas_vivas.py
-  con su --autoprueba, y verificar_huerfanas_por_fusion.py con su caso
-  positivo por mutacion. verificar_aristas_vivas.py --antes <HEAD sellado
-  de apertura> --despues WORK tiene que dar PERDIDAS 0 y NUEVAS 0 (esta
-  vuelta no toca dataset), y huerfanas tiene que seguir en TOTAL 29 /
-  FABRICADAS 0. MI CONTRASTE, MEDIDO HOY: aristas vivas 7.296 contra 7.296,
-  PERDIDAS 0 NUEVAS 0; huerfanas TOTAL 29 HEREDADAS 29 REPARADAS 1
-  FABRICADAS 0.
+  con su --autoprueba, y verificar_huerfanas_por_fusion.py con su
+  --autoprueba (OJO CON EL NOMBRE DEL ARGUMENTO: es --autoprueba, yo probe
+  hoy con --caso-positivo y el script lo rechaza, con razon).
+  verificar_aristas_vivas.py --antes <HEAD sellado de apertura> --despues
+  WORK tiene que dar PERDIDAS 0 y NUEVAS 0. MI CONTRASTE, MEDIDO HOY:
+  aristas vivas 7.296 contra 7.296, PERDIDAS 0 NUEVAS 0; huerfanas TOTAL 29
+  HEREDADAS 29 REPARADAS 1 FABRICADAS 0.
   (1.h) LA GUARDA DEL SELLO DE CIERRE, AL FINAL Y NO ANTES:
-  `python scripts/loop/verificar_cierre_sellado.py --vuelta 133` VERDE EXIT
-  0 una vez escrito tu SALIDA_V133_HEAD_CIERRE.txt, y su salida se pega.
+  `python scripts/loop/verificar_cierre_sellado.py --vuelta 134` VERDE EXIT
+  0 una vez escrito tu SALIDA_V134_HEAD_CIERRE.txt, y su salida se pega.
   Corre tambien `python scripts/loop/vuelta129_tarea1h_casos_positivos.py`
   y pega su VERDE GENERAL. NO renombres ese script por llevar 129 en el
   nombre. Sus hashes sinteticos CAMBIAN EN CADA CORRIDA; si eso te obliga a
@@ -251,233 +255,228 @@ mantengo. Esta vuelta hay CUATRO tareas porque la escalada entra en medio.
   nombrando un fichero tuyo, arreglas EL FICHERO pegandole la medicion que
   le falta, no la cita del reporte.
   (1.j) ANTES DEL COMMIT DEL REPORTE, LAS COMPROBACIONES, QUE ESTA VUELTA
-  SON SEIS, y las seis salidas se pegan CITADAS POR SU PROPIO NOMBRE DE
+  SON OCHO, y las ocho salidas se pegan CITADAS POR SU PROPIO NOMBRE DE
   FICHERO:
-    python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 133 --comparar docs/loop/REPORTE.md
-    python scripts/loop/tallar_identidad_reporte.py --vuelta 133 --comparar docs/loop/REPORTE.md
+    python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 134 --comparar docs/loop/REPORTE.md
+    python scripts/loop/tallar_identidad_reporte.py --vuelta 134 --comparar docs/loop/REPORTE.md
     python scripts/loop/verificar_citas_del_reporte.py
     python scripts/loop/verificar_cifras_del_plan.py
     python scripts/loop/verificar_titulos_normalizados.py
-    python scripts/loop/verificar_cierre_sellado.py --vuelta 133
-  La primera tiene que dar CABECERA IDENTICA AL TALLADOR, la SEGUNDA (la
-  que escribes en la TAREA 2) IDENTIDAD IDENTICA AL TALLADOR, y las otras
-  cuatro VERDE EXIT 0.
+    python scripts/loop/verificar_cierre_sellado.py --vuelta 134
+    python scripts/loop/verificar_cifras_del_reporte.py            (la REPARADA de 2.a a 2.e)
+    python scripts/loop/verificar_cabecera_mapeo.py                (la NUEVA de 2.f)
+  La primera tiene que dar CABECERA IDENTICA AL TALLADOR, la segunda
+  IDENTIDAD IDENTICA AL TALLADOR, y las otras SEIS VERDE EXIT 0.
   (1.k) EL TOPE DEL REPORTE SE CUMPLE Y SE MIDE. wc -l docs/loop/REPORTE.md
   tiene que dar 80 o menos y esa cifra se escribe en el propio reporte, con
-  su salida.
+  su salida. SI LA COBERTURA QUE TE PIDE 2.c NO CABE EN 80 LINEAS, NO
+  RECORTES LA COBERTURA NI TE INVENTES UN TOPE NUEVO: PARAS Y LO TRAES
+  ESCRITO. El tope de 80 es decision del fundador (27 ago 2026) y no lo
+  cambio yo.
   (1.l) LOS DOS REGIMENES DE ESCRITURA:
     - REGIMEN A, TEXTO: un instrumento que solo anade TEXTO a docs/plan/ o
       a docs/ se mide con git diff --numstat y con grep -c "^-[^-]" sobre
       el diff EN CERO, mas git diff --word-diff=porcelain pegado si toca
       una linea vieja. NO necesita las tres guardas.
-    - REGIMEN A CON LINEA VIEJA: esta vuelta el UNICO fichero viejo que
-      puede cambiar de contenido es docs/plan/OP_S_11_MAPEO_PROPUESTO.md,
-      que se REHACE entera por 4.d. Su word-diff va pegado. Ningun otro
-      fichero viejo pierde una linea; si te descubres borrando en otro,
-      paras. LA CORRECCION DE R.13 DE LA TAREA 3 ES POR ADICION: no se
-      borra ni se edita una sola linea de las ya escritas.
+    - REGIMEN A CON LINEA VIEJA: esta vuelta NINGUN fichero viejo pierde
+      una linea. La reposicion del peldano 106 en
+      docs/plan/OP_S_11_MAPEO_PROPUESTO.md es POR ADICION (3.c), igual que
+      las correcciones de la TAREA 3. Si te descubres borrando en un
+      fichero viejo, PARAS.
     - REGIMEN B, DATO: esta vuelta NO SE USA. NO SE TOCA UN SOLO NODO NI UN
       SOLO FICHERO DE dataset/. Si te descubres necesitando uno, es que te
       saliste del encargo: paras y lo traes.
     - EL REPORTE DICE, POR CADA INSTRUMENTO QUE ESCRIBIO, BAJO QUE REGIMEN
       FUE.
-  >>> COMMIT Y PUSH de 1.d a 1.g y de 1.l en cuanto esas guardas esten
-  >>> corridas y pegadas. 1.h, 1.i, 1.j y 1.k VAN AL FINAL, con el sello de
-  >>> cierre, y NO se adelantan. Esta es la reparacion de mi 4.6.
+  >>> COMMIT Y PUSH de 1.e, 1.f, 1.g y 1.l en cuanto esas guardas esten
+  >>> corridas y pegadas: ESAS CUATRO NO NECESITAN EL LADO DE CIERRE.
+  >>> 1.d SI LO NECESITA, asi que 1.d VA AL FINAL, con 1.h, 1.i, 1.j y 1.k
+  >>> y el sello de cierre, en el commit del reporte. ESTA ES LA REPARACION
+  >>> DE MI 4.6 Y ESTA VUELTA NO SE CONTRADICE.
 
-- TAREA 2, LA ESCALADA. OPERACION DE CODIGO, BLOQUEANTE, Y NO ES
-  OPCIONAL. La encargo yo en el acta 132 porque la racha de caidas de
-  reporte llego a DOS y AUDITOR.md 1.2 (letra del 29 ago 2026) manda
-  encargarla en el mismo acta, sin esperar parada ni decision nueva del
-  fundador. EJECUTOR.md 1 la tiene escrita como "la extension del tallador
-  a las fases mecanicas", y yo la apunto al sitio EXACTO por donde entro la
-  caida de la 132: LA LINEA DE IDENTIDAD, que es prosa suelta encima de la
-  tabla tallada y por eso se sigue tecleando a mano desde la vuelta 79.
-  (2.a) scripts/loop/tallar_identidad_reporte.py --vuelta N. Emite, en
-  texto listo para pegar, el parrafo de identidad del reporte con sus TRES
-  rotulos, y NINGUNO se teclea:
-    - "HEAD sellado de apertura": la unica linea de
-      docs/loop/SALIDA_V<N>_HEAD_APERTURA.txt, validada con git rev-parse
-      y git cat-file -t (tiene que ser un commit, y de esta rama).
-    - "commit de nacimiento de las salidas de apertura": se calcula con
-      `git log --diff-filter=A --format=%h -1 --` sobre TODOS los ficheros
-      docs/loop/SALIDA_V<N>_*_APERTURA.txt que existan, uno por uno. Si no
-      salen TODOS del MISMO commit, es ROJO y se nombra cada fichero con
-      su commit. Ese es el numero del rotulo, y no otro.
-    - "HEAD sellado de cierre": la unica linea de
-      docs/loop/SALIDA_V<N>_HEAD_CIERRE.txt, validada igual.
-  Y LA REGLA QUE HABRIA CAZADO LA 132 SOLA: si DOS rotulos cualesquiera
-  salen con el MISMO hash, el tallador NO calla y NO lo da por bueno: lo
-  escribe con todas las letras, "rotulo X y rotulo Y coinciden en <hash>",
-  y anade la razon medida de por que coinciden (por ejemplo, el sello de
-  cierre puesto en el commit de apertura). Una coincidencia declarada es un
-  dato; una coincidencia muda es la caida de la 132.
-  (2.b) --comparar docs/loop/REPORTE.md: extrae del reporte el parrafo de
-  identidad, coteja ROTULO POR ROTULO contra lo medido, y termina con
-  "IDENTIDAD IDENTICA AL TALLADOR" o con ROJO EXIT 1 nombrando el rotulo,
-  el hash escrito y el hash medido. Si el reporte no trae los tres
-  rotulos, tambien es ROJO, nombrando el que falta.
-  (2.c) SUS DOS PRUEBAS POR MUTACION, Y SIN ELLAS LA GUARDA NO SE PUBLICA
-  (EJECUTOR.md 1, EL CASO ROJO SE PRUEBA POR MUTACION). Sobre una COPIA
-  del reporte, nunca sobre el fichero real: mutacion A, poner en el
-  segundo rotulo el hash del primero, que es EXACTAMENTE la caida de la
-  132, y comprobar que --comparar cae en ROJO nombrando ese rotulo;
-  mutacion B, cambiar un caracter del hash del tercer rotulo y comprobar
-  lo mismo. Las dos salidas a
-  docs/loop/SALIDA_V133_2C_MUTACION_A.txt y _MUTACION_B.txt.
-  (2.d) SE CABLEA en 1.j como segunda comprobacion, tal como quedo escrito
+- TAREA 2, LA REPARACION DE LA GUARDA CEGADA. OPERACION DE CODIGO,
+  BLOQUEANTE. LA CAIDA ES MIA (acta 133, 4.4) Y LA REPARACION ES TUYA, ASI
+  QUE TE LA ESCRIBO CERRADA PARA QUE NO TENGAS QUE DECIDIR NADA.
+  (2.a) PRIMERO EL DIAGNOSTICO, Y ANTES DE TOCAR UNA LINEA DEL CODIGO.
+  Corre verificar_cifras_del_reporte.py contra el REPORTE.md de la vuelta
+  133 (el que hay en el arbol al abrir esta vuelta, antes de que lo
+  reescribas) y, POR CADA UNA de las SIETE cifras que hoy caen en "cifra
+  sin fichero que contar", escribe cual de estas DOS cosas le pasa:
+    (A) NO SE ENCONTRO NINGUN docs/loop/SALIDA_V133_*.txt en su ventana, o
+    (B) SI se encontro fichero, pero la cifra no se pudo CONTAR en el.
+  La respuesta se mide, no se supone: si hace falta, le anades al script
+  una traza que lo diga. Salida a
+  docs/loop/SALIDA_V134_2A_DIAGNOSTICO.txt, con las siete lineas, cada una
+  con su motivo (A) o (B) y, si es (B), el nombre del fichero que si
+  encontro. ESTO ES LO QUE MIDE POR QUE MI CONTRATO FALLO, y sin ello la
+  reparacion seria a ciegas.
+  (2.b) LA SALIDA DE EMERGENCIA SE ESTRECHA, Y ASI QUEDA ESCRITA. Donde mi
+  contrato decia "si un numero no encuentra fichero de salida en su
+  ventana, NO es rojo: se LISTA", ahora dice:
+    - Una cifra (numero, unidad del vocabulario cerrado) SIN fichero en su
+      ventana es ROJO EXIT 1, nombrando la linea y la cifra, SALVO que
+      caiga en una de estas TRES exenciones, que son cerradas y son todas:
+      (i) las cifras del parrafo de identidad y de la tabla tallada de la
+      cabecera, que ya cubren tallar_identidad_reporte.py y
+      tallar_cabecera_reporte.py; (ii) la cifra del tope de 1.k, que habla
+      del propio REPORTE.md y se coteja con `wc -l` en vez de con un
+      fichero de salida; (iii) una cifra que el reporte marque
+      explicitamente con el literal `(sin instrumento)` pegado, que
+      obliga a declararlo en vez de callarlo, y que la guarda LISTA aparte
+      y CUENTA.
+    - NINGUNA OTRA EXENCION. Si te descubres necesitando una cuarta,
+      PARAS y la traes escrita: eso seria doctrina nueva y no es tuya ni
+      mia sin medirla.
+  (2.c) LA COBERTURA SE PUBLICA SIEMPRE, VERDE O ROJA. La guarda termina
+  con una linea literal:
+    COBERTURA: <cotejadas> cotejadas / <exentas> exentas / <total> cifras
+  y esa linea SE PEGA EN EL REPORTE, tal cual. Una guarda que no dice
+  cuanto abarca es la que me cegó a mi: que lo diga ella sola cada vuelta.
+  (2.d) SU PRUEBA POR MUTACION, Y ESTA VEZ SOBRE UNA COPIA DEL REPORTE
+  REAL, NO SOBRE UNO FABRICADO. Dos casos, los dos obligatorios:
+    - MUTACION 1: cambias una cifra COTEJABLE del reporte de esta vuelta
+      en una copia y compruebas ROJO EXIT 1 nombrando la linea, la cifra
+      escrita y la contada.
+    - MUTACION 2: BORRAS la cita del fichero de salida que acompana a una
+      cifra, en otra copia, y compruebas que la guarda cae en ROJO por la
+      regla nueva de 2.b, en vez de listarla y callarse. ESTA ES LA
+      MUTACION QUE HABRIA CAZADO MI PROPIO CONTRATO.
+  Salidas a docs/loop/SALIDA_V134_2D_MUTACION_1.txt y _2.txt.
+  (2.e) SE CABLEA en 1.j como septima comprobacion, tal como quedo escrito
   arriba. El reporte de esta vuelta ya pasa por ella.
-  (2.e) LA SEGUNDA MITAD DE LA ESCALADA, LA QUE EJECUTOR.md NOMBRA LITERAL
-  ("toda tabla del reporte tallada de ficheros de salida"):
-  scripts/loop/verificar_cifras_del_reporte.py. Contrato, y lo escribo
-  cerrado para que no haya que decidir nada:
-    - Recorre docs/loop/REPORTE.md SALTANDO la tabla tallada de la
-      cabecera (que ya la cubre el tallador) y el parrafo de identidad
-      (que ya lo cubre 2.a).
-    - Busca pares (numero, unidad) con VOCABULARIO CERRADO de unidades:
-      fichero/ficheros, par/pares, grupo/grupos, grafia/grafias,
-      colapso/colapsos, nodo/nodos, linea/lineas, arista/aristas.
-    - Para cada par, busca en la MISMA frase o en las DOS SIGUIENTES una
-      cita de docs/loop/SALIDA_V<N>_*.txt (misma doctrina de ventana que
-      verificar_cifras_del_plan.py, reusala, no la reinventes). Si la hay,
-      CUENTA la cifra en ese fichero y coteja. SI NO CUADRA, ROJO EXIT 1
-      con la linea, el numero escrito, el numero contado y el fichero.
-    - Y AQUI VA EL RAMAL (xvii) HECHO CODIGO: la unidad manda como se
-      cuenta. "N ficheros" se cuenta como ficheros DISTINTOS; "N pares" se
-      cuenta como pares fichero:linea. Si las dos cuentas del mismo bloque
-      dan numeros distintos y la cifra escrita coincide con la que NO
-      corresponde a su unidad, ROJO, y el mensaje dice las dos cuentas.
-    - Si un numero no encuentra fichero de salida en su ventana, NO es
-      rojo: se LISTA en la salida como "cifra sin fichero que contar" con
-      su linea, para que se vea que la guarda la miro y decidio no
-      cotejarla. Esa lista se pega en el reporte.
-    - Su prueba por mutacion, obligatoria igual que la de 2.c: cambiar una
-      cifra cotejable en una COPIA del reporte y comprobar que cae en ROJO
-      nombrando la linea. Salida a
-      docs/loop/SALIDA_V133_2E_MUTACION.txt.
+  (2.f) LA GUARDA QUE FALTABA, Y QUE HOY TIENE CASO (acta 133, 4.7):
+  scripts/loop/verificar_cabecera_mapeo.py. Contrato cerrado:
+    - Recomputa desde dataset/ los CINCO peldanos de la tabla de
+      OP_S_11_MAPEO_PROPUESTO.md (cadena entera; mas titulo; mas
+      localizador con la cola VIEJA; mas Apendice en la cola; mas prefijo
+      sobre recortada) reusando tus propios scripts vuelta131_*,
+      vuelta132_* y vuelta133_*, no reimplementandolos.
+    - Lee la cabecera de docs/plan/OP_S_11_MAPEO_PROPUESTO.md, extrae las
+      cifras de peldano que declare, y coteja UNA A UNA. Si la cabecera
+      declara MENOS peldanos de los que el recomputo produce, ES ROJO EXIT
+      1 nombrando el peldano que falta: ESE es exactamente el caso de esta
+      vuelta, el 106 que desaparecio.
+    - Coteja tambien las cifras de cierre de la cabecera (grupos de 2 o
+      mas, grafias en grupo, solos, cuantos faltan para 55) y el TOTAL
+      filas del pie contra las filas reales de la tabla.
+    - Su prueba por mutacion, obligatoria: sobre una COPIA de la tabla,
+      borras el peldano de 106 de la cabecera y compruebas que cae ROJO
+      nombrandolo. Salida a
+      docs/loop/SALIDA_V134_2F_MUTACION.txt.
   SI EL TEXTO DE ESTA TAREA NO TE ALCANZA PARA EJECUTARLA SIN DECIDIR,
   PARAS Y LO TRAES ESCRITO. No la recortes en silencio: eso seria el ramal
-  (iii).
-  >>> COMMIT Y PUSH detras de 2.c y otro detras de 2.e.
+  (iii), y esta vuelta el ramal (iii) lo incumpli yo, no tu.
+  >>> COMMIT Y PUSH detras de 2.d y otro detras de 2.f.
 
-- TAREA 3, LOS REGISTROS. Son DOS, las dos REGIMEN A puro, aditivas, sin
+- TAREA 3, LOS REGISTROS. Son TRES, las tres REGIMEN A puro, aditivas, sin
   borrar una sola linea.
-  (3.a) EL REGISTRO R.14 EN docs/PENDIENTES.md, seccion nueva,
-  correcciones declaradas de la vuelta 132, con estas CINCO cosas y con la
-  medicion de cada una escrita, no resumida: (1) tu caida de reporte de la
-  linea de identidad, con los ONCE ficheros de apertura y su commit de
-  nacimiento 3a5fd829 escritos uno por uno, con el agravante de que
-  verificar_apertura_sellada.py imprimia "nacido en 3a5fd829, padre
-  5eb04ca5", y con la constancia de que ACUMULA y de que la racha queda en
-  DOS de tres; (2) tu caida de expediente del "la adjudica el fundador",
-  con la cita literal de mi 3.d de la 132; (3) tu incumplimiento del diff
-  pegado de MOTOR y WEB, con la constancia de que la afirmacion era
-  VERDADERA y lo que falto fue la prueba; (4) MI CAIDA DE CIFRA: la
-  correccion de R.13, que se hace POR ADICION al pie de R.13 y sin tocar
-  una linea de las ya escritas, diciendo que donde dice SEIS pares son
-  SIETE, listando los CINCO de Reason (los cuatro ya escritos mas
-  docs/plan/03_FUSIONES.md:7159) y los DOS de Esty, y diciendo la unidad
-  con todas las letras: CINCO PARES fichero:linea en CUATRO FICHEROS
-  DISTINTOS para Reason; y (5) mis otras dos caidas de encargo, la guarda
-  mal descrita y el sello de cierre contradictorio. Cierra con los ramales
-  (xvi) y (xvii) enteros.
-  (3.b) LA FICHA DEL CAMPO `fuente` EN docs/PENDIENTES.md recibe la
-  UNDECIMA entrada, aditiva: la cola de localizador vigente recorta
-  `, Anexo X` pero NO recorta `, Apendice X`, y por eso
-  `Diana L. Lindstrom, Procurement Project Management Success, Apendice B
-  (RFPS)` pasa por LIBRO ante la regla de la canonica. Con la tabla de las
-  cuatro combinaciones que medi en el acta 132 (3.1) copiada entera, y con
-  el dato de que las tres grafias del censo que llevan Anexo o Apendice
-  son las TRES de la misma familia Lindstrom, medido.
-  >>> COMMIT Y PUSH de 3.a y 3.b en cuanto esten escritas.
+  (3.a) EL REGISTRO R.15 EN docs/PENDIENTES.md, seccion nueva,
+  correcciones declaradas de la vuelta 133, con estas SEIS cosas y con la
+  medicion de cada una escrita, no resumida: (1) tu incumplimiento del
+  peldano 106, con las cinco cifras que el encargo nombro y las cuatro que
+  la cabecera trajo; (2) tu incumplimiento de 2.e con sus DOS brazos, y
+  con la medicion que hice yo escrita entera (UNA cifra cotejada de OCHO,
+  y esa una un CERO; las siete no cotejadas listadas por su nombre; y mi
+  mutacion de "14 grupos" a "19 grupos" que la guarda dejo pasar VERDE);
+  (3) tu caida de reporte del "en la misma vecindad", con la constancia de
+  que en PENDIENTES.md TU SI escribiste el calificativo que la hace
+  verdadera y de que por la letra del 27 ago 2026 NO ACUMULA, y de que la
+  racha de reporte BAJA DE DOS A CERO; (4) MI CAIDA DE GUARDA CEGADA AL
+  NACER, con mi frase de contrato citada literal y con la constancia de
+  que tu la implementaste al pie de la letra; (5) mis otras TRES, la del
+  codigo de salida detras de una tuberia, la del encargo contradictorio de
+  1.l y la del asunto de commit malformado que habria entrado en tu propia
+  cabecera; y (6) el ramal (xviii) entero.
+  (3.b) LA CORRECCION DEL PAR CADUCADO, POR ADICION Y CON SU ESTADO. Al
+  pie de la BOLSA 2a de la ficha del campo fuente Y al pie de R.13(6), sin
+  tocar una linea de las ya escritas, se anade la medicion de hoy:
+  `docs/PENDIENTES.md:3059` FUE VERDADERO medido en el commit `5eb04ca5`
+  (la fila del 2.283, `defensas_en_profundidad_2` / `_3`, con
+  *Managing the Risks of Organizational Accidents* dentro), esta CADUCADO
+  hoy porque el fichero paso de 8.183 a 8.444 lineas, y su contenido vive
+  hoy en `docs/PENDIENTES.md:3138`. Se escribe con las DOS cosas pegadas,
+  el par y el commit, por el ramal (xviii). Y se deja dicho que
+  `docs/PENDIENTES.md:1696` NO era el relevo: es el registro que CITA a
+  3059, dentro de la propia ficha, no un sitio donde el titulo viva por si
+  mismo. Los otros seis pares de R.13(6) se re-miden hoy igual y cada uno
+  se reescribe por adicion con el commit en que lo mediste.
+  (3.c) LA REPOSICION DEL PELDANO 106 EN LA CABECERA DE
+  docs/plan/OP_S_11_MAPEO_PROPUESTO.md, POR ADICION Y SIN BORRAR NADA: la
+  cabecera pasa a declarar los CINCO peldanos por separado, cadena entera
+  111, mas titulo 108, mas localizador con la cola VIEJA 106, mas Apendice
+  en la cola 105, mas prefijo sobre recortada 104. Su word-diff va pegado
+  y el grep de lineas borradas tiene que dar CERO. Cuando 2.f este escrita,
+  esta cabecera tiene que pasarla en VERDE.
+  >>> COMMIT Y PUSH de 3.a, 3.b y 3.c en cuanto esten escritas.
 
-- TAREA 4, EL TRABAJO. LA SEGUNDA MITAD DE `OP-S-11`, TERCERA PARTE.
-  REGIMEN A ESTRICTO: NO SE TOCA UN SOLO NODO NI UN SOLO FICHERO DE
-  dataset/. Y NO SE APLICA LA TABLA A NINGUN NODO. Todo lo de abajo lo
-  adjudique yo en el acta 132 (3.1) y aqui solo se programa.
-  (4.a) LA COLA DE LOCALIZADOR SE EXTIENDE CON `Apendice`. EFECTO
-  NOMBRADO, POR EL RAMAL (xiv): AGRUPA, igual que el resto de la cola.
-  Escribe scripts/loop/vuelta133_cola_localizador_apendice.py o extiende
-  el vuelta132_grupos_por_localizador.py sin borrarlo. La cola pasa a
-  recortar tambien `, Apendice X`, `, Apendices X y Z` y `, Anexos X`
-  (plural del que ya estaba). ADJUDICADO Y NO DISCUTIBLE: `Apendice` es el
-  mismo localizador que `Anexo` escrito en la otra grafia, y las dos
-  formas conviven en la MISMA familia del censo, asi que la extension es
-  por cita, no doctrina nueva.
-  SUS DOS CASOS, POR EL RAMAL (xiii): POSITIVO, la grafia
-  `Diana L. Lindstrom, Procurement Project Management Success, Apendice B
-  (RFPS)` recorta a `Diana L. Lindstrom, Procurement Project Management
-  Success` y DEJA DE SER LIBRO; NEGATIVO, una grafia sin cola no se toca
-  ni un caracter. Salida a
-  docs/loop/SALIDA_V133_4A_COLA_CON_APENDICE.txt.
-  MI CONTRASTE, MEDIDO HOY POR MI: con la cola extendida y SIN 3.d, los
-  106 grupos pasan a 105; los grupos de 2 o mas siguen siendo 15 pero con
-  39 grafias; los solos bajan de 91 a 90; las SINTETICAS siguen en 1 y el
-  singleton de Apendice B entra al grupo SINTETICO de capitulos, que queda
-  de CUATRO miembros. Si te sale otra cosa, manda la tuya y declara la
-  discrepancia.
-  >>> COMMIT Y PUSH detras de 4.a.
-  (4.b) EL PREFIJO SOBRE LA RECORTADA SE APLICA, ATADO A 4.a Y NUNCA
-  SUELTO. EFECTO NOMBRADO: AGRUPA. Esta es la adjudicacion de tu
-  discutible 1, y la hago yo, no el fundador. Prefijo ESTRICTO sobre la
-  forma recortada, guarda de longitud de 20 caracteres o mas sobre la
-  recortada mas corta, MAS la guarda de RESTO por simetria con la regla
-  del titulo (si las dos grafias tienen resto y ninguno es prefijo del
-  otro, no se unen). Escribe
-  scripts/loop/vuelta133_prefijo_sobre_recortada.py.
-  POR QUE ATADO: lo medi, y aplicar el prefijo SOLO, sobre la cola vieja,
-  corona `..., Apendice B (RFPS)` como canonica de 23 nodos y deja las
-  SINTETICAS del censo en CERO. Es el mismo vicio que el acta 131 (3.2)
-  escribio la regla sintetica para matar, entrando por otra puerta. Con
-  4.a puesta, la misma familia queda coronada por
-  `Diana L. Lindstrom, Procurement Project Management Success (J. Ross,
-  2014)`, que es el libro con su edicion.
-  MI CONTRASTE, MEDIDO HOY POR MI: con 4.a y 4.b, 105 grupos pasan a 104;
-  14 grupos de 2 o mas con 39 grafias; 90 solos; UNA familia Lindstrom de
-  SIETE grafias y 23 nodos; canonica `Diana L. Lindstrom, Procurement
-  Project Management Success (J. Ross, 2014)`, NO sintetica. La guarda de
-  RESTO no cambia el resultado hoy (104 con ella y sin ella, los mismos 19
-  pares): PONLA IGUAL, y dilo en la salida, porque cierra el agujero para
-  cuando el censo crezca. Salida a
-  docs/loop/SALIDA_V133_4B_PREFIJO_APLICADO.txt, con TODOS los pares que
-  une, uno por uno.
-  >>> COMMIT Y PUSH detras de 4.b.
-  (4.c) LA CONSECUENCIA QUE SE MIRA CON LOS OJOS ABIERTOS Y SE ESCRIBE.
-  Con 4.a y 4.b puestas, las canonicas SINTETICAS del censo pasan de UNA a
-  CERO. LA REGLA SINTETICA DE LA 132 (3.b) NO SE BORRA, NO SE MARCA MUERTA
-  Y NO SE SACA DEL CODIGO: queda VIGENTE Y SIN CASO EN ESTE CORTE, y eso
-  se dice con esas palabras en la cabecera de la tabla de 4.d y en la
-  ficha de 3.b. Una regla sin caso hoy no es una regla equivocada; es una
-  regla esperando. Salida contada, no afirmada.
-  (4.d) LA TABLA REHECHA. Reescribe docs/plan/OP_S_11_MAPEO_PROPUESTO.md
-  con 4.a y 4.b puestas. MISMAS CUATRO COLUMNAS de la 132 (grafia,
-  canonica propuesta, motivo con las DOS cosas separadas, bolsa), y el
-  vocabulario de la columna de motivo gana los dos valores nuevos: la
-  regla que agrupa puede ser ahora `cadena entera`, `titulo`,
-  `localizador` o `prefijo sobre recortada`, y de donde sale la canonica
-  sigue siendo `la propia grafia`, `recorte de localizador` o `SINTETICA`.
-  En la cabecera, CADA REGLA POR SEPARADO Y ACUMULADA, con las cinco
-  cifras: cadena entera sola 111, mas titulo 108, mas localizador 106, mas
-  Apendice en la cola 105, mas prefijo sobre recortada 104; cuantos grupos
-  de 2 o mas y cuantos solos; que sigue siendo PROPUESTA y sin aplicarse a
-  ningun nodo; que `OP-S-11` sigue LISTA; y CUANTOS COLAPSOS FALTAN PARA
-  55, que con mi medicion son 49. Su word-diff va pegado. Y CORRIGE LA
-  FRASE DE ATRIBUCION de la cabecera vieja: las reglas mecanicas las
-  adjudica el auditor en su acta; lo que queda para decision humana del
-  fundador son los colapsos que ninguna regla mecanica alcanza.
-  >>> COMMIT Y PUSH detras de 4.d.
-  (4.e) LO QUE NO SE TOCA ESTA VUELTA, DICHO SIN CONDICIONALES:
-  `OP-S-11` NO CAMBIA DE ESTADO, SIGUE LISTA. `OP-S-12` NO SE ABRE: va al
-  final de la pasada entera por la atadura 2 de docs/plan/00_INDICE.md. LA
-  FASE 05 NO SE DECLARA CERRADA POR NADIE, Y NO TIENES QUE JUZGAR SI LO
-  ESTA: no lo esta, porque `OP-S-11` tiene trabajo, y cuando lo este lo
-  declaro yo en mi acta. Y la fase 00_CODIGO tampoco: `OP-C-01` a
-  `OP-C-05`, `OP-S-06` y `OP-S-07` figuran LISTA y ESO YA ESTA ADJUDICADO
-  (acta 25 y acta 119). Si tropiezas con esos estados, no abras nada.
+- TAREA 4, EL TRABAJO. LA COLA DE LOCALIZADOR NO RECONOCE LA ABREVIATURA
+  `Cap.`, Y ESO NO LO VIO NADIE HASTA HOY. REGIMEN A ESTRICTO: NO SE TOCA
+  UN SOLO NODO NI UN SOLO FICHERO DE dataset/, Y NO SE APLICA NINGUNA
+  REGLA NUEVA A LA TABLA. ESTA VUELTA SOLO SE MIDE. YO ADJUDICO EN EL ACTA
+  134, Y DIGO POR QUE NO ADJUDICO YA: la cita que sostuvo la adjudicacion
+  de `Apendice` en mi acta 132 (3.1) fue que las dos formas convivian en
+  la MISMA familia del censo, y aqui esa cita NO EXISTE. Lo medi.
+  (4.a) EL CENSO DE LO QUE LA COLA NO RECORTA. Escribe
+  scripts/loop/vuelta134_censo_cola_no_recorta.py: de las 129 grafias, di
+  cuantas la cola de la 133 NO recorta, y para esas, agrupa por la primera
+  palabra que sigue a su ULTIMA coma, con su cuenta. Salida a
+  docs/loop/SALIDA_V134_4A_CENSO_COLA.txt.
+  MI CONTRASTE, MEDIDO HOY POR MI: 117 de 129 no se recortan, y la palabra
+  que encabeza es `Cap.` con 48; detras van `Waltzing` 5 y luego colas de
+  uno. Con el plural incluido, 55 grafias y 62 nodos llevan `, Cap.` o
+  `, Caps.`. Si te sale otra cosa, manda la tuya y declara la discrepancia.
+  (4.b) EL EFECTO, CON LAS DOS CIFRAS QUE EL RAMAL (xvi) EXIGE Y NO CON
+  UNA. Escribe scripts/loop/vuelta134_efecto_cap_abreviado.py: la misma
+  cadena de cuatro reglas de la 133, pero con la cola extendida a
+  `Caps?\.`, y publica LAS DOS COSAS AL LADO, grupos resultantes Y
+  canonicas resultantes, con las SINTETICAS listadas UNA POR UNA con su
+  numero de grafias y de nodos. Salida a
+  docs/loop/SALIDA_V134_4B_EFECTO_CAP.txt.
+  MI CONTRASTE, MEDIDO HOY POR MI: 104 grupos pasarian a 54 (o sea que la
+  meta de 55 de 05_SANEO.md quedaria rebasada por UNO) y las canonicas
+  SINTETICAS pasarian de 0 a CINCO: `Edwards et al., Managing Project
+  Risks` (30 grafias), `DeMarco y Lister, Waltzing with Bears` (13),
+  `Hubbard, The Failure of Risk Management` (10), `Sharon Cullinane,
+  E-Logistics` (1 grafia, 8 nodos) y una quinta que es una grafia
+  malformada, ver 4.d.
+  (4.c) LA CONVIVENCIA, MEDIDA Y NO SUPUESTA, PORQUE DE ELLA DEPENDE MI
+  ADJUDICACION. Para cada familia del censo que traiga un localizador de
+  capitulo, di si lo trae ESCRITO (`capitulo`), ABREVIADO (`Cap.`) o LAS
+  DOS FORMAS. MI CONTRASTE, MEDIDO HOY POR MI: NINGUNA familia trae las
+  dos; las de forma escrita (las dos Lindstrom, Max Muller, Rushton et
+  al.) y las de forma abreviada (Edwards, DeMarco y Lister, Hubbard,
+  Cullinane) son conjuntos DISJUNTOS. SI ESO SE CONFIRMA, la extension a
+  `Cap.` NO se puede adjudicar por la misma cita que `Apendice` y hay que
+  adjudicarla por otra o no adjudicarla: eso lo hago yo, no tu. Salida
+  dentro de docs/loop/SALIDA_V134_4C_CONVIVENCIA.txt.
+  (4.d) LAS CINCO SINTETICAS SE LEEN UNA POR UNA Y SE ESCRIBE SI CADA UNA
+  ES EL TITULO DEL LIBRO O ES BASURA. El ramal (xvi) dice que una regla se
+  juzga por su efecto sobre la CANONICA: pues se mira. Por cada una de las
+  cinco, escribe la canonica que produciria y una linea diciendo si eso es
+  un titulo de libro legible o no. Y MIRA CON ATENCION LA QUINTA, que en
+  mi medicion sale asi: una grafia que es una frase entera con comas y un
+  parentesis sin cerrar, del estilo `Sintesis del metodo aplicado al
+  emprendedor individual (riesgo de rotacion, Waltzing with Bears, Cap.
+  ...`. DOS COSAS DE ESA, LAS DOS MEDIDAS Y NINGUNA SUPUESTA: (1) si la
+  cola la cortase, que canonica saldria, y (2) si sus acentos estan bien
+  en el dato o estan rotos. Yo la vi con interrogantes en mi consola y NO
+  AFIRMO que el dato este corrupto: lee el JSON con encoding utf-8 y
+  dilo con la salida delante. Salida a
+  docs/loop/SALIDA_V134_4D_SINTETICAS.txt.
+  (4.e) LO QUE NO SE TOCA ESTA VUELTA, DICHO SIN CONDICIONALES: la tabla
+  OP_S_11_MAPEO_PROPUESTO.md NO se rehace (lo unico que cambia en ella es
+  la ADICION del peldano 106 de 3.c). `OP-S-11` NO CAMBIA DE ESTADO, SIGUE
+  LISTA. `OP-S-12` NO SE ABRE: va al final de la pasada entera por la
+  atadura 2 de docs/plan/00_INDICE.md. LA FASE 05 NO SE DECLARA CERRADA
+  POR NADIE, Y NO TIENES QUE JUZGAR SI LO ESTA: cuando lo este lo declaro
+  yo en mi acta. Y la fase 00_CODIGO tampoco: `OP-C-01` a `OP-C-05`,
+  `OP-S-06` y `OP-S-07` figuran LISTA y ESO YA ESTA ADJUDICADO (acta 25 y
+  acta 119). Si tropiezas con esos estados, no abras nada.
+  >>> COMMIT Y PUSH detras de 4.b y otro detras de 4.d.
   >>> El commit y push del REPORTE va al final, despues del sello de
-  >>> cierre de 1.a, de las guardas de 1.h e 1.i, de las SEIS
-  >>> comprobaciones de 1.j y de la medida de 1.k. Ese es el ultimo commit
-  >>> de la vuelta.
+  >>> cierre de 1.a, del lado de CIERRE de 1.b y 1.c, de la bateria de
+  >>> 1.d, de las guardas de 1.h e 1.i, de las OCHO comprobaciones de 1.j
+  >>> y de la medida de 1.k. Ese es el ultimo commit de la vuelta.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
