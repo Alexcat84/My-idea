@@ -1,0 +1,12 @@
+Comparacion por familia, APERTURA vs OPS10REP1_POST (una sola operacion esta vuelta).
+
+GATE0: SALIDA_V130_GATE0_CMD1_APERTURA.txt <-> SALIDA_V130_OPS10REP1_GATE0_POST.txt = IDENTICOS
+CONTEO: SALIDA_V130_CONTEO_APERTURA.txt <-> SALIDA_V130_OPS10REP1_CONTEO_POST.txt = IDENTICOS
+MOTOR: SALIDA_V130_MOTOR_APERTURA.txt <-> SALIDA_V130_OPS10REP1_MOTOR_POST.txt = DISTINTOS (solo timing por test, 25/25 en las dos)
+WEB: SALIDA_V130_WEB_APERTURA.txt <-> SALIDA_V130_OPS10REP1_WEB_POST.txt = DISTINTOS (solo Start/Duration, 80 passed (80) / 1030 passed 3 skipped en las dos)
+TSC: SALIDA_V130_TSC_APERTURA.txt <-> SALIDA_V130_OPS10REP1_TSC_POST.txt = IDENTICOS (EXIT=0 en las dos, cero lineas)
+ETIQUETAS: SALIDA_V130_CICLO_ETIQUETAS_APERTURA.txt <-> SALIDA_V130_CICLO_ETIQUETAS_OPS10REP1.txt = IDENTICOS
+SYNC: SALIDA_V130_CICLO_SYNC_APERTURA.txt <-> SALIDA_V130_CICLO_SYNC_OPS10REP1.txt = DISTINTOS (sha256 de master_graph.json cambio: OPS10REP1 SI escribio la condicion nueva)
+NUMSTAT: SALIDA_V130_CICLO_NUMSTAT_APERTURA.txt <-> SALIDA_V130_CICLO_NUMSTAT_OPS10REP1.txt = DISTINTOS (apertura vacio; OPS10REP1 trae los 4 ficheros que la operacion escribio: dataset/metadata/master_graph.json, dataset/nodos/prevenir_franquicias_inadvertidas.json, web/lib/assets/manifest.json, web/lib/assets/master_graph.json)
+
+RESUMEN POR FAMILIA: GATE0 1/1 IDENTICOS. CONTEO 1/1 IDENTICOS (0 aristas movidas, confirmado tambien por verificar_aristas_vivas.py: PERDIDAS 0 NUEVAS 0). MOTOR 0/1 (timing). WEB 0/1 (timing). TSC 1/1 IDENTICOS. ETIQUETAS 1/1 IDENTICOS. SYNC 0/1 (escritura real). NUMSTAT 0/1 (escritura real).

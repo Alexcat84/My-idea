@@ -1,3 +1,4 @@
+=== git show e2a68845:dataset/nodos/prevenir_franquicias_inadvertidas.json (HEAD sellado de apertura, ANTES de OPS10REP1) ===
 {
   "node_id": "prevenir_franquicias_inadvertidas",
   "fase_proyecto": "planificacion",
@@ -22,7 +23,6 @@
     "mix_ubicaciones_corporativas_franquicia"
   ],
   "condiciones_activacion": [
-    "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
     "Si la empresa tiene acuerdos de distribución, licencia o agencia con terceros que usan su marca",
     "Si se está evitando intencionalmente llamar 'franquicia' a una relación comercial para eludir regulaciones",
     "Al diseñar cualquier estructura alternativa a la franquicia tradicional",
@@ -40,3 +40,10 @@
     }
   ]
 }
+=== condiciones_activacion de ese blob (extraida con python -c, mismo comando) ===
+[
+  "Si la empresa tiene acuerdos de distribución, licencia o agencia con terceros que usan su marca",
+  "Si se está evitando intencionalmente llamar 'franquicia' a una relación comercial para eludir regulaciones",
+  "Al diseñar cualquier estructura alternativa a la franquicia tradicional",
+  "Si existe riesgo de haber creado inadvertidamente una franquicia no declarada"
+]

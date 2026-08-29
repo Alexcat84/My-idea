@@ -1,0 +1,18 @@
+==============================================================================
+OP-S-10, OPS10REP1, EL NODO QUE FALTABA (vuelta 130) . MODO SIMULAR
+==============================================================================
+guarda 1, el nodo existe y esta VIVO: OK
+guarda 2, la condicion NO estaba puesta todavia: ROJO
+
+SE ABORTA SIN ESCRIBIR, 1 fallo(s):
+  [ROJO] la condicion YA esta puesta
+EXIT DE LA SEGUNDA PASADA: 1
+
+=== git status --porcelain ===
+ M dataset/metadata/master_graph.json
+ M dataset/nodos/prevenir_franquicias_inadvertidas.json
+?? docs/loop/SALIDA_V130_OPS10REP1_MUTACION_NEGATIVA.txt
+?? docs/loop/SALIDA_V130_OPS10REP1_ROJO_SEGUNDA_PASADA.txt
+?? docs/loop/SALIDA_V130_OPS10REP1_SIMULACION.txt
+?? scripts/loop/vuelta130_tarea3a_medir_nomina_ops10.py
+?? scripts/loop/vuelta130_tarea3a_ops10rep1.py
