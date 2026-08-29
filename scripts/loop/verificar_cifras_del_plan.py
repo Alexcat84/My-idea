@@ -12,7 +12,10 @@ publicada); es una guarda de codigo nueva y propia, bloqueante, para que una
 cifra de esta clase (numero de casos de una suite, citando su ruta) no pueda
 volver a colarse SIN que algo la muerda antes del commit.
 
-CONTRATO (exacto, del encargo del auditor, TAREA 1.f de la vuelta 123):
+CONTRATO (exacto, ENSANCHADO en la vuelta 124, acta 123 seccion 4.3: el
+contrato original de la 123 solo veia el par en la MISMA frase, y por eso no
+cotejaba la correccion 2.a de la propia vuelta 123, que quedo partida en dos
+frases. El ensanche es de contrato, no de codigo del ejecutor):
   - Toma --base <ref> (por defecto, el commit ACTA DE LA VUELTA <N> DEL
     AUDITOR mas reciente de la rama actual: "el acta anterior") y compara
     docs/plan/OPERACIONES.jsonl entre --base y el arbol de trabajo (o
@@ -24,16 +27,33 @@ CONTRATO (exacto, del encargo del auditor, TAREA 1.f de la vuelta 123):
     (difflib), no una resta de substrings.
   - Sobre ESE texto anadido busca, con vocabulario CERRADO, pares (numero,
     artefacto): un numero seguido de "caso", "casos", "test", "tests",
-    "prueba" o "pruebas", en la MISMA frase (partida por punto, sin partir
-    puntos de miles) que una ruta citada que termine en ".test.ts".
-  - Para cada par: corre `npx vitest run <ruta sin el prefijo web/>` desde
-    web/ y lee la linea "Tests  N passed". Si N no es el numero escrito,
-    ROJO EXIT 1 diciendo el id_op, el campo, el numero escrito, el numero
-    real y la ruta.
-  - Si la ruta citada no existe, ROJO.
+    "prueba" o "pruebas". El numero coteja contra la PRIMERA ruta terminada
+    en ".test.ts" que aparezca en una VENTANA de frases: la MISMA frase (el
+    texto se parte por linea y despues por punto, sin partir puntos de
+    miles) o las DOS FRASES SIGUIENTES del mismo texto anadido.
+  - Si en esa ventana aparece mas de una ruta DISTINTA, es ROJO por
+    ambiguo: se nombran todas las rutas de la ventana, para preferir un rojo
+    ruidoso a un verde por no saber a cual mirar. Dos citas de la MISMA ruta
+    que solo difieren en el prefijo "web/" (una para leerse desde la raiz
+    del repo, otra para `npx vitest run` desde web/) cuentan como LA MISMA
+    ruta, no como dos distintas (hallado al probar el ensanche contra el
+    caso positivo de la 123, que cita el mismo fichero de las dos formas a
+    proposito).
+  - Si el numero no encuentra NINGUNA ruta en su ventana, NO es rojo (puede
+    ser una cifra de otra cosa: un id_op, una fecha, un orden): se LISTA en
+    la salida como "numero sin ruta en ventana", con su id_op, su campo y la
+    frase, para que se vea que la guarda lo miro y decidio no cotejarlo.
+  - Para cada par sin ambiguedad: corre `npx vitest run <ruta sin el prefijo
+    web/>` desde web/ y lee la linea "Tests  N passed". Si N no es el numero
+    escrito, ROJO EXIT 1 diciendo el id_op, el campo, el numero escrito, el
+    numero real y la ruta.
+  - Si la ruta citada no existe (probando primero tal cual desde la raiz
+    del repo y despues bajo `web/`, porque una ruta escrita para
+    `npx vitest run <ruta>` se cita sin ese prefijo), ROJO.
   - Si no hay ningun par, VERDE EXIT 0 diciendo "0 pares" y las filas que
     examino (los id_op que cambiaron), para que se vea que corrio.
-  - Si cuadran todos, VERDE EXIT 0 con el recuento.
+  - Si cuadran todos, VERDE EXIT 0 con el recuento y los "numero sin ruta en
+    ventana" que haya, si los hay.
 
 La guarda NO corrige nada: solo lee, compara contra vitest, y grita.
 
@@ -52,6 +72,16 @@ todavia dice "32 casos"): tiene que dar ROJO nombrando `OP-S-08`, 32 contra
 27, y `web/lib/engine/accesosResueltos.test.ts`. Y una segunda corrida, sobre
 el fichero YA CORREGIDO por la 2.a, con el mismo `--base`, tiene que dar
 VERDE.
+
+CASO POSITIVO DEL ENSANCHE (vuelta 124, TAREA 1.f, remedio de 4.3):
+`scripts/loop/vuelta124_tarea1f_caso_positivo_ventana.py` corre esta guarda
+con `--base 128d0e5b` (el acta de la vuelta 122, ANTERIOR a la correccion
+2.a de la 123) sobre una COPIA de docs/plan/OPERACIONES.jsonl DE HOY donde,
+dentro de la correccion declarada de OP-S-08, se cambia "la cifra real es 27
+casos" por "la cifra real es 99 casos": tiene que dar ROJO nombrando 99
+contra 27. La misma guarda sobre el fichero REAL de hoy, con el mismo
+--base, tiene que dar VERDE, cotejando 27 == 27 (antes del ensanche daba
+VERDE con "0 pares" porque el numero y la ruta caian en frases separadas).
 """
 import argparse
 import difflib
@@ -174,17 +204,62 @@ def dividir_frases(texto):
     return frases
 
 
-def pares_en_texto(texto):
-    """[(numero:int, ruta:str), ...] hallados en la MISMA frase."""
+def pares_avisos_en_texto(texto):
+    """(pares, ambiguos, sin_ruta) hallados con VENTANA de frases (TAREA
+    1.f de la vuelta 124): la MISMA frase o las DOS FRASES SIGUIENTES.
+      pares: [(numero:int, ruta:str, frase:str), ...]
+      ambiguos: [(numero:int, [rutas...], frase:str), ...] (mas de una ruta
+        DISTINTA en la ventana)
+      sin_ruta: [(numero:int, frase:str), ...] (ninguna ruta en la ventana)
+    """
+    frases = dividir_frases(texto)
     pares = []
-    for frase in dividir_frases(texto):
-        rutas = PATRON_RUTA_TEST.findall(frase)
-        if not rutas:
-            continue
+    ambiguos = []
+    sin_ruta = []
+    for i, frase in enumerate(frases):
         for m in PATRON_NUMERO_ARTEFACTO.finditer(frase):
-            for ruta in rutas:
-                pares.append((int(m.group(1)), ruta))
-    return pares
+            numero = int(m.group(1))
+            ventana = frases[i:i + 3]
+            # Se agrupa por ruta NORMALIZADA (sin el prefijo "web/"), no por
+            # cadena literal: "web/lib/x.test.ts" y "lib/x.test.ts" son el
+            # MISMO fichero citado de dos formas (una para leer desde la
+            # raiz del repo, otra para `npx vitest run` desde web/), y
+            # contarlas como "distintas" fabricaba un ambiguo falso (hallado
+            # al reproducir el caso positivo de la 123 con --base ed916471,
+            # que cita las dos formas del mismo fichero a proposito).
+            rutas_por_clave = {}
+            for vf in ventana:
+                for ruta in PATRON_RUTA_TEST.findall(vf):
+                    clave = ruta[len("web/"):] if ruta.startswith("web/") else ruta
+                    if clave not in rutas_por_clave:
+                        rutas_por_clave[clave] = ruta
+            rutas_distintas = list(rutas_por_clave.values())
+            if not rutas_distintas:
+                sin_ruta.append((numero, frase))
+            elif len(rutas_distintas) > 1:
+                ambiguos.append((numero, rutas_distintas, frase))
+            else:
+                pares.append((numero, rutas_distintas[0], frase))
+    return pares, ambiguos, sin_ruta
+
+
+def ruta_abs_existente(ruta):
+    """Resuelve `ruta` a un absoluto que EXISTA, probando primero tal cual
+    (relativa a la raiz del repo) y despues bajo `web/` (hallado en la
+    vuelta 124, TAREA 1.f: una ruta citada dentro de un backtick de
+    `npx vitest run <ruta>` se escribe SIN el prefijo `web/` porque el
+    comando ya corre desde `web/`, y `numero_real_de_vitest` ya asume ese
+    mismo relativo; la comprobacion de existencia tiene que asumir lo
+    mismo, o rechaza una ruta real por "NO EXISTE"). Devuelve el absoluto
+    que exista, o el primero (tal cual) si ninguno existe."""
+    tal_cual = os.path.join(RAIZ, ruta.replace("/", os.sep))
+    if os.path.exists(tal_cual):
+        return tal_cual
+    if not ruta.startswith("web/"):
+        bajo_web = os.path.join(RAIZ, "web", ruta.replace("/", os.sep))
+        if os.path.exists(bajo_web):
+            return bajo_web
+    return tal_cual
 
 
 def numero_real_de_vitest(ruta):
@@ -213,6 +288,7 @@ def verificar(base_ref, ruta_work):
 
     fallos = []
     pares_vistos = []
+    sin_ruta_vistos = []
     for id_op in filas_cambiadas:
         base_campos = campos_de_texto(base_filas[id_op])
         work_campos = campos_de_texto(work_filas[id_op])
@@ -221,8 +297,14 @@ def verificar(base_ref, ruta_work):
             if work_txt == base_txt:
                 continue
             anadido = texto_anadido(base_txt, work_txt)
-            for numero, ruta in pares_en_texto(anadido):
-                ruta_abs = os.path.join(RAIZ, ruta.replace("/", os.sep))
+            pares_campo, ambiguos_campo, sin_ruta_campo = pares_avisos_en_texto(anadido)
+            for numero, rutas, frase in ambiguos_campo:
+                fallos.append('%s.%s: %d es AMBIGUO, %d rutas distintas en la ventana: %s (frase: %r)'
+                              % (id_op, campo, numero, len(rutas), ", ".join("`%s`" % r for r in rutas), frase.strip()))
+            for numero, frase in sin_ruta_campo:
+                sin_ruta_vistos.append((id_op, campo, numero, frase.strip()))
+            for numero, ruta, _frase in pares_campo:
+                ruta_abs = ruta_abs_existente(ruta)
                 if not os.path.exists(ruta_abs):
                     fallos.append('%s.%s: cita `%s`, que NO EXISTE' % (id_op, campo, ruta))
                     continue
@@ -235,7 +317,7 @@ def verificar(base_ref, ruta_work):
                 if real != numero:
                     fallos.append('%s.%s: escribe %d, vitest da %d, en `%s`'
                                   % (id_op, campo, numero, real, ruta))
-    return fallos, pares_vistos, filas_cambiadas
+    return fallos, pares_vistos, filas_cambiadas, sin_ruta_vistos
 
 
 def main():
@@ -245,23 +327,30 @@ def main():
     a = ap.parse_args()
 
     base_ref = a.base or commit_acta_mas_reciente()
-    fallos, pares_vistos, filas_cambiadas = verificar(base_ref, a.work)
+    fallos, pares_vistos, filas_cambiadas, sin_ruta_vistos = verificar(base_ref, a.work)
 
     if fallos:
         print("ROJO, %d cosa(s) no cuadran (base %s, work %s):" % (len(fallos), base_ref[:8], a.work))
         for f in fallos:
             print("  " + f)
+        if sin_ruta_vistos:
+            print("numero(s) sin ruta en ventana (%d):" % len(sin_ruta_vistos))
+            for id_op, campo, numero, frase in sin_ruta_vistos:
+                print("  %s.%s: %d, frase: %r" % (id_op, campo, numero, frase))
         return 1
 
     if not pares_vistos:
         print("VERDE EXIT 0: 0 pares (base %s). Filas cambiadas examinadas (%d): %s"
               % (base_ref[:8], len(filas_cambiadas), ", ".join(filas_cambiadas) or "ninguna"))
-        return 0
-
-    print("VERDE EXIT 0: %d par(es) cotejados contra vitest (base %s), todos cuadran:"
-          % (len(pares_vistos), base_ref[:8]))
-    for id_op, campo, numero, real, ruta in pares_vistos:
-        print("  %s.%s: %d == %d en `%s`" % (id_op, campo, numero, real, ruta))
+    else:
+        print("VERDE EXIT 0: %d par(es) cotejados contra vitest (base %s), todos cuadran:"
+              % (len(pares_vistos), base_ref[:8]))
+        for id_op, campo, numero, real, ruta in pares_vistos:
+            print("  %s.%s: %d == %d en `%s`" % (id_op, campo, numero, real, ruta))
+    if sin_ruta_vistos:
+        print("numero(s) sin ruta en ventana (%d):" % len(sin_ruta_vistos))
+        for id_op, campo, numero, frase in sin_ruta_vistos:
+            print("  %s.%s: %d, frase: %r" % (id_op, campo, numero, frase))
     return 0
 
 
