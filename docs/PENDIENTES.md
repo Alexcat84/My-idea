@@ -1677,6 +1677,18 @@ dentro; (2) su cifra de 55 libros canonicos es de OTRO CORTE, **3.521
 nodos vivos** (linea 15 de ese fichero), no el corte de hoy de `OP-S-11`.
 **La lista canonica es lo que `OP-S-11` PRODUCE, no lo que consume.**
 
+**ANADIDO (vuelta 135, TAREA 3.c, citando el acta de la vuelta 134,
+seccion 3.2): LA CORONACION MECANICA DE LA REGLA SINTETICA NO ALCANZA A
+LOS GRUPOS DE UN SOLO MIEMBRO.** Un grupo con un unico miembro conserva su
+propia grafia como canonica y sale con motivo `SIN AGRUPAR (pide
+decision)`; no hay recorte, no hay marca SINTETICA y no hay decision
+mecanica que tomar. Eso es lo que el instrumento hace desde la vuelta 131
+(`scripts/loop/vuelta133_tabla_mapeo_propuesto.py:126`,
+`if len(miembros) == 1: canonica_de[r] = miembros[0]`, sin marcar
+`origen_de[r]`; y `:146`, mismo `if`, motivo `SIN AGRUPAR (pide
+decision)`), no doctrina nueva: la letra del acta 131 (3.2) lo dejo sin
+decir porque en ese corte hablaba de un grupo de tres miembros.
+
 ### DECIMA entrada (vuelta 132, TAREA 2.b): una grafia truncada puede tener su TITULO COMPLETO publicado en la propia campana aunque NO sea reconstruible desde `dataset/`
 
 **Lo que hoy se sabe y no se sabia.** Una grafia truncada a 31 caracteres
@@ -8544,3 +8556,64 @@ antes de que el ejecutor lo heredara.
 > midio, o con un ancla de texto citada al lado. Y el relevo de un par
 > caducado SE BUSCA POR CONTENIDO: quien busca el numero encuentra el
 > registro que lo cita, no el sitio donde la cosa vive.**
+
+## R.16. Registro de correcciones y adjudicaciones declaradas de la vuelta
+134 (acta de la vuelta 134; escrito en la vuelta 135, TAREA 3.a)
+
+**(1) MIA (DEL AUDITOR), DE GUARDA CON PUERTA DE SERVICIO, LA GRANDE (acta
+134, 4.1).** Contra el reporte real de la 134, `verificar_cifras_del_
+reporte.py` publicaba `COBERTURA: 1 cotejadas / 3 exentas / 4 cifras`
+(medido de nuevo hoy en `SALIDA_V135_2A_DIAGNOSTICO.txt`, misma cifra). El
+auditor probo tres mutaciones sobre copias del reporte real de la 134:
+(A) `118 grafias` a `999 grafias`, VERDE EXIT 0; (B) `54 grupos` a
+`77 grupos`, VERDE EXIT 0; (C) una cifra nueva sin marca y sin fichero,
+ROJO EXIT 1. La (C) confirma que la reparacion de la 134 SI muerde lo que
+no lleva la marca; (A) y (B) confirman que las dos cifras marcadas
+`(sin instrumento)` con fichero de instrumento commiteado cerca eran
+inmunes: `SALIDA_V134_4A_CENSO_COLA.txt` dice 118 y
+`SALIDA_V134_4B_EFECTO_CAP.txt` dice 54. Reparado esta vuelta 135, TAREA 2
+(`scripts/loop/verificar_cifras_del_reporte.py`), con las mismas tres
+mutaciones reproducidas y VERIFICADAS: `SALIDA_V135_2E_MUTACION_1.txt` y
+`_2.txt` ROJO, `SALIDA_V135_2E_MUTACION_3.txt` (caso negativo) VERDE.
+
+**(2) MIA (DEL AUDITOR), DE CIFRA (acta 134, 4.2).** El encargo de la 134
+publico "las canonicas SINTETICAS pasarian de 0 a CINCO" y metio dos
+singletons en la lista; SON TRES. La regla de coronacion corta antes en
+los grupos de un solo miembro: `scripts/loop/vuelta133_tabla_mapeo_
+propuesto.py:126` (`if len(miembros) == 1: canonica_de[r] = miembros[0]`,
+sin recorte y sin marca SINTETICA) y `:146` (mismo `if`, motivo
+`SIN AGRUPAR (pide decision)`). Un singleton no puede fabricar canonica.
+
+**(3) MIA (DEL AUDITOR), DE ENCARGO (acta 134, 4.3).** La etiqueta de la
+TAREA 4.a de la 134, "cuantas la cola de la 133 NO recorta", nombraba UN
+predicado y admitia DOS. La grafia que separa las dos cuentas es
+`The Field Guide to Understandin - Dekker, Sidney;` (76 nodos, confirmado
+hoy con `cargar_censo()`). Predicado (A) `LOC.search(g) is None`
+("el localizador NO APARECE"): 118 grafias. Predicado (B)
+`recortar(g) == g` ("la cola NO LA TOCA"): 117 grafias (la cola SI la toca
+porque `PUNTUACION_FINAL` le come el `;` final). Las dos mediciones son
+CORRECTAS. Reparado por adicion en la TAREA 3.b de esta vuelta 135
+(`scripts/loop/vuelta134_censo_cola_no_recorta.py`,
+`SALIDA_V135_3B_CENSO_DOS_PREDICADOS.txt`, las dos cifras confirmadas:
+118 y 117).
+
+**(4) LAS TRES ADJUDICACIONES DEL AUDITOR EN SU ACTA 134, aplicadas esta
+vuelta 135:** (i) las dos cifras del punto (3) se publican, cada una con
+su predicado escrito al lado (ramal xvii); (ii) la coronacion mecanica NO
+ALCANZA a los grupos de un solo miembro, que quedan SIN AGRUPAR y piden
+decision (ver punto (2); documentado ademas en la novena entrada de la
+ficha `fuente` por la TAREA 3.c de esta vuelta); (iii) la extension de la
+cola a `Caps?\.` queda adjudicada y SE APLICA en la TAREA 4 de esta vuelta
+135, por el criterio de la propia operacion (`05_SANEO.md`, `OP-S-11`
+cuenta LIBROS CANONICOS, no capitulos) mas el ramal (xvi): el catalogo
+pasa de 104 a 54 grupos, y LA META DE 55 DE `05_SANEO.md` QUEDA REBASADA
+POR UNO (coste declarado, no escondido).
+
+**(5) EL RAMAL (xix), escrito entero:**
+> **(xix) UNA EXENCION QUE ESCRIBE EL AUDITADO NO ES UNA EXENCION, ES UN
+> INTERRUPTOR. Si una guarda permite que la cosa medida se declare a si
+> misma fuera de alcance, la guarda no mide: pregunta. La exencion se
+> concede por una condicion QUE LA GUARDA PUEDA COMPROBAR SOLA (que no
+> exista fichero de instrumento en la ventana, y no que alguien escriba
+> que no existe), y toda exencion se publica con su cuenta al lado para
+> que su crecimiento se vea.**
