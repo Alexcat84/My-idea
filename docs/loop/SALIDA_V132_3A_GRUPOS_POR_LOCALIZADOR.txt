@@ -1,0 +1,71 @@
+CASO POSITIVO (Lindstrom, tres grafias con cola de capitulo): recortan las tres a 'Diana L. Lindstrom, Procurement Project Management Success' y quedan en UN grupo: OK
+CASO NEGATIVO (grafia sin cola de localizador, recortar(g) == g): OK
+
+GRUPOS con R1 (cadena entera): 111
+GRUPOS con R1+R2 (cadena entera + titulo): 108
+GRUPOS con R1+R2+R3 (+ localizador, AGRUPA): 106
+COLAPSOS ADICIONALES QUE GANA R3 SOLA: 2
+
+PARES NUEVOS QUE SOLO R3 (LOCALIZADOR) UNE (no unidos por R1 ni R2):
+  Diana L. Lindstrom, Procurement Project Management Success, capitulo 11  <->  Diana L. Lindstrom, Procurement Project Management Success, capitulo 3 y Apendice C
+  Diana L. Lindstrom, Procurement Project Management Success, capitulo 11  <->  Diana L. Lindstrom, Procurement Project Management Success, capitulo 6
+
+GRUPOS CON 2 O MAS MIEMBROS (15 grupos, 38 grafias):
+  GRUPO (177 nodos):
+    6	The Startup Owner's Manual
+    133	The Startup Owner's Manual - Steve Blank
+    38	The Startup Owner's Manual - Blank, Steve
+  GRUPO (133 nodos):
+    70	Venture Deals
+    63	Venture Deals - Brad Feld
+  GRUPO (117 nodos):
+    115	The Founder's Dilemmas
+    2	The Founder's Dilemmas - Wasserman, Noam
+  GRUPO (102 nodos):
+    26	The Field Guide to Understandin - Dekker, Sidney
+    76	The Field Guide to Understandin - Dekker, Sidney;
+  GRUPO (95 nodos):
+    13	Essentials of Supply Chain Mana - Michael H. Hugos
+    82	Essentials of Supply Chain Management - Michael H. Hugos
+  GRUPO (85 nodos):
+    15	The Hard Thing About Hard Things
+    48	The Hard Thing About Hard Thing - Ben Horowitz
+    22	The Hard Thing About Hard Things - Ben Horowitz
+  GRUPO (76 nodos):
+    51	Financial Intelligence for Entrepreneurs
+    25	Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe
+  GRUPO (73 nodos):
+    30	Change by Design
+    5	Change by Design - Tim Brown
+    38	Change by Design, Revised and U - Tim Brown
+  GRUPO (61 nodos):
+    53	A Project Manager's Book of Forms
+    8	A Project Manager's Book of Forms - Cynthia Stackpole Snyder
+  GRUPO (48 nodos):
+    34	Business Model Generation (Osterwalder)
+    8	Business Model Generation - Osterwalder
+    6	Business Model Generation - Osterwalder, Alexander
+  GRUPO (19 nodos):
+    17	Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)
+    1	Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014), Capitulo 8: Negociaciones
+    1	Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014), Anexo de aviso de no participación
+  GRUPO (14 nodos):
+    10	Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management
+    3	Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management, capitulo 3
+    1	Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management, capitulo 25
+  GRUPO (9 nodos):
+    8	Guia de empaque para envios (FedEx)
+    1	Guia de empaque para envios (FedEx), seccion Packaging Flowers and Plants
+  GRUPO (5 nodos):
+    3	Max Muller, Essentials of Inventory Management
+    1	Max Muller, Essentials of Inventory Management, capitulo 1
+    1	Max Muller, Essentials of Inventory Management, capitulos 1 y 2
+  GRUPO (3 nodos):
+    1	Diana L. Lindstrom, Procurement Project Management Success, capitulo 6
+    1	Diana L. Lindstrom, Procurement Project Management Success, capitulo 11
+    1	Diana L. Lindstrom, Procurement Project Management Success, capitulo 3 y Apendice C
+
+TOTAL grafias: 129
+TOTAL grupos (incluye singletons): 106
+TOTAL grupos con 2 o mas miembros: 15 (38 grafias)
+TOTAL sin agrupar: 91
