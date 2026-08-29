@@ -1,0 +1,12 @@
+--- CASO (a): cierre = commit lateral b22fec6e (existe, ajeno a la rama) ---
+ROJO, cierre de la vuelta 129 NO sellado (1 cosa(s) no cuadran):
+   el commit de cierre (b22fec6e59e3d99c4c3592f7f5296573f40d9779) no esta en la rama principal (git merge-base --is-ancestor da exit 1)
+CASO (a): OK (ROJO, exit 1, 'no esta en la rama')
+
+--- CASO (b): cierre = apertura, mismo hash d18e8911 ---
+ROJO, cierre de la vuelta 129 NO sellado (1 cosa(s) no cuadran):
+   SALIDA_V129_HEAD_CIERRE.txt es IGUAL a SALIDA_V129_HEAD_APERTURA.txt (d18e8911fcfea0a1df3e15eb9419ed0f2eb73a46): un cierre que no avanzo sobre la apertura no es un cierre
+CASO (b): OK (ROJO, exit 1, 'IGUAL a' la apertura)
+
+VERDE GENERAL: los dos casos positivos (a) y (b) dan el veredicto ROJO esperado.
+EXITCODE: 0
