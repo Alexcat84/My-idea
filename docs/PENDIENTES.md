@@ -1713,6 +1713,49 @@ de 3.c y en la columna de la tabla de 3.e, no en ningun otro sitio):**
 de empaque para transporte`, titulo completo sin autor, RESTO vacio, que
 no esta truncado: simplemente su titulo real mide 31 caracteres.
 
+### UNDECIMA entrada (vuelta 133, TAREA 3.b, medicion del auditor en el
+acta 132 seccion 3.1): la cola de localizador vigente recorta `, Anexo X`
+pero NO recorta `, Apendice X`, y una grafia con Apendice pasa por LIBRO
+
+**Lo que hoy se sabe y no se sabia.** La regla de localizador de la DECIMA
+entrada (vuelta 132, TAREA 3.a) recorta `, capitulo(s) N`, `, Capitulo N:
+...`, `, seccion X` y `, Anexo X`, pero NO recorta `, Apendice X`: la
+palabra `Apendice` nunca entro a esa cola. Por eso
+`Diana L. Lindstrom, Procurement Project Management Success, Apendice B
+(RFPS)` no se reconoce como la misma familia que las otras seis grafias de
+Lindstrom, y pasa por LIBRO propio en vez de por localizador de capitulo,
+igual que si su cola dijera "Anexo" en vez de "Apendice".
+
+**Las TRES grafias del censo que llevan `Anexo` o `Apendice` en su cadena,
+medido hoy (`scripts/loop/vuelta131_grupos_por_titulo.py:cargar_censo`,
+grep por `anexo|apendice` case insensitive sobre las 129 grafias), son las
+TRES de la misma familia Lindstrom, y ninguna otra:**
+  - `Diana L. Lindstrom, Procurement Project Management Success (J. Ross,
+    2014), Anexo de aviso de no participacion` (1 nodo).
+  - `Diana L. Lindstrom, Procurement Project Management Success, Apendice B
+    (RFPS)` (1 nodo).
+  - `Diana L. Lindstrom, Procurement Project Management Success, capitulo 3
+    y Apendice C` (1 nodo).
+
+**Las CUATRO combinaciones medidas por el auditor en el acta 132 (seccion
+3.1), copiadas enteras:**
+
+| cola de localizador | 3.d (prefijo sobre recortada) | grupos | SINTETICAS | canonica de la familia Lindstrom |
+|---|---|---:|---:|---|
+| vigente | no | 106 | 1 | tres grupos: `(J. Ross, 2014)`, `Apendice B (RFPS)`, y la SINTETICA |
+| vigente | si | 104 | 0 | `..., Apendice B (RFPS)` (23 nodos): EL APENDICE CORONADO |
+| mas `Apendice` | no | 105 | 1 | dos grupos; el singleton entra al SINTETICO, que queda de 4 |
+| mas `Apendice` | si | 104 | 0 | `... Success (J. Ross, 2014)` (23 nodos): EL LIBRO CON SU EDICION |
+
+**ADJUDICADO por el auditor (acta 132, 3.1) y ejecutado en la vuelta 133
+(TAREA 4.a y 4.b):** se adopta la extension de la cola con `Apendice(s)`
+ATADA al prefijo sobre la forma recortada, nunca suelta (aplicarla sola
+corona el Apendice como libro para 23 nodos, el mismo vicio que la regla
+sintetica de la NOVENA entrada existe para matar). `Apendice` es el mismo
+localizador que `Anexo` escrito en la otra grafia, y las dos formas
+conviven en la MISMA familia del censo: por eso la extension es por cita,
+no doctrina nueva.
+
 ---
 
 ## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
@@ -8287,3 +8330,115 @@ a que reglas se atribuia.
 > salida del comando que las midio, o NO SE ESCRIBEN. Son las mas
 > peligrosas del reporte porque su unico oficio es convencer al auditor de
 > que no mire.**
+
+**(6) CORRECCION POR ADICION A (1): LA CIFRA ERA CORTA, SON SIETE PARES, NO
+SEIS (acta de la vuelta 132, seccion "MIA, DE CIFRA, PUBLICADA", 4.4;
+escrita en la vuelta 133, TAREA 3.a).** El punto (1) de este mismo R.13,
+arriba, escribe "SEIS pares fichero:linea". Medido de nuevo hoy: SON SIETE,
+CINCO PARES fichero:linea en CUATRO FICHEROS DISTINTOS para
+`Managing the Risks of Organizational Accidents` (de Reason) y DOS PARES en
+DOS FICHEROS para `The Green to Gold Business Playbook` (de Esty). La
+unidad se escribe con todas las letras para que no vuelva a arrastrarse
+torcida (ramal xvii):
+  - Reason, CINCO pares en CUATRO ficheros: `docs/CENSO_DUPLICACION.md:123`,
+    `docs/FICHA_SUBFUSION_GRADIENTE.md:2612`, `docs/PENDIENTES.md:3059`,
+    `docs/plan/03_FUSIONES.md:6522` (los cuatro ya escritos en (1)) mas
+    `docs/plan/03_FUSIONES.md:7159` (el quinto, medido hoy: la frase
+    "Tres miembros del mismo libro" seguida de
+    "*Managing the Risks of Organizational Accidents*, de Reason").
+  - Esty, DOS pares en DOS ficheros, sin cambio: `docs/CENSO_DUPLICACION.md:126`
+    y `docs/plan/03_FUSIONES.md:8018`.
+Esta misma lista de CINCO mas DOS ya vivia, completa y correcta, en la
+BOLSA 2a de la ficha del campo `fuente` (mas abajo en este fichero,
+`docs/PENDIENTES.md:1696` a `1702`, escrita en la vuelta 132 TAREA 3.b): el
+error de (1) fue no repetirla ahi cuando se escribio el registro de
+correcciones. NO se toca una linea de (1): esta es la correccion completa,
+por adicion.
+
+DISCREPANCIA DECLARADA, NO RESUELTA AQUI (medida hoy, vuelta 133): el
+tercer par de Reason en (1), `docs/PENDIENTES.md:3059`, HOY no trae la
+cadena `Managing the Risks` ni nada relacionado (esa linea dice
+"La cobertura al lado, como manda el 9.26..."). La cita que SI la trae, en
+esta misma vecindad de la ficha del campo `fuente`, es
+`docs/PENDIENTES.md:1696` ("`docs/PENDIENTES.md:3059`" aparece copiada ahi
+como PARTE DEL TEXTO CITADO, no como un lugar donde el titulo vive por si
+mismo). No se corrige por decision propia (correccion sobre una correccion
+ya sellada, fuera del alcance aditivo de esta TAREA): se deja escrita como
+pregunta para el auditor.
+
+## R.14. Registro de correcciones declaradas de la vuelta 132 (adjudicadas
+por el acta de la vuelta 132; escrito en la vuelta 133, TAREA 3.a)
+
+**(1) LA CAIDA DE REPORTE DE LA LINEA DE IDENTIDAD, Y ACUMULA (acta 132,
+4.1).** El reporte de la 132 publico "commit de nacimiento de las salidas
+de apertura `5eb04ca5`", copiando encima el rotulo del "HEAD sellado de
+apertura". Medido hoy, `git log --diff-filter=A --format=%h -1 --` sobre
+los ONCE `SALIDA_V132_*_APERTURA.txt`, uno por uno: los once nacen en
+`3a5fd829`, ninguno en `5eb04ca5`:
+  `SALIDA_V132_CICLO_ETIQUETAS_APERTURA.txt`, `SALIDA_V132_CICLO_NUMSTAT_APERTURA.txt`,
+  `SALIDA_V132_CICLO_SYNC_APERTURA.txt`, `SALIDA_V132_CONTEO_APERTURA.txt`,
+  `SALIDA_V132_DESFASE_CALIBRADO_APERTURA.txt`, `SALIDA_V132_GATE0_CMD1_APERTURA.txt`,
+  `SALIDA_V132_HEAD_APERTURA.txt`, `SALIDA_V132_MARCADOR_APERTURA.txt`,
+  `SALIDA_V132_MOTOR_APERTURA.txt`, `SALIDA_V132_TSC_APERTURA.txt`,
+  `SALIDA_V132_WEB_APERTURA.txt`, todos en `3a5fd829`.
+EL AGRAVANTE, medido hoy corriendo el mismo instrumento que se corrio esa
+vuelta: `python scripts/loop/verificar_apertura_sellada.py --vuelta 132`
+imprime, en cada una de las once lineas, "nacido en `3a5fd829`, padre
+`5eb04ca5`" -- el instrumento ya tenia la cifra buena delante y se tecleo
+la vieja igual. Es palabra por palabra lo que EJECUTOR.md 1 prohibe desde
+la vuelta 79 ("LA IDENTIDAD SE LEE DE GIT... UNA LINEA DE IDENTIDAD
+TECLEADA NO SE PUBLICA"). ACUMULA: la racha de reporte queda en DOS de
+tres, y por AUDITOR.md 1.2 (letra del 29 ago 2026) dispara la TAREA 2 de
+esta misma vuelta 133 (`tallar_identidad_reporte.py`), bloqueante.
+
+**(2) LA CAIDA DE EXPEDIENTE, "LA ADJUDICA EL FUNDADOR" (acta 132, 4.2).**
+El reporte de la 132, discutible 1, cita literal: "**3.d, DISCUTIBLE,
+MEDIDO Y NO APLICADO**: prefijo sobre la forma recortada (guarda >=20
+caracteres). 106 grupos -> **104**, una fusion nueva (3 grupos base, 7
+grafias, familia Lindstrom completa, el ejemplo que el encargo nombra). Lo
+adjudica el fundador." Adjudicar una regla mecanica (que grupos une un
+prefijo estricto sobre la forma recortada) no es una decision reservada al
+fundador: es lectura de codigo y de cifra, la misma clase de adjudicacion
+que la propia vuelta 131 ya hizo para la regla de titulo. Llamarlo "el
+fundador" apunta a una parada que no existe.
+
+**(3) EL INCUMPLIMIENTO DE ENCARGO DEL DIFF PEGADO, MOTOR Y WEB (acta 132,
+4.3).** El encargo de la 132 (1.d, ramal xv) mandaba "se prueba con el diff
+pegado, no se afirma". El reporte de la 132 escribio "por timestamps de
+duracion (diff verificado antes de publicar)" sin pegar el diff. El
+auditor lo corrio y la afirmacion ERA VERDADERA (MOTOR difiere solo en
+duraciones por test, WEB solo en "Start at" y "Duration"), pero una
+contencion verdadera sin su salida pegada sigue siendo una contencion sin
+medir, que es exactamente lo que el ramal (xv) prohibe ("UNA FRASE DE
+CONTENCION ES UNA MEDICION, NO UN ALIVIO").
+
+**(4) MI CAIDA DE CIFRA, DEL AUDITOR, YA CORREGIDA POR ADICION ARRIBA.**
+Mi acta 131 y mi encargo de la 132 dijeron "SEIS pares fichero:linea"
+cuando SON SIETE (cinco de Reason, dos de Esty). Ver la correccion (6) al
+pie de R.13, arriba en este mismo fichero, escrita por adicion sin tocar
+una linea de (1).
+
+**(5) MIS OTRAS DOS CAIDAS DE ENCARGO, DEL AUDITOR (acta 132, 4.5 y 4.6).**
+La primera: mi 1.f de la 132 avisaba que `verificar_cifras_del_plan.py`
+"puede tener algo que decir" sobre la cabecera de
+`docs/plan/OP_S_11_MAPEO_PROPUESTO.md`, cuando esa guarda, por contrato,
+NUNCA puede decir nada de ese fichero (solo mira
+`docs/plan/OPERACIONES.jsonl` y pares numero/ruta `.test.ts`). La segunda:
+mi 1.a de la 132 mandaba sellar el cierre "al terminar la ultima
+operacion" y mi propia linea de commit de 1.l mandaba "NO ESPERES A LA
+TAREA 3" con 1.h dentro (que necesita ese sello): encargo contradictorio
+consigo mismo. El ejecutor de la 132 eligio, declaro el motivo y no toco
+`dataset/` despues: resolucion correcta. Esta vuelta 133 la contradiccion
+no existe (ver 1.a y la linea de commit de 1.l del encargo de la 133).
+
+**(6) LOS RAMALES (xvi) Y (xvii), escritos enteros:**
+> **(xvi) UNA REGLA MECANICA SE ADJUDICA POR SU EFECTO SOBRE LA CANONICA, NO
+> SOLO POR CUANTOS GRUPOS COLAPSA. Un colapso que gana dos grupos y corona
+> un apendice es peor que no colapsar. Toda propuesta de regla nueva se
+> mide con las DOS cifras al lado, grupos y canonicas resultantes, o no se
+> adjudica.**
+> **(xvii) UNA CIFRA CON UNIDAD AMBIGUA SE ARRASTRA VUELTA A VUELTA.
+> "Cuatro ficheros" por cuatro pares fichero:linea sobrevivio un acta, un
+> encargo, un registro publicado y un discutible antes de que alguien la
+> contara. La unidad se escribe pegada a la cifra la primera vez, o se
+> hereda torcida.**
