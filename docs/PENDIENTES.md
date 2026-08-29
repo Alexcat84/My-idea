@@ -7413,3 +7413,110 @@ QUE EL REGISTRO ESCRITO A SU LADO.
 
 Texto viejo de `REPORTE.md` de la vuelta 121 intacto (no se reescribe un
 reporte ya commiteado y pusheado); las dos correcciones viven aqui, aditivas.
+
+### R.5 LAS DOS CAIDAS DEL DICTADO DE LA VUELTA 122 (acta de la vuelta 122,
+secciones 4.2 y 4.6), REGISTRO LARGO, CORRECCIONES DECLARADAS
+
+**(1) EL REPORTE DE LA 122 PUBLICO "81 INSERTADAS" Y SU PROPIO REGISTRO DICE
+80.** La TAREA 2 de `docs/loop/REPORTE.md` de la vuelta 122 (commit
+`063b18e1`) abre con *"(81 insertadas, 0 borradas en `PENDIENTES.md` +
+`08_VERIFICACION.md`...)"*. Remedido HOY, leyendo el propio fichero de
+evidencia de esa vuelta, `docs/loop/SALIDA_V122_TAREA2_NUMSTAT.txt`: `55 0
+docs/PENDIENTES.md` y `25 0 docs/plan/08_VERIFICACION.md`, **55 + 25 = 80**.
+La misma cifra falsa **quedo congelada en el mensaje de commit de
+`d7521e8a`** (*"81 insertadas, 0 borradas"*), donde ya no se corrige en su
+sitio, solo por remision aqui. Este es el ramal (iv) del tramo doblado de la
+vuelta 123 (`docs/loop/PROMPT_SIGUIENTE.md`): TODA CIFRA SOBRE UN ARTEFACTO
+CONTABLE (lineas de un diff) SE LEE DE LA SALIDA DEL INSTRUMENTO PEGADA AL
+LADO, y si el instrumento ya escribio su fichero, la cifra del texto ES ESE
+FICHERO.
+
+**(2) `verificar_citas_del_reporte.py` SE ESTRECHO PARA PASAR SOBRE SU PROPIO
+REPORTE Y EL RECORTE SOLO VIVIO EN EL MENSAJE DE COMMIT.** El commit
+`063b18e1` (el mismo que trae `REPORTE.md` de la 122) modifico la guarda
+nacida en `2dc557c3` anadiendo, en `cotejar()`, un
+`if frase.strip().startswith("|"): continue`, que dejaba FUERA DEL COTEJO
+toda fila de tabla markdown. El mensaje del commit declara tres arreglos,
+pero **el `REPORTE.md` de la vuelta dice** *"coteja cada afirmacion del
+vocabulario cerrado contra el fichero que cita"* **sin nombrar ese recorte de
+alcance**, y el `CONTRATO` del docstring del script tampoco lo mencionaba:
+la unica cita del recorte vivio en el mensaje de commit, invisible para
+quien solo lee el expediente. Remedido HOY por mutacion propia
+(`docs/loop/SALIDA_V122_AUDITOR_PUNTO_CIEGO_CITAS.txt`, del auditor): la
+misma afirmacion falsa daba ROJO en prosa y VERDE dentro de una fila de
+tabla. **Arreglado en la vuelta 123** (`scripts/loop/verificar_citas_del_reporte.py`,
+encargo TAREA 1.e): una fila de tabla vuelve a ser cotejable cuando trae cita
+propia en la misma fila; solo una fila SIN cita propia queda fuera (y no
+mira a la frase anterior), y esa exclusion esta escrita en el `CONTRATO`, en
+este registro y en un caso positivo propio
+(`scripts/loop/vuelta123_tarea1e_mutacion_fila_tabla.py`). Este es el ramal
+(iii) del tramo doblado de la vuelta 123: NINGUNA GUARDA SE ESTRECHA EN
+SILENCIO.
+
+Texto viejo de `REPORTE.md` y del mensaje de commit de la vuelta 122 intacto
+(no se reescribe nada ya commiteado); las dos correcciones viven aqui,
+aditivas.
+
+### SEPTIMA entrada (vuelta 123, adjudicacion del ejecutor sobre la
+adjudicacion 3.3 del auditor, acta de la vuelta 122): los alias huerfanos de
+los `alias_map_*.json` NO se borran esta campaña, quedan anotados
+
+**NO SE BORRA NI UN ALIAS EN ESTA CAMPAÑA.** La fuente canonica que el
+resolutor de produccion consulta es `ids_alias` EMBEBIDO en cada nodo de
+`dataset/metadata/master_graph.json` (`mapaDeAlias` en
+`web/lib/engine/graph.ts:109` y su espejo `scripts/reanclar_por_resolutor.py:51`),
+remedida HOY por corrida propia
+(`docs/loop/SALIDA_V123_TAREA2D_CENSO_ALIAS.txt`, clasificando por el DUENO
+del alias, el nid que `resolverId` devuelve, no por si la clave coincide con
+algun id suelto): **742 entradas, 0 colisiones, 719 con dueno VIVO, 23 con
+dueno DEPRECADO, 0 huerfanas**. Los cuatro `alias_map_*.json` de
+`dataset/metadata/` son de OTRA ETAPA: solo TRES (`capa_b`, `capa_c`,
+`auto`) alimentan un mecanismo real, `ALIAS_MAP_FILES` de
+`scripts/run_phase1.py:87`, que repara referencias ROTAS dentro del grafo
+durante la curaduria (reescribe aristas), no resuelve ids externos en
+produccion; `alias_map_capa_d_duplicates.json` no esta en esa lista y ningun
+script vivo lo lee. Censo de HOY sobre la union de los cuatro (primera
+ocurrencia gana): **230 claves unicas, 15 huerfanos, 37 a nodo deprecado**
+(`docs/loop/SALIDA_V123_TAREA2D_CENSO_ALIAS.txt`, identico al recuento del
+acta de la vuelta 122).
+
+**Por que se anota y no se ejecuta**: la unica frase que ordenaba limpiarlos
+era la nota de `OP-S-08` (*"los 77 alias huerfanos se limpian aqui"*), y esa
+frase nombraba una fuente que NO es la del resolutor (los 391/314/77
+originales del censo del 11 ago 2026 eran sobre los cuatro `alias_map_*.json`,
+no sobre `ids_alias`); `OP-S-08` cerro CUMPLIDA CON REMISION sin tocarlos
+(acta de la vuelta 122, seccion 1.4). **Adjudicado citando el punto 2 de la
+decision del fundador del 28 ago 2026**
+(`docs/loop/paradas/2026-08-28-titulo-nafta-ops01-DECISION.md`), igual que
+las entradas de `OP-S-01`, `OP-S-04` y `OP-S-05` de arriba: el contenido que
+ninguna operacion viva reclama se anota como trabajo post campaña y no se
+ejecuta. **Ningun fichero de `dataset/` se toca por esta entrada.**
+
+### OBSERVACION (vuelta 123, TAREA 2.e, medicion para la auditoria de cierre,
+NO es arreglo): `cargarEntrySeeds` sin grafo, censo completo de sitios vivos
+
+**El acta de la vuelta 122 encontro UN sitio** (`web/app/api/project/[id]/follow/route.ts:232`,
+llama `cargarEntrySeeds()` sin el grafo con `graph` ya cargado en la linea
+anterior) y pidio el censo COMPLETO de todas las llamadas vivas. Medido HOY,
+barriendo `web/` fuera de ficheros `*.test.ts`/`*.test.tsx` y `__tests__`:
+**CUATRO llamadas vivas en produccion**, y solo esa es la que NO pasa el
+grafo:
+
+| sitio | llamada | pasa `graph` |
+|---|---|---|
+| `web/app/api/organizer/route.ts:67` | `cargarEntrySeeds(graph)` | SI |
+| `web/app/api/organizer/stream/route.ts:88` | `cargarEntrySeeds(graph)` | SI |
+| `web/app/api/session/start/route.ts:100` | `cargarEntrySeeds(graph)` | SI |
+| `web/app/api/project/[id]/follow/route.ts:232` | `cargarEntrySeeds()` | **NO** |
+
+**La definicion** (`web/lib/engine/graph.ts:67-72`): con `graph`, filtra la
+lista cruda de semillas por `esOfrecible(nid, graph)` (deja fuera nodos
+deprecados o no ofrecibles); sin `graph`, devuelve la lista cruda SIN
+FILTRAR. **`follow/route.ts:232` es el UNICO sitio vivo con el hueco**, con
+`graph = cargarGrafo()` ya disponible en la linea 231 inmediatamente
+anterior: la misma averia que `OP-C-01` arreglo en los dos `organizer`. **NO
+es uno de los veinte de `OP-S-08`** (censo del 11 ago 2026, accesos directos
+`graph[id]`; esto es una carga de semillas), asi que no reabre esa operacion,
+y **NO se toca el codigo esta vuelta** (fase 0, CERRADA). Queda anotado para
+que la auditoria de cierre de la fase 05 lo tenga con su censo completo, no
+solo el sitio suelto.

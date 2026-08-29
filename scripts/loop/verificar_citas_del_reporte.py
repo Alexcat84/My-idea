@@ -10,12 +10,29 @@ status --porcelain vacio tras el rojo" citando (abreviado en la prosa)
 `SALIDA_V121_OPS03_ROJO_SEGUNDA_PASADA.txt`, cuando ese fichero, leido, trae
 tres lineas " M dataset/...json" al final: no esta vacio.
 
-CONTRATO (exacto, del encargo del auditor):
-  - Lee docs/loop/REPORTE.md y busca los pares (afirmacion, fichero citado)
-    sobre un vocabulario CERRADO y corto, en la misma frase o en la frase
-    anterior: "25/25", "vacio", "GATE 0 OK" o "Gate 0 verde", "EXIT 0",
-    "EXIT 1", "ROJO", "IDENTICA AL TALLADOR".
-  - Para cada par, abre el fichero citado y comprueba:
+CONTRATO (exacto, tal como corre desde la vuelta 123, encargo 1.e, acta de la
+vuelta 122 seccion 4.6):
+  - Lee docs/loop/REPORTE.md y parte el texto en frases. Cada LINEA de tabla
+    markdown ("| ... |") es su propia frase atomica; el resto es prosa,
+    partida por punto seguido de espacio o salto de linea (sin partir un
+    punto de miles como "3.853").
+  - Busca los pares (afirmacion, fichero citado) sobre un vocabulario CERRADO
+    y corto: "25/25", "vacio", "GATE 0 OK" o "Gate 0 verde", "EXIT 0",
+    "EXIT 1", "ROJO", "IDENTICA AL TALLADOR". El vocabulario se busca fuera
+    de los nombres de fichero citados (un fichero puede traer "ROJO" en su
+    propio nombre).
+  - LA CITA: si la frase (fila de tabla o prosa) trae su PROPIA cita de
+    fichero, se coteja con esa. Si es PROSA y no trae cita propia, mira la
+    cita de la frase anterior (lookback de prosa, sin cambios desde la 122).
+    Si es FILA DE TABLA y no trae cita propia, NO coteja y NO es rojo (no
+    mira a la frase anterior): una tabla puede tener celdas de dato sin cita
+    propia porque la cita vive una sola vez, en el parrafo que abre la
+    tabla, y forzar el lookback ahi fue el punto ciego que la 122 tapo
+    recortando el vocabulario entero de las filas (acta 122, 4.6). Desde la
+    123, una fila CON cita propia SI se coteja como cualquier frase.
+  - Si una afirmacion en prosa no tiene cita propia ni previa: ROJO
+    (sin fichero citado).
+  - Para cada par con cita, abre el fichero citado y comprueba:
       "25/25"              -> el fichero contiene "TODOS LOS TESTS PASARON (25/25)"
       "vacio"               -> el fichero NO tiene ninguna linea que empiece
                                por espacio y una letra de estado de git
@@ -30,7 +47,11 @@ CONTRATO (exacto, del encargo del auditor):
 
 La guarda NO interpreta ni corrige nada: solo lee el fichero citado y compara
 contra lo que la frase afirma, con el vocabulario cerrado de arriba y nada
-mas. Un par fuera de ese vocabulario no se coteja: no es su contrato.
+mas. Un par fuera de ese vocabulario no se coteja: no es su contrato. Una
+fila de tabla SIN cita propia tampoco se coteja: por diseno, no por recorte
+silencioso (la exclusion esta escrita aqui, en el REPORTE de la vuelta que la
+toca, y probada con un caso positivo, tal como manda el ramal (iii) del
+tramo doblado de EJECUTOR.md).
 
 USO:
   python scripts/loop/verificar_citas_del_reporte.py
@@ -43,6 +64,16 @@ copia MUTADA del REPORTE.md de la vuelta 121 en la que la frase "vacio" cita,
 sin abreviar, `SALIDA_V121_OPS03_ROJO_SEGUNDA_PASADA.txt` (que trae tres lineas
 " M ..."): tiene que dar ROJO. Sobre el REPORTE.md de esta vuelta (una vez
 escrito) tiene que dar VERDE.
+
+CASO POSITIVO DEL PUNTO CIEGO DE FILA DE TABLA (vuelta 123, encargo 1.e, mio):
+`scripts/loop/vuelta123_tarea1e_mutacion_fila_tabla.py` corre esta guarda
+sobre una copia del REPORTE.md de la vuelta 122 con una fila de tabla nueva
+que cita, con cita propia en la misma fila, `SALIDA_V122_TSC_APERTURA.txt`
+afirmando "25/25" (ese fichero es el tsc, EXIT=0, y NUNCA contiene la cadena
+"TODOS LOS TESTS PASARON (25/25)", que es del motor): tiene que dar ROJO
+nombrando el par. Y la mutacion vieja de la 122
+(`vuelta122_tarea1e_mutacion_citas.py`) tiene que SEGUIR dando ROJO: si el
+arreglo de la fila de tabla rompiera esa mutacion, el arreglo estaria mal.
 """
 import argparse
 import io
@@ -145,14 +176,15 @@ def cumple(afirmacion, contenido):
 def cotejar(texto, fallos, pares_ok):
     frases = dividir_frases(texto)
     for i, (offset, frase) in enumerate(frases):
-        # Una fila de tabla markdown ("| ... |") es dato ya validado por OTRA
-        # guarda (tallar_cabecera_reporte.py --comparar): sus celdas no llevan
-        # cita propia por diseno (la cita vive una sola vez, en el parrafo que
-        # abre la tabla). Exigirle una cita a cada celda con "25/25" o similar
-        # es imposible de cumplir sin romper la pega verbatim que la otra
-        # guarda exige: se excluye del vocabulario, no del cotejo de prosa.
-        if frase.strip().startswith("|"):
-            continue
+        # Una fila de tabla markdown ("| ... |") vuelve a ser cotejable desde
+        # la vuelta 123 (encargo 1.e, acta 122 4.6): si lleva una afirmacion
+        # del vocabulario Y una cita de fichero EN LA MISMA FILA, se coteja
+        # como cualquier frase. Lo unico que sigue vivo del corte de la 122
+        # es que una fila SIN cita propia NO MIRA a la frase anterior (ese
+        # lookback era el cruce que motivo el recorte de la 122): simplemente
+        # no se coteja y no es rojo, porque una tabla puede tener celdas de
+        # dato sin cita (la cita vive en el parrafo que abre la tabla).
+        es_fila_tabla = frase.strip().startswith("|")
         # El vocabulario se busca FUERA de los nombres de fichero citados: un
         # fichero como `SALIDA_V121_OPS03_ROJO_SEGUNDA_PASADA.txt` trae la
         # palabra "ROJO" en su propio nombre, y sin este enmascarado el
@@ -163,8 +195,13 @@ def cotejar(texto, fallos, pares_ok):
             if afirmacion not in frase_sin_ficheros:
                 continue
             ficheros = ficheros_citados(frase)
-            if not ficheros and i > 0:
-                ficheros = ficheros_citados(frases[i - 1][1])
+            if not ficheros:
+                if es_fila_tabla:
+                    # fila de tabla sin cita propia: no coteja, no es rojo, y
+                    # NO mira a la frase anterior (vuelta 123, 1.e)
+                    continue
+                if i > 0:
+                    ficheros = ficheros_citados(frases[i - 1][1])
             ln = linea_de(texto, offset)
             if not ficheros:
                 fallos.append('linea %d: sin fichero citado para "%s": %s'
