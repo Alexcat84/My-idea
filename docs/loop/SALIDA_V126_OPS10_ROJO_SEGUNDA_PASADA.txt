@@ -1,0 +1,20 @@
+==============================================================================
+OP-S-10, TRAMO 1, REENCUADRE DE MARCO (vuelta 126) . MODO EJECUTAR
+==============================================================================
+guarda 1, los 10 nodos existen y estan VIVOS: OK
+guarda 2, la condicion NO estaba puesta todavia: ROJO
+
+SE ABORTA SIN ESCRIBIR, 1 fallo(s):
+  [ROJO] la condicion YA esta puesta en: ['alternativa_business_opportunity_licensing', 'alternativa_trademark_licensing', 'calculo_roi_franquiciado_2', 'calificacion_prospectos_award', 'concepto_de_advances', 'cumplir_leyes_estatales_franquicia', 'decision_fpr', 'decision_marca_comun_branding', 'desarrollar_manual_operaciones', 'diseno_programa_capacitacion_franquicia']
+EXIT: 1
+--- git status --porcelain (dataset/) ---
+ M dataset/nodos/alternativa_business_opportunity_licensing.json
+ M dataset/nodos/alternativa_trademark_licensing.json
+ M dataset/nodos/calculo_roi_franquiciado_2.json
+ M dataset/nodos/calificacion_prospectos_award.json
+ M dataset/nodos/concepto_de_advances.json
+ M dataset/nodos/cumplir_leyes_estatales_franquicia.json
+ M dataset/nodos/decision_fpr.json
+ M dataset/nodos/decision_marca_comun_branding.json
+ M dataset/nodos/desarrollar_manual_operaciones.json
+ M dataset/nodos/diseno_programa_capacitacion_franquicia.json
