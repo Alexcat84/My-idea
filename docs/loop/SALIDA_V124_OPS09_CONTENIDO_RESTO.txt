@@ -1,0 +1,251 @@
+12 PARES FALTANTES DEL RACIMO DE OP-S-09, 10 familias, 22 nodos distintos
+
+==========================================================================================
+FAMILIA [accion_correctiva] (2 nodos en esta lectura): accion_correctiva, accion_correctiva_4
+==========================================================================================
+--- accion_correctiva ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Acción Correctiva (Esporádica vs Crónica)
+  etiqueta_arbol: Distingue Fallas Esporádicas y Crónicas
+  resumen_teorico: Distingue dos tipos de no conformidad. La esporádica es un cambio aislado en un proceso que normalmente funciona bien y se resuelve con troubleshooting local o proceso 8D, cuyo diagnóstico consiste en descubrir qué cambió mediante autopsia forense del producto o proceso, comparación de datos antes y después, y reconstrucción cronológica de eventos como turnos, mantenimiento o personal nuevo. El remedio suele ser revertir el cambio y restaurar el estado anterior conocido, un proceso más simple que la mejora continua. La crónica o repetidora es un desperdicio persistente que exige un proyecto formal de mejora de calidad con análisis de causa raíz o metodologías Six Sigma, porque no basta con volver atrás: hay que rediseñar la condición base del proceso.
+  pasos_accionables: ["Clasificar la no conformidad como esporádica o crónica según su recurrencia.", "Para casos esporádicos, hacer una autopsia forense del producto o proceso y comparar datos antes y después del problema.", "Reconstruir la cronología de eventos como cambios de turno, mantenimiento o personal nuevo para formular y descartar teorías de causa.", "Restaurar el proceso al estado previo una vez identificada la causa y verificar que el ajuste sea predecible y accesible.", "Para casos crónicos, organizar un proyecto formal de mejora de calidad con análisis de causa raíz o Six Sigma."]
+  entregable_esperado: Plan de acción correctiva documentado con cronología de eventos si es esporádico, o esquema de proyecto de mejora si es crónico.
+  ids_alias: ['accion_correctiva_diagnostico_remedio']
+  merged_originals: ['accion_correctiva_diagnostico_remedio']
+
+--- accion_correctiva_4 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Acción Correctiva (Paso 6)
+  etiqueta_arbol: Habla y Corrige tus Problemas
+  resumen_teorico: A medida que los empleados hablan abiertamente de sus problemas, surgen oportunidades de corrección más allá de los defectos detectados por inspección. Estos problemas deben tratarse en reuniones de supervisión en cada nivel, y escalarse formalmente si no pueden resolverse en el nivel inicial.
+  pasos_accionables: ["Establecer reuniones regulares de supervisión para tratar problemas de calidad", "Escalar problemas no resueltos al siguiente nivel jerárquico", "Crear reuniones formales en departamentos que no las tengan", "Dar seguimiento visible a la resolución de problemas"]
+  entregable_esperado: Sistema formal de reuniones de acción correctiva funcionando en todos los niveles.
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA [auditoria_de_producto] (2 nodos en esta lectura): auditoria_de_producto, auditoria_producto
+==========================================================================================
+--- auditoria_de_producto ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Revisión independiente de tu producto terminado (auditoría de producto)
+  etiqueta_arbol: Compara tu Producto contra la Realidad
+  resumen_teorico: Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Puedes hacerla al azar, para tener una imagen sin sesgo de la calidad general, o enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificacion del 98%) mientras en la calle el producto sigue fallando.
+  pasos_accionables: ["Define si vas a comparar contra tus propias especificaciones o contra lo que el usuario realmente necesita", "Elige en que momento revisas: fabrica, distribuidor, servicio o ya en campo, según que tan complejo sea tu producto", "Decide cuantas unidades vas a revisar, usando un método estadistico o una regla practica como revisar un porcentaje pequeño de lo que produces por turno", "Diseña que vas a mirar en cada revisión: si sera al azar o enfocada en un problema que ya conoces", "Compara lo que encuentras con quejas de clientes o con lo que ves en el mercado, para confirmar que estas midiendo lo que de verdad importa", "Clasifica cada falla según su gravedad, de critica a incidental, y calcula un indice de fallas por unidad", "Compara tus resultados a lo largo del tiempo y frente a tu competencia para detectar si algo esta empeorando"]
+  entregable_esperado: Tu informe de revisión con un indice de fallas por unidad, la gravedad de cada falla y la comparacion con lo que pasa en campo o en el mercado
+  ids_alias: None
+  merged_originals: None
+
+--- auditoria_producto ---
+  dominio: quality | fase_proyecto: validacion | deprecado: False
+  titulo_concepto: Auditoría de Producto (Aptitud de Uso y Conformidad)
+  etiqueta_arbol: Verifica que tu Producto Sirva
+  resumen_teorico: La auditoría de producto es una evaluación independiente de la calidad de un producto para determinar su aptitud de uso y conformidad con especificaciones, realizada después de las inspecciones regulares. Sus propósitos incluyen estimar el nivel de calidad entregado al cliente, evaluar la efectividad de las decisiones de inspección, y proporcionar aseguramiento adicional. Es crítico que el alcance del muestreo refleje realmente las características importantes para el cliente, no solo lo fácil de medir.
+  pasos_accionables: ["Definir el propósito de la auditoría de producto (estimar calidad entregada, evaluar inspección, etc.)", "Seleccionar la etapa de evaluación más económica y representativa (fábrica, distribuidor, campo)", "Validar que las características auditadas correspondan a lo que realmente importa al cliente (contrastar con estudios de mercado)", "Tomar muestras representativas de productos terminados para verificar conformidad y aptitud de uso"]
+  entregable_esperado: Reporte de auditoría de producto con nivel de calidad estimado y comparación con necesidades del cliente
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA [consejo_de_calidad] (2 nodos en esta lectura): consejo_de_calidad, consejo_de_calidad_3
+==========================================================================================
+--- consejo_de_calidad ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Consejo de Calidad (Liderazgo y Selección de Proyectos de Juran)
+  etiqueta_arbol: Elige tus Proyectos de Mejora
+  resumen_teorico: Es la instancia donde tu, junto con las personas que te ayudan a llevar el negocio, decides que proyectos de mejora vale la pena impulsar, evaluas su avance y asignas los recursos necesarios: capacitación, tiempo, personas. Es la forma en que tu, como responsable del negocio, lideras personalmente las iniciativas de calidad en lugar de delegarlas por completo.
+  pasos_accionables: ["Reune a las personas clave de tu negocio para formar este espacio de decisión, idealmente miembros del comité de alta dirección, presidido por el máximo responsable del nivel correspondiente", "Capacitense en el método de mejora de calidad que van a usar", "Identifica y prioriza los problemas mas importantes, por ejemplo con un análisis de Pareto", "Elige los proyectos a trabajar y define con claridad el problema y la meta de cada uno", "Asigna los recursos necesarios: capacitación, personas, tiempo y acompañamiento", "Revisa el avance de cada equipo y reconoce los logros, con métricas de progreso y la remoción de obstáculos", "Publicar y comunicar las responsabilidades del consejo a toda la organización", "Establecer políticas de enfoque al cliente y continuidad del breakthrough", "Vincular consejos corporativos con consejos divisionales o locales si la organización es grande", "Incluir al director de calidad como miembro del consejo", "Redactar una carta constitutiva con responsabilidades claras del consejo"]
+  entregable_esperado: Un espacio de decisión activo, con proyectos priorizados y equipos con recursos asignados
+  ids_alias: ['consejo_calidad', 'consejo_calidad_2']
+  merged_originals: ['consejo_calidad', 'consejo_calidad_2']
+
+--- consejo_de_calidad_3 ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Consejos de Calidad (Quality Councils)
+  etiqueta_arbol: Comparte Experiencias entre Consejos
+  resumen_teorico: Los consejos de calidad son estructuras organizacionales formadas por representantes de la mejora de calidad de distintas áreas, que se reúnen para compartir experiencias, coordinar iniciativas y sostener el impulso del programa de mejora en el largo plazo. Constituyen el último paso del programa de 14 pasos y aseguran que la mejora de calidad se convierta en parte permanente de la cultura organizacional ('hazlo de nuevo').
+  pasos_accionables: ["Conformar el consejo con representantes de las distintas áreas de mejora", "Establecer una periodicidad de reuniones para compartir avances", "Coordinar la repetición del ciclo de mejora de calidad", "Institucionalizar el consejo como parte de la estructura permanente"]
+  entregable_esperado: Consejo de calidad establecido con reuniones periódicas y mecanismo de repetición del ciclo de mejora
+  ids_alias: ['consejos_calidad', 'consejos_de_calidad_2']
+  merged_originals: ['consejos_calidad', 'consejos_de_calidad_2']
+
+==========================================================================================
+FAMILIA [capacidad_de_proceso] (2 nodos en esta lectura): capacidad_de_proceso, capacidad_del_proceso
+==========================================================================================
+--- capacidad_de_proceso ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Capacidad de Proceso
+  etiqueta_arbol: Mide la Capacidad de tu Proceso
+  resumen_teorico: La capacidad de proceso mide la uniformidad inherente de un proceso para producir dentro de especificaciones. Se cuantifica desde la etapa de planificación y sirve para decidir sobre la adecuación de procesos, elección de alternativas, necesidad de rediseño y, en control, para definir la frecuencia de medición y mantenimiento: a mayor estabilidad, menor necesidad de medición frecuente.
+  pasos_accionables: ["Recolectar datos históricos de desempeño del proceso", "Calcular índices de capacidad (uniformidad) del proceso frente a especificaciones", "Usar los resultados para decidir frecuencia de medición y mantenimiento", "Determinar si el proceso requiere rediseño o si es apto para producción"]
+  entregable_esperado: Análisis de capacidad de proceso con recomendación sobre frecuencia de control y necesidad de ajuste
+  ids_alias: None
+  merged_originals: None
+
+--- capacidad_del_proceso ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Capacidad del Proceso
+  etiqueta_arbol: Calcula lo que tu Proceso Rinde
+  resumen_teorico: Una vez que un proceso está en control estadístico, tiene una capacidad definible y predecible: se puede calcular qué especificaciones puede cumplir de forma sostenida usando la media y el rango de los gráficos X-barra y R. Es un error común calcular capacidad tomando muestras arbitrarias sin antes verificar que el proceso esté en control.
+  pasos_accionables: ["Verificar primero que el proceso esté en control estadístico (gráfico de corridas o X-barra/R)", "Calcular la media y el rango promedio del proceso estable", "Determinar la capacidad usando las fórmulas estándar (constantes d2, A2, etc.)", "Comunicar la capacidad real a diseño e ingeniería para ajustar especificaciones realistas"]
+  entregable_esperado: Informe de capacidad del proceso con límites naturales de variación calculados a partir de datos en control estadístico.
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA [dia_cero_defectos] (2 nodos en esta lectura): dia_cero_defectos, dia_cero_defectos_3
+==========================================================================================
+--- dia_cero_defectos ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Día de Cero Defectos (El Estándar se Fija en Un Solo Día)
+  etiqueta_arbol: Fija tu Estándar en un Día
+  resumen_teorico: Fijas el estándar de Cero Defectos en tu negocio en un solo día, no de forma gradual. Todos entienden la nueva actitud de la misma manera y ese día se convierte en un hito memorable que marca un antes y un después en cómo trabajas y en cómo tu equipo se compromete con hacer las cosas bien desde el principio.
+  pasos_accionables: ["Elige una fecha única para el lanzamiento oficial", "Realiza actividades especiales que marquen el cambio de actitud", "Explica el programa a todos el mismo día"]
+  entregable_esperado: Evento de lanzamiento del estándar Cero Defectos realizado en tu negocio.
+  ids_alias: None
+  merged_originals: None
+
+--- dia_cero_defectos_3 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Día de Cero Defectos (Evento Simbólico ZD)
+  etiqueta_arbol: Vive el Día de Cero Defectos
+  resumen_teorico: El Día ZD es un evento simbólico donde todos los empleados de la empresa experimentan de forma personal y colectiva el inicio de un nuevo estándar de calidad. Se busca reunir a todo el personal simultáneamente, con la participación de figuras significativas (directivos, autoridades, sindicatos), para formalizar el compromiso con Cero Defectos mediante discursos, firma de compromisos (pledges) y entrega de pines. El objetivo es crear un recuerdo compartido que refuerce el cambio cultural.
+  pasos_accionables: ["Organizar un evento que reúna a todos los empleados al mismo tiempo, con presencia de líderes significativos para ellos.", "Incluir un componente de 'show business': música, discursos breves, premios, para hacer el evento memorable.", "Permitir que los empleados firmen su compromiso (pledge) con sus supervisores y reciban un pin o distintivo.", "Anunciar el inicio inmediato de la fase de eliminación de causas de error (ECR) al día siguiente del evento.", "Reconocer públicamente al equipo organizador y a los participantes destacados."]
+  entregable_esperado: Evento corporativo realizado con compromisos firmados por los empleados y lanzamiento oficial del programa ZD.
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA [make_certain_programa] (4 nodos en esta lectura): make_certain_programa, programa_make_certain, programa_make_certain_2, programa_make_certain_3
+==========================================================================================
+--- make_certain_programa ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Programa Make Certain para Áreas Administrativas
+  etiqueta_arbol: Haz Certera tu Oficina
+  resumen_teorico: Make Certain es un programa de mejora orientado a personal de oficina y administrativo (white-collar), diseñado para generar conciencia inmediata sobre la responsabilidad personal en la calidad del trabajo de comunicación y papeleo. Se basa en el reconocimiento de que la mayoría de las personas atribuyen sus problemas a otros y no a sí mismas, y busca revertir esa percepción mediante ejercicios grupales guiados.
+  pasos_accionables: ["Informar al personal directivo sobre el concepto e intención del programa", "Designar coordinadores por departamento administrativo", "Recolectar ejemplos reales de errores de prevención evitables", "Realizar sesión donde cada participante declare su 'mayor problema'", "Evidenciar que los problemas suelen atribuirse a otros, no a uno mismo", "Solicitar ideas escritas de prevención de defectos al equipo de mejora", "Establecer reuniones regulares de prevención de defectos por grupo, similar a los círculos de acción correctiva en manufactura"]
+  entregable_esperado: Sesión Make Certain ejecutada con lista de problemas identificados y compromiso de reuniones regulares de prevención en áreas administrativas.
+  ids_alias: None
+  merged_originals: None
+
+--- programa_make_certain ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Programa Make Certain (para personal administrativo)
+  etiqueta_arbol: Asegura la Calidad Administrativa
+  resumen_teorico: Programa de cinco semanas orientado principalmente a personal de oficina o 'cuello blanco', diseñado como un avance en los esfuerzos de mejora de calidad más allá del entorno de manufactura. Es especialmente apropiado para usarse durante la etapa de concientización (awareness) del programa general de catorce pasos, abordando errores administrativos y de procesos que no son visibles en la línea de producción.
+  pasos_accionables: ["Identificar tasas de repetición de trabajo (rework) en áreas administrativas y de papeleo", "Diseñar el programa de cinco semanas enfocado en detectar y prevenir errores de oficina", "Lanzar el programa como parte de la etapa de concientización de calidad", "Medir el impacto en costo de calidad antes y después de la implementación"]
+  entregable_esperado: Programa Make Certain de cinco semanas diseñado e implementado en áreas administrativas, con métricas de rework antes/después
+  ids_alias: None
+  merged_originals: None
+
+--- programa_make_certain_2 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Programa 'Make Certain' de Prevención de Defectos
+  etiqueta_arbol: Previene Errores en tu Papeleo
+  resumen_teorico: El programa 'Make Certain' es una metodología estructurada de Crosby diseñada especialmente para áreas de servicio y trabajo administrativo (paperwork), donde se involucra a supervisores y empleados en identificar cómo podrían fallar en satisfacer a su cliente interno o externo, y luego invertir esa lógica para generar sugerencias concretas de prevención de defectos. Se apoya en la participación activa de todos los niveles, coordinadores por departamento, medición de sugerencias en horas-hombre ahorradas, y reconocimiento simbólico (como el badge 'Certain Maker') en lugar de premios monetarios.
+  pasos_accionables: ["Informar al staff de dirección sobre el concepto e intención del programa y designar coordinadores por departamento.", "Reunirse con los coordinadores para explicarles el programa y solicitar ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).", "Capacitar a supervisores en la lógica del programa: identificar cliente interno/externo, qué espera ese cliente, y qué podría hacer el equipo para NO cumplirlo (pregunta invertida).", "Convertir esas respuestas negativas en sugerencias positivas de cómo 'hacer cierto' que el cliente reciba lo prometido.", "Registrar y medir las sugerencias entregadas, entregar reconocimiento (badge) y publicar los avances en carteleras.", "Medir el impacto en horas de trabajo no gastadas por hacer las cosas bien, multiplicado por el costo salarial cargado.", "Realizar cuenta regresiva pública antes del cierre del programa y agradecer formalmente a todos los participantes al finalizar.", "Implementar tantas sugerencias como sea posible y reportar su seguimiento durante varios meses."]
+  entregable_esperado: Un programa documentado de prevención de defectos por departamento, con coordinadores asignados, formato de sugerencias, sistema de medición en horas/dinero ahorrado, y reporte de implementación de mejoras.
+  ids_alias: None
+  merged_originals: None
+
+--- programa_make_certain_3 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Programa Make Certain
+  etiqueta_arbol: Certifica tu Trabajo Administrativo
+  resumen_teorico: El programa Make Certain es el primer programa de prevención de defectos diseñado específicamente para empleados administrativos (white-collar) y no relacionados con manufactura. Reconoce que los errores de oficina y paperwork generan problemas costosos y frustrantes, y que basta un solo dato erróneo en la cadena de información para afectar toda su efectividad y precisión. El programa incluye una guía del instructor con pasos de acción específicos para implementarlo en entornos administrativos.
+  pasos_accionables: ["Identificar los procesos administrativos críticos susceptibles a errores de datos", "Capacitar a los empleados administrativos usando la guía del instructor del programa", "Implementar los pasos de acción definidos para la prevención de errores de oficina", "Monitorear la exactitud de los datos y documentos en la cadena de comunicación"]
+  entregable_esperado: Programa Make Certain implementado en áreas administrativas con material de capacitación y métricas de error definidas
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA [clasificacion_de_seriedad_de_defectos] (2 nodos en esta lectura): clasificacion_de_seriedad_de_defectos, clasificacion_seriedad_defectos
+==========================================================================================
+--- clasificacion_de_seriedad_de_defectos ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Clasificación de Seriedad de Defectos y Deméritos por Unidad
+  etiqueta_arbol: Pondera la Gravedad de tus Defectos
+  resumen_teorico: Sistema de ponderación de defectos según su gravedad (crítico, mayor, menor A, menor B, incidental), asignando 'pesos' o deméritos a cada tipo. La suma total de deméritos dividida entre las unidades inspeccionadas produce un índice único (deméritos por unidad) que permite comparar calidad entre periodos, líneas de producción o competidores de forma objetiva y proporcional a la oportunidad de error.
+  pasos_accionables: ["Definir categorías de seriedad de defectos relevantes para el producto", "Asignar peso (demérito) a cada categoría de defecto", "Registrar número de defectos por categoría durante inspección/auditoría", "Calcular deméritos totales y dividir entre unidades inspeccionadas", "Usar el índice resultante para comparar tendencias históricas y frente a competencia"]
+  entregable_esperado: Tabla de clasificación de defectos con pesos asignados y cálculo del índice de deméritos por unidad
+  ids_alias: None
+  merged_originals: None
+
+--- clasificacion_seriedad_defectos ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Clasificación de Seriedad de Defectos (Características y Defectos por Gravedad)
+  etiqueta_arbol: Separa Características y Defectos por Gravedad
+  resumen_teorico: Consiste en clasificar tanto las características de calidad derivadas de especificaciones como los defectos (síntomas de no conformidad) según su gravedad. Aunque ambas listas tienen relación, no son idénticas ni se comportan igual. Esta clasificación, aunque tediosa, revela confusiones entre las distintas partes de tu negocio y permite optimizar recursos de inspección.
+  pasos_accionables: ["Elabora una lista de características de calidad a partir de tus especificaciones", "Elabora una lista aparte de defectos o síntomas de no conformidad", "Define categorías de seriedad (crítico, mayor, menor) con quienes te ayuden en distintas áreas", "Aplica la clasificación para reducir lo que necesitas verificar y el tiempo de inspección", "Valida con casos piloto que muestren el beneficio a quienes se resistan al cambio"]
+  entregable_esperado: Tabla de clasificación de seriedad de características y defectos aplicada a un producto o proceso específico
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA [cultura_justa] (2 nodos en esta lectura): cultura_justa, cultura_justa_3
+==========================================================================================
+--- cultura_justa ---
+  dominio: health_safety | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Ingeniería de una Cultura Justa
+  etiqueta_arbol: Construye una Cultura Justa
+  resumen_teorico: Una cultura justa es un atmósfera de confianza en la que se anima y hasta se recompensa a las personas por proporcionar información esencial relacionada con la seguridad, pero en la que también se tiene claridad sobre dónde trazar la línea entre comportamiento aceptable e inaceptable. No es lo mismo que una cultura de 'no culpa' (no-blame), ya que ciertos actos inseguros egregios (abuso de sustancias, incumplimiento imprudente, sabotaje) sí ameritan sanciones. El desafío está en discriminar entre estas pocas 'malas conductas' verdaderas y la mayoría de actos inseguros donde la atribución de culpa no es apropiada ni útil. Se basa en el análisis de tres elementos de la acción humana: intención, acción y consecuencias.
+  pasos_accionables: ["Definir criterios claros y consensuados para distinguir comportamiento aceptable de inaceptable", "Establecer una línea explícita entre errores humanos normales y actos verdaderamente negligentes o maliciosos, y dejarla por escrito", "Capacitar a supervisores y gestores en la aplicación consistente de estos criterios", "Comunicar estas políticas a toda la organización para generar confianza", "Evitar tanto la amnistía total como el castigo indiscriminado de todos los errores", "Arma un grupo de confianza que revise los casos difíciles o ambiguos"]
+  entregable_esperado: Política de cultura justa documentada con criterios claros de discriminación entre error humano y conducta sancionable
+  ids_alias: ['cultura_justa_organizacional']
+  merged_originals: ['cultura_justa_organizacional']
+
+--- cultura_justa_3 ---
+  dominio: health_safety | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Cultura Justa (Just Culture) y segundas víctimas
+  etiqueta_arbol: Equilibra Justicia y Aprendizaje
+  resumen_teorico: La seguridad está ligada a la rendición de cuentas, el aprendizaje y la justicia organizacional. Crear una 'cultura justa' es difícil pero necesario: implica equilibrar accountability y aprendizaje sin desincentivar que las personas compartan honestamente sus preocupaciones de seguridad. Incluye atención a las 'segundas víctimas': practicantes involucrados en incidentes que se sienten personalmente responsables por daños a otros, y cuya resiliencia individual está ligada a la resiliencia organizacional.
+  pasos_accionables: ["Diseñar políticas de reporte de incidentes que no penalicen la honestidad", "Establecer procesos de apoyo psicológico y profesional para 'segundas víctimas'", "Balancear la necesidad de accountability con la protección al aprendizaje organizacional", "Definir criterios claros y consensuados de qué constituye una conducta sancionable vs. un error del sistema"]
+  entregable_esperado: Política de cultura justa documentada, incluyendo protocolos de apoyo a segundas víctimas y criterios de accountability
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA [definiciones_operacionales] (2 nodos en esta lectura): definiciones_operacionales, definiciones_operacionales_3
+==========================================================================================
+--- definiciones_operacionales ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Definiciones Operacionales de Calidad Aceptable
+  etiqueta_arbol: Aclara qué es Aceptable
+  resumen_teorico: Muchos problemas de calidad surgen porque trabajadores e inspectores no comparten un criterio claro de qué constituye un producto aceptable o no aceptable. Crear definiciones operacionales -con ejemplos concretos de trabajo conforme y no conforme- puede reducir drásticamente la proporción de defectos sin inversión en nueva maquinaria ni mano de obra adicional.
+  pasos_accionables: ["Reunir a supervisores, inspectores y trabajadores para identificar ambigüedades en los criterios de aceptación actuales.", "Desarrollar mediante prueba y error definiciones operacionales claras, con ejemplos físicos o visuales de productos conformes y no conformes.", "Publicar y difundir estas definiciones en el área de trabajo para que todos las conozcan.", "Medir la proporción de defectos antes y después para cuantificar la mejora."]
+  entregable_esperado: Un documento con definiciones operacionales validadas y ejemplos visuales, publicado en el área de trabajo, junto con datos de reducción del porcentaje de defectos.
+  ids_alias: ['caso_definicion_arruga']
+  merged_originals: ['caso_definicion_arruga']
+
+--- definiciones_operacionales_3 ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Definiciones Operacionales (Traducir Conceptos Abstractos)
+  etiqueta_arbol: Traduce lo Abstracto en Pruebas
+  resumen_teorico: Una definición operacional traduce un concepto abstracto (como 'seguro', 'redondo', 'confiable', 'contaminación') en términos comunicables mediante un procedimiento de prueba específico, un criterio de juicio y una decisión clara (sí/no) sobre si el objeto cumple el criterio. Sin una definición operacional, cualquier especificación de calidad es ambigua y no puede ser objeto de acuerdo comercial, legal o de producción, ya que el significado de un concepto solo existe en la mente de quien lo formula hasta que se expresa operacionalmente.
+  pasos_accionables: ["Identificar el adjetivo o concepto ambiguo que se desea especificar (ej. 'limpio', 'seguro', 'contaminado').", "Definir una prueba específica y reproducible para evaluar dicho concepto.", "Establecer un criterio de juicio claro y cuantificable.", "Definir la regla de decisión (sí/no) sobre el cumplimiento del criterio.", "Validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definición.", "Escribe el procedimiento con el detalle suficiente para que cualquier persona que lo siga llegue al mismo resultado que tú."]
+  entregable_esperado: Un documento de especificación técnica que contenga la definición operacional completa: prueba, criterio y regla de decisión para cada característica de calidad relevante.
+  ids_alias: ['definiciones_operacionales_4']
+  merged_originals: ['definiciones_operacionales_4']
+
+==========================================================================================
+FAMILIA [estrategia_de_innovacion_de_producto] (2 nodos en esta lectura): estrategia_de_innovacion_de_producto, estrategia_innovacion_producto
+==========================================================================================
+--- estrategia_de_innovacion_de_producto ---
+  dominio: core | fase_proyecto: ideacion | deprecado: False
+  titulo_concepto: Estrategia de Innovación de Producto y Tecnología
+  etiqueta_arbol: Define tu Estrategia de Innovación
+  resumen_teorico: Las empresas con desempeño superior en innovación cuentan con una estrategia clara de producto-innovación y tecnología que define objetivos de largo plazo, el rol de la innovación en las metas del negocio, las 'arenas estratégicas' de enfoque, buckets estratégicos de recursos, y un roadmap de producto a 3-5 años. Sin esta estrategia, la empresa cae en un enfoque disperso ('scattergun') o en mercados poco atractivos.
+  pasos_accionables: ["Definir objetivos claros de innovación de producto (% de ventas/ganancias de nuevos productos a 3-5 años)", "Vincular explícitamente las metas de innovación con las metas generales del negocio", "Definir arenas estratégicas (mercados, tecnologías, sectores) donde enfocar los esfuerzos de innovación", "Asignar 'buckets estratégicos' de recursos a diferentes tipos de proyectos o arenas", "Crear un roadmap de producto que proyecte iniciativas de desarrollo a 3-5 años", "Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso"]
+  entregable_esperado: Un documento de estrategia de innovación que incluya objetivos, arenas estratégicas, buckets de recursos y roadmap de producto
+  ids_alias: None
+  merged_originals: None
+
+--- estrategia_innovacion_producto ---
+  dominio: core | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Estrategia de Innovación de Producto
+  etiqueta_arbol: Define tu Estrategia de Producto
+  resumen_teorico: Es el plan maestro que guía todos los esfuerzos de nuevos productos de un negocio. Es el vínculo esencial entre el desarrollo de productos y la estrategia general del negocio. Sin ella, las decisiones sobre nuevos productos se toman de manera ad hoc, generando dispersión de esfuerzos, portafolios inconexos y bajo desempeño. Incluye 5 componentes clave: metas y objetivos, el rol de la innovación, arenas estratégicas de enfoque, despliegue de recursos, y planes de ataque.
+  pasos_accionables: ["Definir las metas y objetivos generales para el esfuerzo total de innovación del negocio", "Establecer el rol que jugarán los nuevos productos en el logro de las metas generales del negocio", "Identificar y priorizar las arenas estratégicas (mercados, tecnologías, categorías de producto) en las que se enfocará el esfuerzo de I+D", "Decidir la asignación de recursos (personas, presupuesto de I+D, marketing) entre las arenas seleccionadas", "Definir los planes de ataque para ganar en cada arena (ser innovador, seguidor rápido, proveedor de bajo costo)"]
+  entregable_esperado: Un documento de estrategia de innovación de producto que contenga metas medibles, arenas estratégicas priorizadas, asignación de recursos y planes de ataque claros.
+  ids_alias: None
+  merged_originals: None
