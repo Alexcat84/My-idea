@@ -86,6 +86,7 @@ def main():
     for g in separadoras:
         print("  %r (LOC.search: %s, recortar==g: %s)" %
               (g, LOC.search(g) is not None, recortar_localizador_con_apendice(g) == g))
+        print("CIFRA nodos de la grafia separadora %r: %d nodos" % (g, censo[g]))
 
     print("")
     print("agrupadas por la primera palabra tras su ULTIMA coma (predicado A), orden descendente:")

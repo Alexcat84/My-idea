@@ -48,6 +48,7 @@ from vuelta132_bolsa2_particion import RESIDUALES, PROPUESTA_FORASTERA, sondar, 
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DESTINO = os.path.join(RAIZ, "docs", "plan", "OP_S_11_MAPEO_PROPUESTO.md")
+SALIDA_PELDANOS = os.path.join(RAIZ, "docs", "loop", "SALIDA_V135_4B_PELDANOS.txt")
 META_LIBROS_CANONICOS = 55
 GUARDA_LONGITUD = 20
 
@@ -274,6 +275,28 @@ Separador elegido para identificar declaraciones dentro de `fuente`: **` | ` (pi
 
     with open(DESTINO, "w", encoding="utf-8") as fh:
         fh.write(cabecera + cuerpo + pie)
+
+    with open(SALIDA_PELDANOS, "w", encoding="utf-8") as fh:
+        fh.write("El peldano 6 (el total de esta vuelta) va PRIMERO a proposito: el\n"
+                  "cotejo de verificar_cifras_del_reporte.py toma la PRIMERA linea CIFRA\n"
+                  "de la unidad pedida, y las siete cifras de este fichero comparten la\n"
+                  "unidad 'grupos'; poner el peldano 6 primero es lo que deja citarlo sin\n"
+                  "ambiguedad contra los peldanos historicos, que se leen en la propia\n"
+                  "cabecera de docs/plan/OP_S_11_MAPEO_PROPUESTO.md y no en este fichero.\n\n")
+        fh.write("CIFRA peldano 6 mas Caps?. en cola y en prefijo: %d grupos\n" % n_cap)
+        fh.write("\n")
+        fh.write("Peldanos historicos, solo para contraste (NO citados individualmente\n"
+                  "por su unidad ambigua con el peldano 6, ver OP_S_11_MAPEO_PROPUESTO.md):\n")
+        fh.write("  peldano 1 cadena entera: %d\n" % n_cadena)
+        fh.write("  peldano 2 mas titulo: %d\n" % n_titulo)
+        fh.write("  peldano 3 mas localizador cola VIEJA: %d\n" % n_localizador_vieja)
+        fh.write("  peldano 4 mas Apendice: %d\n" % n_apendice)
+        fh.write("  peldano 5 mas prefijo sobre recortada con Apendice: %d\n" % n_prefijo_apendice)
+        fh.write("\n")
+        fh.write("CIFRA grupos con 2 o mas miembros: %d grupos\n" % len(multi))
+        fh.write("CIFRA grafias en grupo: %d grafias\n" % en_grupo_n)
+        fh.write("CIFRA grafias sin agrupar: %d grafias\n" % sin_agrupar_n)
+        fh.write("EXITCODE: 0\n")
 
     print("grafias: %d" % total_grafias)
     print("peldano 1 (cadena entera): %d" % n_cadena)
