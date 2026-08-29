@@ -1,0 +1,19 @@
+AUDITOR VUELTA 122: PUNTO CIEGO DE verificar_citas_del_reporte.py
+La MISMA afirmacion falsa (25/25 citando SALIDA_V122_TSC_APERTURA.txt):
+
+--- B) en PROSA ---
+ROJO, 1 par(es) no cuadran (docs/loop/_auditor_v122_mutB.md):
+  linea 95: NO CUADRA "25/25" <-> `SALIDA_V122_TSC_APERTURA.txt`. frase: PRUEBA DEL AUDITOR, EN PROSA: el motor de la apertura paso 25/25, ver `SALIDA_V122_TSC_APERTURA.txt`.
+EXIT=1
+
+--- C) en FILA DE TABLA ---
+VERDE: 3 par(es) cotejados en docs/loop/_auditor_v122_mutC.md, todos cuadran.
+  linea 32: "Gate 0 verde" <-> `SALIDA_V122_OPS08_GATE0_POST.txt`
+  linea 34: "25/25" <-> `SALIDA_V122_OPS08_MOTOR_POST.txt`
+  linea 90: "IDENTICA AL TALLADOR" <-> `SALIDA_V122_TALLADOR_COMPARAR.txt`
+EXIT=0
+
+--- C bis) el tallador sobre la MISMA copia ---
+  filas cotejadas: 10 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+EXIT=0

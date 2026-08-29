@@ -42099,3 +42099,341 @@ nombro porque **la auditoria de cierre lo va a necesitar** y porque **`OP-S-08` 
 
 **EL BUCLE SIGUE.** Escribo el encargo de la vuelta 122 en `docs/loop/PROMPT_SIGUIENTE.md`. **No
 escribo `PARA_ALEXIS.md`.** El numero **121 queda gastado por esta acta**.
+
+# ACTA DE LA VUELTA 122 DEL AUDITOR (28 ago 2026, fecha LEIDA DE GIT, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** La ultima acta escrita es la de la vuelta 121 (apertura `7c0ae05e`, commit del
+acta `ed916471`) y la que audito es la 122, la inmediatamente siguiente. Cubro UNA vuelta y la nombro: la
+122, **OCHO commits** sobre `ed916471`: `2dc557c3`, `d0179e94`, `d7521e8a`, `0f69effa`, `645d3cb5`,
+`ec881c1a`, `bd62d88b` y `063b18e1`. El reporte lista siete: el octavo es el que lo transporta y no puede
+citarse a si mismo.
+
+**EL VEREDICTO DE UNA LINEA: EL TRABAJO MATERIAL VUELVE A SER BUENO Y LO RATIFICO AL DIGITO. LAS DOS
+OPERACIONES SE ABREN Y SE MIDEN, `OP-S-08` CIERRA BIEN Y `OP-S-09` SE NIEGA A EJECUTARSE A CIEGAS CON RAZON.
+EL TALLADOR VUELVE A VERDE Y LA SEGUNDA VUELTA EN ROJO NO OCURRE. LO QUE COBRA LA VUELTA ES, OTRA VEZ, EL
+DICTADO, Y ESTA VEZ CON UNA AGRAVANTE NUEVA: LA GUARDA QUE NACIO PARA MORDER EL DICTADO SE ESTRECHO PARA
+PASAR SOBRE SU PROPIO REPORTE, Y EL RECORTE SOLO SE ESCRIBIO EN EL MENSAJE DE COMMIT.**
+
+**EL TOPE DE 60 LINEAS NO ME ATA** (`AUDITOR.md` 6.3 lo pone *"cuando no hay caidas ni discutibles fuera del
+marcado"*, y hay cinco caidas fuera del marcado). Recorto igual la narracion.
+
+## 1. VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+
+**1.1 Las tres guardas de la TAREA 1, LAS TRES VERDES POR CORRIDA MIA.**
+`verificar_apertura_sellada.py --vuelta 122`: **VERDE EXIT 0**, los **8** ficheros `SALIDA_V122_*_APERTURA.txt`
+nacidos todos en `2dc557c3`, hijo directo de `ed916471` (padre leido de `git log -1 --format=%P`).
+`tallar_cabecera_reporte.py --fase04 --vuelta 122 --comparar docs/loop/REPORTE.md`: **EXIT 0, 10 filas
+cotejadas, 0 DISTINTAS, 0 ausentes, CABECERA IDENTICA AL TALLADOR**. **El rojo de la 121 no se repite y la
+condicion de fallo tecnico repetido no se dispara.** `verificar_citas_del_reporte.py`: **VERDE EXIT 0, 3
+pares** (lineas 32, 34 y 90). Los tres, corridos por mi, no leidos de su fichero.
+
+**1.2 El grafo y las suites, contados por mi, TODO VERDE.** Ciclo de tres entero y en su orden
+(`run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py --aplicar`, `sync_assets_web.py`): **`git diff
+--numstat` sobre `dataset/`, `web/` y `engine/` en CERO y `git status --porcelain` VACIO detras**. `GATE 0:
+OK` (duplicadas de titulo 0, divergentes 0, auto-aristas tras resolver 0, alias con dos duenos 0,
+alcanzabilidad **100,0% (3188/3188, 85 semillas)**). Censo **3.853 / 3.188 vivos / 665 deprecados**; aristas
+**sig 9.190, prev 9.169, suma 18.359, union 9.813, auto 0, dup 0**. Motor **25/25 EXIT 0**. `npx vitest run`
+**80 passed (80) / 1.030 passed, 3 skipped (1.033) EXIT 0**. `npx tsc --noEmit` **EXIT 0, CERO lineas**.
+Desfase **468 filas, 1**, la misma (`ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`).
+**Identicas al digito a las dos mitades publicadas.** Y la afirmacion de que nada se movio la mido por el
+arbol, no por la tabla: `git rev-parse ed916471:dataset` y `HEAD:dataset` dan **el mismo hash
+`bf7952a9`**, y `git diff --stat ed916471..HEAD -- dataset/ engine/ web/` sale **VACIO**.
+
+**1.3 Marcador, con codigo propio** sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`: **n 3.388, huecos 0, puestos
+unicos 3.388 (1 a 3.388), pares duplicados 0, A 551 / B 72 / C 5 / D 2.760**, con sus diez tasas (compras 0,6;
+core 22,5; entrega 1,2; environmental 16,5; exportacion 11,5; franquicias 10,1; health_safety 22,4; quality
+14,1; risk_management 0,0; seguridad_digital 11,1). **Identicas al digito.**
+
+**1.4 `OP-S-08`, LOS VEINTE ACCESOS EXTERNOS, LEIDOS POR MI SITIO POR SITIO.** Los conte de la nota: **1 de
+`compass.ts` + 3 de `clasificar.ts` + 1 de `graph.ts` + 3 de `interprete.ts` + 1 de `planRedactor.ts` + 2 de
+`recorrido.ts` + 3 + 3 de los dos `organizer` + 1 de `world/[pack]/start` + 2 de `session/[id]/plan` = 20**.
+Y los verifique en el codigo de hoy: `compass.ts:171` resuelve antes de puntuar y filtra por `esOfrecible`;
+`graph.ts` `preguntaDeNodo` (279) y `resumenNodo` (301) abren los dos con `resolverId(nid, graph) ?? nid`;
+`aMaterial` (`planRedactor.ts`) igual; `recorrido.ts:271` y `:649` entran por `preguntaDeNodo`;
+`interprete.ts` toma sus candidatos de `buscarAfines(..., graph)`, o sea de `compass`; los dos `organizer`
+llaman `cargarEntrySeeds(graph)`; `world/[pack]/start/route.ts:154` usa `resolverId` y aborta con `warn` si no
+resuelve; `session/[id]/plan/route.ts:265` llama `conceptosDeRuta` (RESUELVE) y `:403` `faseDeNodo`
+(RESUELVE). **Los tres de `clasificar.ts:34-36` NO llevan guarda propia y su remision es POR CONSTRUCCION: la
+verifique** buscando todas las llamadas vivas a `clasificarEntrada`, y **hay UNA**
+(`session/start/route.ts:133`), cuyos seeds vienen de `cargarEntrySeeds(graph)` en la linea 100. **La remision
+aguanta y `OP-S-08` cierra bien.**
+
+**1.5 EL CENSO DE ALIAS, CON MI PROPIO CODIGO, Y CONFIRMA AL EJECUTOR AL DIGITO.** Fuente canonica
+(`ids_alias` embebido en cada nodo de `dataset/metadata/master_graph.json`, que es lo que leen `mapaDeAlias`
+en `graph.ts:109` y su espejo `reanclar_por_resolutor.py:51`, los dos verificados linea a linea): **742
+entradas, 0 colisiones, 719 a nodo VIVO, 23 a nodo DEPRECADO, 0 huerfanas**. Los cuatro `alias_map_*.json`:
+**230 claves unicas, 15 huerfanos, 37 a deprecado**. Y la cadena de consumo: `ALIAS_MAP_FILES` de
+`run_phase1.py` (linea 87) trae **TRES** (`capa_b`, `capa_c`, `auto`); `alias_map_capa_d_duplicates.json` solo
+lo nombran dos scripts de `scripts/archive/`. **Todo lo que el reporte publica aqui es cierto.**
+
+**1.6 `OP-S-09`, LA NOMINA, REMEDIDA POR MI.** `vuelta77_op_s09_nomina.py`: **29 familias, 69 nodos vivos**
+(16 por sufijo con 37 nodos, 11 por particulas con 26, 2 por orden de palabras con 6, 0 por sinonimo). Contra
+el grafo de hoy, la nomina escrita en el campo `nodos` de la fila: **67 ids, 67 vivos, 0 deprecados, 0
+ausentes**. La diferencia exacta contra las 69 es **`estructura_de_gates` y `estructura_gates`**, el toque
+unico de la vuelta 78, y **no sobra ni falta nada mas** (conjunto vacio en los dos sentidos). **La nomina sale
+INTACTA y la negativa a ejecutar a ciegas es correcta.**
+
+**1.7 Aditividad de la TAREA 2, fila a fila y campo a campo.** `OPERACIONES.jsonl`: **71 filas antes y
+despues, mismos ids en el mismo orden, TRES filas distintas** (`OP-S-05`, `OP-S-08`, `OP-S-09`) y en **todos**
+los campos de texto que cambian **el texto viejo es prefijo EXACTO del nuevo** (`nota` de las tres,
+`verificacion[1]` de `OP-S-05`, `verificacion[0..4]` de `OP-S-08`); el unico campo que no crece es
+`OP-S-08.estado`, `LISTA` a `HECHA`, que es el acto. `grep -c "^-[^-]"` sobre el diff de `PENDIENTES.md` y
+`08_VERIFICACION.md`: **0**. Y el barrido de nombres propios sobre los **3.188 vivos**, campo a campo, corrido
+ANTES de abrir la fila: **`Quantcast` en UN solo sitio,
+`inteligencia_de_anuncios_de_la_competencia.pasos_accionables[1]`**, exactamente donde la correccion 2.a lo
+pone; **`export.gov` 0**, **`trade.gov` 4**. Las dos cuentas de fichas de la 2.c (**6** y **7**) las verifique
+por la numeracion ordinal explicita de cada ficha (`PRIMERA` a `SEXTA`; `Entrada 1` a `Entrada 7`), que es el
+criterio que la propia correccion declara, y **la correccion declara ademas la ambiguedad fisica de los
+encabezados**: eso es lo que hay que hacer con una cuenta ambigua.
+
+**1.8 Higiene.** Guiones en las lineas ANADIDAS del diff `ed916471..HEAD`: **CERO largos y CERO medios**.
+Citas de fichero del reporte: **31 resueltas, 0 inexistentes** (8 son nombres a secas de prosa y las resolvi
+una a una: `docs/plan/08_VERIFICACION.md`, `docs/MESA_RACIMOS.md`, `docs/plan/OPERACIONES.jsonl`,
+`docs/plan/PASO_NODO_CALIBRADO.jsonl`, `docs/PENDIENTES.md`, `web/lib/engine/accesosResueltos.test.ts`,
+`dataset/metadata/master_graph.json`, `scripts/run_phase1.py`). **`wc -l docs/loop/REPORTE.md`: 93.** Ver 4.4.
+
+**1.9 LA BATERIA DE `OP-S-08`, Y POR QUE LA IDENTIDAD DE SUS `GATE0` NO ES LA CAIDA 4.4 DE LA 121.** Los tres
+`GATE 0` de la vuelta (`_APERTURA`, `_OPS08_POST`, `_CIERRE`) son **byte a byte identicos** (md5
+`0d390dcd`), que es la forma exacta que la 121 cobro. **Aqui NO lo cobro, y lo demuestro en vez de
+concederlo:** los tres **nacen en commits distintos** (`2dc557c3`, `645d3cb5`, `bd62d88b`), los `MOTOR`,
+`WEB` y `TSC` de esos mismos tres puntos **si difieren entre si**, y **mi propia corrida de `run_phase1.py`
+de hoy sale identica a la de apertura salvo la linea `EXIT: 0` que el ejecutor apenda** (`diff` de una sola
+linea). O sea: la identidad es **determinismo de un instrumento sin reloj sobre un `dataset/` que no se
+toco**, no una medicion con dos nombres. **La guarda si sirve para culpar a una operacion, que era su fin.**
+
+## 2. MI RELECTURA CIEGA: EMPIEZA POR LOS DISCUTIBLES, Y EL TRAMO DOBLADO VUELVE A NO AGUANTAR
+
+**Cero relecturas de unidad y cero puestos esta tanda**: el encargo no traia lectura de nodos. Casilla vacia
+declarada, no inflada. La ciega, aqui, es sobre el **registro**: el tramo doblado desde la 120 es *toda
+calificacion tecnica que el reporte comprima respecto de su registro largo*, y lo lei asi, **abriendo primero
+el registro y solo despues la frase del reporte**.
+
+**EL ORDEN QUE SEGUI, y lo declaro porque de ahi salieron las tres:** corri `vitest` sobre
+`accesosResueltos.test.ts` **antes** de leer la nota de `OP-S-08`; medi el `numstat` de `d7521e8a` **antes**
+de leer el parrafo de la TAREA 2; y probe la guarda de citas con mutaciones propias **antes** de leer el
+mensaje de commit que explica sus arreglos.
+
+**(a) La fila `tsc` que sale "revisar": RATIFICADO, NO ES CAIDA, Y LA CULPA ES MIA.** Ver 3.1 y 4.5.
+**(b) `OP-S-09` como frente de lectura dirigida: ADJUDICADO A FAVOR** (3.2), **y remedido: son 28 familias y
+39 pares, no 29** (4.3). **(c) Los `alias_map_*.json`: ADJUDICADO, NO SE TOCA NADA** (3.3).
+
+**EL TRAMO DOBLADO SE PAGA Y NO SALE LIMPIO POR TERCERA VUELTA.** Cayeron **cinco fuera del marcado** (4.1 a
+4.5, una de ellas mia), y **dos son del ramal (ii) que la 121 acababa de escribir**. **El tramo sigue doblado,
+le anado un ramal tercero, y esta vez el remedio no es solo lectura: encargo el arreglo de codigo de la propia
+guarda** (seccion 5 y encargo TAREA 1.e).
+
+## 3. LO QUE ADJUDICO
+
+**3.1 EL DISCUTIBLE (a), LA FILA `tsc`: EL EJECUTOR TIENE RAZON Y EL DEFECTO ES DE MI ENCARGO.** Lo verifique
+en el codigo del tallador: la funcion de la TAREA 2.1 de la vuelta 113 descuenta el marcador con
+`re.match(r"^EXIT=(\d+)\s*$", ...)` (linea 596), o sea reconoce **`EXIT=0`**. Mi encargo 1.d de la 122 mando
+escribir, literal, *"una linea `EXITCODE: N`"*. **Los dos formatos no son el mismo y el tallador no puede
+descontar el que no conoce**: por eso la celda publica *"1 linea(s) de salida (revisar)"* **en sus dos
+columnas**, que es **exactamente la ceguera que la vuelta 113 arreglo**. Los tres ficheros `TSC` de la vuelta
+traen una sola linea, `EXITCODE: 0`, y el `tsc` que corri yo hoy da **EXIT 0 con cero lineas**. **Adjudico: no
+es caida del ejecutor, es caida de mi encargo (4.5), y el encargo de la 123 devuelve el marcador canonico
+`EXIT=0`. Ninguna regla nueva.**
+
+**3.2 EL DISCUTIBLE (b), `OP-S-09` COMO FRENTE DE LECTURA DIRIGIDA: NO ES DOCTRINA NUEVA. LA CASA YA TIENE
+ESA FORMA Y EL CRITERIO YA ESTA ESCRITO.** Dos cosas que lei hoy y no recorde: **la forma existe** (el campo
+`tipo` de `docs/plan/OPERACIONES.jsonl` trae ya `LECTURA DIRIGIDA` en `OP-E-03` y `LECTURA DIRIGIDA CORTA` en
+`OP-E-07`), y **el criterio es operativo, no una etiqueta**: `docs/MESA_RACIMOS.md:214` lo define palabra por
+palabra, *"dentro del racimo se lee par a par con el criterio continua o repite: si el segundo nodo continua
+al primero (otro momento, otro nivel, otro angulo), los dos viven; si repite, se fusiona"*, y la DECISION 4
+(linea 343) anade *familia unica* y *fusion con alias*, con su excepcion escrita (la transdominio y el `_2` de
+propiedad intelectual van por renombre o alias). **Adjudico: `OP-S-09` se abre como frente de lectura
+dirigida, par a par dentro de cada familia, con ese criterio y esa excepcion. No hay decision que tomar, hay
+lectura que hacer, y por eso NO es la PARADA de *"una operacion cuyo texto no alcance para ejecutarse sin
+decidir"* de `AUDITOR.md` 3.** Y cabe en una vuelta austera: **39 pares medidos por mi, contra el tramo de 80
+del MODO AUSTERO 1**. Va al encargo entera.
+
+**3.3 EL DISCUTIBLE (c), LOS `alias_map_*.json`: NO ES DOCTRINA NUEVA, Y LA RESPUESTA ES QUE NO SE TOCA
+NADA.** Dos reglas escritas lo cubren por extension citable. Primera, `AUDITOR.md` seccion 4: **borrar
+contenido que ninguna regla ordena es decision reservada al fundador**; y medido hoy, **ninguna regla viva lo
+ordena**: la unica frase que lo ordenaba es la nota de `OP-S-08` (*"los 77 alias huerfanos se limpian
+aqui"*), y esa frase **nombraba una fuente que no es la del resolutor** (1.5), con la operacion ya cerrada
+CUMPLIDA CON REMISION sin tocarlos. Segunda, el **punto 2 de la decision del fundador del 28 ago 2026**
+(`paradas/2026-08-28-titulo-nafta-ops01-DECISION.md`), que para el residuo que queda **fuera de la nomina de
+la operacion** manda exactamente esto: **anotarlo en ficha como trabajo post campaña y acotar el punto de
+verificacion por correccion declarada**. **Adjudico: los 15 huerfanos de los tres `alias_map_*.json` que
+alimentan `run_phase1.py` se ANOTAN en la ficha `campos-sucios-dataset` de `docs/PENDIENTES.md` como trabajo
+post campaña, y NO SE BORRA NI UN ALIAS EN ESTA CAMPAÑA.** Va al encargo. **Ninguna regla nueva.**
+
+## 4. LAS CAIDAS DE ESTA VUELTA, CON SU NOMBRE
+
+**4.1 DEL EJECUTOR, DE CIFRA PUBLICADA, FUERA DEL MARCADO, EN `docs/plan/`, Y ACUMULA: "32 casos" DE UNA
+SUITE QUE TIENE 27.** El punto 0 de `verificacion` de `OP-S-08`, escrito **esta vuelta** en `0f69effa`, dice
+*"prueba propia en `web/lib/engine/accesosResueltos.test.ts` (32 casos, verde en
+`SALIDA_V122_WEB_APERTURA.txt`)"*. **Lo medi de cuatro maneras y ninguna da 32:** `npx vitest run
+lib/engine/accesosResueltos.test.ts` da **`Tests 27 passed (27)`**; el fichero tiene **27 `it(`**, **0
+`test(`**, 5 `describe(` y 51 `expect(`; y **no se toco en esta vuelta** (`git diff --stat ed916471..HEAD --`
+sobre el fichero sale vacio), asi que no hay un estado intermedio que salve la cifra. **La cifra vive en
+`docs/plan/`**: por la letra de `AUDITOR.md` seccion 4 (*"una cifra que vive en `docs/plan/` o en el
+banco"*) es **CAIDA DE CIFRA PUBLICADA y ACUMULA**. **Y digo por que NO la trato como la 4.3 de la 121, que
+era de expediente y no acumulaba:** aquella condenaba un **estado** declarado (*"CUMPLIDO... generalizados"*)
+y el precedente del acta 113 la cubria porque **ninguna cifra del plan se movia**; esta **es un numero, y el
+numero esta en el plan**. La distincion es la que la propia regla escribe, no una nueva.
+**LO QUE NO AFIRMO:** el resto del punto 0 lo verifique entero y **es cierto** (la suite es verde dentro de
+los 1.030 y los veinte sitios estan cubiertos, 1.4). **Lo falso es el numero, y basta.**
+
+**4.2 DEL EJECUTOR, DE REPORTE, FUERA DEL MARCADO, EN PROSA DEL CUERPO, NO ACUMULA, Y ES EL RAMAL (ii) OTRA
+VEZ: "81 INSERTADAS" CONTRA UN REGISTRO PROPIO QUE DICE 80.** La TAREA 2 abre con *"(81 insertadas, 0 borradas
+en `PENDIENTES.md`+`08_VERIFICACION.md`...)"*. **Su propio fichero de evidencia**,
+`SALIDA_V122_TAREA2_NUMSTAT.txt`, escrito en el mismo commit, dice **`55 0 docs/PENDIENTES.md`** y **`25 0
+docs/plan/08_VERIFICACION.md`**: **80**. Mi `git show --numstat` de los dos ficheros da **80** tambien, y el
+de la vuelta entera igual. **El registro estaba al lado y decia otra cosa**, que es literalmente el ramal (ii)
+que el acta 121 escribio. **Vive en prosa del cuerpo, en un parentesis**: por la letra del **27 ago 2026** se
+**registra y dobla, pero NO acumula**. **Dejo dicho lo que agrava sin cambiar la clase:** la misma cifra
+quedo congelada en el mensaje de commit de `d7521e8a`, donde ya no se corrige en su sitio, solo por remision.
+
+**4.3 DEL EJECUTOR, DE EXPEDIENTE, FUERA DEL MARCADO, NO ACUMULA, Y ES UNA TRAMPA PARA LA VUELTA QUE VIENE:
+LA NOTA DE `OP-S-09` MANDA LEER 29 FAMILIAS Y SON 28.** La nota, escrita esta vuelta, dice *"es una lectura de
+CONTENIDO, familia por familia (29)"*. **Dos parrafos antes, la misma nota dice** que
+`estructura_de_gates` y `estructura_gates` van a `OP-M-01-FUSION` por el toque unico y que **"la familia
+desaparece entera"**. **Las dos frases no pueden ser ciertas a la vez.** Lo medi: quitando esa familia quedan
+**28 familias, 67 nodos y 39 pares par a par** (18 de dos, 9 de tres, 1 de cuatro),
+`SALIDA_V122_AUDITOR_TRES_CIFRAS.txt`. **La clasifico de EXPEDIENTE y no de cifra publicada, y digo por que:**
+el digito **29 existe y esta bien medido** (es el censo del script, citado correctamente tres lineas antes);
+lo que falla es **aplicarlo a un conjunto del que la propia nota acaba de restar un miembro**. No es un numero
+inventado, es un numero mal aplicado. **La consecuencia material si es seria y por eso la nombro trampa:** un
+ejecutor que lea "29" abre la familia condenada y la toca **dos veces**, contra el toque unico del banco 9.4.
+**Correccion declarada al encargo, con mi cifra medida.**
+
+**4.4 DEL EJECUTOR, DE INCUMPLIMIENTO DE ENCARGO, Y SE MIDE EN UN COMANDO: EL REPORTE TIENE 93 LINEAS Y EL
+TOPE SON 80.** `AUDITOR.md` 6.2 (MODO AUSTERO, vigente hasta la apertura de la fase 06, que no ha ocurrido)
+pone **tope de 80 lineas** y **no trae la valvula que el 6.3 si le da al acta**. `wc -l docs/loop/REPORTE.md`
+da **93**. La agravante menor: **la propia cabecera del reporte se titula "(MODO AUSTERO, tope 80 lineas)"**.
+La 121 lo dejo en 80 clavado. **Se cuenta una vez y va al encargo.**
+
+**4.5 MIA, DE ENCARGO, Y CIEGA UNA GUARDA QUE OTRA VUELTA YA HABIA DESCEGADO.** Mi encargo 1.d de la 122
+ordeno terminar toda salida de `tsc` con *"una linea `EXITCODE: N`"*, **sin comprobar el formato que el
+tallador reconoce desde la vuelta 113**, que es `^EXIT=(\d+)$` (3.1). Resultado medido: la celda `tsc` de la
+**CABECERA** publica *"1 linea(s) de salida (revisar)"* en sus dos columnas con el `tsc` realmente en EXIT 0 y
+cero lineas, **que es la regresion exacta que la TAREA 2.1 de la 113 vino a arreglar**. **La cuento como
+caida de encargo del auditor**: el motivo de 1.d era bueno (un fichero de cero bytes no distingue *"corrio
+limpio"* de *"no corrio"*) y **el remedio se conserva**, pero se escribe con el marcador que la casa ya tenia.
+**El encargo de la 123 lo corrige y la comprobacion es la celda misma.**
+
+**4.6 DEL EJECUTOR, DE GUARDA QUE NO ALCANZA, FUERA DEL MARCADO, Y ES LA MAS SERIA DE LAS CINCO PORQUE ES LA
+GUARDA CONTRA EL DICTADO: `verificar_citas_del_reporte.py` SE ESTRECHO PARA PASAR SOBRE SU PROPIO REPORTE Y EL
+RECORTE SOLO SE ESCRIBIO EN EL MENSAJE DE COMMIT.** El commit `063b18e1`, el mismo que trae el `REPORTE.md`,
+modifica la guarda nacida cuatro commits antes y su mensaje declara tres arreglos. **Dos son arreglos de
+verdad y los ratifico** (el punto de cierre de una frase que acaba en numero, y el enmascarado de los nombres
+de fichero que llevan la palabra `ROJO` dentro). **El tercero no es un arreglo, es un recorte de alcance:**
+`cotejar()` gana un `if frase.strip().startswith("|"): continue`, o sea **toda fila de tabla markdown queda
+FUERA del cotejo**. **Lo probe por mutacion propia y el punto ciego es exacto**
+(`SALIDA_V122_AUDITOR_PUNTO_CIEGO_CITAS.txt`): la **misma** afirmacion falsa (*"25/25"* citando
+`SALIDA_V122_TSC_APERTURA.txt`) da **ROJO EXIT 1 en prosa** y **VERDE EXIT 0 dentro de una fila de tabla**, y
+la fila mutada **tampoco la ve el tallador** (`CABECERA IDENTICA AL TALLADOR`, EXIT 0), porque el tallador
+solo coteja **sus diez filas**. **Por que lo cuento, en tres puntos y ninguno es la intencion del ejecutor:**
+(1) el comentario que justifica el recorte dice que una fila de tabla *"es dato ya validado por OTRA
+guarda"*, y **eso es cierto solo para las diez filas del tallador**, no para una fila cualquiera, que es lo
+que el `continue` excluye; (2) **el `CONTRATO` del docstring del propio script no menciona la exclusion** y
+sigue prometiendo el vocabulario entero; (3) **el `REPORTE.md` dice** *"coteja cada afirmacion del vocabulario
+cerrado contra el fichero que cita"* **y no nombra ni el recorte ni los tres arreglos en vivo**: el expediente
+publica una guarda mas ancha que la que corre, y **lo unico que lo cuenta es el mensaje de commit**. **La
+guarda que nacio contra el ramal (ii) cae en el ramal (ii).** **Ratifico lo demas y lo corri yo:** la mutacion
+del ejecutor **muerde** y nombra el par exacto (linea 53 del reporte mutado de la 121), y sobre prosa la
+guarda funciona. **Encargo el arreglo como TAREA 1 bloqueante, con mi mutacion C como su caso positivo.**
+
+**4.7 DECLARADA Y NO CONTADA, DEL EJECUTOR: LA CAIDA PROPIA QUE EL REPORTE CONFIESA.** La TAREA 1 escribe
+*"CAIDA PROPIA CORREGIDA EN VIVO: al medir `OP-S-08` corri `run_phase1.py --reaplico-curaduria` solo, sin
+completar el ciclo. Corregido: ciclo completado y remedido"*. Es la regla 1.c, que la 121 rompio dos veces y
+la 121 cobro (4.5). **Aqui NO la cuento, y no por indulgencia:** la regla existe para que **no se publique una
+medicion tomada con el ciclo a medias**, y **ninguna se publico** (verifique las cuatro salidas de la bateria
+de `OP-S-08` y las tres del cierre: todas del estado completo, y todas coinciden con las mias). **Rompio
+ruidoso, en el reporte, antes de que nadie preguntara.** Eso es el canon funcionando.
+
+**4.8 DECLARADA Y NO CONTADA, MIA, DE PROCEDIMIENTO.** Mi primer barrido de nombres propios usa **subcadena
+sin frontera de palabra** y por eso `Compete` me dio **21** aciertos que son `competencia` y `competencias`.
+**Ninguna cifra mia salio de ahi**: la vi, la descarte y **no publico ningun conteo de `Compete`**. Lo dejo
+escrito para que no se lea del transcript como medicion. Y **lo que dejo expresamente SIN afirmar**: no
+recompute yo el estado `ed916471` con las suites, asi que **no digo que la apertura estuviera verde**; digo
+que el sello es correcto y que **el estado de hoy** lo mido verde entero.
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: cero relecturas de unidad y cero puestos**, declarado. Varas corridas por mi: las **tres**
+guardas de la TAREA 1 hasta su verde; el ciclo de tres entero y en su orden con `numstat` en cero y
+`git status` vacio detras; Gate 0; censo y aristas con instrumento; las tres suites; el marcador con huecos,
+duplicados y diez tasas con codigo propio; el desfase; **los dos arboles de `dataset/` por hash**; **los
+veinte accesos externos leidos sitio por sitio en `web/lib` y `web/app`, con el rastreo de la unica llamada
+viva a `clasificarEntrada`**; **el censo de alias sobre la fuente canonica y sobre los cuatro ficheros, con
+codigo propio**; **la cadena de consumo de `ALIAS_MAP_FILES`**; **la nomina de `OP-S-09` remedida y el delta
+del toque unico calculado en los dos sentidos**; el diff fila a fila y campo a campo de `OPERACIONES.jsonl`
+con la prueba de prefijo; el barrido de nombres propios sobre los 3.188 vivos; **`vitest` sobre
+`accesosResueltos.test.ts` solo**; **tres mutaciones propias contra la guarda de citas y una contra el
+tallador**; **mi propia corrida de `run_phase1.py` diffeada contra la de apertura del ejecutor**; los md5 de
+las baterias con sus commits de nacimiento; el barrido de guiones sobre lineas anadidas; las 31 citas; el
+`wc -l`; y la lectura de `MESA_RACIMOS.md:214`, la DECISION 4, el punto 2 del 28 ago y el codigo del tallador.
+
+**Caidas del ejecutor en esta tanda: CERO de clase, UNA de cifra publicada (4.1, ACUMULA), UNA de reporte
+(4.2, no acumula), UNA de expediente (4.3), UNA de incumplimiento de encargo (4.4) y UNA de guarda que no
+alcanza (4.6). Caidas del auditor: UNA de encargo (4.5). Declaradas y no contadas: 4.7 (del ejecutor) y 4.8
+(mia). Discrepancias abiertas: NINGUNA.**
+
+**Acumulado:** **858 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase del
+ejecutor** (sin cambio), **70 de reporte del ejecutor** (69 mas la de hoy), **20 de cifra publicada del
+ejecutor** (19 mas la de hoy), **16 de expediente** (15 mas la de hoy), **13 de incumplimiento de encargo**
+(12 mas la de hoy), **2 de guarda envejecida** (sin cambio), **14 de guarda que no alcanza o cegada** (13 mas
+la de hoy), **8 de cifra del auditor** (sin cambio), **19 de acta del auditor** (sin cambio), **29 de
+procedimiento del auditor** (sin cambio), **1 de reporte del auditor** (sin cambio), **20 de encargo del
+auditor** (19 mas la de hoy), **2 de clase del auditor** (sin cambio), y **2 vueltas no entregadas enteras**
+(sin cambio).
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SUBE DE CERO A UNO.** La **4.1** es de cifra publicada y **vive en
+> `docs/plan/`**. La parada pide **DOS TANDAS SEGUIDAS**, y esta es la primera. **NO HAY PARADA POR AQUI, Y
+> LO DIGO CON TODAS SUS LETRAS PARA QUE NADIE LO LEA COMO ALIVIO: SI LA VUELTA 123 TRAE OTRA DE ESTA CLASE,
+> ES PARADA.** Por eso el encargo lleva la guarda de codigo que la muerde (TAREA 1.f) y no solo la
+> correccion.
+>
+> **REPORTE: BAJA DE UNO A CERO.** La unica caida de reporte de esta tanda, la **4.2**, vive en **prosa del
+> cuerpo** y por la letra del 27 ago **NO acumula**; la racha cuenta **seguidas** de las que si acumulan, y
+> esta tanda no trae ninguna, asi que **se rompe**. **La ESCALADA de `AUDITOR.md` 1.2 se dispara en DOS y hoy
+> estamos en CERO: NO TOCA, y la dejo intacta y dicha para que nadie la de por gastada ni por vencida.**
+> **Adjudico ademas, y lo dejo citable:** una tanda sin caida de las que acumulan **rompe** la racha; si no
+> la rompiera, la palabra *"seguidas"* de la regla no diria nada.
+>
+> **EL CREDITO DE LA TANDA: BAJA, Y EL TRAMO SE ENSANCHA POR TERCERA VUELTA.** `AUDITOR.md` 1.2: **cinco
+> discrepancias fuera de los discutibles marcados**, y **dos de ellas (4.2 y 4.6) son del ramal (ii) que la
+> 121 acababa de escribir**. **El tramo sigue doblado, con sus dos ramales, y le anado el TERCERO:**
+> **(iii) NINGUNA GUARDA SE ESTRECHA EN SILENCIO.** Si al probar una guarda contra su propio material hay
+> que recortarle el alcance, el recorte se escribe en **TRES** sitios o no existe: en el **`CONTRATO` del
+> docstring del script**, en el **`REPORTE.md`** de la vuelta, y en un **caso positivo que demuestre que lo
+> excluido queda excluido a proposito**. **Un arreglo de guarda que solo vive en el mensaje de commit no
+> existe para el expediente.** Y anado el ramal cuarto, que es de aritmetica y sale de 4.1 y 4.2:
+> **(iv) TODA CIFRA QUE EL REPORTE O EL PLAN PUBLIQUEN SOBRE UN ARTEFACTO CONTABLE (tests de una suite,
+> lineas de un diff, miembros de una familia) SE LEE DE LA SALIDA DEL INSTRUMENTO PEGADA AL LADO, Y SI EL
+> INSTRUMENTO YA ESCRIBIO SU FICHERO, LA CIFRA DEL TEXTO ES ESE FICHERO.**
+
+## 6. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** Los tres discutibles se adjudican en 3.1, 3.2 y 3.3 citando el codigo del tallador (vuelta 113), `MESA_RACIMOS.md:214` con la DECISION 4, y el punto 2 de la decision del fundador del **28 ago 2026**. Ninguna regla nueva |
+| contradiccion con una regla vigente o cifra publicada | **NO.** La 4.1 y la 4.3 contradicen mi medicion y **se resuelven con la correccion declarada** que la casa ya usa (`OP-S-01`, `OP-S-02`, `OP-S-05`) |
+| decision de fundador reservada | **NO.** Y la 3.3 es justo el cuidado de esa frontera: **no se borra ni un alias**, se anota en ficha. El alcance no se mueve, no se gasta fuera del repo, no se toca produccion y **el bucle no funde ramas** |
+| fallo tecnico repetido | **NO.** Gate 0 y las tres suites **verdes por corrida propia**, y **el tallador vuelve a VERDE**: la segunda vuelta en rojo que la 121 dejo amenazada **no ocurre** |
+| credito de tanda roto (clase o cifra) | **NO, PERO SUBE A UNO** de las **dos tandas seguidas** que pide la regla. Primer aviso serio |
+| credito de tanda roto (reporte) | **NO. BAJA A CERO** de las tres que pide la letra del 27 ago |
+| campaña consumada | **NO.** De las **diez** operaciones de la fase 05, **seis** estan HECHAS (`OP-S-01` a `OP-S-05` y `OP-S-08`) y **cuatro** siguen LISTA (`OP-S-09`, `OP-S-10`, `OP-S-11`, `OP-S-12`) |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO SE DISPARA.** Cuatro operaciones siguen en `LISTA`. **Y el aviso de la 121 queda SALDADO: la correccion 2.c ya esta escrita en `08_VERIFICACION.md`** (la verifique, 1.7), asi que cuando la fase cierre **se podra declarar sin mentir** |
+
+**OBSERVACION QUE DEJO ABIERTA Y MARCADA, NO ES CAIDA DE ESTA VUELTA NI ESTA EN LA NOMINA DE `OP-S-08`:**
+rastreando la puerta unica de las semillas encontre que
+**`web/app/api/project/[id]/follow/route.ts:232` llama `cargarEntrySeeds()` SIN el grafo**, con el grafo ya
+cargado en la linea justo anterior. Leido `graph.ts:67`, la version sin grafo **no filtra por `esOfrecible`**,
+que es exactamente lo que `OP-C-01` arreglo en los dos `organizer`. **NO es uno de los veinte** (el censo del
+11 ago clasifico accesos directos `graph[id]`, y este es una carga de semillas), asi que **no toca el cierre
+de `OP-S-08`**, que ratifico. Lo nombro porque **la auditoria de cierre lo va a necesitar** y porque es la
+misma averia con otro nombre. **Va al encargo como MEDICION, no como arreglo.** Sigue viva tambien la
+observacion de la 121 sobre las siete filas de `00_CODIGO` en `LISTA` con el codigo ya arreglado: **el campo
+`estado` no es la verdad de esta campaña**, y hoy lo confirmo otra vez midiendo `OP-C-01/02/03` en el codigo.
+
+**EL BUCLE SIGUE.** Escribo el encargo de la vuelta 123 en `docs/loop/PROMPT_SIGUIENTE.md`. **No escribo
+`PARA_ALEXIS.md`.** El numero **122 queda gastado por esta acta**.
