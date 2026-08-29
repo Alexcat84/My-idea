@@ -43516,3 +43516,200 @@ mas la de hoy), **2 de clase del auditor** (sin cambio), y **2 vueltas no entreg
 
 **EL BUCLE SIGUE.** Escribo el encargo de la vuelta 127 en `docs/loop/PROMPT_SIGUIENTE.md`. **No escribo
 `PARA_ALEXIS.md`.** El numero **126 queda gastado por esta acta**.
+
+# ==========================================================================
+# ACTA DE LA VUELTA 127 DEL AUDITOR (29 ago 2026, fecha LEIDA DE GIT, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** El barrido de cabeceras sobre `docs/loop/ACTA_AUDITOR.md`, corrido hoy: la
+ultima acta escrita es la de la vuelta 126 y la que audito es la 127, la inmediatamente siguiente. Cubro
+UNA vuelta y la nombro: la **127**, y son **CERO commits**. `git rev-parse HEAD` da `4d4aaa8b`, que es el
+commit de mi propia acta de la 126.
+
+**EL VEREDICTO DE UNA LINEA: LA VUELTA 127 NO ENTREGO. CORRIO TRES MINUTOS, DEJO NUEVE SALIDAS SIN
+COMMITEAR Y EL ARBOL ROTO, Y SE DETUVO EN UN MOTOR ROJO. EL ROJO ERA REAL, ERA REPRODUCIBLE Y LA RAIZ ES
+MIA: EL ORDEN DE CAPTURA QUE YO ESCRIBI EN 1.b Y 1.c DEL ENCARGO GARANTIZA ESE ROJO, PORQUE LA PRIMERA
+MEDICION QUE MANDE CAPTURAR DESHACE EL CICLO DE TRES QUE LA MEDICION SIGUIENTE EXIGE CERRADO. LO PROBE HOY
+EN EXPERIMENTO CONTROLADO SOBRE ARBOL LIMPIO, REPARE EL ARBOL CON EL REMEDIO QUE EL PROPIO `run_phase1.py`
+LLEVA ESCRITO, Y CORRIJO EL ORDEN EN EL ENCARGO DE LA 128. NO SE MOVIO UN SOLO DATO DEL CATALOGO. NO HAY
+PARADA.**
+
+## 1. VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+
+**1.1 LO QUE LA 127 DEJO.** `git rev-parse HEAD`: `4d4aaa8bb3e6f5b88ab342fd7a30c6436e8cd959`, el acta 126.
+**CERO commits de la vuelta.** `git status --short`: nueve ficheros `SALIDA_V127_*` sin versionar y
+`dataset/metadata/master_graph.json` **modificado, 72 lineas** (`git diff --numstat`). No hay reporte de la
+127: `docs/loop/REPORTE.md` sigue siendo el de la 126, ya auditado por mi acta anterior.
+`python scripts/loop/verificar_apertura_sellada.py --vuelta 127`: **ROJO EXIT 1**, seis ficheros de apertura
+con "ningun commit lo anade (no versionado)".
+
+**1.2 EL CATALOGO ESTA EXACTAMENTE DONDE LA 126 LO DEJO. LA 127 NO MOVIO UN DATO.** Medido hoy por mi:
+`recomputar_marcador.py 3388` da **A 551 / B 72 / C 5 / D 2760**, `huecos: []`, `dups(puesto): 0`, pares
+duplicados 0. `vuelta83_conteo_aristas.py WORK` da **3.853 nodos / 3.184 vivos / 669 deprecados**, sig
+**9.195**, prev **9.177**, suma **18.372**, union **9.830**, auto 0, dups 0. Las dos cifras coinciden con el
+cierre de la 126. Estados leidos por mi de `docs/plan/OPERACIONES.jsonl` con codigo propio: `OP-S-09`
+**HECHA**; `OP-S-10`, `OP-S-11` y `OP-S-12` en **LISTA**. El pasivo sigue igual:
+`_auditor_v127_proyeccion.py` corrido hoy da **TOTAL 32, HEREDADAS 29, FABRICADAS 3, REPARADAS DE REBOTE
+1**, con las tres fabricadas nombradas. Las tres reposiciones de la TAREA 3.a **no se hicieron**, y de
+`OP-S-10` siguen **26 candidatos, 10 escritos en la 126 y 16 pendientes** (`_auditor_v127_ops10.py`).
+
+**1.3 EL ARBOL QUE LA 127 DEJO ESTABA ROTO, Y EL DE `HEAD` NO.** Comparador propio con la MISMA funcion del
+Gate 0 (`docs/loop/_auditor_v128_gemelos.py`, que importa `gemelos_divergentes` de `scripts/run_phase1.py`):
+`HEAD:dataset` contra `HEAD:web` da **DIVERGENTES: 0**; el arbol de trabajo tal como lo dejo la 127 daba
+**DIVERGENTES: 71**, todos en `etiqueta_arbol`. O sea: la vuelta empezo con los dos gemelos al dia y los
+dejo desalineados.
+
+**1.4 LA CAUSA, MEDIDA EN EXPERIMENTO CONTROLADO Y NO DEDUCIDA**
+(`docs/loop/SALIDA_AUD_V127_EXPERIMENTO_ORDEN.txt`, corrido hoy sobre arbol limpio): UNA sola corrida de
+`python scripts/run_phase1.py --reaplico-curaduria` sale **EXIT 0**, **GATE 0: OK**, y su propio chequeo de
+gemelos dice **0 nodos divergentes**; y esa misma corrida deja **72 lineas** de diff en
+`dataset/metadata/master_graph.json` y **71 gemelos divergentes EN DISCO**, y detras `python
+engine/run_all_tests.py` cae en **EXIT 1, 1 de 25, `test_gate_alias.py`**. El motivo esta escrito en el
+propio codigo y lo cito: Gate 0 compara el **snapshot de antes del paso 6** (tomado en `run_phase1.py:1176`,
+comentado en `:941-947`), mientras que `engine/test_gate_alias.py:116` y `:124` leen **los dos ficheros del
+disco tal como quedan**. Las dos guardas contestan preguntas distintas, y la que puede quedar verde sobre un
+estado que ella misma acaba de destruir es Gate 0.
+
+**1.5 LA REPARACION, CON EL REMEDIO QUE EL PROPIO INSTRUMENTO LLEVA ESCRITO** (`REMEDIO_SYNC`,
+`run_phase1.py:931-939`): `etiquetas_de_cara.py --aplicar` (71 etiquetas) y `sync_assets_web.py`. Detras,
+medido por mi: `git diff --numstat -- dataset/ web/ engine/` **VACIO**, gemelos en disco **0**, y `python
+engine/run_all_tests.py` **TODOS LOS TESTS PASARON (25/25), EXIT 0**. No toque git: el remedio es el de la
+casa y regenera exactamente el contenido de `HEAD`.
+
+**1.6 LO QUE NO PUEDO DETERMINAR Y NO RESUELVO ADIVINANDO.** (a) Si el ejecutor **paro por la regla** (MODO
+DE EJECUCION CONTINUA, `AUDITOR.md` seccion 3: "CUALQUIER guarda en rojo ... detiene al ejecutor y convoca
+al auditor") o si **la sesion murio**: el repo no guarda ni una linea de decision, y bajo las dos lecturas
+falta lo mismo, que es commitear el tramo y traer el caso escrito. (b) Hubo **al menos una corrida de
+`run_phase1.py` que nadie capturo**: su salida de ciclo dice **71 divergentes** en el snapshot de entrada, y
+en `HEAD` los gemelos estan a **0**, asi que algo recompilo antes de esa corrida. Lo declaro medido y no lo
+adorno.
+
+**1.7 LAS NUEVE SALIDAS DE LA 127, RENOMBRADAS A `ABORTADA_V127_*` ANTES DE COMMITEARLAS, Y DIGO POR QUE.**
+Si las commiteo con su nombre `SALIDA_V127_*_APERTURA.txt`, el commit que las anade pasa a ser hijo directo
+del acta 126 y `verificar_apertura_sellada.py --vuelta 127` se pondria **VERDE**: diria que la apertura de
+la 127 quedo sellada, cuando la 127 no commiteo nada. Renombradas, la guarda sigue contestando lo que es
+verdad, y la corri detras para comprobarlo: **ROJO EXIT 1**, "no existe ningun
+`docs/loop/SALIDA_V127_*_APERTURA.txt` en el arbol de trabajo". La guarda **no se toco y no se envenena
+sola**: con cero ficheros no se pone verde, y eso lo medi en vez de suponerlo.
+
+## 2. RELECTURA CIEGA: NO HAY REPORTE, ASI QUE NO HAY TANDA QUE JUZGAR
+
+No hay reporte de la 127 ni un solo veredicto, cifra o decision de lectura nueva: **no hay discutibles
+marcados, no hay relectura ciega y no hay tanda**. Aplico la letra que esta campana ya escribio para el caso
+en el acta de la vuelta 82: "una vuelta sin reporte no suma ni resta: no hay tanda que juzgar". **Cero
+relecturas de unidad y cero puestos**, declarado.
+
+## 3. LO QUE ADJUDICO
+
+**3.1 LA 127 SE REGISTRA COMO VUELTA NO ENTREGADA, Y ES LA TERCERA.** Las otras dos son la **81** (acta 82)
+y la **114** (acta 114). **NO cuenta en ninguna racha**, por la misma razon escrita en el acta 82: las
+rachas de `AUDITOR.md` seccion 4 estan escritas sobre caidas de clase, de cifra publicada y de reporte, y
+esto no es ninguna de las tres, porque no hay afirmacion. **NO son dos seguidas**: la 126 entrego entera y
+verde. La advertencia del acta 82 (dos seguidas sin entregar serian doctrina nueva) **queda intacta y sin
+disparar**, y la repito para que no se de por gastada.
+
+**3.2 EL ROJO DEL MOTOR ERA REAL Y LA RAIZ ES MIA.** No fue un flake ni un arbol sucio de origen: la 127
+empezo con los gemelos a 0 y el orden que yo mande los rompio. **CAIDA MIA, DE ENCARGO** (seccion 4.3).
+
+**3.3 EL ORDEN DE CAPTURA SE CORRIGE, Y ESTA ES LA ADJUDICACION QUE MAS PESA.** Desde la vuelta 128:
+**`run_phase1.py --reaplico-curaduria` NO SE CORRE NUNCA SUELTO COMO MEDICION.** La corrida de Gate 0 de un
+lado (apertura, cierre o post de operacion) **ES la primera corrida del ciclo de tres de ese lado**: una
+sola corrida, una sola salida, y detras siempre `etiquetas_de_cara.py --aplicar` y `sync_assets_web.py`
+antes de capturar nada mas. Lo adjudico citando la regla que ya estaba escrita y que yo mismo contradije: la
+1.c de mi propio encargo ("NINGUNA salida de guarda se captura mientras el ciclo este a medias") y el
+`REMEDIO_SYNC` del propio `run_phase1.py:931-939`, que dice literalmente que tras un recompile la copia
+atrasada es la del dataset. No hace falta doctrina nueva: hace falta obedecer la que hay.
+
+**3.4 DE LA 126 NO CAE NINGUNA CIFRA, Y LO DIGO CON SU LIMITE.** Las diez filas de su cabecera las remedi en
+mi acta anterior y hoy vuelvo a medir marcador y conteo: cuadran. Lo que **nunca estuvo probado** es que sus
+siete salidas de apertura salieran todas del **mismo estado del arbol**: con el orden de 1.b/1.c tal como lo
+escribi, o el motor se midio fuera del orden listado, o alguien reasento las etiquetas sin dejar constancia.
+**No lo resuelvo por deduccion y no acuso a la 126**: lo dejo escrito como duda medida, y el orden nuevo de
+3.3 hace que no pueda repetirse.
+
+**3.5 EL TRABAJO DE LA 127 SE REENCARGA ENTERO A LA 128**, sin quitarle ni anadirle alcance: las tres
+reposiciones, los dieciseis de `OP-S-10`, la medicion de la verificacion 3, los tres registros y la guarda
+nueva del pasivo. Todo lo adjudicado en el encargo de la 127 (la unidad canonica del par vivo resuelto, la
+forma literal de la condicion, las tres varas de la reposicion, el cierre del pendiente de doctrina)
+**sigue adjudicado y no se reabre**.
+
+## 4. LAS CAIDAS DE ESTA VUELTA, CON SU NOMBRE
+
+**4.1 DEL EJECUTOR, VUELTA NO ENTREGADA** (observacion con nombre, **no de racha**): tres minutos de
+corrida, nueve salidas buenas de instrumento y **cero commits**, contra `EJECUTOR.md` regla 6
+(`docs/loop/EJECUTOR.md:105`, "COMMIT Y PUSH POR TRAMO ..., para que nada dependa de que la sesion
+aguante"). El ciclo de tres estaba corrido y capturado: un commit lo habria salvado.
+
+**4.2 DEL EJECUTOR, DE PROCEDIMIENTO: UNA CORRIDA SIN CAPTURAR.** Medido en 1.6(b): el snapshot de entrada
+de su `run_phase1` capturado dice 71 divergentes y `HEAD` dice 0, asi que corrio un recompile que no dejo
+salida. `AUDITOR.md` 1.1 y el ramal (iv) del tramo doblado piden justo lo contrario.
+
+**4.3 DEL AUDITOR, DE ENCARGO, Y ES LA GRANDE.** Yo escribi un orden de captura imposible: 1.c exige el
+arbol en CERO antes de medir y 1.b pone como primera medicion la unica corrida que lo saca de CERO. Peor: en
+el mismo encargo afirme "MEDIDO POR MI HOY SOBRE TU ARBOL: `etiquetas_de_cara.py --aplicar` reasienta 71
+etiquetas y aun asi el numstat cierra en CERO a la primera pasada", que es verdad **del ciclo** y falso
+**del orden completo que yo mandaba**, y esa frase le decia al ejecutor que si a el no le cerraba el
+problema era suyo. Medi el ciclo y no medi el encargo.
+
+**4.4 DEL AUDITOR, DE PROCEDIMIENTO, PROPIA Y DE HOY:** en un borrador de trabajo lei un `EXITCODE` de
+`verificar_apertura_sellada.py` desde un `$?` puesto **detras de una tuberia**, que devuelve el codigo de
+`tail` y no el del instrumento (daba 0 donde el instrumento daba 1). Lo cace yo mismo remidiendo sin tuberia
+(**EXIT 1 real**, que es el que publico en 1.1) y no llego a ninguna cifra del acta, pero va escrito: un
+codigo de salida leido detras de un `|` no es una medicion.
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: cero relecturas de unidad y cero puestos**, declarado (no hubo reporte). Varas corridas por mi
+hoy: `git rev-parse`, `git status` y `git diff --numstat`; el marcador con huecos y duplicados; el conteo de
+aristas; los estados de `OPERACIONES.jsonl` con codigo propio; el comparador de gemelos del Gate 0 sobre
+`HEAD` y sobre el arbol; **el experimento controlado del orden de captura, con sus cuatro pasos y sus
+codigos de salida reales**; el remedio y su verificacion (numstat, gemelos y motor 25/25); la guarda del
+sello en dos estados (con ficheros y sin ellos); la proyeccion del pasivo; y la nomina de `OP-S-10`.
+
+**Caidas del ejecutor en esta tanda: CERO de clase, CERO de cifra publicada, CERO de reporte (no hubo
+reporte), UNA VUELTA NO ENTREGADA (4.1) y UNA de procedimiento (4.2). Caidas del auditor: UNA de encargo
+(4.3) y UNA de procedimiento (4.4). Discrepancias abiertas: CERO.**
+
+**Acumulado:** **858 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase del
+ejecutor** (sin cambio), **73 de reporte del ejecutor** (sin cambio), **20 de cifra publicada del ejecutor**
+(sin cambio), **17 de expediente** (sin cambio), **14 de incumplimiento de encargo** (sin cambio), **1 de
+procedimiento del ejecutor** (linea nueva del registro, la de 4.2), **2 de guarda envejecida** (sin cambio),
+**16 de guarda que no alcanza o cegada** (sin cambio), **10 de cifra del auditor** (sin cambio), **19 de
+acta del auditor** (sin cambio), **31 de procedimiento del auditor** (30 mas la de hoy), **1 de reporte del
+auditor** (sin cambio), **25 de encargo del auditor** (24 mas la de hoy), **2 de clase del auditor** (sin
+cambio), y **3 vueltas no entregadas enteras** (2 mas la de hoy: 81, 114 y 127).
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO.** No se publico una sola cifra y no se movio un
+> solo dato: lo verifique con marcador y conteo, que salen identicos al cierre de la 126.
+>
+> **REPORTE: SIGUE EN CERO de las que acumulan.** Una vuelta sin reporte no suma ni resta (acta 82). **La
+> ESCALADA de `AUDITOR.md` 1.2 se dispara en DOS y estamos en CERO: NO TOCA**, y la dejo dicha entera.
+>
+> **EL CREDITO DE LA TANDA: EL TRAMO SE RELEE AL DOBLE POR OCTAVA VUELTA.** No por hallazgo fuera de lo
+> marcado (no hubo reporte donde marcar), sino porque el tramo de la 120 y sus ramales **siguen vivos y sin
+> consumirse**: la 127 no leyo nada. Siguen los ramales (i) a (iv) de la 120, el (v) de la 123, el (vi) de
+> la 124, el (vii) de la 125, y el (viii) y el (ix) de la 126. **Le anado uno, y sale de mi propia caida:**
+> **(x) UN ORDEN DE MEDICION SE PRUEBA CORRIENDOLO ENTERO SOBRE ARBOL LIMPIO ANTES DE MANDARLO. Medir un
+> paso del orden y dar por bueno el orden es la misma especie de error que medir un tramo y dar por buena la
+> tanda: la guarda que cae no es la que se probo, es la que venia detras.**
+
+## 6. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** La vuelta no entregada tiene letra escrita (acta 82) y **no son dos seguidas**; el orden de captura se corrige citando la 1.c que yo mismo escribi y el `REMEDIO_SYNC` de `run_phase1.py:931-939` |
+| contradiccion con una regla vigente o cifra publicada | **NO.** La contradiccion estaba **dentro de mi encargo**, no entre reglas de la casa, y se resuelve reescribiendolo (3.3). Ninguna cifra publicada cae: marcador y conteo remedidos cuadran |
+| decision de fundador reservada | **NO.** No se borro contenido, no cambio el alcance, no se gasto fuera del repo y no se toco nada fuera de `pasada-unica` |
+| fallo tecnico repetido | **NO.** Gate 0 en rojo **una** vez (el ciclo de entrada de la 127) y con **regla escrita que lo resuelve**, el `REMEDIO_SYNC` del propio instrumento; la condicion pide **dos vueltas seguidas por la misma causa sin regla**. Hoy, por corrida propia: Gate 0 OK, motor 25/25, gemelos 0, arbol en CERO |
+| credito de tanda roto (clase o cifra) | **NO. SIGUE EN CERO** |
+| credito de tanda roto (reporte) | **NO. CERO** de las que acumulan; sin reporte no hay tanda |
+| campana consumada | **NO.** Tres operaciones en `LISTA`, leidas hoy: `OP-S-10`, `OP-S-11`, `OP-S-12` |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO SE DISPARA.** Tres operaciones en `LISTA`. **Aviso por cuarta vuelta: esta encima** |
+
+**EL BUCLE SIGUE.** Escribo el encargo de la vuelta 128 en `docs/loop/PROMPT_SIGUIENTE.md`, con el orden de
+captura corregido y el trabajo de la 127 entero. **No escribo `PARA_ALEXIS.md`.** El numero **127 queda
+gastado por esta acta**.

@@ -1,0 +1,47 @@
+EXPERIMENTO DEL AUDITOR, VUELTA 127. Pregunta: 'run_phase1.py --reaplico-curaduria',
+que es la PRIMERA salida de apertura que mi propio encargo 1.b manda capturar,
+deja el arbol como la 1.c exige (numstat en CERO) o lo ensucia?
+Rama: pasada-unica  HEAD: 4d4aaa8bb3e6f5b88ab342fd7a30c6436e8cd959
+
+--- PASO 0: arbol limpio de partida ---
+git diff --numstat -- dataset/ web/ engine/:
+(vacio arriba = CERO)
+DIVERGENTES: 0
+
+--- PASO 1: una sola corrida de run_phase1.py --reaplico-curaduria ---
+EXITCODE: 0
+  [OK] Los dos master_graph (dataset y web) dicen lo mismo (valor: 0 nodos divergentes)
+GATE 0: OK
+
+--- PASO 2: el arbol DESPUES de esa unica corrida ---
+git diff --numstat -- dataset/ web/ engine/:
+72	72	dataset/metadata/master_graph.json
+DIVERGENTES: 71
+  actualizar_business_model_canvas_discovery (etiqueta_arbol)
+  actualizar_business_model_canvas_tuneup (etiqueta_arbol)
+  actualizar_modelo_de_negocio_pivot_o_proceed (etiqueta_arbol)
+  alineacion_con_canvas (etiqueta_arbol)
+  background_startup_vs_corporativo (etiqueta_arbol)
+
+--- PASO 3: el motor sobre ese arbol ---
+EXITCODE: 1
+  FALLO test_gate_alias.py (0.2s) -- exit code 1
+  1 de 25 test(s) fallaron
+
+--- PASO 4: el remedio que el propio run_phase1.py lleva escrito (REMEDIO_SYNC, lineas 931-939) ---
+etiquetas EXITCODE: 0
+71 etiquetas cambian; 0 ya estaban en su forma final.
+escrito: dataset\metadata\master_graph.json (71 etiquetas)
+escrito: web\lib\assets\master_graph.json (0 etiquetas)
+sync EXITCODE: 0
+git diff --numstat -- dataset/ web/ engine/:
+(vacio arriba = CERO)
+DIVERGENTES: 0
+motor EXITCODE: 0
+TODOS LOS TESTS PASARON (25/25).
+
+VEREDICTO: Gate 0 responde VERDE sobre el SNAPSHOT DE ANTES del paso 6 (snapshot tomado en run_phase1.py:1176, comentado en :941-947; asi esta
+escrito), pero la misma corrida deja en DISCO
+las dos copias divergentes. La guarda que si lee el disco es engine/test_gate_alias.py
+(test_EL_CATALOGO_REAL_ESTA_LIMPIO, :116 y :124), y por eso el motor cae. El orden 1.b/1.c de mi
+encargo de la 127 garantizaba ese rojo.
