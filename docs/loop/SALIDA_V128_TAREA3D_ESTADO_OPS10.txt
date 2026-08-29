@@ -1,0 +1,23 @@
+V1: los 31 nodos de la nomina nombran el pais en condiciones_activacion
+  vivos: 28/28 nombran el pais en condiciones_activacion (faltan: [])
+  deprecados (fuera de alcance, NO tocados): 3 -> ['cinco_categorias_costos_franquicia', 'elaboracion_fdd', 'estructuras_combinadas_franquicia']
+  ESTADO V1: VERDE PARA LOS 28 VIVOS, LITERAL FALSO PARA LOS 31 (3 deprecados no tocados). DISCUTIBLE.
+
+V2: ningun nodo condiciona con adjetivo federal en vez de pais (obtencion_marca_registrada vigilado)
+  obtencion_marca_registrada.condiciones_activacion: ['Solo aplica si vendes o piensas vender franquicias en Estados Unidos', 'Cuando se planea franquiciar y aún no se posee un trademark federal sobre el nombre de marca']
+  primera condicion nombra el pais: True | condicion vieja con adjetivo federal sigue presente (no tocada): True
+  ESTADO V2: VERDE si 'en vez de' se lee como 'la puerta ya no depende solo del adjetivo' (ahora hay condicion de pais delante); LITERAL DISCUTIBLE porque la clausula vieja con 'federal' sigue ahi, sin reescribir por mandato expreso del encargo de la 128.
+
+V3: items numerados del FDD dentro de la condicion de pais (medido en 3.c)
+  VERDE, ver docs/loop/SALIDA_V128_TAREA3C_VERIFICACION3_OPS10.txt
+
+V4: los dos contramodelos se quedan como estan
+  comprender_definicion_legal_franquicia.condiciones_activacion[0]: 'Solo aplica si vendes o piensas vender franquicias en Estados Unidos'
+  cumplimiento_ftc_rule_436.condiciones_activacion[0]: 'Esto aplica solo si vendes o piensas vender franquicias en Estados Unidos'
+  ESTADO V4: VERDE (no fueron tocados por ningun instrumento de esta vuelta ni de la 126)
+
+V5: Gate 0 verde
+  VERDE, ver docs/loop/SALIDA_V128_OPS10_GATE0_POST.txt (ultima corrida de Gate 0 de esta vuelta)
+
+RESUMEN: V1 discutible (28/31, deprecados fuera de alcance), V2 discutible (letra vs espiritu), V3 verde, V4 verde, V5 verde. OP-S-10 NO SE CIERRA AQUI: la adjudica el auditor.
+EXITCODE: 0
