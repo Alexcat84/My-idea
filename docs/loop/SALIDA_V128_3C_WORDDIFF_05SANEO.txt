@@ -1,0 +1,48 @@
+diff --git a/docs/plan/05_SANEO.md b/docs/plan/05_SANEO.md
+index 5813088c..9aaea817 100644
+--- a/docs/plan/05_SANEO.md
++++ b/docs/plan/05_SANEO.md
+@@ -517,6 +517,22 @@ dominio que condiciona con un adjetivo en vez de con un pais.**
+ **LA PREGUNTA**: entra `franquicias` al barrido de marco junto a `exportacion`?
+~
+ **La doctrina mide donde se actua, no cuanto se cita. Sin adjudicar.**
+~
+ 
+~
++> **CORRECCION DECLARADA (29 ago 2026, vuelta 128, TAREA 3.c).** Medicion
+~
++> propia de la verificacion 3 de esta operacion ("los items numerados del
+~
++> FDD, Item 8, 19 y 23, quedan dentro de la condicion de pais, no fuera"),
+~
++> que ninguna vuelta anterior habia medido: por
+~
++> `scripts/loop/vuelta128_tarea3c_verificacion3_ops10.py`
+~
++> (`docs/loop/SALIDA_V128_TAREA3C_VERIFICACION3_OPS10.txt`), de los 31 ids
+~
++> de la nomina, **7 nombran Item 8, Item 19 o Item 23** en algun campo
+~
++> (`calculo_roi_franquiciado_2`, `decision_fpr`, `elaboracion_fdd`
+~
++> DEPRECADO, `financial_performance_representations`,
+~
++> `ingresos_por_rebates`, `preparar_fdd`, `programas_compra_franquicia`);
+~
++> tras el segundo y ultimo tramo de esta vuelta (TAREA 3.b, dieciseis
+~
++> nodos), los **6 vivos quedan CUBIERTOS** por la condicion de pais en
+~
++> `condiciones_activacion`. **VERIFICACION 3 EN VERDE.** No cierra la
+~
++> operacion: mide y publica, la adjudica el auditor con las cinco
+~
++> verificaciones medidas (TAREA 3.d).
+~
+~
+ ---
+~
+ 
+~
+ ## VERIFICACION DE LA FASE
+~
