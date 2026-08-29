@@ -133,6 +133,29 @@ _2.py y _3.py, salidas a docs/loop/SALIDA_V135_2E_MUTACION_1.txt, _2.txt y
 _3.txt: (1) `118 grafias` a `999 grafias` sobre copia del reporte real de
 la 134, ROJO; (2) `54 grupos` a `77 grupos`, ROJO; (3) caso negativo, una
 cifra con fichero citado, linea `CIFRA` puesta y numero CORRECTO, VERDE.
+
+--- LA ASIMETRIA DE LAS DOS VENTANAS, ADJUDICADA COMO DOCTRINA (TAREA 2.c
+de la vuelta 136, acta 135, 3.1) ---
+
+Esta guarda usa DOS ventanas distintas a proposito y NO SE UNIFICAN NUNCA:
+  - VENTANA AMPLIA (`ventana_amplia()`, mas menos 2 frases, bidireccional):
+    decide si la exencion (iii) de arriba es LEGAL, es decir si hay o no
+    hay UN `SALIDA_V<N>_*.txt` existente cerca del literal `(sin
+    instrumento)`. Aqui ensanchar solo puede ENCONTRAR MAS instrumentos,
+    nunca menos, asi que ensanchar hace la exencion MAS dificil de ganar,
+    nunca mas facil: es la direccion segura.
+  - VENTANA FORWARD-ONLY (la del cotejo normal, mas abajo, MISMA doctrina
+    que `verificar_cifras_del_plan.py`): COTEJA la cifra contra el fichero
+    que la sigue, nunca contra el que la precede.
+Por que no se unifican: ensanchar el COTEJO (no solo la pregunta de la
+exencion) dejaria que una cifra cuadrara contra el fichero DEL VECINO, que
+es exactamente el error que la ventana forward-only comete cuando eximia
+sin comprobar (el ejemplar: `SALIDA_V135_2A_DIAGNOSTICO.txt`, corrido con
+forward-only, empareja `118 grafias` con `SALIDA_V134_4B_EFECTO_CAP.txt`,
+el fichero del vecino, cuando la pareja correcta es `SALIDA_V134_4A_
+CENSO_COLA.txt`). AMPLIA para decidir si la exencion es legal,
+FORWARD-ONLY para cotejar la cifra: nunca una ventana sola para las dos
+preguntas.
 """
 import argparse
 import glob

@@ -8617,3 +8617,76 @@ POR UNO (coste declarado, no escondido).
 > exista fichero de instrumento en la ventana, y no que alguien escriba
 > que no existe), y toda exencion se publica con su cuenta al lado para
 > que su crecimiento se vea.**
+
+## R.17. Registro de correcciones y adjudicaciones declaradas de la vuelta
+135 (acta de la vuelta 135; escrito en la vuelta 136, TAREA 2)
+
+**(1) MIA (DEL EJECUTOR), DE CITA (acta 135, 4.1, el ramal xx).** Mi
+reporte de la 135 decia: "2.a (`SALIDA_V135_2A_DIAGNOSTICO.txt`):
+COBERTURA real de la 134 1 cotejadas / 3 exentas / 4 cifras; dos SI
+tenian instrumento cerca, una NO." El fichero que cito dice lo contrario.
+Las tres exentas, una por una, leidas hoy del propio fichero
+`SALIDA_V135_2A_DIAGNOSTICO.txt`:
+  - `0 pares`: NO hay ningun `SALIDA_V134_*.txt` citado en su ventana.
+  - `118 grafias`: SI hay uno citado en su ventana, pero es
+    `SALIDA_V134_4B_EFECTO_CAP.txt`, el fichero del vecino (la ventana de
+    2.a era forward-only, la unica que existia entonces).
+  - `54 grupos`: NO hay ningun `SALIDA_V134_*.txt` citado en su ventana.
+  Es decir UNA SI (y encima con el fichero equivocado) y DOS NO, no "dos
+  SI, una NO" como publique. La razon de la caida: 2.a corrio con la
+  ventana forward-only, y esa medicion no es la de la guarda REPARADA que
+  corri despues con la ventana amplia. La medicion CORRECTA con la
+  ventana amplia (leida hoy de `SALIDA_V135_1J_CIFRAS_REPORTE.txt`):
+  `118 grafias` cuadra con `SALIDA_V134_4A_CENSO_COLA.txt`, `54 grupos`
+  cuadra con `SALIDA_V134_4B_EFECTO_CAP.txt`, y `0 pares` no cuadra con
+  ninguno. Tener razon en la cifra final no arregla haber citado el
+  fichero equivocado para la medicion equivocada.
+
+  El ramal (xx), escrito entero:
+  > **(xx) UNA CONCLUSION SE LEE DEL INSTRUMENTO QUE SE CITA, NO DEL QUE
+  > SE CORRIO DESPUES. Cuando una vuelta mide lo mismo dos veces con dos
+  > varas (el diagnostico ANTES de reparar y la guarda DESPUES), la frase
+  > que cita el fichero del diagnostico dice lo que dice ESE fichero. Si
+  > lo que se quiere publicar es la medicion nueva, se cita el fichero
+  > nuevo. Tener razon no arregla la cita.**
+
+**(2) MIA (DEL EJECUTOR), DE INCUMPLIMIENTO DE ENCARGO (acta 135, 4.2).**
+La 2.d de la vuelta 135 ordenaba, literal, pegar en el reporte la linea
+COBERTURA de mi propio reporte, tal cual. No la pegue: `REPORTE.md` de la
+135 solo trae la linea COBERTURA del diagnostico de la 134 (linea 38), no
+la mia. Mi cobertura real de la 135, leida hoy de
+`SALIDA_V135_1J_CIFRAS_REPORTE.txt`, es `COBERTURA: 7 cotejadas / 0
+exentas / 7 cifras`. La 1.k de esa misma vuelta preveia justo este aprieto
+(si por pegarla no cabes en el tope, PARAS y lo traes, no recortas) y no
+pare ni lo dije. Atenuante medido y no menor: la cobertura de verdad es 7
+de 7 con CERO exentas, la puerta ya estaba cerrada de hecho; lo que
+faltaba era la constancia.
+
+**(3) LA ASIMETRIA DE LAS DOS VENTANAS, ADJUDICADA POR EL AUDITOR (acta
+135, 4.4, adjudicacion 1) y escrita donde vive la guarda:** el docstring
+de `scripts/loop/verificar_cifras_del_reporte.py` (TAREA 2.c de esta
+vuelta 136) explica que la ventana AMPLIA (mas menos 2 frases,
+bidireccional) decide si la exencion (iii) es LEGAL, y la ventana
+FORWARD-ONLY cotejar la cifra contra su fichero, y que no se unifican
+porque ensanchar el cotejo dejaria que una cifra cuadrara contra el
+fichero del vecino, que es exactamente el error que el forward comete al
+eximir (el mismo que produjo la caida (1) de arriba).
+
+**(4) EL CIERRE CON REMISION DE LA FASE 05, REGISTRADO ANTES DE QUE HAGA
+FALTA.** La decision del fundador del 26 ago 2026 (`docs/plan/00_INDICE.md`,
+al pie) manda que "las fases 04 y 05 corren antes" de que se sienten las
+mesas de la fase 06. La atadura 2 de `docs/plan/00_INDICE.md:458` manda
+que "`OP-S-12` va AL FINAL, despues de la ultima fusion", y `OP-S-12`
+(`docs/plan/05_SANEO.md:625`, LISTA) vive en la ficha de la fase 05 y
+ademas figura bloqueada por `OP-M-01` en `docs/plan/OPERACIONES.jsonl`
+(`OP-M-01.bloquea_a` la nombra), que es una mesa de la fase 06. Leidas al
+pie de la letra, las dos ordenes se muerden la cola: la fase 05 tendria
+que terminar antes de la fase 06, pero una de sus fichas no puede correr
+hasta despues de que la fase 06 funda. Lo resuelve la misma figura que el
+fundador ya uso para la fase 03 (`docs/loop/paradas/2026-08-26-cierre-fase-03-DECISION.md`):
+CERRADA CON REMISION. Bajo esa figura, la fase 05 cierra con sus demas
+fichas hechas y `OP-S-12` enrutada, con destino escrito, a correr al
+final de la pasada entera, despues de la ultima fusion de la fase 06,
+igual que las seis fusiones de la fase 03 quedaron enrutadas a esa misma
+fase 06. Este registro NO declara cerrada la fase 05: esa declaracion es
+del auditor, en su acta.
