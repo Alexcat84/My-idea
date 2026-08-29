@@ -1,0 +1,72 @@
+NOMINA (campo nodos): 31 unicos: 31
+APERTURA: vivos 28 deprecados 3 ['cinco_categorias_costos_franquicia', 'elaboracion_fdd', 'estructuras_combinadas_franquicia']
+WORK    : vivos 28 deprecados 3
+
+CANDIDATOS EN APERTURA (vivos que NO nombran el pais en condiciones_activacion): 16
+   - eleccion_abogado_franquicias
+   - estimacion_inversion_inicial_franquiciador
+   - estructura_proveedores_aprobados_designados
+   - exenciones_legales_franquicia
+   - financial_performance_representations
+   - ingresos_por_rebates
+   - los_tres_grandes_criterios
+   - multiples_compradores_influyentes
+   - obtencion_marca_registrada
+   - preparar_fdd
+   - proceso_venta_franquicias
+   - programas_compra_franquicia
+   - propuesta_valor_franquicia
+   - proteccion_propiedad_intelectual_franq
+   - registro_estatal_franquicia
+   - revision_legal_marketing
+
+CON EL LITERAL YA EN APERTURA (tramo vuelta 126): 11
+
+NODOS QUE ESTA VUELTA ANTEPONE EL LITERAL: 16
+   - eleccion_abogado_franquicias
+   - estimacion_inversion_inicial_franquiciador
+   - estructura_proveedores_aprobados_designados
+   - exenciones_legales_franquicia
+   - financial_performance_representations
+   - ingresos_por_rebates
+   - los_tres_grandes_criterios
+   - multiples_compradores_influyentes
+   - obtencion_marca_registrada
+   - preparar_fdd
+   - proceso_venta_franquicias
+   - programas_compra_franquicia
+   - propuesta_valor_franquicia
+   - proteccion_propiedad_intelectual_franq
+   - registro_estatal_franquicia
+   - revision_legal_marketing
+
+DIFERENCIA candidatos_apertura vs escritos: sobran [] faltan []
+VIEJAS ENTERAS Y EN SU ORDEN (h[1:]==a) FALLAN EN: NINGUNO
+CONTRAMODELO comprender_definicion_legal_franquicia intacto: True
+CONTRAMODELO cumplimiento_ftc_rule_436 intacto: True
+
+COBERTURA FINAL: vivos que nombran el pais en condiciones_activacion: 28 de 28
+SIN CUBRIR: NINGUNO
+con el literal exacto primero: 27
+--- QUIENES LLEVABAN EL LITERAL YA EN APERTURA (los 11) ---
+    alternativa_business_opportunity_licensing
+    alternativa_trademark_licensing
+    calculo_roi_franquiciado_2
+    calificacion_prospectos_award
+    comprender_definicion_legal_franquicia
+    concepto_de_advances
+    cumplir_leyes_estatales_franquicia
+    decision_fpr
+    decision_marca_comun_branding
+    desarrollar_manual_operaciones
+    diseno_programa_capacitacion_franquicia
+--- LOS TRES DEPRECADOS, INTACTOS ENTRE APERTURA Y WORK ---
+    cinco_categorias_costos_franquicia identico: True
+    elaboracion_fdd identico: True
+    estructuras_combinadas_franquicia identico: True
+--- obtencion_marca_registrada, condiciones hoy ---
+   [0] Solo aplica si vendes o piensas vender franquicias en Estados Unidos
+   [1] Cuando se planea franquiciar y aún no se posee un trademark federal sobre el nombre de marca
+--- los dos contramodelos, condiciones hoy ---
+   comprender_definicion_legal_franquicia : ['Solo aplica si vendes o piensas vender franquicias en Estados Unidos', 'Cuando estas diseñando un modelo de expansion que involucra a terceros operando bajo tu marca', 'Cuando tienes dudas sobre si el acuerdo de licencia o distribucion que estas armando podria clasificar legalmente como franquicia']
+   cumplimiento_ftc_rule_436 : ['Esto aplica solo si vendes o piensas vender franquicias en Estados Unidos', 'Cuando estás listo para comenzar a vender franquicias formalmente', 'Si planeas expandir la venta de tus franquicias a varios estados']

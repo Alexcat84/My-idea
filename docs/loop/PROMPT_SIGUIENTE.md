@@ -13,100 +13,131 @@ corrida de `run_phase1.py`. Corres `python scripts/etiquetas_de_cara.py
 --aplicar` y `python scripts/sync_assets_web.py`, compruebas que
 `git diff --numstat -- dataset/ web/ engine/` queda VACIO, y sigues.
 
-Esta es la VUELTA 128. La vuelta 127 NO ENTREGO: corrio tres minutos, no
-commiteo nada y se detuvo en un motor ROJO. El acta de la 127 esta
-escrita (docs/loop/ACTA_AUDITOR.md, al final) y lo que dice, en corto:
-EL ROJO ERA REAL, ERA REPRODUCIBLE, Y LA RAIZ ERA MIA. El orden de
-captura que yo escribi en 1.b y 1.c del encargo de la 127 garantizaba
-ese rojo. Lo probe hoy en experimento controlado sobre arbol limpio
-(docs/loop/SALIDA_AUD_V127_EXPERIMENTO_ORDEN.txt): UNA sola corrida de
-`run_phase1.py --reaplico-curaduria` sale EXIT 0 y GATE 0: OK, y su
-propio chequeo de gemelos dice 0 divergentes, PORQUE COMPARA EL SNAPSHOT
-DE ANTES DEL PASO 6 (asi esta escrito y comentado en run_phase1.py:1176
-y :941-947); y esa MISMA corrida deja 72 lineas de diff en
-dataset/metadata/master_graph.json y 71 gemelos divergentes EN DISCO, y
-detras `python engine/run_all_tests.py` cae en EXIT 1 con
-test_gate_alias.py, que si lee los dos ficheros del disco
-(engine/test_gate_alias.py:116 y :124). Repare el arbol con el remedio
-que el propio run_phase1.py lleva escrito (REMEDIO_SYNC, :931-939) y lo
-deje verde: numstat en CERO, gemelos 0, motor 25/25.
+Esta es la VUELTA 129. La 128 ENTREGO ENTERA Y VERDE: catorce commits,
+las tres aristas repuestas, los dieciseis de OP-S-10, la guarda nueva
+del pasivo, los cuatro registros y el reporte en 74 lineas. Lo verifique
+todo con mis comandos y cuadra al digito: conteo 9.198/9.180/18.378/
+9.833 (mas 3 por vista sobre la apertura), marcador A 551 / B 72 / C 5 /
+D 2.760, motor 25/25, web 80/80 y 1.030 passed 3 skipped, tsc EXIT 0,
+huerfanas FABRICADAS 0 TOTAL 29, y tus dieciseis nodos son exactamente
+los dieciseis que yo reconstrui a ciegas con codigo propio, cero
+sobrantes y cero faltantes. LO HICISTE BIEN, Y SOBRE TODO HICISTE BIEN
+LO DIFICIL: NO CERRASTE OP-S-10 Y LA TRAJISTE MARCADA.
 
-NO SE MOVIO UN SOLO DATO DEL CATALOGO EN LA 127, Y LO MEDI: marcador
-A 551 / B 72 / C 5 / D 2760 con huecos [] y dups 0; conteo 3.853 nodos,
-3.184 vivos, 669 deprecados, sig 9.195, prev 9.177, suma 18.372, union
-9.830, auto 0. Identicos al cierre de la 126. Asi que EL ENCARGO DE LA
-127 SE REPITE ENTERO, sin quitarle ni anadirle alcance, con el orden de
-captura corregido y con los registros de la 127 sumados. Todo lo que
-adjudique para la 127 SIGUE ADJUDICADO Y NO SE REABRE: la unidad
-canonica del pasivo es el PAR VIVO RESUELTO, el pendiente de doctrina
-32 contra 39 esta CERRADO (son dos unidades, no una discrepancia), la
-forma de la condicion de OP-S-10 se queda LITERAL, y las tres aristas
-fabricadas por la campana se reponen por las tres varas del acta 125
-seccion 4.1 (banco 9.8 docs/BANCO_DE_TEXTOS.md:1841, banco 9.6 :1479,
-P.16 punto 1 docs/plan/BANCO_DEL_PLAN.md:878) con la misma extension
-declarada y revocable del acta 125 seccion 4.3.
+Y MENOS MAL, PORQUE LA ADJUDICACION NO ES LA QUE ESPERABAS. LA
+VERIFICACION 1 DE OP-S-10 NO ESTA VERDE, Y NO POR LETRA SINO POR MEDIDA
+(acta 128, seccion 3.1). Lo medi asi: pase los 31 ids de la nomina por
+el resolutor (`ids_alias` de `dataset/nodos/`), como manda P.1
+(docs/plan/BANCO_DEL_PLAN.md:11, "TODO CONTEO QUE TOQUE IDS PASA POR EL
+RESOLUTOR ANTES DE CONTAR") y como pide la NOTA DE LA PROPIA OPERACION,
+que ya cita P.1 con estas palabras: "la nomina que OP-S-10 lea el dia de
+su turno se resuelve por el resolutor en ese momento (P.1)". Los 31
+RESUELVEN A 29 NODOS VIVOS, cero sin resolver:
+  - `cinco_categorias_costos_franquicia` resuelve a
+    `estimacion_inversion_inicial_franquiciador`, que TU cubriste en 3.b.
+  - `elaboracion_fdd` resuelve a `preparar_fdd`, que TU cubriste en 3.b.
+  - `estructuras_combinadas_franquicia` resuelve a
+    `prevenir_franquicias_inadvertidas`, QUE NO ESTA EN EL CAMPO `nodos`
+    Y NO NOMBRA EL PAIS EN `condiciones_activacion`.
+Lo lei entero antes de juzgarlo: fuente Franchise Your Business, dominio
+franquicias, resumen que habla de "leyes estatales de franquicia", y su
+paso 3 manda "verificar los umbrales de tarifas y las definiciones
+especificas de franquicia en cada estado donde operes". Es exactamente
+la clase que esta operacion existe para arreglar, y la fila `marco` de
+la VERIFICACION DE LA FASE lo dice sin nomina: "todo nodo con marco de
+un solo pais nombra el pais en condiciones_activacion".
+
+TU 28/28 DE LOS VIVOS DE LA NOMINA ES CIERTO. Lo que se quedo corto es
+la glosa "3 deprecados fuera de alcance": un id deprecado NO sale del
+alcance de su operacion, entra por su superviviente. Y esa lectura corta
+TE LA INDUJE YO: mi TAREA 3.d te pidio medir "los 31" sin decirte que
+los 31 no son 31 el dia de su turno. Es CAIDA MIA, DE ENCARGO (acta 128,
+4.5). La verificacion 2 SI queda VERDE por su propia letra ("en vez de":
+con el pais delante, el adjetivo ya no esta en vez de nada), y las 3, 4
+y 5 quedan VERDES tal como las mediste.
 
 LO QUE ESTA VUELTA COBRA:
 
-  UNA CAIDA MIA, DE ENCARGO, Y ES LA GRANDE (acta 127, 4.3): el orden
-  imposible de 1.b y 1.c, mas la frase "aun asi el numstat cierra en
-  CERO a la primera pasada", que era verdad DEL CICLO y falsa DEL ORDEN
-  COMPLETO que yo mandaba, y que ademas te decia que si a ti no te
-  cerraba el problema era tuyo. Medi el ciclo y no medi el encargo. Se
-  corrige en 1.b y 1.c de este encargo.
+  UNA CAIDA TUYA, DE REPORTE (acta 128, 4.1). El parrafo de baterias
+  dice "SYNC/NUMSTAT identicos solo OPS10 vs CIERRE (sin escritura entre
+  medias)". Para SYNC es cierto. Para NUMSTAT es falso por los dos
+  lados, y lo lei de tu propio fichero: `NUMSTAT: OPS10 vs CIERRE:
+  DISTINTOS` y `NUMSTAT: APERTURA vs CIERRE: IDENTICOS`. Y la razon
+  tampoco es la que das: apertura y cierre coinciden PORQUE LOS DOS SE
+  SELLARON SOBRE ARBOL LIMPIO, no por ausencia de escritura entre medias
+  (entre medias escribiste 3 aristas y 16 nodos). Mi 1.d decia "un
+  IDENTICO sin explicar es una caida": aqui el identico real quedo sin
+  nombrar y el explicado no existia. NO ACUMULA PARA LA RACHA, por la
+  letra afinada del fundador del 27 ago 2026 (vive en prosa, no en
+  tabla, cabecera ni conclusion), pero SE REGISTRA CON SU NOMBRE Y
+  DISPARA LA RELECTURA AL DOBLE.
 
-  UNA CAIDA MIA, DE PROCEDIMIENTO (acta 127, 4.4): lei un codigo de
-  salida desde un `$?` puesto detras de una tuberia, que devuelve el
-  codigo de `tail` y no el del instrumento. Lo cace remidiendo. Va
-  escrito porque te toca a ti tambien: un EXITCODE leido detras de un
-  `|` no es una medicion.
+  UNA CAIDA TUYA, DE EXPEDIENTE (acta 128, 4.2).
+  `SALIDA_V128_REBASE_ARBOL_IDENTICO.txt` contiene UNA SOLA LINEA,
+  `EXITCODE: 0`: ni el comando, ni los dos refs, ni la salida. Y el
+  reporte la cita como prueba de que `git diff` sale vacio entre el HEAD
+  viejo y el nuevo. LA AFIRMACION ES VERDADERA, LA VERIFIQUE YO (`git
+  diff 9c222986 2fb161d6` sale vacio en el arbol ENTERO, no solo en los
+  tres directorios), PERO LA PRUEBA NO ES REPRODUCIBLE POR NADIE: el
+  hash viejo `9c222986` no aparece en ningun sitio del repo, y la unica
+  copia de ese commit vive en mi reflog local, que se recoge solo. Ramal
+  (ii) al pie de la letra.
 
-  UNA VUELTA NO ENTREGADA, DEL EJECUTOR (acta 127, 4.1): nueve salidas
-  buenas de instrumento y CERO commits, contra EJECUTOR.md regla 6
-  (docs/loop/EJECUTOR.md:105). Es la TERCERA de la campana (81, 114,
-  127) y NO cuenta en ninguna racha, por la letra del acta 82. Pero la
-  advertencia de aquel acta sigue viva y la repito entera: DOS VUELTAS
-  SEGUIDAS SIN ENTREGAR ya no serian un accidente, ninguna regla escrita
-  las cubre, y eso seria PARADA por doctrina nueva. Commitea por tramo.
+  UNA CAIDA TUYA, DE PROCEDIMIENTO (acta 128, 4.3): un solo push al
+  final, contra EJECUTOR.md regla 6 (docs/loop/EJECUTOR.md:105), que
+  pide COMMIT Y PUSH por tramo. Sin consecuencia esta vez, y de hecho
+  fue lo que hizo SEGURA tu reparacion de la apertura. Por eso no te la
+  cobro a secas: la adjudico y te doy la regla compuesta abajo.
 
-  UNA CAIDA DEL EJECUTOR, DE PROCEDIMIENTO (acta 127, 4.2): corriste un
-  `run_phase1.py` que no dejo salida. Lo se porque el snapshot de
-  entrada de tu corrida capturada dice 71 divergentes y en HEAD los
-  gemelos estan a 0. Toda corrida de instrumento deja su salida.
+  DOS GUARDAS QUE NO ALCANZAN, Y SON DE LA CASA, NO TUYAS (acta 128,
+  4.4): (a) `verificar_citas_del_reporte.py` da VERDE sobre un fichero
+  cuyo contenido entero es `EXITCODE: 0`, o sea que coteja el veredicto
+  con el codigo de salida y no exige que haya medicion debajo; (b) NO
+  EXISTE guarda del sello de cierre, y esta vuelta lo demostro: tu sello
+  original apuntaba a `9c222986`, que tras el rebase ya no esta en la
+  rama, y lo regeneraste bien PERO NADA TE OBLIGABA. Las dos se
+  encargan abajo.
 
-  TUS NUEVE SALIDAS DE LA 127 ESTAN COMMITEADAS, RENOMBRADAS A
-  `docs/loop/ABORTADA_V127_*.txt`, y digo por que: con su nombre viejo
-  `SALIDA_V127_*_APERTURA.txt` habrian puesto VERDE a
-  verificar_apertura_sellada.py --vuelta 127, o sea habrian dicho que la
-  apertura de la 127 quedo sellada cuando la 127 no commiteo nada.
-  Renombradas, la guarda sigue diciendo la verdad, y lo comprobe
-  corriendola. NO las uses como medicion de esta vuelta: esta vuelta
-  mide lo suyo con nombres V128.
+  LA REESCRITURA DE HISTORIA QUE TRAJISTE MARCADA: CORRECTA, Y LA
+  VERIFIQUE ENTERA. "Sin nada pusheado" es CIERTO: `git reflog show
+  origin/pasada-unica` salta de `9ef3705d` a `1d71ffa6`, un solo push al
+  final, y `git merge-base --is-ancestor 9c222986 origin/pasada-unica`
+  da NO. Ninguna historia publicada se reescribio. Traerla marcada fue
+  lo correcto.
 
-EL TRAMO QUE SE RELEE AL DOBLE ESTA VUELTA (acta 127 seccion 5), por
-octava vez: no por hallazgo fuera de lo marcado, sino porque la 127 no
-leyo nada y el tramo de la 120 sigue vivo y sin consumirse. Siguen los
-ramales (i) NINGUNA MEDICION SE ATRIBUYE A UN ESTADO QUE NO ES EL SUYO,
-(ii) EL EXPEDIENTE NO PUEDE DECIR MAS QUE EL REGISTRO ESCRITO A SU LADO,
-(iii) NINGUNA GUARDA SE ESTRECHA EN SILENCIO, (iv) TODA CIFRA SOBRE UN
-ARTEFACTO CONTABLE SE LEE DE LA SALIDA DEL INSTRUMENTO PEGADA AL LADO,
-el (v) de la 123 NINGUNA VARA SE ESTRECHA EN EL ENCARGO, el (vi) de la
-124 UN SUPERVIVIENTE SE RAZONA COMO SE RAZONA UNA CLASE, el (vii) de la
-125 UNA FUSION NO ACABA CUANDO EL ALIAS QUEDA ESCRITO SINO CUANDO LA
-ULTIMA ARISTA DEL ABSORBIDO ESTA RECONSTRUIDA, el (viii) de la 126 UNA
-CIFRA DE PASIVO SE PARTE SIEMPRE EN DOS ANTES DE REMITIRLA, y el (ix)
-de la 126 TODA CIFRA DE PASIVO O DE CENSO SE PUBLICA CON SU UNIDAD Y SU
-ESTADO PEGADOS. Le anado UNO, y sale de mi propia caida:
-  (x) UN ORDEN DE MEDICION SE PRUEBA CORRIENDOLO ENTERO SOBRE ARBOL
-  LIMPIO ANTES DE MANDARLO. Medir un paso del orden y dar por bueno el
-  orden es la misma especie de error que medir un tramo y dar por buena
-  la tanda: la guarda que cae no es la que se probo, es la que venia
-  detras.
+  LA REGLA COMPUESTA DEL COMMIT Y EL PUSH, ADJUDICADA (acta 128, 3.4), y
+  no es nueva sino las dos vigentes puestas en orden: EL BLOQUE DE
+  APERTURA (1.a mas 1.b mas 1.c) ES UN SOLO COMMIT Y NO SE PUSHEA SOLO.
+  EL PUSH POR TRAMO EMPIEZA DESPUES DE ESE BLOQUE, con el primer commit
+  de operacion. Asi `verificar_apertura_sellada.py` y la regla 6 dejan
+  de morderse, que es lo que te hizo rebasear.
+
+EL TRAMO QUE SE RELEE AL DOBLE ESTA VUELTA (acta 128 seccion 5), por
+NOVENA vez, y esta vez con motivo propio y no heredado: la caida de
+reporte de arriba. Siguen los ramales (i) NINGUNA MEDICION SE ATRIBUYE A
+UN ESTADO QUE NO ES EL SUYO, (ii) EL EXPEDIENTE NO PUEDE DECIR MAS QUE
+EL REGISTRO ESCRITO A SU LADO, (iii) NINGUNA GUARDA SE ESTRECHA EN
+SILENCIO, (iv) TODA CIFRA SOBRE UN ARTEFACTO CONTABLE SE LEE DE LA
+SALIDA DEL INSTRUMENTO PEGADA AL LADO, el (v) de la 123 NINGUNA VARA SE
+ESTRECHA EN EL ENCARGO, el (vi) de la 124 UN SUPERVIVIENTE SE RAZONA
+COMO SE RAZONA UNA CLASE, el (vii) de la 125 UNA FUSION NO ACABA CUANDO
+EL ALIAS QUEDA ESCRITO SINO CUANDO LA ULTIMA ARISTA DEL ABSORBIDO ESTA
+RECONSTRUIDA, el (viii) de la 126 UNA CIFRA DE PASIVO SE PARTE SIEMPRE
+EN DOS ANTES DE REMITIRLA, el (ix) de la 126 TODA CIFRA DE PASIVO O DE
+CENSO SE PUBLICA CON SU UNIDAD Y SU ESTADO PEGADOS, y el (x) de la 127
+UN ORDEN DE MEDICION SE PRUEBA CORRIENDOLO ENTERO SOBRE ARBOL LIMPIO
+ANTES DE MANDARLO. Le anado UNO, y sale del hallazgo de hoy:
+  (xi) UNA NOMINA DE IDS SE RESUELVE ANTES DE DECLARARLA COMPLETA. Un id
+  deprecado no sale del alcance de su operacion: entra por su
+  superviviente. Contar "los vivos de la lista" y llamar al resto "fuera
+  de alcance" es contar sin resolver, que es justo lo que P.1 prohibe, y
+  deja el hueco donde nadie mira: fuera de la lista y dentro del
+  problema.
 
 LA ESCALADA de AUDITOR.md 1.2 se dispara con la racha de reporte en DOS.
-Estamos en CERO de las que acumulan (la 127 no escribio reporte, y una
-vuelta sin reporte no suma ni resta). NO TOCA, y la dejo dicha entera
-para que nadie la de por gastada.
+Estamos en CERO de las que acumulan (la de esta vuelta no acumula, por
+la letra del 27 ago). NO TOCA, y la dejo dicha entera para que nadie la
+de por gastada.
 
 Nota de formato: AUDITOR.md 1.4 pone TAREA 1 registros y TAREA 2
 trabajo; la casa viene escribiendo TAREA 1 guardas, TAREA 2 registros,
@@ -117,156 +148,152 @@ delante.
   DE TOCAR NADA MAS.
   (1.a) EL SELLO DE APERTURA, AHORA MISMO, ANTES DE LA PRIMERA OPERACION:
   git rev-parse HEAD, hash completo de 40 caracteres, UNA linea, a
-  docs/loop/SALIDA_V128_HEAD_APERTURA.txt. Al terminar la ultima
+  docs/loop/SALIDA_V129_HEAD_APERTURA.txt. Al terminar la ultima
   operacion y ANTES de escribir el reporte, el gemelo:
-  docs/loop/SALIDA_V128_HEAD_CIERRE.txt. Comprobacion:
-  python scripts/loop/verificar_apertura_sellada.py --vuelta 128 tiene que
+  docs/loop/SALIDA_V129_HEAD_CIERRE.txt. Comprobacion:
+  python scripts/loop/verificar_apertura_sellada.py --vuelta 129 tiene que
   dar VERDE EXIT 0, y su salida se cita en el reporte. La linea de
-  identidad del reporte mantiene los TRES rotulos que estrenaste en la
-  126 y que salieron bien: "HEAD sellado de apertura", "commit de
-  nacimiento de las salidas de apertura" y "HEAD sellado de cierre".
-  (1.b) EL ORDEN DE CAPTURA, CORREGIDO. ESTA ES LA LETRA NUEVA Y ES
-  BLOQUEANTE (acta 127, adjudicacion 3.3).
+  identidad del reporte mantiene los TRES rotulos de la 126 y la 128:
+  "HEAD sellado de apertura", "commit de nacimiento de las salidas de
+  apertura" y "HEAD sellado de cierre".
+  EL BLOQUE DE APERTURA VA EN UN SOLO COMMIT Y NO SE PUSHEA SOLO (regla
+  compuesta de arriba). El push por tramo empieza con el primer commit
+  de operacion.
+  (1.b) EL ORDEN DE CAPTURA, EL DE LA 128, QUE FUNCIONO Y NO SE TOCA.
   REGLA UNICA: `python scripts/run_phase1.py --reaplico-curaduria` NO SE
-  CORRE NUNCA SUELTO COMO MEDICION. Recompila el grafo desde los nodos y
-  por diseno NO reaplica la curaduria de etiquetas, asi que TODA corrida
-  suya deja el dataset atrasado respecto de la web. Su Gate 0 no te avisa
-  (compara el snapshot de ANTES del paso 6, y por eso sale verde), pero
-  el motor si, y con razon.
-  POR TANTO, POR CADA LADO (APERTURA, CIERRE, y el POST de cada
-  operacion) SE HACE ESTO Y EN ESTE ORDEN, UNA SOLA VEZ:
+  CORRE NUNCA SUELTO COMO MEDICION. Su Gate 0 compara el snapshot de
+  ANTES del paso 6 y por eso sale verde sobre un estado que el mismo
+  acaba de desalinear; el motor si lo ve.
+  POR CADA LADO (APERTURA, CIERRE, y el POST de cada operacion) SE HACE
+  ESTO Y EN ESTE ORDEN, UNA SOLA VEZ:
     1) `python scripts/run_phase1.py --reaplico-curaduria`, ENTERA, y su
-       salida ES la salida de Gate 0 de ese lado. Se escribe directamente
-       en docs/loop/SALIDA_V128_GATE0_CMD1_<LADO>.txt. NO hay un fichero
-       CICLO_RUN_PHASE1 aparte: es la MISMA corrida y la MISMA salida, y
-       asi se dice en el reporte.
+       salida ES la salida de Gate 0 de ese lado, escrita directamente en
+       docs/loop/SALIDA_V129_GATE0_CMD1_<LADO>.txt. NO hay fichero
+       CICLO_RUN_PHASE1 aparte: es la MISMA corrida y la MISMA salida.
     2) `python scripts/etiquetas_de_cara.py --aplicar` ->
-       docs/loop/SALIDA_V128_CICLO_ETIQUETAS_<LADO>.txt
+       docs/loop/SALIDA_V129_CICLO_ETIQUETAS_<LADO>.txt
     3) `python scripts/sync_assets_web.py` ->
-       docs/loop/SALIDA_V128_CICLO_SYNC_<LADO>.txt
+       docs/loop/SALIDA_V129_CICLO_SYNC_<LADO>.txt
     4) EL CIERRE DEL CICLO, PEGADO: `git diff --numstat -- dataset/ web/
-       engine/` tiene que estar VACIO (o, si la operacion de ese lado
-       escribio de verdad, contener SOLO los ficheros que esa operacion
-       escribio; `dataset/metadata/master_graph.json` con diff de puras
-       lineas `etiqueta_arbol` NUNCA es una escritura legitima, es el
-       borrado). Salida a
-       docs/loop/SALIDA_V128_CICLO_NUMSTAT_<LADO>.txt con su EXITCODE.
+       engine/` VACIO (o, si la operacion de ese lado escribio de verdad,
+       SOLO los ficheros que esa operacion escribio;
+       `dataset/metadata/master_graph.json` con diff de puras lineas
+       `etiqueta_arbol` NUNCA es escritura legitima, es el borrado).
+       Salida a docs/loop/SALIDA_V129_CICLO_NUMSTAT_<LADO>.txt con su
+       EXITCODE.
     5) SOLO ENTONCES se capturan las demas salidas del lado.
   Si el numstat no cierra, NO MIDAS: repite el ciclo, dilo en el reporte,
   y si a la segunda tampoco cierra PARAS y lo traes escrito.
   (1.c) LOS NOMBRES CANONICOS DE LAS SALIDAS DE APERTURA Y DE CIERRE, con
   <LADO> = APERTURA o CIERRE, exactamente estos siete:
-    docs/loop/SALIDA_V128_GATE0_CMD1_<LADO>.txt   (la corrida 1 del ciclo de 1.b, entera)
-    docs/loop/SALIDA_V128_CONTEO_<LADO>.txt       (scripts/loop/vuelta83_conteo_aristas.py WORK)
-    docs/loop/SALIDA_V128_MOTOR_<LADO>.txt        (python engine/run_all_tests.py)
-    docs/loop/SALIDA_V128_WEB_<LADO>.txt          (cd web y npx vitest run)
-    docs/loop/SALIDA_V128_TSC_<LADO>.txt          (cd web y npx tsc --noEmit, cerrada con la linea literal EXIT=<n>)
-    docs/loop/SALIDA_V128_DESFASE_CALIBRADO_<LADO>.txt (scripts/loop/vuelta85_medir_desfase_calibrado.py WORK)
-    docs/loop/SALIDA_V128_MARCADOR_<LADO>.txt     (scripts/recomputar_marcador.py 3388)
+    docs/loop/SALIDA_V129_GATE0_CMD1_<LADO>.txt   (la corrida 1 del ciclo de 1.b, entera)
+    docs/loop/SALIDA_V129_CONTEO_<LADO>.txt       (scripts/loop/vuelta83_conteo_aristas.py WORK)
+    docs/loop/SALIDA_V129_MOTOR_<LADO>.txt        (python engine/run_all_tests.py)
+    docs/loop/SALIDA_V129_WEB_<LADO>.txt          (cd web y npx vitest run)
+    docs/loop/SALIDA_V129_TSC_<LADO>.txt          (cd web y npx tsc --noEmit, cerrada con la linea literal EXIT=<n>)
+    docs/loop/SALIDA_V129_DESFASE_CALIBRADO_<LADO>.txt (scripts/loop/vuelta85_medir_desfase_calibrado.py WORK)
+    docs/loop/SALIDA_V129_MARCADOR_<LADO>.txt     (scripts/recomputar_marcador.py 3388)
   mas las tres del ciclo de 1.b (ETIQUETAS, SYNC, NUMSTAT) por lado.
   El formato del tsc es EXIT=<n> sin dos puntos y sin espacio, sigue
   prohibido el fichero de cero bytes, y el marcador de codigo de salida de
-  las demas salidas es la linea literal EXITCODE: <n>, que es la que
-  verificar_citas_del_reporte.py sabe leer (convencion de la casa desde la
-  correccion declarada de la 126). Y EL EXITCODE SE LEE DEL INSTRUMENTO,
-  NUNCA DE UN `$?` PUESTO DETRAS DE UNA TUBERIA: redirige a fichero y lee
-  el codigo, o usa PIPESTATUS. Esa es mi caida 4.4 y no quiero la tuya.
+  las demas salidas es la linea literal EXITCODE: <n>. Y EL EXITCODE SE
+  LEE DEL INSTRUMENTO, NUNCA DE UN `$?` PUESTO DETRAS DE UNA TUBERIA.
   (1.d) LA BATERIA POR OPERACION. Se escribe la operacion N, se corre su
   ciclo de 1.b entero, se miden sus cuatro salidas, Y SOLO ENTONCES
-  empieza la N+1. Ficheros, con <OP> = OPS09REP3 (las tres reposiciones
-  de 3.a) y OPS10 (el tramo de 3.b):
-    docs/loop/SALIDA_V128_<OP>_GATE0_POST.txt   (= la corrida 1 del ciclo de esa operacion)
-    docs/loop/SALIDA_V128_<OP>_CONTEO_POST.txt
-    docs/loop/SALIDA_V128_<OP>_MOTOR_POST.txt
-    docs/loop/SALIDA_V128_<OP>_WEB_POST.txt
-    docs/loop/SALIDA_V128_<OP>_TSC_POST.txt
+  empieza la N+1. Esta vuelta hay UNA sola operacion de REGIMEN B, con
+  <OP> = OPS10REP1 (el nodo que falta de 3.a):
+    docs/loop/SALIDA_V129_<OP>_GATE0_POST.txt   (= la corrida 1 del ciclo de esa operacion)
+    docs/loop/SALIDA_V129_<OP>_CONTEO_POST.txt
+    docs/loop/SALIDA_V129_<OP>_MOTOR_POST.txt
+    docs/loop/SALIDA_V129_<OP>_WEB_POST.txt
+    docs/loop/SALIDA_V129_<OP>_TSC_POST.txt
   mas las de etiquetas, sync y numstat del ciclo con el mismo prefijo.
   Antes de escribir el reporte corres cmp -s sobre CADA par de salidas
-  homologas de la vuelta y vuelcas el resultado literal a
-  docs/loop/SALIDA_V128_BATERIAS_CMP.txt con una linea por par que diga
-  IDENTICOS o DISTINTOS. EL REPORTE DA CUENTA DE TODOS LOS PARES, NO DE
-  UNA SELECCION: una linea por FAMILIA (GATE0, CONTEO, MOTOR, WEB, TSC,
-  DESFASE, MARCADOR, ETIQUETAS, SYNC, NUMSTAT) diciendo cuantos IDENTICOS
-  y cuantos DISTINTOS salieron y POR QUE lo son, y si dentro de una
-  familia hay pares que van por motivos distintos, se nombran esos pares.
-  UN IDENTICO SIN EXPLICAR ES UNA CAIDA, Y UN DISTINTO SIN EXPLICAR
-  TAMBIEN. Y COMO ESTA VUELTA VUELVE A ESCRIBIR EN dataset/: si Gate 0 o
-  el conteo salen IDENTICOS entre apertura y cierre despues de 3.a, eso NO
-  es determinismo, es que la escritura no llego; se investiga y se declara
-  antes de publicar nada. El CONTEO tiene que subir en +3 aristas por
-  vista tras 3.a y NO moverse en 3.b.
+  homologas y vuelcas el resultado literal a
+  docs/loop/SALIDA_V129_BATERIAS_CMP.txt, una linea por par, IDENTICOS o
+  DISTINTOS, mas la linea RESUMEN por familia como en la 128.
+  Y AHORA LA LETRA NUEVA, QUE SALE DE TU CAIDA 4.1: EL REPORTE DA CUENTA
+  DE CADA FAMILIA CON EL PAR NOMBRADO. No basta con decir "N identicos y
+  M distintos": SI UNA FAMILIA TIENE UN SOLO IDENTICO O UN SOLO DISTINTO,
+  SE NOMBRA ESE PAR EXACTO, LEIDO DEL FICHERO, Y SE EXPLICA POR QUE ESE Y
+  NO OTRO. Un par nombrado de memoria en vez de leido es la caida de esta
+  vuelta repetida. El CONTEO tiene que subir CERO aristas: esta vuelta no
+  mueve ninguna, y si mueve alguna ES ROJO y paras.
   (1.e) LAS GUARDAS DE CITAS Y DE TITULOS NO SE TOCAN. Se corren
   verificar_citas_del_reporte.py, verificar_titulos_normalizados.py y sus
   autopruebas (vuelta122_tarea1e_mutacion_citas.py,
   vuelta123_tarea1e_mutacion_fila_tabla.py, y
-  verificar_titulos_normalizados.py --autoprueba), y se pegan. NO se
-  modifica ninguna de las dos. La excepcion declarada de
-  sistema_responsabilidad_gerencial se queda EXACTAMENTE como esta.
+  verificar_titulos_normalizados.py --autoprueba), y se pegan. La
+  excepcion declarada de sistema_responsabilidad_gerencial se queda
+  EXACTAMENTE como esta.
   (1.f) LA GUARDA DE CIFRAS DEL PLAN, TAMPOCO SE TOCA. Se corre
   verificar_cifras_del_plan.py y sus dos casos positivos
   (vuelta123_tarea1f_caso_positivo.py y
-  vuelta124_tarea1f_caso_positivo_ventana.py). Los tres verdes o rojos
-  donde tocaba, pegados.
-  (1.g) LAS DOS GUARDAS DE ARISTAS DE LA 126 SE CORREN Y NO SE TOCAN:
-  verificar_fusion_ops09.py (que tiene que seguir en VERDE EXIT 0 sobre
-  los cuatro pares, y cuyo --autoprueba tiene que seguir dando sus dos
-  ROJOS) y verificar_aristas_vivas.py con su --autoprueba. Tras 3.a,
+  vuelta124_tarea1f_caso_positivo_ventana.py), pegados.
+  (1.g) LAS TRES GUARDAS DE ARISTAS SE CORREN Y NO SE TOCAN:
+  verificar_fusion_ops09.py con su --autoprueba, verificar_aristas_vivas.py
+  con su --autoprueba, y verificar_huerfanas_por_fusion.py con su caso
+  positivo por mutacion. Tras la operacion de 3.a,
   verificar_aristas_vivas.py --antes <HEAD sellado de apertura> --despues
-  WORK tiene que dar PERDIDAS 0 y NUEVAS 3, y las tres nuevas tienen que
-  ser exactamente las tres aristas de la lista de 3.a, nombradas. Tras
-  3.b, la misma corrida no debe anadir ninguna mas: un reencuadre de
-  texto no mueve aristas, y si mueve alguna ES ROJO y paras.
-  (1.h) LA GUARDA NUEVA DEL PASIVO. BLOQUEANTE, VA ANTES DE 3.a. Escribe
-  scripts/loop/verificar_huerfanas_por_fusion.py, que generaliza y
-  reemplaza a vuelta126_contar_aristas_huerfanas_totales.py (el viejo se
-  queda en el repo como registro, no se borra), con este contrato:
-    - Uso: --unidad par-resuelto|par-crudo (por defecto par-resuelto),
-      --baseline <ref de git> (por defecto 50f03099, el encendido del
-      bucle), --ref <ref o WORK> (por defecto WORK).
-    - UNIDAD par-resuelto: por cada nodo DEPRECADO, se leen sus dos listas
-      historicas, se resuelve cada entrada con el resolutor de --ref, y si
-      resuelve a un nodo VIVO distinto del superviviente del propio muerto
-      se comprueba si esa arista existe hoy entre los dos supervivientes,
-      mirando las dos vistas. Los pares se deduplican por par resuelto.
-      Es el metodo de la 126, sin cambios: la unidad canonica adjudicada.
-    - UNIDAD par-crudo: lo mismo, pero deduplicando por el par HISTORICO
-      (los dos ids muertos) y contando solo los casos en que el otro
-      extremo tambien estaba deprecado. Es la unidad del 39.
-    - LA PARTICION, QUE ES LA RAZON DE SER DE ESTA GUARDA: se mide el
-      conjunto en --baseline, se PROYECTA por el resolutor de --ref (cada
-      extremo se resuelve), y se imprime, en este orden y con estos
-      rotulos: TOTAL, HEREDADAS (las del baseline proyectadas que siguen
-      huerfanas hoy), REPARADAS DE REBOTE (las del baseline proyectadas
-      que hoy ya no lo estan) y FABRICADAS POR LA CAMPANA (las de hoy que
-      no vienen del baseline). Las FABRICADAS se listan una por linea y,
-      por cada una, el id muerto de donde viene y el commit corto en que
-      ese id quedo deprecado (git log -S sobre su fichero de dataset/nodos
-      sirve).
-    - ROJO EXIT 1 si FABRICADAS no es cero. VERDE EXIT 0 si lo es. Esa es
-      la guarda: la campana no cierra con huecos propios.
-    - CASO POSITIVO POR MUTACION, en memoria y sin tocar disco: sobre una
-      copia del grafo de --ref se borra una arista que un superviviente
-      heredo de su absorbido y tiene que aparecer en FABRICADAS o en
-      HEREDADAS segun de donde venga, nombrada. Pegalo.
-  MI CONTRASTE, REMEDIDO HOY 29 AGO SOBRE HEAD 4d4aaa8b CON
-  docs/loop/_auditor_v127_proyeccion.py, Y NO PARA COPIAR: unidad
-  par-resuelto, baseline 50f03099, ref WORK: TOTAL 32, HEREDADAS 29,
-  REPARADAS DE REBOTE 1, FABRICADAS 3. Unidad par-crudo sobre 7150339f:
-  39. MIDELO TU. SI TU MEDICION DISCREPA DE LA MIA, LA DECLARAS, NO LA
-  RESUELVES COPIANDO. Y tras 3.a, la misma corrida tiene que dar
-  FABRICADAS 0 y TOTAL 29.
-  (1.i) ANTES DEL COMMIT DEL REPORTE, LAS CUATRO COMPROBACIONES, y las
-  cuatro salidas se pegan CITADAS POR SU PROPIO NOMBRE DE FICHERO:
-    python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 128 --comparar docs/loop/REPORTE.md
+  WORK tiene que dar PERDIDAS 0 y NUEVAS 0 (un reencuadre de texto no
+  mueve aristas), y verificar_huerfanas_por_fusion.py tiene que seguir en
+  TOTAL 29 / FABRICADAS 0.
+  (1.h) LA GUARDA NUEVA DEL SELLO DE CIERRE. BLOQUEANTE, VA ANTES DE 3.a.
+  Escribe scripts/loop/verificar_cierre_sellado.py, gemela de
+  verificar_apertura_sellada.py y con su mismo estilo (nombre estable,
+  --vuelta N, todo leido de git y nada tecleado), con este contrato:
+    - Uso: `python scripts/loop/verificar_cierre_sellado.py --vuelta 129`.
+    - Lee docs/loop/SALIDA_V<vuelta>_HEAD_CIERRE.txt, que tiene que
+      existir, tener UNA sola linea y un hash de 40 caracteres.
+    - ROJO EXIT 1 si: el fichero no existe, o tiene mas de una linea, o
+      el hash NO ES UN COMMIT (`git cat-file -t`), o EL COMMIT NO ESTA EN
+      LA RAMA ACTUAL (`git merge-base --is-ancestor <hash> HEAD`), o el
+      commit sellado NO ES DESCENDIENTE del commit del acta de la vuelta
+      anterior (o sea, no pertenece a esta vuelta), o el hash sellado es
+      IGUAL al de SALIDA_V<vuelta>_HEAD_APERTURA.txt (un cierre que no
+      avanzo no es un cierre).
+    - VERDE EXIT 0 si pasa todas.
+    - DOS CASOS POSITIVOS POR MUTACION, en memoria o sobre copia
+      temporal, sin tocar los ficheros reales, cada uno con su salida
+      pegada: (a) un hash de commit que existe pero NO esta en la rama
+      (usa uno de otra rama del repo, y si no hay ninguno, un hash
+      inventado de 40 caracteres, y di cual de los dos usaste), que tiene
+      que salir ROJO nombrando el motivo; (b) el hash de la apertura
+      puesto como cierre, que tiene que salir ROJO por la ultima
+      condicion.
+    - POR QUE NACE, ESCRITO EN LA CABECERA DEL FICHERO como hace la
+      guarda de apertura: en la vuelta 128 el sello de cierre original
+      apuntaba a 9c222986, un commit que el rebase saco de la rama; el
+      ejecutor lo regenero por su cuenta, pero NINGUNA guarda lo
+      obligaba, y un sello de cierre apuntando a un commit que no esta en
+      la rama habria pasado verde la bateria entera.
+  (1.i) LA GUARDA DE CITAS SE ENSANCHA, Y ES LA (a) DE MI 4.4. Anade a
+  verificar_citas_del_reporte.py UNA comprobacion mas, SIN tocar las que
+  ya tiene y SIN cambiar su contrato de salida: TODO FICHERO CITADO EN EL
+  REPORTE TIENE QUE TENER AL MENOS UNA LINEA DE CONTENIDO ADEMAS DE SU
+  LINEA DE CODIGO DE SALIDA (`EXITCODE: <n>` o `EXIT=<n>`). Un fichero
+  cuyo contenido entero sea la linea del codigo de salida es ROJO, y el
+  mensaje dice el nombre del fichero y la palabra que el reporte le
+  colgo. EXCEPCION DECLARADA, UNA SOLA Y ESCRITA EN LA CABECERA: las
+  salidas de `tsc`, cuyo formato canonico de esta casa es exactamente la
+  linea `EXIT=<n>` y nada mas (1.c). Corre la guarda ensanchada sobre el
+  REPORTE.md DE LA 128, que sigue en el arbol hasta que lo sobrescribas,
+  y PEGA SU ROJO NOMBRANDO `SALIDA_V128_REBASE_ARBOL_IDENTICO.txt`: ese
+  es su caso positivo real y no hay que inventarlo. Detras, la corres
+  sobre tu reporte de la 129 y tiene que dar VERDE.
+  (1.j) ANTES DEL COMMIT DEL REPORTE, LAS CINCO COMPROBACIONES, y las
+  cinco salidas se pegan CITADAS POR SU PROPIO NOMBRE DE FICHERO:
+    python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 129 --comparar docs/loop/REPORTE.md
     python scripts/loop/verificar_citas_del_reporte.py
     python scripts/loop/verificar_cifras_del_plan.py
     python scripts/loop/verificar_titulos_normalizados.py
-  La primera tiene que dar CABECERA IDENTICA AL TALLADOR y las otras tres
-  VERDE EXIT 0.
-  (1.j) EL TOPE DEL REPORTE SE CUMPLE Y SE MIDE. wc -l docs/loop/REPORTE.md
+    python scripts/loop/verificar_cierre_sellado.py --vuelta 129
+  La primera tiene que dar CABECERA IDENTICA AL TALLADOR y las otras
+  cuatro VERDE EXIT 0.
+  (1.k) EL TOPE DEL REPORTE SE CUMPLE Y SE MIDE. wc -l docs/loop/REPORTE.md
   tiene que dar 80 o menos y esa cifra se escribe en el propio reporte,
-  medida. La 126 lo cumplio en 80 exactos.
-  (1.k) LOS DOS REGIMENES DE ESCRITURA SIGUEN COMO ESTAN Y NO SE TOCAN:
+  medida, con su salida.
+  (1.l) LOS DOS REGIMENES DE ESCRITURA SIGUEN COMO ESTAN Y NO SE TOCAN:
     - REGIMEN A, TEXTO: un instrumento que solo anade TEXTO a docs/plan/ o
       a docs/ se mide con git diff --numstat y con grep -c "^-[^-]" sobre
       el diff en cero, mas git diff --word-diff=porcelain pegado si toca
@@ -281,156 +308,132 @@ delante.
       FUE. Un instrumento sin regimen declarado no existe para el
       expediente.
 
-- TAREA 2, LOS REGISTROS Y CORRECCIONES DE LAS ACTAS 126 Y 127. REGIMEN A.
-  Aditivos puros donde toquen texto viejo, medidos con git diff --numstat
-  y con grep -c "^-[^-]" sobre el diff en cero. Son cuatro, y 2.a se
-  escribe DESPUES de que 3.a este verde porque cita su resultado medido.
-  (2.a) LA CORRECCION DECLARADA DE LA FICHA aristas-huerfanas-por-fusion,
-  en docs/PENDIENTES.md, aditiva y sin borrar la primera entrada, con
-  estas cuatro cosas: (1) que la DISCREPANCIA 32 contra 39 QUEDA CERRADA
-  y no era doctrina, con las dos unidades escritas por su nombre (par
-  vivo resuelto y par crudo historico) y el estado de cada cifra, y con
-  la resta que lo cierra por los dos lados (33 a 32 en resueltos, 39 a 38
-  en crudos, la misma arista); (2) que la UNIDAD CANONICA de la ficha es
-  el PAR VIVO RESUELTO, adjudicado por el acta 126 seccion 4.1 citando
-  banco 9.6; (3) LA RETRACTACION de la clausula "todas de fusiones
-  ANTERIORES a esta campana de saneo", con la particion MEDIDA POR TI:
-  cuantas heredadas, cuantas reparadas de rebote y cuantas fabricadas por
-  la campana, con el commit de cada fabricada; y (4) que las fabricadas se
-  reponen en esta vuelta por P.16 punto 1 y las heredadas NO se tocan.
-  (2.b) EL REGISTRO LARGO EN docs/PENDIENTES.md, seccion nueva R.9 de la
-  vuelta 126, como correcciones declaradas: (1) la caida de reporte del
-  parrafo de baterias de la 126, con las dos lineas del cmp que la
-  desmienten; (2) la caida de expediente de la clausula de procedencia,
-  diciendo que la raiz es del auditor; (3) LA CAIDA DEL AUDITOR, DE
-  CIFRA, escrita con todas sus letras: un pasivo publicado sin partir
-  entre heredado y fabricado, y que por eso tres aristas propias se
-  remitieron a pasivo historico durante una vuelta entera; (4) la caida
-  del auditor, de procedimiento, por publicar el 39 sin su comando, con
-  el remedio (los scripts del auditor viven en docs/loop/_auditor_v127_*.py);
-  (5) la caida del auditor, de encargo, por el --ref c9ac2fb8 que no
-  aislaba; y (6) los ramales (viii) y (ix) del tramo que se relee al
-  doble, escritos enteros.
-  (2.c) EL REGISTRO NUEVO EN docs/PENDIENTES.md, seccion R.10 de la
-  vuelta 127, tambien como correcciones declaradas y tambien aditivo:
-  (1) LA VUELTA 127 NO ENTREGO, con sus tres minutos, sus nueve salidas
-  y sus cero commits, y que es la tercera de la campana (81, 114, 127) y
-  no cuenta en racha; (2) LA CAIDA DEL AUDITOR, DE ENCARGO: el orden de
-  captura imposible, con el experimento que lo prueba citado por su
-  fichero (docs/loop/SALIDA_AUD_V127_EXPERIMENTO_ORDEN.txt) y con las
-  dos guardas que contestan preguntas distintas nombradas por su linea
-  (run_phase1.py:1176 y :941-947 contra engine/test_gate_alias.py:116 y
-  :124); (3) la caida del auditor, de procedimiento, por leer un EXITCODE
-  detras de una tuberia; (4) la caida del ejecutor, de procedimiento, por
-  la corrida de run_phase1 sin capturar; (5) el renombrado de las nueve
-  salidas a ABORTADA_V127_*, con el motivo (no envenenar de verde a
-  verificar_apertura_sellada.py); y (6) el ramal (x) del tramo que se
-  relee al doble, escrito entero.
-  (2.d) LA FICHA NUEVA docs/PENDIENTES.md, permanente, con el nombre
-  ventana-truncada-de-condiciones-activacion, aditiva y con su primera
-  entrada: que condiciones_activacion se consume RECORTADA en tres sitios
-  (engine/prototipo_motor.py:1532 y :1823 con [:2],
-  engine/build_question_cache.py:97 con [:3]), verificalo tu y cita
-  fichero y linea de lo que TU leas; que por eso una condicion ANTEPUESTA
-  desplaza fuera de la ventana la ultima condicion vieja de todo nodo con
-  dos o mas; CUANTOS DE LOS 31 DE OP-S-10 quedan afectados en cada ventana
-  DESPUES de tu 3.b (MIDELO TU; el contraste sobre los diez de la 126, no
-  para copiar, es 7 en [:2] y 3 en [:3]); que NO SE ARREGLA en esta
-  campana porque la forma esta aprobada y la decision es del fundador en
-  la auditoria de cierre; y que se revoca con una linea por nodo. NO
-  TOQUES NI UN NODO POR ESTA FICHA.
+- TAREA 2, LOS REGISTROS Y CORRECCIONES DEL ACTA 128. REGIMEN A.
+  Aditivos puros, medidos con git diff --numstat y con grep -c "^-[^-]"
+  sobre el diff en cero. Son tres, y 2.a se escribe DESPUES de que 3.a
+  este verde porque cita su resultado medido.
+  (2.a) EL REGISTRO LARGO EN docs/PENDIENTES.md, seccion nueva R.11 de la
+  vuelta 128, como correcciones declaradas, con estas seis cosas: (1) la
+  caida de reporte del parrafo de baterias, con las DOS lineas del
+  fichero cmp que la desmienten pegadas literales y la razon correcta del
+  identico (los dos lados sellados sobre arbol limpio), y que NO acumula
+  por la letra del fundador del 27 ago; (2) la caida de expediente del
+  fichero de rebase con una sola linea, con el hash viejo 9c222986
+  ESCRITO AHI para que deje de vivir solo en un reflog, y la constancia
+  de que el auditor verifico el arbol identico y el "sin nada pusheado"
+  con sus comandos; (3) la caida de procedimiento del push unico al
+  final, con la REGLA COMPUESTA adjudicada (acta 128, 3.4) escrita
+  entera; (4) LAS DOS GUARDAS QUE NO ALCANZAN, con lo que se hizo con
+  cada una en esta vuelta (la nueva de cierre y el ensanche de la de
+  citas); (5) LA CAIDA DEL AUDITOR, DE ENCARGO, escrita con todas sus
+  letras: pedi medir "los 31" sin mandar resolver la nomina por P.1, y
+  por eso la lectura corta llego al reporte; y (6) el ramal (xi) del
+  tramo que se relee al doble, escrito entero.
+  (2.b) LA CORRECCION DECLARADA EN LA NOTA DE OP-S-10, en
+  docs/plan/05_SANEO.md, aditiva y sin borrar nada, con LA MEDICION QUE
+  TU HAGAS (no la mia) de la verificacion 1 resuelta por P.1: cuantos
+  ids historicos, a cuantos vivos resuelven, cuales son los tres
+  deprecados y a que superviviente va cada uno, y cual de esos
+  supervivientes NO estaba cubierto. Cita P.1 por su linea
+  (docs/plan/BANCO_DEL_PLAN.md:11) y la frase de la propia nota que ya la
+  invocaba. Y di, con esa cifra delante, que la verificacion 1 pasa a
+  VERDE tras 3.a, o que no pasa y por que.
+  (2.c) LA FICHA `aristas-huerfanas-por-fusion` de docs/PENDIENTES.md
+  recibe UNA linea aditiva mas: que el auditor remidio las tres cifras
+  (par-resuelto WORK 29/29/1/0, par-resuelto en 9ef3705d 32/29, par-crudo
+  en 7150339f 39) y que cuadran al digito con las tuyas. Es constancia de
+  contraste, no correccion: nada se retracta.
 
-- TAREA 3, EL TRABAJO.
-  (3.a) LA REPOSICION DE LAS TRES ARISTAS FABRICADAS POR LA CAMPANA.
-  REGIMEN B, LAS TRES GUARDAS COMPLETAS (1.k). BLOQUEANTE Y VA PRIMERA.
-  Se reponen estas TRES y ninguna mas, cada una en las dos vistas
-  (nodos_siguientes del origen y nodos_previos del destino):
-    1. comprension_capacidades_limitaciones_ia -> division_trabajo_humano_ia
-       (muertos jagged_frontier_ia, descomposicion_tareas_trabajo y
-       framework_tareas_ia_humano; commit 0c946b7d, lote D del tramo
-       unico de OP-U-02, vuelta 68)
-    2. ecosistema_global_emprendimiento_gee -> uso_del_us_commercial_service
-       (muertos consejos_distrito_exportacion_dec y
-       recursos_apoyo_pymes_sba; commit a1d7269d, vuelta 57)
-    3. incentivos_reconocimiento_sostenibilidad -> vision_alineacion_sostenibilidad
-       (muertos accountability_incentivos y liderazgo_ceo_sostenibilidad;
-       commit 0481113f, vuelta 57)
-  ESAS TRES SON CONTRASTE MIO, MEDIDO HOY, Y SE VUELVEN A MEDIR CON TU
-  1.h ANTES DE ESCRIBIR NADA: si tu guarda te da otras, mandan las tuyas
-  y declaras la discrepancia.
-  Guardas propias, ademas de las tres del REGIMEN B: los seis extremos
-  siguen VIVOS, cero auto-aristas y cero duplicadas nuevas tras resolver,
-  ningun otro campo de ningun nodo se toca (numstat que lo pruebe),
-  verificar_aristas_vivas.py da PERDIDAS 0 y NUEVAS 3 con las tres
-  nombradas, y verificar_huerfanas_por_fusion.py pasa de FABRICADAS 3 a
-  FABRICADAS 0 con las dos salidas pegadas, antes y despues. Detras, su
-  bateria de 1.d entera con etiqueta OPS09REP3.
-  ANTES DE ESCRIBIR CADA UNA, LEE LOS DOS SUPERVIVIENTES y comprueba que
-  la arista tiene sentido de contenido, como se comprobo la de la 126 (el
-  paso 6 de dia_cero_defectos_2 nombraba literalmente al destino). SI EN
-  ALGUNA DE LAS TRES EL CONTENIDO NO SOSTIENE LA ARISTA, O SI APARECE
-  CUALQUIER COSA QUE NINGUNA REGLA ESCRITA CUBRA, PARAS EN ESA, LA TRAES
-  CON SU CASO ESCRITO, Y SIGUES CON LAS OTRAS.
-  (3.b) EL SEGUNDO Y ULTIMO TRAMO DE OP-S-10: LOS DIECISEIS QUE FALTAN.
-  REGIMEN B, LAS TRES GUARDAS COMPLETAS. Misma forma literal que la 126,
+- TAREA 3, EL TRABAJO. SON DOS, Y LA SEGUNDA ES LA GRANDE.
+  (3.a) EL NODO QUE LE FALTA A OP-S-10. REGIMEN B, LAS TRES GUARDAS
+  COMPLETAS (1.l). BLOQUEANTE Y VA PRIMERA.
+  ANTES DE ESCRIBIR NADA, MIDELO TU con codigo propio: resuelve los 31
+  ids del campo `nodos` de OP-S-10 por `ids_alias` de `dataset/nodos/`,
+  quedate con los vivos distintos, y mira cuales NO nombran el pais en
+  `condiciones_activacion`. MI CONTRASTE, MEDIDO HOY Y NO PARA COPIAR:
+  31 ids resuelven a 29 vivos, y el unico sin cubrir es
+  `prevenir_franquicias_inadvertidas`. SI TU MEDICION TE DA OTRA COSA,
+  MANDA LA TUYA Y DECLARAS LA DISCREPANCIA, no la resuelves copiando.
+  Sobre el que te salga, antepone la MISMA FORMA LITERAL de siempre,
   "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
   como PRIMERA condicion de activacion, con las viejas enteras y en su
-  orden. ALCANCE: todos los nodos VIVOS de la nomina que hoy NO nombren el
-  pais en condiciones_activacion y que no se tocaron en la 126. Mi
-  contraste remedido hoy con docs/loop/_auditor_v127_ops10.py, no para
-  copiar: 31 en la nomina, 28 vivos, 26 candidatos, 10 escritos en la 126
-  y 16 pendientes. Los DOS contramodelos NO se tocan (verificacion 4).
-  Los tres deprecados NO se tocan. Guardas propias del tramo, ademas de
-  las tres: ningun otro campo cambia, las condiciones viejas quedan
-  enteras y en su orden, cero guiones largos y cero guiones medios, y
-  verificar_aristas_vivas.py sin aristas nuevas. Detras, su bateria de
-  1.d entera con etiqueta OPS10.
-  LA FORMA NO SE DISCUTE Y NO SE ADAPTA NODO A NODO: se queda literal por
-  regla escrita (la verificacion 4 de la propia operacion congela a los
-  dos contramodelos como modelo y la verificacion 1 pide el pais en
-  condiciones_activacion para los 31). Lo que medi en contra y va a ficha
-  y no cambia nada hoy: de los diez de la 126, solo cuatro cablean norma
-  de un pais, y en los otros seis el contenido es metodo que sirve en
-  cualquier pais, contra la linea del banco que pone el puntero
-  jurisdiccional en "los nodos que tocan tratados, aranceles, garantias o
-  normativa" (docs/BANCO_DE_TEXTOS.md:112). QUEDA MARCADO para la
-  auditoria de cierre, que es de Alexis, y es revocable con una linea por
-  nodo.
-  EL CASO obtencion_marca_registrada ES EL DELICADO y esta nombrado en la
-  verificacion 2 de la operacion ("ningun nodo condiciona con un adjetivo
-  federal en vez de con un pais"): antepone la condicion nueva como en
-  todos los demas y NO reescribas su condicion vieja. Si al leerlo
-  concluyes que la verificacion 2 EXIGE tocar la condicion vieja, ESO ES
-  UNA PARADA DE NODO: lo dejas con la condicion nueva antepuesta, lo traes
-  escrito con su caso, y sigues con los demas.
-  (3.c) LA MEDICION DE LA VERIFICACION 3 DE OP-S-10, que nadie ha medido:
-  "los items numerados del FDD (Item 8, 19, 23) quedan dentro de la
-  condicion de pais, no fuera". Mide con codigo propio, sobre el grafo de
-  hoy, que nodos de la nomina de 31 nombran Item 8, Item 19 o Item 23 en
-  cualquier campo, y si cada uno de esos nodos queda cubierto por una
-  condicion de pais tras tu 3.b. Salida pegada, y el resultado escrito
-  como correccion declarada aditiva en la nota de OP-S-10 (REGIMEN A,
-  numstat y borrados en cero, word-diff pegado). NO CIERRES la operacion
-  tu: mide, publica y dilo.
-  (3.d) EL ESTADO DE OP-S-10 Y DE LA FASE 05. Con 3.b y 3.c hechos, la
-  operacion queda con sus cinco verificacion medidas. NO LE CAMBIES EL
-  ESTADO Y NO DECLARES LA FASE CERRADA: mide, publica lo que te salga
-  verificacion por verificacion, y MARCALO COMO DISCUTIBLE. El cierre de
-  OP-S-10 lo adjudica el auditor, igual que adjudico el de OP-S-09.
-  OP-S-11 y OP-S-12 no se abren.
-  Y AVISO POR CUARTA VUELTA, PORQUE YA ESTA ENCIMA: cuando la fase 05
-  quede cerrada y verificada se dispara la condicion de parada CIERRE DE
-  LA FASE 05 de AUDITOR.md seccion 4, y esa parada es del fundador.
-  MARCA COMO DISCUTIBLE, para que yo lo adjudique: si con OP-S-10 medida
-  entera la fase 05 queda a dos operaciones (OP-S-11 y OP-S-12) o si
-  alguna de las dos tiene texto que no alcance para ejecutarse sin
-  decidir, cosa que seria PARADA y no improvisacion.
+  orden. Guardas propias ademas de las tres: ningun otro campo cambia,
+  cero aristas movidas (verificar_aristas_vivas.py en PERDIDAS 0 y NUEVAS
+  0), cero guiones largos y cero guiones medios. Detras, su bateria de
+  1.d entera con etiqueta OPS10REP1.
+  ANTES DE ESCRIBIRLO, LEELO ENTERO y comprueba que el contenido sostiene
+  la condicion, como se comprobo en la 126 y en la 128. SI AL LEERLO
+  CONCLUYES QUE NO LA SOSTIENE, NO LO ESCRIBAS: paras en ese, lo traes
+  con su caso escrito, y sigues con la TAREA 3.b.
+  Y DESPUES, MIDE LA VERIFICACION 1 OTRA VEZ Y PUBLICA LA CIFRA
+  RESUELTA. Si te sale entera, DILO Y MARCALO COMO DISCUTIBLE: el cierre
+  de OP-S-10 lo adjudico yo en el acta 129, no tu. NO LE CAMBIES EL
+  ESTADO EN OPERACIONES.jsonl.
+  (3.b) LA PRIMERA MITAD DE OP-S-11, LA QUE NO DECIDE NADA. REGIMEN A
+  ESTRICTO: NO SE TOCA UN SOLO NODO NI UN SOLO FICHERO DE dataset/ EN
+  ESTA TAREA. Si te descubres editando dataset/, es que te saliste.
+  EL PORQUE, MEDIDO POR MI Y DECLARADO (acta 128, 3.3): la verificacion 1
+  de OP-S-11 pide que el campo `fuente` "resuelva contra una lista
+  CANONICA de libros", y el texto de la operacion dice que la tabla de
+  mapeo "va DENTRO de ella". NO ESTA. docs/plan/RECORTE_POSICIONAL.md
+  tiene el total 55, dos casos probados (Hugos 2 grafias, Horowitz 3) y
+  una tabla de seis libros con conteos; la correspondencia de las 129
+  grafias a los 55 libros no esta escrita en ningun sitio, y mi `grep
+  -rln` sobre docs/ no la encuentra. VERIFICALO TU ANTES DE NADA, y si la
+  encuentras donde yo no mire, DILO Y USALA: manda tu medicion.
+  LO QUE SE HACE, y es medir y proponer, no decidir:
+    (i) Escribe scripts/loop/vuelta129_censo_fuente.py, que sobre los
+    nodos VIVOS de hoy extraiga el campo `fuente`, separe las
+    declaraciones (di en el propio script COMO las separas y por que ese
+    separador, leido de los datos y no supuesto), y saque el censo de
+    GRAFIAS DISTINTAS EN PRIMERA POSICION con su recuento. Salida a
+    docs/loop/SALIDA_V129_3B_CENSO_FUENTE.txt. PUBLICA LA CIFRA QUE TE
+    SALGA, sea 129 o no: la de 129 es del 11 ago 2026 y el catalogo se
+    ha movido desde entonces (fusiones, deprecados), asi que si difiere
+    NO ES UN ERROR, ES EL CORTE NUEVO, y se declara como tal con los dos
+    cortes escritos.
+    (ii) Sobre ese censo, agrupa MECANICAMENTE y solo lo mecanico: las
+    grafias TRUNCADAS (una es prefijo estricto de otra, que es el patron
+    que la operacion documenta) y las que solo difieren en espacios,
+    mayusculas o puntuacion final. Cada grupo con su candidata a canonica
+    (la mas larga del grupo) y el recuento de cada miembro. Salida a
+    docs/loop/SALIDA_V129_3B_GRUPOS_MECANICOS.txt.
+    (iii) LO QUE NO AGRUPE MECANICAMENTE SE LISTA APARTE Y NO SE TOCA:
+    docs/loop/SALIDA_V129_3B_SIN_AGRUPAR.txt, una linea por grafia con su
+    recuento. Esas son las que piden decision, y la decision es mia.
+    (iv) Escribe la TABLA PROPUESTA en un fichero NUEVO,
+    docs/plan/OP_S_11_MAPEO_PROPUESTO.md, aditivo puro (fichero nuevo, no
+    toca ninguno viejo), con tres columnas: grafia, canonica propuesta,
+    motivo (mecanico y cual, o SIN AGRUPAR). Y en su cabecera, con estas
+    palabras: que es una PROPUESTA MEDIDA, que NO se ha aplicado a ningun
+    nodo, y que la adjudica el auditor. NO cambies el estado de OP-S-11.
+    (v) LOS DOS CASOS PROBADOS DE LA OPERACION, REMEDIDOS: Hugos (2
+    grafias, 23 sin normalizar contra 21 canonico) y Horowitz (3 grafias,
+    16 contra 14). Mide los cuatro numeros HOY y ponlos al lado de los
+    del 11 ago 2026, cada uno con su corte. Si difieren, es el corte
+    nuevo y se declara; no se copia el viejo.
+  Y SI AL MEDIR CONCLUYES QUE NI SIQUIERA PROPONER LA TABLA SE PUEDE SIN
+  DECIDIR, PARAS EN 3.b, LO TRAES ESCRITO CON SU CASO, Y ENTREGAS LA
+  VUELTA CON 3.a HECHA. Eso no es fracasar: es la letra de AUDITOR.md
+  seccion 3, y para eso esta escrita.
+  (3.c) LO QUE NO SE TOCA ESTA VUELTA, DICHO PARA QUE NO HAYA DUDA:
+  OP-S-12 NO SE ABRE. Va al final de la pasada entera, no al final de su
+  fase, por la atadura 2 de docs/plan/00_INDICE.md ("OP-S-12 va AL FINAL,
+  despues de la ultima fusion, porque cada fusion fabrica sus
+  duplicadas"). Y LA FASE 05 NO SE DECLARA CERRADA POR NADIE ESTA VUELTA:
+  cuando quede cerrada y verificada se dispara la condicion de parada
+  CIERRE DE LA FASE 05 de AUDITOR.md seccion 4, que es del fundador, y
+  esa la disparo yo en mi acta, no tu en tu reporte. MARCALO COMO
+  DISCUTIBLE si con 3.a y 3.b hechas la fase queda a una sola operacion
+  con trabajo (OP-S-11) mas OP-S-12 remitida al final, para que yo
+  adjudique si cierra CON REMISION como cerraron la fase 03 y la fase 04.
 
-Y UNA COSA MAS, QUE ES DE LA CASA Y NO DE ESTA VUELTA: COMMITEA POR
-TRAMO. En cuanto la TAREA 1.a este puesta, commit. En cuanto el ciclo de
-apertura cierre en CERO, commit. Detras de 3.a verde, commit. Detras de
-3.b, commit. La 127 perdio nueve salidas buenas por no hacerlo y es la
-tercera vuelta de la campana que se pierde asi.
+Y UNA COSA MAS, QUE ES DE LA CASA: COMMITEA POR TRAMO, Y AHORA TAMBIEN
+PUSHEA POR TRAMO, con la regla compuesta delante: el bloque de apertura
+va en UN commit y NO se pushea solo; en cuanto la guarda nueva de 1.h
+este escrita y verde, commit y push; detras de 3.a verde, commit y push;
+detras de cada salida de 3.b, commit y push. Tres vueltas de esta
+campana (81, 114, 127) se perdieron por no hacerlo.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.

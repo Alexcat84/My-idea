@@ -43713,3 +43713,249 @@ cambio), y **3 vueltas no entregadas enteras** (2 mas la de hoy: 81, 114 y 127).
 **EL BUCLE SIGUE.** Escribo el encargo de la vuelta 128 en `docs/loop/PROMPT_SIGUIENTE.md`, con el orden de
 captura corregido y el trabajo de la 127 entero. **No escribo `PARA_ALEXIS.md`.** El numero **127 queda
 gastado por esta acta**.
+
+# ACTA DE LA VUELTA 128 DEL AUDITOR (29 ago 2026, fecha LEIDA DE GIT, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** `grep -n '^# ACTA DE LA VUELTA' docs/loop/ACTA_AUDITOR.md | tail -3`, corrido hoy:
+la ultima acta escrita es la de la vuelta 127 y la que audito es la 128, la inmediatamente siguiente. Cubro
+UNA vuelta y la nombro: la **128**, **catorce commits** sobre `9ef3705d`, de `4e412a73` a `1d71ffa6`.
+
+**EL VEREDICTO DE UNA LINEA: LA VUELTA ENTREGA ENTERA Y VERDE, Y HACE BIEN LO MAS DIFICIL, QUE ERA NO CERRAR
+`OP-S-10`. PERO LA ADJUDICACION QUE ME PIDE NO ES LA QUE ESPERABA: LA VERIFICACION 1 NO ESTA VERDE, Y NO POR
+LETRA SINO POR MEDIDA. PASADOS LOS 31 IDS DE LA NOMINA POR EL RESOLUTOR, COMO MANDA `P.1` Y COMO PIDE LA NOTA
+DE LA PROPIA OPERACION, RESUELVEN A **29 NODOS VIVOS**, Y UNO DE ELLOS, `prevenir_franquicias_inadvertidas`,
+SUPERVIVIENTE DE `estructuras_combinadas_franquicia`, **CABLEA LEY ESTATAL DE FRANQUICIAS DE EE.UU. Y NO
+NOMBRA EL PAIS EN `condiciones_activacion`**. LOS TRES DEPRECADOS NO ESTABAN "FUERA DE ALCANCE": DOS
+RESUELVEN A NODOS QUE LA VUELTA YA CUBRIO Y EL TERCERO ABRE UN HUECO REAL. `OP-S-10` NO SE CIERRA HOY: LE
+FALTA UN NODO. NO HAY PARADA Y NO HACE FALTA DOCTRINA NUEVA: `P.1` LO CUBRE POR CITA DIRECTA.**
+
+## 1. VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+
+**1.1 LOS SELLOS.** `verificar_apertura_sellada.py --vuelta 128`: **VERDE EXIT 0**, los **11** ficheros
+`SALIDA_V128_*_APERTURA.txt` nacidos todos en `4e412a73`, padre `9ef3705d`, comprobado tambien por mi con
+`git log --diff-filter=A` y `git show --stat` (11 ficheros, 389 inserciones, un solo commit). Sellos leidos:
+apertura `9ef3705d` (el acta 127), cierre `e9413240`.
+
+**1.2 LAS DIEZ FILAS DE LA CABECERA, REMEDIDAS UNA A UNA.** `vuelta83_conteo_aristas.py WORK`: **3.853 /
+3.184 / 669**, sig **9.198**, prev **9.180**, suma **18.378**, union **9.833**, `auto 0`, `dups 0`. El mismo
+instrumento sobre `9ef3705d`: **9.195 / 9.177 / 18.372 / 9.830**. **La resta da +3 / +3 / +6 / +3, exacta.**
+Motor **25/25 EXIT 0**. `npx vitest run`: **80 passed (80)**, **1.030 passed, 3 skipped (1.033)**. `npx tsc
+--noEmit`: **EXIT 0, cero lineas**. `recomputar_marcador.py 3388`: **A 551 / B 72 / C 5 / D 2.760**, `huecos:
+[]`, `dups 0`, pares duplicados 0. `tallar_cabecera_reporte.py --fase04 --vuelta 128 --comparar`: **10 filas
+cotejadas, DISTINTAS 0, CABECERA IDENTICA AL TALLADOR**. `wc -l docs/loop/REPORTE.md`: **74**, bajo el tope.
+
+**1.3 LAS GUARDAS DE LA CASA, CORRIDAS POR MI.** `verificar_citas_del_reporte.py` **VERDE EXIT 0, 7 pares**;
+`verificar_cifras_del_plan.py` **VERDE EXIT 0, 0 pares**, base `9ef3705d`; `verificar_titulos_normalizados.py`
+**VERDE EXIT 0**, 3.184 vivos, 1 duplicado bajo la excepcion de siempre; `verificar_fusion_ops09.py` **VERDE
+EXIT 0**; `verificar_aristas_vivas.py --antes 9ef3705d --despues WORK`: **7.293 a 7.296, PERDIDAS 0, NUEVAS
+3**, y las tres nuevas son **exactamente** las tres de la TAREA 3.a, nombradas.
+
+**1.4 LA GUARDA NUEVA DEL PASIVO, Y SUS DOS CONTRASTES, MEDIDOS POR MI.**
+`verificar_huerfanas_por_fusion.py` sobre WORK: **TOTAL 29, HEREDADAS 29, REPARADAS DE REBOTE 1, FABRICADAS
+0, VERDE EXIT 0**. Sobre `9ef3705d` (antes de 3.a): **TOTAL 32, HEREDADAS 29**. `--unidad par-crudo --ref
+7150339f`: **TOTAL 39**. Las tres cifras cuadran al digito con el contraste que yo publique, y la particion
+que la guarda existe para hacer es la que hace. **La campana ya no cierra con huecos propios.**
+
+**1.5 LAS TRES ARISTAS REPUESTAS, LEIDAS EN EL GRAFO Y NO EN EL REPORTE.** Codigo propio sobre
+`master_graph.json`: las tres estan **en las dos vistas** (`nodos_siguientes` del origen y `nodos_previos` del
+destino), los **seis extremos vivos**, cero duplicadas en lista. La escritura llego.
+
+**1.6 EL TRAMO DE `OP-S-10`, RECONSTRUIDO A CIEGAS CON CODIGO PROPIO** (`docs/loop/_auditor_v128_ops10.py`):
+lei la nomina de 31, me quede con los vivos en `9ef3705d` (**28**), descarte los que ya nombraban el pais
+(**16 candidatos**) y ordene por id. **Mis dieciseis son sus dieciseis, uno a uno, cero sobrantes y cero
+faltantes.** En los dieciseis la condicion nueva va **primera** y las viejas quedan **enteras y en su orden**
+(`h[1:] == a` en los dieciseis, sin excepcion). Los **dos contramodelos** y los **tres deprecados** salen
+**identicos byte a byte** entre apertura y WORK. `obtencion_marca_registrada` lleva el literal delante y su
+condicion vieja con *federal* **sin reescribir**, que es lo que el encargo mandaba.
+
+**1.7 LA VERIFICACION 3 Y LA FICHA DE LA VENTANA, REPRODUCIDAS.** Item 8/19/23 con regex propio sobre todos
+los campos: **7 nodos de la nomina**, **1 deprecado** (`elaboracion_fdd`), **6 vivos y los 6 CUBIERTOS**.
+Identico al ejecutor. Ventana truncada: los **cuatro** sitios existen y son los que dice
+(`prototipo_motor.py:1532`, `:1823`, `:2611` en `[:2]`, `build_question_cache.py:97` en `[:3]`), y el tercero
+de `[:2]` **el encargo no lo tenia: lo encontro el ejecutor y lo declaro**. Afectados: **13** en `[:2]` y
+**6** en `[:3]`, contados por mi. Cuadra.
+
+**1.8 REGIMEN A, ADITIVIDAD Y LIMPIEZA.** `docs/PENDIENTES.md` **185 anadidas / 0 borradas** y `grep -c
+"^-[^-]"` sobre el diff en **0**; `docs/plan/05_SANEO.md` **16 / 0** y borrados en **0**;
+`docs/plan/OPERACIONES.jsonl` **INTACTO**, que es lo que se le pidio (no cierra la operacion). Guiones largos
+o medios en lineas anadidas de toda la vuelta: **uno**, y es la linea del propio script que los prohibe.
+**Cero en el texto.**
+
+## 2. MI RELECTURA CIEGA, EMPEZANDO POR LOS DISCUTIBLES MARCADOS
+
+**2.1 DISCUTIBLE 1, `V1` Y `V2` DE `OP-S-10`. AQUI ESTA EL HALLAZGO, Y CAMBIA LA ADJUDICACION.** Antes de
+leer su razon escrita corri el resolutor sobre los 31 ids de la nomina (`ids_alias` de `dataset/nodos/`,
+`docs/loop/_auditor_v128_v1_resuelta.txt`): **los 31 resuelven a 29 nodos vivos distintos, cero sin
+resolver.** `cinco_categorias_costos_franquicia` resuelve a `estimacion_inversion_inicial_franquiciador`
+(cubierto hoy), `elaboracion_fdd` a `preparar_fdd` (cubierto hoy), y
+**`estructuras_combinadas_franquicia` resuelve a `prevenir_franquicias_inadvertidas`, que NO esta en el
+campo `nodos` y NO nombra el pais en `condiciones_activacion`.** Lo lei entero antes de juzgarlo: fuente
+*Franchise Your Business*, dominio `franquicias`, resumen que habla de **"leyes estatales de franquicia"**, y
+un paso 3 que manda *"verificar los umbrales de tarifas y las definiciones especificas de franquicia en cada
+estado donde operes"*. **Es exactamente la clase que esta operacion existe para arreglar**, y la fila `marco`
+de la VERIFICACION DE LA FASE lo dice sin nomina: *"todo nodo con marco de un solo pais nombra el pais en
+`condiciones_activacion`"*. **El ejecutor midio bien lo que midio (28/28 de los vivos de la nomina es
+cierto), pero la glosa "3 deprecados fuera de alcance" es la lectura que se queda corta.**
+
+**2.2 DISCUTIBLE 2, `OP-S-11` Y `OP-S-12` CON `nodos` VACIO: NO ES UN DEFECTO, Y LO MEDI.** Conte el campo
+sobre las 71 operaciones: **24 tienen `nodos` vacio**, y son las de tipo `CAMPO_SUCIO`, `GUARDA`, `MESA`,
+`FRONTERA_DECLARADA`, `SANEO MECANICO` y `LECTURA DIRIGIDA`, o sea **las que calculan su alcance con un
+instrumento sobre el grafo entero en vez de enumerarlo**. `OP-S-11` es `CAMPO_SUCIO` y `OP-S-12` es `SANEO
+MECANICO`: el vacio es la convencion de la casa, no un hueco. **Lo que si encontre al leerlas enteras es otra
+cosa, y va en 3.3.**
+
+**2.3 DISCUTIBLE 3, LA REESCRITURA DE HISTORIA: LA DECISION FUE CORRECTA Y LA PRUEBA NO ESTA EN EL REPO.**
+Lo verifique yo: el pre-rebase `9c222986` existe todavia en mi reflog local, `git diff 9c222986 2fb161d6`
+sale **VACIO en el arbol entero**, no solo en `dataset/`, `web/` y `engine/`. Y la afirmacion *"sin nada
+pusheado"* es **CIERTA**: `git reflog show origin/pasada-unica` salta de `9ef3705d` a `1d71ffa6`, o sea un
+solo push al final, y `git merge-base --is-ancestor 9c222986 origin/pasada-unica` da **NO**. Ninguna historia
+publicada se reescribio. **Pero el fichero que el reporte cita como prueba,
+`SALIDA_V128_REBASE_ARBOL_IDENTICO.txt`, contiene una sola linea, `EXITCODE: 0`: ni el comando, ni los dos
+refs, ni la salida.** Y el hash viejo `9c222986` **no aparece en ningun sitio del repo** (`grep -rn` sobre
+`docs/` y `scripts/`: cero). O sea que la unica prueba de que los arboles eran identicos vive en mi reflog,
+que se recoge solo. **Eso es el ramal (ii) del tramo doblado al pie de la letra: el expediente dice mas que
+el registro escrito a su lado.**
+
+## 3. LO QUE ADJUDICO
+
+**3.1 `V1` DE `OP-S-10` ESTA EN ROJO, Y `OP-S-10` NO SE CIERRA. LA VARA ES `P.1`, CITADA, SIN DOCTRINA
+NUEVA.** `P.1` (`docs/plan/BANCO_DEL_PLAN.md:11`): *"EN ESTE GRAFO, TODO CONTEO QUE TOQUE IDS PASA POR EL
+RESOLUTOR ANTES DE CONTAR"*. Y la nota de la propia `OP-S-10` ya la invoca para este caso exacto: *"la nomina
+que `OP-S-10` lea el dia de su turno se resuelve por el resolutor en ese momento (`P.1`)"*. **Un id deprecado
+de la nomina no sale del alcance: entra por su superviviente.** Por esa vara, `V1` se lee sobre **29 vivos** y
+hoy van **28 de 29**. Falta `prevenir_franquicias_inadvertidas`, y se le antepone la **misma forma literal**,
+en la vuelta 129, con las tres guardas del REGIMEN B. **El ejecutor hizo lo correcto al no cerrar y al
+marcarlo: si lo hubiera cerrado con "28/28 VERDE", habria sido caida de CLASE.**
+
+**3.2 `V2` QUEDA EN VERDE POR SU PROPIA LETRA.** El texto dice *"ningun nodo condiciona con un adjetivo
+(federal) **en vez de** con un pais"*. Barri los 28 vivos buscando `federal|estatal|nacional` en
+`condiciones_activacion`: **sale uno solo, `obtencion_marca_registrada`**, y hoy su primera condicion nombra
+el pais, asi que el adjetivo ya **no esta en vez de** nada. **El defecto que la verificacion vigila esta
+curado.** La clausula vieja se queda sin reescribir, como mando el encargo, y su residuo ya vive en la ficha
+`ventana-truncada-de-condiciones-activacion` y en el marcado para la auditoria de cierre, que es de Alexis.
+
+**3.3 `OP-S-11` NO TIENE HOY CON QUE EJECUTARSE, Y LO MEDI ANTES DE DECIRLO.** Su verificacion 1 pide que el
+campo `fuente` *"resuelva contra una lista CANONICA de libros"*, y su texto dice que **la tabla de mapeo va
+DENTRO de la operacion**. **No esta.** `docs/plan/RECORTE_POSICIONAL.md` (144 lineas, la evidencia que la
+operacion cita) tiene el total **55**, dos casos probados (Hugos 2 grafias, Horowitz 3) y una tabla de seis
+libros con sus conteos: **la correspondencia 129 a 55 no esta escrita en ningun sitio**, y `grep -rln` sobre
+`docs/` no la encuentra. **NO LO DECLARO PARADA HOY, y digo por que:** la operacion tiene una **primera mitad
+que no decide nada** (medir las grafias de hoy, agrupar mecanicamente las truncadas y **PROPONER** la tabla),
+y esa mitad es el *criterio del forastero* que esta campana ya usa: **la fuente propone la nomina; la lectura
+y el cableado la confirman**. Se encarga esa mitad en REGIMEN A, **sin tocar `dataset/`**, y la tabla vuelve
+a mi para adjudicarla. **Si al medirla el ejecutor encuentra que ni siquiera proponerla se puede sin decidir,
+para en esa y la trae escrita**, que es la letra de `AUDITOR.md` seccion 3.
+
+**3.4 EL PUSH POR TRAMO, ACLARADO PARA QUE LAS DOS REGLAS QUEPAN.** `EJECUTOR.md` regla 6
+(`docs/loop/EJECUTOR.md:105`) pide **commit Y push** por tramo; esta vuelta commiteo por tramo pero
+**pusheo una sola vez al final**. Y sin embargo eso es lo que hizo **segura** la reparacion de la apertura:
+con la apertura ya pusheada, arreglarla habria pedido un `push --force` sobre historia publicada. **Adjudico
+la regla compuesta, que no es nueva sino las dos vigentes puestas en orden: el bloque de apertura (`1.a` mas
+`1.b` mas `1.c`) es UN SOLO COMMIT y NO SE PUSHEA SOLO; el push por tramo empieza DESPUES de ese bloque, con
+el primer commit de operacion.** Asi `verificar_apertura_sellada.py` y la regla 6 dejan de morderse.
+
+**3.5 EL SELLO DE CIERRE NO TIENE GUARDA, Y ESTA VUELTA LO DEMUESTRA.** `verificar_apertura_sellada.py` solo
+mira la apertura. El sello de cierre original apuntaba a `9c222986`, que tras el rebase **ya no esta en la
+rama**; el ejecutor lo vio y lo regenero, bien. Pero **nada lo obligaba**: un sello de cierre apuntando a un
+commit inexistente habria pasado verde toda la bateria. **Encargo la guarda gemela.**
+
+## 4. LAS CAIDAS DE ESTA VUELTA, CON SU NOMBRE
+
+**4.1 DEL EJECUTOR, DE REPORTE.** El parrafo de baterias dice *"SYNC/NUMSTAT identicos solo OPS10 vs CIERRE
+(sin escritura entre medias)"*. Para `SYNC` es cierto. **Para `NUMSTAT` es falso por los dos lados**, y lo
+lei del propio fichero que el reporte cita: `NUMSTAT: OPS10 vs CIERRE: DISTINTOS` y `NUMSTAT: APERTURA vs
+CIERRE: IDENTICOS`. Y la razon tampoco es la que da: apertura y cierre coinciden **porque los dos se sellaron
+sobre arbol limpio**, no por ausencia de escritura entre medias (entre medias se escribieron 3 aristas y 16
+nodos). El encargo pedia literalmente *"un IDENTICO sin explicar es una caida"*: aqui el identico real
+**quedo sin nombrar y el explicado no existia**. **NO ACUMULA PARA LA RACHA**, por la letra afinada del
+fundador del 27 ago 2026: la cifra vive en **prosa**, no en una tabla, una cabecera ni una conclusion. **Se
+registra con su nombre y dispara la relectura al doble**, como manda la misma decision.
+
+**4.2 DEL EJECUTOR, DE EXPEDIENTE.** `SALIDA_V128_REBASE_ARBOL_IDENTICO.txt` con una sola linea `EXITCODE:
+0`, citada en el reporte como prueba de un `git diff` vacio entre dos estados, **y el estado viejo sin
+nombrar en ningun sitio del repo** (2.3). La afirmacion es **verdadera** (la verifique) y la prueba **no es
+reproducible por nadie que no tenga mi reflog**.
+
+**4.3 DEL EJECUTOR, DE PROCEDIMIENTO.** Un solo push al final contra `EJECUTOR.md` regla 6 (3.4). Sin
+consecuencia esta vez, y con la regla compuesta escrita para que no vuelva a ser ambigua.
+
+**4.4 GUARDA QUE NO ALCANZA, DOS.** (a) `verificar_citas_del_reporte.py` da **VERDE** sobre un fichero cuyo
+contenido entero es `EXITCODE: 0`: la guarda coteja el veredicto con el codigo de salida y **no exige que
+haya medicion debajo**. (b) **No existe guarda del sello de cierre** (3.5).
+
+**4.5 DEL AUDITOR, DE ENCARGO, Y ES MIA.** En la TAREA 3.d de la 128 escribi *"la operacion queda con sus
+cinco verificacion medidas"* **sin mandar resolver la nomina por `P.1`**, cuando la nota de la propia
+operacion ya lo exigia y yo mismo cite `P.1` en el acta 126. Le pedi al ejecutor una medicion sobre "los 31"
+sin decirle que los 31 no son 31 el dia de su turno. **La lectura corta que hoy corrijo la induje yo.**
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda:** **cero relecturas de unidad y cero puestos** (fase III, no hay pares de cribado que releer),
+declarado. Varas corridas por mi hoy: sello de apertura; conteo de aristas en dos refs; marcador con huecos y
+duplicados; motor; `vitest`; `tsc`; tallador con `--comparar`; `wc -l`; las cuatro guardas de la casa; la
+guarda nueva del pasivo en **tres** combinaciones de unidad y ref; `verificar_aristas_vivas.py`; **la
+reconstruccion ciega de los dieciseis nodos de `OP-S-10` con codigo propio**; **el resolutor sobre los 31 ids
+de la nomina**; la lectura entera de `prevenir_franquicias_inadvertidas`; la verificacion 3 con regex propio;
+los cuatro sitios de la ventana truncada; el censo de `nodos` vacio sobre las 71 operaciones; el `diff` de
+arboles pre y post rebase; el reflog del remoto; y los cuatro `NUMSTAT` del ciclo, leidos uno a uno.
+
+**MI PROPIO CASI-FALLO, DECLARADO PORQUE LA CASA LO PIDE AUNQUE NO LLEGARA A NINGUNA CIFRA:** conte los pares
+de la bateria `cmp` con un `grep -c` que se tragaba las **diez lineas `RESUMEN`** y me dio **60** contra los
+**50** del reporte. Antes de escribir la discrepancia lo remedi excluyendo esas lineas: **50, y el reporte
+tiene razon.** No es caida porque no se publico, pero va escrito: **un conteo por `grep` sobre un fichero con
+lineas de resumen no es una medicion hasta que se sabe que cuenta.**
+
+**Caidas del ejecutor en esta tanda: CERO de clase, CERO de cifra publicada, UNA de reporte (4.1, no
+acumula), UNA de expediente (4.2) y UNA de procedimiento (4.3). Guardas que no alcanzan: DOS (4.4). Caidas
+del auditor: UNA de encargo (4.5). Discrepancias abiertas: CERO** (la de `V1` queda adjudicada en 3.1, con su
+trabajo encargado).
+
+**Acumulado:** **858 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase del
+ejecutor** (sin cambio), **74 de reporte del ejecutor** (73 mas la de hoy), **20 de cifra publicada del
+ejecutor** (sin cambio), **18 de expediente** (17 mas la de hoy), **14 de incumplimiento de encargo** (sin
+cambio), **2 de procedimiento del ejecutor** (1 mas la de hoy), **2 de guarda envejecida** (sin cambio),
+**18 de guarda que no alcanza o cegada** (16 mas las dos de hoy), **10 de cifra del auditor** (sin cambio),
+**19 de acta del auditor** (sin cambio), **31 de procedimiento del auditor** (sin cambio), **1 de reporte del
+auditor** (sin cambio), **26 de encargo del auditor** (25 mas la de hoy), **2 de clase del auditor** (sin
+cambio), y **3 vueltas no entregadas enteras** (sin cambio: 81, 114 y 127).
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO.** Ninguna cifra equivocada entro en `docs/plan/` ni
+> en el banco: remedi la anadidura de `05_SANEO.md` linea por linea (7 nodos, 1 deprecado, 6 cubiertos) y
+> sale exacta, `OPERACIONES.jsonl` esta intacto, y las 185 lineas de `PENDIENTES.md` son aditivas con
+> borrados en cero.
+>
+> **REPORTE: SIGUE EN CERO de las que acumulan.** La de hoy (4.1) **no acumula**, por la letra expresa del
+> fundador del 27 ago 2026: vive en prosa, no en tabla, cabecera ni conclusion. **La ESCALADA de
+> `AUDITOR.md` 1.2 se dispara en DOS y estamos en CERO: NO TOCA**, y la dejo dicha entera para que nadie la
+> de por gastada, con el aviso del acta 88 delante: **el dia que llegue a DOS, la operacion de codigo de la
+> escalada se encarga EN EL MISMO ACTA, sin esperar decision nueva.**
+>
+> **EL CREDITO DE LA TANDA: EL TRAMO SE RELEE AL DOBLE POR NOVENA VUELTA.** Y esta vez **si hay motivo
+> propio**, no herencia: la caida de reporte de 4.1 lo dispara por la misma decision del 27 ago. Siguen los
+> ramales (i) a (iv) de la 120, el (v) de la 123, el (vi) de la 124, el (vii) de la 125, el (viii) y el (ix)
+> de la 126, y el (x) de la 127. **Le anado uno, y sale del hallazgo de hoy:**
+> **(xi) UNA NOMINA DE IDS SE RESUELVE ANTES DE DECLARARLA COMPLETA. Un id deprecado no sale del alcance de
+> su operacion: entra por su superviviente. Contar "los vivos de la lista" y llamar al resto "fuera de
+> alcance" es contar sin resolver, que es justo lo que `P.1` prohibe, y deja el hueco donde nadie mira:
+> fuera de la lista y dentro del problema.**
+
+## 6. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** El hallazgo de `V1` se adjudica citando `P.1` (`BANCO_DEL_PLAN.md:11`) y la nota de la propia `OP-S-10`, que ya la invoca. `V2` se adjudica por su propia letra. El vacio de `nodos` es convencion medida sobre 24 operaciones |
+| contradiccion con una regla vigente o cifra publicada | **NO.** Ninguna cifra publicada cae: marcador, conteo, motor, web, tsc y la anadidura de `05_SANEO.md` remedidos y cuadrados |
+| decision de fundador reservada | **NO.** Cero borrados, alcance intacto, nada fuera de `pasada-unica`, y la reescritura de historia no toco historia publicada (2.3) |
+| fallo tecnico repetido | **NO.** Gate 0 y las suites en verde en los cuatro lados, corridos por mi |
+| credito de tanda roto (clase o cifra) | **NO. SIGUE EN CERO** |
+| credito de tanda roto (reporte) | **NO.** Una caida (4.1) que **no acumula** por la letra del 27 ago; la racha de las que acumulan sigue en **CERO** |
+| campana consumada | **NO.** Sesenta y tres operaciones en `LISTA`, contadas hoy sobre `OPERACIONES.jsonl` |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO SE DISPARA, Y HOY SE POSPONE CON MOTIVO MEDIDO.** `OP-S-10` no cierra: le falta `prevenir_franquicias_inadvertidas` (3.1). `OP-S-11` sigue `LISTA` y hoy no tiene su tabla de mapeo (3.3). `OP-S-12` va **al final de la pasada** por la atadura 2 de `00_INDICE.md`, no al final de su fase. **Aviso por quinta vuelta: sigue encima**, y cuando llegue habra que adjudicar si cierra **CON REMISION** de `OP-S-12`, como ya cerraron la fase 03 y la fase 04 |
+
+**EL BUCLE SIGUE.** Escribo el encargo de la vuelta 129 en `docs/loop/PROMPT_SIGUIENTE.md`. **No escribo
+`PARA_ALEXIS.md`.** El numero **128 queda gastado por esta acta**.
