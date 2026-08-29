@@ -554,6 +554,19 @@ dominio que condiciona con un adjetivo en vez de con un pais.**
 > por el ejecutor; el cierre de la operacion lo adjudica el auditor (no esta
 > vuelta), por la misma letra que ya regia la verificacion 3.
 
+> **CIERRE (29 ago 2026, vuelta 131, TAREA 2.b, adjudicacion del auditor,
+> acta 130, 3.1).** `OP-S-10` pasa de **LISTA** a **HECHA** en
+> `docs/plan/OPERACIONES.jsonl`. Las cinco verificaciones, remedidas por el
+> auditor con codigo propio: **V1** por P.1 (`docs/plan/BANCO_DEL_PLAN.md:11`),
+> 31 ids que resuelven a 29 vivos y **29 de 29** nombrando el pais tras la
+> TAREA 3.a de la vuelta 130. **V2** ya quedo adjudicada VERDE por el acta 128
+> (3.2) y el auditor la remidio hoy. **V3** VERDE, siete de siete tras
+> resolver. **V4** VERDE, los dos contramodelos sin tocar. **V5** VERDE, Gate
+> 0 OK. El **CONDICIONAL** de la cabecera queda adjudicado por su propio
+> criterio escrito ("entra si la medicion muestra ley con alcance real"): la
+> medicion del 11 ago da 31 nodos de marco de un solo pais y el 80,6% sin
+> condicionarlo en ningun sitio.
+
 ---
 
 ## VERIFICACION DE LA FASE

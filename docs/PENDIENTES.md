@@ -1660,6 +1660,25 @@ vuelta.**
 
 ---
 
+### NOVENA entrada (vuelta 131, TAREA 2.d): lo que hoy se sabe del truncamiento y por que `RECORTE_POSICIONAL.md` no es la vara de la lista canonica
+
+**El truncamiento corta EL TITULO A 31 CARACTERES EXACTOS**, y el sufijo
+" - Autor" va DETRAS del corte, no dentro de el. Los cuatro casos con
+`len(titulo)=31` medidos en la vuelta 130: `Essentials of Supply Chain
+Mana`, `Co-Intelligence_ Living and Wor`, `Juran's Quality Handbook_ The
+C`, `The Hard Thing About Hard Thing`.
+
+**`docs/plan/RECORTE_POSICIONAL.md` NO ES LA VARA de la lista canonica de
+`OP-S-11`**, por dos razones medidas hoy sobre su propio texto: (1) trae la
+misma suciedad que la operacion existe para limpiar, su propia tabla
+("LA TABLA POR LIBRO") publica `The Field Guide to Understandin - Dekker,
+Sidney;` como **nombre canonico**, truncado y con el punto y coma final
+dentro; (2) su cifra de 55 libros canonicos es de OTRO CORTE, **3.521
+nodos vivos** (linea 15 de ese fichero), no el corte de hoy de `OP-S-11`.
+**La lista canonica es lo que `OP-S-11` PRODUCE, no lo que consume.**
+
+---
+
 ## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
 
 **Nace del lote 8 del gradiente (puesto 69).** Es **hermana** de la de arriba, no
@@ -8110,3 +8129,55 @@ aprobada (OP-S-10) y la ventana de consumo del motor es asunto de producto y
 de voz, no de catalogo (acta de la vuelta 126, seccion 4.3): la decision es
 del fundador en la auditoria de cierre. **Se revoca con una linea por
 nodo.**
+
+## R.12. Registro de correcciones declaradas de la vuelta 130 (adjudicadas
+por el acta de la vuelta 130; escrito en la vuelta 131, TAREA 2.c)
+
+**(1) LA CAIDA DE REPORTE DEL "21 FICHEROS" (acta 130, 4.1).** El
+`REPORTE.md` de la 130 escribio *"21 ficheros mencionan grafia"* sin salida
+de instrumento pegada. El auditor corrio ONCE variantes del grep y ninguna
+da 21: **272, 266, 43, 37, 27, 26, 23, 19, 15, 14 y 12**. La afirmacion que
+carga el peso ("ninguna tabla de mapeo vive en docs/") SI es cierta y el
+auditor la verifico aparte sondeando las 124 grafias largas contra todos los
+ficheros de docs/. La cifra vive en prosa de acompanamiento, asi que se
+registra, dispara relectura al doble, y NO ACUMULA por la letra del
+fundador del 27 ago 2026.
+
+**(2) LA CAIDA DE EXPEDIENTE DEL COMMIT `fc23b099` (acta 130, 4.2).** Su
+mensaje dice que corrige "dos salidas de guarda sin marcador de EXITCODE".
+Cierto de una. De la otra no: ese mismo commit REGENERO
+`SALIDA_V130_1H_CIERRE_SELLADO.txt`, 9 lineas anadidas y CINCO BORRADAS,
+cambiando los hashes sinteticos `8f5840bc` a `b7f0c50e` y `5e9c5c03` a
+`694e2a4f`, y el mensaje no lo dice. El auditor lo midio: `grep -rl
+8f5840bc docs/` da CERO, y ese hash es justo el que el docstring commiteado
+un commit antes (2.d, `b61a6c1b`) cita como prueba de que el hash varia:
+**`8f5840bc` quedo huerfano en `docs/` y solo sobrevive en el docstring de
+`scripts/`.** Nada falso se publico y el hash varia por diseno, pero el
+registro que el expediente senala lo sobrescribio un commit que no lo
+declaro. Ramal (ii): cuando se regenere una salida ya commiteada, EL
+MENSAJE LO DICE.
+
+**(3) LA CAIDA DEL AUDITOR, DE CIFRA (acta 130, 4.3).** El acta 129 publico
+"veinte ficheros" del mismo grep. Tampoco reproduce. Fue primero y se cobra
+igual.
+
+**(4) LAS DOS CAIDAS DEL AUDITOR, DE ENCARGO (acta 130, 4.4 y 4.5).**
+Primera: la TAREA 3.c de la 130 mandaba marcar un discutible "si la fase
+queda a una sola operacion con trabajo", condicion que dependia de la
+adjudicacion de OP-S-10 por el propio auditor, que todavia no existia:
+inevaluable para el ejecutor, "una adivinanza". Segunda, y es la grande: la
+130 escribio "agrupa las grafias TRUNCADAS (una es prefijo estricto de
+otra, QUE ES EL PATRON QUE LA OPERACION DOCUMENTA)". NO ES EL PATRON QUE LA
+OPERACION DOCUMENTA: el recorte de importacion corta EL TITULO A 31
+CARACTERES EXACTOS y el sufijo " - Autor" va DETRAS, asi que el prefijo
+sobre la cadena entera no puede cazarlo. Los cuatro casos con
+`len(titulo)=31`: `Essentials of Supply Chain Mana`, `Co-Intelligence_
+Living and Wor`, `Juran's Quality Handbook_ The C`, `The Hard Thing About
+Hard Thing`. Al primero se le escapaba HUGOS, el caso probado de la propia
+operacion. La regla vieja del auditor y la del ejecutor dieron las dos 13
+grupos, cortas por la misma razon.
+
+**(5) EL RAMAL (xiii) DEL TRAMO QUE SE RELEE AL DOBLE, escrito entero:**
+> **(xiii) UNA REGLA MECANICA SE PRUEBA CONTRA EL CASO QUE LA OPERACION YA
+> DOCUMENTA, ANTES DE MANDARLA. Si la regla no caza el ejemplo que el plan
+> escribio como sintoma, la regla no es mecanica: es decorativa.**
