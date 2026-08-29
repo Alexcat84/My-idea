@@ -7845,3 +7845,188 @@ POST CAMPANA, y crear su operacion de reposicion no lo decide el bucle.
 Las 32 (medidas hoy) quedan listadas integras en
 `docs/loop/SALIDA_V126_2C_ARISTAS_HUERFANAS_TOTALES.txt`, para que la
 siguiente vuelta que las toque no tenga que remedirlas desde cero.
+
+### SEGUNDA entrada (vuelta 128, TAREA 2.a): la discrepancia 32 contra 39
+QUEDA CERRADA, y la clausula "todas anteriores a la campana" SE RETRACTA
+
+**(1) LA DISCREPANCIA NO ERA DOCTRINA: eran DOS UNIDADES distintas medidas
+en DOS PUNTOS distintos**, no un desacuerdo de cifra. El 29 ago 2026,
+`scripts/loop/verificar_huerfanas_por_fusion.py` (guarda nueva, TAREA 1.h de
+esta vuelta) mide las dos unidades con el mismo codigo:
+- **PAR VIVO RESUELTO** (dedup por el par de supervivientes): 33 en
+  `7150339f` (`docs/loop/SALIDA_V128_2A_PARRESUELTO_7150339F.txt`), 32 en
+  `7f14f453`, el estado tras reponer la arista de `OP-S-09`
+  (`docs/loop/SALIDA_V128_HUERFANAS_ANTES_3A.txt`).
+- **PAR CRUDO HISTORICO** (dedup por los dos ids muertos, ambos extremos
+  deprecados): 39 en `7150339f`
+  (`docs/loop/SALIDA_V128_2A_PARCRUDO_7150339F.txt`), 38 en `7f14f453`
+  (`docs/loop/SALIDA_V128_2A_PARCRUDO_7f14f453.txt`).
+**LA RESTA QUE LO CIERRA POR LOS DOS LADOS, LA MISMA ARISTA**: entre
+`7150339f` (antes de reponer `OP-S-09`) y `7f14f453` (despues) las dos
+unidades bajan en exactamente 1: 33 a 32 en resueltos, 39 a 38 en crudos.
+Las dos cifras historicas del acta 125 (32 del ejecutor, 39 del auditor)
+correspondian a unidades distintas y puntos de corte distintos, no a un
+error de conteo. **QUEDA CERRADO, no PENDIENTE DE DOCTRINA.**
+
+**(2) LA UNIDAD CANONICA de esta ficha es el PAR VIVO RESUELTO**, adjudicada
+por el acta de la vuelta 126, seccion 4.1, citando banco 9.6
+(`docs/BANCO_DE_TEXTOS.md:1479`).
+
+**(3) SE RETRACTA la clausula "todas de fusiones ANTERIORES a esta campana
+de saneo" de la PRIMERA entrada.** Medido con la particion nueva de
+`verificar_huerfanas_por_fusion.py` (baseline `50f03099`, el encendido del
+bucle) sobre el estado `7f14f453` (antes de la reposicion de esta vuelta,
+`docs/loop/SALIDA_V128_HUERFANAS_ANTES_3A.txt`): de las 32, **29
+HEREDADAS** (anteriores a la campana, no se tocan), **1 REPARADA DE REBOTE**
+(`definicion_calidad_conformidad -> programa_mejora_calidad_14_pasos`, ya no
+huerfana), y **3 FABRICADAS POR LA CAMPANA**:
+`comprension_capacidades_limitaciones_ia -> division_trabajo_humano_ia`
+(muertos `jagged_frontier_ia`, `descomposicion_tareas_trabajo`,
+`framework_tareas_ia_humano`, commit `0c946b7d`),
+`ecosistema_global_emprendimiento_gee -> uso_del_us_commercial_service`
+(muertos `consejos_distrito_exportacion_dec`, `recursos_apoyo_pymes_sba`,
+commit `a1d7269d`), e
+`incentivos_reconocimiento_sostenibilidad -> vision_alineacion_sostenibilidad`
+(muertos `accountability_incentivos`, `liderazgo_ceo_sostenibilidad`,
+commit `0481113f`).
+
+**(4) LAS FABRICADAS SE REPUSIERON EN ESTA VUELTA (TAREA 3.a), por P.16
+punto 1** (`docs/plan/BANCO_DEL_PLAN.md:878`, un pasivo fabricado por la
+propia campana no se hereda): `verificar_huerfanas_por_fusion.py` pasa de
+FABRICADAS 3 a FABRICADAS 0
+(`docs/loop/SALIDA_V128_HUERFANAS_DESPUES_3A.txt`). **LAS 29 HEREDADAS NO SE
+TOCAN**: siguen siendo pasivo historico, trabajo POST CAMPANA por la misma
+letra de P.16.
+
+## R.9. Registro de correcciones declaradas de la vuelta 126 (adjudicadas
+por el acta de la vuelta 126, seccion 4 y 5; escrito en la vuelta 128,
+TAREA 2.b)
+
+**(1) CAIDA DEL EJECUTOR, DE REPORTE, Y NO ACUMULA.** El reporte de la
+vuelta 126 escribio *"CONTEO/MOTOR/WEB/DESFASE DISTINTOS"* sin acotar entre
+apertura y cierre, cuando su propio `SALIDA_V126_BATERIAS_CMP.txt` registra
+dos pares IDENTICOS sin listar ni explicar: `CONTEO: OPS09REP vs cierre:
+IDENTICOS` y `GATE0: OPS09REP vs OPS10: IDENTICOS` (el segundo, benigno: la
+mejor noticia de la vuelta). Adjudicado en el acta 126, 5.1: vive en prosa
+de acompanamiento, no mueve ningun dato, **se registra, dispara la
+relectura al doble y NO ACUMULA**.
+
+**(2) CAIDA DEL EJECUTOR, DE EXPEDIENTE.** La ficha `aristas-huerfanas-por-fusion`
+afirmo de las 32 que eran *"todas de fusiones ANTERIORES a esta campana de
+saneo"*, procedencia que el encargo de la 126 no pedia y que el ejecutor no
+midio: tres SI eran de esta campana (acta 126, 3.1 y 5.2). La raiz la
+adjudica el auditor como propia (5.3, ver punto 3 de abajo): **se corrige
+por remision en esta vuelta** (TAREA 2.a de arriba, `aristas-huerfanas-por-fusion`,
+SEGUNDA entrada) y se cuenta una vez en cada lado.
+
+**(3) CAIDA DEL AUDITOR, DE CIFRA, LA GRANDE DE LA 126 (acta 126, 5.3).** El
+acta 125 seccion 4.1 dijo *"las otras 38 son de fusiones anteriores de la
+campana"* y las remitio enteras a pasivo historico. Medido en la 126: tres
+eran de esta campana y por su propia vara habia que reponerlas. La cifra no
+estaba mal contada, estaba mal atribuida, y esa atribucion es lo que decidio
+que no se encargaran durante una vuelta entera.
+
+**(4) CAIDA DEL AUDITOR, DE PROCEDIMIENTO (acta 126, 5.4).** Publico el 39
+sin su comando, contra `AUDITOR.md` seccion 2 (toda medicion se declara con
+su comando). El ejecutor no pudo cotejar y la discrepancia acabo escrita
+como *"pendiente de doctrina"* cuando eran dos unidades. **Remedio puesto**:
+los scripts del auditor viven en el repo, `docs/loop/_auditor_v127_*.py`.
+
+**(5) CAIDA DEL AUDITOR, DE ENCARGO (acta 126, 5.5).** El `--ref c9ac2fb8`
+de la 1.g(ii) pedia el caso rojo en un ref donde la fusion de `OP-S-09` aun
+no existia; el ejecutor lo salvo y lo declaro. El ref correcto era
+`7150339f`.
+
+**(6) LOS RAMALES (viii) Y (ix) DEL TRAMO QUE SE RELEE AL DOBLE (acta 126,
+seccion 6), escritos enteros:**
+> **(viii) UNA CIFRA DE PASIVO SE PARTE SIEMPRE EN DOS ANTES DE REMITIRLA:
+> lo que la campana HEREDO y lo que la campana FABRICO. Se mide proyectando
+> el conjunto del baseline por el resolutor de hoy y restando, igual que las
+> aristas vivas. Remitir un pasivo sin partirlo es remitir trabajo propio
+> como si fuera ajeno.**
+> **(ix) TODA CIFRA DE PASIVO O DE CENSO SE PUBLICA CON SU UNIDAD Y SU
+> ESTADO PEGADOS. Dos numeros distintos del mismo fenomeno no son una
+> discrepancia mientras no compartan unidad y ref: cotejar sin unidad
+> fabrica pendientes de doctrina que no existen.**
+
+## R.10. Registro de correcciones declaradas de la vuelta 127 (adjudicadas
+por el acta de la vuelta 127; escrito en la vuelta 128, TAREA 2.c)
+
+**(1) LA VUELTA 127 NO ENTREGO.** Corrio tres minutos, dejo nueve salidas
+buenas de instrumento y CERO commits, contra `EJECUTOR.md` regla 6. Es la
+TERCERA vuelta de la campana que se pierde asi (81, 114, 127) y, por la
+letra del acta 82, NO CUENTA EN NINGUNA RACHA (ni de reporte ni de tanda).
+
+**(2) LA CAIDA DEL AUDITOR, DE ENCARGO.** El orden de captura que el
+encargo de la 127 mandaba en 1.b y 1.c era imposible: `run_phase1.py
+--reaplico-curaduria` corrido suelto deja el dataset atrasado respecto de
+la web (recompila desde los nodos y NO reaplica la curaduria de
+etiquetas), y su Gate 0 no lo acusa porque compara el snapshot de ANTES del
+paso 6 (`scripts/run_phase1.py:1176` y `:941-947`), mientras que el motor
+si lo acusa, con razon (`engine/test_gate_alias.py:116` y `:124`). Probado
+en experimento controlado sobre arbol limpio, citado por su fichero:
+`docs/loop/SALIDA_AUD_V127_EXPERIMENTO_ORDEN.txt`. Corregido en esta vuelta
+con el orden de captura de la TAREA 1.b del encargo 128 (ciclo completo,
+numstat vacio antes de medir).
+
+**(3) LA CAIDA DEL AUDITOR, DE PROCEDIMIENTO.** Leyo un codigo de salida
+`EXITCODE` desde un `$?` puesto detras de una tuberia, que devuelve el
+codigo de `tail` y no el del instrumento medido. Se caza remidiendo. Regla
+para toda vuelta futura: el EXITCODE se lee del instrumento, nunca detras
+de un `|` (redirigir a fichero y leer el codigo, o usar PIPESTATUS).
+
+**(4) LA CAIDA DEL EJECUTOR, DE PROCEDIMIENTO.** Corrio un `run_phase1.py`
+que no dejo salida capturada: el snapshot de entrada de la corrida capturada
+dice 71 divergentes y en HEAD los gemelos estan a 0. Toda corrida de
+instrumento deja su salida, siempre.
+
+**(5) EL RENOMBRADO DE LAS NUEVE SALIDAS DE LA 127**, de `SALIDA_V127_*` a
+`docs/loop/ABORTADA_V127_*.txt`. Motivo: con su nombre viejo habrian puesto
+VERDE a `verificar_apertura_sellada.py --vuelta 127`, es decir habrian dicho
+que la apertura de la 127 quedo sellada cuando la 127 no commiteo nada.
+Renombradas, la guarda sigue diciendo la verdad (comprobado corriendola).
+
+**(6) EL RAMAL (x) DEL TRAMO QUE SE RELEE AL DOBLE (acta 127, seccion 5),
+escrito entero:**
+> **(x) UN ORDEN DE MEDICION SE PRUEBA CORRIENDOLO ENTERO SOBRE ARBOL
+> LIMPIO ANTES DE MANDARLO. Medir un paso del orden y dar por bueno el
+> orden es la misma especie de error que medir un tramo y dar por buena la
+> tanda: la guarda que cae no es la que se probo, es la que venia detras.**
+
+## Ficha permanente: `ventana-truncada-de-condiciones-activacion`
+
+**NACE el 29 ago 2026 (vuelta 128, TAREA 2.d).** NO SE TOCA NI UN NODO por
+esta ficha: es registro para la auditoria de cierre.
+
+### PRIMERA entrada (vuelta 128, TAREA 2.d)
+
+**EL HALLAZGO.** `condiciones_activacion` se consume RECORTADA en varios
+sitios del motor, verificado leyendo el codigo hoy (no citado de memoria):
+`engine/prototipo_motor.py:1532`, `engine/prototipo_motor.py:1823` y
+`engine/prototipo_motor.py:2611` (los tres con `[:2]`, este tercero no
+estaba en el encargo y aparecio al grep completo del archivo), y
+`engine/build_question_cache.py:97` (con `[:3]`).
+
+**LA CONSECUENCIA.** Una condicion ANTEPUESTA (posicion 0) desplaza, para
+todo nodo que ya tuviera dos o mas condiciones, la ULTIMA condicion vieja
+fuera de la ventana que esos sitios consumen: lo que antes de anteponer
+cabia en `[:2]` o `[:3]` deja de caber tras el desplazamiento de uno.
+
+**CUANTOS DE LOS 31 DE OP-S-10 QUEDAN AFECTADOS, MEDIDO DESPUES DE LA TAREA
+3.b DE ESTA VUELTA** (`scripts/loop/vuelta128_2d_ventana_truncada.py`,
+`docs/loop/SALIDA_V128_2D_VENTANA_TRUNCADA.txt`), sobre los 26 nodos
+tocados entre la vuelta 126 (diez) y esta vuelta (dieciseis): **13 quedan
+afectados en la ventana `[:2]`** y **6 en la ventana `[:3]`**. Contraste
+sobre los diez de la vuelta 126 en solitario (no para copiar, viene del
+encargo): 7 en `[:2]` y 3 en `[:3]`; remedido igual (7 de los diez de la
+126 caen dentro del total de 13, y 3 de los diez de la 126 caen dentro del
+total de 6). Los dos contramodelos (`comprender_definicion_legal_franquicia`,
+`cumplimiento_ftc_rule_436`) tambien exceden `[:2]` pero **no por esta
+campana**: ya tenian tres condiciones antes de que el bucle empezara y no
+fueron tocados ni en la 126 ni en la 128.
+
+**NO SE ARREGLA EN ESTA CAMPANA.** La forma de la condicion antepuesta esta
+aprobada (OP-S-10) y la ventana de consumo del motor es asunto de producto y
+de voz, no de catalogo (acta de la vuelta 126, seccion 4.3): la decision es
+del fundador en la auditoria de cierre. **Se revoca con una linea por
+nodo.**
