@@ -42685,3 +42685,279 @@ auditoria de cierre la va a necesitar.
 
 **EL BUCLE SIGUE.** Escribo el encargo de la vuelta 124 en `docs/loop/PROMPT_SIGUIENTE.md`. **No escribo
 `PARA_ALEXIS.md`.** El numero **123 queda gastado por esta acta**.
+
+# ACTA DE LA VUELTA 124 DEL AUDITOR (28 ago 2026, fecha LEIDA DE GIT, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** `grep -n '^# ACTA DE LA VUELTA' docs/loop/ACTA_AUDITOR.md | tail -3`, corrido hoy:
+la ultima acta escrita es la de la vuelta 123 (commit `6d512a0d`) y la que audito es la 124, la
+inmediatamente siguiente. Cubro UNA vuelta y la nombro: la 124, **CINCO commits** sobre `6d512a0d`:
+`5f9b675b`, `24139e38`, `6de4feb2`, `b46e6d92` y `c5109d65`.
+
+**EL VEREDICTO DE UNA LINEA: EL SUELO DE LA VUELTA ESTA CUMPLIDO AL DIGITO Y LAS DIEZ FILAS DE LA CABECERA ME
+SALEN IDENTICAS CON MIS PROPIOS INSTRUMENTOS, PERO MI RELECTURA CIEGA DE LOS 12 PARES ABRE DOS DISCREPANCIAS Y
+NINGUNA SE COBRA HOY: VAN A RELECTURA CONJUNTA. LA PRIMERA ES DE CLASE (`auditoria_de_producto` CONTRA
+`auditoria_producto`, QUE YO LEO REPITE) Y CAE FUERA DE LO MARCADO. LA SEGUNDA ES DE SUPERVIVIENTE Y ES LA MAS
+DURA: EL REGISTRO DECLARA "EL CONTENIDO ESTA EMPATADO" Y ELIGE AL NODO PEOR CABLEADO, CONTRA EL BANCO 9.8 Y
+CONTRA LA CUARTA LINEA DE `verificacion` DE LA PROPIA `OP-S-09`. Y ADJUDICO EL DISCUTIBLE MAYOR: LA CLAUSULA
+DEL SUFIJO NUMERICO NO OBLIGA A RENOMBRAR 61 NODOS, NI HACE FALTA DOCTRINA NUEVA PARA EJECUTAR.**
+
+## 1. VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+
+**1.1 EL SELLO Y EL CICLO.** `verificar_apertura_sellada.py --vuelta 124`: **VERDE EXIT 0**, los **8** ficheros
+`SALIDA_V124_*_APERTURA.txt` nacidos todos en `5f9b675b`, hijo directo de `6d512a0d`. Sellos: apertura
+`6d512a0d`, cierre `b46e6d92` (HEAD real de hoy `c5109d65`, el commit que transporta el reporte y no puede
+sellarse a si mismo). Corri el ciclo de tres entero y en su orden (`run_phase1.py --reaplico-curaduria`,
+`etiquetas_de_cara.py --aplicar`, que reasienta 71 etiquetas, y `sync_assets_web.py`): `git diff --numstat --
+dataset/ web/ engine/` **VACIO** y `git status --porcelain` **VACIO** detras. El arbol que el ejecutor dejo es
+estable bajo el ciclo.
+
+**1.2 LAS DIEZ FILAS DE LA CABECERA, REMEDIDAS UNA A UNA.** `vuelta83_conteo_aristas.py WORK`: **3.853 /
+3.188 / 665** y **9.190 / 9.169 / 18.359 / 9.813**, `auto 0`, `nodos_con_dup_en_lista 0`. Gate 0 **OK**, y mi
+salida es **IDENTICA byte a byte** a `SALIDA_V124_GATE0_CMD1_CIERRE.txt` (`diff` tras normalizar CRLF: cero
+lineas). Motor **25/25**. `npx vitest run`: **80 passed (80)** y **1.030 passed, 3 skipped (1.033)**.
+`npx tsc --noEmit`: **EXIT 0, cero lineas**. `recomputar_marcador.py 3388`: **A 551 / B 72 / C 5 / D 2.760**,
+`huecos: []`, `dups 0`. Desfase: **1 fila**, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`.
+`tallar_cabecera_reporte.py --fase04 --vuelta 124 --comparar docs/loop/REPORTE.md`: **10 filas cotejadas,
+DISTINTAS 0, CABECERA IDENTICA AL TALLADOR**. `wc -l docs/loop/REPORTE.md`: **34**, dentro del tope de 80.
+
+**1.3 LAS BATERIAS, MEDIDAS POR MI Y ESTA VEZ SI DECLARADAS.** `cmp -s` par a par sobre las siete homologas
+apertura contra cierre: **IDENTICOS** `GATE0_CMD1` (4.970 bytes), `CONTEO` (154), `TSC` (7),
+`DESFASE_CALIBRADO` (193) y `MARCADOR` (446); **DISTINTOS** `MOTOR` y `WEB`, que traen tiempos. Coincide linea
+a linea con `SALIDA_V124_BATERIAS_CMP.txt`, **y el reporte lo dice y lo explica**, con el `numstat` de
+`dataset/ web/ engine/` en cero citado al lado. **La caida 4.1 del acta 123 queda remediada.**
+
+**1.4 LAS GUARDAS DE LA TAREA 1, CORRIDAS Y MUTADAS POR MI.** `verificar_citas_del_reporte.py`: **VERDE EXIT
+0**, 1 par cotejado. `verificar_cifras_del_plan.py`: **VERDE EXIT 0, 0 pares**, base `6d512a0d`, fila
+examinada `OP-S-09`. `verificar_titulos_normalizados.py`: **VERDE EXIT 0**, 3.188 vivos, 3.187 grupos, 1
+duplicado normalizado bajo excepcion. Las cuatro mutaciones de la casa vuelven a caer donde tienen que caer
+(`vuelta122_tarea1e_mutacion_citas.py`, `vuelta123_tarea1e_mutacion_fila_tabla.py`,
+`vuelta123_tarea1f_caso_positivo.py` en ROJO 32 contra 27, y `vuelta124_tarea1f_caso_positivo_ventana.py` con
+sus tres tramos). **Y las mutaciones que valen son las mias, porque las dos guardas nuevas son remedios de mis
+dos caidas de la 123:**
+  - **Contra el ensanche de 1.f (mi caida 4.3):** mute `OPERACIONES.jsonl` con codigo propio metiendo *"la
+    cifra real es 99 casos"* en una frase y la ruta `lib/engine/accesosResueltos.test.ts` en la SIGUIENTE,
+    dentro de la nota de `OP-S-09`. `verificar_cifras_del_plan.py --base 6d512a0d --work <mi copia>`: **ROJO
+    EXIT 1, "escribe 99, vitest da 27"**. Ese es exactamente el caso que en la 123 salia VERDE con "0 pares".
+    Y probe la ventana entera a nivel de unidad: distancia 0, 1 y 2 frases **cotejan**; distancia 3 **no
+    coteja y se lista** como "numero sin ruta en ventana"; dos rutas distintas dan **ambiguo**; y la misma
+    ruta escrita con y sin prefijo `web/` **no** fabrica un ambiguo falso. **El contrato que dicte mal ya
+    muerde.**
+  - **Contra la guarda nueva de titulos (1.g):** tres mutaciones propias en memoria. Un nodo vivo con el mismo
+    titulo en mayusculas: **ROJO**. Un TERCER miembro en el grupo de la excepcion declarada: **ROJO**, o sea
+    que la excepcion cubre el par que se declaro y no cualquier futuro miembro. El mismo duplicado pero
+    **deprecado**: **VERDE**, solo mira vivos. Y mi censo propio da **3.188 vivos, 0 duplicados exactos, 1
+    normalizado** (`sistema_responsabilidad_gerencial` / `_2`), **igual a lo que el ejecutor publico y a lo
+    que yo medi en la 123 con otro codigo**.
+
+**1.5 EL SUELO DE LA VUELTA, CONTADO CON MI CODIGO.** Reconstrui las familias desde
+`vuelta77_op_s09_nomina.py` (29 familias, 69 ids), reste la de `estructura_de_gates` por el toque unico y me
+quedan **28 familias y 67 nodos**: **18 de dos, 9 de tres, 1 de cuatro**. **C(n,2) = 51. Consecutivos = 39. No
+consecutivos = 12.** Cruce los dos registros (`SALIDA_V123_OPS09_LECTURA.jsonl`, 39 pares, y
+`SALIDA_V124_OPS09_LECTURA_RESTO.jsonl`, 12 pares): **51 pares unicos, faltan CERO, sobran CERO.** El suelo
+esta cumplido al digito y la correccion de mi propia caida 4.2 esta hecha.
+
+**1.6 ADITIVIDAD Y LIMPIEZA.** `git diff --numstat 6d512a0d HEAD`: `OPERACIONES.jsonl` **1/1**, con
+`git diff --word-diff=porcelain` borrando solo `29."}`, o sea **remision pura**; `PENDIENTES.md` **106/0**,
+con `grep -c "^-[^-]"` en **CERO**. `dataset/`, `web/` y `engine/`: **numstat vacio en toda la vuelta**,
+ningun instrumento los toco. Guiones largos o medios en lineas anadidas: **cero**. R.6 y la SEPTIMA entrada de
+la ficha `campos-sucios-dataset` estan escritas donde el encargo las pidio.
+
+## 2. MI RELECTURA CIEGA DE LOS 12 PARES
+
+Volque con codigo propio (un extractor mio que **NO abre el registro del ejecutor**) titulo, dominio, fase,
+etiqueta, resumen, pasos, entregable y aristas de los nodos de los 12 pares, **adjudique mi clase par a par, y
+solo despues destape `SALIDA_V124_OPS09_LECTURA_RESTO.jsonl`**. Empece por el discutible marcado, que es el
+REPITE que discrepa de mi propio aviso de la 123.
+
+**COINCIDEN 11 DE 12 EN LA CLASE. DISCREPA 1. Y en el unico REPITE coincido en la clase pero DISCREPO en el
+superviviente.**
+
+**2.1 LOS DIEZ QUE COINCIDEN SIN NADA QUE ANADIR.** `accion_correctiva` contra `_4` (Juran esporadica contra
+cronica, frente al Paso 6 de Crosby), `consejo_de_calidad` contra `_3` (consejo de liderazgo de Juran frente
+al paso 14 de Crosby), `capacidad_de_proceso` contra `capacidad_del_proceso` (uso estrategico desde
+planificacion frente al calculo por X-barra/R con la advertencia de no calcular sin control previo),
+`dia_cero_defectos` contra `_3`, los tres del racimo Make Certain, `clasificacion_de_seriedad_de_defectos`
+contra `clasificacion_seriedad_defectos` (indice de demeritos frente a las dos listas para acotar inspeccion),
+`cultura_justa` contra `_3` (segundas victimas, que el base no tiene) y `definiciones_operacionales` contra
+`_3` (practica de piso frente al marco de prueba, criterio y regla de decision). **CONTINUA los diez, con la
+misma vara y por mi cuenta.** Dejo dicho, como la 123, que los tres del Make Certain son **finos**: son cuatro
+resumenes del mismo programa de Crosby y se salvan por el detalle que cada uno trae, no por el angulo.
+
+**2.2 DISCREPANCIA DE CLASE, Y CAE FUERA DE LO MARCADO: `auditoria_de_producto` CONTRA `auditoria_producto`.
+YO LO LEO REPITE.** Mi caso, con los campos delante: los **cuatro** pasos de `auditoria_producto` caen uno a
+uno dentro de los **siete** de `auditoria_de_producto` (definir el proposito frente a especificacion o
+necesidad del usuario es el paso 1 del otro; elegir etapa de fabrica, distribuidor o campo es el paso 2; el
+muestreo es el paso 3; validar que lo auditado sea lo que le importa al cliente es el paso 5), y **no aporta
+ni un paso que el otro no tenga**. La salvacion por "otro momento" que yo mismo escribi como aviso en la 123
+**se cae al leer el nodo**: el propio `auditoria_de_producto` dice *"La haces en distintos momentos del
+recorrido del producto: en fabrica, en el distribuidor, en el servicio o ya en manos del cliente"*, o sea que
+**ya cubre el momento de la fase del otro**. Y el unico proposito que `auditoria_producto` anade, *"evaluar la
+efectividad de las decisiones de inspeccion"*, es **literalmente el nodo hermano** `auditoria_de_producto_2`
+(*"reinspeccion de productos ya aceptados o rechazados para verificar la adecuacion de esas decisiones"*), que
+vive y quedo CONTINUA. Cableado medido hoy: `auditoria_de_producto` **8** (5 salientes, 3 entrantes),
+`auditoria_producto` **1**. **El ejecutor lo leyo CONTINUA con una razon de contenido escrita, mecanismo
+frente a proposito, que es una lectura defendible y no una obediencia a mi aviso.** Por eso **no la cobro**:
+va a **relectura conjunta** (AUDITOR.md 1.3), con este caso escrito. Y digo la mitad que me toca: **mi aviso
+de la 123 apuntaba a la fase distinta como salvacion y hoy, leyendo el nodo entero, esa salvacion no se
+sostiene.**
+
+**2.3 EL DISCUTIBLE MARCADO: COINCIDO EN LA CLASE Y DISCREPO EN EL SUPERVIVIENTE.**
+`estrategia_de_innovacion_de_producto` contra `estrategia_innovacion_producto`: **a ciegas me salio REPITE,
+igual que al ejecutor**, y por la misma razon (el mismo plan maestro de Cooper, con cuatro de sus cinco piezas
+en pasos casi identicos; lo unico que los separa es que uno cierra en roadmap a 3-5 anos y el otro en planes
+de ataque). **Adjudico la clase a favor del ejecutor, y le doy la razon contra mi propio aviso: la fase
+distinta no sostiene un angulo de contenido.** Lo que **no** puedo adjudicarle es el superviviente:
+  - Su propia razon escribe *"aqui el contenido esta empatado"*.
+  - El **banco 9.8** dice, literal: *"A contenido empatado, DESEMPATA EL GRAFO. Sobrevive el mejor cableado"*.
+  - La **cuarta linea del campo `verificacion` de la propia `OP-S-09`** repite la regla dentro de la
+    operacion: *"las 53 familias resueltas por continua o repite, y a contenido empatado desempata el grafo"*.
+  - Cableado medido por mi hoy, contando solo vecinos VIVOS y los entrantes reales:
+    `estrategia_innovacion_producto` **14** (6 salientes, 8 entrantes reales) contra
+    `estrategia_de_innovacion_de_producto` **7** (6 salientes, 1 entrante). **El doble.**
+  - El registro **no da ninguna razon del superviviente**: la razon sostiene la clase y calla el resto.
+
+  Los otros dos REPITE de la 123 tambien eligieron al peor cableado, **pero ahi la eleccion la hizo el
+  CONTENIDO**, que es la primera frase del 9.8, y el acta 123 la ratifico leyendo los nodos. Aqui el contenido
+  esta declarado empatado por el propio registro, asi que **la segunda frase del 9.8 manda, y apunta al otro
+  lado**. Mi lectura: **superviviente `estrategia_innovacion_producto`, alias hereda
+  `estrategia_de_innovacion_de_producto`.** Comprobado ademas que ninguna otra operacion abre esos ids en
+  `nodos`, `eliminar` ni `preservar` (`OP-E-03` solo los nombra en `evidencia`), asi que **el toque unico del
+  banco 9.4 no se rompe con ninguna de las dos direcciones**. **Va a relectura conjunta, con la vara citada.**
+
+## 3. LO QUE ADJUDICO
+
+**3.1 LAS DOS DISCREPANCIAS NO SE COBRAN HOY: VAN A RELECTURA CONJUNTA, Y ES PRECEDENTE DE LA CASA.** El acta
+110 lo dejo escrito para el 28 y el 40: *"no se cobran como caida de clase: fueron a relectura conjunta y el
+ejecutor las movio el mismo dia con la regla en la mano, que es el procedimiento funcionando, no fallando"*.
+Aplico lo mismo, con la aritmetica delante: **la racha de clase o cifra publicada del ejecutor SIGUE EN CERO**
+esta vuelta, y **la 125 la cierra**. Si la relectura conjunta le da la razon, no hay caida; si la mueve con la
+regla en la mano, tampoco; si la mantiene **sin vara que la sostenga**, entonces se cobra, y se cobra en el
+acta 125.
+
+**3.2 EL DISCUTIBLE MAYOR, ADJUDICADO: NI HACE FALTA DOCTRINA NUEVA NI HAY QUE RENOMBRAR 61 NODOS. `OP-S-09`
+SE PUEDE EJECUTAR.** El ejecutor paro bien (EJECUTOR.md regla 11), pero la clausula no pide lo que el reporte
+le atribuye. Adjudico en tres piezas, **todas por extension citable**:
+  - **(a) ALCANCE.** La cuarta linea de `verificacion` (*"ningun id vivo lleva sufijo numerico de duplicado"*)
+    **se acota A LA NOMINA de la operacion**, por extension directa de la **decision del fundador del 28 ago
+    2026** (`docs/loop/paradas/2026-08-28-titulo-nafta-ops01-DECISION.md`, punto 2), que acoto una clausula de
+    la misma forma exacta en `OP-S-01` (*"ningun nodo VIVO lleva NAFTA en su id ni en su titulo"*) a la nomina
+    de esa operacion y mando el barrido global a una ficha de `PENDIENTES.md` como trabajo post campana.
+    **Medido por mi hoy con codigo propio: de los 67 ids vivos de la nomina, 27 llevan sufijo numerico; en el
+    grafo vivo entero son 49.** Los 22 de fuera van a ficha, no a la campana.
+  - **(b) QUIEN ES DUPLICADO LO DICE LA LECTURA, NO LA FORMA DEL ID.** El criterio de la operacion es
+    `MESA_RACIMOS.md` DECISION 4, **continua o repite**, que es lectura de CONTENIDO. Un nodo adjudicado
+    **CONTINUA no es un duplicado**, luego su sufijo **no es un "sufijo numerico de duplicado"** y la clausula
+    no lo toca. Con los 51 pares ya leidos (48 CONTINUA y 3 REPITE), esto resuelve 25 de los 27.
+  - **(c) EL RESIDUO ES UNO, Y SE REMITE.** Tras las fusiones queda **un solo** id vivo cuyo sufijo nombra a
+    un gemelo que acaba de morir: `eliminacion_causas_error_4`. (`dia_cero_defectos_2` conserva su sufijo
+    frente a `dia_cero_defectos`, que sigue VIVO y quedo CONTINUA, o sea que ahi el sufijo distingue a dos
+    nodos vivos; y en la familia de la estrategia ninguno de los dos lleva sufijo.) **Elegir el id nuevo de
+    ese unico caso si es juicio editorial sin regla escrita que lo derive, y por eso NO se renombra en esta
+    campana**: va anotado como trabajo post campana en la misma ficha, con el mismo instrumento que el
+    fundador uso para NAFTA. **NO invento una regla de nomenclatura: la habria tenido que crear, y crear
+    doctrina es parada.**
+
+  Con esto **la clausula queda satisfecha ejecutando las fusiones con alias**, que es lo que la operacion
+  ordena, y `OP-S-09` **no esta bloqueada**.
+
+**3.3 LO QUE NO ADJUDICO, Y LO DEJO MARCADO PARA LA AUDITORIA DE CIERRE, QUE ES DE ALEXIS.** Acoto una
+clausula de `verificacion` citando una decision del fundador de hace un dia sobre otra operacion. **Es
+extension, no doctrina, y lo digo con todas sus letras para que se pueda revocar de un plumazo**: si Alexis
+quiere la clausula literal, vuelve el renombre de los 27, y con el la regla de nomenclatura que hoy no existe.
+
+## 4. LAS CAIDAS DE ESTA VUELTA, CON SU NOMBRE
+
+**4.1 DEL EJECUTOR, DE REPORTE, Y NO ACUMULA: LOS "~61 NODOS VIVOS".** El reporte escribe *"la `verificacion`
+de OP-S-09 exige 'ningun id vivo lleva sufijo numerico de duplicado', lo que implica RENOMBRAR ~61 nodos
+vivos"*. **Medido por mi: los ids vivos de la nomina con sufijo numerico son 27, y en el grafo entero 49.
+Ninguno es 61.** El 61 es 67 menos los 6 nodos de las tres fusiones, o sea **"el resto de la nomina"**, que es
+el alcance de un `RENOMBRE_CON_ALIAS` entero y **no lo que esa clausula pide**. La cifra vive **solo en el
+reporte**, en la prosa del discutible mayor, y no mueve ningun dato: por la **letra del 27 ago 2026**
+(`paradas/2026-08-27-racha-parentesis-DECISION.md`) **se registra con su nombre y NO acumula para la racha**,
+porque no esta en tabla, ni en cabecera, ni en conclusion. **Dispara la relectura al doble del tramo.**
+
+**4.2 MIA, DE ENCARGO: DICTE DOS VARAS PARA EL MISMO ACTO.** Mi TAREA 2 pidio medir las correcciones de
+`docs/plan/` con `numstat` y borrados en cero; mi TAREA 3 abrio con *"LAS TRES GUARDAS DE TODO INSTRUMENTO QUE
+ESCRIBA en dataset/ o en docs/plan/"*. `vuelta124_tarea2a_correccion_ops09.py` escribio en
+`docs/plan/OPERACIONES.jsonl` bajo el regimen de la TAREA 2, sin simulacion ni mutacion pegadas, **igual que
+`vuelta123_tarea2a_aplicar.py` en la vuelta anterior, que mi propia acta 123 dio por buena**. O sea que la
+practica de la casa es la de la TAREA 2 y la que sobra es la letra de mi TAREA 3. **La caida es mia, de
+contrato ambiguo, y la arreglo en el encargo de abajo separando los dos regimenes por escrito.** Lo que si
+anoto sin cobrarlo: el reporte resumio la clausula como *"ningun instrumento toco dataset/"*, estrechandola en
+silencio, que es el ramal (iii); con dos varas encima de la mesa, la culpa del silencio es de quien las
+escribio.
+
+**4.3 DECLARADA Y NO CONTADA, MIA, DE PROCEDIMIENTO.** Mi primer intento de contar los pares reutilizo la
+salida de la nomina desde una ruta temporal que Python y Git Bash no resuelven al mismo sitio en esta maquina;
+salio vacia, lo vi, y **rehice la captura antes de contar nada**: **ninguna cifra de esta acta salio de esa
+corrida rota**. Y lo que dejo expresamente sin afirmar: **no corri las suites sobre `6d512a0d`**, asi que no
+digo que la apertura estuviera verde; digo que el sello es correcto y que **el estado de hoy lo mido verde
+entero**.
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: cero relecturas de unidad y cero puestos**, declarado (la fase III no mueve el cribado). Varas
+corridas por mi: el ciclo de tres entero con `numstat` y `status` vacios; Gate 0 y su `diff` byte a byte
+contra el del ejecutor; censo y aristas; las tres suites; el marcador con huecos y duplicados; el desfase; el
+tallador con `--comparar`; las tres guardas del reporte; las cuatro mutaciones de la casa; **cinco mutaciones
+propias nuevas** (una de ventana de punta a punta contra `OPERACIONES.jsonl`, una de unidad por distancia de
+frases, y tres contra la guarda de titulos); el censo propio de titulos normalizados; **el recuento propio de
+las 28 familias, los 51 pares y la cobertura de los dos registros**; **el volcado ciego de los 12 pares y su
+adjudicacion**; el cableado medido de las tres parejas REPITE; el barrido de las otras operaciones que abren
+esos ids; el `cmp` de las siete baterias; el `word-diff` y el `numstat`; y el barrido de guiones.
+
+**Caidas del ejecutor en esta tanda: CERO de clase, CERO de cifra publicada, UNA de reporte que NO acumula
+(4.1), CERO de incumplimiento de encargo. Caidas del auditor: UNA de encargo (4.2). Declaradas y no contadas:
+4.3, mia. Discrepancias abiertas y en relectura conjunta: DOS (2.2, de clase, y 2.3, de superviviente).
+Discutibles del reporte: los dos, adjudicados en 2.3 y 3.2.**
+
+**Acumulado:** **858 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase del
+ejecutor** (sin cambio), **71 de reporte del ejecutor** (70 mas la de hoy), **20 de cifra publicada del
+ejecutor** (sin cambio), **16 de expediente** (sin cambio), **14 de incumplimiento de encargo** (sin cambio),
+**2 de guarda envejecida** (sin cambio), **16 de guarda que no alcanza o cegada** (sin cambio), **8 de cifra
+del auditor** (sin cambio), **19 de acta del auditor** (sin cambio), **29 de procedimiento del auditor** (sin
+cambio), **1 de reporte del auditor** (sin cambio), **22 de encargo del auditor** (21 mas la de hoy), **2 de
+clase del auditor** (sin cambio), y **2 vueltas no entregadas enteras** (sin cambio).
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO.** Las dos discrepancias de mi ciega **no se cobran
+> hoy**, por el precedente del acta 110 citado en 3.1: van a relectura conjunta y **la 125 las cierra**.
+>
+> **REPORTE: SIGUE EN CERO de las que acumulan.** La de 4.1 se registra y **no** acumula, por la letra del 27
+> ago. **La ESCALADA de `AUDITOR.md` 1.2 se dispara en DOS y estamos en CERO: NO TOCA**, y la dejo intacta y
+> dicha para que nadie la de por gastada.
+>
+> **EL CREDITO DE LA TANDA: EL TRAMO SE RELEE AL DOBLE POR QUINTA VUELTA, Y HOY SI POR LA REGLA DURA.**
+> `AUDITOR.md` 1.2 manda el doble cuando **una discrepancia aparece FUERA de los discutibles marcados**: la de
+> 2.2 (`auditoria_de_producto`) **no estaba marcada en el reporte**, asi que el doble se aplica por su propia
+> letra y no por prudencia. Siguen vivos el tramo de la 120 con sus ramales (i) a (iv) y el (v) de la 123.
+> **Le anado el sexto, que sale limpio de 2.3:**
+> **(vi) UN SUPERVIVIENTE SE RAZONA COMO SE RAZONA UNA CLASE. Si un registro declara el contenido EMPATADO, el
+> superviviente lo decide el cableado medido (banco 9.8), y la medicion va escrita en la razon. Una razon que
+> sostiene la clase y calla el superviviente deja media decision sin vara, y la mitad callada es justamente la
+> que mata un id.**
+
+## 6. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** El discutible mayor se adjudica en 3.2 con la decision del fundador del 28 ago, `MESA_RACIMOS.md` DECISION 4 y el banco 9.8, **todo citable**; y el unico punto que SI habria pedido doctrina nueva, una regla de nomenclatura para renombrar, **se remite en vez de inventarse** |
+| contradiccion con una regla vigente o cifra publicada | **NO.** La del superviviente (2.3) se resuelve con las reglas de correccion existentes: relectura conjunta y correccion declarada |
+| decision de fundador reservada | **NO.** No se borro un nodo ni un alias, `OP-S-09` no se ejecuto, no se toco produccion, **el bucle no funde ramas**, y lo que rozaba la reserva, renombrar ids publicados, **se remite a ficha** |
+| fallo tecnico repetido | **NO.** Gate 0 y las tres suites **verdes por corrida propia**, tallador **IDENTICO**, y las cinco guardas verdes o rojas donde tocaba |
+| credito de tanda roto (clase o cifra) | **NO. SIGUE EN CERO** (3.1) |
+| credito de tanda roto (reporte) | **NO. CERO** de las que acumulan |
+| campana consumada | **NO.** De la fase 05 siguen en `LISTA` **cuatro**, leidas hoy de `OPERACIONES.jsonl`: `OP-S-09` (orden 8, 67 nodos), `OP-S-10` (orden 9, 31 nodos), `OP-S-11` (orden 11) y `OP-S-12` (orden 12) |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO SE DISPARA.** Cuatro operaciones en `LISTA` y `OP-S-09` sin ejecutar. **Aviso: esta cerca** |
+
+**OBSERVACIONES ABIERTAS Y MARCADAS.** Sigue viva la de las siete filas de `00_CODIGO` en `LISTA` con el
+codigo ya arreglado (**el campo `estado` no es la verdad de esta campana**), la de `follow/route.ts:232`, ya
+anotada en `PENDIENTES.md`, y la de la celda "duplicadas de titulo 0", que desde hoy **tiene guarda propia y
+una excepcion declarada que muerde a partir de manana**.
+
+**EL BUCLE SIGUE.** Escribo el encargo de la vuelta 125 en `docs/loop/PROMPT_SIGUIENTE.md`. **No escribo
+`PARA_ALEXIS.md`.** El numero **124 queda gastado por esta acta**.
