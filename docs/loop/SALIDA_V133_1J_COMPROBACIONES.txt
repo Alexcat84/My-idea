@@ -1,0 +1,72 @@
+== 1) tallar_cabecera_reporte --fase04 --comparar ==
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 133. Modo fase04.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.184 / 669 | **3.853 / 3.184 / 669** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 9.198 / 9.180 / 18.378 / 9.833 | **9.198 / 9.180 / 18.378 / 9.833** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| marcador del cribado `A` / `B` / `C` / `D`, `n` | 551 / 72 / 5 / 2.760, n 3.388 | **551 / 72 / 5 / 2.760, n 3.388** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 3 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **3 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `b4fd942f` (asunto real leido de git log: 'ACTA DE LA VUELTA 132 DEL AUDITOR: el trabajo entrego bien (las 129 filas de la tabla cotejadas una por una contra mi propia regla, cero canonicas torcidas, la ciega reproduce 111/108/106 y el 104 del 3.d al digito), pero la linea de identidad publica un commit de nacimiento que ninguno de los once ficheros de apertura tiene, con el instrumento imprimiendo la cifra buena delante. La racha de reporte pasa a DOS y por eso la escalada de AUDITOR.md 1.2 queda ENCARGADA como TAREA 2 bloqueante de la 133.'), HEAD real de apertura `b4fd942f` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `606d4f99` (leido de `SALIDA_V133_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  filas cotejadas: 10 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+
+FIN
+EXITCODE: 0
+
+== 2) tallar_identidad_reporte --comparar ==
+IDENTIDAD IDENTICA AL TALLADOR (vuelta 133)
+  HEAD sellado de apertura: `b4fd942f`
+  commit de nacimiento de las salidas de apertura: `ccb4d351`
+  HEAD sellado de cierre: `606d4f99`
+EXITCODE: 0
+
+== 3) verificar_citas_del_reporte ==
+VERDE: 2 par(es) cotejados en C:\Users\AlexDesk\Documents\I have an idea\docs\loop\REPORTE.md, todos cuadran.
+  linea 34: "ROJO" <-> `SALIDA_V133_2C_MUTACION_A.txt`
+  linea 34: "ROJO" <-> `SALIDA_V133_2C_MUTACION_B.txt`
+EXITCODE: 0
+
+== 4) verificar_cifras_del_plan ==
+VERDE EXIT 0: 0 pares (base b4fd942f). Filas cambiadas examinadas (0): ninguna
+EXITCODE: 0
+
+== 5) verificar_titulos_normalizados ==
+VERDE EXIT 0 (ref WORK): nodos vivos examinados 3184, grupos normalizados 3183, duplicados normalizados encontrados 1, excepciones vigentes 2
+duplicados cubiertos por excepcion:
+  'el sistema es tu responsabilidad': sistema_responsabilidad_gerencial, sistema_responsabilidad_gerencial_2
+EXITCODE: 0
+
+== 6) verificar_cierre_sellado --vuelta 133 ==
+VERDE: SALIDA_V133_HEAD_CIERRE.txt sella 606d4f99f70f638fff35929497fa41c009e8887d, un commit valido, en la rama, descendiente del acta anterior y distinto de la apertura.
+EXITCODE: 0
+
+== (extra, TAREA 2.e) verificar_cifras_del_reporte ==
+VERDE EXIT 0: 1 cifra(s) cotejadas contra su fichero de salida, todas cuadran:
+  0 pares == 0 contados en `SALIDA_V133_1E_GUARDAS.txt`
+cifra(s) sin fichero que contar (7):
+  155 lineas: 'TAREA 3, REGIMEN A puro (`docs/PENDIENTES.md`, 155 lineas anadidas, 0'
+  7 grafias: 'familia Lindstrom 7 grafias/23 nodos, canonica `(J.'
+  23 nodos: 'familia Lindstrom 7 grafias/23 nodos, canonica `(J.'
+  14 grupos: '111/108/105/104, 14 grupos 2+ (39 grafias), 90 solos, faltan 49 colapsos'
+  39 grafias: '111/108/105/104, 14 grupos 2+ (39 grafias), 90 solos, faltan 49 colapsos'
+  49 colapsos: '111/108/105/104, 14 grupos 2+ (39 grafias), 90 solos, faltan 49 colapsos'
+  67 lineas: 'Tope de 1.k: `wc -l docs/loop/REPORTE.md` da 67 lineas (<=80).'
+EXITCODE: 0
+
+== wc -l ==
+67 docs/loop/REPORTE.md

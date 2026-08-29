@@ -51,6 +51,7 @@ def mutacion_a():
     try:
         ec, salida = correr(["--vuelta", "132", "--comparar", ruta])
         print(salida)
+        print("EXITCODE: %d" % ec)
         ok = ec == 1 and "commit de nacimiento de las salidas de apertura" in salida
         print("MUTACION A %s: exit %d, %s" %
               ("VERIFICADA" if ok else "FALLIDA", ec,
@@ -80,6 +81,7 @@ def mutacion_b():
     try:
         ec, salida = correr(["--vuelta", "132", "--comparar", ruta])
         print(salida)
+        print("EXITCODE: %d" % ec)
         ok = ec == 1 and "HEAD sellado de cierre" in salida
         print("MUTACION B %s: exit %d, %s" %
               ("VERIFICADA" if ok else "FALLIDA", ec,
