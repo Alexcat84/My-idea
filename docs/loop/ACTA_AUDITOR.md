@@ -45102,3 +45102,191 @@ entregadas enteras** (sin cambio: 81, 114, 127, 129).
 **EL BUCLE SIGUE.** Escribo el encargo de la vuelta 134 en `docs/loop/PROMPT_SIGUIENTE.md`, con la
 reparacion de mi guarda cegada como TAREA bloqueante. **No escribo `PARA_ALEXIS.md`.** El numero **133
 queda gastado por esta acta**.
+
+# ACTA DE LA VUELTA 134 DEL AUDITOR (MODO AUSTERO)
+
+Sin hueco de acta: la ultima escrita es la 133 y cubre la vuelta inmediatamente anterior a esta.
+Fecha leida de git (`git log -1 --date=format`): 29 ago 2026. Rama `pasada-unica`, HEAD `5957718b`.
+
+**EL VEREDICTO DE UNA LINEA: LA VUELTA 134 ENTREGO ENTERA Y CERO CAIDAS DEL EJECUTOR. LAS TRES DE HOY
+SON MIAS, Y LA GRANDE ES LA MISMA ESPECIE QUE LA 4.4 DE AYER CON OTRA PUERTA: MI EXENCION (iii) DEJA
+QUE EL AUDITADO DESACTIVE LA GUARDA ESCRIBIENDO TRES PALABRAS, Y LO PROBE MUTANDO SU PROPIO REPORTE.**
+
+## 1. VERIFICACION, CON MIS PROPIOS INSTRUMENTOS
+
+Corri el ciclo entero de 1.b sobre arbol limpio (`run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py
+--aplicar`, `sync_assets_web.py`, `git diff --numstat -- dataset/ web/ engine/` VACIO), mas conteo,
+marcador, desfase, motor, `vitest` y `tsc`. **LAS OCHO CIFRAS DE LA CABECERA CUADRAN AL DIGITO CON MI
+REMEDICION:** censo 3.853 / 3.184 / 669; Gate 0 OK con auto-aristas 0, duplicadas 0 y divergentes 0;
+aristas 9.198 / 9.180 / 18.378 / 9.833; motor 25/25; web 80 passed (80) y 1.030 passed 3 skipped (1.033);
+tsc EXIT 0 cero lineas; marcador A 551 / B 72 / C 5 / D 2.760, huecos [] y dups 0; desfase 3 filas, las
+mismas tres. **LOS TRES ROTULOS SALEN CON HASH DISTINTO Y LA CADENA ES EXACTA**, leida de git y no del
+reporte: `04e61206` (acta 133) es el padre de `feba8006` (apertura), y `41f3e156` es el padre de
+`5957718b` (reporte). Los DIEZ `SALIDA_V134_*_APERTURA.txt` y el sello nacen todos en `feba8006`
+(`git log --diff-filter=A`, uno por uno), que es lo que publica el segundo rotulo.
+
+**REGIMEN A CONFIRMADO, CERO NODOS:** `git diff --numstat 04e61206..HEAD -- dataset/ web/ engine/` VACIO.
+Ficheros viejos que pierden linea en toda la vuelta, medidos con `awk`: **TRES**, `REPORTE.md` (59/46),
+`docs/plan/OP_S_11_MAPEO_PROPUESTO.md` (6/1) y `scripts/loop/verificar_cifras_del_reporte.py` (74/14, la
+operacion de codigo de la TAREA 2, autorizada). **Y EL 1 DE LA TABLA DEL PLAN NO ES UN BORRADO:** lei el
+diff entero; la linea vieja sobrevive caracter por caracter y solo se le anade texto detras, y
+`git diff --word-diff=porcelain | grep "^-"` da UNA sola linea que es la cabecera `--- a/...`, o sea CERO
+palabras borradas. La declaracion del reporte ("REGIMEN A CON LINEA VIEJA, word-diff porcelain 0 lineas
+borradas") es exacta. `PENDIENTES.md` 102 anadidas y 0 borradas. `OPERACIONES.jsonl` intacto al byte,
+62 LISTA y 9 HECHA: 4.e cumplida. Los `SALIDA_V133_*` sellados, intactos al byte (el efecto secundario que
+el ejecutor detecto y blindo solo, con foto de bytes, no dejo rastro). `wc -l REPORTE.md` = 80, en el tope.
+
+Guardas corridas por mi, con el codigo de salida leido del instrumento y NO detras de una tuberia: **las
+OCHO comprobaciones de 1.j VERDE EXIT 0** (cabecera IDENTICA AL TALLADOR, 10 filas 0 distintas; identidad
+IDENTICA AL TALLADOR), aristas vivas 7.296 == 7.296 PERDIDAS 0 NUEVAS 0, huerfanas TOTAL 29 HEREDADAS 29
+REPARADAS 1 FABRICADAS 0, `fusion_ops09 --autoprueba` con sus dos casos en ROJO como deben. **La bateria
+de 1.d la verifique yo leyendo los dos diff**: filtre `^[<>]` quitando duraciones y `Start at` y no quedo
+NI UNA linea de otra especie, en MOTOR ni en WEB. 8 IDENTICOS y 2 DISTINTOS, conteo movio cero aristas.
+
+**LAS DOS GUARDAS NUEVAS, ROTAS POR MI.** A `verificar_cabecera_mapeo.py` (2.f) le hice TRES mutaciones
+que el ejecutor no probo, sobre copias: (D) la cifra de cierre "14 grupos de 2+" a 19, (E) el peldano 108
+a 109, (F) "49 colapsos" a 44. **Las tres caen ROJO EXIT 1 nombrando la cifra y contraponiendo el
+recomputo.** Esa guarda ENTREGO Y MUERDE. La otra no, y va en 4.1.
+
+## 2. RELECTURA CIEGA, EMPEZANDO POR LOS DISCUTIBLES MARCADOS
+
+Corri HOY mis propios `_auditor_v133_sonda_cap.py` y `_auditor_v133_efecto_cap.py` (mios, escritos antes
+de que existiera un solo `vuelta134_*`) ANTES de abrir los scripts y las salidas del ejecutor. **MI CIEGA
+DE HOY DA: 117 de 129 no recortadas, `Cap.` 48, `Waltzing` 5; 55 grafias y 62 nodos con `, Cap.`/`, Caps.`;
+104 grupos con la cola vigente y 54 con la extendida; y las tres familias grandes al digito, Edwards
+30 grafias / 30 nodos, DeMarco y Lister 13 / 13, Hubbard 10 / 10.** Coincide con el ejecutor en TODO salvo
+los dos puntos que el marco, y esos dos los adjudico abajo. Verifique aparte, con mi propio `python -c`
+sobre `dataset/nodos/el_riesgo_eres_tu.json`, que **los acentos estan BIEN en el dato** (ni U+FFFD en
+bytes crudos ni en el texto decodificado): su 4.d es correcta y mi sospecha de la 133 queda enterrada,
+como corresponde, por medicion y no por opinion. Y verifique su 3.b entera: `git show 5eb04ca5` da la fila
+del 2.283 en `:3059`, `git show d72afc4e` la da en `:3138`, y el fichero paso de **8.183 a 8.444 lineas**.
+
+## 3. ADJUDICACIONES
+
+**3.1 DISCUTIBLE 1, 117 CONTRA 118. NINGUNO DE LOS DOS SE EQUIVOCO: EL QUE ESCRIBIO MAL FUI YO.** Aisle la
+grafia exacta que separa las dos cuentas: **`'The Field Guide to Understandin - Dekker, Sidney;'` (76
+nodos)**. Su instrumento pregunta `LOC.search(g) is None`, o sea "el localizador NO APARECE", y esa grafia
+no lo trae: la cuenta, 118. Mi sonda pregunta `recortar(g) == g`, o sea "la cola NO LA TOCA", y la cola de
+la 133 SI la toca, porque su `PUNTUACION_FINAL` le come el `;` final: 117. **Las dos mediciones son
+correctas; lo que estaba mal es la etiqueta de mi encargo,** "cuantas la cola de la 133 NO recorta", que
+nombra un predicado y admite dos. Su propia salida lleva la huella impresa: agrupa `Sidney: 1` Y
+`Sidney;: 1`, con punto y coma. **ADJUDICO: se publican LAS DOS, cada una con su predicado escrito al
+lado** (118 sin localizador reconocido / 117 que la cola deja intactas al caracter). Lo cubre por extension
+citable el ramal (xvii), cifra con unidad ambigua, mas el ramal (ix). Para la pregunta que importa, la de
+`Cap.`, las dos mediciones coinciden al digito: 48 y 5, y 55 grafias / 62 nodos con el plural.
+
+**3.2 DISCUTIBLE 2, TRES CONTRA CINCO SINTETICAS. TENIA RAZON EL EJECUTOR Y LA CIFRA EQUIVOCADA ERA LA
+MIA.** La regla de coronacion de la campana, tal como vive desde la 131 en
+`vuelta132_tabla_mapeo_propuesto.py` y la hereda `vuelta133_*`, **corta ANTES en los grupos de un solo
+miembro**: `if len(miembros) == 1: canonica = miembros[0]`, sin recorte y sin marca, y la fila sale con
+motivo `SIN AGRUPAR (pide decision)`. Un singleton NO se corona, luego no puede fabricar una canonica.
+Mi ciega SI coronaba singletons, y ahi nacio mi cinco. **La divergencia estaba latente y no se veia:** con
+la cola de la 133 las dos definiciones dan CERO, porque `Cullinane, E-Logistics, Cap. 8` no se recorta y
+por tanto cuenta como libro; solo al extender a `Cap.` se separan. **ADJUDICO 3.** Y adjudico ademas lo
+que la letra del acta 131 (3.2) dejo sin decir, porque hablaba de un grupo de tres: **la coronacion
+mecanica NO alcanza a los grupos de un solo miembro, que quedan SIN AGRUPAR y piden decision.** No es
+doctrina nueva: es lo que la propia columna de motivo de la tabla lleva publicando desde la 131.
+
+**3.3 LA EXTENSION A `Cap.`: LA ADJUDICO, Y NO POR LA CITA QUE NO EXISTE.** La 133 (3.3) la aparco porque
+el apoyo de `Apendice` (las dos formas conviviendo en la MISMA familia) aqui no esta, y **eso queda
+confirmado por partida doble**: su 4.c da 10 familias con localizador, CERO con las dos formas, 5 y 5
+DISJUNTAS, y mi medicion propia lo repite con un predicado mas estrecho. Adjudicar por analogia seria
+inventarme el apoyo, y no lo hago. **Lo adjudico por el criterio de la propia operacion**, que es cita
+vigente: `05_SANEO.md` manda que `OP-S-11` **cuente libros canonicos, no capitulos** (acta 131, 3.1:
+"dos grafias que tras recortar la cola quedan identicas son el mismo libro, y no hay lectura por la que no
+lo sean"). `Cap. 9` y `capitulo 9` son el MISMO localizador escrito de dos maneras, y
+`Edwards et al., Managing Project Risks, Cap. 2` y `..., Cap. 9` son el mismo libro bajo cualquier lectura.
+**Y por el ramal (xvi), con el efecto sobre la canonica medido y no supuesto:** las TRES canonicas que
+produce son `Edwards et al., Managing Project Risks`, `DeMarco y Lister, Waltzing with Bears` y
+`Hubbard, The Failure of Risk Management`, **las tres titulos de libro legibles** (su 4.d, una por una).
+La grafia malformada del parentesis desbalanceado **NO se corona**, por 3.2: es singleton. Queda dicho lo
+que cuesta y no se esconde: **el catalogo pasa de 104 a 54 grupos y la meta de 55 de `05_SANEO.md` queda
+rebasada por UNO.** Eso se DECLARA en el reporte de la 135; `05_SANEO.md` no se toca.
+
+## 4. CAIDAS, CON NOMBRE. LAS TRES SON MIAS
+
+**4.1 MIA, DE GUARDA CON PUERTA DE SERVICIO, Y ES LA GRANDE: ES LA 4.4 DE AYER OTRA VEZ, CON OTRA
+CERRADURA.** Mi exencion (iii) de 2.b dice que una cifra marcada con el literal `(sin instrumento)` se
+lista y no se verifica. **La escribe el auditado.** Contra el reporte real de la 134 la guarda publica
+`COBERTURA: 1 cotejadas / 3 exentas / 4 cifras`, y la unica cotejada es el `wc -l` de si misma. **Lo probe
+con tres mutaciones mias sobre copias del reporte de esta vuelta:** (A) `118 grafias` a `999 grafias`,
+**VERDE EXIT 0**; (B) `54 grupos` a `77 grupos`, **VERDE EXIT 0**; (C) una cifra nueva sin marca y sin
+fichero, **ROJO EXIT 1**. O sea: la reparacion de la TAREA 2 es REAL y muerde lo que no lleva la marca (la
+(C) lo demuestra, y es exactamente la mutacion que ayer pasaba verde), **pero las dos cifras que hoy estan
+bajo adjudicacion, 118 y 54, son inmunes, y las dos TIENEN fichero de instrumento commiteado que las
+imprime** (`SALIDA_V134_4A_CENSO_COLA.txt` dice 118, `SALIDA_V134_4B_EFECTO_CAP.txt` dice 54). **Encargue
+una guarda con una puerta que abre el vigilado.** Su reparacion va BLOQUEANTE en la 135.
+
+**4.2 MIA, DE CIFRA DEL AUDITOR.** Publique en el encargo "las canonicas SINTETICAS pasarian de 0 a
+CINCO" y liste dos singletons entre ellas. Son TRES (ver 3.2). Mi ciega se aparto de la regla de la
+campana sin que yo lo notara durante tres vueltas, porque el numero coincidia por accidente.
+
+**4.3 MIA, DE ENCARGO.** La etiqueta de mi 4.a nombraba un predicado y admitia dos, y la diferencia
+resulto ser una grafia de 76 nodos (ver 3.1). El ejecutor no podia acertar: hiciera lo que hiciera, la
+mitad de la lectura le daba la contraria.
+
+**DEL EJECUTOR: NINGUNA.** Coteje una por una las catorce afirmaciones del reporte y las catorce se
+sostienen contra mis propias corridas. Las dos discrepancias que trae venian **marcadas como discutibles y
+sin resolver por el**, que es exactamente lo que mi encargo ordenaba ("manda la tuya y declara la
+discrepancia"), y en las dos la resolucion cae de mi lado del reparto, no del suyo. Cumplio ademas las dos
+ordenes que mas facil habria sido recortar en silencio: leyo las CINCO sinteticas una por una aunque su
+propio instrumento solo marcara tres, y midio los acentos en bytes crudos en vez de creerle a la consola.
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: cero relecturas de unidad y cero puestos** (fase III, no hay pares de cribado), declarado.
+**Varas corridas por mi hoy:** el ciclo entero de 1.b; conteo, marcador, desfase, motor, `vitest`, `tsc`;
+las OCHO comprobaciones de 1.j; aristas vivas, huerfanas y `fusion_ops09 --autoprueba`; los dos diff de
+1.d leidos linea a linea con filtro; el numstat de la vuelta con `awk` y el word-diff porcelain de la
+tabla del plan; `OPERACIONES.jsonl` contado; los `SALIDA_V133_*` cotejados intactos; **mis TRES mutaciones
+contra la guarda nueva de 2.f (todas ROJO) y mis TRES contra la guarda de cifras (dos VERDE, y ese es el
+hallazgo)**; mi sonda y mi efecto propios corridos hoy; el aislamiento de la grafia `Dekker, Sidney;`; la
+lectura de los acentos en bytes crudos; y las dos verificaciones de `git show` de su 3.b.
+
+**Caidas del ejecutor: CERO, de toda especie. Caidas del auditor: UNA de guarda con puerta de servicio
+(4.1), UNA de cifra (4.2) y UNA de encargo (4.3). Discrepancias abiertas: CERO, las dos adjudicadas.**
+
+**Acumulado:** **858 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase del
+ejecutor** (sin cambio), **79 de reporte del ejecutor** (sin cambio), **20 de cifra publicada del
+ejecutor** (sin cambio), **21 de expediente** (sin cambio), **19 de incumplimiento de encargo** (sin
+cambio), **3 de procedimiento del ejecutor** (sin cambio), **2 de guarda envejecida** (sin cambio),
+**21 de guarda que no alcanza o cegada** (20 mas la 4.1 de hoy), **13 de cifra del auditor** (12 mas la
+4.2), **19 de acta del auditor** (sin cambio), **33 de procedimiento del auditor** (sin cambio), **1 de
+reporte del auditor** (sin cambio), **34 de encargo del auditor** (33 mas la 4.3), **2 de clase del
+auditor** (sin cambio), y **4 vueltas no entregadas enteras** (sin cambio: 81, 114, 127, 129).
+
+**RACHAS:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO.** Las ocho cifras de su cabecera, sus 54 grupos,
+> sus tres familias con grafias y nodos, su DISJUNTOS, sus acentos y sus dos `git show` cuadran al digito
+> con mi remedicion de hoy. El dataset y `OPERACIONES.jsonl` no se movieron un byte.
+>
+> **REPORTE: SIGUE EN CERO.** La 134 no trae ninguna. Coteje las catorce afirmaciones del cuerpo.
+>
+> **EL CREDITO DE LA TANDA: EL TRAMO SE RELEE AL DOBLE POR DECIMOQUINTA VUELTA**, y esta vez el disparo es
+> MIO, por la 4.1: dos vueltas seguidas encargando una guarda que no puede fallar donde importa.
+> Siguen los ramales (i) a (xviii). Le anado UNO, y sale de mi 4.1:
+> **(xix) UNA EXENCION QUE ESCRIBE EL AUDITADO NO ES UNA EXENCION, ES UN INTERRUPTOR. Si una guarda
+> permite que la cosa medida se declare a si misma fuera de alcance, la guarda no mide: pregunta. La
+> exencion se concede por una condicion QUE LA GUARDA PUEDA COMPROBAR SOLA (que no exista fichero de
+> instrumento en la ventana, y no que alguien escriba que no existe), y toda exencion se publica con su
+> cuenta al lado para que su crecimiento se vea.**
+
+## 6. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** 3.1 por el ramal (xvii); 3.2 por lo que la columna de motivo publica desde la 131; 3.3 por el criterio de la propia `OP-S-11` (libros, no capitulos) mas el ramal (xvi) medido |
+| contradiccion con una regla vigente o cifra publicada | **NO.** La letra del acta 131 (3.2) no se contradice, se completa: hablaba de un grupo de tres y no de singletons, y el instrumento lleva desde la 131 haciendo lo que ahora queda escrito |
+| decision de fundador reservada | **NO.** Cero borrados de contenido, alcance intacto, todo en `pasada-unica`, cero gasto fuera del repo. `05_SANEO.md` no se toca: la meta de 55 es del fundador y el rebase por uno se DECLARA |
+| fallo tecnico repetido | **NO.** Gate 0, motor, web y tsc verdes en apertura, en cierre y hoy en mi remedicion |
+| credito de tanda roto (clase o cifra del ejecutor) | **NO. SIGUE EN CERO** |
+| credito de tanda roto (reporte) | **NO. SIGUE EN CERO** |
+| campana consumada | **NO.** 62 operaciones en `LISTA` hoy, contadas |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO SE DISPARA HOY, Y LA 135 ES LA CANDIDATA. Aviso por UNDECIMA vuelta.** `OP-S-11` sigue LISTA y la regla que acabo de adjudicar todavia NO esta aplicada: esta vuelta solo se midio. Cuando la 135 la aplique y la tabla quede rehecha con sus SEIS peldanos, la mitad mecanica de `OP-S-11` se agota y lo que quede son colapsos que piden decision. Lo declaro yo en el acta 135, no el ejecutor |
+
+**EL BUCLE SIGUE.** Escribo el encargo de la vuelta 135 en `docs/loop/PROMPT_SIGUIENTE.md`, con la
+reparacion de MI exencion (iii) como TAREA bloqueante y la aplicacion de la extension a `Cap.` como
+trabajo. **No escribo `PARA_ALEXIS.md`.** El numero **134 queda gastado por esta acta**.
