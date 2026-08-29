@@ -1,0 +1,16 @@
+--- (1) copia CON el peldano 106 anadido por adicion: esperado VERDE ---
+VERDE EXIT 0: cabecera de C:\Users\AlexDesk\AppData\Local\Temp\OP_S_11_MUTADO_2F_h9ewnp0z.md cuadra con el recomputo:
+  peldanos declarados [104, 105, 106, 108, 111] == recomputados [104, 105, 106, 108, 111]
+  total 104, 2+ 14, en_grupo 39, sin_agrupar 90, sinteticas 0, colapsos 49, filas reales 129 == pie 129
+
+EXITCODE: 0
+
+--- (2) misma copia, peldano 106 BORRADO de nuevo: esperado ROJO nombrandolo ---
+ROJO, 1 cosa(s) no cuadran en la cabecera de C:\Users\AlexDesk\AppData\Local\Temp\OP_S_11_MUTADO_2F_h9ewnp0z.md:
+  peldano 106 (mas localizador con la cola VIEJA) recomputado pero NO declarado en la cabecera
+recomputado: peldanos [111, 108, 106, 105, 104], total 104, 2+ 14, en_grupo 39, sin_agrupar 90, sinteticas 0, colapsos 49, grafias 129, filas reales 129
+
+EXITCODE: 1
+
+MUTACION 2.f VERIFICADA: (1) VERDE con el 106 puesto, (2) ROJO nombrando el 106 al borrarlo, como se esperaba.
+EXITCODE: 0

@@ -54,8 +54,25 @@ CONTRATO (cerrado, para no tener que decidir nada al correrla):
     su unidad, ROJO nombrando las dos cuentas (ramal xvii hecho codigo).
   - Si no cuadra, ROJO EXIT 1 con la linea, el numero escrito, el numero
     contado y el fichero.
-  - Si un numero no encuentra fichero de salida en su ventana, NO es rojo:
-    se LISTA como "cifra sin fichero que contar" con su linea.
+  - LA SALIDA DE EMERGENCIA, ESTRECHADA EN LA VUELTA 134 (acta 133, 4.4: la
+    version vieja de esta regla se tragaba 7 de 8 cifras del reporte y la
+    escalada nacio ciega). Una cifra (numero, unidad) SIN fichero de salida
+    en su ventana (ni citado, ni citado-pero-incontable) es ROJO EXIT 1
+    nombrando la linea y la cifra, SALVO que caiga en una de estas TRES
+    exenciones, cerradas y todas:
+      (i) las cifras del parrafo de identidad y de la tabla tallada de la
+          cabecera: ya quedan fuera porque quitar_bloques_cubiertos() las
+          retira antes de parsear, asi que nunca llegan a esta funcion.
+      (ii) la cifra del tope de 1.k, que habla del propio REPORTE.md (frase
+          que trae "wc -l" y "REPORTE.md" con unidad linea/lineas): se
+          coteja con el conteo EN VIVO de lineas del propio fichero del
+          reporte, no con un SALIDA_V*.txt. Si cuadra, CUENTA COMO COTEJADA.
+      (iii) una cifra que el reporte marque explicitamente con el literal
+          `(sin instrumento)` PEGADO justo detras del numero y su unidad:
+          se LISTA APARTE, en su propia lista de "exentas por (sin
+          instrumento)", y CUENTA en la linea de COBERTURA, pero no se
+          verifica contra nada.
+    NINGUNA OTRA EXENCION.
 
 LO QUE ESTA GUARDA NO CUBRE, DICHO EN VEZ DE CALLADO: los headline de
 `docs/plan/OP_S_11_MAPEO_PROPUESTO.md` (105 grupos, 104, 39 grafias, etc.) NO
@@ -190,6 +207,24 @@ def ficheros_salida_existentes():
     return set(os.path.basename(p) for p in glob.glob(os.path.join(LOOP, "SALIDA_V*.txt")))
 
 
+def contar_lineas_del_propio_reporte(ruta_reporte):
+    """Replica `wc -l`: cuenta caracteres de nueva linea, no lineas con
+    contenido (wc -l no distingue lineas en blanco)."""
+    with io.open(ruta_reporte, "rb") as f:
+        return f.read().count(b"\n")
+
+
+def clasificar_exencion(frase, m, unidad):
+    """Devuelve 'ii', 'iii' o None. (i) no llega aqui: ya la quito
+    quitar_bloques_cubiertos() antes de parsear."""
+    resto = frase[m.end():].lstrip()
+    if resto.startswith("(sin instrumento)"):
+        return "iii"
+    if unidad in ("linea", "lineas") and "wc -l" in frase and "REPORTE.md" in frase:
+        return "ii"
+    return None
+
+
 def verificar(ruta_reporte):
     texto_completo = leer(ruta_reporte)
     texto = quitar_bloques_cubiertos(texto_completo)
@@ -198,7 +233,8 @@ def verificar(ruta_reporte):
 
     fallos = []
     cotejados = []
-    sin_fichero = []
+    exentas_sin_instrumento = []
+    total_cifras = 0
 
     for i, frase in enumerate(frases):
         for m in PATRON_NUMERO_UNIDAD.finditer(frase):
@@ -211,12 +247,30 @@ def verificar(ruta_reporte):
             if not numero_txt_norm.isdigit():
                 continue
             numero = int(numero_txt_norm)
+            total_cifras += 1
+
+            exencion = clasificar_exencion(frase, m, unidad)
+            if exencion == "iii":
+                exentas_sin_instrumento.append((numero, unidad, frase.strip()))
+                continue
+            if exencion == "ii":
+                contado_vivo = contar_lineas_del_propio_reporte(ruta_reporte)
+                if contado_vivo != numero:
+                    fallos.append(
+                        "linea %d: tope 1.k \"%d %s\" <-> `wc -l %s`: contado %d" %
+                        (i, numero, unidad, os.path.basename(ruta_reporte), contado_vivo))
+                else:
+                    cotejados.append((numero, unidad, "wc -l %s" % os.path.basename(ruta_reporte), contado_vivo))
+                continue
+
             ventana = frases[i:i + 3]
             ventana_txt = " ".join(ventana)
             citas = sorted(set(PATRON_CITA_SALIDA.findall(ventana_txt)))
             citas = [c for c in citas if c in existentes]
             if not citas:
-                sin_fichero.append((numero, unidad, frase.strip()))
+                fallos.append(
+                    "linea %d: \"%d %s\" SIN fichero de salida en su ventana (ni exenta): %r" %
+                    (i, numero, unidad, frase.strip()))
                 continue
             fichero_cita = citas[0]
             ruta_cita = os.path.join(LOOP, fichero_cita)
@@ -224,7 +278,9 @@ def verificar(ruta_reporte):
             familia = UNIDAD_A_FAMILIA[unidad]
             contado = contar_por_familia(familia, contenido_cita)
             if contado is None:
-                sin_fichero.append((numero, unidad, frase.strip()))
+                fallos.append(
+                    "linea %d: \"%d %s\" cita `%s` pero no se pudo CONTAR en el (ni exenta)" %
+                    (i, numero, unidad, fichero_cita))
                 continue
             if contado != numero:
                 # ramal (xvii): si la otra familia cotejable (fichero vs par)
@@ -245,7 +301,7 @@ def verificar(ruta_reporte):
             else:
                 cotejados.append((numero, unidad, fichero_cita, contado))
 
-    return fallos, cotejados, sin_fichero
+    return fallos, cotejados, exentas_sin_instrumento, total_cifras
 
 
 def main():
@@ -253,26 +309,30 @@ def main():
     ap.add_argument("--reporte", default=RUTA_REPORTE)
     a = ap.parse_args()
 
-    fallos, cotejados, sin_fichero = verificar(a.reporte)
+    fallos, cotejados, exentas, total_cifras = verificar(a.reporte)
+    cobertura = "COBERTURA: %d cotejadas / %d exentas / %d cifras" % (
+        len(cotejados), len(exentas), total_cifras)
 
     if fallos:
         print("ROJO, %d cifra(s) no cuadran:" % len(fallos))
         for f in fallos:
             print("  %s" % f)
-        if sin_fichero:
-            print("cifra(s) sin fichero que contar (%d):" % len(sin_fichero))
-            for numero, unidad, frase in sin_fichero:
+        if exentas:
+            print("cifra(s) exentas por (sin instrumento) (%d):" % len(exentas))
+            for numero, unidad, frase in exentas:
                 print("  %d %s: %r" % (numero, unidad, frase))
+        print(cobertura)
         return 1
 
-    print("VERDE EXIT 0: %d cifra(s) cotejadas contra su fichero de salida, todas cuadran:" %
+    print("VERDE EXIT 0: %d cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:" %
           len(cotejados))
     for numero, unidad, fichero, contado in cotejados:
         print("  %d %s == %d contados en `%s`" % (numero, unidad, contado, fichero))
-    if sin_fichero:
-        print("cifra(s) sin fichero que contar (%d):" % len(sin_fichero))
-        for numero, unidad, frase in sin_fichero:
+    if exentas:
+        print("cifra(s) exentas por (sin instrumento) (%d):" % len(exentas))
+        for numero, unidad, frase in exentas:
             print("  %d %s: %r" % (numero, unidad, frase))
+    print(cobertura)
     return 0
 
 
