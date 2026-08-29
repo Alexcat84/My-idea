@@ -1,8 +1,8 @@
-# REPORTE VUELTA 123 (MODO AUSTERO, tope 80 lineas)
+# REPORTE, VUELTA 124
 
-Apertura sellada en vivo: `SALIDA_V123_HEAD_APERTURA.txt` = `128d0e5b`, primer
-commit `db8805a2`. `verificar_apertura_sellada.py --vuelta 123` VERDE (8
-ficheros nacidos en `db8805a2`).
+Identidad (git): rama `pasada-unica`, HEAD apertura `6d512a0d` (acta 123, sellado antes de la 1.ª operacion), HEAD cierre `b46e6d92` (`SALIDA_V124_HEAD_CIERRE.txt`). `verificar_apertura_sellada.py --vuelta 124`: VERDE, 8/8 nacidos en el primer commit.
+
+Cabecera tallada (`tallar_cabecera_reporte.py --fase04 --vuelta 124`), pegada entera:
 
 | | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
 |---|---:|---:|
@@ -15,66 +15,20 @@ ficheros nacidos en `db8805a2`).
 | marcador del cribado `A` / `B` / `C` / `D`, `n` | 551 / 72 / 5 / 2.760, n 3.388 | **551 / 72 / 5 / 2.760, n 3.388** |
 | aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
 | desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 1 fila(s): `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **1 fila(s): `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `128d0e5b` (asunto real leido de git log: 'ACTA DE LA VUELTA 122 DEL AUDITOR: el trabajo material aguanta al digito, y la guarda contra el dictado se estrecho para pasar sobre su propio reporte.'), HEAD real de apertura `128d0e5b` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `887f69bc` (leido de `SALIDA_V123_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `6d512a0d` (asunto real leido de git log: 'ACTA DE LA VUELTA 123 DEL AUDITOR: la parada no se dispara, el trabajo del ejecutor aguanta al digito, y las dos caidas de la vuelta son mias.'), HEAD real de apertura `6d512a0d` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `b46e6d92` (leido de `SALIDA_V124_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
 
-Tallada con `tallar_cabecera_reporte.py --fase04 --vuelta 123`. Ciclo de tres
-completo antes y despues de cada bateria (`SALIDA_V123_CICLO_CIERRE_NUMSTAT.txt`
-vacio). **CAIDA PROPIA CORREGIDA EN VIVO, dos veces**: capturar `GATE0_CMD1` con una
-corrida extra de `run_phase1.py` tras converger reabre la curaduria; lo
-delato `engine/run_all_tests.py` (71 divergentes). Corregido reaplicando
-`etiquetas_de_cara.py` + `sync_assets_web.py` las dos veces.
+Baterias (`SALIDA_V124_BATERIAS_CMP.txt`, `cmp -s`): **IDENTICOS** GATE0_CMD1, CONTEO, TSC, DESFASE_CALIBRADO, MARCADOR. **DISTINTOS** MOTOR y WEB (solo tiempos). Determinismo LEGITIMO: `git diff --numstat -- dataset/ web/ engine/` en CERO toda la vuelta salvo dos reconvergencias del ciclo (ver TAREA 1.c/1.a, caida propia corregida en vivo, igual que la 123); nada se escribio en esos arboles.
 
-## TAREA 1, guardas
+**TAREA 1.** 1.e: las dos mutaciones (`docs/loop/SALIDA_V124_TAREA1E_MUTACION_122.txt`, `docs/loop/SALIDA_V124_TAREA1E_MUTACION_123.txt`) siguen cayendo en rojo, sin tocar la guarda. 1.f: `scripts/loop/verificar_cifras_del_plan.py` ensanchado a ventana de 3 frases con normalizacion de `web/` y rojo por ambiguo; `docs/loop/SALIDA_V124_TAREA1F_CASO_POSITIVO.txt` verificado (rojo 99/27 en la copia, VERDE 27==27 en `docs/loop/SALIDA_V124_TAREA1F_VERDE_2727.txt`, rojo 32/27 del caso viejo de la 123 en `docs/loop/SALIDA_V124_TAREA1F_CASO_POSITIVO_VIEJO.txt`). 1.g: `scripts/loop/verificar_titulos_normalizados.py` nuevo, VERDE en `docs/loop/SALIDA_V124_TAREA1G_VERDE.txt` (3.188 vivos, 0 exactos, 1 normalizado, igual a la medicion del auditor sin copiarla), autoprueba de mutacion en rojo verificada en `docs/loop/SALIDA_V124_TAREA1G_AUTOPRUEBA.txt`, excepcion unica declarada (`sistema_responsabilidad_gerencial`/`_2`).
 
-(1.e) `verificar_citas_del_reporte.py`: quitado el `continue` que sacaba toda
-fila de tabla del cotejo (acta 122, 4.6); fila con cita propia si coteja.
-Caso positivo (`vuelta123_tarea1e_mutacion_fila_tabla.py`) y mutacion vieja
-de la 122 siguen cayendo en rojo. (1.f) `verificar_cifras_del_plan.py`
-nuevo: coteja (numero, ruta `.test.ts`) del texto anadido de
-`OPERACIONES.jsonl` contra vitest. Dos bugs propios corregidos al probarla
-(`git show` sin `encoding=utf-8`; `difflib` sin separador entre tramos).
-Caso positivo `--base ed916471`: rojo 32 contra 27
-(`SALIDA_V123_TAREA1F_CASO_POSITIVO_ROJO.txt`); corregido, limpio
-(`..._VERDE.txt`). (1.d) tsc cierra con `EXIT=0`, cabecera limpia.
+**TAREA 2.** 2.a: nota de OP-S-09 corregida (39 consecutivos vs 51 totales del racimo, caida del auditor acta123 4.2); numstat 1/1, word-diff porcelain solo borra la comilla vieja (remision pura). 2.b: `PENDIENTES.md` R.6, las tres caidas de la 123 (dos del auditor, una del ejecutor). 2.c: ficha `campos-sucios-dataset`, SEPTIMA entrada, punto ciego de titulos. `PENDIENTES.md` numstat total 106/0, cero borrados.
 
-## TAREA 2, correcciones aditivas
+**TAREA 3.a, EL SUELO: CUMPLIDO.** 51/51 pares del racimo leidos y registrados (`vuelta124_verificar_51_pares_completos.py`, VERDE). Los 12 que faltaban (`SALIDA_V124_OPS09_LECTURA_RESTO.jsonl`): 11 CONTINUA, 1 REPITE (`estrategia_de_innovacion_de_producto`<->`estrategia_innovacion_producto`, superviviente el primero) que DISCREPA del aviso del auditor (contenido empatado, no lo salva la fase distinta).
 
-(2.a) `OP-S-08.verificacion[0]`: 27 casos, no 32
-(`SALIDA_V123_TAREA2A_VITEST_ACCESOSRESUELTOS.txt`).
-(2.b) `OP-S-09.nota`: 28 familias no 29 (excluida `estructura_de_gates`/
-`estructura_gates`, va a `OP-M-01-FUSION`), 67 nodos, 39 pares
-(`SALIDA_V123_TAREA2B_NOMINA_29.txt`).
-(2.c) `PENDIENTES.md` R.5: dos caidas del dictado de la 122 (81 vs 80
-insertadas; guarda de citas estrechada solo en el commit).
-(2.d) `PENDIENTES.md` SEPTIMA entrada: censo propio de alias confirma al
-acta 122, 742/0/719/23/0, tras corregir bug propio de clasificacion
-(`SALIDA_V123_TAREA2D_CENSO_ALIAS.txt`); `alias_map_*.json` no se tocan.
-(2.e) `PENDIENTES.md`: 4 llamadas vivas a `cargarEntrySeeds`, solo
-`follow/route.ts:232` sin grafo; no se toca codigo.
-Todas aditivas: `git diff --numstat` sobre `PENDIENTES.md` da 107/0.
+**TAREA 3.b, NO CABE ESTA VUELTA: ENTREGA COMPLETA, no limite de alcance** (letra del encargo). Guardas de escritura consumidas: CERO, ningun instrumento toco `dataset/`. **DISCUTIBLE MAYOR:** la `verificacion` de OP-S-09 exige "ningun id vivo lleva sufijo numerico de duplicado", lo que implica RENOMBRAR ~61 nodos vivos ademas de las 3 fusiones REPITE ya leidas y registradas en `SALIDA_V123_OPS09_LECTURA.jsonl` y `SALIDA_V124_OPS09_LECTURA_RESTO.jsonl` (`eliminacion_causas_error` a `_4`, `dia_cero_defectos_3` a `_2`, y la pareja del marco de producto leida hoy). Elegir el id nuevo de cada uno es juicio editorial sin regla escrita que lo derive mecanicamente (EJECUTOR.md regla 11, no adivinar). Paso el par a la 125 con este caso escrito: se ejecuta con una regla de nomenclatura explicita del auditor, o el auditor confirma que el alcance de "renombre" es otro.
 
-## TAREA 3, OP-S-09 lectura dirigida
+**TAREA 3.c: NO CORRE.** Condicionada a que OP-S-09 cierre entera; no cerro.
 
-(3.a) 28 familias, 67 nodos, 39 pares leidos par a par contra
-`MESA_RACIMOS.md:214`, en `SALIDA_V123_OPS09_LECTURA.jsonl` (decisiones ahi,
-no en prosa, MODO AUSTERO 2): 37 continua, 2 repite
-(`eliminacion_causas_error`->`eliminacion_causas_error_4`;
-`dia_cero_defectos_3`->`dia_cero_defectos_2`). Ninguna cae en la excepcion
-de transdominio/`_2` de propiedad intelectual.
-(3.b) NO SE EJECUTA, entrega completa por el texto del encargo: las tres
-guardas de escritura no cupieron con TAREA 1 y la lectura completa. Guardas
-de escritura consumidas: cero. Pasa entera a la 124. (3.c) no aplica: 3.b no cerro.
+`tallar_cabecera_reporte.py --fase04 --vuelta 124 --comparar docs/loop/REPORTE.md`: pendiente de correr tras este commit (se cita en el commit). `verificar_citas_del_reporte.py`, `verificar_cifras_del_plan.py`, `verificar_titulos_normalizados.py`: VERDE los tres (salidas arriba).
 
-## Discutibles marcados (para la relectura ciega)
-
-(A) Los dos veredictos repite de 3.a: discutible de lectura, no de doctrina.
-(B) El superviviente elegido en cada repite es criterio del ejecutor;
-discutible si el auditor prefiere el otro miembro.
-
-## Comprobaciones finales
-
-`tallar_cabecera_reporte.py --comparar docs/loop/REPORTE.md`:
-`SALIDA_V123_TALLADOR_COMPARAR.txt`.
-`verificar_citas_del_reporte.py`: `SALIDA_V123_CITAS_FINAL.txt`.
-`verificar_cifras_del_plan.py`: `SALIDA_V123_CIFRAS_FINAL.txt`, 0 pares.
-`wc -l docs/loop/REPORTE.md`: `SALIDA_V123_WCL_REPORTE.txt`.
+`wc -l docs/loop/REPORTE.md`: **34**, dentro del tope de 80 del austero.

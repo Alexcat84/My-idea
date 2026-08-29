@@ -1,0 +1,38 @@
+
+ROJO, 12 par(es) no cuadran (C:\Users\AlexDesk\AppData\Local\Temp\REPORTE_121_MUTADO_TAREA1E.md):
+  linea 7: NO CUADRA "ROJO" <-> `SALIDA_V121_CABECERA_TALLADA.txt`. frase: **CABECERA: NO TALLABLE ESTA VUELTA, CAIDA DEL EJECUTOR declarada, no
+tapada.** `python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta
+121` cae en ROJO: `no se pudo leer motor APERTURA` (sa
+  linea 10: NO CUADRA "EXIT 1" <-> `ACTA_AUDITOR.md`. frase: Causa: al medir la apertura corri
+`run_phase1.py --reaplico-curaduria` SOLO y meddi `MOTOR` antes de completar
+el ciclo de tres, el mismo error que `ACTA_AUDITOR.md` (lineas 7060-65 y
+23790-23820) ya 
+  linea 10: NO CUADRA "EXIT 1" <-> `SALIDA_V121_MOTOR_APERTURA.txt`. frase: Causa: al medir la apertura corri
+`run_phase1.py --reaplico-curaduria` SOLO y meddi `MOTOR` antes de completar
+el ciclo de tres, el mismo error que `ACTA_AUDITOR.md` (lineas 7060-65 y
+23790-23820) ya 
+  linea 16: NO CUADRA "25/25" <-> `SALIDA_V121_GATE0_CMD1_CIERRE.txt`. frase: Para el CIERRE si complete el ciclo ANTES
+de medir (`SALIDA_V121_GATE0_CMD1_CIERRE.txt`, luego `etiquetas_de_cara.py
+--aplicar`, luego `sync_assets_web.py`, luego las seis lecturas), y esa mitad
+SI es
+  linea 16: fichero citado no existe: `sync_assets_web.py` (afirmacion "25/25")
+  linea 43: NO CUADRA "EXIT 1" <-> `REPORTE.md`. frase: (2.b) Correccion declarada
+en R.3: el `REPORTE.md` de la 120 (`d557e431`, linea 42) aplano "ambas EXIT 1
+limpio" cuando el propio R.3 ya distinguia ROJO limpio de `ValueError` sin
+capturar.
+  linea 43: NO CUADRA "ROJO" <-> `REPORTE.md`. frase: (2.b) Correccion declarada
+en R.3: el `REPORTE.md` de la 120 (`d557e431`, linea 42) aplano "ambas EXIT 1
+limpio" cuando el propio R.3 ya distinguia ROJO limpio de `ValueError` sin
+capturar.
+  linea 49: NO CUADRA "ROJO" <-> `SALIDA_V121_OPS03_SIMULACION.txt`. frase: Cuatro menciones
+(no tres) cambiadas en los cuatro puntos exactos, `scripts/loop/vuelta121_
+tarea3a_export_gov_ops03.py` con simulacion, mutacion negativa y ROJO real en
+segunda pasada (las tres pegad
+  linea 49: fichero citado no existe: `..._MUTACION_NEGATIVA.txt` (afirmacion "ROJO")
+  linea 49: fichero citado no existe: `..._ROJO_SEGUNDA_PASADA.txt` (afirmacion "ROJO")
+  linea 53: NO CUADRA "vacio" <-> `SALIDA_V121_OPS03_ROJO_SEGUNDA_PASADA.txt`. frase: `git status
+--porcelain` vacio tras el rojo (sin escritura nueva), ver `SALIDA_V121_OPS03_ROJO_SEGUNDA_PASADA.txt`.
+  linea 54: NO CUADRA "Gate 0 verde" <-> `SALIDA_V121_OPS03_ROJO_SEGUNDA_PASADA.txt`. frase: Gate 0 verde despues.
+
+MUTACION VERIFICADA: la guarda cae en ROJO nombrando el par mutado, como se esperaba.
+EXITCODE: 0
