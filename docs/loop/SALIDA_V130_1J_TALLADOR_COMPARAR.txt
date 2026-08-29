@@ -1,0 +1,27 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 130. Modo fase04.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.184 / 669 | **3.853 / 3.184 / 669** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 9.198 / 9.180 / 18.378 / 9.833 | **9.198 / 9.180 / 18.378 / 9.833** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| marcador del cribado `A` / `B` / `C` / `D`, `n` | 551 / 72 / 5 / 2.760, n 3.388 | **551 / 72 / 5 / 2.760, n 3.388** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 3 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **3 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `e2a68845` (asunto real leido de git log: 'ACTA DE LA VUELTA 129 DEL AUDITOR: la 129 no entrego y es la cuarta de la campana, pero no fue como la 127: no hubo ni un rojo. Abrio bien y sellada, corrio las nueve guardas de la TAREA 1 verdes, escribio las dos piezas de codigo encargadas, y se apago sin commitear seis minutos y medio de trabajo bueno. Lo verifique pieza por pieza y lo rescate yo en commit propio, porque si lo commiteaba la 130 la guarda de apertura se le ponia roja. Sin doctrina nueva y sin parada.'), HEAD real de apertura `e2a68845` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `c6020899` (leido de `SALIDA_V130_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  filas cotejadas: 10 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+
+FIN

@@ -1,23 +1,27 @@
 === verificar_cierre_sellado.py --vuelta 129 (ROJO esperado, fichero ausente) ===
 ROJO, cierre de la vuelta 129 NO sellado (1 cosa(s) no cuadran):
    SALIDA_V129_HEAD_CIERRE.txt no existe en el arbol de trabajo
+EXITCODE: 1
 
 === vuelta129_tarea1h_casos_positivos.py ===
---- CASO (a): cierre = commit lateral 8f5840bc (existe, ajeno a la rama) ---
+--- CASO (a): cierre = commit lateral b7f0c50e (existe, ajeno a la rama) ---
 ROJO, cierre de la vuelta 129 NO sellado (1 cosa(s) no cuadran):
-   el commit de cierre (8f5840bc10519ba9fdf63bd646ee705d43164b67) no esta en la rama principal (git merge-base --is-ancestor da exit 1)
+   el commit de cierre (b7f0c50e5a66b7b39399ffb608e8ec838849c0eb) no esta en la rama principal (git merge-base --is-ancestor da exit 1)
 CASO (a): OK (ROJO, exit 1, 'no esta en la rama')
 
---- CASO (b): cierre = apertura, mismo hash 5e9c5c03 ---
+--- CASO (b): cierre = apertura, mismo hash 694e2a4f ---
 ROJO, cierre de la vuelta 129 NO sellado (1 cosa(s) no cuadran):
-   SALIDA_V129_HEAD_CIERRE.txt es IGUAL a SALIDA_V129_HEAD_APERTURA.txt (5e9c5c0336080427122c02e63d034b289febf808): un cierre que no avanzo sobre la apertura no es un cierre
+   SALIDA_V129_HEAD_CIERRE.txt es IGUAL a SALIDA_V129_HEAD_APERTURA.txt (694e2a4f3ffcaf9f96baf1f0624feeec3b5198fd): un cierre que no avanzo sobre la apertura no es un cierre
 CASO (b): OK (ROJO, exit 1, 'IGUAL a' la apertura)
 
 VERDE GENERAL: los dos casos positivos (a) y (b) dan el veredicto ROJO esperado.
+EXITCODE: 0
 
-=== verificar_cierre_sellado.py --vuelta 130 (precheck, ROJO esperado: SALIDA_V130_HEAD_CIERRE.txt aun no existe) ===
+=== verificar_cierre_sellado.py --vuelta 130 (precheck, ROJO esperado: SALIDA_V130_HEAD_CIERRE.txt aun no existia en ese momento) ===
 ROJO, cierre de la vuelta 130 NO sellado (1 cosa(s) no cuadran):
    SALIDA_V130_HEAD_CIERRE.txt no existe en el arbol de trabajo
+EXITCODE: 1
 
 === verificar_cierre_sellado.py --vuelta 130 (FINAL, tras escribir SALIDA_V130_HEAD_CIERRE.txt) ===
 VERDE: SALIDA_V130_HEAD_CIERRE.txt sella c602089951bf805ce9eaeedfeccc032ff1363bab, un commit valido, en la rama, descendiente del acta anterior y distinto de la apertura.
+EXITCODE: 0
