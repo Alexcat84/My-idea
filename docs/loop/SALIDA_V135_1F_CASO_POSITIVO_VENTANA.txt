@@ -1,0 +1,17 @@
+--- (1) copia mutada (99), --base 128d0e5b: esperado ROJO 99 vs 27 ---
+ROJO, 1 cosa(s) no cuadran (base 128d0e5b, work C:\Users\AlexDesk\AppData\Local\Temp\vuelta124_ops08_mut_99.jsonl):
+  OP-S-08.verificacion: escribe 99, vitest da 27, en `lib/engine/accesosResueltos.test.ts`
+
+--- (2) fichero real, --base 128d0e5b: esperado VERDE 27 == 27 ---
+VERDE EXIT 0: 1 par(es) cotejados contra vitest (base 128d0e5b), todos cuadran:
+  OP-S-08.verificacion: 27 == 27 en `lib/engine/accesosResueltos.test.ts`
+
+--- (3) caso positivo viejo de la 123, --base ed916471: esperado ROJO 32 vs 27 ---
+ROJO, 1 cosa(s) no cuadran (base ed916471, work C:\Users\AlexDesk\Documents\I have an idea\docs\plan\OPERACIONES.jsonl):
+  OP-S-08.verificacion: escribe 32, vitest da 27, en `web/lib/engine/accesosResueltos.test.ts`
+
+CASO POSITIVO VERIFICADO: la guarda cae en ROJO nombrando 32 contra 27, como se esperaba.
+
+
+CASO POSITIVO DEL ENSANCHE VERIFICADO: (1) ROJO 99/27, (2) VERDE 27==27, (3) el caso viejo de la 123 sigue ROJO 32/27.
+EXITCODE: 0
