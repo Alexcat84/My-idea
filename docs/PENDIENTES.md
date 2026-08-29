@@ -7713,3 +7713,135 @@ Registro completo en `docs/loop/SALIDA_V125_OPS09_RELECTURA_CONJUNTA.jsonl`.
   nota de `OP-S-09` en `docs/plan/OPERACIONES.jsonl` queda corregida por
   remision (correccion declarada, vuelta 124, texto viejo intacto delante).
   Ejecutado en esta vuelta (REGIMEN B).
+
+### R.8 LAS TRES CAIDAS DEL ACTA 125 (secciones 5.1, 5.2, 5.3) Y EL RAMAL
+(VII) DEL TRAMO QUE SE RELEE AL DOBLE, REGISTRO LARGO, CORRECCIONES DECLARADAS
+
+**(1) LA CAIDA DE REPORTE DE LA ETIQUETA "HEAD APERTURA", DEL EJECUTOR, QUE
+NO ACUMULA.** El reporte de la vuelta 125 llamaba "HEAD apertura 486ac73a" al
+HIJO del acta (el primer commit de la propia vuelta 125), cuando el HEAD
+SELLADO de apertura (el que estaba vigente ANTES de la primera operacion, el
+mismo que dice `docs/loop/SALIDA_V125_HEAD_APERTURA.txt`) es **c9ac2fb8**, el
+acta de la vuelta 124. La forma correcta, ya usada en el reporte de la vuelta
+124, era "HEAD apertura 6d512a0d (acta 123, sellado antes de la 1.ª
+operacion)". Vive en prosa, no mueve ninguna cifra, y por la letra del 27 ago
+2026 NO ACUMULA. Remediado en la 1.a de la vuelta 126: la linea de identidad
+del reporte ahora nombra tres cosas por separado, con rotulo fijo cada una
+("HEAD sellado de apertura", "commit de nacimiento de las salidas de
+apertura", "HEAD sellado de cierre"), todas leidas de fichero o de `git log`
+en la misma vuelta.
+
+**(2) LA CAIDA DEL AUDITOR, DE ENCARGO: LA COMPROBACION (4) DE
+`verificar_fusion_ops09.py` DICTADA EN LA 1.g DE LA 124 ERA INALCANZABLE POR
+CONSTRUCCION.** La (4) preguntaba `x == muere and resolver(x) != sup`: como
+el resolutor se construye del propio `ids_alias` del superviviente, en cuanto
+la (2) pasa (`muere` esta en `ids_alias` de `sup`), `resolver(muere)` da
+siempre `sup`, para cualquier `x` que valga `muere`. La pregunta no podia
+caer NUNCA. El auditor lo probo por mutacion propia: mutar
+`fijacion_de_metas` para que volviera a citar a `dia_cero_defectos_3` con el
+alias intacto (exactamente el fallo que la (4) dice vigilar) dio CERO
+FALLOS. Es la misma letra que `docs/plan/08_VERIFICACION.md:9` fija como
+criterio de HECHO: "correr la prueba ANTES del arreglo. Si pasa, no prueba
+nada." La (4) nunca se corrio contra un fallo real porque no podia fallar
+nunca. **ES CAIDA DEL AUDITOR, NO DEL EJECUTOR**: el ejecutor de la 125
+escribio los cinco puntos con fidelidad al dictado y corrio el unico caso
+positivo que se le pidio (borrar el alias, que prueba la (2), no la (4));
+la guarda no vio la arista huerfana porque nadie le pidio que mirara ahi.
+Remediada en la 1.g de la vuelta 126: la (4) se REEMPLAZA (no se le anade
+una sexta al lado) por el contrato de aristas heredadas del muerto, con dos
+autopruebas por mutacion y el caso rojo real sobre WORK (la nueva da ROJO
+nombrando `dia_cero_defectos_2 -> eliminacion_causas_error_4`; la vieja,
+corrida sobre el mismo WORK sin mutar nada, da VERDE).
+
+**(3) LA CAIDA DEL AUDITOR, DE CIFRA: EL CABLEADO DE `auditoria_de_producto`
+PUBLICADO COMO 8 EN EL ACTA 124 SON 7.** El acta 124 publico "8 (5 salientes,
+3 entrantes)". Son 7 (4 salientes, 3 entrantes): el quinto saliente,
+`ciclo_de_retroalimentacion_control`, esta DEPRECADO. El propio auditor
+declaro, dos parrafos mas abajo de esa misma acta, el metodo que iba a usar
+(contar solo vecinos VIVOS), y no fue el metodo con el que conto el 8: conto
+un vecino deprecado con un metodo distinto del que acababa de declarar. El
+ejecutor de la 125 midio 7 con codigo propio
+(`scripts/loop/vuelta125_medir_cableado.py`,
+`docs/loop/SALIDA_V125_OPS09_CABLEADO.txt`) y lo publico sin copiar la cifra
+vieja del auditor, que es el instrumento mandando (EJECUTOR.md, regla 2).
+
+**(4) EL RAMAL (VII) DEL TRAMO QUE SE RELEE AL DOBLE (acta 125, seccion 6),
+escrito entero:** "UNA FUSION NO ACABA CUANDO EL ALIAS QUEDA ESCRITO, SINO
+CUANDO LA ULTIMA ARISTA DEL ABSORBIDO ESTA RECONSTRUIDA. Si dos absorbidos de
+la misma operacion se citaban entre ellos, esa arista no la ve ninguna pasada
+de redireccion sobre nodos vivos, y el resolutor la sigue viendo desde el
+muerto, asi que ningun instrumento acusa. Se mide como se mide todo lo demas:
+aristas vivo-vivo antes y despues, proyectadas por el alias de hoy, y la
+resta se publica." Es el mecanismo exacto que produjo la caida (2) de esta
+misma entrada: `dia_cero_defectos_3` (absorbido) citaba a
+`eliminacion_causas_error` (absorbido en la misma operacion), y esa arista
+solo se hizo visible midiendo aristas vivo-vivo antes y despues, no
+revisando nodo por nodo. EL CONTEO TOTAL EN EL CATALOGO DE HOY QUEDA
+DECLARADO EN LA FICHA `aristas-huerfanas-por-fusion` (docs/PENDIENTES.md),
+con una DISCREPANCIA NO RESUELTA entre el contraste del auditor (39, medido
+por el auditor y explicitamente "no para copiar") y la medicion del
+ejecutor con codigo propio (32, tras reponer la de la vuelta 125): ver la
+ficha para el detalle, no se resuelve copiando ninguna de las dos.
+
+## Ficha permanente: `aristas-huerfanas-por-fusion`
+
+**NACE el 29 ago 2026 (vuelta 126, TAREA 2.c), del hallazgo del auditor en el
+acta de la vuelta 125, seccion 4.1**, sobre `OP-S-09`.
+
+### 1. QUE ES esta especie de perdida, y por que NINGUN instrumento de la
+casa la acusaba
+
+Cuando una fusion funde DOS nodos que se citaban ENTRE SI en la misma
+operacion, la pasada de redireccion de `scripts/loop/fundir_por_plan.py`
+solo reescribe las listas de los nodos que siguen VIVOS. El nodo que muere
+conserva su lista TAL COMO ESTABA (registro historico, banco 9.6), y si el
+nodo que citaba tambien murio en la misma operacion, su lista tampoco se
+toca: la arista queda escrita entre dos ids deprecados, resolviendo
+perfecto HACIA ATRAS (el resolutor la sigue viendo desde el muerto) y sin
+existir HACIA ADELANTE (ningun nodo vivo la porta). Por eso Gate 0 (valida
+estructura, no rutas), el conteo de aristas (cuenta totales, no rutas
+especificas) y el desfase del calibrado (compara contra una foto vieja de
+468 filas) no la ven: hace falta PROYECTAR el grafo vivo-vivo de un antes
+contra un despues, por el resolutor de hoy, y restar. Es lo que hace
+`scripts/loop/verificar_aristas_vivas.py` (guarda nueva, 1.h de esta
+vuelta) para un par de refs, y lo que generaliza a TODO el catalogo
+`scripts/loop/vuelta126_contar_aristas_huerfanas_totales.py`: por cada
+nodo deprecado, se leen sus dos listas historicas, se resuelven con el
+resolutor de hoy, y si el resultado es un nodo vivo distinto del propio
+superviviente del muerto, se comprueba si esa arista existe hoy entre los
+dos supervivientes. Banco 9.8 (`docs/BANCO_DE_TEXTOS.md:1841`): "cada
+arista que no se reconstruye es contenido huerfano de camino".
+
+### PRIMERA entrada (vuelta 126, TAREA 2.c): el residuo medido hoy y la
+discrepancia declarada con el contraste del auditor
+
+**Medido por el ejecutor con codigo propio**
+(`scripts/loop/vuelta126_contar_aristas_huerfanas_totales.py`,
+`docs/loop/SALIDA_V126_2C_ARISTAS_HUERFANAS_TOTALES.txt`), sobre el
+catalogo de HOY, DESPUES de reponer la arista de `OP-S-09`
+(`dia_cero_defectos_2 -> eliminacion_causas_error_4`, TAREA 3.a de esta
+misma vuelta): **32 aristas huerfanas por fusion**, todas de fusiones
+ANTERIORES a esta campana de saneo (la de `OP-S-09` ya quedo repuesta y no
+esta en esta lista).
+
+**DISCREPANCIA DECLARADA, NO RESUELTA (EJECUTOR.md, "el instrumento
+manda"):** el encargo de la vuelta 126 cita un contraste del auditor,
+medido por el auditor y explicitamente escrito "NO PARA COPIAR": 39 en
+total ANTES de la reposicion (1 de la vuelta 125, 38 de fusiones
+anteriores), lo que implicaria 38 despues de reponer la de `OP-S-09`. La
+medicion del ejecutor da **32**, no 38. La diferencia (6) no se investiga
+en esta vuelta: el metodo del ejecutor recorre CADA nodo deprecado y
+resuelve sus dos listas historicas contra el resolutor de hoy, sin
+necesitar saber en que commit especifico murio cada uno; el auditor no
+declaro su metodo exacto en el encargo (solo la cifra, como contraste), asi
+que no hay como cotejar los dos algoritmos sin su codigo. **QUEDA
+PENDIENTE DE DOCTRINA**: reconciliar el metodo del auditor con el del
+ejecutor, o aceptar que miden universos ligeramente distintos.
+
+**LAS OTRAS 32 (o 38, segun el metodo) NO SE TOCAN en esta campana**, por
+la misma letra de P.16 que dejo las 33 auto-aristas y las 1.056 duplicadas
+como pasivo historico (`docs/plan/BANCO_DEL_PLAN.md:878`): son trabajo
+POST CAMPANA, y crear su operacion de reposicion no lo decide el bucle.
+Las 32 (medidas hoy) quedan listadas integras en
+`docs/loop/SALIDA_V126_2C_ARISTAS_HUERFANAS_TOTALES.txt`, para que la
+siguiente vuelta que las toque no tenga que remedirlas desde cero.
