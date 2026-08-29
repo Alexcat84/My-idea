@@ -1,0 +1,755 @@
+FAMILIAS: 28, NODOS: 67
+
+==========================================================================================
+FAMILIA 1/28 [SUFIJO NUMERICO] (3 miembros): accion_correctiva, accion_correctiva_2, accion_correctiva_4
+==========================================================================================
+--- accion_correctiva ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Acción Correctiva (Esporádica vs Crónica)
+  etiqueta_arbol: Distingue Fallas Esporádicas y Crónicas
+  resumen_teorico: Distingue dos tipos de no conformidad. La esporádica es un cambio aislado en un proceso que normalmente funciona bien y se resuelve con troubleshooting local o proceso 8D, cuyo diagnóstico consiste en descubrir qué cambió mediante autopsia forense del producto o proceso, comparación de datos antes y después, y reconstrucción cronológica de eventos como turnos, mantenimiento o personal nuevo. El remedio suele ser revertir el cambio y restaurar el estado anterior conocido, un proceso más simple que la mejora continua. La crónica o repetidora es un desperdicio persistente que exige un proyecto formal de mejora de calidad con análisis de causa raíz o metodologías Six Sigma, porque no basta con volver atrás: hay que rediseñar la condición base del proceso.
+  pasos_accionables: ["Clasificar la no conformidad como esporádica o crónica según su recurrencia.", "Para casos esporádicos, hacer una autopsia forense del producto o proceso y comparar datos antes y después del problema.", "Reconstruir la cronología de eventos como cambios de turno, mantenimiento o personal nuevo para formular y descartar teorías de causa.", "Restaurar el proceso al estado previo una vez identificada la causa y verificar que el ajuste sea predecible y accesible.", "Para casos crónicos, organizar un proyecto formal de mejora de calidad con análisis de causa raíz o Six Sigma."]
+  entregable_esperado: Plan de acción correctiva documentado con cronología de eventos si es esporádico, o esquema de proyecto de mejora si es crónico.
+  ids_alias: ['accion_correctiva_diagnostico_remedio']
+  merged_originals: ['accion_correctiva_diagnostico_remedio']
+
+--- accion_correctiva_2 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Acción Correctiva (De la Detección a la Prevención)
+  etiqueta_arbol: Actúa, No Solo Detectes
+  resumen_teorico: No es lo que encuentras, es lo que haces con lo que encuentras. Toda la planificación, inspección y medición del departamento de calidad es inútil si no conduce a prevenir la recurrencia de un problema. El verdadero valor de la ingeniería de calidad está en aprender del pasado para construir un futuro más fluido, mediante observación de rechazos reales y análisis de tendencias.
+  pasos_accionables: ["Observar rechazos reales y analizarlos como evidencia directa de fallas", "Realizar análisis de tendencias para detectar problemas menos obvios", "Determinar la causa raíz sistémica, no solo culpar a individuos", "Implementar cambios que prevengan la recurrencia del problema, no solo su corrección puntual"]
+  entregable_esperado: Sistema de acción correctiva con causas raíz documentadas y medidas preventivas implementadas
+  ids_alias: None
+  merged_originals: None
+
+--- accion_correctiva_4 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Acción Correctiva (Paso 6)
+  etiqueta_arbol: Habla y Corrige tus Problemas
+  resumen_teorico: A medida que los empleados hablan abiertamente de sus problemas, surgen oportunidades de corrección más allá de los defectos detectados por inspección. Estos problemas deben tratarse en reuniones de supervisión en cada nivel, y escalarse formalmente si no pueden resolverse en el nivel inicial.
+  pasos_accionables: ["Establecer reuniones regulares de supervisión para tratar problemas de calidad", "Escalar problemas no resueltos al siguiente nivel jerárquico", "Crear reuniones formales en departamentos que no las tengan", "Dar seguimiento visible a la resolución de problemas"]
+  entregable_esperado: Sistema formal de reuniones de acción correctiva funcionando en todos los niveles.
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 2/28 [PARTICULAS] (3 miembros): auditoria_de_producto, auditoria_de_producto_2, auditoria_producto
+==========================================================================================
+--- auditoria_de_producto ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Revisión independiente de tu producto terminado (auditoría de producto)
+  etiqueta_arbol: Compara tu Producto contra la Realidad
+  resumen_teorico: Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Puedes hacerla al azar, para tener una imagen sin sesgo de la calidad general, o enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no coincide con lo que realmente le importa al cliente, para no confiarte de un número interno alto (por ejemplo, una calificacion del 98%) mientras en la calle el producto sigue fallando.
+  pasos_accionables: ["Define si vas a comparar contra tus propias especificaciones o contra lo que el usuario realmente necesita", "Elige en que momento revisas: fabrica, distribuidor, servicio o ya en campo, según que tan complejo sea tu producto", "Decide cuantas unidades vas a revisar, usando un método estadistico o una regla practica como revisar un porcentaje pequeño de lo que produces por turno", "Diseña que vas a mirar en cada revisión: si sera al azar o enfocada en un problema que ya conoces", "Compara lo que encuentras con quejas de clientes o con lo que ves en el mercado, para confirmar que estas midiendo lo que de verdad importa", "Clasifica cada falla según su gravedad, de critica a incidental, y calcula un indice de fallas por unidad", "Compara tus resultados a lo largo del tiempo y frente a tu competencia para detectar si algo esta empeorando"]
+  entregable_esperado: Tu informe de revisión con un indice de fallas por unidad, la gravedad de cada falla y la comparacion con lo que pasa en campo o en el mercado
+  ids_alias: None
+  merged_originals: None
+
+--- auditoria_de_producto_2 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Auditoría de Producto (Reinspección para Verificar Decisiones)
+  etiqueta_arbol: Reinspecciona tus Decisiones de Calidad
+  resumen_teorico: La auditoría de producto consiste en la reinspección de productos ya aceptados o rechazados para verificar la adecuación de esas decisiones de inspección. Aunque en teoría no debería ser necesaria si el sistema de calidad funciona correctamente, en la práctica se justifica por quejas de campo. Puede realizarse en cada estación de inspección o después del ensamblaje final.
+  pasos_accionables: ["Seleccionar puntos de control (estaciones de inspección o ensamblaje final) para la auditoría", "Reinspeccionar una muestra de productos ya clasificados como aceptados o rechazados", "Verificar la consistencia entre la decisión original y el resultado de la reinspección", "Registrar discrepancias y retroalimentar al proceso de inspección original"]
+  entregable_esperado: Informe de auditoría de producto con tasa de discrepancias entre inspección original y reinspección
+  ids_alias: None
+  merged_originals: None
+
+--- auditoria_producto ---
+  dominio: quality | fase_proyecto: validacion | deprecado: False
+  titulo_concepto: Auditoría de Producto (Aptitud de Uso y Conformidad)
+  etiqueta_arbol: Verifica que tu Producto Sirva
+  resumen_teorico: La auditoría de producto es una evaluación independiente de la calidad de un producto para determinar su aptitud de uso y conformidad con especificaciones, realizada después de las inspecciones regulares. Sus propósitos incluyen estimar el nivel de calidad entregado al cliente, evaluar la efectividad de las decisiones de inspección, y proporcionar aseguramiento adicional. Es crítico que el alcance del muestreo refleje realmente las características importantes para el cliente, no solo lo fácil de medir.
+  pasos_accionables: ["Definir el propósito de la auditoría de producto (estimar calidad entregada, evaluar inspección, etc.)", "Seleccionar la etapa de evaluación más económica y representativa (fábrica, distribuidor, campo)", "Validar que las características auditadas correspondan a lo que realmente importa al cliente (contrastar con estudios de mercado)", "Tomar muestras representativas de productos terminados para verificar conformidad y aptitud de uso"]
+  entregable_esperado: Reporte de auditoría de producto con nivel de calidad estimado y comparación con necesidades del cliente
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 3/28 [SUFIJO NUMERICO] (2 miembros): triple_bottom_line, triple_bottom_line_2
+==========================================================================================
+--- triple_bottom_line ---
+  dominio: environmental | fase_proyecto: ideacion | deprecado: False
+  titulo_concepto: Los tres resultados que debes cuidar: dinero, planeta y personas (Triple Bottom Line)
+  etiqueta_arbol: Persigue Ganancia, Planeta y Gente
+  resumen_teorico: Tu negocio puede perseguir al mismo tiempo tres resultados: uno económico sólido, uno ambiental (contaminar lo menos posible y usar los recursos naturales con responsabilidad) y uno social (buenas condiciones laborales, diversidad, pago justo). La sostenibilidad de verdad significaría eliminar todo el desperdicio y las emisiones, y consumir solo recursos renovables que se gestionan sin agotar sus reservas, aunque casi ningún negocio se acerca a ese ideal. Por eso la meta práctica es que tu negocio pueda crecer sin que su impacto ambiental crezca al mismo ritmo.
+  pasos_accionables: ["Define tus propios indicadores para los tres resultados: económico, ambiental y social", "Haz un diagnóstico de dónde estás hoy en cada uno de esos tres frentes", "Fija metas para que tu negocio crezca sin que su impacto ambiental crezca igual", "Elige qué iniciativas priorizar según cómo equilibran las tres dimensiones"]
+  entregable_esperado: Un marco propio de indicadores con los tres resultados (económico, ambiental, social) adaptado a tu negocio
+  ids_alias: None
+  merged_originals: None
+
+--- triple_bottom_line_2 ---
+  dominio: environmental | fase_proyecto: ideacion | deprecado: False
+  titulo_concepto: Enfoque de Triple Bottom Line
+  etiqueta_arbol: Suma lo Social a tu Impacto
+  resumen_teorico: Enfoque de sostenibilidad que amplía el análisis más allá de lo ambiental para incluir preocupaciones sociales, tales como salarios y beneficios de trabajadores, diversidad, desarrollo comunitario, derechos laborales, trabajo infantil, derechos humanos, seguridad laboral, ética y salud. Este enfoque busca balancear el desempeño económico, ambiental y social de la empresa.
+  pasos_accionables: ["Identificar issues sociales relevantes para la empresa (más allá de los ambientales)", "Evaluar prácticas laborales, de diversidad y de derechos humanos en la cadena de valor", "Integrar métricas sociales junto con las ambientales en el análisis de sostenibilidad"]
+  entregable_esperado: Un mapeo de issues sociales relevantes complementario al análisis ambiental
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 4/28 [SUFIJO NUMERICO] (2 miembros): ciclo_ventas_calidad_franquicia, ciclo_ventas_calidad_franquicia_2
+==========================================================================================
+--- ciclo_ventas_calidad_franquicia ---
+  dominio: franquicias | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Ciclo de Ventas-Calidad de la Franquicia
+  etiqueta_arbol: Apoya al Franquiciado tras la Venta
+  resumen_teorico: Vender franquicias es solo la mitad de la batalla. Necesitas un concepto sólido y una estructura competitiva que atraiga interés mediante marketing y un proceso de venta efectivo, pero también debes ser selectivo al elegir franquiciados y darles las herramientas y el apoyo necesarios para que tengan éxito. Esto genera 'validación': comentarios positivos de franquiciados actuales que influyen en futuros compradores y refuerzan la percepción de que tu concepto es excelente, retroalimentando así nuevas ventas y el crecimiento desde tu propia base existente. El ciclo puede romperse en cualquier punto de la cadena, y el factor más importante de tu éxito como franquiciador es el éxito real de tus franquiciados.
+  pasos_accionables: ["Diseña un concepto sólido y una estructura de franquicia competitiva antes de vender.", "Invierte en marketing y materiales de venta que comuniquen ese concepto con claridad.", "Establece criterios de selección rigurosos para aceptar nuevos franquiciados.", "Diseña un sistema de soporte y capacitación robusto para después de la venta.", "Mide y monitorea la satisfacción y validación de tus franquiciados actuales.", "Usa a tus franquiciados exitosos como referencias activas para atraer nuevas ventas y expandir unidades."]
+  entregable_esperado: Sistema documentado que conecte selección, soporte y validación de franquiciados como ciclo continuo de crecimiento sostenible.
+  ids_alias: ['ciclo_venta_calidad_franquicia']
+  merged_originals: ['ciclo_venta_calidad_franquicia']
+
+--- ciclo_ventas_calidad_franquicia_2 ---
+  dominio: franquicias | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: El Ciclo de Ventas-Control de Calidad de Franquicias
+  etiqueta_arbol: Domina los Seis Factores de Venta
+  resumen_teorico: Las ventas de franquicias son un juego de números que depende de seis factores: concepto y propuesta de valor, oferta/estructura, plan de marketing, mensaje y materiales, gasto publicitario, y proceso de ventas. El factor más importante para el éxito de ventas a largo plazo es la validación del franquiciado, por lo que la pregunta clave no es 'qué tan rápido puedo vender' sino 'qué tan rápido DEBERÍA vender'.
+  pasos_accionables: ["Auditar los seis factores del ciclo de ventas de forma periódica", "Priorizar el concepto y la propuesta de valor como base del éxito de ventas", "Medir el ritmo de ventas en función de la capacidad de soporte y éxito del franquiciado", "Evitar vender más rápido de lo que el sistema puede sostener con calidad"]
+  entregable_esperado: Panel de control con los 6 factores de venta monitoreados y ritmo de venta sostenible definido
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 5/28 [PARTICULAS] (2 miembros): conciencia_calidad, conciencia_de_calidad_2
+==========================================================================================
+--- conciencia_calidad ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Conciencia de Calidad (Paso 5)
+  etiqueta_arbol: Comparte el Costo Real
+  resumen_teorico: Este paso consiste en compartir con todos los que trabajan contigo las mediciones sobre lo que realmente cuesta la no calidad, para que entiendan el impacto económico de los errores. Se apoya en la capacitación de quienes supervisan y en materiales visibles como folletos, videos o carteles. No es un esquema de motivación rápida ni una campaña pasajera, sino un proceso genuino de compartir información que cambia actitudes hacia la calidad de forma duradera. Es clave extender esta comunicación más allá de producción, incluyendo también a personal administrativo y de servicio, y convertir el hablar de calidad en una conversación habitual y positiva, no en un evento aislado.
+  pasos_accionables: ["Capacita a tus supervisores para que orienten a sus equipos sobre el costo real de la no calidad", "Produce material de comunicación visible como posters, videos o folletos", "Incluye a personal administrativo y de servicio en la comunicación, no solo a producción", "Fomenta el hábito de hablar positiva y regularmente sobre calidad con tu equipo"]
+  entregable_esperado: Programa de comunicación interna sobre calidad implementado en todos los niveles, con supervisores capacitados.
+  ids_alias: ['conciencia_de_calidad']
+  merged_originals: ['conciencia_de_calidad']
+
+--- conciencia_de_calidad_2 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Conciencia de Calidad (Elevar la Preocupación Personal)
+  etiqueta_arbol: Eleva la Preocupación Personal
+  resumen_teorico: Es el paso destinado a elevar la preocupación personal de todo el personal hacia la conformidad del producto o servicio y la reputación de calidad de la empresa. Se logra mediante dos elementos: reuniones regulares entre supervisores y empleados para discutir problemas específicos de no conformidad, y comunicación constante (afiches, boletines, eventos) que refuerce el mensaje de que la empresa toma en serio la calidad. Es un proceso de bajo perfil pero constante, sin inicio ni fin definido, que prepara a la organización para el compromiso posterior con Cero Defectos.
+  pasos_accionables: ["Organizar reuniones regulares entre supervisores y sus equipos para discutir problemas de no conformidad específicos", "Establecer comunicación visual (afiches, boletines internos, eventos) que refuerce el mensaje de calidad", "Asegurar que cada supervisor transmita el mensaje directamente a su gente, no mediante una sola reunión masiva", "Mantener consistencia y cumplir las promesas hechas en las reuniones", "Involucrar a relaciones públicas y personal para apoyar la logística de la campaña de conciencia"]
+  entregable_esperado: Un calendario de reuniones periódicas por departamento y material de comunicación visual (afiches, boletines) desplegado en la planta
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 6/28 [SUFIJO NUMERICO] (3 miembros): consejo_de_calidad, consejo_de_calidad_2, consejo_de_calidad_3
+==========================================================================================
+--- consejo_de_calidad ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Consejo de Calidad (Liderazgo y Selección de Proyectos de Juran)
+  etiqueta_arbol: Elige tus Proyectos de Mejora
+  resumen_teorico: Es la instancia donde tu, junto con las personas que te ayudan a llevar el negocio, decides que proyectos de mejora vale la pena impulsar, evaluas su avance y asignas los recursos necesarios: capacitación, tiempo, personas. Es la forma en que tu, como responsable del negocio, lideras personalmente las iniciativas de calidad en lugar de delegarlas por completo.
+  pasos_accionables: ["Reune a las personas clave de tu negocio para formar este espacio de decisión, idealmente miembros del comité de alta dirección, presidido por el máximo responsable del nivel correspondiente", "Capacitense en el método de mejora de calidad que van a usar", "Identifica y prioriza los problemas mas importantes, por ejemplo con un análisis de Pareto", "Elige los proyectos a trabajar y define con claridad el problema y la meta de cada uno", "Asigna los recursos necesarios: capacitación, personas, tiempo y acompañamiento", "Revisa el avance de cada equipo y reconoce los logros, con métricas de progreso y la remoción de obstáculos", "Publicar y comunicar las responsabilidades del consejo a toda la organización", "Establecer políticas de enfoque al cliente y continuidad del breakthrough", "Vincular consejos corporativos con consejos divisionales o locales si la organización es grande", "Incluir al director de calidad como miembro del consejo", "Redactar una carta constitutiva con responsabilidades claras del consejo"]
+  entregable_esperado: Un espacio de decisión activo, con proyectos priorizados y equipos con recursos asignados
+  ids_alias: ['consejo_calidad', 'consejo_calidad_2']
+  merged_originals: ['consejo_calidad', 'consejo_calidad_2']
+
+--- consejo_de_calidad_2 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Consejo de Calidad (Red Autogestionada de Profesionales, Crosby)
+  etiqueta_arbol: Autogestiona tu Consejo de Calidad
+  resumen_teorico: El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (supervisores, encargados de calidad, personal operativo) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbolicas (como pagar cada quien sus propias bebidas) para preservar su autonomia. Sirve como espacio de comunicación entre tu y el personal operativo, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.
+  pasos_accionables: ["Formar el consejo de calidad con representantes voluntarios de distintas areas operativas.", "Permitir que el consejo elija su propia dirección, independiente de la jerarquia formal.", "Programar reuniones periodicas donde puedas presentar avances y responder preguntas abiertamente.", "Mantener la autonomia del consejo respecto a ti (por ejemplo, financiamiento propio de actividades sociales) para preservar su caracter genuino."]
+  entregable_esperado: Consejo de calidad operativo con estructura propia, reuniones regulares contigo y canal abierto de comunicación bidireccional.
+  ids_alias: None
+  merged_originals: None
+
+--- consejo_de_calidad_3 ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Consejos de Calidad (Quality Councils)
+  etiqueta_arbol: Comparte Experiencias entre Consejos
+  resumen_teorico: Los consejos de calidad son estructuras organizacionales formadas por representantes de la mejora de calidad de distintas áreas, que se reúnen para compartir experiencias, coordinar iniciativas y sostener el impulso del programa de mejora en el largo plazo. Constituyen el último paso del programa de 14 pasos y aseguran que la mejora de calidad se convierta en parte permanente de la cultura organizacional ('hazlo de nuevo').
+  pasos_accionables: ["Conformar el consejo con representantes de las distintas áreas de mejora", "Establecer una periodicidad de reuniones para compartir avances", "Coordinar la repetición del ciclo de mejora de calidad", "Institucionalizar el consejo como parte de la estructura permanente"]
+  entregable_esperado: Consejo de calidad establecido con reuniones periódicas y mecanismo de repetición del ciclo de mejora
+  ids_alias: ['consejos_calidad', 'consejos_de_calidad_2']
+  merged_originals: ['consejos_calidad', 'consejos_de_calidad_2']
+
+==========================================================================================
+FAMILIA 7/28 [SUFIJO NUMERICO] (2 miembros): costo_de_calidad, costo_de_calidad_3
+==========================================================================================
+--- costo_de_calidad ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Costo de la Calidad (Marco de Análisis Financiero)
+  etiqueta_arbol: Traduce Calidad a Dinero
+  resumen_teorico: El Costo de la Calidad es una forma de traducir los problemas de calidad (inventarios excesivos, defectos, retrabajo, faltantes) en dinero, en términos que tú puedas entender y usar para decidir. Al revisar cada mes cosas como el crecimiento del inventario o la caída de ventas, buscas conectar tus decisiones del día a día con su impacto económico real, para priorizar qué corregir primero según lo que realmente te cuesta, no solo según lo que te parece grave.
+  pasos_accionables: ["Arma una revisión mensual de tu negocio con números financieros y operativos juntos.", "Calcula cuánto te cuestan los inventarios excesivos, los defectos y el retrabajo.", "Compara esas cifras contra lo que tenías presupuestado y detecta si hay costos evitables que van en aumento.", "Define qué parte de tu negocio (compras, control de materiales, ventas) va a investigar y corregir cada desviación.", "Usa el costo de calidad como argumento concreto para decidir si vale la pena invertir en prevenir estos problemas."]
+  entregable_esperado: Un reporte mensual de costo de calidad que conecte tus indicadores operativos con su impacto en el dinero, para tener el número claro antes de decidir.
+  ids_alias: None
+  merged_originals: None
+
+--- costo_de_calidad_3 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Paso 4: Costo de la Calidad
+  etiqueta_arbol: Cuantifica el Costo de Hacerlo Mal
+  resumen_teorico: El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, sumando también fallos internos, fallos externos, prevención y evaluación. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Crosby marca como referencia que no debería superar el 2.5% al 4% de las ventas; si estás muy por encima, hay una oportunidad clara de ahorro. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.
+  pasos_accionables: ["Dale a quien te lleva las cuentas información detallada sobre qué constituye el costo de calidad", "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, auditorías, cambios de ingeniería, fallos internos, fallos externos, prevención y evaluación, incluyendo tu tiempo o salario, sin minimizar cifras", "Calcula el costo de calidad total como porcentaje de tus ventas y compáralo con el estándar de referencia del 2.5% al 4%", "Usa las cifras para priorizar acciones correctivas enfocadas en prevención más que en inspección", "Establece una meta de reducción progresiva del costo de calidad", "Convierte este cálculo en una medición recurrente de cómo va tu gestión de calidad"]
+  entregable_esperado: Reporte desglosado por categoría del costo de calidad actual, elaborado por quien te lleva las cuentas, expresado como porcentaje de tus ventas y con una meta de reducción definida.
+  ids_alias: ['costo_de_calidad_4', 'costo_de_calidad_2']
+  merged_originals: ['costo_de_calidad_4', 'costo_de_calidad_2']
+
+==========================================================================================
+FAMILIA 8/28 [PARTICULAS] (3 miembros): capacidad_de_proceso, capacidad_de_proceso_2, capacidad_del_proceso
+==========================================================================================
+--- capacidad_de_proceso ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Capacidad de Proceso
+  etiqueta_arbol: Mide la Capacidad de tu Proceso
+  resumen_teorico: La capacidad de proceso mide la uniformidad inherente de un proceso para producir dentro de especificaciones. Se cuantifica desde la etapa de planificación y sirve para decidir sobre la adecuación de procesos, elección de alternativas, necesidad de rediseño y, en control, para definir la frecuencia de medición y mantenimiento: a mayor estabilidad, menor necesidad de medición frecuente.
+  pasos_accionables: ["Recolectar datos históricos de desempeño del proceso", "Calcular índices de capacidad (uniformidad) del proceso frente a especificaciones", "Usar los resultados para decidir frecuencia de medición y mantenimiento", "Determinar si el proceso requiere rediseño o si es apto para producción"]
+  entregable_esperado: Análisis de capacidad de proceso con recomendación sobre frecuencia de control y necesidad de ajuste
+  ids_alias: None
+  merged_originals: None
+
+--- capacidad_de_proceso_2 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Capacidad de Proceso mediante Monitoreo Estadístico
+  etiqueta_arbol: Monitorea tu Proceso en el Tiempo
+  resumen_teorico: Cada unidad estudiada (un operador humano, una máquina o un sistema) debe ser monitoreada durante un período de tiempo para determinar su capacidad de proceso: lo que puede hacer predeciblemente bajo las condiciones actuales. Esta capacidad usualmente puede determinarse en unos tres meses mediante cartas de control. Si la dirección determina que la capacidad del proceso no está dentro de límites aceptables, debe actuar sobre el proceso o sistema, ya que la calidad no puede exceder la capacidad del sistema y no puede ser inspeccionada dentro del producto, debe ser construida en él.
+  pasos_accionables: ["Seleccionar la unidad a estudiar (persona, máquina, sistema)", "Recolectar datos de desempeño durante un período representativo (aprox. 3 meses)", "Construir cartas de control (run charts, control charts) para visualizar variación", "Determinar si el proceso está dentro de límites aceptables", "Si no lo está, intervenir sobre el sistema (no sobre el individuo)"]
+  entregable_esperado: Carta de control con límites de capacidad del proceso y decisión de intervención documentada
+  ids_alias: None
+  merged_originals: None
+
+--- capacidad_del_proceso ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Capacidad del Proceso
+  etiqueta_arbol: Calcula lo que tu Proceso Rinde
+  resumen_teorico: Una vez que un proceso está en control estadístico, tiene una capacidad definible y predecible: se puede calcular qué especificaciones puede cumplir de forma sostenida usando la media y el rango de los gráficos X-barra y R. Es un error común calcular capacidad tomando muestras arbitrarias sin antes verificar que el proceso esté en control.
+  pasos_accionables: ["Verificar primero que el proceso esté en control estadístico (gráfico de corridas o X-barra/R)", "Calcular la media y el rango promedio del proceso estable", "Determinar la capacidad usando las fórmulas estándar (constantes d2, A2, etc.)", "Comunicar la capacidad real a diseño e ingeniería para ajustar especificaciones realistas"]
+  entregable_esperado: Informe de capacidad del proceso con límites naturales de variación calculados a partir de datos en control estadístico.
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 9/28 [SUFIJO NUMERICO] (2 miembros): desarrollar_caracteristicas_proceso, desarrollar_caracteristicas_proceso_2
+==========================================================================================
+--- desarrollar_caracteristicas_proceso ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Desarrollar las Características del Proceso
+  etiqueta_arbol: Define las Características del Proceso
+  resumen_teorico: Quinto paso del modelo: identificar y seleccionar los procesos (actuales o alternativos) capaces de producir las características definidas para el producto. Principio clave: la capacidad del proceso debe reconciliarse con los requisitos del producto; la variación proviene de los procesos, las metas provienen de las personas.
+  pasos_accionables: ["Listar los procesos posibles capaces de generar cada característica del producto", "Evaluar la capacidad actual de los procesos frente a los requisitos definidos", "Seleccionar el proceso óptimo con su justificación", "Establecer metas de proceso alineadas con las metas de producto"]
+  entregable_esperado: Selección documentada del proceso (o procesos) con metas de capacidad alineadas a los requisitos del producto
+  ids_alias: None
+  merged_originals: None
+
+--- desarrollar_caracteristicas_proceso_2 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Cómo diseñar el proceso para crear y entregar tu producto
+  etiqueta_arbol: Diseña cómo Entregarás tu Producto
+  resumen_teorico: Una vez que tienes listo el diseño de tu producto, tienes que definir el proceso con el que lo vas a crear y entregar de forma continua. Este desarrollo incluye 11 actividades, desde revisar las metas del producto hasta publicar el diseño final del proceso, asegurándote de que sea orientado a metas, sistemático, capaz y legítimo.
+  pasos_accionables: ["Revisa las metas de calidad de tu producto junto con quienes te ayuden a diseñar el proceso", "Identifica las condiciones de operación: cómo entiende el usuario tu producto, cómo lo usa en la realidad y en qué entorno lo usa", "Reúne información sobre los procesos alternativos que tienes disponibles", "Elige el diseño general del proceso usando diagramas de flujo de alto nivel", "Identifica las características y metas detalladas del proceso y optimízalas", "Establece la capacidad del proceso y publica el diseño final"]
+  entregable_esperado: Un diagrama de flujo de proceso de alto nivel con las 11 actividades de desarrollo documentadas y aprobadas
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 10/28 [SUFIJO NUMERICO] (2 miembros): eliminacion_causas_error, eliminacion_causas_error_4
+==========================================================================================
+--- eliminacion_causas_error ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Eliminación de Causas de Error (Paso 11)
+  etiqueta_arbol: Reporta tus Obstáculos de Calidad
+  resumen_teorico: Los empleados describen en un formulario simple cualquier problema que les impida realizar trabajo libre de errores. No es un sistema de sugerencias: solo se lista el problema, y el grupo funcional apropiado desarrolla la solución. Los problemas deben ser reconocidos rápidamente, dentro de 24 horas.
+  pasos_accionables: ["Crear un formulario simple de una página para reportar obstáculos al trabajo sin errores", "Asignar grupos funcionales responsables de resolver cada tipo de problema", "Garantizar reconocimiento del reporte dentro de 24 horas", "Dar seguimiento y comunicar las soluciones implementadas"]
+  entregable_esperado: Sistema de reporte y resolución de causas de error funcionando activamente.
+  ids_alias: None
+  merged_originals: None
+
+--- eliminacion_causas_error_4 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Eliminación de Causas de Error (Error Cause Removal - ECR)
+  etiqueta_arbol: Identifica las Causas de Error
+  resumen_teorico: ECR es la forma en que cualquier persona que te ayuda en tu negocio te avisa, sin necesidad de proponer la solución, sobre algo que le impide hacer bien su trabajo: una herramienta que no funciona, poca luz, un proceso que no tiene sentido, etc. Se activa una vez que ya tienes clara la meta de cero errores y todos la entienden, trasladando la detección de obstáculos a quien está en el día a día. Cada aviso merece una respuesta rápida y un agradecimiento personal; si decides no actuar, esa decisión debe quedar justificada y revisada por alguien de más experiencia o confianza. Bien manejado, genera participación positiva sin volverse quejas destructivas, y sirve de base para reconocer periódicamente a quienes avisan.
+  pasos_accionables: ["Crea un canal simple, con un formulario, para que quien te ayuda reporte causas de error sin necesidad de proponer la solución, y ponlo en cada área de trabajo, a la vista de todos", "Envía un agradecimiento personal e inmediato a quien te avisa de un problema", "Clasifica y prioriza cada aviso y pásalo a quien pueda resolverlo", "Consigue lo necesario y actúa rápido para eliminar la causa", "Si decides no actuar, justifica la decisión y revísala con alguien de más experiencia o confianza antes de cerrarla", "Confirma a cada persona la decisión tomada y considera reconocer periódicamente a quienes más avisan, por ejemplo con un sorteo semanal o un reconocimiento visible"]
+  entregable_esperado: Sistema ECR funcionando: formulario, respuesta rápida, registro de causas reportadas y resueltas, y retroalimentación a quienes avisan.
+  ids_alias: ['eliminacion_causas_error_3', 'programa_ecr_causa_de_error', 'eliminacion_causas_error_2']
+  merged_originals: ['eliminacion_causas_error_3', 'programa_ecr_causa_de_error', 'eliminacion_causas_error_2']
+
+==========================================================================================
+FAMILIA 11/28 [SUFIJO NUMERICO] (3 miembros): dia_cero_defectos, dia_cero_defectos_2, dia_cero_defectos_3
+==========================================================================================
+--- dia_cero_defectos ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Día de Cero Defectos (El Estándar se Fija en Un Solo Día)
+  etiqueta_arbol: Fija tu Estándar en un Día
+  resumen_teorico: Fijas el estándar de Cero Defectos en tu negocio en un solo día, no de forma gradual. Todos entienden la nueva actitud de la misma manera y ese día se convierte en un hito memorable que marca un antes y un después en cómo trabajas y en cómo tu equipo se compromete con hacer las cosas bien desde el principio.
+  pasos_accionables: ["Elige una fecha única para el lanzamiento oficial", "Realiza actividades especiales que marquen el cambio de actitud", "Explica el programa a todos el mismo día"]
+  entregable_esperado: Evento de lanzamiento del estándar Cero Defectos realizado en tu negocio.
+  ids_alias: None
+  merged_originals: None
+
+--- dia_cero_defectos_2 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Día de Cero Defectos (ZD Day) y el Compromiso (Pledge)
+  etiqueta_arbol: Comprométete con Cero Defectos
+  resumen_teorico: Evento formal de lanzamiento del estándar Cero Defectos, pensado para ser memorable y significativo, donde tú y las personas que te ayudan en el negocio firman un compromiso de hacer el trabajo bien a la primera vez. Cero Defectos no es una herramienta de motivación superficial sino la comunicación de un estándar de desempeño permanente, basado en la idea de que la mayoría de los errores humanos vienen de falta de atención, no de falta de conocimiento.
+  pasos_accionables: ["Organizar un día de sugerencias previo para recolectar ideas de mejora de las personas que trabajan contigo", "Preparar una carta explicativa del concepto Cero Defectos con el compromiso incluido, con la identidad de tu negocio", "Realizar el evento con tu participación y la de invitados relevantes para tu contexto, con actividades para todos los que forman parte del negocio", "Explicar el concepto y firmar el compromiso junto con cada persona que te ayuda, uno a uno", "Distribuir materiales visuales (pines, botones) de forma voluntaria", "Iniciar al día siguiente el programa de eliminación de causas de error"]
+  entregable_esperado: Evento Cero Defectos realizado con compromisos firmados por ti y por quienes te ayudan, y transición inmediata al programa de eliminación de causas de error
+  ids_alias: None
+  merged_originals: None
+
+--- dia_cero_defectos_3 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Día de Cero Defectos (Evento Simbólico ZD)
+  etiqueta_arbol: Vive el Día de Cero Defectos
+  resumen_teorico: El Día ZD es un evento simbólico donde todos los empleados de la empresa experimentan de forma personal y colectiva el inicio de un nuevo estándar de calidad. Se busca reunir a todo el personal simultáneamente, con la participación de figuras significativas (directivos, autoridades, sindicatos), para formalizar el compromiso con Cero Defectos mediante discursos, firma de compromisos (pledges) y entrega de pines. El objetivo es crear un recuerdo compartido que refuerce el cambio cultural.
+  pasos_accionables: ["Organizar un evento que reúna a todos los empleados al mismo tiempo, con presencia de líderes significativos para ellos.", "Incluir un componente de 'show business': música, discursos breves, premios, para hacer el evento memorable.", "Permitir que los empleados firmen su compromiso (pledge) con sus supervisores y reciban un pin o distintivo.", "Anunciar el inicio inmediato de la fase de eliminación de causas de error (ECR) al día siguiente del evento.", "Reconocer públicamente al equipo organizador y a los participantes destacados."]
+  entregable_esperado: Evento corporativo realizado con compromisos firmados por los empleados y lanzamiento oficial del programa ZD.
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 12/28 [ORDEN DE PALABRAS] (4 miembros): make_certain_programa, programa_make_certain, programa_make_certain_2, programa_make_certain_3
+==========================================================================================
+--- make_certain_programa ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Programa Make Certain para Áreas Administrativas
+  etiqueta_arbol: Haz Certera tu Oficina
+  resumen_teorico: Make Certain es un programa de mejora orientado a personal de oficina y administrativo (white-collar), diseñado para generar conciencia inmediata sobre la responsabilidad personal en la calidad del trabajo de comunicación y papeleo. Se basa en el reconocimiento de que la mayoría de las personas atribuyen sus problemas a otros y no a sí mismas, y busca revertir esa percepción mediante ejercicios grupales guiados.
+  pasos_accionables: ["Informar al personal directivo sobre el concepto e intención del programa", "Designar coordinadores por departamento administrativo", "Recolectar ejemplos reales de errores de prevención evitables", "Realizar sesión donde cada participante declare su 'mayor problema'", "Evidenciar que los problemas suelen atribuirse a otros, no a uno mismo", "Solicitar ideas escritas de prevención de defectos al equipo de mejora", "Establecer reuniones regulares de prevención de defectos por grupo, similar a los círculos de acción correctiva en manufactura"]
+  entregable_esperado: Sesión Make Certain ejecutada con lista de problemas identificados y compromiso de reuniones regulares de prevención en áreas administrativas.
+  ids_alias: None
+  merged_originals: None
+
+--- programa_make_certain ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Programa Make Certain (para personal administrativo)
+  etiqueta_arbol: Asegura la Calidad Administrativa
+  resumen_teorico: Programa de cinco semanas orientado principalmente a personal de oficina o 'cuello blanco', diseñado como un avance en los esfuerzos de mejora de calidad más allá del entorno de manufactura. Es especialmente apropiado para usarse durante la etapa de concientización (awareness) del programa general de catorce pasos, abordando errores administrativos y de procesos que no son visibles en la línea de producción.
+  pasos_accionables: ["Identificar tasas de repetición de trabajo (rework) en áreas administrativas y de papeleo", "Diseñar el programa de cinco semanas enfocado en detectar y prevenir errores de oficina", "Lanzar el programa como parte de la etapa de concientización de calidad", "Medir el impacto en costo de calidad antes y después de la implementación"]
+  entregable_esperado: Programa Make Certain de cinco semanas diseñado e implementado en áreas administrativas, con métricas de rework antes/después
+  ids_alias: None
+  merged_originals: None
+
+--- programa_make_certain_2 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Programa 'Make Certain' de Prevención de Defectos
+  etiqueta_arbol: Previene Errores en tu Papeleo
+  resumen_teorico: El programa 'Make Certain' es una metodología estructurada de Crosby diseñada especialmente para áreas de servicio y trabajo administrativo (paperwork), donde se involucra a supervisores y empleados en identificar cómo podrían fallar en satisfacer a su cliente interno o externo, y luego invertir esa lógica para generar sugerencias concretas de prevención de defectos. Se apoya en la participación activa de todos los niveles, coordinadores por departamento, medición de sugerencias en horas-hombre ahorradas, y reconocimiento simbólico (como el badge 'Certain Maker') en lugar de premios monetarios.
+  pasos_accionables: ["Informar al staff de dirección sobre el concepto e intención del programa y designar coordinadores por departamento.", "Reunirse con los coordinadores para explicarles el programa y solicitar ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).", "Capacitar a supervisores en la lógica del programa: identificar cliente interno/externo, qué espera ese cliente, y qué podría hacer el equipo para NO cumplirlo (pregunta invertida).", "Convertir esas respuestas negativas en sugerencias positivas de cómo 'hacer cierto' que el cliente reciba lo prometido.", "Registrar y medir las sugerencias entregadas, entregar reconocimiento (badge) y publicar los avances en carteleras.", "Medir el impacto en horas de trabajo no gastadas por hacer las cosas bien, multiplicado por el costo salarial cargado.", "Realizar cuenta regresiva pública antes del cierre del programa y agradecer formalmente a todos los participantes al finalizar.", "Implementar tantas sugerencias como sea posible y reportar su seguimiento durante varios meses."]
+  entregable_esperado: Un programa documentado de prevención de defectos por departamento, con coordinadores asignados, formato de sugerencias, sistema de medición en horas/dinero ahorrado, y reporte de implementación de mejoras.
+  ids_alias: None
+  merged_originals: None
+
+--- programa_make_certain_3 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Programa Make Certain
+  etiqueta_arbol: Certifica tu Trabajo Administrativo
+  resumen_teorico: El programa Make Certain es el primer programa de prevención de defectos diseñado específicamente para empleados administrativos (white-collar) y no relacionados con manufactura. Reconoce que los errores de oficina y paperwork generan problemas costosos y frustrantes, y que basta un solo dato erróneo en la cadena de información para afectar toda su efectividad y precisión. El programa incluye una guía del instructor con pasos de acción específicos para implementarlo en entornos administrativos.
+  pasos_accionables: ["Identificar los procesos administrativos críticos susceptibles a errores de datos", "Capacitar a los empleados administrativos usando la guía del instructor del programa", "Implementar los pasos de acción definidos para la prevención de errores de oficina", "Monitorear la exactitud de los datos y documentos en la cadena de comunicación"]
+  entregable_esperado: Programa Make Certain implementado en áreas administrativas con material de capacitación y métricas de error definidas
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 13/28 [PARTICULAS] (2 miembros): reduccion_de_tiempo_de_ciclo, reduccion_tiempo_ciclo
+==========================================================================================
+--- reduccion_de_tiempo_de_ciclo ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Reducción del Tiempo de Ciclo
+  etiqueta_arbol: Reduce el Tiempo de tu Ciclo
+  resumen_teorico: El tiempo de ciclo es el tiempo total transcurrido desde el inicio hasta el fin de un proceso. La presión competitiva y de costos impulsa a las organizaciones a reducir este tiempo mediante diagnóstico de causas de demora y remedios específicos, siguiendo el proceso de mejora de calidad.
+  pasos_accionables: ["Diagnosticar las causas de consumo excesivo de tiempo en el proceso.", "Desarrollar remedios específicos para reducir el tiempo de ciclo.", "Medir el impacto de los remedios sobre el tiempo total del proceso."]
+  entregable_esperado: Plan de reducción de tiempo de ciclo con métricas de mejora documentadas.
+  ids_alias: None
+  merged_originals: None
+
+--- reduccion_tiempo_ciclo ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Reducción del Tiempo de Ciclo del Proceso
+  etiqueta_arbol: Acorta tu Tiempo de Ciclo
+  resumen_teorico: El tiempo es una de las métricas más utilizadas para medir la entrega de servicios. Los clientes demandan continuamente tiempos de entrega más cortos. Mediante el análisis del diagrama de flujo y técnicas Lean, se pueden eliminar desperdicios y reducir el tiempo de ciclo mediante acciones como eliminar reprocesos, simplificar pasos, combinar actividades, transferir aprobaciones a niveles más bajos, y usar tecnología.
+  pasos_accionables: ["Eliminar bucles de reproceso para corregir errores del proceso", "Eliminar o simplificar pasos de valor marginal para el cliente", "Eliminar pasos redundantes como inspecciones (solo tras eliminar causas de error)", "Combinar pasos realizados por un mismo trabajador", "Transferir pasos de aprobación a niveles inferiores", "Cambiar la secuencia de actividades de consecutivas a simultáneas", "Usar tecnología para realizar pasos rutinarios y complejos"]
+  entregable_esperado: Proceso de servicio rediseñado con tiempo de ciclo reducido, documentado con datos de antes/después
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 14/28 [PARTICULAS] (3 miembros): clasificacion_de_seriedad_de_defectos, clasificacion_de_seriedad_de_defectos_2, clasificacion_seriedad_defectos
+==========================================================================================
+--- clasificacion_de_seriedad_de_defectos ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Clasificación de Seriedad de Defectos y Deméritos por Unidad
+  etiqueta_arbol: Pondera la Gravedad de tus Defectos
+  resumen_teorico: Sistema de ponderación de defectos según su gravedad (crítico, mayor, menor A, menor B, incidental), asignando 'pesos' o deméritos a cada tipo. La suma total de deméritos dividida entre las unidades inspeccionadas produce un índice único (deméritos por unidad) que permite comparar calidad entre periodos, líneas de producción o competidores de forma objetiva y proporcional a la oportunidad de error.
+  pasos_accionables: ["Definir categorías de seriedad de defectos relevantes para el producto", "Asignar peso (demérito) a cada categoría de defecto", "Registrar número de defectos por categoría durante inspección/auditoría", "Calcular deméritos totales y dividir entre unidades inspeccionadas", "Usar el índice resultante para comparar tendencias históricas y frente a competencia"]
+  entregable_esperado: Tabla de clasificación de defectos con pesos asignados y cálculo del índice de deméritos por unidad
+  ids_alias: None
+  merged_originals: None
+
+--- clasificacion_de_seriedad_de_defectos_2 ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Clasificación de Seriedad de Defectos (Guía para el Proveedor)
+  etiqueta_arbol: Prioriza Defectos con tu Proveedor
+  resumen_teorico: Sistema para categorizar defectos según su gravedad e impacto, ayudando al proveedor a entender dónde concentrar sus esfuerzos de mejora. Esta clasificación es fundamental para priorizar recursos y establecer niveles de calidad aceptables (AQL) o defectos por millón (DPM) según la criticidad del defecto.
+  pasos_accionables: ["Listar todos los posibles defectos del producto o proceso", "Asignar niveles de seriedad (crítico, mayor, menor) a cada defecto", "Comunicar la clasificación al proveedor para enfocar esfuerzos", "Vincular la clasificación a los planes de muestreo e inspección"]
+  entregable_esperado: Tabla de clasificación de defectos por nivel de seriedad, comunicada formalmente al proveedor
+  ids_alias: None
+  merged_originals: None
+
+--- clasificacion_seriedad_defectos ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Clasificación de Seriedad de Defectos (Características y Defectos por Gravedad)
+  etiqueta_arbol: Separa Características y Defectos por Gravedad
+  resumen_teorico: Consiste en clasificar tanto las características de calidad derivadas de especificaciones como los defectos (síntomas de no conformidad) según su gravedad. Aunque ambas listas tienen relación, no son idénticas ni se comportan igual. Esta clasificación, aunque tediosa, revela confusiones entre las distintas partes de tu negocio y permite optimizar recursos de inspección.
+  pasos_accionables: ["Elabora una lista de características de calidad a partir de tus especificaciones", "Elabora una lista aparte de defectos o síntomas de no conformidad", "Define categorías de seriedad (crítico, mayor, menor) con quienes te ayuden en distintas áreas", "Aplica la clasificación para reducir lo que necesitas verificar y el tiempo de inspección", "Valida con casos piloto que muestren el beneficio a quienes se resistan al cambio"]
+  entregable_esperado: Tabla de clasificación de seriedad de características y defectos aplicada a un producto o proceso específico
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 15/28 [PARTICULAS] (2 miembros): storytelling_como_herramienta_de_diseno, storytelling_como_herramienta_diseno
+==========================================================================================
+--- storytelling_como_herramienta_de_diseno ---
+  dominio: core | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Storytelling como Herramienta de Design Thinking
+  etiqueta_arbol: Cuenta Historias que Transforman
+  resumen_teorico: Las narrativas permiten dar contexto y significado a las ideas, facilitando su comprensión, adopción y propagación. El caso Cool Biz de Hakuhodo muestra cómo convertir una campaña gubernamental en un movimiento social usando storytelling en lugar de publicidad tradicional, logrando que la audiencia se convierta en narradora activa de la idea.
+  pasos_accionables: ["Identificar el mensaje central que se quiere comunicar", "Traducir el mensaje en actividades concretas y significativas para el público", "Crear momentos memorables (eventos, demostraciones) en lugar de solo publicidad, con figuras de autoridad para modelar el nuevo comportamiento", "Facilitar que la audiencia se apropie y difunda la historia por sí misma", "Reforzar la narrativa con símbolos tangibles (pines, insignias, señales)", "Medir el reconocimiento y adopción de la narrativa en la población objetivo"]
+  entregable_esperado: Una narrativa central clara con elementos tangibles de refuerzo que el público pueda replicar y compartir.
+  ids_alias: ['storytelling_para_el_cambio']
+  merged_originals: ['storytelling_para_el_cambio']
+
+--- storytelling_como_herramienta_diseno ---
+  dominio: core | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Storytelling Integrado en el Proceso de Diseño
+  etiqueta_arbol: Teje tu Historia desde el Inicio
+  resumen_teorico: El storytelling debe integrarse desde el inicio del proyecto de diseño, no solo al final para documentar. Una narrativa efectiva tiene dos momentos críticos: el principio (donde se teje en cada aspecto del esfuerzo de innovación) y el final (donde la audiencia se apropia de la historia y la lleva más allá del equipo de diseño). Es un relato abierto que invita a las personas a escribir su propia conclusión, no una narrativa cerrada con inicio-nudo-desenlace tradicional.
+  pasos_accionables: ["Incorporar escritores o narradores al equipo de diseño desde el día uno del proyecto", "Identificar las motivaciones emocionales profundas detrás del comportamiento de los usuarios (no solo métricas)", "Diseñar mecanismos para que los usuarios compartan y narren sus propias historias", "Crear espacios físicos o digitales donde estas historias se conecten con otras (ej: boards, redes)", "Dejar que la audiencia complete la narrativa y la propague orgánicamente"]
+  entregable_esperado: Un sistema o mecanismo narrativo integrado en la experiencia del producto/servicio que permite a los usuarios compartir y perpetuar la historia
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 16/28 [PARTICULAS] (2 miembros): obtencion_compromiso, obtencion_de_compromiso
+==========================================================================================
+--- obtencion_compromiso ---
+  dominio: core | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Cómo lograr un compromiso (más allá del cierre de venta tradicional)
+  etiqueta_arbol: Busca un Avance Real
+  resumen_teorico: Cuando vendes algo grande, casi nunca consigues el compromiso final con un pedido directo. Lo normal es lograr un avance (Advance) hacia la decisión, como conseguir una demostración o pasar al siguiente nivel de decisión. La investigación de Huthwaite muestra que las técnicas de cierre clásicas (cierre asumido, alternativo, de última oportunidad, etc.) no aumentan tu éxito en ventas grandes y hasta pueden perjudicarlo, al contrario de lo que suele creerse sobre que 'cerrar más' siempre es mejor.
+  pasos_accionables: ["Define para cada llamada un objetivo de avance realista en vez de buscar el cierre inmediato", "Evita las técnicas de cierre de presión (cierre asumido, alternativo, última oportunidad) cuando la venta es compleja", "Mide el éxito de tus llamadas por los avances que logras, no solo por los pedidos que cierras", "Pon tu esfuerzo de mejora en las etapas de investigación y demostración de capacidad, no en el cierre"]
+  entregable_esperado: Una lista clara de qué cuenta como avance válido en cada etapa de tu proceso de venta
+  ids_alias: None
+  merged_originals: None
+
+--- obtencion_de_compromiso ---
+  dominio: core | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Las Cuatro Acciones para Obtener Compromiso
+  etiqueta_arbol: Usa las Cuatro Acciones Clave
+  resumen_teorico: Los vendedores exitosos en ventas grandes usan cuatro acciones concretas para obtener compromiso del cliente: (1) dedicar más tiempo a investigar necesidades que a demostrar capacidades, (2) verificar proactivamente que no queden dudas o preocupaciones sin resolver, (3) resumir los beneficios clave discutidos antes de pedir el compromiso, y (4) proponer (no simplemente pedir) el siguiente paso lógico y alcanzable.
+  pasos_accionables: ["Dedica la mayor parte de la reunión a investigar y entender las necesidades del cliente antes de presentar tu solución", "Antes de cerrar, pregunta explícitamente si hay algo más que el cliente necesite aclarar", "Resume los beneficios y puntos clave discutidos en la conversación", "Propón el siguiente paso concreto y realista, en lugar de simplemente 'pedir la venta'", "Asegúrate de que el compromiso propuesto sea el más alto que el cliente pueda dar de forma realista en ese momento"]
+  entregable_esperado: Guion o checklist de cierre que incluya verificación de dudas, resumen de beneficios y propuesta de próximo paso concreto
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 17/28 [PARTICULAS] (2 miembros): control_estadistico_del_proceso, control_estadistico_proceso
+==========================================================================================
+--- control_estadistico_del_proceso ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Control Estadístico del Proceso (SPC)
+  etiqueta_arbol: Confirma que tu Proceso Esté Estable
+  resumen_teorico: Un proceso está en control estadístico cuando su variación proviene únicamente de causas comunes (inherentes al sistema) y no de causas especiales (eventos aislados). Solo cuando un proceso está en control estadístico es posible predecir su comportamiento futuro. Sin este control, la inspección se vuelve la única alternativa, lo cual es costoso y poco confiable, ya que un proceso puede cumplir especificaciones ahora y fallar más tarde sin previo aviso.
+  pasos_accionables: ["Recolectar datos secuenciales del proceso (por hora, por lote, etc.)", "Construir gráficos de control (X-barra y R) con los datos", "Identificar y eliminar causas especiales de variación hasta que el proceso muestre estabilidad", "Una vez estable, calcular la capacidad real del proceso", "Aceptar que estar en control no equivale a cumplir especificaciones", "Iniciar intervención en el sistema (cambio de diseño, método, materiales) para reducir el nivel de defectos una vez confirmado el control", "Distinguir entre cambiar el nivel promedio (más simple) y reducir la dispersión (usualmente más difícil)"]
+  entregable_esperado: Gráfico de control validado que demuestre estabilidad estadística del proceso, con causas especiales documentadas y eliminadas.
+  ids_alias: ['control_estadistico_no_implica_cero_defectos']
+  merged_originals: ['control_estadistico_no_implica_cero_defectos']
+
+--- control_estadistico_proceso ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Un proceso estable es la base para innovar (control estadístico de procesos)
+  etiqueta_arbol: Usa la Estabilidad para Innovar
+  resumen_teorico: Cuando tu proceso tiene una variación predecible y dentro de límites, decimos que está en control estadístico. Eso te permite detectar las causas puntuales que se salen de lo normal y, una vez que las eliminas, tienes una base sólida para innovar técnicamente. El caso de Nashua Corporation muestra esto: al lograr que su proceso de recubrimiento fuera estable, redujo el uso de material y evitó una inversión fuerte en equipo nuevo, generando ahorros anuales importantes (pregunta las cifras equivalentes en tu mercado).
+  pasos_accionables: ["Establece cartas de control para las variables críticas de tu proceso.", "Identifica y elimina los puntos fuera de los límites de control, es decir, las causas puntuales de variación.", "Una vez que tu proceso esté bajo control estadístico, usa lo que aprendiste de él para experimentar e innovar, por ejemplo reduciendo insumos o mejorando el diseño, sin perder la estabilidad.", "Evita ajustar tu proceso de forma reactiva por cada medición individual, porque eso aumenta la variación en vez de reducirla."]
+  entregable_esperado: Cartas de control funcionando en tu proceso crítico, con evidencia de que la variación bajó, y un plan de innovación técnica basado en ese proceso ya estable.
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 18/28 [SUFIJO NUMERICO] (2 miembros): velocidad_crecimiento_franquicia, velocidad_crecimiento_franquicia_2
+==========================================================================================
+--- velocidad_crecimiento_franquicia ---
+  dominio: franquicias | fase_proyecto: ideacion | deprecado: False
+  titulo_concepto: Velocidad de Crecimiento vía Franquicia
+  etiqueta_arbol: Crece Más Rápido con Franquicias
+  resumen_teorico: La franquicia permite expandirse más rápido que el crecimiento corporativo porque el franquiciado ejecuta la mayoría de las tareas operativas (búsqueda de sitio, negociación de arriendo, contratación, etc.), permitiendo al franquiciante capturar posiciones de liderazgo de mercado antes que la competencia y saturar mercados con mayor rapidez.
+  pasos_accionables: ["Estimar el tiempo necesario para abrir una unidad propia (sitio, diseño, contratación, etc.)", "Comparar ese tiempo con el potencial de apertura simultánea de múltiples franquicias", "Evaluar el riesgo competitivo de no expandirse rápidamente en el mercado actual", "Diseñar una estrategia de expansión territorial basada en velocidad de saturación"]
+  entregable_esperado: Plan de velocidad de expansión comparado entre modelo propio y modelo de franquicia
+  ids_alias: None
+  merged_originals: None
+
+--- velocidad_crecimiento_franquicia_2 ---
+  dominio: franquicias | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Encuentra tu velocidad correcta para crecer
+  etiqueta_arbol: Elige tu Ritmo de Crecimiento
+  resumen_teorico: Al principio tienes que crecer despacio para no repetir a lo grande los mismos errores operativos. Piénsalo como 'rápido o cuidadoso': creces rápido si eres el primero en un mercado nuevo, o vas con cuidado y meticulosidad si ya hay competidores establecidos peleando el mismo terreno. Además, conviene que limites tu expansión inicial a un radio de 3 horas de donde estás tú, para poder dar soporte, hacer marketing local y cuidar tu reputación sin dispersarte.
+  pasos_accionables: ["Mira qué tan competido y maduro está tu mercado: ¿eres el primero o ya hay otros haciendo esto?", "Decide si conviene moverte rápido o ir con cuidado, según esa competencia", "Limita tu expansión inicial a una distancia que puedas manejar (por ejemplo, 3 horas desde donde estás)", "Antes de escalar, asegúrate de que tus sistemas (inventario, personal, contabilidad) funcionen bien", "Ajusta cuántas franquicias vendes al ritmo real con el que puedes dar soporte"]
+  entregable_esperado: Tu plan de expansión, con el territorio y el ritmo de crecimiento definidos según lo que realmente puedes soportar
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 19/28 [SUFIJO NUMERICO] (3 miembros): cultura_justa, cultura_justa_2, cultura_justa_3
+==========================================================================================
+--- cultura_justa ---
+  dominio: health_safety | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Ingeniería de una Cultura Justa
+  etiqueta_arbol: Construye una Cultura Justa
+  resumen_teorico: Una cultura justa es un atmósfera de confianza en la que se anima y hasta se recompensa a las personas por proporcionar información esencial relacionada con la seguridad, pero en la que también se tiene claridad sobre dónde trazar la línea entre comportamiento aceptable e inaceptable. No es lo mismo que una cultura de 'no culpa' (no-blame), ya que ciertos actos inseguros egregios (abuso de sustancias, incumplimiento imprudente, sabotaje) sí ameritan sanciones. El desafío está en discriminar entre estas pocas 'malas conductas' verdaderas y la mayoría de actos inseguros donde la atribución de culpa no es apropiada ni útil. Se basa en el análisis de tres elementos de la acción humana: intención, acción y consecuencias.
+  pasos_accionables: ["Definir criterios claros y consensuados para distinguir comportamiento aceptable de inaceptable", "Establecer una línea explícita entre errores humanos normales y actos verdaderamente negligentes o maliciosos, y dejarla por escrito", "Capacitar a supervisores y gestores en la aplicación consistente de estos criterios", "Comunicar estas políticas a toda la organización para generar confianza", "Evitar tanto la amnistía total como el castigo indiscriminado de todos los errores", "Arma un grupo de confianza que revise los casos difíciles o ambiguos"]
+  entregable_esperado: Política de cultura justa documentada con criterios claros de discriminación entre error humano y conducta sancionable
+  ids_alias: ['cultura_justa_organizacional']
+  merged_originals: ['cultura_justa_organizacional']
+
+--- cultura_justa_2 ---
+  dominio: health_safety | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Cultura Justa (Just Culture) más allá de los programas de categorías
+  etiqueta_arbol: Ve Más Allá de Categorías
+  resumen_teorico: Muchas organizaciones implementan 'cultura justa' como un programa basado en categorías (blanco=error honesto, gris=riesgo, negro=negligencia intencional) usando árboles de decisión de culpabilidad. Sin embargo, la investigación muestra que estas categorías son arbitrarias y dependen de quién tiene el poder de trazarlas, generando percepciones desiguales de justicia y a veces fomentando el secretismo del riesgo en lugar del aprendizaje. La cultura justa genuina no puede comprarse como programa; requiere esfuerzo cognitivo y moral continuo.
+  pasos_accionables: ["Evitar la compra de programas de 'cultura justa' prediseñados basados solo en categorías de culpabilidad", "Preguntar 'qué es responsable' en vez de 'quién es responsable' ante cada incidente", "Involucrar en el análisis a personas con conocimiento técnico y credibilidad entre pares (no solo supervisores o jueces)", "Explorar la justicia restaurativa en lugar de la retributiva"]
+  entregable_esperado: Un protocolo de respuesta a incidentes que incorpore preguntas sistémicas, participación de pares expertos y enfoque restaurativo, en lugar de un árbol de decisión de culpabilidad
+  ids_alias: None
+  merged_originals: None
+
+--- cultura_justa_3 ---
+  dominio: health_safety | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Cultura Justa (Just Culture) y segundas víctimas
+  etiqueta_arbol: Equilibra Justicia y Aprendizaje
+  resumen_teorico: La seguridad está ligada a la rendición de cuentas, el aprendizaje y la justicia organizacional. Crear una 'cultura justa' es difícil pero necesario: implica equilibrar accountability y aprendizaje sin desincentivar que las personas compartan honestamente sus preocupaciones de seguridad. Incluye atención a las 'segundas víctimas': practicantes involucrados en incidentes que se sienten personalmente responsables por daños a otros, y cuya resiliencia individual está ligada a la resiliencia organizacional.
+  pasos_accionables: ["Diseñar políticas de reporte de incidentes que no penalicen la honestidad", "Establecer procesos de apoyo psicológico y profesional para 'segundas víctimas'", "Balancear la necesidad de accountability con la protección al aprendizaje organizacional", "Definir criterios claros y consensuados de qué constituye una conducta sancionable vs. un error del sistema"]
+  entregable_esperado: Política de cultura justa documentada, incluyendo protocolos de apoyo a segundas víctimas y criterios de accountability
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 20/28 [ORDEN DE PALABRAS] (2 miembros): customer_development_modelo, modelo_customer_development
+==========================================================================================
+--- customer_development_modelo ---
+  dominio: core | fase_proyecto: ideacion | deprecado: False
+  titulo_concepto: Sal a hablar con tus clientes antes de construir (Customer Development)
+  etiqueta_arbol: Sal a Descubrir Clientes
+  resumen_teorico: Es un proceso para encontrar un modelo de negocio que funcione y que puedas repetir y hacer crecer. Se combina con un desarrollo ágil de tu producto para ir ajustando rápido. La idea central es que salgas del escritorio y hables directamente con clientes reales antes de comprometerte con un diseño final de producto. Esto reemplaza el viejo camino de escribir un plan de negocio fijo y recién ahí construir.
+  pasos_accionables: ["Identifica las hipótesis centrales de tu negocio: quién es tu cliente, cuál es su problema y qué solución le propones", "Sal a hablar directamente con clientes potenciales, no te quedes esperando que lleguen", "Recoge lo que te dicen sobre el producto, el canal para llegar a ellos, el precio y cómo lo entienden", "Ajusta tu modelo de negocio según lo que aprendes de verdad, no según lo que supones", "Combina estas conversaciones con ir desarrollando tu producto de forma ágil, en paralelo"]
+  entregable_esperado: Un registro de conversaciones con clientes, hechas de forma repetida, que te confirme o te tumbe las hipótesis con las que arrancaste
+  ids_alias: None
+  merged_originals: None
+
+--- modelo_customer_development ---
+  dominio: core | fase_proyecto: validacion | deprecado: False
+  titulo_concepto: Modelo de Customer Development (4 Pasos)
+  etiqueta_arbol: Sigue los Pasos del Cliente
+  resumen_teorico: Marco metodológico que organiza las actividades relacionadas con el cliente en una startup en cuatro pasos iterativos: Customer Discovery, Customer Validation, Customer Creation y Company-Building. Los dos primeros pasos constituyen la 'búsqueda' del modelo de negocio, mientras que los dos últimos son la 'ejecución' del modelo ya validado. A diferencia de los planes de producto tradicionales lineales, este modelo es cíclico y acepta retrocesos como parte natural del aprendizaje.
+  pasos_accionables: ["Identificar en qué paso del proceso se encuentra la startup actualmente", "Formular hipótesis de negocio antes de iniciar cualquier paso", "Diseñar experimentos para testear cada hipótesis fuera del edificio", "Evaluar en cada 'stop sign' si se alcanzó 'velocidad de escape' antes de avanzar", "Estar dispuesto a retroceder a pasos anteriores si el aprendizaje lo indica"]
+  entregable_esperado: Diagrama de flujo del proceso de Customer Development con indicación clara del paso actual y evidencia de aprendizaje acumulado
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 21/28 [SUFIJO NUMERICO] (3 miembros): definiciones_operacionales, definiciones_operacionales_2, definiciones_operacionales_3
+==========================================================================================
+--- definiciones_operacionales ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Definiciones Operacionales de Calidad Aceptable
+  etiqueta_arbol: Aclara qué es Aceptable
+  resumen_teorico: Muchos problemas de calidad surgen porque trabajadores e inspectores no comparten un criterio claro de qué constituye un producto aceptable o no aceptable. Crear definiciones operacionales -con ejemplos concretos de trabajo conforme y no conforme- puede reducir drásticamente la proporción de defectos sin inversión en nueva maquinaria ni mano de obra adicional.
+  pasos_accionables: ["Reunir a supervisores, inspectores y trabajadores para identificar ambigüedades en los criterios de aceptación actuales.", "Desarrollar mediante prueba y error definiciones operacionales claras, con ejemplos físicos o visuales de productos conformes y no conformes.", "Publicar y difundir estas definiciones en el área de trabajo para que todos las conozcan.", "Medir la proporción de defectos antes y después para cuantificar la mejora."]
+  entregable_esperado: Un documento con definiciones operacionales validadas y ejemplos visuales, publicado en el área de trabajo, junto con datos de reducción del porcentaje de defectos.
+  ids_alias: ['caso_definicion_arruga']
+  merged_originals: ['caso_definicion_arruga']
+
+--- definiciones_operacionales_2 ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Definiciones Operacionales (Método, Prueba y Criterio)
+  etiqueta_arbol: Define Método, Prueba y Criterio
+  resumen_teorico: Una definición operacional consiste en un método de prueba, una prueba y un criterio para juzgar si una pieza de trabajo se clasifica como defectuosa o aceptable. Es esencial para que diferentes inspectores o trabajadores entiendan y apliquen el mismo criterio, evitando discrepancias como las observadas entre inspectores que califican de manera diferente el mismo producto.
+  pasos_accionables: ["Definir claramente el método de prueba a utilizar", "Establecer el criterio específico de aceptación o rechazo", "Documentar la definición de forma comunicable para todo el personal involucrado", "Verificar que múltiples inspectores apliquen el criterio de manera consistente"]
+  entregable_esperado: Un documento de definición operacional con método de prueba y criterios claros de aceptación/rechazo
+  ids_alias: None
+  merged_originals: None
+
+--- definiciones_operacionales_3 ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Definiciones Operacionales (Traducir Conceptos Abstractos)
+  etiqueta_arbol: Traduce lo Abstracto en Pruebas
+  resumen_teorico: Una definición operacional traduce un concepto abstracto (como 'seguro', 'redondo', 'confiable', 'contaminación') en términos comunicables mediante un procedimiento de prueba específico, un criterio de juicio y una decisión clara (sí/no) sobre si el objeto cumple el criterio. Sin una definición operacional, cualquier especificación de calidad es ambigua y no puede ser objeto de acuerdo comercial, legal o de producción, ya que el significado de un concepto solo existe en la mente de quien lo formula hasta que se expresa operacionalmente.
+  pasos_accionables: ["Identificar el adjetivo o concepto ambiguo que se desea especificar (ej. 'limpio', 'seguro', 'contaminado').", "Definir una prueba específica y reproducible para evaluar dicho concepto.", "Establecer un criterio de juicio claro y cuantificable.", "Definir la regla de decisión (sí/no) sobre el cumplimiento del criterio.", "Validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definición.", "Escribe el procedimiento con el detalle suficiente para que cualquier persona que lo siga llegue al mismo resultado que tú."]
+  entregable_esperado: Un documento de especificación técnica que contenga la definición operacional completa: prueba, criterio y regla de decisión para cada característica de calidad relevante.
+  ids_alias: ['definiciones_operacionales_4']
+  merged_originals: ['definiciones_operacionales_4']
+
+==========================================================================================
+FAMILIA 22/28 [SUFIJO NUMERICO] (2 miembros): planificacion_estrategica_despliegue, planificacion_estrategica_despliegue_2
+==========================================================================================
+--- planificacion_estrategica_despliegue ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Planificación Estratégica y Despliegue (Catch Ball)
+  etiqueta_arbol: Despliega tu Estrategia en Metas
+  resumen_teorico: Proceso estructurado que va desde definir la misión y visión organizacional hasta traducir estrategias clave en metas cuantificadas y objetivos operativos específicos. El despliegue ocurre mediante un proceso iterativo de comunicación bidireccional (catch ball) donde las estrategias se circulan hacia abajo en la jerarquía y las ideas/sugerencias regresan hacia arriba, refinando las metas hasta que son precisas, prácticas y cuentan con dueños asignados.
+  pasos_accionables: ["Definir la misión organizacional (¿en qué negocio estamos?)", "Formular y publicar una visión del estado futuro deseado", "Generar pocas estrategias clave para cumplir la misión y visión", "Cuantificar metas estratégicas para cada estrategia clave, divididas por horizonte temporal", "Establecer objetivos operativos específicos con responsables asignados", "Ejecutar el proceso de catch ball: circular estrategias hacia abajo, recopilar sugerencias, refinar metas en iteraciones", "Definir métricas y scorecards para dar seguimiento al progreso en todos los niveles"]
+  entregable_esperado: Plan estratégico desplegado con metas cuantificadas, objetivos operativos, dueños asignados y sistema de métricas de seguimiento (scorecard)
+  ids_alias: None
+  merged_originals: None
+
+--- planificacion_estrategica_despliegue_2 ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Cómo integrar la calidad en tu plan de negocio
+  etiqueta_arbol: Alinea Calidad con tu Estrategia
+  resumen_teorico: Es el proceso sistemático mediante el cual tú defines tus metas de largo plazo relacionadas con la calidad y los clientes, integrándolas de forma equitativa con las metas financieras, de la gente que trabaja contigo, marketing y desarrollo, en un solo plan de negocio cohesivo. Ese plan luego se baja a metas más pequeñas, proyectos y acciones concretas en cada área. Integrarlo evita que tengas planes que se contradicen entre sí (dinero contra calidad) y asegura que elimines o cambies las actividades que no estén alineadas con tus metas.
+  pasos_accionables: ["Definir tu visión, misión, estrategias y metas anuales de forma integrada", "Poner la voz del cliente y las metas de calidad al mismo nivel que las metas financieras", "Reconocer y premiar el desempeño de acuerdo a las metas de mejora que te propongas", "Asegurarte de que participen todos los que te ayudan, sin importar su rol o nivel", "Usar el mismo lenguaje para los términos clave, como calidad, comparación con el mercado o cómo bajas la estrategia a lo concreto", "Enseñar estos conceptos y herramientas a todos los que trabajan contigo, no solo a quien se encarga de la calidad", "Eliminar las iniciativas que no estén alineadas con tu plan estratégico"]
+  entregable_esperado: Un plan estratégico anual único que integra tus metas de calidad, financieras y operativas, con proyectos concretos y quién se encarga de cada uno
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 23/28 [SUFIJO NUMERICO] (2 miembros): eco_efectividad, eco_efectividad_2
+==========================================================================================
+--- eco_efectividad ---
+  dominio: environmental | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Eco-efectividad como Nuevo Paradigma
+  etiqueta_arbol: Diseña Productos que Regeneren
+  resumen_teorico: En contraste con la eco-eficiencia, la eco-efectividad busca rediseñar productos y sistemas industriales desde su origen para que sean beneficiosos, no solo 'menos dañinos'. Se ilustra con el ejemplo de tres libros: uno convencional (tóxico al desecharse), uno 'eco-eficiente' (con compromisos de calidad y toxicidad residual), y uno 'eco-efectivo' hecho de polímeros infinitamente reciclables al mismo nivel de calidad, diseñado desde el inicio pensando en su próxima vida útil.
+  pasos_accionables: ["Seleccionar un producto piloto de la empresa para rediseñar bajo el paradigma eco-efectivo", "Definir los ciclos biológicos y técnicos en los que este producto podría reintegrarse sin pérdida de calidad", "Buscar materiales o polímeros diseñados para reciclaje infinito de alta calidad (upcycling)"]
+  entregable_esperado: Propuesta de rediseño eco-efectivo de un producto piloto con materiales de ciclo cerrado
+  ids_alias: None
+  merged_originals: None
+
+--- eco_efectividad_2 ---
+  dominio: environmental | fase_proyecto: ideacion | deprecado: False
+  titulo_concepto: Eco-Efectividad
+  etiqueta_arbol: Inspírate en Ciclos Naturales
+  resumen_teorico: La eco-efectividad es un paradigma de diseño que busca rediseñar tus procesos y productos por completo, en lugar de solo minimizar el daño como hace la eco-eficiencia. Se inspira en los ciclos naturales, donde el desperdicio de un organismo alimenta a otro y un cerezo produce abundancia sin agotar su entorno. El objetivo no es hacer menos mal sino hacer las cosas correctas: integrar placer, funcionalidad y regeneración ambiental en el mismo diseño, generando valor positivo para los ecosistemas y tu negocio a la vez. Esto implica cuestionar el propósito completo de tu sistema, cultural, comercial y ecológico, antes de simplemente optimizar lo que ya existe.
+  pasos_accionables: ["Analiza el ciclo de vida completo de tu producto o proceso identificando todos los flujos de materiales", "Cuestiona si tu diseño actual es el correcto, no solo si puede ser más eficiente, y si realmente regenera el entorno", "Identifica el propósito completo de tu sistema: cultural, comercial y ecológico", "Rediseña para que los materiales se conviertan en nutrientes biológicos o técnicos que generen efectos positivos", "Establece metas positivas de diseño, qué quieres lograr, en vez de solo metas negativas, qué quieres evitar, y en concreto la de regeneración positiva", "Diseñar sistemas que se autorregulen, inspirados en ciclos naturales (agua, nutrientes, energía)"]
+  entregable_esperado: Un diagnóstico del sistema actual con una propuesta de objetivo positivo de diseño que redefina el propósito del producto desde una lógica de abundancia y regeneración.
+  ids_alias: ['eco_efectividad_vs_eco_eficiencia', 'eco_efectividad_re_evolucion_industrial']
+  merged_originals: ['eco_efectividad_vs_eco_eficiencia', 'eco_efectividad_re_evolucion_industrial']
+
+==========================================================================================
+FAMILIA 24/28 [SUFIJO NUMERICO] (2 miembros): establecer_vision_organizacional, establecer_vision_organizacional_2
+==========================================================================================
+--- establecer_vision_organizacional ---
+  dominio: quality | fase_proyecto: ideacion | deprecado: False
+  titulo_concepto: Establecimiento de Visión, Misión y Estrategias
+  etiqueta_arbol: Define tu Visión y Misión
+  resumen_teorico: Tu estrategia empieza con una visión centrada en tu cliente. La visión es el estado futuro que quieres para tu negocio en los próximos 5 a 10 años, la misión es la razón por la que existes, las estrategias son los caminos para llegar a esa visión, y las metas anuales son los resultados concretos hacia los que diriges tu esfuerzo. Estos elementos deben ser simples, directos y estar claros para ti y para quien te ayude, de modo que puedas ser flexible en cómo los logras sin perder de vista hacia dónde vas.
+  pasos_accionables: ["Escribe una visión simple, directa e inspiradora, centrada en tu cliente", "Define tu misión: qué haces y a quién le sirves", "Establece tus estrategias como los pocos factores clave para tener éxito (precio, valor, tecnología, cultura)", "Define metas anuales de corto plazo (1 a 2 años) y de largo plazo (2 a 3 años)", "Establece criterios que guíen tus decisiones diarias en temas como calidad, cuidado del entorno y seguridad", "Crea un plan que baje tu visión a estrategias, metas y proyectos concretos"]
+  entregable_esperado: Un documento con tu visión, misión, estrategias y metas anuales, decidido y aprobado por ti
+  ids_alias: None
+  merged_originals: None
+
+--- establecer_vision_organizacional_2 ---
+  dominio: quality | fase_proyecto: ideacion | deprecado: False
+  titulo_concepto: Establecer una Visión para tu Negocio
+  etiqueta_arbol: Construye tu Visión de Cliente
+  resumen_teorico: La planificación estratégica de calidad empieza con una visión enfocada en el cliente. Una visión poderosa es simple, directa, y define los beneficios que tus clientes, las personas que trabajan contigo, tus socios y la sociedad pueden esperar de tu negocio. Debe ser un reto alcanzable en 3 a 5 años, con logros medibles, y considerar a tus clientes, tus mercados, tu entorno y tu cultura actual.
+  pasos_accionables: ["Dedica tiempo a pensar con claridad hacia dónde quieres llevar tu negocio en los próximos años, y si tienes con quién conversarlo, hazlo", "Redacta una visión simple, directa y medible a 3 o 5 años", "Revisa que la visión contemple beneficios para tus clientes, las personas que trabajan contigo y tus socios", "Evita errores comunes como enfocarte solo en tus socios o crear visiones inalcanzables", "Comparte la visión de forma que sea entendida y compartida por todas las personas que trabajan contigo"]
+  entregable_esperado: Una declaración de visión escrita, que tú apruebes y compartas con las personas que trabajan contigo
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 25/28 [PARTICULAS] (3 miembros): estrategia_de_innovacion_de_producto, estrategia_de_innovacion_producto, estrategia_innovacion_producto
+==========================================================================================
+--- estrategia_de_innovacion_de_producto ---
+  dominio: core | fase_proyecto: ideacion | deprecado: False
+  titulo_concepto: Estrategia de Innovación de Producto y Tecnología
+  etiqueta_arbol: Define tu Estrategia de Innovación
+  resumen_teorico: Las empresas con desempeño superior en innovación cuentan con una estrategia clara de producto-innovación y tecnología que define objetivos de largo plazo, el rol de la innovación en las metas del negocio, las 'arenas estratégicas' de enfoque, buckets estratégicos de recursos, y un roadmap de producto a 3-5 años. Sin esta estrategia, la empresa cae en un enfoque disperso ('scattergun') o en mercados poco atractivos.
+  pasos_accionables: ["Definir objetivos claros de innovación de producto (% de ventas/ganancias de nuevos productos a 3-5 años)", "Vincular explícitamente las metas de innovación con las metas generales del negocio", "Definir arenas estratégicas (mercados, tecnologías, sectores) donde enfocar los esfuerzos de innovación", "Asignar 'buckets estratégicos' de recursos a diferentes tipos de proyectos o arenas", "Crear un roadmap de producto que proyecte iniciativas de desarrollo a 3-5 años", "Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso"]
+  entregable_esperado: Un documento de estrategia de innovación que incluya objetivos, arenas estratégicas, buckets de recursos y roadmap de producto
+  ids_alias: None
+  merged_originals: None
+
+--- estrategia_de_innovacion_producto ---
+  dominio: core | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Estrategia de innovación de producto audaz
+  etiqueta_arbol: Apuesta por Innovación Audaz
+  resumen_teorico: La mayoría de los negocios concentran su desarrollo en mercados ya maduros y en ideas conocidas, las opciones fáciles, lo que deja pocas innovaciones reales: apenas el 11% del portafolio termina siendo algo nuevo para el mundo. Para lograr un crecimiento real, necesitas definir espacios estratégicos concretos y fértiles, mercados o tecnologías con alto potencial, que sirvan como el terreno oficial donde buscar ideas audaces, en lugar de dispersar tus esfuerzos en pequeños ajustes.
+  pasos_accionables: ["Revisa tu portafolio actual de desarrollo y clasifica qué parte es realmente nuevo para el mundo y qué parte es solo una mejora.", "Identifica los mercados o tecnologías emergentes con alto potencial de crecimiento donde quieres enfocar tu energía, como hizo Corning con las pantallas planas.", "Comparte con claridad hacia dónde vas a enfocar tu desarrollo con quienes trabajan contigo."]
+  entregable_esperado: Un documento donde defines los espacios estratégicos en los que vas a enfocar tu desarrollo de producto.
+  ids_alias: None
+  merged_originals: None
+
+--- estrategia_innovacion_producto ---
+  dominio: core | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Estrategia de Innovación de Producto
+  etiqueta_arbol: Define tu Estrategia de Producto
+  resumen_teorico: Es el plan maestro que guía todos los esfuerzos de nuevos productos de un negocio. Es el vínculo esencial entre el desarrollo de productos y la estrategia general del negocio. Sin ella, las decisiones sobre nuevos productos se toman de manera ad hoc, generando dispersión de esfuerzos, portafolios inconexos y bajo desempeño. Incluye 5 componentes clave: metas y objetivos, el rol de la innovación, arenas estratégicas de enfoque, despliegue de recursos, y planes de ataque.
+  pasos_accionables: ["Definir las metas y objetivos generales para el esfuerzo total de innovación del negocio", "Establecer el rol que jugarán los nuevos productos en el logro de las metas generales del negocio", "Identificar y priorizar las arenas estratégicas (mercados, tecnologías, categorías de producto) en las que se enfocará el esfuerzo de I+D", "Decidir la asignación de recursos (personas, presupuesto de I+D, marketing) entre las arenas seleccionadas", "Definir los planes de ataque para ganar en cada arena (ser innovador, seguidor rápido, proveedor de bajo costo)"]
+  entregable_esperado: Un documento de estrategia de innovación de producto que contenga metas medibles, arenas estratégicas priorizadas, asignación de recursos y planes de ataque claros.
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 26/28 [SUFIJO NUMERICO] (2 miembros): sistema_responsabilidad_gerencial, sistema_responsabilidad_gerencial_2
+==========================================================================================
+--- sistema_responsabilidad_gerencial ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: El Sistema es tu Responsabilidad
+  etiqueta_arbol: Asume el Sistema como Gerencia
+  resumen_teorico: El 'sistema' es el conjunto de elementos que estan fuera del control directo de quien ejecuta el trabajo: el estilo de dirección, la formación y experiencia de las personas, las regulaciones, los proveedores, los clientes, los inversores, los bancos y las restricciones del entorno. Tu tienes poder y margen de decisión sobre buena parte de ese sistema, pero no sobre todo. Esto es clave porque la mayoria de los problemas de calidad (94% según la estimación de Deming) son responsabilidad de quien diseña y mantiene el sistema, no de la persona que trabaja dentro de el.
+  pasos_accionables: ["Mapea todos los componentes del sistema que afectan el trabajo de quien te ayuda: politicas, recursos, capacitación, proveedores", "Identifica que elementos del sistema estan bajo tu control directo y cuales no", "Antes de culpar a alguien por un error, evalua si el sistema le permitia hacer bien su trabajo", "Rediseña procesos y politicas del sistema en lugar de limitarte a corregir a las personas", "Escucha las advertencias tempranas, tanto de quien trabaja contigo como de los clientes, antes de lanzar algo al mercado"]
+  entregable_esperado: Mapa o diagrama de tu sistema de negocio identificando que elementos controlas tu directamente y cuales quedan fuera de tu alcance
+  ids_alias: None
+  merged_originals: None
+
+--- sistema_responsabilidad_gerencial_2 ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: El Sistema es Tu Responsabilidad
+  etiqueta_arbol: Amplía tu Idea de Sistema
+  resumen_teorico: Muchas personas limitan el concepto de 'sistema' a la maquinaria y el procesamiento de datos, ignorando que a quien eliges para ayudarte, como los entrenas, como los acompanas y las ayudas que les das también son parte del sistema. Tu eres responsable del sistema completo; la persona que te ayuda solo puede dar lo que el sistema le permite dar. La mejora real requiere que simplifiques procesos, mejores la forma en que entrenas y entiendas donde y por que ocurren los errores.
+  pasos_accionables: ["Identifica todos los componentes del sistema mas alla de la maquinaria: a quien eliges para ayudarte, como lo entrenas, como lo acompanas, los procedimientos que sigues", "Simplifica procesos complejos que generan errores (por ejemplo, esquemas de descuentos complicados)", "Recopila datos sobre frecuencia, ubicación y causa de errores especificos", "Implementa entrenamiento continuo y retroalimentación basada en los datos del sistema", "Asume la responsabilidad sobre los resultados, en lugar de atribuir los fallos unicamente a quien te ayuda"]
+  entregable_esperado: Diagnostico del sistema completo (procesos, personas, entrenamiento) y plan de mejora que tu lideras
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 27/28 [PARTICULAS] (2 miembros): planificacion_de_la_inspeccion, planificacion_inspeccion
+==========================================================================================
+--- planificacion_de_la_inspeccion ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Planificación de la Inspección
+  etiqueta_arbol: Planifica tus Puntos de Inspección
+  resumen_teorico: Proceso de designar estaciones de inspección y especificar las instrucciones y facilidades requeridas para verificar la conformidad del producto con las especificaciones. Incluye la definición de una clasificación de características (lista derivada de especificaciones) y una clasificación de defectos (síntomas de no conformidad durante manufactura y uso en campo).
+  pasos_accionables: ["Designar las estaciones de inspección a lo largo del proceso productivo", "Especificar instrucciones detalladas para cada punto de inspección", "Definir las facilidades y equipos requeridos para la inspección", "Elaborar una clasificación de características derivada de especificaciones", "Elaborar una clasificación de defectos basada en síntomas de no conformidad"]
+  entregable_esperado: Plan de inspección documentado con estaciones, instrucciones, clasificación de características y de defectos
+  ids_alias: None
+  merged_originals: None
+
+--- planificacion_inspeccion ---
+  dominio: quality | fase_proyecto: planificacion | deprecado: False
+  titulo_concepto: Planificación de Inspección
+  etiqueta_arbol: Define tus Puntos de Inspección
+  resumen_teorico: Actividad de designar las 'estaciones' donde debe realizarse la inspección (incoming inspection, process inspection, lot approval, finished-goods inspection, etc.) y proporcionar los medios e instrucciones necesarias. Se apoya en el flowchart del proceso para ubicar los puntos críticos de control.
+  pasos_accionables: ["Mapear el proceso completo mediante un flowchart.", "Identificar puntos críticos: recepción de materiales, setup, operaciones críticas, transferencia entre departamentos, producto terminado.", "Definir si la inspección será fija, itinerante (roving) o integrada al operador (poka-yoke).", "Documentar instrucciones y facilidades requeridas en cada estación."]
+  entregable_esperado: Mapa de estaciones de inspección con instrucciones y recursos asignados.
+  ids_alias: None
+  merged_originals: None
+
+==========================================================================================
+FAMILIA 28/28 [SUFIJO NUMERICO] (2 miembros): validacion_sistema_medicion, validacion_sistema_medicion_2
+==========================================================================================
+--- validacion_sistema_medicion ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Validación del Sistema de Medición (Antes de Confiar en los Datos)
+  etiqueta_arbol: Valida tu Sistema de Medición
+  resumen_teorico: Antes de confiar en los datos de tu proceso mejorado, necesitas confirmar que tu forma de medir es precisa y confiable. Para lograrlo, analiza la capacidad de tu sistema de medición (análisis MSA), apoyándote en un software estadístico como Minitab. Así te aseguras de que las cifras que vas a usar para tomar decisiones realmente reflejan lo que está pasando en tu negocio.
+  pasos_accionables: ["Evalúa la capacidad de tu sistema de medición usando el análisis MSA", "Usa un software estadístico (como Minitab) para hacer el análisis", "Confirma que tus mediciones son confiables antes de fijar los estándares de control"]
+  entregable_esperado: Un reporte que valida tu sistema de medición y confirma su capacidad
+  ids_alias: None
+  merged_originals: None
+
+--- validacion_sistema_medicion_2 ---
+  dominio: quality | fase_proyecto: ejecucion | deprecado: False
+  titulo_concepto: Validación del Sistema de Medición (Bajo Six Sigma)
+  etiqueta_arbol: Comprueba la Capacidad de Medición
+  resumen_teorico: Bajo enfoques Six Sigma con bajos niveles de defectos permitidos, es crucial validar la capacidad del sistema de medición, no solo del proceso de manufactura. La variación observada proviene tanto del proceso como de la medición; si esta última es alta, se producen clasificaciones erróneas de producto bueno como defectuoso o viceversa.
+  pasos_accionables: ["Cuantificar la variación debida al proceso de manufactura", "Cuantificar la variación debida al sistema de medición (Gauge R&R)", "Comparar ambas fuentes de variación para determinar capacidad de medición", "Corregir o calibrar el sistema de medición si es necesario"]
+  entregable_esperado: Estudio de Gauge R&R con capacidad de medición validada
+  ids_alias: None
+  merged_originals: None
