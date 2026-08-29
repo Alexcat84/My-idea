@@ -1,0 +1,12 @@
+AUDITOR VUELTA 124 (audita la 123). Evidencia de la seccion 4.1 del acta.
+cmp -s de las siete baterias, apertura contra cierre:
+  IDENTICOS  GATE0_CMD1
+  IDENTICOS  CONTEO
+  DISTINTOS  MOTOR
+  DISTINTOS  WEB
+  IDENTICOS  TSC
+  IDENTICOS  DESFASE_CALIBRADO
+  IDENTICOS  MARCADOR
+
+grep -in 'identic|determinis|byte' docs/loop/REPORTE.md:
+  (cero aciertos)

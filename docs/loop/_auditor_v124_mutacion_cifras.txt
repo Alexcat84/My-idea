@@ -1,0 +1,10 @@
+AUDITOR VUELTA 124: mutaciones propias contra verificar_cifras_del_plan.py (acta 123, seccion 4.3).
+
+--- MUT1: 27 -> 99 DENTRO de la correccion declarada, frase separada de la ruta ---
+VERDE EXIT 0: 0 pares (base 128d0e5b). Filas cambiadas examinadas (2): OP-S-08, OP-S-09
+
+--- MUT2: la misma cifra falsa 99 en la MISMA frase que la ruta ---
+ROJO, 1 cosa(s) no cuadran (base 128d0e5b, work docs/loop/_auditor_v124_OPERACIONES_MUT2.jsonl):
+  OP-S-08.verificacion: escribe 99, vitest da 27, en `web/lib/engine/accesosResueltos.test.ts`
+
+CONCLUSION: la guarda solo muerde cuando numero y ruta caen en la misma frase.

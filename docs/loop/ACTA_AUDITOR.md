@@ -42437,3 +42437,251 @@ observacion de la 121 sobre las siete filas de `00_CODIGO` en `LISTA` con el cod
 
 **EL BUCLE SIGUE.** Escribo el encargo de la vuelta 123 en `docs/loop/PROMPT_SIGUIENTE.md`. **No escribo
 `PARA_ALEXIS.md`.** El numero **122 queda gastado por esta acta**.
+
+# ACTA DE LA VUELTA 123 DEL AUDITOR (28 ago 2026, fecha LEIDA DE GIT, Opus 5)
+# ==========================================================================
+
+**HUECO DE ACTA: NO HAY.** La ultima acta escrita es la de la vuelta 122 (commit del acta `128d0e5b`) y la
+que audito es la 123, la inmediatamente siguiente. Cubro UNA vuelta y la nombro: la 123, **CUATRO commits**
+sobre `128d0e5b`: `db8805a2`, `bd6d4ed5`, `887f69bc` y `48f735b7`. El reporte cita tres: el cuarto es el que
+lo transporta y no puede citarse a si mismo.
+
+**EL VEREDICTO DE UNA LINEA: LA PARADA QUE EL ACTA 122 DEJO AMENAZADA NO SE DISPARA. NO ENCUENTRO NI UNA
+CIFRA FALSA DEL EJECUTOR EN ESTA VUELTA: LAS DIEZ FILAS DE LA CABECERA, LAS DOS CORRECCIONES DE
+`OPERACIONES.jsonl`, LOS DOS CENSOS DE ALIAS Y LAS CUATRO LLAMADAS A `cargarEntrySeeds` ME SALEN IDENTICAS
+CON MIS PROPIOS INSTRUMENTOS, Y MI RELECTURA CIEGA DE LOS 39 PARES COINCIDE EN LOS 39. LO QUE COBRA LA
+VUELTA ES MIO: EL ENCARGO DE LA 123 ESTRECHO LA VARA DE `MESA_RACIMOS.md:214` A PARES CONSECUTIVOS Y DEJO
+12 PARES DEL RACIMO SIN LEER, Y EL CONTRATO QUE DICTE PARA LA GUARDA NUEVA NO ALCANZA A COTEJAR EL PROPIO
+TEXTO DE CORRECCION QUE LA VUELTA ESCRIBIO. LO DEMUESTRO POR MUTACION PROPIA LAS DOS VECES.**
+
+## 1. VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+
+**1.1 EL SELLO Y EL CICLO.** `verificar_apertura_sellada.py --vuelta 123`: **VERDE EXIT 0**, los **8**
+ficheros `SALIDA_V123_*_APERTURA.txt` nacidos todos en `db8805a2`, hijo directo de `128d0e5b`. Sellos
+leidos: apertura `128d0e5b`, cierre `887f69bc`, HEAD real `48f735b72cb547b7ab65285a2fbce2f1899a73f7`.
+Corri el ciclo de tres entero y en su orden (`run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py
+--aplicar`, `sync_assets_web.py`): `git diff --numstat -- dataset/ web/ engine/` **VACIO**, y `git status
+--porcelain` detras solo con mis propios ficheros `_auditor_v124_*`. El arbol que el ejecutor dejo es
+estable bajo el ciclo.
+
+**1.2 LAS DIEZ FILAS DE LA CABECERA, REMEDIDAS UNA A UNA.** Censo y aristas con
+`vuelta83_conteo_aristas.py WORK`: **3.853 / 3.188 / 665** y **9.190 / 9.169 / 18.359 / 9.813**, con
+`auto 0` y `nodos_con_dup_en_lista 0`. Gate 0 **OK**. Motor **25/25**. `npx vitest run`: **80 passed (80)**
+y **1.030 passed, 3 skipped (1.033)**. `npx tsc --noEmit`: **EXIT 0, cero lineas**, y las dos salidas del
+ejecutor cierran con la linea literal `EXIT=0` que mi encargo de la 123 corrigio, con la celda publicando
+"EXITCODE 0, cero lineas" en sus dos columnas: **el arreglo de 1.d esta hecho y la ceguera de la 113 no
+vuelve**. `recomputar_marcador.py 3388`: **A 551 / B 72 / C 5 / D 2.760**, `huecos: []`, `dups 0`.
+Desfase: **1 fila**, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`. Las diez coinciden.
+`tallar_cabecera_reporte.py --fase04 --vuelta 123 --comparar`: **10 filas cotejadas, DISTINTAS 0,
+CABECERA IDENTICA AL TALLADOR**. Y **mi corrida de Gate 0 sale byte a byte igual a la del ejecutor**
+(unico delta: la linea `EXIT: 0` que el anade), asi que el determinismo esta comprobado, no supuesto.
+
+**1.3 LAS TRES GUARDAS DE LA TAREA 1, CORRIDAS POR MI.** `verificar_citas_del_reporte.py`: **VERDE EXIT 0**.
+`verificar_cifras_del_plan.py`: **VERDE EXIT 0, 0 pares**, base `128d0e5b`, dos filas examinadas.
+`vuelta123_tarea1e_mutacion_fila_tabla.py`: **ROJO**, nombra la fila de tabla.
+`vuelta122_tarea1e_mutacion_citas.py`: **sigue ROJO**, el arreglo no la rompio.
+`vuelta123_tarea1f_caso_positivo.py`: **ROJO, 32 contra 27**. Lei ademas el diff entero de
+`verificar_citas_del_reporte.py`: el `continue` que sacaba toda fila de tabla esta QUITADO, el corte atomico
+por fila se conserva, el lookback de fila queda excluido **por diseno escrito** y la exclusion vive en el
+`CONTRATO` del docstring, en el registro largo y en un caso positivo: **el ramal (iii) que estrene en la 122
+se cumplio en los tres sitios**.
+
+**1.4 LAS CORRECCIONES DE LA TAREA 2, REMEDIDAS SIN COPIAR SU NUMERO.**
+`npx vitest run lib/engine/accesosResueltos.test.ts`: **Tests 27 passed (27)**, la cifra corregida es la
+real. `vuelta77_op_s09_nomina.py` sobre el grafo de hoy: **29 familias, `NOMINA_IDS_TOTAL=69`** en crudo;
+restando `['estructura_de_gates', 'estructura_gates']` quedan **28 familias y 67 nodos**, y los pares
+consecutivos son **18 familias de dos + 9 de tres + 1 de cuatro = 18+18+3 = 39**. Coincide al digito.
+Censo de alias por dueno: **742 / 0 colisiones / 719 vivo / 23 deprecado**. Censo de los cuatro
+`alias_map_*.json` en union con primera ocurrencia: **230 claves, 15 huerfanos, 37 a deprecado**. Las
+cuatro citas de linea que la ficha usa son exactas (`run_phase1.py:87` = `ALIAS_MAP_FILES = [`,
+`graph.ts:109` = `mapaDeAlias`, `reanclar_por_resolutor.py:51` = el bucle de `ids_alias`, `graph.ts:67` =
+`cargarEntrySeeds`). `cargarEntrySeeds(` en `web/` fuera de tests: **cuatro llamadas vivas**, y solo
+`follow/route.ts:232` va **sin grafo**. Aditividad: `OPERACIONES.jsonl` 2/2 con **word-diff que solo borra
+la comilla de cierre de dos campos**, o sea remision pura; `PENDIENTES.md` **107/0**; `wc -l REPORTE.md`
+**80**, el tope del austero cumplido y medido. Guiones largos o medios en lineas anadidas: **cero**.
+
+## 2. MI RELECTURA CIEGA: LOS 39 PARES, Y LOS 12 QUE NADIE LEYO
+
+Volque con codigo propio (`docs/loop/_auditor_v124_ciega.py`, que **NO abre el registro del ejecutor**)
+titulo, fuente, resumen, pasos, entregable, activacion, etiqueta y fase de los **67 nodos**, adjudique mi
+clase par a par, y **solo despues** destape `SALIDA_V123_OPS09_LECTURA.jsonl`. Empece por los discutibles
+marcados (A) y (B).
+
+**COINCIDEN 39 DE 39. DISCREPAN 0.** Los dos REPITE me salen REPITE con la misma vara: en
+`eliminacion_causas_error` los dos nodos son el mismo Paso 11 de Crosby (formulario, sin proponer solucion,
+respuesta rapida) y `_4` solo lo dice con mas detalle; en `dia_cero_defectos` los pasos de `_2` y `_3`
+comparten firma del pledge, pines y arranque de ECR al dia siguiente. **Y los dos supervivientes que elegi
+a ciegas son los suyos**: `eliminacion_causas_error_4` (mas rico y en la voz de la casa; su razon anade un
+campo que yo no habia mirado, `merged_originals`, que lo refuerza) y `dia_cero_defectos_2` (voz de la casa,
+"las personas que te ayudan"; `_3` es corporativo, "toda la plantilla"). **Adjudico (A) y (B) a favor del
+ejecutor.** Los 37 CONTINUA tambien me salen CONTINUA, aunque **dejo dicho que su lectura tira
+sistematicamente a lo generoso**: en `conciencia_calidad`, `capacidad_de_proceso_2`/`capacidad_del_proceso`,
+`programa_make_certain_2`/`_3`, `definiciones_operacionales_2`/`_3`, `planificacion_de_la_inspeccion`/
+`planificacion_inspeccion` y `establecer_vision_organizacional` el "otro angulo" es fino. Fino, pero
+escrito en la vara y sostenido en cada caso por un campo citado. No es caida.
+
+**LO QUE SI ENCONTRE, Y NO ES DEL EJECUTOR.** `MESA_RACIMOS.md:214` dice *"dentro del racimo se lee par a
+par"*. El ejecutor leyo **pares CONSECUTIVOS** porque **mi encargo de la 123 le fijo la cifra 39**, que es
+la suma de (n-1) por familia. Los pares del racimo son **51** (suma de C(n,2)), asi que **12 pares nunca se
+confrontaron**, todos en las familias de tres y en la de cuatro. Lo medi con codigo propio y los nombro:
+`accion_correctiva`<->`accion_correctiva_4`, `auditoria_de_producto`<->`auditoria_producto`,
+`consejo_de_calidad`<->`consejo_de_calidad_3`, `capacidad_de_proceso`<->`capacidad_del_proceso`,
+`dia_cero_defectos`<->`dia_cero_defectos_3`, `make_certain_programa`<->`programa_make_certain_2`,
+`make_certain_programa`<->`programa_make_certain_3`, `programa_make_certain`<->`programa_make_certain_3`,
+`clasificacion_de_seriedad_de_defectos`<->`clasificacion_seriedad_defectos`,
+`cultura_justa`<->`cultura_justa_3`, `definiciones_operacionales`<->`definiciones_operacionales_3`,
+`estrategia_de_innovacion_de_producto`<->`estrategia_innovacion_producto`. **Y no es teorico:** los dos
+solapes mas fuertes que encontre leyendo a ciegas caen justo ahi. `auditoria_de_producto` y
+`auditoria_producto` son los dos la evaluacion independiente del producto terminado despues de la
+inspeccion normal, del mismo Juran; `estrategia_de_innovacion_de_producto` y
+`estrategia_innovacion_producto` son los dos el plan maestro de Cooper con las mismas cinco piezas (metas,
+rol de la innovacion, arenas, despliegue de recursos, roadmap o planes de ataque). **Los salva la fase
+distinta** (`ideacion` contra `planificacion` y `validacion`), que es "otro momento" citable, **pero ninguno
+de los dos pares fue leido**, y esa salvacion la puse yo ahora, no el expediente.
+
+## 3. LO QUE ADJUDICO
+
+**3.1 EL ALCANCE DE "PAR A PAR" SON TODOS LOS PARES DEL RACIMO, NO SOLO LOS CONSECUTIVOS.** Sin doctrina
+nueva: `MESA_RACIMOS.md:214` escribe *"dentro del racimo se lee par a par"* y no dice "consecutivos"; el
+orden alfabetico de los ids es un accidente del listado, no una relacion del contenido, y en una familia de
+tres deja al primero y al tercero sin mirarse. **OP-S-09 NO puede ejecutarse hasta que los 12 pares que
+faltan esten leidos y registrados.** Los 39 ya leidos **quedan firmes y no se releen**.
+
+**3.2 LOS DOS REPITE Y SUS DOS SUPERVIVIENTES QUEDAN RATIFICADOS** (seccion 2), con la excepcion escrita de
+la DECISION 4 comprobada por mi: **ninguna de las 28 familias es transdominio** (medido: todos los miembros
+de cada familia comparten dominio) y ninguna es el `_2` de propiedad intelectual, asi que la excepcion de
+RENOMBRE O ALIAS no toca a nadie aqui.
+
+**3.3 LA ENTREGA DE LA 3.b ES COMPLETA, NO UN LIMITE DE ALCANCE.** Lo escribi yo en el encargo de la 123 con
+todas sus letras, el ejecutor lo cita, y ademas publica la cuenta de guardas de escritura consumidas: cero.
+**Se cumple lo pactado.** Y hoy se refuerza: con 12 pares sin leer, ejecutar habria sido peor.
+
+**3.4 LA CELDA "duplicadas de titulo 0" DE LA CABECERA NO SIGNIFICA LO QUE SE LEE.** Lei el codigo:
+`find_exact_title_duplicates` (`scripts/run_phase1.py:671`) agrupa por el `titulo_concepto` **crudo**, y
+`find_near_duplicate_titles` (linea 689) si normaliza pero **excluye expresamente los pares cuyo titulo
+normalizado es IGUAL**. Un par que solo difiere en mayusculas o acentos **se cae por las dos rendijas**.
+Medido por mi sobre los 3.188 vivos: **titulos duplicados exactos 0, normalizados 1**, y ese uno es
+`sistema_responsabilidad_gerencial` / `sistema_responsabilidad_gerencial_2` ("El Sistema es tu
+Responsabilidad" / "El Sistema es Tu Responsabilidad"), **que es una de las 28 familias de OP-S-09 y quedo
+CONTINUA**. No reabro el veredicto (la vara es el contenido, no el titulo), pero **la guarda se anota y el
+titulo tiene que dejar de estar duplicado**. Nada de esto se toca en `run_phase1.py`: va como guarda nueva
+en `scripts/loop/` y como ficha, que es donde la casa pone lo que no ordena ninguna operacion.
+
+## 4. LAS CAIDAS DE ESTA VUELTA, CON SU NOMBRE
+
+**4.1 DEL EJECUTOR, INCUMPLIMIENTO DE ENCARGO: CINCO BATERIAS SALEN IDENTICAS BYTE A BYTE Y EL REPORTE NO
+LO DICE.** Mi encargo 1.d ordena, literal: *"Si dos baterias salen identicas byte a byte, EL REPORTE LO DICE
+Y EXPLICA POR QUE"*, y ademas le advertia que la 122 se lo habia saltado. Medido por mi con `cmp`: son
+**IDENTICOS** `GATE0_CMD1`, `CONTEO`, `TSC`, `DESFASE_CALIBRADO` y `MARCADOR`; distintos solo `MOTOR` y
+`WEB` (traen tiempos). `grep -in "identic\|determinis\|byte" docs/loop/REPORTE.md`: **cero aciertos**.
+**El determinismo es legitimo** (no se escribio nada en `dataset/`, y mi Gate 0 reproduce el suyo byte a
+byte), **pero el encargo pedia nombrarlo y es la segunda vuelta seguida sin nombrarlo.** No es cifra falsa
+ni afirmacion equivocada: **es silencio donde el encargo mandaba hablar.** No acumula para ninguna racha.
+
+**4.2 MIA, DE ENCARGO: ESTRECHE LA VARA A 39 PARES Y DEJE 12 SIN LEER.** El encargo de la 123 escribe *"Las
+28 familias enteras (39 pares...)"* y el ejecutor obedecio exacto. La cifra 39 la puse yo en el acta 122
+midiendo pares consecutivos, y `MESA_RACIMOS.md:214` no dice consecutivos. **Convertir una vara escrita en
+una cuenta mecanica mas estrecha, y publicarla como si fuera la vara, es caida propia**, de la misma familia
+que las que llevo cobrandole al ejecutor. Se corrige en el encargo de la 124 (seccion 3.1) y estrena el
+ramal (v) de abajo.
+
+**4.3 MIA, GUARDA QUE NO ALCANZA: EL CONTRATO QUE DICTE PARA `verificar_cifras_del_plan.py` NO COTEJA LA
+CORRECCION QUE LA VUELTA ESCRIBIO.** Mi encargo 1.f pide el par *"en la MISMA frase que una ruta citada"*.
+La correccion 2.a quedo partida en dos frases: *"la cifra real es 27 casos, no 32."* y *"Medido con `npx
+vitest run lib/engine/accesosResueltos.test.ts` desde web/..."*. **Mutacion propia**: cambie 27 por **99** en
+esa correccion y corri `verificar_cifras_del_plan.py --base 128d0e5b --work
+docs/loop/_auditor_v124_OPERACIONES_MUT.jsonl`: **VERDE EXIT 0, "0 pares"**. Con la misma cifra falsa metida
+en la misma frase que la ruta (`_auditor_v124_OPERACIONES_MUT2.jsonl`) la guarda si cae: **ROJO, "escribe
+99, vitest da 27"**. O sea: la guarda hace exactamente lo que su contrato dice y **el contrato es mio y es
+corto**. La guarda nacio para morder la cifra falsa de una correccion y **no muerde el texto de la
+correccion**. El ejecutor la implemento bien; el agujero es del dictado. Se ensancha en la 124.
+
+**4.4 DECLARADA Y NO CONTADA, DEL EJECUTOR.** El reporte confiesa en su cabecera *"CAIDA PROPIA CORREGIDA EN
+VIVO, dos veces"*: capturo `GATE0_CMD1` con una corrida extra de `run_phase1.py` tras converger, lo delato
+`engine/run_all_tests.py` con 71 divergentes, y lo corrigio reaplicando el ciclo las dos veces. **No la
+cuento**, por la misma razon que la 122: la regla existe para que no se publique una medicion tomada con el
+ciclo a medias, **y ninguna se publico** (mi ciclo converge a `numstat` vacio y mis siete salidas coinciden
+con las suyas). Rompio ruidoso, en el reporte, antes de que nadie preguntara.
+
+**4.5 DECLARADA Y NO CONTADA, MIA, DE PROCEDIMIENTO.** Mi primer volcado ciego pidio campos que este grafo no
+tiene (`titulo`, `pasos`, `proposito`) y salio con `titulo: None` en todo. Lo vi, lei el esquema real
+(`titulo_concepto`, `pasos_accionables`, `resumen_teorico`) y **rehice el volcado antes de adjudicar nada**:
+**ninguna clase mia salio del volcado roto**. Y lo que dejo expresamente SIN afirmar: **no recompute el
+estado `128d0e5b` con las suites**, asi que no digo que la apertura estuviera verde; digo que el sello es
+correcto y que **el estado de hoy** lo mido verde entero.
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: cero relecturas de unidad y cero puestos**, declarado (la fase III no mueve el cribado). Varas
+corridas por mi: el ciclo de tres entero con `numstat` vacio y `git status` detras; Gate 0, y su diff byte a
+byte contra el del ejecutor; censo y aristas con instrumento; las tres suites; el marcador con huecos y
+duplicados; el desfase; el tallador con `--comparar`; las **cinco** guardas y mutaciones de la TAREA 1;
+`vitest` sobre `accesosResueltos.test.ts` solo; la nomina de OP-S-09 remedida y las tres cifras derivadas;
+los **dos** censos de alias con codigo propio; las cuatro citas de linea; el barrido de `cargarEntrySeeds`;
+el word-diff de `OPERACIONES.jsonl`; el `numstat` y el `wc -l`; el barrido de guiones; **el volcado ciego de
+los 67 nodos y la adjudicacion de los 39 pares**; **el calculo de los 51 pares del racimo y la nomina de los
+12 no leidos**; **el censo de titulos duplicados normalizados sobre los 3.188 vivos y la lectura del codigo
+de las dos funciones de Gate 0**; y **dos mutaciones propias contra `verificar_cifras_del_plan.py`**.
+
+**Caidas del ejecutor en esta tanda: CERO de clase, CERO de cifra publicada, CERO de reporte, UNA de
+incumplimiento de encargo (4.1). Caidas del auditor: UNA de encargo (4.2) y UNA de guarda que no alcanza
+(4.3). Declaradas y no contadas: 4.4 (del ejecutor) y 4.5 (mia). Discrepancias de clase en la ciega:
+NINGUNA, 39 de 39. Discutibles abiertos: NINGUNO.**
+
+**Acumulado:** **858 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase del
+ejecutor** (sin cambio), **70 de reporte del ejecutor** (sin cambio), **20 de cifra publicada del ejecutor**
+(sin cambio), **16 de expediente** (sin cambio), **14 de incumplimiento de encargo** (13 mas la de hoy),
+**2 de guarda envejecida** (sin cambio), **16 de guarda que no alcanza o cegada** (14 mas la mia de 4.3 mas
+la de Gate 0 que mido en 3.4), **8 de cifra del auditor** (sin cambio), **19 de acta del auditor** (sin
+cambio), **29 de procedimiento del auditor** (sin cambio), **1 de reporte del auditor** (sin cambio),
+**21 de encargo del auditor** (20 mas la de hoy), **2 de clase del auditor** (sin cambio), y **2 vueltas no
+entregadas enteras** (sin cambio).
+
+**RACHAS, con la aritmetica delante:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: BAJA DE UNO A CERO.** El acta 122 la dejo en **UNO** y aviso con
+> todas sus letras que otra de esa clase en la 123 era **PARADA**. **Busque esa segunda con todo lo que
+> tengo**: remedi las diez filas de la cabecera, las dos correcciones de `OPERACIONES.jsonl` sin copiar sus
+> numeros, los dos censos de alias, las cuatro citas de linea, las cuatro llamadas a `cargarEntrySeeds`, la
+> nomina de OP-S-09 y sus tres cifras derivadas, y lei a ciegas los 39 pares. **No hay ninguna. La racha se
+> rompe y la parada NO se dispara.** Y dejo dicho por que se rompio: el remedio que encargue era **de
+> codigo** (la guarda 1.f), no solo de texto, y ademas 4.3 demuestra que **ese remedio todavia no alcanza**,
+> asi que el merito de esta vuelta es del trabajo del ejecutor mas que de mi guarda.
+>
+> **REPORTE: SIGUE EN CERO.** Cero afirmaciones equivocadas que vivan solo en `REPORTE.md`. La 4.1 es una
+> **omision**, no una afirmacion, y la casa la clasifica aparte. **La ESCALADA de `AUDITOR.md` 1.2 se
+> dispara en DOS y estamos en CERO: NO TOCA**, y la dejo intacta y dicha para que nadie la de por gastada.
+>
+> **EL CREDITO DE LA TANDA: EL TRAMO SE ENSANCHA POR CUARTA VUELTA, PERO HOY POR CULPA MIA.** `AUDITOR.md`
+> 1.2 manda el doble cuando hay discrepancias fuera del marcado: **en la ciega no hubo ninguna**, y las tres
+> caidas de hoy son **una omision del ejecutor y dos mias**. Sigue vivo el tramo doblado de la 120 con sus
+> ramales (i), (ii), (iii) y (iv), y le anado el quinto, que sale limpio de 4.2:
+> **(v) NINGUNA VARA SE ESTRECHA EN EL ENCARGO. Si un encargo convierte un criterio escrito en una cuenta
+> mecanica (un numero de pares, de familias, de sitios), el ejecutor REMIDE ese numero contra la vara
+> escrita ANTES de trabajar y declara la diferencia si la hay. Una cifra de alcance dictada por el auditor
+> no es la vara: la vara es el texto que la vara cita.**
+
+## 6. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** Los dos discutibles marcados se adjudican en 2 y 3.2 con la vara y la DECISION 4; el alcance de "par a par" se adjudica en 3.1 **por extension citable del propio texto** de `MESA_RACIMOS.md:214`, no por regla nueva |
+| contradiccion con una regla vigente o cifra publicada | **NO.** La cifra falsa de la 122 quedo corregida por remision y **la remedi yo en 27**; ninguna cifra de esta vuelta contradice a mi medicion |
+| decision de fundador reservada | **NO.** No se borro un solo nodo ni un solo alias, OP-S-09 no se ejecuto, el alcance no se movio, no se gasto fuera del repo, no se toco produccion y **el bucle no funde ramas** |
+| fallo tecnico repetido | **NO.** Gate 0 y las tres suites **verdes por corrida propia**, tallador **IDENTICO**, y las cinco guardas de la TAREA 1 verdes o rojas donde tocaba |
+| credito de tanda roto (clase o cifra) | **NO. BAJA DE UNO A CERO.** La segunda caida que habria parado el bucle **no existe** |
+| credito de tanda roto (reporte) | **NO. SIGUE EN CERO** de las tres que pide la letra del 27 ago |
+| campaña consumada | **NO.** De la fase 05 siguen en `LISTA` **cuatro**: `OP-S-09` (orden 8, 67 nodos), `OP-S-10` (orden 9, 31 nodos), `OP-S-11` (orden 11) y `OP-S-12` (orden 12), leidos de `OPERACIONES.jsonl` hoy |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO SE DISPARA.** Cuatro operaciones en `LISTA` y `OP-S-09` ni siquiera ejecutada |
+
+**OBSERVACION QUE DEJO ABIERTA Y MARCADA:** la de la 122 sobre `follow/route.ts:232` **ya esta medida y
+anotada** en `PENDIENTES.md` por la TAREA 2.e, con las cuatro llamadas clasificadas; la verifique y queda
+para la auditoria de cierre, **sin tocar codigo**. Sigue viva la de las siete filas de `00_CODIGO` en
+`LISTA` con el codigo ya arreglado: **el campo `estado` no es la verdad de esta campaña**. Y sumo la de
+3.4: **la celda "duplicadas de titulo 0" es case-sensitive**, hay **una** duplicada normalizada viva, y la
+auditoria de cierre la va a necesitar.
+
+**EL BUCLE SIGUE.** Escribo el encargo de la vuelta 124 en `docs/loop/PROMPT_SIGUIENTE.md`. **No escribo
+`PARA_ALEXIS.md`.** El numero **123 queda gastado por esta acta**.

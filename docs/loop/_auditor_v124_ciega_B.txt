@@ -1,0 +1,428 @@
+===== FAMILIA: obtencion_compromiso =====
+  --- obtencion_compromiso ---
+    titulo: Cómo lograr un compromiso (más allá del cierre de venta tradicional)
+    dominio: core | fase: ejecucion | deprecado: None
+    fuente: SPIN Selling - Neil Rackham
+    resumen: Cuando vendes algo grande, casi nunca consigues el compromiso final con un pedido directo. Lo normal es lograr un avance (Advance) hacia la decisión, como conseguir una demostración o pasar al siguiente nivel de decisión. La investigación de Huthwaite muestra que las técnicas de cierre clásicas (cierre asumido, alternativo, de última oportunidad, etc.) no aumentan tu éxito en ventas grandes y hasta pueden perjudicarlo, al contrario de lo que suele creerse sobre que 'cerrar más' siempre es mejor.
+    paso 1: Define para cada llamada un objetivo de avance realista en vez de buscar el cierre inmediato
+    paso 2: Evita las técnicas de cierre de presión (cierre asumido, alternativo, última oportunidad) cuando la venta es compleja
+    paso 3: Mide el éxito de tus llamadas por los avances que logras, no solo por los pedidos que cierras
+    paso 4: Pon tu esfuerzo de mejora en las etapas de investigación y demostración de capacidad, no en el cierre
+    entregable: Una lista clara de qué cuenta como avance válido en cada etapa de tu proceso de venta
+    activacion: ['Cuando usas técnicas de cierre agresivas y no te están dando buenos resultados en ventas grandes', 'Si tu ciclo de venta requiere varios pasos antes de llegar al pedido final']
+    etiqueta: Busca un Avance Real
+    n_prev 3 n_sig 1
+  --- obtencion_de_compromiso ---
+    titulo: Las Cuatro Acciones para Obtener Compromiso
+    dominio: core | fase: ejecucion | deprecado: None
+    fuente: SPIN Selling - Neil Rackham
+    resumen: Los vendedores exitosos en ventas grandes usan cuatro acciones concretas para obtener compromiso del cliente: (1) dedicar más tiempo a investigar necesidades que a demostrar capacidades, (2) verificar proactivamente que no queden dudas o preocupaciones sin resolver, (3) resumir los beneficios clave discutidos antes de pedir el compromiso, y (4) proponer (no simplemente pedir) el siguiente paso lógico y alcanzable.
+    paso 1: Dedica la mayor parte de la reunión a investigar y entender las necesidades del cliente antes de presentar tu solución
+    paso 2: Antes de cerrar, pregunta explícitamente si hay algo más que el cliente necesite aclarar
+    paso 3: Resume los beneficios y puntos clave discutidos en la conversación
+    paso 4: Propón el siguiente paso concreto y realista, en lugar de simplemente 'pedir la venta'
+    paso 5: Asegúrate de que el compromiso propuesto sea el más alto que el cliente pueda dar de forma realista en ese momento
+    entregable: Guion o checklist de cierre que incluya verificación de dudas, resumen de beneficios y propuesta de próximo paso concreto
+    activacion: ['Cuando el usuario está cerca de cerrar una venta grande y necesita una estrategia estructurada de cierre en lugar de técnicas de presión']
+    etiqueta: Usa las Cuatro Acciones Clave
+    n_prev 5 n_sig 2
+
+===== FAMILIA: control_estadistico_del_proceso =====
+  --- control_estadistico_del_proceso ---
+    titulo: Control Estadístico del Proceso (SPC)
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: Un proceso está en control estadístico cuando su variación proviene únicamente de causas comunes (inherentes al sistema) y no de causas especiales (eventos aislados). Solo cuando un proceso está en control estadístico es posible predecir su comportamiento futuro. Sin este control, la inspección se vuelve la única alternativa, lo cual es costoso y poco confiable, ya que un proceso puede cumplir especificaciones ahora y fallar más tarde sin previo aviso.
+    paso 1: Recolectar datos secuenciales del proceso (por hora, por lote, etc.)
+    paso 2: Construir gráficos de control (X-barra y R) con los datos
+    paso 3: Identificar y eliminar causas especiales de variación hasta que el proceso muestre estabilidad
+    paso 4: Una vez estable, calcular la capacidad real del proceso
+    paso 5: Aceptar que estar en control no equivale a cumplir especificaciones
+    paso 6: Iniciar intervención en el sistema (cambio de diseño, método, materiales) para reducir el nivel de defectos una vez confirmado el control
+    paso 7: Distinguir entre cambiar el nivel promedio (más simple) y reducir la dispersión (usualmente más difícil)
+    entregable: Gráfico de control validado que demuestre estabilidad estadística del proceso, con causas especiales documentadas y eliminadas.
+    activacion: ['Cuando el usuario depende de inspección final para garantizar calidad', 'Cuando hay variabilidad inexplicada en la producción', 'Antes de intentar mejorar un proceso, para saber si es estable', "Cuando el equipo confunda 'proceso estable' con 'proceso libre de defectos'"]
+    etiqueta: Confirma que tu Proceso Esté Estable
+    n_prev 3 n_sig 4
+  --- control_estadistico_proceso ---
+    titulo: Un proceso estable es la base para innovar (control estadístico de procesos)
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: Cuando tu proceso tiene una variación predecible y dentro de límites, decimos que está en control estadístico. Eso te permite detectar las causas puntuales que se salen de lo normal y, una vez que las eliminas, tienes una base sólida para innovar técnicamente. El caso de Nashua Corporation muestra esto: al lograr que su proceso de recubrimiento fuera estable, redujo el uso de material y evitó una inversión fuerte en equipo nuevo, generando ahorros anuales importantes (pregunta las cifras equivalentes en tu mercado).
+    paso 1: Establece cartas de control para las variables críticas de tu proceso.
+    paso 2: Identifica y elimina los puntos fuera de los límites de control, es decir, las causas puntuales de variación.
+    paso 3: Una vez que tu proceso esté bajo control estadístico, usa lo que aprendiste de él para experimentar e innovar, por ejemplo reduciendo insumos o mejorando el diseño, sin perder la estabilidad.
+    paso 4: Evita ajustar tu proceso de forma reactiva por cada medición individual, porque eso aumenta la variación en vez de reducirla.
+    entregable: Cartas de control funcionando en tu proceso crítico, con evidencia de que la variación bajó, y un plan de innovación técnica basado en ese proceso ya estable.
+    activacion: ['Cuando estás por invertir en maquinaria nueva para resolver un problema de calidad sin haber estabilizado antes tu proceso actual.', 'Cuando notas que tú o quien opera el proceso hacen ajustes frecuentes y costosos.']
+    etiqueta: Usa la Estabilidad para Innovar
+    n_prev 11 n_sig 7
+
+===== FAMILIA: velocidad_crecimiento_franquicia =====
+  --- velocidad_crecimiento_franquicia ---
+    titulo: Velocidad de Crecimiento vía Franquicia
+    dominio: franquicias | fase: ideacion | deprecado: None
+    fuente: Franchise Your Business - Mark Siebert
+    resumen: La franquicia permite expandirse más rápido que el crecimiento corporativo porque el franquiciado ejecuta la mayoría de las tareas operativas (búsqueda de sitio, negociación de arriendo, contratación, etc.), permitiendo al franquiciante capturar posiciones de liderazgo de mercado antes que la competencia y saturar mercados con mayor rapidez.
+    paso 1: Estimar el tiempo necesario para abrir una unidad propia (sitio, diseño, contratación, etc.)
+    paso 2: Comparar ese tiempo con el potencial de apertura simultánea de múltiples franquicias
+    paso 3: Evaluar el riesgo competitivo de no expandirse rápidamente en el mercado actual
+    paso 4: Diseñar una estrategia de expansión territorial basada en velocidad de saturación
+    entregable: Plan de velocidad de expansión comparado entre modelo propio y modelo de franquicia
+    activacion: ['Si existe riesgo de que competidores copien el concepto de negocio', 'Si el mercado tiene ventanas de oportunidad limitadas']
+    etiqueta: Crece Más Rápido con Franquicias
+    n_prev 2 n_sig 3
+  --- velocidad_crecimiento_franquicia_2 ---
+    titulo: Encuentra tu velocidad correcta para crecer
+    dominio: franquicias | fase: ejecucion | deprecado: None
+    fuente: Franchise Your Business - Mark Siebert
+    resumen: Al principio tienes que crecer despacio para no repetir a lo grande los mismos errores operativos. Piénsalo como 'rápido o cuidadoso': creces rápido si eres el primero en un mercado nuevo, o vas con cuidado y meticulosidad si ya hay competidores establecidos peleando el mismo terreno. Además, conviene que limites tu expansión inicial a un radio de 3 horas de donde estás tú, para poder dar soporte, hacer marketing local y cuidar tu reputación sin dispersarte.
+    paso 1: Mira qué tan competido y maduro está tu mercado: ¿eres el primero o ya hay otros haciendo esto?
+    paso 2: Decide si conviene moverte rápido o ir con cuidado, según esa competencia
+    paso 3: Limita tu expansión inicial a una distancia que puedas manejar (por ejemplo, 3 horas desde donde estás)
+    paso 4: Antes de escalar, asegúrate de que tus sistemas (inventario, personal, contabilidad) funcionen bien
+    paso 5: Ajusta cuántas franquicias vendes al ritmo real con el que puedes dar soporte
+    entregable: Tu plan de expansión, con el territorio y el ritmo de crecimiento definidos según lo que realmente puedes soportar
+    activacion: ['Estás lanzando tu programa de franquicias y tienes que decidir a qué ritmo crecer', 'Corres el riesgo de crecer más rápido de lo que tu capacidad de soporte permite']
+    etiqueta: Elige tu Ritmo de Crecimiento
+    n_prev 1 n_sig 2
+
+===== FAMILIA: cultura_justa =====
+  --- cultura_justa ---
+    titulo: Ingeniería de una Cultura Justa
+    dominio: health_safety | fase: planificacion | deprecado: None
+    fuente: Managing the Risks of Organizat - Reason, J. T_
+    resumen: Una cultura justa es un atmósfera de confianza en la que se anima y hasta se recompensa a las personas por proporcionar información esencial relacionada con la seguridad, pero en la que también se tiene claridad sobre dónde trazar la línea entre comportamiento aceptable e inaceptable. No es lo mismo que una cultura de 'no culpa' (no-blame), ya que ciertos actos inseguros egregios (abuso de sustancias, incumplimiento imprudente, sabotaje) sí ameritan sanciones. El desafío está en discriminar entre estas pocas 'malas conductas' verdaderas y la mayoría de actos inseguros donde la atribución de cu
+    paso 1: Definir criterios claros y consensuados para distinguir comportamiento aceptable de inaceptable
+    paso 2: Establecer una línea explícita entre errores humanos normales y actos verdaderamente negligentes o maliciosos, y dejarla por escrito
+    paso 3: Capacitar a supervisores y gestores en la aplicación consistente de estos criterios
+    paso 4: Comunicar estas políticas a toda la organización para generar confianza
+    paso 5: Evitar tanto la amnistía total como el castigo indiscriminado de todos los errores
+    paso 6: Arma un grupo de confianza que revise los casos difíciles o ambiguos
+    entregable: Política de cultura justa documentada con criterios claros de discriminación entre error humano y conducta sancionable
+    activacion: ['Cuando existe ambigüedad sobre qué comportamientos deben ser sancionados', 'Cuando los trabajadores desconfían del sistema de sanciones disciplinarias', 'Al diseñar políticas de manejo de errores en la organización', 'Cuando buscas que tu equipo reporte errores de forma voluntaria']
+    etiqueta: Construye una Cultura Justa
+    n_prev 11 n_sig 6
+  --- cultura_justa_2 ---
+    titulo: Cultura Justa (Just Culture) más allá de los programas de categorías
+    dominio: health_safety | fase: planificacion | deprecado: None
+    fuente: The Field Guide to Understandin - Dekker, Sidney;
+    resumen: Muchas organizaciones implementan 'cultura justa' como un programa basado en categorías (blanco=error honesto, gris=riesgo, negro=negligencia intencional) usando árboles de decisión de culpabilidad. Sin embargo, la investigación muestra que estas categorías son arbitrarias y dependen de quién tiene el poder de trazarlas, generando percepciones desiguales de justicia y a veces fomentando el secretismo del riesgo en lugar del aprendizaje. La cultura justa genuina no puede comprarse como programa; requiere esfuerzo cognitivo y moral continuo.
+    paso 1: Evitar la compra de programas de 'cultura justa' prediseñados basados solo en categorías de culpabilidad
+    paso 2: Preguntar 'qué es responsable' en vez de 'quién es responsable' ante cada incidente
+    paso 3: Involucrar en el análisis a personas con conocimiento técnico y credibilidad entre pares (no solo supervisores o jueces)
+    paso 4: Explorar la justicia restaurativa en lugar de la retributiva
+    entregable: Un protocolo de respuesta a incidentes que incorpore preguntas sistémicas, participación de pares expertos y enfoque restaurativo, en lugar de un árbol de decisión de culpabilidad
+    activacion: ["Cuando la organización busca implementar o revisar su programa de 'just culture'", 'Cuando los programas existentes de cultura justa generan quejas de injusticia percibida']
+    etiqueta: Ve Más Allá de Categorías
+    n_prev 2 n_sig 2
+  --- cultura_justa_3 ---
+    titulo: Cultura Justa (Just Culture) y segundas víctimas
+    dominio: health_safety | fase: ejecucion | deprecado: None
+    fuente: The Field Guide to Understandin - Dekker, Sidney;
+    resumen: La seguridad está ligada a la rendición de cuentas, el aprendizaje y la justicia organizacional. Crear una 'cultura justa' es difícil pero necesario: implica equilibrar accountability y aprendizaje sin desincentivar que las personas compartan honestamente sus preocupaciones de seguridad. Incluye atención a las 'segundas víctimas': practicantes involucrados en incidentes que se sienten personalmente responsables por daños a otros, y cuya resiliencia individual está ligada a la resiliencia organizacional.
+    paso 1: Diseñar políticas de reporte de incidentes que no penalicen la honestidad
+    paso 2: Establecer procesos de apoyo psicológico y profesional para 'segundas víctimas'
+    paso 3: Balancear la necesidad de accountability con la protección al aprendizaje organizacional
+    paso 4: Definir criterios claros y consensuados de qué constituye una conducta sancionable vs. un error del sistema
+    entregable: Política de cultura justa documentada, incluyendo protocolos de apoyo a segundas víctimas y criterios de accountability
+    activacion: ['Al diseñar políticas de reporte de incidentes y accountability', 'Cuando un trabajador se ve emocionalmente afectado tras estar involucrado en un incidente de seguridad']
+    etiqueta: Equilibra Justicia y Aprendizaje
+    n_prev 3 n_sig 0
+
+===== FAMILIA: customer_development_modelo =====
+  --- customer_development_modelo ---
+    titulo: Sal a hablar con tus clientes antes de construir (Customer Development)
+    dominio: core | fase: ideacion | deprecado: None
+    fuente: The Startup Owner's Manual - Blank, Steve
+    resumen: Es un proceso para encontrar un modelo de negocio que funcione y que puedas repetir y hacer crecer. Se combina con un desarrollo ágil de tu producto para ir ajustando rápido. La idea central es que salgas del escritorio y hables directamente con clientes reales antes de comprometerte con un diseño final de producto. Esto reemplaza el viejo camino de escribir un plan de negocio fijo y recién ahí construir.
+    paso 1: Identifica las hipótesis centrales de tu negocio: quién es tu cliente, cuál es su problema y qué solución le propones
+    paso 2: Sal a hablar directamente con clientes potenciales, no te quedes esperando que lleguen
+    paso 3: Recoge lo que te dicen sobre el producto, el canal para llegar a ellos, el precio y cómo lo entienden
+    paso 4: Ajusta tu modelo de negocio según lo que aprendes de verdad, no según lo que supones
+    paso 5: Combina estas conversaciones con ir desarrollando tu producto de forma ágil, en paralelo
+    entregable: Un registro de conversaciones con clientes, hechas de forma repetida, que te confirme o te tumbe las hipótesis con las que arrancaste
+    activacion: ['Cuando necesitas comprobar si de verdad existe mercado para tu producto', 'Cuando estás por empezar a construir tu producto sin haberlo validado antes']
+    etiqueta: Sal a Descubrir Clientes
+    n_prev 4 n_sig 6
+  --- modelo_customer_development ---
+    titulo: Modelo de Customer Development (4 Pasos)
+    dominio: core | fase: validacion | deprecado: None
+    fuente: The Startup Owner's Manual - Steve Blank
+    resumen: Marco metodológico que organiza las actividades relacionadas con el cliente en una startup en cuatro pasos iterativos: Customer Discovery, Customer Validation, Customer Creation y Company-Building. Los dos primeros pasos constituyen la 'búsqueda' del modelo de negocio, mientras que los dos últimos son la 'ejecución' del modelo ya validado. A diferencia de los planes de producto tradicionales lineales, este modelo es cíclico y acepta retrocesos como parte natural del aprendizaje.
+    paso 1: Identificar en qué paso del proceso se encuentra la startup actualmente
+    paso 2: Formular hipótesis de negocio antes de iniciar cualquier paso
+    paso 3: Diseñar experimentos para testear cada hipótesis fuera del edificio
+    paso 4: Evaluar en cada 'stop sign' si se alcanzó 'velocidad de escape' antes de avanzar
+    paso 5: Estar dispuesto a retroceder a pasos anteriores si el aprendizaje lo indica
+    entregable: Diagrama de flujo del proceso de Customer Development con indicación clara del paso actual y evidencia de aprendizaje acumulado
+    activacion: ['Si el emprendedor no tiene un proceso estructurado para testear su modelo de negocio', 'Si la startup está tratando de ejecutar un plan en lugar de buscar un modelo validado']
+    etiqueta: Sigue los Pasos del Cliente
+    n_prev 6 n_sig 5
+
+===== FAMILIA: definiciones_operacionales =====
+  --- definiciones_operacionales ---
+    titulo: Definiciones Operacionales de Calidad Aceptable
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: Muchos problemas de calidad surgen porque trabajadores e inspectores no comparten un criterio claro de qué constituye un producto aceptable o no aceptable. Crear definiciones operacionales -con ejemplos concretos de trabajo conforme y no conforme- puede reducir drásticamente la proporción de defectos sin inversión en nueva maquinaria ni mano de obra adicional.
+    paso 1: Reunir a supervisores, inspectores y trabajadores para identificar ambigüedades en los criterios de aceptación actuales.
+    paso 2: Desarrollar mediante prueba y error definiciones operacionales claras, con ejemplos físicos o visuales de productos conformes y no conformes.
+    paso 3: Publicar y difundir estas definiciones en el área de trabajo para que todos las conozcan.
+    paso 4: Medir la proporción de defectos antes y después para cuantificar la mejora.
+    entregable: Un documento con definiciones operacionales validadas y ejemplos visuales, publicado en el área de trabajo, junto con datos de reducción del porcentaje de defectos.
+    activacion: ['Cuando existe alta variabilidad en la aceptación de productos entre inspectores o turnos.', 'Cuando el porcentaje de defectos es estable pero elevado y no se ha intentado clarificar criterios.']
+    etiqueta: Aclara qué es Aceptable
+    n_prev 3 n_sig 11
+  --- definiciones_operacionales_2 ---
+    titulo: Definiciones Operacionales (Método, Prueba y Criterio)
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: Una definición operacional consiste en un método de prueba, una prueba y un criterio para juzgar si una pieza de trabajo se clasifica como defectuosa o aceptable. Es esencial para que diferentes inspectores o trabajadores entiendan y apliquen el mismo criterio, evitando discrepancias como las observadas entre inspectores que califican de manera diferente el mismo producto.
+    paso 1: Definir claramente el método de prueba a utilizar
+    paso 2: Establecer el criterio específico de aceptación o rechazo
+    paso 3: Documentar la definición de forma comunicable para todo el personal involucrado
+    paso 4: Verificar que múltiples inspectores apliquen el criterio de manera consistente
+    entregable: Un documento de definición operacional con método de prueba y criterios claros de aceptación/rechazo
+    activacion: ['Cuando distintos inspectores obtienen resultados inconsistentes sobre el mismo producto', 'Cuando se necesita estandarizar criterios de calidad entre múltiples evaluadores']
+    etiqueta: Define Método, Prueba y Criterio
+    n_prev 1 n_sig 3
+  --- definiciones_operacionales_3 ---
+    titulo: Definiciones Operacionales (Traducir Conceptos Abstractos)
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: Una definición operacional traduce un concepto abstracto (como 'seguro', 'redondo', 'confiable', 'contaminación') en términos comunicables mediante un procedimiento de prueba específico, un criterio de juicio y una decisión clara (sí/no) sobre si el objeto cumple el criterio. Sin una definición operacional, cualquier especificación de calidad es ambigua y no puede ser objeto de acuerdo comercial, legal o de producción, ya que el significado de un concepto solo existe en la mente de quien lo formula hasta que se expresa operacionalmente.
+    paso 1: Identificar el adjetivo o concepto ambiguo que se desea especificar (ej. 'limpio', 'seguro', 'contaminado').
+    paso 2: Definir una prueba específica y reproducible para evaluar dicho concepto.
+    paso 3: Establecer un criterio de juicio claro y cuantificable.
+    paso 4: Definir la regla de decisión (sí/no) sobre el cumplimiento del criterio.
+    paso 5: Validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definición.
+    paso 6: Escribe el procedimiento con el detalle suficiente para que cualquier persona que lo siga llegue al mismo resultado que tú.
+    entregable: Un documento de especificación técnica que contenga la definición operacional completa: prueba, criterio y regla de decisión para cada característica de calidad relevante.
+    activacion: ['Cuando se redactan especificaciones de calidad para contratos con proveedores.', 'Cuando existen disputas entre departamentos sobre qué constituye un defecto.', 'Al diseñar regulaciones gubernamentales o estándares industriales.']
+    etiqueta: Traduce lo Abstracto en Pruebas
+    n_prev 1 n_sig 4
+
+===== FAMILIA: planificacion_estrategica_despliegue =====
+  --- planificacion_estrategica_despliegue ---
+    titulo: Planificación Estratégica y Despliegue (Catch Ball)
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Proceso estructurado que va desde definir la misión y visión organizacional hasta traducir estrategias clave en metas cuantificadas y objetivos operativos específicos. El despliegue ocurre mediante un proceso iterativo de comunicación bidireccional (catch ball) donde las estrategias se circulan hacia abajo en la jerarquía y las ideas/sugerencias regresan hacia arriba, refinando las metas hasta que son precisas, prácticas y cuentan con dueños asignados.
+    paso 1: Definir la misión organizacional (¿en qué negocio estamos?)
+    paso 2: Formular y publicar una visión del estado futuro deseado
+    paso 3: Generar pocas estrategias clave para cumplir la misión y visión
+    paso 4: Cuantificar metas estratégicas para cada estrategia clave, divididas por horizonte temporal
+    paso 5: Establecer objetivos operativos específicos con responsables asignados
+    paso 6: Ejecutar el proceso de catch ball: circular estrategias hacia abajo, recopilar sugerencias, refinar metas en iteraciones
+    paso 7: Definir métricas y scorecards para dar seguimiento al progreso en todos los niveles
+    entregable: Plan estratégico desplegado con metas cuantificadas, objetivos operativos, dueños asignados y sistema de métricas de seguimiento (scorecard)
+    activacion: ['Cuando la organización necesita alinear todos los niveles jerárquicos hacia objetivos comunes', "Cuando se busca pasar de 'buena' a 'excelente' en desempeño organizacional"]
+    etiqueta: Despliega tu Estrategia en Metas
+    n_prev 2 n_sig 4
+  --- planificacion_estrategica_despliegue_2 ---
+    titulo: Cómo integrar la calidad en tu plan de negocio
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Es el proceso sistemático mediante el cual tú defines tus metas de largo plazo relacionadas con la calidad y los clientes, integrándolas de forma equitativa con las metas financieras, de la gente que trabaja contigo, marketing y desarrollo, en un solo plan de negocio cohesivo. Ese plan luego se baja a metas más pequeñas, proyectos y acciones concretas en cada área. Integrarlo evita que tengas planes que se contradicen entre sí (dinero contra calidad) y asegura que elimines o cambies las actividades que no estén alineadas con tus metas.
+    paso 1: Definir tu visión, misión, estrategias y metas anuales de forma integrada
+    paso 2: Poner la voz del cliente y las metas de calidad al mismo nivel que las metas financieras
+    paso 3: Reconocer y premiar el desempeño de acuerdo a las metas de mejora que te propongas
+    paso 4: Asegurarte de que participen todos los que te ayudan, sin importar su rol o nivel
+    paso 5: Usar el mismo lenguaje para los términos clave, como calidad, comparación con el mercado o cómo bajas la estrategia a lo concreto
+    paso 6: Enseñar estos conceptos y herramientas a todos los que trabajan contigo, no solo a quien se encarga de la calidad
+    paso 7: Eliminar las iniciativas que no estén alineadas con tu plan estratégico
+    entregable: Un plan estratégico anual único que integra tus metas de calidad, financieras y operativas, con proyectos concretos y quién se encarga de cada uno
+    activacion: ['Cuando tienes planes de calidad y planes financieros que no se hablan entre sí', 'Cuando buscas una ventaja competitiva que dure, a través de hacer las cosas muy bien', 'Al empezar a transformar tu negocio usando la calidad como base']
+    etiqueta: Alinea Calidad con tu Estrategia
+    n_prev 2 n_sig 5
+
+===== FAMILIA: eco_efectividad =====
+  --- eco_efectividad ---
+    titulo: Eco-efectividad como Nuevo Paradigma
+    dominio: environmental | fase: planificacion | deprecado: None
+    fuente: Cradle to Cradle - Michael Braungart
+    resumen: En contraste con la eco-eficiencia, la eco-efectividad busca rediseñar productos y sistemas industriales desde su origen para que sean beneficiosos, no solo 'menos dañinos'. Se ilustra con el ejemplo de tres libros: uno convencional (tóxico al desecharse), uno 'eco-eficiente' (con compromisos de calidad y toxicidad residual), y uno 'eco-efectivo' hecho de polímeros infinitamente reciclables al mismo nivel de calidad, diseñado desde el inicio pensando en su próxima vida útil.
+    paso 1: Seleccionar un producto piloto de la empresa para rediseñar bajo el paradigma eco-efectivo
+    paso 2: Definir los ciclos biológicos y técnicos en los que este producto podría reintegrarse sin pérdida de calidad
+    paso 3: Buscar materiales o polímeros diseñados para reciclaje infinito de alta calidad (upcycling)
+    entregable: Propuesta de rediseño eco-efectivo de un producto piloto con materiales de ciclo cerrado
+    activacion: ['Cuando la empresa está lista para ir más allá de la reducción de daño hacia un diseño regenerativo', 'Si se busca innovar en materiales para lograr reciclaje de alta calidad (upcycling) en lugar de downcycling']
+    etiqueta: Diseña Productos que Regeneren
+    n_prev 5 n_sig 4
+  --- eco_efectividad_2 ---
+    titulo: Eco-Efectividad
+    dominio: environmental | fase: ideacion | deprecado: None
+    fuente: Cradle to Cradle - Michael Braungart
+    resumen: La eco-efectividad es un paradigma de diseño que busca rediseñar tus procesos y productos por completo, en lugar de solo minimizar el daño como hace la eco-eficiencia. Se inspira en los ciclos naturales, donde el desperdicio de un organismo alimenta a otro y un cerezo produce abundancia sin agotar su entorno. El objetivo no es hacer menos mal sino hacer las cosas correctas: integrar placer, funcionalidad y regeneración ambiental en el mismo diseño, generando valor positivo para los ecosistemas y tu negocio a la vez. Esto implica cuestionar el propósito completo de tu sistema, cultural, comerci
+    paso 1: Analiza el ciclo de vida completo de tu producto o proceso identificando todos los flujos de materiales
+    paso 2: Cuestiona si tu diseño actual es el correcto, no solo si puede ser más eficiente, y si realmente regenera el entorno
+    paso 3: Identifica el propósito completo de tu sistema: cultural, comercial y ecológico
+    paso 4: Rediseña para que los materiales se conviertan en nutrientes biológicos o técnicos que generen efectos positivos
+    paso 5: Establece metas positivas de diseño, qué quieres lograr, en vez de solo metas negativas, qué quieres evitar, y en concreto la de regeneración positiva
+    paso 6: Diseñar sistemas que se autorregulen, inspirados en ciclos naturales (agua, nutrientes, energía)
+    entregable: Un diagnóstico del sistema actual con una propuesta de objetivo positivo de diseño que redefina el propósito del producto desde una lógica de abundancia y regeneración.
+    activacion: ['Cuando solo buscas reducir emisiones o desperdicios sin cuestionar el diseño base de tu producto', 'Cuando inicias un proyecto de diseño sostenible desde cero', "Si el proyecto busca diferenciarse de estrategias convencionales de 'sostenibilidad'"]
+    etiqueta: Inspírate en Ciclos Naturales
+    n_prev 4 n_sig 5
+
+===== FAMILIA: establecer_vision_organizacional =====
+  --- establecer_vision_organizacional ---
+    titulo: Establecimiento de Visión, Misión y Estrategias
+    dominio: quality | fase: ideacion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Tu estrategia empieza con una visión centrada en tu cliente. La visión es el estado futuro que quieres para tu negocio en los próximos 5 a 10 años, la misión es la razón por la que existes, las estrategias son los caminos para llegar a esa visión, y las metas anuales son los resultados concretos hacia los que diriges tu esfuerzo. Estos elementos deben ser simples, directos y estar claros para ti y para quien te ayude, de modo que puedas ser flexible en cómo los logras sin perder de vista hacia dónde vas.
+    paso 1: Escribe una visión simple, directa e inspiradora, centrada en tu cliente
+    paso 2: Define tu misión: qué haces y a quién le sirves
+    paso 3: Establece tus estrategias como los pocos factores clave para tener éxito (precio, valor, tecnología, cultura)
+    paso 4: Define metas anuales de corto plazo (1 a 2 años) y de largo plazo (2 a 3 años)
+    paso 5: Establece criterios que guíen tus decisiones diarias en temas como calidad, cuidado del entorno y seguridad
+    paso 6: Crea un plan que baje tu visión a estrategias, metas y proyectos concretos
+    entregable: Un documento con tu visión, misión, estrategias y metas anuales, decidido y aprobado por ti
+    activacion: ['Cuando tu negocio no tiene una dirección clara hacia dónde ir', 'Al empezar a construir la estrategia de tu negocio desde cero']
+    etiqueta: Define tu Visión y Misión
+    n_prev 2 n_sig 5
+  --- establecer_vision_organizacional_2 ---
+    titulo: Establecer una Visión para tu Negocio
+    dominio: quality | fase: ideacion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: La planificación estratégica de calidad empieza con una visión enfocada en el cliente. Una visión poderosa es simple, directa, y define los beneficios que tus clientes, las personas que trabajan contigo, tus socios y la sociedad pueden esperar de tu negocio. Debe ser un reto alcanzable en 3 a 5 años, con logros medibles, y considerar a tus clientes, tus mercados, tu entorno y tu cultura actual.
+    paso 1: Dedica tiempo a pensar con claridad hacia dónde quieres llevar tu negocio en los próximos años, y si tienes con quién conversarlo, hazlo
+    paso 2: Redacta una visión simple, directa y medible a 3 o 5 años
+    paso 3: Revisa que la visión contemple beneficios para tus clientes, las personas que trabajan contigo y tus socios
+    paso 4: Evita errores comunes como enfocarte solo en tus socios o crear visiones inalcanzables
+    paso 5: Comparte la visión de forma que sea entendida y compartida por todas las personas que trabajan contigo
+    entregable: Una declaración de visión escrita, que tú apruebes y compartas con las personas que trabajan contigo
+    activacion: ['Cuando tu negocio inicia un proceso de planificación estratégica de calidad', 'Si no tienes una dirección clara y compartida para tu negocio']
+    etiqueta: Construye tu Visión de Cliente
+    n_prev 1 n_sig 2
+
+===== FAMILIA: estrategia_de_innovacion_de_producto =====
+  --- estrategia_de_innovacion_de_producto ---
+    titulo: Estrategia de Innovación de Producto y Tecnología
+    dominio: core | fase: ideacion | deprecado: None
+    fuente: Winning at New Products - Robert G. Cooper
+    resumen: Las empresas con desempeño superior en innovación cuentan con una estrategia clara de producto-innovación y tecnología que define objetivos de largo plazo, el rol de la innovación en las metas del negocio, las 'arenas estratégicas' de enfoque, buckets estratégicos de recursos, y un roadmap de producto a 3-5 años. Sin esta estrategia, la empresa cae en un enfoque disperso ('scattergun') o en mercados poco atractivos.
+    paso 1: Definir objetivos claros de innovación de producto (% de ventas/ganancias de nuevos productos a 3-5 años)
+    paso 2: Vincular explícitamente las metas de innovación con las metas generales del negocio
+    paso 3: Definir arenas estratégicas (mercados, tecnologías, sectores) donde enfocar los esfuerzos de innovación
+    paso 4: Asignar 'buckets estratégicos' de recursos a diferentes tipos de proyectos o arenas
+    paso 5: Crear un roadmap de producto que proyecte iniciativas de desarrollo a 3-5 años
+    paso 6: Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+    entregable: Un documento de estrategia de innovación que incluya objetivos, arenas estratégicas, buckets de recursos y roadmap de producto
+    activacion: ['Al iniciar el proceso de planificación de innovación de una unidad de negocio', 'Cuando la empresa carece de dirección clara para decidir en qué proyectos invertir']
+    etiqueta: Define tu Estrategia de Innovación
+    n_prev 1 n_sig 6
+  --- estrategia_de_innovacion_producto ---
+    titulo: Estrategia de innovación de producto audaz
+    dominio: core | fase: planificacion | deprecado: None
+    fuente: Winning at New Products - Robert G. Cooper
+    resumen: La mayoría de los negocios concentran su desarrollo en mercados ya maduros y en ideas conocidas, las opciones fáciles, lo que deja pocas innovaciones reales: apenas el 11% del portafolio termina siendo algo nuevo para el mundo. Para lograr un crecimiento real, necesitas definir espacios estratégicos concretos y fértiles, mercados o tecnologías con alto potencial, que sirvan como el terreno oficial donde buscar ideas audaces, en lugar de dispersar tus esfuerzos en pequeños ajustes.
+    paso 1: Revisa tu portafolio actual de desarrollo y clasifica qué parte es realmente nuevo para el mundo y qué parte es solo una mejora.
+    paso 2: Identifica los mercados o tecnologías emergentes con alto potencial de crecimiento donde quieres enfocar tu energía, como hizo Corning con las pantallas planas.
+    paso 3: Comparte con claridad hacia dónde vas a enfocar tu desarrollo con quienes trabajan contigo.
+    entregable: Un documento donde defines los espacios estratégicos en los que vas a enfocar tu desarrollo de producto.
+    activacion: ['Si tu lista de productos en desarrollo está llena de mejoras pequeñas y le faltan innovaciones reales.', 'Si no tienes una dirección clara hacia dónde dirigir tu desarrollo.']
+    etiqueta: Apuesta por Innovación Audaz
+    n_prev 1 n_sig 3
+  --- estrategia_innovacion_producto ---
+    titulo: Estrategia de Innovación de Producto
+    dominio: core | fase: planificacion | deprecado: None
+    fuente: Winning at New Products - Robert G. Cooper
+    resumen: Es el plan maestro que guía todos los esfuerzos de nuevos productos de un negocio. Es el vínculo esencial entre el desarrollo de productos y la estrategia general del negocio. Sin ella, las decisiones sobre nuevos productos se toman de manera ad hoc, generando dispersión de esfuerzos, portafolios inconexos y bajo desempeño. Incluye 5 componentes clave: metas y objetivos, el rol de la innovación, arenas estratégicas de enfoque, despliegue de recursos, y planes de ataque.
+    paso 1: Definir las metas y objetivos generales para el esfuerzo total de innovación del negocio
+    paso 2: Establecer el rol que jugarán los nuevos productos en el logro de las metas generales del negocio
+    paso 3: Identificar y priorizar las arenas estratégicas (mercados, tecnologías, categorías de producto) en las que se enfocará el esfuerzo de I+D
+    paso 4: Decidir la asignación de recursos (personas, presupuesto de I+D, marketing) entre las arenas seleccionadas
+    paso 5: Definir los planes de ataque para ganar en cada arena (ser innovador, seguidor rápido, proveedor de bajo costo)
+    entregable: Un documento de estrategia de innovación de producto que contenga metas medibles, arenas estratégicas priorizadas, asignación de recursos y planes de ataque claros.
+    activacion: ['Cuando el negocio tiene un sistema Stage-Gate pero carece de dirección estratégica general', 'Cuando los proyectos de nuevos productos se seleccionan sin criterio de alineación estratégica', 'Cuando la empresa atraviesa una crisis y necesita reorientar su innovación']
+    etiqueta: Define tu Estrategia de Producto
+    n_prev 8 n_sig 7
+
+===== FAMILIA: sistema_responsabilidad_gerencial =====
+  --- sistema_responsabilidad_gerencial ---
+    titulo: El Sistema es tu Responsabilidad
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: El 'sistema' es el conjunto de elementos que estan fuera del control directo de quien ejecuta el trabajo: el estilo de dirección, la formación y experiencia de las personas, las regulaciones, los proveedores, los clientes, los inversores, los bancos y las restricciones del entorno. Tu tienes poder y margen de decisión sobre buena parte de ese sistema, pero no sobre todo. Esto es clave porque la mayoria de los problemas de calidad (94% según la estimación de Deming) son responsabilidad de quien diseña y mantiene el sistema, no de la persona que trabaja dentro de el.
+    paso 1: Mapea todos los componentes del sistema que afectan el trabajo de quien te ayuda: politicas, recursos, capacitación, proveedores
+    paso 2: Identifica que elementos del sistema estan bajo tu control directo y cuales no
+    paso 3: Antes de culpar a alguien por un error, evalua si el sistema le permitia hacer bien su trabajo
+    paso 4: Rediseña procesos y politicas del sistema en lugar de limitarte a corregir a las personas
+    paso 5: Escucha las advertencias tempranas, tanto de quien trabaja contigo como de los clientes, antes de lanzar algo al mercado
+    entregable: Mapa o diagrama de tu sistema de negocio identificando que elementos controlas tu directamente y cuales quedan fuera de tu alcance
+    activacion: ['Cuando evalues por que un producto tuvo que retirarse del mercado por fallas de diseño', 'Si tiendes a culpar a la persona que te ayuda por problemas que en realidad vienen del sistema', 'Al diseñar como evaluas y compensas a quienes trabajan contigo']
+    etiqueta: Asume el Sistema como Gerencia
+    n_prev 3 n_sig 2
+  --- sistema_responsabilidad_gerencial_2 ---
+    titulo: El Sistema es Tu Responsabilidad
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: Muchas personas limitan el concepto de 'sistema' a la maquinaria y el procesamiento de datos, ignorando que a quien eliges para ayudarte, como los entrenas, como los acompanas y las ayudas que les das también son parte del sistema. Tu eres responsable del sistema completo; la persona que te ayuda solo puede dar lo que el sistema le permite dar. La mejora real requiere que simplifiques procesos, mejores la forma en que entrenas y entiendas donde y por que ocurren los errores.
+    paso 1: Identifica todos los componentes del sistema mas alla de la maquinaria: a quien eliges para ayudarte, como lo entrenas, como lo acompanas, los procedimientos que sigues
+    paso 2: Simplifica procesos complejos que generan errores (por ejemplo, esquemas de descuentos complicados)
+    paso 3: Recopila datos sobre frecuencia, ubicación y causa de errores especificos
+    paso 4: Implementa entrenamiento continuo y retroalimentación basada en los datos del sistema
+    paso 5: Asume la responsabilidad sobre los resultados, en lugar de atribuir los fallos unicamente a quien te ayuda
+    entregable: Diagnostico del sistema completo (procesos, personas, entrenamiento) y plan de mejora que tu lideras
+    activacion: ['Cuando atribuyas los problemas de calidad exclusivamente al desempeno de quien te ayuda', 'Cuando existan altos niveles de error sistematico en tus procesos administrativos u operativos']
+    etiqueta: Amplía tu Idea de Sistema
+    n_prev 1 n_sig 1
+
+===== FAMILIA: planificacion_de_la_inspeccion =====
+  --- planificacion_de_la_inspeccion ---
+    titulo: Planificación de la Inspección
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Proceso de designar estaciones de inspección y especificar las instrucciones y facilidades requeridas para verificar la conformidad del producto con las especificaciones. Incluye la definición de una clasificación de características (lista derivada de especificaciones) y una clasificación de defectos (síntomas de no conformidad durante manufactura y uso en campo).
+    paso 1: Designar las estaciones de inspección a lo largo del proceso productivo
+    paso 2: Especificar instrucciones detalladas para cada punto de inspección
+    paso 3: Definir las facilidades y equipos requeridos para la inspección
+    paso 4: Elaborar una clasificación de características derivada de especificaciones
+    paso 5: Elaborar una clasificación de defectos basada en síntomas de no conformidad
+    entregable: Plan de inspección documentado con estaciones, instrucciones, clasificación de características y de defectos
+    activacion: ['Cuando se diseña un nuevo proceso de manufactura', 'Cuando se requiere formalizar los puntos de control de calidad en producción']
+    etiqueta: Planifica tus Puntos de Inspección
+    n_prev 1 n_sig 4
+  --- planificacion_inspeccion ---
+    titulo: Planificación de Inspección
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Actividad de designar las 'estaciones' donde debe realizarse la inspección (incoming inspection, process inspection, lot approval, finished-goods inspection, etc.) y proporcionar los medios e instrucciones necesarias. Se apoya en el flowchart del proceso para ubicar los puntos críticos de control.
+    paso 1: Mapear el proceso completo mediante un flowchart.
+    paso 2: Identificar puntos críticos: recepción de materiales, setup, operaciones críticas, transferencia entre departamentos, producto terminado.
+    paso 3: Definir si la inspección será fija, itinerante (roving) o integrada al operador (poka-yoke).
+    paso 4: Documentar instrucciones y facilidades requeridas en cada estación.
+    entregable: Mapa de estaciones de inspección con instrucciones y recursos asignados.
+    activacion: ['Al diseñar o rediseñar un sistema de control de calidad para un proceso productivo o de servicio.']
+    etiqueta: Define tus Puntos de Inspección
+    n_prev 1 n_sig 2
+
+===== FAMILIA: validacion_sistema_medicion =====
+  --- validacion_sistema_medicion ---
+    titulo: Validación del Sistema de Medición (Antes de Confiar en los Datos)
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Antes de confiar en los datos de tu proceso mejorado, necesitas confirmar que tu forma de medir es precisa y confiable. Para lograrlo, analiza la capacidad de tu sistema de medición (análisis MSA), apoyándote en un software estadístico como Minitab. Así te aseguras de que las cifras que vas a usar para tomar decisiones realmente reflejan lo que está pasando en tu negocio.
+    paso 1: Evalúa la capacidad de tu sistema de medición usando el análisis MSA
+    paso 2: Usa un software estadístico (como Minitab) para hacer el análisis
+    paso 3: Confirma que tus mediciones son confiables antes de fijar los estándares de control
+    entregable: Un reporte que valida tu sistema de medición y confirma su capacidad
+    activacion: ['Cuando necesitas confirmar que los datos que usas para controlar un proceso son confiables']
+    etiqueta: Valida tu Sistema de Medición
+    n_prev 6 n_sig 2
+  --- validacion_sistema_medicion_2 ---
+    titulo: Validación del Sistema de Medición (Bajo Six Sigma)
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Bajo enfoques Six Sigma con bajos niveles de defectos permitidos, es crucial validar la capacidad del sistema de medición, no solo del proceso de manufactura. La variación observada proviene tanto del proceso como de la medición; si esta última es alta, se producen clasificaciones erróneas de producto bueno como defectuoso o viceversa.
+    paso 1: Cuantificar la variación debida al proceso de manufactura
+    paso 2: Cuantificar la variación debida al sistema de medición (Gauge R&R)
+    paso 3: Comparar ambas fuentes de variación para determinar capacidad de medición
+    paso 4: Corregir o calibrar el sistema de medición si es necesario
+    entregable: Estudio de Gauge R&R con capacidad de medición validada
+    activacion: ['Cuando se requieren tolerancias muy estrictas (Six Sigma)', 'Cuando existen discrepancias entre clasificación de producto bueno/malo']
+    etiqueta: Comprueba la Capacidad de Medición
+    n_prev 2 n_sig 1
+

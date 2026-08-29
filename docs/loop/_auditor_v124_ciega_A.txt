@@ -1,0 +1,488 @@
+===== FAMILIA: accion_correctiva =====
+  --- accion_correctiva ---
+    titulo: Acción Correctiva (Esporádica vs Crónica)
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Distingue dos tipos de no conformidad. La esporádica es un cambio aislado en un proceso que normalmente funciona bien y se resuelve con troubleshooting local o proceso 8D, cuyo diagnóstico consiste en descubrir qué cambió mediante autopsia forense del producto o proceso, comparación de datos antes y después, y reconstrucción cronológica de eventos como turnos, mantenimiento o personal nuevo. El remedio suele ser revertir el cambio y restaurar el estado anterior conocido, un proceso más simple que la mejora continua. La crónica o repetidora es un desperdicio persistente que exige un proyecto fo
+    paso 1: Clasificar la no conformidad como esporádica o crónica según su recurrencia.
+    paso 2: Para casos esporádicos, hacer una autopsia forense del producto o proceso y comparar datos antes y después del problema.
+    paso 3: Reconstruir la cronología de eventos como cambios de turno, mantenimiento o personal nuevo para formular y descartar teorías de causa.
+    paso 4: Restaurar el proceso al estado previo una vez identificada la causa y verificar que el ajuste sea predecible y accesible.
+    paso 5: Para casos crónicos, organizar un proyecto formal de mejora de calidad con análisis de causa raíz o Six Sigma.
+    entregable: Plan de acción correctiva documentado con cronología de eventos si es esporádico, o esquema de proyecto de mejora si es crónico.
+    activacion: ['Cuando aparece un pico o desviación aislada no conforme en tu proceso.', 'Cuando detectas un problema que se repite una y otra vez pese a corregirlo.', 'Cuando necesitas decidir si basta con restaurar el estado anterior o si hace falta rediseñar el proceso.']
+    etiqueta: Distingue Fallas Esporádicas y Crónicas
+    n_prev 16 n_sig 5
+  --- accion_correctiva_2 ---
+    titulo: Acción Correctiva (De la Detección a la Prevención)
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: No es lo que encuentras, es lo que haces con lo que encuentras. Toda la planificación, inspección y medición del departamento de calidad es inútil si no conduce a prevenir la recurrencia de un problema. El verdadero valor de la ingeniería de calidad está en aprender del pasado para construir un futuro más fluido, mediante observación de rechazos reales y análisis de tendencias.
+    paso 1: Observar rechazos reales y analizarlos como evidencia directa de fallas
+    paso 2: Realizar análisis de tendencias para detectar problemas menos obvios
+    paso 3: Determinar la causa raíz sistémica, no solo culpar a individuos
+    paso 4: Implementar cambios que prevengan la recurrencia del problema, no solo su corrección puntual
+    entregable: Sistema de acción correctiva con causas raíz documentadas y medidas preventivas implementadas
+    activacion: ['Cuando se detectan defectos o no conformidades recurrentes']
+    etiqueta: Actúa, No Solo Detectes
+    n_prev 1 n_sig 2
+  --- accion_correctiva_4 ---
+    titulo: Acción Correctiva (Paso 6)
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: A medida que los empleados hablan abiertamente de sus problemas, surgen oportunidades de corrección más allá de los defectos detectados por inspección. Estos problemas deben tratarse en reuniones de supervisión en cada nivel, y escalarse formalmente si no pueden resolverse en el nivel inicial.
+    paso 1: Establecer reuniones regulares de supervisión para tratar problemas de calidad
+    paso 2: Escalar problemas no resueltos al siguiente nivel jerárquico
+    paso 3: Crear reuniones formales en departamentos que no las tengan
+    paso 4: Dar seguimiento visible a la resolución de problemas
+    entregable: Sistema formal de reuniones de acción correctiva funcionando en todos los niveles.
+    activacion: ['Cuando se identifican problemas recurrentes sin mecanismo formal de resolución']
+    etiqueta: Habla y Corrige tus Problemas
+    n_prev 1 n_sig 1
+
+===== FAMILIA: auditoria_de_producto =====
+  --- auditoria_de_producto ---
+    titulo: Revisión independiente de tu producto terminado (auditoría de producto)
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Puedes hacerla al azar, para tener una imagen sin sesgo de la calidad general, o enfocada en los puntos donde ya sabes que hay problemas. Su sentido es detectar cuando lo que mides por dentro no 
+    paso 1: Define si vas a comparar contra tus propias especificaciones o contra lo que el usuario realmente necesita
+    paso 2: Elige en que momento revisas: fabrica, distribuidor, servicio o ya en campo, según que tan complejo sea tu producto
+    paso 3: Decide cuantas unidades vas a revisar, usando un método estadistico o una regla practica como revisar un porcentaje pequeño de lo que produces por turno
+    paso 4: Diseña que vas a mirar en cada revisión: si sera al azar o enfocada en un problema que ya conoces
+    paso 5: Compara lo que encuentras con quejas de clientes o con lo que ves en el mercado, para confirmar que estas midiendo lo que de verdad importa
+    paso 6: Clasifica cada falla según su gravedad, de critica a incidental, y calcula un indice de fallas por unidad
+    paso 7: Compara tus resultados a lo largo del tiempo y frente a tu competencia para detectar si algo esta empeorando
+    entregable: Tu informe de revisión con un indice de fallas por unidad, la gravedad de cada falla y la comparacion con lo que pasa en campo o en el mercado
+    activacion: ['Cuando sospechas que tus números internos de calidad no reflejan lo que realmente vive el cliente', 'Cuando necesitas confirmar que tu inspeccion habitual esta funcionando', 'Cuando tu producto es delicado y quieres una segunda capa de control']
+    etiqueta: Compara tu Producto contra la Realidad
+    n_prev 3 n_sig 5
+  --- auditoria_de_producto_2 ---
+    titulo: Auditoría de Producto (Reinspección para Verificar Decisiones)
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: La auditoría de producto consiste en la reinspección de productos ya aceptados o rechazados para verificar la adecuación de esas decisiones de inspección. Aunque en teoría no debería ser necesaria si el sistema de calidad funciona correctamente, en la práctica se justifica por quejas de campo. Puede realizarse en cada estación de inspección o después del ensamblaje final.
+    paso 1: Seleccionar puntos de control (estaciones de inspección o ensamblaje final) para la auditoría
+    paso 2: Reinspeccionar una muestra de productos ya clasificados como aceptados o rechazados
+    paso 3: Verificar la consistencia entre la decisión original y el resultado de la reinspección
+    paso 4: Registrar discrepancias y retroalimentar al proceso de inspección original
+    entregable: Informe de auditoría de producto con tasa de discrepancias entre inspección original y reinspección
+    activacion: ['Cuando existen quejas de clientes sobre productos que pasaron inspección', 'Cuando se requiere validar la confiabilidad del sistema de aceptación/rechazo']
+    etiqueta: Reinspecciona tus Decisiones de Calidad
+    n_prev 1 n_sig 1
+  --- auditoria_producto ---
+    titulo: Auditoría de Producto (Aptitud de Uso y Conformidad)
+    dominio: quality | fase: validacion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: La auditoría de producto es una evaluación independiente de la calidad de un producto para determinar su aptitud de uso y conformidad con especificaciones, realizada después de las inspecciones regulares. Sus propósitos incluyen estimar el nivel de calidad entregado al cliente, evaluar la efectividad de las decisiones de inspección, y proporcionar aseguramiento adicional. Es crítico que el alcance del muestreo refleje realmente las características importantes para el cliente, no solo lo fácil de medir.
+    paso 1: Definir el propósito de la auditoría de producto (estimar calidad entregada, evaluar inspección, etc.)
+    paso 2: Seleccionar la etapa de evaluación más económica y representativa (fábrica, distribuidor, campo)
+    paso 3: Validar que las características auditadas correspondan a lo que realmente importa al cliente (contrastar con estudios de mercado)
+    paso 4: Tomar muestras representativas de productos terminados para verificar conformidad y aptitud de uso
+    entregable: Reporte de auditoría de producto con nivel de calidad estimado y comparación con necesidades del cliente
+    activacion: ['Cuando se necesita validar la calidad real entregada al cliente más allá de la inspección rutinaria']
+    etiqueta: Verifica que tu Producto Sirva
+    n_prev 1 n_sig 0
+
+===== FAMILIA: triple_bottom_line =====
+  --- triple_bottom_line ---
+    titulo: Los tres resultados que debes cuidar: dinero, planeta y personas (Triple Bottom Line)
+    dominio: environmental | fase: ideacion | deprecado: None
+    fuente: The Green to Gold Business Play - Daniel C. Esty
+    resumen: Tu negocio puede perseguir al mismo tiempo tres resultados: uno económico sólido, uno ambiental (contaminar lo menos posible y usar los recursos naturales con responsabilidad) y uno social (buenas condiciones laborales, diversidad, pago justo). La sostenibilidad de verdad significaría eliminar todo el desperdicio y las emisiones, y consumir solo recursos renovables que se gestionan sin agotar sus reservas, aunque casi ningún negocio se acerca a ese ideal. Por eso la meta práctica es que tu negocio pueda crecer sin que su impacto ambiental crezca al mismo ritmo.
+    paso 1: Define tus propios indicadores para los tres resultados: económico, ambiental y social
+    paso 2: Haz un diagnóstico de dónde estás hoy en cada uno de esos tres frentes
+    paso 3: Fija metas para que tu negocio crezca sin que su impacto ambiental crezca igual
+    paso 4: Elige qué iniciativas priorizar según cómo equilibran las tres dimensiones
+    entregable: Un marco propio de indicadores con los tres resultados (económico, ambiental, social) adaptado a tu negocio
+    activacion: ['Cuando empiezas a definir la estrategia de sostenibilidad de tu negocio', 'Si necesitas un marco amplio antes de usar herramientas más específicas de ventaja ecológica (Eco-Advantage)']
+    etiqueta: Persigue Ganancia, Planeta y Gente
+    n_prev 2 n_sig 2
+  --- triple_bottom_line_2 ---
+    titulo: Enfoque de Triple Bottom Line
+    dominio: environmental | fase: ideacion | deprecado: None
+    fuente: The Green to Gold Business Play - Daniel C. Esty
+    resumen: Enfoque de sostenibilidad que amplía el análisis más allá de lo ambiental para incluir preocupaciones sociales, tales como salarios y beneficios de trabajadores, diversidad, desarrollo comunitario, derechos laborales, trabajo infantil, derechos humanos, seguridad laboral, ética y salud. Este enfoque busca balancear el desempeño económico, ambiental y social de la empresa.
+    paso 1: Identificar issues sociales relevantes para la empresa (más allá de los ambientales)
+    paso 2: Evaluar prácticas laborales, de diversidad y de derechos humanos en la cadena de valor
+    paso 3: Integrar métricas sociales junto con las ambientales en el análisis de sostenibilidad
+    entregable: Un mapeo de issues sociales relevantes complementario al análisis ambiental
+    activacion: ['Si la empresa desea adoptar un enfoque más amplio que solo el ambiental', 'Cuando stakeholders exigen transparencia en temas sociales y laborales']
+    etiqueta: Suma lo Social a tu Impacto
+    n_prev 2 n_sig 1
+
+===== FAMILIA: ciclo_ventas_calidad_franquicia =====
+  --- ciclo_ventas_calidad_franquicia ---
+    titulo: Ciclo de Ventas-Calidad de la Franquicia
+    dominio: franquicias | fase: ejecucion | deprecado: None
+    fuente: Franchise Your Business - Mark Siebert
+    resumen: Vender franquicias es solo la mitad de la batalla. Necesitas un concepto sólido y una estructura competitiva que atraiga interés mediante marketing y un proceso de venta efectivo, pero también debes ser selectivo al elegir franquiciados y darles las herramientas y el apoyo necesarios para que tengan éxito. Esto genera 'validación': comentarios positivos de franquiciados actuales que influyen en futuros compradores y refuerzan la percepción de que tu concepto es excelente, retroalimentando así nuevas ventas y el crecimiento desde tu propia base existente. El ciclo puede romperse en cualquier pu
+    paso 1: Diseña un concepto sólido y una estructura de franquicia competitiva antes de vender.
+    paso 2: Invierte en marketing y materiales de venta que comuniquen ese concepto con claridad.
+    paso 3: Establece criterios de selección rigurosos para aceptar nuevos franquiciados.
+    paso 4: Diseña un sistema de soporte y capacitación robusto para después de la venta.
+    paso 5: Mide y monitorea la satisfacción y validación de tus franquiciados actuales.
+    paso 6: Usa a tus franquiciados exitosos como referencias activas para atraer nuevas ventas y expandir unidades.
+    entregable: Sistema documentado que conecte selección, soporte y validación de franquiciados como ciclo continuo de crecimiento sostenible.
+    activacion: ['Ya vendes franquicias pero no tienes un sistema de soporte post venta definido.', 'Ya tienes franquiciados operando y buscas sostener el crecimiento.', 'Detectas señales de insatisfacción o baja validación entre tus franquiciados actuales.']
+    etiqueta: Apoya al Franquiciado tras la Venta
+    n_prev 4 n_sig 6
+  --- ciclo_ventas_calidad_franquicia_2 ---
+    titulo: El Ciclo de Ventas-Control de Calidad de Franquicias
+    dominio: franquicias | fase: ejecucion | deprecado: None
+    fuente: Franchise Your Business - Mark Siebert
+    resumen: Las ventas de franquicias son un juego de números que depende de seis factores: concepto y propuesta de valor, oferta/estructura, plan de marketing, mensaje y materiales, gasto publicitario, y proceso de ventas. El factor más importante para el éxito de ventas a largo plazo es la validación del franquiciado, por lo que la pregunta clave no es 'qué tan rápido puedo vender' sino 'qué tan rápido DEBERÍA vender'.
+    paso 1: Auditar los seis factores del ciclo de ventas de forma periódica
+    paso 2: Priorizar el concepto y la propuesta de valor como base del éxito de ventas
+    paso 3: Medir el ritmo de ventas en función de la capacidad de soporte y éxito del franquiciado
+    paso 4: Evitar vender más rápido de lo que el sistema puede sostener con calidad
+    entregable: Panel de control con los 6 factores de venta monitoreados y ritmo de venta sostenible definido
+    activacion: ['Cuando se necesita evaluar la salud general del proceso de ventas de franquicias']
+    etiqueta: Domina los Seis Factores de Venta
+    n_prev 2 n_sig 1
+
+===== FAMILIA: conciencia_calidad =====
+  --- conciencia_calidad ---
+    titulo: Conciencia de Calidad (Paso 5)
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: Este paso consiste en compartir con todos los que trabajan contigo las mediciones sobre lo que realmente cuesta la no calidad, para que entiendan el impacto económico de los errores. Se apoya en la capacitación de quienes supervisan y en materiales visibles como folletos, videos o carteles. No es un esquema de motivación rápida ni una campaña pasajera, sino un proceso genuino de compartir información que cambia actitudes hacia la calidad de forma duradera. Es clave extender esta comunicación más allá de producción, incluyendo también a personal administrativo y de servicio, y convertir el habl
+    paso 1: Capacita a tus supervisores para que orienten a sus equipos sobre el costo real de la no calidad
+    paso 2: Produce material de comunicación visible como posters, videos o folletos
+    paso 3: Incluye a personal administrativo y de servicio en la comunicación, no solo a producción
+    paso 4: Fomenta el hábito de hablar positiva y regularmente sobre calidad con tu equipo
+    entregable: Programa de comunicación interna sobre calidad implementado en todos los niveles, con supervisores capacitados.
+    activacion: ['Cuando los empleados no comprenden el impacto económico de la no calidad', 'Antes de iniciar acciones correctivas masivas', 'Cuando ya cuentas con mediciones de costo de calidad y necesitas involucrar a los empleados']
+    etiqueta: Comparte el Costo Real
+    n_prev 10 n_sig 7
+  --- conciencia_de_calidad_2 ---
+    titulo: Conciencia de Calidad (Elevar la Preocupación Personal)
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: Es el paso destinado a elevar la preocupación personal de todo el personal hacia la conformidad del producto o servicio y la reputación de calidad de la empresa. Se logra mediante dos elementos: reuniones regulares entre supervisores y empleados para discutir problemas específicos de no conformidad, y comunicación constante (afiches, boletines, eventos) que refuerce el mensaje de que la empresa toma en serio la calidad. Es un proceso de bajo perfil pero constante, sin inicio ni fin definido, que prepara a la organización para el compromiso posterior con Cero Defectos.
+    paso 1: Organizar reuniones regulares entre supervisores y sus equipos para discutir problemas de no conformidad específicos
+    paso 2: Establecer comunicación visual (afiches, boletines internos, eventos) que refuerce el mensaje de calidad
+    paso 3: Asegurar que cada supervisor transmita el mensaje directamente a su gente, no mediante una sola reunión masiva
+    paso 4: Mantener consistencia y cumplir las promesas hechas en las reuniones
+    paso 5: Involucrar a relaciones públicas y personal para apoyar la logística de la campaña de conciencia
+    entregable: Un calendario de reuniones periódicas por departamento y material de comunicación visual (afiches, boletines) desplegado en la planta
+    activacion: ['Cuando los empleados no perciben la calidad como su responsabilidad directa', 'Cuando se ha calculado el costo de calidad y se necesita comunicar los hallazgos a toda la organización']
+    etiqueta: Eleva la Preocupación Personal
+    n_prev 1 n_sig 2
+
+===== FAMILIA: consejo_de_calidad =====
+  --- consejo_de_calidad ---
+    titulo: Consejo de Calidad (Liderazgo y Selección de Proyectos de Juran)
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Es la instancia donde tu, junto con las personas que te ayudan a llevar el negocio, decides que proyectos de mejora vale la pena impulsar, evaluas su avance y asignas los recursos necesarios: capacitación, tiempo, personas. Es la forma en que tu, como responsable del negocio, lideras personalmente las iniciativas de calidad en lugar de delegarlas por completo.
+    paso 1: Reune a las personas clave de tu negocio para formar este espacio de decisión, idealmente miembros del comité de alta dirección, presidido por el máximo responsable del nivel correspondiente
+    paso 2: Capacitense en el método de mejora de calidad que van a usar
+    paso 3: Identifica y prioriza los problemas mas importantes, por ejemplo con un análisis de Pareto
+    paso 4: Elige los proyectos a trabajar y define con claridad el problema y la meta de cada uno
+    paso 5: Asigna los recursos necesarios: capacitación, personas, tiempo y acompañamiento
+    paso 6: Revisa el avance de cada equipo y reconoce los logros, con métricas de progreso y la remoción de obstáculos
+    paso 7: Publicar y comunicar las responsabilidades del consejo a toda la organización
+    paso 8: Establecer políticas de enfoque al cliente y continuidad del breakthrough
+    paso 9: Vincular consejos corporativos con consejos divisionales o locales si la organización es grande
+    paso 10: Incluir al director de calidad como miembro del consejo
+    paso 11: Redactar una carta constitutiva con responsabilidades claras del consejo
+    entregable: Un espacio de decisión activo, con proyectos priorizados y equipos con recursos asignados
+    activacion: ['Cuando necesitas instalar en tu negocio una practica constante de mejora continua', 'Cuando la organización requiere cientos o miles de proyectos de mejora anuales', 'Cuando la organización inicia un esfuerzo estratégico de calidad', 'Cuando se requiere coordinación de alto nivel para el despliegue de la estrategia de calidad']
+    etiqueta: Elige tus Proyectos de Mejora
+    n_prev 14 n_sig 7
+  --- consejo_de_calidad_2 ---
+    titulo: Consejo de Calidad (Red Autogestionada de Profesionales, Crosby)
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (supervisores, encargados de calidad, personal operativo) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbolicas (como pagar cada quien sus propias bebidas) para preservar su autonomia. Sirve como espacio de comunicación entre tu y el personal operativo, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.
+    paso 1: Formar el consejo de calidad con representantes voluntarios de distintas areas operativas.
+    paso 2: Permitir que el consejo elija su propia dirección, independiente de la jerarquia formal.
+    paso 3: Programar reuniones periodicas donde puedas presentar avances y responder preguntas abiertamente.
+    paso 4: Mantener la autonomia del consejo respecto a ti (por ejemplo, financiamiento propio de actividades sociales) para preservar su caracter genuino.
+    entregable: Consejo de calidad operativo con estructura propia, reuniones regulares contigo y canal abierto de comunicación bidireccional.
+    activacion: ['Cuando buscas sostener el programa de calidad en el tiempo con participación genuina del personal operativo.', 'Cuando quieres demostrar compromiso visible con la mejora de calidad.']
+    etiqueta: Autogestiona tu Consejo de Calidad
+    n_prev 1 n_sig 2
+  --- consejo_de_calidad_3 ---
+    titulo: Consejos de Calidad (Quality Councils)
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: Los consejos de calidad son estructuras organizacionales formadas por representantes de la mejora de calidad de distintas áreas, que se reúnen para compartir experiencias, coordinar iniciativas y sostener el impulso del programa de mejora en el largo plazo. Constituyen el último paso del programa de 14 pasos y aseguran que la mejora de calidad se convierta en parte permanente de la cultura organizacional ('hazlo de nuevo').
+    paso 1: Conformar el consejo con representantes de las distintas áreas de mejora
+    paso 2: Establecer una periodicidad de reuniones para compartir avances
+    paso 3: Coordinar la repetición del ciclo de mejora de calidad
+    paso 4: Institucionalizar el consejo como parte de la estructura permanente
+    entregable: Consejo de calidad establecido con reuniones periódicas y mecanismo de repetición del ciclo de mejora
+    activacion: ['Cuando se ha completado un primer ciclo del programa de mejora de calidad', 'Cuando se busca sostener e institucionalizar la mejora continua a largo plazo']
+    etiqueta: Comparte Experiencias entre Consejos
+    n_prev 3 n_sig 3
+
+===== FAMILIA: costo_de_calidad =====
+  --- costo_de_calidad ---
+    titulo: Costo de la Calidad (Marco de Análisis Financiero)
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: El Costo de la Calidad es una forma de traducir los problemas de calidad (inventarios excesivos, defectos, retrabajo, faltantes) en dinero, en términos que tú puedas entender y usar para decidir. Al revisar cada mes cosas como el crecimiento del inventario o la caída de ventas, buscas conectar tus decisiones del día a día con su impacto económico real, para priorizar qué corregir primero según lo que realmente te cuesta, no solo según lo que te parece grave.
+    paso 1: Arma una revisión mensual de tu negocio con números financieros y operativos juntos.
+    paso 2: Calcula cuánto te cuestan los inventarios excesivos, los defectos y el retrabajo.
+    paso 3: Compara esas cifras contra lo que tenías presupuestado y detecta si hay costos evitables que van en aumento.
+    paso 4: Define qué parte de tu negocio (compras, control de materiales, ventas) va a investigar y corregir cada desviación.
+    paso 5: Usa el costo de calidad como argumento concreto para decidir si vale la pena invertir en prevenir estos problemas.
+    entregable: Un reporte mensual de costo de calidad que conecte tus indicadores operativos con su impacto en el dinero, para tener el número claro antes de decidir.
+    activacion: ['Cuando necesitas justificar con números si vale la pena invertir en calidad.', 'Cuando notas crecimientos inusuales en inventario, retrabajo o costos operativos ligados a defectos.']
+    etiqueta: Traduce Calidad a Dinero
+    n_prev 6 n_sig 6
+  --- costo_de_calidad_3 ---
+    titulo: Paso 4: Costo de la Calidad
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, sumando también fallos internos, fallos externos, prevención y evaluación. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Crosby marca como referencia q
+    paso 1: Dale a quien te lleva las cuentas información detallada sobre qué constituye el costo de calidad
+    paso 2: Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, auditorías, cambios de ingeniería, fallos internos, fallos externos, prevención y evaluación, incluyendo tu tiempo o salario, sin minimizar cifras
+    paso 3: Calcula el costo de calidad total como porcentaje de tus ventas y compáralo con el estándar de referencia del 2.5% al 4%
+    paso 4: Usa las cifras para priorizar acciones correctivas enfocadas en prevención más que en inspección
+    paso 5: Establece una meta de reducción progresiva del costo de calidad
+    paso 6: Convierte este cálculo en una medición recurrente de cómo va tu gestión de calidad
+    entregable: Reporte desglosado por categoría del costo de calidad actual, elaborado por quien te lleva las cuentas, expresado como porcentaje de tus ventas y con una meta de reducción definida.
+    activacion: ['Cuando no tienes visibilidad financiera del impacto de tus defectos o errores', 'Cuando necesitas justificar con números si vale la pena invertir en un programa de mejora de calidad', 'Al completar la fase de medición inicial de tu proceso', 'Cuando quieres evidencia financiera clara del impacto de la falta de calidad antes de decidir']
+    etiqueta: Cuantifica el Costo de Hacerlo Mal
+    n_prev 5 n_sig 4
+
+===== FAMILIA: capacidad_de_proceso =====
+  --- capacidad_de_proceso ---
+    titulo: Capacidad de Proceso
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: La capacidad de proceso mide la uniformidad inherente de un proceso para producir dentro de especificaciones. Se cuantifica desde la etapa de planificación y sirve para decidir sobre la adecuación de procesos, elección de alternativas, necesidad de rediseño y, en control, para definir la frecuencia de medición y mantenimiento: a mayor estabilidad, menor necesidad de medición frecuente.
+    paso 1: Recolectar datos históricos de desempeño del proceso
+    paso 2: Calcular índices de capacidad (uniformidad) del proceso frente a especificaciones
+    paso 3: Usar los resultados para decidir frecuencia de medición y mantenimiento
+    paso 4: Determinar si el proceso requiere rediseño o si es apto para producción
+    entregable: Análisis de capacidad de proceso con recomendación sobre frecuencia de control y necesidad de ajuste
+    activacion: ['Cuando se planifica un nuevo proceso o se evalúa uno existente', 'Si se necesita justificar la frecuencia de inspección o mantenimiento']
+    etiqueta: Mide la Capacidad de tu Proceso
+    n_prev 7 n_sig 6
+  --- capacidad_de_proceso_2 ---
+    titulo: Capacidad de Proceso mediante Monitoreo Estadístico
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: Cada unidad estudiada (un operador humano, una máquina o un sistema) debe ser monitoreada durante un período de tiempo para determinar su capacidad de proceso: lo que puede hacer predeciblemente bajo las condiciones actuales. Esta capacidad usualmente puede determinarse en unos tres meses mediante cartas de control. Si la dirección determina que la capacidad del proceso no está dentro de límites aceptables, debe actuar sobre el proceso o sistema, ya que la calidad no puede exceder la capacidad del sistema y no puede ser inspeccionada dentro del producto, debe ser construida en él.
+    paso 1: Seleccionar la unidad a estudiar (persona, máquina, sistema)
+    paso 2: Recolectar datos de desempeño durante un período representativo (aprox. 3 meses)
+    paso 3: Construir cartas de control (run charts, control charts) para visualizar variación
+    paso 4: Determinar si el proceso está dentro de límites aceptables
+    paso 5: Si no lo está, intervenir sobre el sistema (no sobre el individuo)
+    entregable: Carta de control con límites de capacidad del proceso y decisión de intervención documentada
+    activacion: ['Cuando existen tasas de error o rechazo variables que se desean estabilizar', 'Cuando se necesita decidir si un problema es del sistema o del individuo']
+    etiqueta: Monitorea tu Proceso en el Tiempo
+    n_prev 2 n_sig 3
+  --- capacidad_del_proceso ---
+    titulo: Capacidad del Proceso
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    resumen: Una vez que un proceso está en control estadístico, tiene una capacidad definible y predecible: se puede calcular qué especificaciones puede cumplir de forma sostenida usando la media y el rango de los gráficos X-barra y R. Es un error común calcular capacidad tomando muestras arbitrarias sin antes verificar que el proceso esté en control.
+    paso 1: Verificar primero que el proceso esté en control estadístico (gráfico de corridas o X-barra/R)
+    paso 2: Calcular la media y el rango promedio del proceso estable
+    paso 3: Determinar la capacidad usando las fórmulas estándar (constantes d2, A2, etc.)
+    paso 4: Comunicar la capacidad real a diseño e ingeniería para ajustar especificaciones realistas
+    entregable: Informe de capacidad del proceso con límites naturales de variación calculados a partir de datos en control estadístico.
+    activacion: ['Cuando se necesita definir qué especificaciones puede cumplir realmente un proceso', 'Antes de negociar especificaciones con clientes o diseño de producto']
+    etiqueta: Calcula lo que tu Proceso Rinde
+    n_prev 7 n_sig 1
+
+===== FAMILIA: desarrollar_caracteristicas_proceso =====
+  --- desarrollar_caracteristicas_proceso ---
+    titulo: Desarrollar las Características del Proceso
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Quinto paso del modelo: identificar y seleccionar los procesos (actuales o alternativos) capaces de producir las características definidas para el producto. Principio clave: la capacidad del proceso debe reconciliarse con los requisitos del producto; la variación proviene de los procesos, las metas provienen de las personas.
+    paso 1: Listar los procesos posibles capaces de generar cada característica del producto
+    paso 2: Evaluar la capacidad actual de los procesos frente a los requisitos definidos
+    paso 3: Seleccionar el proceso óptimo con su justificación
+    paso 4: Establecer metas de proceso alineadas con las metas de producto
+    entregable: Selección documentada del proceso (o procesos) con metas de capacidad alineadas a los requisitos del producto
+    activacion: ['Cuando las características del producto ya están definidas y priorizadas', 'Si existe duda sobre si el proceso actual puede cumplir con los nuevos requisitos']
+    etiqueta: Define las Características del Proceso
+    n_prev 2 n_sig 2
+  --- desarrollar_caracteristicas_proceso_2 ---
+    titulo: Cómo diseñar el proceso para crear y entregar tu producto
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Una vez que tienes listo el diseño de tu producto, tienes que definir el proceso con el que lo vas a crear y entregar de forma continua. Este desarrollo incluye 11 actividades, desde revisar las metas del producto hasta publicar el diseño final del proceso, asegurándote de que sea orientado a metas, sistemático, capaz y legítimo.
+    paso 1: Revisa las metas de calidad de tu producto junto con quienes te ayuden a diseñar el proceso
+    paso 2: Identifica las condiciones de operación: cómo entiende el usuario tu producto, cómo lo usa en la realidad y en qué entorno lo usa
+    paso 3: Reúne información sobre los procesos alternativos que tienes disponibles
+    paso 4: Elige el diseño general del proceso usando diagramas de flujo de alto nivel
+    paso 5: Identifica las características y metas detalladas del proceso y optimízalas
+    paso 6: Establece la capacidad del proceso y publica el diseño final
+    entregable: Un diagrama de flujo de proceso de alto nivel con las 11 actividades de desarrollo documentadas y aprobadas
+    activacion: ['Cuando ya tienes listo el diseño de tu producto y necesitas definir cómo lo vas a crear y entregar de forma continua']
+    etiqueta: Diseña cómo Entregarás tu Producto
+    n_prev 1 n_sig 3
+
+===== FAMILIA: make_certain_programa =====
+  --- make_certain_programa ---
+    titulo: Programa Make Certain para Áreas Administrativas
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: Make Certain es un programa de mejora orientado a personal de oficina y administrativo (white-collar), diseñado para generar conciencia inmediata sobre la responsabilidad personal en la calidad del trabajo de comunicación y papeleo. Se basa en el reconocimiento de que la mayoría de las personas atribuyen sus problemas a otros y no a sí mismas, y busca revertir esa percepción mediante ejercicios grupales guiados.
+    paso 1: Informar al personal directivo sobre el concepto e intención del programa
+    paso 2: Designar coordinadores por departamento administrativo
+    paso 3: Recolectar ejemplos reales de errores de prevención evitables
+    paso 4: Realizar sesión donde cada participante declare su 'mayor problema'
+    paso 5: Evidenciar que los problemas suelen atribuirse a otros, no a uno mismo
+    paso 6: Solicitar ideas escritas de prevención de defectos al equipo de mejora
+    paso 7: Establecer reuniones regulares de prevención de defectos por grupo, similar a los círculos de acción correctiva en manufactura
+    entregable: Sesión Make Certain ejecutada con lista de problemas identificados y compromiso de reuniones regulares de prevención en áreas administrativas.
+    activacion: ['Cuando la organización desea extender la cultura de calidad a áreas administrativas y de servicio', 'Cuando gran parte de los defectos provienen de papeleo y comunicación, no de manufactura']
+    etiqueta: Haz Certera tu Oficina
+    n_prev 3 n_sig 1
+  --- programa_make_certain ---
+    titulo: Programa Make Certain (para personal administrativo)
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: Programa de cinco semanas orientado principalmente a personal de oficina o 'cuello blanco', diseñado como un avance en los esfuerzos de mejora de calidad más allá del entorno de manufactura. Es especialmente apropiado para usarse durante la etapa de concientización (awareness) del programa general de catorce pasos, abordando errores administrativos y de procesos que no son visibles en la línea de producción.
+    paso 1: Identificar tasas de repetición de trabajo (rework) en áreas administrativas y de papeleo
+    paso 2: Diseñar el programa de cinco semanas enfocado en detectar y prevenir errores de oficina
+    paso 3: Lanzar el programa como parte de la etapa de concientización de calidad
+    paso 4: Medir el impacto en costo de calidad antes y después de la implementación
+    entregable: Programa Make Certain de cinco semanas diseñado e implementado en áreas administrativas, con métricas de rework antes/después
+    activacion: ['Cuando el programa de calidad se ha enfocado únicamente en manufactura y se requiere extenderlo a personal administrativo', 'Si existe alto porcentaje de tiempo dedicado a rehacer trabajo en áreas de oficina', 'En la fase de concientización de un programa de mejora de calidad de catorce pasos']
+    etiqueta: Asegura la Calidad Administrativa
+    n_prev 6 n_sig 2
+  --- programa_make_certain_2 ---
+    titulo: Programa 'Make Certain' de Prevención de Defectos
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: El programa 'Make Certain' es una metodología estructurada de Crosby diseñada especialmente para áreas de servicio y trabajo administrativo (paperwork), donde se involucra a supervisores y empleados en identificar cómo podrían fallar en satisfacer a su cliente interno o externo, y luego invertir esa lógica para generar sugerencias concretas de prevención de defectos. Se apoya en la participación activa de todos los niveles, coordinadores por departamento, medición de sugerencias en horas-hombre ahorradas, y reconocimiento simbólico (como el badge 'Certain Maker') en lugar de premios monetarios
+    paso 1: Informar al staff de dirección sobre el concepto e intención del programa y designar coordinadores por departamento.
+    paso 2: Reunirse con los coordinadores para explicarles el programa y solicitar ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).
+    paso 3: Capacitar a supervisores en la lógica del programa: identificar cliente interno/externo, qué espera ese cliente, y qué podría hacer el equipo para NO cumplirlo (pregunta invertida).
+    paso 4: Convertir esas respuestas negativas en sugerencias positivas de cómo 'hacer cierto' que el cliente reciba lo prometido.
+    paso 5: Registrar y medir las sugerencias entregadas, entregar reconocimiento (badge) y publicar los avances en carteleras.
+    paso 6: Medir el impacto en horas de trabajo no gastadas por hacer las cosas bien, multiplicado por el costo salarial cargado.
+    paso 7: Realizar cuenta regresiva pública antes del cierre del programa y agradecer formalmente a todos los participantes al finalizar.
+    paso 8: Implementar tantas sugerencias como sea posible y reportar su seguimiento durante varios meses.
+    entregable: Un programa documentado de prevención de defectos por departamento, con coordinadores asignados, formato de sugerencias, sistema de medición en horas/dinero ahorrado, y reporte de implementación de mejoras.
+    activacion: ['Cuando la organización tiene un alto número de errores administrativos o de servicio (no manufactura).', 'Cuando se busca involucrar a mandos medios y empleados en la prevención de defectos de forma participativa.', 'Cuando se necesita iniciar un programa de mejora de calidad en áreas de oficina o servicio.']
+    etiqueta: Previene Errores en tu Papeleo
+    n_prev 2 n_sig 3
+  --- programa_make_certain_3 ---
+    titulo: Programa Make Certain
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    resumen: El programa Make Certain es el primer programa de prevención de defectos diseñado específicamente para empleados administrativos (white-collar) y no relacionados con manufactura. Reconoce que los errores de oficina y paperwork generan problemas costosos y frustrantes, y que basta un solo dato erróneo en la cadena de información para afectar toda su efectividad y precisión. El programa incluye una guía del instructor con pasos de acción específicos para implementarlo en entornos administrativos.
+    paso 1: Identificar los procesos administrativos críticos susceptibles a errores de datos
+    paso 2: Capacitar a los empleados administrativos usando la guía del instructor del programa
+    paso 3: Implementar los pasos de acción definidos para la prevención de errores de oficina
+    paso 4: Monitorear la exactitud de los datos y documentos en la cadena de comunicación
+    entregable: Programa Make Certain implementado en áreas administrativas con material de capacitación y métricas de error definidas
+    activacion: ['Cuando los errores de paperwork o comunicación administrativa generan problemas costosos', 'Cuando se desea extender la cultura de prevención de defectos a personal no manufacturero']
+    etiqueta: Certifica tu Trabajo Administrativo
+    n_prev 1 n_sig 1
+
+===== FAMILIA: reduccion_de_tiempo_de_ciclo =====
+  --- reduccion_de_tiempo_de_ciclo ---
+    titulo: Reducción del Tiempo de Ciclo
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: El tiempo de ciclo es el tiempo total transcurrido desde el inicio hasta el fin de un proceso. La presión competitiva y de costos impulsa a las organizaciones a reducir este tiempo mediante diagnóstico de causas de demora y remedios específicos, siguiendo el proceso de mejora de calidad.
+    paso 1: Diagnosticar las causas de consumo excesivo de tiempo en el proceso.
+    paso 2: Desarrollar remedios específicos para reducir el tiempo de ciclo.
+    paso 3: Medir el impacto de los remedios sobre el tiempo total del proceso.
+    entregable: Plan de reducción de tiempo de ciclo con métricas de mejora documentadas.
+    activacion: ['Cuando el tiempo de entrega o respuesta del proceso es una queja frecuente de clientes o una desventaja competitiva']
+    etiqueta: Reduce el Tiempo de tu Ciclo
+    n_prev 3 n_sig 1
+  --- reduccion_tiempo_ciclo ---
+    titulo: Reducción del Tiempo de Ciclo del Proceso
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: El tiempo es una de las métricas más utilizadas para medir la entrega de servicios. Los clientes demandan continuamente tiempos de entrega más cortos. Mediante el análisis del diagrama de flujo y técnicas Lean, se pueden eliminar desperdicios y reducir el tiempo de ciclo mediante acciones como eliminar reprocesos, simplificar pasos, combinar actividades, transferir aprobaciones a niveles más bajos, y usar tecnología.
+    paso 1: Eliminar bucles de reproceso para corregir errores del proceso
+    paso 2: Eliminar o simplificar pasos de valor marginal para el cliente
+    paso 3: Eliminar pasos redundantes como inspecciones (solo tras eliminar causas de error)
+    paso 4: Combinar pasos realizados por un mismo trabajador
+    paso 5: Transferir pasos de aprobación a niveles inferiores
+    paso 6: Cambiar la secuencia de actividades de consecutivas a simultáneas
+    paso 7: Usar tecnología para realizar pasos rutinarios y complejos
+    entregable: Proceso de servicio rediseñado con tiempo de ciclo reducido, documentado con datos de antes/después
+    activacion: ['Cuando el tiempo de entrega del servicio es una preocupación crítica del cliente', 'Cuando se ha completado el mapeo de proceso y se buscan oportunidades de mejora']
+    etiqueta: Acorta tu Tiempo de Ciclo
+    n_prev 1 n_sig 2
+
+===== FAMILIA: clasificacion_de_seriedad_de_defectos =====
+  --- clasificacion_de_seriedad_de_defectos ---
+    titulo: Clasificación de Seriedad de Defectos y Deméritos por Unidad
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Sistema de ponderación de defectos según su gravedad (crítico, mayor, menor A, menor B, incidental), asignando 'pesos' o deméritos a cada tipo. La suma total de deméritos dividida entre las unidades inspeccionadas produce un índice único (deméritos por unidad) que permite comparar calidad entre periodos, líneas de producción o competidores de forma objetiva y proporcional a la oportunidad de error.
+    paso 1: Definir categorías de seriedad de defectos relevantes para el producto
+    paso 2: Asignar peso (demérito) a cada categoría de defecto
+    paso 3: Registrar número de defectos por categoría durante inspección/auditoría
+    paso 4: Calcular deméritos totales y dividir entre unidades inspeccionadas
+    paso 5: Usar el índice resultante para comparar tendencias históricas y frente a competencia
+    entregable: Tabla de clasificación de defectos con pesos asignados y cálculo del índice de deméritos por unidad
+    activacion: ['Cuando se necesita un indicador único y comparable de calidad de producto', 'Cuando se quiere diferenciar la gravedad relativa de distintos tipos de fallas']
+    etiqueta: Pondera la Gravedad de tus Defectos
+    n_prev 2 n_sig 1
+  --- clasificacion_de_seriedad_de_defectos_2 ---
+    titulo: Clasificación de Seriedad de Defectos (Guía para el Proveedor)
+    dominio: quality | fase: planificacion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Sistema para categorizar defectos según su gravedad e impacto, ayudando al proveedor a entender dónde concentrar sus esfuerzos de mejora. Esta clasificación es fundamental para priorizar recursos y establecer niveles de calidad aceptables (AQL) o defectos por millón (DPM) según la criticidad del defecto.
+    paso 1: Listar todos los posibles defectos del producto o proceso
+    paso 2: Asignar niveles de seriedad (crítico, mayor, menor) a cada defecto
+    paso 3: Comunicar la clasificación al proveedor para enfocar esfuerzos
+    paso 4: Vincular la clasificación a los planes de muestreo e inspección
+    entregable: Tabla de clasificación de defectos por nivel de seriedad, comunicada formalmente al proveedor
+    activacion: ['Cuando se necesita priorizar recursos de inspección', 'Cuando existen múltiples tipos de no conformidad en un producto']
+    etiqueta: Prioriza Defectos con tu Proveedor
+    n_prev 1 n_sig 1
+  --- clasificacion_seriedad_defectos ---
+    titulo: Clasificación de Seriedad de Defectos (Características y Defectos por Gravedad)
+    dominio: quality | fase: ejecucion | deprecado: None
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    resumen: Consiste en clasificar tanto las características de calidad derivadas de especificaciones como los defectos (síntomas de no conformidad) según su gravedad. Aunque ambas listas tienen relación, no son idénticas ni se comportan igual. Esta clasificación, aunque tediosa, revela confusiones entre las distintas partes de tu negocio y permite optimizar recursos de inspección.
+    paso 1: Elabora una lista de características de calidad a partir de tus especificaciones
+    paso 2: Elabora una lista aparte de defectos o síntomas de no conformidad
+    paso 3: Define categorías de seriedad (crítico, mayor, menor) con quienes te ayuden en distintas áreas
+    paso 4: Aplica la clasificación para reducir lo que necesitas verificar y el tiempo de inspección
+    paso 5: Valida con casos piloto que muestren el beneficio a quienes se resistan al cambio
+    entregable: Tabla de clasificación de seriedad de características y defectos aplicada a un producto o proceso específico
+    activacion: ['Cuando tienes alto volumen de inspección sin prioridades claras', 'Cuando hay desacuerdo sobre qué defectos son realmente críticos']
+    etiqueta: Separa Características y Defectos por Gravedad
+    n_prev 1 n_sig 2
+
+===== FAMILIA: storytelling_como_herramienta_de_diseno =====
+  --- storytelling_como_herramienta_de_diseno ---
+    titulo: Storytelling como Herramienta de Design Thinking
+    dominio: core | fase: ejecucion | deprecado: None
+    fuente: Change by Design, Revised and U - Tim Brown
+    resumen: Las narrativas permiten dar contexto y significado a las ideas, facilitando su comprensión, adopción y propagación. El caso Cool Biz de Hakuhodo muestra cómo convertir una campaña gubernamental en un movimiento social usando storytelling en lugar de publicidad tradicional, logrando que la audiencia se convierta en narradora activa de la idea.
+    paso 1: Identificar el mensaje central que se quiere comunicar
+    paso 2: Traducir el mensaje en actividades concretas y significativas para el público
+    paso 3: Crear momentos memorables (eventos, demostraciones) en lugar de solo publicidad, con figuras de autoridad para modelar el nuevo comportamiento
+    paso 4: Facilitar que la audiencia se apropie y difunda la historia por sí misma
+    paso 5: Reforzar la narrativa con símbolos tangibles (pines, insignias, señales)
+    paso 6: Medir el reconocimiento y adopción de la narrativa en la población objetivo
+    entregable: Una narrativa central clara con elementos tangibles de refuerzo que el público pueda replicar y compartir.
+    activacion: ['Cuando se necesita cambiar comportamientos colectivos o culturales', 'Cuando la publicidad tradicional no está generando adopción', 'Cuando se busca transformar una campaña en un movimiento']
+    etiqueta: Cuenta Historias que Transforman
+    n_prev 4 n_sig 4
+  --- storytelling_como_herramienta_diseno ---
+    titulo: Storytelling Integrado en el Proceso de Diseño
+    dominio: core | fase: ejecucion | deprecado: None
+    fuente: Change by Design, Revised and U - Tim Brown
+    resumen: El storytelling debe integrarse desde el inicio del proyecto de diseño, no solo al final para documentar. Una narrativa efectiva tiene dos momentos críticos: el principio (donde se teje en cada aspecto del esfuerzo de innovación) y el final (donde la audiencia se apropia de la historia y la lleva más allá del equipo de diseño). Es un relato abierto que invita a las personas a escribir su propia conclusión, no una narrativa cerrada con inicio-nudo-desenlace tradicional.
+    paso 1: Incorporar escritores o narradores al equipo de diseño desde el día uno del proyecto
+    paso 2: Identificar las motivaciones emocionales profundas detrás del comportamiento de los usuarios (no solo métricas)
+    paso 3: Diseñar mecanismos para que los usuarios compartan y narren sus propias historias
+    paso 4: Crear espacios físicos o digitales donde estas historias se conecten con otras (ej: boards, redes)
+    paso 5: Dejar que la audiencia complete la narrativa y la propague orgánicamente
+    entregable: Un sistema o mecanismo narrativo integrado en la experiencia del producto/servicio que permite a los usuarios compartir y perpetuar la historia
+    activacion: ['Cuando se busca aumentar el engagement emocional con una causa o producto', 'Cuando las métricas frías no logran movilizar a las personas', 'Si el proyecto requiere que los usuarios se conviertan en embajadores']
+    etiqueta: Teje tu Historia desde el Inicio
+    n_prev 3 n_sig 4
+
