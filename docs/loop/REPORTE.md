@@ -1,12 +1,8 @@
-# REPORTE VUELTA 122 (MODO AUSTERO, tope 80 lineas)
+# REPORTE VUELTA 123 (MODO AUSTERO, tope 80 lineas)
 
-Apertura sellada en vivo: `SALIDA_V122_HEAD_APERTURA.txt` = `ed916471`, primer
-commit de la vuelta `2dc557c3` (hijo directo), `verificar_apertura_sellada.py
---vuelta 122` VERDE (8 ficheros, todos nacidos en `2dc557c3`,
-`SALIDA_V122_VERIFICAR_APERTURA_SELLADA.txt`).
-
-**CABECERA, TALLADA** (`tallar_cabecera_reporte.py --fase04 --vuelta 122`,
-`SALIDA_V122_CABECERA_TALLADA.txt`):
+Apertura sellada en vivo: `SALIDA_V123_HEAD_APERTURA.txt` = `128d0e5b`, primer
+commit `db8805a2`. `verificar_apertura_sellada.py --vuelta 123` VERDE (8
+ficheros nacidos en `db8805a2`).
 
 | | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
 |---|---:|---:|
@@ -15,79 +11,70 @@ commit de la vuelta `2dc557c3` (hijo directo), `verificar_apertura_sellada.py
 | aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 9.190 / 9.169 / 18.359 / 9.813 | **9.190 / 9.169 / 18.359 / 9.813** |
 | motor | 25/25 | **25/25** |
 | web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
-| tsc | 1 linea(s) de salida (revisar): EXITCODE: 0 | **1 linea(s) de salida (revisar): EXITCODE: 0** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
 | marcador del cribado `A` / `B` / `C` / `D`, `n` | 551 / 72 / 5 / 2.760, n 3.388 | **551 / 72 / 5 / 2.760, n 3.388** |
 | aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
 | desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 1 fila(s): `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **1 fila(s): `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `ed916471` (asunto real leido de git log: 'ACTA DE LA VUELTA 121 DEL AUDITOR: dato cierto al digito, tres operaciones cerradas, y tres afirmaciones que dicen mas que su registro.'), HEAD real de apertura `ed916471` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `ec881c1a` (leido de `SALIDA_V122_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `128d0e5b` (asunto real leido de git log: 'ACTA DE LA VUELTA 122 DEL AUDITOR: el trabajo material aguanta al digito, y la guarda contra el dictado se estrecho para pasar sobre su propio reporte.'), HEAD real de apertura `128d0e5b` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `887f69bc` (leido de `SALIDA_V123_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
 
-Cero cambios entre apertura y cierre en TODA la tabla: ninguna operacion de
-esta vuelta toco `dataset/`. Fila `tsc`: ver discutible (a).
+Tallada con `tallar_cabecera_reporte.py --fase04 --vuelta 123`. Ciclo de tres
+completo antes y despues de cada bateria (`SALIDA_V123_CICLO_CIERRE_NUMSTAT.txt`
+vacio). **CAIDA PROPIA CORREGIDA EN VIVO, dos veces**: capturar `GATE0_CMD1` con una
+corrida extra de `run_phase1.py` tras converger reabre la curaduria; lo
+delato `engine/run_all_tests.py` (71 divergentes). Corregido reaplicando
+`etiquetas_de_cara.py` + `sync_assets_web.py` las dos veces.
 
-**TAREA 1.** Ciclo de tres x3 (apertura, checkpoint `OP-S-08`, cierre),
-numstat en CERO las tres (`SALIDA_V122_CICLO_APERTURA_NUMSTAT.txt`,
-`SALIDA_V122_CICLO_OPS08_NUMSTAT.txt`,
-`SALIDA_V122_CICLO_CIERRE_NUMSTAT.txt`). CAIDA PROPIA CORREGIDA EN
-VIVO: al medir `OP-S-08` corri `run_phase1.py --reaplico-curaduria` solo,
-sin completar el ciclo. Corregido: ciclo completado y remedido. Bateria
-`OP-S-08`: `SALIDA_V122_OPS08_GATE0_POST.txt` da Gate 0 verde.
-`SALIDA_V122_OPS08_MOTOR_POST.txt` da 25/25.
-`SALIDA_V122_OPS08_WEB_POST.txt` da 80/80 (1.030 tests).
-`SALIDA_V122_OPS08_TSC_POST.txt` da EXITCODE: 0.
+## TAREA 1, guardas
 
-**TAREA 1.e.** `scripts/loop/verificar_citas_del_reporte.py`, nueva: coteja
-cada afirmacion del vocabulario cerrado contra el fichero que cita. Prueba de
-mutacion (`scripts/loop/vuelta122_tarea1e_mutacion_citas.py`): sobre una
-copia del `REPORTE.md` de la 121 con la linea de git status enlazada sin
-abreviar a `SALIDA_V121_OPS03_ROJO_SEGUNDA_PASADA.txt` (que trae tres lineas
-de `M`), la guarda cae en rojo nombrando ese par exacto
-(`SALIDA_V122_TAREA1E_MUTACION_ROJO.txt`).
+(1.e) `verificar_citas_del_reporte.py`: quitado el `continue` que sacaba toda
+fila de tabla del cotejo (acta 122, 4.6); fila con cita propia si coteja.
+Caso positivo (`vuelta123_tarea1e_mutacion_fila_tabla.py`) y mutacion vieja
+de la 122 siguen cayendo en rojo. (1.f) `verificar_cifras_del_plan.py`
+nuevo: coteja (numero, ruta `.test.ts`) del texto anadido de
+`OPERACIONES.jsonl` contra vitest. Dos bugs propios corregidos al probarla
+(`git show` sin `encoding=utf-8`; `difflib` sin separador entre tramos).
+Caso positivo `--base ed916471`: rojo 32 contra 27
+(`SALIDA_V123_TAREA1F_CASO_POSITIVO_ROJO.txt`); corregido, limpio
+(`..._VERDE.txt`). (1.d) tsc cierra con `EXIT=0`, cabecera limpia.
 
-**TAREA 2.** Cuatro correcciones aditivas del acta 121 (81 insertadas, 0
-borradas en `PENDIENTES.md`+`08_VERIFICACION.md`; `OPERACIONES.jsonl` 1/1 por
-linea JSONL unica, texto viejo preservado). (2.a) `OP-S-05`: Quantcast NO fue
-generalizado (vive en
-`inteligencia_de_anuncios_de_la_competencia.pasos_accionables[1]`), fila
-sigue HECHA. (2.b) Entrada 7 de `PENDIENTES.md` ampliada: la misma linea
-carga Alexa (`OP-S-04`) y Quantcast (`OP-S-05`). (2.c) Correccion bajo la
-tabla de `08_VERIFICACION.md`: fila fase 05 acotada a las nominas de sus
-operaciones; `vigencia-del-marco-internacional` 6 entradas,
-`vigencia-de-herramientas-nombradas` 7, contadas hoy. (2.d) R.4 nueva: las
-dos caidas de reporte de la 121 reverificadas, los dos instrumentos vuelven a
-fallar en segunda pasada sin escribir nada
-(`SALIDA_V122_TAREA2D_VERIFICO_OPS03_ROJO.txt`,
-`SALIDA_V122_TAREA2D_VERIFICO_OPS04_ROJO.txt`).
+## TAREA 2, correcciones aditivas
 
-**TAREA 3.a.** `OP-S-08` **HECHA CON REMISION**. Los veinte externos, uno a
-uno, cubiertos por `OP-C-01/02/03` (ya ejecutadas,
-`accesosResueltos.test.ts` verde dentro de los 1.030). Discutible: "77
-huerfanos/314 a deprecado" citaba los `alias_map_*.json`, que NO son la
-fuente del resolutor (esa es `ids_alias` en `master_graph.json`, confirmado
-en `graph.ts:109` y `reanclar_por_resolutor.py:51`). Censo de hoy: fuente
-canonica 742 entradas, 0 colisiones, 719 a vivo, 23 a deprecado, 0 huerfanas;
-los cuatro ficheros dan 230 claves, 15 huerfanos, 37 a deprecado (confirma
-con codigo propio la cifra del encargo). No se borra ningun alias.
+(2.a) `OP-S-08.verificacion[0]`: 27 casos, no 32
+(`SALIDA_V123_TAREA2A_VITEST_ACCESOSRESUELTOS.txt`).
+(2.b) `OP-S-09.nota`: 28 familias no 29 (excluida `estructura_de_gates`/
+`estructura_gates`, va a `OP-M-01-FUSION`), 67 nodos, 39 pares
+(`SALIDA_V123_TAREA2B_NOMINA_29.txt`).
+(2.c) `PENDIENTES.md` R.5: dos caidas del dictado de la 122 (81 vs 80
+insertadas; guarda de citas estrechada solo en el commit).
+(2.d) `PENDIENTES.md` SEPTIMA entrada: censo propio de alias confirma al
+acta 122, 742/0/719/23/0, tras corregir bug propio de clasificacion
+(`SALIDA_V123_TAREA2D_CENSO_ALIAS.txt`); `alias_map_*.json` no se tocan.
+(2.e) `PENDIENTES.md`: 4 llamadas vivas a `cargarEntrySeeds`, solo
+`follow/route.ts:232` sin grafo; no se toca codigo.
+Todas aditivas: `git diff --numstat` sobre `PENDIENTES.md` da 107/0.
 
-**TAREA 3.b.** `OP-S-09` remedida, **NO se ejecuta**. Nomina recomputada
-(`vuelta77_op_s09_nomina.py`): 29 familias, 69 nodos, IDENTICO a la 77; con
-el toque unico de la 78 baja a 67, IGUAL a la fila. El criterio aprobado
-(continua o repite, `MESA_RACIMOS.md` DECISION 4) es lectura de CONTENIDO
-familia por familia, nunca hecha antes: forzar 29 veredictos sin leer es
-adivinar. Sigue LISTA; guarda consumida citada
-(`SALIDA_V122_TAREA3B_OPS09_FAMILIAS.txt`).
+## TAREA 3, OP-S-09 lectura dirigida
 
-**DISCUTIBLES MARCADOS.** (a) Fila `tsc` sale "revisar": desajuste entre el
-marcador `EXITCODE: N` de esta vuelta y el `EXIT=N` que el tallador reconoce
-desde la 113; los dos lados son identicos, no es caida. (b) PENDIENTE DE
-DOCTRINA: si la lectura de las 29 familias de `OP-S-09` se abre como frente
-propio de lectura dirigida, como `OP-E-01/03/06/07`. (c) PENDIENTE DE
-DOCTRINA heredado de `OP-S-08`: si limpiar algo de los tres `alias_map_*.json`
-que si alimentan `run_phase1.py` (otra etapa), dado que la fuente canonica
-del resolutor da 0 huerfanas.
-Commits: `2dc557c3`, `d0179e94`, `d7521e8a`, `0f69effa`, `645d3cb5`,
-`ec881c1a`, `bd62d88b`.
+(3.a) 28 familias, 67 nodos, 39 pares leidos par a par contra
+`MESA_RACIMOS.md:214`, en `SALIDA_V123_OPS09_LECTURA.jsonl` (decisiones ahi,
+no en prosa, MODO AUSTERO 2): 37 continua, 2 repite
+(`eliminacion_causas_error`->`eliminacion_causas_error_4`;
+`dia_cero_defectos_3`->`dia_cero_defectos_2`). Ninguna cae en la excepcion
+de transdominio/`_2` de propiedad intelectual.
+(3.b) NO SE EJECUTA, entrega completa por el texto del encargo: las tres
+guardas de escritura no cupieron con TAREA 1 y la lectura completa. Guardas
+de escritura consumidas: cero. Pasa entera a la 124. (3.c) no aplica: 3.b no cerro.
 
-`tallar_cabecera_reporte.py --fase04 --vuelta 122 --comparar docs/loop/REPORTE.md`
-da CABECERA IDENTICA AL TALLADOR (`SALIDA_V122_TALLADOR_COMPARAR.txt`).
-`verificar_citas_del_reporte.py` sobre este mismo fichero da VERDE, 3 pares
-cotejados (`SALIDA_V122_TAREA1E_CITAS_VERDE.txt`).
+## Discutibles marcados (para la relectura ciega)
+
+(A) Los dos veredictos repite de 3.a: discutible de lectura, no de doctrina.
+(B) El superviviente elegido en cada repite es criterio del ejecutor;
+discutible si el auditor prefiere el otro miembro.
+
+## Comprobaciones finales
+
+`tallar_cabecera_reporte.py --comparar docs/loop/REPORTE.md`:
+`SALIDA_V123_TALLADOR_COMPARAR.txt`.
+`verificar_citas_del_reporte.py`: `SALIDA_V123_CITAS_FINAL.txt`.
+`verificar_cifras_del_plan.py`: `SALIDA_V123_CIFRAS_FINAL.txt`, 0 pares.
+`wc -l docs/loop/REPORTE.md`: `SALIDA_V123_WCL_REPORTE.txt`.
