@@ -1,0 +1,24 @@
+==============================================================================
+REPOSICION DE TRES ARISTAS FABRICADAS, vuelta 128 . MODO EJECUTAR
+==============================================================================
+
+par: comprension_capacidades_limitaciones_ia -> division_trabajo_humano_ia
+  guarda 1, los dos nodos existen y siguen VIVOS: OK
+  guarda 2, la arista NO estaba puesta todavia: ROJO
+  [ROJO] la arista comprension_capacidades_limitaciones_ia -> division_trabajo_humano_ia YA esta puesta (nodos_siguientes=True, nodos_previos=True)
+
+par: ecosistema_global_emprendimiento_gee -> uso_del_us_commercial_service
+  guarda 1, los dos nodos existen y siguen VIVOS: OK
+  guarda 2, la arista NO estaba puesta todavia: ROJO
+  [ROJO] la arista ecosistema_global_emprendimiento_gee -> uso_del_us_commercial_service YA esta puesta (nodos_siguientes=True, nodos_previos=True)
+
+par: incentivos_reconocimiento_sostenibilidad -> vision_alineacion_sostenibilidad
+  guarda 1, los dos nodos existen y siguen VIVOS: OK
+  guarda 2, la arista NO estaba puesta todavia: ROJO
+  [ROJO] la arista incentivos_reconocimiento_sostenibilidad -> vision_alineacion_sostenibilidad YA esta puesta (nodos_siguientes=True, nodos_previos=True)
+
+SE ABORTA SIN ESCRIBIR NADA, 3 fallo(s):
+  [ROJO] la arista comprension_capacidades_limitaciones_ia -> division_trabajo_humano_ia YA esta puesta (nodos_siguientes=True, nodos_previos=True)
+  [ROJO] la arista ecosistema_global_emprendimiento_gee -> uso_del_us_commercial_service YA esta puesta (nodos_siguientes=True, nodos_previos=True)
+  [ROJO] la arista incentivos_reconocimiento_sostenibilidad -> vision_alineacion_sostenibilidad YA esta puesta (nodos_siguientes=True, nodos_previos=True)
+EXITCODE: 1
