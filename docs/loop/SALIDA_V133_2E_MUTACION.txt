@@ -1,0 +1,14 @@
+--- (1) reporte fabricado, cifra CORRECTA: 2 lineas ---
+VERDE EXIT 0: 1 cifra(s) cotejadas contra su fichero de salida, todas cuadran:
+  2 lineas == 2 contados en `SALIDA_V133_CONTEO_APERTURA.txt`
+
+CASO (1) VERDE, como se esperaba
+
+--- (2) MUTADO: 3 lineas (deberia caer en ROJO) ---
+ROJO, 1 cifra(s) no cuadran:
+  linea 0: "3 lineas" <-> `SALIDA_V133_CONTEO_APERTURA.txt`: contado 2
+
+CASO (2) ROJO, como se esperaba
+
+MUTACION VERIFICADA: (1) VERDE 2==2, (2) ROJO nombrando 3 lineas mutadas.
+EXITCODE: 0
