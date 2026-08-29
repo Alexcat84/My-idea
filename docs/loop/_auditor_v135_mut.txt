@@ -1,0 +1,23 @@
+### MUT-A auditor: 118 -> 999 grafias (cita 3B con linea CIFRA) -> EXIT 1 (esperaba ROJO) VERIFICADA
+    ROJO, 1 cifra(s) no cuadran:
+      linea 36: "999 grafias" <-> `SALIDA_V135_3B_CENSO_DOS_PREDICADOS.txt`: contado 118
+    COBERTURA: 6 cotejadas / 0 exentas / 7 cifras
+
+### MUT-B auditor: 54 -> 77 grupos -> EXIT 1 (esperaba ROJO) VERIFICADA
+    ROJO, 1 cifra(s) no cuadran:
+      linea 53: "77 grupos" <-> `SALIDA_V135_4B_PELDANOS.txt`: contado 54
+    COBERTURA: 6 cotejadas / 0 exentas / 7 cifras
+
+### MUT-C auditor: LA PUERTA, (sin instrumento) sobre cifra con fichero en ventana -> EXIT 1 (esperaba ROJO) VERIFICADA
+    ROJO, 1 cifra(s) no cuadran:
+      linea 36: "118 grafias" marca (sin instrumento) pero su ventana amplia SI cita `SALIDA_V135_3B_CENSO_DOS_PREDICADOS.txt`: la cifra se coteja, no se exime (hay instrumento en la ventana)
+    COBERTURA: 6 cotejadas / 0 exentas / 7 cifras
+
+### MUT-D auditor: caso negativo, reporte real intacto -> EXIT 0 (esperaba VERDE) VERIFICADA
+    VERDE EXIT 0: 7 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
+      0 pares == 0 contados en `SALIDA_V135_1F_CIFRAS_PLAN.txt`
+      118 grafias == 118 contados en `SALIDA_V135_3B_CENSO_DOS_PREDICADOS.txt`
+      76 nodos == 76 contados en `SALIDA_V135_3B_CENSO_DOS_PREDICADOS.txt`
+      55 grupos == 55 contados en `SALIDA_V135_4A_COLA_CON_CAP.txt`
+      54 grupos == 54 contados en `SALIDA_V135_4B_PELDANOS.txt`
+

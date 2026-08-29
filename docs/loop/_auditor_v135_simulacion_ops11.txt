@@ -1,0 +1,21 @@
+SIMULACION DEL AUDITOR DE OP-S-11 (vuelta 135). EN MEMORIA, CERO ESCRITURA.
+
+CIFRA nodos vivos con fuente: 3184 nodos
+CIFRA grafias en primera posicion: 129 grafias
+CIFRA grafias en posicion NO primera: 7 grafias
+CIFRA filas de la tabla de mapeo: 129 grafias
+reparto por numero de declaraciones en el campo: {1: 3176, 2: 6, 3: 2}
+primera posicion CUBIERTA por la tabla: True
+CIFRA grafias de posicion NO primera que la tabla NO cubre: 0 grafias
+
+CIFRA nodos cuyo campo fuente CAMBIA: 726 nodos
+CIFRA nodos cuyo campo fuente NO cambia: 2458 nodos
+CIFRA grafias distintas en cualquier posicion DESPUES: 54 grafias
+CIFRA grafias distintas en primera posicion DESPUES: 54 grafias
+
+PERDIDAS REPARTIDAS: ningun nodo muere. La UNICA perdida es de DECLARACION
+repetida dentro del propio campo, y es el caso que 05_SANEO.md ya documenta:
+  decision_de_vender_startup pierde 1 declaracion(es) duplicada(s)
+CIFRA nodos que pierden una declaracion duplicada: 1 nodos
+
+EXITCODE: 0

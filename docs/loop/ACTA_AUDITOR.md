@@ -45290,3 +45290,213 @@ auditor** (sin cambio), y **4 vueltas no entregadas enteras** (sin cambio: 81, 1
 **EL BUCLE SIGUE.** Escribo el encargo de la vuelta 135 en `docs/loop/PROMPT_SIGUIENTE.md`, con la
 reparacion de MI exencion (iii) como TAREA bloqueante y la aplicacion de la extension a `Cap.` como
 trabajo. **No escribo `PARA_ALEXIS.md`.** El numero **134 queda gastado por esta acta**.
+
+---
+
+# ACTA DE LA VUELTA 135 DEL AUDITOR (MODO AUSTERO)
+
+Sin hueco de acta: la ultima escrita es la 134 y cubre la vuelta inmediatamente anterior a esta
+(`grep -n '^# ACTA DE LA VUELTA' docs/loop/ACTA_AUDITOR.md | tail -3`, corrido hoy).
+Fecha leida de git (`git log -1 --date=format:"%d %b %Y"`): 29 ago 2026. Rama `pasada-unica`, HEAD `782a768a`.
+
+**EL VEREDICTO DE UNA LINEA: LA TAPIA AGUANTA Y EL TRABAJO ES BUENO, PERO LA 135 TRAE UNA CAIDA SUYA Y ES
+DE LAS QUE ME IMPORTAN: EL REPORTE ATRIBUYE A `SALIDA_V135_2A_DIAGNOSTICO.txt` UN RESULTADO QUE ESE
+FICHERO NO DICE. LA COSA ES CIERTA; EL FICHERO CITADO NO LA SOSTIENE.**
+
+## 1. VERIFICACION, CON MIS PROPIOS INSTRUMENTOS
+
+Corri el ciclo entero de 1.b sobre arbol limpio (`run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py
+--aplicar`, `sync_assets_web.py`, `git diff --numstat -- dataset/ web/ engine/` VACIO), mas conteo,
+marcador, desfase, motor, `vitest` y `tsc`. **LAS OCHO CIFRAS DE LA CABECERA CUADRAN AL DIGITO CON MI
+REMEDICION:** censo 3.853 / 3.184 / 669; Gate 0 OK con auto-aristas 0, duplicadas 0 y divergentes 0;
+aristas 9.198 / 9.180 / 18.378 / 9.833; motor 25/25; web 80 passed (80) y 1.030 passed 3 skipped (1.033);
+tsc EXIT 0 cero lineas; marcador A 551 / B 72 / C 5 / D 2.760, huecos [] y dups 0; desfase 3 filas, las
+mismas tres. **LOS TRES ROTULOS SALEN DE GIT Y CON HASH DISTINTO:** `e12e4c36` es el acta 134 y es el HEAD
+sellado de apertura; `a3b1bbb3` es el commit donde NACEN las salidas de apertura (`--diff-filter=A`); y
+`2deac539` es el HEAD de cierre, el commit de 4.b mas 4.c, o sea el ultimo ANTES del reporte. Cadena exacta.
+
+**REGIMEN A CONFIRMADO, CERO NODOS:** `git diff --numstat e12e4c36 782a768a -- dataset/ web/ engine/`
+**VACIO**. `OPERACIONES.jsonl` intacto al byte, 62 LISTA y 9 HECHA, contados por mi. `PENDIENTES.md`
+73 anadidas y **0 palabras borradas** en el word-diff porcelain. `OP_S_11_MAPEO_PROPUESTO.md` trae **137
+palabras borradas**, y eso es EXACTO y esta declarado: 4.b REGENERA la tabla entera, no anade al final de
+una linea vieja. `wc -l REPORTE.md` = 80, en el tope.
+
+**LAS OCHO COMPROBACIONES DE 1.j, CORRIDAS POR MI, VERDE EXIT 0**, con el codigo leido del instrumento y
+no detras de una tuberia: cabecera IDENTICA AL TALLADOR (10 filas, 0 distintas), identidad IDENTICA AL
+TALLADOR, citas, cifras del plan (0 pares), titulos (1 dup cubierto, la excepcion de
+`sistema_responsabilidad_gerencial` intacta), cierre sellado, cifras del reporte y cabecera de mapeo.
+Aristas vivas **7.296 == 7.296, PERDIDAS 0 NUEVAS 0**; huerfanas TOTAL 29 HEREDADAS 29 REPARADAS 1
+FABRICADAS 0; `fusion_ops09 --autoprueba` con sus dos casos en ROJO. **La bateria de 1.d la verifique
+leyendo los dos diff:** filtre `^[<>]` quitando duraciones y `Start at` y **no quedo NI UNA linea de otra
+especie**, en MOTOR ni en WEB. 8 IDENTICOS, 2 DISTINTOS, conteo movio cero aristas.
+
+**LA TABLA LA CONTE YO, DEL FICHERO ESCRITO Y SIN USAR SU MOTOR** (`python` propio sobre las filas
+markdown): **129 filas, 54 canonicas distintas, 17 grupos de 2 o mas, 92 grafias en grupo, 37 solas, 3
+SINTETICAS** (Edwards et al. 30, DeMarco y Lister 13, Hubbard 10), **0 colapsos**, pie 129 == 129. Al
+digito con lo que publica. Re-corri `vuelta134_censo_cola_no_recorta.py`: **118 y 117**, separadora
+`The Field Guide to Understandin - Dekker, Sidney;`, **76 nodos**. Sus 7 lineas borradas ahi NO estrechan
+nada: el predicado (A) sobrevive identico y solo se le suma el (B). Y 4.a da **55 grupos** antes del prefijo.
+
+**LAS DOS GUARDAS, ROTAS POR MI CON MUTACIONES QUE EL EJECUTOR NO PROBO.** Contra la de cifras, sobre el
+reporte VIVO de la 135: (A) `118` a `999 grafias` **ROJO**; (B) `54` a `77 grupos` **ROJO**; (C) **LA
+PUERTA**, pegarle `(sin instrumento)` a una cifra que SI tiene fichero en la ventana, **ROJO nombrando el
+fichero**; (D) caso negativo, reporte intacto, **VERDE 7/7**. Contra la de la cabecera de mapeo, ya
+extendida a seis: (G) 3 SINTETICAS a 5 **ROJO**; (H) peldano 106 a 107 **ROJO**; (I) 37 sin agrupar a 36
+**ROJO**; (J) borrar una fila de grafia **ROJO por el pie**; (K) intacta **VERDE**. **LAS DOS ENTREGAN Y
+MUERDEN, Y LA EXTENSION A SEIS NO AFLOJO NINGUNA.**
+
+## 2. RELECTURA CIEGA, EMPEZANDO POR EL DISCUTIBLE MARCADO
+
+Fase III: cero pares de cribado, cero relecturas de unidad, declarado. Mi ciega fue de instrumento: corri
+la guarda REPARADA contra el reporte real de la 134 **antes** de abrir sus tres scripts de mutacion, para
+adjudicar yo mismo si la tapia cierra. **DA ROJO DOS VECES Y NOMBRA LOS DOS FICHEROS EXACTOS:** `118
+grafias` contra `SALIDA_V134_4A_CENSO_COLA.txt` y `54 grupos` contra `SALIDA_V134_4B_EFECTO_CAP.txt`. Esas
+son, al fichero, las dos cifras que mi acta 134 declaro inmunes. **LA REPARACION ES REAL.** Y de esa misma
+corrida sale la caida de la 4.1, porque el fichero que el reporte cita dice otra cosa.
+
+## 3. ADJUDICACIONES
+
+**3.1 EL DISCUTIBLE MARCADO, LA VENTANA AMPLIA DE 2.b: NO ES DOCTRINA NUEVA. LA ADJUDICO.** La cubre por
+extension citable el ramal **(xix)**, que escribi yo en el acta 134 y dice literal que la exencion se
+concede *"por una condicion QUE LA GUARDA PUEDA COMPROBAR SOLA (que no exista fichero de instrumento en la
+ventana)"*: nombra la ventana y no le fija forma, luego elegir la forma que mide de verdad esa condicion
+es aplicar el ramal, no ampliarlo. **Y va en la direccion segura, que es lo que decide:** ensanchar la
+ventana solo puede encontrar MAS instrumentos, o sea hacer la exencion MAS dificil. El ramal (iii) prohibe
+ESTRECHAR una guarda en silencio; esto es lo contrario, y ademas viene declarado. **Lo tengo medido, no
+argumentado:** con la ventana forward-only, `54 grupos` no encuentra NINGUN fichero (es la mutacion (B)
+que ayer pasaba VERDE) y `118 grafias` encuentra el fichero EQUIVOCADO, el `4B` del vecino. **La
+asimetria que el ejecutor conservo es correcta y la escribo como doctrina para que nadie la simplifique
+despues: AMPLIA para decidir si la exencion es legal, FORWARD-ONLY para cotejar la cifra.** Ensanchar el
+cotejo dejaria que una cifra cuadrara contra el fichero del vecino, que es justo el error que el forward
+comete arriba. **Borde conocido, y se declara si alguna vez muerde:** una cifra sin instrumento propio que
+caiga a menos de dos frases de un fichero ajeno ya no podra eximirse; el remedio es el de 2.c, pegarle su
+linea `CIFRA` al instrumento, **y NUNCA una cuarta exencion.**
+
+**3.2 EL CIERRE DE LA FASE 05: NO SE DISPARA HOY, Y ADJUDICO POR ADELANTADO COMO SE CERRARA.** Hoy no, y
+la razon es de una linea: **`OP-S-11` sigue `LISTA` y no se ha escrito un solo nodo.** La 135 dejo
+terminada su TABLA DE PROPUESTA, que no es la operacion. Pero al medir el cierre encontre un **choque de
+reglas escritas que no puede resolverse en caliente en la vuelta que lo pise**, y lo resuelvo ahora: la
+parada del fundador (26 ago 2026) dice que la fase 06 no abre hasta que la fase 05 quede cerrada, y la
+**atadura 2** de `docs/plan/00_INDICE.md:458` dice que **`OP-S-12` va AL FINAL, despues de la ultima
+fusion**, que son las SEIS que las mesas de la fase 06 habilitan. Leidas al pie de la letra se muerden la
+cola: la 05 no cierra hasta despues de la 06, y la 06 no abre hasta que la 05 cierre. **NO ES DOCTRINA
+NUEVA Y NO ES PARADA, porque la casa ya tiene la figura y con nombre: la fase 03 quedo `CERRADA CON
+REMISION`** (decision del fundador de 26 ago 2026, `docs/loop/paradas/2026-08-26-cierre-fase-03-DECISION.md`),
+y la propia condicion de la fase 03 define cerrada como *"todas sus operaciones con destino"*. **ADJUDICO:
+cuando `OP-S-11` quede `HECHA`, la fase 05 queda CERRADA CON REMISION de `OP-S-12` al final de la pasada
+por la atadura 2**, y eso dispara la parada del fundador. Coincide ademas con su motivo escrito, que habla
+del trabajo y no del inventario: *"el tramo mecanico se acaba ahi y vuelve el trabajo de lectura"*. **Lo
+declaro yo en mi acta 136, no el ejecutor, y por eso la 136 sera con toda probabilidad la ultima vuelta
+antes de `PARA_ALEXIS.md`.**
+
+**3.3 `OP-S-11` SE PUEDE EJECUTAR SIN DECIDIR NADA, Y NO LO SUPONGO: LO SIMULE**
+(`docs/loop/_auditor_v135_simulacion_ops11.txt`, en memoria, cero escritura). Las **129** grafias de
+primera posicion estan **cubiertas al 100 por ciento** por las 129 filas de la tabla; solo **8 nodos**
+tienen 2 o mas declaraciones y las **7** grafias que viven fuera de la primera posicion estan **todas** en
+la tabla, **0 sin cubrir**. Aplicada a TODAS las posiciones: **726 nodos cambian, 2.458 no**, y el campo
+queda con **54** grafias distintas en cualquier posicion. **La prueba de que la regla es la buena la da la
+propia operacion:** `05_SANEO.md` documenta que `decision_de_vender_startup` declara el mismo libro dos
+veces, y **ese es exactamente el unico nodo** que mi simulacion ve colapsar una declaracion. Ramal (xiii)
+cumplido por medicion. **La meta de 55 contra los 54 de hoy NO es contradiccion**: el 55 es una medicion
+del 11 ago 2026 y el 54 es la de hoy, y la regla de verificacion de `AUDITOR.md` manda declarar la
+discrepancia en vez de copiar la vieja. Ya esta declarada, y `05_SANEO.md` no se toca.
+
+## 4. CAIDAS, CON NOMBRE
+
+**4.1 DEL EJECUTOR, DE REPORTE, Y ACUMULA.** El reporte dice: *"2.a (`SALIDA_V135_2A_DIAGNOSTICO.txt`):
+COBERTURA real de la 134 1 cotejadas / 3 exentas / 4 cifras; **dos SI tenian instrumento cerca, una NO**"*.
+**El fichero que cita dice lo contrario: UNA si y DOS no** (`118 grafias: SI ... SALIDA_V134_4B_EFECTO_CAP.txt`,
+`0 pares: NO`, `54 grupos: NO`), porque su 2.a mide con la ventana **forward-only**, que es la unica que
+existia cuando 2.a corrio. **La afirmacion es CIERTA** (yo la medi: con la ventana amplia son 118 con `4A`
+y 54 con `4B`) **pero el instrumento citado no la sostiene, y encima empareja mal el fichero**. Es el ramal
+(i), medicion atribuida a un estado que no es el suyo, y el (ii), el expediente diciendo mas que el
+registro de al lado. El mensaje del commit `6e30311b` repite la misma frase con el mismo defecto.
+**ACUMULA: no vive en una lista de rutas ni en prosa de acompanamiento, es la LINEA DE RESULTADO de la
+subtarea 2.a**, la que el propio encargo llamo *"lo que mide el tamano de la puerta"*, y eso es una
+conclusion en el sentido de la letra del fundador del 27 ago 2026. **La cifra correcta cabe en el mismo
+renglon y con los mismos caracteres, asi que el tope de 80 lineas no lo explica.**
+
+**4.2 DEL EJECUTOR, DE INCUMPLIMIENTO DE ENCARGO.** La 2.d ordenaba, literal, *"esa linea SE PEGA EN EL
+REPORTE, tal cual"*, hablando de la COBERTURA **de su propio reporte**. `grep -n COBERTURA
+docs/loop/REPORTE.md` da **una sola linea, y es la del diagnostico de la 134**. La suya, `COBERTURA: 7
+cotejadas / 0 exentas / 7 cifras`, esta en `SALIDA_V135_1J_CIFRAS_REPORTE.txt` y **no aparece en el
+reporte, que tampoco cita ese fichero**. La 1.k preveia justo esto y mandaba **PARAR** antes que recortar.
+No paro y no lo dijo. Es la misma raiz que la 4.1: leyo la 2.d como parte de la 2.a. **Atenuante real y lo
+escribo: su cobertura verdadera es 7 de 7 con CERO exentas**, o sea que la parte de (xix) que exige motivo
+por cada exenta esta cumplida por vacio y la puerta esta cerrada de hecho. Lo que falta es la constancia.
+
+**4.3 MIA, DE ENCARGO.** Mi 1.l dice *"UN SOLO fichero viejo autorizado a cambiar de contenido... NINGUN
+OTRO. Si te descubres borrando en cualquier otro fichero viejo, PARAS"*, y mis TAREAS 2, 3.b y 4.c le
+**ordenan** borrar lineas en `verificar_cifras_del_reporte.py`, `vuelta134_censo_cola_no_recorta.py` y
+`verificar_cabecera_mapeo.py`. Mi encargo se contradice a si mismo. El leyo la clausula donde vive, dentro
+del REGIMEN A de texto, y siguio: **acerto**, pero acerto eligiendo entre dos ordenes mias.
+
+**4.4 MIA, DE ENCARGO.** Mis MUTACIONES 1 y 2 de la 2.e no discriminan nada, y lo se porque lo medi: tras
+la reparacion, el reporte de la 134 **SIN MUTAR** ya cae ROJO en esas dos cifras. Mutar `118` a `999`
+manteniendo el `(sin instrumento)` prueba la exencion, que ya estaba probada, y **no prueba el cotejo del
+numero**. Pedi dos pruebas que no podian fallar. Las corri yo bien contra el reporte vivo (mis A, B, C y D
+de la seccion 1) y ahi si discriminan.
+
+**DEL EJECUTOR, LO QUE ENTREGO BIEN Y NO SE DILUYE POR LAS DOS DE ARRIBA:** las ocho cifras de cabecera,
+las 129 / 54 / 17 / 92 / 37 / 3 que conte yo del fichero, los 118 / 117 / 76, los 55 de la 4.a, el
+word-diff de `PENDIENTES.md` en cero, el dataset sin un byte movido, `OPERACIONES.jsonl` intacto, y **dos
+guardas que aguantan nueve mutaciones mias**. Tapio la puerta que yo deje abierta y la tapio bien. Y marco
+el discutible de la ventana en vez de resolverlo solo, que es lo que le mande.
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: cero relecturas de unidad y cero puestos** (fase III), declarado. **Varas corridas por mi
+hoy:** el ciclo entero de 1.b; conteo, marcador, desfase, motor, `vitest`, `tsc`; las OCHO de 1.j; aristas
+vivas, huerfanas y `fusion_ops09 --autoprueba`; los dos diff de 1.d filtrados linea a linea; el numstat y
+los dos word-diff porcelain de la vuelta; `OPERACIONES.jsonl` contado; la tabla de mapeo contada del
+fichero con codigo propio; el censo de los dos predicados re-corrido; **mis CUATRO mutaciones contra la
+guarda de cifras y mis CINCO contra la de la cabecera de mapeo**; la guarda reparada corrida contra el
+reporte de la 134; y **la simulacion completa de `OP-S-11` en memoria**.
+
+**Caidas del ejecutor: UNA de reporte (4.1) y UNA de incumplimiento de encargo (4.2). Caidas del auditor:
+DOS de encargo (4.3 y 4.4). Discrepancias abiertas: CERO; el unico discutible marcado queda adjudicado.**
+
+**Acumulado:** **858 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase del
+ejecutor** (sin cambio), **80 de reporte del ejecutor** (79 mas la 4.1), **20 de cifra publicada del
+ejecutor** (sin cambio), **21 de expediente** (sin cambio), **20 de incumplimiento de encargo** (19 mas la
+4.2), **3 de procedimiento del ejecutor** (sin cambio), **2 de guarda envejecida** (sin cambio), **21 de
+guarda que no alcanza o cegada** (sin cambio), **13 de cifra del auditor** (sin cambio), **19 de acta del
+auditor** (sin cambio), **33 de procedimiento del auditor** (sin cambio), **1 de reporte del auditor** (sin
+cambio), **36 de encargo del auditor** (34 mas la 4.3 y la 4.4), **2 de clase del auditor** (sin cambio),
+y **4 vueltas no entregadas enteras** (sin cambio: 81, 114, 127, 129).
+
+**RACHAS:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO.** Ninguna cifra que viva en `docs/plan/` o en el
+> banco se movio mal: las 129 / 54 / 17 / 92 / 37 / 3 de la tabla las conte yo del fichero y cuadran, y el
+> dataset no se movio un byte.
+>
+> **REPORTE: PASA DE CERO A UNA**, por la 4.1. **NO llega a DOS, luego NO encargo la operacion de codigo
+> de la escalada**, y lo digo expresamente para no repetir la caida propia del auditor de la vuelta 89.
+> Encargo la correccion de la frase y la constancia que falta, las dos como registro de la 136.
+>
+> **EL CREDITO DE LA TANDA: EL TRAMO SE RELEE AL DOBLE POR DECIMOSEXTA VUELTA.** Siguen los ramales (i) a
+> (xix). Le anado UNO, y sale de mi 4.1:
+> **(xx) UNA CONCLUSION SE LEE DEL INSTRUMENTO QUE SE CITA, NO DEL QUE SE CORRIO DESPUES. Cuando una
+> vuelta mide lo mismo dos veces con dos varas (el diagnostico ANTES de reparar y la guarda DESPUES), la
+> frase que cita el fichero del diagnostico dice lo que dice ESE fichero. Si lo que se quiere publicar es
+> la medicion nueva, se cita el fichero nuevo. Tener razon no arregla la cita.**
+
+## 6. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** La ventana amplia la cubre el ramal (xix) por extension citable (3.1); el cierre con remision lo cubre el precedente de la fase 03 (3.2) |
+| contradiccion con una regla vigente o cifra publicada | **NO, Y ERA LA CANDIDATA REAL DE HOY.** El choque entre la parada de la fase 05 y la atadura 2 lo resuelve la figura de CERRADA CON REMISION, ya usada por decision del fundador en la fase 03 (3.2). La meta de 55 contra 54 es medicion vieja contra medicion de hoy, y la regla manda declararla (3.3) |
+| decision de fundador reservada | **NO.** Cero borrados que ninguna regla ordene, alcance intacto, todo en `pasada-unica`, cero gasto fuera del repo. `05_SANEO.md` no se toca |
+| fallo tecnico repetido | **NO.** Gate 0, motor, web y tsc verdes en apertura, en cierre y hoy en mi remedicion |
+| credito de tanda roto (clase o cifra del ejecutor) | **NO. SIGUE EN CERO** |
+| credito de tanda roto (reporte) | **NO. UNA, de tres.** No llega ni a la escalada de DOS |
+| campana consumada | **NO.** 62 operaciones en `LISTA` hoy, contadas |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **NO HOY, Y POR PRIMERA VEZ CON FECHA: `OP-S-11` sigue `LISTA` y cero nodos escritos.** La 136 la ejecuta, y al quedar `HECHA` la fase 05 cierra CON REMISION de `OP-S-12` (3.2) y la parada se dispara en mi acta 136. Aviso por DUODECIMA vuelta, y es la ultima |
+
+**EL BUCLE SIGUE.** Escribo el encargo de la vuelta 136 en `docs/loop/PROMPT_SIGUIENTE.md`: la ejecucion
+de `OP-S-11`, primer REGIMEN B en muchas vueltas, con los dos registros de la 4.1 y la 4.2 delante.
+**No escribo `PARA_ALEXIS.md`.** El numero **135 queda gastado por esta acta**.
