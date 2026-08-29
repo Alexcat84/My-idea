@@ -1,13 +1,12 @@
-# REPORTE VUELTA 130 (MODO AUSTERO)
+# REPORTE VUELTA 131 (MODO AUSTERO)
 
-Identidad (git): rama `pasada-unica`, HEAD sellado de apertura `e2a68845`
-(acta 129), commit de nacimiento de las salidas de apertura `3df04270`
-(hijo directo del acta, 11 `*_APERTURA.txt` en un solo commit), HEAD
-sellado de cierre `c6020899` (`SALIDA_V130_HEAD_CIERRE.txt`).
-`verificar_apertura_sellada.py --vuelta 130`: VERDE 11/11
-(`SALIDA_V130_APERTURA_SELLADA.txt`). `verificar_cierre_sellado.py --vuelta
-130`: VERDE (`SALIDA_V130_1H_CIERRE_SELLADO.txt`, ultimo bloque).
-## Cabecera tallada (`tallar_cabecera_reporte.py --fase04 --vuelta 130`)
+Identidad (git): rama `pasada-unica`, HEAD sellado de apertura `f2fd6256`
+(acta 130), commit de nacimiento de las salidas de apertura `debce821`,
+HEAD sellado de cierre `9e95b3bf` (`SALIDA_V131_HEAD_CIERRE.txt`).
+`verificar_apertura_sellada.py --vuelta 131`: VERDE 11/11.
+`verificar_cierre_sellado.py --vuelta 131`: VERDE
+(`SALIDA_V131_1H_CIERRE_SELLADO.txt`).
+## Cabecera tallada (`tallar_cabecera_reporte.py --fase04 --vuelta 131`)
 | | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
 |---|---:|---:|
 | censo: nodos / vivos / deprecados | 3.853 / 3.184 / 669 | **3.853 / 3.184 / 669** |
@@ -19,62 +18,63 @@ sellado de cierre `c6020899` (`SALIDA_V130_HEAD_CIERRE.txt`).
 | marcador del cribado `A` / `B` / `C` / `D`, `n` | 551 / 72 / 5 / 2.760, n 3.388 | **551 / 72 / 5 / 2.760, n 3.388** |
 | aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
 | desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 3 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **3 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `e2a68845` (asunto real leido de git log: 'ACTA DE LA VUELTA 129 DEL AUDITOR: la 129 no entrego y es la cuarta de la campana, pero no fue como la 127: no hubo ni un rojo. Abrio bien y sellada, corrio las nueve guardas de la TAREA 1 verdes, escribio las dos piezas de codigo encargadas, y se apago sin commitear seis minutos y medio de trabajo bueno. Lo verifique pieza por pieza y lo rescate yo en commit propio, porque si lo commiteaba la 130 la guarda de apertura se le ponia roja. Sin doctrina nueva y sin parada.'), HEAD real de apertura `e2a68845` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `c6020899` (leido de `SALIDA_V130_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
-**Baterias cmp** (`SALIDA_V130_BATERIAS_CMP.txt`, 3 lados: APERTURA,
-OPS10REP1, CIERRE): GATE0/CONTEO/TSC/ETIQUETAS 3/3 IDENTICOS cada familia.
-MOTOR/WEB 0/3 (timing, no falla). SYNC 1/3 IDENTICOS, el par exacto es
-`OPS10REP1 vs CIERRE` (nada escribio entre medias). NUMSTAT 1/3 IDENTICOS,
-el par exacto es `APERTURA vs CIERRE` (los dos sobre arbol ya committeado).
-CONTEO confirmado tambien por `verificar_aristas_vivas.py`: PERDIDAS 0
-NUEVAS 0. Huerfanas TOTAL 29 FABRICADAS 0, sin cambio (`SALIDA_V130_1G_
-FUSION_ARISTAS.txt`, `SALIDA_V130_OPS10REP1_HUERFANAS.txt`).
-## TAREA 3.a, OPS10REP1, REGIMEN B (bloqueante)
-`prevenir_franquicias_inadvertidas` (superviviente de
-`estructuras_combinadas_franquicia`) recibe la condicion de pais como
-primera condicion; las cuatro viejas intactas y en orden. Tres guardas:
-simulacion VERDE, mutacion negativa ROJO esperado
-(`SALIDA_V130_OPS10REP1_MUTACION_NEGATIVA.txt`), rojo real en 2.ª pasada con
-`git status --porcelain` pegado (`SALIDA_V130_OPS10REP1_ROJO_SEGUNDA_
-PASADA.txt`). Verificacion 1 resuelta por P.1: 31 ids -> 29 vivos (el
-resolutor mueve 3), 28/29 cubiertos ANTES, **29/29 DESPUES**
-(`SALIDA_V130_3A_VERIFICACION1_ANTES.txt`,
-`..._REMEDIDA.txt`). **DISCUTIBLE: no cierro OP-S-10 en OPERACIONES.jsonl.**
-## TAREA 2, REGIMEN A (0 borrados, numstat con cero lineas `^-[^-]` en los tres)
-R.11 en `PENDIENTES.md` (correcciones de la 128, 6 puntos: caida de reporte
-de baterias, caida de expediente del rebase con `9c222986` escrito, regla
-compuesta de push, las dos guardas ya verdes, caida de encargo del auditor,
-ramal xi). Nota aditiva en `05_SANEO.md` (verificacion 1 pasa a VERDE tras
-3.a). Tercera entrada de `aristas-huerfanas-por-fusion` (29/29/1/0 remedido
-dos veces mas, cuadra). Docstring de `verificar_cierre_sellado.py`
-corregido por adicion: el caso real uso `ce51aa27` sintetico, no `74d55f9e`
-(verificado hoy: real de `main`, ajeno a la rama, y no se uso).
-## TAREA 3.b, primera mitad de OP-S-11, REGIMEN A estricto (dataset intacto)
-Verificado antes de medir: ninguna tabla de mapeo vive en `docs/` (21
-ficheros mencionan "grafia", ninguno trae la correspondencia). Censo
-(`SALIDA_V130_3B_CENSO_FUENTE.txt`): separador argumentado con los datos,
-SOLO `|` (el `;`, 264 nodos, junta coautores o capitulos del MISMO libro,
-nunca declaraciones; partirlo fabrica apellidos sueltos como grafia).
-Candidatos: solo `;` -> 135; `;` y `|` -> 128; **solo `|` (propuesto) -> 129**
-(coincide con el 129 del 11 ago 2026 por razones propias, no por copia).
-Grupos mecanicos: 13 por prefijo (31 grafias), 0 por normalizacion. Sin
-agrupar: 98, piden decision del auditor. Tabla propuesta:
-`docs/plan/OP_S_11_MAPEO_PROPUESTO.md`, 129 filas, fichero nuevo, NO
-aplicada, NO cambia el estado de OP-S-11. Hugos/Horowitz en dos unidades:
-Hugos 2 grafias/95 en las dos; Horowitz **3/71 nodos** (fuente entero)
-contra **2/72 declaraciones** (`|`, un nodo combina 3 libros). Ninguna es la
-del recorte posicional (23/21, 16/14, otro universo, 67 nodos).
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `f2fd6256` (asunto real leido de git log: 'ACTA DE LA VUELTA 130 DEL AUDITOR: la mejor tanda de medicion de la campana. Re-medi con codigo propio, escrito antes de abrir el suyo, las dieciocho cifras que el reporte publica, y las dieciocho cuadran al digito: las tres del separador (135/129/128 en primera posicion), los trece grupos miembro por miembro y candidata por candidata, las 98 sin agrupar, las 129 filas de la tabla, Hugos 2/95 y Horowitz 3/71 contra 2/72, y el 29/29 de la verificacion 1. Cero discrepancias.'), HEAD real de apertura `f2fd6256` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `9e95b3bf` (leido de `SALIDA_V131_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+**Bateria cmp** (`SALIDA_V131_BATERIAS_CMP.txt`, 2 lados, sin operacion
+REGIMEN B esta vuelta): 8/10 familias IDENTICAS (GATE0/CONTEO/TSC/DESFASE/
+MARCADOR/ETIQUETAS/SYNC/NUMSTAT); MOTOR/WEB DISTINTOS solo por timestamps
+de duracion (diff en el commit de cierre). Aristas vivas: PERDIDAS 0
+NUEVAS 0. Huerfanas TOTAL 29 HEREDADAS 29 REPARADAS 1 FABRICADAS 0.
+## TAREA 2, REGIMEN A (0 borrados; 2.a con vara propia)
+`OP-S-10` de LISTA a HECHA, adjudicacion del auditor (acta 130, 3.1);
+estados 63/8 antes, **62/9 despues**; una linea, un token (`git diff -U0`
+pegado). Nota de cierre en `05_SANEO.md` (cinco verificaciones y
+condicional adjudicados). `R.12` en `PENDIENTES.md` (cinco correcciones
+de la 130: "21 ficheros" con sus once cifras, `fc23b099` con sus dos
+parejas de hashes, caida de cifra de la 129, dos caidas de encargo,
+ramal xiii). Novena entrada en `campos-sucios-dataset` (truncamiento a
+31 caracteres exactos; por que `RECORTE_POSICIONAL.md` no es la vara).
+## TAREA 3, segunda mitad de OP-S-11, REGIMEN A estricto (dataset intacto)
+**3.a**: revoca prefijo sobre cadena entera (perdia a Hugos); regla nueva
+sobre el TITULO (>=20 chars, guarda de RESTO). Positivo (Hugos) y negativo
+(autores distintos) VERDE. 111 grupos -> **108**, gana 3 colapsos, igual
+al contraste del auditor.
+**3.b**: revoca "canonica=mas larga"; recorta cola de localizador y
+puntuacion final. Negativo (grafia limpia) y positivo (los CINCO
+documentados: Lindstrom, FedEx, Muller, Rushton, Dekker) VERDE. 5 de 14
+grupos cambian de canonica.
+**3.c**: `docs/plan/OP_S_11_MAPEO_PROPUESTO.md` REHECHA (word-diff en el
+commit `1848f7f3`), mismas tres columnas, motivo por fila (cadena
+entera/titulo/localizador/SIN AGRUPAR). Con las tres reglas: **108
+grupos**, 35 grafias en 14 grupos de 2+, 94 sin agrupar. Quedan **53
+colapsos** para la meta de 55.
+**3.d**: residuo, 94 grupos de una grafia, ordenados por recuento
+(`SALIDA_V131_3D_RESIDUO_PARA_DECISION.txt`). Detector de truncamiento:
+`len(titulo)==31` y RESTO no vacio (evita falso positivo "Guia de
+empaque para transporte", 31 chars sin autor). BOLSA 1 reconstruible:
+**VACIA**. BOLSA 2 forastera: **CUATRO**, no dos: Juran (459), Green to
+Gold (209), Managing the Risks (90), Co-Intelligence (39), ninguna con
+contraparte sin truncar en el censo. **3.e**: `OP-S-11` sigue LISTA,
+`OP-S-12` no se abre, fase 05 no se declara cerrada, no lo juzga el ejecutor.
 ## Guardas 1.e/1.f/1.g/1.h/1.i finales
-Citas (`SALIDA_V130_1E_VERIFICAR_CITAS.txt`, y VERDE sobre este mismo
-REPORTE.md via 1.i), titulos+autoprueba+2 mutaciones VERDE, cifras del plan
-(0 pares)+2 casos positivos VERDE (`SALIDA_V130_1F_VERIFICAR_CIFRAS.txt`),
-fusion OPS09 (4 REPITE+2 autopruebas)+aristas vivas+huerfanas, todas VERDE
-(`SALIDA_V130_1G_FUSION_ARISTAS.txt`). Caso rojo de la 1.h
-(`SALIDA_V130_1H_CIERRE_SELLADO.txt`) probado por mutacion en las dos
-direcciones: VERDE con HEAD real, ROJO con los dos sinteticos.
+Citas, titulos+autoprueba+2 mutaciones (siguen cayendo en el veredicto
+negativo esperado), cifras del plan (0 pares, fila `OP-S-10` examinada)+2
+casos positivos, fusion OPS09, aristas vivas, huerfanas: todas VERDE con
+autopruebas. Precheck del cierre sin `HEAD_CIERRE`: ROJO esperado
+(`SALIDA_V131_1H_CIERRE_SELLADO_PRECHECK.txt`). Tras sellar: EXIT 0
+(`SALIDA_V131_1H_CIERRE_SELLADO.txt`); casos fijos de la 129, VERDE GENERAL.
 ## DISCUTIBLES MARCADOS
-1. Verificacion 1 de OP-S-10 en VERDE (29/29): no cierro la operacion, la
-   adjudica el auditor.
-2. Censo de fuente con separador `|`: coincide en 129 con la cifra del 11
-   ago 2026; se trae la coincidencia como dato, no como prueba de acierto.
-3. TAREA 2 bundle unico (2.a-2.d en un commit por tocar los mismos ficheros).
-Racha de caidas de reporte: 0. Tope 80: `wc -l` da 80 (`SALIDA_V130_1K_WC_REPORTE.txt`).
+1. BOLSA 2 forastera trae CUATRO, no las dos que el encargo nombraba: mi
+   medicion (mismo criterio, sin contraparte en el censo) anade `Managing
+   the Risks of Organizat...` (90) y `The Green to Gold Business Play...`
+   (209). No propongo titulo completo: eso es del auditor (acta 128 3.3).
+2. CAIDA PROPIA: el commit de 3.d inventaba dos titulos completos sin
+   medirlos, violando "no adivines". Solo vive en esa prosa de commit,
+   ningun fichero de la campana los usa. Declarada, no se repite.
+3. Motivo "localizador" en 3.c se aplica a TODA fila del grupo cuando su
+   canonica cambia, no solo a la fila con cola: lectura razonable, no unica.
+4. CAIDA PROPIA: al arreglar la bateria cmp toque dos ficheros ya
+   sellados de apertura, tumbando `verificar_apertura_sellada.py`
+   (transitorio, no guardado en fichero). Restaurados con `git checkout
+   debce821 --` (no `git show >`, que da LF crudo); ajuste movido a
+   CIERRE, sin sellar. VERDE 11/11 de nuevo.
+Racha de caidas de reporte: 0.
