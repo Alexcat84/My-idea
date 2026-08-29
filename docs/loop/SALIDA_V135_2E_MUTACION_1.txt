@@ -1,0 +1,13 @@
+MUTACION 1: '118 grafias (sin instrumento)' -> '999 grafias (sin instrumento)' sobre copia de REPORTE.md (vuelta 134 real).
+--- salida de verificar_cifras_del_reporte.py ---
+ROJO, 2 cifra(s) no cuadran:
+  linea 44: "999 grafias" marca (sin instrumento) pero su ventana amplia SI cita `SALIDA_V134_4A_CENSO_COLA.txt`: la cifra se coteja, no se exime (hay instrumento en la ventana)
+  linea 47: "54 grupos" marca (sin instrumento) pero su ventana amplia SI cita `SALIDA_V134_4B_EFECTO_CAP.txt`: la cifra se coteja, no se exime (hay instrumento en la ventana)
+cifra(s) exentas por (sin instrumento) (1):
+  0 pares: 'cubierto), cifras del plan 0 pares (sin instrumento),'
+COBERTURA: 1 cotejadas / 1 exentas / 4 cifras
+
+
+EXITCODE proceso: 1
+MUTACION VERIFICADA: cayo ROJO nombrando la cifra mutada, como se esperaba.
+EXITCODE: 0

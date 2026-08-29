@@ -89,6 +89,50 @@ USO:
 PRUEBA DE MUTACION (obligatoria, EJECUTOR.md 1 "EL CASO ROJO SE PRUEBA POR
 MUTACION"): scripts/loop/vuelta133_tarea2e_mutacion_cifras.py, salida a
 docs/loop/SALIDA_V133_2E_MUTACION.txt.
+
+--- LA PUERTA DE SERVICIO SE TAPIA (TAREA 2 de la vuelta 135, acta 134,
+4.1) ---
+
+POR QUE NACE. La exencion (iii) de arriba eximia una cifra con SOLO el
+literal `(sin instrumento)` pegado, escrito por EL AUDITADO, sin que la
+guarda comprobara nada por si misma. El auditor lo probo con tres
+mutaciones sobre el reporte real de la 134: `118 grafias` a `999 grafias`
+dio VERDE EXIT 0, `54 grupos` a `77 grupos` dio VERDE EXIT 0, y solo una
+cifra nueva SIN marca y sin fichero dio ROJO. Las dos primeras cifras SI
+tenian fichero de instrumento commiteado cerca (`SALIDA_V134_4A_CENSO_
+COLA.txt` y `SALIDA_V134_4B_EFECTO_CAP.txt`) y la exencion las dejaba
+pasar de todos modos: "una exencion que escribe el auditado no es una
+exencion, es un interruptor" (ramal xix).
+
+LA CONDICION NUEVA (2.b). El literal `(sin instrumento)` exime una cifra
+SOLO SI la guarda comprueba, ELLA MISMA, que en la VENTANA AMPLIA de esa
+cifra (`ventana_amplia()`: la propia frase mas HASTA DOS frases ANTES y
+HASTA DOS frases DESPUES, bidireccional) no hay ningun `SALIDA_V<N>_*.txt`
+existente citado. Se ensancha la ventana SOLO para esta pregunta binaria
+(hay o no hay UN fichero cerca): en la prosa de este reporte la cita casi
+siempre PRECEDE al numero que introduce (patron "4.a (`FICHERO`, ...): ...
+<numero> ...") y el wrap de linea de `dividir_frases` corta la frase justo
+ahi, así que una ventana solo-adelante (la que sigue usando, SIN TOCAR, el
+cotejo normal de mas abajo, MISMA doctrina que `verificar_cifras_del_
+plan.py`) no la veria nunca. Si la ventana amplia SI trae un fichero
+citado, el literal es ILEGAL: ROJO EXIT 1 nombrando la linea, la cifra y
+el fichero, motivo "hay instrumento en la ventana: la cifra se coteja, no
+se exime". Las exenciones (i) y (ii) NO cambian. NINGUNA CUARTA EXENCION.
+
+LA LINEA `CIFRA` (2.c). Para que tapiar la puerta no deje al auditado sin
+salida honesta, un instrumento puede imprimir una linea
+`CIFRA <etiqueta>: <n> <unidad>` (unidad del vocabulario cerrado de
+arriba). Cuando una cifra del reporte cita un fichero, la guarda busca
+PRIMERO una linea `CIFRA` de esa MISMA familia de unidad en ese fichero y
+coteja contra ella; solo si no la encuentra cae a la convencion generica
+de recuento (`contar_por_familia`) que ya tenia. Si no puede contar de
+ninguna de las dos maneras, sigue siendo ROJO nombrando el fichero.
+
+PRUEBA DE MUTACION (obligatoria): scripts/loop/vuelta135_2e_mutacion_1.py,
+_2.py y _3.py, salidas a docs/loop/SALIDA_V135_2E_MUTACION_1.txt, _2.txt y
+_3.txt: (1) `118 grafias` a `999 grafias` sobre copia del reporte real de
+la 134, ROJO; (2) `54 grupos` a `77 grupos`, ROJO; (3) caso negativo, una
+cifra con fichero citado, linea `CIFRA` puesta y numero CORRECTO, VERDE.
 """
 import argparse
 import glob
@@ -115,6 +159,9 @@ PATRON_RUTA_FICHERO = re.compile(
 PATRON_PAR_FICHERO_LINEA = re.compile(
     r"[A-Za-z0-9_./\\-]+\.(?:py|md|ts|tsx|js|jsx|json|jsonl|txt):\d+\b")
 PATRON_ARISTA = re.compile(r"^\s*\S+\s*->\s*\S+", re.MULTILINE)
+PATRON_CIFRA_ETIQUETA = re.compile(
+    r"^CIFRA\s+[^:\n]+:\s*(\d+(?:[.,]\d+)?)\s+(%s)\b" % "|".join(UNIDADES),
+    re.IGNORECASE | re.MULTILINE)
 
 
 def leer(ruta):
@@ -163,6 +210,29 @@ def contar_lineas(contenido):
     return len([l for l in contenido.split("\n") if l.strip()])
 
 
+def contar_por_cifra_etiquetada(contenido, unidad):
+    """2.c: busca PRIMERO una linea `CIFRA <etiqueta>: <n> <unidad>` de la
+    MISMA unidad CANONICA (singular/plural de la MISMA palabra: "grafia" no
+    cotejua contra una linea CIFRA de "grupo" solo por compartir familia
+    generica). Devuelve None si no hay ninguna (el llamador cae a
+    `contar_por_familia`)."""
+    canonica = UNIDAD_CANONICA[unidad]
+    for m in PATRON_CIFRA_ETIQUETA.finditer(contenido):
+        numero_txt = m.group(1).replace(".", "").replace(",", "")
+        u = m.group(2).lower()
+        if UNIDAD_CANONICA.get(u) == canonica and numero_txt.isdigit():
+            return int(numero_txt)
+    return None
+
+
+def ventana_amplia(frases, i):
+    """2.b: ventana BIDIRECCIONAL (+/-2), SOLO para decidir la LEGALIDAD de
+    la exencion (iii). La cita casi siempre PRECEDE al numero en la prosa
+    de este reporte; la ventana forward-only del cotejo normal (sin tocar,
+    mas abajo) no la veria. Ver docstring del modulo."""
+    return frases[max(0, i - 2):i + 3]
+
+
 def contar_generico_bullets(contenido):
     """Convencion generica para grupo/grafia/colapso/nodo (docstring del
     modulo): lineas con sangria de lista (2+ espacios) que no son ya una
@@ -188,6 +258,23 @@ UNIDAD_A_FAMILIA = {
     "grafia": "generico", "grafias": "generico",
     "colapso": "generico", "colapsos": "generico",
     "nodo": "generico", "nodos": "generico",
+}
+
+# Canonica SINGULAR de cada unidad (2.c): la familia de arriba agrupa
+# grupo/grafia/colapso/nodo en un solo "generico" para el CONTEO GENERICO
+# (ninguno tiene convencion mecanica propia), pero la linea `CIFRA` SI
+# distingue entre ellas: "118 grafias" y "54 grupos" son unidades
+# DISTINTAS y no pueden cotejar contra la misma linea `CIFRA` solo porque
+# comparten familia generica.
+UNIDAD_CANONICA = {
+    "fichero": "fichero", "ficheros": "fichero",
+    "par": "par", "pares": "par",
+    "grupo": "grupo", "grupos": "grupo",
+    "grafia": "grafia", "grafias": "grafia",
+    "colapso": "colapso", "colapsos": "colapso",
+    "nodo": "nodo", "nodos": "nodo",
+    "linea": "linea", "lineas": "linea",
+    "arista": "arista", "aristas": "arista",
 }
 
 
@@ -251,6 +338,16 @@ def verificar(ruta_reporte):
 
             exencion = clasificar_exencion(frase, m, unidad)
             if exencion == "iii":
+                ventana_ilegal = ventana_amplia(frases, i)
+                ventana_ilegal_txt = " ".join(ventana_ilegal)
+                citas_cercanas = sorted(set(PATRON_CITA_SALIDA.findall(ventana_ilegal_txt)))
+                citas_cercanas = [c for c in citas_cercanas if c in existentes]
+                if citas_cercanas:
+                    fallos.append(
+                        "linea %d: \"%d %s\" marca (sin instrumento) pero su ventana amplia "
+                        "SI cita `%s`: la cifra se coteja, no se exime (hay instrumento en la "
+                        "ventana)" % (i, numero, unidad, citas_cercanas[0]))
+                    continue
                 exentas_sin_instrumento.append((numero, unidad, frase.strip()))
                 continue
             if exencion == "ii":
@@ -276,7 +373,9 @@ def verificar(ruta_reporte):
             ruta_cita = os.path.join(LOOP, fichero_cita)
             contenido_cita = leer(ruta_cita)
             familia = UNIDAD_A_FAMILIA[unidad]
-            contado = contar_por_familia(familia, contenido_cita)
+            contado = contar_por_cifra_etiquetada(contenido_cita, unidad)
+            if contado is None:
+                contado = contar_por_familia(familia, contenido_cita)
             if contado is None:
                 fallos.append(
                     "linea %d: \"%d %s\" cita `%s` pero no se pudo CONTAR en el (ni exenta)" %

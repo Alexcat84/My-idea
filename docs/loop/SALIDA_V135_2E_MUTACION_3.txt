@@ -1,0 +1,14 @@
+MUTACION 3 (CASO NEGATIVO): '118 grafias (sin instrumento)' y '54 grupos (sin instrumento)' pasan a citar `SALIDA_V135_2E_APOYO.txt`, que trae sus dos lineas CIFRA con el numero CORRECTO, sobre copia de REPORTE.md (vuelta 134 real).
+--- salida de verificar_cifras_del_reporte.py ---
+VERDE EXIT 0: 3 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
+  118 grafias == 118 contados en `SALIDA_V135_2E_APOYO.txt`
+  54 grupos == 54 contados en `SALIDA_V135_2E_APOYO.txt`
+  80 lineas == 80 contados en `wc -l REPORTE_134_MUTACION3_vk8dn7ly.md`
+cifra(s) exentas por (sin instrumento) (1):
+  0 pares: 'cubierto), cifras del plan 0 pares (sin instrumento),'
+COBERTURA: 3 cotejadas / 1 exentas / 4 cifras
+
+
+EXITCODE proceso: 0
+MUTACION VERIFICADA: el caso negativo da VERDE, como se esperaba.
+EXITCODE: 0
