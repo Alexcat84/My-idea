@@ -1,0 +1,49 @@
+==============================================================================
+ESCRITURA DE ARISTAS DE OP-E-05 . MODO MUTACION NEGATIVA (nunca escribe)
+==============================================================================
+tipo de la ficha        : ENLACE MUTUO
+ENLACE MUTUO (del tipo) : True
+aristas de la ficha     : 2 cadena(s), 4 par(es) dirigido(s)
+MUTACION NEGATIVA: el destino de la 1.a arista se fuerza a accion_correctiva_3 (DEPRECADO y no es alias de ningun vivo), elegido computandolo del grafo y no tecleado
+   comprobacion previa del propio arnes: resolver(accion_correctiva_3) = accion_correctiva_3, vivo tras resolver = False
+
+arista de la ficha: requisitos_gates_con_dientes -> accion_correctiva_3
+  RESUELTA POR ALIAS y se declara: sistema_gates_go_kill -> accion_correctiva_3  (origen RESUELTO, destino directo)
+  guarda 1, los dos extremos existen y estan VIVOS: ROJO
+
+arista de la ficha: gestion_portafolio_formal -> requisitos_gates_con_dientes
+  RESUELTA POR ALIAS y se declara: gestion_portafolio_formal -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, YA PRESENTE hoy: se SALTA y se declara (escribirla seria fabricar una duplicada)
+
+arista de la ficha: requisitos_gates_con_dientes -> gestion_portafolio_dos_niveles
+  RESUELTA POR ALIAS y se declara: sistema_gates_go_kill -> gestion_portafolio_dos_niveles  (origen RESUELTO, destino directo)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION (o MUTUO declarado en la ficha): OK
+  guarda 6, cero duplicadas NUEVAS tras resolver: OK (preexistentes: sistema_gates_go_kill.nodos_siguientes 1, gestion_portafolio_dos_niveles.nodos_previos 0; tras escribir: 1 y 0)
+  sistema_gates_go_kill.nodos_siguientes: 14 -> 15
+  gestion_portafolio_dos_niveles.nodos_previos   : 2 -> 3
+
+arista de la ficha: gestion_portafolio_dos_niveles -> requisitos_gates_con_dientes
+  RESUELTA POR ALIAS y se declara: gestion_portafolio_dos_niveles -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION (o MUTUO declarado en la ficha): OK
+  guarda 6, cero duplicadas NUEVAS tras resolver: OK (preexistentes: gestion_portafolio_dos_niveles.nodos_siguientes 0, sistema_gates_go_kill.nodos_previos 1; tras escribir: 0 y 1)
+  gestion_portafolio_dos_niveles.nodos_siguientes: 5 -> 6
+  sistema_gates_go_kill.nodos_previos   : 15 -> 16
+
+------------------------------------------------------------------------------
+RESUMEN: 4 par(es) de la ficha | 2 a escribir | 1 YA PRESENTES (saltadas) | 1 fallo(s)
+   YA PRESENTE: gestion_portafolio_formal -> sistema_gates_go_kill
+
+SE ABORTA SIN ESCRIBIR NADA, 1 fallo(s):
+   [ROJO] sistema_gates_go_kill -> accion_correctiva_3: extremo no vivo (origen vivo=True, destino vivo=False)
+EXITCODE: 1
