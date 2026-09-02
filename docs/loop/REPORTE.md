@@ -594,8 +594,21 @@ VERDE: las 23 mutaciones viejas corren, muerden, y sus salidas selladas salen ID
 ```
 
 **4.f. LA APERTURA SELLADA, RE-CORRIDA DESPUES DE COMMITEAR EL REPORTE**, que es la
-regla que la 4.e de la 146 dejo puesta. Su salida esta en
-`SALIDA_V147_4F_APERTURA_SELLADA_RECIERRE.txt`.
+regla que la 4.e de la 146 dejo puesta. **VERDE EXIT 0 con los diez dentro**, todos
+nacidos en `7af19492` cuyo padre es `dc77ef71`, pegado de
+`SALIDA_V147_4F_APERTURA_SELLADA_RECIERRE.txt`:
+
+```
+   SALIDA_V147_HEAD_APERTURA.txt -- nacido en 7af19492, padre dc77ef71
+   SALIDA_V147_WEB_APERTURA.txt -- nacido en 7af19492, padre dc77ef71
+```
+
+**LA MISMA NOTA HONESTA QUE LA 146 DEJO EN SU 4.e, Y POR EL MISMO MOTIVO:** la linea del
+veredicto **no se pega con su cifra**, porque el conteo generico de la unidad `fichero`
+cuenta tambien **el glob de la propia cabecera** y da uno de mas. Se pegan **dos filas**
+de la salida, **la nomina entera ya esta pegada arriba en la 0.d**, y el recuento se dice
+en palabras: **los diez, todos nacidos en el primer commit de la vuelta**. **El verde
+sobrevive a la vuelta**, que es lo que la regla vino a conseguir.
 
 ## LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
 
