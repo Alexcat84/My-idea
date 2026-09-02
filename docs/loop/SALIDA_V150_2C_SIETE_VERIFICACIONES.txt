@@ -1,0 +1,97 @@
+FICHA OP-C-05: fase 00_CODIGO, tipo GUARDA, orden 7, depende_de ['OP-S-12'], estado LISTA
+SUS VERIFICACIONES SON 7 Y SE LEEN DE docs/plan/OPERACIONES.jsonl EN ESTA CORRIDA.
+
+==============================================================================
+VERIFICACION 1 de 7
+  LETRA: CASO POSITIVO: en una copia se mete a mano un campo con [destino, alias_de_destino] y la guarda TIENE que fallar nombrando nodo, campo y destino. Si pasa, la guarda no sirve
+  CONTESTADA en dos sedes, las dos con su salida commiteada:
+    (a) COPIA EN MEMORIA, docs/loop/SALIDA_V150_2D_SIMULACION_OP_C_05.txt:
+        la guarda saca 1 linea y nombra nodo, campo y destino.
+    (b) GATE 0 REAL sobre el arbol de trabajo, nunca commiteado,
+        docs/loop/SALIDA_V150_2C_CASO_POSITIVO_GATE0.txt:
+        [FALLO] OP-C-05 ... y GATE 0: FALLIDO, EXITCODE 1.
+        La sede es la adjudicada para OP-C-04 el 14 ago 2026 (acta 21,
+        seccion 4, punto 4): arbol de trabajo temporal, restaurado acto seguido.
+  VEREDICTO: CONTESTADA, EN VERDE.
+
+==============================================================================
+VERIFICACION 2 de 7
+  LETRA: caso negativo: el grafo saneado por OP-S-12 pasa en verde
+  MEDIDO HOY sobre dataset/metadata/master_graph.json (WORK): 0 lista(s) con duplicada tras resolver.
+  Y Gate 0 corrido entero da GATE 0: OK con la guarda dentro.
+  VEREDICTO: CONTESTADA, EN VERDE.
+
+==============================================================================
+VERIFICACION 3 de 7
+  LETRA: CASO DE BORDE: el mismo destino en nodos_previos y en nodos_siguientes NO debe fallar
+  MEDIDO HOY: 307 nodo(s) vivo(s) traen un mismo destino, tras resolver,
+  en nodos_previos Y en nodos_siguientes a la vez, y la guarda saca 0.
+  La guarda vacia su diccionario en cada campo y nunca cruza las dos listas.
+  El caso montado a mano en la simulacion tambien sale en verde.
+  VEREDICTO: CONTESTADA, EN VERDE.
+
+==============================================================================
+VERIFICACION 4 de 7
+  LETRA: la guarda RESUELVE, no compara literal: las 1.056 entradas duplicadas son todas distintas como texto y una guarda literal daria verde sobre todas
+  LA PRUEBA SE CORRE SOBRE EL GRAFO DE JUSTO ANTES DE OP-S-12 (a34328b2~1),
+  que es el unico sitio donde todavia hay duplicadas que cazar:
+    guarda LITERAL (compara texto):        0 lista(s)
+    guarda RESOLVIENDO (la que se cablea): 888 lista(s)
+  La literal da VERDE sobre un grafo que tiene 888. Esa es la diferencia
+  entre una guarda que guarda y una que no.
+  VEREDICTO: CONTESTADA, EN VERDE.
+
+==============================================================================
+VERIFICACION 5 de 7
+  LETRA: CASO POSITIVO DE LA LISTA BLANCA: se mete a mano una arista bidireccional que NO este en la lista y la guarda TIENE que fallar. Si pasa, la lista blanca esta abierta de mas
+  NO SE CONTESTA, Y EL MOTIVO ES UNA MEDICION, NO UNA OPINION:
+    pares bidireccionales tras resolver, entre nodos VIVOS, HOY: 153
+    los mismos en el grafo ANTERIOR A LA CAMPANA (merge-base con main, 36b57d78): 83
+    entradas de la lista blanca escritas en la adjudicacion de la ficha: 2
+  Encender la mitad de la lista blanca tal como esta adjudicada
+  ("la guarda falla ante cualquier arista bidireccional SALVO las de la
+  lista blanca") pondria Gate 0 en ROJO 153 veces sobre el grafo saneado,
+  y eso choca de frente con la verificacion 2 de esta misma ficha.
+  Meter los 153 pares en la lista blanca choca con su otra letra:
+  "cada entrada CITA SU LECTURA: una entrada sin su C del 9.22 detras no
+  es una excepcion, es un agujero". Esas 153 lecturas no existen.
+  VEREDICTO: PARADA. No la resuelvo yo (EJECUTOR.md 5, AUDITOR.md 3).
+
+==============================================================================
+VERIFICACION 6 de 7
+  LETRA: CASO NEGATIVO DE LA LISTA BLANCA: las cuatro aristas de OP-E-05 pasan en verde
+  MEDIDO HOY, arista por arista, sobre el grafo (OP-E-05 esta en estado LISTA):
+    requisitos_gates_con_dientes -> gestion_portafolio_formal | en nodos_siguientes de requisitos_gates_con_dientes: True | en nodos_previos: False
+    gestion_portafolio_formal -> requisitos_gates_con_dientes | en nodos_siguientes de gestion_portafolio_formal: False | en nodos_previos: False
+    requisitos_gates_con_dientes -> gestion_portafolio_dos_niveles | en nodos_siguientes de requisitos_gates_con_dientes: False | en nodos_previos: False
+    gestion_portafolio_dos_niveles -> requisitos_gates_con_dientes | en nodos_siguientes de gestion_portafolio_dos_niveles: False | en nodos_previos: False
+  DE LAS CUATRO ARISTAS DE OP-E-05 EXISTEN 1.
+  No hay cuatro aristas que puedan pasar en verde porque OP-E-05 no se
+  ha ejecutado. La verificacion no se puede contestar todavia, y no se
+  finge contestada.
+  VEREDICTO: NO CONTESTABLE HOY. Depende de OP-E-05, no de esta vuelta.
+
+==============================================================================
+VERIFICACION 7 de 7
+  LETRA: cada entrada de la lista blanca cita su lectura: una entrada sin su C del 9.22 detras no es una excepcion, es un agujero
+  LAS DOS ENTRADAS ESCRITAS EN LA ADJUDICACION, CON SU LECTURA:
+    requisitos_gates_con_dientes <-> gestion_portafolio_formal | lectura citada: LD-41 (docs/plan/LD_MESA_UNIDA.md), clase C del banco 9.22
+    requisitos_gates_con_dientes <-> gestion_portafolio_dos_niveles | lectura citada: LD-43 (docs/plan/LD_MESA_UNIDA.md), clase C del banco 9.22
+  LAS DOS CITAN SU LECTURA: por ese lado la ficha esta entera.
+  Lo que NO tiene lectura son los 153 pares bidireccionales que la guarda
+  encontraria si se encendiera. Por eso la 5 es PARADA y esta no se
+  puede cerrar sola.
+  VEREDICTO: CONTESTADA PARA LAS DOS ENTRADAS ESCRITAS; ABIERTA para el resto.
+
+==============================================================================
+RESUMEN, CONTADO Y NO TECLEADO:
+  verificaciones de la ficha: 7
+  contestadas en verde en esta vuelta: 4 (la 1, la 2, la 3 y la 4)
+  en PARADA: 1 (la 5)
+  no contestables hoy: 1 (la 6, depende de OP-E-05)
+  contestadas solo en parte: 1 (la 7)
+  ESTADO DE OP-C-05 EN LA FICHA: LISTA, y NO se mueve.
+  La 2.e del encargo dice que se mueve cuando las SIETE esten
+  contestadas. No lo estan. Un estado en HECHA con tres verificaciones
+  abiertas encima seria un verde sobre una pregunta abierta.
+EXITCODE: 0

@@ -1050,6 +1050,82 @@ def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
             f": {claves_renegadas[:5]}" if claves_renegadas else ""),
     ))
 
+    # ── OP-C-05 (FASE 0): DOS ENTRADAS QUE RESUELVEN AL MISMO DESTINO ────
+    # Es la guarda que hace PERMANENTE a OP-S-12, igual que las dos de arriba
+    # hacen permanentes a OP-S-06 y a OP-S-07. Su nota lo dice con esas
+    # palabras: "una limpieza sin guarda se deshace sola". OP-S-12 retiro 925
+    # entradas duplicadas sobre nodos vivos en la vuelta 148 (commit a34328b2)
+    # y hasta hoy no habia nadie defendiendolas: la proxima fusion volvia a
+    # dejar una por acto, que es el mecanismo que la propia ficha de OP-S-12
+    # describe ("la cola larga de a una confirma el mecanismo: cada fusion deja
+    # una").
+    #
+    # SE ENCIENDE AHORA Y NO ANTES, con la letra de su ficha: "SE ENCIENDE
+    # DESPUES DEL SANEO FINAL: encenderla antes para el trabajo, porque el
+    # grafo de hoy la falla 1.056 veces y eso NO es una regresion, es el estado
+    # conocido". Su depende_de es ['OP-S-12'] y se cumplio en la vuelta 148.
+    #
+    # RESUELVE, NO COMPARA LITERAL, y la resolucion es toda la guarda: las
+    # entradas duplicadas son todas DISTINTAS COMO TEXTO (el id nuevo mas su
+    # alias), asi que un chequeo literal daba VERDE sobre las 925. Medido en la
+    # vuelta 150 con instrumento propio (scripts/loop/vuelta150_medir_opc05.py)
+    # sobre el arbol de a34328b2~1, o sea el grafo de justo ANTES de OP-S-12:
+    # el conteo literal de vuelta83_conteo_aristas.py dice
+    # `nodos_con_dup_en_lista 0` y esta guarda, resolviendo, dice 925 entradas
+    # que sobran en 888 grupos de 702 nodos. Cero contra 925 es la diferencia
+    # entre una guarda que guarda y una que no.
+    #
+    # POR CAMPO Y POR SEPARADO, que es el CASO DE BORDE de su verificacion:
+    # "el mismo destino en nodos_previos y en nodos_siguientes NO debe fallar",
+    # porque eso no es una duplicada sino ida y vuelta. Por eso el diccionario
+    # se vacia en cada `campo` y nunca se cruzan las dos listas: hoy hay 307
+    # nodos vivos con un destino en las dos listas y ninguno es un fallo.
+    #
+    # MIDE SOBRE VIVOS, y los deprecados quedan fuera. NO ES UNA DECISION
+    # NUEVA: es el criterio ya escrito y adjudicado para OP-C-04 el 14 ago 2026
+    # (decision del fundador, camino A), que la propia ficha de OP-C-05 cita
+    # como su patron ("OP-C-04, el mismo patron ya adoptado para las
+    # auto-aristas via alias"), y es tambien el universo sobre el que OP-S-12
+    # midio y opero (3.521 vivos al 11 ago 2026). Un nodo deprecado es registro
+    # historico, no superficie del producto. Su censo, medido en la vuelta 150:
+    # 330 entradas que sobran contando vivos y deprecados juntos, o sea 330
+    # sobre deprecados, y quedan declaradas aqui en vez de calladas.
+    #
+    # LO QUE ESTA GUARDA NO CUBRE, DICHO EN VOZ ALTA. La ficha de OP-C-05 trae
+    # una SEGUNDA mitad, la LISTA BLANCA: "la guarda falla ante cualquier
+    # arista bidireccional SALVO las de la lista blanca", con dos entradas (los
+    # dos enlaces mutuos de OP-E-05, por LD-41 y LD-43). ESA MITAD NO SE
+    # ENCIENDE AQUI, y el motivo esta medido, no supuesto: hoy hay 153 pares
+    # bidireccionales tras resolver entre nodos vivos, y en el grafo anterior a
+    # la campana (merge-base con main, 36b57d78) ya habia 83. Encenderla como
+    # esta escrita pondria Gate 0 en rojo 153 veces y chocaria con la
+    # verificacion 2 de su propia ficha ("el grafo saneado por OP-S-12 pasa en
+    # verde"). Meter 153 pares en la lista blanca chocaria con su adjudicacion
+    # ("cada entrada CITA SU LECTURA: una entrada sin su C del 9.22 detras no
+    # es una excepcion, es un agujero"). NO SE ADIVINA cual de las dos cede:
+    # queda como PARADA declarada en el reporte de la vuelta 150 y en el estado
+    # de la ficha, que NO pasa a HECHA.
+    duplicadas_resueltas = []
+    for _nid in sorted(activos):
+        _n = activos[_nid]
+        for _campo in ("nodos_previos", "nodos_siguientes"):
+            _por_destino = {}
+            for _dest in _n.get(_campo) or []:
+                if _dest not in nodos_todos:
+                    continue  # referencia rota: la caza el chequeo de enlaces
+                _por_destino.setdefault(_resolver(_dest), []).append(_dest)
+            for _destino, _entradas in sorted(_por_destino.items()):
+                if len(_entradas) > 1:
+                    duplicadas_resueltas.append(
+                        f"{_nid}.{_campo} -> {_destino} (por {_entradas})")
+    checks.append((
+        "OP-C-05: ninguna lista de aristas de un nodo VIVO tiene dos entradas que RESUELVAN al mismo destino",
+        not duplicadas_resueltas,
+        f"{len(duplicadas_resueltas)} lista(s) con duplicada tras resolver" + (
+            f": {duplicadas_resueltas[:5]}" if duplicadas_resueltas else ""),
+    ))
+    # ── FIN OP-C-05 ────────────────────────────────────────────
+
     # ── OP-A-01 (FASE 07 ADUANA): LOS TRES CONTROLES DE SU `verificacion` ────
     # Ejecutada en la vuelta 146, TAREA 3.b, con su simulacion previa sobre
     # copia en memoria (scripts/loop/vuelta146_3b_simular_op_a_01.py) y su caso

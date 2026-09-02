@@ -1,0 +1,36 @@
+dataset/ ANTES: master_graph sha256=3fa0a5db9822 | dataset/nodos sha256=b26b4dde5f4d
+
+CASO NEGATIVO (verificacion 2 de la ficha): el grafo saneado por OP-S-12,
+tal como esta hoy, sobre COPIA EN MEMORIA.
+  medido (COMPUTADO por la guarda) = 0 | esperado = 0
+  VERDE
+
+CASO POSITIVO (verificacion 1 de la ficha): en la COPIA se mete a mano
+[destino, alias_de_destino] y la guarda TIENE que fallar nombrando
+nodo, campo y destino.
+  victima: ab_testing_optimizacion.nodos_siguientes ya trae analisis_de_cohortes; se le anade su alias cohort_analysis_retencion
+  medido (COMPUTADO por la guarda) = 1 | esperado = 1
+  linea de la guarda: ab_testing_optimizacion.nodos_siguientes -> analisis_de_cohortes (por ['analisis_de_cohortes', 'cohort_analysis_retencion'])
+  NOMBRA NODO, CAMPO Y DESTINO: los tres estan en la linea
+  ROJO como se pedia
+
+CASO DE BORDE (verificacion 3 de la ficha): el mismo destino en
+nodos_previos Y en nodos_siguientes NO debe fallar.
+  montado: ab_testing_optimizacion tiene ahora analisis_de_cohortes en nodos_siguientes Y en nodos_previos
+  medido (COMPUTADO por la guarda) = 0 | esperado = 0
+  VERDE: la ida y vuelta no es una duplicada
+
+CASO ROJO POR MUTACION, SOBRE VARIABLE COMPUTADA (EJECUTOR.md 1).
+Se cambia EL VALOR ESPERADO de cada uno de los tres asserts de arriba
+y se comprueba que el caso CAE. `medido` no se toca: sigue saliendo
+de contar la salida de la guarda.
+  caso negativo: assert 0 == 1 CAE. El caso muerde.
+  caso positivo: assert 1 == 0 CAE. El caso muerde.
+  caso de borde: assert 0 == 1 CAE. El caso muerde.
+  caidas (COMPUTADO) = 3 | esperado = 3
+
+dataset/ DESPUES: master_graph sha256=3fa0a5db9822 | dataset/nodos sha256=b26b4dde5f4d
+dataset/ IDENTICO ANTES Y DESPUES: comprobado por el propio arnes.
+
+SIMULACION VERDE.
+EXITCODE: 0
