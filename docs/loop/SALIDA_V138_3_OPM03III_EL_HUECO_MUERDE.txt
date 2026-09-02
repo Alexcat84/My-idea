@@ -1,0 +1,65 @@
+OP-M-03-III: EL HUECO DEL CONTRATO DE MARCAS MUERDE OTRA VEZ, Y ESTA VEZ EN EL
+TEXTO DE LOS ABSORBIDOS Y NO EN LA FICHA.
+
+Corte: 2 sep 2026, vuelta 138, TAREA 3. Leido nodo a nodo, no deducido.
+
+QUE PASO. Con P.5 ya satisfecha (los tres pares del acto leidos y los tres en A,
+docs/plan/LD_ACTO_III_DEL_PIVOTE.md mas los puestos 857 y 306), se paso a repartir
+las once piezas de los dos absorbidos y el reparto se paro en UNA.
+
+LA PIEZA, con los dos textos delante:
+  pivote_startup, paso 2:
+      "Identifica que parte de tu modelo de negocio necesita cambiar"
+  pivotes_e_iteraciones, paso 3:
+      "Usa tu lienzo de modelo de negocio para ubicar que parte necesita el cambio"
+Son EL MISMO GESTO. El segundo anade el instrumento (el lienzo); ninguno de los
+dos esta en el superviviente.
+
+EL SUPERVIVIENTE NO LO TIENE, y se comprueba paso por paso. pivote_estrategico
+manda: 1 aceptar la evidencia contra el sunk cost; 2 FORMULAR UNA NUEVA HIPOTESIS
+DE VALOR basada en los insights de clientes; 3 redirigir el desarrollo hacia esa
+hipotesis; 4 validar la nueva direccion y medir; 5 comunicar el pivote. Formular
+la hipotesis nueva NO ES ubicar que casilla del lienzo hay que cambiar: lo
+segundo es el barrido previo entre las nueve partes, lo primero es el nombre que
+se le pone al resultado. Marcar CUBIERTO:2 afirmaria del superviviente algo que
+el superviviente no dice.
+
+LAS CUATRO SALIDAS QUE EL CONTRATO OFRECE, Y POR QUE LAS CUATRO FALLAN AQUI:
+  APPEND en los dos      . el superviviente acaba con el mismo gesto dos veces.
+  CUBIERTO:n en el otro  . afirma del superviviente algo que no dice (arriba).
+  CUBIERTO_COND:n        . lo mismo, contra una condicion que tampoco lo dice.
+  INCISO:k|trozo|nexo    . el unico destino honesto seria adosar el matiz DEL
+                           LIENZO al paso que ya viaja de APPEND, y ese paso NO
+                           EXISTE cuando el plan se sella: la guarda del
+                           generador exige 1 <= k <= 5, que son los pasos que el
+                           superviviente tiene HOY.
+
+LA FICHA YA HABIA ELEGIDO DUENO, y por eso el instrumento de esta vuelta no lo
+cazo: docs/plan/OPERACIONES.jsonl atribuye la pieza a UNO solo ("de
+pivote_startup: senalar QUE PARTE DEL LIENZO cambia, segmento, forma de cobrar o
+propuesta de valor"), asi que la linea de `preservar` nombra UN absorbido y
+scripts/loop/vuelta138_3_pieza_de_varios_duenos.py la cuenta como 1, no como 2.
+ESO NO ES UN FALLO DEL INSTRUMENTO OCULTO: es el limite que su propio docstring
+declara con estas palabras, "el cero que este instrumento puede sostener es 'cero
+lineas que NOMBREN dos absorbidos', nunca 'cero piezas de varios duenos'". El
+hueco vive en el TEXTO DE LOS ABSORBIDOS, y ahi solo llega el ojo.
+
+CONSECUENCIA, Y NO SE ADIVINA NADA: OP-M-03-III NO SE FUNDE EN ESTA VUELTA. La
+fusion es irreversible ("una vez fundido, el acto es un nodo y la pregunta se
+vuelve irrespondible", P.5), y no se hace una cosa irreversible sobre una regla
+que no existe. Por EJECUTOR regla 5 no se para la vuelta: se registra lo mejor
+sostenido, se marca PENDIENTE DE DOCTRINA y se sigue.
+
+LO QUE SI QUEDA HECHO Y NO HAY QUE REPETIR: la lectura de acto por P.5, que era
+la condicion bloqueante que la propia ficha escribia ("SIN ESA LECTURA LA FUSION
+DE LOS TRES NO SE EJECUTA"). Esta hecha, esta escrita y esta medida.
+
+CIFRA fusiones de las seis donde el hueco muerde, comprobado a mano: 2 grupos
+  (OP-M-01-FUSION, por su linea de preservar de TRES duenos, y OP-M-03-III, por
+   el par de pasos de arriba)
+CIFRA fusiones de las seis con dos o mas absorbidos, que es donde el hueco PUEDE
+morder y hay que mirar una por una: 5 grupos
+CIFRA fusiones de las seis leidas a mano en esta vuelta buscando el hueco: 2 grupos
+  Las otras tres (OP-M-05-INDICE, OP-M-05-EDIFICIO, OP-M-05-APERTURA) NO se
+  declaran limpias: no se han leido a mano y una busqueda negativa no se puede
+  citar. Quedan por mirar.
