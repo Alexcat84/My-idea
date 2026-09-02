@@ -1,0 +1,14 @@
+BASE (sin mutar): catalogo 16 | cumplido 13 | sin cumplir 3 | fallos 0
+BASE, SIN CUMPLIR: OP-M-01, OP-M-04, OP-E-04
+
+MUTACION 2.a.i: LA VUELTA QUE NACE (sujeto elegido POR COMPUTO).
+   sujeto computado: OP-M-01-ESLABONES, direccion stage_gate_system -> sistema_gates_go_kill; la vuelta que se mete es sistema_gates_go_kill -> stage_gate_system
+   VERDE  2.a.i la operacion sale NOMBRADA en SIN CUMPLIR | obtenido=True esperado=True
+   VERDE  2.a.i la cifra de cumplido BAJA | obtenido=True esperado=True
+   VERDE  2.a.i la celda nombra la vuelta metida | obtenido=True esperado=True
+   VERDE  2.a.i CONTRAPRUEBA sin mutar: la operacion NO esta en SIN CUMPLIR | obtenido=False esperado=False
+
+MUTACION 2.a.ii: LA VUELTA QUE MUERE (sujeto elegido POR COMPUTO).
+   DESCARTADA POR COMPUTO: OP-E-04 lista en su propio aristas_nuevas LAS DOS DIRECCIONES de 2 par(es) (portfolio_management <-> sistema_gates_go_kill, gestion_portafolio_foco <-> sistema_gates_go_kill), asi que 'todas las idas y ninguna vuelta' es inalcanzable por construccion bajo regimen PROHIBE (acta 141, adjudicacion 3.4)
+   OMITIDO POR FALTA DE SUJETO: ninguna operacion ENLACE con regimen PROHIBE tiene hoy la vuelta puesta SIN listar ella misma las dos direcciones de un par. No hay caso que mutar. ESO ES ROJO, NO VERDE: una mutacion que no encuentra su sujeto es una guarda que no mide.
+EXITCODE: 1

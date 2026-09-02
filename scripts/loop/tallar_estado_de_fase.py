@@ -170,6 +170,75 @@ QUE HACE AHORA. La nomina de una mesa es la UNION de dos fuentes:
       docs/plan/04_ENLACES.md por leer_remisiones() y no tecleada aqui.
 La celda publica DE DONDE SALE CADA HIJA: "bloquea_a", "remision" o "las dos".
 
+--- LA VARA FUSION APRENDE EL TERCER VEREDICTO (TAREA 2.c, vuelta 142) ---
+
+POR QUE NACE (acta de la vuelta 141, adjudicacion 3.5, y es lo mas importante
+que el auditor trajo esa vuelta). El reporte de la vuelta 141 propuso ENSANCHAR
+esta vara pasando el `superviviente` por el resolutor y quedarse con lo que
+saliera. EL AUDITOR LO MIDIO Y ESO PUBLICA UN VERDE FALSO:
+
+  - OP-M-02-ADMIT: `superviviente` `fase_admit`, `eliminar`
+    ["fase_admit_celebracion"]. Hoy `fase_admit` esta DEPRECADO y resuelve a
+    `fase_admit_celebracion`, QUE ESTA VIVO.
+  - OP-M-02-MEDIOS: `superviviente` `seis_medios_comunicacion_cliente`,
+    `eliminar` ["estrategia_multicanal_bienvenida"]. Hoy el superviviente esta
+    DEPRECADO y resuelve a `estrategia_multicanal_bienvenida`, QUE ESTA VIVO.
+
+EN LAS DOS, EL QUE SOBREVIVE ES EL QUE LA FICHA MANDA ELIMINAR. Resolver a secas
+y llamarlas CUMPLIDAS seria publicar CUMPLIDO sobre una operacion ejecutada al
+reves, o sea la degradacion silenciosa del banco 9 por la puerta de un arreglo
+que parece obvio. Y las TRES que COINCIDEN (ASSESS, ACTIVATE, ACCOMPLISH) ya
+salian cumplidas sin resolutor, asi que el resolutor a secas silenciaria SOLO
+los dos casos que merecen ruido.
+
+LA EXCEPCION VA ESCRITA Y CITADA, NO ADIVINADA. Las dos cosas que la sostienen
+existen desde la vuelta 64 y no son doctrina nueva:
+  (1) el campo `nota` de las dos fichas lleva la CORRECCION DECLARADA de la
+      vuelta 64: "ESTA FICHA ESTA CONSUMIDA. NO SE EJECUTA Y NO SE REHACE";
+  (2) docs/loop/SALIDA_V64_CONSUMIDAS.txt computa CINCO fusiones de mesa
+      consumidas, de las cuales DOS DIVERGEN (MEDIOS y ADMIT) y TRES COINCIDEN
+      (ASSESS, ACTIVATE, ACCOMPLISH), con el criterio ya escrito alli: "el par
+      resuelve a UN solo vivo" mas "DIVERGEN: la ficha decia X y el tramo dejo
+      vivo a Y".
+Y el resolutor se usa porque EJECUTOR.md regla 9 con P.1 lo mandan ("todo conteo
+que toque ids pasa por el resolutor antes de contar"): la vara SI resuelve; lo
+que no puede es quedarse solo con eso.
+
+LOS TRES CASOS QUE LA VARA CLASIFICA AHORA:
+  - superviviente escrito VIVO y absorbidos deprecados y en su ids_alias:
+    CUMPLIDO, como siempre.
+  - superviviente escrito DEPRECADO que resuelve a un VIVO que la propia ficha
+    lista en `eliminar`: CONSUMIDA CON SUPERVIVIENTE DIVERGENTE, NUNCA cumplido,
+    y la celda publica el id escrito, el id al que resuelve y el campo
+    `eliminar` que lo condena.
+  - superviviente DEPRECADO que resuelve a un VIVO que NO esta en `eliminar`:
+    CONSUMIDA, se nombra, y tampoco se llama cumplida.
+
+DONDE VA EL TERCER VEREDICTO EN LA CIFRA, Y POR QUE NO SALE DE `SIN CUMPLIR`.
+La adjudicacion dice "NO ES CUMPLIDA NI SIN CUMPLIR", y eso se cumple EN SU
+COLUMNA DE VEREDICTO, que publica su rotulo propio. En la CIFRA, en cambio, va
+como SUB-SACO NOMBRADO dentro de `sin cumplir`, igual que `sin vara escrita`
+desde la vuelta 140, y por la misma razon ya adjudicada (acta 140, 3.2: "NO
+COMPUTABLE cuenta como SIN CUMPLIR"). EL MOTIVO ES MEDIBLE Y NO ES DE ESTILO:
+verificar_cifras_del_reporte.py juzga las AFIRMACIONES DE CIERRE leyendo la
+linea `sin cumplir: N` de esta salida y su lista `SIN CUMPLIR (N):`. Si una
+DIVERGENTE saliera de ahi, una fase con una operacion EJECUTADA AL REVES dentro
+publicaria `sin cumplir: 0` y la frase "la fase cierra" pasaria la guarda. Eso
+es exactamente la degradacion silenciosa que este tercer veredicto nace para
+impedir, entrando por la otra puerta. La CIFRA publica los dos sub-sacos con su
+nombre y su nomina, para que nadie confunda "no cumplida" con "no medible" ni
+con "consumida al reves".
+
+CONSECUENCIA MEDIDA Y TRAIDA COMO PARADA (vuelta 142): el encargo esperaba que
+los cuatro "de mas" de vuelta141_2e_caso_positivo_fase03.py bajaran a DOS. NO
+BAJAN: siguen siendo cuatro, porque OP-M-02-ADMIT y OP-M-02-MEDIOS siguen
+dentro de `sin cumplir` por lo de arriba, aunque ahora lleven el rotulo
+DIVERGENTE. Se dice, se mide y no se ajusta.
+
+MUTACIONES: scripts/loop/vuelta142_2c_mutaciones.py, EN MEMORIA y nunca en
+disco, sobre una operacion ELEGIDA POR COMPUTO (la primera FUSION hoy CUMPLIDA
+de la fase, por orden del catalogo) y nunca tecleada.
+
 LAS MUTACIONES viven en scripts/loop/vuelta140_2a_mutaciones.py, que importa
 este modulo y muta EN MEMORIA (nunca el disco). Las tres, todas sobre cifra
 COMPUTADA y nunca sobre un literal (EJECUTOR.md regla 1, "EL CASO ROJO SE
@@ -197,6 +266,13 @@ REL_ENLACES = "docs/plan/04_ENLACES.md"
 PATRON_ID_NODO = re.compile(r"^[a-z0-9_]+$")
 PATRON_ARISTA = re.compile(r"([a-z0-9_]+)\s*->\s*([a-z0-9_]+)")
 PATRON_OP = re.compile(r"OP-[A-Z0-9]+(?:-[A-Z0-9]+)*")
+
+# EL TERCER VEREDICTO DE LA VARA FUSION (TAREA 2.c, vuelta 142). Las dos marcas
+# viven aqui, en un solo sitio, porque las escribe destino_de_fusion() y las
+# vuelven a leer medir() e imprimir(): dos copias del mismo rotulo se
+# desincronizarian el dia que una cambie.
+MARCA_DIVERGENTE = "CONSUMIDA CON SUPERVIVIENTE DIVERGENTE"
+MARCA_CONSUMIDA = "CONSUMIDA:"
 
 
 # ------------------------------------------------------------------ lectura
@@ -348,12 +424,46 @@ def pares_de_aristas(op, fallos):
     return pares
 
 
-def destino_de_fusion(op, nodos, fallos):
+def destino_de_fusion(op, nodos, fallos, resolver=None):
+    """TAREA 2.c de la vuelta 142. Ver el bloque "LA VARA FUSION APRENDE EL
+    TERCER VEREDICTO" del docstring del modulo.
+
+    Devuelve (cumplido, razon), donde `cumplido` es True, False o None. El
+    tercer veredicto NO es True nunca: `CONSUMIDA CON SUPERVIVIENTE DIVERGENTE`
+    y `CONSUMIDA` salen con `cumplido` False y la razon los nombra entera."""
     sup = op.get("superviviente")
     absorbidos = [x for x in (op.get("nodos") or []) if x != sup]
     n_sup = nodos.get(sup)
     if not vivo(n_sup):
-        return False, "superviviente %s NO esta vivo hoy" % sup
+        # EL SUPERVIVIENTE ESCRITO NO ESTA VIVO. Antes de la vuelta 142 la vara
+        # paraba aqui con "NO esta vivo hoy" y no decia mas. Ahora RESUELVE
+        # (EJECUTOR.md regla 9, P.1) y publica cual de los dos casos es, sin
+        # llamar CUMPLIDO a ninguno.
+        if resolver is None:
+            return False, "superviviente %s NO esta vivo hoy" % sup
+        destino = resolver(sup)
+        n_dest = nodos.get(destino)
+        eliminar = list(op.get("eliminar") or [])
+        if destino == sup or not vivo(n_dest):
+            return False, ("superviviente %s NO esta vivo hoy y el resolutor (P.1) no lleva "
+                           "a ningun nodo vivo (resuelve a %s)" % (sup, destino))
+        if destino in eliminar:
+            return False, (
+                MARCA_DIVERGENTE + ": el `superviviente` escrito en la "
+                "ficha es %s, hoy DEPRECADO; resuelve por alias (P.1) a %s, que esta VIVO; "
+                "y %s es justamente uno de los que el campo `eliminar` de esta misma ficha "
+                "manda eliminar (eliminar: %s). NO ES CUMPLIDA NI SIN CUMPLIR: la operacion "
+                "se ejecuto al reves. Ver la correccion declarada de la vuelta 64 en el "
+                "`nota` de la ficha (\"ESTA FICHA ESTA CONSUMIDA. NO SE EJECUTA Y NO SE "
+                "REHACE\") y docs/loop/SALIDA_V64_CONSUMIDAS.txt, que computa cinco "
+                "consumidas de las cuales dos DIVERGEN"
+                % (sup, destino, destino, ", ".join(eliminar) or "vacio"))
+        return False, (
+            MARCA_CONSUMIDA + " el `superviviente` escrito en la ficha es %s, hoy DEPRECADO; resuelve "
+            "por alias (P.1) a %s, que esta VIVO y NO esta en el campo `eliminar` de la ficha "
+            "(eliminar: %s). El par resuelve a un solo vivo, pero NO es el superviviente "
+            "escrito: se nombra y NO se llama cumplida"
+            % (sup, destino, ", ".join(eliminar) or "vacio"))
     alias_sup = set(n_sup.get("ids_alias") or [])
     faltas = []
     for x in absorbidos:
@@ -511,7 +621,7 @@ def medir(fase, ops, nodos, remisiones=None, ref="WORK"):
         pares = pares_de_aristas(op, fallos)
         if sup and PATRON_ID_NODO.match(sup) and sup in nodos:
             vara = "FUSION"
-            cumplido, razon = destino_de_fusion(op, nodos, fallos)
+            cumplido, razon = destino_de_fusion(op, nodos, fallos, resolver)
         elif pares:
             vara = "ENLACE"
             cumplido, razon = destino_de_enlace(op, pares, nodos, resolver, fallos)
@@ -576,9 +686,24 @@ def medir(fase, ops, nodos, remisiones=None, ref="WORK"):
     cumplidas = [f["id_op"] for f in lista if f["cumplido"] is True]
     sin_cumplir = [f["id_op"] for f in lista if f["cumplido"] is not True]
     sin_vara = [f["id_op"] for f in lista if f["cumplido"] is None]
+    # EL TERCER VEREDICTO (TAREA 2.c, vuelta 142). Se publica COMO SUB-SACO
+    # NOMBRADO DENTRO DE `sin cumplir`, exactamente igual que `sin vara escrita`
+    # desde la vuelta 140, y POR LA MISMA RAZON ADJUDICADA (acta 140, 3.2): una
+    # operacion cuyo destino no esta demostrado NO puede salir del saco de las
+    # no cumplidas, porque el instrumento que lee la linea `sin cumplir: N` para
+    # juzgar las afirmaciones de cierre (verificar_cifras_del_reporte.py) dejaria
+    # pasar "la fase cierra" con una operacion EJECUTADA AL REVES dentro. Que no
+    # sea "cumplida ni sin cumplir" se cumple donde se puede cumplir sin abrir
+    # ese agujero: EN SU VEREDICTO, que es el suyo y no `SIN CUMPLIR`.
+    divergentes = [f["id_op"] for f in lista
+                   if f["vara"] == "FUSION" and (f["razon"] or "").startswith(MARCA_DIVERGENTE)]
+    consumidas = [f["id_op"] for f in lista
+                  if f["vara"] == "FUSION" and (f["razon"] or "").startswith(MARCA_CONSUMIDA)]
     cifra = dict(catalogo=len(lista), cumplido=len(cumplidas),
                  sin_cumplir=len(sin_cumplir), sin_vara=len(sin_vara),
-                 nombres_sin_cumplir=sin_cumplir, nombres_sin_vara=sin_vara)
+                 nombres_sin_cumplir=sin_cumplir, nombres_sin_vara=sin_vara,
+                 divergentes=len(divergentes), nombres_divergentes=divergentes,
+                 consumidas=len(consumidas), nombres_consumidas=consumidas)
     return lista, cifra, fallos
 
 
@@ -600,18 +725,38 @@ def imprimir(fase, lista, cifra, fallos, ref="WORK"):
             celda_rem = "de %s / a %s (%s)" % (rem.get("de") or "?", rem.get("a") or "la fase, sin mesa nombrada", rem.get("fuente"))
         else:
             celda_rem = "no remitida"
-        v = "CUMPLIDO" if f["cumplido"] is True else ("SIN CUMPLIR" if f["cumplido"] is False else "NO COMPUTABLE")
+        # EL TERCER VEREDICTO SE PUBLICA EN SU COLUMNA (TAREA 2.c, vuelta 142):
+        # ni CUMPLIDO ni un SIN CUMPLIR a secas, sino su rotulo propio.
+        razon_f = f["razon"] or ""
+        if f["cumplido"] is True:
+            v = "CUMPLIDO"
+        elif razon_f.startswith(MARCA_DIVERGENTE):
+            v = "CONSUMIDA CON SUPERVIVIENTE DIVERGENTE"
+        elif razon_f.startswith(MARCA_CONSUMIDA):
+            v = "CONSUMIDA"
+        elif f["cumplido"] is False:
+            v = "SIN CUMPLIR"
+        else:
+            v = "NO COMPUTABLE"
         print("| %s | %s | %s | %s | %s | %s | %s |" % (
             f["id_op"], _celda(f["fase"]), _celda(f["estado"]), f["vara"],
             _celda(celda_rem), _celda(f["razon"]), v))
     print("")
     print("CIFRA: operaciones del catalogo: %d | con destino cumplido: %d | sin cumplir: %d "
-          "| de ellas, sin vara escrita: %d" % (cifra["catalogo"], cifra["cumplido"],
-                                                cifra["sin_cumplir"], cifra["sin_vara"]))
+          "| de ellas, sin vara escrita: %d | de ellas, consumidas con superviviente "
+          "divergente: %d | de ellas, consumidas: %d"
+          % (cifra["catalogo"], cifra["cumplido"], cifra["sin_cumplir"], cifra["sin_vara"],
+             cifra["divergentes"], cifra["consumidas"]))
     print("SIN CUMPLIR (%d): %s" % (len(cifra["nombres_sin_cumplir"]),
                                     ", ".join(cifra["nombres_sin_cumplir"]) or "ninguna"))
     print("SIN VARA ESCRITA (%d): %s" % (len(cifra["nombres_sin_vara"]),
                                          ", ".join(cifra["nombres_sin_vara"]) or "ninguna"))
+    print("CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (%d): %s"
+          % (len(cifra["nombres_divergentes"]),
+             ", ".join(cifra["nombres_divergentes"]) or "ninguna"))
+    print("CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (%d): %s"
+          % (len(cifra["nombres_consumidas"]),
+             ", ".join(cifra["nombres_consumidas"]) or "ninguna"))
     if fallos:
         print("")
         print("ROJO, %d cosa(s) no cuadran:" % len(fallos))

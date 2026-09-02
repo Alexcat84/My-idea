@@ -84,6 +84,16 @@ def quitar_arista(nodos, resolver, origen, destino):
                            if resolver(x) != origen]
 
 
+def poner_arista(nodos, resolver, origen, destino):
+    """Pone origen -> destino en LAS DOS VISTAS (TAREA 2.d, vuelta 142). Es la
+    inversa exacta de quitar_arista, y se usa solo EN MEMORIA."""
+    no, nd = nodos[origen], nodos[destino]
+    if not any(resolver(x) == destino for x in (no.get("nodos_siguientes") or [])):
+        no["nodos_siguientes"] = list(no.get("nodos_siguientes") or []) + [destino]
+    if not any(resolver(x) == origen for x in (nd.get("nodos_previos") or [])):
+        nd["nodos_previos"] = list(nd.get("nodos_previos") or []) + [origen]
+
+
 def main():
     ops = T.cargar_ops("WORK")
     nodos = T.cargar_grafo("WORK")
@@ -136,36 +146,97 @@ def main():
     print("")
 
     # --------------------------------------------------------------- 2.a.ii
+    #
+    # REPARADO EN LA VUELTA 142, TAREA 2.d (acta de la vuelta 141, caida 4.3 de
+    # la casa). EL DEFECTO: el selector exigia "todas las idas presentes Y
+    # EXACTAMENTE UNA vuelta", y el unico sujeto posible del plan
+    # (OP-M-01-ESLABONES) se lo llevo la poda del par 6 de esa misma vuelta 141.
+    # Desde entonces el caso salia ROJO DE ARNES por falta de sujeto, que es
+    # fallar ruidoso y por tanto correcto, pero la bateria que lo cazaria
+    # (verificar_mutaciones_viejas.py) no lo incluia.
+    #
+    # EL SELECTOR NUEVO, tal como el encargo lo escribe: "entre las operaciones
+    # ENLACE con regimen PROHIBE QUE HOY TENGAN LA VUELTA PUESTA". Sin exigir
+    # que las idas esten: las idas que falten SE PONEN EN MEMORIA como parte de
+    # la mutacion, de modo que el caso siga probando lo que promete (que la
+    # vuelta, y solo la vuelta, es lo que impide cumplir) y siga teniendo
+    # sujeto mientras exista una sola vuelta prohibida en el plan.
     print("MUTACION 2.a.ii: LA VUELTA QUE MUERE (sujeto elegido POR COMPUTO).")
     sujeto_ii = None
-    for f in base_filas.values():
-        if f["vara"] != "ENLACE" or f["cumplido"] is not False:
+    descartadas = []
+    for f in sorted(base_filas.values(), key=lambda x: x["id_op"]):
+        if f["vara"] != "ENLACE":
             continue
         op = por_id[f["id_op"]]
         if T.regimen_de_vuelta(op, [])[0] != "PROHIBE":
             continue
         dirs = T.direcciones_de(T.pares_de_aristas(op, []), resolver)
-        idas = [T.arista_presente(nodos, resolver, ro, rd)[0] for ro, rd in dirs]
         vueltas = [(ro, rd) for ro, rd in dirs
                    if T.arista_presente(nodos, resolver, rd, ro)[0]]
-        if all(idas) and len(vueltas) == 1:
-            sujeto_ii = (f["id_op"], vueltas[0][0], vueltas[0][1])
-            break
+        if not vueltas:
+            continue
+        # EL FILTRO QUE FALTABA, COMPUTADO Y DECLARADO (vuelta 142, 2.d). Si la
+        # PROPIA ficha lista LAS DOS DIRECCIONES de un mismo par, la promesa de
+        # este caso ("quitadas las vueltas, la operacion sube a cumplida") es
+        # INALCANZABLE por construccion bajo regimen PROHIBE: poner la ida de
+        # una de esas dos direcciones ES poner la vuelta de la otra. Es
+        # exactamente la contradiccion que el acta 141, adjudicacion 3.4, midio
+        # en OP-E-04 (LD-40 con LD-48, y LD-45 con LD-53). Un sujeto asi haria
+        # que el caso saliera ROJO por un defecto del PLAN y no de la guarda que
+        # prueba, asi que se descarta NOMBRANDOLO, nunca en silencio.
+        mutuas = [(ro, rd) for ro, rd in dirs if (rd, ro) in dirs]
+        if mutuas:
+            descartadas.append((f["id_op"], mutuas))
+            continue
+        sujeto_ii = (f["id_op"], dirs, vueltas)
+        break
+    for nombre, mutuas in descartadas:
+        print("   DESCARTADA POR COMPUTO: %s lista en su propio aristas_nuevas LAS DOS "
+              "DIRECCIONES de %d par(es) (%s), asi que 'todas las idas y ninguna vuelta' es "
+              "inalcanzable por construccion bajo regimen PROHIBE (acta 141, adjudicacion "
+              "3.4)" % (nombre, len(mutuas) // 2,
+                        ", ".join("%s <-> %s" % (a, b) for a, b in mutuas
+                                  if (a, b) <= (b, a))))
     if not sujeto_ii:
-        print("   ROJO (arnes): ninguna operacion ENLACE con regimen PROHIBE cuyo UNICO "
-              "defecto sea una sola vuelta. No hay caso que mutar.")
+        print("   OMITIDO POR FALTA DE SUJETO: ninguna operacion ENLACE con regimen PROHIBE "
+              "tiene hoy la vuelta puesta SIN listar ella misma las dos direcciones de un "
+              "par. No hay caso que mutar. ESO ES ROJO, NO VERDE: una mutacion que no "
+              "encuentra su sujeto es una guarda que no mide.")
         return 1
-    op_ii, ro_ii, rd_ii = sujeto_ii
-    print("   sujeto computado: %s, direccion %s -> %s; la vuelta que se quita es %s -> %s"
-          % (op_ii, ro_ii, rd_ii, rd_ii, ro_ii))
+    op_ii, dirs_ii, vueltas_ii = sujeto_ii
+    faltan_idas = [(ro, rd) for ro, rd in dirs_ii
+                   if not T.arista_presente(nodos, resolver, ro, rd)[0]]
+    print("   sujeto computado: %s | %d direccion(es) | %d con la VUELTA puesta | "
+          "%d sin la IDA" % (op_ii, len(dirs_ii), len(vueltas_ii), len(faltan_idas)))
+    print("   vueltas que se quitan: %s"
+          % ", ".join("%s -> %s" % (rd, ro) for ro, rd in vueltas_ii))
+    print("   idas que se ponen antes (para que el UNICO defecto sea la vuelta): %s"
+          % (", ".join("%s -> %s" % (ro, rd) for ro, rd in faltan_idas) or "ninguna"))
 
-    nodos_ii = copy.deepcopy(nodos)
-    quitar_arista(nodos_ii, T.resolver_de(nodos_ii), rd_ii, ro_ii)
+    # PASO A: se ponen las idas que faltan y NADA MAS. La operacion tiene que
+    # SEGUIR sin cumplir, y la razon tiene que ser la vuelta.
+    nodos_iia = copy.deepcopy(nodos)
+    res_iia = T.resolver_de(nodos_iia)
+    for ro, rd in faltan_idas:
+        poner_arista(nodos_iia, res_iia, ro, rd)
+    filas_iia, cifra_iia, _ = medir(ops, nodos_iia, copy.deepcopy(remisiones))
+    comprobar("2.a.ii PASO A: con TODAS las idas puestas y la vuelta todavia ahi, la "
+              "operacion SIGUE sin cumplir", filas_iia[op_ii]["cumplido"], False)
+
+    # PASO B: ademas se quitan TODAS las vueltas. Ahora si tiene que subir.
+    nodos_ii = copy.deepcopy(nodos_iia)
+    res_ii = T.resolver_de(nodos_ii)
+    for ro, rd in vueltas_ii:
+        quitar_arista(nodos_ii, res_ii, rd, ro)
     filas_ii, cifra_ii, _ = medir(ops, nodos_ii, copy.deepcopy(remisiones))
-    comprobar("2.a.ii la operacion SUBE a cumplida",
+    vueltas_despues = [(ro, rd) for ro, rd in dirs_ii
+                       if T.arista_presente(nodos_ii, T.resolver_de(nodos_ii), rd, ro)[0]]
+    comprobar("2.a.ii PASO B: quitadas las vueltas, no queda NINGUNA vuelta puesta",
+              len(vueltas_despues), 0)
+    comprobar("2.a.ii PASO B: la operacion SUBE a cumplida",
               filas_ii[op_ii]["cumplido"], True)
-    comprobar("2.a.ii la cifra de cumplido SUBE",
-              cifra_ii["cumplido"] > base_cifra["cumplido"], True)
+    comprobar("2.a.ii PASO B: la cifra de cumplido SUBE contra el paso A",
+              cifra_ii["cumplido"] > cifra_iia["cumplido"], True)
     comprobar("2.a.ii CONTRAPRUEBA sin mutar: la operacion esta en SIN CUMPLIR",
               op_ii in base_cifra["nombres_sin_cumplir"], True)
     print("")

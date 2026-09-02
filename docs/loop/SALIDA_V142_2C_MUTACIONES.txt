@@ -1,0 +1,32 @@
+==============================================================================
+MUTACIONES DE LA TAREA 2.c | vuelta 142 | FASE 03_FUSIONES
+Todo EN MEMORIA. El sujeto se ELIGE POR COMPUTO, no se teclea.
+FUSIONES en el catalogo de la fase: 14
+==============================================================================
+
+SUJETO ELEGIDO POR COMPUTO: OP-M-02-PROG | superviviente escrito ocho_fases_experiencia_cliente | eliminar ['fases_de_retencion_de_clientes']
+
+(0) sin mutar -> cumplido=True | superviviente ocho_fases_experiencia_cliente vivo, 1 absorbido(s) deprecado(s) y en ids_alias
+
+(i) alias ocho_fases_experiencia_cliente -> _mutacion_v142_destino_condenado (esta en eliminar) -> cumplido=False
+    CONSUMIDA CON SUPERVIVIENTE DIVERGENTE: el `superviviente` escrito en la ficha es ocho_fases_experiencia_cliente, hoy DEPRECADO; resuelve por alias (P.1) a _mutacion_v142_destino_condenado, que esta VIVO; y _mutacion_v14
+
+(ii) alias ocho_fases_experiencia_cliente -> _mutacion_v142_destino_no_condenado (NO esta en eliminar) -> cumplido=False
+     CONSUMIDA: el `superviviente` escrito en la ficha es ocho_fases_experiencia_cliente, hoy DEPRECADO; resuelve por alias (P.1) a _mutacion_v142_destino_no_condenado, que esta VIVO y NO esta en el campo `eliminar` de la fic
+
+(iii) halladas POR COMPUTO 2: OP-M-02-MEDIOS, OP-M-02-ADMIT
+      salen DIVERGENTES 2: OP-M-02-MEDIOS, OP-M-02-ADMIT
+
+git status --porcelain -- dataset/ docs/plan/ : ''
+
+==============================================================================
+  VERDE 0 CONTRAPRUEBA sin mutar: OP-M-02-PROG sale CUMPLIDA
+  VERDE i superviviente DEPRECADO con alias hacia un id que la ficha SI condena: sale DIVERGENTE y NO cumplida
+  VERDE ii superviviente DEPRECADO con alias hacia un id que la ficha NO condena: sale CONSUMIDA, no DIVERGENTE, y tampoco cumplida
+  VERDE iii CASO POSITIVO sobre el grafo de hoy: las 2 FUSION con superviviente deprecado que resuelve a un condenado salen TODAS DIVERGENTES
+  VERDE P.16 dataset/ y docs/plan/ SIN TOCAR tras las mutaciones
+CIFRA de la bateria 2.c: 5 comprobaciones
+CIFRA verdes de la bateria 2.c: 5 comprobaciones
+==============================================================================
+VERDE: los 5 casos se comportan.
+EXITCODE: 0

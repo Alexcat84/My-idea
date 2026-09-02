@@ -2,10 +2,23 @@
 """verificar_mutaciones_viejas.py . LAS MUTACIONES VIEJAS, EN EL CICLO DE
 CIERRE DE CADA VUELTA, Y ANCLA PERDIDA CUENTA COMO ROJO.
 
-LA NOMINA VIVE EN `VIEJAS` Y CRECE: nacio con CUATRO y en la vuelta 140 pasa a
-CINCO, con `vuelta139_2b_mutaciones.py`, cuyo bloque (iii) tenia un ancla movil
-(TAREA 2.c, acta 139 caida 4.2). La cifra del rotulo se computa de `VIEJAS`, no
-se teclea, para que anadir una no deje una frase mintiendo detras.
+LA NOMINA VIVE EN `VIEJAS` Y CRECE: nacio con CUATRO, en la vuelta 140 paso a
+CINCO con `vuelta139_2b_mutaciones.py` (cuyo bloque (iii) tenia un ancla movil,
+TAREA 2.c, acta 139 caida 4.2) y en la vuelta 142 pasa a SIETE con
+`vuelta140_2a_mutaciones.py` y `vuelta141_2_mutaciones.py` (TAREA 2.d; acta 141
+caida 4.3: "VIEJAS sigue en cinco y no incluye ni las de la 140 ni las de la
+141, cuando su propio docstring dice que una mutacion sin sujeto es ROJO"). La
+cifra del rotulo se computa de `VIEJAS`, no se teclea, para que anadir una no
+deje una frase mintiendo detras; su prueba de mutacion es
+scripts/loop/vuelta142_2d_mutacion_bateria.py, que quita un script de la nomina
+EN MEMORIA y exige que la cifra del rotulo baje sola.
+
+CASO DECLARADO (vuelta 142, TAREA 2.d): un exit distinto de cero CONOCIDO,
+MEDIDO Y PUBLICADO en su vuelta deja de contarse como NO MORDIO, pero se imprime
+con su motivo entero y SOLO si la salida trae su MARCA OBLIGATORIA. Ver
+`CASOS_DECLARADOS`. Es lo contrario de una lista de exclusiones: la exencion es
+de UN fallo concreto, y el dia que el script falle por otra cosa vuelve a caer
+en ROJO.
 
 NOMBRE ESTABLE, SIN NUMERO DE VUELTA, como verificar_apertura_sellada.py y
 tallar_cabecera_reporte.py: se corre igual en toda vuelta y no se clona.
@@ -27,12 +40,17 @@ tres estaban desancladas y contarlo como fallo de la guarda habria sido mentir
 en la otra direccion. DESDE QUE ESTAN RE-ANCLADAS ESA DISTINCION SE ACABA: una
 mutacion que no encuentra su sujeto es una guarda que no mide, y aqui es ROJO.
 
-QUE COMPRUEBA. Corre las cuatro y exige EXIT 0 de cada una. Clasifica:
+QUE COMPRUEBA. Corre las SIETE (la cifra sale de len(VIEJAS)) y exige EXIT 0 de
+cada una, salvo los CASOS DECLARADOS de arriba. Clasifica:
   OK             . exit 0, la mutacion corrio y mordio.
   ANCLA PERDIDA  . la salida trae "ROJO PREVIO": el sujeto no esta o no es el
                    que la mutacion espera. ROJO.
   NO MORDIO      . exit distinto de 0 sin "ROJO PREVIO": la guarda que la
                    mutacion prueba dejo de morder. ROJO.
+  CASO DECLARADO . (TAREA 2.d, vuelta 142) exit distinto de 0 QUE COINCIDE con el
+                   declarado en CASOS_DECLARADOS Y cuya salida trae la marca
+                   obligatoria de esa entrada. NO es rojo, y se imprime con su
+                   motivo entero para que se vea.
   NO REPRODUCIBLE. (TAREA 2.f, vuelta 141) la mutacion se corre DOS VECES
                    seguidas y alguna de las salidas selladas que escribe sale
                    DISTINTA entre las dos. ROJO, nombrando el fichero y la
@@ -79,7 +97,54 @@ VIEJAS = [
     # justamente para que, SI EL ANCLA SE VUELVE A PERDER, salga como ANCLA
     # PERDIDA y no como verde. No admite --sujeto: fabrica los suyos.
     ("vuelta139_2b_mutaciones.py", False),
+    # SEXTA Y SEPTIMA, ANADIDAS EN LA VUELTA 142 (TAREA 2.d; acta 141, caida
+    # 4.3 de la casa: "VIEJAS sigue en cinco y no incluye ni las de la 140 ni
+    # las de la 141, cuando su propio docstring dice que una mutacion sin
+    # sujeto es ROJO"). Ninguna admite --sujeto: las dos fabrican los suyos EN
+    # MEMORIA. La cifra del rotulo se sigue computando de len(VIEJAS).
+    ("vuelta140_2a_mutaciones.py", False),
+    ("vuelta141_2_mutaciones.py", False),
 ]
+
+# CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su
+# motivo escrito y su fecha. Se separan de NO MORDIO porque son cosas
+# CONOCIDAS, MEDIDAS Y PUBLICADAS en su vuelta, no sorpresas; pero NO se
+# esconden: la bateria los imprime uno a uno con su motivo entero, y si alguno
+# dejara de dar su codigo declarado, vuelve a caer como NO MORDIO.
+#
+# EL LIMITE, DICHO PARA QUE NO SE ABUSE: aqui SOLO entra un caso cuyo diagnostico
+# esta escrito y medido en su acta o su reporte. Un rojo sin acta detras no se
+# declara: se arregla o se trae como PARADA.
+#
+# CADA ENTRADA ES (exit_declarado, motivo, MARCA_OBLIGATORIA). La exencion solo
+# vale si la salida del script TRAE ESA MARCA: si el script empieza a fallar por
+# OTRA razon, la marca no aparece y vuelve a caer como NO MORDIO. La exencion es
+# de UN fallo concreto, nunca del script.
+CASOS_DECLARADOS = {
+    "vuelta140_2a_mutaciones.py": (
+        2,
+        "su bloque (iii), el caso positivo sobre la fase 05, sale NO CALZA y esta "
+        "DECLARADO desde la vuelta 140: el auditor lo reconocio como caida SUYA de "
+        "encargo (acta 140, 4.5, 'EL AUDITOR ELIGIO MAL EL SUJETO CONGELADO'). "
+        "OP-S-05, OP-S-08, OP-S-11 y OP-S-12 tienen HUELLA DE GRAFO IDENTICA (los "
+        "cuatro campos vacios) y lo unico que las separa es `estado`, que el encargo "
+        "prohibe mirar: NINGUNA VARA DE GRAFO PUEDE SEPARARLAS. Los bloques (i) y "
+        "(ii) SI muerden y son los que esta bateria vigila.",
+        "VEREDICTO (iii): NO CALZA"),
+    "vuelta135_2e_mutacion_3.py": (
+        1,
+        "su SUJETO FIJO es el REPORTE.md de la vuelta 134, congelado por banco 9.10, y "
+        "ES ANTERIOR A LOS DELIMITADORES DE CABECERA TALLADA. Medido en esta vuelta: "
+        "grep -c 'CABECERA TALLADA' docs/loop/SUJETO_FIJO_V135_2E_REPORTE_134.md da 0, y "
+        "sobre docs/loop/REPORTE.md da 3. La ampliacion del vocabulario de la TAREA 2.a "
+        "(vuelta 142) hace que la guarda vea ahora la celda '3 fila(s)' del desfase del "
+        "calibrado, que EN UN REPORTE MODERNO vive DENTRO de la cabecera delimitada y "
+        "queda recortada antes de parsear, y en este sujeto no, porque las marcas no "
+        "existian aun. LAS DOS CIFRAS QUE ESTA MUTACION PRUEBA SI COTEJAN (la salida "
+        "publica '2 POR ETIQUETA'): lo que cae es una tercera, ajena al caso. El sujeto "
+        "NO se retoca, porque su valor es estar congelado.",
+        "NO TIENE CONVENCION MECANICA DE CONTEO"),
+}
 
 # EL ANCLA QUE SE ARRANCA en --mutar-ancla. Es el literal que las tres buscan.
 ANCLAS = ["118 grafias (sin instrumento)", "54 grupos (sin instrumento)"]
@@ -324,6 +389,15 @@ def main():
             else:
                 codigo, salida, escritos, inestables = correr_dos_veces(script, DOCS_LOOP, usar)
             estado = clasificar(codigo, salida)
+            # CASO DECLARADO (TAREA 2.d, vuelta 142): un exit conocido, medido y
+            # publicado en su vuelta deja de contarse como NO MORDIO, PERO SE
+            # IMPRIME CON SU MOTIVO ENTERO. Si el codigo deja de ser el
+            # declarado, vuelve a caer como NO MORDIO: la exencion es de UN
+            # codigo concreto, no del script.
+            declarado = CASOS_DECLARADOS.get(script)
+            if (declarado and codigo == declarado[0] and estado == "NO MORDIO"
+                    and declarado[2] in salida):
+                estado = "CASO DECLARADO"
             if inestables:
                 estado = "NO REPRODUCIBLE"
                 for nombre, num, la, lb in inestables:
@@ -350,6 +424,12 @@ def main():
     print("  ANCLA PERDIDA  : %d (%s)" % (len(perdidas), ", ".join(perdidas) or "ninguna"))
     print("  NO MORDIO      : %d (%s)" % (len(no_mordio), ", ".join(no_mordio) or "ninguna"))
     print("  NO REPRODUCIBLE: %d (%s)" % (len(no_reprod), ", ".join(no_reprod) or "ninguna"))
+    declarados = [s for s, _, e, _, _ in filas if e == "CASO DECLARADO"]
+    print("  CASO DECLARADO : %d (%s)" % (len(declarados), ", ".join(declarados) or "ninguna"))
+    for s in declarados:
+        print("      %s, exit declarado %d, marca obligatoria %r:"
+              % (s, CASOS_DECLARADOS[s][0], CASOS_DECLARADOS[s][2]))
+        print("         %s" % CASOS_DECLARADOS[s][1])
     for script, nombre, num, la, lb in inestables_todas:
         print("      %s: %s cambia SOLO entre dos corridas, linea %s" % (script, nombre, num))
         print("         corrida 1: %s" % la)

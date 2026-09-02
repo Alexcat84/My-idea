@@ -1,14 +1,13 @@
 MUTACION 3 (CASO NEGATIVO): '118 grafias (sin instrumento)' y '54 grupos (sin instrumento)' pasan a citar `SALIDA_V135_2E_APOYO.txt`, que trae sus dos lineas CIFRA con el numero CORRECTO, sobre copia de REPORTE.md (vuelta 134 real).
 --- salida de verificar_cifras_del_reporte.py ---
-VERDE EXIT 0: 3 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
-  118 grafias == 118 contados en `SALIDA_V135_2E_APOYO.txt (CIFRA 'grafias sin recortar por la cola vieja', POR ETIQUETA)`
-  54 grupos == 54 contados en `SALIDA_V135_2E_APOYO.txt (CIFRA 'grupos con la cola extendida a Caps?.', POR ETIQUETA)`
-  80 lineas == 80 contados en `wc -l REPORTE_134_MUTACION3.md`
+ROJO, 2 cifra(s) no cuadran:
+  linea 13: "3 fila" cita `SALIDA_V134_HEAD_CIERRE.txt`, pero la unidad `fila` NO TIENE CONVENCION MECANICA DE CONTEO: el fichero citado tiene que publicar una linea `CIFRA <etiqueta>: <n> fila` y no la trae (EJECUTOR.md 1: si no existe fichero que contar, la cifra no se publica)
+  linea 13: "3 fila" cita `SALIDA_V134_HEAD_CIERRE.txt`, pero la unidad `fila` NO TIENE CONVENCION MECANICA DE CONTEO: el fichero citado tiene que publicar una linea `CIFRA <etiqueta>: <n> fila` y no la trae (EJECUTOR.md 1: si no existe fichero que contar, la cifra no se publica)
 cifra(s) exentas por (sin instrumento) (1):
   0 pares: 'cubierto), cifras del plan 0 pares (sin instrumento),'
-COBERTURA: 3 cotejadas / 1 exentas / 4 cifras | reparto: 2 POR ETIQUETA, 0 POR CONJUNTO, 1 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 0
+COBERTURA: 3 cotejadas / 1 exentas / 6 cifras | reparto: 2 POR ETIQUETA, 0 POR CONJUNTO, 1 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 0 | unidades vistas FUERA del vocabulario: 15 palabra(s) [passed x4, canonicas x2, sinteticas x2, skipped x2, aguanto x1, completo x1, dup x1, fabricadas x1, familias x1, heredadas x1, identicos x1, nuevas x1, perdidas x1, reparadas x1, repuesto x1]
 
 
-EXITCODE proceso: 0
-MUTACION VERIFICADA: el caso negativo da VERDE, como se esperaba.
-EXITCODE: 0
+EXITCODE proceso: 1
+MUTACION NO VERIFICADA: no dio VERDE como se esperaba.
+EXITCODE: 1
