@@ -1,0 +1,41 @@
+########## SIN MUTAR ##########
+==============================================================================
+LAS CUATRO MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+==============================================================================
+
+  vuelta133_tarea2e_mutacion_cifras.py   exit 0  OK            
+  vuelta135_2e_mutacion_1.py             exit 0  OK            
+  vuelta135_2e_mutacion_2.py             exit 0  OK            
+  vuelta135_2e_mutacion_3.py             exit 0  OK            
+
+  ANCLA PERDIDA: 0 (ninguna)
+  NO MORDIO    : 0 (ninguna)
+
+VERDE: las 4 mutaciones viejas corren y muerden.
+FIN
+EXIT=0
+
+########## --mutar-ancla ##########
+==============================================================================
+LAS CUATRO MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+MODO MUTACION: sujeto con el ancla arrancada. TIENE QUE DAR ROJO.
+==============================================================================
+  anclas arrancadas de la copia: 2 de 2
+  copia con el ancla arrancada: C:\Users\AlexDesk\AppData\Local\Temp\ancla_arrancada_yyb9lekm\SUJETO_CON_EL_ANCLA_ARRANCADA.md
+  P.16: la copia temporal se retira. Existe todavia: False
+
+  vuelta133_tarea2e_mutacion_cifras.py   exit 0  OK            
+  vuelta135_2e_mutacion_1.py             exit 1  ANCLA PERDIDA 
+      SUJETO DADO A MANO (--sujeto C:\Users\AlexDesk\AppData\Local\Temp\ancla_arrancada_yyb9lekm\SUJETO_CON_EL_ANCLA_ARRANCADA.md): la comprobacion de ident
+  vuelta135_2e_mutacion_2.py             exit 1  ANCLA PERDIDA 
+      SUJETO DADO A MANO (--sujeto C:\Users\AlexDesk\AppData\Local\Temp\ancla_arrancada_yyb9lekm\SUJETO_CON_EL_ANCLA_ARRANCADA.md): la comprobacion de ident
+  vuelta135_2e_mutacion_3.py             exit 1  ANCLA PERDIDA 
+      SUJETO DADO A MANO (--sujeto C:\Users\AlexDesk\AppData\Local\Temp\ancla_arrancada_yyb9lekm\SUJETO_CON_EL_ANCLA_ARRANCADA.md): la comprobacion de ident
+
+  ANCLA PERDIDA: 3 (vuelta135_2e_mutacion_1.py, vuelta135_2e_mutacion_2.py, vuelta135_2e_mutacion_3.py)
+  NO MORDIO    : 0 (ninguna)
+
+VERDE DE LA MUTACION: las 3 re-ancladas caen como ANCLA PERDIDA cuando se
+les arranca el ancla, y el veredicto de esta guarda seria ROJO.
+FIN
+EXIT=0

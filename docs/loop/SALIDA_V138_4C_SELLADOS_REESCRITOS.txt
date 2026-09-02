@@ -1,0 +1,28 @@
+DECLARACION 4.c: FICHEROS SELLADOS DE LA VUELTA 135 QUE ESTA VUELTA REESCRIBE.
+
+Las tres mutaciones re-ancladas de la 2.b escriben, como siempre hicieron, sus
+SALIDA_V135_2E_MUTACION_<n>.txt. Dos de las tres salen IDENTICAS y git no las
+marca; la tercera cambia y su diff entero va aqui.
+
+=== git status --porcelain de los tres ===
+ M docs/loop/SALIDA_V135_2E_MUTACION_3.txt
+(una linea por fichero cambiado; sin linea = sin cambio)
+
+=== git diff entero ===
+diff --git a/docs/loop/SALIDA_V135_2E_MUTACION_3.txt b/docs/loop/SALIDA_V135_2E_MUTACION_3.txt
+index cabb4a58..001bbf1b 100644
+--- a/docs/loop/SALIDA_V135_2E_MUTACION_3.txt
++++ b/docs/loop/SALIDA_V135_2E_MUTACION_3.txt
+@@ -1,9 +1,9 @@
+ MUTACION 3 (CASO NEGATIVO): '118 grafias (sin instrumento)' y '54 grupos (sin instrumento)' pasan a citar `SALIDA_V135_2E_APOYO.txt`, que trae sus dos lineas CIFRA con el numero CORRECTO, sobre copia de REPORTE.md (vuelta 134 real).
+ --- salida de verificar_cifras_del_reporte.py ---
+ VERDE EXIT 0: 3 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
+-  118 grafias == 118 contados en `SALIDA_V135_2E_APOYO.txt`
+-  54 grupos == 54 contados en `SALIDA_V135_2E_APOYO.txt`
+-  80 lineas == 80 contados en `wc -l REPORTE_134_MUTACION3_vk8dn7ly.md`
++  118 grafias == 118 contados en `SALIDA_V135_2E_APOYO.txt (CIFRA 'grafias sin recortar por la cola vieja', POR ETIQUETA)`
++  54 grupos == 54 contados en `SALIDA_V135_2E_APOYO.txt (CIFRA 'grupos con la cola extendida a Caps?.', POR ETIQUETA)`
++  80 lineas == 80 contados en `wc -l REPORTE_134_MUTACION3_j14gxfty.md`
+ cifra(s) exentas por (sin instrumento) (1):
+   0 pares: 'cubierto), cifras del plan 0 pares (sin instrumento),'
+ COBERTURA: 3 cotejadas / 1 exentas / 4 cifras
