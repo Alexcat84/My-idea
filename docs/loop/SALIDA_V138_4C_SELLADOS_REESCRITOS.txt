@@ -26,3 +26,32 @@ index cabb4a58..001bbf1b 100644
  cifra(s) exentas por (sin instrumento) (1):
    0 pares: 'cubierto), cifras del plan 0 pares (sin instrumento),'
  COBERTURA: 3 cotejadas / 1 exentas / 4 cifras
+
+=== ADENDA DEL CIERRE, 2 sep 2026 ===
+La corrida del ciclo de cierre (verificar_mutaciones_viejas.py) volvio a tocar el
+mismo fichero sellado, y se declara igual que la primera vez. El diff acumulado
+contra la version anterior a esta vuelta SIGUE SIENDO de tres lineas cambiadas,
+que es la cifra que el reporte publica:
+3	3	docs/loop/SALIDA_V135_2E_MUTACION_3.txt
+
+Lo unico que la segunda corrida movio es el NOMBRE ALEATORIO del fichero
+temporal que la mutacion 3 fabrica y borra:
+diff --git a/docs/loop/SALIDA_V135_2E_MUTACION_3.txt b/docs/loop/SALIDA_V135_2E_MUTACION_3.txt
+index 6393762c..424b9271 100644
+--- a/docs/loop/SALIDA_V135_2E_MUTACION_3.txt
++++ b/docs/loop/SALIDA_V135_2E_MUTACION_3.txt
+@@ -3,7 +3,7 @@ MUTACION 3 (CASO NEGATIVO): '118 grafias (sin instrumento)' y '54 grupos (sin in
+ VERDE EXIT 0: 3 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
+   118 grafias == 118 contados en `SALIDA_V135_2E_APOYO.txt (CIFRA 'grafias sin recortar por la cola vieja', POR ETIQUETA)`
+   54 grupos == 54 contados en `SALIDA_V135_2E_APOYO.txt (CIFRA 'grupos con la cola extendida a Caps?.', POR ETIQUETA)`
+-  80 lineas == 80 contados en `wc -l REPORTE_134_MUTACION3_nuiwjex1.md`
++  80 lineas == 80 contados en `wc -l REPORTE_134_MUTACION3__fuqj3sa.md`
+ cifra(s) exentas por (sin instrumento) (1):
+   0 pares: 'cubierto), cifras del plan 0 pares (sin instrumento),'
+ COBERTURA: 3 cotejadas / 1 exentas / 4 cifras
+
+NOTA ESTRUCTURAL, y queda dicha para quien venga: este fichero sellado CAMBIARA
+en TODA vuelta que corra el ciclo de cierre, porque el nombre del temporal es
+aleatorio por construccion (tempfile.mkstemp). O se acepta y se declara cada
+vez, como aqui, o la mutacion 3 deja de imprimir el nombre del temporal. Lo
+segundo es una operacion de codigo que este encargo no pide.

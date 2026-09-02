@@ -370,6 +370,15 @@ cambio no viene de la reparacion 2.b: viene de que
 etiqueta `CIFRA` y el camino (`POR ETIQUETA`) al citar el fichero, mas el nombre
 aleatorio del temporal. Los `_1` y `_2` salen identicos y git no los marca.
 
+**ADENDA DEL CIERRE, con su diff en el mismo fichero:** la corrida del ciclo de
+cierre volvio a tocarlo y se declara igual. Lo unico que movio es el nombre
+aleatorio del temporal; el diff acumulado contra la version anterior a esta
+vuelta no cambia. **Y queda dicha la nota estructural:** ese fichero sellado
+cambiara en TODA vuelta que corra el ciclo de cierre, porque el nombre del
+temporal es aleatorio por construccion. O se acepta y se declara cada vez, como
+aqui, o la mutacion 3 deja de imprimir ese nombre, que es una operacion de
+codigo que este encargo no pide.
+
 **(4.b) LA CONDICION DEL DISCUTIBLE 1.** Va en la seccion 9, al pie, porque la
 cobertura se mide sobre este mismo fichero ya escrito.
 
