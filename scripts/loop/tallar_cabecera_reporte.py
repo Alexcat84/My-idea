@@ -1052,6 +1052,57 @@ def comparar_contra(f, ruta_arg):
 #     DECLARA como truncado y se cuenta; si no es prefijo, es ROJO.
 # El commit de apertura es el mismo que la fila de identidad ya usa
 # (commit_apertura_desde_git), o sea leido de git y nunca tecleado.
+#
+# --- EL BLOQUE DE COMMITS SE ANCLA AL HEAD SELLADO (TAREA 2.b, VUELTA 142) ---
+#
+# POR QUE CAMBIA (acta de la vuelta 141: caida 4.2 de la casa, y 4.6 de encargo
+# del auditor, que se declara autor del anclaje malo porque su TAREA 2.d de la
+# 140 decia literal "lo coteja contra `git log <apertura>..HEAD`").
+#
+# EL DEFECTO, MEDIDO: anclado a HEAD VIVO, este cotejo SOLO PUEDE ESTAR VERDE EN
+# EL INSTANTE EN QUE SE CORRE. En cuanto el reporte se commitea, git da un
+# commit mas que el bloque, y la guarda pasa a ROJO con "el bloque trae 11 y git
+# da 12" mas las once posiciones corridas un lugar. Corrida por el auditor sobre
+# la vuelta 141 ya cerrada: ROJO con 13 cosas que no cuadran, sin que ninguna
+# cifra estuviera mal (el auditor coteje el bloque a mano contra
+# `git log 4b0fcb20..5a82ce38` y sale identico). UNA GUARDA QUE EL AUDITOR NO
+# PUEDE RE-CORRER NO ES UNA GUARDA.
+#
+# EL REMEDIO, QUE ES EL QUE LA CABECERA YA USABA: el extremo de arriba se lee
+# del SELLO, `SALIDA_V<N>_HEAD_CIERRE.txt`, con `leer_head_cierre()`, la misma
+# funcion que la fila de identidad de la columna de cierre usa desde la vuelta
+# 106. Asi el rango es FIJO y el cotejo es REPRODUCIBLE cualquier dia.
+#
+# SI EL SELLO NO EXISTE TODAVIA, ES ROJO Y SE DICE: no se cae de vuelta a HEAD
+# vivo (eso seria reintroducir el defecto en silencio) y no se salta el chequeo.
+# La consecuencia practica, dicha para que no sorprenda: `--comparar-commits` se
+# corre DESPUES de sellar el HEAD de cierre, igual que `--comparar` de la
+# cabecera.
+#
+# UNA CORRECCION AL ENCARGO, MEDIDA Y DECLARADA (vuelta 142, 2.b). El encargo
+# decia "pasa a cotejar contra `git log <apertura>..<HEAD sellado de cierre>`,
+# leido de SALIDA_V<N>_HEAD_CIERRE.txt". SE IMPLEMENTO ASI PRIMERO Y SE MIDIO:
+# sobre el reporte de la vuelta 141 sale ROJO CON 12, no VERDE. La causa es
+# estructural y no del reporte: EL HASH SELLADO ES, POR CONSTRUCCION, EL COMMIT
+# ANTERIOR AL COMMIT QUE LLEVA EL SELLO. El ejecutor corre `git rev-parse HEAD`,
+# escribe el fichero y LUEGO commitea; en la vuelta 141 el sello dice `84e4d861`
+# y el commit que lo anade es `5a82ce38`, el commit de CIERRE, que el bloque
+# lista y que `..84e4d861` deja fuera. Medido: `git log --diff-filter=A --
+# docs/loop/SALIDA_V141_HEAD_CIERRE.txt` da `5a82ce38`, y `git rev-parse
+# 5a82ce38^` da exactamente `84e4d861`.
+#
+# EL ANCLA QUE SI FUNCIONA, Y SIGUE SIN TECLEARSE: el COMMIT QUE ANADE el sello,
+# leido con `git log --diff-filter=A`, igual que ya hace
+# verificar_apertura_sellada.py con los ficheros de apertura. Es fijo,
+# reproducible y no depende de HEAD. Y el hash escrito DENTRO del sello no se
+# tira: se usa como GUARDA, exigiendo que sea el PADRE del commit que lo lleva.
+# Si no lo es, es ROJO nombrando los dos, porque significa que el sello se
+# escribio en un momento distinto del que dice.
+#
+# MUTACION (vuelta 142, 2.b): sobre el reporte de la vuelta 141 esta version
+# tiene que salir VERDE donde la vieja salia ROJO con 13; y metiendo un commit
+# inventado dentro del bloque, ROJO nombrandolo. Ver
+# scripts/loop/vuelta142_2b_mutacion_commits.py.
 MARCA_COMMITS_ABRE = "<!-- COMMITS TALLADOS -->"
 MARCA_COMMITS_CIERRA = "<!-- FIN COMMITS TALLADOS -->"
 RE_LINEA_COMMIT = re.compile(r"^\s*([0-9a-f]{7,40})\s+(\S.*?)\s*$")
@@ -1078,15 +1129,62 @@ def bloque_de_commits_del_fichero(ruta, fallos):
     return filas
 
 
-def commits_de_git(apertura, fallos):
-    """`git log <apertura>..HEAD`, hash completo y asunto entero, en el orden
-    que git da (el mas reciente primero), que es el orden en que el bloque se
-    escribe."""
+def commit_que_lleva_el_sello_de_cierre(vuelta, fallos):
+    """EL EXTREMO DE ARRIBA DEL RANGO (TAREA 2.b, vuelta 142). Devuelve
+    (commit_que_anade_el_sello, hash_escrito_dentro_del_sello), los dos leidos
+    de git y del fichero, nunca tecleados. Ver el bloque
+    "EL BLOQUE DE COMMITS SE ANCLA AL HEAD SELLADO" de arriba, y en particular
+    "UNA CORRECCION AL ENCARGO, MEDIDA Y DECLARADA", que explica por que el
+    ancla es el commit QUE LLEVA el sello y no el hash escrito dentro.
+
+    ROJO, nombrando, si: el sello no existe (`leer_head_cierre` ya lo dice);
+    ningun commit lo anade, o mas de uno; o el hash escrito dentro NO es el
+    PADRE del commit que lo lleva."""
+    sellado = leer_head_cierre(vuelta, fallos)
+    if sellado is None:
+        return None, None
+    nombre = "SALIDA_V%d_HEAD_CIERRE.txt" % vuelta
+    rel = "docs/loop/%s" % nombre
     try:
-        r = subprocess.run(["git", "log", "%s..HEAD" % apertura, "--pretty=format:%H\x01%s"],
+        r = subprocess.run(["git", "log", "--diff-filter=A", "--pretty=format:%H", "--", rel],
                            cwd=RAIZ, capture_output=True, text=True, check=True)
     except Exception as e:
-        fallos.append("no se pudo correr git log %s..HEAD: %s" % (apertura, e))
+        fallos.append("no se pudo leer el commit de nacimiento de %s: %s" % (nombre, e))
+        return None, sellado
+    nacidos = [h for h in r.stdout.splitlines() if h.strip()]
+    if len(nacidos) != 1:
+        fallos.append("%s tiene %d commit(s) que lo anaden (%s): el ancla del bloque de "
+                      "commits queda ambigua y no se adivina"
+                      % (nombre, len(nacidos), ", ".join(h[:8] for h in nacidos) or "ninguno"))
+        return None, sellado
+    portador = nacidos[0]
+    try:
+        padre = subprocess.run(["git", "rev-parse", "%s^" % portador], cwd=RAIZ,
+                               capture_output=True, text=True, check=True).stdout.strip()
+    except Exception as e:
+        fallos.append("no se pudo leer el padre de %s: %s" % (portador[:8], e))
+        return None, sellado
+    if padre != sellado:
+        fallos.append("%s dice %s, pero el PADRE del commit que lo anade (%s) es %s: el sello "
+                      "no se escribio donde dice" % (nombre, sellado[:8], portador[:8], padre[:8]))
+        return None, sellado
+    return portador, sellado
+
+
+def commits_de_git(apertura, cierre, fallos):
+    """`git log <apertura>..<cierre>`, hash completo y asunto entero, en el
+    orden que git da (el mas reciente primero), que es el orden en que el
+    bloque se escribe.
+
+    EL EXTREMO DE ARRIBA ES EL HEAD SELLADO, NO `HEAD` (TAREA 2.b, vuelta 142;
+    acta 141, caida 4.2 de la casa y 4.6 de encargo del auditor). Ver el bloque
+    "EL BLOQUE DE COMMITS SE ANCLA AL HEAD SELLADO" mas arriba."""
+    try:
+        r = subprocess.run(["git", "log", "%s..%s" % (apertura, cierre),
+                            "--pretty=format:%H\x01%s"],
+                           cwd=RAIZ, capture_output=True, text=True, check=True)
+    except Exception as e:
+        fallos.append("no se pudo correr git log %s..%s: %s" % (apertura, cierre, e))
         return []
     salida = []
     for linea in r.stdout.splitlines():
@@ -1111,13 +1209,26 @@ def comparar_commits(vuelta, ruta_arg):
         for x in fallos:
             print("  ROJO: %s" % x)
         return 1
+    # EL EXTREMO DE ARRIBA: EL HEAD SELLADO DE CIERRE, LEIDO DE SU FICHERO
+    # (TAREA 2.b, vuelta 142). Si el sello no existe todavia, la guarda LO DICE
+    # Y SALE ROJO: no se salta y no cae de vuelta a HEAD vivo, que es
+    # exactamente lo que la hacia irrepetible.
+    cierre, sellado = commit_que_lleva_el_sello_de_cierre(vuelta, fallos)
+    if fallos:
+        for x in fallos:
+            print("  ROJO: %s" % x)
+        print("  BLOQUE DE COMMITS: NO SE PUEDE COTEJAR SIN EL HEAD SELLADO DE CIERRE")
+        return 1
     print("  commit de apertura, leido de git (no tecleado): %s" % apertura)
     print("  asunto real del acta: %r" % asunto_acta)
-    print("  rango cotejado: git log %s..HEAD" % apertura)
+    print("  HEAD sellado en SALIDA_V%d_HEAD_CIERRE.txt: %s" % (vuelta, sellado))
+    print("  commit que LLEVA ese sello (git log --diff-filter=A), y padre del cual es el "
+          "sellado: %s" % cierre)
+    print("  rango cotejado, FIJO y sin HEAD vivo: git log %s..%s" % (apertura, cierre))
     print()
 
     del_fichero = bloque_de_commits_del_fichero(ruta, fallos)
-    de_git = commits_de_git(apertura, fallos)
+    de_git = commits_de_git(apertura, cierre, fallos)
     if fallos:
         for x in fallos:
             print("  ROJO: %s" % x)

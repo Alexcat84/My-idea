@@ -270,6 +270,61 @@ por su nombre. Tiene que traer la cabecera `ESTADO DE LA FASE` y una linea
 `CIFRA:` con `sin cumplir: <n>`. Un fichero citado que no las traiga NO
 cuenta como cita valida, y se dice cual era.
 
+--- LA GUARDA DEJA DE SER CIEGA (TAREA 2.a, VUELTA 142) ---
+
+POR QUE NACE. Es la caida 4.5 del acta 141, y es del auditor, hallada
+CORRIENDO esta guarda y no leyendola. Corrida contra el reporte de la vuelta
+141 daba `VERDE EXIT 0: 0 cifra(s) cotejadas` con
+`COBERTURA: 0 cotejadas / 0 exentas / 0 cifras`. La causa, medida en el
+codigo: `UNIDADES` era un vocabulario cerrado (fichero, par, grupo, grafia,
+colapso, nodo, linea, arista) y el reporte publica sus cifras en DIRECCIONES,
+filas y comprobaciones, ninguna dentro. Y `direccion` es justamente LA UNIDAD
+QUE EL ACTA 140 ADJUDICO como unidad publicada (adjudicacion 3.4): la unidad
+oficial de la campana era la unica que la guarda no sabia leer. Peor: en la
+vuelta 140 esa misma salida se firmo como verde con su COBERTURA en ceros
+delante. Es P.14: un control que solo encuentra fallos ajenos no es un control.
+
+LAS DOS PIEZAS, Y LAS DOS VAN.
+
+(i) EL VOCABULARIO CRECE CON LA UNIDAD ADJUDICADA, Y NO SE TECLEA DE MEMORIA.
+    Entran `direccion(es)`, `fila(s)`, `comprobacion(es)` y `operacion(es)`.
+    Las tres primeras salen MEDIDAS de docs/loop/REPORTE.md con
+    scripts/loop/vuelta142_2a_nomina_unidades.py (direcciones 5 veces,
+    comprobaciones 2, filas 1 sobre el reporte de la vuelta 141); `operacion`
+    entra por el encargo. NINGUNA HEREDA CONVENCION MECANICA: ver el comentario
+    de `UNIDAD_A_FAMILIA`, familia `sin convencion`. Una cifra de estas ocho
+    unidades SOLO coteja contra una linea `CIFRA <etiqueta>: <n> <unidad>` del
+    fichero citado; si el fichero no la trae, es ROJO diciendolo con esas
+    palabras, en vez de contar lineas que no son la unidad pedida.
+
+    Y LA SEGUNDA MITAD, QUE ES LA QUE IMPIDE QUE VUELVA A PASAR: la guarda
+    PUBLICA EN CADA CORRIDA, en su linea COBERTURA, LA NOMINA DE UNIDADES
+    VISTAS DETRAS DE UN NUMERO QUE NO ESTAN EN SU VOCABULARIO
+    (`unidades_vistas_fuera_del_vocabulario`). No las juzga y no falla por
+    ellas: las hace VISIBLES. Una unidad nueva ya no puede colarse en silencio
+    porque aparece nombrada en la salida el primer dia que se usa.
+    `RUIDO` es SOLO gramatica y verbos: ningun sustantivo contable entra ahi,
+    porque esconder una palabra en RUIDO seria la misma ceguera por otra puerta.
+
+(ii) CERO CIFRAS COTEJADAS DEJA DE SER VERDE. Si la guarda recorre el reporte y
+    no llega a cotejar NINGUNA cifra, no es que todo cuadre: es que no midio.
+    Sale ROJO diciendo cuantas cifras vio, cuantas cotejo, cuantas eximio y con
+    que unidades se quedo fuera. Es banco 9 (fallar ruidoso) y es el ramal
+    (xxi) del acta 136 escrito en el codigo: "una cobertura de cero no es un
+    verde, es un plato vacio".
+
+PRUEBA DE MUTACION (obligatoria, EJECUTOR.md 1: sobre variable COMPUTADA,
+nunca sobre un literal): scripts/loop/vuelta142_2a_mutaciones.py, salida a
+docs/loop/SALIDA_V142_2A_MUTACIONES.txt. Cuatro casos, dos por pieza:
+  (i.a)  sobre una COPIA del reporte, se cambia el NUMERO de una cifra en
+         `direcciones` que SI cita su fichero: ROJO nombrando la linea.
+  (i.b)  contraprueba: la misma copia sin mutar, esa cifra COTEJADA y VERDE.
+  (ii.a) reporte de prueba SIN ninguna cifra cotejable: ROJO por cobertura
+         cero.
+  (ii.b) contraprueba: el mismo reporte de prueba con UNA cifra cotejable:
+         ya no cae por cobertura cero.
+Los sujetos fabricados se retiran al terminar (P.16, quien fabrica limpia).
+
 PRUEBA DE MUTACION (obligatoria): scripts/loop/vuelta140_2b_mutaciones.py,
 salida a docs/loop/SALIDA_V140_2B_MUTACIONES.txt. Cinco casos sobre sujeto
 fabricado y retirado por P.16 (quien fabrica, limpia): (a) frase de cierre SIN
@@ -294,9 +349,42 @@ from verificar_cifras_del_plan import dividir_frases  # noqa: E402
 
 UNIDADES = ["fichero", "ficheros", "par", "pares", "grupo", "grupos",
             "grafia", "grafias", "colapso", "colapsos", "nodo", "nodos",
-            "linea", "lineas", "arista", "aristas"]
+            "linea", "lineas", "arista", "aristas",
+            # TAREA 2.a.i, vuelta 142. LAS OCHO QUE ENTRAN, y de donde salen:
+            # el encargo las nombra una a una, y la medicion de
+            # vuelta142_2a_nomina_unidades.py sobre docs/loop/REPORTE.md de la
+            # vuelta 141 las halla usadas (direcciones 5 veces, comprobaciones
+            # 2, filas 1). `direccion` es ademas LA UNIDAD ADJUDICADA por el
+            # acta 140, adjudicacion 3.4. Ver el bloque
+            # "LA GUARDA DEJA DE SER CIEGA" del docstring.
+            "direccion", "direcciones", "fila", "filas",
+            "comprobacion", "comprobaciones", "operacion", "operaciones"]
 PATRON_NUMERO_UNIDAD = re.compile(
     r"\b(\d+(?:[.,]\d+)?)\s+(%s)\b" % "|".join(UNIDADES), re.IGNORECASE)
+
+# --- EL PATRON ANCHO Y LA NOMINA DE RUIDO (TAREA 2.a.i, vuelta 142) ---
+# Viven AQUI y no en el instrumento de medicion porque son la misma pregunta y
+# no puede haber dos versiones de la misma cosa: `PATRON_NUMERO_UNIDAD` solo ve
+# las palabras que el vocabulario ya trae, asi que por construccion NO PUEDE
+# descubrir la que falta. Este patron ve CUALQUIER palabra detras de un numero,
+# y `RUIDO` separa los conectores y verbos que siguen a un numero sin ser nunca
+# una unidad. scripts/loop/vuelta142_2a_nomina_unidades.py los IMPORTA de aqui.
+#
+# RUIDO ES SOLO GRAMATICA, NUNCA UN SUSTANTIVO CONTABLE, y se dice por que: lo
+# que entra en RUIDO deja de aparecer en la nomina, y una palabra que nombra
+# algo contable escondida ahi seria la misma ceguera de la 4.5 por otra puerta.
+# Por eso "cumplidas", "presentes", "verdes" o "comprobaciones" NO estan aqui
+# aunque hoy no esten en UNIDADES: se publican cada corrida en la nomina de
+# unidades vistas y fuera del vocabulario, para que se vean y se decidan.
+PATRON_NUMERO_PALABRA = re.compile(r"\b(\d+(?:[.,]\d+)?)\s+([^\W\d_]{3,})\b", re.UNICODE)
+RUIDO = set(u"""de del la las los una uno con por para que sin sobre mas menos
+como cuando donde entre desde hasta tras segun sus era eran son fue fueron
+esta estan este estos estas ese esa esos esas cada todo toda todos todas
+otro otra otros otras solo solamente casi tambien pero aunque porque
+dice dicen dijo queda quedan quedo caen cae cayo lee leen leyo pide piden
+ordena ordenan dejo dejan deja defiende defienden sigue siguen siguio
+tiene tienen tuvo hace hacen hizo dan daba salen sale salio trae traen trajo
+ago sep jul jun may abr mar feb ene oct nov dic""".split())
 PATRON_CITA_SALIDA = re.compile(r"SALIDA_V\d+_[A-Za-z0-9_]+\.txt")
 PATRON_RUTA_FICHERO = re.compile(
     r"[A-Za-z0-9_./\\-]+\.(?:py|md|ts|tsx|js|jsx|json|jsonl|txt)\b")
@@ -575,6 +663,23 @@ UNIDAD_A_FAMILIA = {
     "grafia": "generico", "grafias": "generico",
     "colapso": "generico", "colapsos": "generico",
     "nodo": "generico", "nodos": "generico",
+    # TAREA 2.a.i (vuelta 142). LAS OCHO NUEVAS NO HEREDAN NINGUNA CONVENCION
+    # MECANICA, Y ESO SE DECLARA EN VEZ DE INVENTARSE UNA. Un `18 direcciones`
+    # NO se puede contar con `contar_aristas` (que cuenta TODA linea con `->`,
+    # y las salidas de esta campana imprimen la misma direccion en la tabla y
+    # otra vez en la lista de abajo: cotejar asi tiraria en ROJO cifras
+    # CORRECTAS, que es exactamente el defecto que la reparacion 1.c de la
+    # vuelta 137 quito), ni con `contar_generico_bullets` (que cuenta lineas
+    # con sangria, sean lo que sean). LA CONSECUENCIA, ESCRITA: una cifra de
+    # estas ocho unidades SOLO coteja contra una linea `CIFRA <etiqueta>: <n>
+    # <unidad>` del fichero citado. Si el fichero no la publica, es ROJO
+    # diciendolo con esas palabras. Eso es EJECUTOR.md 1 ("LA TABLA SE CUENTA
+    # DE SU FICHERO... Si no existe fichero que contar, LA TABLA NO SE
+    # PUBLICA") puesto en el instrumento.
+    "direccion": "sin convencion", "direcciones": "sin convencion",
+    "fila": "sin convencion", "filas": "sin convencion",
+    "comprobacion": "sin convencion", "comprobaciones": "sin convencion",
+    "operacion": "sin convencion", "operaciones": "sin convencion",
 }
 
 # Canonica SINGULAR de cada unidad (2.c): la familia de arriba agrupa
@@ -592,6 +697,14 @@ UNIDAD_CANONICA = {
     "nodo": "nodo", "nodos": "nodo",
     "linea": "linea", "lineas": "linea",
     "arista": "arista", "aristas": "arista",
+    # Las ocho de la TAREA 2.a.i (vuelta 142): cada una es su propia canonica,
+    # para que "18 direcciones" NUNCA coteje contra una linea CIFRA de "filas"
+    # del mismo fichero. Es la misma doctrina que separo grafia de grupo en la
+    # vuelta 137.
+    "direccion": "direccion", "direcciones": "direccion",
+    "fila": "fila", "filas": "fila",
+    "comprobacion": "comprobacion", "comprobaciones": "comprobacion",
+    "operacion": "operacion", "operaciones": "operacion",
 }
 
 
@@ -604,7 +717,36 @@ def contar_por_familia(familia, contenido):
         return contar_aristas(contenido)
     if familia == "linea":
         return contar_lineas(contenido)
+    if familia == "sin convencion":
+        # No hay convencion mecanica para esta unidad: se devuelve None a
+        # proposito para que el llamador lo diga con su nombre, en vez de
+        # fabricar un numero contando lineas que no son la unidad pedida.
+        return None
     return contar_generico_bullets(contenido)
+
+
+def unidades_vistas_fuera_del_vocabulario(texto):
+    """TAREA 2.a.i (vuelta 142). LA NOMINA QUE LA GUARDA PUBLICA EN CADA
+    CORRIDA, para que la proxima unidad nueva no se cuele como se colo
+    `direcciones` (acta 141, caida 4.5 del auditor).
+
+    Recorre el reporte con `PATRON_NUMERO_PALABRA`, que ve CUALQUIER palabra
+    detras de un numero, y devuelve {palabra: veces} de las que NO estan en
+    `UNIDADES` y NO estan en la nomina declarada de `RUIDO`. NO decide nada: no
+    es un fallo, es una LISTA VISIBLE. Quien decide que una palabra entre al
+    vocabulario es el encargo, y la entrada queda escrita en `UNIDADES` con su
+    motivo."""
+    vocabulario = set(u.lower() for u in UNIDADES)
+    vistas = {}
+    for m in PATRON_NUMERO_PALABRA.finditer(texto):
+        numero_txt = m.group(1).replace(".", "").replace(",", "")
+        if not numero_txt.isdigit():
+            continue
+        palabra = m.group(2).lower()
+        if palabra in vocabulario or palabra in RUIDO:
+            continue
+        vistas[palabra] = vistas.get(palabra, 0) + 1
+    return vistas
 
 
 def ficheros_salida_existentes():
@@ -725,14 +867,19 @@ def comprobar_afirmaciones_de_cierre(frases, existentes):
     return fallos, cotejadas
 
 
-def verificar(ruta_reporte, cierres_out=None):
+def verificar(ruta_reporte, cierres_out=None, nomina_out=None):
     """LA ARIDAD NO SE TOCA (vuelta 140, 2.b): sigue devolviendo CUATRO valores
     porque scripts/loop/vuelta135_2a_diagnostico.py y
     scripts/loop/vuelta139_2b_mutaciones.py, los dos sellados en otras vueltas,
     desempaquetan cuatro. Las afirmaciones de cierre cotejadas se recogen en la
-    lista `cierres_out` si el llamador la pasa."""
+    lista `cierres_out` si el llamador la pasa, y la nomina de unidades vistas
+    fuera del vocabulario en el dict `nomina_out` (TAREA 2.a.i, vuelta 142), por
+    la misma razon: anadir un quinto valor de retorno romperia los dos scripts
+    sellados."""
     texto_completo = leer(ruta_reporte)
     texto = quitar_bloques_cubiertos(texto_completo)
+    if nomina_out is not None:
+        nomina_out.update(unidades_vistas_fuera_del_vocabulario(texto))
     # LA BANDERA DE TABLA (vuelta 139, 2.b), con su guarda de que no se ha
     # inventado un partido distinto del de la casa: si algun dia
     # frases_con_bandera_de_tabla dejara de dar la MISMA lista que
@@ -845,9 +992,17 @@ def verificar(ruta_reporte, cierres_out=None):
             else:
                 contado = contar_por_familia(familia, contenido_cita)
             if contado is None:
-                fallos.append(
-                    "linea %d: \"%d %s\" cita `%s` pero no se pudo CONTAR en el (ni exenta)" %
-                    (i, numero, unidad, fichero_cita))
+                if familia == "sin convencion":
+                    fallos.append(
+                        "linea %d: \"%d %s\" cita `%s`, pero la unidad `%s` NO TIENE "
+                        "CONVENCION MECANICA DE CONTEO: el fichero citado tiene que "
+                        "publicar una linea `CIFRA <etiqueta>: <n> %s` y no la trae "
+                        "(EJECUTOR.md 1: si no existe fichero que contar, la cifra no "
+                        "se publica)" % (i, numero, unidad, fichero_cita, unidad, unidad))
+                else:
+                    fallos.append(
+                        "linea %d: \"%d %s\" cita `%s` pero no se pudo CONTAR en el (ni exenta)" %
+                        (i, numero, unidad, fichero_cita))
                 continue
             if contado != numero:
                 # ramal (xvii): si la otra familia cotejable (fichero vs par)
@@ -886,7 +1041,25 @@ def main():
     a = ap.parse_args()
 
     cierres = []
-    fallos, cotejados, exentas, total_cifras = verificar(a.reporte, cierres_out=cierres)
+    nomina = {}
+    fallos, cotejados, exentas, total_cifras = verificar(
+        a.reporte, cierres_out=cierres, nomina_out=nomina)
+
+    # --- (ii) CERO CIFRAS COTEJADAS DEJA DE SER VERDE (TAREA 2.a.ii, vuelta
+    # 142; acta 141, caida 4.5 del auditor). Si la guarda recorre el reporte
+    # entero y no llega a cotejar NINGUNA cifra, eso NO es cobertura llena: es
+    # que no midio, y publicarlo como VERDE EXIT 0 es una firma, no un control
+    # (banco 9, fallar ruidoso; P.14). El fallo se ANADE a la lista, no la
+    # sustituye, para que un reporte que ademas tenga cifras malas siga
+    # nombrandolas todas.
+    if not cotejados:
+        detalle = ", ".join("%s (%d)" % (p, n) for p, n in
+                            sorted(nomina.items(), key=lambda kv: (-kv[1], kv[0]))) or "ninguna"
+        fallos.append(
+            "COBERTURA CERO: la guarda vio %d cifra(s) con unidad del vocabulario, "
+            "cotejo 0 y eximio %d. UN VERDE SOBRE CERO NO ES UN VERDE. Unidades vistas "
+            "detras de un numero y FUERA del vocabulario (%d palabra(s)): %s"
+            % (total_cifras, len(exentas), len(nomina), detalle))
     # EL REPARTO POR ETIQUETA CONTRA POR CONJUNTO es condicion viva del acta 137
     # (3.1): una cobertura tiene que decir DE QUE esta llena. Y desde la vuelta
     # 139 (2.b) dice ademas CUANTAS de las cotejadas viven en una FILA DE TABLA,
@@ -902,6 +1075,14 @@ def main():
                      len(cotejados) - por_etiqueta - por_conjunto, en_tabla))
     cobertura += (" | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: %d"
                   % len(cierres))
+    # LA NOMINA VA EN LA MISMA LINEA QUE LA COBERTURA, siempre, verde o rojo
+    # (TAREA 2.a.i, vuelta 142): una cobertura que no dice QUE SE QUEDO FUERA es
+    # la que dejo colarse a `direcciones` durante dos vueltas.
+    cobertura += (" | unidades vistas FUERA del vocabulario: %d palabra(s) [%s]"
+                  % (len(nomina),
+                     ", ".join("%s x%d" % (p, n) for p, n in
+                               sorted(nomina.items(), key=lambda kv: (-kv[1], kv[0])))
+                     or "ninguna"))
 
     if fallos:
         print("ROJO, %d cifra(s) no cuadran:" % len(fallos))

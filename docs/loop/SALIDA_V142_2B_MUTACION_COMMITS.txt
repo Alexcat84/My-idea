@@ -1,0 +1,33 @@
+==============================================================================
+MUTACIONES DE LA TAREA 2.b | vuelta 142
+Sujeto CONGELADO: 9835e37e:docs/loop/REPORTE.md (no el arbol vivo)
+Sello de cierre de la vuelta 141: 84e4d861
+El tallador se corre COMO SUBPROCESO: se prueba su EXIT y sus lineas.
+==============================================================================
+
+CONTRASTE, el tallador de HEAD (el anclado al HEAD VIVO, antes de esta
+reparacion) sobre el mismo sujeto -> EXIT 1, problemas 17
+
+(a) tallador reparado -> EXIT 0, problemas 0
+      HEAD sellado en SALIDA_V141_HEAD_CIERRE.txt: 84e4d86120af295986ca0baa43a53bd3ed5b17c0
+      commit que LLEVA ese sello (git log --diff-filter=A), y padre del cual es el sellado: 5a82ce381a494508df36f933aec926d7fd2e3c85
+      rango cotejado, FIJO y sin HEAD vivo: git log 4b0fcb20..5a82ce381a494508df36f933aec926d7fd2e3c85
+      commits en el bloque del fichero: 11 | commits en git: 11
+      BLOQUE DE COMMITS: IDENTICO A GIT (11 commit(s), mismo orden, 9 asunto(s) truncado(s) declarado(s))
+
+(b) hash real 5a82ce38 -> inventado 5a82ce30 (COMPUTADO, ultimo digito cambiado)
+    -> EXIT 1, problemas 1, nombrado en la salida: True
+      posicion 1: el bloque dice 5a82ce30 y git dice 5a82ce38 (hash distinto o fuera de orden)
+
+(c) sello cambiado a 452a23fd -> EXIT 1, dice lo del padre: True
+      ROJO: SALIDA_V141_HEAD_CIERRE.txt dice 452a23fd, pero el PADRE del commit que lo anade (5a82ce38) es 84e4d861: el sello no se escribio donde dice
+
+==============================================================================
+  VERDE a CASO POSITIVO sobre sujeto congelado: EXIT 0, bloque IDENTICO A GIT con el ancla sellada
+  VERDE b COMMIT INVENTADO dentro del bloque: EXIT 1 y ROJO NOMBRANDOLO
+  VERDE c SELLO CAMBIADO por otro commit real: EXIT 1 diciendo que el padre del portador no es el sellado
+CIFRA de la bateria 2.b: 3 comprobaciones
+CIFRA verdes de la bateria 2.b: 3 comprobaciones
+==============================================================================
+VERDE: los 3 casos se comportan.
+EXITCODE: 0

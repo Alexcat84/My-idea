@@ -99,6 +99,21 @@ def main():
     print("EN EL UNIVERSO 2 Y NO EN EL 1 (%d): %s" % (len(fuera), ", ".join(fuera) or "ninguna"))
     print("DIFERENCIA DE DIRECCIONES ENTRE LOS DOS UNIVERSOS: %d" % (dirs_todas - dirs_cinco))
 
+    # LAS LINEAS `CIFRA` QUE LA GUARDA DE CIFRAS SABE LEER (TAREA 2.a.i, vuelta
+    # 142). `direccion` y `fila` entraron al vocabulario de
+    # verificar_cifras_del_reporte.py SIN convencion mecanica de conteo a
+    # proposito, asi que una cifra del reporte en esas unidades SOLO coteja
+    # contra una linea `CIFRA <etiqueta>: <n> <unidad>` de su fichero. Si este
+    # instrumento no las imprimiera, ninguna cifra suya seria cotejable y el
+    # reporte no podria publicarla: por eso van aqui y no en la prosa.
+    print("")
+    print("CIFRA universo 1 cinco remitidas: %d direcciones" % dirs_cinco)
+    print("CIFRA universo 1 cinco remitidas: %d filas" % filas_cinco)
+    print("CIFRA universo 2 seis del catalogo: %d direcciones" % dirs_todas)
+    print("CIFRA universo 2 seis del catalogo: %d filas" % filas_todas)
+    print("CIFRA operaciones del universo 1: %d operaciones" % len(nombres_cinco))
+    print("CIFRA operaciones del universo 2: %d operaciones" % len(nombres_todas))
+
     if fallos:
         print("")
         print("ROJO, %d cosa(s) no cuadran:" % len(fallos))
