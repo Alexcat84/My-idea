@@ -1,0 +1,58 @@
+MEDICION DE LA PARADA DE OP-E-04 (vuelta 140, TAREA 3, remitida 5 de 5)
+==============================================================================
+
+SU VERIFICACION 0, LITERAL: "UNA SOLA DIRECCION POR ENLACE, de la madre al
+hijo. La vuelta no debe existir ni literal ni resuelta, por la regla de la
+escalera". Tras OP-M-01-FUSION esa verificacion NO SE PUEDE CUMPLIR sin
+decidir cual de dos direcciones muere, y esa decision no la toma ninguna
+regla escrita.
+
+LAS NUEVE ARISTAS DE LA FICHA, RESUELTAS CONTRA EL GRAFO DE HOY:
+
+| # | de la ficha | resuelta | estado hoy |
+|---|---|---|---|
+| 1 | gestion_portafolio_dos_niveles -> estructura_gates | gestion_portafolio_dos_niveles -> sistema_gates_go_kill | YA PRESENTE |
+| 2 | requisitos_gates_con_dientes -> portfolio_management | sistema_gates_go_kill -> portfolio_management | YA PRESENTE |
+| 3 | requisitos_gates_con_dientes -> revision_portafolio_periodica | sistema_gates_go_kill -> revision_portafolio_periodica | BLOQUEADA: su VUELTA ya existe |
+| 4 | requisitos_gates_con_dientes -> gestion_portafolio_foco | sistema_gates_go_kill -> gestion_portafolio_foco | escribible, si no choca con otra de esta misma ficha |
+| 5 | portfolio_management -> gates_go_kill_decision_points | portfolio_management -> sistema_gates_go_kill | BLOQUEADA: su VUELTA ya existe |
+| 6 | gestion_portafolio_formal -> gates_go_kill_decision_points | gestion_portafolio_formal -> sistema_gates_go_kill | YA PRESENTE |
+| 7 | gestion_portafolio_dos_niveles -> gates_go_kill_decision_points | gestion_portafolio_dos_niveles -> sistema_gates_go_kill | YA PRESENTE |
+| 8 | gestion_portafolio_foco -> gates_go_kill_decision_points | gestion_portafolio_foco -> sistema_gates_go_kill | escribible, si no choca con otra de esta misma ficha |
+| 9 | decision_factory_mentality -> gates_go_kill_decision_points | decision_factory_mentality -> sistema_gates_go_kill | escribible, si no choca con otra de esta misma ficha |
+
+NUEVE PARES DE LA FICHA COLAPSAN EN 8 ARISTAS DISTINTAS tras resolver.
+La que se repite: gestion_portafolio_dos_niveles -> sistema_gates_go_kill,
+que es LD-35 y LD-51 a la vez.
+
+LOS TRES BLOQUEOS, CADA UNO CON SU ORIGEN MEDIDO CONTRA GIT:
+
+  (1) sistema_gates_go_kill -> revision_portafolio_periodica (LD-42).
+      Su vuelta, revision_portafolio_periodica -> sistema_gates_go_kill, YA
+      EXISTE. Antes de 3f249a03 esa entrada era gates_go_kill_decision_points,
+      absorbido de OP-M-01-FUSION, y la redireccion de la fusion la reapunto
+      al superviviente. Es una arista de OTRA operacion, no de esta.
+
+  (2) portfolio_management -> sistema_gates_go_kill (LD-48).
+      Su vuelta es LD-40 DE ESTA MISMA FICHA, y esta YA PRESENTE. Dos lecturas
+      dirigidas distintas de la misma operacion se convierten, tras la fusion,
+      en las dos direcciones del MISMO par.
+
+  (3) gestion_portafolio_foco -> sistema_gates_go_kill (LD-53).
+      Su vuelta es LD-45 DE ESTA MISMA FICHA, y va en la misma corrida. Mismo
+      caso que (2), con las dos direcciones todavia sin escribir.
+
+LA RAIZ, Y ES UNA SOLA: la nota de la propia ficha ya avisaba de que "CINCO DE
+LOS NUEVE APUNTAN AL MISMO HIJO, gates_go_kill_decision_points, que tras la
+fusion es sistema_gates_go_kill". Lo que la nota no previo es que TRES de las
+nueve tienen como MADRE a un nodo que otra de las nueve tiene como HIJO. Antes
+de la fusion eran pares distintos; despues, son el mismo par en dos sentidos.
+
+POR QUE NO SE ESCRIBE NI SIQUIERA LO QUE PASA: dos de los nueve pares pasan
+todas las guardas (sistema_gates_go_kill -> gestion_portafolio_foco, LD-45, y
+decision_factory_mentality -> sistema_gates_go_kill, LD-55). PERO LD-45 es
+exactamente la vuelta de LD-53: escribirla sola seria ELEGIR cual de las dos
+direcciones sobrevive, y eso es la decision que esta parada trae. Se escribe
+entera o no se escribe (EJECUTOR.md regla 5).
+
+CERO ESCRITURAS EN ESTA OPERACION. El instrumento aborto solo.
