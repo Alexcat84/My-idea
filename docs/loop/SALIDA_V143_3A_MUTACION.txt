@@ -1,0 +1,50 @@
+SHA256 DEL ARBOL ANTES DE MUTAR: 3fcd9b2a907ba89f193ded3b908489ce755362fb76d0b9efa8e0522d1e55b242
+
+=== CONTRAPRUEBA SIN MUTAR ===
+EXIT 0
+VERDE: adicion pura de UNA linea de verificacion en UNA sola ficha, censo intacto
+
+=== MUTACION 1: segundo campo tocado en OP-E-04 (orden +1) ===
+EXIT 1
+REFERENCIA: da255454f906eeada7f0b3f53eb757ec61176f91
+FICHAS ANTES: 71 | FICHAS DESPUES: 71
+IDS SOLO ANTES: [] | IDS SOLO DESPUES: []
+FICHAS QUE CAMBIAN: ['OP-E-04']
+  OP-E-04 CAMPOS QUE CAMBIAN: ['orden', 'verificacion']
+
+ROJO: 1 fallo(s)
+  - en OP-E-04 cambian campos ['orden', 'verificacion'], se esperaba solo verificacion
+
+=== MUTACION 2: verificacion 0 alterada (rompe el prefijo identico) ===
+EXIT 1
+REFERENCIA: da255454f906eeada7f0b3f53eb757ec61176f91
+FICHAS ANTES: 71 | FICHAS DESPUES: 71
+IDS SOLO ANTES: [] | IDS SOLO DESPUES: []
+FICHAS QUE CAMBIAN: ['OP-E-04']
+  OP-E-04 CAMPOS QUE CAMBIAN: ['verificacion']
+  OP-E-04 verificacion: 5 lineas -> 6 lineas
+  OP-E-04 PREFIJO IDENTICO (adicion pura): False
+  OP-E-04 LINEA NUEVA 6 (1950 caracteres): EXCEPCION DEL 9.22 PARA LOS PARES MUTUOS NOMBRADOS, ANADIDA EN LA VUELTA 142 POR ADICION Y SIN TOCAR UNA LETRA DE LA VER
+
+ROJO: 1 fallo(s)
+  - en OP-E-04 las lineas viejas NO son prefijo identico de las nuevas
+
+=== MUTACION 3: ficha OP-F-01 borrada (rompe el censo) ===
+EXIT 1
+REFERENCIA: da255454f906eeada7f0b3f53eb757ec61176f91
+FICHAS ANTES: 71 | FICHAS DESPUES: 70
+IDS SOLO ANTES: ['OP-F-01'] | IDS SOLO DESPUES: []
+FICHAS QUE CAMBIAN: ['OP-E-04']
+  OP-E-04 CAMPOS QUE CAMBIAN: ['verificacion']
+  OP-E-04 verificacion: 5 lineas -> 6 lineas
+  OP-E-04 PREFIJO IDENTICO (adicion pura): True
+  OP-E-04 LINEA NUEVA 6 (1950 caracteres): EXCEPCION DEL 9.22 PARA LOS PARES MUTUOS NOMBRADOS, ANADIDA EN LA VUELTA 142 POR ADICION Y SIN TOCAR UNA LETRA DE LA VER
+
+ROJO: 2 fallo(s)
+  - el censo de fichas se movio
+  - el juego de ids se movio
+
+SHA256 DEL ARBOL TRAS RESTAURAR: 3fcd9b2a907ba89f193ded3b908489ce755362fb76d0b9efa8e0522d1e55b242
+CONTRAPRUEBA FINAL TRAS RESTAURAR: EXIT 0
+
+3 DE 3 EN MUTACION, con contraprueba antes y despues. El arbol queda IDENTICO (sha256 igual).
