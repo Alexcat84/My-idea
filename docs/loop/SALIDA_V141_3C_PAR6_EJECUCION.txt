@@ -1,0 +1,72 @@
+TAREA 3.c, PAR 6: LA EJECUCION DE LA PODA.
+
+--- GRADO TOTAL ANTES (censo del arbol de trabajo) ---
+        WORK | nodos 3853 vivos 3171 depre 682 | sig 9231 prev 9205 suma 18436 union 9906 | solo_sig 701 solo_prev 675 auto 0 | nodos_con_dup_en_lista 0
+
+--- LA PODA ---
+==============================================================================
+RETIRO DE LA VUELTA | MODO: EJECUTAR
+==============================================================================
+
+GUARDA 1, LOS DOS EXTREMOS RESUELTOS (P.1) Y VIVOS:
+   asignacion_recursos_en_gates -> resuelve a asignacion_recursos_en_gates | existe True | vivo True
+   sistema_gates_go_kill -> resuelve a sistema_gates_go_kill | existe True | vivo True
+GUARDA 2, CERO AUTO-ARISTAS: OK, asignacion_recursos_en_gates != sistema_gates_go_kill
+GUARDA 3, LA VUELTA EXISTE HOY (dos vistas): asignacion_recursos_en_gates -> sistema_gates_go_kill : PRESENTE
+           y la IDA:                          sistema_gates_go_kill -> asignacion_recursos_en_gates : PRESENTE
+GUARDA 4, UNA OPERACION DEL PLAN PROHIBE LA VUELTA DE ESTE PAR:
+   SI. verificacion 0 de OP-M-01-ESLABONES: 'LA VUELTA NO EXISTE NI LITERAL NI RESUELTA en ninguno de los dos peldanos, comprobado CON EL RESOLUTOR PUESTO'
+       y la IDA sistema_gates_go_kill -> asignacion_recursos_en_gates es una fila de OP-M-01-ESLABONES
+GUARDA 5, LA IDA SIGUE PRESENTE AL TERMINAR: OK, la ida esta puesta
+
+GUARDA 6, EL GRADO TOTAL ANTES Y DESPUES (simulacion sobre copia en memoria):
+   entradas literales que se quitarian: de asignacion_recursos_en_gates.nodos_siguientes ['sistema_gates_go_kill'] | de sistema_gates_go_kill.nodos_previos ['asignacion_recursos_en_gates']
+   sig    antes   9231  despues   9230  delta -1
+   prev   antes   9205  despues   9204  delta -1
+   suma   antes  18436  despues  18434  delta -2
+   union  antes   9906  despues   9905  delta -1
+   PODA CORRECTA: la union baja en exactamente 1 y no sube.
+
+GUARDA 7, CERO DUPLICADAS Y CERO AUTO-ARISTAS NUEVAS TRAS RESOLVER.
+   LO QUE SE MIDE ES EL DELTA, NO EL TOTAL, y es la misma decision que la
+   guarda 6 de vuelta140_3_escribir_aristas.py ya tomo: las duplicadas que YA
+   ESTABAN se imprimen para que se vean, pero no bloquean, porque tienen dueno
+   escrito (OP-S-12, atadura 2 del 00_INDICE) y castigar a quien no las hizo
+   bloquea sin arreglar nada. Un RETIRO ademas no puede fabricar duplicadas:
+   solo quita entradas. Si el delta no es cero, algo muy raro paso.
+   asignacion_recursos_en_gates.nodos_siguientes: 6 -> 5 entradas
+      duplicadas YA PRESENTES (no bloquean, dueno OP-S-12): ['identificar_pensadores_de_diseno_internos']
+      duplicadas NUEVAS: ninguna | auto-aristas NUEVAS: ninguna
+   sistema_gates_go_kill.nodos_previos: 16 -> 15 entradas
+      duplicadas YA PRESENTES (no bloquean, dueno OP-S-12): ['gestion_portafolio_formal']
+      duplicadas NUEVAS: ninguna | auto-aristas NUEVAS: ninguna
+
+VERDE: las 7 guardas pasan.
+   ESCRITO asignacion_recursos_en_gates.nodos_siguientes: 6 -> 5 entradas (quitadas: ['sistema_gates_go_kill'])
+   ESCRITO sistema_gates_go_kill.nodos_previos: 16 -> 15 entradas (quitadas: ['asignacion_recursos_en_gates'])
+
+EJECUTADO: la vuelta asignacion_recursos_en_gates -> sistema_gates_go_kill queda retirada en las dos vistas.
+
+--- GRADO TOTAL DESPUES (censo del arbol de trabajo) ---
+        WORK | nodos 3853 vivos 3171 depre 682 | sig 9231 prev 9205 suma 18436 union 9906 | solo_sig 701 solo_prev 675 auto 0 | nodos_con_dup_en_lista 0
+EXITCODE: 0
+
+================================================================================
+CORRECCION DECLARADA DE ESTA MISMA SALIDA, Y EL TEXTO VIEJO SE QUEDA ARRIBA
+================================================================================
+LA LINEA "GRADO TOTAL DESPUES" DE ARRIBA ESTA MEDIDA CON EL GRAFO SIN RECOMPILAR
+Y POR ESO SALE IGUAL QUE LA DE ANTES (9231 / 9205 / 18436 / 9906).
+
+EL MOTIVO, MEDIDO Y NO OPINADO: scripts/loop/vuelta83_conteo_aristas.py WORK lee
+dataset/metadata/master_graph.json, y la poda escribe en dataset/nodos/*.json. El
+master_graph solo se recompila con scripts/run_phase1.py, que en esta salida
+todavia no habia corrido. La cifra de arriba no es falsa: es la del grafo
+COMPILADO ANTES de la poda, y esta mal ROTULADA como "despues".
+
+LA MEDICION BUENA, con el ciclo corrido, vive en
+docs/loop/SALIDA_V141_3_CONTEO_PAR6.txt y dice:
+        WORK | nodos 3853 vivos 3171 depre 682 | sig 9230 prev 9204 suma 18434 union 9905
+
+O SEA: sig -1, prev -1, suma -2, union -1. Es EXACTAMENTE lo que la guarda 6 de
+la simulacion predijo sobre la copia en memoria, y es la PODA de la contraorden
+del 12 ago 2026: baja el grado total en uno y no lo sube.
