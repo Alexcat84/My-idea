@@ -1,0 +1,28 @@
+==============================================================================
+MUTACIONES DE LA TAREA 2.a | vuelta 142
+La guarda se corre COMO SUBPROCESO: se prueba su EXIT y sus lineas,
+no una copia de su regla (ver el docstring de correr()).
+Fichero citado: SALIDA_V142_1B_DESGLOSE_DIRECCIONES.txt | linea CIFRA elegida: 'universo 1 cinco remitidas' | valor bueno COMPUTADO: 17
+Valor mutado, COMPUTADO como bueno mas uno: 18
+==============================================================================
+
+(i.b) sin mutar -> EXIT 0 | cotejadas 1 | vistas 1
+
+(i.a) mutada a 18 -> EXIT 1 | cotejadas 0 | vistas 1
+      linea 1: "18 direcciones" <-> `SALIDA_V142_1B_DESGLOSE_DIRECCIONES.txt`: contado 17 (linea CIFRA 'universo 1 cinco remitidas', elegida POR ETIQUETA) [candidatas de esa unidad en el fichero: 'universo 1 cinco remitidas'=17, 'universo 2 seis del catalogo'=18]
+      COBERTURA CERO: la guarda vio 1 cifra(s) con unidad del vocabulario, cotejo 0 y eximio 0. UN VERDE SOBRE CERO NO ES UN VERDE. Unidades vistas detras de un numero y FUERA del vocabulario (1 palabra(s)): cinco (1)
+
+(ii.a) sin cifras -> EXIT 1 | cotejadas 0 | vistas 0
+      COBERTURA CERO: la guarda vio 0 cifra(s) con unidad del vocabulario, cotejo 0 y eximio 0. UN VERDE SOBRE CERO NO ES UN VERDE. Unidades vistas detras de un numero y FUERA del vocabulario (0 palabra(s)): ninguna
+
+(ii.b) con una cifra -> EXIT 0 | cotejadas 1 | vistas 1
+
+==============================================================================
+  VERDE i.b CONTRAPRUEBA sin mutar: EXIT 0 y la cifra buena COTEJADA
+  VERDE i.a MUTADA: EXIT 1 y ROJO NOMBRANDO la linea de la cifra mutada
+  VERDE ii.a SIN cifras cotejables: EXIT 1 por COBERTURA CERO
+  VERDE ii.b CONTRAPRUEBA con UNA cifra cotejable: EXIT 0, el fallo de cobertura cero DESAPARECE
+CIFRA de la bateria 2.a: 4 comprobaciones
+CIFRA verdes de la bateria 2.a: 4 comprobaciones
+==============================================================================
+VERDE: los 4 casos se comportan.

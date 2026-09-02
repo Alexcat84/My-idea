@@ -47517,3 +47517,321 @@ dentro de `verificar_mutaciones_viejas.py` (4.3). **TAREA 3**, el trabajo: la ex
 escrita **por adicion** en la verificacion de `OP-E-04` (3.4), y con ella `OP-E-04` ejecutada entera,
 con el giro del par 5 en su mismo commit. **TAREA 4**, la relectura al doble del tramo, que es **toda
 cifra publicada cuya unidad la guarda de cifras no sepa leer**.
+
+---
+
+# ACTA DE LA VUELTA 142 DEL AUDITOR (REGIMEN COMPLETO, el austero sigue suspendido)
+
+**HUECO DE ACTA: NO HAY.** `grep -c '^# ACTA DE LA VUELTA' docs/loop/ACTA_AUDITOR.md` corrido hoy da
+**108**, y las cuatro ultimas cabeceras son 138, 139, 140 y **141**: la ultima escrita cubre la vuelta
+inmediatamente anterior a la que audito. Fecha leida de git (`git log -1 --format=%ad
+--date=format:'%d %b %Y'`): **02 Sep 2026**. Rama `pasada-unica`, HEAD real de hoy `016df0f7`,
+`origin/pasada-unica == HEAD` (`git status -sb`).
+
+**HUECO DE REPORTE, Y ESE SI LO HAY.** `docs/loop/REPORTE.md` sigue siendo el de la **vuelta 141**
+(`git log -1 --oneline -- docs/loop/REPORTE.md` da `9835e37e`, de la 141). **LA VUELTA 142 CORRIO
+CINCO COMMITS Y NO ESCRIBIO REPORTE.** Audito contra EL REPO, que es lo que `AUDITOR.md` 1.1 manda
+(*"El estado de verdad es EL REPO"*), con Gate 0 y las suites RE-CORRIDOS por mi, igual que el
+protocolo del hueco de acta ordena para una vuelta sin verificar.
+
+**EL VEREDICTO DE UNA LINEA: LO QUE ENTREGO ES BUENO Y LO VERIFIQUE ENTERO. LA TAREA 0, LA 1 Y LA 2
+ESTAN HECHAS Y MUERDEN, Y NI UNA CIFRA SE MUEVE MAL: CENSO, ARISTAS, DESGLOSE Y TABLA DE LA FASE 06
+CUADRAN AL DIGITO CON MIS PROPIOS INSTRUMENTOS. PERO LA VUELTA NO CIERRA: SIN REPORTE, SIN BLOQUE DE
+CIERRE Y CON LA TAREA 3.a HECHA Y SIN COMMITEAR EN docs/plan/OPERACIONES.jsonl. Y LO GRANDE QUE
+TRAIGO, MEDIDO: ESA 3.a NO MUEVE NADA, PORQUE LA VARA DE ENLACE NO LEE LA EXCEPCION QUE ACABA DE
+ESCRIBIRSE, ASI QUE OP-E-04 NO PUEDE LLEGAR A CUMPLIDA Y LA FASE 06 NO PUEDE CERRAR NUNCA.**
+
+## 1. VERIFICACION, CON MIS PROPIOS INSTRUMENTOS Y EN ESTA VUELTA
+
+**IDENTIDAD.** `git rev-parse 80c8ad99^` da **exactamente** `fd020d71`, el commit de mi acta 141: el
+bloque de apertura es hijo directo del acta y trae **diez ficheros y nada mas** (`git show --numstat
+80c8ad99`), los diez `SALIDA_V142_*_APERTURA.txt`, todos por adicion. `fd020d71..HEAD` trae **CINCO**
+commits, que son los cinco de la vuelta. `verificar_apertura_sellada.py --vuelta 142`, corrido por mi,
+**VERDE EXIT 0 con los DIEZ dentro**. `verificar_cierre_sellado.py --vuelta 142`: **ROJO,
+`SALIDA_V142_HEAD_CIERRE.txt` no existe**. La vuelta no tiene sello de cierre.
+
+**EL CICLO ENTERO, CORRIDO POR MI HOY Y NO LEIDO DE SU SALIDA.** `python scripts/run_phase1.py
+--reaplico-curaduria` da **GATE 0: OK**, master_graph 3.853 contra 3.853, componentes 1, cobertura
+100,0 por ciento, titulos duplicados 0, auto-aristas tras resolver 0, divergentes 0, semillas
+deprecadas 0, puentes rotos 0, alcanzabilidad 100,0 por ciento
+(`docs/loop/_auditor_v142_gate0.txt`). Detras, `etiquetas_de_cara.py --aplicar` (71 etiquetas),
+`sync_assets_web.py` (seis assets) y **`git diff --numstat -- dataset/ web/ engine/` en cero**.
+
+**EL CENSO Y LAS CUATRO CIFRAS DE ARISTAS, CON PARSER PROPIO** (`_auditor_v142_censo.py`, corrido
+sobre `dataset/nodos/` y no sobre `master_graph.json`): **3.853 / 3.171 / 682**, **sig 9.230, prev
+9.204, suma 18.434, union 9.905**, solo_sig 701, solo_prev 675, auto 0, duplicadas en lista 0.
+**IDENTICO AL CONTEO DE APERTURA de la vuelta**, o sea **CERO ARISTAS MOVIDAS**, que es lo coherente
+con que la TAREA 3.b nunca corriera.
+
+**MOTOR 25/25** (`python engine/run_all_tests.py`, EXIT 0). **VITEST 80 ficheros, 1.030 passed, 3
+skipped** (EXIT 0). **TSC EXIT 0, cero lineas.** **DESFASE DEL CALIBRADO: 468 filas, 4 de desfase**,
+las cuatro con el mismo nombre y sentido que la apertura.
+
+**LOS REGISTROS DE LA TAREA 1, POR ADICION PURA, MEDIDO CON `git show --numstat 452a23fd`:**
+`docs/PENDIENTES.md` **221 anadidas / 0 borradas** y `docs/plan/CORRECCIONES_A_APLICAR.md` **152
+anadidas / 0 borradas**. **`docs/plan/OPERACIONES.jsonl` no se toca en NINGUN commit de la vuelta**
+(`git log fd020d71..HEAD -- docs/plan/OPERACIONES.jsonl` sale vacio), como la TAREA 1 exigia. Lei
+R.23 entera: trae las **seis** partes que el encargo pide (las diez adjudicaciones 3.1 a 3.10, la
+caida del ejecutor, las dos de la casa, mis cuatro, la ciega y la racha en dos).
+
+**GUIONES: CERO.** `git diff fd020d71 HEAD` sobre los dos registros: **0 guiones largos y 0 medios en
+las lineas anadidas**. Los 54 de `docs/PENDIENTES.md` son de sus secciones viejas, no de esta vuelta.
+
+**LA TAREA 2, PUNTO POR PUNTO, CORRIDA POR MI:**
+
+  - **2.a, LA GUARDA DE CIFRAS YA NO ES CIEGA.** `verificar_cifras_del_reporte.py` sale hoy **ROJO
+    EXIT 1**, con **9 cifras que no cuadran** y la linea **`COBERTURA CERO: la guarda vio 8 cifra(s)
+    con unidad del vocabulario, cotejo 0 y eximio 0. UN VERDE SOBRE CERO NO ES UN VERDE`**. El
+    vocabulario paso de **8 a 24 palabras** y la nomina de unidades fuera se publica en cada corrida.
+    **Y muerde donde tenia que morder:** entre los nueve rojos estan las dos lineas del *"18
+    direcciones"* que fue mi 4.4 y su 4.1. `vuelta142_2a_mutaciones.py`: **4 de 4 VERDE, EXIT 0.**
+  - **2.b, EL BLOQUE DE COMMITS SE ANCLA AL SELLO.** `tallar_cabecera_reporte.py --vuelta 141
+    --fase04 --comparar-commits docs/loop/REPORTE.md`: **VERDE EXIT 0, BLOQUE IDENTICO A GIT, 11
+    contra 11, mismo orden, 9 asuntos truncados y declarados**, donde en la 141 daba ROJO con 13.
+    **Y su correccion al encargo es correcta y la medi:** `git rev-parse 5a82ce38^` da **exactamente**
+    `84e4d861`, o sea que el hash sellado es el PADRE del commit que lo lleva y el rango bueno acaba
+    en `5a82ce38`, leido con `--diff-filter=A`. Con `--vuelta 142`, sin sello de cierre, sale **ROJO
+    EXIT 1 diciendo que falta el fichero**, que es lo que el encargo pedia.
+    `vuelta142_2b_mutacion_commits.py`: **3 de 3 VERDE, EXIT 0.**
+  - **2.c, EL TERCER VEREDICTO.** `tallar_estado_de_fase.py --fase 06_MESAS`, corrido por mi, sale
+    **igual que la sellada de la 141 salvo las dos lineas nuevas**: `diff` da UNA sola diferencia, los
+    dos sub-sacos `CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0)` y `CONSUMIDAS (0)`. **Catalogo 16,
+    cumplido 13, sin cumplir 3 (`OP-M-01`, `OP-M-04`, `OP-E-04`), sin vara escrita 1: NI UNA CIFRA DE
+    LA FASE 06 SE MUEVE**, exactamente como el ejecutor predijo en la 141 y yo firme.
+    `vuelta142_2c_mutaciones.py` sale hoy **4 de 5**, y **el unico rojo es la P.16 de arbol limpio,
+    causada por la 3.a sin commitear**; su salida sellada, con el arbol limpio, es **5 de 5 EXIT 0**
+    (la propia salida trae dentro `git status --porcelain -- dataset/ docs/plan/` vacio). **El sujeto
+    se elige por computo (`OP-M-02-PROG`) y el caso (iii) halla por computo las DOS reales,
+    `OP-M-02-MEDIOS` y `OP-M-02-ADMIT`, y las dos salen DIVERGENTES.**
+  - **2.d, LA BATERIA VIEJA.** `verificar_mutaciones_viejas.py`, corrido por mi: **SIETE dentro** (era
+    cinco), ANCLA PERDIDA 0, NO REPRODUCIBLE 0, CASO DECLARADO 2, y **NO MORDIO 1:
+    `vuelta141_2_mutaciones.py`**, o sea **ROJO EXIT 1**. Su salida sellada dice exactamente lo mismo:
+    la bateria se entrego en rojo y declarado. `vuelta142_2d_mutacion_bateria.py`: **3 de 3 VERDE.**
+  - **EL 2.e RE-CORRIDO.** `vuelta141_2e_caso_positivo_fase03.py` sale **EXIT 2, NO CALZA**, con
+    **cuatro de mas** todavia: `OP-U-01` y `OP-U-02` en `SIN VARA ESCRITA`, y `OP-M-02-ADMIT` y
+    `OP-M-02-MEDIOS` ahora **DIVERGENTES**, con el id escrito, el id al que resuelve y el `eliminar`
+    que lo condena, contra el grafo de hoy. **No bajo a dos.**
+
+**LA TAREA 3.a, MEDIDA EN EL ARBOL DE TRABAJO Y SIN COMMITEAR.** `git diff` sobre
+`docs/plan/OPERACIONES.jsonl` da `1 insertion / 1 deletion`, que es lo que un JSONL de una linea por
+ficha da SIEMPRE. **Lo medi semanticamente con parser propio:** **71 fichas antes y 71 despues**, la
+UNICA que cambia es **`OP-E-04`**, el UNICO campo es **`verificacion`**, que pasa de **5 a 6 lineas**,
+y **las cinco viejas son prefijo identico de las seis nuevas**: **adicion pura, cero borradas.** El
+texto trae las cinco cosas del encargo (la regla con 9.22 y el hueco de orden 1, la lectura con los
+cuatro pares y el LD-42, lo que autoriza, lo que no, y la contradiccion de la ficha consigo misma),
+cita la CORRECCION 14 y no lleva un solo guion largo.
+
+## 2. RELECTURA CIEGA
+
+**NO HAY DISCUTIBLES MARCADOS, PORQUE NO HAY REPORTE.** La ciega la hice donde si hay cifra que
+adjudicar: **el desglose de direcciones de la CORRECCION 15**. Escribi mi propio instrumento
+(`_auditor_v142_direcciones.py`: parser de prosa, resolutor propio y colapso por alias), lo corri
+**ANTES de abrir `docs/plan/CORRECCIONES_A_APLICAR.md`**, y solo despues destape.
+
+**COINCIDIMOS EN LA UNIDAD ADJUDICADA, AL DIGITO: 17 DIRECCIONES sobre las CINCO (2+8+4+2+1) y 18
+sobre las SEIS**, con `OP-M-05-APERTURA` aportando exactamente **1**. Su tabla da lo mismo y su
+membresia sale parseada de `docs/plan/04_ENLACES.md`, no tecleada. **Corri su instrumento y sale byte
+a byte identico a su sellada** (`diff` en cero).
+
+**DONDE NO COINCIDIMOS ES EN UNA UNIDAD QUE NADIE HABIA NOMBRADO, Y LO DECLARO EN VEZ DE COPIARLO.**
+Mi parser conto **16 filas** sobre las cinco; el suyo, **18**. Lo mordi hasta el fondo: su *"fila de
+ficha"* es **la direccion escrita antes de resolver**, que es la convencion que
+`tallar_estado_de_fase.py` sostiene desde la 141 (`OP-E-05`: **2 entradas JSON que el parser abre en 4
+filas**; `OP-M-05-APERTURA`: **1 entrada JSON que abre en 2 filas**). El mio contaba **entradas del
+array JSON**, que es una TERCERA unidad que ningun documento nombra. **Su 18 es el bueno bajo la
+convencion de la casa y mi acta 141 lo publico bien.** Cero discrepancias de cifra.
+
+## 3. ADJUDICACIONES
+
+**3.1. LA PARADA 1 DEL EJECUTOR (EL 2.e NO BAJA A DOS): A FAVOR DE EL, Y EL ERROR ES DE MI ENCARGO.**
+Mi TAREA 2.c de la 141 decia literal *"los cuatro de mas tienen que bajar a DOS"*. **Es imposible por
+construccion y lo contradice mi propia adjudicacion 3.5**, que dice *"NUNCA `CUMPLIDO`"*: si
+DIVERGENTE no puede ser cumplida, se queda en `sin cumplir`, y los de mas siguen siendo cuatro. El
+razonamiento del ejecutor esta escrito en el docstring del instrumento y es el correcto: si DIVERGENTE
+saliera de `sin cumplir`, **una fase con una operacion EJECUTADA AL REVES dentro publicaria
+`sin cumplir: 0` y la frase "la fase cierra" pasaria la guarda**. Eso es banco 9 y `P.14`.
+**ADJUDICO: el sub-saco nombrado dentro de `sin cumplir` es la forma correcta. Lo que se arregla es LA
+EXPECTATIVA del caso positivo, no la vara: se recomputa a "cumplido mas divergentes mas sin vara
+escrita" contra el catalogo menos las seis remitidas. ENCARGADO.**
+
+**3.2. LA PARADA 2 (EL 2.a.ii SIN SUJETO): A FAVOR, EL ROJO ES EL QUE YO PEDI, PERO NO PUEDE
+QUEDARSE ASI.** Mi encargo 2.d decia literal *"el caso se declara OMITIDO POR FALTA DE SUJETO y ESO
+ES ROJO, no verde"*, y eso es exactamente lo que hace. Su descarte esta computado y escrito:
+`OP-E-04` lista las dos direcciones de **2 pares**, asi que *"todas las idas y ninguna vuelta"* es
+inalcanzable bajo regimen PROHIBE. **PERO: `verificar_mutaciones_viejas.py` queda en ROJO PERMANENTE,
+y una bateria que no puede estar verde no es una puerta, es un adorno rojo.** El remedio esta en la
+casa y no es doctrina nueva: **`vuelta142_2c_mutaciones.py` fabrica su sujeto EN MEMORIA** y elige por
+computo. **ADJUDICO: el 2.a.ii fabrica su sujeto en memoria igual que el 2.c, sobre una operacion
+ELEGIDA POR COMPUTO, y vuelve a morder. ENCARGADO.**
+
+**3.3. Y ESTA ES LA GRANDE, Y LA TRAIGO YO: LA VARA DE ENLACE NO LEE LA EXCEPCION QUE LA 3.a ACABA DE
+ESCRIBIR, ASI QUE LA FASE 06 NO PUEDE CERRAR NUNCA.** Lo medi con el arbol en las dos posiciones:
+corri `tallar_estado_de_fase.py --fase 06_MESAS` **con la 3.a puesta** y **con la 3.a guardada en
+`git stash`**, y **la celda de `OP-E-04` sale IDENTICA en las dos**: *"regimen de vuelta PROHIBE por
+la ficha (verificacion 0): la vuelta presente IMPIDE cumplir"*. Lei el codigo: `regimen_de_vuelta()`
+clasifica **por OPERACION**, con tres frases literales para PROHIBE y tres para MUTUO, y **el texto de
+la excepcion no contiene ninguna de las de MUTUO**. Y si la contuviera **saldria `AMBIGUO` con
+fallo**, porque la verificacion 0 sigue entera: **no hay redaccion posible que arregle esto mientras
+el regimen sea por operacion.** Consecuencia medida: `OP-E-04` tiene 4 vueltas presentes, cuatro de
+ellas legitimas por la excepcion, **y no puede llegar a CUMPLIDA ni ejecutando la 3.b entera**; con
+ella `sin cumplir` nunca baja de 1 y la fase 06 no cierra.
+**NO ES DOCTRINA NUEVA Y POR ESO NO ES PARADA:** el banco **9.22** define la figura **por PAR**
+(*"La figura exige dos lineas distintas, una en cada nodo"*, *"El par es sano"*), y el hueco de
+orden 1 del `00_INDICE:482` exige literal **"LA GUARDA TIENE QUE LLEVAR LA EXCEPCION ESCRITA"**. Hoy
+**no la lleva**. **ADJUDICO: el regimen de vuelta pasa a ser POR PAR cuando la ficha nombra sus pares
+en la excepcion; la operacion deja de tener un regimen unico y cada direccion se juzga contra el par
+al que pertenece. La excepcion se lee de la ficha, no se adivina. ENCARGADO Y BLOQUEANTE.**
+
+**3.4. EL `00_INDICE` DICE "LAS UNICAS" Y HOY SON EL DOBLE: CORRECCION POR ADICION, NO PARADA.**
+`docs/plan/00_INDICE.md:478` dice *"Los dos enlaces mutuos del banco 9.22 son las UNICAS aristas del
+plan que van en las dos direcciones a proposito"*. **Medido hoy con mi parser sobre el propio
+`aristas_nuevas`:** `OP-E-05` escribe las dos direcciones de **2 pares** (`sgk` con `formal`, `sgk`
+con `dos_niveles`) y **`OP-E-04` escribe las dos direcciones de 2 pares mas** (`sgk` con
+`portfolio_management` por LD-40 y LD-48, `sgk` con `gestion_portafolio_foco` por LD-45 y LD-53).
+**Son CUATRO pares y OCHO aristas, no dos y cuatro.** Se resuelve con el mecanismo que la casa ya usa
+y que las CORRECCIONES 13 a 16 estrenan: **se registra por adicion, con las dos cifras y sus fuentes,
+y la vieja no se borra. ENCARGADO como CORRECCION 17.**
+
+**3.5. LA CORRECCION 15 Y LA 16: LAS DOS A FAVOR, Y LAS VERIFIQUE ENTERAS.** La 15 publica las tres
+cifras con su autor, su corte y su fichero, dice por que discrepan con los dos defectos separados y no
+borra ninguna; **la ciega me dio sus mismos 17 y 18**. La 16 describe la especie **sin nombres
+propios** antes de dar los dos casos, y sus tres citas existen y las abri: el `nota` de las dos fichas
+con la correccion declarada de la vuelta 64, `SALIDA_V64_CONSUMIDAS.txt` con sus cinco consumidas y
+sus dos divergentes, y `EJECUTOR.md` regla 9 con `P.1`. **A FAVOR LAS DOS.**
+
+**3.6. LA VUELTA SIN REPORTE NO ES PARADA, Y DIGO CON QUE REGLA.** `AUDITOR.md` 1.1 fija que **el
+estado de verdad es el repo** y que nada se acepta sin verificarse con instrumento propio corrido en
+esta vuelta; el protocolo del hueco de acta fija el remedio para una vuelta sin verificar: **Gate 0 y
+las suites RE-CORRIDOS por el auditor**. Los corri todos. **Lo que se pierde no es la verificacion, es
+la DECLARACION**: sin reporte no hay donde vivan la particion (*"diciendo CUAL no hiciste y por que"*)
+ni la TAREA 4. Eso va como caida de encargo, no como parada.
+
+## 4. CAIDAS, CON NOMBRE, LAS SUYAS Y LAS MIAS
+
+**(1) DOS DEL EJECUTOR, NINGUNA DE CIFRA NI DE CLASE.**
+
+  - **4.1, DE INCUMPLIMIENTO DE ENCARGO, Y ES LA GRANDE: LA VUELTA 142 NO TIENE REPORTE, NI BLOQUE DE
+    CIERRE, NI CABECERA TALLADA.** Medido: `docs/loop/REPORTE.md` sigue en `9835e37e`, de la 141; no
+    existe ningun `SALIDA_V142_*_CIERRE.txt`; `verificar_cierre_sellado.py --vuelta 142` sale ROJO por
+    fichero ausente. La TAREA 0 exigia el gemelo de CIERRE con los diez nombres y el tallador con
+    `--comparar` y `--comparar-commits`; la TAREA 4 exigia publicar cuantas cifras vio la guarda,
+    cuantas cotejo y cuantas quedaron fuera. **Nada de eso tiene donde vivir.** Es la **quinta vuelta
+    no entregada entera** (81, 114, 127, 129 y esta).
+  - **4.2, DE PROCEDIMIENTO: LA TAREA 3.a QUEDA HECHA Y SIN COMMITEAR EN `docs/plan/`.** El encargo
+    abre con *"Commitea y pushea lo pendiente en la rama activa antes de tocar nada"*. Consecuencia
+    medida y no supuesta: **`vuelta142_2c_mutaciones.py` sale hoy 4 de 5** y el unico rojo es su
+    guarda `P.16` de arbol limpio, que ve el `M docs/plan/OPERACIONES.jsonl`. **El trabajo es bueno**
+    (adicion pura verificada arriba); lo que falla es dejarlo fuera de un commit, que **ensucia una
+    guarda ajena y deja la rama sin sello**.
+
+**(2) TRES DE LA CASA, LAS TRES DE GUARDA QUE NO ALCANZA.**
+
+  - **4.3: LA VARA DE ENLACE NO LEE LA EXCEPCION Y NO PUEDE LEERLA.** Es mi 3.3, medida con el arbol
+    en las dos posiciones. Incumple el hueco de orden 1 del `00_INDICE` con sus propias palabras.
+  - **4.4: `verificar_mutaciones_viejas.py` QUEDA EN ROJO PERMANENTE.** Es mi 3.2. El rojo es honesto
+    y es el que pedi, pero una bateria que **no puede** estar verde deja de servir de puerta.
+  - **4.5: LA EXPECTATIVA DEL CASO POSITIVO DE LA FASE 03 ES INALCANZABLE.** Es mi 3.1: pide una
+    cuenta que la vara, bien construida, no puede producir.
+
+**(3) TRES MIAS, LAS TRES DE ENCARGO.**
+
+  - **4.6, DE ENCARGO: PEDI QUE LOS CUATRO DE MAS BAJARAN A DOS, CONTRA MI PROPIA ADJUDICACION 3.5.**
+    Mi 3.5 de la 141 dice *"NUNCA `CUMPLIDO`"* y mi 2.c de la misma acta pide la cuenta que solo sale
+    si dejan de contarse como no cumplidas. **Mi letra se contradice a si misma en la misma acta**, y
+    el ejecutor hizo lo unico correcto: medirlo y parar el caso.
+  - **4.7, DE ENCARGO: PEDI "CERO BORRADAS" EN UN JSONL DONDE CADA FICHA ES UNA LINEA.** Mi TAREA 3.a
+    dice literal *"`git show --numstat` del commit tiene que dar CERO BORRADAS en
+    `OPERACIONES.jsonl`"*. **Es inalcanzable por construccion**: cualquier adicion a una ficha
+    reescribe su linea y da 1/1. Lo medi y la guarda buena es **semantica**: mismas fichas, mismo
+    campo, la lista vieja como **prefijo identico** de la nueva. Asi la corri y asi sale.
+  - **4.8, DE ENCARGO: PEDI MEDIR EL VOCABULARIO SOBRE "EL REPORTE DE ESTA VUELTA" EN UNA TAREA QUE
+    CORRE ANTES DE QUE EL REPORTE EXISTA.** Mi 2.a.i dice *"sacalas midiendo el `REPORTE.md` de la
+    vuelta 141 y el de esta"*, y la TAREA 2 es **bloqueante y anterior a todo**. **Circular por
+    construccion.** El ejecutor midio sobre el unico fichero que existia y **publico que era uno**,
+    que es lo honesto.
+
+**DISCREPANCIAS DE CLASE ABIERTAS: CERO. CAIDAS DE CIFRA PUBLICADA DEL EJECUTOR: CERO, Y LO DIGO
+EXPRESAMENTE**: recompute el censo, las cuatro cifras de aristas, el desglose entero de direcciones y
+filas en los dos universos, la tabla de la fase 06 linea a linea contra la sellada de la 141, los tres
+numstat y la adicion semantica de la 3.a. **Todas cuadran al digito.**
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: CERO relecturas de par que muevan el marcador.** **LA CIEGA FUE DE CIFRA: el desglose de
+direcciones adjudicado con instrumento propio antes de abrir la CORRECCION 15, coincidiendo al digito
+en la unidad adjudicada (17 y 18) y separando una tercera unidad que nadie habia nombrado.** Cero
+puestos.
+
+**Varas corridas por mi hoy:** el ciclo entero (Gate 0 con sus quince comprobaciones, etiquetas, sync,
+numstat en cero); motor, vitest y tsc; el censo y las cuatro cifras de aristas con parser propio; el
+desfase del calibrado; `verificar_apertura_sellada.py` y `verificar_cierre_sellado.py`;
+`verificar_cifras_del_reporte.py`; `tallar_cabecera_reporte.py --comparar-commits` sobre la 141 y
+sobre la 142; `tallar_estado_de_fase.py --fase 06_MESAS` **con la 3.a puesta y con la 3.a en stash**,
+con `diff` contra la sellada de la 141; `vuelta141_2e_caso_positivo_fase03.py`;
+`vuelta141_2_mutaciones.py`; `verificar_mutaciones_viejas.py`; las cuatro baterias
+`vuelta142_2a/2b/2c/2d`; `vuelta142_1b_desglose_direcciones.py` con `diff` contra su sellada; mi
+propio `_auditor_v142_direcciones.py` con parser y resolutor propios; `pares_de_aristas` sobre las
+seis operaciones para separar entrada JSON de fila de ficha; el parser semantico de la 3.a sobre las
+71 fichas; los numstat por commit y el `git log` de `OPERACIONES.jsonl`; el conteo de guiones sobre
+las lineas anadidas; `git rev-parse 80c8ad99^` y `git rev-parse 5a82ce38^`; el banco 9.22 y
+`00_INDICE:455-485` leidos enteros.
+
+**Caidas del ejecutor: UNA de incumplimiento de encargo (4.1) y UNA de procedimiento (4.2). De la
+casa: TRES de guarda que no alcanza (4.3, 4.4 y 4.5). Caidas del auditor: TRES de encargo (4.6, 4.7 y
+4.8).**
+
+**Acumulado:** **859 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase del
+ejecutor** (sin cambio), **86 de reporte del ejecutor** (**SIN CAMBIO: no hay reporte que pueda
+fallar**), **20 de cifra publicada del ejecutor** (**SIN CAMBIO**, recomputado como digo arriba),
+**22 de expediente** (sin cambio), **22 de incumplimiento de encargo** (21 mas la 4.1), **7 de
+procedimiento del ejecutor** (6 mas la 4.2), **16 de cifra del auditor** (sin cambio), **20 de acta
+del auditor** (sin cambio), **36 de procedimiento del auditor** (sin cambio), **1 de reporte del
+auditor** (sin cambio), **48 de encargo del auditor** (45 mas la 4.6, la 4.7 y la 4.8), **2 de clase
+del auditor** (sin cambio), y **5 vueltas no entregadas enteras** (4 mas la 142: 81, 114, 127, 129,
+142). **POR ESPECIE, Y ESTO NO SUMA DOS VECES AL TOTAL: 6 de guarda envejecida** (sin cambio) y **32
+de guarda que no alcanza o cegada** (29 mas la 4.3, la 4.4 y la 4.5).
+
+**RACHAS:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO.** Ni una cifra de `dataset/`, de `docs/plan/`
+> o del banco se movio mal. El grafo no se toco: mi censo de hoy es identico al de la apertura de la
+> vuelta, cero aristas movidas.
+>
+> **REPORTE: SE QUEDA EN DOS, Y POR UNA RAZON QUE HAY QUE DECIR EN VOZ ALTA: NO HAY REPORTE.** La
+> caida de reporte es, por su propia definicion, *"una afirmacion equivocada que vive solo en
+> `REPORTE.md`"*. Sin reporte no hay especie que contar. **DOS, no tres. NO ES PARADA. Y no cuento
+> como acierto lo que solo es una pagina que no se escribio.**
+>
+> **LA ESCALADA DE LA RACHA EN DOS: ENTREGADA EN CUATRO DE CUATRO PUNTOS Y VERIFICADA HOY.** La guarda
+> de cifras deja de salir verde sobre cero y muerde; el bloque de commits se ancla al sello; la vara
+> `FUSION` publica su tercer veredicto y no silencia a las dos divergentes; y las mutaciones de la 140
+> y la 141 entran en la bateria. **Y COMO LA RACHA SIGUE EN DOS, `AUDITOR.md` 1.2 me obliga otra vez y
+> lo hago EN ESTE MISMO ACTA**: la escalada de la vuelta siguiente es **el regimen POR PAR de la vara
+> de enlace** (4.3), **la bateria que vuelve a poder estar verde** (4.4) y **la expectativa
+> recomputada del caso positivo** (4.5), **como TAREA BLOQUEANTE**, sin esperar decision de nadie.
+> **Declararla sin encargarla seria caida propia mia y no la cometo.**
+
+## 6. CONDICIONES DE PARADA, REPASADAS UNA A UNA
+
+**NINGUNA SE CUMPLE, Y LO DIGO CON SU NOMBRE.** Doctrina nueva: **NO**; la 3.3 la cubren el banco
+**9.22** (la figura es del PAR) y el hueco de orden 1 del `00_INDICE:482` con sus palabras exactas; la
+3.2 la cubre el patron en memoria que `vuelta142_2c_mutaciones.py` ya usa con `EJECUTOR.md` regla 1;
+la 3.1 es caida de mi encargo. Contradiccion con regla vigente o cifra publicada: **NO**; el *"las
+UNICAS"* del `00_INDICE` se resuelve con el mecanismo de correccion por adicion que las CORRECCIONES
+13 a 16 ya estrenan, sin borrar la vieja (3.4). Decision de fundador: **NO**; nada de lo encargado
+borra contenido sin regla, cambia el alcance, gasta fuera del repo ni toca produccion. Fallo tecnico
+repetido: **NO**; Gate 0 verde corrido por mi hoy y verde en la 141. Credito roto: **NO**; clase y
+cifra publicada en **CERO**, reporte en **DOS**. Cierre de la fase 03 y de la fase 05: **CUMPLIDAS** y
+citables, no reabiertas. Campana consumada: **NO**; la fase 06 no cierra, faltan `OP-M-01`, `OP-M-04`
+y `OP-E-04`, medido hoy por mi. Credenciales: **NO** aplica.
+**`PROMPT_SIGUIENTE.md` va escrito. NO se escribe `PARA_ALEXIS.md`.**
+
+## 7. LO QUE ENTREGO COMO ENCARGO
+
+**TAREA 0**, el bloque de apertura, **y el de CIERRE que la 142 no puso**. **TAREA 1**, los registros
+de esta acta y la CORRECCION 17 (3.4). **TAREA 2, BLOQUEANTE**, la escalada: el regimen **por PAR** de
+la vara de enlace leyendo la excepcion de la ficha (3.3), la bateria que vuelve a morder (3.2) y la
+expectativa recomputada del caso positivo (3.1). **TAREA 3**, el trabajo: **commitear la 3.a que ya
+esta hecha** y, con la vara arreglada, `OP-E-04` entera con el giro del par 5 en su mismo commit.
+**TAREA 4**, la relectura al doble, que esta vez es **el cierre de la vuelta**: reporte, bloque de
+cierre y cabecera cotejada, porque lo que fallo no fue medir sino declarar.
