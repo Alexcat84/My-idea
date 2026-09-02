@@ -1,0 +1,176 @@
+############ OP-M-01-FUSION
+==============================================================================
+P.5, LA LECTURA DEL ACTO OP-M-01-FUSION, PAR A PAR
+  miembros (5): sistema_gates_go_kill, gates_go_kill_decision_points, requisitos_gates_con_dientes, estructura_gates, estructura_de_gates
+  superviviente: sistema_gates_go_kill
+==============================================================================
+  pares internos posibles: 10
+
+  LEIDO   A    sistema_gates_go_kill  contra  gates_go_kill_decision_points
+          cribado, puesto 1038
+          LOS MISMOS PUNTOS DE DECISION, del mismo libro y sin arista entre ellos. Lo comun es el nucleo entero: definir
+  LEIDO   A    sistema_gates_go_kill  contra  requisitos_gates_con_dientes
+          cribado, puesto 801
+          FAMILIA DECLARADA: los dos son miembros del racimo de LAS PUERTAS DEL STAGE-GATE, remedido a ocho miembros en 
+  LEIDO   A    sistema_gates_go_kill  contra  estructura_gates
+          cribado, puesto 356
+          REPITE con sistema_gates_go_kill. Los dos mandan montar el mismo sistema de puertas: definir los gates en los 
+  LEIDO   A    sistema_gates_go_kill  contra  estructura_de_gates
+          lectura dirigida, LD_ACTO_DE_SEIS.md
+          ### `LD-64` . `sistema_gates_go_kill` contra `estructura_de_gates` . **A. REPITE**
+  LEIDO   A    gates_go_kill_decision_points  contra  requisitos_gates_con_dientes
+          lectura dirigida, LD_CADENA.md
+          ## `LD-58` . `gates_go_kill_decision_points` contra `requisitos_gates_con_dientes` . **A. REPITE**
+  LEIDO   A    gates_go_kill_decision_points  contra  estructura_gates
+          lectura dirigida, LD_ACTO_DE_SEIS.md
+          ### `LD-60` . `gates_go_kill_decision_points` contra `estructura_gates` . **A. REPITE**
+  LEIDO   A    gates_go_kill_decision_points  contra  estructura_de_gates
+          lectura dirigida, LD_ACTO_DE_SEIS.md
+          ### `LD-61` . `gates_go_kill_decision_points` contra `estructura_de_gates` . **A. REPITE, Y SIN PERDIDA**
+  LEIDO   A    requisitos_gates_con_dientes  contra  estructura_gates
+          cribado, puesto 745
+          FAMILIA DECLARADA: los dos son miembros del racimo nuevo de LAS PUERTAS DEL STAGE-GATE, seis miembros, seccion
+  LEIDO   A    requisitos_gates_con_dientes  contra  estructura_de_gates
+          cribado, puesto 765
+          HALLAZGO DE NOMBRE, y esta vez no es prediccion sino lectura: existen `estructura_gates` Y `estructura_de_gate
+  LEIDO   A    estructura_gates  contra  estructura_de_gates
+          cribado, puesto 1524
+          LA MISMA PUERTA CON Y SIN LA PARTICULA, del mismo libro y sin arista entre ellos, y era EL ULTIMO PAR PENDIENT
+
+CIFRA pares internos del acto: 10 pares
+CIFRA pares leidos: 10 pares
+CIFRA pares sin leer: 0 pares
+  reparto por clase de los leidos: A 10
+
+P.5 SATISFECHA POR EL REGISTRO: los 10 pares del acto tienen lectura.
+FIN
+EXIT=0
+
+############ OP-M-02-ACCLIMATE
+==============================================================================
+P.5, LA LECTURA DEL ACTO OP-M-02-ACCLIMATE, PAR A PAR
+  miembros (2): fase_acclimate_experiencia_cliente, fase_acclimate_mapa_de_proceso
+  superviviente: fase_acclimate_experiencia_cliente
+==============================================================================
+  pares internos posibles: 1
+
+  LEIDO   A    fase_acclimate_experiencia_cliente  contra  fase_acclimate_mapa_de_proceso
+          cribado, puesto 447
+          REPITE con fase_acclimate_mapa_de_proceso. Los dos trabajan la misma fase Acclimate y mandan lo mismo: mapear 
+
+CIFRA pares internos del acto: 1 pares
+CIFRA pares leidos: 1 pares
+CIFRA pares sin leer: 0 pares
+  reparto por clase de los leidos: A 1
+
+P.5 SATISFECHA POR EL REGISTRO: los 1 pares del acto tienen lectura.
+FIN
+EXIT=0
+
+############ OP-M-03-III
+==============================================================================
+P.5, LA LECTURA DEL ACTO OP-M-03-III, PAR A PAR
+  miembros (3): pivote_estrategico, pivote_startup, pivotes_e_iteraciones
+  superviviente: pivote_estrategico
+==============================================================================
+  pares internos posibles: 3
+
+  LEIDO   A    pivote_estrategico  contra  pivote_startup
+          cribado, puesto 857
+          EL MISMO PIVOTE CONTADO POR LOS DOS LIBROS, y los pasos se emparejan uno a uno. pivote_estrategico manda acept
+  LEIDO   A    pivote_startup  contra  pivotes_e_iteraciones
+          cribado, puesto 306
+          REPITE con pivotes_e_iteraciones. Los dos mandan lo mismo: correr pruebas de si o no sobre las hipotesis del m
+  SIN LEER     pivote_estrategico  contra  pivotes_e_iteraciones
+          no aparece ni en el registro del cribado ni en ninguna cabecera de lectura dirigida
+
+CIFRA pares internos del acto: 3 pares
+CIFRA pares leidos: 2 pares
+CIFRA pares sin leer: 1 pares
+  reparto por clase de los leidos: A 2
+
+P.5 NO SATISFECHA POR EL REGISTRO: 1 par(es) del acto sin lectura. La lectura de esos pares es trabajo propio ANTES de fundir.
+FIN
+EXIT=1
+
+############ OP-M-05-INDICE
+==============================================================================
+P.5, LA LECTURA DEL ACTO OP-M-05-INDICE, PAR A PAR
+  miembros (3): customer_discovery, customer_discovery_cuatro_fases, customer_discovery_overview
+  superviviente: customer_discovery
+==============================================================================
+  pares internos posibles: 3
+
+  LEIDO   A    customer_discovery  contra  customer_discovery_cuatro_fases
+          cribado, puesto 276
+          REPITE con customer_discovery_cuatro_fases. Cuatro de los cinco pasos del primero vuelven como fases del segun
+  LEIDO   A    customer_discovery  contra  customer_discovery_overview
+          cribado, puesto 206
+          REPITE con customer_discovery_overview. Los dos mandan salir a hablar con clientes potenciales, probar la perc
+  LEIDO   A    customer_discovery_cuatro_fases  contra  customer_discovery_overview
+          cribado, puesto 156
+          REPITE con customer_discovery_overview. Los cuatro pasos son los mismos en el mismo orden: descomponer la visi
+
+CIFRA pares internos del acto: 3 pares
+CIFRA pares leidos: 3 pares
+CIFRA pares sin leer: 0 pares
+  reparto por clase de los leidos: A 3
+
+P.5 SATISFECHA POR EL REGISTRO: los 3 pares del acto tienen lectura.
+FIN
+EXIT=0
+
+############ OP-M-05-EDIFICIO
+==============================================================================
+P.5, LA LECTURA DEL ACTO OP-M-05-EDIFICIO, PAR A PAR
+  miembros (3): customer_discovery_get_out_of_building, get_out_of_the_building, manifiesto_regla1_hechos_fuera_del_edificio
+  superviviente: customer_discovery_get_out_of_building
+==============================================================================
+  pares internos posibles: 3
+
+  LEIDO   A    customer_discovery_get_out_of_building  contra  get_out_of_the_building
+          cribado, puesto 175
+          REPITE con get_out_of_the_building. Los dos mandan entrevistar clientes de forma repetida durante semanas, evi
+  LEIDO   A    customer_discovery_get_out_of_building  contra  manifiesto_regla1_hechos_fuera_del_edificio
+          cribado, puesto 510
+          REPITE con manifiesto_regla1_hechos_fuera_del_edificio. Los dos mandan la misma consigna de Blank: salir a ent
+  LEIDO   A    get_out_of_the_building  contra  manifiesto_regla1_hechos_fuera_del_edificio
+          cribado, puesto 439
+          REPITE con manifiesto_regla1_hechos_fuera_del_edificio. Los dos mandan lo mismo y es la misma consigna de Blan
+
+CIFRA pares internos del acto: 3 pares
+CIFRA pares leidos: 3 pares
+CIFRA pares sin leer: 0 pares
+  reparto por clase de los leidos: A 3
+
+P.5 SATISFECHA POR EL REGISTRO: los 3 pares del acto tienen lectura.
+FIN
+EXIT=0
+
+############ OP-M-05-APERTURA
+==============================================================================
+P.5, LA LECTURA DEL ACTO OP-M-05-APERTURA, PAR A PAR
+  miembros (3): customer_validation, filosofia_customer_validation, introduccion_validacion_clientes
+  superviviente: customer_validation
+==============================================================================
+  pares internos posibles: 3
+
+  LEIDO   A    customer_validation  contra  filosofia_customer_validation
+          cribado, puesto 247
+          REPITE con filosofia_customer_validation. Los dos mandan desplegar el MVP, probar el plan de ventas en el terr
+  LEIDO   A    customer_validation  contra  introduccion_validacion_clientes
+          cribado, puesto 709
+          Dos introducciones a la misma fase, del mismo libro y sin arista entre ellas. customer_validation dice: desple
+  LEIDO   A    filosofia_customer_validation  contra  introduccion_validacion_clientes
+          cribado, puesto 549
+          FAMILIA DECLARADA: los dos nodos son miembros del racimo nuevo C del informe intra, la apertura de Customer Va
+
+CIFRA pares internos del acto: 3 pares
+CIFRA pares leidos: 3 pares
+CIFRA pares sin leer: 0 pares
+  reparto por clase de los leidos: A 3
+
+P.5 SATISFECHA POR EL REGISTRO: los 3 pares del acto tienen lectura.
+FIN
+EXIT=0
+

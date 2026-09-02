@@ -1,0 +1,82 @@
+########## UMBRAL 2 (el hueco) ##########
+==============================================================================
+PIEZAS DE VARIOS DUENOS EN LAS SEIS FUSIONES DE LA FASE 06
+  umbral de duenos para caer en el hueco: 2 o mas
+==============================================================================
+
+------------------------------------------------------------------------------
+OP-M-01-FUSION  | absorbidos 4 | lineas de preservar 10
+  PIEZA DE 3 DUENO(S): requisitos_gates_con_dientes, estructura_gates, estructura_de_gates
+      LOS ENTREGABLES CLAROS Y ESTANDARIZADOS con sus plantillas. El superviviente NO los tiene y los tres que mueren si
+  lineas que NOMBRAN 2 o mas absorbidos: 1
+
+------------------------------------------------------------------------------
+OP-M-02-ACCLIMATE  | absorbidos 1 | lineas de preservar 1
+  lineas que NOMBRAN 2 o mas absorbidos: 0
+  LINEAS SIN NINGUN ID DE ABSORBIDO, no clasificables por maquina,
+  SE LEEN CON EL OJO ANTES DE FUNDIR (1):
+      el mapa visual del proceso, que es el artefacto propio del que muere
+
+------------------------------------------------------------------------------
+OP-M-03-III  | absorbidos 2 | lineas de preservar 4
+  lineas que NOMBRAN 2 o mas absorbidos: 0
+
+------------------------------------------------------------------------------
+OP-M-05-INDICE  | absorbidos 2 | lineas de preservar 3
+  lineas que NOMBRAN 2 o mas absorbidos: 0
+  LINEAS SIN NINGUN ID DE ABSORBIDO, no clasificables por maquina,
+  SE LEEN CON EL OJO ANTES DE FUNDIR (3):
+      LAS CUATRO FASES ENUMERADAS del descubrimiento, que es lo que los dos indices aportan y el superviviente no lleva
+      descomponer la vision en LAS NUEVE PARTES DEL LIENZO
+      LA PUERTA DEL FINAL: evaluar si hay validacion suficiente para pasar a la fase siguiente
+
+------------------------------------------------------------------------------
+OP-M-05-EDIFICIO  | absorbidos 2 | lineas de preservar 4
+  lineas que NOMBRAN 2 o mas absorbidos: 0
+  LINEAS SIN NINGUN ID DE ABSORBIDO, no clasificables por maquina,
+  SE LEEN CON EL OJO ANTES DE FUNDIR (1):
+      VIVE DENTRO, no es perdida: evitar las listas exhaustivas de funciones es el paso 3 del superviviente, que ademas anade las encuestas de foco tradicio
+
+------------------------------------------------------------------------------
+OP-M-05-APERTURA  | absorbidos 2 | lineas de preservar 5
+  PIEZA DE 2 DUENO(S): filosofia_customer_validation, introduccion_validacion_clientes
+      probar que el proceso de venta SE REPITE, buscar pedidos a PRECIO COMPLETO como prueba dura, y probar los canales
+  lineas que NOMBRAN 2 o mas absorbidos: 1
+  LINEAS SIN NINGUN ID DE ABSORBIDO, no clasificables por maquina,
+  SE LEEN CON EL OJO ANTES DE FUNDIR (2):
+      VIVE DENTRO EN SU NUCLEO: confirmar con ventas reales y con dinero de por medio es el paso 4 del superviviente. VIAJA SOLO EL MATIZ, que los clics y l
+      YA NO APLICA: customer_validation_sell_phase DEJO DE ENTRAR en esta fusion por LD-59. El nodo sigue vivo y se queda con su pieza. Se retira de la list
+
+==============================================================================
+  OPERACION            ABSORBIDOS  PRESERVAR  NOMBRAN 2+    SIN ID (a leer)
+  OP-M-01-FUSION       4           10         1             0
+  OP-M-02-ACCLIMATE    1           1          0             1
+  OP-M-03-III          2           4          0             0
+  OP-M-05-INDICE       2           3          0             3
+  OP-M-05-EDIFICIO     2           4          0             1
+  OP-M-05-APERTURA     2           5          1             2
+
+CIFRA lineas de preservar que nombran dos o mas absorbidos: 2 lineas
+CIFRA lineas de preservar sin ningun id, que la maquina NO clasifica: 7 lineas
+CIFRA operaciones con al menos una pieza en el hueco: 2 grupos
+  son: OP-M-01-FUSION, OP-M-05-APERTURA
+
+FIN
+EXIT=0
+
+########## --mutar-umbral (umbral 1) ##########
+  OPERACION            ABSORBIDOS  PRESERVAR  NOMBRAN 2+    SIN ID (a leer)
+  OP-M-01-FUSION       4           10         10            0
+  OP-M-02-ACCLIMATE    1           1          0             1
+  OP-M-03-III          2           4          4             0
+  OP-M-05-INDICE       2           3          0             3
+  OP-M-05-EDIFICIO     2           4          3             1
+  OP-M-05-APERTURA     2           5          3             2
+
+CIFRA lineas de preservar que nombran dos o mas absorbidos: 20 lineas
+CIFRA lineas de preservar sin ningun id, que la maquina NO clasifica: 7 lineas
+CIFRA operaciones con al menos una pieza en el hueco: 4 grupos
+  son: OP-M-01-FUSION, OP-M-03-III, OP-M-05-EDIFICIO, OP-M-05-APERTURA
+
+FIN
+EXIT=0
