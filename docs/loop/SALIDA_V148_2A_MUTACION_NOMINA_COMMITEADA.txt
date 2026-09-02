@@ -1,0 +1,24 @@
+NOMINA REAL: 8 entrada(s), leidas de dataset/metadata/aduana_fuente_multiple.json
+SUJETO ELEGIDO POR COMPUTO (el primero por orden): arquetipos_de_cliente
+ANCLA DE LA VUELTA, LEIDA DE GIT: 84b64cd0 'ACTA DE LA VUELTA 147 DEL AUDITOR + PARADA: LA MEJOR VUELTA '
+
+CASO 1 (nada se movio): ok=True, fallos=0
+
+CASO 2 (EL AGUJERO: arbol y HEAD identicos, los dos movidos): ok=False, fallos=2
+   | la nomina se movio (0 entran, 1 salen, 0 cambian) y el reporte NO trae la marca 'RE-SELLADO DE LA NOMINA DE LA ADUANA': re-sellar la nomina es RE-ADJUDICAR y no puede hacerse callando. ATENCION: 1 de 
+   | arquetipos_de_cliente sale en la nomina y el reporte NO lo nombra
+   contra HEAD, diferencias: 0 entran, 0 salen, 0 cambian (tienen que ser 0)
+
+CASO 3 (el mismo movimiento, DECLARADO): ok=True, fallos=0
+CASO 4 (marca sin nombrar el node_id): ok=False, fallos=1
+CASO 5 (una entrada COLADA, ya commiteada): ok=False, fallos=2
+CASO 6 (sin ancla): ok=False, fallos=1
+
+HUELLA dataset/ antes:   063e9e39db96b418fdd869b8668df581c6952cd4b148c695e661e6f8d216c464
+HUELLA dataset/ despues: 063e9e39db96b418fdd869b8668df581c6952cd4b148c695e661e6f8d216c464
+dataset/ IDENTICO: el arnes no escribio un byte.
+
+VERDE: los seis casos se comportan. EL AGUJERO ESTA CERRADO: con arbol y HEAD
+identicos y los dos movidos, la guarda CAE, nombra el node_id y dice que el
+movimiento llego YA COMMITEADO. Declararlo sigue bastando; la marca sola no; una
+entrada colada tampoco pasa; y sin ancla no hay verde.
