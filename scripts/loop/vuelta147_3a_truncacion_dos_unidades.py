@@ -189,6 +189,10 @@ def main():
     print("CIFRA canonicas distintas de la tabla OP-S-11: %d grafias" % len(canonicas))
     print("CIFRA canonicas de 31 por la sola longitud: %d grafias" % len(can_a))
     print("CIFRA canonicas de 31 por el detector vigente: %d grafias" % len(can_b))
+    # LA DIFERENCIA ENTRE LAS DOS UNIDADES TAMBIEN ES UNA CIFRA, y sin su linea
+    # `CIFRA` el reporte no la puede publicar cotejada: la guarda de cifras solo
+    # sabe cotejar la unidad `grafia` contra una linea de esta forma.
+    print("CIFRA grafias que separan las dos unidades: %d grafias" % len(solo_a))
     return 0
 
 

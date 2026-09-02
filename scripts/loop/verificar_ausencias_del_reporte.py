@@ -295,7 +295,15 @@ VOCABULARIO_ACTIVO = list(FORMULAS_DE_AUSENCIA)
 
 
 def dispara(frase):
-    b = frase.lower()
+    # EL ESPACIO EN BLANCO SE NORMALIZA ANTES DE BUSCAR (vuelta 147, hallado
+    # midiendo esta misma guarda sobre el reporte de la 147). Una formula
+    # PARTIDA POR UN SALTO DE LINEA se le escapaba entera: `en ninguna parte`
+    # con el salto justo detras de `en` no casaba, y el reporte va envuelto a
+    # 88 columnas, asi que el escape no es raro, es lo normal. Escapar por
+    # donde cae el salto de linea del envoltorio es la misma especie que
+    # escapar por una palabra que no esta en el vocabulario, y una guarda que
+    # depende de donde parta el editor no mide lo que dice medir.
+    b = re.sub(r"\s+", " ", frase.lower())
     return [f for f in VOCABULARIO_ACTIVO if f in b]
 
 
