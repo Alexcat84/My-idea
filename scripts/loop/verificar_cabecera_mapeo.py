@@ -35,12 +35,31 @@ import argparse
 import io
 import os
 import re
+import shutil
 import subprocess
 import sys
+import tarfile
+import tempfile
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LOOP_SCRIPTS = os.path.dirname(os.path.abspath(__file__))
 RUTA_TABLA = os.path.join(RAIZ, "docs", "plan", "OP_S_11_MAPEO_PROPUESTO.md")
+
+# EL ARBOL CONTRA EL QUE SE RECOMPUTA, FIJADO (reparacion 1.a de la vuelta 137,
+# parada del 29 ago 2026 punto 1). La cabecera de OP_S_11_MAPEO_PROPUESTO.md
+# describe el censo del corte en que se CALCULO, y ese corte es el commit que
+# escribio la tabla: 2deac539 (vuelta 135, TAREA 4.b+4.c). Despues, la escritura
+# de OP-S-11 (9e909a05, vuelta 136) canonizo el campo `fuente` de 726 nodos
+# vivos, o sea que el censo VIVO de hoy trae 54 grafias ya canonicas, cada una
+# su grupo de una, y el recomputo contra el arbol vivo devuelve [54]*6: ROJO
+# PERMANENTE sobre una tabla que NO esta mal.
+#   Ni la tabla ni la guarda estaban mal: cada una es correcta para SU corte, y
+# lo cubre banco 9.10 ("lo que envejecio fue la nota, no el fichero sellado").
+# Lo que faltaba era decir contra QUE corte recomputa esta guarda. Medido en la
+# vuelta 137: dataset/nodos es IDENTICO entre 2deac539 y 9e909a05^ (git diff
+# --stat vacio), asi que el sello de la tabla y el estado previo a la escritura
+# son el mismo censo.
+SELLO_APERTURA = "2deac539e17e7df0471df27c89c183857867e842"
 
 ETIQUETAS = {
     111: "cadena entera",
@@ -63,8 +82,15 @@ def leer(ruta):
 # el arbol. Se toma una foto de bytes ANTES de cada corrida y se restaura
 # DESPUES (no con git checkout, que perderia una edicion todavia sin
 # commitear): asi esta guarda nunca ensucia nada con solo ejecutarse.
+# REPARACION 1.a DE LA VUELTA 137 (parada del 29 ago 2026, punto 2): el script
+# que se invoca escribe DOS ficheros, no uno. El segundo,
+# docs/loop/SALIDA_V135_4B_PELDANOS.txt, no estaba en esta lista y por eso cada
+# corrida de esta guarda lo ensuciaba (medido en la vuelta 136 y otra vez en la
+# apertura de la 137: 8 lineas insertadas / 8 borradas, con los peldanos
+# historicos 111/108/106/105/104 sobreescritos por 54).
 FICHEROS_CON_EFECTO_SECUNDARIO = [
     RUTA_TABLA,
+    os.path.join(RAIZ, "docs", "loop", "SALIDA_V135_4B_PELDANOS.txt"),
 ]
 
 
@@ -83,16 +109,50 @@ def _restaurar_sellados(foto):
             f.write(contenido)
 
 
-def correr(script, *args):
+def correr(script, *args, **kw):
+    entorno = kw.pop("entorno", None)
     foto = _foto_sellados()
+    env = dict(os.environ)
+    if entorno:
+        env.update(entorno)
     r = subprocess.run([sys.executable, os.path.join(LOOP_SCRIPTS, script)] + list(args),
-                        capture_output=True, text=True, cwd=RAIZ)
+                        capture_output=True, text=True, cwd=RAIZ, env=env)
     _restaurar_sellados(foto)
     return r.stdout + "\n" + r.stderr
 
 
-def recomputar():
-    out = correr("vuelta135_tabla_mapeo_propuesto.py")
+def extraer_nodos_sellados(sello, destino):
+    """Saca dataset/nodos del arbol SELLADO `sello` a `destino` sin tocar el
+    arbol de trabajo (git archive a un tar en memoria, no un checkout). Devuelve
+    la ruta del directorio de nodos extraido."""
+    r = subprocess.run(["git", "archive", "--format=tar", sello, "dataset/nodos"],
+                       capture_output=True, cwd=RAIZ)
+    if r.returncode != 0:
+        raise SystemExit("no se pudo extraer dataset/nodos del sello %s: %s" %
+                         (sello, r.stderr.decode("utf-8", "replace")))
+    with tarfile.open(fileobj=io.BytesIO(r.stdout)) as tf:
+        try:
+            tf.extractall(destino, filter="data")
+        except TypeError:  # python anterior al filtro de extraccion
+            tf.extractall(destino)
+    return os.path.join(destino, "dataset", "nodos")
+
+
+def recomputar(sello=SELLO_APERTURA):
+    """Recomputa los seis peldanos contra el arbol FIJADO `sello`, no contra el
+    arbol vivo. Con sello=None recomputa contra el arbol vivo (el comportamiento
+    viejo, que se conserva para poder EXHIBIR la caida: es lo que hace
+    --arbol-vivo)."""
+    if sello is None:
+        out = correr("vuelta135_tabla_mapeo_propuesto.py")
+    else:
+        tmp = tempfile.mkdtemp(prefix="sello_mapeo_")
+        try:
+            nodos = extraer_nodos_sellados(sello, tmp)
+            out = correr("vuelta135_tabla_mapeo_propuesto.py",
+                         entorno={"MAPEO_NODOS_DIR": nodos})
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
 
     n_cadena = int(re.search(r"peldano 1 \(cadena entera\): (\d+)", out).group(1))
     n_titulo = int(re.search(r"peldano 2 \(\+ titulo\): (\d+)", out).group(1))
@@ -181,8 +241,8 @@ def leer_declarado(ruta_tabla):
     }
 
 
-def verificar(ruta_tabla):
-    rec = recomputar()
+def verificar(ruta_tabla, sello=SELLO_APERTURA):
+    rec = recomputar(sello)
     dec = leer_declarado(ruta_tabla)
     filas_reales = contar_filas_tabla(ruta_tabla)
 
@@ -230,9 +290,19 @@ def verificar(ruta_tabla):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--tabla", default=RUTA_TABLA)
+    ap.add_argument("--sello", default=SELLO_APERTURA,
+                    help="commit contra cuyo dataset/nodos se recomputa "
+                         "(por defecto el sello de apertura de la tabla)")
+    ap.add_argument("--arbol-vivo", action="store_true",
+                    help="recomputa contra el arbol de trabajo VIVO en vez del "
+                         "sello: sirve para EXHIBIR la caida que la reparacion "
+                         "1.a de la vuelta 137 arregla, no para verificar")
     a = ap.parse_args()
 
-    fallos, rec, dec, filas_reales = verificar(a.tabla)
+    sello = None if a.arbol_vivo else a.sello
+    print("recomputando contra: %s" % ("EL ARBOL VIVO" if sello is None else "sello " + sello))
+
+    fallos, rec, dec, filas_reales = verificar(a.tabla, sello)
 
     if fallos:
         print("ROJO, %d cosa(s) no cuadran en la cabecera de %s:" % (len(fallos), a.tabla))

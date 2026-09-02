@@ -47,7 +47,13 @@ import sys
 from collections import Counter
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-NODOS = os.path.join(RAIZ, "dataset", "nodos")
+# REPARACION 1.a DE LA VUELTA 137 (parada del 29 ago 2026, punto 1): el censo
+# se lee del arbol VIVO por defecto (comportamiento identico al de siempre,
+# ningun llamador viejo cambia), pero admite que se le FIJE otro arbol por la
+# variable de entorno MAPEO_NODOS_DIR. Lo usa verificar_cabecera_mapeo.py para
+# recomputar contra el arbol SELLADO en que la cabecera de la tabla se calculo,
+# en vez de contra el arbol vivo que la propia OP-S-11 ya movio.
+NODOS = os.environ.get("MAPEO_NODOS_DIR") or os.path.join(RAIZ, "dataset", "nodos")
 SALIDA = os.path.join(RAIZ, "docs", "loop", "SALIDA_V131_3A_GRUPOS_POR_TITULO.txt")
 
 
