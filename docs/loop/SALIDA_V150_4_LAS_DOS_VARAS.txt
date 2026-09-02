@@ -1,0 +1,123 @@
+DECLARACION DE LAS DOS CORRIDAS DE LA TAREA 4 (vuelta 150), ESCRITA A MANO POR EL
+EJECUTOR Y MARCADA COMO TAL. Corte: 2 sep 2026.
+
+POR QUE EXISTE ESTE FICHERO. La primera corrida de
+scripts/loop/vuelta150_4_tabla_por_fase.py publico CINCO filas en NO CUMPLE. Al
+revisar cada una contra la letra de su celda encontre que CINCO DE MIS PROPIAS
+VARAS estaban mal escritas, las corregi, y la segunda corrida da CERO NO CUMPLE.
+Una correccion que tapa lo que corrige no se puede auditar (EJECUTOR.md 8), y un
+salto de cinco rojos a cero es exactamente la forma que tiene una vara ablandada
+hasta que pasa. Asi que aqui van las dos corridas, con el motivo de cada cambio y
+su cita.
+
+ADVERTENCIA HONESTA SOBRE ESTE FICHERO: la PRIMERA corrida NO llego a
+commitearse (se escribio y se sobrescribio en la misma vuelta). Lo que el lector
+tiene de ella es esta declaracion mia. Lo que SI puede auditar entero es la
+SEGUNDA: su instrumento esta commiteado y cada correccion lleva su motivo escrito
+en un comentario dentro del propio codigo, al lado de la linea que cambio.
+
+LA TABLA DE LAS DOS CORRIDAS
+============================
+
+| fila | PRIMERA corrida | SEGUNDA corrida | que cambio en la vara |
+|---|---|---|---|
+| 0 CODIGO | NO CUMPLE, 6 de 7 | VERDE, 7 de 7 (6 propias, 1 por portadora) | se anadio la pierna de la PORTADORA |
+| 01 FUENTES | NO CUMPLE, 68 alterados | VERDE PARCIAL, 0 desaparecidos de 73 | se separo la celda en sus dos mitades y la mitad no atribuible se declaro |
+| 02 DESTEJIDOS | VERDE PARCIAL | VERDE PARCIAL | sin cambio |
+| 03 FUSIONES | NO CUMPLE, 5 incumplimientos | VERDE PARCIAL, 0 incumplimientos y 2 divergentes | el universo se acoto a 03_FUSIONES y los divergentes se clasificaron por la CORRECCION 16 |
+| 04 ENLACES | VERDE PARCIAL | VERDE PARCIAL | sin cambio |
+| 05 SANEO | NO CUMPLE, 4 de 6 | VERDE, 6 de 6 | NAFTA se mide en id y titulo, no en el cuerpo; Incoterms se mide sobre vivos |
+| 06 MESAS | NO CUMPLE, 2 de 5 | VERDE, 5 de 5 | la sede de la decision incluye docs/plan/06_MESAS.md, no solo el jsonl |
+| 07 ADUANA | VERDE, 4 de 4 | VERDE, 4 de 4 | sin cambio |
+
+LOS CINCO CAMBIOS, UNO A UNO, CON SU CITA
+=========================================
+
+(1) FILA 0 CODIGO. La primera vara pedia que CADA operacion de 00_CODIGO tuviera
+    una salida roja commiteada QUE LA NOMBRARA. OP-S-06 salia con cero.
+    LO QUE ESTABA MAL: la ficha de OP-C-04 dice literal "ES LA GUARDA QUE HACE
+    PERMANENTE A OP-S-07 Y A OP-S-06", y su campo depende_de nombra a las dos.
+    El caso positivo de OP-S-06 (la clave `fase_проekto` con letras cirilicas)
+    ESTA guardado, en docs/loop/SALIDA_V24_OPC04_CASO_POSITIVO.txt, bajo el
+    nombre de su portadora. La primera vara exigia un nombre y no una prueba.
+    LA CITA: el campo nota y el campo depende_de de OP-C-04, leidos en esta
+    corrida.
+    LO QUE NO SE AFLOJO: la pierna de portadora exige que la portadora nombre a
+    la cubierta EN SU depende_de. No basta con que hablen de lo mismo.
+
+(2) FILA 01 FUENTES. La primera vara leia "ningun nodo de la clase con pasos
+    alterados" como "ningun nodo de la nomina tiene hoy pasos distintos de los
+    del grafo previo a la campana", y daba 68 de 73.
+    LO QUE ESTABA MAL: entre aquel grafo y el de hoy han corrido tambien los
+    DESTEJIDOS, que alteran pasos A PROPOSITO, y sus nominas se solapan con la
+    de FUENTES en 20 de esos 68, medido en esta corrida. La vara no puede
+    ATRIBUIR la alteracion a la fase 01, y una cifra sin atribucion publicada
+    como incumplimiento de la fase 01 es un rojo falso.
+    LO QUE SE HIZO EN VEZ DE BAJARLA: la celda se parte en sus dos mitades. La
+    mitad "el material reubicado, NO BORRADO" SE MIDE Y ESTA VERDE (0
+    desaparecidos de 73, 5 deprecados que siguen en el grafo). La mitad de los
+    pasos queda declarada NO ATRIBUIBLE con su cifra al lado, y por eso la fila
+    es VERDE PARCIAL y no VERDE.
+    LA CITA: EJECUTOR.md 11, "no adivines"; y la cifra del solape, medida.
+
+(3) FILA 03 FUSIONES. La primera vara medía TODA ficha del plan con
+    `superviviente` escrito, viniera de la fase que viniera, y sacaba 5
+    incumplimientos.
+    LO QUE ESTABA MAL: tres de los cinco eran de OTRAS filas de la tabla, no de
+    esta. OP-D-02 es 02_DESTEJIDOS y OP-M-04 es 06_MESAS; ademas el campo
+    `superviviente` de OP-M-04 no es un id sino la frase "identificar_consejo_asesores
+    (fusion 367) y formalizar_junta_asesora (fusion 328)". Pintar de rojo la
+    fila 03 con incumplimientos de la 02 y la 06 es un error de universo.
+    Los otros dos (OP-M-02-MEDIOS y OP-M-02-ADMIT) SI son de 03_FUSIONES, y no
+    son un rojo suelto: son la especie que la CORRECCION 16 de
+    docs/plan/CORRECCIONES_A_APLICAR.md ya describe y nombra, "una fusion
+    consumida al reves no es cumplida ni sin cumplir".
+    LO QUE NO SE AFLOJO: los dos divergentes SE SIGUEN CONTANDO Y NOMBRANDO, y
+    por ellos la fila es VERDE PARCIAL y no VERDE. Lo unico que cambia es que se
+    clasifican donde la casa ya los clasifico, en vez de contarlos dos veces.
+    LA CITA: la celda dice "03 FUSIONES"; y la CORRECCION 16, que dice de si
+    misma que "gobierna la vara FUSION de cualquier fase".
+
+(4) FILA 05 SANEO, DOS SUB-CELDAS.
+    (4.a) "ningun id vivo con tratado extinto". La primera vara buscaba la
+    palabra NAFTA en el JSON ENTERO del nodo y marcaba a
+    certificado_de_origen_tratados_libre_comercio.
+    LO QUE ESTABA MAL: la propia ficha de OP-S-01 escribe la vara con otras
+    palabras, "ningun nodo VIVO lleva NAFTA EN SU ID NI EN SU TITULO", acotada
+    ademas A LA NOMINA por correccion declarada del 28 ago 2026 (decision del
+    fundador, docs/loop/paradas/2026-08-28-titulo-nafta-ops01-DECISION.md,
+    punto 2). Y peor: la palabra aparece en `ids_alias` PORQUE LA PRIMERA
+    VERIFICACION DE ESA MISMA FICHA LO EXIGE ("ids_alias de
+    certificado_de_origen_tratados_libre_comercio contiene
+    nafta_free_trade_agreements"). La primera vara marcaba en rojo lo que la
+    ficha manda que exista.
+    (4.b) "los tres de Incoterms con su version". La primera vara media los
+    tres nodos de la nomina sin mirar si estaban vivos, y marcaba dos.
+    LO QUE ESTABA MAL: la CORRECCION DECLARADA de la vuelta 120, escrita DENTRO
+    de la propia ficha de OP-S-02, dice que esos DOS estan hoy deprecados. La
+    celda habla de nodos vivos, y dejar los deprecados fuera es el mismo
+    criterio adjudicado el 14 ago 2026 para la guarda de auto-arista de
+    OP-C-04: un deprecado es registro historico, no superficie del producto.
+    LO QUE NO SE AFLOJO: el nodo vivo de la nomina, incoterms_reglas_comerciales
+    _internacionales, SI se mide y SI cita su version.
+
+(5) FILA 06 MESAS. La primera vara buscaba "motivo" y "cobertura" solo dentro
+    del jsonl y sacaba 2 de 5.
+    LO QUE ESTABA MAL: la sede donde la casa escribe las decisiones de las cinco
+    mesas es docs/plan/06_MESAS.md (25.843 caracteres, medido en esta corrida),
+    y OPERACIONES.jsonl es el indice, no el expediente. Medir el indice y
+    concluir sobre el expediente es medir otra cosa.
+    LO QUE SI ES DISCUTIBLE Y LO MARCO: la ventana que se lee de esa pagina son
+    los 4.000 caracteres siguientes a la primera mencion de la mesa. Es una
+    ventana ELEGIDA POR MI, no una seccion delimitada por la pagina, y podria
+    atrapar una cifra de la seccion vecina. Va marcado como discutible en el
+    reporte.
+
+LO QUE ESTE FICHERO NO DICE
+===========================
+
+No dice que la fase 08 este hecha. Cuatro de las ocho filas son VERDE PARCIAL, y
+una fila con una mitad sin vara escrita NO cierra su fase: la abre. El criterio
+de HECHO de la propia pagina ("una fase esta hecha cuando su verificacion SE
+CAERIA si el fallo volviera") no se cumple sobre una mitad que hoy nadie puede
+hacer caer.
