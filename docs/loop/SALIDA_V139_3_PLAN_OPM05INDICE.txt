@@ -1,0 +1,39 @@
+==============================================================================
+GENERADOR DEL PLAN DE LA FUSION DE MESA OP-M-05-INDICE (vuelta 139)
+  ficha leida de: docs/plan/OPERACIONES.jsonl
+  tipo: FUSION DE MESA | estado: LISTA | fecha de corte: 2026-08-12
+==============================================================================
+
+  LA FICHA MANDA, y esto es lo que dice:
+     nodos         : customer_discovery, customer_discovery_cuatro_fases, customer_discovery_overview
+     superviviente : customer_discovery
+     eliminar      : customer_discovery_cuatro_fases, customer_discovery_overview
+     guarda 1B, ningun absorbido es puerta: OK
+     los 3 miembros vivos y presentes: OK
+
+  EL SUPERVIVIENTE DE HOY: 5 pasos y 2 condiciones
+  FORMATO DEL REPARTO: pasos POR PAR (absorbido, numero de paso) | condiciones POR PAR (absorbido, numero de paso)
+  EL ABSORBIDO customer_discovery_cuatro_fases: 4 pasos y 2 condiciones
+  EL ABSORBIDO customer_discovery_overview: 4 pasos y 2 condiciones
+
+  VIAJA_EN_EL_ACTO, 4 pieza(s) que ya viajan por otro absorbido:
+     el paso 1 de customer_discovery_overview viaja por el paso 1 de customer_discovery_cuatro_fases
+        linea editorial: MISMO GESTO: descomponer la idea en LAS NUEVE PARTES DEL LIENZO, que es la linea 2 de preservar. El paso 1 de customer_discovery_overview y el paso 1 de customer_discovery_cuatro_fases mandan lo mismo y el superviviente no lo tiene en ninguno de sus cinco pasos. VIAJA LA REDACCION DE customer_discovery_cuatro_fases, que es la que lleva el APPEND, por dos motivos de texto: es la UNICA que trae el rotulo Fase 1, que la linea 1 de preservar exige enumerado, y ademas es la mas rica, porque anade escribir un resumen de una pagina por cada hipotesis, que la otra no dice. LO UNICO QUE ESTA REDACCION TRAE Y LA OTRA NO ES EL NOMBRE EN INGLES ENTRE PARENTESIS (Business Model Canvas), Y SE DECLARA: es una glosa de terminologia y no un gesto, asi que no se trata como pieza propia. Va marcado como DISCUTIBLE en el reporte de esta vuelta.
+     el paso 2 de customer_discovery_overview viaja por el paso 2 de customer_discovery_cuatro_fases
+        linea editorial: MISMO GESTO: salir a comprobar la hipotesis del problema con clientes reales. El paso 2 de customer_discovery_overview y el paso 2 de customer_discovery_cuatro_fases mandan lo mismo. VIAJA LA REDACCION DE customer_discovery_cuatro_fases, que es la que lleva el APPEND, porque es la unica que trae el rotulo Fase 2 y la linea 1 de preservar exige LAS CUATRO FASES ENUMERADAS, no tres. El matiz de esta redaccion, que el problema LE DUELE al cliente, no se pierde: el paso 4 del superviviente confirma que el problema le importa lo suficiente como para que decida comprar.
+     el paso 3 de customer_discovery_overview viaja por el paso 3 de customer_discovery_cuatro_fases
+        linea editorial: MISMO GESTO: mostrar el producto minimo viable para validar la solucion. El paso 3 de customer_discovery_overview y el paso 3 de customer_discovery_cuatro_fases mandan lo mismo. VIAJA LA REDACCION DE customer_discovery_cuatro_fases, que es la que lleva el APPEND, porque trae el rotulo Fase 3 que preservar exige Y porque es la mas rica: compara las respuestas contra las metas de exito y fracaso DEFINIDAS DE ANTEMANO, que esta no dice. El matiz de esta, mostrar tambien LA PROPUESTA DE VALOR, no se pierde: el paso 4 de customer_discovery_cuatro_fases evalua si la propuesta de valor se valida, y viaja entero de APPEND.
+     el paso 4 de customer_discovery_overview viaja por el paso 4 de customer_discovery_cuatro_fases
+        linea editorial: MISMO GESTO: LA PUERTA DEL FINAL, que es la linea 3 de preservar: evaluar si hay validacion suficiente para pasar a la fase siguiente. El paso 4 de customer_discovery_overview y el paso 4 de customer_discovery_cuatro_fases mandan lo mismo, y el superviviente NO tiene la puerta: su paso 4 confirma que el problema le importa al cliente lo suficiente para comprar, que es UNA de las preguntas de la puerta y no la puerta. VIAJA LA REDACCION DE customer_discovery_cuatro_fases, que es la que lleva el APPEND, porque trae el rotulo Fase 4 que preservar exige Y porque enumera las CINCO preguntas de la puerta (si entendiste el problema, si la propuesta de valor se valida, cuantos clientes hay, si pagarian y si el negocio es rentable) donde esta solo dice evalua los resultados. Su unico matiz propio, nombrar el PIVOTE como salida, no se pierde: la otra dice vuelves a aprender mas, que es la misma rama, y el pivote tiene su propio acto en OP-M-03-III.
+
+  LA FICHA EN VERDE: cobertura exacta, guarda 1B, incisos extraidos y verbatim.
+  REPARTO: piezas 12 (enteras 7, ya dichas 1, de INCISO 0, que ya viajan en el acto 4)
+
+  LAS PERDIDAS SELLADAS EN CAMPO PROPIO (contrato CAMPO PROPIO v1):
+     perdidas selladas: 0
+        NINGUNA, y la lista vacia es una DECLARACION de cero perdidas.
+
+  plan escrito: docs\loop\PLAN_V139_OPM05INDICE.json
+
+FIN
+EXITCODE: 0

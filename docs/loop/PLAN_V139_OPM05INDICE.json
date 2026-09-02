@@ -1,0 +1,92 @@
+{
+ "operacion": "OP-M-05-INDICE",
+ "rotulo": "EL INDICE DE DISCOVERY, DE BLANK: customer_discovery absorbe a customer_discovery_cuatro_fases y a customer_discovery_overview. Es la misma figura de la cabeza duplicada de Coleman, dos indices de las mismas cuatro fases y un nodo base al que los dos describen, PERO AQUI GANA EL BASE, porque su cableado es de otro orden",
+ "fecha": "2026-09-02",
+ "estado": "SELLADO",
+ "contrato_de_perdidas": "CAMPO PROPIO v1",
+ "vuelta": 139,
+ "tramo": "NO ES UN TRAMO: es la fusion de mesa OP-M-05-INDICE",
+ "ficha_tipo": "FUSION DE MESA",
+ "ficha_fecha_corte": "2026-08-12",
+ "ficha_adjudicacion": "EL INDICE DE DISCOVERY. Triangulo CERRADO POR LECTURA: los tres pares leidos y los tres en A, puestos 206, 276 y 156. Sobrevive customer_discovery. P.8 EN ORDEN: el contenido no decide, porque los dos indices dicen LO MISMO entre si (156) y el nodo base dice el concepto; el cableado decide y NO ESTA CERCA: 28 contra 6 contra 5. customer_discovery es el nodo mas nombrado de toda la zona.",
+ "ficha_preservar": [
+  "LAS CUATRO FASES ENUMERADAS del descubrimiento, que es lo que los dos indices aportan y el superviviente no lleva",
+  "descomponer la vision en LAS NUEVE PARTES DEL LIENZO",
+  "LA PUERTA DEL FINAL: evaluar si hay validacion suficiente para pasar a la fase siguiente"
+ ],
+ "ficha_verificacion": [
+  "SIMULADA (P.7): CUATRO duplicadas nuevas, y estan nombradas",
+  "LAS CUATRO DUPLICADAS: customer_validation.nodos_previos, identificar_earlyvangelists.nodos_previos, lienzo_modelo_negocio.nodos_siguientes y producto_minimo_viable.nodos_previos. Todas para OP-S-12",
+  "LAS TRES PERDIDAS ESTAN EN EL TEXTO FINAL, y la de las cuatro fases se comprueba ENTERA: si el superviviente queda sin las fases enumeradas, se perdio el indice",
+  "LECTURA DE ACTO POR P.5 ANTES DE FUNDIR: el acto de discovery tiene 20 pares internos FUERA DE COLA y TRES sanos por dentro. Si la lectura completa parte la componente, esta fusion se revisa",
+  "PASADA DE PERDIDAS RECOMPUTADAS (P.13), 12 ago 2026: cada perdida listada comprobada contra la nomina COMPLETA de esta fusion y contra el texto del superviviente. Las que viven dentro estan reclasificadas y no se injertan. SIN CAMBIOS: las perdidas listadas no estan en el superviviente ni en ningun otro nodo vivo de la nomina, asi que las 3 VIAJAN todas"
+ ],
+ "ficha_evidencia": [
+  "puestos 206, 276 y 156, los tres en A",
+  "scripts/plan/simular_fusion.py (P.7), corrida del 12 ago 2026",
+  "MEDIDO: cableado 28 contra 6 contra 5"
+ ],
+ "ficha_nota": "ES LA MISMA FIGURA DE LA CABEZA DUPLICADA DE COLEMAN: dos indices de las mismas cuatro fases, y un nodo base al que los dos describen. Y AQUI EL BASE GANA, al reves que en Coleman, porque su cableado es de otro orden: 28 nodos lo nombran. EL DUDOSO DEL 707 NO SE RESUELVE AQUI Y HAY QUE DECIRLO: customer_development_modelo contra customer_discovery_overview queda en B, y overview muere en esta fusion. TRAS EJECUTARLA, EL 707 SE RELEE CONTRA EL SUPERVIVIENTE, por el banco 9.10. Si sale A, la practica se funde tambien; si sale D, se enlaza.",
+ "ficha_depende_de": [
+  "OP-M-05",
+  "OP-M-04",
+  "OP-M-03-II"
+ ],
+ "ficha_bloquea_a": [],
+ "simulacion_de_hoy": "scripts/plan/simular_fusion.py, corrida el 2 sep 2026 ANTES de fundir, salida sellada en docs/loop/SALIDA_V139_3_SIM_OPM05INDICE.txt: CUATRO duplicadas nuevas, LAS MISMAS CUATRO que la ficha nombra, CERO auto aristas, CERO aristas internas del acto que sobrevivan, y cableado 30 contra 11 y 30 contra 10, donde la ficha del 12 ago decia 28 contra 6 contra 5. La divergencia va declarada.",
+ "actos": [
+  {
+   "orden": 1,
+   "miembros": [
+    "customer_discovery",
+    "customer_discovery_cuatro_fases",
+    "customer_discovery_overview"
+   ],
+   "miembros_del_acto_entero": [
+    "customer_discovery",
+    "customer_discovery_cuatro_fases",
+    "customer_discovery_overview"
+   ],
+   "figura": "FUSION DE MESA, la ficha la escribe con su adjudicacion sellada",
+   "superviviente": "customer_discovery",
+   "motivo": "EL SUPERVIVIENTE LO FIJA LA FICHA SELLADA Y AQUI NO SE RE-ADJUDICA: docs/plan/OPERACIONES.jsonl escribe superviviente customer_discovery el 12 ago 2026. Su adjudicacion dice que EL CONTENIDO NO DECIDE, porque los dos indices dicen LO MISMO entre si (puesto 156) y el nodo base dice el concepto, y que DECIDE EL CABLEADO Y NO ESTA CERCA. LA REGLA DE LA FICHA ENVEJECIDA (P.9, P.13) SE APLICA Y SE DECLARA: la ficha escribe MEDIDO: cableado 28 contra 6 contra 5 (12 ago 2026); la simulacion del 2 sep 2026, sellada en docs/loop/SALIDA_V139_3_SIM_OPM05INDICE.txt, mide 30 contra 11 y 30 contra 10. NO VOLTEA NADA, y de las cinco mesas esta es la que menos riesgo corria: customer_discovery gana por casi el triple con las dos mediciones. LAS DUPLICADAS SI CUADRAN AL DIGITO Y CON SUS NOMBRES: CUATRO, customer_validation.nodos_previos, identificar_earlyvangelists.nodos_previos, lienzo_modelo_negocio.nodos_siguientes y producto_minimo_viable.nodos_previos, las mismas cuatro que la verificacion 2 de la ficha nombra. CERO auto aristas y CERO aristas internas del acto que sobrevivan. LECTURA DE ACTO POR P.5, RE-CORRIDA HOY ANTES DE FUNDIR: 3 pares leidos = 3 pares del acto, EXIT 0. SE DICE QUE MIDE, PARA QUE NADIE LO LEA DE MAS: la verificacion 4 de la ficha habla de VEINTE pares internos fuera de cola del ACTO DE DISCOVERY ENTERO, que es una zona mas ancha que esta operacion; el alcance de P.5 quedo acotado por la correccion declarada del 15 ago 2026 AL ACTO EN OPERACION Y NADA MAS, y el acto en operacion son estos TRES nodos y sus TRES pares, los tres leidos y los tres en A (puestos 206, 276 y 156). EL DUDOSO DEL 707 NO SE RESUELVE AQUI Y LA FICHA YA LO DEJA ESCRITO: customer_development_modelo contra customer_discovery_overview queda en B, y overview muere en esta fusion. TRAS EJECUTARLA, EL 707 SE RELEE CONTRA EL SUPERVIVIENTE, por el banco 9.10. Esta fusion NO lo cierra y NO lo toca.",
+   "absorbidos": [
+    "customer_discovery_cuatro_fases",
+    "customer_discovery_overview"
+   ],
+   "pasos": {
+    "customer_discovery_cuatro_fases": {
+     "1": "APPEND",
+     "2": "APPEND",
+     "3": "APPEND",
+     "4": "APPEND"
+    },
+    "customer_discovery_overview": {
+     "1": "VIAJA_EN_EL_ACTO:customer_discovery_cuatro_fases|1",
+     "2": "VIAJA_EN_EL_ACTO:customer_discovery_cuatro_fases|2",
+     "3": "VIAJA_EN_EL_ACTO:customer_discovery_cuatro_fases|3",
+     "4": "VIAJA_EN_EL_ACTO:customer_discovery_cuatro_fases|4"
+    }
+   },
+   "condiciones": {
+    "customer_discovery_cuatro_fases": {
+     "1": "APPEND",
+     "2": "APPEND"
+    },
+    "customer_discovery_overview": {
+     "1": "CUBIERTO:2",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "DOCE PIEZAS REPARTIDAS ENTRE DOS ABSORBIDOS, 8 de paso y 4 de condicion, y el reparto lo CUENTA EL GENERADOR de las marcas: esta nota no lo teclea. EL INDICE VIAJA ENTERO Y ESA ES LA DECISION DE ESTE ACTO. Los CUATRO pasos de customer_discovery_cuatro_fases van de APPEND, los cuatro, y los CUATRO de customer_discovery_overview llevan VIAJA_EN_EL_ACTO apuntando al suyo, uno a uno. Es el uso mas limpio de la quinta marca que da la fase 06: dos indices que dicen LO MISMO paso por paso (que es exactamente lo que el puesto 156 dictamino) y un superviviente que no lleva ninguno de los dos. POR QUE LOS CUATRO DE APPEND Y NINGUNO CUBIERTO, que es la parte discutible y va dicha: LA VERIFICACION 3 DE LA FICHA MANDA COMPROBAR LAS CUATRO FASES ENTERAS, con la frase si el superviviente queda sin las fases enumeradas, SE PERDIO EL INDICE. El indice es UNA pieza de cuatro rotulos, no cuatro piezas sueltas: marcar CUBIERTO el rotulo Fase 2 o el Fase 3 dejaria un indice de tres fases, que no es un indice. Y SE DICE EL PRECIO EN VEZ DE CALLARLO: la sustancia de la fase 2 (salir a probar la hipotesis del problema con clientes reales) ya esta en los pasos 1 y 2 del superviviente, y la de la fase 3 (mostrar el MVP) esta en su paso 3. Las fases 2 y 3 repiten sustancia que el superviviente ya tiene, y lo que anaden es EL ROTULO y, en la 3, la comparacion contra metas definidas de antemano. EL SUPERVIVIENTE QUEDA EN 9 PASOS Y 5 CONDICIONES, contra 5 y 2 de partida, y ES CANDIDATO LEGITIMO A LA PODA DE LA FASE 04 por esa repeticion de sustancia, que es donde esa poda tiene que mirar. Va marcado como DISCUTIBLE en el reporte. LAS TRES CONDICIONES DE APPEND SON DISPARADORES DISTINTOS (acta 55, pregunta 5): NECESITAR ORDENAR METODICAMENTE el proceso es una falta de metodo, no de hechos; ARRANCAR EL PROCESO FORMAL EN UN PROYECTO NUEVO es un hito de calendario; y QUERER EVITAR CONSTRUIR UN PRODUCTO COMPLETO SIN VALIDAR es una intencion de ahorro. Ninguna de las tres es la condicion 1 del superviviente (el negocio se basa solo en tu vision) ni su condicion 2 (todavia no has probado con clientes). CERO PERDIDAS SELLADAS, Y LA LISTA VACIA ES UNA DECLARACION: la verificacion 5 de la ficha dice que LAS 3 VIAJAN todas, y las tres viajan.",
+   "perdidas": [],
+   "lineas_de_viaje": {
+    "customer_discovery_overview|1": "MISMO GESTO: descomponer la idea en LAS NUEVE PARTES DEL LIENZO, que es la linea 2 de preservar. El paso 1 de customer_discovery_overview y el paso 1 de customer_discovery_cuatro_fases mandan lo mismo y el superviviente no lo tiene en ninguno de sus cinco pasos. VIAJA LA REDACCION DE customer_discovery_cuatro_fases, que es la que lleva el APPEND, por dos motivos de texto: es la UNICA que trae el rotulo Fase 1, que la linea 1 de preservar exige enumerado, y ademas es la mas rica, porque anade escribir un resumen de una pagina por cada hipotesis, que la otra no dice. LO UNICO QUE ESTA REDACCION TRAE Y LA OTRA NO ES EL NOMBRE EN INGLES ENTRE PARENTESIS (Business Model Canvas), Y SE DECLARA: es una glosa de terminologia y no un gesto, asi que no se trata como pieza propia. Va marcado como DISCUTIBLE en el reporte de esta vuelta.",
+    "customer_discovery_overview|2": "MISMO GESTO: salir a comprobar la hipotesis del problema con clientes reales. El paso 2 de customer_discovery_overview y el paso 2 de customer_discovery_cuatro_fases mandan lo mismo. VIAJA LA REDACCION DE customer_discovery_cuatro_fases, que es la que lleva el APPEND, porque es la unica que trae el rotulo Fase 2 y la linea 1 de preservar exige LAS CUATRO FASES ENUMERADAS, no tres. El matiz de esta redaccion, que el problema LE DUELE al cliente, no se pierde: el paso 4 del superviviente confirma que el problema le importa lo suficiente como para que decida comprar.",
+    "customer_discovery_overview|3": "MISMO GESTO: mostrar el producto minimo viable para validar la solucion. El paso 3 de customer_discovery_overview y el paso 3 de customer_discovery_cuatro_fases mandan lo mismo. VIAJA LA REDACCION DE customer_discovery_cuatro_fases, que es la que lleva el APPEND, porque trae el rotulo Fase 3 que preservar exige Y porque es la mas rica: compara las respuestas contra las metas de exito y fracaso DEFINIDAS DE ANTEMANO, que esta no dice. El matiz de esta, mostrar tambien LA PROPUESTA DE VALOR, no se pierde: el paso 4 de customer_discovery_cuatro_fases evalua si la propuesta de valor se valida, y viaja entero de APPEND.",
+    "customer_discovery_overview|4": "MISMO GESTO: LA PUERTA DEL FINAL, que es la linea 3 de preservar: evaluar si hay validacion suficiente para pasar a la fase siguiente. El paso 4 de customer_discovery_overview y el paso 4 de customer_discovery_cuatro_fases mandan lo mismo, y el superviviente NO tiene la puerta: su paso 4 confirma que el problema le importa al cliente lo suficiente para comprar, que es UNA de las preguntas de la puerta y no la puerta. VIAJA LA REDACCION DE customer_discovery_cuatro_fases, que es la que lleva el APPEND, porque trae el rotulo Fase 4 que preservar exige Y porque enumera las CINCO preguntas de la puerta (si entendiste el problema, si la propuesta de valor se valida, cuantos clientes hay, si pagarian y si el negocio es rentable) donde esta solo dice evalua los resultados. Su unico matiz propio, nombrar el PIVOTE como salida, no se pierde: la otra dice vuelves a aprender mas, que es la misma rama, y el pivote tiene su propio acto en OP-M-03-III."
+   }
+  }
+ ],
+ "declarados_y_no_fundidos": []
+}

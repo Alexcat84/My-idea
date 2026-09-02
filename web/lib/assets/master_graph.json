@@ -1450,7 +1450,7 @@
         "ganar_comprension_del_cliente",
         "capturar_conocimiento_de_mercado",
         "customer_development_modelo",
-        "customer_discovery_cuatro_fases"
+        "customer_discovery"
       ],
       "nodos_siguientes": [
         "prueba_mvp_alta_fidelidad",
@@ -28185,7 +28185,7 @@
         "board_management_buyin"
       ],
       "nodos_siguientes": [
-        "customer_discovery_overview",
+        "customer_discovery",
         "fase_mobilizar_modelo_negocio"
       ],
       "condiciones_activacion": [
@@ -28265,7 +28265,11 @@
         "Prueba como percibe el cliente el problema antes de mostrarle nada del producto",
         "Construye una versión minima del producto (MVP) para testear la solución",
         "Confirma que el problema le importa lo suficiente como para que decida comprar",
-        "Documenta lo que aprendes y ajusta tu modelo de negocio según ese feedback"
+        "Documenta lo que aprendes y ajusta tu modelo de negocio según ese feedback",
+        "Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis",
+        "Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales",
+        "Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano",
+        "Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más"
       ],
       "entregable_esperado": "Un conjunto de hipótesis sobre tu negocio, validadas o descartadas con conversaciones reales con clientes, mas un MVP probado en el terreno",
       "nodos_previos": [
@@ -28280,7 +28284,11 @@
         "seleccion_estrategia_pricing",
         "sintesis_hipotesis_modelo_negocio",
         "search_for_business_model",
-        "business_model_canvas_scorecard"
+        "business_model_canvas_scorecard",
+        "customer_development_team",
+        "customer_discovery_get_out_of_building",
+        "lienzo_modelo_negocio",
+        "segmentos_de_clientes_problema_necesidad"
       ],
       "nodos_siguientes": [
         "customer_validation",
@@ -28302,13 +28310,44 @@
         "sales_funnel_get_keep_grow",
         "sales_roadmap_vs_sales_force",
         "producto_minimo_viable",
-        "product_market_fit"
+        "product_market_fit",
+        "actualizar_modelo_de_negocio_pivot_o_proceed",
+        "customer_validation_sales_roadmap",
+        "fit_problema_solucion",
+        "hipotesis_de_tamano_de_mercado",
+        "mapa_flujo_trabajo_cliente",
+        "pivote_o_proceder",
+        "priorizar_elementos_a_validar",
+        "prueba_solucion_con_cliente",
+        "realizar_pruebas_pasa_no_pasa",
+        "sintesis_hipotesis_modelo_negocio",
+        "validar_modelo_negocio_hechos",
+        "verificar_product_market_fit"
       ],
       "condiciones_activacion": [
         "Si tu negocio se basa solo en tu visión, sin hechos reales del mercado",
-        "Si todavia no has probado el problema y la solución con clientes reales"
+        "Si todavia no has probado el problema y la solución con clientes reales",
+        "Cuando necesitas ordenar de forma metódica todo el proceso de descubrir a tu cliente",
+        "Cuando arrancas el proceso formal de descubrir a tu cliente en un proyecto nuevo",
+        "Quieres evitar construir un producto completo sin validar antes el problema"
       ],
-      "etiqueta_arbol": "Descubre a tus Clientes"
+      "etiqueta_arbol": "Descubre a tus Clientes",
+      "ids_alias": [
+        "customer_discovery_cuatro_fases",
+        "customer_discovery_overview"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "customer_discovery_cuatro_fases",
+          "titulo": "Las cuatro fases para descubrir a tu cliente",
+          "fuente": "The Startup Owner's Manual - Blank, Steve"
+        },
+        {
+          "node_id": "customer_discovery_overview",
+          "titulo": "Las cuatro fases para descubrir a tu cliente (Customer Discovery)",
+          "fuente": "The Startup Owner's Manual - Blank, Steve"
+        }
+      ]
     },
     "customer_discovery_cuatro_fases": {
       "fase_proyecto": "validacion",
@@ -28343,7 +28382,8 @@
         "sintesis_hipotesis_modelo_negocio",
         "priorizar_elementos_a_validar"
       ],
-      "etiqueta_arbol": "Avanza en Cuatro Fases"
+      "etiqueta_arbol": "Avanza en Cuatro Fases",
+      "deprecado": true
     },
     "customer_discovery_get_out_of_building": {
       "node_id": "customer_discovery_get_out_of_building",
@@ -28367,7 +28407,7 @@
       "nodos_siguientes": [
         "problem_solution_fit",
         "producto_minimo_viable",
-        "customer_discovery_cuatro_fases",
+        "customer_discovery",
         "preparar_contacto_clientes",
         "ganar_comprension_del_cliente"
       ],
@@ -28440,7 +28480,8 @@
         "Tienes una hipótesis de negocio pero todavia no has salido a hablar con clientes reales",
         "Quieres evitar construir un producto completo sin validar antes el problema"
       ],
-      "etiqueta_arbol": "Prueba tu Modelo en Fases"
+      "etiqueta_arbol": "Prueba tu Modelo en Fases",
+      "deprecado": true
     },
     "customer_discovery_phase2_problem_test": {
       "node_id": "customer_discovery_phase2_problem_test",
@@ -29023,7 +29064,6 @@
       "nodos_previos": [
         "customer_discovery",
         "business_model_canvas_scorecard",
-        "customer_discovery_cuatro_fases",
         "desarrollo_presentacion_problema",
         "hipotesis_relacion_clientes_web",
         "modelo_customer_development",
@@ -29065,7 +29105,7 @@
       "entregable_esperado": "Sales roadmap validado con evidencia de ventas repetibles antes de construir el equipo comercial",
       "nodos_previos": [
         "producto_minimo_viable",
-        "customer_discovery_cuatro_fases",
+        "customer_discovery",
         "filosofia_customer_validation",
         "customer_development_process"
       ],
@@ -56360,7 +56400,7 @@
         "presales",
         "testing_process_completo",
         "understanding_customers_tecnicas",
-        "customer_discovery_overview"
+        "customer_discovery"
       ],
       "nodos_siguientes": [
         "design_test_repeat",
@@ -63881,7 +63921,7 @@
       "node_id": "hipotesis_de_tamano_de_mercado",
       "nodos_previos": [
         "estrategia_innovacion_producto",
-        "customer_discovery_overview"
+        "customer_discovery"
       ],
       "nodos_siguientes": [
         "hipotesis_propuesta_de_valor_producto",
@@ -65958,7 +65998,6 @@
         "scorecard_descubrimiento_cliente",
         "get_out_of_the_building",
         "customer_discovery_introduccion",
-        "customer_discovery_overview",
         "problem_solution_fit",
         "actualizar_modelo_de_negocio_pivot_o_proceed"
       ],
@@ -71989,9 +72028,8 @@
         "convertible_debt_fundamentos",
         "search_for_business_model",
         "customer_development_weekly_lessons_learned",
-        "customer_discovery_cuatro_fases",
+        "customer_discovery",
         "customer_discovery_get_out_of_building",
-        "customer_discovery_overview",
         "segmentos_de_clientes_problema_necesidad",
         "empathy_map",
         "epicentros_innovacion_modelo_negocio",
@@ -73958,7 +73996,7 @@
         "scorecard_descubrimiento_cliente",
         "lienzo_modelo_negocio",
         "voice_of_customer_homework",
-        "customer_discovery_overview"
+        "customer_discovery"
       ],
       "nodos_siguientes": [
         "presentacion_solucion_producto",
@@ -86201,7 +86239,7 @@
         "mapa_flujo_trabajo_cliente",
         "validar_posicionamiento_con_analistas",
         "verificar_modelo_ingresos",
-        "customer_discovery_cuatro_fases"
+        "customer_discovery"
       ],
       "nodos_siguientes": [
         "presentacion_solucion_producto",
@@ -91761,7 +91799,7 @@
         "lienzo_modelo_negocio",
         "filosofia_customer_validation",
         "multi_sided_platforms",
-        "customer_discovery_cuatro_fases"
+        "customer_discovery"
       ],
       "nodos_siguientes": [
         "craft_positioning_statement",
@@ -92986,9 +93024,8 @@
         "build_measure_learn",
         "catalogo_pivotes",
         "ciclo_construir_medir_aprender",
-        "customer_discovery_cuatro_fases",
+        "customer_discovery",
         "customer_discovery_get_out_of_building",
-        "customer_discovery_overview",
         "evitar_paralisis_por_analisis",
         "experiment_library",
         "genchi_gembutsu_salir_del_edificio",
@@ -93001,8 +93038,7 @@
         "tres_espacios_innovacion_prototipado",
         "valor_vs_desperdicio",
         "waterfall_vs_agile_development",
-        "identificar_earlyvangelists",
-        "customer_discovery"
+        "identificar_earlyvangelists"
       ],
       "nodos_siguientes": [
         "mvp_tipo_video",
@@ -95794,7 +95830,7 @@
       "nodos_previos": [
         "presentacion_solucion_producto",
         "simulacion_clientes_ia",
-        "customer_discovery_overview",
+        "customer_discovery",
         "customer_development_process"
       ],
       "nodos_siguientes": [
@@ -97318,7 +97354,7 @@
         "wallas_etapa_verificacion",
         "pivote_o_proceder",
         "customer_validation",
-        "customer_discovery_overview"
+        "customer_discovery"
       ],
       "nodos_siguientes": [
         "verificar_product_market_fit",
@@ -106012,7 +106048,7 @@
         "lienzo_modelo_negocio"
       ],
       "nodos_siguientes": [
-        "customer_discovery_cuatro_fases",
+        "customer_discovery",
         "scorecard_descubrimiento_cliente",
         "arquetipos_de_cliente",
         "canales_distribucion",
@@ -109215,7 +109251,7 @@
       "nodos_previos": [
         "validacion_hipotesis_ingresos",
         "customer_validation_sales_roadmap",
-        "customer_discovery_cuatro_fases"
+        "customer_discovery"
       ],
       "nodos_siguientes": [
         "diseno_experimentos_pass_fail",
@@ -117568,7 +117604,7 @@
         "decision_pivotar_o_proceder",
         "war_room_pivot_proceed",
         "testear_circulo_cuadrado_rectangulo",
-        "customer_discovery_overview"
+        "customer_discovery"
       ],
       "nodos_siguientes": [
         "validar_modelo_financiero",
@@ -119069,7 +119105,7 @@
         "actualizar_business_model_canvas_tuneup",
         "fit_problema_solucion",
         "pivote_o_proceder",
-        "customer_discovery_cuatro_fases",
+        "customer_discovery",
         "customer_development_process"
       ],
       "nodos_siguientes": [
@@ -128587,7 +128623,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 272,
+    "nodos_sin_enlaces_entrantes": 274,
     "enlaces_rotos_en_grafo": 0
   }
 }

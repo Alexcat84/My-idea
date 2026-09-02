@@ -10,7 +10,11 @@
     "Prueba como percibe el cliente el problema antes de mostrarle nada del producto",
     "Construye una versión minima del producto (MVP) para testear la solución",
     "Confirma que el problema le importa lo suficiente como para que decida comprar",
-    "Documenta lo que aprendes y ajusta tu modelo de negocio según ese feedback"
+    "Documenta lo que aprendes y ajusta tu modelo de negocio según ese feedback",
+    "Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis",
+    "Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales",
+    "Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano",
+    "Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más"
   ],
   "entregable_esperado": "Un conjunto de hipótesis sobre tu negocio, validadas o descartadas con conversaciones reales con clientes, mas un MVP probado en el terreno",
   "nodos_previos": [
@@ -25,7 +29,11 @@
     "seleccion_estrategia_pricing",
     "sintesis_hipotesis_modelo_negocio",
     "search_for_business_model",
-    "business_model_canvas_scorecard"
+    "business_model_canvas_scorecard",
+    "customer_development_team",
+    "customer_discovery_get_out_of_building",
+    "lienzo_modelo_negocio",
+    "segmentos_de_clientes_problema_necesidad"
   ],
   "nodos_siguientes": [
     "customer_validation",
@@ -47,11 +55,42 @@
     "sales_funnel_get_keep_grow",
     "sales_roadmap_vs_sales_force",
     "producto_minimo_viable",
-    "product_market_fit"
+    "product_market_fit",
+    "actualizar_modelo_de_negocio_pivot_o_proceed",
+    "customer_validation_sales_roadmap",
+    "fit_problema_solucion",
+    "hipotesis_de_tamano_de_mercado",
+    "mapa_flujo_trabajo_cliente",
+    "pivote_o_proceder",
+    "priorizar_elementos_a_validar",
+    "prueba_solucion_con_cliente",
+    "realizar_pruebas_pasa_no_pasa",
+    "sintesis_hipotesis_modelo_negocio",
+    "validar_modelo_negocio_hechos",
+    "verificar_product_market_fit"
   ],
   "condiciones_activacion": [
     "Si tu negocio se basa solo en tu visión, sin hechos reales del mercado",
-    "Si todavia no has probado el problema y la solución con clientes reales"
+    "Si todavia no has probado el problema y la solución con clientes reales",
+    "Cuando necesitas ordenar de forma metódica todo el proceso de descubrir a tu cliente",
+    "Cuando arrancas el proceso formal de descubrir a tu cliente en un proyecto nuevo",
+    "Quieres evitar construir un producto completo sin validar antes el problema"
   ],
-  "etiqueta_arbol": "Descubre a tus Clientes"
+  "etiqueta_arbol": "Descubre a tus Clientes",
+  "ids_alias": [
+    "customer_discovery_cuatro_fases",
+    "customer_discovery_overview"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "customer_discovery_cuatro_fases",
+      "titulo": "Las cuatro fases para descubrir a tu cliente",
+      "fuente": "The Startup Owner's Manual - Blank, Steve"
+    },
+    {
+      "node_id": "customer_discovery_overview",
+      "titulo": "Las cuatro fases para descubrir a tu cliente (Customer Discovery)",
+      "fuente": "The Startup Owner's Manual - Blank, Steve"
+    }
+  ]
 }

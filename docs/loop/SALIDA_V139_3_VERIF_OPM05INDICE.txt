@@ -1,0 +1,100 @@
+LA LECTURA CON EL OJO DE OP-M-05-INDICE: LOS TRES NODOS ENTEROS, IMPRESOS
+Las TRES lineas de preservar de esta ficha no nombran NINGUN id. Se leen con
+el ojo contra este volcado, y de aqui sale cada afirmacion del contenido.
+
+DOS AVISOS SOBRE ESTA MISMA PRUEBA, declarados y no corregidos en silencio:
+  (a) LA COMPARACION VA SIN TILDES en los dos lados. El primer intento buscaba
+      'evalu' contra un texto que dice 'evalua' con tilde y dio CERO donde hay UNO.
+  (b) EL VEREDICTO DE CADA LINEA LO COMPUTA EL CODIGO de las cifras que acaba de
+      contar, NO es una frase escrita a mano. En el primer intento SI lo era, y
+      llego a imprimir 'ES DE LOS DOS ABSORBIDOS' debajo de una medicion que decia
+      que uno de los dos no la tenia. Esa es la especie de caida que la casa mas
+      persigue, y aqui se cambia el codigo en vez de la frase.
+==============================================================================
+
+--- customer_discovery (SUPERVIVIENTE) | deprecado=False
+    titulo: Descubrimiento del cliente (Customer Discovery)
+    CIFRA pasos: 5 lineas | CIFRA condiciones: 2 lineas
+      PASO 1: Sal a hablar directamente con clientes potenciales en vez de quedarte encerrado con tu idea
+      PASO 2: Prueba como percibe el cliente el problema antes de mostrarle nada del producto
+      PASO 3: Construye una versión minima del producto (MVP) para testear la solución
+      PASO 4: Confirma que el problema le importa lo suficiente como para que decida comprar
+      PASO 5: Documenta lo que aprendes y ajusta tu modelo de negocio según ese feedback
+      COND 1: Si tu negocio se basa solo en tu visión, sin hechos reales del mercado
+      COND 2: Si todavia no has probado el problema y la solución con clientes reales
+
+--- customer_discovery_cuatro_fases (ABSORBIDO) | deprecado=False
+    titulo: Las cuatro fases para descubrir a tu cliente
+    CIFRA pasos: 4 lineas | CIFRA condiciones: 2 lineas
+      PASO 1: Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis
+      PASO 2: Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales
+      PASO 3: Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano
+      PASO 4: Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más
+      COND 1: Cuando necesitas ordenar de forma metódica todo el proceso de descubrir a tu cliente
+      COND 2: Cuando arrancas el proceso formal de descubrir a tu cliente en un proyecto nuevo
+
+--- customer_discovery_overview (ABSORBIDO) | deprecado=False
+    titulo: Las cuatro fases para descubrir a tu cliente (Customer Discovery)
+    CIFRA pasos: 4 lineas | CIFRA condiciones: 2 lineas
+      PASO 1: Descompon tu visión inicial en las nueve partes de tu lienzo de modelo de negocio (Business Model Canvas)
+      PASO 2: Sal a comprobar si el problema es real y le duele a tus clientes
+      PASO 3: Muestrales tu producto minimo viable (MVP) y tu propuesta de valor para validar la solución
+      PASO 4: Evalua los resultados y decide si tienes suficiente validación para pasar a probar con clientes reales (Customer Validation) o si necesitas pivotar
+      COND 1: Tienes una hipótesis de negocio pero todavia no has salido a hablar con clientes reales
+      COND 2: Quieres evitar construir un producto completo sin validar antes el problema
+
+==============================================================================
+LA ADJUDICACION DE LAS TRES LINEAS SIN ID, MEDIDA SOBRE ESTE VOLCADO
+El veredicto sale de las cifras, no de una frase tecleada.
+==============================================================================
+
+[1] LAS CUATRO FASES ENUMERADAS (linea 1 de preservar)
+   detalle de la prueba: el paso empieza por el rotulo 'Fase N:'
+   customer_discovery_cuatro_fases    pasos [1, 2, 3, 4]
+   customer_discovery_overview        pasos NINGUNO
+   customer_discovery (superviv.)     pasos NINGUNO
+   VEREDICTO COMPUTADO: ES DE customer_discovery_cuatro_fases Y DE NADIE MAS, y el superviviente no la tiene
+
+[2] LAS NUEVE PARTES DEL LIENZO (linea 2 de preservar)
+   detalle de la prueba: el paso dice 'nueve partes' y 'lienzo'
+   customer_discovery_cuatro_fases    pasos [1]
+   customer_discovery_overview        pasos [1]
+   customer_discovery (superviv.)     pasos NINGUNO
+   VEREDICTO COMPUTADO: ES DE LOS DOS ABSORBIDOS Y EL SUPERVIVIENTE NO LA TIENE: PIEZA DE DOS DUENOS
+
+[3] LA PUERTA DEL FINAL (linea 3 de preservar)
+   detalle de la prueba: el paso EVALUA y DECIDE si se pasa a lo siguiente
+   customer_discovery_cuatro_fases    pasos [4]
+   customer_discovery_overview        pasos [4]
+   customer_discovery (superviv.)     pasos NINGUNO
+   VEREDICTO COMPUTADO: ES DE LOS DOS ABSORBIDOS Y EL SUPERVIVIENTE NO LA TIENE: PIEZA DE DOS DUENOS
+
+Y EL CONTEO DEL ROTULO, POR SI LA LINEA 1 SE QUISIERA LEER COMO CUATRO PIEZAS:
+   CIFRA pasos de customer_discovery_cuatro_fases con rotulo de fase: 4 lineas
+   El indice es UNA pieza de cuatro rotulos: con tres rotulos no es un indice,
+   y la verificacion 3 de la ficha manda comprobarlo ENTERO.
+EXITCODE: 0
+
+==============================================================================
+DESPUES DE FUNDIR: verificacion [3] DE LA FICHA SOBRE EL NODO ESCRITO
+==============================================================================
+CIFRA pasos del superviviente: 9 lineas
+  PASO 1: Sal a hablar directamente con clientes potenciales en vez de quedarte encerrado con tu idea
+  PASO 2: Prueba como percibe el cliente el problema antes de mostrarle nada del producto
+  PASO 3: Construye una versión minima del producto (MVP) para testear la solución
+  PASO 4: Confirma que el problema le importa lo suficiente como para que decida comprar
+  PASO 5: Documenta lo que aprendes y ajusta tu modelo de negocio según ese feedback
+  PASO 6: Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis
+  PASO 7: Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales
+  PASO 8: Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano
+  PASO 9: Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más
+
+EL INDICE, ENTERO: pasos con rotulo de fase [6, 7, 8, 9]
+CIFRA fases enumeradas en el texto final: 4 lineas
+   LAS CUATRO ESTAN: True
+preservar[2] las nueve partes del lienzo : pasos [6] (UNA SOLA VEZ: True)
+preservar[3] la puerta del final         : pasos [9] (UNA SOLA VEZ: True)
+
+ids_alias: ['customer_discovery_cuatro_fases', 'customer_discovery_overview']
+   customer_discovery_cuatro_fases    en alias: True | deprecado: True
+   customer_discovery_overview        en alias: True | deprecado: True

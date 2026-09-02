@@ -1,0 +1,104 @@
+==============================================================================
+OP-M-05-INDICE . EL INDICE DE DISCOVERY, DE BLANK: customer_discovery absorbe a customer_discovery_cuatro_fases y a customer_discovery_overview. Es la misma figura de la cabeza duplicada de Coleman, dos indices de las mismas cuatro fases y un nodo base al que los dos describen, PERO AQUI GANA EL BASE, porque su cableado es de otro orden . MODO EJECUTAR
+plan: docs/loop/PLAN_V139_OPM05INDICE.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3177 vivos, 676 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive customer_discovery . absorbe customer_discovery_cuatro_fases, customer_discovery_overview
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 9 (anadidos 4) | condiciones 2 -> 5 (anadidas 3)
+  alias del superviviente: ['customer_discovery_cuatro_fases', 'customer_discovery_overview']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 21
+   actualizar_modelo_de_negocio_pivot_o_proceed         nodos_previos     customer_discovery_cuatro_fases -> customer_discovery
+   customer_development_team                            nodos_siguientes  customer_discovery_overview -> customer_discovery
+   customer_discovery_get_out_of_building               nodos_siguientes  customer_discovery_cuatro_fases -> customer_discovery
+   customer_validation                                  nodos_previos     customer_discovery_cuatro_fases -> customer_discovery
+   customer_validation_sales_roadmap                    nodos_previos     customer_discovery_cuatro_fases -> customer_discovery
+   fit_problema_solucion                                nodos_previos     customer_discovery_overview -> customer_discovery
+   hipotesis_de_tamano_de_mercado                       nodos_previos     customer_discovery_overview -> customer_discovery
+   identificar_earlyvangelists                          nodos_previos     customer_discovery_overview -> customer_discovery
+   lienzo_modelo_negocio                                nodos_siguientes  customer_discovery_cuatro_fases -> customer_discovery
+   lienzo_modelo_negocio                                nodos_siguientes  customer_discovery_overview -> customer_discovery
+   mapa_flujo_trabajo_cliente                           nodos_previos     customer_discovery_overview -> customer_discovery
+   pivote_o_proceder                                    nodos_previos     customer_discovery_cuatro_fases -> customer_discovery
+   priorizar_elementos_a_validar                        nodos_previos     customer_discovery_cuatro_fases -> customer_discovery
+   producto_minimo_viable                               nodos_previos     customer_discovery_cuatro_fases -> customer_discovery
+   producto_minimo_viable                               nodos_previos     customer_discovery_overview -> customer_discovery
+   prueba_solucion_con_cliente                          nodos_previos     customer_discovery_overview -> customer_discovery
+   realizar_pruebas_pasa_no_pasa                        nodos_previos     customer_discovery_overview -> customer_discovery
+   segmentos_de_clientes_problema_necesidad             nodos_siguientes  customer_discovery_cuatro_fases -> customer_discovery
+   sintesis_hipotesis_modelo_negocio                    nodos_previos     customer_discovery_cuatro_fases -> customer_discovery
+   validar_modelo_negocio_hechos                        nodos_previos     customer_discovery_overview -> customer_discovery
+   verificar_product_market_fit                         nodos_previos     customer_discovery_cuatro_fases -> customer_discovery
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 1
+   earlyvangelists                                      nodos_previos     customer_discovery_overview (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 4
+   customer_validation                                  nodos_previos
+   identificar_earlyvangelists                          nodos_previos
+   lienzo_modelo_negocio                                nodos_siguientes
+   producto_minimo_viable                               nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 869   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 868   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 1, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 5 de 5
+guarda D, los 2 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (12 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 customer_discovery_cuatro_fases              paso         1  PASO 6 del superviviente
+        Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis
+    1 customer_discovery_cuatro_fases              paso         2  PASO 7 del superviviente
+        Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales
+    1 customer_discovery_cuatro_fases              paso         3  PASO 8 del superviviente
+        Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano
+    1 customer_discovery_cuatro_fases              paso         4  PASO 9 del superviviente
+        Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide 
+    1 customer_discovery_cuatro_fases              condicion    1  CONDICION 3 del superviviente
+        Cuando necesitas ordenar de forma metódica todo el proceso de descubrir a tu cliente
+    1 customer_discovery_cuatro_fases              condicion    2  CONDICION 4 del superviviente
+        Cuando arrancas el proceso formal de descubrir a tu cliente en un proyecto nuevo
+    1 customer_discovery_overview                  paso         1  VIAJA EN ESTE MISMO ACTO por el PASO 1 de customer_discovery_cuatro_fases (P.13, VIVE DENTRO: no se injerta dos veces)
+        Descompon tu visión inicial en las nueve partes de tu lienzo de modelo de negocio (Business Model Canvas)
+    1 customer_discovery_overview                  paso         2  VIAJA EN ESTE MISMO ACTO por el PASO 2 de customer_discovery_cuatro_fases (P.13, VIVE DENTRO: no se injerta dos veces)
+        Sal a comprobar si el problema es real y le duele a tus clientes
+    1 customer_discovery_overview                  paso         3  VIAJA EN ESTE MISMO ACTO por el PASO 3 de customer_discovery_cuatro_fases (P.13, VIVE DENTRO: no se injerta dos veces)
+        Muestrales tu producto minimo viable (MVP) y tu propuesta de valor para validar la solución
+    1 customer_discovery_overview                  paso         4  VIAJA EN ESTE MISMO ACTO por el PASO 4 de customer_discovery_cuatro_fases (P.13, VIVE DENTRO: no se injerta dos veces)
+        Evalua los resultados y decide si tienes suficiente validación para pasar a probar con clientes reales (Customer Validation) o si necesitas pivotar
+    1 customer_discovery_overview                  condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Tienes una hipótesis de negocio pero todavia no has salido a hablar con clientes reales
+    1 customer_discovery_overview                  condicion    2  CONDICION 5 del superviviente
+        Quieres evitar construir un producto completo sin validar antes el problema
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 1
+  nodos implicados    : 3
+  nodos que MUEREN    : 2
+  piezas repartidas   : 12 (7 viajan enteras, 1 ya estaban dichas, 4 ya viajan en el acto)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 22
+censo DESPUES: 3853 ficheros, 3175 vivos, 678 deprecados
+censo ANTES  : 3853 ficheros, 3177 vivos, 676 deprecados
+delta deprecados: +2 (esperado +2): OK
+EXITCODE: 0

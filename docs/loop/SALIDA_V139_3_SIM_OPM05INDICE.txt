@@ -1,0 +1,57 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### customer_discovery  <==  customer_discovery_cuatro_fases
+  1. DESEMPATE POR CABLEADO
+     customer_discovery                           pasos  5 | nombra 30 | LO NOMBRAN 30
+     customer_discovery_cuatro_fases              pasos  4 | nombra 11 | LO NOMBRAN 11
+     >>> gana customer_discovery por 30 contra 11
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['customer_discovery_cuatro_fases']
+  3. ENTRADAS QUE SE REDIRIGEN
+     actualizar_modelo_de_negocio_pivot_o_proceed nodos_previos     -> customer_discovery
+     customer_discovery_get_out_of_building       nodos_siguientes  -> customer_discovery
+     customer_validation                          nodos_previos     -> customer_discovery
+     customer_validation_sales_roadmap            nodos_previos     -> customer_discovery
+     lienzo_modelo_negocio                        nodos_siguientes  -> customer_discovery
+     pivote_o_proceder                            nodos_previos     -> customer_discovery
+     priorizar_elementos_a_validar                nodos_previos     -> customer_discovery
+     producto_minimo_viable                       nodos_previos     -> customer_discovery
+     segmentos_de_clientes_problema_necesidad     nodos_siguientes  -> customer_discovery
+     sintesis_hipotesis_modelo_negocio            nodos_previos     -> customer_discovery
+     verificar_product_market_fit                 nodos_previos     -> customer_discovery
+
+### customer_discovery  <==  customer_discovery_overview
+  1. DESEMPATE POR CABLEADO
+     customer_discovery                           pasos  5 | nombra 30 | LO NOMBRAN 30
+     customer_discovery_overview                  pasos  4 | nombra 10 | LO NOMBRAN 10
+     >>> gana customer_discovery por 30 contra 10
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['customer_discovery_overview']
+  3. ENTRADAS QUE SE REDIRIGEN
+     customer_development_team                    nodos_siguientes  -> customer_discovery
+     fit_problema_solucion                        nodos_previos     -> customer_discovery
+     hipotesis_de_tamano_de_mercado               nodos_previos     -> customer_discovery
+     identificar_earlyvangelists                  nodos_previos     -> customer_discovery
+     lienzo_modelo_negocio                        nodos_siguientes  -> customer_discovery
+     mapa_flujo_trabajo_cliente                   nodos_previos     -> customer_discovery
+     producto_minimo_viable                       nodos_previos     -> customer_discovery
+     prueba_solucion_con_cliente                  nodos_previos     -> customer_discovery
+     realizar_pruebas_pasa_no_pasa                nodos_previos     -> customer_discovery
+     validar_modelo_negocio_hechos                nodos_previos     -> customer_discovery
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     customer_validation                          nodos_previos     -> customer_discovery
+     identificar_earlyvangelists                  nodos_previos     -> customer_discovery
+     lienzo_modelo_negocio                        nodos_siguientes  -> customer_discovery
+     producto_minimo_viable                       nodos_previos     -> customer_discovery
+     TOTAL NUEVAS: 4
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ninguna
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     NINGUNA: el acto queda sin aristas internas tras la fusion
+EXITCODE: 0
