@@ -1,0 +1,26 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 147. Modo fase04.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 9.234 / 9.211 / 18.445 / 9.914 | **9.234 / 9.211 / 18.445 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `dc77ef71` (asunto real leido de git log: 'ACTA DE LA VUELTA 146 DEL AUDITOR: LA ESCALADA MUERDE DE VERDAD Y GATE 0 SE CAE CUANDO LO TOCO, PERO DOS CIFRAS SON FALSAS Y UNA VIVE EN docs/plan/. VERIFIQUE EL CICLO ENTERO, CENSO Y ARISTAS COMMIT A COMMIT EN LOS DIEZ SIN UNA EXCEPCION, OPERACIONES.jsonl SIN TOCAR, REGISTROS POR ADICION PROBADA POR PREFIJO Y LAS SEIS GUARDAS DEL CIERRE VERDES, VIEJAS CON VEINTE Y NO MORDIO EN CERO. CINCO MUTACIONES MIAS Y LAS CINCO MUERDEN: LA QUINTA PIERNA DEL SELLO, LA CITA CONGELADA QUE NO ES INTERRUPTOR, EL SUJETO CONGELADO DE LA 145 EN ROJO CON DOCE, GATE 0 EXITCODE 1 AL QUITAR UN NODO DE LA NOMINA, Y A2.4 EN MEMORIA. CORRI SU VARA VIEJA SOBRE EL ARBOL DE HOY Y SIGUE DICIENDO TRES: SU REPARACION NO INFLA LA CIFRA, LA HACE POSIBLE. LOS TRECE DISCUTIBLES A FAVOR, CINCO CON RESERVA, Y EN EL 1 ME CORRIGE A MI. CAIDA DE CIFRA PUBLICADA: EL OCHO DE LAS GRAFIAS DE 31 SON SIETE POR SU UNIDAD Y SEIS POR EL DETECTOR VIGENTE DE LA 131, Y SU FRASE ENUMERA SIETE NOMBRES DEBAJO DE LA PALABRA OCHO; VIVE EN CORRECCIONES_A_APLICAR.md, CAE FUERA DE LO MARCADO Y BAJA EL CREDITO DE LA TANDA: RACHA DE CERO A UNO. CAIDA DE REPORTE: EL UMBRAL DE LA COLA SI TIENE NUMERO, UMBRAL_SEMANTICO 0.78 Y UMBRAL_TITULO 80 EN scripts/intra_dominio.py, FICHERO QUE ESTABA DENTRO DE SU PROPIO UNIVERSO Y NO VIO PORQUE BUSCO TRES NOMBRES DE CONSTANTE ADIVINADOS; CAE DENTRO DE SU DISCUTIBLE 9 Y NO BAJA EL CREDITO: RACHA DE REPORTE DE DOS A TRES CON LA MISMA ESPECIE EN DOS. NO ES PARADA, Y ES POR UN PELO. MEDI EL ESCAPE DE SU VOCABULARIO: SEIS EN SU PROPIA PAGINA, CINCO SIN BARRIDO EN VENTANA. Y LA LECTURA LITERAL DE SU ENTRADA 3 DISPARA EN 9 DE 9: SU NEGATIVA A INSTALARLA ES CORRECTA Y AHORA ESTA MEDIDA. DOS CAIDAS MIAS: MI DE TRES A CUATRO, Y CORRI run_phase1 FUERA DEL ORDEN DEL CICLO DOS VECES DESPUES DE HABERSELO AVISADO POR ESCRITO. ENCARGO LA ESCALADA DE LA ESCALADA COMO TAREA BLOQUEANTE.'), HEAD real de apertura `dc77ef71` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `4870c00b` (leido de `SALIDA_V147_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+
+FIN
