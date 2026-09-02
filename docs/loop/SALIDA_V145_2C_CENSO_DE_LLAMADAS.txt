@@ -1,8 +1,9 @@
 CENSO DE `pares_exceptuados_de` EN scripts/, CON LOS NUMEROS DE LINEA DE HOY
 ==============================================================================
 FICHERO                                         LINEA  CLASE      QUE HACE CON SUS FALLOS
-scripts/loop/tallar_estado_de_fase.py             665  DEFINICION 
-scripts/loop/tallar_estado_de_fase.py             801  LLAMADA    LOS RECOGE en fallos
+scripts/loop/_v145_registrar_r26.py                70  MENCION    el nombre fuera de toda llamada
+scripts/loop/tallar_estado_de_fase.py             683  DEFINICION 
+scripts/loop/tallar_estado_de_fase.py             819  LLAMADA    LOS RECOGE en fallos
 scripts/loop/vuelta140_3_escribir_aristas.py       33  MENCION    el nombre fuera de toda llamada
 scripts/loop/vuelta140_3_escribir_aristas.py      150  LLAMADA    LOS RECOGE en fallos_exc
 scripts/loop/vuelta141_2_mutaciones.py            246  LLAMADA    LOS RECOGE en _fallos_exc
@@ -29,9 +30,11 @@ scripts/loop/vuelta145_2c_censo_de_llamadas.py     46  MENCION    el nombre fuer
 scripts/loop/vuelta145_2c_mutacion_censo.py        15  MENCION    el nombre fuera de toda llamada
 scripts/loop/vuelta145_2c_mutacion_censo.py        82  LLAMADA    LOS RECOGE en fallos_de_esta
 
-FICHEROS CON APARICION DEL NOMBRE : 10
+FICHEROS CON APARICION DEL NOMBRE : 11
 FICHEROS CON LLAMADA DE VERDAD    : 8
-FICHEROS QUE SOLO LO MENCIONAN    : 2 ['scripts/loop/vuelta144_1b_medir_ventana.py', 'scripts/loop/vuelta145_2c_censo_de_llamadas.py']
+CIFRA ficheros con aparicion del nombre: 11 ficheros
+CIFRA ficheros con llamada de verdad: 8 ficheros
+FICHEROS QUE SOLO LO MENCIONAN    : 3 ['scripts/loop/_v145_registrar_r26.py', 'scripts/loop/vuelta144_1b_medir_ventana.py', 'scripts/loop/vuelta145_2c_censo_de_llamadas.py']
 LLAMADAS EN TOTAL                 : 14
   que RECOGEN sus fallos          : 13
   que los TIRAN Y LO DECLARAN     : 1 ['scripts/loop/vuelta144_2b_mutacion_giro.py:214']

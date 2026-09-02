@@ -139,6 +139,11 @@ def main():
 
     print("FICHEROS CON APARICION DEL NOMBRE : %d" % len(con_aparicion))
     print("FICHEROS CON LLAMADA DE VERDAD    : %d" % len(con_llamada))
+    # LINEAS CIFRA, para que el reporte pueda cotejar estas dos unidades contra
+    # este fichero en vez de dejarlas sin nada que contar. SON DOS UNIDADES
+    # DISTINTAS y por eso llevan dos etiquetas distintas (CORRECCION 18).
+    print("CIFRA ficheros con aparicion del nombre: %d ficheros" % len(con_aparicion))
+    print("CIFRA ficheros con llamada de verdad: %d ficheros" % len(con_llamada))
     print("FICHEROS QUE SOLO LO MENCIONAN    : %d %s"
           % (len(solo_mencion), solo_mencion or ""))
     print("LLAMADAS EN TOTAL                 : %d" % len(llamadas))

@@ -412,6 +412,39 @@ def leer(ruta):
         return f.read()
 
 
+# LOS FICHEROS CITADOS QUE NO SON UTF-8 (vuelta 145, TAREA 4.c). Hallado al
+# correr esta guarda sobre el REPORTE.md de la vuelta 145: reventaba con
+# UnicodeDecodeError y una traza de pila, sin decir de que fichero hablaba mas
+# que en el stack. La causa no es el reporte: es que
+# `docs/loop/SALIDA_V<N>_CICLO_ETIQUETAS_*.txt` se captura con la codificacion
+# de la consola de Windows (cp1252), y lleva asi desde al menos la vuelta 144
+# (medido: el fichero de la 144 tampoco decodifica). Nadie lo habia visto
+# porque hasta hoy ningun reporte lo habia CITADO.
+#
+# LA DECISION, DECLARADA: se cuenta igual, porque ninguna de las cuatro
+# unidades que esta guarda cuenta (ficheros, pares, aristas, lineas) depende de
+# un acento; PERO NO SE CALLA. Se decodifica con `errors="replace"` y se ANOTA
+# el fichero en `NO_UTF8`, que la linea de COBERTURA publica siempre. Degradar
+# en silencio seria justo lo que el banco 9 prohibe; reventar con una traza
+# tampoco sirve, porque no distingue "el reporte esta mal" de "la guarda no
+# pudo leer".
+NO_UTF8 = []
+
+
+def leer_citado(ruta):
+    """El contenido de un fichero de salida CITADO por el reporte. Intenta
+    UTF-8 estricto; si el fichero no lo es, lo decodifica con reemplazo Y LO
+    ANOTA para que la cobertura lo diga con su nombre."""
+    try:
+        return leer(ruta)
+    except UnicodeDecodeError:
+        nombre = os.path.basename(ruta)
+        if nombre not in NO_UTF8:
+            NO_UTF8.append(nombre)
+        with io.open(ruta, encoding="utf-8", errors="replace") as f:
+            return f.read()
+
+
 MARCA_CABECERA_ABRE = "<!-- CABECERA TALLADA -->"
 MARCA_CABECERA_CIERRA = "<!-- FIN CABECERA TALLADA -->"
 # LA LISTA DE COMMITS, TALLADA DE GIT (vuelta 140, tercera reparacion de la 2.b).
@@ -1119,7 +1152,7 @@ def verificar(ruta_reporte, cierres_out=None, nomina_out=None):
                 continue
             fichero_cita = citas[0]
             ruta_cita = os.path.join(LOOP, fichero_cita)
-            contenido_cita = leer(ruta_cita)
+            contenido_cita = leer_citado(ruta_cita)
             familia = UNIDAD_A_FAMILIA[unidad]
             etiqueta_usada = None
             modo_cifra = None
@@ -1216,6 +1249,8 @@ def main():
     # LA NOMINA VA EN LA MISMA LINEA QUE LA COBERTURA, siempre, verde o rojo
     # (TAREA 2.a.i, vuelta 142): una cobertura que no dice QUE SE QUEDO FUERA es
     # la que dejo colarse a `direcciones` durante dos vueltas.
+    cobertura += (" | ficheros citados que NO son UTF-8: %d [%s]"
+                  % (len(NO_UTF8), ", ".join(sorted(NO_UTF8)) or "ninguno"))
     cobertura += (" | unidades vistas FUERA del vocabulario: %d palabra(s) [%s]"
                   % (len(nomina),
                      ", ".join("%s x%d" % (p, n) for p, n in

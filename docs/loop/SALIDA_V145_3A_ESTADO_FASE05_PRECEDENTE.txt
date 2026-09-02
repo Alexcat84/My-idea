@@ -1,0 +1,22 @@
+ESTADO DE LA FASE 05_SANEO | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-S-01 | 05_SANEO | HECHA | FUSION | no remitida | superviviente certificado_de_origen_tratados_libre_comercio vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-S-02 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo VIGENCIA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-03 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo VIGENCIA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-04 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo HERRAMIENTA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-05 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo HERRAMIENTA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-08 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-09 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo RENOMBRE_CON_ALIAS (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-10 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo REENCUADRE_DE_MARCO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-11 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-12 | 05_SANEO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo SANEO MECANICO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 10 | con destino cumplido: 1 | sin cumplir: 9 | de ellas, sin vara escrita: 9 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (9): OP-S-02, OP-S-03, OP-S-04, OP-S-05, OP-S-08, OP-S-09, OP-S-10, OP-S-11, OP-S-12
+SIN VARA ESCRITA (9): OP-S-02, OP-S-03, OP-S-04, OP-S-05, OP-S-08, OP-S-09, OP-S-10, OP-S-11, OP-S-12
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+EXITCODE: 0

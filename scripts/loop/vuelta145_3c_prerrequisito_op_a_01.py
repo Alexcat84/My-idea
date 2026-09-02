@@ -86,7 +86,7 @@ def main():
         print("  separador %-5r : %4d nodo(s)%s" % (sep, cuantos, marca))
     multi = sorted(k for k, n in vivos.items()
                    if len(piezas(n.get("fuente") or "", SEPARADOR_CANONICO)) > 1)
-    print("  CIFRA nodos con mas de una fuente: %d nodos" % len(multi))
+    print("CIFRA nodos con mas de una fuente: %d nodos" % len(multi))
     print("")
 
     print("(2) DECLARACIONES EN SEGUNDA POSICION O POSTERIOR (lo que mira P.2)")
@@ -94,7 +94,7 @@ def main():
     for nid in multi:
         ps = piezas(vivos[nid].get("fuente") or "", SEPARADOR_CANONICO)
         total_segunda += len(ps) - 1
-    print("  CIFRA declaraciones en 2.a posicion o posterior: %d lineas" % total_segunda)
+    print("CIFRA declaraciones en 2.a posicion o posterior: %d lineas" % total_segunda)
     print("  LOS NODOS, UNO A UNO, y ninguno se queda sin nombre:")
     for nid in multi:
         ps = piezas(vivos[nid].get("fuente") or "", SEPARADOR_CANONICO)
@@ -118,6 +118,11 @@ def main():
             conteo[(rotulo, etiqueta)] = len(grafias)
             print("  %s, %s: %d grafia(s) distinta(s), %d nodo(s)"
                   % (rotulo, etiqueta, len(grafias), sum(len(v) for v in grafias.values())))
+            # LINEA CIFRA (contrato de verificar_cifras_del_reporte.py, 2.c de
+            # la vuelta 135): para que el reporte pueda COTEJAR esta cifra
+            # contra su fichero en vez de dejarla sin nada que contar.
+            print("CIFRA grafias de %s, %s: %d grafias"
+                  % (rotulo, etiqueta.lower(), len(grafias)))
             for g in sorted(grafias):
                 print("     %4d nodo(s)  %r" % (len(grafias[g]), g))
     print("")
