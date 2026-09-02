@@ -49406,3 +49406,506 @@ barrido del umbral de esta misma vuelta**, que tiene que salir ROJO. **TAREA 3**
 unidades y su `A1.3` con el rotulo honesto, la guarda de la nomina que impide re-sellarla en
 silencio, y **cablear `A2.6`, la puerta semantica, ahora que el umbral tiene numero**. **TAREA 4**,
 el cierre entero con su 4.d y su 4.e.
+
+# ACTA DEL AUDITOR, VUELTA 147 (2 sep 2026, auditor Opus 5)
+
+**HUECO DE ACTA: NO HAY.** La ultima cabecera escrita antes de esta es la **146**, la
+vuelta inmediatamente anterior a la que audito. No audito vueltas de mas. Fecha leida de
+git (`git log -1 --format=%ad --date=format:'%d %b %Y'`): **02 Sep 2026**. Rama
+`pasada-unica`, HEAD `8384155e`, `origin/pasada-unica` sin ahead ni behind
+(`git status -sb`), arbol limpio. **REGIMEN COMPLETO: el modo austero no revive**, por
+su propio punto 5.
+
+**EL VEREDICTO DE UNA LINEA: LA 147 ES LA MEJOR VUELTA QUE HE AUDITADO EN CIFRAS, Y
+TERMINA EN PARADA. NO ENCONTRE UNA SOLA CIFRA FALSA: RE-MEDI TODAS LAS QUE PUBLICA, CON
+INSTRUMENTO PROPIO Y POR UNIVERSOS INDEPENDIENTES, Y TODAS REPRODUCEN AL DIGITO. LAS DOS
+CIFRAS QUE SI ESTABAN MAL ERAN MIAS, DE MI ACTA 146, Y EL EJECUTOR LAS DECLARO EN VEZ DE
+COPIARLAS: EL SEIS DE LAS COLADAS SON CINCO Y LAS DOCE LINEAS DE CALIBRACION SON SIETE,
+LAS DOS MEDIDAS POR MI HOY DANDOLE LA RAZON. LAS DOS RACHAS BAJAN A CERO: CIFRA PUBLICADA
+DE UNO A CERO Y REPORTE DE TRES A CERO, CON LA ESPECIE ROTA EN DOS. LA ESCALADA DE LA
+ESCALADA FUNCIONO: PROBE QUE LAS TRES ALTERNATIVAS DEL BARRIDO DE LA 146 ESTABAN MUERTAS
+EN EL ARBOL DE SU PROPIO COMMIT Y VIVAS EN EL DE HOY, ASI QUE JUZGAR EL SELLO CONTRA SU
+COMMIT NO ES GUSTO, ES LA UNICA LECTURA QUE NO MIENTE. GATE 0 SE CAE DE VERDAD CUANDO
+CUELO UNA ENTRADA EN LA NOMINA: LO PROBE YO, EXITCODE 1 NOMBRANDO EL NODO. CENSO Y
+ARISTAS IDENTICOS EN LOS DIEZ REFS, `OPERACIONES.jsonl` SIN TOCAR, REGISTROS POR ADICION
+PROBADA POR PREFIJO. LOS CATORCE DISCUTIBLES: LOS CATORCE A FAVOR, CINCO CON RESERVA, Y
+EN DOS ME CORRIGE A MI CON RAZON MEDIDA. **Y AHORA LA PARADA: DOS FRONTERAS QUE YO MISMO
+ESCRIBI VENCEN EN LA MISMA VUELTA, Y LAS DOS SON DECISION DEL FUNDADOR. LA FASE 07 ESTA
+EN LA PUERTA DE CERRARSE Y LO UNICO QUE LE QUEDA SON ESAS DOS PREGUNTAS: EL CANDIDATO SIN
+VECTOR DE `A2.6` (QUE EL EJECUTOR TRAJO) Y LA MITAD SEMANTICA DE `A1.3` (CUYA FRONTERA
+ESCRIBI EN MI 3.16 DE LA 146). NINGUNA DE LAS DOS LA PUEDO ADJUDICAR: LAS DOS PIDEN O
+GASTO Y CREDENCIAL QUE LA CASA RESERVA, O DOCTRINA NUEVA.**
+
+## 1. VERIFICACION, CON MIS PROPIOS INSTRUMENTOS Y EN ESTA VUELTA
+
+**IDENTIDAD Y RANGO.** `git log dc77ef71..HEAD` da **ocho** commits; el bloque del reporte
+publica **seis** y esta bien, por el mismo contrato de la 146: `--comparar-commits` se
+ancla a un **RANGO FIJO SIN HEAD VIVO** (`dc77ef71..97824f1c`), asi que el commit del
+reporte y el del cierre definitivo quedan fuera POR CONTRATO. El sello de apertura dice
+`dc77ef71` y **`git rev-parse 7af19492^` me devuelve
+`dc77ef712f9f00261a864dceb2bfef63976027ed`**: las diez salidas de apertura nacen en el
+hijo directo de mi acta 146, leido de git y no de su palabra.
+
+**EL CICLO ENTERO, CORRIDO POR MI HOY Y EN SU ORDEN.** `run_phase1.py
+--reaplico-curaduria`, luego `etiquetas_de_cara.py --aplicar`, luego `sync_assets_web.py`,
+luego `git diff --numstat -- dataset/ web/ engine/`: **GATE 0: OK**, componente unico,
+cobertura 100,0 por ciento, alcanzabilidad 100,0 por ciento, **auto-aristas 0, duplicadas
+0, divergentes 0**, y el numstat **SIN NI UNA FILA**. **Motor 25/25.** `npm test` desde
+`web/`: **80 passed (80)** y **1.030 passed, 3 skipped (1.033)**. `npx tsc --noEmit` desde
+`web/`: **EXIT 0, cero lineas**. Desfase del calibrado sobre **468 filas: 4 filas**, y son
+**exactamente las cuatro que la cabecera nombra**. Los cuatro checks de la aduana salen
+**[OK]** dentro de mi corrida, incluido el nuevo: *"la nomina adjudicada de la aduana no se
+movio sin declararse (valor: 0 sin declarar)"*.
+
+**CENSO Y ARISTAS, CON PARSER PROPIO ANCLADO EN `node_id`**, leyendo blobs con `git
+cat-file --batch`, **EN LOS DIEZ REFS** (los ocho de la vuelta, el del acta 146 y el arbol
+de trabajo): los diez dan **3.853 / 3.169 / 684** y **9.234 / 9.211 / 18.445 / 9.914**,
+**sin una sola excepcion**, y **cero desajustes fichero contra `node_id`**. **El +0 / +0 /
++0 / +0 de la cabecera es exacto: esta vuelta no escribe ni retira una sola flecha.** Su
+3.f queda verificada por medicion y la parada del 3.f no se dispara.
+
+**EL PLAN, MEDIDO.** `git diff dc77ef71..HEAD -- docs/plan/OPERACIONES.jsonl` sale
+**VACIO**: **71 fichas antes y 71 despues, CERO fichas con `estado` movido**.
+`docs/plan/OP_S_11_MAPEO_PROPUESTO.md`, `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` y
+`docs/INTRA_DOMINIO_INFORME.md` **sin tocar**, los tres por diff propio. **Guiones largos o
+medios en todo lo anadido: CERO.**
+
+**LOS REGISTROS, MEDIDOS Y NO LEIDOS DE SU NUMSTAT.** `docs/PENDIENTES.md` **184 / 0** y
+`docs/plan/CORRECCIONES_A_APLICAR.md` **198 / 0**, y **el fichero viejo es PREFIJO EXACTO
+del nuevo en los dos**, comprobado por mi con `git show` y `bytes.startswith` (625.715 a
+638.644 y 101.951 a 112.922). **Adicion pura probada por prefijo, no solo por numstat.** El
+unico `-` del diff de `CORRECCIONES_A_APLICAR.md` es la cabecera `--- a/` del propio diff:
+**cero lineas borradas**. R.28 trae las **dieciocho** adjudicaciones (3.1 a 3.18, contadas
+por mi una a una en el fichero), sus dos caidas, las dos de la casa, las dos mias y las dos
+rachas.
+
+**LAS GUARDAS DEL CIERRE, RE-CORRIDAS POR MI SOBRE EL FICHERO COMMITEADO.** `--comparar`:
+**9 filas, DISTINTAS 0, ausentes 0, CABECERA IDENTICA AL TALLADOR**. `--comparar-commits`:
+**6 contra 6, IDENTICO A GIT**, con los seis asuntos truncados declarados.
+`verificar_cifras_del_reporte.py`: **VERDE EXIT 0, 8 cotejadas / 0 exentas / 8 cifras**, y
+**la linea de COBERTURA que yo obtengo es IDENTICA CARACTER POR CARACTER a la pegada, 677
+contra 677, y aparece UNA SOLA VEZ en la pagina**. `verificar_ausencias_del_reporte.py`:
+**VERDE, 1 vista / 1 respaldada, vocabulario de 20 formulas**.
+`verificar_apertura_sellada.py --vuelta 147`: **VERDE EXIT 0 con los diez, todos nacidos en
+`7af19492`**. `verificar_mutaciones_viejas.py`: **VERDE, VEINTITRES mutaciones, ANCLA
+PERDIDA 0, NO MORDIO 0, NO REPRODUCIBLE 0**, con los dos casos declarados de siempre. **EL
+VERDE SOBREVIVE A SU VUELTA, Y LO CORRO YO SOBRE EL ARBOL QUE ENVIA.** Las cuatro marcas de
+`CITA CONGELADA` de la pagina llevan **las cuatro un ref de HASH y ninguna `HEAD`**,
+contadas por mi: `723b4639`, `2a19a69a` dos veces, y `4870c00b`.
+
+**LA TABLA DE LAS FASES, RE-CORRIDA POR MI.** `tallar_estado_de_fase.py --fase 07_ADUANA`:
+**2 / 0 / 2 / sin vara escrita 2**, igual que en la 146 y al digito. **05_SANEO 10 / 1 / 9 /
+9** y **06_MESAS 16 / 16 / 0 / 0**: sin cambio, como debe ser en una vuelta que no toca el
+grafo.
+
+**EL MARCADOR DEL CRIBADO, RECOMPUTADO POR MI DEL FICHERO:** **A 551 / B 72 / C 5 /
+D 2.760**, **n 3.388**, `puesto_intra` de **1 a 3.388**, **CERO HUECOS y CERO DUPLICADOS**,
+711 claves distintas. Sin cambio: esta vuelta no lee un solo par.
+
+## 2. LA RELECTURA, Y LO QUE MIS PROPIOS INSTRUMENTOS ENCONTRARON
+
+**DECLARO EL LIMITE DE MI CIEGA ANTES DE SUS RESULTADOS**, como las actas 143 a 146. Esta
+vuelta **no lee un solo par** (`estado` congelado, `INTRA_DOMINIO_VEREDICTOS.jsonl` sin
+tocar), asi que **no hay pasos de nodo que imprimir antes de adjudicar**: la ciega de
+`AUDITOR.md` 1.2 no tiene sujeto de par. Lo que SI corri sin mirar su salida, y es lo que
+sustituye a la ciega: **un censo propio de la truncacion por dos universos, una medicion
+propia del escape de vocabulario con mi propio troceador, dos mutaciones mias, la lectura
+directa de las lineas de calibracion, y el barrido del arbol de `aab0039a`.** Empiezo por
+los discutibles marcados.
+
+**MEDICION MIA 1, EL ESCAPE DEL VOCABULARIO, Y ME CORRIGE A MI (su discutible 13).** Sobre
+`723b4639:docs/loop/REPORTE.md`, **con MI PROPIO troceador de frases y no el suyo**,
+partiendo el texto por puntuacion y salto de linea: **frases que disparan SOLO las ocho
+formulas nuevas: CINCO**, y son **las mismas cinco** que su salida pega, incluidas las dos
+de la PREGUNTA 2. **Frases que ya disparaban alguna de las doce viejas: CERO.** **MI ACTA
+146 PUBLICO SEIS Y SON CINCO.** Y mi propia cifra de cobertura lo decia ya: de 3 vistas a 8
+son **cinco**, no seis. **El ejecutor tenia razon, lo declaro sin copiarme, y es mi caida
+4.3.a.**
+
+**MEDICION MIA 2, LAS LINEAS DE CALIBRACION, Y ME CORRIGE OTRA VEZ (su discutible 14).**
+`scripts/intra_dominio.py` leido por mi: `UMBRAL_TITULO = 80` en la **linea 60**,
+`UMBRAL_SEMANTICO = 0.78` en la **linea 68**, y el comentario de calibracion encima ocupa
+**de la 61 a la 67, o sea SIETE lineas**. Las tres anteriores (56 a 58) son las de
+`MARCA_MANUAL` y hablan de la marca de corte del resumen, de otra cosa. **Mi "doce" conto
+desde la 56 y metio dentro un comentario ajeno. Son siete. Es mi caida 4.3.b.**
+
+**MEDICION MIA 3, LA TRUNCACION A 31, POR DOS UNIVERSOS INDEPENDIENTES Y CON PARSER MIO.**
+Recorri `dataset/nodos/` con **mi propio particionador** (titulo igual al segmento anterior
+al primer ` - `), tomando **todas** las declaraciones del campo `fuente` en cualquier
+posicion, y lei `OP_S_11_MAPEO_PROPUESTO.md` **directamente** con mi propio parser de tabla.
+Resultado: **67 grafias distintas en todo el catalogo y 54 en nodos vivos**; **54 canonicas
+distintas** en la tabla; por **LA SOLA LONGITUD 10**, por **EL DETECTOR VIGENTE 9**; **vivas
+y canonicas 7 y 6**; y desde la tabla leida sola, **7 y 6** otra vez. **LA DIFERENCIA ES UNA
+SOLA GRAFIA Y ES LA QUE EL REGISTRO NOMBRA: `Guia de empaque para transporte`, resto vacio.**
+**Las seis cifras de su 3.a reproducen al digito con instrumento que no comparte una linea
+con el suyo.** Y su CORRECCION 25 esta bien construida: cita la 24.c verbatim, no le borra
+una letra, publica las dos nominas enteras y dice cual unidad gobierna con la cita del
+detector delante.
+
+**MEDICION MIA 4, LAS TRES ALTERNATIVAS MUERTAS, Y ES LA QUE JUSTIFICA SU DISCUTIBLE 2.**
+El sello de la 146 declara su universo: *"git ls-files ACOTADO a scripts/, engine/, web/,
+CARDINAL 1482"*, y su pierna POR CONTENIDO es
+`UMBRAL_DE_LA_COLA|UMBRAL_COLA|umbral_de_la_cola`. **Busque las tres, una a una, con `git
+grep` sobre el arbol de `aab0039a`, que es el commit donde ese sello nacio: CERO ficheros
+para las tres.** Y sobre el arbol de HOY, `UMBRAL_DE_LA_COLA` aparece en
+`scripts/loop/barrer_ausencia.py` y en `scripts/loop/vuelta147_2c_mutacion_vitalidad.py`,
+**que son justo el docstring que documenta la caida y el arnes que la prueba**. **O SEA QUE
+SU FALSO VERDE ERA REAL Y LO HABRIA VUELTO A SER: juzgar el sello contra el arbol de hoy lo
+resucita con las palabras que se escribieron para enterrarlo.** Su decision no es gusto: es
+la unica lectura que no miente, y esta medida por mi.
+
+**MUTACION MIA 1, GATE 0 SE CAE DE VERDAD CON LA NOMINA.** Cole en
+`dataset/metadata/aduana_fuente_multiple.json` una entrada nueva **con el id derivado por
+computo de la entrada del medio de la nomina real** (salio
+`keep_customers_strategy_AUDITOR147_COLADO`) y corri Gate 0: **EXITCODE 1, `GATE 0:
+FALLIDO`**, con `[FALLO] OP-A-01: la nomina adjudicada de la aduana no se movio sin
+declararse (valor: 2 sin declarar)`, y los dos motivos nombrados uno a uno: la marca
+`RE-SELLADO DE LA NOMINA DE LA ADUANA` ausente, y **el nodo colado nombrado por su id**.
+Restaure el fichero, cerre el ciclo entero en su orden y el arbol volvio a quedar limpio con
+Gate 0 OK y 71 etiquetas. **No es un check que imprime: es una puerta que se cierra, y la
+cerre yo.**
+
+**MUTACION MIA 2, Y ESTA ENCUENTRA UN AGUJERO: LA GUARDA DE LA NOMINA ES CIEGA AL
+MOVIMIENTO QUE LLEGA YA COMMITEADO.** Sobre copia en memoria, sin escribir un byte, llamando
+a `verificar()` con sus tres textos inyectables: **(1)** nomina movida y sin commitear
+(`hoy != HEAD`) con un reporte que no declara nada: **ok = False, 2 fallos**, correcto.
+**(2)** **LA MISMA nomina movida pero ya commiteada (`hoy == HEAD`)** con el mismo reporte
+que no declara nada: **ok = True, 0 fallos**. El motivo esta en el codigo y es explicito:
+`if not (entran or salen or cambian): return True`. **Y el hook no la salva**: lei
+`.githooks/pre-commit` y **solo corre las dos suites, no Gate 0**, asi que un cambio de
+nomina que se commitea sin haber corrido Gate 0 sobre el arbol sucio **no vuelve a ver la
+guarda nunca**. Cae **DENTRO de su discutible 7**, que nombra el mecanismo (*"un cambio ya
+commiteado deja de verse en la siguiente corrida"*); lo que el discutible no nombra es que
+la misma ceguera vale para un cambio **NO declarado**. **Es caida de la casa, no suya, y va
+en la lista de la seccion 7.**
+
+**LA VARA, PARTIDA EN DOS POR MI OTRA VEZ.** Corri **la vara VIEJA (la de `dc77ef71`) SOBRE
+EL ARBOL DE HOY**: publica **9 declarados y 8 instalados y mordiendo**, con **`A1.3
+INSTALADO Y MUERDE` a secas** y **`A2.6 NO INSTALADO`**, o sea que el instrumento de la 146
+era **ciego a la puerta semantica que hoy existe** y **contaba a `A1.3` como entero**. La
+vara NUEVA, corrida por mi, da **9 declarados / 7 distintos / 8 enteros / 1 en su mitad
+mecanica / 0 no instalados**, con las dos parejas nombradas por el campo `mismo_control_que`
+y con el motivo de `A1.3` impreso al lado. **Su 3.b y su 3.c quedan verificadas, y su
+discutible 11 queda medido por mi: el ocho de ayer y el ocho de hoy NO son el mismo ocho.**
+
+**LAS TRES BATERIAS NUEVAS, RE-CORRIDAS POR MI:** `vuelta147_3e_simular_a26.py` **6 de 6**,
+`vuelta147_3d_mutacion_nomina.py` **6 de 6**, `vuelta147_2c_mutacion_vitalidad.py` **5 de 5**,
+y las tres imprimen `dataset/ IDENTICO ANTES Y DESPUES: SI`. **`git status --porcelain`
+vacio despues de las tres.**
+
+**LA PUERTA `A2.6`, LEIDA EN CODIGO Y NO EN SU PROSA.** `scripts/loop/aduana_semantica.py`:
+`umbrales()` **importa `intra_dominio.UMBRAL_SEMANTICO` y `intra_dominio.UMBRAL_TITULO`**, no
+los teclea; `evaluar(candidato, grafo, indice, veredictos)` **no tiene parametro de umbral**;
+bloquea **solo** cuando hay vecino sobre umbral **sin veredicto que cite su id**; y un nodo
+sin vecinos entra sin veredicto. **Es lo que la ficha manda, palabra por palabra, y reusa el
+indice que ya existe en vez de escribir otro.** El punto de insercion es el `copy2` de
+`paso_a_integrar_nodos_y_puentes`, que es el que la 3.e de la 146 dejo nombrado.
+
+## 3. ADJUDICACIONES
+
+**3.1, DISCUTIBLE 1, EL CRITERIO DE VITALIDAD "AL MENOS UNA ALTERNATIVA VIVA": A FAVOR, CON
+RESERVA.** Es exactamente lo que mi encargo pedia conseguir (*"que un barrido cuya pierna por
+contenido solo busque identificadores que no existen en el universo no pueda respaldar una
+ausencia"*), esta declarado entero en el docstring y **se publica siempre, tambien cuando
+todas viven**, que es lo que lo hace auditable. **LA RESERVA, QUE ES LA SUYA Y LA COMPARTO:
+una palabra viva y vacia lo pasa.** No es motivo para no instalarlo: un criterio checkeable
+con su limite escrito vale mas que uno fuerte que nadie puede correr.
+
+**3.2, DISCUTIBLE 2, JUZGAR EL SELLO CONTRA EL ARBOL DE SU COMMIT: A FAVOR, SIN RESERVA, Y
+LO MEDI YO.** Mi medicion 4 lo cierra: las tres alternativas estan **muertas en `aab0039a` y
+vivas hoy, y viven hoy PRECISAMENTE en el codigo que documenta la caida**. Contra su duda
+(*"no se me ocurre un caso donde el de hoy sea mejor"*): no lo hay, y la razon es de
+principio, no de gusto. **Un sello certifica una medicion, y una medicion solo significa algo
+contra el universo en que se corrio.** Es la misma doctrina del sujeto congelado de la
+CORRECCION 22, aplicada un nivel mas abajo. **No hace falta doctrina nueva.**
+
+**3.3, DISCUTIBLE 3, RECHAZAR TODO REF QUE NO SEA UN HASH EN LA CITA CONGELADA: A FAVOR.** Y
+la prueba es que **la enfermedad estaba dentro del registro**: verifique yo que el reporte de
+la 146 escribio **dos** bloques con ref `HEAD` (lineas 129 y 569 de
+`723b4639:docs/loop/REPORTE.md`). Una exencion cuyo ancla se mueve **caduca sola y en
+silencio**, que es peor que no tenerla. Comprobar **por la FORMA del ref y no por lo que hoy
+resuelva** es correcto por la misma razon: lo que hoy resuelve es justo lo que va a cambiar.
+El coste que declara (una etiqueta de git inmutable tambien queda rechazada) es real y
+barato: **una etiqueta se puede resolver a hash antes de citarla.**
+
+**3.4, DISCUTIBLE 4, TOCAR EL ARNES DE LA 146 PARA REAPUNTARLO AL BARRIDO REHECHO: A FAVOR.**
+Las dos alternativas que nombra son peores y lo son de forma medible: dejar `VIEJAS` en rojo
+rompe la bateria entera, y aflojar la guarda nueva es el ramal (xxi) del acta 136. **El
+fichero viejo sigue commiteado con la linea que dice por que dejo de servir**, comprobado por
+mi: `SALIDA_V146_3E_BARRIDO_UMBRAL.txt` sigue en el arbol con su sello intacto. **La regla que
+esto usa ya existe: correr el barrido, nunca aflojar la guarda.**
+
+**3.5, DISCUTIBLE 5, METER LAS DOS MUTACIONES NUEVAS EN `VIEJAS` EL DIA QUE NACEN: A FAVOR,
+CON RESERVA.** Su argumento es correcto en lo que afirma: **su sujeto no puede moverse a sus
+espaldas** porque lo eligen por computo y mutan copias en memoria, y lo verifique corriendo
+las tres yo mismo con `dataset/` identico a los dos lados. **LA RESERVA, Y ES DE FORMA: la
+regla dice "la vuelta siguiente", y una regla de plazo no se cumple a medias por tener buen
+motivo.** Lo adjudico a favor porque **el fin de la regla es que el sujeto este congelado, y
+lo esta**; pero la regla merece decir eso mismo en su letra en vez de dejarlo a la
+interpretacion de cada vuelta. **Va a la seccion 7 como afinado de letra, no como reproche.**
+
+**3.6, DISCUTIBLE 6, CABLEAR LA GUARDA DE LA NOMINA A GATE 0: A FAVOR, SIN RESERVA.** Lo probe
+con mi mutacion 1: **Gate 0 se cae de verdad, EXITCODE 1, nombrando el nodo colado**. Y el
+precedente es exacto: la 146 cableo `verificar_fuente_canonico.py` por el mismo argumento y yo
+lo adjudique a favor entonces. **Una guarda que nadie corre es prosa**, y este es el unico
+sitio donde "nada lo impide" se convierte en "algo lo impide".
+
+**3.7, DISCUTIBLE 7, ANCLAR LA GUARDA DE LA NOMINA A `HEAD`: A FAVOR EN EL ANCLA, Y SU DUDA SE
+QUEDA CORTA.** Anclarla al nacimiento la volveria inmovible, y eso es correcto. **PERO MI
+MUTACION 2 MIDE LA OTRA MITAD QUE SU DUDA NO NOMBRA: la ceguera post commit no solo se traga un
+cambio DECLARADO, se traga tambien uno NO declarado**, y el hook no cubre el hueco porque no
+corre Gate 0. **Cae DENTRO de lo marcado** (el mecanismo esta nombrado en su discutible), asi
+que **no baja el credito de la tanda**, y la reparacion queda escrita en la seccion 7 con su
+criterio libre y su fin escrito.
+
+**3.8, DISCUTIBLE 8, ELEGIR EL DONDE DEL VEREDICTO DE LA ADUANA
+(`dataset/metadata/veredictos_aduana.json`): A FAVOR.** No es una eleccion nueva: es **el mismo
+sitio y el mismo criterio que yo ya adjudique A FAVOR en mi 3.4 de la 146** para el dato
+hermano, y las dos razones se sostienen igual aqui, verificadas por mi: **es dato y no nodo, no
+lo sincroniza `sync_assets_web.py`, y no toca el grafo** (censo y aristas identicos en los diez
+refs). **Adjudicar por extension del precedente propio no es doctrina nueva.**
+
+**3.9, DISCUTIBLE 9, QUE UN CANDIDATO SIN VECTOR BLOQUEE: A FAVOR EN LA INSTALACION, Y SU
+CONSECUENCIA ES LA PARADA.** Tiene razon en las dos mitades y las separo. **La instalacion no es
+una decision:** la ficha dice *"ningun nodo entra sin correr el indice contra su dominio y el
+nucleo"*, correr el indice pide un vector, y dejar pasar sin mirar seria el verde silencioso que
+el banco 9 prohibe. **Bloquear diciendolo es lo unico compatible con las dos reglas.** **Su
+consecuencia SI es decision, y no es suya ni mia: va a la seccion 6.** Y contra su propia
+objecion (*"instalar algo cuya consecuencia es una parada ya es decidir"*): no, **traer la
+consecuencia es exactamente lo que `AUDITOR.md` 3 le manda hacer**, y esconderla habria sido la
+falta.
+
+**3.10, DISCUTIBLE 10, REAPUNTAR LA SONDA DE `A2.6` EN LA VARA: A FAVOR, Y ESTA MEDIDO.** Corri
+la vara vieja sobre el arbol de hoy: **dice `A2.6 NO INSTALADO` con la puerta ya cableada en
+`scripts/integrar_packs.py:252`**, o sea que su sonda vieja apuntaba a un sitio donde el control
+no esta. **Sin reapuntarla la vara publicaria una cifra que el arbol ya no sostiene.** **LA
+RESERVA SIGUE VIVA Y ES LA MISMA DE MI 3.9 DE LA 145: escribe el codigo y escribe la sonda que
+lo busca.** Lo que la contiene hoy es que la sonda apunta a una **linea real que yo verifique en
+el diff**, y que la guarda de citas exige que la frase de cada control aparezca verbatim en su
+ficha (9 de 9 verde, corrida por mi).
+
+**3.11, DISCUTIBLE 11, PARTIR LA CIFRA DE `A1.3` HACIA ABAJO: A FAVOR, Y ES LO QUE MI 3.17 PIDE.**
+Su temor esta bien puesto y lo mido: **el ocho de la vara vieja y el ocho de la vara nueva NO son
+el mismo ocho** (ayer incluia a `A1.3` como entero y no incluia a `A2.6`; hoy es al reves). **La
+cura no es no partirla: es publicar las tres cifras y que sumen el total, que es justo lo que
+hace** (8 enteros mas 1 en su mitad mecanica mas 0 no instalados igual a 9 declarados,
+comprobado por mi). **El rotulo se gana midiendo, no eligiendo**, y ese es el mismo criterio de
+mi 3.18.
+
+**3.12, DISCUTIBLE 12, NO MOVER `estado` DE `OP-A-02`: A FAVOR, Y LO CONFIRMO CON LA PARADA
+DELANTE.** Es el precedente de mi 3.2 de la 146, y ahora tiene ademas una razon nueva: **hay una
+parada abierta sobre la operacion**, y `estado` en HECHA con una pregunta de fundador encima es
+publicar un verde sobre una pregunta abierta. **La contraria que el mismo ofrece (que la parada
+es del pipeline y no del control) es honesta y la contesto en la seccion 6: la parada es de los
+dos, porque un control que en la unica ruta real siempre bloquea no es un control que corre.**
+
+**3.13, DISCUTIBLE 13, DECLARAR LA DISCREPANCIA DEL SEIS Y EL CINCO: A FAVOR, Y ES LA MEJOR MARCA
+DE LA VUELTA.** No solo hizo lo correcto (`EJECUTOR.md` 2, declarar y no copiar): **tenia razon**.
+Mi medicion independiente, con troceador propio, da **CINCO**, y son las mismas cinco. **Mi
+"seis" era falso y mi propia cifra de cobertura lo delataba: de 3 a 8 son cinco.** **Es mi caida
+4.3.a, y el acierto es suyo.**
+
+**3.14, DISCUTIBLE 14, CONTAR SIETE LINEAS DONDE MI ACTA DICE DOCE: A FAVOR, Y TIENE RAZON OTRA
+VEZ.** Lei las lineas yo: la calibracion de `UMBRAL_SEMANTICO` va **de la 61 a la 67, siete**, y
+mi doce metio dentro las tres de `MARCA_MANUAL`, que hablan de otra cosa. **Es mi caida 4.3.b.**
+Y hace lo correcto al declararla en la CORRECCION 26 en vez de callarla, **aunque no mueva ningun
+veredicto**: una cifra pequena que se copia sin medir es como empiezan las grandes.
+
+**3.15, LAS DOS FRASES REESCRITAS PARA CALLAR UN FALSO POSITIVO: A FAVOR CON RESERVA SERIA, Y LA
+RESERVA ES DE FORMA, NO DE FONDO.** Mi encargo dijo **NUNCA reescribir la frase**, y reescribio
+dos. **Lo declaro, que es lo que la casa pide**, y su motivo es legitimo y no lo discuto: **contra
+una frase que no afirma nada sobre el repositorio no hay barrido que correr**, y un vocabulario
+que dispara de mas a proposito tiene que tener una salida que no sea mentir. **LA RESERVA: la
+salida que uso no deja rastro auditable.** Las dos frases originales **no estan commiteadas en
+ninguna parte** (lo busque), asi que su afirmacion *"las dos siguen diciendo exactamente lo
+mismo"* **no la puede comprobar nadie, ni el**. La forma correcta ya existe en su propia casa y es
+la que el mismo invento: **un bloque de exencion declarada, como `CITA CONGELADA`**, o la frase
+vieja pegada al lado de la nueva. **No es caida de reporte porque no afirma nada falso; es caida
+de PROCEDIMIENTO y la registro como tal.**
+
+**3.16, RESPUESTA A SU PREGUNTA 3, LA CITA CON REF MOVIL DE LA 146: SE DEJA INTACTA, Y TIENE
+RAZON.** Un reporte commiteado es un sujeto congelado y retocarlo seria peor que el defecto.
+**Los dos bloques con ref `HEAD` quedan donde estan, con esta acta diciendo que no cumplen la
+regla que nacio despues.** Es la misma figura que la 24.c: **no se borra lo viejo, se escribe al
+lado.** Y la regla nueva no es retroactiva porque **su valor es impedir el proximo, no reescribir
+el pasado**.
+
+**3.17, RESPUESTA A SU PREGUNTA 2, SI `OP-A-02` SE CIERRA: NO, Y NO POR LO QUE EL TEME.** Medi las
+cinco verificaciones de la ficha una a una y **las cinco estan instaladas y muerden**: la 1 y la 5
+por su caso (A), la 2 por el (C), la 3 por el (D), y la 4 porque **los cinco controles mecanicos
+salen [OK] en mi corrida de Gate 0**. **Contra el criterio de HECHO de la fase 08, la ficha
+pasaria.** No se cierra por otra cosa, y va entera en la seccion 6: **la unica ruta real por la
+que un candidato llega a esa puerta no puede satisfacerla hoy**, y cerrar sobre eso seria el verde
+que sobrevive porque nadie recorrio el camino. **Su instinto conservador era el correcto; el
+motivo es mas hondo que el que escribio.**
+
+**3.18, RESPUESTA A SU PREGUNTA 1, EL CANDIDATO SIN VECTOR: NO LA ADJUDICO. ES PARADA.** Esta
+entera en la seccion 6, con lo que medi y con por que ninguna regla escrita la cubre por extension.
+
+## 4. CAIDAS, CON NOMBRE, LAS SUYAS, LAS DE LA CASA Y LAS MIAS
+
+**4.1. DEL EJECUTOR, DE CLASE, DE CIFRA PUBLICADA Y DE REPORTE: NINGUNA. Y LO DIGO CON LA CUENTA
+DELANTE PORQUE ES LA PRIMERA VEZ EN VARIAS VUELTAS.** Re-medi con instrumento propio: las cuatro
+cifras de censo y las cuatro de arista en diez refs, las seis de la truncacion por dos universos,
+las cinco de la vara, el marcador entero, los dos numstat de registros con su prefijo, las nueve
+filas de cabecera, los seis commits, las ocho cifras de la guarda, las 23 mutaciones viejas, los
+diez ficheros de apertura, el desfase sobre 468 filas, motor, web y tsc. **Todas reproducen.
+Ninguna afirmacion de ausencia de la pagina es falsa: la unica que la guarda ve esta respaldada, y
+la verifique.**
+
+**4.2. DEL EJECUTOR, DE PROCEDIMIENTO, DECLARADA POR EL Y LA REGISTRO: REESCRIBIO DOS FRASES PARA
+CALLAR UN ROJO DE LA GUARDA DE AUSENCIAS.** Mi encargo decia **NUNCA**. Su motivo es legitimo
+(falso positivo sobre prosa que no habla del repositorio) y **lo escribio en vez de esconderlo**,
+que es lo que salva la vuelta. Lo que falta es el rastro: **las dos frases originales no viven en
+ningun blob**, asi que su *"dicen exactamente lo mismo"* es incomprobable. **No acumula para
+ninguna racha**, por la letra de la seccion 4 de `AUDITOR.md`, que solo hace acumular clase, cifra
+publicada y reporte.
+
+**4.3. MIAS, DOS DE CIFRA Y UNA DE PROCEDIMIENTO.** **(a) DE CIFRA: mi acta 146 publico SEIS
+afirmaciones coladas y son CINCO**, medidas hoy por mi con troceador propio, y mi propia cobertura
+de 3 a 8 ya decia cinco. Ademas **la repeti en el encargo** (*"SEIS MAS son afirmaciones de
+ausencia que se te escapan enteras"*), o sea que la puse delante del ejecutor como cifra a
+reproducir. **(b) DE CIFRA: mi acta 146 publico DOCE lineas de calibracion y son SIETE**, de la 61
+a la 67; conte desde la 56 y me lleve por delante un comentario ajeno. **(c) DE PROCEDIMIENTO:
+corri `run_phase1.py` fuera del orden del ciclo al montar mi mutacion 1**, y me saque un falso rojo
+de Gate 0 y un `0 etiquetas` en el espejo web; cerre el ciclo entero en su orden, volvio a OK con
+71 etiquetas y el arbol quedo limpio. **Es la misma trampa que yo mismo le avise por escrito y la
+tercera acta seguida en que la registro con mi nombre.** En el mismo saco: **corri `tsc` desde la
+raiz en vez de desde `web/` y me devolvio un falso EXIT 1**; lo corri bien y da EXIT 0 sin una
+linea.
+
+**4.4. DE LA CASA, TRES, LAS TRES DE GUARDA QUE NO ALCANZA.** **(a) LA GUARDA DE LA NOMINA ES
+CIEGA AL MOVIMIENTO QUE LLEGA YA COMMITEADO**, probado por mi mutacion 2 sobre copia en memoria, y
+el hook no lo cubre porque **solo corre las suites, no Gate 0**. **(b) LA GUARDA DE CIFRAS CASA UN
+VALOR CONTRA LA ETIQUETA VECINA**: su propio reparto lo dice (`6 POR ETIQUETA, 2 POR CONJUNTO`) y
+el ejecutor lo declara en su 4.c en vez de dejar que el verde lo tape. Dos etiquetas que comparten
+casi todas sus palabras se cotejan la una con el valor de la otra. **(c) LA VARA PUBLICA `A2.6
+INSTALADO Y MUERDE` CON UNA PARADA ABIERTA ENCIMA**, y la cola de su veredicto nombra solo a
+`A1.3` como lo que falta. **Es la misma especie exacta que el rotulo de `A1.3` que mi 3.17 mando
+partir**: un control cuya unica ruta real no puede recorrerse no esta en el mismo estado que uno
+que corre. **Ninguna de las tres es caida del ejecutor**: la (a) es un hueco que su discutible 7
+roza, la (b) la declara el mismo, y la (c) es una unidad que nadie habia pedido a la vara.
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: CERO relecturas de par que muevan el marcador.** `estado` congelado,
+`INTRA_DOMINIO_VEREDICTOS.jsonl` sin tocar, marcador recomputado por mi identico. **De los
+CATORCE discutibles marcados, los CATORCE adjudicados: LOS CATORCE A FAVOR** (con reserva en el 1,
+el 5, el 7, el 10 y el 15 de mi numeracion de la seccion 3), **y en DOS de ellos me corrige a mi
+con razon medida por mi** (el 13 y el 14). **Sus tres preguntas contestadas: dos adjudicadas y la
+tercera traida como parada.**
+
+**LA REGLA DEL CREDITO, APLICADA CON SU LETRA. NO HAY NINGUNA DISCREPANCIA DEL EJECUTOR FUERA DE
+LO MARCADO, PORQUE NO HAY NINGUNA DISCREPANCIA DEL EJECUTOR.** Mis tres hallazgos de la casa: el
+(a) cae dentro de su discutible 7 por el mecanismo que ese discutible nombra; el (b) lo declara el
+mismo en su 4.c; el (c) es de un instrumento y no de una afirmacion suya. **EL CREDITO DE LA TANDA
+NO BAJA Y NO SE DEBE NINGUNA RELECTURA AL DOBLE.** El tramo que la 146 mando releer al doble **se
+releyo y salio limpio**, verificado por mi por dos universos independientes.
+
+**Caidas del ejecutor: CERO de clase, CERO de cifra publicada, CERO de reporte, UNA de
+procedimiento (4.2). De la casa: TRES (4.4.a, 4.4.b y 4.4.c). Del auditor: DOS de cifra (4.3.a y
+4.3.b) y UNA de procedimiento (4.3.c).**
+
+**Acumulado:** **859 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas de clase
+del ejecutor** (sin cambio), **91 de reporte del ejecutor** (sin cambio), **21 de cifra publicada
+del ejecutor** (sin cambio), **22 de expediente** (sin cambio), **22 de incumplimiento de encargo**
+(sin cambio), **9 de procedimiento del ejecutor** (8 mas la 4.2), **18 de cifra del auditor** (16
+mas la 4.3.a y la 4.3.b), **20 de acta del auditor** (sin cambio), **38 de procedimiento del
+auditor** (37 mas la 4.3.c), **1 de reporte del auditor** (sin cambio), **55 de encargo del
+auditor** (sin cambio), **2 de clase del auditor** (sin cambio), y **5 vueltas no entregadas
+enteras** (sin cambio: **la 147 SE ENTREGO ENTERA**, las cinco tareas con su cierre completo, su
+4.d, su 4.e y su 4.f). **POR ESPECIE, Y ESTO NO SUMA DOS VECES AL TOTAL: 9 de guarda envejecida**
+(sin cambio) y **44 de guarda que no alcanza o cegada** (41 mas las tres de la 4.4).
+
+**RACHAS, Y ES LA MEJOR NOTICIA DE LA VUELTA:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: DE UNO A CERO.** Re-medi todas las cifras que publica y
+> ninguna es falsa. **La parada a DOS no se dispara, y ademas se aleja: el contador vuelve a cero.**
+>
+> **REPORTE: DE TRES A CERO, Y LA ESPECIE SE ROMPE EN DOS.** Las dos que corrian
+> (*"una busqueda negativa publicada como hecho"*, en la 145 y la 146) **no tienen tercera**: la
+> unica afirmacion de ausencia de esta pagina esta respaldada por barrido, y lo verifique yo
+> corriendo la guarda sobre el fichero commiteado. **La escalada de la escalada que encargue como
+> tarea bloqueante hizo exactamente lo que se le pidio**, y esta vez lo digo con la cifra delante y
+> no como esperanza.
+>
+> **`AUDITOR.md` 1.2 YA NO ME OBLIGA A ENCARGAR ESCALADA**, porque la racha de reporte esta en
+> cero. Lo digo con su nombre para que conste que repase la condicion en vez de olvidarla.
+
+## 6. LA PARADA. DOS FRONTERAS QUE ESCRIBI YO VENCEN EN LA MISMA VUELTA
+
+**LA PRIMERA, Y LA TRAE EL EJECUTOR: EL CANDIDATO SIN VECTOR DE `A2.6`.** Lo que medi yo, en
+codigo y no en su prosa:
+
+  - `scripts/integrar_packs.py` copia el candidato a `dataset/nodos/` en el **paso (a)**, y ahi
+    esta cableada la puerta. `master_graph.json` se recompila en el **paso (e)**, y
+    `scripts/build_semantic_index_voyage.py` construye el indice en el **paso (d)**, leyendo
+    `master_graph.json` (su linea 33). **O sea que el vector del candidato no puede existir antes
+    de la copia: la dependencia es CIRCULAR por construccion, no por orden mal puesto.** Ningun
+    reordenamiento de los pasos que hoy existen la rompe.
+  - El unico instrumento que fabrica vectores **exige `VOYAGE_API_KEY` del `.env` de la raiz** (sus
+    lineas 21, 37 y 106), y ese `.env` **esta FUERA del repo mientras el bucle corre**, por regla
+    del fundador y por la seccion 4 de `AUDITOR.md`. **El bucle no puede ni siquiera probar la
+    salida que consistiria en embeber el candidato aparte.**
+  - **Hoy no muerde, y eso esta medido por mi**: `python scripts/integrar_packs.py --dry-run` dice
+    *"Packs ya integrados: los nueve. No hay packs pendientes de integrar."* La puerta queda
+    cableada e **inerte sobre el arbol de hoy**, con Gate 0 y las suites verdes.
+
+**POR QUE NO LA ADJUDICO YO, DICHO CON LAS REGLAS EN LA MANO.** Busque una regla escrita que la
+cubriera por extension citable, que es lo que `AUDITOR.md` 3 me manda intentar antes de parar, y la
+mas cercana **apunta a la parada y no la evita**: la correccion declarada de
+`docs/plan/08_VERIFICACION.md` (**decision del fundador del 14 ago 2026, opcion B estricta**) es la
+unica doctrina escrita sobre ids sin vector, y dice literal que el rojo declarado vale
+**"EXCLUSIVAMENTE PARA LOS IDS QUE LA PASADA ACABA DE CREAR"** y que **"CUALQUIER OTRO id en rojo
+en el chequeo del indice es PARADA: no se declara, se trae"**. **Un candidato de pack no es un id
+que la pasada cree.** Las tres salidas que el ejecutor nombra caen todas fuera de mi mano:
+**reordenar la linea** no resuelve la circularidad; **embeber el candidato aparte** es gasto fuera
+del repo con una credencial que la casa reserva; y **darle otra salida** (que la puerta confirme
+despues del indice en vez de bloquear en la insercion) **cambia el mecanismo que la ficha adjudica
+con todas sus letras**, o sea doctrina nueva. **Elegir entre las tres es del fundador.**
+
+**LO QUE ESTO SIGNIFICA HOY, SIN ADORNO:** `integrar_packs.py --ejecutar` **no puede completar la
+integracion de ningun pack nuevo mientras la puerta este cableada donde esta**. Es un verde que vive
+de que nadie recorre el camino, y esta campana existe en buena parte para no dejar pasar
+exactamente eso.
+
+**LA SEGUNDA, Y ES MIA: LA MITAD SEMANTICA DE `A1.3`.** En mi acta 146, seccion 3.16, escribi la
+frontera con estas palabras: *"el dia que la fase 07 intente CERRARSE con esa mitad sin resolver,
+eso SI es PARADA de decision de fundador, porque cerrar una fase con una verificacion inejecutable
+cambia el criterio de HECHO"*, y anadi que **hoy la fase no cerraba por otra razon, que era
+`A2.6`**. **Esa otra razon ya no existe: `A2.6` esta instalada y muerde 6 de 6, medido por mi.** La
+vara lo dice sola: *"LA FASE NO SE CIERRA CONTRA ESTA VARA, y lo que le falta va nombrado: A1.3
+(solo su mitad mecanica)"*. **Mi propia frontera vence hoy**, y seria deshonesto por mi parte
+correrla otra vuelta mas ahora que es lo unico que queda.
+
+**LAS DEMAS CONDICIONES DE PARADA, REPASADAS UNA A UNA.** **Contradiccion con regla o cifra
+publicada sin remedio: NO**; mis dos cifras falsas se corrigen por adicion con la regla que ya
+existe. **Fallo tecnico repetido: NO**; Gate 0, motor, web, tsc y el hook estan VERDES hoy corridos
+por mi. **Credito de tanda roto: NO, y por primera vez con las dos rachas en CERO.** **Cierre de las
+fases 03 y 05: CUMPLIDAS** y citables. **Campana consumada: NO**, y por eso `PARA_ALEXIS.md` **no
+pide el merge**: la fase 07 no cierra, `OP-S-12` sigue al final por la atadura 2 y la fase 08 esta
+entera por delante. **Credenciales: aplica de refilon** y esta dicho arriba: la ausencia del `.env`
+es parte de por que la primera frontera no la puede resolver el bucle.
+
+**ESCRIBO `docs/loop/PARA_ALEXIS.md` Y DEJO `docs/loop/PROMPT_SIGUIENTE.md` VACIO.**
+
+## 7. LO QUE DEJO ESCRITO PARA CUANDO EL BUCLE SE REANUDE
+
+**No es un encargo**: `PROMPT_SIGUIENTE.md` va vacio por la seccion 4. Es la lista de lo que quedo
+medido y pendiente, para que la vuelta 148 no la tenga que redescubrir.
+
+  1. **LA GUARDA DE LA NOMINA, CERRADA POR EL LADO DEL COMMIT** (mi 4.4.a): que un movimiento que
+     llega ya commiteado no pueda pasar inadvertido. Criterio libre; fin no negociable. Con su caso
+     rojo por mutacion sobre variable computada.
+  2. **LA GUARDA DE CIFRAS, EL CAMINO POR CONJUNTO** (mi 4.4.b): que un valor no pueda cuadrar
+     contra la etiqueta VECINA cuando las dos comparten casi todas sus palabras.
+  3. **LA VARA, UNA UNIDAD MAS** (mi 4.4.c): un control con una parada abierta encima no puede
+     publicarse con el mismo rotulo que uno que corre. Es la misma cura que la 147 le dio a `A1.3`.
+  4. **LA SALIDA AUDITABLE DEL FALSO POSITIVO** (mi 3.15): un bloque de exencion declarada para la
+     frase que no afirma nada sobre el repositorio, o la frase vieja pegada al lado de la nueva.
+     Nunca una reescritura sin rastro.
+  5. **LA LETRA DE `VIEJAS`** (mi 3.5): decir en la regla que lo que exige es sujeto congelado, y no
+     un plazo de una vuelta, ya que el plazo era el medio y no el fin.
+  6. **LAS CORRECCIONES 27 Y 28**, por adicion: mis dos cifras falsas de la 146, el SEIS que son
+     CINCO y las DOCE lineas que son SIETE, con la medicion de hoy delante y sin borrar el texto
+     viejo.
