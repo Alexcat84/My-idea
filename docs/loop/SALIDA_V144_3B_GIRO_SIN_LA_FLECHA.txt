@@ -1,0 +1,24 @@
+MEDICION DE LA TAREA 3.b | vuelta 144 | OP-M-04
+Entradas de aristas_nuevas con flecha QUITADAS EN MEMORIA: 1
+==============================================================================
+GRAFO DE PARTIDA FABRICADO EN MEMORIA: la VUELTA formalizar_junta_asesora -> identificar_consejo_asesores puesta: True | la IDA identificar_consejo_asesores -> formalizar_junta_asesora puesta: False
+
+==============================================================================
+GIRO DE ARISTA . MODO SIMULAR
+se RETIRA la vuelta formalizar_junta_asesora -> identificar_consejo_asesores y se ESCRIBE la ida identificar_consejo_asesores -> formalizar_junta_asesora
+por la operacion OP-M-04
+==============================================================================
+guarda 1, los dos ids son DIRECTOS: no hay alias que resolver
+guarda 1, los dos extremos existen y estan VIVOS: OK
+guarda 2, cero auto-aristas: OK
+guarda 3, estado de partida: la VUELTA formalizar_junta_asesora -> identificar_consejo_asesores esta puesta: True | la IDA identificar_consejo_asesores -> formalizar_junta_asesora esta puesta: False
+guarda 3: OK, es un giro
+guarda 4, la ficha PROHIBE la vuelta y NOMBRA el par: ROJO
+   OP-M-04 trae la clausula de escalera pero NO NOMBRA este par en sus aristas_nuevas: la contraorden cubre la vuelta de UNA FILA SUYA, no cualquier arista del grafo
+SE ABORTA SIN ESCRIBIR NADA (guarda 3.d del encargo).
+==============================================================================
+codigo de salida: 1 (distinto de cero: True)
+cae la guarda 4: True | y nombra el motivo: True
+CERO ESCRITURAS en dataset/: True
+VEREDICTO: OK, la adicion era necesaria
+EXITCODE: 0

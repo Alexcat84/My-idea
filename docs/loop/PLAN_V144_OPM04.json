@@ -1,0 +1,142 @@
+{
+ "operacion": "OP-M-04",
+ "rotulo": "LA MESA DE LA JUNTA ASESORA: DOS FUSIONES MAS UN ENLACE. La 367 (identificar_consejo_asesores absorbe identificar_junta_asesores) y la 328 (formalizar_junta_asesora absorbe formalize_advisory_board). EL GIRO DE LA ARISTA NO VA EN ESTE PLAN: es una operacion aparte y la hace scripts/loop/vuelta143_3c_girar_arista.py, con sus diez guardas",
+ "fecha": "2026-08-11",
+ "estado": "SELLADO",
+ "contrato_de_perdidas": "CAMPO PROPIO v1",
+ "vuelta": 144,
+ "tramo": "NO ES UN TRAMO: son las DOS fusiones de la mesa OP-M-04",
+ "ficha_tipo": "MESA ADJUDICADA: DOS FUSIONES MAS UN ENLACE",
+ "ficha_fecha_corte": "2026-08-11",
+ "ficha_adjudicacion": "ADJUDICADA POR EL AUDITOR EL 11 ago 2026. a) FORMA DEL ACTO: DOS FUSIONES MAS UN ENLACE, no una fusion de cuatro. Son dos parejas de gemelos unidas por una ESCALERA, y fundir todo borraria la secuencia identificar y despues formalizar. b) FUSION 367: sobrevive identificar_consejo_asesores. Su paso 6 es la unica linea de los cuatro nodos que entrega el testigo. El gemelo de cuatro pasos no aporta nada propio: sus pasos 1, 2 y 4 viven en la madre, y su paso 3, evaluar el interes en convertirse en asesores formales, es SOLAPE con formalizar. MUERE COMO SOLAPE Y NO COMO PERDIDA, que es una distincion que hay que escribir: no se pierde contenido, se deja de decir dos veces. c) FUSION 328: sobrevive formalizar_junta_asesora por DESEMPATE POR CABLEADO. El contenido esta empatado (los ids son el mismo nombre en dos idiomas, veredicto 328), y el desempate lo da que es EL UNICO NODO CONECTADO con el otro lado del acto. Las cuatro perdidas de formalize_advisory_board VIAJAN al superviviente. d) EL ENLACE: la arista existente entre formalizar_junta_asesora e identificar_junta_asesores resuelve por alias tras la fusion 367 y el grafo YA TENIA LA CUERDA. e) PODA DEL SOLAPE: el paso 1 del superviviente de formalizar deja de repetir la busqueda y parte del entregable de la madre, la lista de prospectos, citando la arista. f) EL 1190 SE LIBERA SIN CIRUGIA: el superviviente conserva el paso 6, formalizar sigue siendo su hijo y la D se confirma. Sale de congelados. g) D4: las dos parejas quedan como EJEMPLAR DE FAMILIA DE IDS RESUELTA POR LA MESA, y los alias cargan los ids que mueren. CONTRAORDEN DEL AUDITOR, 12 ago 2026, sobre el punto d: SE GIRA LA ARISTA EXISTENTE EN VEZ DE ANADIR LA DE IDA. MOTIVO: en un grafo de secuencia la vuelta es UNA INSTRUCCION FALSA, y el ciclo de dos fabrica exactamente la averia que esta campana esta quitando. La operacion termina con UNA arista en la direccion de la escalera y no con dos.",
+ "ficha_preservar": [
+  "VIVE DENTRO, no es perdida: el paso 6 es del PROPIO superviviente. Se reclasifica como PIEZA QUE NO SE TOCA, que es otra cosa: no hay que injertarla, hay que no borrarla",
+  "RECOMPUTADO POR P.13: de las cuatro de formalize_advisory_board, TRES VIAJAN (el mapa de asesores por area, priorizar calidad sobre cantidad, y la opcion de invertir en acciones preferentes) y UNA VIVE DENTRO: sumar clientes potenciales clave por su mirada de compra ya es el paso 1 del otro superviviente, formalizar_junta_asesora"
+ ],
+ "ficha_verificacion": [
+  "CASO POSITIVO DE LA OPERACION: releido el par 1190 tras la ejecucion, tiene que dar D por la vara. Si diera A, la fusion 367 conservo el nodo equivocado",
+  "el superviviente de 367 conserva su paso 6 palabra por palabra: es la linea que sostiene toda la mesa",
+  "las cuatro perdidas de formalize_advisory_board estan en el texto del superviviente de formalizar: mapa por area, calidad sobre cantidad, clientes con mirada de compra, y la opcion de acciones preferentes",
+  "VERIFICACION EXPLICITA DE LA ENTRADA POR customer_discovery: customer_discovery.nodos_siguientes tiene HOY formalizar_junta_asesora Y formalize_advisory_board; tras la fusion las dos resuelven al superviviente, asi que la entrada NO se pierde. Y queda DUPLICADA, que la limpia OP-S-12",
+  "identificar_consejo_asesores queda con DOS alias: el que ya tenia, identificar_advisory_board, y el nuevo identificar_junta_asesores. formalizar_junta_asesora queda con uno: formalize_advisory_board",
+  "el acto de la junta asesora sale de la lista de actos abiertos: su decision esta tomada",
+  "LA ESCALERA EXISTE Y EN UNA SOLA DIRECCION: identificar_consejo_asesores tiene a formalizar_junta_asesora entre sus destinos resueltos de nodos_siguientes",
+  "LA VUELTA NO EXISTE NI LITERAL NI RESUELTA: ningun campo deja a identificar_consejo_asesores como destino resuelto de nodos_siguientes de formalizar_junta_asesora, ni a formalizar_junta_asesora en los nodos_previos de identificar_consejo_asesores. Se comprueba con el resolutor puesto, no comparando literal",
+  "el grado total del acto NO SUBE: se gira una arista, no se anade. Si el conteo sube en uno, se anadio en vez de girar",
+  "PASADA DE PERDIDAS RECOMPUTADAS (P.13), 12 ago 2026: cada perdida listada comprobada contra la nomina COMPLETA de esta fusion y contra el texto del superviviente. Las que viven dentro estan reclasificadas y no se injertan"
+ ],
+ "ficha_evidencia": [
+  "docs/plan/EXPEDIENTE_MESA_JUNTA_ASESORA.md, del 11 ago 2026, con los seis veredictos en crudo",
+  "puesto 367 (A), 328 (A), 712 (A), 976 (A), 1190 (D CONGELADO) y LD-01 (D)",
+  "scripts/plan/mesa_junta_verificacion.py, corrida del 11 ago 2026: simula las dos fusiones sobre una copia en memoria y mide el cableado resultante",
+  "MEDIDO: la arista existente es UNA sola direccion, formalizar hacia identificar, declarada en los dos extremos; tras la fusion sobrevive resuelta, y la direccion identificar hacia formalizar NO existe"
+ ],
+ "ficha_nota": "LO QUE LA MEDICION CORRIGIO DE LA PREMISA, y se escribe porque cambia la ejecucion. PRIMERO: la arista entre formalizar_junta_asesora e identificar_junta_asesores NO es bidireccional. Es UNA arista dirigida, formalizar hacia identificar, declarada en los dos extremos (nodos_siguientes de una y nodos_previos de la otra), que es lo que el veredicto 712 llamo en los dos sentidos. Tras la fusion 367 resuelve limpia a formalizar_junta_asesora hacia identificar_consejo_asesores. SEGUNDO, Y ES LO QUE IMPORTA: esa direccion es LA CONTRARIA A LA ESCALERA. La escalera va de identificar hacia formalizar, y esa direccion NO existe hoy ni aparece tras resolver: medido, identificar_consejo_asesores no tiene nada hacia el otro lado en ninguno de sus dos campos. ASI QUE LA CUERDA QUE EL GRAFO YA TENIA ES LA DE VUELTA, NO LA DE IDA, y por la instruccion del auditor de anadir la direccion que falte solo si falta tras resolver, SE ANADE identificar_consejo_asesores hacia formalizar_junta_asesora. RESIDUO RESUELTO POR CONTRAORDEN DEL 12 ago 2026: SE GIRA LA EXISTENTE. Se habia escrito como residuo que quedarian las dos direcciones, un ciclo de dos, y el auditor lo cerro en una linea: EN UN GRAFO DE SECUENCIA LA VUELTA ES UNA INSTRUCCION FALSA, y el ciclo de dos fabrica la averia que la campana quita. Queda UNA arista, la de la escalera. TERCERO: LA MESA GENERA DOS DUPLICADAS DE LA CLASE OP-S-12, medidas, y son la confirmacion de su regla de orden. customer_discovery.nodos_siguientes queda con dos entradas que resuelven a formalizar_junta_asesora, y verificar_product_market_fit.nodos_previos con dos que resuelven a identificar_consejo_asesores. POR ESO OP-S-12 SE CORRE DESPUES: esta mesa es justo el tipo de operacion que la vuelve a ensuciar. LAS CUATRO ENTRADAS QUE SE REDIRIGEN LIMPIAS: ai_como_coach_personalizado y producto_minimo_viable pasan a identificar_consejo_asesores; customer_validation_sell_phase y hire_data_analytics_chief pasan a formalizar_junta_asesora. LA FIGURA QUE DEJA ESTE ACTO: los cuatro A forman un cuadrado y los dos unicos D salen del mismo nodo, identificar_consejo_asesores, que es el unico que no repite con los dos de formalizar. Su diferencia es exactamente un paso, el 6. UN SOLO PASO SEPARA UN GEMELO DE UNA MADRE.",
+ "ficha_depende_de": [],
+ "ficha_bloquea_a": [
+  "OP-S-12",
+  "OP-U-01"
+ ],
+ "sellado_por": "scripts/loop/vuelta144_3b_sellar_mesa_opm04.py, instrumento nuevo de la vuelta 144: el generador de la casa da por supuesto UN superviviente por ficha y esta mesa tiene DOS. NO SE RELAJO NINGUNA GUARDA DEL GENERADOR: su maquina se IMPORTA entera (marcar, reparto_por_par, validar_viaja_en_el_acto, puertas, CLAVES_DE_PERDIDA, ESPECIES_DE_PERDIDA, ficha) y lo unico propio es el reparto en dos actos y sus cinco guardas nuevas",
+ "emparejamiento_leido_de_la_ficha": "identificar_consejo_asesores queda con DOS alias: el que ya tenia, identificar_advisory_board, y el nuevo identificar_junta_asesores. formalizar_junta_asesora queda con uno: formalize_advisory_board",
+ "actos": [
+  {
+   "orden": 1,
+   "miembros": [
+    "identificar_consejo_asesores",
+    "identificar_junta_asesores"
+   ],
+   "miembros_del_acto_entero": [
+    "formalize_advisory_board",
+    "formalizar_junta_asesora",
+    "identificar_junta_asesores",
+    "identificar_consejo_asesores"
+   ],
+   "figura": "FUSION DE MESA, una de las DOS de OP-M-04. La ficha declara la figura entera en su `tipo`: 'MESA ADJUDICADA: DOS FUSIONES MAS UN ENLACE'",
+   "superviviente": "identificar_consejo_asesores",
+   "absorbidos": [
+    "identificar_junta_asesores"
+   ],
+   "motivo": "EL SUPERVIVIENTE LO FIJA LA FICHA SELLADA Y AQUI NO SE RE-ADJUDICA: docs/plan/OPERACIONES.jsonl escribe superviviente identificar_consejo_asesores (fusion 367) el 11 ago 2026, POR CONTENIDO, y la adjudicacion del expediente lo razona en una linea: el paso 6 es la unica de los cuatro nodos que entrega el testigo. LA COBERTURA DEL ACTO ES COMPLETA Y ES LA UNICA DE LAS CINCO MESAS QUE LA TIENE: seis pares posibles, SEIS LEIDOS, cinco en el archivo de veredictos (367 A, 328 A, 712 A, 976 A, 1190 D CONGELADO) y el sexto por lectura dirigida (LD-01, D). EL DESEMPATE POR CABLEADO NO HACE FALTA AQUI Y AUN ASI CONCUERDA: la simulacion del 2 sep 2026 (docs/loop/SALIDA_V144_3B_SIMULACION.txt) mide 5 contra 4 a favor del superviviente. Y LA DISTINCION QUE EL EXPEDIENTE MANDA ESCRIBIR: el paso 3 del absorbido, evaluar su interes en convertirse en asesores formales, MUERE COMO SOLAPE Y NO COMO PERDIDA. No se pierde contenido: se deja de decir dos veces. Una perdida se registra y viaja; un solape se poda y no viaja a ninguna parte.",
+   "pasos": {
+    "identificar_junta_asesores": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:2",
+     "4": "CUBIERTO:3"
+    }
+   },
+   "condiciones": {
+    "identificar_junta_asesores": {
+     "1": "CUBIERTO:3",
+     "2": "CUBIERTO:1"
+    }
+   },
+   "nota_del_reparto": "SEIS PIEZAS REPARTIDAS, LAS SEIS DE CUBIERTO Y NINGUNA DE APPEND, y eso es exactamente lo que la adjudicacion del expediente dice con sus palabras: EL GEMELO DE CUATRO PASOS NO APORTA NADA PROPIO. Se comprueba paso por paso contra el texto de hoy y no contra la tabla del expediente. PASO 1 contra PASO 1: el absorbido identifica clientes o expertos que destaquen por su conocimiento o entusiasmo; el superviviente identifica, durante las entrevistas de descubrimiento, personas con conocimiento de dominio o entusiasmo notable. Es el mismo gesto en el mismo momento, y el superviviente ademas fija el momento. PASO 2 contra PASO 2: el absorbido invita a almuerzos o reuniones informales; el superviviente invita a un cafe o charla informal. Mismo gesto, otros ejemplos, y el matiz va SELLADO EN CAMPO PROPIO como perdida de parametro. PASO 3 contra PASO 2: evaluar el interes en convertirse en asesores formales es explorar su interes en asesorarte, que es lo que el paso 2 del superviviente manda hacer en el mismo encuentro. ES EL SOLAPE QUE EL EXPEDIENTE NOMBRA, y por su propia letra NO SE REGISTRA COMO PERDIDA. PASO 4 contra PASOS 3 y 5: buscar asesores para problemas tecnicos y desarrollo de producto es el paso 3 del superviviente; introducciones a clientes clave y conocimiento de dominio es su paso 5. La marca apunta al 3 porque una marca nombra UN paso; el 5 queda dicho aqui. CONDICION 1 contra CONDICION 3: necesitar orientacion tecnica o de negocio EXTERNA es necesitar conocimiento externo especializado que no se puede contratar a tiempo completo. CONDICION 2 contra CONDICION 1: haber identificado clientes con voces destacadas DURANTE EL DESCUBRIMIENTO es el disparador oportunista del superviviente, durante todo el proceso de customer discovery. UNA PERDIDA SELLADA, DE MATIZ Y NO DE GESTO.",
+   "perdidas": [
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "el ALMUERZO o la REUNION INFORMAL como formato del primer encuentro, y el encuadre de invitarlos a COMPARTIR SU OPINION antes de pedirles nada; el paso 2 del superviviente invita a un cafe o charla informal para explorar su interes en asesorarte, que es el mismo encuentro con otros ejemplos y con la pregunta hecha de frente",
+     "donde": "paso 2 de identificar_junta_asesores",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    }
+   ],
+   "simulacion_de_hoy": "scripts/plan/simular_fusion.py corrido en la vuelta 144 ANTES de tocar un nodo (docs/loop/SALIDA_V144_3B_SIMULACION.txt), con las DOS fusiones de la mesa a la vez porque es un solo acto: CUATRO entradas se redirigen a este superviviente (ai_como_coach_personalizado, formalizar_junta_asesora, producto_minimo_viable y verificar_product_market_fit), UNA duplicada NUEVA de su lado (verificar_product_market_fit.nodos_previos), CERO auto aristas, y el alias del superviviente queda con identificar_advisory_board, el que ya tenia, mas identificar_junta_asesores. CALZA AL DIGITO CON LO QUE LA FICHA ESCRIBIO EL 11 AGO 2026 en su verificacion 4 y en su nota: las cuatro entradas que se redirigen limpias y las dos duplicadas de la clase OP-S-12. LA ARISTA INTERNA DEL ACTO QUE SOBREVIVE ES UNA Y ES LA VUELTA, formalizar_junta_asesora hacia identificar_consejo_asesores, que es exactamente lo que la nota de la ficha predice y lo que el GIRO de esta misma operacion viene a corregir.",
+   "rotulo_del_acto": "FUSION 367 DE LA MESA DE LA JUNTA ASESORA: identificar_consejo_asesores absorbe identificar_junta_asesores. LOS DOS GEMELOS DE IDENTIFICAR, y sobrevive el de SEIS pasos porque su paso 6 es LA UNICA LINEA DE LOS CUATRO NODOS QUE ENTREGA EL TESTIGO: formalizar el consejo asesor mas adelante, durante la validacion de clientes"
+  },
+  {
+   "orden": 2,
+   "miembros": [
+    "formalizar_junta_asesora",
+    "formalize_advisory_board"
+   ],
+   "miembros_del_acto_entero": [
+    "formalize_advisory_board",
+    "formalizar_junta_asesora",
+    "identificar_junta_asesores",
+    "identificar_consejo_asesores"
+   ],
+   "figura": "FUSION DE MESA, una de las DOS de OP-M-04. La ficha declara la figura entera en su `tipo`: 'MESA ADJUDICADA: DOS FUSIONES MAS UN ENLACE'",
+   "superviviente": "formalizar_junta_asesora",
+   "absorbidos": [
+    "formalize_advisory_board"
+   ],
+   "motivo": "EL SUPERVIVIENTE LO FIJA LA FICHA SELLADA Y AQUI NO SE RE-ADJUDICA: docs/plan/OPERACIONES.jsonl escribe superviviente formalizar_junta_asesora (fusion 328) el 11 ago 2026, POR DESEMPATE POR CABLEADO, y el expediente lo razona: el contenido esta empatado, y lo dice el propio veredicto 328 (los ids son el mismo nombre en dos idiomas y los pasos coinciden), asi que el desempate lo da el grafo. LA SIMULACION DEL 2 SEP 2026 lo confirma y por mas margen que el expediente: 7 contra 3 (docs/loop/SALIDA_V144_3B_SIMULACION.txt). LA ENTRADA POR customer_discovery, QUE EL AUDITOR PIDIO NOMBRAR: customer_discovery.nodos_siguientes trae HOY las dos, formalizar_junta_asesora y formalize_advisory_board; tras la fusion las dos resuelven al superviviente, asi que LA ENTRADA NO SE PIERDE y queda DUPLICADA, que es lo que limpia OP-S-12, que corre despues por la atadura 2 del indice.",
+   "pasos": {
+    "formalize_advisory_board": {
+     "1": "APPEND",
+     "2": "APPEND",
+     "3": "CUBIERTO:1",
+     "4": "INCISO:4|o la posibilidad de invertir en acciones preferentes|, ",
+     "5": "CUBIERTO:5"
+    }
+   },
+   "condiciones": {
+    "formalize_advisory_board": {
+     "1": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "SEIS PIEZAS REPARTIDAS: DOS VIAJAN ENTERAS, UNA VIAJA COMO INCISO, y TRES ya estaban dichas. El reparto se comprueba contra el texto de hoy, no contra la tabla del expediente, y donde discrepa SE DECLARA. LAS DOS QUE VIAJAN ENTERAS son las que la ficha manda preservar y son propias del que muere: EL MAPA DE ASESORES POR AREA (tecnico, negocio, cliente, industria, marketing), que el superviviente no hace en ningun grado (recluta expertos de industria y busca un asesor tipo CEO, que son dos areas sueltas, no el mapa); y PRIORIZAR CALIDAD SOBRE CANTIDAD, reclutar solo a quien tenga impacto estrategico real, que es una vara de seleccion que el superviviente no escribe. LA QUE VIAJA COMO INCISO es la tercera de las que la ficha manda preservar: LA OPCION DE INVERTIR EN ACCIONES PREFERENTES. El paso 4 del superviviente define el esquema de compensacion con stock comun y vesting mensual, o sea que ya trae el gesto y le falta LA OTRA VIA. Por eso no es APPEND (fabricaria un paso que repite la compensacion) ni CUBIERTO (afirmaria del superviviente algo que su texto no dice): es el INCISO, que adosa el trozo al paso que ya existe. LA QUE VIVE DENTRO, y la ficha ya la reclasifico en su propio recomputo P.13: SUMAR CLIENTES POTENCIALES CLAVE POR SU MIRADA DE COMPRA es literalmente el paso 1 del superviviente, identificar clientes potenciales clave descubiertos en customer discovery para invitarlos a la junta asesora. Va de CUBIERTO y no se injerta, que es lo que P.13 manda con las piezas que viven dentro. DIVERGENCIA DECLARADA CON LA PASADA P.13 DE LA FICHA, Y NO SE RESUELVE COPIANDO: la ficha recomputo cuatro piezas y dijo tres viajan y una vive dentro. Leido el nodo entero HOY, paso por paso, EL PASO 5 DEL QUE MUERE TIENE UN PARAMETRO QUE EL SUPERVIVIENTE NO DICE: acordar CON QUE FRECUENCIA se van a reunir. El paso 5 del superviviente decide SI habra reuniones formales o consultas individuales, que es la forma, no el ritmo. Va de CUBIERTO por el gesto y la frecuencia va SELLADA EN CAMPO PROPIO como perdida de parametro: la lista `preservar` de la ficha es el SUELO de lo que no se puede perder, no el TECHO. Lo mismo con la CONDICION 1, cuyo disparador temporal (YA VALIDASTE TUS PRIMERAS HIPOTESIS) no esta en ninguna de las tres condiciones del superviviente. LAS DOS DIVERGENCIAS VAN MARCADAS COMO DISCUTIBLE EN EL REPORTE DE ESTA VUELTA.",
+   "perdidas": [
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "la FRECUENCIA acordada con cada asesor, con que frecuencia se van a reunir; el paso 5 del superviviente decide si habra reuniones formales o consultas individuales, que es la FORMA del encuentro y no su RITMO, y el paso 6 documenta la operacion de la junta sin fijar cada cuanto se reune",
+     "donde": "paso 5 de formalize_advisory_board",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE CONDICIONES",
+     "que": "el disparador TEMPORAL, cuando YA VALIDASTE TUS PRIMERAS HIPOTESIS; las tres condiciones del superviviente disparan por NECESIDAD (credibilidad ante inversores, introducciones de alto nivel, falta de experiencia operativa) y ninguna dice EN QUE MOMENTO DEL PROYECTO toca",
+     "donde": "condicion 1 de formalize_advisory_board",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"
+    }
+   ],
+   "simulacion_de_hoy": "scripts/plan/simular_fusion.py corrido en la vuelta 144 ANTES de tocar un nodo (docs/loop/SALIDA_V144_3B_SIMULACION.txt), con las DOS fusiones de la mesa a la vez: TRES entradas se redirigen a este superviviente (customer_discovery, customer_validation_sell_phase y hire_data_analytics_chief), UNA duplicada NUEVA de su lado (customer_discovery.nodos_siguientes), CERO auto aristas, y el alias del superviviente queda con formalize_advisory_board. CALZA AL DIGITO CON LA FICHA: la verificacion 3 predice exactamente la duplicada de customer_discovery y la verificacion 4 el alias unico. LA UNICA DIVERGENCIA CON EL EXPEDIENTE ES A FAVOR DEL MISMO SUPERVIVIENTE: el cableado de hoy es 7 contra 3 y el expediente no publico cifra para este par, solo la razon.",
+   "rotulo_del_acto": "FUSION 328 DE LA MESA DE LA JUNTA ASESORA: formalizar_junta_asesora absorbe formalize_advisory_board. EL MISMO NOMBRE EN DOS IDIOMAS, con el contenido EMPATADO y el desempate dado por EL CABLEADO: formalizar_junta_asesora es el unico nodo del acto conectado con el otro lado. LA OPCION DE INVERTIR EN ACCIONES PREFERENTES VIAJA COMO INCISO, la primera pieza del reparto"
+  }
+ ],
+ "declarados_y_no_fundidos": [],
+ "colisiones_esperadas": "DOS DUPLICADAS NUEVAS, medidas en la simulacion previa del 2 sep 2026 (docs/loop/SALIDA_V144_3B_SIMULACION.txt): customer_discovery.nodos_siguientes -> formalizar_junta_asesora y verificar_product_market_fit.nodos_previos -> identificar_consejo_asesores. LAS DOS ESTAN PREDICHAS POR LA PROPIA FICHA en su `nota` y quedan para OP-S-12, que corre AL FINAL de la pasada entera por la atadura 2 del indice.",
+ "vara_de_las_puertas": "dataset/metadata/entry_seeds.json mas los entry_seeds y bridges_aprobados de packs/, leidos al sellar",
+ "varas_impresas": "las nueve guardas de este sellador van impresas arriba con su veredicto, y la aritmetica de las marcas es la del generador de la casa, importada y no copiada"
+}

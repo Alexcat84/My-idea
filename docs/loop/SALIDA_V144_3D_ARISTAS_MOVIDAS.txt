@@ -1,0 +1,29 @@
+GUARDA 3.d DE LA VUELTA 144: TODA ARISTA QUE SE MUEVE, NOMBRADA Y ADJUDICADA
+Aristas RESUELTAS entre nodos VIVOS, contadas con instrumento propio.
+==============================================================================
+ANTES  (HEAD, el commit de la TAREA 3.a): 7343 aristas resueltas | auto-aristas tras resolver: 0
+DESPUES (WORK, tras las dos fusiones y el giro): 7341 | auto-aristas tras resolver: 0
+
+ENTRAN (5):
+   + ai_como_coach_personalizado -> identificar_consejo_asesores
+   + formalizar_junta_asesora -> customer_validation_sell_phase
+   + hire_data_analytics_chief -> formalizar_junta_asesora
+   + identificar_consejo_asesores -> formalizar_junta_asesora
+   + producto_minimo_viable -> identificar_consejo_asesores
+SALEN (7):
+   - ai_como_coach_personalizado -> identificar_junta_asesores
+   - customer_discovery -> formalize_advisory_board
+   - formalizar_junta_asesora -> identificar_junta_asesores
+   - formalize_advisory_board -> customer_validation_sell_phase
+   - hire_data_analytics_chief -> formalize_advisory_board
+   - identificar_junta_asesores -> verificar_product_market_fit
+   - producto_minimo_viable -> identificar_junta_asesores
+
+ADJUDICACION DE CADA UNA, y ninguna se queda sin nombre:
+  Las que ENTRAN por REDIRECCION DE ALIAS de las dos fusiones (misma arista, el id
+  del absorbido reescrito al del superviviente): su gemela sale en la lista de SALEN.
+  ARISTAS QUE ENTRAN SIN NINGUNA QUE SALGA COMPARTIENDO UN EXTREMO: 1
+     + identificar_consejo_asesores -> formalizar_junta_asesora
+  ARISTAS QUE SALEN SIN NINGUNA QUE ENTRE COMPARTIENDO UN EXTREMO: 2
+     - customer_discovery -> formalize_advisory_board
+     - identificar_junta_asesores -> verificar_product_market_fit

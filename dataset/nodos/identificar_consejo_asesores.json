@@ -17,12 +17,15 @@
   "nodos_previos": [
     "actualizar_business_model_canvas_discovery",
     "actualizar_business_model_canvas_tuneup",
-    "prueba_solucion_con_cliente"
+    "prueba_solucion_con_cliente",
+    "ai_como_coach_personalizado",
+    "producto_minimo_viable"
   ],
   "nodos_siguientes": [
     "verificar_product_market_fit",
     "composicion_board_directors",
-    "product_market_fit"
+    "product_market_fit",
+    "formalizar_junta_asesora"
   ],
   "condiciones_activacion": [
     "Durante todo el proceso de customer discovery, de forma oportunista",
@@ -31,13 +34,19 @@
   ],
   "etiqueta_arbol": "Elige tus Primeros Asesores",
   "ids_alias": [
-    "identificar_advisory_board"
+    "identificar_advisory_board",
+    "identificar_junta_asesores"
   ],
   "merged_originals": [
     {
       "node_id": "identificar_advisory_board",
       "titulo": "Identificación de Miembros del Consejo Asesor",
       "fuente": "The Startup Owner's Manual - Steve Blank"
+    },
+    {
+      "node_id": "identificar_junta_asesores",
+      "titulo": "Identificar Primeros Miembros de la Junta Asesora",
+      "fuente": "The Startup Owner's Manual - Blank, Steve"
     }
   ]
 }

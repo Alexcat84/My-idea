@@ -9,26 +9,40 @@
     "Identificar clientes potenciales clave descubiertos en customer discovery para invitarlos a la junta asesora",
     "Reclutar expertos de industria (domain experts) que aporten credibilidad al mercado o tecnología",
     "Buscar un asesor tipo CEO experimentado ('been there, done that') para consejo práctico",
-    "Definir esquema de compensación (stock común con vesting mensual)",
+    "Definir esquema de compensación (stock común con vesting mensual), o la posibilidad de invertir en acciones preferentes",
     "Decidir si habrá reuniones formales o consultas individuales",
-    "Documentar el tamaño, composición y operación de la junta asesora"
+    "Documentar el tamaño, composición y operación de la junta asesora",
+    "Haz un mapa de qué asesores necesitas por área: técnico, negocio, cliente, industria, marketing",
+    "Recluta solo a quienes puedan tener impacto estratégico real, priorizando calidad sobre cantidad"
   ],
   "entregable_esperado": "Documento formal que describe tamaño, composición, roles y esquema de compensación de la junta asesora de la startup",
   "nodos_previos": [
     "customer_discovery",
     "identificar_earlyvangelists",
     "hoja_de_ruta_de_ventas",
-    "plan_de_implementacion_de_venta"
+    "plan_de_implementacion_de_venta",
+    "hire_data_analytics_chief",
+    "identificar_consejo_asesores"
   ],
   "nodos_siguientes": [
     "get_out_building_test_sell",
     "refinar_sales_roadmap",
-    "identificar_junta_asesores"
+    "customer_validation_sell_phase"
   ],
   "condiciones_activacion": [
     "Si la startup necesita credibilidad ante inversores o clientes enterprise",
     "Si se requieren introducciones de alto nivel a clientes o industria",
     "Cuando el equipo fundador carece de experiencia operativa en el sector"
   ],
-  "etiqueta_arbol": "Formaliza tu Junta Asesora"
+  "etiqueta_arbol": "Formaliza tu Junta Asesora",
+  "ids_alias": [
+    "formalize_advisory_board"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "formalize_advisory_board",
+      "titulo": "Formalizar el Consejo Asesor (Advisory Board)",
+      "fuente": "The Startup Owner's Manual - Blank, Steve"
+    }
+  ]
 }

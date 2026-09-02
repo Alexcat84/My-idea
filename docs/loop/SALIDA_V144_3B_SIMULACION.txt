@@ -1,0 +1,41 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### identificar_consejo_asesores  <==  identificar_junta_asesores
+  1. DESEMPATE POR CABLEADO
+     identificar_consejo_asesores                 pasos  6 | nombra  5 | LO NOMBRAN  5
+     identificar_junta_asesores                   pasos  4 | nombra  4 | LO NOMBRAN  4
+     >>> gana identificar_consejo_asesores por 5 contra 4
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['identificar_advisory_board', 'identificar_junta_asesores']
+  3. ENTRADAS QUE SE REDIRIGEN
+     ai_como_coach_personalizado                  nodos_siguientes  -> identificar_consejo_asesores
+     formalizar_junta_asesora                     nodos_siguientes  -> identificar_consejo_asesores
+     producto_minimo_viable                       nodos_siguientes  -> identificar_consejo_asesores
+     verificar_product_market_fit                 nodos_previos     -> identificar_consejo_asesores
+
+### formalizar_junta_asesora  <==  formalize_advisory_board
+  1. DESEMPATE POR CABLEADO
+     formalizar_junta_asesora                     pasos  6 | nombra  7 | LO NOMBRAN  7
+     formalize_advisory_board                     pasos  5 | nombra  3 | LO NOMBRAN  3
+     >>> gana formalizar_junta_asesora por 7 contra 3
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['formalize_advisory_board']
+  3. ENTRADAS QUE SE REDIRIGEN
+     customer_discovery                           nodos_siguientes  -> formalizar_junta_asesora
+     customer_validation_sell_phase               nodos_previos     -> formalizar_junta_asesora
+     hire_data_analytics_chief                    nodos_siguientes  -> formalizar_junta_asesora
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     customer_discovery                           nodos_siguientes  -> formalizar_junta_asesora
+     verificar_product_market_fit                 nodos_previos     -> identificar_consejo_asesores
+     TOTAL NUEVAS: 2
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ninguna
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     formalizar_junta_asesora      .nodos_siguientes   formalizar_junta_asesora -> identificar_consejo_asesores
+EXITCODE: 0

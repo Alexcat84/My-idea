@@ -1,0 +1,28 @@
+CASO POSITIVO DE LA OPERACION OP-M-04 | vuelta 144 | EL PAR 1190
+De solo lectura. El veredicto se COMPUTA del grafo, no se teclea.
+==============================================================================
+(a) EL PAR 1190, resuelto por alias (P.1):
+     formalize_advisory_board         resuelve a formalizar_junta_asesora         vivo: True
+     identificar_consejo_asesores     resuelve a identificar_consejo_asesores     vivo: True
+
+(b) EL VEREDICTO POR LA VARA: D
+     identificar_consejo_asesores conserva en su paso 6 la linea que DIFIERE la formalizacion, asi que formalizar_junta_asesora sigue siendo su hijo y no su gemelo: madre e hijo, CONTINUA
+
+(c) LA ESCALERA, tras resolver:
+     la IDA    identificar_consejo_asesores -> formalizar_junta_asesora esta puesta: True
+     la VUELTA formalizar_junta_asesora -> identificar_consejo_asesores esta puesta: False
+     UNA SOLA ARISTA y en la direccion de la escalera: True
+
+(d) LA MUTACION, el mundo en que la fusion 367 hubiera conservado el nodo equivocado:
+     se le quita a identificar_consejo_asesores su paso 6: 'Formaliza el consejo asesor más adelante, durante la validación de clientes'
+     veredicto mutado: A
+     NINGUNO de los dos extremos conserva la linea que difiere la formalizacion: los dos dicen lo mismo al mismo grano y el par es REPETICION
+     LA VARA MUERDE (de D pasa a A): True
+
+==============================================================================
+  veredicto del par 1190          : D (tiene que ser D)
+  la escalera, una sola direccion : True
+  la vara probada por mutacion    : True
+
+VERDE: el caso positivo de la operacion CALZA.
+EXITCODE: 0

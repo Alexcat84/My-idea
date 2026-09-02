@@ -1,0 +1,29 @@
+==============================================================================
+GIRO DE ARISTA . MODO SIMULAR
+se RETIRA la vuelta formalizar_junta_asesora -> identificar_consejo_asesores y se ESCRIBE la ida identificar_consejo_asesores -> formalizar_junta_asesora
+por la operacion OP-M-04
+==============================================================================
+guarda 1, los dos ids son DIRECTOS: no hay alias que resolver
+guarda 1, los dos extremos existen y estan VIVOS: OK
+guarda 2, cero auto-aristas: OK
+guarda 3, estado de partida: la VUELTA formalizar_junta_asesora -> identificar_consejo_asesores esta puesta: True | la IDA identificar_consejo_asesores -> formalizar_junta_asesora esta puesta: False
+guarda 3: OK, es un giro
+guarda 4, la ficha PROHIBE la vuelta y NOMBRA el par: OK
+   verificacion 7 de OP-M-04: 'LA VUELTA NO EXISTE NI LITERAL NI RESUELTA: ningun campo deja a identificar_consejo_asesores como destino resuelto de nodos_siguientes de formalizar_junta_asesora, ni a formalizar_junta_asesora en los nodos_previos de identificar_consejo_asesores. Se comprueba con el resolutor puesto, no comparando literal' y la IDA identificar_consejo_asesores -> formalizar_junta_asesora es una fila de OP-M-04
+guarda 5, el par NO esta exceptuado por la ficha: OK
+guarda 6, P.9: lo que se escribe son los ids VIVOS resueltos 'identificar_consejo_asesores' y 'formalizar_junta_asesora'
+guarda 7, duplicadas tras resolver en formalizar_junta_asesora.nodos_siguientes: 0 -> 0
+guarda 7, duplicadas tras resolver en identificar_consejo_asesores.nodos_previos: 1 -> 1
+guarda 7, duplicadas tras resolver en identificar_consejo_asesores.nodos_siguientes: 0 -> 0
+guarda 7, duplicadas tras resolver en formalizar_junta_asesora.nodos_previos: 0 -> 0
+guarda 7: OK, cero duplicadas nuevas
+guarda 8, ningun otro campo cambia: OK
+guarda 9, EL GRADO TOTAL NO SE MUEVE (es un giro, no una poda ni una escritura):
+   antes  : sig 9234 prev 9211 suma 18445 union 9914
+   despues: sig 9234 prev 9211 suma 18445 union 9914
+   las CUATRO cifras identicas: True
+guarda 10, resultado: la IDA identificar_consejo_asesores -> formalizar_junta_asesora esta puesta: True | la VUELTA formalizar_junta_asesora -> identificar_consejo_asesores esta puesta: False
+guarda 10: OK
+
+SIMULACION: cero escrituras. El giro esta listo para --ejecutar.
+EXITCODE: 0

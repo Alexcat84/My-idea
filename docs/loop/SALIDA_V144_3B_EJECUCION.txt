@@ -1,0 +1,101 @@
+==============================================================================
+OP-M-04 . LA MESA DE LA JUNTA ASESORA: DOS FUSIONES MAS UN ENLACE. La 367 (identificar_consejo_asesores absorbe identificar_junta_asesores) y la 328 (formalizar_junta_asesora absorbe formalize_advisory_board). EL GIRO DE LA ARISTA NO VA EN ESTE PLAN: es una operacion aparte y la hace scripts/loop/vuelta143_3c_girar_arista.py, con sus diez guardas . MODO EJECUTAR
+plan: docs/loop/PLAN_V144_OPM04.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3171 vivos, 682 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive identificar_consejo_asesores . absorbe identificar_junta_asesores
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['identificar_advisory_board', 'identificar_junta_asesores']
+
+------------------------------------------------------------------------------
+ACTO 2 . sobrevive formalizar_junta_asesora . absorbe formalize_advisory_board
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 8 (anadidos 2) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 4 de formalize_advisory_board al PASO 4 del superviviente
+        inciso VERBATIM: 'o la posibilidad de invertir en acciones preferentes'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Definir esquema de compensación (stock común con vesting mensual), o la posibilidad de invertir en acciones preferentes
+  alias del superviviente: ['formalize_advisory_board']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 7
+   ai_como_coach_personalizado                          nodos_siguientes  identificar_junta_asesores -> identificar_consejo_asesores
+   customer_discovery                                   nodos_siguientes  formalize_advisory_board -> formalizar_junta_asesora
+   customer_validation_sell_phase                       nodos_previos     formalize_advisory_board -> formalizar_junta_asesora
+   formalizar_junta_asesora                             nodos_siguientes  identificar_junta_asesores -> identificar_consejo_asesores
+   hire_data_analytics_chief                            nodos_siguientes  formalize_advisory_board -> formalizar_junta_asesora
+   producto_minimo_viable                               nodos_siguientes  identificar_junta_asesores -> identificar_consejo_asesores
+   verificar_product_market_fit                         nodos_previos     identificar_junta_asesores -> identificar_consejo_asesores
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 0
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 2
+   customer_discovery                                   nodos_siguientes
+   verificar_product_market_fit                         nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 865   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 865   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 0, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 10 de 10
+guarda D, los 2 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (12 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 identificar_junta_asesores                   paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar clientes o expertos que destaquen por su conocimiento o entusiasmo
+    1 identificar_junta_asesores                   paso         2  ya lo dice el PASO 2 del superviviente
+        Invitarlos a compartir su opinión mediante almuerzos o reuniones informales
+    1 identificar_junta_asesores                   paso         3  ya lo dice el PASO 2 del superviviente
+        Evaluar su interés en convertirse en asesores formales
+    1 identificar_junta_asesores                   paso         4  ya lo dice el PASO 3 del superviviente
+        Buscar asesores para problemas técnicos, introducciones a clientes clave, conocimiento de dominio y desarrollo de producto
+    1 identificar_junta_asesores                   condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Cuando el equipo necesita orientación técnica o de negocio externa
+    1 identificar_junta_asesores                   condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si se han identificado clientes con voces destacadas durante el descubrimiento
+    2 formalize_advisory_board                     paso         1  PASO 7 del superviviente
+        Haz un mapa de qué asesores necesitas por área: técnico, negocio, cliente, industria, marketing
+    2 formalize_advisory_board                     paso         2  PASO 8 del superviviente
+        Recluta solo a quienes puedan tener impacto estratégico real, priorizando calidad sobre cantidad
+    2 formalize_advisory_board                     paso         3  ya lo dice el PASO 1 del superviviente
+        Suma como asesores a clientes potenciales clave para tener su mirada de compra
+    2 formalize_advisory_board                     paso         4  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Define cómo vas a compensarlos: acciones comunes con periodo de consolidación (vesting), o la posibilidad de invertir en acciones preferentes
+    2 formalize_advisory_board                     paso         5  ya lo dice el PASO 5 del superviviente
+        Acuerda con cada asesor con qué frecuencia y de qué forma se van a reunir
+    2 formalize_advisory_board                     condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando ya validaste tus primeras hipótesis y necesitas ampliar tu red de contactos y tu visión estratégica
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 2
+  nodos implicados    : 4
+  nodos que MUEREN    : 2
+  piezas repartidas   : 12 (2 viajan enteras, 9 ya estaban dichas, 0 ya viajan en el acto)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 10
+censo DESPUES: 3853 ficheros, 3169 vivos, 684 deprecados
+censo ANTES  : 3853 ficheros, 3171 vivos, 682 deprecados
+delta deprecados: +2 (esperado +2): OK
+EXITCODE: 0

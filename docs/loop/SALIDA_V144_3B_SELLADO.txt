@@ -1,0 +1,42 @@
+==============================================================================
+SELLADOR DEL PLAN DE LA MESA DE DOS FUSIONES OP-M-04 (vuelta 144)
+  ficha leida de: docs/plan/OPERACIONES.jsonl
+  tipo: MESA ADJUDICADA: DOS FUSIONES MAS UN ENLACE
+  estado: LISTA | fecha de corte: 2026-08-11
+==============================================================================
+
+  guarda 1, la ficha declara su figura en su `tipo`: OK ('mesa adjudicada: dos fusiones mas un enlace')
+  LA FICHA MANDA, y esto es lo que dice:
+     nodos          : formalize_advisory_board, formalizar_junta_asesora, identificar_junta_asesores, identificar_consejo_asesores
+     superviviente  : identificar_consejo_asesores (fusion 367) y formalizar_junta_asesora (fusion 328)
+     supervivientes leidos del cruce con `nodos`: formalizar_junta_asesora, identificar_consejo_asesores
+     eliminar       : identificar_junta_asesores, formalize_advisory_board
+  guarda 2 y 3, dos supervivientes, dos absorbidos y nodos = union: OK
+  guarda 4, los contenidos cubren los dos y los dos sin repetir: OK
+  guarda 5, el emparejamiento del contenido calza con el de la ficha: OK
+     formalizar_junta_asesora absorbe formalize_advisory_board
+     identificar_consejo_asesores absorbe identificar_junta_asesores
+     leido de: identificar_consejo_asesores queda con DOS alias: el que ya tenia, identificar_advisory_board, y el 
+  guarda 6 (1B), ningun absorbido es puerta: OK
+  guarda 7, los 4 miembros vivos y presentes: OK
+
+  ---- ACTO 1: identificar_consejo_asesores absorbe identificar_junta_asesores ----
+     EL SUPERVIVIENTE DE HOY: 6 pasos y 3 condiciones
+     FORMATO DEL REPARTO: pasos POR PAR (absorbido, numero de paso) | condiciones POR PAR (absorbido, numero de paso)
+     EL ABSORBIDO identificar_junta_asesores: 4 pasos y 2 condiciones
+     perdidas selladas: 1
+
+  ---- ACTO 2: formalizar_junta_asesora absorbe formalize_advisory_board ----
+     EL SUPERVIVIENTE DE HOY: 6 pasos y 3 condiciones
+     FORMATO DEL REPARTO: pasos POR PAR (absorbido, numero de paso) | condiciones POR PAR (absorbido, numero de paso)
+     EL ABSORBIDO formalize_advisory_board: 5 pasos y 1 condiciones
+  INCISO al paso 4 del superviviente
+      trozo pedido en ASCII  : 'o la posibilidad de invertir en acciones preferentes'
+      trozo EXTRAIDO del nodo: 'o la posibilidad de invertir en acciones preferentes'
+      paso resultante        : Definir esquema de compensación (stock común con vesting mensual), o la posibilidad de invertir en acciones preferentes
+     perdidas selladas: 2
+
+SELLADO: docs\loop\PLAN_V144_OPM04.json
+  actos: 2 | miembros: 4 | perdidas selladas: 3
+FIN
+EXITCODE: 0

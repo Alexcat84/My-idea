@@ -2246,7 +2246,7 @@
         "construccion_experticia_era_ia"
       ],
       "nodos_siguientes": [
-        "identificar_junta_asesores"
+        "identificar_consejo_asesores"
       ],
       "condiciones_activacion": [
         "Cuando la startup necesita escalar la capacitación de nuevos empleados con recursos limitados",
@@ -28293,7 +28293,6 @@
         "earlyvangelists_ventas_tempranas",
         "embudo_get_keep_grow",
         "formalizar_junta_asesora",
-        "formalize_advisory_board",
         "fundadores_lideran_validacion",
         "ganar_comprension_del_cliente",
         "identificar_earlyvangelists",
@@ -29197,7 +29196,7 @@
       ],
       "entregable_esperado": "Resultados de pruebas de venta reales que confirman o refutan lo que creías de tu negocio",
       "nodos_previos": [
-        "formalize_advisory_board",
+        "formalizar_junta_asesora",
         "metricas_de_adquisicion_activacion",
         "customer_validation"
       ],
@@ -57234,28 +57233,42 @@
         "Identificar clientes potenciales clave descubiertos en customer discovery para invitarlos a la junta asesora",
         "Reclutar expertos de industria (domain experts) que aporten credibilidad al mercado o tecnología",
         "Buscar un asesor tipo CEO experimentado ('been there, done that') para consejo práctico",
-        "Definir esquema de compensación (stock común con vesting mensual)",
+        "Definir esquema de compensación (stock común con vesting mensual), o la posibilidad de invertir en acciones preferentes",
         "Decidir si habrá reuniones formales o consultas individuales",
-        "Documentar el tamaño, composición y operación de la junta asesora"
+        "Documentar el tamaño, composición y operación de la junta asesora",
+        "Haz un mapa de qué asesores necesitas por área: técnico, negocio, cliente, industria, marketing",
+        "Recluta solo a quienes puedan tener impacto estratégico real, priorizando calidad sobre cantidad"
       ],
       "entregable_esperado": "Documento formal que describe tamaño, composición, roles y esquema de compensación de la junta asesora de la startup",
       "nodos_previos": [
         "customer_discovery",
         "identificar_earlyvangelists",
         "hoja_de_ruta_de_ventas",
-        "plan_de_implementacion_de_venta"
+        "plan_de_implementacion_de_venta",
+        "hire_data_analytics_chief",
+        "identificar_consejo_asesores"
       ],
       "nodos_siguientes": [
         "get_out_building_test_sell",
         "refinar_sales_roadmap",
-        "identificar_junta_asesores"
+        "customer_validation_sell_phase"
       ],
       "condiciones_activacion": [
         "Si la startup necesita credibilidad ante inversores o clientes enterprise",
         "Si se requieren introducciones de alto nivel a clientes o industria",
         "Cuando el equipo fundador carece de experiencia operativa en el sector"
       ],
-      "etiqueta_arbol": "Formaliza tu Junta Asesora"
+      "etiqueta_arbol": "Formaliza tu Junta Asesora",
+      "ids_alias": [
+        "formalize_advisory_board"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "formalize_advisory_board",
+          "titulo": "Formalizar el Consejo Asesor (Advisory Board)",
+          "fuente": "The Startup Owner's Manual - Blank, Steve"
+        }
+      ]
     },
     "formalizar_un_proceso_ad_hoc": {
       "node_id": "formalizar_un_proceso_ad_hoc",
@@ -57312,7 +57325,8 @@
       "condiciones_activacion": [
         "Cuando ya validaste tus primeras hipótesis y necesitas ampliar tu red de contactos y tu visión estratégica"
       ],
-      "etiqueta_arbol": "Crea tu Consejo Asesor Formal"
+      "etiqueta_arbol": "Crea tu Consejo Asesor Formal",
+      "deprecado": true
     },
     "formar_consejo_asesor_sostenibilidad": {
       "node_id": "formar_consejo_asesor_sostenibilidad",
@@ -64143,7 +64157,7 @@
         "metricas_de_adquisicion_activacion"
       ],
       "nodos_siguientes": [
-        "formalize_advisory_board",
+        "formalizar_junta_asesora",
         "optimizacion_embudo_get_customers",
         "war_room_datos",
         "war_room_pivot_proceed"
@@ -66016,12 +66030,15 @@
       "nodos_previos": [
         "actualizar_business_model_canvas_discovery",
         "actualizar_business_model_canvas_tuneup",
-        "prueba_solucion_con_cliente"
+        "prueba_solucion_con_cliente",
+        "ai_como_coach_personalizado",
+        "producto_minimo_viable"
       ],
       "nodos_siguientes": [
         "verificar_product_market_fit",
         "composicion_board_directors",
-        "product_market_fit"
+        "product_market_fit",
+        "formalizar_junta_asesora"
       ],
       "condiciones_activacion": [
         "Durante todo el proceso de customer discovery, de forma oportunista",
@@ -66030,13 +66047,19 @@
       ],
       "etiqueta_arbol": "Elige tus Primeros Asesores",
       "ids_alias": [
-        "identificar_advisory_board"
+        "identificar_advisory_board",
+        "identificar_junta_asesores"
       ],
       "merged_originals": [
         {
           "node_id": "identificar_advisory_board",
           "titulo": "Identificación de Miembros del Consejo Asesor",
           "fuente": "The Startup Owner's Manual - Steve Blank"
+        },
+        {
+          "node_id": "identificar_junta_asesores",
+          "titulo": "Identificar Primeros Miembros de la Junta Asesora",
+          "fuente": "The Startup Owner's Manual - Blank, Steve"
         }
       ]
     },
@@ -66201,7 +66224,8 @@
         "Cuando el equipo necesita orientación técnica o de negocio externa",
         "Si se han identificado clientes con voces destacadas durante el descubrimiento"
       ],
-      "etiqueta_arbol": "Suma tus Primeros Mentores"
+      "etiqueta_arbol": "Suma tus Primeros Mentores",
+      "deprecado": true
     },
     "identificar_oportunidades_sostenibilidad": {
       "node_id": "identificar_oportunidades_sostenibilidad",
@@ -93132,7 +93156,7 @@
         "get_customers_funnel_webmobile",
         "hablar_con_clientes_desmontar_supuestos",
         "herramientas_de_activacion_web",
-        "identificar_junta_asesores",
+        "identificar_consejo_asesores",
         "motor_crecimiento_pago",
         "motor_crecimiento_viral",
         "mvp_alta_fidelidad",
@@ -119170,10 +119194,9 @@
       ],
       "entregable_esperado": "Documento de evaluación de Product/Market Fit con evidencia de demanda validada y actualización del Business Model Canvas",
       "nodos_previos": [
-        "identificar_junta_asesores",
+        "identificar_consejo_asesores",
         "scorecard_descubrimiento_cliente",
         "actualizar_business_model_canvas_discovery",
-        "identificar_consejo_asesores",
         "realizar_pruebas_pasa_no_pasa",
         "reempaquetado_producto",
         "testing_process_completo",
@@ -128698,7 +128721,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 276,
+    "nodos_sin_enlaces_entrantes": 278,
     "enlaces_rotos_en_grafo": 0
   }
 }

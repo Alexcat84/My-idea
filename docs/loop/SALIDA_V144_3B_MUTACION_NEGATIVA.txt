@@ -1,0 +1,26 @@
+MUTACION NEGATIVA DE LA TAREA 3.b | vuelta 144
+Todo EN MEMORIA y con --simular: ni el plan ni un nodo se tocan.
+==============================================================================
+(C) CONTRAPRUEBA, sin mutar nada: codigo 0
+     VEREDICTO: OK
+
+(A) EMPAREJAMIENTO CAMBIADO (los dos absorbidos intercambiados):
+     codigo 1 | la guarda 5 cae: True | nombra los dos repartos: True | no escribe nada: True
+     guarda 5, el emparejamiento del contenido calza con el de la ficha: ROJO
+     el emparejamiento del contenido {'identificar_consejo_asesores': ['formalize_advisory_board'], 'formalizar_junta_asesora': ['identificar_junta_asesores']} NO es el que la ficha dec
+     VEREDICTO: OK
+
+(B) MARCA CUBIERTO:99, fuera del rango del superviviente:
+     codigo 1 | cae la aritmetica IMPORTADA del generador: True | no escribe nada: True
+     paso 1: CUBIERTO:99 y el superviviente tiene 6
+     VEREDICTO: OK
+
+==============================================================================
+  (C) contraprueba, el sellador sale VERDE         OK
+  (A) emparejamiento cambiado, cae la guarda 5     OK
+  (B) marca fuera de rango, cae la aritmetica      OK
+
+CERO ESCRITURAS: git status -- dataset/ docs/loop/ identico al de la apertura del arnes: True
+
+COMPROBACIONES QUE MUERDEN: 3 de 3
+EXITCODE: 0
