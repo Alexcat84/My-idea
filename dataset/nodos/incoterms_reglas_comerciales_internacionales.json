@@ -16,21 +16,19 @@
   "entregable_esperado": "Cotización o pro forma invoice y contrato de venta con el Incoterm y el lugar o puerto nombrado claramente especificado.",
   "nodos_previos": [
     "seleccion_de_metodo_de_pago",
-    "documentacion_exportacion_basica",
+    "documentacion_exportacion",
     "fijacion_precio_exportacion",
     "evaluacion_mercados_objetivo",
-    "documentacion_exportacion",
     "modos_de_entrada_intermediarios"
   ],
   "nodos_siguientes": [
     "letters_of_credit",
-    "seleccion_metodo_envio_internacional",
+    "seleccion_metodo_transporte_internacional",
     "seleccion_de_metodo_de_pago",
     "elaboracion_pro_forma_invoice",
     "seguro_exportacion",
     "certificado_de_origen_coo",
-    "documentacion_exportacion_basica",
-    "seleccion_metodo_transporte_internacional"
+    "documentacion_exportacion_basica"
   ],
   "condiciones_activacion": [
     "Cuando necesitas preparar una cotización o pro forma invoice para un comprador extranjero.",

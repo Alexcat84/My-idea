@@ -14,19 +14,15 @@
   ],
   "entregable_esperado": "Lista de peligros ordenada de mayor a menor riesgo, indicando para cada uno su severidad, su probabilidad y el número de personas expuestas",
   "nodos_previos": [
-    "inspeccion_sitio_peligros",
+    "inspeccion_lugar_trabajo_peligros",
     "identificacion_peligros_salud",
     "investigacion_incidentes",
-    "identificacion_peligros_salud_2",
-    "investigacion_incidentes_2",
-    "peligros_emergencias_no_rutinarias",
-    "inspeccion_lugar_trabajo_peligros"
+    "peligros_emergencias_no_rutinarias"
   ],
   "nodos_siguientes": [
-    "jerarquia_controles",
+    "prevencion_control_peligros",
     "prevencion_violencia_laboral",
-    "rutas_salida_planificacion_emergencias",
-    "prevencion_control_peligros"
+    "rutas_salida_planificacion_emergencias"
   ],
   "condiciones_activacion": [
     "Cuando existen múltiples peligros identificados y recursos limitados para atenderlos todos a la vez",

@@ -17,17 +17,14 @@
   "nodos_previos": [
     "lienzo_modelo_negocio",
     "preservar_efectivo_buscar_modelo",
-    "cohort_analysis_retencion",
+    "analisis_de_cohortes",
     "validar_posicionamiento_con_analistas",
-    "hire_data_analytics_chief",
-    "analisis_de_cohortes"
+    "hire_data_analytics_chief"
   ],
   "nodos_siguientes": [
-    "pivot_o_proceder",
-    "metricas_que_importan",
-    "validar_modelo_negocio_hechos",
     "decision_pivotar_o_proceder",
-    "metrics_that_matter_framework"
+    "metrics_that_matter_framework",
+    "validar_modelo_negocio_hechos"
   ],
   "condiciones_activacion": [
     "Cuando has completado la recolección de datos de discovery y validation y necesitas decidir el rumbo del negocio",
