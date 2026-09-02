@@ -14,6 +14,7 @@ primer commit de la vuelta y en el cierre:
 | commit de APERTURA | `732cb930aa3dff3785a3f71a4a79073d3fe2a597` | `SALIDA_V138_HEAD_APERTURA.txt` |
 | commit de CIERRE (al correr la bateria) | `fbcb950ce358e715476f5ccded9488cd5f6b0914` | `SALIDA_V138_HEAD_CIERRE.txt` |
 | rama | `pasada-unica` | `git rev-parse --abbrev-ref HEAD` |
+| HASH FINAL de la vuelta | `c5711bdcb28b42e36766b404a77d94884bcfd938` | `git rev-parse HEAD`, leido al escribir esta linea |
 
 **LA CABECERA TALLADA NO SALE, Y NO SE TECLEA EN SU LUGAR.**
 `tallar_cabecera_reporte.py --vuelta 138 --fase04` da **ROJO EXIT 1**, y su
@@ -504,8 +505,11 @@ la de `OP-M-03-III`.
 
 ---
 
-**COMMITS DE ESTA VUELTA (`git log 732cb930..HEAD`, leidos de git):**
+**COMMITS DE ESTA VUELTA (`git log --oneline 732cb930..HEAD`, tallados de git al
+cerrar; el ultimo, el que escribe esta misma lista, no puede aparecer en ella):**
 
+- `c5711bdc` VUELTA 138, ADENDA 4.c: el ciclo de cierre vuelve a tocar el mismo fichero sellado, y se declara igual que la primera vez.
+- `0b4fe2c1` REPORTE DE LA VUELTA 138: LAS TAREAS 1, 2 Y 4 ENTERAS, UNA FUSION DE SEIS, Y EL HUECO DE DOCTRINA QUE PARA A LAS OTRAS DOS QUE MEDI.
 - `fbcb950c` VUELTA 138, TAREA 3: LA LECTURA DE ACTO QUE FALTABA, HECHA Y ESCRITA, Y EL HUECO DEL CONTRATO QUE PARA A OP-M-03-III.
 - `4b981c04` VUELTA 138, OP-M-02-ACCLIMATE EJECUTADA: LA PRIMERA FUSION DE LA FASE 06, Y LA PRIMERA DE LA CAMPANA SELLADA CON EL REPARTO POR PAR.
 - `c3a5b4e1` VUELTA 138, TAREA 3, PASO PREVIO: LA LECTURA DE ACTO POR P.5 DE LAS SEIS, MEDIDA PAR A PAR, Y UN HUECO DEL CONTRATO DE MARCAS QUE APARECE AL SENTAR LA PRIMERA MESA.
