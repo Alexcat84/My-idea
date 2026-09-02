@@ -1,0 +1,37 @@
+==============================================================================
+(c) CONTRAPRUEBA PRIMERO: EL MISMO CUERPO SIN LA FRASE DE CIERRE
+==============================================================================
+fallos: 0
+VEREDICTO (c): VERDE
+
+==============================================================================
+(a) FRASE DE CIERRE SIN CITA
+==============================================================================
+fallos: 1
+   linea 4: AFIRMACION DE CIERRE (sujeto 'fase', verbo 'cierra') SIN cita de tallar_estado_de_fase.py en su ventana: 'LA FASE 99 CIERRA SU CATALOGO.'
+ROJO Y ES DE LA ESPECIE CORRECTA: True
+CONTRAPRUEBA: sin la frase habia 0 fallo(s), con ella 1
+VEREDICTO (a): VERDE
+
+==============================================================================
+(b) FRASE DE CIERRE CITANDO UN FICHERO QUE DICE sin cumplir: 3
+==============================================================================
+fallos: 1
+   linea 4: AFIRMACION DE CIERRE (sujeto 'fase', verbo 'cierra') citando `SALIDA_V999_MUTACION_ESTADO_SUCIO.txt`, que dice sin cumplir: 3. LAS QUE FALTAN, NOMBRADAS: OP-Z-02, OP-Z-03, OP-Z-04. Frase: 'LA FASE 99 CIERRA SU CATALOGO, medido en `SALIDA_V999_MUTACION_ESTADO_SUCIO.txt`.'
+EL FICHERO FABRICADO DICE sin cumplir: 3 y nombra ['OP-Z-02', 'OP-Z-03', 'OP-Z-04'] (leido, no tecleado)
+ROJO NOMBRANDO LAS TRES: True
+VEREDICTO (b): VERDE
+
+==============================================================================
+(c bis) LA MISMA FRASE CITANDO UN FICHERO QUE DICE sin cumplir: 0
+==============================================================================
+fallos: 0
+afirmaciones de cierre COTEJADAS: 1
+   linea 4 (sujeto 'fase', verbo 'cierra') <-> SALIDA_V999_MUTACION_ESTADO_LIMPIO.txt
+VEREDICTO (c bis): VERDE
+
+==============================================================================
+RESUMEN: (a) VERDE | (b) VERDE | (c) VERDE | (c bis) VERDE
+==============================================================================
+P.16, temporales retirados: SI
+EXITCODE: 0

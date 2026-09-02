@@ -73,6 +73,19 @@ BLOB_DEL_SUJETO = "e12e4c36:docs/loop/REPORTE.md"
 
 REPORTE_REL = "docs/loop/REPORTE.md"
 
+# --- TAREA 2.c DE LA VUELTA 140: EL ANCLA DEL BLOQUE (iii) DEJA DE MOVERSE ---
+# Es la caida 4.2 del acta de la vuelta 139. El bloque (iii) resolvia su sujeto
+# con `git log -1 -- docs/loop/REPORTE.md`, o sea EL ULTIMO COMMIT QUE TOCA EL
+# REPORTE. El dia que se corrio eso era el reporte de la 138 y la cifra salio
+# bien; una vuelta despues eso ya era el reporte de la 139, y el mismo script
+# imprimia "filas de tabla en el reporte de la 138: 67" (el de la 138 tiene 75)
+# bajo un rotulo que seguia diciendo "EL REPORTE DE LA VUELTA 138, TAL COMO ESTA
+# EN GIT". Banco 9.10: un sujeto que se mueve solo no prueba nada.
+# AHORA EL BLOB VA CLAVADO POR SU HASH, con su sha256 cotejado en cada corrida,
+# igual que ya hacia el bloque (ii), y el rotulo dice de que commit sale.
+BLOB_REPORTE_138 = "23bde6cd:docs/loop/REPORTE.md"
+SHA256_REPORTE_138 = "c8cbdfb2fbc006e6e444d0294219c27699098dd1f80d2719217d6e08646dbbbe"
+
 
 class SalidaCapturable(io.StringIO):
     def reconfigure(self, **kw):
@@ -245,16 +258,28 @@ def main():
         # TIENEN QUE SEGUIR MORDIENDO con la guarda reparada. Se corre la guarda
         # de la casa, no una copia.
         print("")
-        print("    EL POSITIVO DURO: las CUATRO mutaciones viejas, ancladas a este mismo")
+        print("    EL POSITIVO DURO: las mutaciones viejas, ancladas a este mismo")
         print("    sujeto congelado, corridas con la guarda reparada.")
-        r = subprocess.run(
-            [sys.executable, os.path.join(LOOP_SCRIPTS, "verificar_mutaciones_viejas.py")],
-            cwd=RAIZ, capture_output=True, text=True)
-        for l in r.stdout.splitlines():
-            if l.strip():
-                print("       %s" % l.rstrip())
-        cuatro_ok = (r.returncode == 0)
-        print("       exit de verificar_mutaciones_viejas.py: %d" % r.returncode)
+        # CORTACIRCUITOS (vuelta 140, 2.c): desde la vuelta 140 este script ESTA
+        # EN la nomina de verificar_mutaciones_viejas.py, asi que si la bateria
+        # es quien nos llama, volver a lanzarla es un bucle sin fondo. Se omite
+        # el sub-caso Y SE DICE, nunca se da por verde en silencio (banco 9).
+        if os.environ.get("LOOP_BATERIA_EN_CURSO"):
+            cuatro_ok = None
+            r = None
+            print("       OMITIDO POR RECURSION: nos lanza verificar_mutaciones_viejas.py")
+            print("       (LOOP_BATERIA_EN_CURSO=1) y este script ya esta en su nomina.")
+            print("       El sub-caso NO se da por verde: se declara omitido. Corrido a")
+            print("       mano, sin esa variable, el positivo duro va entero.")
+        else:
+            r = subprocess.run(
+                [sys.executable, os.path.join(LOOP_SCRIPTS, "verificar_mutaciones_viejas.py")],
+                cwd=RAIZ, capture_output=True, text=True)
+            for l in r.stdout.splitlines():
+                if l.strip():
+                    print("       %s" % l.rstrip())
+            cuatro_ok = (r.returncode == 0)
+            print("       exit de verificar_mutaciones_viejas.py: %d" % r.returncode)
 
         veredictos.append(("(ii.a) identidad del sujeto congelado",
                            "VERDE, sha256 identico al blob"))
@@ -262,9 +287,10 @@ def main():
                            "VERDE, %d -> %d cifras" % (vistas_v_suj, vistas_n_suj)
                            if ok_ii else
                            "ROJO, vieja %d y nueva %d" % (vistas_v_suj, vistas_n_suj)))
-        veredictos.append(("(ii.c) las 4 mutaciones viejas siguen mordiendo",
-                           "VERDE, exit 0" if cuatro_ok else
-                           "ROJO, exit %d" % r.returncode))
+        veredictos.append(("(ii.c) las mutaciones viejas siguen mordiendo",
+                           "OMITIDO POR RECURSION (nos lanza la bateria)" if cuatro_ok is None
+                           else ("VERDE, exit 0" if cuatro_ok else
+                                 "ROJO, exit %d" % r.returncode)))
 
         # ------------------------------------------------------------------
         # (i) LA MUTACION: una fila de tabla con una cifra que NO cuadra.
@@ -329,14 +355,23 @@ def main():
         print("")
         print("-" * 78)
         print("(iii) EL REPORTE DE LA VUELTA 138, TAL COMO ESTA EN GIT.")
-        commit_reporte = git(["log", "-1", "--pretty=format:%H", "--",
-                              REPORTE_REL]).decode("utf-8").strip()
-        datos_138 = git(["show", "%s:%s" % (commit_reporte, REPORTE_REL)])
+        # ANCLA CLAVADA (vuelta 140, 2.c): NUNCA "el ultimo commit que toca el
+        # reporte". El blob va por su hash y su sha256 se coteja aqui mismo; si
+        # no cuadra, ROJO PREVIO, que es lo que verificar_mutaciones_viejas.py
+        # clasifica como ANCLA PERDIDA.
+        commit_reporte = BLOB_REPORTE_138.split(":", 1)[0]
+        datos_138 = git(["show", BLOB_REPORTE_138])
+        h_138 = sha256_normalizado(datos_138)
+        if h_138 != SHA256_REPORTE_138:
+            print("    ROJO PREVIO: el blob %s tiene sha256 %s y se esperaba %s: ANCLA PERDIDA."
+                  % (BLOB_REPORTE_138, h_138, SHA256_REPORTE_138))
+            return 1
         ruta_138 = os.path.join(tmp, "reporte_138.md")
         io.open(ruta_138, "wb").write(datos_138)
         texto_138 = normalizar(datos_138).decode("utf-8")
-        print("    blob leido de %s (ultimo commit que toca %s)"
-              % (commit_reporte[:8], REPORTE_REL))
+        asunto_138 = git(["log", "-1", "--pretty=format:%s", commit_reporte]).decode("utf-8").strip()
+        print("    blob CLAVADO en %s (asunto: %r), sha256 %s: OK"
+              % (BLOB_REPORTE_138, asunto_138, h_138[:16]))
         print("    filas de tabla en el reporte de la 138: %d"
               % contar_filas_de_tabla(texto_138))
 

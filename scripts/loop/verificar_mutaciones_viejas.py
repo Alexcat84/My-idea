@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
-"""verificar_mutaciones_viejas.py . LAS CUATRO MUTACIONES VIEJAS, EN EL CICLO DE
+"""verificar_mutaciones_viejas.py . LAS MUTACIONES VIEJAS, EN EL CICLO DE
 CIERRE DE CADA VUELTA, Y ANCLA PERDIDA CUENTA COMO ROJO.
+
+LA NOMINA VIVE EN `VIEJAS` Y CRECE: nacio con CUATRO y en la vuelta 140 pasa a
+CINCO, con `vuelta139_2b_mutaciones.py`, cuyo bloque (iii) tenia un ancla movil
+(TAREA 2.c, acta 139 caida 4.2). La cifra del rotulo se computa de `VIEJAS`, no
+se teclea, para que anadir una no deje una frase mintiendo detras.
 
 NOMBRE ESTABLE, SIN NUMERO DE VUELTA, como verificar_apertura_sellada.py y
 tallar_cabecera_reporte.py: se corre igual en toda vuelta y no se clona.
@@ -60,17 +65,32 @@ VIEJAS = [
     ("vuelta135_2e_mutacion_1.py", True),
     ("vuelta135_2e_mutacion_2.py", True),
     ("vuelta135_2e_mutacion_3.py", True),
+    # QUINTA, ANADIDA EN LA VUELTA 140 (TAREA 2.c, acta 139 caida 4.2). Su
+    # bloque (iii) tenia un ANCLA MOVIL (`git log -1 -- REPORTE.md`) y la
+    # reparacion la clava por hash con su sha256. Entra en esta bateria
+    # justamente para que, SI EL ANCLA SE VUELVE A PERDER, salga como ANCLA
+    # PERDIDA y no como verde. No admite --sujeto: fabrica los suyos.
+    ("vuelta139_2b_mutaciones.py", False),
 ]
 
 # EL ANCLA QUE SE ARRANCA en --mutar-ancla. Es el literal que las tres buscan.
 ANCLAS = ["118 grafias (sin instrumento)", "54 grupos (sin instrumento)"]
 
 
+# EL CORTACIRCUITOS (vuelta 140, 2.c). Ver el docstring: `vuelta139_2b_mutaciones.py`
+# corre esta bateria dentro de su bloque (ii), y esta bateria corre ese script
+# desde la vuelta 140. Sin esta marca los dos se llaman sin fondo. Es ruidosa:
+# el hijo DICE en su salida que omite el sub-caso por recursion.
+MARCA_RECURSION = "LOOP_BATERIA_EN_CURSO"
+
+
 def correr(script, sujeto=None):
     cmd = [sys.executable, os.path.join(LOOP, script)]
     if sujeto:
         cmd += ["--sujeto", sujeto]
-    r = subprocess.run(cmd, capture_output=True, text=True, cwd=RAIZ)
+    entorno = dict(os.environ)
+    entorno[MARCA_RECURSION] = "1"
+    r = subprocess.run(cmd, capture_output=True, text=True, cwd=RAIZ, env=entorno)
     return r.returncode, (r.stdout or "") + (r.stderr or "")
 
 
@@ -96,7 +116,7 @@ def main():
     sys.stdout.reconfigure(encoding="utf-8")
 
     print("=" * 78)
-    print("LAS CUATRO MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.")
+    print("LAS %d MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO." % len(VIEJAS))
     if a.mutar:
         print("MODO MUTACION: sujeto con el ancla arrancada. TIENE QUE DAR ROJO.")
     print("=" * 78)

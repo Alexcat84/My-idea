@@ -201,6 +201,52 @@ salida a docs/loop/SALIDA_V137_1C_MUTACION.txt. Cuatro casos: cifra
 equivocada por uno, cifra de la etiqueta VECINA del mismo fichero (prueba
 que el camino fuerte no se degrada al debil), el falso verde de arriba, y
 las mutaciones viejas recorridas.
+
+--- LA GUARDA APRENDE A LEER LAS AFIRMACIONES DE CIERRE (VUELTA 140, 2.b) ---
+
+POR QUE NACE. Es la caida 4.1 del acta 139 puesta donde ocurrio. El reporte
+de la vuelta 139 publico "LA FASE 06 CIERRA SU CATALOGO" en su cabecera y
+"hoy cierra" en su conclusion, y sobre esa frase pidio disparar el pase de
+estado de seis operaciones. No cerraba: cinco operaciones remitidas por la
+fase 04 en la vuelta 118 tenian once aristas sin escribir. Esta guarda no
+podia verlo porque solo miraba CIFRAS con unidad, y "la fase 06 cierra su
+catalogo" no lleva ninguna. Una frase de cierre SIN INSTRUMENTO DETRAS es
+la especie exacta que la racha de reporte castiga.
+
+QUE COMPRUEBA, DE MAS. Toda frase que afirme que una FASE o un CATALOGO
+cierra, queda completo o esta entero tiene que CITAR, en su ventana, un
+fichero de salida de `tallar_estado_de_fase.py`, y la guarda coteja que ese
+fichero diga `sin cumplir: 0`. SIN ESA CITA, ROJO. Con una cita a un fichero
+que diga `sin cumplir: 3`, ROJO NOMBRANDO LAS TRES.
+
+EL VOCABULARIO DE DISPARO ES CERRADO, Y SE DICE AQUI PARA QUE LA PROXIMA
+AMPLIACION NO SEA UNA SORPRESA. Dispara una frase que traiga a la vez un
+SUJETO de `SUJETOS_DE_CIERRE` (`fase`, `catalogo`) y un VERBO de
+`VERBOS_DE_CIERRE` (`cierra`, `cierre`, `catalogo completo`,
+`queda completa`, `queda completo`, `esta entera`, `esta entero`,
+`sin pendientes`). Ni una palabra mas: si manana hace falta cazar otra
+formula, se ANADE AQUI y se dice en el reporte, nunca se deja que la guarda
+la adivine.
+
+LA GUARDA DISPARA DE MAS A PROPOSITO, Y EL REMEDIO NO ES REESCRIBIR. Con ese
+vocabulario cerrado caen tambien frases condicionales ("cuando la fase 06
+cierre") y frases sobre el cierre de una vuelta. Es deliberado: el coste de
+un disparo de mas es UNA CITA, y el coste de un disparo de menos fue la
+caida 4.1. **El remedio de un ROJO de esta clase es CITAR EL INSTRUMENTO,
+jamas reescribir la prosa hasta que la guarda no encuentre nada**, que es el
+ramal (xxi) del acta 136 ("una cobertura de cero no es un verde, es un plato
+vacio").
+
+COMO RECONOCE UN FICHERO DE `tallar_estado_de_fase.py`: POR SU CONTENIDO, no
+por su nombre. Tiene que traer la cabecera `ESTADO DE LA FASE` y una linea
+`CIFRA:` con `sin cumplir: <n>`. Un fichero citado que no las traiga NO
+cuenta como cita valida, y se dice cual era.
+
+PRUEBA DE MUTACION (obligatoria): scripts/loop/vuelta140_2b_mutaciones.py,
+salida a docs/loop/SALIDA_V140_2B_MUTACIONES.txt. Tres casos sobre sujeto
+fabricado y retirado por P.16 (quien fabrica, limpia): (a) frase de cierre
+SIN cita, ROJO; (b) frase de cierre con cita a un fichero que dice
+`sin cumplir: 3`, ROJO nombrando las tres; (c) sin la frase, VERDE.
 """
 import argparse
 import glob
@@ -230,6 +276,17 @@ PATRON_ARISTA = re.compile(r"^\s*\S+\s*->\s*\S+", re.MULTILINE)
 PATRON_CIFRA_ETIQUETA = re.compile(
     r"^CIFRA\s+[^:\n]+:\s*(\d+(?:[.,]\d+)?)\s+(%s)\b" % "|".join(UNIDADES),
     re.IGNORECASE | re.MULTILINE)
+
+# --- VOCABULARIO CERRADO DE LAS AFIRMACIONES DE CIERRE (vuelta 140, 2.b) ---
+# Ver el docstring del modulo, seccion "LA GUARDA APRENDE A LEER LAS
+# AFIRMACIONES DE CIERRE": esta lista es CERRADA por contrato. Ampliarla es un
+# acto declarado, no una adivinanza del instrumento.
+SUJETOS_DE_CIERRE = ("fase", "catalogo")
+VERBOS_DE_CIERRE = ("cierra", "cierre", "catalogo completo", "queda completa",
+                    "queda completo", "esta entera", "esta entero", "sin pendientes")
+PATRON_SIN_CUMPLIR = re.compile(r"sin cumplir:\s*(\d+)", re.IGNORECASE)
+PATRON_LISTA_SIN_CUMPLIR = re.compile(r"^SIN CUMPLIR \(\d+\):\s*(.+)$", re.MULTILINE)
+MARCA_ESTADO_DE_FASE = "ESTADO DE LA FASE"
 
 
 def leer(ruta):
@@ -520,7 +577,98 @@ def clasificar_exencion(frase, m, unidad):
     return None
 
 
-def verificar(ruta_reporte):
+def _sin_tildes(texto):
+    """Las frases del reporte llevan tildes y el vocabulario de disparo esta
+    escrito sin ellas (esta casa escribe sus instrumentos sin tildes). Se
+    igualan los dos lados antes de comparar, que es la misma reparacion que la
+    correccion 1 de la vuelta 139 (una busqueda de "vision general" dio 0
+    contra un texto que la lleva con tilde)."""
+    pares = {"\u00e1": "a", "\u00e9": "e", "\u00ed": "i", "\u00f3": "o", "\u00fa": "u",
+             "\u00c1": "A", "\u00c9": "E", "\u00cd": "I", "\u00d3": "O", "\u00da": "U",
+             "\u00fc": "u", "\u00dc": "U"}
+    return "".join(pares.get(c, c) for c in texto)
+
+
+def es_afirmacion_de_cierre(frase):
+    """VOCABULARIO CERRADO (ver docstring del modulo). Dispara si la frase trae
+    a la vez un SUJETO y un VERBO de las dos nominas literales."""
+    plana = _sin_tildes(frase).lower()
+    sujeto = next((s for s in SUJETOS_DE_CIERRE if s in plana), None)
+    verbo = next((v for v in VERBOS_DE_CIERRE if v in plana), None)
+    if sujeto and verbo:
+        return sujeto, verbo
+    return None
+
+
+def leer_estado_de_fase(contenido):
+    """Reconoce una salida de tallar_estado_de_fase.py POR SU CONTENIDO, no por
+    su nombre. Devuelve (sin_cumplir, nombres) o None si no lo es."""
+    if MARCA_ESTADO_DE_FASE not in contenido:
+        return None
+    m = PATRON_SIN_CUMPLIR.search(contenido)
+    if m is None:
+        return None
+    nombres = []
+    ml = PATRON_LISTA_SIN_CUMPLIR.search(contenido)
+    if ml:
+        crudo = ml.group(1).strip()
+        if crudo.lower() != "ninguna":
+            nombres = [x.strip() for x in crudo.split(",") if x.strip()]
+    return int(m.group(1)), nombres
+
+
+def comprobar_afirmaciones_de_cierre(frases, existentes):
+    """TAREA 2.b de la vuelta 140. Devuelve (fallos, cotejadas). Una frase de
+    cierre sin cita de tallar_estado_de_fase.py en su ventana es ROJO; con cita
+    a un fichero que no diga "sin cumplir: 0", ROJO NOMBRANDO las que faltan.
+
+    LA VENTANA ES LA MISMA QUE LA DEL COTEJO DE CIFRAS, frases[i:i+3], y por el
+    mismo motivo: la asimetria de ventanas de esta guarda esta adjudicada como
+    doctrina en el docstring del modulo y no se ensancha por comodidad."""
+    fallos = []
+    cotejadas = []
+    for i, frase in enumerate(frases):
+        disparo = es_afirmacion_de_cierre(frase)
+        if disparo is None:
+            continue
+        sujeto, verbo = disparo
+        ventana_txt = " ".join(frases[i:i + 3])
+        citas = [c for c in PATRON_CITA_SALIDA.findall(ventana_txt) if c in existentes]
+        estados = []
+        no_validas = []
+        for c in dict.fromkeys(citas):
+            leido = leer_estado_de_fase(leer(os.path.join(LOOP, c)))
+            if leido is None:
+                no_validas.append(c)
+            else:
+                estados.append((c, leido))
+        if not estados:
+            msg = ("linea %d: AFIRMACION DE CIERRE (sujeto '%s', verbo '%s') SIN cita de "
+                   "tallar_estado_de_fase.py en su ventana: %r"
+                   % (i, sujeto, verbo, frase.strip()))
+            if no_validas:
+                msg += (" [citas de la ventana que NO son salidas de estado de fase: %s]"
+                        % ", ".join(no_validas))
+            fallos.append(msg)
+            continue
+        for fichero, (sin_cumplir, nombres) in estados:
+            if sin_cumplir != 0:
+                fallos.append(
+                    "linea %d: AFIRMACION DE CIERRE (sujeto '%s', verbo '%s') citando `%s`, "
+                    "que dice sin cumplir: %d. LAS QUE FALTAN, NOMBRADAS: %s. Frase: %r"
+                    % (i, sujeto, verbo, fichero, sin_cumplir,
+                       ", ".join(nombres) or "el fichero no las nombra", frase.strip()))
+            else:
+                cotejadas.append((i, sujeto, verbo, fichero))
+    return fallos, cotejadas
+
+
+def verificar(ruta_reporte, cierres_out=None):
+    """LA ARIDAD NO SE TOCA (vuelta 140, 2.b): sigue devolviendo CUATRO valores
+    porque scripts/loop/vuelta135_2a_diagnostico.py y
+    scripts/loop/vuelta139_2b_mutaciones.py, los dos sellados en otras vueltas,
+    desempaquetan cuatro. Las afirmaciones de cierre cotejadas se recogen en la
+    lista `cierres_out` si el llamador la pasa."""
     texto_completo = leer(ruta_reporte)
     texto = quitar_bloques_cubiertos(texto_completo)
     # LA BANDERA DE TABLA (vuelta 139, 2.b), con su guarda de que no se ha
@@ -541,6 +689,14 @@ def verificar(ruta_reporte):
     cotejados = []
     exentas_sin_instrumento = []
     total_cifras = 0
+
+    # TAREA 2.b de la vuelta 140: las AFIRMACIONES DE CIERRE, antes que las
+    # cifras, porque una fase que no cierra invalida el parrafo entero y no
+    # una celda. Ver el docstring del modulo.
+    fallos_cierre, cierres_cotejados = comprobar_afirmaciones_de_cierre(frases, existentes)
+    fallos.extend(fallos_cierre)
+    if cierres_out is not None:
+        cierres_out.extend(cierres_cotejados)
 
     for i, frase in enumerate(frases):
         for m in PATRON_NUMERO_UNIDAD.finditer(frase):
@@ -667,7 +823,8 @@ def main():
     ap.add_argument("--reporte", default=RUTA_REPORTE)
     a = ap.parse_args()
 
-    fallos, cotejados, exentas, total_cifras = verificar(a.reporte)
+    cierres = []
+    fallos, cotejados, exentas, total_cifras = verificar(a.reporte, cierres_out=cierres)
     # EL REPARTO POR ETIQUETA CONTRA POR CONJUNTO es condicion viva del acta 137
     # (3.1): una cobertura tiene que decir DE QUE esta llena. Y desde la vuelta
     # 139 (2.b) dice ademas CUANTAS de las cotejadas viven en una FILA DE TABLA,
@@ -681,6 +838,8 @@ def main():
                      len(cotejados), len(exentas), total_cifras,
                      por_etiqueta, por_conjunto,
                      len(cotejados) - por_etiqueta - por_conjunto, en_tabla))
+    cobertura += (" | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: %d"
+                  % len(cierres))
 
     if fallos:
         print("ROJO, %d cifra(s) no cuadran:" % len(fallos))
@@ -702,6 +861,11 @@ def main():
         print("cifra(s) exentas por (sin instrumento) (%d):" % len(exentas))
         for numero, unidad, frase in exentas:
             print("  %d %s: %r" % (numero, unidad, frase))
+    if cierres:
+        print("afirmacion(es) de CIERRE cotejadas (%d), todas contra un fichero que dice "
+              "sin cumplir: 0:" % len(cierres))
+        for i, sujeto, verbo, fichero in cierres:
+            print("  linea %d (sujeto '%s', verbo '%s') <-> `%s`" % (i, sujeto, verbo, fichero))
     print(cobertura)
     return 0
 
