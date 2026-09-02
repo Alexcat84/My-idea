@@ -15,6 +15,7 @@ Y la tercera baranda nace del mismo trabajo: 71 `etiqueta_arbol` vivieron
 divergentes entre las dos copias del grafo durante toda una serie de commits,
 porque cada copia era valida por su cuenta y NINGUN guardian las comparaba.
 """
+import os
 import json
 import subprocess
 import sys
@@ -122,7 +123,19 @@ def test_EL_CATALOGO_REAL_ESTA_LIMPIO():
     web = json.loads((BASE / "web" / "lib" / "assets" / "master_graph.json")
                      .read_text(encoding="utf-8"))["nodos"]
     dif = gemelos_divergentes(g, web)
-    assert not dif, f"{len(dif)} nodos divergentes entre las dos copias: {list(dif)[:3]}"
+    # EL FALSO ROJO SE DELATA SOLO (TAREA 5 de la vuelta 150). Esta linea es la
+    # que cuatro actas seguidas leyeron como un rojo del catalogo cuando era el
+    # ciclo de Gate 0 a medias. El assert NO se afloja: lo que se anade es el
+    # diagnostico que dice, en una linea, cual de las dos cosas es, y nombra el
+    # comando que falta cuando falta.
+    if dif:
+        sys.path.insert(0, str(BASE / "scripts" / "loop"))
+        from diagnostico_ciclo_a_medias import diagnosticar
+        diag = diagnosticar(dif, g, web)
+    else:
+        diag = ""
+    assert not dif, (f"{len(dif)} nodos divergentes entre las dos copias: "
+                     + str(list(dif)[:3]) + os.linesep + diag)
     print(f"  ok: los {len(g)} nodos del master real, sin auto-alias, sin dos "
           f"duenos, y las dos copias identicas")
 

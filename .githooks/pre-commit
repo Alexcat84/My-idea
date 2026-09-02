@@ -23,6 +23,14 @@ if ! python engine/run_all_tests.py > /tmp/_suite_motor.log 2>&1; then
   echo ""
   echo "  COMMIT ABORTADO: la suite del motor esta en ROJO."
   tail -25 /tmp/_suite_motor.log
+  # EL FALSO ROJO SE DELATA SOLO (TAREA 5 de la vuelta 150). Aqui es donde el
+  # ejecutor de la vuelta 150 se comio la trampa, y donde el auditor de la 149
+  # se la habria comido: el guardian aborta con "N nodos divergentes" y el que
+  # lo lee no sabe si sembro algo o si se salto el comando 2 del ciclo. El
+  # guardian NO afloja (exit 1 igual); lo que hace es decir cual de las dos.
+  if grep -q "nodos divergentes" /tmp/_suite_motor.log; then
+    python scripts/loop/diagnostico_ciclo_a_medias.py || true
+  fi
   exit 1
 fi
 

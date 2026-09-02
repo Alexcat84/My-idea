@@ -1,0 +1,37 @@
+  ok: el grafo limpio pasa las tres barandas
+  ok: caza el auto-alias y no marca al limpio
+  ok: caza el alias con dos duenos, con los dos nombres
+  ok: caza la divergencia de campo y la de nodo ausente
+  ok: compara campos, no bytes ni orden de claves
+  ok: los 5 puntos de escritura filtran el auto-alias
+Traceback (most recent call last):
+  File "C:\Users\AlexDesk\Documents\I have an idea\engine\test_gate_alias.py", line 156, in <module>
+    main()
+  File "C:\Users\AlexDesk\Documents\I have an idea\engine\test_gate_alias.py", line 151, in main
+    f()
+  File "C:\Users\AlexDesk\Documents\I have an idea\engine\test_gate_alias.py", line 137, in test_EL_CATALOGO_REAL_ESTA_LIMPIO
+    assert not dif, (f"{len(dif)} nodos divergentes entre las dos copias: "
+           ^^^^^^^
+AssertionError: 71 nodos divergentes entre las dos copias: ['actualizar_business_model_canvas_discovery', 'actualizar_business_model_canvas_tuneup', 'actualizar_modelo_de_negocio_pivot_o_proceed']
+
+  ------------------------------------------------------------------------
+  DIAGNOSTICO DEL CICLO (scripts/loop/diagnostico_ciclo_a_medias.py)
+  nodos divergentes: 71 | campos que divergen: etiqueta_arbol
+  la divergencia es SOLO de `etiqueta_arbol`, que es la curaduria de cara,
+  y la curaduria NO vive en los nodos: vive en
+  dataset/metadata/etiquetas_de_cara_v1*.json (72 etiquetas canonicas leidas).
+  reparto contra la canonica: dataset desfasado y web al dia: 71 | dataset al dia y web desfasada: 0 | sin canonica: 0
+  VEREDICTO: **EL CICLO PUDO QUEDARSE A MEDIAS. FALTA EL COMANDO 2.**
+  El comando 1 recompilo el grafo y por diseno NO reaplica la curaduria.
+  FALTA: python scripts/etiquetas_de_cara.py --aplicar
+
+  EL CICLO ENTERO Y EN SU ORDEN:
+  1) python scripts/run_phase1.py --reaplico-curaduria
+  2) python scripts/etiquetas_de_cara.py --aplicar        <- reaplica la curaduria
+  3) python scripts/sync_assets_web.py                    <- la lleva a la copia web
+  4) git diff HEAD --numstat -- dataset/ web/ engine/     <- tiene que salir SIN FILAS
+
+  SI DESPUES DE CORRERLO ENTERO LAS DOS COPIAS SIGUEN DIVERGIENDO, ESO
+  SIGUE SIENDO ROJO Y SIGUE PARANDO. Este diagnostico no es una excepcion.
+  ------------------------------------------------------------------------
+EXITCODE: 1

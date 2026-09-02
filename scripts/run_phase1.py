@@ -958,6 +958,13 @@ def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
         if gemelos:
             muestra = [f"{k} ({v})" for k, v in list(gemelos.items())[:3]]
             detalle += f": {muestra} -> {REMEDIO_SYNC}"
+            # EL FALSO ROJO SE DELATA SOLO (TAREA 5 de la vuelta 150). El
+            # REMEDIO_SYNC de arriba dice QUE correr; esto dice ademas SI el rojo
+            # es de verdad o es el ciclo a medias, y CUAL de los dos comandos
+            # falta. No afloja el check: `not gemelos` sigue siendo la condicion.
+            sys.path.insert(0, str(BASE / "scripts" / "loop"))
+            from diagnostico_ciclo_a_medias import diagnosticar
+            detalle += diagnosticar(gemelos, nodos_dataset_al_empezar, nodos_web)
         checks.append(("Los dos master_graph (dataset y web) dicen lo mismo",
                        not gemelos, detalle))
 

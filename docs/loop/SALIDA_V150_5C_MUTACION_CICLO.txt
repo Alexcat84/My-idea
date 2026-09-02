@@ -1,0 +1,41 @@
+dataset ANTES sha256=627cc662296f | web ANTES sha256=627cc662296f
+etiquetas canonicas leidas de dataset/metadata/etiquetas_de_cara_v1*.json: 72
+nodos curados presentes en el grafo: 71
+
+(A) CASO DE CONTROL: el ciclo corrido EN ORDEN, sobre las dos copias reales.
+    divergencias (COMPUTADO) = 0 | diagnostico vacio = True
+    VERDE: el ciclo en orden NO dispara el aviso.
+
+(B) FALTA EL COMANDO 2 (etiquetas_de_cara --aplicar).
+    nodos desfasados montados: 71 | divergencias: 71
+    el diagnostico nombra el COMANDO 2 (COMPUTADO) = 1
+    | VEREDICTO: **EL CICLO PUDO QUEDARSE A MEDIAS. FALTA EL COMANDO 2.**
+    | FALTA: python scripts/etiquetas_de_cara.py --aplicar
+    VERDE: se delata solo y nombra el comando que falta.
+
+(C) FALTA EL COMANDO 3 (sync_assets_web).
+    divergencias: 71 | el diagnostico nombra el COMANDO 3 (COMPUTADO) = 1
+    | VEREDICTO: **EL CICLO PUDO QUEDARSE A MEDIAS. FALTA EL COMANDO 3.**
+    | FALTA: python scripts/sync_assets_web.py
+    VERDE: se delata solo y nombra el comando que falta.
+
+(D) ROJO DE VERDAD: un campo que el ciclo NO escribe (titulo_concepto).
+    victima: 6s_lugar_trabajo | divergencias: 1
+    el diagnostico dice que NO es un ciclo a medias (COMPUTADO) = 1
+    | VEREDICTO: **ESTO NO ES UN CICLO A MEDIAS.** La divergencia toca
+    | ES UN ROJO DE VERDAD y hay que mirarlo. No lo tape el diagnostico.
+    VERDE: el rojo legitimo sigue siendo rojo y el diagnostico lo dice.
+
+PRUEBA DE MUTACION SOBRE VARIABLE COMPUTADA: se cambia EL VALOR ESPERADO
+de cada uno de los cuatro asserts y se comprueba que el caso CAE.
+  A control: assert 0 == 1 CAE. El caso muerde.
+  B falta comando 2: assert 1 == 0 CAE. El caso muerde.
+  C falta comando 3: assert 1 == 0 CAE. El caso muerde.
+  D rojo de verdad: assert 1 == 0 CAE. El caso muerde.
+  caidas (COMPUTADO) = 4 | esperado = 4
+
+dataset DESPUES sha256=627cc662296f | web DESPUES sha256=627cc662296f
+LAS DOS COPIAS IDENTICAS ANTES Y DESPUES: comprobado por el propio arnes.
+
+LOS CUATRO CASOS EN VERDE, Y LOS CUATRO MUERDEN.
+EXITCODE: 0
