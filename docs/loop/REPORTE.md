@@ -37,16 +37,17 @@ EXIT 0** y su tabla se pega entera, sin tocar una celda. Salida en
 leido al escribir esta linea, en la rama `pasada-unica`:
 
 ```
-6121ae9e7d2694cebf219193e1f212346c235563
+2cbb80192491c6bc24ae8e1a577a8b9eb3fbe677
 ```
 
 <!-- COMMITS TALLADOS -->
 
 **LOS COMMITS DE LA VUELTA**, de `git log 6ec25c1d..HEAD` (el acta de la 139
-excluida). Son **11**, y el ultimo, el que escribe esta lista, no puede aparecer
+excluida). Son **12**, y el ultimo, el que escribe esta lista, no puede aparecer
 en ella: es el carril de la vuelta 64 que el acta 137 ya verifico.
 
 ```
+  2cbb8019 VUELTA 140, CIERRE 1 DE 2: LA TERCERA ACOTACION DE LA GUARDA DE CIERRE Y SUS DOS MUTACIONES NUEVAS.
   6121ae9e REPORTE DE LA VUELTA 140: LAS TAREAS 0, 1, 2 Y 4 ENTERAS, TRES REMITIDAS DE CINCO, Y DOS PARADAS. LA FASE 06 NO CIERRA, Y ESTA VEZ LO DICE UN
   2730d6af VUELTA 140, TAREA 3, REMITIDA 5 DE 5: OP-E-04 NO SE EJECUTA. PARADA, CERO ESCRITURAS, Y NO LA ARREGLO YO.
   7439c26b VUELTA 140, TAREA 3, REMITIDA 4 DE 5: OP-E-05, EL ENLACE MUTUO. LAS DOS QUE FALTABAN, ESCRITAS RESUELTAS POR ALIAS.
