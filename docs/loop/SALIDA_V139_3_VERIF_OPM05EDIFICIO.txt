@@ -1,0 +1,46 @@
+VERIFICACIONES DE LA FICHA DE OP-M-05-EDIFICIO, SOBRE EL NODO ESCRITO
+Comparacion SIN TILDES en los dos lados. Los veredictos los COMPUTA el codigo.
+==============================================================================
+CIFRA pasos del superviviente: 8 lineas
+  PASO 1: Identifica tus hipótesis clave sobre el problema, el cliente y la solución
+  PASO 2: Sal a entrevistar clientes potenciales de forma repetida durante semanas o meses
+  PASO 3: Evita las encuestas de foco tradicionales o las listas exhaustivas de funciones (features)
+  PASO 4: Anota lo que aprendes y compáralo con lo que pensabas al principio
+  PASO 5: Lidera tú mismo estas conversaciones, no las delegues en personal junior
+  PASO 6: Documenta lo que aprendes de cada conversación en el momento (blog, CRM)
+  PASO 7: Consigue experiencia de primera mano sobre cada parte de tu modelo de negocio
+  PASO 8: Prepárate para recibir feedback impredecible y a veces doloroso
+
+--- verificacion [2]: LAS CUATRO PERDIDAS EN EL TEXTO FINAL, una por una ---
+  preservar[1] LIDERAR TU MISMO, no delegar        pasos [5]
+       paso 5: Lidera tú mismo estas conversaciones, no las delegues en personal junior
+  preservar[2] VIVE DENTRO: evitar listas exhaustivas pasos [3]
+       paso 3: Evita las encuestas de foco tradicionales o las listas exhaustivas de funciones (features)
+  preservar[3] documentar EN EL MOMENTO            pasos [6]
+       paso 6: Documenta lo que aprendes de cada conversación en el momento (blog, CRM)
+  preservar[4] NO HAY HECHOS DENTRO DEL EDIFICIO   pasos NINGUNO
+
+--- LA LINEA 4, DONDE VIVE DE VERDAD (la perdida DE NOMBRE sellada) ---
+CIFRA entradas en merged_originals: 2 lineas
+   node_id=get_out_of_the_building
+      titulo=Sal del edificio (Get Out of the Building)
+      contiene la formulacion: False
+   node_id=manifiesto_regla1_hechos_fuera_del_edificio
+      titulo=No Hay Hechos Dentro del Edificio: Sal a Buscarlos
+      contiene la formulacion: True
+
+   VEREDICTO COMPUTADO: en los pasos del superviviente: False | en merged_originals: True
+   O SEA: la verificacion 2 de la ficha, tal como esta escrita (comprobarla COMO
+   FRASE en el texto final), NO SE CUMPLE, y la formulacion NO SE PIERDE del
+   catalogo: vive en merged_originals. Es lo que la perdida DE NOMBRE sellada
+   en el plan declara, y va enrutada a la fase 04.
+
+--- LA PIEZA DE DOS DUENOS, UNA SOLA VEZ ---
+CIFRA pasos que mandan no delegar: 1 lineas
+   paso 5: Lidera tú mismo estas conversaciones, no las delegues en personal junior
+
+--- verificacion [4]: EL ALIAS CARGA LOS DOS IDS ---
+ids_alias: ['get_out_of_the_building', 'manifiesto_regla1_hechos_fuera_del_edificio']
+   get_out_of_the_building                        en alias: True | deprecado: True
+   manifiesto_regla1_hechos_fuera_del_edificio    en alias: True | deprecado: True
+EXITCODE: 0

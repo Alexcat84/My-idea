@@ -1,0 +1,42 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### customer_discovery_get_out_of_building  <==  get_out_of_the_building
+  1. DESEMPATE POR CABLEADO
+     customer_discovery_get_out_of_building       pasos  4 | nombra  8 | LO NOMBRAN  8
+     get_out_of_the_building                      pasos  4 | nombra  6 | LO NOMBRAN  6
+     >>> gana customer_discovery_get_out_of_building por 8 contra 6
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['get_out_of_the_building']
+  3. ENTRADAS QUE SE REDIRIGEN
+     customer_development_process                 nodos_siguientes  -> customer_discovery_get_out_of_building
+     customer_discovery_introduccion              nodos_siguientes  -> customer_discovery_get_out_of_building
+     equipo_customer_development                  nodos_siguientes  -> customer_discovery_get_out_of_building
+     identificar_earlyvangelists                  nodos_previos     -> customer_discovery_get_out_of_building
+     producto_minimo_viable                       nodos_previos     -> customer_discovery_get_out_of_building
+     validar_canal_distribucion                   nodos_previos     -> customer_discovery_get_out_of_building
+
+### customer_discovery_get_out_of_building  <==  manifiesto_regla1_hechos_fuera_del_edificio
+  1. DESEMPATE POR CABLEADO
+     customer_discovery_get_out_of_building       pasos  4 | nombra  8 | LO NOMBRAN  8
+     manifiesto_regla1_hechos_fuera_del_edificio  pasos  4 | nombra  3 | LO NOMBRAN  3
+     >>> gana customer_discovery_get_out_of_building por 8 contra 3
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['manifiesto_regla1_hechos_fuera_del_edificio']
+  3. ENTRADAS QUE SE REDIRIGEN
+     actualizar_business_model_canvas_tuneup      nodos_siguientes  -> customer_discovery_get_out_of_building
+     customer_development_agile_pairing           nodos_previos     -> customer_discovery_get_out_of_building
+     fracaso_como_aprendizaje_startup             nodos_previos     -> customer_discovery_get_out_of_building
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     producto_minimo_viable                       nodos_previos     -> customer_discovery_get_out_of_building
+     TOTAL NUEVAS: 1
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ninguna
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     NINGUNA: el acto queda sin aristas internas tras la fusion
+EXITCODE: 0

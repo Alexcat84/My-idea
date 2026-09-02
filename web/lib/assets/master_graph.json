@@ -1405,7 +1405,7 @@
         "product_market_fit",
         "identificar_advisory_board",
         "genchi_gembutsu_salir_del_edificio",
-        "manifiesto_regla1_hechos_fuera_del_edificio",
+        "customer_discovery_get_out_of_building",
         "identificar_consejo_asesores",
         "verificar_product_market_fit",
         "customer_discovery_introduccion",
@@ -28083,7 +28083,7 @@
       "node_id": "customer_development_agile_pairing",
       "nodos_previos": [
         "modelo_customer_development",
-        "manifiesto_regla1_hechos_fuera_del_edificio",
+        "customer_discovery_get_out_of_building",
         "customer_development_modelo"
       ],
       "nodos_siguientes": [
@@ -28153,7 +28153,7 @@
         "customer_validation",
         "ganar_comprension_del_cliente",
         "verificar_product_market_fit",
-        "get_out_of_the_building",
+        "customer_discovery_get_out_of_building",
         "problem_solution_fit",
         "customer_validation_sales_roadmap",
         "voz_del_cliente_voc",
@@ -28396,26 +28396,54 @@
         "Identifica tus hipótesis clave sobre el problema, el cliente y la solución",
         "Sal a entrevistar clientes potenciales de forma repetida durante semanas o meses",
         "Evita las encuestas de foco tradicionales o las listas exhaustivas de funciones (features)",
-        "Anota lo que aprendes y compáralo con lo que pensabas al principio"
+        "Anota lo que aprendes y compáralo con lo que pensabas al principio",
+        "Lidera tú mismo estas conversaciones, no las delegues en personal junior",
+        "Documenta lo que aprendes de cada conversación en el momento (blog, CRM)",
+        "Consigue experiencia de primera mano sobre cada parte de tu modelo de negocio",
+        "Prepárate para recibir feedback impredecible y a veces doloroso"
       ],
       "entregable_esperado": "Un registro de tus entrevistas con clientes reales, con lo que confirmaste o descartaste de tus ideas iniciales sobre el problema y el cliente",
       "nodos_previos": [
         "value_proposition_canvas",
         "lienzo_modelo_negocio",
-        "voz_del_cliente_voc"
+        "voz_del_cliente_voc",
+        "actualizar_business_model_canvas_tuneup",
+        "customer_development_process",
+        "customer_discovery_introduccion",
+        "equipo_customer_development"
       ],
       "nodos_siguientes": [
         "problem_solution_fit",
         "producto_minimo_viable",
         "customer_discovery",
         "preparar_contacto_clientes",
-        "ganar_comprension_del_cliente"
+        "ganar_comprension_del_cliente",
+        "customer_development_agile_pairing",
+        "fracaso_como_aprendizaje_startup",
+        "identificar_earlyvangelists",
+        "validar_canal_distribucion"
       ],
       "condiciones_activacion": [
         "Cuando tienes un plan de negocio basado solo en tus propias suposiciones, sin validar",
         "Si todavia no has hablado con clientes reales"
       ],
-      "etiqueta_arbol": "Sal del Edificio a Validar"
+      "etiqueta_arbol": "Sal del Edificio a Validar",
+      "ids_alias": [
+        "get_out_of_the_building",
+        "manifiesto_regla1_hechos_fuera_del_edificio"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "get_out_of_the_building",
+          "titulo": "Sal del edificio (Get Out of the Building)",
+          "fuente": "The Startup Owner's Manual - Blank, Steve"
+        },
+        {
+          "node_id": "manifiesto_regla1_hechos_fuera_del_edificio",
+          "titulo": "No Hay Hechos Dentro del Edificio: Sal a Buscarlos",
+          "fuente": "The Startup Owner's Manual - Blank, Steve"
+        }
+      ]
     },
     "customer_discovery_introduccion": {
       "node_id": "customer_discovery_introduccion",
@@ -28436,7 +28464,7 @@
         "actualizar_business_model_canvas_tuneup"
       ],
       "nodos_siguientes": [
-        "get_out_of_the_building",
+        "customer_discovery_get_out_of_building",
         "earlyvangelists",
         "identificar_earlyvangelists",
         "customer_discovery_phase2_problem_test"
@@ -45342,7 +45370,7 @@
         "decisiones_rapidas_reversibles"
       ],
       "nodos_siguientes": [
-        "get_out_of_the_building",
+        "customer_discovery_get_out_of_building",
         "preservar_caja_buscar_gastar",
         "preservar_caja_hasta_validar",
         "preservar_efectivo_buscar_modelo"
@@ -57496,7 +57524,7 @@
       "nodos_previos": [
         "busqueda_vs_ejecucion",
         "buscar_armonia_diseno",
-        "manifiesto_regla1_hechos_fuera_del_edificio",
+        "customer_discovery_get_out_of_building",
         "poder_a_traves_de_la_accion",
         "search_for_business_model",
         "emocion_como_motor_pensamiento"
@@ -61923,7 +61951,8 @@
         "Si estás construyendo tu producto sin validarlo con clientes reales",
         "Si tus decisiones se basan en suposiciones internas y no en lo que dicen los clientes"
       ],
-      "etiqueta_arbol": "Sal a Hablar con Clientes"
+      "etiqueta_arbol": "Sal a Hablar con Clientes",
+      "deprecado": true
     },
     "get_visual": {
       "node_id": "get_visual",
@@ -65996,7 +66025,7 @@
         "pivot_post_ventas",
         "pivote_o_proceder",
         "scorecard_descubrimiento_cliente",
-        "get_out_of_the_building",
+        "customer_discovery_get_out_of_building",
         "customer_discovery_introduccion",
         "problem_solution_fit",
         "actualizar_modelo_de_negocio_pivot_o_proceed"
@@ -73400,7 +73429,8 @@
         "Al iniciar la búsqueda de tus primeros clientes",
         "Cuando dependes demasiado de reportes internos en lugar de hablar tú mismo con tus clientes"
       ],
-      "etiqueta_arbol": "Sal a Buscar los Hechos"
+      "etiqueta_arbol": "Sal a Buscar los Hechos",
+      "deprecado": true
     },
     "manifiesto_regla4_iteraciones_pivotes": {
       "node_id": "manifiesto_regla4_iteraciones_pivotes",
@@ -93029,7 +93059,6 @@
         "evitar_paralisis_por_analisis",
         "experiment_library",
         "genchi_gembutsu_salir_del_edificio",
-        "get_out_of_the_building",
         "hipotesis_relacion_clientes_web",
         "pivot_como_hipotesis_estrategica",
         "prototipado_en_lo_salvaje",
@@ -117523,7 +117552,7 @@
       "nodos_previos": [
         "get_out_building_test_sell",
         "channels_hypothesis_physical",
-        "get_out_of_the_building",
+        "customer_discovery_get_out_of_building",
         "canales_distribucion",
         "producto_mercado_fit_motores",
         "mapa_de_canal_de_ventas"
@@ -128623,7 +128652,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 274,
+    "nodos_sin_enlaces_entrantes": 276,
     "enlaces_rotos_en_grafo": 0
   }
 }

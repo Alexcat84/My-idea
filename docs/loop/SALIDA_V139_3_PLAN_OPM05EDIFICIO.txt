@@ -1,0 +1,33 @@
+==============================================================================
+GENERADOR DEL PLAN DE LA FUSION DE MESA OP-M-05-EDIFICIO (vuelta 139)
+  ficha leida de: docs/plan/OPERACIONES.jsonl
+  tipo: FUSION DE MESA | estado: LISTA | fecha de corte: 2026-08-12
+==============================================================================
+
+  LA FICHA MANDA, y esto es lo que dice:
+     nodos         : customer_discovery_get_out_of_building, get_out_of_the_building, manifiesto_regla1_hechos_fuera_del_edificio
+     superviviente : customer_discovery_get_out_of_building
+     eliminar      : get_out_of_the_building, manifiesto_regla1_hechos_fuera_del_edificio
+     guarda 1B, ningun absorbido es puerta: OK
+     los 3 miembros vivos y presentes: OK
+
+  EL SUPERVIVIENTE DE HOY: 4 pasos y 2 condiciones
+  FORMATO DEL REPARTO: pasos POR PAR (absorbido, numero de paso) | condiciones POR PAR (absorbido, numero de paso)
+  EL ABSORBIDO get_out_of_the_building: 4 pasos y 2 condiciones
+  EL ABSORBIDO manifiesto_regla1_hechos_fuera_del_edificio: 4 pasos y 2 condiciones
+
+  VIAJA_EN_EL_ACTO, 1 pieza(s) que ya viajan por otro absorbido:
+     el paso 2 de manifiesto_regla1_hechos_fuera_del_edificio viaja por el paso 2 de get_out_of_the_building
+        linea editorial: MISMO GESTO: no delegar las conversaciones con clientes, llevarlas tu mismo. El paso 2 de manifiesto_regla1_hechos_fuera_del_edificio (no deleguees la investigacion de clientes en empleados o consultores) y el paso 2 de get_out_of_the_building (lidera tu mismo estas conversaciones, no las delegues en personal junior) mandan lo mismo, y el superviviente no lo tiene en ninguno de sus cuatro pasos: su paso 2 manda salir a entrevistar, pero no dice QUIEN entrevista. VIAJA LA REDACCION DE get_out_of_the_building, y el motivo es la ficha: su linea 1 de preservar cita esa redaccion casi palabra por palabra, LIDERAR TU MISMO estas conversaciones y no delegarlas en personal junior, y es la unica de las dos que dice LO QUE SI HAY QUE HACER (liderarlas) y no solo lo que no. UN MATIZ QUE NO VIAJA Y SE DECLARA: esta redaccion prohibe delegar en EMPLEADOS O CONSULTORES, que es un conjunto mas ancho que PERSONAL JUNIOR. No se trata como pieza propia porque el gesto es el mismo y la ficha fija la redaccion, pero el ensanchamiento se pierde y va marcado como DISCUTIBLE en el reporte de esta vuelta.
+
+  LA FICHA EN VERDE: cobertura exacta, guarda 1B, incisos extraidos y verbatim.
+  REPARTO: piezas 12 (enteras 4, ya dichas 7, de INCISO 0, que ya viajan en el acto 1)
+
+  LAS PERDIDAS SELLADAS EN CAMPO PROPIO (contrato CAMPO PROPIO v1):
+     perdidas selladas: 1
+        DE NOMBRE              LA FORMULACION QUE DA NOMBRE AL NODO: NO HAY HECHOS DENTRO DEL EDIFICIO. Es la linea 4 de preservar de la ficha, y su verificacion 2 manda comprobarla COMO FRASE en el texto final.
+
+  plan escrito: docs\loop\PLAN_V139_OPM05EDIFICIO.json
+
+FIN
+EXITCODE: 0
