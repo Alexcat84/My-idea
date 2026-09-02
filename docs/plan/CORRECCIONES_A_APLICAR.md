@@ -1671,3 +1671,151 @@ guarda entera.
 **LA BATERIA, DESPUES:** de **13 a 19** entradas, **ANCLA PERDIDA 0, NO MORDIO 0, NO
 REPRODUCIBLE 0**, **VERDE EXIT 0**
 ([`loop/SALIDA_V145_2_VIEJAS_TRAS_TAREA2.txt`](../loop/SALIDA_V145_2_VIEJAS_TRAS_TAREA2.txt)).
+
+## CORRECCION 23. **UNA AFIRMACION DE AUSENCIA SE PRUEBA POR BARRIDO EXHAUSTIVO COMPUTADO O NO SE PUBLICA**
+
+**Adjudicacion 3.10 del acta de la vuelta 145** (el discutible 10, EN CONTRA) **y su
+caida de la casa 4.2** (*"la regla 9 de `EJECUTOR.md` no tiene guarda que la haga
+morder"*). Registrada por adicion en la vuelta 146, TAREA 1.b; la guarda que la hace
+morder se construye en la TAREA 2 de esta misma vuelta. Corte: **2 sep 2026**.
+**TODAS LAS CIFRAS DE ESTA ENTRADA SON MEDICION MIA DE HOY, no copia del acta**, y
+donde discrepe de ella lo digo.
+
+### 23.a. LA AFIRMACION QUE CAYO, CITADA DE SU FICHERO CONGELADO
+
+El reporte de la vuelta 145, congelado en `a9b638ba:docs/loop/REPORTE.md`, publica en
+su 3.c, **verbatim**: *"no existe en el repositorio ninguna lista canonica de libros
+con sus alias de escritura"*, y de ahi saca **`PRERREQUISITO CUMPLIDO: NO`** y el
+bloqueo nombrado de la fase 07. El metodo, escrito en la propia salida: *"candidatos
+mirados: `dataset/metadata/libros_canonicos.json`,
+`dataset/metadata/fuentes_canonicas.json`, `docs/plan/LIBROS_CANONICOS.md`"*,
+*"hallados: NINGUNO"*. **Tres rutas tecleadas a mano, cero busqueda por contenido.**
+
+### 23.b. LO QUE MIDO YO HOY, Y CUADRA CON EL ACTA EN LAS CUATRO
+
+| lo que se afirma | mi medicion de hoy | veredicto |
+|---|---|---|
+| los tres nombres candidatos no existen | `git ls-files --error-unmatch` sobre los tres: **los tres NO EXISTEN** en el indice | **CIERTO, y es lo unico cierto de la 3.c** |
+| existe una lista canonica de libros con sus alias | `docs/plan/OP_S_11_MAPEO_PROPUESTO.md`, **24.915 bytes, 143 lineas**, tabla `grafia / canonica propuesta / motivo / bolsa` que reduce **129 grafias** a **54 canonicas** | **LA LISTA EXISTE** |
+| `OP-S-11` sigue sin hacerse | leida hoy su ficha de `docs/plan/OPERACIONES.jsonl`: **`estado: HECHA`**, **`fecha_corte: 2026-08-29`**, y `bloquea_a` nombra a `OP-A-01` y `OP-A-02` | **ESTA HECHA** |
+| no hay contra que validar el campo | `python scripts/loop/verificar_fuente_canonico.py` corrido por mi: **VERDE EXIT 0**, *"los 3169 nodos vivos traen `fuente` PRESENTE y con al menos una declaracion, y todas sus declaraciones son canonicas de la tabla"* | **HAY, Y VALIDA VERDE** |
+
+**CERO DISCREPANCIAS CON EL ACTA 145 EN ESTAS CUATRO.** El universo del barrido de
+hoy: **15.088 ficheros** en `git ls-files`.
+
+### 23.c. POR QUE EL METODO ES EL DEFECTO, Y NO LA MALA SUERTE
+
+La lista **no aparecio con ninguno de los tres nombres porque no se llama asi**. Una
+busqueda por NOMBRE contra tres candidatos tecleados **no puede** hallar un fichero
+que se llama por su operacion duena; una busqueda POR CONTENIDO sobre el universo de
+`git ls-files` **si**. Es exactamente lo que `EJECUTOR.md` 9 prohibe desde hace
+vueltas (*"una busqueda negativa no se puede citar"*) y lo que el propio discutible 10
+citaba mientras lo incumplia en la misma pagina.
+
+**Y HAY UNA SEGUNDA MITAD DEL DEFECTO, QUE ES DE UNIDADES.** La 3.c apoyo su
+conclusion en que `tallar_estado_de_fase.py` pone a `OP-S-11` **SIN VARA ESCRITA**.
+Eso es CIERTO y **no significa lo que la 3.c le hizo decir**: esa columna mide
+**destino contra el grafo**, y una operacion que no deja huella de fusion no puede
+tener destino que medir. **Usar una columna de vara de grafo como veredicto de
+ejecucion es la confusion que la adjudicacion 3.9 del acta 144 ya mandaba evitar** y
+que la CORRECCION 18 llama por su nombre: dos unidades no comparten columna.
+
+### 23.d. LA REGLA QUE QUEDA
+
+**UNA AFIRMACION DE AUSENCIA (que algo NO EXISTE, que NO ESTA INSTALADO, que NO SE
+HALLO) SE PUBLICA SOLO SI VIENE RESPALDADA POR UN BARRIDO EXHAUSTIVO COMPUTADO,
+SELLADO EN UNA SALIDA, CON SU UNIVERSO Y SU CARDINAL PUBLICADOS.** Un barrido
+exhaustivo es un recorrido del universo entero donde la cosa podria estar: para
+ficheros, `git ls-files` **mas** una busqueda POR CONTENIDO, no solo por nombre. **Una
+lista de rutas candidatas escritas a mano NO ES UN BARRIDO** y no respalda nada.
+
+**LO QUE ESTA REGLA NO DICE, para que no se lea de mas:** no dice que la cosa exista
+ni que no exista. Dice que **la afirmacion** tiene que estar respaldada. La guarda de
+la TAREA 2 comprueba el respaldo, jamas el hecho.
+
+### 23.e. EL APOYO POSITIVO QUE ESTABA INVERTIDO, MEDIDO POR MI
+
+La 3.c dijo que la grafia vieja vive del lado deprecado *"o sea que nada la esta
+normalizando"*. **Es al reves, y lo mido:** `verificar_fuente_canonico.py` **solo
+obliga a los VIVOS**, asi que una grafia vieja que sobrevive **unicamente** entre
+deprecados es la firma de una normalizacion **CONSUMADA**, no de una ausente. Medido
+por mi con `scripts/loop/vuelta146_1c_cifras_ficha_op_a_01.py` sobre los dos refs
+([`loop/SALIDA_V146_1C_CIFRAS_FICHA.txt`](../loop/SALIDA_V146_1C_CIFRAS_FICHA.txt)):
+en el grafo del corte (`0e5e0c60`) Hugos y Horowitz tenian **2 grafias vivas cada
+uno**; hoy tienen **1 y 1**, y las viejas quedan con **cero nodos vivos**.
+
+## CORRECCION 24. **LAS SEIS CIFRAS DE LA FICHA DE `OP-A-01` CONTRA SU CORTE: TRES REPRODUCEN Y TRES NO, Y EL TEXTO DE LA FICHA NO SE TOCA**
+
+**Adjudicacion 3.14 del acta de la vuelta 145**, que responde la PREGUNTA 1 del
+reporte de la 145: *"ni se re-mide la ficha ni se deja muda"*. Registrada **POR
+ADICION** en la vuelta 146, TAREA 1.c. **EL TEXTO DE `OP-A-01` NO SE TOCA**, por
+`EJECUTOR.md` 8: una correccion que tapa lo que corrige no se puede auditar.
+
+**EL SUJETO, ELEGIDO POR COMPUTO Y NO TECLEADO:** `0e5e0c60`, el ultimo commit que
+toca `dataset/metadata/master_graph.json` **antes del 12 ago 2026**. Comprobado con
+`git log --format='%H %ad' --date=short -- dataset/metadata/master_graph.json`: su
+fecha es **2026-08-09** y el siguiente commit del fichero es del **2026-08-14**.
+**Instrumento:** `scripts/loop/vuelta146_1c_cifras_ficha_op_a_01.py`, salida sellada
+en [`loop/SALIDA_V146_1C_CIFRAS_FICHA.txt`](../loop/SALIDA_V146_1C_CIFRAS_FICHA.txt).
+
+### 24.a. LAS SEIS, UNA A UNA, CON SU UNIDAD Y SU CORTE
+
+| # | lo que la ficha dice (corte 11 ago 2026) | lo que mido sobre `0e5e0c60` | veredicto |
+|---|---|---|---|
+| 1 | *"3.521 nodos vivos"* | **3.521** nodos vivos | **REPRODUCE EXACTO** |
+| 2 | *"67 con mas de un libro"* | **67** nodos vivos con mas de una declaracion en `fuente` | **REPRODUCE EXACTO** |
+| 3 | *"70 declaraciones en segunda posicion o posterior"* | **74** declaraciones de indice mayor que cero, sobre nodos vivos | **NO REPRODUCE** |
+| 4 | *"Hugos aparece con DOS grafias"* | **2** grafias distintas | **REPRODUCE EXACTO** |
+| 5 | *"y Horowitz con TRES"* | **2** grafias distintas | **NO REPRODUCE: son DOS** |
+| 6 | *"sin normalizar el recorte da 23 y 16 donde el canonico da 21 y 14"* | sobre el recorte (los 67): Hugos **21** sin normalizar y **20** solo canonica; Horowitz **11** y **6** | **NO REPRODUCE NINGUNO DE LOS CUATRO** |
+
+**LA UNIDAD DE LA CIFRA 6 NO ESTA ESCRITA EN LA FICHA Y NO SE ADIVINA.** El
+instrumento publica las CUATRO lecturas construibles (sobre todos los vivos y sobre
+el recorte, sin normalizar y solo canonica) y **ninguna de las cuatro da 23, 16, 21 y
+14 a la vez**. Es la caida 4.7 del acta 144 otra vez: una cifra sin unidad nombrada no
+se puede cotejar. **Y NO PUEDO RE-CORRER SU INSTRUMENTO: no esta en `scripts/`.**
+
+**UNA COINCIDENCIA QUE SI TRAIGO, PORQUE ES MEDIDA Y NO INTERPRETACION:** la
+`evidencia` de la ficha dice *"los 21 de Hugos, verificados 21 de 21"*, y **21 es
+exactamente lo que mi recorte da para Hugos SIN NORMALIZAR**. La ficha atribuye ese 21
+al conteo CANONICO. **Lo dejo dicho y no lo resuelvo**: cual de las dos etiquetas
+llevaba la nomina del auditor del 11 ago no se puede decidir sin su instrumento.
+
+### 24.b. LO QUE NO ES UN ERROR DE NADIE, Y HAY QUE DECIRLO PARA QUE NO SE LEA MAL
+
+Medido hoy sobre `WORK`: **3.169 vivos, 8 nodos con mas de un libro, 9 declaraciones
+en segunda posicion o posterior**, contra **3.521 / 67 / 74** en el corte. **LA CAIDA
+DE 67 A 8 ES OBRA DE LA CAMPANA, NO UN ERROR DE MEDICION.** Las cifras de la ficha
+llevan su corte del 11 ago y describen un catalogo que la propia campana lleva
+semanas reparando; **la ficha no envejece por estar equivocada, envejece por haber
+funcionado**. Coincido con el acta 145 en las tres que reproducen y en las tres que
+no, **sin una sola discrepancia**.
+
+### 24.c. LA TRUNCACION A 31 CARACTERES, MEDIDA CON MI PROPIO BARRIDO
+
+**LA REGLA DEL BARRIDO, ESCRITA ANTES DE CORRERLO:** se parte cada grafia distinta del
+campo `fuente` por el separador ` - ` en (titulo, autor); una pareja entra si **los dos
+traen autor**, el autor es **identico** y un titulo es **prefijo estricto** del otro.
+
+| ref | parejas titulo-prefijo con el mismo autor | cuales |
+|---|---|---|
+| `0e5e0c60` (corte, 129 grafias) | **3 pares** | Hugos (31 contra 37), Horowitz (31 contra 32) y **Tim Brown** (`Change by Design` de 16 contra `Change by Design, Revised and U` de 31) |
+| `WORK` (hoy, 67 grafias) | **2 pares** | Hugos, con **0 vivos** y 1 deprecado en la corta contra 95 vivos y 20 deprecados en la larga; Horowitz, con **0 vivos** y 5 deprecados contra 87 vivos y 1 deprecado |
+
+**COINCIDO CON EL ACTA 145 EN LAS DOS DE HOY**, con sus longitudes y con sus ceros de
+nodos vivos. **Y TRAIGO UNA TERCERA QUE EL ACTA NO NOMBRA**, la de Tim Brown, que
+existia en el corte y **hoy ya no**: su forma corta se fusiono.
+
+**Y AQUI VA MI UNICA DISCREPANCIA DE FONDO CON EL ACTA 145, DECLARADA Y NO COPIADA.**
+El acta dice que las dos son *"LAS DOS UNICAS DEL CATALOGO"*. **Eso es cierto de las
+PAREJAS y falso de las TRUNCACIONES**, y son dos unidades distintas. Un barrido por
+parejas **solo ve una truncacion cuando la forma larga tambien vive en el catalogo**;
+una grafia recortada cuyo original nadie escribio nunca **es invisible para el**.
+Censado aparte, con la otra unidad: **hoy hay 10 grafias distintas cuyo titulo mide
+exactamente 31 caracteres**, y **ocho de ellas estan VIVAS y son CANONICAS de la tabla
+de `OP-S-11`** (`Change by Design, Revised and U`, `Co-Intelligence_ Living and Wor`,
+`Juran's Quality Handbook_ The C`, `Managing the Risks of Organizat`, `The Field Guide
+to Understandin`, `The Green to Gold Business Play`, mas `Guia de empaque para
+transporte`, que mide 31 por coincidencia y no por recorte). **La truncacion a 31 no
+esta resuelta: esta HORNEADA EN LA TABLA CANONICA.** Es medicion, no operacion: **no
+se toca nada**, y va como pregunta al auditor en el reporte de esta vuelta.

@@ -10051,3 +10051,153 @@ ruidoso), banco 9.10 (el sujeto congelado), el hueco de orden 1 del
 `00_INDICE:482`, la CORRECCION 18 (dos unidades no comparten columna),
 `AUDITOR.md` 1.1 y 1.2, y `EJECUTOR.md` reglas 1, 2, 5, 8 y 9. Siguen vivos
 (i) a (xxi).
+
+## R.27. Registro de correcciones y adjudicaciones declaradas de la vuelta
+145 (acta del auditor, vuelta 145; escrito en la vuelta 146, TAREA 1.a)
+
+Por adicion, como R.21 a R.26. Las adjudicaciones y las caidas del auditor se
+escriben IGUAL que las del ejecutor. Corte de todas las cifras de esta entrada:
+2 sep 2026, salvo donde se diga otra cosa.
+
+**(1) LAS QUINCE ADJUDICACIONES DEL ACTA 145 (3.1 a 3.15). DOCE A FAVOR DEL
+EJECUTOR (UNA CON RESERVA), UNA EN CONTRA, Y LAS DOS ULTIMAS SON LAS RESPUESTAS
+A SUS DOS PREGUNTAS.**
+  - **3.1, DISCUTIBLE 1, CONGELAR POR REF DE GIT EN VEZ DE COMMITEAR UN FICHERO:
+    A FAVOR, Y CON LA FRONTERA ESCRITA.** El encargo pedia *"un SUJETO CONGELADO
+    commiteado en `docs/loop/`"* y el ejecutor monto el pre-estado desde un ref.
+    El motivo es mecanico: **una copia commiteada de un nodo del catalogo seria
+    un segundo nodo con el mismo id**, que es lo que Gate 0 existe para
+    prohibir. **LA FRONTERA: si el sujeto es un DOCUMENTO, se congela
+    commiteando el fichero; si es ESTADO DEL GRAFO o del plan, se congela por
+    REF COMPUTADO, nunca tecleado, y si dos caminos dan refs distintos es ROJO
+    PREVIO.** Verificado por el auditor: `c72ce2c0^` es `5fff85f7`.
+  - **3.2, DISCUTIBLE 2, REUSAR EL SUJETO CONGELADO DE LA 135: A FAVOR.** La
+    independencia que pierde es menos que la fuente unica que gana, y el riesgo
+    se invierte solo: si alguien tocara ese fichero **caerian DOS arneses en vez
+    de uno**, que es mas ruidoso. Es la regla de la casa de no tener dos
+    versiones de lo mismo.
+  - **3.3, DISCUTIBLE 3, `ValueError` EN VEZ DE UN FALLO NUMERADO: A FAVOR.** Lo
+    que el banco 9 exige es fallar ruidoso, y la mutacion del auditor lo
+    confirma: EXIT 1 con el nombre de la marca y todas sus posiciones con linea
+    y offset.
+  - **3.4, DISCUTIBLE 4, NOMBRAR TODAS LAS MARCAS REPETIDAS Y NO SOLO LA
+    PRIMERA: A FAVOR, SIN RESERVA.** Da mas de lo pedido y ahorra correr la
+    guarda en bucle.
+  - **3.5, DISCUTIBLE 5, PARTIR LA UNIDAD DEL CENSO EN APARICION Y LLAMADA: A
+    FAVOR.** El censo del auditor con `ast` **reproduce el del ejecutor al
+    digito**, 11 / 8 / 14 / 3, con los tres mismos nombres y los catorce mismos
+    numeros de linea. **No discute la caida 4.1 de la 144, la acepta.**
+  - **3.6, DISCUTIBLE 6, REHACER EL INSTRUMENTO DENTRO DE LA VUELTA Y DEJAR EL
+    DEFECTO VIEJO ESCRITO: A FAVOR**, por `EJECUTOR.md` 8. Que el censo se
+    delatara solo con dos falsos rojos es lo que un instrumento honesto hace.
+  - **3.7, DISCUTIBLE 7, CORREGIR AL AUDITOR EL ROTULO DE LA UNIDAD: A FAVOR, Y
+    EL EQUIVOCADO ERA EL AUDITOR.** De sus seis variantes de unidad de arista
+    **solo la UNION DE LAS DOS VISTAS LEIDAS DE VIVOS** da 7.343 y 7.341; *"con
+    la FUENTE viva"* da 7.337 y 7.336, y leyendo solo siguientes 7.327 y 7.325.
+    **La unidad se llama desde hoy "aristas resueltas de la UNION de las dos
+    vistas, leidas de nodos vivos", y la otra "con los dos extremos vivos".**
+  - **3.8, DISCUTIBLE 8, MEDIR EL SUPERCONJUNTO DE NUEVE CONTROLES: A FAVOR, Y
+    EL ENCARGO ESTABA MAL.** La `verificacion` de `OP-A-01` tiene **TRES**
+    entradas y los **cinco controles mecanicos los nombra `OP-A-02` en su
+    `verificacion` 4**. Va a la cuenta del auditor como caida 4.3.
+  - **3.9, DISCUTIBLE 9, LOS LITERALES DE LAS SONDAS: A FAVOR CON RESERVA.** La
+    mitigacion buena es la guarda de citas, probada por mutacion: se para y
+    nombra la cita muerta. **LA RESERVA, Y ES SERIA: un `NO INSTALADO` sigue
+    siendo una BUSQUEDA NEGATIVA, la misma especie que la caida 4.1.** Seis de
+    los nueve controles descansan en ese veredicto. **Entra en el alcance de la
+    escalada**, y por eso la TAREA 3.d de la vuelta 146 pasa los `NO INSTALADO`
+    por la guarda nueva como cualquier otra ausencia.
+  - **3.10, DISCUTIBLE 10, DAR POR NO CUMPLIDO EL PRERREQUISITO MIRANDO TRES
+    NOMBRES DE FICHERO: EN CONTRA.** Es la caida 4.1. **La lista existe, su
+    dueno esta HECHA y su guarda sale VERDE sobre los 3.169 vivos**, medido de
+    nuevo por el ejecutor en la vuelta 146 y registrado en la **CORRECCION 23**.
+    **El prerrequisito de `OP-A-01` ESTA CUMPLIDO y el bloqueo que el reporte
+    nombra no existe.** Lo que el discutible tiene de bueno: **marco el metodo
+    exacto por el que fallo, y por eso no baja el credito de la tanda.**
+  - **3.11, DISCUTIBLE 11, TOCAR LA GUARDA DE CIFRAS DESPUES DE CERRAR LA TAREA
+    2: A FAVOR.** Las dos alternativas eran peores: no entregar la 4.c, o quitar
+    del reporte la cita que destapa la averia. **La reparacion muerde**, probada
+    por mutacion del auditor.
+  - **3.12, DISCUTIBLE 12, PROSA SIN CIFRAS SUELTAS: A FAVOR.** Es lo que la
+    guarda exige y lo que hace el reporte contable.
+  - **3.13, DISCUTIBLE 13, RENOMBRAR EL ARTEFACTO EN VEZ DE TOCAR LA GUARDA: A
+    FAVOR, SIN RESERVA, Y ES EJEMPLAR.** El renombre es puro, cero lineas
+    cambiadas, y la guarda sale **VERDE con los diez**. **Que la 0.d se re-corra
+    DESPUES de commitear el reporte es la doctrina buena**, y en la vuelta 146
+    queda ASCENDIDA A REGLA en el propio encargo (paso 4.e).
+  - **3.14, PREGUNTA 1 DEL EJECUTOR, RESPONDIDA CON MEDICION: NI SE RE-MIDE LA
+    FICHA NI SE DEJA MUDA.** No se toca el texto de `OP-A-01`; se anade una
+    **CORRECCION DECLARADA POR ADICION** con la tabla de contraste y el corte de
+    cada cifra. Cumplida en la vuelta 146 como **CORRECCION 24**.
+  - **3.15, PREGUNTA 2 DEL EJECUTOR, RESPONDIDA POR EL TEXTO DE LA PROPIA FICHA:
+    SI CUENTAN.** La `verificacion` 4 de `OP-A-02` pide *"los CINCO controles
+    mecanicos CORRIENDO"*, no instalados en una aduana, y su `nota` los reparte
+    **con dueno ajeno**: auto-arista y lista blanca a `OP-C-04`, control
+    posicional a `OP-A-01`, campo fuente canonico a `OP-S-11`, y nomina por
+    dominio al control mecanico del 13 ago. **`OP-A-02` no los posee: los exige
+    corriendo**, y Gate 0 es la puerta. **Lo unico que `OP-A-02` posee de verdad
+    es su puerta semantica, la A2.6, y eso si le falta entero.**
+
+**(2) UNA CAIDA DEL EJECUTOR, DE REPORTE, Y ACUMULA (acta 145, 4.1).**
+  - **4.1, DE REPORTE: LA BUSQUEDA NEGATIVA PUBLICADA COMO CONCLUSION Y COMO
+    BLOQUEO DE LA FASE.** La 3.c concluyo *"no existe en el repositorio ninguna
+    lista canonica de libros con sus alias de escritura"* y de ahi saco
+    **`PRERREQUISITO CUMPLIDO: NO`**. **NO MUEVE NINGUN DATO**:
+    `OPERACIONES.jsonl` no se toco y ni una cifra de `dataset/`, `docs/plan/` o
+    del banco cambio, asi que es de REPORTE y no de cifra publicada. **EL MOTIVO
+    POR EL QUE ACUMULA, ESCRITO: VIVE EN UNA CONCLUSION** (el veredicto de la
+    3.c, el asunto del commit y el cierre de la seccion 3), y por la letra
+    afinada del 27 ago 2026 una caida de reporte **acumula cuando la cifra vive
+    en una tabla, una cabecera o una CONCLUSION**. **Dispara la relectura al
+    doble del tramo de la 3.c**, cumplida en la vuelta 146, TAREA 3.a. **Cae
+    DENTRO del discutible 10, asi que NO baja el credito de la tanda.**
+    Registrada como **CORRECCION 23**.
+
+**(3) UNA DE LA CASA (acta 145, 4.2).**
+  - **4.2: LA REGLA 9 DE `EJECUTOR.md` NO TIENE GUARDA QUE LA HAGA MORDER.**
+    *"Una busqueda negativa no se puede citar"* esta escrita desde hace vueltas,
+    **el reporte de la 145 la CITA en su discutible 10 y la incumple en la misma
+    pagina**. Una regla que se puede citar y romper a la vez es prosa, no
+    guarda. **Es el hueco exacto que la escalada tapa**, y por eso la TAREA 2 de
+    la vuelta 146 construye `verificar_ausencias_del_reporte.py` con su caso
+    rojo por mutacion sobre el texto real de la 3.c.
+
+**(4) DOS CAIDAS DEL AUDITOR, LAS DOS DE ENCARGO (acta 145, 4.3 y 4.4).**
+  - **4.3, DE ENCARGO: LE ATRIBUYO A `OP-A-01` CINCO CONTROLES QUE SON DE
+    `OP-A-02`.** El encargo dijo *"Para OP-A-01 los cinco controles mecanicos
+    que su propia ficha nombra"*; leida hoy, la `verificacion` de `OP-A-01`
+    tiene **TRES** entradas. El ejecutor lo cazo y lo marco como discutible 8.
+  - **4.4, DE ENCARGO, Y ES LA QUE MAS PESA: CEBO LA RESPUESTA NEGATIVA SIN
+    HABER MIRADO SI `OP-S-11` ESTABA HECHA.** El encargo escribio *"SI NO LO
+    ESTA, NO IMPROVISES LA LISTA CANONICA"* y repitio el diagnostico de la ficha
+    como si siguiera vigente, **en la misma acta en la que midio las fases con
+    el tallador**. Bastaba abrir la ficha de `OP-S-11` para leer `estado: HECHA`
+    y `fecha_corte 2026-08-29`. **La caida 4.1 es del ejecutor y acumula, pero
+    esta parte es del auditor y va con su nombre.**
+
+**(5) LAS DOS RACHAS, CON SU ESTADO NUEVO Y SU MOTIVO ESCRITO.**
+  - **RACHA DE CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO.** El motivo,
+    medido por el auditor con instrumentos propios: censo y las cuatro cifras de
+    arista recomputados **COMMIT A COMMIT en los diez** commits (los ocho de la
+    vuelta, el del acta 144 y el arbol), y **los diez dan 3.853 / 3.169 / 684 y
+    9.234 / 9.211 / 18.445 / 9.914 sin una sola excepcion**;
+    `docs/plan/OPERACIONES.jsonl` **sin tocar en toda la vuelta**, 71 fichas
+    antes y 71 despues, **cero fichas con el campo `estado` movido**. **La 4.1
+    es de dictado, no de dato.**
+  - **RACHA DE REPORTE: SUBE DE UNO A DOS.** El motivo escrito: **la 4.1 ACUMULA
+    porque vive en una CONCLUSION**. **Y LAS DOS NO SON DE LA MISMA ESPECIE**:
+    la de la 144 era la cuenta de filas de una tabla; la de la 145 es una
+    busqueda negativa publicada como hecho. **La regla de las TRES SEGUIDAS DE
+    LA MISMA ESPECIE no esta ni a dos, asi que NO ES PARADA.**
+  - **PERO DOS ES DOS, Y POR `AUDITOR.md` 1.2 ESO OBLIGA A LA ESCALADA, QUE ES
+    LA TAREA 2 DE LA VUELTA 146.** La escalada del 26 ago (toda tabla y toda
+    cifra del reporte contada de su fichero) **ya esta construida y corriendo**:
+    es `verificar_cifras_del_reporte.py`. **No cubre la especie de la 145**,
+    porque una AUSENCIA no tiene fichero que contar. La escalada encargada la
+    extiende a esa especie. **No es doctrina nueva:** `EJECUTOR.md` 9 ya lo
+    prohibe en prosa y lo unico que faltaba era la guarda que lo hiciera morder.
+
+**NINGUN RAMAL NUEVO.** Todo se resuelve con `EJECUTOR.md` 1, 8 y 9, banco 9
+(fallar ruidoso), banco 9.10 (el sujeto congelado), la CORRECCION 18 (dos
+unidades no comparten columna), la adjudicacion 3.9 del acta 144 y `AUDITOR.md`
+1.2. Siguen vivos (i) a (xxi).
