@@ -1,0 +1,101 @@
+==============================================================================
+TAREA 3.b: LA VARA DEL 9.22 SOBRE LOS SEIS PARES
+La regla, literal del banco 9.22: 'La figura exige dos lineas distintas, una en
+cada nodo'; 'si las dos direcciones apuntan a la misma linea, no es esta figura'.
+==============================================================================
+
+------------------------------------------------------------------------------
+PAR 1: sistema_gates_go_kill CONTRA gestion_portafolio_dos_niveles
+  estado medido hoy: sistema_gates_go_kill -> gestion_portafolio_dos_niveles PRESENTE | gestion_portafolio_dos_niveles -> sistema_gates_go_kill PRESENTE
+
+  DIRECCION gestion_portafolio_dos_niveles -> sistema_gates_go_kill
+     lectura dirigida: LD-35 y LD-51 (OP-E-04) y LD-43 (OP-E-05)
+     linea que expande: gestion_portafolio_dos_niveles, paso 1 EN EL NODO DE HOY
+     texto, LEIDO DEL GRAFO: Establecer un proceso de gating (compuertas) para revisar cada proyecto individualmente
+  DIRECCION sistema_gates_go_kill -> gestion_portafolio_dos_niveles
+     lectura dirigida: LD-43 (OP-E-05)
+     linea que expande: sistema_gates_go_kill, paso 10 EN EL NODO DE HOY
+     texto, LEIDO DEL GRAFO: Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+
+  ADJUDICACION POR LA VARA DEL 9.22: ENLACE MUTUO (dos lineas distintas, una en cada nodo)
+  DISCUTIBLE, marcado antes de saber si acierto.
+
+------------------------------------------------------------------------------
+PAR 2: sistema_gates_go_kill CONTRA gestion_portafolio_formal
+  estado medido hoy: sistema_gates_go_kill -> gestion_portafolio_formal PRESENTE | gestion_portafolio_formal -> sistema_gates_go_kill PRESENTE
+
+  DIRECCION gestion_portafolio_formal -> sistema_gates_go_kill
+     lectura dirigida: LD-49 (OP-E-04) y LD-41 (OP-E-05)
+     linea que expande: gestion_portafolio_formal, paso 6 EN EL NODO DE HOY
+     texto, LEIDO DEL GRAFO: Usa esa lista priorizada como apoyo en tus próximas decisiones de gate
+  DIRECCION sistema_gates_go_kill -> gestion_portafolio_formal
+     lectura dirigida: LD-41 (OP-E-05)
+     linea que expande: sistema_gates_go_kill, paso 10 EN EL NODO DE HOY
+     texto, LEIDO DEL GRAFO: Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+
+  ADJUDICACION POR LA VARA DEL 9.22: ENLACE MUTUO (dos lineas distintas, una en cada nodo)
+  DISCUTIBLE, marcado antes de saber si acierto.
+
+------------------------------------------------------------------------------
+PAR 3: sistema_gates_go_kill CONTRA portfolio_management
+  estado medido hoy: sistema_gates_go_kill -> portfolio_management PRESENTE | portfolio_management -> sistema_gates_go_kill no presente
+
+  DIRECCION sistema_gates_go_kill -> portfolio_management
+     lectura dirigida: LD-40 (OP-E-04)
+     linea que expande: sistema_gates_go_kill, paso 10 EN EL NODO DE HOY
+     texto, LEIDO DEL GRAFO: Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+  DIRECCION portfolio_management -> sistema_gates_go_kill
+     lectura dirigida: LD-48 (OP-E-04)
+     linea que expande: portfolio_management, paso 4 EN EL NODO DE HOY
+     texto, LEIDO DEL GRAFO: Tomar decisiones Go/Kill continuas sobre proyectos individuales
+
+  ADJUDICACION POR LA VARA DEL 9.22: ENLACE MUTUO (dos lineas distintas, una en cada nodo)
+  DISCUTIBLE, marcado antes de saber si acierto.
+
+------------------------------------------------------------------------------
+PAR 4: sistema_gates_go_kill CONTRA gestion_portafolio_foco
+  estado medido hoy: sistema_gates_go_kill -> gestion_portafolio_foco no presente | gestion_portafolio_foco -> sistema_gates_go_kill no presente
+
+  DIRECCION sistema_gates_go_kill -> gestion_portafolio_foco
+     lectura dirigida: LD-45 (OP-E-04)
+     linea que expande: sistema_gates_go_kill, paso 10 EN EL NODO DE HOY
+     texto, LEIDO DEL GRAFO: Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+  DIRECCION gestion_portafolio_foco -> sistema_gates_go_kill
+     lectura dirigida: LD-53 (OP-E-04)
+     linea que expande: gestion_portafolio_foco, paso 2 EN EL NODO DE HOY
+     texto, LEIDO DEL GRAFO: Aplicar criterios estrictos de Go/Kill para reducir el número de proyectos en pipeline
+
+  ADJUDICACION POR LA VARA DEL 9.22: ENLACE MUTUO (dos lineas distintas, una en cada nodo)
+  DISCUTIBLE, marcado antes de saber si acierto.
+
+------------------------------------------------------------------------------
+PAR 5: sistema_gates_go_kill CONTRA revision_portafolio_periodica
+  estado medido hoy: sistema_gates_go_kill -> revision_portafolio_periodica no presente | revision_portafolio_periodica -> sistema_gates_go_kill PRESENTE
+
+  DIRECCION sistema_gates_go_kill -> revision_portafolio_periodica
+     lectura dirigida: LD-42 (OP-E-04)
+     linea que expande: sistema_gates_go_kill, paso 10 EN EL NODO DE HOY
+     texto, LEIDO DEL GRAFO: Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+  DIRECCION revision_portafolio_periodica -> sistema_gates_go_kill
+     lectura dirigida: SIN LECTURA QUE LA PROPONGA. La arista la fabrico la redireccion de 3f249a03 sobre revision_portafolio_periodica -> gates_go_kill_decision_points, que LD-50 leyo y declaro 'bien puesta' SIN jerarquia ('no hay jerarquia: hay dos decisiones distintas'). NINGUNA LINEA DEL SUPERVIVIENTE LA EXPANDE
+     linea que expande: NINGUNA
+
+  ADJUDICACION POR LA VARA DEL 9.22: ESCALERA (solo UNA direccion se apoya en una linea; la otra no expande ninguna)
+  DISCUTIBLE, marcado antes de saber si acierto.
+
+------------------------------------------------------------------------------
+PAR 6: sistema_gates_go_kill CONTRA asignacion_recursos_en_gates
+  estado medido hoy: sistema_gates_go_kill -> asignacion_recursos_en_gates PRESENTE | asignacion_recursos_en_gates -> sistema_gates_go_kill PRESENTE
+
+  DIRECCION sistema_gates_go_kill -> asignacion_recursos_en_gates
+     lectura dirigida: LD-57 (OP-M-01-ESLABONES)
+     linea que expande: sistema_gates_go_kill, paso 5 EN EL NODO DE HOY
+     texto, LEIDO DEL GRAFO: Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+  DIRECCION asignacion_recursos_en_gates -> sistema_gates_go_kill
+     lectura dirigida: SIN LECTURA QUE LA PROPONGA. La arista la fabrico la misma redireccion sobre asignacion_recursos_en_gates -> estructura_de_gates. NINGUNA LINEA DEL SUPERVIVIENTE LA EXPANDE que no sea la misma del paso 5
+     linea que expande: NINGUNA
+
+  ADJUDICACION POR LA VARA DEL 9.22: ESCALERA (solo UNA direccion se apoya en una linea; la otra no expande ninguna)
+  DISCUTIBLE, marcado antes de saber si acierto.
+
+EXITCODE: 0
