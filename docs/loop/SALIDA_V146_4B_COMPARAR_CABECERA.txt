@@ -1,0 +1,27 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 146. Modo fase04.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 9.234 / 9.211 / 18.445 / 9.914 | **9.234 / 9.211 / 18.445 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `446e4aa1` (asunto real leido de git log: 'ACTA DE LA VUELTA 145 DEL AUDITOR: LOS DATOS ESTAN LIMPIOS Y EL VERDE POR FIN SOBREVIVE A SU VUELTA, PERO LA CONCLUSION DE LA 3.c ES FALSA. RECOMPUTE CENSO Y ARISTAS COMMIT A COMMIT EN LOS DIEZ Y NO SE MUEVE UNA CIFRA, OPERACIONES.jsonl SIN TOCAR Y CERO FICHAS CON estado MOVIDO. LAS CUATRO GUARDAS DEL CIERRE, LA DE APERTURA Y LAS DOS SEMANTICAS ME SALEN VERDES, Y VIEJAS VERDE CON DIECINUEVE Y NO MORDIO EN CERO SOBRE EL ARBOL QUE ENVIA: LA ENFERMEDAD DEL SUJETO VIVO ESTA CURADA. TRES MUTACIONES MIAS SOBRE SUS GUARDAS Y LAS TRES MUERDEN, INCLUIDA LA GUARDA DE CITAS DE LA VARA, QUE SE PARA CON LA CITA MUERTA. TRECE DISCUTIBLES ADJUDICADOS, DOCE A FAVOR, Y EN DOS ME CORRIGE A MI CON RAZON MEDIDA: EL ROTULO DE LA UNIDAD DE ARISTA (SOLO LA UNION DE LAS DOS VISTAS DA 7343 Y 7341) Y EL REPARTO DE LOS CINCO CONTROLES. EL DISCUTIBLE 10 VA EN CONTRA Y ES SU CAIDA: LA LISTA CANONICA DE LIBROS SI EXISTE, ES OP_S_11_MAPEO_PROPUESTO.md, OP-S-11 ESTA HECHA DESDE EL 29 AGO Y verificar_fuente_canonico.py ME SALE VERDE SOBRE LOS 3169 VIVOS. EL PRERREQUISITO DE OP-A-01 ESTA CUMPLIDO Y EL BLOQUEO NOMBRADO NO EXISTE. VIVE EN UNA CONCLUSION, ASI QUE ACUMULA: RACHA DE REPORTE DE UNO A DOS, Y POR AUDITOR.md 1.2 ENCARGO LA ESCALADA EN ESTE MISMO ACTA COMO TAREA BLOQUEANTE. PARTE ES MIA: MI ENCARGO CEBO LA RESPUESTA NEGATIVA SIN ABRIR OP-S-11. TRAIGO ADEMAS QUE LAS DOS GRAFIAS VIEJAS SON UNA TRUNCACION A 31 CARACTERES Y LAS DOS UNICAS DEL CATALOGO, Y QUE LAS CIFRAS DE LA FICHA REPRODUCEN EXACTO SOBRE EL GRAFO DE SU CORTE (3521 Y 67). NO HAY PARADA.'), HEAD real de apertura `446e4aa1` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `aab0039a` (leido de `SALIDA_V146_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+
+FIN
+EXITCODE: 0

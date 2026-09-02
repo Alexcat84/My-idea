@@ -1,0 +1,25 @@
+BARRIDO EXHAUSTIVO
+  PREGUNTA: existe en el esquema del nodo un campo que atribuya cada paso_accionable a su libro de origen, que es lo que pide la mitad semantica de la verificacion 3 de OP-A-01
+  UNIVERSO: git ls-files de la rama actual ACOTADO a dataset/, scripts/expansion/
+  CARDINAL: 4093
+  EXCLUIDOS POR SER SONDA Y NO INSTALACION (declarados, no escondidos): 0
+  POR NOMBRE: esquema|schema|pasos | 12 ficheros con coincidencia
+  POR CONTENIDO: fuente_del_paso|paso_fuente|pasos_con_fuente|"pasos_accionables":\s*\[\s*\{ | 0 ficheros con coincidencia
+  NO DECODIFICABLES (mirados y no leidos, NO cuentan como sin coincidencia): 0
+  VEREDICTO: HALLADO
+  LOS QUE COINCIDEN (union de las dos piernas): 12
+      dataset/nodos/benchmarking_7_pasos_juran.json  [nombre]
+      dataset/nodos/cinco_pasos_eco_efectividad.json  [nombre]
+      dataset/nodos/cinco_pasos_enfoque_restricciones.json  [nombre]
+      dataset/nodos/concepto_programa_catorce_pasos.json  [nombre]
+      dataset/nodos/crosby_programa_14_pasos_introduccion.json  [nombre]
+      dataset/nodos/diez_pasos_iniciales_programa.json  [nombre]
+      dataset/nodos/nueve_pasos_iniciar_programa.json  [nombre]
+      dataset/nodos/proceso_benchmarking_juran_7pasos.json  [nombre]
+      dataset/nodos/proceso_rmf_siete_pasos.json  [nombre]
+      dataset/nodos/programa_catorce_pasos_crosby.json  [nombre]
+      dataset/nodos/programa_mejora_calidad_14_pasos.json  [nombre]
+      scripts/expansion/validar_esquema.py  [nombre]
+CIFRA ficheros del universo: 4093 ficheros
+CIFRA ficheros que coinciden: 12 ficheros
+EXITCODE: 0
