@@ -1,0 +1,196 @@
+########## --mutar-rotulo ##########
+==============================================================================
+CASO POSITIVO DE LA OPERACION 2.a (vuelta 138): los TRES planes de las
+vueltas 63 y 64, regenerados con el generador de HOY.
+MODO MUTACION: rotulo. EL CASO TIENE QUE CAER.
+==============================================================================
+
+------------------------------------------------------------------------------
+PLAN_V63_OPM02PROG.json (OP-M-02-PROG, vuelta 63)
+  sellado en    : 0f692945
+  se regenera en: e55252dc (su padre)
+  absorbido fases_de_retencion_de_clientes, deprecado en el sello: True
+  absorbido fases_de_retencion_de_clientes, deprecado en el padre: False
+  absorbido fases_de_retencion_de_clientes, deprecado HOY        : True
+   FORMATO DEL REPARTO: pasos VIEJO (un solo absorbido) | condiciones VIEJO (un solo absorbido)
+  el fichero de HOY difiere del blob del sellado en 14 linea(s); commits posteriores que lo tocan: be69bc56 (VUELTA 64, TAREA 1.b Y 1.c: EL D10 SE SELLA Y LAS CINCO CO)
+  MUTACION APLICADA AL REGENERADO: la linea del rotulo (indice 2)
+  lineas regeneradas 79, lineas selladas 79, lineas distintas 2
+     linea 3 regenerada: "rotulo": "EL PROGRAMA UNICO: ocho_fases_experiencia_cliente absorbe fases_de_retencion_de_clientes. Es la SEGUNDA fusion de mesa de la campana y la s
+     linea 3 sellada   : "rotulo": "EL PROGRAMA UNICO: ocho_fases_experiencia_cliente absorbe fases_de_retencion_de_clientes. Es la SEGUNDA fusion de mesa de la campana y la s
+     linea 4 regenerada: "fecha": "2026-09-02",
+     linea 4 sellada   : "fecha": "2026-08-20",
+  ROJO: hay diferencias fuera de la fecha.
+
+------------------------------------------------------------------------------
+PLAN_V63_OPM03I.json (OP-M-03-I, vuelta 63)
+  sellado en    : f5e9a72b
+  se regenera en: 0f7d2ef0 (su padre)
+  absorbido decision_pivote_perseverar, deprecado en el sello: True
+  absorbido decision_pivote_perseverar, deprecado en el padre: False
+  absorbido decision_pivote_perseverar, deprecado HOY        : True
+   FORMATO DEL REPARTO: pasos VIEJO (un solo absorbido) | condiciones VIEJO (un solo absorbido)
+  el fichero de HOY difiere del blob del sellado en 0 linea(s); commits posteriores que lo tocan: NINGUNO
+  MUTACION APLICADA AL REGENERADO: la linea del rotulo (indice 2)
+  lineas regeneradas 93, lineas selladas 93, lineas distintas 2
+     linea 3 regenerada: "rotulo": "ACTO I DE LA MESA DEL PIVOTE, LA PUERTA DE METRICAS DE RIES: pivotar_o_perseverar absorbe decision_pivote_perseverar. Es la primera fusion 
+     linea 3 sellada   : "rotulo": "ACTO I DE LA MESA DEL PIVOTE, LA PUERTA DE METRICAS DE RIES: pivotar_o_perseverar absorbe decision_pivote_perseverar. Es la primera fusion 
+     linea 4 regenerada: "fecha": "2026-09-02",
+     linea 4 sellada   : "fecha": "2026-08-20",
+  ROJO: hay diferencias fuera de la fecha.
+
+------------------------------------------------------------------------------
+PLAN_V64_OPM03II.json (OP-M-03-II, vuelta 64)
+  sellado en    : 7a160a25
+  se regenera en: 4d16c100 (su padre)
+  absorbido pivotar_o_proceder, deprecado en el sello: True
+  absorbido pivotar_o_proceder, deprecado en el padre: False
+  absorbido pivotar_o_proceder, deprecado HOY        : True
+   FORMATO DEL REPARTO: pasos VIEJO (un solo absorbido) | condiciones VIEJO (un solo absorbido)
+  el fichero de HOY difiere del blob del sellado en 1 linea(s); commits posteriores que lo tocan: ca74f202 (REPORTE DE LA VUELTA 64: EL PUESTO 2 DE LA FASE 03 ABIERTO)
+  MUTACION APLICADA AL REGENERADO: la linea del rotulo (indice 2)
+  lineas regeneradas 98, lineas selladas 98, lineas distintas 2
+     linea 3 regenerada: "rotulo": "ACTO II DE LA MESA DEL PIVOTE, LA PUERTA DE LA REUNION DEL DESCUBRIMIENTO, DE BLANK: pivote_o_proceder absorbe pivotar_o_proceder. Es la TE
+     linea 3 sellada   : "rotulo": "ACTO II DE LA MESA DEL PIVOTE, LA PUERTA DE LA REUNION DEL DESCUBRIMIENTO, DE BLANK: pivote_o_proceder absorbe pivotar_o_proceder. Es la TE
+     linea 4 regenerada: "fecha": "2026-09-02",
+     linea 4 sellada   : "fecha": "2026-08-20",
+  ROJO: hay diferencias fuera de la fecha.
+
+==============================================================================
+  PLAN_V63_OPM02PROG.json      ROJO, 2 linea(s) distintas
+  PLAN_V63_OPM03I.json         ROJO, 2 linea(s) distintas
+  PLAN_V64_OPM03II.json        ROJO, 2 linea(s) distintas
+VERDE DE LA MUTACION: el caso CAE, 3 de 3 planes en ROJO.
+FIN
+EXIT=0
+
+########## --mutar-marca ##########
+==============================================================================
+CASO POSITIVO DE LA OPERACION 2.a (vuelta 138): los TRES planes de las
+vueltas 63 y 64, regenerados con el generador de HOY.
+MODO MUTACION: marca. EL CASO TIENE QUE CAER.
+==============================================================================
+
+------------------------------------------------------------------------------
+PLAN_V63_OPM02PROG.json (OP-M-02-PROG, vuelta 63)
+  sellado en    : 0f692945
+  se regenera en: e55252dc (su padre)
+  absorbido fases_de_retencion_de_clientes, deprecado en el sello: True
+  absorbido fases_de_retencion_de_clientes, deprecado en el padre: False
+  absorbido fases_de_retencion_de_clientes, deprecado HOY        : True
+   FORMATO DEL REPARTO: pasos VIEJO (un solo absorbido) | condiciones VIEJO (un solo absorbido)
+  el fichero de HOY difiere del blob del sellado en 14 linea(s); commits posteriores que lo tocan: be69bc56 (VUELTA 64, TAREA 1.b Y 1.c: EL D10 SE SELLA Y LAS CINCO CO)
+  MUTACION APLICADA AL REGENERADO: una marca APPEND cambiada a CUBIERTO:1 (indice 56)
+  lineas regeneradas 79, lineas selladas 79, lineas distintas 2
+     linea 4 regenerada: "fecha": "2026-09-02",
+     linea 4 sellada   : "fecha": "2026-08-20",
+     linea 57 regenerada: "3": "CUBIERTO:1"
+     linea 57 sellada   : "3": "APPEND"
+  ROJO: hay diferencias fuera de la fecha.
+
+------------------------------------------------------------------------------
+PLAN_V63_OPM03I.json (OP-M-03-I, vuelta 63)
+  sellado en    : f5e9a72b
+  se regenera en: 0f7d2ef0 (su padre)
+  absorbido decision_pivote_perseverar, deprecado en el sello: True
+  absorbido decision_pivote_perseverar, deprecado en el padre: False
+  absorbido decision_pivote_perseverar, deprecado HOY        : True
+   FORMATO DEL REPARTO: pasos VIEJO (un solo absorbido) | condiciones VIEJO (un solo absorbido)
+  el fichero de HOY difiere del blob del sellado en 0 linea(s); commits posteriores que lo tocan: NINGUNO
+  MUTACION APLICADA AL REGENERADO: una marca APPEND cambiada a CUBIERTO:1 (indice 55)
+  lineas regeneradas 93, lineas selladas 93, lineas distintas 2
+     linea 4 regenerada: "fecha": "2026-09-02",
+     linea 4 sellada   : "fecha": "2026-08-20",
+     linea 56 regenerada: "2": "CUBIERTO:1",
+     linea 56 sellada   : "2": "APPEND",
+  ROJO: hay diferencias fuera de la fecha.
+
+------------------------------------------------------------------------------
+PLAN_V64_OPM03II.json (OP-M-03-II, vuelta 64)
+  sellado en    : 7a160a25
+  se regenera en: 4d16c100 (su padre)
+  absorbido pivotar_o_proceder, deprecado en el sello: True
+  absorbido pivotar_o_proceder, deprecado en el padre: False
+  absorbido pivotar_o_proceder, deprecado HOY        : True
+   FORMATO DEL REPARTO: pasos VIEJO (un solo absorbido) | condiciones VIEJO (un solo absorbido)
+  el fichero de HOY difiere del blob del sellado en 1 linea(s); commits posteriores que lo tocan: ca74f202 (REPORTE DE LA VUELTA 64: EL PUESTO 2 DE LA FASE 03 ABIERTO)
+  MUTACION APLICADA AL REGENERADO: una marca APPEND cambiada a CUBIERTO:1 (indice 54)
+  lineas regeneradas 98, lineas selladas 98, lineas distintas 2
+     linea 4 regenerada: "fecha": "2026-09-02",
+     linea 4 sellada   : "fecha": "2026-08-20",
+     linea 55 regenerada: "2": "CUBIERTO:1",
+     linea 55 sellada   : "2": "APPEND",
+  ROJO: hay diferencias fuera de la fecha.
+
+==============================================================================
+  PLAN_V63_OPM02PROG.json      ROJO, 2 linea(s) distintas
+  PLAN_V63_OPM03I.json         ROJO, 2 linea(s) distintas
+  PLAN_V64_OPM03II.json        ROJO, 2 linea(s) distintas
+VERDE DE LA MUTACION: el caso CAE, 3 de 3 planes en ROJO.
+FIN
+EXIT=0
+
+########## --mutar-fecha ##########
+==============================================================================
+CASO POSITIVO DE LA OPERACION 2.a (vuelta 138): los TRES planes de las
+vueltas 63 y 64, regenerados con el generador de HOY.
+MODO BORDE DE LA TOLERANCIA: fecha. EL CASO TIENE QUE SEGUIR VERDE.
+==============================================================================
+
+------------------------------------------------------------------------------
+PLAN_V63_OPM02PROG.json (OP-M-02-PROG, vuelta 63)
+  sellado en    : 0f692945
+  se regenera en: e55252dc (su padre)
+  absorbido fases_de_retencion_de_clientes, deprecado en el sello: True
+  absorbido fases_de_retencion_de_clientes, deprecado en el padre: False
+  absorbido fases_de_retencion_de_clientes, deprecado HOY        : True
+   FORMATO DEL REPARTO: pasos VIEJO (un solo absorbido) | condiciones VIEJO (un solo absorbido)
+  el fichero de HOY difiere del blob del sellado en 14 linea(s); commits posteriores que lo tocan: be69bc56 (VUELTA 64, TAREA 1.b Y 1.c: EL D10 SE SELLA Y LAS CINCO CO)
+  MUTACION APLICADA AL REGENERADO: la linea de la fecha (indice 3)
+  lineas regeneradas 79, lineas selladas 79, lineas distintas 1
+     linea 4 regenerada: "fecha": "1999-01-01",
+     linea 4 sellada   : "fecha": "2026-08-20",
+  VERDE CON LA UNICA DIFERENCIA DECLARADA: solo la linea de la fecha,
+  que el generador computa con datetime.date.today() y no se parchea.
+
+------------------------------------------------------------------------------
+PLAN_V63_OPM03I.json (OP-M-03-I, vuelta 63)
+  sellado en    : f5e9a72b
+  se regenera en: 0f7d2ef0 (su padre)
+  absorbido decision_pivote_perseverar, deprecado en el sello: True
+  absorbido decision_pivote_perseverar, deprecado en el padre: False
+  absorbido decision_pivote_perseverar, deprecado HOY        : True
+   FORMATO DEL REPARTO: pasos VIEJO (un solo absorbido) | condiciones VIEJO (un solo absorbido)
+  el fichero de HOY difiere del blob del sellado en 0 linea(s); commits posteriores que lo tocan: NINGUNO
+  MUTACION APLICADA AL REGENERADO: la linea de la fecha (indice 3)
+  lineas regeneradas 93, lineas selladas 93, lineas distintas 1
+     linea 4 regenerada: "fecha": "1999-01-01",
+     linea 4 sellada   : "fecha": "2026-08-20",
+  VERDE CON LA UNICA DIFERENCIA DECLARADA: solo la linea de la fecha,
+  que el generador computa con datetime.date.today() y no se parchea.
+
+------------------------------------------------------------------------------
+PLAN_V64_OPM03II.json (OP-M-03-II, vuelta 64)
+  sellado en    : 7a160a25
+  se regenera en: 4d16c100 (su padre)
+  absorbido pivotar_o_proceder, deprecado en el sello: True
+  absorbido pivotar_o_proceder, deprecado en el padre: False
+  absorbido pivotar_o_proceder, deprecado HOY        : True
+   FORMATO DEL REPARTO: pasos VIEJO (un solo absorbido) | condiciones VIEJO (un solo absorbido)
+  el fichero de HOY difiere del blob del sellado en 1 linea(s); commits posteriores que lo tocan: ca74f202 (REPORTE DE LA VUELTA 64: EL PUESTO 2 DE LA FASE 03 ABIERTO)
+  MUTACION APLICADA AL REGENERADO: la linea de la fecha (indice 3)
+  lineas regeneradas 98, lineas selladas 98, lineas distintas 1
+     linea 4 regenerada: "fecha": "1999-01-01",
+     linea 4 sellada   : "fecha": "2026-08-20",
+  VERDE CON LA UNICA DIFERENCIA DECLARADA: solo la linea de la fecha,
+  que el generador computa con datetime.date.today() y no se parchea.
+
+==============================================================================
+  PLAN_V63_OPM02PROG.json      IDENTICOS salvo la fecha, declarada
+  PLAN_V63_OPM03I.json         IDENTICOS salvo la fecha, declarada
+  PLAN_V64_OPM03II.json        IDENTICOS salvo la fecha, declarada
+VERDE DEL BORDE: mutar la linea de la fecha NO hace caer el caso, que es
+exactamente la tolerancia declarada, ni una linea mas.
+FIN
+EXIT=0
+

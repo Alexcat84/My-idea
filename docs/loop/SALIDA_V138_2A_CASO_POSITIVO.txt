@@ -1,0 +1,58 @@
+########## CASO POSITIVO, SIN MUTAR ##########
+==============================================================================
+CASO POSITIVO DE LA OPERACION 2.a (vuelta 138): los TRES planes de las
+vueltas 63 y 64, regenerados con el generador de HOY.
+==============================================================================
+
+------------------------------------------------------------------------------
+PLAN_V63_OPM02PROG.json (OP-M-02-PROG, vuelta 63)
+  sellado en    : 0f692945
+  se regenera en: e55252dc (su padre)
+  absorbido fases_de_retencion_de_clientes, deprecado en el sello: True
+  absorbido fases_de_retencion_de_clientes, deprecado en el padre: False
+  absorbido fases_de_retencion_de_clientes, deprecado HOY        : True
+   FORMATO DEL REPARTO: pasos VIEJO (un solo absorbido) | condiciones VIEJO (un solo absorbido)
+  el fichero de HOY difiere del blob del sellado en 14 linea(s); commits posteriores que lo tocan: be69bc56 (VUELTA 64, TAREA 1.b Y 1.c: EL D10 SE SELLA Y LAS CINCO CO)
+  lineas regeneradas 79, lineas selladas 79, lineas distintas 1
+     linea 4 regenerada: "fecha": "2026-09-02",
+     linea 4 sellada   : "fecha": "2026-08-20",
+  VERDE CON LA UNICA DIFERENCIA DECLARADA: solo la linea de la fecha,
+  que el generador computa con datetime.date.today() y no se parchea.
+
+------------------------------------------------------------------------------
+PLAN_V63_OPM03I.json (OP-M-03-I, vuelta 63)
+  sellado en    : f5e9a72b
+  se regenera en: 0f7d2ef0 (su padre)
+  absorbido decision_pivote_perseverar, deprecado en el sello: True
+  absorbido decision_pivote_perseverar, deprecado en el padre: False
+  absorbido decision_pivote_perseverar, deprecado HOY        : True
+   FORMATO DEL REPARTO: pasos VIEJO (un solo absorbido) | condiciones VIEJO (un solo absorbido)
+  el fichero de HOY difiere del blob del sellado en 0 linea(s); commits posteriores que lo tocan: NINGUNO
+  lineas regeneradas 93, lineas selladas 93, lineas distintas 1
+     linea 4 regenerada: "fecha": "2026-09-02",
+     linea 4 sellada   : "fecha": "2026-08-20",
+  VERDE CON LA UNICA DIFERENCIA DECLARADA: solo la linea de la fecha,
+  que el generador computa con datetime.date.today() y no se parchea.
+
+------------------------------------------------------------------------------
+PLAN_V64_OPM03II.json (OP-M-03-II, vuelta 64)
+  sellado en    : 7a160a25
+  se regenera en: 4d16c100 (su padre)
+  absorbido pivotar_o_proceder, deprecado en el sello: True
+  absorbido pivotar_o_proceder, deprecado en el padre: False
+  absorbido pivotar_o_proceder, deprecado HOY        : True
+   FORMATO DEL REPARTO: pasos VIEJO (un solo absorbido) | condiciones VIEJO (un solo absorbido)
+  el fichero de HOY difiere del blob del sellado en 1 linea(s); commits posteriores que lo tocan: ca74f202 (REPORTE DE LA VUELTA 64: EL PUESTO 2 DE LA FASE 03 ABIERTO)
+  lineas regeneradas 98, lineas selladas 98, lineas distintas 1
+     linea 4 regenerada: "fecha": "2026-09-02",
+     linea 4 sellada   : "fecha": "2026-08-20",
+  VERDE CON LA UNICA DIFERENCIA DECLARADA: solo la linea de la fecha,
+  que el generador computa con datetime.date.today() y no se parchea.
+
+==============================================================================
+  PLAN_V63_OPM02PROG.json      IDENTICOS salvo la fecha, declarada
+  PLAN_V63_OPM03I.json         IDENTICOS salvo la fecha, declarada
+  PLAN_V64_OPM03II.json        IDENTICOS salvo la fecha, declarada
+VERDE: los 3 planes se regeneran identicos con el generador de hoy.
+FIN
+EXIT=0

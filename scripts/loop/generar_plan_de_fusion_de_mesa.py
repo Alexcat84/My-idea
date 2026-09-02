@@ -33,6 +33,31 @@ LAS GUARDAS AL SELLAR, todas las del hermano:
 
 DE ESCRITURA SOLO SOBRE docs/loop/PLAN_V<N>_*.json. No toca ni un nodo.
 
+--- EL REPARTO SE INDEXA POR EL PAR (VUELTA 138, OPERACION 2.a) ---
+
+CORRECCION DECLARADA, y el texto viejo de arriba se queda entero porque una
+correccion que tapa lo que corrige no se puede auditar. Hasta esta vuelta, la
+linea "COBERTURA EXACTA: cada paso y cada condicion de cada absorbido con marca
+UNICA" era verdad SOLO con un absorbido: `marcar(spec["pasos"], ...)` corria
+dentro de `for ab in absorbidos` con el MISMO `spec` cada vez, y `spec["pasos"]`
+se indexaba por NUMERO DE PASO, nunca por el par, asi que el paso 1 de dos
+absorbidos distintos leia LA MISMA marca.
+
+NO ES UNA REGRESION, ES UN CAMINO QUE ESTRENA. Los TRES usos historicos del
+generador (OP-M-02-PROG y OP-M-03-I en la vuelta 63, OP-M-03-II en la vuelta 64)
+tienen EXACTAMENTE UN absorbido cada uno: el camino de dos o mas nunca habia
+corrido. La fase 06 lo estrena con cinco de sus seis mesas.
+
+LO QUE CAMBIA, en reparto_por_par():
+  - el reparto acepta el FORMATO POR PAR, {"<absorbido>": {"1": marca, ...}};
+  - el FORMATO VIEJO plano, {"1": marca, ...}, SIGUE VALIENDO con un unico
+    absorbido, y por eso los tres planes sellados se regeneran IDENTICOS;
+  - el FORMATO VIEJO con dos o mas absorbidos es ROJO y el ROJO los nombra:
+    no se acepta en silencio compartiendo marcas;
+  - la marca que falta cae ROJO NOMBRANDO EL PAR, no solo el numero;
+  - --reparto-viejo EXHIBE el defecto (reparte el dict plano a todos los
+    absorbidos e imprime las colisiones) y nunca escribe.
+
 Uso:
   python scripts/loop/generar_plan_de_fusion_de_mesa.py --vuelta 63
       --id-op OP-M-03-I --contenido _v63_opm03i [--simular]
@@ -76,7 +101,8 @@ def marcar(spec_marcas, textos, etq, ab, n_sup_pasos, n_sup_cond, pasos_sup, fal
     for i, texto in enumerate(textos, 1):
         m = spec_marcas.get(str(i))
         if not m:
-            fallos.append("el %s %d de %s no tiene marca" % (etq, i, ab))
+            fallos.append("el %s %d de %s no tiene marca: FALTA EL PAR (%s, %d)"
+                          % (etq, i, ab, ab, i))
             continue
         if m[0] == "APPEND":
             marcas[str(i)] = "APPEND"
@@ -125,8 +151,134 @@ def marcar(spec_marcas, textos, etq, ab, n_sup_pasos, n_sup_cond, pasos_sup, fal
             fallos.append("%s %d: marca desconocida %r" % (etq, i, m))
     sobra = set(spec_marcas) - {str(i) for i in range(1, len(textos) + 1)}
     if sobra:
-        fallos.append("marcas de %s que sobran: %s" % (etq, sorted(sobra)))
+        fallos.append("marcas de %s que sobran para el absorbido %s: %s"
+                      % (etq, ab, sorted(sobra)))
     return marcas
+
+
+def reparto_por_par(spec, clave, absorbidos, fallos, forzar_viejo=False):
+    """EL REPARTO SE INDEXA POR EL PAR (absorbido, numero de paso).
+
+    OPERACION 2.a DE LA VUELTA 138, adjudicada en el acta de la vuelta 137,
+    seccion 3.4, como OPERACION DE CODIGO BLOQUEANTE. EL DEFECTO, probado por
+    los dos lados: `marcar(spec["pasos"], ...)` se llamaba dentro de
+    `for ab in absorbidos` con el MISMO `spec` cada vez, y `spec["pasos"]` se
+    indexaba por NUMERO DE PASO, nunca por el par; el paso 1 de dos absorbidos
+    distintos leia LA MISMA marca. Los TRES usos historicos del generador
+    (OP-M-02-PROG y OP-M-03-I en la vuelta 63, OP-M-03-II en la vuelta 64)
+    tienen EXACTAMENTE UN absorbido cada uno, asi que el camino de dos o mas
+    NO HA CORRIDO NUNCA: esto no repara una regresion, estrena un camino.
+
+    LOS DOS FORMATOS QUE SE ACEPTAN, y por que los dos:
+
+      FORMATO VIEJO (plano, indexado por numero de paso):
+          {"1": [...], "2": [...]}
+      VALE SOLO SI LA OPERACION TIENE UN UNICO ABSORBIDO, que es el caso de
+      los tres planes ya sellados. Con dos o mas es ROJO, y el ROJO nombra los
+      absorbidos: no se acepta en silencio compartiendo marcas, porque eso es
+      exactamente el defecto que esta funcion repara (banco 9, fallar ruidoso).
+
+      FORMATO POR PAR (indexado por absorbido y dentro por numero de paso):
+          {"absorbido_a": {"1": [...]}, "absorbido_b": {"1": [...]}}
+      Es el unico que vale con dos o mas absorbidos, y tambien vale con uno.
+
+    EL DICT VACIO no es ambiguo y no se trata como formato: `{}` significa que
+    NINGUN absorbido trae piezas de esa especie (lo normal en `condiciones`
+    cuando ningun absorbido tiene condiciones), y se expande a `{}` por
+    absorbido.
+
+    `forzar_viejo` es la bandera de exhibicion (--reparto-viejo, guarda (iv)
+    del encargo): reparte el dict PLANO a TODOS los absorbidos, que es
+    literalmente lo que hacia el codigo viejo, para que el defecto se pueda
+    ENSENAR y no solo contar. Una reparacion que no puede exhibir el defecto
+    que repara no se puede auditar.
+
+    Devuelve (por_absorbido, nombre_del_formato).
+    """
+    bruto = spec.get(clave)
+    if bruto is None:
+        fallos.append("el contenido no trae la clave %r del reparto" % clave)
+        return {ab: {} for ab in absorbidos}, "AUSENTE"
+    if not isinstance(bruto, dict):
+        fallos.append("el reparto de %s no es un dict sino %s" % (clave, type(bruto).__name__))
+        return {ab: {} for ab in absorbidos}, "NO ES DICT"
+
+    claves = list(bruto.keys())
+    if not claves:
+        return {ab: {} for ab in absorbidos}, "VACIO"
+
+    son_numeros = [k for k in claves if str(k).isdigit()]
+    son_absorbidos = [k for k in claves if k in absorbidos]
+
+    if len(son_numeros) == len(claves):
+        # FORMATO VIEJO, plano.
+        if forzar_viejo:
+            return {ab: bruto for ab in absorbidos}, "VIEJO FORZADO (EXHIBICION)"
+        if len(absorbidos) != 1:
+            fallos.append(
+                "el reparto de %s viene en FORMATO VIEJO (indexado por numero de paso) y la "
+                "operacion tiene %d absorbidos (%s): con dos o mas, el mismo numero de paso de "
+                "absorbidos distintos leeria LA MISMA marca. Indexa por el par "
+                "(absorbido, numero de paso)." % (clave, len(absorbidos), ", ".join(absorbidos)))
+            return {ab: {} for ab in absorbidos}, "VIEJO EN ROJO"
+        return {absorbidos[0]: bruto}, "VIEJO (un solo absorbido)"
+
+    if len(son_absorbidos) == len(claves):
+        # FORMATO POR PAR.
+        faltan = [ab for ab in absorbidos if ab not in bruto]
+        if faltan:
+            fallos.append("el reparto de %s no trae entrada para los absorbidos %s"
+                          % (clave, ", ".join(faltan)))
+        por_ab = {}
+        for ab in absorbidos:
+            sub = bruto.get(ab)
+            if sub is None:
+                por_ab[ab] = {}
+                continue
+            if not isinstance(sub, dict):
+                fallos.append("el reparto de %s del absorbido %s no es un dict sino %s"
+                              % (clave, ab, type(sub).__name__))
+                por_ab[ab] = {}
+                continue
+            no_numeros = [k for k in sub if not str(k).isdigit()]
+            if no_numeros:
+                fallos.append("el reparto de %s del absorbido %s tiene claves que no son numero "
+                              "de paso: %s" % (clave, ab, ", ".join(sorted(no_numeros))))
+            por_ab[ab] = sub
+        return por_ab, "POR PAR (absorbido, numero de paso)"
+
+    # NI UNA COSA NI LA OTRA: se nombran las claves que no encajan, sin resumir.
+    sueltas = [k for k in claves if not str(k).isdigit() and k not in absorbidos]
+    fallos.append(
+        "el reparto de %s mezcla formatos o trae claves desconocidas: %d clave(s) de numero de "
+        "paso, %d clave(s) de absorbido, y estas no son ninguna de las dos: %s"
+        % (clave, len(son_numeros), len(son_absorbidos), ", ".join(repr(k) for k in sorted(sueltas))))
+    return {ab: {} for ab in absorbidos}, "MEZCLADO EN ROJO"
+
+
+def exhibir_reparto(marcas_p, marcas_c, absorbidos):
+    """GUARDA (iv) DEL ENCARGO DE LA VUELTA 138: el fallo viejo queda EXHIBIBLE.
+
+    Imprime la tabla (absorbido, numero de paso) -> marca y CUENTA las
+    colisiones, es decir los numeros de paso en los que dos absorbidos
+    distintos reciben la MISMA marca. Devuelve el numero de colisiones, que es
+    una cifra COMPUTADA de las marcas y no un literal: es la variable sobre la
+    que muerde la prueba de mutacion.
+    """
+    colisiones = 0
+    for etq, d in (("paso", marcas_p), ("condicion", marcas_c)):
+        numeros = sorted({n for ab in absorbidos for n in (d.get(ab) or {})},
+                         key=lambda x: int(x))
+        for n in numeros:
+            valores = [(ab, (d.get(ab) or {}).get(n)) for ab in absorbidos]
+            presentes = [(ab, v) for ab, v in valores if v is not None]
+            iguales = len({v for _, v in presentes}) == 1 and len(presentes) > 1
+            if iguales:
+                colisiones += 1
+            for ab, v in presentes:
+                print("     %-9s %-3s %-46s %s%s" % (etq, n, ab[:46], v,
+                                                     "   <== COLISION" if iguales else ""))
+    return colisiones
 
 
 def main():
@@ -138,6 +290,11 @@ def main():
     ap.add_argument("--prefijo", default=None,
                     help="prefijo del plan; por defecto PLAN_V<vuelta>_")
     ap.add_argument("--simular", action="store_true")
+    ap.add_argument("--reparto-viejo", dest="reparto_viejo", action="store_true",
+                    help="EXHIBE el defecto reparado en la vuelta 138: reparte el dict "
+                         "PLANO de marcas a TODOS los absorbidos, como hacia el codigo "
+                         "viejo, e imprime la tabla (absorbido, paso) con sus COLISIONES. "
+                         "NUNCA escribe el plan.")
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
 
@@ -208,15 +365,36 @@ def main():
     print()
     print("  EL SUPERVIVIENTE DE HOY: %d pasos y %d condiciones" % (len(pasos_sup), len(cond_sup)))
 
+    # EL REPARTO SE INDEXA POR EL PAR (absorbido, numero de paso), vuelta 138, 2.a.
+    spec_p, formato_p = reparto_por_par(spec, "pasos", absorbidos, fallos,
+                                        forzar_viejo=a.reparto_viejo)
+    spec_c, formato_c = reparto_por_par(spec, "condiciones", absorbidos, fallos,
+                                        forzar_viejo=a.reparto_viejo)
+    print("  FORMATO DEL REPARTO: pasos %s | condiciones %s" % (formato_p, formato_c))
     marcas_p, marcas_c = {}, {}
     for ab in absorbidos:
         pa = list(nodos[ab].get("pasos_accionables") or [])
         ca = list(nodos[ab].get("condiciones_activacion") or [])
         print("  EL ABSORBIDO %s: %d pasos y %d condiciones" % (ab, len(pa), len(ca)))
-        marcas_p[ab] = marcar(spec["pasos"], pa, "paso", ab, len(pasos_sup), len(cond_sup),
-                              pasos_sup, fallos, permite_cond=True)
-        marcas_c[ab] = marcar(spec["condiciones"], ca, "condicion", ab, len(pasos_sup),
+        marcas_p[ab] = marcar(spec_p.get(ab) or {}, pa, "paso", ab, len(pasos_sup),
+                              len(cond_sup), pasos_sup, fallos, permite_cond=True)
+        marcas_c[ab] = marcar(spec_c.get(ab) or {}, ca, "condicion", ab, len(pasos_sup),
                               len(cond_sup), pasos_sup, fallos, permite_cond=False)
+
+    if a.reparto_viejo:
+        print()
+        print("  ==== EXHIBICION DEL REPARTO VIEJO (guarda (iv), vuelta 138) ====")
+        print("  El dict PLANO de marcas se reparte a los %d absorbidos, que es lo que"
+              % len(absorbidos))
+        print("  hacia el codigo viejo. NO se escribe ningun plan.")
+        colisiones = exhibir_reparto(marcas_p, marcas_c, absorbidos)
+        print("  COLISIONES DEL REPARTO VIEJO: %d" % colisiones)
+        if fallos:
+            print("  (y ademas %d fallo(s) de marca, informativos en esta exhibicion)"
+                  % len(fallos))
+        print()
+        print("FIN")
+        return 0
 
     for p_ in (spec.get("perdidas") or []):
         faltan = [k for k in CLAVES_DE_PERDIDA if k not in p_]

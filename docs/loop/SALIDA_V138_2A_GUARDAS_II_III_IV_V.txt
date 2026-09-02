@@ -1,0 +1,59 @@
+==============================================================================
+GUARDAS (ii), (iii), (iv) Y (v) DE LA OPERACION 2.a, VUELTA 138
+==============================================================================
+  ids del banco que existen en dataset/nodos: NINGUNO, como debe ser
+
+------------------------------------------------------------------------------
+(ii) MUTACION 1: dos absorbidos, marcas DISTINTAS para el paso 1.
+  exit del generador: 0 | plan escrito: True
+   FORMATO DEL REPARTO: pasos POR PAR (absorbido, numero de paso) | condiciones POR PAR (absorbido, numero de paso)
+  marca del par (v138_ab_uno_fixture, 1) en el plan: 'APPEND'
+  marca del par (v138_ab_dos_fixture, 1) en el plan: 'CUBIERTO:2'
+  distintas: True
+
+  MUTACION DEL CASO (ii): el mismo sujeto por el REPARTO VIEJO.
+  colisiones contadas por el generador: 3
+  el caso (ii) CAE contra el reparto viejo: True
+
+------------------------------------------------------------------------------
+(iii) MUTACION 2: falta la marca del par (v138_ab_dos_fixture, 1).
+  exit del generador: 1
+     el paso 1 de v138_ab_dos_fixture no tiene marca: FALTA EL PAR (v138_ab_dos_fixture, 1)
+  el ROJO nombra el par (v138_ab_dos_fixture, 1): True
+  (v) ficheros escritos en la salida tras el ROJO: NINGUNO
+
+  MUTACION DEL CASO (iii): se devuelve la marca del par (v138_ab_dos_fixture, 1).
+  exit del generador: 0 | queda algun FALTA EL PAR: False
+  el caso (iii) CAE al devolver la marca: True
+
+------------------------------------------------------------------------------
+(iv) EL FALLO VIEJO, EXHIBIDO con --reparto-viejo:
+    FORMATO DEL REPARTO: pasos VIEJO FORZADO (EXHIBICION) | condiciones VIEJO FORZADO (EXHIBICION)
+    ==== EXHIBICION DEL REPARTO VIEJO (guarda (iv), vuelta 138) ====
+       paso      1   v138_ab_uno_fixture                            APPEND   <== COLISION
+       paso      1   v138_ab_dos_fixture                            APPEND   <== COLISION
+       paso      2   v138_ab_uno_fixture                            CUBIERTO:1   <== COLISION
+       paso      2   v138_ab_dos_fixture                            CUBIERTO:1   <== COLISION
+       condicion 1   v138_ab_uno_fixture                            APPEND   <== COLISION
+       condicion 1   v138_ab_dos_fixture                            APPEND   <== COLISION
+    COLISIONES DEL REPARTO VIEJO: 3
+
+  MUTACION DEL CASO (iv): el mismo spec plano SIN --reparto-viejo.
+  exit del generador: 1 | plan escrito: False
+     el reparto de pasos viene en FORMATO VIEJO (indexado por numero de paso) y la operacion tiene 2 absorbidos (v138_ab_uno_fixture, v138_ab_dos_fixture): con dos o mas, el mismo numero de paso de absorbi
+     el reparto de condiciones viene en FORMATO VIEJO (indexado por numero de paso) y la operacion tiene 2 absorbidos (v138_ab_uno_fixture, v138_ab_dos_fixture): con dos o mas, el mismo numero de paso de a
+  el ROJO nombra los DOS absorbidos: True
+
+  P.16: el banco temporal se retira. Existe todavia: False
+
+==============================================================================
+  (ii) marcas distintas              VERDE
+  (ii) su mutacion, reparto viejo    VERDE, cae
+  (iii) ROJO nombrando el par        VERDE
+  (v) cero escritura si hay fallos   VERDE
+  (iii) su mutacion, marca devuelta  VERDE, cae
+  (iv) el fallo viejo exhibible      VERDE, 3 colision(es)
+  (iv) su mutacion, sin la bandera   VERDE, cae
+VERDE: las 7 guardas pasan.
+FIN
+EXIT=0

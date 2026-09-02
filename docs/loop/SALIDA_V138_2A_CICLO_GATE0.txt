@@ -1,0 +1,39 @@
+=== 1. run_phase1.py --reaplico-curaduria ===
+  [96.4] definicion_calidad_conformidad_requisitos_2  <->  definicion_calidad_conformidad_requisitos_3
+  [96.3] involucramiento_sindical  <->  involucramiento_sindical_calidad
+  [96.1] decision_aptitud_para_uso  <->  decision_aptitud_uso
+  [95.7] eliminacion_causas_error_3  <->  eliminacion_causas_error_4
+
+GATE 0: OK
+EXITCODE1: 0
+
+=== 2. etiquetas_de_cara.py --aplicar ===
+
+71 etiquetas cambian; 0 ya estaban en su forma final.
+escrito: dataset\metadata\master_graph.json (71 etiquetas)
+escrito: web\lib\assets\master_graph.json (0 etiquetas)
+
+=== 3. sync_assets_web.py ===
+
+Manifest escrito en web\lib\assets\manifest.json
+Assets sincronizados: ['master_graph.json', 'preguntas_cache.json', 'node_families.json', 'entry_seeds.json', 'prompts.json', 'semantic_index.json']
+
+=== 4. git diff --numstat -- dataset/ web/ engine/ ===
+warning: in the working copy of 'dataset/metadata/master_graph.json', LF will be replaced by CRLF the next time Git touches it
+(fin del numstat)
+
+=== 5. engine/run_all_tests.py ===
+  OK    test_verificador_huerfanos.py (0.0s)
+
+TODOS LOS TESTS PASARON (25/25).
+
+=== 6. npx vitest run (desde web/) ===
+
+ Test Files  80 passed (80)
+      Tests  1030 passed | 3 skipped (1033)
+   Start at  00:23:48
+   Duration  17.60s (transform 38.02s, setup 0ms, import 130.10s, tests 8.86s, environment 15ms)
+
+
+=== 7. npx tsc --noEmit (desde web/) ===
+EXIT=0
