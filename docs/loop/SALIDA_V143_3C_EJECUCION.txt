@@ -1,0 +1,33 @@
+==============================================================================
+GIRO DE ARISTA . MODO EJECUTAR
+se RETIRA la vuelta revision_portafolio_periodica -> sistema_gates_go_kill y se ESCRIBE la ida sistema_gates_go_kill -> revision_portafolio_periodica
+por la operacion OP-E-04
+==============================================================================
+guarda 1, los dos ids son DIRECTOS: no hay alias que resolver
+guarda 1, los dos extremos existen y estan VIVOS: OK
+guarda 2, cero auto-aristas: OK
+guarda 3, estado de partida: la VUELTA revision_portafolio_periodica -> sistema_gates_go_kill esta puesta: True | la IDA sistema_gates_go_kill -> revision_portafolio_periodica esta puesta: False
+guarda 3: OK, es un giro
+guarda 4, la ficha PROHIBE la vuelta y NOMBRA el par: OK
+   verificacion 0 de OP-E-04: 'UNA SOLA DIRECCION POR ENLACE, de la madre al hijo. La vuelta no debe existir ni literal ni resuelta, por la regla de la escalera' y la IDA sistema_gates_go_kill -> revision_portafolio_periodica es una fila de OP-E-04
+guarda 5, el par NO esta exceptuado por la ficha: OK
+   pares exceptuados que la ficha nombra (4): gestion_portafolio_dos_niveles <-> sistema_gates_go_kill, gestion_portafolio_foco <-> sistema_gates_go_kill, gestion_portafolio_formal <-> sistema_gates_go_kill, portfolio_management <-> sistema_gates_go_kill
+guarda 6, P.9: lo que se escribe son los ids VIVOS resueltos 'sistema_gates_go_kill' y 'revision_portafolio_periodica'
+guarda 7, duplicadas tras resolver en revision_portafolio_periodica.nodos_siguientes: 0 -> 0
+guarda 7, duplicadas tras resolver en sistema_gates_go_kill.nodos_previos: 1 -> 1
+guarda 7, duplicadas tras resolver en sistema_gates_go_kill.nodos_siguientes: 1 -> 1
+guarda 7, duplicadas tras resolver en revision_portafolio_periodica.nodos_previos: 0 -> 0
+guarda 7: OK, cero duplicadas nuevas
+guarda 8, ningun otro campo cambia: OK
+guarda 9, EL GRADO TOTAL NO SE MUEVE (es un giro, no una poda ni una escritura):
+   antes  : sig 9230 prev 9204 suma 18434 union 9905
+   despues: sig 9230 prev 9204 suma 18434 union 9905
+   las CUATRO cifras identicas: True
+guarda 10, resultado: la IDA sistema_gates_go_kill -> revision_portafolio_periodica esta puesta: True | la VUELTA revision_portafolio_periodica -> sistema_gates_go_kill esta puesta: False
+guarda 10: OK
+
+ESCRITO. ficheros de nodo tocados: 2 (revision_portafolio_periodica, sistema_gates_go_kill)
+git status --porcelain -- dataset/nodos/ tras el giro:
+   M dataset/nodos/revision_portafolio_periodica.json
+    M dataset/nodos/sistema_gates_go_kill.json
+EXITCODE: 0

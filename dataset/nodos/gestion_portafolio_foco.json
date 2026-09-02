@@ -14,12 +14,14 @@
   ],
   "entregable_esperado": "Portafolio de proyectos priorizado y balanceado según capacidad real de recursos disponibles",
   "nodos_previos": [
-    "equipo_multifuncional_real"
+    "equipo_multifuncional_real",
+    "sistema_gates_go_kill"
   ],
   "nodos_siguientes": [
     "stage_gate_system",
     "pruning_portafolio",
-    "analisis_de_capacidad_de_recursos"
+    "analisis_de_capacidad_de_recursos",
+    "sistema_gates_go_kill"
   ],
   "condiciones_activacion": [
     "Si la organización tiene demasiados proyectos activos y recursos insuficientes",

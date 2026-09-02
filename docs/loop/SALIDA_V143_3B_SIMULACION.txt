@@ -1,0 +1,98 @@
+==============================================================================
+ESCRITURA DE ARISTAS DE OP-E-04 . MODO SIMULAR
+==============================================================================
+tipo de la ficha        : ENLACE
+ENLACE MUTUO (del tipo) : False
+PARES EXCEPTUADOS POR LA FICHA (leidos de su verificacion, no adivinados): 4 (verificacion 5: excepcion del 9.22 para los pares mutuos nombrados; gestion_portafolio_dos_niveles <-> sistema_gates_go_kill, gestion_portafolio_foco <-> sistema_gates_go_kill, gestion_portafolio_formal <-> sistema_gates_go_kill, portfolio_management <-> sistema_gates_go_kill)
+aristas de la ficha     : 9 cadena(s), 9 par(es) dirigido(s)
+
+arista de la ficha: gestion_portafolio_dos_niveles -> estructura_gates
+  RESUELTA POR ALIAS y se declara: gestion_portafolio_dos_niveles -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, YA PRESENTE hoy: se SALTA y se declara (escribirla seria fabricar una duplicada)
+
+arista de la ficha: requisitos_gates_con_dientes -> portfolio_management
+  RESUELTA POR ALIAS y se declara: sistema_gates_go_kill -> portfolio_management  (origen RESUELTO, destino directo)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, YA PRESENTE hoy: se SALTA y se declara (escribirla seria fabricar una duplicada)
+
+arista de la ficha: requisitos_gates_con_dientes -> revision_portafolio_periodica
+  RESUELTA POR ALIAS y se declara: sistema_gates_go_kill -> revision_portafolio_periodica  (origen RESUELTO, destino directo)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, YA PRESENTE hoy: se SALTA y se declara (escribirla seria fabricar una duplicada)
+
+arista de la ficha: requisitos_gates_con_dientes -> gestion_portafolio_foco
+  RESUELTA POR ALIAS y se declara: sistema_gates_go_kill -> gestion_portafolio_foco  (origen RESUELTO, destino directo)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION (o MUTUO declarado en la ficha): OK
+  guarda 6, cero duplicadas NUEVAS tras resolver: OK (preexistentes: sistema_gates_go_kill.nodos_siguientes 1, gestion_portafolio_foco.nodos_previos 0; tras escribir: 1 y 0)
+  sistema_gates_go_kill.nodos_siguientes: 16 -> 17
+  gestion_portafolio_foco.nodos_previos   : 1 -> 2
+
+arista de la ficha: portfolio_management -> gates_go_kill_decision_points
+  RESUELTA POR ALIAS y se declara: portfolio_management -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION: OK POR EXCEPCION ESCRITA DE LA FICHA. La inversa sistema_gates_go_kill -> portfolio_management ya existe y el par portfolio_management <-> sistema_gates_go_kill esta en la excepcion (verificacion 5: excepcion del 9.22 para los pares mutuos nombrados)
+  guarda 6, cero duplicadas NUEVAS tras resolver: OK (preexistentes: portfolio_management.nodos_siguientes 1, sistema_gates_go_kill.nodos_previos 1; tras escribir: 1 y 1)
+  portfolio_management.nodos_siguientes: 3 -> 4
+  sistema_gates_go_kill.nodos_previos   : 14 -> 15
+
+arista de la ficha: gestion_portafolio_formal -> gates_go_kill_decision_points
+  RESUELTA POR ALIAS y se declara: gestion_portafolio_formal -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, YA PRESENTE hoy: se SALTA y se declara (escribirla seria fabricar una duplicada)
+
+arista de la ficha: gestion_portafolio_dos_niveles -> gates_go_kill_decision_points
+  RESUELTA POR ALIAS y se declara: gestion_portafolio_dos_niveles -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, YA PRESENTE hoy: se SALTA y se declara (escribirla seria fabricar una duplicada)
+
+arista de la ficha: gestion_portafolio_foco -> gates_go_kill_decision_points
+  RESUELTA POR ALIAS y se declara: gestion_portafolio_foco -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION: OK POR EXCEPCION ESCRITA DE LA FICHA. La inversa sistema_gates_go_kill -> gestion_portafolio_foco va en esta misma corrida y el par gestion_portafolio_foco <-> sistema_gates_go_kill esta en la excepcion (verificacion 5: excepcion del 9.22 para los pares mutuos nombrados)
+  guarda 6, cero duplicadas NUEVAS tras resolver: OK (preexistentes: gestion_portafolio_foco.nodos_siguientes 0, sistema_gates_go_kill.nodos_previos 1; tras escribir: 0 y 1)
+  gestion_portafolio_foco.nodos_siguientes: 3 -> 4
+  sistema_gates_go_kill.nodos_previos   : 15 -> 16
+
+arista de la ficha: decision_factory_mentality -> gates_go_kill_decision_points
+  RESUELTA POR ALIAS y se declara: decision_factory_mentality -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION (o MUTUO declarado en la ficha): OK
+  guarda 6, cero duplicadas NUEVAS tras resolver: OK (preexistentes: decision_factory_mentality.nodos_siguientes 0, sistema_gates_go_kill.nodos_previos 1; tras escribir: 0 y 1)
+  decision_factory_mentality.nodos_siguientes: 1 -> 2
+  sistema_gates_go_kill.nodos_previos   : 16 -> 17
+
+------------------------------------------------------------------------------
+RESUMEN: 9 par(es) de la ficha | 4 a escribir | 5 YA PRESENTES (saltadas) | 0 fallo(s)
+   YA PRESENTE: gestion_portafolio_dos_niveles -> sistema_gates_go_kill
+   YA PRESENTE: sistema_gates_go_kill -> portfolio_management
+   YA PRESENTE: sistema_gates_go_kill -> revision_portafolio_periodica
+   YA PRESENTE: gestion_portafolio_formal -> sistema_gates_go_kill
+   YA PRESENTE: gestion_portafolio_dos_niveles -> sistema_gates_go_kill
+guarda 7, ningun otro campo cambia en ningun nodo tocado: OK
+
+SIMULACION: cero escrituras. 4 arista(s) listas para --ejecutar.
+EXITCODE: 0

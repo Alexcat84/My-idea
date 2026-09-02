@@ -24,10 +24,26 @@ LAS GUARDAS, por arista y con su salida impresa:
   (4) YA PRESENTE no es un fallo, es un SALTO DECLARADO. Varias de estas
       operaciones estan a medias (el acta 139 lo midio), y escribir una arista
       que ya existe es fabricar una duplicada. Se cuenta y se nombra.
-  (5) UNA SOLA DIRECCION salvo los ENLACES MUTUOS. La direccion contraria se
-      mira ANTES de escribir: si existe y la operacion NO es mutua, es ROJO y
-      se aborta sin escribir nada. Que una operacion sea mutua NO lo decide
+  (5) UNA SOLA DIRECCION salvo los ENLACES MUTUOS Y LOS PARES QUE LA FICHA
+      EXCEPTUA POR ESCRITO. La direccion contraria se mira ANTES de escribir:
+      si existe y ni la operacion es mutua ni ese PAR esta exceptuado, es ROJO
+      y se aborta sin escribir nada. Que una operacion sea mutua NO lo decide
       este script: lo dice el campo `tipo` de su propia ficha (`ENLACE MUTUO`).
+      Y que un PAR este exceptuado tampoco lo decide este script: lo lee de la
+      `verificacion` de la ficha con `T.pares_exceptuados_de`, LA MISMA FUNCION
+      QUE LA VARA usa desde la TAREA 2.a de la vuelta 143, para que el que mide
+      y el que escribe lean la excepcion igual.
+
+      POR QUE SE ANADE, Y NO ES DOCTRINA NUEVA (adjudicacion 3.9 del acta de la
+      vuelta 141, con estas palabras): "La vara del 9.22 adjudica LA FIGURA, no
+      el permiso de escritura; quien autoriza a escribir es la ficha, por su
+      `aristas_nuevas` y bajo su verificacion. Mientras la verificacion 0 de
+      `OP-E-04` prohiba la vuelta sin excepcion escrita, escribir la direccion
+      que falta seria que la operacion escriba justo lo que su propia guarda le
+      prohibe. CON LA EXCEPCION ESCRITA EL PERMISO LLEGA, y entonces los pares
+      3 y 4 se escriben enteros, porque las dos direcciones de los dos ya estan
+      en su propio `aristas_nuevas`." La excepcion se escribio en la vuelta 142
+      y se commiteo en la 143.
   (6) CERO DUPLICADAS NUEVAS en las listas tocadas, comprobado TRAS RESOLVER
       (no basta con que el literal no se repita: dos literales distintos que
       resuelven al mismo nodo son una duplicada). LO QUE SE MIDE ES EL DELTA,
@@ -128,6 +144,10 @@ def main():
     fallos_parser = []
     pares = T.pares_de_aristas(op, fallos_parser)
     es_mutuo = "MUTUO" in (op.get("tipo") or "").upper()
+    # LA EXCEPCION SE LEE DE LA FICHA CON LA MISMA FUNCION QUE LA VARA
+    # (TAREA 3.b, vuelta 143). Ver la guarda 5 del docstring.
+    fallos_exc = []
+    pares_exceptuados, cita_exc, nomina_exc = T.pares_exceptuados_de(op, resolver, fallos_exc)
 
     modo = ("MUTACION NEGATIVA (nunca escribe)" if a.mutacion_negativa
             else ("EJECUTAR" if a.ejecutar else "SIMULAR"))
@@ -136,6 +156,14 @@ def main():
     print("=" * 78)
     print("tipo de la ficha        : %s" % op.get("tipo"))
     print("ENLACE MUTUO (del tipo) : %s" % es_mutuo)
+    print("PARES EXCEPTUADOS POR LA FICHA (leidos de su verificacion, no adivinados): %d%s"
+          % (len(nomina_exc), (" (%s; %s)" % (cita_exc, ", ".join(nomina_exc)))
+             if nomina_exc else ""))
+    for f in fallos_exc:
+        print("  [ROJO] %s" % f)
+    if fallos_exc:
+        print("SE ABORTA SIN ESCRIBIR NADA: la ficha dispara una excepcion que no se puede leer.")
+        return 1
     print("aristas de la ficha     : %d cadena(s), %d par(es) dirigido(s)"
           % (len(op.get("aristas_nuevas") or []), len(pares)))
     if fallos_parser:
@@ -209,16 +237,25 @@ def main():
             continue
         print("  guarda 4, no estaba puesta todavia: OK, hay que escribirla")
 
-        # (5) una sola direccion
+        # (5) una sola direccion, salvo MUTUO o PAR EXCEPTUADO POR ESCRITO
         inversa, _, _ = T.arista_presente(nodos, resolver, d, o)
         inversa_en_plan = any((po, pd) == (d, o) for po, pd, _, _ in planes)
-        if (inversa or inversa_en_plan) and not es_mutuo:
-            print("  guarda 5, UNA SOLA DIRECCION: ROJO (la inversa %s -> %s %s)"
+        par_exceptuado = frozenset((o, d)) in pares_exceptuados
+        if (inversa or inversa_en_plan) and not es_mutuo and not par_exceptuado:
+            print("  guarda 5, UNA SOLA DIRECCION: ROJO (la inversa %s -> %s %s, y ni la "
+                  "ficha dice MUTUO ni exceptua este par)"
                   % (d, o, "ya existe" if inversa else "esta en el plan de esta corrida"))
-            fallos.append("%s -> %s: la direccion contraria %s existe y la ficha NO dice MUTUO"
+            fallos.append("%s -> %s: la direccion contraria %s existe, la ficha NO dice MUTUO "
+                          "y este par NO esta en su excepcion escrita"
                           % (o, d, "ya" if inversa else "va en esta misma corrida"))
             continue
-        print("  guarda 5, UNA SOLA DIRECCION (o MUTUO declarado en la ficha): OK")
+        if (inversa or inversa_en_plan) and par_exceptuado:
+            print("  guarda 5, UNA SOLA DIRECCION: OK POR EXCEPCION ESCRITA DE LA FICHA. La "
+                  "inversa %s -> %s %s y el par %s esta en la excepcion (%s)"
+                  % (d, o, "ya existe" if inversa else "va en esta misma corrida",
+                     " <-> ".join(sorted((o, d))), cita_exc))
+        else:
+            print("  guarda 5, UNA SOLA DIRECCION (o MUTUO declarado en la ficha): OK")
 
         d_o = cargar(o)[0]
         d_d = cargar(d)[0]

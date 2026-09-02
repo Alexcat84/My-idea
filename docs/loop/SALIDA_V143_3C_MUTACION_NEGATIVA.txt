@@ -1,0 +1,15 @@
+MUTACION NEGATIVA: el giro se apunta a ab_testing_optimizacion -> analisis_de_cohortes, elegida POR COMPUTO porque tiene FORMA DE GIRO (la vuelta puesta y la ida ausente) y NO esta nombrada en ninguna aristas_nuevas del plan. Asi la guarda 3 pasa y la que tiene que morder es la 4.
+==============================================================================
+GIRO DE ARISTA . MODO MUTACION NEGATIVA (nunca escribe)
+se RETIRA la vuelta ab_testing_optimizacion -> analisis_de_cohortes y se ESCRIBE la ida analisis_de_cohortes -> ab_testing_optimizacion
+por la operacion OP-E-04
+==============================================================================
+guarda 1, los dos ids son DIRECTOS: no hay alias que resolver
+guarda 1, los dos extremos existen y estan VIVOS: OK
+guarda 2, cero auto-aristas: OK
+guarda 3, estado de partida: la VUELTA ab_testing_optimizacion -> analisis_de_cohortes esta puesta: True | la IDA analisis_de_cohortes -> ab_testing_optimizacion esta puesta: False
+guarda 3: OK, es un giro
+guarda 4, la ficha PROHIBE la vuelta y NOMBRA el par: ROJO
+   OP-E-04 trae la clausula de escalera pero NO NOMBRA este par en sus aristas_nuevas: la contraorden cubre la vuelta de UNA FILA SUYA, no cualquier arista del grafo
+SE ABORTA SIN ESCRIBIR NADA (guarda 3.d del encargo).
+EXITCODE: 1
