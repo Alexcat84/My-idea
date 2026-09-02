@@ -1,0 +1,45 @@
+==============================================================================
+RELECTURA AL DOBLE DEL TRAMO | FASE 06_MESAS | REF: WORK
+El tramo: toda arista escrita o declarada cumplida SIN haber medido su vuelta.
+Ninguna direccion se salta por estar YA PRESENTE: esa es la que la caida 4.1
+del acta 140 dejo sin mirar.
+==============================================================================
+
+| operacion | regimen de vuelta (de la ficha) | direccion resuelta | lectura | IDA | VUELTA |
+|---|---|---|---|---|---|
+| OP-E-04 | PROHIBE | gestion_portafolio_dos_niveles -> sistema_gates_go_kill | LD-35, LD-51 | SI | SI |
+| OP-E-04 | PROHIBE | sistema_gates_go_kill -> portfolio_management | LD-40 | SI | no |
+| OP-E-04 | PROHIBE | sistema_gates_go_kill -> revision_portafolio_periodica | LD-42 | no | SI |
+| OP-E-04 | PROHIBE | sistema_gates_go_kill -> gestion_portafolio_foco | LD-45 | no | no |
+| OP-E-04 | PROHIBE | portfolio_management -> sistema_gates_go_kill | LD-48 | no | SI |
+| OP-E-04 | PROHIBE | gestion_portafolio_formal -> sistema_gates_go_kill | LD-49 | SI | SI |
+| OP-E-04 | PROHIBE | gestion_portafolio_foco -> sistema_gates_go_kill | LD-53 | no | no |
+| OP-E-04 | PROHIBE | decision_factory_mentality -> sistema_gates_go_kill | LD-55 | no | no |
+| OP-E-05 | MUTUO | sistema_gates_go_kill -> gestion_portafolio_formal | LD-41 | SI | SI |
+| OP-E-05 | MUTUO | gestion_portafolio_formal -> sistema_gates_go_kill | LD-41 | SI | SI |
+| OP-E-05 | MUTUO | sistema_gates_go_kill -> gestion_portafolio_dos_niveles | LD-43 | SI | SI |
+| OP-E-05 | MUTUO | gestion_portafolio_dos_niveles -> sistema_gates_go_kill | LD-43 | SI | SI |
+| OP-M-01-ESLABONES | PROHIBE | stage_gate_system -> sistema_gates_go_kill | LD-56 | SI | no |
+| OP-M-01-ESLABONES | PROHIBE | sistema_gates_go_kill -> asignacion_recursos_en_gates | LD-57 | SI | no |
+| OP-M-01-SEXTO | PROHIBE | gestion_de_portafolio_gates_go_kill -> sistema_gates_go_kill | (sin LD) | SI | no |
+| OP-M-03-ENLACES | PROHIBE | pivotar_o_perseverar -> pivote_estrategico | (sin LD) | SI | no |
+| OP-M-03-ENLACES | PROHIBE | pivote_o_proceder -> pivote_estrategico | (sin LD) | SI | no |
+| OP-M-05-APERTURA | SIN REGLA | customer_validation -> customer_validation_sell_phase | LD-59 | SI | no |
+
+CIFRA DEL TRAMO RELEIDO AL DOBLE:
+   direcciones releidas con IDA Y VUELTA a la vez: 18
+   direcciones con LA VUELTA PRESENTE: 8
+      OP-E-04 | sistema_gates_go_kill -> gestion_portafolio_dos_niveles | por LD-35, LD-51
+      OP-E-04 | revision_portafolio_periodica -> sistema_gates_go_kill | por LD-42
+      OP-E-04 | sistema_gates_go_kill -> portfolio_management | por LD-48
+      OP-E-04 | sistema_gates_go_kill -> gestion_portafolio_formal | por LD-49
+      OP-E-05 | gestion_portafolio_formal -> sistema_gates_go_kill | por LD-41
+      OP-E-05 | sistema_gates_go_kill -> gestion_portafolio_formal | por LD-41
+      OP-E-05 | gestion_portafolio_dos_niveles -> sistema_gates_go_kill | por LD-43
+      OP-E-05 | sistema_gates_go_kill -> gestion_portafolio_dos_niveles | por LD-43
+   de esas, en una ficha que PROHIBE la vuelta: 4
+      OP-E-04 | sistema_gates_go_kill -> gestion_portafolio_dos_niveles | por LD-35, LD-51
+      OP-E-04 | revision_portafolio_periodica -> sistema_gates_go_kill | por LD-42
+      OP-E-04 | sistema_gates_go_kill -> portfolio_management | por LD-48
+      OP-E-04 | sistema_gates_go_kill -> gestion_portafolio_formal | por LD-49
+EXITCODE: 0
