@@ -1,0 +1,110 @@
+==============================================================================
+OP-M-05-APERTURA . LA APERTURA DE CUSTOMER VALIDATION, DE BLANK: customer_validation absorbe a filosofia_customer_validation y a introduccion_validacion_clientes. Se funde EL TRIANGULO CERRADO DE TRES y customer_validation_sell_phase queda fuera y se enlaza, como LD-59 corrigio el 12 ago 2026 . MODO EJECUTAR
+plan: docs/loop/PLAN_V139_OPM05APERTURA.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3173 vivos, 680 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive customer_validation . absorbe filosofia_customer_validation, introduccion_validacion_clientes
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 11 (anadidos 6) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 4 de filosofia_customer_validation al PASO 4 del superviviente
+        inciso VERBATIM: 'usuarios o clics reales, no solo respuestas de encuestas'
+        nexo (lo unico de cosecha propia): ', y cuentan como evidencia los '
+        paso resultante: Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar, y cuentan como evidencia los usuarios o clics reales, no solo respuestas de encuestas
+  alias del superviviente: ['filosofia_customer_validation', 'introduccion_validacion_clientes']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 18
+   business_model_canvas_scorecard                      nodos_siguientes  filosofia_customer_validation -> customer_validation
+   checkpoints_validacion                               nodos_previos     filosofia_customer_validation -> customer_validation
+   coraje_decision_ceo                                  nodos_previos     introduccion_validacion_clientes -> customer_validation
+   customer_discovery                                   nodos_siguientes  filosofia_customer_validation -> customer_validation
+   customer_validation_sales_roadmap                    nodos_previos     filosofia_customer_validation -> customer_validation
+   customer_validation_sell_phase                       nodos_previos     introduccion_validacion_clientes -> customer_validation
+   decision_pivotar_o_proceder                          nodos_previos     filosofia_customer_validation -> customer_validation
+   decision_pivotar_o_proceder                          nodos_siguientes  introduccion_validacion_clientes -> customer_validation
+   establecer_linea_base_mvp                            nodos_previos     filosofia_customer_validation -> customer_validation
+   eventos_offline_como_canal_traccion                  nodos_previos     introduccion_validacion_clientes -> customer_validation
+   filosofia_validacion_clientes                        nodos_previos     introduccion_validacion_clientes -> customer_validation
+   fundadores_lideran_validacion                        nodos_previos     filosofia_customer_validation -> customer_validation
+   gestion_alucinaciones_ia                             nodos_siguientes  introduccion_validacion_clientes -> customer_validation
+   get_out_building_test_sell                           nodos_previos     filosofia_customer_validation -> customer_validation
+   lienzo_modelo_negocio                                nodos_siguientes  filosofia_customer_validation -> customer_validation
+   preservar_efectivo_buscar_modelo                     nodos_siguientes  introduccion_validacion_clientes -> customer_validation
+   priorizar_elementos_a_validar                        nodos_previos     filosofia_customer_validation -> customer_validation
+   realizar_pruebas_pasa_no_pasa                        nodos_previos     introduccion_validacion_clientes -> customer_validation
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 3
+   business_model_canvas_como_scorecard                 nodos_siguientes  filosofia_customer_validation (registro historico)
+   eventos_offline_propios                              nodos_previos     introduccion_validacion_clientes (registro historico)
+   restriccion_gasto_validacion                         nodos_siguientes  introduccion_validacion_clientes (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 6
+   business_model_canvas_scorecard                      nodos_siguientes
+   checkpoints_validacion                               nodos_previos
+   customer_discovery                                   nodos_siguientes
+   decision_pivotar_o_proceder                          nodos_previos
+   preservar_efectivo_buscar_modelo                     nodos_siguientes
+   realizar_pruebas_pasa_no_pasa                        nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 866   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 865   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 1, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 5 de 5
+guarda D, los 2 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (12 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 filosofia_customer_validation                paso         1  ya lo dice la CONDICION 1 del superviviente
+        Revisa las hipótesis de negocio que ya confirmaste hablando con clientes
+    1 filosofia_customer_validation                paso         2  ya lo dice el PASO 1 del superviviente
+        Prepara tu primera versión del producto (MVP) y los materiales que necesitas para vender y difundirlo
+    1 filosofia_customer_validation                paso         3  ya lo dice el PASO 4 del superviviente
+        Sal a pedir pedidos reales, no solo opiniones
+    1 filosofia_customer_validation                paso         4  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Confirma que haya pedidos, usuarios o clics reales, no solo respuestas de encuestas
+    1 filosofia_customer_validation                paso         5  PASO 6 del superviviente
+        Responde estas tres preguntas: ¿puede crecer tu negocio?, ¿tu forma de vender se repite?, ¿puedes predecir cuánta gente avanza hacia la compra?
+    1 filosofia_customer_validation                condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando ya hablaste con clientes y confirmaste tus hipótesis, y necesitas comprobar si tu negocio realmente genera ventas
+    1 introduccion_validacion_clientes             paso         1  PASO 7 del superviviente
+        Probar la repetibilidad del proceso de ventas o adquisición de usuarios
+    1 introduccion_validacion_clientes             paso         2  PASO 8 del superviviente
+        Buscar pedidos u órdenes reales a precio completo como prueba de validación
+    1 introduccion_validacion_clientes             paso         3  PASO 9 del superviviente
+        Probar canales de ventas y distribución
+    1 introduccion_validacion_clientes             paso         4  PASO 10 del superviviente
+        Escuchar activamente a los clientes para identificar pivotes necesarios
+    1 introduccion_validacion_clientes             paso         5  PASO 11 del superviviente
+        Posicionar correctamente el producto y la empresa
+    1 introduccion_validacion_clientes             condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el equipo decidió 'proceder' tras el descubrimiento de clientes y necesita iniciar la fase de validación
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 1
+  nodos implicados    : 3
+  nodos que MUEREN    : 2
+  piezas repartidas   : 12 (6 viajan enteras, 5 ya estaban dichas, 0 ya viajan en el acto)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 20
+censo DESPUES: 3853 ficheros, 3171 vivos, 682 deprecados
+censo ANTES  : 3853 ficheros, 3173 vivos, 680 deprecados
+delta deprecados: +2 (esperado +2): OK
+EXITCODE: 0

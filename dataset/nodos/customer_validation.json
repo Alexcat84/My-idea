@@ -9,8 +9,14 @@
     "Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes",
     "Diseña un plan de ventas y pruébalo en el terreno con tus primeros clientes",
     "Mide si por cada peso que inviertes en ventas y marketing te regresan el doble (o la proporción que hayas definido)",
-    "Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar",
-    "Evalúa si ya alcanzaste el impulso suficiente para pasar a escalar"
+    "Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar, y cuentan como evidencia los usuarios o clics reales, no solo respuestas de encuestas",
+    "Evalúa si ya alcanzaste el impulso suficiente para pasar a escalar",
+    "Responde estas tres preguntas: ¿puede crecer tu negocio?, ¿tu forma de vender se repite?, ¿puedes predecir cuánta gente avanza hacia la compra?",
+    "Probar la repetibilidad del proceso de ventas o adquisición de usuarios",
+    "Buscar pedidos u órdenes reales a precio completo como prueba de validación",
+    "Probar canales de ventas y distribución",
+    "Escuchar activamente a los clientes para identificar pivotes necesarios",
+    "Posicionar correctamente el producto y la empresa"
   ],
   "entregable_esperado": "Evidencia con números de que tienes un modelo de negocio que se puede repetir y escalar, incluyendo qué tanto te regresa lo que inviertes en ventas y marketing",
   "nodos_previos": [
@@ -22,7 +28,10 @@
     "preservar_efectivo_buscar_modelo",
     "product_market_fit",
     "producto_minimo_viable",
-    "customer_development_process"
+    "customer_development_process",
+    "decision_pivotar_o_proceder",
+    "gestion_alucinaciones_ia",
+    "lienzo_modelo_negocio"
   ],
   "nodos_siguientes": [
     "customer_creation",
@@ -33,11 +42,36 @@
     "prueba_mvp_alta_fidelidad",
     "mvp_alta_fidelidad",
     "checkpoints_validacion",
-    "realizar_pruebas_pasa_no_pasa"
+    "realizar_pruebas_pasa_no_pasa",
+    "coraje_decision_ceo",
+    "customer_validation_sales_roadmap",
+    "customer_validation_sell_phase",
+    "establecer_linea_base_mvp",
+    "eventos_offline_como_canal_traccion",
+    "filosofia_validacion_clientes",
+    "fundadores_lideran_validacion",
+    "get_out_building_test_sell",
+    "priorizar_elementos_a_validar"
   ],
   "condiciones_activacion": [
     "Si ya terminaste el descubrimiento de clientes y confirmaste el problema y la solución",
     "Si necesitas comprobar que puedes escalar antes de invertir fuerte en crecimiento"
   ],
-  "etiqueta_arbol": "Valida tu Modelo con Clientes"
+  "etiqueta_arbol": "Valida tu Modelo con Clientes",
+  "ids_alias": [
+    "filosofia_customer_validation",
+    "introduccion_validacion_clientes"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "filosofia_customer_validation",
+      "titulo": "Cómo comprobar que tu cliente compra de verdad (Customer Validation)",
+      "fuente": "The Startup Owner's Manual - Blank, Steve"
+    },
+    {
+      "node_id": "introduccion_validacion_clientes",
+      "titulo": "Introducción a la Validación de Clientes (Customer Validation)",
+      "fuente": "The Startup Owner's Manual - Blank, Steve"
+    }
+  ]
 }

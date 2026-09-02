@@ -1,0 +1,55 @@
+VERIFICACIONES DE LA FICHA DE OP-M-05-APERTURA, SOBRE EL NODO ESCRITO
+Comparacion SIN TILDES. Los veredictos los COMPUTA el codigo, no son frases.
+==============================================================================
+CIFRA pasos del superviviente: 11 lineas
+  PASO 1: Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes
+  PASO 2: Diseña un plan de ventas y pruébalo en el terreno con tus primeros clientes
+  PASO 3: Mide si por cada peso que inviertes en ventas y marketing te regresan el doble (o la proporción que hayas definido)
+  PASO 4: Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar, y cuentan como evidencia los usuarios o clics reales, no solo respuestas de encuestas
+  PASO 5: Evalúa si ya alcanzaste el impulso suficiente para pasar a escalar
+  PASO 6: Responde estas tres preguntas: ¿puede crecer tu negocio?, ¿tu forma de vender se repite?, ¿puedes predecir cuánta gente avanza hacia la compra?
+  PASO 7: Probar la repetibilidad del proceso de ventas o adquisición de usuarios
+  PASO 8: Buscar pedidos u órdenes reales a precio completo como prueba de validación
+  PASO 9: Probar canales de ventas y distribución
+  PASO 10: Escuchar activamente a los clientes para identificar pivotes necesarios
+  PASO 11: Posicionar correctamente el producto y la empresa
+
+--- verificacion [2]: LAS TRES PREGUNTAS DE ESCALA, UNA POR UNA ---
+   puede crecer tu negocio                    pasos [6]
+   tu forma de vender se repite               pasos [6]
+   puedes predecir cuanta gente avanza        pasos [6]
+   VEREDICTO COMPUTADO: las TRES estan: True
+
+--- preservar[3], SUS TRES PARTES ---
+   la repetibilidad del proceso de ventas     pasos [7]
+   pedidos a PRECIO COMPLETO                  pasos [8]
+   los canales de ventas y distribucion       pasos [9]
+
+--- preservar[5], LO SUYO QUE EL HIJO NO TOCA ---
+   identificar los PIVOTES escuchando         pasos [10]
+   POSICIONAR el producto y la empresa        pasos [11]
+
+--- preservar[2]: EL NUCLEO VIVE DENTRO Y VIAJA SOLO EL MATIZ (el INCISO) ---
+   el matiz de clics y usuarios contra encuestas: pasos [4]
+      paso 4: Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar, y cuentan como evidencia los usuarios o clics reales, no solo respuestas de encuestas
+
+--- EL SOLAPE DECLARADO: la repetibilidad de la venta, CUANTAS VECES ---
+   CIFRA pasos que hablan de que la venta se repite: 2 lineas
+      paso 6: Responde estas tres preguntas: ¿puede crecer tu negocio?, ¿tu forma de vender se repite?, ¿puedes predecir cuánta gente avanza hacia la compra?
+      paso 7: Probar la repetibilidad del proceso de ventas o adquisición de usuarios
+   VEREDICTO COMPUTADO: aparece 2 vez/veces. ES EL SOLAPE QUE EL CONTENIDO
+   DECLARA: una como PRUEBA que se corre y otra como PREGUNTA de puerta.
+   Candidato a la poda de la fase 04, y va marcado DISCUTIBLE.
+
+--- verificacion [6]: LO PROPIO DEL HIJO SIGUE EN EL HIJO ---
+   customer_validation_sell_phase deprecado: False (tiene que ser False)
+   la pieza del hijo, en el hijo    : pasos [4]
+      paso 4: Confirma cómo es el proceso real de compra y de aprobación dentro del negocio de tu cliente
+   la pieza del hijo, en el superviv.: pasos NINGUNO
+   VEREDICTO COMPUTADO: sigue en el hijo y NO se copio arriba: True
+
+--- verificacion [4]: EL ALIAS CARGA LOS DOS IDS ---
+ids_alias: ['filosofia_customer_validation', 'introduccion_validacion_clientes']
+   filosofia_customer_validation        en alias: True | deprecado: True
+   introduccion_validacion_clientes     en alias: True | deprecado: True
+EXITCODE: 0

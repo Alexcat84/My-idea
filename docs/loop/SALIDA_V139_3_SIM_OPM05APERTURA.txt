@@ -1,0 +1,56 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### customer_validation  <==  filosofia_customer_validation
+  1. DESEMPATE POR CABLEADO
+     customer_validation                          pasos  5 | nombra 18 | LO NOMBRAN 18
+     filosofia_customer_validation                pasos  5 | nombra 10 | LO NOMBRAN 10
+     >>> gana customer_validation por 18 contra 10
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['filosofia_customer_validation']
+  3. ENTRADAS QUE SE REDIRIGEN
+     business_model_canvas_scorecard              nodos_siguientes  -> customer_validation
+     checkpoints_validacion                       nodos_previos     -> customer_validation
+     customer_discovery                           nodos_siguientes  -> customer_validation
+     customer_validation_sales_roadmap            nodos_previos     -> customer_validation
+     decision_pivotar_o_proceder                  nodos_previos     -> customer_validation
+     establecer_linea_base_mvp                    nodos_previos     -> customer_validation
+     fundadores_lideran_validacion                nodos_previos     -> customer_validation
+     get_out_building_test_sell                   nodos_previos     -> customer_validation
+     lienzo_modelo_negocio                        nodos_siguientes  -> customer_validation
+     priorizar_elementos_a_validar                nodos_previos     -> customer_validation
+
+### customer_validation  <==  introduccion_validacion_clientes
+  1. DESEMPATE POR CABLEADO
+     customer_validation                          pasos  5 | nombra 18 | LO NOMBRAN 18
+     introduccion_validacion_clientes             pasos  5 | nombra  8 | LO NOMBRAN  8
+     >>> gana customer_validation por 18 contra 8
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['introduccion_validacion_clientes']
+  3. ENTRADAS QUE SE REDIRIGEN
+     coraje_decision_ceo                          nodos_previos     -> customer_validation
+     customer_validation_sell_phase               nodos_previos     -> customer_validation
+     decision_pivotar_o_proceder                  nodos_siguientes  -> customer_validation
+     eventos_offline_como_canal_traccion          nodos_previos     -> customer_validation
+     filosofia_validacion_clientes                nodos_previos     -> customer_validation
+     gestion_alucinaciones_ia                     nodos_siguientes  -> customer_validation
+     preservar_efectivo_buscar_modelo             nodos_siguientes  -> customer_validation
+     realizar_pruebas_pasa_no_pasa                nodos_previos     -> customer_validation
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     business_model_canvas_scorecard              nodos_siguientes  -> customer_validation
+     checkpoints_validacion                       nodos_previos     -> customer_validation
+     customer_discovery                           nodos_siguientes  -> customer_validation
+     decision_pivotar_o_proceder                  nodos_previos     -> customer_validation
+     preservar_efectivo_buscar_modelo             nodos_siguientes  -> customer_validation
+     realizar_pruebas_pasa_no_pasa                nodos_previos     -> customer_validation
+     TOTAL NUEVAS: 6
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ninguna
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     NINGUNA: el acto queda sin aristas internas tras la fusion
+EXITCODE: 0

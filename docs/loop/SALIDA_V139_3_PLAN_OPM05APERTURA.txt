@@ -1,0 +1,33 @@
+==============================================================================
+GENERADOR DEL PLAN DE LA FUSION DE MESA OP-M-05-APERTURA (vuelta 139)
+  ficha leida de: docs/plan/OPERACIONES.jsonl
+  tipo: FUSION DE MESA | estado: LISTA | fecha de corte: 2026-08-12
+==============================================================================
+
+  LA FICHA MANDA, y esto es lo que dice:
+     nodos         : customer_validation, filosofia_customer_validation, introduccion_validacion_clientes
+     superviviente : customer_validation
+     eliminar      : filosofia_customer_validation, introduccion_validacion_clientes
+     guarda 1B, ningun absorbido es puerta: OK
+     los 3 miembros vivos y presentes: OK
+
+  EL SUPERVIVIENTE DE HOY: 5 pasos y 2 condiciones
+  FORMATO DEL REPARTO: pasos POR PAR (absorbido, numero de paso) | condiciones POR PAR (absorbido, numero de paso)
+  EL ABSORBIDO filosofia_customer_validation: 5 pasos y 1 condiciones
+  INCISO al paso 4 del superviviente
+      trozo pedido en ASCII  : 'usuarios o clics reales, no solo respuestas de encuestas'
+      trozo EXTRAIDO del nodo: 'usuarios o clics reales, no solo respuestas de encuestas'
+      paso resultante        : Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar, y cuentan como evidencia los usuarios o clics reales, no solo respuestas de encuestas
+  EL ABSORBIDO introduccion_validacion_clientes: 5 pasos y 1 condiciones
+
+  LA FICHA EN VERDE: cobertura exacta, guarda 1B, incisos extraidos y verbatim.
+  REPARTO: piezas 12 (enteras 6, ya dichas 5, de INCISO 1, que ya viajan en el acto 0)
+
+  LAS PERDIDAS SELLADAS EN CAMPO PROPIO (contrato CAMPO PROPIO v1):
+     perdidas selladas: 0
+        NINGUNA, y la lista vacia es una DECLARACION de cero perdidas.
+
+  plan escrito: docs\loop\PLAN_V139_OPM05APERTURA.json
+
+FIN
+EXITCODE: 0

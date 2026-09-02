@@ -1,0 +1,92 @@
+{
+ "operacion": "OP-M-05-APERTURA",
+ "rotulo": "LA APERTURA DE CUSTOMER VALIDATION, DE BLANK: customer_validation absorbe a filosofia_customer_validation y a introduccion_validacion_clientes. Se funde EL TRIANGULO CERRADO DE TRES y customer_validation_sell_phase queda fuera y se enlaza, como LD-59 corrigio el 12 ago 2026",
+ "fecha": "2026-09-02",
+ "estado": "SELLADO",
+ "contrato_de_perdidas": "CAMPO PROPIO v1",
+ "vuelta": 139,
+ "tramo": "NO ES UN TRAMO: es la fusion de mesa OP-M-05-APERTURA",
+ "ficha_tipo": "FUSION DE MESA",
+ "ficha_fecha_corte": "2026-08-12",
+ "ficha_adjudicacion": "LA APERTURA DE CUSTOMER VALIDATION. Cinco de sus seis pares estan leidos y los CINCO en A: 781, 247, 709, 245 y 549. Sobrevive customer_validation. P.8 EN ORDEN: el contenido esta empatado y el archivo lo dice, los dos LISTAN LAS ACTIVIDADES DE LA ETAPA y coinciden en las tres centrales (549); el cableado decide, 14 contra 8 contra 6 contra 5. FORMA CORREGIDA EL 12 ago 2026 POR LD-59, Y SE TRAE. El sexto par NO era el que faltaba: ERA EL QUE DECIDIA. customer_validation_sell_phase contra introduccion_validacion_clientes sale D, y de MADRE E HIJO: la segunda LISTA las cinco actividades de la etapa y la primera TRAE EL PROCEDIMIENTO de las dos primeras. LA APERTURA NO ES UNA FAMILIA PLANA DE CUATRO: es un TRIANGULO CERRADO DE TRES mas un hijo. SE FUNDE EL TRIANGULO CERRADO, customer_validation con filosofia_customer_validation y con introduccion_validacion_clientes, cuyos tres pares estan leidos y son A (247, 709, 549). customer_validation_sell_phase QUEDA FUERA Y SE ENLAZA como hijo.",
+ "ficha_preservar": [
+  "de filosofia_customer_validation: LAS TRES PREGUNTAS DE ESCALA, si el negocio puede crecer, si la forma de vender se repite, y si se puede pagar la adquisicion",
+  "VIVE DENTRO EN SU NUCLEO: confirmar con ventas reales y con dinero de por medio es el paso 4 del superviviente. VIAJA SOLO EL MATIZ, que los clics y los usuarios cuentan como evidencia y las respuestas de encuesta no",
+  "de introduccion_validacion_clientes y filosofia_customer_validation: probar que el proceso de venta SE REPITE, buscar pedidos a PRECIO COMPLETO como prueba dura, y probar los canales",
+  "YA NO APLICA: customer_validation_sell_phase DEJO DE ENTRAR en esta fusion por LD-59. El nodo sigue vivo y se queda con su pieza. Se retira de la lista",
+  "de introduccion_validacion_clientes, y son lo suyo que el hijo NO toca: identificar los PIVOTES necesarios escuchando activamente, y POSICIONAR correctamente el producto y la empresa"
+ ],
+ "ficha_verificacion": [
+  "SIMULADA (P.7): TRES duplicadas nuevas, business_model_canvas_scorecard.nodos_siguientes, customer_creation.nodos_previos y customer_discovery.nodos_siguientes. Para OP-S-12",
+  "las cuatro perdidas estan en el texto final, y las TRES PREGUNTAS DE ESCALA se comprueban una por una",
+  "TRAS LA FUSION SE RELEE earlyvangelists_ventas_tempranas CONTRA EL SUPERVIVIENTE, por el banco 9.10, y la razon esta en la nota",
+  "customer_validation_sell_phase NO ENTRA EN LA FUSION: su D con introduccion_validacion_clientes lo deja fuera, y meterlo seria fundir sobre un D",
+  "TRAS LA FUSION SE RELEEN SUS DOS A CONTRA EL SUPERVIVIENTE, el 781 y el 245, por el banco 9.10: los dos eran A con nodos que mueren o cambian, y uno de ellos, filosofia_customer_validation, desaparece dentro del superviviente",
+  "lo propio del hijo se comprueba que SIGUE EN EL HIJO y no se copia arriba: confirmar el proceso real de compra y de aprobacion DENTRO DEL NEGOCIO DEL CLIENTE, que no esta en ninguno de los otros tres",
+  "PASADA DE PERDIDAS RECOMPUTADAS (P.13), 12 ago 2026: cada perdida listada comprobada contra la nomina COMPLETA de esta fusion y contra el texto del superviviente. Las que viven dentro estan reclasificadas y no se injertan"
+ ],
+ "ficha_evidencia": [
+  "puestos 781, 247, 709, 245 y 549, los cinco en A",
+  "scripts/plan/simular_fusion.py (P.7), corrida del 12 ago 2026",
+  "MEDIDO: cableado 14 contra 8 contra 6 contra 5",
+  "puesto 1096: la perdida de earlyvangelists ya esta nombrada por el archivo",
+  "docs/plan/LD_CADENA.md, del 12 ago 2026"
+ ],
+ "ficha_nota": "LA PERDIDA NOMBRADA POR EL ARCHIVO, Y SE PRESERVA CON NOMBRE: el puesto 1096 dice que si earlyvangelists_ventas_tempranas se funde SE PIERDE SU UNICO GESTO PROPIO, DECIR EN VOZ ALTA A QUIEN SE LE VENDE EN ESTA ETAPA, porque la filosofia dice clientes y NUNCA DICE PRIMEROS CONVENCIDOS. PERO earlyvangelists NO ENTRA EN ESTA FUSION, y el motivo es el hueco que la mesa deja escrito: su UNICA A es con filosofia_customer_validation (1096), que MUERE aqui, y es D con customer_validation (1185), con filosofia_validacion_clientes (436) y con introduccion_validacion_clientes (697). AL FUNDIR, SU A SE CONVIERTE EN UNA CONTRADICCION CON SU PROPIA D: pasaria a ser A con un nodo con el que ya salio D. ES OTRO NODO PUENTE, y se resuelve como manda el banco 9.10: SE RELEE CONTRA EL SUPERVIVIENTE. Si sale A, se funde y la perdida viaja con su nombre; si sale D, se queda y se enlaza. NO SE DECIDE AQUI POR ADELANTADO. CORREGIDA EL 12 ago 2026 POR LD-59. Y APARECE EL MISMO PUENTE QUE EN LA MESA UNIDA: customer_validation y filosofia_customer_validation son A con los dos lados, y los dos lados son D entre si. LA DIFERENCIA ES QUE AQUI YA NO QUEDA LECTURA QUE DESEMPATE: las seis estan hechas. Por eso se funde SOLO el triangulo cerrado y el cuarto se enlaza, que es la unica forma que no contradice ninguna lectura. Y CAE UNA ENTRADA DE LA COLA DE RELECTURA: el puesto 751, customer_validation_sell_phase contra verificar_product_market_fit, ya NO hay que releerlo, porque ese nodo deja de morir.",
+ "ficha_depende_de": [
+  "OP-M-05",
+  "OP-M-04",
+  "OP-M-03-II"
+ ],
+ "ficha_bloquea_a": [],
+ "simulacion_de_hoy": "scripts/plan/simular_fusion.py, corrida el 2 sep 2026 ANTES de fundir, salida sellada en docs/loop/SALIDA_V139_3_SIM_OPM05APERTURA.txt: SEIS duplicadas nuevas donde la ficha decia TRES, y solo DOS de los nombres coinciden; CERO auto aristas; CERO aristas internas del acto que sobrevivan; y cableado 18 contra 10 y 18 contra 8, donde la ficha decia 14 contra 8 contra 6 contra 5 sobre una nomina de cuatro. Las divergencias van declaradas, no resueltas copiando.",
+ "actos": [
+  {
+   "orden": 1,
+   "miembros": [
+    "customer_validation",
+    "filosofia_customer_validation",
+    "introduccion_validacion_clientes"
+   ],
+   "miembros_del_acto_entero": [
+    "customer_validation",
+    "filosofia_customer_validation",
+    "introduccion_validacion_clientes"
+   ],
+   "figura": "FUSION DE MESA, la ficha la escribe con su adjudicacion sellada",
+   "superviviente": "customer_validation",
+   "motivo": "EL SUPERVIVIENTE LO FIJA LA FICHA SELLADA Y AQUI NO SE RE-ADJUDICA: docs/plan/OPERACIONES.jsonl escribe superviviente customer_validation el 12 ago 2026, por P.8 en orden: el contenido esta empatado (los dos LISTAN LAS ACTIVIDADES DE LA ETAPA y coinciden en las tres centrales, puesto 549) y decide el cableado. LA REGLA DE LA FICHA ENVEJECIDA (P.9, P.13) SE APLICA Y SE DECLARA, y aqui las DOS cifras se mueven:   (a) CABLEADO. La ficha escribe MEDIDO: cableado 14 contra 8 contra 6 contra 5 (12 ago 2026), que es una cuenta de CUATRO nodos, la nomina de antes de LD-59. La simulacion del 2 sep 2026 mide 18 contra 10 y 18 contra 8 sobre los TRES que hoy se funden. NO VOLTEA NADA: customer_validation gana por casi el doble contra los dos.   (b) DUPLICADAS. La ficha escribe TRES y las nombra: business_model_canvas_scorecard.nodos_siguientes, customer_creation.nodos_previos y customer_discovery.nodos_siguientes. La simulacion de hoy mide SEIS, y SOLO DOS DE LOS NOMBRES COINCIDEN: siguen business_model_canvas_scorecard y customer_discovery, YA NO ESTA customer_creation, y aparecen checkpoints_validacion.nodos_previos, decision_pivotar_o_proceder.nodos_previos, preservar_efectivo_buscar_modelo.nodos_siguientes y realizar_pruebas_pasa_no_pasa.nodos_previos. ES LA DIVERGENCIA MAS GRANDE DE LAS CINCO MESAS DE ESTA VUELTA, y se declara entera en vez de copiarse: las SEIS siguen enrutadas a OP-S-12 por la propia ficha, que se equivoco en la cantidad y en cuatro nombres, no en el destino. CERO auto aristas y CERO aristas internas del acto que sobrevivan, las dos como la ficha dice. LECTURA DE ACTO POR P.5, RE-CORRIDA HOY ANTES DE FUNDIR: 3 pares leidos = 3 pares del acto, EXIT 0. Los tres del triangulo estan en A (247, 709 y 549). customer_validation_sell_phase NO ENTRA, y no por olvido: su D con introduccion_validacion_clientes lo deja fuera, y meterlo seria fundir sobre un D (verificacion 4 de la ficha). TRES RELECTURAS QUEDAN PENDIENTES Y NO SE TOCAN AQUI, todas por el banco 9.10 y todas escritas por la ficha: earlyvangelists_ventas_tempranas contra el superviviente (verificacion 3), y los puestos 781 y 245 contra el superviviente (verificacion 5). NO SE DECIDEN POR ADELANTADO.",
+   "absorbidos": [
+    "filosofia_customer_validation",
+    "introduccion_validacion_clientes"
+   ],
+   "pasos": {
+    "filosofia_customer_validation": {
+     "1": "CUBIERTO_COND:1",
+     "2": "CUBIERTO:1",
+     "3": "CUBIERTO:4",
+     "4": "INCISO:4|usuarios o clics reales, no solo respuestas de encuestas|, y cuentan como evidencia los ",
+     "5": "APPEND"
+    },
+    "introduccion_validacion_clientes": {
+     "1": "APPEND",
+     "2": "APPEND",
+     "3": "APPEND",
+     "4": "APPEND",
+     "5": "APPEND"
+    }
+   },
+   "condiciones": {
+    "filosofia_customer_validation": {
+     "1": "CUBIERTO:1"
+    },
+    "introduccion_validacion_clientes": {
+     "1": "CUBIERTO:1"
+    }
+   },
+   "nota_del_reparto": "DOCE PIEZAS REPARTIDAS ENTRE DOS ABSORBIDOS, 10 de paso y 2 de condicion, y el reparto lo CUENTA EL GENERADOR de las marcas: esta nota no lo teclea. CERO VIAJA_EN_EL_ACTO EN ESTA MESA, Y ES LA DISCREPANCIA QUE ESTA VUELTA TRAE MARCADA. El acta 138 conto esta mesa como el TERCER grupo donde el hueco muerde. Medido pieza por pieza antes de marcar nada, no cuadra asi: la pieza de la linea 3 de preservar tiene TRES partes y las tres estan en introduccion_validacion_clientes (repetibilidad en su paso 1, precio completo en su paso 2, canales en su paso 3); el paso 5 de filosofia_customer_validation NO contiene esa pieza, contiene LAS TRES PREGUNTAS DE ESCALA, que son la linea 1 de preservar, y de las tres partes de la linea 3 solo toca UNA, la repetibilidad, y la toca como PREGUNTA DE PUERTA y no como prueba que se corre. LOS DOS TRAEN MATICES QUE EL OTRO NO TRAE, y la regla del propio auditor dice que entonces cada uno es PIEZA PROPIA y viaja con su propia marca. Los dos van de APPEND. Y SE DECLARA EL SOLAPE EN VEZ DE CALLARLO: en el texto final la repetibilidad de la venta aparece DOS VECES, una como prueba y otra como pregunta de puerta dentro de las tres preguntas de escala. Es candidato legitimo a la poda de la fase 04. EL UNICO INCISO ES EL QUE LA FICHA MANDA, con sus palabras: su linea 2 de preservar dice VIVE DENTRO EN SU NUCLEO, confirmar con ventas reales y con dinero de por medio es el paso 4 del superviviente, y VIAJA SOLO EL MATIZ, que los clics y los usuarios cuentan como evidencia y las respuestas de encuesta no. El trozo se EXTRAE VERBATIM del paso 4 de la filosofia y se adosa al paso 4 del superviviente, que no cierra en punto. Es la unica linea de preservar de las cinco mesas que pide expresamente un matiz y no una pieza. UN CUBIERTO_COND, Y ES EL PRIMERO DE LA FASE 06: el paso 1 de la filosofia (revisa las hipotesis que ya confirmaste hablando con clientes) no es un paso del superviviente, es SU CONDICION 1 (si ya terminaste el descubrimiento de clientes y confirmaste el problema y la solucion). La marca CUBIERTO_COND existe justo para esto y se usa en vez de forzar un CUBIERTO de paso que no seria verdad. LA LINEA 4 DE preservar NO SE REPARTE PORQUE LA PROPIA FICHA LA RETIRA: dice YA NO APLICA, customer_validation_sell_phase DEJO DE ENTRAR en esta fusion por LD-59, el nodo sigue vivo y se queda con su pieza. No hay nada que marcar. LA VERIFICACION 6 SE COMPRUEBA SIN TOCAR NADA: lo propio del hijo (confirmar el proceso real de compra y de aprobacion DENTRO DEL NEGOCIO DEL CLIENTE) sigue en customer_validation_sell_phase, que no entra en esta fusion, asi que no se copia arriba por construccion. EL SUPERVIVIENTE QUEDA EN 11 PASOS Y 2 CONDICIONES, contra 5 y 2 de partida. CERO PERDIDAS SELLADAS, Y LA LISTA VACIA ES UNA DECLARACION: las cuatro lineas vivas de preservar viajan (la 1 de APPEND, la 2 de INCISO, la 3 en tres APPEND y la 5 en dos APPEND) y la 4 la retira la ficha.",
+   "perdidas": []
+  }
+ ],
+ "declarados_y_no_fundidos": []
+}

@@ -1,0 +1,69 @@
+==============================================================================
+CASO POSITIVO DE LOS INSTRUMENTOS DE FUSION DE MESA
+  sujeto: OP-M-05-APERTURA
+  el fundidor se llama SIEMPRE en modo SIMULAR: ni en el peor caso toca un nodo
+==============================================================================
+
+  --- GUARDA DE SUJETO VIVO, la que el ancestro no tenia ---
+     superviviente de la ficha: customer_validation
+     absorbidos de la ficha   : filosofia_customer_validation, introduccion_validacion_clientes
+     customer_validation                    VIVO
+     filosofia_customer_validation          VIVO
+     introduccion_validacion_clientes       VIVO
+     el superviviente de hoy: 5 pasos y 2 condiciones
+     el absorbido filosofia_customer_validation 5 pasos y 1 condiciones
+     el absorbido introduccion_validacion_clientes 5 pasos y 1 condiciones
+     las marcas de mentira se mutan sobre el PRIMER absorbido: filosofia_customer_validation
+
+  1. SUPERVIVIENTE que la ficha no escribe
+     exit=1 | escribio plan: NO
+     el contenido dice superviviente 'filosofia_customer_validation' y la ficha dice 'customer_validation'
+     VEREDICTO: LA GUARDA MUERDE
+
+  2. ABSORBIDO que la ficha no escribe
+     exit=1 | escribio plan: NO
+     el contenido dice absorbidos ['customer_validation'] y la ficha dice ['filosofia_customer_validation', 'introduccion_validacion_clientes']
+     VEREDICTO: LA GUARDA MUERDE
+
+  3. COBERTURA por OLVIDO: a un paso de filosofia_customer_validation le falta la marca
+     exit=1 | escribio plan: NO
+     el paso 5 de filosofia_customer_validation no tiene marca: FALTA EL PAR (filosofia_customer_validation, 5)
+     VEREDICTO: LA GUARDA MUERDE
+
+  4. COBERTURA por SOBRANTE: marca de un paso de filosofia_customer_validation que no existe
+     exit=1 | escribio plan: NO
+     marcas de paso que sobran para el absorbido filosofia_customer_validation: ['9']
+     VEREDICTO: LA GUARDA MUERDE
+
+  5. INCISO que NO es trozo verbatim del paso que muere
+     exit=1 | escribio plan: NO
+     paso 1 de filosofia_customer_validation: INCISO 'una parafrasis que no esta en el paso', el trozo no casa dentro del paso ni comparando sin tildes
+     VEREDICTO: LA GUARDA MUERDE
+
+  6. PERDIDA con especie desconocida
+     exit=1 | escribio plan: NO
+     especie de perdida desconocida 'DE COLOR'. Las escritas son: DE PARAMETRO DE PASO, DE CONDICIONES, DE NOMBRE
+     VEREDICTO: LA GUARDA MUERDE
+
+  7. el plan manda absorber un nodo YA DEPRECADO (guarda 1)
+     exit=1
+     guarda 1, miembros vivos y nomina completa: ROJO ['6s_lugar_trabajo YA esta deprecado']
+     [ROJO] acto 1: 6s_lugar_trabajo YA esta deprecado
+     VEREDICTO: LA GUARDA MUERDE
+
+  8. el plan manda absorber la SEMILLA actividades_clave (guarda 1B)
+     exit=1
+     [ROJO] acto 1: actividades_clave es SEMILLA DE ENTRADA y no se puede absorber
+     VEREDICTO: LA GUARDA MUERDE
+
+  9. plan SIN campo operacion: el titulo lo DICE en vez de suponer OP-U-01
+     exit=1
+     SIN OPERACION DECLARADA EN EL PLAN . PLAN DE MENTIRA . MODO SIMULAR
+     VEREDICTO: LA GUARDA MUERDE
+
+  ficheros de mentira borrados: 9
+
+==============================================================================
+RESULTADO: LAS NUEVE MUERDEN, sobre el sujeto OP-M-05-APERTURA
+==============================================================================
+EXITCODE: 0
