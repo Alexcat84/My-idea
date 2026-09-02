@@ -1,0 +1,37 @@
+MUTACIONES DE LA TAREA 2.a | vuelta 145 | EL ANCLA UNICA
+Todo EN MEMORIA, cero escrituras. Sujeto CONGELADO por ref de git.
+==============================================================================
+ELECCION DEL SUJETO POR COMPUTO (condicion: marca de COBERTURA repetida):
+  b7f07648:docs/loop/REPORTE.md      COBERTURA abre x2 | CABECERA abre x1 <- ELEGIDO
+  c02b9fad:docs/loop/REPORTE.md      COBERTURA abre x0 | CABECERA abre x1 
+
+(i) EL SUJETO TAL CUAL (b7f07648:docs/loop/REPORTE.md)
+     CON EL CODIGO DE AYER (ancla en la primera ocurrencia): VERDE en silencio, 29 unidad(es) fuera del vocabulario
+     CON LA REGLA NUEVA: ROJO
+     nombra la marca de COBERTURA: True
+     ROJO POR AMBIGUA: 2 marca(s) de bloque repetida(s) en el reporte, y con la marca repetida el recorte iria de la PRIMERA apertura al PRIMER cierre dejando el resto SIN RECORTAR. No se toma la primera. COBERTURA DE LA GUARDA, apertura ('<!-- COBERTURA DE LA GUARDA -->') aparece 2 veces, en linea 274 (offset 17651), linea 632 (offset 40326); COBERTURA DE LA GUARDA, cierre ('<!-- FIN COBERTURA DE LA G
+     VEREDICTO: OK
+
+(ii) QUITADO EL SEGUNDO PAR DE MARCAS DE COBERTURA: VERDE
+     unidades fuera del vocabulario: 29 (ayer, sobre el sujeto entero: 29)
+     la regla nueva NO cambia lo que se mide: True
+     VEREDICTO: OK
+
+(iii) DUPLICADA LA MARCA DE CABECERA TALLADA sobre el sujeto ya saneado: ROJO
+     nombra la marca de CABECERA: True
+     ROJO POR AMBIGUA: 1 marca(s) de bloque repetida(s) en el reporte, y con la marca repetida el recorte iria de la PRIMERA apertura al PRIMER cierre dejando el resto SIN RECORTAR. No se toma la primera. CABECERA TALLADA, apertura ('<!-- CABECERA TALLADA -->') aparece 2 veces, en linea 22 (offset 1038), linea 23 (offset 1064). LA REGLA: la pareja de marcas aparece EXACTAMENTE UNA VEZ; para citar el me
+     VEREDICTO: OK
+
+(iv) CONTRAPRUEBA, UN SOLO PAR DE CADA UNA DE LAS TRES: VERDE
+     unidades fuera del vocabulario: 0
+     
+     VEREDICTO: OK
+
+==============================================================================
+  (i) marca de COBERTURA repetida -> ROJO POR AMBIGUA        OK
+  (ii) sin el 2.o par, VERDE y la MISMA cifra de ayer        OK
+  (iii) la regla es DE LAS TRES parejas, no solo de la nueva OK
+  (iv) un solo par de cada una -> VERDE                      OK
+
+COMPROBACIONES QUE MUERDEN: 4 de 4
+EXITCODE: 0

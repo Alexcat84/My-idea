@@ -40,8 +40,21 @@ tres estaban desancladas y contarlo como fallo de la guarda habria sido mentir
 en la otra direccion. DESDE QUE ESTAN RE-ANCLADAS ESA DISTINCION SE ACABA: una
 mutacion que no encuentra su sujeto es una guarda que no mide, y aqui es ROJO.
 
+LA COLETILLA DE LA VUELTA 145 (CORRECCION 22; acta 144, caidas 4.4 a 4.6 de la
+casa, LAS TRES DE LA MISMA ENFERMEDAD, EL SUJETO VIVO). La regla de entrada de
+arriba se queda corta y se completa: UNA MUTACION ENTRA EN LA VUELTA SIGUIENTE
+A LA QUE NACE, Y SOLO SI SU SUJETO ESTA CONGELADO. Medido en la vuelta 145
+sobre el arbol limpio de la apertura, esta bateria daba ROJO con NO MORDIO 1,
+`vuelta144_2d_mutacion_cobertura.py`, cuyo sujeto era el `docs/loop/REPORTE.md`
+VIVO: estaba verde cuando se corrio y roja en cuanto se escribio el reporte de
+esa misma vuelta. Un sujeto vivo hace que el verde de una vuelta no sobreviva a
+la vuelta. La que no pueda tener sujeto congelado entra como CASO DECLARADO,
+con su exit esperado y su motivo escrito en el propio fichero, como ya hacen
+`vuelta135_2e_mutacion_3.py` y `vuelta140_2a_mutaciones.py`.
+
 QUE COMPRUEBA. Corre TODAS las de `VIEJAS` (la cifra sale de len(VIEJAS), nunca
-tecleada; en la vuelta 144 pasaron de SIETE a TRECE) y exige EXIT 0 de
+tecleada; en la vuelta 144 pasaron de SIETE a TRECE, y en la 145 de TRECE a
+DIECINUEVE) y exige EXIT 0 de
 cada una, salvo los CASOS DECLARADOS de arriba. Clasifica:
   OK             . exit 0, la mutacion corrio y mordio.
   ANCLA PERDIDA  . la salida trae "ROJO PREVIO": el sujeto no esta o no es el
@@ -126,6 +139,27 @@ VIEJAS = [
     ("vuelta144_2a_mutaciones.py", False),
     ("vuelta144_2b_mutacion_giro.py", False),
     ("vuelta144_2d_mutacion_cobertura.py", False),
+    # DE LA DECIMOCUARTA A LA DECIMONOVENA, ANADIDAS EN LA VUELTA 145 (TAREA
+    # 2.b), por la MISMA regla de arriba, ahora con la coletilla que la
+    # CORRECCION 22 le pone: UNA MUTACION ENTRA EN ESTA BATERIA EN LA VUELTA
+    # SIGUIENTE A LA QUE NACE, Y SOLO SI SU SUJETO ESTA CONGELADO. La que no
+    # pueda tenerlo entra como CASO DECLARADO, con su exit esperado y su
+    # motivo escrito en el propio fichero.
+    #
+    # LAS TRES QUE NACIERON EN LA TAREA 3 DE LA VUELTA 144 y que la 2.c de esa
+    # vuelta no llego a meter. `vuelta144_3b_mutacion_negativa.py` entra CON
+    # SUJETO CONGELADO y no como caso declarado: su pre-estado se monta de un
+    # ref de git computado (ver su propio docstring), y asi vuelve a morder 3
+    # de 3 en vez de quedar excusada.
+    ("vuelta144_3a_mutaciones.py", False),
+    ("vuelta144_3b_mutacion_negativa.py", False),
+    ("vuelta144_3c_caso_positivo_1190.py", False),
+    # Y LAS TRES QUE NACEN HOY, en esta misma vuelta 145. Las tres eligen su
+    # sujeto POR COMPUTO y ninguna toma el arbol vivo: la 2.a lee un ref de
+    # git, la 2.b parchea guardas en memoria y la 2.c fabrica su ficha rota.
+    ("vuelta145_2a_mutacion_ancla_unica.py", False),
+    ("vuelta145_2b_mutacion_arneses.py", False),
+    ("vuelta145_2c_mutacion_censo.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

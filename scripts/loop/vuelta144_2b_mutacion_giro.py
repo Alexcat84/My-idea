@@ -133,12 +133,30 @@ def main():
     print("=" * 78)
 
     # ---- EL SUJETO, POR COMPUTO -------------------------------------------
+    # LOS FALLOS DEL PARSER SE RECOGEN Y SE DICEN (vuelta 145, TAREA 2.c; acta
+    # 144, caida 4.1 del auditor). El texto viejo de este bucle pasaba una
+    # LISTA LITERAL VACIA, `T.pares_exceptuados_de(op, resolver, [])`, que es
+    # exactamente el defecto que ESTE MISMO INSTRUMENTO nacio para probar
+    # reparado en el giro. La llamada de la comprobacion (B), mas abajo, SI
+    # sigue tirandolos A PROPOSITO y lo dice en su comentario: esa es la
+    # contraprueba del codigo viejo y no se toca.
     idx_ficha = None
+    fallos_del_censo = []
     for i, op in enumerate(ops):
-        conj, cita, nomina = T.pares_exceptuados_de(op, resolver, [])
+        fallos_de_esta = []
+        conj, cita, nomina = T.pares_exceptuados_de(op, resolver, fallos_de_esta)
+        if fallos_de_esta:
+            fallos_del_censo.append((op.get("id_op"), list(fallos_de_esta)))
         if conj:
             idx_ficha, sujeto, pares_exc, nomina_exc = i, op, conj, nomina
             break
+    if fallos_del_censo:
+        print("FICHAS CUYA EXCEPCION NO PARSEA, NOMBRADAS EN VEZ DE SALTADAS (%d):"
+              % len(fallos_del_censo))
+        for id_op, fs in fallos_del_censo:
+            for f in fs:
+                print("     %s: %s" % (id_op, f))
+        print("")
     if idx_ficha is None:
         print("OMITIDO POR FALTA DE SUJETO: ninguna ficha dispara la excepcion. ESO ES ROJO.")
         return 1

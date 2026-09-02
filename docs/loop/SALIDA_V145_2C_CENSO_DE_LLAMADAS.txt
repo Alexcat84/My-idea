@@ -1,0 +1,41 @@
+CENSO DE `pares_exceptuados_de` EN scripts/, CON LOS NUMEROS DE LINEA DE HOY
+==============================================================================
+FICHERO                                         LINEA  CLASE      QUE HACE CON SUS FALLOS
+scripts/loop/tallar_estado_de_fase.py             665  DEFINICION 
+scripts/loop/tallar_estado_de_fase.py             801  LLAMADA    LOS RECOGE en fallos
+scripts/loop/vuelta140_3_escribir_aristas.py       33  MENCION    el nombre fuera de toda llamada
+scripts/loop/vuelta140_3_escribir_aristas.py      150  LLAMADA    LOS RECOGE en fallos_exc
+scripts/loop/vuelta141_2_mutaciones.py            246  LLAMADA    LOS RECOGE en _fallos_exc
+scripts/loop/vuelta143_2a_mutaciones.py           137  LLAMADA    LOS RECOGE en fallos_exc_lectura
+scripts/loop/vuelta143_3c_girar_arista.py          44  MENCION    el nombre fuera de toda llamada
+scripts/loop/vuelta143_3c_girar_arista.py         232  LLAMADA    LOS RECOGE en fallos_exc
+scripts/loop/vuelta144_1b_medir_ventana.py          6  MENCION    el nombre fuera de toda llamada
+scripts/loop/vuelta144_1b_medir_ventana.py         61  MENCION    el nombre fuera de toda llamada
+scripts/loop/vuelta144_2a_mutaciones.py            72  MENCION    el nombre fuera de toda llamada
+scripts/loop/vuelta144_2a_mutaciones.py            80  LLAMADA    LOS RECOGE en fallos_de_esta
+scripts/loop/vuelta144_2a_mutaciones.py           116  LLAMADA    LOS RECOGE en fallos_iv
+scripts/loop/vuelta144_2a_mutaciones.py           133  LLAMADA    LOS RECOGE en fallos_i
+scripts/loop/vuelta144_2a_mutaciones.py           161  LLAMADA    LOS RECOGE en fallos_ii
+scripts/loop/vuelta144_2a_mutaciones.py           188  LLAMADA    LOS RECOGE en fallos_iii
+scripts/loop/vuelta144_2b_mutacion_giro.py          6  MENCION    el nombre fuera de toda llamada
+scripts/loop/vuelta144_2b_mutacion_giro.py        138  MENCION    el nombre fuera de toda llamada
+scripts/loop/vuelta144_2b_mutacion_giro.py        147  LLAMADA    LOS RECOGE en fallos_de_esta
+scripts/loop/vuelta144_2b_mutacion_giro.py        214  LLAMADA    LOS TIRA, Y LO DECLARA en la propia linea
+scripts/loop/vuelta144_2b_mutacion_giro.py        217  LLAMADA    LOS RECOGE en fallos_hoy
+scripts/loop/vuelta145_2c_censo_de_llamadas.py      3  MENCION    el nombre fuera de toda llamada
+scripts/loop/vuelta145_2c_censo_de_llamadas.py     13  MENCION    el nombre fuera de toda llamada
+scripts/loop/vuelta145_2c_censo_de_llamadas.py     14  MENCION    el nombre fuera de toda llamada
+scripts/loop/vuelta145_2c_censo_de_llamadas.py     46  MENCION    el nombre fuera de toda llamada
+scripts/loop/vuelta145_2c_mutacion_censo.py        15  MENCION    el nombre fuera de toda llamada
+scripts/loop/vuelta145_2c_mutacion_censo.py        82  LLAMADA    LOS RECOGE en fallos_de_esta
+
+FICHEROS CON APARICION DEL NOMBRE : 10
+FICHEROS CON LLAMADA DE VERDAD    : 8
+FICHEROS QUE SOLO LO MENCIONAN    : 2 ['scripts/loop/vuelta144_1b_medir_ventana.py', 'scripts/loop/vuelta145_2c_censo_de_llamadas.py']
+LLAMADAS EN TOTAL                 : 14
+  que RECOGEN sus fallos          : 13
+  que los TIRAN Y LO DECLARAN     : 1 ['scripts/loop/vuelta144_2b_mutacion_giro.py:214']
+  que los TIRAN EN SILENCIO       : 0 []
+
+VERDE: ninguna llamada tira sus fallos en silencio
+EXITCODE: 0

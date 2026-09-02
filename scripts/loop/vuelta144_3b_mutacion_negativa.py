@@ -24,6 +24,35 @@ nunca contra un literal (EJECUTOR.md regla 1):
 
 Y AL FINAL, LA CUENTA QUE MANDA: `git status --porcelain -- dataset/ docs/loop/`
 tiene que salir IGUAL que al empezar. Cero escrituras.
+
+--- EL SUJETO DEJA DE SER EL ARBOL VIVO (VUELTA 145, TAREA 2.b; acta 144,
+caida 4.9 del auditor) ---
+
+CORRECCION DECLARADA, y el texto de arriba NO SE BORRA porque sigue diciendo
+exactamente lo que este arnes prueba (EJECUTOR.md 8).
+
+EL DEFECTO, MEDIDO. Corrido sobre el arbol limpio de la apertura de la vuelta
+145 este arnes daba 1 de 3: (C), la contraprueba, pedia que el sellador de
+`OP-M-04` saliera VERDE, y el sellador contestaba *"ROJO, 2 fallo(s): el nodo
+formalize_advisory_board YA esta deprecado, el nodo identificar_junta_asesores
+YA esta deprecado"*. LA FUSION QUE ESTE ARNES SELLA YA CORRIO, en el commit
+`c72ce2c0` de la vuelta 144: el mundo que (C) necesita no existe desde
+entonces, y (B) caia detras porque el sellador aborta antes de llegar a la
+aritmetica que (B) mide. No era un fallo de la guarda: era un arnes sin sujeto.
+
+EL ARREGLO. El sujeto pasa a ser EL PRE-ESTADO CONGELADO, montado en un
+directorio temporal por `vuelta145_2b_prestado_congelado.materializar()` a
+partir de un ref de git, y las dos rutas que el sellador lee
+(`dataset/nodos/` via `S.NODOS`, y `docs/plan/OPERACIONES.jsonl` via
+`G.OPERACIONES`) se apuntan alli mientras dura el arnes. EL REF SE COMPUTA, NO
+SE TECLEA: `ref_del_preestado()` busca el commit MAS NUEVO que deja deprecado
+al absorbido y devuelve SU PADRE, o sea el arbol justo antes de la cirugia.
+Medido en la vuelta 145: para los dos absorbidos da el mismo ref, `5fff85f7`,
+deprecados los dos en `c72ce2c0`. Si los dos absorbidos dieran refs distintos,
+ROJO PREVIO: no se elige uno.
+
+P.16, QUIEN FABRICA LIMPIA: el temporal se retira siempre, y la cuenta de cero
+escrituras sobre el arbol de verdad se mantiene igual que antes.
 """
 import copy
 import os
@@ -36,7 +65,13 @@ sys.path.insert(0, LOOP)
 
 import _v144_opm04_328 as C328  # noqa: E402
 import _v144_opm04_367 as C367  # noqa: E402
+import generar_plan_de_fusion_de_mesa as G  # noqa: E402
 import vuelta144_3b_sellar_mesa_opm04 as S  # noqa: E402
+from vuelta145_2b_prestado_congelado import (  # noqa: E402
+    materializar, ref_del_preestado)
+
+# Las rutas que el sellador lee y que el pre-estado tiene que traer consigo.
+RUTAS_DEL_PREESTADO = ["docs/plan/OPERACIONES.jsonl"]
 
 
 def estado():
@@ -77,6 +112,34 @@ def correr(argv):
     return codigo, buf.valor()
 
 
+def miembros_de_la_mesa():
+    """Los cuatro miembros, leidos de los dos contenidos y no tecleados."""
+    fuera = []
+    for spec in (C367.FUSION, C328.FUSION):
+        fuera.append(spec["superviviente"])
+        fuera.extend(spec["absorbidos"])
+    return sorted(set(fuera))
+
+
+def absorbidos_de_la_mesa():
+    return sorted(set(list(C367.FUSION["absorbidos"]) + list(C328.FUSION["absorbidos"])))
+
+
+def ref_unico_del_preestado():
+    """EL REF DEL PRE-ESTADO, COMPUTADO DE LOS ABSORBIDOS Y EXIGIDO UNICO.
+    Devuelve (ref, detalle). Si los absorbidos dan refs distintos, o alguno no
+    da ninguno, devuelve (None, detalle) y quien llama para: no se elige uno."""
+    detalle = []
+    refs = set()
+    for x in absorbidos_de_la_mesa():
+        ref, deprecado_en, _hist = ref_del_preestado(x)
+        detalle.append((x, ref, deprecado_en))
+        refs.add(ref)
+    if len(refs) != 1 or None in refs:
+        return None, detalle
+    return refs.pop(), detalle
+
+
 def main():
     argv = ["vuelta144_3b_sellar_mesa_opm04.py", "--simular"]
     antes = estado()
@@ -86,7 +149,33 @@ def main():
     print("Todo EN MEMORIA y con --simular: ni el plan ni un nodo se tocan.")
     print("=" * 78)
 
+    # ---- EL SUJETO CONGELADO (vuelta 145, TAREA 2.b) -----------------------
+    ref, detalle = ref_unico_del_preestado()
+    print("SUJETO CONGELADO: el pre-estado, con el ref COMPUTADO de los absorbidos")
+    for x, r, dep in detalle:
+        print("     %-32s pre-estado %s | deprecado en %s"
+              % (x, (r or "NINGUNO")[:8], (dep or "NINGUNO")[:8]))
+    if ref is None:
+        print("")
+        print("ROJO PREVIO: los absorbidos no dan un unico ref de pre-estado; "
+              "no se elige uno y el arnes no mide nada")
+        return 1
+    rutas = RUTAS_DEL_PREESTADO + ["dataset/nodos/%s.json" % x for x in miembros_de_la_mesa()]
+    print("     ref elegido: %s | %d ruta(s) materializadas" % (ref[:8], len(rutas)))
+    print("")
+
+    nodos_real, operaciones_real = S.NODOS, G.OPERACIONES
     resultados = []
+    with materializar(ref, rutas) as raiz:
+        S.NODOS = os.path.join(raiz, "dataset", "nodos")
+        G.OPERACIONES = os.path.join(raiz, "docs", "plan", "OPERACIONES.jsonl")
+        try:
+            return _casos(argv, guardadas, resultados, antes)
+        finally:
+            S.NODOS, G.OPERACIONES = nodos_real, operaciones_real
+
+
+def _casos(argv, guardadas, resultados, antes):
     try:
         # ---- (C) LA CONTRAPRUEBA, primero -----------------------------------
         cod_c, sal_c = correr(argv)

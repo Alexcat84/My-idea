@@ -19,6 +19,32 @@ dependencias salen del jsonl y se copian VERBATIM al plan. Este fichero no sabe
 nada de ninguna operacion concreta, y por eso no puede envejecer: es la leccion
 del censo de plantillas de la vuelta 63.
 
+--- LA FRONTERA DE LOS DOS SELLADORES, ESCRITA (VUELTA 145, TAREA 2.e; acta
+144, adjudicacion 3.2, que responde la PREGUNTA 2 del reporte de la 144) ---
+
+NO HAY DOS CAMINOS PARA LO MISMO: HAY DOS FIGURAS.
+
+  - `generar_plan_de_fusion_de_mesa.py` (el de la casa) sella UNA FUSION CON
+    UN SUPERVIVIENTE. Su nombre no lleva vuelta ni operacion a proposito: la
+    vuelta, la operacion y el contenido entran por argumento, y sirve para
+    cualquier ficha de esa figura, hoy y dentro de veinte vueltas.
+  - `vuelta144_3b_sellar_mesa_opm04.py` sella UNA MESA DE DOS ACTOS: DOS
+    supervivientes, DOS absorbidos y un reparto que la ficha declara. Lleva la
+    vuelta y la operacion en el nombre porque hoy hay UNA sola ficha con esa
+    figura; el dia que haya una segunda, el instrumento se generaliza como se
+    generalizo el de la casa.
+
+QUE DECIDE CUAL SE USA: LA FIGURA QUE LA FICHA DECLARA EN SU PROPIO `tipo`,
+leida con `tallar_estado_de_fase.figura_declarada_de`, nunca el gusto de quien
+sella. La ficha que no declara la figura de dos actos NO entra en el sellador
+de dos actos, y su guarda 1 la rechaza.
+
+Y POR QUE NO SE RELAJO EL DE LA CASA, que seria el otro camino: sus tres
+guardas de superviviente unico estan BIEN PUESTAS, y relajarlas para que
+tragaran dos supervivientes las habria dejado ciegas para las fichas de UNA
+fusion, que son la inmensa mayoria. Se importo su maquina entera en vez de
+copiarla, asi que los dos no pueden discrepar en silencio.
+
 LAS GUARDAS AL SELLAR, todas las del hermano:
   - el superviviente y los absorbidos que el plan usa TIENEN que ser los que la
     ficha escribe, y si no lo son es ROJO y no se escribe nada;

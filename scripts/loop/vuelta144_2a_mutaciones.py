@@ -67,12 +67,29 @@ def main():
     print("=" * 78)
 
     # ---- EL SUJETO, POR COMPUTO -------------------------------------------
+    # LOS FALLOS DEL PARSER SE RECOGEN Y SE DICEN (vuelta 145, TAREA 2.c; acta
+    # 144, caida 4.1 del auditor). El texto viejo de este bucle pasaba una
+    # LISTA LITERAL VACIA, `T.pares_exceptuados_de(op, resolver, [])`, o sea
+    # que tiraba los fallos igual que hacia el giro antes de la 2.b de la 144.
+    # Una ficha cuya excepcion no parsea se saltaba EN SILENCIO y el bucle
+    # seguia buscando sujeto como si nada (banco 9, fallar ruidoso).
     sujeto = None
+    fallos_del_censo = []
     for op in ops:
-        conj, cita, nomina = T.pares_exceptuados_de(op, resolver, [])
+        fallos_de_esta = []
+        conj, cita, nomina = T.pares_exceptuados_de(op, resolver, fallos_de_esta)
+        if fallos_de_esta:
+            fallos_del_censo.append((op.get("id_op"), list(fallos_de_esta)))
         if conj:
             sujeto, base_conj, base_cita, base_nomina = op, conj, cita, nomina
             break
+    if fallos_del_censo:
+        print("FICHAS CUYA EXCEPCION NO PARSEA, NOMBRADAS EN VEZ DE SALTADAS (%d):"
+              % len(fallos_del_censo))
+        for id_op, fs in fallos_del_censo:
+            for f in fs:
+                print("     %s: %s" % (id_op, f))
+        print("")
     if sujeto is None:
         print("OMITIDO POR FALTA DE SUJETO: ninguna ficha dispara la excepcion con pares "
               "nombrados. ESO ES ROJO, no verde.")

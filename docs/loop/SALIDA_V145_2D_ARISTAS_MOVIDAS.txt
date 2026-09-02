@@ -1,0 +1,37 @@
+GUARDA DE ARISTAS MOVIDAS: TODA ARISTA QUE SE MUEVE, NOMBRADA Y ADJUDICADA
+Instrumento: scripts/loop/vuelta145_2d_aristas_movidas.py (vuelta 145, TAREA 2.d)
+Resolutor de la casa (P.1). ANTES: 5fff85f7 | DESPUES: c72ce2c0
+==============================================================================
+LAS DOS UNIDADES, CADA UNA CON SU NOMBRE ENTERO:
+  (A) aristas resueltas de la UNION de las dos vistas, leidas de nodos VIVOS
+        ANTES 7343 | DESPUES 7341 | auto-aristas tras resolver: 0 y 0
+  (B) aristas resueltas CON LOS DOS EXTREMOS VIVOS
+        ANTES 7309 | DESPUES 7307 | auto-aristas tras resolver: 0 y 0
+  DIFERENCIA ENTRE LAS DOS UNIDADES (aristas con un extremo que no resuelve a un nodo vivo): ANTES 34 | DESPUES 34
+  DELTA (despues menos antes): (A) -2 | (B) -2
+
+ENTRAN (5), sobre la unidad (A):
+   + ai_como_coach_personalizado -> identificar_consejo_asesores
+   + formalizar_junta_asesora -> customer_validation_sell_phase
+   + hire_data_analytics_chief -> formalizar_junta_asesora
+   + identificar_consejo_asesores -> formalizar_junta_asesora
+   + producto_minimo_viable -> identificar_consejo_asesores
+SALEN (7), sobre la unidad (A):
+   - ai_como_coach_personalizado -> identificar_junta_asesores
+   - customer_discovery -> formalize_advisory_board
+   - formalizar_junta_asesora -> identificar_junta_asesores
+   - formalize_advisory_board -> customer_validation_sell_phase
+   - hire_data_analytics_chief -> formalize_advisory_board
+   - identificar_junta_asesores -> verificar_product_market_fit
+   - producto_minimo_viable -> identificar_junta_asesores
+
+LOS MISMOS CONJUNTOS CON LA UNIDAD (B): True (entran 5, salen 7)
+
+ADJUDICACION DE CADA UNA, y ninguna se queda sin nombre:
+  Las que ENTRAN por REDIRECCION DE ALIAS (misma arista, el id del absorbido
+  reescrito al del superviviente): su gemela sale en la lista de SALEN.
+  ARISTAS QUE ENTRAN SIN NINGUNA QUE SALGA COMPARTIENDO UN EXTREMO: 0
+  ARISTAS QUE SALEN SIN NINGUNA QUE ENTRE COMPARTIENDO UN EXTREMO: 2
+     - customer_discovery -> formalize_advisory_board
+     - identificar_junta_asesores -> verificar_product_market_fit
+EXITCODE: 0

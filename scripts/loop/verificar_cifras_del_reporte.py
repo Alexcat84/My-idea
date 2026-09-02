@@ -443,6 +443,55 @@ MARCA_COBERTURA_ABRE = "<!-- COBERTURA DE LA GUARDA -->"
 MARCA_COBERTURA_CIERRA = "<!-- FIN COBERTURA DE LA GUARDA -->"
 
 
+# LAS SEIS MARCAS DE BLOQUE, en una sola nomina para que la regla del ancla
+# unica (vuelta 145, TAREA 2.a) no pueda quedarse corta de una: cada pareja que
+# se anada aqui queda cubierta sin tocar `_exigir_ancla_unica`.
+MARCAS_DE_BLOQUE = (
+    ("CABECERA TALLADA, apertura", MARCA_CABECERA_ABRE),
+    ("CABECERA TALLADA, cierre", MARCA_CABECERA_CIERRA),
+    ("COMMITS TALLADOS, apertura", MARCA_COMMITS_ABRE),
+    ("COMMITS TALLADOS, cierre", MARCA_COMMITS_CIERRA),
+    ("COBERTURA DE LA GUARDA, apertura", MARCA_COBERTURA_ABRE),
+    ("COBERTURA DE LA GUARDA, cierre", MARCA_COBERTURA_CIERRA),
+)
+
+
+def _posiciones(texto, marca):
+    """TODAS las posiciones de `marca`, cada una como (offset, linea). Es lo
+    contrario de `texto.find`, que devuelve solo la primera y por eso pudo
+    anclar en el bloque equivocado durante toda la vuelta 144."""
+    fuera = []
+    i = texto.find(marca)
+    while i != -1:
+        fuera.append((i, texto.count("\n", 0, i) + 1))
+        i = texto.find(marca, i + 1)
+    return fuera
+
+
+def _exigir_ancla_unica(texto):
+    """LA CUARTA REGLA DE DELIMITADOR (vuelta 145, TAREA 2.a; acta 144, 4.3).
+
+    Ninguna de las SEIS marcas puede aparecer mas de una vez. Si alguna se
+    repite, ROJO POR AMBIGUA con ValueError, nombrando LA MARCA y TODAS sus
+    posiciones (linea y offset), nunca tomando la primera. Se nombran TODAS las
+    marcas repetidas de una corrida, no solo la primera que se encuentre: una
+    guarda que solo canta el primer defecto obliga a correrla en bucle."""
+    ambiguas = []
+    for rotulo, marca in MARCAS_DE_BLOQUE:
+        pos = _posiciones(texto, marca)
+        if len(pos) > 1:
+            ambiguas.append("%s (%r) aparece %d veces, en %s"
+                            % (rotulo, marca, len(pos),
+                               ", ".join("linea %d (offset %d)" % (l, o) for o, l in pos)))
+    if ambiguas:
+        raise ValueError(
+            "ROJO POR AMBIGUA: %d marca(s) de bloque repetida(s) en el reporte, y con la "
+            "marca repetida el recorte iria de la PRIMERA apertura al PRIMER cierre "
+            "dejando el resto SIN RECORTAR. No se toma la primera. %s. LA REGLA: la pareja "
+            "de marcas aparece EXACTAMENTE UNA VEZ; para citar el mecanismo en prosa se usa "
+            "OTRO literal, no la marca de verdad" % (len(ambiguas), "; ".join(ambiguas)))
+
+
 def quitar_bloques_cubiertos(texto):
     """Quita LA CABECERA TALLADA DELIMITADA y el parrafo de identidad (tallado
     por tallar_identidad_reporte.py, 2.a). Esos dos bloques tienen su propio
@@ -491,7 +540,58 @@ def quitar_bloques_cubiertos(texto):
     SI SOLO ESTA UNA DE LAS DOS MARCAS es ROJO tambien, y por la misma razon:
     se levanta ValueError con el nombre de la que falta, en vez de adivinar
     donde acaba el bloque.
+
+    --- LA ANCLA UNICA, Y ES DE LAS TRES (VUELTA 145, TAREA 2.a; acta 144,
+    adjudicacion 4.3 del auditor) ---
+
+    CORRECCION DECLARADA. EL TEXTO VIEJO DE LA REGLA NO SE BORRA (EJECUTOR.md
+    8): las TRES reglas de delimitador de arriba (las dos marcas recortan,
+    ninguna no recorta nada, una sola es ROJO) SIGUEN VIGENTES TAL CUAL. Lo
+    que se anade es una CUARTA, y va ANTES que las otras tres.
+
+    EL DEFECTO, MEDIDO Y NO OPINADO. Esta funcion resolvia cada uno de sus
+    TRES pares con `texto.find(MARCA)`, y `find` DEVUELVE LA PRIMERA
+    OCURRENCIA: con la marca repetida, el recorte iba de la PRIMERA apertura
+    al PRIMER cierre y EL SEGUNDO BLOQUE SE PARSEABA ENTERO, en silencio y
+    con VERDE EXIT 0. Medido en la vuelta 145 con
+    scripts/loop/vuelta145_1b_censo_de_marcas.py sobre el REPORTE.md de la
+    vuelta 144 ya commiteado (`b7f07648:docs/loop/REPORTE.md`, sujeto
+    congelado por ref de git y no por arbol vivo), salida en
+    docs/loop/SALIDA_V145_1B_CENSO_DE_MARCAS.txt: la marca de COBERTURA
+    aparece DOS VECES (lineas 274 y 278, y otra vez 632 y 638) y las otras
+    cuatro UNA sola; la funcion recorta las lineas 274 a 278 y deja fuera las
+    632 a 638. Pegada la linea real de COBERTURA dentro de ESE segundo
+    bloque, que es justo donde el propio reporte de la 144 anuncia "(pegada
+    abajo tras la segunda corrida)", la guarda pasa de VERDE EXIT 0 a ROJO
+    EXIT 1 y las unidades fuera del vocabulario suben de 29 a 34. Es decir:
+    la reparacion de la vuelta 144 (TAREA 2.d) protegia EL BLOQUE QUE EL
+    ORDEN DEL FICHERO ELIGE, no el que el reporte designa.
+
+    LA CUARTA REGLA. SI CUALQUIERA DE LAS SEIS MARCAS (apertura y cierre de
+    CABECERA TALLADA, de COMMITS TALLADOS y de COBERTURA DE LA GUARDA)
+    APARECE MAS DE UNA VEZ, ES ROJO POR AMBIGUA: ValueError nombrando LA
+    MARCA y TODAS SUS POSICIONES (linea y offset). NO SE TOMA LA PRIMERA.
+    Es la misma regla (iii) que la TAREA 2.a de la vuelta 144 escribio para
+    la formula canonica de la excepcion del 9.22, el ancla unica, que la 2.d
+    de esa misma vuelta no heredo. Vale para las TRES parejas y no solo para
+    la nueva, porque el defecto es de `find`, no del bloque.
+
+    POR QUE ROJO Y NO "RECORTAR LOS DOS": porque un reporte con la marca
+    repetida es AMBIGUO sobre cual bloque es el bloque, y elegir por el
+    ejecutor seria adivinar, que es exactamente lo que esta funcion dejo de
+    hacer en la vuelta 139. La salida honesta la da la regla nueva de la
+    TAREA 4.c: LA PAREJA DE MARCAS APARECE EXACTAMENTE UNA VEZ EN EL
+    REPORTE, y quien necesite citar el mecanismo en prosa lo cita con OTRO
+    literal.
+
+    MUTACIONES: scripts/loop/vuelta145_2a_mutacion_ancla_unica.py.
     """
+    # LA CUARTA REGLA, EL ANCLA UNICA (vuelta 145, TAREA 2.a; acta 144, 4.3).
+    # VA LA PRIMERA DE TODAS, antes de cualquier recorte: si una marca esta
+    # repetida, no hay nada que anclar y `find` mentiria tomando la primera.
+    # Las SEIS a la vez, porque el defecto es de `find` y no de un bloque.
+    _exigir_ancla_unica(texto)
+
     # Los COMMITS TALLADOS, con las mismas tres reglas de delimitador que la
     # cabecera (vuelta 140): las dos marcas quitan lo delimitado, ninguna no
     # quita nada, una sola es ROJO.
