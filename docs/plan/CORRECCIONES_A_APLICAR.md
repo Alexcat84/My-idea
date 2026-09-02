@@ -992,3 +992,155 @@ PODA**. Y se mide, por la contraorden:
   verificaciones de `OP-E-04`, `OP-E-05`, `OP-M-01-ESLABONES` y `OP-M-01-SEXTO`
   quedan tal como estan; lo que este criterio dice es **como se leen cuando
   chocan**.
+
+## CORRECCION 15. **EL TOTAL DE DIRECCIONES DE LA FASE 06: TRES CIFRAS, DOS UNIVERSOS Y DOS UNIDADES, Y LA VIEJA NO SE BORRA**
+
+**POR ADICION.** Escrita en la vuelta 142, TAREA 1.b, por encargo del acta 141.
+Cubre a la vez la **caida 4.4 del auditor** (cifra publicada en el acta 140) y la
+**caida 4.1 del ejecutor** (declarar concordancia donde habia discrepancia de
+composicion). **NADA DE LO VIEJO SE BORRA:** las tres cifras quedan escritas, cada
+una con su autor, su corte y su fichero, que es lo que `EJECUTOR.md` 8 manda.
+
+### 15.a. LAS TRES CIFRAS, UNA POR FILA
+
+**LA TABLA SALE DE UN INSTRUMENTO Y SE PEGA ENTERA.** Comando corrido en esta
+vuelta: `python scripts/loop/vuelta142_1b_desglose_direcciones.py --fase 06_MESAS`.
+Salida en `docs/loop/SALIDA_V142_1B_DESGLOSE_DIRECCIONES.txt`.
+
+| cifra | unidad | universo | desglose | autor | corte | fichero |
+|---:|---|---|---|---|---|---|
+| **18** | **direcciones** (asi la rotulo el acta) | **CINCO** operaciones | 2+9+4+2+1 | auditor | acta 140, adjudicacion 3.4 | `docs/loop/ACTA_AUDITOR.md`, acta de la vuelta 140 |
+| **17** | **direcciones** | **CINCO** operaciones remitidas por `docs/plan/04_ENLACES.md` | 2+8+4+2+1 | ejecutor, vuelta 142 | 2 sep 2026 | `docs/loop/SALIDA_V142_1B_DESGLOSE_DIRECCIONES.txt`, universo 1 |
+| **18** | **direcciones** | **SEIS** operaciones del catalogo con direcciones, `OP-M-05-APERTURA` dentro | 8+4+2+1+2+1 | ejecutor, vuelta 141 y re-medido en la 142 | 2 sep 2026 | `docs/loop/SALIDA_V142_1B_DESGLOSE_DIRECCIONES.txt`, universo 2 |
+
+### 15.b. POR QUE DISCREPAN, MEDIDO Y NO OPINADO
+
+**SON DOS DEFECTOS DISTINTOS SUMADOS, Y CADA UNO TIENE SU NOMBRE.**
+
+**(1) EL 18 DEL ACTA 140 MEZCLA DOS UNIDADES DENTRO DE UNA SOLA SUMA.** Su
+desglose mete **9 FILAS DE FICHA** de `OP-E-04` en una suma que la propia
+adjudicacion 3.4 rotula en **DIRECCIONES**, y la propia adjudicacion lo dice tres
+lineas antes (*"4 mas 5 da 9 filas, pero solo hay 8 direcciones"*). El instrumento
+de hoy lo separa sin ambiguedad: sobre las cinco remitidas hay **18 FILAS DE
+FICHA** y **17 DIRECCIONES DISTINTAS**. **El 18 del acta es correcto como filas de
+ficha y falso como direcciones**, y la unidad que el acta escribio es la segunda.
+
+**(2) EL 18 DE LA VUELTA 141 CUENTA UN UNIVERSO MAS ANCHO.** Su instrumento
+recorre **todas** las operaciones del catalogo de la fase 06 con `aristas_nuevas`,
+y eso mete a `OP-M-05-APERTURA` (**2 filas de ficha que colapsan en 1 direccion**,
+remitida por `docs/plan/00_INDICE.md:261` y no por la tabla de las cinco), que el
+acta 140 nunca conto. Medido hoy: **universo 1, cinco operaciones, 17
+direcciones; universo 2, seis operaciones, 18 direcciones; diferencia exacta 1, y
+esa 1 es `OP-M-05-APERTURA`.**
+
+**LOS DOS TOTALES DAN 18 POR CASUALIDAD:** uno suma una fila de ficha de mas, el
+otro suma una operacion de mas, y los dos errores valen exactamente 1. **Por eso
+declarar concordancia entre los dos era la caida: coincidian los totales y no las
+composiciones.**
+
+### 15.c. LA REGLA QUE QUEDA, Y NO ES NUEVA
+
+**LA UNIDAD SIGUE SIENDO LA DIRECCION** (acta 140, adjudicacion 3.4: *"es lo que
+el grafo guarda y lo que la vara mide, y la cadena esconde el enlace mutuo"*), y
+`tallar_estado_de_fase.py` ya la publica asi desde la vuelta 141, TAREA 2.c. **LO
+QUE ESTA CORRECCION ANADE ES QUE UN TOTAL LLEVA SU UNIVERSO AL LADO**, no solo su
+unidad: dos cifras de la misma unidad sobre universos distintos **no se cotejan**,
+y si se cotejan hay que decir cual universo se toma. Es `EJECUTOR.md` 2 aplicado a
+un total (*"si discrepan de la medicion de hoy, la discrepancia se declara en vez
+de resolverse copiando"*) y `AUDITOR.md` 1.1.
+
+**CIFRA VIEJA QUE NO SE BORRA, Y SE DICE DONDE VIVE:** el **18 (2+9+4+2+1)** del
+acta 140 sigue escrito en `docs/loop/ACTA_AUDITOR.md` tal cual, y el **18** de la
+vuelta 141 sigue escrito en `docs/loop/REPORTE.md` de esa vuelta y en
+`docs/loop/SALIDA_V141_4_RELECTURA_AL_DOBLE.txt` tal cual. Esta correccion no
+reescribe ninguno de los dos: los **coloca al lado de la medicion de hoy con su
+universo nombrado**.
+
+## CORRECCION 16. **EL SUPERVIVIENTE DIVERGENTE: UNA FUSION CONSUMIDA AL REVES NO ES CUMPLIDA NI SIN CUMPLIR**
+
+**POR ADICION.** Escrita en la vuelta 142, TAREA 1.c, por encargo del acta 141,
+adjudicacion **3.5**. **Es un CRITERIO con dos casos medidos detras.** Se escribe
+aqui, y no en una ficha, porque gobierna **la vara `FUSION` de cualquier fase**, no
+solo a las dos fichas que hoy la disparan.
+
+**NO ES DOCTRINA NUEVA, Y POR ESO NO HAY PARADA.** Las tres cosas que la sostienen
+estaban escritas antes de esta vuelta y van citadas abajo con su fichero.
+
+### 16.a. LA ESPECIE, DESCRITA SIN NOMBRES PROPIOS
+
+Una ficha de `FUSION` escribe un `superviviente` y un `eliminar`. Mas tarde, otra
+operacion ejecuta la fusion **al reves**: deja vivo al que la ficha mandaba
+eliminar y deprecar al que la ficha nombraba superviviente, con alias del muerto
+al vivo. **El par queda consumido** (resuelve a un solo vivo, que es lo que la
+fusion buscaba) **y a la vez ejecutado contra la letra de su ficha.**
+
+**QUE PASA SI LA VARA SOLO RESUELVE.** Si la vara `FUSION` pasa el `superviviente`
+escrito por el resolutor y se queda con lo que salga, el caso sale **CUMPLIDO**:
+el id resuelto esta vivo, el absorbido esta deprecado y en `ids_alias`. **Y eso es
+publicar CUMPLIDO sobre una operacion ejecutada al reves**, que es la degradacion
+silenciosa del banco 9 entrando por la puerta de un arreglo que parece obvio.
+
+### 16.b. LOS DOS CASOS, MEDIDOS CONTRA EL GRAFO DE HOY
+
+Corte **2 sep 2026**. Los cuatro campos de cada fila salen de
+`docs/plan/OPERACIONES.jsonl` y de `dataset/metadata/master_graph.json`, resueltos
+con el resolutor de la casa (`EJECUTOR.md` regla 9, `P.1`).
+
+| ficha | `superviviente` escrito | ¿vivo hoy? | resuelve a | ¿vivo? | campo `eliminar` de la ficha | ¿el que sobrevive esta en `eliminar`? |
+|---|---|---|---|---|---|:---:|
+| `OP-M-02-ADMIT` | `fase_admit` | **NO, deprecado** | `fase_admit_celebracion` | **si** | `["fase_admit_celebracion"]` | **SI** |
+| `OP-M-02-MEDIOS` | `seis_medios_comunicacion_cliente` | **NO, deprecado** | `estrategia_multicanal_bienvenida` | **si** | `["estrategia_multicanal_bienvenida"]` | **SI** |
+
+**EN LAS DOS, EL QUE SOBREVIVE ES EXACTAMENTE EL QUE LA FICHA MANDA ELIMINAR.**
+
+### 16.c. LAS TRES COSAS ESCRITAS QUE LO GOBIERNAN, CITADAS
+
+**(1) LA CORRECCION DECLARADA DE LA VUELTA 64, EN EL `nota` DE LAS DOS FICHAS**
+(`docs/plan/OPERACIONES.jsonl`), literal:
+
+> **CORRECCION DECLARADA (2026-08-20, vuelta 64, TAREA 1.c del encargo), POR EL
+> CARRIL DEL BANCO 9.10 Y CON EL TEXTO VIEJO ENTERO ARRIBA: ESTA FICHA ESTA
+> CONSUMIDA. NO SE EJECUTA Y NO SE REHACE.**
+
+**(2) `docs/loop/SALIDA_V64_CONSUMIDAS.txt`**, que computa **CINCO fusiones de
+mesa consumidas** y separa **DOS que DIVERGEN** de **TRES que COINCIDEN**, con el
+criterio ya escrito alli (*"el par resuelve a UN solo vivo"* mas *"DIVERGEN: la
+ficha decia X y el tramo dejo vivo a Y"*):
+
+> `OP-M-02-MEDIOS` **DIVERGEN**, `OP-M-02-ADMIT` **DIVERGEN**, `OP-M-02-ASSESS`
+> **COINCIDEN**, `OP-M-02-ACTIVATE` **COINCIDEN**, `OP-M-02-ACCOMPLISH`
+> **COINCIDEN**.
+
+**(3) `EJECUTOR.md` regla 9 con `P.1`**: *"Todo conteo que toque ids pasa por el
+resolutor antes de contar"*. La vara **si** tiene que resolver; lo que no puede es
+**quedarse solo con eso**.
+
+### 16.d. EL CRITERIO ADJUDICADO, Y EL TERCER VEREDICTO
+
+**UNA OPERACION `FUSION` CUYO `superviviente` ESCRITO ESTA DEPRECADO Y RESUELVE A
+UN NODO VIVO QUE SU PROPIA FICHA LISTA EN `eliminar` NO ES CUMPLIDA NI SIN
+CUMPLIR: ES `CONSUMIDA CON SUPERVIVIENTE DIVERGENTE`.** La celda publica las tres
+cosas (el id escrito, el id al que resuelve y el campo `eliminar` que lo condena)
+y **NUNCA la llama cumplida**.
+
+Y el caso vecino, que tambien se nombra en vez de callarse: **un `superviviente`
+deprecado que resuelve a un vivo que la ficha NO lista en `eliminar` se publica
+como `CONSUMIDA` y se nombra, sin llamarla cumplida** tampoco.
+
+### 16.e. POR QUE EL RESOLUTOR A SECAS SILENCIARIA SOLO A LAS QUE MERECEN RUIDO
+
+**MEDIDO HOY, NO SUPUESTO.** `python scripts/loop/tallar_estado_de_fase.py --fase
+03_FUSIONES`, corrido en esta vuelta ANTES del cambio de vara
+(`docs/loop/SALIDA_V142_1C_ESTADO_FASE03_ANTES.txt`):
+
+- **`OP-M-02-ASSESS`, `OP-M-02-ACTIVATE` y `OP-M-02-ACCOMPLISH` ya salen
+  `CUMPLIDO`**, cada una con su superviviente escrito vivo y su absorbido
+  deprecado y en `ids_alias`. **Las tres que COINCIDEN no necesitan el
+  resolutor.**
+- **`OP-M-02-ADMIT` y `OP-M-02-MEDIOS` salen `SIN CUMPLIR`**, las dos con la misma
+  razon computada (*"superviviente X NO esta vivo hoy"*).
+
+**O SEA QUE PONER EL RESOLUTOR AL `superviviente` Y NADA MAS NO ANADIRIA NINGUNA
+CUMPLIDA LEGITIMA: SOLO CONVERTIRIA EN CUMPLIDAS A LAS DOS DIVERGENTES.** El rojo
+de esas dos **no es ruido: es el sintoma bien puesto y mal rotulado**, y el remedio
+es rotularlo, no apagarlo.
