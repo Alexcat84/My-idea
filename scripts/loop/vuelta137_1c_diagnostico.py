@@ -76,7 +76,7 @@ def correr_guarda(texto, lineas, titulo, espera):
     lineas.append(r.stdout.rstrip())
     if r.stderr.strip():
         lineas.append(r.stderr.rstrip())
-    lineas.append("EXITCODE: %d" % r.returncode)
+    lineas.append("EXITCODE proceso: %d" % r.returncode)
     lineas.append("")
     return r.returncode, r.stdout
 

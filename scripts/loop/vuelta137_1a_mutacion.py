@@ -70,7 +70,7 @@ def mutacion_a(lineas):
     lineas.append(r.stdout.rstrip())
     if r.stderr.strip():
         lineas.append(r.stderr.rstrip())
-    lineas.append("EXITCODE: %d" % r.returncode)
+    lineas.append("EXITCODE proceso: %d" % r.returncode)
     ok = (r.returncode == 1 and "peldanos [54, 54, 54, 54, 54, 54]" in r.stdout)
     lineas.append("MUTACION A %s: la guarda cae ROJO y sus seis peldanos recomputados salen"
                   % ("VERIFICADA" if ok else "NO VERIFICADA"))
@@ -100,7 +100,7 @@ def mutacion_b(lineas):
         lineas.append(r.stdout.rstrip())
         if r.stderr.strip():
             lineas.append(r.stderr.rstrip())
-        lineas.append("EXITCODE: %d" % r.returncode)
+        lineas.append("EXITCODE proceso: %d" % r.returncode)
         ok = (r.returncode == 1 and "peldano 54" in r.stdout)
     finally:
         os.remove(tmp)

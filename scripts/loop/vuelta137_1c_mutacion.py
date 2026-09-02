@@ -83,7 +83,7 @@ def bloque(lineas, titulo, texto, r, espera_rojo, nota=""):
     lineas.append(r.stdout.rstrip())
     if r.stderr.strip():
         lineas.append(r.stderr.rstrip())
-    lineas.append("EXITCODE: %d" % r.returncode)
+    lineas.append("EXITCODE proceso: %d" % r.returncode)
     ok = (r.returncode == 1) if espera_rojo else (r.returncode == 0)
     lineas.append("%s: %s" % (titulo.split(",")[0],
                              "VERIFICADA" if ok else "NO VERIFICADA"))
@@ -130,11 +130,11 @@ def main():
     lineas.append(txt_c.strip())
     lineas.append("--- salida de la guarda VIEJA (git show %s) ---" % COMMIT_VIEJO)
     lineas.append(r_vieja.stdout.rstrip())
-    lineas.append("EXITCODE viejo: %d" % r_vieja.returncode)
+    lineas.append("EXITCODE proceso viejo: %d" % r_vieja.returncode)
     r_nueva = correr_guarda(txt_c)
     lineas.append("--- salida de la guarda REPARADA ---")
     lineas.append(r_nueva.stdout.rstrip())
-    lineas.append("EXITCODE nuevo: %d" % r_nueva.returncode)
+    lineas.append("EXITCODE proceso nuevo: %d" % r_nueva.returncode)
     c = (r_vieja.returncode == 0 and r_nueva.returncode == 1)
     lineas.append("MUTACION C: %s" % (
         "VERIFICADA: la vieja daba VERDE sobre una cifra falsa y la reparada cae ROJO"
@@ -162,7 +162,7 @@ def main():
         else:
             estado = "FALLO: la guarda NO mordio"
             d = False
-        lineas.append("  %s: EXIT %d, %s" % (script, r.returncode, estado))
+        lineas.append("  %s: EXIT proceso %d, %s" % (script, r.returncode, estado))
     lineas.append("MUTACION D: %s" % (
         "VERIFICADA (ninguna mutacion vieja acusa a la guarda)" if d
         else "NO VERIFICADA"))

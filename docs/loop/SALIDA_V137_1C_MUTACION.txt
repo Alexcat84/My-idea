@@ -9,7 +9,7 @@ La tabla de peldanos (`SALIDA_V135_4B_PELDANOS.txt`) deja 38 grafias sin agrupar
 ROJO, 1 cifra(s) no cuadran:
   linea 1: "38 grafias" <-> `SALIDA_V135_4B_PELDANOS.txt`: contado 37 (linea CIFRA 'grafias sin agrupar', elegida POR ETIQUETA) [candidatas de esa unidad en el fichero: 'grafias en grupo'=92, 'grafias sin agrupar'=37]
 COBERTURA: 0 cotejadas / 0 exentas / 1 cifras
-EXITCODE: 1
+EXITCODE proceso: 1
 MUTACION A: VERIFICADA
 
 === MUTACION B, la cifra de la etiqueta VECINA del mismo fichero
@@ -22,7 +22,7 @@ La tabla de peldanos (`SALIDA_V135_4B_PELDANOS.txt`) deja 92 grafias sin agrupar
 ROJO, 1 cifra(s) no cuadran:
   linea 1: "92 grafias" <-> `SALIDA_V135_4B_PELDANOS.txt`: contado 37 (linea CIFRA 'grafias sin agrupar', elegida POR ETIQUETA) [candidatas de esa unidad en el fichero: 'grafias en grupo'=92, 'grafias sin agrupar'=37]
 COBERTURA: 0 cotejadas / 0 exentas / 1 cifras
-EXITCODE: 1
+EXITCODE proceso: 1
 MUTACION B: VERIFICADA
 
 === MUTACION C, el FALSO VERDE que el defecto 2 permitia
@@ -37,12 +37,12 @@ La mutacion de la vuelta 133 (`SALIDA_V133_2E_MUTACION.txt`) quedo verificada ap
 VERDE EXIT 0: 1 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
   2 grafias == 2 contados en `SALIDA_V133_2E_MUTACION.txt`
 COBERTURA: 1 cotejadas / 0 exentas / 1 cifras
-EXITCODE viejo: 0
+EXITCODE proceso viejo: 0
 --- salida de la guarda REPARADA ---
 ROJO, 1 cifra(s) no cuadran:
   linea 1: "2 grafias" <-> `SALIDA_V135_4B_PELDANOS.txt`: contado 92 (linea CIFRA 'grafias en grupo', elegida POR ETIQUETA) [candidatas de esa unidad en el fichero: 'grafias en grupo'=92, 'grafias sin agrupar'=37]
 COBERTURA: 0 cotejadas / 0 exentas / 1 cifras
-EXITCODE nuevo: 1
+EXITCODE proceso nuevo: 1
 MUTACION C: VERIFICADA: la vieja daba VERDE sobre una cifra falsa y la reparada cae ROJO
 
 === MUTACION D, las mutaciones VIEJAS contra la guarda reparada
@@ -51,10 +51,10 @@ mutacion no llega a correr porque el texto que buscaba en REPORTE.md ya no
 esta: REPORTE.md se sobreescribe cada vuelta). Un EXIT 1 por ancla perdida
 NO es un fallo de la guarda, y contarlo como tal seria mentir en la otra
 direccion. Ver el hallazgo lateral en el reporte de la vuelta 137.
-  vuelta133_tarea2e_mutacion_cifras.py: EXIT 0, OK, la guarda mordio como se esperaba
-  vuelta135_2e_mutacion_1.py: EXIT 1, ANCLA PERDIDA, no llega a probar la guarda: ROJO PREVIO: '118 grafias (sin instrumento)' no aparece exactamente una vez en el reporte real.
-  vuelta135_2e_mutacion_2.py: EXIT 1, ANCLA PERDIDA, no llega a probar la guarda: ROJO PREVIO: '54 grupos (sin instrumento)' no aparece exactamente una vez en el reporte real.
-  vuelta135_2e_mutacion_3.py: EXIT 1, ANCLA PERDIDA, no llega a probar la guarda: ROJO PREVIO: '118 grafias (sin instrumento)' no aparece exactamente una vez en el reporte real.
+  vuelta133_tarea2e_mutacion_cifras.py: EXIT proceso 0, OK, la guarda mordio como se esperaba
+  vuelta135_2e_mutacion_1.py: EXIT proceso 1, ANCLA PERDIDA, no llega a probar la guarda: ROJO PREVIO: '118 grafias (sin instrumento)' no aparece exactamente una vez en el reporte real.
+  vuelta135_2e_mutacion_2.py: EXIT proceso 1, ANCLA PERDIDA, no llega a probar la guarda: ROJO PREVIO: '54 grupos (sin instrumento)' no aparece exactamente una vez en el reporte real.
+  vuelta135_2e_mutacion_3.py: EXIT proceso 1, ANCLA PERDIDA, no llega a probar la guarda: ROJO PREVIO: '118 grafias (sin instrumento)' no aparece exactamente una vez en el reporte real.
 MUTACION D: VERIFICADA (ninguna mutacion vieja acusa a la guarda)
 HALLAZGO LATERAL, DECLARADO: 3 de las 4 mutaciones viejas no pueden correr hoy
   (vuelta135_2e_mutacion_1.py, vuelta135_2e_mutacion_2.py, vuelta135_2e_mutacion_3.py).
