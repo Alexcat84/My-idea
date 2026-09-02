@@ -1,0 +1,29 @@
+(a) depende_de de OP-M-04: [] -- VACIO, no espera a nadie
+
+(b) bloquea_a de OP-M-04: ['OP-S-12', 'OP-U-01']
+      OP-S-12 -- existe=True, fase=05_SANEO, su depende_de=['OP-S-01', 'OP-S-09', 'OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06', 'OP-U-01']
+      OP-U-01 -- existe=True, fase=03_FUSIONES, su depende_de=['OP-C-01', 'OP-C-02', 'OP-C-03', 'OP-C-04', 'OP-F-01', 'OP-F-02', 'OP-F-03', 'OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06']
+    OP-M-04 esta en depende_de de alguna: []
+    NINGUNA de las dos es de la fase 06: True
+
+(c) LOS CUATRO NODOS DE OP-M-04, en el grafo de hoy:
+      formalize_advisory_board         existe=True  deprecado=False resuelve_a=formalize_advisory_board
+      formalizar_junta_asesora         existe=True  deprecado=False resuelve_a=formalizar_junta_asesora
+      identificar_junta_asesores       existe=True  deprecado=False resuelve_a=identificar_junta_asesores
+      identificar_consejo_asesores     existe=True  deprecado=False resuelve_a=identificar_consejo_asesores
+    VIVOS: 4 de 4 | SIN FUNDIR (resuelven a si mismos): 4 de 4
+
+(d) LA RAMA es_mesa DE medir(), leida del fuente (473 nodos AST):
+      lee el campo propio `nodos`          de la ficha: NO
+      lee el campo propio `eliminar`       de la ficha: NO
+      lee el campo propio `superviviente`  de la ficha: NO
+      lee el campo propio `aristas_nuevas` de la ficha: NO
+      lee el campo propio `preservar`      de la ficha: NO
+    CAMPOS DE LA FICHA QUE SI LEE: ['a', 'bloquea_a', 'estado', 'fase', 'tipo']
+
+(e) LA CELDA DE HOY para OP-M-04:
+      vara      : MESA
+      cumplido  : None
+      razon     : NINGUNA de sus hijas esta en el catalogo de esta fase; nomina de 2 (bloquea_a 2, remision 0, union 2); nomina: OP-S-12 (05_SANEO), OP-U-01 (03_FUSIONES)
+    SIN VARA ESCRITA hoy: ['OP-M-04']
+EXITCODE: 0

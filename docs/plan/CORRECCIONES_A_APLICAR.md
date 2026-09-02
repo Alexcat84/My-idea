@@ -1302,3 +1302,209 @@ de la casa desde la vuelta 141, la sostiene `tallar_estado_de_fase.py` en su cod
 y en su celda, y quien quiera contar elementos del array **dice ENTRADAS**. Es la
 misma doctrina que la **CORRECCION 15** fijo para el universo (*"un total lleva su
 universo al lado"*), aplicada ahora a la unidad.
+
+---
+
+## CORRECCION 19. **LA EXCEPCION DEL 9.22 SE ESCRIBE CON FORMULA CANONICA, Y LA VENTANA TENIA DOS AGUJEROS**
+
+**Adjudicacion 3.1 del acta de la vuelta 143. Escrita en la vuelta 144, TAREA 1.b,
+POR ADICION: no se borra una letra de la CORRECCION 14, que sigue entera y
+vigente.** Corte de todas las cifras de esta correccion: **2 sep 2026**, medidas en
+la vuelta 144 con instrumento propio del ejecutor
+(`scripts/loop/vuelta144_1b_medir_ventana.py`, salida en
+`docs/loop/SALIDA_V144_1B_VENTANA_MEDIDA.txt`), **no copiadas de la medicion del
+auditor**. La medicion de contraste del auditor va citada al lado en cada punto.
+
+### 19.a. LO QUE HABIA, Y NO SE BORRA
+
+La vuelta 143 (TAREA 2.a) enseno a `scripts/loop/tallar_estado_de_fase.py` a leer
+la excepcion del banco **9.22** que la propia ficha de `OP-E-04` escribe en su
+`verificacion 5`. La decision de lectura, escrita entonces y **que sigue en el
+codigo sin tocarse**, fue: *"LOS PARES SE PARSEAN DE LA VENTANA QUE LA PROPIA FICHA
+DELIMITA CON SUS PALABRAS"*, con la ventana yendo del literal `DOBLE LINEA` al
+literal `y ESCALERA`. **El criterio es correcto y queda adjudicado** (acta 143,
+3.1): restringir la ventana era necesario, porque la misma frase nombra **LD-42
+como ESCALERA**, o sea como el par que la excepcion **expresamente NO cubre**, y
+leer la linea entera lo colaria dentro.
+
+**LO QUE SE CORRIGE NO ES EL CRITERIO, ES LA IMPLEMENTACION.**
+
+### 19.b. AGUJERO 1: LA VENTANA SE ENSANCHA EN SILENCIO SI FALTA EL CIERRE
+
+El codigo de la 143 dice, en `pares_exceptuados_de`:
+
+```
+fin = bajo.find(MARCA_CIERRA_EXCEPCION, ini)
+ventana = linea[ini:fin] if fin > ini else linea[ini:]
+```
+
+Si el literal de cierre no esta, `find` devuelve **-1** y la ventana **se lee hasta
+el final de la linea sin decir nada**. Habia fallo ruidoso para la apertura ausente
+y para el caso de cero pares; **para el cierre ausente no lo habia**.
+
+**MEDIDO POR EL EJECUTOR EN LA VUELTA 144, EN MEMORIA Y CON CERO ESCRITURAS:**
+
+| que se mide | ficha tal cual | quitado el literal de cierre |
+|---|---:|---:|
+| pares exceptuados que salen | **4** | **5** |
+| fallos declarados | **0** | **0** |
+
+**EL PAR QUE ENTRA DE MAS ES
+`revision_portafolio_periodica <-> sistema_gates_go_kill`**, que es **exactamente
+el par que la excepcion niega por escrito**: el LD-42 que la propia formula de la
+ficha adjudica como **ESCALERA**. Y entra **con cero fallos declarados**, o sea
+**hacia el lado permisivo y en silencio**, que es lo contrario de banco 9.
+
+**CONTRASTE:** el auditor midio lo mismo por mutacion propia (acta 143, seccion 2 y
+caida 4.2) y nombro el mismo par. **CERO DISCREPANCIAS.**
+
+### 19.c. AGUJERO 2: EL ANCLA ES LA PRIMERA OCURRENCIA, Y NO ES LA FORMULA
+
+`bajo.find(MARCA_ABRE_EXCEPCION)` toma **la primera** ocurrencia del literal.
+
+**MEDIDO POR EL EJECUTOR CON `re.finditer` SOBRE ESA MISMA LINEA** (verificacion 5,
+**1.950 caracteres**):
+
+- el literal `doble linea` aparece **2 veces**, en las posiciones **381** y **859**;
+- **el codigo de hoy ancla en 381**, que cae dentro de la prosa del punto **(1)**
+  (*"...NO para los enlaces de doble linea, por el banco 9.22..."*), **no en 859**,
+  que es donde vive la formula de adjudicacion (*"adjudico DOBLE LINEA los pares
+  de..."*);
+- la ventana real de hoy es **`[381, 952)`, 571 caracteres**; el tramo **tragado de
+  mas** va de **381 a 859**, o sea **478 caracteres**, y se come el punto (1)
+  entero, la cita a la **CORRECCION 14** y una ruta de fichero.
+
+**EL COMENTARIO DEL CODIGO DE LA 143 Y EL DISCUTIBLE 1 DE SU REPORTE DESCRIBEN UNA
+VENTANA QUE EL CODIGO NO LEE.**
+
+**POR QUE HOY NO MUEVE UNA CIFRA, MEDIDO Y NO SUPUESTO:** dentro de esos **478
+caracteres** hay **cero LD** y **cero flechas** (`PATRON_LD` y `PATRON_ARISTA`
+corridos sobre el tramo), asi que el conjunto de LDs de la ventana real
+(`35, 40, 45, 48, 49, 51, 53`) y el de la ventana que el comentario describe son
+**el mismo**. **Hoy sale bien por suerte, no por construccion**: el dia que una
+excepcion cite un `LD-nn` en su encabezado, se cuela sola.
+
+**CONTRASTE:** el auditor midio las mismas dos posiciones, 381 y 859 (acta 143,
+caida 4.3). **CERO DISCREPANCIAS.**
+
+### 19.d. LA FORMULA CANONICA QUE QUEDA, Y QUE LA TAREA 2.a IMPLEMENTA
+
+**LA VARA DEJA DE DEPENDER DE LA REDACCION DE UNA FICHA.** No es doctrina nueva:
+es el hueco de orden 1 del `00_INDICE:482` (*"LA GUARDA TIENE QUE LLEVAR LA
+EXCEPCION ESCRITA"*) llevado a su consecuencia, mas **banco 9** (fallar ruidoso).
+
+**LA FORMULA, en cuatro renglones:**
+
+1. **LA EXCEPCION DECLARA SUS PARES ENTRE DOS MARCAS INEQUIVOCAS**, elegidas para
+   que **no puedan aparecer en prosa**: `PARES EXCEPTUADOS:` abre y
+   `FIN PARES EXCEPTUADOS` cierra. **Se justifica la eleccion:** las dos llevan la
+   palabra `EXCEPTUADOS` en mayuscula pegada a un dos puntos o a un `FIN`, forma
+   que ninguna explicacion en castellano corriente produce; y a diferencia de
+   `doble linea` o `y escalera`, **no son terminos del vocabulario del 9.22**, que
+   es justo lo que hacia que los viejos aparecieran tambien en la explicacion.
+2. **SI LA FICHA DISPARA LA EXCEPCION Y NO TRAE LA FORMULA ENTERA, ES ROJO
+   NOMBRANDOLA, y el conjunto sale VACIO.** Los dos extremos con su fallo: falta la
+   apertura, **ROJO**; falta el cierre, **ROJO**. **NUNCA se lee hasta el final de
+   la linea por defecto**: el `else linea[ini:]` muere.
+3. **EL ANCLA ES UNICA O ES ROJO.** Si la marca de apertura aparece **mas de una
+   vez** en la linea, es **ROJO por ambigua**, no se toma la primera.
+4. **LO VIEJO NO SE BORRA:** la verificacion 5 de `OP-E-04` se reescribe **por
+   adicion**, sin tocar una letra de lo que ya dice, con la guarda semantica de
+   siempre (fichas antes y despues, ficha que cambia, campo que cambia, **prefijo
+   identico**), y **los cuatro pares exceptuados tienen que seguir siendo los
+   mismos cuatro**.
+
+### 19.e. LA REGLA QUE QUEDA
+
+**UNA VENTANA DE LECTURA SE DELIMITA CON MARCAS QUE NO PUEDAN SALIR EN LA PROSA QUE
+LA RODEA, Y SUS DOS EXTREMOS FALLAN RUIDOSO.** Un extremo que, al faltar, ensancha
+la lectura en vez de pararla, es un modo de fallo **silencioso y permisivo**: la
+guarda sigue en verde mientras deja entrar justo lo que niega. Es la misma especie
+que la **CORRECCION 16** registra para el superviviente divergente (una operacion
+hecha al reves que pasaba por cumplida) y la misma que el banco 9 llama por su
+nombre: **fallar ruidoso, no mentir calladito.**
+
+---
+
+## CORRECCION 20. **`OP-M-04` NO ESPERA A NADIE, Y LA VARA DE MESA MIDE SOLO POR HIJAS**
+
+**Adjudicacion 3.9 del acta de la vuelta 143. Escrita en la vuelta 144, TAREA 1.c,
+POR ADICION.** Corte de todas las cifras: **2 sep 2026**, medidas en la vuelta 144
+con instrumento propio del ejecutor (`scripts/loop/vuelta144_1c_medir_opm04.py`,
+salida en `docs/loop/SALIDA_V144_1C_OPM04_MEDIDA.txt`).
+
+### 20.a. LA PREMISA VIEJA, QUE NO SE BORRA, Y POR QUE ERA FALSA
+
+El reporte de la vuelta 143 escribio, en su PREGUNTA 2, que `OP-M-04` *"queda en NO
+COMPUTABLE esperando a `OP-U-01`"*. **La conclusion (que la fase 06 no cierra sin
+ella) era correcta; la premisa (que espera a alguien) no lo era**, y el texto viejo
+se deja escrito porque una correccion que tapa lo que corrige no se puede auditar
+(`EJECUTOR.md` 8).
+
+### 20.b. LO MEDIDO, CON INSTRUMENTO PROPIO Y CERO ESCRITURAS
+
+- **`depende_de` de `OP-M-04` es `[]`.** Vacio. **No espera a nadie.**
+- **`bloquea_a` de `OP-M-04` es `['OP-S-12', 'OP-U-01']`**, o sea que **las bloquea,
+  no depende de ellas**. Comprobado ademas por el otro lado: **`OP-M-04` no aparece
+  en el `depende_de` de ninguna de las dos** (lista de coincidencias: vacia). Y
+  **ninguna de las dos es de la fase 06**: `OP-S-12` es de `05_SANEO` y `OP-U-01` de
+  `03_FUSIONES`.
+- **Sus cuatro nodos siguen VIVOS y SIN FUNDIR en el grafo de hoy: 4 de 4 y 4 de
+  4.** `formalize_advisory_board`, `formalizar_junta_asesora`,
+  `identificar_junta_asesores` e `identificar_consejo_asesores` existen los cuatro,
+  ninguno esta deprecado, y **los cuatro resuelven a si mismos** con el resolutor
+  de alias puesto (`P.1`). **La operacion esta entera por hacer y nada la bloquea.**
+
+### 20.c. LA CAUSA REAL: LA VARA DE MESA NUNCA MIRA LOS CAMPOS PROPIOS DE LA FICHA
+
+**Medido leyendo el CODIGO FUENTE, no de memoria**: el arnes recorta con `ast` el
+bucle de las mesas dentro de `medir()` (`tallar_estado_de_fase.py`) y busca en el
+las cadenas de los campos propios. Resultado:
+
+| campo propio de la ficha | lo lee la rama `es_mesa`? |
+|---|---|
+| `nodos` | **NO** |
+| `eliminar` | **NO** |
+| `superviviente` | **NO** |
+| `aristas_nuevas` | **NO** |
+| `preservar` | **NO** |
+
+**Los campos de ficha que si lee son `bloquea_a`, `fase`, `estado`, `tipo` y `a`**
+(el de la tabla de remision). O sea: **la vara de MESA mide una mesa SOLO por sus
+hijas** (`bloquea_a` union remision).
+
+**Y `OP-M-04` ES LA UNICA MESA QUE LLEVA SU PROPIA CIRUGIA DENTRO:** `nodos` con
+cuatro, `eliminar` con dos, un `superviviente` doble y un giro en `aristas_nuevas`.
+**Sus hijas no ejecutan su cirugia; la ejecuta ella.** Como sus dos hijas estan
+fuera del catalogo de la fase 06, la celda de hoy sale, literal:
+
+```
+vara      : MESA
+cumplido  : None
+razon     : NINGUNA de sus hijas esta en el catalogo de esta fase; nomina de 2
+            (bloquea_a 2, remision 0, union 2); nomina: OP-S-12 (05_SANEO),
+            OP-U-01 (03_FUSIONES)
+```
+
+y cae en **SIN VARA ESCRITA**, que es **el propio instrumento diciendo en voz alta
+que le falta una regla**, exactamente como su docstring promete. No es una averia
+del instrumento: es su fallo ruidoso funcionando.
+
+### 20.d. LA REGLA QUE QUEDA
+
+**LA MESA QUE DECLARA SU FIGURA EN SU PROPIO `tipo` SE MIDE CON LAS VARAS DE SU
+FIGURA, SOBRE SUS PROPIOS CAMPOS.**
+
+**NO ES DOCTRINA NUEVA, Y SE DICE POR QUE.** El `tipo` de `OP-M-04` dice literal
+**"MESA ADJUDICADA: DOS FUSIONES MAS UN ENLACE"**: **la propia ficha nombra su
+figura**, igual que las seis frases literales que la vuelta 141 hizo citar en el
+codigo y la excepcion que la 143 hizo leer de la ficha. **Y las dos varas que esa
+figura pide ya estan escritas y en uso en este mismo fichero**: la de **FUSION**
+(superviviente vivo, absorbidos deprecados y en `ids_alias`) y la de **ENLACE**
+(direcciones con la IDA presente y el regimen de vuelta). No se copian: **se
+reusan**.
+
+**LA MESA QUE NO DECLARA SU FIGURA SE COMPORTA EXACTAMENTE COMO HOY.** La extension
+es un caso mas y **solo uno**, disparado por una frase literal de la ficha citada en
+el codigo; ninguna otra fila de la tabla de la fase 06 puede moverse, y si se mueve,
+se trae en vez de ajustarse.

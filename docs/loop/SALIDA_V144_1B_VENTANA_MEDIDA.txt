@@ -1,0 +1,35 @@
+LA LINEA QUE DISPARA: verificacion 5, 1950 caracteres
+
+(i) FICHA TAL CUAL: 4 par(es), 0 fallo(s)
+      gestion_portafolio_dos_niveles <-> sistema_gates_go_kill
+      gestion_portafolio_foco <-> sistema_gates_go_kill
+      gestion_portafolio_formal <-> sistema_gates_go_kill
+      portfolio_management <-> sistema_gates_go_kill
+
+    posicion del literal de cierre 'y escalera': 952
+(ii) SIN EL LITERAL DE CIERRE: 5 par(es), 0 fallo(s)
+      gestion_portafolio_dos_niveles <-> sistema_gates_go_kill
+      gestion_portafolio_foco <-> sistema_gates_go_kill
+      gestion_portafolio_formal <-> sistema_gates_go_kill
+      portfolio_management <-> sistema_gates_go_kill
+      revision_portafolio_periodica <-> sistema_gates_go_kill
+    ENTRAN DE MAS: 1 -- revision_portafolio_periodica <-> sistema_gates_go_kill
+    SE PIERDEN:    0 -- ninguno
+
+(iii) EL LITERAL DE APERTURA 'doble linea' aparece 2 vez/veces, en [381, 859]
+      EL CODIGO DE HOY ANCLA EN: 381 (bajo.find, la PRIMERA)
+      DISTANCIA HASTA LA ULTIMA: 478 caracteres
+      LO QUE LA VENTANA SE TRAGA DE MAS (de 381 a 859):
+        doble linea, por el banco 9.22 ('ENLACE MUTUO: dos aristas, una por cada linea expandida') y por el hueco de orden 1 del 00_INDICE, que exige literalmente que LA GUARDA TIENE QUE LLEVAR LA EXCEPCION ESCRITA. El criterio entero esta registrado en docs/plan/CORRECCIONES_A_APLICAR.md, CORRECCION 14. (2) LA LECTURA: la vuelta 141 releyo los seis pares colapsados con la vara del 9.22, citando por su numero el paso de cada nodo (docs/loop/SALIDA_V141_3B_VARA_922.txt), y adjudico 
+
+LA VENTANA REAL DE HOY: [381, 952), 571 caracteres
+  doble linea, por el banco 9.22 ('ENLACE MUTUO: dos aristas, una por cada linea expandida') y por el hueco de orden 1 del 00_INDICE, que exige literalmente que LA GUARDA TIENE QUE LLEVAR LA EXCEPCION ESCRITA. El criterio entero esta registrado en docs/plan/CORRECCIONES_A_APLICAR.md, CORRECCION 14. (2) LA LECTURA: la vuelta 141 releyo los seis pares colapsados con la vara del 9.22, citando por su numero el paso de cada nodo (docs/loop/SALIDA_V141_3B_VARA_922.txt), y adjudico DOBLE LINEA los pares de LD-35 con LD-51, de LD-49, de LD-40 con LD-48 y de LD-45 con LD-53, 
+
+LDs DENTRO DE LA VENTANA REAL DE HOY: ['35', '40', '45', '48', '49', '51', '53']
+LDs DENTRO DE LA VENTANA QUE EL COMENTARIO DESCRIBE (ancla en 859): ['35', '40', '45', '48', '49', '51', '53']
+
+EL TRAMO TRAGADO DE MAS: 478 caracteres, de 381 a 859
+  LDs dentro:     []
+  flechas dentro: []
+  VEREDICTO: hoy no aporta nada, por eso la cifra no se mueve
+EXITCODE: 0
