@@ -1,0 +1,33 @@
+==============================================================================
+VERIFICAR Y DECLARAR EL DESTINO DE OP-M-01-ESLABONES . ESTE INSTRUMENTO NO ESCRIBE
+==============================================================================
+tipo: ENLACE | fase escrita: 04_ENLACES | estado (contraste): LISTA
+pares dirigidos de la ficha: 2
+
+(V3) los nodos del acto siguen siendo NODOS DISTINTOS Y VIVOS (la escalera
+     los encadena, NO los funde):
+     sistema_stage_gate                       -> stage_gate_system                        vivo=True
+     sistema_gates_go_kill                    -> sistema_gates_go_kill                    vivo=True
+     asignacion_recursos_en_gates             -> asignacion_recursos_en_gates             vivo=True
+     nodos distintos tras resolver: 3 de 3
+
+arista de la ficha: sistema_stage_gate -> sistema_gates_go_kill
+   resuelta a: stage_gate_system -> sistema_gates_go_kill
+   (V2) PRESENTE HOY: True
+   (V0) la VUELTA sistema_gates_go_kill -> stage_gate_system existe: False
+   (V1) literales en stage_gate_system.nodos_siguientes que resuelven a sistema_gates_go_kill: ['sistema_gates_go_kill']
+   (V1) literales en sistema_gates_go_kill.nodos_previos que resuelven a stage_gate_system: ['stage_gate_system']
+   (V4) P.9: literales que son el ID VIVO: ['sistema_gates_go_kill', 'stage_gate_system'] | literales que viven por ALIAS: ninguno
+arista de la ficha: sistema_gates_go_kill -> asignacion_recursos_en_gates
+   (V2) PRESENTE HOY: True
+   (V0) la VUELTA asignacion_recursos_en_gates -> sistema_gates_go_kill existe: True
+   (V1) literales en sistema_gates_go_kill.nodos_siguientes que resuelven a asignacion_recursos_en_gates: ['asignacion_recursos_en_gates']
+   (V1) literales en asignacion_recursos_en_gates.nodos_previos que resuelven a sistema_gates_go_kill: ['sistema_gates_go_kill']
+   (V4) P.9: literales que son el ID VIVO: ['asignacion_recursos_en_gates', 'sistema_gates_go_kill'] | literales que viven por ALIAS: ninguno
+
+------------------------------------------------------------------------------
+CIFRA: aristas de la ficha: 2 | presentes hoy: 2 | que se escribirian: 0
+
+ROJO, 1 cosa(s) no cuadran. EL DESTINO NO SE DECLARA CUMPLIDO:
+   (V0) la VUELTA asignacion_recursos_en_gates -> sistema_gates_go_kill EXISTE, y la regla de la escalera la prohibe
+EXITCODE: 1

@@ -1,0 +1,29 @@
+MEDICION DE LA PARADA DE OP-M-01-ESLABONES (vuelta 140, TAREA 3, remitida 2 de 5)
+==============================================================================
+
+LA VUELTA QUE LA FICHA PROHIBE EXISTE HOY, Y ESTAS SON LAS DOS DIRECCIONES:
+  ida    : sistema_gates_go_kill -> asignacion_recursos_en_gates  (el 2.o peldano, HEREDADO)
+  vuelta : asignacion_recursos_en_gates -> sistema_gates_go_kill  (PROHIBIDA por la verificacion 0)
+
+LAS DOS SON LITERALES, NO RESUELTAS POR ALIAS (medido con el resolutor puesto).
+
+DE DONDE SALIO LA VUELTA, MEDIDO CONTRA GIT Y NO SUPUESTO:
+  asignacion_recursos_en_gates.nodos_siguientes ANTES de 3f249a03:
+    ['gestion_portafolio_formal', 'gates_huecos_hollow_gates', 'identificacion_talento_design_thinking', 'trabajo_en_lotes_pequenos', 'identificar_pensadores_de_diseno_internos', 'estructura_de_gates']
+  asignacion_recursos_en_gates.nodos_siguientes HOY:
+    ['gestion_portafolio_formal', 'gates_huecos_hollow_gates', 'identificacion_talento_design_thinking', 'trabajo_en_lotes_pequenos', 'identificar_pensadores_de_diseno_internos', 'sistema_gates_go_kill']
+
+  LA UNICA ENTRADA QUE CAMBIA: estructura_de_gates -> sistema_gates_go_kill.
+  estructura_de_gates es uno de los CUATRO absorbidos de OP-M-01-FUSION
+  (vuelta 139, commit 3f249a03), y la pasada de redireccion de esa fusion
+  reapunto la arista al superviviente. La ida ya estaba (heredada de
+  gates_go_kill_decision_points, otro absorbido de la misma fusion).
+  RESULTADO: un ciclo de dos que ninguna de las dos operaciones pidio.
+
+LO QUE ESTO NO ES: no es una arista mal escrita por esta vuelta. La vuelta 140
+NO ESCRIBIO NADA en OP-M-01-ESLABONES, y su instrumento no tiene modo escritura.
+
+POR QUE ES PARADA Y NO SE ARREGLA AQUI: cortar una arista que otra operacion
+fabrico legitimamente es una DECISION que ninguna regla escrita toma. La ficha
+dice que la vuelta no debe existir, pero no dice quien la quita ni si la regla
+de la escalera manda sobre la redireccion de una fusion. EJECUTOR.md regla 5.
