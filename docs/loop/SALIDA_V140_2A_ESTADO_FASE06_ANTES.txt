@@ -1,0 +1,26 @@
+ESTADO DE LA FASE 06_MESAS | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-M-01 | 06_MESAS | LISTA | MESA | no remitida | 2 de 4 hijas del catalogo con destino cumplido; sin cumplir: OP-E-04, OP-E-05; hijas FUERA del catalogo: OP-S-12 (05_SANEO) | SIN CUMPLIR |
+| OP-M-02 | 06_MESAS | LISTA | MESA | no remitida | 1 de 1 hijas del catalogo con destino cumplido; hijas FUERA del catalogo: OP-M-02-PROG (03_FUSIONES), OP-M-02-MEDIOS (03_FUSIONES), OP-M-02-ASSESS (03_FUSIONES), OP-M-02-ADMIT (03_FUSIONES), OP-M-02-ACTIVATE (03_FUSIONES), OP-M-02-ACCOMPLISH (03_FUSIONES), OP-S-12 (05_SANEO) | CUMPLIDO |
+| OP-M-03 | 06_MESAS | LISTA | MESA | no remitida | 1 de 2 hijas del catalogo con destino cumplido; sin cumplir: OP-M-03-ENLACES; hijas FUERA del catalogo: OP-D-07 (02_DESTEJIDOS), OP-M-03-I (03_FUSIONES), OP-M-03-II (03_FUSIONES), OP-S-12 (05_SANEO) | SIN CUMPLIR |
+| OP-M-04 | 06_MESAS | LISTA | MESA | no remitida | NINGUNA de sus hijas esta en el catalogo de esta fase; bloquea_a: OP-S-12 (05_SANEO), OP-U-01 (03_FUSIONES) | NO COMPUTABLE |
+| OP-M-05 | 06_MESAS | LISTA | MESA | no remitida | 3 de 3 hijas del catalogo con destino cumplido; hijas FUERA del catalogo: OP-S-12 (05_SANEO) | CUMPLIDO |
+| OP-E-04 | 04_ENLACES | LISTA | ENLACE | de 04_ENLACES / a OP-M-01 (docs/plan/04_ENLACES.md:1452) | 2 de 9 presentes; faltan: gestion_portafolio_dos_niveles -> sistema_gates_go_kill, sistema_gates_go_kill -> revision_portafolio_periodica, sistema_gates_go_kill -> gestion_portafolio_foco, portfolio_management -> sistema_gates_go_kill, gestion_portafolio_dos_niveles -> sistema_gates_go_kill, gestion_portafolio_foco -> sistema_gates_go_kill, decision_factory_mentality -> sistema_gates_go_kill | SIN CUMPLIR |
+| OP-E-05 | 04_ENLACES | LISTA | ENLACE | de 04_ENLACES / a OP-M-01 (docs/plan/04_ENLACES.md:1453) | 2 de 4 presentes; faltan: sistema_gates_go_kill -> gestion_portafolio_dos_niveles, gestion_portafolio_dos_niveles -> sistema_gates_go_kill | SIN CUMPLIR |
+| OP-M-01-ESLABONES | 04_ENLACES | LISTA | ENLACE | de 04_ENLACES / a OP-M-01 (docs/plan/04_ENLACES.md:1454) | 2 de 2 presentes | CUMPLIDO |
+| OP-M-01-FUSION | 03_FUSIONES | LISTA | FUSION | de 03_FUSIONES / a la fase, sin mesa nombrada (docs/plan/00_INDICE.md:261) | superviviente sistema_gates_go_kill vivo, 4 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-01-SEXTO | 04_ENLACES | LISTA | ENLACE | de 04_ENLACES / a OP-M-01 (docs/plan/04_ENLACES.md:1455) | 0 de 1 presentes; faltan: gestion_de_portafolio_gates_go_kill -> sistema_gates_go_kill | SIN CUMPLIR |
+| OP-M-02-ACCLIMATE | 03_FUSIONES | LISTA | FUSION | de 03_FUSIONES / a la fase, sin mesa nombrada (docs/plan/00_INDICE.md:261) | superviviente fase_acclimate_experiencia_cliente vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-03-ENLACES | 04_ENLACES | LISTA | ENLACE | de 04_ENLACES / a OP-M-03 (docs/plan/04_ENLACES.md:1451) | 0 de 2 presentes; faltan: pivotar_o_perseverar -> pivote_estrategico, pivote_o_proceder -> pivote_estrategico | SIN CUMPLIR |
+| OP-M-03-III | 03_FUSIONES | LISTA | FUSION | de 03_FUSIONES / a la fase, sin mesa nombrada (docs/plan/00_INDICE.md:261) | superviviente pivote_estrategico vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-05-APERTURA | 03_FUSIONES | LISTA | FUSION | de 03_FUSIONES / a la fase, sin mesa nombrada (docs/plan/00_INDICE.md:261) | superviviente customer_validation vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-05-EDIFICIO | 03_FUSIONES | LISTA | FUSION | de 03_FUSIONES / a la fase, sin mesa nombrada (docs/plan/00_INDICE.md:261) | superviviente customer_discovery_get_out_of_building vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-05-INDICE | 03_FUSIONES | LISTA | FUSION | de 03_FUSIONES / a la fase, sin mesa nombrada (docs/plan/00_INDICE.md:261) | superviviente customer_discovery vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+
+CIFRA: operaciones del catalogo: 16 | con destino cumplido: 9 | sin cumplir: 7 | de ellas, sin vara escrita: 1
+SIN CUMPLIR (7): OP-M-01, OP-M-03, OP-M-04, OP-E-04, OP-E-05, OP-M-01-SEXTO, OP-M-03-ENLACES
+SIN VARA ESCRITA (1): OP-M-04
+EXITCODE: 0
