@@ -1,0 +1,22 @@
+### OP-M-01-ESLABONES
+LD-56          sistema_stage_gate -> sistema_gates_go_kill | resueltos: stage_gate_system -> sistema_gates_go_kill | vivos True/True | IDA sig=True prev=True | VUELTA sig=False prev=False
+LD-57          sistema_gates_go_kill -> asignacion_recursos_en_gates | resueltos: sistema_gates_go_kill -> asignacion_recursos_en_gates | vivos True/True | IDA sig=True prev=True | VUELTA sig=True prev=True
+### OP-E-04
+LD-35          gestion_portafolio_dos_niveles -> estructura_gates | resueltos: gestion_portafolio_dos_niveles -> sistema_gates_go_kill | vivos True/True | IDA sig=True prev=True | VUELTA sig=True prev=True
+LD-40          requisitos_gates_con_dientes -> portfolio_management | resueltos: sistema_gates_go_kill -> portfolio_management | vivos True/True | IDA sig=True prev=True | VUELTA sig=False prev=False
+LD-42          requisitos_gates_con_dientes -> revision_portafolio_periodica | resueltos: sistema_gates_go_kill -> revision_portafolio_periodica | vivos True/True | IDA sig=False prev=False | VUELTA sig=True prev=True
+LD-45          requisitos_gates_con_dientes -> gestion_portafolio_foco | resueltos: sistema_gates_go_kill -> gestion_portafolio_foco | vivos True/True | IDA sig=False prev=False | VUELTA sig=False prev=False
+LD-48          portfolio_management -> gates_go_kill_decision_points | resueltos: portfolio_management -> sistema_gates_go_kill | vivos True/True | IDA sig=False prev=False | VUELTA sig=True prev=True
+LD-49          gestion_portafolio_formal -> gates_go_kill_decision_points | resueltos: gestion_portafolio_formal -> sistema_gates_go_kill | vivos True/True | IDA sig=True prev=True | VUELTA sig=True prev=True
+LD-51          gestion_portafolio_dos_niveles -> gates_go_kill_decision_points | resueltos: gestion_portafolio_dos_niveles -> sistema_gates_go_kill | vivos True/True | IDA sig=True prev=True | VUELTA sig=True prev=True
+LD-53          gestion_portafolio_foco -> gates_go_kill_decision_points | resueltos: gestion_portafolio_foco -> sistema_gates_go_kill | vivos True/True | IDA sig=False prev=False | VUELTA sig=False prev=False
+LD-55          decision_factory_mentality -> gates_go_kill_decision_points | resueltos: decision_factory_mentality -> sistema_gates_go_kill | vivos True/True | IDA sig=False prev=False | VUELTA sig=False prev=False
+pares dirigidos distintos tras resolver: 8 de 9
+### OP-E-05
+LD-41          requisitos_gates_con_dientes -> gestion_portafolio_formal | resueltos: sistema_gates_go_kill -> gestion_portafolio_formal | vivos True/True | IDA sig=True prev=True | VUELTA sig=True prev=True
+LD-43          requisitos_gates_con_dientes -> gestion_portafolio_dos_niveles | resueltos: sistema_gates_go_kill -> gestion_portafolio_dos_niveles | vivos True/True | IDA sig=True prev=True | VUELTA sig=True prev=True
+### OP-M-03-ENLACES
+a              pivotar_o_perseverar -> pivote_estrategico | resueltos: pivotar_o_perseverar -> pivote_estrategico | vivos True/True | IDA sig=True prev=True | VUELTA sig=False prev=False
+b              pivote_o_proceder -> pivote_estrategico | resueltos: pivote_o_proceder -> pivote_estrategico | vivos True/True | IDA sig=True prev=True | VUELTA sig=False prev=False
+### OP-M-01-SEXTO
+x              gestion_de_portafolio_gates_go_kill -> sistema_gates_go_kill | resueltos: gestion_de_portafolio_gates_go_kill -> sistema_gates_go_kill | vivos True/True | IDA sig=True prev=True | VUELTA sig=False prev=False

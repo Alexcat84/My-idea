@@ -1,0 +1,63 @@
+==============================================================================
+(c) CONTRAPRUEBA PRIMERO: EL MISMO CUERPO SIN LA FRASE DE CIERRE
+==============================================================================
+fallos: 0
+VEREDICTO (c): VERDE
+
+==============================================================================
+(a) FRASE DE CIERRE SIN CITA
+==============================================================================
+fallos: 1
+   linea 4: AFIRMACION DE CIERRE (sujeto 'fase', verbo 'cierra') SIN cita de tallar_estado_de_fase.py en su ventana: 'LA FASE 99 CIERRA SU CATALOGO.'
+ROJO Y ES DE LA ESPECIE CORRECTA: True
+CONTRAPRUEBA: sin la frase habia 0 fallo(s), con ella 1
+VEREDICTO (a): VERDE
+
+==============================================================================
+(b) FRASE DE CIERRE CITANDO UN FICHERO QUE DICE sin cumplir: 3
+==============================================================================
+fallos: 1
+   linea 4: AFIRMACION DE CIERRE (sujeto 'fase', verbo 'cierra') citando `SALIDA_V999_MUTACION_ESTADO_SUCIO.txt`, que dice sin cumplir: 3, y su ventana NO NOMBRA 3 de ellas: OP-Z-02, OP-Z-03, OP-Z-04. Frase: 'LA FASE 99 CIERRA SU CATALOGO, medido en `SALIDA_V999_MUTACION_ESTADO_SUCIO.txt`.'
+EL FICHERO FABRICADO DICE sin cumplir: 3 y nombra ['OP-Z-02', 'OP-Z-03', 'OP-Z-04'] (leido, no tecleado)
+ROJO NOMBRANDO LAS TRES: True
+VEREDICTO (b): VERDE
+
+==============================================================================
+(b bis) LA MISMA FRASE, EL MISMO FICHERO SUCIO, PERO NOMBRANDO LAS TRES
+==============================================================================
+Es el caso que la PRIMERA version de la guarda tiraba: un reporte que dice
+la verdad sobre una fase que no cierra caia igual que uno que la calla.
+fallos: 0
+PASA CUANDO LAS NOMBRA: True
+CONTRAPRUEBA, la misma frase SIN nombrarlas dio 1 fallo(s) de cierre: True
+VEREDICTO (b bis): VERDE
+
+==============================================================================
+(c bis) LA MISMA FRASE CITANDO UN FICHERO QUE DICE sin cumplir: 0
+==============================================================================
+fallos: 0
+afirmaciones de cierre COTEJADAS: 1
+   linea 4 (sujeto 'fase', verbo 'cierra') <-> SALIDA_V999_MUTACION_ESTADO_LIMPIO.txt: sin cumplir: 0
+VEREDICTO (c bis): VERDE
+
+==============================================================================
+(d) EL DELIMITADOR DE LOS COMMITS TALLADOS: CON LAS DOS MARCAS, SE SALTA
+==============================================================================
+La frase de cierre SIN cita va DENTRO del bloque delimitado. Con las dos
+marcas, la guarda no la ve; el mismo texto SIN marcas si la ve.
+con las DOS marcas: 0 fallo(s) de cierre
+SIN las marcas (contraprueba): 1 fallo(s) de cierre
+   linea 5: AFIRMACION DE CIERRE (sujeto 'fase', verbo 'cierra') SIN cita de tallar_estado_de_fase.py en su ventana: 'abc12345 REPORTE DE LA VUELTA 140: LA FASE 06 NO CIERRA.'
+EL DELIMITADOR QUITA LO DELIMITADO Y NADA MAS: True
+VEREDICTO (d): VERDE
+
+==============================================================================
+(e) UNA SOLA MARCA: ROJO RUIDOSO, NO SILENCIO
+==============================================================================
+cayo con ValueError, como debe: el reporte trae UNA SOLA de las dos marcas de los commits tallados: falta '<!-- FIN COMMITS TALLADOS -->'
+VEREDICTO (e): VERDE
+
+==============================================================================
+RESUMEN: (a) VERDE | (b) VERDE | (b bis) VERDE | (c) VERDE | (c bis) VERDE | (d) VERDE | (e) VERDE
+==============================================================================
+P.16, temporales retirados: SI

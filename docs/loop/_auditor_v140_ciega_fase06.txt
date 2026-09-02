@@ -1,0 +1,28 @@
+CATALOGO (16): mesas 5, fusiones 6, remitidas 5
+  fusiones: ['OP-M-01-FUSION', 'OP-M-02-ACCLIMATE', 'OP-M-03-III', 'OP-M-05-INDICE', 'OP-M-05-EDIFICIO', 'OP-M-05-APERTURA']
+  remitidas: ['OP-M-03-ENLACES', 'OP-E-04', 'OP-E-05', 'OP-M-01-ESLABONES', 'OP-M-01-SEXTO']
+
+OP-M-01              LISTA        MESA(hijas en catalogo: ['OP-E-04', 'OP-E-05', 'OP-M-01-ESLABONES', 'OP-M-01-FUSION']) 
+OP-M-02              LISTA        MESA(hijas en catalogo: ['OP-M-02-ACCLIMATE']) 
+OP-M-03              LISTA        MESA(hijas en catalogo: ['OP-M-03-III', 'OP-M-03-ENLACES']) 
+OP-M-04              LISTA        SIN CUMPLIR                                   sup=identificar_consejo_asesores (fusion 367) y formalizar_junta_asesora (fusion 328) vivo=False | absorbidos=2 ok=0
+OP-M-05              LISTA        MESA(hijas en catalogo: ['OP-M-05-INDICE', 'OP-M-05-EDIFICIO', 'OP-M-05-APERTURA']) 
+OP-M-01-FUSION       LISTA        CUMPLIDO                                      sup=sistema_gates_go_kill vivo=True | absorbidos=4 ok=4
+OP-M-02-ACCLIMATE    LISTA        CUMPLIDO                                      sup=fase_acclimate_experiencia_cliente vivo=True | absorbidos=1 ok=1
+OP-M-03-III          LISTA        CUMPLIDO                                      sup=pivote_estrategico vivo=True | absorbidos=2 ok=2
+OP-M-05-INDICE       LISTA        CUMPLIDO                                      sup=customer_discovery vivo=True | absorbidos=2 ok=2
+OP-M-05-EDIFICIO     LISTA        CUMPLIDO                                      sup=customer_discovery_get_out_of_building vivo=True | absorbidos=2 ok=2
+OP-M-05-APERTURA     LISTA        CUMPLIDO                                      sup=customer_validation vivo=True | absorbidos=2 ok=2
+OP-M-03-ENLACES      LISTA        CUMPLIDO                                      2 de 2 direcciones distintas presentes
+OP-E-04              LISTA        SIN CUMPLIR                                   3 de 8 direcciones distintas presentes
+OP-E-05              LISTA        CUMPLIDO                                      4 de 4 direcciones distintas presentes
+OP-M-01-ESLABONES    LISTA        CUMPLIDO                                      2 de 2 direcciones distintas presentes
+OP-M-01-SEXTO        LISTA        CUMPLIDO                                      1 de 1 direcciones distintas presentes
+
+MESA OP-M-01    hijas_en_catalogo=['OP-E-04', 'OP-E-05', 'OP-M-01-ESLABONES', 'OP-M-01-FUSION'] -> SIN CUMPLIR
+MESA OP-M-02    hijas_en_catalogo=['OP-M-02-ACCLIMATE'] -> CUMPLIDO
+MESA OP-M-03    hijas_en_catalogo=['OP-M-03-III', 'OP-M-03-ENLACES'] -> CUMPLIDO
+MESA OP-M-05    hijas_en_catalogo=['OP-M-05-INDICE', 'OP-M-05-EDIFICIO', 'OP-M-05-APERTURA'] -> CUMPLIDO
+
+CIFRA: catalogo 16 | cumplido 13 | sin cumplir 3
+SIN CUMPLIR: ['OP-E-04', 'OP-M-01', 'OP-M-04']

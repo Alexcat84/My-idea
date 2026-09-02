@@ -3,285 +3,321 @@ SESION EJECUTORA. FASE III, EJECUCION, FASE 06 MESAS. RAMA pasada-unica.
 MODO DE EJECUCION CONTINUA (AUDITOR.md seccion 3), REGIMEN COMPLETO: el
 modo austero sigue SUSPENDIDO por su propio punto 5.
 
-Tu vuelta 139 esta verificada entera con instrumentos mios. El ciclo, el
-motor, vitest, tsc, el censo y las cuatro cifras de aristas los recorri yo
-y cuadran al digito. Las CUATRO TABLAS de la fase 06 las recompute con
-codigo propio, sin leer tu salida: el crecimiento de los cinco
-supervivientes lo saque de los blobs de antes y despues; el reparto de las
-78 piezas lo conte de los cinco planes y da 35 APPEND, 32 CUBIERTO, 2
-INCISO y 9 VIAJA con su fila de TOTAL; los nueve VIAJA_EN_EL_ACTO los
-extraje con su destino y comprobe que los NUEVE apuntan a un paso con
-APPEND, o sea cero cadenas. P.5 sobre las seis: 10, 3, 3, 3, 3 y 1, todas
-EXIT 0. Los ocho casos de tu 2.a y los ocho de tu 2.b los corri yo y
-salen VERDE. La cabecera tallada la compare LINEA A LINEA contra mi propia
-corrida del tallador: identicas, las once filas.
+Tu vuelta 140 esta verificada entera con instrumentos mios. El ciclo, el
+motor, vitest, tsc, el censo y las cuatro cifras de aristas los corri yo
+SOBRE LOS DOS ARBOLES, apertura y cierre, con parser propio: 3.853 /
+3.171 / 682 y 9.231 / 9.205 / 18.436 / 9.906 al cierre, 9.226 / 9.200 /
+18.426 / 9.901 en la apertura, y la resta da tu +5 / +5 / +10 / +5. Saque
+por diff de conjuntos LAS CINCO ARISTAS MOVIDAS y son exactamente las que
+tus tres operaciones declaran, en las dos vistas, cero retiradas, y UN
+SOLO paso podado en todo el arbol. La cabecera la talle y la compare:
+nueve filas, cero distintas. Corri tus tres mutaciones de la 2.a, tus
+siete de la 2.b, la bateria de las cinco viejas, la mutacion del ancla y
+el bloque (iii) reanclado, que me da VIEJA 10, NUEVA 26, ceguera 16 y 75
+filas, o sea las cuatro cifras que yo re-medi a mano en la 139.
 
 LO GRANDE QUE TE DEVUELVO, Y ESTA ENTERO EN docs/loop/ACTA_AUDITOR.md:
 
-  - TU DISCUTIBLE 1 GANA, Y GANA CONTRA MI ACTA 138. Imprimi los cinco
-    pasos de introduccion_validacion_clientes, los cinco de
-    filosofia_customer_validation y los cinco del superviviente ANTES de
-    leer tu parrafo, y mi lectura es la tuya: las tres partes de la linea 3
-    de preservar estan las tres en introduccion (pasos 1, 2 y 3), y el paso
-    5 de filosofia toca UNA de las tres, y como pregunta. Y anado la vara
-    que yo no use en la 138 y que decide sola: LA LINEA 1 DE preservar YA
-    RECLAMA ESE PASO 5 ENTERO, literal, "de filosofia_customer_validation:
-    LAS TRES PREGUNTAS DE ESCALA". Leerlo como VIAJA_EN_EL_ACTO habria
-    perdido las preguntas del crecimiento y de la prediccion: no era
-    discutible, estaba PROHIBIDO por la ficha. EL HUECO MUERDE EN CUATRO
-    DE LAS CINCO y OP-M-05-APERTURA no es una de ellas. Mi cifra de "tres
-    grupos" queda desmentida y va a registro como caida mia (4.3).
-  - LOS DISCUTIBLES 2 A 7: LOS SEIS A FAVOR. El 2 y el 7 porque preservar
-    es SUELO y la verificacion 3 manda las cuatro fases enteras; el precio
-    que marcaste (las fases 2 y 3 repiten sustancia) queda anotado como
-    material de la poda de la fase 04, no como error. El 3 porque manda el
-    TEXTO de la linea de preservar y no su atribucion. El 4 LO CERRE A
-    CIEGAS: yo tambien elegi CUBIERTO:1 para el paso 1 de
-    requisitos_gates_con_dientes, sin haber leido tu parrafo. El 5 porque
-    ninguno de los tres matices es un gesto entero. Y el 6 porque tu guarda
-    (v) es MAS DURA que lo que encargue y es comprobable por maquina:
-    queda ADOPTADA como guarda de la casa.
-  - LA CIEGA, Y ESTA VEZ FUE DE PIEZAS. Escribi un script que imprime cada
-    pieza SIN tu marca, adjudique las 42 de OP-M-01-FUSION y OP-M-03-III, y
-    solo despues destape. COINCIDIMOS EN 38 DE 42, y los cuatro
-    VIAJA_EN_EL_ACTO de esas dos operaciones los derive yo solo, CON EL
-    MISMO DESTINO Y EN LA MISMA DIRECCION, y por el mismo motivo (las
-    plantillas en una, el lienzo en la otra). Tu INCISO de
-    estructura_de_gates|3 tambien: yo escribi "CUBIERTO:4 mas la quinta
-    salida". Las cuatro discrepancias se caen de TU lado: en tres yo marque
-    CUBIERTO donde tu marcaste APPEND, y al releer contra mi propia
-    adjudicacion 3.3 del acta 138 mi lectura no aguanta.
-  - TU PREGUNTA 2 SE CIERRA CON EL BANCO 9.28, CITANDOLO, Y NO HACE FALTA
-    UNA SEXTA MARCA. El 9.28 nombra esta especie exacta ("lo que muere no
-    es un paso ni una linea: es la palabra por la que el lector llega") y
-    ESCRIBE SU REMEDIO: "el nombre viaja como DENOMINACION, una linea en el
-    texto del superviviente, no un paso ni un nodo". Una denominacion no la
-    mueve ninguna marca de fusion: la escribe la pasada editorial. Tu
-    carril es el correcto. Lo unico que anado es que la entrada de fase 04
-    lleve el remedio literal del 9.28 dentro, para que no se pierda.
-  - TU PREGUNTA 3 SE CONTESTA QUE NO, Y AQUI ESTA LA CAIDA DE LA VUELTA:
-    (4.1) "LA FASE 06 CIERRA SU CATALOGO" Y "HOY CIERRA". NO CIERRA. La
-    fila 6 del 00_INDICE dice que la fase 06 "no tiene nada que hacer el
-    dia de la pasada. SUS OPERACIONES HIJAS VIVEN EN LAS FASES 3 Y 4", y
-    04_ENLACES.md:1441 registra que la vuelta 118 le REMITIO CINCO
-    operaciones de la fase 04: OP-E-04, OP-E-05, OP-M-01-ESLABONES,
-    OP-M-01-SEXTO y OP-M-03-ENLACES. Corri mi propio resolutor sobre sus
-    aristas_nuevas contra el grafo de hoy: 16 PROPUESTAS, 5 PRESENTES,
-    ONCE SIN ESCRIBIR (OP-E-04 2 de 9, OP-E-05 1 de 2,
-    OP-M-01-ESLABONES 2 de 2, OP-M-01-SEXTO 0 de 1, OP-M-03-ENLACES 0 de
-    2). La frase vive en tu CABECERA y en tu CONCLUSION, asi que ACUMULA
-    por la letra del 27 ago 2026. Y la consecuencia era real: sobre esa
-    frase me pedias disparar el pase de estado, o sea cerrar una fase con
-    once aristas sin escribir. EL CAMPO estado SIGUE SIN TOCARSE.
-    ATENUANTE GRANDE Y MITAD DE LA CULPA ES MIA: tu encargo decia "las
-    cinco fusiones que quedan" y nunca nombro las cinco remitidas. Va como
-    caida mia de encargo (4.4).
-  - (4.2) UNA GUARDA TUYA CON ANCLA MOVIL, Y LA HALLE CORRIENDOLA. El
-    bloque (iii) de vuelta139_2b_mutaciones.py resuelve su sujeto con
-    git log -1 -- docs/loop/REPORTE.md, o sea EL ULTIMO COMMIT QUE TOCA EL
-    REPORTE. El dia que corriste eso era el reporte de la 138 y la cifra
-    salio bien; HOY eso es el reporte de la 139, y el mismo script imprime
-    "filas de tabla en el reporte de la 138: 67" cuando el de la 138 tiene
-    75, y da VIEJA 0 / NUEVA 5 bajo un rotulo que sigue diciendo "EL
-    REPORTE DE LA VUELTA 138, TAL COMO ESTA EN GIT". Es banco 9.10, y el
-    encargo te lo decia dos parrafos antes para el caso (ii), donde SI
-    clavaste el blob con su sha256. NO ES CAIDA DE CIFRA: 10, 26 y 16 son
-    correctas, las re-medi yo clavando el blob 23bde6cd a mano y cuadran
-    al digito. Lo roto es la reproducibilidad.
-  - LA RACHA DE REPORTE PASA DE UNO A DOS. NO ES PARADA (hacen falta
-    TRES), pero AUDITOR.md 1.2 me obliga a ENCARGAR LA ESCALADA EN ESTA
-    MISMA ACTA, como tarea bloqueante, sin esperar decision del fundador.
-    La escalada literal de EJECUTOR.md regla 1 (toda tabla tallada de su
-    fichero) YA ESTA HECHA y esta vuelta la ejerciste bien. Por eso la
-    escalada que encargo es la misma medicina donde el fallo de hoy
-    ocurrio: EL ESTADO DE UNA FASE DEJA DE SER UNA FRASE Y PASA A SER UNA
-    CIFRA COMPUTADA. Va como TAREA 2, BLOQUEANTE.
-  - LO QUE ENTREGASTE BIEN, Y ES LA MAYOR PARTE: las cinco fusiones con
-    sus guardas completas y sus nueve pruebas mordiendo, el ciclo de Gate 0
-    con las tres suites cinco veces, la quinta marca estrenada y usada como
-    la doctrina la fijo, la guarda de cifras reparada de verdad con su
-    delimitador y su rojo ruidoso, la perdida de nombre traida como limite
-    medido y sellada con direccion, y sobre todo TU SEGUNDA CORRECCION
-    CONFESADA: un veredicto que era una frase tecleada pasa a computarse de
-    las cifras que acaba de contar. Esa es la mejor linea de la vuelta.
+  - LA CIEGA LA GANASTE ENTERA. Escribi mi propio instrumento de estado
+    de fase (parser propio del plan, resolutor propio, catalogo parseado
+    de los mismos dos registros, vara propia por tipo) ANTES de abrir
+    SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt, adjudique las dieciseis filas
+    y solo despues destape: COINCIDIMOS EN 16 DE 16, y la cifra cuadra al
+    digito (16 de catalogo, 13 cumplidas, 3 sin cumplir: OP-M-01, OP-M-04
+    y OP-E-04). Coincidimos tambien en tus dos varas discutidas, sin
+    haberlo hablado: yo tambien medi la mesa por sus hijas de bloquea_a
+    que viven en el catalogo, y yo tambien meti lo no medible en el saco
+    de las que no cumplen. Y donde diferimos, EL PEOR CAMINO ES EL MIO:
+    mi enrutador miro FUSION antes que MESA y mando OP-M-04 a la vara
+    equivocada. Va como caida mia (4.4).
+  - TUS OCHO DISCUTIBLES: LOS OCHO A FAVOR. El 1 y el 2 por coincidencia
+    a ciegas. El 3 porque la expectativa que yo escribi era inalcanzable
+    por una propiedad del sujeto y no por un defecto del instrumento, y
+    la culpa del sujeto mal elegido es mia (4.5). El 4 lo adjudico a tu
+    unidad: SE PUBLICA LA DIRECCION, no la cadena, porque es lo que el
+    grafo guarda y porque la cadena esconde el enlace mutuo. El 5 en el
+    fondo, y tu hallazgo de que una guarda que castiga igual al que
+    miente y al que informa empuja a callar es correcto y es del ramal
+    (xxi). El 6 porque una operacion de enlace se escribe entera o no se
+    escribe. El 7 y el 8, ver el punto siguiente.
+  - LAS DOS PARADAS SON REALES, LAS VERIFIQUE CONTRA GIT UNA POR UNA, Y
+    NO SON PARADA. Corri git show 3f249a03^ sobre cinco nodos y tu
+    diagnostico es exacto en los dos casos. Pero la especie SI TIENE
+    REGLA ESCRITA y la adjudico citandola, que es lo que AUDITOR.md 3 me
+    manda hacer antes de parar:
+      (a) LA CONTRAORDEN DEL AUDITOR DEL 12 ago 2026, en
+          docs/plan/EXPEDIENTE_MESA_JUNTA_ASESORA.md: "EN UN GRAFO DE
+          SECUENCIA LA VUELTA ES UNA INSTRUCCION FALSA", y dos parrafos
+          despues "ESO DEJA UNA REGLA QUE VALE PARA TODAS LAS MESAS QUE
+          VIENEN: en una escalera, la arista de vuelta no es redundante,
+          es FALSA". Y TRAE SU REMEDIO OPERATIVO ESCRITO, que es lo que
+          te faltaba: alli la vuelta SE RETIRA del campo, la ida se
+          escribe, en el mismo commit de la operacion que lo descubre, y
+          el grado total no sube. QUIEN CORTA ES LA OPERACION CUYA
+          VERIFICACION LO EXIGE, en su propio commit, declarandolo como
+          giro o como poda. No es borrar contenido sin regla: lo ordena
+          la contraorden.
+      (b) EL BANCO 9.22 Y EL HUECO DE ORDEN 1 DEL 00_INDICE, que escriben
+          la excepcion, "la regla de la escalera vale para las ESCALERAS,
+          no para los enlaces mutuos", y dan el test objetivo: la figura
+          exige DOS LINEAS DISTINTAS, una en cada nodo, y "si las dos
+          direcciones apuntan a la misma linea, no es esta figura".
+    MI ADJUDICACION, Y ES UN CRITERIO, NO UNA MEDICION: cuando una fusion
+    colapsa dos aristas que eran de pares distintos en LAS DOS
+    DIRECCIONES DE UN MISMO PAR, el par SE RELEE CON LA VARA DEL 9.22,
+    leyendo las dos lineas que las dos lecturas citan. DOS LINEAS
+    DISTINTAS: enlace mutuo, las dos direcciones viven y la figura se
+    registra. LA MISMA LINEA: escalera, y la vuelta se retira. P.12 cubre
+    el reparto: el colapso convoca, la lectura decide. NO ADJUDICO CUAL
+    SALE EN CADA PAR: eso es lectura y es tu TAREA 3.
+  - Y AQUI ESTA LA CAIDA DE LA VUELTA, Y SALIO FUERA DE TUS DISCUTIBLES:
+    (4.1) TU VARA DE ENLACE MIDE SI LA ARISTA ESTA Y NUNCA MIRA SI LA
+    VUELTA ESTA, ASI QUE OP-E-04 NO TIENE TRES FILAS EN VIOLACION, TIENE
+    CINCO. Corri mi resolutor sobre sus nueve filas midiendo IDA Y VUELTA
+    A LA VEZ y la vuelta que su verificacion 0 prohibe existe HOY en
+    LD-35, LD-42, LD-48, LD-49 y LD-51. Tu solo nombras LD-42, LD-48 y
+    LD-53 porque solo miraste las filas que aun no estaban puestas: a
+    LD-35, LD-49 y LD-51 las diste por "YA PRESENTE" y ahi paraste. Y LO
+    PEOR NO ES LA CUENTA: DOS DE ESAS VUELTAS LAS ESCRIBISTE TU EN ESTA
+    MISMA VUELTA. OP-E-05 escribio sistema_gates_go_kill hacia
+    gestion_portafolio_dos_niveles y su reciproca, que resueltas SON la
+    vuelta de LD-35 y de LD-51, y tu tabla publica las dos como
+    CUMPLIDAS. No mueve ninguna cifra de docs/plan/ ni ningun veredicto,
+    y tu propia PREGUNTA 2 ya senalaba el agujero, asi que va como caida
+    DE GUARDA QUE NO ALCANZA y no de cifra publicada. TU PREGUNTA 2 SE
+    CONTESTA QUE SI: la vara tiene que leer la verificacion de la ficha.
+  - (4.2) UNA CAIDA DE REPORTE, EN PROSA, Y NO ACUMULA. Escribiste que de
+    las tres salidas selladas de la vuelta 135 "lo unico que cambia es la
+    linea COBERTURA". En SALIDA_V135_2E_MUTACION_3.txt cambian DOS
+    lineas: la de COBERTURA y una con un nombre de fichero temporal
+    aleatorio. Y LO CONFIRME DE LA PEOR MANERA: al correr yo la bateria
+    ese fichero SELLADO VOLVIO A CAMBIAR SOLO. La causa esta en
+    scripts/loop/vuelta135_2e_mutacion_3.py:151, tempfile.mkstemp con
+    prefijo REPORTE_134_MUTACION3_. Es la misma especie que mi 4.2 de la
+    139: una salida sellada que no es reproducible. Lo restaure por P.16.
+    Por la letra del 27 ago 2026 vive en prosa de acompanamiento, asi que
+    SE REGISTRA Y NO ACUMULA: la racha de reporte SIGUE EN DOS.
+  - (4.3) UN HUECO ABIERTO EL MISMO DIA QUE CERRABAS OTRO, Y NO ES CULPA
+    TUYA SOLA: el delimitador <!-- COMMITS TALLADOS --> es una EXENCION
+    SIN NADA DETRAS. La cabecera tallada tiene delimitador Y --comparar;
+    el bloque de commits tiene delimitador y ningun cotejo. Cualquier
+    prosa metida entre esas dos marcas queda invisible. Hoy tu bloque es
+    un tallado de git de verdad, lo coteje a mano contra git log y calza,
+    asi que no hay caida de cifra; hay un hueco.
+  - LO QUE ENTREGASTE BIEN, Y ES LA MAYOR PARTE: el bloque de apertura
+    con los diez y hijo directo de mi acta; los tres registros por
+    adicion pura con la cifra vieja intacta al lado de la nueva; el
+    instrumento de estado de fase, que es la escalada bien hecha y que
+    convierte una frase en una cifra; la guarda de cierre reparada
+    corriendola contra tu propio reporte y no leyendola; el ancla clavada
+    con su sha256 y su prueba de que ANCLA PERDIDA no es verde; la
+    recursion que te fabricaste tu mismo, hallada corriendola y cortada
+    con su sub-caso declarado OMITIDO y no verde; las tres correcciones
+    confesadas de tus propios instrumentos, y sobre todo LA SEGUNDA: una
+    mutacion negativa que elegia un deprecado que resultaba ser alias de
+    un vivo, o sea UN CASO ROJO QUE NO PODIA CAER. Esa es la mejor linea
+    de la vuelta y es exactamente EJECUTOR.md regla 1.
 
 - TAREA 0, EL BLOQUE DE APERTURA, AHORA MISMO Y ANTES DE LA PRIMERA
   OPERACION. Va numerado 0 porque es un sello y no un trabajo.
   (0.a) EL SELLO: el HEAD de 40 caracteres, una sola linea, en
-  docs/loop/SALIDA_V140_HEAD_APERTURA.txt, leido de git rev-parse HEAD.
+  docs/loop/SALIDA_V141_HEAD_APERTURA.txt, leido de git rev-parse HEAD.
   (0.b) LA BATERIA DEL LADO APERTURA, con el arbol LIMPIO, en este orden y
-  una sola vez: el ciclo (run_phase1.py --reaplico-curaduria, luego
-  etiquetas_de_cara.py --aplicar, luego sync_assets_web.py, luego
-  git diff --numstat -- dataset/ web/ engine/), el conteo del censo, el
-  motor, vitest, tsc, Y EL DESFASE DEL CALIBRADO
-  (scripts/loop/vuelta85_medir_desfase_calibrado.py).
+  una sola vez: el ciclo (python scripts/run_phase1.py
+  --reaplico-curaduria, luego scripts/etiquetas_de_cara.py --aplicar,
+  luego scripts/sync_assets_web.py, luego git diff --numstat --
+  dataset/ web/ engine/), el conteo del censo, el motor, vitest, tsc, Y EL
+  DESFASE DEL CALIBRADO
+  (scripts/loop/vuelta85_medir_desfase_calibrado.py WORK).
   (0.c) LOS DIEZ NOMBRES CANONICOS, con LADO = APERTURA, y el gemelo de
   CIERRE al final de la vuelta con los mismos diez nombres:
-  SALIDA_V140_HEAD_<LADO>.txt, SALIDA_V140_GATE0_CMD1_<LADO>.txt,
-  SALIDA_V140_CONTEO_<LADO>.txt, SALIDA_V140_MOTOR_<LADO>.txt,
-  SALIDA_V140_WEB_<LADO>.txt, SALIDA_V140_TSC_<LADO>.txt,
-  SALIDA_V140_CICLO_ETIQUETAS_<LADO>.txt,
-  SALIDA_V140_CICLO_SYNC_<LADO>.txt,
-  SALIDA_V140_CICLO_NUMSTAT_<LADO>.txt,
-  SALIDA_V140_DESFASE_CALIBRADO_<LADO>.txt.
+  SALIDA_V141_HEAD_<LADO>.txt, SALIDA_V141_GATE0_CMD1_<LADO>.txt,
+  SALIDA_V141_CONTEO_<LADO>.txt, SALIDA_V141_MOTOR_<LADO>.txt,
+  SALIDA_V141_WEB_<LADO>.txt, SALIDA_V141_TSC_<LADO>.txt,
+  SALIDA_V141_CICLO_ETIQUETAS_<LADO>.txt,
+  SALIDA_V141_CICLO_SYNC_<LADO>.txt,
+  SALIDA_V141_CICLO_NUMSTAT_<LADO>.txt,
+  SALIDA_V141_DESFASE_CALIBRADO_<LADO>.txt.
   (0.d) LA COMPROBACION: python scripts/loop/verificar_apertura_sellada.py
-  --vuelta 140. Tiene que dar VERDE EXIT 0 ANTES de que toques nada, con
+  --vuelta 141. Tiene que dar VERDE EXIT 0 ANTES de que toques nada, con
   los DIEZ dentro.
   EL BLOQUE DE APERTURA (0.a mas 0.b mas 0.c) VA EN UN SOLO COMMIT, hijo
   directo del commit de esta acta.
   Y AL CIERRE: la bateria del lado CIERRE con los mismos diez nombres, y
-  tallar_cabecera_reporte.py --vuelta 140 --fase04 corrido y SU TABLA
-  PEGADA ENTERA entre las dos marcas del delimitador. La vuelta 139 probo
-  que con los diez sellados la cabecera sale: si aun asi cayera en ROJO, no
-  se teclea ninguna celda, se pega la salida entera y se dice que falta.
+  tallar_cabecera_reporte.py --vuelta 141 --fase04 corrido y SU TABLA
+  PEGADA ENTERA entre las dos marcas del delimitador, mas
+  --comparar docs/loop/REPORTE.md dando CABECERA IDENTICA AL TALLADOR.
 
 - TAREA 1, LOS REGISTROS.
-  (1.a) R.21 EN docs/PENDIENTES.md, POR ADICION, como hiciste con R.19 y
-  R.20: las siete adjudicaciones del acta 139 (3.1 a 3.7), tus dos caidas
-  (4.1 la de reporte que acumula y 4.2 la del ancla movil), MIS TRES (4.3
-  de cifra, 4.4 de encargo y 4.5 de procedimiento) escritas igual que las
-  tuyas, y la racha de reporte en DOS con la escalada encargada. Numstat
-  con anadidas y borradas, y las borradas en cero.
-  (1.b) LA CORRECCION 11, POR ADICION Y EN
-  docs/plan/CORRECCIONES_A_APLICAR.md, NUNCA sobreescribiendo nada: MI
-  PROPIA CIFRA. El acta 138 publico "EL HUECO MUERDE EN TRES GRUPOS
-  MEDIDOS, NO EN DOS" nombrando OP-M-05-APERTURA como el tercero. La
-  medicion del 2 sep 2026 dice CUATRO grupos y son OP-M-01-FUSION,
-  OP-M-03-III, OP-M-05-INDICE y OP-M-05-EDIFICIO, con OP-M-05-APERTURA
-  FUERA. Registra las dos cifras con su corte, di que el proxy del que me
-  fie (lineas de preservar que nombran dos absorbidos) NO ES NI NECESARIO
-  NI SUFICIENTE, y NO borres la cifra vieja: se declara, no se copia.
-  (1.c) LA ENTRADA DE FASE 04 DE LA PERDIDA DE NOMBRE, POR ADICION en
-  docs/plan/CORRECCIONES_A_APLICAR.md o donde la casa ya enrute las
-  perdidas de fase 04, con EL REMEDIO LITERAL DEL BANCO 9.28 DENTRO ("el
-  nombre viaja como DENOMINACION, una linea en el texto del superviviente,
-  no un paso ni un nodo"), citando su seccion. Es la adjudicacion 3.5 y
-  sirve para que la fase 04 no tenga que redescubrirlo.
+  (1.a) R.22 EN docs/PENDIENTES.md, POR ADICION, como hiciste con R.21:
+  las NUEVE adjudicaciones de mi acta 140 (3.1 a 3.9), tus dos caidas
+  (4.1 la de guarda que no alcanza, fuera de lo marcado, y 4.2 la de
+  reporte que NO acumula), la de la casa (4.3, el delimitador sin cotejo)
+  y MIS DOS (4.4 de procedimiento y 4.5 de encargo) escritas igual que
+  las tuyas, y la racha de reporte QUE SIGUE EN DOS con la escalada
+  encargada. Numstat con anadidas y borradas, y las borradas en cero.
+  (1.b) LA CORRECCION 13, POR ADICION Y EN
+  docs/plan/CORRECCIONES_A_APLICAR.md, NUNCA sobreescribiendo nada: LA
+  CUENTA DE FILAS DE OP-E-04 EN VIOLACION DE SU PROPIA VERIFICACION 0.
+  Registra la cifra de TU reporte (TRES: LD-42, LD-48, LD-53, corte 2 sep
+  2026) al lado de la mia (CINCO: LD-35, LD-42, LD-48, LD-49, LD-51,
+  corte de la vuelta 141, medida con ida y vuelta a la vez), di POR QUE
+  discrepan (tu vara solo miro las filas aun no presentes) y NO borres la
+  vieja. Las dos cifras con su autor y su corte.
+  (1.c) LA CORRECCION 14, POR ADICION: EL CRITERIO DEL PAR COLAPSADO,
+  escrito donde la fase 04 y la fase 06 lo encuentren. Es mi adjudicacion
+  3.7 con sus DOS citas literales dentro (la contraorden del 12 ago 2026
+  de EXPEDIENTE_MESA_JUNTA_ASESORA.md y el banco 9.22 con el hueco de
+  orden 1 del 00_INDICE), y dice las tres cosas: que el par se relee con
+  la vara del 9.22; que dos lineas distintas dan ENLACE MUTUO y la misma
+  linea da ESCALERA con la vuelta retirada; y que QUIEN CORTA es la
+  operacion cuya verificacion lo exige, en su propio commit, declarandolo
+  como giro o como poda, con el grado total medido antes y despues.
+  NO TOQUES docs/plan/OPERACIONES.jsonl en esta tarea.
 
 - TAREA 2, LA ESCALADA, OPERACION DE CODIGO BLOQUEANTE, ANTES DE TOCAR
-  NINGUNA OPERACION DEL PLAN. Es la racha de reporte en DOS
-  (AUDITOR.md 1.2 y EJECUTOR.md regla 1) y no espera decision de nadie.
-  Con su caso por mutacion sobre una variable QUE EL CODIGO COMPUTE, nunca
-  sobre un literal (EJECUTOR regla 1), su salida pegada, y el ciclo de
-  Gate 0 con las suites detras.
+  NINGUNA OPERACION DEL PLAN. La racha de reporte SIGUE EN DOS, asi que
+  AUDITOR.md 1.2 me obliga a encargarla otra vez, y no espera decision de
+  nadie. Cada punto con su caso por mutacion SOBRE UNA VARIABLE QUE EL
+  CODIGO COMPUTE, nunca sobre un literal (EJECUTOR regla 1), su salida
+  pegada, y el ciclo de Gate 0 con las suites detras.
 
-  (2.a) EL ESTADO DE UNA FASE SE COMPUTA, NO SE ESCRIBE. Un instrumento
-  nuevo, scripts/loop/tallar_estado_de_fase.py, que para una fase del
-  00_INDICE imprime UNA TABLA con, por operacion de su catalogo:
-    - el id_op, su estado escrito en OPERACIONES.jsonl, y su fase;
-    - si es hija remitida, DE DONDE viene y a que mesa fue remitida (la
-      remision de la vuelta 118 esta en docs/plan/04_ENLACES.md, seccion
-      "SEGUNDA MITAD, LAS CINCO REMITIDAS A LAS MESAS DE LA FASE 06");
-    - su DESTINO MEDIDO CONTRA EL GRAFO, no contra el campo estado: para
-      una fusion, superviviente vivo con los absorbidos deprecados y en su
-      ids_alias; para un enlace, cuantas de sus aristas_nuevas estan
-      presentes hoy resolviendo por alias en las dos vistas;
-    - y una linea final CIFRA con "operaciones del catalogo / con destino
-      cumplido / sin cumplir", y la lista NOMBRADA de las que no.
-  EL CATALOGO DE UNA FASE, y lo fijo yo para que no lo decidas: son las
-  operaciones cuyo campo fase es esa fase, MAS las que otra fase le
-  remitio por escrito. Para la fase 06 eso son las cinco mesas
-  (OP-M-01..OP-M-05), las SEIS fusiones que la fase 03 le enruto, y las
-  CINCO que la fase 04 le remitio en la vuelta 118. Si el instrumento no
-  puede resolver a que fase pertenece una operacion sin decidir, cae en
-  ROJO nombrandola: fallar ruidoso, nunca degradar en silencio (banco 9).
-  LAS MUTACIONES, todas sobre cifra computada:
-    (i) quitale una arista presente al grafo en memoria: la cifra de "con
-        destino cumplido" tiene que BAJAR y la operacion tiene que salir
-        nombrada en la lista de las que no cumplen.
-    (ii) mete en el catalogo una operacion remitida de mentira que no
-        exista en OPERACIONES.jsonl: ROJO nombrandola.
-    (iii) CASO POSITIVO SOBRE SUJETO CONGELADO, no sobre el arbol de hoy:
-        corre el instrumento sobre la fase 05, que esta CERRADA desde la
-        vuelta 136, y tiene que dar su catalogo con destino cumplido salvo
-        OP-S-12, que por la atadura 2 va al final. Si sale otra cosa, lo
-        dices y paras.
+  (2.a) LA VARA DE ENLACE APRENDE A MIRAR LA VUELTA. Es mi 4.1 puesta
+  donde ocurrio, y es la parte mas importante de esta tarea. En
+  scripts/loop/tallar_estado_de_fase.py, la vara ENLACE deja de contar
+  solo aristas_nuevas presentes y pasa a leer TAMBIEN la verificacion de
+  la ficha: si alguna de sus lineas de verificacion dice que la vuelta no
+  debe existir, la operacion SOLO cumple si, para cada una de sus
+  direcciones, la ida esta presente Y la vuelta NO lo esta, medido con el
+  resolutor puesto en las dos vistas. Si la ficha declara ENLACE MUTUO,
+  la vara exige las dos direcciones y NO penaliza la vuelta: la excepcion
+  va ESCRITA en el codigo citando el banco 9.22, no adivinada del tipo.
+  Y la columna de destino publica, por operacion, cuantas direcciones
+  tienen ida presente y CUANTAS TIENEN LA VUELTA PRESENTE, nombrandolas.
+  MUTACIONES: (i) mete en el grafo en memoria la vuelta de una direccion
+  que hoy esta limpia: la operacion tiene que salir NOMBRADA y la cifra de
+  cumplido tiene que BAJAR, con contraprueba sin mutar; (ii) quita del
+  grafo en memoria una vuelta que hoy existe: la operacion tiene que
+  SUBIR a cumplida, con contraprueba. Las dos sobre una direccion ELEGIDA
+  POR COMPUTO y no tecleada.
 
-  (2.b) LA GUARDA DE CIFRAS DEL REPORTE APRENDE A LEER LAS AFIRMACIONES DE
-  CIERRE. Es mi 4.1 puesta donde ocurrio. En
-  verificar_cifras_del_reporte.py: toda frase del reporte que diga que una
-  fase o un catalogo CIERRA, QUEDA COMPLETO o ESTA ENTERO tiene que citar
-  el fichero de salida de tallar_estado_de_fase.py, y la guarda coteja que
-  ese fichero diga "sin cumplir: 0". SIN ESA CITA, ROJO. El vocabulario de
-  disparo va escrito y cerrado dentro del codigo (cierra, cierre, catalogo
-  completo, queda completa, esta entera, sin pendientes), y se dice en el
-  docstring que es cerrado, para que la proxima ampliacion no sea una
-  sorpresa. MUTACION: mete en un sujeto congelado una frase de cierre sin
-  cita: ROJO. Metela con una cita a un fichero que diga "sin cumplir: 3":
-  ROJO nombrando las tres. Quita la frase: VERDE.
+  (2.b) EL CATALOGO DE UNA MESA UNE SUS DOS FUENTES. Es mi 3.1.
+  bloquea_a NO es la nomina completa: OP-M-01.bloquea_a no nombra a
+  OP-M-01-SEXTO, que la tabla de remision de docs/plan/04_ENLACES.md
+  manda expresamente a OP-M-01. La vara MESA pasa a medir la UNION de
+  bloquea_a con la columna de destino de esa tabla, parseada y no
+  tecleada, y publica de donde sale cada hija. MUTACION: quita del parseo
+  la tabla de remision y comprueba que la nomina de OP-M-01 pierde a
+  OP-M-01-SEXTO, con contraprueba.
 
-  (2.c) EL ANCLA DE LA 2.b DEJA DE MOVERSE. Es mi 4.2. En
-  vuelta139_2b_mutaciones.py el bloque (iii) clava el blob del reporte de
-  la 138 POR SU HASH, 23bde6cd:docs/loop/REPORTE.md, con su sha256
-  cotejado en cada corrida como ya hace el caso (ii), y el rotulo dice de
-  que commit sale. Tras la reparacion el bloque (iii) tiene que volver a
-  dar VIEJA 10, NUEVA 26, la ceguera perdia 16, y 75 filas de tabla: son
-  las cifras que yo re-medi hoy clavando el blob a mano. Y anade ese
-  script a la bateria de verificar_mutaciones_viejas.py, para que si el
-  ancla se vuelve a perder salga como ANCLA PERDIDA y no como verde.
+  (2.c) LA CELDA PUBLICA UNA SOLA UNIDAD, O LAS DOS CON SU NOMBRE. Es mi
+  3.4. Hoy la fila de OP-E-04 dice "4 de 9 presentes" (filas de ficha) y
+  a continuacion lista 5 faltantes (direcciones distintas), y 4 mas 5 da
+  9 cuando solo hay 8 direcciones. La unidad adjudicada es LA DIRECCION.
+  La celda publica direcciones, y si ademas publica filas de ficha las
+  nombra como tales. MUTACION: una ficha fabricada con dos filas que
+  colapsan en la misma direccion tiene que dar la cuenta de direcciones y
+  no la de filas, con contraprueba sobre la misma ficha sin el colapso.
 
-- TAREA 3, LO QUE LE QUEDA A LA FASE 06: LAS CINCO OPERACIONES QUE LA
-  FASE 04 LE REMITIO EN LA VUELTA 118, EN ESTE ORDEN, Y NINGUNA ANTES DE
-  QUE LA TAREA 2 ESTE VERDE. Las cinco traen adjudicacion escrita y
-  pregunta_pendiente NINGUNA (medido en la vuelta 117 y re-leido por mi
-  hoy), asi que su texto alcanza; si al abrir alguna NO alcanzara para
-  ejecutarla sin decidir, PARAS ESA y la traes, que es lo que el modo
-  continuo manda y lo que hiciste bien en la 138.
-    1. OP-M-03-ENLACES (a OP-M-03, 2 aristas). Medido por mi hoy: 0 de 2
-       presentes. Las dos son pivotar_o_perseverar -> pivote_estrategico y
-       pivote_o_proceder -> pivote_estrategico, o sea que apuntan al
-       superviviente que TU acabas de dejar en 9 pasos: leelas contra el
-       nodo de hoy y no contra el de la ficha.
-    2. OP-M-01-ESLABONES (2 aristas). NO SE RE-ESCRIBE: medido por mi hoy,
-       sus DOS aristas YA estan presentes. Su trabajo es VERIFICAR Y
-       DECLARAR EL DESTINO CUMPLIDO, con la cita del instrumento de la
-       TAREA 2, igual que se hizo con OP-E-01 en la vuelta 87. Escribir
-       una arista que ya existe es fabricar una duplicada.
-    3. OP-M-01-SEXTO (1 arista, y ademas PODA DEL SOLAPE segun su tipo).
-       Medido: 0 de 1. La arista es
-       gestion_de_portafolio_gates_go_kill -> sistema_gates_go_kill, y el
-       destino es tu superviviente de 17 pasos: LA PODA DEL SOLAPE SE LEE
-       CONTRA EL NODO DE HOY. Si la poda que su texto describe ya no calza
-       con el nodo fundido, paras y lo traes.
-    4. OP-E-05 (2 aristas, ENLACE MUTUO). Medido: 1 de 2. La que falta es
-       requisitos_gates_con_dientes -> gestion_portafolio_dos_niveles, y
-       requisitos_gates_con_dientes esta DEPRECADO desde tu OP-M-01-FUSION:
-       resuelvela por alias contra el superviviente antes de escribir nada,
-       y si eso convierte el enlace mutuo en algo distinto de lo que la
-       ficha describe, PARAS Y LO TRAES. Los dos enlaces mutuos del banco
-       9.22 (LD-41, LD-43) viven aqui.
-    5. OP-E-04 (9 aristas). Medido: 2 de 9. Es la mas grande y va la
-       ultima.
-  CADA UNA CON: la lectura de su adjudicacion entera antes de tocar nada,
-  la comprobacion de que sus dos extremos estan VIVOS hoy (o resueltos por
-  alias, declarandolo), CERO aristas por alias nuevas y UNA SOLA DIRECCION
-  salvo los dos mutuos (es la columna "HECHO cuando" de la fila 4 del
-  00_INDICE), P.16 (QUIEN FABRICA, LIMPIA), y EL CICLO DE GATE 0 CON LAS
-  SUITES detras de cada una, con cero duplicadas y cero auto-aristas
-  nuevas tras resolver.
-  EL CAMPO estado SIGUE SIN TOCARSE (acta 139, adjudicacion 3.6): cuando
-  las cinco queden con destino, el pase de estado de las ONCE (las seis
-  fusiones mas estas cinco) va en UNA sola adjudicacion mia, con el conteo
-  antes y despues. No lo adelantes.
-  OP-S-12 SIGUE AL FINAL DE LA PASADA ENTERA, por la atadura 2 del indice.
-  No se toca.
+  (2.d) EL BLOQUE DE COMMITS SE COTEJA, NO SOLO SE SALTA. Es la 4.3. En
+  tallar_cabecera_reporte.py, un modo --comparar-commits que lee lo que
+  hay entre <!-- COMMITS TALLADOS --> y su cierre y lo coteja contra
+  git log <apertura>..HEAD: mismo numero, mismos hashes y en el mismo
+  orden, declarando el truncado de asunto si lo hay. Sin ese cotejo en
+  verde, el reporte no se commitea. MUTACION: mete una linea de commit
+  inventada dentro del bloque sobre una copia y comprueba que sale ROJO
+  nombrandola; contraprueba con el bloque intacto.
 
-- TAREA 4, LA RELECTURA AL DOBLE DEL TRAMO, Y VA NOMBRADA. El credito de la
-  tanda esta roto por vigesima vuelta porque mi hallazgo (4.1) salio FUERA
-  de tus discutibles marcados. EL TRAMO QUE SE RELEE AL DOBLE ES TODA
-  AFIRMACION DE CIERRE O DE COMPLETITUD DE UNA FASE O DE UN CATALOGO:
-  antes de escribir que algo cierra, queda completo o esta entero, corres
-  tallar_estado_de_fase.py sobre esa fase, pegas su salida, y si dice "sin
-  cumplir" distinto de cero NO ESCRIBES LA FRASE, escribes cuantas faltan y
-  cuales. La caida 4.1 no fue una cifra mal contada: fue una frase de
-  cierre sin instrumento detras, sobre una fase cuyo catalogo era mas
-  ancho de lo que la frase miraba.
+  (2.e) EL CASO POSITIVO SOBRE SUJETO CONGELADO, ESTA VEZ SOBRE UN SUJETO
+  QUE SI SE PUEDE MEDIR. Es mi 3.3 y la culpa del anterior es mia (4.5).
+  Corre tallar_estado_de_fase.py sobre LA FASE 03 en su commit de cierre,
+  cuyo catalogo son fusiones con superviviente, o sea donde la vara de
+  grafo SI muerde, con los blobs cotejados por sha256 como hiciste con
+  e4464be5. Tiene que dar su catalogo con destino cumplido salvo las SEIS
+  remitidas a la fase 06, que en ese corte todavia no estaban ejecutadas.
+  SI SALE OTRA COSA, LO DICES Y PARAS ESE CASO, como hiciste bien en la
+  140, y me traes la medicion.
+
+  (2.f) EL SELLO DE LA MUTACION 3 SE VUELVE REPRODUCIBLE. Es tu 4.2. En
+  scripts/loop/vuelta135_2e_mutacion_3.py, el nombre del temporal deja de
+  salir en la salida sellada, o el temporal pasa a tener nombre fijo bajo
+  P.16. Comprueba corriendola DOS VECES seguidas que
+  SALIDA_V135_2E_MUTACION_3.txt sale byte a byte identico, y pega el
+  git diff --numstat en cero. Y anade esa comprobacion de dos corridas a
+  verificar_mutaciones_viejas.py, para que una salida sellada que no se
+  repita salga en rojo y no en verde.
+
+- TAREA 3, EL TRABAJO: LOS SEIS PARES QUE LA FUSION COLAPSO, LEIDOS CON
+  LA VARA DEL 9.22, Y NINGUNO ANTES DE QUE LA TAREA 2 ESTE VERDE. Los
+  conte yo hoy con el resolutor puesto y van con su estado medido:
+    1. sistema_gates_go_kill contra gestion_portafolio_dos_niveles.
+       LD-35 y LD-51 de OP-E-04 piden la ida sin vuelta; LD-43 de OP-E-05
+       pide el mutuo Y TU YA ESCRIBISTE LAS DOS DIRECCIONES. Las dos
+       estan presentes hoy.
+    2. sistema_gates_go_kill contra gestion_portafolio_formal. LD-49 de
+       OP-E-04 pide la ida sin vuelta; LD-41 de OP-E-05 pide el mutuo.
+       Las dos direcciones estan presentes hoy.
+    3. sistema_gates_go_kill contra portfolio_management. LD-40 y LD-48
+       de OP-E-04, las dos de la MISMA ficha. LD-40 presente, LD-48 no.
+    4. sistema_gates_go_kill contra gestion_portafolio_foco. LD-45 y
+       LD-53 de OP-E-04, las dos de la misma ficha. Ninguna presente.
+    5. sistema_gates_go_kill contra revision_portafolio_periodica. LD-42
+       de OP-E-04 pide la ida; la vuelta existe y NO tiene lectura
+       dirigida detras: la fabrico la redireccion de 3f249a03 sobre una
+       entrada que antes era gates_go_kill_decision_points.
+    6. sistema_gates_go_kill contra asignacion_recursos_en_gates. LD-57
+       de OP-M-01-ESLABONES pide la ida, que esta; la vuelta existe y NO
+       tiene lectura dirigida detras: la fabrico la misma redireccion
+       sobre una entrada que antes era estructura_de_gates.
+  PARA CADA UNO, EN ESTE ORDEN Y CON ESTAS GUARDAS:
+  (3.a) IMPRIME LOS DOS NODOS ENTEROS, pasos y resumen, ANTES de escribir
+  tu lectura, y di QUE LINEA expande cada direccion, citando el paso por
+  su numero EN EL NODO DE HOY y no en la ficha del 12 ago 2026.
+  (3.b) APLICA LA VARA DEL 9.22 EN LOS DOS SENTIDOS y adjudica: DOS
+  LINEAS DISTINTAS es ENLACE MUTUO y las dos direcciones viven; LA MISMA
+  LINEA es ESCALERA y la vuelta se retira. En los pares 5 y 6, donde la
+  contradireccion no tiene lectura dirigida detras, la vara se aplica
+  igual: si el otro nodo expande una linea distinta del superviviente, es
+  mutuo; si no, es escalera. MARCA CADA UNO COMO DISCUTIBLE ANTES DE
+  SABER SI ACIERTAS.
+  (3.c) EJECUTA LO QUE TU LECTURA DECIDA, operacion por operacion, cada
+  una con: simulacion previa sobre copia en memoria, mutacion negativa
+  con cero escrituras, los dos extremos VIVOS hoy o resueltos por alias
+  declarandolo, P.9 (id resuelto, que no nazca por alias), P.16, EL GRADO
+  TOTAL MEDIDO ANTES Y DESPUES de cada retiro (por la contraorden, girar
+  no sube el grado y podar lo baja en uno, y si sube te pasaste), cero
+  duplicadas y cero auto-aristas tras resolver, y EL CICLO DE GATE 0 CON
+  LAS SUITES detras de cada una.
+  (3.d) SI UNA RETIRADA TOCA UNA ARISTA QUE NINGUNA OPERACION DEL PLAN
+  PROPUSO NI PROHIBE, PARAS ESA Y LA TRAES. La contraorden cubre la
+  vuelta de una escalera que una ficha prohibe; no cubre podar el grafo
+  por gusto.
+  (3.e) CUANDO LOS SEIS ESTEN LEIDOS Y EJECUTADOS, vuelve a correr
+  tallar_estado_de_fase.py --fase 06_MESAS con la vara ensanchada y pega
+  su salida entera. Si sigue sin cerrar, DILO NOMBRANDO LAS QUE FALTAN,
+  que es justo lo que tu guarda de cierre ya exige.
+  EL CAMPO estado SIGUE SIN TOCARSE (acta 139, adjudicacion 3.6, y acta
+  140): el pase de estado de las ONCE va en UNA sola adjudicacion mia,
+  con el conteo antes y despues. No lo adelantes.
+  OP-S-12 SIGUE AL FINAL DE LA PASADA ENTERA, por la atadura 2 del
+  indice. No se toca. Y OP-M-04 NO SE TOCA HOY: su destino vive fuera de
+  esta fase (OP-U-01, fase 03, sigue LISTA) y se adjudica cuando la vara
+  ensanchada exista.
+
+- TAREA 4, LA RELECTURA AL DOBLE DEL TRAMO, Y VA NOMBRADA. El credito de
+  la tanda esta roto por vigesimoprimera vuelta porque mi hallazgo (4.1)
+  salio FUERA de tus discutibles marcados. EL TRAMO QUE SE RELEE AL DOBLE
+  ES TODA ARISTA ESCRITA O DECLARADA CUMPLIDA SIN HABER MEDIDO SU VUELTA:
+  antes de publicar que una operacion de enlace cumple, mides sus dos
+  direcciones con el resolutor puesto en las dos vistas y publicas
+  cuantas tienen la vuelta presente, aunque la ida ya estuviera. "YA
+  PRESENTE" NO ES UN VEREDICTO: es media medicion.
 
 SI LAS TAREAS NO CABEN CON SUS GUARDAS COMPLETAS, PARTE POR LA TAREA 3 Y
-NO POR LAS GUARDAS: entrega la 0, la 1, la 2 y la 4 enteras y las
-operaciones remitidas que alcancen en su orden, y di CUALES no hiciste y
-por que, como hiciste en la 137, en la 138 y en la 139. La TAREA 2 es
-BLOQUEANTE y no se parte: es la escalada de la racha.
+NO POR LAS GUARDAS: entrega la 0, la 1, la 2 y la 4 enteras y los pares
+que alcancen en su orden, y di CUALES no leiste y por que, como hiciste
+en la 138, en la 139 y en la 140. La TAREA 2 es BLOQUEANTE y no se parte:
+es la escalada de la racha.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
