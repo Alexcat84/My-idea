@@ -1,0 +1,57 @@
+VERSIONES DE docs/plan/ARISTAS_DUPLICADAS.jsonl EN GIT (git log --follow): 30
+  la PRIMERA es af467eb1
+  la de HEAD es d6341ebe
+
+PRIMERA VERSION (af467eb1): 1015 grupos / 802 nodos / 1056 entradas que sobran
+VERSION DE HEAD (d6341ebe): 898 grupos / 711 nodos / 935 entradas que sobran
+
+DE LAS 935 DE HEAD, REPARTIDAS CONTRA EL GRAFO DE HOY:
+  entradas que sobran sobre nodos HOY DEPRECADOS: 10 (en 10 grupo(s))
+  entradas que sobran sobre nodos QUE YA NO EXISTEN: 0 (en 0 grupo(s))
+  entradas que sobran sobre nodos VIVOS: 925
+    deprecado: customer_discovery_overview.nodos_siguientes -> identificar_earlyvangelists (sobran 1)
+    deprecado: dia_cero_defectos_3.nodos_previos -> conciencia_calidad (sobran 1)
+    deprecado: eliminacion_causas_error.nodos_previos -> programa_mejora_calidad_14_pasos (sobran 1)
+    deprecado: estructura_de_gates.nodos_siguientes -> gestion_portafolio_formal (sobran 1)
+    deprecado: fase_acclimate_mapa_de_proceso.nodos_previos -> shock_and_awe_kit_bienvenida (sobran 1)
+    deprecado: filosofia_customer_validation.nodos_previos -> business_model_canvas_scorecard (sobran 1)
+    deprecado: get_out_of_the_building.nodos_siguientes -> identificar_earlyvangelists (sobran 1)
+    deprecado: get_out_of_the_building.nodos_siguientes -> validar_canal_distribucion (sobran 1)
+    deprecado: pivote_startup.nodos_previos -> catalogo_pivotes (sobran 1)
+    deprecado: pivotes_e_iteraciones.nodos_siguientes -> business_model_canvas_scorecard (sobran 1)
+
+LA SERIE ENTERA, DE LA PRIMERA A LA DE HEAD (grupos / nodos / sobran):
+  af467eb1   1015 /   802 /  1056
+  67bc64c3   1002 /   791 /  1043
+  5b7caac0   1001 /   790 /  1042
+  5c485cb2   1000 /   789 /  1041
+  be5d152b    997 /   787 /  1038
+  29ac3675    988 /   779 /  1029
+  b908d5b4    983 /   774 /  1023
+  2743bd88    981 /   772 /  1021
+  d5d82060    975 /   767 /  1015
+  051c0396    972 /   764 /  1012
+  0481113f    965 /   759 /  1005
+  a1d7269d    962 /   757 /  1002
+  706397c7    955 /   753 /   995
+  3ffc2091    956 /   754 /   996
+  6b6607bb    946 /   747 /   985
+  02384c6a    938 /   744 /   977
+  aed86a79    935 /   741 /   974
+  7a467818    933 /   739 /   972
+  01fb303f    928 /   735 /   966
+  f5e9a72b    927 /   734 /   965
+  2cc84e86    925 /   733 /   963
+  a0d6873c    921 /   730 /   958
+  eedd7fa1    915 /   725 /   952
+  c50cf7e4    914 /   724 /   951
+  0c946b7d    913 /   723 /   950
+  471971de    912 /   722 /   949
+  a59d49d6    911 /   721 /   948
+  f188f1c3    902 /   714 /   939
+  90df5a9f    899 /   712 /   936
+  d6341ebe    898 /   711 /   935
+
+BAJADA MONOTONA (ninguna version sube respecto de la anterior): False
+PRIMERA 1056, ULTIMA 935, DIFERENCIA 121
+EXITCODE: 0

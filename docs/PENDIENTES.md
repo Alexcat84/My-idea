@@ -10385,3 +10385,77 @@ LAS TRES PREGUNTAS DEL EJECUTOR.**
 (fallar ruidoso), banco 9.10 (el sujeto congelado), la CORRECCION 18 (dos
 unidades no comparten columna), la CORRECCION 22 (el sujeto vivo), la CORRECCION
 23 (la busqueda negativa) y `AUDITOR.md` 1.2 y 3. Siguen vivos (i) a (xxi).
+
+**REMISION (vuelta 150, TAREA 1.a): `R.29`, el registro del acta de la vuelta
+149, NO esta en esta pagina.** El encargo de la vuelta 150 lo manda a
+`docs/plan/CORRECCIONES_A_APLICAR.md` con esas palabras, y ahi vive, al final del
+fichero. **Esto es una remision, no una copia:** la fuente unica de `R.29` es esa
+pagina. Nada de `R.20` a `R.28` se toca.
+
+## EL INDICE SEMANTICO DESFASADO, TRABAJO DE LA SESION CON CREDENCIAL (vuelta 150, TAREA 1.d)
+
+**Nace del discutible 9 del reporte de la vuelta 148, adjudicado A FAVOR SIN
+RESERVA en el acta 149, seccion 3.9.** **Todas las cifras de esta ficha son la
+MEDICION DE HOY del ejecutor, no la de nadie.** Corte: **2 sep 2026**.
+Instrumento y salida commiteada: `docs/loop/SALIDA_V150_1D_INDICE_SEMANTICO.txt`.
+
+**QUE PASA.** `web/lib/assets/semantic_index.json` (modelo `voyage-4-lite`,
+dimension 512) trae **3.521 ids y 3.521 embeddings**, y el grafo de hoy tiene
+**3.169 vivos y 684 deprecados**. Los dos numeros no cuadran por los dos lados a
+la vez:
+
+| lo medido hoy | cifra |
+|---|---:|
+| ids en el indice | **3.521** |
+| nodos VIVOS en el grafo de hoy | **3.169** |
+| **vivos SIN VECTOR** en el indice | **18** |
+| ids del indice que **ya no estan vivos** | **370** |
+| de esos 370, **DEPRECADOS** del grafo de hoy | **370** |
+| de esos 370, **FANTASMAS** (ids que ya no existen en el grafo) | **0** |
+
+**CUADRA POR LOS DOS LADOS:** 3.521 ids = 3.151 vivos con vector + 370 no vivos;
+y 3.169 vivos = 3.151 con vector + 18 sin vector. **Que los 370 sean 370
+deprecados y CERO fantasmas importa**: no hay ni un id inventado en el indice, o
+sea que el desfase es de fecha y no de integridad.
+
+**LOS 18 VIVOS SIN VECTOR, NOMBRADOS UNO A UNO** (son los que la puerta `A2.6`
+solo puede juzgar por la pierna del titulo, porque por contenido no tienen con
+que):
+
+  1. `anillo_interior_explotar_el_canal_nucleo`
+  2. `autoservicio_y_autosanacion_del_producto`
+  3. `critica_del_plan_con_ia`
+  4. `driver_de_inventario`
+  5. `escenarios_de_evolucion_de_la_ia`
+  6. `estar_listo_para_ser_publica`
+  7. `estrategia_circular_y_mecanismo_de_retorno`
+  8. `formalizar_un_proceso_ad_hoc`
+  9. `ideacion_con_ia_en_la_sesion`
+  10. `incentivos_internos_alineados_a_retencion`
+  11. `inteligencia_de_anuncios_de_la_competencia`
+  12. `la_historia_de_la_empresa`
+  13. `observar_al_cliente_en_su_contexto`
+  14. `personalizacion_guiada_por_el_cliente`
+  15. `producto_como_servicio_de_acceso`
+  16. `puntos_brillantes_antes_del_pivote`
+  17. `seleccion_de_proveedores_por_costo_total`
+  18. `silla_vacia_del_cliente_en_decisiones`
+
+**POR QUE ES TRABAJO DE LA SESION CON CREDENCIAL Y NO DEL BUCLE.** Reconstruir el
+indice llama a Voyage y pide `VOYAGE_API_KEY`, o sea **gasto fuera del repo con
+una credencial que la casa reserva** (`AUDITOR.md` seccion 4). El bucle lo mide y
+lo trae; no lo arregla.
+
+**UNA SOLA CORRIDA ARREGLA LAS DOS MITADES, Y ESTA VERIFICADO EN EL CODIGO, NO
+SUPUESTO** (lo anadio el auditor en su 3.11 y el ejecutor lo re leyo hoy):
+`main()` de `scripts/build_semantic_index_voyage.py` **reconstruye la lista `ids`
+desde cero** con `ids = [k for k in graph.keys() if not graph[k].get("deprecado")]`
+(**linea 166**) y la escribe entera en el fichero de salida (**linea 184**). No
+es un parche incremental: **los 18 entran y los 370 salen EN LA MISMA PASADA**, y
+el indice queda con exactamente los vivos del dia en que se corra.
+
+**DONDE ENCAJA EN EL PLAN.** Es el **punto 5 de la verificacion transversal de la
+fase 08** (`docs/plan/08_VERIFICACION.md`), o sea que entra en esa sesion por
+construccion. El ultimo commit que toco el indice es **`12605810`, del 9 ago
+2026**, medido hoy con `git log -1`: el desfase viene de antes de la pasada y no
+lo creo ninguna operacion de la campana.
