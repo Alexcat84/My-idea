@@ -1,0 +1,30 @@
+==============================================================================
+MUTACION DE LA TAREA 2.c | vuelta 143
+Sujeto congelado: 62d4f28e | fase 03_FUSIONES
+Todo EN MEMORIA. La divergente que se mueve se ELIGE POR COMPUTO.
+==============================================================================
+
+(a) sin mutar -> calza=True codigo=0
+    divergentes que la vara publica: OP-M-02-ADMIT, OP-M-02-MEDIOS
+
+(b) mutada OP-M-02-ADMIT -> calza=False codigo=2
+
+(c) lineas de fallo que la nombran:
+    (B) sale(n) CUMPLIDA(S) una o mas operaciones cuya ficha las hace CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE, y la adjudicacion 3.5 del acta 141 dice NUNCA cumplido: OP-M-02-ADMIT
+    (B) la ficha y el grafo hacen DIVERGENTE(S) a OP-M-02-ADMIT y la vara no la(s) publica en su saco
+
+(d) union sin mutar 10 nombres | union mutada 10 nombres | iguales: True
+
+git status --porcelain -- dataset/ docs/plan/ : ''
+
+==============================================================================
+  VERDE a CONTRAPRUEBA sin mutar: el caso positivo CALZA (codigo 0)
+  VERDE b movida OP-M-02-ADMIT al saco de cumplidas, la expectativa CAE
+  VERDE c la caida NOMBRA a OP-M-02-ADMIT y lo hace por la comprobacion (B)
+  VERDE d la UNION de los tres sacos NO se mueve con la mutacion, o sea que la comprobacion (A) sola es ciega a esto y la que muerde es la (B)
+  VERDE P.16 dataset/ y docs/plan/ SIN TOCAR tras la mutacion
+CIFRA de la bateria 2.c: 5 comprobaciones
+CIFRA verdes de la bateria 2.c: 5 comprobaciones
+==============================================================================
+VERDE: los 5 casos se comportan.
+EXITCODE: 0

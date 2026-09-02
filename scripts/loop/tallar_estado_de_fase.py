@@ -503,13 +503,177 @@ FRASES_MUTUO = [
     "la regla de la escalera no aplica",
 ]
 
+# --------------- EL REGIMEN DE VUELTA PASA A SER POR PAR (TAREA 2.a, v143) ---
+#
+# POR QUE NACE (acta de la vuelta 142, adjudicacion 3.3 y caida 4.3 de la casa,
+# "LA VARA DE ENLACE NO LEE LA EXCEPCION QUE LA 3.a ACABA DE ESCRIBIR, ASI QUE
+# LA FASE 06 NO PUEDE CERRAR NUNCA").
+#
+# EL DEFECTO, MEDIDO POR EL AUDITOR CON EL ARBOL EN LAS DOS POSICIONES: corrio
+# tallar_estado_de_fase.py --fase 06_MESAS CON la excepcion de la vuelta 142
+# puesta y con esa misma excepcion guardada en git stash, y la celda de OP-E-04
+# sale IDENTICA en las dos ("regimen de vuelta PROHIBE por la ficha
+# (verificacion 0): la vuelta presente IMPIDE cumplir"). La causa esta en el
+# codigo de arriba: regimen_de_vuelta() clasificaba POR OPERACION contra seis
+# frases literales, y el texto de la excepcion no lleva ninguna de las de MUTUO.
+# Y SI LA LLEVARA, SALDRIA AMBIGUO CON FALLO, porque la verificacion 0 de la
+# misma ficha sigue entera y prohibiendo. O sea: NO HABIA REDACCION POSIBLE que
+# arreglara esto mientras el regimen fuera uno por operacion. Consecuencia
+# medida: OP-E-04 no podia llegar a CUMPLIDA ni ejecutando su ficha entera,
+# "sin cumplir" nunca bajaba de 1 y la fase 06 no podia cerrar nunca.
+#
+# NO ES DOCTRINA NUEVA. El banco 9.22 define la figura POR PAR ("La figura exige
+# dos lineas distintas, una en cada nodo", "El par es sano"), y el hueco de
+# orden 1 del 00_INDICE:482 exige literal "LA GUARDA TIENE QUE LLEVAR LA
+# EXCEPCION ESCRITA".
+#
+# QUE CAMBIA, EN TRES PIEZAS:
+#
+# (i) LA FICHA PUEDE DECLARAR PARES EXCEPTUADOS Y LA VARA LOS LEE. La excepcion
+#     se lee de la `verificacion` de la ficha, NUNCA del campo `tipo` y NUNCA
+#     adivinada. La frase que la dispara va LITERAL de la ficha, igual que las
+#     seis de la vuelta 141: sale de la verificacion 5 de OP-E-04 (la sexta
+#     linea), escrita en la vuelta 142 y commiteada en la 143, cuyo primer
+#     renglon dice "EXCEPCION DEL 9.22 PARA LOS PARES MUTUOS NOMBRADOS".
+#
+#     LOS PARES SE PARSEAN DE LA VENTANA QUE LA PROPIA FICHA DELIMITA CON SUS
+#     PALABRAS, y esto se declara aqui porque es una decision de lectura: la
+#     ficha adjudica con la formula "adjudico DOBLE LINEA los pares de LD-35 con
+#     LD-51, de LD-49, de LD-40 con LD-48 y de LD-45 con LD-53, y ESCALERA el de
+#     LD-42". La ventana va del literal "DOBLE LINEA" al literal "y ESCALERA", y
+#     SOLO de ahi se sacan pares. NO SE LEEN LOS LD DE LA LINEA ENTERA, y el
+#     motivo es medible: la misma frase nombra LD-42 como ESCALERA, o sea como
+#     el par que la excepcion EXPRESAMENTE NO cubre; leer la linea entera lo
+#     colaria dentro y la excepcion se tragaria justo el caso que niega.
+#
+#     DENTRO DE LA VENTANA SE ACEPTAN LAS DOS FORMAS que el encargo nombra, "por
+#     sus ids o por sus LD": un LD-<n> se traduce a par de nodos buscandolo en
+#     el propio aristas_nuevas de la ficha (la fila que dice "por LD-<n>"), y
+#     una flecha "A -> B" escrita dentro de la ventana se toma tal cual. Las dos
+#     formas SE RESUELVEN POR ALIAS (P.1, EJECUTOR.md regla 9) antes de
+#     comparar, y el par se guarda SIN ORDEN, porque un par exceptuado lo esta
+#     en sus dos sentidos.
+#
+#     SI LA FICHA DISPARA LA EXCEPCION Y NO SE PUEDE SACAR NI UN PAR, ES FALLO
+#     RUIDOSO (banco 9) y no se aplica ninguna excepcion: una excepcion que no
+#     nombra pares es exactamente el caso que (ii) reserva para AMBIGUO.
+#
+# (ii) EL REGIMEN DEJA DE SER UNO POR OPERACION. Una operacion con excepcion
+#     tiene regimen PROHIBE para las direcciones cuyo par NO esta exceptuado, y
+#     MUTUO para las de los pares que SI lo estan. Una operacion SIN excepcion
+#     se comporta EXACTAMENTE como antes de esta vuelta, y su celda sale con el
+#     mismo texto (eso es lo que prueba la mutacion (iii) de
+#     vuelta143_2a_mutaciones.py). LLEVAR PROHIBE Y UNA EXCEPCION NOMBRADA A LA
+#     VEZ DEJA DE SER AMBIGUO: eso es justo lo que el hueco de orden 1 manda que
+#     exista. AMBIGUO queda reservado a la ficha que prohibe y exige la vuelta
+#     SIN nombrar pares.
+#
+# (iii) LA CELDA PUBLICA EL DESGLOSE Y NO UN TOTAL PELADO: cuantas direcciones
+#     bajo PROHIBE tienen la vuelta presente (las que impiden cumplir), cuantas
+#     bajo MUTUO tienen sus dos direcciones (las que se exigen), y la NOMINA de
+#     los pares exceptuados que la ficha nombra, para que se vea crecer.
+#
+# MUTACIONES: scripts/loop/vuelta143_2a_mutaciones.py, todas EN MEMORIA y con el
+# sujeto ELEGIDO POR COMPUTO, nunca tecleado.
+FRASES_EXCEPCION_PAR = [
+    "excepcion del 9.22 para los pares mutuos nombrados",
+]
+# Los dos literales con los que la propia ficha delimita su adjudicacion.
+MARCA_ABRE_EXCEPCION = "doble linea"
+MARCA_CIERRA_EXCEPCION = "y escalera"
+PATRON_LD = re.compile(r"\bLD-(\d+)\b")
 
-def regimen_de_vuelta(op, fallos):
+
+def _pares_por_ld(op):
+    """{'LD-<n>': [(origen, destino), ...]} sacado del PROPIO aristas_nuevas de
+    la ficha. Es la traduccion de un LD a par de nodos, y no se teclea: la fila
+    que dice "por LD-<n>" es la que aporta sus pares."""
+    mapa = {}
+    for cadena in (op.get("aristas_nuevas") or []):
+        pares = PATRON_ARISTA.findall(cadena)
+        if not pares:
+            continue
+        for n in PATRON_LD.findall(cadena):
+            mapa.setdefault("LD-%s" % n, []).extend(pares)
+    return mapa
+
+
+def pares_exceptuados_de(op, resolver, fallos):
+    """TAREA 2.a (vuelta 143). Los pares que la EXCEPCION ESCRITA de la ficha
+    nombra. Ver el bloque "EL REGIMEN DE VUELTA PASA A SER POR PAR" de arriba.
+
+    Devuelve (conjunto, cita, nomina):
+      conjunto = set de frozenset({a, b}) con los dos extremos YA RESUELTOS;
+      cita     = "verificacion <i>: <frase literal>" que dispara, o None;
+      nomina   = ["a <-> b", ...] ordenada, para publicar en la celda."""
+    disparo = None
+    for i, linea in enumerate(op.get("verificacion") or []):
+        bajo = (linea or "").lower()
+        for f in FRASES_EXCEPCION_PAR:
+            if f in bajo:
+                disparo = (i, f, linea or "", bajo)
+                break
+        if disparo:
+            break
+    if disparo is None:
+        return set(), None, []
+
+    i, frase, linea, bajo = disparo
+    cita = "verificacion %d: %s" % (i, frase)
+
+    ini = bajo.find(MARCA_ABRE_EXCEPCION)
+    if ini < 0:
+        fallos.append("%s: dispara la excepcion del 9.22 (%s) pero su texto no trae el "
+                      "literal '%s' que abre la lista de pares: no se adivina cuales son"
+                      % (op.get("id_op"), cita, MARCA_ABRE_EXCEPCION))
+        return set(), cita, []
+    fin = bajo.find(MARCA_CIERRA_EXCEPCION, ini)
+    ventana = linea[ini:fin] if fin > ini else linea[ini:]
+
+    mapa_ld = _pares_por_ld(op)
+    crudos = []
+    sueltos = []
+    for n in PATRON_LD.findall(ventana):
+        ld = "LD-%s" % n
+        if ld in mapa_ld:
+            crudos.extend(mapa_ld[ld])
+        else:
+            sueltos.append(ld)
+    crudos.extend(PATRON_ARISTA.findall(ventana))
+    if sueltos:
+        fallos.append("%s: la excepcion nombra %s y su propio aristas_nuevas no trae ninguna "
+                      "fila con ese LD: no se adivina a que par se refiere"
+                      % (op.get("id_op"), ", ".join(sorted(set(sueltos)))))
+
+    conjunto = set()
+    for o, d in crudos:
+        ro, rd = resolver(o), resolver(d)
+        if ro == rd:
+            continue
+        conjunto.add(frozenset((ro, rd)))
+
+    if not conjunto:
+        fallos.append("%s: dispara la excepcion del 9.22 (%s) y NO se puede sacar ni un par "
+                      "de su texto: una excepcion que no nombra pares no se aplica"
+                      % (op.get("id_op"), cita))
+        return set(), cita, []
+
+    nomina = sorted(" <-> ".join(sorted(par)) for par in conjunto)
+    return conjunto, cita, nomina
+
+
+def regimen_de_vuelta(op, fallos, hay_excepcion=False):
     """PROHIBE / MUTUO / SIN REGLA, leido de la `verificacion` de la ficha.
 
     Devuelve (regimen, cita), donde cita es "verificacion <i>: <frase>" de la
     primera linea que lo decide, o None si ninguna lo dice. NUNCA mira el campo
-    `tipo`: el encargo de la vuelta 141 lo prohibe expresamente."""
+    `tipo`: el encargo de la vuelta 141 lo prohibe expresamente.
+
+    `hay_excepcion` (TAREA 2.a, vuelta 143) dice si la ficha NOMBRA pares
+    exceptuados. Si los nombra, llevar PROHIBE y MUTUO a la vez YA NO ES
+    AMBIGUO: la ficha ha dicho con sus palabras cuales pares salen de la
+    prohibicion, que es lo que el hueco de orden 1 del 00_INDICE manda. AMBIGUO
+    queda para la ficha que prohibe y exige la vuelta SIN nombrar pares."""
     prohibe = None
     mutuo = None
     for i, linea in enumerate(op.get("verificacion") or []):
@@ -521,8 +685,11 @@ def regimen_de_vuelta(op, fallos):
             if f in bajo and mutuo is None:
                 mutuo = "verificacion %d: %s" % (i, f)
     if prohibe and mutuo:
-        fallos.append("%s: su verificacion PROHIBE y EXIGE la vuelta a la vez (%s / %s): "
-                      "no se resuelve adivinando" % (op.get("id_op"), prohibe, mutuo))
+        if hay_excepcion:
+            return "PROHIBE", "%s (y %s, resuelto por la excepcion nombrada)" % (prohibe, mutuo)
+        fallos.append("%s: su verificacion PROHIBE y EXIGE la vuelta a la vez (%s / %s) y NO "
+                      "nombra pares exceptuados: no se resuelve adivinando"
+                      % (op.get("id_op"), prohibe, mutuo))
         return "AMBIGUO", "%s / %s" % (prohibe, mutuo)
     if prohibe:
         return "PROHIBE", prohibe
@@ -544,12 +711,20 @@ def direcciones_de(pares, resolver):
 
 
 def destino_de_enlace(op, pares, nodos, resolver, fallos):
-    """TAREA 2.a y 2.c de la vuelta 141. Mide IDA Y VUELTA de cada DIRECCION y
-    juzga segun el regimen de vuelta que la propia ficha declara."""
-    regimen, cita = regimen_de_vuelta(op, fallos)
+    """TAREA 2.a y 2.c de la vuelta 141, y TAREA 2.a de la vuelta 143. Mide IDA
+    Y VUELTA de cada DIRECCION y juzga segun el regimen de vuelta que la propia
+    ficha declara, QUE DESDE LA VUELTA 143 PUEDE SER DISTINTO PAR A PAR (ver el
+    bloque "EL REGIMEN DE VUELTA PASA A SER POR PAR")."""
+    exceptuados, cita_exc, nomina_exc = pares_exceptuados_de(op, resolver, fallos)
+    regimen, cita = regimen_de_vuelta(op, fallos, hay_excepcion=bool(exceptuados))
     dirs = direcciones_de(pares, resolver)
 
     con_ida, sin_ida, con_vuelta = [], [], []
+    # EL DESGLOSE POR PAR (TAREA 2.a.iii, vuelta 143): las direcciones cuyo par
+    # NO esta exceptuado siguen bajo PROHIBE, y su vuelta presente impide
+    # cumplir; las de los pares SI exceptuados van bajo MUTUO, y su vuelta no
+    # solo no penaliza: se exige.
+    vuelta_bajo_prohibe, dos_lineas_bajo_mutuo, mutuo_a_medias = [], [], []
     for ro, rd in dirs:
         ida, _, _ = arista_presente(nodos, resolver, ro, rd)
         vuelta, _, _ = arista_presente(nodos, resolver, rd, ro)
@@ -557,11 +732,32 @@ def destino_de_enlace(op, pares, nodos, resolver, fallos):
         (con_ida if ida else sin_ida).append(nombre)
         if vuelta:
             con_vuelta.append("%s -> %s" % (rd, ro))
+        if exceptuados:
+            par = frozenset((ro, rd))
+            if par in exceptuados:
+                if ida and vuelta:
+                    dos_lineas_bajo_mutuo.append(nombre)
+                else:
+                    mutuo_a_medias.append(nombre)
+            elif vuelta:
+                vuelta_bajo_prohibe.append("%s -> %s" % (rd, ro))
 
     if not dirs:
         return False, "cero direcciones parseadas de aristas_nuevas"
 
-    if regimen == "MUTUO":
+    if exceptuados and regimen in ("PROHIBE", "MUTUO", "SIN REGLA"):
+        # LA VUELTA SOLO PENALIZA DONDE LA FICHA NO LA HA EXCEPTUADO.
+        cumplido = (not sin_ida) and (not vuelta_bajo_prohibe)
+        nota = ("regimen de vuelta POR PAR por la EXCEPCION ESCRITA en la ficha (%s), "
+                "banco 9.22 y hueco de orden 1 del 00_INDICE: %d direccion(es) de pares "
+                "EXCEPTUADOS van bajo MUTUO (la vuelta NO penaliza y las dos se exigen) y "
+                "%d bajo PROHIBE (la vuelta presente IMPIDE cumplir); el regimen de base de "
+                "la ficha es %s (%s); PARES EXCEPTUADOS QUE LA FICHA NOMBRA (%d): %s"
+                % (cita_exc,
+                   len([1 for ro, rd in dirs if frozenset((ro, rd)) in exceptuados]),
+                   len([1 for ro, rd in dirs if frozenset((ro, rd)) not in exceptuados]),
+                   regimen, cita, len(nomina_exc), ", ".join(nomina_exc)))
+    elif regimen == "MUTUO":
         cumplido = not sin_ida
         nota = ("regimen de vuelta MUTUO por la ficha (%s), banco 9.22: la vuelta NO "
                 "penaliza y las dos direcciones se exigen" % cita)
@@ -589,6 +785,19 @@ def destino_de_enlace(op, pares, nodos, resolver, fallos):
         razon += ": " + ", ".join(con_vuelta)
     if sin_ida:
         razon += "; sin la IDA: " + ", ".join(sin_ida)
+    if exceptuados:
+        # EL DESGLOSE, NO UN TOTAL PELADO (TAREA 2.a.iii de la vuelta 143).
+        razon += ("; bajo PROHIBE con la VUELTA presente (impiden cumplir) %d"
+                  % len(vuelta_bajo_prohibe))
+        if vuelta_bajo_prohibe:
+            razon += ": " + ", ".join(vuelta_bajo_prohibe)
+        razon += ("; bajo MUTUO con las DOS direcciones (se exigen) %d"
+                  % len(dos_lineas_bajo_mutuo))
+        if dos_lineas_bajo_mutuo:
+            razon += ": " + ", ".join(dos_lineas_bajo_mutuo)
+        if mutuo_a_medias:
+            razon += ("; bajo MUTUO a medias (falta una de las dos) %d: %s"
+                      % (len(mutuo_a_medias), ", ".join(mutuo_a_medias)))
     razon += "; " + nota
     return cumplido, razon
 

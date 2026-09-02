@@ -1,0 +1,39 @@
+==============================================================================
+MUTACIONES DE LA TAREA 2.a | vuelta 143 | FASE 06_MESAS
+Todo EN MEMORIA. El sujeto se ELIGE POR COMPUTO, no se teclea.
+ENLACES en el catalogo de la fase: 5 (OP-E-04, OP-E-05, OP-M-01-ESLABONES, OP-M-01-SEXTO, OP-M-03-ENLACES)
+==============================================================================
+
+SUJETO ELEGIDO POR COMPUTO: OP-E-04
+   excepcion disparada por: verificacion 5: excepcion del 9.22 para los pares mutuos nombrados
+   PARES EXCEPTUADOS QUE LA FICHA NOMBRA (4): gestion_portafolio_dos_niveles <-> sistema_gates_go_kill, gestion_portafolio_foco <-> sistema_gates_go_kill, gestion_portafolio_formal <-> sistema_gates_go_kill, portfolio_management <-> sistema_gates_go_kill
+   direcciones totales 8 | de pares EXCEPTUADOS 6 | de pares NO exceptuados 2
+
+(iii) lineas de verificacion quitadas: 1 | regimen de base recomputado: PROHIBE (verificacion 0: la vuelta no debe existir)
+      la celda termina en el texto viejo: True
+      la celda NO trae desglose por par: True
+
+(0) grafo simulado (ficha ejecutada entera) -> cumplido=True
+    8 de 8 direcciones con la IDA presente (9 filas de ficha colapsan en 8 direcciones); con la VUELTA presente 6 de 8: sistema_gates_go_kill -> gestion_portafolio_dos_niveles, portfolio_management -> sistema_gates_go_kill, gestion_po
+
+(i) metida la vuelta revision_portafolio_periodica -> sistema_gates_go_kill (par NO exceptuado) -> cumplido=False
+    cumplidas antes 15, despues 13 | sin cumplir antes ['OP-M-04'], despues ['OP-M-01', 'OP-M-04', 'OP-E-04']
+    8 de 8 direcciones con la IDA presente (9 filas de ficha colapsan en 8 direcciones); con la VUELTA presente 7 de 8: sistema_gates_go_kill -> gestion_portafolio_dos_niveles, portfolio_management -> sistema_gates_go_kill, revision_p
+
+(ii) quitada la ida gestion_portafolio_dos_niveles -> sistema_gates_go_kill (par SI exceptuado) -> cumplido=False
+     la nombra en 'sin la IDA': True | cero vueltas culpables: True
+     7 de 8 direcciones con la IDA presente (9 filas de ficha colapsan en 8 direcciones); con la VUELTA presente 6 de 8: sistema_gates_go_kill -> gestion_portafolio_dos_niveles, portfolio_management -> sistema_gates_go_kill, gestion_po
+
+git status --porcelain -- dataset/ docs/plan/ : ''
+
+==============================================================================
+  VERDE iii sin la linea de la excepcion la ficha vuelve al regimen PROHIBE de siempre, con el MISMO texto de celda: el comportamiento viejo no se rompio
+  VERDE 0 CONTRAPRUEBA sin mutar sobre el grafo simulado: OP-E-04 sale CUMPLIDA
+  VERDE i la VUELTA de una direccion cuyo par NO esta exceptuado deja a OP-E-04 NOMBRADA en SIN CUMPLIR y hace BAJAR la cifra de cumplidas
+  VERDE ii quitada una direccion de un par SI exceptuado, OP-E-04 sale SIN CUMPLIR por FALTA (nombrada en 'sin la IDA') y NO por vuelta (cero direcciones bajo PROHIBE con la vuelta presente)
+  VERDE P.16 dataset/ y docs/plan/ SIN TOCAR tras las mutaciones
+CIFRA de la bateria 2.a: 5 comprobaciones
+CIFRA verdes de la bateria 2.a: 5 comprobaciones
+==============================================================================
+VERDE: los 5 casos se comportan.
+EXITCODE: 0

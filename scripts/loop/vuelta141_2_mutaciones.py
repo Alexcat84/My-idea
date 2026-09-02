@@ -197,31 +197,95 @@ def main():
               "3.4)" % (nombre, len(mutuas) // 2,
                         ", ".join("%s <-> %s" % (a, b) for a, b in mutuas
                                   if (a, b) <= (b, a))))
+
+    # ------ EL CASO FABRICA SU SUJETO EN MEMORIA (TAREA 2.b, vuelta 143) -----
+    #
+    # POR QUE CAMBIA (acta de la vuelta 142, adjudicacion 3.2 y caida 4.4 de la
+    # casa, "verificar_mutaciones_viejas.py QUEDA EN ROJO PERMANENTE"). El rojo
+    # de la vuelta 142 era honesto y era el que el encargo pidio: no habia
+    # sujeto real, porque la unica operacion con la vuelta puesta y sin la
+    # contradiccion del par mutuo era OP-M-01-ESLABONES y la poda del par 6 de
+    # la vuelta 141 se la llevo. PERO una bateria que NO PUEDE estar verde deja
+    # de ser una puerta y pasa a ser un adorno rojo: el dia que otra mutacion se
+    # rompa de verdad, su rojo no se distingue de este.
+    #
+    # EL REMEDIO ES EL QUE LA CASA YA USA y no es doctrina nueva:
+    # vuelta142_2c_mutaciones.py fabrica su sujeto EN MEMORIA cuando el grafo de
+    # hoy no se lo da. Aqui igual: si ninguna operacion tiene HOY la vuelta
+    # puesta, se ELIGE POR COMPUTO una operacion ENLACE con regimen PROHIBE (la
+    # primera por orden de id, descartando las que listan las dos direcciones de
+    # un par y las direcciones cuyo par la ficha EXCEPTUA, porque en esas la
+    # vuelta no penaliza y el caso no probaria nada), SE LE METE EN MEMORIA la
+    # vuelta de una de sus direcciones para tener el defecto que se quiere
+    # probar, y ENTONCES se quita y se comprueba que la cifra sube.
+    #
+    # SI TAMPOCO ASI HAY SUJETO, SIGUE SIENDO ROJO Y SE DICE POR QUE: el arnes
+    # no se ablanda, solo deja de depender de que el plan tenga hoy un defecto
+    # concreto puesto.
+    fabricado = False
+    vuelta_fabricada = None
+    if not sujeto_ii:
+        for f in sorted(base_filas.values(), key=lambda x: x["id_op"]):
+            if f["vara"] != "ENLACE":
+                continue
+            op = por_id[f["id_op"]]
+            if T.regimen_de_vuelta(op, [])[0] != "PROHIBE":
+                continue
+            dirs = T.direcciones_de(T.pares_de_aristas(op, []), resolver)
+            if not dirs:
+                continue
+            mutuas = [(ro, rd) for ro, rd in dirs if (rd, ro) in dirs]
+            if mutuas:
+                continue
+            exc, _cita, _nom = T.pares_exceptuados_de(op, resolver, [])
+            libres = [(ro, rd) for ro, rd in dirs if frozenset((ro, rd)) not in exc]
+            if not libres:
+                continue
+            sujeto_ii = (f["id_op"], dirs, [libres[0]])
+            vuelta_fabricada = libres[0]
+            fabricado = True
+            break
+
     if not sujeto_ii:
         print("   OMITIDO POR FALTA DE SUJETO: ninguna operacion ENLACE con regimen PROHIBE "
-              "tiene hoy la vuelta puesta SIN listar ella misma las dos direcciones de un "
-              "par. No hay caso que mutar. ESO ES ROJO, NO VERDE: una mutacion que no "
-              "encuentra su sujeto es una guarda que no mide.")
+              "tiene hoy la vuelta puesta NI puede recibirla en memoria sin listar ella "
+              "misma las dos direcciones de un par o tener todos sus pares exceptuados. No "
+              "hay caso que mutar. ESO ES ROJO, NO VERDE: una mutacion que no encuentra su "
+              "sujeto es una guarda que no mide.")
         return 1
     op_ii, dirs_ii, vueltas_ii = sujeto_ii
     faltan_idas = [(ro, rd) for ro, rd in dirs_ii
                    if not T.arista_presente(nodos, resolver, ro, rd)[0]]
     print("   sujeto computado: %s | %d direccion(es) | %d con la VUELTA puesta | "
-          "%d sin la IDA" % (op_ii, len(dirs_ii), len(vueltas_ii), len(faltan_idas)))
+          "%d sin la IDA%s" % (op_ii, len(dirs_ii), len(vueltas_ii), len(faltan_idas),
+                               " | SUJETO FABRICADO EN MEMORIA" if fabricado else ""))
+    if fabricado:
+        ro_f, rd_f = vuelta_fabricada
+        print("   NINGUNA operacion tiene hoy la vuelta puesta, asi que el caso FABRICA su "
+              "defecto EN MEMORIA (TAREA 2.b, vuelta 143): se mete %s -> %s, que es la "
+              "VUELTA de la direccion %s -> %s de %s, elegida por computo."
+              % (rd_f, ro_f, ro_f, rd_f, op_ii))
     print("   vueltas que se quitan: %s"
           % ", ".join("%s -> %s" % (rd, ro) for ro, rd in vueltas_ii))
     print("   idas que se ponen antes (para que el UNICO defecto sea la vuelta): %s"
           % (", ".join("%s -> %s" % (ro, rd) for ro, rd in faltan_idas) or "ninguna"))
 
-    # PASO A: se ponen las idas que faltan y NADA MAS. La operacion tiene que
-    # SEGUIR sin cumplir, y la razon tiene que ser la vuelta.
+    # PASO A: se ponen las idas que faltan y NADA MAS (y, si el sujeto es
+    # fabricado, se mete tambien la vuelta que crea el defecto). La operacion
+    # tiene que SEGUIR sin cumplir, y la razon tiene que ser la vuelta.
     nodos_iia = copy.deepcopy(nodos)
     res_iia = T.resolver_de(nodos_iia)
     for ro, rd in faltan_idas:
         poner_arista(nodos_iia, res_iia, ro, rd)
+    if fabricado:
+        ro_f, rd_f = vuelta_fabricada
+        poner_arista(nodos_iia, res_iia, rd_f, ro_f)
     filas_iia, cifra_iia, _ = medir(ops, nodos_iia, copy.deepcopy(remisiones))
     comprobar("2.a.ii PASO A: con TODAS las idas puestas y la vuelta todavia ahi, la "
               "operacion SIGUE sin cumplir", filas_iia[op_ii]["cumplido"], False)
+    comprobar("2.a.ii PASO A: la celda nombra la vuelta que impide cumplir",
+              ("%s -> %s" % (vueltas_ii[0][1], vueltas_ii[0][0])) in filas_iia[op_ii]["razon"],
+              True)
 
     # PASO B: ademas se quitan TODAS las vueltas. Ahora si tiene que subir.
     nodos_ii = copy.deepcopy(nodos_iia)
@@ -237,8 +301,20 @@ def main():
               filas_ii[op_ii]["cumplido"], True)
     comprobar("2.a.ii PASO B: la cifra de cumplido SUBE contra el paso A",
               cifra_ii["cumplido"] > cifra_iia["cumplido"], True)
-    comprobar("2.a.ii CONTRAPRUEBA sin mutar: la operacion esta en SIN CUMPLIR",
-              op_ii in base_cifra["nombres_sin_cumplir"], True)
+    # LA CONTRAPRUEBA SE MIDE CONTRA EL ESTADO DEL QUE PARTE EL CASO. Con sujeto
+    # real ese estado es el arbol de hoy; con sujeto FABRICADO es el paso A, que
+    # es donde vive el defecto que el caso prueba. Comparar un sujeto fabricado
+    # contra el arbol de hoy seria comparar contra un estado en el que el
+    # defecto no existe, y la contraprueba no diria nada.
+    if fabricado:
+        comprobar("2.a.ii CONTRAPRUEBA sobre el sujeto FABRICADO: en el paso A la operacion "
+                  "esta en SIN CUMPLIR", op_ii in cifra_iia["nombres_sin_cumplir"], True)
+        comprobar("2.a.ii CONTRAPRUEBA sobre el arbol de hoy: SIN la vuelta fabricada la "
+                  "operacion NO esta en SIN CUMPLIR",
+                  op_ii in base_cifra["nombres_sin_cumplir"], False)
+    else:
+        comprobar("2.a.ii CONTRAPRUEBA sin mutar: la operacion esta en SIN CUMPLIR",
+                  op_ii in base_cifra["nombres_sin_cumplir"], True)
     print("")
 
     # ------------------------------------------------------------------ 2.b

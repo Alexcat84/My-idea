@@ -1,0 +1,25 @@
+==============================================================================
+MUTACION DE LA TAREA 2.b | vuelta 143
+Se rompe A PROPOSITO el caso fabricado del 2.a.ii y se comprueba que la
+bateria lo marca. Todo sobre una COPIA; el fichero real no se toca.
+==============================================================================
+
+(a) exit 0 | comprobaciones 17 | verdes 17 | sujeto fabricado: True
+
+(b) exit 1 | comprobaciones 17 | verdes 13 | cae una del 2.a.ii: True
+    ROJO   2.a.ii PASO A: con TODAS las idas puestas y la vuelta todavia ahi, la operacion SIGUE sin cumplir | obtenido=True esperado=False
+    ROJO   2.a.ii PASO A: la celda nombra la vuelta que impide cumplir | obtenido=False esperado=True
+    ROJO   2.a.ii PASO B: la cifra de cumplido SUBE contra el paso A | obtenido=False esperado=True
+    ROJO   2.a.ii CONTRAPRUEBA sobre el sujeto FABRICADO: en el paso A la operacion esta en SIN CUMPLIR | obtenido=False esperado=True
+
+(c) verdes limpias 17 | verdes con el caso roto 13
+
+==============================================================================
+  VERDE a CONTRAPRUEBA sin mutar: la bateria sale VERDE exit 0 y su sujeto del 2.a.ii es FABRICADO EN MEMORIA (o sea, hay algo que romper)
+  VERDE b rota la inyeccion de la vuelta fabricada, la bateria CAE y la comprobacion que cae es del bloque 2.a.ii
+  VERDE c la cifra de comprobaciones VERDES baja al romper el caso (13 contra 17)
+CIFRA de la bateria 2.b: 3 comprobaciones
+CIFRA verdes de la bateria 2.b: 3 comprobaciones
+==============================================================================
+VERDE: los 3 casos se comportan.
+EXITCODE: 0

@@ -1,0 +1,46 @@
+BASE (sin mutar): catalogo 16 | cumplido 13 | sin cumplir 3 | fallos 0
+BASE, SIN CUMPLIR: OP-M-01, OP-M-04, OP-E-04
+
+MUTACION 2.a.i: LA VUELTA QUE NACE (sujeto elegido POR COMPUTO).
+   sujeto computado: OP-M-01-ESLABONES, direccion stage_gate_system -> sistema_gates_go_kill; la vuelta que se mete es sistema_gates_go_kill -> stage_gate_system
+   VERDE  2.a.i la operacion sale NOMBRADA en SIN CUMPLIR | obtenido=True esperado=True
+   VERDE  2.a.i la cifra de cumplido BAJA | obtenido=True esperado=True
+   VERDE  2.a.i la celda nombra la vuelta metida | obtenido=True esperado=True
+   VERDE  2.a.i CONTRAPRUEBA sin mutar: la operacion NO esta en SIN CUMPLIR | obtenido=False esperado=False
+
+MUTACION 2.a.ii: LA VUELTA QUE MUERE (sujeto elegido POR COMPUTO).
+   DESCARTADA POR COMPUTO: OP-E-04 lista en su propio aristas_nuevas LAS DOS DIRECCIONES de 2 par(es) (portfolio_management <-> sistema_gates_go_kill, gestion_portafolio_foco <-> sistema_gates_go_kill), asi que 'todas las idas y ninguna vuelta' es inalcanzable por construccion bajo regimen PROHIBE (acta 141, adjudicacion 3.4)
+   sujeto computado: OP-M-01-ESLABONES | 2 direccion(es) | 1 con la VUELTA puesta | 0 sin la IDA | SUJETO FABRICADO EN MEMORIA
+   NINGUNA operacion tiene hoy la vuelta puesta, asi que el caso FABRICA su defecto EN MEMORIA (TAREA 2.b, vuelta 143): se mete sistema_gates_go_kill -> stage_gate_system, que es la VUELTA de la direccion stage_gate_system -> sistema_gates_go_kill de OP-M-01-ESLABONES, elegida por computo.
+   vueltas que se quitan: sistema_gates_go_kill -> stage_gate_system
+   idas que se ponen antes (para que el UNICO defecto sea la vuelta): ninguna
+   VERDE  2.a.ii PASO A: con TODAS las idas puestas y la vuelta todavia ahi, la operacion SIGUE sin cumplir | obtenido=False esperado=False
+   VERDE  2.a.ii PASO A: la celda nombra la vuelta que impide cumplir | obtenido=True esperado=True
+   VERDE  2.a.ii PASO B: quitadas las vueltas, no queda NINGUNA vuelta puesta | obtenido=0 esperado=0
+   VERDE  2.a.ii PASO B: la operacion SUBE a cumplida | obtenido=True esperado=True
+   VERDE  2.a.ii PASO B: la cifra de cumplido SUBE contra el paso A | obtenido=True esperado=True
+   VERDE  2.a.ii CONTRAPRUEBA sobre el sujeto FABRICADO: en el paso A la operacion esta en SIN CUMPLIR | obtenido=True esperado=True
+   VERDE  2.a.ii CONTRAPRUEBA sobre el arbol de hoy: SIN la vuelta fabricada la operacion NO esta en SIN CUMPLIR | obtenido=False esperado=False
+
+MUTACION 2.b: EL CATALOGO DE UNA MESA SIN SU TABLA DE REMISION.
+   sujeto computado: la mesa OP-M-01 y su hija OP-M-01-SEXTO, que bloquea_a NO nombra
+   VERDE  2.b CON la tabla, la nomina de la mesa trae a la hija | obtenido=True esperado=True
+   VERDE  2.b SIN la tabla, la nomina de la mesa PIERDE a la hija | obtenido=False esperado=False
+   VERDE  2.b CON la tabla, la celda dice de donde sale la hija | obtenido=True esperado=True
+
+MUTACION 2.c: LA UNIDAD DE LA CELDA, FILAS CONTRA DIRECCIONES.
+   sujeto computado: alias abandonar_la_falacia_del_arreglo_rapido que resuelve a abandonar_arreglos_rapidos; origen ab_testing_optimizacion; tercero abolir_inspeccion_masiva
+   celda CON colapso: 0 de 1 direcciones con la IDA presente (2 filas de ficha colapsan en 1 direcciones); con la VUELTA presente 0 de 1; sin la IDA: ab_testing_optimizacion -> abandonar_arreglos_rapidos; regimen de vuelta PROHIBE por la ficha (verificacion 0: la vuelta no debe existir): la vuelta presente IMPIDE cumplir
+   celda SIN colapso: 0 de 2 direcciones con la IDA presente (2 filas de ficha, sin colapso); con la VUELTA presente 0 de 2; sin la IDA: ab_testing_optimizacion -> abandonar_arreglos_rapidos, ab_testing_optimizacion -> abolir_inspeccion_masiva; regimen de vuelta PROHIBE por la ficha (verificacion 0: la vuelta no debe existir): la vuelta presente IMPIDE cumplir
+   VERDE  2.c con colapso el denominador es de DIRECCIONES (1) | obtenido=True esperado=True
+   VERDE  2.c con colapso la celda NOMBRA las filas de ficha como tales | obtenido=True esperado=True
+   VERDE  2.c CONTRAPRUEBA sin colapso: dos direcciones y sin colapso | obtenido=True esperado=True
+
+PRUEBA DE MUTACION DEL PROPIO ARNES: se cambia el valor esperado de CADA
+comprobacion y se RE-EVALUA la comparacion contra el MISMO valor obtenido.
+La que siga verde con el esperado cambiado no puede fallar nunca y sale ROJA
+aqui (EJECUTOR.md regla 1, 'EL CASO ROJO SE PRUEBA POR MUTACION').
+   comprobaciones corridas: 17 | verdes: 17 | caen con el esperado mutado: 17
+
+VERDE: las 17 comprobaciones pasan, y las 17 caen al mutarles el esperado.
+EXITCODE: 0
