@@ -1,299 +1,330 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
-SESION EJECUTORA. FASE III, EJECUCION. FASE 07 ADUANA, ABIERTA Y MEDIDA POR LA
-145. RAMA pasada-unica. MODO DE EJECUCION CONTINUA (AUDITOR.md seccion 3),
-REGIMEN COMPLETO: EL MODO AUSTERO NO REVIVE. Y LO DIGO PORQUE HOY SI SE
-RESTABLECE ALGO: EN LA 144 QUEDABA UNA GUARDA EN ROJO Y ESO OBLIGABA A
-VERIFICACION COMPLETA; HOY NO QUEDA NINGUNA, ASI QUE VUELVE EL MODO CONTINUO.
+SESION EJECUTORA. FASE III, EJECUCION. FASE 07 ADUANA, ABIERTA Y A MEDIO EJECUTAR:
+OP-A-01 ESTA CABLEADA A GATE 0 Y OP-A-02 ENTERA POR DELANTE. RAMA pasada-unica.
+MODO DE EJECUCION CONTINUA (AUDITOR.md seccion 3), REGIMEN COMPLETO: EL MODO
+AUSTERO NO REVIVE. NO QUEDA NINGUNA GUARDA EN ROJO.
 
-LA 145 SE ENTREGO ENTERA Y NO TENIA NADA PENDIENTE. Empiezas por el bloque de
+LA 146 SE ENTREGO ENTERA Y NO TENIA NADA PENDIENTE. Empiezas por el bloque de
 apertura y punto.
 
 LO QUE TE DEVUELVO, Y ESTA ENTERO EN docs/loop/ACTA_AUDITOR.md, ACTA DE LA
-VUELTA 145:
+VUELTA 146:
 
-  - LA VUELTA 145 ES BUENA EN LOS DATOS Y NO SE LE MUEVE UNA CIFRA. Lo
-    recompute con instrumentos mios: censo con parser propio anclado en
-    node_id y las cuatro cifras de arista COMMIT A COMMIT leyendo blobs con
-    git cat-file, EN LOS DIEZ (los ocho de la vuelta, el del acta 144 y el
-    arbol), y los diez dan 3.853 / 3.169 / 684 y 9.234 / 9.211 / 18.445 /
-    9.914 sin una sola excepcion: tu +0 / +0 / +0 / +0 es exacto y esta vuelta
-    no escribe ni retira una sola flecha. OPERACIONES.jsonl SIN TOCAR EN TODA
-    LA VUELTA, 71 fichas antes y 71 despues, CERO fichas con el campo estado
-    movido: tu 3.e queda verificada. Ciclo de Gate 0 OK con numstat sin una
-    fila, motor 25/25, vitest 80 ficheros con 1.030 passed y 3 skipped, tsc
-    EXIT 0 con cero lineas, desfase 4 filas con las cuatro que nombras. Las
-    CUATRO guardas del cierre re-corridas por mi: cabecera 9 de 9 IDENTICAS,
-    bloque de commits 6 contra 6 IDENTICO A GIT, guarda de cifras VERDE 8 de 8
-    con su linea de COBERTURA IDENTICA CARACTER POR CARACTER (669 contra 669)
-    y las SEIS marcas de bloque UNA SOLA VEZ cada una, y la apertura sellada
-    VERDE con los diez. Y LA QUE MAS IMPORTA: verificar_mutaciones_viejas.py
-    corrida POR MI sobre el arbol que envias sale VERDE con DIECINUEVE y NO
-    MORDIO EN CERO. EL VERDE DE LA 144 NO SOBREVIVIA A SU VUELTA; EL TUYO SI.
-  - TUS TRECE DISCUTIBLES: LOS TRECE ADJUDICADOS, DOCE A TU FAVOR (uno con
-    reserva, el 9) Y UNO EN CONTRA (el 10). Y EN DOS DE ELLOS ME CORRIGES A MI
-    Y TIENES RAZON MEDIDA. Medi las seis variantes de unidad de arista yo
-    tambien y solo la UNION DE LAS DOS VISTAS LEIDAS DE VIVOS da 7.343 y
-    7.341; "con la FUENTE viva" da 7.337 y 7.336, o 7.327 y 7.325 leyendo solo
-    siguientes. TU ROTULO ES EL BUENO Y EL MIO NO LO ERA. Y la verificacion de
-    OP-A-01 tiene TRES entradas: los cinco controles mecanicos los nombra
-    OP-A-02 en su verificacion 4, asi que mi encargo te los atribuyo mal y tu
-    superconjunto de nueve es la lectura correcta.
-  - TRES MUTACIONES MIAS SOBRE TUS GUARDAS, Y LAS TRES MUERDEN. (1) Duplique
-    cada una de las tres marcas de apertura en tres copias del reporte: EXIT 1
-    en las tres, ROJO POR AMBIGUA con linea y offset. Tu 2.a es de las tres
-    parejas de verdad. (2) Anadi al reporte una cifra que cita el fichero que
-    no es UTF-8: la guarda de ayer muere con UnicodeDecodeError y la tuya sale
-    EXIT 0 publicando el nombre. Tu 4.c es real. (3) Reescribi en un temporal
-    la frase que cita el control A2.1 y corri tu vara: EXIT 1, ROJO nombrando
-    A2.1 y el literal entero, y LA VARA NO MIDE NADA CON LAS CITAS ROTAS. ES
-    LA MEJOR PIEZA DE TU VUELTA. Y tu censo de llamadas lo rehice con mi
-    propio ast: 11 / 8 / 14 / 3, los tres nombres y los catorce numeros de
-    linea IDENTICOS a los tuyos.
-  - Y AHORA LO QUE NO ESTA BIEN, Y ES UNA SOLA COSA PERO ES GRANDE. TU
-    CONCLUSION DE LA 3.c ES FALSA: LA LISTA CANONICA DE LIBROS SI EXISTE.
-    (A) SE LLAMA docs/plan/OP_S_11_MAPEO_PROPUESTO.md, 24.915 bytes, y es
-        exactamente "una lista canonica de libros con sus alias de escritura":
-        una tabla de grafia a canonica con su motivo por fila, que reduce 129
-        grafias distintas a 54 LIBROS CANONICOS. No aparecio con ninguno de
-        tus tres nombres porque no se llama asi, y nadie corrio una busqueda
-        de contenido.
-    (B) SU DUENO NO ESTA PENDIENTE: ESTA HECHO. Lei la ficha de OP-S-11
-        entera: estado HECHA, fecha_corte 2026-08-29, y su nota dice que en la
-        vuelta 136 se escribio el campo fuente de 726 nodos vivos aplicando
-        esa tabla A TODAS LAS POSICIONES del campo. Que
-        tallar_estado_de_fase.py la ponga SIN VARA ESCRITA es cierto y es OTRA
-        COSA: esa columna mide destino contra el grafo y OP-S-11 no deja
-        huella de fusion. USASTE UNA COLUMNA DE VARA DE GRAFO COMO SI FUERA UN
-        VEREDICTO DE EJECUCION, que es justo la confusion de unidades que mi
-        adjudicacion 3.9 de la 144 mandaba evitar.
-    (C) LA GUARDA DEL CRITERIO DE HECHO SALE VERDE HOY, CORRIDA POR MI:
-        python scripts/loop/verificar_fuente_canonico.py da EXIT 0 con "los
-        3169 nodos vivos traen fuente PRESENTE y con al menos una
-        declaracion, y todas sus declaraciones son canonicas de la tabla".
-        EL CAMPO ESTA NORMALIZADO Y HAY CONTRA QUE VALIDARLO.
-    (D) Y TU APOYO POSITIVO ESTA INVERTIDO. Dijiste que la grafia vieja vive
-        del lado deprecado "o sea que nada la esta normalizando". Es al reves:
-        la guarda canonica SOLO OBLIGA A LOS VIVOS, asi que una grafia vieja
-        que sobrevive UNICAMENTE del lado deprecado es la firma de una
-        normalizacion CONSUMADA. Medido por mi sobre el grafo del corte
-        (0e5e0c60, 9 ago): entonces habia DOS grafias VIVAS de Hugos y DOS de
-        Horowitz; hoy UNA y UNA.
-    EL PRERREQUISITO DE OP-A-01 ESTA CUMPLIDO Y EL BLOQUEO QUE NOMBRASTE NO
-    EXISTE. Es tu caida 4.1, vive en una CONCLUSION y por la letra afinada del
-    27 ago ACUMULA: LA RACHA DE REPORTE SUBE DE UNO A DOS. Cae DENTRO de tu
-    discutible 10, asi que NO baja el credito de la tanda, y lo digo con todas
-    sus letras porque marcaste el metodo exacto por el que fallaste. PARTE DE
-    ESTO ES MIA Y VA CON MI NOMBRE: mi encargo te cebo la respuesta negativa
-    ("SI NO LO ESTA, NO IMPROVISES") repitiendo el diagnostico de la ficha sin
-    haber abierto OP-S-11, en la misma acta en la que medi las fases con el
-    tallador (mi caida 4.4).
-  - LO QUE TRAIGO YO Y NADIE HABIA MEDIDO. (1) LAS DOS GRAFIAS VIEJAS SON UNA
-    TRUNCACION A 31 CARACTERES Y SON LAS DOS UNICAS DEL CATALOGO. Barri las 67
-    grafias distintas del campo fuente buscando parejas titulo-prefijo con el
-    mismo autor: hay EXACTAMENTE DOS, y son Hugos (31 contra 37) y Horowitz
-    (31 contra 32), las dos con CERO nodos vivos. No son variantes de cita:
-    son un recorte de campo de alguna importacion, que es lo que la propia
-    nota de OP-S-11 ya diagnosticaba, y son detectables POR COMPUTO SIN
-    NINGUNA LISTA. (2) LAS CIFRAS DE LA FICHA DE OP-A-01 CON CORTE DEL 11 AGO
-    NO ESTAN PODRIDAS. Corri mi codigo sobre el grafo de aquel corte: 3.521
-    nodos vivos REPRODUCE EXACTO, 67 nodos con mas de un libro REPRODUCE
-    EXACTO, y Hugos con DOS grafias REPRODUCE. No reproducen tres: las 70
-    declaraciones (yo mido 74), las TRES grafias de Horowitz (yo mido 2, que
-    es lo que tu dijiste) y el 23/16 contra 21/14 (yo mido 21 y 20, 11 y 6).
-    LA CAIDA DE 67 A 8 ES OBRA DE LA CAMPANA, no un error de nadie.
-  - TU PREGUNTA 1 TIENE RESPUESTA: NI SE RE-MIDE LA FICHA NI SE DEJA MUDA. No
-    tocas el texto de OP-A-01. Se anade una CORRECCION DECLARADA POR ADICION
-    con la tabla de contraste de arriba y el corte de cada cifra, por
-    EJECUTOR.md 8: una correccion que tapa lo que corrige no se puede auditar.
-  - TU PREGUNTA 2 TIENE RESPUESTA, Y SALE DEL TEXTO DE LA PROPIA FICHA: SI
-    CUENTAN. La verificacion 4 de OP-A-02 pide "los CINCO controles mecanicos
-    CORRIENDO", no instalados en una aduana, y su nota los reparte CON DUENO
-    AJENO: auto-arista y lista blanca a OP-C-04, control posicional a OP-A-01,
-    campo fuente canonico a OP-S-11, y nomina por dominio al control mecanico
-    del 13 ago. OP-A-02 NO LOS POSEE: LOS EXIGE CORRIENDO. Un control que
-    existe y muerde en Gate 0 esta corriendo, y Gate 0 es la puerta. LO UNICO
-    QUE OP-A-02 POSEE DE VERDAD ES SU PUERTA SEMANTICA, la A2.6, y eso si le
-    falta entero.
+  - LOS DATOS ESTAN LIMPIOS Y NO SE TE MUEVE UNA CIFRA DE GRAFO. Censo con
+    parser propio anclado en node_id y las cuatro cifras de arista COMMIT A
+    COMMIT con git cat-file EN LOS DIEZ: los diez dan 3.853 / 3.169 / 684 y
+    9.234 / 9.211 / 18.445 / 9.914 sin una excepcion, y cero desajustes fichero
+    contra node_id. Tu +0 / +0 / +0 / +0 es exacto. OPERACIONES.jsonl SIN TOCAR
+    EN TODA LA VUELTA, 71 fichas antes y 71 despues, CERO fichas con estado
+    movido. Ciclo de Gate 0 OK con numstat sin una fila, motor 25/25, vitest 80
+    ficheros con 1.030 passed y 3 skipped, tsc EXIT 0, desfase 4 filas con las
+    cuatro que nombras. Registros por ADICION PURA, y lo pruebo por PREFIJO y no
+    solo por numstat: el fichero viejo es prefijo exacto del nuevo en los dos.
+    Las guardas del cierre re-corridas por mi: cabecera 9 de 9 IDENTICAS,
+    commits 6 contra 6 IDENTICO A GIT, cifras VERDE 12 de 12 con tu linea de
+    COBERTURA IDENTICA CARACTER POR CARACTER (657 contra 657) y una sola vez,
+    apertura sellada VERDE con los diez, VIEJAS VERDE con VEINTE y NO MORDIO en
+    cero, y tu guarda nueva VERDE sobre tu propia pagina.
+  - CINCO MUTACIONES MIAS SOBRE TU TRABAJO, Y LAS CINCO MUERDEN. (1) Le quite la
+    linea POR CONTENIDO al barrido de la lista canonica y tu guarda cae EXIT 1
+    nombrando exactamente la pierna que falta. (2) Inyecte una frase mia dentro
+    de tu bloque CITA CONGELADA y cae nombrando la linea inventada: TU EXENCION
+    NO ES UN INTERRUPTOR, y esa es buena ingenieria. (3) La guarda sobre
+    a9b638ba:docs/loop/REPORTE.md sale ROJO con DOCE afirmaciones, las tres de
+    la caida entre ellas. (4) Le quite a la nomina la entrada de indice 3
+    (elegida por computo, salio decision_de_vender_startup) y GATE 0 SE CAYO DE
+    VERDAD, EXITCODE 1, nombrando el nodo: no es un check que imprime, es una
+    puerta que se cierra. (5) El control A2.4 en memoria con tu propio
+    overrides: sin mutar ok=True, con grafia fuera de la tabla ok=False, con
+    campo ausente ok=False, cero escrituras en disco.
+  - Y MEDI ALGO QUE NADIE HABIA MEDIDO: CORRI TU VARA VIEJA (la de 446e4aa1)
+    SOBRE EL ARBOL DE HOY Y SIGUE DICIENDO TRES. Con los tres checks ya dentro
+    de Gate 0, el instrumento de la 145 los veia como NO INSTALADO o como
+    INSTALADO SIN MUTACION. O sea que tu reparacion NO INFLA LA CIFRA: LA HACE
+    POSIBLE. Tu 3.d queda verificada y tu discutible 10 queda justificado por
+    medicion.
+  - TUS TRECE DISCUTIBLES: LOS TRECE A FAVOR, con reserva en el 3, el 5, el 8,
+    el 9 y el 12. Y EN EL 1 ME CORRIGES A MI Y TIENES RAZON MEDIDA: mi "de TRES
+    a CUATRO" no salia de ningun instrumento y ni siquiera cuadraba con mi
+    propia 3.c, que sola mueve DOS casillas. Publicaste OCHO porque es lo que
+    mide la vara, y EJECUTOR.md 2 manda. ES MI CAIDA, no tuya.
+  - Y AHORA LO QUE NO ESTA BIEN, Y SON DOS COSAS.
+    (A) EL "OCHO" DE LAS GRAFIAS DE 31 ES FALSO, Y ES CAIDA DE CIFRA PUBLICADA
+        PORQUE VIVE EN docs/plan/CORRECCIONES_A_APLICAR.md (tu 24.c) ademas de
+        en el reporte. Lo medi por TRES caminos independientes y los tres dan
+        SIETE: mi recorrido de dataset/nodos con tu mismo particionador, la
+        tabla canonica directamente (cargar_tabla, 129 grafias a 54 canonicas,
+        de las que SIETE tienen titulo de 31), y TU PROPIA SALIDA
+        SALIDA_V146_1C_CIFRAS_FICHA.txt, que lista las diez y solo siete tienen
+        vivos mayor que cero. Y TU PROPIA FRASE ENUMERA SIETE NOMBRES DEBAJO DE
+        LA PALABRA "OCHO": la cifra se contradice con su lista en el mismo
+        renglon.
+        Y HAY UNA SEGUNDA UNIDAD QUE NO USASTE Y QUE ES LA VIGENTE:
+        docs/PENDIENTES.md, DECIMA entrada (vuelta 132, corregida en la 131 y
+        re-medida en la 134), fija el detector mecanico de truncamiento en
+        "len(titulo) == 31 CON RESTO NO VACIO", y dice con todas sus letras que
+        la sola longitud fichaba un falso positivo llamado Guia de empaque para
+        transporte. Tu censo usa la sola longitud y METE A GUIA DE EMPAQUE EN LA
+        CUENTA, diciendolo entre parentesis en la misma frase. Con la unidad
+        vigente son NUEVE grafias y SEIS vivas y canonicas.
+        LA RACHA DE CIFRA PUBLICADA PASA DE CERO A UNO, y la regla dice DOS
+        TANDAS SEGUIDAS: PARADA. Y CAE FUERA DE TUS TRECE DISCUTIBLES, asi que
+        BAJA EL CREDITO DE TODA LA TANDA y ese tramo SE RELEE AL DOBLE.
+        LO QUE SI ESTA BIEN Y LO DIGO: EL HALLAZGO DE FONDO ES REAL Y VALIOSO.
+        La truncacion a 31 esta HORNEADA EN LA TABLA CANONICA y eso no lo habia
+        dicho nadie. Lo que falla es la cuenta y la unidad, no la idea.
+    (B) "EL UMBRAL DE LA COLA NO TIENE NUMERO EN NINGUNA PARTE" ES FALSO. Esta
+        escrito, tiene nombre y tiene motivo: scripts/intra_dominio.py, linea 60
+        UMBRAL_TITULO = 80 y linea 68 UMBRAL_SEMANTICO = 0.78, con doce lineas
+        de calibracion encima explicando por que bajo de 0,80 a 0,78 (dos
+        parejas ya adjudicadas que vivian en 0,7890 y 0,7887). La ficha de
+        OP-A-02 dice "el umbral de la cola es el mismo del cribado intra", y
+        intra_dominio.py ES el cribado intra. ESE FICHERO ESTABA DENTRO DEL
+        UNIVERSO DE TU BARRIDO, los 1.482 de scripts, engine y web: lo miraste y
+        no lo viste, porque tu pierna POR NOMBRE era "umbral|cola" (y el fichero
+        se llama intra_dominio.py) y tu pierna POR CONTENIDO eran TRES NOMBRES
+        DE CONSTANTE ADIVINADOS, UMBRAL_DE_LA_COLA, UMBRAL_COLA y
+        umbral_de_la_cola, ninguno de los cuales existe. LA CONSTANTE REAL SE
+        LLAMA UMBRAL_SEMANTICO.
+        ES CAIDA DE REPORTE Y ACUMULA, porque vive en la cabecera de tu PREGUNTA
+        2 y en su conclusion ("sin ese numero la puerta semantica no se puede
+        cablear"). PERO CAE DENTRO DE TU DISCUTIBLE 9, que nombra la 3.e y
+        nombra que la ausencia descansa entera en la pierna por contenido: por
+        la regla del marcado NO baja el credito de la tanda. LA RACHA DE REPORTE
+        PASA DE DOS A TRES.
+  - LA RAYA, PARA QUE LA SEPAS ANTES DE ESCRIBIR NADA. La regla de parada no
+    dice "tres acumuladas": dice TRES SEGUIDAS DE LA MISMA ESPECIE. La de la 144
+    era la cuenta de filas de una tabla; la de la 145 y la de hoy son las dos
+    UNA BUSQUEDA NEGATIVA PUBLICADA COMO HECHO. Van DOS de la misma especie.
+    UNA TERCERA BUSQUEDA NEGATIVA PUBLICADA COMO HECHO ES PARADA AUTOMATICA Y
+    SE ACABA EL BUCLE. Y una segunda caida de cifra publicada tambien lo es. NO
+    ES UNA AMENAZA: ES LA ARITMETICA, Y TE LA DOY DELANTE PARA QUE PUEDAS
+    EVITARLA. La forma de evitarla no es escribir menos: es que ninguna ausencia
+    salga de esta vuelta sin un barrido cuya pierna por contenido busque EL
+    CONCEPTO y no un nombre que te imaginaste.
+  - TUS TRES PREGUNTAS TIENEN RESPUESTA Y ESTAN EN LA 3.14, 3.15 Y 3.18 DE MI
+    ACTA. La 1: no se toca nada del dataset ni de la tabla, se corrige la cifra
+    por adicion con las DOS unidades escritas, y la pregunta de fondo queda
+    registrada para quien cierre la fase 08. La 2: el umbral existe, arriba
+    esta. La 3: LAS DOS UNIDADES, y las dos en la salida de la vara. El nueve es
+    lo DECLARADO (cada ficha declara los suyos) y el siete es lo DISTINTO (A1.1
+    con A2.3 y A1.2 con A2.4 son el mismo control con dos nombres). Ninguna es
+    falsa y publicar solo una esconde la otra.
+  - Y TU PENDIENTE DE DOCTRINA 7.1 NO ES PARADA HOY, con su frontera escrita.
+    Probe la lectura LITERAL de tu entrada 3 (buscar el titulo del segundo libro
+    como TEXTO dentro de pasos_accionables) y DISPARA EN 9 DE 9: rechazaria los
+    ocho nodos adjudicados enteros, porque ningun paso del catalogo nombra su
+    libro. TU NEGATIVA A INSTALARLA ES CORRECTA Y AHORA ESTA MEDIDA. La
+    frontera, para que no se arrastre en silencio: EL DIA QUE LA FASE 07 INTENTE
+    CERRARSE con esa mitad sin resolver, ESO SI ES PARADA de decision de
+    fundador. Hoy la fase no cierra por otra razon (A2.6), asi que la pregunta
+    no vence todavia.
 
 - TAREA 0, EL BLOQUE DE APERTURA, ANTES DE LA PRIMERA OPERACION. Va numerado
   0 porque es un sello y no un trabajo.
   (0.a) EL SELLO: el HEAD de 40 caracteres, una sola linea, en
-  docs/loop/SALIDA_V146_HEAD_APERTURA.txt, leido de git rev-parse HEAD.
+  docs/loop/SALIDA_V147_HEAD_APERTURA.txt, leido de git rev-parse HEAD.
   (0.b) LA BATERIA DEL LADO APERTURA, con el arbol LIMPIO, en este orden y una
   sola vez: EL CICLO ENTERO, QUE ES DE TRES Y NO DE UNO (python
   scripts/run_phase1.py --reaplico-curaduria, luego
   scripts/etiquetas_de_cara.py --aplicar, luego scripts/sync_assets_web.py,
   luego git diff --numstat -- dataset/ web/ engine/), el conteo del censo, el
   motor (python engine/run_all_tests.py), vitest, tsc, Y EL DESFASE DEL
-  CALIBRADO (scripts/loop/vuelta85_medir_desfase_calibrado.py WORK). LO DEL
-  CICLO DE TRES LO DIGO PORQUE ME PASO A MI HOY: corrido run_phase1.py SOLO,
-  el numstat da 72/72 en master_graph.json y parece un rojo que no existe.
+  CALIBRADO (scripts/loop/vuelta85_medir_desfase_calibrado.py WORK). Y LO DIGO
+  OTRA VEZ PORQUE ME PASO A MI HOY, DOS VECES, DESPUES DE HABERTELO AVISADO POR
+  ESCRITO: corrido run_phase1.py fuera del orden del ciclo, el chequeo de
+  gemelos canta 71 divergentes o el numstat da 72/72 en master_graph.json, y las
+  dos cosas son falsos rojos. EL CICLO ES DE TRES Y SE CIERRA EN SU ORDEN.
   (0.c) LOS DIEZ NOMBRES CANONICOS, con LADO = APERTURA, y el gemelo de CIERRE
   al final de la vuelta con los mismos diez nombres:
-  SALIDA_V146_HEAD_<LADO>.txt, SALIDA_V146_GATE0_CMD1_<LADO>.txt,
-  SALIDA_V146_CONTEO_<LADO>.txt, SALIDA_V146_MOTOR_<LADO>.txt,
-  SALIDA_V146_WEB_<LADO>.txt, SALIDA_V146_TSC_<LADO>.txt,
-  SALIDA_V146_CICLO_ETIQUETAS_<LADO>.txt, SALIDA_V146_CICLO_SYNC_<LADO>.txt,
-  SALIDA_V146_CICLO_NUMSTAT_<LADO>.txt,
-  SALIDA_V146_DESFASE_CALIBRADO_<LADO>.txt.
-  Y NINGUNA OTRA SALIDA DE LA VUELTA SE LLAMA SALIDA_V146_*_APERTURA.txt: es
-  la leccion de tu discutible 13, y esta vez la sabes de antemano.
+  SALIDA_V147_HEAD_<LADO>.txt, SALIDA_V147_GATE0_CMD1_<LADO>.txt,
+  SALIDA_V147_CONTEO_<LADO>.txt, SALIDA_V147_MOTOR_<LADO>.txt,
+  SALIDA_V147_WEB_<LADO>.txt, SALIDA_V147_TSC_<LADO>.txt,
+  SALIDA_V147_CICLO_ETIQUETAS_<LADO>.txt, SALIDA_V147_CICLO_SYNC_<LADO>.txt,
+  SALIDA_V147_CICLO_NUMSTAT_<LADO>.txt,
+  SALIDA_V147_DESFASE_CALIBRADO_<LADO>.txt.
+  Y NINGUNA OTRA SALIDA DE LA VUELTA SE LLAMA SALIDA_V147_*_APERTURA.txt.
   (0.d) LA COMPROBACION: python scripts/loop/verificar_apertura_sellada.py
-  --vuelta 146. TIENE QUE DAR VERDE EXIT 0 CON LOS DIEZ DENTRO: no hay ninguna
+  --vuelta 147. TIENE QUE DAR VERDE EXIT 0 CON LOS DIEZ DENTRO: no hay ninguna
   desviacion declarada y el bloque es HIJO DIRECTO del commit de mi acta. Si
   saliera ROJO, PARAS Y LO TRAES.
   EL BLOQUE DE APERTURA (0.a mas 0.b mas 0.c) VA EN UN SOLO COMMIT.
 
 - TAREA 4 ADELANTADA. Escribe hoy, nada mas cerrar la TAREA 0, el esqueleto de
-  docs/loop/REPORTE.md de la vuelta 146 con su cabecera vacia entre los
+  docs/loop/REPORTE.md de la vuelta 147 con su cabecera vacia entre los
   delimitadores y las secciones por tarea. LO QUE SE MIDE SE VA PEGANDO DENTRO
-  A MEDIDA QUE PASA. Y AL CIERRE, LAS CINCO COSAS:
+  A MEDIDA QUE PASA. Y AL CIERRE, LAS SEIS COSAS:
   (4.a) la bateria del lado CIERRE con los mismos diez nombres, y
-  SALIDA_V146_HEAD_CIERRE.txt sellado TRAS la ultima operacion y ANTES de
+  SALIDA_V147_HEAD_CIERRE.txt sellado TRAS la ultima operacion y ANTES de
   escribir el hash en el reporte.
-  (4.b) tallar_cabecera_reporte.py --vuelta 146 --fase04 corrido, SU TABLA
+  (4.b) tallar_cabecera_reporte.py --vuelta 147 --fase04 corrido, SU TABLA
   PEGADA ENTERA entre las dos marcas, mas --comparar docs/loop/REPORTE.md
   dando CABECERA IDENTICA AL TALLADOR, mas --comparar-commits contra el HEAD
   sellado.
   (4.c) verificar_cifras_del_reporte.py --reporte docs/loop/REPORTE.md corrido
   SOBRE TU PROPIO REPORTE antes de commitearlo, con su linea de COBERTURA
   pegada UNA SOLA VEZ, y corrido UNA SEGUNDA VEZ despues de pegarla para
-  comprobar que reproduce. LA PAREJA DE MARCAS DE COBERTURA APARECE
-  EXACTAMENTE UNA VEZ, como en la 145.
-  (4.d) DESPUES de escribir el reporte y ANTES del commit final, RE-CORRE
+  comprobar que reproduce.
+  (4.d) verificar_ausencias_del_reporte.py, YA CON EL VOCABULARIO AMPLIADO DE
+  TU TAREA 2, corrida SOBRE TU PROPIO REPORTE y pegada su COBERTURA DE
+  AUSENCIAS. VERDE O NO SE COMMITEA. Y EL REMEDIO DE UN ROJO ES CORRER EL
+  BARRIDO, NUNCA REESCRIBIR LA FRASE HASTA QUE LA GUARDA NO ENCUENTRE NADA:
+  eso es el ramal (xxi) del acta 136 y lo tienes escrito en tu propio docstring.
+  (4.e) DESPUES de escribir el reporte y ANTES del commit final, RE-CORRE
   python scripts/loop/verificar_mutaciones_viejas.py Y PEGA SU SALIDA. VERDE
-  con NO MORDIO en cero SOBRE EL FICHERO QUE VAS A COMMITEAR. Si sale rojo, ES
-  ROJO DE LA VUELTA y lo dices con su nombre.
-  (4.e) Y EL PASO NUEVO, QUE ES TU PROPIA DOCTRINA DEL DISCUTIBLE 13
-  ASCENDIDA A REGLA: RE-CORRE TAMBIEN verificar_apertura_sellada.py --vuelta
-  146 DESPUES DE COMMITEAR EL REPORTE, porque el estado al cierre se mide al
-  cierre. Pega su salida. Si sale rojo, lo arreglas por el lado de TU
-  artefacto y nunca ensanchando la guarda.
+  con NO MORDIO en cero SOBRE EL FICHERO QUE VAS A COMMITEAR.
+  (4.f) RE-CORRE TAMBIEN verificar_apertura_sellada.py --vuelta 147 DESPUES DE
+  COMMITEAR EL REPORTE, que es la regla que tu 4.e de la 146 dejo puesta. Si
+  sale rojo, lo arreglas por el lado de TU artefacto y nunca ensanchando la
+  guarda.
   SI LA VUELTA SE TE ACABA, EL REPORTE Y EL BLOQUE DE CIERRE SON LO ULTIMO QUE
   SE SACRIFICA, NO LO PRIMERO. Antes de eso se parte la TAREA 3.
 
 - TAREA 1, LOS REGISTROS.
-  (1.a) R.27 EN docs/PENDIENTES.md, POR ADICION, como hiciste con R.26: las
-  QUINCE adjudicaciones de mi acta 145 (3.1 a 3.15, con el 3.14 y el 3.15 como
-  respuestas a tus dos preguntas), TU caida (4.1, de reporte, QUE ACUMULA, con
-  el motivo escrito: vive en una conclusion), LA DE LA CASA (4.2, la regla 9
-  de EJECUTOR.md sin guarda que la haga morder) y MIS DOS (4.3 y 4.4, las dos
-  de encargo). Y LAS DOS RACHAS CON SU ESTADO NUEVO Y SU MOTIVO: cifra
-  publicada SIGUE EN CERO, REPORTE SUBE DE UNO A DOS, y que por AUDITOR.md 1.2
-  eso obliga a la escalada, que es tu TAREA 2. Numstat con anadidas y
-  borradas.
-  (1.b) LA CORRECCION 23, POR ADICION Y EN
-  docs/plan/CORRECCIONES_A_APLICAR.md: UNA AFIRMACION DE AUSENCIA SE PRUEBA
-  POR BARRIDO EXHAUSTIVO COMPUTADO O NO SE PUBLICA. Es mi adjudicacion 3.10 y
-  mi caida de la casa 4.2. Registra CON TU PROPIA MEDICION, no copiando la
-  mia: que los tres nombres que probaste no existen, que
-  docs/plan/OP_S_11_MAPEO_PROPUESTO.md si existe y que contiene la tabla de
-  grafias, que OP-S-11 tiene estado HECHA con su fecha_corte, y que
-  verificar_fuente_canonico.py sale VERDE hoy sobre los 3.169 vivos. Si tu
-  medicion discrepa de la mia, LO DECLARAS.
-  (1.c) LA CORRECCION 24, POR ADICION: LAS CIFRAS DE LA FICHA DE OP-A-01
-  CONTRA SU CORTE. Es mi adjudicacion 3.14 y la respuesta a tu PREGUNTA 1.
-  Deja escrito, medido con tu instrumento sobre el grafo del corte (0e5e0c60,
-  el ultimo commit del master_graph anterior al 12 ago): cuales de las seis
-  cifras de la ficha reproducen y cuales no, cada una con su corte y su
-  unidad. NO TOCAS EL TEXTO DE LA FICHA. Y deja escrito tambien lo de la
-  truncacion a 31 caracteres, con tu propio barrido de las parejas
-  titulo-prefijo del mismo autor.
-  NO TOQUES docs/plan/OPERACIONES.jsonl EN ESTA TAREA.
+  (1.a) R.28 EN docs/PENDIENTES.md, POR ADICION, como R.27: las DIECIOCHO
+  adjudicaciones de mi acta 146 (3.1 a 3.18, con la 3.14, la 3.15 y la 3.18 como
+  respuestas a tus tres preguntas), TUS DOS CAIDAS (4.1 de CIFRA PUBLICADA, que
+  ACUMULA, y 4.2 de REPORTE, que ACUMULA, cada una con su motivo y con si cae
+  dentro o fuera de tus discutibles), LAS DOS DE LA CASA (4.3.a el vocabulario
+  con agujero medido, 4.3.b el sello que certifica una pierna de nombres
+  adivinados) y MIS DOS (4.4.a de encargo, 4.4.b de procedimiento). Y LAS DOS
+  RACHAS CON SU ESTADO NUEVO Y SU MOTIVO: cifra publicada DE CERO A UNO, reporte
+  DE DOS A TRES con la misma especie corriendo en DOS, y por que eso no es
+  parada todavia. Numstat con anadidas y borradas.
+  (1.b) LA CORRECCION 25, POR ADICION Y EN docs/plan/CORRECCIONES_A_APLICAR.md:
+  LA CIFRA DE LAS GRAFIAS DE 31 CARACTERES, CORREGIDA. NO BORRAS NI UNA LETRA DE
+  LA 24.c: se anade debajo, por EJECUTOR.md 8, porque una correccion que tapa lo
+  que corrige no se puede auditar. Y LA MIDES TU, NO COPIAS LA MIA. Deja escrito:
+  cuantas grafias de titulo exactamente 31 hay por LA SOLA LONGITUD y cuantas de
+  ellas son vivas y canonicas; cuantas por EL DETECTOR VIGENTE (31 CON RESTO NO
+  VACIO, docs/PENDIENTES.md decima entrada, vuelta 132, corregido en la 131 y
+  re-medido en la 134) y cuantas de ellas son vivas y canonicas; la lista
+  nominal en las dos unidades; y CUAL ES LA UNIDAD QUE GOBIERNA Y POR QUE, con
+  la cita del detector delante. Si tu medicion discrepa de la mia, LO DECLARAS.
+  Y deja escrito que la enumeracion de la 24.c ya listaba siete nombres.
+  (1.c) LA CORRECCION 26, POR ADICION: EL UMBRAL DE LA COLA EXISTE. Con su
+  fichero, sus dos lineas, sus dos constantes y su motivo, LEIDO POR TI del
+  codigo y no de mi acta. Y con la frase de tu PREGUNTA 2 CITADA VERBATIM y no
+  escondida, en un bloque CITA CONGELADA con su ref, que es el patron que tu
+  mismo montaste. Escribe tambien POR QUE tu barrido no lo hallo: la pierna por
+  nombre y los tres nombres de constante adivinados. ESO ES LO QUE LA TAREA 2
+  VIENE A IMPEDIR.
+  NO TOQUES docs/plan/OPERACIONES.jsonl EN ESTA TAREA. NO TOQUES LA TABLA
+  docs/plan/OP_S_11_MAPEO_PROPUESTO.md NI UNA GRAFIA DEL CAMPO fuente.
 
-- TAREA 2, LA ESCALADA. BLOQUEANTE Y ANTES DE TOCAR NINGUNA OPERACION DEL
-  PLAN. NO ES UNA REPARACION MAS: ES LA ESCALADA AUTOMATICA DE AUDITOR.md 1.2,
-  disparada porque la racha de reporte llego a DOS, y la encargo yo en el
-  mismo acto en que la declaro, que es lo que esa regla exige. La escalada del
-  26 ago (toda tabla y toda cifra contada de su fichero) YA ESTA CONSTRUIDA:
-  es verificar_cifras_del_reporte.py y hoy sale verde con 8 de 8. NO CUBRE LA
-  ESPECIE DE HOY, porque una AUSENCIA no tiene fichero que contar. Esto lo
-  extiende a esa especie, y no es doctrina nueva: EJECUTOR.md 9 ya dice que
-  una busqueda negativa no se puede citar, y lo que falta es la guarda que lo
-  haga morder.
-  (2.a) EL INSTRUMENTO. Un script propio en scripts/loop/ que, dado un
-  reporte, encuentre sus AFIRMACIONES DE AUSENCIA (el vocabulario lo eliges tu
-  y lo declaras: "no existe", "hallados: NINGUNO", "no esta en", "NO
-  INSTALADO", "PRERREQUISITO CUMPLIDO: NO" y las que anadas) y exija que cada
-  una venga respaldada por un BARRIDO EXHAUSTIVO COMPUTADO citado en una
-  salida sellada, no por una lista de rutas candidatas escritas a mano. QUE
-  CUENTA COMO BARRIDO EXHAUSTIVO, escrito en el docstring y no adivinado: un
-  recorrido del universo entero de donde la cosa podria estar (git ls-files
-  para ficheros, mas una busqueda POR CONTENIDO, no solo por nombre), con su
-  universo y su cardinal publicados. Una ausencia sin eso es ROJO.
-  (2.b) EL CASO ROJO, POR MUTACION Y SOBRE SUJETO CONGELADO, Y ESTE ES EL QUE
-  MANDA: la guarda corrida sobre el REPORTE.md DE LA VUELTA 145 COMMITEADO
-  (congelalo por ref de git, a9b638ba:docs/loop/REPORTE.md, que es tu propio
-  patron del discutible 1) TIENE QUE SALIR ROJO Y TIENE QUE NOMBRAR LA
-  AFIRMACION DE LA 3.c. Si sale verde sobre ese sujeto, la guarda no sirve y
-  lo dices en vez de aflojar el vocabulario hasta que pase.
-  (2.c) EL CASO VERDE: la misma guarda sobre una ausencia respaldada por un
-  barrido exhaustivo de verdad sale VERDE. Sin este, (2.b) solo prueba que el
-  instrumento sabe decir rojo.
-  (2.d) LA FRONTERA, ESCRITA EN EL DOCSTRING: esta guarda NO decide si la cosa
-  existe; decide si la AFIRMACION esta respaldada. Y no entra en ninguna
-  columna de tallar_estado_de_fase.py, por la misma razon de unidades de mi
-  adjudicacion 3.9 de la 144.
-  (2.e) Y ENTRA EN VIEJAS, por la regla, con sujeto congelado.
+- TAREA 2, LA ESCALADA DE LA ESCALADA. BLOQUEANTE Y ANTES DE TOCAR NINGUNA
+  OPERACION DEL PLAN. Es la escalada automatica de AUDITOR.md 1.2, disparada
+  porque la racha de reporte sigue en dos o mas, y la encargo yo en el mismo
+  acto en que la declaro. TU GUARDA DE LA 146 ESTA BIEN CONSTRUIDA Y MUERDE: lo
+  probe con mutaciones mias. LO QUE PASA ES QUE NO ALCANZA, y lo se porque la
+  caida de hoy le paso por delante. Esto la extiende, y no es doctrina nueva: es
+  la CORRECCION 23 aplicada al instrumento que la hace cumplir.
+  (2.a) EL VOCABULARIO, AMPLIADO CON MEDICION Y NO CON OCURRENCIAS. Lo medi yo
+  reusando tu propio dividir_frases y tu propio recorte sobre tu reporte de la
+  146: DOCE frases disparan tu vocabulario de doce, y SEIS MAS son afirmaciones
+  de ausencia que se te escapan enteras. Corrida tu misma guarda con el
+  vocabulario ampliado, salen CINCO EN ROJO sin barrido en su ventana y la
+  cobertura pasa de 3 vistas a 8 vistas. La familia que se escapa: "no tiene",
+  "no tienen", "no da un numero", "no halla ningun", "no halla ninguna", "en
+  ninguna parte", "no trae ningun", "no trae ninguna". LA AMPLIAS, LA DECLARAS
+  ENTERA EN EL DOCSTRING como hiciste con las doce, Y LO REPRODUCES TU: no
+  copies mi cifra, corre tu la medicion sobre a9b638ba y sobre el reporte de la
+  146 congelado por ref, y publica cuantas ve el vocabulario viejo y cuantas el
+  nuevo. SI TU MEDICION DISCREPA DE LA MIA, LO DECLARAS.
+  (2.b) LA PIERNA POR CONTENIDO NO PUEDE SER UNA LISTA DE NOMBRES ADIVINADOS, Y
+  ESTE ES EL CORAZON DE LA TAREA. Tu sello tiene cinco piezas y las cinco
+  estaban en el barrido del umbral, y aun asi el barrido fallo, porque sus
+  patrones de contenido eran tres identificadores que nadie habia visto nunca
+  (UMBRAL_DE_LA_COLA, UMBRAL_COLA, umbral_de_la_cola). UN SELLO QUE CERTIFICA
+  ESO CERTIFICA EL METODO EXACTO QUE LA CORRECCION 23 PROHIBE, un nivel mas
+  abajo. El criterio lo eliges tu y lo declaras en el docstring; lo que tiene
+  que conseguir esta escrito y no es negociable: QUE UN BARRIDO CUYA PIERNA POR
+  CONTENIDO SOLO BUSQUE IDENTIFICADORES QUE NO EXISTEN EN EL UNIVERSO NO PUEDA
+  RESPALDAR UNA AUSENCIA. Una via posible, y no te la impongo: exigir que al
+  menos un patron de contenido sea VOCABULARIO DE LA PREGUNTA y no un
+  identificador, o publicar en el sello cuantos de los patrones de contenido
+  tienen CERO apariciones en todo el universo, que es la senal de que se busco
+  algo que nadie escribio. Elijas lo que elijas, SE PUBLICA EN EL SELLO Y SE
+  DECLARA.
+  (2.c) EL CASO ROJO, POR MUTACION Y SOBRE SUJETO CONGELADO, Y ESTE ES EL QUE
+  MANDA: la guarda nueva corrida sobre docs/loop/SALIDA_V146_3E_BARRIDO_UMBRAL.txt
+  (congelalo por ref de git, es de esta rama y ya esta commiteado) TIENE QUE
+  SALIR ROJO. Y la guarda de ausencias con el vocabulario ampliado, corrida
+  sobre el REPORTE.md de la vuelta 146 congelado por ref, TIENE QUE SALIR ROJO
+  NOMBRANDO LA FRASE DE LA PREGUNTA 2. Si sale verde sobre esos sujetos, la
+  ampliacion no sirve y LO DICES, en vez de aflojarla hasta que pase.
+  (2.d) EL CASO VERDE: un barrido cuya pierna por contenido busca el concepto
+  y no un nombre inventado sale VERDE. Constrúyelo con el caso real que tienes
+  a mano: el barrido del umbral REHECHO, buscando "umbral" y "similitud" como
+  contenido en vez de tres constantes, TIENE QUE HALLAR scripts/intra_dominio.py.
+  Sin este, (2.c) solo prueba que el instrumento sabe decir rojo.
+  (2.e) LA FRONTERA, ESCRITA EN EL DOCSTRING, como la de la 146: esta guarda no
+  decide si la cosa existe, decide si la AFIRMACION esta respaldada POR UN
+  BARRIDO QUE PUDO HABERLA HALLADO. Y no entra en ninguna columna de
+  tallar_estado_de_fase.py, por la misma razon de unidades de siempre.
+  (2.f) Y ENTRA EN VIEJAS, por la regla, con sujeto congelado.
   AL TERMINAR LA TAREA 2: el ciclo de Gate 0 con las suites detras, y la
   bateria VIEJAS corrida y VERDE. Si no sale verde aqui, no pasas a la 3.
 
-- TAREA 3, EL TRABAJO: LA FASE 07 SE EJECUTA. NADA DE ESTO ANTES DE QUE LA
-  TAREA 2 ESTE VERDE.
-  (3.a) LA 3.c DE LA 145, RELEIDA AL DOBLE, que es lo que toda caida de
-  reporte dispara. RE-MIDE EL PRERREQUISITO DE OP-A-01 CON EL BARRIDO BUENO,
-  el de tu TAREA 2, y no con tres nombres de fichero. Corre
-  verificar_fuente_canonico.py tu mismo y pega su salida. SI SIGUE VERDE, EL
-  PRERREQUISITO ESTA CUMPLIDO Y LO DECLARAS ASI, con la cita de la ficha de
-  OP-S-11 (estado, fecha_corte y la lista) delante. Si te saliera rojo, ESO SI
-  ES PARADA y lo traes.
-  (3.b) EJECUTA OP-A-01, y solo ella. Su verificacion tiene TRES entradas y
-  esas tres son el alcance, ni una mas: (1) todo nodo que entre declarando mas
-  de una fuente pasa por la comprobacion posicional, (2) el campo fuente se
-  valida contra la lista canonica, que ya existe, y (3) Gate 0 rechaza un nodo
-  cuyo segundo libro no aparece en ningun paso. CON SIMULACION PREVIA SOBRE
-  COPIA EN MEMORIA, CASO POSITIVO Y CASO ROJO POR MUTACION SOBRE UNA VARIABLE
-  QUE EL CODIGO COMPUTE, nunca sobre un literal (EJECUTOR.md 1). Los ocho
-  nodos vivos que hoy declaran mas de una fuente son tu caso positivo natural
-  y los mides antes y despues.
-  (3.c) CABLEA A GATE 0 LA GUARDA CANONICA QUE YA EXISTE Y YA MUERDE.
-  verificar_fuente_canonico.py esta escrita, es el criterio de HECHO de la
-  fase 08 y sale verde, pero NO corre dentro de Gate 0, o sea que hoy nada
-  impide que entre manana un nodo con una grafia fuera de la tabla. Eso es el
-  control A2.4 de tu propia vara. Cableado, tu vara tiene que pasar de TRES a
-  CUATRO instalados y mordiendo, y ESA es la cifra que publicas. Con su
-  mutacion: un nodo de prueba con grafia fuera de la tabla tiene que tumbar
-  Gate 0 sobre copia en memoria, y dataset/ sin tocar antes ni despues.
-  (3.d) LA VARA DE LA FASE 07, RE-CORRIDA AL CIERRE, con su recuento nuevo. Y
-  SU RESERVA ATENDIDA, que es mi adjudicacion 3.9: un NO INSTALADO sigue
-  siendo una busqueda negativa, asi que los controles que sigas declarando NO
-  INSTALADOS pasan por la guarda de tu TAREA 2 como cualquier otra ausencia.
-  (3.e) LA PUERTA SEMANTICA DE OP-A-02 (su A2.6) NO SE EJECUTA EN ESTA VUELTA.
-  Es lo unico que OP-A-02 posee de verdad, es la pieza grande de la fase, y
-  quiero la 146 con la escalada dentro y OP-A-01 cerrada antes de abrirla. LO
-  QUE SI HACES: dejarla ESCRITA Y ACOTADA en el reporte, con el punto de
-  insercion nombrado y el umbral de la cola citado de su ficha.
-  (3.f) LA TRUNCACION A 31 CARACTERES, MEDIDA Y DECLARADA, NO RESUELTA. Mide
-  tu mismo las parejas titulo-prefijo con el mismo autor sobre las grafias del
-  campo fuente y publica cuantas hay, con cuantos nodos vivos y deprecados
-  cada una. NO LAS TOQUES: el verificacion 2 de OP-S-11 dice "ninguna grafia
-  truncada sobrevive" y no se cumple si se cuentan los deprecados, aunque si
-  se cumple sobre los vivos, que es el alcance de su guarda. ESO ES UNA
-  PREGUNTA PARA MI, NO UNA OPERACION PARA TI: la mides, la dices y la dejas.
-  (3.g) SI UNA ESCRITURA O UNA RETIRADA TOCA UNA ARISTA QUE NINGUNA OPERACION
+- TAREA 3, EL TRABAJO. NADA DE ESTO ANTES DE QUE LA TAREA 2 ESTE VERDE.
+  (3.a) LA 3.f DE LA 146, RELEIDA AL DOBLE, que es lo que obliga una caida
+  FUERA de lo marcado, y ademas es de cifra publicada. NO ES REPETIR LA MISMA
+  CUENTA: es medir la truncacion CON LAS DOS UNIDADES, la sola longitud y el
+  detector vigente, cada una con su nomina completa, y decir cual gobierna con
+  la cita del registro delante. Esa medicion es la que alimenta la CORRECCION
+  25. NO TOCAS NI UNA GRAFIA.
+  (3.b) LA VARA DE LA FASE 07, PARTIDA EN SUS DOS UNIDADES. Publica las DOS
+  cifras, la DECLARADA (nueve, porque cada ficha declara los suyos) y la
+  DISTINTA (siete, con las dos parejas nombradas: A1.1 con A2.3 y A1.2 con
+  A2.4), las dos computadas de la tabla y ninguna tecleada. Es mi adjudicacion
+  3.18 y la respuesta a tu PREGUNTA 3.
+  (3.c) EL ROTULO HONESTO DE A1.3. Un control instalado en su mitad mecanica no
+  puede publicarse con el mismo rotulo que uno entero: la vara dice INSTALADO EN
+  SU MITAD MECANICA y el recuento lo separa. Es tu propio discutible 3, que
+  tenias razon en temer.
+  (3.d) LA GUARDA DE LA NOMINA, que es tu discutible 5 convertido en codigo.
+  "Re-sellarla es re-adjudicar" es hoy una REGLA SIN GUARDA, o sea la misma
+  especie que la caida de la casa 4.2 de la 145: nada impide que una vuelta
+  futura regenere dataset/metadata/aduana_fuente_multiple.json para hacer callar
+  a Gate 0 y que el numstat lo tape. Escribe la guarda que lo impide, con su
+  caso rojo por mutacion sobre variable computada y con dataset/ identico antes
+  y despues. El criterio lo eliges tu y lo declaras.
+  (3.e) CABLEA A2.6, LA PUERTA SEMANTICA DE OP-A-02. Es la pieza grande de la
+  fase y ya no hay nada que la bloquee: el umbral tiene numero
+  (scripts/intra_dominio.py, UMBRAL_SEMANTICO y UMBRAL_TITULO), el punto de
+  insercion lo dejaste nombrado tu mismo en la 3.e de la 146
+  (scripts/integrar_packs.py, paso_a_integrar_nodos_y_puentes, en el
+  shutil.copy2 que copia cada nodo a dataset/nodos/), y el mecanismo esta citado
+  de su ficha: correr el indice contra SU DOMINIO Y EL NUCLEO, y si algun vecino
+  supera el umbral, LA INSERCION SE BLOQUEA hasta que quien inserta escriba el
+  veredicto continua-o-repite CITANDO EL ID DEL VECINO. NUNCA BLOQUEA POR
+  PARECIDO: SOLO POR VEREDICTO AUSENTE, y bajar el umbral no es una salida.
+  CON SIMULACION PREVIA SOBRE COPIA EN MEMORIA, CASO POSITIVO Y CASO ROJO POR
+  MUTACION SOBRE UNA VARIABLE QUE EL CODIGO COMPUTE, nunca sobre un literal
+  (EJECUTOR.md 1): un nodo de prueba que se parezca por encima del umbral a uno
+  existente NO PUEDE ENTRAR sin veredicto, y la prueba se cae si entra. Y
+  dataset/ sin tocar antes ni despues, comprobado por el propio arnes con git
+  status --porcelain a los dos lados.
+  SI REUSAS EL INDICE QUE YA EXISTE EN VEZ DE ESCRIBIR OTRO, MEJOR, Y LO DICES:
+  dos versiones de la misma comprobacion son la averia de los dos master_graph
+  que el chequeo de gemelos vino a curar, y tu 3.c de la 146 lo hizo bien.
+  SI EL TEXTO DE LA FICHA NO TE ALCANZA PARA CABLEARLA SIN DECIDIR, PARAS ESA Y
+  LA TRAES: es AUDITOR.md 3 y no es una derrota, es el procedimiento.
+  (3.f) SI UNA ESCRITURA O UNA RETIRADA TOCA UNA ARISTA QUE NINGUNA OPERACION
   DEL PLAN PROPONE NI PROHIBE, PARAS ESA Y LA TRAES. Sigue viva.
-  EL CAMPO estado SIGUE SIN TOCARSE (actas 139 a 145) SALVO para OP-A-01 si la
-  cierras, que es la unica ficha que esta vuelta puede mover y solo por
-  haberla ejecutado con su criterio de HECHO cumplido. El pase del par 1190 a
-  fuera de congelados sigue SIN aplicarse. OP-S-12 SIGUE AL FINAL DE LA PASADA
-  ENTERA, por la atadura 2 del indice.
+  EL CAMPO estado SIGUE SIN TOCARSE (actas 139 a 146) SALVO para OP-A-02 si la
+  cierras entera, y OP-A-01 SIGUE EN LISTA: su entrada 3 esta instalada en su
+  mitad mecanica y su otra mitad es pendiente de doctrina, con la frontera que
+  te escribi arriba. El pase del par 1190 a fuera de congelados sigue SIN
+  aplicarse. OP-S-12 SIGUE AL FINAL DE LA PASADA ENTERA, por la atadura 2 del
+  indice.
 
-SI LAS TAREAS NO CABEN CON SUS GUARDAS COMPLETAS, PARTE POR LA TAREA 3 Y NO
-POR LAS GUARDAS NI POR EL CIERRE: entrega la 0, la 4, la 1 y la 2 enteras, y
-de la 3 lo que alcance en su orden (3.a antes que 3.b, y la 3.b antes que la
-3.c), diciendo CUAL no hiciste y por que. LA TAREA 2 ES BLOQUEANTE Y NO SE
-PARTE: es la escalada, y su falta es una caida del auditor, no tuya. LA TAREA
-4 NO SE PARTE TAMPOCO, Y SUS PUNTOS 4.d Y 4.e MENOS QUE NINGUNO.
+SI LAS TAREAS NO CABEN CON SUS GUARDAS COMPLETAS, PARTE POR LA TAREA 3 Y NO POR
+LAS GUARDAS NI POR EL CIERRE: entrega la 0, la 4, la 1 y la 2 enteras, y de la 3
+lo que alcance en su orden (3.a antes que 3.b, y la 3.e la ultima), diciendo
+CUAL no hiciste y por que. LA TAREA 2 ES BLOQUEANTE Y NO SE PARTE: es la
+escalada, y su falta es una caida del auditor, no tuya. LA TAREA 4 NO SE PARTE
+TAMPOCO, Y SUS PUNTOS 4.d, 4.e Y 4.f MENOS QUE NINGUNO.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
