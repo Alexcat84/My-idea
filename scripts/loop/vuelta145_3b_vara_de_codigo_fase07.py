@@ -99,6 +99,22 @@ CONTROLES = [
         "frase": "Gate 0 rechaza un nodo cuyo segundo libro no aparece en ningun paso",
         "sondas": [("scripts/run_phase1.py", "segundo libro")],
         "mutacion": "aduana_segundo_libro",
+        # EL ROTULO HONESTO (vuelta 147, TAREA 3.c; adjudicacion 3.17 del acta
+        # 146, y discutible 3 del reporte de la 146, que temia justo esto). LO
+        # QUE ESTA INSTALADO ES LA MITAD MECANICA: Gate 0 rechaza el nodo cuyo
+        # segundo libro no esta en la nomina adjudicada. LA OTRA MITAD, la
+        # lectura semantica de si ese libro aparece de verdad en algun paso
+        # accionable, NO esta instalada, y esta medido que no puede instalarse
+        # tal como esta escrita: la lectura LITERAL de esa entrada dispara en 9
+        # de 9 y rechazaria los ocho nodos adjudicados enteros, porque ningun
+        # paso del catalogo nombra su libro (medicion del auditor, acta 146).
+        # UN CONTROL INSTALADO A MEDIAS NO SE PUBLICA CON EL MISMO ROTULO QUE
+        # UNO ENTERO, por la misma razon de unidades de la adjudicacion 3.9 del
+        # acta 144 y de la CORRECCION 18.
+        "mitad_mecanica": "la mitad mecanica (el segundo libro contra la nomina adjudicada) "
+                          "esta instalada y muerde; la mitad semantica (que ese libro "
+                          "aparezca en algun paso accionable) NO lo esta, y su lectura "
+                          "literal dispara en 9 de 9",
     },
     {
         "id": "A2.1",
@@ -134,6 +150,13 @@ CONTROLES = [
         # A1.1, que es el control de verdad.
         "sondas": [("scripts/run_phase1.py", "comprobacion posicional")],
         "mutacion": "aduana_posicional",
+        # LA UNIDAD DISTINTA (vuelta 147, TAREA 3.b; adjudicacion 3.18 del acta
+        # 146). A2.3 Y A1.1 SON EL MISMO CONTROL con dos nombres, y hasta hoy
+        # eso vivia SOLO en el comentario de arriba: el recuento los contaba por
+        # separado sin decir en ningun sitio computable que eran uno. Este campo
+        # lo hace COMPUTABLE, para que la vara pueda publicar LAS DOS unidades
+        # (la DECLARADA, nueve, y la DISTINTA, siete) sin teclear ninguna.
+        "mismo_control_que": "A1.1",
     },
     {
         "id": "A2.4",
@@ -149,6 +172,9 @@ CONTROLES = [
         # OP-S-11. Cableado a Gate 0 en la vuelta 146, TAREA 3.c.
         "sondas": [("scripts/run_phase1.py", "resuelve contra la lista CANONICA de libros")],
         "mutacion": "aduana_canonico",
+        # LA UNIDAD DISTINTA (vuelta 147, TAREA 3.b): A2.4 Y A1.2 SON EL MISMO
+        # CONTROL, el campo fuente canonico. Mismo motivo que el de A2.3.
+        "mismo_control_que": "A1.2",
     },
     {
         "id": "A2.5",
@@ -164,9 +190,21 @@ CONTROLES = [
         "nombre": "BLOQUEO POR VEREDICTO AUSENTE, la puerta semantica",
         "frase": "la insercion se desbloquea con el veredicto escrito, NO con el parecido "
                  "bajado: bajar el umbral no es una salida",
-        "sondas": [("scripts/run_phase1.py", "veredicto continua-o-repite"),
-                   ("engine/plan_readiness.py", "veredicto continua-o-repite")],
-        "mutacion": "no_instalado",
+        # SONDA REAPUNTADA EN LA VUELTA 147 (TAREA 3.e). LA VIEJA, QUE NO SE
+        # BORRA, ERA: ("scripts/run_phase1.py", "veredicto continua-o-repite") y
+        # ("engine/plan_readiness.py", "veredicto continua-o-repite"), DOS RUTAS
+        # ELEGIDAS CUANDO EL CONTROL NO EXISTIA EN NINGUNA PARTE y por lo tanto
+        # adivinadas: es el metodo que la CORRECCION 23 prohibe y que la
+        # ESCALADA de la TAREA 2 de esta vuelta acaba de cazar un nivel mas
+        # abajo. El control existe desde hoy y NO vive en ninguna de las dos:
+        # vive donde la 3.e de la 146 dejo nombrado el punto de insercion,
+        # `scripts/integrar_packs.py`, en el paso que copia cada nodo a
+        # dataset/nodos/, y su criterio entero vive en
+        # `scripts/loop/aduana_semantica.py`. La sonda mira LO QUE EL CONTROL
+        # ES, no un nombre que alguien se imagino.
+        "sondas": [("scripts/integrar_packs.py", "ADUANA SEMANTICA (OP-A-02, A2.6)"),
+                   ("scripts/loop/aduana_semantica.py", "LA INSERCION SE BLOQUEA")],
+        "mutacion": "aduana_semantica",
     },
 ]
 
@@ -306,6 +344,27 @@ def mut_no_instalado():
     return False, False, "el control no esta instalado: no hay nada que mutar"
 
 
+def mut_aduana_semantica():
+    """LA MUTACION DE LA PUERTA SEMANTICA A2.6 (vuelta 147, TAREA 3.e). NO SE
+    REIMPLEMENTA AQUI: se llama al arnes que ya la prueba,
+    `scripts/loop/vuelta147_3e_simular_a26.py`, que elige sus sujetos POR
+    COMPUTO (la pareja real de mayor coseno de su dominio, y un clon con su
+    mismo vector), corre `evaluar` DE VERDAD sobre copia en memoria y comprueba
+    `git status --porcelain -- dataset/` a los dos lados. Dos versiones de la
+    misma mutacion serian dos varas midiendo cosas distintas con el mismo
+    nombre."""
+    import subprocess
+    import sys as _sys
+    r = subprocess.run([_sys.executable,
+                        os.path.join(RAIZ, "scripts", "loop", "vuelta147_3e_simular_a26.py")],
+                       cwd=RAIZ, capture_output=True)
+    sal = r.stdout.decode("utf-8", "replace")
+    linea = next((l for l in sal.splitlines() if l.startswith("CASOS QUE MUERDEN:")), "")
+    # EL VEREDICTO SALE DE LEER LA SALIDA REAL DEL PROCESO, nunca de comparar un
+    # literal consigo mismo (`EJECUTOR.md` 1, caida 2 de la vuelta 89).
+    return True, (r.returncode == 0), (linea.strip() or "el arnes no imprimio su recuento")
+
+
 # --- LAS TRES MUTACIONES DE LA ADUANA (vuelta 146, TAREAS 3.b y 3.c) ---
 # NO SE REIMPLEMENTAN AQUI: se llaman las del arnes que ya las prueba,
 # `scripts/loop/vuelta146_3c_mutacion_aduana.py`, que corre `step7_validate` DE
@@ -364,7 +423,26 @@ MUTACIONES = {
     "aduana_canonico": mut_aduana_canonico,
     "aduana_segundo_libro": mut_aduana_segundo_libro,
     "no_instalado": mut_no_instalado,
+    # LA PUERTA SEMANTICA, ANADIDA EN LA VUELTA 147 (TAREA 3.e).
+    "aduana_semantica": mut_aduana_semantica,
 }
+
+
+def rotulo_de(fila):
+    """EL ROTULO DE UN CONTROL, EN UNA SOLA FUNCION (vuelta 147, TAREA 3.c;
+    adjudicacion 3.17 del acta 146). Un control cuya tabla lo declara instalado
+    SOLO EN SU MITAD MECANICA no puede publicarse con el mismo rotulo que uno
+    entero: se dice cual mitad esta y cual no, y el recuento lo separa."""
+    c, hay, _donde, aplica, muerde, _detalle = fila
+    if hay and aplica and muerde:
+        if c.get("mitad_mecanica"):
+            return "INSTALADO EN SU MITAD MECANICA"
+        return "INSTALADO Y MUERDE"
+    if hay and aplica and not muerde:
+        return "INSTALADO, NO MUERDE"
+    if hay:
+        return "INSTALADO, SIN MUTACION"
+    return "NO INSTALADO"
 
 
 def main():
@@ -414,24 +492,58 @@ def main():
     for op in ("OP-A-01", "OP-A-02"):
         suyas = [f for f in filas if f[0]["op"] == op]
         existen = [f for f in suyas if f[1]]
-        muerden = [f for f in suyas if f[3] and f[4]]
-        print("  %s: %d control(es) declarado(s) | EXISTEN %d | MUERDEN %d | "
-              "INSTALADOS Y MORDIENDO %d"
+        muerden = [f for f in suyas if f[3] and f[4]
+                   and not f[0].get("mitad_mecanica")]
+        print("  %s: %d control(es) declarado(s) | EXISTEN %d | MUERDEN ENTEROS %d | "
+              "INSTALADOS Y MORDIENDO ENTEROS %d"
               % (op, len(suyas), len(existen), len(muerden), len(muerden)))
         for f in suyas:
-            estado = "INSTALADO Y MUERDE" if (f[1] and f[3] and f[4]) else (
-                "INSTALADO, NO MUERDE" if (f[1] and f[3] and not f[4]) else (
-                    "INSTALADO, SIN MUTACION" if f[1] else "NO INSTALADO"))
-            print("     %-5s %s" % (f[0]["id"], estado))
+            print("     %-5s %s" % (f[0]["id"], rotulo_de(f)))
     total = len(filas)
-    completos = len([f for f in filas if f[1] and f[3] and f[4]])
+    # EL ROTULO HONESTO SE PAGA EN EL RECUENTO (vuelta 147, TAREA 3.c). Un
+    # control instalado en su mitad mecanica NO entra en la cifra de los
+    # enteros: se cuenta aparte, con su nombre, y las tres cifras suman el
+    # total. Antes de hoy A1.3 entraba en `completos` y la cifra publicaba OCHO
+    # cuando enteros hay SIETE.
+    enteros = [f for f in filas if f[1] and f[3] and f[4] and not f[0].get("mitad_mecanica")]
+    a_medias = [f for f in filas if f[1] and f[3] and f[4] and f[0].get("mitad_mecanica")]
+    resto = [f for f in filas if not (f[1] and f[3] and f[4])]
+    completos = len(enteros)
+    print("")
+    for f in a_medias:
+        print("  POR QUE %s NO ENTRA EN LA CIFRA DE LOS ENTEROS: %s"
+              % (f[0]["id"], f[0]["mitad_mecanica"]))
+    if a_medias:
+        print("")
+
+    # LAS DOS UNIDADES, LAS DOS COMPUTADAS Y NINGUNA TECLEADA (vuelta 147,
+    # TAREA 3.b; adjudicacion 3.18 del acta 146). LA DECLARADA cuenta lo que
+    # cada ficha declara, porque la vara no puede desobedecer a las fichas. LA
+    # DISTINTA descuenta los que son EL MISMO CONTROL CON DOS NOMBRES, y las
+    # parejas salen del campo `mismo_control_que` de la tabla, no de una lista
+    # aparte. NINGUNA ES FALSA Y PUBLICAR SOLO UNA ESCONDE LA OTRA: es la misma
+    # doctrina de las dos unidades de arista del acta 145, y el rotulo se gana
+    # midiendo y no eligiendo.
+    parejas = [(c["id"], c["mismo_control_que"]) for c in CONTROLES
+               if c.get("mismo_control_que")]
+    distintos = total - len(parejas)
+    print("LAS DOS UNIDADES DE LA CUENTA DE CONTROLES, LAS DOS COMPUTADAS DE LA TABLA")
+    print("  DECLARADA: %d, uno por cada control que declara una ficha." % total)
+    print("  DISTINTA:  %d, descontando los que son EL MISMO CONTROL CON DOS NOMBRES:"
+          % distintos)
+    for cual, mismo in parejas:
+        print("      %s es el mismo control que %s" % (cual, mismo))
     print("")
     print("CIFRA controles declarados: %d controles" % total)
-    print("CIFRA controles instalados y mordiendo: %d controles" % completos)
+    print("CIFRA controles distintos: %d controles" % distintos)
+    print("CIFRA controles instalados y mordiendo enteros: %d controles" % completos)
+    print("CIFRA controles instalados solo en su mitad mecanica: %d controles" % len(a_medias))
+    print("CIFRA controles no instalados: %d controles" % len(resto))
     print("")
     print("VEREDICTO DE LA FASE 07 CONTRA ESTA VARA: ABIERTA Y MEDIDA. %d de %d controles "
-          "estan instalados y muerden; los otros %d NO estan instalados y esta vara lo dice "
-          "en voz alta en vez de callarlo." % (completos, total, total - completos))
+          "declarados estan instalados y muerden ENTEROS, %d lo esta solo en su MITAD "
+          "MECANICA y %d NO estan instalados, y esta vara lo dice en voz alta en vez de "
+          "callarlo." % (completos, total, len(a_medias), len(resto)))
     # LA COLA SE COMPUTA, NO SE TECLEA (vuelta 146, TAREA 3.d). La version de la
     # vuelta 145 imprimia una frase FIJA, "LA FASE NO SE CIERRA HOY Y NINGUNA DE
     # LAS DOS OPERACIONES SE EJECUTA: el encargo de la vuelta 145 manda ABRIR Y
@@ -439,7 +551,11 @@ def main():
     # vuelta 146 ejecuto OP-A-01. Una linea de veredicto que no depende de lo que
     # el instrumento acaba de medir es exactamente una cifra tecleada. Ahora la
     # frase sale de `pendientes`, que se computa de la tabla.
-    pendientes = [f[0]["id"] for f in filas if not (f[1] and f[3] and f[4])]
+    # LO QUE LE FALTA A LA FASE NO ES SOLO LO NO INSTALADO (vuelta 147, TAREA
+    # 3.c): un control instalado a medias TAMBIEN le falta, en su otra mitad, y
+    # callarlo aqui seria volver a publicar como entero lo que no lo es.
+    pendientes = ([f[0]["id"] for f in resto]
+                  + ["%s (solo su mitad mecanica)" % f[0]["id"] for f in a_medias])
     if pendientes:
         # UNA SOLA FRASE, Y NO ES CAPRICHO (vuelta 146, 4.c): el veredicto y lo
         # que falta van juntos porque `verificar_cifras_del_reporte.py` coteja

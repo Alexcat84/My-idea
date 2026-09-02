@@ -177,6 +177,18 @@ VIEJAS = [
     # verde y sus dos mutaciones se corren EN VIVO y se limpian solas (P.16):
     # no hay artefacto que pueda envejecer.
     ("vuelta147_2c_mutacion_vitalidad.py", False),
+    # LA VIGESIMOSEGUNDA Y LA VIGESIMOTERCERA, ANADIDAS TAMBIEN EN LA VUELTA 147
+    # (TAREAS 3.d y 3.e), por la MISMA regla y con la misma coletilla. NINGUNA
+    # DE LAS DOS PUEDE ENVEJECER POR EL CAMINO QUE LA CORRECCION 22 CURO, y no
+    # porque se les haya congelado un fichero sino porque NO LEEN NINGUNO QUE
+    # PUEDA MOVERSE A SUS ESPALDAS: las dos eligen su sujeto POR COMPUTO sobre
+    # el estado de hoy (la entrada del medio de la nomina real; la pareja viva
+    # de mayor coseno de su dominio) y las dos mutan COPIAS EN MEMORIA. Las dos
+    # comprueban ademas `git status --porcelain -- dataset/` a los dos lados y
+    # exigen que sea IDENTICO, asi que su verde no puede venir de haber tocado
+    # el dataset.
+    ("vuelta147_3d_mutacion_nomina.py", False),
+    ("vuelta147_3e_simular_a26.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

@@ -1,0 +1,25 @@
+PRUEBA DE MUTACION DE LA GUARDA DE LA NOMINA (vuelta 147, TAREA 3.d)
+
+  NODO ELEGIDO POR COMPUTO (posicion 4 de 8 en la nomina de HEAD): keep_customers_strategy
+
+  A caso verde de contraste: la nomina no se movio                       OK
+      entran 0, salen 0, cambian 0
+  B una entrada que SALE sin declarar                                    OK
+      la nomina se movio (0 entran, 1 salen, 0 cambian) y el reporte NO trae la marca 'RE-SELLADO DE LA NOMINA DE LA ADUANA': re-sellar la nomina es RE-ADJU
+  C una entrada que ENTRA sin declarar                                   OK
+      la nomina se movio (1 entran, 0 salen, 0 cambian) y el reporte NO trae la marca 'RE-SELLADO DE LA NOMINA DE LA ADUANA': re-sellar la nomina es RE-ADJU
+  D el ataque de verdad: un SEGUNDO LIBRO que se cuela en silencio       OK
+      la nomina se movio (0 entran, 0 salen, 1 cambian) y el reporte NO trae la marca 'RE-SELLADO DE LA NOMINA DE LA ADUANA': re-sellar la nomina es RE-ADJU
+  E contraprueba: la MISMA mutacion, declarada en el reporte             OK
+      la guarda no prohibe re-sellar, prohibe re-sellar callando
+  F falla ruidoso: la nomina de HEAD ilegible es ROJO, nunca verde       OK
+      no se pudo interpretar la nomina (dataset/metadata/aduana_fuente_multiple.json): Expecting value: line 1 column 1 (char 0)
+
+  dataset/ ANTES  : (sin cambios)
+  dataset/ DESPUES: (sin cambios)
+  dataset/ IDENTICO ANTES Y DESPUES: SI
+
+CASOS QUE MUERDEN: 6 de 6
+CIFRA casos que muerden: 6 casos
+CIFRA casos del arnes: 6 casos
+EXITCODE: 0

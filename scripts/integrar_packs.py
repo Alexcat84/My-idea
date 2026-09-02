@@ -206,6 +206,37 @@ def validar_anclas_de_todos_los_puentes():
 def paso_a_integrar_nodos_y_puentes(packs, puentes_por_dominio):
     """Copia los nodos de packs al dataset y teje los puentes bidireccionales."""
     print("\n=== a. Integrando nodos de packs + puentes aprobados ===")
+
+    # LA PUERTA SEMANTICA A2.6 DE OP-A-02, CABLEADA AQUI (vuelta 147, TAREA
+    # 3.e). Este es el punto de insercion que la 3.e de la vuelta 146 dejo
+    # nombrado: el shutil.copy2 que copia cada nodo a dataset/nodos/. La frase
+    # que lo gobierna, citada de la ficha: LA ADUANA NO JUZGA, OBLIGA A JUZGAR.
+    # Al insertar un nodo se corre el indice contra SU DOMINIO y el NUCLEO, y si
+    # algun vecino supera el umbral de la cola LA INSERCION SE BLOQUEA hasta que
+    # quien inserta escriba el veredicto continua-o-repite CITANDO EL ID DEL
+    # VECINO. Nunca bloquea por parecido: solo por VEREDICTO AUSENTE.
+    #
+    # NO SE REIMPLEMENTA NADA: el criterio entero, con su frontera, sus dos
+    # umbrales IMPORTADOS de scripts/intra_dominio.py y el vecindario, vive en
+    # scripts/loop/aduana_semantica.py. Dos versiones de la misma comprobacion
+    # serian la averia de los dos master_graph que el chequeo de gemelos vino a
+    # curar.
+    #
+    # LO QUE ESTA PUERTA CUESTA, DICHO AQUI Y NO ESCONDIDO: un candidato SIN
+    # VECTOR en el indice semantico no se puede medir, y la puerta lo bloquea
+    # diciendolo en vez de dejarlo pasar sin mirar (banco 9). En la secuencia de
+    # HOY el indice se construye en el paso (d), DESPUES de esta copia, asi que
+    # un pack pendiente de verdad chocaria contra eso. QUEDA TRAIDO COMO PARADA
+    # en el reporte de la vuelta 147 y NO SE DECIDE AQUI: reordenar la linea o
+    # embeber el candidato antes de insertarlo es una decision que el texto de
+    # la ficha no cubre.
+    if packs:
+        sys.path.insert(0, str(BASE / "scripts" / "loop"))
+        from aduana_semantica import (cargar_grafo, cargar_indice, cargar_veredictos,
+                                      evaluar)
+        grafo_aduana = cargar_grafo()
+        indice_aduana = cargar_indice()
+        veredictos_aduana = cargar_veredictos()
     copiados = 0
     for d in packs:
         origen = BASE / "packs" / d / "nodos"
@@ -213,6 +244,14 @@ def paso_a_integrar_nodos_y_puentes(packs, puentes_por_dominio):
             destino = DATASET_NODOS / archivo.name
             if destino.exists():
                 fallar(f"colisión de node_id entre core y '{d}': {archivo.name} ya existe en dataset/nodos/")
+            candidato = cargar_json(archivo)
+            permitido, bloqueos, _vecinos = evaluar(
+                candidato, grafo_aduana, indice_aduana, veredictos_aduana)
+            if not permitido:
+                detalle = "\n  ".join(bloqueos[:5])
+                fallar(f"ADUANA SEMANTICA (OP-A-02, A2.6): la insercion de "
+                       f"{archivo.name} queda BLOQUEADA, {len(bloqueos)} motivo(s)\n  "
+                       f"{detalle}")
             shutil.copy2(archivo, destino)
             copiados += 1
     print(f"  {copiados} nodos de packs copiados a dataset/nodos/.")

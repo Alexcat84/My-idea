@@ -1144,6 +1144,25 @@ def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
             f": {[(n, g) for n, g, _m in canonico_incump[:5]]}" if canonico_incump else ""),
     ))
 
+    # 3) LA NOMINA NO SE MUEVE EN SILENCIO (vuelta 147, TAREA 3.d; discutible 5
+    #    del reporte 146, adjudicado A FAVOR CON RESERVA SERIA en el acta 146,
+    #    3.5). El check (1) de aqui arriba mide LOS NODOS contra la nomina; este
+    #    protege LA NOMINA contra la que aquel mide, que hasta hoy no la
+    #    protegia nadie: bastaba volver a correr el sellador para que un nodo sin
+    #    adjudicar entrase y Gate 0 volviese a verde con el `numstat` tapandolo.
+    #    NO SE REIMPLEMENTA NADA: se llama a
+    #    scripts/loop/verificar_nomina_sellada.py, que es donde vive el criterio
+    #    entero con su frontera escrita.
+    from verificar_nomina_sellada import verificar as _verificar_nomina_sellada
+
+    nomina_ok, nomina_fallos, _nomina_detalle = _verificar_nomina_sellada()
+    checks.append((
+        "OP-A-01: la nomina adjudicada de la aduana no se movio sin declararse",
+        nomina_ok,
+        f"{len(nomina_fallos)} sin declarar" + (
+            f": {nomina_fallos[:3]}" if nomina_fallos else ""),
+    ))
+
     sin_pasos_con_dos_libros = sorted(
         nid for nid, (decl, n_pasos) in fuentes_por_nodo.items() if n_pasos == 0)
     checks.append((

@@ -1,0 +1,29 @@
+SIMULACION PREVIA Y MUTACION DE LA PUERTA SEMANTICA A2.6 (vuelta 147, TAREA 3.e)
+
+  UMBRALES IMPORTADOS DE scripts/intra_dominio.py, NO TECLEADOS:
+      UMBRAL_SEMANTICO = 0.78 | UMBRAL_TITULO = 80
+  PAREJA REAL DE MAYOR COSENO EN SU DOMINIO, ELEGIDA POR COMPUTO:
+      cumplimiento_magnuson_moss  con  regla_disponibilidad_previa_venta   coseno 0.9324
+  NODO DE PRUEBA: clon de cumplimiento_magnuson_moss con id nodo_de_prueba_aduana_cumplimiento_magnuson_moss y su MISMO vector
+
+  A el clon SIN veredicto NO entra, y el bloqueo nombra al vecino                          OK
+      11 vecino(s) sobre el umbral; nodo_de_prueba_aduana_cumplimiento_magnuson_moss supera el umbral de la cola contra clasificacion_garantia_full_limited (semantica
+  B el MISMO clon CON veredicto citando cada vecino SI entra                               OK
+      11 veredicto(s) escritos, cero bloqueos
+  C veredicto que cita OTRO id (mutacion sobre variable computada): BLOQUEA                OK
+      id suplantado por computo: gestion_para_la_calidad
+  D bajar el umbral no es una salida: evaluar() no acepta umbral por parametro             OK
+      TypeError al intentar pasarle un umbral
+  E un nodo SIN vector bloquea diciendolo, nunca pasa en silencio                          OK
+      nodo_de_prueba_aduana_cumplimiento_magnuson_moss_sin_vector NO TIENE VECTOR en el indice semantico: no se puede correr el indice c
+  F un nodo que no se parece a nadie entra SIN veredicto: nunca bloquea por parecido       OK
+      0 vecinos sobre el umbral
+
+  dataset/ ANTES  : (sin cambios)
+  dataset/ DESPUES: (sin cambios)
+  dataset/ IDENTICO ANTES Y DESPUES: SI
+
+CASOS QUE MUERDEN: 6 de 6
+CIFRA casos que muerden: 6 casos
+CIFRA casos del arnes: 6 casos
+EXITCODE: 0
