@@ -526,18 +526,36 @@ de commitearlo, y **una segunda vez despues de pegar su linea**, para comprobar 
 reproduce. La pareja de marcas aparece **exactamente una vez**:
 
 <!-- COBERTURA DE LA GUARDA -->
-COBERTURA: 12 cotejadas / 0 exentas / 12 cifras | reparto: 12 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 2 | ficheros citados que NO son UTF-8: 0 [ninguno] | unidades vistas FUERA del vocabulario: 28 palabra(s) [car x4, depre x4, caracteres x2, control x2, controles x2, docs x2, lleva x2, acaba x1, aduana x1, afirma x1, aplicada x1, atendida x1, buscaba x1, cifra x1, eso x1, estaba x1, fuera x1, iba x1, miro x1, mutaciones x1, nombra x1, prohibe x1, publico x1, quedaba x1, tal x1, valida x1, veces x1, veredicto x1]
+COBERTURA: 12 cotejadas / 0 exentas / 12 cifras | reparto: 12 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 2 | ficheros citados que NO son UTF-8: 0 [ninguno] | unidades vistas FUERA del vocabulario: 29 palabra(s) [car x4, depre x4, caracteres x2, control x2, controles x2, docs x2, lleva x2, mutaciones x2, acaba x1, aduana x1, afirma x1, aplicada x1, ascendida x1, atendida x1, buscaba x1, cifra x1, eso x1, estaba x1, fuera x1, iba x1, miro x1, nombra x1, prohibe x1, publico x1, quedaba x1, tal x1, valida x1, veces x1, veredicto x1]
 <!-- FIN COBERTURA DE LA GUARDA -->
 
 **Y LA GUARDA NUEVA SOBRE SI MISMA:** `verificar_ausencias_del_reporte.py` corrida
 sobre este reporte, salida en `SALIDA_V146_4C_GUARDA_AUSENCIAS.txt`. **Una escalada que
 no se aplica a la pagina que la anuncia no es una escalada.**
 
-**4.d y 4.e.** `verificar_mutaciones_viejas.py` y
-`verificar_apertura_sellada.py --vuelta 146` re-corridas **despues** de escribir y
-commitear el reporte, porque **el estado al cierre se mide al cierre**. Salidas en
-`SALIDA_V146_4D_VIEJAS_TRAS_REPORTE.txt` y
-`SALIDA_V146_4E_APERTURA_SELLADA_RECIERRE.txt`.
+**4.d.** `verificar_mutaciones_viejas.py` re-corrida **despues de escribir el reporte y
+antes del commit final**, sobre el fichero que se commitea: **VERDE**, con `ANCLA
+PERDIDA 0`, `NO MORDIO 0` y `NO REPRODUCIBLE 0`, y las veinte corriendo. Pegado de
+`SALIDA_V146_4D_VIEJAS_TRAS_REPORTE.txt`:
+
+```
+VERDE: las 20 mutaciones viejas corren, muerden, y sus salidas selladas salen IDENTICAS en dos corridas seguidas.
+```
+
+**4.e. EL PASO NUEVO, MI PROPIA DOCTRINA DEL DISCUTIBLE 13 ASCENDIDA A REGLA:**
+`verificar_apertura_sellada.py --vuelta 146` re-corrida **DESPUES de commitear el
+reporte**, porque **el estado al cierre se mide al cierre**. **VERDE EXIT 0 con los
+diez dentro**, todos nacidos en `105fef3d`, cuyo padre es `446e4aa1`. Pegado de
+`SALIDA_V146_4E_APERTURA_SELLADA_RECIERRE.txt`:
+
+```
+   SALIDA_V146_HEAD_APERTURA.txt -- nacido en 105fef3d, padre 446e4aa1
+   SALIDA_V146_WEB_APERTURA.txt -- nacido en 105fef3d, padre 446e4aa1
+```
+Pegado de `SALIDA_V146_4E_APERTURA_SELLADA_RECIERRE.txt`, que trae **los diez** con esa
+misma forma y sale **VERDE EXIT 0**; la nomina entera ya va pegada en la seccion 0.d.
+
+**EL VERDE SOBREVIVE A LA VUELTA.**
 
 ## 5. CORRECCIONES DECLARADAS DENTRO DE LA PROPIA VUELTA
 
