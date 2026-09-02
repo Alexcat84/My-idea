@@ -429,3 +429,103 @@ CONTINUA en los dos sentidos, banco 9.22.*
 > veinticuatro dias despues del veredicto.**
 
 **LO QUE NO SE HIZO:** no se toco el veredicto. **El archivo sigue diciendo D.**
+
+## CORRECCION 9. **LA FICHA DE `OP-M-02-ACCLIMATE` CONTRA SU PROPIA EJECUCION: DOS CIFRAS SELLADAS EL 12 AGO 2026 QUE LA PASADA DEL 2 SEP 2026 DESMIENTE**
+
+**POR ADICION, Y NO SE TOCA LA FICHA.** Escrita en la vuelta 139, TAREA 1.b, por
+encargo del acta de la vuelta 138 (adjudicacion **3.4**, discutibles 3 y 4). Lo
+que la regla manda aqui es `P.9` y `P.13` con su frase comun, *"lo escrito el dia
+de la decision hay que releerlo el dia de la ejecucion"*, y `EJECUTOR.md` regla 2:
+**la discrepancia se declara, no se resuelve copiando**. El veredicto viejo se
+queda donde esta, con su fecha de corte, y esta pagina dice al lado lo que se
+midio el dia de fundir.
+
+**QUIEN ES.** `OP-M-02-ACCLIMATE`, fusion de mesa de la serie Coleman, fase 5
+Acclimate. Superviviente `fase_acclimate_experiencia_cliente`, absorbido
+`fase_acclimate_mapa_de_proceso`. **FUNDIDA EN LA VUELTA 138**, la primera mesa de
+la fase 06.
+
+### 9.a. LAS DUPLICADAS: la ficha dice CERO, la pasada fabrico DOS
+
+**LO QUE DICE LA FICHA SELLADA (`docs/plan/OPERACIONES.jsonl`, entrada
+`OP-M-02-ACCLIMATE`, `fecha_corte` **2026-08-12**), y va copiado VERBATIM:**
+
+> `verificacion`, **SEXTA** linea (indice contado con codigo sobre el JSON, no a
+> ojo): *"la simulacion fabrica 0 duplicadas: se dejan para OP-S-12"*
+>
+> `nota`, ultima frase: *"Es ademas la unica de las cinco que NO fabrica ninguna
+> duplicada."*
+
+**LO QUE MIDIO LA SIMULACION DEL DIA DE LA EJECUCION.** `scripts/plan/simular_fusion.py`
+corrida el **2 sep 2026**, salida sellada en
+`docs/loop/SALIDA_V138_3_SIM_OPM02ACCLIMATE.txt`, bloque **4**, copiado VERBATIM:
+
+> ```
+> ### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+>     Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+>      gamificacion_onboarding_visual               nodos_previos     -> fase_acclimate_experiencia_cliente
+>      ocho_fases_experiencia_cliente               nodos_siguientes  -> fase_acclimate_experiencia_cliente
+>      TOTAL NUEVAS: 2
+> ```
+
+| | cifra | corte | fuente |
+|---|---|---|---|
+| duplicadas nuevas, segun la ficha | **0** | 12 ago 2026 | `OPERACIONES.jsonl`, `verificacion` linea 6 y `nota` |
+| duplicadas nuevas, segun la simulacion del dia de fundir | **2** | 2 sep 2026 | `SALIDA_V138_3_SIM_OPM02ACCLIMATE.txt`, bloque 4 |
+
+**LAS DOS, CON NOMBRE:** `gamificacion_onboarding_visual` en `nodos_previos` y
+`ocho_fases_experiencia_cliente` en `nodos_siguientes`, las dos apuntando a
+`fase_acclimate_experiencia_cliente`.
+
+### 9.b. EL CABLEADO: la ficha dice 10 contra 3, la pasada midio 11 contra 4
+
+**LO QUE DICE LA FICHA SELLADA**, en dos sitios y con las mismas cifras, VERBATIM:
+
+> `evidencia`, tercera linea: *"MEDIDO: 10 contra 3 en cableado"*
+>
+> `adjudicacion`: *"Sobrevive fase_acclimate_experiencia_cliente por DESEMPATE POR
+> CABLEADO, 10 contra 3."*
+
+**LO QUE MIDIO LA SIMULACION DEL DIA DE LA EJECUCION**, mismo fichero sellado,
+bloque **1**, copiado VERBATIM:
+
+> ```
+>   1. DESEMPATE POR CABLEADO
+>      fase_acclimate_experiencia_cliente           pasos  5 | nombra 11 | LO NOMBRAN 11
+>      fase_acclimate_mapa_de_proceso               pasos  8 | nombra  4 | LO NOMBRAN  4
+>      >>> gana fase_acclimate_experiencia_cliente por 11 contra 4
+> ```
+
+| | cifra | corte | fuente |
+|---|---|---|---|
+| cableado, segun la ficha | **10 contra 3** | 12 ago 2026 | `OPERACIONES.jsonl`, `evidencia` linea 3 y `adjudicacion` |
+| cableado, segun la simulacion del dia de fundir | **11 contra 4** | 2 sep 2026 | `SALIDA_V138_3_SIM_OPM02ACCLIMATE.txt`, bloque 1 |
+
+### 9.c. QUE SE HACE, Y QUE NO
+
+**LO QUE NO SE HACE, y se dice con todas sus letras:**
+
+- **NO se toca el veredicto ni la ficha.** `OPERACIONES.jsonl` sigue diciendo
+  `0 duplicadas` y `10 contra 3` con su `fecha_corte` de 2026-08-12. Una correccion
+  que tapa lo que corrige no se puede auditar (`EJECUTOR.md` regla 8).
+- **NO se promedia ni se elige una de las dos cifras.** Las dos son ciertas con su
+  corte: la ficha midio un grafo de hace veintiun dias, la simulacion midio el de
+  hoy, y entre medias esta campaña movio aristas.
+- **NO es parada.** Adjudicado por el auditor en el acta 138, 3.4: *"no es
+  contradiccion irresoluble: es el caso que `P.9` y `P.13` cubren"*.
+
+**LO QUE SI CAMBIA, y ya estaba escrito en la propia ficha:** las dos duplicadas
+nuevas **quedan enrutadas a `OP-S-12`**, que es lo que la ficha manda en su cuarta
+linea de `verificacion`, VERBATIM: *"las duplicadas que la fusion fabrica quedan
+para OP-S-12, que corre despues"*. **La ficha se equivoco en la CANTIDAD, no en el
+DESTINO**, y el destino es el que gobierna.
+
+**LO QUE ESTA CORRECCION DEJA ESCRITO PARA LAS QUE FALTAN:** el desempate por
+cableado y el conteo de duplicadas de una ficha sellada **se vuelven a medir el dia
+de fundir, y si mueven, se declaran aqui**. En `OP-M-02-ACCLIMATE` el movimiento no
+volteo nada (el superviviente gana por los dos conteos, y las duplicadas ya tenian
+carril), pero **`OP-M-05-EDIFICIO` tiene el margen corto**: su `evidencia` linea 3
+dice, VERBATIM, *"MEDIDO: cableado 6 contra 5 contra 3"*, o sea **una sola unidad
+entre el superviviente y el primer perseguidor**, y ahi un movimiento de uno si
+puede voltear un superviviente. Leido hoy de `OPERACIONES.jsonl` con codigo, no de
+memoria.

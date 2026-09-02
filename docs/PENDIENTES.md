@@ -8860,3 +8860,135 @@ palabras.
     dos vueltas muriendo en "ROJO PREVIO". **Lo encontro el ejecutor, no el
     auditor**, y lo trajo marcado como discutible. Es lo que motiva la guarda
     de ciclo de cierre de la 2.b.
+
+## R.20. Registro de correcciones y adjudicaciones declaradas de la vuelta
+138 (acta de la vuelta 138; escrito en la vuelta 139, TAREA 1.a)
+
+Por adicion, como R.18 y R.19. Las adjudicaciones y las caidas del auditor se
+escriben IGUAL que las del ejecutor, que es lo que el encargo pide con esas
+palabras.
+
+**(1) LAS SIETE ADJUDICACIONES DEL ACTA 138 (3.1 a 3.7).**
+  - **3.1, EL PENDIENTE DE DOCTRINA (la pieza que DOS O MAS absorbidos tienen
+    y el superviviente NO): ADJUDICADO. NO ES DOCTRINA NUEVA Y NO ES PARADA.
+    LO CIERRA `P.13` CITANDOLA.** De las tres salidas que el ejecutor ofrecio,
+    dos las mata la regla escrita: el doble `APPEND` lo prohibe la frase
+    literal de `P.13` (*"obliga a injertar en el superviviente algo que ya
+    esta, y eso es como se fabrica una repeticion nueva el dia de la
+    pasada"*), y la PERDIDA en campo propio la prohibe esa misma frase (la
+    llama *"perdida falsa"*) **y ademas no cabe**: `ESPECIES_DE_PERDIDA` son
+    las tres escritas y el generador cae ROJO ante una cuarta, medido por el
+    auditor en `scripts/loop/generar_plan_del_lote.py:175`. La forma de
+    anotarla ya existe: `VIVE DENTRO`, *"se tacha de la lista y SE ANOTA DONDE
+    VIVE"*. **LO QUE FALTABA NO ERA DOCTRINA, ERA VOCABULARIO DEL
+    INSTRUMENTO**, mismo carril que la 3.4 del acta 137 y que la vuelta 106.
+    Hecho en la vuelta 139, operacion 2.a: la marca es
+    `VIAJA_EN_EL_ACTO:<absorbido>|<n>`, con sus seis guardas y sus casos.
+  - **3.2, DISCUTIBLE 1, NO FUNDIR EN VEZ DE FUNDIR CON LA MARCA MENOS MALA:
+    A FAVOR DEL EJECUTOR, Y NO ERA UN EMPATE.** Tres reglas escritas apuntan
+    al mismo sitio: `EJECUTOR.md` regla 5 (*"registra lo mejor sostenido"*, y
+    ninguna de las cuatro marcas del contrato era sostenible ahi), `P.5` (*"una
+    vez fundido, el acto es un nodo y la pregunta de si eran una familia o dos
+    se vuelve irrespondible"*) y el `MODO DE EJECUCION CONTINUA` de
+    `AUDITOR.md` seccion 3. **No es que pudiera no fundir: es que debia no
+    fundir.** Su TAREA 3 incompleta NO es incumplimiento de encargo.
+  - **3.3, DISCUTIBLE 2, LOS TRES `APPEND` DE MAS: A FAVOR. `preservar` ES
+    SUELO, NO TECHO.** El auditor leyo los ocho pasos del absorbido y los
+    cinco del superviviente ANTES que el parrafo del ejecutor: dos de las tres
+    piezas no estan en el superviviente en ningun grado, y la tercera (las
+    senales silenciosas antes de la queja) cae del mismo lado porque el paso 5
+    del superviviente mide senales EXPLICITAS. **Marcarlas `CUBIERTO` habria
+    sido afirmar del superviviente algo que no dice.**
+  - **3.4, DISCUTIBLES 3 Y 4, LAS DOS DIVERGENCIAS CONTRA LA FICHA SELLADA DEL
+    12 AGO 2026: A FAVOR, Y NO SON PARADA.** Es el caso que `P.9` y `P.13`
+    cubren con su frase comun, *"lo escrito el dia de la decision hay que
+    releerlo el dia de la ejecucion"*. **Publicar las dos cifras sin
+    promediarlas ni elegir una es lo que la regla 2 pide.** El registro va
+    como correccion declarada POR ADICION en
+    `docs/plan/CORRECCIONES_A_APLICAR.md` (vuelta 139, TAREA 1.b), NUNCA
+    sobreescribiendo la ficha.
+  - **3.5, DISCUTIBLES 5 Y 6: A FAVOR.** El sitio de
+    `LD_ACTO_III_DEL_PIVOTE.md` es el de la casa (`docs/plan/LD_*.md`) y trae
+    su aviso de que no mueve el marcador (banco 9.6.1). El 6 lo contesta la
+    relectura ciega del auditor: **imprimio los pasos de los tres nodos,
+    adjudico CLASE A y el mismo emparejamiento paso a paso, y solo despues
+    abrio la LD.** Coincidieron en la clase y en los tres pares.
+  - **3.6, EL CAMPO `estado` DE LAS FICHAS DE FUSION: NO SE TOCA UNA A UNA, SE
+    RESUELVE EN UN SOLO PASE AL CERRAR LA FASE 06.** El precedente de las que
+    SI se movieron (OP-S-10 en la 131, OP-S-11 en la 136) es que **el estado lo
+    mueve una adjudicacion de acta, no el ejecutor por su cuenta**; y
+    `OP-M-02-ACCLIMATE` lleva `fase: 03_FUSIONES`, o sea que esta entre las
+    DIECISEIS que el cierre con remision de la fase 03 dejo leyendo LISTA por
+    decision de fundador. Hasta el cierre de la fase 06, el estado se mide
+    contra el grafo.
+  - **3.7, EL ORDEN DE LA FASE 06 QUE QUEDA.** Sigue el del acta 137 (3.5) con
+    una precision hoy medida: **`OP-M-05-APERTURA` tiene el hueco igual que
+    `OP-M-01-FUSION`** (caida 4.2), asi que las cinco se ejecutan DESPUES de
+    la TAREA 2 de codigo y ninguna antes.
+
+**(2) DOS CAIDAS DEL EJECUTOR, FUERA DE LO MARCADO, LAS DOS ACUMULAN (acta
+138, 4.1 y 4.2).**
+  - **4.1, DE REPORTE: "el camino `--fase04` lee DIEZ familias" es una cifra
+    tecleada, y es la misma que el acta 137 ya le habia registrado.** Medida
+    por el auditor instrumentando el tallador con un espia sobre `io.open`:
+    **16 ficheros distintos y OCHO familias** (`GATE0_CMD1`, `CONTEO`,
+    `MOTOR`, `WEB`, `TSC`, `HEAD`, `MARCADOR` opcional y
+    `DESFASE_CALIBRADO`). **Ocho, no diez.** AGRAVANTE: el encargo que tenia
+    delante ya le decia que diez no era ninguna cuenta buena. **ACUMULA**
+    porque hoy vive ademas en la `PREGUNTA 1` de la seccion 9, que es una
+    conclusion. ATENUANTE grande: la conclusion de esa pregunta es CIERTA y es
+    el mejor hallazgo de la vuelta. **La culpa de fondo es del auditor (4.3 y
+    4.4).**
+  - **4.2, DE REPORTE: "a las tres de `OP-M-05` no lo se", y su propia salida
+    sellada dice lo contrario.** `SALIDA_V138_3_PIEZA_DE_VARIOS_DUENOS.txt`,
+    linea 62: *"son: OP-M-01-FUSION, OP-M-05-APERTURA"*. **Los dos grupos que
+    la maquina nombra NO son los dos que el reporte nombra**, y la fila de su
+    tabla publica `donde el hueco MUERDE, comprobado | 2 grupos`. Comprobado a
+    mano por el auditor: la linea 3 de `preservar` de `OP-M-05-APERTURA`
+    nombra los DOS absorbidos, la pieza esta en el paso 1 de
+    `introduccion_validacion_clientes` y en el paso 5 de
+    `filosofia_customer_validation`, y `customer_validation` NO la tiene en
+    ninguno de sus cinco pasos. **EL HUECO MUERDE EN TRES GRUPOS MEDIDOS, NO
+    EN DOS.** **ACUMULA: la cifra vive en una TABLA y la afirmacion en una
+    CONCLUSION.** No fue una cifra mal contada: fue **una cifra correcta con
+    los nombres cambiados**.
+
+**(3) DOS CAIDAS DEL AUDITOR, ESCRITAS IGUAL QUE LAS DEL EJECUTOR (acta 138,
+4.3 y 4.4).**
+  - **4.3, DE CIFRA, Y ES LA RAIZ DE LA 4.1: el acta 137 conto SIETE familias
+    del tallador y son OCHO.** La que faltaba es `DESFASE_CALIBRADO`, que
+    `lado_fase04` lee con `leer()` y no con `leer_opcional()` desde la vuelta
+    86, con su comentario dentro del codigo diciendo que dejo de ser opcional
+    a proposito. **Corrigio al ejecutor con una cifra propia que tambien
+    estaba mal, y la unica que faltaba es justo la que impedia tallar la
+    cabecera.**
+  - **4.4, DE ENCARGO, Y ES LA RAIZ DE QUE LA CABECERA LLEVARA DOS VUELTAS SIN
+    SALIR: restituyo el bloque de apertura con NUEVE nombres y hacen falta
+    DIEZ.** La lista canonica nombraba `HEAD`, `GATE0_CMD1`, `CONTEO`,
+    `MOTOR`, `WEB`, `TSC` y los tres del ciclo (`CICLO_ETIQUETAS`,
+    `CICLO_SYNC`, `CICLO_NUMSTAT`), **y de esos tres el tallador no lee
+    ninguno**, mientras que el que si necesita, `DESFASE_CALIBRADO`, no
+    estaba. **La 137 no tuvo cabecera por su omision y la 138 tampoco, por su
+    lista corta.** Reparado en el encargo de la 139 con los DIEZ nombres, y
+    sellado: `verificar_apertura_sellada.py --vuelta 139` da VERDE EXIT 0 con
+    los diez dentro.
+
+**(4) UNA GUARDA CEGADA DE LA CASA (acta 138, 4.5).**
+  - **4.5: `verificar_cifras_del_reporte.py` NO VE NI UNA CIFRA QUE VIVA EN
+    UNA TABLA.** `quitar_bloques_cubiertos()` promete en su docstring quitar
+    *"la tabla de cabecera"*, en singular, y su implementacion **descarta TODA
+    linea que empiece por `|`**. Medido por el auditor sobre el reporte de la
+    138: **26 cifras de numero mas unidad en el fichero, 10 que la guarda ve,
+    16 que se pierden por vivir en una fila de tabla**, entre ellas las cinco
+    cifras en `grupos` de la tabla de la fase 06, la de la 4.2 incluida. Y la
+    linea publicada, `COBERTURA: 10 cotejadas / 0 exentas / 10 cifras`, **se
+    lee como cobertura llena**. **NO ES CAIDA DEL EJECUTOR: publico la linea
+    que la guarda le dio.** Reparada en la vuelta 139, operacion 2.b: la
+    cabecera tallada se delimita con dos marcas literales de comentario HTML,
+    la guarda quita SOLO lo delimitado, y si las marcas NO estan no quita nada
+    y recorre todas las filas (fallar ruidoso, banco 9).
+
+**NINGUN RAMAL NUEVO (acta 138, cierre de la seccion 3).** Todo se resuelve
+con `P.5`, `P.9`, `P.13`, banco 9 (fallar ruidoso), banco 9.6.1,
+`EJECUTOR.md` regla 5 y el `MODO DE EJECUCION CONTINUA`. Siguen vivos (i) a
+(xxi).
