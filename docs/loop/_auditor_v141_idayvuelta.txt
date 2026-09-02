@@ -1,0 +1,36 @@
+==========================================================================
+OP-M-03-ENLACES | tipo=ENLACE | REGIMEN LEIDO DE LA VERIFICACION: SIN REGLA
+  filas de ficha: 2 | direcciones distintas tras resolver: 2
+   pivotar_o_perseverar                       -> pivote_estrategico                     IDA=True  VUELTA=False
+   pivote_o_proceder                          -> pivote_estrategico                     IDA=True  VUELTA=False
+==========================================================================
+OP-M-01-SEXTO | tipo=ENLACE MAS PODA DEL SOLAPE | REGIMEN LEIDO DE LA VERIFICACION: PROHIBE
+  filas de ficha: 1 | direcciones distintas tras resolver: 1
+   gestion_de_portafolio_gates_go_kill        -> sistema_gates_go_kill                  IDA=True  VUELTA=False
+==========================================================================
+OP-E-05 | tipo=ENLACE MUTUO | REGIMEN LEIDO DE LA VERIFICACION: MUTUO
+  filas de ficha: 4 | direcciones distintas tras resolver: 4
+   sistema_gates_go_kill                      -> gestion_portafolio_formal              IDA=True  VUELTA=True 
+   gestion_portafolio_formal                  -> sistema_gates_go_kill                  IDA=True  VUELTA=True 
+   sistema_gates_go_kill                      -> gestion_portafolio_dos_niveles         IDA=True  VUELTA=True 
+   gestion_portafolio_dos_niveles             -> sistema_gates_go_kill                  IDA=True  VUELTA=True 
+==========================================================================
+OP-M-01-ESLABONES | tipo=ENLACE | REGIMEN LEIDO DE LA VERIFICACION: PROHIBE
+  filas de ficha: 2 | direcciones distintas tras resolver: 2
+   stage_gate_system                          -> sistema_gates_go_kill                  IDA=True  VUELTA=False
+   sistema_gates_go_kill                      -> asignacion_recursos_en_gates           IDA=True  VUELTA=False
+==========================================================================
+OP-E-04 | tipo=ENLACE | REGIMEN LEIDO DE LA VERIFICACION: PROHIBE
+  filas de ficha: 9 | direcciones distintas tras resolver: 8
+   gestion_portafolio_dos_niveles             -> sistema_gates_go_kill                  IDA=True  VUELTA=True  <-- VUELTA EN FICHA QUE LA PROHIBE
+   sistema_gates_go_kill                      -> portfolio_management                   IDA=True  VUELTA=False
+   sistema_gates_go_kill                      -> revision_portafolio_periodica          IDA=False VUELTA=True  <-- VUELTA EN FICHA QUE LA PROHIBE
+   sistema_gates_go_kill                      -> gestion_portafolio_foco                IDA=False VUELTA=False
+   portfolio_management                       -> sistema_gates_go_kill                  IDA=False VUELTA=True  <-- VUELTA EN FICHA QUE LA PROHIBE
+   gestion_portafolio_formal                  -> sistema_gates_go_kill                  IDA=True  VUELTA=True  <-- VUELTA EN FICHA QUE LA PROHIBE
+   gestion_portafolio_foco                    -> sistema_gates_go_kill                  IDA=False VUELTA=False
+   decision_factory_mentality                 -> sistema_gates_go_kill                  IDA=False VUELTA=False
+==========================================================================
+TOTAL direcciones distintas medidas: 17
+con LA VUELTA PRESENTE: 8
+de esas, en ficha que PROHIBE la vuelta: 4

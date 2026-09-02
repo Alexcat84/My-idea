@@ -1,0 +1,116 @@
+==============================================================================
+PAR 1: sistema_gates_go_kill  CONTRA  gestion_portafolio_dos_niveles
+==============================================================================
+
+--- NODO sistema_gates_go_kill  (vivo=True, resuelto=sistema_gates_go_kill) ---
+TITULO: Sistema de Gates (Puntos de Decisión Go/Kill)
+RESUMEN: En lugar de dejar que todos tus proyectos avancen sin filtro como en un tunel, construye un embudo con puntos de decision (gates) a lo largo del proceso. En cada gate evaluas tres cosas: si el proyecto esta listo para pasar a la siguiente etapa, si el racional de negocio justifica seguir invirtiendo (criterios Go/Kill y priorizacion, por ejemplo NPV), y que plan de accion y recursos necesita la siguiente fase. Usar criterios explicitos en formato de checklist o scorecard mejora la calidad de tus decisiones y evita que sigas invirtiendo tiempo y dinero en ideas debiles. Los gates te permiten ma
+  paso  1: Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+  paso  2: Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+  paso  3: Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+  paso  4: Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+  paso  5: Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+  paso  6: Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+  paso  7: En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+  paso  8: No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+  paso  9: Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+  paso 10: Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+  paso 11: Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+  paso 12: Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+  paso 13: Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+  paso 14: Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+  paso 15: Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+  paso 16: Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+  paso 17: Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+
+--- NODO gestion_portafolio_dos_niveles  (vivo=True, resuelto=gestion_portafolio_dos_niveles) ---
+TITULO: Enfoque Jerárquico de Gestión de Portafolio
+RESUMEN: Combina dos procesos de decisión complementarios: el 'gating' (revisión exhaustiva de cada proyecto individual en tiempo real) y las revisiones de portafolio (análisis holístico de todos los proyectos en conjunto, con menos detalle por proyecto). Las decisiones estratégicas son de alto nivel y direccionales; las tácticas se refieren a selección y priorización de proyectos.
+  paso  1: Establecer un proceso de gating (compuertas) para revisar cada proyecto individualmente
+  paso  2: Establecer revisiones de portafolio trimestrales o semestrales que vean el conjunto completo de proyectos
+  paso  3: Definir qué decisiones son estratégicas (alto nivel) y cuáles tácticas (selección/priorización)
+  paso  4: Usar ambos procesos de forma complementaria, no sustitutiva
+
+ESTADO HOY: sistema_gates_go_kill -> gestion_portafolio_dos_niveles  sig=True prev=True   |   gestion_portafolio_dos_niveles -> sistema_gates_go_kill  sig=True prev=True
+==============================================================================
+PAR 2: sistema_gates_go_kill  CONTRA  gestion_portafolio_formal
+==============================================================================
+
+--- sistema_gates_go_kill (ya impreso arriba, pasos identicos) ---
+
+--- NODO gestion_portafolio_formal  (vivo=True, resuelto=gestion_portafolio_formal) ---
+TITULO: Sistema Formal de Gestión de Portafolio Integrado con Gates
+RESUMEN: Este sistema combina dos niveles de decisión: los gates evalúan cada proyecto de forma individual (seguir o matar), mientras que la revisión de portafolio compara y prioriza todos tus proyectos activos en conjunto, buscando el mix, balance y alineación correctos con tu estrategia de negocio. Hazlo 2-4 veces al año, revisando los proyectos que ya superaron cierta etapa. Usa criterios financieros y estratégicos comunes para rankear, y aplica un ejercicio de poda inicial para eliminar los proyectos más débiles antes de asignar recursos por Strategic Buckets, es decir, categorías como tipo de proy
+  paso  1: Agenda revisiones de tu portafolio completo 2-4 veces al año
+  paso  2: Reúne todos los proyectos que ya superaron cierta etapa o gate inicial
+  paso  3: Haz una poda inicial eliminando los proyectos más débiles del conjunto
+  paso  4: Define Strategic Buckets según tipo de proyecto o línea de producto y asigna recursos a cada uno
+  paso  5: Rankea los proyectos dentro de cada bucket con criterios financieros y estratégicos hasta el límite de recursos
+  paso  6: Usa esa lista priorizada como apoyo en tus próximas decisiones de gate
+
+ESTADO HOY: sistema_gates_go_kill -> gestion_portafolio_formal  sig=True prev=True   |   gestion_portafolio_formal -> sistema_gates_go_kill  sig=True prev=True
+==============================================================================
+PAR 3: sistema_gates_go_kill  CONTRA  portfolio_management
+==============================================================================
+
+--- sistema_gates_go_kill (ya impreso arriba, pasos identicos) ---
+
+--- NODO portfolio_management  (vivo=True, resuelto=portfolio_management) ---
+TITULO: Gestión de Portafolio de Proyectos (Portfolio Management)
+RESUMEN: La gestión de portafolio es un proceso dinámico de decisión mediante el cual se evalúan, seleccionan, priorizan y reasignan recursos entre los proyectos activos de desarrollo de nuevos productos de una empresa. Busca balance entre riesgo/retorno, corto/largo plazo y mantenimiento/crecimiento, asegurando que los recursos escasos se inviertan en los proyectos correctos.
+  paso  1: Evaluar si existen demasiados proyectos para los recursos disponibles
+  paso  2: Revisar el balance del portafolio (proyectos pequeños vs de alto valor)
+  paso  3: Implementar revisiones periódicas de todo el portafolio de forma holística
+  paso  4: Tomar decisiones Go/Kill continuas sobre proyectos individuales
+  paso  5: Eliminar proyectos débiles o que ya no cumplen con la estrategia (aproximadamente un tercio suele requerir cancelación)
+  paso  6: Reasignar los recursos liberados a los proyectos de mayor valor
+
+ESTADO HOY: sistema_gates_go_kill -> portfolio_management  sig=True prev=True   |   portfolio_management -> sistema_gates_go_kill  sig=False prev=False
+==============================================================================
+PAR 4: sistema_gates_go_kill  CONTRA  gestion_portafolio_foco
+==============================================================================
+
+--- sistema_gates_go_kill (ya impreso arriba, pasos identicos) ---
+
+--- NODO gestion_portafolio_foco  (vivo=True, resuelto=gestion_portafolio_foco) ---
+TITULO: Gestión del Portafolio y Foco de Recursos
+RESUMEN: Uno de los mayores errores de gestión senior es sobrecargar el pipeline de desarrollo con demasiados proyectos aprobados para los recursos disponibles. Esto lleva a proyectos subrecursados, personal fragmentado en múltiples tareas (multitasking ineficiente), retrasos generalizados y decline en la calidad (se recortan estudios de mercado, pruebas de campo abreviadas). La solución es enfocar recursos en menos proyectos pero de mayor potencial ('betting practices'), logrando balance y mix adecuado en el portafolio.
+  paso  1: Auditar el número de proyectos activos versus la capacidad real de recursos
+  paso  2: Aplicar criterios estrictos de Go/Kill para reducir el número de proyectos en pipeline
+  paso  3: Priorizar proyectos de mayor potencial estratégico y financiero
+  paso  4: Evitar el multitasking excesivo del personal entre proyectos simultáneos
+  paso  5: Revisar periódicamente el balance del portafolio (riesgo, tipo de innovación, mercados)
+
+ESTADO HOY: sistema_gates_go_kill -> gestion_portafolio_foco  sig=False prev=False   |   gestion_portafolio_foco -> sistema_gates_go_kill  sig=False prev=False
+==============================================================================
+PAR 5: sistema_gates_go_kill  CONTRA  revision_portafolio_periodica
+==============================================================================
+
+--- sistema_gates_go_kill (ya impreso arriba, pasos identicos) ---
+
+--- NODO revision_portafolio_periodica  (vivo=True, resuelto=revision_portafolio_periodica) ---
+TITULO: Revisión periódica de todos tus proyectos juntos (Portfolio Review)
+RESUMEN: Además de revisar cada proyecto por separado en las revisiones de control (gates), conviene que de vez en cuando, cada trimestre o cada seis meses, te sientes a mirar todos tus proyectos como un conjunto. En una revisión individual analizas un proyecto a fondo; aquí miras el conjunto completo: si están alineados con tu estrategia, si las prioridades siguen teniendo sentido, si el conjunto está balanceado, si tienes recursos suficientes para todos y si vas a llegar a las metas de ventas que esperas de tus nuevos productos. Las revisiones individuales analizan los árboles; esta revisión analiza 
+  paso  1: Agenda reuniones periódicas, por ejemplo cada trimestre, para revisar todos tus proyectos juntos.
+  paso  2: Prepara un panorama visual simple de todos tus proyectos activos, por ejemplo un gráfico de torta o de burbujas.
+  paso  3: Evalúa si el conjunto está alineado con tu estrategia, si está balanceado y si tienes los recursos suficientes para sostenerlo.
+  paso  4: Decide qué proyectos acelerar, detener, cancelar o reordenar en prioridad, mirando el conjunto y no cada uno por separado.
+  paso  5: Anota tus decisiones y ajusta cómo repartes tus recursos entre los distintos grupos de proyectos si hace falta.
+
+ESTADO HOY: sistema_gates_go_kill -> revision_portafolio_periodica  sig=False prev=False   |   revision_portafolio_periodica -> sistema_gates_go_kill  sig=True prev=True
+==============================================================================
+PAR 6: sistema_gates_go_kill  CONTRA  asignacion_recursos_en_gates
+==============================================================================
+
+--- sistema_gates_go_kill (ya impreso arriba, pasos identicos) ---
+
+--- NODO asignacion_recursos_en_gates  (vivo=True, resuelto=asignacion_recursos_en_gates) ---
+TITULO: Método de Asignación de Recursos en Gates
+RESUMEN: Toda decisión Go en un gate debe ir acompañada de un compromiso real de recursos, considerando el contexto del portafolio completo (no solo el proyecto individual). Se recomiendan tres enfoques: que el líder de proyecto llegue con candidatos de equipo pre-conversados, uso de software de gestión de recursos que muestre disponibilidad, o que los propios gatekeepers lleguen preparados con conocimiento de disponibilidad de su departamento.
+  paso  1: Mostrar en cada gate la lista de proyectos activos con su priorización y compromisos de recursos actuales
+  paso  2: Elegir un método de seguimiento de recursos: pre-conversación del líder con candidatos, software de gestión, o preparación previa de gatekeepers, o bien lista manual, hoja de cálculo o algún programa especializado
+  paso  3: Verificar disponibilidad real de personas antes de comprometer recursos a un nuevo proyecto
+  paso  4: Evitar agregar proyectos a la lista activa sin resolver las implicaciones de recursos
+  paso  5: En la reunión, comprométete de forma explícita a asignar personas y presupuesto para la siguiente etapa.
+
+ESTADO HOY: sistema_gates_go_kill -> asignacion_recursos_en_gates  sig=True prev=True   |   asignacion_recursos_en_gates -> sistema_gates_go_kill  sig=False prev=False

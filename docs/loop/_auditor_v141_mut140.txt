@@ -1,0 +1,71 @@
+==============================================================================
+(i) SE LE QUITA UNA ARISTA PRESENTE AL GRAFO EN MEMORIA
+==============================================================================
+ANTES:  catalogo 16 | cumplido 13 | sin cumplir 3 | sin vara 1
+        sin cumplir: OP-M-01, OP-M-04, OP-E-04
+OPERACION ELEGIDA POR COMPUTO (no tecleada): OP-E-05
+ARISTA ELEGIDA POR COMPUTO (no tecleada): sistema_gates_go_kill -> gestion_portafolio_formal
+DESPUES: catalogo 16 | cumplido 12 | sin cumplir 4 | sin vara 1
+        sin cumplir: OP-M-01, OP-M-04, OP-E-04, OP-E-05
+LA CIFRA DE CUMPLIDO BAJA: True (13 -> 12)
+LA OPERACION SALE NOMBRADA: True
+CONTRAPRUEBA (copia SIN mutar): cumplido 13, se queda quieto: True
+VEREDICTO (i): VERDE
+
+==============================================================================
+(ii) UNA REMITIDA DE MENTIRA QUE NO EXISTE EN OPERACIONES.jsonl
+==============================================================================
+SIN MUTAR: 0 fallo(s)
+EL ID INVENTADO EXISTE EN OPERACIONES.jsonl: False (computado)
+MUTADO: 1 fallo(s)
+   OP-Z-99-FANTASMA esta REMITIDO a la fase 06_MESAS por MUTACION EN MEMORIA y NO EXISTE en docs/plan/OPERACIONES.jsonl: no se puede medir su destino
+ROJO Y LA NOMBRA: True
+CONTRAPRUEBA (sin mutar no hay fallo nuevo): True
+VEREDICTO (ii): VERDE
+
+==============================================================================
+(iii) CASO POSITIVO SOBRE SUJETO CONGELADO: LA FASE 05, CERRADA EN LA VUELTA 136
+==============================================================================
+SUJETO CLAVADO POR COMMIT: e4464be5 (acta 136 del auditor)
+   dataset/metadata/master_graph.json       48dc4d393388eb2b  OK
+   docs/plan/00_INDICE.md                   0eb832bb8aba0bff  OK
+   docs/plan/04_ENLACES.md                  f64648029faf4361  OK
+   docs/plan/OPERACIONES.jsonl              1338bf8fee4315b2  OK
+ESTADO DE LA FASE 05_SANEO | REF: e4464be5
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-S-01 | 05_SANEO | HECHA | FUSION | no remitida | superviviente certificado_de_origen_tratados_libre_comercio vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-S-02 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo VIGENCIA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-03 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo VIGENCIA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-04 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo HERRAMIENTA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-05 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo HERRAMIENTA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-08 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-09 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo RENOMBRE_CON_ALIAS (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-10 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo REENCUADRE_DE_MARCO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-11 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-12 | 05_SANEO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo SANEO MECANICO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 10 | con destino cumplido: 1 | sin cumplir: 9 | de ellas, sin vara escrita: 9
+SIN CUMPLIR (9): OP-S-02, OP-S-03, OP-S-04, OP-S-05, OP-S-08, OP-S-09, OP-S-10, OP-S-11, OP-S-12
+SIN VARA ESCRITA (9): OP-S-02, OP-S-03, OP-S-04, OP-S-05, OP-S-08, OP-S-09, OP-S-10, OP-S-11, OP-S-12
+
+LO QUE EL ENCARGO ESPERA: catalogo 10 con destino cumplido SALVO OP-S-12, o sea cumplido 9 y sin cumplir exactamente ['OP-S-12']
+LO QUE SALE:              cumplido 1 y sin cumplir ['OP-S-02', 'OP-S-03', 'OP-S-04', 'OP-S-05', 'OP-S-08', 'OP-S-09', 'OP-S-10', 'OP-S-11', 'OP-S-12']
+CALZA CON LO ESPERADO: False
+
+POR QUE NO CALZA, MEDIDO Y NO OPINADO:
+   grupos de operaciones con HUELLA DE GRAFO IDENTICA (nodos, superviviente,
+   aristas_nuevas y eliminar, los cuatro campos con los que el grafo se mide): 1
+      OP-S-05, OP-S-08, OP-S-11, OP-S-12
+   OP-S-12 comparte huella con otras 3 operacion(es) del catalogo: OP-S-05, OP-S-08, OP-S-11
+   NINGUNA VARA DE GRAFO PUEDE SEPARARLAS: True
+   Lo unico que las separa es el campo `estado`, y el encargo dice
+   expresamente que el destino se mide CONTRA EL GRAFO, NO CONTRA `estado`.
+
+VEREDICTO (iii): NO CALZA, SE DICE Y SE PARA ESTE CASO
+
+==============================================================================
+RESUMEN: (i) VERDE | (ii) VERDE | (iii) NO CALZA
+==============================================================================

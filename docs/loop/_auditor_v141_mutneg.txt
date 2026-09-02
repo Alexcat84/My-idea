@@ -1,0 +1,40 @@
+==============================================================================
+RETIRO DE LA VUELTA | MODO: EJECUTAR  (MUTACION NEGATIVA)
+==============================================================================
+MUTACION NEGATIVA: la direccion se ELIGE POR COMPUTO entre las que ninguna
+ficha del plan nombra en sus aristas_nuevas. Elegida: accion_correctiva_sistematica -> cero_defectos
+
+GUARDA 1, LOS DOS EXTREMOS RESUELTOS (P.1) Y VIVOS:
+   accion_correctiva_sistematica -> resuelve a accion_correctiva_sistematica | existe True | vivo True
+   cero_defectos -> resuelve a cero_defectos | existe True | vivo True
+GUARDA 2, CERO AUTO-ARISTAS: OK, accion_correctiva_sistematica != cero_defectos
+GUARDA 3, LA VUELTA EXISTE HOY (dos vistas): accion_correctiva_sistematica -> cero_defectos : PRESENTE
+           y la IDA:                          cero_defectos -> accion_correctiva_sistematica : PRESENTE
+GUARDA 4, UNA OPERACION DEL PLAN PROHIBE LA VUELTA DE ESTE PAR:
+   NO. OP-M-01-ESLABONES trae la clausula de escalera pero NO NOMBRA este par en sus aristas_nuevas: la contraorden cubre la vuelta de UNA FILA SUYA, no cualquier arista del grafo
+GUARDA 5, LA IDA SIGUE PRESENTE AL TERMINAR: OK, la ida esta puesta
+
+GUARDA 6, EL GRADO TOTAL ANTES Y DESPUES (simulacion sobre copia en memoria):
+   entradas literales que se quitarian: de accion_correctiva_sistematica.nodos_siguientes ['cero_defectos'] | de cero_defectos.nodos_previos ['accion_correctiva_sistematica']
+   sig    antes   9230  despues   9229  delta -1
+   prev   antes   9204  despues   9203  delta -1
+   suma   antes  18434  despues  18432  delta -2
+   union  antes   9905  despues   9904  delta -1
+   PODA CORRECTA: la union baja en exactamente 1 y no sube.
+
+GUARDA 7, CERO DUPLICADAS Y CERO AUTO-ARISTAS NUEVAS TRAS RESOLVER.
+   LO QUE SE MIDE ES EL DELTA, NO EL TOTAL, y es la misma decision que la
+   guarda 6 de vuelta140_3_escribir_aristas.py ya tomo: las duplicadas que YA
+   ESTABAN se imprimen para que se vean, pero no bloquean, porque tienen dueno
+   escrito (OP-S-12, atadura 2 del 00_INDICE) y castigar a quien no las hizo
+   bloquea sin arreglar nada. Un RETIRO ademas no puede fabricar duplicadas:
+   solo quita entradas. Si el delta no es cero, algo muy raro paso.
+   accion_correctiva_sistematica.nodos_siguientes: 5 -> 4 entradas
+      duplicadas YA PRESENTES (no bloquean, dueno OP-S-12): ninguna
+      duplicadas NUEVAS: ninguna | auto-aristas NUEVAS: ninguna
+   cero_defectos.nodos_previos: 15 -> 14 entradas
+      duplicadas YA PRESENTES (no bloquean, dueno OP-S-12): ['costo_de_mala_calidad_copq', 'definicion_calidad_conformidad']
+      duplicadas NUEVAS: ninguna | auto-aristas NUEVAS: ninguna
+
+ROJO, 1 guarda(s) caen. NO SE ESCRIBE NADA (ni siquiera en modo --ejecutar):
+   OP-M-01-ESLABONES trae la clausula de escalera pero NO NOMBRA este par en sus aristas_nuevas: la contraorden cubre la vuelta de UNA FILA SUYA, no cualquier arista del grafo: la contraorden no cubre podar el grafo por gusto (guarda 3.d del encargo)

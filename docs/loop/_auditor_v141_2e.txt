@@ -1,0 +1,67 @@
+==============================================================================
+TAREA 2.e: CASO POSITIVO SOBRE SUJETO CONGELADO, LA FASE 03_FUSIONES
+==============================================================================
+SUJETO CLAVADO POR COMMIT: 62d4f28ee472588f846466c2734a6690eb2d0ca7
+   fecha (de git): 2026-08-26
+   asunto (de git): Decision del fundador: la fase 03 cierra con remision y el tramo mecanico abre con la pareja nueva
+
+LOS CUATRO BLOBS QUE EL INSTRUMENTO LEE, CON SU sha256 DE HOY:
+   dataset/metadata/master_graph.json       b476d05ac230b42a  OK
+   docs/plan/00_INDICE.md                   9ef27456a73d39fb  OK
+   docs/plan/04_ENLACES.md                  2276d91a46a086a2  OK
+   docs/plan/OPERACIONES.jsonl              7ea9c1dae46c155a  OK
+
+ESTADO DE LA FASE 03_FUSIONES | REF: 62d4f28e
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-M-01-FUSION | 03_FUSIONES | LISTA | FUSION | no remitida | 0 absorbido(s) OK de 4; gates_go_kill_decision_points NO esta deprecado; gates_go_kill_decision_points no esta en ids_alias de sistema_gates_go_kill; requisitos_gates_con_dientes NO esta deprecado; requisitos_gates_con_dientes no esta en ids_alias de sistema_gates_go_kill; estructura_gates NO esta deprecado; estructura_gates no esta en ids_alias de sistema_gates_go_kill; estructura_de_gates NO esta deprecado; estructura_de_gates no esta en ids_alias de sistema_gates_go_kill | SIN CUMPLIR |
+| OP-M-02-ACCLIMATE | 03_FUSIONES | LISTA | FUSION | no remitida | 0 absorbido(s) OK de 1; fase_acclimate_mapa_de_proceso NO esta deprecado; fase_acclimate_mapa_de_proceso no esta en ids_alias de fase_acclimate_experiencia_cliente | SIN CUMPLIR |
+| OP-M-02-ACCOMPLISH | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente fase_accomplish_experiencia_cliente vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-02-ACTIVATE | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente fase_activate_primera_impresion vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-02-ADMIT | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente fase_admit NO esta vivo hoy | SIN CUMPLIR |
+| OP-M-02-ASSESS | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente fase_assess_ciclo_cliente vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-02-MEDIOS | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente seis_medios_comunicacion_cliente NO esta vivo hoy | SIN CUMPLIR |
+| OP-M-02-PROG | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente ocho_fases_experiencia_cliente vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-03-I | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente pivotar_o_perseverar vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-03-II | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente pivote_o_proceder vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-03-III | 03_FUSIONES | LISTA | FUSION | no remitida | 0 absorbido(s) OK de 2; pivote_startup NO esta deprecado; pivote_startup no esta en ids_alias de pivote_estrategico; pivotes_e_iteraciones NO esta deprecado; pivotes_e_iteraciones no esta en ids_alias de pivote_estrategico | SIN CUMPLIR |
+| OP-M-05-APERTURA | 03_FUSIONES | LISTA | FUSION | no remitida | 0 absorbido(s) OK de 2; filosofia_customer_validation NO esta deprecado; filosofia_customer_validation no esta en ids_alias de customer_validation; introduccion_validacion_clientes NO esta deprecado; introduccion_validacion_clientes no esta en ids_alias de customer_validation | SIN CUMPLIR |
+| OP-M-05-EDIFICIO | 03_FUSIONES | LISTA | FUSION | no remitida | 0 absorbido(s) OK de 2; get_out_of_the_building NO esta deprecado; get_out_of_the_building no esta en ids_alias de customer_discovery_get_out_of_building; manifiesto_regla1_hechos_fuera_del_edificio NO esta deprecado; manifiesto_regla1_hechos_fuera_del_edificio no esta en ids_alias de customer_discovery_get_out_of_building | SIN CUMPLIR |
+| OP-M-05-INDICE | 03_FUSIONES | LISTA | FUSION | no remitida | 0 absorbido(s) OK de 2; customer_discovery_cuatro_fases NO esta deprecado; customer_discovery_cuatro_fases no esta en ids_alias de customer_discovery; customer_discovery_overview NO esta deprecado; customer_discovery_overview no esta en ids_alias de customer_discovery | SIN CUMPLIR |
+| OP-U-01 | 03_FUSIONES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo FUSION (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-U-02 | 03_FUSIONES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo FUSION (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 16 | con destino cumplido: 6 | sin cumplir: 10 | de ellas, sin vara escrita: 2
+SIN CUMPLIR (10): OP-M-01-FUSION, OP-M-02-ACCLIMATE, OP-M-02-ADMIT, OP-M-02-MEDIOS, OP-M-03-III, OP-M-05-APERTURA, OP-M-05-EDIFICIO, OP-M-05-INDICE, OP-U-01, OP-U-02
+SIN VARA ESCRITA (2): OP-U-01, OP-U-02
+
+LAS REMITIDAS A LA FASE 06_MESAS, LEIDAS DEL 00_INDICE DE 62d4f28e (no tecleadas): 6
+   OP-M-01-FUSION, OP-M-02-ACCLIMATE, OP-M-03-III, OP-M-05-APERTURA, OP-M-05-EDIFICIO, OP-M-05-INDICE
+   de esas, en el catalogo de la fase 03_FUSIONES: 6 (OP-M-01-FUSION, OP-M-02-ACCLIMATE, OP-M-03-III, OP-M-05-APERTURA, OP-M-05-EDIFICIO, OP-M-05-INDICE)
+
+LO QUE EL ENCARGO ESPERA: catalogo 16 con destino cumplido SALVO las 6 remitidas, o sea cumplido 10 y sin cumplir exactamente ['OP-M-01-FUSION', 'OP-M-02-ACCLIMATE', 'OP-M-03-III', 'OP-M-05-APERTURA', 'OP-M-05-EDIFICIO', 'OP-M-05-INDICE']
+LO QUE SALE:              cumplido 6 y sin cumplir ['OP-M-01-FUSION', 'OP-M-02-ACCLIMATE', 'OP-M-02-ADMIT', 'OP-M-02-MEDIOS', 'OP-M-03-III', 'OP-M-05-APERTURA', 'OP-M-05-EDIFICIO', 'OP-M-05-INDICE', 'OP-U-01', 'OP-U-02']
+CALZA CON LO ESPERADO: False
+
+POR QUE NO CALZA, MEDIDO Y NO OPINADO:
+   SIN CUMPLIR DE MAS (4): OP-M-02-ADMIT, OP-M-02-MEDIOS, OP-U-01, OP-U-02
+   SIN CUMPLIR DE MENOS (0): ninguna
+
+   OP-M-02-ADMIT | vara FUSION | tipo FUSION DE MESA
+      superviviente escrito en la ficha: 'fase_admit'
+      ese id: existe=True | deprecado=True | RESUELVE POR ALIAS A 'fase_admit_celebracion'
+      razon del instrumento: superviviente fase_admit NO esta vivo hoy
+   OP-M-02-MEDIOS | vara FUSION | tipo FUSION DE MESA
+      superviviente escrito en la ficha: 'seis_medios_comunicacion_cliente'
+      ese id: existe=True | deprecado=True | RESUELVE POR ALIAS A 'estrategia_multicanal_bienvenida'
+      razon del instrumento: superviviente seis_medios_comunicacion_cliente NO esta vivo hoy
+   OP-U-01 | vara SIN VARA ESCRITA | tipo FUSION
+      superviviente escrito en la ficha: None
+      razon del instrumento: no hay regla escrita que mida contra el grafo el destino de un tipo FUSION (ni superviviente resoluble ni aristas_nuevas)
+   OP-U-02 | vara SIN VARA ESCRITA | tipo FUSION
+      superviviente escrito en la ficha: None
+      razon del instrumento: no hay regla escrita que mida contra el grafo el destino de un tipo FUSION (ni superviviente resoluble ni aristas_nuevas)
+
+VEREDICTO (2.e): NO CALZA, SE DICE Y SE PARA ESTE CASO.
