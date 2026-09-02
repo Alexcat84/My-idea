@@ -1,0 +1,35 @@
+==============================================================================
+PARES DEL PLAN CON LAS DOS DIRECCIONES EN SU PROPIO aristas_nuevas
+REF: WORK | fichas leidas de docs/plan/OPERACIONES.jsonl: 71
+Direcciones RESUELTAS por alias (P.1) antes de emparejar.
+==============================================================================
+
+| # | operacion | par (resuelto) | LD de la ida | LD de la vuelta | filas de ficha |
+|---:|---|---|---|---|---|
+| 1 | OP-E-04 | sistema_gates_go_kill <-> portfolio_management | LD-40 | LD-48 | DOS filas (indices 1 y 4) |
+| 2 | OP-E-04 | sistema_gates_go_kill <-> gestion_portafolio_foco | LD-45 | LD-53 | DOS filas (indices 3 y 7) |
+| 3 | OP-E-05 | sistema_gates_go_kill <-> gestion_portafolio_formal | LD-41 | LD-41 | UNA fila (indices 0 y 0) |
+| 4 | OP-E-05 | sistema_gates_go_kill <-> gestion_portafolio_dos_niveles | LD-43 | LD-43 | UNA fila (indices 1 y 1) |
+
+PARES CON LAS DOS DIRECCIONES: 4
+ARISTAS QUE ESO SUPONE (2 por par): 8
+FICHAS DEL PLAN CON aristas_nuevas NO VACIO: 6 de 71
+FILAS DE FICHA TOTALES EN EL PLAN: 20
+DIRECCIONES DISTINTAS TOTALES EN EL PLAN (tras resolver): 18
+
+DESGLOSE POR OPERACION:
+   OP-E-04: 2 par(es)
+   OP-E-05: 2 par(es)
+
+LAS CADENAS DE ORIGEN, ENTERAS Y SIN RECORTAR:
+   OP-E-04 | sistema_gates_go_kill <-> portfolio_management
+      [1] requisitos_gates_con_dientes -> portfolio_management (nodos_siguientes), por LD-40: el paso 5 del primero es la linea del puente y el segundo trae el gobierno del conjunto
+      [4] portfolio_management -> gates_go_kill_decision_points (nodos_siguientes), por LD-48: el paso 4 del primero, decisiones Go Kill continuas, es la linea; el segundo trae la disciplina
+   OP-E-04 | sistema_gates_go_kill <-> gestion_portafolio_foco
+      [3] requisitos_gates_con_dientes -> gestion_portafolio_foco (nodos_siguientes), por LD-45: el paso 5 apunta a como asignas recursos y el segundo trae el procedimiento de capacidad
+      [7] gestion_portafolio_foco -> gates_go_kill_decision_points (nodos_siguientes), por LD-53: el paso 2 del primero, criterios estrictos de Go Kill, es la linea; el segundo trae la disciplina
+   OP-E-05 | sistema_gates_go_kill <-> gestion_portafolio_formal
+      [0] requisitos_gates_con_dientes -> gestion_portafolio_formal Y gestion_portafolio_formal -> requisitos_gates_con_dientes, por LD-41
+   OP-E-05 | sistema_gates_go_kill <-> gestion_portafolio_dos_niveles
+      [1] requisitos_gates_con_dientes -> gestion_portafolio_dos_niveles Y gestion_portafolio_dos_niveles -> requisitos_gates_con_dientes, por LD-43
+EXITCODE: 0

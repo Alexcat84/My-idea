@@ -1,0 +1,42 @@
+==============================================================================
+LAS TRES UNIDADES | FASE 06_MESAS | REF: WORK
+ENTRADA = elemento del array JSON aristas_nuevas
+FILA    = 'A -> B' escrito, ANTES de resolver (lo que el tallador llama fila)
+DIRECCION = (A, B) DESPUES de resolver por alias (P.1), unidad del acta 140
+==============================================================================
+
+| operacion | remitida por | entradas | filas | direcciones |
+|---|---|---:|---:|---:|
+| OP-E-04 | docs/plan/04_ENLACES.md:1452 | 9 | 9 | 8 |
+| OP-E-05 | docs/plan/04_ENLACES.md:1453 | 2 | 4 | 4 |
+| OP-M-01-ESLABONES | docs/plan/04_ENLACES.md:1454 | 2 | 2 | 2 |
+| OP-M-01-SEXTO | docs/plan/04_ENLACES.md:1455 | 1 | 1 | 1 |
+| OP-M-03-ENLACES | docs/plan/04_ENLACES.md:1451 | 2 | 2 | 2 |
+| OP-M-05-APERTURA | docs/plan/00_INDICE.md:261 | 1 | 2 | 1 |
+
+UNIVERSO 1, LAS REMITIDAS POR docs/plan/04_ENLACES.md: 5 operaciones (OP-E-04, OP-E-05, OP-M-01-ESLABONES, OP-M-01-SEXTO, OP-M-03-ENLACES)
+   ENTRADAS 16 | FILAS 18 | DIRECCIONES 17
+
+UNIVERSO 2, TODAS LAS DEL CATALOGO CON DIRECCIONES: 6 operaciones (OP-E-04, OP-E-05, OP-M-01-ESLABONES, OP-M-01-SEXTO, OP-M-03-ENLACES, OP-M-05-APERTURA)
+   ENTRADAS 17 | FILAS 20 | DIRECCIONES 18
+
+EN EL UNIVERSO 2 Y NO EN EL 1: OP-M-05-APERTURA
+
+LOS DOS EJEMPLARES DEL SALTO, cada uno con sus tres cifras:
+   OP-E-05: 2 entrada(s), 4 fila(s), 4 direccion(es)
+      entrada [0]: requisitos_gates_con_dientes -> gestion_portafolio_formal Y gestion_portafolio_formal -> requisitos_gates_con_dientes, por LD-41
+      entrada [1]: requisitos_gates_con_dientes -> gestion_portafolio_dos_niveles Y gestion_portafolio_dos_niveles -> requisitos_gates_con_dientes, por LD-43
+      fila escrita: requisitos_gates_con_dientes -> gestion_portafolio_formal   (resuelve a sistema_gates_go_kill -> gestion_portafolio_formal)
+      fila escrita: gestion_portafolio_formal -> requisitos_gates_con_dientes   (resuelve a gestion_portafolio_formal -> sistema_gates_go_kill)
+      fila escrita: requisitos_gates_con_dientes -> gestion_portafolio_dos_niveles   (resuelve a sistema_gates_go_kill -> gestion_portafolio_dos_niveles)
+      fila escrita: gestion_portafolio_dos_niveles -> requisitos_gates_con_dientes   (resuelve a gestion_portafolio_dos_niveles -> sistema_gates_go_kill)
+      direccion resuelta: sistema_gates_go_kill -> gestion_portafolio_formal
+      direccion resuelta: gestion_portafolio_formal -> sistema_gates_go_kill
+      direccion resuelta: sistema_gates_go_kill -> gestion_portafolio_dos_niveles
+      direccion resuelta: gestion_portafolio_dos_niveles -> sistema_gates_go_kill
+   OP-M-05-APERTURA: 1 entrada(s), 2 fila(s), 1 direccion(es)
+      entrada [0]: introduccion_validacion_clientes -> customer_validation_sell_phase, que tras la fusion resuelve a customer_validation -> customer_validation_sell_phase (nodos_siguientes), por LD-59: la madre lista las actividades y el hijo trae el procedimiento de las dos primeras
+      fila escrita: introduccion_validacion_clientes -> customer_validation_sell_phase   (resuelve a customer_validation -> customer_validation_sell_phase)
+      fila escrita: customer_validation -> customer_validation_sell_phase   (resuelve a customer_validation -> customer_validation_sell_phase)
+      direccion resuelta: customer_validation -> customer_validation_sell_phase
+EXITCODE: 0

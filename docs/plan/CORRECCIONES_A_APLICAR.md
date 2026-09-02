@@ -1144,3 +1144,161 @@ como `CONSUMIDA` y se nombra, sin llamarla cumplida** tampoco.
 CUMPLIDA LEGITIMA: SOLO CONVERTIRIA EN CUMPLIDAS A LAS DOS DIVERGENTES.** El rojo
 de esas dos **no es ruido: es el sintoma bien puesto y mal rotulado**, y el remedio
 es rotularlo, no apagarlo.
+
+## CORRECCION 17. **EL `00_INDICE` DICE "LAS UNICAS" Y HOY SON EL DOBLE: CUATRO PARES Y OCHO ARISTAS, Y LA FRASE VIEJA NO SE BORRA**
+
+**POR ADICION.** Escrita en la vuelta 143, TAREA 1.b, por encargo del acta 142,
+adjudicacion 3.4. Corte de todas las cifras de esta correccion: **2 sep 2026**
+(`git log -1 --format=%ad --date=short`, corrido en esta vuelta).
+
+### 17.a. LA FRASE VIEJA, CITADA LITERAL Y SIN TOCAR
+
+`docs/plan/00_INDICE.md:478`, dentro del **hueco de orden 1**, dice literal:
+
+> **Los dos enlaces mutuos del banco 9.22 son las UNICAS aristas del plan que van en las
+> dos direcciones a proposito.**
+
+**ESA LINEA NO SE BORRA NI SE REESCRIBE.** Sigue en su fichero, en su linea y con
+sus palabras, y esta correccion **la coloca al lado de la medicion de hoy**, que
+es lo que `EJECUTOR.md` 8 manda (*"una correccion que tapa lo que corrige no se
+puede auditar"*).
+
+### 17.b. LA MEDICION DE HOY, TALLADA DE UN INSTRUMENTO Y NO TECLEADA
+
+**Comando corrido en esta vuelta:**
+`python scripts/loop/vuelta143_1b_pares_de_doble_direccion.py`.
+Salida entera en `docs/loop/SALIDA_V143_1B_PARES_DOBLE_DIRECCION.txt`. El
+instrumento recorre **las 71 fichas** de `docs/plan/OPERACIONES.jsonl`, saca los
+pares con el parser de `tallar_estado_de_fase.py`, los **resuelve por alias**
+(`P.1`, `EJECUTOR.md` regla 9) y busca los pares no ordenados `{A, B}` para los
+que **la misma ficha** escribe `A -> B` y `B -> A`. El `LD` sale de la propia
+cadena de `aristas_nuevas`, nunca se teclea.
+
+| # | operacion | par (resuelto) | LD de la ida | LD de la vuelta | filas de ficha |
+|---:|---|---|---|---|---|
+| 1 | OP-E-04 | sistema_gates_go_kill <-> portfolio_management | LD-40 | LD-48 | DOS filas (indices 1 y 4) |
+| 2 | OP-E-04 | sistema_gates_go_kill <-> gestion_portafolio_foco | LD-45 | LD-53 | DOS filas (indices 3 y 7) |
+| 3 | OP-E-05 | sistema_gates_go_kill <-> gestion_portafolio_formal | LD-41 | LD-41 | UNA fila (indices 0 y 0) |
+| 4 | OP-E-05 | sistema_gates_go_kill <-> gestion_portafolio_dos_niveles | LD-43 | LD-43 | UNA fila (indices 1 y 1) |
+
+**PARES CON LAS DOS DIRECCIONES: 4. ARISTAS QUE ESO SUPONE: 8.** Desglose por
+operacion, tallado de la misma salida: **`OP-E-04`: 2 pares. `OP-E-05`: 2 pares.**
+Contexto de la misma corrida, para que las cifras no queden sueltas: **6 fichas
+de 71 tienen `aristas_nuevas` no vacio; 20 filas de ficha en todo el plan; 18
+direcciones distintas tras resolver.**
+
+### 17.c. LAS DOS CIFRAS, UNA POR FILA, CADA UNA CON SU AUTOR Y SU FICHERO
+
+| cifra | unidad | que cuenta | autor | corte | fichero |
+|---:|---|---|---|---|---|
+| **2** | **pares** (y **4** aristas) | los enlaces mutuos escritos en UNA sola fila, que es lo que la frase vio | plan, `00_INDICE` | sin fecha escrita en la linea | `docs/plan/00_INDICE.md:478` |
+| **4** | **pares** (y **8** aristas) | todos los pares con las dos direcciones en su propio `aristas_nuevas`, tras resolver por alias | ejecutor, vuelta 143 | 2 sep 2026 | `docs/loop/SALIDA_V143_1B_PARES_DOBLE_DIRECCION.txt` |
+| **4** | **pares** (y **8** aristas) | la misma cuenta, medida con parser propio del auditor | auditor, acta 142, adjudicacion 3.4 | acta de la vuelta 142 | `docs/loop/ACTA_AUDITOR.md`, acta 142 |
+
+**COTEJO CONTRA LA MEDICION DE CONTRASTE DEL AUDITOR, QUE ES LO QUE `EJECUTOR.md`
+2 pide: CERO DISCREPANCIAS.** El acta 142 da **cuatro pares y ocho aristas**, dos
+de `OP-E-05` (`sgk` con `gestion_portafolio_formal` por LD-41 y `sgk` con
+`gestion_portafolio_dos_niveles` por LD-43) y dos de `OP-E-04` (`sgk` con
+`portfolio_management` por LD-40 y LD-48, `sgk` con `gestion_portafolio_foco` por
+LD-45 y LD-53). **Mi instrumento da exactamente esos cuatro, con esos ocho LD y
+esas dos operaciones. No hay discrepancia que declarar.**
+
+### 17.d. POR QUE LA FRASE VIEJA NO ERA MENTIRA CUANDO SE ESCRIBIO
+
+**LA DIFERENCIA ESTA EN LA FORMA, NO EN LA INTENCION, Y EL INSTRUMENTO LA MIDE.**
+Los dos pares de `OP-E-05` llevan sus dos direcciones **en UNA sola fila** de
+`aristas_nuevas` (*"A -> B Y B -> A, por LD-41"*): se ven leyendo la ficha. Los dos
+pares de `OP-E-04` llevan sus dos direcciones **en DOS filas distintas**
+(indices 1 y 4; indices 3 y 7) **y con nodos escritos que hoy son alias**
+(`requisitos_gates_con_dientes` y `gates_go_kill_decision_points` resuelven los dos
+a `sistema_gates_go_kill`): **no se ven leyendo la ficha, solo se ven tras
+resolver.** La frase del `00_INDICE` miraba la forma que se ve.
+
+### 17.e. LA REGLA QUE QUEDA
+
+**UNA CUENTA DE "ARISTAS QUE VAN EN LAS DOS DIRECCIONES" SE HACE SOBRE LAS
+DIRECCIONES RESUELTAS, NUNCA SOBRE LAS CADENAS ESCRITAS**, porque una fusion puede
+juntar las dos direcciones de un par sin que ninguna fila lo diga (que es
+exactamente el criterio de la **CORRECCION 14**, el par colapsado). Y la
+consecuencia practica, que es la que el hueco de orden 1 ya pedia con sus palabras
+(*"LA GUARDA TIENE QUE LLEVAR LA EXCEPCION ESCRITA"*): **la excepcion del 9.22 no
+cubre dos pares, cubre cuatro**, y la ficha de `OP-E-04` los nombra desde la
+vuelta 142 (TAREA 3.a, commiteada en la vuelta 143).
+
+## CORRECCION 18. **LA TERCERA UNIDAD QUE NADIE NOMBRA: ENTRADA, FILA DE FICHA Y DIRECCION SON TRES COSAS DISTINTAS**
+
+**POR ADICION.** Escrita en la vuelta 143, TAREA 1.c, por encargo del acta 142,
+seccion 2 (la relectura ciega). Corte de todas las cifras: **2 sep 2026**.
+
+### 18.a. POR QUE NACE, Y NO ES UN ERROR DE NADIE
+
+El auditor de la vuelta 142 releyo a ciegas el desglose de direcciones con
+instrumento propio y **coincidio al digito en la unidad adjudicada**: 17
+direcciones sobre las cinco remitidas y 18 sobre las seis. **Donde no coincidio
+fue en "filas": conto 16 donde el ejecutor conto 18.** Mordido hasta el fondo, no
+habia cifra mal en ningun lado: **contaban unidades distintas**. El auditor contaba
+**entradas del array JSON**; el ejecutor y `tallar_estado_de_fase.py` cuentan
+**filas de ficha**. La tercera unidad existia y **ningun documento la nombraba**.
+
+### 18.b. LAS TRES UNIDADES, DEFINIDAS DE UNA VEZ
+
+| unidad | que es | quien la usa |
+|---|---|---|
+| **ENTRADA de `aristas_nuevas`** | un elemento del array JSON de la ficha | el parser ciego del auditor de la vuelta 142; **ningun documento del plan la nombraba antes de esta correccion** |
+| **FILA DE FICHA** | un par `A -> B` tal como esta **ESCRITO**, ANTES de resolver alias | `pares_de_aristas()`; es lo que `tallar_estado_de_fase.py` llama **fila** y publica en su celda desde la vuelta 141, TAREA 2.c |
+| **DIRECCION** | el par `(A, B)` **DESPUES** de resolver por alias (`P.1`) | la unidad **adjudicada** por el acta 140, adjudicacion 3.4; es la que el grafo guarda y la que la vara mide |
+
+### 18.c. LOS TRES TOTALES, MEDIDOS HOY Y TALLADOS DE UN INSTRUMENTO
+
+**Comando corrido en esta vuelta:**
+`python scripts/loop/vuelta143_1c_tres_unidades.py --fase 06_MESAS`.
+Salida entera en `docs/loop/SALIDA_V143_1C_TRES_UNIDADES.txt`.
+
+| operacion | remitida por | entradas | filas | direcciones |
+|---|---|---:|---:|---:|
+| OP-E-04 | docs/plan/04_ENLACES.md:1452 | 9 | 9 | 8 |
+| OP-E-05 | docs/plan/04_ENLACES.md:1453 | 2 | 4 | 4 |
+| OP-M-01-ESLABONES | docs/plan/04_ENLACES.md:1454 | 2 | 2 | 2 |
+| OP-M-01-SEXTO | docs/plan/04_ENLACES.md:1455 | 1 | 1 | 1 |
+| OP-M-03-ENLACES | docs/plan/04_ENLACES.md:1451 | 2 | 2 | 2 |
+| OP-M-05-APERTURA | docs/plan/00_INDICE.md:261 | 1 | 2 | 1 |
+
+**UNIVERSO 1, LAS CINCO REMITIDAS por `docs/plan/04_ENLACES.md` (el que el acta
+140 conto y el que el encargo pide): ENTRADAS 16, FILAS 18, DIRECCIONES 17.**
+
+**UNIVERSO 2, LAS SEIS del catalogo con direcciones (anade `OP-M-05-APERTURA`):
+ENTRADAS 17, FILAS 20, DIRECCIONES 18.**
+
+**EL 16 DEL AUDITOR ERA CORRECTO EN SU UNIDAD:** es exactamente el total de
+ENTRADAS sobre las cinco. **El 18 del ejecutor tambien:** es el total de FILAS
+sobre las cinco. **No hay cifra que corregir en ninguno de los dos; hay una unidad
+que faltaba nombrar.**
+
+### 18.d. EL EJEMPLAR DE CADA SALTO
+
+**`OP-E-05`: 2 entradas, 4 filas, 4 direcciones.** El salto es de entrada a fila:
+cada una de sus dos entradas escribe **las dos direcciones dentro de la misma
+cadena** (*"requisitos_gates_con_dientes -> gestion_portafolio_formal Y
+gestion_portafolio_formal -> requisitos_gates_con_dientes, por LD-41"*). De fila a
+direccion **no hay salto**: las cuatro filas resuelven a cuatro direcciones
+distintas.
+
+**`OP-M-05-APERTURA`: 1 entrada, 2 filas, 1 direccion.** Aqui saltan las dos: su
+unica entrada escribe la arista **y su forma resuelta en la misma cadena**
+(*"introduccion_validacion_clientes -> customer_validation_sell_phase, que tras la
+fusion resuelve a customer_validation -> customer_validation_sell_phase"*), asi que
+el parser saca **2 filas**; y las dos filas resuelven a **la misma direccion**,
+`customer_validation -> customer_validation_sell_phase`, asi que colapsan en **1**.
+
+### 18.e. LA REGLA QUE QUEDA
+
+**UNA CIFRA DE ESTA FAMILIA SE PUBLICA SIEMPRE CON SU UNIDAD NOMBRADA.** No hay
+cifra por defecto: entrada, fila y direccion son tres respuestas legitimas a tres
+preguntas distintas, y la que el acta 140 adjudico como unidad **publicada** es la
+**direccion**.
+
+**Y "FILAS DE FICHA" NUNCA SIGNIFICA FILAS DEL ARRAY JSON.** Esa es la convencion
+de la casa desde la vuelta 141, la sostiene `tallar_estado_de_fase.py` en su codigo
+y en su celda, y quien quiera contar elementos del array **dice ENTRADAS**. Es la
+misma doctrina que la **CORRECCION 15** fijo para el universo (*"un total lleva su
+universo al lado"*), aplicada ahora a la unidad.
