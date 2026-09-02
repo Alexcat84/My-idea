@@ -1,0 +1,73 @@
+MEDICION DEL AUDITOR DE LA VUELTA 149 SOBRE LA VUELTA 148
+Instrumento propio, escrito hoy. Ninguna cifra copiada de una pagina.
+==============================================================================
+
+--- 1. CENSO Y ARISTAS EN LOS CATORCE REFS DE LA VUELTA ---
+  84b64cd0  censo 3853/3169/684   aristas 9234/9211/18445/9914
+  68db6230  censo 3853/3169/684   aristas 9234/9211/18445/9914
+  5567cdc8  censo 3853/3169/684   aristas 9234/9211/18445/9914
+  8dc333b4  censo 3853/3169/684   aristas 9234/9211/18445/9914
+  3acd002f  censo 3853/3169/684   aristas 9234/9211/18445/9914
+  72796815  censo 3853/3169/684   aristas 9234/9211/18445/9914
+  21eb9875  censo 3853/3169/684   aristas 9234/9211/18445/9914
+  0bca418c  censo 3853/3169/684   aristas 9234/9211/18445/9914
+  c2c8ca71  censo 3853/3169/684   aristas 9234/9211/18445/9914
+  a82cb8e4  censo 3853/3169/684   aristas 9234/9211/18445/9914
+  a34328b2  censo 3853/3169/684   aristas 8780/8740/17520/9914   <-- AQUI SALTA (OP-S-12)
+  a352bae1  censo 3853/3169/684   aristas 8780/8740/17520/9914
+  8e2ccdf5  censo 3853/3169/684   aristas 8780/8740/17520/9914
+  200f84bf  censo 3853/3169/684   aristas 8780/8740/17520/9914
+
+--- 2. LO QUE MOVIO LA VUELTA (cierre menos apertura) ---
+  nodos_siguientes -454 | nodos_previos -471 | suma -925 | UNION +0
+  la union quieta es la prueba: no se perdio ni una arista, solo repeticiones.
+
+--- 3. LAS DUPLICADAS TRAS RESOLVER, ANTES Y DESPUES ---
+  APERTURA nodos con duplicada 702 | entradas que sobran 925
+           por campo {'nodos_siguientes': 454, 'nodos_previos': 471}
+           por motivo {'el id nuevo mas su alias': 922, 'dos alias del mismo destino': 3}
+  CIERRE   nodos con duplicada 0 | entradas que sobran 0
+           por campo {}
+           por motivo {}
+
+--- 4. EL VECINDARIO RESUELTO, NODO A NODO Y CAMPO A CAMPO ---
+  comparaciones: 7706 antes / 7706 despues | DISTINTAS: 0
+
+--- 5. NINGUN ID RENOMBRADO NI INVENTADO ---
+  node_id identicos: True | ids_alias identicos: True
+  literales usados: 3646 antes / 3525 despues
+  APARECIDOS DE LA NADA: [] | desaparecidos del todo: 121
+
+--- 6. EL 1.056 DE LA VERIFICACION 4, RASTREADO EN GIT ---
+  docs/plan/ARISTAS_DUPLICADAS.jsonl no es un fichero quieto: se regenera.
+  af467eb1 LA PRIMERA (la que la ficha cita): grupos 1015 | nodos 802 | sobran 1056
+  d6341ebe LA DE HOY, EN HEAD: grupos 898 | nodos 711 | sobran 935
+        de esos, sobre nodos HOY DEPRECADOS: 10 | sobre vivos: 925
+  versiones del fichero en git: 30. Baja monotona: cada fusion consume duplicadas.
+
+--- 7. EL INDICE SEMANTICO ---
+  ids en el indice 3521 | nodos vivos 3169 | modelo voyage-4-lite dim 512
+  VIVOS SIN VECTOR: 18
+     anillo_interior_explotar_el_canal_nucleo, autoservicio_y_autosanacion_del_producto, critica_del_plan_con_ia, driver_de_inventario, escenarios_de_evolucion_de_la_ia, estar_listo_para_ser_publica, estrategia_circular_y_mecanismo_de_retorno, formalizar_un_proceso_ad_hoc, ideacion_con_ia_en_la_sesion, incentivos_internos_alineados_a_retencion, inteligencia_de_anuncios_de_la_competencia, la_historia_de_la_empresa, observar_al_cliente_en_su_contexto, personalizacion_guiada_por_el_cliente, producto_como_servicio_de_acceso, puntos_brillantes_antes_del_pivote, seleccion_de_proveedores_por_costo_total, silla_vacia_del_cliente_en_decisiones
+  ids del indice que NO estan vivos: 370 | de ellos DEPRECADOS: 370 | FANTASMAS: 0
+  blob del indice al abrir y al cerrar: IDENTICO (f23f25a4): el desfase VIENE DE ANTES, no de OP-S-12.
+
+--- 8. LA VERIFICACION 3 DE OP-A-01: EL 9 DE 9, RE MEDIDO ---
+  nodos adjudicados 8 | segundos y terceros libros 9 | la lectura literal DISPARA EN 9 DE 9
+
+--- 9. EL MARCADOR DEL CRIBADO ---
+  A 551 / B 72 / C 5 / D 2760 | n 3388 | puestos 1 a 3388 | huecos 0 | duplicados 0
+
+--- 10. LOS REGISTROS, POR PREFIJO EXACTO ---
+  docs/PENDIENTES.md                         638644 -> 638644 | viejo es PREFIJO EXACTO: True
+  docs/plan/CORRECCIONES_A_APLICAR.md        112922 -> 118578 | viejo es PREFIJO EXACTO: True
+  docs/INTRA_DOMINIO_INFORME.md              943970 -> 943970 | viejo es PREFIJO EXACTO: True
+  docs/plan/OP_S_11_MAPEO_PROPUESTO.md       24772 -> 24772 | viejo es PREFIJO EXACTO: True
+
+--- 11. EL CATALOGO DE OPERACIONES ---
+  fichas 71 | esquemas distintos 1 | claves 18
+  05_SANEO por estado: OP-S-01=HECHA, OP-S-02=HECHA, OP-S-03=HECHA, OP-S-04=HECHA, OP-S-05=HECHA, OP-S-08=HECHA, OP-S-09=HECHA, OP-S-10=HECHA, OP-S-11=HECHA, OP-S-12=LISTA
+  OP-C-05: fase 00_CODIGO | orden 7 | depende_de ['OP-S-12'] | estado LISTA
+  quien nombra a OP-S-12: ['OP-M-01', 'OP-M-02', 'OP-M-03', 'OP-M-04', 'OP-M-05', 'OP-C-05', 'OP-M-01-FUSION']
+
+FIN DE LA MEDICION
