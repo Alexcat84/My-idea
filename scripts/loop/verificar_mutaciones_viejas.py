@@ -168,6 +168,15 @@ VIEJAS = [
     # es el texto que fallo. Los otros tres se fabrican EN TEMPORAL y se borran
     # siempre (P.16). No admite --sujeto.
     ("vuelta146_2b_mutacion_ausencias.py", False),
+    # LA VIGESIMOPRIMERA, ANADIDA EN LA VUELTA 147 (TAREA 2.f), por la MISMA
+    # regla con la coletilla de la CORRECCION 22: entra el dia que nace y CON
+    # SUJETO CONGELADO. Sus dos casos rojos corren sobre refs de git COMPUTADOS
+    # (el commit de nacimiento de `SALIDA_V146_3E_BARRIDO_UMBRAL.txt` y el
+    # ultimo commit que toco `docs/loop/REPORTE.md` antes del HEAD de apertura
+    # de la 147), no sobre el arbol vivo y sin un solo hash tecleado. Su caso
+    # verde y sus dos mutaciones se corren EN VIVO y se limpian solas (P.16):
+    # no hay artefacto que pueda envejecer.
+    ("vuelta147_2c_mutacion_vitalidad.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

@@ -1,0 +1,81 @@
+BARRIDO EXHAUSTIVO
+  PREGUNTA: existe en el codigo una constante que fije el UMBRAL de la cola semantica en un valor numerico, el que OP-A-02 cita sin numero
+  UNIVERSO: git ls-files de la rama actual ACOTADO a scripts/, engine/, web/
+  CARDINAL: 1482
+  EXCLUIDOS POR SER SONDA Y NO INSTALACION (declarados, no escondidos): 0
+  POR NOMBRE: umbral|cola|intra | 7 ficheros con coincidencia
+  POR CONTENIDO: umbral|similitud | 102 ficheros con coincidencia
+  VITALIDAD DE LOS PATRONES DE CONTENIDO: 2 de 2 alternativas aparecen en el universo
+      umbral                                         -> 85     viva
+      similitud                                      -> 35     viva
+  NO DECODIFICABLES (mirados y no leidos, NO cuentan como sin coincidencia): 0
+  VEREDICTO: HALLADO
+  LOS QUE COINCIDEN (union de las dos piernas): 108
+      engine/calculadora.py  [contenido]
+      engine/node_families.json  [contenido]
+      engine/preguntas_cache.json  [contenido]
+      engine/prototipo_motor.py  [contenido]
+      engine/test_aviso_curaduria.py  [contenido]
+      engine/test_calculadora.py  [contenido]
+      engine/test_censo_solo_lectura.py  [contenido]
+      engine/test_prueba_rumbos.py  [contenido]
+      scripts/archive/phase1_3_orphans.py  [contenido]
+      scripts/build_semantic_index_voyage.py  [contenido]
+      scripts/censo_duplicacion.py  [contenido]
+      scripts/consolidar_pack.py  [contenido]
+      scripts/costuras_internas.py  [contenido]
+      scripts/expansion/enriquecer_vs_crear.py  [contenido]
+      scripts/expansion/tejer_ola1.py  [contenido]
+      scripts/extraer_mundo.py  [contenido]
+      scripts/fix_spiderweb.py  [contenido]
+      scripts/gradiente_pares.py  [contenido]
+      scripts/hseq/_analizar_dedup.py  [contenido]
+      scripts/hseq/_finalizar_decisiones.py  [contenido]
+      scripts/hseq/lib_dominio.py  [contenido]
+      scripts/hseq/paso2_dedup.py  [contenido]
+      scripts/hseq/paso3_4_aristas.py  [contenido]
+      scripts/hseq/paso3b_rematch_semantico.py  [contenido]
+      scripts/hseq/paso5_6_semillas_puentes.py  [contenido]
+      scripts/hseq/run_phase1_dominio.py  [contenido]
+      scripts/ids_existentes.txt  [contenido]
+      scripts/intra_dominio.py  [nombre y contenido]
+      scripts/intra_leer.py  [nombre]
+      scripts/intra_reg.py  [nombre]
+      scripts/loop/_v40_patch_costuras.py  [contenido]
+      scripts/loop/_v40_patch_costuras_b.py  [contenido]
+      scripts/loop/_v40_patch_costuras_c.py  [contenido]
+      scripts/loop/_v41_patch_costuras.py  [contenido]
+      scripts/loop/_v72_lote_h.py  [contenido]
+      scripts/loop/barrer_ausencia.py  [contenido]
+      scripts/loop/tallar_veredictos_reporte.py  [contenido]
+      scripts/loop/v41_actos/acto_285.py  [contenido]
+      scripts/loop/v41_actos/acto_331.py  [contenido]
+      scripts/loop/v41_actos/acto_711.py  [contenido]
+      scripts/loop/v41_actos/acto_969.py  [contenido]
+      scripts/loop/verificar_ausencias_del_reporte.py  [contenido]
+      scripts/loop/vuelta130_tarea3a_ops10rep1.py  [contenido]
+      scripts/loop/vuelta133_cola_localizador_apendice.py  [nombre]
+      scripts/loop/vuelta134_censo_cola_no_recorta.py  [nombre]
+      scripts/loop/vuelta135_cola_localizador_cap.py  [nombre]
+      scripts/loop/vuelta138_3_pieza_de_varios_duenos.py  [contenido]
+      scripts/loop/vuelta145_3b_vara_de_codigo_fase07.py  [contenido]
+      scripts/loop/vuelta29_sellar_hor.py  [contenido]
+      scripts/loop/vuelta32_costura_opd01.py  [contenido]
+      scripts/loop/vuelta32_nota_opd01.py  [contenido]
+      scripts/loop/vuelta34_calibrar_costuras.py  [contenido]
+      scripts/loop/vuelta34_costuras_opd03.py  [contenido]
+      scripts/loop/vuelta34_mov2.py  [contenido]
+      scripts/loop/vuelta36_ld_643.py  [contenido]
+      scripts/loop/vuelta36_volcado_643.py  [contenido]
+      scripts/loop/vuelta40_calibrar_costuras.py  [contenido]
+      scripts/loop/vuelta40_guarda_puerta.py  [contenido]
+      scripts/loop/vuelta40_senal_antes_despues.py  [contenido]
+      scripts/loop/vuelta42_senal_antes_despues.py  [contenido]
+      ... y 48 mas
+CIFRA ficheros del universo: 1482 ficheros
+CIFRA ficheros que coinciden por nombre: 7 ficheros
+CIFRA ficheros que coinciden por contenido: 102 ficheros
+CIFRA alternativas de contenido vivas: 2 alternativas
+CIFRA alternativas de contenido en total: 2 alternativas
+CIFRA ficheros que coinciden: 108 ficheros
+EXITCODE: 0

@@ -1,0 +1,61 @@
+==============================================================================
+LAS 21 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+==============================================================================
+
+  vuelta133_tarea2e_mutacion_cifras.py   exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta135_2e_mutacion_1.py             exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): SALIDA_V135_2E_MUTACION_1.txt
+  vuelta135_2e_mutacion_2.py             exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): SALIDA_V135_2E_MUTACION_2.txt
+  vuelta135_2e_mutacion_3.py             exit 1  CASO DECLARADO  
+      salidas selladas que escribe (computadas, no tecleadas): SALIDA_V135_2E_MUTACION_3.txt
+      SUJETO FIJO VERIFICADO: SUJETO_FIJO_V135_2E_REPORTE_134.md calza con el blob e12e4c36 (sha256 d1f97a510f17e35046eeec4975e1e0a1adabcfdda5a4646a250aa6db
+  vuelta139_2b_mutaciones.py             exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta140_2a_mutaciones.py             exit 2  CASO DECLARADO  
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+      ==============================================================================
+  vuelta141_2_mutaciones.py              exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta143_2a_mutaciones.py             exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta143_2b_mutacion_bateria.py       exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta143_2c_mutacion_positivo.py      exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta144_2a_mutaciones.py             exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta144_2b_mutacion_giro.py          exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta144_2d_mutacion_cobertura.py     exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta144_3a_mutaciones.py             exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta144_3b_mutacion_negativa.py      exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta144_3c_caso_positivo_1190.py     exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta145_2a_mutacion_ancla_unica.py   exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta145_2b_mutacion_arneses.py       exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta145_2c_mutacion_censo.py         exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta146_2b_mutacion_ausencias.py     exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta147_2c_mutacion_vitalidad.py     exit 0  OK              
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+
+  ANCLA PERDIDA  : 0 (ninguna)
+  NO MORDIO      : 0 (ninguna)
+  NO REPRODUCIBLE: 0 (ninguna)
+  CASO DECLARADO : 2 (vuelta135_2e_mutacion_3.py, vuelta140_2a_mutaciones.py)
+      vuelta135_2e_mutacion_3.py, exit declarado 1, marca obligatoria 'NO TIENE CONVENCION MECANICA DE CONTEO':
+         su SUJETO FIJO es el REPORTE.md de la vuelta 134, congelado por banco 9.10, y ES ANTERIOR A LOS DELIMITADORES DE CABECERA TALLADA. Medido en esta vuelta: grep -c 'CABECERA TALLADA' docs/loop/SUJETO_FIJO_V135_2E_REPORTE_134.md da 0, y sobre docs/loop/REPORTE.md da 3. La ampliacion del vocabulario de la TAREA 2.a (vuelta 142) hace que la guarda vea ahora la celda '3 fila(s)' del desfase del calibrado, que EN UN REPORTE MODERNO vive DENTRO de la cabecera delimitada y queda recortada antes de parsear, y en este sujeto no, porque las marcas no existian aun. LAS DOS CIFRAS QUE ESTA MUTACION PRUEBA SI COTEJAN (la salida publica '2 POR ETIQUETA'): lo que cae es una tercera, ajena al caso. El sujeto NO se retoca, porque su valor es estar congelado.
+      vuelta140_2a_mutaciones.py, exit declarado 2, marca obligatoria 'VEREDICTO (iii): NO CALZA':
+         su bloque (iii), el caso positivo sobre la fase 05, sale NO CALZA y esta DECLARADO desde la vuelta 140: el auditor lo reconocio como caida SUYA de encargo (acta 140, 4.5, 'EL AUDITOR ELIGIO MAL EL SUJETO CONGELADO'). OP-S-05, OP-S-08, OP-S-11 y OP-S-12 tienen HUELLA DE GRAFO IDENTICA (los cuatro campos vacios) y lo unico que las separa es `estado`, que el encargo prohibe mirar: NINGUNA VARA DE GRAFO PUEDE SEPARARLAS. Los bloques (i) y (ii) SI muerden y son los que esta bateria vigila.
+
+VERDE: las 21 mutaciones viejas corren, muerden, y sus salidas selladas salen IDENTICAS en dos corridas seguidas.
+FIN
+EXITCODE: 0

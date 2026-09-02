@@ -1,0 +1,50 @@
+EL ESCAPE DEL VOCABULARIO, MEDIDO POR EL EJECUTOR EN LA VUELTA 147 (TAREA 2.a)
+
+  formulas del vocabulario VIEJO (vuelta 146): 12
+  formulas ANADIDAS en la vuelta 147: 8
+      no tiene
+      no tienen
+      no da un numero
+      no halla ningun
+      no halla ninguna
+      no trae ningun
+      no trae ninguna
+      en ninguna parte
+  formulas del vocabulario NUEVO: 20
+
+  SUJETO CONGELADO: a9b638ba:docs/loop/REPORTE.md  (reporte de la vuelta 145)
+      vocabulario VIEJO: 12 vistas / 0 respaldadas / 12 en rojo
+      vocabulario NUEVO: 12 vistas / 0 respaldadas / 12 en rojo
+      la cobertura pasa de 12 vistas a 12 vistas
+
+  SUJETO CONGELADO: 723b4639:docs/loop/REPORTE.md  (reporte de la vuelta 146)
+      vocabulario VIEJO: 3 vistas / 2 respaldadas / 4 en rojo
+      vocabulario NUEVO: 8 vistas / 2 respaldadas / 9 en rojo
+      la cobertura pasa de 3 vistas a 8 vistas
+
+  LAS QUE SE ESCAPAN ENTERAS del vocabulario viejo, sobre 723b4639:docs/loop/REPORTE.md
+      frases que disparan SOLO formulas NUEVAS (escape puro): 5
+          **no tiene**, y el barrido exhaustivo lo sella con su pierna por contenido en cero:
+              dispara por: no tiene
+          **LA FICHA NO DA UN NUMERO**, y **no lo adivino**: el
+              dispara por: no da un numero
+          sana**, porque la otra mitad pide un dato que el esquema no tiene.
+              dispara por: no tiene
+          EL UMBRAL DE LA COLA NO TIENE NUMERO EN NINGUNA PARTE.** `OP-A-02` lo
+              dispara por: no tiene, en ninguna parte
+          cita por referencia y el barrido no halla ninguna constante que lo fije.
+              dispara por: no halla ningun, no halla ninguna
+      frases que ya disparaban alguna VIEJA (no anaden cobertura): 0
+
+  CONTRASTE CON EL ACTA 146, DECLARADO Y NO RESUELTO COPIANDO (`EJECUTOR.md` 2):
+      el acta 146 publica SEIS afirmaciones coladas enteras y CINCO sin barrido
+      en su ventana, y publica que la cobertura pasa de 3 vistas a 8 vistas.
+      Mi medicion de hoy sobre el MISMO sujeto congelado da 5 escapes puros.
+      La cifra de cobertura del acta (3 a 8) cuadra con 5 y no con seis.
+
+CIFRA formulas del vocabulario viejo: 12 formulas
+CIFRA formulas anadidas en la vuelta 147: 8 formulas
+CIFRA formulas del vocabulario nuevo: 20 formulas
+CIFRA frases de escape puro sobre el reporte de la 146: 5 frases
+CIFRA frases que ya disparaban una vieja: 0 frases
+EXITCODE: 0

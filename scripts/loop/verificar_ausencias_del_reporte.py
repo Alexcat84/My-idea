@@ -27,13 +27,16 @@ Esto es la guarda que la hace morder. Registrada como CORRECCION 23.
 
 --- LA FRONTERA, PRIMERO, PORQUE ES LO QUE MAS FACIL SE LEE DE MAS ---
 
-ESTA GUARDA NO DECIDE SI LA COSA EXISTE. Decide si LA AFIRMACION esta
-RESPALDADA. Un reporte que diga "no existe X" con un barrido exhaustivo detras
-pasa aunque X exista (entonces el barrido lo habria encontrado y el reporte
-seria contradictorio a la vista de cualquiera, que es justo lo que la guarda
-hermana de cifras dice de su propio caso analogo); y un reporte que diga "no
-existe X" sin barrido cae aunque X de verdad no exista. LO QUE SE VIGILA ES EL
-METODO, NO EL HECHO.
+ESTA GUARDA NO DECIDE SI LA COSA EXISTE. Decide si LA AFIRMACION ESTA
+RESPALDADA POR UN BARRIDO QUE PUDO HABERLA HALLADO. Esa segunda mitad de la
+frase es lo que la vuelta 147 le anade y es toda la escalada: hasta la 146
+bastaba con que EXISTIERA un barrido con su sello; desde la 147, ese barrido
+tiene ademas que HABER TENIDO PODER PARA ENCONTRAR LA COSA, o sea que al menos
+una de las cadenas que busco por contenido exista en alguna parte del universo.
+Sigue sin decidir el HECHO: un reporte que diga "no existe X" con un barrido
+exhaustivo, sellado y CON PODER detras pasa aunque X exista, y un reporte que
+diga "no existe X" sin barrido cae aunque X de verdad no exista. LO QUE SE
+VIGILA ES EL METODO, NO EL HECHO.
 
 Y NO ENTRA EN NINGUNA COLUMNA DE `tallar_estado_de_fase.py`, por la misma razon
 de unidades de la adjudicacion 3.9 del acta 144 y de la CORRECCION 18: aquella
@@ -52,6 +55,29 @@ cualquiera de estas formas, sin distinguir mayusculas:
     no esta en el repositorio / NO INSTALADO / NO INSTALADOS
     PRERREQUISITO CUMPLIDO: NO
 
+Y LAS OCHO QUE SE SUMAN EN LA VUELTA 147 (TAREA 2.a de la ESCALADA DE LA
+ESCALADA), con su motivo MEDIDO y no supuesto: el acta 146 midio el escape de
+las doce de arriba sobre el propio reporte de la 146 y publico SEIS
+afirmaciones de ausencia coladas enteras; REMEDIDO EN LA 147 SOBRE EL MISMO
+SUJETO CONGELADO (`723b4639:docs/loop/REPORTE.md`) SALEN CINCO, y la propia
+cifra de cobertura del acta (de 3 vistas a 8) es la que cuadra con CINCO y no
+con seis. La discrepancia se declara y no se resuelve copiando
+(`EJECUTOR.md` 2). UNA DE ELLAS LLEVABA DENTRO LA
+AFIRMACION FALSA DEL UMBRAL (la cabecera de la PREGUNTA 2, *"EL UMBRAL DE LA
+COLA NO TIENE NUMERO EN NINGUNA PARTE"*), que es literalmente la caida 4.2 de
+esa acta. La familia que se escapaba es la del VERBO DE TENENCIA y la del
+LUGAR:
+
+    no tiene / no tienen / no da un numero
+    no halla ningun / no halla ninguna
+    no trae ningun / no trae ninguna
+    en ninguna parte
+
+LA AMPLIACION ES UN ACTO DECLARADO Y NO UNA ADIVINANZA DEL INSTRUMENTO: se
+escribe aqui entera, como se escribieron las doce, y su efecto se MIDE y se
+publica en el reporte de la vuelta que la instala, sobre sujetos CONGELADOS por
+ref, no sobre el arbol vivo.
+
 LA GUARDA DISPARA DE MAS A PROPOSITO, igual que su hermana: el coste de un
 disparo de mas es UNA CITA de barrido, y el coste de un disparo de menos fue la
 caida 4.1 del acta 145. **EL REMEDIO DE UN ROJO DE ESTA CLASE ES CORRER EL
@@ -62,8 +88,8 @@ plato vacio.
 --- QUE CUENTA COMO BARRIDO EXHAUSTIVO, ESCRITO Y NO ADIVINADO ---
 
 La afirmacion tiene que CITAR EN SU VENTANA un `docs/loop/SALIDA_V<N>_*.txt`
-EXISTENTE que traiga el SELLO COMPLETO que imprime `barrer_ausencia.py`, y son
-CINCO piezas, todas obligatorias:
+EXISTENTE que traiga el SELLO COMPLETO que imprime `barrer_ausencia.py`, y
+desde la vuelta 147 son SEIS piezas, todas obligatorias:
 
   (1) la marca literal `BARRIDO EXHAUSTIVO`
   (2) `PREGUNTA:` con texto (que ausencia respalda ese barrido)
@@ -74,6 +100,19 @@ CINCO piezas, todas obligatorias:
       es exactamente la que faltaba el dia de la caida. Un barrido de una sola
       pierna, por nombre, NO PUEDE hallar un fichero que se llama por su
       operacion duena.
+  (6) LA VITALIDAD DE LA PIERNA POR CONTENIDO (vuelta 147, TAREA 2.b): al
+      menos UNA de las alternativas de primer nivel del patron de contenido
+      tiene que APARECER EN EL UNIVERSO. Su motivo entero, su criterio y su
+      limite estan escritos en el docstring de `barrer_ausencia.py`, seccion LA
+      SEXTA PIEZA DEL SELLO, y no se repiten aqui para que no haya dos
+      versiones de la misma doctrina.
+      LOS SELLOS ANTERIORES A LA 147 NO CAEN POR VIEJOS: si no publican la
+      linea de vitalidad, esta guarda LA RECOMPUTA, con el mismo instrumento y
+      SOBRE EL ARBOL DEL COMMIT DEL SELLO cuando se la juzga congelada
+      (`--sello-ref`). Medir un sello viejo contra el arbol de HOY da falsos
+      verdes, y esta medido: los tres identificadores muertos del barrido del
+      umbral de la 146 salen VIVOS hoy porque el docstring que documenta la
+      caida los escribe.
 
 Y HAY UN ROJO CON NOMBRE PROPIO: si el fichero citado trae `candidatos
 mirados:` y NO trae la marca `BARRIDO EXHAUSTIVO`, la guarda cae nombrando ESE
@@ -172,6 +211,15 @@ RUTA_REPORTE = os.path.join(LOOP, "REPORTE.md")
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from verificar_cifras_del_plan import dividir_frases  # noqa: E402
+# UNA SOLA IMPLEMENTACION DE LA VITALIDAD, NO DOS (la averia de los dos
+# `master_graph` que el chequeo de gemelos vino a curar): el instrumento la
+# computa para imprimirla en su sello y esta guarda la importa de ahi para
+# recomputarla sobre los sellos anteriores a la vuelta 147.
+from barrer_ausencia import (  # noqa: E402
+    ROTULO_VITALIDAD,
+    universo,
+    vitalidad_de_contenido,
+)
 
 # --- VOCABULARIO CERRADO DE LAS AFIRMACIONES DE AUSENCIA ---
 # Ver el docstring, seccion "EL VOCABULARIO DE DISPARO". Ampliarlo es un acto
@@ -184,7 +232,22 @@ FORMULAS_DE_AUSENCIA = (
     "no esta en el repositorio",
     "no instalado", "no instalados",
     "prerrequisito cumplido: no",
+    # LAS OCHO DE LA VUELTA 147 (TAREA 2.a). Ver el docstring: la familia del
+    # VERBO DE TENENCIA y la del LUGAR, que es por donde se colo la caida 4.2
+    # del acta 146. No se sustituye ninguna de las doce de arriba: se suman.
+    "no tiene", "no tienen",
+    "no da un numero",
+    "no halla ningun", "no halla ninguna",
+    "no trae ningun", "no trae ninguna",
+    "en ninguna parte",
 )
+
+# LAS DOCE DE ANTES DE LA VUELTA 147, CONSERVADAS PARA PODER MEDIR EL ESCAPE.
+# No se borra lo viejo, se escribe al lado (`EJECUTOR.md` 8): sin esta tupla no
+# hay forma de publicar "cuantas veia el vocabulario viejo y cuantas el nuevo"
+# sobre el mismo sujeto congelado, que es lo que la TAREA 2.a exige reproducir.
+# `--vocabulario viejo` la usa; ninguna corrida normal la toca.
+FORMULAS_DE_AUSENCIA_VIEJAS = FORMULAS_DE_AUSENCIA[:12]
 
 # --- EL SELLO DEL BARRIDO. Contrato compartido con barrer_ausencia.py. ---
 MARCA_BARRIDO = "BARRIDO EXHAUSTIVO"
@@ -226,9 +289,14 @@ def desadornar(linea):
     return re.sub(r"\s+", " ", s).strip()
 
 
+# El vocabulario EN USO. Vale el nuevo salvo que `--vocabulario viejo` lo
+# cambie, y eso solo lo hace la medicion del escape de la TAREA 2.a.
+VOCABULARIO_ACTIVO = list(FORMULAS_DE_AUSENCIA)
+
+
 def dispara(frase):
     b = frase.lower()
-    return [f for f in FORMULAS_DE_AUSENCIA if f in b]
+    return [f for f in VOCABULARIO_ACTIVO if f in b]
 
 
 def quitar_bloque_simple(texto, abre, cierra, fallos, rotulo):
@@ -244,6 +312,20 @@ def quitar_bloque_simple(texto, abre, cierra, fallos, rotulo):
         fallos.append("%s: la marca de cierre va antes que la de apertura" % rotulo)
         return texto
     return texto[:a] + texto[c + len(cierra):]
+
+
+# REFS QUE SE MUEVEN. Un ref congelado es un HASH (o algo que se resuelva a uno
+# y no cambie): `HEAD`, `HEAD~n`, `HEAD^`, el nombre de una rama y las etiquetas
+# movibles NO lo son. Se comprueba por la FORMA del ref y no por lo que hoy
+# resuelva, porque lo que hoy resuelve es justamente lo que va a cambiar.
+PATRON_HASH = re.compile(r"^[0-9a-f]{7,40}$", re.IGNORECASE)
+
+
+def es_ref_movil(ref):
+    """True si el ref NO es un hash de commit. Ver el comentario de arriba y el
+    bloque de `quitar_citas_congeladas` que lo usa: la enfermedad del sujeto
+    vivo (CORRECCION 22) metida dentro de una cita."""
+    return not bool(PATRON_HASH.match(ref.strip()))
 
 
 def quitar_citas_congeladas(texto, fallos):
@@ -263,6 +345,20 @@ def quitar_citas_congeladas(texto, fallos):
             break
         ref, ruta = m.group(1), m.group(2)
         cuerpo = texto[m.end():fin]
+        if es_ref_movil(ref):
+            # UNA CITA ANCLADA A UN REF MOVIL NO ESTA CONGELADA (vuelta 147,
+            # TAREA 2, hallazgo de la propia medicion). El reporte de la 146
+            # escribio `<!-- CITA CONGELADA HEAD:docs/loop/PROMPT_SIGUIENTE.md
+            # -->` y salio VERDE el dia que se escribio; medido hoy sobre el
+            # blob congelado de ese mismo reporte sale ROJO, porque `HEAD` ya
+            # no es el commit de entonces y `PROMPT_SIGUIENTE.md` se sobreescribe
+            # cada vuelta. Es EXACTAMENTE la enfermedad del SUJETO VIVO que la
+            # CORRECCION 22 curo en la bateria de mutaciones viejas, reaparecida
+            # dentro del mecanismo de cita. Un verde que no sobrevive a su
+            # vuelta no es un verde.
+            fallos.append("CITA CONGELADA %s:%s: %r NO es un ref congelado, es un ref MOVIL, "
+                          "asi que esta cita no esta congelada y su verde no sobrevive a la "
+                          "vuelta. Usese el hash del commit" % (ref, ruta, ref))
         blob = leer_ref(ref, ruta)
         if blob is None:
             fallos.append("CITA CONGELADA %s:%s: no se pudo leer ese blob con git show" % (ref, ruta))
@@ -293,7 +389,7 @@ def quitar_citas_congeladas(texto, fallos):
 
 def sello_del_barrido(nombre):
     """(es_barrido, motivo) del fichero de salida citado. Ver el docstring,
-    seccion QUE CUENTA COMO BARRIDO EXHAUSTIVO: las cinco piezas van todas."""
+    seccion QUE CUENTA COMO BARRIDO EXHAUSTIVO."""
     ruta = os.path.join(LOOP, nombre)
     if not os.path.exists(ruta):
         return False, "el fichero citado no existe en docs/loop/"
@@ -302,6 +398,15 @@ def sello_del_barrido(nombre):
     except UnicodeDecodeError:
         with io.open(ruta, "rb") as f:
             texto = f.read().decode("utf-8", "replace")
+    return sello_de_texto(texto)
+
+
+def sello_de_texto(texto, ref=None):
+    """El MISMO juicio de `sello_del_barrido`, pero sobre el TEXTO y no sobre
+    un nombre de fichero del arbol de trabajo. Se parte en dos (vuelta 147,
+    TAREA 2.c) para poder juzgar un sello CONGELADO POR REF DE GIT, que es la
+    unica forma de que la prueba de mutacion de esta guarda no envejezca
+    (CORRECCION 22). El juicio es uno solo: no hay dos versiones."""
     if MARCA_BARRIDO not in texto:
         if PATRON_CANDIDATOS_A_MANO.search(texto):
             return False, ("trae 'candidatos mirados:' y NO trae la marca %r: es una "
@@ -318,11 +423,97 @@ def sello_del_barrido(nombre):
         faltan.append("CARDINAL:")
     elif int(m_card.group(1)) <= 0:
         faltan.append("CARDINAL: mayor que cero (un universo vacio no es un universo)")
-    if not PATRON_POR_CONTENIDO.search(texto):
+    m_cont = PATRON_POR_CONTENIDO.search(texto)
+    if not m_cont:
         faltan.append("POR CONTENIDO: (la segunda pierna, la que faltaba en la caida)")
     if faltan:
         return False, "trae la marca pero le falta: %s" % ", ".join(faltan)
-    return True, "sello completo"
+
+    # LA SEXTA PIEZA (vuelta 147, TAREA 2.b): LA PIERNA POR CONTENIDO TIENE QUE
+    # PODER HABER HALLADO LA COSA. Ver el docstring de `barrer_ausencia.py`,
+    # seccion LA SEXTA PIEZA DEL SELLO: si TODAS las alternativas del patron de
+    # contenido tienen CERO apariciones en el universo entero, el barrido no
+    # puede distinguir "la cosa no existe" de "adivine mal el nombre".
+    ok_vit, motivo_vit = vitalidad_del_sello(texto, ref)
+    if not ok_vit:
+        return False, motivo_vit
+    return True, "sello completo, con la pierna por contenido viva"
+
+
+PATRON_UNIVERSO_ACOTADO = re.compile(r"^\s*UNIVERSO:.*ACOTADO a (.+?)\s*$", re.MULTILINE)
+PATRON_EXCLUIDOS = re.compile(
+    r"^\s*EXCLUIDOS POR SER SONDA Y NO INSTALACION[^:]*:\s*(\d+)\s*$", re.MULTILINE)
+
+
+def _prefijos_y_excluidos(texto):
+    """Reconstruye el universo DECLARADO EN EL SELLO: los prefijos de la linea
+    `UNIVERSO:` y las rutas excluidas por ser sonda. Las exclusiones se honran
+    a proposito: ignorarlas haria parecer VIVA una alternativa cuyo unico
+    fichero es la propia sonda que la busca, que es justo el caso que
+    `--excluir` existe para no contar."""
+    m = PATRON_UNIVERSO_ACOTADO.search(texto)
+    prefijos = [p.strip() for p in m.group(1).split(",") if p.strip()] if m else []
+    excluidos = []
+    m2 = PATRON_EXCLUIDOS.search(texto)
+    if m2:
+        n = int(m2.group(1))
+        resto = texto[m2.end():].splitlines()
+        for linea in resto[1:1 + n]:
+            if linea.strip():
+                excluidos.append(linea.strip())
+    return prefijos, excluidos
+
+
+def vitalidad_del_sello(texto, ref=None):
+    """(ok, motivo) de la SEXTA PIEZA. Dos caminos, y el segundo es el que hace
+    que esta guarda muerda sobre los barridos de ANTES de la vuelta 147:
+
+      (1) EL SELLO LA PUBLICA (barridos de la 147 en adelante): se lee su linea
+          `VITALIDAD DE LOS PATRONES DE CONTENIDO: <vivas> de <total>`.
+      (2) EL SELLO NO LA PUBLICA (barridos viejos): NO se cae por vieja, que
+          seria un rojo sin contenido. SE RECOMPUTA AQUI Y AHORA, con el mismo
+          `vitalidad_de_contenido` que usa el instrumento (UNA sola
+          implementacion, importada, nunca dos), sobre el universo que el propio
+          sello declara. Asi el rojo del barrido del umbral de la 146 no dice
+          "te falta una linea": dice QUE SUS TRES PATRONES ESTAN MUERTOS, medido
+          hoy.
+
+    En los dos caminos el veredicto es el mismo: TODAS las alternativas muertas
+    es ROJO; al menos una viva pasa."""
+    m = re.search(r"^\s*%s:\s*(\d+) de (\d+)\b" % re.escape(ROTULO_VITALIDAD),
+                  texto, re.MULTILINE)
+    if m:
+        vivas, total = int(m.group(1)), int(m.group(2))
+        if vivas == 0:
+            return False, ("su sello declara %d de %d alternativas de contenido VIVAS: la "
+                           "pierna POR CONTENIDO esta ENTERAMENTE MUERTA y no puede "
+                           "distinguir que la cosa no exista de que se adivinara mal el "
+                           "nombre" % (vivas, total))
+        return True, "vitalidad declarada en el sello: %d de %d vivas" % (vivas, total)
+
+    m_cont = PATRON_POR_CONTENIDO.search(texto)
+    linea = texto[m_cont.start():texto.find("\n", m_cont.start())]
+    cuerpo = linea.split(":", 1)[1]
+    patron = cuerpo.rsplit("|", 1)[0].strip() if "| " in cuerpo else cuerpo.strip()
+    prefijos, excluidos = _prefijos_y_excluidos(texto)
+    try:
+        rutas = [r for r in universo(prefijos, ref) if r not in set(excluidos)]
+        vit = vitalidad_de_contenido(rutas, patron, ref)
+    except Exception as e:
+        return False, ("su sello no publica %r y no se pudo recomputar la vitalidad de sus "
+                       "patrones de contenido: %s" % (ROTULO_VITALIDAD, e))
+    vivas = [x for x in vit if x[1] not in (None, 0)]
+    donde = "el arbol de %s" % ref[:8] if ref else "el arbol de trabajo de hoy"
+    if not vivas:
+        muertas = ", ".join(repr(a) for a, _ in vit)
+        return False, ("su sello es anterior a la vuelta 147 y no publica %r, asi que la "
+                       "recomputo aqui sobre el universo que el mismo declara, leido de %s "
+                       "(%d ficheros): SUS %d ALTERNATIVAS DE CONTENIDO ESTAN TODAS MUERTAS, "
+                       "cero apariciones en todo el universo (%s). Una pierna por contenido de "
+                       "nombres que nadie escribio nunca no puede respaldar una ausencia"
+                       % (ROTULO_VITALIDAD, donde, len(rutas), len(vit), muertas))
+    return True, ("vitalidad RECOMPUTADA sobre %s (sello anterior a la 147): %d de %d "
+                  "alternativas vivas" % (donde, len(vivas), len(vit)))
 
 
 def ventana(frases, i):
@@ -371,7 +562,38 @@ def main():
     ap.add_argument("--reporte", default=RUTA_REPORTE)
     ap.add_argument("--ref", default=None,
                     help="lee el reporte del blob de ese ref en vez del arbol de trabajo")
+    ap.add_argument("--vocabulario", choices=("nuevo", "viejo"), default="nuevo",
+                    help="'viejo' usa las DOCE formulas de antes de la vuelta 147; existe "
+                         "SOLO para medir el escape de la TAREA 2.a sobre sujeto congelado")
+    ap.add_argument("--sello", default=None, metavar="RUTA",
+                    help="juzga el SELLO de UN barrido (no un reporte) y sale VERDE o ROJO; "
+                         "con --sello-ref lo lee del blob de ese ref, congelado")
+    ap.add_argument("--sello-ref", default=None, metavar="REF",
+                    help="ref de git del que leer el fichero de --sello")
     a = ap.parse_args()
+
+    global VOCABULARIO_ACTIVO
+    VOCABULARIO_ACTIVO = list(FORMULAS_DE_AUSENCIA_VIEJAS if a.vocabulario == "viejo"
+                              else FORMULAS_DE_AUSENCIA)
+
+    if a.sello:
+        rel = os.path.relpath(os.path.abspath(a.sello), RAIZ).replace("\\", "/")
+        if a.sello_ref:
+            texto = leer_ref(a.sello_ref, rel)
+            if texto is None:
+                print("ROJO PREVIO: no se pudo leer %s:%s" % (a.sello_ref, rel))
+                return 1
+            sujeto = "%s:%s" % (a.sello_ref, rel)
+        else:
+            if not os.path.exists(a.sello):
+                print("ROJO PREVIO: no existe %s" % a.sello)
+                return 1
+            texto = leer(a.sello)
+            sujeto = a.sello
+        ok, motivo = sello_de_texto(texto, a.sello_ref)
+        print("SUJETO DEL SELLO: %s" % sujeto)
+        print("%s: %s" % ("VERDE EXIT 0" if ok else "ROJO EXIT 1", motivo))
+        return 0 if ok else 1
 
     if a.ref:
         rel = os.path.relpath(os.path.abspath(a.reporte), RAIZ).replace("\\", "/")
@@ -403,7 +625,7 @@ def main():
     print("<!-- COBERTURA DE AUSENCIAS -->")
     print("COBERTURA DE AUSENCIAS: %d vistas / %d respaldadas / %d en rojo | vocabulario "
           "de %d formulas" % (len(vistas), len(respaldadas), len(fallos),
-                              len(FORMULAS_DE_AUSENCIA)))
+                              len(VOCABULARIO_ACTIVO)))
     print("<!-- FIN COBERTURA DE AUSENCIAS -->")
     return 1 if fallos else 0
 

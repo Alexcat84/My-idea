@@ -1,0 +1,83 @@
+BARRIDO EXHAUSTIVO
+  PREGUNTA: esta instalado en el codigo el control A2.6 de OP-A-02, la puerta semantica que bloquea la insercion mientras no haya veredicto citando el vecino
+  UNIVERSO: git ls-files de la rama actual ACOTADO a scripts/, engine/, web/
+  CARDINAL: 1481
+  EXCLUIDOS POR SER SONDA Y NO INSTALACION (declarados, no escondidos): 1
+      scripts/loop/vuelta145_3b_vara_de_codigo_fase07.py
+  POR NOMBRE: aduana|veredicto|puerta_semantica|integrar_packs | 12 ficheros con coincidencia
+  POR CONTENIDO: veredicto|vecino|umbral | 544 ficheros con coincidencia
+  VITALIDAD DE LOS PATRONES DE CONTENIDO: 3 de 3 alternativas aparecen en el universo
+      veredicto                                      -> 472    viva
+      vecino                                         -> 71     viva
+      umbral                                         -> 85     viva
+  NO DECODIFICABLES (mirados y no leidos, NO cuentan como sin coincidencia): 0
+  VEREDICTO: HALLADO
+  LOS QUE COINCIDEN (union de las dos piernas): 547
+      engine/calculadora.py  [contenido]
+      engine/db.py  [contenido]
+      engine/preguntas_cache.json  [contenido]
+      engine/prototipo_motor.py  [contenido]
+      engine/test_aviso_curaduria.py  [contenido]
+      engine/test_calculadora.py  [contenido]
+      engine/test_censo_solo_lectura.py  [contenido]
+      engine/test_integrar_packs_reanuda.py  [nombre]
+      engine/test_juez_sesion.py  [contenido]
+      engine/test_prueba_rumbos.py  [contenido]
+      engine/test_reporte_tipo_oferta.py  [contenido]
+      scripts/_actos_citas.json  [contenido]
+      scripts/_ctx_familia.py  [contenido]
+      scripts/_registrar_lote.py  [contenido]
+      scripts/barrido_direccion.py  [contenido]
+      scripts/barrido_perdida_de_nombre.py  [contenido]
+      scripts/barrido_quinta_cara.py  [contenido]
+      scripts/barrido_quinta_cara_cuerpo.py  [contenido]
+      scripts/build_semantic_index_voyage.py  [contenido]
+      scripts/censo_duplicacion.py  [contenido]
+      scripts/censo_escala.py  [contenido]
+      scripts/consolidar_pack.py  [contenido]
+      scripts/corregir_veredicto.py  [nombre y contenido]
+      scripts/costuras_internas.py  [contenido]
+      scripts/expansion/enriquecer_vs_crear.py  [contenido]
+      scripts/expansion/tejer_ola1.py  [contenido]
+      scripts/extraer_mundo.py  [contenido]
+      scripts/gradiente_pares.py  [contenido]
+      scripts/hseq/_veredictos_rematch.py  [nombre y contenido]
+      scripts/hseq/paso2_dedup.py  [contenido]
+      scripts/hseq/paso3_4_aristas.py  [contenido]
+      scripts/hseq/paso3b_rematch_semantico.py  [contenido]
+      scripts/hseq/paso7_conectar_huerfanos.py  [contenido]
+      scripts/hseq/run_phase1_dominio.py  [contenido]
+      scripts/integrar_packs.py  [nombre]
+      scripts/intra_dominio.py  [contenido]
+      scripts/intra_leer.py  [contenido]
+      scripts/intra_reg.py  [contenido]
+      scripts/inventario_escala.py  [contenido]
+      scripts/loop/_v111_tarea2_6_caso_o_antes.py  [contenido]
+      scripts/loop/_v111_verificar_vuelco_de_veredicto_55a48875.py  [nombre y contenido]
+      scripts/loop/_v115_mut_z_copia.py  [contenido]
+      scripts/loop/_v116_mut_aa_copia.py  [contenido]
+      scripts/loop/_v117_mut_bb_copia.py  [contenido]
+      scripts/loop/_v137_fix_citas.py  [contenido]
+      scripts/loop/_v139_opm01fusion.py  [contenido]
+      scripts/loop/_v139_opm03iii.py  [contenido]
+      scripts/loop/_v144_opm04_328.py  [contenido]
+      scripts/loop/_v144_opm04_367.py  [contenido]
+      scripts/loop/_v145_cuerpo_reporte.py  [contenido]
+      scripts/loop/_v145_registrar_correcciones.py  [contenido]
+      scripts/loop/_v145_registrar_r26.py  [contenido]
+      scripts/loop/_v40_patch_costuras.py  [contenido]
+      scripts/loop/_v40_patch_costuras_b.py  [contenido]
+      scripts/loop/_v40_patch_costuras_c.py  [contenido]
+      scripts/loop/_v40_patch_registro.py  [contenido]
+      scripts/loop/_v41_patch_costuras.py  [contenido]
+      scripts/loop/_v45_lote_784.py  [contenido]
+      scripts/loop/_v45_seccion_opd08.py  [contenido]
+      scripts/loop/_v45_seccion_opd09.py  [contenido]
+      ... y 487 mas
+CIFRA ficheros del universo: 1481 ficheros
+CIFRA ficheros que coinciden por nombre: 12 ficheros
+CIFRA ficheros que coinciden por contenido: 544 ficheros
+CIFRA alternativas de contenido vivas: 3 alternativas
+CIFRA alternativas de contenido en total: 3 alternativas
+CIFRA ficheros que coinciden: 547 ficheros
+EXITCODE: 0

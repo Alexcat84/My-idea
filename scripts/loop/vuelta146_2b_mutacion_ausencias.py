@@ -66,7 +66,21 @@ RUTA_CONGELADA = "docs/loop/REPORTE.md"
 # La frase de la 3.c, la que la caida 4.1 del acta 145 nombra. NO es el
 # veredicto de nada: es la AGUJA que se busca en la salida del proceso.
 AGUJA_3C = "no existe en el repositorio ninguna lista canonica de libros"
-BARRIDO_BUENO = "SALIDA_V146_2C_BARRIDO_VERDE.txt"
+# CORRECCION DECLARADA DENTRO DE LA VUELTA 147 (TAREA 2.f), SIN BORRAR LO VIEJO
+# (`EJECUTOR.md` 8). Este arnes apuntaba a `SALIDA_V146_2C_BARRIDO_VERDE.txt`, y
+# desde la SEXTA PIEZA del sello (la vitalidad de la pierna por contenido) ese
+# fichero YA NO ES UN BARRIDO VALIDO, y con razon: su pierna por contenido era
+# `veredicto continua-o-repite|bloqueo por veredicto ausente|veredicto_ausente`,
+# TRES CADENAS QUE NO APARECEN NI UNA VEZ EN TODO EL UNIVERSO. Es exactamente la
+# enfermedad que la escalada de la 147 viene a matar, y el caso VERDE de la 146
+# estaba construido con ella.
+# EL REMEDIO ES CORRER EL BARRIDO, NUNCA AFLOJAR LA GUARDA (ramal xxi del acta
+# 136): la misma pregunta, rebarrida con la pierna por contenido buscando EL
+# CONCEPTO (`veredicto|vecino|umbral`, las tres alternativas VIVAS), queda en
+# `SALIDA_V147_2C_BARRIDO_A26.txt`. El fichero viejo NO se toca ni se borra:
+# sigue commiteado tal como se sello, y esta linea dice por que dejo de servir.
+BARRIDO_BUENO_VIEJO = "SALIDA_V146_2C_BARRIDO_VERDE.txt"
+BARRIDO_BUENO = "SALIDA_V147_2C_BARRIDO_A26.txt"
 NO_BARRIDO = "SALIDA_V146_MOTOR_APERTURA.txt"
 
 
