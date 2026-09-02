@@ -8,12 +8,14 @@ propio punto 5 y por la decision del fundador del 29 ago 2026.
 Rama `pasada-unica`, leida de `git rev-parse --abbrev-ref HEAD`.
 HEAD sellado de apertura `51b76cd23e7c1c7db8f8c89b0fb97f97d9fb5b4c`, del
 2026-08-29, leido de `git rev-parse 51b76cd2` y `git log -1 --format=%ad`.
-HEAD sellado de cierre `e7942378fe2a16ec54a12f485d61b75efad5135b`, del
-2026-09-01, leido de `git rev-parse HEAD`.
+HEAD sellado de cierre `62c4f0e8fcf2b62b72d495dc779062d2df85d4f5`, del
+2026-09-01, leido de `git rev-parse HEAD` DESPUES del commit del reporte y
+escrito en un commit propio, que es el carril que la vuelta 64 ya uso: el commit
+del reporte no puede contener su propio hash.
 
-Seis commits, leidos de `git log --oneline 51b76cd2..HEAD`: `25895ba4` (1.a),
-`ebdb7962` (1.b), `4a7eee78` (1.c), `f0db4ef6` (1.d), `8165558f` (TAREA 2) y
-`e7942378` (cierre).
+Siete commits, leidos de `git log --oneline 51b76cd2..HEAD`: `25895ba4` (1.a),
+`ebdb7962` (1.b), `4a7eee78` (1.c), `f0db4ef6` (1.d), `8165558f` (TAREA 2),
+`e7942378` (las medidas del cierre) y `62c4f0e8` (el reporte).
 
 ## LA CABECERA NO SE TALLA ESTA VUELTA, Y SE DICE POR QUE
 
@@ -295,4 +297,4 @@ la imprime como linea `CIFRA` en `SALIDA_V137_CIFRAS_DEL_REPORTE.txt`, y luego
 puse cada cita junto a su cifra. Es el remedio que la regla manda y el contrario
 del que la parada reprocho.
 
-Tope: `wc -l docs/loop/REPORTE.md` da 298 lineas.
+Tope: `wc -l docs/loop/REPORTE.md` da 300 lineas.
