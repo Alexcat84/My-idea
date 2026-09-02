@@ -1,0 +1,29 @@
+COBERTURA DEL REPORTE DE LA VUELTA 138, CON SU REPARTO.
+Corte: 2 sep 2026. Condicion del DISCUTIBLE 1 adjudicado en el acta 137, 3.1.
+Corrida FINAL, sobre el REPORTE.md ya completo.
+
+--- verificar_cifras_del_reporte.py sobre docs/loop/REPORTE.md ---
+VERDE EXIT 0: 10 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
+  9 ficheros == 9 contados en `SALIDA_V138_9_APOYO_CIFRAS.txt (CIFRA 'ficheros de apertura sellados en el primer commit', POR ETIQUETA)`
+  14 lineas == 14 contados en `SALIDA_V138_9_APOYO_CIFRAS.txt (CIFRA 'deriva de PLAN_V63_OPM02PROG.json contra su sellado', POR ETIQUETA)`
+  1 lineas == 1 contados en `SALIDA_V138_9_APOYO_CIFRAS.txt (CIFRA 'deriva de PLAN_V64_OPM03II.json contra su sellado', POR ETIQUETA)`
+  10 pares == 10 contados en `SALIDA_V138_3_P5_LAS_SEIS.txt (CIFRA 'pares internos del acto', POR CONJUNTO)`
+  3 pares == 3 contados en `SALIDA_V138_3_P5_LAS_SEIS.txt (CIFRA 'pares internos del acto', POR CONJUNTO)`
+  2 lineas == 2 contados en `SALIDA_V138_3_PIEZA_DE_VARIOS_DUENOS.txt (CIFRA 'lineas de preservar que nombran dos o mas absorbidos', POR CONJUNTO)`
+  7 lineas == 7 contados en `SALIDA_V138_3_PIEZA_DE_VARIOS_DUENOS.txt (CIFRA 'lineas de preservar sin ningun id, que la maquina NO clasifica', POR CONJUNTO)`
+  97 lineas == 97 contados en `SALIDA_V138_9_APOYO_CIFRAS.txt (CIFRA 'lineas anadidas a docs/PENDIENTES.md por R.19', POR CONJUNTO)`
+  0 lineas == 0 contados en `SALIDA_V138_9_APOYO_CIFRAS.txt (CIFRA 'lineas borradas de docs/PENDIENTES.md por R.19', POR CONJUNTO)`
+  3 lineas == 3 contados en `SALIDA_V138_9_APOYO_CIFRAS.txt (CIFRA 'lineas cambiadas del sellado SALIDA_V135_2E_MUTACION_3.txt', POR ETIQUETA)`
+COBERTURA: 10 cotejadas / 0 exentas / 10 cifras
+EXIT=0
+
+--- REPARTO CONTADO DE LA SALIDA DE ARRIBA ---
+CIFRA cifras cotejadas por el camino POR ETIQUETA: 4 cifras
+CIFRA cifras cotejadas por el camino POR CONJUNTO: 6 cifras
+LAS QUE VAN POR CONJUNTO, NOMBRADAS UNA POR UNA:
+   10 pares == 10 contados en `SALIDA_V138_3_P5_LAS_SEIS.txt (CIFRA 'pares internos del acto', POR CONJUNTO)`
+   3 pares == 3 contados en `SALIDA_V138_3_P5_LAS_SEIS.txt (CIFRA 'pares internos del acto', POR CONJUNTO)`
+   2 lineas == 2 contados en `SALIDA_V138_3_PIEZA_DE_VARIOS_DUENOS.txt (CIFRA 'lineas de preservar que nombran dos o mas absorbidos', POR CONJUNTO)`
+   7 lineas == 7 contados en `SALIDA_V138_3_PIEZA_DE_VARIOS_DUENOS.txt (CIFRA 'lineas de preservar sin ningun id, que la maquina NO clasifica', POR CONJUNTO)`
+   97 lineas == 97 contados en `SALIDA_V138_9_APOYO_CIFRAS.txt (CIFRA 'lineas anadidas a docs/PENDIENTES.md por R.19', POR CONJUNTO)`
+   0 lineas == 0 contados en `SALIDA_V138_9_APOYO_CIFRAS.txt (CIFRA 'lineas borradas de docs/PENDIENTES.md por R.19', POR CONJUNTO)`

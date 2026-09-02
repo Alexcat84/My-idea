@@ -1,0 +1,37 @@
+PRUEBA DE QUE LA CELDA QUE FALTA NO SE PUEDE FABRICAR HOY SIN ROMPER EL SELLO.
+Corte: 2 sep 2026, vuelta 138, cierre.
+
+EL TALLADOR --fase04 PIDE DIEZ FAMILIAS Y EL ENCARGO NOMBRO NUEVE.
+La que falta es DESFASE_CALIBRADO, en sus dos lados. El de CIERRE se midio y
+esta (SALIDA_V138_DESFASE_CALIBRADO_CIERRE.txt). El de APERTURA no puede
+existir, y esto NO se afirma: se mide.
+
+=== 1. LA GUARDA DEL SELLO, AHORA MISMO, SIN EL FICHERO ===
+VERDE: los 9 ficheros SALIDA_V138_*_APERTURA.txt nacieron todos en el primer commit de la vuelta (hijo directo del acta):
+   SALIDA_V138_CICLO_ETIQUETAS_APERTURA.txt -- nacido en 7e285147, padre 732cb930
+   SALIDA_V138_CICLO_NUMSTAT_APERTURA.txt -- nacido en 7e285147, padre 732cb930
+EXIT=0
+
+=== 2. SE FABRICA EL FICHERO QUE FALTA, medido contra el ref de apertura ===
+escrito, primeras lineas:
+REF: 732cb930aa3dff3785a3f71a4a79073d3fe2a597
+FILAS EN EL CALIBRADO: 468
+DESFASE DEL CALIBRADO RASTREADO: 3 fila(s)
+
+=== 3. LA GUARDA DEL SELLO, CON EL FICHERO PUESTO ===
+ROJO, apertura de la vuelta 138 NO sellada antes de la 1.a operacion (1 cosa(s) no cuadran):
+   SALIDA_V138_DESFASE_CALIBRADO_APERTURA.txt: ningun commit lo anade (no versionado)
+EXIT=1
+
+=== 4. P.16, QUIEN FABRICA LIMPIA: se retira ===
+ls: cannot access 'docs/loop/SALIDA_V138_DESFASE_CALIBRADO_APERTURA.txt': No such file or directory
+
+=== 5. LA GUARDA DEL SELLO, TRAS RETIRARLO ===
+VERDE: los 9 ficheros SALIDA_V138_*_APERTURA.txt nacieron todos en el primer commit de la vuelta (hijo directo del acta):
+   SALIDA_V138_CICLO_ETIQUETAS_APERTURA.txt -- nacido en 7e285147, padre 732cb930
+EXIT=0
+
+CONCLUSION MEDIDA: el fichero de apertura que el tallador pide haria caer en
+ROJO la guarda que la TAREA 1.d exige en VERDE, porque no nacio en el primer
+commit de la vuelta y no puede nacer alli a posteriori. La celda no sale del
+tallador, y por tanto NO SE TECLEA.

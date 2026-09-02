@@ -1,0 +1,23 @@
+APOYO DE CIFRAS DEL REPORTE DE LA VUELTA 138.
+Cada cifra sale del comando que va encima. Ninguna esta tecleada.
+Corte: 2 sep 2026.
+
+--- ls docs/loop/SALIDA_V138_*_APERTURA.txt | wc -l ---
+9
+CIFRA ficheros de apertura sellados en el primer commit: 9 ficheros
+
+--- git diff --numstat 199401ce^ 199401ce -- docs/PENDIENTES.md ---
+97	0	docs/PENDIENTES.md
+CIFRA lineas anadidas a docs/PENDIENTES.md por R.19: 97 lineas
+CIFRA lineas borradas de docs/PENDIENTES.md por R.19: 0 lineas
+
+--- git diff --numstat b61d8abd^ b61d8abd -- docs/loop/SALIDA_V135_2E_MUTACION_3.txt ---
+3	3	docs/loop/SALIDA_V135_2E_MUTACION_3.txt
+CIFRA lineas cambiadas del sellado SALIDA_V135_2E_MUTACION_3.txt: 3 lineas
+
+--- deriva de los planes sellados contra su blob de sellado ---
+difiere del blob del sellado en 14 linea
+difiere del blob del sellado en 0 linea
+difiere del blob del sellado en 1 linea
+CIFRA deriva de PLAN_V63_OPM02PROG.json contra su sellado: 14 lineas
+CIFRA deriva de PLAN_V64_OPM03II.json contra su sellado: 1 lineas
