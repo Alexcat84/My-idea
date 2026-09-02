@@ -1,21 +1,24 @@
-# REPORTE DE LA VUELTA 140
+# REPORTE DE LA VUELTA 141
 
 **Rama `pasada-unica`. Fase III, EJECUCION, fase 06 MESAS. Regimen completo: el
 modo austero sigue suspendido por su propio punto 5.** Corte de todas las cifras
-de esta pagina: **2 sep 2026**, salvo donde se diga otra cosa.
+de esta pagina: **2 sep 2026** (`git log -1 --format=%ad --date=short`), salvo
+donde se diga otra cosa.
 
-**LA VUELTA ENTREGA LA 0, LA 1, LA 2 Y LA 4 ENTERAS, Y DE LA TAREA 3 ENTREGA TRES
-DE LAS CINCO REMITIDAS Y TRAE DOS COMO PARADA.** Y lo que el encargo pedia
-comprobar por encima de todo: **la fase 06 NO cierra hoy** (medido al cierre en
-`SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt`, que deja sin cumplir a `OP-M-01`,
-`OP-M-04` y `OP-E-04`), **y esta vez la frase no la escribe nadie: la computa un
-instrumento.**
+**LA VUELTA ENTREGA LA 0, LA 1, LA 2 Y LA 4 ENTERAS, Y DE LA TAREA 3 LEE LOS SEIS
+PARES Y EJECUTA UNO.** Lo que mas pesa: **la escalada de la TAREA 2 esta verde en
+cinco de sus seis puntos y el sexto (2.e) se para con su medicion encima**, y
+**la vara de enlace ya mira la vuelta**, con lo que la parada de `OP-M-01-ESLABONES`
+de la vuelta 140 queda **cerrada por poda** y la de `OP-E-04` queda **medida por un
+instrumento en vez de por una frase**. **LA FASE 06 SIGUE SIN CERRAR** (medido al
+cierre en `SALIDA_V141_3E_ESTADO_FASE06_CIERRE.txt`: 16 de catalogo, 13 cumplidas,
+sin cumplir `OP-M-01`, `OP-M-04` y `OP-E-04`).
 
 ## 0. LA CABECERA, TALLADA Y PEGADA ENTERA
 
-`python scripts/loop/tallar_cabecera_reporte.py --vuelta 140 --fase04` da **VERDE
+`python scripts/loop/tallar_cabecera_reporte.py --vuelta 141 --fase04` da **VERDE
 EXIT 0** y su tabla se pega entera, sin tocar una celda. Salida en
-`SALIDA_V140_TALLADOR_CABECERA.txt`.
+`SALIDA_V141_TALLADOR_CABECERA.txt`.
 
 <!-- CABECERA TALLADA -->
 
@@ -23,13 +26,13 @@ EXIT 0** y su tabla se pega entera, sin tocar una celda. Salida en
 |---|---:|---:|
 | censo: nodos / vivos / deprecados | 3.853 / 3.171 / 682 | **3.853 / 3.171 / 682** |
 | Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
-| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 9.226 / 9.200 / 18.426 / 9.901 | **9.231 / 9.205 / 18.436 / 9.906** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 9.231 / 9.205 / 18.436 / 9.906 | **9.230 / 9.204 / 18.434 / 9.905** |
 | motor | 25/25 | **25/25** |
 | web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
 | tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
-| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+5 / +5 / +10 / +5** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **-1 / -1 / -2 / -1** |
 | desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `6ec25c1d` (asunto real leido de git log: 'ACTA DE LA VUELTA 139 DEL AUDITOR: EL DISCUTIBLE 1 GANA CONTRA MI ACTA 138, PERO LA FASE 06 NO CIERRA: LAS CINCO REMITIDAS DE LA VUELTA 118 TIENEN ONCE ARISTAS SIN ESCRIBIR. RACHA DE REPORTE EN DOS Y ESCALADA ENCARGADA.'), HEAD real de apertura `6ec25c1d` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `2730d6af` (leido de `SALIDA_V140_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `4b0fcb20` (asunto real leido de git log: 'ACTA DE LA VUELTA 140 DEL AUDITOR: LA CIEGA SALE 16 DE 16 Y LOS OCHO DISCUTIBLES A FAVOR, PERO LA VARA DE ENLACE NUNCA MIRA LA VUELTA: OP-E-04 NO TIENE TRES FILAS EN VIOLACION, TIENE CINCO, Y DOS DE ESAS VUELTAS LAS ESCRIBIO ESTA MISMA VUELTA CON OP-E-05.'), HEAD real de apertura `4b0fcb20` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `84e4d861` (leido de `SALIDA_V141_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
 
 <!-- FIN CABECERA TALLADA -->
 
@@ -37,406 +40,353 @@ EXIT 0** y su tabla se pega entera, sin tocar una celda. Salida en
 leido al escribir esta linea, en la rama `pasada-unica`:
 
 ```
-2cbb80192491c6bc24ae8e1a577a8b9eb3fbe677
+5a82ce381a494508df36f933aec926d7fd2e3c85
 ```
 
 <!-- COMMITS TALLADOS -->
 
-**LOS COMMITS DE LA VUELTA**, de `git log 6ec25c1d..HEAD` (el acta de la 139
-excluida). Son **12**, y el ultimo, el que escribe esta lista, no puede aparecer
-en ella: es el carril de la vuelta 64 que el acta 137 ya verifico.
+**LOS COMMITS DE LA VUELTA**, de `git log 4b0fcb20..HEAD` (el acta de la 140
+excluida), tallados con `--pretty=format:"  %h %s"` y truncados a 150 caracteres.
+Son **11**, y el ultimo, el que escribe esta lista, no puede aparecer en ella.
+**Y ESTA VEZ EL BLOQUE SE COTEJA**: `--comparar-commits` (TAREA 2.d) exige mismo
+numero, mismos hashes y mismo orden contra `git log`, y su salida se cita abajo.
 
 ```
-  2cbb8019 VUELTA 140, CIERRE 1 DE 2: LA TERCERA ACOTACION DE LA GUARDA DE CIERRE Y SUS DOS MUTACIONES NUEVAS.
-  6121ae9e REPORTE DE LA VUELTA 140: LAS TAREAS 0, 1, 2 Y 4 ENTERAS, TRES REMITIDAS DE CINCO, Y DOS PARADAS. LA FASE 06 NO CIERRA, Y ESTA VEZ LO DICE UN
-  2730d6af VUELTA 140, TAREA 3, REMITIDA 5 DE 5: OP-E-04 NO SE EJECUTA. PARADA, CERO ESCRITURAS, Y NO LA ARREGLO YO.
-  7439c26b VUELTA 140, TAREA 3, REMITIDA 4 DE 5: OP-E-05, EL ENLACE MUTUO. LAS DOS QUE FALTABAN, ESCRITAS RESUELTAS POR ALIAS.
-  291001a3 VUELTA 140, TAREA 3, REMITIDA 3 DE 5: OP-M-01-SEXTO. LA PODA DEL SOLAPE Y LA ARISTA QUE LA SUSTITUYE.
-  4e6bda28 VUELTA 140, TAREA 3, REMITIDA 2 DE 5: OP-M-01-ESLABONES NO SE DECLARA CUMPLIDA. PARADA, Y NO LA ARREGLO YO.
-  ed2fce07 VUELTA 140, TAREA 3, REMITIDA 1 DE 5: OP-M-03-ENLACES. LAS DOS ARISTAS ESCRITAS, Y LA MESA OP-M-03 PASA A DESTINO CUMPLIDO.
-  f26dee37 VUELTA 140, TAREAS 2.b Y 2.c: LA GUARDA APRENDE A LEER LAS AFIRMACIONES DE CIERRE, Y EL ANCLA MOVIL SE CLAVA.
-  7ba117bf VUELTA 140, TAREA 2.a: EL ESTADO DE UNA FASE SE COMPUTA. tallar_estado_de_fase.py con sus tres varas y su tercer saco ruidoso. Mutaciones (i)
-  c7963429 VUELTA 140, TAREA 1: LOS TRES REGISTROS, LOS TRES POR ADICION PURA. R.21, LA CORRECCION 11 (LA CIFRA DEL AUDITOR) Y LA 12 (LA PERDIDA DE NOMB
-  7ccc1885 VUELTA 140, TAREA 0.d: LA GUARDA DE LA APERTURA EN VERDE EXIT 0, CON LOS DIEZ DENTRO.
-  2e2ad80b VUELTA 140, TAREA 0: EL BLOQUE DE APERTURA, SELLADO ANTES DE LA PRIMERA OPERACION, CON LOS DIEZ NOMBRES CANONICOS.
+  5a82ce38 VUELTA 141, CIERRE: LA BATERIA DEL LADO CIERRE CON LOS DIEZ NOMBRES CANONICOS, EL ESTADO DE LA FASE 06 AL CIERRE Y LA CABECERA TALLADA. UNI
+  84e4d861 VUELTA 141, TAREA 4: LA RELECTURA AL DOBLE DEL TRAMO NOMBRADO. LAS 18 DIRECCIONES DE LA FASE 06 MEDIDAS CON IDA Y VUELTA A LA VEZ, NINGUNA 
+  bc17e305 VUELTA 141, TAREA 3, PARES 1 A 5: LEIDOS Y ADJUDICADOS (CUATRO ENLACES MUTUOS Y UNA ESCALERA), PERO OP-E-04 NO SE EJECUTA. PARADA, CERO ESC
+  6a0170e8 VUELTA 141, TAREA 3, PAR 6 DE 6: ESCALERA. LA VUELTA asignacion_recursos_en_gates -> sistema_gates_go_kill SE RETIRA POR LA CONTRAORDEN DEL
+  bf1be708 VUELTA 141, TAREA 3.a Y 3.b: LOS SEIS PARES IMPRESOS ENTEROS Y LEIDOS CON LA VARA DEL 9.22, CADA LINEA CITADA POR SU NUMERO DE PASO EN EL N
+  06cc61fa VUELTA 141, TAREA 2.e: EL CASO POSITIVO SOBRE LA FASE 03 CONGELADA (62d4f28e, CUATRO BLOBS COTEJADOS POR sha256) NO CALZA CON LA EXPECTATIV
+  8ca43b58 VUELTA 141, TAREAS 2.d Y 2.f: EL BLOQUE DE COMMITS SE COTEJA (--comparar-commits, 12 COMPROBACIONES VERDES Y LAS 12 CAEN AL MUTAR SU ESPERA
+  1a027c4a VUELTA 141, TAREAS 2.a, 2.b Y 2.c: LA VARA DE ENLACE APRENDE A MIRAR LA VUELTA, EL CATALOGO DE UNA MESA UNE SUS DOS FUENTES Y LA CELDA PUBL
+  52c29739 VUELTA 141, TAREA 1: LOS TRES REGISTROS, LOS TRES POR ADICION PURA. R.22 (178/0), LA CORRECCION 13 (TRES CONTRA CINCO FILAS DE OP-E-04, LA 
+  2c1e0df7 VUELTA 141, TAREA 0.d: LA GUARDA DE LA APERTURA EN VERDE EXIT 0, CON LOS DIEZ DENTRO.
+  47e2fde1 VUELTA 141, TAREA 0: EL BLOQUE DE APERTURA, SELLADO ANTES DE LA PRIMERA OPERACION, CON LOS DIEZ NOMBRES CANONICOS.
 ```
 
 <!-- FIN COMMITS TALLADOS -->
 
-**EL DESFASE DEL CALIBRADO NO SE MUEVE:** las mismas cuatro filas al abrir y al
-cerrar. Las escrituras de esta vuelta no tocan ninguna fila del calibrado.
+## 1. TAREA 0, EL BLOQUE DE APERTURA
 
-## 1. TAREA 0, EL BLOQUE DE APERTURA. ENTERA, CON LOS DIEZ.
+Sellado **antes de la primera operacion**, en `47e2fde1`, hijo directo del commit
+del acta 140 (`4b0fcb20`). Los **diez** nombres canonicos con `LADO = APERTURA`, y
+sus gemelos de `CIERRE` al final de la vuelta.
 
-Los **DIEZ** `SALIDA_V140_*_APERTURA.txt` en **UN SOLO COMMIT**, `2e2ad80b`, hijo
-directo de `6ec25c1d`, el acta de la vuelta 139, y antes de la primera operacion.
-`verificar_apertura_sellada.py --vuelta 140` da **VERDE EXIT 0** con los diez
-dentro, al abrir (`SALIDA_V140_TAREA0D_APERTURA_SELLADA.txt`) y otra vez al
-cerrar (`SALIDA_V140_CIERRE_APERTURA_SELLADA.txt`).
-`verificar_cierre_sellado.py --vuelta 140`: **VERDE**
-(`SALIDA_V140_CIERRE_SELLADO.txt`).
+`python scripts/loop/verificar_apertura_sellada.py --vuelta 141` da **VERDE EXIT 0
+con los DIEZ dentro** (`SALIDA_V141_TAREA0D_APERTURA_SELLADA.txt`): los diez
+nacieron en `47e2fde1`, padre `4b0fcb20`.
 
-## 2. TAREA 1, LOS TRES REGISTROS. ENTERA, Y LOS TRES POR ADICION PURA.
+## 2. TAREA 1, LOS TRES REGISTROS, LOS TRES POR ADICION PURA
 
-| registro | fichero | numstat |
-|---|---|---|
-| **R.21** (las siete adjudicaciones del acta 139, las dos caidas del ejecutor, LAS TRES DEL AUDITOR y la racha en DOS con su escalada) | `docs/PENDIENTES.md` | **170 anadidas / 0 borradas** |
-| **CORRECCION 11** (la cifra del propio auditor: TRES grupos contra CUATRO) | `docs/plan/CORRECCIONES_A_APLICAR.md` | **144 anadidas / 0 borradas, junto con la 12** |
-| **CORRECCION 12** (la entrada de fase 04 de la perdida de nombre, con el remedio literal del banco 9.28 dentro) | `docs/plan/CORRECCIONES_A_APLICAR.md` | (en el mismo numstat) |
+`git diff --numstat` de la corrida, en `SALIDA_V141_1_NUMSTAT_REGISTROS.txt`:
 
-**Nada se sobreescribe y la cifra vieja no se borra:** la CORRECCION 11 publica
-**TRES** (acta 138, corte 1 sep 2026) al lado de **CUATRO** (medicion del 2 sep
-2026), dice que el proxy sintactico del que el acta se fio **no es ni necesario
-ni suficiente**, y deja las dos con su autor y su corte.
+```
+178	0	docs/PENDIENTES.md
+208	0	docs/plan/CORRECCIONES_A_APLICAR.md
+```
 
-## 3. TAREA 2, LA ESCALADA. ENTERA Y BLOQUEANTE, ANTES DE NINGUNA MESA.
+**`docs/plan/OPERACIONES.jsonl` NO APARECE: cero lineas tocadas**, como el encargo
+manda. **Cero borradas en los dos ficheros.**
 
-### 3.a. EL ESTADO DE UNA FASE SE COMPUTA: `tallar_estado_de_fase.py`
+- **(1.a) R.22 en `docs/PENDIENTES.md`**: las nueve adjudicaciones del acta 140
+  (3.1 a 3.9), mis dos caidas (4.1 de guarda que no alcanza y fuera de lo marcado;
+  4.2 de reporte que **NO acumula**), la de la casa (4.3, el delimitador sin
+  cotejo) y **las dos del auditor** (4.4 de procedimiento y 4.5 de encargo),
+  escritas igual que las mias. La racha de reporte **sigue en DOS** con la escalada
+  encargada.
+- **(1.b) CORRECCION 13**, por adicion: la cuenta de filas de `OP-E-04` en
+  violacion de su propia verificacion 0. **TRES** (mi reporte de la 140: `LD-42`,
+  `LD-48`, `LD-53`, corte 2 sep 2026) al lado de **CINCO** (auditor, re-medida por
+  mi en esta vuelta: `LD-35`, `LD-42`, `LD-48`, `LD-49`, `LD-51`). **La vieja no se
+  borra.** El porque esta medido: mi vara solo miro las filas que aun no estaban
+  puestas. La medicion de hoy sale de
+  `SALIDA_V141_1B_IDA_Y_VUELTA_OPE04.txt`.
+- **(1.c) CORRECCION 14**, por adicion: el criterio del par colapsado, con sus
+  **dos citas literales** dentro (la contraorden del 12 ago 2026 de
+  `EXPEDIENTE_MESA_JUNTA_ASESORA.md` con su remedio operativo, y el banco 9.22 con
+  el hueco de orden 1 del `00_INDICE`), y las tres cosas que el encargo pide: el
+  par se relee con la vara del 9.22; dos lineas distintas dan ENLACE MUTUO y la
+  misma linea da ESCALERA con la vuelta retirada; y quien corta es la operacion
+  cuya verificacion lo exige, en su commit, declarandolo como giro o como poda,
+  con el grado total medido antes y despues.
 
-Instrumento nuevo, nombre estable y sin numero de vuelta. Lee el catalogo de una
-fase de **su fichero**: las operaciones cuya `fase` es esa, mas las remitidas por
-escrito, y los dos registros de remision se **parsean**, no se teclean
-(`00_INDICE.md:261` para las seis de la fase 03, y la seccion
-`SEGUNDA MITAD, LAS CINCO REMITIDAS A LAS MESAS DE LA FASE 06` de
-`04_ENLACES.md` para las cinco de la vuelta 118).
+## 3. TAREA 2, LA ESCALADA. CINCO PUNTOS VERDES Y UNO PARADO
 
-**LAS TRES MUTACIONES** (`SALIDA_V140_2A_MUTACIONES.txt`):
+**Las mutaciones de 2.a, 2.b y 2.c** (`SALIDA_V141_2ABC_MUTACIONES.txt`):
+**13 comprobaciones, 13 verdes, y las 13 caen al mutarles el esperado.** La prueba
+de mutacion del arnes **re-evalua** cada comparacion contra el mismo valor
+obtenido; no cuenta literales.
 
-| caso | que prueba | veredicto |
-|---|---|---|
-| **(i)** | se le quita al grafo en memoria una arista presente, **elegida por computo y no tecleada**: cumplido baja de 9 a 8 y `OP-M-01-ESLABONES` sale NOMBRADA. Contraprueba con copia sin mutar: la cifra no se mueve | **VERDE** |
-| **(ii)** | una remitida de mentira que no existe en `OPERACIONES.jsonl`: ROJO nombrandola, y sin mutar hay cero fallos | **VERDE** |
-| **(iii)** | caso positivo sobre sujeto congelado, la fase 05 en el commit `e4464be5` con los cuatro blobs cotejados por sha256 | **NO CALZA. SE DICE Y SE PARA ESTE CASO** |
+- **(2.a) LA VARA DE ENLACE MIRA LA VUELTA.** Lee la `verificacion` de la ficha y
+  clasifica su regimen en `PROHIBE`, `MUTUO` o `SIN REGLA`, **sin mirar el campo
+  `tipo`**, que el encargo prohibe. Las frases van **literales de las fichas** y
+  citadas en el codigo. La excepcion del banco 9.22 va **escrita**. La celda
+  publica, por operacion, cuantas direcciones tienen la ida y **cuantas tienen la
+  vuelta**, nombrandolas. Mutaciones: **(i)** se mete la vuelta de una direccion
+  limpia y `OP-M-01-SEXTO` (elegida por computo) sale nombrada y la cifra baja;
+  **(ii)** se quita una vuelta existente y `OP-M-01-ESLABONES` (por computo) sube a
+  cumplida. Las dos con contraprueba sin mutar.
+- **(2.b) EL CATALOGO DE UNA MESA UNE SUS DOS FUENTES.** La nomina de `OP-M-01`
+  pasa de **5 a 6**: `OP-M-01-SEXTO` entra **por remision**, parseada de
+  `04_ENLACES.md`, y la celda publica de donde sale cada hija. Mutacion: sin la
+  tabla de remision, la nomina pierde a `OP-M-01-SEXTO`.
+- **(2.c) LA CELDA PUBLICA UNA SOLA UNIDAD.** Numerador y denominador son
+  **direcciones**; las filas de ficha van nombradas como tales. La fila de
+  `OP-E-04` ya no dice *"4 de 9 presentes"*: dice **"3 de 8 direcciones con la IDA
+  presente (9 filas de ficha colapsan en 8 direcciones)"**. Mutacion sobre una
+  ficha fabricada con dos filas que colapsan por alias, con contraprueba sin
+  colapso.
+- **(2.d) EL BLOQUE DE COMMITS SE COTEJA.** `--comparar-commits` en
+  `tallar_cabecera_reporte.py`. **12 comprobaciones verdes y las 12 caen al mutar
+  su esperado** (`SALIDA_V141_2D_MUTACION_COMMITS.txt`): bloque intacto VERDE,
+  commit inventado ROJO nombrandolo, orden cambiado ROJO, asunto truncado VERDE y
+  **declarado**, asunto que no es prefijo del real ROJO.
+- **(2.f) EL SELLO DE LA MUTACION 3 ES REPRODUCIBLE.** El temporal pasa a nombre
+  fijo bajo un directorio temporal (P.16). **Dos corridas seguidas dan el mismo
+  sha256** (`SALIDA_V141_2F_DOS_CORRIDAS.txt`) y el `git diff --numstat` tras la
+  reparacion sale **en cero** (`SALIDA_V141_2F_NUMSTAT_EN_CERO.txt`). Y la
+  comprobacion entra en `verificar_mutaciones_viejas.py`: cada mutacion vieja se
+  corre **dos veces** y `NO REPRODUCIBLE` es ROJO. Su prueba de mutacion
+  (`--mutar-reproducibilidad`) fabrica dos scripts, uno con salida aleatoria y otro
+  con salida fija, y exige que marque al primero y deje pasar al segundo.
+  **La bateria completa sale VERDE** con las cinco corriendo, mordiendo y con sus
+  salidas selladas identicas en dos corridas.
 
-**LA (iii) NO CALZA Y AQUI VA ENTERO EL PORQUE, COMPUTADO Y NO OPINADO.** El
-encargo espera que la fase 05 salga con todo su catalogo cumplido salvo
-`OP-S-12`. Sale **cumplido 1** (`OP-S-01`) y **9 sin cumplir**, las nueve por
-falta de vara. **Y NO ES UN DEFECTO DEL INSTRUMENTO, ES UNA PROPIEDAD DEL
-SUJETO:** el propio caso imprime que `OP-S-05`, `OP-S-08`, `OP-S-11` y `OP-S-12`
-tienen **HUELLA DE GRAFO IDENTICA** (`nodos`, `superviviente`, `aristas_nuevas` y
-`eliminar`, los cuatro campos con los que el grafo se mide, vacios en las
-cuatro). **Ninguna vara de grafo puede separarlas.** Lo unico que separa a
-`OP-S-11` de `OP-S-12` es el campo `estado`, y el encargo dice expresamente que
-el destino se mide **contra el grafo y NO contra `estado`**. Lo digo y paro **ese
-caso**, no la tarea: las mutaciones (i) y (ii) muerden, y el instrumento hace
-sobre la fase 06 exactamente lo que la escalada pedia.
+### 3.1. **(2.e) PARADA 1 DE 3: EL CASO POSITIVO SOBRE LA FASE 03 NO CALZA**
 
-**LAS VARAS, Y UNA ES MIA:** `FUSION` y `ENLACE` las escribio el encargo. La
-tercera, **`MESA`**, es **lectura mia** y va como **DISCUTIBLE 1**: una mesa
-tiene destino cumplido cuando lo tienen todas sus hijas del catalogo, leidas de
-su campo `bloquea_a`. La cuarta, **`SIN VARA ESCRITA`**, no mide: **cae en NO
-COMPUTABLE, se cuenta entre las que no cumplen y se nombra aparte** (**DISCUTIBLE
-2**).
+El sujeto esta clavado en **`62d4f28e`** (*"Decision del fundador: la fase 03
+cierra con remision..."*, 26 ago 2026, asunto leido de `git log`), con sus
+**cuatro blobs cotejados por sha256** en cada corrida. La expectativa del encargo
+era *"su catalogo con destino cumplido salvo las SEIS remitidas a la fase 06"*.
 
-### 3.b. LA GUARDA DE CIFRAS APRENDE A LEER LAS AFIRMACIONES DE CIERRE
+**NO CALZA, y lo digo y paro ese caso** (`SALIDA_V141_2E_CASO_POSITIVO_FASE03.txt`):
 
-Es la caida 4.1 del acta 139 puesta donde ocurrio. Vocabulario **CERRADO y
-escrito dentro del codigo**, con su docstring diciendo que es cerrado: sujetos
-`fase` y `catalogo`, y ocho verbos. La regla son **dos cosas, las dos
-objetivas**, y la guarda **no intenta distinguir una afirmacion de una
-negacion**, que seria leerle la mente al que escribe: **(1)** toda frase de la
-familia CITA un fichero de `tallar_estado_de_fase.py` en su ventana, y sin cita
-es ROJO; **(2)** si el fichero citado dice `sin cumplir: N` distinto de cero, la
-ventana **tiene que NOMBRAR LAS N**, y si calla alguna es ROJO nombrandola.
+```
+LO QUE EL ENCARGO ESPERA: catalogo 16 ... cumplido 10 y sin cumplir exactamente
+  ['OP-M-01-FUSION','OP-M-02-ACCLIMATE','OP-M-03-III','OP-M-05-APERTURA','OP-M-05-EDIFICIO','OP-M-05-INDICE']
+LO QUE SALE:              cumplido 6 y sin cumplir 10, con CUATRO DE MAS
+SIN CUMPLIR DE MAS (4): OP-M-02-ADMIT, OP-M-02-MEDIOS, OP-U-01, OP-U-02
+```
 
-**POR QUE ESA SEGUNDA, Y ES UNA REPARACION QUE ME HALLE A MI MISMO CORRIENDO LA
-GUARDA CONTRA ESTE REPORTE.** Mi primera version exigia `sin cumplir: 0` a secas,
-y con esa regla **el reporte que dice la verdad caia en ROJO**: escribir *"la
-fase 06 NO cierra"* citando `SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt`, que deja
-sin cumplir a `OP-M-01`, `OP-M-04` y `OP-E-04`, era tan rojo como escribir
-*"cierra"* sin citar nada. Una guarda que castiga igual a quien miente y a quien informa del
-estado real no empuja a la honestidad: **empuja a no hablar del asunto**, que es
-la ceguera del ramal (xxi) por otra puerta. Y la caida 4.1 nunca fue decir
-*"cierra"*: fue decirlo **callando las cinco remitidas**. Bajo la regla reparada
-esa frase da ROJO nombrandolas una a una.
+**Las seis remitidas se leen del `00_INDICE` de ese mismo commit, no se teclean**, y
+las seis salen exactamente. **Los cuatro de mas tienen dos causas distintas y las
+dos estan medidas:**
 
-**LO QUE LA REGLA SIGUE PERMITIENDO, dicho para que nadie la lea de mas:** un
-texto que escriba *"cierra"* Y ADEMAS nombre las que faltan pasaria. Es prosa que
-se contradice sola y que salta a la vista; lo que la guarda impide es lo que
-**no** salta a la vista.
+- **`OP-U-01` y `OP-U-02`**: su `superviviente` es `null` y no tienen
+  `aristas_nuevas`, asi que caen en `SIN VARA ESCRITA`. **Es la misma especie que
+  la 4.5 del acta 140**: un sujeto que la vara de grafo no puede morder. No es
+  defecto del instrumento.
+- **`OP-M-02-ADMIT` y `OP-M-02-MEDIOS`, Y ESTA ES LA QUE TRAIGO:** su
+  `superviviente` escrito en la ficha es `fase_admit` y
+  `seis_medios_comunicacion_cliente`, y los dos **estan DEPRECADOS y resuelven por
+  alias** a `fase_admit_celebracion` y `estrategia_multicanal_bienvenida`, tanto en
+  `62d4f28e` como **hoy**. **LA VARA `FUSION` NO LE PONE EL RESOLUTOR AL
+  SUPERVIVIENTE**, y `EJECUTOR.md` regla 9 dice que *todo conteo que toque ids pasa
+  por el resolutor antes de contar* (P.1). **PARADA: no la arreglo yo.** Ensanchar
+  la vara `FUSION` no esta en el encargo y mueve una vara de destino.
+  **No mueve ninguna cifra de la fase 06**, medido: las dos son de la fase 03 y no
+  estan en el catalogo de la 06.
 
-**Y UNA TERCERA REPARACION, TAMBIEN HALLADA CORRIENDOLA CONTRA ESTE REPORTE, ya
-con su lista de commits pegada:** el bloque de commits es un **tallado de git**,
-y sus lineas son **asuntos de commit, no prosa mia**. Uno de los de esta vuelta
-lleva en su asunto la misma frase sobre el estado de la fase 06 que
-`SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt` mide (sin cumplir: `OP-M-01`, `OP-M-04`
-y `OP-E-04`), y la guarda lo leia como una afirmacion del reporte y pedia una
-cita **que dentro de una lista de commits no hay donde poner**, porque la ventana
-es forward-only por doctrina adjudicada y detras solo hay mas commits. **La reparacion es la que la casa ya usa** para la cabecera
-tallada: se delimita con dos marcas y se le dan **las mismas tres reglas**, con
-las dos marcas se quita lo delimitado, **sin ninguna marca no se quita nada y se
-recorre todo**, y con una sola es ROJO.
+### 3.2. CORRECCION DECLARADA DE UN INSTRUMENTO MIO, Y NO ME LA PIDIO NADIE
 
-**LAS SIETE MUTACIONES, VERDE** (`SALIDA_V140_2B_MUTACIONES.txt`), sobre sujeto
-fabricado y **retirado por P.16**: (a) frase de cierre sin cita, ROJO; (b) con
-cita a un fichero que dice `sin cumplir: 3` y sin nombrarlas, ROJO **nombrando
-las tres, leidas del fichero y no tecleadas**; **(b bis) la misma frase
-nombrandolas, VERDE, que es justo el caso que mi primera version tiraba**; (c)
-sin la frase, VERDE; (c bis) con cita a un fichero que dice `sin cumplir: 0`,
-VERDE y cotejada; **(d) la misma frase sin cita metida DENTRO del bloque
-delimitado no se ve, y el mismo texto sin las marcas SI se ve**; **(e) una sola
-marca, ROJO ruidoso**.
+`vuelta140_2a_mutaciones.py` caso **(i)** se puso **ROJO** al ensanchar la vara, y
+**no porque la guarda se rompiera**: su sujeto estaba **TECLEADO**
+(`SUJETO_ENLACE = "OP-M-01-ESLABONES"`), y con la vara nueva esa operacion pasa a
+`SIN CUMPLIR` por si sola, asi que quitarle una ida ya no puede bajar la cifra.
+**Es la misma especie que la 4.5 del acta 140 y se arregla igual: el sujeto se
+computa.** Ahora elige la primera operacion `ENLACE` que hoy cumple y tiene una
+arista presente, y **el caso (i) vuelve a VERDE** sobre `OP-E-05`, elegida por
+computo (`SALIDA_V141_2A_VUELTA140_REPARADA.txt`). El texto viejo queda en el
+fichero con su motivo, sin borrarse.
 
-**Y LA PRUEBA DE QUE SIRVE, sobre el sujeto real que la motivo**
-(`SALIDA_V140_2B_SOBRE_REPORTE_139.txt`): corrida contra el reporte de la vuelta
-139 **caza la caida 4.1 en sus dos sitios**, la linea 8 (la cabecera) y la
-linea 391 (la conclusion), y otras cuatro de la misma familia.
+## 4. TAREA 3, LOS SEIS PARES: SEIS LEIDOS, UNO EJECUTADO, CINCO PARADOS
 
-**LA ARIDAD DE `verificar()` NO SE TOCA**, y se dice por que: dos llamadores
-sellados de otras vueltas desempaquetan cuatro valores
-(`vuelta135_2a_diagnostico.py:30` y `vuelta139_2b_mutaciones.py:136`). Las
-afirmaciones cotejadas salen por un parametro opcional de recogida.
+**(3.a) Los dos nodos de cada par, enteros**, en
+`SALIDA_V141_3A_LOS_SEIS_PARES.txt`. **(3.b) La vara del 9.22**, con **cada linea
+citada por su numero de paso EN EL NODO DE HOY y su texto leido del grafo**, en
+`SALIDA_V141_3B_VARA_922.txt`. La adjudicacion **la computa la regla**, no la
+escribo yo: dos lineas distintas, una en cada nodo, es MUTUO; una sola linea, o
+las dos en el mismo nodo, es ESCALERA.
 
-### 3.c. EL ANCLA DE LA 2.b DEJA DE MOVERSE
-
-El bloque (iii) de `vuelta139_2b_mutaciones.py` deja de resolver su sujeto con
-*el ultimo commit que toca el reporte* y lo clava en `23bde6cd:docs/loop/REPORTE.md`
-con su sha256 cotejado en cada corrida. **Reanclado da exactamente lo que el acta
-139 re-midio a mano** (`SALIDA_V140_2C_V139_2B_REANCLADO.txt`): guarda vieja
-**10**, guarda nueva **26**, la ceguera perdia **16**, y **75 filas** de tabla en
-el reporte de la 138.
-
-El script entra en la nomina de `verificar_mutaciones_viejas.py`, que pasa a
-**CINCO** y da **ANCLA PERDIDA 0** (`SALIDA_V140_2C_MUTACIONES_VIEJAS.txt`). Y la
-prueba de que eso sirve de algo, con su contraprueba
-(`SALIDA_V140_2C_MUTACION_ANCLA.txt`): con el sha256 cambiado sobre una copia, la
-bateria lo clasifica **ANCLA PERDIDA** y no verde; con la copia intacta, **OK**.
-
-**Y UNA RECURSION QUE LA PROPIA 2.c CREO, HALLADA CORRIENDOLA Y NO LEYENDOLA:**
-la bateria pasa a correr el script y el script ya corria la bateria. Cortada con
-`LOOP_BATERIA_EN_CURSO`, y el sub-caso omitido **se declara como OMITIDO POR
-RECURSION**, nunca como verde.
-
-**TRES SALIDAS SELLADAS DE LA VUELTA 135 CAMBIAN Y SE DECLARA:**
-`SALIDA_V135_2E_MUTACION_1/2/3.txt`. Lo unico que cambia es la linea `COBERTURA`,
-que ahora dice ademas cuantas afirmaciones de cierre se cotejaron. **Ningun
-veredicto se mueve.**
-
-## 4. TAREA 3, LAS CINCO REMITIDAS. TRES ENTREGADAS Y DOS PARADAS.
-
-**LA TABLA SALE DEL INSTRUMENTO**, `SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt`, que
-al cierre deja sin cumplir a `OP-M-01`, `OP-M-04` y `OP-E-04`.
-
-| # | operacion | que se hizo | destino medido al cierre |
+| par | contra | direccion y su linea (paso EN EL NODO DE HOY) | adjudicacion |
 |---|---|---|---|
-| 1 | `OP-M-03-ENLACES` | las dos escritas | **CUMPLIDO** |
-| 2 | `OP-M-01-ESLABONES` | verificada, **no se re-escribe nada** | **PARADA: su verificacion 0 cae** |
-| 3 | `OP-M-01-SEXTO` | poda del solape mas la arista | **CUMPLIDO** |
-| 4 | `OP-E-05` | las dos que faltaban, resueltas por alias | **CUMPLIDO** |
-| 5 | `OP-E-04` | **cero escrituras** | **PARADA: su verificacion 0 no se puede cumplir** |
+| **1** | `gestion_portafolio_dos_niveles` | `dos_niveles -> sgk` por su **paso 1**; `sgk -> dos_niveles` por el **paso 10** de `sgk` | **ENLACE MUTUO** |
+| **2** | `gestion_portafolio_formal` | `formal -> sgk` por su **paso 6**; `sgk -> formal` por el **paso 10** de `sgk` | **ENLACE MUTUO** |
+| **3** | `portfolio_management` | `sgk -> pm` por el **paso 10** de `sgk`; `pm -> sgk` por el **paso 4** de `pm` | **ENLACE MUTUO** |
+| **4** | `gestion_portafolio_foco` | `sgk -> foco` por el **paso 10** de `sgk`; `foco -> sgk` por el **paso 2** de `foco` | **ENLACE MUTUO** |
+| **5** | `revision_portafolio_periodica` | `sgk -> revision` por el **paso 10** de `sgk`; la contradireccion **no expande ninguna linea** | **ESCALERA** |
+| **6** | `asignacion_recursos_en_gates` | `sgk -> asignacion` por el **paso 5** de `sgk`; la contradireccion **no expande ninguna linea** | **ESCALERA** |
 
-### 4.1. LO QUE SE ESCRIBIO, Y CON QUE GUARDAS
+**LOS SEIS VAN MARCADOS DISCUTIBLES**, y lo estaban en la salida sellada
+**antes** de ejecutar nada: el commit `bf1be708` los sella y el `6a0170e8` es el
+que ejecuta.
 
-`vuelta140_3_escribir_aristas.py` **importa el parser de aristas del instrumento
-que MIDE**, para que el que cuenta y el que escribe no partan la ficha de dos
-maneras. Siete guardas por arista, la operacion se escribe entera o no se
-escribe, y **mutacion negativa en las tres**, siempre con cero escrituras.
+### 4.1. PAR 6, EJECUTADO: LA PODA, Y LA PARADA DE LA 140 QUEDA CERRADA
 
-- **`OP-M-03-ENLACES`.** Los tres extremos vivos y directos, leidos contra
-  `pivote_estrategico` **tal como quedo en la vuelta 139** y no contra la ficha
-  del 12 ago 2026.
-- **`OP-M-01-SEXTO`.** **La poda se leyo contra el nodo de hoy y calza mejor que
-  contra la ficha:** las dos mitades de lo podado viven literales en el
-  superviviente de 17 pasos. **El paso podado no se eligio por su numero:** se
-  busco por su contenido, salio uno solo y cayo en la posicion que la ficha
-  nombra. Las cuatro piezas propias de `preservar` siguen enteras despues.
-- **`OP-E-05`.** **La resolucion por alias no lo convierte en otra cosa, y lo
-  medi antes de escribir:** siguen siendo cuatro direcciones entre nodos vivos y
-  distintos, y **las dos lineas que justifican el mutuo estan vivas**: el paso 5
-  del absorbido vive hoy en el paso 10 del superviviente, medido.
+La vuelta `asignacion_recursos_en_gates -> sistema_gates_go_kill` **se retira**,
+que es lo que la **verificacion 0 de `OP-M-01-ESLABONES` exige** literalmente
+(*"LA VUELTA NO EXISTE NI LITERAL NI RESUELTA en ninguno de los dos peldanos"*) y
+lo que la contraorden del 12 ago 2026 ordena. Guardas corridas, todas con su
+salida (`SALIDA_V141_3C_PAR6_SIMULACION_Y_MUTACION.txt` y
+`SALIDA_V141_3C_PAR6_EJECUCION.txt`):
 
-### 4.2. LAS DOS PARADAS, Y SON LA MISMA ESPECIE
+- **simulacion previa sobre copia en memoria** antes de tocar disco;
+- **mutacion negativa con `--ejecutar`**: la direccion se elige **por computo**
+  entre las que ninguna ficha nombra, y **cae en la guarda 4 con CERO
+  ESCRITURAS**, comprobado con `git status` vacio;
+- **los dos extremos vivos** tras resolver (P.1), **cero auto-aristas**, **cero
+  duplicadas nuevas** (las preexistentes se imprimen y no bloquean: tienen dueno,
+  `OP-S-12`);
+- **EL GRADO TOTAL ANTES Y DESPUES**, del censo recompilado:
+  **9.231 / 9.205 / 18.436 / 9.906** pasa a **9.230 / 9.204 / 18.434 / 9.905**.
+  **La union baja en EXACTAMENTE UNO: es una PODA y no sube el grado**, como la
+  contraorden manda;
+- **ciclo de Gate 0 con las suites detras**: Gate 0 OK, motor 25/25, web 80/1.030
+  passed 3 skipped, tsc EXIT 0.
 
-**Las dos salen del mismo sitio: la fusion `OP-M-01-FUSION`, ejecutada en la
-vuelta anterior, dejo cinco destinos colapsados en un solo nodo, y con ellos
-pares que antes eran distintos.**
+**`OP-M-01-ESLABONES` pasa a destino cumplido** con la vara ensanchada, y su
+parada de la vuelta 140 queda cerrada por la via que su propia ficha pedia.
 
-**PARADA 1, `OP-M-01-ESLABONES`** (`SALIDA_V140_3_PARADA_OPM01ESLABONES.txt`).
-Sus dos aristas estan presentes, cada una una sola vez tras resolver y con el id
-vivo escrito. Pero su verificacion 0 dice *"LA VUELTA NO EXISTE NI LITERAL NI
-RESUELTA"* y **la vuelta existe**: `asignacion_recursos_en_gates ->
-sistema_gates_go_kill`, medida contra git, la fabrico la redireccion de
-`3f249a03` sobre una entrada que antes era `estructura_de_gates`.
+**CORRECCION DECLARADA DE MI PROPIA SALIDA, y el texto viejo se queda:** la linea
+*"GRADO TOTAL DESPUES"* de `SALIDA_V141_3C_PAR6_EJECUCION.txt` salio **igual** que
+la de antes porque `vuelta83_conteo_aristas.py` lee `master_graph.json` y la poda
+escribe en `dataset/nodos/`, y el ciclo todavia no habia recompilado. La cifra no
+es falsa: **esta mal rotulada**. La buena vive en `SALIDA_V141_3_CONTEO_PAR6.txt` y
+la correccion esta escrita **dentro del propio fichero**, debajo del texto viejo.
 
-**PARADA 2, `OP-E-04`** (`SALIDA_V140_3_PARADA_OPE04.txt`). Sus nueve pares
-colapsan en ocho aristas distintas tras resolver. Cuatro ya estan, dos pasarian,
-y **tres quedan bloqueadas porque su vuelta existe**: LD-42 (la fabrico la
-fusion), LD-48 (su vuelta es LD-40 de su propia ficha) y LD-53 (su vuelta es
-LD-45 de su propia ficha). **No escribo ni las dos que pasan**, porque LD-45 es
-justamente la vuelta de LD-53 y escribirla sola seria elegir cual direccion
-sobrevive.
+### 4.2. PARADA 2 DE 3: `OP-E-04` NO SE EJECUTA, Y AHORA SE SABE POR QUE
 
-**NINGUNA DE LAS DOS LA ARREGLO YO:** la ficha dice que la vuelta no debe
-existir, pero no dice **quien la quita** ni si la regla de la escalera manda
-sobre la redireccion de una fusion (`EJECUTOR.md` regla 5).
+Los pares **1, 2, 3, 4 y 5** cubren **ocho de las nueve filas** de `OP-E-04`.
+Cuatro de esos pares salen **ENLACE MUTUO**. Y ahi choca con su propia ficha:
+**la verificacion 0 de `OP-E-04` dice *"UNA SOLA DIRECCION POR ENLACE... la vuelta
+no debe existir ni literal ni resuelta"***, sin la excepcion del 9.22 que
+`OP-E-05` si lleva escrita.
 
-## 5. TAREA 4, LA RELECTURA AL DOBLE: TODA AFIRMACION DE CIERRE
+**No lo afirmo: lo mido con los instrumentos de la casa**
+(`SALIDA_V141_3C_PARES_1A5_PARADA.txt`), y las dos corridas dejan el arbol limpio:
 
-**LA FASE 06 NO CIERRA, Y NO LO DIGO YO, LO DICE EL INSTRUMENTO**, corrido al
-cierre y pegado de `SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt`, que deja sin cumplir
-a `OP-M-01`, `OP-M-04` y `OP-E-04`:
+- `vuelta140_3_escribir_aristas.py --op OP-E-04` **aborta sin escribir nada**, con
+  **tres ROJOS de la misma especie**: *"la direccion contraria ya existe y la ficha
+  NO dice MUTUO"*, para `sgk -> revision_portafolio_periodica`,
+  `portfolio_management -> sgk` y `gestion_portafolio_foco -> sgk` (esta ultima
+  bloqueada por **su propia hermana de la misma corrida**);
+- el retiro del par 5 (**el giro de `LD-42`**) **cae en su guarda 5**: la ida
+  `sgk -> revision_portafolio_periodica` **no esta puesta**, y retirar la vuelta
+  dejaria el par suelto. El giro exige escribir la ida **en el mismo commit**, y
+  escribirla es justo lo que el escritor aborta.
+
+**PARADA, CERO ESCRITURAS, Y NO LA ARREGLO YO.** El remedio es de **ficha**, no de
+grafo: `OP-E-04` necesita la excepcion del banco 9.22 escrita en su verificacion,
+igual que la lleva `OP-E-05` y que el **hueco de orden 1 del `00_INDICE`** exige
+(*"LA GUARDA TIENE QUE LLEVAR LA EXCEPCION ESCRITA"*). Reescribir una ficha del
+plan no es mio (`EJECUTOR.md` regla 5).
+
+**Y va dicho entero, porque es lo que la 3.6 del acta 140 defiende:** aunque
+pudiera escribir alguna fila suelta, **una operacion de enlace se escribe entera o
+no se escribe**, y con los pares 3, 4 y 5 bloqueados `OP-E-04` no puede escribirse
+entera hoy.
+
+### 4.3. PARADA 3 DE 3: LO QUE LD-50 DICE DEL PAR 5, Y EL ENCARGO NO LO SABIA
+
+El encargo dice que la contradireccion del par 5 *"NO tiene lectura dirigida
+detras"*. **Lo verifique contra git y hay que matizarlo, medido**: antes de
+`3f249a03`, esa arista era
+`revision_portafolio_periodica -> gates_go_kill_decision_points`, y **`LD-50` leyo
+exactamente ese par** y escribio *"Ya tienen arista entre ellos, y la arista esta
+bien puesta: son dos momentos que se alimentan"*, con veredicto **D** y
+**declarando que NO hay jerarquia**.
+
+**No cambia mi adjudicacion y explico por que:** el test del 9.22 pide
+**procedimiento en los dos sentidos sobre dos lineas distintas**, y `LD-50` dice
+con todas sus letras que ahi **no hay jerarquia en ninguno de los dos sentidos**.
+Por eso el par 5 es **ESCALERA** y no mutuo. **Pero la frase del encargo, tal como
+esta, no se sostiene**, y la traigo en vez de callarla: **hay lectura dirigida
+detras de esa arista, solo que sobre el nodo que murio.**
+
+## 5. TAREA 4, LA RELECTURA AL DOBLE DEL TRAMO NOMBRADO
+
+**El tramo: toda arista escrita o declarada cumplida sin haber medido su vuelta.**
+`SALIDA_V141_4_RELECTURA_AL_DOBLE.txt`, con las 18 direcciones una por una y
+**ninguna saltada por estar YA PRESENTE**:
 
 ```
-CIFRA: operaciones del catalogo: 16 | con destino cumplido: 13 | sin cumplir: 3 | de ellas, sin vara escrita: 1
-SIN CUMPLIR (3): OP-M-01, OP-M-04, OP-E-04
-SIN VARA ESCRITA (1): OP-M-04
+direcciones releidas con IDA Y VUELTA a la vez: 18
+direcciones con LA VUELTA PRESENTE: 8
+de esas, en una ficha que PROHIBE la vuelta: 4
+   OP-E-04 | sistema_gates_go_kill -> gestion_portafolio_dos_niveles | por LD-35, LD-51
+   OP-E-04 | revision_portafolio_periodica -> sistema_gates_go_kill  | por LD-42
+   OP-E-04 | sistema_gates_go_kill -> portfolio_management           | por LD-48
+   OP-E-04 | sistema_gates_go_kill -> gestion_portafolio_formal      | por LD-49
 ```
 
-**LAS TRES QUE FALTAN, NOMBRADAS Y CON SU MOTIVO:** `OP-E-04` por su parada;
-`OP-M-01` porque `OP-E-04` es hija suya; y `OP-M-04` porque **ninguna de sus
-hijas esta en el catalogo de esta fase** (`bloquea_a` nombra `OP-S-12`, de la
-fase 05, y `OP-U-01`, de la fase 03). Al abrir la vuelta eran **siete**; al
-cerrar son **tres**.
+**Las 18 direcciones cuadran al digito con la adjudicacion 3.4 del acta 140**
+(*"El total de la fase es 18 direcciones (2+9+4+2+1)"*), y esa cifra la computa hoy
+un instrumento, no una suma a mano.
 
-**EL CAMPO `estado` SIGUE SIN TOCARSE** en las once (acta 139, adjudicacion 3.6).
-**`OP-S-12` sigue al final de la pasada entera** por la atadura 2, y esta vuelta
-no lo toca.
+**"YA PRESENTE" NO ES UN VEREDICTO: ES MEDIA MEDICION.** Queda como regla de
+trabajo y ya vive en el codigo, no en una frase.
 
-## 6. CORRECCIONES DECLARADAS
+## 6. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
 
-**Ninguna tapa lo que corrige.** Ademas de la 11 y la 12 de la TAREA 1, **tres de
-mis propios instrumentos, las tres halladas CORRIENDOLOS y no leyendolos**:
-
-1. **La guarda 6 del escritor media el TOTAL de duplicadas y no el DELTA**, y
-   caia en ROJO por una duplicada **que ya estaba** en
-   `pivote_estrategico.nodos_previos` (`mvp_concierge` y `concierge_mvp`
-   resuelven al mismo destino), fabricada por una fusion anterior y con dueno
-   escrito en `OP-S-12`. Una guarda que castiga a quien no lo hizo no es una
-   guarda: es un bloqueo. Ahora mide el delta e **imprime las preexistentes**.
-2. **Peor, y era un caso rojo que no podia caer:** la mutacion negativa del
-   escritor elegia *un deprecado cualquiera*, y el primero por orden alfabetico
-   (`6s_lugar_trabajo`) **es alias de un vivo**, asi que el resolutor lo revivia
-   y la guarda pasaba con razon. Ahora elige, computandolo, uno que **sigue
-   muerto tras resolver**.
-3. **Un rotulo que afirmaba de mas:** el escritor imprimia *"los dos ids son
-   VIVOS y directos"* cuando lo unico que habia comprobado era que no habia alias
-   que resolver. Corregido a *"los dos ids son DIRECTOS"*.
-
-**Y UNA DISCREPANCIA DE CONTEO CONTRA EL ACTA 139, DECLARADA Y NO COPIADA:** el
-acta mide `OP-E-05` como **1 de 2** contando **cadenas** de `aristas_nuevas`; yo
-cuento **pares dirigidos** y da **2 de 4**. Las dos son correctas sobre unidades
-distintas, y el registro de la vuelta 117 en `04_ENLACES.md` ya usaba la mia
-(*"1 de 4"*). El total de la fase pasa de dieciseis cadenas a
-dieciocho direcciones por el mismo motivo. Va como **DISCUTIBLE 4**.
+1. **Los seis pares, uno por uno** (seccion 4): cuatro MUTUOS y dos ESCALERAS. El
+   mas fragil es el **par 5**, por lo que dice `LD-50` (seccion 4.3).
+2. **El paso 10 de `sistema_gates_go_kill` como la linea de CUATRO direcciones
+   distintas** (pares 1, 2, 3 y 4). Es el antiguo paso 5 de
+   `requisitos_gates_con_dientes`, y el acta 140 (3.7) ya lo verifico. Que **una
+   sola linea sea la madre de cuatro hijos** es defendible por el 9.22 (que exige
+   dos lineas distintas **del mismo par**, no de todo el grafo), pero lo marco.
+3. **La adjudicacion del par 6 como ESCALERA**, y con ella **la poda ejecutada**.
+   Es la unica escritura de la vuelta.
+4. **Parar `OP-E-04` entera en vez de escribir las filas que pasan.** Me apoyo en
+   la 3.6 del acta 140. Lo contrario (escribir tres de nueve) es media ficha.
+5. **No ensanchar la vara `FUSION` con el resolutor** pese a que `EJECUTOR.md`
+   regla 9 lo pide, porque no esta en el encargo y mueve una vara de destino.
+6. **Las frases literales como forma de leer el regimen de vuelta** (2.a) en vez de
+   un campo. Es lo que el encargo pide (*"no adivinada del tipo"*), pero una ficha
+   nueva que escriba la prohibicion con otras palabras saldria `SIN REGLA`.
+7. **`SIN REGLA` no penaliza la vuelta** (2.a): mide, publica y no juzga. Podria
+   defenderse lo contrario.
+8. **La guarda 4 del instrumento de retiro exige que la ficha NOMBRE el par**, no
+   solo que traiga la clausula de escalera. Es mas dura que lo encargado.
 
 ## 7. PENDIENTES DE DOCTRINA
 
-**UNO, Y ES EL DE LAS DOS PARADAS.** No existe regla escrita para **una arista de
-una sola direccion cuya vuelta nace de la redireccion de una fusion**. La regla
-de la escalera dice que la vuelta es una instruccion falsa; la redireccion de una
-fusion dice que una arista del absorbido pasa al superviviente. Cuando chocan,
-**nadie ha escrito cual manda ni quien corta**. Queda **PENDIENTE DE DOCTRINA** y
-es lo que las dos paradas piden.
+- **`OP-E-04` necesita la excepcion del 9.22 escrita en su verificacion**, o los
+  cuatro pares mutuos no se pueden ejecutar nunca. Es la parada 2.
+- **La vara `FUSION` no resuelve el `superviviente` por alias** y `EJECUTOR.md`
+  regla 9 dice que todo conteo que toque ids pasa por el resolutor. Es la parada 1.
+- **Lo que el acta 140 dejo abierto y sigue abierto**: si un superviviente muy
+  crecido deja de *expandir* una linea y pasa a *dominarla*, el 9.22 no lo mide.
+  **Hoy no muerde**, y el paso 10 de `sistema_gates_go_kill` es exactamente el sitio
+  donde asomaria.
 
-## 8. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+## 8. PREGUNTAS
 
-1. **LA VARA `MESA` ES MIA Y NO DEL ENCARGO.** El encargo escribio dos varas,
-   fusion y enlace. Yo anadi que una mesa tiene destino cumplido cuando lo tienen
-   sus hijas del catalogo, leidas de `bloquea_a`, apoyandome en la fila 6 del
-   `00_INDICE` (*"sus operaciones hijas viven en las fases 3 y 4"*). Sin esa vara
-   las cinco mesas caerian en el saco de las no medibles.
-2. **`NO COMPUTABLE` CUENTA COMO `SIN CUMPLIR`.** Sostengo que *destino cumplido*
-   es una afirmacion y que lo no medible no esta demostrado. Meterlo con las
-   cumplidas seria la degradacion silenciosa del banco 9. El desglose se publica
-   al lado para que nadie confunda **no cumplida** con **no medible**.
-3. **PARE EL CASO (iii) Y NO LA TAREA 2.** El encargo dice *"si sale otra cosa,
-   lo dices y paras"*. Pare **ese caso** y segui, porque su expectativa es
-   inalcanzable por una propiedad del sujeto que el propio caso imprime, y parar
-   la vuelta entera por eso habria dejado las remitidas otra vuelta mas sin
-   tocar. **Puedo estar equivocado.**
-4. **PARES DIRIGIDOS CONTRA CADENAS DE `aristas_nuevas`.** Ver la seccion 6.
-5. **LA GUARDA DE CIERRE DISPARA DE MAS, Y A PROPOSITO, PERO YA HE TENIDO QUE
-   ACOTARLA DOS VECES.** Con el vocabulario cerrado caen tambien frases
-   condicionales, asuntos de commit, y hasta el nombre del propio fichero de
-   estado, `SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt`, que deja sin cumplir a
-   `OP-M-01`, `OP-M-04` y `OP-E-04`. La acote **exigiendo nombrar las que faltan** en vez de
-   exigir un cero, y **delimitando el bloque de commits tallados**. Sostengo que
-   el coste de un disparo de mas es una cita y el de un disparo de menos fue la
-   caida 4.1, y que **el remedio es CITAR, jamas reescribir la prosa** (ramal
-   (xxi)). **Pero dos acotaciones en una vuelta son un aviso**, y si hicieran
-   falta mas habria que revisar el vocabulario en vez de seguir poniendo
-   excepciones.
-6. **LAS DOS PARADAS PODRIAN LEERSE COMO EXCESO DE CELO.** En `OP-E-04` dos de
-   los nueve pares pasan todas las guardas y no los escribi. Sostengo que
-   escribir LD-45 sin LD-53 es elegir direccion, pero **es defendible entregar
-   LD-55, que no choca con nada**.
-7. **MI LECTURA DE QUE `OP-E-05` SIGUE SIENDO EL MUTUO DE LA FICHA** pese a que
-   un extremo es hoy un nodo fundido de 17 pasos. Me apoyo en su verificacion 2
-   (*"los ids se escriben resueltos"*) y en que las dos lineas que lo justifican
-   siguen vivas. **Un extremo mucho mas gordo cambia el peso del enlace, y eso no
-   lo mide nadie.**
-8. **MI PROPIO INSTRUMENTO DA `OP-M-01-ESLABONES` POR CUMPLIDA Y SU FICHA DICE
-   QUE NO.** La vara que el encargo le escribio cuenta `aristas_nuevas`
-   presentes; la ficha ademas exige que la vuelta no exista. **Hoy discrepan, y
-   lo dejo discrepando en vez de ensanchar la vara por mi cuenta.**
+1. **¿La adjudicacion de un par como ENLACE MUTUO autoriza a ESCRIBIR la direccion
+   que falta, o solo a NO RETIRAR la que hay?** La `CORRECCION 14` dice *"las dos
+   direcciones viven"*. En los pares 1 y 2 no importa (las dos estan); en el 3 y el
+   4 es la diferencia entre escribir y no escribir. **He leido "viven" como "no se
+   retiran", y por eso no escribi.**
+2. **¿`OP-M-02-ADMIT` y `OP-M-02-MEDIOS` estan ejecutadas?** Su superviviente
+   deprecado resuelve a un vivo, que es la huella de una fusion hecha y luego
+   reapuntada. Si lo estan, la vara `FUSION` las esta llamando incumplidas por no
+   resolver, y eso es una cifra que hoy publica mal el estado de la fase 03.
+3. **¿`LD-50` sigue valiendo tras la fusion?** Si vale, el par 5 no es una escalera
+   limpia. Yo digo que su propia frase (*"no hay jerarquia"*) lo saca del 9.22, pero
+   la decision es del auditor.
 
-## 9. PREGUNTAS PARA EL AUDITOR
+## 9. VERIFICACION DEL CIERRE
 
-1. **¿Quien corta la vuelta de las dos paradas, y que regla manda?** Es el
-   pendiente de doctrina de la seccion 7, y por el sigue sin cerrar la fase 06,
-   con las tres que `SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt` nombra todavia sin
-   cumplir: `OP-E-04`, `OP-M-01` y `OP-M-04`.
-2. **¿Debe `tallar_estado_de_fase.py` mirar tambien las `verificacion` de cada
-   ficha, y no solo sus `aristas_nuevas`?** Hoy `OP-M-01-ESLABONES` sale cumplida
-   con su ficha cayendo. No lo ensanche yo porque el encargo fijo la vara.
-3. **¿Donde vive el destino de `OP-M-04`?** Sus hijas escritas viven fuera de la
-   fase 06 (`OP-U-01`, de la fase 03, sigue `LISTA`). Mientras eso siga asi, la
-   fase 06 no puede cerrar aunque `OP-E-04` se resuelva.
-
-## 10. VERIFICACION DEL CIERRE
-
-| guarda | veredicto | salida |
-|---|---|---|
-| `verificar_apertura_sellada.py --vuelta 140` | **VERDE EXIT 0**, los diez | `SALIDA_V140_CIERRE_APERTURA_SELLADA.txt` |
-| `verificar_cierre_sellado.py --vuelta 140` | **VERDE** | `SALIDA_V140_CIERRE_SELLADO.txt` |
-| `verificar_mutaciones_viejas.py` | **VERDE**, las cinco muerden, ANCLA PERDIDA 0 | `SALIDA_V140_CIERRE_MUTACIONES_VIEJAS.txt` |
-| `tallar_cabecera_reporte.py --vuelta 140 --fase04` | **VERDE EXIT 0** | `SALIDA_V140_TALLADOR_CABECERA.txt` |
-| `tallar_cabecera_reporte.py --comparar docs/loop/REPORTE.md` | **CABECERA IDENTICA AL TALLADOR**, nueve filas cotejadas, cero distintas, cero ausentes | `SALIDA_V140_CABECERA_COMPARADA.txt` |
-| `verificar_cifras_del_reporte.py` **ampliada** | **VERDE EXIT 0** | `SALIDA_V140_CIERRE_GUARDA_CIFRAS.txt` |
-| `tallar_estado_de_fase.py --fase 06_MESAS` | corrido al abrir y al cerrar | `SALIDA_V140_2A_ESTADO_FASE06_ANTES.txt`, `SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt` |
-
-**LAS DOS CORRIDAS DEL INSTRUMENTO, CON SUS NOMBRES:** al abrir quedaban siete sin cumplir, `OP-M-01`, `OP-M-03`, `OP-M-04`, `OP-E-04`, `OP-E-05`, `OP-M-01-SEXTO` y `OP-M-03-ENLACES`, y al cerrar quedan tres, `OP-M-01`, `OP-M-04` y `OP-E-04`.
-
-**LA LINEA `COBERTURA`, ENTERA Y CON SU LECTURA HONESTA:**
-
-```
-COBERTURA: 0 cotejadas / 0 exentas / 0 cifras | reparto: 0 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 15
-```
-
-Esa linea sale de `SALIDA_V140_CIERRE_GUARDA_CIFRAS.txt` y las afirmaciones que cuenta van todas contra `SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt`, que deja sin cumplir a `OP-M-01`, `OP-M-04` y `OP-E-04`.
-
-**Y COMO SE ESCRIBIO ESA LINEA, porque tiene una trampa que declaro:** esa cifra
-**mide al propio reporte**, asi que escribirla lo mueve. No se teclea: se corre
-la guarda, se pega su linea entera y su palabra de recuento, y **se repite hasta
-PUNTO FIJO**, que llego en la segunda iteracion. Si no hubiera convergido, la
-regla que me di es decirlo y no publicar la cifra.
-
-**UN CERO DE COBERTURA NO ES UN VERDE, ES UN PLATO VACIO** (ramal (xxi) del acta
-136), y por eso lo explico en vez de publicarlo a secas: **el cuerpo de este
-reporte, fuera de la cabecera delimitada, no trae ni un par numero-mas-unidad del
-vocabulario cerrado de la guarda** (`fichero`, `par`, `grupo`, `grafia`,
-`colapso`, `nodo`, `linea`, `arista`). **No lo evite a proposito**, y lo digo
-expresamente porque esa es justamente la caida 4.1 del acta 136: las cifras de
-esta vuelta son operaciones, aristas de una ficha, pasos y direcciones, y de esas
-unidades solo `arista` esta en el vocabulario, en frases donde va sin numero
-delante. **Las dos cifras que si lo traian se reescribieron cuando la guarda las
-canto, y las dos veces por motivo declarado**: una era **el numero de una vuelta
-leido como si fuera un recuento de colapsos**, un falso positivo del patron; la
-otra contaba **direcciones y las llamaba pares**, que **no es la unidad
-correcta** para una arista dirigida, y ademas no tenia fichero que la contara.
-
-**LO QUE SI SE COTEJO, Y ES LO QUE ESTA VUELTA ANADE: QUINCE AFIRMACIONES DE
-CIERRE**, contra `SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt` y contra
-`SALIDA_V140_2A_ESTADO_FASE06_ANTES.txt`, que dejan sin cumplir a `OP-M-01`,
-`OP-M-04`, `OP-E-04`, `OP-M-03`, `OP-E-05`, `OP-M-01-SEXTO` y `OP-M-03-ENLACES`,
-y cada una publicando **lo que su fichero dice, computado y no tecleado**. La primera
-version de ese rotulo imprimia *"todas contra un fichero que dice sin cumplir:
-0"*, que **era falso** en cuanto una pasaba por nombrar las que faltan: es la
-especie exacta de la correccion 2 de la vuelta 139, y se arreglo **en el codigo y
-no en la frase**.
-
----
-
-**Rutas tocadas:** `dataset/nodos/` (seis nodos), `dataset/metadata/master_graph.json`,
-`web/lib/assets/`, `docs/PENDIENTES.md`, `docs/plan/CORRECCIONES_A_APLICAR.md`,
-`docs/loop/` y `scripts/loop/`. **`docs/plan/OPERACIONES.jsonl` NO se toca.**
+- `verificar_apertura_sellada.py --vuelta 141`: **VERDE EXIT 0**, los diez.
+- `tallar_cabecera_reporte.py --vuelta 141 --fase04`: **VERDE EXIT 0**; su tabla,
+  pegada entera arriba.
+- `tallar_cabecera_reporte.py --vuelta 141 --fase04 --comparar docs/loop/REPORTE.md`:
+  **CABECERA IDENTICA AL TALLADOR** (`SALIDA_V141_CIERRE_COMPARAR.txt`).
+- `tallar_cabecera_reporte.py --vuelta 141 --comparar-commits docs/loop/REPORTE.md`:
+  **BLOQUE DE COMMITS IDENTICO A GIT** (`SALIDA_V141_CIERRE_COMPARAR_COMMITS.txt`).
+  Es la guarda que nace hoy, corrida sobre su primer bloque real.
+- `verificar_mutaciones_viejas.py`: **VERDE**, las cinco corren, muerden y sus
+  salidas selladas salen identicas en dos corridas
+  (`SALIDA_V141_2F_MUTACIONES_VIEJAS.txt`).
+- `verificar_cifras_del_reporte.py`: salida en `SALIDA_V141_CIERRE_CIFRAS.txt`.
