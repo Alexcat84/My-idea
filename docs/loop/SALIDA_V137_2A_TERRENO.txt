@@ -1,0 +1,64 @@
+TERRENO DE LA FASE 06, MEDIDO EN LA VUELTA 137 (no se funde nada aqui)
+
+--- (A) LAS SEIS FUSIONES DIFERIDAS, MEDIDAS CONTRA EL GRAFO ---
+El campo `estado` NO se usa como fuente: las DIECISEIS fichas de fase 03
+leen LISTA, las resueltas incluidas. Se mide superviviente y absorbidos.
+  OP-M-01-FUSION     campo=LISTA | GRAFO=SIN FUNDIR (sup sistema_gates_go_kill VIVO, absorbidos vivos 4 de 4)
+  OP-M-02-ACCLIMATE  campo=LISTA | GRAFO=SIN FUNDIR (sup fase_acclimate_experiencia_cliente VIVO, absorbidos vivos 1 de 1)
+  OP-M-03-III        campo=LISTA | GRAFO=SIN FUNDIR (sup pivote_estrategico VIVO, absorbidos vivos 2 de 2)
+  OP-M-05-INDICE     campo=LISTA | GRAFO=SIN FUNDIR (sup customer_discovery VIVO, absorbidos vivos 2 de 2)
+  OP-M-05-EDIFICIO   campo=LISTA | GRAFO=SIN FUNDIR (sup customer_discovery_get_out_of_building VIVO, absorbidos vivos 2 de 2)
+  OP-M-05-APERTURA   campo=LISTA | GRAFO=SIN FUNDIR (sup customer_validation VIVO, absorbidos vivos 2 de 2)
+CIFRA fusiones diferidas sin fundir: 6 grupos
+
+--- LAS CINCO MESAS, con su campo y su pregunta pendiente ---
+  OP-M-01  estado=LISTA | pregunta_pendiente=None | tipo=MESA ADJUDICADA: LAS DOS MITADES QUEDAN, CON F
+  OP-M-02  estado=LISTA | pregunta_pendiente=None | tipo=MESA ADJUDICADA: SERIE DECLARADA
+  OP-M-03  estado=LISTA | pregunta_pendiente=None | tipo=MESA ADJUDICADA: DOS PUERTAS MAS UN ACTO
+  OP-M-04  estado=LISTA | pregunta_pendiente=None | tipo=MESA ADJUDICADA: DOS FUSIONES MAS UN ENLACE
+  OP-M-05  estado=LISTA | pregunta_pendiente=None | tipo=MESA ADJUDICADA: DOS ETAPAS, CON FRONTERA REGI
+Las cinco estan ADJUDICADAS (11 y 12 ago 2026) y ninguna tiene pregunta
+pendiente: lo que les queda no es decidir, es EJECUTAR sus hijas.
+
+--- (B) EL TAMANO EDITORIAL DE LAS SEIS ---
+  OP-M-01-FUSION     sup sistema_gates_go_kill: 6 pasos, 3 condiciones | absorbidos: 4
+        gates_go_kill_decision_points                 4 pasos, 2 condiciones
+        requisitos_gates_con_dientes                  6 pasos, 2 condiciones
+        estructura_gates                              4 pasos, 2 condiciones
+        estructura_de_gates                           4 pasos, 2 condiciones
+  OP-M-02-ACCLIMATE  sup fase_acclimate_experiencia_cliente: 5 pasos, 2 condiciones | absorbidos: 1
+        fase_acclimate_mapa_de_proceso                8 pasos, 1 condiciones
+  OP-M-03-III        sup pivote_estrategico: 5 pasos, 2 condiciones | absorbidos: 2
+        pivote_startup                                5 pasos, 2 condiciones
+        pivotes_e_iteraciones                         6 pasos, 3 condiciones
+  OP-M-05-INDICE     sup customer_discovery: 5 pasos, 2 condiciones | absorbidos: 2
+        customer_discovery_cuatro_fases               4 pasos, 2 condiciones
+        customer_discovery_overview                   4 pasos, 2 condiciones
+  OP-M-05-EDIFICIO   sup customer_discovery_get_out_of_building: 4 pasos, 2 condiciones | absorbidos: 2
+        get_out_of_the_building                       4 pasos, 2 condiciones
+        manifiesto_regla1_hechos_fuera_del_edificio   4 pasos, 2 condiciones
+  OP-M-05-APERTURA   sup customer_validation: 5 pasos, 2 condiciones | absorbidos: 2
+        filosofia_customer_validation                 5 pasos, 1 condiciones
+        introduccion_validacion_clientes              5 pasos, 1 condiciones
+CIFRA absorbidos de las seis fusiones: 13 nodos
+CIFRA marcas editoriales por decidir: 87 lineas
+Cada marca es una decision de reparto (CUBIERTO, APPEND o INCISO) con su
+motivo escrito, mas su perdida sellada en campo propio si no viaja.
+
+--- (C) LA LIMITACION DEL GENERADOR SELLADO, PROBADA ---
+Fusiones con MAS DE UN absorbido: 5 de 6 (OP-M-01-FUSION, OP-M-03-III, OP-M-05-INDICE, OP-M-05-EDIFICIO, OP-M-05-APERTURA).
+Con UN solo absorbido: OP-M-02-ACCLIMATE.
+Corrido G.marcar() sobre los DOS absorbidos de OP-M-03-III con el MISMO
+spec, que es exactamente como el generador lo llama (bucle for ab in
+absorbidos, siempre spec['pasos']):
+  pivote_startup                   marcas de paso: {'1': 'CUBIERTO:1', '2': 'CUBIERTO:1', '3': 'CUBIERTO:1', '4': 'CUBIERTO:1', '5': 'CUBIERTO:1'}
+  pivotes_e_iteraciones            marcas de paso: {'1': 'CUBIERTO:1', '2': 'CUBIERTO:1', '3': 'CUBIERTO:1', '4': 'CUBIERTO:1', '5': 'CUBIERTO:1', '6': 'CUBIERTO:1'}
+Numeros de paso que reciben LA MISMA marca en los dos absorbidos: 5
+PROBADO: el reparto NO se puede diferenciar por absorbido. El indice de
+spec['pasos'] es el NUMERO DE PASO, no el par (absorbido, paso), asi que
+el paso 1 de pivote_startup y el paso 1 de pivotes_e_iteraciones
+leen la misma marca y no se pueden repartir distinto.
+CONSECUENCIA: las 5 fusiones de mas de un absorbido NO SE PUEDEN SELLAR
+con el generador tal como esta. No se parchea en esta vuelta: se declara.
+
+EXITCODE: 0
