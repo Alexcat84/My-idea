@@ -166,6 +166,41 @@ muerta.
 Las marcas siguen la regla de las tres de la guarda de cifras: con las dos se
 quita lo delimitado, sin ninguna no se quita nada, y con UNA SOLA es ROJO.
 
+--- LA EXENCION DECLARADA, PARA LA FRASE QUE NO HABLA DEL REPOSITORIO
+(TAREA 2.4 de la vuelta 148) ---
+
+POR QUE NACE. La caida 4.2 del acta 147: la vuelta 147 REESCRIBIO DOS FRASES
+para callar un rojo de esta guarda. El motivo era legitimo (la guarda dispara
+sobre prosa que no afirma NADA sobre el repositorio: un falso positivo) y el
+ejecutor lo declaro en vez de esconderlo, pero LAS DOS FRASES ORIGINALES NO
+VIVEN EN NINGUN BLOB, asi que su "dicen exactamente lo mismo" es incomprobable.
+El auditor pidio una de dos salidas: un bloque de exencion declarada, o la
+frase vieja pegada al lado de la nueva. NUNCA UNA REESCRITURA SIN RASTRO.
+
+LA FORMA:
+
+    <!-- EXENCION DECLARADA: <motivo, en una linea> -->
+    ...la frase que no afirma nada sobre el repositorio...
+    <!-- FIN EXENCION DECLARADA -->
+
+Y AQUI ESTA LO QUE IMPIDE QUE SEA UN INTERRUPTOR (leccion de la vuelta 135,
+"una exencion que escribe el auditado no es una exencion, es un interruptor").
+LA GUARDA COMPRUEBA ELLA MISMA QUE LO EXIMIDO DE VERDAD NO HABLA DEL
+REPOSITORIO: si dentro del bloque aparece CUALQUIER cosa que apunte al repo (una
+ruta `docs/`, `scripts/`, `dataset/`, `web/`, `engine/`, `packs/`, un nombre de
+fichero con extension conocida, o un `SALIDA_V<N>_...`), LA EXENCION SE RECHAZA
+Y ES ROJO NOMBRANDO LO QUE APARECIO. Una frase que nombra un fichero SI afirma
+algo sobre el repositorio, y esa necesita barrido como cualquier otra.
+
+Ademas: el motivo NO PUEDE IR VACIO, valen las tres reglas de marcas de la casa
+(con las dos se quita, sin ninguna no se quita nada, con una sola es ROJO), y
+CADA EXENCION USADA SE IMPRIME en la salida con su motivo, para que se vea
+cuantas hay y de que. Una exencion invisible seria peor que el rojo que evita.
+
+LA FRONTERA: esto NO exime de barrido a ninguna afirmacion sobre el repo. Lo
+unico que hace es dar salida al falso positivo, con rastro, en vez de empujar a
+reescribir la frase y perder el original.
+
 TAMBIEN SE RECORTAN los bloques `<!-- COMMITS TALLADOS -->` y
 `<!-- CABECERA TALLADA -->`, por el mismo motivo por el que la guarda de cifras
 los recorta: sus lineas son ASUNTOS DE COMMIT y CELDAS TALLADAS DE
@@ -262,6 +297,15 @@ PATRON_CITA_SALIDA = re.compile(r"SALIDA_V\d+_[A-Za-z0-9_]+\.txt")
 
 MARCA_CITA_ABRE = re.compile(r"<!--\s*CITA CONGELADA\s+(\S+?):(\S+?)\s*-->")
 MARCA_CITA_CIERRA = "<!-- FIN CITA CONGELADA -->"
+MARCA_EXENCION_ABRE = re.compile(r"<!--\s*EXENCION DECLARADA:\s*(.*?)\s*-->")
+MARCA_EXENCION_CIERRA = "<!-- FIN EXENCION DECLARADA -->"
+# LO QUE DELATA QUE UNA FRASE SI HABLA DEL REPOSITORIO. Si algo de esto aparece
+# dentro de un bloque de exencion, la exencion no vale: esa frase necesita
+# barrido como cualquier otra.
+PATRON_APUNTA_AL_REPO = re.compile(
+    r"(?:docs/|scripts/|dataset/|web/|engine/|packs/"
+    r"|SALIDA_V\d+"
+    r"|(?<![\w.-])[\w.-]+\.(?:py|md|json|jsonl|ts|tsx|txt|yml|yaml)(?![\w.-]))")
 MARCA_COMMITS_ABRE = "<!-- COMMITS TALLADOS -->"
 MARCA_COMMITS_CIERRA = "<!-- FIN COMMITS TALLADOS -->"
 MARCA_CABECERA_ABRE = "<!-- CABECERA TALLADA -->"
@@ -334,6 +378,51 @@ def es_ref_movil(ref):
     bloque de `quitar_citas_congeladas` que lo usa: la enfermedad del sujeto
     vivo (CORRECCION 22) metida dentro de una cita."""
     return not bool(PATRON_HASH.match(ref.strip()))
+
+
+def quitar_exenciones_declaradas(texto, fallos, usadas):
+    """Quita los bloques `<!-- EXENCION DECLARADA: motivo -->` ... `<!-- FIN
+    EXENCION DECLARADA -->` DESPUES DE COMPROBAR QUE LO EXIMIDO DE VERDAD NO
+    HABLA DEL REPOSITORIO. Ver el docstring: una exencion que escribe el
+    auditado no es una exencion, es un interruptor, y lo que la salva de serlo
+    es que la guarda la verifica ella misma y la imprime."""
+    fuera = []
+    pos = 0
+    while True:
+        m = MARCA_EXENCION_ABRE.search(texto, pos)
+        if m is None:
+            fuera.append(texto[pos:])
+            break
+        cierre = texto.find(MARCA_EXENCION_CIERRA, m.end())
+        if cierre == -1:
+            fallos.append("bloque de EXENCION DECLARADA abierto en el offset %d y nunca "
+                          "cerrado con %s" % (m.start(), MARCA_EXENCION_CIERRA))
+            fuera.append(texto[pos:])
+            break
+        motivo = (m.group(1) or "").strip()
+        cuerpo = texto[m.end():cierre]
+        if not motivo:
+            fallos.append("EXENCION DECLARADA sin motivo escrito: una exencion sin motivo es "
+                          "un interruptor. Escribir el motivo en la propia marca")
+        # finditer y no findall: el patron lleva grupos internos y findall
+        # devolveria los grupos en vez de lo que caso.
+        apunta = sorted(set(x.group(0) for x in PATRON_APUNTA_AL_REPO.finditer(cuerpo)))
+        if apunta:
+            fallos.append("EXENCION DECLARADA (%r) RECHAZADA: lo eximido SI apunta al "
+                          "repositorio (%s). Una frase que nombra una ruta o un fichero "
+                          "afirma algo sobre el repo y necesita barrido como cualquier otra"
+                          % (motivo[:80], ", ".join(apunta[:5])))
+        else:
+            usadas.append((motivo, " ".join(cuerpo.split())[:160]))
+            cuerpo = ""   # solo se quita si la exencion es legitima
+        fuera.append(texto[pos:m.start()])
+        fuera.append(cuerpo)
+        pos = cierre + len(MARCA_EXENCION_CIERRA)
+    # LA REGLA DE LAS TRES MARCAS: un cierre suelto, sin apertura, es ROJO.
+    if MARCA_EXENCION_CIERRA in texto and MARCA_EXENCION_ABRE.search(texto) is None:
+        fallos.append("EXENCION DECLARADA: hay una marca de cierre %s sin su apertura"
+                      % MARCA_EXENCION_CIERRA)
+    return "".join(fuera)
 
 
 def quitar_citas_congeladas(texto, fallos):
@@ -532,6 +621,8 @@ def ventana(frases, i):
 
 def verificar(texto):
     fallos = []
+    exenciones = []
+    texto = quitar_exenciones_declaradas(texto, fallos, exenciones)
     texto = quitar_citas_congeladas(texto, fallos)
     texto = quitar_bloque_simple(texto, MARCA_COMMITS_ABRE, MARCA_COMMITS_CIERRA,
                                  fallos, "COMMITS TALLADOS")
@@ -562,7 +653,7 @@ def verificar(texto):
                              "; ".join(motivos)))
             continue
         respaldadas.append((fr, formulas, buenos))
-    return fallos, vistas, respaldadas
+    return fallos, vistas, respaldadas, exenciones
 
 
 def main():
@@ -617,7 +708,7 @@ def main():
         texto = leer(a.reporte)
         sujeto = a.reporte
 
-    fallos, vistas, respaldadas = verificar(texto)
+    fallos, vistas, respaldadas, exenciones = verificar(texto)
 
     print("SUJETO: %s" % sujeto)
     if fallos:
@@ -630,10 +721,17 @@ def main():
               "por un barrido exhaustivo sellado." % len(vistas))
     for fr, formulas, buenos in respaldadas:
         print("   RESPALDADA por %s: %r" % (", ".join(buenos), fr.strip()[:120]))
+    # CADA EXENCION USADA SE IMPRIME (vuelta 148, TAREA 2.4). Una exencion
+    # invisible seria peor que el rojo que evita.
+    for motivo, cuerpo in exenciones:
+        print("   EXENCION DECLARADA aceptada (no apunta al repositorio) | motivo: %s"
+              % motivo)
+        print("      texto eximido: %r" % cuerpo)
     print("<!-- COBERTURA DE AUSENCIAS -->")
-    print("COBERTURA DE AUSENCIAS: %d vistas / %d respaldadas / %d en rojo | vocabulario "
-          "de %d formulas" % (len(vistas), len(respaldadas), len(fallos),
-                              len(VOCABULARIO_ACTIVO)))
+    print("COBERTURA DE AUSENCIAS: %d vistas / %d respaldadas / %d en rojo / %d exentas "
+          "declaradas | vocabulario de %d formulas"
+          % (len(vistas), len(respaldadas), len(fallos), len(exenciones),
+             len(VOCABULARIO_ACTIVO)))
     print("<!-- FIN COBERTURA DE AUSENCIAS -->")
     return 1 if fallos else 0
 

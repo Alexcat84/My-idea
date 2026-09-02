@@ -1,0 +1,16 @@
+VOCABULARIO VIVO: 20 formulas. Elegida por orden: 'en ninguna parte'
+
+CASO A (frase suelta, sin exencion): fallos=1 vistas=1 exenciones=0
+CASO B (misma frase, exencion legitima): fallos=0 vistas=0 exenciones=1
+   | motivo: prosa de la campana, no afirma nada sobre el repositorio
+CASO C (MUTACION: la misma frase mas UNA ruta del repo): fallos=2 exenciones=0
+   | EXENCION DECLARADA ('prosa de la campana, no afirma nada sobre el repositorio') RECHAZADA: lo eximido SI apunta al repositorio (docs/). Una frase que nombra una ruta o un
+   | AUSENCIA SIN BARRIDO: 'En toda la campana en ninguna parte parecido, y lo digo de memoria.' (dispara por en ninguna parte) no cita ningun SALIDA_V<N>_*.txt en su ventana
+CASO D (exencion sin motivo): fallos=1
+CASO E (cierre sin apertura): fallos=2
+CASO F (una exenta y una suelta en la misma pagina): fallos=1 exenciones=1
+
+VERDE: los seis casos se comportan. La exencion NO es un interruptor: solo se
+acepta si lo eximido de verdad no apunta al repositorio, se rechaza nombrando la
+ruta en cuanto aparece una, exige motivo escrito, canta la marca suelta, y no
+tapa a la frase vecina.

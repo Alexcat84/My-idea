@@ -42,8 +42,29 @@ mutacion que no encuentra su sujeto es una guarda que no mide, y aqui es ROJO.
 
 LA COLETILLA DE LA VUELTA 145 (CORRECCION 22; acta 144, caidas 4.4 a 4.6 de la
 casa, LAS TRES DE LA MISMA ENFERMEDAD, EL SUJETO VIVO). La regla de entrada de
-arriba se queda corta y se completa: UNA MUTACION ENTRA EN LA VUELTA SIGUIENTE
-A LA QUE NACE, Y SOLO SI SU SUJETO ESTA CONGELADO. Medido en la vuelta 145
+arriba se queda corta y se completa.
+
+  LA LETRA DE LA 145 A LA 148, QUE NO SE BORRA: "UNA MUTACION ENTRA EN LA VUELTA
+  SIGUIENTE A LA QUE NACE, Y SOLO SI SU SUJETO ESTA CONGELADO."
+
+  LA LETRA DESDE LA VUELTA 148 (TAREA 2.5, sobre la adjudicacion 3.5 del acta
+  147): LO QUE ESTA REGLA EXIGE ES SUJETO CONGELADO. EL PLAZO DE UNA VUELTA ERA
+  EL MEDIO, NO EL FIN. Se escribio "en la vuelta siguiente" porque esperar una
+  vuelta era la forma comoda de comprobar que el verde de una mutacion
+  SOBREVIVIA a que su propia vuelta escribiera el reporte; pero lo que hace
+  falta no es que pase el tiempo, es que EL SUJETO NO SE MUEVA. Una mutacion
+  anclada a un fichero congelado y cotejado contra un blob de git ya cumple el
+  fin el mismo dia que nace, y hacerla esperar una vuelta no la hace mas
+  segura: solo la hace mas tarde. Una anclada a un fichero VIVO no cumple el
+  fin ni esperando diez vueltas, porque el sujeto se le mueve debajo igual.
+  POR ESO LA CONDICION DE ENTRADA ES EL SUJETO CONGELADO, Y EL PLAZO DEJA DE
+  SER REQUISITO. La que no pueda tener sujeto congelado entra como CASO
+  DECLARADO, igual que antes.
+
+  QUE NO CAMBIA, PARA QUE NADIE LEA DE MAS: no se afloja ni una comprobacion.
+  Una mutacion con sujeto vivo sigue sin poder entrar, ANCLA PERDIDA sigue
+  siendo ROJO, y los CASOS DECLARADOS siguen necesitando su marca. Lo unico que
+  se cae es un plazo que nunca fue lo que protegia. Medido en la vuelta 145
 sobre el arbol limpio de la apertura, esta bateria daba ROJO con NO MORDIO 1,
 `vuelta144_2d_mutacion_cobertura.py`, cuyo sujeto era el `docs/loop/REPORTE.md`
 VIVO: estaba verde cuando se corrio y roja en cuanto se escribio el reporte de
