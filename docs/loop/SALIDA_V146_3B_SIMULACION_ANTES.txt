@@ -1,0 +1,47 @@
+SIMULACION DE OP-A-01 SOBRE COPIA EN MEMORIA | vuelta 146, TAREA 3.b
+==============================================================================
+nodos vivos leidos: 3169
+
+(1) COMPROBACION POSICIONAL (P.2: el orden del campo fuente lleva informacion)
+  nodos vivos que declaran MAS DE UNA fuente: 8
+     arquetipos_de_cliente
+        [0] The Startup Owner's Manual - Blank, Steve
+        [1] The Lean Startup - Eric Ries
+     coeficiente_viral
+        [0] The Startup Owner's Manual - Blank, Steve
+        [1] Traction - Gabriel Weinberg
+     composicion_board_directors
+        [0] Venture Deals - Brad Feld
+        [1] The Founder's Dilemmas - Wasserman, Noam
+     decision_de_vender_startup
+        [0] The Founder's Dilemmas - Wasserman, Noam
+        [1] The Hard Thing About Hard Things - Ben Horowitz
+     keep_customers_strategy
+        [0] The Startup Owner's Manual - Blank, Steve
+        [1] Never Lose a Customer Again - Joey Coleman
+     preferencia_de_liquidacion
+        [0] Venture Deals - Brad Feld
+        [1] The Founder's Dilemmas - Wasserman, Noam
+     principio_calidad_mvp
+        [0] The Lean Startup - Eric Ries
+        [1] The Hard Thing About Hard Things - Ben Horowitz
+     viral_loop_marketing
+        [0] The Startup Owner's Manual - Blank, Steve
+        [1] Never Lose a Customer Again - Joey Coleman
+        [2] Traction - Gabriel Weinberg
+  NOMINA ADJUDICADA: todavia NO existe dataset\metadata\aduana_fuente_multiple.json
+  -> el control diria ROJO sobre los 8 de arriba hasta que se selle la nomina
+
+(2) CAMPO FUENTE CONTRA LA LISTA CANONICA (se reusa verificar_fuente_canonico)
+  veredicto: VERDE | incumplimientos: 0
+
+(3) EL SEGUNDO LIBRO NO APARECE EN NINGUN PASO, MITAD SANA
+  nodos con mas de un libro y CERO pasos_accionables: 0
+  LA OTRA MITAD NO SE INSTALA Y SE DICE POR QUE: atribuir el MATERIAL de un
+  paso a un libro pide una atribucion POR PASO que el esquema no tiene.
+  PENDIENTE DE DOCTRINA, no adivinada.
+
+CIFRA nodos vivos con mas de una fuente: 8 nodos
+CIFRA nodos con mas de un libro y sin pasos: 0 nodos
+CIFRA incumplimientos canonicos: 0 nodos
+EXITCODE: 0

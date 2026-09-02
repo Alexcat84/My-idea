@@ -1,0 +1,98 @@
+BARRIDO EXHAUSTIVO
+  PREGUNTA: existe en el repositorio una lista canonica de libros con sus alias de escritura, que es el prerrequisito que OP-A-01 nombra
+  UNIVERSO: git ls-files de la rama actual (todo lo versionado, sin acotar)
+  CARDINAL: 15103
+  EXCLUIDOS POR SER SONDA Y NO INSTALACION (declarados, no escondidos): 0
+  POR NOMBRE: canonic|MAPEO|libros|fuentes | 49 ficheros con coincidencia
+  POR CONTENIDO: canonica propuesta|lista CANONICA de libros|LIBROS CANONICOS|libros canonicos | 41 ficheros con coincidencia
+  NO DECODIFICABLES (mirados y no leidos, NO cuentan como sin coincidencia): 388
+      docs/loop/ABORTADA_V127_CICLO_ETIQUETAS_NUMSTAT.txt
+      docs/loop/SALIDA_V101_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V102_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V102_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V103_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V103_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V105_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V105_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V106_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V106_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V107_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V107_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V108_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V108_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V109_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V109_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V111_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V111_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V112_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V112_ETIQUETAS_CIERRE.txt
+  VEREDICTO: HALLADO
+  LOS QUE COINCIDEN (union de las dos piernas): 81
+      dataset/metadata/expansion_v13/nodos_absorbidos/mapeo_journey_cliente_holistico.json  [nombre]
+      dataset/nodos/energia_fuentes_limpias.json  [nombre]
+      dataset/nodos/estudio_mezclas_multiples_fuentes.json  [nombre]
+      dataset/nodos/fuentes_contratacion_ejecutivos.json  [nombre]
+      dataset/nodos/fuentes_datos_benchmarking.json  [nombre]
+      dataset/nodos/fuentes_financiamiento_startup.json  [nombre]
+      dataset/nodos/fuentes_investigacion_mercado.json  [nombre]
+      dataset/nodos/identify_mapeo_datos.json  [nombre]
+      dataset/nodos/investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor.json  [nombre]
+      dataset/nodos/mapeo_capas_diseno.json  [nombre]
+      dataset/nodos/mapeo_de_patrones.json  [nombre]
+      dataset/nodos/mapeo_flujo_valor.json  [nombre]
+      dataset/nodos/mapeo_flujo_valor_2.json  [nombre]
+      dataset/nodos/mapeo_flujos_invisibles_datos.json  [nombre]
+      dataset/nodos/mapeo_stakeholders.json  [nombre]
+      dataset/nodos/pensamiento_espacial_mapeo.json  [nombre]
+      docs/COSTURAS_INTERNAS_RESUMEN.md  [contenido]
+      docs/PENDIENTES.md  [contenido]
+      docs/_censo_fuentes.json  [nombre]
+      docs/loop/ACTA_AUDITOR.md  [contenido]
+      docs/loop/PROMPT_SIGUIENTE.md  [contenido]
+      docs/loop/SALIDA_V117_TAREA3_1_CRITERIO_HECHO_TRES_FUENTES.txt  [nombre]
+      docs/loop/SALIDA_V131_3B_CANONICAS_SIN_LOCALIZADOR.txt  [nombre]
+      docs/loop/SALIDA_V131_3C_WORDDIFF.txt  [contenido]
+      docs/loop/SALIDA_V132_3B_CANONICAS_SINTETICAS.txt  [nombre]
+      docs/loop/SALIDA_V132_3E_WORDDIFF.txt  [contenido]
+      docs/loop/SALIDA_V133_4D_WORDDIFF.txt  [contenido]
+      docs/loop/SALIDA_V134_1J_CABECERA_MAPEO.txt  [nombre]
+      docs/loop/SALIDA_V135_1J_CABECERA_MAPEO.txt  [nombre]
+      docs/loop/SALIDA_V136_1J_CABECERA_MAPEO.txt  [nombre]
+      docs/loop/SALIDA_V136_1J_FUENTE_CANONICO.txt  [nombre]
+      docs/loop/SALIDA_V145_3B_VARA_FASE07.txt  [contenido]
+      docs/loop/SALIDA_V145_3C_PRERREQUISITO.txt  [contenido]
+      docs/loop/SALIDA_V146_1B_FUENTE_CANONICO.txt  [nombre]
+      docs/loop/SALIDA_V146_2B_MUTACION_AUSENCIAS.txt  [contenido]
+      docs/loop/_auditor_v124_OPERACIONES_MUT.jsonl  [contenido]
+      docs/loop/_auditor_v124_OPERACIONES_MUT2.jsonl  [contenido]
+      docs/loop/_auditor_v130_ciega_grupos.py  [contenido]
+      docs/loop/_auditor_v134_mut_D.md  [contenido]
+      docs/loop/_auditor_v134_mut_E.md  [contenido]
+      docs/loop/_auditor_v134_mut_F.md  [contenido]
+      docs/loop/_auditor_v146_fuente_canonico.txt  [nombre]
+      docs/loop/_auditor_v146_vara07.txt  [contenido]
+      docs/loop/_v130_acta_seccion.md  [contenido]
+      docs/plan/00_INDICE.md  [contenido]
+      docs/plan/01_FUENTES.md  [nombre]
+      docs/plan/05_SANEO.md  [contenido]
+      docs/plan/07_ADUANA.md  [contenido]
+      docs/plan/10_INVENTARIO.md  [contenido]
+      docs/plan/CORRECCIONES_A_APLICAR.md  [contenido]
+      docs/plan/INVENTARIO.jsonl  [contenido]
+      docs/plan/OPERACIONES.jsonl  [contenido]
+      docs/plan/OP_S_11_MAPEO_PROPUESTO.md  [nombre y contenido]
+      docs/plan/RECORTE_POSICIONAL.md  [contenido]
+      packs/compras/nodos/investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor.json  [nombre]
+      packs/compras/nodos_crudos/investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor.json  [nombre]
+      packs/environmental/nodos/energia_fuentes_limpias.json  [nombre]
+      packs/environmental/nodos/mapeo_stakeholders.json  [nombre]
+      packs/exportacion/nodos/fuentes_investigacion_mercado.json  [nombre]
+      packs/quality/nodos/estudio_mezclas_multiples_fuentes.json  [nombre]
+      ... y 21 mas
+  RUTAS CANDIDATAS MIRADAS A MANO (NO SON EL BARRIDO, van aparte):
+      dataset/metadata/libros_canonicos.json -> NO EXISTE
+      dataset/metadata/fuentes_canonicas.json -> NO EXISTE
+      docs/plan/LIBROS_CANONICOS.md -> NO EXISTE
+CIFRA ficheros del universo: 15103 ficheros
+CIFRA ficheros que coinciden: 81 ficheros
+EXITCODE: 0

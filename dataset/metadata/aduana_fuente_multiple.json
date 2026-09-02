@@ -1,0 +1,75 @@
+{
+  "que_es": "Nomina ADJUDICADA de los nodos vivos que declaran MAS DE UNA fuente. Es el dato contra el que mide la comprobacion posicional de Gate 0 (OP-A-01, verificacion 1; BANCO_DEL_PLAN.md P.2).",
+  "para_que": "Que un nodo NUEVO con dos libros no pueda entrar callado, y que a un nodo ya adjudicado no se le pueda anadir un segundo libro en silencio: la lista se coteja ENTERA Y EN ORDEN.",
+  "lo_que_NO_dice": "NO dice que el reparto de material de estos nodos este adjudicado por lectura. Dice que estos son los que habia al cablear el control, con su corte.",
+  "como_se_cambia": "Re-sellar esta nomina es RE-ADJUDICAR. No se regenera para hacer callar a Gate 0: se lee el nodo nuevo, se adjudica y entonces se sella, y el cambio se declara en el reporte.",
+  "generado_por": "scripts/loop/vuelta146_3b_sellar_nomina_aduana.py",
+  "fecha_corte": "2026-09-02",
+  "adjudicados": [
+    {
+      "node_id": "arquetipos_de_cliente",
+      "fuente": [
+        "The Startup Owner's Manual - Blank, Steve",
+        "The Lean Startup - Eric Ries"
+      ],
+      "pasos_accionables": 8
+    },
+    {
+      "node_id": "coeficiente_viral",
+      "fuente": [
+        "The Startup Owner's Manual - Blank, Steve",
+        "Traction - Gabriel Weinberg"
+      ],
+      "pasos_accionables": 8
+    },
+    {
+      "node_id": "composicion_board_directors",
+      "fuente": [
+        "Venture Deals - Brad Feld",
+        "The Founder's Dilemmas - Wasserman, Noam"
+      ],
+      "pasos_accionables": 6
+    },
+    {
+      "node_id": "decision_de_vender_startup",
+      "fuente": [
+        "The Founder's Dilemmas - Wasserman, Noam",
+        "The Hard Thing About Hard Things - Ben Horowitz"
+      ],
+      "pasos_accionables": 15
+    },
+    {
+      "node_id": "keep_customers_strategy",
+      "fuente": [
+        "The Startup Owner's Manual - Blank, Steve",
+        "Never Lose a Customer Again - Joey Coleman"
+      ],
+      "pasos_accionables": 6
+    },
+    {
+      "node_id": "preferencia_de_liquidacion",
+      "fuente": [
+        "Venture Deals - Brad Feld",
+        "The Founder's Dilemmas - Wasserman, Noam"
+      ],
+      "pasos_accionables": 8
+    },
+    {
+      "node_id": "principio_calidad_mvp",
+      "fuente": [
+        "The Lean Startup - Eric Ries",
+        "The Hard Thing About Hard Things - Ben Horowitz"
+      ],
+      "pasos_accionables": 7
+    },
+    {
+      "node_id": "viral_loop_marketing",
+      "fuente": [
+        "The Startup Owner's Manual - Blank, Steve",
+        "Never Lose a Customer Again - Joey Coleman",
+        "Traction - Gabriel Weinberg"
+      ],
+      "pasos_accionables": 23
+    }
+  ]
+}

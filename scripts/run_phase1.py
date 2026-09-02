@@ -1050,6 +1050,110 @@ def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
             f": {claves_renegadas[:5]}" if claves_renegadas else ""),
     ))
 
+    # ── OP-A-01 (FASE 07 ADUANA): LOS TRES CONTROLES DE SU `verificacion` ────
+    # Ejecutada en la vuelta 146, TAREA 3.b, con su simulacion previa sobre
+    # copia en memoria (scripts/loop/vuelta146_3b_simular_op_a_01.py) y su caso
+    # rojo por mutacion sobre variable computada
+    # (scripts/loop/vuelta146_3c_mutacion_aduana.py).
+    #
+    # EL ALCANCE SON LAS TRES ENTRADAS DE SU FICHA Y NI UNA MAS. Su PRERREQUISITO
+    # esta CUMPLIDO: la lista canonica de libros existe
+    # (docs/plan/OP_S_11_MAPEO_PROPUESTO.md) y su duena OP-S-11 esta HECHA con
+    # corte 2026-08-29. Que la vuelta 145 dijera lo contrario es su caida 4.1, y
+    # la guarda que impide repetirla es scripts/loop/
+    # verificar_ausencias_del_reporte.py (CORRECCION 23).
+    #
+    # 3) EL SEGUNDO LIBRO Y LOS PASOS, LA MITAD SANA. La entrada 3 dice "Gate 0
+    #    rechaza un nodo cuyo segundo libro no aparece en ningun paso". Un nodo
+    #    que declara mas de un libro y NO TIENE NI UN paso no puede tener un paso
+    #    donde aparezca su segundo libro: ese caso es MECANICO y no puede dar un
+    #    falso rojo. LA OTRA MITAD (decidir si el MATERIAL de un paso concreto
+    #    viene del segundo libro) PIDE UNA ATRIBUCION POR PASO QUE EL ESQUEMA NO
+    #    TIENE: `pasos_accionables` es texto libre sin campo de fuente. NO SE
+    #    ADIVINA (EJECUTOR.md 11) y no se fabrica una heuristica de parecido, que
+    #    decidiria por semejanza lo que solo decide una lectura. Queda PENDIENTE
+    #    DE DOCTRINA, dicho aqui, en la vara de la fase 07 y en el reporte.
+    fuentes_por_nodo = {}
+    for path in sorted(NODOS_DIR.glob("*.json")):
+        try:
+            datos = load_json(path)
+        except json.JSONDecodeError:
+            continue  # ya lo reporta el chequeo de parseo
+        if datos.get("deprecado"):
+            continue
+        fu = datos.get("fuente")
+        decl = [x.strip() for x in str(fu).split(" | ") if x.strip()] if isinstance(fu, str) else []
+        if len(decl) > 1:
+            fuentes_por_nodo[datos.get("node_id") or path.stem] = (
+                decl, len(datos.get("pasos_accionables") or []))
+
+    # 1) LA COMPROBACION POSICIONAL (BANCO_DEL_PLAN.md P.2: "el orden dentro del
+    #    campo fuente lleva informacion; el primero es de donde salio el nodo, y
+    #    lo que viene detras es lo que se le pego"). La nota de la ficha dice para
+    #    que le sirve a la ADUANA: "el plan repara 67 nodos una vez; la aduana
+    #    impide que entre el sesenta y ocho, y para eso le basta con mirar el
+    #    ORDEN del campo fuente". Se coteja contra la NOMINA ADJUDICADA, ENTERA Y
+    #    EN ORDEN, para que anadirle en silencio un segundo libro a un nodo ya
+    #    adjudicado caiga igual que un nodo nuevo sin adjudicar.
+    ruta_nomina = BASE / "dataset" / "metadata" / "aduana_fuente_multiple.json"
+    try:
+        nomina_aduana = {
+            x["node_id"]: list(x["fuente"])
+            for x in load_json(ruta_nomina).get("adjudicados", [])
+        }
+        nomina_legible = True
+    except (OSError, json.JSONDecodeError, KeyError, TypeError):
+        nomina_aduana, nomina_legible = {}, False
+
+    posicional_fallos = []
+    if not nomina_legible:
+        posicional_fallos.append(
+            "no se pudo leer dataset/metadata/aduana_fuente_multiple.json: "
+            "sin nomina el control posicional no mide nada")
+    else:
+        for nid, (decl, _n_pasos) in sorted(fuentes_por_nodo.items()):
+            if nid not in nomina_aduana:
+                posicional_fallos.append(
+                    f"{nid} declara {len(decl)} fuentes y NO esta en la nomina adjudicada")
+            elif nomina_aduana[nid] != decl:
+                posicional_fallos.append(
+                    f"{nid} declara {decl} y la nomina adjudicada dice {nomina_aduana[nid]}")
+    checks.append((
+        "OP-A-01: todo nodo VIVO con MAS DE UNA fuente pasa la comprobacion posicional",
+        not posicional_fallos,
+        f"{len(fuentes_por_nodo)} con fuente multiple, {len(posicional_fallos)} sin adjudicar"
+        + (f": {posicional_fallos[:5]}" if posicional_fallos else ""),
+    ))
+
+    # 2) EL CAMPO FUENTE CONTRA LA LISTA CANONICA DE LIBROS. NO SE REIMPLEMENTA:
+    #    se llama a scripts/loop/verificar_fuente_canonico.py, que YA es el
+    #    criterio de HECHO de la fase 08 y ya muerde por mutacion. Dos versiones
+    #    de la misma comprobacion serian exactamente la averia de los dos
+    #    master_graph que el chequeo de gemelos vino a curar. Este cableado es
+    #    ademas el control A2.4 que OP-A-02 exige CORRIENDO (adjudicacion 3.15
+    #    del acta 145: "OP-A-02 no los posee: los exige corriendo, y Gate 0 es la
+    #    puerta").
+    sys.path.insert(0, str(BASE / "scripts" / "loop"))
+    from verificar_fuente_canonico import verificar as _verificar_fuente_canonico
+
+    canonico_ok, canonico_incump = _verificar_fuente_canonico()
+    checks.append((
+        "OP-A-01 / OP-A-02 (A2.4): el campo `fuente` resuelve contra la lista CANONICA de libros",
+        canonico_ok,
+        f"{len(canonico_incump)} incumplimiento(s)" + (
+            f": {[(n, g) for n, g, _m in canonico_incump[:5]]}" if canonico_incump else ""),
+    ))
+
+    sin_pasos_con_dos_libros = sorted(
+        nid for nid, (decl, n_pasos) in fuentes_por_nodo.items() if n_pasos == 0)
+    checks.append((
+        "OP-A-01: ningun nodo declara un SEGUNDO libro sin tener ni un paso donde pueda aparecer",
+        not sin_pasos_con_dos_libros,
+        f"{len(sin_pasos_con_dos_libros)} sin pasos" + (
+            f": {sin_pasos_con_dos_libros[:5]}" if sin_pasos_con_dos_libros else ""),
+    ))
+    # ── FIN OP-A-01 ─────────────────────────────────────────────────────────
+
     seeds = load_entry_seeds()
     seeds_deprecadas = sorted(set(seeds) & deprecados)
     checks.append((

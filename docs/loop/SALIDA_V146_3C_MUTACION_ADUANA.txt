@@ -1,0 +1,34 @@
+MUTACIONES DE LOS TRES CONTROLES DE OP-A-01 EN GATE 0 | vuelta 146, 3.b y 3.c
+==============================================================================
+SUJETOS ELEGIDOS POR COMPUTO: adjudicado 'arquetipos_de_cliente' | suelto 'ab_testing_optimizacion' | libro extra 'A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)'
+
+CONTRAPRUEBA, SIN MUTAR NADA: los tres checks salen OK: True
+   [OK] OP-A-01: todo nodo VIVO con MAS DE UNA fuente pasa la comprobacion posicional (valor: 8 con fuente multiple, 0 sin adjudicar)
+   [OK] OP-A-01 / OP-A-02 (A2.4): el campo `fuente` resuelve contra la lista CANONICA de libros (valor: 0 incumplimiento(s))
+   [OK] OP-A-01: ningun nodo declara un SEGUNDO libro sin tener ni un paso donde pueda aparecer (valor: 0 sin pasos)
+
+A nodo nuevo con dos libros sin adjudicar
+   sujeto 'ab_testing_optimizacion' | el check pasa a FALLO: True | lo nombra: True
+   valor del check: 9 con fuente multiple, 1 sin adjudicar: ['ab_testing_optimizacion declara 2 fuentes y NO esta en la nomina adjudicada']
+   VEREDICTO: OK
+
+B tercer libro anadido en silencio a uno ya adjudicado
+   sujeto 'arquetipos_de_cliente' | el check pasa a FALLO: True | lo nombra: True
+   valor del check: 8 con fuente multiple, 1 sin adjudicar: ['arquetipos_de_cliente declara ["The Startup Owner\'s Manual - Blank, Steve", \'The Lean Startup - Eric Ries\', \'A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition
+   VEREDICTO: OK
+
+C grafia fuera de la tabla canonica (control A2.4)
+   sujeto 'ab_testing_optimizacion' | el check pasa a FALLO: True | lo nombra: True
+   valor del check: 1 incumplimiento(s): [('ab_testing_optimizacion', "The Startup Owner's Manual - Blank, Steve, EDICION QUE NINGUNA CANONICA TIENE")]
+   VEREDICTO: OK
+
+D segundo libro sin ni un paso
+   sujeto 'arquetipos_de_cliente' | el check pasa a FALLO: True | lo nombra: True
+   valor del check: 1 sin pasos: ['arquetipos_de_cliente']
+   VEREDICTO: OK
+
+dataset/ IDENTICO antes y despues (cero escrituras): True
+==============================================================================
+CASOS QUE MUERDEN: 4 de 4
+VEREDICTO GLOBAL: VERDE
+EXITCODE: 0

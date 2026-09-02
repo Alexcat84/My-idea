@@ -70,7 +70,7 @@ CONTROLES = [
         "frase": "todo nodo que entre declarando MAS DE UNA fuente pasa por la "
                  "comprobacion posicional",
         "sondas": [("scripts/run_phase1.py", "comprobacion posicional")],
-        "mutacion": "no_instalado",
+        "mutacion": "aduana_posicional",
     },
     {
         "id": "A1.2",
@@ -78,10 +78,19 @@ CONTROLES = [
         "nombre": "campo fuente validado contra una lista CANONICA de libros",
         "frase": "el campo fuente se valida contra una lista CANONICA de libros: hoy no "
                  "existe y sin ella el control es fragil",
-        "sondas": [("dataset/metadata/libros_canonicos.json", None),
-                   ("dataset/metadata/fuentes_canonicas.json", None),
-                   ("docs/plan/LIBROS_CANONICOS.md", None)],
-        "mutacion": "no_instalado",
+        # SONDA REPARADA EN LA VUELTA 146 (TAREA 3.d). LA VIEJA, QUE NO SE
+        # BORRA, ERA: tres rutas tecleadas a mano
+        # (dataset/metadata/libros_canonicos.json,
+        # dataset/metadata/fuentes_canonicas.json,
+        # docs/plan/LIBROS_CANONICOS.md), NINGUNA DE LAS CUALES EXISTE NI HA
+        # EXISTIDO NUNCA. Es EXACTAMENTE el metodo de la caida 4.1 del acta 145
+        # y lo que la CORRECCION 23 prohibe: una busqueda por NOMBRE contra
+        # candidatos tecleados no puede hallar un fichero que se llama por su
+        # operacion duena. La lista canonica existe y es
+        # docs/plan/OP_S_11_MAPEO_PROPUESTO.md. La sonda nueva mira LO QUE EL
+        # CONTROL ES: el rotulo del check cableado a Gate 0 en la vuelta 146.
+        "sondas": [("scripts/run_phase1.py", "resuelve contra la lista CANONICA de libros")],
+        "mutacion": "aduana_canonico",
     },
     {
         "id": "A1.3",
@@ -89,7 +98,7 @@ CONTROLES = [
         "nombre": "Gate 0 rechaza el nodo cuyo segundo libro no aparece en ningun paso",
         "frase": "Gate 0 rechaza un nodo cuyo segundo libro no aparece en ningun paso",
         "sondas": [("scripts/run_phase1.py", "segundo libro")],
-        "mutacion": "no_instalado",
+        "mutacion": "aduana_segundo_libro",
     },
     {
         "id": "A2.1",
@@ -114,17 +123,32 @@ CONTROLES = [
         "op": "OP-A-02",
         "nombre": "control posicional del campo fuente",
         "frase": "control posicional del campo fuente",
-        "sondas": [("scripts/run_phase1.py", "posicional del campo fuente")],
-        "mutacion": "no_instalado",
+        # SONDA REPARADA EN LA VUELTA 146 (TAREA 3.d). LA VIEJA, QUE NO SE
+        # BORRA, buscaba el literal "posicional del campo fuente" en
+        # scripts/run_phase1.py. A2.3 Y A1.1 SON EL MISMO CONTROL con dos
+        # nombres: la ficha de OP-A-02 lo llama "control posicional del campo
+        # fuente" y se lo atribuye a OP-A-01 en su nota ("todos con dueno:
+        # ... control posicional del campo fuente (OP-A-01)"). Sondear un
+        # literal que solo existia en la frase de la ficha y no en el codigo
+        # era medir la ficha, no la instalacion. Se apunta al MISMO rotulo que
+        # A1.1, que es el control de verdad.
+        "sondas": [("scripts/run_phase1.py", "comprobacion posicional")],
+        "mutacion": "aduana_posicional",
     },
     {
         "id": "A2.4",
         "op": "OP-A-02",
         "nombre": "campo fuente CANONICO",
         "frase": "campo fuente canonico",
-        "sondas": [("dataset/metadata/libros_canonicos.json", None),
-                   ("dataset/metadata/fuentes_canonicas.json", None)],
-        "mutacion": "no_instalado",
+        # SONDA REPARADA EN LA VUELTA 146 (TAREA 3.c). LA VIEJA, QUE NO SE
+        # BORRA, eran dos rutas tecleadas a mano
+        # (dataset/metadata/libros_canonicos.json y
+        # dataset/metadata/fuentes_canonicas.json), ninguna existente. Mismo
+        # defecto que A1.2 y misma reparacion: A2.4 Y A1.2 SON EL MISMO
+        # CONTROL, el campo fuente canonico, que la nota de OP-A-02 atribuye a
+        # OP-S-11. Cableado a Gate 0 en la vuelta 146, TAREA 3.c.
+        "sondas": [("scripts/run_phase1.py", "resuelve contra la lista CANONICA de libros")],
+        "mutacion": "aduana_canonico",
     },
     {
         "id": "A2.5",
@@ -282,10 +306,63 @@ def mut_no_instalado():
     return False, False, "el control no esta instalado: no hay nada que mutar"
 
 
+# --- LAS TRES MUTACIONES DE LA ADUANA (vuelta 146, TAREAS 3.b y 3.c) ---
+# NO SE REIMPLEMENTAN AQUI: se llaman las del arnes que ya las prueba,
+# `scripts/loop/vuelta146_3c_mutacion_aduana.py`, que corre `step7_validate` DE
+# VERDAD con `load_json` parcheado en memoria. Dos versiones de la misma
+# mutacion serian dos varas midiendo cosas distintas con el mismo nombre, que
+# es la averia que esta campana persigue. Los sujetos los elige POR COMPUTO ese
+# arnes, no esta vara.
+def _mut_aduana(rotulo_literal, cual):
+    import vuelta146_3c_mutacion_aduana as M
+    base = M.correr_checks()
+    rot = next((r for r in base if rotulo_literal in r), None)
+    if rot is None:
+        return True, False, "el check no aparece en la nomina de Gate 0"
+    verde_antes = base[rot][0]
+    nomina = json.load(io.open(os.path.join(
+        RAIZ, "dataset", "metadata", "aduana_fuente_multiple.json"), encoding="utf-8"))
+    adjudicado = nomina["adjudicados"][0]["node_id"]
+    import verificar_fuente_canonico as V
+    suelto = next(nid for nid, fu in V.cargar_nodos_vivos()
+                  if isinstance(fu, str) and " | " not in fu
+                  and nid not in {x["node_id"] for x in nomina["adjudicados"]})
+    if cual == "posicional":
+        sujeto, libro = suelto, sorted(set(M.cargar_tabla().values()))[0]
+        mut = {sujeto: (lambda d, l=libro: dict(d, fuente="%s | %s" % (d.get("fuente"), l)))}
+    elif cual == "canonico":
+        sujeto = suelto
+        mut = {sujeto: (lambda d: dict(
+            d, fuente="%s, EDICION QUE NINGUNA CANONICA TIENE" % d.get("fuente")))}
+    else:
+        sujeto = adjudicado
+        mut = {sujeto: (lambda d: dict(d, pasos_accionables=[]))}
+    despues = M.correr_checks(mut)
+    verde_despues = despues[rot][0]
+    muerde = bool(verde_antes) and not verde_despues and (sujeto in str(despues[rot][1]))
+    return True, muerde, ("con el catalogo de hoy el check dice %s; mutado %r en memoria dice "
+                          "%s y lo nombra" % (verde_antes, sujeto, verde_despues))
+
+
+def mut_aduana_posicional():
+    return _mut_aduana("pasa la comprobacion posicional", "posicional")
+
+
+def mut_aduana_canonico():
+    return _mut_aduana("resuelve contra la lista CANONICA de libros", "canonico")
+
+
+def mut_aduana_segundo_libro():
+    return _mut_aduana("sin tener ni un paso donde pueda aparecer", "segundo_libro")
+
+
 MUTACIONES = {
     "gate0_auto_arista": mut_gate0_auto_arista,
     "gate0_dominio": mut_gate0_dominio,
     "lista_blanca_de_claves": mut_lista_blanca_de_claves,
+    "aduana_posicional": mut_aduana_posicional,
+    "aduana_canonico": mut_aduana_canonico,
+    "aduana_segundo_libro": mut_aduana_segundo_libro,
     "no_instalado": mut_no_instalado,
 }
 
@@ -355,8 +432,21 @@ def main():
     print("VEREDICTO DE LA FASE 07 CONTRA ESTA VARA: ABIERTA Y MEDIDA. %d de %d controles "
           "estan instalados y muerden; los otros %d NO estan instalados y esta vara lo dice "
           "en voz alta en vez de callarlo." % (completos, total, total - completos))
-    print("LA FASE NO SE CIERRA HOY Y NINGUNA DE LAS DOS OPERACIONES SE EJECUTA: "
-          "el encargo de la vuelta 145 manda ABRIR Y MEDIR.")
+    # LA COLA SE COMPUTA, NO SE TECLEA (vuelta 146, TAREA 3.d). La version de la
+    # vuelta 145 imprimia una frase FIJA, "LA FASE NO SE CIERRA HOY Y NINGUNA DE
+    # LAS DOS OPERACIONES SE EJECUTA: el encargo de la vuelta 145 manda ABRIR Y
+    # MEDIR", que era cierta el dia que se escribio y dejo de serlo en cuanto la
+    # vuelta 146 ejecuto OP-A-01. Una linea de veredicto que no depende de lo que
+    # el instrumento acaba de medir es exactamente una cifra tecleada. Ahora la
+    # frase sale de `pendientes`, que se computa de la tabla.
+    pendientes = [f[0]["id"] for f in filas if not (f[1] and f[3] and f[4])]
+    if pendientes:
+        print("LA FASE NO SE CIERRA CONTRA ESTA VARA. Lo que le falta, nombrado: %s."
+              % ", ".join(pendientes))
+    else:
+        print("CONTRA ESTA VARA NO LE FALTA NINGUN CONTROL. Cerrar la fase es una "
+              "adjudicacion del auditor, no de este instrumento: esta vara mide CODIGO "
+              "INSTALADO, no destino contra el grafo (ver la frontera del docstring).")
     return 0
 
 

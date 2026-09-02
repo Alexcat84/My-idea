@@ -1,0 +1,76 @@
+VARA DE CODIGO DE LA FASE 07 ADUANA | vuelta 145, TAREA 3.b
+Instrumento APARTE, por la frontera de la adjudicacion 3.9 del acta 144:
+este veredicto NO entra en la columna de tallar_estado_de_fase.py, cuyo
+contrato dice 'destino medido contra el grafo'. Dos unidades no comparten
+columna (CORRECCION 18).
+==============================================================================
+GUARDA DE CITAS: cada frase de este codigo aparece VERBATIM en su ficha
+  VERDE: las 9 citas aparecen VERBATIM en su ficha
+
+LA TABLA, CONTROL A CONTROL
+==============================================================================
+A1.1  OP-A-01  comprobacion posicional del nodo que declara mas de una fuente
+     frase de la ficha: 'todo nodo que entre declarando MAS DE UNA fuente pasa por la comprobacion posicional'
+     (1) EXISTE EN EL CODIGO: SI   [scripts/run_phase1.py:1122]
+     (2) MUERDE POR MUTACION: SI   [con el catalogo de hoy el check dice True; mutado 'ab_testing_optimizacion' en memoria dice False y lo nombra]
+
+A1.2  OP-A-01  campo fuente validado contra una lista CANONICA de libros
+     frase de la ficha: 'el campo fuente se valida contra una lista CANONICA de libros: hoy no existe y sin ella el control es fragil'
+     (1) EXISTE EN EL CODIGO: SI   [scripts/run_phase1.py:1141]
+     (2) MUERDE POR MUTACION: SI   [con el catalogo de hoy el check dice True; mutado 'ab_testing_optimizacion' en memoria dice False y lo nombra]
+
+A1.3  OP-A-01  Gate 0 rechaza el nodo cuyo segundo libro no aparece en ningun paso
+     frase de la ficha: 'Gate 0 rechaza un nodo cuyo segundo libro no aparece en ningun paso'
+     (1) EXISTE EN EL CODIGO: SI   [scripts/run_phase1.py:1067]
+     (2) MUERDE POR MUTACION: SI   [con el catalogo de hoy el check dice True; mutado 'arquetipos_de_cliente' en memoria dice False y lo nombra]
+
+A2.1  OP-A-02  auto-arista CON RESOLUCION
+     frase de la ficha: 'los CINCO controles mecanicos corriendo: auto-arista con resolucion'
+     (1) EXISTE EN EL CODIGO: SI   [scripts/run_phase1.py:1018]
+     (2) MUERDE POR MUTACION: SI   [con el grafo de hoy el check dice True; anadida una auto-arista a 'ab_testing_optimizacion' dice False]
+
+A2.2  OP-A-02  lista blanca de claves del nodo
+     frase de la ficha: 'lista blanca de claves'
+     (1) EXISTE EN EL CODIGO: SI   [scripts/run_phase1.py:1047]
+     (2) MUERDE POR MUTACION: SI   [el nodo 6s_lugar_trabajo.json da 0 clave(s) renegada(s); con una clave de mas da 1 y la nombra: ['fase_proyecto_con_cirilica_v145']]
+
+A2.3  OP-A-02  control posicional del campo fuente
+     frase de la ficha: 'control posicional del campo fuente'
+     (1) EXISTE EN EL CODIGO: SI   [scripts/run_phase1.py:1122]
+     (2) MUERDE POR MUTACION: SI   [con el catalogo de hoy el check dice True; mutado 'ab_testing_optimizacion' en memoria dice False y lo nombra]
+
+A2.4  OP-A-02  campo fuente CANONICO
+     frase de la ficha: 'campo fuente canonico'
+     (1) EXISTE EN EL CODIGO: SI   [scripts/run_phase1.py:1141]
+     (2) MUERDE POR MUTACION: SI   [con el catalogo de hoy el check dice True; mutado 'ab_testing_optimizacion' en memoria dice False y lo nombra]
+
+A2.5  OP-A-02  revision de nomina por dominio
+     frase de la ficha: 'revision de nomina por dominio'
+     (1) EXISTE EN EL CODIGO: SI   [scripts/run_phase1.py:769]
+     (2) MUERDE POR MUTACION: SI   [con el grafo de hoy el check dice True; puesto un dominio invalido en '6s_lugar_trabajo' dice False]
+
+A2.6  OP-A-02  BLOQUEO POR VEREDICTO AUSENTE, la puerta semantica
+     frase de la ficha: 'la insercion se desbloquea con el veredicto escrito, NO con el parecido bajado: bajar el umbral no es una salida'
+     (1) EXISTE EN EL CODIGO: NO   [scripts/run_phase1.py no trae el literal 'veredicto continua-o-repite'; engine/plan_readiness.py no trae el literal 'veredicto continua-o-repite']
+     (2) MUERDE POR MUTACION: NO APLICA   [el control no esta instalado: no hay nada que mutar]
+
+==============================================================================
+EL RECUENTO, POR OPERACION
+  OP-A-01: 3 control(es) declarado(s) | EXISTEN 3 | MUERDEN 3 | INSTALADOS Y MORDIENDO 3
+     A1.1  INSTALADO Y MUERDE
+     A1.2  INSTALADO Y MUERDE
+     A1.3  INSTALADO Y MUERDE
+  OP-A-02: 6 control(es) declarado(s) | EXISTEN 5 | MUERDEN 5 | INSTALADOS Y MORDIENDO 5
+     A2.1  INSTALADO Y MUERDE
+     A2.2  INSTALADO Y MUERDE
+     A2.3  INSTALADO Y MUERDE
+     A2.4  INSTALADO Y MUERDE
+     A2.5  INSTALADO Y MUERDE
+     A2.6  NO INSTALADO
+
+CIFRA controles declarados: 9 controles
+CIFRA controles instalados y mordiendo: 8 controles
+
+VEREDICTO DE LA FASE 07 CONTRA ESTA VARA: ABIERTA Y MEDIDA. 8 de 9 controles estan instalados y muerden; los otros 1 NO estan instalados y esta vara lo dice en voz alta en vez de callarlo.
+LA FASE NO SE CIERRA CONTRA ESTA VARA. Lo que le falta, nombrado: A2.6.
+EXITCODE: 0

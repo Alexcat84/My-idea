@@ -1,0 +1,17 @@
+BARRIDO EXHAUSTIVO
+  PREGUNTA: existe en el codigo una constante canonica que fije el UMBRAL DE LA COLA en un valor numerico, el que OP-A-02 cita sin numero
+  UNIVERSO: git ls-files de la rama actual ACOTADO a scripts/, engine/, web/
+  CARDINAL: 1479
+  EXCLUIDOS POR SER SONDA Y NO INSTALACION (declarados, no escondidos): 0
+  POR NOMBRE: umbral|cola | 4 ficheros con coincidencia
+  POR CONTENIDO: UMBRAL_DE_LA_COLA|UMBRAL_COLA|umbral_de_la_cola | 0 ficheros con coincidencia
+  NO DECODIFICABLES (mirados y no leidos, NO cuentan como sin coincidencia): 0
+  VEREDICTO: HALLADO
+  LOS QUE COINCIDEN (union de las dos piernas): 4
+      scripts/loop/vuelta133_cola_localizador_apendice.py  [nombre]
+      scripts/loop/vuelta134_censo_cola_no_recorta.py  [nombre]
+      scripts/loop/vuelta135_cola_localizador_cap.py  [nombre]
+      scripts/plan/diferencia_contra_cola.py  [nombre]
+CIFRA ficheros del universo: 1479 ficheros
+CIFRA ficheros que coinciden: 4 ficheros
+EXITCODE: 0
