@@ -52,6 +52,8 @@ LAS VARAS DEL DESTINO, y de donde sale cada una:
       en `nodos_siguientes` del origen O en `nodos_previos` del destino.
       Si una cadena de `aristas_nuevas` contiene "->" y NO produce ningun par,
       es ROJO nombrandola (una arista que el parser no ve es peor que ninguna).
+      DESDE LA VUELTA 141 ESTA VARA MIDE TAMBIEN LA VUELTA: ver el bloque
+      "LA VARA DE ENLACE APRENDE A MIRAR LA VUELTA" mas abajo.
 
   (3) MESA. ESTA VARA NO ESTA EN EL ENCARGO Y ES LECTURA MIA, DECLARADA AQUI Y
       MARCADA COMO DISCUTIBLE EN EL REPORTE DE LA VUELTA 140. Sale de dos
@@ -62,6 +64,8 @@ LAS VARAS DEL DESTINO, y de donde sale cada una:
       catalogo lo tienen. Si una mesa no tiene NINGUNA hija en el catalogo, el
       destino NO SE DA POR CUMPLIDO: sale NO COMPUTABLE con sus hijas y la
       fase de cada una nombradas, para que se vea por que.
+      DESDE LA VUELTA 141 LA NOMINA DE UNA MESA SON SUS DOS FUENTES UNIDAS:
+      ver el bloque "EL CATALOGO DE UNA MESA UNE SUS DOS FUENTES" mas abajo.
 
   (4) SIN VARA ESCRITA. Todo lo demas. NO HAY REGLA ESCRITA que mida contra el
       grafo el destino de una VIGENCIA, una HERRAMIENTA, un CAMPO_SUCIO, un
@@ -90,6 +94,81 @@ USO:
 --ref fija el grafo Y el OPERACIONES.jsonl Y los dos registros de remision en
 un commit, para poder correr sobre SUJETO CONGELADO (banco 9.10: un sujeto que
 se mueve solo no prueba nada). Por defecto WORK, el arbol de trabajo.
+
+--- LA VARA DE ENLACE APRENDE A MIRAR LA VUELTA (TAREA 2.a, vuelta 141) ---
+
+POR QUE NACE (acta de la vuelta 140, caida 4.1, "DE GUARDA QUE NO ALCANZA, Y ES
+LA GRANDE DE HOY"). La vara ENLACE contaba cuantas `aristas_nuevas` estan
+presentes y NUNCA miraba si la VUELTA estaba. Una fila cuya ida ya estaba puesta
+salia como "YA PRESENTE" y la vara paraba ahi. Consecuencia medida por el
+auditor: OP-E-04 no tenia TRES filas en violacion de su propia verificacion 0,
+tenia CINCO (LD-35, LD-42, LD-48, LD-49 y LD-51), y DOS de esas vueltas las
+escribio la vuelta 140 con OP-E-05, que la misma tabla publicaba como CUMPLIDA.
+"YA PRESENTE" NO ES UN VEREDICTO: ES MEDIA MEDICION.
+
+QUE HACE AHORA, Y DE DONDE SALE CADA COSA. La vara lee TAMBIEN la `verificacion`
+de la ficha y clasifica su REGIMEN DE VUELTA en uno de tres, SIN mirar el campo
+`tipo` (el encargo lo prohibe expresamente: la excepcion va escrita, no
+adivinada del tipo):
+
+  - PROHIBE. Alguna linea de `verificacion` dice que la vuelta no debe existir.
+    Las tres formas que el plan usa hoy, LITERALES de las fichas y por eso
+    escritas aqui como frases y no como una heuristica:
+      * "la vuelta no debe existir"        (OP-E-04 v0, OP-M-01-SEXTO v2)
+      * "la vuelta no existe ni literal ni resuelta"  (OP-M-01-ESLABONES v0,
+                                                       OP-M-04 v7)
+      * "la vuelta es una instruccion falsa"          (OP-M-03-ENLACES v0)
+    En este regimen la operacion SOLO cumple si, para CADA una de sus
+    direcciones, la IDA esta presente Y la VUELTA NO lo esta, medido con el
+    resolutor puesto en las DOS VISTAS.
+
+  - MUTUO. Alguna linea de `verificacion` declara la excepcion del BANCO 9.22
+    ("La regla de la escalera vale para las ESCALERAS, no para los enlaces
+    mutuos", hueco de orden 1 del 00_INDICE; y el 9.22: "ENLACE MUTUO: dos
+    aristas, una por cada linea expandida"). Las formas literales:
+      * "la vuelta si existe"             (OP-E-05 v0)
+      * "es un enlace mutuo"              (OP-E-05 v0)
+      * "la regla de la escalera no aplica" (OP-E-05 v0)
+    En este regimen la vara EXIGE las dos direcciones (que ya vienen las dos en
+    `aristas_nuevas`) y NO PENALIZA la vuelta.
+
+  - SIN REGLA. Ninguna linea dice nada de la vuelta. La vara NO INVENTA una
+    (EJECUTOR.md regla 5): mide la ida como siempre, MIDE la vuelta igual y la
+    PUBLICA, pero no la usa para el veredicto, y lo dice en la celda.
+
+Si una misma ficha trae las dos clases de frase, es ROJO nombrandola: una ficha
+que prohibe y exige la vuelta a la vez no se resuelve adivinando.
+
+Y LA COLUMNA DE DESTINO PUBLICA, POR OPERACION, cuantas direcciones tienen la
+IDA presente y CUANTAS TIENEN LA VUELTA PRESENTE, nombrandolas las dos veces.
+
+--- LA CELDA PUBLICA UNA SOLA UNIDAD (TAREA 2.c, vuelta 141) ---
+
+POR QUE NACE (acta de la vuelta 140, adjudicacion 3.4). La celda de OP-E-04
+decia "4 de 9 presentes" (numerador en FILAS DE FICHA) y a continuacion listaba
+5 faltantes (DIRECCIONES distintas): 4 mas 5 da 9 filas cuando solo hay 8
+direcciones. Dos unidades en una celda.
+
+LA UNIDAD ADJUDICADA ES LA DIRECCION ("es lo que el grafo guarda y lo que la
+vara mide, y la cadena esconde el enlace mutuo"). Desde la vuelta 141 el
+NUMERADOR Y EL DENOMINADOR de la celda son DIRECCIONES distintas tras resolver;
+las filas de ficha se siguen publicando, pero SIEMPRE NOMBRADAS COMO TALES
+("N filas de ficha"), y cuando colapsan se dice en cuantas.
+
+--- EL CATALOGO DE UNA MESA UNE SUS DOS FUENTES (TAREA 2.b, vuelta 141) ---
+
+POR QUE NACE (acta de la vuelta 140, adjudicacion 3.1). `bloquea_a` NO es la
+nomina completa de una mesa: OP-M-01.bloquea_a nombra OP-E-04, OP-E-05,
+OP-M-01-ESLABONES, OP-M-01-FUSION y OP-S-12, y NO nombra OP-M-01-SEXTO, que la
+tabla de remision de docs/plan/04_ENLACES.md manda expresamente a OP-M-01. Hoy
+no mueve la cifra (OP-M-01 cae igual por OP-E-04), pero el dia que solo falte la
+sexta la mesa cerraria con una hija fuera.
+
+QUE HACE AHORA. La nomina de una mesa es la UNION de dos fuentes:
+  (1) su campo `bloquea_a`, y
+  (2) la COLUMNA DE DESTINO de la tabla de remision, PARSEADA de
+      docs/plan/04_ENLACES.md por leer_remisiones() y no tecleada aqui.
+La celda publica DE DONDE SALE CADA HIJA: "bloquea_a", "remision" o "las dos".
 
 LAS MUTACIONES viven en scripts/loop/vuelta140_2a_mutaciones.py, que importa
 este modulo y muta EN MEMORIA (nunca el disco). Las tres, todas sobre cifra
@@ -294,19 +373,113 @@ def destino_de_fusion(op, nodos, fallos):
         sup, len(absorbidos))
 
 
-def destino_de_enlace(pares, nodos, resolver):
-    presentes = 0
-    faltan = []
+# ------------------------------------------- el regimen de vuelta de la ficha
+
+# TAREA 2.a (vuelta 141). Las frases van LITERALES de las fichas del plan, no
+# como heuristica: ver el bloque "LA VARA DE ENLACE APRENDE A MIRAR LA VUELTA"
+# del docstring, donde cada una lleva la ficha y la linea de la que sale.
+FRASES_PROHIBE_VUELTA = [
+    "la vuelta no debe existir",
+    "la vuelta no existe ni literal ni resuelta",
+    "la vuelta es una instruccion falsa",
+]
+# La excepcion del BANCO 9.22, ESCRITA y no adivinada del campo `tipo`:
+# "La regla de la escalera vale para las ESCALERAS, no para los enlaces mutuos"
+# (00_INDICE, hueco de orden 1), y "ENLACE MUTUO: dos aristas, una por cada
+# linea expandida" (banco 9.22).
+FRASES_MUTUO = [
+    "la vuelta si existe",
+    "es un enlace mutuo",
+    "la regla de la escalera no aplica",
+]
+
+
+def regimen_de_vuelta(op, fallos):
+    """PROHIBE / MUTUO / SIN REGLA, leido de la `verificacion` de la ficha.
+
+    Devuelve (regimen, cita), donde cita es "verificacion <i>: <frase>" de la
+    primera linea que lo decide, o None si ninguna lo dice. NUNCA mira el campo
+    `tipo`: el encargo de la vuelta 141 lo prohibe expresamente."""
+    prohibe = None
+    mutuo = None
+    for i, linea in enumerate(op.get("verificacion") or []):
+        bajo = (linea or "").lower()
+        for f in FRASES_PROHIBE_VUELTA:
+            if f in bajo and prohibe is None:
+                prohibe = "verificacion %d: %s" % (i, f)
+        for f in FRASES_MUTUO:
+            if f in bajo and mutuo is None:
+                mutuo = "verificacion %d: %s" % (i, f)
+    if prohibe and mutuo:
+        fallos.append("%s: su verificacion PROHIBE y EXIGE la vuelta a la vez (%s / %s): "
+                      "no se resuelve adivinando" % (op.get("id_op"), prohibe, mutuo))
+        return "AMBIGUO", "%s / %s" % (prohibe, mutuo)
+    if prohibe:
+        return "PROHIBE", prohibe
+    if mutuo:
+        return "MUTUO", mutuo
+    return "SIN REGLA", None
+
+
+def direcciones_de(pares, resolver):
+    """Las DIRECCIONES distintas tras resolver, en el orden en que aparecen
+    (TAREA 2.c, vuelta 141: la unidad publicada es la direccion, no la fila de
+    ficha ni la cadena)."""
+    vistas = []
     for o, d in pares:
-        ok, ro, rd = arista_presente(nodos, resolver, o, d)
-        if ok:
-            presentes += 1
-        else:
-            faltan.append("%s -> %s" % (ro, rd))
-    cumplido = presentes == len(pares) and len(pares) > 0
-    razon = "%d de %d presentes" % (presentes, len(pares))
-    if faltan:
-        razon += "; faltan: " + ", ".join(faltan)
+        par = (resolver(o), resolver(d))
+        if par not in vistas:
+            vistas.append(par)
+    return vistas
+
+
+def destino_de_enlace(op, pares, nodos, resolver, fallos):
+    """TAREA 2.a y 2.c de la vuelta 141. Mide IDA Y VUELTA de cada DIRECCION y
+    juzga segun el regimen de vuelta que la propia ficha declara."""
+    regimen, cita = regimen_de_vuelta(op, fallos)
+    dirs = direcciones_de(pares, resolver)
+
+    con_ida, sin_ida, con_vuelta = [], [], []
+    for ro, rd in dirs:
+        ida, _, _ = arista_presente(nodos, resolver, ro, rd)
+        vuelta, _, _ = arista_presente(nodos, resolver, rd, ro)
+        nombre = "%s -> %s" % (ro, rd)
+        (con_ida if ida else sin_ida).append(nombre)
+        if vuelta:
+            con_vuelta.append("%s -> %s" % (rd, ro))
+
+    if not dirs:
+        return False, "cero direcciones parseadas de aristas_nuevas"
+
+    if regimen == "MUTUO":
+        cumplido = not sin_ida
+        nota = ("regimen de vuelta MUTUO por la ficha (%s), banco 9.22: la vuelta NO "
+                "penaliza y las dos direcciones se exigen" % cita)
+    elif regimen == "PROHIBE":
+        cumplido = (not sin_ida) and (not con_vuelta)
+        nota = ("regimen de vuelta PROHIBE por la ficha (%s): la vuelta presente "
+                "IMPIDE cumplir" % cita)
+    elif regimen == "AMBIGUO":
+        cumplido = False
+        nota = "regimen de vuelta AMBIGUO (%s): no se juzga" % cita
+    else:
+        cumplido = not sin_ida
+        nota = ("regimen de vuelta SIN REGLA: la ficha no dice nada de la vuelta, "
+                "asi que se MIDE y se publica pero NO se juzga (EJECUTOR.md regla 5)")
+
+    # LA CELDA PUBLICA UNA SOLA UNIDAD: el numerador y el denominador son
+    # DIRECCIONES; las filas de ficha van nombradas como tales (TAREA 2.c).
+    razon = "%d de %d direcciones con la IDA presente" % (len(con_ida), len(dirs))
+    if len(pares) != len(dirs):
+        razon += " (%d filas de ficha colapsan en %d direcciones)" % (len(pares), len(dirs))
+    else:
+        razon += " (%d filas de ficha, sin colapso)" % len(pares)
+    razon += "; con la VUELTA presente %d de %d" % (len(con_vuelta), len(dirs))
+    if con_vuelta:
+        razon += ": " + ", ".join(con_vuelta)
+    if sin_ida:
+        razon += "; sin la IDA: " + ", ".join(sin_ida)
+    razon += "; " + nota
     return cumplido, razon
 
 
@@ -341,7 +514,7 @@ def medir(fase, ops, nodos, remisiones=None, ref="WORK"):
             cumplido, razon = destino_de_fusion(op, nodos, fallos)
         elif pares:
             vara = "ENLACE"
-            cumplido, razon = destino_de_enlace(pares, nodos, resolver)
+            cumplido, razon = destino_de_enlace(op, pares, nodos, resolver, fallos)
         else:
             vara = "SIN VARA ESCRITA"
             cumplido = None
@@ -357,17 +530,38 @@ def medir(fase, ops, nodos, remisiones=None, ref="WORK"):
         op = por_id[x]
         if not es_mesa(op):
             continue
-        hijas = [h for h in (op.get("bloquea_a") or []) if h in en_catalogo and h != x]
+        # TAREA 2.b (vuelta 141): LA NOMINA SON LAS DOS FUENTES UNIDAS.
+        # `bloquea_a` NO es la nomina completa: OP-M-01.bloquea_a no nombra a
+        # OP-M-01-SEXTO, que la tabla de remision de 04_ENLACES.md manda
+        # expresamente a OP-M-01. La segunda fuente se PARSEA (leer_remisiones),
+        # no se teclea.
+        de_bloquea = [h for h in (op.get("bloquea_a") or []) if h != x]
+        de_remision = [h for h, meta in sorted(remisiones.items())
+                       if meta.get("a") == x and h != x]
+        procedencia = {}
+        for h in de_bloquea:
+            procedencia[h] = "bloquea_a"
+        for h in de_remision:
+            procedencia[h] = "las dos" if h in procedencia else "remision"
+        nomina = de_bloquea + [h for h in de_remision if h not in de_bloquea]
+
+        hijas = [h for h in nomina if h in en_catalogo]
         fuera = [(h, (por_id.get(h) or {}).get("fase", "no existe"))
-                 for h in (op.get("bloquea_a") or []) if h not in en_catalogo]
+                 for h in nomina if h not in en_catalogo]
+        celda_fuentes = "nomina de %d (bloquea_a %d, remision %d, union %d)" % (
+            len(nomina), len(de_bloquea), len(de_remision), len(nomina))
         if not hijas:
             cumplido = None
-            razon = ("NINGUNA de sus hijas esta en el catalogo de esta fase; "
-                     "bloquea_a: %s" % (", ".join("%s (%s)" % (h, f) for h, f in fuera) or "vacio"))
+            razon = ("NINGUNA de sus hijas esta en el catalogo de esta fase; %s; "
+                     "nomina: %s" % (celda_fuentes,
+                                     ", ".join("%s (%s)" % (h, f) for h, f in fuera) or "vacia"))
         else:
             sin = [h for h in hijas if veredicto.get(h) is not True]
             cumplido = not sin
             razon = "%d de %d hijas del catalogo con destino cumplido" % (len(hijas) - len(sin), len(hijas))
+            razon += "; " + celda_fuentes
+            razon += "; procedencia: " + ", ".join(
+                "%s por %s" % (h, procedencia[h]) for h in hijas)
             if sin:
                 razon += "; sin cumplir: " + ", ".join(sorted(sin))
             if fuera:

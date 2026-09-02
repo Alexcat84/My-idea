@@ -48,7 +48,22 @@ SHA256_ESPERADOS = {
 }
 
 FASE = "06_MESAS"
-SUJETO_ENLACE = "OP-M-01-ESLABONES"
+
+# EL SUJETO DEL CASO (i) SE COMPUTA, YA NO SE TECLEA (CORRECCION DECLARADA EN
+# LA VUELTA 141, TAREA 2.a).
+#
+# POR QUE CAMBIA. Aqui habia una constante, SUJETO_ENLACE = "OP-M-01-ESLABONES".
+# La arista se elegia por computo DENTRO de esa operacion, pero LA OPERACION
+# estaba tecleada. Al ensanchar la vara ENLACE en la vuelta 141 (que ahora mide
+# tambien la VUELTA), OP-M-01-ESLABONES pasa a SIN CUMPLIR por si sola: su
+# vuelta asignacion_recursos_en_gates -> sistema_gates_go_kill existe. Quitarle
+# una ida a una operacion que YA no cumple no puede bajar la cifra de cumplido,
+# asi que el caso (i) salia ROJO sin que la guarda tuviera nada roto.
+#
+# ES LA MISMA ESPECIE QUE LA CAIDA 4.5 DEL ACTA 140 (elegir mal el sujeto de un
+# caso), y se arregla igual: EL SUJETO SE COMPUTA. Se elige la primera operacion
+# de vara ENLACE que HOY cumple y que tiene al menos una arista presente, que es
+# exactamente lo que el caso (i) necesita para poder caer.
 
 
 def cifra_de(fase, ops, nodos, remisiones):
@@ -84,19 +99,30 @@ def caso_i():
         print("ARNES ROTO: el estado de partida ya trae fallos: %s" % fallos_antes)
         return 1
 
-    # LA ARISTA NO SE TECLEA: se computa cual de las de SUJETO_ENLACE esta
-    # presente hoy, con el mismo resolutor que usa el instrumento.
-    op = [o for o in ops if o.get("id_op") == SUJETO_ENLACE][0]
+    # NI LA OPERACION NI LA ARISTA SE TECLEAN (correccion de la vuelta 141): se
+    # computa la primera operacion de vara ENLACE que HOY cumple y que tiene al
+    # menos una arista presente, y dentro de ella la arista presente, con el
+    # mismo resolutor que usa el instrumento.
+    filas_antes, _, _ = T.medir(FASE, ops, nodos, remisiones=remisiones)
+    por_id = {o.get("id_op"): o for o in ops}
     resolver = T.resolver_de(nodos)
-    presentes = []
-    for o, d in T.pares_de_aristas(op, []):
-        ok, ro, rd = T.arista_presente(nodos, resolver, o, d)
-        if ok:
-            presentes.append((ro, rd))
-    if not presentes:
-        print("ARNES ROTO: %s no tiene ninguna arista presente que quitar" % SUJETO_ENLACE)
+    SUJETO_ENLACE, victima = None, None
+    for f in filas_antes:
+        if f["vara"] != "ENLACE" or f["cumplido"] is not True:
+            continue
+        op = por_id[f["id_op"]]
+        for o, d in T.pares_de_aristas(op, []):
+            ok, ro, rd = T.arista_presente(nodos, resolver, o, d)
+            if ok:
+                SUJETO_ENLACE, victima = f["id_op"], (ro, rd)
+                break
+        if victima:
+            break
+    if not victima:
+        print("ARNES ROTO: ninguna operacion de vara ENLACE cumple hoy con una arista "
+              "presente que quitar. No hay caso (i) que correr.")
         return 1
-    victima = presentes[0]
+    print("OPERACION ELEGIDA POR COMPUTO (no tecleada): %s" % SUJETO_ENLACE)
     print("ARISTA ELEGIDA POR COMPUTO (no tecleada): %s -> %s" % victima)
 
     mutado = copia_de_nodos(nodos)
