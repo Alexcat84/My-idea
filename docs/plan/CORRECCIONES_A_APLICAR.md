@@ -529,3 +529,114 @@ dice, VERBATIM, *"MEDIDO: cableado 6 contra 5 contra 3"*, o sea **una sola unida
 entre el superviviente y el primer perseguidor**, y ahi un movimiento de uno si
 puede voltear un superviviente. Leido hoy de `OPERACIONES.jsonl` con codigo, no de
 memoria.
+
+## CORRECCION 10. **LAS CINCO FICHAS DE LA FASE 06 CONTRA SU PROPIA EJECUCION: EL CABLEADO Y LAS DUPLICADAS, MEDIDOS EL DIA DE FUNDIR**
+
+**POR ADICION, Y NO SE TOCA NINGUNA FICHA.** Escrita en la vuelta 139, TAREA 3.
+Es la hermana de la CORRECCION 9, que hizo lo mismo con `OP-M-02-ACCLIMATE`, y
+sale de la misma regla: `P.9` y `P.13` con su frase comun, *"lo escrito el dia de
+la decision hay que releerlo el dia de la ejecucion"*, y `EJECUTOR.md` regla 2,
+**la discrepancia se declara, no se resuelve copiando**.
+
+**COMO SE MIDIO:** `scripts/plan/simular_fusion.py` corrida el **2 sep 2026**
+ANTES de cada fusion, con su salida sellada. Las cifras de la columna de la
+ficha llevan corte **12 ago 2026** y salen de `docs/plan/OPERACIONES.jsonl`.
+
+### 10.a. EL CABLEADO
+
+| operacion | ficha (12 ago 2026) | medido el dia de fundir (2 sep 2026) | voltea |
+|---|---|---|---|
+| `OP-M-01-FUSION` | 9 contra 7, 5, 5 y 4 | **10** contra 7, 5, 4 y 5 | **NO** |
+| `OP-M-03-III` | 13 contra 11 y 13 contra 4 | 13 contra **12** y 13 contra **3** | **NO** |
+| `OP-M-05-INDICE` | 28 contra 6 contra 5 | **30** contra **11** y 30 contra **10** | **NO** |
+| `OP-M-05-EDIFICIO` | 6 contra 5 contra 3 | **8** contra **6** y 8 contra 3 | **NO** |
+| `OP-M-05-APERTURA` | 14 contra 8 contra 6 contra 5 | **18** contra **10** y 18 contra **8** | **NO** |
+
+**NINGUNA VOLTEA UN SUPERVIVIENTE, y la que mas riesgo corria queda dicha:**
+`OP-M-05-EDIFICIO` traia el margen mas corto del plan, **6 contra 5**, y su
+propia ficha avisaba de que *"la lectura de acto de P.5 no es formalidad"* por
+eso. Medido hoy, **el margen se ENSANCHA de 1 a 2** (8 contra 6). La vigilancia
+que la ficha pedia se hizo y salio a favor de lo sellado.
+
+**Y UNA NOTA DE FORMA, para que la tabla no se lea mal:** las celdas de la ficha
+de `OP-M-05-INDICE`, `OP-M-05-EDIFICIO` y `OP-M-05-APERTURA` cuentan **la nomina
+entera del acto** (tres o cuatro nodos en una sola cadena), mientras que el
+instrumento de hoy imprime **un desempate por absorbido**. No es la misma forma
+de contar, y por eso se publican las dos tal como cada fuente las escribe, sin
+reescribir ninguna.
+
+### 10.b. LAS DUPLICADAS QUE LA FUSION FABRICA
+
+| operacion | ficha | hoy | los nombres |
+|---|---|---|---|
+| `OP-M-01-FUSION` | 4 | **5** | las cuatro de la ficha **mas** `tipos_criterios_gate.nodos_previos` |
+| `OP-M-03-III` | 2 | 2 | **CUADRAN AL DIGITO Y CON SUS NOMBRES** |
+| `OP-M-05-INDICE` | 4 | 4 | **CUADRAN AL DIGITO Y CON SUS NOMBRES** |
+| `OP-M-05-EDIFICIO` | 1 | 1 | **CUADRA AL DIGITO Y CON SU NOMBRE** |
+| `OP-M-05-APERTURA` | 3 | **6** | **SOLO DOS COINCIDEN** |
+
+**LA DE `OP-M-05-APERTURA` ES LA DIVERGENCIA MAS GRANDE DE LA FASE 06 Y VA
+ENTERA.** La ficha nombra tres: `business_model_canvas_scorecard.nodos_siguientes`,
+`customer_creation.nodos_previos` y `customer_discovery.nodos_siguientes`. Hoy
+son seis: siguen `business_model_canvas_scorecard` y `customer_discovery`, **ya
+no esta `customer_creation`**, y aparecen `checkpoints_validacion.nodos_previos`,
+`decision_pivotar_o_proceder.nodos_previos`,
+`preservar_efectivo_buscar_modelo.nodos_siguientes` y
+`realizar_pruebas_pasa_no_pasa.nodos_previos`.
+
+**LO QUE NO CAMBIA EN NINGUNA DE LAS CINCO: EL DESTINO.** Todas las duplicadas,
+las que la ficha previo y las que no, **quedan enrutadas a `OP-S-12`** por la
+propia verificacion de cada ficha. **Las fichas se equivocaron en la CANTIDAD y,
+en dos casos, en algun NOMBRE; ninguna se equivoco en el DESTINO**, y el destino
+es el que gobierna. `OP-S-12` sigue al final de la pasada entera, por la atadura
+2 del indice, y esta vuelta no lo toca.
+
+**Y LO QUE NINGUNA MOVIO, medido en las cinco:** **CERO auto aristas nuevas** y
+**CERO aristas internas del acto que sobrevivan**, en las cinco simulaciones y en
+las cinco ejecuciones. La guarda B del fundidor (**cero duplicadas nuevas TRAS
+RESOLVER**) sale **OK (0)** en las cinco, que es la cifra que de verdad importa
+para el catalogo.
+
+### 10.c. UNA LINEA DE `preservar` QUE NINGUNA MARCA DEL CONTRATO PUEDE CUMPLIR
+
+**ES DE `OP-M-05-EDIFICIO`, linea 4, y no es una opinion sino una medicion campo
+por campo.** Pide preservar *"la formulacion que le da nombre, NO HAY HECHOS
+DENTRO DEL EDIFICIO"*, y su verificacion 2 manda comprobarla *"como FRASE"* en el
+texto final.
+
+**MEDIDO SOBRE `manifiesto_regla1_hechos_fuera_del_edificio` el 2 sep 2026:** esa
+formulacion vive **SOLO en `node_id` y en `titulo_concepto`**. **NO esta en
+ninguno de sus cuatro `pasos_accionables` ni en `resumen_teorico`.** Las cinco
+marcas del contrato mueven pasos y condiciones VERBATIM, y **ninguna mueve un
+titulo**; un `INCISO` cae en ROJO porque el trozo no es literal de ningun paso, y
+escribirla a mano seria **inventar texto**, que es justo lo que el `INCISO`
+existe para impedir.
+
+**LO QUE SE HIZO, con regla escrita y no inventada:** se sello como **PERDIDA DE
+ESPECIE `DE NOMBRE`**, una de las tres de `ESPECIES_DE_PERDIDA`, con sus cuatro
+claves, **enrutada a la fase 04**, y declarando donde vive de verdad tras la
+fusion: en **`merged_originals` del superviviente**, comprobado sobre el nodo
+escrito (`titulo` = *"No Hay Hechos Dentro del Edificio: Sal a Buscarlos"*).
+**NO SE PIERDE DEL CATALOGO.** Lo que no se puede es ponerla en el texto de los
+pasos sin inventarla.
+
+**QUEDA DECLARADO PARA EL AUDITOR: la verificacion 2 de esa ficha, TAL COMO ESTA
+ESCRITA, NO SE PUEDE CUMPLIR con las cinco marcas de hoy.** No se toca la ficha y
+no se finge que se cumplio.
+
+### 10.d. DOS PIEZAS PROPIAS QUE `preservar` NO LISTABA
+
+**Tambien de `OP-M-05-EDIFICIO`, y las registro porque su propia nota lo manda**
+(*"si al leer los textos enteros aparece una pieza propia que no este en la lista
+de perdidas, se registra antes de fundir"*). Aparecen **DOS**, y las dos en
+`manifiesto_regla1_hechos_fuera_del_edificio`, no en `get_out_of_the_building`:
+
+- **su paso 3**, conseguir experiencia de primera mano sobre **CADA PARTE** del
+  modelo de negocio, que es mas ancho que el paso 1 del superviviente (que solo
+  identifica hipotesis sobre problema, cliente y solucion);
+- **su paso 4**, prepararse para recibir feedback **impredecible y a veces
+  doloroso**, que es una disposicion y no la tiene ningun otro nodo del acto.
+
+**Las dos viajan de `APPEND`**, porque `preservar` es **SUELO y no techo** (acta
+138, adjudicacion 3.3) y marcarlas `CUBIERTO` habria afirmado del superviviente
+algo que su texto no dice.
