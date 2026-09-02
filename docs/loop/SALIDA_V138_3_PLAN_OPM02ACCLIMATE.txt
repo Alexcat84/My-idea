@@ -1,0 +1,30 @@
+==============================================================================
+GENERADOR DEL PLAN DE LA FUSION DE MESA OP-M-02-ACCLIMATE (vuelta 138)
+  ficha leida de: docs/plan/OPERACIONES.jsonl
+  tipo: FUSION DE MESA | estado: LISTA | fecha de corte: 2026-08-12
+==============================================================================
+
+  LA FICHA MANDA, y esto es lo que dice:
+     nodos         : fase_acclimate_experiencia_cliente, fase_acclimate_mapa_de_proceso
+     superviviente : fase_acclimate_experiencia_cliente
+     eliminar      : fase_acclimate_mapa_de_proceso
+     guarda 1B, ningun absorbido es puerta: OK
+     los 2 miembros vivos y presentes: OK
+
+  EL SUPERVIVIENTE DE HOY: 5 pasos y 2 condiciones
+  FORMATO DEL REPARTO: pasos POR PAR (absorbido, numero de paso) | condiciones POR PAR (absorbido, numero de paso)
+  EL ABSORBIDO fase_acclimate_mapa_de_proceso: 8 pasos y 1 condiciones
+
+  LA FICHA EN VERDE: cobertura exacta, guarda 1B, incisos extraidos y verbatim.
+  REPARTO: piezas 9 (enteras 4, ya dichas 5, de INCISO 0)
+
+  LAS PERDIDAS SELLADAS EN CAMPO PROPIO (contrato CAMPO PROPIO v1):
+     perdidas selladas: 3
+        DE PARAMETRO DE PASO   el HORIZONTE CONCRETO del recorrido, entre la compra y EL DIA 100, y el encuadre DESDE LA PERSPECTIVA DEL CLIENTE; el paso 1 del superviviente dice entre la primera compra y el logro del objetivo del cliente, que es el mismo tramo medido por el resultado en vez de por los dias
+        DE PARAMETRO DE PASO   la ENUMERACION de los hitos de comunicacion proactiva, bienvenida, chequeos de progreso y celebracion de logros tempranos, y el calificativo MICRO-LOGROS; los pasos 3 y 4 del superviviente disenan las herramientas de comunicacion por etapa y establecen hitos claros que se celebran, que es el mismo gesto sin la lista de ejemplos
+        DE CONDICIONES         el disparador de que el cliente PREGUNTE QUE SIGUE durante la implementacion, que es la senal dicha en voz alta; la condicion 1 del superviviente dispara por ALTA TASA DE ABANDONO en los primeros meses tras la venta, que recoge al que se pierde y al que deja de responder pero no al que pregunta
+
+  plan escrito: docs\loop\PLAN_V138_OPM02ACCLIMATE.json
+
+FIN
+EXITCODE: 0

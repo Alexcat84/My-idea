@@ -1,0 +1,53 @@
+=== 1. run_phase1.py --reaplico-curaduria ===
+  [96.1] decision_aptitud_para_uso  <->  decision_aptitud_uso
+  [95.7] eliminacion_causas_error_3  <->  eliminacion_causas_error_4
+
+GATE 0: OK
+
+=== 2. etiquetas_de_cara.py --aplicar ===
+71 etiquetas cambian; 0 ya estaban en su forma final.
+escrito: dataset\metadata\master_graph.json (71 etiquetas)
+escrito: web\lib\assets\master_graph.json (0 etiquetas)
+
+=== 3. sync_assets_web.py ===
+Manifest escrito en web\lib\assets\manifest.json
+Assets sincronizados: ['master_graph.json', 'preguntas_cache.json', 'node_families.json', 'entry_seeds.json', 'prompts.json', 'semantic_index.json']
+
+=== 4. git diff --numstat -- dataset/ web/ engine/ ===
+warning: in the working copy of 'dataset/metadata/master_graph.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'dataset/nodos/fase_acclimate_mapa_de_proceso.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'dataset/nodos/gamificacion_onboarding_visual.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'dataset/nodos/ocho_fases_experiencia_cliente.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'dataset/nodos/seis_herramientas_comunicacion_fase_activate.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'dataset/nodos/shock_and_awe_kit_bienvenida.json', LF will be replaced by CRLF the next time Git touches it
+26	11	dataset/metadata/master_graph.json
+12	1	dataset/metadata/phase1_run_log.json
+20	4	dataset/nodos/fase_acclimate_experiencia_cliente.json
+2	1	dataset/nodos/fase_acclimate_mapa_de_proceso.json
+2	3	dataset/nodos/gamificacion_onboarding_visual.json
+1	2	dataset/nodos/ocho_fases_experiencia_cliente.json
+1	1	dataset/nodos/seis_herramientas_comunicacion_fase_activate.json
+1	1	dataset/nodos/shock_and_awe_kit_bienvenida.json
+2	2	web/lib/assets/manifest.json
+26	11	web/lib/assets/master_graph.json
+(fin)
+
+=== 5. motor ===
+
+TODOS LOS TESTS PASARON (25/25).
+
+=== 6. vitest ===
+      Tests  1030 passed | 3 skipped (1033)
+   Start at  00:42:45
+   Duration  18.16s (transform 38.23s, setup 0ms, import 136.94s, tests 8.81s, environment 15ms)
+
+
+=== 7. tsc ===
+EXIT=0
+
+=== 8. censo de aristas ===
+        WORK | nodos 3853 vivos 3183 depre 670 | sig 9197 prev 9181 suma 18378 union 9835 | solo_sig 654 solo_prev 638 auto 0 | nodos_con_dup_en_lista 0
+
+=== 9. estado del acto contra el grafo ===
+fase_acclimate_experiencia_cliente       deprecado=None pasos=9 cond=2 alias=None
+fase_acclimate_mapa_de_proceso           deprecado=True pasos=8 cond=1 alias=None

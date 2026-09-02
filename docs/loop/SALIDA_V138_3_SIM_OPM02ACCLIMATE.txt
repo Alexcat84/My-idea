@@ -1,0 +1,29 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### fase_acclimate_experiencia_cliente  <==  fase_acclimate_mapa_de_proceso
+  1. DESEMPATE POR CABLEADO
+     fase_acclimate_experiencia_cliente           pasos  5 | nombra 11 | LO NOMBRAN 11
+     fase_acclimate_mapa_de_proceso               pasos  8 | nombra  4 | LO NOMBRAN  4
+     >>> gana fase_acclimate_experiencia_cliente por 11 contra 4
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['fase_acclimate_mapa_de_proceso']
+  3. ENTRADAS QUE SE REDIRIGEN
+     gamificacion_onboarding_visual               nodos_previos     -> fase_acclimate_experiencia_cliente
+     ocho_fases_experiencia_cliente               nodos_siguientes  -> fase_acclimate_experiencia_cliente
+     seis_herramientas_comunicacion_fase_activate nodos_siguientes  -> fase_acclimate_experiencia_cliente
+     shock_and_awe_kit_bienvenida                 nodos_siguientes  -> fase_acclimate_experiencia_cliente
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     gamificacion_onboarding_visual               nodos_previos     -> fase_acclimate_experiencia_cliente
+     ocho_fases_experiencia_cliente               nodos_siguientes  -> fase_acclimate_experiencia_cliente
+     TOTAL NUEVAS: 2
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ninguna
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     NINGUNA: el acto queda sin aristas internas tras la fusion
+EXITCODE: 0

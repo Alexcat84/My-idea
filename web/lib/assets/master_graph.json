@@ -54502,7 +54502,11 @@
         "Identificar momentos de fricción, confusión o estrés potencial en ese recorrido.",
         "Diseñar herramientas de comunicación (email, presencial, video, correo físico, teléfono, regalos) para cada etapa del proceso.",
         "Establecer hitos claros y celebrarlos para mantener el compromiso del cliente.",
-        "Medir el nivel de aclimatación con encuestas rápidas o check-ins regulares."
+        "Medir el nivel de aclimatación con encuestas rápidas o check-ins regulares.",
+        "Crear un documento o gráfico visual (mapa) que muestre en qué etapa está el cliente en cada momento",
+        "Detectar señales silenciosas de desconexión del cliente antes de que se quejen o abandonen",
+        "Simplificar procesos complejos dividiéndolos en pasos pequeños y digeribles",
+        "Asigna un responsable claro para cada punto de contacto y mide qué tan consistente es la ejecución"
       ],
       "entregable_esperado": "Mapa de la fase de aclimatación con puntos de contacto, riesgos de abandono y acciones diseñadas para cada etapa del proceso de onboarding.",
       "nodos_previos": [
@@ -54511,7 +54515,9 @@
         "fase_affirm_reduccion_incertidumbre",
         "investigar_datos_cliente",
         "fase_affirm_buyers_remorse",
-        "ocho_fases_experiencia_cliente"
+        "ocho_fases_experiencia_cliente",
+        "seis_herramientas_comunicacion_fase_activate",
+        "shock_and_awe_kit_bienvenida"
       ],
       "nodos_siguientes": [
         "fase_accomplish_experiencia_cliente",
@@ -54525,7 +54531,17 @@
         "Cuando el negocio tiene alta tasa de abandono en los primeros meses tras la venta",
         "Cuando el proceso de implementación o uso del producto es complejo y requiere aprendizaje"
       ],
-      "etiqueta_arbol": "Enseña al Cliente tus Reglas"
+      "etiqueta_arbol": "Enseña al Cliente tus Reglas",
+      "ids_alias": [
+        "fase_acclimate_mapa_de_proceso"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "fase_acclimate_mapa_de_proceso",
+          "titulo": "Fase Acclimate: Familiarizar al Cliente con el Proceso",
+          "fuente": "Never Lose a Customer Again - Joey Coleman"
+        }
+      ]
     },
     "fase_acclimate_mapa_de_proceso": {
       "node_id": "fase_acclimate_mapa_de_proceso",
@@ -54557,7 +54573,8 @@
       "condiciones_activacion": [
         "Cuando los clientes se pierden, dejan de responder o preguntan '¿qué sigue?' durante la implementación o entrega del servicio"
       ],
-      "etiqueta_arbol": "Familiariza al Cliente con Procesos"
+      "etiqueta_arbol": "Familiariza al Cliente con Procesos",
+      "deprecado": true
     },
     "fase_accomplish": {
       "node_id": "fase_accomplish",
@@ -58811,10 +58828,9 @@
       ],
       "entregable_esperado": "Un sistema visual/lúdico de seguimiento de progreso para procesos complejos de implementación u onboarding",
       "nodos_previos": [
-        "fase_acclimate_mapa_de_proceso",
+        "fase_acclimate_experiencia_cliente",
         "conversacion_emocional_postcompra",
-        "fase_affirm_buyers_remorse",
-        "fase_acclimate_experiencia_cliente"
+        "fase_affirm_buyers_remorse"
       ],
       "nodos_siguientes": [
         "get_visual",
@@ -82459,8 +82475,7 @@
         "estrategia_multicanal_bienvenida",
         "fase_affirm_buyers_remorse",
         "estrategia_de_ventas",
-        "fase_acclimate_experiencia_cliente",
-        "fase_acclimate_mapa_de_proceso"
+        "fase_acclimate_experiencia_cliente"
       ],
       "condiciones_activacion": [
         "Cuando el usuario necesita una estructura sistemática para gestionar la experiencia del cliente después de la venta.",
@@ -106562,7 +106577,7 @@
         "shock_and_awe_kit_bienvenida"
       ],
       "nodos_siguientes": [
-        "fase_acclimate_mapa_de_proceso"
+        "fase_acclimate_experiencia_cliente"
       ],
       "condiciones_activacion": [
         "Cuando ya tienes clientes pero todavía no has ordenado cómo los acompañas la primera vez que usan lo que vendes"
@@ -108848,7 +108863,7 @@
       ],
       "nodos_siguientes": [
         "customer_appreciation_pr",
-        "fase_acclimate_mapa_de_proceso",
+        "fase_acclimate_experiencia_cliente",
         "seis_herramientas_comunicacion_fase_activate"
       ],
       "condiciones_activacion": [

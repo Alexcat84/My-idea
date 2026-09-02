@@ -1,0 +1,76 @@
+==============================================================================
+OP-M-02-ACCLIMATE . LA FASE ACCLIMATE DE AFFIRM, UN NODO POR FASE: fase_acclimate_experiencia_cliente absorbe fase_acclimate_mapa_de_proceso. Es la segunda fusion de la fase 06 por el orden del acta 137, 3.5, y la unica de las seis que el generador sellado podia hacer sin la reparacion 2.a, porque es la unica con un solo absorbido. EL MAPA VISUAL DEL PROCESO ES LA PIEZA QUE LA FICHA MANDA PRESERVAR y va de APPEND, la primera del reparto . MODO SIMULAR
+plan: docs/loop/PLAN_V138_OPM02ACCLIMATE.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3184 vivos, 669 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive fase_acclimate_experiencia_cliente . absorbe fase_acclimate_mapa_de_proceso
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 9 (anadidos 4) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['fase_acclimate_mapa_de_proceso']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 4
+   gamificacion_onboarding_visual                       nodos_previos     fase_acclimate_mapa_de_proceso -> fase_acclimate_experiencia_cliente
+   ocho_fases_experiencia_cliente                       nodos_siguientes  fase_acclimate_mapa_de_proceso -> fase_acclimate_experiencia_cliente
+   seis_herramientas_comunicacion_fase_activate         nodos_siguientes  fase_acclimate_mapa_de_proceso -> fase_acclimate_experiencia_cliente
+   shock_and_awe_kit_bienvenida                         nodos_siguientes  fase_acclimate_mapa_de_proceso -> fase_acclimate_experiencia_cliente
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 1
+   kit_shock_and_awe_bienvenida                         nodos_siguientes  fase_acclimate_mapa_de_proceso (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 2
+   gamificacion_onboarding_visual                       nodos_previos
+   ocho_fases_experiencia_cliente                       nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 875   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 874   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 1, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 5 de 5
+guarda D, los 1 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (9 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 fase_acclimate_mapa_de_proceso               paso         1  ya lo dice el PASO 1 del superviviente
+        Mapear todos los pasos del proceso de entrega/servicio desde la perspectiva del cliente
+    1 fase_acclimate_mapa_de_proceso               paso         2  PASO 6 del superviviente
+        Crear un documento o gráfico visual (mapa) que muestre en qué etapa está el cliente en cada momento
+    1 fase_acclimate_mapa_de_proceso               paso         3  ya lo dice el PASO 4 del superviviente
+        Establecer comunicaciones recurrentes atadas a micro-logros o hitos del proceso
+    1 fase_acclimate_mapa_de_proceso               paso         4  PASO 7 del superviviente
+        Detectar señales silenciosas de desconexión del cliente antes de que se quejen o abandonen
+    1 fase_acclimate_mapa_de_proceso               paso         5  PASO 8 del superviviente
+        Simplificar procesos complejos dividiéndolos en pasos pequeños y digeribles
+    1 fase_acclimate_mapa_de_proceso               paso         6  ya lo dice el PASO 1 del superviviente
+        Haz una lista de todos los puntos de contacto que atraviesa un cliente nuevo entre la compra y el día 100
+    1 fase_acclimate_mapa_de_proceso               paso         7  ya lo dice el PASO 3 del superviviente
+        Establece hitos de comunicación proactiva (bienvenida, chequeos de progreso, celebración de logros tempranos) distribuidos en ese periodo
+    1 fase_acclimate_mapa_de_proceso               paso         8  PASO 9 del superviviente
+        Asigna un responsable claro para cada punto de contacto y mide qué tan consistente es la ejecución
+    1 fase_acclimate_mapa_de_proceso               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando los clientes se pierden, dejan de responder o preguntan '¿qué sigue?' durante la implementación o entrega del servicio
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 1
+  nodos implicados    : 2
+  nodos que MUEREN    : 1
+  piezas repartidas   : 9 (4 viajan enteras, 5 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.
+EXITCODE: 0
