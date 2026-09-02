@@ -85,6 +85,37 @@ desviacion declarada, da **VERDE EXIT 0**. La nomina, pegada de
 
 Todas nacen en `3f99f8b7`, **cuyo padre es `0f0b4d25`, el commit del acta 144**.
 
+**Y UNA CAIDA MIA, HALLADA AL RE-CORRER LA 0.d DESPUES DE COMMITEAR EL REPORTE, QUE
+ES CUANDO EL ESTADO SE MIDE.** La 0.d, que al abrir la vuelta salio VERDE, **se puso
+ROJA A MITAD DE LA VUELTA POR CULPA MIA**: en la TAREA 3 selle una salida llamada
+`SALIDA_V145_3A_ESTADO_FASE07_APERTURA.txt`, y ese nombre **casa con el glob de la
+guarda**, `SALIDA_V145_*_APERTURA.txt`. La guarda hizo exactamente lo que debe: canto
+que un fichero de apertura habia nacido tarde, en `45b7b5a7` y no en `3f99f8b7`. **LA
+GUARDA NO SE TOCA** (es la familia de la que su propio docstring llama *la guarda que
+se envenena sola*, y ensancharle exclusiones la volveria ciega): **lo que se corrige
+es MI nombre de fichero**, que pasa a `SALIDA_V145_3A_ESTADO_FASE07_AL_ABRIR.txt`,
+porque esa salida **no es una medicion de apertura de la vuelta**, es una medicion de
+la fase 07 al abrirla. Re-corrida despues del renombre:
+
+```
+   SALIDA_V145_CICLO_ETIQUETAS_APERTURA.txt -- nacido en 3f99f8b7, padre 0f0b4d25
+   SALIDA_V145_CICLO_NUMSTAT_APERTURA.txt -- nacido en 3f99f8b7, padre 0f0b4d25
+   SALIDA_V145_CICLO_SYNC_APERTURA.txt -- nacido en 3f99f8b7, padre 0f0b4d25
+   SALIDA_V145_CONTEO_APERTURA.txt -- nacido en 3f99f8b7, padre 0f0b4d25
+   SALIDA_V145_DESFASE_CALIBRADO_APERTURA.txt -- nacido en 3f99f8b7, padre 0f0b4d25
+   SALIDA_V145_GATE0_CMD1_APERTURA.txt -- nacido en 3f99f8b7, padre 0f0b4d25
+   SALIDA_V145_HEAD_APERTURA.txt -- nacido en 3f99f8b7, padre 0f0b4d25
+   SALIDA_V145_MOTOR_APERTURA.txt -- nacido en 3f99f8b7, padre 0f0b4d25
+   SALIDA_V145_TSC_APERTURA.txt -- nacido en 3f99f8b7, padre 0f0b4d25
+   SALIDA_V145_WEB_APERTURA.txt -- nacido en 3f99f8b7, padre 0f0b4d25
+```
+Contado de `SALIDA_V145_0D_APERTURA_SELLADA_RECIERRE.txt`.
+
+**LO DIGO CON TODAS SUS LETRAS PORQUE ES LA REGLA DE LA CASA APLICADA A MI:** el
+estado al cierre se mide AL CIERRE, y si no llego a re-correr esta guarda el reporte
+habria publicado un VERDE cierto al medirlo y falso al commitearlo, que es
+exactamente la caida 4.1 del acta 143.
+
 ## 1. LOS REGISTROS
 
 **1.a. R.26 en `docs/PENDIENTES.md`, POR ADICION**, con las nueve adjudicaciones del
@@ -589,7 +620,7 @@ el reporte vivo como sujeto, asi que escribir este reporte no lo tumba.
 
 <!-- COBERTURA DE LA GUARDA -->
 ```
-COBERTURA: 8 cotejadas / 0 exentas / 8 cifras | reparto: 8 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 0 | ficheros citados que NO son UTF-8: 0 [ninguno] | unidades vistas FUERA del vocabulario: 28 palabra(s) [llamada x14, mencion x13, vez x6, caracteres x4, instalado x3, aduana x2, control x2, controles x2, docs x2, envio x2, exitcode x2, asunto x1, asuntos x1, bloque x1, cabecera x1, cerro x1, commit x1, congelan x1, definicion x1, delta x1, diferencia x1, fuera x1, mide x1, nombra x1, prohibe x1, rojo x1, tampoco x1, unidades x1]
+COBERTURA: 8 cotejadas / 0 exentas / 8 cifras | reparto: 8 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 0 | ficheros citados que NO son UTF-8: 0 [ninguno] | unidades vistas FUERA del vocabulario: 29 palabra(s) [llamada x14, mencion x13, vez x6, caracteres x4, instalado x3, aduana x2, control x2, controles x2, docs x2, envio x2, exitcode x2, asunto x1, asuntos x1, bloque x1, cabecera x1, cerro x1, commit x1, congelan x1, definicion x1, delta x1, diferencia x1, fuera x1, mide x1, nombra x1, prohibe x1, rojo x1, selle x1, tampoco x1, unidades x1]
 ```
 <!-- FIN COBERTURA DE LA GUARDA -->
 
@@ -663,6 +694,12 @@ viven dentro de los bloques pegados, con su fichero debajo. **Se lee peor y se c
 mejor**: una cifra en prosa lejos de su instrumento es exactamente lo que la guarda
 declara incontable, y prefiero un reporte mas seco a uno con cifras que nadie puede
 cotejar.
+
+**DISCUTIBLE 13. RENOMBRE UN FICHERO DE SALIDA YA COMMITEADO EN VEZ DE DEJAR LA 0.d
+EN ROJO.** El fichero de la TAREA 3 se llamaba `..._FASE07_APERTURA.txt` y envenenaba
+el glob de la guarda de apertura. **Elegi renombrar mi artefacto y NO tocar la
+guarda.** Lo alternativo era declarar la 0.d en rojo y dejarla, que habria sido
+honesto pero peor: la guarda tenia razon y el defecto era mi nombre.
 
 ## PREGUNTAS
 
