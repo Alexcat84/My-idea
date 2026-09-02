@@ -1,0 +1,50 @@
+VOCABULARIO: 12 viejas (vuelta 146) + 8 anadidas (vuelta 147) = 20 activas
+
+==============================================================================
+CORRECCION 27. LAS COLADAS DEL ACTA 146
+==============================================================================
+CONTRASTE, y es una cita y no una fuente: el acta 146 publica SEIS escapes en su
+pagina, cinco sin barrido en ventana. El acta 147, en su 4.3.a, se corrige sola y
+dice CINCO. Lo que sigue es MI medicion de hoy.
+
+SUJETO CONGELADO (a) la PAGINA DEL ACTA 146: dc77ef71:docs/loop/_v146_acta_seccion.md
+   ESCAPE PURO (dispara SOLO formulas nuevas): 4 frase(s)
+      por en ninguna parte, no tiene | (2) "EL UMBRAL DE LA COLA NO TIENE NUMERO EN NINGUNA PARTE" ES
+      por no tiene | **no hay pasos de nodo que imprimir antes de adjudicar**: la ciega de la seccion 1.2 no tiene
+      por en ninguna parte, no da un numero, no halla ningun, no halla ninguna, no tiene | no metio** (`no tiene`, `no da un numero`, `no halla ninguna`, `en ninguna parte`).
+      por no tiene | "EL UMBRAL DE LA COLA NO TIENE NUMERO EN NINGUNA
+   MIXTAS (ya disparaban alguna vieja, no anaden cobertura): 0
+
+SUJETO CONGELADO (b) el REPORTE de la vuelta 146: 723b4639:docs/loop/REPORTE.md
+   ESCAPE PURO (dispara SOLO formulas nuevas): 5 frase(s)
+      por no tiene | **no tiene**, y el barrido exhaustivo lo sella con su pierna por contenido en cero:
+      por no da un numero | **LA FICHA NO DA UN NUMERO**, y **no lo adivino**: el
+      por no tiene | sana**, porque la otra mitad pide un dato que el esquema no tiene.
+      por en ninguna parte, no tiene | EL UMBRAL DE LA COLA NO TIENE NUMERO EN NINGUNA PARTE.** `OP-A-02` lo
+      por no halla ningun, no halla ninguna | cita por referencia y el barrido no halla ninguna constante que lo fije.
+   MIXTAS (ya disparaban alguna vieja, no anaden cobertura): 0
+
+CIFRA coladas del acta 146 por escape puro sobre la pagina del acta: 4 frases
+CIFRA coladas del acta 146 por escape puro sobre el reporte de la 146: 5 frases
+
+==============================================================================
+CORRECCION 28. LAS LINEAS DE CALIBRACION
+==============================================================================
+CONTRASTE, y es una cita y no una fuente: el acta 146 dice DOCE lineas de
+calibracion encima del umbral. El acta 147, en su 4.3.b, se corrige sola y dice
+SIETE, de la 61 a la 67. Lo que sigue es MI conteo de hoy sobre el fichero.
+
+scripts/intra_dominio.py, linea 68: UMBRAL_SEMANTICO = 0.78
+LAS LINEAS DE COMENTARIO CONTIGUAS INMEDIATAMENTE ENCIMA, una a una:
+   linea 61: # BAJADO DE 0.80 A 0.78 para el cribado completo, y el motivo esta medido: las
+   linea 62: # DOS parejas ya adjudicadas que la corrida a 0.80 perdia viven en 0,7890
+   linea 63: # (accion_correctiva_4 con accion_correctiva_sistematica) y 0,7887 (cadencia
+   linea 64: # con gestion_seguimiento_prospectos). Un umbral que se deja fuera lo que ya
+   linea 65: # esta confirmado no es selectivo: es ciego en la banda de abajo. Los pares que
+   linea 66: # entran por esa rebaja van marcados con banda_078_080 para poder contarlos
+   linea 67: # aparte y no mezclar su rendimiento con el de la cola original.
+
+   primera: linea 61 | ultima: linea 67
+   LA LINEA DE ENCIMA DEL BLOQUE (linea 60), que NO es comentario de calibracion: UMBRAL_TITULO = 80
+
+CIFRA lineas de calibracion encima del umbral: 7 lineas

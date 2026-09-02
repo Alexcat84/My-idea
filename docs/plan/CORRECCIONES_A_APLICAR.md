@@ -2017,3 +2017,107 @@ salidas estan en `docs/loop/SALIDA_V147_2C_MUTACION_VITALIDAD.txt` y
 
 **LO QUE ESTA CORRECCION NO HACE:** no toca `docs/plan/OPERACIONES.jsonl`, no
 toca la ficha de `OP-A-02` y no toca una sola grafia del campo `fuente`.
+
+---
+
+## CORRECCION 27. **EL SEIS DE LAS COLADAS DEL ACTA 146 NO ES SEIS, Y MI MEDICION DE HOY TAMPOCO DICE CINCO EN LOS DOS SUJETOS**
+
+**Vuelta 148, TAREA 2.6, sobre la caida 4.3.a del acta del auditor de la vuelta
+147 (de CIFRA, DEL AUDITOR, declarada por el mismo).** Corte: **2 sep 2026**.
+**POR ADICION: NO SE BORRA NI SE ESCONDE NINGUNA DE LAS DOS CIFRAS ANTERIORES.**
+
+**LA CIFRA VIEJA, CITADA Y NO REESCRITA.** El acta 146 publica, en su propia
+pagina, *"son SEIS escapes en esta misma pagina, CINCO de ellos sin barrido en
+ventana"*, y su cabecera de commit lo repite: *"MEDI EL ESCAPE DE SU
+VOCABULARIO: SEIS EN SU PROPIA PAGINA, CINCO SIN BARRIDO EN VENTANA"*.
+
+**LA CORRECCION DEL PROPIO AUDITOR, CITADA COMO CONTRASTE Y NO COMO FUENTE**
+(`EJECUTOR.md` 2). El acta 147, seccion 4.3.a, se corrige sola: *"mi acta 146
+publico SEIS afirmaciones coladas y son CINCO"*.
+
+**MI MEDICION DE HOY, CON INSTRUMENTO PROPIO**
+(`scripts/loop/vuelta148_2f_medir_correcciones_27_28.py`, salida en
+`docs/loop/SALIDA_V148_2F_CORRECCIONES_27_28.txt`). Se mide el **ESCAPE PURO**:
+las frases que disparan **SOLO** formulas del vocabulario NUEVO, o sea las que
+las DOCE formulas de la vuelta 146 no veian en absoluto. Vocabulario medido hoy:
+**12 viejas mas 8 anadidas, 20 activas.**
+
+  - **SUJETO (a), LA PAGINA DEL ACTA 146**, congelada en su commit de nacimiento
+    `dc77ef71:docs/loop/_v146_acta_seccion.md`: **CUATRO frases**, y las cuatro
+    van nombradas en la salida con la formula que las dispara.
+  - **SUJETO (b), EL REPORTE DE LA VUELTA 146**, congelado por ref computado
+    `723b4639:docs/loop/REPORTE.md`: **CINCO frases**, tambien nombradas una a
+    una.
+
+**LO QUE ESTO DEJA, DICHO SIN REDONDEAR HACIA LO COMODO.** **El SEIS no
+reproduce en ninguno de los dos sujetos.** **El CINCO del acta 147 reproduce al
+digito, pero sobre el REPORTE de la 146, no sobre la pagina del acta**, que es
+el sujeto que la frase del acta 146 nombra (*"esta misma pagina"*). **Sobre la
+pagina del acta mi instrumento cuenta CUATRO, y esa es una discrepancia NUEVA
+con el acta 147 que declaro y NO resuelvo copiando**, por `EJECUTOR.md` 2.
+**Ninguna de las dos lecturas cambia el veredicto de fondo**, que es lo que la
+correccion existe para dejar escrito: la cifra publicada en la 146 era mas alta
+que la real por cualquiera de los dos caminos, y la ampliacion del vocabulario
+de la vuelta 147 estaba justificada.
+
+---
+
+## CORRECCION 28. **LAS DOCE LINEAS DE CALIBRACION SON SIETE, Y ESTA REPRODUCE AL DIGITO**
+
+**Vuelta 148, TAREA 2.6, sobre la caida 4.3.b del acta del auditor de la vuelta
+147 (de CIFRA, DEL AUDITOR, declarada por el mismo).** Corte: **2 sep 2026**.
+**POR ADICION: NO SE BORRA LA CIFRA VIEJA.**
+
+**LA CIFRA VIEJA, CITADA:** el acta 146 dice *"con doce lineas de calibracion
+encima"* del umbral. **LA CORRECCION DEL AUDITOR, COMO CONTRASTE:** el acta 147,
+seccion 4.3.b, dice *"son SIETE, de la 61 a la 67; conte desde la 56 y me lleve
+por delante un comentario ajeno"*.
+
+**MI CONTEO DE HOY, SOBRE EL FICHERO Y NO SOBRE EL ACTA** (mismo instrumento y
+misma salida que la CORRECCION 27). En `scripts/intra_dominio.py`,
+`UMBRAL_SEMANTICO = 0.78` esta en la **linea 68**, y las lineas de comentario
+CONTIGUAS inmediatamente encima van de la **61 a la 67**, las siete impresas una
+a una con su numero. **La linea 60, la de encima del bloque, es
+`UMBRAL_TITULO = 80` y no es comentario**, o sea que el bloque no sigue hacia
+arriba.
+
+**CIFRA lineas de calibracion encima del umbral: 7 lineas.** **REPRODUCE AL
+DIGITO la correccion del acta 147, y el DOCE del acta 146 no reproduce.** Las
+tres lineas de comentario que van de la 56 a la 58 son las de `MARCA_MANUAL` y
+no hablan del umbral, tal como el auditor declaro.
+
+---
+
+## CORRECCION 29. **LA VERIFICACION 3 DE `OP-A-01`: SU MITAD MECANICA SE QUEDA Y SU MITAD SEMANTICA SE REMITE A `A2.6`**
+
+**Vuelta 148, TAREA 1.b, por DECISION DEL FUNDADOR del 2 sep 2026 (PREGUNTA 2,
+opcion 2), escrita en
+`docs/loop/paradas/2026-09-02-aduana-vector-y-a13-DECISION.md`.** Corte: **2 sep
+2026**. **EL TEXTO VIEJO NO SE BORRA: ENCABEZA LA PROPIA ENTRADA DE LA FICHA.**
+
+**EL TEXTO VIEJO, CITADO VERBATIM DE `docs/plan/OPERACIONES.jsonl`:** *"Gate 0
+rechaza un nodo cuyo segundo libro no aparece en ningun paso"*. Es la tercera de
+las tres verificaciones de `OP-A-01`.
+
+**LO QUE LA DECISION DISPONE, Y ES LO QUE SE ESCRIBE DETRAS DEL TEXTO VIEJO, NO
+EN SU LUGAR:**
+
+  - **SU MITAD MECANICA QUEDA COMO ESTA**: el segundo libro se comprueba contra
+    la nomina adjudicada, instalada en Gate 0 y mordiendo.
+  - **SU MITAD SEMANTICA SE REMITE A LA PUERTA `A2.6`** de `OP-A-02`: la
+    vecindad por contenido sobre el indice semantico es su lectura ejecutable.
+
+**EL MOTIVO, MEDIDO Y NO DE PALABRA, CITADO DEL ACTA 146:** la lectura literal
+de esta entrada (buscar el titulo del segundo libro como texto dentro de
+`pasos_accionables`) **DISPARA EN 9 DE 9 sobre nodos adjudicados enteros**, o sea
+que rechazaria los ocho ya adjudicados porque ningun paso del catalogo nombra su
+libro: **INEJECUTABLE tal como esta escrita**.
+
+**LO QUE ESTA CORRECCION NO HACE.** No toca el campo `estado` de ninguna ficha,
+congelado desde la vuelta 139 y hoy medido en `LISTA` para `OP-A-01`. No toca el
+esquema: las **71 fichas siguen teniendo UN solo esquema de 18 claves**, medido
+hoy. Y no cierra la fase 07 de palabra: **la vara de codigo se re corre y publica
+su propio veredicto**, y la remision de `A1.3` a `A2.6` solo cuenta como control
+entero **mientras `A2.6` este instalado, muerda y no tenga parada abierta
+encima**, comprobado en cada corrida y probado por mutacion en
+`scripts/loop/vuelta148_2c_mutacion_vara_parada.py`.
