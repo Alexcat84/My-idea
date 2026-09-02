@@ -54,6 +54,7 @@ esta linea:
 es el commit del acta de la 144, excluido.
 
 ```
+  cdf1b75f VUELTA 145, CIERRE: LA BATERIA DEL LADO CIERRE CON LOS DIEZ NOMBRES CANONICOS, LA CABECERA TALLADA Y LA GUARDA DE CIFRAS. HEAD DE CIERRE 45b7
   45b7b5a7 VUELTA 145, TAREA 3: LA FASE 07 ADUANA QUEDA ABIERTA Y MEDIDA, SIN EJECUTAR NINGUNA DE SUS DOS OPERACIONES. 3.a: LEIDAS ENTERAS LAS FICHAS DE
   0a997c1b VUELTA 145, TAREA 1: LOS TRES REGISTROS POR ADICION PURA. R.26 EN PENDIENTES (150/0) CON LAS NUEVE ADJUDICACIONES DEL ACTA 144, LAS DOS CAIDA
   f3d2d19d VUELTA 145, TAREA 2, LAS REPARACIONES DE LAS CINCO CAIDAS DE LA CASA Y DE LAS DOS DE ENCARGO. 2.a: EL ANCLA UNICA EN LOS TRES PARES DE MARCAS
@@ -551,9 +552,44 @@ la regla nueva de la 4.c; donde hace falta citar el mecanismo en prosa lo cito p
 nombre en castellano y **nunca con el literal de verdad**, que es justo lo que la 2.a
 de esta vuelta convierte en ROJO.
 
+**4.b, LAS DOS COMPARACIONES, PEGADAS.** `--fase04 --comparar docs/loop/REPORTE.md`:
+
+```
+  filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+```
+Contado de `SALIDA_V145_4B_COMPARAR_CABECERA.txt`.
+
+Y `--comparar-commits docs/loop/REPORTE.md`, que se ancla al HEAD sellado de cierre y
+por eso se corre DESPUES de commitear el bloque de cierre:
+
+```
+  commits en el bloque del fichero: 6 | commits en git: 6
+  asuntos TRUNCADOS y declarados como tales: 6
+
+  BLOQUE DE COMMITS: IDENTICO A GIT (6 commit(s), mismo orden, 6 asunto(s) truncado(s) declarado(s))
+```
+Contado de `SALIDA_V145_4B_COMPARAR_COMMITS.txt`.
+
+**4.d, EL PASO NUEVO Y BLOQUEANTE, CORRIDO DESPUES DE ESCRIBIR ESTE REPORTE Y ANTES
+DEL COMMIT FINAL.** Es la reparacion de la caida 4.8 del acta: sin el, el verde de una
+vuelta no puede sobrevivir a la vuelta, porque la bateria tiene un miembro cuyo sujeto
+era el propio reporte. Corrido SOBRE EL FICHERO QUE SE VA A COMMITEAR:
+
+```
+  ANCLA PERDIDA  : 0 (ninguna)
+  NO MORDIO      : 0 (ninguna)
+  NO REPRODUCIBLE: 0 (ninguna)
+  CASO DECLARADO : 2 (vuelta135_2e_mutacion_3.py, vuelta140_2a_mutaciones.py)
+```
+Contado de `SALIDA_V145_4D_VIEJAS_TRAS_REPORTE.txt`.
+
+**VERDE, CON NO MORDIO EN CERO.** El arnes que la vuelta 144 envio en rojo ya no toma
+el reporte vivo como sujeto, asi que escribir este reporte no lo tumba.
+
 <!-- COBERTURA DE LA GUARDA -->
 ```
-COBERTURA: 8 cotejadas / 0 exentas / 8 cifras | reparto: 8 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 0 | ficheros citados que NO son UTF-8: 0 [ninguno] | unidades vistas FUERA del vocabulario: 23 palabra(s) [llamada x14, mencion x13, vez x6, caracteres x4, instalado x3, aduana x2, control x2, controles x2, docs x2, exitcode x2, cerro x1, congelan x1, definicion x1, delta x1, diferencia x1, envio x1, fuera x1, mide x1, nombra x1, prohibe x1, rojo x1, tampoco x1, unidades x1]
+COBERTURA: 8 cotejadas / 0 exentas / 8 cifras | reparto: 8 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 0 | ficheros citados que NO son UTF-8: 0 [ninguno] | unidades vistas FUERA del vocabulario: 28 palabra(s) [llamada x14, mencion x13, vez x6, caracteres x4, instalado x3, aduana x2, control x2, controles x2, docs x2, envio x2, exitcode x2, asunto x1, asuntos x1, bloque x1, cabecera x1, cerro x1, commit x1, congelan x1, definicion x1, delta x1, diferencia x1, fuera x1, mide x1, nombra x1, prohibe x1, rojo x1, tampoco x1, unidades x1]
 ```
 <!-- FIN COBERTURA DE LA GUARDA -->
 

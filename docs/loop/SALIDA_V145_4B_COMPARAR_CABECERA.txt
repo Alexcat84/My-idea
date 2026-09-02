@@ -1,83 +1,27 @@
 ==============================================================================
-LA CABECERA DEL REPORTE, TALLADA. Vuelta 145.
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 145. Modo fase04.
 Cada celda sale de la salida que la cita; ninguna esta tecleada.
 ==============================================================================
 
-  ROJO, 76 celdas no se pudieron leer y NO se talla nada:
-     no existe la salida SALIDA_V145_APERTURA.txt
-     sin texto para ficheros APERTURA
-     sin texto para vivos APERTURA
-     sin texto para deprecados APERTURA
-     sin texto para enlaces APERTURA
-     sin texto para operaciones APERTURA
-     sin texto para estados APERTURA
-     sin texto para dependencias rotas APERTURA
-     sin texto para inventario APERTURA
-     no existe la salida SALIDA_V145_MARCADOR_APERTURA.txt
-     sin texto para A APERTURA
-     sin texto para B APERTURA
-     sin texto para C APERTURA
-     sin texto para D APERTURA
-     sin texto para n APERTURA
-     sin texto para huecos APERTURA
-     sin texto para duplicados APERTURA
-     no existe la salida SALIDA_V145_RECOMPUTO_APERTURA.txt
-     sin texto para A crudas APERTURA
-     sin texto para colapsos APERTURA
-     sin texto para pares distintos APERTURA
-     sin texto para componentes APERTURA
-     sin texto para CERRADOS APERTURA
-     sin texto para nodos CERRADOS APERTURA
-     sin texto para ABIERTOS APERTURA
-     sin texto para nodos ABIERTOS APERTURA
-     sin texto para comprobacion i izquierda APERTURA
-     sin texto para comprobacion i derecha APERTURA
-     sin texto para comprobacion ii izquierda APERTURA
-     sin texto para comprobacion ii derecha APERTURA
-     no existe la salida SALIDA_V145_COLA_APERTURA.txt
-     sin texto para cola APERTURA
-     no existe la salida SALIDA_V145_COLISIONES_APERTURA.txt
-     sin texto para colisiones APERTURA
-     sin texto para auto-pares APERTURA
-     no existe la salida SALIDA_V145_DUPLICADAS_APERTURA.txt
-     sin texto para grupos de duplicadas APERTURA
-     sin texto para nodos con duplicadas APERTURA
-     no existe la salida SALIDA_V145_CIERRE.txt
-     sin texto para ficheros CIERRE
-     sin texto para vivos CIERRE
-     sin texto para deprecados CIERRE
-     sin texto para enlaces CIERRE
-     sin texto para operaciones CIERRE
-     sin texto para estados CIERRE
-     sin texto para dependencias rotas CIERRE
-     sin texto para inventario CIERRE
-     no existe la salida SALIDA_V145_MARCADOR_CIERRE.txt
-     sin texto para A CIERRE
-     sin texto para B CIERRE
-     sin texto para C CIERRE
-     sin texto para D CIERRE
-     sin texto para n CIERRE
-     sin texto para huecos CIERRE
-     sin texto para duplicados CIERRE
-     no existe la salida SALIDA_V145_RECOMPUTO_CIERRE.txt
-     sin texto para A crudas CIERRE
-     sin texto para colapsos CIERRE
-     sin texto para pares distintos CIERRE
-     sin texto para componentes CIERRE
-     sin texto para CERRADOS CIERRE
-     sin texto para nodos CERRADOS CIERRE
-     sin texto para ABIERTOS CIERRE
-     sin texto para nodos ABIERTOS CIERRE
-     sin texto para comprobacion i izquierda CIERRE
-     sin texto para comprobacion i derecha CIERRE
-     sin texto para comprobacion ii izquierda CIERRE
-     sin texto para comprobacion ii derecha CIERRE
-     no existe la salida SALIDA_V145_COLA_CIERRE.txt
-     sin texto para cola CIERRE
-     no existe la salida SALIDA_V145_COLISIONES_CIERRE.txt
-     sin texto para colisiones CIERRE
-     sin texto para auto-pares CIERRE
-     no existe la salida SALIDA_V145_DUPLICADAS_CIERRE.txt
-     sin texto para grupos de duplicadas CIERRE
-     sin texto para nodos con duplicadas CIERRE
-EXITCODE: 1
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 9.234 / 9.211 / 18.445 / 9.914 | **9.234 / 9.211 / 18.445 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `0f0b4d25` (asunto real leido de git log: 'ACTA DE LA VUELTA 144 DEL AUDITOR: LA FASE 06 CIERRA DE VERDAD Y LOS DATOS NO SE MUEVEN. RECOMPUTE CENSO Y ARISTAS COMMIT A COMMIT, LA TABLA DE LA FASE 06 BYTE A BYTE, LAS CINCO QUE ENTRAN Y LAS SIETE QUE SALEN, Y LAS DOCE PIEZAS DEL REPARTO UNA A UNA. LOS NUEVE DISCUTIBLES ADJUDICADOS, OCHO A FAVOR, Y MI D DEL PAR 1190 COINCIDE CON LA SUYA. PERO EL VERDE NO SOBREVIVE A LA PROPIA VUELTA: LA BATERIA VIEJAS SALE ROJA SOBRE EL ARBOL QUE ENVIA Y CON ELLA DOS ARNESES MAS, POR UNA SOLA ENFERMEDAD, EL SUJETO VIVO, Y DOS DE SUS CUATRO CAUSAS SON CAIDAS MIAS DE ENCARGO. LA GUARDA DE CIFRAS ANCLA EN LA PRIMERA OCURRENCIA Y EL REPORTE TRAE LA MARCA DOS VECES: LA 2.a REPARO ESE DEFECTO Y LA 2.d NO LO HEREDO. UNA CAIDA SUYA QUE ACUMULA: EL CENSO DICE SEIS Y HOY SON OCHO. RACHA DE REPORTE DE CERO A UNO. LA FASE 07 QUEDA ADJUDICADA PARA QUE NO SEA PARADA: LA OPERACION SIN HUELLA EN EL GRAFO SE MIDE CONTRA LO QUE INSTALA, EN INSTRUMENTO APARTE.'), HEAD real de apertura `0f0b4d25` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `45b7b5a7` (leido de `SALIDA_V145_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+
+FIN
+EXITCODE: 0
