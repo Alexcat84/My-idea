@@ -1,11 +1,11 @@
 BARRIDO EXHAUSTIVO
   PREGUNTA: existe en el repositorio una lista canonica de libros con sus alias de escritura, que es el prerrequisito que OP-A-01 nombra
   UNIVERSO: git ls-files de la rama actual (todo lo versionado, sin acotar)
-  CARDINAL: 15103
+  CARDINAL: 15135
   EXCLUIDOS POR SER SONDA Y NO INSTALACION (declarados, no escondidos): 0
-  POR NOMBRE: canonic|MAPEO|libros|fuentes | 49 ficheros con coincidencia
-  POR CONTENIDO: canonica propuesta|lista CANONICA de libros|LIBROS CANONICOS|libros canonicos | 41 ficheros con coincidencia
-  NO DECODIFICABLES (mirados y no leidos, NO cuentan como sin coincidencia): 388
+  POR NOMBRE: canonic|MAPEO|libros|fuentes | 51 ficheros con coincidencia
+  POR CONTENIDO: canonica propuesta|lista CANONICA de libros|LIBROS CANONICOS|libros canonicos | 51 ficheros con coincidencia
+  NO DECODIFICABLES (mirados y no leidos, NO cuentan como sin coincidencia): 389
       docs/loop/ABORTADA_V127_CICLO_ETIQUETAS_NUMSTAT.txt
       docs/loop/SALIDA_V101_ETIQUETAS_APERTURA.txt
       docs/loop/SALIDA_V102_ETIQUETAS_APERTURA.txt
@@ -27,7 +27,7 @@ BARRIDO EXHAUSTIVO
       docs/loop/SALIDA_V112_ETIQUETAS_APERTURA.txt
       docs/loop/SALIDA_V112_ETIQUETAS_CIERRE.txt
   VEREDICTO: HALLADO
-  LOS QUE COINCIDEN (union de las dos piernas): 81
+  LOS QUE COINCIDEN (union de las dos piernas): 93
       dataset/metadata/expansion_v13/nodos_absorbidos/mapeo_journey_cliente_holistico.json  [nombre]
       dataset/nodos/energia_fuentes_limpias.json  [nombre]
       dataset/nodos/estudio_mezclas_multiples_fuentes.json  [nombre]
@@ -49,6 +49,7 @@ BARRIDO EXHAUSTIVO
       docs/_censo_fuentes.json  [nombre]
       docs/loop/ACTA_AUDITOR.md  [contenido]
       docs/loop/PROMPT_SIGUIENTE.md  [contenido]
+      docs/loop/REPORTE.md  [contenido]
       docs/loop/SALIDA_V117_TAREA3_1_CRITERIO_HECHO_TRES_FUENTES.txt  [nombre]
       docs/loop/SALIDA_V131_3B_CANONICAS_SIN_LOCALIZADOR.txt  [nombre]
       docs/loop/SALIDA_V131_3C_WORDDIFF.txt  [contenido]
@@ -63,6 +64,14 @@ BARRIDO EXHAUSTIVO
       docs/loop/SALIDA_V145_3C_PRERREQUISITO.txt  [contenido]
       docs/loop/SALIDA_V146_1B_FUENTE_CANONICO.txt  [nombre]
       docs/loop/SALIDA_V146_2B_MUTACION_AUSENCIAS.txt  [contenido]
+      docs/loop/SALIDA_V146_3A_BARRIDO_LISTA_CANONICA.txt  [nombre]
+      docs/loop/SALIDA_V146_3A_FUENTE_CANONICO.txt  [nombre]
+      docs/loop/SALIDA_V146_3C_MUTACION_ADUANA.txt  [contenido]
+      docs/loop/SALIDA_V146_3D_VARA_FASE07.txt  [contenido]
+      docs/loop/SALIDA_V146_3_GATE0_TRAS_TAREA3.txt  [contenido]
+      docs/loop/SALIDA_V146_4B_COMPARAR_CABECERA.txt  [contenido]
+      docs/loop/SALIDA_V146_GATE0_CMD1_CIERRE.txt  [contenido]
+      docs/loop/SALIDA_V146_TALLADOR_CABECERA.txt  [contenido]
       docs/loop/_auditor_v124_OPERACIONES_MUT.jsonl  [contenido]
       docs/loop/_auditor_v124_OPERACIONES_MUT2.jsonl  [contenido]
       docs/loop/_auditor_v130_ciega_grupos.py  [contenido]
@@ -79,20 +88,13 @@ BARRIDO EXHAUSTIVO
       docs/plan/10_INVENTARIO.md  [contenido]
       docs/plan/CORRECCIONES_A_APLICAR.md  [contenido]
       docs/plan/INVENTARIO.jsonl  [contenido]
-      docs/plan/OPERACIONES.jsonl  [contenido]
-      docs/plan/OP_S_11_MAPEO_PROPUESTO.md  [nombre y contenido]
-      docs/plan/RECORTE_POSICIONAL.md  [contenido]
-      packs/compras/nodos/investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor.json  [nombre]
-      packs/compras/nodos_crudos/investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor.json  [nombre]
-      packs/environmental/nodos/energia_fuentes_limpias.json  [nombre]
-      packs/environmental/nodos/mapeo_stakeholders.json  [nombre]
-      packs/exportacion/nodos/fuentes_investigacion_mercado.json  [nombre]
-      packs/quality/nodos/estudio_mezclas_multiples_fuentes.json  [nombre]
-      ... y 21 mas
+      ... y 33 mas
   RUTAS CANDIDATAS MIRADAS A MANO (NO SON EL BARRIDO, van aparte):
       dataset/metadata/libros_canonicos.json -> NO EXISTE
       dataset/metadata/fuentes_canonicas.json -> NO EXISTE
       docs/plan/LIBROS_CANONICOS.md -> NO EXISTE
-CIFRA ficheros del universo: 15103 ficheros
-CIFRA ficheros que coinciden: 81 ficheros
+CIFRA ficheros del universo: 15135 ficheros
+CIFRA ficheros que coinciden por nombre: 51 ficheros
+CIFRA ficheros que coinciden por contenido: 51 ficheros
+CIFRA ficheros que coinciden: 93 ficheros
 EXITCODE: 0

@@ -1,0 +1,18 @@
+VERDE EXIT 0: 12 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
+  15135 ficheros == 15135 contados en `SALIDA_V146_3A_BARRIDO_LISTA_CANONICA.txt (CIFRA 'ficheros del universo', POR ETIQUETA)`
+  51 ficheros == 51 contados en `SALIDA_V146_3A_BARRIDO_LISTA_CANONICA.txt (CIFRA 'ficheros que coinciden por contenido', POR ETIQUETA)`
+  3169 nodos == 3169 contados en `SALIDA_V146_3A_FUENTE_CANONICO.txt (CIFRA 'nodos vivos comprobados', POR ETIQUETA)`
+  8 nodos == 8 contados en `SALIDA_V146_3B_SIMULACION_ANTES.txt (CIFRA 'nodos vivos con mas de una fuente', POR ETIQUETA)`
+  0 nodos == 0 contados en `SALIDA_V146_3B_SIMULACION_ANTES.txt (CIFRA 'nodos con mas de un libro y sin pasos', POR ETIQUETA)`
+  0 nodos == 0 contados en `SALIDA_V146_3B_SIMULACION_ANTES.txt (CIFRA 'incumplimientos canonicos', POR ETIQUETA)`
+  8 nodos == 8 contados en `SALIDA_V146_3B_NOMINA_SELLADA.txt (CIFRA 'nodos adjudicados con mas de una fuente', POR ETIQUETA)`
+  0 ficheros == 0 contados en `SALIDA_V146_3B_BARRIDO_ATRIBUCION_PASO.txt (CIFRA 'ficheros que coinciden por contenido', POR ETIQUETA)`
+  0 ficheros == 0 contados en `SALIDA_V146_3E_BARRIDO_UMBRAL.txt (CIFRA 'ficheros que coinciden por contenido', POR ETIQUETA)`
+  2 pares == 2 contados en `SALIDA_V146_1C_CIFRAS_FICHA.txt (CIFRA 'parejas titulo-prefijo con el mismo autor WORK', POR ETIQUETA)`
+  3 pares == 3 contados en `SALIDA_V146_1C_CIFRAS_FICHA.txt (CIFRA 'parejas titulo-prefijo con el mismo autor 0e5e0c60', POR ETIQUETA)`
+  10 grafias == 10 contados en `SALIDA_V146_1C_CIFRAS_FICHA.txt (CIFRA 'grafias con titulo de 31 caracteres WORK', POR ETIQUETA)`
+afirmacion(es) de CIERRE cotejadas (2), cada una con LO QUE SU FICHERO DICE (computado, no tecleado):
+  linea 337 (sujeto 'fase', verbo 'cierra') <-> `SALIDA_V146_3D_ESTADO_FASE07.txt`: sin cumplir: 2, y la ventana las nombra todas
+  linea 366 (sujeto 'fase', verbo 'cierra') <-> `SALIDA_V146_3D_ESTADO_FASE07.txt`: sin cumplir: 2, y la ventana las nombra todas
+COBERTURA: 12 cotejadas / 0 exentas / 12 cifras | reparto: 12 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 2 | ficheros citados que NO son UTF-8: 0 [ninguno] | unidades vistas FUERA del vocabulario: 28 palabra(s) [car x4, depre x4, caracteres x2, control x2, controles x2, docs x2, lleva x2, acaba x1, aduana x1, afirma x1, aplicada x1, atendida x1, buscaba x1, cifra x1, eso x1, estaba x1, fuera x1, iba x1, miro x1, mutaciones x1, nombra x1, prohibe x1, publico x1, quedaba x1, tal x1, valida x1, veces x1, veredicto x1]
+EXITCODE: 0

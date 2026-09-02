@@ -173,6 +173,10 @@ def main():
         vivos = cargar_nodos_vivos()
         print("VERDE EXIT 0: los %d nodos vivos traen `fuente` PRESENTE y con al menos una "
               "declaracion, y todas sus declaraciones son canonicas de la tabla." % len(vivos))
+        # LA CIFRA EN FORMA CONTABLE (vuelta 146, 4.c): sin esta linea, un
+        # reporte que cite esta salida no puede cotejar su numero con
+        # verificar_cifras_del_reporte.py. No cambia ningun veredicto.
+        print("CIFRA nodos vivos comprobados: %d nodos" % len(vivos))
         return 0
     print("ROJO, %d incumplimiento(s):" % len(incumplimientos))
     for id_nodo, grafia, motivo in incumplimientos:

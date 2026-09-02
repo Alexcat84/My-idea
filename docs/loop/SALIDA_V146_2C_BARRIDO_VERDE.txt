@@ -1,14 +1,18 @@
 BARRIDO EXHAUSTIVO
   PREGUNTA: esta instalado en el codigo el control A2.6 de OP-A-02, la puerta semantica que bloquea la insercion por veredicto ausente
   UNIVERSO: git ls-files de la rama actual ACOTADO a scripts/, engine/, web/
-  CARDINAL: 1475
+  CARDINAL: 1481
   EXCLUIDOS POR SER SONDA Y NO INSTALACION (declarados, no escondidos): 1
       scripts/loop/vuelta145_3b_vara_de_codigo_fase07.py
-  POR NOMBRE: aduana|veredicto_ausente|puerta_semantica | 0 ficheros con coincidencia
+  POR NOMBRE: aduana|veredicto_ausente|puerta_semantica | 2 ficheros con coincidencia
   POR CONTENIDO: veredicto continua-o-repite|bloqueo por veredicto ausente|veredicto_ausente | 0 ficheros con coincidencia
   NO DECODIFICABLES (mirados y no leidos, NO cuentan como sin coincidencia): 0
-  VEREDICTO: NO HALLADO
-  LOS QUE COINCIDEN (union de las dos piernas): 0
-CIFRA ficheros del universo: 1475 ficheros
-CIFRA ficheros que coinciden: 0 ficheros
+  VEREDICTO: HALLADO
+  LOS QUE COINCIDEN (union de las dos piernas): 2
+      scripts/loop/vuelta146_3b_sellar_nomina_aduana.py  [nombre]
+      scripts/loop/vuelta146_3c_mutacion_aduana.py  [nombre]
+CIFRA ficheros del universo: 1481 ficheros
+CIFRA ficheros que coinciden por nombre: 2 ficheros
+CIFRA ficheros que coinciden por contenido: 0 ficheros
+CIFRA ficheros que coinciden: 2 ficheros
 EXITCODE: 0

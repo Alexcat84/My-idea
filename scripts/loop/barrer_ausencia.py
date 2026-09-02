@@ -176,7 +176,16 @@ def main():
         print("  RUTAS CANDIDATAS MIRADAS A MANO (NO SON EL BARRIDO, van aparte):")
         for c in a.candidato:
             print("      %s -> %s" % (c, "EXISTE" if c in set(rutas) else "NO EXISTE"))
+    # LAS CIFRAS SE PUBLICAN EN FORMA CONTABLE (vuelta 146, 4.c). Sin estas
+    # lineas `CIFRA`, un reporte que pegue el sello no puede cotejar sus
+    # numeros con `verificar_cifras_del_reporte.py`, que para las unidades sin
+    # convencion mecanica SOLO sabe leer una linea `CIFRA <etiqueta>: <n>
+    # <unidad>`. Se anaden las DOS PIERNAS por separado porque son la pareja
+    # que sostiene o tumba una afirmacion de ausencia: la de contenido en cero
+    # es lo que respalda un NO HALLADO.
     print("CIFRA ficheros del universo: %d ficheros" % len(rutas))
+    print("CIFRA ficheros que coinciden por nombre: %d ficheros" % len(nom))
+    print("CIFRA ficheros que coinciden por contenido: %d ficheros" % len(con))
     print("CIFRA ficheros que coinciden: %d ficheros" % len(todos))
     return 0
 

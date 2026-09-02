@@ -127,10 +127,17 @@ muerta.
 Las marcas siguen la regla de las tres de la guarda de cifras: con las dos se
 quita lo delimitado, sin ninguna no se quita nada, y con UNA SOLA es ROJO.
 
-TAMBIEN SE RECORTA el bloque `<!-- COMMITS TALLADOS -->`, por el mismo motivo
-por el que la guarda de cifras lo recorta: sus lineas son ASUNTOS DE COMMIT
-tallados de git, no prosa del reporte, y dentro de una lista de commits no hay
-donde poner una cita.
+TAMBIEN SE RECORTAN los bloques `<!-- COMMITS TALLADOS -->` y
+`<!-- CABECERA TALLADA -->`, por el mismo motivo por el que la guarda de cifras
+los recorta: sus lineas son ASUNTOS DE COMMIT y CELDAS TALLADAS DE
+INSTRUMENTOS, no prosa del reporte, y dentro de una lista de commits o de una
+tabla tallada no hay donde poner una cita. LA CABECERA SE SUMO EN LA PRIMERA
+CORRIDA DE ESTA GUARDA SOBRE UN REPORTE REAL (vuelta 146, 4.c) y se dice por
+que no la debilita: la celda de identidad de la cabecera trae el ASUNTO DEL
+COMMIT DEL ACTA leido de `git log`, y ese asunto puede contener cualquier
+formula del vocabulario sin que sea una afirmacion de quien escribe el reporte;
+ademas `tallar_cabecera_reporte.py --comparar` ya exige que ese bloque sea
+IDENTICO AL TALLADOR, o sea que no cabe meter ahi una frase propia.
 
 --- CERO AFIRMACIONES VISTAS NO ES VERDE ---
 
@@ -194,6 +201,8 @@ MARCA_CITA_ABRE = re.compile(r"<!--\s*CITA CONGELADA\s+(\S+?):(\S+?)\s*-->")
 MARCA_CITA_CIERRA = "<!-- FIN CITA CONGELADA -->"
 MARCA_COMMITS_ABRE = "<!-- COMMITS TALLADOS -->"
 MARCA_COMMITS_CIERRA = "<!-- FIN COMMITS TALLADOS -->"
+MARCA_CABECERA_ABRE = "<!-- CABECERA TALLADA -->"
+MARCA_CABECERA_CIERRA = "<!-- FIN CABECERA TALLADA -->"
 
 
 def leer(ruta):
@@ -327,6 +336,8 @@ def verificar(texto):
     texto = quitar_citas_congeladas(texto, fallos)
     texto = quitar_bloque_simple(texto, MARCA_COMMITS_ABRE, MARCA_COMMITS_CIERRA,
                                  fallos, "COMMITS TALLADOS")
+    texto = quitar_bloque_simple(texto, MARCA_CABECERA_ABRE, MARCA_CABECERA_CIERRA,
+                                 fallos, "CABECERA TALLADA")
 
     frases = dividir_frases(texto)
     vistas, respaldadas = [], []

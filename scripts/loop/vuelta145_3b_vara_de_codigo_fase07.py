@@ -441,7 +441,12 @@ def main():
     # frase sale de `pendientes`, que se computa de la tabla.
     pendientes = [f[0]["id"] for f in filas if not (f[1] and f[3] and f[4])]
     if pendientes:
-        print("LA FASE NO SE CIERRA CONTRA ESTA VARA. Lo que le falta, nombrado: %s."
+        # UNA SOLA FRASE, Y NO ES CAPRICHO (vuelta 146, 4.c): el veredicto y lo
+        # que falta van juntos porque `verificar_cifras_del_reporte.py` coteja
+        # toda afirmacion de cierre contra una ventana de TRES FRASES, y una
+        # linea partida en dos gasta la ventana antes de llegar a la cita. El
+        # veredicto no cambia; lo que cambia es que se pueda citar al lado.
+        print("LA FASE NO SE CIERRA CONTRA ESTA VARA, y lo que le falta va nombrado: %s."
               % ", ".join(pendientes))
     else:
         print("CONTRA ESTA VARA NO LE FALTA NINGUN CONTROL. Cerrar la fase es una "
