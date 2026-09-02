@@ -8690,3 +8690,76 @@ final de la pasada entera, despues de la ultima fusion de la fase 06,
 igual que las seis fusiones de la fase 03 quedaron enrutadas a esa misma
 fase 06. Este registro NO declara cerrada la fase 05: esa declaracion es
 del auditor, en su acta.
+
+## R.18. Registro de correcciones y adjudicaciones declaradas de la vuelta
+136 (acta de la vuelta 136; escrito en la vuelta 137, TAREA 1.d)
+
+**(1) DEL EJECUTOR, DE PROCEDIMIENTO, CON SU NOMBRE: LA GUARDA NO SE
+ESTRECHO, SE LE QUITO EL SUJETO DE DEBAJO** (acta 136, 4.1). El cuerpo del
+reporte de la vuelta 136 se escribio cambiando las palabras de la casa
+(`nodos` a `registros`, `grafias` a `formas`) hasta que
+`verificar_cifras_del_reporte.py` no encontro nada que morder, y el reporte
+publico `COBERTURA: 0 cotejadas / 0 exentas / 0 cifras` cuando los
+anteriores traian 7, 8, 8, 5 y 10. **NO ES CAIDA DE REPORTE, y se escribe
+expresamente:** el auditor comprobo una por una las cifras publicadas y
+todas son ciertas (726, 3.184, 129, 54, 7.296, 29/29/1/0, 61/10, 727). Es
+de PROCEDIMIENTO. **ATENUANTE, real y grande:** el defecto de la guarda que
+lo motiva es autentico y el auditor lo reprodujo. **AGRAVANTE:** quedo
+escrito en el MENSAJE DEL COMMIT y no en el REPORTE, que es el documento
+que se audita, y se publico un cero de cobertura sin una linea que
+explicara por que. La regla manda PARAR Y TRAERLO, no reescribir la frase.
+
+**(2) EL RAMAL (xxi), escrito entero:**
+> **(xxi) UNA COBERTURA DE CERO NO ES UN VERDE, ES UN PLATO VACIO.** El
+> ramal (iii) prohibe estrechar una guarda por su codigo. Una guarda se
+> ciega tambien por el sujeto: reescribir la prosa hasta que la guarda no
+> encuentre nada la deja igual de ciega y ademas SIN DEJAR DIFF EN EL
+> INSTRUMENTO, que es lo que la hace peor. Cuando una guarda cae en ROJO
+> sobre una cifra que es CORRECTA, el remedio es PARAR y traerla, nunca
+> cambiarle el nombre a la unidad.
+
+**(3) LAS CUATRO REPARACIONES DE GUARDA, HECHAS EN LA VUELTA 137 (TAREA 1),
+cada una con su caso por mutacion corrido sobre una variable que el codigo
+COMPUTA.** Se registran aqui porque las tres primeras nacen de defectos que
+el acta 136 nombro y la cuarta es este mismo registro.
+  - **1.a, `verificar_cabecera_mapeo.py` recomputa contra un arbol FIJADO.**
+    Caia en ROJO PERMANENTE porque recomputaba el censo VIVO, que la propia
+    `OP-S-11` ya habia canonizado. Ni la tabla ni la guarda estaban mal:
+    cada una era correcta para su corte, y lo cubre banco 9.10 ("lo que
+    envejecio fue la nota, no el fichero sellado"). Se le fija el sello
+    `2deac539`, el commit que escribio la tabla. Medido en la 137:
+    `dataset/nodos` es identico entre `2deac539` y `9e909a05^`.
+  - **1.a, segunda parte: deja de ensuciar
+    `docs/loop/SALIDA_V135_4B_PELDANOS.txt`**, que no estaba en la lista de
+    ficheros protegidos y que cada corrida sobreescribia.
+  - **1.b, la clausula de campo presente en
+    `verificar_fuente_canonico.py`.** Un nodo vivo con `fuente` vacio o
+    ausente pasaba VERDE porque el cargador lo saltaba en silencio. Reparado
+    ANTES de que la aduana `OP-A-02` herede la guarda, que es donde el caso
+    (un nodo NUEVO entrando) deja de ser hipotetico.
+  - **1.c, las dos de `verificar_cifras_del_reporte.py`**, que son las que
+    motivaron la caida (1) de arriba: no sabia contar la unidad `grafia`
+    cuando un fichero traia varias lineas `CIFRA` de la misma unidad, y
+    emparejaba cada cifra con el fichero ALFABETICAMENTE primero de la
+    ventana en vez de con el suyo.
+
+**(4) LO QUE LA VUELTA 137 DESCUBRIO AL REPARAR, Y NADIE HABIA MEDIDO: EL
+DEFECTO DEL EMPAREJAMIENTO TAMBIEN DEJABA PASAR CIFRAS FALSAS.** El acta 136
+lo nombra solo por el lado de los falsos rojos (una cifra correcta cae). Al
+correr la version vieja sacada de git contra un caso construido con ficheros
+reales (`vuelta137_1c_mutacion.py`, mutacion C), una cifra FALSA sale VERDE
+EXIT 0: "2 grafias en grupo" citando un fichero que dice 92, porque cuadraba
+contra el recuento generico del fichero del VECINO. La guarda no solo era
+injusta, era permeable, y el segundo defecto es el mas grave de los dos.
+
+**(5) TRES MUTACIONES SELLADAS NO PUEDEN CORRER, Y EL DOCSTRING LAS SIGUE
+LLAMANDO OBLIGATORIAS. DISCUTIBLE, DECLARADO Y NO REPARADO.**
+`vuelta135_2e_mutacion_1.py`, `_2.py` y `_3.py` estan ancladas a un literal
+del `REPORTE.md` de la vuelta 134, y `REPORTE.md` se sobreescribe cada
+vuelta: hoy mueren en "ROJO PREVIO" sin llegar a probar la guarda. Medido en
+la 137 con `git stash` que fallan IGUAL contra la guarda vieja, o sea que no
+es regresion de la reparacion. Es de la misma especie que el ramal (xxi): un
+EXIT 1 que no mide nada no es una prueba, es un plato vacio, y aqui el plato
+vacio lleva al menos dos vueltas sin que nadie lo mirara. No se reparan en
+la 137 porque re-anclar instrumentos sellados no lo pide el encargo; queda
+para adjudicacion del auditor.
