@@ -1,0 +1,27 @@
+SUJETO: b7f07648:docs/loop/REPORTE.md
+CARACTERES: 40541   LINEAS: 639
+
+(1) CENSO DE LAS SEIS MARCAS
+  CABECERA TALLADA, abre           1 vez/veces  linea 22 (offset 1038)
+  CABECERA TALLADA, cierra         1 vez/veces  linea 34 (offset 3630)
+  COMMITS TALLADOS, abre           1 vez/veces  linea 43 (offset 3849)
+  COMMITS TALLADOS, cierra         1 vez/veces  linea 66 (offset 5739)
+  COBERTURA DE LA GUARDA, abre     2 vez/veces  linea 274 (offset 17651), linea 632 (offset 40326)
+  COBERTURA DE LA GUARDA, cierra   2 vez/veces  linea 278 (offset 18315), linea 638 (offset 40505)
+
+(2) QUE RECORTA HOY quitar_bloques_cubiertos(), ANCLADO EN LA PRIMERA OCURRENCIA
+  COBERTURA  RECORTA lineas 274 a 278 (699 caracteres)
+             QUEDA FUERA el bloque 2.o, lineas 632 a 638 (214 caracteres): SE PARSEA
+  COMMITS    RECORTA lineas 43 a 66 (1919 caracteres)
+  CABECERA   RECORTA lineas 22 a 34 (2621 caracteres)
+
+(3) LA GUARDA ENTERA SOBRE ESTE SUJETO: EXIT 0
+  COBERTURA: 2 cotejadas / 0 exentas / 2 cifras | reparto: 0 POR ETIQUETA, 0 POR CONJUNTO, 2 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 8 | unidades vistas FUERA del vocabulario: 29 palabra(s) [passed x4, caracteres x3, despues x3, anadidas x2, aprobo x2, borradas x2, cierra x2, contra x2, fichas x2, skipped x2, aborta x1, absorbidos x1, antes x1, aprenda x1, contados x1, corre x1, deprecados x1, destapa x1, entradas x1, fallos x1, hubiera x1, mesas x1, mutaciones x1, tomo x1, tragados x1, veces x1, viajan x1, vieja x1, vivos x1]
+  unidades fuera del vocabulario: 29
+
+(4) PEGADA LA LINEA REAL DE COBERTURA DENTRO DEL SEGUNDO BLOQUE (linea 638)
+  linea pegada: COBERTURA: 2 cotejadas / 0 exentas / 2 cifras | reparto: 0 POR ETIQUETA, 0 POR CONJUNTO, 2 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 8 | unidades vistas FUERA del vocabulario: 29 palabra(s) [passed x4, caracteres x3, despues x3, anadidas x2, aprobo x2, borradas x2, cierra x2, contra x2, fichas x2, skipped x2, aborta x1, absorbidos x1, antes x1, aprenda x1, contados x1, corre x1, deprecados x1, destapa x1, entradas x1, fallos x1, hubiera x1, mesas x1, mutaciones x1, tomo x1, tragados x1, veces x1, viajan x1, vieja x1, vivos x1]
+  la guarda sobre el sujeto mutado: EXIT 1
+  COBERTURA: 2 cotejadas / 0 exentas / 2 cifras | reparto: 0 POR ETIQUETA, 0 POR CONJUNTO, 2 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 8 | unidades vistas FUERA del vocabulario: 34 palabra(s) [passed x4, caracteres x3, despues x3, anadidas x2, aprobo x2, borradas x2, cierra x2, contra x2, fichas x2, skipped x2, aborta x1, absorbidos x1, antes x1, aprenda x1, cifras x1, contados x1, corre x1, cotejadas x1, deprecados x1, destapa x1, entradas x1, exentas x1, fallos x1, hubiera x1, mesas x1, mutaciones x1, palabra x1, tomo x1, tragados x1, veces x1, viajan x1, vieja x1, viven x1, vivos x1]
+  unidades fuera del vocabulario: 29 -> 34
+EXITCODE: 0
