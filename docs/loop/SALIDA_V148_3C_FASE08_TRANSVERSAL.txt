@@ -1,0 +1,42 @@
+FASE 08, LA VERIFICACION TRANSVERSAL: LOS CINCO PUNTOS, UNO A UNO
+==============================================================================
+1. GATE 0 VERDE (EL CICLO, no la invocacion a secas)
+   corrido en esta vuelta tras OP-S-12: SALIDA_V148_3A_GATE0_TRAS_OPS12_BIS.txt
+   comando 2, la vara del blob: byte identico al HEAD DEL MOMENTO
+      dataset/metadata/master_graph.json         disco cb33552aeddd | HEAD cb33552aeddd | IDENTICO
+      web/lib/assets/master_graph.json           disco cb33552aeddd | HEAD cb33552aeddd | IDENTICO
+      LAS DOS COPIAS ENTRE SI: IDENTICAS
+
+2. SUITE VERDE
+   motor 25/25, vitest 80 ficheros 1030 pasadas 3 saltadas, tsc EXIT 0.
+   ficheros: SALIDA_V148_3B_MOTOR.txt, SALIDA_V148_3B_WEB.txt, SALIDA_V148_3B_TSC.txt
+
+3. VUELO COMPLETO
+   NO CORRIBLE EN EL BUCLE, y se declara en vez de darse por bueno.
+   web/scripts/vuelo.ts va por HTTP real contra un `next dev` local, inicia sesion
+   como el dev user via Supabase y llama a la API de verdad. Necesita el servidor
+   levantado y las credenciales del .env, que estan FUERA del repo mientras el
+   bucle corre. Es la misma frontera de la decision del fundador de esta vuelta:
+   lo que gasta credencial corre en sesion con humano presente.
+
+4. PRUEBA DE RUMBOS
+   CORRIDA POR MI EN ESTA VUELTA. exitcode 2, salida literal:
+      ERROR: falta VOYAGE_API_KEY en .env
+   NO CORRIBLE EN EL BUCLE por la misma frontera: pide VOYAGE_API_KEY del .env.
+
+5. REINDEXADO SEMANTICO DESPUES DE MOVER IDS
+   NO CORRIBLE EN EL BUCLE: scripts/build_semantic_index_voyage.py pide
+   VOYAGE_API_KEY. PERO LA PRECONDICION SI SE PUEDE MEDIR, Y LA MIDO:
+      nodos VIVOS en el grafo            : 3169
+      ids en el indice semantico          : 3521
+      vivos SIN vector                    : 18
+      ids del indice que ya no estan vivos: 370
+      LA RAZON POR LA QUE OP-S-12 NO OBLIGA A REINDEXAR, y es medible:
+      el indice se construye con texto_nodo(), que lee titulo_concepto,
+      resumen_teorico y condiciones_activacion. OP-S-12 SOLO toco
+      nodos_previos y nodos_siguientes, y NO renombro ni un id: el censo de
+      vivos es el mismo antes y despues (3169). No hay id movido que reindexar.
+      vivos sin vector, nombrados: anillo_interior_explotar_el_canal_nucleo, autoservicio_y_autosanacion_del_producto, critica_del_plan_con_ia, driver_de_inventario, escenarios_de_evolucion_de_la_ia, estar_listo_para_ser_publica, estrategia_circular_y_mecanismo_de_retorno, formalizar_un_proceso_ad_hoc, ideacion_con_ia_en_la_sesion, incentivos_internos_alineados_a_retencion
+
+CIFRA puntos transversales corridos en esta vuelta: 3 puntos
+CIFRA puntos transversales que piden credencial: 3 puntos
