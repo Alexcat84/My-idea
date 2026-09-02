@@ -28,6 +28,28 @@ NI UNA LINEA DE ARITMETICA, NI UNA GUARDA, NI EL CONTRATO DE LAS MARCAS CAMBIA.
 
 MODOS: --simular (por defecto, cero escrituras) y --ejecutar.
 
+EL CUARTO DESTINO, `VIAJA_EN_EL_ACTO` (VUELTA 139, OPERACION 2.a; acta de la
+vuelta 138, adjudicacion 3.1). Nace del mismo modo que el INCISO: un caso real
+que las marcas de entonces no sabian decir. Cuando DOS O MAS absorbidos del
+mismo acto traen LA MISMA PIEZA y el superviviente no la tiene, ninguna de las
+cuatro marcas viejas la sostiene: `CUBIERTO` afirma del superviviente algo que
+su texto no dice; el doble `APPEND` fabrica la repeticion que `P.13` prohibe
+por su nombre; y declararla perdida es la PERDIDA FALSA que la misma frase de
+`P.13` prohibe. La marca se escribe con dos campos:
+
+    "VIAJA_EN_EL_ACTO:<absorbido>|<n>"
+
+y dice, sin afirmar nada mas: "esta pieza ya viaja en este mismo acto, por el
+paso n del absorbido <absorbido>". LA PIEZA NO SE INJERTA. Es `VIVE DENTRO` de
+`P.13` ("se tacha de la lista y SE ANOTA DONDE VIVE") aplicado al superviviente
+DESPUES de la fusion.
+
+SUS GUARDAS SE MUERDEN AQUI TAMBIEN, no solo en el generador: el destino existe
+en el acto, no es auto referente, y LLEVA APPEND O INCISO (si lleva CUBIERTO,
+CUBIERTO_COND u otro VIAJA_EN_EL_ACTO es ROJO con la letra "cadena que no llega
+a viajar"). Una guarda que solo corre el dia de sellar no protege el dia de
+escribir el catalogo.
+
 Uso:
   python scripts/loop/fundir_por_plan.py --plan docs/loop/PLAN_V63_OPM03I.json [--ejecutar]
 
@@ -320,6 +342,54 @@ def main():
                         incisos_puestos.append((muere, i, k, inciso, nexo))
                         destino = ("INCISO ADOSADO al PASO %d del superviviente "
                                    "(SALVAGUARDA, tabla de los seis motivos)" % k)
+                elif m.startswith("VIAJA_EN_EL_ACTO:"):
+                    # LA QUINTA MARCA (vuelta 139, 2.a; acta de la vuelta 138,
+                    # adjudicacion 3.1, que cierra el pendiente citando P.13).
+                    # LA PIEZA NO SE INJERTA: ya viaja en este mismo acto por el
+                    # paso de otro absorbido. Injertarla otra vez es fabricar la
+                    # repeticion que P.13 prohibe por su nombre; declararla
+                    # perdida es la PERDIDA FALSA que la misma frase prohibe.
+                    # Aqui SE ANOTA DONDE VIVE, que es lo que VIVE DENTRO manda.
+                    #
+                    # LAS GUARDAS SE VUELVEN A MORDER EN LA EJECUCION, no solo
+                    # al sellar: entre el sello del plan y la fusion puede haber
+                    # pasado cualquier cosa, y una guarda que solo corre en el
+                    # generador no protege el dia que se escribe el catalogo.
+                    resto = m[len("VIAJA_EN_EL_ACTO:"):]
+                    if "|" not in resto or not resto.rsplit("|", 1)[1].isdigit():
+                        fallos.append("acto %d: marca VIAJA_EN_EL_ACTO mal formada %r" % (n, m))
+                        tabla_perdidas.append((n, muere, "paso", i, texto, "MARCA ROTA"))
+                        continue
+                    ab_d, n_d = resto.rsplit("|", 1)
+                    n_d = int(n_d)
+                    if ab_d == muere and n_d == i:
+                        fallos.append("acto %d: VIAJA_EN_EL_ACTO AUTO REFERENTE en el paso %d "
+                                      "de %s" % (n, i, muere))
+                        destino = "MARCA ROTA"
+                    elif ab_d not in abs_:
+                        fallos.append("acto %d: el paso %d de %s viaja por el absorbido %s, que "
+                                      "NO esta en el acto (absorbidos: %s)"
+                                      % (n, i, muere, ab_d, ", ".join(abs_)))
+                        destino = "MARCA ROTA"
+                    else:
+                        pasos_d = (todos[ab_d][0].get("pasos_accionables") or []) \
+                            if ab_d in todos else []
+                        m_d = (act["pasos"].get(ab_d) or {}).get(str(n_d))
+                        if not (1 <= n_d <= len(pasos_d)):
+                            fallos.append("acto %d: el paso %d de %s viaja por el paso %d de %s, "
+                                          "que tiene %d paso(s): ese paso NO existe"
+                                          % (n, i, muere, n_d, ab_d, len(pasos_d)))
+                            destino = "MARCA ROTA"
+                        elif not (m_d == "APPEND" or (m_d or "").startswith("INCISO:")):
+                            fallos.append("acto %d: CADENA QUE NO LLEGA A VIAJAR. El paso %d de "
+                                          "%s apunta al par (%s, %d), cuya marca es %r, y solo "
+                                          "APPEND o INCISO hacen viajar la pieza"
+                                          % (n, i, muere, ab_d, n_d, m_d))
+                            destino = "MARCA ROTA"
+                        else:
+                            destino = ("VIAJA EN ESTE MISMO ACTO por el PASO %d de %s "
+                                       "(P.13, VIVE DENTRO: no se injerta dos veces)"
+                                       % (n_d, ab_d))
                 elif m.startswith("CUBIERTO_COND:"):
                     destino = "ya lo dice la CONDICION %s del superviviente" % m.split(":")[1]
                 elif m.startswith("CUBIERTO:"):
@@ -608,10 +678,12 @@ def main():
     print("  actos fundidos      : %d" % len(plan["actos"]))
     print("  nodos implicados    : %d" % sum(len(x["miembros"]) for x in plan["actos"]))
     print("  nodos que MUEREN    : %d" % len(todos_absorbidos))
-    print("  piezas repartidas   : %d (%d viajan enteras, %d ya estaban dichas)"
+    print("  piezas repartidas   : %d (%d viajan enteras, %d ya estaban dichas, "
+          "%d ya viajan en el acto)"
           % (len(tabla_perdidas),
              sum(1 for r in tabla_perdidas if r[5].startswith(("PASO", "CONDICION"))),
-             sum(1 for r in tabla_perdidas if r[5].startswith("ya lo dice"))))
+             sum(1 for r in tabla_perdidas if r[5].startswith("ya lo dice")),
+             sum(1 for r in tabla_perdidas if r[5].startswith("VIAJA EN ESTE MISMO ACTO"))))
     print("  actos DECLARADOS y no fundidos: %d" % len(plan["declarados_y_no_fundidos"]))
 
     if not a.ejecutar:

@@ -1,0 +1,24 @@
+########## --mutar-rotulo ##########
+==============================================================================
+  PLAN_V63_OPM02PROG.json      ROJO, 2 linea(s) distintas
+  PLAN_V63_OPM03I.json         ROJO, 2 linea(s) distintas
+  PLAN_V64_OPM03II.json        ROJO, 2 linea(s) distintas
+VERDE DE LA MUTACION: el caso CAE, 3 de 3 planes en ROJO.
+FIN
+EXITCODE: 0
+########## --mutar-marca ##########
+==============================================================================
+  PLAN_V63_OPM02PROG.json      ROJO, 2 linea(s) distintas
+  PLAN_V63_OPM03I.json         ROJO, 2 linea(s) distintas
+  PLAN_V64_OPM03II.json        ROJO, 2 linea(s) distintas
+VERDE DE LA MUTACION: el caso CAE, 3 de 3 planes en ROJO.
+FIN
+EXITCODE: 0
+########## --mutar-fecha ##########
+  PLAN_V63_OPM02PROG.json      IDENTICOS salvo la fecha, declarada
+  PLAN_V63_OPM03I.json         IDENTICOS salvo la fecha, declarada
+  PLAN_V64_OPM03II.json        IDENTICOS salvo la fecha, declarada
+VERDE DEL BORDE: mutar la linea de la fecha NO hace caer el caso, que es
+exactamente la tolerancia declarada, ni una linea mas.
+FIN
+EXITCODE: 0

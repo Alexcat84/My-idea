@@ -1,0 +1,92 @@
+==============================================================================
+CASOS (B), (C), (D) Y (E) DE LA OPERACION 2.a, VUELTA 139
+LA QUINTA MARCA: VIAJA_EN_EL_ACTO
+==============================================================================
+  ids del banco que existen en dataset/nodos: NINGUNO, como debe ser
+  banco montado en un temporal: 3 nodos, ficha OP-V139-FIXTURE
+  la PIEZA de dos duenos, contada por el trozo 'pedidos a precio completo':
+     en v139_ab_uno_fixture, paso 1: Buscar pedidos a precio completo como prueba dura de que la venta se repite
+     en v139_ab_dos_fixture, paso 2: Probar que el proceso se repite buscando pedidos a precio completo
+     en el superviviente: EN NINGUNO de sus 2 pasos (premisa del caso)
+
+------------------------------------------------------------------------------
+(B) LA CUENTA DE LA PIEZA EN EL SUPERVIVIENTE RESULTANTE.
+    SANO: (v139_ab_uno_fixture, 1) APPEND y (v139_ab_dos_fixture, 2) VIAJA_EN_EL_ACTO al par (v139_ab_uno_fixture, 1).
+    generador: exit 0 | plan escrito: True
+     FORMATO DEL REPARTO: pasos POR PAR (absorbido, numero de paso) | condiciones POR PAR (absorbido, numero de paso)
+     VIAJA_EN_EL_ACTO, 1 pieza(s) que ya viajan por otro absorbido:
+        el paso 2 de v139_ab_dos_fixture viaja por el paso 1 de v139_ab_uno_fixture
+     REPARTO: piezas 4 (enteras 3, ya dichas 0, de INCISO 0, que ya viajan en el acto 1)
+    fundidor: exit 0 | el superviviente resultante tiene 5 paso(s)
+       paso 1: Paso uno del superviviente del banco
+       paso 2: Paso dos del superviviente del banco
+       paso 3: Buscar pedidos a precio completo como prueba dura de que la venta se repite
+       paso 4: Paso propio del absorbido uno que no esta en ningun otro
+       paso 5: Paso propio del absorbido dos que no esta en ningun otro
+       1 v139_ab_dos_fixture                          paso         2  VIAJA EN ESTE MISMO ACTO por el PASO 1 de v139_ab_uno_fixture (P.13, VIVE DENTRO: no se injerta dos veces)
+     piezas repartidas   : 4 (3 viajan enteras, 0 ya estaban dichas, 1 ya viajan en el acto)
+    CUENTA DE LA PIEZA EN EL RESULTADO: 1
+
+    MUTACION DEL (B): el VIAJA_EN_EL_ACTO pasa a ser un SEGUNDO APPEND.
+    fundidor: exit 0 | el superviviente resultante tiene 6 paso(s)
+       paso 1: Paso uno del superviviente del banco
+       paso 2: Paso dos del superviviente del banco
+       paso 3: Buscar pedidos a precio completo como prueba dura de que la venta se repite
+       paso 4: Paso propio del absorbido uno que no esta en ningun otro
+       paso 5: Paso propio del absorbido dos que no esta en ningun otro
+       paso 6: Probar que el proceso se repite buscando pedidos a precio completo
+    CUENTA DE LA PIEZA EN EL RESULTADO: 2
+    (y la GUARDA 3 del fundidor, cero repetidos LITERALES, NO la ve:
+     las dos redacciones no son iguales byte a byte, que es justo la
+     figura que P.13 llama repeticion fabricada)
+
+    LAS DOS CUENTAS, UNA AL LADO DE LA OTRA: sana 1, mutada 2
+
+------------------------------------------------------------------------------
+(C) MUTACION: VIAJA_EN_EL_ACTO apuntando a un paso marcado CUBIERTO.
+    generador: exit 1 | plan escrito: False
+       paso 2 de v139_ab_dos_fixture: CADENA QUE NO LLEGA A VIAJAR. Apunta al par (v139_ab_uno_fixture, 1), cuya marca es 'CUBIERTO:1', y solo APPEND o INCISO hacen viajar la pieza
+    ROJO con la letra y nombrando el par (v139_ab_uno_fixture, 1): True
+
+------------------------------------------------------------------------------
+(D.1) MUTACION: VIAJA_EN_EL_ACTO a un absorbido que NO esta en la operacion.
+    generador: exit 1 | plan escrito: False
+       paso 2 de v139_ab_dos_fixture: VIAJA_EN_EL_ACTO al absorbido 'v139_ab_fantasma_que_no_existe' y el paso 1, y el absorbido 'v139_ab_fantasma_que_no_existe' NO esta en esta operacion (los absorbidos son: v139_ab_uno_fixture, v139_ab_dos_fixture)
+    ROJO nombrando LOS DOS (absorbido y numero de paso): True
+
+(D.2) MUTACION: VIAJA_EN_EL_ACTO a un numero de paso que NO existe.
+    generador: exit 1 | plan escrito: False
+       paso 2 de v139_ab_dos_fixture: VIAJA_EN_EL_ACTO al absorbido v139_ab_uno_fixture y el paso 99, y v139_ab_uno_fixture tiene 2 paso(s): ese paso NO existe
+    ROJO nombrando LOS DOS (absorbido y numero de paso): True
+
+------------------------------------------------------------------------------
+(iii) MUTACION: VIAJA_EN_EL_ACTO auto referente (mismo absorbido, mismo paso).
+    generador: exit 1 | plan escrito: False
+       paso 2 de v139_ab_dos_fixture: VIAJA_EN_EL_ACTO AUTO REFERENTE, se apunta a si mismo (v139_ab_dos_fixture, 2). Una pieza no puede viajar por su propio paso
+
+------------------------------------------------------------------------------
+(v.1) MUTACION: VIAJA_EN_EL_ACTO SIN linea editorial.
+    generador: exit 1 | plan escrito: False
+       paso 2 de v139_ab_dos_fixture: VIAJA_EN_EL_ACTO SIN LINEA EDITORIAL. Falta la clave 'v139_ab_dos_fixture|2' en lineas_de_viaje, que dice POR QUE los dos son el mismo gesto y CUAL de las dos redacciones viaja
+
+(v.2) MUTACION: linea editorial que NO nombra al absorbido destino.
+    generador: exit 1 | plan escrito: False
+       paso 2 de v139_ab_dos_fixture: la linea editorial de 'v139_ab_dos_fixture|2' no NOMBRA al absorbido destino v139_ab_uno_fixture, asi que no dice cual de las dos redacciones viaja: 'Los dos dicen lo mismo.'
+
+------------------------------------------------------------------------------
+(E) ficheros escritos en la salida tras los SEIS ROJOS: NINGUNO
+
+  temporal retirado (P.16): True
+
+==============================================================================
+  (B) la cuenta pasa de 1 a 2 al quitar la marca   VERDE
+  (C) cadena que no llega a viajar                 VERDE
+  (D.1) absorbido destino inexistente              VERDE
+  (D.2) numero de paso destino inexistente         VERDE
+  (iii) auto referencia                            VERDE
+  (v.1) sin linea editorial                        VERDE
+  (v.2) linea que no dice cual redaccion viaja     VERDE
+  (E) cero escritura si hay fallos                 VERDE
+VERDE: los 8 casos de la quinta marca se sostienen.
+FIN
+EXITCODE: 0

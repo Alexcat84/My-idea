@@ -58,6 +58,58 @@ LO QUE CAMBIA, en reparto_por_par():
   - --reparto-viejo EXHIBE el defecto (reparte el dict plano a todos los
     absorbidos e imprime las colisiones) y nunca escribe.
 
+--- LA QUINTA MARCA: VIAJA_EN_EL_ACTO (VUELTA 139, OPERACION 2.a) ---
+
+CORRECCION DECLARADA POR ADICION, y el texto de arriba se queda entero.
+
+POR QUE NACE, y NO ES DOCTRINA NUEVA. La vuelta 138 se detuvo ante una pieza
+que DOS O MAS absorbidos del mismo acto tienen y el superviviente NO, porque
+ninguna de las cuatro marcas del contrato la sostenia: `CUBIERTO` afirma del
+superviviente algo que su texto no dice, el doble `APPEND` fabrica la
+repeticion que `P.13` prohibe por su nombre ("obliga a injertar en el
+superviviente algo que ya esta, y eso es como se fabrica una repeticion nueva
+el dia de la pasada"), y declararla PERDIDA es lo que `P.13` llama PERDIDA
+FALSA, ademas de no caber en ESPECIES_DE_PERDIDA. El acta de la vuelta 138,
+adjudicacion 3.1, lo cerro citando `P.13`: lo que faltaba NO era doctrina,
+era VOCABULARIO DEL INSTRUMENTO, el mismo carril que la 3.4 del acta 137.
+
+QUE DICE LA MARCA, exactamente y nada mas:
+    VIAJA_EN_EL_ACTO:<absorbido>|<n>
+    "esta pieza ya viaja en este mismo acto, por el paso n del absorbido
+     <absorbido>"
+NO afirma nada del texto del superviviente, que es lo que hacia insostenible a
+CUBIERTO, y NO es una perdida, que es lo que `P.13` llama perdida falsa. Es
+`VIVE DENTRO` de `P.13` ("se tacha de la lista y SE ANOTA DONDE VIVE")
+aplicado al superviviente DESPUES de la fusion en vez de antes.
+
+QUE REDACCION VIAJA, fijado por el auditor y no decidido aqui: LA DEL ABSORBIDO
+CUYO PASO LLEVA EL APPEND. Si el segundo dueno trae un MATIZ que el primero no
+trae, ESE MATIZ NO ES VIAJA_EN_EL_ACTO: es una pieza propia y viaja con su
+propia marca, por `P.13`. La casa ya escribe asi (ficha de OP-M-05-APERTURA,
+"VIAJA SOLO EL MATIZ").
+
+LAS SEIS GUARDAS AL SELLAR, todas ROJO y sin escribir nada si fallan:
+  (i)   el destino (absorbido, n) EXISTE en la misma operacion: el absorbido
+        esta en `absorbidos` y n esta entre sus pasos. ROJO NOMBRANDO LOS DOS.
+  (ii)  el destino LLEVA UNA MARCA QUE HACE VIAJAR LA PIEZA, o sea APPEND o
+        INCISO. Si lleva CUBIERTO, CUBIERTO_COND u otro VIAJA_EN_EL_ACTO, es
+        ROJO con la letra "cadena que no llega a viajar", nombrando el par.
+        NO HAY CADENAS: el destino viaja directo o es rojo.
+  (iii) la auto referencia (el mismo absorbido y el mismo n) es ROJO.
+  (iv)  COBERTURA EXACTA sigue mandando, indexada por el par (2.a de la 138).
+  (v)   cada VIAJA_EN_EL_ACTO lleva EN EL PLAN una linea editorial, copiada
+        VERBATIM del contenido, en `lineas_de_viaje`, indexada por el par
+        ORIGEN "<absorbido>|<n>". Sin esa linea, ROJO. La linea tiene ademas
+        que NOMBRAR AL ABSORBIDO DESTINO, que es la parte de "CUAL de las dos
+        redacciones viaja" que una maquina puede comprobar.
+  (vi)  el REPARTO impreso cuenta la marca nueva junto a APPEND, CUBIERTO e
+        INCISO, y la cifra es COMPUTADA de las marcas, no un literal.
+
+SOLO PARA PASOS, como el INCISO. Una condicion marcada VIAJA_EN_EL_ACTO es
+ROJO: la marca nombra "el paso n" del absorbido destino, y el destino de una
+condicion no esta definido por ninguna regla escrita. Cuando haga falta, se
+adjudica; hoy no se inventa.
+
 Uso:
   python scripts/loop/generar_plan_de_fusion_de_mesa.py --vuelta 63
       --id-op OP-M-03-I --contenido _v63_opm03i [--simular]
@@ -147,6 +199,40 @@ def marcar(spec_marcas, textos, etq, ab, n_sup_pasos, n_sup_cond, pasos_sup, fal
                 print("      trozo EXTRAIDO del nodo: %r" % trozo)
                 print("      paso resultante        : %s" % resultante)
             marcas[str(i)] = "INCISO:%d|%s|%s" % (k, trozo, nexo)
+        elif m[0] == "VIAJA_EN_EL_ACTO":
+            # LA QUINTA MARCA (vuelta 139, 2.a). Aqui solo se comprueba lo que
+            # se puede ver con UN absorbido delante: la forma, la especie y la
+            # AUTO REFERENCIA (guarda iii). Las guardas (i), (ii) y (v) miran
+            # los otros absorbidos del acto y viven en
+            # validar_viaja_en_el_acto(), que corre cuando ya estan todos
+            # marcados. Se parte a proposito: una guarda que necesita el acto
+            # entero no puede fingir que le basta un absorbido.
+            if etq == "condicion":
+                fallos.append("condicion %d de %s: VIAJA_EN_EL_ACTO NO vale para una "
+                              "condicion: la marca nombra EL PASO n del absorbido destino, y "
+                              "el destino de una condicion no lo escribe ninguna regla. "
+                              "Cuando haga falta se adjudica; aqui no se inventa" % (i, ab))
+                continue
+            if len(m) != 3:
+                fallos.append("paso %d de %s: VIAJA_EN_EL_ACTO mal formada %r: se escribe "
+                              "['VIAJA_EN_EL_ACTO', '<absorbido destino>', <n>]" % (i, ab, m))
+                continue
+            _, ab_destino, n_destino = m
+            if not isinstance(n_destino, int):
+                fallos.append("paso %d de %s: VIAJA_EN_EL_ACTO con numero de paso %r, que no "
+                              "es un entero" % (i, ab, n_destino))
+                continue
+            if "|" in str(ab_destino):
+                fallos.append("paso %d de %s: el absorbido destino %r lleva la barra vertical, "
+                              "que es el separador de la marca" % (i, ab, ab_destino))
+                continue
+            # GUARDA (iii), AUTO REFERENCIA: el mismo absorbido y el mismo paso.
+            if ab_destino == ab and n_destino == i:
+                fallos.append("paso %d de %s: VIAJA_EN_EL_ACTO AUTO REFERENTE, se apunta a si "
+                              "mismo (%s, %d). Una pieza no puede viajar por su propio paso"
+                              % (i, ab, ab, i))
+                continue
+            marcas[str(i)] = "VIAJA_EN_EL_ACTO:%s|%d" % (ab_destino, n_destino)
         else:
             fallos.append("%s %d: marca desconocida %r" % (etq, i, m))
     sobra = set(spec_marcas) - {str(i) for i in range(1, len(textos) + 1)}
@@ -154,6 +240,101 @@ def marcar(spec_marcas, textos, etq, ab, n_sup_pasos, n_sup_cond, pasos_sup, fal
         fallos.append("marcas de %s que sobran para el absorbido %s: %s"
                       % (etq, ab, sorted(sobra)))
     return marcas
+
+
+def viaja_a(marca):
+    """Devuelve (absorbido_destino, n_destino) si la marca es VIAJA_EN_EL_ACTO,
+    y None si no lo es. UNA sola forma de leer la marca, para que el generador y
+    el fundidor no puedan discrepar en silencio sobre como se parte."""
+    if not isinstance(marca, str) or not marca.startswith("VIAJA_EN_EL_ACTO:"):
+        return None
+    resto = marca[len("VIAJA_EN_EL_ACTO:"):]
+    if "|" not in resto:
+        return None
+    ab, num = resto.rsplit("|", 1)
+    if not num.isdigit():
+        return None
+    return ab, int(num)
+
+
+def validar_viaja_en_el_acto(marcas_p, absorbidos, pasos_por_ab, lineas, fallos):
+    """LAS GUARDAS (i), (ii) Y (v) DE LA QUINTA MARCA (vuelta 139, 2.a).
+
+    Corre cuando TODOS los absorbidos ya estan marcados, porque las tres miran
+    fuera del absorbido que lleva la marca:
+
+      (i)  el destino (absorbido, n) EXISTE en la misma operacion. ROJO
+           NOMBRANDO LOS DOS, el absorbido y el numero.
+      (ii) el destino LLEVA UNA MARCA QUE HACE VIAJAR LA PIEZA (APPEND o
+           INCISO). Si lleva CUBIERTO, CUBIERTO_COND u otro VIAJA_EN_EL_ACTO,
+           es ROJO con la letra "cadena que no llega a viajar", nombrando el
+           par. NO HAY CADENAS: el destino viaja directo o es rojo.
+      (v)  cada VIAJA_EN_EL_ACTO lleva su linea editorial en `lineas_de_viaje`,
+           indexada por el par ORIGEN "<absorbido>|<n>", no vacia, y que NOMBRE
+           AL ABSORBIDO DESTINO (la parte comprobable de "cual de las dos
+           redacciones viaja": viaja la del destino, que es la que lleva el
+           APPEND, fijado por el auditor en el encargo de la 139).
+
+    Devuelve la lista de (ab_origen, n_origen, ab_destino, n_destino), que es
+    una cifra COMPUTADA de las marcas y no un literal.
+    """
+    hallados = []
+    for ab in absorbidos:
+        for num, marca in sorted((marcas_p.get(ab) or {}).items(), key=lambda x: int(x[0])):
+            destino = viaja_a(marca)
+            if destino is None:
+                continue
+            ab_d, n_d = destino
+            i = int(num)
+            hallados.append((ab, i, ab_d, n_d))
+
+            # (i) EL DESTINO EXISTE, y el ROJO nombra los dos.
+            if ab_d not in absorbidos:
+                fallos.append(
+                    "paso %d de %s: VIAJA_EN_EL_ACTO al absorbido %r y el paso %d, y el "
+                    "absorbido %r NO esta en esta operacion (los absorbidos son: %s)"
+                    % (i, ab, ab_d, n_d, ab_d, ", ".join(absorbidos)))
+                continue
+            n_pasos_destino = len(pasos_por_ab.get(ab_d) or [])
+            if not (1 <= n_d <= n_pasos_destino):
+                fallos.append(
+                    "paso %d de %s: VIAJA_EN_EL_ACTO al absorbido %s y el paso %d, y %s "
+                    "tiene %d paso(s): ese paso NO existe"
+                    % (i, ab, ab_d, n_d, ab_d, n_pasos_destino))
+                continue
+
+            # (ii) EL DESTINO VIAJA DE VERDAD. Cero cadenas.
+            marca_destino = (marcas_p.get(ab_d) or {}).get(str(n_d))
+            if marca_destino is None:
+                fallos.append(
+                    "paso %d de %s: VIAJA_EN_EL_ACTO al par (%s, %d), que no tiene marca"
+                    % (i, ab, ab_d, n_d))
+                continue
+            if not (marca_destino == "APPEND" or marca_destino.startswith("INCISO:")):
+                fallos.append(
+                    "paso %d de %s: CADENA QUE NO LLEGA A VIAJAR. Apunta al par (%s, %d), "
+                    "cuya marca es %r, y solo APPEND o INCISO hacen viajar la pieza"
+                    % (i, ab, ab_d, n_d, marca_destino))
+
+            # (v) LA LINEA EDITORIAL, indexada por el par ORIGEN.
+            clave = "%s|%d" % (ab, i)
+            linea = (lineas or {}).get(clave)
+            if not isinstance(linea, str) or not linea.strip():
+                fallos.append(
+                    "paso %d de %s: VIAJA_EN_EL_ACTO SIN LINEA EDITORIAL. Falta la clave %r "
+                    "en lineas_de_viaje, que dice POR QUE los dos son el mismo gesto y CUAL "
+                    "de las dos redacciones viaja" % (i, ab, clave))
+            elif ab_d not in linea:
+                fallos.append(
+                    "paso %d de %s: la linea editorial de %r no NOMBRA al absorbido destino "
+                    "%s, asi que no dice cual de las dos redacciones viaja: %r"
+                    % (i, ab, clave, ab_d, linea))
+
+    sobran = sorted(set((lineas or {}).keys()) - {"%s|%d" % (a_, i_) for a_, i_, _, _ in hallados})
+    if sobran:
+        fallos.append("lineas_de_viaje trae claves que no corresponden a ningun "
+                      "VIAJA_EN_EL_ACTO: %s" % ", ".join(repr(x) for x in sobran))
+    return hallados
 
 
 def reparto_por_par(spec, clave, absorbidos, fallos, forzar_viejo=False):
@@ -372,14 +553,28 @@ def main():
                                         forzar_viejo=a.reparto_viejo)
     print("  FORMATO DEL REPARTO: pasos %s | condiciones %s" % (formato_p, formato_c))
     marcas_p, marcas_c = {}, {}
+    pasos_por_ab = {}
     for ab in absorbidos:
         pa = list(nodos[ab].get("pasos_accionables") or [])
         ca = list(nodos[ab].get("condiciones_activacion") or [])
+        pasos_por_ab[ab] = pa
         print("  EL ABSORBIDO %s: %d pasos y %d condiciones" % (ab, len(pa), len(ca)))
         marcas_p[ab] = marcar(spec_p.get(ab) or {}, pa, "paso", ab, len(pasos_sup),
                               len(cond_sup), pasos_sup, fallos, permite_cond=True)
         marcas_c[ab] = marcar(spec_c.get(ab) or {}, ca, "condicion", ab, len(pasos_sup),
                               len(cond_sup), pasos_sup, fallos, permite_cond=False)
+
+    # LAS GUARDAS (i), (ii) Y (v) DE LA QUINTA MARCA (vuelta 139, 2.a): miran el
+    # acto entero, asi que corren cuando ya estan todos los absorbidos marcados.
+    lineas_de_viaje = spec.get("lineas_de_viaje") or {}
+    viajes = validar_viaja_en_el_acto(marcas_p, absorbidos, pasos_por_ab,
+                                      lineas_de_viaje, fallos)
+    if viajes:
+        print()
+        print("  VIAJA_EN_EL_ACTO, %d pieza(s) que ya viajan por otro absorbido:" % len(viajes))
+        for ab_o, n_o, ab_d, n_d in viajes:
+            print("     el paso %d de %s viaja por el paso %d de %s" % (n_o, ab_o, n_d, ab_d))
+            print("        linea editorial: %s" % lineas_de_viaje.get("%s|%d" % (ab_o, n_o)))
 
     if a.reparto_viejo:
         print()
@@ -411,15 +606,26 @@ def main():
             print("     %s" % f)
         return 1
 
-    cuenta = {"APPEND": 0, "CUBIERTO": 0, "INCISO": 0}
+    # GUARDA (vi) DE LA QUINTA MARCA (vuelta 139, 2.a): el reparto impreso cuenta
+    # VIAJA_EN_EL_ACTO junto a las otras tres, y las CUATRO cifras salen de las
+    # marcas, ninguna es un literal.
+    cuenta = {"APPEND": 0, "CUBIERTO": 0, "INCISO": 0, "VIAJA_EN_EL_ACTO": 0}
     for d in (marcas_p, marcas_c):
         for por_ab in d.values():
             for m in por_ab.values():
-                k = "APPEND" if m == "APPEND" else ("INCISO" if m.startswith("INCISO") else "CUBIERTO")
+                if m == "APPEND":
+                    k = "APPEND"
+                elif m.startswith("INCISO"):
+                    k = "INCISO"
+                elif m.startswith("VIAJA_EN_EL_ACTO"):
+                    k = "VIAJA_EN_EL_ACTO"
+                else:
+                    k = "CUBIERTO"
                 cuenta[k] += 1
     print("  LA FICHA EN VERDE: cobertura exacta, guarda 1B, incisos extraidos y verbatim.")
-    print("  REPARTO: piezas %d (enteras %d, ya dichas %d, de INCISO %d)"
-          % (sum(cuenta.values()), cuenta["APPEND"], cuenta["CUBIERTO"], cuenta["INCISO"]))
+    print("  REPARTO: piezas %d (enteras %d, ya dichas %d, de INCISO %d, que ya viajan en el acto %d)"
+          % (sum(cuenta.values()), cuenta["APPEND"], cuenta["CUBIERTO"], cuenta["INCISO"],
+             cuenta["VIAJA_EN_EL_ACTO"]))
     print()
     print("  LAS PERDIDAS SELLADAS EN CAMPO PROPIO (contrato %s):" % CONTRATO_DE_PERDIDAS)
     print("     perdidas selladas: %d" % len(spec.get("perdidas") or []))
@@ -441,6 +647,22 @@ def main():
         "nota_del_reparto": spec["nota"],
         "perdidas": list(spec.get("perdidas") or []),
     }
+    # GUARDA (v) DE LA QUINTA MARCA (vuelta 139, 2.a): la linea editorial de cada
+    # VIAJA_EN_EL_ACTO va EN EL PLAN, copiada VERBATIM del contenido como el
+    # resto.
+    #
+    # POR QUE ESTE CAMPO NO VA SIEMPRE, al reves que `perdidas`, y se declara
+    # aqui en vez de dejarlo a la vista de quien lo lea: el CASO POSITIVO de
+    # esta operacion es que los tres planes sellados en las vueltas 63 y 64 se
+    # regeneren IDENTICOS con el generador de hoy, salvo la fecha. Un campo
+    # nuevo presente siempre, aunque vacio, MUEVE ESOS TRES FICHEROS y rompe el
+    # caso positivo: la marca nueva no puede mover el camino viejo. Y no hay
+    # ambiguedad que un campo vacio resolviera, porque cero viajes es cero
+    # lineas y la guarda (v) ya cae en ROJO si un viaje se queda sin la suya:
+    # el campo ausente aqui significa "ninguna pieza viaja por otra", medido,
+    # no "el plan no lo dice".
+    if lineas_de_viaje:
+        acto["lineas_de_viaje"] = dict(lineas_de_viaje)
     plan = {
         "operacion": a.id_op,
         # EL ROTULO NO REPITE EL ID: el ejecutor imprime los dos campos, y

@@ -51,6 +51,11 @@ CAER nombrando esa linea. La variable del veredicto es `distintas`, que sale de
 comparar dos listas de lineas leidas de dos ficheros; no hay ningun literal
 comparado consigo mismo.
 
+EL RENOMBRE DE LA 2.c (VUELTA 139): la variable `deriva` pasa a ser la funcion
+contar_distintas_por_posicion(), y a su lado se imprime el numstat de git del
+MISMO par de blobs (numstat_entre). La prueba de mutacion va en
+--mutar-cifras-de-deriva y muerde sobre LAS DOS CIFRAS COMPUTADAS.
+
 --mutar-fecha ES DE OTRA ESPECIE Y SE DECLARA COMO TAL: mide EL BORDE DE LA
 TOLERANCIA, no la mordida. Cambiar la linea de la fecha tiene que dar VERDE,
 porque la fecha es la unica diferencia tolerada; si diera ROJO, la tolerancia
@@ -63,6 +68,7 @@ USO:
   python scripts/loop/vuelta138_2a_caso_positivo_63_64.py --mutar-rotulo
   python scripts/loop/vuelta138_2a_caso_positivo_63_64.py --mutar-marca
   python scripts/loop/vuelta138_2a_caso_positivo_63_64.py --mutar-fecha
+  python scripts/loop/vuelta138_2a_caso_positivo_63_64.py --mutar-cifras-de-deriva
 """
 import argparse
 import io
@@ -147,6 +153,45 @@ def lineas_de_blob(ref, rel):
     return _normalizar(r.stdout).decode("utf-8").split("\n")
 
 
+def contar_distintas_por_posicion(a_lineas, b_lineas):
+    """EL RENOMBRE DE LA 2.c (vuelta 139, encargo del auditor sobre el acta de la
+    vuelta 138).
+
+    ESTA FUNCION SE LLAMABA `deriva` Y ERA UNA VARIABLE SUELTA, y el nombre
+    mentia sobre lo que mide. El auditor lo midio y lo declaro sin contarlo como
+    caida: el instrumento publicaba 14 para `PLAN_V63_OPM02PROG.json` donde git
+    dice 7 anadidas y 1 borrada (blob 0f692945 contra hoy). LAS DOS CIFRAS SON
+    CIERTAS Y MIDEN COSAS DISTINTAS: esto compara LINEA i CONTRA LINEA i, asi
+    que una insercion desplaza todo lo que sigue y CADA LINEA DESPLAZADA CUENTA
+    COMO DISTINTA aunque su texto no haya cambiado. No es un diff, y `deriva` lo
+    sugeria.
+
+    NO SE CAMBIA LO QUE MIDE, SE CAMBIA COMO SE LLAMA, y al lado se imprime el
+    numstat de git del MISMO par de blobs (ver numstat_entre), que si es un diff.
+    Una cifra que se explica al lado de la otra no puede volver a leerse como si
+    fuera la que no es.
+    """
+    total = 0
+    for i in range(max(len(a_lineas), len(b_lineas))):
+        x = a_lineas[i] if i < len(a_lineas) else None
+        y = b_lineas[i] if i < len(b_lineas) else None
+        if x != y:
+            total += 1
+    return total
+
+
+def numstat_entre(ref_a, ref_b, rel):
+    """El numstat de git del MISMO par de blobs que compara
+    contar_distintas_por_posicion (vuelta 139, 2.c). Devuelve (anadidas,
+    borradas). Si git no imprime fila para la ruta, no hubo cambio: (0, 0)."""
+    out = git(["diff", "--numstat", ref_a, ref_b, "--", rel])
+    for l in out.splitlines():
+        campos = l.split("\t")
+        if len(campos) == 3 and campos[0].isdigit() and campos[1].isdigit():
+            return int(campos[0]), int(campos[1])
+    return 0, 0
+
+
 def commits_que_lo_editan(rel, sello):
     """Los commits posteriores al sellado que TOCAN el plan. Se miden y se
     imprimen; una edicion posterior no invalida el caso, pero callarla si."""
@@ -191,6 +236,14 @@ def main():
     ap.add_argument("--mutar-rotulo", dest="mut", action="store_const", const="rotulo")
     ap.add_argument("--mutar-marca", dest="mut", action="store_const", const="marca")
     ap.add_argument("--mutar-fecha", dest="mut", action="store_const", const="fecha")
+    ap.add_argument("--mutar-cifras-de-deriva", dest="mut_cifras", action="store_true",
+                    help="PRUEBA DE MUTACION DE LA 2.c (vuelta 139), sobre las DOS cifras "
+                         "COMPUTADAS y no sobre ningun literal: inserta UNA linea en el "
+                         "fichero de hoy EN MEMORIA antes de contar. La cuenta POSICIONAL "
+                         "tiene que MOVERSE (prueba que sale de los datos), y el numstat de "
+                         "git tiene que quedarse IGUAL (prueba que las dos cifras miden cosas "
+                         "distintas, que es justo lo que el renombre declara). Ademas se corre "
+                         "el numstat contra si mismo (sello..sello), que tiene que dar 0 y 0.")
     ap.set_defaults(mut=None)
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
@@ -205,6 +258,7 @@ def main():
     print("=" * 78)
 
     veredictos = []
+    veredictos_cifras = []
     for nombre_plan, id_op, contenido, vuelta, absorbido in CASOS:
         rel = "docs/loop/%s" % nombre_plan
         sello = commit_que_anade(rel)
@@ -254,16 +308,38 @@ def main():
             continue
         b_lineas = lineas_de_blob(sello, rel)
 
-        # LA DERIVA DEL FICHERO DE HOY, medida e impresa, nunca callada.
+        # EL FICHERO DE HOY CONTRA SU SELLADO, medido e impreso, nunca callado.
+        # LAS DOS CIFRAS VAN JUNTAS Y CADA UNA CON SU NOMBRE (vuelta 139, 2.c).
         hoy_lineas = lineas(os.path.join(RAIZ, rel))
-        deriva = sum(1 for i in range(max(len(hoy_lineas), len(b_lineas)))
-                     if (hoy_lineas[i] if i < len(hoy_lineas) else None)
-                     != (b_lineas[i] if i < len(b_lineas) else None))
+        lineas_distintas_por_posicion = contar_distintas_por_posicion(hoy_lineas, b_lineas)
+        anadidas, borradas = numstat_entre(sello, "HEAD", rel)
         editores = commits_que_lo_editan(rel, sello)
-        print("  el fichero de HOY difiere del blob del sellado en %d linea(s); "
-              "commits posteriores que lo tocan: %s"
-              % (deriva, ", ".join("%s (%s)" % (h[:8], s[:58]) for h, s in editores)
-                 or "NINGUNO"))
+        print("  el fichero de HOY contra el blob del sellado, DOS cifras y no una:")
+        print("     lineas distintas POR POSICION  : %d  (comparacion posicional: una "
+              "insercion desplaza lo que sigue y todo lo desplazado cuenta)"
+              % lineas_distintas_por_posicion)
+        print("     numstat de git (%s..HEAD)  : %d anadida(s), %d borrada(s)"
+              % (sello[:8], anadidas, borradas))
+        print("     commits posteriores que lo tocan: %s"
+              % (", ".join("%s (%s)" % (h[:8], s[:58]) for h, s in editores) or "NINGUNO"))
+
+        if a.mut_cifras:
+            # PRUEBA DE MUTACION DE LA 2.c, sobre las DOS cifras COMPUTADAS.
+            mutadas = list(hoy_lineas)
+            mutadas.insert(1, ' "LINEA INSERTADA POR LA MUTACION DE LA 2.c",')
+            cuenta_mutada = contar_distintas_por_posicion(mutadas, b_lineas)
+            numstat_consigo = numstat_entre(sello, sello, rel)
+            print("     MUTACION 2.c, una linea insertada en el fichero de hoy EN MEMORIA:")
+            print("        cuenta POSICIONAL antes %d, despues %d, se movio: %s"
+                  % (lineas_distintas_por_posicion, cuenta_mutada,
+                     cuenta_mutada != lineas_distintas_por_posicion))
+            print("        numstat de git contra si mismo (%s..%s): %d anadida(s), "
+                  "%d borrada(s)" % (sello[:8], sello[:8], numstat_consigo[0],
+                                     numstat_consigo[1]))
+            mut_ok = (cuenta_mutada != lineas_distintas_por_posicion
+                      and numstat_consigo == (0, 0))
+            veredictos_cifras.append((nombre_plan, mut_ok, lineas_distintas_por_posicion,
+                                      cuenta_mutada, anadidas, borradas, numstat_consigo))
 
         if a.mut:
             a_lineas, que = mutar(a_lineas, a.mut)
@@ -306,6 +382,26 @@ def main():
     for nombre_plan, v in veredictos:
         print("  %-28s %s" % (nombre_plan, v))
     malos = [v for _, v in veredictos if v.startswith("ROJO")]
+
+    if a.mut_cifras:
+        print("")
+        print("  PRUEBA DE MUTACION DE LA 2.c, LAS DOS CIFRAS COMPUTADAS:")
+        for nom, ok, antes, despues, an, bo, consigo in veredictos_cifras:
+            print("     %-28s posicional %d -> %d | numstat %d/%d | consigo %d/%d | %s"
+                  % (nom, antes, despues, an, bo, consigo[0], consigo[1],
+                     "VERDE" if ok else "ROJO"))
+        if not veredictos_cifras or not all(ok for _, ok, *_ in veredictos_cifras):
+            print("ROJO DE LA MUTACION 2.c: alguna de las dos cifras no se movio como debe,")
+            print("o sea que no se computa de los datos que dice medir.")
+            print("FIN")
+            return 1
+        print("VERDE DE LA MUTACION 2.c: la cuenta POSICIONAL se mueve al insertar una")
+        print("linea (sale de los datos) y el numstat de git NO se mueve por esa insercion")
+        print("en memoria y da 0/0 contra si mismo (sale de git). Son dos cifras distintas")
+        print("y ahora cada una lleva su nombre.")
+        print("FIN")
+        return 0 if not malos else 1
+
     if a.mut == "fecha":
         # BORDE DE LA TOLERANCIA: tiene que dar VERDE, no caer.
         if malos:
