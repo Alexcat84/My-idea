@@ -1,0 +1,64 @@
+VERIFICACIONES DE LA FICHA DE OP-M-01-FUSION, COMPROBADAS SOBRE EL NODO ESCRITO
+La comparacion va SIN TILDES en los dos lados: el primer intento de esta misma
+prueba dio 0 en la verificacion [5] buscando 'vision general' contra un texto que
+dice 'vision general' con tilde. Era el fallo de la PRUEBA, no de la fusion, y se
+declara en vez de corregirse en silencio.
+==============================================================================
+CIFRA pasos del superviviente: 17 lineas
+CIFRA condiciones del superviviente: 6 lineas
+  PASO 1: Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+  PASO 2: Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+  PASO 3: Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+  PASO 4: Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+  PASO 5: Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+  PASO 6: Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+  PASO 7: En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+  PASO 8: No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+  PASO 9: Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+  PASO 10: Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+  PASO 11: Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+  PASO 12: Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+  PASO 13: Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+  PASO 14: Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+  PASO 15: Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+  PASO 16: Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+  PASO 17: Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+  COND 1: Cuando tienes demasiados proyectos o ideas activas y recursos insuficientes para todos
+  COND 2: Cuando no eliminas a tiempo los proyectos debiles y siguen consumiendo tu tiempo y dinero
+  COND 3: Cuando tus decisiones de continuar o parar un proyecto son inconsistentes o las tomas sin criterio claro
+  COND 4: Cuando estás diseñando o rediseñando tu propio sistema de etapas y decisiones (Stage-Gate).
+  COND 5: Si tus proyectos avanzan sin puntos de control claros
+  COND 6: Si los líderes de proyecto no saben qué se espera de ellos en cada etapa.
+
+--- verificacion [4] LA QUINTA SALIDA SE COMPRUEBA POR SU NOMBRE ---
+CIFRA pasos que nombran Conditional Go: 1 lineas
+   paso 4: Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+      contiene 'Go'             True
+      contiene 'Kill'           True
+      contiene 'Hold'           True
+      contiene 'Recycle'        True
+      contiene 'Conditional Go' True
+
+--- verificacion [5] EL PUENTE AL PORTAFOLIO SE COMPRUEBA LITERAL ---
+CIFRA pasos que conectan el gate con recursos y vision general: 1 lineas
+   paso 10: Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+
+--- LOS ENTREGABLES (linea 4 de preservar), UNA SOLA VEZ ---
+CIFRA pasos que hablan de entregables: 1 lineas
+   paso 15: Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+   con plantillas: True
+   LA PIEZA DE TRES DUENOS APARECE UNA SOLA VEZ: True
+
+--- verificacion [6] EL SUPERVIVIENTE CARGA LOS CUATRO ALIAS ---
+ids_alias: ['sistema_de_gates_go_kill', 'gates_go_kill_decision_points', 'requisitos_gates_con_dientes', 'estructura_gates', 'estructura_de_gates']
+   gates_go_kill_decision_points      en alias: True
+   requisitos_gates_con_dientes       en alias: True
+   estructura_gates                   en alias: True
+   estructura_de_gates                en alias: True
+
+--- LOS CUATRO ABSORBIDOS, DEPRECADOS Y CON SU TEXTO INTACTO ---
+   gates_go_kill_decision_points      deprecado: True | pasos: 4
+   requisitos_gates_con_dientes       deprecado: True | pasos: 6
+   estructura_gates                   deprecado: True | pasos: 4
+   estructura_de_gates                deprecado: True | pasos: 4
+EXITCODE: 0

@@ -1,0 +1,76 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### sistema_gates_go_kill  <==  gates_go_kill_decision_points
+  1. DESEMPATE POR CABLEADO
+     sistema_gates_go_kill                        pasos  6 | nombra 10 | LO NOMBRAN 10
+     gates_go_kill_decision_points                pasos  4 | nombra  7 | LO NOMBRAN  7
+     >>> gana sistema_gates_go_kill por 10 contra 7
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['gates_go_kill_decision_points', 'sistema_de_gates_go_kill']
+  3. ENTRADAS QUE SE REDIRIGEN
+     asignacion_recursos_en_gates                 nodos_previos     -> sistema_gates_go_kill
+     automatizacion_software_gestion_innovacion   nodos_siguientes  -> sistema_gates_go_kill
+     diamante_decision_tres_partes                nodos_siguientes  -> sistema_gates_go_kill
+     gates_sin_dientes_problema                   nodos_previos     -> sistema_gates_go_kill
+     mitos_stage_gate                             nodos_siguientes  -> sistema_gates_go_kill
+     revision_portafolio_periodica                nodos_siguientes  -> sistema_gates_go_kill
+     scorecards_criterios_gate                    nodos_previos     -> sistema_gates_go_kill
+
+### sistema_gates_go_kill  <==  requisitos_gates_con_dientes
+  1. DESEMPATE POR CABLEADO
+     sistema_gates_go_kill                        pasos  6 | nombra 10 | LO NOMBRAN 10
+     requisitos_gates_con_dientes                 pasos  6 | nombra  4 | LO NOMBRAN  5
+     >>> gana sistema_gates_go_kill por 10 contra 5
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['requisitos_gates_con_dientes', 'sistema_de_gates_go_kill']
+  3. ENTRADAS QUE SE REDIRIGEN
+     curva_atricion_optima                        nodos_siguientes  -> sistema_gates_go_kill
+     gates_sin_dientes_problema                   nodos_previos     -> sistema_gates_go_kill
+     gates_sin_dientes_problema                   nodos_siguientes  -> sistema_gates_go_kill
+     gestion_portafolio_formal                    nodos_previos     -> sistema_gates_go_kill
+     scorecards_criterios_gate                    nodos_previos     -> sistema_gates_go_kill
+
+### sistema_gates_go_kill  <==  estructura_gates
+  1. DESEMPATE POR CABLEADO
+     sistema_gates_go_kill                        pasos  6 | nombra 10 | LO NOMBRAN 10
+     estructura_gates                             pasos  4 | nombra  4 | LO NOMBRAN  4
+     >>> gana sistema_gates_go_kill por 10 contra 4
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['estructura_gates', 'sistema_de_gates_go_kill']
+  3. ENTRADAS QUE SE REDIRIGEN
+     etapa_discovery_ideacion                     nodos_previos     -> sistema_gates_go_kill
+     gate1_idea_screen                            nodos_previos     -> sistema_gates_go_kill
+     reglas_gestion_riesgo_gambling               nodos_siguientes  -> sistema_gates_go_kill
+     stage_gate_system                            nodos_siguientes  -> sistema_gates_go_kill
+
+### sistema_gates_go_kill  <==  estructura_de_gates
+  1. DESEMPATE POR CABLEADO
+     sistema_gates_go_kill                        pasos  6 | nombra 10 | LO NOMBRAN 10
+     estructura_de_gates                          pasos  4 | nombra  5 | LO NOMBRAN  5
+     >>> gana sistema_gates_go_kill por 10 contra 5
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['estructura_de_gates', 'sistema_de_gates_go_kill']
+  3. ENTRADAS QUE SE REDIRIGEN
+     asignacion_recursos_en_gates                 nodos_siguientes  -> sistema_gates_go_kill
+     diamante_decision_tres_partes                nodos_previos     -> sistema_gates_go_kill
+     gestion_portafolio_formal                    nodos_previos     -> sistema_gates_go_kill
+     mitos_stage_gate                             nodos_siguientes  -> sistema_gates_go_kill
+     tipos_criterios_gate                         nodos_previos     -> sistema_gates_go_kill
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     gates_sin_dientes_problema                   nodos_previos     -> sistema_gates_go_kill
+     gestion_portafolio_formal                    nodos_previos     -> sistema_gates_go_kill
+     mitos_stage_gate                             nodos_siguientes  -> sistema_gates_go_kill
+     scorecards_criterios_gate                    nodos_previos     -> sistema_gates_go_kill
+     tipos_criterios_gate                         nodos_previos     -> sistema_gates_go_kill
+     TOTAL NUEVAS: 5
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ninguna
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     NINGUNA: el acto queda sin aristas internas tras la fusion
+EXITCODE: 0

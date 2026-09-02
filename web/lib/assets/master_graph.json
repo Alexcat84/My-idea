@@ -6046,7 +6046,7 @@
       "entregable_esperado": "Sistema de seguimiento de recursos (hoja de cálculo o software) que muestre asignación de personas por proyecto y disponibilidad futura",
       "nodos_previos": [
         "scorecards_criterios_gate",
-        "gates_go_kill_decision_points",
+        "sistema_gates_go_kill",
         "gates_huecos_hollow_gates",
         "automatizacion_software_gestion_innovacion",
         "mitos_stage_gate",
@@ -6058,7 +6058,7 @@
         "identificacion_talento_design_thinking",
         "trabajo_en_lotes_pequenos",
         "identificar_pensadores_de_diseno_internos",
-        "estructura_de_gates"
+        "sistema_gates_go_kill"
       ],
       "condiciones_activacion": [
         "Cuando se aprueban proyectos sin verificar disponibilidad real de equipo",
@@ -7683,7 +7683,7 @@
       "nodos_siguientes": [
         "asignacion_recursos_en_gates",
         "gestion_visual_del_pipeline_de_desarrollo",
-        "gates_go_kill_decision_points",
+        "sistema_gates_go_kill",
         "gestion_alucinaciones_ia"
       ],
       "condiciones_activacion": [
@@ -27769,7 +27769,7 @@
         "decision_factory_mentality"
       ],
       "nodos_siguientes": [
-        "requisitos_gates_con_dientes",
+        "sistema_gates_go_kill",
         "mantener_puntaje_innovacion",
         "modelo_tradicional_introduccion_producto"
       ],
@@ -35562,11 +35562,11 @@
       ],
       "entregable_esperado": "Un método propio para revisar tus proyectos en tres pasos claros, con un resultado anotado en cada uno.",
       "nodos_previos": [
-        "estructura_de_gates"
+        "sistema_gates_go_kill"
       ],
       "nodos_siguientes": [
         "tipos_criterios_gate",
-        "gates_go_kill_decision_points",
+        "sistema_gates_go_kill",
         "second_wind_energia_mental"
       ],
       "condiciones_activacion": [
@@ -49657,7 +49657,8 @@
         "Si las reuniones de revisión de proyecto terminan con decisiones vagas o ambiguas.",
         "Si los líderes de proyecto no saben qué se espera de ellos en cada etapa."
       ],
-      "etiqueta_arbol": "Diseña Puertas de Decisión Claras"
+      "etiqueta_arbol": "Diseña Puertas de Decisión Claras",
+      "deprecado": true
     },
     "estructura_de_la_venta": {
       "node_id": "estructura_de_la_venta",
@@ -49803,7 +49804,8 @@
         "Si tus proyectos avanzan sin puntos de control claros",
         "Si necesitas una forma objetiva de priorizar entre varios proyectos"
       ],
-      "etiqueta_arbol": "Define Entregables y Criterios"
+      "etiqueta_arbol": "Define Entregables y Criterios",
+      "deprecado": true
     },
     "estructura_global_oficina_calidad": {
       "node_id": "estructura_global_oficina_calidad",
@@ -50292,7 +50294,7 @@
       ],
       "entregable_esperado": "Un documento de idea (idea template) de una página, listo para ser presentado en el Gate 1",
       "nodos_previos": [
-        "estructura_gates",
+        "sistema_gates_go_kill",
         "stage_gate_system"
       ],
       "nodos_siguientes": [
@@ -59011,7 +59013,7 @@
       "entregable_esperado": "Una decisión clara de seguir adelante o no, escrita, con la lista de requisitos revisada",
       "nodos_previos": [
         "etapa_discovery_ideacion",
-        "estructura_gates"
+        "sistema_gates_go_kill"
       ],
       "nodos_siguientes": [
         "etapa_scoping",
@@ -59186,7 +59188,8 @@
         "Cuando tienes más de un proyecto avanzando al mismo tiempo",
         "Cuando necesitas una forma clara de decidir si sigues invirtiendo en un proyecto o lo cierras"
       ],
-      "etiqueta_arbol": "Decide Seguir o Detener"
+      "etiqueta_arbol": "Decide Seguir o Detener",
+      "deprecado": true
     },
     "gates_huecos_hollow_gates": {
       "node_id": "gates_huecos_hollow_gates",
@@ -59229,12 +59232,11 @@
       ],
       "entregable_esperado": "Un diagnóstico escrito del estado actual de tus filtros, con la curva de supervivencia de proyectos y las razones que identificaste detrás de tu resistencia a matar proyectos",
       "nodos_previos": [
-        "gates_go_kill_decision_points",
-        "requisitos_gates_con_dientes"
+        "sistema_gates_go_kill"
       ],
       "nodos_siguientes": [
         "pruning_portafolio",
-        "requisitos_gates_con_dientes",
+        "sistema_gates_go_kill",
         "gates_huecos_hollow_gates"
       ],
       "condiciones_activacion": [
@@ -61129,8 +61131,7 @@
       "nodos_previos": [
         "asignacion_recursos_en_gates",
         "pruning_portafolio",
-        "requisitos_gates_con_dientes",
-        "estructura_de_gates"
+        "sistema_gates_go_kill"
       ],
       "nodos_siguientes": [
         "sistema_de_gates_go_kill",
@@ -78488,8 +78489,7 @@
         "checklist_sistema_stage_gate_primera_clase",
         "analisis_flujo_de_valor",
         "backlog_evolutivo_y_cronograma_flexible",
-        "estructura_de_gates",
-        "gates_go_kill_decision_points",
+        "sistema_gates_go_kill",
         "gestion_portafolio_dos_niveles",
         "modelo_hibrido_agile_stage_gate",
         "asignacion_recursos_en_gates",
@@ -99726,7 +99726,7 @@
       ],
       "nodos_siguientes": [
         "stage_gate_system",
-        "estructura_gates",
+        "sistema_gates_go_kill",
         "cadena_suministro_respuesta_desastres",
         "fundamentos_gestion_riesgo"
       ],
@@ -101006,7 +101006,8 @@
         "Cuando estás diseñando o rediseñando tu propio sistema de etapas y decisiones (Stage-Gate).",
         "Si tus puntos de decisión actuales no producen decisiones reales de seguir o cancelar."
       ],
-      "etiqueta_arbol": "Haz Efectivas tus Puertas de Decisión"
+      "etiqueta_arbol": "Haz Efectivas tus Puertas de Decisión",
+      "deprecado": true
     },
     "requisitos_lider_de_rrhh": {
       "node_id": "requisitos_lider_de_rrhh",
@@ -102790,7 +102791,7 @@
         "gestion_portafolio_dos_niveles"
       ],
       "nodos_siguientes": [
-        "gates_go_kill_decision_points",
+        "sistema_gates_go_kill",
         "red_flags_proyectos_en_problemas",
         "post_launch_review"
       ],
@@ -105416,8 +105417,7 @@
       ],
       "entregable_esperado": "Scorecard estandarizado y aplicado consistentemente en cada gate, con puntuaciones documentadas y criterios de corte definidos",
       "nodos_previos": [
-        "requisitos_gates_con_dientes",
-        "gates_go_kill_decision_points"
+        "sistema_gates_go_kill"
       ],
       "nodos_siguientes": [
         "asignacion_recursos_en_gates",
@@ -109468,9 +109468,20 @@
         "Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)",
         "Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa",
         "Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad",
-        "Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle",
+        "Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go",
         "Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes",
-        "Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa"
+        "Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa",
+        "En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto",
+        "No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir",
+        "Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.",
+        "Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.",
+        "Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.",
+        "Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables",
+        "Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa",
+        "Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella",
+        "Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).",
+        "Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.",
+        "Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate."
       ],
       "entregable_esperado": "Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control",
       "nodos_previos": [
@@ -109478,7 +109489,16 @@
         "diseno_como_plataforma_expansiva",
         "portafolio_formal_management",
         "estrategia_de_innovacion_arenas",
-        "gestion_portafolio_formal"
+        "gestion_portafolio_formal",
+        "asignacion_recursos_en_gates",
+        "automatizacion_software_gestion_innovacion",
+        "curva_atricion_optima",
+        "diamante_decision_tres_partes",
+        "gates_sin_dientes_problema",
+        "mitos_stage_gate",
+        "reglas_gestion_riesgo_gambling",
+        "revision_portafolio_periodica",
+        "stage_gate_system"
       ],
       "nodos_siguientes": [
         "gestion_riesgo_incremental",
@@ -109487,21 +109507,55 @@
         "scorecard_de_seleccion_de_proyectos",
         "portfolio_management",
         "reglas_gestion_riesgo_gambling",
-        "tipos_criterios_gate"
+        "tipos_criterios_gate",
+        "asignacion_recursos_en_gates",
+        "diamante_decision_tres_partes",
+        "etapa_discovery_ideacion",
+        "gate1_idea_screen",
+        "gates_sin_dientes_problema",
+        "gestion_portafolio_formal",
+        "scorecards_criterios_gate"
       ],
       "condiciones_activacion": [
         "Cuando tienes demasiados proyectos o ideas activas y recursos insuficientes para todos",
         "Cuando no eliminas a tiempo los proyectos debiles y siguen consumiendo tu tiempo y dinero",
-        "Cuando tus decisiones de continuar o parar un proyecto son inconsistentes o las tomas sin criterio claro"
+        "Cuando tus decisiones de continuar o parar un proyecto son inconsistentes o las tomas sin criterio claro",
+        "Cuando estás diseñando o rediseñando tu propio sistema de etapas y decisiones (Stage-Gate).",
+        "Si tus proyectos avanzan sin puntos de control claros",
+        "Si los líderes de proyecto no saben qué se espera de ellos en cada etapa."
       ],
       "etiqueta_arbol": "Filtra Proyectos con Decisiones Go/Kill",
       "ids_alias": [
-        "sistema_de_gates_go_kill"
+        "sistema_de_gates_go_kill",
+        "gates_go_kill_decision_points",
+        "requisitos_gates_con_dientes",
+        "estructura_gates",
+        "estructura_de_gates"
       ],
       "merged_originals": [
         {
           "node_id": "sistema_de_gates_go_kill",
           "titulo": "Sistema de Compuertas (Gates) con Criterios Go/Kill",
+          "fuente": "Winning at New Products - Robert G. Cooper"
+        },
+        {
+          "node_id": "gates_go_kill_decision_points",
+          "titulo": "Puntos de decisión: seguir o parar (gates)",
+          "fuente": "Winning at New Products - Robert G. Cooper"
+        },
+        {
+          "node_id": "requisitos_gates_con_dientes",
+          "titulo": "Requisitos para que tus Puntos de Decisión (Gates) Tengan Fuerza",
+          "fuente": "Winning at New Products - Robert G. Cooper"
+        },
+        {
+          "node_id": "estructura_gates",
+          "titulo": "Estructura de las Puertas de Decisión (Gates)",
+          "fuente": "Winning at New Products - Robert G. Cooper"
+        },
+        {
+          "node_id": "estructura_de_gates",
+          "titulo": "Estructura de un Gate Efectivo (Entradas, Criterios, Salidas)",
           "fuente": "Winning at New Products - Robert G. Cooper"
         }
       ]
@@ -111259,7 +111313,7 @@
         "modelo_tradicional_introduccion_producto",
         "estrategia_innovacion_producto",
         "calidad_de_ejecucion_proceso_innovacion",
-        "estructura_gates",
+        "sistema_gates_go_kill",
         "etapa_discovery_ideacion",
         "tipos_criterios_gate",
         "stage_gate_tipos_proyectos"
@@ -114444,9 +114498,8 @@
       "entregable_esperado": "Un set documentado de criterios must-meet, go/kill y should-meet (scorecard) por cada gate del proceso.",
       "nodos_previos": [
         "diamante_decision_tres_partes",
-        "estructura_de_gates",
-        "stage_gate_system",
-        "sistema_gates_go_kill"
+        "sistema_gates_go_kill",
+        "stage_gate_system"
       ],
       "nodos_siguientes": [
         "seleccion_gatekeepers",
@@ -128499,7 +128552,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 270,
+    "nodos_sin_enlaces_entrantes": 272,
     "enlaces_rotos_en_grafo": 0
   }
 }

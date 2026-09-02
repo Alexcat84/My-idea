@@ -1,0 +1,73 @@
+==============================================================================
+CASO POSITIVO DE LOS INSTRUMENTOS DE FUSION DE MESA
+  sujeto: OP-M-01-FUSION
+  el fundidor se llama SIEMPRE en modo SIMULAR: ni en el peor caso toca un nodo
+==============================================================================
+
+  --- GUARDA DE SUJETO VIVO, la que el ancestro no tenia ---
+     superviviente de la ficha: sistema_gates_go_kill
+     absorbidos de la ficha   : gates_go_kill_decision_points, requisitos_gates_con_dientes, estructura_gates, estructura_de_gates
+     sistema_gates_go_kill                  VIVO
+     gates_go_kill_decision_points          VIVO
+     requisitos_gates_con_dientes           VIVO
+     estructura_gates                       VIVO
+     estructura_de_gates                    VIVO
+     el superviviente de hoy: 6 pasos y 3 condiciones
+     el absorbido gates_go_kill_decision_points 4 pasos y 2 condiciones
+     el absorbido requisitos_gates_con_dientes 6 pasos y 2 condiciones
+     el absorbido estructura_gates           4 pasos y 2 condiciones
+     el absorbido estructura_de_gates        4 pasos y 2 condiciones
+     las marcas de mentira se mutan sobre el PRIMER absorbido: gates_go_kill_decision_points
+
+  1. SUPERVIVIENTE que la ficha no escribe
+     exit=1 | escribio plan: NO
+     el contenido dice superviviente 'gates_go_kill_decision_points' y la ficha dice 'sistema_gates_go_kill'
+     VEREDICTO: LA GUARDA MUERDE
+
+  2. ABSORBIDO que la ficha no escribe
+     exit=1 | escribio plan: NO
+     el contenido dice absorbidos ['sistema_gates_go_kill'] y la ficha dice ['gates_go_kill_decision_points', 'requisitos_gates_con_dientes', 'estructura_g
+     VEREDICTO: LA GUARDA MUERDE
+
+  3. COBERTURA por OLVIDO: a un paso de gates_go_kill_decision_points le falta la marca
+     exit=1 | escribio plan: NO
+     el paso 4 de gates_go_kill_decision_points no tiene marca: FALTA EL PAR (gates_go_kill_decision_points, 4)
+     VEREDICTO: LA GUARDA MUERDE
+
+  4. COBERTURA por SOBRANTE: marca de un paso de gates_go_kill_decision_points que no existe
+     exit=1 | escribio plan: NO
+     marcas de paso que sobran para el absorbido gates_go_kill_decision_points: ['8']
+     VEREDICTO: LA GUARDA MUERDE
+
+  5. INCISO que NO es trozo verbatim del paso que muere
+     exit=1 | escribio plan: NO
+     paso 1 de gates_go_kill_decision_points: INCISO 'una parafrasis que no esta en el paso', el trozo no casa dentro del paso ni comparando sin tildes
+     VEREDICTO: LA GUARDA MUERDE
+
+  6. PERDIDA con especie desconocida
+     exit=1 | escribio plan: NO
+     especie de perdida desconocida 'DE COLOR'. Las escritas son: DE PARAMETRO DE PASO, DE CONDICIONES, DE NOMBRE
+     VEREDICTO: LA GUARDA MUERDE
+
+  7. el plan manda absorber un nodo YA DEPRECADO (guarda 1)
+     exit=1
+     guarda 1, miembros vivos y nomina completa: ROJO ['6s_lugar_trabajo YA esta deprecado']
+     [ROJO] acto 1: 6s_lugar_trabajo YA esta deprecado
+     VEREDICTO: LA GUARDA MUERDE
+
+  8. el plan manda absorber la SEMILLA actividades_clave (guarda 1B)
+     exit=1
+     [ROJO] acto 1: actividades_clave es SEMILLA DE ENTRADA y no se puede absorber
+     VEREDICTO: LA GUARDA MUERDE
+
+  9. plan SIN campo operacion: el titulo lo DICE en vez de suponer OP-U-01
+     exit=1
+     SIN OPERACION DECLARADA EN EL PLAN . PLAN DE MENTIRA . MODO SIMULAR
+     VEREDICTO: LA GUARDA MUERDE
+
+  ficheros de mentira borrados: 9
+
+==============================================================================
+RESULTADO: LAS NUEVE MUERDEN, sobre el sujeto OP-M-01-FUSION
+==============================================================================
+EXITCODE: 0

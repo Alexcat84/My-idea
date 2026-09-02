@@ -1,0 +1,137 @@
+==============================================================================
+OP-M-01-FUSION . LA CAMARILLA DE CINCO, DE COOPER: sistema_gates_go_kill absorbe a los CUATRO, gates_go_kill_decision_points, requisitos_gates_con_dientes, estructura_gates y estructura_de_gates. Es la SEGUNDA fusion de la fase 06 y la PRIMERA de la campana con CUATRO absorbidos. ES LA UNICA FUSION DEL PLAN CON SU ACTO LEIDO ENTERO: diez pares posibles, DIEZ leidos, LOS DIEZ EN A, y por eso su ficha dice P.5 SATISFECHA POR CONSTRUCCION y no como condicion . MODO SIMULAR
+plan: docs/loop/PLAN_V139_OPM01FUSION.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3183 vivos, 670 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive sistema_gates_go_kill . absorbe gates_go_kill_decision_points, requisitos_gates_con_dientes, estructura_gates, estructura_de_gates
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 17 (anadidos 11) | condiciones 3 -> 6 (anadidas 3)
+  INCISOS ADOSADOS: 1
+     del paso 3 de estructura_de_gates al PASO 4 del superviviente
+        inciso VERBATIM: 'Conditional Go'
+        nexo (lo unico de cosecha propia): ', y una quinta salida, '
+        paso resultante: Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+  alias del superviviente: ['sistema_de_gates_go_kill', 'gates_go_kill_decision_points', 'requisitos_gates_con_dientes', 'estructura_gates', 'estructura_de_gates']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 21
+   asignacion_recursos_en_gates                         nodos_previos     gates_go_kill_decision_points -> sistema_gates_go_kill
+   asignacion_recursos_en_gates                         nodos_siguientes  estructura_de_gates -> sistema_gates_go_kill
+   automatizacion_software_gestion_innovacion           nodos_siguientes  gates_go_kill_decision_points -> sistema_gates_go_kill
+   curva_atricion_optima                                nodos_siguientes  requisitos_gates_con_dientes -> sistema_gates_go_kill
+   diamante_decision_tres_partes                        nodos_previos     estructura_de_gates -> sistema_gates_go_kill
+   diamante_decision_tres_partes                        nodos_siguientes  gates_go_kill_decision_points -> sistema_gates_go_kill
+   etapa_discovery_ideacion                             nodos_previos     estructura_gates -> sistema_gates_go_kill
+   gate1_idea_screen                                    nodos_previos     estructura_gates -> sistema_gates_go_kill
+   gates_sin_dientes_problema                           nodos_previos     gates_go_kill_decision_points -> sistema_gates_go_kill
+   gates_sin_dientes_problema                           nodos_previos     requisitos_gates_con_dientes -> sistema_gates_go_kill
+   gates_sin_dientes_problema                           nodos_siguientes  requisitos_gates_con_dientes -> sistema_gates_go_kill
+   gestion_portafolio_formal                            nodos_previos     estructura_de_gates -> sistema_gates_go_kill
+   gestion_portafolio_formal                            nodos_previos     requisitos_gates_con_dientes -> sistema_gates_go_kill
+   mitos_stage_gate                                     nodos_siguientes  estructura_de_gates -> sistema_gates_go_kill
+   mitos_stage_gate                                     nodos_siguientes  gates_go_kill_decision_points -> sistema_gates_go_kill
+   reglas_gestion_riesgo_gambling                       nodos_siguientes  estructura_gates -> sistema_gates_go_kill
+   revision_portafolio_periodica                        nodos_siguientes  gates_go_kill_decision_points -> sistema_gates_go_kill
+   scorecards_criterios_gate                            nodos_previos     gates_go_kill_decision_points -> sistema_gates_go_kill
+   scorecards_criterios_gate                            nodos_previos     requisitos_gates_con_dientes -> sistema_gates_go_kill
+   stage_gate_system                                    nodos_siguientes  estructura_gates -> sistema_gates_go_kill
+   tipos_criterios_gate                                 nodos_previos     estructura_de_gates -> sistema_gates_go_kill
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 3
+   portafolio_formal_management                         nodos_previos     estructura_de_gates (registro historico)
+   sistema_gestion_recursos_en_gates                    nodos_siguientes  estructura_de_gates (registro historico)
+   sistema_stage_gate                                   nodos_siguientes  estructura_gates (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 5
+   gates_sin_dientes_problema                           nodos_previos
+   gestion_portafolio_formal                            nodos_previos
+   mitos_stage_gate                                     nodos_siguientes
+   scorecards_criterios_gate                            nodos_previos
+   tipos_criterios_gate                                 nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 874   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 873   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 1, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 5 de 5
+guarda D, los 4 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (26 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 gates_go_kill_decision_points                paso         1  ya lo dice el PASO 1 del superviviente
+        Define con claridad cada punto de decisión en tu camino de la idea al lanzamiento
+    1 gates_go_kill_decision_points                paso         2  PASO 7 del superviviente
+        En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+    1 gates_go_kill_decision_points                paso         3  PASO 8 del superviviente
+        No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+    1 gates_go_kill_decision_points                paso         4  ya lo dice el PASO 6 del superviviente
+        Anota qué decidiste: seguir, parar, dejarlo en espera, replantearlo, o seguir pero con condiciones
+    1 gates_go_kill_decision_points                condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando tienes más de un proyecto avanzando al mismo tiempo
+    1 gates_go_kill_decision_points                condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Cuando necesitas una forma clara de decidir si sigues invirtiendo en un proyecto o lo cierras
+    1 requisitos_gates_con_dientes                 paso         1  ya lo dice el PASO 1 del superviviente
+        Define cada punto de decisión (gate) como un momento real donde decides seguir o cancelar (Go/Kill).
+    1 requisitos_gates_con_dientes                 paso         2  VIAJA EN ESTE MISMO ACTO por el PASO 1 de estructura_de_gates (P.13, VIVE DENTRO: no se injerta dos veces)
+        Pide entregables claros y estandarizados que debes presentar en cada punto de decisión.
+    1 requisitos_gates_con_dientes                 paso         3  ya lo dice el PASO 2 del superviviente
+        Establece criterios de avance visibles y documentados, una tabla de criterios, para todos los que participan en la decisión.
+    1 requisitos_gates_con_dientes                 paso         4  PASO 9 del superviviente
+        Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+    1 requisitos_gates_con_dientes                 paso         5  PASO 10 del superviviente
+        Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+    1 requisitos_gates_con_dientes                 paso         6  PASO 11 del superviviente
+        Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+    1 requisitos_gates_con_dientes                 condicion    1  CONDICION 4 del superviviente
+        Cuando estás diseñando o rediseñando tu propio sistema de etapas y decisiones (Stage-Gate).
+    1 requisitos_gates_con_dientes                 condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Si tus puntos de decisión actuales no producen decisiones reales de seguir o cancelar.
+    1 estructura_gates                             paso         1  VIAJA EN ESTE MISMO ACTO por el PASO 1 de estructura_de_gates (P.13, VIVE DENTRO: no se injerta dos veces)
+        Define una lista clara de lo que debes entregar en cada punto de decisión de tu proceso
+    1 estructura_gates                             paso         2  PASO 12 del superviviente
+        Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+    1 estructura_gates                             paso         3  PASO 13 del superviviente
+        Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+    1 estructura_gates                             paso         4  PASO 14 del superviviente
+        Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete e
+    1 estructura_gates                             condicion    1  CONDICION 5 del superviviente
+        Si tus proyectos avanzan sin puntos de control claros
+    1 estructura_gates                             condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si necesitas una forma objetiva de priorizar entre varios proyectos
+    1 estructura_de_gates                          paso         1  PASO 15 del superviviente
+        Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+    1 estructura_de_gates                          paso         2  PASO 16 del superviviente
+        Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+    1 estructura_de_gates                          paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir explícitamente las posibles salidas de la reunión (Go/Kill/Hold/Recycle/Conditional Go).
+    1 estructura_de_gates                          paso         4  PASO 17 del superviviente
+        Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+    1 estructura_de_gates                          condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Si las reuniones de revisión de proyecto terminan con decisiones vagas o ambiguas.
+    1 estructura_de_gates                          condicion    2  CONDICION 6 del superviviente
+        Si los líderes de proyecto no saben qué se espera de ellos en cada etapa.
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 1
+  nodos implicados    : 5
+  nodos que MUEREN    : 4
+  piezas repartidas   : 26 (14 viajan enteras, 9 ya estaban dichas, 2 ya viajan en el acto)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.
+EXITCODE: 0

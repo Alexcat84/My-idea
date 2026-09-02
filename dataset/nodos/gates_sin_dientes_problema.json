@@ -13,12 +13,11 @@
   ],
   "entregable_esperado": "Un diagnóstico escrito del estado actual de tus filtros, con la curva de supervivencia de proyectos y las razones que identificaste detrás de tu resistencia a matar proyectos",
   "nodos_previos": [
-    "gates_go_kill_decision_points",
-    "requisitos_gates_con_dientes"
+    "sistema_gates_go_kill"
   ],
   "nodos_siguientes": [
     "pruning_portafolio",
-    "requisitos_gates_con_dientes",
+    "sistema_gates_go_kill",
     "gates_huecos_hollow_gates"
   ],
   "condiciones_activacion": [

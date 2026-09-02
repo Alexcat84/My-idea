@@ -1,0 +1,41 @@
+==============================================================================
+GENERADOR DEL PLAN DE LA FUSION DE MESA OP-M-01-FUSION (vuelta 139)
+  ficha leida de: docs/plan/OPERACIONES.jsonl
+  tipo: FUSION DE MESA: LA CAMARILLA DE CINCO | estado: LISTA | fecha de corte: 2026-08-12
+==============================================================================
+
+  LA FICHA MANDA, y esto es lo que dice:
+     nodos         : sistema_gates_go_kill, gates_go_kill_decision_points, requisitos_gates_con_dientes, estructura_gates, estructura_de_gates
+     superviviente : sistema_gates_go_kill
+     eliminar      : gates_go_kill_decision_points, requisitos_gates_con_dientes, estructura_gates, estructura_de_gates
+     guarda 1B, ningun absorbido es puerta: OK
+     los 5 miembros vivos y presentes: OK
+
+  EL SUPERVIVIENTE DE HOY: 6 pasos y 3 condiciones
+  FORMATO DEL REPARTO: pasos POR PAR (absorbido, numero de paso) | condiciones POR PAR (absorbido, numero de paso)
+  EL ABSORBIDO gates_go_kill_decision_points: 4 pasos y 2 condiciones
+  EL ABSORBIDO requisitos_gates_con_dientes: 6 pasos y 2 condiciones
+  EL ABSORBIDO estructura_gates: 4 pasos y 2 condiciones
+  EL ABSORBIDO estructura_de_gates: 4 pasos y 2 condiciones
+  INCISO al paso 4 del superviviente
+      trozo pedido en ASCII  : 'Conditional Go'
+      trozo EXTRAIDO del nodo: 'Conditional Go'
+      paso resultante        : Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+
+  VIAJA_EN_EL_ACTO, 2 pieza(s) que ya viajan por otro absorbido:
+     el paso 2 de requisitos_gates_con_dientes viaja por el paso 1 de estructura_de_gates
+        linea editorial: MISMO GESTO: pedir entregables claros y estandarizados en cada punto de decision. El paso 2 de requisitos_gates_con_dientes (pide entregables claros y estandarizados que debes presentar en cada punto de decision) y el paso 1 de estructura_de_gates (definir de antemano una lista estandar de entregables requeridos para cada gate, ej. plantillas de business case) mandan lo mismo, y es la linea 4 de preservar de la ficha: LOS ENTREGABLES CLAROS Y ESTANDARIZADOS con sus plantillas, que el superviviente NO tiene y los tres que mueren si. VIAJA LA REDACCION DE estructura_de_gates, que es la que lleva el APPEND, Y EL MOTIVO NO ES EL ORDEN SINO EL TEXTO: es la UNICA de las tres que trae LAS PLANTILLAS, y la linea de preservar las exige con esas palabras (con sus plantillas). Si viajara esta, las plantillas se perderian y la ficha quedaria incumplida. Esta redaccion no anade ningun matiz que la de estructura_de_gates no traiga: estandarizados y lista estandar dicen lo mismo, y en cada punto de decision y para cada gate tambien.
+     el paso 1 de estructura_gates viaja por el paso 1 de estructura_de_gates
+        linea editorial: MISMO GESTO: definir la lista de lo que hay que entregar en cada punto de decision. El paso 1 de estructura_gates (define una lista clara de lo que debes entregar en cada punto de decision de tu proceso) y el paso 1 de estructura_de_gates son el mismo gesto, y los dos caen bajo la linea 4 de preservar. VIAJA LA REDACCION DE estructura_de_gates, que es la que lleva el APPEND, porque es la unica de las tres que nombra LAS PLANTILLAS que esa linea de preservar exige. Esta redaccion es la mas pobre de las tres (dice lista clara donde la otra dice lista estandar definida de antemano) y no trae ningun matiz propio: no es una pieza propia, es la misma pieza.
+
+  LA FICHA EN VERDE: cobertura exacta, guarda 1B, incisos extraidos y verbatim.
+  REPARTO: piezas 26 (enteras 14, ya dichas 9, de INCISO 1, que ya viajan en el acto 2)
+
+  LAS PERDIDAS SELLADAS EN CAMPO PROPIO (contrato CAMPO PROPIO v1):
+     perdidas selladas: 0
+        NINGUNA, y la lista vacia es una DECLARACION de cero perdidas.
+
+  plan escrito: docs\loop\PLAN_V139_OPM01FUSION.json
+
+FIN
+EXITCODE: 0

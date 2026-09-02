@@ -150,14 +150,29 @@ def main():
     print("  --- GUARDA DE SUJETO VIVO, la que el ancestro no tenia ---")
     print("     superviviente de la ficha: %s" % sup)
     print("     absorbidos de la ficha   : %s" % ", ".join(absorbidos))
-    if not sup or len(absorbidos) != 1:
-        print("     ROJO: el sujeto tiene que ser un PAR con superviviente escrito. PARADA.")
+    if not sup or not absorbidos:
+        print("     ROJO: el sujeto tiene que traer superviviente y al menos un absorbido. PARADA.")
         return 1
+    # EL SUJETO PUEDE TENER MAS DE UN ABSORBIDO (vuelta 139, TAREA 3).
+    # CORRECCION DECLARADA, y el texto viejo de esta guarda era, VERBATIM:
+    #     if not sup or len(absorbidos) != 1:
+    #         print("     ROJO: el sujeto tiene que ser un PAR con superviviente escrito. PARADA.")
+    # NO ERA UNA REGLA, ERA UN LIMITE DEL INSTRUMENTO: la fase 06 abre con
+    # OP-M-01-FUSION, que tiene CUATRO absorbidos, y con la guarda vieja el caso
+    # positivo de esa fusion no podia correr y habria quedado SIN CASO. Es la
+    # misma figura que la 2.a de la vuelta 138 encontro en el generador (el
+    # camino de dos o mas absorbidos no habia corrido nunca) y se repara igual:
+    # el reparto de mentira se arma POR PAR, que es el unico formato que el
+    # generador acepta con dos o mas. NINGUNA PRUEBA CAMBIA DE SENTIDO y no se
+    # anade ni se quita ninguna: siguen siendo las mismas NUEVE, y las que mutan
+    # una marca mutan la del PRIMER absorbido de la ficha, nombrado en la salida.
     ab = absorbidos[0]
-    n_sup, n_ab = nodo(sup), nodo(ab)
-    muertos = [x for x, d in ((sup, n_sup), (ab, n_ab))
+    n_sup = nodo(sup)
+    nodos_ab = [(x, nodo(x)) for x in absorbidos]
+    n_ab = dict(nodos_ab)[ab]
+    muertos = [x for x, d in ([(sup, n_sup)] + nodos_ab)
                if d is None or d.get("deprecado") or d.get("deprecated")]
-    for x, d in ((sup, n_sup), (ab, n_ab)):
+    for x, d in ([(sup, n_sup)] + nodos_ab):
         print("     %-38s %s" % (x, "AUSENTE" if d is None else
                                  ("DEPRECADO" if (d.get("deprecado") or d.get("deprecated"))
                                   else "VIVO")))
@@ -173,26 +188,39 @@ def main():
 
     pasos_sup = list(n_sup.get("pasos_accionables") or [])
     cond_sup = list(n_sup.get("condiciones_activacion") or [])
-    pasos_ab = list(n_ab.get("pasos_accionables") or [])
-    cond_ab = list(n_ab.get("condiciones_activacion") or [])
+    pasos_por_ab = {x: list(d.get("pasos_accionables") or []) for x, d in nodos_ab}
+    cond_por_ab = {x: list(d.get("condiciones_activacion") or []) for x, d in nodos_ab}
+    pasos_ab = pasos_por_ab[ab]
+    cond_ab = cond_por_ab[ab]
     print("     el superviviente de hoy: %d pasos y %d condiciones"
           % (len(pasos_sup), len(cond_sup)))
-    print("     el absorbido de hoy    : %d pasos y %d condiciones"
-          % (len(pasos_ab), len(cond_ab)))
-    if not pasos_sup or not pasos_ab or not cond_sup or not cond_ab:
+    for x, _d in nodos_ab:
+        print("     el absorbido %-26s %d pasos y %d condiciones"
+              % (x, len(pasos_por_ab[x]), len(cond_por_ab[x])))
+    print("     las marcas de mentira se mutan sobre el PRIMER absorbido: %s" % ab)
+    vacios = [x for x, _d in nodos_ab if not pasos_por_ab[x] or not cond_por_ab[x]]
+    if not pasos_sup or not cond_sup or vacios:
         print()
-        print("     ROJO: el par no tiene pasos y condiciones en los dos lados, y las")
-        print("     nueve pruebas necesitan las cuatro listas. PARADA.")
+        print("     ROJO: el superviviente o algun absorbido (%s) no tiene pasos y"
+              % (", ".join(vacios) or "ninguno"))
+        print("     condiciones, y las nueve pruebas necesitan las listas de los dos")
+        print("     lados. PARADA.")
         return 1
 
     # LAS MARCAS DE MENTIRA SE ARMAN DE LA FORMA REAL DE LOS NODOS.
     BASE = {
         "titulo": "SUJETO DEL CASO POSITIVO, NO SE EJECUTA NUNCA",
         "superviviente": sup,
-        "absorbidos": [ab],
+        "absorbidos": list(absorbidos),
         "motivo": "motivo de mentira, este plan no se sella jamas",
-        "pasos": {str(i): ["CUBIERTO", 1] for i in range(1, len(pasos_ab) + 1)},
-        "condiciones": {str(i): ["CUBIERTO", 1] for i in range(1, len(cond_ab) + 1)},
+        # EL REPARTO DE MENTIRA VA POR PAR (vuelta 139): con un solo absorbido
+        # da exactamente lo mismo que el dict plano de antes, porque el
+        # generador acepta los dos formatos con uno; con dos o mas es el UNICO
+        # que el generador acepta desde la 2.a de la vuelta 138.
+        "pasos": {x: {str(i): ["CUBIERTO", 1] for i in range(1, len(pasos_por_ab[x]) + 1)}
+                  for x, _d in nodos_ab},
+        "condiciones": {x: {str(i): ["CUBIERTO", 1] for i in range(1, len(cond_por_ab[x]) + 1)}
+                        for x, _d in nodos_ab},
         "nota": "nota de mentira",
         "perdidas": [],
     }
@@ -206,17 +234,20 @@ def main():
     prueba_generador(2, "ABSORBIDO que la ficha no escribe", m,
                      "el contenido dice absorbidos", fallos, basura, a.id_op)
 
-    m = dict(BASE); m["pasos"] = dict(BASE["pasos"]); del m["pasos"][str(len(pasos_ab))]
-    prueba_generador(3, "COBERTURA por OLVIDO: a un paso le falta la marca", m,
+    m = dict(BASE); m["pasos"] = dict(BASE["pasos"])
+    m["pasos"][ab] = dict(BASE["pasos"][ab]); del m["pasos"][ab][str(len(pasos_ab))]
+    prueba_generador(3, "COBERTURA por OLVIDO: a un paso de %s le falta la marca" % ab, m,
                      "no tiene marca", fallos, basura, a.id_op)
 
     m = dict(BASE); m["pasos"] = dict(BASE["pasos"])
-    m["pasos"][str(len(pasos_ab) + 4)] = ["CUBIERTO", 1]
-    prueba_generador(4, "COBERTURA por SOBRANTE: marca de un paso que no existe", m,
+    m["pasos"][ab] = dict(BASE["pasos"][ab])
+    m["pasos"][ab][str(len(pasos_ab) + 4)] = ["CUBIERTO", 1]
+    prueba_generador(4, "COBERTURA por SOBRANTE: marca de un paso de %s que no existe" % ab, m,
                      "que sobran", fallos, basura, a.id_op)
 
     m = dict(BASE); m["pasos"] = dict(BASE["pasos"])
-    m["pasos"]["1"] = ["INCISO", 1, "una parafrasis que no esta en el paso", ", "]
+    m["pasos"][ab] = dict(BASE["pasos"][ab])
+    m["pasos"][ab]["1"] = ["INCISO", 1, "una parafrasis que no esta en el paso", ", "]
     prueba_generador(5, "INCISO que NO es trozo verbatim del paso que muere", m,
                      "no casa dentro del paso", fallos, basura, a.id_op)
 
