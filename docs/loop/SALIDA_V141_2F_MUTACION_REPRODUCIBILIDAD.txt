@@ -1,0 +1,19 @@
+==============================================================================
+PRUEBA DE MUTACION DEL COTEJO DE REPRODUCIBILIDAD (TAREA 2.f, vuelta 141)
+==============================================================================
+  script_inestable.py    escribe SALIDA_DE_MENTIRA.txt | inestable=True (esperado True)  VERDE
+       SALIDA_DE_MENTIRA.txt, linea 2
+          corrida 1: sufijo aleatorio: 1aa441a024c741f198f3b95a33f67792
+          corrida 2: sufijo aleatorio: e3948d1c458143d4942a756323b7ba88
+  script_estable.py      escribe SALIDA_DE_MENTIRA.txt | inestable=False (esperado False)  VERDE
+  P.16: el directorio temporal se retira. Existe todavia: False
+
+  Y AHORA SE MUTA EL ESPERADO DE CADA UNA y se re-evalua contra el MISMO
+  valor obtenido: la que siga verde no puede fallar nunca.
+  comprobaciones: 2 | verdes: 2 | caen con el esperado mutado: 2
+
+VERDE DE LA MUTACION: el cotejo marca la salida aleatoria como NO
+REPRODUCIBLE y deja pasar la fija, y las dos comprobaciones caen al
+mutarles el esperado.
+FIN
+EXITCODE: 0

@@ -1,0 +1,32 @@
+commit de apertura (de git, no tecleado): 4b0fcb20
+commits reales en el rango: 4
+
+(a) CONTRAPRUEBA: EL BLOQUE INTACTO.
+   VERDE  (a) el bloque intacto da exit 0 | obtenido=0 esperado=0
+   VERDE  (a) la salida dice IDENTICO A GIT | obtenido=True esperado=True
+
+(b) COMMIT INVENTADO DENTRO DEL BLOQUE.
+   VERDE  (b) el hash fabricado NO existe en git (computado) | obtenido=False esperado=False
+       hash inventado: 07e2fde1
+   VERDE  (b) el commit inventado da exit 1 | obtenido=1 esperado=1
+   VERDE  (b) la salida NOMBRA el hash inventado | obtenido=True esperado=True
+   VERDE  (b) la salida dice NO CALZA CON GIT | obtenido=True esperado=True
+
+(c) ORDEN CAMBIADO: DOS COMMITS INTERCAMBIADOS.
+   VERDE  (c) el orden cambiado da exit 1 | obtenido=1 esperado=1
+   VERDE  (c) la salida dice hash distinto o fuera de orden | obtenido=True esperado=True
+
+(d) ASUNTO TRUNCADO: TIENE QUE PASAR Y QUEDAR DECLARADO.
+   VERDE  (d) el asunto truncado sigue dando exit 0 | obtenido=0 esperado=0
+   VERDE  (d) la salida DECLARA cuantos asuntos van truncados | obtenido=True esperado=True
+
+(e) ASUNTO CAMBIADO POR OTRO QUE NO ES PREFIJO DEL REAL.
+   VERDE  (e) el asunto cambiado da exit 1 | obtenido=1 esperado=1
+   VERDE  (e) la salida dice que el asunto NO es prefijo del real | obtenido=True esperado=True
+
+PRUEBA DE MUTACION DEL PROPIO ARNES: se cambia el valor esperado de CADA
+comprobacion y se RE-EVALUA contra el MISMO valor obtenido.
+   comprobaciones corridas: 12 | verdes: 12 | caen con el esperado mutado: 12
+
+VERDE: las 12 comprobaciones pasan, y las 12 caen al mutarles el esperado.
+EXITCODE: 0

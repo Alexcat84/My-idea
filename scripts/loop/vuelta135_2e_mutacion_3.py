@@ -50,6 +50,7 @@ import argparse
 import hashlib
 import io
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -148,8 +149,24 @@ def main():
             return 1
         mutado = mutado.replace(viejo, nuevo)
 
-    fd, ruta_tmp = tempfile.mkstemp(suffix=".md", prefix="REPORTE_134_MUTACION3_")
-    os.close(fd)
+    # EL TEMPORAL TIENE NOMBRE FIJO (TAREA 2.f de la vuelta 141, acta de la
+    # vuelta 140, caida 4.2 del ejecutor).
+    #
+    # POR QUE CAMBIA. Aqui habia tempfile.mkstemp(prefix="REPORTE_134_MUTACION3_"),
+    # que produce un sufijo ALEATORIO. La guarda que se corre abajo IMPRIME el
+    # nombre del fichero que cuenta ("80 lineas == 80 contados en `wc -l
+    # REPORTE_134_MUTACION3_xffen9vd.md`"), asi que ese nombre aleatorio entraba
+    # en docs/loop/SALIDA_V135_2E_MUTACION_3.txt, que es una SALIDA SELLADA. El
+    # fichero cambiaba SOLO en cada corrida sin que nadie tocara nada: el auditor
+    # lo confirmo al correr la bateria de la vuelta 140 y verlo mutar de
+    # _xffen9vd a _xv7o8hyj.
+    #
+    # EL ARREGLO: el nombre del fichero pasa a ser FIJO y la aleatoriedad se
+    # mueve al DIRECTORIO temporal, que la guarda no imprime. La salida sellada
+    # queda byte a byte identica entre corridas. P.16, QUIEN FABRICA LIMPIA: el
+    # directorio se retira entero en el finally.
+    dir_tmp = tempfile.mkdtemp(prefix="v135_2e_mut3_")
+    ruta_tmp = os.path.join(dir_tmp, "REPORTE_134_MUTACION3.md")
     with io.open(ruta_tmp, "w", encoding="utf-8") as f:
         f.write(mutado)
 
@@ -170,7 +187,7 @@ def main():
                         "MUTACION NO VERIFICADA: no dio VERDE como se esperaba.\n")
         salida_txt += "EXITCODE: %d\n" % (0 if verificada else 1)
     finally:
-        os.remove(ruta_tmp)
+        shutil.rmtree(dir_tmp, ignore_errors=True)
 
     with io.open(SALIDA, "w", encoding="utf-8") as fh:
         fh.write(salida_txt)

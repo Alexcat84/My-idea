@@ -1032,6 +1032,145 @@ def comparar_contra(f, ruta_arg):
     return 0
 
 
+# --------------------------- EL BLOQUE DE COMMITS SE COTEJA (TAREA 2.d, v141)
+#
+# POR QUE NACE (acta de la vuelta 140, caida 4.3, "de guarda que no alcanza, de
+# la casa"). La cabecera tallada tiene delimitador Y --comparar, que exige
+# CABECERA IDENTICA AL TALLADOR antes del commit. El bloque de commits estrenado
+# en la vuelta 140 tiene delimitador y NINGUN COTEJO: verificar_cifras_del_reporte.py
+# solo lo usa para SALTARSE esa ventana, asi que cualquier prosa metida entre las
+# dos marcas queda invisible para la guarda de cifras. Es una exencion sin nada
+# detras.
+#
+# QUE COMPRUEBA --comparar-commits: lee lo que hay entre <!-- COMMITS TALLADOS -->
+# y <!-- FIN COMMITS TALLADOS --> del fichero, saca de ahi las lineas de commit
+# (hash corto mas asunto) y las coteja contra `git log <apertura>..HEAD`:
+#   - MISMO NUMERO de commits;
+#   - MISMOS HASHES, cada uno prefijo del hash completo que git da;
+#   - EN EL MISMO ORDEN, posicion por posicion;
+#   - el ASUNTO tiene que ser PREFIJO del asunto real. Si es mas corto, se
+#     DECLARA como truncado y se cuenta; si no es prefijo, es ROJO.
+# El commit de apertura es el mismo que la fila de identidad ya usa
+# (commit_apertura_desde_git), o sea leido de git y nunca tecleado.
+MARCA_COMMITS_ABRE = "<!-- COMMITS TALLADOS -->"
+MARCA_COMMITS_CIERRA = "<!-- FIN COMMITS TALLADOS -->"
+RE_LINEA_COMMIT = re.compile(r"^\s*([0-9a-f]{7,40})\s+(\S.*?)\s*$")
+
+
+def bloque_de_commits_del_fichero(ruta, fallos):
+    """Las lineas de commit que el fichero trae ENTRE LAS DOS MARCAS. Devuelve
+    la lista [(hash_corto, asunto)] en el orden en que aparecen."""
+    texto = io.open(ruta, encoding="utf-8").read().splitlines()
+    abre = [i for i, l in enumerate(texto) if MARCA_COMMITS_ABRE in l]
+    cierra = [i for i, l in enumerate(texto) if MARCA_COMMITS_CIERRA in l]
+    if len(abre) != 1 or len(cierra) != 1:
+        fallos.append("el fichero trae %d marca(s) de apertura y %d de cierre del bloque "
+                      "de commits: se esperaba una de cada" % (len(abre), len(cierra)))
+        return []
+    if cierra[0] < abre[0]:
+        fallos.append("la marca de cierre del bloque de commits va ANTES que la de apertura")
+        return []
+    filas = []
+    for linea in texto[abre[0] + 1:cierra[0]]:
+        m = RE_LINEA_COMMIT.match(linea)
+        if m:
+            filas.append((m.group(1), m.group(2)))
+    return filas
+
+
+def commits_de_git(apertura, fallos):
+    """`git log <apertura>..HEAD`, hash completo y asunto entero, en el orden
+    que git da (el mas reciente primero), que es el orden en que el bloque se
+    escribe."""
+    try:
+        r = subprocess.run(["git", "log", "%s..HEAD" % apertura, "--pretty=format:%H\x01%s"],
+                           cwd=RAIZ, capture_output=True, text=True, check=True)
+    except Exception as e:
+        fallos.append("no se pudo correr git log %s..HEAD: %s" % (apertura, e))
+        return []
+    salida = []
+    for linea in r.stdout.splitlines():
+        if "\x01" in linea:
+            h, s = linea.split("\x01", 1)
+            salida.append((h, s))
+    return salida
+
+
+def comparar_commits(vuelta, ruta_arg):
+    """El cotejo de la TAREA 2.d. Devuelve el exit code (0 calza, 1 rojo)."""
+    print("--- COTEJO DEL BLOQUE DE COMMITS DE %s ---" % ruta_arg)
+    print()
+    fallos = []
+    ruta = ruta_arg if os.path.isabs(ruta_arg) else os.path.join(RAIZ, ruta_arg)
+    if not os.path.exists(ruta):
+        print("  ROJO: no existe %s" % ruta)
+        return 1
+    rama = rama_actual(fallos)
+    apertura, asunto_acta = commit_apertura_desde_git(vuelta, rama, fallos)
+    if fallos:
+        for x in fallos:
+            print("  ROJO: %s" % x)
+        return 1
+    print("  commit de apertura, leido de git (no tecleado): %s" % apertura)
+    print("  asunto real del acta: %r" % asunto_acta)
+    print("  rango cotejado: git log %s..HEAD" % apertura)
+    print()
+
+    del_fichero = bloque_de_commits_del_fichero(ruta, fallos)
+    de_git = commits_de_git(apertura, fallos)
+    if fallos:
+        for x in fallos:
+            print("  ROJO: %s" % x)
+        return 1
+
+    print("  commits en el bloque del fichero: %d | commits en git: %d"
+          % (len(del_fichero), len(de_git)))
+    problemas = []
+    if len(del_fichero) != len(de_git):
+        problemas.append("EL NUMERO NO CALZA: el bloque trae %d y git da %d"
+                         % (len(del_fichero), len(de_git)))
+
+    truncados = 0
+    for i in range(max(len(del_fichero), len(de_git))):
+        if i >= len(del_fichero):
+            problemas.append("posicion %d: git trae %s %r y el bloque no trae nada"
+                             % (i + 1, de_git[i][0][:8], de_git[i][1][:60]))
+            continue
+        if i >= len(de_git):
+            problemas.append("posicion %d: el bloque trae %s %r y git no trae nada "
+                             "(commit INVENTADO o fuera del rango)"
+                             % (i + 1, del_fichero[i][0], del_fichero[i][1][:60]))
+            continue
+        h_f, s_f = del_fichero[i]
+        h_g, s_g = de_git[i]
+        if not h_g.startswith(h_f):
+            problemas.append("posicion %d: el bloque dice %s y git dice %s (hash distinto "
+                             "o fuera de orden)" % (i + 1, h_f, h_g[:len(h_f)]))
+            continue
+        if s_f == s_g:
+            continue
+        if s_g.startswith(s_f):
+            truncados += 1
+            continue
+        problemas.append("posicion %d (%s): el asunto del bloque NO es prefijo del real.\n"
+                         "             bloque: %s\n             git   : %s"
+                         % (i + 1, h_f, s_f, s_g))
+
+    print("  asuntos TRUNCADOS y declarados como tales: %d" % truncados)
+    print()
+    if problemas:
+        print("  ROJO, %d cosa(s) no cuadran en el bloque de commits:" % len(problemas))
+        for x in problemas:
+            print("     %s" % x)
+        print()
+        print("  BLOQUE DE COMMITS: NO CALZA CON GIT")
+        return 1
+    print("  BLOQUE DE COMMITS: IDENTICO A GIT (%d commit(s), mismo orden, %d asunto(s) "
+          "truncado(s) declarado(s))" % (len(de_git), truncados))
+    print()
+    return 0
+
+
 RE_UNIDAD_CADENA = re.compile(
     r"^\s*(\d+):\s*(.+?)\s*->\s*(.+?)\s*\(paso\s*(.+?),\s*dominio\s*(.+?)\)\s*\|\s*(.+?)\s*$"
 )
@@ -1356,6 +1495,11 @@ def main():
                              "SALIDA_V<vuelta>_TRAMO<K>_FILTRO_P91_GUARDA_CADENA.txt")
     ap_arg.add_argument("--comparar", default=None,
                         help="fichero cuya tabla se coteja contra la tallada")
+    ap_arg.add_argument("--comparar-commits", default=None, metavar="RUTA",
+                        help="TAREA 2.d (vuelta 141): coteja el bloque entre "
+                             "<!-- COMMITS TALLADOS --> y su cierre contra "
+                             "git log <apertura>..HEAD (mismo numero, mismos hashes, "
+                             "mismo orden), declarando el truncado de asunto")
     ap_arg.add_argument("--registro", default=None, metavar="RUTA",
                         help="TAREA 2.d: con --tramo-cadena, niega que alguna unidad tallada "
                              "ya tenga decision NO SE ENLAZA en este registro jsonl "
@@ -1363,6 +1507,9 @@ def main():
     a = ap_arg.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
     con_miles = not a.sin_miles
+
+    if a.comparar_commits is not None:
+        return comparar_commits(a.vuelta, a.comparar_commits)
 
     if a.tramo_cadena is not None:
         return modo_tramo_cadena(a.vuelta, a.tramo_cadena, a.comparar, a.registro)
