@@ -1,0 +1,55 @@
+GUARDAS DEL CIERRE DE LA VUELTA 150, RE CORRIDAS SOBRE EL FICHERO COMMITEADO.
+
+===== verificar_apertura_sellada.py --vuelta 150 =====
+VERDE: los 10 ficheros SALIDA_V150_*_APERTURA.txt nacieron todos en el primer commit de la vuelta (hijo directo del acta):
+   SALIDA_V150_CICLO_ETIQUETAS_APERTURA.txt -- nacido en 1f423cbc, padre fe98cf97
+   SALIDA_V150_CICLO_NUMSTAT_APERTURA.txt -- nacido en 1f423cbc, padre fe98cf97
+   SALIDA_V150_CICLO_SYNC_APERTURA.txt -- nacido en 1f423cbc, padre fe98cf97
+   SALIDA_V150_CONTEO_APERTURA.txt -- nacido en 1f423cbc, padre fe98cf97
+   SALIDA_V150_DESFASE_CALIBRADO_APERTURA.txt -- nacido en 1f423cbc, padre fe98cf97
+   SALIDA_V150_GATE0_CMD1_APERTURA.txt -- nacido en 1f423cbc, padre fe98cf97
+   SALIDA_V150_HEAD_APERTURA.txt -- nacido en 1f423cbc, padre fe98cf97
+   SALIDA_V150_MOTOR_APERTURA.txt -- nacido en 1f423cbc, padre fe98cf97
+   SALIDA_V150_TSC_APERTURA.txt -- nacido en 1f423cbc, padre fe98cf97
+   SALIDA_V150_WEB_APERTURA.txt -- nacido en 1f423cbc, padre fe98cf97
+EXITCODE: 0
+
+===== tallar_cabecera_reporte.py --vuelta 150 --fase04 --comparar docs/loop/REPORTE.md =====
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+
+FIN
+
+===== verificar_cabecera_pegada_o_condensada.py --vuelta 150 =====
+MEDICION: PEGADA ENTERA. Las 9 filas, identicas tras normalizar.
+VERDE: la medicion de arriba calza con lo que el reporte afirma.
+
+===== verificar_cierre_sellado.py --vuelta 150 =====
+VERDE: SALIDA_V150_HEAD_CIERRE.txt sella 0821eaa3327a08bb6d23a8d84f2a8b05690db91a, un commit valido, en la rama, descendiente del acta anterior y distinto de la apertura.
+
+===== verificar_ausencias_del_reporte.py =====
+SUJETO: docs/loop/REPORTE.md
+VERDE EXIT 0: las 0 afirmacion(es) de ausencia vistas vienen respaldadas por un barrido exhaustivo sellado.
+<!-- COBERTURA DE AUSENCIAS -->
+COBERTURA DE AUSENCIAS: 0 vistas / 0 respaldadas / 0 en rojo / 0 exentas declaradas | vocabulario de 20 formulas
+<!-- FIN COBERTURA DE AUSENCIAS -->
+
+===== verificar_cifras_del_reporte.py =====
+VERDE EXIT 0: 4 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
+  0 grupos == 0 contados en `SALIDA_V150_2C_SIETE_VERIFICACIONES.txt (CIFRA 'duplicadas literales antes de OP-S-12', POR ETIQUETA)`
+  888 grupos == 888 contados en `SALIDA_V150_2C_SIETE_VERIFICACIONES.txt (CIFRA 'duplicadas resolviendo antes de OP-S-12', POR ETIQUETA)`
+  153 pares == 153 contados en `SALIDA_V150_2C_SIETE_VERIFICACIONES.txt (CIFRA 'bidireccionales vivos en HEAD', POR ETIQUETA)`
+  83 pares == 83 contados en `SALIDA_V150_2C_SIETE_VERIFICACIONES.txt (CIFRA 'bidireccionales vivos en mergebase', POR ETIQUETA)`
+COBERTURA: 4 cotejadas / 0 exentas / 4 cifras | reparto: 4 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 0 | ficheros citados que NO son UTF-8: 0 [ninguno] | unidades vistas FUERA del vocabulario: 36 palabra(s) [mesas x3, vivos x3, caracteres x2, divergentes x2, fichas x2, fusiones x2, aduana x1, claves x1, codigo x1, contra x1, controles x1, corri x1, dada x1, delante x1, dentro x1, depende x1, deprecados x1, desaparecidos x1, destejidos x1, divergencias x1, enlaces x1, entradas x1, etiquetas x1, fuentes x1, ids x1, incumplimientos x1, manda x1, movio x1, pasa x1, propias x1, real x1, registro x1, saneo x1, sub x1, tampoco x1, veces x1]
+
+===== verificar_citas_del_reporte.py =====
+VERDE: 5 par(es) cotejados en docs/loop/REPORTE.md, todos cuadran.
+  linea 16: "EXIT 0" <-> `SALIDA_V150_TALLADOR_CABECERA.txt`
+  linea 223: "vacio" <-> `SALIDA_V150_3_RELECTURA_EXPEDIENTE.txt`
+  linea 286: "25/25" <-> `SALIDA_V150_MOTOR_CIERRE.txt`
+  linea 343: "IDENTICA AL TALLADOR" <-> `SALIDA_V150_GUARDAS_DEL_CIERRE.txt`
+  linea 461: "vacio" <-> `SALIDA_V150_3_RELECTURA_EXPEDIENTE.txt`

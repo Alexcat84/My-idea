@@ -267,6 +267,14 @@ def main():
     print("  en PARADA: 1 (la 5)")
     print("  no contestables hoy: 1 (la 6, depende de OP-E-05)")
     print("  contestadas solo en parte: 1 (la 7)")
+    # LINEAS `CIFRA` (contrato 2.c de verificar_cifras_del_reporte.py): el
+    # instrumento imprime sus propias cifras con etiqueta y unidad del
+    # vocabulario cerrado, para que el reporte pueda cotejarlas contra este
+    # fichero en vez de teclearlas.
+    print("CIFRA duplicadas resolviendo antes de OP-S-12: %d grupos" % res_antes)
+    print("CIFRA duplicadas literales antes de OP-S-12: %d grupos" % lit_antes)
+    print("CIFRA bidireccionales vivos en HEAD: %d pares" % len(pares))
+    print("CIFRA bidireccionales vivos en mergebase: %d pares" % len(pares_base))
     print("  ESTADO DE OP-C-05 EN LA FICHA: %s, y NO se mueve." % f["estado"])
     print("  La 2.e del encargo dice que se mueve cuando las SIETE esten")
     print("  contestadas. No lo estan. Un estado en HECHA con tres verificaciones")
