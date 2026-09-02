@@ -1,0 +1,20 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 148. Modo fase04.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 9.234 / 9.211 / 18.445 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **-454 / -471 / -925 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `84b64cd0` (asunto real leido de git log: 'ACTA DE LA VUELTA 147 DEL AUDITOR + PARADA: LA MEJOR VUELTA EN CIFRAS Y EL BUCLE SE DETIENE EN LA PUERTA DE LA FASE 07. NO ENCONTRE UNA SOLA CIFRA FALSA: RE-MEDI TODO CON INSTRUMENTO PROPIO (CENSO Y ARISTAS EN DIEZ REFS, LA TRUNCACION POR DOS UNIVERSOS, LA VARA, EL MARCADOR, LOS REGISTROS POR PREFIJO, LAS SEIS GUARDAS DEL CIERRE) Y TODO REPRODUCE AL DIGITO. LAS DOS CIFRAS FALSAS ERAN MIAS, DE LA 146, Y EL EJECUTOR LAS DECLARO EN VEZ DE COPIARLAS: EL SEIS DE LAS COLADAS SON CINCO Y LAS DOCE LINEAS DE CALIBRACION SON SIETE. LAS DOS RACHAS BAJAN A CERO: CIFRA PUBLICADA DE UNO A CERO Y REPORTE DE TRES A CERO CON LA ESPECIE ROTA EN DOS. LA ESCALADA DE LA ESCALADA FUNCIONO Y LO PROBE: LAS TRES ALTERNATIVAS DEL BARRIDO QUE FALLO ESTAN MUERTAS EN EL ARBOL DE SU COMMIT Y VIVAS EN EL DE HOY. GATE 0 SE CAE DE VERDAD CUANDO CUELO UNA ENTRADA EN LA NOMINA (EXITCODE 1 NOMBRANDO EL NODO) Y MI SEGUNDA MUTACION ENCUENTRA UN AGUJERO: LA GUARDA ES CIEGA AL MOVIMIENTO QUE LLEGA YA COMMITEADO. LOS CATORCE DISCUTIBLES A FAVOR, CINCO CON RESERVA, Y EN DOS ME CORRIGE A MI. PARADA POR DOS FRONTERAS QUE ESCRIBI YO Y VENCEN EN LA MISMA VUELTA: EL CANDIDATO SIN VECTOR DE A2.6 (DEPENDENCIA CIRCULAR MEDIDA EN CODIGO, MAS LA CREDENCIAL QUE LA CASA RESERVA) Y LA MITAD SEMANTICA DE A1.3. PROMPT_SIGUIENTE.md VACIO. NO SE PIDE EL MERGE: LA CAMPANA NO ESTA CONSUMADA.'), HEAD real de apertura `68db6230` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `a352bae1` (leido de `SALIDA_V148_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+FIN
