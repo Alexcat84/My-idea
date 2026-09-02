@@ -1,0 +1,84 @@
+==============================================================================
+LA TABLA DE LA FASE 06, IMPRESA DE SUS FICHEROS DE SALIDA
+Ninguna celda esta tecleada. Cada una cita el fichero del que sale.
+==============================================================================
+
+--- TABLA 1: LO QUE CADA FUSION MOVIO ---
+
+| operacion | P.5 | caso positivo | crecimiento del superviviente | delta deprecados |
+|---|---|---|---|---|
+| `OP-M-01-FUSION` | 10 pares leidos = 10 del acto, EXIT 0 | LAS NUEVE MUERDEN | 6 a 17 pasos, 3 a 6 condiciones | +4 |
+| `OP-M-03-III` | 3 pares leidos = 3 del acto, EXIT 0 | LAS NUEVE MUERDEN | 5 a 9 pasos, 2 a 2 condiciones | +2 |
+| `OP-M-05-INDICE` | 3 pares leidos = 3 del acto, EXIT 0 | LAS NUEVE MUERDEN | 5 a 9 pasos, 2 a 5 condiciones | +2 |
+| `OP-M-05-EDIFICIO` | 3 pares leidos = 3 del acto, EXIT 0 | LAS NUEVE MUERDEN | 4 a 8 pasos, 2 a 2 condiciones | +2 |
+| `OP-M-05-APERTURA` | 3 pares leidos = 3 del acto, EXIT 0 | LAS NUEVE MUERDEN | 5 a 11 pasos, 2 a 2 condiciones | +2 |
+
+--- TABLA 2: EL REPARTO DE PIEZAS, CONTADO POR EL GENERADOR ---
+
+| operacion | piezas | enteras (APPEND) | ya dichas (CUBIERTO) | de INCISO | que ya viajan en el acto |
+|---|---:|---:|---:|---:|---:|
+| `OP-M-01-FUSION` | 26 | 14 | 9 | 1 | 2 |
+| `OP-M-03-III` | 16 | 4 | 10 | 0 | 2 |
+| `OP-M-05-INDICE` | 12 | 7 | 1 | 0 | 4 |
+| `OP-M-05-EDIFICIO` | 12 | 4 | 7 | 0 | 1 |
+| `OP-M-05-APERTURA` | 12 | 6 | 5 | 1 | 0 |
+| **TOTAL de las cinco** | **78** | **35** | **32** | **2** | **9** |
+
+--- TABLA 3: DONDE MUERDE EL HUECO, CON SUS PARES NOMBRADOS ---
+
+| operacion | VIAJA_EN_EL_ACTO | los pares, del fichero del plan |
+|---|---:|---|
+| `OP-M-01-FUSION` | 2 | paso 2 de `requisitos_gates_con_dientes` viaja por el paso 1 de `estructura_de_gates`; paso 1 de `estructura_gates` viaja por el paso 1 de `estructura_de_gates` |
+| `OP-M-03-III` | 2 | paso 2 de `pivote_startup` viaja por el paso 3 de `pivotes_e_iteraciones`; paso 4 de `pivotes_e_iteraciones` viaja por el paso 3 de `pivote_startup` |
+| `OP-M-05-INDICE` | 4 | paso 1 de `customer_discovery_overview` viaja por el paso 1 de `customer_discovery_cuatro_fases`; paso 2 de `customer_discovery_overview` viaja por el paso 2 de `customer_discovery_cuatro_fases`; paso 3 de `customer_discovery_overview` viaja por el paso 3 de `customer_discovery_cuatro_fases`; paso 4 de `customer_discovery_overview` viaja por el paso 4 de `customer_discovery_cuatro_fases` |
+| `OP-M-05-EDIFICIO` | 1 | paso 2 de `manifiesto_regla1_hechos_fuera_del_edificio` viaja por el paso 2 de `get_out_of_the_building` |
+| `OP-M-05-APERTURA` | 0 | NINGUNO |
+
+CIFRA operaciones donde el hueco muerde: 4 de 5
+   las que muerden, nombradas: OP-M-01-FUSION, OP-M-03-III, OP-M-05-INDICE, OP-M-05-EDIFICIO
+   las que NO, nombradas     : OP-M-05-APERTURA
+
+--- TABLA 4: LAS GUARDAS DEL FUNDIDOR Y LA SIMULACION PREVIA ---
+
+| operacion | guarda A auto-aristas | guarda B duplicadas tras resolver | guarda C | guarda D | duplicadas de la simulacion | auto aristas | aristas internas |
+|---|---|---|---|---|---:|---|---|
+| `OP-M-01-FUSION` | OK (0) | OK (0) | 5 de 5 | OK | 5 | ninguna | NINGUNA |
+| `OP-M-03-III` | OK (0) | OK (0) | 5 de 5 | OK | 2 | ninguna | NINGUNA |
+| `OP-M-05-INDICE` | OK (0) | OK (0) | 5 de 5 | OK | 4 | ninguna | NINGUNA |
+| `OP-M-05-EDIFICIO` | OK (0) | OK (0) | 5 de 5 | OK | 1 | ninguna | NINGUNA |
+| `OP-M-05-APERTURA` | OK (0) | OK (0) | 5 de 5 | OK | 6 | ninguna | NINGUNA |
+
+--- LAS DUPLICADAS, NOMBRE POR NOMBRE (bloque 4 de cada simulacion) ---
+  OP-M-01-FUSION: 5 nombradas, TOTAL NUEVAS dice 5
+     gates_sin_dientes_problema
+     gestion_portafolio_formal
+     mitos_stage_gate
+     scorecards_criterios_gate
+     tipos_criterios_gate
+  OP-M-03-III: 2 nombradas, TOTAL NUEVAS dice 2
+     customer_development_agile_pairing
+     fracaso_como_aprendizaje_startup
+  OP-M-05-INDICE: 4 nombradas, TOTAL NUEVAS dice 4
+     customer_validation
+     identificar_earlyvangelists
+     lienzo_modelo_negocio
+     producto_minimo_viable
+  OP-M-05-EDIFICIO: 1 nombradas, TOTAL NUEVAS dice 1
+     producto_minimo_viable
+  OP-M-05-APERTURA: 6 nombradas, TOTAL NUEVAS dice 6
+     business_model_canvas_scorecard
+     checkpoints_validacion
+     customer_discovery
+     decision_pivotar_o_proceder
+     preservar_efectivo_buscar_modelo
+     realizar_pruebas_pasa_no_pasa
+
+--- EL CABLEADO MEDIDO HOY, del bloque 1 de cada simulacion ---
+  OP-M-01-FUSION       10 contra 7, 10 contra 5, 10 contra 4, 10 contra 5
+  OP-M-03-III          13 contra 12, 13 contra 3
+  OP-M-05-INDICE       30 contra 11, 30 contra 10
+  OP-M-05-EDIFICIO     8 contra 6, 8 contra 3
+  OP-M-05-APERTURA     18 contra 10, 18 contra 8
+
+VERDE: las 5 filas salen enteras de sus ficheros.
+EXITCODE: 0
