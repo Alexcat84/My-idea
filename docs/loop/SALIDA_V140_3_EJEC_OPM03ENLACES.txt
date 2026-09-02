@@ -1,0 +1,35 @@
+==============================================================================
+ESCRITURA DE ARISTAS DE OP-M-03-ENLACES . MODO EJECUTAR
+==============================================================================
+tipo de la ficha        : ENLACE
+ENLACE MUTUO (del tipo) : False
+aristas de la ficha     : 2 cadena(s), 2 par(es) dirigido(s)
+
+arista de la ficha: pivotar_o_perseverar -> pivote_estrategico
+  los dos ids son DIRECTOS: no hay alias que resolver (si estan VIVOS lo dice la guarda 1)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION (o MUTUO declarado en la ficha): OK
+  guarda 6, cero duplicadas NUEVAS tras resolver: OK (preexistentes: pivotar_o_perseverar.nodos_siguientes 0, pivote_estrategico.nodos_previos 1; tras escribir: 0 y 1)
+  pivotar_o_perseverar.nodos_siguientes: 4 -> 5
+  pivote_estrategico.nodos_previos   : 23 -> 24
+
+arista de la ficha: pivote_o_proceder -> pivote_estrategico
+  los dos ids son DIRECTOS: no hay alias que resolver (si estan VIVOS lo dice la guarda 1)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION (o MUTUO declarado en la ficha): OK
+  guarda 6, cero duplicadas NUEVAS tras resolver: OK (preexistentes: pivote_o_proceder.nodos_siguientes 0, pivote_estrategico.nodos_previos 1; tras escribir: 0 y 1)
+  pivote_o_proceder.nodos_siguientes: 9 -> 10
+  pivote_estrategico.nodos_previos   : 24 -> 25
+
+------------------------------------------------------------------------------
+RESUMEN: 2 par(es) de la ficha | 2 a escribir | 0 YA PRESENTES (saltadas) | 0 fallo(s)
+guarda 7, ningun otro campo cambia en ningun nodo tocado: OK
+
+ESCRITO. ficheros de nodo tocados: 3 (pivotar_o_perseverar, pivote_estrategico, pivote_o_proceder)
+EXITCODE: 0
