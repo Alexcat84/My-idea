@@ -784,3 +784,211 @@ texto del superviviente**, no solo en `merged_originals` ni en `ids_alias`.
 - **NO se toca la ficha de `OP-M-05-EDIFICIO`, y queda dicho lo que la 10.c ya
   declaraba:** su **verificacion 2, tal como esta escrita, no se puede cumplir**
   con las cinco marcas de hoy. No se finge que se cumplio.
+
+## CORRECCION 13. **LA CUENTA DE FILAS DE `OP-E-04` EN VIOLACION DE SU PROPIA VERIFICACION 0: TRES CONTRA CINCO, Y LA CIFRA VIEJA NO SE BORRA**
+
+**POR ADICION, Y NO SE BORRA NI SE REESCRIBE LA CIFRA VIEJA.** Escrita en la
+vuelta 141, TAREA 1.b, por encargo expreso del acta 140 (caida **4.1**, del
+auditor sobre el ejecutor). Sale de la misma regla que las CORRECCIONES 9, 10 y
+11: `EJECUTOR.md` regla 2 y regla 8, **la discrepancia se declara, no se resuelve
+copiando**, y *"una correccion que tapa lo que corrige no se puede auditar"*.
+
+**LA AFIRMACION SOBRE LA QUE LAS DOS CIFRAS SE MIDEN**, literal de la
+`verificacion` 0 de la ficha de `OP-E-04` en `docs/plan/OPERACIONES.jsonl`, leida
+en la vuelta 141:
+
+> *"UNA SOLA DIRECCION POR ENLACE, de la madre al hijo. La vuelta no debe existir
+> ni literal ni resuelta, por la regla de la escalera"*
+
+### 13.a. LAS DOS CIFRAS, CADA UNA CON SU AUTOR, SU CORTE Y SU FUENTE
+
+| | cifra | quien la publica | corte | fuente | como se midio |
+|---|---:|---|---|---|---|
+| **la vieja, que NO se borra** | **TRES filas**: `LD-42`, `LD-48`, `LD-53` | ejecutor, reporte de la vuelta 140 | **2 sep 2026** | `docs/loop/REPORTE.md` de la vuelta 140, seccion de la TAREA 3, remitida 5 de 5 | la vara de enlace de `tallar_estado_de_fase.py` **mide si la IDA esta presente** y nunca mira la vuelta; solo se inspeccionaron **las filas que aun no estaban puestas** |
+| **la de hoy** | **CINCO filas**: `LD-35`, `LD-42`, `LD-48`, `LD-49`, `LD-51` | auditor, acta 140, caida 4.1; **re-medida por el ejecutor en la vuelta 141** | **corte de la vuelta 141** | `docs/loop/SALIDA_V141_1B_IDA_Y_VUELTA_OPE04.txt`, de `python scripts/loop/vuelta141_1b_medir_ida_y_vuelta.py --op OP-E-04` | **ida y vuelta a la vez**, con el resolutor de la casa (`P.1`) puesto y las dos vistas miradas (`nodos_siguientes` del origen y `nodos_previos` del destino) |
+
+**LA TABLA DE LA MEDICION DE HOY, PEGADA DE SU FICHERO DE SALIDA Y NO TECLEADA**
+(`docs/loop/SALIDA_V141_1B_IDA_Y_VUELTA_OPE04.txt`):
+
+| lectura | fila cruda (origen -> destino) | origen resuelto | destino resuelto | IDA presente | VUELTA presente |
+|---|---|---|---|---|---|
+| LD-35 | gestion_portafolio_dos_niveles -> estructura_gates | gestion_portafolio_dos_niveles | sistema_gates_go_kill | SI | SI |
+| LD-40 | requisitos_gates_con_dientes -> portfolio_management | sistema_gates_go_kill | portfolio_management | SI | no |
+| LD-42 | requisitos_gates_con_dientes -> revision_portafolio_periodica | sistema_gates_go_kill | revision_portafolio_periodica | no | SI |
+| LD-45 | requisitos_gates_con_dientes -> gestion_portafolio_foco | sistema_gates_go_kill | gestion_portafolio_foco | no | no |
+| LD-48 | portfolio_management -> gates_go_kill_decision_points | portfolio_management | sistema_gates_go_kill | no | SI |
+| LD-49 | gestion_portafolio_formal -> gates_go_kill_decision_points | gestion_portafolio_formal | sistema_gates_go_kill | SI | SI |
+| LD-51 | gestion_portafolio_dos_niveles -> gates_go_kill_decision_points | gestion_portafolio_dos_niveles | sistema_gates_go_kill | SI | SI |
+| LD-53 | gestion_portafolio_foco -> gates_go_kill_decision_points | gestion_portafolio_foco | sistema_gates_go_kill | no | no |
+| LD-55 | decision_factory_mentality -> gates_go_kill_decision_points | decision_factory_mentality | sistema_gates_go_kill | no | no |
+
+**Y LAS CIFRAS DE CIERRE DE ESA MISMA SALIDA, tambien pegadas:** *"FILAS DE
+FICHA: 9 | DIRECCIONES DISTINTAS TRAS RESOLVER: 8"*, *"FILAS CON LA IDA
+PRESENTE: 4 | FILAS CON LA VUELTA PRESENTE: 5"*, *"EN VIOLACION DE LA
+VERIFICACION 0 (la vuelta existe hoy), 5 fila(s): LD-35, LD-42, LD-48, LD-49,
+LD-51"*.
+
+### 13.b. POR QUE DISCREPAN, Y NO ES ARITMETICA: ES QUE LA VARA MIRABA MEDIA COSA
+
+**LA CAUSA, NOMBRADA:** la vara de enlace de `scripts/loop/tallar_estado_de_fase.py`
+contaba **cuantas `aristas_nuevas` estan presentes**, y de ahi derivaba las que
+faltaban. Una fila cuya **ida ya estaba puesta** salia como *"YA PRESENTE"* y **la
+vara no seguia mirando**: la vuelta, que es lo que la verificacion 0 prohibe,
+nunca se media. Por eso la cifra vieja solo pudo poblarse con filas **sin la ida
+puesta**, y de esas solo tres tenian la vuelta.
+
+**LAS TRES QUE LA CIFRA VIEJA NO PUDO VER, Y POR QUE:** `LD-35`, `LD-49` y
+`LD-51` tienen **la ida presente**, asi que la vara las dio por buenas y paro.
+Las tres tienen **tambien la vuelta presente**, o sea que las tres violan la
+verificacion 0 y ninguna aparecia en la cuenta.
+
+**Y `LD-53` ESTA EN LA CIFRA VIEJA Y NO EN LA DE HOY:** medida hoy con las dos
+direcciones, `LD-53` tiene **ida no presente y vuelta no presente**. Es una fila
+**sin escribir**, no una fila en violacion. La cifra vieja la contaba porque
+mezclaba las dos cosas en un solo saco: *lo que falta por poner* y *lo que esta
+puesto al reves*. **Son dos poblaciones distintas y hoy se publican separadas:**
+en violacion de la verificacion 0 van **CINCO** (`LD-35`, `LD-42`, `LD-48`,
+`LD-49`, `LD-51`); sin la ida puesta van **CINCO** tambien, y no son las mismas
+(`LD-42`, `LD-45`, `LD-48`, `LD-53`, `LD-55`).
+
+**LA FORMA DE LA DISCREPANCIA, DICHA ENTERA:** no es *"tres contra cinco"* por
+una unidad y media. De las tres que la cifra vieja nombro, **dos siguen en pie**
+(`LD-42` y `LD-48`) y **una no era de esta especie** (`LD-53`); y **tres que si
+lo son no se vieron** (`LD-35`, `LD-49`, `LD-51`). La cifra vieja **estaba mal
+poblada**, igual que la de la CORRECCION 11.
+
+### 13.c. LO QUE ESTO ARRASTRA, Y QUE NO SE TOCA
+
+- **DOS DE ESAS VUELTAS LAS ESCRIBIO LA VUELTA 140 ELLA MISMA.** `OP-E-05`
+  escribio `sistema_gates_go_kill -> gestion_portafolio_dos_niveles` y su
+  reciproca; resueltas, **son la vuelta de `LD-35` y de `LD-51`**. Es decir que
+  una operacion de la mesa escribio la arista que otra operacion de la misma
+  mesa prohibe, **y la tabla del reporte de la 140 publica las dos como
+  CUMPLIDAS**. El choque es real y **no se resuelve aqui**: lo resuelve la
+  lectura de la TAREA 3 de la vuelta 141 con la vara del banco 9.22, bajo el
+  criterio de la CORRECCION 14.
+- **NO SE TOCA NINGUNA FICHA de `docs/plan/OPERACIONES.jsonl`** ni ningun
+  veredicto: esta correccion registra **una cifra de reporte**, no un dato del
+  plan. El campo `estado` de `OP-E-04` sigue sin tocarse.
+- **NO SE BORRA LA CIFRA VIEJA.** Queda arriba, con su autor y su corte, junto a
+  la de hoy.
+- **CONSECUENCIA PARA QUIEN LEA DESPUES, Y ES LA UTIL:** *"YA PRESENTE" NO ES UN
+  VEREDICTO, ES MEDIA MEDICION.* Antes de publicar que una operacion de enlace
+  cumple, se miden **sus dos direcciones** con el resolutor puesto en las dos
+  vistas y se publica **cuantas tienen la vuelta presente**, aunque la ida ya
+  estuviera. El remedio en codigo esta en la vuelta 141, TAREA 2.a.
+
+## CORRECCION 14. **EL CRITERIO DEL PAR COLAPSADO: CUANDO UNA FUSION JUNTA LAS DOS DIRECCIONES DE UN MISMO PAR, EL PAR SE RELEE CON LA VARA DEL 9.22**
+
+**POR ADICION.** Escrita en la vuelta 141, TAREA 1.c, por encargo del acta 140,
+adjudicacion **3.7**. **Es un CRITERIO, no una medicion**, y el auditor lo dice
+con esas palabras (`AUDITOR.md` 2). Se escribe aqui, y no en una ficha, para que
+**la fase 04 y la fase 06 lo encuentren las dos**: la fase 04 porque es donde
+viven `OP-E-04`, `OP-E-05`, `OP-M-01-ESLABONES` y `OP-M-01-SEXTO`, y la fase 06
+porque es la mesa que las remitio.
+
+**NO ES DOCTRINA NUEVA, Y POR ESO NO HAY PARADA.** Las dos reglas que lo
+sostienen estaban escritas antes de esta vuelta, y van citadas literales abajo.
+
+### 14.a. LA ESPECIE, DESCRITA SIN NOMBRES PROPIOS
+
+Una lectura dirigida escribe `A -> B`. Otra lectura dirigida, de **otro par**,
+escribe `C -> D`. Llega una fusion y **`B` y `C` colapsan en el mismo
+superviviente**, o **`A` y `D` colapsan**. Tras resolver, las dos aristas dejan
+de ser de pares distintos: **son la ida y la vuelta del mismo par**.
+
+**QUE PASA ENTONCES.** Si una de las dos fichas lleva la regla de la escalera en
+su verificacion (*"la vuelta no debe existir ni literal ni resuelta"*), esa
+verificacion **queda en violacion sin que nadie haya escrito mal nada**: la
+fusion la puso en violacion. Y la otra ficha, que puede ser un `ENLACE MUTUO`
+legitimo, **manda expresamente que la vuelta exista**.
+
+### 14.b. LAS DOS CITAS LITERALES QUE LO GOBIERNAN
+
+**(1) LA CONTRAORDEN DEL AUDITOR DEL 12 ago 2026**, en
+`docs/plan/EXPEDIENTE_MESA_JUNTA_ASESORA.md`, seccion *"CONTRAORDEN DEL AUDITOR,
+12 ago 2026: SE GIRA LA EXISTENTE"*:
+
+> **EN UN GRAFO DE SECUENCIA LA VUELTA ES UNA INSTRUCCION FALSA, y el ciclo de
+> dos FABRICA LA AVERIA QUE ESTA CAMPANA ESTA QUITANDO.**
+
+y dos parrafos despues, en la misma seccion:
+
+> **Y ESO DEJA UNA REGLA QUE VALE PARA TODAS LAS MESAS QUE VIENEN: en una
+> escalera, la arista de vuelta no es redundante, es FALSA.** Decir *despues de
+> formalizar viene identificar* **manda al lector a repetir el paso que acaba de
+> dar.**
+
+**Y SU REMEDIO OPERATIVO, tambien literal de esa seccion**, que es la parte que
+convierte la regla en algo ejecutable: alli **la vuelta se retira del campo**
+(*"`formalizar_junta_asesora`.`nodos_siguientes` | contiene
+`identificar_junta_asesores` | se retira"*), **la ida se escribe**, todo **en el
+mismo commit de la operacion que lo descubre**, y **el grado total NO SUBE**
+(*"el grado total del acto NO SUBE: se gira una arista, no se anade. Si el conteo
+sube en uno, se anadio en vez de girar"*).
+
+**(2) EL BANCO 9.22 Y EL HUECO DE ORDEN 1 DEL `00_INDICE`**, que escriben la
+excepcion y dan el test objetivo. Del banco, seccion *"9.22 FIGURA: LA VARA EN
+LOS DOS SENTIDOS"*:
+
+> **LA COMPROBACION QUE LA SEPARA DE LA DUPLICACION.** Si las dos direcciones
+> apuntan a **la misma linea**, no es esta figura: es un solape y se juzga por
+> las reglas de siempre. **La figura exige dos lineas distintas**, una en cada
+> nodo.
+
+Y del `00_INDICE`, *"LOS CUATRO HUECOS DE ORDEN QUE ESTE RESUMEN DESTAPA"*,
+hueco **1**:
+
+> **LA GUARDA TIENE QUE LLEVAR LA EXCEPCION ESCRITA, o el dia de la pasada borra
+> cuatro aristas que costaron dos lecturas.** **La regla de la escalera vale para
+> las ESCALERAS, no para los enlaces mutuos.**
+
+### 14.c. EL CRITERIO, EN SUS TRES PIEZAS
+
+**(i) EL PAR SE RELEE CON LA VARA DEL 9.22.** Cuando una fusion colapsa dos
+aristas que eran de pares distintos **en las dos direcciones de un mismo par**,
+el par **no se resuelve por antiguedad ni por cual ficha se ejecuto antes**: se
+**relee**, leyendo **las dos lineas** que las dos lecturas dirigidas citan, **en
+el nodo de HOY** y no en la ficha del 12 ago 2026. `P.12` cubre el reparto: **el
+colapso convoca, la lectura decide.**
+
+**(ii) EL TEST ES DE LINEAS, Y TIENE DOS SALIDAS Y NADA MAS.**
+
+| lo que devuelve la relectura | la figura | que pasa con las dos direcciones |
+|---|---|---|
+| **DOS LINEAS DISTINTAS**, una en cada nodo, cada una expandida por el otro | **ENLACE MUTUO** (banco 9.22, primer polo) | **las dos viven**, y la figura **se registra**. La regla de la escalera **no aplica** |
+| **LA MISMA LINEA** en las dos direcciones | **ESCALERA** | **la vuelta se retira** por la contraorden del 12 ago 2026, y la ida queda |
+
+**El test es de LINEAS, no de tamano de nodo** (acta 140, 3.7): que un extremo
+sea un superviviente muy crecido no cambia la vara. **Lo que queda abierto y va
+nombrado:** si un superviviente crecido deja de *expandir* una linea y pasa a
+*dominarla*, el 9.22 no lo mide. **Hoy no muerde; si asoma, es del fundador.**
+
+**(iii) QUIEN CORTA, Y COMO SE MIDE QUE NO SE PASO.** Corta **la operacion cuya
+verificacion lo exige**, **en su propio commit**, y **lo declara como GIRO o como
+PODA**. Y se mide, por la contraorden:
+
+- **el grado total se mide ANTES y DESPUES de cada retiro**;
+- **girar NO sube el grado** (se retira una direccion y se escribe la otra: neto
+  cero);
+- **podar lo BAJA en uno** (se retira una direccion y no se escribe ninguna);
+- **si el grado SUBE, se anadio en vez de girar, y esta mal.**
+
+### 14.d. LO QUE ESTE CRITERIO NO AUTORIZA, DICHO PARA QUE NADIE LO LEA DE MAS
+
+- **NO autoriza podar el grafo por gusto.** La contraorden cubre **la vuelta de
+  una escalera que una ficha prohibe**. Si una retirada tocase una arista que
+  **ninguna operacion del plan propuso ni prohibe**, esa retirada **se para y se
+  trae**, no se ejecuta (`AUDITOR.md` 4: no se borra contenido que ninguna regla
+  ordena).
+- **NO decide cual sale en cada par.** El acta 140, 3.7, lo dice con esas
+  palabras: *"NO ADJUDICO CUAL SALE EN CADA PAR: eso es lectura"*. Este criterio
+  fija **la vara**; la adjudicacion par por par es trabajo de lectura y se marca
+  **DISCUTIBLE** antes de conocer el resultado.
+- **NO toca el campo `estado` de ninguna ficha.** El pase de estado de las once
+  operaciones de la fase 06 sigue reservado a **una sola adjudicacion del
+  auditor**, con el conteo antes y despues (acta 139, 3.6, y acta 140).
+- **NO reescribe ninguna ficha de `docs/plan/OPERACIONES.jsonl`.** Las
+  verificaciones de `OP-E-04`, `OP-E-05`, `OP-M-01-ESLABONES` y `OP-M-01-SEXTO`
+  quedan tal como estan; lo que este criterio dice es **como se leen cuando
+  chocan**.

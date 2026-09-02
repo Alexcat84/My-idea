@@ -1,0 +1,12 @@
+TAREA 1 DE LA VUELTA 141: ADITIVIDAD DE LOS TRES REGISTROS
+git diff --numstat -- docs/PENDIENTES.md docs/plan/CORRECCIONES_A_APLICAR.md docs/plan/OPERACIONES.jsonl
+178	0	docs/PENDIENTES.md
+208	0	docs/plan/CORRECCIONES_A_APLICAR.md
+
+OPERACIONES.jsonl NO APARECE ARRIBA: cero lineas tocadas, como manda el encargo.
+git status --porcelain:
+ M docs/PENDIENTES.md
+ M docs/plan/CORRECCIONES_A_APLICAR.md
+?? docs/loop/SALIDA_V141_1B_IDA_Y_VUELTA_OPE04.txt
+?? docs/loop/SALIDA_V141_1_NUMSTAT_REGISTROS.txt
+?? scripts/loop/vuelta141_1b_medir_ida_y_vuelta.py

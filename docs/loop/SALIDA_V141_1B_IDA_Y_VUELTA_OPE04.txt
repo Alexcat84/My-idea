@@ -1,0 +1,20 @@
+IDA Y VUELTA DE OP-E-04 | REF: WORK
+Verificacion 0 de la ficha, literal: UNA SOLA DIRECCION POR ENLACE, de la madre al hijo. La vuelta no debe existir ni literal ni resuelta, por la regla de la escalera
+
+| lectura | fila cruda (origen -> destino) | origen resuelto | destino resuelto | IDA presente | VUELTA presente |
+|---|---|---|---|---|---|
+| LD-35 | gestion_portafolio_dos_niveles -> estructura_gates | gestion_portafolio_dos_niveles | sistema_gates_go_kill | SI | SI |
+| LD-40 | requisitos_gates_con_dientes -> portfolio_management | sistema_gates_go_kill | portfolio_management | SI | no |
+| LD-42 | requisitos_gates_con_dientes -> revision_portafolio_periodica | sistema_gates_go_kill | revision_portafolio_periodica | no | SI |
+| LD-45 | requisitos_gates_con_dientes -> gestion_portafolio_foco | sistema_gates_go_kill | gestion_portafolio_foco | no | no |
+| LD-48 | portfolio_management -> gates_go_kill_decision_points | portfolio_management | sistema_gates_go_kill | no | SI |
+| LD-49 | gestion_portafolio_formal -> gates_go_kill_decision_points | gestion_portafolio_formal | sistema_gates_go_kill | SI | SI |
+| LD-51 | gestion_portafolio_dos_niveles -> gates_go_kill_decision_points | gestion_portafolio_dos_niveles | sistema_gates_go_kill | SI | SI |
+| LD-53 | gestion_portafolio_foco -> gates_go_kill_decision_points | gestion_portafolio_foco | sistema_gates_go_kill | no | no |
+| LD-55 | decision_factory_mentality -> gates_go_kill_decision_points | decision_factory_mentality | sistema_gates_go_kill | no | no |
+
+FILAS DE FICHA: 9 | DIRECCIONES DISTINTAS TRAS RESOLVER: 8
+FILAS CON LA IDA PRESENTE: 4 | FILAS CON LA VUELTA PRESENTE: 5
+EN VIOLACION DE LA VERIFICACION 0 (la vuelta existe hoy), 5 fila(s): LD-35, LD-42, LD-48, LD-49, LD-51
+FILAS SIN LA IDA PUESTA, 5: LD-42, LD-45, LD-48, LD-53, LD-55
+EXITCODE: 0
