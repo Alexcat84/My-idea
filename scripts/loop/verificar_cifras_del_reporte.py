@@ -782,23 +782,92 @@ def cifras_etiquetadas(contenido, unidad):
     return out
 
 
+def _discriminantes(candidatas):
+    """Por cada etiqueta del grupo, las palabras que aparecen EN ELLA Y EN
+    NINGUNA OTRA del grupo. Son las unicas que sirven para distinguirla: si dos
+    etiquetas se llaman casi igual, lo que las separa es justo esto.
+
+    OJO CON LA VERSION QUE NO VALE, y se dice porque yo escribi primero esa:
+    "las palabras que no estan en la interseccion de TODAS" no discrimina nada
+    en cuanto el grupo tiene mas de dos miembros dispares, porque la
+    interseccion se vacia y entonces TODAS las palabras parecen distintivas. Lo
+    cazo el CASO D de scripts/loop/vuelta148_2b_mutacion_cifras_conjunto.py. Y
+    el grupo que importa es el de las EMPATADAS, no el de todas las candidatas:
+    distinguir de una etiqueta que ya quedo descartada no distingue nada."""
+    propias = {}
+    for et, _v in candidatas:
+        otras = set()
+        for et2, _v2 in candidatas:
+            if et2 != et:
+                otras |= _palabras(et2)
+        propias[et] = _palabras(et) - otras
+    return propias
+
+
 def elegir_cifra_etiquetada(candidatas, frase, numero):
-    """Devuelve (valor, etiqueta, modo) o None si no hay candidatas. `modo` es
-    'ETIQUETA' (camino fuerte) o 'CONJUNTO' (camino debil, declarado)."""
+    """Devuelve (valor, etiqueta, modo, empatadas) o None si no hay candidatas.
+    `modo` es 'ETIQUETA' (camino fuerte), 'CONJUNTO' (camino debil, declarado) o
+    'AMBIGUO' (la guarda NO puede decidir y por eso no acepta).
+
+    EL CAMINO POR CONJUNTO, CERRADO (TAREA 2.2 de la vuelta 148, sobre la caida
+    4.4.b del acta 147). EL AGUJERO ERA ESTE: cuando dos etiquetas empataban, el
+    camino debil recorria las candidatas y aceptaba LA PRIMERA CUYO VALOR
+    COINCIDIERA CON EL NUMERO ESCRITO. O sea que una cifra podia CUADRAR CONTRA
+    LA ETIQUETA VECINA: si dos etiquetas comparten casi todas sus palabras, la
+    prosa no las distingue, y el numero de una validaba la frase de la otra. El
+    verde salia de que el numero existiera EN ALGUN SITIO del fichero, no de que
+    fuera el de la etiqueta de la que se hablaba.
+
+    LA CURA, EN DOS PELDANOS Y NINGUNO MAS LAXO QUE ANTES:
+
+      (1) DESEMPATE POR PALABRA DISCRIMINANTE. Si la frase trae una palabra que
+          es EXCLUSIVA de una de las empatadas, esa gana, y el cotejo vuelve al
+          camino FUERTE. Empatar por las palabras comunes no significa que la
+          prosa no diga cual es: significa que hay que mirar las que NO comparten.
+
+      (2) SI SIGUEN SIN DISTINGUIRSE, MANDA EL VALOR. Si TODAS las empatadas
+          valen LO MISMO, aceptar es inofensivo (cualquiera da el mismo numero)
+          y se marca POR CONJUNTO como hasta ahora. Si valen DISTINTO, la guarda
+          NO PUEDE SABER cual es la buena, y entonces NO ACEPTA: devuelve
+          AMBIGUO para que el llamador lo cante nombrando las etiquetas y sus
+          valores. Ahi es donde una cifra cuadraba contra su vecina, y ahora es
+          ROJO en vez de verde.
+
+    Que esto se resuelve escribiendo la frase con una palabra que distinga, que
+    es lo que se le pide a la prosa: no bajar el listo, decir de cual se habla.
+
+    HONESTIDAD SOBRE EL PELDANO (1), porque medirlo es facil y presumir es
+    barato: la puntuacion ya premia por si sola a la etiqueta que trae la
+    palabra propia, asi que en la mayoria de los casos reales el empate se
+    deshace ANTES de llegar al peldano (1) y este no llega a dispararse. El
+    peldano (1) es una red para los empates donde otra etiqueta compensa con
+    palabras distintas. LO QUE DE VERDAD CIERRA EL AGUJERO ES EL PELDANO (2):
+    negarse a aceptar cuando las empatadas valen distinto. Se dice asi y no al
+    reves para que nadie lea de mas."""
     if not candidatas:
         return None
     if len(candidatas) == 1:
-        return candidatas[0][1], candidatas[0][0], "ETIQUETA"
+        return candidatas[0][1], candidatas[0][0], "ETIQUETA", candidatas
     pal_frase = _palabras(frase)
     puntuadas = [(len(_palabras(et) & pal_frase), et, val) for et, val in candidatas]
     mejor = max(p for p, _e, _v in puntuadas)
     empatadas = [(et, val) for p, et, val in puntuadas if p == mejor]
     if mejor > 0 and len(empatadas) == 1:
-        return empatadas[0][1], empatadas[0][0], "ETIQUETA"
-    for et, val in candidatas:
-        if val == numero:
-            return val, et, "CONJUNTO"
-    return candidatas[0][1], candidatas[0][0], "CONJUNTO"
+        return empatadas[0][1], empatadas[0][0], "ETIQUETA", empatadas
+
+    # (1) las palabras que SEPARAN a las EMPATADAS entre si (no a todas las
+    # candidatas: distinguir de una que ya quedo descartada no distingue nada)
+    disc = _discriminantes(empatadas)
+    con_disc = [(et, val) for et, val in empatadas if disc.get(et, set()) & pal_frase]
+    if len(con_disc) == 1:
+        return con_disc[0][1], con_disc[0][0], "ETIQUETA", empatadas
+
+    # (2) sin nada que las distinga, solo pasa si todas dicen el mismo numero
+    valores = set(val for _et, val in empatadas)
+    if len(valores) == 1:
+        et, val = empatadas[0]
+        return val, et, "CONJUNTO", empatadas
+    return None, None, "AMBIGUO", empatadas
 
 
 def ventana_amplia(frases, i):
@@ -1158,8 +1227,21 @@ def verificar(ruta_reporte, cierres_out=None, nomina_out=None):
             modo_cifra = None
             elegida = elegir_cifra_etiquetada(
                 cifras_etiquetadas(contenido_cita, unidad), frase, numero)
+            if elegida is not None and elegida[2] == "AMBIGUO":
+                # LA CIFRA NO PUEDE CUADRAR CONTRA LA ETIQUETA VECINA (vuelta
+                # 148, TAREA 2.2): dos etiquetas que la frase no distingue y que
+                # valen distinto no se pueden cotejar, y callarlo seria dar por
+                # buena la del vecino.
+                fallos.append(
+                    "linea %d: \"%d %s\" cita `%s`, pero la frase NO DISTINGUE entre %d "
+                    "etiquetas de esa unidad que valen DISTINTO (%s): la cifra podria estar "
+                    "cuadrando contra la etiqueta VECINA. Escribir en la frase una palabra "
+                    "que solo aparezca en la etiqueta de la que se habla" %
+                    (i, numero, unidad, fichero_cita, len(elegida[3]),
+                     ", ".join("'%s'=%d" % (e, v) for e, v in elegida[3])))
+                continue
             if elegida is not None:
-                contado, etiqueta_usada, modo_cifra = elegida
+                contado, etiqueta_usada, modo_cifra = elegida[0], elegida[1], elegida[2]
             else:
                 contado = contar_por_familia(familia, contenido_cita)
             if contado is None:

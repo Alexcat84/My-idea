@@ -1,0 +1,29 @@
+CANDIDATAS DE LA UNIDAD 'grafias' EN SALIDA_V147_3A_TRUNCACION_DOS_UNIDADES.txt, LEIDAS DEL FICHERO:
+   'grafias distintas del campo fuente WORK' = 67
+   'grafias de 31 por la sola longitud WORK' = 10
+   'grafias de 31 por la sola longitud vivas y canonicas WORK' = 7
+   'grafias de 31 por el detector vigente WORK' = 9
+   'grafias de 31 por el detector vigente vivas y canonicas WORK' = 6
+   'canonicas distintas de la tabla OP-S-11' = 54
+   'canonicas de 31 por la sola longitud' = 7
+   'canonicas de 31 por el detector vigente' = 6
+   'grafias que separan las dos unidades' = 1
+
+CASO A: puntuacion mayor=3, empatadas=2, valores=[7, 10]
+
+CASO B (regla VIEJA): acepta -> valor=10 etiqueta='grafias de 31 por la sola longitud WORK' modo='CONJUNTO'
+CASO C (regla de HOY): modo='AMBIGUO', empatadas nombradas=2
+
+PALABRAS QUE DISTINGUEN A LAS EMPATADAS ENTRE SI (propias de una y de ninguna otra):
+   'grafias de 31 por la sola longitud WORK' -> NINGUNA
+   'grafias de 31 por la sola longitud vivas y canonicas WORK' -> ['canonicas', 'vivas']
+
+CASO D (frase con la palabra discriminante 'canonicas'): modo='ETIQUETA' etiqueta='grafias de 31 por la sola longitud vivas y canonicas WORK' valor=7
+
+CASO E (mismas etiquetas, valores IGUALADOS a 67): modo='CONJUNTO' valor=67
+CASO F (una sola candidata): modo='ETIQUETA'
+
+VERDE: los seis casos se comportan. Sobre la pareja REAL que solo se diferencia en
+'vivas y canonicas', la regla VIEJA aceptaba el valor de la vecina y la de HOY
+devuelve AMBIGUO; una palabra que distinga devuelve el cotejo al camino FUERTE;
+igualados los valores vuelve a ser inofensivo; y una sola candidata sigue igual.
