@@ -160,6 +160,14 @@ VIEJAS = [
     ("vuelta145_2a_mutacion_ancla_unica.py", False),
     ("vuelta145_2b_mutacion_arneses.py", False),
     ("vuelta145_2c_mutacion_censo.py", False),
+    # LA VIGESIMA, ANADIDA EN LA VUELTA 146 (TAREA 2.e), por la MISMA regla con
+    # la coletilla de la CORRECCION 22: entra el dia que nace y CON SUJETO
+    # CONGELADO. Su caso que manda, el (A), corre la guarda de ausencias sobre
+    # `a9b638ba:docs/loop/REPORTE.md`, el reporte de la vuelta 145 TAL COMO SE
+    # COMMITEO, leido con `git show`: no es un sujeto fabricado para la ocasion,
+    # es el texto que fallo. Los otros tres se fabrican EN TEMPORAL y se borran
+    # siempre (P.16). No admite --sujeto.
+    ("vuelta146_2b_mutacion_ausencias.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

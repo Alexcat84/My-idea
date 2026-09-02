@@ -1,0 +1,31 @@
+(A) CASO ROJO, sujeto congelado a9b638ba:docs/loop/REPORTE.md
+    exit 1 (se esperaba 1) | nombra la afirmacion de la 3.c: True
+      AUSENCIA SIN BARRIDO: 'MOTIVO: no existe en el repositorio ninguna lista canonica de libros con sus' (dispara por no existe) no cita ningun SALIDA_V<N>_*.txt en su ventan
+    VEREDICTO: OK
+
+(B) CASO VERDE, ausencia respaldada por SALIDA_V146_2C_BARRIDO_VERDE.txt
+    exit 0 (se esperaba 0)
+      VERDE EXIT 0: las 1 afirmacion(es) de ausencia vistas vienen respaldadas por un barrido exhaustivo sellado.
+      COBERTURA DE AUSENCIAS: 1 vistas / 1 respaldadas / 0 en rojo | vocabulario de 12 formulas
+    VEREDICTO: OK
+
+(C) MUTACION DEL VERDE: la misma frase citando SALIDA_V146_MOTOR_APERTURA.txt, que existe y NO es barrido
+    exit 1 (se esperaba 1) | nombra el fichero y la marca que le falta: True
+      AUSENCIA MAL RESPALDADA: 'Barrido en `SALIDA_V146_MOTOR_APERTURA.txt`: el control A2.6 **no existe** en el codigo.' (dispara por no existe) cita SALIDA_V146_MOTOR_APERTURA.txt, y ninguno es un barrido
+    VEREDICTO: OK
+
+(D) LA CITA CONGELADA SE COMPRUEBA CONTRA SU REF
+    D.1 texto inventado dentro del bloque: exit 1 (se esperaba 1) | lo nombra: True
+      CITA CONGELADA a9b638ba:docs/loop/REPORTE.md: esta linea dispara el vocabulario y NO esta en ese blob, asi que no es una cita: 'no existe ninguna cosa que este texto se acaba de inventar'
+    D.2 contraprueba, la linea REAL del blob elegida por computo: exit 0 (se esperaba 0)
+      linea usada: 'MOTIVO: no existe en el repositorio ninguna lista canonica de libros con sus'
+    VEREDICTO: OK
+
+==============================================================================
+  A caso rojo sobre el reporte congelado de la 145               OK
+  B caso verde con barrido sellado detras                        OK
+  C el sello del barrido muerde, no solo la falta de cita        OK
+  D la cita congelada se comprueba contra su ref                 OK
+
+CASOS QUE MUERDEN: 4 de 4
+EXITCODE: 0
