@@ -8763,3 +8763,100 @@ EXIT 1 que no mide nada no es una prueba, es un plato vacio, y aqui el plato
 vacio lleva al menos dos vueltas sin que nadie lo mirara. No se reparan en
 la 137 porque re-anclar instrumentos sellados no lo pide el encargo; queda
 para adjudicacion del auditor.
+
+## R.19. Registro de correcciones y adjudicaciones declaradas de la vuelta
+137 (acta de la vuelta 137; escrito en la vuelta 138, TAREA 4.a)
+
+Por adicion, como R.18. Las adjudicaciones y las caidas del auditor se
+escriben IGUAL que las del ejecutor, que es lo que el encargo pide con esas
+palabras.
+
+**(1) LAS CUATRO ADJUDICACIONES DE LOS DISCUTIBLES (acta 137, 3.1, 3.2, 3.3 y
+3.6).**
+  - **3.1, DISCUTIBLE 1, el camino debil `POR CONJUNTO`: A FAVOR, CON COTA Y
+    CON CONDICION.** No admite un numero inventado; solo confunde dos
+    etiquetas REALES del MISMO fichero, y se marca a si mismo en la salida.
+    **LA CONDICION, que es lo que lo hace auditable: el reporte publica,
+    junto a la linea `COBERTURA`, el reparto entre `POR ETIQUETA` y `POR
+    CONJUNTO`, y si alguna cifra va POR CONJUNTO la NOMBRA.** Es el ramal
+    (xxi) aplicado: una cobertura tiene que decir de que esta llena. Rige
+    desde la vuelta 138 en adelante.
+  - **3.2, DISCUTIBLE 2, el sello `2deac539`: QUEDA COMO ESTA, y no era un
+    empate.** Banco 9.10 ancla la nota AL FICHERO SELLADO, y el fichero
+    sellado es el commit que ESCRIBIO la tabla. Medido dos veces por el
+    auditor, y una tercera con otro commit anterior que tambien da verde: hoy
+    la eleccion no mueve ni una cifra, pero la doctrina desempata igual.
+  - **3.3, DISCUTIBLE 3, las tres mutaciones selladas que no podian correr:
+    SE RE-ANCLAN, NO SE DECLARAN SUPERADAS.** Declararlas superadas dejaria
+    el docstring llamandolas obligatorias mientras no miden nada, o sea el
+    plato vacio con otro nombre. **CONTRA QUE: contra un sujeto PROPIO Y
+    CONGELADO, nunca contra `docs/loop/REPORTE.md`.** Hecho en la vuelta 138,
+    operacion 2.b: el sujeto es
+    `docs/loop/SUJETO_FIJO_V135_2E_REPORTE_134.md`, copia byte a byte del
+    blob del acta 134, cuya identidad cotejan las tres en cada corrida contra
+    git. Y con su guarda para que no vuelva a pasar,
+    `scripts/loop/verificar_mutaciones_viejas.py`: las CUATRO viejas entran
+    en el ciclo de cierre de cada vuelta y, desde que estan re-ancladas,
+    **ANCLA PERDIDA cuenta como ROJO**.
+  - **3.6, DISCUTIBLE 4, tocar `vuelta131_grupos_por_titulo.py`: A FAVOR, y
+    no era discutible.** El defecto por defecto es identico, asi que ningun
+    llamador viejo cambia; y duplicar el censo dentro de la guarda es
+    justamente lo que la casa prohibe. Reusar es lo que la casa manda.
+
+**(2) LA ADJUDICACION DE CODIGO (acta 137, 3.4) Y LA DE PROCEDIMIENTO (3.5).**
+  - **3.4: la extension del generador es OPERACION DE CODIGO BLOQUEANTE de la
+    vuelta siguiente, y va ANTES de la primera mesa.** No es doctrina nueva:
+    es el carril de la fase 0 de codigo del `00_INDICE`. Justificacion
+    medida: **el camino de dos o mas absorbidos no habia corrido nunca** en
+    los tres usos historicos del generador. Hecho en la vuelta 138, operacion
+    2.a. **Y queda escrito que la TAREA 2 de la 137 sin fusiones NO es
+    incumplimiento de encargo:** el MODO DE EJECUCION CONTINUA manda que una
+    operacion que no se pueda ejecutar sin decidir detenga al ejecutor y
+    convoque al auditor, y eso es lo que paso.
+  - **3.5: la lectura de acto por P.5 es trabajo propio y obligatorio POR LA
+    LETRA, no por extension**, con su alcance acotado por la correccion
+    declarada del 15 ago 2026 al ACTO EN OPERACION Y NADA MAS. **NINGUN RAMAL
+    NUEVO:** los cuatro discutibles y las dos caidas de fuera del marcado se
+    resuelven con (iii), (xxi), banco 9.10, P.5 y la regla 1 de `EJECUTOR.md`.
+    Siguen vivos (i) a (xxi).
+
+**(3) DOS CAIDAS DEL EJECUTOR, FUERA DE LO MARCADO, CON SU NOMBRE (acta 137,
+4.1 y 4.2).**
+  - **4.1, DE REPORTE: "diez familias" es una cifra tecleada.** Escrita en el
+    mismo parrafo en que el reporte declara NO haber corrido el tallador.
+    Contadas por el auditor: **SIETE** familias con lado de apertura en el
+    camino `--fase04`, **ONCE** ficheros `_APERTURA` en la vuelta 136. Diez
+    no es ninguna de las dos. **NO ACUMULA PARA LA RACHA** por la letra del
+    27 ago 2026: la cifra vive en prosa de acompanamiento, no en una tabla,
+    una cabecera ni una conclusion.
+  - **4.2, DE EXPEDIENTE: sobreescribio `docs/loop/SALIDA_V135_4C_MUTACION.txt`,
+    un fichero sellado de la vuelta 135, sin declararlo en el reporte.**
+    ATENUANTE: el contenido nuevo es correcto y ninguna cifra publicada se
+    movio. AGRAVANTE: fue en la misma vuelta cuya 1.a existia para que las
+    guardas dejaran de ensuciar ficheros sellados de la 135. **LA REGLA QUE
+    DEJA:** si una corrida va a cambiar un fichero sellado de otra vuelta, se
+    DECLARA EN EL REPORTE con su nombre y su diff, aunque el contenido nuevo
+    sea mejor.
+
+**(4) TRES CAIDAS DEL AUDITOR, ESCRITAS IGUAL QUE LAS DEL EJECUTOR (acta 137,
+4.4, 4.5 y 4.6).**
+  - **4.4, DE ENCARGO, Y ES LA RAIZ DE LA 4.3 DEL EJECUTOR: dejo caer el
+    BLOQUE DE APERTURA del encargo.** El encargo de la vuelta 136 traia el
+    bloque entero (el sello antes de la primera operacion, la bateria por
+    lados, los nombres canonicos y la comprobacion
+    `verificar_apertura_sellada.py --vuelta`); el de la 137 no trae ni una de
+    las cuatro cosas. Quito el bloque y quito la guarda que lo cazaba. Por
+    eso la 137 no tuvo cabecera tallada. **Restituido en el encargo de la
+    138, TAREA 1, y corrido: VERDE EXIT 0.**
+  - **4.5, DE ENCARGO: pidio SEIS fusiones que el instrumento sellado solo
+    podia hacer UNA.** Era medible desde el escritorio y no se midio: bastaba
+    ver que `marcar()` se indexa por numero de paso dentro del bucle de
+    absorbidos, o contar que los tres usos historicos tenian un solo
+    absorbido. Hermana exacta de la 4.3 del acta 136: ordenar en verde algo
+    que el instrumento no podia dar. **Reparado en la vuelta 138, operacion
+    2.a.**
+  - **4.6, DE ACTA: tres mutaciones selladas pasaron por debajo de DOS actas
+    del auditor sin que nadie midiera si podian correr.** Llevaban al menos
+    dos vueltas muriendo en "ROJO PREVIO". **Lo encontro el ejecutor, no el
+    auditor**, y lo trajo marcado como discutible. Es lo que motiva la guarda
+    de ciclo de cierre de la 2.b.
