@@ -1,0 +1,143 @@
+TAREA 3.c, PARES 1 A 5: POR QUE OP-E-04 NO SE EJECUTA, MEDIDO CON LOS INSTRUMENTOS DE LA CASA Y NO AFIRMADO.
+
+=== (A) EL ESCRITOR DE ARISTAS DE LA CASA SOBRE OP-E-04, EN MODO SIMULAR (cero escrituras) ===
+Comando: python scripts/loop/vuelta140_3_escribir_aristas.py --op OP-E-04
+==============================================================================
+ESCRITURA DE ARISTAS DE OP-E-04 . MODO SIMULAR
+==============================================================================
+tipo de la ficha        : ENLACE
+ENLACE MUTUO (del tipo) : False
+aristas de la ficha     : 9 cadena(s), 9 par(es) dirigido(s)
+
+arista de la ficha: gestion_portafolio_dos_niveles -> estructura_gates
+  RESUELTA POR ALIAS y se declara: gestion_portafolio_dos_niveles -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, YA PRESENTE hoy: se SALTA y se declara (escribirla seria fabricar una duplicada)
+
+arista de la ficha: requisitos_gates_con_dientes -> portfolio_management
+  RESUELTA POR ALIAS y se declara: sistema_gates_go_kill -> portfolio_management  (origen RESUELTO, destino directo)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, YA PRESENTE hoy: se SALTA y se declara (escribirla seria fabricar una duplicada)
+
+arista de la ficha: requisitos_gates_con_dientes -> revision_portafolio_periodica
+  RESUELTA POR ALIAS y se declara: sistema_gates_go_kill -> revision_portafolio_periodica  (origen RESUELTO, destino directo)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION: ROJO (la inversa revision_portafolio_periodica -> sistema_gates_go_kill ya existe)
+
+arista de la ficha: requisitos_gates_con_dientes -> gestion_portafolio_foco
+  RESUELTA POR ALIAS y se declara: sistema_gates_go_kill -> gestion_portafolio_foco  (origen RESUELTO, destino directo)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION (o MUTUO declarado en la ficha): OK
+  guarda 6, cero duplicadas NUEVAS tras resolver: OK (preexistentes: sistema_gates_go_kill.nodos_siguientes 1, gestion_portafolio_foco.nodos_previos 0; tras escribir: 1 y 0)
+  sistema_gates_go_kill.nodos_siguientes: 15 -> 16
+  gestion_portafolio_foco.nodos_previos   : 1 -> 2
+
+arista de la ficha: portfolio_management -> gates_go_kill_decision_points
+  RESUELTA POR ALIAS y se declara: portfolio_management -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION: ROJO (la inversa sistema_gates_go_kill -> portfolio_management ya existe)
+
+arista de la ficha: gestion_portafolio_formal -> gates_go_kill_decision_points
+  RESUELTA POR ALIAS y se declara: gestion_portafolio_formal -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, YA PRESENTE hoy: se SALTA y se declara (escribirla seria fabricar una duplicada)
+
+arista de la ficha: gestion_portafolio_dos_niveles -> gates_go_kill_decision_points
+  RESUELTA POR ALIAS y se declara: gestion_portafolio_dos_niveles -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, YA PRESENTE hoy: se SALTA y se declara (escribirla seria fabricar una duplicada)
+
+arista de la ficha: gestion_portafolio_foco -> gates_go_kill_decision_points
+  RESUELTA POR ALIAS y se declara: gestion_portafolio_foco -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION: ROJO (la inversa sistema_gates_go_kill -> gestion_portafolio_foco esta en el plan de esta corrida)
+
+arista de la ficha: decision_factory_mentality -> gates_go_kill_decision_points
+  RESUELTA POR ALIAS y se declara: decision_factory_mentality -> sistema_gates_go_kill  (origen directo, destino RESUELTO)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION (o MUTUO declarado en la ficha): OK
+  guarda 6, cero duplicadas NUEVAS tras resolver: OK (preexistentes: decision_factory_mentality.nodos_siguientes 0, sistema_gates_go_kill.nodos_previos 1; tras escribir: 0 y 1)
+  decision_factory_mentality.nodos_siguientes: 1 -> 2
+  sistema_gates_go_kill.nodos_previos   : 15 -> 16
+
+------------------------------------------------------------------------------
+RESUMEN: 9 par(es) de la ficha | 2 a escribir | 4 YA PRESENTES (saltadas) | 3 fallo(s)
+   YA PRESENTE: gestion_portafolio_dos_niveles -> sistema_gates_go_kill
+   YA PRESENTE: sistema_gates_go_kill -> portfolio_management
+   YA PRESENTE: gestion_portafolio_formal -> sistema_gates_go_kill
+   YA PRESENTE: gestion_portafolio_dos_niveles -> sistema_gates_go_kill
+
+SE ABORTA SIN ESCRIBIR NADA, 3 fallo(s):
+   [ROJO] sistema_gates_go_kill -> revision_portafolio_periodica: la direccion contraria ya existe y la ficha NO dice MUTUO
+   [ROJO] portfolio_management -> sistema_gates_go_kill: la direccion contraria ya existe y la ficha NO dice MUTUO
+   [ROJO] gestion_portafolio_foco -> sistema_gates_go_kill: la direccion contraria va en esta misma corrida existe y la ficha NO dice MUTUO
+EXITCODE ESCRITOR: 1
+
+=== (B) EL RETIRO DEL PAR 5 (el giro de LD-42), EN MODO SIMULAR ===
+Comando: python scripts/loop/vuelta141_3_retirar_vuelta.py --de revision_portafolio_periodica --a sistema_gates_go_kill --por-la-op OP-E-04
+==============================================================================
+RETIRO DE LA VUELTA | MODO: SIMULAR
+==============================================================================
+
+GUARDA 1, LOS DOS EXTREMOS RESUELTOS (P.1) Y VIVOS:
+   revision_portafolio_periodica -> resuelve a revision_portafolio_periodica | existe True | vivo True
+   sistema_gates_go_kill -> resuelve a sistema_gates_go_kill | existe True | vivo True
+GUARDA 2, CERO AUTO-ARISTAS: OK, revision_portafolio_periodica != sistema_gates_go_kill
+GUARDA 3, LA VUELTA EXISTE HOY (dos vistas): revision_portafolio_periodica -> sistema_gates_go_kill : PRESENTE
+           y la IDA:                          sistema_gates_go_kill -> revision_portafolio_periodica : NO PRESENTE
+GUARDA 4, UNA OPERACION DEL PLAN PROHIBE LA VUELTA DE ESTE PAR:
+   SI. verificacion 0 de OP-E-04: 'UNA SOLA DIRECCION POR ENLACE, de la madre al hijo. La vuelta no debe existir ni literal ni resuelta, por la regla de la escalera'
+       y la IDA sistema_gates_go_kill -> revision_portafolio_periodica es una fila de OP-E-04
+GUARDA 5, LA IDA SIGUE PRESENTE AL TERMINAR: ROJO, el par quedaria sin ninguna arista
+
+GUARDA 6, EL GRADO TOTAL ANTES Y DESPUES (simulacion sobre copia en memoria):
+   entradas literales que se quitarian: de revision_portafolio_periodica.nodos_siguientes ['sistema_gates_go_kill'] | de sistema_gates_go_kill.nodos_previos ['revision_portafolio_periodica']
+   sig    antes   9230  despues   9229  delta -1
+   prev   antes   9204  despues   9203  delta -1
+   suma   antes  18434  despues  18432  delta -2
+   union  antes   9905  despues   9904  delta -1
+   PODA CORRECTA: la union baja en exactamente 1 y no sube.
+
+GUARDA 7, CERO DUPLICADAS Y CERO AUTO-ARISTAS NUEVAS TRAS RESOLVER.
+   LO QUE SE MIDE ES EL DELTA, NO EL TOTAL, y es la misma decision que la
+   guarda 6 de vuelta140_3_escribir_aristas.py ya tomo: las duplicadas que YA
+   ESTABAN se imprimen para que se vean, pero no bloquean, porque tienen dueno
+   escrito (OP-S-12, atadura 2 del 00_INDICE) y castigar a quien no las hizo
+   bloquea sin arreglar nada. Un RETIRO ademas no puede fabricar duplicadas:
+   solo quita entradas. Si el delta no es cero, algo muy raro paso.
+   revision_portafolio_periodica.nodos_siguientes: 3 -> 2 entradas
+      duplicadas YA PRESENTES (no bloquean, dueno OP-S-12): ninguna
+      duplicadas NUEVAS: ninguna | auto-aristas NUEVAS: ninguna
+   sistema_gates_go_kill.nodos_previos: 15 -> 14 entradas
+      duplicadas YA PRESENTES (no bloquean, dueno OP-S-12): ['gestion_portafolio_formal']
+      duplicadas NUEVAS: ninguna | auto-aristas NUEVAS: ninguna
+
+ROJO, 1 guarda(s) caen. NO SE ESCRIBE NADA (ni siquiera en modo --ejecutar):
+   la ida sistema_gates_go_kill -> revision_portafolio_periodica no esta presente: retirar la vuelta dejaria el par suelto
+EXITCODE RETIRO: 1
+
+=== (C) EL ARBOL, TRAS LAS DOS SIMULACIONES: TIENE QUE ESTAR LIMPIO ===
+(fin del status; vacio = cero escrituras)
