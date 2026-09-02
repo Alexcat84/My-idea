@@ -1,0 +1,98 @@
+==============================================================================
+LA TRUNCACION A 31, MEDIDA CON LAS DOS UNIDADES. Vuelta 147, TAREA 3.a.
+Relectura AL DOBLE del tramo de la 3.f de la 146 (caida 4.1 del acta 146,
+de CIFRA PUBLICADA y FUERA de lo marcado).
+==============================================================================
+
+UNIVERSO 1: dataset/metadata/master_graph.json (WORK), campo `fuente`,
+            TODAS las posiciones, separador ' | '.
+  nodos del grafo: 3853
+  grafias distintas del campo fuente: 67
+
+  UNIDAD A, LA SOLA LONGITUD (len(titulo) == 31)
+    grafias que la cumplen: 10
+      Change by Design, Revised and U - Tim Brown          vivos=73   depre=5    [VIVA y CANONICA]
+      Co-Intelligence_ Living and Wor - Ethan Mollick      vivos=39   depre=12   [VIVA y CANONICA]
+      Essentials of Supply Chain Mana - Michael H. Hugos   vivos=0    depre=1    [ni viva ni canonica]
+      Guia de empaque para transporte                      vivos=1    depre=0    [VIVA y CANONICA]
+      Juran's Quality Handbook_ The C - Joseph A. Defeo    vivos=459  depre=111  [VIVA y CANONICA]
+      Managing the Risks of Organizat - Reason, J. T_      vivos=90   depre=22   [VIVA y CANONICA]
+      The Field Guide to Understandin - Dekker, Sidney     vivos=102  depre=1    [VIVA y CANONICA]
+      The Field Guide to Understandin - Dekker, Sidney;    vivos=0    depre=15   [ni viva ni canonica]
+      The Green to Gold Business Play - Daniel C. Esty     vivos=209  depre=33   [VIVA y CANONICA]
+      The Hard Thing About Hard Thing - Ben Horowitz       vivos=0    depre=5    [ni viva ni canonica]
+    de ellas VIVAS (vivos > 0): 7
+      Change by Design, Revised and U - Tim Brown
+      Co-Intelligence_ Living and Wor - Ethan Mollick
+      Guia de empaque para transporte
+      Juran's Quality Handbook_ The C - Joseph A. Defeo
+      Managing the Risks of Organizat - Reason, J. T_
+      The Field Guide to Understandin - Dekker, Sidney
+      The Green to Gold Business Play - Daniel C. Esty
+    de ellas VIVAS Y CANONICAS de la tabla de OP-S-11: 7
+      Change by Design, Revised and U - Tim Brown
+      Co-Intelligence_ Living and Wor - Ethan Mollick
+      Guia de empaque para transporte
+      Juran's Quality Handbook_ The C - Joseph A. Defeo
+      Managing the Risks of Organizat - Reason, J. T_
+      The Field Guide to Understandin - Dekker, Sidney
+      The Green to Gold Business Play - Daniel C. Esty
+
+  UNIDAD B, EL DETECTOR VIGENTE (31 CON RESTO NO VACIO)
+    grafias que la cumplen: 9
+      Change by Design, Revised and U - Tim Brown          vivos=73   depre=5    [VIVA y CANONICA]
+      Co-Intelligence_ Living and Wor - Ethan Mollick      vivos=39   depre=12   [VIVA y CANONICA]
+      Essentials of Supply Chain Mana - Michael H. Hugos   vivos=0    depre=1    [ni viva ni canonica]
+      Juran's Quality Handbook_ The C - Joseph A. Defeo    vivos=459  depre=111  [VIVA y CANONICA]
+      Managing the Risks of Organizat - Reason, J. T_      vivos=90   depre=22   [VIVA y CANONICA]
+      The Field Guide to Understandin - Dekker, Sidney     vivos=102  depre=1    [VIVA y CANONICA]
+      The Field Guide to Understandin - Dekker, Sidney;    vivos=0    depre=15   [ni viva ni canonica]
+      The Green to Gold Business Play - Daniel C. Esty     vivos=209  depre=33   [VIVA y CANONICA]
+      The Hard Thing About Hard Thing - Ben Horowitz       vivos=0    depre=5    [ni viva ni canonica]
+    de ellas VIVAS (vivos > 0): 6
+      Change by Design, Revised and U - Tim Brown
+      Co-Intelligence_ Living and Wor - Ethan Mollick
+      Juran's Quality Handbook_ The C - Joseph A. Defeo
+      Managing the Risks of Organizat - Reason, J. T_
+      The Field Guide to Understandin - Dekker, Sidney
+      The Green to Gold Business Play - Daniel C. Esty
+    de ellas VIVAS Y CANONICAS de la tabla de OP-S-11: 6
+      Change by Design, Revised and U - Tim Brown
+      Co-Intelligence_ Living and Wor - Ethan Mollick
+      Juran's Quality Handbook_ The C - Joseph A. Defeo
+      Managing the Risks of Organizat - Reason, J. T_
+      The Field Guide to Understandin - Dekker, Sidney
+      The Green to Gold Business Play - Daniel C. Esty
+
+  LA DIFERENCIA ENTRE LAS DOS UNIDADES, NOMBRADA UNA A UNA: 1 grafia(s)
+      Guia de empaque para transporte  titulo de 31 car, RESTO VACIO
+
+UNIVERSO 2: docs/plan/OP_S_11_MAPEO_PROPUESTO.md, LA TABLA CANONICA
+            DIRECTAMENTE (camino independiente, no pasa por el grafo).
+  filas grafia a canonica en la tabla: 129
+  canonicas distintas: 54
+  canonicas con titulo de 31 por LA SOLA LONGITUD: 7
+      Change by Design, Revised and U - Tim Brown
+      Co-Intelligence_ Living and Wor - Ethan Mollick
+      Guia de empaque para transporte
+      Juran's Quality Handbook_ The C - Joseph A. Defeo
+      Managing the Risks of Organizat - Reason, J. T_
+      The Field Guide to Understandin - Dekker, Sidney
+      The Green to Gold Business Play - Daniel C. Esty
+  canonicas con titulo de 31 por EL DETECTOR VIGENTE: 6
+      Change by Design, Revised and U - Tim Brown
+      Co-Intelligence_ Living and Wor - Ethan Mollick
+      Juran's Quality Handbook_ The C - Joseph A. Defeo
+      Managing the Risks of Organizat - Reason, J. T_
+      The Field Guide to Understandin - Dekker, Sidney
+      The Green to Gold Business Play - Daniel C. Esty
+
+CIFRA grafias distintas del campo fuente WORK: 67 grafias
+CIFRA grafias de 31 por la sola longitud WORK: 10 grafias
+CIFRA grafias de 31 por la sola longitud vivas y canonicas WORK: 7 grafias
+CIFRA grafias de 31 por el detector vigente WORK: 9 grafias
+CIFRA grafias de 31 por el detector vigente vivas y canonicas WORK: 6 grafias
+CIFRA canonicas distintas de la tabla OP-S-11: 54 grafias
+CIFRA canonicas de 31 por la sola longitud: 7 grafias
+CIFRA canonicas de 31 por el detector vigente: 6 grafias
+EXITCODE: 0
