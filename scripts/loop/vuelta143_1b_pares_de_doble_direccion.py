@@ -109,6 +109,12 @@ def main():
                  ",".join(str(x) for x in idx_i), ",".join(str(x) for x in idx_v)))
 
     print("")
+    # LINEAS `CIFRA <etiqueta>: <n> <unidad>` para que verificar_cifras_del_reporte.py
+    # pueda COTEJAR estas cifras contra este fichero (unidades `par` y `arista`).
+    # Sin ellas, una cifra de este instrumento publicada en el reporte no tiene
+    # convencion mecanica de conteo y la guarda no la puede ver.
+    print("CIFRA pares con las dos direcciones: %d pares" % len(hallados))
+    print("CIFRA aristas de esos pares: %d aristas" % (2 * len(hallados)))
     print("PARES CON LAS DOS DIRECCIONES: %d" % len(hallados))
     print("ARISTAS QUE ESO SUPONE (2 por par): %d" % (2 * len(hallados)))
     print("FICHAS DEL PLAN CON aristas_nuevas NO VACIO: %d de %d" % (fichas_con_aristas, len(ops)))

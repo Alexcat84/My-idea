@@ -1,8 +1,8 @@
-BASE (sin mutar): catalogo 16 | cumplido 13 | sin cumplir 3 | fallos 0
-BASE, SIN CUMPLIR: OP-M-01, OP-M-04, OP-E-04
+BASE (sin mutar): catalogo 16 | cumplido 15 | sin cumplir 1 | fallos 0
+BASE, SIN CUMPLIR: OP-M-04
 
 MUTACION 2.a.i: LA VUELTA QUE NACE (sujeto elegido POR COMPUTO).
-   sujeto computado: OP-M-01-ESLABONES, direccion stage_gate_system -> sistema_gates_go_kill; la vuelta que se mete es sistema_gates_go_kill -> stage_gate_system
+   sujeto computado: OP-E-04, direccion sistema_gates_go_kill -> revision_portafolio_periodica; la vuelta que se mete es revision_portafolio_periodica -> sistema_gates_go_kill
    VERDE  2.a.i la operacion sale NOMBRADA en SIN CUMPLIR | obtenido=True esperado=True
    VERDE  2.a.i la cifra de cumplido BAJA | obtenido=True esperado=True
    VERDE  2.a.i la celda nombra la vuelta metida | obtenido=True esperado=True
@@ -40,6 +40,8 @@ PRUEBA DE MUTACION DEL PROPIO ARNES: se cambia el valor esperado de CADA
 comprobacion y se RE-EVALUA la comparacion contra el MISMO valor obtenido.
 La que siga verde con el esperado cambiado no puede fallar nunca y sale ROJA
 aqui (EJECUTOR.md regla 1, 'EL CASO ROJO SE PRUEBA POR MUTACION').
+CIFRA comprobaciones corridas: 17 comprobaciones
+CIFRA comprobaciones verdes: 17 comprobaciones
    comprobaciones corridas: 17 | verdes: 17 | caen con el esperado mutado: 17
 
 VERDE: las 17 comprobaciones pasan, y las 17 caen al mutarles el esperado.

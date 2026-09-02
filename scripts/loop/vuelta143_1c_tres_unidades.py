@@ -80,6 +80,14 @@ def main():
             n5.append(x)
 
     print("")
+    # LINEAS `CIFRA <etiqueta>: <n> <unidad>` para que verificar_cifras_del_reporte.py
+    # pueda COTEJAR estas cifras contra este fichero. `fila` y `direccion` no
+    # tienen convencion mecanica de conteo: solo cotejan contra una linea CIFRA.
+    print("CIFRA filas sobre las cinco remitidas: %d filas" % tot5[1])
+    print("CIFRA direcciones sobre las cinco remitidas: %d direcciones" % tot5[2])
+    print("CIFRA filas sobre las seis del catalogo: %d filas" % tot6[1])
+    print("CIFRA direcciones sobre las seis del catalogo: %d direcciones" % tot6[2])
+    print("")
     print("UNIVERSO 1, LAS REMITIDAS POR %s: %d operaciones (%s)"
           % (T.REL_ENLACES, len(n5), ", ".join(n5)))
     print("   ENTRADAS %d | FILAS %d | DIRECCIONES %d" % tuple(tot5))

@@ -412,6 +412,12 @@ def main():
         sigue_verde = (obtenido == esperado_mutado)
         if sigue_verde:
             no_caen.append(nombre)
+    # LINEA `CIFRA <etiqueta>: <n> <unidad>` para que verificar_cifras_del_reporte.py
+    # pueda COTEJAR esta cifra contra este fichero: `comprobacion` no tiene
+    # convencion mecanica de conteo y solo coteja contra una linea CIFRA.
+    print("CIFRA comprobaciones corridas: %d comprobaciones" % len(_resultados))
+    print("CIFRA comprobaciones verdes: %d comprobaciones"
+          % sum(1 for r in _resultados if r[3]))
     print("   comprobaciones corridas: %d | verdes: %d | caen con el esperado mutado: %d"
           % (len(_resultados), sum(1 for r in _resultados if r[3]),
              len(_resultados) - len(no_caen)))
