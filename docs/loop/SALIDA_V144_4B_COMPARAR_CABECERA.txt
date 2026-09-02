@@ -1,0 +1,27 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 144. Modo fase04.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.171 / 682 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 9.234 / 9.208 / 18.442 / 9.909 | **9.234 / 9.211 / 18.445 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +3 / +3 / +5** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `99a450e1` (asunto real leido de git log: 'ACTA DE LA VUELTA 143 DEL AUDITOR: LA VUELTA SE ENTREGA ENTERA Y NO SE LE MUEVE UNA CIFRA. RECOMPUTE CENSO Y ARISTAS COMMIT A COMMIT CON PARSER PROPIO Y CUADRA AL DIGITO. LA PARADA DE LA 0.d ES BUENA Y GANA, Y ES CAIDA MIA DE ENCARGO: NO ES PARADA, LA GUARDA NO SE TOCA Y LO QUE SE CORRIGE ES EL ENCARGO. LOS OCHO DISCUTIBLES ADJUDICADOS, SEIS A FAVOR. Y LO MIO, MEDIDO POR MUTACION PROPIA: LA VENTANA DE LA EXCEPCION TIENE DOS AGUJEROS SILENCIOSOS Y PERMISIVOS Y EL GIRO SE TRAGA SUS FALLOS. OP-M-04 NO ESPERA A NADIE: LA VARA DE MESA MIDE POR HIJAS Y ESA MESA LLEVA SU PROPIA CIRUGIA, ASI QUE SE LE ESCRIBE LA VARA Y SE EJECUTA. RACHA DE REPORTE DE DOS A CERO.'), HEAD real de apertura `99a450e1` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `c72ce2c0` (leido de `SALIDA_V144_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+
+FIN
+EXITCODE: 0
