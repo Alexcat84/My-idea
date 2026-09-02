@@ -1,0 +1,31 @@
+MUTACION DE LA TAREA 2.d | vuelta 144
+Todo EN MEMORIA, cero escrituras. Sujeto: docs/loop/REPORTE.md del arbol.
+==============================================================================
+(A) LINEA BASE: 1 unidad(es) fuera del vocabulario
+     mesas
+
+LA LINEA QUE SE PEGA (producida, no tecleada), 107 caracteres:
+     COBERTURA: 1 cotejadas / 0 exentas / 1 cifras | unidades vistas FUERA del vocabulario: 1 palabra(s) [mesas]
+
+(B) PEGADA DENTRO DE LOS DELIMITADORES: 1 unidad(es)
+     la cifra se mueve: False (entran ninguna, salen ninguna)
+     VEREDICTO: OK
+
+(C) CONTRAPRUEBA, PEGADA SIN DELIMITADORES: 5 unidad(es)
+     la cifra SUBE: True (entran ['cifras', 'cotejadas', 'exentas', 'palabra'])
+     VEREDICTO: OK
+
+(D) FALLO RUIDOSO CON UNA SOLA MARCA:
+     solo la marca de APERTURA -> OK
+        el reporte trae UNA SOLA de las dos marcas del bloque de cobertura pegado: falta '<!-- FIN COBERTURA DE LA GUARDA -->'
+     solo la marca de CIERRE -> OK
+        el reporte trae UNA SOLA de las dos marcas del bloque de cobertura pegado: falta '<!-- COBERTURA DE LA GUARDA -->'
+     VEREDICTO: OK
+
+==============================================================================
+  (B) dentro de los delimitadores, la cifra NO se mueve OK
+  (C) sin delimitadores, la cifra SI sube          OK
+  (D) una sola marca es ROJO y la nombra           OK
+
+COMPROBACIONES QUE MUERDEN: 3 de 3
+EXITCODE: 0

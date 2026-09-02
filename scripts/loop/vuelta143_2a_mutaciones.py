@@ -127,7 +127,22 @@ def main():
     sujeto = None
     exceptuados = set()
     for op in enlaces:
-        conj, cita, nomina = T.pares_exceptuados_de(op, resolver, [])
+        # LOS FALLOS SE RECOGEN Y CANTAN (TAREA 2.b, vuelta 144). Antes se
+        # tiraban: un parseo roto dejaba `conj` vacio, la ficha se saltaba en
+        # silencio y el arnes acababa diciendo "OMITIDO POR FALTA DE SUJETO"
+        # como si ninguna ficha disparara la excepcion, cuando lo que pasaba era
+        # que la lectura habia fallado. Son dos cosas distintas y se dicen
+        # distinto.
+        fallos_exc_lectura = []
+        conj, cita, nomina = T.pares_exceptuados_de(op, resolver, fallos_exc_lectura)
+        if fallos_exc_lectura:
+            print("")
+            print("ROJO: no se pudo leer la excepcion de %s (%d fallo(s)):"
+                  % (op.get("id_op"), len(fallos_exc_lectura)))
+            for f in fallos_exc_lectura:
+                print("   %s" % f)
+            print("SIN LECTURA FIABLE NO SE ELIGE SUJETO. ESO ES ROJO, no verde.")
+            return 1
         if conj:
             sujeto, exceptuados, cita_exc, nomina_exc = op, conj, cita, nomina
             break

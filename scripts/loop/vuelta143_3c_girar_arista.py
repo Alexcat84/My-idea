@@ -219,7 +219,25 @@ def main():
         return 1
 
     # ---- (5) el par NO esta exceptuado ------------------------------------
-    exceptuados, cita_exc, nomina_exc = T.pares_exceptuados_de(op, resolver, [])
+    # LOS FALLOS DEL PARSER SE RECOGEN Y ABORTAN (TAREA 2.b, vuelta 144; acta
+    # 143, adjudicacion 3.3 y caida de la casa 4.4). Hasta la vuelta 143 esta
+    # llamada pasaba una lista literal vacia y TIRABA los fallos: si el parseo
+    # de la excepcion fallaba, el conjunto salia vacio, `exceptuado` salia
+    # False, la guarda 5 decia OK y EL GIRO PROCEDIA A BORRAR UNA ARISTA. De
+    # los tres instrumentos que leen la excepcion, este era el unico que se
+    # comia sus fallos, y es el unico que DESTRUYE. Ahora hace lo mismo que
+    # vuelta140_3_escribir_aristas.py:149-164: los recoge, los imprime y aborta
+    # con ellos, ANTES de tocar nada.
+    fallos_exc = []
+    exceptuados, cita_exc, nomina_exc = T.pares_exceptuados_de(op, resolver, fallos_exc)
+    if fallos_exc:
+        print("guarda 5, la lectura de la excepcion de la ficha: ROJO, %d fallo(s)"
+              % len(fallos_exc))
+        for f in fallos_exc:
+            print("   %s" % f)
+        print("   NO se puede saber si el par esta exceptuado, y un giro BORRA una arista.")
+        print("SE ABORTA SIN ESCRIBIR NADA.")
+        return 1
     exceptuado = frozenset((rd, rh)) in exceptuados
     print("guarda 5, el par NO esta exceptuado por la ficha: %s"
           % ("ROJO" if exceptuado else "OK"))

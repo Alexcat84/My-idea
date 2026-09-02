@@ -1,0 +1,43 @@
+MUTACIONES DE LA TAREA 2.a | vuelta 144 | FASE 06_MESAS
+Todo EN MEMORIA, cero escrituras. Sujeto y veredictos POR COMPUTO.
+==============================================================================
+SUJETO ELEGIDO POR COMPUTO: OP-E-04, verificacion 5 (2869 caracteres)
+   excepcion disparada por: verificacion 5: excepcion del 9.22 para los pares mutuos nombrados
+   pares que saca la ficha entera: 4
+
+(iv) CONTRAPRUEBA, ficha entera y bien formada:
+     pares: 4 | fallos: 0
+       gestion_portafolio_dos_niveles <-> sistema_gates_go_kill
+       gestion_portafolio_foco <-> sistema_gates_go_kill
+       gestion_portafolio_formal <-> sistema_gates_go_kill
+       portfolio_management <-> sistema_gates_go_kill
+     VEREDICTO: OK
+
+(i) QUITADA LA MARCA DE CIERRE:
+     literal quitado de verdad: True
+     pares: 0 | fallos: 1 | el fallo NOMBRA la marca de cierre: True
+       FALLO: OP-E-04: dispara la excepcion del 9.22 (verificacion 5: excepcion del 9.22 para los pares mutuos nombrados) y abre la formula canonica con 'PARES EXCEPTUADOS:' pero NO la cierra con 'FIN PARES EXCEPTUADOS': la excepcion NO se aplica y la ventana NO se ensancha hasta el final de la linea
+     CONTRASTE con la lectura VIEJA sobre su propio literal de cierre: 5 pares y 0 fallos (EN SILENCIO)
+     VEREDICTO: OK
+
+(ii) QUITADA LA MARCA DE APERTURA:
+     literal quitado de verdad: True
+     pares: 0 | fallos: 1 | el fallo NOMBRA la marca de apertura: True
+       FALLO: OP-E-04: dispara la excepcion del 9.22 (verificacion 5: excepcion del 9.22 para los pares mutuos nombrados) pero su texto no trae la marca de apertura 'PARES EXCEPTUADOS:' de la formula canonica: la excepcion NO se aplica y no se adivina que pares nombra
+     CONTRASTE: la lectura VIEJA, sobre la ficha SIN mutar, anclaba en la primera ocurrencia de su literal viejo y sacaba 4 pares con 0 fallos
+     VEREDICTO: OK
+
+(iii) DUPLICADA LA MARCA DE APERTURA:
+     literal duplicado de verdad: True (ocurrencias en la linea mutada: 2)
+     pares: 0 | fallos: 1 | el fallo dice AMBIGUA: True
+       FALLO: OP-E-04: dispara la excepcion del 9.22 (verificacion 5: excepcion del 9.22 para los pares mutuos nombrados) y la marca de apertura 'PARES EXCEPTUADOS:' aparece 2 veces en la misma linea (posiciones 2768, 2787): ANCLA AMBIGUA, la excepcion NO se aplica y no se toma la primera
+     VEREDICTO: OK
+
+==============================================================================
+  (iv) contraprueba, ficha entera        OK     (4 pares y 0 fallos)
+  (i) sin marca de cierre                OK     (0 pares, 1 fallos, nombra la marca: True)
+  (ii) sin marca de apertura             OK     (0 pares, 1 fallos, nombra la marca: True)
+  (iii) marca de apertura duplicada      OK     (0 pares, 1 fallos, dice AMBIGUA: True)
+
+MUTACIONES QUE MUERDEN: 4 de 4
+EXITCODE: 0

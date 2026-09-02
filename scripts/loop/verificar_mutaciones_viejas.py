@@ -40,7 +40,8 @@ tres estaban desancladas y contarlo como fallo de la guarda habria sido mentir
 en la otra direccion. DESDE QUE ESTAN RE-ANCLADAS ESA DISTINCION SE ACABA: una
 mutacion que no encuentra su sujeto es una guarda que no mide, y aqui es ROJO.
 
-QUE COMPRUEBA. Corre las SIETE (la cifra sale de len(VIEJAS)) y exige EXIT 0 de
+QUE COMPRUEBA. Corre TODAS las de `VIEJAS` (la cifra sale de len(VIEJAS), nunca
+tecleada; en la vuelta 144 pasaron de SIETE a TRECE) y exige EXIT 0 de
 cada una, salvo los CASOS DECLARADOS de arriba. Clasifica:
   OK             . exit 0, la mutacion corrio y mordio.
   ANCLA PERDIDA  . la salida trae "ROJO PREVIO": el sujeto no esta o no es el
@@ -104,6 +105,27 @@ VIEJAS = [
     # MEMORIA. La cifra del rotulo se sigue computando de len(VIEJAS).
     ("vuelta140_2a_mutaciones.py", False),
     ("vuelta141_2_mutaciones.py", False),
+    # DE LA OCTAVA A LA DECIMOTERCERA, ANADIDAS EN LA VUELTA 144 (TAREA 2.c;
+    # acta 143, adjudicacion 3.6, discutible 6 del ejecutor CONCEDIDO: "VIEJAS
+    # tiene 7 entradas y las tres de esta vuelta no estan").
+    #
+    # LA REGLA QUE QUEDA, Y SE ESCRIBE AQUI PARA QUE NO HAGA FALTA VOLVER A
+    # ADJUDICARLA: UNA MUTACION ENTRA EN ESTA BATERIA EN LA VUELTA SIGUIENTE A
+    # LA QUE NACE, NO MAS TARDE. Una mutacion que nace, muerde una vez y no
+    # entra en la bateria deja de medir desde el dia siguiente, y nadie se
+    # entera hasta que un acta lo cuenta a mano.
+    #
+    # Las TRES de la vuelta 143:
+    ("vuelta143_2a_mutaciones.py", False),
+    ("vuelta143_2b_mutacion_bateria.py", False),
+    ("vuelta143_2c_mutacion_positivo.py", False),
+    # Y LAS TRES QUE NACEN HOY, en esta misma vuelta 144, por la regla de
+    # arriba aplicada a si misma: entran el dia que nacen y no se esperan una
+    # vuelta mas. Ninguna admite --sujeto: las tres fabrican los suyos EN
+    # MEMORIA y con cero escrituras.
+    ("vuelta144_2a_mutaciones.py", False),
+    ("vuelta144_2b_mutacion_giro.py", False),
+    ("vuelta144_2d_mutacion_cobertura.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

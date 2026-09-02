@@ -13,12 +13,24 @@ QUE MIDE, TODO EN MEMORIA Y CON CERO ESCRITURAS:
         en cual de ellas ancla el codigo de hoy (bajo.find toma la primera).
 
 Cero escrituras: la ficha se copia en memoria y el fichero de disco no se toca.
+
+LOS DOS LITERALES VAN CLAVADOS AQUI, NO LEIDOS DE `T` (decision de la vuelta
+144, para que esta medicion siga REPRODUCIENDO): este arnes mide el ESTADO
+ANTERIOR a la reparacion de la TAREA 2.a, cuando la ventana se delimitaba con
+"doble linea" y "y escalera". La 2.a los sustituye por la formula canonica; si
+el arnes los leyera de `T`, dejaria de medir el defecto que documenta y su
+salida commiteada no reproduciria. Tambien lleva SU PROPIA copia de la lectura
+vieja (`_ventana_vieja`), por lo mismo.
 """
 import io
 import json
 import os
 import re
 import sys
+
+# Los dos literales TAL COMO ESTABAN hasta la vuelta 143 incluida.
+ABRE_VIEJA = "doble linea"
+CIERRA_VIEJA = "y escalera"
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.join(RAIZ, "scripts", "loop"))
@@ -41,6 +53,54 @@ def ficha(id_op):
 def resolver_del_grafo():
     """El resolutor de alias que la vara usa (P.1, EJECUTOR.md 9)."""
     return T.resolver_de(T.cargar_grafo("WORK"))
+
+
+def _ventana_vieja(op, resolver, fallos):
+    """LA LECTURA TAL COMO ESTABA HASTA LA VUELTA 143, copiada aqui para que
+    este arnes siga midiendo el defecto que documenta despues de que la TAREA
+    2.a lo repare. Es el codigo de `T.pares_exceptuados_de` de la 143, con sus
+    dos literales viejos y con su `else linea[ini:]` intacto."""
+    disparo = None
+    for i, linea in enumerate(op.get("verificacion") or []):
+        bajo = (linea or "").lower()
+        for f in T.FRASES_EXCEPCION_PAR:
+            if f in bajo:
+                disparo = (i, f, linea or "", bajo)
+                break
+        if disparo:
+            break
+    if disparo is None:
+        return set(), None, []
+    i, frase, linea, bajo = disparo
+    cita = "verificacion %d: %s" % (i, frase)
+    ini = bajo.find(ABRE_VIEJA)
+    if ini < 0:
+        fallos.append("%s: no trae el literal '%s'" % (op.get("id_op"), ABRE_VIEJA))
+        return set(), cita, []
+    fin = bajo.find(CIERRA_VIEJA, ini)
+    ventana = linea[ini:fin] if fin > ini else linea[ini:]
+    mapa_ld = T._pares_por_ld(op)
+    crudos = []
+    sueltos = []
+    for n in T.PATRON_LD.findall(ventana):
+        ld = "LD-%s" % n
+        if ld in mapa_ld:
+            crudos.extend(mapa_ld[ld])
+        else:
+            sueltos.append(ld)
+    crudos.extend(T.PATRON_ARISTA.findall(ventana))
+    if sueltos:
+        fallos.append("%s: la excepcion nombra %s y su aristas_nuevas no lo trae"
+                      % (op.get("id_op"), ", ".join(sorted(set(sueltos)))))
+    conjunto = set()
+    for o, d in crudos:
+        ro, rd = resolver(o), resolver(d)
+        if ro != rd:
+            conjunto.add(frozenset((ro, rd)))
+    if not conjunto:
+        fallos.append("%s: dispara la excepcion y no se saca ni un par" % op.get("id_op"))
+        return set(), cita, []
+    return conjunto, cita, sorted(" <-> ".join(sorted(par)) for par in conjunto)
 
 
 def nomina(conjunto):
@@ -66,7 +126,7 @@ def main():
 
     # (i) LA FICHA TAL CUAL.
     fallos = []
-    conj, cita, nom = T.pares_exceptuados_de(op, resolver, fallos)
+    conj, cita, nom = _ventana_vieja(op, resolver, fallos)
     print("(i) FICHA TAL CUAL: %d par(es), %d fallo(s)" % (len(conj), len(fallos)))
     for x in nom:
         print("      %s" % x)
@@ -76,15 +136,15 @@ def main():
 
     # (ii) QUITADO EL LITERAL DE CIERRE, en memoria.
     #      Se quita del texto real de la linea, respetando su caja.
-    m = re.search(re.escape(T.MARCA_CIERRA_EXCEPCION), bajo)
+    m = re.search(re.escape(CIERRA_VIEJA), bajo)
     if not m:
         raise SystemExit("ROJO: la linea no trae el literal de cierre")
     pos_cierre = m.start()
-    print("    posicion del literal de cierre '%s': %d" % (T.MARCA_CIERRA_EXCEPCION, pos_cierre))
+    print("    posicion del literal de cierre '%s': %d" % (CIERRA_VIEJA, pos_cierre))
     op_sin_cierre = json.loads(json.dumps(op))
-    op_sin_cierre["verificacion"][idx] = linea[:pos_cierre] + linea[pos_cierre + len(T.MARCA_CIERRA_EXCEPCION):]
+    op_sin_cierre["verificacion"][idx] = linea[:pos_cierre] + linea[pos_cierre + len(CIERRA_VIEJA):]
     fallos2 = []
-    conj2, _, nom2 = T.pares_exceptuados_de(op_sin_cierre, resolver, fallos2)
+    conj2, _, nom2 = _ventana_vieja(op_sin_cierre, resolver, fallos2)
     print("(ii) SIN EL LITERAL DE CIERRE: %d par(es), %d fallo(s)" % (len(conj2), len(fallos2)))
     for x in nom2:
         print("      %s" % x)
@@ -97,10 +157,10 @@ def main():
     print("")
 
     # (iii) POSICIONES DEL LITERAL DE APERTURA.
-    pos = [m.start() for m in re.finditer(re.escape(T.MARCA_ABRE_EXCEPCION), bajo)]
+    pos = [m.start() for m in re.finditer(re.escape(ABRE_VIEJA), bajo)]
     print("(iii) EL LITERAL DE APERTURA '%s' aparece %d vez/veces, en %s"
-          % (T.MARCA_ABRE_EXCEPCION, len(pos), pos))
-    ancla = bajo.find(T.MARCA_ABRE_EXCEPCION)
+          % (ABRE_VIEJA, len(pos), pos))
+    ancla = bajo.find(ABRE_VIEJA)
     print("      EL CODIGO DE HOY ANCLA EN: %d (bajo.find, la PRIMERA)" % ancla)
     if len(pos) > 1:
         print("      DISTANCIA HASTA LA ULTIMA: %d caracteres" % (pos[-1] - pos[0]))
@@ -109,7 +169,7 @@ def main():
     print("")
 
     # LO QUE LA VENTANA DE HOY LEE DE VERDAD.
-    fin = bajo.find(T.MARCA_CIERRA_EXCEPCION, ancla)
+    fin = bajo.find(CIERRA_VIEJA, ancla)
     ventana = linea[ancla:fin] if fin > ancla else linea[ancla:]
     print("LA VENTANA REAL DE HOY: [%d, %d), %d caracteres" % (ancla, fin, len(ventana)))
     print("  %s" % ventana)

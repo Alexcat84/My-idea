@@ -237,7 +237,20 @@ def main():
             mutuas = [(ro, rd) for ro, rd in dirs if (rd, ro) in dirs]
             if mutuas:
                 continue
-            exc, _cita, _nom = T.pares_exceptuados_de(op, resolver, [])
+            # LOS FALLOS SE RECOGEN Y CANTAN (TAREA 2.b, vuelta 144). Antes se
+            # tiraban con una lista literal vacia: si el parseo de la excepcion
+            # fallaba, `exc` salia vacio, TODAS las direcciones parecian libres
+            # y el arnes elegia como sujeto un par que si estaba exceptuado, sin
+            # que nadie se enterara. Ahora aborta con ellos.
+            _fallos_exc = []
+            exc, _cita, _nom = T.pares_exceptuados_de(op, resolver, _fallos_exc)
+            if _fallos_exc:
+                print("   ROJO: no se pudo leer la excepcion de %s (%d fallo(s)):"
+                      % (f["id_op"], len(_fallos_exc)))
+                for _f in _fallos_exc:
+                    print("      %s" % _f)
+                print("   SIN LECTURA FIABLE NO SE ELIGE SUJETO. ESO ES ROJO, no verde.")
+                return 1
             libres = [(ro, rd) for ro, rd in dirs if frozenset((ro, rd)) not in exc]
             if not libres:
                 continue

@@ -579,8 +579,72 @@ FRASES_EXCEPCION_PAR = [
     "excepcion del 9.22 para los pares mutuos nombrados",
 ]
 # Los dos literales con los que la propia ficha delimita su adjudicacion.
-MARCA_ABRE_EXCEPCION = "doble linea"
-MARCA_CIERRA_EXCEPCION = "y escalera"
+# LA VUELTA 144 LOS SUSTITUYE POR LA FORMULA CANONICA. Los viejos quedan
+# escritos aqui, sin borrar, porque la CORRECCION 19 se apoya en ellos:
+#     MARCA_ABRE_EXCEPCION   = "doble linea"     (hasta la vuelta 143)
+#     MARCA_CIERRA_EXCEPCION = "y escalera"      (hasta la vuelta 143)
+# Ver el bloque "LA FORMULA CANONICA DE LA EXCEPCION" justo debajo.
+# --------------- LA FORMULA CANONICA DE LA EXCEPCION (TAREA 2.a, v144) -------
+#
+# POR QUE NACE (acta de la vuelta 143, adjudicacion 3.1 y caidas de la casa 4.2
+# y 4.3; CORRECCION 19 de docs/plan/CORRECCIONES_A_APLICAR.md). La lectura que
+# la vuelta 143 escribio arriba delimitaba la ventana con DOS LITERALES DEL
+# PROPIO VOCABULARIO DEL 9.22 ("doble linea" para abrir, "y escalera" para
+# cerrar). Esos dos literales pueden salir, y salen, en la PROSA QUE EXPLICA la
+# excepcion, no solo en la formula que la adjudica. De ahi los dos agujeros,
+# los dos medidos y los dos hacia el lado permisivo:
+#
+#   (A) EL CIERRE. `ventana = linea[ini:fin] if fin > ini else linea[ini:]`. Si
+#       falta el literal de cierre, `find` da -1 y LA VENTANA SE ENSANCHA HASTA
+#       EL FINAL DE LA LINEA SIN DECIR NADA. Medido (vuelta 144,
+#       scripts/loop/vuelta144_1b_medir_ventana.py): quitado "y ESCALERA" en
+#       memoria, los pares exceptuados suben de 4 a 5 CON CERO FALLOS, y el que
+#       entra es revision_portafolio_periodica con sistema_gates_go_kill, o sea
+#       EXACTAMENTE EL PAR QUE LA EXCEPCION NIEGA POR ESCRITO (el LD-42 que la
+#       ficha adjudica como ESCALERA). Habia fallo ruidoso para la apertura
+#       ausente y para el caso de cero pares; para el cierre ausente no lo
+#       habia.
+#
+#   (B) LA APERTURA. `bajo.find(MARCA_ABRE_EXCEPCION)` toma la PRIMERA
+#       ocurrencia. Medido sobre esa misma linea: "doble linea" aparece en las
+#       posiciones 381 y 859; LA VENTANA REAL ARRANCABA EN 381, dentro de la
+#       prosa del punto (1), no en 859, que es donde vive la formula. Son 478
+#       caracteres de mas. Hoy inocuo por suerte (cero LD y cero flechas en ese
+#       tramo, medido); el dia que una excepcion cite un LD-nn en su encabezado,
+#       se cuela sola.
+#
+# LA DECISION, Y ES LA QUE LA CORRECCION 19 DEJA ESCRITA: LA VARA DEJA DE
+# DEPENDER DE LA REDACCION DE UNA FICHA. La excepcion declara sus pares dentro
+# de UNA FORMULA CANONICA con marca de apertura y de cierre INEQUIVOCAS, y la
+# vara la exige entera.
+#
+# POR QUE ESTAS DOS MARCAS Y NO OTRAS, que es la parte que hay que justificar:
+# "PARES EXCEPTUADOS:" y "FIN PARES EXCEPTUADOS" llevan la palabra EXCEPTUADOS
+# pegada a un dos puntos o a un FIN, forma que la prosa explicativa en
+# castellano no produce sola; y, a diferencia de "doble linea" o "y escalera",
+# NO SON TERMINOS DEL VOCABULARIO DEL 9.22, que era justo lo que hacia que los
+# viejos aparecieran tambien en la explicacion. La marca de cierre NO contiene
+# a la de apertura (una lleva dos puntos y la otra no), asi que la comprobacion
+# de ancla unica no se dispara sola.
+#
+# LOS TRES FALLOS RUIDOSOS, Y NINGUNO LEE DE MAS (banco 9):
+#   (i)   falta la marca de APERTURA  -> ROJO nombrandola, conjunto VACIO.
+#   (ii)  falta la marca de CIERRE    -> ROJO nombrandola, conjunto VACIO.
+#         El `else linea[ini:]` MUERE: nunca se lee hasta el final de la linea.
+#   (iii) la marca de apertura aparece MAS DE UNA VEZ -> ROJO POR AMBIGUA,
+#         conjunto VACIO. No se toma la primera.
+# Y sigue vivo el cuarto de la vuelta 143: la excepcion que dispara y no deja
+# sacar ni un par es ROJO y no se aplica.
+#
+# LO VIEJO NO SE BORRA: el bloque de la vuelta 143 que hay encima queda entero,
+# porque es donde vive el CRITERIO (que sigue adjudicado y vigente: los pares
+# se sacan de la ventana que la ficha delimita, no de la linea entera). Lo que
+# cambia es COMO se delimita esa ventana.
+#
+# MUTACIONES: scripts/loop/vuelta144_2a_mutaciones.py, todas EN MEMORIA y con
+# el sujeto y el veredicto POR COMPUTO, nunca sobre un literal.
+MARCA_ABRE_EXCEPCION = "pares exceptuados:"
+MARCA_CIERRA_EXCEPCION = "fin pares exceptuados"
 PATRON_LD = re.compile(r"\bLD-(\d+)\b")
 
 
@@ -621,14 +685,33 @@ def pares_exceptuados_de(op, resolver, fallos):
     i, frase, linea, bajo = disparo
     cita = "verificacion %d: %s" % (i, frase)
 
-    ini = bajo.find(MARCA_ABRE_EXCEPCION)
-    if ini < 0:
-        fallos.append("%s: dispara la excepcion del 9.22 (%s) pero su texto no trae el "
-                      "literal '%s' que abre la lista de pares: no se adivina cuales son"
-                      % (op.get("id_op"), cita, MARCA_ABRE_EXCEPCION))
+    # LA FORMULA CANONICA, ENTERA O ROJO (TAREA 2.a, vuelta 144; CORRECCION 19).
+    # Los tres extremos fallan RUIDOSO y ninguno lee de mas: nunca hay lectura
+    # por defecto hasta el final de la linea.
+    aperturas = [m.start() for m in re.finditer(re.escape(MARCA_ABRE_EXCEPCION), bajo)]
+    if not aperturas:
+        fallos.append("%s: dispara la excepcion del 9.22 (%s) pero su texto no trae la marca "
+                      "de apertura '%s' de la formula canonica: la excepcion NO se aplica y "
+                      "no se adivina que pares nombra"
+                      % (op.get("id_op"), cita, MARCA_ABRE_EXCEPCION.upper()))
         return set(), cita, []
-    fin = bajo.find(MARCA_CIERRA_EXCEPCION, ini)
-    ventana = linea[ini:fin] if fin > ini else linea[ini:]
+    if len(aperturas) > 1:
+        fallos.append("%s: dispara la excepcion del 9.22 (%s) y la marca de apertura '%s' "
+                      "aparece %d veces en la misma linea (posiciones %s): ANCLA AMBIGUA, la "
+                      "excepcion NO se aplica y no se toma la primera"
+                      % (op.get("id_op"), cita, MARCA_ABRE_EXCEPCION.upper(),
+                         len(aperturas), ", ".join(str(x) for x in aperturas)))
+        return set(), cita, []
+    ini = aperturas[0]
+    fin = bajo.find(MARCA_CIERRA_EXCEPCION, ini + len(MARCA_ABRE_EXCEPCION))
+    if fin < 0:
+        fallos.append("%s: dispara la excepcion del 9.22 (%s) y abre la formula canonica con "
+                      "'%s' pero NO la cierra con '%s': la excepcion NO se aplica y la ventana "
+                      "NO se ensancha hasta el final de la linea"
+                      % (op.get("id_op"), cita, MARCA_ABRE_EXCEPCION.upper(),
+                         MARCA_CIERRA_EXCEPCION.upper()))
+        return set(), cita, []
+    ventana = linea[ini + len(MARCA_ABRE_EXCEPCION):fin]
 
     mapa_ld = _pares_por_ld(op)
     crudos = []

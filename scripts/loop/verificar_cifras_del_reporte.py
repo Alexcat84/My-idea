@@ -420,6 +420,27 @@ MARCA_CABECERA_CIERRA = "<!-- FIN CABECERA TALLADA -->"
 # reporte. Ver el docstring del modulo.
 MARCA_COMMITS_ABRE = "<!-- COMMITS TALLADOS -->"
 MARCA_COMMITS_CIERRA = "<!-- FIN COMMITS TALLADOS -->"
+# LA SALIDA DE ESTA MISMA GUARDA, PEGADA EN EL REPORTE (TAREA 2.d, vuelta 144;
+# acta 143, adjudicacion 3.10 y caida 4.1 del ejecutor).
+#
+# POR QUE NACE, Y ES UNA CIFRA MEDIDA: el reporte de la vuelta 143 publico
+# "unidades vistas FUERA del vocabulario: 18 palabra(s)". Re-corrida la misma
+# guarda sobre el REPORTE.md ya commiteado, la cifra dio 30. Las doce nuevas
+# eran TODAS del propio bloque que el reporte habia pegado (cotejadas, exentas,
+# commit, bloque, cabecera, cifra, cifras, asunto, asuntos, palabra, viven,
+# contra). PEGAR LA SALIDA DENTRO DEL FICHERO QUE LA SALIDA MIDE CAMBIA LA
+# MEDIDA: la cola de vocabulario no es un punto fijo, y el ejecutor no puede
+# publicar una cifra que deja de ser cierta en el momento de commitearla.
+#
+# EL ARREGLO NO INVENTA NADA: es el MISMO mecanismo que esta funcion ya usa con
+# la cabecera tallada y con los commits tallados, con sus MISMAS TRES REGLAS de
+# delimitador (las dos marcas quitan lo delimitado; ninguna no quita nada y se
+# recorre todo, que es fallar ruidoso; una sola es ROJO con ValueError). Lo
+# unico que cambia es el bloque que delimita.
+#
+# MUTACION: scripts/loop/vuelta144_2d_mutacion_cobertura.py.
+MARCA_COBERTURA_ABRE = "<!-- COBERTURA DE LA GUARDA -->"
+MARCA_COBERTURA_CIERRA = "<!-- FIN COBERTURA DE LA GUARDA -->"
 
 
 def quitar_bloques_cubiertos(texto):
@@ -474,6 +495,23 @@ def quitar_bloques_cubiertos(texto):
     # Los COMMITS TALLADOS, con las mismas tres reglas de delimitador que la
     # cabecera (vuelta 140): las dos marcas quitan lo delimitado, ninguna no
     # quita nada, una sola es ROJO.
+    # LA SALIDA DE ESTA MISMA GUARDA, pegada en el reporte (vuelta 144, TAREA
+    # 2.d): mismas tres reglas de delimitador que la cabecera y que los
+    # commits. Va la PRIMERA porque es el bloque que la propia guarda escribe,
+    # y porque el orden no cambia el resultado: los tres son disjuntos.
+    g_abre = texto.find(MARCA_COBERTURA_ABRE)
+    g_cierra = texto.find(MARCA_COBERTURA_CIERRA)
+    if (g_abre == -1) != (g_cierra == -1):
+        falta = MARCA_COBERTURA_CIERRA if g_cierra == -1 else MARCA_COBERTURA_ABRE
+        raise ValueError(
+            "el reporte trae UNA SOLA de las dos marcas del bloque de cobertura pegado: "
+            "falta %r" % falta)
+    if g_abre != -1 and g_cierra < g_abre:
+        raise ValueError("el reporte trae %r ANTES de %r"
+                         % (MARCA_COBERTURA_CIERRA, MARCA_COBERTURA_ABRE))
+    if g_abre != -1:
+        texto = texto[:g_abre] + texto[g_cierra + len(MARCA_COBERTURA_CIERRA):]
+
     c_abre = texto.find(MARCA_COMMITS_ABRE)
     c_cierra = texto.find(MARCA_COMMITS_CIERRA)
     if (c_abre == -1) != (c_cierra == -1):

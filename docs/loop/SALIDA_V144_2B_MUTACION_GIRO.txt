@@ -1,0 +1,56 @@
+MUTACION DE LA TAREA 2.b | vuelta 144
+Sujeto y par POR COMPUTO. Fichas y grafo EN MEMORIA: el disco no se toca.
+==============================================================================
+SUJETO: OP-E-04, verificacion 5
+PARES QUE LA FICHA EXCEPTUA (4): gestion_portafolio_dos_niveles <-> sistema_gates_go_kill, gestion_portafolio_foco <-> sistema_gates_go_kill, gestion_portafolio_formal <-> sistema_gates_go_kill, portfolio_management <-> sistema_gates_go_kill
+PAR QUE SE LE PASA AL GIRO: se retira gestion_portafolio_dos_niveles -> sistema_gates_go_kill y se escribiria sistema_gates_go_kill -> gestion_portafolio_dos_niveles
+GRAFO SIMULADO: la VUELTA gestion_portafolio_dos_niveles -> sistema_gates_go_kill puesta: True | la IDA sistema_gates_go_kill -> gestion_portafolio_dos_niveles puesta: False
+
+(A) FORMULA ROTA (sin la marca de cierre) Y GIRO CON --ejecutar:
+     codigo de salida: 1 (distinto de cero: True)
+     git status -- dataset/ cambia: False (CERO ESCRITURAS: True)
+     la guarda 5 NOMBRA el fallo del parser: True
+     la salida dice que aborta sin escribir: True
+     guarda 1, los dos ids son DIRECTOS: no hay alias que resolver
+     guarda 1, los dos extremos existen y estan VIVOS: OK
+     guarda 2, cero auto-aristas: OK
+     guarda 3, estado de partida: la VUELTA gestion_portafolio_dos_niveles -> sistema_gates_go_kill esta puesta: True | la IDA sistema_gates_go_kill -> gestion_portafolio_dos_niveles esta puesta: False
+     guarda 3: OK, es un giro
+     guarda 4, la ficha PROHIBE la vuelta y NOMBRA el par: OK
+     guarda 5, la lectura de la excepcion de la ficha: ROJO, 1 fallo(s)
+        OP-E-04: dispara la excepcion del 9.22 (verificacion 5: excepcion del 9.22 para los pares mutuos nombrados) y abre la formula canonica con 'PARES EXCEPTUADOS:' pero NO la cierra con 'FIN PARES EXCEPTUADOS': la excepcion NO se aplica y la ventana NO se ensancha hasta el final de la linea
+        NO se puede saber si el par esta exceptuado, y un giro BORRA una arista.
+     SE ABORTA SIN ESCRIBIR NADA.
+     VEREDICTO: OK
+
+(B) CONTRASTE CON EL CODIGO VIEJO, sobre la MISMA ficha rota:
+     con los fallos TIRADOS (como hasta la 143): 0 pares, el par exceptuado: False
+     o sea que la guarda 5 VIEJA habria dicho OK y el giro habria seguido a BORRAR
+     con los fallos RECOGIDOS (hoy): 1 fallo(s) que abortan
+     VEREDICTO: OK
+
+(C) CONTRAPRUEBA, formula ENTERA sobre el mismo grafo simulado:
+     codigo de salida: 1
+     git status -- dataset/ cambia: False (CERO ESCRITURAS: True)
+     la guarda 5 NO cae por fallo de parser: True
+     cae por el motivo BUENO (el par esta exceptuado): True
+     guarda 1, los dos ids son DIRECTOS: no hay alias que resolver
+     guarda 1, los dos extremos existen y estan VIVOS: OK
+     guarda 2, cero auto-aristas: OK
+     guarda 3, estado de partida: la VUELTA gestion_portafolio_dos_niveles -> sistema_gates_go_kill esta puesta: True | la IDA sistema_gates_go_kill -> gestion_portafolio_dos_niveles esta puesta: False
+     guarda 3: OK, es un giro
+     guarda 4, la ficha PROHIBE la vuelta y NOMBRA el par: OK
+     guarda 5, el par NO esta exceptuado por la ficha: ROJO
+        el par gestion_portafolio_dos_niveles <-> sistema_gates_go_kill SI esta en la excepcion (verificacion 5: excepcion del 9.22 para los pares mutuos nombrados): lleva sus dos direcciones a proposito y girarlo borraria una arista legitima.
+     SE ABORTA SIN ESCRIBIR NADA.
+     VEREDICTO: OK
+
+==============================================================================
+  (A) formula rota, el giro CAE y no escribe     OK
+  (B) el codigo viejo habria dicho OK            OK
+  (C) contraprueba, formula entera               OK
+
+ESTADO FINAL DE dataset/: 0 fila(s) en git status, identico al de la apertura del arnes: True
+
+COMPROBACIONES QUE MUERDEN: 3 de 3
+EXITCODE: 0
