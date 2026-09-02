@@ -1,0 +1,49 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### pivote_estrategico  <==  pivote_startup
+  1. DESEMPATE POR CABLEADO
+     pivote_estrategico                           pasos  5 | nombra 13 | LO NOMBRAN 13
+     pivote_startup                               pasos  5 | nombra 12 | LO NOMBRAN 12
+     >>> gana pivote_estrategico por 13 contra 12
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['pivote_startup']
+  3. ENTRADAS QUE SE REDIRIGEN
+     business_model_canvas_scorecard              nodos_siguientes  -> pivote_estrategico
+     catalogo_pivotes                             nodos_siguientes  -> pivote_estrategico
+     contabilidad_innovacion                      nodos_siguientes  -> pivote_estrategico
+     customer_discovery                           nodos_siguientes  -> pivote_estrategico
+     customer_validation                          nodos_siguientes  -> pivote_estrategico
+     decisiones_reversibles_irreversibles         nodos_siguientes  -> pivote_estrategico
+     desarrollo_de_clientes_customer_development  nodos_siguientes  -> pivote_estrategico
+     fracaso_como_aprendizaje_startup             nodos_siguientes  -> pivote_estrategico
+     modelo_customer_development                  nodos_previos     -> pivote_estrategico
+     pivot_post_ventas                            nodos_previos     -> pivote_estrategico
+     principio_calidad_mvp                        nodos_siguientes  -> pivote_estrategico
+     wizard_of_oz_testing                         nodos_siguientes  -> pivote_estrategico
+
+### pivote_estrategico  <==  pivotes_e_iteraciones
+  1. DESEMPATE POR CABLEADO
+     pivote_estrategico                           pasos  5 | nombra 13 | LO NOMBRAN 13
+     pivotes_e_iteraciones                        pasos  6 | nombra  4 | LO NOMBRAN  3
+     >>> gana pivote_estrategico por 13 contra 3
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['pivotes_e_iteraciones']
+  3. ENTRADAS QUE SE REDIRIGEN
+     business_model_canvas_scorecard              nodos_previos     -> pivote_estrategico
+     customer_development_agile_pairing           nodos_siguientes  -> pivote_estrategico
+     fracaso_como_aprendizaje_startup             nodos_siguientes  -> pivote_estrategico
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     customer_development_agile_pairing           nodos_siguientes  -> pivote_estrategico
+     fracaso_como_aprendizaje_startup             nodos_siguientes  -> pivote_estrategico
+     TOTAL NUEVAS: 2
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ninguna
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     NINGUNA: el acto queda sin aristas internas tras la fusion
+EXITCODE: 0

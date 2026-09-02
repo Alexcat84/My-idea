@@ -9829,7 +9829,7 @@
         "hipotesis_de_tamano_de_mercado",
         "producto_minimo_viable",
         "lienzo_modelo_negocio",
-        "pivotes_e_iteraciones",
+        "pivote_estrategico",
         "business_model_environment_mapping",
         "business_plan_cinco_secciones",
         "search_for_business_model"
@@ -9846,7 +9846,7 @@
         "diseno_experimentos_hipotesis",
         "customer_discovery",
         "modelo_customer_development",
-        "pivote_startup"
+        "pivote_estrategico"
       ],
       "condiciones_activacion": [
         "Cuando necesitas rastrear cómo cambian tus hipótesis de negocio a lo largo del tiempo",
@@ -12343,7 +12343,7 @@
       "nodos_siguientes": [
         "pivot_como_hipotesis_estrategica",
         "producto_minimo_viable",
-        "pivote_startup",
+        "pivote_estrategico",
         "contabilidad_innovacion_pivote",
         "runway_como_numero_de_pivotes",
         "reempaquetado_producto"
@@ -21049,7 +21049,7 @@
         "producto_mercado_fit_motores"
       ],
       "nodos_siguientes": [
-        "pivote_startup",
+        "pivote_estrategico",
         "motor_de_crecimiento",
         "pivotar_o_perseverar",
         "metricas_accionables",
@@ -28089,7 +28089,7 @@
       "nodos_siguientes": [
         "customer_discovery",
         "manifiesto_regla4_iteraciones_pivotes",
-        "pivotes_e_iteraciones"
+        "pivote_estrategico"
       ],
       "etiqueta_arbol": "Combina Descubrimiento con Desarrollo Ágil"
     },
@@ -28284,7 +28284,7 @@
       ],
       "nodos_siguientes": [
         "customer_validation",
-        "pivote_startup",
+        "pivote_estrategico",
         "earlyvangelists_ventas_tempranas",
         "embudo_get_keep_grow",
         "filosofia_customer_validation",
@@ -29036,7 +29036,7 @@
         "customer_creation",
         "decision_pivotar_o_proceder",
         "metrics_that_matter_framework",
-        "pivote_startup",
+        "pivote_estrategico",
         "validar_modelo_financiero",
         "prueba_mvp_alta_fidelidad",
         "mvp_alta_fidelidad",
@@ -30490,7 +30490,7 @@
         "metricas_de_startup"
       ],
       "nodos_siguientes": [
-        "pivote_startup",
+        "pivote_estrategico",
         "equipo_customer_development",
         "gestion_intraemprendedora_experimentacion"
       ],
@@ -33013,7 +33013,7 @@
       ],
       "nodos_siguientes": [
         "build_measure_learn",
-        "pivote_startup",
+        "pivote_estrategico",
         "spiral_development",
         "decisiones_reversibles_irreversibles",
         "desarrollo_en_espiral"
@@ -57462,9 +57462,8 @@
         "emocion_como_motor_pensamiento"
       ],
       "nodos_siguientes": [
-        "pivote_startup",
+        "pivote_estrategico",
         "manifiesto_regla4_iteraciones_pivotes",
-        "pivotes_e_iteraciones",
         "diseno_experimentos_hipotesis"
       ],
       "etiqueta_arbol": "Acepta el Fracaso como Aprendizaje",
@@ -79045,7 +79044,7 @@
         "lienzo_modelo_negocio",
         "business_model_canvas_vs_plan_negocio",
         "busqueda_vs_ejecucion",
-        "pivote_startup",
+        "pivote_estrategico",
         "search_for_business_model",
         "business_model_canvas_scorecard"
       ],
@@ -85999,7 +85998,7 @@
       "entregable_esperado": "Tu mapa de modelo de negocio actualizado con las hipótesis corregidas y un nuevo plan de prueba",
       "nodos_previos": [
         "get_out_building_test_sell",
-        "pivote_startup",
+        "pivote_estrategico",
         "actualizar_modelo_de_negocio_pivot_o_proceed",
         "pivote_o_proceder"
       ],
@@ -86111,7 +86110,11 @@
         "Formular una nueva hipótesis de valor basada en los insights obtenidos de clientes",
         "Redirigir el desarrollo de producto hacia la nueva hipótesis, incluso si implica desechar código o funcionalidades ya construidas",
         "Validar la nueva dirección con nuevos experimentos y medir si las métricas empiezan a moverse",
-        "Comunicar el pivote y su justificación basada en datos a inversores, empleados y stakeholders"
+        "Comunicar el pivote y su justificación basada en datos a inversores, empleados y stakeholders",
+        "Decide con rapidez y sin miedo al fracaso si toca pivotar",
+        "Distingue con claridad entre un ajuste menor y un cambio sustancial",
+        "Usa tu lienzo de modelo de negocio para ubicar qué parte necesita el cambio",
+        "Documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio"
       ],
       "entregable_esperado": "Documento de pivote que explique: la estrategia original, la evidencia que la invalidó, la nueva hipótesis de valor y los primeros resultados métricos post-pivote",
       "nodos_previos": [
@@ -86126,18 +86129,48 @@
         "lead_bullets_no_silver_bullets",
         "comunicacion_transparente_en_crisis",
         "plan_de_contingencia_b",
-        "concierge_mvp"
+        "concierge_mvp",
+        "business_model_canvas_scorecard",
+        "catalogo_pivotes",
+        "contabilidad_innovacion",
+        "customer_development_agile_pairing",
+        "customer_discovery",
+        "customer_validation",
+        "decisiones_reversibles_irreversibles",
+        "desarrollo_de_clientes_customer_development",
+        "fracaso_como_aprendizaje_startup",
+        "principio_calidad_mvp",
+        "wizard_of_oz_testing"
       ],
       "nodos_siguientes": [
         "metricas_como_validacion_cuantitativa",
         "reconstruccion_de_equipo_ejecutivo",
-        "reconstruir_equipo_ejecutivo_para_nueva_etapa"
+        "reconstruir_equipo_ejecutivo_para_nueva_etapa",
+        "business_model_canvas_scorecard",
+        "modelo_customer_development",
+        "pivot_post_ventas"
       ],
       "condiciones_activacion": [
         "Cuando múltiples experimentos y entrevistas con clientes muestran consistentemente que la estrategia original no funciona",
         "Cuando las métricas del negocio se mantienen estancadas a pesar de iteraciones continuas sobre el mismo modelo"
       ],
-      "etiqueta_arbol": "Cambia de Rumbo con Evidencia"
+      "etiqueta_arbol": "Cambia de Rumbo con Evidencia",
+      "ids_alias": [
+        "pivote_startup",
+        "pivotes_e_iteraciones"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "pivote_startup",
+          "titulo": "Cambio de rumbo (pivot)",
+          "fuente": "The Startup Owner's Manual - Blank, Steve"
+        },
+        {
+          "node_id": "pivotes_e_iteraciones",
+          "titulo": "Cambiar de rumbo o solo ajustar (pivotes e iteraciones)",
+          "fuente": "The Startup Owner's Manual - Blank, Steve"
+        }
+      ]
     },
     "pivote_o_proceder": {
       "node_id": "pivote_o_proceder",
@@ -86233,7 +86266,8 @@
         "Si lo que ves con tus clientes contradice lo que pensabas al inicio sobre tu negocio",
         "Si tu negocio está estancado y necesita un cambio grande para avanzar"
       ],
-      "etiqueta_arbol": "Cambia tu Modelo de Negocio"
+      "etiqueta_arbol": "Cambia tu Modelo de Negocio",
+      "deprecado": true
     },
     "pivotes_e_iteraciones": {
       "node_id": "pivotes_e_iteraciones",
@@ -86275,7 +86309,8 @@
           "titulo": "Iteraciones Continuas y Pivotes",
           "fuente": "The Startup Owner's Manual - Blank, Steve"
         }
-      ]
+      ],
+      "deprecado": true
     },
     "plan_a_b_c_soft_landing": {
       "node_id": "plan_a_b_c_soft_landing",
@@ -91099,7 +91134,7 @@
       ],
       "nodos_siguientes": [
         "contabilidad_innovacion",
-        "pivote_startup",
+        "pivote_estrategico",
         "biblioteca_experimentos_validacion",
         "riesgos_lanzamiento_mvp",
         "construir_mvp_baja_fidelidad"
@@ -120704,7 +120739,7 @@
       ],
       "nodos_siguientes": [
         "contabilidad_innovacion",
-        "pivote_startup",
+        "pivote_estrategico",
         "usability_testing_producto",
         "principio_calidad_mvp",
         "riesgos_lanzamiento_mvp"

@@ -1,0 +1,104 @@
+==============================================================================
+OP-M-03-III . ACTO III DE LA MESA DEL PIVOTE: pivote_estrategico absorbe a pivote_startup y a pivotes_e_iteraciones. Es la TERCERA fusion de la fase 06, y la primera en la que la quinta marca se usa DOS VECES en el mismo acto . MODO SIMULAR
+plan: docs/loop/PLAN_V139_OPM03III.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3179 vivos, 674 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive pivote_estrategico . absorbe pivote_startup, pivotes_e_iteraciones
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 9 (anadidos 4) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['pivote_startup', 'pivotes_e_iteraciones']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 15
+   business_model_canvas_scorecard                      nodos_previos     pivotes_e_iteraciones -> pivote_estrategico
+   business_model_canvas_scorecard                      nodos_siguientes  pivote_startup -> pivote_estrategico
+   catalogo_pivotes                                     nodos_siguientes  pivote_startup -> pivote_estrategico
+   contabilidad_innovacion                              nodos_siguientes  pivote_startup -> pivote_estrategico
+   customer_development_agile_pairing                   nodos_siguientes  pivotes_e_iteraciones -> pivote_estrategico
+   customer_discovery                                   nodos_siguientes  pivote_startup -> pivote_estrategico
+   customer_validation                                  nodos_siguientes  pivote_startup -> pivote_estrategico
+   decisiones_reversibles_irreversibles                 nodos_siguientes  pivote_startup -> pivote_estrategico
+   desarrollo_de_clientes_customer_development          nodos_siguientes  pivote_startup -> pivote_estrategico
+   fracaso_como_aprendizaje_startup                     nodos_siguientes  pivote_startup -> pivote_estrategico
+   fracaso_como_aprendizaje_startup                     nodos_siguientes  pivotes_e_iteraciones -> pivote_estrategico
+   modelo_customer_development                          nodos_previos     pivote_startup -> pivote_estrategico
+   pivot_post_ventas                                    nodos_previos     pivote_startup -> pivote_estrategico
+   principio_calidad_mvp                                nodos_siguientes  pivote_startup -> pivote_estrategico
+   wizard_of_oz_testing                                 nodos_siguientes  pivote_startup -> pivote_estrategico
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 5
+   business_model_canvas_como_scorecard                 nodos_previos     pivotes_e_iteraciones (registro historico)
+   business_model_canvas_vs_plan                        nodos_siguientes  pivote_startup (registro historico)
+   fallo_como_aprendizaje_startup                       nodos_siguientes  pivotes_e_iteraciones (registro historico)
+   pivot_o_proceder_revalidar_modelo_negocio            nodos_previos     pivotes_e_iteraciones (registro historico)
+   tipos_de_pivote                                      nodos_siguientes  pivote_startup (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 1
+   fracaso_como_aprendizaje_startup                     nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 873   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 869   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 4, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 5 de 5
+guarda D, los 2 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (16 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 pivote_startup                               paso         1  ya lo dice el PASO 1 del superviviente
+        Revisa los resultados de tus pruebas de sí o no sobre las hipótesis de tu negocio
+    1 pivote_startup                               paso         2  VIAJA EN ESTE MISMO ACTO por el PASO 3 de pivotes_e_iteraciones (P.13, VIVE DENTRO: no se injerta dos veces)
+        Identifica qué parte de tu modelo de negocio necesita cambiar
+    1 pivote_startup                               paso         3  PASO 6 del superviviente
+        Decide con rapidez y sin miedo al fracaso si toca pivotar
+    1 pivote_startup                               paso         4  ya lo dice el PASO 5 del superviviente
+        Si trabajas con alguien más, cuéntale el cambio como parte normal del proceso
+    1 pivote_startup                               paso         5  ya lo dice el PASO 4 del superviviente
+        Vuelve a poner a prueba tu modelo ajustado hablando con clientes
+    1 pivote_startup                               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si lo que ves con tus clientes contradice lo que pensabas al inicio sobre tu negocio
+    1 pivote_startup                               condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si tu negocio está estancado y necesita un cambio grande para avanzar
+    1 pivotes_e_iteraciones                        paso         1  PASO 7 del superviviente
+        Distingue con claridad entre un ajuste menor y un cambio sustancial
+    1 pivotes_e_iteraciones                        paso         2  ya lo dice el PASO 1 del superviviente
+        Corre pruebas pasa/no pasa constantes sobre las hipótesis de tu modelo de negocio
+    1 pivotes_e_iteraciones                        paso         3  PASO 8 del superviviente
+        Usa tu lienzo de modelo de negocio para ubicar qué parte necesita el cambio
+    1 pivotes_e_iteraciones                        paso         4  VIAJA EN ESTE MISMO ACTO por el PASO 3 de pivote_startup (P.13, VIVE DENTRO: no se injerta dos veces)
+        Cuando los datos contradigan una hipótesis, admite el error y decide sin demora si ajustas o cambias de rumbo
+    1 pivotes_e_iteraciones                        paso         5  PASO 9 del superviviente
+        Documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio
+    1 pivotes_e_iteraciones                        paso         6  ya lo dice el PASO 1 del superviviente
+        No te aferres a tu idea original si los datos indican lo contrario
+    1 pivotes_e_iteraciones                        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si las pruebas con clientes te dan resultados negativos o ambiguos
+    1 pivotes_e_iteraciones                        condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si tus métricas de validación muestran que una hipótesis de tu modelo de negocio es falsa
+    1 pivotes_e_iteraciones                        condicion    3  ya lo dice la CONDICION 2 del superviviente
+        Si tu crecimiento está estancado y necesitas un cambio para sobrevivir
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 1
+  nodos implicados    : 3
+  nodos que MUEREN    : 2
+  piezas repartidas   : 16 (4 viajan enteras, 10 ya estaban dichas, 2 ya viajan en el acto)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.
+EXITCODE: 0

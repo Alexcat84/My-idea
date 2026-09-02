@@ -1,0 +1,34 @@
+VERIFICACIONES DE LA FICHA DE OP-M-03-III, SOBRE EL NODO ESCRITO (sin tildes)
+==============================================================================
+CIFRA pasos del superviviente: 9 lineas
+  PASO 1: Aceptar la evidencia empírica aunque contradiga meses de trabajo e inversión previa (sunk cost)
+  PASO 2: Formular una nueva hipótesis de valor basada en los insights obtenidos de clientes
+  PASO 3: Redirigir el desarrollo de producto hacia la nueva hipótesis, incluso si implica desechar código o funcionalidades ya construidas
+  PASO 4: Validar la nueva dirección con nuevos experimentos y medir si las métricas empiezan a moverse
+  PASO 5: Comunicar el pivote y su justificación basada en datos a inversores, empleados y stakeholders
+  PASO 6: Decide con rapidez y sin miedo al fracaso si toca pivotar
+  PASO 7: Distingue con claridad entre un ajuste menor y un cambio sustancial
+  PASO 8: Usa tu lienzo de modelo de negocio para ubicar qué parte necesita el cambio
+  PASO 9: Documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio
+
+--- verificacion [3] LAS CUATRO PERDIDAS ESTAN EN EL TEXTO FINAL ---
+  preservar[1] QUE PARTE DEL LIENZO cambia                 1 paso(s)
+     paso 8: Usa tu lienzo de modelo de negocio para ubicar qué parte necesita el cambio
+  preservar[2] DECIDIR CON RAPIDEZ Y SIN MIEDO AL FRACASO  1 paso(s)
+     paso 6: Decide con rapidez y sin miedo al fracaso si toca pivotar
+  preservar[3] AJUSTE MENOR contra CAMBIO SUSTANCIAL       1 paso(s)
+     paso 7: Distingue con claridad entre un ajuste menor y un cambio sustancial
+  preservar[4] VERSION NUEVA DEL LIENZO                    1 paso(s)
+     paso 9: Documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio
+
+--- LAS DOS PIEZAS DE DOS DUENOS, CADA UNA UNA SOLA VEZ ---
+CIFRA pasos que ubican la parte que cambia: 1 lineas
+   paso 8: Usa tu lienzo de modelo de negocio para ubicar qué parte necesita el cambio
+CIFRA pasos que deciden sin demora: 1 lineas
+   paso 6: Decide con rapidez y sin miedo al fracaso si toca pivotar
+
+--- verificacion [4] EL ALIAS CARGA LOS DOS IDS QUE MUEREN ---
+ids_alias: ['pivote_startup', 'pivotes_e_iteraciones']
+   pivote_startup           en alias: True | deprecado: True
+   pivotes_e_iteraciones    en alias: True | deprecado: True
+EXITCODE: 0
