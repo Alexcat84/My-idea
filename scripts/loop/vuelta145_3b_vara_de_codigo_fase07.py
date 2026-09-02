@@ -111,10 +111,32 @@ CONTROLES = [
         # UN CONTROL INSTALADO A MEDIAS NO SE PUBLICA CON EL MISMO ROTULO QUE
         # UNO ENTERO, por la misma razon de unidades de la adjudicacion 3.9 del
         # acta 144 y de la CORRECCION 18.
-        "mitad_mecanica": "la mitad mecanica (el segundo libro contra la nomina adjudicada) "
-                          "esta instalada y muerde; la mitad semantica (que ese libro "
-                          "aparezca en algun paso accionable) NO lo esta, y su lectura "
-                          "literal dispara en 9 de 9",
+        #
+        # EL ROTULO CAMBIA EN LA VUELTA 148, Y NO POR UN INTERRUPTOR (TAREA
+        # 1.c). NO SE BORRA EL TEXTO VIEJO, que decia: "la mitad mecanica (el
+        # segundo libro contra la nomina adjudicada) esta instalada y muerde;
+        # la mitad semantica (que ese libro aparezca en algun paso accionable)
+        # NO lo esta, y su lectura literal dispara en 9 de 9". Eso era cierto
+        # hasta el 2 sep 2026. La decision del fundador de ese dia (PREGUNTA 2,
+        # opcion 2) reescribio la verificacion 3 de OP-A-01 por correccion
+        # declarada: su mitad mecanica queda como esta y SU MITAD SEMANTICA SE
+        # REMITE A LA PUERTA A2.6, cuya vecindad por contenido sobre el indice
+        # es la lectura ejecutable.
+        #
+        # LA REMISION NO ES UNA PALABRA: SE COMPRUEBA. `mitad_remitida_a` no
+        # marca a A1.3 como entero; dice A QUIEN le presta su otra mitad, y
+        # esta vara solo se la da por buena SI ESE CONTROL esta instalado,
+        # muerde y no tiene parada abierta encima, todo medido en la misma
+        # corrida. Si A2.6 dejara de morder, A1.3 volveria a caer con el,
+        # que es lo que "remitida" tiene que significar para no ser un
+        # interruptor con nombre bonito.
+        "mitad_remitida_a": "A2.6",
+        "mitad_remitida_texto": "la mitad mecanica (el segundo libro contra la nomina "
+                                "adjudicada) esta instalada y muerde; la mitad semantica "
+                                "(que ese libro aparezca en algun paso accionable) NO se "
+                                "instala con su lectura literal, que dispara en 9 de 9 "
+                                "sobre nodos adjudicados enteros, y queda REMITIDA a la "
+                                "puerta A2.6 por decision del fundador del 2 sep 2026",
     },
     {
         "id": "A2.1",
@@ -205,6 +227,15 @@ CONTROLES = [
         "sondas": [("scripts/integrar_packs.py", "ADUANA SEMANTICA (OP-A-02, A2.6)"),
                    ("scripts/loop/aduana_semantica.py", "LA INSERCION SE BLOQUEA")],
         "mutacion": "aduana_semantica",
+        # LA PARADA QUE TUVO ENCIMA (vuelta 148, TAREA 2.3; caida 4.4.c del acta
+        # 147). Cuando la vuelta 147 la instalo, esta puerta salia "INSTALADO Y
+        # MUERDE" con una PARADA ABIERTA encima: el candidato de un pack no
+        # podia tener vector cuando la puerta lo media, asi que su unica ruta
+        # real no se podia recorrer. Un control asi NO esta en el mismo estado
+        # que uno que corre, y la vara lo publicaba igual. Desde hoy lleva el
+        # nombre de su parada y la vara MIRA EL DISCO para saber si sigue
+        # abierta: no se declara cerrada de palabra.
+        "parada": "2026-09-02-aduana-vector-y-a13",
     },
 ]
 
@@ -428,15 +459,73 @@ MUTACIONES = {
 }
 
 
-def rotulo_de(fila):
+PARADAS = os.path.join(RAIZ, "docs", "loop", "paradas")
+
+
+def estado_de_parada(slug):
+    """LA UNIDAD QUE FALTABA (vuelta 148, TAREA 2.3; caida 4.4.c del acta 147):
+    UN CONTROL CON UNA PARADA ABIERTA ENCIMA NO PUEDE PUBLICARSE CON EL MISMO
+    ROTULO QUE UNO QUE CORRE. Es la misma cura que la vuelta 147 le dio a A1.3:
+    un control cuya unica ruta real no puede recorrerse no esta en el estado de
+    uno que si.
+
+    NO SE DECLARA DE PALABRA, SE MIRA EL DISCO: la parada vive en
+    `docs/loop/paradas/<slug>.md` y se considera CERRADA cuando existe su
+    respuesta, `docs/loop/paradas/<slug>-DECISION.md`. Devuelve
+    ("SIN PARADA" | "ABIERTA" | "CERRADA", detalle).
+
+    Que la decision exista no significa que este APLICADA, y esta vara no
+    pretende medir eso: lo que mide es si la pregunta sigue sin contestar. Si
+    la decision esta escrita pero el codigo no la aplica, quien lo delata es la
+    mutacion del propio control, que corre igual."""
+    if not slug:
+        return "SIN PARADA", "el control no declara ninguna parada"
+    pregunta = os.path.join(PARADAS, "%s.md" % slug)
+    respuesta = os.path.join(PARADAS, "%s-DECISION.md" % slug)
+    if not os.path.exists(pregunta):
+        return "SIN PARADA", "no existe docs/loop/paradas/%s.md" % slug
+    if os.path.exists(respuesta):
+        return "CERRADA", "docs/loop/paradas/%s-DECISION.md existe" % slug
+    return "ABIERTA", "docs/loop/paradas/%s.md sin su -DECISION.md al lado" % slug
+
+
+def entero(fila, por_id=None):
+    """SI ESTE CONTROL CUENTA COMO INSTALADO Y MORDIENDO ENTERO. Se computa, no
+    se marca a mano, y hay tres maneras de no serlo: no estar instalado, no
+    morder, o tener una PARADA ABIERTA encima. Un control que remite una de sus
+    mitades a otro (`mitad_remitida_a`) solo es entero SI AQUEL lo es."""
+    c, hay, _donde, aplica, muerde, _detalle = fila
+    if not (hay and aplica and muerde):
+        return False
+    if estado_de_parada(c.get("parada"))[0] == "ABIERTA":
+        return False
+    destino = c.get("mitad_remitida_a")
+    if destino:
+        otra = (por_id or {}).get(destino)
+        if otra is None:
+            return False
+        return entero(otra, por_id)
+    return True
+
+
+def rotulo_de(fila, por_id=None):
     """EL ROTULO DE UN CONTROL, EN UNA SOLA FUNCION (vuelta 147, TAREA 3.c;
     adjudicacion 3.17 del acta 146). Un control cuya tabla lo declara instalado
     SOLO EN SU MITAD MECANICA no puede publicarse con el mismo rotulo que uno
-    entero: se dice cual mitad esta y cual no, y el recuento lo separa."""
+    entero: se dice cual mitad esta y cual no, y el recuento lo separa. Desde la
+    vuelta 148 se le suma la PARADA ABIERTA, por el mismo argumento."""
     c, hay, _donde, aplica, muerde, _detalle = fila
     if hay and aplica and muerde:
-        if c.get("mitad_mecanica"):
-            return "INSTALADO EN SU MITAD MECANICA"
+        estado, _d = estado_de_parada(c.get("parada"))
+        if estado == "ABIERTA":
+            return "INSTALADO Y MUERDE, PERO CON PARADA ABIERTA ENCIMA"
+        destino = c.get("mitad_remitida_a")
+        if destino:
+            otra = (por_id or {}).get(destino)
+            if otra is not None and entero(otra, por_id):
+                return "INSTALADO, SU MITAD SEMANTICA REMITIDA A %s, QUE MUERDE" % destino
+            return ("INSTALADO EN SU MITAD MECANICA (LA REMISION A %s NO SE SOSTIENE HOY)"
+                    % destino)
         return "INSTALADO Y MUERDE"
     if hay and aplica and not muerde:
         return "INSTALADO, NO MUERDE"
@@ -473,6 +562,7 @@ def main():
         hay, donde = existe(c)
         aplica, muerde, detalle = MUTACIONES[c["mutacion"]]()
         filas.append((c, hay, donde, aplica, muerde, detalle))
+    por_id = dict((f[0]["id"], f) for f in filas)
 
     print("LA TABLA, CONTROL A CONTROL")
     print("=" * 78)
@@ -485,6 +575,13 @@ def main():
         else:
             print("     (2) MUERDE POR MUTACION: %s   [%s]"
                   % ("SI" if muerde else "NO", detalle))
+        est, det = estado_de_parada(c.get("parada"))
+        if est != "SIN PARADA":
+            print("     (3) PARADA ENCIMA: %s   [%s]" % (est, det))
+        if c.get("mitad_remitida_a"):
+            print("     (4) MITAD REMITIDA A %s: %s"
+                  % (c["mitad_remitida_a"], c.get("mitad_remitida_texto", "")))
+        print("     ROTULO: %s" % rotulo_de((c, hay, donde, aplica, muerde, detalle), por_id))
         print("")
 
     print("=" * 78)
@@ -492,29 +589,49 @@ def main():
     for op in ("OP-A-01", "OP-A-02"):
         suyas = [f for f in filas if f[0]["op"] == op]
         existen = [f for f in suyas if f[1]]
-        muerden = [f for f in suyas if f[3] and f[4]
-                   and not f[0].get("mitad_mecanica")]
+        muerden = [f for f in suyas if entero(f, por_id)]
         print("  %s: %d control(es) declarado(s) | EXISTEN %d | MUERDEN ENTEROS %d | "
               "INSTALADOS Y MORDIENDO ENTEROS %d"
               % (op, len(suyas), len(existen), len(muerden), len(muerden)))
         for f in suyas:
-            print("     %-5s %s" % (f[0]["id"], rotulo_de(f)))
+            print("     %-5s %s" % (f[0]["id"], rotulo_de(f, por_id)))
     total = len(filas)
     # EL ROTULO HONESTO SE PAGA EN EL RECUENTO (vuelta 147, TAREA 3.c). Un
     # control instalado en su mitad mecanica NO entra en la cifra de los
     # enteros: se cuenta aparte, con su nombre, y las tres cifras suman el
     # total. Antes de hoy A1.3 entraba en `completos` y la cifra publicaba OCHO
     # cuando enteros hay SIETE.
-    enteros = [f for f in filas if f[1] and f[3] and f[4] and not f[0].get("mitad_mecanica")]
-    a_medias = [f for f in filas if f[1] and f[3] and f[4] and f[0].get("mitad_mecanica")]
+    # LAS TRES CESTAS, TODAS COMPUTADAS Y NINGUNA MARCADA A MANO (vuelta 148).
+    # `entero` es la unica que decide, y suma la parada abierta y la remision a
+    # lo que ya miraba. Las tres suman el total, y eso se comprueba abajo.
+    instalados_y_muerden = [f for f in filas if f[1] and f[3] and f[4]]
+    enteros = [f for f in instalados_y_muerden if entero(f, por_id)]
+    a_medias = [f for f in instalados_y_muerden if not entero(f, por_id)]
     resto = [f for f in filas if not (f[1] and f[3] and f[4])]
     completos = len(enteros)
+    assert len(enteros) + len(a_medias) + len(resto) == len(filas), "las cestas no suman"
     print("")
     for f in a_medias:
-        print("  POR QUE %s NO ENTRA EN LA CIFRA DE LOS ENTEROS: %s"
-              % (f[0]["id"], f[0]["mitad_mecanica"]))
+        c = f[0]
+        est, det = estado_de_parada(c.get("parada"))
+        if est == "ABIERTA":
+            motivo = "tiene una PARADA ABIERTA encima (%s)" % det
+        elif c.get("mitad_remitida_a"):
+            motivo = ("remite su otra mitad a %s, que hoy no esta instalado y mordiendo "
+                      "entero" % c["mitad_remitida_a"])
+        else:
+            motivo = "no esta entero"
+        print("  POR QUE %s NO ENTRA EN LA CIFRA DE LOS ENTEROS: %s" % (c["id"], motivo))
     if a_medias:
         print("")
+    # LO QUE SI ENTRA POR REMISION SE DICE IGUAL DE ALTO QUE LO QUE NO.
+    for f in enteros:
+        if f[0].get("mitad_remitida_a"):
+            print("  POR QUE %s SI ENTRA EN LA CIFRA DE LOS ENTEROS: su mitad semantica esta "
+                  "REMITIDA a %s por decision del fundador, y %s esta instalado, muerde y no "
+                  "tiene parada abierta encima, medido en esta misma corrida."
+                  % (f[0]["id"], f[0]["mitad_remitida_a"], f[0]["mitad_remitida_a"]))
+            print("")
 
     # LAS DOS UNIDADES, LAS DOS COMPUTADAS Y NINGUNA TECLEADA (vuelta 147,
     # TAREA 3.b; adjudicacion 3.18 del acta 146). LA DECLARADA cuenta lo que
@@ -537,13 +654,21 @@ def main():
     print("CIFRA controles declarados: %d controles" % total)
     print("CIFRA controles distintos: %d controles" % distintos)
     print("CIFRA controles instalados y mordiendo enteros: %d controles" % completos)
-    print("CIFRA controles instalados solo en su mitad mecanica: %d controles" % len(a_medias))
+    print("CIFRA controles instalados pero no enteros (mitad sin sostener o parada abierta "
+          "encima): %d controles" % len(a_medias))
     print("CIFRA controles no instalados: %d controles" % len(resto))
     print("")
-    print("VEREDICTO DE LA FASE 07 CONTRA ESTA VARA: ABIERTA Y MEDIDA. %d de %d controles "
-          "declarados estan instalados y muerden ENTEROS, %d lo esta solo en su MITAD "
-          "MECANICA y %d NO estan instalados, y esta vara lo dice en voz alta en vez de "
-          "callarlo." % (completos, total, len(a_medias), len(resto)))
+    # LA PRIMERA PALABRA DEL VEREDICTO TAMBIEN SE COMPUTA (vuelta 148). Decia
+    # "ABIERTA Y MEDIDA" con un literal, y era cierto mientras algo faltara: el
+    # dia que no faltara nada seguiria diciendo ABIERTA, que es exactamente la
+    # especie de celda tecleada que esta campana persigue (EJECUTOR 1, "la
+    # tabla se imprime, no se teclea"). Ahora sale de las cestas.
+    cabeza = ("ABIERTA Y MEDIDA" if (a_medias or resto)
+              else "SIN CONTROL PENDIENTE CONTRA ESTA VARA")
+    print("VEREDICTO DE LA FASE 07 CONTRA ESTA VARA: %s. %d de %d controles "
+          "declarados estan instalados y muerden ENTEROS, %d estan instalados pero NO "
+          "enteros y %d NO estan instalados, y esta vara lo dice en voz alta en vez de "
+          "callarlo." % (cabeza, completos, total, len(a_medias), len(resto)))
     # LA COLA SE COMPUTA, NO SE TECLEA (vuelta 146, TAREA 3.d). La version de la
     # vuelta 145 imprimia una frase FIJA, "LA FASE NO SE CIERRA HOY Y NINGUNA DE
     # LAS DOS OPERACIONES SE EJECUTA: el encargo de la vuelta 145 manda ABRIR Y
@@ -554,8 +679,15 @@ def main():
     # LO QUE LE FALTA A LA FASE NO ES SOLO LO NO INSTALADO (vuelta 147, TAREA
     # 3.c): un control instalado a medias TAMBIEN le falta, en su otra mitad, y
     # callarlo aqui seria volver a publicar como entero lo que no lo es.
-    pendientes = ([f[0]["id"] for f in resto]
-                  + ["%s (solo su mitad mecanica)" % f[0]["id"] for f in a_medias])
+    def _por_que_falta(f):
+        c = f[0]
+        if estado_de_parada(c.get("parada"))[0] == "ABIERTA":
+            return "%s (con parada abierta encima)" % c["id"]
+        if c.get("mitad_remitida_a"):
+            return "%s (su remision a %s no se sostiene)" % (c["id"], c["mitad_remitida_a"])
+        return "%s (instalado, no entero)" % c["id"]
+
+    pendientes = ([f[0]["id"] for f in resto] + [_por_que_falta(f) for f in a_medias])
     if pendientes:
         # UNA SOLA FRASE, Y NO ES CAPRICHO (vuelta 146, 4.c): el veredicto y lo
         # que falta van juntos porque `verificar_cifras_del_reporte.py` coteja

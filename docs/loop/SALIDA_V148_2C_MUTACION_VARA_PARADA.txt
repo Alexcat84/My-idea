@@ -1,0 +1,24 @@
+CONTROLES EN LA TABLA REAL DE LA VARA: 9
+A1.3 remite su mitad semantica a: 'A2.6'
+A2.6 declara la parada: '2026-09-02-aduana-vector-y-a13'
+estado de esa parada, LEIDO DEL DISCO: CERRADA [docs/loop/paradas/2026-09-02-aduana-vector-y-a13-DECISION.md existe]
+
+CASO A (estado real de hoy): 9 entero(s) de 9
+   A1.3 -> INSTALADO, SU MITAD SEMANTICA REMITIDA A A2.6, QUE MUERDE
+   A2.6 -> INSTALADO Y MUERDE
+
+CASO B (parada de A2.6 mutada a una SIN decision): estado=ABIERTA
+   A2.6 -> INSTALADO Y MUERDE, PERO CON PARADA ABIERTA ENCIMA
+CASO C (la cascada):
+   A1.3 -> INSTALADO EN SU MITAD MECANICA (LA REMISION A A2.6 NO SE SOSTIENE HOY)
+   enteros: 7 de 9 (eran 9)
+
+CASO D (A1.3 remite a un control que no esta en la tabla):
+   A1.3 -> INSTALADO EN SU MITAD MECANICA (LA REMISION A A9.9_no_existe NO SE SOSTIENE HOY)
+
+CASO E (slug sin fichero): estado=SIN PARADA [no existe docs/loop/paradas/2026-01-01-esto-no-existe-en-ninguna-parte.md]
+
+VERDE: los cinco casos se comportan. Con la parada CERRADA los nueve son enteros;
+mutada a una parada SIN decision, A2.6 pierde el rotulo Y ARRASTRA A A1.3, que es
+lo que hace honesta a la remision; una remision a un control inexistente cae; y un
+slug sin fichero no se inventa una parada.
