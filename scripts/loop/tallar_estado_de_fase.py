@@ -885,6 +885,226 @@ def destino_de_enlace(op, pares, nodos, resolver, fallos):
     return cumplido, razon
 
 
+# --------------- LA MESA QUE DECLARA SU FIGURA (TAREA 3.a, vuelta 144) -------
+#
+# POR QUE NACE (acta de la vuelta 143, adjudicacion 3.9; CORRECCION 20 de
+# docs/plan/CORRECCIONES_A_APLICAR.md). La rama `es_mesa` de `medir()` mide una
+# mesa SOLO POR SUS HIJAS (`bloquea_a` union remision) y NUNCA mira los campos
+# propios de la ficha. Medido leyendo el fuente con `ast`
+# (scripts/loop/vuelta144_1c_medir_opm04.py): esa rama no lee `nodos`, ni
+# `eliminar`, ni `superviviente`, ni `aristas_nuevas`, ni `preservar`.
+#
+# Eso vale para las cuatro mesas cuya cirugia la hacen sus hijas. NO vale para
+# `OP-M-04`, que es LA UNICA MESA QUE LLEVA SU PROPIA CIRUGIA DENTRO: `nodos`
+# con cuatro, `eliminar` con dos, un `superviviente` doble y un giro en
+# `aristas_nuevas`. Sus dos hijas (`OP-S-12` y `OP-U-01`) no ejecutan su
+# cirugia, y ademas ninguna esta en el catalogo de la fase 06, asi que la vara
+# de mesa la dejaba en NO COMPUTABLE y caia en SIN VARA ESCRITA: el instrumento
+# diciendo en voz alta que le falta una regla.
+#
+# LO QUE SE ANADE ES UN CASO MAS Y SOLO UNO, POR EXTENSION CITABLE: cuando el
+# `tipo` de la mesa DECLARA SU FIGURA, la mesa se mide con las varas de esa
+# figura SOBRE SUS PROPIOS CAMPOS. La frase que dispara va LITERAL DE LA FICHA
+# y citada aqui, igual que las seis de la vuelta 141 y la excepcion de la 143:
+#
+#     "MESA ADJUDICADA: DOS FUSIONES MAS UN ENLACE"   (tipo de OP-M-04)
+#
+# NO ES DOCTRINA NUEVA Y LAS DOS VARAS YA ESTAN ESCRITAS EN ESTE MISMO FICHERO:
+# `destino_de_fusion` (superviviente vivo, absorbidos deprecados y en
+# `ids_alias`) y `destino_de_enlace` (direcciones con la IDA presente y el
+# regimen de vuelta que la ficha declara). SE REUSAN, NO SE COPIAN: esta rama
+# fabrica sub-fichas EN MEMORIA y se las pasa.
+#
+# UNA MESA QUE NO DECLARA SU FIGURA SE COMPORTA EXACTAMENTE COMO ANTES DE ESTA
+# VUELTA, con el mismo texto de celda. Eso es lo que prueba la mutacion (iv) de
+# scripts/loop/vuelta144_3a_mutaciones.py.
+#
+# --- LAS DOS DECISIONES DE LECTURA, DECLARADAS PORQUE SON DECISIONES ---
+#
+# (1) EL EMPAREJAMIENTO DE CADA FUSION NO SE TECLEA, SE DERIVA, Y CON UNA
+#     EXIGENCIA DE COBERTURA QUE LO HACE NO CIRCULAR. La ficha nombra sus DOS
+#     supervivientes en el campo `superviviente` y sus DOS eliminados en
+#     `eliminar`, pero NO dice por escrito cual eliminado va con cual
+#     superviviente en forma legible por maquina. Asignarlo a mano seria teclear
+#     una celda. Se deriva del grafo: cada eliminado se asigna al superviviente
+#     en cuyos `ids_alias` aparece. Y para que eso no sea circular (aceptar
+#     cualquier reparto), se exige ADEMAS, y esto es lo que muerde:
+#       - CADA eliminado tiene que estar en los `ids_alias` de EXACTAMENTE UNO
+#         de los supervivientes: cero es ROJO nombrandolo, dos es ROJO
+#         nombrandolo;
+#       - CADA superviviente tiene que quedarse con AL MENOS UN absorbido,
+#         porque la figura declara DOS fusiones y una fusion sin absorbido no es
+#         una fusion.
+#     Con las dos exigencias puestas, `destino_de_fusion` mide lo suyo (vivo,
+#     deprecado, alias) sobre un reparto que ya no puede ser cualquiera.
+#
+# (2) LA DIRECCION DEL ENLACE SE LEE DE UNA FRASE LITERAL DE `aristas_nuevas`,
+#     CITADA AQUI. El `aristas_nuevas` de esta mesa es prosa y NO trae ninguna
+#     flecha "A -> B", asi que `pares_de_aristas` saca cero pares de el. Lo que
+#     si trae, literal, es:
+#
+#         "LA OPERACION TERMINA CON UNA SOLA ARISTA entre madre e hijo, en la
+#          direccion de la escalera: identificar hacia formalizar"
+#
+#     La marca es `en la direccion de la escalera:` y detras van dos palabras
+#     separadas por `hacia`. CADA UNA TIENE QUE CASAR COMO PREFIJO CON
+#     EXACTAMENTE UNO de los dos supervivientes: si casa con ninguno o con los
+#     dos, es ROJO nombrandolo, nunca se elige el primero. Con eso se fabrica la
+#     sub-ficha del ENLACE ("A -> B") y se le pasa a `destino_de_enlace` junto
+#     con la `verificacion` ENTERA de la propia ficha, para que el regimen de
+#     vuelta lo siga decidiendo la ficha y no esta rama.
+#
+# MUTACIONES: scripts/loop/vuelta144_3a_mutaciones.py, las cuatro EN MEMORIA y
+# con el veredicto por computo.
+FRASE_FIGURA_DOS_FUSIONES_UN_ENLACE = "mesa adjudicada: dos fusiones mas un enlace"
+MARCA_DIRECCION_ESCALERA = "en la direccion de la escalera:"
+
+
+def figura_declarada_de(op):
+    """La figura que el propio `tipo` de la mesa declara, o None. La frase va
+    literal de la ficha (ver el bloque de arriba)."""
+    tipo = (op.get("tipo") or "").lower()
+    if FRASE_FIGURA_DOS_FUSIONES_UN_ENLACE in tipo:
+        return FRASE_FIGURA_DOS_FUSIONES_UN_ENLACE
+    return None
+
+
+def _supervivientes_de(op):
+    """Los ids de nodo que el campo `superviviente` nombra Y que ademas estan en
+    el propio `nodos` de la ficha. No se teclea ninguno: se cruzan los dos
+    campos de la ficha."""
+    texto = op.get("superviviente") or ""
+    de_la_ficha = [x for x in (op.get("nodos") or [])]
+    return [x for x in de_la_ficha if re.search(r"\b%s\b" % re.escape(x), texto)]
+
+
+def _direccion_del_enlace(op, sups, fallos):
+    """La direccion del enlace, leida de la frase literal de `aristas_nuevas`.
+    Devuelve (origen, destino) o (None, None) con el fallo ya registrado."""
+    cadena = None
+    for s in (op.get("aristas_nuevas") or []):
+        if MARCA_DIRECCION_ESCALERA in (s or "").lower():
+            cadena = s
+            break
+    if cadena is None:
+        fallos.append("%s: declara la figura %r y su aristas_nuevas no trae la marca %r: "
+                      "no se adivina en que direccion va el enlace"
+                      % (op.get("id_op"), FRASE_FIGURA_DOS_FUSIONES_UN_ENLACE,
+                         MARCA_DIRECCION_ESCALERA))
+        return None, None
+    bajo = cadena.lower()
+    cola = cadena[bajo.find(MARCA_DIRECCION_ESCALERA) + len(MARCA_DIRECCION_ESCALERA):]
+    palabras = [p for p in re.split(r"[^a-z0-9_]+", cola.lower()) if p]
+    if len(palabras) < 3 or palabras[1] != "hacia":
+        fallos.append("%s: tras %r esperaba '<a> hacia <b>' y encontro %r: no se adivina"
+                      % (op.get("id_op"), MARCA_DIRECCION_ESCALERA, palabras[:3]))
+        return None, None
+    extremos = []
+    for tok in (palabras[0], palabras[2]):
+        casan = [s for s in sups if s.startswith(tok)]
+        if len(casan) != 1:
+            fallos.append("%s: la palabra %r de la direccion del enlace casa con %d de los "
+                          "supervivientes (%s) y tiene que casar con UNO: ambiguo, no se "
+                          "toma el primero"
+                          % (op.get("id_op"), tok, len(casan), ", ".join(casan) or "ninguno"))
+            return None, None
+        extremos.append(casan[0])
+    if extremos[0] == extremos[1]:
+        fallos.append("%s: la direccion del enlace sale con el mismo nodo en los dos "
+                      "extremos (%s)" % (op.get("id_op"), extremos[0]))
+        return None, None
+    return extremos[0], extremos[1]
+
+
+def destino_de_mesa_con_figura(op, nodos, resolver, fallos):
+    """La mesa que declara su figura, medida con las varas de su figura sobre
+    SUS PROPIOS campos. Ver el bloque "LA MESA QUE DECLARA SU FIGURA".
+
+    Devuelve (cumplido, razon). `cumplido` es True o False; nunca None, porque
+    aqui SI hay vara escrita."""
+    partes = []
+    sups = _supervivientes_de(op)
+    elim = list(op.get("eliminar") or [])
+    if len(sups) != 2 or len(elim) != 2:
+        fallos.append("%s: la figura %r pide DOS supervivientes y DOS eliminados, y la ficha "
+                      "trae %d y %d" % (op.get("id_op"),
+                                        FRASE_FIGURA_DOS_FUSIONES_UN_ENLACE,
+                                        len(sups), len(elim)))
+        return False, ("la ficha declara la figura %r y no trae dos supervivientes y dos "
+                       "eliminados (trae %d y %d)"
+                       % (FRASE_FIGURA_DOS_FUSIONES_UN_ENLACE, len(sups), len(elim)))
+
+    # ---- LAS DOS FUSIONES, con reparto derivado y cobertura exigida --------
+    reparto = {s: [] for s in sups}
+    sin_casa, con_dos_casas = [], []
+    for x in elim:
+        duenos = [s for s in sups if x in set((nodos.get(s) or {}).get("ids_alias") or [])]
+        if len(duenos) == 1:
+            reparto[duenos[0]].append(x)
+        elif not duenos:
+            sin_casa.append(x)
+        else:
+            con_dos_casas.append("%s (en %s)" % (x, " y ".join(duenos)))
+
+    faltas_fusion = []
+    if sin_casa:
+        faltas_fusion.append("sin absorber por ninguno de los dos supervivientes: %s"
+                             % ", ".join(sorted(sin_casa)))
+    if con_dos_casas:
+        faltas_fusion.append("en los ids_alias de LOS DOS supervivientes a la vez: %s"
+                             % ", ".join(sorted(con_dos_casas)))
+    vacios = [s for s in sups if not reparto[s]]
+    if vacios and not sin_casa and not con_dos_casas:
+        faltas_fusion.append("superviviente(s) sin ningun absorbido, y la figura declara DOS "
+                             "fusiones: %s" % ", ".join(sorted(vacios)))
+
+    # UNA FUSION SIN ABSORBIDO NO CUENTA COMO CUMPLIDA. `destino_de_fusion`
+    # sobre un superviviente vivo y cero absorbidos devuelve True, y con razon,
+    # porque en su contexto normal la nomina de absorbidos siempre esta llena.
+    # Aqui la nomina la reparte esta rama, asi que el caso vacio existe y se
+    # trata: se cuenta como NO cumplida y la celda lo dice con esas palabras.
+    cumplidas = []
+    for s in sups:
+        sub = {"id_op": "%s (fusion de %s)" % (op.get("id_op"), s),
+               "superviviente": s,
+               "nodos": [s] + reparto[s],
+               "eliminar": reparto[s]}
+        ok, razon = destino_de_fusion(sub, nodos, fallos, resolver)
+        if not reparto[s]:
+            ok = False
+            razon += " [SIN ABSORBIDO ASIGNADO: no es una fusion cumplida]"
+        cumplidas.append(ok is True)
+        partes.append("fusion de %s: %s" % (s, razon))
+    n_fusiones_ok = sum(1 for c in cumplidas if c)
+    fusiones_ok = all(cumplidas) and not faltas_fusion
+    if faltas_fusion:
+        partes.append("REPARTO DE ABSORBIDOS ROTO: " + "; ".join(faltas_fusion))
+
+    # ---- EL ENLACE, con la direccion leida de la ficha ---------------------
+    origen, destino = _direccion_del_enlace(op, sups, fallos)
+    if origen is None:
+        partes.append("enlace: NO se pudo leer la direccion de la ficha")
+        enlace_ok = False
+    else:
+        sub_enlace = {"id_op": "%s (enlace)" % op.get("id_op"),
+                      "aristas_nuevas": ["%s -> %s" % (origen, destino)],
+                      "verificacion": list(op.get("verificacion") or [])}
+        pares = pares_de_aristas(sub_enlace, fallos)
+        ok_e, razon_e = destino_de_enlace(sub_enlace, pares, nodos, resolver, fallos)
+        enlace_ok = ok_e is True
+        partes.append("enlace %s -> %s (direccion leida de la ficha): %s"
+                      % (origen, destino, razon_e))
+
+    cumplido = bool(fusiones_ok and enlace_ok)
+    cabeza = ("figura declarada en el propio `tipo` (%r), medida con las varas de FUSION y "
+              "de ENLACE sobre los campos de la ficha: %d de %d fusiones con destino "
+              "cumplido, reparto de absorbidos %s, y el enlace %s"
+              % (op.get("tipo"), n_fusiones_ok, len(sups),
+                 "ROTO" if faltas_fusion else "OK",
+                 "CUMPLIDO" if enlace_ok else "SIN CUMPLIR"))
+    return cumplido, cabeza + "; " + "; ".join(partes)
+
+
 def es_mesa(op):
     return (op.get("tipo") or "").upper().startswith("MESA ADJUDICADA")
 
@@ -937,6 +1157,19 @@ def medir(fase, ops, nodos, remisiones=None, ref="WORK"):
         # OP-M-01-SEXTO, que la tabla de remision de 04_ENLACES.md manda
         # expresamente a OP-M-01. La segunda fuente se PARSEA (leer_remisiones),
         # no se teclea.
+        # LA MESA QUE DECLARA SU FIGURA SE MIDE POR SU FIGURA (TAREA 3.a,
+        # vuelta 144; acta 143, adjudicacion 3.9). Es UN caso mas y solo uno:
+        # una mesa que NO declara figura sigue midiendose por sus hijas,
+        # exactamente como antes de esta vuelta.
+        if figura_declarada_de(op) is not None:
+            cumplido, razon = destino_de_mesa_con_figura(op, nodos, resolver, fallos)
+            veredicto[x] = cumplido
+            filas[x] = dict(id_op=x, fase=op.get("fase"), estado=op.get("estado"),
+                            tipo=op.get("tipo"), vara="MESA POR FIGURA",
+                            cumplido=cumplido, razon=razon,
+                            remitida=remisiones.get(x))
+            continue
+
         de_bloquea = [h for h in (op.get("bloquea_a") or []) if h != x]
         de_remision = [h for h, meta in sorted(remisiones.items())
                        if meta.get("a") == x and h != x]

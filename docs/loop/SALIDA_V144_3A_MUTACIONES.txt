@@ -1,0 +1,45 @@
+MUTACIONES DE LA TAREA 3.a | vuelta 144 | OP-M-04
+Todo EN MEMORIA, cero escrituras. Grafo simulado y veredictos POR COMPUTO.
+==============================================================================
+EL REPARTO, LEIDO DE LA FICHA (no tecleado):
+   formalizar_junta_asesora absorbe formalize_advisory_board
+   identificar_consejo_asesores absorbe identificar_junta_asesores
+   leido de: identificar_consejo_asesores queda con DOS alias: el que ya tenia, identificar_advisory_board, y el nuevo iden
+LA DIRECCION DEL ENLACE, LEIDA DE LA FICHA: identificar_consejo_asesores -> formalizar_junta_asesora (fallos: 0)
+
+(i) CONTRAPRUEBA, ficha EJECUTADA sobre el grafo simulado:
+     cumplido: True | fallos: 0
+     figura declarada en el propio `tipo` ('MESA ADJUDICADA: DOS FUSIONES MAS UN ENLACE'), medida con las varas de FUSION y de ENLACE sobre los campos de la ficha: 2 de 2 fusiones con destino cumplido, reparto de absorbidos OK, y el enlace CUMPLIDO; fusion de formalizar_junta_asesora: superviviente formalizar_junta_asesora vivo, 1 absorbido(s) deprecado(s) y en ids_alias; fusion de identificar_consejo_
+     VEREDICTO: OK
+
+(ii) UNA FUSION A MEDIAS (formalize_advisory_board sin deprecar, absorbido de formalizar_junta_asesora):
+     cumplido: False
+     NOMBRA al absorbido y dice que no esta deprecado: True
+     y el enlace sigue CUMPLIDO (o sea que cae por la fusion): True
+     figura declarada en el propio `tipo` ('MESA ADJUDICADA: DOS FUSIONES MAS UN ENLACE'), medida con las varas de FUSION y de ENLACE sobre los campos de la ficha: 1 de 2 fusiones con destino cumplido, reparto de absorbidos OK, y el enlace CUMPLIDO; fusion de formalizar_junta_asesora: 0 absorbido(s) OK de 1; formalize_advisory_board NO esta deprecado; fusion de identificar_consejo_asesores: supervivien
+     VEREDICTO: OK
+
+(iii) EL ENLACE EN LA DIRECCION EQUIVOCADA (formalizar_junta_asesora -> identificar_consejo_asesores puesta, la buena no):
+     cumplido: False
+     cae POR EL ENLACE: True | las dos fusiones siguen cumplidas: True | reparto OK: True
+     figura declarada en el propio `tipo` ('MESA ADJUDICADA: DOS FUSIONES MAS UN ENLACE'), medida con las varas de FUSION y de ENLACE sobre los campos de la ficha: 2 de 2 fusiones con destino cumplido, reparto de absorbidos OK, y el enlace SIN CUMPLIR; fusion de formalizar_junta_asesora: superviviente formalizar_junta_asesora vivo, 1 absorbido(s) deprecado(s) y en ids_alias; fusion de identificar_conse
+     VEREDICTO: OK
+
+(iv) BORRADA LA FRASE DE LA FIGURA DEL `tipo`:
+     la frase se quito de verdad: True | sigue siendo MESA: True | ya no declara figura: True
+     vara: 'MESA' | cumplido: None (NO COMPUTABLE es None)
+     LA CELDA SALE IDENTICA A LA DE LA TABLA VIEJA (leida de SALIDA_V144_2A_ESTADO_DESPUES.txt): True
+     celda de hoy : NINGUNA de sus hijas esta en el catalogo de esta fase; nomina de 2 (bloquea_a 2, remision 0, union 2); nomina: OP-S-12 (05_SANEO), OP-U-01 (03_FUSIONES)
+     celda vieja  : NINGUNA de sus hijas esta en el catalogo de esta fase; nomina de 2 (bloquea_a 2, remision 0, union 2); nomina: OP-S-12 (05_SANEO), OP-U-01 (03_FUSIONES)
+     VEREDICTO: OK
+
+==============================================================================
+  (i) ejecutada en memoria sale CUMPLIDA           OK
+  (ii) fusion a medias, SIN CUMPLIR y la nombra    OK
+  (iii) enlace al reves, cae por el enlace         OK
+  (iv) sin la figura, vuelve a NO COMPUTABLE igual OK
+
+P.16, dataset/ y docs/plan/ SIN TOCAR tras las mutaciones: True
+
+MUTACIONES QUE MUERDEN: 4 de 4
+EXITCODE: 0
