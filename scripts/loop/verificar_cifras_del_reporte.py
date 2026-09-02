@@ -254,6 +254,17 @@ jamas reescribir la prosa hasta que la guarda no encuentre nada**, que es el
 ramal (xxi) del acta 136 ("una cobertura de cero no es un verde, es un plato
 vacio").
 
+LA LISTA DE COMMITS QUEDA FUERA, Y SE DICE POR QUE (vuelta 140, tercera
+reparacion de esta operacion, hallada corriendo la guarda contra el reporte ya
+con su lista pegada). El bloque de commits es un TALLADO DE GIT: sus lineas son
+ASUNTOS DE COMMIT, no prosa del reporte, y uno de los asuntos de esta vuelta
+empieza por "LA FASE 06 NO CIERRA". Dentro de una lista de commits no hay donde
+poner la cita, porque la ventana es forward-only por doctrina adjudicada y detras
+solo hay mas commits. Se le da el MISMO trato que a la cabecera tallada, con las
+MISMAS tres reglas de delimitador (`<!-- COMMITS TALLADOS -->` y su cierre): con
+las dos marcas se quita lo delimitado, SIN NINGUNA marca no se quita nada y se
+recorre todo, y con UNA SOLA es ROJO.
+
 COMO RECONOCE UN FICHERO DE `tallar_estado_de_fase.py`: POR SU CONTENIDO, no
 por su nombre. Tiene que traer la cabecera `ESTADO DE LA FASE` y una linea
 `CIFRA:` con `sin cumplir: <n>`. Un fichero citado que no las traiga NO
@@ -315,6 +326,12 @@ def leer(ruta):
 
 MARCA_CABECERA_ABRE = "<!-- CABECERA TALLADA -->"
 MARCA_CABECERA_CIERRA = "<!-- FIN CABECERA TALLADA -->"
+# LA LISTA DE COMMITS, TALLADA DE GIT (vuelta 140, tercera reparacion de la 2.b).
+# Mismo trato y mismas reglas de delimitador que la cabecera tallada: es un
+# bloque con su propio tallador, y sus lineas son ASUNTOS DE COMMIT, no prosa del
+# reporte. Ver el docstring del modulo.
+MARCA_COMMITS_ABRE = "<!-- COMMITS TALLADOS -->"
+MARCA_COMMITS_CIERRA = "<!-- FIN COMMITS TALLADOS -->"
 
 
 def quitar_bloques_cubiertos(texto):
@@ -366,6 +383,22 @@ def quitar_bloques_cubiertos(texto):
     se levanta ValueError con el nombre de la que falta, en vez de adivinar
     donde acaba el bloque.
     """
+    # Los COMMITS TALLADOS, con las mismas tres reglas de delimitador que la
+    # cabecera (vuelta 140): las dos marcas quitan lo delimitado, ninguna no
+    # quita nada, una sola es ROJO.
+    c_abre = texto.find(MARCA_COMMITS_ABRE)
+    c_cierra = texto.find(MARCA_COMMITS_CIERRA)
+    if (c_abre == -1) != (c_cierra == -1):
+        falta = MARCA_COMMITS_CIERRA if c_cierra == -1 else MARCA_COMMITS_ABRE
+        raise ValueError(
+            "el reporte trae UNA SOLA de las dos marcas de los commits tallados: falta %r"
+            % falta)
+    if c_abre != -1 and c_cierra < c_abre:
+        raise ValueError("el reporte trae %r ANTES de %r"
+                         % (MARCA_COMMITS_CIERRA, MARCA_COMMITS_ABRE))
+    if c_abre != -1:
+        texto = texto[:c_abre] + texto[c_cierra + len(MARCA_COMMITS_CIERRA):]
+
     abre = texto.find(MARCA_CABECERA_ABRE)
     cierra = texto.find(MARCA_CABECERA_CIERRA)
     if (abre == -1) != (cierra == -1):

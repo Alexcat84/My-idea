@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-r"""vuelta140_2b_mutaciones.py . LAS CINCO PRUEBAS DE LA GUARDA DE AFIRMACIONES
+r"""vuelta140_2b_mutaciones.py . LAS SIETE PRUEBAS DE LA GUARDA DE AFIRMACIONES
 DE CIERRE (TAREA 2.b de la vuelta 140, acta de la vuelta 139, caida 4.1).
 
 QUE PRUEBA. `verificar_cifras_del_reporte.py` aprendio en esta vuelta a leer
@@ -17,6 +17,11 @@ de una FASE o de un CATALOGO tiene que (1) citar un fichero de salida de
           caia igual que uno que la calla.
   (c)     sin la frase: VERDE.
   (c bis) frase con cita a un fichero que dice `sin cumplir: 0`: VERDE y cotejada.
+  (d)     el DELIMITADOR de los COMMITS TALLADOS: la misma frase de cierre SIN
+          cita, metida DENTRO del bloque delimitado, no se ve; el MISMO texto sin
+          las marcas si se ve. Es la contraprueba de que el delimitador quita lo
+          delimitado y nada mas.
+  (e)     UNA SOLA marca del delimitador: ROJO ruidoso, no silencio.
 
 EL SUJETO ES FABRICADO Y CONGELADO, NO EL REPORTE DE HOY. Se escribe un
 reporte minimo en un temporal y dos ficheros de salida de estado de fase
@@ -25,7 +30,7 @@ AL TERMINAR (P.16, quien fabrica limpia), pase lo que pase, incluso si el
 script cae. Asi el caso no depende del arbol de hoy ni deja basura que la
 proxima guarda de apertura se coma.
 
-NINGUN VEREDICTO ES UN LITERAL: los cinco comparan los FALLOS que la guarda de
+NINGUN VEREDICTO ES UN LITERAL: los siete comparan los FALLOS que la guarda de
 verdad acaba de computar sobre el sujeto fabricado, y cada caso lleva su
 contraprueba (el mismo camino sin la mutacion). Los nombres de las que faltan
 se LEEN del fichero fabricado con la funcion de la propia guarda, no se teclean.
@@ -198,11 +203,48 @@ def main():
         ok_d = not [x for x in fallos_d if "AFIRMACION DE CIERRE" in x] and len(cierres_d) == 1
         print("VEREDICTO (c bis): %s" % ("VERDE" if ok_d else "ROJO"))
 
-        todo = ok_a and ok_b and ok_bb and ok_c and ok_d
         print("")
         print("=" * 78)
-        print("RESUMEN: (a) %s | (b) %s | (b bis) %s | (c) %s | (c bis) %s"
-              % tuple("VERDE" if x else "ROJO" for x in (ok_a, ok_b, ok_bb, ok_c, ok_d)))
+        print("(d) EL DELIMITADOR DE LOS COMMITS TALLADOS: CON LAS DOS MARCAS, SE SALTA")
+        print("=" * 78)
+        print("La frase de cierre SIN cita va DENTRO del bloque delimitado. Con las dos")
+        print("marcas, la guarda no la ve; el mismo texto SIN marcas si la ve.")
+        dentro = ("\n" + V.MARCA_COMMITS_ABRE + "\n\n```\n"
+                  "  abc12345 REPORTE DE LA VUELTA 140: LA FASE 06 NO CIERRA.\n"
+                  "```\n\n" + V.MARCA_COMMITS_CIERRA + "\n")
+        fallos_d, _ = correr(CUERPO_BASE + dentro)
+        de_cierre_d = [x for x in fallos_d if "AFIRMACION DE CIERRE" in x]
+        print("con las DOS marcas: %d fallo(s) de cierre" % len(de_cierre_d))
+        sin_marcas = dentro.replace(V.MARCA_COMMITS_ABRE, "").replace(V.MARCA_COMMITS_CIERRA, "")
+        fallos_sm, _ = correr(CUERPO_BASE + sin_marcas)
+        de_cierre_sm = [x for x in fallos_sm if "AFIRMACION DE CIERRE" in x]
+        print("SIN las marcas (contraprueba): %d fallo(s) de cierre" % len(de_cierre_sm))
+        for x in de_cierre_sm:
+            print("   %s" % x)
+        ok_dd = (len(de_cierre_d) == 0 and len(de_cierre_sm) == 1)
+        print("EL DELIMITADOR QUITA LO DELIMITADO Y NADA MAS: %s" % ok_dd)
+        print("VEREDICTO (d): %s" % ("VERDE" if ok_dd else "ROJO"))
+
+        print("")
+        print("=" * 78)
+        print("(e) UNA SOLA MARCA: ROJO RUIDOSO, NO SILENCIO")
+        print("=" * 78)
+        solo_una = dentro.replace(V.MARCA_COMMITS_CIERRA, "")
+        try:
+            correr(CUERPO_BASE + solo_una)
+            ok_e = False
+            print("NO CAYO: la guarda acepto una sola marca. ROJO.")
+        except ValueError as e:
+            ok_e = "commits tallados" in str(e)
+            print("cayo con ValueError, como debe: %s" % e)
+        print("VEREDICTO (e): %s" % ("VERDE" if ok_e else "ROJO"))
+
+        todo = ok_a and ok_b and ok_bb and ok_c and ok_d and ok_dd and ok_e
+        print("")
+        print("=" * 78)
+        print("RESUMEN: (a) %s | (b) %s | (b bis) %s | (c) %s | (c bis) %s | (d) %s | (e) %s"
+              % tuple("VERDE" if x else "ROJO"
+                      for x in (ok_a, ok_b, ok_bb, ok_c, ok_d, ok_dd, ok_e)))
         print("=" * 78)
         return 0 if todo else 1
     finally:

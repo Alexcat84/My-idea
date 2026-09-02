@@ -41,7 +41,24 @@ afirmaciones de cierre COTEJADAS: 1
 VEREDICTO (c bis): VERDE
 
 ==============================================================================
-RESUMEN: (a) VERDE | (b) VERDE | (b bis) VERDE | (c) VERDE | (c bis) VERDE
+(d) EL DELIMITADOR DE LOS COMMITS TALLADOS: CON LAS DOS MARCAS, SE SALTA
+==============================================================================
+La frase de cierre SIN cita va DENTRO del bloque delimitado. Con las dos
+marcas, la guarda no la ve; el mismo texto SIN marcas si la ve.
+con las DOS marcas: 0 fallo(s) de cierre
+SIN las marcas (contraprueba): 1 fallo(s) de cierre
+   linea 5: AFIRMACION DE CIERRE (sujeto 'fase', verbo 'cierra') SIN cita de tallar_estado_de_fase.py en su ventana: 'abc12345 REPORTE DE LA VUELTA 140: LA FASE 06 NO CIERRA.'
+EL DELIMITADOR QUITA LO DELIMITADO Y NADA MAS: True
+VEREDICTO (d): VERDE
+
+==============================================================================
+(e) UNA SOLA MARCA: ROJO RUIDOSO, NO SILENCIO
+==============================================================================
+cayo con ValueError, como debe: el reporte trae UNA SOLA de las dos marcas de los commits tallados: falta '<!-- FIN COMMITS TALLADOS -->'
+VEREDICTO (e): VERDE
+
+==============================================================================
+RESUMEN: (a) VERDE | (b) VERDE | (b bis) VERDE | (c) VERDE | (c bis) VERDE | (d) VERDE | (e) VERDE
 ==============================================================================
 P.16, temporales retirados: SI
 EXITCODE: 0

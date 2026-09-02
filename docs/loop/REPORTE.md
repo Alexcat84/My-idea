@@ -33,6 +33,35 @@ EXIT 0** y su tabla se pega entera, sin tocar una celda. Salida en
 
 <!-- FIN CABECERA TALLADA -->
 
+**HASH FINAL de la vuelta, tallado de git y no tecleado.** `git rev-parse HEAD`
+leido al escribir esta linea, en la rama `pasada-unica`:
+
+```
+6121ae9e7d2694cebf219193e1f212346c235563
+```
+
+<!-- COMMITS TALLADOS -->
+
+**LOS COMMITS DE LA VUELTA**, de `git log 6ec25c1d..HEAD` (el acta de la 139
+excluida). Son **11**, y el ultimo, el que escribe esta lista, no puede aparecer
+en ella: es el carril de la vuelta 64 que el acta 137 ya verifico.
+
+```
+  6121ae9e REPORTE DE LA VUELTA 140: LAS TAREAS 0, 1, 2 Y 4 ENTERAS, TRES REMITIDAS DE CINCO, Y DOS PARADAS. LA FASE 06 NO CIERRA, Y ESTA VEZ LO DICE UN
+  2730d6af VUELTA 140, TAREA 3, REMITIDA 5 DE 5: OP-E-04 NO SE EJECUTA. PARADA, CERO ESCRITURAS, Y NO LA ARREGLO YO.
+  7439c26b VUELTA 140, TAREA 3, REMITIDA 4 DE 5: OP-E-05, EL ENLACE MUTUO. LAS DOS QUE FALTABAN, ESCRITAS RESUELTAS POR ALIAS.
+  291001a3 VUELTA 140, TAREA 3, REMITIDA 3 DE 5: OP-M-01-SEXTO. LA PODA DEL SOLAPE Y LA ARISTA QUE LA SUSTITUYE.
+  4e6bda28 VUELTA 140, TAREA 3, REMITIDA 2 DE 5: OP-M-01-ESLABONES NO SE DECLARA CUMPLIDA. PARADA, Y NO LA ARREGLO YO.
+  ed2fce07 VUELTA 140, TAREA 3, REMITIDA 1 DE 5: OP-M-03-ENLACES. LAS DOS ARISTAS ESCRITAS, Y LA MESA OP-M-03 PASA A DESTINO CUMPLIDO.
+  f26dee37 VUELTA 140, TAREAS 2.b Y 2.c: LA GUARDA APRENDE A LEER LAS AFIRMACIONES DE CIERRE, Y EL ANCLA MOVIL SE CLAVA.
+  7ba117bf VUELTA 140, TAREA 2.a: EL ESTADO DE UNA FASE SE COMPUTA. tallar_estado_de_fase.py con sus tres varas y su tercer saco ruidoso. Mutaciones (i)
+  c7963429 VUELTA 140, TAREA 1: LOS TRES REGISTROS, LOS TRES POR ADICION PURA. R.21, LA CORRECCION 11 (LA CIFRA DEL AUDITOR) Y LA 12 (LA PERDIDA DE NOMB
+  7ccc1885 VUELTA 140, TAREA 0.d: LA GUARDA DE LA APERTURA EN VERDE EXIT 0, CON LOS DIEZ DENTRO.
+  2e2ad80b VUELTA 140, TAREA 0: EL BLOQUE DE APERTURA, SELLADO ANTES DE LA PRIMERA OPERACION, CON LOS DIEZ NOMBRES CANONICOS.
+```
+
+<!-- FIN COMMITS TALLADOS -->
+
 **EL DESFASE DEL CALIBRADO NO SE MUEVE:** las mismas cuatro filas al abrir y al
 cerrar. Las escrituras de esta vuelta no tocan ninguna fila del calibrado.
 
@@ -125,13 +154,27 @@ texto que escriba *"cierra"* Y ADEMAS nombre las que faltan pasaria. Es prosa qu
 se contradice sola y que salta a la vista; lo que la guarda impide es lo que
 **no** salta a la vista.
 
-**LAS CINCO MUTACIONES, VERDE** (`SALIDA_V140_2B_MUTACIONES.txt`), sobre sujeto
+**Y UNA TERCERA REPARACION, TAMBIEN HALLADA CORRIENDOLA CONTRA ESTE REPORTE, ya
+con su lista de commits pegada:** el bloque de commits es un **tallado de git**,
+y sus lineas son **asuntos de commit, no prosa mia**. Uno de los de esta vuelta
+lleva en su asunto la misma frase sobre el estado de la fase 06 que
+`SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt` mide (sin cumplir: `OP-M-01`, `OP-M-04`
+y `OP-E-04`), y la guarda lo leia como una afirmacion del reporte y pedia una
+cita **que dentro de una lista de commits no hay donde poner**, porque la ventana
+es forward-only por doctrina adjudicada y detras solo hay mas commits. **La reparacion es la que la casa ya usa** para la cabecera
+tallada: se delimita con dos marcas y se le dan **las mismas tres reglas**, con
+las dos marcas se quita lo delimitado, **sin ninguna marca no se quita nada y se
+recorre todo**, y con una sola es ROJO.
+
+**LAS SIETE MUTACIONES, VERDE** (`SALIDA_V140_2B_MUTACIONES.txt`), sobre sujeto
 fabricado y **retirado por P.16**: (a) frase de cierre sin cita, ROJO; (b) con
 cita a un fichero que dice `sin cumplir: 3` y sin nombrarlas, ROJO **nombrando
 las tres, leidas del fichero y no tecleadas**; **(b bis) la misma frase
 nombrandolas, VERDE, que es justo el caso que mi primera version tiraba**; (c)
 sin la frase, VERDE; (c bis) con cita a un fichero que dice `sin cumplir: 0`,
-VERDE y cotejada.
+VERDE y cotejada; **(d) la misma frase sin cita metida DENTRO del bloque
+delimitado no se ve, y el mismo texto sin las marcas SI se ve**; **(e) una sola
+marca, ROJO ruidoso**.
 
 **Y LA PRUEBA DE QUE SIRVE, sobre el sujeto real que la motivo**
 (`SALIDA_V140_2B_SOBRE_REPORTE_139.txt`): corrida contra el reporte de la vuelta
@@ -301,11 +344,17 @@ es lo que las dos paradas piden.
    la vuelta entera por eso habria dejado las remitidas otra vuelta mas sin
    tocar. **Puedo estar equivocado.**
 4. **PARES DIRIGIDOS CONTRA CADENAS DE `aristas_nuevas`.** Ver la seccion 6.
-5. **LA GUARDA DE CIERRE DISPARA DE MAS, Y A PROPOSITO.** Con el vocabulario
-   cerrado caen tambien frases condicionales y asuntos de commit. Sostengo que el
-   coste de un disparo de mas es una cita y el de un disparo de menos fue la
-   caida 4.1. **El remedio de un rojo de esta clase es CITAR, jamas reescribir la
-   prosa** (ramal (xxi)).
+5. **LA GUARDA DE CIERRE DISPARA DE MAS, Y A PROPOSITO, PERO YA HE TENIDO QUE
+   ACOTARLA DOS VECES.** Con el vocabulario cerrado caen tambien frases
+   condicionales, asuntos de commit, y hasta el nombre del propio fichero de
+   estado, `SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt`, que deja sin cumplir a
+   `OP-M-01`, `OP-M-04` y `OP-E-04`. La acote **exigiendo nombrar las que faltan** en vez de
+   exigir un cero, y **delimitando el bloque de commits tallados**. Sostengo que
+   el coste de un disparo de mas es una cita y el de un disparo de menos fue la
+   caida 4.1, y que **el remedio es CITAR, jamas reescribir la prosa** (ramal
+   (xxi)). **Pero dos acotaciones en una vuelta son un aviso**, y si hicieran
+   falta mas habria que revisar el vocabulario en vez de seguir poniendo
+   excepciones.
 6. **LAS DOS PARADAS PODRIAN LEERSE COMO EXCESO DE CELO.** En `OP-E-04` dos de
    los nueve pares pasan todas las guardas y no los escribi. Sostengo que
    escribir LD-45 sin LD-53 es elegir direccion, pero **es defendible entregar
@@ -350,7 +399,7 @@ es lo que las dos paradas piden.
 **LA LINEA `COBERTURA`, ENTERA Y CON SU LECTURA HONESTA:**
 
 ```
-COBERTURA: 0 cotejadas / 0 exentas / 0 cifras | reparto: 0 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 13
+COBERTURA: 0 cotejadas / 0 exentas / 0 cifras | reparto: 0 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 15
 ```
 
 Esa linea sale de `SALIDA_V140_CIERRE_GUARDA_CIFRAS.txt` y las afirmaciones que cuenta van todas contra `SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt`, que deja sin cumplir a `OP-M-01`, `OP-M-04` y `OP-E-04`.
@@ -375,7 +424,7 @@ leido como si fuera un recuento de colapsos**, un falso positivo del patron; la
 otra contaba **direcciones y las llamaba pares**, que **no es la unidad
 correcta** para una arista dirigida, y ademas no tenia fichero que la contara.
 
-**LO QUE SI SE COTEJO, Y ES LO QUE ESTA VUELTA ANADE: TRECE AFIRMACIONES DE
+**LO QUE SI SE COTEJO, Y ES LO QUE ESTA VUELTA ANADE: QUINCE AFIRMACIONES DE
 CIERRE**, contra `SALIDA_V140_4_ESTADO_FASE06_CIERRE.txt` y contra
 `SALIDA_V140_2A_ESTADO_FASE06_ANTES.txt`, que dejan sin cumplir a `OP-M-01`,
 `OP-M-04`, `OP-E-04`, `OP-M-03`, `OP-E-05`, `OP-M-01-SEXTO` y `OP-M-03-ENLACES`,
