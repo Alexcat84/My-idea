@@ -1,0 +1,121 @@
+==============================================================================
+GUARDAS (i), (ii), (iii) Y (iv) DE LA OPERACION 2.b, VUELTA 139
+LA GUARDA DE CIFRAS DEJA DE SER CIEGA A LAS TABLAS
+==============================================================================
+  commit del acta 138, resuelto por su asunto: e8cf1552
+  guarda VIEJA sacada de git: 29725 bytes, sha256 725c2a43743ab200
+  las DOS guardas importadas, la de hoy y la del acta 138.
+
+------------------------------------------------------------------------------
+(ii) EL SUJETO CONGELADO Y SU IDENTIDAD, cotejada en esta corrida.
+    SUJETO_FIJO_V135_2E_REPORTE_134.md : sha256 d1f97a510f17e35046eeec4975e1e0a1adabcfdda5a4646a250aa6db97d61fdd
+    e12e4c36:docs/loop/REPORTE.md : sha256 d1f97a510f17e35046eeec4975e1e0a1adabcfdda5a4646a250aa6db97d61fdd
+    identicos byte a byte (normalizando fin de linea): True
+
+    CASO POSITIVO SOBRE EL SUJETO CONGELADO, las dos guardas:
+       filas de tabla en el sujeto            : 12
+       cifras que VE la guarda VIEJA          : 4 (exit 0)
+       cifras que VE la guarda NUEVA          : 4 (exit 1)
+       COBERTURA: 1 cotejadas / 1 exentas / 4 cifras | reparto: 0 POR ETIQUETA, 0 POR CONJUNTO, 1 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA
+    MONOTONIA (la nueva nunca ve menos que la vieja): True
+    pares (numero, unidad) que viven en las 12 filas de tabla de este
+    sujeto, contados con el patron de la propia guarda: 0
+    POR ESO las dos ven 4: aqui no habia nada que la ceguera tapara.
+
+    LO QUE SI CAMBIA EN ESTE SUJETO, Y SE DECLARA: EL VEREDICTO.
+       la VIEJA da exit 0, la NUEVA da exit 1.
+       No es que la nueva vea mas cifras: es que al dejar de borrar las
+       filas de tabla, la VENTANA AMPLIA de la exencion (iii) cambia de
+       vecinos, y dos `(sin instrumento)` del reporte de la 134 dejan de
+       ser legales porque su ventana SI cita un fichero. Es el ramal
+       (xix) mordiendo mas, no menos: una exencion que escribe el
+       auditado no es una exencion. Los dos fallos, enteros:
+          linea 56: "118 grafias" marca (sin instrumento) pero su ventana amplia SI cita `SALIDA_V134_4A_CENSO_COLA.txt`: la cifra se coteja, no se exime (hay instrumento en la ventana)
+          linea 59: "54 grupos" marca (sin instrumento) pero su ventana amplia SI cita `SALIDA_V134_4B_EFECTO_CAP.txt`: la cifra se coteja, no se exime (hay instrumento en la ventana)
+
+    EL POSITIVO DURO: las CUATRO mutaciones viejas, ancladas a este mismo
+    sujeto congelado, corridas con la guarda reparada.
+       ==============================================================================
+       LAS CUATRO MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+       ==============================================================================
+         vuelta133_tarea2e_mutacion_cifras.py   exit 0  OK
+         vuelta135_2e_mutacion_1.py             exit 0  OK
+         vuelta135_2e_mutacion_2.py             exit 0  OK
+         vuelta135_2e_mutacion_3.py             exit 0  OK
+         ANCLA PERDIDA: 0 (ninguna)
+         NO MORDIO    : 0 (ninguna)
+       VERDE: las 4 mutaciones viejas corren y muerden.
+       FIN
+       exit de verificar_mutaciones_viejas.py: 0
+
+------------------------------------------------------------------------------
+(i) MUTACION: una FILA DE TABLA con una cifra que NO cuadra con su fichero.
+    fichero testigo: `SALIDA_V139_CONTEO_APERTURA.txt`
+    lineas que el fichero tiene de verdad (contadas por la guarda): 2
+    la fila de tabla dira 3 lineas, que es una de mas: 3
+
+    GUARDA VIEJA (blob de e8cf1552): exit 0, cifras vistas 0
+       VERDE EXIT 0: 0 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
+       COBERTURA: 0 cotejadas / 0 exentas / 0 cifras
+
+    GUARDA NUEVA (arbol de hoy): exit 1, cifras vistas 1
+       ROJO, 1 cifra(s) no cuadran:
+         linea 6: "3 lineas" <-> `SALIDA_V139_CONTEO_APERTURA.txt`: contado 2
+       COBERTURA: 0 cotejadas / 0 exentas / 1 cifras | reparto: 0 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA
+
+    LA VIEJA LA DEJA PASAR INVISIBLE (exit 0, cero cifras vistas) y
+    LA NUEVA CAE EN ROJO nombrandola: True
+
+------------------------------------------------------------------------------
+(iii) EL REPORTE DE LA VUELTA 138, TAL COMO ESTA EN GIT.
+    blob leido de 23bde6cd (ultimo commit que toca docs/loop/REPORTE.md)
+    filas de tabla en el reporte de la 138: 75
+
+    CIFRAS QUE VE LA GUARDA VIEJA : 10   (exit 1)
+    CIFRAS QUE VE LA GUARDA NUEVA : 26   (exit 1)
+    CIFRAS QUE LA CEGUERA PERDIA  : 16
+    COBERTURA de la VIEJA: 0 cotejadas / 0 exentas / 10 cifras
+    COBERTURA de la NUEVA: 17 cotejadas / 0 exentas / 26 cifras | reparto: 6 POR ETIQUETA, 10 POR CONJUNTO, 1 sin linea CIFRA | de las cotejadas, 7 viven en una FILA DE TABLA
+
+    LOS ROJOS DE LA GUARDA NUEVA SOBRE EL REPORTE DE LA 138, CITADOS
+    ENTEROS Y NO RESUMIDOS. El encargo lo dice con estas palabras:
+    "casi seguro dara ROJO, porque las cifras de tabla nunca se
+    citaron. ESO ES EL EXITO, NO EL FALLO. Lo que se hace con los
+    rojos es CITARLOS, jamas debilitar la guarda ni borrar la tabla."
+       ROJO, 9 cifra(s) no cuadran:
+         linea 77: "80 ficheros" <-> `SALIDA_V138_WEB_APERTURA.txt`: contado 0
+         linea 77: "80 ficheros" <-> `SALIDA_V138_WEB_APERTURA.txt`: contado 0
+         linea 339: "6 grupos" SIN fichero de salida en su ventana (ni exenta): '| fusiones de la fase 06 | 6 grupos |'
+         linea 340: "1 grupo" SIN fichero de salida en su ventana (ni exenta): '| fundidas en esta vuelta | 1 grupo |'
+         linea 341: "5 grupos" SIN fichero de salida en su ventana (ni exenta): '| con dos o mas absorbidos, donde el hueco PUEDE morder | 5 grupos |'
+         linea 342: "2 grupos" SIN fichero de salida en su ventana (ni exenta): '| leidas a mano en esta vuelta buscando el hueco | 2 grupos |'
+         linea 343: "2 grupos" SIN fichero de salida en su ventana (ni exenta): '| donde el hueco MUERDE, comprobado | 2 grupos |'
+         linea 344: "2 lineas" SIN fichero de salida en su ventana (ni exenta): '| lineas de `preservar` que nombran dos o mas absorbidos | 2 lineas |'
+         linea 345: "7 lineas" SIN fichero de salida en su ventana (ni exenta): '| lineas de `preservar` sin ningun id, que la maquina NO clasifica | 7 lineas |'
+       COBERTURA: 17 cotejadas / 0 exentas / 26 cifras | reparto: 6 POR ETIQUETA, 10 POR CONJUNTO, 1 sin linea CIFRA | de las cotejadas, 7 viven en una FILA DE TABLA
+
+------------------------------------------------------------------------------
+(iv) EL DELIMITADOR DE LA CABECERA TALLADA.
+    filas de tabla en el sujeto           : 6
+    de ellas, dentro de la cabecera       : 3
+    CON las dos marcas, filas que quedan  : 3 (se esperaban 3)
+    SIN las marcas, filas que quedan      : 6 (se esperaban 6, TODAS)
+
+    CON UNA SOLA MARCA: tiene que ser ROJO RUIDOSO, no adivinar.
+       solo la de abrir     ValueError: el reporte trae UNA sola de las dos marcas de la cabecera tallada: falta '<!-- FIN CABECERA TALLADA -->'. O van las dos o no va ninguna; adivinar donde acaba el bloque es justo lo que esta guarda dejo de hacer en la vuelta 139
+       solo la de cerrar    ValueError: el reporte trae UNA sola de las dos marcas de la cabecera tallada: falta '<!-- CABECERA TALLADA -->'. O van las dos o no va ninguna; adivinar donde acaba el bloque es justo lo que esta guarda dejo de hacer en la vuelta 139
+
+  temporal retirado (P.16): True
+
+==============================================================================
+  (ii.a) identidad del sujeto congelado          VERDE, sha256 identico al blob
+  (ii.b) monotonia, la nueva nunca ve menos      VERDE, 4 -> 4 cifras
+  (ii.c) las 4 mutaciones viejas siguen mordiendo VERDE, exit 0
+  (i) fila de tabla con cifra que no cuadra      VERDE, vieja exit 0 ve 0 / nueva exit 1 ve 1
+  (iii) el reporte de la 138, cifras vistas      VERDE, 10 -> 26 (16 que la ceguera perdia)
+  (iv) el delimitador quita solo lo delimitado   VERDE
+  (iv) sin marcas no quita nada                  VERDE
+  (iv) con una sola marca, ROJO ruidoso          VERDE
+VERDE: los 8 casos de la 2.b se sostienen.
+FIN
+EXITCODE: 0

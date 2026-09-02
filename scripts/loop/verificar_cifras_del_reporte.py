@@ -14,12 +14,21 @@ CUERPO del reporte, con sus tablas de adjudicaciones y sus cifras de prosa,
 sigue sin ningun instrumento que lo muerda.
 
 CONTRATO (cerrado, para no tener que decidir nada al correrla):
-  - Recorre docs/loop/REPORTE.md SALTANDO la tabla tallada de la cabecera
-    (delimitada por las lineas que `tallar_cabecera_reporte.py --comparar`
-    reconoce: se salta desde la primera fila de tabla markdown hasta la
-    ultima fila de tabla consecutiva del bloque de cabecera) y el parrafo de
-    identidad (las tres lineas de rotulo que empiezan por "HEAD sellado" o
-    "commit de nacimiento").
+  - Recorre docs/loop/REPORTE.md SALTANDO la cabecera tallada Y NADA MAS.
+    CORREGIDO EN LA VUELTA 139 (2.b), y el texto viejo de este punto decia,
+    VERBATIM: "SALTANDO la tabla tallada de la cabecera (delimitada por las
+    lineas que `tallar_cabecera_reporte.py --comparar` reconoce: se salta
+    desde la primera fila de tabla markdown hasta la ultima fila de tabla
+    consecutiva del bloque de cabecera)". NO ERA LO QUE EL CODIGO HACIA: el
+    codigo descartaba TODA linea que empezara por barra vertical, viviera
+    donde viviera, y por eso no veia NI UNA cifra que viviera en una tabla
+    (acta de la vuelta 138, caida 4.5: 26 cifras en el fichero, 10 vistas,
+    16 perdidas). DESDE LA VUELTA 139 la cabecera tallada se DELIMITA con
+    dos marcas literales, `<!-- CABECERA TALLADA -->` y
+    `<!-- FIN CABECERA TALLADA -->`, y se quita SOLO lo que hay entre ellas;
+    si las marcas NO estan, no se quita nada y se recorren TODAS las filas.
+    Se sigue quitando el parrafo de identidad (las lineas de rotulo que
+    empiezan por "HEAD sellado" o "commit de nacimiento").
   - Busca pares (numero, unidad) con VOCABULARIO CERRADO de unidades:
     fichero/ficheros, par/pares, grupo/grupos, grafia/grafias,
     colapso/colapsos, nodo/nodos, linea/lineas, arista/aristas (singular o
@@ -228,29 +237,110 @@ def leer(ruta):
         return f.read()
 
 
+MARCA_CABECERA_ABRE = "<!-- CABECERA TALLADA -->"
+MARCA_CABECERA_CIERRA = "<!-- FIN CABECERA TALLADA -->"
+
+
 def quitar_bloques_cubiertos(texto):
-    """Quita la tabla de cabecera (tallada por tallar_cabecera_reporte.py) y
-    el parrafo de identidad (tallado por tallar_identidad_reporte.py, 2.a):
-    esos dos bloques ya tienen su propio tallador y no se recorren aqui."""
-    lineas = texto.split("\n")
-    fuera = []
-    en_tabla_cabecera = False
-    for l in lineas:
+    """Quita LA CABECERA TALLADA DELIMITADA y el parrafo de identidad (tallado
+    por tallar_identidad_reporte.py, 2.a). Esos dos bloques tienen su propio
+    tallador y no se recorren aqui.
+
+    --- LA GUARDA DEJA DE SER CIEGA A LAS TABLAS (VUELTA 139, OPERACION 2.b) ---
+
+    CORRECCION DECLARADA, y el texto viejo de esta funcion se cita entero abajo
+    porque una correccion que tapa lo que corrige no se puede auditar.
+
+    EL DEFECTO, MEDIDO POR EL AUDITOR Y NO OPINADO (acta de la vuelta 138,
+    caida 4.5): el docstring prometia quitar "la tabla de cabecera", en
+    singular, y el codigo hacia esto:
+
         es_fila_tabla = l.strip().startswith("|")
-        es_rotulo_identidad = (l.startswith("HEAD sellado") or
-                                l.startswith("commit de nacimiento") or
-                                "HEAD sellado de apertura" in l or
-                                "HEAD sellado de cierre" in l or
-                                "commit de nacimiento de las salidas de apertura" in l)
-        if es_rotulo_identidad:
-            continue
+        ...
         if es_fila_tabla:
             en_tabla_cabecera = True
             continue
-        if en_tabla_cabecera and not es_fila_tabla:
-            en_tabla_cabecera = False
+
+    o sea que DESCARTABA TODA LINEA QUE EMPEZARA POR BARRA VERTICAL, viviera
+    donde viviera. Medido sobre el reporte de la vuelta 138: 26 cifras de
+    numero mas unidad en el fichero entero, 10 que la guarda llegaba a ver, 16
+    que se perdian por vivir en una fila de tabla, entre ellas las CINCO cifras
+    en `grupos` de la tabla de la fase 06, la de la caida 4.2 incluida. Y la
+    linea que se publicaba, `COBERTURA: 10 cotejadas / 0 exentas / 10 cifras`,
+    SE LEE COMO COBERTURA LLENA. Es la peor combinacion posible con la letra
+    del 27 ago 2026 ("TODA TABLA O CIFRA DEL REPORTE CITA EL FICHERO DE SALIDA
+    DEL QUE SALE"): la guarda era ciega exactamente donde la doctrina es mas
+    dura.
+
+    EL ARREGLO, fijado por el auditor en el encargo de la vuelta 139: la
+    cabecera tallada se DELIMITA en el reporte con dos marcas literales,
+
+        <!-- CABECERA TALLADA -->  ...  <!-- FIN CABECERA TALLADA -->
+
+    y esta funcion quita SOLO lo que esta entre ellas (las marcas incluidas),
+    mas el parrafo de identidad que ya quitaba. TODAS LAS DEMAS FILAS DE TABLA
+    SE RECORREN.
+
+    SI LAS MARCAS NO ESTAN, NO SE QUITA NADA Y SE RECORRE TODO, incluidas las
+    filas de la cabecera: fallar ruidoso, nunca degradar en silencio (banco 9).
+    Un reporte sin marcas dara mas trabajo, y probablemente ROJO, que es
+    justamente el sintoma que la degradacion silenciosa no dejaba.
+
+    SI SOLO ESTA UNA DE LAS DOS MARCAS es ROJO tambien, y por la misma razon:
+    se levanta ValueError con el nombre de la que falta, en vez de adivinar
+    donde acaba el bloque.
+    """
+    abre = texto.find(MARCA_CABECERA_ABRE)
+    cierra = texto.find(MARCA_CABECERA_CIERRA)
+    if (abre == -1) != (cierra == -1):
+        falta = MARCA_CABECERA_CIERRA if cierra == -1 else MARCA_CABECERA_ABRE
+        raise ValueError(
+            "el reporte trae UNA sola de las dos marcas de la cabecera tallada: falta %r. "
+            "O van las dos o no va ninguna; adivinar donde acaba el bloque es justo lo que "
+            "esta guarda dejo de hacer en la vuelta 139" % falta)
+    if abre != -1 and cierra < abre:
+        raise ValueError("el reporte trae %r ANTES de %r"
+                         % (MARCA_CABECERA_CIERRA, MARCA_CABECERA_ABRE))
+
+    if abre == -1:
+        # NI UNA MARCA: no se quita ningun bloque de tabla. Se recorre todo.
+        cuerpo = texto
+    else:
+        cuerpo = texto[:abre] + texto[cierra + len(MARCA_CABECERA_CIERRA):]
+
+    fuera = []
+    for l in cuerpo.split("\n"):
+        es_rotulo_identidad = (l.startswith("HEAD sellado") or
+                               l.startswith("commit de nacimiento") or
+                               "HEAD sellado de apertura" in l or
+                               "HEAD sellado de cierre" in l or
+                               "commit de nacimiento de las salidas de apertura" in l)
+        if es_rotulo_identidad:
+            continue
         fuera.append(l)
     return "\n".join(fuera)
+
+
+def frases_con_bandera_de_tabla(texto):
+    """Las MISMAS frases que `dividir_frases`, cada una con la bandera de si la
+    LINEA de la que sale es una fila de tabla (vuelta 139, 2.b).
+
+    NO SE REIMPLEMENTA EL PARTIDO: `dividir_frases` parte primero por linea, asi
+    que una frase nunca cruza dos lineas, y llamarla linea a linea da EXACTAMENTE
+    la misma lista en el mismo orden. Eso se comprueba en `verificar()` con una
+    guarda que cae si algun dia dejara de ser cierto, en vez de confiarlo a este
+    comentario.
+
+    Para que sirve: la linea COBERTURA publica ademas CUANTAS de las cotejadas
+    viven en una fila de tabla, que son precisamente las que la guarda no veia
+    hasta esta vuelta.
+    """
+    salida = []
+    for linea in texto.split("\n"):
+        es_tabla = linea.strip().startswith("|")
+        for f in dividir_frases(linea):
+            salida.append((f, es_tabla))
+    return salida
 
 
 def contar_ficheros(contenido):
@@ -433,7 +523,18 @@ def clasificar_exencion(frase, m, unidad):
 def verificar(ruta_reporte):
     texto_completo = leer(ruta_reporte)
     texto = quitar_bloques_cubiertos(texto_completo)
+    # LA BANDERA DE TABLA (vuelta 139, 2.b), con su guarda de que no se ha
+    # inventado un partido distinto del de la casa: si algun dia
+    # frases_con_bandera_de_tabla dejara de dar la MISMA lista que
+    # dividir_frases, esto cae en vez de medir otra cosa en silencio.
+    con_bandera = frases_con_bandera_de_tabla(texto)
     frases = dividir_frases(texto)
+    if [f for f, _ in con_bandera] != frases:
+        raise ValueError(
+            "frases_con_bandera_de_tabla dio %d frase(s) y dividir_frases %d, o en otro "
+            "orden: el partido de frases de esta guarda ya no es el de la casa"
+            % (len(con_bandera), len(frases)))
+    es_de_tabla = [b for _, b in con_bandera]
     existentes = ficheros_salida_existentes()
 
     fallos = []
@@ -475,7 +576,7 @@ def verificar(ruta_reporte):
                         "linea %d: tope 1.k \"%d %s\" <-> `wc -l %s`: contado %d" %
                         (i, numero, unidad, os.path.basename(ruta_reporte), contado_vivo))
                 else:
-                    cotejados.append((numero, unidad, "wc -l %s" % os.path.basename(ruta_reporte), contado_vivo))
+                    cotejados.append((numero, unidad, "wc -l %s" % os.path.basename(ruta_reporte), contado_vivo, es_de_tabla[i]))
                 continue
 
             ventana = frases[i:i + 3]
@@ -556,7 +657,7 @@ def verificar(ruta_reporte):
                 detalle = fichero_cita
                 if etiqueta_usada is not None:
                     detalle += " (CIFRA '%s', POR %s)" % (etiqueta_usada, modo_cifra)
-                cotejados.append((numero, unidad, detalle, contado))
+                cotejados.append((numero, unidad, detalle, contado, es_de_tabla[i]))
 
     return fallos, cotejados, exentas_sin_instrumento, total_cifras
 
@@ -567,8 +668,19 @@ def main():
     a = ap.parse_args()
 
     fallos, cotejados, exentas, total_cifras = verificar(a.reporte)
-    cobertura = "COBERTURA: %d cotejadas / %d exentas / %d cifras" % (
-        len(cotejados), len(exentas), total_cifras)
+    # EL REPARTO POR ETIQUETA CONTRA POR CONJUNTO es condicion viva del acta 137
+    # (3.1): una cobertura tiene que decir DE QUE esta llena. Y desde la vuelta
+    # 139 (2.b) dice ademas CUANTAS de las cotejadas viven en una FILA DE TABLA,
+    # que son exactamente las que esta guarda no veia hasta que se reparo.
+    por_etiqueta = len([c for c in cotejados if "POR ETIQUETA" in c[2]])
+    por_conjunto = len([c for c in cotejados if "POR CONJUNTO" in c[2]])
+    en_tabla = len([c for c in cotejados if c[4]])
+    cobertura = ("COBERTURA: %d cotejadas / %d exentas / %d cifras"
+                 " | reparto: %d POR ETIQUETA, %d POR CONJUNTO, %d sin linea CIFRA"
+                 " | de las cotejadas, %d viven en una FILA DE TABLA" % (
+                     len(cotejados), len(exentas), total_cifras,
+                     por_etiqueta, por_conjunto,
+                     len(cotejados) - por_etiqueta - por_conjunto, en_tabla))
 
     if fallos:
         print("ROJO, %d cifra(s) no cuadran:" % len(fallos))
@@ -583,8 +695,9 @@ def main():
 
     print("VERDE EXIT 0: %d cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:" %
           len(cotejados))
-    for numero, unidad, fichero, contado in cotejados:
-        print("  %d %s == %d contados en `%s`" % (numero, unidad, contado, fichero))
+    for numero, unidad, fichero, contado, en_fila in cotejados:
+        print("  %d %s == %d contados en `%s`%s"
+              % (numero, unidad, contado, fichero, "  [FILA DE TABLA]" if en_fila else ""))
     if exentas:
         print("cifra(s) exentas por (sin instrumento) (%d):" % len(exentas))
         for numero, unidad, frase in exentas:
