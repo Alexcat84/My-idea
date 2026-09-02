@@ -1,16 +1,22 @@
 # -*- coding: utf-8 -*-
-r"""vuelta140_2b_mutaciones.py . LAS TRES PRUEBAS DE LA GUARDA DE AFIRMACIONES
+r"""vuelta140_2b_mutaciones.py . LAS CINCO PRUEBAS DE LA GUARDA DE AFIRMACIONES
 DE CIERRE (TAREA 2.b de la vuelta 140, acta de la vuelta 139, caida 4.1).
 
 QUE PRUEBA. `verificar_cifras_del_reporte.py` aprendio en esta vuelta a leer
-las afirmaciones de cierre: toda frase que diga que una FASE o un CATALOGO
-cierra, queda completo o esta entero tiene que citar un fichero de salida de
-`tallar_estado_de_fase.py`, y ese fichero tiene que decir `sin cumplir: 0`.
+las afirmaciones de cierre: toda frase que hable del cierre o de la completitud
+de una FASE o de un CATALOGO tiene que (1) citar un fichero de salida de
+`tallar_estado_de_fase.py` en su ventana y (2) si ese fichero dice
+`sin cumplir: N` con N distinto de cero, NOMBRAR LAS N en esa misma ventana.
 
-  (a) frase de cierre SIN cita: ROJO.
-  (b) frase de cierre con cita a un fichero que dice `sin cumplir: 3`: ROJO
-      NOMBRANDO LAS TRES.
-  (c) sin la frase: VERDE.
+  (a)     frase de cierre SIN cita: ROJO.
+  (b)     frase de cierre con cita a un fichero que dice `sin cumplir: 3` y SIN
+          nombrarlas: ROJO NOMBRANDO LAS TRES.
+  (b bis) la MISMA frase, el MISMO fichero, pero NOMBRANDO las tres: VERDE. Es el
+          caso que la primera version de la guarda tiraba, y por el que se
+          reparo: un reporte que dice la verdad sobre una fase que no cierra
+          caia igual que uno que la calla.
+  (c)     sin la frase: VERDE.
+  (c bis) frase con cita a un fichero que dice `sin cumplir: 0`: VERDE y cotejada.
 
 EL SUJETO ES FABRICADO Y CONGELADO, NO EL REPORTE DE HOY. Se escribe un
 reporte minimo en un temporal y dos ficheros de salida de estado de fase
@@ -19,9 +25,10 @@ AL TERMINAR (P.16, quien fabrica limpia), pase lo que pase, incluso si el
 script cae. Asi el caso no depende del arbol de hoy ni deja basura que la
 proxima guarda de apertura se coma.
 
-NINGUN VEREDICTO ES UN LITERAL: los tres comparan el EXIT y los FALLOS que la
-guarda de verdad acaba de computar sobre el sujeto fabricado, y cada caso
-lleva su contraprueba (el mismo camino sin la mutacion).
+NINGUN VEREDICTO ES UN LITERAL: los cinco comparan los FALLOS que la guarda de
+verdad acaba de computar sobre el sujeto fabricado, y cada caso lleva su
+contraprueba (el mismo camino sin la mutacion). Los nombres de las que faltan
+se LEEN del fichero fabricado con la funcion de la propia guarda, no se teclean.
 
 USO:
   python scripts/loop/vuelta140_2b_mutaciones.py
@@ -150,12 +157,32 @@ def main():
         esperados = leido[1]
         nombradas = (len(de_cierre_b) == 1
                      and all(n in de_cierre_b[0] for n in esperados)
-                     and ("sin cumplir: %d" % leido[0]) in de_cierre_b[0])
+                     and ("sin cumplir: %d" % leido[0]) in de_cierre_b[0]
+                     and "NO NOMBRA" in de_cierre_b[0])
         print("EL FICHERO FABRICADO DICE sin cumplir: %d y nombra %s (leido, no tecleado)"
               % (leido[0], esperados))
         print("ROJO NOMBRANDO LAS TRES: %s" % nombradas)
         ok_b = nombradas and len(fallos_b) > len(fallos_c)
         print("VEREDICTO (b): %s" % ("VERDE" if ok_b else "ROJO"))
+
+        print("")
+        print("=" * 78)
+        print("(b bis) LA MISMA FRASE, EL MISMO FICHERO SUCIO, PERO NOMBRANDO LAS TRES")
+        print("=" * 78)
+        print("Es el caso que la PRIMERA version de la guarda tiraba: un reporte que dice")
+        print("la verdad sobre una fase que no cierra caia igual que uno que la calla.")
+        frase_nombrando = ("\nLA FASE 99 NO CIERRA, medido en `%s`: faltan %s.\n"
+                           % (F_ESTADO_SUCIO, ", ".join(esperados)))
+        fallos_bb, _ = correr(CUERPO_BASE + frase_nombrando)
+        print("fallos: %d" % len(fallos_bb))
+        for x in fallos_bb:
+            print("   %s" % x)
+        ok_bb = not [x for x in fallos_bb if "AFIRMACION DE CIERRE" in x]
+        print("PASA CUANDO LAS NOMBRA: %s" % ok_bb)
+        print("CONTRAPRUEBA, la misma frase SIN nombrarlas dio %d fallo(s) de cierre: %s"
+              % (len(de_cierre_b), len(de_cierre_b) == 1))
+        ok_bb = ok_bb and len(de_cierre_b) == 1
+        print("VEREDICTO (b bis): %s" % ("VERDE" if ok_bb else "ROJO"))
 
         print("")
         print("=" * 78)
@@ -167,15 +194,15 @@ def main():
             print("   %s" % x)
         print("afirmaciones de cierre COTEJADAS: %d" % len(cierres_d))
         for c in cierres_d:
-            print("   linea %d (sujeto '%s', verbo '%s') <-> %s" % c)
+            print("   linea %d (sujeto '%s', verbo '%s') <-> %s: %s" % c)
         ok_d = not [x for x in fallos_d if "AFIRMACION DE CIERRE" in x] and len(cierres_d) == 1
         print("VEREDICTO (c bis): %s" % ("VERDE" if ok_d else "ROJO"))
 
-        todo = ok_a and ok_b and ok_c and ok_d
+        todo = ok_a and ok_b and ok_bb and ok_c and ok_d
         print("")
         print("=" * 78)
-        print("RESUMEN: (a) %s | (b) %s | (c) %s | (c bis) %s"
-              % tuple("VERDE" if x else "ROJO" for x in (ok_a, ok_b, ok_c, ok_d)))
+        print("RESUMEN: (a) %s | (b) %s | (b bis) %s | (c) %s | (c bis) %s"
+              % tuple("VERDE" if x else "ROJO" for x in (ok_a, ok_b, ok_bb, ok_c, ok_d)))
         print("=" * 78)
         return 0 if todo else 1
     finally:

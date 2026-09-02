@@ -213,11 +213,28 @@ podia verlo porque solo miraba CIFRAS con unidad, y "la fase 06 cierra su
 catalogo" no lleva ninguna. Una frase de cierre SIN INSTRUMENTO DETRAS es
 la especie exacta que la racha de reporte castiga.
 
-QUE COMPRUEBA, DE MAS. Toda frase que afirme que una FASE o un CATALOGO
-cierra, queda completo o esta entero tiene que CITAR, en su ventana, un
-fichero de salida de `tallar_estado_de_fase.py`, y la guarda coteja que ese
-fichero diga `sin cumplir: 0`. SIN ESA CITA, ROJO. Con una cita a un fichero
-que diga `sin cumplir: 3`, ROJO NOMBRANDO LAS TRES.
+QUE COMPRUEBA, DE MAS, y son DOS cosas, las dos objetivas (la guarda NO intenta
+distinguir una afirmacion de una negacion: eso seria leerle la mente al que
+escribe). Toda frase que hable del cierre o de la completitud de una FASE o de un
+CATALOGO tiene que:
+  (1) CITAR, en su ventana, un fichero de salida de `tallar_estado_de_fase.py`.
+      Sin cita, ROJO.
+  (2) si el fichero citado dice `sin cumplir: N` con N distinto de cero, NOMBRAR
+      EN SU VENTANA LAS N. Si calla alguna, ROJO nombrando las que callo.
+
+POR QUE ESA SEGUNDA Y NO "el fichero tiene que decir cero". La primera version de
+esta guarda exigia `sin cumplir: 0` a secas, y con esa regla EL REPORTE QUE DICE
+LA VERDAD CAIA EN ROJO: "la fase 06 NO cierra", citando el instrumento que dice
+`sin cumplir: 3`, era tan rojo como "la fase 06 cierra" sin citar nada. Se hallo
+corriendo la guarda contra el reporte de la vuelta 140. La caida 4.1 no fue decir
+"cierra": fue decirlo CALLANDO las cinco remitidas que faltaban. Bajo esta regla
+esa frase da ROJO nombrandolas una a una, y un reporte que dice "no cierra,
+faltan estas tres" pasa, porque hizo lo que se le pide.
+
+LO QUE ESTA REGLA SIGUE PERMITIENDO, dicho para que nadie la lea de mas: un texto
+que escriba "cierra" Y ADEMAS nombre las que faltan pasaria. Es prosa que se
+contradice sola y que salta a la vista de cualquier lector; lo que la guarda
+impide es lo que NO salta a la vista, que es afirmar el cierre callando la lista.
 
 EL VOCABULARIO DE DISPARO ES CERRADO, Y SE DICE AQUI PARA QUE LA PROXIMA
 AMPLIACION NO SEA UNA SORPRESA. Dispara una frase que traiga a la vez un
@@ -243,10 +260,12 @@ por su nombre. Tiene que traer la cabecera `ESTADO DE LA FASE` y una linea
 cuenta como cita valida, y se dice cual era.
 
 PRUEBA DE MUTACION (obligatoria): scripts/loop/vuelta140_2b_mutaciones.py,
-salida a docs/loop/SALIDA_V140_2B_MUTACIONES.txt. Tres casos sobre sujeto
-fabricado y retirado por P.16 (quien fabrica, limpia): (a) frase de cierre
-SIN cita, ROJO; (b) frase de cierre con cita a un fichero que dice
-`sin cumplir: 3`, ROJO nombrando las tres; (c) sin la frase, VERDE.
+salida a docs/loop/SALIDA_V140_2B_MUTACIONES.txt. Cinco casos sobre sujeto
+fabricado y retirado por P.16 (quien fabrica, limpia): (a) frase de cierre SIN
+cita, ROJO; (b) frase de cierre con cita a un fichero que dice `sin cumplir: 3`
+y SIN nombrarlas, ROJO nombrando las tres; (b bis) la misma frase NOMBRANDO las
+tres, VERDE (es el caso que la primera version tiraba); (c) sin la frase, VERDE;
+(c bis) frase con cita a un fichero que dice `sin cumplir: 0`, VERDE y cotejada.
 """
 import argparse
 import glob
@@ -652,14 +671,24 @@ def comprobar_afirmaciones_de_cierre(frases, existentes):
             fallos.append(msg)
             continue
         for fichero, (sin_cumplir, nombres) in estados:
-            if sin_cumplir != 0:
+            if sin_cumplir == 0:
+                cotejadas.append((i, sujeto, verbo, fichero, "sin cumplir: 0"))
+                continue
+            # LA FASE NO ESTA CUMPLIDA: la ventana TIENE QUE NOMBRAR las que
+            # faltan. Ver el docstring del modulo: la caida 4.1 no fue decir
+            # "cierra", fue decirlo CALLANDO LA LISTA.
+            sin_nombrar = [x for x in nombres if x not in ventana_txt]
+            if sin_nombrar:
                 fallos.append(
                     "linea %d: AFIRMACION DE CIERRE (sujeto '%s', verbo '%s') citando `%s`, "
-                    "que dice sin cumplir: %d. LAS QUE FALTAN, NOMBRADAS: %s. Frase: %r"
-                    % (i, sujeto, verbo, fichero, sin_cumplir,
-                       ", ".join(nombres) or "el fichero no las nombra", frase.strip()))
+                    "que dice sin cumplir: %d, y su ventana NO NOMBRA %d de ellas: %s. "
+                    "Frase: %r"
+                    % (i, sujeto, verbo, fichero, sin_cumplir, len(sin_nombrar),
+                       ", ".join(sin_nombrar) or "el fichero no las nombra", frase.strip()))
             else:
-                cotejadas.append((i, sujeto, verbo, fichero))
+                cotejadas.append((i, sujeto, verbo, fichero,
+                                  "sin cumplir: %d, y la ventana las nombra todas"
+                                  % sin_cumplir))
     return fallos, cotejadas
 
 
@@ -862,10 +891,11 @@ def main():
         for numero, unidad, frase in exentas:
             print("  %d %s: %r" % (numero, unidad, frase))
     if cierres:
-        print("afirmacion(es) de CIERRE cotejadas (%d), todas contra un fichero que dice "
-              "sin cumplir: 0:" % len(cierres))
-        for i, sujeto, verbo, fichero in cierres:
-            print("  linea %d (sujeto '%s', verbo '%s') <-> `%s`" % (i, sujeto, verbo, fichero))
+        print("afirmacion(es) de CIERRE cotejadas (%d), cada una con LO QUE SU FICHERO "
+              "DICE (computado, no tecleado):" % len(cierres))
+        for i, sujeto, verbo, fichero, estado in cierres:
+            print("  linea %d (sujeto '%s', verbo '%s') <-> `%s`: %s"
+                  % (i, sujeto, verbo, fichero, estado))
     print(cobertura)
     return 0
 
