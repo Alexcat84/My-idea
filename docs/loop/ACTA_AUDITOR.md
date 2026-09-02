@@ -46394,3 +46394,380 @@ nombres** (4.4), la TAREA 2 de codigo con la marca nueva y la guarda de cifras r
 las cinco fusiones que quedan con `OP-M-05-APERTURA` ya medida (3.7 y 4.2), y los registros con la
 correccion declarada de la ficha (3.4). **No escribo `PARA_ALEXIS.md`.** El numero **138 queda
 gastado por esta acta**.
+
+# ACTA DE LA VUELTA 139 DEL AUDITOR (REGIMEN COMPLETO, el austero sigue suspendido)
+# =========================================================================
+
+**HUECO DE ACTA: NO HAY.** `grep -n '^# ACTA DE LA VUELTA' docs/loop/ACTA_AUDITOR.md | tail -4`,
+corrido hoy, da 135, 136, 137 y 138: la ultima escrita cubre la vuelta inmediatamente anterior a
+esta. Fecha leida de git (`git log -1 --format=%ad --date=format:'%d %b %Y'`): **02 Sep 2026**.
+Rama `pasada-unica`, HEAD real de hoy `c87f10b1`, `origin/pasada-unica == HEAD`.
+
+**EL VEREDICTO DE UNA LINEA: LAS CINCO FUSIONES ESTAN BIEN HECHAS Y BIEN GUARDADAS, Y EL DISCUTIBLE 1
+GANA CONTRA MI PROPIA ACTA 138: `OP-M-05-APERTURA` NO ES UN GRUPO DONDE EL HUECO MUERDA, LO CONFIRME
+LEYENDO LOS TEXTOS ANTES QUE SU PARRAFO. PERO LA VUELTA CIERRA UNA FASE QUE NO CIERRA: EL CATALOGO DE
+LA FASE 06 NO SON SOLO LAS SEIS FUSIONES, SON TAMBIEN LAS CINCO OPERACIONES QUE LA FASE 04 LE REMITIO
+EN LA VUELTA 118, Y ESAS TIENEN ONCE ARISTAS SIN ESCRIBIR, MEDIDAS POR MI HOY. ESO ES UNA CAIDA DE
+REPORTE EN CABECERA Y EN CONCLUSION, LA RACHA LLEGA A DOS, Y ENCARGO LA ESCALADA EN ESTA MISMA ACTA.
+Y LO MIO: MI ACTA 138 FIJO EL RESTO DE LA FASE 06 COMO "LAS CINCO FUSIONES" Y NUNCA NOMBRO LAS CINCO
+REMITIDAS, ASI QUE LA MITAD DE ESTA CAIDA ES DE MI ENCARGO.**
+
+## 1. VERIFICACION, CON MIS PROPIOS INSTRUMENTOS Y EN ESTA VUELTA
+
+**IDENTIDAD.** `a4968cd4`, el commit del bloque de apertura, tiene por padre **exactamente**
+`e8cf1552` (`git rev-parse a4968cd4^`), el commit de mi acta 138, y trae **10 ficheros y nada mas**
+(`git show --stat`), los diez `SALIDA_V139_*_APERTURA.txt`. Es el **primero** de la vuelta
+(`git log --reverse`). `e8cf1552..HEAD` trae **TRECE** commits; el reporte lista **DOCE** y declara
+que el ultimo, el que escribe la lista, no puede aparecer en ella. Es el carril de la vuelta 64 que
+ya verifique en las actas 137 y 138. **NO ES CAIDA.**
+
+**LAS DOS GUARDAS DE SELLO, CORRIDAS POR MI:** `verificar_apertura_sellada.py --vuelta 139` da
+**VERDE EXIT 0** con los **DIEZ** nacidos en `a4968cd4`, padre `e8cf1552`; `verificar_cierre_sellado.py
+--vuelta 139` da **VERDE** sobre `9f473ce0`. **Mi 4.4 queda reparada: la lista de diez es la buena.**
+
+**EL CICLO ENTERO, CORRIDO POR MI SOBRE ARBOL LIMPIO.** `run_phase1.py --reaplico-curaduria`
+**GATE 0: OK, EXIT 0**, con **auto-aristas 0, duplicadas de titulo 0 y divergentes 0** y
+alcanzabilidad **100,0 por ciento (3171/3171)**; `etiquetas_de_cara.py --aplicar` **71**;
+`sync_assets_web.py` **6 assets, EXIT 0**; `git diff --numstat -- dataset/ web/ engine/` **VACIO**.
+**MOTOR 25/25.** **WEB 80 passed (80) y 1030 passed, 3 skipped (1033). TSC EXITCODE 0, cero lineas.**
+
+**EL CENSO Y LAS ARISTAS, CON PARSER PROPIO Y SIN IMPORTAR UN MODULO DEL EJECUTOR:** **3.853
+ficheros, 3.171 vivos, 682 deprecados**; **sig 9226, prev 9200, suma 18426, union 9901**,
+**auto-aristas 0**; `master_graph.json` con **3.853** entradas. **Las diez cifras de la columna de
+CIERRE cuadran al digito.** El reparto de deprecados por operacion (+4, +2, +2, +2, +2) suma **+12**,
+que es exactamente 670 a 682. `OPERACIONES.jsonl`: **71 lineas, 61 LISTA y 10 HECHA**, contadas por
+mi, **y el fichero no se toca en la vuelta** (`git diff --name-only e8cf1552..HEAD` vacio para el).
+
+**LA CABECERA, TALLADA POR MI Y COTEJADA LINEA A LINEA.** Corri
+`tallar_cabecera_reporte.py --vuelta 139 --fase04`: **VERDE EXIT 0**. Compare las **once filas**
+pegadas entre las dos marcas del reporte contra mi propia salida con un script: **IDENTICAS**. Es la
+primera cabecera que sale en tres vueltas y sale porque el bloque de apertura llevo los diez.
+
+**EL DESFASE NUEVO, MEDIDO Y NO ACEPTADO.** La fila `customer_validation -> establecer_linea_base_mvp`
+la mide mi corrida de `vuelta85_medir_desfase_calibrado.py WORK` (**4 filas**), y la comprobe contra el
+grafo: la arista **existe hoy** y el calibrado la tiene en `false`. La produjo `OP-M-05-APERTURA` al
+heredar al superviviente las aristas de los dos absorbidos (medido en los blobs de `6c976514^` y
+`6c976514`: `nodos_siguientes` de 9 a 18). **La atribucion del reporte a la adjudicacion 5.7 del acta
+82 la verifique y no sale del acta: sale del docstring del propio instrumento, que es quien la cita
+asi desde la vuelta 85. La cadena es correcta y la declaro entera en vez de darla por buena.**
+
+**LOS DOS REGISTROS, MEDIDOS POR MI COMMIT A COMMIT.** `git show --numstat 5fb86415`: **132/0** en
+`docs/PENDIENTES.md` y **100/0** en `CORRECCIONES_A_APLICAR.md`; `git show --numstat 9f473ce0`:
+**111/0**. **Adicion pura en las tres, cero borradas.** R.20 trae **mis dos caidas escritas igual que
+las suyas** (4.3 y 4.4, comprobado en el diff). Correcciones 9 y 10 presentes con sus encabezados.
+
+**LAS CUATRO TABLAS DE LA FASE 06, RECOMPUTADAS POR MI Y NO LEIDAS DE SU SALIDA.**
+
+- **Crecimiento (tabla 1):** lei los blobs de `<commit>^` y `<commit>` de los cinco supervivientes:
+  **6 a 17 / 3 a 6**, **5 a 9 / 2 a 2**, **5 a 9 / 2 a 5**, **4 a 8 / 2 a 2**, **5 a 11 / 2 a 2**.
+  **Cuadran las cinco.** (Me equivoque primero de superviviente en `OP-M-05-EDIFICIO` y lo corregi:
+  es `customer_discovery_get_out_of_building`, no `get_out_of_the_building`, que es absorbido.)
+- **Reparto (tabla 2):** conte las marcas de `pasos` y `condiciones` de los cinco planes sellados con
+  codigo mio: **26/16/12/12/12 piezas** y **TOTAL 78, 35 APPEND, 32 CUBIERTO, 2 INCISO, 9 VIAJA**.
+  **Cuadra al digito, incluida la fila de TOTAL.** Y **`CUBIERTO_COND` sale 1 en todo el catalogo**,
+  en `OP-M-05-APERTURA`, que es justo lo que el reporte dice.
+- **El hueco (tabla 3):** extraje los nueve `VIAJA_EN_EL_ACTO` de los planes con su destino y su
+  marca de destino: **2/2/4/1/0**, **los nueve apuntan a un paso con APPEND** (guarda ii cumplida,
+  cero cadenas) y **los pares nombrados son los mismos**. **Cuatro de cinco, y la que no es
+  `OP-M-05-APERTURA`.**
+- **Guardas (tabla 4):** corri `vuelta139_tabla_fase06.py`: **VERDE**, y las duplicadas nombradas
+  cuadran con su `TOTAL NUEVAS` en las cinco. Gate 0 de hoy confirma **duplicadas 0 y auto-aristas 0**
+  sobre el catalogo entero.
+- **P.5, RE-CORRIDA POR MI SOBRE LAS SEIS:** `10, 3, 3, 3, 3` y `OP-M-02-ACCLIMATE` **1**, las seis
+  con pares leidos igual a pares del acto y **EXIT 0**.
+
+**LA SECCION 5 DEL REPORTE, COTEJADA FICHA CONTRA SIMULACION.** Lei las seis fichas en
+`OPERACIONES.jsonl` y las contraste con las duplicadas de hoy: **cuadran con sus nombres** en
+`OP-M-03-III` (2), `OP-M-05-INDICE` (4) y `OP-M-05-EDIFICIO` (1); **no cuadran** en `OP-M-01-FUSION`
+(ficha CUATRO, hoy **5**) ni en `OP-M-05-APERTURA` (ficha TRES, hoy **6**, **y de los tres nombres de
+la ficha solo dos coinciden**: `business_model_canvas_scorecard` y `customer_discovery`). **Cuadra al
+digito con lo que el reporte publica, incluido el "solo dos nombres coinciden".**
+
+**LAS TRES OPERACIONES DE CODIGO, CORRIDAS POR MI.** `vuelta139_2a_mutaciones.py`: **los ocho casos
+VERDE**, con el temporal retirado por P.16. `vuelta139_2b_mutaciones.py`: **los ocho casos VERDE**.
+`vuelta138_2a_caso_positivo_63_64.py`: **los tres planes identicos salvo la fecha**, y el renombre de
+la 2.c esta hecho, con **14 distintas por posicion contra 7 anadidas y 1 borrada de numstat** para
+`PLAN_V63_OPM02PROG.json`, que es exactamente lo que yo medi con git en el acta 138.
+`verificar_mutaciones_viejas.py`: **VERDE, las cuatro muerden, ANCLA PERDIDA 0**. **Y limpie lo que mi
+corrida ensucio** (`SALIDA_V135_2E_MUTACION_3.txt` devuelto con `git checkout --`): P.16 vale para mi.
+
+**LA CIFRA DE LA 2.b, RE-MEDIDA POR MI CON EL BLOB CLAVADO A MANO, PORQUE SU INSTRUMENTO YA NO LA
+REPRODUCE.** Saque `23bde6cd:docs/loop/REPORTE.md` (el reporte de la 138) y la guarda vieja de
+`e8cf1552`, y llame a `verificar()` de las dos: **VIEJA 10, NUEVA 26, la ceguera perdia 16.**
+**Cuadra al digito con la tabla del reporte y con lo que yo mismo medi en el acta 138.** Lo que ya no
+cuadra es el instrumento: ver 4.2.
+
+**LA GUARDA DE CIFRAS SOBRE EL REPORTE DE HOY, CORRIDA POR MI: VERDE EXIT 0**, y su linea
+`COBERTURA: 5 cotejadas / 0 exentas / 5 cifras | reparto: 0 POR ETIQUETA, 5 POR CONJUNTO, 0 sin linea
+CIFRA | de las cotejadas, 5 viven en una FILA DE TABLA` es **identica** a la publicada. La condicion
+de mi 3.1 del acta 137 y la de mi 4.5 del acta 138 quedan **las dos cumplidas**. **Cero guiones largos
+y cero guiones medios en todo lo anadido de la vuelta** (`git diff e8cf1552..HEAD | grep '^+'`): **0**.
+
+**LA PERDIDA DE NOMBRE DE `OP-M-05-EDIFICIO`, VERIFICADA HASTA SU DIRECCION.** Corri
+`tallar_perdidas_del_plan.py` sobre los cinco planes: **una perdida nombrada, especie `DE NOMBRE`**,
+con sus cuatro claves. Comprobe sobre el nodo escrito que la formulacion **no esta en ninguno de los
+ocho pasos** y **si esta en `merged_originals`**. La perdida tiene direccion y es hallable con el
+instrumento de la casa; no es una promesa suelta.
+
+**EL SUPERVIVIENTE DE `OP-M-05-APERTURA`, LEIDO ENTERO POR MI:** once pasos, y **la repetibilidad
+aparece dos veces, paso 6 como pregunta y paso 7 como prueba**, tal como el reporte lo declara. El
+`INCISO` del paso 4 esta injertado verbatim. **El precio que el reporte marca es real y esta medido.**
+
+## 2. RELECTURA CIEGA, SOBRE EL REGISTRO Y CON LAS MARCAS TAPADAS
+
+**LA CIEGA DE ESTA VUELTA NO ES DE UN PAR, ES DE PIEZAS, y lo digo para no inflar el contador.**
+Escribi `docs/loop/_auditor_v139_ciega.py`: imprime, de los blobs **anteriores** a cada fusion, todos
+los pasos y condiciones del superviviente y **el texto de cada pieza de cada absorbido, SIN la marca
+que el ejecutor le puso**. Adjudique mi marca sobre las **42 piezas** de `OP-M-01-FUSION` (26) y
+`OP-M-03-III` (16) y solo despues corri el mismo script con `--revelar`.
+
+**EL RESULTADO: 38 de 42 COINCIDEN.** Y lo que importa mas que el numero:
+
+> **LOS CUATRO `VIAJA_EN_EL_ACTO` DE ESAS DOS OPERACIONES LOS DERIVE YO SOLO, CON EL MISMO DESTINO Y
+> EN LA MISMA DIRECCION:** `requisitos_gates_con_dientes|2` y `estructura_gates|1` los dos a
+> `estructura_de_gates|1` (porque es la unica de las tres que trae **las plantillas**, que es lo que
+> la linea 4 de `preservar` exige), y en `OP-M-03-III` el cruzado en las dos direcciones,
+> `pivote_startup|2` a `pivotes_e_iteraciones|3` (por **el lienzo**) y `pivotes_e_iteraciones|4` a
+> `pivote_startup|3`. **La marca nueva se esta usando como la doctrina la fijo, y lo compruebo
+> reproduciendola, no leyendola.** El `INCISO` de `estructura_de_gates|3` tambien: yo escribi
+> "CUBIERTO:4 mas la quinta salida", y su marca es `INCISO:4|Conditional Go|`.
+
+**LAS CUATRO DISCREPANCIAS, Y LAS CUATRO SE CAEN DEL LADO DE EL.** Tres son de clase y **las tres van
+en el mismo sentido**: yo marque `CUBIERTO` donde el marco `APPEND` (`gates_go_kill_decision_points`
+pasos 2 y 3, y la condicion 1 de `estructura_gates`). Al releer contra la regla, **mi lectura no
+aguanta**: el superviviente no dice "no solo revises como va", ni "no dejes avanzar sin decidir", ni
+"avanzan sin puntos de control", y marcarlos `CUBIERTO` habria sido afirmar de su texto algo que no
+dice, que es lo que mi propia adjudicacion 3.3 del acta 138 prohibe. **`preservar` es SUELO.** La
+cuarta es de indice y no de clase (`pivotes_e_iteraciones|2`: yo `CUBIERTO:4`, el `CUBIERTO:1`), y
+**no mueve nada**: la pieza no se injerta ni se pierde con ninguno de los dos.
+
+**DESPUES, FUERA DE LO MARCADO, ENCONTRE UNA COSA, Y ES GRANDE:** la fase 06 no cierra hoy. Va en 4.1.
+
+## 3. ADJUDICACIONES
+
+**3.1 DISCUTIBLE 1, EL GRANDE: ADJUDICADO A FAVOR DEL EJECUTOR, Y CONTRA MI PROPIA ACTA 138.
+`OP-M-05-APERTURA` NO ES UN GRUPO DONDE EL HUECO MUERDA.** Imprimi los cinco pasos de
+`introduccion_validacion_clientes`, los cinco de `filosofia_customer_validation` y los cinco del
+superviviente **antes** de leer su parrafo, y mi lectura es la suya:
+
+- La linea 3 de `preservar` tiene **tres partes** (la repetibilidad, los pedidos a **precio
+  completo**, los **canales**), y **las tres estan en `introduccion_validacion_clientes`**, una por
+  paso (1, 2 y 3). Medido sobre el texto.
+- El paso 5 de `filosofia_customer_validation` es **"Responde estas tres preguntas: puede crecer tu
+  negocio, tu forma de vender se repite, puedes predecir cuanta gente avanza hacia la compra"**. De
+  las tres partes toca **una**, y **como pregunta de puerta**. No trae ni el precio completo ni los
+  canales.
+- **Y LA VARA QUE DECIDE Y QUE MI ACTA 138 NO USO, QUE ESTA EN LA PROPIA FICHA: su linea 1 de
+  `preservar` YA RECLAMA ese paso 5 entero**, literal, *"de filosofia_customer_validation: LAS TRES
+  PREGUNTAS DE ESCALA"*. Leer la linea 3 como si viviera tambien ahi **asigna el mismo paso a dos
+  lineas de `preservar`**.
+- **Y hay una consecuencia dura, no una preferencia:** marcarlo `VIAJA_EN_EL_ACTO` hacia
+  `introduccion_validacion_clientes|1` **habria perdido las preguntas del crecimiento y de la
+  prediccion**, que es la linea 1 de `preservar`. La marca no solo era discutible: **estaba
+  prohibida por la ficha.**
+- Cierra la propia doctrina que yo fije en la 3.1 del acta 138: *"cuando el segundo dueno trae un
+  MATIZ que el primero no trae, el matiz es una pieza propia y P.13 lo clasifica solo"*.
+
+**Los dos van de `APPEND`, el solape se declara y se mide, y el hueco muerde en CUATRO de las cinco:
+`OP-M-01-FUSION`, `OP-M-03-III`, `OP-M-05-INDICE` y `OP-M-05-EDIFICIO`.** Mi cifra de "tres grupos"
+del acta 138 queda **desmentida por la medicion de hoy** y se registra en 4.3.
+
+**3.2 DISCUTIBLES 2 Y 7, EL CRECIMIENTO Y EL INDICE ENTERO: ADJUDICADOS A FAVOR.** `preservar` es
+SUELO (acta 138, 3.3) y **ninguna regla escrita pone techo de pasos**. El indice de
+`OP-M-05-INDICE` **va entero por su verificacion 3**, que manda comprobar las cuatro fases enteras, y
+**un indice de tres rotulos no es un indice**. El precio, que las fases 2 y 3 repiten sustancia, **lo
+trajo marcado el ejecutor y es exactamente el material de la poda de la fase 04**. Adjudico: los tres
+supervivientes gordos (`sistema_gates_go_kill` 17, `customer_validation` 11, `customer_discovery` 9)
+quedan **anotados como candidatos de poda de la fase 04**, sin tocarse ahora.
+
+**3.3 DISCUTIBLE 3, LA ATRIBUCION DE `preservar` CONTRA LA REDACCION QUE VIAJA: ADJUDICADO A FAVOR, Y
+LA REGLA ES LA DEL ENCARGO.** Mi acta 138 fijo *"viaja la del absorbido cuyo paso lleva el APPEND"*,
+y el desempate de cual lleva el APPEND lo decide **el texto de `preservar`**, no su atribucion: en
+`OP-M-03-III` `preservar` pide **el lienzo** y solo `pivotes_e_iteraciones` lo nombra. **Manda el
+texto de la linea, no de quien dice la ficha que es.** Lo mismo en `OP-M-01-FUSION` con las
+plantillas. **Y la divergencia contra la ficha se declara, no se resuelve copiando** (P.9, P.13),
+que es lo que la correccion 10 hace.
+
+**3.4 DISCUTIBLES 4, 5 Y 6: ADJUDICADOS A FAVOR.** El 4 lo cerre a ciegas: **yo tambien elegi
+`CUBIERTO:1`** para el paso 1 de `requisitos_gates_con_dientes`, sin haber leido su parrafo, y el
+matiz del gate como momento de go/kill vive en el paso 4 del superviviente igual. El 5, los tres
+matices que no viajan, quedan **declarados y son material de la fase 04**, no perdidas de campo
+propio: ninguno es un gesto entero. Y el 6, la guarda **(v)** de su cosecha que exige que la linea
+editorial **nombre al absorbido destino**, es **mas dura que lo que encargue y comprobable por
+maquina**: endurecer una guarda declarandolo es lo contrario de la caida que esta casa persigue.
+**Queda adoptada como guarda de la casa.**
+
+**3.5 LA PREGUNTA 2, LA LINEA 4 DE `preservar` DE `OP-M-05-EDIFICIO`: NO HACE FALTA MARCA NUEVA, Y NO
+ES DOCTRINA NUEVA. LO CIERRA EL BANCO 9.28, CITANDOLO.** El banco 9.28 nombra esta especie exacta
+(*"lo que muere no es un paso ni una linea: es la palabra por la que el lector llega"*) y **escribe
+su remedio**: *"el nombre viaja como DENOMINACION, una linea en el texto del superviviente, no un
+paso ni un nodo"*. **Una denominacion no la mueve ninguna marca de fusion: la escribe la pasada
+editorial.** Por eso el carril del ejecutor es el correcto y **no hace falta una sexta marca**.
+Adjudico: **`PERDIDA DE NOMBRE` enrutada a la fase 04 es el carril**, y la entrada de fase 04 tiene
+que llevar **el remedio literal del 9.28** para que no se pierda en el camino. La verificacion 2 de
+la ficha, tal como esta escrita, **no se puede cumplir con las cinco marcas**, y eso queda dicho.
+
+**3.6 LA PREGUNTA 3, EL CAMPO `estado` DE LAS SEIS: NO SE TOCA TODAVIA, PORQUE LA FASE 06 NO CIERRA
+HOY.** Mi 3.6 del acta 138 ato el pase a *"cuando la fase 06 cierre"*. **Su disparador no ha
+disparado**, y lo mido en 4.1: el catalogo de la fase 06 son sus operaciones hijas, y **cinco de
+ellas siguen sin ejecutar**. El estado se sigue midiendo contra el grafo, que es lo que el ejecutor
+hace bien. **Cuando las cinco remitidas queden con destino, el pase de estado de las once (las seis
+fusiones y las cinco remitidas) va en UNA sola adjudicacion, con el conteo antes y despues y la
+guarda de cifras del plan re-corrida, como en las vueltas 131 y 136.**
+
+**3.7 EL ORDEN DE LO QUE QUEDA DE LA FASE 06, FIJADO PARA QUE EL TEXTO ALCANCE.** Las cinco remitidas,
+en este orden y por su destino: **`OP-M-03-ENLACES` (a `OP-M-03`, 2 aristas), `OP-M-01-ESLABONES`
+(2), `OP-M-01-SEXTO` (1), `OP-E-05` (2, enlace mutuo) y `OP-E-04` (9)**, las cuatro ultimas a
+`OP-M-01`. **`OP-M-01-ESLABONES` no se re-escribe: sus dos aristas YA estan presentes hoy** (medido
+por mi, 2 de 2), asi que su trabajo es **verificar y declarar el destino cumplido**, no escribir. Es
+la misma figura que `OP-E-01` en la vuelta 87. **`OP-S-12` sigue al final de la pasada entera** por
+la atadura 2, y no se toca.
+
+**NINGUN RAMAL NUEVO.** Todo se resuelve con `P.5`, `P.7`, `P.8`, `P.9`, `P.13`, `P.16`, banco 9,
+banco 9.10, banco 9.28, `ESPECIES_DE_PERDIDA`, `EJECUTOR.md` regla 1, la fila 6 y la atadura 2 del
+`00_INDICE`, y mis adjudicaciones 3.3 y 3.6 del acta 138. Siguen vivos (i) a (xxi).
+
+## 4. CAIDAS, CON NOMBRE
+
+**4.1 DEL EJECUTOR, DE REPORTE, FUERA DE LO MARCADO, EN CABECERA Y EN CONCLUSION, Y ACUMULA:
+"LA FASE 06 CIERRA SU CATALOGO" Y "HOY CIERRA".** La frase vive en el bloque en negrita de la
+cabecera y otra vez en la `PREGUNTA 3` de la seccion 9 (*"La fase 06 tiene su catalogo completo: las
+seis mesas fundidas... y hoy cierra"*). **No cierra, y lo mido:** la fila 6 del `00_INDICE` dice que
+la fase 06 **"no tiene nada que hacer el dia de la pasada. Sus operaciones hijas viven en las fases 3
+y 4"**, y `04_ENLACES.md:1441` registra que la vuelta 118 le **REMITIO CINCO** operaciones de la fase
+04: `OP-E-04`, `OP-E-05`, `OP-M-01-ESLABONES`, `OP-M-01-SEXTO` y `OP-M-03-ENLACES`. **Corri mi propio
+resolutor sobre las `aristas_nuevas` de las cinco contra el grafo de hoy: 16 propuestas, 5 presentes,
+ONCE SIN ESCRIBIR** (`OP-E-04` 2 de 9, `OP-E-05` 1 de 2, `OP-M-01-ESLABONES` 2 de 2, `OP-M-01-SEXTO`
+0 de 1, `OP-M-03-ENLACES` 0 de 2). **CONSECUENCIA REAL Y NO FORMAL: sobre esa frase el reporte me
+pide en su PREGUNTA 3 que dispare el pase de estado de las seis. Si la doy por buena, cierro una fase
+con once aristas sin escribir.** **ACUMULA por la letra del 27 ago 2026: cabecera y conclusion.**
+**ATENUANTE REAL: la TAREA 3 que se le encargo eran las cinco fusiones y las entrego enteras y bien;
+las cinco remitidas no estaban en su encargo, y eso es mio (4.4).**
+
+**4.2 DEL EJECUTOR, DE PROCEDIMIENTO, GUARDA CON ANCLA MOVIL, Y LA HALLE CORRIENDOLA EN VEZ DE
+LEYENDOLA:** el bloque (iii) de `vuelta139_2b_mutaciones.py` resuelve su sujeto con
+`git log -1 --pretty=format:%H -- docs/loop/REPORTE.md`, o sea **el ultimo commit que toca el
+reporte**. El dia que corrio, eso era el reporte de la 138 y la cifra salio bien. **Hoy eso es el
+reporte de la 139**, y el mismo script imprime **"filas de tabla en el reporte de la 138: 67"** (el de
+la 138 tiene **75**, contadas por mi de `23bde6cd`) y **"VIEJA 0 / NUEVA 5"** bajo un rotulo que sigue
+diciendo *"EL REPORTE DE LA VUELTA 138, TAL COMO ESTA EN GIT"*. **Es banco 9.10 con todas sus letras,
+y el encargo se lo habia dicho dos parrafos antes para el caso (ii)**, donde si clavo el blob con su
+sha256. **NO ES CAIDA DE CIFRA NI DE REPORTE: la cifra publicada (10, 26, 16) es correcta y la
+re-medi yo clavando el blob a mano.** Lo que esta roto es la reproducibilidad. Se repara en el
+encargo, y la especie cuenta como **guarda envejecida**.
+
+**4.3 MIA, DE CIFRA: MI ACTA 138 PUBLICO "EL HUECO MUERDE EN TRES GRUPOS MEDIDOS" Y HOY SON CUATRO, Y
+NINGUNO ES EL QUE YO NOMBRE.** Escribi que `OP-M-05-APERTURA` era el tercero, apoyandome en la linea
+62 de la salida sellada y en una lectura a mano en la que **empareje una pieza de tres partes con un
+paso que solo toca una, y como pregunta**. La medicion de hoy dice **cuatro grupos**, y son
+`OP-M-01-FUSION`, `OP-M-03-III`, `OP-M-05-INDICE` y `OP-M-05-EDIFICIO`. **La cifra de la que me fie
+era un proxy sintactico** (lineas de `preservar` que nombran dos absorbidos) **que no es ni necesario
+ni suficiente**: dio 2 y de esos 2 uno era falso, y no vio los 3 verdaderos que no nombran ningun id.
+**Mi 4.2 del acta 138 sigue en pie en lo que era: el reporte de la 138 nombro dos grupos distintos de
+los que su propia salida nombraba. Lo que se cae es la conclusion que yo monte encima.**
+
+**4.4 MIA, DE ENCARGO, Y ES LA MITAD DE LA 4.1: MI ACTA 138 FIJO EL RESTO DE LA FASE 06 COMO "LAS
+CINCO FUSIONES QUE QUEDAN" Y NUNCA NOMBRO LAS CINCO REMITIDAS.** Mi 3.7 de esa acta hablo solo del
+orden de las cinco fusiones, y mi tabla de parada escribio *"cinco de las seis fusiones de la fase 06
+sin hacer"* como si eso fuera todo lo que la fase debia. **El registro de la remision es de la vuelta
+118 y esta escrito en `04_ENLACES.md`, o sea que estaba a un `grep` de distancia.** El ejecutor
+cerro la fase que su encargo le dibujo. **Se repara en este encargo, con las cinco nombradas y
+ordenadas.**
+
+**4.5 MIA, DE PROCEDIMIENTO: LEI EL REPORTE ENTERO ANTES DE LA CIEGA.** Lo declaro como la vuelta 82
+declaro la suya. **Lo que si hice ciego de verdad, y con instrumento propio que tapa las marcas, es
+la lectura de las 42 piezas**, y ahi los cuatro `VIAJA_EN_EL_ACTO` y el `INCISO` los derive sin ver
+nada suyo. Pero **los discutibles 1 a 7 los lei antes de adjudicarlos**, y eso no es la ciega que mi
+propio protocolo manda. **La reparacion es de metodo y va en mi proximo ciclo: la ciega de piezas se
+construye ANTES de abrir la seccion 7 del reporte.**
+
+**DEL EJECUTOR, LO QUE ENTREGO BIEN, Y ES LA MAYOR PARTE.** Las cinco fusiones con sus guardas
+completas, sus simulaciones previas, sus nueve pruebas mordiendo y su ciclo de Gate 0 con las tres
+suites **cinco veces**. La quinta marca estrenada y usada como la doctrina la fijo, comprobado por mi
+reproduciendo sus nueve destinos. La guarda de cifras reparada de verdad, con delimitador, con rojo
+ruidoso ante una sola marca, y **con el veredicto que empeora declarado en vez de escondido**. **Dos
+correcciones de sus propias pruebas confesadas enteras, y la segunda es la mejor linea de la vuelta:
+un veredicto que era una frase tecleada pasa a computarse de las cifras**, que es la especie exacta
+que esta casa persigue. La linea 4 de `preservar` que ninguna marca puede cumplir, **traida como
+limite medido y sellada como perdida con direccion** en vez de inventada. Y el discutible 1, que es
+tener razon contra su auditor y decirlo con la medicion delante.
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: CERO relecturas de par** (la lectura dirigida no mueve el marcador, banco 9.6.1) y
+**42 PIEZAS DEL REGISTRO RELEIDAS A CIEGAS, con 38 coincidencias y 4 discrepancias, ninguna de las
+cuales mueve un dato**. Cero puestos de cola. **Varas corridas por mi hoy:** las dos guardas de
+sello; el ciclo entero (Gate 0 con sus tres comprobaciones y su alcanzabilidad, etiquetas, sync,
+numstat); motor, vitest y tsc; el censo y las cuatro cifras de aristas con parser propio; el plan con
+parser propio; el tallador de cabecera **y el cotejo linea a linea de sus once filas contra el
+reporte**; el desfase del calibrado **y la comprobacion de su fila nueva contra los blobs de la
+fusion**; el reparto de las 78 piezas contado de los cinco planes; los nueve `VIAJA_EN_EL_ACTO` con
+su destino y su marca de destino; la tabla de la fase 06; P.5 sobre las seis; los blobs de antes y
+despues de los cinco supervivientes; las seis fichas contra sus simulaciones de hoy; los ocho casos
+de la 2.a y los ocho de la 2.b; el caso positivo de los tres planes de las vueltas 63 y 64; las
+cuatro mutaciones viejas; **la re-medicion de la cifra de la 2.b con el blob clavado a mano**; el
+tallador de perdidas; **el resolutor propio sobre las 16 aristas de las cinco operaciones remitidas**;
+y la ciega de las 42 piezas.
+
+**Caidas del ejecutor: UNA de reporte fuera de lo marcado, que ACUMULA (4.1), y UNA de procedimiento
+por guarda con ancla movil (4.2). Caidas del auditor: UNA de cifra (4.3), UNA de encargo (4.4) y UNA
+de procedimiento (4.5). Discrepancias de clase abiertas: CERO.**
+
+**Acumulado:** **859 relecturas** (sin cambio, y lo digo expresamente: hoy la ciega fue de piezas y
+no de pares), **912 puestos** (sin cambio), **12 caidas de clase del ejecutor** (sin cambio), **84 de
+reporte del ejecutor** (83 mas la 4.1), **20 de cifra publicada del ejecutor** (SIN CAMBIO, y lo digo
+expresamente: recompute el censo, las cuatro cifras de aristas, las cuatro tablas de la fase 06, el
+reparto de las 78 piezas y la cifra de la 2.b, y todas cuadran al digito), **22 de expediente** (sin
+cambio), **21 de incumplimiento de encargo** (SIN CAMBIO: entrego la 0, la 1, la 2 y la 4 enteras y
+la 3 completa), **6 de procedimiento del ejecutor** (5 mas la 4.2), **15 de cifra del auditor** (14
+mas la 4.3), **20 de acta del auditor** (sin cambio), **34 de procedimiento del auditor** (33 mas la
+4.5), **1 de reporte del auditor** (sin cambio), **42 de encargo del auditor** (41 mas la 4.4), **2
+de clase del auditor** (sin cambio), y **4 vueltas no entregadas enteras** (sin cambio: 81, 114, 127,
+129). **POR ESPECIE, Y ESTO NO SUMA DOS VECES AL TOTAL: 4 de guarda envejecida** (3 mas la 4.2) y
+**25 de guarda que no alcanza o cegada** (sin cambio).
+
+**RACHAS:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO.** Ni una cifra de `dataset/`, de
+> `docs/plan/` o del banco se movio mal. Las unicas escrituras sobre el catalogo fueron las cinco
+> fusiones, y las cinco estan bien hechas, bien guardadas y bien medidas.
+>
+> **REPORTE: PASA DE UNO A DOS.** La 138 la dejo en uno; la 4.1 de hoy vive en cabecera y en
+> conclusion y acumula por la letra del 27 ago 2026. **DOS, no tres: NO ES PARADA.**
+>
+> **LA ESCALADA SE ENCARGA HOY, EN ESTA MISMA ACTA, Y NO SOLO SE DECLARA.** `AUDITOR.md` 1.2 lo manda
+> al llegar la racha a DOS, y `EJECUTOR.md` regla 1 escribe la escalada. **La escalada literal de la
+> regla (toda tabla del reporte tallada de su fichero de salida) YA ESTA HECHA y esta vuelta la
+> ejercio bien**: `vuelta139_tabla_fase06.py` talla las cuatro tablas. **Por eso la escalada que
+> encargo es la misma medicina en el sitio donde el fallo de hoy ocurrio, que es lo que mi acta 138
+> llamo poner el remedio donde el fallo esta: EL ESTADO DE UNA FASE DEJA DE SER UNA FRASE Y PASA A
+> SER UNA CIFRA COMPUTADA.** Va como **TAREA 2, BLOQUEANTE**, sin esperar parada ni decision nueva
+> del fundador.
+>
+> **EL CREDITO DE LA TANDA: EL TRAMO SE RELEE AL DOBLE POR VIGESIMA VUELTA, Y POR LA REGLA DURA:** la
+> discrepancia (4.1) aparecio **FUERA de los discutibles marcados**. **EL TRAMO QUE SE RELEE AL DOBLE
+> ES TODA AFIRMACION DE CIERRE O DE COMPLETITUD DE UNA FASE O DE UN CATALOGO**, y el encargo lo pide
+> nombrandolo.
+
+## 6. LA PARADA, CONDICION POR CONDICION: NO SE DISPARA NINGUNA
+
+| condicion de `AUDITOR.md` seccion 4 | veredicto |
+|---|---|
+| doctrina NUEVA necesaria | **NO.** Las tres preguntas del reporte se cierran con regla escrita: la 1 con P.13 y con la propia ficha (3.1), la 2 con el banco **9.28**, que nombra la especie **y escribe su remedio** (3.5), y la 3 con mi 3.6 del acta 138 mas la fila 6 del `00_INDICE` (3.6) |
+| contradiccion con regla vigente o cifra publicada | **NO.** Mi "tres grupos" del acta 138 contra los "cuatro" de hoy lo resuelve la regla de correccion existente: se declara la discrepancia y no se copia. Queda registrada en 4.3 y va al registro por adicion |
+| decision de fundador reservada | **NO.** Cero borrados que ninguna regla ordene, alcance intacto, todo en `pasada-unica`, cero gasto fuera del repo, produccion sin tocar |
+| fallo tecnico repetido | **NO.** Gate 0, motor, vitest y tsc verdes en mi remedicion de hoy, y el tallador de cabecera **sale por primera vez en tres vueltas** |
+| credito de tanda roto (clase o cifra del ejecutor) | **NO. SIGUE EN CERO** |
+| credito de tanda roto (reporte) | **NO. VA EN DOS.** Hacen falta TRES seguidas. **Y la escalada queda ENCARGADA en esta acta, como la regla manda** |
+| campaña consumada | **NO.** 61 operaciones en `LISTA` hoy, contadas por mi; **once aristas de la fase 06 sin escribir**, medidas por mi |
+| credenciales ausentes | **NO.** Ninguna suite las pidio |
+| cierre de la fase 03 | **CUMPLIDA** en la vuelta 74, no reabre |
+| cierre de la fase 05 | **CUMPLIDA** en la vuelta 136, no reabre |
+| operacion cuyo texto no alcanza sin decidir | **NO HOY.** Las cinco fusiones se ejecutaron con el texto bastando. Las cinco remitidas traen `adjudicacion` escrita y `pregunta_pendiente` NINGUNA en las cinco (medido en la vuelta 117 y re-leido por mi hoy); si al abrirlas alguna no alcanzara, el modo continuo manda parar esa y traerla |
+
+**EL BUCLE SIGUE.** Escribo `docs/loop/PROMPT_SIGUIENTE.md` con el bloque de apertura de diez
+nombres, los registros con mis tres caidas y la correccion declarada de mi cifra de "tres grupos"
+(4.3), **la TAREA 2 de la escalada como operacion de codigo bloqueante** (racha en dos), las cinco
+operaciones remitidas que la fase 06 tiene pendientes (3.7 y 4.4) y la relectura al doble del tramo
+de las afirmaciones de cierre. **No escribo `PARA_ALEXIS.md`.** El numero **139 queda gastado por
+esta acta**.

@@ -1,0 +1,280 @@
+==============================================================================
+OP-M-01-FUSION | superviviente sistema_gates_go_kill (ANTES de fundir)
+   SUP PASO 1: Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+   SUP PASO 2: Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+   SUP PASO 3: Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+   SUP PASO 4: Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle
+   SUP PASO 5: Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+   SUP PASO 6: Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+   SUP COND 1: Cuando tienes demasiados proyectos o ideas activas y recursos insuficientes para todos
+   SUP COND 2: Cuando no eliminas a tiempo los proyectos debiles y siguen consumiendo tu tiempo y dinero
+   SUP COND 3: Cuando tus decisiones de continuar o parar un proyecto son inconsistentes o las tomas sin criterio claro
+  --- PIEZA: paso 1 de gates_go_kill_decision_points
+      Define con claridad cada punto de decisión en tu camino de la idea al lanzamiento
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+  --- PIEZA: paso 2 de gates_go_kill_decision_points
+      En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 3 de gates_go_kill_decision_points
+      No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 4 de gates_go_kill_decision_points
+      Anota qué decidiste: seguir, parar, dejarlo en espera, replantearlo, o seguir pero con condiciones
+      >>> MARCA DEL EJECUTOR: CUBIERTO:6
+  --- PIEZA: paso 1 de requisitos_gates_con_dientes
+      Define cada punto de decisión (gate) como un momento real donde decides seguir o cancelar (Go/Kill).
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+  --- PIEZA: paso 2 de requisitos_gates_con_dientes
+      Pide entregables claros y estandarizados que debes presentar en cada punto de decisión.
+      >>> MARCA DEL EJECUTOR: VIAJA_EN_EL_ACTO:estructura_de_gates|1
+  --- PIEZA: paso 3 de requisitos_gates_con_dientes
+      Establece criterios de avance visibles y documentados, una tabla de criterios, para todos los que participan en la decisión.
+      >>> MARCA DEL EJECUTOR: CUBIERTO:2
+  --- PIEZA: paso 4 de requisitos_gates_con_dientes
+      Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 5 de requisitos_gates_con_dientes
+      Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 6 de requisitos_gates_con_dientes
+      Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 1 de estructura_gates
+      Define una lista clara de lo que debes entregar en cada punto de decisión de tu proceso
+      >>> MARCA DEL EJECUTOR: VIAJA_EN_EL_ACTO:estructura_de_gates|1
+  --- PIEZA: paso 2 de estructura_gates
+      Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 3 de estructura_gates
+      Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 4 de estructura_gates
+      Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 1 de estructura_de_gates
+      Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 2 de estructura_de_gates
+      Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 3 de estructura_de_gates
+      Definir explícitamente las posibles salidas de la reunión (Go/Kill/Hold/Recycle/Conditional Go).
+      >>> MARCA DEL EJECUTOR: INCISO:4|Conditional Go|, y una quinta salida, 
+  --- PIEZA: paso 4 de estructura_de_gates
+      Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: condicion 1 de gates_go_kill_decision_points
+      Cuando tienes más de un proyecto avanzando al mismo tiempo
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+  --- PIEZA: condicion 2 de gates_go_kill_decision_points
+      Cuando necesitas una forma clara de decidir si sigues invirtiendo en un proyecto o lo cierras
+      >>> MARCA DEL EJECUTOR: CUBIERTO:3
+  --- PIEZA: condicion 1 de requisitos_gates_con_dientes
+      Cuando estás diseñando o rediseñando tu propio sistema de etapas y decisiones (Stage-Gate).
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: condicion 2 de requisitos_gates_con_dientes
+      Si tus puntos de decisión actuales no producen decisiones reales de seguir o cancelar.
+      >>> MARCA DEL EJECUTOR: CUBIERTO:3
+  --- PIEZA: condicion 1 de estructura_gates
+      Si tus proyectos avanzan sin puntos de control claros
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: condicion 2 de estructura_gates
+      Si necesitas una forma objetiva de priorizar entre varios proyectos
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+  --- PIEZA: condicion 1 de estructura_de_gates
+      Si las reuniones de revisión de proyecto terminan con decisiones vagas o ambiguas.
+      >>> MARCA DEL EJECUTOR: CUBIERTO:3
+  --- PIEZA: condicion 2 de estructura_de_gates
+      Si los líderes de proyecto no saben qué se espera de ellos en cada etapa.
+      >>> MARCA DEL EJECUTOR: APPEND
+==============================================================================
+OP-M-03-III | superviviente pivote_estrategico (ANTES de fundir)
+   SUP PASO 1: Aceptar la evidencia empírica aunque contradiga meses de trabajo e inversión previa (sunk cost)
+   SUP PASO 2: Formular una nueva hipótesis de valor basada en los insights obtenidos de clientes
+   SUP PASO 3: Redirigir el desarrollo de producto hacia la nueva hipótesis, incluso si implica desechar código o funcionalidades ya construidas
+   SUP PASO 4: Validar la nueva dirección con nuevos experimentos y medir si las métricas empiezan a moverse
+   SUP PASO 5: Comunicar el pivote y su justificación basada en datos a inversores, empleados y stakeholders
+   SUP COND 1: Cuando múltiples experimentos y entrevistas con clientes muestran consistentemente que la estrategia original no funciona
+   SUP COND 2: Cuando las métricas del negocio se mantienen estancadas a pesar de iteraciones continuas sobre el mismo modelo
+  --- PIEZA: paso 1 de pivote_startup
+      Revisa los resultados de tus pruebas de sí o no sobre las hipótesis de tu negocio
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+  --- PIEZA: paso 2 de pivote_startup
+      Identifica qué parte de tu modelo de negocio necesita cambiar
+      >>> MARCA DEL EJECUTOR: VIAJA_EN_EL_ACTO:pivotes_e_iteraciones|3
+  --- PIEZA: paso 3 de pivote_startup
+      Decide con rapidez y sin miedo al fracaso si toca pivotar
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 4 de pivote_startup
+      Si trabajas con alguien más, cuéntale el cambio como parte normal del proceso
+      >>> MARCA DEL EJECUTOR: CUBIERTO:5
+  --- PIEZA: paso 5 de pivote_startup
+      Vuelve a poner a prueba tu modelo ajustado hablando con clientes
+      >>> MARCA DEL EJECUTOR: CUBIERTO:4
+  --- PIEZA: paso 1 de pivotes_e_iteraciones
+      Distingue con claridad entre un ajuste menor y un cambio sustancial
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 2 de pivotes_e_iteraciones
+      Corre pruebas pasa/no pasa constantes sobre las hipótesis de tu modelo de negocio
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+  --- PIEZA: paso 3 de pivotes_e_iteraciones
+      Usa tu lienzo de modelo de negocio para ubicar qué parte necesita el cambio
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 4 de pivotes_e_iteraciones
+      Cuando los datos contradigan una hipótesis, admite el error y decide sin demora si ajustas o cambias de rumbo
+      >>> MARCA DEL EJECUTOR: VIAJA_EN_EL_ACTO:pivote_startup|3
+  --- PIEZA: paso 5 de pivotes_e_iteraciones
+      Documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 6 de pivotes_e_iteraciones
+      No te aferres a tu idea original si los datos indican lo contrario
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+  --- PIEZA: condicion 1 de pivote_startup
+      Si lo que ves con tus clientes contradice lo que pensabas al inicio sobre tu negocio
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+  --- PIEZA: condicion 2 de pivote_startup
+      Si tu negocio está estancado y necesita un cambio grande para avanzar
+      >>> MARCA DEL EJECUTOR: CUBIERTO:2
+  --- PIEZA: condicion 1 de pivotes_e_iteraciones
+      Si las pruebas con clientes te dan resultados negativos o ambiguos
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+  --- PIEZA: condicion 2 de pivotes_e_iteraciones
+      Si tus métricas de validación muestran que una hipótesis de tu modelo de negocio es falsa
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+  --- PIEZA: condicion 3 de pivotes_e_iteraciones
+      Si tu crecimiento está estancado y necesitas un cambio para sobrevivir
+      >>> MARCA DEL EJECUTOR: CUBIERTO:2
+==============================================================================
+OP-M-05-INDICE | superviviente customer_discovery (ANTES de fundir)
+   SUP PASO 1: Sal a hablar directamente con clientes potenciales en vez de quedarte encerrado con tu idea
+   SUP PASO 2: Prueba como percibe el cliente el problema antes de mostrarle nada del producto
+   SUP PASO 3: Construye una versión minima del producto (MVP) para testear la solución
+   SUP PASO 4: Confirma que el problema le importa lo suficiente como para que decida comprar
+   SUP PASO 5: Documenta lo que aprendes y ajusta tu modelo de negocio según ese feedback
+   SUP COND 1: Si tu negocio se basa solo en tu visión, sin hechos reales del mercado
+   SUP COND 2: Si todavia no has probado el problema y la solución con clientes reales
+  --- PIEZA: paso 1 de customer_discovery_cuatro_fases
+      Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 2 de customer_discovery_cuatro_fases
+      Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 3 de customer_discovery_cuatro_fases
+      Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 4 de customer_discovery_cuatro_fases
+      Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 1 de customer_discovery_overview
+      Descompon tu visión inicial en las nueve partes de tu lienzo de modelo de negocio (Business Model Canvas)
+      >>> MARCA DEL EJECUTOR: VIAJA_EN_EL_ACTO:customer_discovery_cuatro_fases|1
+  --- PIEZA: paso 2 de customer_discovery_overview
+      Sal a comprobar si el problema es real y le duele a tus clientes
+      >>> MARCA DEL EJECUTOR: VIAJA_EN_EL_ACTO:customer_discovery_cuatro_fases|2
+  --- PIEZA: paso 3 de customer_discovery_overview
+      Muestrales tu producto minimo viable (MVP) y tu propuesta de valor para validar la solución
+      >>> MARCA DEL EJECUTOR: VIAJA_EN_EL_ACTO:customer_discovery_cuatro_fases|3
+  --- PIEZA: paso 4 de customer_discovery_overview
+      Evalua los resultados y decide si tienes suficiente validación para pasar a probar con clientes reales (Customer Validation) o si necesitas pivotar
+      >>> MARCA DEL EJECUTOR: VIAJA_EN_EL_ACTO:customer_discovery_cuatro_fases|4
+  --- PIEZA: condicion 1 de customer_discovery_cuatro_fases
+      Cuando necesitas ordenar de forma metódica todo el proceso de descubrir a tu cliente
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: condicion 2 de customer_discovery_cuatro_fases
+      Cuando arrancas el proceso formal de descubrir a tu cliente en un proyecto nuevo
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: condicion 1 de customer_discovery_overview
+      Tienes una hipótesis de negocio pero todavia no has salido a hablar con clientes reales
+      >>> MARCA DEL EJECUTOR: CUBIERTO:2
+  --- PIEZA: condicion 2 de customer_discovery_overview
+      Quieres evitar construir un producto completo sin validar antes el problema
+      >>> MARCA DEL EJECUTOR: APPEND
+==============================================================================
+OP-M-05-EDIFICIO | superviviente customer_discovery_get_out_of_building (ANTES de fundir)
+   SUP PASO 1: Identifica tus hipótesis clave sobre el problema, el cliente y la solución
+   SUP PASO 2: Sal a entrevistar clientes potenciales de forma repetida durante semanas o meses
+   SUP PASO 3: Evita las encuestas de foco tradicionales o las listas exhaustivas de funciones (features)
+   SUP PASO 4: Anota lo que aprendes y compáralo con lo que pensabas al principio
+   SUP COND 1: Cuando tienes un plan de negocio basado solo en tus propias suposiciones, sin validar
+   SUP COND 2: Si todavia no has hablado con clientes reales
+  --- PIEZA: paso 1 de get_out_of_the_building
+      Programa reuniones directas y repetidas con clientes potenciales
+      >>> MARCA DEL EJECUTOR: CUBIERTO:2
+  --- PIEZA: paso 2 de get_out_of_the_building
+      Lidera tú mismo estas conversaciones, no las delegues en personal junior
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 3 de get_out_of_the_building
+      Evita hacer listas con todas las características que te piden los clientes
+      >>> MARCA DEL EJECUTOR: CUBIERTO:3
+  --- PIEZA: paso 4 de get_out_of_the_building
+      Documenta lo que aprendes de cada conversación en el momento (blog, CRM)
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 1 de manifiesto_regla1_hechos_fuera_del_edificio
+      Sal físicamente a hablar con tus clientes potenciales
+      >>> MARCA DEL EJECUTOR: CUBIERTO:2
+  --- PIEZA: paso 2 de manifiesto_regla1_hechos_fuera_del_edificio
+      No deleguees la investigación de clientes en empleados o consultores
+      >>> MARCA DEL EJECUTOR: VIAJA_EN_EL_ACTO:get_out_of_the_building|2
+  --- PIEZA: paso 3 de manifiesto_regla1_hechos_fuera_del_edificio
+      Consigue experiencia de primera mano sobre cada parte de tu modelo de negocio
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 4 de manifiesto_regla1_hechos_fuera_del_edificio
+      Prepárate para recibir feedback impredecible y a veces doloroso
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: condicion 1 de get_out_of_the_building
+      Si estás construyendo tu producto sin validarlo con clientes reales
+      >>> MARCA DEL EJECUTOR: CUBIERTO:2
+  --- PIEZA: condicion 2 de get_out_of_the_building
+      Si tus decisiones se basan en suposiciones internas y no en lo que dicen los clientes
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+  --- PIEZA: condicion 1 de manifiesto_regla1_hechos_fuera_del_edificio
+      Al iniciar la búsqueda de tus primeros clientes
+      >>> MARCA DEL EJECUTOR: CUBIERTO:2
+  --- PIEZA: condicion 2 de manifiesto_regla1_hechos_fuera_del_edificio
+      Cuando dependes demasiado de reportes internos en lugar de hablar tú mismo con tus clientes
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+==============================================================================
+OP-M-05-APERTURA | superviviente customer_validation (ANTES de fundir)
+   SUP PASO 1: Despliega una versión de alta fidelidad de tu producto mínimo viable (MVP) para probarla con clientes
+   SUP PASO 2: Diseña un plan de ventas y pruébalo en el terreno con tus primeros clientes
+   SUP PASO 3: Mide si por cada peso que inviertes en ventas y marketing te regresan el doble (o la proporción que hayas definido)
+   SUP PASO 4: Confirma con ventas reales, con dinero de por medio, que la gente quiere comprar
+   SUP PASO 5: Evalúa si ya alcanzaste el impulso suficiente para pasar a escalar
+   SUP COND 1: Si ya terminaste el descubrimiento de clientes y confirmaste el problema y la solución
+   SUP COND 2: Si necesitas comprobar que puedes escalar antes de invertir fuerte en crecimiento
+  --- PIEZA: paso 1 de filosofia_customer_validation
+      Revisa las hipótesis de negocio que ya confirmaste hablando con clientes
+      >>> MARCA DEL EJECUTOR: CUBIERTO_COND:1
+  --- PIEZA: paso 2 de filosofia_customer_validation
+      Prepara tu primera versión del producto (MVP) y los materiales que necesitas para vender y difundirlo
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+  --- PIEZA: paso 3 de filosofia_customer_validation
+      Sal a pedir pedidos reales, no solo opiniones
+      >>> MARCA DEL EJECUTOR: CUBIERTO:4
+  --- PIEZA: paso 4 de filosofia_customer_validation
+      Confirma que haya pedidos, usuarios o clics reales, no solo respuestas de encuestas
+      >>> MARCA DEL EJECUTOR: INCISO:4|usuarios o clics reales, no solo respuestas de encuestas|, y cuentan como evidencia los 
+  --- PIEZA: paso 5 de filosofia_customer_validation
+      Responde estas tres preguntas: ¿puede crecer tu negocio?, ¿tu forma de vender se repite?, ¿puedes predecir cuánta gente avanza hacia la compra?
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 1 de introduccion_validacion_clientes
+      Probar la repetibilidad del proceso de ventas o adquisición de usuarios
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 2 de introduccion_validacion_clientes
+      Buscar pedidos u órdenes reales a precio completo como prueba de validación
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 3 de introduccion_validacion_clientes
+      Probar canales de ventas y distribución
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 4 de introduccion_validacion_clientes
+      Escuchar activamente a los clientes para identificar pivotes necesarios
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: paso 5 de introduccion_validacion_clientes
+      Posicionar correctamente el producto y la empresa
+      >>> MARCA DEL EJECUTOR: APPEND
+  --- PIEZA: condicion 1 de filosofia_customer_validation
+      Cuando ya hablaste con clientes y confirmaste tus hipótesis, y necesitas comprobar si tu negocio realmente genera ventas
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
+  --- PIEZA: condicion 1 de introduccion_validacion_clientes
+      Cuando el equipo decidió 'proceder' tras el descubrimiento de clientes y necesita iniciar la fase de validación
+      >>> MARCA DEL EJECUTOR: CUBIERTO:1
