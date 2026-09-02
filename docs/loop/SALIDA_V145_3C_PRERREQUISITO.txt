@@ -1,0 +1,74 @@
+PRERREQUISITO DE OP-A-01, MEDIDO HOY | REF: WORK
+Instrumento: scripts/loop/vuelta145_3c_prerrequisito_op_a_01.py (vuelta 145, 3.c)
+==============================================================================
+CENSO DE PARTIDA: 3853 nodos en el grafo, 3169 VIVOS
+  el campo `fuente` por tipo de dato: {'str': 3853}
+  nodos vivos con `fuente` vacia o ausente: 0
+
+(1) NODOS VIVOS QUE DECLARAN MAS DE UNA FUENTE, por candidato a separador
+  separador ' | ' :    8 nodo(s)  <- SEPARADOR CANONICO DEL CATALOGO
+  separador '|'   :    8 nodo(s)
+  separador ';'   :  227 nodo(s)
+  CIFRA nodos con mas de una fuente: 8 nodos
+
+(2) DECLARACIONES EN SEGUNDA POSICION O POSTERIOR (lo que mira P.2)
+  CIFRA declaraciones en 2.a posicion o posterior: 9 lineas
+  LOS NODOS, UNO A UNO, y ninguno se queda sin nombre:
+     arquetipos_de_cliente
+        [1] The Startup Owner's Manual - Blank, Steve
+        [2] The Lean Startup - Eric Ries   <- SEGUNDA O POSTERIOR
+     coeficiente_viral
+        [1] The Startup Owner's Manual - Blank, Steve
+        [2] Traction - Gabriel Weinberg   <- SEGUNDA O POSTERIOR
+     composicion_board_directors
+        [1] Venture Deals - Brad Feld
+        [2] The Founder's Dilemmas - Wasserman, Noam   <- SEGUNDA O POSTERIOR
+     decision_de_vender_startup
+        [1] The Founder's Dilemmas - Wasserman, Noam
+        [2] The Hard Thing About Hard Things - Ben Horowitz   <- SEGUNDA O POSTERIOR
+     keep_customers_strategy
+        [1] The Startup Owner's Manual - Blank, Steve
+        [2] Never Lose a Customer Again - Joey Coleman   <- SEGUNDA O POSTERIOR
+     preferencia_de_liquidacion
+        [1] Venture Deals - Brad Feld
+        [2] The Founder's Dilemmas - Wasserman, Noam   <- SEGUNDA O POSTERIOR
+     principio_calidad_mvp
+        [1] The Lean Startup - Eric Ries
+        [2] The Hard Thing About Hard Things - Ben Horowitz   <- SEGUNDA O POSTERIOR
+     viral_loop_marketing
+        [1] The Startup Owner's Manual - Blank, Steve
+        [2] Never Lose a Customer Again - Joey Coleman   <- SEGUNDA O POSTERIOR
+        [3] Traction - Gabriel Weinberg   <- SEGUNDA O POSTERIOR
+
+(3) GRAFIAS DISTINTAS POR LIBRO, contadas POR PIEZA y no por cadena entera.
+    LAS DOS UNIDADES CON SU NOMBRE, que aqui no da lo mismo (CORRECCION 18):
+    SOLO VIVOS es lo que el grafo publica hoy; TODOS LOS NODOS incluye los
+    deprecados, que es donde la grafia vieja sigue existiendo.
+  Hugos, SOLO VIVOS: 1 grafia(s) distinta(s), 95 nodo(s)
+       95 nodo(s)  'Essentials of Supply Chain Management - Michael H. Hugos'
+  Hugos, TODOS LOS NODOS: 2 grafia(s) distinta(s), 116 nodo(s)
+        1 nodo(s)  'Essentials of Supply Chain Mana - Michael H. Hugos'
+      115 nodo(s)  'Essentials of Supply Chain Management - Michael H. Hugos'
+  Horowitz, SOLO VIVOS: 1 grafia(s) distinta(s), 87 nodo(s)
+       87 nodo(s)  'The Hard Thing About Hard Things - Ben Horowitz'
+  Horowitz, TODOS LOS NODOS: 2 grafia(s) distinta(s), 93 nodo(s)
+        5 nodo(s)  'The Hard Thing About Hard Thing - Ben Horowitz'
+       88 nodo(s)  'The Hard Thing About Hard Things - Ben Horowitz'
+
+(4) LA DECLARACION
+  grafias de Hugos hoy: 1 SOLO VIVOS, 2 TODOS LOS NODOS
+  grafias de Horowitz hoy: 1 SOLO VIVOS, 2 TODOS LOS NODOS
+  CONTRA LO QUE LA FICHA DICE (corte 11 ago 2026): Hugos DOS grafias y Horowitz
+  TRES. La de Hugos REPRODUCE contando TODOS LOS NODOS; la de Horowitz da DOS y
+  no tres, y se declara en vez de resolverse copiando. En las DOS, la grafia
+  vieja vive HOY solo del lado deprecado.
+  LISTA CANONICA DE LIBROS EN EL REPOSITORIO: se busca y se dice si esta.
+     candidatos mirados: dataset/metadata/libros_canonicos.json, dataset/metadata/fuentes_canonicas.json, docs/plan/LIBROS_CANONICOS.md
+     hallados: NINGUNO
+
+  PRERREQUISITO CUMPLIDO: NO
+  MOTIVO: no existe en el repositorio ninguna lista canonica de libros con sus
+  alias de escritura. La ficha de OP-A-01 nombra a OP-S-11 como su dueno, y
+  OP-S-11 sigue SIN VARA ESCRITA en la fase 05. NO SE IMPROVISA LA LISTA:
+  la fase 07 queda ABIERTA Y MEDIDA con su bloqueo nombrado.
+EXITCODE: 0

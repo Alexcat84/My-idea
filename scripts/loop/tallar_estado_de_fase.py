@@ -74,6 +74,24 @@ LAS VARAS DEL DESTINO, y de donde sale cada una:
       la da por buena: sale NO COMPUTABLE, se cuenta en SIN CUMPLIR y se
       nombra en el desglose `de ellas, sin vara escrita`.
 
+      EL PUNTERO DE LA FASE 07, Y SOLO UN PUNTERO (vuelta 145, TAREA 3.b; acta
+      144, adjudicacion 3.9). Las DOS operaciones de `07_ADUANA` (`OP-A-01` y
+      `OP-A-02`) tienen `nodos`, `superviviente`, `eliminar` y `aristas_nuevas`
+      VACIOS los cuatro, asi que salen aqui en SIN VARA ESCRITA y NO COMPUTABLE,
+      y ESO ES CORRECTO: no dejan huella en el grafo y esta es una vara de
+      grafo. Se miden APARTE, contra LO QUE INSTALAN, con
+      `scripts/loop/vuelta145_3b_vara_de_codigo_fase07.py`, que pregunta por
+      cada control DOS COSAS Y SOLO DOS: que exista en el codigo y que muerda
+      por mutacion.
+
+      ESE VEREDICTO NO ENTRA EN ESTA TABLA NI EN NINGUNA COLUMNA SUYA, y la
+      razon se escribe para que nadie lo "arregle" luego: el contrato de esta
+      columna es "destino medido contra el grafo", y meter ahi un veredicto de
+      CODIGO serian DOS UNIDADES EN UNA COLUMNA, la especie exacta de la
+      CORRECCION 18. La celda de las dos sigue diciendo SIN VARA ESCRITA, que
+      es la verdad medida contra el grafo, y quien quiera el otro veredicto
+      corre el otro instrumento.
+
 POR QUE "NO COMPUTABLE" CUENTA COMO "SIN CUMPLIR", y es la decision que mas
 manda en la cifra: "destino cumplido" es una AFIRMACION, y una operacion cuyo
 destino no se puede medir NO HA SIDO DEMOSTRADA cumplida. Meterla en el saco
