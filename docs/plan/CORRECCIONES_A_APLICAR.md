@@ -640,3 +640,147 @@ de perdidas, se registra antes de fundir"*). Aparecen **DOS**, y las dos en
 **Las dos viajan de `APPEND`**, porque `preservar` es **SUELO y no techo** (acta
 138, adjudicacion 3.3) y marcarlas `CUBIERTO` habria afirmado del superviviente
 algo que su texto no dice.
+
+## CORRECCION 11. **UNA CIFRA DEL AUDITOR CONTRA LA MEDICION DEL DIA: "EL HUECO MUERDE EN TRES GRUPOS" ERAN CUATRO, Y NINGUNO ES EL QUE EL ACTA 138 NOMBRO**
+
+**POR ADICION, Y NO SE BORRA NI SE REESCRIBE LA CIFRA VIEJA.** Escrita en la
+vuelta 140, TAREA 1.b, por encargo expreso del acta 139 (caida **4.3**, del
+auditor sobre si mismo). Sale de la misma regla que las CORRECCIONES 9 y 10:
+`EJECUTOR.md` regla 2 y regla 8, **la discrepancia se declara, no se resuelve
+copiando**, y *"una correccion que tapa lo que corrige no se puede auditar"*.
+
+**ES LA PRIMERA CORRECCION DE ESTE FICHERO CUYA CIFRA VIEJA NO ES DE UNA FICHA
+DEL PLAN SINO DE UN ACTA DEL AUDITOR.** Se registra igual que las otras, que es
+lo que el encargo pide con esas palabras.
+
+### 11.a. LAS DOS CIFRAS, CADA UNA CON SU CORTE Y SU AUTOR
+
+| | cifra | quien la publica | corte | fuente |
+|---|---:|---|---|---|
+| **la vieja, que NO se borra** | **TRES grupos** | acta 138 del auditor, caida 4.2 (*"EL HUECO MUERDE EN TRES GRUPOS MEDIDOS, NO EN DOS"*) | **1 sep 2026** | lectura a mano sobre la linea 62 de `SALIDA_V138_3_PIEZA_DE_VARIOS_DUENOS.txt` |
+| **la de hoy** | **CUATRO grupos** | ejecutor en la vuelta 139 (DISCUTIBLE 1), **adjudicado a favor** por el acta 139, 3.1, que lo re-midio a ciegas | **2 sep 2026** | lectura pieza por pieza de los cinco planes de la fase 06 |
+
+**LOS CUATRO GRUPOS DE HOY, NOMBRADOS:** `OP-M-01-FUSION`, `OP-M-03-III`,
+`OP-M-05-INDICE` y `OP-M-05-EDIFICIO`.
+
+**EL QUE EL ACTA 138 NOMBRO Y HOY QUEDA FUERA:** `OP-M-05-APERTURA`.
+
+**Y LA FORMA DE LA DISCREPANCIA NO ES "TRES CONTRA CUATRO", ES PEOR Y SE DICE
+ENTERA:** de los grupos que el acta 138 conto, **`OP-M-05-APERTURA` es falso** y
+**los tres que si muerden y no nombran ningun id no los vio**. La cifra no se
+quedo corta por una unidad: **estaba mal poblada**.
+
+### 11.b. POR QUE FALLO, Y ES EL PROXY Y NO LA ARITMETICA
+
+**EL PROXY DEL QUE EL ACTA 138 SE FIO: "lineas de `preservar` que nombran DOS
+absorbidos".** Se declara aqui, con las dos palabras que lo describen y que el
+acta 139 escribio en su 4.3:
+
+- **NO ES SUFICIENTE.** Que una linea de `preservar` nombre dos absorbidos **no
+  implica que la pieza este partida entre los dos**. En `OP-M-05-APERTURA` la
+  linea 3 nombra a los dos, y medido sobre el texto **sus tres partes (la
+  repetibilidad, los pedidos a precio completo, los canales) estan LAS TRES en
+  `introduccion_validacion_clientes`**, una por paso (1, 2 y 3). El paso 5 de
+  `filosofia_customer_validation` toca **una** de las tres, **y como pregunta de
+  puerta**. Un nombre en una linea no es una pieza compartida.
+- **NO ES NECESARIO.** Los otros **tres** grupos donde el hueco si muerde
+  (`OP-M-03-III`, `OP-M-05-INDICE` y `OP-M-05-EDIFICIO`) **no nombran ningun id
+  en la linea de `preservar` correspondiente**, y el proxy no los podia ver por
+  construccion.
+
+**LA VARA QUE DECIDE SOLA Y QUE EL ACTA 138 NO USO, Y VIVE EN LA PROPIA FICHA:**
+la linea **1** de `preservar` de `OP-M-05-APERTURA` **ya reclama ese paso 5
+entero**, literal, *"de filosofia_customer_validation: LAS TRES PREGUNTAS DE
+ESCALA"*. Leer la linea 3 como si viviera tambien ahi **asigna el mismo paso a
+dos lineas de `preservar`**, y marcarlo `VIAJA_EN_EL_ACTO` habria **perdido las
+preguntas del crecimiento y de la prediccion**. **No era discutible: estaba
+prohibido por la ficha.**
+
+### 11.c. QUE SE CAE Y QUE SIGUE EN PIE
+
+- **SIGUE EN PIE lo que la caida 4.2 del acta 138 era en su nucleo:** el reporte
+  de la vuelta 138 nombro **dos grupos distintos** de los que su propia salida
+  sellada nombraba. Eso se midio contra el fichero y no se toca.
+- **SE CAE la conclusion montada encima**, o sea la cifra de **TRES** y el
+  nombre de `OP-M-05-APERTURA` como tercero.
+- **NO SE TOCA NINGUNA FICHA de `docs/plan/OPERACIONES.jsonl`** ni ningun
+  veredicto: esta correccion registra **una cifra de acta**, no un dato del
+  plan.
+- **CONSECUENCIA PARA QUIEN LEA DESPUES:** cuando haga falta contar donde el
+  hueco muerde, **la vara no es el proxy sintactico sino la lectura pieza por
+  pieza de los planes**, que es la que produjo la cifra de CUATRO. El proxy
+  puede seguir usandose como **buscador de candidatos**, nunca como censo, que
+  es exactamente lo que el banco **9.28** ya dice de su propio barrido
+  (*"El instrumento no puede ser un censo: puede ser un buscador de
+  candidatos"*).
+
+## CORRECCION 12. **ENTRADA DE FASE 04: LA PERDIDA DE NOMBRE DE `OP-M-05-EDIFICIO`, CON EL REMEDIO LITERAL DEL BANCO 9.28 DENTRO**
+
+**POR ADICION.** Escrita en la vuelta 140, TAREA 1.c, por encargo del acta 139,
+adjudicacion **3.5**. Es la continuacion de la **10.c** de la CORRECCION 10, que
+sello la perdida; esta escribe **el remedio**, para que la fase 04 no tenga que
+redescubrirlo. **No se toca la ficha ni el nodo: la fase 04 es quien ejecuta.**
+
+### 12.a. LA PERDIDA, TAL COMO QUEDO SELLADA
+
+**Operacion:** `OP-M-05-EDIFICIO`, fase 06, ejecutada el **2 sep 2026**
+(vuelta 139).
+**Especie:** `DE NOMBRE`, una de las tres de `ESPECIES_DE_PERDIDA`.
+**Muere:** `manifiesto_regla1_hechos_fuera_del_edificio`.
+**Sobrevive:** `get_out_of_the_building`.
+**La denominacion que se pierde del TEXTO:** *"NO HAY HECHOS DENTRO DEL
+EDIFICIO"*, la formulacion que la linea 4 de `preservar` manda preservar y que la
+verificacion 2 de la ficha manda comprobar **como frase** en el texto final.
+
+**MEDIDO CAMPO POR CAMPO EL 2 SEP 2026:** esa formulacion vive **SOLO en
+`node_id` y en `titulo_concepto`** del absorbido. **NO esta en ninguno de sus
+cuatro `pasos_accionables` ni en `resumen_teorico`.** Tras la fusion vive en
+`merged_originals` del superviviente, comprobado sobre el nodo escrito.
+
+**POR QUE NINGUNA MARCA DE FUSION PUEDE MOVERLA:** las cinco marcas del contrato
+mueven **pasos y condiciones VERBATIM**, y **ninguna mueve un titulo**; un
+`INCISO` cae en ROJO porque el trozo no es literal de ningun paso, y escribirla a
+mano seria **inventar texto**, que es justo lo que el `INCISO` existe para
+impedir.
+
+### 12.b. EL REMEDIO, LITERAL DEL BANCO 9.28, PARA QUE NO SE PIERDA EN EL CAMINO
+
+**El banco de textos, seccion `9.28 CLASE DE PERDIDA: LA PERDIDA DE NOMBRE`,
+nombra esta especie exacta:**
+
+> **HAY FUSIONES DONDE LO QUE MUERE NO ES UN PASO NI UNA LINEA: ES LA PALABRA POR
+> LA QUE EL LECTOR LLEGA.**
+
+**Y ESCRIBE SU REMEDIO, y esta es la linea que la fase 04 tiene que ejecutar,
+citada literal de esa misma seccion:**
+
+> **EL REMEDIO, y es barato:** el nombre **viaja como DENOMINACION**, **una linea
+> en el texto del superviviente**, no un paso ni un nodo. Basta con que el titulo
+> o la primera linea digan *tambien llamada funcion de perdida de Taguchi*.
+
+**QUE SIGNIFICA AQUI, sin inventar nada:** en `get_out_of_the_building` la
+denominacion *"no hay hechos dentro del edificio"* tiene que aparecer **en el
+texto que el lector ve**, como **una linea de denominacion** (titulo o primera
+linea del `resumen_teorico`), **no como un paso nuevo ni como un nodo nuevo**.
+
+**POR QUE EL ALIAS NO BASTA, y el 9.28 lo dice con su tabla:** el id muerto queda
+en `ids_alias` y **eso cubre el GRAFO, no cubre AL LECTOR**. *"Un alias es una
+redireccion interna. El lector que escribe [la denominacion] no esta resolviendo
+un id: esta buscando una palabra que tiene que estar EN EL TEXTO."*
+
+**COMO SE COMPROBARA QUE QUEDO HECHO, y es comprobable por script** (el criterio
+de reconocimiento del propio 9.28): la denominacion **aparece en algun sitio del
+texto del superviviente**, no solo en `merged_originals` ni en `ids_alias`.
+
+### 12.c. LO QUE ESTA ENTRADA NO HACE, DICHO PARA QUE NADIE LO LEA DE MAS
+
+- **NO se ejecuta aqui.** La denominacion **la escribe la pasada editorial**
+  (adjudicacion 3.5 del acta 139: *"Una denominacion no la mueve ninguna marca de
+  fusion: la escribe la pasada editorial"*). Esta entrada solo la enruta con su
+  remedio dentro.
+- **NO hace falta una sexta marca de fusion.** El acta 139, 3.5, lo adjudica con
+  esas palabras, y el carril (`PERDIDA DE NOMBRE` enrutada a la fase 04) queda
+  confirmado como el correcto.
+- **NO se toca la ficha de `OP-M-05-EDIFICIO`, y queda dicho lo que la 10.c ya
+  declaraba:** su **verificacion 2, tal como esta escrita, no se puede cumplir**
+  con las cinco marcas de hoy. No se finge que se cumplio.
