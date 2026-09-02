@@ -156,6 +156,42 @@ el fichero del vecino, cuando la pareja correcta es `SALIDA_V134_4A_
 CENSO_COLA.txt`). AMPLIA para decidir si la exencion es legal,
 FORWARD-ONLY para cotejar la cifra: nunca una ventana sola para las dos
 preguntas.
+
+--- LAS DOS REPARACIONES DE LA VUELTA 137 (TAREA 1.c, parada del 29 ago
+2026 punto 4, acta 136) ---
+
+Las nombro el auditor al medir POR QUE el reporte de la vuelta 136 publico
+COBERTURA 0/0/0: el ejecutor cambio las palabras de la casa hasta que esta
+guarda no encontro nada que morder. Su diagnostico era CIERTO (la guarda
+caia ROJO sobre cifras CORRECTAS); el remedio no lo era. Los dos defectos
+se reprodujeron con ficheros REALES antes de tocar nada
+(vuelta137_1c_diagnostico.py, SALIDA_V137_1C_DIAGNOSTICO.txt).
+
+PRIMERA, QUE APRENDA A CONTAR LA UNIDAD `grafia`. Un fichero de salida
+puede traer VARIAS lineas `CIFRA` de la MISMA unidad y se tomaba la
+PRIMERA. Ahora se recogen todas con su ETIQUETA y se elige por la
+etiqueta (camino FUERTE); si hay empate o ninguna palabra en comun con la
+frase, se acepta cualquiera de las candidatas y se marca POR CONJUNTO
+(camino DEBIL, declarado en el codigo y en la salida, no escondido).
+
+SEGUNDA, QUE EMPAREJE CADA CIFRA CON SU FICHERO. Habia un `sorted(set())`
+y un `citas[0]`: de todas las citas de la ventana se tomaba la
+ALFABETICAMENTE primera. Ahora se ordenan por PROXIMIDAD TEXTUAL a la
+cifra. LA VENTANA NO CAMBIA: sigue siendo la forward-only, porque la
+asimetria de arriba esta adjudicada como doctrina; lo que cambia es CUAL
+de las citas de esa misma ventana se elige.
+
+Y UN HALLAZGO QUE EL DEFECTO SEGUNDO ESCONDIA: no solo tiraba cifras
+correctas, tambien DEJABA PASAR incorrectas. Medido corriendo la version
+vieja sacada de git (vuelta137_1c_mutacion.py, mutacion C): "2 grafias en
+grupo" citando un fichero que dice 92 salia VERDE EXIT 0, porque cuadraba
+contra el recuento generico del fichero del VECINO.
+
+PRUEBA DE MUTACION (obligatoria): scripts/loop/vuelta137_1c_mutacion.py,
+salida a docs/loop/SALIDA_V137_1C_MUTACION.txt. Cuatro casos: cifra
+equivocada por uno, cifra de la etiqueta VECINA del mismo fichero (prueba
+que el camino fuerte no se degrada al debil), el falso verde de arriba, y
+las mutaciones viejas recorridas.
 """
 import argparse
 import glob
@@ -233,19 +269,78 @@ def contar_lineas(contenido):
     return len([l for l in contenido.split("\n") if l.strip()])
 
 
-def contar_por_cifra_etiquetada(contenido, unidad):
-    """2.c: busca PRIMERO una linea `CIFRA <etiqueta>: <n> <unidad>` de la
-    MISMA unidad CANONICA (singular/plural de la MISMA palabra: "grafia" no
-    cotejua contra una linea CIFRA de "grupo" solo por compartir familia
-    generica). Devuelve None si no hay ninguna (el llamador cae a
-    `contar_por_familia`)."""
+# REPARACION 1.c DE LA VUELTA 137, PRIMERA: QUE APRENDA A CONTAR LA UNIDAD
+# `grafia` (parada del 29 ago 2026, punto 4; acta 136).
+#
+# EL DEFECTO, MEDIDO (SALIDA_V137_1C_DIAGNOSTICO.txt, corrido antes de esta
+# reparacion): un fichero de salida puede traer VARIAS lineas `CIFRA` de la
+# MISMA unidad, y esto devolvia la PRIMERA y solo la primera.
+# docs/loop/SALIDA_V135_4B_PELDANOS.txt trae dos de unidad `grafias` ("grafias
+# en grupo: 92" y "grafias sin agrupar: 37"), asi que la cifra CORRECTA "37
+# grafias sin agrupar" se cotejaba contra 92 y caia ROJO. La prueba de que el
+# defecto ya deformaba el trabajo esta en la cabecera de ese mismo fichero, que
+# explica que el peldano 6 va PRIMERO "porque el cotejo toma la PRIMERA linea
+# CIFRA de la unidad pedida": un instrumento doblado alrededor del defecto.
+#
+# LA REPARACION: se recogen TODAS las lineas `CIFRA` de esa unidad canonica, con
+# su ETIQUETA, y se elige por la ETIQUETA, que es justamente el dato que el
+# instrumento imprime para distinguirlas. Dos caminos, y el segundo se declara
+# porque es mas debil:
+#   CAMINO FUERTE, POR ETIQUETA. Se puntua cada etiqueta por cuantas de sus
+#   palabras de contenido aparecen en la frase del reporte. Si UNA sola etiqueta
+#   saca la puntuacion mas alta y esa puntuacion no es cero, ESA es la linea
+#   contra la que se coteja, y se coteja ESTRICTO: si no cuadra, ROJO.
+#   CAMINO DEBIL, POR CONJUNTO (DISCUTIBLE, declarado). Si hay empate o ninguna
+#   palabra en comun, la guarda no puede saber a cual de las etiquetas se
+#   referia la prosa. Entonces acepta que la cifra escrita sea CUALQUIERA de las
+#   candidatas, nombrando cual caso, y lo dice en la salida con la marca POR
+#   CONJUNTO. Es mas debil que el camino fuerte (una cifra podria cuadrar contra
+#   la etiqueta equivocada del mismo fichero) y por eso se marca en vez de
+#   callarse; sigue siendo mas estricto que el estado anterior, donde una cifra
+#   correcta caia ROJA y el ejecutor aprendia a evitar el vocabulario.
+PALABRAS_VACIAS = set("""de del la las el los un una y o en con por para que a al
+mas sin sobre su sus lo se es son como entre tras hasta desde no ni""".split())
+
+
+def _palabras(texto):
+    return set(w for w in re.findall(r"[a-z0-9]+", texto.lower())
+               if len(w) >= 4 and w not in PALABRAS_VACIAS)
+
+
+def cifras_etiquetadas(contenido, unidad):
+    """Devuelve la lista de (etiqueta, valor) de TODAS las lineas
+    `CIFRA <etiqueta>: <n> <unidad>` de la MISMA unidad CANONICA
+    (singular/plural de la MISMA palabra: "grafia" no coteja contra una linea
+    CIFRA de "grupo" solo por compartir familia generica). Lista vacia si no hay
+    ninguna (el llamador cae a `contar_por_familia`)."""
     canonica = UNIDAD_CANONICA[unidad]
+    out = []
     for m in PATRON_CIFRA_ETIQUETA.finditer(contenido):
         numero_txt = m.group(1).replace(".", "").replace(",", "")
         u = m.group(2).lower()
         if UNIDAD_CANONICA.get(u) == canonica and numero_txt.isdigit():
-            return int(numero_txt)
-    return None
+            etiqueta = m.group(0).split(":")[0][len("CIFRA"):].strip()
+            out.append((etiqueta, int(numero_txt)))
+    return out
+
+
+def elegir_cifra_etiquetada(candidatas, frase, numero):
+    """Devuelve (valor, etiqueta, modo) o None si no hay candidatas. `modo` es
+    'ETIQUETA' (camino fuerte) o 'CONJUNTO' (camino debil, declarado)."""
+    if not candidatas:
+        return None
+    if len(candidatas) == 1:
+        return candidatas[0][1], candidatas[0][0], "ETIQUETA"
+    pal_frase = _palabras(frase)
+    puntuadas = [(len(_palabras(et) & pal_frase), et, val) for et, val in candidatas]
+    mejor = max(p for p, _e, _v in puntuadas)
+    empatadas = [(et, val) for p, et, val in puntuadas if p == mejor]
+    if mejor > 0 and len(empatadas) == 1:
+        return empatadas[0][1], empatadas[0][0], "ETIQUETA"
+    for et, val in candidatas:
+        if val == numero:
+            return val, et, "CONJUNTO"
+    return candidatas[0][1], candidatas[0][0], "CONJUNTO"
 
 
 def ventana_amplia(frases, i):
@@ -385,8 +480,34 @@ def verificar(ruta_reporte):
 
             ventana = frases[i:i + 3]
             ventana_txt = " ".join(ventana)
-            citas = sorted(set(PATRON_CITA_SALIDA.findall(ventana_txt)))
-            citas = [c for c in citas if c in existentes]
+            # REPARACION 1.c DE LA VUELTA 137, SEGUNDA: QUE EMPAREJE CADA CIFRA
+            # CON SU FICHERO (parada del 29 ago 2026, punto 4; acta 136).
+            # EL DEFECTO, MEDIDO (SALIDA_V137_1C_DIAGNOSTICO.txt): aqui habia un
+            # `sorted(set(...))` y mas abajo un `citas[0]`, o sea que de todas
+            # las citas de la ventana se tomaba LA ALFABETICAMENTE PRIMERA, no
+            # la que corresponde a esa cifra. Reproducido con ficheros reales:
+            # "92 grafias en grupo (`SALIDA_V135_4B_PELDANOS.txt`)" seguido de
+            # una frase que cita `SALIDA_V133_2E_MUTACION.txt` se cotejaba
+            # contra el del VECINO (V133 < V135 alfabeticamente) y caia ROJO
+            # contando 2.
+            # LA REPARACION: las citas se ordenan por PROXIMIDAD TEXTUAL a la
+            # cifra dentro de la ventana, no por alfabeto, y se toma la mas
+            # cercana. LA VENTANA NO SE TOCA: sigue siendo la FORWARD-ONLY de
+            # siempre (frases[i:i+3]), porque la asimetria de las dos ventanas
+            # esta adjudicada como doctrina en el docstring de este modulo y
+            # ensanchar el COTEJO es justamente lo que dejaria cuadrar una cifra
+            # contra el fichero del vecino. Lo que se corrige es CUAL de las
+            # citas de esa misma ventana se elige.
+            pos_cifra = m.start()
+            vistos = {}
+            for mc in PATRON_CITA_SALIDA.finditer(ventana_txt):
+                nombre = mc.group(0)
+                if nombre not in existentes:
+                    continue
+                distancia = abs(mc.start() - pos_cifra)
+                if nombre not in vistos or distancia < vistos[nombre]:
+                    vistos[nombre] = distancia
+            citas = [n for n, _d in sorted(vistos.items(), key=lambda kv: (kv[1], kv[0]))]
             if not citas:
                 fallos.append(
                     "linea %d: \"%d %s\" SIN fichero de salida en su ventana (ni exenta): %r" %
@@ -396,8 +517,13 @@ def verificar(ruta_reporte):
             ruta_cita = os.path.join(LOOP, fichero_cita)
             contenido_cita = leer(ruta_cita)
             familia = UNIDAD_A_FAMILIA[unidad]
-            contado = contar_por_cifra_etiquetada(contenido_cita, unidad)
-            if contado is None:
+            etiqueta_usada = None
+            modo_cifra = None
+            elegida = elegir_cifra_etiquetada(
+                cifras_etiquetadas(contenido_cita, unidad), frase, numero)
+            if elegida is not None:
+                contado, etiqueta_usada, modo_cifra = elegida
+            else:
                 contado = contar_por_familia(familia, contenido_cita)
             if contado is None:
                 fallos.append(
@@ -415,13 +541,22 @@ def verificar(ruta_reporte):
                     otra = ("fichero", contar_ficheros(contenido_cita))
                 msg = ("linea %d: \"%d %s\" <-> `%s`: contado %d" %
                        (i, numero, unidad, fichero_cita, contado))
+                if etiqueta_usada is not None:
+                    msg += " (linea CIFRA '%s', elegida POR %s)" % (etiqueta_usada, modo_cifra)
+                    todas = cifras_etiquetadas(contenido_cita, unidad)
+                    if len(todas) > 1:
+                        msg += " [candidatas de esa unidad en el fichero: %s]" % ", ".join(
+                            "'%s'=%d" % (e, v) for e, v in todas)
                 if otra and otra[1] == numero:
                     msg += (" (NO CUADRA como %s, pero SI cuadra como %s: %d; "
                             "la unidad escrita no corresponde a la cifra)" %
                             (unidad, otra[0], otra[1]))
                 fallos.append(msg)
             else:
-                cotejados.append((numero, unidad, fichero_cita, contado))
+                detalle = fichero_cita
+                if etiqueta_usada is not None:
+                    detalle += " (CIFRA '%s', POR %s)" % (etiqueta_usada, modo_cifra)
+                cotejados.append((numero, unidad, detalle, contado))
 
     return fallos, cotejados, exentas_sin_instrumento, total_cifras
 

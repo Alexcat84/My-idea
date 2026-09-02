@@ -1,0 +1,70 @@
+PRUEBAS POR MUTACION DE LAS DOS REPARACIONES 1.c (vuelta 137)
+
+=== MUTACION A, la cifra equivocada por uno (37 a 38)
+--- reporte de prueba ---
+# prueba
+
+La tabla de peldanos (`SALIDA_V135_4B_PELDANOS.txt`) deja 38 grafias sin agrupar.
+--- salida ---
+ROJO, 1 cifra(s) no cuadran:
+  linea 1: "38 grafias" <-> `SALIDA_V135_4B_PELDANOS.txt`: contado 37 (linea CIFRA 'grafias sin agrupar', elegida POR ETIQUETA) [candidatas de esa unidad en el fichero: 'grafias en grupo'=92, 'grafias sin agrupar'=37]
+COBERTURA: 0 cotejadas / 0 exentas / 1 cifras
+EXITCODE: 1
+MUTACION A: VERIFICADA
+
+=== MUTACION B, la cifra de la etiqueta VECINA del mismo fichero
+92 es una cifra REAL de ese fichero, pero de la etiqueta 'grafias en grupo', no de 'grafias sin agrupar'. Si el camino fuerte se degradara al debil, esta saldria VERDE.
+--- reporte de prueba ---
+# prueba
+
+La tabla de peldanos (`SALIDA_V135_4B_PELDANOS.txt`) deja 92 grafias sin agrupar.
+--- salida ---
+ROJO, 1 cifra(s) no cuadran:
+  linea 1: "92 grafias" <-> `SALIDA_V135_4B_PELDANOS.txt`: contado 37 (linea CIFRA 'grafias sin agrupar', elegida POR ETIQUETA) [candidatas de esa unidad en el fichero: 'grafias en grupo'=92, 'grafias sin agrupar'=37]
+COBERTURA: 0 cotejadas / 0 exentas / 1 cifras
+EXITCODE: 1
+MUTACION B: VERIFICADA
+
+=== MUTACION C, el FALSO VERDE que el defecto 2 permitia
+La cifra '2 grafias en grupo' es FALSA para su propio fichero (SALIDA_V135_4B_PELDANOS.txt dice 92),
+pero coincide con el recuento generico del fichero VECINO (SALIDA_V133_2E_MUTACION.txt).
+--- reporte de prueba ---
+# prueba
+
+La tabla de peldanos (`SALIDA_V135_4B_PELDANOS.txt`) deja 2 grafias en grupo.
+La mutacion de la vuelta 133 (`SALIDA_V133_2E_MUTACION.txt`) quedo verificada aparte.
+--- salida de la guarda VIEJA (git show ebdb7962) ---
+VERDE EXIT 0: 1 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
+  2 grafias == 2 contados en `SALIDA_V133_2E_MUTACION.txt`
+COBERTURA: 1 cotejadas / 0 exentas / 1 cifras
+EXITCODE viejo: 0
+--- salida de la guarda REPARADA ---
+ROJO, 1 cifra(s) no cuadran:
+  linea 1: "2 grafias" <-> `SALIDA_V135_4B_PELDANOS.txt`: contado 92 (linea CIFRA 'grafias en grupo', elegida POR ETIQUETA) [candidatas de esa unidad en el fichero: 'grafias en grupo'=92, 'grafias sin agrupar'=37]
+COBERTURA: 0 cotejadas / 0 exentas / 1 cifras
+EXITCODE nuevo: 1
+MUTACION C: VERIFICADA: la vieja daba VERDE sobre una cifra falsa y la reparada cae ROJO
+
+=== MUTACION D, las mutaciones VIEJAS contra la guarda reparada
+Se distingue LA GUARDA NO MORDIO (fallo de verdad) de ANCLA PERDIDA (la
+mutacion no llega a correr porque el texto que buscaba en REPORTE.md ya no
+esta: REPORTE.md se sobreescribe cada vuelta). Un EXIT 1 por ancla perdida
+NO es un fallo de la guarda, y contarlo como tal seria mentir en la otra
+direccion. Ver el hallazgo lateral en el reporte de la vuelta 137.
+  vuelta133_tarea2e_mutacion_cifras.py: EXIT 0, OK, la guarda mordio como se esperaba
+  vuelta135_2e_mutacion_1.py: EXIT 1, ANCLA PERDIDA, no llega a probar la guarda: ROJO PREVIO: '118 grafias (sin instrumento)' no aparece exactamente una vez en el reporte real.
+  vuelta135_2e_mutacion_2.py: EXIT 1, ANCLA PERDIDA, no llega a probar la guarda: ROJO PREVIO: '54 grupos (sin instrumento)' no aparece exactamente una vez en el reporte real.
+  vuelta135_2e_mutacion_3.py: EXIT 1, ANCLA PERDIDA, no llega a probar la guarda: ROJO PREVIO: '118 grafias (sin instrumento)' no aparece exactamente una vez en el reporte real.
+MUTACION D: VERIFICADA (ninguna mutacion vieja acusa a la guarda)
+HALLAZGO LATERAL, DECLARADO: 3 de las 4 mutaciones viejas no pueden correr hoy
+  (vuelta135_2e_mutacion_1.py, vuelta135_2e_mutacion_2.py, vuelta135_2e_mutacion_3.py).
+  Estan ancladas a un literal del REPORTE.md de la vuelta 134, que se
+  sobreescribio. El docstring de verificar_cifras_del_reporte.py las
+  sigue nombrando 'PRUEBA DE MUTACION (obligatoria)'. Medido: fallan
+  IGUAL contra la guarda VIEJA (comprobado en la vuelta 137 con git
+  stash), asi que NO es una regresion de esta reparacion. No las toco:
+  re-anclarlas es una operacion sobre instrumentos sellados que este
+  encargo no pide. Queda DISCUTIBLE en el reporte.
+
+RESUMEN: A OK / B OK / C OK / D OK
+EXITCODE: 0

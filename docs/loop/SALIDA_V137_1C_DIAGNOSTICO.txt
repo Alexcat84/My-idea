@@ -1,0 +1,28 @@
+DIAGNOSTICO 1.c (vuelta 137): los dos defectos de verificar_cifras_del_reporte.py, con ficheros REALES
+
+lineas CIFRA de `SALIDA_V135_4B_PELDANOS.txt`:
+  CIFRA peldano 6 mas Caps?. en cola y en prefijo: 54 grupos
+  CIFRA grupos con 2 o mas miembros: 17 grupos
+  CIFRA grafias en grupo: 92 grafias
+  CIFRA grafias sin agrupar: 37 grafias
+lineas CIFRA de `SALIDA_V133_2E_MUTACION.txt`:
+  (ninguna)
+
+=== DEFECTO 1, la unidad `grafia`: el fichero trae DOS lineas CIFRA de esa unidad y la guarda toma la PRIMERA.
+cifra escrita y CORRECTA segun su propio fichero: 37 grafias sin agrupar, que es literalmente la linea 'CIFRA grafias sin agrupar: 37 grafias' de SALIDA_V135_4B_PELDANOS.txt
+--- salida de verificar_cifras_del_reporte.py ---
+VERDE EXIT 0: 1 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
+  37 grafias == 37 contados en `SALIDA_V135_4B_PELDANOS.txt (CIFRA 'grafias sin agrupar', POR ETIQUETA)`
+COBERTURA: 1 cotejadas / 0 exentas / 1 cifras
+EXITCODE: 0
+
+=== DEFECTO 2, el emparejamiento: la cifra cita SU fichero y la frase siguiente cita otro alfabeticamente ANTERIOR.
+cifra escrita y CORRECTA segun su propio fichero: 92 grafias en grupo, que es literalmente la linea 'CIFRA grafias en grupo: 92 grafias' de SALIDA_V135_4B_PELDANOS.txt
+--- salida de verificar_cifras_del_reporte.py ---
+VERDE EXIT 0: 1 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
+  92 grafias == 92 contados en `SALIDA_V135_4B_PELDANOS.txt (CIFRA 'grafias en grupo', POR ETIQUETA)`
+COBERTURA: 1 cotejadas / 0 exentas / 1 cifras
+EXITCODE: 0
+
+RESUMEN: defecto 1 NO reproducido (EXIT 0) / defecto 2 NO reproducido (EXIT 0)
+EXITCODE: 1
