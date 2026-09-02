@@ -112,6 +112,51 @@ reescribir una salida de apertura, se reescribe y esta guarda lo canta, y
 el reporte lo explica. Es lo contrario de degradarse en silencio (banco
 9, "fallar ruidoso").
 
+--- EL CORREDOR DE LA PARADA (TAREA 0.d, vuelta 148) ---
+
+POR QUE NACE. Esta guarda medía el fin ("la apertura se sello ANTES de la
+primera operacion de la vuelta") con un PROXY: "el padre del commit de
+nacimiento es el commit del acta de la vuelta anterior". El proxy vale
+mientras el bucle encadena vuelta tras vuelta sin interrupcion, y se rompe
+la primera vez que el bucle SE PARA y el fundador contesta la parada en un
+commit propio, que es exactamente la forma de la vuelta 148: entre el acta
+de la 147 (84b64cd0) y el bloque de apertura de la 148 (5567cdc8) vive
+68db6230, "Decision del fundador", que escribe la decision y el encargo. La
+guarda vieja, corrida por mi en esta vuelta, dio ROJO con los diez ficheros
+dentro y el motivo literal "cuyo padre es 68db6230 (no el commit del acta
+84b64cd0)", y su salida esta commiteada en
+docs/loop/SALIDA_V148_0D_APERTURA_SELLADA_GUARDA_VIEJA.txt. Ninguna
+apertura se habia medido tarde: lo que fallaba era la vara. Y la caida es
+ESTRUCTURAL, no un accidente: toda vuelta que reanude tras una parada de
+decision del fundador nace con ese commit en medio.
+
+QUE COMPRUEBA AHORA, Y NO ES MAS LAXO SINO MAS PRECISO. Si el padre del
+commit de nacimiento NO es el commit del acta, la guarda ya no se rinde: mide
+EL CORREDOR, o sea todos los commits que van del acta (exclusive) al commit
+de nacimiento (exclusive), y exige DOS cosas:
+  - que el acta sea ANTEPASADO del commit de nacimiento (`git merge-base
+    --is-ancestor`); si el bloque de apertura cuelga de otra rama, ROJO;
+  - que TODO commit del corredor toque UNICAMENTE papeles de la parada:
+    `docs/loop/PROMPT_SIGUIENTE.md`, `docs/loop/PARA_ALEXIS.md` y cualquier
+    cosa bajo `docs/loop/paradas/`. Son los tres sitios donde se escribe una
+    parada y su respuesta, y NINGUNO de ellos puede mover una sola de las
+    cifras que la apertura mide (censo, Gate 0, aristas, motor, web, tsc,
+    desfase del calibrado). Un commit del corredor que toque cualquier otra
+    ruta ES una operacion, y entonces la apertura se midio tarde de verdad:
+    ROJO nombrando el commit y las rutas ajenas, una a una, sin resumir.
+
+EL CORREDOR ACEPTADO NO SE CALLA (banco 9, "fallar ruidoso"): cuando la
+guarda sale VERDE con corredor, lo IMPRIME entero, con el hash y el asunto de
+cada commit que dejo pasar. Un corredor invisible seria la misma degradacion
+silenciosa que esta guarda existe para impedir.
+
+CASO ROJO POR MUTACION, SOBRE VARIABLE COMPUTADA (EJECUTOR 1, "EL CASO ROJO
+SE PRUEBA POR MUTACION"): la decision vive en `intrusos_del_corredor`, que es
+PURA (recibe el corredor ya leido de git y no vuelve a tocar el disco), asi
+que se le puede dar el corredor REAL leido de git y una copia mutada del
+mismo. Ver scripts/loop/vuelta148_0d_mutacion_corredor.py y su salida
+docs/loop/SALIDA_V148_0D_MUTACION_CORREDOR.txt.
+
 CASO POSITIVO OBLIGATORIO (vuelta 108): `--vuelta 107` da ROJO nombrando
 `SALIDA_V107_TSC_APERTURA.txt` con sus dos sha256 (docs/loop/
 SALIDA_V108_TAREA4_3_CASO_VUELTA107_ROJO.txt, el caso real que lo produjo);
@@ -217,6 +262,64 @@ def commit_de_nacimiento(nombre, rama, fallos):
     return hallados[0]
 
 
+PAPELES_DE_LA_PARADA = (
+    "docs/loop/PROMPT_SIGUIENTE.md",
+    "docs/loop/PARA_ALEXIS.md",
+)
+CARPETA_DE_PARADAS = "docs/loop/paradas/"
+
+
+def es_papel_de_la_parada(ruta):
+    """Una ruta que solo puede llevar la parada o su respuesta. Ninguna de
+    ellas entra en el censo, en Gate 0, en las aristas, en las suites, en el
+    tsc ni en el desfase del calibrado, o sea que ninguna puede mover una
+    cifra de la apertura."""
+    return ruta in PAPELES_DE_LA_PARADA or ruta.startswith(CARPETA_DE_PARADAS)
+
+
+def intrusos_del_corredor(corredor):
+    """PURA A PROPOSITO (para que el caso rojo se pueda probar por mutacion
+    sin tocar git ni el disco): recibe el corredor ya leido,
+    [(hash, asunto, [rutas])], y devuelve [(hash, asunto, [rutas ajenas])]
+    con SOLO los commits que tocan algo que no es papel de parada. Lista
+    vacia significa corredor limpio."""
+    intrusos = []
+    for h, asunto, rutas in corredor:
+        ajenas = sorted(r for r in rutas if not es_papel_de_la_parada(r))
+        if ajenas:
+            intrusos.append((h, asunto, ajenas))
+    return intrusos
+
+
+def corredor_desde_git(acta, nacido_en, fallos):
+    """Los commits que van del acta (exclusive) al commit de nacimiento
+    (exclusive), cada uno con TODAS las rutas que toca. Devuelve None si el
+    acta no es antepasado del commit de nacimiento (fallo registrado)."""
+    try:
+        subprocess.run(["git", "merge-base", "--is-ancestor", acta, nacido_en],
+                       cwd=RAIZ, capture_output=True, check=True)
+    except Exception:
+        fallos.append("el commit del acta %s NO es antepasado de %s: el bloque de "
+                      "apertura no cuelga de la vuelta anterior" % (acta[:8], nacido_en[:8]))
+        return None
+    out = _git(["log", "--format=%H%s", "%s..%s^" % (acta, nacido_en)],
+               fallos, "corredor entre el acta y la apertura")
+    if out is None:
+        return None
+    corredor = []
+    for linea in out.splitlines():
+        if "" not in linea:
+            continue
+        h, asunto = linea.split("", 1)
+        rutas_out = _git(["show", "--name-only", "--format=", "-M", h],
+                         fallos, "rutas de %s" % h[:8])
+        if rutas_out is None:
+            return None
+        rutas = [r.strip() for r in rutas_out.splitlines() if r.strip()]
+        corredor.append((h, asunto, rutas))
+    return corredor
+
+
 def _normalizar_finales_de_linea(datos):
     """CRLF/LF no es cambio de CONTENIDO (TAREA 4, vuelta 108): este repo
     tiene core.autocrlf=true, asi que el arbol de trabajo en Windows trae
@@ -279,17 +382,19 @@ def verificar(vuelta):
     fallos = []
     rama = rama_actual(fallos)
     if rama is None:
-        return fallos, []
+        return fallos, [], {}
     acta = commit_acta(vuelta, rama, fallos)
     if acta is None:
-        return fallos, []
+        return fallos, [], {}
 
     nombres = ficheros_apertura(vuelta)
     if not nombres:
         fallos.append("no existe ningun docs/loop/SALIDA_V%d_*_APERTURA.txt en el arbol de trabajo" % vuelta)
-        return fallos, []
+        return fallos, [], {}
 
     detalle = []
+    corredores = {}   # cache: un corredor por commit de nacimiento, no uno por fichero
+    declarados = {}   # corredores ACEPTADOS, que se imprimen y nunca se callan
     for nombre in nombres:
         nacido_en = commit_de_nacimiento(nombre, rama, fallos)
         if nacido_en is None:
@@ -299,9 +404,29 @@ def verificar(vuelta):
         if padre is None:
             continue
         if padre != acta:
-            fallos.append("%s nacio en %s, cuyo padre es %s (no el commit del acta %s): "
-                          "no se sello antes de la 1.a operacion" %
-                          (nombre, nacido_en[:8], padre[:8], acta[:8]))
+            # EL CORREDOR DE LA PARADA (vuelta 148): el padre puede no ser el
+            # acta sin que la apertura se haya medido tarde, y el caso real es
+            # el commit con que el fundador contesta una parada. Se mide el
+            # corredor en vez de rendirse, y solo se acepta si NADA de lo que
+            # toca puede mover una cifra de la apertura.
+            if nacido_en not in corredores:
+                corredores[nacido_en] = corredor_desde_git(acta, nacido_en, fallos)
+            corredor = corredores[nacido_en]
+            if corredor is None:
+                fallos.append("%s nacio en %s, cuyo padre es %s (no el commit del acta %s) "
+                              "y el corredor no se pudo medir" %
+                              (nombre, nacido_en[:8], padre[:8], acta[:8]))
+            else:
+                intrusos = intrusos_del_corredor(corredor)
+                if intrusos:
+                    for h, asunto, ajenas in intrusos:
+                        fallos.append("%s nacio en %s, y entre el acta %s y ese commit vive %s "
+                                      "('%s') que toca %d ruta(s) que NO son papel de parada "
+                                      "(%s): la apertura se midio DESPUES de una operacion" %
+                                      (nombre, nacido_en[:8], acta[:8], h[:8], asunto[:60],
+                                       len(ajenas), ", ".join(ajenas)))
+                else:
+                    declarados[nacido_en] = corredor
 
         # TAREA 4 (vuelta 108): el sello fija CONTENIDO, no solo nacimiento.
         iguales, h_nac, h_hoy = contenido_igual_al_nacer(nombre, nacido_en, fallos)
@@ -310,7 +435,7 @@ def verificar(vuelta):
                           "%s, sha256 de hoy %s" % (nombre, nacido_en[:8], h_nac, h_hoy))
 
         detalle.append((nombre, nacido_en[:8], padre[:8] if padre else "?", padre == acta))
-    return fallos, detalle
+    return fallos, detalle, declarados
 
 
 def main():
@@ -318,7 +443,7 @@ def main():
     ap.add_argument("--vuelta", type=int, required=True)
     a = ap.parse_args()
 
-    fallos, detalle = verificar(a.vuelta)
+    fallos, detalle, declarados = verificar(a.vuelta)
     if fallos:
         print("ROJO, apertura de la vuelta %d NO sellada antes de la 1.a operacion "
               "(%d cosa(s) no cuadran):" % (a.vuelta, len(fallos)))
@@ -326,10 +451,23 @@ def main():
             print("   %s" % x)
         return 1
 
+    # La cabecera dice lo que de verdad se midio: "hijo directo del acta" seria
+    # FALSO en cuanto hay corredor de parada aceptado (vuelta 148), y una
+    # cabecera que miente es justo la especie que esta guarda persigue.
+    cola = ("hijo directo del acta" if not declarados
+            else "primer commit de la vuelta TRAS el corredor de la parada, declarado abajo")
     print("VERDE: los %d ficheros SALIDA_V%d_*_APERTURA.txt nacieron todos en el "
-          "primer commit de la vuelta (hijo directo del acta):" % (len(detalle), a.vuelta))
+          "primer commit de la vuelta (%s):" % (len(detalle), a.vuelta, cola))
     for nombre, nacido_en, padre, ok in detalle:
         print("   %s -- nacido en %s, padre %s" % (nombre, nacido_en, padre))
+    # EL CORREDOR ACEPTADO NO SE CALLA (vuelta 148): si el padre no era el acta
+    # y aun asi la guarda dejo pasar, se dice QUE dejo pasar y por que.
+    for nacido_en, corredor in sorted(declarados.items()):
+        print("   CORREDOR DE LA PARADA aceptado ante %s: %d commit(s) entre el acta y la "
+              "apertura, y ninguno toca nada fuera de los papeles de parada:"
+              % (nacido_en[:8], len(corredor)))
+        for h, asunto, rutas in corredor:
+            print("      %s '%s' -- %d ruta(s): %s" % (h[:8], asunto[:70], len(rutas), ", ".join(rutas)))
     return 0
 
 

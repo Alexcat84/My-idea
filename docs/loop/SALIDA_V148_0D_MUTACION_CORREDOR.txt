@@ -1,0 +1,16 @@
+CORREDOR REAL DE LA VUELTA 148, LEIDO DE GIT (no tecleado)
+  acta de la 147: 84b64cd0
+  apertura de la 148 nacio en: 5567cdc8
+  68db6230 'Decision del fundador: el candidato se embebe aparte en sesion con cre'
+      docs/loop/PROMPT_SIGUIENTE.md   (papel de parada: True)
+      docs/loop/paradas/2026-09-02-aduana-vector-y-a13-DECISION.md   (papel de parada: True)
+      docs/loop/paradas/2026-09-02-aduana-vector-y-a13.md   (papel de parada: True)
+
+CASO A (verde, corredor real): 0 intruso(s)
+CASO B (rojo por mutacion, +dataset/nodos/un_nodo_cualquiera.json): 1 intruso(s)
+      68db6230 nombra ['dataset/nodos/un_nodo_cualquiera.json']
+CASO C (rojo por mutacion, +docs/loop/paradas_falsas/2026-09-02-colada.md): 1 intruso(s)
+      68db6230 nombra ['docs/loop/paradas_falsas/2026-09-02-colada.md']
+CASO D (verde de control, vuelta 147): corredor de 0 commit(s), 0 intruso(s)
+
+VERDE: los cuatro casos se comportan. El corredor real pasa, las dos mutaciones CAEN nombrando la ruta intrusa, y el corredor vacio de la 147 sigue pasando.
