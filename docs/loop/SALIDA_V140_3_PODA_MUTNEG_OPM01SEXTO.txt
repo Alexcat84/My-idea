@@ -1,0 +1,24 @@
+==============================================================================
+PODA DEL SOLAPE DE OP-M-01-SEXTO . MODO MUTACION NEGATIVA (nunca escribe)
+==============================================================================
+(G1) gestion_de_portafolio_gates_go_kill existe y esta VIVO: True
+     el superviviente de la ficha, sistema_gates_go_kill, resuelve hoy a sistema_gates_go_kill (vivo=True) y tiene 17 pasos
+
+(G2) EL PASO QUE SE PODA, BUSCADO POR SU CONTENIDO y no por su numero:
+     candidato en la posicion 2: Establecer gates o puntos de decisión formales con criterios visibles de Go/Kill
+     el hallado esta en la posicion 2 y la ficha dice 'el paso 2': OK
+
+MUTACION NEGATIVA: se borran EN MEMORIA del superviviente los pasos que
+traen la 2.a mitad. Pasos del superviviente: 17 -> 16
+   veredicto de la G3 SIN mutar (computado): True
+
+(G3) LA PODA CALZA CONTRA EL NODO DE HOY (las dos mitades de lo podado
+     viven en el texto del superviviente):
+     'define los gates' -> hallada como 'define los gates' en el paso 1 de sistema_gates_go_kill
+     'criterios claros y visibles' -> NO HALLADA en ningun paso de sistema_gates_go_kill
+     veredicto G3 (computado): False
+   los DOS veredictos de la G3, sin mutar y mutado: True y False. DISTINTOS: True
+
+SE ABORTA SIN PODAR NADA, 1 fallo(s):
+   [ROJO] (G3) el superviviente NO trae en su texto de hoy lo que la poda quita: podar seria perder catalogo
+EXITCODE: 1

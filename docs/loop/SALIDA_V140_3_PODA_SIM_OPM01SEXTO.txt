@@ -1,0 +1,31 @@
+==============================================================================
+PODA DEL SOLAPE DE OP-M-01-SEXTO . MODO SIMULAR
+==============================================================================
+(G1) gestion_de_portafolio_gates_go_kill existe y esta VIVO: True
+     el superviviente de la ficha, sistema_gates_go_kill, resuelve hoy a sistema_gates_go_kill (vivo=True) y tiene 17 pasos
+
+(G2) EL PASO QUE SE PODA, BUSCADO POR SU CONTENIDO y no por su numero:
+     candidato en la posicion 2: Establecer gates o puntos de decisión formales con criterios visibles de Go/Kill
+     el hallado esta en la posicion 2 y la ficha dice 'el paso 2': OK
+
+(G3) LA PODA CALZA CONTRA EL NODO DE HOY (las dos mitades de lo podado
+     viven en el texto del superviviente):
+     'define los gates' -> hallada como 'define los gates' en el paso 1 de sistema_gates_go_kill
+     'criterios claros y visibles' -> hallada como 'criterios claros y visibles' en el paso 2 de sistema_gates_go_kill
+     veredicto G3 (computado): True
+
+EL PASO QUE SE PODA, entero:
+   Establecer gates o puntos de decisión formales con criterios visibles de Go/Kill
+PASOS: 5 -> 4
+
+(G4) LAS CUATRO PIEZAS PROPIAS DE `preservar`, buscadas en el texto QUE QUEDA:
+     EL EMBUDO                (marca 'embudo') -> paso(s) [1]
+     LOS SEIS CRITERIOS       (marca 'seis criterios') -> paso(s) [2]
+     MATAR EN FIRME           (marca 'matar') -> paso(s) [3]
+     EL BALANCE Y LA MEZCLA   (marca 'balance y mezcla') -> paso(s) [4]
+
+(G5) se poda EXACTAMENTE UN paso: OK (5 -> 4)
+(G6) ningun otro campo del nodo cambia: OK
+
+SIMULACION: cero escrituras. La poda esta lista para --ejecutar.
+EXITCODE: 0

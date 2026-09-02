@@ -1,0 +1,19 @@
+==============================================================================
+ESCRITURA DE ARISTAS DE OP-M-01-SEXTO . MODO MUTACION NEGATIVA (nunca escribe)
+==============================================================================
+tipo de la ficha        : ENLACE MAS PODA DEL SOLAPE
+ENLACE MUTUO (del tipo) : False
+aristas de la ficha     : 1 cadena(s), 1 par(es) dirigido(s)
+MUTACION NEGATIVA: el destino de la 1.a arista se fuerza a accion_correctiva_3 (DEPRECADO y no es alias de ningun vivo), elegido computandolo del grafo y no tecleado
+   comprobacion previa del propio arnes: resolver(accion_correctiva_3) = accion_correctiva_3, vivo tras resolver = False
+
+arista de la ficha: gestion_de_portafolio_gates_go_kill -> accion_correctiva_3
+  los dos ids son DIRECTOS: no hay alias que resolver (si estan VIVOS lo dice la guarda 1)
+  guarda 1, los dos extremos existen y estan VIVOS: ROJO
+
+------------------------------------------------------------------------------
+RESUMEN: 1 par(es) de la ficha | 0 a escribir | 0 YA PRESENTES (saltadas) | 1 fallo(s)
+
+SE ABORTA SIN ESCRIBIR NADA, 1 fallo(s):
+   [ROJO] gestion_de_portafolio_gates_go_kill -> accion_correctiva_3: extremo no vivo (origen vivo=True, destino vivo=False)
+EXITCODE: 1

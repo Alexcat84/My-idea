@@ -1,0 +1,24 @@
+==============================================================================
+ESCRITURA DE ARISTAS DE OP-M-01-SEXTO . MODO EJECUTAR
+==============================================================================
+tipo de la ficha        : ENLACE MAS PODA DEL SOLAPE
+ENLACE MUTUO (del tipo) : False
+aristas de la ficha     : 1 cadena(s), 1 par(es) dirigido(s)
+
+arista de la ficha: gestion_de_portafolio_gates_go_kill -> sistema_gates_go_kill
+  los dos ids son DIRECTOS: no hay alias que resolver (si estan VIVOS lo dice la guarda 1)
+  guarda 1, los dos extremos existen y estan VIVOS: OK
+  guarda 2, cero auto-aristas: OK
+  guarda 3, se escribe el ID VIVO resuelto (cero aristas por alias nuevas): OK
+  guarda 4, no estaba puesta todavia: OK, hay que escribirla
+  guarda 5, UNA SOLA DIRECCION (o MUTUO declarado en la ficha): OK
+  guarda 6, cero duplicadas NUEVAS tras resolver: OK (preexistentes: gestion_de_portafolio_gates_go_kill.nodos_siguientes 0, sistema_gates_go_kill.nodos_previos 1; tras escribir: 0 y 1)
+  gestion_de_portafolio_gates_go_kill.nodos_siguientes: 0 -> 1
+  sistema_gates_go_kill.nodos_previos   : 14 -> 15
+
+------------------------------------------------------------------------------
+RESUMEN: 1 par(es) de la ficha | 1 a escribir | 0 YA PRESENTES (saltadas) | 0 fallo(s)
+guarda 7, ningun otro campo cambia en ningun nodo tocado: OK
+
+ESCRITO. ficheros de nodo tocados: 2 (gestion_de_portafolio_gates_go_kill, sistema_gates_go_kill)
+EXITCODE: 0
