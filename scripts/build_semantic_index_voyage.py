@@ -33,7 +33,8 @@ BASE = Path(__file__).resolve().parent.parent
 GRAPH_PATH = BASE / "dataset" / "metadata" / "master_graph.json"
 OUT_PATH = BASE / "web" / "lib" / "assets" / "semantic_index.json"
 
-load_dotenv(BASE / ".env")
+RUTA_ENV = BASE / ".env"
+load_dotenv(RUTA_ENV)
 VOYAGE_API_KEY = os.environ.get("VOYAGE_API_KEY", "").strip()
 VOYAGE_MODEL = "voyage-4-lite"
 OUTPUT_DIMENSION = 512
@@ -62,9 +63,26 @@ def texto_nodo(n):
     return " ".join(p for p in partes if p).strip()
 
 
-def _embeber(textos, input_type):
+def embeber_textos(textos, input_type):
     """Una llamada a Voyage para un batch de textos (<=1000). Devuelve la
     lista de vectores en el MISMO orden que los textos de entrada.
+
+    NOMBRE PUBLICO DESDE LA VUELTA 148, y el cambio es de rotulo y nada mas:
+    el cuerpo no se toco. Nacio como `_embeber`, o sea declarada privada del
+    modulo, y desde la vuelta 148 `scripts/integrar_packs.py` la usa para
+    embeber un candidato de pack ANTES de insertarlo (decision del fundador
+    del 2 sep 2026, PREGUNTA 1 por el camino 1). Importar un nombre privado
+    desde otro modulo es acordar una costura sin declararla: el guion bajo
+    dice "puedo cambiar sin avisar" y el que la importa no se entera. Se
+    renombra en vez de duplicar la llamada HTTP, que es lo unico que no se
+    puede hacer: dos versiones de la misma llamada serian dos varas.
+    `_embeber` sobrevive como alias mas abajo para no romper a nadie.
+
+    NO LEE EL GRAFO. Toma una lista de textos sueltos, y por eso sirve para un
+    candidato que todavia no esta en `master_graph.json`: la dependencia
+    circular que la vuelta 147 midio (el vector se fabrica leyendo el grafo, y
+    el grafo solo conoce al candidato tras la copia) vive en `main()`, no
+    aqui.
     Reintenta con backoff exponencial ante 429 (rate limit) -- encontrado
     en vivo corriendo esto la primera vez: 10 llamadas seguidas sin pausa
     disparaban 429 en una cuenta nueva."""
@@ -95,6 +113,37 @@ def _embeber(textos, input_type):
     raise RuntimeError("no se pudo completar el embebido tras varios reintentos")
 
 
+# Alias de compatibilidad: el nombre viejo sigue apuntando a la MISMA funcion,
+# no a una copia. Cualquiera que aun escriba `_embeber` obtiene lo mismo.
+_embeber = embeber_textos
+
+
+def credencial_ausente(clave=None, ruta_env=None):
+    """PURA A PROPOSITO, Y NO SALE A LA RED (vuelta 148). Devuelve el MOTIVO
+    escrito de que falte la credencial, o None si esta. No lanza y no imprime:
+    quien llama decide como fallar, y asi el motivo se puede probar sin gastar
+    un token ni tocar el disco.
+
+    Recibe la clave por parametro (con el global como defecto) para que la
+    prueba de mutacion pueda darle una clave computada y una copia mutada de
+    esa misma clave, en vez de compararse contra un literal (EJECUTOR 1, "EL
+    CASO ROJO SE PRUEBA POR MUTACION").
+
+    NOMBRA LO QUE FALTA: la variable Y el fichero donde vive. Un "falta la
+    configuracion" no le dice a nadie que escribir ni donde (banco 9, fallar
+    ruidoso)."""
+    clave = VOYAGE_API_KEY if clave is None else clave
+    ruta_env = RUTA_ENV if ruta_env is None else ruta_env
+    if (clave or "").strip():
+        return None
+    return ("falta la credencial VOYAGE_API_KEY. Es una variable de entorno que se "
+            "lee del fichero '%s' (la raiz del repo). Ese fichero esta FUERA del repo "
+            "a proposito, asi que esta herramienta solo puede correr en una sesion con "
+            "humano presente que lo tenga puesto. Sin ella no se puede embeber el "
+            "candidato, y sin vector la aduana semantica A2.6 bloquea la insercion: "
+            "no hay forma de seguir a medias." % ruta_env)
+
+
 def _coseno(a, b):
     dot = sum(x * y for x, y in zip(a, b))
     norma_a = sum(x * x for x in a) ** 0.5
@@ -103,8 +152,9 @@ def _coseno(a, b):
 
 
 def main():
-    if not VOYAGE_API_KEY:
-        print("ERROR: falta VOYAGE_API_KEY en el .env de la raiz.")
+    motivo = credencial_ausente()
+    if motivo:
+        print("ERROR: %s" % motivo)
         raise SystemExit(1)
 
     print(f"Cargando grafo desde {GRAPH_PATH}...")
@@ -123,7 +173,7 @@ def main():
     total_tokens = 0
     for i in range(0, len(textos), BATCH_SIZE):
         batch = textos[i : i + BATCH_SIZE]
-        vectores, usage = _embeber(batch, input_type="document")
+        vectores, usage = embeber_textos(batch, input_type="document")
         embeddings.extend(vectores)
         total_tokens += usage.get("total_tokens", 0)
         print(f"  batch {i}-{i + len(batch)}: {len(vectores)} vectores (tokens acumulados: {total_tokens})")
@@ -138,9 +188,9 @@ def main():
     # Recalibracion (obligatoria por el prompt de Fase 3.0): re-verificar
     # los 2 casos de referencia de la Fase 2.9 contra el espacio nuevo.
     print("\n--- Recalibracion de MIN_SCORE_SALTO contra los embeddings de Voyage ---")
-    vectores_pos, _ = _embeber([QUERY_POSITIVA], input_type="query")
+    vectores_pos, _ = embeber_textos([QUERY_POSITIVA], input_type="query")
     vec_pos = vectores_pos[0]
-    vectores_neg, _ = _embeber([QUERY_NEGATIVA], input_type="query")
+    vectores_neg, _ = embeber_textos([QUERY_NEGATIVA], input_type="query")
     vec_neg = vectores_neg[0]
     idx_pos = ids.index(NODO_ESPERADO_POSITIVO)
     idx_neg = ids.index(NODO_ESPERADO_EXCLUIDO)

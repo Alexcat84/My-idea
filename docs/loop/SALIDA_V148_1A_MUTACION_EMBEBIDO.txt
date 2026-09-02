@@ -1,0 +1,44 @@
+HUELLA DE dataset/ ANTES: 063e9e39db96b418fdd869b8668df581c6952cd4b148c695e661e6f8d216c464
+SUJETO: pack 'quality', 896 nodo(s) reales leidos de packs/quality/nodos/
+CLAVE REAL EN ESTA SESION: AUSENTE (len=0)
+
+CASO 1 (sin credencial): salio=True, llamadas a Voyage=0
+   | === a-previo. Embebido del candidato APARTE (antes de la copia) ===
+   | 
+   | ERROR: EMBEBIDO DEL CANDIDATO (paso a-previo): falta la credencial VOYAGE_API_KEY. Es una variable de entorno que se lee del fichero 'C:\Users\AlexDesk\Documents\I have an idea\.env' (la raiz del repo). Ese fichero esta FUERA del repo a proposito, asi que esta herramienta solo puede correr en una sesion con humano presente que lo tenga puesto. Sin ella no se puede embeber el candidato, y sin vector la aduana semantica A2.6 bloquea la insercion: no hay forma de seguir a medias.
+   |   integrar_packs.py --ejecutar es una HERRAMIENTA DE SESION CON CREDENCIAL: corre solo en sesiones post campaña, con humano presente y el .env puesto, y JAMAS dentro del bucle autonomo.
+
+CASO 2 (mutacion de la MISMA variable computada, clave con valor):
+   credencial_ausente('') -> falta la credencial VOYAGE_API_KEY. Es una varia
+   credencial_ausente(mutada) -> None
+
+=== a-previo. Embebido del candidato APARTE (antes de la copia) ===
+  896 candidato(s) a embeber con voyage-4-lite (dim=512), en lotes de 500.
+  896 vector(es) obtenidos (~0 tokens). NO se escribe el indice aqui: el paso (d) lo reconstruye entero.
+   llamadas a Voyage=2, vectores devueltos=896
+
+CASO 3 (la circularidad):
+   SIN el paso a-previo: permitido=False, bloqueos=1, de ellos por falta de vector=1
+   CON el paso a-previo: permitido=True, bloqueos=0, de ellos por falta de vector=0, vecinos sobre el umbral=0
+
+CASO 3b (la puerta sigue siendo puerta), clon de 'ab_testing_optimizacion':
+   con vector inyectado: permitido=False, vecinos sobre el umbral=5, bloqueos=5
+   la puerta BLOQUEA por veredicto ausente. Primer motivo:
+      clon_sintetico_v148_de_ab_testing_optimizacion supera el umbral de la cola contra ab_testing_optimizacion (semantica 1.0000 >= 0.78; titulo 100.0 >= 80) y NO hay veredicto continua
+   con los 5 veredicto(s) escritos: permitido=True, bloqueos=0
+
+CASO 4a (dimension ajena): salio=True
+CASO 4b (id que ya estaba, 'ab_testing_optimizacion'): salio=True
+
+HUELLA DE dataset/ DESPUES: 063e9e39db96b418fdd869b8668df581c6952cd4b148c695e661e6f8d216c464
+dataset/ IDENTICO antes y despues: el arnes no escribio un byte.
+
+NO PROBADO AQUI, Y SE DECLARA: que la llamada REAL a Voyage devuelve un vector
+util para el candidato. Necesita VOYAGE_API_KEY del .env de la raiz, que esta
+fuera del repo mientras el bucle corre. Esa mitad se verifica en la sesion con
+humano presente que corra --ejecutar; aqui no se da por buena.
+
+VERDE: los seis casos se comportan. Sin clave falla nombrando la variable y el
+fichero SIN llamar a la red; con la MISMA variable computada puesta, pide los
+vectores; el vector inyectado quita el bloqueo por falta de vector sin abrir la
+puerta; dimension ajena e id repetido caen; y dataset/ queda identico.
