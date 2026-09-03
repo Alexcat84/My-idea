@@ -1,0 +1,36 @@
+==============================================================================
+VUELTA 162, TAREA 1.a: LA ENTRADA DE LA VUELTA 161 PASA DE R.29 A R.30
+==============================================================================
+
+A) LA SERIE, RECOMPUTADA DE SUS DOS SEDES ANTES DE ESCRIBIR NADA
+   CIFRA entradas: 22
+   CIFRA colisiones: 1
+   R.29 LEGITIMA, asignada desde la vuelta 150: docs/plan/CORRECCIONES_A_APLICAR.md:2127
+      ## R.29. Registro de correcciones y adjudicaciones declaradas de la vuelta 149 (acta del auditor, vuelta 149; 
+   R.29 ESCRITA POR LA VUELTA 161, la que se renumera: docs/PENDIENTES.md:10465
+      ## R.29. Registro de las caidas de clase de las dos tandas y de la parada de la
+   SIGUIENTE LIBRE, computado y NO tecleado: R.30
+
+B) LA PRUEBA QUE YA ESTABA EN EL MISMO FICHERO, LOCALIZADA HOY POR SU TEXTO
+   docs/PENDIENTES.md:10389
+      **REMISION (vuelta 150, TAREA 1.a): `R.29`, el registro del acta de la vuelta
+   distancia entre la remision y la entrada mal numerada: 76 lineas
+
+C) LA ESCRITURA
+   git diff --numstat: 25	2	docs/PENDIENTES.md
+   CIFRA lineas anadidas: 25
+   CIFRA lineas borradas: 2
+   Las 2 borradas son las 2 del titulo viejo, y vuelven TACHADAS Y LEGIBLES
+   dentro del bloque nuevo. Se comprueba:
+      titulo viejo presente y tachado: SI
+
+D) LA SERIE, RECOMPUTADA DESPUES
+   CIFRA entradas: 22
+   CIFRA colisiones: 0
+   CIFRA huecos: 0
+   SIGUIENTE LIBRE: R.31
+
+VERDE: la entrada de la vuelta 161 se llama R.30, la R.29 legitima se queda
+donde estaba, la serie no tiene colisiones y el titulo viejo sigue legible.
+CIFRA renumeradas: 1
+EXITCODE: 0

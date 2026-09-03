@@ -4,13 +4,31 @@
 DEJA ESCRITOS EN EL REPO LOS REGISTROS QUE EL ENCARGO PIDE: LAS CAIDAS DE CLASE
 DE LAS DOS TANDAS CON SUS PUESTOS, Y LA PARADA CON SU RESOLUCION POR CITA.
 
-LA SEDE, ELEGIDA Y DECLARADA EN VEZ DE SUPUESTA. Va a `docs/PENDIENTES.md` como
-entrada `R.29`, que es la forma que la casa ya usa desde `R.9`: "Registro de
-correcciones y adjudicaciones declaradas de la vuelta N", con la ultima escrita
-siendo `R.28` (vuelta 146, escrita en la 147, TAREA 1.a). Es el unico sitio del
-repo donde las caidas y las adjudicaciones de una vuelta se registran como
-REGISTRO y no como prosa de acta. VA MARCADO COMO DISCUTIBLE en el reporte: el
-encargo dice "LOS REGISTROS" sin nombrar fichero.
+LA SEDE, ELEGIDA Y DECLARADA EN VEZ DE SUPUESTA. Va a `docs/PENDIENTES.md`, que
+es la forma que la casa ya usa desde `R.9`: "Registro de correcciones y
+adjudicaciones declaradas de la vuelta N". Es el unico sitio del repo donde las
+caidas y las adjudicaciones de una vuelta se registran como REGISTRO y no como
+prosa de acta. VA MARCADO COMO DISCUTIBLE en el reporte: el encargo dice "LOS
+REGISTROS" sin nombrar fichero.
+
+--- CORRECCION DECLARADA (vuelta 162, TAREA 1.a; acta 161, seccion 5.1 y
+adjudicacion 6.8). LO VIEJO NO SE BORRA Y QUEDA TACHADO Y LEGIBLE ---
+
+    ~~"Va a `docs/PENDIENTES.md` como entrada `R.29` ... con la ultima escrita
+    siendo `R.28` (vuelta 146, escrita en la 147, TAREA 1.a)."~~
+
+LA CAIDA: `R.29` YA ESTABA ASIGNADA desde la vuelta 150 y vive en
+`docs/plan/CORRECCIONES_A_APLICAR.md:2127`. La prueba estaba en el mismo fichero
+que este script abrio: `docs/PENDIENTES.md:10389` dice literal que `R.29` NO esta
+en esa pagina y que su fuente unica es la otra. LAS DOS CAUSAS SON DE ESTE
+FICHERO: el ultimo numero venia TECLEADO aqui arriba, y la idempotencia de abajo
+miraba UNA sola sede. LA SERIE `R.N` ES GLOBAL A LOS DOS FICHEROS.
+
+EL REMEDIO, Y ES EL QUE HACE QUE NO PUEDA REPETIRSE: EL NUMERO NO SE TECLEA
+NUNCA MAS. Lo computa `scripts/loop/serie_de_registros.py`, que lee LAS DOS
+sedes, imprime la serie entera con su sede y devuelve `siguiente_libre()`. La
+entrada que este script escribio se renumero a `R.30` en la vuelta 162 con
+`scripts/loop/vuelta162_tarea1a_renumerar_r29.py`, sin borrar una linea.
 
 NINGUNA CELDA SE TECLEA. Las cinco caidas se leen del registro de citas
 (`docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl`), su numero de fila se cuenta del
@@ -34,6 +52,10 @@ import io
 import json
 import os
 import subprocess
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import serie_de_registros as SERIE   # noqa: E402
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PENDIENTES = os.path.join(RAIZ, "docs", "PENDIENTES.md")
@@ -42,7 +64,14 @@ ARCHIVO = os.path.join(RAIZ, "docs", "INTRA_DOMINIO_VEREDICTOS.jsonl")
 AUDITOR = os.path.join(RAIZ, "docs", "loop", "AUDITOR.md")
 DECISION = os.path.join(RAIZ, "docs", "loop", "paradas",
                         "2026-09-03-credito-vara-movil-DECISION.md")
-MARCA = "## R.29. Registro de las caidas de clase de las dos tandas"
+# CORRECCION DECLARADA (vuelta 162, TAREA 1.a). LA LINEA VIEJA, TACHADA Y
+# LEGIBLE, porque con ella se escribio la entrada de la vuelta 161:
+#     ~~MARCA = "## R.29. Registro de las caidas de clase de las dos tandas"~~
+# EL DEFECTO: el numero estaba DENTRO de la marca, asi que la idempotencia
+# dependia de acertar el numero, y ademas solo se buscaba en docs/PENDIENTES.md.
+# LO NUEVO: la marca es el TITULO SIN NUMERO (lo unico estable de la entrada) y
+# se busca en LAS DOS SEDES de la serie.
+TITULO_SIN_NUMERO = "Registro de las caidas de clase de las dos tandas"
 
 # (numero, tanda, lugar en la racha, que paso). El QUE PASO no es cifra: es la
 # historia que el propio campo `cita` de la fila declara, y se coteja contra el.
@@ -71,10 +100,27 @@ def main():
     print("")
 
     pend = io.open(PENDIENTES, encoding="utf-8").read()
-    if MARCA in pend:
-        print("YA ESTABA: R.29 vive en docs/PENDIENTES.md. No se toca.")
+    # CORRECCION DECLARADA (vuelta 162, TAREA 1.a). LAS LINEAS VIEJAS, TACHADAS Y
+    # LEGIBLES, porque el veredicto de la vuelta 161 se dio con ellas:
+    #     ~~if MARCA in pend:~~
+    #     ~~    print("YA ESTABA: R.29 vive en docs/PENDIENTES.md. No se toca.")~~
+    # LA SERIE SE RECOMPUTA DE LAS DOS SEDES ANTES DE MIRAR NADA, y la entrada se
+    # busca POR SU TITULO, no por su numero.
+    serie = SERIE.entradas()
+    print("A0) LA SERIE R.N, RECOMPUTADA DE SUS DOS SEDES ANTES DE ESCRIBIR")
+    for numero, rel, linea, titulo in serie:
+        print("   R.%-3d %s:%-6d %s" % (numero, rel, linea, titulo[:88]))
+    print("   CIFRA entradas: %d" % len(serie))
+    print("   CIFRA colisiones: %d" % len(SERIE.colisiones(serie)))
+    print("   SIGUIENTE LIBRE, computado y no tecleado: R.%d" % SERIE.siguiente_libre(serie))
+    print("")
+    ya = [(n, rel, ln) for n, rel, ln, t in serie if TITULO_SIN_NUMERO in t]
+    if ya:
+        n, rel, ln = ya[0]
+        print("YA ESTABA: la entrada vive como R.%d en %s:%d. No se toca." % (n, rel, ln))
         print("CIFRA entradas escritas: 0")
         return 0
+    numero_nuevo = SERIE.siguiente_libre(serie)
 
     filas = [json.loads(l) for l in io.open(REGISTRO, encoding="utf-8") if l.strip()]
     print("A) EL REGISTRO, CONTADO DEL FICHERO")

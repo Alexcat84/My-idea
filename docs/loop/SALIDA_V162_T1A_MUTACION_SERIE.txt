@@ -1,0 +1,46 @@
+==============================================================================
+CASO POSITIVO POR MUTACION: LA SERIE R.N SE LEE DE LOS DOS FICHEROS
+==============================================================================
+
+A) EL SUJETO: COPIAS TEMPORALES DE LAS DOS SEDES
+   PENDIENTES.md (646625 bytes)
+   CORRECCIONES_A_APLICAR.md (147103 bytes)
+
+B) SIN MUTAR: la serie de las copias tiene que dar lo mismo que el repo
+   CIFRA entradas: 22
+   CIFRA colisiones: 1
+   SIGUIENTE LIBRE: R.30
+
+C) LA MUTACION: se anade una R.31 DE MENTIRA al OTRO fichero, el que la
+   idempotencia caida de la vuelta 161 no miraba
+   fichero mutado: CORRECCIONES_A_APLICAR.md
+   CIFRA entradas tras la mutacion: 23
+   la R.31 de mentira, VISTA por el instrumento: [(31, '../../AppData/Local/Temp/v162_serie_ite16zep/CORRECCIONES_A_APLICAR.md', 2605)]
+   SIGUIENTE LIBRE tras la mutacion: R.32
+
+D) LA MUTACION SOLO EN docs/PENDIENTES.md, para probar que la ceguera
+   habria sido de UN fichero y no de los dos
+   SIGUIENTE LIBRE mirando SOLO docs/PENDIENTES.md: R.30
+   (esa es exactamente la cifra que la vuelta 161 publico, y por eso cayo)
+
+E) PASADA 1, LOS CASOS TAL CUAL: todos tienen que PASAR
+   sin_mutar_la_serie_da_30                   esperado 30     obtenido 30     PASA
+   sin_mutar_hay_una_colision                 esperado 1      obtenido 1      PASA
+   la_R31_de_mentira_SE_VE                    esperado 1      obtenido 1      PASA
+   y_mueve_el_siguiente_libre_a_32            esperado 32     obtenido 32     PASA
+   mirando_solo_PENDIENTES_la_serie_miente    esperado 30     obtenido 30     PASA
+
+F) PASADA 2, LA MUTACION DEL VALOR ESPERADO: cada caso TIENE que CAER
+   sin_mutar_la_serie_da_30                   esperado MUTADO 31     obtenido 30     CAE (bien)
+   sin_mutar_hay_una_colision                 esperado MUTADO 2      obtenido 1      CAE (bien)
+   la_R31_de_mentira_SE_VE                    esperado MUTADO 2      obtenido 1      CAE (bien)
+   y_mueve_el_siguiente_libre_a_32            esperado MUTADO 33     obtenido 32     CAE (bien)
+   mirando_solo_PENDIENTES_la_serie_miente    esperado MUTADO 31     obtenido 30     CAE (bien)
+
+G) EL ARBOL DE TRABAJO NO SE TOCO
+   antes:   [('docs/PENDIENTES.md', 646625), ('docs/plan/CORRECCIONES_A_APLICAR.md', 147103)]
+   despues: [('docs/PENDIENTES.md', 646625), ('docs/plan/CORRECCIONES_A_APLICAR.md', 147103)]
+   IDENTICO: SI
+
+VERDE: 5 casos, los 5 pasan y los 5 caen al mutar el valor esperado. LA R.31 DE MENTIRA EN EL OTRO FICHERO SE VE, y mueve el siguiente libre de R.30 a R.32. Mirando solo docs/PENDIENTES.md el instrumento habria seguido diciendo R.30, que es la ceguera exacta de la vuelta 161.
+EXITCODE: 0

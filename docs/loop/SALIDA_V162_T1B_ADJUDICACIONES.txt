@@ -1,0 +1,70 @@
+==============================================================================
+VUELTA 162, TAREA 1.b: LAS OCHO ADJUDICACIONES DEL ACTA 161, REGISTRADAS
+==============================================================================
+
+A) LA SERIE, RECOMPUTADA DE SUS DOS SEDES ANTES DE ESCRIBIR
+   R.9   docs/PENDIENTES.md:8041   ## R.9. Registro de correcciones declaradas de la vuelta 126 (adjudicadas
+   R.10  docs/PENDIENTES.md:8092   ## R.10. Registro de correcciones declaradas de la vuelta 127 (adjudicadas
+   R.11  docs/PENDIENTES.md:8136   ## R.11. Registro de correcciones declaradas de la vuelta 128 (adjudicadas
+   R.12  docs/PENDIENTES.md:8239   ## R.12. Registro de correcciones declaradas de la vuelta 130 (adjudicadas
+   R.13  docs/PENDIENTES.md:8291   ## R.13. Registro de correcciones declaradas de la vuelta 131 (adjudicadas
+   R.14  docs/PENDIENTES.md:8409   ## R.14. Registro de correcciones declaradas de la vuelta 132 (adjudicadas
+   R.15  docs/PENDIENTES.md:8486   ## R.15. Registro de correcciones declaradas de la vuelta 133 (adjudicadas
+   R.16  docs/PENDIENTES.md:8560   ## R.16. Registro de correcciones y adjudicaciones declaradas de la vuelta
+   R.17  docs/PENDIENTES.md:8621   ## R.17. Registro de correcciones y adjudicaciones declaradas de la vuelta
+   R.18  docs/PENDIENTES.md:8694   ## R.18. Registro de correcciones y adjudicaciones declaradas de la vuelta
+   R.19  docs/PENDIENTES.md:8767   ## R.19. Registro de correcciones y adjudicaciones declaradas de la vuelta
+   R.20  docs/PENDIENTES.md:8864   ## R.20. Registro de correcciones y adjudicaciones declaradas de la vuelta
+   R.21  docs/PENDIENTES.md:8996   ## R.21. Registro de correcciones y adjudicaciones declaradas de la vuelta
+   R.22  docs/PENDIENTES.md:9166   ## R.22. Registro de correcciones y adjudicaciones declaradas de la vuelta
+   R.23  docs/PENDIENTES.md:9344   ## R.23. Registro de correcciones y adjudicaciones declaradas de la vuelta
+   R.24  docs/PENDIENTES.md:9565   ## R.24. Registro de correcciones y adjudicaciones declaradas de la vuelta
+   R.25  docs/PENDIENTES.md:9753   ## R.25. Registro de correcciones y adjudicaciones declaradas de la vuelta
+   R.26  docs/PENDIENTES.md:9906   ## R.26. Registro de correcciones y adjudicaciones declaradas de la vuelta
+   R.27  docs/PENDIENTES.md:10055  ## R.27. Registro de correcciones y adjudicaciones declaradas de la vuelta
+   R.28  docs/PENDIENTES.md:10205  ## R.28. Registro de correcciones y adjudicaciones declaradas de la vuelta
+   R.29  docs/plan/CORRECCIONES_A_APLICAR.md:2127   ## R.29. Registro de correcciones y adjudicaciones declaradas de la vuelta 149 (acta del
+   R.30  docs/PENDIENTES.md:10465  ## R.30. Registro de las caidas de clase de las dos tandas y de la parada de la
+   CIFRA entradas: 22
+   CIFRA colisiones: 0
+   SIGUIENTE LIBRE, computado y no tecleado: R.31
+
+B) LA SEDE, ELEGIDA CONTANDO LA SERIE Y NO SUPUESTA
+   CIFRA entradas en docs/PENDIENTES.md: 21
+   CIFRA entradas en docs/plan/CORRECCIONES_A_APLICAR.md: 1
+   SEDE ELEGIDA: docs/PENDIENTES.md (la que mas entradas de la serie tiene)
+
+C) LAS OCHO ADJUDICACIONES, LEIDAS HOY DE SU LINEA EN EL ACTA 161
+   acta 161: docs/loop/ACTA_AUDITOR.md, lineas 53247 a 53613
+   6.1  docs/loop/ACTA_AUDITOR.md:53475
+      6.1 `LD-OPC05-049` Y `LD-OPC05-098` SE QUEDAN EN `C`, Y NO ERAN PARADA.
+   6.2  docs/loop/ACTA_AUDITOR.md:53480
+      6.2 EL DISCUTIBLE DE `LD-OPC05-068` LO RESUELVE `P.11` EN CONTRA DE QUIEN LO MARCO, Y SE SOSTIENE `C`.
+   6.3  docs/loop/ACTA_AUDITOR.md:53489
+      6.3 `LD-OPC05-005` Y `LD-OPC05-084` SE SOSTIENEN EN `C`, Y DIGO CUAL ES LA MAS FINA.
+   6.4  docs/loop/ACTA_AUDITOR.md:53497
+      6.4 EL ROJO DE `OP-D-02` ES DE LA VARA Y NO DE LA OPERACION, Y LO DICE LA FICHA CON SUS PALABRAS.
+   6.5  docs/loop/ACTA_AUDITOR.md:53512
+      6.5 LA PUERTA DEL CORREDOR SE ENSANCHA POR EXTENSION CITABLE, Y LA ADJUDICO YO PORQUE LA PUERTA ES MIA.
+   6.6  docs/loop/ACTA_AUDITOR.md:53530
+      6.6 LA GUARDA DE CIFRAS NO PUEDE PERDER COBERTURA EN SILENCIO.
+   6.7  docs/loop/ACTA_AUDITOR.md:53539
+      6.7 LA `P.5.2` OBLIGA TAMBIEN AL AUDITOR, Y SE ADOPTA, PERO LA MANO ES DEL EJECUTOR.
+   6.8  docs/loop/ACTA_AUDITOR.md:53548
+      6.8 LA CAIDA DE LA `R.29` SE REGISTRA CON SU NOMBRE Y NO ACUMULA, Y DIGO POR QUE PARA NO AFLOJAR LA REGLA POR CONVENIENCIA.
+   CIFRA adjudicaciones leidas: 8
+
+D) LA ESCRITURA
+   R.31 anadida al final de docs/PENDIENTES.md, por adicion pura
+   git diff --numstat: 75	2	docs/PENDIENTES.md
+
+E) LA SERIE, RECOMPUTADA DESPUES
+   CIFRA entradas: 23
+   CIFRA colisiones: 0
+   CIFRA huecos: 0
+   SIGUIENTE LIBRE: R.32
+
+VERDE: las ocho adjudicaciones quedan registradas como R.31 en docs/PENDIENTES.md.
+CIFRA entradas escritas: 1
+CIFRA adjudicaciones registradas: 8
+EXITCODE: 0

@@ -10462,8 +10462,31 @@ lo creo ninguna operacion de la campana.
 
 ---
 
-## R.29. Registro de las caidas de clase de las dos tandas y de la parada de la
-vuelta 160, con su resolucion (escrito en la vuelta 161, TAREA 1.0)
+## R.30. Registro de las caidas de clase de las dos tandas y de la parada de la
+vuelta 160, con su resolucion (escrito en la vuelta 161, TAREA 1.0; RENUMERADA de
+`R.29` a `R.30` en la vuelta 162, TAREA 1.a)
+
+**CORRECCION DECLARADA, Y NO SE BORRA UNA SOLA LINEA** (vuelta 162, TAREA 1.a;
+acta del auditor de la vuelta 161, seccion 5.1 y adjudicacion 6.8).
+
+**EL MOTIVO, MEDIDO HOY Y NO ALEGADO.** La `R.29` **ya estaba asignada** desde la
+vuelta 150 y vive en `docs/plan/CORRECCIONES_A_APLICAR.md:2127`
+(*"R.29. Registro de correcciones y adjudicaciones declaradas de la vuelta 149 (acta del auditor, vuelta 149; escrito en la vuelta 150, TAREA 1.a)"*). La entrada de la vuelta 161 se numero `R.29` porque su instrumento
+llevaba el ultimo numero **TECLEADO** (*"con la ultima escrita siendo `R.28`"*) y
+su idempotencia miraba **un solo fichero**. **La serie `R.N` es GLOBAL a los dos**,
+y lo prueba la propia remision de la vuelta 150, que estaba en esta misma pagina,
+en `docs/PENDIENTES.md:10389`, a **76 lineas** de la entrada mal numerada: *"**REMISION (vuelta 150, TAREA 1.a): `R.29`, el registro del acta de la vuelta"*.
+**Corte de esta medicion: 3 sep 2026**, instrumento
+`scripts/loop/serie_de_registros.py`, salida
+`docs/loop/SALIDA_V162_T1A_SERIE_ANTES.txt`.
+
+**EL TITULO VIEJO, TACHADO Y LEGIBLE:**
+
+~~## R.29. Registro de las caidas de clase de las dos tandas y de la parada de la
+vuelta 160, con su resolucion (escrito en la vuelta 161, TAREA 1.0)~~
+
+**LO QUE NO CAMBIA:** el cuerpo entero de la entrada, sus cifras y su corte siguen
+tal cual se escribieron en la vuelta 161. Lo unico que se corrige es el numero.
 
 Por adicion, como `R.21` a `R.28`. **Corte de todas las cifras de esta entrada:
 3 sep 2026**, y ninguna esta tecleada: todas salen de
@@ -10525,3 +10548,53 @@ de **PROCEDIMENTAR**. Esa especie es la que la decision del fundador congela en
 estaba (acta 149, seccion 3.10): no cierra sin una sesion con credencial y con el
 fundador delante, porque el `.env` esta fuera del repo mientras el bucle corre.
 **Eso no lo resuelve ninguna vuelta mas.**
+
+---
+
+## R.31. Registro de las ocho adjudicaciones del acta de la vuelta 161 (acta del
+auditor, vuelta 161, seccion 6; escrito en la vuelta 162, TAREA 1.b)
+
+Por adicion, como `R.21` a `R.30`. Las adjudicaciones del auditor se escriben
+IGUAL que las del ejecutor. **Corte de todas las cifras de esta entrada: 3 sep
+2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes, que
+es el remedio de la caida de la vuelta 161. Salida:
+`docs/loop/SALIDA_V162_T1B_ADJUDICACIONES.txt`.
+
+**LAS OCHO, CON SU LINEA EN EL ACTA LEIDA HOY.** El titulo de cada una es
+LITERAL del fichero (localizado dentro de la seccion 6 del acta 161, no de
+cualquier acta); la glosa que sigue es prosa del ejecutor y va marcada como tal.
+
+  - **6.1 (`docs/loop/ACTA_AUDITOR.md:53475`, leida hoy).** Titulo literal del
+    acta: *"6.1 `LD-OPC05-049` Y `LD-OPC05-098` SE QUEDAN EN `C`, Y NO ERAN PARADA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA SIN TOCAR NADA, Y ERA LO CORRECTO. Las dos se quedan en `C` y esta vuelta NO les mueve la clase. El pendiente de doctrina 2 del reporte de la vuelta 161 queda CERRADO sin subir al fundador. La leccion, escrita para que no se repita: el ejemplar `100` no excluye por consumo, excluye porque UNA de sus dos direcciones falla, y su propia razon declara LIMPIA la direccion que el ejecutor creia excluida.
+  - **6.2 (`docs/loop/ACTA_AUDITOR.md:53480`, leida hoy).** Titulo literal del
+    acta: *"6.2 EL DISCUTIBLE DE `LD-OPC05-068` LO RESUELVE `P.11` EN CONTRA DE QUIEN LO MARCO, Y SE SOSTIENE `C`."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA SIN TOCAR NADA. `LD-OPC05-068` se queda en `C`. El discutible que el ejecutor marco se resuelve EN SU CONTRA: `P.11` dice que una advertencia SI es linea valida, y lo que prohibe es contar un nodo hecho de advertencias como procedimiento.
+  - **6.3 (`docs/loop/ACTA_AUDITOR.md:53489`, leida hoy).** Titulo literal del
+    acta: *"6.3 `LD-OPC05-005` Y `LD-OPC05-084` SE SOSTIENEN EN `C`, Y DIGO CUAL ES LA MAS FINA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA SIN TOCAR NADA. `LD-OPC05-005` y `LD-OPC05-084` se quedan en `C`. Queda anotado que `084` es la mas fina de las catorce y que, si alguna vuelve algun dia, es esa.
+  - **6.4 (`docs/loop/ACTA_AUDITOR.md:53497`, leida hoy).** Titulo literal del
+    acta: *"6.4 EL ROJO DE `OP-D-02` ES DE LA VARA Y NO DE LA OPERACION, Y LO DICE LA FICHA CON SUS PALABRAS."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN CODIGO, TAREA 2.b de esta vuelta. La vara de los destejidos toma como absorbidos todo el campo `nodos` menos el superviviente, y la ficha de `OP-D-02` manda TENER DELANTE a dos de ellos, no absorberlos. Se arregla con TABLA DE EXCEPCIONES QUE CITA SU ADJUDICACION, el patron de la lista blanca de `OP-C-05`, y con caso positivo por mutacion.
+  - **6.5 (`docs/loop/ACTA_AUDITOR.md:53512`, leida hoy).** Titulo literal del
+    acta: *"6.5 LA PUERTA DEL CORREDOR SE ENSANCHA POR EXTENSION CITABLE, Y LA ADJUDICO YO PORQUE LA PUERTA ES MIA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN CODIGO, TAREA 2.a de esta vuelta. La puerta del corredor tras una parada se ensancha en `scripts/loop/verificar_apertura_sellada.py`. `--vuelta 161` pasa de ROJA a VERDE y `--vuelta 162` sale VERDE. Ningun veredicto viejo se mueve, comprobado con la guarda vieja copiada antes de tocar nada. VA MARCADO COMO DISCUTIBLE: la letra de la adjudicacion (leer el encargo del portador) NO basta para la vara de aceptacion, porque el encargo de `d3482b11` no trae el rotulo; lo que pone verde la 161 es que EL PORTADOR DEL ENCARGO NO ENTRA EN EL CENSO DE INTRUSOS.
+  - **6.6 (`docs/loop/ACTA_AUDITOR.md:53530`, leida hoy).** Titulo literal del
+    acta: *"6.6 LA GUARDA DE CIFRAS NO PUEDE PERDER COBERTURA EN SILENCIO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN CODIGO, TAREA 3 de esta vuelta. `verificar_cifras_del_reporte.py` pasa a cotejar tambien las afirmaciones de cierre que vivan en una FILA DE TABLA, y lo que no pueda cotejar lo dice con su cifra en un AVISO visible. Nada se afloja y la tabla no se prohibe.
+  - **6.7 (`docs/loop/ACTA_AUDITOR.md:53539`, leida hoy).** Titulo literal del
+    acta: *"6.7 LA `P.5.2` OBLIGA TAMBIEN AL AUDITOR, Y SE ADOPTA, PERO LA MANO ES DEL EJECUTOR."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EL REGISTRO, TAREA 1.c de esta vuelta. Las 16 lecturas ciegas del auditor (las catorce en `C` mas los ejemplares `100` y `122`) dejan marca contable por ADICION en el campo `razon` de sus filas, con la forma que `P.5.2` exige, citando la seccion 3 del acta 161 y el sello sha1 `ffe1fa6f`. NINGUNA CLASE SE MUEVE: las 16 coinciden con la vigente.
+  - **6.8 (`docs/loop/ACTA_AUDITOR.md:53548`, leida hoy).** Titulo literal del
+    acta: *"6.8 LA CAIDA DE LA `R.29` SE REGISTRA CON SU NOMBRE Y NO ACUMULA, Y DIGO POR QUE PARA NO AFLOJAR LA REGLA POR CONVENIENCIA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EL REGISTRO, TAREA 1.a de esta vuelta. La entrada que la vuelta 161 numero `R.29` pasa a `R.30` por correccion declarada, sin borrar una linea y con el titulo viejo tachado y legible. La causa se arregla EN LA FUENTE: el numero lo computa ahora `scripts/loop/serie_de_registros.py` leyendo las DOS sedes. LA CAIDA NO ACUMULA por letra de esta misma adjudicacion.
+
+**EL RESUMEN, CONTADO Y NO TECLEADO: 8 adjudicaciones, de las cuales 3 se
+ejecutan EN CODIGO (6.4, 6.5, 6.6), 2 EN EL REGISTRO (6.7, 6.8) y 3 SIN TOCAR
+NADA (6.1, 6.2, 6.3), porque adjudican que lo hecho estaba bien.** Ninguna de las
+ocho sube al fundador y ninguna mueve una clase.
+
+**LO QUE ESTE REGISTRO NO CIERRA.** La vara `P.5.1` sigue CONGELADA y ninguna de
+estas ocho la estrecha ni la ensancha: la 6.1, la 6.2 y la 6.3 la LEEN entera,
+con sus ejemplares, y por eso no la mueven.
