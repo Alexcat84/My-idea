@@ -2485,3 +2485,119 @@ daba un **falso verde** en el caso B.
 
 **Y EL `estado` SE MUEVE DETRAS DE ESTA CORRECCION, NO DELANTE**, que es el orden
 que la adjudicacion 3.14 del acta 149 ya fijo para `OP-S-12`.
+
+
+---
+
+## CORRECCION 34. **LA GUARDA DE `OP-C-05` ESTABA VERDE SOBRE UN UNIVERSO INCOMPLETO: SON 154 PARES, NO 153, Y UNO ESTABA SIN CITA**
+
+**Fecha: 2026-09-02. Vuelta 154, TAREA 2. Hallazgo del acta 153, seccion 4, FUERA de lo marcado.**
+
+**LA CIFRA QUE SE CORRIGE.** Donde la `nota` de `OP-C-05` y los comentarios de
+`scripts/run_phase1.py` publican *"153 pares bidireccionales entre vivos tras
+resolver, 153 con cita, 0 sin cita"*, lo cierto es **154 PARES, Y UNO ESTABA SIN
+CITA**. El **"0 sin cita" era FALSO**. Nada del texto viejo se borra en ninguna
+de las dos sedes: la correccion se anade debajo, con la frase vieja tachada.
+
+**POR QUE, Y ESTA MEDIDO.** La guarda recorria los nodos ACTIVOS y de cada uno
+leia **SOLO** su lista `nodos_siguientes`. La FUENTE no hacia falta resolverla
+(el nodo de partida ya es vivo por construccion), pero **`nodos_previos` NO SE
+LEIA NUNCA**, asi que una arista declarada solo por ese lado era invisible.
+
+**LA VARA DECLARADA SON LOS DOS CAMPOS, Y NO SE INVENTA HOY.** Esta escrita en
+tres sitios, los tres re leidos con instrumento propio antes de tocar nada:
+la **cabecera** cuenta `nodos_previos` (8.740) y su union de 9.914 sale de los
+dos; **`aristas_a_simetrizar`**, dentro de la propia `scripts/run_phase1.py`,
+admite una arista *"si LA DECLARA UN NODO VIVO, EN CUALQUIERA DE SUS DOS
+VISTAS"*, que es exactamente esta vara y la comprobacion de simetria de Gate 0
+ya la usa; y **`web/lib/engine/planRedactor.ts` linea 96** recorre los dos campos
+juntos como vecinos. Mas **P.1**, que manda resolver antes de contar.
+
+**LAS CUATRO VARAS, PUBLICADAS ENTERAS Y NO SOLO LA QUE CONVIENE**
+(`scripts/loop/vuelta154_tarea2a_universo_bidireccionales.py`, salida
+[`loop/SALIDA_V154_T2A_UNIVERSO.txt`](../loop/SALIDA_V154_T2A_UNIVERSO.txt)):
+
+| vara | pares | sin cita |
+|---|---:|---:|
+| fuentes vivas, solo `nodos_siguientes` (la de la guarda vieja) | 153 | 0 |
+| **fuentes vivas, LOS DOS campos (LA VIGENTE)** | **154** | **1** |
+| todas las fuentes, solo `nodos_siguientes` | 155 | 2 |
+| todas las fuentes, los dos campos | 157 | 4 |
+
+Las cuatro **reproducen al digito** la tabla del acta 153, 4.1.
+
+**EL PAR QUE FALTABA:** `error_proofing_servicio` contra `metodologia_6s`, los
+dos VIVOS, con las dos direcciones declaradas por el **propio `metodologia_6s`**
+dentro de sus dos listas (`nodos_siguientes` trae `mistake_proofing_poka_yoke` y
+`nodos_previos` trae `errores_a_prueba_poka_yoke`, y los dos resuelven al mismo
+nodo vivo). Leido por **P.5** en esta vuelta y registrado como **`LD-OPC05-122`,
+clase C** por el banco 9.22, primer polo. **`n` no se movio: 3.388 antes y
+despues.**
+
+**LO QUE LA VARA DEJA FUERA SE NOMBRA EN VEZ DE CALLARSE** (banco 9, fallar
+ruidoso). Con fuentes deprecadas admitidas saldrian 157 pares y 4 sin cita, o sea
+**TRES pares mas**: `asignacion_recursos_en_gates <-> sistema_gates_go_kill`,
+`formalizar_junta_asesora <-> identificar_consejo_asesores` y
+`revision_portafolio_periodica <-> sistema_gates_go_kill`. Quedan fuera por el
+criterio **ya adjudicado el 14 ago 2026** (un nodo deprecado es registro
+historico, no superficie del producto), no por una vara estrechada hoy.
+
+**LA MUTACION MUERDE POR EL LADO QUE ERA CIEGO, Y LA INGENUA NO HABRIA PROBADO
+NADA.** El paso 5 de `run_phase1` **simetriza los ids CRUDOS** antes de que Gate
+0 corra, asi que meter el id crudo de un vivo en `nodos_previos` de otro lo
+vuelve visible tambien para la guarda vieja. El punto ciego real vive en el
+desfase entre **ids crudos** (que es lo que la simetrizacion mira) e **ids
+resueltos** (que es lo que la guarda mira). La mutacion mete un **alias
+deprecado que resuelve a un vivo** en las DOS listas de otro vivo, con los tres
+nombres elegidos **por computo**:
+[`loop/SALIDA_V154_T2D_MUTACION.txt`](../loop/SALIDA_V154_T2D_MUTACION.txt).
+**CASO A**, guarda nueva sobre la mutacion: **ROJO exit 1 nombrando el par**.
+**CASO B, LA CONTRAPRUEBA OBLIGATORIA**, la guarda **VIEJA** sacada literal de
+git sobre **LA MISMA** mutacion: **VERDE exit 0**. **CASO C**, guarda nueva sobre
+arbol intacto: **VERDE**. `dataset/` **identico antes y despues por sha256**.
+
+**LA CIFRA DE HOY, con Gate 0 en verde: 154 pares bidireccionales entre vivos
+tras resolver, 154 con cita, 0 SIN CITA.** Con esto queda contestada la
+**verificacion 8** de la ficha, que el acta 153 declaraba sin contestar.
+
+
+---
+
+## CORRECCION 35. **EL PASE DE `estado` DE LAS CINCO MESAS, CON SU DISPARADOR MEDIDO EN LA VUELTA QUE LO USA**
+
+**Fecha: 2026-09-02. Vuelta 154, TAREA 5. Autorizada por el acta 153, adjudicacion 6.3.**
+
+**POR QUE NO SE MOVIERON ANTES, Y NO ES UN OLVIDO.** La reserva del acta 139,
+3.6 nombra literalmente *"el pase de estado de las once (las seis fusiones y las
+cinco remitidas)"*, y **las cinco mesas no estan en esas once**. El ejecutor de
+la vuelta 152 no las movio, y el acta 153 se lo cuenta a favor: ampliar la
+reserva por cuenta propia habria sido improvisar.
+
+**LO QUE SI HABIA, Y ES LO QUE DISPARA HOY.** Esa misma 3.6 les puso a las mesas
+un disparador propio: **"cuando la fase 06 cierre"**. El acta 153, 6.3 lo mide
+disparado y lo adjudica; **esta vuelta lo vuelve a medir con su propio
+instrumento antes de mover una sola ficha**, que es lo que la regla del
+instrumento manda.
+
+**EL DISPARADOR, MEDIDO EN ESTA VUELTA** (`scripts/loop/tallar_estado_de_fase.py
+--fase 06_MESAS`, salida
+[`loop/SALIDA_V154_T5_DISPARADOR.txt`](../loop/SALIDA_V154_T5_DISPARADOR.txt)):
+**16 de 16 operaciones del catalogo de la fase 06 con destino CUMPLIDO, 0 sin
+cumplir**, y **las cinco mesas entre ellas**.
+
+**LAS CINCO, NOMBRADAS:** `OP-M-01`, `OP-M-02`, `OP-M-03`, `OP-M-04`, `OP-M-05`.
+
+**EL PASE ES POR FICHA Y NO POR DECRETO.** El encargo lo fija: la adjudicacion
+cubre a las que el disparador alcance. Se mueve la ficha cuya fila diga
+`CUMPLIDO` y se deja quieta la que no, y las que no se mueven se nombran. En
+esta corrida se movieron **5 de 5**; sin mover: **ninguna**.
+
+**EL ACTO Y SUS GUARDAS:** uno solo, las cinco a la vez, con el **conteo antes y
+despues**, el **esquema comprobado por assert** (71 fichas, un solo juego de 18
+claves) y la **guarda de cifras del plan re corrida**, exactamente el molde de
+las vueltas 131, 136 y 152.
+
+**LA CONVENCION DEL SILENCIO NO SE MUEVE EN LA MISMA VUELTA EN QUE SE CUENTA:**
+se cuenta con la **lista A**, la que vive en
+`vuelta150_3_relectura_expediente.py:declara_su_estado`. Cambiar la vara y el
+sujeto a la vez es la trampa que la vuelta 152 ya evito.

@@ -1,0 +1,89 @@
+================================================================================================
+VUELTA 154, TAREA 5: EL PASE DE `estado` DE LAS CINCO MESAS
+================================================================================================
+LA NOMINA SE LEE DEL FICHERO, no de memoria: fichas con fase 06_MESAS en
+docs/plan/OPERACIONES.jsonl: 5 (OP-M-01, OP-M-02, OP-M-03, OP-M-04, OP-M-05)
+
+================================================================================================
+EL DISPARADOR, MEDIDO CON MI INSTRUMENTO EN ESTA VUELTA
+================================================================================================
+CATALOGO DE LA FASE 06: 16 operacion(es) | con destino cumplido 16 | sin cumplir 0
+
+  [OK] OP-M-01    destino medido: CUMPLIDO
+  [OK] OP-M-02    destino medido: CUMPLIDO
+  [OK] OP-M-03    destino medido: CUMPLIDO
+  [OK] OP-M-04    destino medido: CUMPLIDO
+  [OK] OP-M-05    destino medido: CUMPLIDO
+
+DISPARADOR: 5 de 5 mesas alcanzadas.
+LA FASE 06 CIERRA ENTERA. El disparador que el acta 139, 3.6 dejo escrito
+ha disparado, y el acta 153, 6.3 lo adjudica.
+
+================================================================================================
+CONTEO ANTES
+================================================================================================
+CENSO ANTES: 71 fichas | HECHA 23 LISTA 48 | LISTA que NO hablan de su estado (lista A): 18
+  OP-M-01    estado ANTES: LISTA
+  OP-M-02    estado ANTES: LISTA
+  OP-M-03    estado ANTES: LISTA
+  OP-M-04    estado ANTES: LISTA
+  OP-M-05    estado ANTES: LISTA
+
+================================================================================================
+EL ACTO: UNO SOLO, LAS QUE EL DISPARADOR ALCANZA
+================================================================================================
+  [OK] 5 ficha(s) movidas de LISTA a HECHA: OP-M-01, OP-M-02, OP-M-03, OP-M-04, OP-M-05
+  [OK] CORRECCION 35 anadida a docs/plan/CORRECCIONES_A_APLICAR.md POR ADICION
+       PURA (el fichero viejo es prefijo EXACTO del nuevo, comprobado con assert)
+  [OK] esquema intacto: 71 fichas, UN solo esquema de 18 claves
+  [OK] las 71 notas viejas quedan ENTERAS como prefijo de las nuevas
+
+================================================================================================
+CONTEO DESPUES
+================================================================================================
+CENSO DESPUES: 71 fichas | HECHA 28 LISTA 43 | LISTA que NO hablan de su estado (lista A): 18
+  OP-M-01    estado DESPUES: HECHA
+  OP-M-02    estado DESPUES: HECHA
+  OP-M-03    estado DESPUES: HECHA
+  OP-M-04    estado DESPUES: HECHA
+  OP-M-05    estado DESPUES: HECHA
+
+| cifra | antes | despues |
+|---|---:|---:|
+| fichas en HECHA | 23 | 28 |
+| fichas en LISTA | 48 | 43 |
+| congeladas EN SILENCIO (lista A) | 18 | 18 |
+
+LAS QUE SIGUEN EN SILENCIO DESPUES DEL PASE (18), nombradas y no resumidas:
+  OP-A-01
+  OP-A-02
+  OP-C-01
+  OP-C-02
+  OP-C-03
+  OP-F-01
+  OP-L-01
+  OP-L-02
+  OP-L-03
+  OP-M-02-ACCOMPLISH
+  OP-M-02-ACTIVATE
+  OP-M-02-ADMIT
+  OP-M-02-ASSESS
+  OP-M-02-MEDIOS
+  OP-M-02-PROG
+  OP-M-03-I
+  OP-M-03-II
+  OP-V-01
+
+================================================================================================
+LA GUARDA DE CIFRAS DEL PLAN, RE CORRIDA
+================================================================================================
+VERDE EXIT 0: 0 pares (base 32b2c76e). Filas cambiadas examinadas (6): OP-M-01, OP-M-02, OP-M-03, OP-M-04, OP-M-05, OP-C-05
+EXITCODE GUARDA DE CIFRAS DEL PLAN: 0
+
+CIFRA mesas de la fase 06: 5 operaciones
+CIFRA mesas alcanzadas por el disparador: 5 operaciones
+CIFRA mesas movidas de LISTA a HECHA: 5 operaciones
+CIFRA fichas del expediente: 71 operaciones
+CIFRA fichas en HECHA al cierre de esta tarea: 28 operaciones
+CIFRA fichas en LISTA al cierre de esta tarea: 43 operaciones
+EXITCODE: 0
