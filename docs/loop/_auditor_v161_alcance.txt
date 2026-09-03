@@ -1,0 +1,89 @@
+==============================================================================
+VUELTA 159, TAREA 5.b: EL ALCANCE DEL CHECK DE P.16, RECOMPUTADO
+==============================================================================
+
+EXCLUSION DECLARADA, Y DESDE LA VUELTA 161 ES POR CONTENIDO Y NO POR
+NOMBRE: nadie se descarta por como se llama. Se lee de cada fichero,
+con tokenize, si LLEVA la marca del remedio de la vuelta 160 en un
+COMENTARIO REAL (esta en el alcance) o si la ESCRIBE dentro de una
+constante de cadena (la pone en otros, no la lleva).
+   marca: REMEDIO DEL CHECK DE P.16 (vuelta 160
+   la nomina vieja BUSCADORES queda escrita en el fuente como
+   registro de lo que se hacia, y ya no filtra nada.
+
+A) LA BATERIA, CONTADA DE SU PROPIO FICHERO
+   fuente: scripts/loop/verificar_mutaciones_viejas.py
+   CIFRA mutaciones en la nomina de la bateria: 23
+
+B) LAS TRES LECTURAS DEL PATRON LITERAL
+   A ESTRECHA (dataset/ Y docs/plan/)
+      patron: "--porcelain", "--", "dataset/", "docs/plan/"
+      CIFRA ficheros: 5
+      CIFRA de ellos en la bateria de las 23: 3
+   B MEDIA (pathspec que empieza por dataset/)
+      patron: "--porcelain", "--", "dataset/
+      CIFRA ficheros: 17
+      CIFRA de ellos en la bateria de las 23: 7
+   C ANCHA (cualquier git status --porcelain)
+      patron: "--porcelain"
+      CIFRA ficheros: 20
+      CIFRA de ellos en la bateria de las 23: 7
+
+C) LA NOMINA PRINCIPAL (clase ALCANCE de la seccion E), UNA A UNA
+   vuelta142_2c_mutaciones.py                     fuera de la bateria
+   vuelta143_2a_mutaciones.py                     EN LA BATERIA
+   vuelta143_2c_mutacion_positivo.py              EN LA BATERIA
+   vuelta143_3c_girar_arista.py                   fuera de la bateria
+   vuelta144_2b_mutacion_giro.py                  EN LA BATERIA
+   vuelta144_3a_mutaciones.py                     EN LA BATERIA
+   vuelta144_3b_giro_sin_flecha.py                fuera de la bateria
+   vuelta144_3b_mutacion_negativa.py              EN LA BATERIA
+   vuelta146_3c_mutacion_aduana.py                fuera de la bateria
+   vuelta147_3d_mutacion_nomina.py                EN LA BATERIA
+   vuelta147_3e_simular_a26.py                    EN LA BATERIA
+   vuelta89_tarea4_guarda_op_c05.py               fuera de la bateria
+
+   CIFRA ficheros en el alcance: 12
+   CIFRA de ellos dentro de la bateria de las 23: 7
+   CIFRA de ellos fuera de la bateria: 5
+
+E) LA CLASIFICACION POR CONTENIDO, FICHERO A FICHERO (vuelta 161)
+   vuelta142_2c_mutaciones.py                     ALCANCE            ejecuta el patron
+   vuelta143_2a_mutaciones.py                     ALCANCE            ejecuta el patron
+   vuelta143_2c_mutacion_positivo.py              ALCANCE            ejecuta el patron
+   vuelta143_3c_girar_arista.py                   ALCANCE            ejecuta el patron
+   vuelta144_2b_mutacion_giro.py                  ALCANCE            
+   vuelta144_3a_mutaciones.py                     ALCANCE            ejecuta el patron
+   vuelta144_3b_giro_sin_flecha.py                ALCANCE            
+   vuelta144_3b_mutacion_negativa.py              ALCANCE            
+   vuelta146_3c_mutacion_aduana.py                ALCANCE            
+   vuelta147_3d_mutacion_nomina.py                ALCANCE            
+   vuelta147_3e_simular_a26.py                    ALCANCE            
+   vuelta159_tarea1_registrar_adjudicaciones.py   SOLO_CITA          
+   vuelta159_tarea5_alcance_p16.py                ESCRIBE_EL_REMEDIO 
+   vuelta160_tarea1_registrar_adjudicaciones.py   SOLO_CITA          
+   vuelta160_tarea3_remedio_p16.py                ESCRIBE_EL_REMEDIO 
+   vuelta160_tarea3b_caso_positivo.py             SOLO_CITA          ejecuta el patron
+   vuelta89_tarea4_guarda_op_c05.py               ALCANCE            ejecuta el patron
+
+   CIFRA ficheros que contienen el patron: 17
+   CIFRA en la clase ALCANCE: 12
+   CIFRA en la clase ESCRIBE_EL_REMEDIO: 2
+   CIFRA en la clase SOLO_CITA: 3
+   CIFRA que EJECUTAN el patron sin llevar la marca (AVISO): 1
+      AVISO: vuelta160_tarea3b_caso_positivo.py ejecuta git status --porcelain
+             sobre dataset/ y NO lleva la marca del remedio. No entra
+             al alcance, y por aqui es por donde esta vara podria
+             quedarse ciega.
+
+D) EL COTEJO CONTRA LA CIFRA DEL ACTA 158, ADJUDICACION 6.7
+   (la cifra vigente es la de la adjudicacion 6.1 del ACTA 159,
+    docs/loop/ACTA_AUDITOR.md:52708, que corrige el once del acta 158)
+   CIFRA que el acta declara, ficheros: 12
+   CIFRA que el acta declara, dentro de la bateria: 7
+   CIFRA que este computo da, ficheros: 12
+   CIFRA que este computo da, dentro de la bateria: 7
+
+   LOS SIETE DE LA BATERIA REPRODUCEN AL DIGITO.
+   LA CUENTA REPRODUCE. Se puede aplicar el remedio de la 5.a.
+FIN

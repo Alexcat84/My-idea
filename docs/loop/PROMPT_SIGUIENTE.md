@@ -3,92 +3,126 @@ SESION EJECUTORA. FASE III, EJECUCION. RAMA pasada-unica. MODO DE
 EJECUCION CONTINUA (AUDITOR.md seccion 3), en REGIMEN COMPLETO, con las
 guardas obligatorias por operacion.
 
-La decision del fundador que desbloquea esta vuelta esta en
-docs/loop/paradas/2026-09-03-credito-vara-movil-DECISION.md, y la parada
-entera en docs/loop/paradas/2026-09-03-credito-vara-movil.md. En resumen:
-OPCION A CON REMATE. La vara de la lectura dirigida queda CONGELADA y ya
-esta escrita en un solo sitio citable, P.5.1 del banco del plan (LA VARA
-DE LA LECTURA DIRIGIDA, CONGELADA: NOMBRAR NO ES PROCEDIMENTAR), con sus
-cuatro ejemplares, y la ficha de OP-C-05 la cita en su nota. MODELOS SIN
-CAMBIO: ejecutor Opus 5, auditor Opus 5. LA RACHA DEL CREDITO VUELVE A
-CERO con la vara congelada, por letra expresa de la decision.
+TU VUELTA ES LA 162. El acta que te abre es la 161. Va en la cabecera fija
+por la adjudicacion 6.1 del acta 158, y no es cosmetico: las dos guardas
+del cierre (tallar_cabecera_reporte.py y verificar_apertura_sellada.py)
+localizan la apertura buscando el acta de la vuelta N menos 1, y el
+invariante de la casa es ACTA N, VUELTA N MAS 1. Tus ficheros de esta
+vuelta se llaman SALIDA_V162_*.
 
-NINGUNA VUELTA ESTRECHA NI ENSANCHA ESA VARA sin correccion declarada del
-fundador. Si una lectura pide mover la frontera, ESO ES PARADA Y SE TRAE,
-no se ajusta la vara sobre la marcha: esa es la enfermedad que la
-congelacion viene a curar.
+HASHES ADMITIDOS EN EL CORREDOR DE ESTA VUELTA: NINGUNO. No hay commit de
+decision del fundador que admitir. Todo commit dentro del corredor es tuyo
+y cuenta como intruso.
 
-- TAREA 1, LOS REGISTROS DEL ACTA 160 Y LAS TRES DEUDAS.
-  (1.0) LOS REGISTROS: las caidas de CLASE de las dos tandas CON SUS
-  PUESTOS (la LD-OPC05-005 de la tanda de la vuelta 157, publicada D y
-  devuelta a C por la relectura conjunta, registrada en el acta 159; y la
-  LD-OPC05-100 de la tanda de la 159, publicada C y pasada a D en la 160
-  al darle el ejecutor la razon al auditor, mas las TRES DE LA MISMA
-  COSTURA que el ejecutor encontro por su cuenta al releer el tramo: 094,
-  101 y 118). Y LA PARADA CON SU RESOLUCION POR CITA: se disparo la regla
-  del credito de AUDITOR.md seccion 4 (dos tandas seguidas con caida de
-  clase), y la resuelve la decision del fundador del 3 sep 2026, citada
-  por su fichero.
-  (1.a) EL INSTRUMENTO DEL ALCANCE DE P.16 DEJA DE EXCLUIR POR NOMBRE.
-  scripts/loop/vuelta159_tarea5_alcance_p16.py descarta hoy los
-  buscadores POR NOMBRE (su propia salida lo declara: "EXCLUSION
-  DECLARADA: se descartan por nombre los dos buscadores"), y por eso
-  ENVEJECE SOLO: hoy da 15 en vez de 12 y sale exit 1. LOS TRES NUEVOS
-  SON DE LA VUELTA 160 Y NINGUNO TRAE EL DEFECTO (dos son buscadores y el
-  tercero usa la huella de contenido como vara), o sea que LA CIFRA DEL
-  REPORTE ES CORRECTA Y LO QUE HAY QUE ARREGLAR ES LA EXCLUSION. Se
-  excluye POR CONTENIDO, con LA HUELLA DE CONTENIDO COMO VARA, con CASO
-  POR MUTACION sobre variable computada, y con LA CIFRA 12 REPRODUCIDA
-  por el instrumento arreglado.
-  (1.b) LOS SEIS ASSETS DE sync_assets_web, LEIDOS UNA VEZ. Hasta hoy
-  solo se comprobo que el script corre y que no deja diferencia: NADIE HA
-  MIRADO LO QUE ESCRIBE, y lleva pendiente desde el acta 157, o sea
-  cuatro actas. Los seis se leen UNA vez CON SU CONTENIDO COTEJADO CONTRA
-  SU FUENTE, y EL RESULTADO SE REGISTRA: verde o rojo, CON NOMBRE. Un
-  rojo aqui se declara, no se arregla de paso.
-  (1.c) LA DEFINICION DE SEGUNDA LECTURA INDEPENDIENTE, ESCRITA EN EL
-  BANCO, porque hoy no esta en ningun sitio y por eso las cifras bailan.
-  Tiene que decir TRES COSAS: QUE MARCA CUENTA, QUIEN PUEDE FIRMARLA, y
-  QUE UNA RELECTURA CONJUNTA CUENTA UNA SOLA VEZ. Y despues LA CIFRA
-  RECOMPUTADA POR ESA DEFINICION, con LAS DOS VIEJAS TACHADAS AL LADO Y
-  NO COPIADAS: el 84 del acta 158 y el 82 del acta 160, las dos con su
-  autor y su corte, ninguna borrada y ninguna escrita encima de la otra.
-  LO QUE FALTABA ERA LA DEFINICION, NO EL NUMERO.
-- TAREA 2, EL TRAMO DE LOS 14 PARES EN C, RELEIDOS CON LA VARA
-  CONGELADA, COMO UN SOLO TRAMO DIRIGIDO. Son UNA sola relectura, no una
-  pasada abierta: la decision dice UNA vez. Con LOS NODOS IMPRESOS
-  ENTEROS antes de adjudicar, EL CRITERIO CITADO por su numero (P.5.1) en
-  cada veredicto, EL REGISTRO DE CITAS ACTUALIZADO POR ADICION (nada se
-  borra: docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl) y LA GUARDA DE OP-C-05
-  RE CORRIDA EN VERDE al terminar.
-  EL MOTIVO ESTA ESCRITO Y CONVIENE TENERLO DELANTE: UNA C DE MAS RETIRA
-  UNA DIRECCION DE MAS, o sea que el coste de equivocarse no es simetrico.
-  AVISO MEDIDO, PARA QUE NO SE DESCUBRA A MITAD. Conte el registro hoy:
-  154 filas, 122 de LECTURA_DIRIGIDA y 32 de CRIBADO, con 14 en C, 139 en
-  D y 1 en B, o sea que las cifras de la parada reproducen al digito. Y
-  LOS CUATRO EJEMPLARES DE LA VARA YA LEEN EN EL REGISTRO EXACTAMENTE
-  COMO LA VARA DICE: 052 en C y 095 en C (aceptan), 122 en D y 100 en D
-  (excluyen). La 100 NO esta pendiente: la vuelta 160 ya la reclasifico y
-  su propia cita lo declara ("clase D [ANTES C, RECLASIFICADA EN LA
-  VUELTA 160]"), igual que las tres de su misma costura, 094, 101 y 118,
-  las tres ya en D con su correccion declarada dentro de la cita. O sea
-  que ninguna de las cuatro entra en este tramo y NO SE VUELVEN A TOCAR.
-  LAS 14 QUE SI ENTRAN, contadas del fichero, son: 005, 038, 049, 052,
-  068, 081, 084, 087, 088, 095, 098, 109, 110 y 116.
-  Y UNA GUARDA DE COHERENCIA QUE SALE DE AHI: DOS DE LAS CATORCE (052 y
-  095) SON LOS PROPIOS EJEMPLARES DE ACEPTACION DE LA VARA CONGELADA, asi
-  que por construccion tienen que sobrevivir la relectura. SI ALGUNA DE
-  LAS DOS CAYERA, eso no es una reclasificacion mas: es que la lectura
-  contradice la vara que el fundador acaba de congelar, y entonces PARAS
-  Y LO TRAES, sin tocar ni la clase ni la vara.
+Y EL SELLO DE APERTURA VA EN EL PRIMER COMMIT DEL CORREDOR, NO EN EL
+CIERRE. En la 161 lo hiciste bien: los diez SALIDA_V161_*_APERTURA.txt
+nacieron todos en 4208b8fa, y lo verifique yo corriendo la guarda.
+Repitelo igual.
 
-- TAREA 3, SEGUIR EL ORDEN ESCRITO EN MODO CONTINUO, hasta el MURO
+LO PRIMERO, PORQUE TE AHORRA TRABAJO: LAS TRES COSAS QUE TRAJISTE SIN
+ARREGLAR ESTAN ADJUDICADAS EN EL ACTA 161 Y NINGUNA SUBE AL FUNDADOR.
+(1) Las dos paradas de frontera NO ERAN PARADA: 049 y 098 se quedan en C
+por la adjudicacion 6.1, y el motivo es que el ejemplar 100 no excluye por
+consumo sino por una direccion que falla, y su propia razon declara LIMPIA
+la direccion que tu creias excluida. Hiciste bien en no tocarlas y traerlas.
+(2) El rojo de OP-D-02 es DE LA VARA y lo dice tu propia ficha (6.4).
+(3) La puerta del corredor queda ensanchada por la adjudicacion 6.5. Las
+tres se ejecutan aqui abajo. LA VARA P.5.1 SIGUE CONGELADA Y NADIE LA
+TOCA: ninguna vuelta la estrecha ni la ensancha sin correccion declarada
+del fundador.
+
+- TAREA 1, LOS REGISTROS, Y LLEVA DENTRO UNA CAIDA TUYA QUE HAY QUE
+  CORREGIR ANTES DE ESCRIBIR NADA MAS.
+  (1.a) LA R.29 QUE ESCRIBISTE YA EXISTIA, Y ES LA CAIDA DE LA VUELTA 161
+  (acta 161, seccion 5.1). R.29 esta asignada desde la vuelta 150 y vive
+  en docs/plan/CORRECCIONES_A_APLICAR.md:2127; y la prueba estaba en el
+  mismo fichero que abriste, docs/PENDIENTES.md:10389, que dice literal
+  que R.29 NO esta en esa pagina y que su fuente unica es la otra. Hoy
+  docs/PENDIENTES.md se contradice a si mismo con 76 lineas de distancia.
+  LA ENTRADA PASA A R.30 POR CORRECCION DECLARADA, sin borrar una sola
+  linea: el titulo viejo queda TACHADO Y LEGIBLE con su motivo delante.
+  Y ANTES DE ESCRIBIR, LA SERIE SE RECOMPUTA CON INSTRUMENTO DE LOS DOS
+  FICHEROS (docs/PENDIENTES.md y docs/plan/CORRECCIONES_A_APLICAR.md),
+  imprimiendo la serie entera con su sede fichero por fichero: la serie
+  R.N es GLOBAL a los dos, y lo prueba la propia remision. EL NUMERO NO
+  SE TECLEA NUNCA MAS, que es exactamente lo que fallo: tu instrumento
+  llevaba "con la ultima escrita siendo R.28" escrito a mano y su
+  idempotencia solo miraba un fichero. Arregla eso EN LA FUENTE, con
+  CASO POSITIVO POR MUTACION sobre variable computada (mete una R.31 de
+  mentira en el OTRO fichero y el instrumento tiene que verla).
+  (1.b) LAS ADJUDICACIONES 6.1 A 6.8 DEL ACTA 161, registradas en la
+  forma de la casa, en la sede que la serie recomputada diga.
+  (1.c) LAS MARCAS DE MI CIEGA, EN EL REGISTRO, POR LA ADJUDICACION 6.7.
+  Relei a ciegas las CATORCE en C (005, 038, 049, 052, 068, 081, 084,
+  087, 088, 095, 098, 109, 110, 116) mas los dos ejemplares de exclusion
+  (100 y 122), 16 de 16 coincidiendo, y esas lecturas hoy NO DEJAN MARCA
+  CONTABLE, que es justo lo que P.5.2 denuncia. Escribe tu la marca por
+  adicion en el campo razon de esas 16 filas, con la forma que P.5.2
+  exige (que es RELECTURA y EN QUE VUELTA), citando la seccion 3 del acta
+  161 y mi sello sha1 ffe1fa6f. No cambies ni una clase: las 16
+  coinciden con la vigente. Y despues RECOMPUTA la cifra de P.5.2 y
+  anadela debajo con su corte, sin borrar ni la de apertura ni la de
+  cierre de la 161.
+
+- TAREA 2, LAS DOS GUARDAS QUE EL ROJO DEJO ABIERTAS. ES BLOQUEANTE: LA
+  APERTURA DE ESTA VUELTA NO SE DA POR BUENA HASTA QUE LA 2.a ESTE VERDE.
+  (2.a) LA PUERTA DEL CORREDOR DESPUES DE UNA PARADA (adjudicacion 6.5
+  del acta 161, que es MIA y por eso la ensancho yo). En
+  verificar_apertura_sellada.py: CUANDO, Y SOLO CUANDO, el commit del
+  acta trae docs/loop/PROMPT_SIGUIENTE.md VACIO y docs/loop/PARA_ALEXIS.md
+  escrito (la firma de una parada, que tu no puedes fabricar porque el
+  acta es mia), el encargo se lee del PRIMER commit posterior al acta que
+  escriba PROMPT_SIGUIENTE.md. EL MECANISMO DEL ROTULO NO CAMBIA EN NADA:
+  sin el literal HASHES ADMITIDOS EN EL CORREDOR DE ESTA VUELTA: no entra
+  nada, y un hash citado de paso sigue sin entrar. SI HUBIERA MAS DE UN
+  COMMIT ASI, ROJO. Con CASO POSITIVO POR MUTACION sobre encargo
+  fabricado en memoria (la funcion ya es pura a proposito), y con la
+  prueba de que NINGUN VEREDICTO VIEJO SE MUEVE: corre la guarda vieja
+  contra la nueva sobre las vueltas 156, 158, 159 y 160 y coteja. Al
+  terminar, verificar_apertura_sellada.py --vuelta 161 TIENE QUE DAR
+  VERDE, y --vuelta 162 tambien.
+  (2.b) LA VARA DE LOS DESTEJIDOS Y OP-D-02 (adjudicacion 6.4). El
+  tallador toma como absorbidos todo el campo nodos menos el
+  superviviente, y la ficha de OP-D-02 dice con sus palabras que
+  homework_frontend_loading y voice_of_customer_homework NO ENTRAN EN LA
+  FUSION y que el campo nodos NO es la lista de lo que se funde. LA VARA
+  ES MAS ANCHA QUE LA FICHA. Se arregla con TABLA DE EXCEPCIONES QUE CITA
+  SU ADJUDICACION, que es el patron que la casa ya usa en la lista blanca
+  de OP-C-05 (cada entrada cita su lectura): una excepcion sin cita es un
+  agujero. CASO POSITIVO POR MUTACION: una operacion cuyos absorbidos de
+  verdad esten pendientes TIENE que seguir saliendo roja, y si pasa, la
+  excepcion esta abierta de mas. Recomputa la fase 02 despues y publica
+  las dos cifras, antes y despues, sin borrar la de antes.
+
+- TAREA 3, LA GUARDA QUE SE QUEDO CIEGA Y SIGUE DANDO VERDE (adjudicacion
+  6.6, acta 161 seccion 5.2). verificar_cifras_del_reporte.py cotejo
+  CINCO afirmaciones de cierre sobre el reporte de la vuelta 160 y CERO
+  sobre el tuyo, y salio VERDE las dos veces: tus ocho cifras de fase se
+  mudaron de la prosa a una tabla y la guarda dejo de verlas. Esta medido
+  y se reproduce con git show aa6bb622:docs/loop/REPORTE.md. NO SE AFLOJA
+  NADA Y NO SE PROHIBE LA TABLA: la guarda tiene que cotejar tambien las
+  afirmaciones de cierre que vivan en una FILA DE TABLA, y lo que no
+  pueda cotejar lo tiene que DECIR con su cifra en un AVISO visible, que
+  es la regla de fallar ruidoso del banco 9. VARA DE ACEPTACION, y es
+  dura: sobre tu reporte de la 161 tiene que cotejar las OCHO filas de
+  fase del cierre, sobre el de la 160 tiene que SEGUIR DANDO 5, y ningun
+  veredicto viejo puede moverse. Con su caso por mutacion.
+
+- TAREA 4, UNA MEDICION QUE NO ARREGLA NADA Y SE DECLARA (acta 161,
+  seccion 5.3). Hay UN par de nodos vivos con el mismo titulo normalizado,
+  sistema_responsabilidad_gerencial y sistema_responsabilidad_gerencial_2,
+  y el Gate 0 no se equivoca al decir cero duplicadas porque su vara es el
+  titulo EXACTO. Mide el universo entero de colisiones de titulo
+  NORMALIZADO entre vivos, publica la nomina con su cifra, y PARA AHI:
+  NO FUNDAS NADA Y NO PROPONGAS FUSION, que eso es alcance de campaña y
+  es del fundador. Es una medicion, no una operacion.
+
+- TAREA 5, SEGUIR EL ORDEN ESCRITO EN MODO CONTINUO, hasta el MURO
   CONOCIDO Y YA ADJUDICADO (acta 149, seccion 3.10): la fase 08 NO CIERRA
   sin una SESION CON CREDENCIAL Y CON EL FUNDADOR DELANTE, porque el .env
-  esta fuera del repo mientras el bucle corre y eso esta bien. Al llegar
-  ahi SE PARA Y SE DICE: es donde termina lo que un bucle puede hacer
-  solo, y no es un fallo del bucle. EL MERGE NO SE PIDE NI SE HACE: es
-  del fundador y solo suyo, ni ahora ni al final.
+  esta fuera del repo mientras el bucle corre y eso esta bien. Lo corri yo
+  hoy y da exit 2. Al llegar ahi SE PARA Y SE DICE. EL MERGE NO SE PIDE NI
+  SE HACE: es del fundador y solo suyo, ni ahora ni al final.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.

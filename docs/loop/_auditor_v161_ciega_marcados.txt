@@ -1,0 +1,81 @@
+==============================================================================
+CASO LD-OPC05-005   par: aim_of_leadership  <->  causas_comunes_vs_especiales
+==============================================================================
+  NODO aim_of_leadership
+    titulo: Objetivo del Liderazgo (Deming)
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    entregable: Un plan de liderazgo enfocado en mejorar el sistema, con identificación de casos individuales fuera de lo esperado y acciones de apoyo basadas en datos.
+       1. Identificar, con datos o con criterio, quién está fuera de lo esperado, por bajo o por muy alto desempeño
+       2. Investigar las causas de raíz del sistema que afectan el desempeño general
+       3. Diseñar formas de ayuda individual o de reconocimiento según corresponda
+       4. Trabajar de forma continua en mejorar el sistema para todos, no solo en corregir personas
+       5. Reconocer y estudiar a quienes tienen un desempeño excepcional para replicar sus métodos
+       6. Buscar reducir la variabilidad de desempeño entre personas dentro del mismo sistema
+  ---
+  NODO causas_comunes_vs_especiales
+    titulo: Causas Comunes vs Causas Especiales de Variación
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    entregable: Gráfico de corrida o de control con los puntos clasificados como causa común o especial y un plan de acción diferenciado para cada tipo.
+       1. Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes
+       2. Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos
+       3. Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales
+       4. Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla
+       5. Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas
+       6. Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales
+       7. Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo
+       8. Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+       9. Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).
+      10. Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.
+      11. Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.
+      12. Comunicar a los equipos que el objetivo es identificar problemas, no culpables
+      13. Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo
+      14. Fomentar la colaboración entre turnos y departamentos para resolver causas comunes
+      15. Analizar la distribución de errores o defectos entre todas las personas usando limites de control
+
+==============================================================================
+CASO LD-OPC05-068   par: eliminar_metas_numericas_gerencia  <->  sistema_estable_causas_comunes
+==============================================================================
+  NODO eliminar_metas_numericas_gerencia
+    titulo: Eliminación de Metas Numéricas Internas sin Método
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    entregable: Documento de metas organizacionales revisado, con cada meta vinculada a un método y análisis de capacidad del sistema
+       1. Revisar las metas numéricas actuales de gerencia y verificar si cuentan con un plan de acción concreto
+       2. Eliminar metas que solo se basen en deseos o presión sin método definido
+       3. Determinar la capacidad real del sistema mediante análisis estadístico antes de fijar cualquier meta
+       4. Reemplazar metas arbitrarias por objetivos de mejora continua con planes de acción específicos
+       5. Reconocer el costo oculto de manejar tu negocio por miedo a los números
+  ---
+  NODO sistema_estable_causas_comunes
+    titulo: Sistema Estable y tu Responsabilidad sobre la Variación
+    fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+    entregable: Una carta de control o run chart con el diagnóstico de estabilidad del proceso, la clasificación de causas y un plan de acción dirigido a cambiar el sistema si corresponde.
+       1. Recolectar datos diarios de defectos o errores durante varias semanas.
+       2. Graficar los datos en una carta de corrida o carta de control para verificar si la variación es estable o inestable.
+       3. Clasificar la variación como causa común (del sistema) o causa especial (puntual).
+       4. Si el sistema es estable, identificar qué cambios estructurales, como materiales, herramientas o capacitación, pueden mover su capacidad.
+       5. Evitar fijar metas numéricas o culpar a la persona que te ayuda hasta haber intervenido sobre el sistema mismo.
+
+==============================================================================
+CASO LD-OPC05-084   par: genchi_gembutsu_salir_del_edificio  <->  leap_of_faith_assumptions
+==============================================================================
+  NODO genchi_gembutsu_salir_del_edificio
+    titulo: Genchi Gembutsu: Salir del Edificio
+    fuente: The Lean Startup - Eric Ries
+    entregable: Registro de conversaciones y observaciones directas con clientes potenciales que validen o invaliden las hipótesis iniciales del negocio
+       1. Identificar las preguntas de fe (leap-of-faith questions) más críticas del negocio
+       2. Salir físicamente a hablar con clientes potenciales reales, no solo encuestas remotas, lo que se llama get out of the building
+       3. Observar el comportamiento real de los usuarios en su contexto natural
+       4. Evitar tomar decisiones basadas únicamente en reportes de segunda mano
+       5. Documentar los hallazgos firsthand para contrastarlos con las hipótesis iniciales
+       6. Usar estas observaciones para ajustar el diseño del producto o servicio
+  ---
+  NODO leap_of_faith_assumptions
+    titulo: Supuestos de salto de fe (leap-of-faith assumptions)
+    fuente: The Lean Startup - Eric Ries
+    entregable: Lista priorizada de tus supuestos de salto de fe, separados de los hechos comprobados de tu plan
+       1. Revisa tu plan y separa los hechos comprobados de las suposiciones que aún no has verificado, incluidos el modelo de negocio y el spreadsheet financiero
+       2. Identifica cuáles suposiciones son de bajo riesgo y cuáles son verdaderos saltos de fe
+       3. Reescribe tus comparaciones con otros negocios en términos concretos y verificables, evitando analogías que te oculten el riesgo real
+       4. Ordena tus supuestos según el riesgo que representan para que tu negocio funcione
+       5. Diseñar experimentos específicos para validar cada leap-of-faith question antes de construir el producto completo
+

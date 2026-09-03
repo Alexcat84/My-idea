@@ -1,0 +1,139 @@
+==============================================================================
+CASO LD-OPC05-038   par: control_estadistico_de_procesos  <->  plan_de_control
+==============================================================================
+  NODO control_estadistico_de_procesos
+    titulo: Control Estadístico de Procesos (SPC)
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    entregable: Gráfico de control implementado con límites calculados, subgrupos racionales definidos y protocolo de interpretación/acción
+       1. Elegir la característica a graficar, priorizando las de alta tasa de defectos
+       2. Identificar variables y condiciones del proceso que contribuyen a la característica final
+       3. Verificar que el sistema de medición tenga precisión y exactitud suficientes
+       4. Determinar el punto más temprano de prueba para detectar causas asignables
+       5. Elegir el tipo de gráfico de control adecuado (variables o atributos)
+       6. Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio
+       7. Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5
+       8. Establecer un sistema simple y confiable de recolección de datos
+       9. Calcular límites de control y definir instrucciones de interpretación y acción
+      10. Graficar los datos e interpretar los resultados
+  ---
+  NODO plan_de_control
+    titulo: Plan de Control
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    entregable: Plan de control documentado con variables, mediciones, responsables y acciones correctivas definidas
+       1. Identificar las variables que afectan al remedio y al cliente directa o indirectamente
+       2. Establecer el estándar que activará una acción, idealmente un límite de control de una carta de control
+       3. Definir cómo se medirá cada variable de control, especificando unidad de medida, sensor, frecuencia y tamaño de muestra
+       4. Establecer dónde, cuándo y cómo se registrarán las mediciones
+       5. Decidir quién analizará las mediciones y determinará si el proceso está fuera de control
+       6. Decidir quién actuará para diagnosticar y eliminar la causa asignable
+       7. Definir los pasos para regresar el proceso a control
+       8. Revisar la matriz para verificar completitud y efectividad, y también su cobertura de variables críticas y velocidad de respuesta
+       9. Capacitar a los dueños del proceso en el uso del plan de control.
+      10. Auditar periódicamente la efectividad del plan de control.
+
+==============================================================================
+CASO LD-OPC05-081   par: fase_accomplish_experiencia_cliente  <->  reunion_conclusion_proyecto
+==============================================================================
+  NODO fase_accomplish_experiencia_cliente
+    titulo: Fase Accomplish: Verificar que el Cliente Logró su Objetivo
+    fuente: Never Lose a Customer Again - Joey Coleman
+    entregable: Sistema de tracking de logros de clientes y protocolo de celebración definido para el momento en que se alcanza el objetivo
+       1. Definir claramente cuál es el objetivo/resultado que el cliente busca al comprar tu producto, y no solo la entrega del producto
+       2. Implementar un sistema de seguimiento (automatizado o manual) para saber cuándo el cliente alcanza ese objetivo
+       3. Clasificar cada relación con cliente en uno de los tres escenarios: Mission Accomplished, Lukewarm Bath o Mission Failure
+       4. Diseñar un momento de celebración específico para cuando el cliente logra su objetivo
+       5. Reservar al menos 5% de las ganancias del proyecto para invertir en mejoras de experiencia del cliente
+       6. Identificar el objetivo superficial que el cliente dice buscar
+       7. Investigar el deseo o motivación real detrás de ese objetivo declarado
+       8. Diseñar un punto de seguimiento posterior al logro del objetivo aparente (ej. pedir una foto, confirmar el resultado real)
+       9. Mantener contacto y apoyo del equipo más allá del cumplimiento nominal del contrato
+      10. Evitar que el equipo 'desacelere' el esfuerzo justo cuando el cliente cree haber terminado
+      11. Recoger evidencia (testimonios, datos) del resultado logrado para usos futuros.
+  ---
+  NODO reunion_conclusion_proyecto
+    titulo: Reunión de Conclusión con Encuestas Internas y Externas
+    fuente: Never Lose a Customer Again - Joey Coleman
+    entregable: Protocolo de cierre de proyecto con encuestas internas/externas y plan de monitoreo post-entrega documentado
+       1. Programar una Reunión de Conclusión al finalizar el proyecto, revisando los objetivos y métricas definidos en el kickoff
+       2. Diseñar una encuesta interna para el equipo: satisfacción de trabajar con el cliente, disposición a repetir, comentarios abiertos
+       3. Diseñar una encuesta externa para el cliente: satisfacción, probabilidad de recomendar, comentarios abiertos, con una calificación inicial de estrellas o NPS
+       4. Ramificar las preguntas según el puntaje recibido (alta satisfacción → pedir testimonio; baja satisfacción → espacio para desahogo y solución)
+       5. Establecer un periodo de monitoreo posterior (ej. 3 meses) para mitigar el 'remordimiento post-lanzamiento' del cliente
+       6. Solicitar testimonios y referidos solo después de dar valor y feedback positivo primero
+       7. Revisar los objetivos organizacionales y métricas de éxito definidas en el kickoff
+       8. Realizar una evaluación honesta del nivel de éxito en cada métrica
+       9. Solicitar feedback del cliente sobre esas métricas
+      10. Atender cualquier deficiencia pendiente antes de cerrar
+      11. Compartir testimonios y reconocimientos mutuos
+      12. Establecer un plan de monitoreo post-entrega (ej. 3 meses de seguimiento)
+      13. Usa los resultados para ajustar tus procesos futuros
+
+==============================================================================
+CASO LD-OPC05-087   par: gestion_portafolio_dos_niveles  <->  sistema_gates_go_kill
+==============================================================================
+  NODO gestion_portafolio_dos_niveles
+    titulo: Enfoque Jerárquico de Gestión de Portafolio
+    fuente: Winning at New Products - Robert G. Cooper
+    entregable: Un sistema dual documentado de gates y revisiones de portafolio con roles y frecuencias definidas
+       1. Establecer un proceso de gating (compuertas) para revisar cada proyecto individualmente
+       2. Establecer revisiones de portafolio trimestrales o semestrales que vean el conjunto completo de proyectos
+       3. Definir qué decisiones son estratégicas (alto nivel) y cuáles tácticas (selección/priorización)
+       4. Usar ambos procesos de forma complementaria, no sustitutiva
+  ---
+  NODO sistema_gates_go_kill
+    titulo: Sistema de Gates (Puntos de Decisión Go/Kill)
+    fuente: Winning at New Products - Robert G. Cooper
+    entregable: Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control
+       1. Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+       2. Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+       3. Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+       4. Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+       5. Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+       6. Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+       7. En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+       8. No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+       9. Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+      10. Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+      11. Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+      12. Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+      13. Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+      14. Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+      15. Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+      16. Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+      17. Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+
+==============================================================================
+CASO LD-OPC05-088   par: gestion_portafolio_foco  <->  sistema_gates_go_kill
+==============================================================================
+  NODO gestion_portafolio_foco
+    titulo: Gestión del Portafolio y Foco de Recursos
+    fuente: Winning at New Products - Robert G. Cooper
+    entregable: Portafolio de proyectos priorizado y balanceado según capacidad real de recursos disponibles
+       1. Auditar el número de proyectos activos versus la capacidad real de recursos
+       2. Aplicar criterios estrictos de Go/Kill para reducir el número de proyectos en pipeline
+       3. Priorizar proyectos de mayor potencial estratégico y financiero
+       4. Evitar el multitasking excesivo del personal entre proyectos simultáneos
+       5. Revisar periódicamente el balance del portafolio (riesgo, tipo de innovación, mercados)
+  ---
+  NODO sistema_gates_go_kill
+    titulo: Sistema de Gates (Puntos de Decisión Go/Kill)
+    fuente: Winning at New Products - Robert G. Cooper
+    entregable: Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control
+       1. Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+       2. Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+       3. Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+       4. Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+       5. Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+       6. Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+       7. En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+       8. No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+       9. Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+      10. Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+      11. Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+      12. Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+      13. Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+      14. Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+      15. Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+      16. Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+      17. Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+

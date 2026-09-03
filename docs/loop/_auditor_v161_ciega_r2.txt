@@ -1,0 +1,95 @@
+==============================================================================
+CASO LD-OPC05-109   par: plan_gestion_comunicaciones  <->  plan_gestion_interesados
+==============================================================================
+  NODO plan_gestion_comunicaciones
+    titulo: Plan de comunicación con las personas que te importan en el proyecto
+    fuente: A Project Manager's Book of Forms - Cynthia Stackpole Snyder
+    entregable: Un plan de comunicación completo con la lista de personas involucradas, el tipo de información, el método, la frecuencia y quién es responsable de cada envío.
+       1. Haz una lista de las personas o grupos que necesitan recibir información de tu proyecto
+       2. Describe qué tipo de información vas a comunicar a cada uno (reportes de avance, actas, actualizaciones)
+       3. Decide el método de entrega (correo, reuniones, videollamadas)
+       4. Define cada cuánto o en qué momento vas a enviar cada comunicación
+       5. Decide quién es el responsable de mandar cada comunicación
+       6. Anota las restricciones o supuestos de comunicación y un glosario con los términos que uses
+  ---
+  NODO plan_gestion_interesados
+    titulo: Plan para relacionarte con las personas interesadas en tu proyecto
+    fuente: A Project Manager's Book of Forms - Cynthia Stackpole Snyder
+    entregable: Una lista donde para cada persona interesada tienes anotado su nivel actual y deseado de compromiso, junto con la manera en que planeas acercarla.
+       1. Anota el nivel de compromiso actual y el nivel que te gustaría lograr con cada persona interesada
+       2. Ubica a cada una según cómo se relaciona con tu proyecto: si no lo conoce, si se resiste, si es neutral, si lo apoya o si ya lo defiende
+       3. Define qué necesita saber cada persona y cómo se lo vas a comunicar
+       4. Identifica cómo se relacionan entre sí los distintos grupos de personas interesadas
+       5. Piensa cómo vas a acercar a cada una al nivel de compromiso que necesitas
+
+==============================================================================
+CASO LD-OPC05-110   par: portfolio_management  <->  sistema_gates_go_kill
+==============================================================================
+  NODO portfolio_management
+    titulo: Gestión de Portafolio de Proyectos (Portfolio Management)
+    fuente: Winning at New Products - Robert G. Cooper
+    entregable: Portafolio de proyectos priorizado y balanceado, con recursos asignados según valor estratégico y decisiones explícitas de Go/Kill documentadas.
+       1. Evaluar si existen demasiados proyectos para los recursos disponibles
+       2. Revisar el balance del portafolio (proyectos pequeños vs de alto valor)
+       3. Implementar revisiones periódicas de todo el portafolio de forma holística
+       4. Tomar decisiones Go/Kill continuas sobre proyectos individuales
+       5. Eliminar proyectos débiles o que ya no cumplen con la estrategia (aproximadamente un tercio suele requerir cancelación)
+       6. Reasignar los recursos liberados a los proyectos de mayor valor
+  ---
+  NODO sistema_gates_go_kill
+    titulo: Sistema de Gates (Puntos de Decisión Go/Kill)
+    fuente: Winning at New Products - Robert G. Cooper
+    entregable: Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control
+       1. Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+       2. Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+       3. Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+       4. Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+       5. Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+       6. Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+       7. En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+       8. No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+       9. Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+      10. Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+      11. Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+      12. Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+      13. Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+      14. Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+      15. Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+      16. Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+      17. Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+
+==============================================================================
+CASO LD-OPC05-116   par: reglas_gestion_riesgo_gambling  <->  sistema_gates_go_kill
+==============================================================================
+  NODO reglas_gestion_riesgo_gambling
+    titulo: Las Cinco Reglas de Gestión de Riesgo (Gambling Rules)
+    fuente: Winning at New Products - Robert G. Cooper
+    entregable: Un mapa de riesgo del proyecto que muestre la relación entre incertidumbre y montos invertidos en cada etapa, con puntos de salida definidos
+       1. Evaluar el nivel de incertidumbre actual antes de asignar recursos a la siguiente etapa
+       2. Dividir tu inversión total en etapas incrementales en vez de comprometer todo el presupuesto de una vez
+       3. Invertir en investigación de mercado y técnica (VoC, tests) para reducir la incertidumbre antes de aumentar el gasto
+       4. Definir puntos de decisión claros (gates) donde puedas matar el proyecto si la información no es favorable
+       5. Aumentar el monto invertido solo cuando la incertidumbre haya bajado en la etapa anterior
+  ---
+  NODO sistema_gates_go_kill
+    titulo: Sistema de Gates (Puntos de Decisión Go/Kill)
+    fuente: Winning at New Products - Robert G. Cooper
+    entregable: Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control
+       1. Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+       2. Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+       3. Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+       4. Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+       5. Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+       6. Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+       7. En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+       8. No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+       9. Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+      10. Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+      11. Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+      12. Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+      13. Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+      14. Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+      15. Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+      16. Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+      17. Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+
