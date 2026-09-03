@@ -1,0 +1,101 @@
+==============================================================================
+VUELTA 161, TAREA 3: EL ORDEN ESCRITO, RECORRIDO HASTA DONDE LLEGA
+==============================================================================
+
+A) EL ORDEN, LEIDO DEL FICHERO Y NO TECLEADO
+   fuente: docs/plan/OPERACIONES.jsonl (campo `fase`)
+   00_CODIGO
+   01_FUENTES
+   02_DESTEJIDOS
+   03_FUSIONES
+   04_ENLACES
+   05_SANEO
+   06_MESAS
+   07_ADUANA
+   08_VERIFICACION
+   09_LECTURAS_DIRIGIDAS
+   10_INVENTARIO
+   CIFRA fases con operaciones: 11
+
+B) EL RECORRIDO, FASE A FASE, CON SUS CIFRAS TALLADAS
+   instrumento: scripts/loop/tallar_estado_de_fase.py --fase <N>
+
+   | fase | catalogo | cumplidas | sin cumplir | de ellas SIN VARA ESCRITA | sin cumplir CON VARA QUE MIDE | las que faltan |
+   |---|---:|---:|---:|---:|---:|---|
+   | 00_CODIGO | 7 | 0 | 7 | 7 | 0 | OP-C-01, OP-C-02, OP-C-03, OP-C-04, OP-C-05, OP-S-06, OP-S-07 |
+   | 01_FUENTES | 7 | 0 | 7 | 7 | 0 | OP-F-01, OP-F-02, OP-F-03, OP-F-04-COL, OP-F-04-HOR, OP-F-04-RAC, OP-F-04-WEI |
+   | 02_DESTEJIDOS | 9 | 1 | 8 | 7 | 1 | OP-D-01, OP-D-02, OP-D-03, OP-D-04, OP-D-06, OP-D-07, OP-D-08, OP-D-09 |
+   | 03_FUSIONES | 16 | 12 | 4 | 2 | 2 | OP-M-02-ADMIT, OP-M-02-MEDIOS, OP-U-01, OP-U-02 |
+   | 04_ENLACES | 10 | 5 | 5 | 5 | 0 | OP-E-01, OP-E-02, OP-E-03, OP-E-06, OP-E-07 |
+   | 05_SANEO | 10 | 1 | 9 | 9 | 0 | OP-S-02, OP-S-03, OP-S-04, OP-S-05, OP-S-08, OP-S-09, OP-S-10, OP-S-11, OP-S-12 |
+   | 06_MESAS | 16 | 16 | 0 | 0 | 0 | ninguna |
+   | 07_ADUANA | 2 | 0 | 2 | 2 | 0 | OP-A-01, OP-A-02 |
+   | 08_VERIFICACION | 1 | 0 | 1 | 1 | 0 | OP-V-01 |
+   | 09_LECTURAS_DIRIGIDAS | 3 | 0 | 3 | 3 | 0 | OP-L-01, OP-L-02, OP-L-03 |
+   | 10_INVENTARIO | 1 | 0 | 1 | 1 | 0 | OP-I-01 |
+
+   CIFRA fases medidas: 11
+   CIFRA fases sin NINGUNA sin cumplir: 1
+   CIFRA fases sin ninguna sin cumplir CON VARA QUE MIDE: 9
+   CIFRA operaciones del plan entero: 82
+   CIFRA sin cumplir en total: 47
+   CIFRA de ellas SIN VARA ESCRITA (no computables): 44
+   CIFRA de ellas SIN CUMPLIR CON VARA QUE MIDE: 3
+
+   LO QUE ESTA TABLA DICE Y LO QUE NO, Y SE SEPARA A PROPOSITO:
+   'sin cumplir' del tallador incluye las NO COMPUTABLES, o sea las
+   de un tipo para el que NO HAY REGLA ESCRITA que mida su destino
+   contra el grafo. Esa columna NO dice que la operacion este
+   pendiente: dice que nadie ha escrito con que medirla. La columna
+   que si muerde es la ultima.
+   LA PRIMERA DEL ORDEN CON ALGO SIN CUMPLIR Y CON VARA QUE MIDE:
+      02_DESTEJIDOS, con 1 (OP-D-01, OP-D-02, OP-D-03, OP-D-04, OP-D-06, OP-D-07, OP-D-08, OP-D-09)
+
+C) EL MURO, MEDIDO HOY Y NO CITADO DE MEMORIA
+   ACTA_AUDITOR.md:50182, leida hoy:
+      **3.10, RESPUESTA A SU PREGUNTA 1, SI LA FASE 08 PUEDE DARSE POR HECHA: NO, Y NO NECESITO
+   .env existe en el arbol de trabajo: False
+   .env esta en .gitignore: True
+
+   LA PRUEBA DE RUMBOS, CORRIDA HOY (tiene que fallar VISIBLE):
+      ERROR: falta VOYAGE_API_KEY en .env
+      EXITCODE de la prueba de rumbos: 2
+      FALLA VISIBLE: True
+
+D) LO QUE APARECIO AL RECORRER EL ORDEN, Y NO LO ARREGLO: OP-D-02
+   Es la UNICA operacion de una fase distinta de la 03 que sale SIN
+   CUMPLIR CON UNA VARA QUE MIDE. Se mide y se declara, no se toca.
+   superviviente escrito en la ficha: voz_del_cliente_voc
+   campo `nodos` de la ficha (4): voz_del_cliente_voc, enfoque_mercado_voc, homework_frontend_loading, voice_of_customer_homework
+   campo `eliminar` de la ficha: []
+   ids_alias del superviviente HOY: ['enfoque_mercado_voc']
+      voz_del_cliente_voc              existe=True deprecado=False en ids_alias del superviviente=False
+      enfoque_mercado_voc              existe=True deprecado=True en ids_alias del superviviente=True
+      homework_frontend_loading        existe=True deprecado=False en ids_alias del superviviente=False
+      voice_of_customer_homework       existe=True deprecado=False en ids_alias del superviviente=False
+   LA VARA DEL TALLADOR toma como ABSORBIDOS a todo `nodos` menos el
+   superviviente, o sea TRES, y exige de los tres que esten deprecados
+   y en ids_alias. LA FICHA NO DICE ESO: su orden interno manda FUNDIR
+   con enfoque_mercado_voc (punto 2) y solo TENER DELANTE a
+   homework_frontend_loading y voice_of_customer_homework (punto 4), y
+   su campo `eliminar` esta VACIO. Medido contra el grafo, el unico
+   absorbido que la ficha manda SI esta hecho: enfoque_mercado_voc
+   deprecado y en ids_alias del superviviente.
+   NO TOCO LA VARA NI LA FICHA. Queda PENDIENTE DE DOCTRINA y va como
+   pregunta: si `tener delante` cuenta como absorcion para la vara de
+   los DESTEJIDOS, esta operacion esta sin cumplir; si no cuenta, la
+   vara es mas ancha que la ficha y el rojo es falso.
+
+E) DONDE TERMINA LO QUE UN BUCLE PUEDE HACER SOLO
+   La fase 08 tiene UNA operacion, OP-V-01, y su punto 9 es la
+   verificacion TRANSVERSAL: Gate 0 verde, suite verde, VUELO COMPLETO,
+   PRUEBA DE RUMBOS y REINDEXADO SEMANTICO. Las tres ultimas necesitan
+   credencial: VOYAGE_API_KEY para el indice y los rumbos,
+   NEXT_PUBLIC_SUPABASE_URL y SUPABASE_SERVICE_ROLE_KEY mas un next dev
+   levantado para el vuelo. El .env esta fuera del repo mientras el
+   bucle corre Y ESO ESTA BIEN (AUDITOR.md seccion 4).
+   SE PARA Y SE DICE: no es un fallo del bucle, es su frontera.
+   EL MERGE NO SE PIDE NI SE HACE.
+
+FIN
+EXITCODE: 0
