@@ -370,11 +370,54 @@ def primera_linea_distinta(ruta_a_texto_1, ruta_a_texto_2):
     return None, None, None
 
 
-def correr_dos_veces(script, directorio, sujeto=None, base=None):
-    """Devuelve (codigo, salida, escritos, inestables). Las dos listas se
+def _cambios_entre_corridas(directorio, tras1, tras2, textos1, nombres):
+    """Los ficheros de `nombres` cuyo CONTENIDO cambio entre la corrida 1 y la
+    2, con la primera linea que difiere. Se usa dos veces: para los que el
+    script escribe y para el ruido que no es de nadie."""
+    salida = []
+    for n in sorted(nombres):
+        if tras1.get(n, (None, None))[1] == tras2.get(n, (None, None))[1]:
+            continue
+        texto2 = ""
+        ruta = os.path.join(directorio, n)
+        if os.path.isfile(ruta):
+            with io.open(ruta, encoding="utf-8", errors="replace") as f:
+                texto2 = f.read()
+        num, la, lb = primera_linea_distinta(textos1.get(n, ""), texto2)
+        salida.append((n, num, la, lb))
+    return salida
+
+
+def correr_dos_veces(script, directorio, sujeto=None, base=None, cenir=True):
+    """Devuelve (codigo, salida, escritos, inestables, ruido). Las listas se
     COMPUTAN del directorio, nunca se teclean: `escritos` son los .txt cuyo
-    mtime se movio en la primera corrida, `inestables` los que cambiaron de
-    CONTENIDO entre la primera y la segunda."""
+    mtime se movio en la primera corrida, `inestables` los ficheros QUE ESE
+    SCRIPT ESCRIBE que cambiaron de CONTENIDO entre la primera y la segunda, y
+    `ruido` los que cambiaron o aparecieron SIN SER DE NADIE.
+
+    --- CORRECCION DECLARADA (vuelta 157, TAREA 5, adjudicacion 6.9 del acta
+    157): LA COMPROBACION SE CINE A LOS FICHEROS QUE CADA SCRIPT ESCRIBE ---
+
+    LO QUE ESTA FUNCION HACIA ANTES, escrito aqui en vez de borrado: computaba
+    `inestables` recorriendo `sorted(set(tras1) | set(tras2))`, o sea EL
+    DIRECTORIO ENTERO, y le colgaba a un script CUALQUIER fichero que apareciera
+    o cambiara mientras el corria. El auditor lo demostro cayendo el (acta 157,
+    caida 2 y seccion 5.3): corrio la bateria con sus instrumentos al lado y
+    salio ROJO acusando a `vuelta144_2b_mutacion_giro.py` y a
+    `vuelta147_2c_mutacion_vitalidad.py` por dos ficheros SUYOS que ninguno de
+    los dos escribe, y la propia salida decia de los dos "salidas selladas que
+    escribe: ninguna".
+
+    LO QUE HACE AHORA: `inestables` SOLO puede contener ficheros de `escritos`,
+    que es la lista que esta guarda ya computaba y ya publicaba. Lo que cambia y
+    no es de nadie sale en `ruido`, se reporta APARTE y CON SU NOMBRE, y NO
+    enciende el rojo de ningun script. Callarlo seria la caida contraria: falla
+    ruidoso sigue vigente, lo que se arregla es A QUIEN SE NOMBRA.
+
+    `cenir=False` reproduce EL COMPORTAMIENTO VIEJO, y existe SOLO para que
+    `scripts/loop/vuelta157_tarea5c_mutacion_ruido.py` pueda probar por mutacion
+    que la version vieja SIGUE saliendo roja sobre el mismo escenario. En el
+    ciclo de cierre nadie lo pasa."""
     antes = estado_de(directorio)
     codigo, salida = correr(script, sujeto, base)
     tras1 = estado_de(directorio)
@@ -386,20 +429,15 @@ def correr_dos_veces(script, directorio, sujeto=None, base=None):
                 textos1[n] = f.read()
     correr(script, sujeto, base)
     tras2 = estado_de(directorio)
-    inestables = []
-    for n in sorted(set(tras1) | set(tras2)):
-        sha1 = tras1.get(n, (None, None))[1]
-        sha2 = tras2.get(n, (None, None))[1]
-        if sha1 == sha2:
-            continue
-        texto2 = ""
-        ruta = os.path.join(directorio, n)
-        if os.path.isfile(ruta):
-            with io.open(ruta, encoding="utf-8", errors="replace") as f:
-                texto2 = f.read()
-        num, la, lb = primera_linea_distinta(textos1.get(n, ""), texto2)
-        inestables.append((n, num, la, lb))
-    return codigo, salida, escritos, inestables
+    todos = set(tras1) | set(tras2)
+    suyos = set(escritos)
+    if not cenir:
+        # EL COMPORTAMIENTO VIEJO, entero, para el caso por mutacion.
+        return (codigo, salida, escritos,
+                _cambios_entre_corridas(directorio, tras1, tras2, textos1, todos), [])
+    inestables = _cambios_entre_corridas(directorio, tras1, tras2, textos1, todos & suyos)
+    ruido = _cambios_entre_corridas(directorio, tras1, tras2, textos1, todos - suyos)
+    return codigo, salida, escritos, inestables, ruido
 
 
 def clasificar(codigo, salida):
@@ -451,7 +489,7 @@ def prueba_de_reproducibilidad():
                 ("script_inestable.py", SCRIPT_INESTABLE, True),
                 ("script_estable.py", SCRIPT_ESTABLE, False)):
             io.open(os.path.join(tmp, nombre), "w", encoding="utf-8").write(fuente)
-            _c, _s, escritos, inestables = correr_dos_veces(nombre, tmp, base=tmp)
+            _c, _s, escritos, inestables, _r = correr_dos_veces(nombre, tmp, base=tmp)
             hay = bool(inestables)
             ok = (hay == esperado_inestable)
             resultados.append((nombre, hay, esperado_inestable, ok))
@@ -529,15 +567,22 @@ def main():
 
         filas = []
         inestables_todas = []
+        ruido_todo = []
         for script, admite_sujeto in VIEJAS:
             usar = sujeto if (a.mutar and admite_sujeto) else None
             if a.mutar:
                 # En modo mutacion el sujeto es una copia con el ancla arrancada:
                 # lo que se prueba es el ANCLA, no la reproducibilidad.
                 codigo, salida = correr(script, usar)
-                escritos, inestables = [], []
+                escritos, inestables, ruido = [], [], []
             else:
-                codigo, salida, escritos, inestables = correr_dos_veces(script, DOCS_LOOP, usar)
+                codigo, salida, escritos, inestables, ruido = correr_dos_veces(
+                    script, DOCS_LOOP, usar)
+                for nombre, num, la, lb in ruido:
+                    # ADJUDICACION 6.9 DEL ACTA 157, PUNTO (b): lo que cambia en
+                    # docs/loop/ y NO ES DE NADIE no se calla y no se le cuelga a
+                    # nadie. Se acumula aqui y se publica APARTE, con su nombre.
+                    ruido_todo.append((script, nombre, num, la, lb))
             estado = clasificar(codigo, salida)
             # CASO DECLARADO (TAREA 2.d, vuelta 142): un exit conocido, medido y
             # publicado en su vuelta deja de contarse como NO MORDIO, PERO SE
@@ -584,6 +629,21 @@ def main():
         print("      %s: %s cambia SOLO entre dos corridas, linea %s" % (script, nombre, num))
         print("         corrida 1: %s" % la)
         print("         corrida 2: %s" % lb)
+
+    # ADJUDICACION 6.9 DEL ACTA 157, PUNTO (b). EL RUIDO DE CONCURRENCIA SE
+    # PUBLICA APARTE Y CON SU NOMBRE, Y NO ENCIENDE EL ROJO DE NADIE. La cuenta
+    # se computa de `ruido_todo`, no se teclea, para que el dia que crezca no
+    # deje una frase mintiendo detras.
+    sueltos = sorted({n for _s, n, _num, _a, _b in ruido_todo})
+    print("  RUIDO DE CONCURRENCIA: %d fichero(s) (%s)"
+          % (len(sueltos), ", ".join(sueltos) or "ninguno"))
+    if sueltos:
+        print("      cambian en docs/loop/ mientras la bateria corre y NO LOS ESCRIBE")
+        print("      NINGUN script de la nomina. NO son de nadie y NO son rojo de nadie:")
+        print("      son la senal de que esta bateria se corrio con algo al lado, y por")
+        print("      regla de la casa SE CORRE SOLA.")
+        for script, nombre, num, la, lb in ruido_todo:
+            print("      aparecio durante %s: %s, linea %s" % (script, nombre, num))
 
     if a.mutar:
         esperadas = [s for s, admite in VIEJAS if admite]

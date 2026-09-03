@@ -1,0 +1,41 @@
+==============================================================================
+VUELTA 157, TAREA 5.c: CASO POSITIVO POR MUTACION DEL RUIDO DE CONCURRENCIA
+==============================================================================
+
+  CIFRA mutaciones en la nomina VIEJAS (contadas, no tecleadas): 23
+  (D) LAS 23 SIGUEN SIENDO 23: True
+
+  commit de apertura, leido de git log: abb2fe4e03a314a03f3a034d4cb867f8d0161a4c
+  guarda VIEJA importada del commit de apertura, 29712 bytes
+  la vieja trae el parametro `cenir`: False
+
+  P.16, QUIEN FABRICA LIMPIA: los directorios temporales se retiran.
+
+(A) LA GUARDA NUEVA, CENIDA A LO QUE EL SCRIPT ESCRIBE
+    salidas selladas que ESCRIBE (corrida 1) : SALIDA_PROPIA_SELLADA.txt
+    CIFRA inestables (rojo del script)       : 0 (ninguno)
+    CIFRA ruido de concurrencia (aparte)     : 1 (_vecino_de_otro.txt)
+    VEREDICTO (A): VERDE, y el ruido va nombrado APARTE
+
+(B) LA GUARDA VIEJA, SACADA DEL COMMIT DE APERTURA abb2fe4e
+    salidas selladas que ESCRIBE (corrida 1) : SALIDA_PROPIA_SELLADA.txt
+    CIFRA inestables que le cuelga al script : 1 (_vecino_de_otro.txt)
+    VEREDICTO (B): SIGUE SALIENDO ROJA, y acusa a quien no fue
+    Y ESTE ES EL DEFECTO ENTERO EN UNA LINEA: el fichero que la vieja le
+    cuelga al script NO ESTA en la lista de lo que el script escribe.
+
+(C) LA NUEVA CON cenir=False, o sea el comportamiento viejo en proceso
+    CIFRA inestables: 1 (_vecino_de_otro.txt)
+    VEREDICTO (C): ROJO, como la vieja
+
+  MUTACION ACTIVA: se le da la vuelta al valor esperado de (A). Ahora se
+  exige que la guarda NUEVA siga colgandole el vecino al script, que es
+  falso, y este caso tiene que CAER. Si no cae, no probaba nada.
+
+  (A) esperado False, medido True
+  (B) esperado True, medido True
+  (C) esperado True, medido True
+  (D) esperado True, medido True
+
+ROJO: alguna de las cuatro condiciones no se cumple.
+FIN
