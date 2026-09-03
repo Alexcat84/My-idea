@@ -1,0 +1,81 @@
+==============================================================================
+VUELTA 162, TAREA 5: EL ORDEN ESCRITO, RECORRIDO HASTA EL MURO
+==============================================================================
+
+A) EL ORDEN, LEIDO DEL FICHERO Y NO TECLEADO
+   fuente: docs/plan/OPERACIONES.jsonl (campo `fase`)
+   00_CODIGO
+   01_FUENTES
+   02_DESTEJIDOS
+   03_FUSIONES
+   04_ENLACES
+   05_SANEO
+   06_MESAS
+   07_ADUANA
+   08_VERIFICACION
+   09_LECTURAS_DIRIGIDAS
+   10_INVENTARIO
+   CIFRA fases con operaciones: 11
+
+B) EL RECORRIDO, FASE A FASE, CON SUS CIFRAS TALLADAS
+   instrumento: scripts/loop/tallar_estado_de_fase.py --fase <N>
+
+   | fase | catalogo | cumplidas | sin cumplir | de ellas SIN VARA ESCRITA | sin cumplir CON VARA QUE MIDE | las que faltan |
+   |---|---:|---:|---:|---:|---:|---|
+   | 00_CODIGO | 7 | 0 | 7 | 7 | 0 | OP-C-01, OP-C-02, OP-C-03, OP-C-04, OP-C-05, OP-S-06, OP-S-07 |
+   | 01_FUENTES | 7 | 0 | 7 | 7 | 0 | OP-F-01, OP-F-02, OP-F-03, OP-F-04-COL, OP-F-04-HOR, OP-F-04-RAC, OP-F-04-WEI |
+   | 02_DESTEJIDOS | 9 | 2 | 7 | 7 | 0 | OP-D-01, OP-D-03, OP-D-04, OP-D-06, OP-D-07, OP-D-08, OP-D-09 |
+   | 03_FUSIONES | 16 | 12 | 4 | 2 | 2 | OP-M-02-ADMIT, OP-M-02-MEDIOS, OP-U-01, OP-U-02 |
+   | 04_ENLACES | 10 | 5 | 5 | 5 | 0 | OP-E-01, OP-E-02, OP-E-03, OP-E-06, OP-E-07 |
+   | 05_SANEO | 10 | 1 | 9 | 9 | 0 | OP-S-02, OP-S-03, OP-S-04, OP-S-05, OP-S-08, OP-S-09, OP-S-10, OP-S-11, OP-S-12 |
+   | 06_MESAS | 16 | 16 | 0 | 0 | 0 | ninguna |
+   | 07_ADUANA | 2 | 0 | 2 | 2 | 0 | OP-A-01, OP-A-02 |
+   | 08_VERIFICACION | 1 | 0 | 1 | 1 | 0 | OP-V-01 |
+   | 09_LECTURAS_DIRIGIDAS | 3 | 0 | 3 | 3 | 0 | OP-L-01, OP-L-02, OP-L-03 |
+   | 10_INVENTARIO | 1 | 0 | 1 | 1 | 0 | OP-I-01 |
+
+   CIFRA fases medidas: 11
+   CIFRA fases sin NINGUNA sin cumplir: 1
+   CIFRA fases sin ninguna sin cumplir CON VARA QUE MIDE: 10
+   CIFRA operaciones del plan entero: 82
+   CIFRA sin cumplir en total: 46
+   CIFRA de ellas SIN VARA ESCRITA (no computables): 44
+   CIFRA de ellas SIN CUMPLIR CON VARA QUE MIDE: 2
+
+   LO QUE ESTA TABLA DICE Y LO QUE NO, Y SE SEPARA A PROPOSITO:
+   'sin cumplir' del tallador incluye las NO COMPUTABLES, o sea las de un tipo
+   para el que NO HAY REGLA ESCRITA que mida su destino contra el grafo. Esa
+   columna NO dice que la operacion este pendiente: dice que nadie ha escrito
+   con que medirla. La columna que si muerde es la ultima.
+   LA PRIMERA DEL ORDEN CON ALGO SIN CUMPLIR Y CON VARA QUE MIDE: 03_FUSIONES
+
+C) LO QUE APARECE AL RECORRER EL ORDEN, COMPUTADO Y NO TECLEADO
+   CIFRA fases con algo sin cumplir CON VARA QUE MIDE: 1
+      03_FUSIONES: 2 con vara que mide, dentro de las 4 sin cumplir (OP-M-02-ADMIT, OP-M-02-MEDIOS, OP-U-01, OP-U-02)
+   Y LA COMPARACION CON LA VUELTA 161, SIN BORRAR LO QUE AQUELLA MIDIO: la 161
+   publico 47 sin cumplir, 44 sin vara escrita y TRES con vara que muerde
+   (OP-M-02-ADMIT, OP-M-02-MEDIOS y OP-D-02). Hoy son 46, 44 y 2: la que sale
+   es OP-D-02, y sale por la TAREA 2.b de esta vuelta (adjudicacion 6.4 del
+   acta 161), no porque se haya tocado el grafo.
+
+D) EL MURO, MEDIDO HOY Y NO CITADO DE MEMORIA
+   ACTA_AUDITOR.md:50182, leida hoy:
+      **3.10, RESPUESTA A SU PREGUNTA 1, SI LA FASE 08 PUEDE DARSE POR HECHA: NO, Y NO NECESITO
+   .env existe en el arbol de trabajo: False
+   .env esta en .gitignore: True
+
+   LA PRUEBA DE RUMBOS, CORRIDA HOY (tiene que fallar VISIBLE):
+      ERROR: falta VOYAGE_API_KEY en .env
+      EXITCODE de la prueba de rumbos: 2
+      FALLA VISIBLE: True
+
+E) DONDE TERMINA LO QUE UN BUCLE PUEDE HACER SOLO
+   La fase 08 tiene UNA operacion, OP-V-01, y su punto 9 es la verificacion
+   TRANSVERSAL: Gate 0 verde, suite verde, VUELO COMPLETO, PRUEBA DE RUMBOS y
+   REINDEXADO SEMANTICO. Las tres ultimas necesitan credencial. El .env esta
+   fuera del repo mientras el bucle corre Y ESO ESTA BIEN (AUDITOR.md 4).
+   SE PARA Y SE DICE: no es un fallo del bucle, es su frontera.
+   EL MERGE NO SE PIDE NI SE HACE.
+
+FIN
+EXITCODE: 0

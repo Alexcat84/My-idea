@@ -1,0 +1,63 @@
+==============================================================================
+VUELTA 162, TAREA 4: COLISIONES DE TITULO NORMALIZADO ENTRE VIVOS
+ES UNA MEDICION. NO SE FUNDE NADA Y NO SE PROPONE FUSION.
+==============================================================================
+
+A) EL UNIVERSO, CONTADO DEL FICHERO
+   fuente: dataset/metadata/master_graph.json (arbol de trabajo)
+   CIFRA nodos del grafo: 3853
+   CIFRA nodos VIVOS: 3169
+   CIFRA nodos deprecados: 684
+   CIFRA vivos SIN titulo_concepto: 0 (ninguno)
+
+B) LA VARA DE GATE 0, LEIDA HOY DE SU FICHERO Y NO CITADA DE MEMORIA
+   scripts/run_phase1.py:811 -> "Cero grupos con titulo_concepto exacto duplicado",
+   Esa vara agrupa por `titulo_concepto` EXACTO. Por eso puede decir CERO
+   sobre un par que solo se diferencia en una mayuscula, y NO se equivoca.
+
+C) LA VARA EXACTA, CORRIDA AQUI SOBRE LOS MISMOS VIVOS
+   CIFRA grupos por titulo EXACTO: 3169
+   CIFRA grupos EXACTOS con mas de un id: 0
+   Cuadra con lo que Gate 0 publica en la cabecera: duplicadas 0.
+
+D) LA VARA NORMALIZADA (NFKD, sin diacriticos, minusculas, espacios
+   colapsados), IMPORTADA de verificar_titulos_normalizados.py
+   CIFRA grupos por titulo NORMALIZADO: 3168
+   CIFRA COLISIONES (grupos normalizados con mas de un id vivo): 1
+   CIFRA nodos vivos metidos en una colision: 2
+
+E) LA NOMINA ENTERA, SIN RESUMIR, CADA ID CON SU TITULO EXACTO
+   CLAVE NORMALIZADA 'el sistema es tu responsabilidad'  (2 nodos)  excepcion declarada: SI
+      sistema_responsabilidad_gerencial          titulo exacto: 'El Sistema es tu Responsabilidad'
+                                                 fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+                                                 pasos: 5 | siguientes: 2 | previos: 2 | en la excepcion: SI
+      sistema_responsabilidad_gerencial_2        titulo exacto: 'El Sistema es Tu Responsabilidad'
+                                                 fuente: Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+                                                 pasos: 5 | siguientes: 1 | previos: 1 | en la excepcion: SI
+
+F) LAS EXCEPCIONES DECLARADAS DE LA GUARDA, IMPRESAS ENTERAS
+   CIFRA excepciones vigentes: 2
+      sistema_responsabilidad_gerencial          vuelta 124
+                                                 familia OP-S-09 CONTINUA por contenido (SALIDA_V123_OPS09_LECTURA.jsonl); solo el titulo esta duplicado, el veredicto no se reabre
+      sistema_responsabilidad_gerencial_2        vuelta 124
+                                                 familia OP-S-09 CONTINUA por contenido (SALIDA_V123_OPS09_LECTURA.jsonl); solo el titulo esta duplicado, el veredicto no se reabre
+
+G) LA GUARDA DE LA CASA, CORRIDA HOY POR SU CUENTA, COMO CONTRASTE
+   VERDE EXIT 0 (ref WORK): nodos vivos examinados 3169, grupos normalizados 3168, duplicados normalizados encontrados 1, excepciones vigentes 2
+   duplicados cubiertos por excepcion:
+     'el sistema es tu responsabilidad': sistema_responsabilidad_gerencial, sistema_responsabilidad_gerencial_2
+   exit 0
+
+H) LA SALUD DE LA PROPIA LISTA DE EXCEPCIONES
+   CIFRA ids exentos que YA NO estan vivos: 0 (ninguno)
+   CIFRA ids exentos vivos que YA NO colisionan con nadie: 0 (ninguno)
+
+I) EL VEREDICTO DE ESTA MEDICION
+   CIFRA colisiones de titulo normalizado entre vivos: 1
+   CIFRA de ellas ya declaradas como excepcion: 1
+   CIFRA de ellas NUEVAS, sin excepcion declarada: 0
+
+SE PARA AQUI. No se funde nada, no se propone fusion y no se toca ningun
+titulo: el alcance de campaña es del fundador (acta 161, seccion 5.3).
+FIN
+EXITCODE: 0
