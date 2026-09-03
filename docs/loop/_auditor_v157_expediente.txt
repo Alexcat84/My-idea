@@ -1,0 +1,232 @@
+RELOJ DE GIT CONGELADO EN --corte HEAD (92d29d23). RANGO PROPIO DE LA VUELTA: HEAD..HEAD (92d29d23)
+VARA DE LA P3: VIGENTE, adjudicacion 6.1 del acta 153 (rutas: dataset/, web/, engine/)
+LA ASIMETRIA P2 CONTRA P3 ESTA ESCRITA DENTRO DE ESTE INSTRUMENTO (adjudicacion
+6.2 del acta 153): la P3 va con el reloj congelado porque mide un ACTO fechado;
+la P2 lee el arbol de trabajo porque mide la EXISTENCIA de un control, que es un
+estado y no una ejecucion. Ver el docstring, bloque de la adjudicacion 6.2.
+FICHAS EN docs/plan/OPERACIONES.jsonl: 71
+
+CRITERIO (TAREA 3.b): las tres pruebas estan escritas en el docstring de
+este fichero, cada una con la fuente que la autoriza. Se dice SIEMPRE cual
+de las tres sostiene cada fila.
+
+
+EL TEXTO DE LA FICHA VA CONGELADO EN --corte (adjudicacion 6.7 del acta 155):
+  fichas en OPERACIONES.jsonl AL CORTE 92d29d23: 71
+  fichas en el ARBOL DE TRABAJO: 71
+  VARA DE `declara_su_estado`: DEL CORTE, la vigente
+
+GUARDA DEL RELOJ: commits propios de la vuelta 0 | commits contados por P3 102 | INTRUSOS 0
+COBERTURA DE CADA PRUEBA, CONTADA:
+  P1 vara de grafo: 71 ficha(s) con veredicto computable, 19 con DESTINO CUMPLIDO
+  P2 vara de codigo (presencia): 20 ficha(s) con el id_op en codigo vivo
+  P3a huella en git (mensaje + rutas dataset/web/engine): 59 ficha(s)
+  P3b caso positivo o mutacion citado y presente en el arbol del corte: 4 ficha(s)
+      OP-S-11            SALIDA_V136_3D_MUTACION.txt
+      OP-E-03            SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt, SALIDA_V96_TAREA3_MUTACION.txt, SALIDA_V97_TAREA2_MUTACION.txt, SALIDA_V98_TAREA4_MUTACION.txt, SALIDA_V99_TAREA3_MUTACION.txt
+      OP-C-05            SALIDA_V154_T2D_MUTACION.txt
+      OP-E-07            SALIDA_V93_TAREA3_MUTACION.txt, SALIDA_V94_TAREA2B_MUTACION.txt
+
+====================================================================================================
+TABLA DE LAS QUE NO CALZAN (36 de 71). Las 35 que calzan NO se imprimen.
+====================================================================================================
+| id_op | fase | estado | pruebas | motivo |
+|---|---|---|---|---|
+| `OP-F-01` | 01_FUENTES | LISTA | P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+| `OP-F-02` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-F-03` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-D-01` | 02_DESTEJIDOS | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-D-02` | 02_DESTEJIDOS | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-D-03` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-D-04` | 02_DESTEJIDOS | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-D-05` | 02_DESTEJIDOS | LISTA | P1+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-D-06` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-S-06` | 00_CODIGO | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-S-07` | 00_CODIGO | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-C-01` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+| `OP-C-02` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+| `OP-C-03` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+| `OP-C-04` | 00_CODIGO | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-U-01` | 03_FUSIONES | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-E-01` | 04_ENLACES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-A-01` | 07_ADUANA | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+| `OP-A-02` | 07_ADUANA | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+| `OP-U-02` | 03_FUSIONES | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-F-04-COL` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-F-04-HOR` | 01_FUENTES | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-F-04-WEI` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-F-04-RAC` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-E-03` | 04_ENLACES | LISTA | P3b | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-M-02-PROG` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+| `OP-M-02-ASSESS` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+| `OP-M-02-ACTIVATE` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+| `OP-M-02-ACCOMPLISH` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+| `OP-D-07` | 02_DESTEJIDOS | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-M-03-I` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+| `OP-M-03-II` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+| `OP-E-06` | 04_ENLACES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-E-07` | 04_ENLACES | LISTA | P3a+P3b | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-D-08` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+| `OP-D-09` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+
+DESGLOSE, con la evidencia de cada fila:
+  OP-F-01 (01_FUENTES, estado LISTA)
+    pruebas que dan positivo: P3a
+    P3, commits con codigo o dato: e5f7bdbd, 23942638
+  OP-F-02 (01_FUENTES, estado LISTA)
+    pruebas que dan positivo: P3a
+    P3, commits con codigo o dato: 9d4a8eb1, 2d96e3d3, 7563c85e
+  OP-F-03 (01_FUENTES, estado LISTA)
+    pruebas que dan positivo: P3a
+    P3, commits con codigo o dato: 23942638, 9d4a8eb1, dc8ef3a2
+  OP-D-01 (02_DESTEJIDOS, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: scripts/plan/simular_destejido.py
+    P3, commits con codigo o dato: b9517f11, 2a45f346, 23942638
+  OP-D-02 (02_DESTEJIDOS, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: engine/test_gate_deprecado_reciproco.py
+    P3, commits con codigo o dato: 1ecb2948, b9517f11, 2a45f346
+  OP-D-03 (02_DESTEJIDOS, estado LISTA)
+    pruebas que dan positivo: P3a
+    P3, commits con codigo o dato: e5f7bdbd, 2a45f346
+  OP-D-04 (02_DESTEJIDOS, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: scripts/costuras_internas.py
+    P3, commits con codigo o dato: b9517f11, e5f7bdbd, d406059c
+  OP-D-05 (02_DESTEJIDOS, estado LISTA)
+    pruebas que dan positivo: P1+P3a
+    P3, commits con codigo o dato: 7ea4cf27, 7e8c1f36
+  OP-D-06 (02_DESTEJIDOS, estado LISTA)
+    pruebas que dan positivo: P3a
+    P3, commits con codigo o dato: 1f7493d1, b9517f11, a0276079
+  OP-S-06 (00_CODIGO, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: scripts/run_phase1.py
+    P3, commits con codigo o dato: a1c39585, 1578e641
+  OP-S-07 (00_CODIGO, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: scripts/run_phase1.py, scripts/plan/aristas_duplicadas_tras_resolver.py
+    P3, commits con codigo o dato: a34328b2, d6341ebe, a59d49d6
+  OP-C-01 (00_CODIGO, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: web/lib/compass.ts, web/lib/engine/accesosResueltos.test.ts
+    P3, commits con codigo o dato: 1578e641, 41a9c570, 8b2ba536
+  OP-C-02 (00_CODIGO, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: web/lib/engine/accesosResueltos.test.ts, web/lib/engine/graph.ts
+    P3, commits con codigo o dato: 1578e641, 41a9c570
+  OP-C-03 (00_CODIGO, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: web/lib/engine/accesosResueltos.test.ts, web/lib/engine/graph.ts
+    P3, commits con codigo o dato: 1578e641
+  OP-C-04 (00_CODIGO, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: scripts/run_phase1.py
+    P3, commits con codigo o dato: a1c39585, 1578e641
+  OP-U-01 (03_FUSIONES, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: scripts/plan/recomputo_3388.py
+    P3, commits con codigo o dato: f040e905, 0f692945, f5e9a72b
+  OP-E-01 (04_ENLACES, estado LISTA)
+    pruebas que dan positivo: P3a
+    P3, commits con codigo o dato: 3df9cfa7, 43bafe47, 7398b308
+  OP-A-01 (07_ADUANA, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: scripts/run_phase1.py
+    P3, commits con codigo o dato: aab0039a
+  OP-A-02 (07_ADUANA, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: scripts/integrar_packs.py, scripts/run_phase1.py
+    P3, commits con codigo o dato: aab0039a
+  OP-U-02 (03_FUSIONES, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: scripts/plan/recomputo_3388.py
+    P3, commits con codigo o dato: d6341ebe, 90df5a9f, f188f1c3
+  OP-F-04-COL (01_FUENTES, estado LISTA)
+    pruebas que dan positivo: P3a
+    P3, commits con codigo o dato: a0276079, 575be1e3, f69f4819
+  OP-F-04-HOR (01_FUENTES, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: scripts/costuras_internas.py
+    P3, commits con codigo o dato: e8383dfb, 2bd8dd76, f69f4819
+  OP-F-04-WEI (01_FUENTES, estado LISTA)
+    pruebas que dan positivo: P3a
+    P3, commits con codigo o dato: 129c6909, d6341ebe, a59d49d6
+  OP-F-04-RAC (01_FUENTES, estado LISTA)
+    pruebas que dan positivo: P3a
+    P3, commits con codigo o dato: 2a45f346, 407d4d9f
+  OP-E-03 (04_ENLACES, estado LISTA)
+    pruebas que dan positivo: P3b
+  OP-M-02-PROG (03_FUSIONES, estado LISTA)
+    pruebas que dan positivo: P1+P3a
+    P3, commits con codigo o dato: 0f692945
+  OP-M-02-ASSESS (03_FUSIONES, estado LISTA)
+    pruebas que dan positivo: P1
+  OP-M-02-ACTIVATE (03_FUSIONES, estado LISTA)
+    pruebas que dan positivo: P1
+  OP-M-02-ACCOMPLISH (03_FUSIONES, estado LISTA)
+    pruebas que dan positivo: P1
+  OP-D-07 (02_DESTEJIDOS, estado LISTA)
+    pruebas que dan positivo: P2+P3a
+    P2, en codigo vivo: scripts/plan/simular_destejido.py
+    P3, commits con codigo o dato: b9517f11
+  OP-M-03-I (03_FUSIONES, estado LISTA)
+    pruebas que dan positivo: P1+P3a
+    P3, commits con codigo o dato: 4b981c04, f5e9a72b
+  OP-M-03-II (03_FUSIONES, estado LISTA)
+    pruebas que dan positivo: P1+P3a
+    P3, commits con codigo o dato: a0d6873c, 7a160a25, f5e9a72b
+  OP-E-06 (04_ENLACES, estado LISTA)
+    pruebas que dan positivo: P3a
+    P3, commits con codigo o dato: efb427bc, 3df9cfa7
+  OP-E-07 (04_ENLACES, estado LISTA)
+    pruebas que dan positivo: P3a+P3b
+    P3, commits con codigo o dato: 163c51c3, 39053558, 5c9da0d1
+  OP-D-08 (02_DESTEJIDOS, estado LISTA)
+    pruebas que dan positivo: P3a
+    P3, commits con codigo o dato: 1f7493d1, b9517f11
+  OP-D-09 (02_DESTEJIDOS, estado LISTA)
+    pruebas que dan positivo: P3a
+    P3, commits con codigo o dato: ef78c8b1, b9517f11
+
+CONTADO: no calzan 36 | de ellas, congeladas DECLARADAS 24 | congeladas EN SILENCIO 12 | HECHA sin prueba 0
+
+====================================================================================================
+TAREA 3.c: OPERACIONES DESBLOQUEADAS, con su depende_de MEDIDO
+====================================================================================================
+Criterio: estado LISTA y TODAS sus depende_de en HECHA. Las de depende_de VACIO
+no entran: nunca estuvieron bloqueadas y contarlas aqui seria ruido.
+
+| id_op | fase | tipo | depende_de medido |
+|---|---|---|---|
+| `OP-M-02-PROG` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA |
+| `OP-M-02-MEDIOS` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA |
+| `OP-D-07` | 02_DESTEJIDOS | DESTEJIDO | OP-M-03=HECHA |
+| `OP-M-03-II` | 03_FUSIONES | FUSION DE MESA | OP-M-03=HECHA |
+
+CONTADO: 4 operacion(es) LISTA con todas sus dependencias en HECHA.
+CONTRASTE: 24 operacion(es) LISTA con depende_de VACIO (nunca bloqueadas).
+
+Y LO QUE DE VERDAD QUEDA POR CORRER: las fichas en LISTA SIN NINGUNA de las
+tres pruebas. Son las unicas cuyo estado LISTA calza con el repo, o sea las
+unicas que el expediente y el arbol dicen a la vez que no se han ejecutado.
+
+| id_op | fase | tipo | depende_de medido |
+|---|---|---|---|
+| `OP-V-01` | 08_VERIFICACION | MESA | (vacio) |
+| `OP-L-01` | 09_LECTURAS_DIRIGIDAS | MESA | (vacio) |
+| `OP-L-02` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA |
+| `OP-L-03` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA, OP-D-04=LISTA, OP-D-05=LISTA, OP-D-06=LISTA |
+| `OP-I-01` | 10_INVENTARIO | MESA | (vacio) |
+| `OP-M-02-MEDIOS` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA |
+| `OP-M-02-ADMIT` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA, OP-M-02-MEDIOS=LISTA |
+
+CONTADO: 7 ficha(s) en LISTA sin ninguna prueba de ejecucion.
+
+CIFRA fichas del expediente: 71 operaciones
+CIFRA fichas que no calzan: 36 operaciones
+CIFRA fichas congeladas declaradas: 24 operaciones
+CIFRA fichas congeladas en silencio: 12 operaciones
+CIFRA fichas HECHA sin ninguna prueba: 0 operaciones
+CIFRA fichas en LISTA sin ninguna prueba: 7 operaciones

@@ -1,0 +1,30 @@
+lecturas dirigidas: 122
+con DOS o mas punteros de paso: 2  ['LD-OPC05-031', 'LD-OPC05-122']
+con UN puntero de paso:        4  ['LD-OPC05-001', 'LD-OPC05-003', 'LD-OPC05-008', 'LD-OPC05-059']
+con NINGUN puntero de paso:    116
+clases del saco de CERO punteros: {'D': 3, 'C': 113}
+clases del saco de UN puntero:   {'C': 4}
+clases del saco de DOS punteros: {'C': 2}
+
+--- BASE DE LA C EN EL ARCHIVO ENTERO DEL CRIBADO ---
+3.388 veredictos: {'D': 2760, 'A': 551, 'B': 72, 'C': 5}  |  C = 5 (0.15 por ciento)
+registro OP-C-05 via CRIBADO: {'D': 31, 'B': 1}
+registro OP-C-05 via LECTURA_DIRIGIDA: {'C': 119, 'D': 3}
+### LD-OPC05-001  clase C  ['accion_correctiva_sistematica', 'cero_defectos']
+el paso 6 de Crosby (fichar, revisar y escalar cada problema hasta la causa raiz) contra el estandar ZD y su dia de lanzamiento: cada uno expande un procedimiento que el otro no contiene
+
+### LD-OPC05-003  clase C  ['activity_duration_estimates', 'cronograma_proyecto']
+estimar duraciones por metodo (parametrico, analogo, tres puntos) contra construir el cronograma con dependencias, recursos y ruta: el paso 1 del cronograma consume la salida del otro y no la repite
+
+### LD-OPC05-008  clase C  ['analisis_motivaciones_fundador', 'dilema_riqueza_vs_control']
+DISCUTIBLE 1. El paso 5 de motivaciones nombra el dilema riqueza contra control, que es el otro nodo entero. Se sostiene C porque motivaciones expande las influencias familiares y las 13 motivaciones, y el dilema expande el trade off en CADA decision de financiamiento
+
+### LD-OPC05-031  clase C  ['compatibilidad_motivaciones_riqueza_control', 'dilema_riqueza_vs_control']
+DISCUTIBLE 2, EL MAS AJUSTADO DE LOS CUATRO. El paso 1 de compatibilidad y el paso 2 del dilema son casi la misma linea. Se sostiene C porque el sujeto es distinto: compatibilidad se pregunta por TI Y TU SOCIO antes de asociarse, el dilema se pregunta por TI SOLO en cada decision de financiamiento
+
+### LD-OPC05-059  clase C  ['dilema_riqueza_vs_control', 'puzzle_prima_capital_privado']
+DISCUTIBLE 4. El paso 2 del puzzle repite casi la pregunta del dilema. Se sostiene C porque el puzzle expande UN ARGUMENTO EMPIRICO (la prima de capital privado no existe) y el dilema expande UN PROCEDIMIENTO DE DECISION en cada ronda
+
+### LD-OPC05-122  clase C  ['error_proofing_servicio', 'metodologia_6s']
+PAR QUE SOLO EXISTE TRAS RESOLVER ALIAS, y ademas SOLO SE VE LEYENDO LOS DOS CAMPOS: metodologia_6s nombra mistake_proofing_poka_yoke en nodos_siguientes y errores_a_prueba_poka_yoke en nodos_previos, y los dos resuelven a error_proofing_servicio. La organizacion del puesto de trabajo (sacar lo que no se necesita, ordenar, limpiar, estandarizar el habito, sostener la disciplina) contra el diseno de dispositivos a prueba de error (los cinco principios, el dispositivo fisico o logico, la validacion antes de escalar): el paso 6 de 6S nombra la seguridad y no la procedimenta, y el paso 4 de error-proofing nombra simplificar el trabajo y no lo procedimenta. Dos lineas distintas, una en cada nodo, y ninguno es la madre
+

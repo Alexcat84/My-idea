@@ -7,210 +7,208 @@ HASHES ADMITIDOS EN EL CORREDOR DE ESTA VUELTA: NINGUNO. No hay commit de
 decision del fundador que admitir. Todo commit dentro del corredor es tuyo
 y cuenta como intruso.
 
-El acta que te encarga esto es ACTA_AUDITOR.md, VUELTA 155. Su veredicto:
-la 154 entrega las nueve tareas y la bloqueante cierra de verdad. Re medi
-todo con instrumento propio y reproduce al digito (censo 3.853/3.169/684,
-aristas 8.780/8.740/17.520/9.914, ciclo entero con numstat en cero filas,
-Gate 0 en 26 de 26 con 0 en fallo, motor 25/25, vitest 80 y 1.030 con 3
-saltadas, tsc exit 0, cabecera identica al tallador con 9 filas y 0
-distintas, las cuatro varas en 153/154/155/157 con 0/1/2/4 sin cita en la
-apertura y 0/0/1/3 hoy, 255 nodos con 307 destinos y 306 mutuos, 3.388
-veredictos, registro en 154 pares distintos, 71 fichas con 18 claves,
-HECHA 23 a 28, tabla por fase 5/3/0, expediente 36/24/12/0 con 7 en LISTA
-sin prueba, fase 06 en 16 de 16, fase 03 con sus cuatro sin cumplir y
-fase 08 con OP-V-01). LA MUTACION DE LA GUARDA LA REHICE YO EN UN
-WORKTREE APARTE, ELIGIENDO LOS NOMBRES POR COMPUTO, Y MUERDE: la nueva
-cae en rojo nombrando el par y la vieja, sacada del commit de apertura,
-sale verde sobre la misma mutacion. Tu TAREA 4 la reproduje con el arbol
-PRIETO de 6f695db6 y tu atribucion de las cuatro fichas es correcta al
-digito.
+El acta que te encarga esto es ACTA_AUDITOR.md, VUELTA 157. Su veredicto:
+la 156 entrega las nueve tareas y la bloqueante cierra. Re medi todo con
+instrumento propio y reproduce al digito (censo 3.853/3.169/684, aristas
+8.780/8.740/17.520/9.914 con solo_sig 1174 y solo_prev 1134, ciclo entero
+con numstat en cero filas, Gate 0 en 26 de 26 con 0 en fallo, motor 25/25,
+vitest 80 y 1.030 con 3 saltadas desde web/, tsc exit 0 sin una linea,
+cabecera identica al tallador con 9 filas y 0 distintas, 154 pares
+bidireccionales con cita y 0 sin cita con los 157 del ensanchado y sus
+tres nombrados, 3.388 veredictos con CERO HUECOS y CERO DUPLICADOS,
+expediente 71/36/24/12/0/7, fase 03 con sus cuatro, fase 06 en 16 de 16 y
+fase 08 con OP-V-01). Tu TAREA 4 y tu TAREA 5 las reprodujo mi propia
+mano sin tuberia y muerden. La bateria de las 23 sale VERDE en corrida
+limpia.
 
-LA CIEGA: CATORCE PUESTOS, DOCE COINCIDEN, DOS DISCREPAN, Y LAS DOS CAEN
-DENTRO DE LO QUE TU MARCASTE, con once de once coincidiendo fuera del
-marcado. POR ESO EL CREDITO DE LA TANDA NO BAJA: marcaste bien donde
-estaban tus dudas. LA RACHA DE CIFRA PUBLICADA VUELVE A CERO: la cerraste.
-El tramo del registro de citas queda RELEIDO AL DOBLE Y SALDADO (tus 41
-mas mis 14 con cero solape). Una caida de reporte tuya, que no acumula, y
-dos hallazgos mios sobre guardas. Las diez adjudicaciones estan en la
-seccion 6 del acta 155.
+Y LO PRIMERO, PORQUE ES TUYO: EN LA BLOQUEANTE TIENES RAZON TU Y NO YO.
+LD-OPC05-097 ES D. Mi adjudicacion 6.1 del acta 155 queda REVOCADA POR SU
+PROPIO AUTOR y va registrada como CAIDA MIA. Lo confirme con tres
+mediciones propias (acta 157, seccion 3.1): el calibrado de la casa ya
+trata a juran_rcca_metodo como MADRE, con dos filas propias (su paso 2
+con prueba_teorias_causa_raiz y su paso 3 con diseno_implementacion_remedio);
+resistencia_al_cambio esta VIVO con arista en las dos vistas y sus cuatro
+pasos despliegan el paso 7 del viaje, o sea que tu medicion es cierta; y
+por los dos caminos posibles la clase es D, porque si los dos restos
+fueran procedimiento el propio banco ya resolvio ese caso en el puesto
+2091, clase D. Hiciste exactamente lo que la relectura conjunta existe
+para producir: verificaste contra el grafo, publicaste lo que medias
+aunque fuera contra la adjudicacion, no ejecutaste la fusion y no moviste
+n.
+
+LA CIEGA: ONCE PUESTOS, DIEZ NUEVOS SIN SOLAPE CON NADIE, Y LOS DIEZ ME
+SALEN D CONTRA LA C ESCRITA. NO SON DIEZ ERRORES TUYOS: son diez miembros
+del saco que TU mediste, publicaste con su nomina entera y trajiste como
+pregunta 1, y que mi propia TAREA 3.c te prohibio tocar. POR ESO EL
+CREDITO DE LA TANDA NO BAJA y las diez cuentan DENTRO de lo marcado. Lo
+que mi ciega anade es que el saco no es un problema de redaccion: es
+contenido. Una caida de reporte tuya, que no acumula, y tres caidas mias,
+dos de ellas declaradas en el acta con su nombre. Las diez adjudicaciones
+estan en la seccion 6 del acta 157.
 
 - TAREA 1, LOS REGISTROS, Y ES LO PRIMERO: deja escritas en el repo las
-  diez adjudicaciones de la seccion 6 del acta 155 donde cada una vive
-  (6.1 y 6.2 en el registro de citas y en el instrumento que lo lee; 6.3
-  y 6.4 en el registro; 6.5 y 6.6 en el instrumento de la relectura del
-  expediente; 6.7 tambien ahi; 6.8 en la guarda del corredor; 6.9 en los
-  comentarios de la guarda de OP-C-05; 6.10 en tallar_estado_de_fase.py),
-  TODAS POR ADICION Y CON CORRECCION DECLARADA, sin borrar una linea del
-  texto viejo. Y la aditividad se MIDE, no se promete: numstat de git
-  para los .py y prefijo comprobado por assert para el JSONL, como hiciste
-  en la 154.
+  diez adjudicaciones de la seccion 6 del acta 157 donde cada una vive
+  (6.1 y 6.2 en la razon de LD-OPC05-097 del registro y en
+  scripts/loop/vuelta156_tarea2a_pasos_con_hijo.py; 6.3 y 6.4 en
+  scripts/loop/vuelta152_registro_de_citas_opc05.py, que es donde vive la
+  doctrina de vias y clases; 6.5 en la guarda de OP-C-05 de
+  scripts/run_phase1.py; 6.6 en el registro y en el instrumento que lo
+  lee; 6.7 en la funcion de la P3b de
+  scripts/loop/vuelta150_3_relectura_expediente.py; 6.8 en
+  vuelta152_registro_de_citas_opc05.py; 6.9 en
+  scripts/loop/verificar_mutaciones_viejas.py; 6.10 en
+  scripts/loop/verificar_cifras_del_reporte.py), TODAS POR ADICION Y CON
+  CORRECCION DECLARADA, sin borrar una linea del texto viejo. Y la
+  aditividad se MIDE, no se promete: numstat de git para los .py y
+  prefijo comprobado por assert para el JSONL, como en la 154 y la 156.
 
-- TAREA 2, Y ES BLOQUEANTE, LA RELECTURA CONJUNTA DE LD-OPC05-097
-  (juran_rcca_metodo contra viaje_diagnostico_remedial). NO ES OPINION
-  MIA CONTRA LA TUYA: lei el par A CIEGAS, sin ver tu discutible ni la
-  razon escrita, y llegue a la MISMA clase que tu, A. Mi caso, con las
-  reglas citadas, esta entero en la adjudicacion 6.1 del acta 155.
-  Resumido: (i) el perfil de madre e hijo del 9.6.2 NO se cumple, porque
-  el hijo tendria que caber ENTERO DENTRO DE UN PASO de la madre y el
-  viaje se reparte entre los pasos 2, 3 y 4 de juran; (ii) el 9.6.3 manda
-  pesar LO QUE QUEDA FUERA DEL SOLAPE, y fuera quedan el paso 1 de juran
-  (esporadico contra cronico y el enunciado) y el paso 7 del viaje
-  (gestionar la resistencia), los dos LINEA por la regla practica del
-  informe 67.6, sin procedimiento en ningun lado; (iii) con linea en los
-  dos sentidos, el segundo polo del 9.22 dice que REPITEN y prescribe
-  fusion. Y la razon escrita se delata sola: nombra la granularidad y las
-  dos apostillas, que es la definicion literal del segundo polo, y NO
-  nombra una sola linea distinta en cada nodo, que es lo que la C exige.
-  LO QUE HAY QUE HACER, EN ESTE ORDEN:
-  (2.a) VERIFICAS CONTRA EL GRAFO, que es tu mitad del trato: los dos
-  nodos vivos, sus pasos leidos enteros hoy, la arista bidireccional
-  medida, y si alguno de los dos aparece en otro par del registro o en
-  algun acto declarado. Publicas lo que midas, salga a favor o en contra.
-  (2.b) DECIDES CON LA VARA, y si la clase cambia de C a A se cambia LA
-  CLASE del registro con CORRECCION DECLARADA y con el texto viejo entero
-  como prefijo. Si al leerlo hoy sostienes la C, LO DICES Y LO ARGUMENTAS
-  CON LAS DOS LINEAS NOMBRADAS: la C exige nombrarlas, y si no puedes
-  nombrarlas no es C.
-  (2.c) LA FUSION NO SE EJECUTA. Si la clase pasa a A, el par se registra
-  como CANDIDATO A FUSION y ahi para: una fusion necesita su ficha, su
-  superviviente y su ruta, y ninguna de las tres cabe en una vuelta de
-  lectura. Si crees que hay que fundir ya, PARAS Y LO TRAES.
-  (2.d) GUARDA DE FRONTERA: el registro cambia, el grafo NO. sha256 de
-  dataset/ y conteo de censo y aristas antes y despues, con assert. Y n
-  no se mueve: los 3.388 veredictos siguen en 3.388.
-  (2.e) Y COMPRUEBAS QUE GATE 0 NO SE CAE POR EL CAMBIO DE CLASE. Lo
-  medi yo leyendo la guarda y te lo adelanto para que no lo temas: la
-  guarda mete en _citados el `par` de TODA linea del registro, sin mirar
-  la clase, asi que reclasificar no la enciende. Comprobalo igual.
+- TAREA 2, Y ES BLOQUEANTE, EL PRIMER LOTE DEL SACO, POR LA ADJUDICACION
+  6.3. No se reclasifica en bloque y no se ajusta la regla para que no
+  alcance: SE LEE. La pregunta de cada lectura es ESTRECHA Y BINARIA, y
+  es la de la adjudicacion 6.4: se pueden nombrar DOS LINEAS DISTINTAS,
+  una en cada nodo, y decir QUE PROCEDIMIENTO DEL OTRO NODO expande cada
+  una? Si se pueden, la C se sostiene y la razon las nombra. Si no, la
+  clase es D. Si la razon describe que CADA NODO EXPANDE LO SUYO, eso es
+  el puesto 2091 del banco y la clase es D.
+  (2.a) EL LOTE 1 SON 66 LECTURAS, Y LA NOMINA SALE DE UN COMPUTO, NO DE
+  UNA LISTA TECLEADA: las SEIS que traen puntero de paso (LD-OPC05-001,
+  003, 008, 031, 059 y 122) mas las SESENTA primeras por numero del saco
+  sin puntero que siguen en C, que hoy van de LD-OPC05-004 a
+  LD-OPC05-067. La cuenta de partida, medida por mi: 122 lecturas
+  dirigidas, 116 sin puntero (de ellas 3 ya en D) y 6 con puntero, o sea
+  113 todavia en C sin puntero. TU INSTRUMENTO RECOMPUTA ESA NOMINA Y LA
+  PUBLICA: si no da 6 y 60, paras y lo dices antes de leer nada.
+  (2.b) DOS AVISOS PARA QUE NO TE SORPRENDAN, y los digo yo antes:
+  LD-OPC05-046 esta en el lote y el acta 155, adjudicacion 6.3, lo
+  sostuvo en C por el 9.6.3, o sea POR SER SANO. Bajo la 6.4 sano sin
+  figura es D. NO ESTA PROTEGIDO: releelo como los demas y si sale D, sale
+  D, y lo dices citando que revoca esa parte de la 6.3. Y LD-OPC05-122 es
+  el unico cuya razon tiene hoy la forma de la figura: si se sostiene, se
+  sostiene con sus dos lineas nombradas.
+  (2.c) MI LECTURA A CIEGAS ESTA SELLADA Y LA PUEDES COTEJAR DESPUES, NO
+  ANTES: en docs/loop/_auditor_v157_mis_adjudicaciones.txt (sha1
+  c3b1ceca) hay diez veredictos mios, y cinco de esos casos (007, 019,
+  043, 055, 067) caen en tu lote. LEELOS TU PRIMERO CONTRA LOS NODOS, y
+  solo despues compara y publica en cuantos coincidimos. Si discrepas de
+  mi, discrepa: mi lectura no es la vara, el nodo lo es.
+  (2.d) LAS GUARDAS, LAS MISMAS DE LA 156 Y NO SE AFLOJAN: cada cambio de
+  clase con CORRECCION DECLARADA y el texto viejo entero como prefijo; n
+  NO SE MUEVE y sigue en 3.388; assert de frontera con sha256 de dataset/
+  y conteo de censo y aristas antes y despues (el registro cambia, EL
+  GRAFO NO); y Gate 0 corrido al terminar el lote.
+  (2.e) Y EL LIMITE, QUE SIGUE VIGENTE DESDE LA 6.1: LA QUE SALGA A NO SE
+  VOLTEA. Se marca como discutible, se publica su caso, y NO SE EJECUTA
+  NINGUNA FUSION. Una fusion necesita su ficha, su superviviente y su
+  ruta, y ninguna de las tres cabe en una vuelta de lectura.
 
-- TAREA 3, LA FIGURA DELGADA, POR LA ADJUDICACION 6.2. La C del 9.22 es
-  SANO CON FIGURA, y la figura EXIGE dos lineas distintas, una en cada
-  nodo. Adjudico: para registrar C, LA RAZON TIENE QUE NOMBRAR LAS DOS
-  LINEAS. Donde no pueda nombrarlas, la clase es D.
-  (3.a) UN INSTRUMENTO TUYO recorre las 122 lecturas dirigidas del
-  registro y clasifica cada RAZON en tres sacos, POR COMPUTO donde se
-  pueda y por lectura donde no: NOMBRA LAS DOS LINEAS / NOMBRA UNA SOLA /
-  NO NOMBRA NINGUNA. Publicas los tres conteos y la nomina de los dos
-  ultimos sacos. NO RECLASIFICAS NADA TODAVIA: esta tarea MIDE.
-  (3.b) LOS DOS QUE YA ESTAN NOMBRADOS, y son mi muestra, no una
-  sospecha: LD-OPC05-040 (cost_management_plan contra stakeholder_register,
-  el dinero y las personas sin una linea en comun) y LD-OPC05-002
-  (actividades_clave contra key_resources_hypothesis, dos bloques del
-  Canvas). Los relees por P.5 y los adjudicas con las dos lineas
-  nombradas o con la D escrita, con correccion declarada, sin mover n.
-  (3.c) EL RESTO DEL SACO "NO NOMBRA NINGUNA" NO SE TOCA EN ESTA VUELTA:
-  se publica su nomina y se trae. Si son muchos, la reclasificacion en
-  bloque es una decision de tamaño y la quiero ver medida antes de
-  encargarla.
+- TAREA 3, LA INFERENCIA INVALIDA DE LA RAZON DE LD-097, POR LA
+  ADJUDICACION 6.2. La clase NO cambia y no hay cifra falsa: lo que hay
+  que corregir es un paso de razonamiento. Tu razon dice "el paso 1 de
+  juran NO tiene hijo, o sea que ES linea", y eso no se sigue: el 9.6.2
+  da una prueba SUFICIENTE de que un paso es procedimiento, no una
+  necesaria, y tu vara ademas solo mira hijos ADJUDICADOS. Lo medi:
+  desperdicio_cronico_vs_esporadico esta VIVO y sus cuatro pasos
+  despliegan justo ese paso 1 (monitorear, diferenciar pico esporadico de
+  nivel cronico, accion correctiva, proyecto de mejora), aunque sin
+  arista y sin fila en el calibrado. Comprueba las dos cosas tu mismo,
+  publica lo que midas, y corrige POR ADICION la razon y la docstring del
+  instrumento para que "ningun hijo adjudicado" quede escrito como
+  AUSENCIA BAJO LA VARA DECLARADA y no como prueba de linea.
 
-- TAREA 4, EL VERDE SILENCIOSO DE tallar_estado_de_fase.py, POR LA
-  ADJUDICACION 6.10. ESTO ES UN HALLAZGO MIO Y CAI EN EL YO MISMO.
-  MEDIDO HOY, SIN TUBERIA: --fase 06_MESAS da 16 del catalogo, 16
-  cumplidas, 0 sin cumplir, EXIT 0; --fase 06 da 11 del catalogo, 11
-  cumplidas, 0 sin cumplir, EXIT 0 Y NI UNA QUEJA (cero propias, once
-  recogidas por remision). El catalogo COMPLETAMENTE VACIO si esta cazado
-  (--fase NO_EXISTE: ROJO y EXIT 1); el catalogo PARCIAL POR PREFIJO no.
-  Es un verde sobre un universo incompleto, la misma especie exacta del
-  hallazgo de OP-C-05 del acta 153, y no es teorico: este instrumento
-  midio el disparador que movio cinco fichas a HECHA, mide la celda de la
-  fase 03 y el muro de la 08, y verificar_cifras_del_reporte.py coteja
-  contra el las afirmaciones de cierre.
-  (4.a) UN --fase QUE NO CALCE EXACTAMENTE con un nombre del fichero es
-  ROJO Y EXIT DISTINTO DE CERO. Nada de catalogos parciales en verde.
-  (4.b) CASO POSITIVO POR MUTACION, con las dos salidas: --fase 06 tiene
-  que salir ROJO despues del arreglo, y --fase 06_MESAS tiene que seguir
-  saliendo VERDE con sus 16 de 16 IDENTICOS a los de hoy. Si el 16 se
-  mueve, paras: el arreglo tenia que tocar la puerta, no el conteo.
-  (4.c) Y COMPRUEBAS QUE NINGUNA CIFRA PUBLICADA DEPENDIA DEL BUG: repasa
-  las llamadas a este instrumento en los reportes y salidas de las
-  vueltas 154 y anteriores que sigan citandose, y dices si alguna uso un
-  nombre de fase incompleto. Si alguna lo uso, es CIFRA PUBLICADA FALSA y
-  se corrige por declaracion en su sede.
+- TAREA 4, EL TACHADO QUE HOY ROMPE EL LECTOR, POR LA ADJUDICACION 6.8.
+  Elegiste bien al dejar la celda limpia, y lo probe por mutacion: con
+  `~~C~~ D` el patron del lector da 0 coincidencias y la fila DESAPARECE
+  del registro. Pero la costumbre de la casa no se sacrifica a un
+  `[A-Z]+`.
+  (4.a) EL LECTOR DE docs/plan/LECTURAS_DIRIGIDAS.md se ensancha para
+  aceptar la celda tachada y tomar LA ULTIMA clase escrita.
+  (4.b) CASO POSITIVO POR MUTACION, con las dos salidas: con el lector
+  viejo la fila tachada desaparece, y con el nuevo aparece con la clase
+  buena. Y el conteo de pares del registro tiene que salir IDENTICO antes
+  y despues sobre el fichero SIN tachar: si se mueve, paras.
+  (4.c) SOLO ENTONCES las tres filas ya reclasificadas (002, 040 y 097)
+  reciben su `~~C~~ D`, y Gate 0 se corre para verlo en verde.
 
-- TAREA 5, EL CORREDOR, POR LA ADJUDICACION 6.8. Tenias razon en que la
-  regla es prospectiva y en no aflojarla por autor ni por asunto. Pero la
-  puerta quedo mas ancha que lo que la 6.7 concedio y esta anclada a algo
-  que se mueve, y las dos cosas las medi llamando a tu propia funcion:
-  hoy admite 6f695db6 y c9c6ea40, LOS DOS COMMITS TUYOS, porque admite
-  CUALQUIER hash que el encargo cite; y lee PROMPT_SIGUIENTE.md DEL ARBOL
-  DE TRABAJO, asi que el veredicto del corredor de una vuelta ya juzgada
-  puede cambiar cuando se escriba un encargo posterior. Eso ultimo es LA
-  MISMA ESPECIE que tus caidas 5 y 6, una vara anclada a algo que se
-  mueve, dentro de una guarda que escribiste en esa misma vuelta.
-  (5.a) SOLO ENTRA LO MARCADO: el encargo declara sus hashes admitidos
-  con un literal explicito y la guarda admite unicamente los marcados. La
-  cabecera de este encargo ya trae el literal y hoy dice NINGUNO.
-  (5.b) LA VARA SE FIJA: el encargo se lee DEL COMMIT DEL ACTA de la
-  vuelta que se comprueba, con git show, no del arbol de trabajo. Es tu
-  propio remedio de la caida 5 aplicado a esta guarda.
-  (5.c) LA GUARDA LOS SIGUE NOMBRANDO APARTE, nunca en silencio, y el
-  rojo por un commit tuyo sigue intacto.
-  (5.d) CASOS POR MUTACION, con los cuatro de la 154 RE CORRIDOS para que
-  se vea que no se rompio nada, mas dos nuevos: un hash citado SIN marcar
-  dentro del corredor tiene que salir ROJO, y --vuelta 154 tiene que
-  seguir VERDE con sus diez ficheros y --vuelta 100 ROJO con sus 48.
+- TAREA 5, EL ROJO QUE NOMBRA AL CULPABLE EQUIVOCADO, POR LA ADJUDICACION
+  6.9. ESTO LO DESCUBRI CAYENDO YO: corri verificar_mutaciones_viejas.py
+  con instrumentos mios al lado, salio ROJO exit 1 con dos "salidas
+  selladas que no se repiten", y las dos eran ficheros MIOS que ninguno
+  de los dos scripts acusados escribe (la propia salida dice de los dos
+  "salidas selladas que escribe: ninguna"). Corrida sola: VERDE.
+  (5.a) LA COMPROBACION DE REPRODUCIBILIDAD SE CINE A LOS FICHEROS QUE
+  CADA SCRIPT ESCRIBE, que la guarda ya computa y ya publica.
+  (5.b) LO QUE APAREZCA EN docs/loop/ Y NO SEA DE NADIE NO SE CALLA: se
+  reporta APARTE, con su nombre, como ruido de concurrencia, y no
+  enciende el rojo de ningun script.
+  (5.c) CASO POSITIVO POR MUTACION, y el sujeto ya existe: mi corrida
+  roja esta sellada en docs/loop/_auditor_v157_mutaciones.txt y la verde
+  en _auditor_v157_mutaciones2.txt. La guarda nueva sobre el mismo
+  escenario tiene que salir VERDE nombrando el ruido aparte, y la vieja
+  sacada del commit de apertura tiene que seguir saliendo ROJA. Y las 23
+  siguen siendo 23.
 
-- TAREA 6, EL TEXTO DE LA FICHA SE CONGELA, POR LA ADJUDICACION 6.7.
-  declara_su_estado lee `nota` y `adjudicacion` DEL CORTE, como la P3. Tu
-  discutible 8 tenia razon y lo demostraste al digito: tus propias notas
-  movieron cuatro fichas de silencio a declarado dentro de la misma
-  vuelta que publicaba la cifra. Una cifra que el texto de la vuelta
-  mueve es una cifra que mide la vuelta, no el repo. VA CON CORRECCION
-  DECLARADA Y CON LA SERIE RE MEDIDA EN LOS DOS CORTES, y la diferencia
-  atribuida, exactamente como ya hiciste con el 26/22 contra el 30/18. Si
-  la cifra publicada de congelados se mueve, se dice cuanto y por que.
+- TAREA 6, LA SALIDA QUE SE RE SELLA EN SILENCIO, POR LA ADJUDICACION
+  6.10, Y NACE DE UNA CAIDA TUYA. Tu caida 4 remata con "las cifras no
+  cambiaron: lo que cambio fue la columna", y es FALSO: medido con
+  git diff 92d29d23^ 92d29d23, el re sellado movio "salidas selladas 52"
+  a 55, "con nombre que calza 50" a 53, y {"C": 121, "D": 1} a
+  {"C": 119, "D": 3}. Ninguna cifra PUBLICADA es falsa, porque el reporte
+  pega las lineas finales y las verifique todas. Lo falso es la
+  afirmacion sobre el efecto de tu propia correccion: lo que no movio
+  cifras fue dedentar, lo que las movio fue re correr mas tarde. CAIDA DE
+  REPORTE, registrada en el acta 157, seccion 4; vive en prosa y NO
+  acumula. NO HAY REPORTE VIEJO QUE ARREGLAR. El arreglo es por
+  construccion: una guarda que, para cada SALIDA_* citada por el reporte,
+  compare su version en el commit de su tarea contra la de HEAD y, si
+  cambio, EXIJA que el reporte lo declare con el numstat y la lista de
+  lineas CIFRA cuyo VALOR cambio, computados y no narrados. No se prohibe
+  re sellar: se prohibe re sellar en silencio. Con su caso por mutacion.
 
-- TAREA 7, EL HUECO DE LA P3b, POR LA ADJUDICACION 6.6. El proxy se
-  queda: re correr 71 mutaciones por vuelta no cabe y el limite ya va
-  declarado junto a la funcion. Su respaldo es verificar_mutaciones_viejas.py,
-  que corre 23 mutaciones, las hace morder y comprueba que su salida
-  sellada se repite, y corre cada vuelta al cierre. LO QUE FALTA ES
-  NOMBRAR EL HUECO: cuantas de las 71 fichas citan un caso positivo que
-  la bateria de 23 NO cubre. Lo mides, publicas la nomina, y lo dejas
-  escrito junto a la funcion de la P3b. Es barato y convierte un proxy en
-  un proxy con su agujero contado.
+- TAREA 7, LAS NUEVE SALIDAS DE LA P3b, POR LA ADJUDICACION 6.7, Y LA
+  CULPA DE QUE HAGA FALTA ES DE MI 6.6, QUE DIO POR RESPALDO UNA BATERIA
+  SIN CRUZARLA. Tu discutible 4 lo cerre yo y NO por nombre: busque cada
+  una de las nueve salidas DENTRO del texto de los veintitres scripts y
+  ninguno escribe ninguna. El hueco de 4 de 4 no esta inflado. Lo que
+  falta es el COSTE, que nadie ha medido.
+  (7.a) CORRE LAS NUEVE UNA VEZ, con su tiempo cronometrado por script y
+  su salida sellada, y publica si cada una todavia MUERDE.
+  (7.b) CON ESA CIFRA DELANTE dices cuanto anadirian al cierre de cada
+  vuelta. NO LAS METAS EN LA BATERIA POR TU CUENTA: publica el coste y
+  traelo.
+  (7.c) MIENTRAS NO ENTREN, la P3b de esas cuatro fichas queda declarada
+  junto a la funcion como PROXY SIN RESPALDO EFECTIVO, con esa letra.
 
-- TAREA 8, LAS DOS DEUDAS DEL REPORTE, Y LA PRIMERA ES UNA CAIDA TUYA.
-  (8.a) LA CAIDA: la seccion 7.b escribe "y dos afirmaciones de cierre
-  cotejadas contra tallar_estado_de_fase.py". La linea COBERTURA que el
-  propio reporte pega tres lineas mas arriba, y mi corrida de hoy de la
-  misma guarda, dicen las dos "afirmaciones de CIERRE cotejadas contra
-  tallar_estado_de_fase.py: 4", y la guarda las lista una a una (lineas
-  359, 360, 409 y 551). No hay un 2 en ningun contador de esa salida.
-  CAIDA DE REPORTE, registrada con su nombre en el acta 155, seccion 4.
-  Vive en prosa de acompanamiento, asi que por la letra del 27 ago 2026
-  NO ACUMULA, pero dispara la relectura al doble del tramo. Y agrava que
-  la 7.c afirme "no hay una sola cifra que no salga de un fichero de
-  salida citado al lado" justo despues de que el encargo te dijera que no
-  lo repitieras: esa frase es falsa por culpa de la cifra de arriba. NO
-  HAY REPORTE VIEJO QUE ARREGLAR. Hay que no repetirlo, y esta vez el
-  arreglo es por construccion: TODA CIFRA DE TU REPORTE QUE DESCRIBA UNA
-  SALIDA SE PEGA DE LA SALIDA, no se parafrasea al lado.
-  (8.b) EL DEFECTO DE FORMA: la seccion 8 repite la misma frase entera
-  dos veces seguidas ("Lo que la adjudicacion 6.6 pone en verde es LA
-  CELDA de la tabla por fase, no el destino de esas cuatro"). Ninguna
-  cifra se mueve. Lo produce el script que escribe el reporte y por eso
-  se arregla ahi, con una comprobacion que cace la frase duplicada antes
-  de sellar.
+- TAREA 8, LA CUENTA DE LAS DOS ESPECIES DE D, POR LA ADJUDICACION 6.6.
+  Tu discutible 3 tiene razon en que la etiqueta D dice "sano y distinto"
+  y aqui el motivo es "madre e hijo, el par continua". NO se inventa
+  letra nueva: eso seria doctrina nueva y seria PARADA, y ademas el
+  archivo ya registra esa especie en D desde hace tiempo (los puestos
+  316, 478, 1424, 1494 y 2066 del propio registro, medidos por mi hoy).
+  Lo que hace falta antes de que nadie proponga una letra es la CUENTA:
+  un instrumento tuyo recorre las D del registro y las reparte en MADRE E
+  HIJO (el par continua) contra SANO Y DISTINTO, por lectura de su razon,
+  publica los dos conteos y la nomina de cada saco, y declara su vara con
+  sus limites. Esta tarea MIDE: no reclasifica nada y no toca una clase.
 
 - TAREA 9, EL CIERRE RECOMPUTADO AL CIERRE, con el ciclo entero en su
   orden (run_phase1 --reaplico-curaduria, etiquetas_de_cara --aplicar,
   sync_assets_web, y despues el numstat de dataset/ web/ engine/), NUNCA
-  run_phase1 suelto, las tres suites (vitest DESDE web/, que corrido
-  desde la raiz arrastra los ficheros de referencia/iching-app y da un
-  rojo que no es del repo: esa caida es mia y la declaro en el acta 155
-  para que no la repitas), la cabecera tallada y comparada, y las guardas
-  del cierre con su estado real aunque no te favorezcan.
-  verificar_mutaciones_viejas.py se corre SOLA, sin nada al lado, por la
-  leccion de concurrencia del acta 153.
+  run_phase1 suelto, las tres suites (vitest DESDE web/), la cabecera
+  tallada y comparada, y las guardas del cierre con su estado real aunque
+  no te favorezcan. verificar_mutaciones_viejas.py se corre SOLA, SIN
+  NADA AL LADO, y esta vez lo digo con la prueba delante: yo la rompi
+  esta vuelta por no hacerlo, y el rojo que me salio esta sellado.
+  Y EL REPORTE, con la regla que tu misma pusiste en la 156 y que
+  funciona: toda cifra que describa una salida va PEGADA de la salida.
 
 - Y DESPUES, SEGUIR EL ORDEN ESCRITO EN MODO CONTINUO hasta el MURO
   CONOCIDO Y YA ADJUDICADO (acta 149, 3.10): la fase 08 no cierra sin una
   SESION CON CREDENCIAL Y CON EL FUNDADOR DELANTE. Medida hoy por mi, la
   fase 08 trae una operacion, una sin cumplir, OP-V-01, sin vara escrita.
-  Al llegar ahi se para y se dice, que es donde termina lo que un bucle
-  puede hacer solo. EL MERGE NO SE PIDE NI SE HACE: es del fundador y
-  solo suyo.
+  Ahi se para y se dice. Y queda dicho tambien lo otro, porque ya se ve:
+  LA UNICA DEUDA DE LECTURA QUE LE QUEDA AL BUCLE ES EL SACO, y cuando el
+  lote 2 lo vacie no quedara trabajo que un bucle pueda hacer solo. EL
+  MERGE NO SE PIDE NI SE HACE: es del fundador y solo suyo.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.

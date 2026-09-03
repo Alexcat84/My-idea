@@ -1,0 +1,47 @@
+juran_rcca_metodo              existe=True deprecado=None
+   titulo: Método RCCA de Juran (Análisis de Causa Raíz)
+   siguientes: ['definicion_problema_moms_2', 'viaje_diagnostico_remedial']
+   previos: ['viaje_diagnostico_remedial']
+
+viaje_diagnostico_remedial     existe=True deprecado=None
+   titulo: Viaje Diagnóstico y Viaje Remedial
+   siguientes: ['six_sigma_dmaic', 'sostener_las_ganancias', 'ciclo_shewhart_pdsa', 'diagnostico_sintoma_vs_causa_ventas', 'enfoque_proyecto_por_proyecto', 'error_proofing_servicio', 'juran_rcca_metodo', 'resistencia_al_cambio']
+   previos: ['six_sigma_dmaic', 'analisis_pareto_de_proveedores', 'establecer_proyecto_mejora', 'definicion_problema_moms_2', 'dmaic_fase_analyze', 'juran_rcca_metodo']
+
+resistencia_al_cambio          existe=True deprecado=None
+   titulo: Resistencia al Cambio
+   siguientes: ['normas_culturales_calidad']
+   previos: ['breakthrough_cultural', 'viaje_diagnostico_remedial']
+     paso 1: Identificar los grupos y roles cuyo estatus podría verse afectado por el cambio propuesto
+     paso 2: Comunicar de forma anticipada y transparente los beneficios y el impacto del cambio
+     paso 3: Involucrar a los afectados en el diseño e implementación del cambio
+     paso 4: Anticipar y gestionar activamente las reacciones defensivas del personal
+   entregable: Plan de gestión del cambio que identifique riesgos de resistencia y estrategias de mitigación
+
+=== NODOS VIVOS cuyo titulo o pasos hablan de esporadico/cronico ===
+  accion_correctiva :: Acción Correctiva (Esporádica vs Crónica)
+  desperdicio_cronico_vs_esporadico :: Desperdicio Crónico vs. Picos Esporádicos
+  juran_rcca_metodo :: Método RCCA de Juran (Análisis de Causa Raíz)
+  mejora_continua_operaciones :: Enfoque de Mejora Continua en Operaciones
+  trilogia_de_juran :: Trilogía de Juran (Planificación, Control y Mejora)
+desperdicio_cronico_vs_esporadico | deprecado=None | titulo=Desperdicio Crónico vs. Picos Esporádicos
+   paso 1: Monitorear los niveles de fallo/error de los procesos de forma continua
+   paso 2: Diferenciar si un aumento de fallos es un pico esporádico (causa asignable) o parte del nivel crónico
+   paso 3: Ante picos esporádicos, aplicar acción correctiva inmediata para restaurar el status quo
+   paso 4: Ante desperdicio crónico, iniciar un proyecto de mejora para identificar y eliminar causas raíz
+   siguientes: ['enfoque_proyecto_por_proyecto']
+   previos: ['trilogia_de_juran']
+
+accion_correctiva | deprecado=None | titulo=Acción Correctiva (Esporádica vs Crónica)
+   paso 1: Clasificar la no conformidad como esporádica o crónica según su recurrencia.
+   paso 2: Para casos esporádicos, hacer una autopsia forense del producto o proceso y comparar datos antes y después del problema.
+   paso 3: Reconstruir la cronología de eventos como cambios de turno, mantenimiento o personal nuevo para formular y descartar teorías de causa.
+   paso 4: Restaurar el proceso al estado previo una vez identificada la causa y verificar que el ajuste sea predecible y accesible.
+   paso 5: Para casos crónicos, organizar un proyecto formal de mejora de calidad con análisis de causa raíz o Six Sigma.
+   siguientes: ['comite_cero_defectos', 'eliminacion_causas_error_4', 'manejo_problemas', 'planificacion_calidad_crosby', 'sistema_informacion_calidad']
+   previos: ['disposicion_producto_no_conforme', 'analisis_datos_reporte_estatus', 'cero_defectos', 'conciencia_calidad', 'conciencia_de_calidad_2', 'costo_de_calidad_3', 'costo_de_mala_calidad_copq', 'ingenieria_calidad', 'programa_mejora_calidad_14_pasos', 'programa_make_certain_3', 'rework_por_el_causante', 'decision_aptitud_para_uso', 'limites_control_estadistico_vs_tolerancias']
+
+=== CALIBRADO: filas que nombran a los tres nodos ===
+{"dominio": "quality", "madre": "viaje_diagnostico_remedial", "paso": 7, "texto_paso": "Gestionar la resistencia predecible al cambio", "hijo": "resistencia_al_cambio", "titulo_hijo": "Resistencia al Cambio", "titulo_ratio": 100.0, "contencion": 0.5, "familia_paso": "GESTIONAR", "familia_hijo": null, "arista": true}
+{"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz", "hijo": "prueba_teorias_causa_raiz", "titulo_hijo": "Prueba de Teorías para Identificar la Causa Raíz", "titulo_ratio": 81.5, "contencion": 0.5, "familia_paso": "OBSERVAR", "familia_hijo": "OBSERVAR", "arista": false}
+{"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar el remedio", "hijo": "diseno_implementacion_remedio", "titulo_hijo": "Diseño e Implementación del Remedio", "titulo_ratio": 72.0, "contencion": 0.5, "familia_paso": "CONSTRUIR", "familia_hijo": "CONSTRUIR", "arista": false}
