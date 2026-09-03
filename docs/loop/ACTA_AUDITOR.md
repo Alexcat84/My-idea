@@ -52887,3 +52887,359 @@ tienen** en vez de un hueco, y si de verdad no se hallo, se dice. **Por adicion 
 con correccion declarada, y sin tocar ningun veredicto**, con su caso positivo:
 una corrida sin ficheros de apertura tiene que seguir saliendo ROJO y ahora ademas
 **nombrar el commit del acta**.
+
+# ACTA DEL AUDITOR, VUELTA 160 (3 sep 2026, auditor Opus 5)
+# =========================================================================
+
+**HUECO DE ACTA: NO HAY, Y LO COMPRUEBO CON GIT.** La ultima cabecera escrita es
+la **159** (`13cf21be`), el ejecutor numera la suya **160**, y el invariante ACTA
+N VUELTA N MAS 1 se cumple. Corredor de `13cf21be` a `HEAD`: **ocho commits**
+contados con `git rev-list --count` (siete cuando el ejecutor midio, mas el del
+reporte), **todos suyos y cero intrusos**, y el padre del primer commit del
+corredor (`ac56c912`) es exactamente `13cf21be`. Rama `pasada-unica`. **REGIMEN
+COMPLETO**: el austero sigue suspendido por su punto 5.
+
+**EL VEREDICTO DE UNA LINEA: HAY PARADA, Y ES LEGITIMA. LA RELECTURA CONJUNTA DE
+LA `LD-OPC05-100` CONFIRMA MI LECTURA CONTRA LA SUYA, ASI QUE LA TANDA DE LA
+VUELTA 159 TRAE CAIDA DE CLASE Y, CON LA `005` YA CONFIRMADA EN LA TANDA 157, SON
+DOS TANDAS SEGUIDAS. LA REGLA DEL CREDITO SE DISPARA Y EL BUCLE SE DETIENE.** Y
+lo digo entero para que no se lea como un tramite: **el ejecutor declaro su
+propia parada, no la escondio, y ademas ejecuto el encargo completo**, incluido
+el remedio que la bajada de credito venia a exigir. Todo el cierre reproduce al
+digito con mi propia mano: censo **3.853 / 3.169 / 684**, aristas **8.780 / 8.740
+/ 17.520 / 9.914** con `solo_sig 1174`, `solo_prev 1134` y **cero auto enlaces**,
+archivo **3.388 con A 551, B 72, C 5, D 2.760**, **huecos 0 y duplicados 0**,
+registro **154** con **LECTURA_DIRIGIDA C 14 y D 108** y **CRIBADO B 1 y D 31**,
+citas de lectura dirigida **122** con **rastro 110**, ciclo entero con `numstat`
+en **cero filas**, Gate 0 **26 en OK y 0 en fallo** e **IDENTICO al suyo linea por
+linea**, motor **25/25**, vitest **80 ficheros y 1.030 pasadas con 3 saltadas**
+desde `web/`, `tsc` **exit 0 y cero lineas**, expediente **71 / 36 / 24 / 12 / 0 /
+7**, fase 03 **16/12/4**, fase 06 **16/16/0**, fase 08 **1/0/1 con OP-V-01**, fase
+09 **3/0/3**, y la bateria de las 23 **VERDE en corrida sola por mi mano** con
+**RUIDO DE CONCURRENCIA 0**. **PARO, y escribo `PARA_ALEXIS.md`.**
+
+## 1. VERIFICACION, CON MIS INSTRUMENTOS Y EN ESTA VUELTA
+
+**EL CICLO ENTERO Y EN SU ORDEN, CORRIDO POR MI**, nunca `run_phase1` suelto:
+`--reaplico-curaduria` (`GATE 0: OK`, `_auditor_v160_gate0.txt`),
+`etiquetas_de_cara --aplicar` (**71 etiquetas**, `_auditor_v160_etiq.txt`),
+`sync_assets_web` (**seis assets**, `_auditor_v160_sync.txt`) y despues
+`git diff HEAD --numstat -- dataset/ web/ engine/`: **cero filas**
+(`_auditor_v160_numstat.txt`). **Y NO SOLO CUENTO 26 EN OK Y 0 EN FALLO: DIFF MI
+SALIDA CONTRA LA SUYA** y **no hay una sola linea distinta en las 26**.
+
+**LA FRONTERA, MEDIDA Y NO CREIDA.** `git diff --name-only 13cf21be..HEAD` da
+**92 ficheros**, y **fuera de `docs/loop/` y `scripts/loop/` solo hay dos**:
+`docs/plan/LECTURAS_DIRIGIDAS.md` y `docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl`.
+**`dataset/` no aparece.** El registro cambia y el grafo no.
+
+**LA ADITIVIDAD, MEDIDA CONTRA EL COMMIT DEL ACTA CON INSTRUMENTO PROPIO**
+(`_auditor_v160_aditividad.py`, salida `_auditor_v160_aditividad.txt`): **154
+lineas a 154**, **cero pares desaparecidos y cero nuevos**, **esquema identico de
+7 claves**, **39 razones ampliadas con PREFIJO ROTO 0**, **4 clases movidas y las
+cuatro de C a D** (`094`, `100`, `101`, `118`), **cero que se muevan a A**, y **4
+citas cambiadas**. Su reparto cuadra con el mio elemento a elemento.
+
+**Y LA GUARDA QUE NACE DE SU CAIDA 2, COMPROBADA POR MI CONTRA EL FICHERO, NO
+CONTRA SU PALABRA:** cuento las filas cuya `cita` declara una clase distinta de la
+vigente y salen **CERO**. Lei ademas la guarda en
+`scripts/loop/vuelta159_motor_veredictos.py`: esta **en el motor**, **asserta** (no
+solo imprime), y lee la clase del texto **detras** del identificador para que el
+`LD-OPC05-NNN` no pueda casar por accidente. Es una guarda que mide.
+
+**LA TAREA 3, MEDIDA POR MI Y NO POR SU INSTRUMENTO.** `git diff --numstat` del
+commit `dff99af3` restringido a los DOCE: **264 anadidas y 39 retiradas en doce
+ficheros**, identico a lo que publica. Y **las 39 retiradas las comprobe una a una
+con mi propio bucle**: toda linea retirada aparece hoy, literal, dentro de su
+mismo fichero. **CERO HUERFANAS**, verificado y no creido.
+
+**LAS GUARDAS DEL CIERRE, CORRIDAS POR MI, CON SU ESTADO REAL.**
+
+  - `verificar_mutaciones_viejas.py`, **SOLA y sin nada al lado**: **VERDE exit
+    0**, 23 mutaciones, **0 ancla perdida, 0 no mordio, 0 no reproducible, 2
+    casos declarados, RUIDO DE CONCURRENCIA 0** (`_auditor_v160_bateria.txt`).
+  - `verificar_apertura_sellada.py --vuelta 160`: **VERDE exit 0**, los **diez**
+    `SALIDA_V160_*_APERTURA.txt` nacidos todos en `ac56c912`, hijo directo del
+    acta, y **hashes admitidos 0**, leido del commit del acta. Lo recompute
+    ademas por fuera de la guarda, fichero a fichero con
+    `git log --diff-filter=A`: **los diez en `ac56c912`**.
+  - `tallar_cabecera_reporte.py --vuelta 160 --fase04 --comparar`: **VERDE**,
+    **nueve filas cotejadas, cero distintas, cero ausentes, CABECERA IDENTICA AL
+    TALLADOR**.
+  - `verificar_cifras_del_reporte.py`: **VERDE exit 0**, **5 afirmaciones de
+    CIERRE** cotejadas contra el tallador de fases y **1 cifra** por etiqueta.
+  - `verificar_re_sellado.py --reporte docs/loop/REPORTE.md`: **VERDE exit 0**,
+    **re selladas SIN declarar 0**, exencion por construccion con sus dos nombres.
+
+## 2. MIS PROPIAS CAIDAS, CON SU NOMBRE
+
+**CAIDA 1, DE INSTRUMENTO, CAZADA POR SU PROPIO REVENTON.** Mi primer marcador
+leyo el grafo por la clave `nodes` y las filas del archivo por `puesto`, y esta
+casa las llama `nodos` y `puesto_intra`. Salio `CIFRA nodos: 6` y despues un
+`AttributeError`. **No publique ese numero**: lo arregle contra el esquema real
+leido del fichero y re corri entero. Queda escrito de donde salio.
+
+**CAIDA 2, DE ARNES, EN LA SUITE WEB, Y ES LA QUE MAS ME IMPORTA.** Corri
+`vitest run --reporter=basic` y vitest 4 no tiene ese reporter: **Startup Error**,
+cero tests corridos, y el proceso de fondo me devolvio **exit 0**, que es justo la
+forma en que un verde falso entra. **Lo cace leyendo la salida en vez de creerle
+al codigo de salida**, re corri con el comando limpio y de ahi salen las cifras
+que publico. Es el banco 9 aplicado a mi propia mano: **el exit 0 de un arnes roto
+miente mas calladito que un rojo.**
+
+**NINGUNA DE LAS DOS TOCO UNA CIFRA PUBLICADA**, porque las dos reventaron antes
+de que yo escribiera nada. Se declaran igual.
+
+## 3. LA RELECTURA CIEGA, POR LOS DISCUTIBLES MARCADOS PRIMERO
+
+**METODO:** `docs/loop/_auditor_v160_ciega.py`, escrito hoy, imprime **solo
+titulo, fuente, entregable y pasos accionables de los dos nodos**, sin clase, sin
+via, sin cita y sin razon. Selle mis veinticuatro adjudicaciones en
+`_auditor_v160_mis_adjudicaciones.txt` (**sha1 `e8449144`**, calculado con
+`git hash-object` ANTES de destapar) y solo despues corri el destape
+(`_auditor_v160_destape.txt`). **La vara y la muestra van escritas dentro del
+sello, antes de mirar.**
+
+| tramo | leidos | coinciden | discrepan |
+|---|---:|---:|---:|
+| **marcados** (074, 076, 082, 094, 098, 099, 101, 106, 107, 112, 113, 114, 118, 119, 121) | 15 | **15** | **0** |
+| **fuera del marcado** (068, 087, 088, 109, 072, 092, 096, 104, 108) | 9 | **8** | **1** (104) |
+| **total** | **24** | **23** | **1** |
+
+**LA VARA, IDENTICA EN LAS 24 Y ESCRITA ANTES DE DESTAPAR:** C si se pueden
+nombrar DOS LINEAS DISTINTAS, una en cada nodo, cada una expandida por un
+PROCEDIMIENTO del otro; **nombrar no es procedimentar** (6.4 del acta 158); una
+REMISION y una ORDEN CON CRITERIO DE PARADA no son procedimiento (letra de la
+`027` y la `004`); y **una INSTANCIA no es el procedimiento de su categoria** (6.5
+del acta 159). D en cualquier otro caso.
+
+**LA MUESTRA DE FUERA DEL MARCADO NO ES CAPRICHOSA Y VA DECLARADA EN EL SELLO:**
+las **cuatro C que el tramo sostiene y que no estan marcadas** (`068`, `087`,
+`088`, `109`), **a proposito**, porque la `100` que abrio la bajada era una que
+SOSTUVO C y esa es la especie del caso; mas las **divisibles por cuatro** de las
+22 no marcadas (`072`, `092`, `096`, `104`, `108`).
+
+**LOS QUINCE MARCADOS: COINCIDIMOS EN LOS QUINCE.** Y en varios con el mismo
+motivo escrito antes de vernos: en la `076` yo anote *"Grow contra Get, eje
+distinto"* y su razon dice *"el sujeto no calza: el embudo prueba tacticas para
+ADQUIRIR DESCONOCIDOS"*; en la `119`, la `107`, la `113`, la `106` y la `099` la
+regla de la instancia cae en el mismo sitio en las dos plumas. **Las cuatro C
+sostenidas fuera del marcado (`068`, `087`, `088`, `109`) las adjudique C
+tambien**, y en las cuatro por la misma doble direccion que el escribio.
+
+### 3.1 `LD-OPC05-104`, LA UNICA DISCREPANCIA, Y LE DOY LA RAZON A EL
+
+**Mi lectura a ciegas dio C. Su clase es D. Destapado su caso, la suya es la buena
+y lo digo sin escudo.** Yo tome dos direcciones: el paso 6 de
+`market_type_revenue_growth` (*ajusta tus proyecciones de ingresos*) expandido por
+la hoja entera de `metrics_that_matter_framework`, y el paso 2 de metrics
+(*calcula las unidades vendidas y el precio*) expandido por el metodo por tipo de
+mercado. **Su razon ya nombraba mi par como EL PAR MAS FUERTE DESCARTADO y decia
+por que no vale**, y ademas lo decia DOS VECES, en la vuelta 159 y otra vez en la
+segunda pasada de hoy: *"metrics da LA ARITMETICA DE UNA PROYECCION y no trae una
+sola linea que la ajuste POR TIPO DE MERCADO, que es el contenido operativo de la
+linea: expandir la mitad ociosa de una linea no la expande."* **Es mejor que mi
+argumento y lo concedo entero:** yo me colgue de la mitad de la linea que metrics
+si expande e ignore la mitad que la define. **Adjudico D, que es su clase, y
+registro la discrepancia como caida de lectura MIA.**
+
+**Y ESTA DISCREPANCIA NO BAJA EL CREDITO DE LA TANDA, Y DIGO POR QUE PARA NO
+AFLOJAR LA REGLA POR CONVENIENCIA.** La regla de la seccion 1.2 castiga la
+discrepancia que aparece fuera del marcado **porque delata lectura suelta en el
+tramo**. Aqui pasa lo contrario: **la 6.3 hizo exactamente su trabajo**, el par
+que a mi me convencio estaba examinado y descartado por escrito antes de que yo lo
+mirara. Es la misma forma que el acta 159 adjudico en su 3.1 con la `004`, donde
+la discrepancia se conto como **caida del auditor** y no como bajada de credito
+del ejecutor. **Aplico ese precedente, y la 104 no acumula.** Lo que si vale la
+pena decir es lo otro: **en 24 casos leidos a ciegas hoy, el ejecutor no tiene ni
+una lectura suelta.**
+
+## 4. LA PARADA, ADJUDICADA Y NO HEREDADA
+
+**PRIMERO VERIFIQUE QUE LA CONJUNTA ES UNA MEDICION Y NO UNA CAPITULACION**, que
+era el riesgo real: el encargo le habia dicho que si me daba la razon el bucle se
+paraba. **Sus tres argumentos se leen de los nodos y los recompute yo hoy** sobre
+`dataset/metadata/master_graph.json`, por mi mano:
+
+  - **El entregable de `proceso_ideacion_modelo_negocio`** dice literalmente
+    *"Lista corta de 3 a 5 prototipos de modelo de negocio esbozados EN EL LIENZO
+    DE MODELO DE NEGOCIO"*. **El de `lienzo_modelo_negocio` no menciona la
+    ideacion**: dice *"Lienzo de Modelo de Negocio completo con los 9 bloques"*.
+    **Ideacion CONSUME el lienzo; el lienzo no consume la ideacion.**
+  - **El paso 2 de ideacion** es, literal, *"Realizar una fase de inmersion:
+    investigar clientes, tecnologias y modelos de negocio existentes"*: **la misma
+    orden con tres complementos**, sin metodo, sin instrumento y sin secuencia.
+  - **El paso 9 del lienzo** es *"Pausar para investigar mas informacion donde
+    haya vacios importantes"*, una pausa DENTRO de la construccion del lienzo.
+
+**Y TRAE ADEMAS UN ARGUMENTO QUE NO ERA MIO NI SUYO ANTES, EL DEL ENTREGABLE, Y
+NOMBRA TRES PARES DESCARTADOS UNO A UNO.** Eso es lo contrario de capitular:
+**decidio con la vara y publico mas evidencia de la que le pedi.**
+
+**LA CUENTA DE LA RACHA, CON SU NOMBRE:**
+
+  - **TANDA DE LA VUELTA 157 (lote 1):** `LD-OPC05-005`, caida de CLASE
+    confirmada en la relectura conjunta de la vuelta 159 y registrada en el acta
+    159. **Racha: UNO.**
+  - **TANDA DE LA VUELTA 159 (lote 2):** `LD-OPC05-100`, caida de CLASE
+    confirmada HOY en la relectura conjunta. **Y no viene sola:** el propio tramo
+    al doble tumbo `094`, `101` y `118`, de la misma tanda y de la misma costura,
+    **la segunda linea de una C**. Las cuatro las movio el ejecutor, medidas por
+    mi contra el commit del acta. **Racha: DOS.**
+  - `docs/loop/AUDITOR.md` seccion 4, literal: *"Caida de CLASE o de CIFRA
+    PUBLICADA ... cuenta para el credito y para la parada. **Dos tandas seguidas:
+    PARADA.**"* **Y no hay tanda intermedia limpia entre las dos**: el lote 1 y el
+    lote 2 son las dos tandas consecutivas de lectura dirigida, como el propio
+    acta 159 dejo escrito en su seccion 7 antes de saber el resultado.
+
+**LA TANDA DE HOY, LA DE LAS 37, NO TRAE CAIDA DE CLASE**, medido por mi ciega de
+24: cero discrepancias dentro del marcado y la unica de fuera resuelta contra mi.
+**La parada no la dispara el trabajo de hoy: la dispara el de la 159, que hoy
+quedo confirmado.** Es una distincion que importa para el fundador.
+
+**RACHA DE REPORTE: CERO.** Busque caidas de dictado y no encontre ninguna: la
+cabecera sale identica al tallador en las nueve filas, los bloques pegados son
+literales de su salida (los coteje en la 2.a, la 2.b, la 2.c, la 3 y el marcador),
+la nomina de 37 reproduce elemento a elemento con union 53 y **cero solapadas**, el
+alcance de los doce y sus 264 y 39 reproducen con mi propio `numstat`, y **sus
+cinco caidas propias estaban todas declaradas antes de que yo mirara**. **LA
+ESCALADA NO SE DISPARA, y lo digo con su nombre para no confundir declararla con
+encargarla:** pide racha de reporte en **DOS** y esta en **CERO**.
+
+## 5. LOS HALLAZGOS FUERA DEL MARCADO
+
+**5.1 EL ALCANCE DEL PATRON DE P.16 YA NO DA DOCE: DA QUINCE, Y LA EXCLUSION POR
+NOMBRE ES LA QUE ENVEJECE.** Corri `vuelta159_tarea5_alcance_p16.py` yo hoy
+(`_auditor_v160_alcance.txt`) y su lectura B da **15 ficheros**, no 12, y el
+instrumento sale **exit 1** por eso. **Los tres nuevos son de esta misma vuelta**:
+`vuelta160_tarea1_registrar_adjudicaciones.py`, `vuelta160_tarea3_remedio_p16.py`
+y `vuelta160_tarea3b_caso_positivo.py`. **Los lei los tres y NINGUNO trae el
+defecto**, y lo digo con lo que hay en el codigo: en el primero el patron es un
+**literal de busqueda** (`PATRON_P16 = ...`); el segundo es el **escritor del
+remedio** y sus `porcelain` son el texto que escribe, uno de ellos ya tachado y
+otro rotulado *"(INFORME, no vara)"*; y el tercero usa `HC.huella` como vara y su
+`porcelain()` sirve para **evaluar la condicion literal del codigo viejo**, que es
+justo lo que la 3.b pedia. **O sea que la cifra del reporte es cierta (los DOCE
+siguen casando y el alcance adjudicado sigue en DOCE) y lo que falla es el
+instrumento: excluye a los buscadores POR NOMBRE, asi que cada vuelta que escriba
+un buscador nuevo lo pone en rojo.** No es caida de reporte (el reporte no afirma
+que la poblacion sea doce) y no mueve ningun dato. **Va a `PARA_ALEXIS.md` como
+deuda medida, porque el bucle se para y no hay encargo donde ponerlo.**
+
+**5.2 LAS DOCE CONGELADAS EN SILENCIO, NOMBRADAS UNA A UNA POR PRIMERA VEZ.**
+Estaba pendiente desde el acta 155 y hoy la cierro, porque la cifra sin nomina no
+se puede auditar. Corri el expediente con `--corte 13cf21be` por mi mano y extraje
+la nomina (`_auditor_v160_congeladas.txt`): **`OP-F-01`, `OP-C-01`, `OP-C-02`,
+`OP-C-03`, `OP-A-01`, `OP-A-02`, `OP-M-02-PROG`, `OP-M-02-ASSESS`,
+`OP-M-02-ACTIVATE`, `OP-M-02-ACCOMPLISH`, `OP-M-03-I`, `OP-M-03-II`.** Son doce y
+la cifra reproduce.
+
+## 6. ADJUDICACIONES
+
+**6.1 LA PARADA SE DECLARA CONSUMADA Y SE EJECUTA.** Adjudicado por la seccion 4:
+dos tandas seguidas con caida de CLASE confirmada (`005` en la tanda 157, `100`
+en la tanda 159). **Escribo `docs/loop/PARA_ALEXIS.md` y dejo
+`docs/loop/PROMPT_SIGUIENTE.md` VACIO**, que es lo que la seccion 4 del AUDITOR.md
+manda y lo que el ejecutor, correctamente, NO hizo por su mano.
+
+**6.2 `LD-OPC05-100` QUEDA EN D, Y LA RELECTURA CONJUNTA QUEDA CERRADA.**
+Adjudicado por la seccion 4 con los tres argumentos verificados por mi contra el
+grafo. **La 6.3 del acta 159 queda cumplida y no vuelve a abrirse.**
+
+**6.3 `LD-OPC05-104` SE QUEDA EN D Y LA DISCREPANCIA ES MIA.** Adjudicado por la
+seccion 3.1. Su razon nombraba el par que a mi me convencio y lo descartaba con
+motivo escrito, dos veces. **Ninguna clase se mueve. Y no baja el credito de la
+tanda**, por el precedente de la 3.1 del acta 159 con la `004`, citado en su
+sitio.
+
+**6.4 EL SACO DE LAS C QUEDA CERRADO, Y ESTO CONTESTA SU PREGUNTA 4 MIDIENDO.**
+Su pregunta era si el reparto de las 18 hay que recomputarlo con las clases de
+hoy. **Lo recompute yo** (`_auditor_v160_marcador.py` y el registro): hoy hay
+**CATORCE en C**, y son `005`, `038`, `049`, `052`, `068`, `081`, `084`, `087`,
+`088`, `095`, `098`, `109`, `110`, `116`. **La aritmetica cierra sin residuo**:
+18 menos las tres del tramo que cayeron (`094`, `101`, `118`) menos la `100` da
+14. **Y las CATORCE tienen ya dos lecturas independientes o mas**: cuatro cerradas
+por la 6.7 del acta 159 (`005`, `038`, `049`, `052`), cinco releidas a ciegas por
+mi en la vuelta 159 (`081`, `084`, `095`, `110`, `116`), y **las cinco que el
+tramo sostuvo (`068`, `087`, `088`, `098`, `109`) las relei a ciegas HOY, o sea
+que llevan tres**. **La 6.7 del acta 159 no queda invalidada por el movimiento de
+clases: queda ampliada, y el saco de C esta cubierto.**
+
+**6.5 EL ACUMULADO DE SEGUNDAS LECTURAS SOBRE LAS 122, MEDIDO Y NO REPETIDO (su
+pregunta 1).** El acta 158 publico 84 y nadie lo recomputo desde entonces. **Lo
+computo yo hoy sobre el registro**, contando las marcas que las propias vueltas
+escriben en la razon: de las **122**, **120 llevan al menos una marca de segunda
+lectura** y **82 llevan dos marcas distintas**; **solo dos no llevan ninguna**. La
+segunda pasada del tramo al doble aporta **37** y las relecturas conjuntas **5**.
+**No repito el 84 del acta 158 y declaro la discrepancia en vez de resolverla
+copiando**: mi cuenta y aquella no miden lo mismo, porque la definicion exacta de
+*segunda lectura independiente* nunca se escribio. **Eso es lo que queda a
+verificar, y va a `PARA_ALEXIS.md`: no la cifra, sino la definicion.**
+
+**6.6 LA GUARDA DE COHERENCIA CITA CLASE SE DA POR BUENA, Y CON ELOGIO.** Lei el
+codigo, no la promesa: esta en el motor, asserta, y su lectura de la clase evita
+el falso positivo del identificador. **Es la respuesta correcta a su caida 2**, que
+es construir el instrumento que faltaba en vez de solo arreglar las cuatro filas.
+
+**6.7 LA CIFRA DEL ALCANCE NO SE TOCA Y EL INSTRUMENTO QUEDA ANOTADO COMO DEUDA
+(seccion 5.1).** No adjudico un remedio porque el bucle se para; queda medido y
+nombrado en `PARA_ALEXIS.md` para quien reanude.
+
+## 7. LA METRICA DE CREDITO
+
+Cuento como las actas 153 a 159: `relecturas` y `puestos` son los casos leidos por
+mi.
+
+| | esta vuelta | acumulado |
+|---|---:|---:|
+| relecturas | 24 | 265 |
+| puestos | 24 | 458 |
+| discrepancias DENTRO del marcado | 0 | 19 |
+| discrepancias y hallazgos FUERA del marcado | 2 | 20 |
+| caidas propias del auditor | 2 | (se declaran, no se acumulan aqui) |
+
+**EL CREDITO DE LA TANDA DE HOY NO BAJA, Y ES LA PRIMERA VUELTA EN TRES QUE NO
+BAJA.** 23 de 24 a ciegas, **cero discrepancias en los quince marcados**, y la
+unica de fuera resuelta contra mi por un motivo que el ya tenia escrito. **Dicho
+de otro modo: el remedio que la 6.4 del acta 159 encargo funciono.** La costura
+que se vigilaba, la segunda linea de una C, la reviso el propio ejecutor y encontro
+tres mas por su cuenta antes que yo. **Lo que para el bucle no es el trabajo de
+hoy, es el de la 159 confirmado hoy**, y esa distincion tiene que llegarle entera
+al fundador.
+
+**LAS DOS RACHAS, CON SU NOMBRE:**
+
+  - **RACHA DE CIFRA PUBLICADA: DOS. PARADA.** Tanda 157 con la `005`; tanda 159
+    con la `100`, mas `094`, `101` y `118` de la misma tanda y la misma especie.
+  - **RACHA DE REPORTE: CERO.** Ninguna caida de dictado en esta vuelta.
+  - **LA ESCALADA NO SE DISPARA:** pide racha de reporte en DOS y esta en CERO.
+
+## 8. LO QUE NO CONSULTE Y QUEDA A VERIFICAR
+
+  - **Las 13 del tramo que no relei**: lei 24 de las 37 mas las cuatro C
+    sostenidas. Las restantes quedan con su segunda pasada del ejecutor y sin
+    tercera mia.
+  - **El contenido de los seis assets de `sync_assets_web`**: comprobe que corre y
+    que el `numstat` queda en cero filas; **no audite lo que escribe.** Sigue
+    pendiente desde el acta 157 y ya son cuatro actas.
+  - **La definicion de SEGUNDA LECTURA INDEPENDIENTE**: mido 120 de 122 con marca,
+    pero **la definicion nunca se escribio** y por eso mi cifra y el 84 del acta
+    158 no son comparables. Lo declaro, no lo resuelvo.
+  - **Los once ficheros del alcance leidos por dentro**: lei enteros los tres
+    nuevos de la seccion 5.1 y comprobe el remedio de los doce por `numstat` y por
+    huerfanas; **el check completo de cada uno no lo lei linea a linea.**
+  - **Los pasos completos de los 13 pares del tramo que no entraron en mi ciega.**
+
+## 9. EL MURO, EL ESTADO Y LO QUE NO HAGO
+
+La fase 08 no cierra sin una sesion con credencial y con el fundador delante (acta
+149, 3.10). Medido hoy por mi con el tallador: **fase 08 con una operacion, una
+sin cumplir, `OP-V-01`, sin vara escrita**; **fase 03 en 16/12/4** con
+`OP-M-02-ADMIT`, `OP-M-02-MEDIOS`, `OP-U-01` y `OP-U-02`; **fase 06 en 16/16/0**;
+**fase 09 con tres sin cumplir**.
+
+**NO PIDO EL MERGE Y NO LO HAGO.** El merge de `pasada-unica` es del fundador y
+solo suyo, y **la campana NO esta consumada**: esta es la parada de la regla del
+credito, no la parada feliz. **Lo unico que ejecuto es lo que la seccion 4 me
+manda: `PARA_ALEXIS.md` escrito con motivo, estado exacto y como retomar, y
+`PROMPT_SIGUIENTE.md` vacio.**
