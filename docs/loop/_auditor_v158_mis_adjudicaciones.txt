@@ -1,0 +1,61 @@
+ADJUDICACIONES A CIEGAS DEL AUDITOR, VUELTA 158.
+Leidas SOLO de titulo, fuente, entregable y pasos de los dos nodos
+(docs/loop/_auditor_v158_ciega.py). Sin ver clase, via, cita ni razon.
+Vara aplicada: la 6.4 del acta 157 (dos lineas DISTINTAS, una en cada nodo,
+cada una expandida por un PROCEDIMIENTO del otro nodo; mencion, precondicion
+o diagnostico no cuentan; si las dos direcciones apuntan a la misma linea,
+no es la figura y la clase es D).
+
+== LOS MARCADOS POR EL EJECUTOR (discutibles 1, 2 y 3) ==
+027 = D   la ida (SPIN p1 diagnosticar pequena/grande <- cierre p1) se sostiene,
+          pero la vuelta no: SPIN p2 REPITE la linea de cierre p3 en vez de
+          expandirla, y SPIN p3 aplaza el como a "capitulos posteriores".
+          Las dos direcciones caen sobre la misma linea. 9.22 separador.
+038 = C   plan_de_control p2 (el estandar que activa la accion, un limite de
+          carta) <- los diez pasos de SPC; y SPC p9 (instrucciones de
+          interpretacion y accion) <- plan p4 a p7 (quien mide, quien analiza,
+          quien actua, como se regresa a control). Dos lineas distintas.
+049 = C   decision p4 (toma un Canvas nuevo y busca game changers) <- los doce
+          pasos del lienzo; y lienzo p12 (usar el lienzo para pivotar o validar)
+          <- los seis pasos de la decision. Dos lineas distintas.
+122 = D   la vuelta se sostiene (6S como simplificacion del trabajo, error
+          proofing p4), la IDA no: 6S p6 "Safety, practicas seguras" no lo
+          ejecuta error_proofing_servicio, que es prevencion de ERROR en
+          proceso de servicio y no seguridad ocupacional. Materia distinta.
+017 = D   ida limpia (pivote p8/p9 usar y versionar el lienzo <- scorecard),
+          vuelta no: scorecard p2 actualiza el canvas REFLEJANDO pivotes, y el
+          pivote es precondicion de esa linea, no su ejecucion.
+030 = D   ida discutible (community p7 nombra eventos offline), vuelta no:
+          eventos p1 es DIAGNOSTICO y p7 es paralelo a community p9, no su
+          expansion.
+056 = D   ida limpia (design_test_repeat p1 prototipar <- los cinco pasos de
+          prototyping), vuelta no: el nodo abstracto no expande la linea del
+          concreto (p5 MVP); testear/aprender es menos especifico, no mas.
+
+== FUERA DEL MARCADO, MUESTRA POR COMPUTO (LD == 2 mod 3 dentro del lote 1) ==
+005 = C   DISCREPO. aim_of_leadership p2 (investigar las causas de raiz DEL
+          SISTEMA) <- los quince pasos de causas_comunes_vs_especiales (datos
+          cronologicos, limites, reglas, separar comun de especial); y
+          causas p13 (dar seguimiento y apoyo a quienes caen fuera de las
+          tolerancias del grupo) <- aim p1 + p3 + p5 (identificar quien esta
+          fuera, disenar ayuda o reconocimiento, estudiar al excepcional).
+          Dos lineas distintas y en dos nodos distintos. Me sale C.
+011 = D   dos clausulas distintas del mismo term sheet. Sano y distinto.
+014 = D   auditoria de negocio contra consejo de calidad: materias distintas.
+020 = D   calibracion de rangos contra analisis de sensibilidad. Distintos.
+023 = D   armar el cap table contra convertir notas: madre e hijo a lo sumo,
+          no bidireccional.
+026 = D   estrategia de cierre contra cuestionario de actitud: el cuestionario
+          apunta al entrenamiento, no lo expande.
+029 = D   no-shop contra condiciones de cierre: dos clausulas del LOI.
+032 = D   compromiso de fecha contra secuencia de preguntas SPIN. Distintos.
+035 = D   TOC contra pull/kanban: pull expande "subordinar", pero TOC p1 REPITE
+          la linea del cuello de botella en vez de expandirla. Una sola via.
+041 = D   CON DUDA DECLARADA. COPQ da los insumos del modelo optimo (eso es
+          precondicion, no ejecucion) y el modelo si expande "decidir si
+          invertir" de COPQ p5. Una via clara y una discutible. La dejo en D
+          y digo que es la mas floja de las once.
+044 = D   Govern del CSF contra perfiles Current/Target. Distintos.
+047 = D   la ida es limpia (economia p2 mapear touchpoints <- journey), pero
+          journey p4 y economia p1 son LA MISMA LINEA (valor contra memorable).
+          Separador del 9.22.

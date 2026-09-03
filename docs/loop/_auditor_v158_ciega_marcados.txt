@@ -1,0 +1,220 @@
+==============================================================================
+CASO LD-OPC05-027
+----------------------------------------------------------------------
+NODO: cierre_segun_complejidad_venta
+  titulo    : Efectividad del Cierre según la Complejidad de la Venta
+  fuente    : SPIN Selling - Neil Rackham
+  entregable: Una estrategia de ventas diferenciada según el tipo de venta (transaccional vs. consultiva/compleja)
+  deprecado : False
+   paso 1: Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y tambien por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión
+   paso 2: Si es venta pequeña y transaccional: aplicar técnicas de cierre tradicionales sin restricción
+   paso 3: Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN)
+   paso 4: Revisar el proceso de venta completo, no solo el cierre, para identificar el verdadero factor decisivo del éxito
+   paso 5: Capacitar al equipo de ventas diferenciando el enfoque según el tipo de venta que manejan
+   paso 6: Medir tiempo de transacción y tasa de éxito antes/después de cambiar el enfoque
+   paso 7: Construir la relación en base a confianza y transparencia en lugar de tácticas de persuasión
+   paso 8: Diseñar la estrategia de seguimiento entre llamadas, ya que las decisiones importantes ocurren cuando el vendedor no está presente
+   paso 9: Anticipar que el cliente evaluará también la relación con el vendedor, no solo el producto, en decisiones grandes
+   paso 10: Auditar el uso de técnicas de cierre en tu equipo comercial mediante observación de llamadas reales
+   paso 11: Comparar tasas de éxito entre vendedores que usan muchas técnicas de cierre vs. pocas
+   paso 12: Mide la satisfacción post-venta para detectar si tus técnicas de cierre están dañando la relación con el cliente.
+----------------------------------------------------------------------
+NODO: metodologia_spin_selling
+  titulo    : Metodología SPIN Selling
+  fuente    : SPIN Selling - Neil Rackham
+  entregable: Diagnóstico escrito de qué tipo de venta maneja el usuario (pequeña vs grande) y decisión de adoptar el enfoque SPIN en lugar de técnicas tradicionales
+  deprecado : False
+   paso 1: Diagnosticar si tu venta es 'pequeña' (una sola llamada, bajo valor) o 'grande' (ciclo largo, alto valor, decisión pública)
+   paso 2: Abandonar el enfoque en cierres agresivos y manejo de objeciones si vendes productos/servicios de alto valor
+   paso 3: Prepararse para usar preguntas de Situación, Problema, Implicación y Necesidad-Beneficio (se detallan en capítulos posteriores)
+   paso 4: Medir el impacto de la investigación mejorada: los estudios muestran incrementos de más del 20% en volumen de ventas
+
+==============================================================================
+CASO LD-OPC05-038
+----------------------------------------------------------------------
+NODO: control_estadistico_de_procesos
+  titulo    : Control Estadístico de Procesos (SPC)
+  fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  entregable: Gráfico de control implementado con límites calculados, subgrupos racionales definidos y protocolo de interpretación/acción
+  deprecado : False
+   paso 1: Elegir la característica a graficar, priorizando las de alta tasa de defectos
+   paso 2: Identificar variables y condiciones del proceso que contribuyen a la característica final
+   paso 3: Verificar que el sistema de medición tenga precisión y exactitud suficientes
+   paso 4: Determinar el punto más temprano de prueba para detectar causas asignables
+   paso 5: Elegir el tipo de gráfico de control adecuado (variables o atributos)
+   paso 6: Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio
+   paso 7: Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5
+   paso 8: Establecer un sistema simple y confiable de recolección de datos
+   paso 9: Calcular límites de control y definir instrucciones de interpretación y acción
+   paso 10: Graficar los datos e interpretar los resultados
+----------------------------------------------------------------------
+NODO: plan_de_control
+  titulo    : Plan de Control
+  fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  entregable: Plan de control documentado con variables, mediciones, responsables y acciones correctivas definidas
+  deprecado : False
+   paso 1: Identificar las variables que afectan al remedio y al cliente directa o indirectamente
+   paso 2: Establecer el estándar que activará una acción, idealmente un límite de control de una carta de control
+   paso 3: Definir cómo se medirá cada variable de control, especificando unidad de medida, sensor, frecuencia y tamaño de muestra
+   paso 4: Establecer dónde, cuándo y cómo se registrarán las mediciones
+   paso 5: Decidir quién analizará las mediciones y determinará si el proceso está fuera de control
+   paso 6: Decidir quién actuará para diagnosticar y eliminar la causa asignable
+   paso 7: Definir los pasos para regresar el proceso a control
+   paso 8: Revisar la matriz para verificar completitud y efectividad, y también su cobertura de variables críticas y velocidad de respuesta
+   paso 9: Capacitar a los dueños del proceso en el uso del plan de control.
+   paso 10: Auditar periódicamente la efectividad del plan de control.
+
+==============================================================================
+CASO LD-OPC05-049
+----------------------------------------------------------------------
+NODO: decision_pivotar_o_proceder
+  titulo    : Decisión: Pivotar o Proceder
+  fuente    : The Startup Owner's Manual - Blank, Steve
+  entregable: Documento de decisión de pivotar o proceder, con checklist completado, Business Model Canvas actualizado y evidencia de las pruebas de éxito y fracaso realizadas
+  deprecado : False
+   paso 1: Revisa honestamente si la validación convirtió opiniones en hechos, y no que moviste las metas para que coincidieran con el resultado
+   paso 2: Confirma que el producto se vendió bien y fácilmente, que la llegada de clientes es predecible, escalable y rentable, y que existe un proceso de ventas repetible
+   paso 3: Verifica que los tiempos de entrega del producto sean realistas con tu equipo de desarrollo
+   paso 4: Toma un Business Model Canvas nuevo y busca game changers revisando propuesta de valor, precios, canales y relaciones con clientes, no solo mejoras incrementales
+   paso 5: Presenta tu canvas a tu consejo asesor para que lo cuestione activamente
+   paso 6: Actualiza el canvas con lo aprendido y decide formalmente si pivotar volviendo a descubrimiento o proceder avanzando a creación de clientes
+----------------------------------------------------------------------
+NODO: lienzo_modelo_negocio
+  titulo    : El Lienzo de Modelo de Negocio (Business Model Canvas)
+  fuente    : Business Model Generation - Osterwalder, Alexander
+  entregable: Lienzo de Modelo de Negocio completo con los 9 bloques definidos y coherentes entre sí
+  deprecado : False
+   paso 1: Imprimir el lienzo en tamaño grande para trabajo colaborativo y un Business Model Canvas para cada miembro del equipo
+   paso 2: Reunirse con el equipo aceptando que habrá vacíos en la primera versión
+   paso 3: Escribir cada bloque en notas post-it sobre el lienzo
+   paso 4: Identificar los segmentos de clientes a los que se dirige la organización
+   paso 5: Definir la propuesta de valor para cada segmento
+   paso 6: Mapear canales, relaciones y fuentes de ingresos
+   paso 7: Mapear recursos, actividades y asociaciones clave
+   paso 8: Calcular la estructura de costos y el profit resultante
+   paso 9: Pausar para investigar más información donde haya vacíos importantes
+   paso 10: Iterar y discutir en grupo hasta lograr coherencia entre los bloques
+   paso 11: Publicar el canvas en el espacio de trabajo y actualizarlo conforme avanza el proyecto
+   paso 12: Usar el lienzo como base para pivotar o validar hipótesis del negocio, y también para llevar una solución ya diseñada a un modelo de negocio viable
+
+==============================================================================
+CASO LD-OPC05-122
+----------------------------------------------------------------------
+NODO: error_proofing_servicio
+  titulo    : Error-Proofing (A Prueba de Errores) en Procesos de Servicio
+  fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  entregable: Lista de mecanismos de error-proofing implementados en el proceso con evidencia de reducción de errores
+  deprecado : False
+   paso 1: Identificar actividades propensas a errores en el proceso o producto
+   paso 2: Evaluar si la actividad puede eliminarse completamente
+   paso 3: Buscar sustitutos más confiables para el proceso actual
+   paso 4: Simplificar el trabajo para reducir la posibilidad de error humano
+   paso 5: Implementar detección temprana de errores (software, códigos de barras, checklists)
+   paso 6: Diseñar mecanismos para minimizar el impacto cuando ocurran errores
+   paso 7: Clasifica el tipo de intervención según los cinco principios: eliminación, reemplazo, facilitación, detección o mitigación
+   paso 8: Diseña dispositivos físicos o lógicos que hagan imposible o detectable el error, como encajes únicos o sensores
+   paso 9: Prioriza la prevención proactiva en la etapa de diseño por encima de la mitigación reactiva
+   paso 10: Valida que el dispositivo funcione consistentemente antes de escalar su uso
+----------------------------------------------------------------------
+NODO: metodologia_6s
+  titulo    : Metodología 6S (Sort, Set in order, Shine, Standardize, Sustain, Safety)
+  fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  entregable: Área de trabajo organizada según los 6 principios 6S, con checklist de auditoría periódica establecido
+  deprecado : False
+   paso 1: Sort: elimina de tu área de trabajo todo lo que no necesites
+   paso 2: Set in order: organiza tus herramientas y materiales para acceder y devolverlos fácilmente
+   paso 3: Shine: limpia tu espacio y mantenlo libre de suciedad
+   paso 4: Standardize: crea procedimientos que conviertan la limpieza y el orden en un hábito
+   paso 5: Sustain: reserva tiempo, recursos e incentivos para sostener la disciplina en el tiempo
+   paso 6: Safety: revisa e integra prácticas seguras en cada etapa de tu trabajo
+
+==============================================================================
+CASO LD-OPC05-017
+----------------------------------------------------------------------
+NODO: business_model_canvas_scorecard
+  titulo    : El Business Model Canvas como Scorecard Semanal
+  fuente    : The Startup Owner's Manual - Blank, Steve
+  entregable: Serie histórica de canvases semanales que documenta la evolución de tu modelo de negocio.
+  deprecado : False
+   paso 1: Llenar el canvas inicial con tus hipótesis en las 9 áreas: segmentos, propuesta de valor, canales, relaciones, recursos, socios e ingresos
+   paso 2: Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho, y ademas cada vez que obtengas nueva evidencia
+   paso 3: Resaltar en rojo los cambios respecto a la semana anterior
+   paso 4: Una vez que confirmes los cambios, integrarlos como el nuevo canvas base en negro para la siguiente semana
+   paso 5: Repetir este proceso de forma continua durante todo tu customer discovery
+   paso 6: Sal a validar cada hipótesis con clientes reales cara a cara.
+   paso 7: Conserva todas las versiones del canvas como un flip book que documente la evolución de tu modelo de negocio.
+   paso 8: Evita convertir el canvas en un plan operativo prematuro basado en suposiciones sin validar.
+----------------------------------------------------------------------
+NODO: pivote_estrategico
+  titulo    : Pivote Estratégico basado en Evidencia
+  fuente    : The Lean Startup - Eric Ries
+  entregable: Documento de pivote que explique: la estrategia original, la evidencia que la invalidó, la nueva hipótesis de valor y los primeros resultados métricos post-pivote
+  deprecado : False
+   paso 1: Aceptar la evidencia empírica aunque contradiga meses de trabajo e inversión previa (sunk cost)
+   paso 2: Formular una nueva hipótesis de valor basada en los insights obtenidos de clientes
+   paso 3: Redirigir el desarrollo de producto hacia la nueva hipótesis, incluso si implica desechar código o funcionalidades ya construidas
+   paso 4: Validar la nueva dirección con nuevos experimentos y medir si las métricas empiezan a moverse
+   paso 5: Comunicar el pivote y su justificación basada en datos a inversores, empleados y stakeholders
+   paso 6: Decide con rapidez y sin miedo al fracaso si toca pivotar
+   paso 7: Distingue con claridad entre un ajuste menor y un cambio sustancial
+   paso 8: Usa tu lienzo de modelo de negocio para ubicar qué parte necesita el cambio
+   paso 9: Documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio
+
+==============================================================================
+CASO LD-OPC05-030
+----------------------------------------------------------------------
+NODO: community_building_estrategia
+  titulo    : Construcción de Comunidad (Community Building)
+  fuente    : Traction - Gabriel Weinberg
+  entregable: Documento de misión de comunidad, guías de calidad definidas y un plan de reconocimiento a evangelistas tempranos
+  deprecado : False
+   paso 1: Definir una misión clara y significativa que la comunidad pueda adoptar como propia
+   paso 2: Aprovechar una audiencia existente (blog, redes) para dar feedback previo al lanzamiento, incluidas comunidades complementarias existentes online y offline
+   paso 3: Crear espacios de meta-discusión donde los usuarios hablen sobre la comunidad misma
+   paso 4: Reconocer y agradecer personalmente a los evangelistas tempranos (emails, regalos, eventos)
+   paso 5: Establecer guías de calidad claras y visibles desde el inicio
+   paso 6: Delegar cierta moderación a la propia comunidad (sistemas de karma/votación)
+   paso 7: Combinar community building con otros canales como eventos offline y speaking
+   paso 8: Evaluar si tu modelo de negocio se presta naturalmente a la construcción de comunidad (¿tu valor central conecta personas?).
+   paso 9: Fomentar la conexión cruzada entre miembros de la comunidad, no solo entre miembro-empresa.
+----------------------------------------------------------------------
+NODO: eventos_offline_como_canal_traccion
+  titulo    : Eventos presenciales para conseguir tus primeros clientes (canal de tracción)
+  fuente    : Traction - Gabriel Weinberg
+  entregable: Un evento presencial piloto (encuentro o mini charla) que planeaste y realizaste, con la asistencia y el interés generado anotados
+  deprecado : False
+   paso 1: Piensa si las personas a las que quieres llegar comparten intereses o buscan comunidad
+   paso 2: Empieza con un evento pequeño y de bajo costo, como una mini charla de un día; pregunta el precio en tu mercado, o un evento lujoso multi-día para decision makers de alto nivel
+   paso 3: Invita a tres emprendedores o expertos locales relevantes para que den charlas cortas, y sin que el evento parezca un pitch de ventas
+   paso 4: Busca un espacio accesible, como una universidad, para reducir gastos
+   paso 5: Si el evento pequeño funciona, anímate a organizar uno más grande con auspiciantes
+   paso 6: Mantén el precio de entrada relativamente alto para asegurar que quien va realmente esté interesado
+   paso 7: Facilita que los que dan charlas y los asistentes se conecten entre sí, con almuerzos compartidos o mesas de conversación
+   paso 8: Validar la demanda del evento preguntando directamente a tu audiencia (encuesta, venta anticipada de entradas).
+   paso 9: Usar transmisión en vivo o meetups satélite para expandir el alcance sin aumentar costos de viaje.
+   paso 10: Repetir el evento anualmente una vez validado, ajustando precio y escala según la demanda comprobada.
+
+==============================================================================
+CASO LD-OPC05-056
+----------------------------------------------------------------------
+NODO: design_test_repeat
+  titulo    : Diseñar, Probar, Repetir (Ciclo Iterativo)
+  fuente    : Value Proposition Design
+  entregable: Un ciclo documentado de iteraciones de prototipo-prueba-aprendizaje.
+  deprecado : False
+   paso 1: Prototipar rápidamente una idea de propuesta de valor.
+   paso 2: Testear el prototipo con clientes reales.
+   paso 3: Aprender de los resultados y rediseñar.
+   paso 4: Repetir el ciclo continuamente.
+----------------------------------------------------------------------
+NODO: prototyping_possibilities
+  titulo    : Prototipado de Posibilidades
+  fuente    : Value Proposition Design
+  entregable: Conjunto de prototipos alternativos (sketches, ad-libs, canvases) listos para exponer a feedback.
+  deprecado : False
+   paso 1: Generar múltiples direcciones alternativas para la misma idea (no solo una).
+   paso 2: Usar napkin sketches (bocetos rápidos de 5-15 min) para hacer tangibles las ideas.
+   paso 3: Rellenar ad-libs para precisar cómo cada alternativa crea valor.
+   paso 4: Desarrollar Value Proposition Canvases para las direcciones más prometedoras.
+   paso 5: Construir un MVP para llevar la propuesta a la vida y testearla.
+

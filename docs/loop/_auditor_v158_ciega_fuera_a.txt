@@ -1,0 +1,177 @@
+==============================================================================
+CASO LD-OPC05-005
+----------------------------------------------------------------------
+NODO: aim_of_leadership
+  titulo    : Objetivo del Liderazgo (Deming)
+  fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  entregable: Un plan de liderazgo enfocado en mejorar el sistema, con identificación de casos individuales fuera de lo esperado y acciones de apoyo basadas en datos.
+  deprecado : False
+   paso 1: Identificar, con datos o con criterio, quién está fuera de lo esperado, por bajo o por muy alto desempeño
+   paso 2: Investigar las causas de raíz del sistema que afectan el desempeño general
+   paso 3: Diseñar formas de ayuda individual o de reconocimiento según corresponda
+   paso 4: Trabajar de forma continua en mejorar el sistema para todos, no solo en corregir personas
+   paso 5: Reconocer y estudiar a quienes tienen un desempeño excepcional para replicar sus métodos
+   paso 6: Buscar reducir la variabilidad de desempeño entre personas dentro del mismo sistema
+----------------------------------------------------------------------
+NODO: causas_comunes_vs_especiales
+  titulo    : Causas Comunes vs Causas Especiales de Variación
+  fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  entregable: Gráfico de corrida o de control con los puntos clasificados como causa común o especial y un plan de acción diferenciado para cada tipo.
+  deprecado : False
+   paso 1: Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes
+   paso 2: Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos
+   paso 3: Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales
+   paso 4: Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla
+   paso 5: Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas
+   paso 6: Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales
+   paso 7: Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo
+   paso 8: Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+   paso 9: Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).
+   paso 10: Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.
+   paso 11: Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.
+   paso 12: Comunicar a los equipos que el objetivo es identificar problemas, no culpables
+   paso 13: Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo
+   paso 14: Fomentar la colaboración entre turnos y departamentos para resolver causas comunes
+   paso 15: Analizar la distribución de errores o defectos entre todas las personas usando limites de control
+
+==============================================================================
+CASO LD-OPC05-011
+----------------------------------------------------------------------
+NODO: antidilucion_provisiones
+  titulo    : Provisiones de Antidilución (Full Ratchet vs Weighted Average)
+  fuente    : Venture Deals - Brad Feld
+  entregable: Cláusula de antidilución definida en el term sheet, con el mecanismo de ajuste (weighted average o full ratchet), su fórmula y las excepciones (carve-outs) claramente especificadas
+  deprecado : False
+   paso 1: Negociar antidilución basada en weighted average (broad-based), el estándar más equilibrado del mercado; evitar full ratchet salvo en negociaciones muy específicas o desfavorables
+   paso 2: Identificar y listar las excepciones (carve-outs o 'excluded issuances') que no disparan el ajuste, como el pool de opciones para empleados o fusiones aprobadas por la junta
+   paso 3: Negociar una cláusula de renuncia (waiver) por mayoría de la Serie A, para los casos en que la mayoría de inversionistas acuerde financiar una ronda futura a un precio menor
+   paso 4: Negociar si el ajuste también aplica a splits de acciones, dividendos en acciones y recapitalizaciones
+   paso 5: Consultar con un abogado corporativo el impacto de cada mecanismo en la tabla de capitalización ante un escenario de ronda a la baja
+----------------------------------------------------------------------
+NODO: preferencia_de_liquidacion
+  titulo    : Preferencia de Liquidación (Liquidation Preference)
+  fuente    : Venture Deals - Brad Feld | The Founder's Dilemmas - Wasserman, Noam
+  entregable: Cláusula de liquidation preference definida en el term sheet (multiplicador, tipo participante/no participante, definición de evento de liquidación) y modelada en distintos escenarios de salida (análisis de cascada o waterfall)
+  deprecado : False
+   paso 1: Negociar una preferencia de liquidación simple (1x, no participante) en rondas iniciales; evitar múltiplos superiores a 1x, ya que son señal de alerta sobre el inversionista
+   paso 2: Entender la diferencia entre preferencia participante (preferencia MÁS parte proporcional como común) y no participante (una u otra, no ambas)
+   paso 3: Si se acepta participación, solicitar 'kick-outs' que la eliminen una vez el inversionista alcance un retorno de 2x-3x
+   paso 4: Definir con claridad qué eventos constituyen un 'Change in Control' que dispara la liquidación; recordar que una oferta pública inicial NO se considera evento de liquidación
+   paso 5: Entender el 'overhang' de la preferencia: el monto que debe devolverse a los inversionistas antes de que los comunes reciban cualquier proceso
+   paso 6: Modelar distintos escenarios de venta (bajo, medio, alto) para entender el impacto real en el retorno de fundadores, empleados e inversionistas (análisis de cascada o waterfall)
+   paso 7: Revisar cómo se tratan las contraprestaciones en garantía (escrow) o contingentes al calcular la distribución
+   paso 8: Anticipar que un inversionista que percibe mayor riesgo (mercado incierto, competencia, condiciones de salida poco claras) tenderá a exigir términos más agresivos
+
+==============================================================================
+CASO LD-OPC05-014
+----------------------------------------------------------------------
+NODO: auditoria_negocio
+  titulo    : Auditoría de Negocio (Business Audit)
+  fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  entregable: Un informe de auditoría con hallazgos, comparación contra criterios de calidad y recomendaciones de acción
+  deprecado : False
+   paso 1: Identificar las preguntas clave que quieres que la auditoría responda
+   paso 2: Recopilar y analizar la información necesaria para responder esas preguntas
+   paso 3: Comparar el desempeño auditado contra criterios externos o contra los que tú mismo definiste
+   paso 4: Revisar los hallazgos y las recomendaciones con calma antes de decidir
+   paso 5: Definir qué acciones tomar según los resultados de la auditoría
+----------------------------------------------------------------------
+NODO: consejo_de_calidad
+  titulo    : Consejo de Calidad (Liderazgo y Selección de Proyectos de Juran)
+  fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  entregable: Un espacio de decisión activo, con proyectos priorizados y equipos con recursos asignados
+  deprecado : False
+   paso 1: Reune a las personas clave de tu negocio para formar este espacio de decisión, idealmente miembros del comité de alta dirección, presidido por el máximo responsable del nivel correspondiente
+   paso 2: Capacitense en el método de mejora de calidad que van a usar
+   paso 3: Identifica y prioriza los problemas mas importantes, por ejemplo con un análisis de Pareto
+   paso 4: Elige los proyectos a trabajar y define con claridad el problema y la meta de cada uno
+   paso 5: Asigna los recursos necesarios: capacitación, personas, tiempo y acompañamiento
+   paso 6: Revisa el avance de cada equipo y reconoce los logros, con métricas de progreso y la remoción de obstáculos
+   paso 7: Publicar y comunicar las responsabilidades del consejo a toda la organización
+   paso 8: Establecer políticas de enfoque al cliente y continuidad del breakthrough
+   paso 9: Vincular consejos corporativos con consejos divisionales o locales si la organización es grande
+   paso 10: Incluir al director de calidad como miembro del consejo
+   paso 11: Redactar una carta constitutiva con responsabilidades claras del consejo
+
+==============================================================================
+CASO LD-OPC05-020
+----------------------------------------------------------------------
+NODO: calibra_tu_propio_ojo
+  titulo    : Calibración del Juicio
+  fuente    : Hubbard, The Failure of Risk Management
+  entregable: Un registro de tus estimaciones con rango y su resultado real, que muestra qué tan calibrado estás.
+  deprecado : False
+   paso 1: En tus próximas diez estimaciones, da rangos con noventa por ciento de confianza.
+   paso 2: Cuando sepas el resultado real, cuenta cuántas veces cayó dentro de tu rango.
+   paso 3: Si aciertas menos de nueve de diez, amplía tus rangos: estás sobreconfiado.
+   paso 4: Usa la prueba de la apuesta: si por dinero ampliarías el rango, es que era muy estrecho.
+----------------------------------------------------------------------
+NODO: mide_lo_que_de_verdad_mueve_la_aguja
+  titulo    : Análisis de Sensibilidad
+  fuente    : DeMarco y Lister, Waltzing with Bears
+  entregable: Tus supuestos ordenados por cuánto mueven el resultado, con los dos o tres decisivos marcados para medir primero.
+  deprecado : False
+   paso 1: Lista los supuestos inciertos detrás de tu decisión o tu proyección.
+   paso 2: Pregunta de cada uno: si me equivoco en este, cuánto cambia el resultado final.
+   paso 3: Marca los dos o tres que más mueven la aguja e ignora por ahora los demás.
+   paso 4: Concentra tu siguiente esfuerzo de medición en reducir la incertidumbre de esos pocos.
+
+==============================================================================
+CASO LD-OPC05-023
+----------------------------------------------------------------------
+NODO: cap_table_basico
+  titulo    : Cómo armar tu tabla de reparto de acciones (cap table)
+  fuente    : Venture Deals - Brad Feld
+  entregable: Tu tabla de capitalización completa y verificada, con cada tipo de acción, su porcentaje y el precio por acción calculados correctamente
+  deprecado : False
+   paso 1: Lista las acciones que tienes como fundador antes de recibir la inversión
+   paso 2: Define la valuación antes de la inversión (pre-money) y el monto que vas a recibir, para calcular la valuación después de la inversión (post-money)
+   paso 3: Calcula el porcentaje que le corresponde al inversionista dividiendo lo que invierte entre la valuación post-money
+   paso 4: Si vas a crear una bolsa de opciones después de la inversión, resta ese porcentaje del tuyo para saber cuánto te queda realmente
+   paso 5: Resuelve lo que falta en tu tabla (total de acciones, precio por acción) con álgebra básica
+   paso 6: Verifica tus cálculos comparando la valuación pre-money implícita contra el número de acciones y el precio por acción
+   paso 7: Usa decimales o fracciones de acciones en los cálculos intermedios y redondea solo al final
+----------------------------------------------------------------------
+NODO: metodo_conversion_notas_cap_table
+  titulo    : Cómo convertir tus notas convertibles en el reparto de acciones (cap table)
+  fuente    : Venture Deals - Brad Feld
+  entregable: Un análisis comparativo de los tres métodos de conversión, con la elección documentada en el documento de términos (term sheet) de tu ronda Serie A
+  deprecado : False
+   paso 1: Identifica la valuación acordada antes de la inversión, el monto que invertirá la Serie A, el capital más interés de tus notas, y la tasa de descuento
+   paso 2: Calcula el resultado si fijas la valuación antes de la inversión (método pre-money) y derivas el precio de conversión con el descuento
+   paso 3: Calcula el resultado si fijas el porcentaje de propiedad de los inversionistas de la Serie A (método de porcentaje fijo)
+   paso 4: Calcula el resultado si fijas el valor de tu empresa después de la inversión (método de dólares invertidos): valor después de la inversión igual a valor antes más inversión más notas convertidas
+   paso 5: Compara los tres escenarios de dilución para ti, los tenedores de notas y los inversionistas de la Serie A
+   paso 6: Negocia y deja por escrito en el documento de términos (term sheet) qué método vas a usar
+
+==============================================================================
+CASO LD-OPC05-026
+----------------------------------------------------------------------
+NODO: cierre_segun_complejidad_venta
+  titulo    : Efectividad del Cierre según la Complejidad de la Venta
+  fuente    : SPIN Selling - Neil Rackham
+  entregable: Una estrategia de ventas diferenciada según el tipo de venta (transaccional vs. consultiva/compleja)
+  deprecado : False
+   paso 1: Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y tambien por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión
+   paso 2: Si es venta pequeña y transaccional: aplicar técnicas de cierre tradicionales sin restricción
+   paso 3: Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN)
+   paso 4: Revisar el proceso de venta completo, no solo el cierre, para identificar el verdadero factor decisivo del éxito
+   paso 5: Capacitar al equipo de ventas diferenciando el enfoque según el tipo de venta que manejan
+   paso 6: Medir tiempo de transacción y tasa de éxito antes/después de cambiar el enfoque
+   paso 7: Construir la relación en base a confianza y transparencia en lugar de tácticas de persuasión
+   paso 8: Diseñar la estrategia de seguimiento entre llamadas, ya que las decisiones importantes ocurren cuando el vendedor no está presente
+   paso 9: Anticipar que el cliente evaluará también la relación con el vendedor, no solo el producto, en decisiones grandes
+   paso 10: Auditar el uso de técnicas de cierre en tu equipo comercial mediante observación de llamadas reales
+   paso 11: Comparar tasas de éxito entre vendedores que usan muchas técnicas de cierre vs. pocas
+   paso 12: Mide la satisfacción post-venta para detectar si tus técnicas de cierre están dañando la relación con el cliente.
+----------------------------------------------------------------------
+NODO: escala_actitud_cierre
+  titulo    : Escala de Actitud hacia el Cierre de Ventas
+  fuente    : SPIN Selling - Neil Rackham
+  entregable: Puntaje individual de actitud hacia el cierre, con diagnóstico de si el vendedor necesita reorientar su enfoque hacia técnicas consultivas (SPIN) en vez de cierre agresivo.
+  deprecado : False
+   paso 1: Responder el cuestionario de 15 afirmaciones sobre creencias de cierre
+   paso 2: Calcular el puntaje según las instrucciones de interpretación
+   paso 3: Identificar si existe sesgo hacia técnicas de cierre agresivo vs. enfoque consultivo
+   paso 4: Usar el resultado para ajustar el enfoque de entrenamiento o coaching individual del vendedor
+

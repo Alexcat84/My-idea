@@ -1,0 +1,159 @@
+==============================================================================
+CASO LD-OPC05-029
+----------------------------------------------------------------------
+NODO: clausula_no_shop_adquisicion
+  titulo    : Cláusula No-Shop en Procesos de Venta de la Empresa
+  fuente    : Venture Deals - Brad Feld
+  entregable: Cláusula de no-shop con duración y condiciones de salida claramente definidas en el LOI.
+  deprecado : False
+   paso 1: Negociar una duración de no-shop entre 45 y 60 días.
+   paso 2: Incluir cláusula de terminación automática si el comprador abandona el proceso.
+   paso 3: Evitar sobre-negociar en el momento de solicitud de extensión del no-shop.
+   paso 4: Considerar excepciones (carve-outs) como rondas de financiamiento durante el período de no-shop.
+----------------------------------------------------------------------
+NODO: condiciones_de_cierre_adquisicion
+  titulo    : Condiciones de Cierre (Conditions to Close) en el LOI
+  fuente    : Venture Deals - Brad Feld
+  entregable: Lista de condiciones de cierre negociada y con plan de resolución temprana.
+  deprecado : False
+   paso 1: Revisar la lista completa de condiciones de cierre propuestas por el comprador.
+   paso 2: Cuestionar condiciones inusualmente restrictivas o específicas desde el inicio.
+   paso 3: Resolver condiciones complejas (ej. liquidación de subsidiarias) temprano en el due diligence.
+   paso 4: Evaluar el nivel de compromiso del comprador según la complejidad de las condiciones.
+
+==============================================================================
+CASO LD-OPC05-032
+----------------------------------------------------------------------
+NODO: compromiso_linea_tiempo_cliente
+  titulo    : Compromiso con Línea de Tiempo de Compra
+  fuente    : Traction - Gabriel Weinberg
+  entregable: Acuerdo o documento de compromiso con fecha y condiciones claras de decisión de compra por parte del prospecto
+  deprecado : False
+   paso 1: Definir un plan de acción claro para el prospecto (ej. pilot de X semanas)
+   paso 2: Comunicar explícitamente el cronograma y las condiciones de decisión
+   paso 3: Solicitar un compromiso de respuesta sí/no al finalizar el plazo
+   paso 4: Documentar y dar seguimiento a la fecha comprometida
+   paso 5: Descartar o re-clasificar a los prospectos que no confirman compromiso
+   paso 6: Establecer un timeline claro de compra y pedir compromiso explícito (sí/no) al prospecto
+   paso 7: Documentar el acuerdo de cierre por escrito con el cliente
+----------------------------------------------------------------------
+NODO: modelo_spin_preguntas
+  titulo    : Modelo SPIN: Secuencia de Preguntas de Venta
+  fuente    : SPIN Selling - Neil Rackham
+  entregable: Guion o banco de preguntas SPIN personalizado por cliente o producto, listo para tu próxima llamada de venta clave
+  deprecado : False
+   paso 1: Prepara preguntas de Situación mínimas y específicas sobre el contexto del cliente, usándolas con moderación
+   paso 2: Formula preguntas de Problema para identificar dificultades o insatisfacciones del cliente
+   paso 3: Desarrolla preguntas de Implicación que conecten el problema con consecuencias mayores no obvias
+   paso 4: Cierra con preguntas de Necesidad-Beneficio para que el cliente exprese el valor de resolver el problema
+   paso 5: Ajusta la secuencia según el flujo natural de la conversación sin forzar el orden rígido
+   paso 6: Presenta tu solución recién cuando el cliente haya articulado la Necesidad Explícita
+   paso 7: Deja de entrenarte en distinguir preguntas abiertas de cerradas; ese no es el factor que marca la diferencia
+   paso 8: Practica pasar de un tipo de pregunta a otro sin que se note, en llamadas reales
+   paso 9: Revisa tus llamadas o tus notas para detectar en qué parte de la secuencia te trabas
+
+==============================================================================
+CASO LD-OPC05-035
+----------------------------------------------------------------------
+NODO: constraint_management
+  titulo    : Gestión de Restricciones (Teoría de las Restricciones)
+  fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  entregable: Restricción del sistema identificada con plan de acción de las 5 etapas de TOC
+  deprecado : False
+   paso 1: Identificar la restricción (equipo, mano de obra, información o proveedor) que limita el throughput
+   paso 2: Decidir cómo explotar al máximo la restricción actual
+   paso 3: Subordinar todos los demás procesos a esta decisión
+   paso 4: Elevar el desempeño de la restricción mediante inversión o mejora
+   paso 5: Repetir el ciclo identificando la nueva restricción
+----------------------------------------------------------------------
+NODO: sistema_pull_push
+  titulo    : Sistemas Pull versus Push en Producción
+  fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  entregable: Sistema de produccion rediseñado bajo logica pull con kanbans implementados y metricas de flujo mejoradas.
+  deprecado : False
+   paso 1: Evaluar si tu operacion actual funciona bajo un esquema push o pull
+   paso 2: Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso
+   paso 3: Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente
+   paso 4: Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor
+   paso 5: Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad
+   paso 6: Implementar el sistema y capacitar a los operadores
+
+==============================================================================
+CASO LD-OPC05-041
+----------------------------------------------------------------------
+NODO: costo_de_mala_calidad_copq
+  titulo    : Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)
+  fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  entregable: Reporte cuantificado del COPQ desglosado por categorías y como porcentaje de ventas, con los segmentos que concentran el mayor costo y una meta de reducción anual
+  deprecado : False
+   paso 1: Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad
+   paso 2: Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos
+   paso 3: Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real
+   paso 4: Identifica los pocos procesos o productos que concentran la mayor parte del costo
+   paso 5: Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio
+   paso 6: Establece una meta de reducción anual y repite el cálculo periódicamente para verificar la tendencia
+----------------------------------------------------------------------
+NODO: modelo_costo_optimo_calidad
+  titulo    : Modelo de Costo Óptimo de Calidad
+  fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  entregable: Un análisis gráfico y numérico que muestre si alcanzaste el óptimo económico de calidad o si aún existen oportunidades de mejora rentables, con recomendaciones de inversión.
+  deprecado : False
+   paso 1: Grafica las curvas de costo de fallas y de evaluación/prevención en función del nivel de conformidad de tu producto
+   paso 2: Identifica el punto de intersección o mínimo de la curva de costo total de calidad
+   paso 3: Evalúa si existen proyectos de mejora cuyo beneficio supere claramente su costo
+   paso 4: Determina si tu negocio está lejos del punto óptimo o si ya alcanzaste el límite económico de mejora
+   paso 5: Ajusta tu presupuesto de prevención según el análisis de beneficio costo que obtuviste
+
+==============================================================================
+CASO LD-OPC05-044
+----------------------------------------------------------------------
+NODO: csf_funcion_govern
+  titulo    : Función Govern del NIST CSF 2.0
+  fuente    : NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide
+  entregable: Documento de gobernanza que incluya misión del negocio, riesgos identificados, requisitos legales/regulatorios/contractuales, y designación formal de responsables de ciberseguridad
+  deprecado : False
+   paso 1: Documentar la misión del negocio y qué riesgos de ciberseguridad podrían impedir alcanzarla
+   paso 2: Identificar requisitos legales, regulatorios y contractuales de ciberseguridad aplicables
+   paso 3: Asignar formalmente quién será responsable de desarrollar y ejecutar la estrategia de ciberseguridad
+   paso 4: Evaluar el impacto potencial de perder activos o operaciones críticas
+   paso 5: Evaluar si un seguro de ciberseguridad es apropiado para el negocio
+   paso 6: Evaluar riesgos de proveedores y terceros antes de formalizar relaciones comerciales
+   paso 7: Comunicar y hacer cumplir políticas de gestión de riesgo de ciberseguridad a toda la organización
+----------------------------------------------------------------------
+NODO: csf_perfiles_organizacionales
+  titulo    : Perfiles Organizacionales del CSF (Current y Target Profile)
+  fuente    : NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide
+  entregable: Documento con Current Profile y Target Profile definidos, más un análisis de brechas entre ambos
+  deprecado : False
+   paso 1: Documentar el Current Profile: qué resultados de ciberseguridad se están logrando actualmente y en qué medida
+   paso 2: Definir el Target Profile: qué resultados se han priorizado como objetivo de gestión de riesgo
+   paso 3: Considerar usar un Community Profile del sector como base para el Target Profile
+   paso 4: Usar los CSF Tiers para calificar el rigor actual o deseado de las prácticas por Función o Categoría
+   paso 5: Comparar Current vs Target Profile para identificar brechas y priorizar acciones futuras
+
+==============================================================================
+CASO LD-OPC05-047
+----------------------------------------------------------------------
+NODO: customer_journey_mapping
+  titulo    : Mapeo del Customer Journey (Viaje del Cliente)
+  fuente    : Change by Design, Revised and U - Tim Brown
+  entregable: Un mapa visual del viaje del cliente con todas sus etapas y todos sus touchpoints, los momentos emocionales clave identificados, cada punto evaluado por el valor que crea y por lo memorable que resulta, levantado con la estrategia general y el detalle operativo al mismo tiempo, y con las mejoras priorizadas por impacto
+  deprecado : False
+   paso 1: Observa directamente a clientes reales durante toda su experiencia de servicio, acompañándolos en todo su recorrido (shadowing) y sin limitarte al punto de contacto que asumiste como el más importante
+   paso 2: Documenta cada etapa del viaje, desde el primer contacto hasta el cierre, identificando en cada una los momentos emocionales clave (los 'momentos de verdad'), y levanta el mapa con la estrategia general y el detalle operativo al mismo tiempo
+   paso 3: Identifica todos los 'touchpoints' donde el cliente interactúa con la marca o el servicio
+   paso 4: Evalúa cada touchpoint con dos varas distintas: si crea valor positivo o pierde al cliente, y si solo evita una mala experiencia o genera una experiencia memorable
+   paso 5: Prioriza las mejoras en los puntos de mayor impacto, no solo en el producto central
+----------------------------------------------------------------------
+NODO: economia_de_la_experiencia
+  titulo    : La Economía de la Experiencia
+  fuente    : Change by Design, Revised and U - Tim Brown
+  entregable: Un análisis de touchpoints con propuestas concretas de mejora para transformar la interacción funcional en una experiencia emocionalmente resonante.
+  deprecado : False
+   paso 1: Analizar el producto/servicio actual e identificar si solo resuelve una función o si genera una experiencia memorable.
+   paso 2: Mapear los puntos de contacto (touchpoints) donde el usuario podría pasar de consumo pasivo a participación activa.
+   paso 3: Diseñar elementos que generen conexión emocional, no solo eficiencia funcional.
+   paso 4: Evaluar la ejecución del detalle (calidad, distribución, precio, diseño físico) ya que fallas de ejecución destruyen buenas ideas.
+   paso 5: Iterar el diseño de la experiencia con el mismo rigor que se aplicaría a la ingeniería de un producto.
+   paso 6: Analizar ejemplos de marcas de experiencia (Whole Foods, Virgin America) para inspirar el diseño propio
+
