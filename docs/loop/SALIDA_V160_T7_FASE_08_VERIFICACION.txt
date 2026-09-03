@@ -1,0 +1,13 @@
+ESTADO DE LA FASE 08_VERIFICACION | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-V-01 | 08_VERIFICACION | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo MESA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 1 | con destino cumplido: 0 | sin cumplir: 1 | de ellas, sin vara escrita: 1 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (1): OP-V-01
+SIN VARA ESCRITA (1): OP-V-01
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+EXITCODE: 0

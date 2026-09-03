@@ -1,0 +1,54 @@
+==============================================================================
+VUELTA 160, TAREA 7.c: PRUEBA DE MUTACION DE LA GUARDA DE LA CITA
+==============================================================================
+
+SHA256 DE LOS TRES ORIGINALES, ANTES DE NADA:
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl           ea6e850d331d14f0
+   docs/plan/LECTURAS_DIRIGIDAS.md               069248dc345994c0
+   docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl       b10896c975bb08d7
+
+SUJETO COMPUTADO (no tecleado): LD-OPC05-001, clase vigente D, su cita la declara
+
+CASO 1: SE MUEVE LA CLASE Y NO SE TOCA LA CITA. TIENE QUE REVENTAR
+------------------------------------------------------------------------------
+   excepcion: AssertionError
+   es AssertionError: True
+   el mensaje NOMBRA la fila LD-OPC05-001: True
+   mensaje: LA CITA MIENTE SOBRE SU PROPIA CLASE en 1 fila(s): LD-OPC05-001. Reescribe el campo `cita` a la forma unica de la adjudicacion 6.6 del acta 158 (clase VIGENTE [ANTES ANTERIOR, RECLASIFICADA EN LA VUEL
+      |    C.7 CIFRA citas cuya clase escrita NO es la vigente: 1
+      |        LD-OPC05-001     la cita dice D | la clase vigente es C
+   VEREDICTO: OK
+
+CASO 2, CONTRAPRUEBA: se SOSTIENE la clase. NO puede caer
+------------------------------------------------------------------------------
+   excepcion: NINGUNA
+      |    C.7 CIFRA citas cuya clase escrita NO es la vigente: 0
+      |        NINGUNA: cada cita declara la clase que la fila tiene hoy.
+   VEREDICTO: OK
+
+CASO 3, MUTACION DEL VALOR ESPERADO: si la guarda compara la clase
+contra SI MISMA, deja de caer sobre el escenario del caso 1
+------------------------------------------------------------------------------
+   excepcion con el valor esperado mutado: NINGUNA
+   LA GUARDA DEJA DE CAER, o sea que su rojo del caso 1 venia de la
+   comparacion que dice hacer y no de otra cosa.
+   VEREDICTO: OK
+
+==============================================================================
+LOS TRES ORIGINALES, INTACTOS (medido, no prometido):
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl           ea6e850d331d14f0  identico: True
+   docs/plan/LECTURAS_DIRIGIDAS.md               069248dc345994c0  identico: True
+   docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl       b10896c975bb08d7  identico: True
+
+  OK    CASO 1, la guarda CAE con la cita mintiendo
+  OK    CASO 2, contraprueba: sosteniendo la clase no cae
+  OK    CASO 3, mutado el valor esperado, la guarda no cae
+  OK    LA FRONTERA: los tres ficheros reales no se tocaron
+
+CIFRA casos del arnes: 4
+CIFRA casos que se comportan: 4
+==============================================================================
+VERDE: los 4 se comportan. LA GUARDA DE LA CITA MUERDE, Y MUERDE POR
+LO QUE DICE MEDIR.
+FIN
+EXITCODE: 0

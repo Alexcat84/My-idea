@@ -49,6 +49,26 @@ import os
 import re
 import subprocess
 
+
+# --- GUARDA ANADIDA EN LA VUELTA 160 (TAREA 7.b), Y NACE DE UNA CAIDA DEL
+# PROPIO EJECUTOR CAZADA EN EL CIERRE ---
+#
+# QUE FALTABA. Este motor escribe `clase`, `razon` y la celda del `.md`, y NO
+# TOCA EL CAMPO `cita`. Cuando la vuelta 160 movio cuatro clases de C a D con
+# TODAS las guardas de la 2.d en verde, las cuatro filas quedaron con su `cita`
+# diciendo `clase C` sobre una fila que ya era `D`. Eso es EXACTAMENTE lo que la
+# adjudicacion 6.6 del acta 158 vino a cerrar (*las 3 de la vuelta 156 dejan de
+# leer "clase C" en una fila que es D*), y la vuelta 159 lo habia dejado en cero.
+#
+# POR QUE NO LO CAZO NINGUNA GUARDA: las seis de la 2.d miran el prefijo de las
+# razones, los pares, el sha256 de dataset/, el censo, `n` y que ninguna clase
+# vaya a `A`. NINGUNA miraba la coherencia entre la clase vigente y la clase que
+# el propio campo `cita` declara. Lo delato el marcador del cierre, contando.
+#
+# LA GUARDA: al terminar de escribir, NINGUNA fila puede tener en `cita` una
+# clase distinta de la vigente. Si la hay, el motor SALE ROJO EN EL SITIO en vez
+# de dejarla llegar al cierre. Un arreglo sin guarda solo aplaza la proxima.
+
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 REGISTRO = os.path.join(RAIZ, "docs", "plan", "REGISTRO_DE_CITAS_OPC05.jsonl")
 LD_MD = os.path.join(RAIZ, "docs", "plan", "LECTURAS_DIRIGIDAS.md")
@@ -75,6 +95,15 @@ def guardar(E):
 
 def ld_de(e):
     return e["cita"].split(",")[0].strip()
+
+
+def clase_escrita_en_la_cita(cita):
+    """La clase que el campo `cita` DICE, o None si no dice ninguna (guarda de
+    la vuelta 160, TAREA 7.b). Se lee del texto DETRAS del identificador para
+    que el `LD-OPC05-NNN` no pueda casar por accidente."""
+    resto = cita.split(",", 1)[1] if "," in cita else ""
+    m = re.search(r"clase ([A-D])", resto)
+    return m.group(1) if m else None
 
 
 def sha_dataset():
@@ -237,6 +266,22 @@ def aplicar(titulo, veredictos, marca, cabeza, nota_md, ids_esperados=None):
     print("   C.5 CIFRA n, veredictos del cribado DESPUES: %d" % n_desp)
     assert n_antes == n_desp == N_CRIBADO, "n se movio: tenia que quedarse en 3.388"
     print("       n NO SE MUEVE y sigue en 3.388")
+
+    # GUARDA DE LA VUELTA 160 (TAREA 7.b): la cita no puede declarar una clase
+    # que ya no es la vigente. Ver el motivo entero al principio de este fichero.
+    descuadradas = [(ld_de(d), clase_escrita_en_la_cita(d["cita"]), d["clase"])
+                    for d in D if clase_escrita_en_la_cita(d["cita"]) != d["clase"]]
+    print("   C.7 CIFRA citas cuya clase escrita NO es la vigente: %d"
+          % len(descuadradas))
+    for ld, dice, vig in descuadradas:
+        print("       %-16s la cita dice %s | la clase vigente es %s" % (ld, dice, vig))
+    assert not descuadradas, (
+        "LA CITA MIENTE SOBRE SU PROPIA CLASE en %d fila(s): %s. Reescribe el "
+        "campo `cita` a la forma unica de la adjudicacion 6.6 del acta 158 "
+        "(clase VIGENTE [ANTES ANTERIOR, RECLASIFICADA EN LA VUELTA N: ver la "
+        "razon]) en la misma tarea que mueve la clase."
+        % (len(descuadradas), ", ".join(x[0] for x in descuadradas)))
+    print("       NINGUNA: cada cita declara la clase que la fila tiene hoy.")
     print("")
 
     r = subprocess.run(["git", "diff", "--numstat", "--", "docs/plan/"],
