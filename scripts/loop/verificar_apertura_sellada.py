@@ -182,6 +182,42 @@ Y LA MITAD QUE NO SE TOCA, dicha con todas sus letras: EL ROJO POR UN COMMIT DEL
 PROPIO EJECUTOR DENTRO DEL CORREDOR SE QUEDA INTACTO. Esa mitad del rojo de la
 vuelta 152 era legitima. La admision es por HASH CITADO EN EL ENCARGO, no por
 autor adivinado ni por ruta: un hash que el encargo no cite no entra.
+
+--- ADJUDICACION 6.8 DEL ACTA 155 (3 sep 2026): LA PUERTA SE ESTRECHA A LO QUE
+LA 6.7 DEL ACTA 153 CONCEDIO, Y LA VARA SE FIJA ---
+
+CORRECCION DECLARADA POR ADICION. EL BLOQUE DE LA ADJUDICACION 6.7 DEL ACTA 153
+QUE ESTA JUSTO ENCIMA NO SE BORRA: describe con exactitud lo que la puerta hizo
+entre la vuelta 154 y hoy, y taparlo impediria auditar por que fue mas ancha de
+lo concedido.
+
+LAS DOS COSAS QUE EL AUDITOR MIDIO LLAMANDO A LA PROPIA FUNCION DE ESTA GUARDA:
+  (i)  LA PUERTA ERA MAS ANCHA QUE LA CONCESION. La 6.7 del acta 153 concedio
+       admitir EL COMMIT DE LA DECISION DEL FUNDADOR que el encargo cite por su
+       hash. La implementacion admitia CUALQUIER hash que el encargo citara,
+       sea de quien sea: medido el 3 sep 2026, los hashes admitidos eran
+       `6f695db6` y `c9c6ea40`, LOS DOS COMMITS DEL EJECUTOR. Hoy no hacia dano
+       (ninguno cae dentro de un corredor), pero la puerta concedida era otra.
+  (ii) LA VARA ESTABA ANCLADA A ALGO QUE SE MUEVE. `hashes_citados_por_el_encargo`
+       leia `docs/loop/PROMPT_SIGUIENTE.md` DEL ARBOL DE TRABAJO, asi que el
+       veredicto del corredor de una vuelta YA JUZGADA podia cambiar cuando se
+       escribiera un encargo posterior. Es LA MISMA ESPECIE que las caidas 5 y 6
+       que el ejecutor declaro en la vuelta 154, una vara anclada a algo que se
+       mueve, viviendo dentro de una guarda escrita en esa misma vuelta.
+
+LO QUE SE ADJUDICA, Y NO ES DOCTRINA NUEVA (es la letra de la 6.7 mas la vara
+que el propio ejecutor ya se aplico a si mismo):
+  (a) SOLO ENTRA LO MARCADO. El encargo declara sus hashes admitidos con un
+      LITERAL EXPLICITO, y la guarda admite unicamente los marcados. Un hash
+      citado de paso NO entra. La cabecera del encargo de la vuelta 156 ya trae
+      el literal, y dice NINGUNO.
+  (b) LA VARA SE FIJA. El encargo se lee DEL COMMIT DEL ACTA de la vuelta que se
+      comprueba (`git show` del acta sobre docs/loop/PROMPT_SIGUIENTE.md), no
+      del arbol de trabajo. El acta ya se localiza aqui con `commit_acta`, asi
+      que la vara es la misma que la guarda ya usa para todo lo demas.
+  (c) LA GUARDA LOS SIGUE NOMBRANDO APARTE, nunca en silencio.
+  (d) EL ROJO POR UN COMMIT DEL PROPIO EJECUTOR DENTRO DEL CORREDOR SE QUEDA
+      INTACTO. Esa mitad no se toca.
 """
 import argparse
 import glob

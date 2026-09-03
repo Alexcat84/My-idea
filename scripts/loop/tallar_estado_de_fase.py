@@ -267,6 +267,34 @@ PRUEBA POR MUTACION"):
         OPERACIONES.jsonl: ROJO nombrandola;
   (iii) caso positivo sobre sujeto congelado: la fase 05, cerrada desde la
         vuelta 136.
+
+--- ADJUDICACION 6.10 DEL ACTA 155 (3 sep 2026): UN `--fase` QUE NO CALCE
+EXACTAMENTE ES ROJO Y EXIT DISTINTO DE CERO ---
+
+CORRECCION DECLARADA POR ADICION. NADA DEL TEXTO ANTERIOR SE BORRA.
+
+EL HALLAZGO, MEDIDO POR EL AUDITOR EL 3 SEP 2026 Y SIN TUBERIA (la tuberia fue
+su propia caida 2 y la declara): `--fase 06_MESAS` daba 16 del catalogo, 16
+cumplidas, 0 sin cumplir y EXIT 0; `--fase 06` daba 11 DEL CATALOGO, 11
+cumplidas, 0 sin cumplir, EXIT 0 Y NI UNA QUEJA (cero propias, once recogidas
+por remision, porque `leer_remisiones` recorta el nombre de fase a su NUMERO y
+ese numero si casa). EL CATALOGO COMPLETAMENTE VACIO SI ESTABA CAZADO
+(`--fase NO_EXISTE`: ROJO y EXIT 1, por el fallo de `medir`); EL CATALOGO
+PARCIAL POR UN NOMBRE QUE NO EXISTE, NO.
+
+POR QUE IMPORTA Y NO ES TEORICO: es UN VERDE SOBRE UN UNIVERSO INCOMPLETO, la
+misma especie exacta del hallazgo de OP-C-05 del acta 153. Y este instrumento
+es el que midio el disparador que movio cinco fichas a HECHA, el que mide la
+celda de la fila 03 de la tabla por fase y el muro de la fase 08, y es contra
+el que `scripts/loop/verificar_cifras_del_reporte.py` coteja las afirmaciones
+de cierre del reporte.
+
+LO QUE SE ADJUDICA, POR EXTENSION DEL BANCO 9 (FALLAR RUIDOSO) Y SIN DOCTRINA
+NUEVA: es la misma regla que ya caza el catalogo vacio, aplicada al catalogo
+MUTILADO. `--fase X` donde X no sea EXACTAMENTE uno de los nombres de fase que
+`docs/plan/OPERACIONES.jsonl` trae es ROJO Y EXIT DISTINTO DE CERO, con la
+nomina de los nombres validos impresa al lado para que el rojo se pueda
+arreglar sin adivinar.
 """
 import argparse
 import io

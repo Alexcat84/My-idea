@@ -1253,6 +1253,29 @@ def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
                         _dirigidas.add((_a, _b))
     _bidireccionales = sorted({tuple(sorted(_p)) for _p in _dirigidas
                                if (_p[1], _p[0]) in _dirigidas})
+    # ADJUDICACION 6.9 DEL ACTA 155 (2026-09-03, vuelta 156): EL HUECO DE LA
+    # VARA SE CUENTA Y SE PUBLICA CADA VEZ QUE ESTA GUARDA HABLE. Mismo
+    # recorrido que el de arriba, con UNA sola diferencia: no se exige que el
+    # nodo de PARTIDA este vivo. Los dos EXTREMOS siguen teniendo que resolver a
+    # nodos vivos, asi que lo unico que se afloja es QUIEN declara la arista.
+    # Es la vara 4 de la tabla del acta 153, seccion 4.1. NINGUNA CIFRA VA
+    # TECLEADA: el 157 y el 3 salen de este computo, no de una constante.
+    _dirigidas_con_deprecadas = set()
+    for _nid in sorted(nodos_todos):
+        for _campo in ("nodos_siguientes", "nodos_previos"):
+            for _dest in nodos_todos[_nid].get(_campo) or []:
+                if _dest not in nodos_todos:
+                    continue
+                _a, _b = _resolver(_nid), _resolver(_dest)
+                if (_a and _b and _a != _b
+                        and _a in activos and _b in activos):
+                    if _campo == "nodos_previos":
+                        _dirigidas_con_deprecadas.add((_b, _a))
+                    else:
+                        _dirigidas_con_deprecadas.add((_a, _b))
+    _bidi_con_deprecadas = sorted({tuple(sorted(_p)) for _p in _dirigidas_con_deprecadas
+                                   if (_p[1], _p[0]) in _dirigidas_con_deprecadas})
+    _fuera_por_fuente_deprecada = sorted(set(_bidi_con_deprecadas) - set(_bidireccionales))
     _sin_cita = [f"{_a} <-> {_b}" for _a, _b in _bidireccionales
                  if (_a, _b) not in _citados]
     checks.append((
@@ -1261,8 +1284,33 @@ def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
         (f"{len(_bidireccionales)} par(es) bidireccional(es) tras resolver, "
          f"{len(_bidireccionales) - len(_sin_cita)} con cita, {len(_sin_cita)} SIN CITA"
          + ("" if _registro_existe else " (Y EL REGISTRO NO EXISTE: docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl)")
+         + (f" [FUERA DE ESTA VARA, decision del fundador del 14 ago 2026, camino A: {len(_fuera_por_fuente_deprecada)} par(es) mas que solo existen si se admite como declarante a un nodo DEPRECADO, o sea {len(_bidi_con_deprecadas)} con ellos: {[f'{_x} <-> {_y}' for _x, _y in _fuera_por_fuente_deprecada]}]" if _fuera_por_fuente_deprecada else "")
          + (f": {_sin_cita[:5]}" if _sin_cita else "")),
     ))
+    # CORRECCION DECLARADA POR ADICION (2026-09-03, vuelta 156, TAREA 1,
+    # ADJUDICACION 6.9 DEL ACTA 155). NADA DE LOS COMENTARIOS DE ARRIBA SE
+    # BORRA: siguen describiendo con exactitud lo que esta guarda mira y lo que
+    # deja fuera.
+    #
+    # LA PREGUNTA QUE SE CONTESTA (pregunta 4 de la vuelta 154): si los TRES
+    # pares que solo existen admitiendo como declarante a un nodo DEPRECADO
+    # habia que leerlos y meterlos en el registro.
+    #
+    # LA ADJUDICACION: NO SE LEEN. Quedan fuera por la DECISION DEL FUNDADOR DEL
+    # 14 AGO 2026, CAMINO A, que no es del bucle para revocarla, y leerlos
+    # meteria en el registro veredictos de pares que la vara declarada no mira.
+    # SE QUEDAN FUERA Y SE QUEDAN NOMBRADOS AQUI DENTRO, que es lo minimo que el
+    # banco 9 pide, y SU CUENTA SE PUBLICA CADA VEZ QUE ESTA GUARDA HABLE: no
+    # solo en este comentario, sino en la linea de detalle del check, para que
+    # el universo que la vara deja fuera no sea nunca invisible desde la salida.
+    # Los tres pares son los ya nombrados arriba, y la cuenta es 157 menos 154.
+    #
+    # COMO SE CUENTA, Y SE COMPUTA, NO SE TECLEA: el mismo recorrido de arriba
+    # pero SIN exigir que el nodo de partida este vivo (vara 4 de la tabla del
+    # acta 153, seccion 4.1, medida en la vuelta 154 con
+    # scripts/loop/vuelta154_tarea2a_universo_bidireccionales.py). Los dos
+    # EXTREMOS siguen teniendo que resolver a nodos VIVOS: lo unico que se
+    # afloja para contar el hueco es QUIEN declara la arista.
     # ── FIN OP-C-05 ────────────────────────────────────────────
 
     # ── OP-A-01 (FASE 07 ADUANA): LOS TRES CONTROLES DE SU `verificacion` ────

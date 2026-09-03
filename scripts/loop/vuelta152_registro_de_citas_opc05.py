@@ -37,6 +37,52 @@ USO:
   python scripts/loop/vuelta152_registro_de_citas_opc05.py
   python scripts/loop/vuelta152_registro_de_citas_opc05.py --escribir
   python scripts/loop/vuelta152_registro_de_citas_opc05.py --ref <REF>
+
+--- ADJUDICACION 6.1 DEL ACTA 155 (3 sep 2026): `LD-OPC05-097` VA A RELECTURA
+CONJUNTA, Y LA C ESCRITA NO SE SOSTIENE POR SI SOLA ---
+
+REGISTRO POR ADICION. NADA DE LO ESCRITO ARRIBA SE BORRA.
+
+EL CASO DEL AUDITOR, QUE LEYO EL PAR A CIEGAS (sin ver la clase, la via, la
+cita ni la razon) Y LLEGO A LA MISMA CLASE A QUE EL EJECUTOR MARCO COMO
+DISCUTIBLE, con tres reglas escritas empujando al mismo sitio:
+  (i)   el perfil de MADRE E HIJO del 9.6.2 NO se cumple, porque el hijo
+        tendria que caber ENTERO DENTRO DE UN PASO de la madre y
+        `viaje_diagnostico_remedial` se reparte entre los pasos 2, 3 y 4 de
+        `juran_rcca_metodo`;
+  (ii)  el 9.6.3 manda pesar LO QUE QUEDA FUERA DEL SOLAPE, y fuera quedan el
+        paso 1 de juran (esporadico contra cronico, y el enunciado) y el paso 7
+        del viaje (gestionar la resistencia), los dos LINEA por la regla
+        practica del informe 67.6, sin procedimiento en ningun lado;
+  (iii) con LINEA en los dos sentidos, el SEGUNDO POLO del 9.22 dice que
+        REPITEN y prescribe FUSION.
+
+Y LA RAZON ESCRITA SE DELATA SOLA: nombra la diferencia de granularidad y las
+dos apostillas, que es la definicion literal del segundo polo, y NO nombra una
+sola LINEA DISTINTA EN CADA NODO, que es lo que la C exige.
+
+EL LIMITE, ESCRITO ANTES DE QUE SE CRUCE: si la clase pasa a A, se cambia LA
+CLASE con su correccion declarada y el par se registra como CANDIDATO A FUSION.
+LA FUSION NO SE EJECUTA en una vuelta de lectura ni sin su ficha, su
+superviviente y su ruta.
+
+--- ADJUDICACION 6.2 DEL ACTA 155 (3 sep 2026): PARA REGISTRAR C, LA RAZON
+TIENE QUE NOMBRAR LAS DOS LINEAS. DONDE NO PUEDA NOMBRARLAS, LA CLASE ES D ---
+
+CORRECCION DECLARADA POR ADICION, y no es doctrina nueva: es extension citable
+del 9.22, que lo dice el mismo en su comprobacion separadora, "LA FIGURA EXIGE
+DOS LINEAS DISTINTAS, UNA EN CADA NODO", siendo la C sano CON FIGURA.
+
+LO QUE CAMBIA AL REGISTRAR: una entrada en clase C cuya razon NO pueda nombrar
+una linea distinta en cada uno de los dos nodos NO es C. Es D, sano y distinto.
+El ejemplar que la obliga es `LD-OPC05-040` (`cost_management_plan` contra
+`stakeholder_register`): el dinero y las personas, sin una sola linea de uno
+que el otro expanda.
+
+LA FRONTERA, MEDIDA PARA QUE NADIE SE ASUSTE: la guarda de `OP-C-05` de
+`scripts/run_phase1.py` mete en `_citados` el campo `par` de TODA linea del
+registro, SIN MIRAR LA CLASE, asi que RECLASIFICAR DE C A D NO PONE GATE 0 EN
+ROJO. Lo que la clase mueve es la lectura, no la cobertura del registro.
 """
 import argparse
 import collections

@@ -142,6 +142,78 @@ se lo concede entero al ejecutor y lo registra como caida de vara DEL AUDITOR.
 NO CAMBIO UN DIGITO en aquella medicion (los dos cortes dan 58/13/30/67), pero
 la vara laxa no se hereda: `--corte` es el HEAD DE APERTURA y no un ancestro
 cualquiera cercano.
+
+--- ADJUDICACION 6.5 DEL ACTA 155 (3 sep 2026): "EN LA NOMINA DE LA FICHA" SE
+LEE COMO "EL MENSAJE DEL COMMIT NOMBRA EL id_op", Y LA AMBIGUEDAD ERA DEL ACTA ---
+
+REGISTRO POR ADICION, y no cambia una sola linea de codigo: confirma la lectura
+con la que la P3 ya corre desde la vuelta 154.
+
+QUE SE PREGUNTO Y QUE SE CONTESTA. La adjudicacion 6.1 del acta 153 escribio
+"commits que tocan dataset/, web/ o engine/ EN LA NOMINA DE LA FICHA", y el
+ejecutor de la vuelta 154 declaro que lo leia como "el mensaje del commit
+nombra el id_op de la ficha", marcandolo como discutible. EL ACTA 155 LO
+ADJUDICA A FAVOR DE ESA LECTURA y registra la ambiguedad COMO SUYA: la 6.1
+venia a quitar la prueba POR MENCION SOLA, no a redefinir como se atribuye un
+commit a una ficha.
+
+LA CONDICION QUE LA P3 YA TENIA Y QUE LA 6.1 NO TOCO sigue siendo la vigente:
+`p3_huella_en_git` busca por `git log --grep` con frontera de palabra sobre el
+id_op, y ademas exige que el commit toque `RUTAS_NUEVA`. Las dos condiciones,
+no una.
+
+--- ADJUDICACION 6.6 DEL ACTA 155 (3 sep 2026): LA P3b SE QUEDA COMO PROXY
+DECLARADO, SU RESPALDO ES `verificar_mutaciones_viejas.py`, Y SU HUECO SE
+CUENTA ---
+
+REGISTRO POR ADICION. El limite de la P3b que ya esta escrito arriba, en el
+docstring de `p3b_caso_positivo`, NO SE BORRA NI SE SUAVIZA: sigue siendo lo
+que este instrumento mide.
+
+LO QUE EL ACTA CONCEDE: re correr 71 mutaciones por vuelta no cabe, y el limite
+ya iba declarado junto a la funcion, que era la condicion. La P3b se queda.
+
+LO QUE EL ACTA ANADE, Y ES LO QUE CONVIERTE UN PROXY EN UN PROXY CON SU AGUJERO
+CONTADO: "cita un artefacto que existe" es mas flojo que el criterio de HECHO
+de `docs/plan/08_VERIFICACION.md`, y la casa ya tiene lo que cierra ese hueco.
+`scripts/loop/verificar_mutaciones_viejas.py` corre 23 mutaciones, las hace
+MORDER (comprueba que caen en rojo) y comprueba que su salida sellada se
+repite, y corre CADA VUELTA AL CIERRE. ESE ES EL RESPALDO DECLARADO DE LA P3b.
+
+Y EL HUECO SE NOMBRA EN VEZ DE CALLARSE (banco 9, fallar ruidoso): CUANTAS DE
+LAS FICHAS QUE SE APOYAN EN LA P3b CITAN UN CASO POSITIVO QUE LA BATERIA DE 23
+NO CUBRE. Se mide en la TAREA 7 de la vuelta 156 y su nomina se publica.
+
+--- ADJUDICACION 6.7 DEL ACTA 155 (3 sep 2026): `declara_su_estado` LEE `nota` Y
+`adjudicacion` DEL CORTE, COMO LA P3 ---
+
+CORRECCION DECLARADA POR ADICION. NADA DEL TEXTO ANTERIOR SE BORRA, Y EN
+PARTICULAR NO SE BORRA EL BLOQUE DE LA ADJUDICACION 6.2 DEL ACTA 153 (la
+asimetria P2 contra P3), del que esta adjudicacion es una EXTENSION y no una
+enmienda.
+
+LA PARTICION QUE LA 6.2 DEL ACTA 153 DEJO ESCRITA: lo que mide EXISTENCIA DE UN
+CONTROL EN EL CODIGO VIVO lee el arbol de trabajo; lo que mide EJECUCION va
+congelado en `--corte`.
+
+DONDE CAE `declara_su_estado`: EN NINGUNA DE LAS DOS. No mide existencia de un
+control ni un acto fechado: mide LO QUE LA FICHA DICE DE SI MISMA. Y el dano
+esta demostrado al digito por la vuelta 154, que lo marco como su discutible 8:
+SUS PROPIAS NOTAS MOVIERON CUATRO FICHAS de "congelado en silencio" a
+"congelado declarado" DENTRO DE LA MISMA VUELTA que publicaba la cifra. UNA
+CIFRA QUE EL TEXTO DE LA VUELTA MUEVE ES UNA CIFRA QUE MIDE LA VUELTA, NO EL
+REPO.
+
+LO QUE CAMBIA: `declara_su_estado` deja de leer la ficha del arbol de trabajo y
+pasa a leer `nota` y `adjudicacion` DEL CORTE (`git show <corte>` sobre
+docs/plan/OPERACIONES.jsonl), igual que la P3. Una ficha que no existia al
+corte no declara nada, porque al corte no habia nada que declarar.
+
+LO QUE ESTO CUESTA, DICHO EN VOZ ALTA: la cifra publicada de congeladas
+declaradas y de congeladas en silencio SE MUEVE, y se mueve exactamente por las
+notas que la propia vuelta escribe. Por eso va con LA SERIE RE MEDIDA EN LOS DOS
+CORTES y la diferencia ATRIBUIDA, como ya se hizo en la vuelta 154 con el 26/22
+contra el 30/18.
 """
 import argparse
 import io

@@ -1,0 +1,45 @@
+==============================================================================
+VUELTA 156, TAREA 1: LAS DIEZ ADJUDICACIONES DE LA SECCION 6 DEL ACTA 155,
+ESCRITAS DONDE CADA UNA VIVE, TODAS POR ADICION.
+==============================================================================
+
+A) LOS CINCO FICHEROS .py
+  6.1  scripts/loop/vuelta152_registro_de_citas_opc05.py        ANADIDO (28 lineas)
+  6.2  scripts/loop/vuelta152_registro_de_citas_opc05.py        ANADIDO (18 lineas)
+  6.5  scripts/loop/vuelta150_3_relectura_expediente.py         ANADIDO (19 lineas)
+  6.6  scripts/loop/vuelta150_3_relectura_expediente.py         ANADIDO (22 lineas)
+  6.7  scripts/loop/vuelta150_3_relectura_expediente.py         ANADIDO (31 lineas)
+  6.8  scripts/loop/verificar_apertura_sellada.py               ANADIDO (36 lineas)
+  6.10 scripts/loop/tallar_estado_de_fase.py                    ANADIDO (28 lineas)
+  6.9  scripts/run_phase1.py                                    ANADIDO (24 lineas)
+
+B) EL REGISTRO DE CITAS, POR ADICION AL CAMPO `razon`
+  6.2  LD-OPC05-040     razon ampliada (+505 caracteres)
+  6.3  LD-OPC05-046     razon ampliada (+647 caracteres)
+  6.1  LD-OPC05-097     razon ampliada (+876 caracteres)
+  6.4  LD-OPC05-122     razon ampliada (+437 caracteres)
+
+C) LA ADITIVIDAD SE MIDE, NO SE PROMETE
+
+C.1) LOS .py, POR numstat DE GIT (se exige BORRADOS 0):
+     scripts/loop/vuelta152_registro_de_citas_opc05.py        +46   -0
+     scripts/loop/vuelta150_3_relectura_expediente.py         +72   -0
+     scripts/loop/verificar_apertura_sellada.py               +36   -0
+     scripts/run_phase1.py                                    +24   -0
+     scripts/loop/tallar_estado_de_fase.py                    +28   -0
+     BORRADOS TOTALES EN LOS CINCO .py: 0
+
+C.2) EL JSONL, POR ASSERT DE PREFIJO LITERAL sobre el campo `razon`:
+     154 entrada(s) del registro comprobadas: el texto viejo de `razon` sigue
+     siendo PREFIJO LITERAL del nuevo en TODAS, no solo en las cuatro tocadas.
+     entradas cuyo `razon` CRECIO: 4
+     esquema IGUAL (7 claves), clases IGUALES, pares IGUALES (154).
+
+CIFRA adjudicaciones escritas: 12 operaciones
+CIFRA lineas del registro de citas: 154 linea(s)
+CIFRA ficheros de codigo tocados: 5 fichero(s)
+
+NADA SE BORRA: los siete bloques de docstring se insertan al FINAL del
+docstring, el bloque de la 6.9 se inserta DELANTE del cierre del comentario
+de OP-C-05, y las cuatro razones se CONCATENAN detras del texto viejo.
+EXITCODE: 0
