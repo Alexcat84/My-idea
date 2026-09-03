@@ -1,0 +1,115 @@
+NOTA DEL EJECUTOR DE LA VUELTA 161, ESCRITA ANTES DE LA SALIDA PARA QUE NADIE LA
+LEA COMO LO QUE NO ES: este barrido se corrio para intentar respaldar la
+afirmacion "el .env NO existe en el arbol de trabajo", Y NO LA RESPALDA. El
+universo de barrer_ausencia.py es `git ls-files`, y un fichero IGNORADO no puede
+estar en ese universo POR CONSTRUCCION. El veredicto HALLADO de abajo lo produce
+`.env.example` por la pierna del nombre y las menciones de las variables por la
+pierna del contenido, que no es lo que se preguntaba. POR ESO EL REPORTE NO
+PUBLICA ESA AFIRMACION DE AUSENCIA: publica lo positivo, que es que .gitignore
+lista .env y que la prueba de rumbos falla visible pidiendo la credencial. Se
+deja el fichero como rastro de la busqueda, no como prueba.
+
+BARRIDO EXHAUSTIVO
+  PREGUNTA: existe un fichero .env en el arbol de trabajo del repo mientras el bucle corre
+  UNIVERSO: git ls-files de la rama actual (todo lo versionado, sin acotar)
+  CARDINAL: 15986
+  EXCLUIDOS POR SER SONDA Y NO INSTALACION (declarados, no escondidos): 0
+  POR NOMBRE: ^\.env$|^\.env\.|\.env$ | 2 ficheros con coincidencia
+  POR CONTENIDO: VOYAGE_API_KEY|SUPABASE_SERVICE_ROLE_KEY|NEXT_PUBLIC_SUPABASE_URL | 64 ficheros con coincidencia
+  VITALIDAD DE LOS PATRONES DE CONTENIDO: 3 de 3 alternativas aparecen en el universo
+      VOYAGE_API_KEY                                 -> 38     viva
+      SUPABASE_SERVICE_ROLE_KEY                      -> 27     viva
+      NEXT_PUBLIC_SUPABASE_URL                       -> 26     viva
+  NO DECODIFICABLES (mirados y no leidos, NO cuentan como sin coincidencia): 426
+      docs/loop/ABORTADA_V127_CICLO_ETIQUETAS_NUMSTAT.txt
+      docs/loop/SALIDA_V101_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V102_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V102_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V103_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V103_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V105_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V105_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V106_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V106_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V107_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V107_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V108_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V108_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V109_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V109_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V111_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V111_ETIQUETAS_CIERRE.txt
+      docs/loop/SALIDA_V112_ETIQUETAS_APERTURA.txt
+      docs/loop/SALIDA_V112_ETIQUETAS_CIERRE.txt
+  VEREDICTO: HALLADO
+  LOS QUE COINCIDEN (union de las dos piernas): 66
+      .env.example  [nombre]
+      docs/MIGRACION_DE_BASE.md  [contenido]
+      docs/PENDIENTES.md  [contenido]
+      docs/loop/ACTA_AUDITOR.md  [contenido]
+      docs/loop/REPORTE.md  [contenido]
+      docs/loop/SALIDA_ACTA26_AUDITOR.txt  [contenido]
+      docs/loop/SALIDA_V148_3C_FASE08_TRANSVERSAL.txt  [contenido]
+      docs/loop/SALIDA_V148_3C_RUMBOS.txt  [contenido]
+      docs/loop/SALIDA_V148_WEB_APERTURA.txt  [contenido]
+      docs/loop/SALIDA_V161_T3_ORDEN_Y_MURO.txt  [contenido]
+      docs/loop/SALIDA_V37_SUITE_WEB.txt  [contenido]
+      docs/loop/SALIDA_V49_SUITE_WEB_CIERRE.txt  [contenido]
+      docs/loop/SALIDA_V49_SUITE_WEB_T1.txt  [contenido]
+      docs/loop/SALIDA_V49_SUITE_WEB_T21.txt  [contenido]
+      docs/loop/SALIDA_V50_SUITE_WEB.txt  [contenido]
+      docs/loop/SALIDA_V50_SUITE_WEB_CIERRE.txt  [contenido]
+      docs/loop/SALIDA_V53_SUITE_WEB_A.txt  [contenido]
+      docs/loop/SALIDA_V53_SUITE_WEB_B.txt  [contenido]
+      docs/loop/SALIDA_V53_SUITE_WEB_C.txt  [contenido]
+      docs/loop/SALIDA_V53_SUITE_WEB_CIERRE.txt  [contenido]
+      docs/loop/SALIDA_V53_SUITE_WEB_T1.txt  [contenido]
+      docs/loop/SALIDA_V97_WEB_APERTURA.txt  [contenido]
+      docs/loop/SALIDA_V97_WEB_CIERRE.txt  [contenido]
+      docs/loop/_auditor_v75_web.txt  [contenido]
+      docs/loop/_v149_acta_seccion.md  [contenido]
+      docs/loop/paradas/2026-08-14-muro-indice-y-destinos.md  [contenido]
+      docs/loop/paradas/2026-09-02-aduana-vector-y-a13.md  [contenido]
+      docs/plan/CORRECCIONES_A_APLICAR.md  [contenido]
+      engine/db.py  [contenido]
+      scripts/build_semantic_index_voyage.py  [contenido]
+      scripts/censo_duplicacion.py  [contenido]
+      scripts/expansion/enriquecer_vs_crear.py  [contenido]
+      scripts/loop/auditor_v26_verifica.py  [contenido]
+      scripts/loop/vuelta148_1a_mutacion_embebido.py  [contenido]
+      scripts/loop/vuelta150_1_registrar.py  [contenido]
+      scripts/loop/vuelta161_tarea3_orden_y_muro.py  [contenido]
+      scripts/preparar_poda.py  [contenido]
+      scripts/reembeber_nodos.py  [contenido]
+      scripts/rumbos/prueba_rumbos.py  [contenido]
+      scripts/setup_dev_user.py  [contenido]
+      web/.env.example  [nombre]
+      web/lib/compass.test.ts  [contenido]
+      web/lib/compass.ts  [contenido]
+      web/lib/feedCalendario.test.ts  [contenido]
+      web/lib/feedCalendario.ts  [contenido]
+      web/lib/loadRootEnv.test.ts  [contenido]
+      web/lib/loadRootEnv.ts  [contenido]
+      web/lib/supabase/admin.ts  [contenido]
+      web/lib/supabase/client.ts  [contenido]
+      web/lib/supabase/server.ts  [contenido]
+      web/proxy.ts  [contenido]
+      web/scripts/_shared/http.ts  [contenido]
+      web/scripts/adoptar_proyectos.ts  [contenido]
+      web/scripts/forense.ts  [contenido]
+      web/scripts/gate_beta.ts  [contenido]
+      web/scripts/gate_canon.ts  [contenido]
+      web/scripts/gate_estados.ts  [contenido]
+      web/scripts/gate_etiquetas.ts  [contenido]
+      web/scripts/gate_numeros.ts  [contenido]
+      web/scripts/gate_preview.ts  [contenido]
+      ... y 6 mas
+  RUTAS CANDIDATAS MIRADAS A MANO (NO SON EL BARRIDO, van aparte):
+      .env -> NO EXISTE
+CIFRA ficheros del universo: 15986 ficheros
+CIFRA ficheros que coinciden por nombre: 2 ficheros
+CIFRA ficheros que coinciden por contenido: 64 ficheros
+CIFRA alternativas de contenido vivas: 3 alternativas
+CIFRA alternativas de contenido en total: 3 alternativas
+CIFRA ficheros que coinciden: 66 ficheros
+EXITCODE: 0

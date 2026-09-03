@@ -1,4 +1,31 @@
-# REPORTE DE LA VUELTA 161 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+# -*- coding: utf-8 -*-
+"""vuelta161_tarea4_escribir_reporte.py . EL CIERRE DE LA VUELTA 161: ESCRIBE
+docs/loop/REPORTE.md.
+
+LA CABECERA NO SE TECLEA (EJECUTOR.md 1): se LEE ENTERA de
+`docs/loop/SALIDA_V161_T4_CABECERA.txt`, que es la salida de
+`tallar_cabecera_reporte.py --fase04 --vuelta 161`, y se pega entre las dos
+marcas literales que `--comparar` y `verificar_cifras_del_reporte.py` reconocen.
+Si el fichero no esta o no trae tabla, este script PARA sin escribir nada.
+
+USO:  python scripts/loop/vuelta161_tarea4_escribir_reporte.py
+"""
+import io
+import os
+
+RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+LOOP = os.path.join(RAIZ, "docs", "loop")
+CABECERA = os.path.join(LOOP, "SALIDA_V161_T4_CABECERA.txt")
+REPORTE = os.path.join(LOOP, "REPORTE.md")
+
+
+def tabla_de_la_cabecera():
+    texto = io.open(CABECERA, encoding="utf-8").read()
+    filas = [l for l in texto.split("\n") if l.startswith("|")]
+    return "\n".join(filas)
+
+
+CUERPO = u"""# REPORTE DE LA VUELTA 161 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
 
 **EL VEREDICTO DE UNA LINEA: EL ENCARGO ENTREGADO ENTERO, LAS CATORCE EN `C`
 RELEIDAS CON LA VARA CONGELADA Y NINGUNA MOVIDA, LAS TRES DEUDAS CERRADAS, Y
@@ -18,17 +45,7 @@ Todo lo de esta seccion sale de
 `scripts/loop/vuelta161_tarea4_escribir_reporte.py`, que la LEE del fichero.
 
 <!-- CABECERA TALLADA -->
-| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
-|---|---:|---:|
-| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
-| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
-| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
-| motor | 25/25 | **25/25** |
-| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
-| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
-| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
-| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `ed234154` (asunto real leido de git log: 'ACTA DE LA VUELTA 160 DEL AUDITOR: HAY PARADA Y ES LEGITIMA. LA RELECTURA CONJUNTA DE LA LD-OPC05-100 CONFIRMA MI LECTURA, ASI QUE LA TANDA DE LA 159 TRAE CAIDA DE CLASE Y CON LA 005 DE LA TANDA 157 SON DOS TANDAS SEGUIDAS: SE DISPARA LA REGLA DEL CREDITO. Escribo PARA_ALEXIS.md y dejo PROMPT_SIGUIENTE.md VACIO.'), HEAD real de apertura `d3482b11` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `24f48fac` (leido de `SALIDA_V161_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+__CABECERA__
 <!-- FIN CABECERA TALLADA -->
 
 **Y LA IDENTIDAD DEL CORREDOR, LEIDA DE GIT EN ESTA VUELTA**, salida
@@ -487,3 +504,30 @@ cuales llego a publicarse: las dos se cazaron leyendo la salida antes del commit
 
 **Y EL MERGE NO SE PIDE Y NO SE HACE.** `pasada-unica` no se funde a nada por
 mano del bucle. **La campana no esta consumada.**
+"""
+
+
+def main():
+    if not os.path.exists(CABECERA):
+        print("PARADA: no existe %s. Sin cabecera tallada no se escribe reporte."
+              % CABECERA)
+        return 1
+    tabla = tabla_de_la_cabecera()
+    if tabla.count("\n") < 5:
+        print("PARADA: la cabecera tallada no trae tabla suficiente.")
+        return 1
+    texto = CUERPO.replace("__CABECERA__", tabla)
+    with io.open(REPORTE, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(texto)
+    print("REPORTE ESCRITO en docs/loop/REPORTE.md")
+    print("CIFRA lineas del reporte: %d" % (texto.count("\n") + 1))
+    print("CIFRA filas de la cabecera pegadas del tallador: %d"
+          % (tabla.count("\n") + 1))
+    print("guiones largos: %d ; guiones medios: %d"
+          % (texto.count(u"—"), texto.count(u"–")))
+    print("FIN")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

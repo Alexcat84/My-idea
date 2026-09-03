@@ -1,0 +1,86 @@
+=== RUTAS TOCADAS EN LA VUELTA 161 (d3482b11..HEAD), leidas de git ===
+A	docs/loop/NOMINA_V161_TRAMO_C.json
+A	docs/loop/SALIDA_V161_CICLO_ETIQUETAS_APERTURA.txt
+A	docs/loop/SALIDA_V161_CICLO_ETIQUETAS_CIERRE.txt
+A	docs/loop/SALIDA_V161_CICLO_NUMSTAT_APERTURA.txt
+A	docs/loop/SALIDA_V161_CICLO_NUMSTAT_CIERRE.txt
+A	docs/loop/SALIDA_V161_CICLO_SYNC_APERTURA.txt
+A	docs/loop/SALIDA_V161_CICLO_SYNC_CIERRE.txt
+A	docs/loop/SALIDA_V161_CONTEO_APERTURA.txt
+A	docs/loop/SALIDA_V161_CONTEO_CIERRE.txt
+A	docs/loop/SALIDA_V161_DESFASE_CALIBRADO_APERTURA.txt
+A	docs/loop/SALIDA_V161_DESFASE_CALIBRADO_CIERRE.txt
+A	docs/loop/SALIDA_V161_GATE0_CMD1_APERTURA.txt
+A	docs/loop/SALIDA_V161_GATE0_CMD1_CIERRE.txt
+A	docs/loop/SALIDA_V161_GUARDA_OPC05_ANTES.txt
+A	docs/loop/SALIDA_V161_HEAD_APERTURA.txt
+A	docs/loop/SALIDA_V161_MOTOR_APERTURA.txt
+A	docs/loop/SALIDA_V161_MOTOR_CIERRE.txt
+A	docs/loop/SALIDA_V161_T0_APERTURA_SELLADA.txt
+A	docs/loop/SALIDA_V161_T0_CORREDOR_MEDIDO.txt
+A	docs/loop/SALIDA_V161_T1_0_REGISTROS.txt
+A	docs/loop/SALIDA_V161_T1A_ALCANCE_ANTES.txt
+A	docs/loop/SALIDA_V161_T1A_ALCANCE_DESPUES.txt
+A	docs/loop/SALIDA_V161_T1A_ARREGLO.txt
+A	docs/loop/SALIDA_V161_T1A_MUTACION.txt
+A	docs/loop/SALIDA_V161_T1A_ROTULO.txt
+A	docs/loop/SALIDA_V161_T1B_ASSETS.txt
+A	docs/loop/SALIDA_V161_T1C_ESCRITURA_P52.txt
+A	docs/loop/SALIDA_V161_T1C_SEGUNDA_LECTURA.txt
+A	docs/loop/SALIDA_V161_T2_CIERRE_P52.txt
+A	docs/loop/SALIDA_V161_T2_DOSSIER.txt
+A	docs/loop/SALIDA_V161_T2_GUARDA_OPC05.txt
+A	docs/loop/SALIDA_V161_T2_NOMINA.txt
+A	docs/loop/SALIDA_V161_T2_SEGUNDA_LECTURA_CIERRE.txt
+A	docs/loop/SALIDA_V161_T2_VEREDICTOS.txt
+A	docs/loop/SALIDA_V161_T3_FASE_02.txt
+A	docs/loop/SALIDA_V161_T3_FASE_03.txt
+A	docs/loop/SALIDA_V161_T3_FASE_06.txt
+A	docs/loop/SALIDA_V161_T3_FASE_08.txt
+A	docs/loop/SALIDA_V161_T3_FASE_09.txt
+A	docs/loop/SALIDA_V161_T3_ORDEN_Y_MURO.txt
+A	docs/loop/SALIDA_V161_T4_EXPEDIENTE.txt
+A	docs/loop/SALIDA_V161_T4_FASE_03.txt
+A	docs/loop/SALIDA_V161_T4_FASE_06.txt
+A	docs/loop/SALIDA_V161_T4_FASE_08.txt
+A	docs/loop/SALIDA_V161_T4_FASE_09.txt
+A	docs/loop/SALIDA_V161_T4_MARCADOR_CIERRE.txt
+A	docs/loop/SALIDA_V161_TSC_APERTURA.txt
+A	docs/loop/SALIDA_V161_TSC_CIERRE.txt
+A	docs/loop/SALIDA_V161_WEB_APERTURA.txt
+A	docs/loop/SALIDA_V161_WEB_CIERRE.txt
+M	docs/PENDIENTES.md
+M	docs/plan/BANCO_DEL_PLAN.md
+M	docs/plan/LECTURAS_DIRIGIDAS.md
+M	docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl
+M	scripts/loop/vuelta159_tarea5_alcance_p16.py
+A	scripts/loop/vuelta161_tarea1_0_registros.py
+A	scripts/loop/vuelta161_tarea1a_arreglar_alcance.py
+A	scripts/loop/vuelta161_tarea1a_mutacion_alcance.py
+A	scripts/loop/vuelta161_tarea1a_rotulo_seccion_c.py
+A	scripts/loop/vuelta161_tarea1b_auditar_assets.py
+A	scripts/loop/vuelta161_tarea1c_escribir_p52.py
+A	scripts/loop/vuelta161_tarea1c_segunda_lectura.py
+A	scripts/loop/vuelta161_tarea2_cierre_p52.py
+A	scripts/loop/vuelta161_tarea2_nomina.py
+A	scripts/loop/vuelta161_tarea2_relectura.py
+A	scripts/loop/vuelta161_tarea3_orden_y_muro.py
+
+CIFRA de rutas tocadas:
+66
+CIFRA de commits del corredor (d3482b11..HEAD):
+9
+
+LOS COMMITS, UNO A UNO:
+   24f48fac VUELTA 161, CIERRE: LAS MEDICIONES DEL CIERRE, RECOMPUTADAS AL CIERRE Y NO HEREDADAS DE LA APERTURA. Ciclo de Gate 0 entero: run_phase1 --
+   386bf2d8 VUELTA 161, TAREA 3: EL ORDEN ESCRITO RECORRIDO ENTERO EN MODO CONTINUO, Y EL MURO MEDIDO EN VEZ DE CITADO DE MEMORIA. El orden se lee del
+   438786e2 VUELTA 161, TAREA 2: LAS CATORCE EN C, RELEIDAS UNA VEZ CON LA VARA CONGELADA, CON LOS NODOS IMPRESOS ENTEROS Y P.5.1 CITADA EN CADA VERED
+   937ad290 VUELTA 161, TAREA 1.0: LOS REGISTROS DE LAS DOS TANDAS Y DE LA PARADA, ESCRITOS EN docs/PENDIENTES.md COMO R.29 POR ADICION PURA (66 linea
+   6bc5eb27 VUELTA 161, TAREA 1.c: LA DEFINICION DE SEGUNDA LECTURA INDEPENDIENTE QUEDA ESCRITA EN EL BANCO DEL PLAN (P.5.2), Y LA CIFRA SALE DE ELLA.
+   ab6b7818 VUELTA 161, TAREA 1.b: LOS SEIS ASSETS DE sync_assets_web LEIDOS UNA VEZ, Y SALE UN ROJO QUE SE DECLARA. La deuda llevaba desde el acta 15
+   567c119b VUELTA 161, TAREA 1.a: EL INSTRUMENTO DEL ALCANCE DE P.16 DEJA DE EXCLUIR POR NOMBRE Y LA CIFRA 12 REPRODUCE. Corrido antes de tocarlo dab
+   a5f7fa81 VUELTA 161, TAREA 0: LA GUARDA DE LA APERTURA SALE ROJA Y NO LA TOCO. El corredor de esta vuelta trae d3482b11, la DECISION DEL FUNDADOR, 
+   4208b8fa VUELTA 161, APERTURA SELLADA ANTES DE LA PRIMERA OPERACION: los diez SALIDA_V161_*_APERTURA.txt nacen en este commit, primer commit de la 
+
+numstat de dataset/ web/ engine/ entre la apertura y HEAD:
+   (cero filas arriba = el grafo, la web y el motor no se movieron en toda la vuelta)

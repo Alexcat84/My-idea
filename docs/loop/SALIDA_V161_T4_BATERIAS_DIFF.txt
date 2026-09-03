@@ -1,0 +1,28 @@
+=== POR QUE MOTOR Y WEB SALEN DISTINTOS, MEDIDO Y NO ALEGADO ===
+diff SALIDA_V161_MOTOR_APERTURA.txt SALIDA_V161_MOTOR_CIERRE.txt :
+8c8
+<   OK    test_cifras.py (0.9s)
+---
+>   OK    test_cifras.py (0.8s)
+19c19
+<   OK    test_pregunta_adaptada.py (0.3s)
+---
+>   OK    test_pregunta_adaptada.py (0.2s)
+26,27c26,27
+<   OK    test_validador_esquema.py (0.3s)
+<   OK    test_verificador_huerfanos.py (0.0s)
+---
+>   OK    test_validador_esquema.py (0.2s)
+>   OK    test_verificador_huerfanos.py (0.1s)
+
+diff SALIDA_V161_WEB_APERTURA.txt SALIDA_V161_WEB_CIERRE.txt :
+7,8c7,8
+<    Start at  11:31:56
+<    Duration  17.92s (transform 38.18s, setup 0ms, import 134.32s, tests 8.93s, environment 21ms)
+---
+>    Start at  12:23:09
+>    Duration  17.91s (transform 39.19s, setup 0ms, import 133.36s, tests 8.77s, environment 14ms)
+
+LAS DOS DIFERENCIAS SON DE RELOJ Y NADA MAS: tiempos por fichero en el motor,
+hora de arranque y duraciones en la web. NINGUN VEREDICTO SE MUEVE: motor 25/25 en
+los dos lados, web 80 ficheros y 1.030 pasadas con 3 saltadas en los dos lados.
