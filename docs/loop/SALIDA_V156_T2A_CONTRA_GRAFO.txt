@@ -1,0 +1,128 @@
+================================================================================================
+VUELTA 156, TAREA 2.a: `LD-OPC05-097` VERIFICADO CONTRA EL GRAFO, HOY
+================================================================================================
+Par: juran_rcca_metodo  <->  viaje_diagnostico_remedial
+
+------------------------------------------------------------------------------------------------
+1. LOS DOS NODOS, LEIDOS DE dataset/nodos/*.json
+------------------------------------------------------------------------------------------------
+  juran_rcca_metodo                deprecado=False  resuelve a juran_rcca_metodo
+     titulo: None
+     etiqueta_arbol: Halla la Causa Raíz
+     dominio: quality | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+  viaje_diagnostico_remedial       deprecado=False  resuelve a viaje_diagnostico_remedial
+     titulo: None
+     etiqueta_arbol: Diagnostica y Corrige la Causa
+     dominio: quality | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+
+  CIFRA nodos vivos del par: 2 nodo(s) de 2
+
+------------------------------------------------------------------------------------------------
+2. LOS PASOS ENTEROS DE LOS DOS, SIN RECORTAR
+------------------------------------------------------------------------------------------------
+
+  juran_rcca_metodo  (campo `pasos_accionables`, 4 paso(s))
+     1. Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema
+     2. Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+     3. Mejorar: diseñar e implementar el remedio
+     4. Controlar: ajustar los controles para mantener las ganancias
+
+  viaje_diagnostico_remedial  (campo `pasos_accionables`, 8 paso(s))
+     1. Analizar los síntomas del problema (evidencia observable), con un análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)
+     2. Formular teorías sobre las posibles causas, usando brainstorming y diagramas causa-efecto
+     3. Probar las teorías más plausibles con datos, con un mecanismo de recolección que permita correlacionar cada teoría con el defecto observado
+     4. Establecer la(s) causa(s) raíz confirmada(s), validando estadísticamente cuál teoría explica la mayoría de los casos
+     5. Diseñar remedios para eliminar las causas
+     6. Probar los remedios bajo condiciones operativas reales
+     7. Gestionar la resistencia predecible al cambio
+     8. Establecer nuevos controles para sostener las ganancias
+
+  CIFRA pasos de juran_rcca_metodo: 4 paso(s)
+  CIFRA pasos de viaje_diagnostico_remedial: 8 paso(s)
+
+------------------------------------------------------------------------------------------------
+3. LA ARISTA, MEDIDA EN LAS CUATRO VISTAS, CON EL RESOLUTOR DELANTE
+------------------------------------------------------------------------------------------------
+  juran_rcca_metodo                .nodos_siguientes trae a viaje_diagnostico_remedial       : True  (literal: True)
+  juran_rcca_metodo                .nodos_previos    trae a viaje_diagnostico_remedial       : True  (literal: True)
+  viaje_diagnostico_remedial       .nodos_siguientes trae a juran_rcca_metodo                : True  (literal: True)
+  viaje_diagnostico_remedial       .nodos_previos    trae a juran_rcca_metodo                : True  (literal: True)
+
+  DIRECCION juran_rcca_metodo -> viaje_diagnostico_remedial declarada por alguien: True
+  DIRECCION viaje_diagnostico_remedial -> juran_rcca_metodo declarada por alguien: True
+  BIDIRECCIONAL: True
+  CIFRA vistas que declaran la arista: 4 direccion(es)
+
+------------------------------------------------------------------------------------------------
+4. LOS DOS NODOS EN EL RESTO DEL REGISTRO DE CITAS
+------------------------------------------------------------------------------------------------
+  Lineas del registro: 154
+  LA PROPIA ENTRADA: LD-OPC05-097, clase C | clase C | via LECTURA_DIRIGIDA
+  viaje_diagnostico_remedial       aparece con six_sigma_dmaic                  | clase D | puesto 3118, dominio quality, clase D
+
+  CIFRA otras entradas del registro que tocan al par: 1 linea(s)
+
+------------------------------------------------------------------------------------------------
+5. LOS DOS NODOS EN LOS ACTOS DECLARADOS DEL PLAN (docs/plan/)
+------------------------------------------------------------------------------------------------
+  03_FUSIONES.md                             :5984   viaje_diagnostico_remedial*, verbatim.
+  03_FUSIONES.md                             :6233   | **2838** | `A` **por contencion** con superviviente `viaje_diagnostico_remedial`, **y hasta el mismo residuo**: la lectura contraria del Pareto y la
+  03_FUSIONES.md                             :6237   | **los dos supervivientes, ademas** | `marco_avances_continuaciones` en el `acto 29` y `viaje_diagnostico_remedial` en el `acto 30`, **elegidos ciego
+  04_ENLACES.md                              :795    | 117 | `juran_rcca_metodo -> diseno_implementacion_remedio` (paso 3, quality) | **SE ESCRIBE** | SI | ALCANZABLE (6 saltos), ES la cadena propia de l
+  04_ENLACES.md                              :840    `juran_rcca_metodo -> definicion_problema_moms_2 -> analisis_sintomas ->
+  04_ENLACES.md                              :859    `juran_rcca_metodo` (medido leyendo su ficha completa, `pasos_accionables`).
+  04_ENLACES.md                              :898    ESCRIBE` a **`NO SE ENLAZA`**, y la arista `juran_rcca_metodo ->
+  04_ENLACES.md                              :1241   | 8 | LA REVERSION DEL 117 (fila de `OP-E-01`, NO un conteo de la bolsa: `juran_rcca_metodo -> diseno_implementacion_remedio`, la tercera condicion qu
+  ARISTAS_DUPLICADAS.jsonl                   :877    {"nodo": "viaje_diagnostico_remedial", "dominio": "quality", "campo": "nodos_previos", "destino": "analisis_pareto_de_proveedores", "entradas": ["anal
+  DIFERENCIA_CONTRA_COLA.jsonl               :99     {"dominio": "quality", "madre": "juran_rcca_metodo", "hijo": "prueba_teorias_causa_raiz", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar 
+  DIFERENCIA_CONTRA_COLA.jsonl               :179    {"dominio": "quality", "madre": "juran_rcca_metodo", "hijo": "diseno_implementacion_remedio", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar
+  DIFERENCIA_CONTRA_COLA_ENSAYO_AGOSTO.jsonl :134    {"dominio": "quality", "madre": "viaje_diagnostico_remedial", "hijo": "resistencia_al_cambio", "paso": 7, "texto_paso": "Gestionar la resistencia pred
+  DIFERENCIA_CONTRA_COLA_ENSAYO_AGOSTO.jsonl :268    {"dominio": "quality", "madre": "juran_rcca_metodo", "hijo": "prueba_teorias_causa_raiz", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar 
+  DIFERENCIA_CONTRA_COLA_ENSAYO_AGOSTO.jsonl :382    {"dominio": "quality", "madre": "juran_rcca_metodo", "hijo": "diseno_implementacion_remedio", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar
+  INVENTARIO.jsonl                           :424    {"tipo":"acto","nombre":"analisis_causa_raiz_diagnostico","miembros":["analisis_causa_raiz_diagnostico","analisis_diagnostico_causa","viaje_diagnostic
+  LECTURAS_DIRIGIDAS.md                      :2023   | 97 | REGISTRO DE CITAS `OP-C-05` | juran_rcca_metodo <-> viaje_diagnostico_remedial | C | LD-OPC05-097 | el metodo RCCA de Juran en cuatro fases con
+  OPERACIONES.jsonl                          :25     {"id_op": "OP-E-01", "fase": "04_ENLACES", "tipo": "ENLACE", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": []
+  OP_E_01_DECIDIDAS.jsonl                    :60     {"madre": "viaje_diagnostico_remedial", "hijo": "resistencia_al_cambio", "paso": "7", "tramo": 4, "decision": "ESCRITA", "fichero_origen": "SALIDA_V78
+  OP_E_01_DECIDIDAS.jsonl                    :150    {"madre": "juran_rcca_metodo", "hijo": "prueba_teorias_causa_raiz", "paso": "2", "tramo": 9, "decision": "NO SE ENLAZA", "fichero_origen": "SALIDA_V84
+  OP_E_01_DECIDIDAS.jsonl                    :218    {"madre": "juran_rcca_metodo", "hijo": "diseno_implementacion_remedio", "paso": "3", "tramo": 12, "decision": "NO SE ENLAZA", "fichero_origen": "SALID
+  OP_E_03_LECTURA_TRAMO2_V97.jsonl           :59     {"puesto_tramo": 99, "operacion": "OP-E-03", "marca": "LECTURA DIRIGIDA", "fuera_de_la_cola": true, "fuera_de_la_tasa_por_dominio": true, "mueve_el_ma
+  OP_E_03_LECTURA_TRAMO4_V99.jsonl           :29     {"puesto_tramo": 179, "operacion": "OP-E-03", "marca": "LECTURA DIRIGIDA", "fuera_de_la_cola": true, "fuera_de_la_tasa_por_dominio": true, "mueve_el_m
+  PASO_NODO_CALIBRADO.jsonl                  :181    {"dominio": "quality", "madre": "viaje_diagnostico_remedial", "paso": 7, "texto_paso": "Gestionar la resistencia predecible al cambio", "hijo": "resis
+  PASO_NODO_CALIBRADO.jsonl                  :331    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas
+  PASO_NODO_CALIBRADO.jsonl                  :462    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar el remedio", "hijo": "diseno_implementac
+  PASO_NODO_CALIBRADO_FILTRADO_V76.jsonl     :99     {"dominio": "quality", "madre": "viaje_diagnostico_remedial", "paso": 7, "texto_paso": "Gestionar la resistencia predecible al cambio", "hijo": "resis
+  PASO_NODO_CALIBRADO_FILTRADO_V76.jsonl     :214    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas
+  PASO_NODO_CALIBRADO_FILTRADO_V76.jsonl     :322    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar el remedio", "hijo": "diseno_implementac
+  PASO_NODO_CALIBRADO_FILTRADO_V77.jsonl     :57     {"dominio": "quality", "madre": "viaje_diagnostico_remedial", "paso": 7, "texto_paso": "Gestionar la resistencia predecible al cambio", "hijo": "resis
+  PASO_NODO_CALIBRADO_FILTRADO_V77.jsonl     :150    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas
+  PASO_NODO_CALIBRADO_FILTRADO_V77.jsonl     :245    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar el remedio", "hijo": "diseno_implementac
+  PASO_NODO_CALIBRADO_FILTRADO_V78.jsonl     :21     {"dominio": "quality", "madre": "viaje_diagnostico_remedial", "paso": 7, "texto_paso": "Gestionar la resistencia predecible al cambio", "hijo": "resis
+  PASO_NODO_CALIBRADO_FILTRADO_V78.jsonl     :103    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas
+  PASO_NODO_CALIBRADO_FILTRADO_V78.jsonl     :188    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar el remedio", "hijo": "diseno_implementac
+  PASO_NODO_CALIBRADO_FILTRADO_V79.jsonl     :79     {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas
+  PASO_NODO_CALIBRADO_FILTRADO_V79.jsonl     :164    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar el remedio", "hijo": "diseno_implementac
+  PASO_NODO_CALIBRADO_FILTRADO_V80.jsonl     :69     {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas
+  PASO_NODO_CALIBRADO_FILTRADO_V80.jsonl     :154    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar el remedio", "hijo": "diseno_implementac
+  PASO_NODO_CALIBRADO_FILTRADO_V82.jsonl     :66     {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas
+  PASO_NODO_CALIBRADO_FILTRADO_V82.jsonl     :151    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar el remedio", "hijo": "diseno_implementac
+  PASO_NODO_CALIBRADO_FILTRADO_V83.jsonl     :66     {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas
+  PASO_NODO_CALIBRADO_FILTRADO_V83.jsonl     :151    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar el remedio", "hijo": "diseno_implementac
+  PASO_NODO_CALIBRADO_FILTRADO_V84.jsonl     :54     {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas
+  PASO_NODO_CALIBRADO_FILTRADO_V84.jsonl     :139    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar el remedio", "hijo": "diseno_implementac
+  PASO_NODO_CALIBRADO_FILTRADO_V85.jsonl     :53     {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas
+  PASO_NODO_CALIBRADO_FILTRADO_V85.jsonl     :133    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar el remedio", "hijo": "diseno_implementac
+  PASO_NODO_CALIBRADO_FILTRADO_V86.jsonl     :53     {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas
+  PASO_NODO_CALIBRADO_FILTRADO_V86.jsonl     :126    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar el remedio", "hijo": "diseno_implementac
+  PASO_NODO_CALIBRADO_FILTRADO_V87.jsonl     :53     {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas
+  PASO_NODO_CALIBRADO_FILTRADO_V87.jsonl     :118    {"dominio": "quality", "madre": "juran_rcca_metodo", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar el remedio", "hijo": "diseno_implementac
+  RECOMPUTO_3388.md                          :339    | **FALSA** | **21** | `captura_conocimiento_mercado` (3769), `control_estadistico_de_procesos` (3717), `criterios_equity_split` (3700), `design_for_s
+  RECOMPUTO_3388_COMPONENTES.jsonl           :86     {"miembros": ["analisis_causa_raiz_diagnostico", "analisis_diagnostico_causa", "viaje_diagnostico_remedial"], "tamano": 3, "posibles": 3, "leidos": 2,
+
+  CIFRA lineas de docs/plan/ que nombran a uno de los dos: 52 linea(s)
+
+================================================================================================
+LO QUE ESTA TAREA NO HACE: no decide la clase. La decision con la vara va en
+la TAREA 2.b, y la fusion NO se ejecuta en esta vuelta (adjudicacion 6.1 del
+acta 155: si la clase pasa a A, el par se registra como CANDIDATO A FUSION).
+================================================================================================
+EXITCODE: 0

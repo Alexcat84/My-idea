@@ -1,0 +1,39 @@
+=== 2.e.1 EL LECTOR DEL FICHERO DE LECTURAS SIGUE VIENDO EL PAR (sin --escribir) ===
+  pares bidireccionales entre vivos SIN resolver            : 147
+  pares que SOLO aparecen tras resolver                     : 6
+      costo_de_mala_calidad_copq <-> rejilla_madurez_gestion_calidad
+      documentacion_exportacion <-> incoterms_reglas_comerciales_internacionales
+      documentacion_exportacion <-> seleccion_metodo_transporte_internacional
+      evaluacion_necesidad_franquiciar <-> mix_ubicaciones_corporativas_franquicia
+      mapeo_flujo_valor <-> takt_time
+      market_type_revenue_growth <-> metrics_that_matter_framework
+  SIN P.1 el registro se daria por completo dejando esos pares sin cita.
+
+================================================================================================
+EL CRUCE, CONTADO
+================================================================================================
+  con cita por CRIBADO            : 32
+  con cita por P.10               : 0
+  con cita por LECTURA_DIRIGIDA   : 121
+  CON CITA, TOTAL              : 153 de 153
+  SIN VEREDICTO                : 0
+
+  clases de las citas del cribado: {'D': 31, 'B': 1}
+
+================================================================================================
+LOS PARES SIN VEREDICTO (0). ESTOS SON LOS QUE VAN A LECTURA DIRIGIDA POR P.5.
+================================================================================================
+
+EXITCODE_LECTOR: 0
+
+=== 2.e.2 EL CICLO ENTERO Y EN SU ORDEN, CON GATE 0 ===
+  [OK] OP-C-05: ninguna lista de aristas de un nodo VIVO tiene dos entradas que RESUELVAN al mismo destino (valor: 0 lista(s) con duplicada tras resolver)
+  [OK] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 154 par(es) bidireccional(es) tras resolver, 154 con cita, 0 SIN CITA [FUERA DE ESTA VARA, decision del fundador del 14 ago 2026, camino A: 3 par(es) mas que solo existen si se admite como declarante a un nodo DEPRECADO, o sea 157 con ellos: ['asignacion_recursos_en_gates <-> sistema_gates_go_kill', 'formalizar_junta_asesora <-> identificar_consejo_asesores', 'revision_portafolio_periodica <-> sistema_gates_go_kill']])
+GATE 0: OK
+EXITCODE_GATE0: 0
+escrito: dataset\metadata\master_graph.json (71 etiquetas)
+escrito: web\lib\assets\master_graph.json (0 etiquetas)
+Assets sincronizados: ['master_graph.json', 'preguntas_cache.json', 'node_families.json', 'entry_seeds.json', 'prompts.json', 'semantic_index.json']
+--- git diff HEAD --numstat -- dataset/ web/ engine/ ---
+warning: in the working copy of 'dataset/metadata/master_graph.json', LF will be replaced by CRLF the next time Git touches it
+FIN NUMSTAT

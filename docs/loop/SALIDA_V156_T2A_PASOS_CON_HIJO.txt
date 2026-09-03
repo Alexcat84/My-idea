@@ -1,0 +1,58 @@
+====================================================================================================
+VUELTA 156, TAREA 2.a (SEGUNDA MEDICION): CADA PASO DE LOS DOS NODOS, CON SU HIJO
+MEDIDO CONTRA EL CALIBRADO, LAS DECIDIDAS Y EL GRAFO DE HOY
+====================================================================================================
+VARA: banco 9.6.2, 'la prueba de que el paso de la madre es un procedimiento es
+que EXISTE EL HIJO QUE LO EJECUTA'.
+
+Filas del calibrado: 468 | filas de OP_E_01_DECIDIDAS: 220
+
+----------------------------------------------------------------------------------------------------
+juran_rcca_metodo  (4 pasos)
+----------------------------------------------------------------------------------------------------
+  paso 1: Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema
+       HIJO EN EL CALIBRADO: NINGUNO. DECISION ESCRITA: NINGUNA.
+  paso 2: Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+       hijo del calibrado: prueba_teorias_causa_raiz                  existe=True vivo=True | arista madre.sig=False hijo.prev=False
+       OP-E-01 decidio: hijo prueba_teorias_causa_raiz              decision=NO SE ENLAZA (tramo 9, SALIDA_V84_TRAMO9_ESCRIBIR.txt)
+  paso 3: Mejorar: diseñar e implementar el remedio
+       hijo del calibrado: diseno_implementacion_remedio              existe=True vivo=True | arista madre.sig=False hijo.prev=False
+       OP-E-01 decidio: hijo diseno_implementacion_remedio          decision=NO SE ENLAZA (tramo 12, SALIDA_V87_TRAMO12_ESCRIBIR.txt)
+  paso 4: Controlar: ajustar los controles para mantener las ganancias
+       HIJO EN EL CALIBRADO: NINGUNO. DECISION ESCRITA: NINGUNA.
+
+----------------------------------------------------------------------------------------------------
+viaje_diagnostico_remedial  (8 pasos)
+----------------------------------------------------------------------------------------------------
+  paso 1: Analizar los síntomas del problema (evidencia observable), con un análisis de Pareto para descartar variables 
+       HIJO EN EL CALIBRADO: NINGUNO. DECISION ESCRITA: NINGUNA.
+  paso 2: Formular teorías sobre las posibles causas, usando brainstorming y diagramas causa-efecto
+       HIJO EN EL CALIBRADO: NINGUNO. DECISION ESCRITA: NINGUNA.
+  paso 3: Probar las teorías más plausibles con datos, con un mecanismo de recolección que permita correlacionar cada te
+       HIJO EN EL CALIBRADO: NINGUNO. DECISION ESCRITA: NINGUNA.
+  paso 4: Establecer la(s) causa(s) raíz confirmada(s), validando estadísticamente cuál teoría explica la mayoría de los
+       HIJO EN EL CALIBRADO: NINGUNO. DECISION ESCRITA: NINGUNA.
+  paso 5: Diseñar remedios para eliminar las causas
+       HIJO EN EL CALIBRADO: NINGUNO. DECISION ESCRITA: NINGUNA.
+  paso 6: Probar los remedios bajo condiciones operativas reales
+       HIJO EN EL CALIBRADO: NINGUNO. DECISION ESCRITA: NINGUNA.
+  paso 7: Gestionar la resistencia predecible al cambio
+       hijo del calibrado: resistencia_al_cambio                      existe=True vivo=True | arista madre.sig=True hijo.prev=True
+       OP-E-01 decidio: hijo resistencia_al_cambio                  decision=ESCRITA (tramo 4, SALIDA_V78_TRAMO4_ESCRIBIR.txt)
+  paso 8: Establecer nuevos controles para sostener las ganancias
+       HIJO EN EL CALIBRADO: NINGUNO. DECISION ESCRITA: NINGUNA.
+
+====================================================================================================
+RESUMEN: PASOS CON HIJO VIVO ADJUDICADO EN EL CALIBRADO
+====================================================================================================
+  juran_rcca_metodo                2 paso(s) con hijo vivo: paso 2 -> prueba_teorias_causa_raiz, paso 3 -> diseno_implementacion_remedio
+  CIFRA pasos con hijo de juran_rcca_metodo: 2 paso(s)
+  viaje_diagnostico_remedial       1 paso(s) con hijo vivo: paso 7 -> resistencia_al_cambio
+  CIFRA pasos con hijo de viaje_diagnostico_remedial: 1 paso(s)
+
+LOS DOS PASOS QUE EL CASO DEL AUDITOR PONE FUERA DEL SOLAPE:
+  juran_rcca_metodo                paso 1: hijo vivo adjudicado = NINGUNO
+  viaje_diagnostico_remedial       paso 7: hijo vivo adjudicado = resistencia_al_cambio
+
+ESTA MEDICION NO DECIDE LA CLASE. La decision con la vara va en la TAREA 2.b.
+EXITCODE: 0
