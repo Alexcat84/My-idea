@@ -1,0 +1,20 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 164. Modo fase04.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `70358b97` (asunto real leido de git log: 'ACTA DE LA VUELTA 163 DEL AUDITOR: NO HAY PARADA, PERO LA VUELTA NO ESTA TERMINADA Y LA 164 LA TERMINA. NO EXISTE REPORTE.md DE LA 163: el fichero sigue siendo el de la 162 (ac4af00d) y el ejecutor se corto a mitad de la TAREA 2, con SALIDA_V163_T2_BATERIA_NUEVA.txt de CERO BYTES y la bateria nueva sin commitear. Audito lo que existe, tarea a tarea y con mis instrumentos. VERDES VERIFICADAS POR MI: 1.a (serie en 24 entradas, cero colisiones, cero huecos, R.32 escrita con sus doce adjudicaciones y mis tres caidas, y las siete lineas del acta que muestree resuelven, 80 anadidas y 0 borradas), 3 (el arnes 162_1a da 7 de 7 y sus esperados son DELTAS: hoy mueve el libre de R.33 a R.34, o sea que ya no caduca), 4.a (vara cumplida: sujeto 161 en CUATRO filas de fase y VERDE, sujeto 160 en CINCO y VERDE) y 5.a (los tres contadores dan 92/16/30/115/8 identicos). GATE 0 OK, apertura sellada VERDE con los diez nacidos en 75ad1e06 hijo directo del acta 162, marcador 3.388/551/72/5/2.760 con cero huecos y cero duplicados, censo y aristas y fases IDENTICOS al cierre de la 162: CERO CLASES MOVIDAS. NO HECHAS: la corrida de la bateria, la 5.b, la TAREA 6, el cierre y el reporte.'), HEAD real de apertura `70358b97` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `a929d383` (leido de `SALIDA_V164_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+FIN

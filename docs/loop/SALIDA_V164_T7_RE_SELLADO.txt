@@ -1,0 +1,85 @@
+==============================================================================
+VERIFICAR RE SELLADO: TODA SALIDA_* QUE EL REPORTE CITE Y QUE HAYA CAMBIADO
+DESPUES DEL COMMIT DE SU TAREA TIENE QUE IR DECLARADA
+==============================================================================
+  reporte: docs/loop/REPORTE.md
+  CIFRA salidas selladas que el reporte cita: 45
+
+  SALIDA_V135_2E_MUTACION_1.txt                  RE SELLADO
+      commit de su tarea : 53cca3cd3152
+      numstat contra HEAD: +7/-4
+      CIFRA lineas CIFRA cuyo VALOR cambio: 0
+      DECLARADO EN EL REPORTE: SI, con la linea que esta guarda computo
+  SALIDA_V135_2E_MUTACION_2.txt                  RE SELLADO
+      commit de su tarea : 53cca3cd3152
+      numstat contra HEAD: +7/-4
+      CIFRA lineas CIFRA cuyo VALOR cambio: 0
+      DECLARADO EN EL REPORTE: SI, con la linea que esta guarda computo
+  SALIDA_V135_2E_MUTACION_3.txt                  RE SELLADO
+      commit de su tarea : 53cca3cd3152
+      numstat contra HEAD: +8/-8
+      CIFRA lineas CIFRA cuyo VALOR cambio: 0
+      DECLARADO EN EL REPORTE: SI, con la linea que esta guarda computo
+  SALIDA_V163_T1A_REGISTRO_ACTA_162.txt          SIN RE SELLAR
+  SALIDA_V163_T1B_DOSSIER_101.txt                SIN RE SELLAR
+  SALIDA_V163_T1C_TRAMO.txt                      SIN RE SELLAR
+  SALIDA_V163_T2_BATERIA_NUEVA.txt               SIN RE SELLAR
+  SALIDA_V163_T3_ARNES_ARREGLADO.txt             SIN RE SELLAR
+  SALIDA_V163_T4A_MUTACION.txt                   SIN RE SELLAR
+  SALIDA_V163_T4B_MUTACION.txt                   SIN RE SELLAR
+  SALIDA_V163_T5A_COTEJO.txt                     SIN RE SELLAR
+  SALIDA_V164_APERTURA_GUARDA.txt                SIN RE SELLAR
+  SALIDA_V164_CICLO_NUMSTAT_CIERRE.txt           SIN COMMIT DE TAREA
+  SALIDA_V164_DESFASE_CALIBRADO_CIERRE.txt       SIN COMMIT DE TAREA
+  SALIDA_V164_GATE0_CMD1_CIERRE.txt              SIN COMMIT DE TAREA
+  SALIDA_V164_HEAD_CIERRE.txt                    SIN COMMIT DE TAREA
+  SALIDA_V164_MOTOR_CIERRE.txt                   SIN COMMIT DE TAREA
+  SALIDA_V164_T1_MUTACION.txt                    SIN RE SELLAR
+  SALIDA_V164_T1_REGISTRO_ACTA_163.txt           SIN RE SELLAR
+  SALIDA_V164_T1_SERIE_ANTES.txt                 SIN RE SELLAR
+  SALIDA_V164_T1_SERIE_DESPUES.txt               SIN RE SELLAR
+  SALIDA_V164_T2A_BATERIA.txt                    SIN RE SELLAR
+  SALIDA_V164_T2A_BATERIA_SEGUNDA.txt            SIN COMMIT DE TAREA
+  SALIDA_V164_T2A_COTEJO_CONTADOR.txt            SIN RE SELLAR
+  SALIDA_V164_T2A_RUIDO_ARREGLADO.txt            SIN RE SELLAR
+  SALIDA_V164_T2C_ARNES_ANCLADO.txt              SIN RE SELLAR
+  SALIDA_V164_T2C_PRUEBA_DEL_ANCLAJE.txt         SIN RE SELLAR
+  SALIDA_V164_T34_MUTACION.txt                   SIN RE SELLAR
+  SALIDA_V164_T34_P52_ANTES.txt                  SIN RE SELLAR
+  SALIDA_V164_T34_P52_DESPUES.txt                SIN RE SELLAR
+  SALIDA_V164_T34_VEREDICTOS.txt                 SIN RE SELLAR
+  SALIDA_V164_T34_VEREDICTOS_RECORRIDO.txt       SIN RE SELLAR
+  SALIDA_V164_T4_CITA.txt                        SIN RE SELLAR
+  SALIDA_V164_T4_DOSSIER_005.txt                 SIN RE SELLAR
+  SALIDA_V164_T5_LIMPIEZA.txt                    SIN RE SELLAR
+  SALIDA_V164_T5_PRE148.txt                      SIN RE SELLAR
+  SALIDA_V164_T6_ORDEN_Y_MURO.txt                SIN RE SELLAR
+  SALIDA_V164_T7_CABECERA.txt                    SIN COMMIT DE TAREA
+  SALIDA_V164_T7_CABECERA_COMPARADA.txt          SIN COMMIT DE TAREA
+  SALIDA_V164_T7_FASE_02.txt                     SIN COMMIT DE TAREA
+  SALIDA_V164_T7_FASE_03.txt                     SIN COMMIT DE TAREA
+  SALIDA_V164_T7_FASE_06.txt                     SIN COMMIT DE TAREA
+  SALIDA_V164_T7_FASE_08.txt                     SIN COMMIT DE TAREA
+  SALIDA_V164_T7_FASE_09.txt                     SIN COMMIT DE TAREA
+  SALIDA_V164_T7_MARCADOR_CIERRE.txt             SIN COMMIT DE TAREA
+
+  CIFRA por estado: RE SELLADO 3, SIN COMMIT DE TAREA 14, SIN RE SELLAR 28
+  CIFRA salidas EXENTAS por construccion: 0
+  CIFRA de esas exentas que ademas estan RE SELLADAS: 0
+  EXENCION POR CONSTRUCCION (adjudicacion 6.8 del acta 158): 0 fichero(s) exento(s) del rojo, por ser la salida de esta guarda o del verificador de cifras sobre el reporte final: ninguno
+  CIFRA re selladas SIN declarar en el reporte: 0
+
+==============================================================================
+CAMINO NUEVO (adjudicacion 6.7 del acta 162): TODA docs/loop/SALIDA_*
+MODIFICADA DESDE LA APERTURA DE LA VUELTA, LA CITE EL REPORTE O NO
+==============================================================================
+  vuelta tomada (computada del arbol): 164
+  commit de apertura, leido de git --diff-filter=A y no tecleado: 28dde491e131
+  CIFRA docs/loop/SALIDA_* MODIFICADAS desde la apertura: 0
+  CIFRA de esas que el reporte NO nombra: 0
+  (una salida que NACE en esta vuelta no cuenta: nacer no es re sellar)
+
+VERDE: ninguna salida sellada citada por el reporte cambio en silencio, y
+ninguna docs/loop/SALIDA_* modificada desde la apertura se quedo sin
+nombrar.
+FIN

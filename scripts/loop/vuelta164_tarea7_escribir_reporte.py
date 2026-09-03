@@ -1,4 +1,40 @@
-# REPORTE DE LAS VUELTAS 163 Y 164 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+# -*- coding: utf-8 -*-
+r"""vuelta164_tarea7_escribir_reporte.py . EL CIERRE DE LA VUELTA 164.
+
+ESCRIBE `docs/loop/REPORTE.md` DE LAS DOS VUELTAS, LA 163 Y LA 164, por la
+adjudicacion 6.1 del acta 163.
+
+LA CABECERA NO SE TECLEA: SE LEE DEL FICHERO QUE LA TALLA. El cuerpo es prosa
+del ejecutor; la cabecera se pega ENTERA desde
+`docs/loop/SALIDA_V164_T7_CABECERA.txt`, que es la salida de
+`scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 164`. Este script
+PARA si ese fichero no esta o no trae su tabla: la regla de la casa es que la
+celda que no salga de un instrumento NO SE ESCRIBE.
+
+USO:  python scripts/loop/vuelta164_tarea7_escribir_reporte.py
+"""
+import io
+import os
+import sys
+
+AQUI = os.path.dirname(os.path.abspath(__file__))
+RAIZ = os.path.dirname(os.path.dirname(AQUI))
+CABECERA = os.path.join(RAIZ, "docs", "loop", "SALIDA_V164_T7_CABECERA.txt")
+REPORTE = os.path.join(RAIZ, "docs", "loop", "REPORTE.md")
+
+
+def cabecera_tallada():
+    if not os.path.exists(CABECERA):
+        raise SystemExit("ROJO: no existe %s. La cabecera no se teclea." % CABECERA)
+    t = io.open(CABECERA, encoding="utf-8").read()
+    if "| | **apertura**" not in t:
+        raise SystemExit("ROJO: el tallador no publico su tabla. No se escribe nada.")
+    ini = t.index("| | **apertura**")
+    fin = t.index("\nFIN")
+    return t[ini:fin].rstrip() + "\n"
+
+
+CUERPO = r"""# REPORTE DE LAS VUELTAS 163 Y 164 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
 
 **ESTE REPORTE CUBRE DOS VUELTAS Y NO UNA, por la adjudicacion 6.1 del acta 163**
 (`docs/loop/ACTA_AUDITOR.md:54293`, leida hoy): *"LA VUELTA 163 NO SE CIERRA POR
@@ -26,18 +62,7 @@ Todo lo de esta seccion sale de
 PARA si no esta.
 
 <!-- CABECERA TALLADA -->
-| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
-|---|---:|---:|
-| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
-| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
-| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
-| motor | 25/25 | **25/25** |
-| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
-| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
-| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
-| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `70358b97` (asunto real leido de git log: 'ACTA DE LA VUELTA 163 DEL AUDITOR: NO HAY PARADA, PERO LA VUELTA NO ESTA TERMINADA Y LA 164 LA TERMINA. NO EXISTE REPORTE.md DE LA 163: el fichero sigue siendo el de la 162 (ac4af00d) y el ejecutor se corto a mitad de la TAREA 2, con SALIDA_V163_T2_BATERIA_NUEVA.txt de CERO BYTES y la bateria nueva sin commitear. Audito lo que existe, tarea a tarea y con mis instrumentos. VERDES VERIFICADAS POR MI: 1.a (serie en 24 entradas, cero colisiones, cero huecos, R.32 escrita con sus doce adjudicaciones y mis tres caidas, y las siete lineas del acta que muestree resuelven, 80 anadidas y 0 borradas), 3 (el arnes 162_1a da 7 de 7 y sus esperados son DELTAS: hoy mueve el libre de R.33 a R.34, o sea que ya no caduca), 4.a (vara cumplida: sujeto 161 en CUATRO filas de fase y VERDE, sujeto 160 en CINCO y VERDE) y 5.a (los tres contadores dan 92/16/30/115/8 identicos). GATE 0 OK, apertura sellada VERDE con los diez nacidos en 75ad1e06 hijo directo del acta 162, marcador 3.388/551/72/5/2.760 con cero huecos y cero duplicados, censo y aristas y fases IDENTICOS al cierre de la 162: CERO CLASES MOVIDAS. NO HECHAS: la corrida de la bateria, la 5.b, la TAREA 6, el cierre y el reporte.'), HEAD real de apertura `70358b97` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `a929d383` (leido de `SALIDA_V164_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
-<!-- FIN CABECERA TALLADA -->
+%(CABECERA)s<!-- FIN CABECERA TALLADA -->
 
 **EL CORREDOR DE ESTA VUELTA NO ADMITE NINGUN HASH Y NO HIZO FALTA ADMITIR
 NINGUNO.** El acta 163 (`70358b97`) escribe su encargo en el mismo commit. El
@@ -564,3 +589,20 @@ todas sus letras**. Las cuatro cifras del contraste dan **delta CERO**.
 
 **Cero guiones largos y cero guiones medios. El hook corrio en los cinco commits
 de esta vuelta y ninguno se salto.**
+"""
+
+
+def main():
+    cab = cabecera_tallada()
+    texto = CUERPO % {"CABECERA": cab}
+    with io.open(REPORTE, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(texto)
+    print("REPORTE.md escrito: %d lineas" % len(texto.split("\n")))
+    print("cabecera pegada desde docs/loop/SALIDA_V164_T7_CABECERA.txt: %d lineas"
+          % len(cab.rstrip().split("\n")))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.stdout.reconfigure(encoding="utf-8")
+    raise SystemExit(main())
