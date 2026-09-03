@@ -1,0 +1,27 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 162. Modo fase04.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `f7f52f91` (asunto real leido de git log: 'ACTA DE LA VUELTA 161 DEL AUDITOR: NO HAY PARADA. LAS TRES COSAS QUE EL EJECUTOR TRAJO SIN ARREGLAR LAS ADJUDICO YO, LAS TRES, CITANDO REGLA ESCRITA, Y LA CIEGA DA 16 DE 16 SIN UNA SOLA DISCREPANCIA.'), HEAD real de apertura `f7f52f91` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `c233d0d8` (leido de `SALIDA_V162_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+
+FIN
+EXITCODE: 0

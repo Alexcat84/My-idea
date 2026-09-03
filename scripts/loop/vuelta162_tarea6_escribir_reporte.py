@@ -1,4 +1,42 @@
-# REPORTE DE LA VUELTA 162 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+# -*- coding: utf-8 -*-
+r"""vuelta162_tarea6_escribir_reporte.py . EL CIERRE DE LA VUELTA 162.
+
+ESCRIBE `docs/loop/REPORTE.md` ENTERO, SOBRESCRIBIENDO EL ANTERIOR.
+
+LA CABECERA NO SE TECLEA: se LEE de `docs/loop/SALIDA_V162_T6_CABECERA.txt`,
+que es la salida de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta
+162`, y se pega ENTERA entre sus dos marcas. Si el fichero no trae la tabla,
+este instrumento PARA sin escribir.
+
+USO:  python scripts/loop/vuelta162_tarea6_escribir_reporte.py
+"""
+import io
+import os
+
+RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+LOOP = os.path.join(RAIZ, "docs", "loop")
+CABECERA = os.path.join(LOOP, "SALIDA_V162_T6_CABECERA.txt")
+REPORTE = os.path.join(LOOP, "REPORTE.md")
+ABRE = "--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---"
+CIERRA = "FIN"
+
+
+def tabla_tallada():
+    texto = io.open(CABECERA, encoding="utf-8").read()
+    i = texto.find(ABRE)
+    if i < 0:
+        raise SystemExit("ROJO: la salida del tallador no trae su marca de apertura.")
+    resto = texto[i + len(ABRE):]
+    j = resto.rfind("\n" + CIERRA)
+    if j < 0:
+        raise SystemExit("ROJO: la salida del tallador no trae su marca de cierre.")
+    filas = [l for l in resto[:j].split("\n") if l.strip().startswith("|")]
+    if len(filas) < 5:
+        raise SystemExit("ROJO: la tabla tallada trae %d fila(s)." % len(filas))
+    return "\n".join(filas), len(filas)
+
+
+CUERPO = u"""# REPORTE DE LA VUELTA 162 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
 
 **EL VEREDICTO DE UNA LINEA: EL ENCARGO ENTREGADO ENTERO, LAS CINCO TAREAS, Y LAS
 TRES GUARDAS QUE EL ACTA 161 MANDO ARREGLAR MUERDEN AHORA Y NINGUN VEREDICTO
@@ -19,17 +57,7 @@ Todo lo de esta seccion sale de
 `scripts/loop/vuelta162_tarea6_escribir_reporte.py`, que la LEE del fichero.
 
 <!-- CABECERA TALLADA -->
-| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
-|---|---:|---:|
-| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
-| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
-| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
-| motor | 25/25 | **25/25** |
-| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
-| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
-| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
-| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `f7f52f91` (asunto real leido de git log: 'ACTA DE LA VUELTA 161 DEL AUDITOR: NO HAY PARADA. LAS TRES COSAS QUE EL EJECUTOR TRAJO SIN ARREGLAR LAS ADJUDICO YO, LAS TRES, CITANDO REGLA ESCRITA, Y LA CIEGA DA 16 DE 16 SIN UNA SOLA DISCREPANCIA.'), HEAD real de apertura `f7f52f91` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `c233d0d8` (leido de `SALIDA_V162_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+__TABLA__
 <!-- FIN CABECERA TALLADA -->
 
 **EL CORREDOR DE ESTA VUELTA NO TRAE NADA, Y ES LA PRIMERA VEZ EN TRES VUELTAS.**
@@ -413,3 +441,26 @@ anade nada. La caida de la `R.29` **no acumula** por la adjudicacion 6.8 del act
 
 **Y EL MERGE NO SE PIDE Y NO SE HACE.** `pasada-unica` no se funde a nada por
 mano del bucle. **La campana no esta consumada.**
+"""
+
+
+def main():
+    tabla, filas = tabla_tallada()
+    print("LA CABECERA SE LEE DEL FICHERO, NO SE TECLEA")
+    print("   fuente: %s" % os.path.relpath(CABECERA, RAIZ).replace("\\", "/"))
+    print("   CIFRA filas de la tabla tallada: %d" % filas)
+    texto = CUERPO.replace("__TABLA__", tabla)
+    io.open(REPORTE, "w", encoding="utf-8", newline="\n").write(texto)
+    n = len(texto.split("\n"))
+    print("   CIFRA lineas del reporte escrito: %d" % n)
+    largos = [c for c in texto if c in u"—–"]
+    print("   CIFRA guiones largos o medios: %d" % len(largos))
+    if largos:
+        print("ROJO: el reporte trae guiones largos o medios.")
+        return 1
+    print("VERDE: docs/loop/REPORTE.md escrito.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
