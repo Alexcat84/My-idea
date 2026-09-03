@@ -1,0 +1,816 @@
+================================================================================================
+VUELTA 154, TAREA 3: LA RELECTURA AL DOBLE DEL TRAMO, EN CIEGO
+================================================================================================
+UNIVERSO: 122 lectura(s) dirigida(s) en docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl
+MUESTRA POR COMPUTO: zancada 3, arranque en el puesto 1, ordenadas por cita.
+SELECCIONADAS: 41 puesto(s). Piso del encargo: 32. Muestra del auditor en la
+vuelta 153: 8. Esta pasa del doble de aquella y del piso.
+
+AQUI NO HAY CLASE, NI VIA, NI CITA, NI LA RAZON ESCRITA: solo los dos nodos.
+
+================================================================================================
+CASO 1 de 41
+  --- accion_correctiva_sistematica (deprecado=None, dominio=quality)
+      titulo: Acción Correctiva Sistemática (Paso 6 de Crosby)
+       1. Documenta cada problema detectado en una ficha simple: qué pasó, qué tan grave es, por qué pasó, quién se encarga y para cuándo
+       2. Revisa a diario los problemas nuevos junto con la persona que te ayuda con calidad o producción, si la tienes
+       3. Si un problema no se resuelve en la revisión diaria, pásalo a una revisión semanal más a fondo
+       4. Revisa una vez al mes lo que sigue sin resolverse y decide si necesita un esfuerzo dedicado aparte
+       5. Para los problemas más complejos, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, y disuélvelo en cuanto el problema quede resuelto
+       6. Ordena los problemas por gravedad y ataca primero los más grandes
+       7. Define acciones que corrijan la causa raíz y prevengan la recurrencia, no solo alivien la presión del momento
+       8. Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular, para que no se acepten como normales
+       9. Dar seguimiento y verificar que la acción implementada haya eliminado el problema
+  --- cero_defectos (deprecado=None, dominio=quality)
+      titulo: Cero Defectos (Zero Defects - ZD)
+       1. Establece el estándar de Cero Defectos como compromiso personal de desempeño, no como eslogan motivacional pasajero
+       2. Comunícalo con absoluta claridad, trabajándolo caso por caso en vez de con mensajes masivos
+       3. Fija una fecha de lanzamiento (Día de Cero Defectos) tras un periodo breve de preparación para darle visibilidad
+       4. Reconoce el desempeño alineado al estándar de forma genuina, evitando el efectivo como único mecanismo
+       5. Extiende el estándar a todas tus áreas de trabajo, no solo a la producción o entrega del producto
+       6. Repite y refuerza el mensaje de forma constante hasta que se vuelva parte habitual de tu forma de trabajar
+       7. Eliminar el lenguaje que normaliza niveles aceptables de error (AQL)
+
+================================================================================================
+CASO 2 de 41
+  --- actualizar_business_model_canvas_tuneup (deprecado=None, dominio=core)
+      titulo: Actualización Iterativa del Business Model Canvas ('Tune-up')
+       1. Revisa tu propuesta de valor a la luz del feedback de clientes recibido
+       2. Reevalúa tus segmentos de clientes identificando si el producto resuena solo con un subconjunto
+       3. Ajusta tus hipótesis de ingresos según los segmentos que mostraron entusiasmo real
+       4. Documenta los cambios, sorpresas y decepciones como parte de un tune-up, no una revisión final
+  --- reempaquetado_producto (deprecado=None, dominio=core)
+      titulo: Reempaquetado del Producto (Estrategia de Pivote)
+       1. Identificar si el problema real es de tecnología o de empaquetado y posicionamiento comercial
+       2. Explorar alternativas de empaquetado: módulos, suscripción, versiones escalonadas de funcionalidad
+       3. Validar la nueva configuración con clientes, sin necesidad de rediseñar el producto central
+       4. Actualizar el lienzo de modelo de negocio con el nuevo modelo de entrega o precio
+
+================================================================================================
+CASO 3 de 41
+  --- analisis_motivaciones_fundador (deprecado=None, dominio=core)
+      titulo: Análisis de Motivaciones del Fundador
+       1. Reflexiona sobre las influencias familiares y culturales que tuviste relacionadas con emprender
+       2. Identifica tus 4 motivaciones principales (de una lista de 13: afiliación, altruismo, autonomía, ganancia financiera, etc.), por ejemplo con una herramienta tipo CareerLeader
+       3. Compara esas motivaciones con los perfiles típicos de quienes emprenden y de quienes no
+       4. Decide si tu perfil motivacional es compatible con el camino de emprender
+       5. Identifica si lo tuyo es más el control o más la riqueza, porque eso va a pesar cuando decidas cómo repartir participación y quién manda en tu negocio
+  --- decision_cuando_fundar (deprecado=None, dominio=core)
+      titulo: La Decisión de Cuándo Fundar: Factores de Carrera, Mercado y Personales
+       1. Evaluar tus factores de carrera: ¿tienes las habilidades y experiencia necesarias o necesitarás cofundadores/empleados para compensar?
+       2. Evaluar factores de mercado: ¿tu idea es lo suficientemente sólida o tu pasión te está sesgando el juicio?
+       3. Evaluar factores personales: ¿tu situación familiar y económica permite asumir el riesgo del emprendimiento?
+       4. Identificar cuál de los tres factores es más débil y diseñar un plan para mitigarlo antes de dar el salto
+
+================================================================================================
+CASO 4 de 41
+  --- antidilucion_provisiones (deprecado=None, dominio=core)
+      titulo: Provisiones de Antidilución (Full Ratchet vs Weighted Average)
+       1. Negociar antidilución basada en weighted average (broad-based), el estándar más equilibrado del mercado; evitar full ratchet salvo en negociaciones muy específicas o desfavorables
+       2. Identificar y listar las excepciones (carve-outs o 'excluded issuances') que no disparan el ajuste, como el pool de opciones para empleados o fusiones aprobadas por la junta
+       3. Negociar una cláusula de renuncia (waiver) por mayoría de la Serie A, para los casos en que la mayoría de inversionistas acuerde financiar una ronda futura a un precio menor
+       4. Negociar si el ajuste también aplica a splits de acciones, dividendos en acciones y recapitalizaciones
+       5. Consultar con un abogado corporativo el impacto de cada mecanismo en la tabla de capitalización ante un escenario de ronda a la baja
+  --- pay_to_play (deprecado=None, dominio=core)
+      titulo: Cláusula Pay-to-Play
+       1. Definir qué constituye una 'Qualified Financing' que gatilla la cláusula.
+       2. Establecer el porcentaje pro rata mínimo requerido para mantener status preferente.
+       3. Negociar si la conversión a común es total o parcial según el nivel de participación.
+       4. Permitir la asignación de derechos a fondos afiliados del inversionista.
+
+================================================================================================
+CASO 5 de 41
+  --- auditoria_de_posicionamiento (deprecado=None, dominio=core)
+      titulo: Auditoría de Posicionamiento (Positioning Audit)
+       1. Diseñar un cuestionario de auditoría externa para clientes, prensa, analistas e influenciadores
+       2. Entrevistar una muestra representativa que conozca y no conozca la empresa
+       3. Realizar las primeras 5-10 llamadas personalmente con el equipo fundador
+       4. Aplicar el mismo cuestionario internamente al equipo ejecutivo y la junta directiva
+       5. Comparar percepciones externas vs internas para detectar discrepancias
+  --- desarrollar_posicionamiento_empresa (deprecado=None, dominio=core)
+      titulo: Desarrollo del Posicionamiento de Empresa
+       1. Revisar la declaración de misión creada durante el descubrimiento de clientes
+       2. Comparar la descripción de la empresa con la de sus competidores
+       3. Redactar una declaración de posicionamiento de empresa simple y centrada en el cliente
+       4. Evitar superlativos no demostrables; usar afirmaciones comprobables
+       5. Ajustar el posicionamiento al tipo de mercado correspondiente
+
+================================================================================================
+CASO 6 de 41
+  --- bullseye_framework (deprecado=None, dominio=core)
+      titulo: Bullseye Framework (Diana de Tracción)
+       1. Lista los 19 canales de tracción posibles y evalúa cuáles podrían aplicar a tu negocio sin descartar ninguno por default.
+       2. Selecciona 3 a 5 canales prometedores según tu contexto, industria y modelo de negocio.
+       3. Diseña experimentos baratos, de menos de 1000 dólares y un mes de duración, para testear cada canal seleccionado en paralelo. Prueba en AdWords, pregunta el precio en tu mercado
+       4. Mide en cada experimento el costo de adquisición, el volumen disponible y la calidad de esos clientes.
+       5. Elige el canal con mejores resultados como tu canal núcleo y concentra ahí la mayoría de tus recursos. Es el paso previo para pasar a las pruebas del anillo interno
+       6. Si ningún canal funciona, repite el proceso o revisa tu producto.
+       7. Haz una lista de los 19 canales de tracción posibles para tu negocio
+       8. Diseña una prueba barata y corta para cada canal que te haga sentido, por ejemplo contactar a diez blogs de tu nicho, correr unos anuncios pagados o escribir un artículo semanal durante un mes
+       9. Corre las pruebas en paralelo o por lotes y mide resultados concretos, no solo clics o vistas
+      10. Compara los resultados entre canales y elige el o los que más prometan para invertirles más recursos
+      11. Anota lo que aprendes de cada prueba, incluidas las que fallaron, para mejorar tus próximos intentos
+      12. Compara los resultados de las distintas estrategias que probaste en una hoja de cálculo
+  --- critical_path (deprecado=None, dominio=core)
+      titulo: Critical Path (Camino Crítico)
+       1. Enumera los hitos estrictamente necesarios para alcanzar tu traction goal
+       2. Excluye actividades que no sean absolutamente necesarias, aunque sean solicitadas por usuarios
+       3. Evalúa cada actividad propuesta contra el Critical Path antes de ejecutarla
+       4. Reevalúa el Critical Path después de completar cada hito, ya que las suposiciones cambian con feedback real
+       5. Comunica el Critical Path al equipo para alinear prioridades y evitar desperdicio de recursos
+
+================================================================================================
+CASO 7 de 41
+  --- calculo_roi_franquiciado_2 (deprecado=None, dominio=franquicias)
+      titulo: Cuánto retorno gana quien compra tu franquicia (ROI cash on cash)
+       1. Calcula la inversión inicial total que necesita quien compre tu franquicia (equipo, obra, inventario, cuota de entrada, capital de trabajo) en valores actuales.
+       2. Toma el estado de resultados de tu unidad más representativa del negocio actual.
+       3. Ajusta el salario de gerencia o dueño a la tasa de mercado.
+       4. Quita los gastos que quien compre tu franquicia no va a tener (oficina administrativa, soporte de campo, gastos legales de marca).
+       5. Quita los gastos financieros (intereses), los que no son en efectivo (depreciación y amortización) y los impuestos.
+       6. Agrega la línea de regalías y aportes al fondo de marketing del sistema.
+       7. Divide el flujo de caja ajustado entre la inversión total para obtener el retorno proyectado.
+  --- decision_franquiciar_vs_expansion_propia (deprecado=None, dominio=franquicias)
+      titulo: Decisión Estratégica: Franquiciar vs. Expansión con Unidades Propias vs. Capital Externo
+       1. Define tu meta financiera personal: valoración objetivo del negocio y plazo de retiro o venta.
+       2. Calcula el escenario de mantener el negocio tal como está (status quo) a 5-10 años.
+       3. Modela el escenario de abrir más unidades propias: capital requerido, financiamiento y retorno proyectado.
+       4. Modela el escenario de franquiciar: ingresos por regalías y fees, inversión inicial del programa y ritmo de apertura.
+       5. Modela el escenario de traer un socio de capital: dilución de equity versus capital aportado.
+       6. Compara todos los escenarios contra tu meta y selecciona la estrategia, o combinación, que cierre la brecha dentro del plazo y riesgo que aceptas.
+
+================================================================================================
+CASO 8 de 41
+  --- canales_distribucion (deprecado=None, dominio=core)
+      titulo: Bloque de Canales (Channels)
+       1. Mapear las 5 fases del canal (conocimiento, evaluación, compra, entrega, post-venta) para cada segmento
+       2. Decidir si usar canales propios (mayor margen, mayor costo) o de socios (menor margen, mayor alcance)
+       3. Evaluar la integración entre canales para generar una experiencia de cliente coherente
+       4. Calcular costo-eficiencia de cada canal seleccionado
+  --- eventos_offline_como_canal_traccion (deprecado=None, dominio=core)
+      titulo: Eventos presenciales para conseguir tus primeros clientes (canal de tracción)
+       1. Piensa si las personas a las que quieres llegar comparten intereses o buscan comunidad
+       2. Empieza con un evento pequeño y de bajo costo, como una mini charla de un día; pregunta el precio en tu mercado, o un evento lujoso multi-día para decision makers de alto nivel
+       3. Invita a tres emprendedores o expertos locales relevantes para que den charlas cortas, y sin que el evento parezca un pitch de ventas
+       4. Busca un espacio accesible, como una universidad, para reducir gastos
+       5. Si el evento pequeño funciona, anímate a organizar uno más grande con auspiciantes
+       6. Mantén el precio de entrada relativamente alto para asegurar que quien va realmente esté interesado
+       7. Facilita que los que dan charlas y los asistentes se conecten entre sí, con almuerzos compartidos o mesas de conversación
+       8. Validar la demanda del evento preguntando directamente a tu audiencia (encuesta, venta anticipada de entradas).
+       9. Usar transmisión en vivo o meetups satélite para expandir el alcance sin aumentar costos de viaje.
+      10. Repetir el evento anualmente una vez validado, ajustando precio y escala según la demanda comprobada.
+
+================================================================================================
+CASO 9 de 41
+  --- checklist_sistema_stage_gate_primera_clase (deprecado=None, dominio=core)
+      titulo: Checklist de un Sistema Stage-Gate de Primera Clase
+       1. Documentar completamente el proceso: etapas, actividades, gates, criterios y entregables
+       2. Medir el grado real de adopción del proceso por los equipos (no solo su existencia)
+       3. Evaluar si el proceso facilita o entorpece el acceso a recursos
+       4. Implementar métricas de cumplimiento (compliance) del proceso
+       5. Crear versiones escalables del proceso según el riesgo y tamaño del proyecto
+       6. Designar un gerente de proceso responsable de coaching y mejora continua
+       7. Revisar y actualizar el proceso cada 3-5 años
+  --- mitos_stage_gate (deprecado=None, dominio=core)
+      titulo: Lo que Stage-Gate NO es (Desmitificación)
+       1. Verificar que el proceso permita actividades en paralelo, no solo secuenciales
+       2. Confirmar que existan flexibilidad y posibilidad de saltar u omitir etapas según el riesgo del proyecto
+       3. Asegurarse de que el proceso combine Stage-Gate (macro proceso) con gestión de proyectos (micro proceso, ej. Agile, Gantt)
+       4. Eliminar burocracia, papeleo y reuniones que no agreguen valor
+       5. Dar importancia real al front-end (ideación, definición y business case) y no solo al desarrollo/lanzamiento
+
+================================================================================================
+CASO 10 de 41
+  --- cinco_porques_master (deprecado=None, dominio=core)
+      titulo: Designar un Maestro de los Cinco Porqués
+       1. Elegir a una persona con suficiente autoridad para asegurar cumplimiento de las tareas asignadas, pero con disponibilidad para asistir a las sesiones
+       2. Comenzar con una categoría de síntomas específica y de bajo riesgo (ej. una herramienta interna, no un sistema crítico de clientes)
+       3. Definir una regla simple e inequívoca sobre qué tipo de incidentes disparan automáticamente una sesión de Cinco Porqués
+       4. Expandir gradualmente el alcance del proceso a medida que el equipo gana experiencia y confianza
+       5. Evaluar periódicamente si las inversiones de prevención realizadas están reduciendo la frecuencia/severidad de los problemas
+  --- five_whys_inversion_proporcional (deprecado=None, dominio=core)
+      titulo: Los Cinco Porqués con Inversión Proporcional
+       1. Ante un incidente o error, preguntar '¿por qué ocurrió?' de forma iterativa (mínimo 5 veces)
+       2. Para cada respuesta, asignar una persona responsable y una acción proporcional al nivel del problema
+       3. Documentar tanto el aprendizaje obtenido como las acciones correctivas tomadas
+       4. Evitar culpar a individuos; enfocar el análisis en procesos y sistemas
+       5. Revisar después de un tiempo si el problema se repitió para validar la efectividad de las correcciones
+       6. Cuando ocurra un fallo o síntoma negativo, reunir a todas las personas involucradas en su descubrimiento, diagnóstico y resolución
+       7. Identificar en cada nivel si la causa es técnica o humana/organizacional
+
+================================================================================================
+CASO 11 de 41
+  --- compatibilidad_motivaciones_riqueza_control (deprecado=None, dominio=core)
+      titulo: Compatibilidad de motivaciones: riqueza contra control
+       1. Pregúntate honestamente si lo que mas te importa es la riqueza o el control antes de asociarte con alguien
+       2. Habla abiertamente de tu motivacion con tu posible socio antes de lanzar el proyecto juntos, y sobre cada fork de decisión (financiamiento, equity, roles)
+       3. Detecta si hay una fuente de conflicto por el rol de liderazgo cuando las motivaciones no calzan
+       4. Si ambos buscan control, anticipa el choque de poder y define desde el inicio como lo van a resolver, sin caer en un liderazgo compartido ambiguo
+       5. Si hay un mix de motivaciones, confirma que de verdad confias en la capacidad de tu socio antes de cederle esa autoridad
+       6. Usar una matriz tipo Figura 11.1 para simular escenarios futuros y verificar consenso.
+       7. Decidir explícitamente, antes de fundar, si existe compatibilidad motivacional suficiente para evitar conflictos destructivos.
+  --- dilema_riqueza_vs_control (deprecado=None, dominio=core)
+      titulo: Elegir entre hacerte rico o mantener el control (Rich vs. King)
+       1. Reflexiona con honestidad sobre qué es más importante para ti: maximizar el valor de salida o mantener el control de las decisiones clave
+       2. Pregúntate si tu motivación principal es la riqueza financiera o el control, porque eso anticipa cómo vas a responder ante futuras decisiones de financiamiento o crecimiento
+       3. Evalúa, en cada decisión de financiamiento o contratación, cuánto control pierdes a cambio de cuánto valor ganas
+       4. Define con claridad qué decisiones no estás dispuesto a ceder en cuanto a control, por ejemplo la dirección estratégica o la cultura, y cuáles sí puedes soltar a cambio de recursos
+       5. Considera estructuras híbridas, como acciones con derechos de voto diferenciados, si quieres conservar el control mientras consigues capital
+       6. Ten presente que crecer rápido o levantar capital de riesgo suele significar sacrificar control
+
+================================================================================================
+CASO 12 de 41
+  --- conexion_personal_emocional (deprecado=None, dominio=core)
+      titulo: Conexión mediante Datos Personales y Emocionales
+       1. Clasifica los datos que tienes de tus clientes en personales, emocionales, o ambos a la vez
+       2. Da prioridad a recolectar los datos que caen en ambas categorías
+       3. Usa siempre el nombre del cliente en tus interacciones, nunca un número de cliente
+       4. Crea pequeños rituales de reconocimiento con esos datos, por ejemplo felicitarlo cuando gana su equipo favorito
+       5. Prioriza datos que sean personales (únicos de cada persona) y emocionales (con una carga afectiva positiva)
+  --- rediseno_procesos_negocio_cx (deprecado=None, dominio=core)
+      titulo: Rediseño de Procesos de Negocio Centrado en el Cliente
+       1. Revisa qué procesos internos le generan fricción innecesaria a tu cliente (números distintos, sistemas duplicados)
+       2. Enseña a todas las personas que trabajan contigo, no solo a quien atiende al cliente, cuál es su papel en la experiencia que vive
+       3. Reduce la cantidad de herramientas o sistemas que usas para atender a tu cliente
+       4. Ponte tú, o quien tenga visión de todo el proceso, a cargo de la experiencia del cliente, no solo para reaccionar cuando algo falla
+       5. Destina presupuesto sostenido durante varios años para esta transformación, en lugar de soluciones rápidas y parciales
+       6. Diagnosticar si los empleados saben que la experiencia del cliente es parte de su trabajo
+       7. Diseñar un programa de capacitación peer-to-peer a gran escala con plazos definidos
+       8. Unificar las herramientas internas de información del cliente para reducir errores y fricción
+       9. Consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas
+      10. Rediseñar procesos clave (ej: agendamiento, atención telefónica) para resolución en un solo contacto
+      11. Implementar compensaciones automáticas cuando la empresa incumple su promesa de servicio
+      12. Medir el impacto con métricas antes/después (volumen de llamadas, tasa de resolución en primer contacto)
+      13. Simplifica los procesos administrativos (formularios, papeleo) con herramientas digitales para reducir la fricción
+      14. Identificar y mapear los distintos journeys del cliente (facturación, soporte, onboarding, percepción)
+      15. Diagnosticar en qué punto los departamentos se pasan la responsabilidad del cliente sin resolución
+      16. Medir el impacto cuantitativo del mal servicio (llamadas repetidas, visitas técnicas, tasa de abandono)
+
+================================================================================================
+CASO 13 de 41
+  --- contract_close_out (deprecado=None, dominio=core)
+      titulo: Cierre de Contrato
+       1. Confirmar que todas las disputas contractuales estén resueltas
+       2. Verificar que el producto o resultado haya sido aceptado
+       3. Confirmar que se hayan realizado los pagos finales
+       4. Documentar el análisis de desempeño del proveedor y registro de cambios
+       5. Registrar la fecha de finalización del contrato y firma de cierre
+  --- contractor_status_report (deprecado=None, dominio=core)
+      titulo: Informe de Estado del Contratista
+       1. Solicitar al contratista el informe periódico de desempeño
+       2. Revisar el desempeño de alcance, calidad, cronograma y costo del periodo actual
+       3. Analizar los pronósticos de fecha de entrega y costo final
+       4. Registrar reclamaciones, disputas o riesgos nuevos
+       5. Integrar la información en el Informe de Desempeño del Proyecto
+
+================================================================================================
+CASO 14 de 41
+  --- cost_management_plan (deprecado=None, dominio=core)
+      titulo: Cost Management Plan
+       1. Define el nivel de precisión requerido para tus estimaciones de costo
+       2. Establece las unidades de medida, la moneda y los umbrales de varianza que usarás para detectar desviaciones
+       3. Documenta las técnicas de estimación y el proceso para desarrollar el presupuesto por fases
+       4. Especifica las reglas de medición de desempeño, como el valor ganado, y quién tiene autoridad para asignar presupuesto
+  --- stakeholder_register (deprecado=None, dominio=core)
+      titulo: Lista de las personas que le importan a tu proyecto (Stakeholder Register)
+       1. Anota a todas las personas u organizaciones, internas y externas, que identificaste al arrancar el proyecto
+       2. Registra la posición, el rol, el contacto y lo que cada una necesita
+       3. Escribe qué espera cada persona de tu proyecto o producto
+       4. Marca cuánta influencia tiene cada una: alta, media o baja
+       5. Clasifícalas según su postura hacia ti (a favor, neutral, en contra) para saber cómo tratarlas
+       6. Actualiza esta lista a medida que conoces más sobre cada persona
+
+================================================================================================
+CASO 15 de 41
+  --- costo_de_mala_calidad_copq (deprecado=None, dominio=quality)
+      titulo: Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)
+       1. Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad
+       2. Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos
+       3. Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real
+       4. Identifica los pocos procesos o productos que concentran la mayor parte del costo
+       5. Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio
+       6. Establece una meta de reducción anual y repite el cálculo periódicamente para verificar la tendencia
+  --- trilogia_de_juran (deprecado=None, dominio=quality)
+      titulo: Trilogía de Juran (Planificación, Control y Mejora)
+       1. Diseña tus procesos traduciendo lo que pide tu cliente en especificaciones concretas de tu producto o servicio
+       2. Verifica si el problema que enfrentas es un pico esporádico o un desperdicio crónico antes de decidir cómo actuar
+       3. Aplica control de proceso para eliminar picos esporádicos y devolver el desempeño al nivel planificado
+       4. Aplica un proceso de mejora o breakthrough para reducir el desperdicio crónico a un nivel sin precedentes
+       5. Revisa que lo que produces cumpla con los criterios de diseño originales
+       6. Integra los tres procesos como un ciclo continuo en tu forma de gestionar la calidad
+
+================================================================================================
+CASO 16 de 41
+  --- cultura_de_aprendizaje (deprecado=None, dominio=health_safety)
+      titulo: Cultura de Aprendizaje Organizacional
+       1. Establecer mecanismos formales de análisis de datos del sistema de reporte de seguridad, incluida una forma sistematica de observar incidentes y condiciones de riesgo, y momentos regulares para analizar y diagnosticar
+       2. Definir procesos de decisión para implementar reformas basadas en hallazgos, comprometiendo tu tiempo y tus recursos explícitamente para IMPLEMENTAR las mejoras encontradas, no solo hablar de ellas
+       3. Medir la efectividad de las reformas implementadas mediante seguimiento continuo
+       4. Institucionalizar la revisión periódica de lecciones aprendidas
+  --- cultura_de_seguridad_componentes (deprecado=None, dominio=health_safety)
+      titulo: Componentes de la Cultura de Seguridad
+       1. Evaluar el estado actual de cada uno de los cuatro subcomponentes en tu negocio
+       2. Establecer un sistema que recolecte, analice y difunda información de incidentes
+       3. Definir indicadores para medir el nivel de cultura informada de tu negocio
+       4. Tener claro y por escrito por que vale la pena invertir en estos cuatro pilares antes de decidir
+
+================================================================================================
+CASO 17 de 41
+  --- decision_pivotar_o_proceder (deprecado=None, dominio=core)
+      titulo: Decisión: Pivotar o Proceder
+       1. Revisa honestamente si la validación convirtió opiniones en hechos, y no que moviste las metas para que coincidieran con el resultado
+       2. Confirma que el producto se vendió bien y fácilmente, que la llegada de clientes es predecible, escalable y rentable, y que existe un proceso de ventas repetible
+       3. Verifica que los tiempos de entrega del producto sean realistas con tu equipo de desarrollo
+       4. Toma un Business Model Canvas nuevo y busca game changers revisando propuesta de valor, precios, canales y relaciones con clientes, no solo mejoras incrementales
+       5. Presenta tu canvas a tu consejo asesor para que lo cuestione activamente
+       6. Actualiza el canvas con lo aprendido y decide formalmente si pivotar volviendo a descubrimiento o proceder avanzando a creación de clientes
+  --- lienzo_modelo_negocio (deprecado=None, dominio=core)
+      titulo: El Lienzo de Modelo de Negocio (Business Model Canvas)
+       1. Imprimir el lienzo en tamaño grande para trabajo colaborativo y un Business Model Canvas para cada miembro del equipo
+       2. Reunirse con el equipo aceptando que habrá vacíos en la primera versión
+       3. Escribir cada bloque en notas post-it sobre el lienzo
+       4. Identificar los segmentos de clientes a los que se dirige la organización
+       5. Definir la propuesta de valor para cada segmento
+       6. Mapear canales, relaciones y fuentes de ingresos
+       7. Mapear recursos, actividades y asociaciones clave
+       8. Calcular la estructura de costos y el profit resultante
+       9. Pausar para investigar más información donde haya vacíos importantes
+      10. Iterar y discutir en grupo hasta lograr coherencia entre los bloques
+      11. Publicar el canvas en el espacio de trabajo y actualizarlo conforme avanza el proyecto
+      12. Usar el lienzo como base para pivotar o validar hipótesis del negocio, y también para llevar una solución ya diseñada a un modelo de negocio viable
+
+================================================================================================
+CASO 18 de 41
+  --- definicion_alineacion_cadena_suministro (deprecado=None, dominio=core)
+      titulo: Definición y Alineación de la Cadena de Suministro con la Estrategia
+       1. Mapear todas las empresas y actividades que participan en la cadena de suministro de tu producto/servicio.
+       2. Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.), y sus core competencies
+       3. Definir si tu estrategia competitiva se basa en precio bajo (requiere eficiencia) o en servicio/conveniencia (requiere capacidad de respuesta).
+       4. Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida, que son los 5 drivers (producción, inventario, ubicación, transporte, información)
+       5. Identificar en qué categoría(s) participa tu empresa: productor, distribuidor, minorista, proveedor de servicios
+       6. Mapear todos los participantes de tu cadena de suministro actual, incluyendo proveedores del proveedor y clientes del cliente
+       7. Determinar qué proveedores de servicios (logística, financieros, TI) podrían mejorar tu eficiencia operativa
+       8. Responder las 6 preguntas de Chopra y Meindl sobre tu mercado: cantidad por lote, tiempo de respuesta, variedad, nivel de servicio, precio, tasa de innovación
+       9. Validar que la estrategia de cadena de suministro sea coherente con la propuesta de valor al cliente
+  --- trade_off_responsividad_eficiencia (deprecado=None, dominio=core)
+      titulo: Balance entre Capacidad de Respuesta y Eficiencia
+       1. Analizar qué valora más tu segmento de clientes: precio bajo o rapidez/servicio.
+       2. Evaluar el nivel de exceso de capacidad, inventario y flexibilidad de transporte actuales.
+       3. Ajustar cada driver (producción, inventario, ubicación, transporte, información) hacia el extremo del espectro que corresponda a la estrategia elegida.
+       4. Revisar periódicamente el balance, ya que cambios en el mercado pueden requerir reajustes.
+       5. Monitorear factores clave: demanda de producto, precios, tasas de producción, frecuencia de entregas
+       6. Evaluar la confiabilidad de los pronósticos y datos disponibles
+       7. Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece responsividad)
+       8. Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, features, velocidad)
+
+================================================================================================
+CASO 19 de 41
+  --- design_for_six_sigma_dfss (deprecado=None, dominio=quality)
+      titulo: Design for Six Sigma (DFSS) y Metodología DMADV
+       1. Revisa tu plan de negocio y define el alcance del proyecto de diseño antes de empezar.
+       2. Identifica a tus clientes objetivo y traduce sus necesidades en requerimientos medibles (CTQs).
+       3. Analiza la voz del cliente y evalúa varios conceptos de diseño usando métodos estadísticos.
+       4. Diseña el producto y su proceso de producción de forma integrada, incorporando los CTQs como criterios de decisión.
+       5. Verifica que el diseño detallado cumple los niveles de calidad Six Sigma y los CTQs antes de producir a escala completa.
+       6. Prepara el plan de lanzamiento y define mecanismos de control para asegurar que se mantenga el cumplimiento de los CTQs.
+  --- innovacion_tipo_ii (deprecado=None, dominio=quality)
+      titulo: Innovación Tipo II (Más grande/Más pequeño/Combinación)
+       1. Definir el producto/servicio/proceso objetivo de la innovación
+       2. Crear tres columnas de encabezado: 'hacerlo más grande', 'hacerlo más pequeño', 'combinarlo con'
+       3. Generar ideas libremente en cada columna sin criticar durante la generación
+       4. Filtrar y transformar las ideas más disruptivas en propuestas viables
+       5. Seleccionar las ideas con mayor potencial para desarrollo posterior
+
+================================================================================================
+CASO 20 de 41
+  --- diagnostico_antes_remedio (deprecado=None, dominio=quality)
+      titulo: Diagnóstico Debe Preceder al Remedio
+       1. No aplicar ningún remedio sin evidencia validada de la causa real
+       2. Cuestionar cualquier afirmación, propia o de quien te asesora, que no tenga datos que la respalden
+       3. Investigar a fondo cuando tengas una creencia arraigada sobre la causa de un problema
+       4. Usar datos históricos parecidos a estudios de fallas para validar tus hipótesis
+  --- terminologia_clave_breakthrough (deprecado=None, dominio=quality)
+      titulo: Terminología Clave para Diagnóstico de Breakthrough
+       1. Definir claramente cada término con el equipo antes de iniciar el diagnóstico
+       2. Diferenciar síntomas de causas en cada problema detectado
+       3. Aplicar el principio de Pareto para identificar la causa dominante
+       4. Documentar teorías propuestas antes de validarlas con datos
+
+================================================================================================
+CASO 21 de 41
+  --- documentacion_exportacion (deprecado=None, dominio=exportacion)
+      titulo: Documentación de Exportación
+       1. Determina qué documentos necesitas según el destino y el tipo de producto
+       2. Prepara la factura pro forma para cotizar al comprador antes del envío
+       3. Emite la factura comercial una vez confirmada la venta, incluyendo los términos de venta y pago, y elabora la lista de empaque con el contenido, los pesos y las dimensiones
+       4. Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y delega la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker)
+       5. Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si tu envío supera el valor mínimo que se fije en tu país o si necesitas una licencia de exportación
+       6. Revisa toda la documentación antes del embarque y confirma con tu banco los plazos de cobro si hay carta de crédito
+  --- seguro_exportacion (deprecado=None, dominio=exportacion)
+      titulo: Seguro de Exportación (Carga y Crédito)
+       1. Determinar según términos de venta quién es responsable del seguro de carga
+       2. Contratar póliza propia o asegurar bajo la póliza del freight forwarder
+       3. No asumir que el comprador ha contratado seguro adecuado si es su responsabilidad, y verificar documentación
+       4. Evaluar contratación de seguro de crédito a la exportación para cubrir riesgo de impago
+       5. Verificar requisitos de instituciones financieras del comprador sobre seguro de crédito
+       6. Consultar con aseguradoras internacionales o freight forwarders para definir el nivel de cobertura (típicamente 110% del valor CIF/CIP).
+
+================================================================================================
+CASO 22 de 41
+  --- educacion_estadistica_para_la_calidad (deprecado=None, dominio=quality)
+      titulo: Educación Masiva en Métodos Estadísticos para la Calidad
+       1. Diseñar una capacitación en métodos estadísticos para ti y para cada persona que trabaja contigo, sin importar la tarea que haga
+       2. Eliminar cualquier barrera que impida que quien hace el trabajo se sienta orgulloso de hacerlo bien
+       3. Impartir formación práctica en construcción e interpretación de cartas de control
+       4. Extender la capacitación a investigación de mercado y métodos modernos de muestreo
+       5. Buscar alianzas con instituciones educativas o asociaciones profesionales que te ayuden a sostener la capacitación en el tiempo
+  --- responsabilidad_gerencial_en_la_calidad (deprecado=None, dominio=quality)
+      titulo: Tu responsabilidad en la mejora de la calidad
+       1. Comprometerte a aprender de primera mano la filosofia y los métodos de calidad
+       2. Asumir tu mismo la responsabilidad de liderar las mejoras en tus procesos
+       3. Estar presente donde se hace el trabajo para entender los procesos de primera mano
+       4. Escribir tu mismo los reportes de mejora en lugar de delegarlos por completo
+       5. Conectar la mejora de calidad con la mejora de productividad y rentabilidad en la forma en que cuentas lo que haces
+
+================================================================================================
+CASO 23 de 41
+  --- elementos_plan_exportacion_ejemplo (deprecado=None, dominio=exportacion)
+      titulo: Elementos Prácticos de un Plan de Exportación (Ejemplo Aplicado)
+       1. Redacta una introducción breve explicando por qué quieres exportar
+       2. Define metas medibles (por ejemplo, aumentar tus ventas un 15% en dos años usando plataformas de venta en línea)
+       3. Lista los recursos financieros con que cuentas (presupuesto anual, tiempo que puedes dedicar, personal)
+       4. Lista tus recursos no financieros (experiencia de viaje, capacitación, investigación sobre ayuda del gobierno)
+       5. Documenta la capacidad de producción que ya tienes, sin necesidad de invertir más
+       6. Identifica los mercados a los que quieres llegar y respalda esa elección con datos
+       7. Define tu política de riesgo, crédito, devoluciones y envío
+       8. Determina si necesitas un agente de carga (forwarder), licencias de exportación y certificados sanitarios
+       9. Revisa qué idioma exige el empaque y el etiquetado en el mercado al que vas
+      10. Identifica el código arancelario de tu producto
+      11. Define cómo vas a proteger tu propiedad intelectual en los mercados a los que apuntas
+      12. Define tu estrategia de precios considerando el costo de flete, los aranceles y la comisión del distribuidor
+      13. Prepara tu sitio web para otros países: agrega conversor de moneda, testimonios internacionales y políticas claras
+  --- programas_ex_im_bank (deprecado=None, dominio=exportacion)
+      titulo: Programas de Financiamiento del Ex-Im Bank
+       1. Solicita la Garantia de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportacion
+       2. Determina si te conviene mas una garantia de prestamo, que suele ser mas económica, o un prestamo directo de mediano o largo plazo para la venta
+       3. Evalua contratar un seguro de crédito a la exportacion, propio del Ex-Im Bank o privado si ya tienes historial como exportador establecido
+       4. Revisa si calificas para la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energia, telecomunicaciones o transporte
+       5. Presenta tu inventario y tus cuentas por cobrar de exportacion como garantia y negocia las tasas de anticipo con el prestamista
+       6. Consulta con la oficina local del U.S. Commercial Service o en exim.gov el proceso de solicitud y los bancos participantes
+
+================================================================================================
+CASO 24 de 41
+  --- encuadre_desafio_diseno (deprecado=None, dominio=core)
+      titulo: Encuadre del Desafío de Diseño (Frame Your Design Challenge)
+       1. Formular el problema como una pregunta de diseño abierta, utilizando la fórmula '¿Cómo podríamos...?'
+       2. Definir el impacto último que se busca lograr
+       3. Listar posibles soluciones pensando ampliamente, permitiendo resultados sorprendentes
+       4. Documentar contexto y restricciones (geográficas, tecnológicas, de tiempo, poblacionales)
+       5. Revisar y ajustar la pregunta original según lo aprendido, iterando la formulación con el equipo hasta encontrar el nivel de abstracción correcto
+       6. Validar el brief con conocimiento local ('local knowledge') de ONGs o actores en terreno antes de prototipar
+       7. Identificar el objetivo macro o problema social/de negocio a resolver.
+       8. Verifica que la pregunta no sea demasiado general (imposible de abordar) ni demasiado específica (limita soluciones)
+       9. Usa la pregunta como brújula durante todo el proceso de diseño
+      10. Usar esta pregunta como titular para las sesiones de brainstorming.
+  --- integracion_deseabilidad_viabilidad_factibilidad_social (deprecado=None, dominio=core)
+      titulo: Integración de Deseabilidad-Viabilidad-Factibilidad en Emprendimientos Sociales
+       1. Evaluar cada iniciativa social bajo el triple criterio: ¿es deseable para la comunidad?, ¿es viable financieramente sin depender solo de donaciones?, ¿es factible de ejecutar con la infraestructura disponible?
+       2. Formar equipos interdisciplinarios que incluyan expertos técnicos y del sector (salud, agricultura, finanzas) además de diseñadores
+       3. Diseñar métricas de éxito que balanceen impacto social y sostenibilidad económica
+       4. Navegar burocracias gubernamentales e infraestructura local como parte del diseño del sistema
+
+================================================================================================
+CASO 25 de 41
+  --- entrenamiento_supervisores_calidad (deprecado=None, dominio=quality)
+      titulo: Entrenamiento de Supervisores (El Supervisor como Clave)
+       1. Dedica al menos 6 horas a estudiar el sistema de medicion de calidad, los costos de calidad y las acciones correctivas al iniciar la etapa de conciencia de calidad.
+       2. Explica de forma completa el programa Cero Defectos y el método para eliminar las causas de los errores a quienes te ayudan, al menos 4 semanas antes del día ZD.
+       3. Prepara un manual o guia detallada del programa para usarla como referencia.
+       4. Haz un test de comprension sobre el concepto ZD antes de replicarlo con tu equipo.
+       5. Resuelve de forma individual las dudas de cada persona antes de la implementacion.
+       6. Verifica que cada persona refuerce la formacion en su area de responsabilidad.
+  --- identificacion_empleado_con_el_trabajo (deprecado=None, dominio=quality)
+      titulo: Identificación del Empleado con su Trabajo (Job Identification)
+       1. Conocer personalmente a cada miembro del equipo (nombre, proficiencia, intereses).
+       2. Mostrar a los empleados el resultado final de su trabajo y su impacto en la cadena de valor.
+       3. Fomentar que los empleados comuniquen sus problemas laborales al supervisor.
+       4. Establecer estándares de desempeño claros y comprensibles para cada puesto.
+       5. Realizar seguimiento del ausentismo como indicador de identificación con el trabajo.
+       6. Aplicar una autoevaluación periódica del supervisor sobre su relación con el equipo.
+
+================================================================================================
+CASO 26 de 41
+  --- estrategia_crecimiento_clientes (deprecado=None, dominio=core)
+      titulo: Estrategia de Crecimiento de Clientes (Grow)
+       1. Calcular el valor de vida del cliente de la base de clientes actual
+       2. Diseñar programas de venta cruzada y venta adicional integrados en el proceso de compra (por ejemplo: 'gasta 25 dólares más y obtén envío gratis')
+       3. Crear motores de recomendación tipo 'si compraste X, te gustará Y'
+       4. Diseñar mecanismos de marketing viral y programas de referidos que incentiven a los clientes actuales a invitar a nuevos
+       5. Probar estas tácticas con clientes reales, incluyendo ofertas y promociones exclusivas
+       6. Revisar tácticas específicas de canales web o móviles para identificar ideas adicionales de crecimiento
+  --- get_customers_funnel_webmobile (deprecado=None, dominio=core)
+      titulo: Embudo de Adquisición y Activación Web/Mobile
+       1. Determinar quién es tu audiencia objetivo y dónde pasa tiempo en la web
+       2. Crear contenido atractivo y adaptado al formato de cada plataforma (video, blog, FAQ, redes sociales)
+       3. Participar activamente en las comunidades donde está tu audiencia
+       4. Probar primero tácticas de adquisición gratuitas: PR, SEO, redes sociales, marketing viral
+       5. Probar tácticas de adquisición pagadas a pequeña escala: PPC, afiliados, email marketing, publicidad online
+       6. Medir la tasa de activación (registro, descarga o compra) de cada táctica y descartar las que no generen suficiente respuesta
+
+================================================================================================
+CASO 27 de 41
+  --- evaluacion_necesidad_franquiciar (deprecado=None, dominio=franquicias)
+      titulo: Evaluación de la Necesidad de Franquiciar
+       1. Define tus metas de crecimiento personales y del negocio
+       2. Evalúa si tu capital y capacidad de gestión actuales bastan para alcanzarlas mediante expansión propia; si no, decide entre extender el plazo, reducir metas o cambiar de estrategia
+       3. Confirma que tu negocio tiene un prototipo probado, rentable y diferenciable frente a la competencia
+       4. Verifica que tus procesos pueden documentarse y enseñarse a alguien de competencia promedio en menos de tres meses
+       5. Calcula el ROI que obtendría un franquiciado tras deducir regalías y confirma que tienes recursos para dar soporte a largo plazo
+       6. Compara las ventajas de franquiciar (capital sin deuda, expansión rápida, dueños motivados) contra sus desventajas antes de decidir
+  --- mix_ubicaciones_corporativas_franquicia (deprecado=None, dominio=franquicias)
+      titulo: Estrategia de Mezcla entre Ubicaciones Corporativas y de Franquicia
+       1. Decide si continuaras abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias, lanzando el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo
+       2. Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, asegurando a los dos canales recursos dedicados suficientes para crecer sin canibalizarse
+       3. Selecciona la estrategia de ubicacion, Home Sweet Home, Spiking, Cherry Picking o Reverse Cherry Picking, segun tus objetivos de validacion, riesgo y retorno
+       4. Define criterios claros para asignar mercados y ubicaciones entre lo corporativo y lo franquiciado, y para evitar encroachment
+       5. Evalua el impacto de la estrategia elegida en la validacion y satisfaccion de futuros franquiciados
+       6. Documenta la estrategia en tu plan de marketing de franquicia, incluyendo el uso de ubicaciones corporativas como centros de entrenamiento o soporte si aplica, y en especial las de en mercados distantes
+
+================================================================================================
+CASO 28 de 41
+  --- future_scenarios_planning (deprecado=None, dominio=core)
+      titulo: Planificación de Escenarios Futuros (Scenario Planning)
+       1. Identifica dos o más impulsores de incertidumbre clave que puedan transformar tu industria (por ejemplo la tecnología o la regulación): son las dimensiones que van a caracterizar a tus escenarios
+       2. Cruza esos impulsores en una matriz para generar entre 2 y 4 escenarios distintos, y asegúrate de que entre ellos estén descritos en detalle, a 5 a 10 años, el mejor y el peor escenario posible para el entorno externo de tu empresa
+       3. Titula y narra cada escenario con una historia breve que describa sus elementos principales
+       4. Organiza un taller donde los participantes desarrollen un modelo de negocio apropiado para cada escenario, usando lluvia de ideas y técnicas de creatividad, y formula preguntas específicas por bloque del Canvas (KP, KA, VP, CR, CS, C$, R$) para cada uno
+       5. Identifica las decisiones primarias que enfrenta tu empresa (nuevos negocios, tecnologías, productos), asigna una probabilidad pequeña a los escenarios alternativos y reconsidera con ella tus decisiones de inversión
+       6. Identifica las señales y marcadores tempranos que indiquen hacia qué escenario se está moviendo el mundo
+  --- iota_analysis (deprecado=None, dominio=core)
+      titulo: IOTA - Análisis de Impacto de Oportunidades y Amenazas
+       1. Reunir todos los hallazgos de los ejercicios estratégicos previos en una tabla resumen
+       2. Indicar el momento (timing) y probabilidad de ocurrencia de cada tendencia/amenaza/oportunidad
+       3. Evaluar el impacto potencial de cada elemento en el negocio
+       4. Responder la pregunta '¿entonces qué?' identificando nuevos productos, servicios o modelos de negocio necesarios
+       5. Priorizar las acciones resultantes según impacto y urgencia
+
+================================================================================================
+CASO 29 de 41
+  --- gestion_alucinaciones_ia (deprecado=None, dominio=core)
+      titulo: Gestión de Alucinaciones de la IA
+       1. Establecer como política interna que ningún dato, cifra o cita generado por IA se use en documentos externos (pitch decks, reportes, contratos) sin verificación humana en fuente original.
+       2. Pedir a la IA que cite fuentes verificables y luego contrastar manualmente esas fuentes.
+       3. Usar la IA para generar borradores o hipótesis, nunca como fuente final de verdad.
+       4. Entrenar al equipo en detectar el patrón de 'sonar creíble' como señal de alerta, no de confianza.
+       5. Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas
+  --- ia_generacion_ideas_negocio (deprecado=None, dominio=core)
+      titulo: IA como Motor de Generación de Ideas (Recombinación)
+       1. Invitar siempre a la IA a sesiones de brainstorming como un participante más
+       2. Pedir a la IA que combine 2-3 conceptos distantes o no relacionados con el negocio para forzar recombinación creativa
+       3. Solicitar listas largas (20+ ideas) esperando que la mayoría sean mediocres, y filtrar humanamente las de mayor potencial
+       4. Asignar un rol experto a la IA en el prompt (ej. 'Eres un experto en marketing') para mejorar la calidad de las ideas generadas
+       5. Repetir la solicitud con distintos contextos o audiencias objetivo si las primeras ideas no inspiran
+
+================================================================================================
+CASO 30 de 41
+  --- gestion_portafolio_foco (deprecado=None, dominio=core)
+      titulo: Gestión del Portafolio y Foco de Recursos
+       1. Auditar el número de proyectos activos versus la capacidad real de recursos
+       2. Aplicar criterios estrictos de Go/Kill para reducir el número de proyectos en pipeline
+       3. Priorizar proyectos de mayor potencial estratégico y financiero
+       4. Evitar el multitasking excesivo del personal entre proyectos simultáneos
+       5. Revisar periódicamente el balance del portafolio (riesgo, tipo de innovación, mercados)
+  --- sistema_gates_go_kill (deprecado=None, dominio=core)
+      titulo: Sistema de Gates (Puntos de Decisión Go/Kill)
+       1. Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+       2. Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+       3. Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+       4. Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+       5. Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+       6. Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+       7. En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+       8. No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+       9. Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+      10. Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+      11. Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+      12. Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+      13. Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+      14. Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+      15. Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+      16. Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+      17. Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+
+================================================================================================
+CASO 31 de 41
+  --- incoterms_reglas_comerciales_internacionales (deprecado=None, dominio=exportacion)
+      titulo: Incoterms: Términos Comerciales Internacionales (EXW, FCA, FAS, FOB)
+       1. Identificar el modo de transporte que se usará (marítimo, aéreo, terrestre o intermodal).
+       2. Seleccionar el Incoterm adecuado según el nivel de responsabilidad que quieres asumir, considerando CIF o CIP si buscas mostrar el costo total al comprador.
+       3. Negociar con el comprador el punto exacto de transferencia de riesgo y costo.
+       4. Especificar el Incoterm y el lugar o puerto nombrado en la cotización, pro forma invoice, factura comercial y contrato de venta.
+       5. Consultar con un freight forwarder o agente aduanal las obligaciones específicas del término elegido, incluyendo el cálculo de precios CIF o CIP si aplica.
+       6. Verificar que el Incoterm sea compatible con los requisitos de documentación del país importador.
+  --- seleccion_de_metodo_de_pago (deprecado=None, dominio=exportacion)
+      titulo: Selección del Método de Pago en Exportación
+       1. Evaluar la solvencia del comprador usando un perfil de crédito comercial u otras fuentes disponibles en tu mercado, con verificaciones de crédito exhaustivas antes de cada transacción, como el International Company Profile (ICP) del U.S. Commercial Service
+       2. Definir cuánto riesgo estás dispuesto a asumir según la relación con el comprador y el país al que exportas
+       3. Comparar los cinco métodos de pago según seguridad, costo y competitividad
+       4. Negociar con el comprador el método de pago y dejarlo claro por escrito en el contrato de venta
+       5. Consultar con la persona que te ayuda en el banco sobre las implicaciones y costos de cada método, tambien ante circunstancias inusuales
+       6. Monitorear continuamente los patrones de pago de clientes existentes
+
+================================================================================================
+CASO 32 de 41
+  --- investigacion_etnografica_ideacion (deprecado=None, dominio=core)
+      titulo: Investigación Etnográfica ('Camping Out') para Generación de Ideas
+       1. Seleccionar un contexto de uso real del producto (ej. campo, fábrica, hospital)
+       2. Observar directamente a los usuarios utilizando o mal utilizando el producto durante un período extendido, involucrando a líderes o clientes (deputizar) en la observación de campo para generar empatía directa
+       3. Documentar problemas, quejas y comportamientos no verbalizados
+       4. Capacitar al equipo observador en habilidades de escucha e inferencia
+       5. Reducir el tiempo por visita si es necesario (ej. 'día en la vida' de un día por sitio)
+       6. Traducir los hallazgos observacionales en conceptos de producto concretos
+       7. Formar equipos que combinen antropólogos/etnógrafos con diseñadores, arquitectos e ingenieros.
+       8. Buscar situaciones análogas (ej. un pit stop de carreras para entender una sala de emergencias)
+       9. Construir confianza genuina con los sujetos observados antes de extraer insights
+  --- reglas_brainstorming (deprecado=None, dominio=core)
+      titulo: Reglas de Brainstorming Efectivo
+       1. Reunir al equipo en un espacio dedicado sin distracciones, formando grupos donde los participantes se conozcan y tengan confianza mutua para evitar el escepticismo que reduce la generación de ideas.
+       2. Definir un enunciado claro del problema centrado en necesidad del cliente
+       3. Establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual, fomentar ideas locas o descabelladas, y construir sobre las ideas de otros por encima de generar ideas propias de forma aislada, en sesiones de construcción colectiva ('yes, and...')
+       4. Preparar al equipo con una experiencia de inmersión previa (visita de campo, entrevistas a clientes)
+       5. Usar Post-it notes o pizarra para capturar y mover las ideas visualmente
+       6. Opcional: realizar el ejercicio 'Silly Cow' como calentamiento creativo
+       7. Generar el mayor número de ideas posible sin filtrar prematuramente, en sesiones dedicadas solo a generar opciones (divergencia) y separadas de las sesiones de selección (convergencia).
+       8. Evitar atribuir ideas exclusivamente a una sola persona para promover su evolución.
+
+================================================================================================
+CASO 33 de 41
+  --- juran_rcca_metodo (deprecado=None, dominio=quality)
+      titulo: Método RCCA de Juran (Análisis de Causa Raíz)
+       1. Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema
+       2. Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+       3. Mejorar: diseñar e implementar el remedio
+       4. Controlar: ajustar los controles para mantener las ganancias
+  --- viaje_diagnostico_remedial (deprecado=None, dominio=quality)
+      titulo: Viaje Diagnóstico y Viaje Remedial
+       1. Analizar los síntomas del problema (evidencia observable), con un análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)
+       2. Formular teorías sobre las posibles causas, usando brainstorming y diagramas causa-efecto
+       3. Probar las teorías más plausibles con datos, con un mecanismo de recolección que permita correlacionar cada teoría con el defecto observado
+       4. Establecer la(s) causa(s) raíz confirmada(s), validando estadísticamente cuál teoría explica la mayoría de los casos
+       5. Diseñar remedios para eliminar las causas
+       6. Probar los remedios bajo condiciones operativas reales
+       7. Gestionar la resistencia predecible al cambio
+       8. Establecer nuevos controles para sostener las ganancias
+
+================================================================================================
+CASO 34 de 41
+  --- lienzo_modelo_negocio (deprecado=None, dominio=core)
+      titulo: El Lienzo de Modelo de Negocio (Business Model Canvas)
+       1. Imprimir el lienzo en tamaño grande para trabajo colaborativo y un Business Model Canvas para cada miembro del equipo
+       2. Reunirse con el equipo aceptando que habrá vacíos en la primera versión
+       3. Escribir cada bloque en notas post-it sobre el lienzo
+       4. Identificar los segmentos de clientes a los que se dirige la organización
+       5. Definir la propuesta de valor para cada segmento
+       6. Mapear canales, relaciones y fuentes de ingresos
+       7. Mapear recursos, actividades y asociaciones clave
+       8. Calcular la estructura de costos y el profit resultante
+       9. Pausar para investigar más información donde haya vacíos importantes
+      10. Iterar y discutir en grupo hasta lograr coherencia entre los bloques
+      11. Publicar el canvas en el espacio de trabajo y actualizarlo conforme avanza el proyecto
+      12. Usar el lienzo como base para pivotar o validar hipótesis del negocio, y también para llevar una solución ya diseñada a un modelo de negocio viable
+  --- proceso_ideacion_modelo_negocio (deprecado=None, dominio=core)
+      titulo: Proceso de Ideación de Modelos de Negocio
+       1. Ensamblar un equipo diverso en antigüedad, experiencia, área funcional y conocimiento del cliente
+       2. Realizar una fase de inmersión: investigar clientes, tecnologías y modelos de negocio existentes
+       3. Expandir generando la mayor cantidad de ideas posible por cada bloque del lienzo de modelo de negocio, sin criticar todavía y priorizando cantidad sobre calidad
+       4. Definir criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.)
+       5. Reducir a entre tres y cinco ideas y prototiparlas usando el lienzo de modelo de negocio
+
+================================================================================================
+CASO 35 de 41
+  --- mapeo_flujo_valor (deprecado=None, dominio=quality)
+      titulo: Mapeo de Flujo de Valor (De la Concepción a la Comercialización)
+       1. Repasa los conceptos clave de Lean y Value Stream Mapping antes de empezar
+       2. Mapea el estado actual documentando tiempos de ciclo, esperas, inventarios, downtime y capacidad, y el flujo actual de materiales e información en el proceso
+       3. Clasifica cada actividad en valor agregado, no valor agregado pero necesaria, o desperdicio puro
+       4. Diseña y documenta el mapa del estado futuro con las mejoras que quieres lograr
+       5. Implementa los cambios y define mecanismos de control para validar el avance contra el mapa futuro
+       6. Registrar métricas de tiempo de ciclo y costo en cada etapa
+       7. Priorizar los problemas detectados como proyectos de mejora
+  --- takt_time (deprecado=None, dominio=quality)
+      titulo: Takt Time y Producción en Flujo
+       1. Calcular la demanda del cliente en un periodo definido
+       2. Determinar el takt time dividiendo el tiempo disponible entre la demanda
+       3. Comparar el takt time con tu capacidad demostrada y teórica
+       4. Ajustar tu dotación de trabajo y balancear las estaciones según el takt
+       5. Reducir tiempos de cambio (setup) para permitir lotes más pequeños
+       6. Si la demanda varía significativamente, separa tus líneas de valor
+
+================================================================================================
+CASO 36 de 41
+  --- motor_crecimiento_viral (deprecado=None, dominio=core)
+      titulo: Motor de Crecimiento Viral
+       1. Calcular el coeficiente viral actual del producto (nuevos usuarios generados por cada usuario existente)
+       2. Identificar el mecanismo de transmisión persona a persona inherente al uso del producto (no opcional)
+       3. Eliminar fricción en el proceso de registro y recomendación
+       4. Enfocar todo el desarrollo de producto en aumentar el coeficiente viral, no en ventas/marketing tradicional
+       5. Evaluar si el modelo de negocio debe basarse en ingresos indirectos (publicidad) en vez de cobro directo
+  --- motor_de_crecimiento (deprecado=None, dominio=core)
+      titulo: Motor de Crecimiento (Engine of Growth)
+       1. Identificar cuál de las 4 fuentes de crecimiento sostenible aplica mejor al modelo de negocio
+       2. Descartar el uso de métricas de vanidad (número total de clientes) como indicador de crecimiento
+       3. Seleccionar el motor de crecimiento específico (pegajoso, viral o pagado) y sus métricas asociadas
+       4. Enfocar todos los experimentos de crecimiento en el motor elegido, evitando dispersión de esfuerzos
+
+================================================================================================
+CASO 37 de 41
+  --- plan_gestion_comunicaciones (deprecado=None, dominio=core)
+      titulo: Plan de comunicación con las personas que te importan en el proyecto
+       1. Haz una lista de las personas o grupos que necesitan recibir información de tu proyecto
+       2. Describe qué tipo de información vas a comunicar a cada uno (reportes de avance, actas, actualizaciones)
+       3. Decide el método de entrega (correo, reuniones, videollamadas)
+       4. Define cada cuánto o en qué momento vas a enviar cada comunicación
+       5. Decide quién es el responsable de mandar cada comunicación
+       6. Anota las restricciones o supuestos de comunicación y un glosario con los términos que uses
+  --- plan_gestion_interesados (deprecado=None, dominio=core)
+      titulo: Plan para relacionarte con las personas interesadas en tu proyecto
+       1. Anota el nivel de compromiso actual y el nivel que te gustaría lograr con cada persona interesada
+       2. Ubica a cada una según cómo se relaciona con tu proyecto: si no lo conoce, si se resiste, si es neutral, si lo apoya o si ya lo defiende
+       3. Define qué necesita saber cada persona y cómo se lo vas a comunicar
+       4. Identifica cómo se relacionan entre sí los distintos grupos de personas interesadas
+       5. Piensa cómo vas a acercar a cada una al nivel de compromiso que necesitas
+
+================================================================================================
+CASO 38 de 41
+  --- problem_solution_fit (deprecado=None, dominio=core)
+      titulo: Búsqueda del Problem/Solution Fit
+       1. Validar que el problema identificado sea doloroso para un segmento amplio de clientes
+       2. Probar si la solución propuesta resuelve el problema de forma convincente
+       3. Verificar alineación entre modelo de ingresos, precio y necesidades del cliente
+       4. Considerar mercados multi-sided donde puede haber múltiples propuestas de valor
+  --- producto_minimo_viable (deprecado=None, dominio=core)
+      titulo: Producto Mínimo Viable (MVP)
+       1. Identifica la hipótesis de negocio más crítica que necesitas validar, de valor o de crecimiento, y bájala al problema central más pequeño que un cliente pagaría por resolver.
+       2. Diseña la versión más simple del producto que te permita probar esa hipótesis, definiendo el conjunto mínimo de características a partir de tu propia visión y no de una lista larga de pedidos.
+       3. Evita agregar funciones extra que no sean estrictamente necesarias para aprender; agrega una solo por excepción, cuando sin ella no sea posible vender.
+       4. Lanza tu primera versión a tus primeros usuarios (early adopters o earlyvangelists), no al mercado masivo.
+       5. Mide la reacción real de los usuarios, no solo su opinión, para validar o descartar tu hipótesis, no para expandir funciones.
+       6. Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental.
+
+================================================================================================
+CASO 39 de 41
+  --- recomendaciones_smart (deprecado=None, dominio=health_safety)
+      titulo: Recomendaciones SMART para Investigaciones de Seguridad
+       1. Identificar el factor de cambio real, distinto de los factores explicativos superficiales
+       2. Redactar la recomendación especificando qué parte de la organización debe hacer qué y cuándo
+       3. Definir criterios medibles de éxito
+       4. Validar la recomendación con los responsables de implementación considerando restricciones de producción/eficiencia
+       5. Establecer una fecha límite realista para la implementación
+  --- revision_de_aprendizaje (deprecado=None, dominio=health_safety)
+      titulo: Revisión de Aprendizaje en Lugar de Investigación
+       1. Renombrar el equipo investigador como 'equipo de aprendizaje'
+       2. Formular la pregunta clave: '¿qué necesitan ustedes para mejorar esto?'
+       3. Fomentar un diálogo abierto y honesto sobre cómo las personas se adaptan a conflictos de metas y restricciones de recursos
+       4. Evitar connotaciones de interrogatorio o búsqueda de culpables en el proceso
+
+================================================================================================
+CASO 40 de 41
+  --- search_for_business_model (deprecado=None, dominio=core)
+      titulo: Búsqueda de un Modelo de Negocio (Search)
+       1. Determina si tu proyecto está en modo búsqueda (hipótesis no probadas) o en modo ejecución (modelo conocido)
+       2. Lista explícitamente las hipótesis de tu modelo de negocio: mercado, cliente, producto, canal y precio, marcadas como no probadas
+       3. Aplica el proceso de Customer Development para salir a probar cada hipótesis con clientes reales
+       4. Evita montar estructuras o roles de ejecución antes de validar el modelo
+       5. Itera y pivota según la evidencia recogida hasta encontrar un modelo repetible y escalable
+       6. Adopta una mentalidad de aprendizaje y experimentación en vez de miedo al fracaso
+       7. Abandonar la idea de escribir un plan de negocio detallado al inicio
+       8. Usar el Business Model Canvas y Value Proposition Canvas como herramientas de planificación flexible
+  --- vision_estrategia_producto_pivote (deprecado=None, dominio=core)
+      titulo: Vision, Estrategia y Producto: Conducir en lugar de Lanzar un Cohete
+       1. Define la visión de largo plazo del proyecto (el destino inalterable).
+       2. Formula una estrategia inicial: modelo de negocio, hoja de ruta de producto, cliente objetivo y postura frente a competidores.
+       3. Distingue explícitamente entre ajustes menores (tuning/optimización) y cambios de rumbo mayores (pivotes) en tu estrategia.
+       4. Establece el ciclo Construir-Medir-Aprender como mecanismo de dirección continua en vez de seguir un plan rígido.
+       5. Evalúa regularmente si mantener el rumbo actual (perseverar) o hacer un giro brusco (pivotar).
+
+================================================================================================
+CASO 41 de 41
+  --- venture_debt_introduccion (deprecado=None, dominio=core)
+      titulo: Deuda de Riesgo (Venture Debt) como Complemento al Equity
+       1. Evaluar el balance ideal entre equity y deuda dentro de la estrategia de capital.
+       2. Confirmar que la empresa ya cuenta con respaldo de capital de riesgo institucional antes de buscar venture debt.
+       3. Identificar bancos especializados (ej. SVB) o fondos de deuda de riesgo con track record en el sector.
+       4. Discutir con el board y los VCs la conveniencia y momento de levantar deuda.
+       5. Definir el propósito específico del préstamo (extensión de runway, capex, adquisición, puente a próxima ronda).
+  --- venture_debt_terminos_economicos (deprecado=None, dominio=core)
+      titulo: Las condiciones de precio en un préstamo de deuda de riesgo (venture debt)
+       1. Revisa la tasa de interés que te proponen y el índice de referencia (como la Prime Rate) más el margen que le suman.
+       2. Fíjate cómo y cuándo te cobran las comisiones del préstamo.
+       3. Negocia qué porcentaje de tu empresa entregas en certificados de compra de acciones (warrants) y si son sobre acciones comunes o preferentes.
+       4. Negocia el precio al que podrás ejercer esos warrants, buscando anclarlo a la valoración de tu próxima ronda si esperas crecer.
+       5. Compara ofertas entre bancos, que suelen pedir menos warrants pero imponen más restricciones (covenants), y fondos de deuda, que piden más warrants pero imponen menos restricciones.
+
+================================================================================================
+CIFRA lecturas dirigidas del universo: 122 pares
+CIFRA puestos de la muestra ciega: 41 pares
+EXITCODE: 0
