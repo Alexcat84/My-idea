@@ -74,6 +74,74 @@ USO:
               en silencio es peor que una que no corre.
   --apertura  HEAD de apertura de la vuelta, que define el rango prohibido para
               la guarda. Por defecto, el mismo valor de --corte.
+
+--- ADJUDICACION 6.1 DEL ACTA 153 (2 sep 2026): LA P3 DEJA DE CONTAR MENCIONES ---
+
+CORRECCION DECLARADA. NADA DE LO ESCRITO ARRIBA SE BORRA: este bloque se anade
+debajo y describe lo que cambia a partir de hoy.
+
+LA VARA YA EXISTIA Y NO ES DOCTRINA NUEVA. Es el CRITERIO DE HECHO de
+docs/plan/08_VERIFICACION.md: "UNA FASE ESTA HECHA CUANDO SU VERIFICACION SE
+CAERIA SI EL FALLO VOLVIERA. No cuando pasa verde: cuando se CAERIA." Un commit
+que NOMBRA una operacion no hace que ninguna verificacion se caiga.
+
+LO QUE CAMBIA: la P3 pasa a contar SOLO commits que tocan `dataset/`, `web/` o
+`engine/`. `scripts/` SALE de la lista de rutas. El ejemplar que lo obliga, y es
+el que el acta manda usar como caso de mutacion: `c9c6ea40` (el commit que
+publica que OP-V-01 y OP-L-01 NO tienen prueba) toca `docs/loop/` y
+`scripts/loop/`, y con la vara vieja contaba como PRUEBA DE EJECUCION de esas
+dos fichas por la sola ruta `scripts/`. Con la vara nueva deja de contar.
+
+Y LA SEGUNDA VIA, escrita porque la adjudicacion la nombra: tambien cuenta "el
+caso positivo de la ficha corriendo en rojo antes y en verde despues". Esa via
+se mide aqui como P3b y su alcance esta declarado junto a la funcion que la
+implementa: NO se re corre un caso positivo por ficha en cada corrida (serian 71
+mutaciones por vuelta), se exige que la ficha CITE una salida de caso positivo o
+de mutacion que EXISTA en el arbol del corte.
+
+LO QUE ESTA LECTURA SUPONE Y SE DECLARA EN VEZ DE CALLARSE: la adjudicacion dice
+"commits que tocan dataset/, web/ o engine/ EN LA NOMINA DE LA FICHA". Se lee
+"la nomina de la ficha" como "el mensaje del commit nombra el id_op de la
+ficha", que es la condicion que la P3 ya tenia y que la adjudicacion no toca.
+Queda marcado como discutible en el reporte de la vuelta 154.
+
+--- ADJUDICACION 6.2 DEL ACTA 153 (2 sep 2026): LA ASIMETRIA P2 CONTRA P3 SE
+QUEDA, Y SE ESCRIBE AQUI DENTRO PORQUE LA ADJUDICACION LO EXIGE ---
+
+CORRECCION DECLARADA POR ADICION. La condicion literal del acta es que la
+asimetria quede escrita DENTRO DEL INSTRUMENTO y no solo en el reporte, "para
+que la lea quien venga detras". Esta es esa escritura.
+
+LA ASIMETRIA: la P3 corre con el reloj de git CONGELADO en `--corte`, y la P2
+NO se congela: lee el ARBOL DE TRABAJO de hoy.
+
+POR QUE NO ES UNA INCOHERENCIA:
+  - La P2 mide EXISTENCIA de un control en el codigo vivo. Existencia es un
+    ESTADO, no una ejecucion, y el estado de hoy se mide en el arbol de hoy. Un
+    control instalado hoy esta instalado, lo instalara quien lo instalara y el
+    dia que fuera.
+  - La P3 mide EJECUCION, o sea un ACTO fechado. Un acto que la propia vuelta
+    acaba de cometer no puede ser la prueba de que la vuelta hizo el trabajo:
+    ahi es donde la vara se cuenta a si misma, y por eso solo esta va congelada.
+
+LO QUE LA ASIMETRIA CUESTA, DICHO EN VOZ ALTA: si la propia vuelta INSTALA el
+id_op en `scripts/`, `engine/` o `web/lib/`, la P2 lo vera en la misma corrida.
+Eso NO es la caida que el acta 151 hallo (aquella era la P3 comiendose su propio
+papeleo), pero es su vecina, y por eso se nombra aqui en vez de esconderse.
+
+--- ADJUDICACION 6.5 DEL ACTA 153 (2 sep 2026): EL CORTE ES EL HEAD DE APERTURA,
+EN ESTRICTO ---
+
+CORRECCION DECLARADA POR ADICION, y la caida es del auditor, no de este
+instrumento. El acta 151 congelo el reloj en `c9c6ea40~1` (`fb3c0c75`), que cae
+DENTRO de la vuelta 150; la regla escrita en el bloque de arriba pide EL HEAD DE
+APERTURA DE LA VUELTA, o sea el commit anterior al primero que la vuelta
+escribe, que para la 150 era `fe98cf97`. El acta 153, seccion 2, tercer parrafo,
+se lo concede entero al ejecutor y lo registra como caida de vara DEL AUDITOR.
+
+NO CAMBIO UN DIGITO en aquella medicion (los dos cortes dan 58/13/30/67), pero
+la vara laxa no se hereda: `--corte` es el HEAD DE APERTURA y no un ancestro
+cualquiera cercano.
 """
 import argparse
 import io

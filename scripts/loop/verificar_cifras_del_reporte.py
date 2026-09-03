@@ -332,6 +332,25 @@ cita, ROJO; (b) frase de cierre con cita a un fichero que dice `sin cumplir: 3`
 y SIN nombrarlas, ROJO nombrando las tres; (b bis) la misma frase NOMBRANDO las
 tres, VERDE (es el caso que la primera version tiraba); (c) sin la frase, VERDE;
 (c bis) frase con cita a un fichero que dice `sin cumplir: 0`, VERDE y cotejada.
+
+--- ADJUDICACION 6.8 DEL ACTA 153 (2 sep 2026): LA LINEA CIFRA NO ERA DOCTRINA
+PENDIENTE, ESTABA ESCRITA AQUI ---
+
+REGISTRO POR ADICION, sin corregir nada: el contrato de abajo no cambia ni una
+coma. Se escribe aqui porque la vuelta 152 lo trajo como PREGUNTA 3 ("cual es el
+formato exacto de la linea CIFRA y donde va") y la respuesta estaba en este
+mismo fichero, a una lectura de distancia.
+
+EL CONTRATO, RE LEIDO Y CITADO POR SU LINEA:
+  - FORMATO: `CIFRA <etiqueta>: <n> <unidad>`, con la unidad tomada del
+    vocabulario CERRADO de `UNIDADES` (fichero(s), par(es), grupo(s), grafia(s),
+    colapso(s), nodo(s), linea(s), arista(s), direccion(es), fila(s),
+    comprobacion(es), operacion(es)). Ver el bloque "LA LINEA `CIFRA` (2.c)" del
+    docstring y el patron `PATRON_CIFRA_ETIQUETA`.
+  - DONDE VA: EN EL FICHERO DE SALIDA QUE LA CIFRA CITA, nunca en el reporte. La
+    guarda la busca en el fichero citado y coteja contra ella.
+  - LA LINEA EMPIEZA EN COLUMNA CERO: el patron es MULTILINE y anclado en `^`.
+  - SE APLICA IGUAL A UN REPORTE DE FASE III: esta guarda no distingue fase.
 """
 import argparse
 import glob

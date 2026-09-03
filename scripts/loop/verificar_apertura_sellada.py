@@ -161,6 +161,27 @@ CASO POSITIVO OBLIGATORIO (vuelta 108): `--vuelta 107` da ROJO nombrando
 `SALIDA_V107_TSC_APERTURA.txt` con sus dos sha256 (docs/loop/
 SALIDA_V108_TAREA4_3_CASO_VUELTA107_ROJO.txt, el caso real que lo produjo);
 `--vuelta 108`, corrida al cierre de esta misma vuelta, da VERDE.
+
+--- ADJUDICACION 6.7 DEL ACTA 153 (2 sep 2026): EL CORREDOR ADMITE EL COMMIT DE
+LA DECISION DEL FUNDADOR, Y LO NOMBRA APARTE ---
+
+CORRECCION DECLARADA POR ADICION. NADA DEL TEXTO ANTERIOR SE BORRA.
+
+EL CASO REAL QUE LA OBLIGA (vuelta 152): el corredor traia DOS commits, el del
+ejecutor (`6f419952`) y `d9fa886b`, LA DECISION DEL FUNDADOR, que toca
+`docs/loop/AUDITOR.md` y `docs/plan/OPERACIONES.jsonl` porque el encargo manda
+aplicar las respuestas donde viven. La guarda fallaba por los dos por igual.
+
+LO QUE EL ACTA ADJUDICA: `AUDITOR.md` seccion 4 trata la decision del fundador
+como una CATEGORIA PROPIA, ajena al trabajo del bucle; un commit de decision NO
+es el ejecutor tocando nada. El corredor ADMITE el commit de la decision del
+fundador QUE `docs/loop/PROMPT_SIGUIENTE.md` CITA POR SU HASH, y la guarda lo
+NOMBRA APARTE en vez de fallar por el.
+
+Y LA MITAD QUE NO SE TOCA, dicha con todas sus letras: EL ROJO POR UN COMMIT DEL
+PROPIO EJECUTOR DENTRO DEL CORREDOR SE QUEDA INTACTO. Esa mitad del rojo de la
+vuelta 152 era legitima. La admision es por HASH CITADO EN EL ENCARGO, no por
+autor adivinado ni por ruta: un hash que el encargo no cite no entra.
 """
 import argparse
 import glob

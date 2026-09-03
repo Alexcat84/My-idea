@@ -39,6 +39,22 @@ y no con el Gate 0 de otra vuelta.
 
 USO:
   python scripts/loop/vuelta150_4_tabla_por_fase.py --corte <REF> [--apertura <REF>] [--gate0 <RUTA>]
+
+--- ADJUDICACION 6.6 DEL ACTA 153 (2 sep 2026): LA FILA 03 FUSIONES, Y LOS DOS
+DIVERGENTES DEJAN DE CONTAR COMO FALTA ---
+
+CORRECCION DECLARADA POR ADICION. NADA DE LO ESCRITO ARRIBA SE BORRA.
+
+LO QUE FALTABA NO ERA UNA MEDICION SINO UNA DECISION, y el acta 153 la toma:
+"los dos divergentes que la CORRECCION 16 ya clasifica NO son un pendiente de la
+fase 03. La celda pide un superviviente por acto con el resto deprecado y con
+alias, y eso esta medido en 0 incumplimientos sobre 14 fichas. La fila 03 pasa a
+VERDE en cuanto el arnes deje de contar los dos divergentes como falta, y eso es
+un cambio de la celda, NO DEL GRAFO."
+
+ES UN CAMBIO DE LA CELDA, NO DEL GRAFO, y esa frontera se vigila: si al correr
+el arnes con esta adjudicacion aplicada se mueve una sola cifra del grafo, se
+para. Ninguna linea de `dataset/` se toca por esto.
 """
 import argparse
 import io
