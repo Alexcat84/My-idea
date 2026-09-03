@@ -1,0 +1,33 @@
+==============================================================================
+VUELTA 157, TAREA 4.b: CASO POSITIVO POR MUTACION DEL LECTOR ENSANCHADO
+==============================================================================
+
+  lector importado de: scripts/loop/vuelta152_registro_de_citas_opc05.py
+  patron VIEJO: ]+)\s*\|\s*([A-Z]+)\s*\|\s*(LD-[A-Za-z0-9.\-]+)\s*\|\s*([^\n|]+)
+  patron NUEVO: A-Z]+~~\s*)*[A-Z]+)\s*\|\s*(LD-[A-Za-z0-9.\-]+)\s*\|\s*([^\n|]+)
+
+(C) EL CONTEO SOBRE EL FICHERO SIN TACHAR, QUE ES LO QUE NO SE PUEDE MOVER
+    CIFRA pares que recoge el lector VIEJO: 122
+    CIFRA pares que recoge el lector NUEVO: 122
+    mismas claves: True | mismas clases: True
+    VEREDICTO (C): IDENTICO
+
+(A) EL LECTOR VIEJO SOBRE LA FILA 97 TACHADA
+    CIFRA pares que recoge el lector VIEJO sobre el texto tachado: 121
+    la fila 97 esta en lo que recoge el VIEJO: False
+    coincidencias del patron VIEJO en la fila 97: 0
+    VEREDICTO (A): LA FILA DESAPARECE
+
+(B) EL LECTOR NUEVO SOBRE LA MISMA FILA 97 TACHADA
+    CIFRA pares que recoge el lector NUEVO sobre el texto tachado: 122
+    la fila 97 esta en lo que recoge el NUEVO: True
+    clase que le asigna (la ULTIMA escrita en la celda): 'D'
+    VEREDICTO (B): APARECE CON LA CLASE BUENA
+
+  (A) esperado True, medido True
+  (B) esperado True, medido True
+  (C) esperado True, medido True
+
+VERDE: el lector viejo pierde la fila tachada, el nuevo la recupera con la
+clase D, y el conteo sobre el fichero sin tachar no se mueve.
+FIN

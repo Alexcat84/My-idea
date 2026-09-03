@@ -295,24 +295,67 @@ def citas_del_cribado(N):
     return idx
 
 
-def citas_de_lectura_dirigida(N):
+# EL PATRON DE LA FILA DE LECTURA DIRIGIDA, EN DOS VERSIONES Y LAS DOS VIVAS
+# (vuelta 157, TAREA 4, adjudicacion 6.8 del acta 157).
+#
+# EL VIEJO NO SE BORRA Y NO ES DECORACION: es EL SUJETO del caso positivo por
+# mutacion `scripts/loop/vuelta157_tarea4b_mutacion_tachado.py`, que lo importa
+# de aqui y exige que SIGA PERDIENDO la fila tachada. Borrarlo dejaria la
+# correccion sin nada contra lo que probarse.
+PATRON_FILA_LD_VIEJO = re.compile(
+    r"REGISTRO DE CITAS `OP-C-05`\s*\|\s*([a-z0-9_]+)\s*<->\s*([a-z0-9_]+)\s*\|\s*"
+    r"([A-Z]+)\s*\|\s*(LD-[A-Za-z0-9.\-]+)\s*\|\s*([^\n|]+)")
+
+# EL NUEVO acepta la celda de clase con UNA O MAS CLASES TACHADAS delante de la
+# vigente (`~~C~~ D`, y tambien `~~B~~ ~~C~~ D` el dia que haga falta), y de esa
+# celda se toma LA ULTIMA CLASE ESCRITA. Lo demas del patron no se toca.
+PATRON_FILA_LD = re.compile(
+    r"REGISTRO DE CITAS `OP-C-05`\s*\|\s*([a-z0-9_]+)\s*<->\s*([a-z0-9_]+)\s*\|\s*"
+    r"((?:~~[A-Z]+~~\s*)*[A-Z]+)\s*\|\s*(LD-[A-Za-z0-9.\-]+)\s*\|\s*([^\n|]+)")
+
+
+def clase_de_celda(celda):
+    """LA ULTIMA CLASE ESCRITA EN LA CELDA, que es la vigente.
+
+    En `~~C~~ D` la clase es D y la C queda a la vista, que es exactamente lo
+    que la costumbre de la casa pide: no tapar lo que se corrige. En una celda
+    limpia (`D`) devuelve D, asi que el fichero SIN tachar se lee igual que
+    antes de esta correccion, y eso lo comprueba el conteo del caso positivo."""
+    return re.findall(r"[A-Z]+", celda)[-1]
+
+
+def citas_de_lectura_dirigida(N, patron=None):
     """Las lecturas de esta campana escritas en docs/plan/LECTURAS_DIRIGIDAS.md
     con la marca de registro de citas de OP-C-05. Se leen de su fichero: este
-    instrumento NO adjudica, solo recoge."""
+    instrumento NO adjudica, solo recoge.
+
+    CORRECCION DECLARADA (vuelta 157, TAREA 4, adjudicacion 6.8 del acta 157):
+    la celda de clase admite el TACHADO y se toma la ULTIMA clase escrita. El
+    patron viejo, que pedia `[A-Z]+` a secas y perdia la fila entera cuando la
+    celda venia tachada, sigue vivo arriba como `PATRON_FILA_LD_VIEJO` para que
+    su caso positivo por mutacion tenga contra que compararse.
+
+    `patron` existe SOLO para esa mutacion: en produccion nadie lo pasa y vale
+    el nuevo."""
     r = hacer_resolver(N)
     out = {}
     if not os.path.exists(LD):
         return out
     texto = io.open(LD, encoding="utf-8").read()
-    patron = re.compile(
-        r"REGISTRO DE CITAS `OP-C-05`\s*\|\s*([a-z0-9_]+)\s*<->\s*([a-z0-9_]+)\s*\|\s*"
-        r"([A-Z]+)\s*\|\s*(LD-[A-Za-z0-9.\-]+)\s*\|\s*([^\n|]+)")
-    for m in patron.finditer(texto):
+    return citas_de_lectura_dirigida_de_texto(texto, r, patron)
+
+
+def citas_de_lectura_dirigida_de_texto(texto, r, patron=None):
+    """El mismo recorrido pero sobre un TEXTO en memoria, para que la mutacion
+    pueda tachar una celda SIN TOCAR EL FICHERO DEL REPO."""
+    out = {}
+    for m in (patron or PATRON_FILA_LD).finditer(texto):
         a, b = r(m.group(1)), r(m.group(2))
         if not a or not b or a == b:
             continue
         out[tuple(sorted((a, b)))] = {
-            "clase": m.group(3), "ld": m.group(4), "motivo": m.group(5).strip()}
+            "clase": clase_de_celda(m.group(3)), "ld": m.group(4),
+            "motivo": m.group(5).strip()}
     return out
 
 
