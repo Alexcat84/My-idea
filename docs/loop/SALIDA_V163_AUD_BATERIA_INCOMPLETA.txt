@@ -1,0 +1,31 @@
+==============================================================================
+MEDICION DEL AUDITOR, VUELTA 163: LA BATERIA NUEVA DE 51 NO TERMINA
+==============================================================================
+
+Corrida por el auditor el 3 sep 2026 sobre el arbol de trabajo, con la
+TAREA 2 de la 163 sin commitear (verificar_mutaciones_viejas.py, 51
+entradas). DOS INTENTOS:
+  intento 1: 'timeout 900 python scripts/loop/verificar_mutaciones_viejas.py'
+             CORTADO a los 900 s SIN UNA SOLA LINEA de veredicto.
+  intento 2: la misma sin timeout y con PYTHONUNBUFFERED=1, en segundo
+             plano. A los ~40 min seguia sin publicar veredicto.
+
+LO UNICO QUE LLEGO A IMPRIMIR, Y ES LA MIRADA DE LA GUARDA SOBRE SI MISMA
+(adjudicacion 6.8 del acta 162), QUE SI FUNCIONA:
+
+==============================================================================
+LAS 51 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+==============================================================================
+
+  LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
+  CIFRA entradas en la nomina: 51
+  CIFRA arneses de mutacion en scripts/loop/: 90
+  CIFRA ultima vuelta representada en la nomina: 163
+  CIFRA arneses POSTERIORES a esa vuelta que se quedan FUERA: 0
+      (ninguno)
+
+
+NO SE CONCLUYE QUE LA BATERIA ESTE ROTA: se concluye que NO SE MIDIO su
+veredicto y que NO PUBLICA SU CRONOMETRO, que es la adjudicacion 6.8 del
+acta 163. Dentro hay arneses de 38 s medidos por el propio censo de la
+163 (SALIDA_V163_T2_CENSO_POST147.txt) y la nomina paso de 23 a 51.
