@@ -52455,3 +52455,435 @@ de las cuales 4 leidas y sostenidas y 53 sin leer, mas las 41 que la 6.5 manda
 releer.** Cuando eso se vacie no quedara trabajo que un bucle pueda hacer solo:
 ahi se escribe `PARA_ALEXIS.md`. **El merge no se pide ni se hace: es del
 fundador y solo suyo. La campana NO esta consumada.**
+
+# ACTA DEL AUDITOR, VUELTA 159 (3 sep 2026, auditor Opus 5)
+# =========================================================================
+
+**HUECO DE ACTA: NO HAY, Y LO COMPRUEBO CON GIT.** La ultima cabecera escrita es
+la **158** (`3ad70158`), que audito la vuelta que el ejecutor numero 157 y que la
+propia 6.1 de esa acta renumero **158**. El ejecutor numera la suya **159**, que
+es el invariante ACTA N VUELTA N MAS 1 cumplido. Audito esa y no hay vuelta sin
+acta detras. Corredor de `3ad70158` a `HEAD`: **once commits** contados con
+`git rev-list --count` (diez cuando el ejecutor midio, mas el del reporte),
+**todos suyos y cero intrusos**, y el padre del primer commit del corredor es
+exactamente `3ad70158`. Rama `pasada-unica`. **REGIMEN COMPLETO**: el austero
+sigue suspendido por su punto 5.
+
+**EL VEREDICTO DE UNA LINEA: LAS NUEVE TAREAS ENTREGADAS, TODO EL CIERRE
+REPRODUCE AL DIGITO CON MI PROPIA MANO, Y LA PARADA DE LA TAREA 5 ERA CORRECTA:
+EL ALCANCE DA DOCE Y NO ONCE, ASI QUE LA CIFRA MALA ERA LA MIA. PERO MI CIEGA
+TRAE UNA DISCREPANCIA FUERA DE LOS DOCE MARCADOS, `LD-OPC05-100`, Y POR ESO EL
+CREDITO DE LA TANDA BAJA OTRA VEZ Y EL LOTE 2 SE RELEE AL DOBLE.** Re medi todo
+con instrumento propio escrito hoy: censo **3.853 / 3.169 / 684**, aristas
+**8.780 / 8.740 / 17.520 / 9.914** con `solo_sig 1174` y `solo_prev 1134` y
+**cero auto enlaces**, archivo **3.388 con A 551, B 72, C 5, D 2.760**, **huecos
+0 y duplicados 0**, registro **154** con **LECTURA_DIRIGIDA C 18 y D 104** y
+**CRIBADO B 1 y D 31**, citas de lectura dirigida **122** con **rastro 106** y
+**cero en la forma vieja de la 156**, ciclo entero con `numstat` en **cero
+filas**, Gate 0 **26 en OK y 0 en fallo** y **IDENTICO al suyo linea por linea**,
+motor **25/25**, vitest **80 ficheros y 1.030 pasadas con 3 saltadas** desde
+`web/`, `tsc` **exit 0 y cero lineas**, expediente **71 / 36 / 24 / 12 / 0 / 7**,
+fase 03 **16/12/4** con sus cuatro nombradas, fase 06 **16/16/0**, fase 08
+**1/0/1 con OP-V-01**, fase 09 **3/0/3**, y la bateria de las 23 **VERDE en
+corrida sola por mi mano** con **RUIDO DE CONCURRENCIA 0**. **NO PARO.**
+
+## 1. VERIFICACION, CON MIS INSTRUMENTOS Y EN ESTA VUELTA
+
+**EL CICLO ENTERO Y EN SU ORDEN, CORRIDO POR MI**, nunca `run_phase1` suelto:
+`--reaplico-curaduria` (`GATE 0: OK`, `_auditor_v159_gate0.txt`),
+`etiquetas_de_cara --aplicar` (**71 etiquetas**, `_auditor_v159_etiq.txt`),
+`sync_assets_web` (**seis assets**, `_auditor_v159_sync.txt`) y despues
+`git diff HEAD --numstat -- dataset/ web/ engine/`: **cero filas**
+(`_auditor_v159_numstat.txt`). **Y NO SOLO CUENTO 26 EN OK Y 0 EN FALLO: DIFF MI
+SALIDA CONTRA LA SUYA** (`_auditor_v159_gate0_diff.txt`) **Y LA UNICA LINEA
+DISTINTA ES EL ROTULO DEL EXIT QUE YO MISMO ANADO.** Las 26 comprobaciones, con
+el mismo texto y el mismo valor.
+
+**LA FRONTERA, MEDIDA Y NO CREIDA.** `git diff --name-only 3ad70158..HEAD` da
+**108 ficheros**, y **fuera de `docs/loop/` y `scripts/loop/` solo hay dos**:
+`docs/plan/LECTURAS_DIRIGIDAS.md` y `docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl`.
+**`dataset/` no aparece.** El registro cambia y el grafo no, que es lo que la
+2.d exige.
+
+**LA ADITIVIDAD, MEDIDA CONTRA EL COMMIT DEL ACTA**
+(`_auditor_v159_aditividad.txt`): **154 lineas a 154**, **cero pares
+desaparecidos y cero nuevos**, **esquema identico de 7 claves**, **120 razones
+ampliadas con PREFIJO ROTO 0**, **43 clases movidas, 41 de C a D y 2 de D a C**
+(`005` y `052`), **106 citas cambiadas**, **cero que se muevan a A**, y **cero
+citas cuya clase escrita no sea la vigente**. Los `.py` de su TAREA 1, con
+`git diff --numstat a49315c9^ a49315c9`: **veintiun ficheros y CERO borrados en
+los veintiuno**. Su linea sellada dice la verdad, y su reparto de 3 mas 1 mas 39
+cuadra con mis 43.
+
+**LAS DOS NOMINAS, RECOMPUTADAS DESDE GIT SIN CREERLE NINGUNA**
+(`_auditor_v159_nomina41.txt`). Del lote 1: **62 cayeron a D**, **21 releidas por
+las dos ciegas** sin una sola solapada, **62 menos 21 da 41**, y mi lista de 41
+**sale identica a la suya, elemento a elemento**. Del lote 2: **53 recomputadas**
+por clase vigente al corte del acta y **identicas a las suyas**. Las dos nominas
+reproducen sin residuo.
+
+**LAS GUARDAS DEL CIERRE, CORRIDAS POR MI, CON SU ESTADO REAL.**
+
+  - `verificar_mutaciones_viejas.py`, **SOLA y sin nada al lado**: **VERDE exit
+    0**, 23 mutaciones, **0 ancla perdida, 0 no mordio, 0 no reproducible, 2
+    casos declarados, RUIDO DE CONCURRENCIA 0** (`_auditor_v159_bateria.txt`).
+  - `verificar_apertura_sellada.py --vuelta 159`: **VERDE exit 0**, y lo que
+    imprime es la 6.2 cumplida: los diez `SALIDA_V159_*_APERTURA.txt` **nacidos
+    todos en `9a0ae9d7`, cuyo padre es `3ad70158`**. La guarda desbloqueada
+    muerde y esta vez no tuvo a quien morder.
+  - `tallar_cabecera_reporte.py --vuelta 159 --fase04 --comparar`: **VERDE**,
+    **nueve filas cotejadas, cero distintas, cero ausentes, CABECERA IDENTICA AL
+    TALLADOR** (`_auditor_v159_cabecera_cmp.txt`). La 6.1 cumplida.
+  - `verificar_cifras_del_reporte.py`: **VERDE exit 0**, con **6 afirmaciones de
+    CIERRE cotejadas** contra el tallador de fases y **1 cifra** por etiqueta.
+    **Y el ejecutor publico su limite en vez de vender el verde**, cosa que
+    apunto a su favor.
+  - `verificar_re_sellado.py --reporte docs/loop/REPORTE.md`: **VERDE exit 0**,
+    con **re selladas SIN declarar 0** y la exencion impresa con sus dos nombres
+    (`_auditor_v159_re_sellado.txt`). **Corrida por mi sobre el reporte ya
+    commiteado, o sea en el mismo sitio donde antes salia rojo por
+    construccion.** La 6.8 esta cerrada de verdad.
+  - Las dos que no muerden, **corridas por mi**: `vuelta96_tarea3` **exit 1** y
+    `vuelta97_tarea2` **exit 1**, y los cuatro nodos que sus fallos nombran
+    (`get_out_of_the_building`, `customer_discovery_overview`,
+    `estrategia_de_innovacion_de_producto`, `requisitos_gates_con_dientes`)
+    **salen `deprecado=true` los cuatro, leidos del grafo por mi**. Su
+    diagnostico de EXPECTATIVA ENVEJECIDA SOBRE SUJETO CONGELADO **se sostiene
+    con mi medicion**, y las dos siguen en exit 1 como manda la 6.10.
+
+## 2. MIS PROPIAS CAIDAS, CON SU NOMBRE
+
+**CAIDA 1, DE INSTRUMENTO, CAZADA ANTES DE PUBLICAR.** Mi primer contador de
+aristas leyo la clave `id` de cada nodo, y el esquema de esta casa la llama
+`node_id`; ademas trato como lista lo que en el fichero es una lista en `repr`.
+Salieron **3.401 y 3.204** en vez de 8.780 y 8.740, y la union igual a la suma,
+que es imposible. **No publique ese numero:** la union identica a la suma me
+delato el fallo, lo arregle contra el esquema real y re corri
+(`_auditor_v159_aristas.txt`). Queda escrito de donde salio.
+
+**CAIDA 2, DE CIFRA, HEREDADA Y MIA: EL ALCANCE DE LA 6.7 NO ERAN ONCE.** El acta
+158 midio **once** ficheros con el patron literal de P.16 y el encargo mando
+parar si no daban once. **Son doce**, y lo recompute yo hoy con instrumento
+propio sobre el arbol del commit del acta y sobre HEAD por separado
+(`_auditor_v159_alcance.txt`): las tres lecturas dan **4 / 12 / 14** ficheros y
+**3 / 7 / 7** dentro de la bateria en LOS DOS arboles. La cifra del ejecutor
+reproduce al digito con la mia y **la equivocada era la del acta, o sea yo**. Se
+registra con mi nombre. **No acumula para la racha por su sede**, por el mismo
+motivo con que el acta 158 no acumulo la suya: vive en `ACTA_AUDITOR.md` y en
+`PROMPT_SIGUIENTE.md`, que no son tabla ni cabecera ni conclusion de reporte, ni
+`docs/plan/`, ni el banco, ni el comentario de una guarda. **Y verifique que no
+se colo a la cuarta sede:** el texto que la TAREA 1 escribio en los doce `.py`
+**declara la discrepancia en vez de copiar el once**, lo lei entero en
+`vuelta89_tarea4_guarda_op_c05.py`.
+
+## 3. LA RELECTURA CIEGA, POR LOS DISCUTIBLES MARCADOS PRIMERO
+
+**METODO:** `docs/loop/_auditor_v159_ciega.py`, escrito hoy, imprime **solo
+titulo, fuente, entregable y pasos accionables de los dos nodos**, sin clase, sin
+via, sin cita y sin razon. Selle mis veintinueve adjudicaciones en
+`_auditor_v159_mis_adjudicaciones.txt` (**sha1 `d7eefaca`**, calculado con
+`git hash-object` ANTES de destapar) y solo despues corri el destape
+(`_auditor_v159_ciega_destape.txt`). Muestra de fuera del marcado elegida **por
+computo y declarada en el propio sello**: del lote 2, los `LD` divisibles por
+cinco (once); del tramo de las 41, seis repartidos a lo largo de la nomina.
+
+| tramo | leidos | coinciden | discrepan |
+|---|---:|---:|---:|
+| **marcados** (052, 018, 042, 004, 039, 063, 066, 078, 103, 081, 084, 116) | 12 | **11** | **1** (004) |
+| **fuera del marcado** (070, 075, 080, 085, 090, 095, 100, 105, 110, 115, 120, 009, 016, 025, 037, 050, 061) | 17 | **16** | **1** (100) |
+| **total** | **29** | **27** | **2** |
+
+**LA VARA QUE APLIQUE, IDENTICA EN LAS 29 Y ESCRITA EN EL SELLO ANTES DE
+DESTAPAR:** C si se pueden nombrar DOS LINEAS DISTINTAS, una en cada nodo, cada
+una expandida por un PROCEDIMIENTO del otro; **nombrar no es procedimentar**, que
+es la letra de la 6.4 del acta 158 sobre la `122`. D en cualquier otro caso.
+
+**LAS ONCE DEL MARCADO EN LAS QUE COINCIDIMOS**, y en varias con el mismo motivo
+escrito antes de vernos: `052` **C** (el paso 3 de alineacion decide la postura y
+el paso 1 de trade_off mide el mercado, dos lineas, y el paso 8 de alineacion es
+un instrumento nombrado de seis dimensiones); `081` **C**, `084` **C** y `116`
+**C**; `018` **D** (el paso 4 de escenarios NOMBRA la formulacion de preguntas
+por bloque, no la procedimenta, y ademas lo hace sobre otro insumo); `042`,
+`039`, `063` y `066` **D**; `078` y `103` **D**, y en las dos por el mismo motivo
+que el ejecutor escribio.
+
+### 3.1 `LD-OPC05-004`, LA DISCREPANCIA DENTRO DEL MARCADO: LE DOY LA RAZON A EL
+
+**Mi lectura a ciegas dio C. Su clase es D. Destapado su caso, la suya es la
+buena y lo digo sin escudo.** Yo tome como segunda linea el paso 3 del tune-up
+(*ajusta tus hipotesis de ingresos segun los segmentos que mostraron
+entusiasmo*), expandido por los pasos 1 a 3 de reempaquetado. **Su razon ya
+nombraba ese par como EL PAR MAS FUERTE DESCARTADO y decia por que no vale:**
+reempaquetado es UN REMEDIO HERMANO, una de varias clases de pivote, y contesta
+QUE CAMBIAR, no COMO se ajustan las hipotesis de ingresos. **Eso es exactamente
+la 6.3 haciendo su trabajo:** el par que a mi me convencio ya estaba examinado y
+descartado por escrito antes de que yo lo mirara. **Adjudico D, que es su clase,
+y registro la discrepancia como caida de lectura MIA**, no suya.
+
+### 3.2 `LD-OPC05-100`, LA DISCREPANCIA FUERA DEL MARCADO, CON MI CASO ESCRITO
+
+**Mi lectura a ciegas dio D. Su clase es C.** Y aqui **sostengo la mia** y la
+mando a relectura conjunta, que es lo que la seccion 1.3 del AUDITOR.md manda.
+
+  - **SU LINEA 2 ME PARECE BUENA Y LA CONCEDO:** el paso 5 de
+    `proceso_ideacion_modelo_negocio` (*reducir a entre tres y cinco ideas y
+    prototiparlas usando el lienzo*) lo expanden los doce pasos de
+    `lienzo_modelo_negocio`, que son el procedimiento entero del instrumento que
+    esa linea nombra. **Una direccion limpia.**
+  - **SU LINEA 1 NO PASA LA VARA, Y ESE ES TODO EL DESACUERDO.** Dice que el paso
+    9 del lienzo (*pausar para investigar mas informacion donde haya vacios
+    importantes*) lo expande el paso 2 de ideacion (*realizar una fase de
+    inmersion: investigar clientes, tecnologias y modelos de negocio
+    existentes*). **Eso no es un procedimiento: es la misma orden con tres
+    complementos.** No trae metodo, ni instrumento, ni secuencia. Comparese con
+    lo que si acepte hoy: en la `095`, los cuatro pasos de process tracing son un
+    metodo completo; en la `052`, el paso 8 de alineacion es un instrumento
+    nombrado de seis dimensiones. **Aqui no hay ninguno de los dos.** Es
+    literalmente el caso que la 6.4 del acta 158 excluyo en la `122`: **nombrar
+    sin procedimentar; dos nombres no son dos expansiones.**
+  - **Y HAY UNA INCONSISTENCIA INTERNA QUE LO REFUERZA, EN SU PROPIA PLUMA Y EN
+    LA MISMA VUELTA:** en la `004` descarto la C escribiendo *"UNA SOLA DIRECCION
+    ES MADRE E HIJO Y EL PAR CONTINUA"*. **En la `100`, quitada la linea 1, queda
+    exactamente una sola direccion.** La misma vara aplicada a las dos da D en
+    las dos.
+  - **NO LA VUELCO YO.** Va a **relectura conjunta**: mi caso escrito con
+    evidencia, el ejecutor verifica contra los nodos y decide con la vara,
+    incluso contra mi. **Hoy no la cuento como caida, la cuento como
+    discrepancia**, igual que el acta 158 hizo con la `005`. **Si mi lectura se
+    confirma, la caida de CLASE se registra en el acta siguiente con su nombre y
+    entra en la racha.**
+
+## 4. LA PARADA DE LA TAREA 5 ERA CORRECTA, Y LA ADJUDICO MIDIENDO
+
+**QUE MEDI, Y LO MEDI DOS VECES A PROPOSITO.** Corri las tres lecturas del patron
+literal sobre **el arbol del commit del acta 158** (que es lo que el acta tenia
+delante cuando escribio once) y sobre **HEAD**, con los dos buscadores excluidos
+por nombre. **Las dos corridas dan lo mismo: 4 / 12 / 14 ficheros y 3 / 7 / 7
+dentro de la bateria.** O sea que la diferencia **no la introdujo esta vuelta**:
+el once nunca fue cierto.
+
+**Y EL DUODECIMO ESTA EN ALCANCE, LO COMPROBE LEYENDOLO.**
+`vuelta89_tarea4_guarda_op_c05.py` corre `git status --porcelain -- dataset/`
+antes y despues de su caso rojo y aborta si sale sucio: **tiene las dos anclas
+que la 6.7 describe, la del fin de linea y la de la suciedad anterior al
+arranque**. Es del mismo defecto, solo que mas viejo que la serie 142 a 147.
+**No hay motivo de vara para excluirlo, y lo incluyo.**
+
+**LO QUE EL EJECUTOR HIZO BIEN Y VA ANTES QUE LO OTRO:** paro por mandato
+literal, **no toco un solo check**, publico las tres lecturas medidas en vez de
+elegir la comoda, y **nombro el residuo con nombre y apellido** en vez de
+declarar una diferencia abstracta. Eso es lo que convierte una parada en cinco
+minutos de adjudicacion. **La 5.a y la 5.c van a la vuelta 160 con el alcance ya
+fijado en doce.**
+
+## 5. LOS HALLAZGOS FUERA DEL MARCADO
+
+**5.1 LAS FICHAS QUE CITAN LAS DOS SALIDAS YA NOMBRAN A SU PRODUCTOR, LAS
+CUATRO, Y ESO CONTESTA SU PREGUNTA 4 SIN REESCRIBIR NADA.** Computado por mi
+(`_auditor_v159_productores.txt`): las dos salidas se citan en **cuatro lugares**
+de `docs/plan/` y `docs/PENDIENTES.md`, y en **los cuatro** el nombre del
+productor esta en la misma cita o en su misma frase partida por el ancho de
+columna: `04_ENLACES.md:445` y `OPERACIONES.jsonl:45` nombran
+`verificar_cobertura_bolsa_tres_vias.py` junto a `SALIDA_V108_...`;
+`OPERACIONES.jsonl:36` nombra `verificar_fuente_canonico.py` junto a
+`SALIDA_V136_3D_MUTACION.txt`; y `PENDIENTES.md:6241` lo nombra dos lineas
+arriba, dentro del mismo parentesis. **CIFRA fichas que hay que reescribir: 0.**
+**Y esto le pone nombre a lo que fallo en la 157:** el angulo que nadie corrio no
+era la historia de git ni la cabecera literal, **era leer la ficha que cita la
+salida**, donde el productor llevaba meses escrito al lado.
+
+**5.2 EL INSTRUMENTO QUE NACE PARA MATAR LOS ARTEFACTOS DE UN SOLO USO TRAE EL
+NUMERO DE VUELTA CLAVADO.** Confirmo primero su hallazgo: `git log --all -S`
+sobre la cabecera de `SALIDA_V157_T9_MARCADOR_CIERRE.txt` no devuelve **nada** en
+`scripts/`, ni vivo ni muerto; **era de un solo uso y su reporte lo dice bien**.
+Pero el reemplazo, `vuelta159_tarea9_marcador_cierre.py`, imprime en su linea 52
+`"VUELTA 159, CIERRE: ..."` **literal, sin `--vuelta` y sin `argparse`**. En la
+vuelta 160 o miente en su propia cabecera o nace otro instrumento de un solo uso,
+**que es el defecto que este vino a cerrar**. No es caida de reporte: el reporte
+no afirma que este parametrizado. **Es un agujero de construccion y va
+encargado.**
+
+## 6. ADJUDICACIONES
+
+**6.1 EL ALCANCE DEL CHECK DE P.16 SON DOCE, NO ONCE, Y EL DUODECIMO ENTRA.**
+Adjudicado por la seccion 4, con la medicion hecha en los dos arboles.
+`vuelta89_tarea4_guarda_op_c05.py` **queda dentro del alcance** porque lleva las
+dos anclas que la 6.7 describe, leidas por mi en su fuente. **La 5.a y la 5.c del
+encargo anterior se ejecutan sobre los DOCE**, y la vara de la lectura es la
+**B (pathspec que empieza por `dataset/`)**, que es la que el ejecutor publico
+como principal y la que la 6.7 sostiene al describir el defecto por su
+instrumento. **La lectura estrecha de cuatro no vale**, porque el defecto no
+depende de que el pathspec traiga tambien `docs/plan/`.
+
+**6.2 `LD-OPC05-004` SE QUEDA EN D, Y LA DISCREPANCIA ES MIA.** Adjudicado por la
+seccion 3.1. Su razon nombraba el par que a mi me convencio y lo descartaba por
+escrito con motivo. **Ninguna clase se mueve.**
+
+**6.3 `LD-OPC05-100` VA A RELECTURA CONJUNTA, NO A MI PLUMA.** Mi caso esta en la
+seccion 3.2. **El ejecutor verifica contra los nodos y decide con la vara,
+incluso contra mi**, y publica lo que mida. Si sostiene la C, tiene que decir
+**que procedimiento del otro nodo expande el paso 9 del lienzo**, no que linea lo
+repite.
+
+**6.4 EL CREDITO DE LA TANDA BAJA Y EL LOTE 2 SE RELEE AL DOBLE. NO LO DECLARO,
+LO ENCARGO.** La regla es literal y no tiene excepcion: una discrepancia FUERA de
+los discutibles marcados baja el credito de toda la tanda y el tramo se relee al
+doble. **`100` esta fuera de los doce marcados.** El tramo es el **lote 2**, y
+releerlo al doble significa: **las que nadie ha vuelto a mirar reciben una
+segunda pasada independiente bajo la 6.3**. La cifra la computo, no la teclee
+(`_auditor_v159_tramo_al_doble.txt`): del lote de **53**, **16 las relei yo hoy**
+(los cinco marcados que caen dentro mas los once de mi muestra por computo),
+**53 menos 16 da 37**, de las cuales **8 estan hoy en C y 29 en D**. **Y VAN LAS
+37 ENTERAS, NO SOLO LAS QUE CAYERON A D**, y el motivo es que la discrepancia que
+disparo la bajada, la `100`, es una que **SOSTUVO C**: restringir el tramo a las
+caidas dejaria fuera justo la especie que lo abrio. Va como tarea **bloqueante**
+de la vuelta 160.
+
+**6.5 UNA INSTANCIA NO ES EL PROCEDIMIENTO DE SU CATEGORIA: ADJUDICADA, Y NO ES
+DOCTRINA NUEVA.** Es su pendiente de doctrina de la seccion 12, y **no paro**,
+porque una regla escrita la cubre por extension citable. La 6.4 pregunta si el
+otro nodo es **el COMO SE HACE** de una linea; un ejemplar de una categoria es el
+**QUE**, no el **COMO**, y por eso no la expande. Y la 6.4 del acta 158, en la
+`122`, ya escribio la forma general de esto: **nombrar sin procedimentar es
+exactamente lo que la 6.4 excluye**. Adjudico la regla **tal como el ejecutor la
+formulo**, con dos condiciones: **(a)** cuando sea el unico motivo del descarte,
+la razon lo dice con esa letra y marca la fila como discutible, **como ya hizo en
+la `078` y la `103`**; **(b)** su consistencia se audita en la segunda pasada de
+la 6.4, sobre las 37, porque el riesgo de una regla nueva no es aplicarla mal una
+vez sino aplicarla solo cuando conviene.
+
+**6.6 LAS FICHAS DE LAS DOS SALIDAS NO SE REESCRIBEN (su pregunta 4).**
+Adjudicado por la medicion de la 5.1: **las cuatro citas ya nombran a su
+productor**. La 6.9 pedia que la ficha lo citara y **ya lo cita**. Lo que si va
+es dejar escrito junto a la funcion de la P3b **que el angulo barato era leer la
+ficha**, porque esa leccion no esta en ningun sitio y es la que habria ahorrado
+dos vueltas.
+
+**6.7 LAS 18 EN C NO SE DAN POR CERRADAS (su pregunta 2), Y LA 6.4 YA CONTESTA
+CUALES.** De las 18, **cuatro** (`005`, `038`, `049`, `052`) tienen dos lecturas
+independientes cada una y **quedan cerradas**; **ocho** caen dentro de las 37 del
+tramo al doble y **se releen ahi**; y las **seis restantes** (`095`, `100`,
+`110`, `081`, `084`, `116`) **las relei yo hoy a ciegas**, con la `100` en
+disputa. **No hace falta una pasada aparte para el saco: la 6.4 lo cubre.**
+
+**6.8 EL INSTRUMENTO DEL MARCADOR DE CIERRE SE PARAMETRIZA (seccion 5.2).**
+Adjudico por extension de la 6.9 del acta 158 (*la cita no se borra: se marca*) y
+de su propio motivo escrito: **un instrumento que nace para que la cifra tenga
+productor vivo no puede obligar a escribir otro el mes que viene**. Toma
+`--vuelta` y el rotulo se interpola. **Por adicion y con correccion declarada.**
+
+## 7. LA METRICA DE CREDITO
+
+Cuento como las actas 153, 155, 157 y 158: `relecturas` y `puestos` son los casos
+leidos por mi.
+
+| | esta vuelta | acumulado |
+|---|---:|---:|
+| relecturas | 29 | 241 |
+| puestos | 29 | 434 |
+| discrepancias DENTRO del marcado | 1 | 19 |
+| discrepancias y hallazgos FUERA del marcado | 3 | 18 |
+| caidas propias del auditor | 2 | (se declaran, no se acumulan aqui) |
+
+**EL CREDITO DE LA TANDA BAJA, Y ES LA SEGUNDA VUELTA SEGUIDA QUE BAJA.** En la
+158 bajo por la `005` y el tramo fue el lote 1; hoy baja por la `100` y el tramo
+es el lote 2. **Lo digo con todas sus letras porque importa:** el ejecutor esta
+leyendo bien (27 de 29 hoy, y en la unica del marcado que discrepamos tenia el
+razonamiento ya escrito y ganado), **pero las dos bajadas seguidas caen en el
+mismo sitio, la segunda linea de una C**, y esa es la costura que hay que
+vigilar. La 6.4 encarga la pasada.
+
+**LAS DOS RACHAS, CON SU NOMBRE:**
+
+  - **RACHA DE CIFRA PUBLICADA: UNO, Y LO REGISTRO PORQUE EL ACTA 158 SE
+    COMPROMETIO A HACERLO.** La `LD-OPC05-005` fue a relectura conjunta y **la
+    conjunta la confirmo: vuelve a C**, o sea que la D publicada en la tanda de
+    la vuelta 157 era una **caida de CLASE** y entra en la racha con su nombre.
+    La `052`, que el ejecutor cazo solo en su propia segunda pasada, es de **la
+    misma especie y de la misma tanda**, asi que **no anade una segunda**. La
+    tanda de HOY no trae caida de clase confirmada: la `100` esta en disputa y no
+    la cuento. **ESTAMOS A UNA DE LA PARADA:** si la conjunta confirma mi lectura
+    de la `100`, seran **dos tandas seguidas** y el bucle se para por la regla
+    del credito. Lo digo ahora para que nadie lo descubra despues.
+  - **RACHA DE REPORTE: CERO.** Busque caidas de dictado y no encontre ninguna:
+    la cabecera sale identica al tallador en las nueve filas, las nominas de 41 y
+    53 reproducen elemento a elemento, el reparto de 43 clases cuadra con el mio,
+    la aritmetica de 3 mas 62 mas 43 sobre 106 citas cuadra con las dos que
+    cambiaron dos veces, los bloques de salida que el reporte pega estan pegados
+    literales (los coteje en el de la 6.8 y en el del alcance), y sus **cuatro
+    caidas propias estaban todas declaradas antes de que yo mirara**.
+  - **LA ESCALADA NO SE DISPARA, Y LO DIGO CON SU NOMBRE PARA NO CONFUNDIR
+    DECLARARLA CON ENCARGARLA:** pide racha de reporte en **DOS** y esta en
+    **CERO**. **No hay operacion de escalada que encargar por esa via.** Lo que
+    encargo, y por la otra via, es la 6.4.
+
+## 8. LO QUE NO CONSULTE Y QUEDA A VERIFICAR
+
+  - **Las 37 del lote 2 que no relei**: lei 16 de 53. Por eso la 6.4 las encarga
+    enteras y no me conformo con mi muestra.
+  - **El acumulado de segundas lecturas independientes sobre las 122**: el acta
+    158 publico 84; **no lo recompute hoy** y por eso no lo repito como cifra. Se
+    mide cuando el tramo de la 6.4 cierre.
+  - **El contenido de los seis assets de `sync_assets_web`**: comprobe que corre y
+    que el `numstat` queda en cero filas; **no audite lo que escribe.** Sigue
+    pendiente desde el acta 157.
+  - **Las 12 congeladas en silencio, nombradas una a una**: la cifra cuadra con mi
+    corrida propia del expediente al corte `3ad70158`; **la nomina ficha a ficha
+    sigue sin cotejar**, igual que en las actas 155, 157 y 158.
+  - **Los doce ficheros del alcance, leidos uno a uno**: lei entero el duodecimo
+    (`vuelta89_tarea4_guarda_op_c05.py`) y confirme sus dos anclas; **de los otros
+    once verifique el patron, no el check completo.**
+
+## 9. EL MURO SIGUE DONDE ESTABA, Y EL SACO NO DEJABA AL BUCLE SIN TRABAJO
+
+La fase 08 no cierra sin una sesion con credencial y con el fundador delante
+(acta 149, 3.10). Medido hoy por mi con el tallador: **fase 08 con una operacion,
+una sin cumplir, `OP-V-01`, sin vara escrita**; **fase 03 en 16/12/4** con
+`OP-M-02-ADMIT`, `OP-M-02-MEDIOS`, `OP-U-01` y `OP-U-02`; **fase 06 en 16/16/0**;
+**fase 09 con tres sin cumplir**. **Y CORRIJO LA CONCLUSION DEL REPORTE, QUE ES
+LO UNICO QUE LE DISCUTO DE FONDO: el saco de lectura NO deja al bucle sin
+trabajo.** La regla del credito acaba de abrir **37 segundas lecturas** y una
+relectura conjunta, y la 6.1 devuelve la TAREA 5 entera. **No se escribe
+`PARA_ALEXIS.md` y no se pide el merge.** El merge es del fundador y solo suyo.
+**La campana NO esta consumada.**
+
+## 10. ADDENDUM DE LA MISMA VUELTA, HALLADO AL PROBAR MI PROPIO COMMIT
+
+**LO ENCONTRE DESPUES DE ESCRIBIR LO DE ARRIBA Y VA AQUI EN VEZ DE CALLARSE.**
+Antes de pushear corri `verificar_apertura_sellada.py --vuelta 160` sobre mi
+propio commit del acta, para probar que las dos guardas de la vuelta 160 lo van a
+encontrar. Encuentra bien el commit (lo comprobe llamando a `commit_acta(160)`
+directamente: devuelve el hash del acta y **cero fallos**), **pero su primera
+linea impresa dice `COMMIT DEL ACTA (no hallado)`, que es falso.**
+
+**EL MOTIVO ESTA EN EL CODIGO Y ES DE CONSTRUCCION:** `verificar()` halla el acta
+en su linea 637 y la guarda en la variable `acta`; cuando despues no hay ningun
+`SALIDA_V160_*_APERTURA.txt` (que es lo correcto, porque la vuelta 160 no ha
+corrido), sale por la salida temprana con `return (fallos,) + vacio`, y el ultimo
+hueco de `vacio` es `None`. **El `main` imprime ese `None` como `(no hallado)`.**
+La correccion declarada de la vuelta 156 que creo esas tuplas completas arreglo el
+ValueError y **dejo pasar esta**: la tupla ya no revienta, pero miente sobre lo
+que la funcion si averiguo.
+
+**NO CAMBIA NINGUN VEREDICTO** (el unico fallo que la guarda reporta es el
+correcto y el rojo es legitimo), pero **es exactamente la especie que esta campana
+persigue: un rojo que nombra al culpable equivocado es media guarda**, la 6.9 del
+acta 157. Va encargado.
+
+**Y UNA CAIDA MIA MAS, LA TERCERA, CAZADA POR ESTA MISMA PRUEBA.** Mi primer
+intento de commit del acta salio con el asunto empezando por `@`, porque escribi
+el mensaje con la sintaxis de here-string de PowerShell en un shell POSIX. Las dos
+guardas de apertura buscan `^ACTA DE LA VUELTA N DEL AUDITOR` **anclado al
+principio**, asi que ese `@` habria dejado ciegas a las dos en la vuelta 160, que
+es el mismo fallo que costo la parada de la vuelta 158. **Lo cace leyendo el
+patron en la fuente de la guarda antes de pushear**, rehice el mensaje y verifique
+con la propia guarda que ahora lo encuentra. Queda escrito de donde salio.
+
+**6.9 LA PUERTA DEL CORREDOR NO PUEDE DECIR `(no hallado)` DE UN COMMIT QUE
+HALLO.** Adjudico por extension de la 6.9 del acta 157 (*un rojo que nombra al
+culpable equivocado es media guarda*) y del banco 9 (*fallar ruidoso, no mentir
+calladito*): las salidas tempranas de `verificar()` **llevan el `acta` que ya
+tienen** en vez de un hueco, y si de verdad no se hallo, se dice. **Por adicion y
+con correccion declarada, y sin tocar ningun veredicto**, con su caso positivo:
+una corrida sin ficheros de apertura tiene que seguir saliendo ROJO y ahora ademas
+**nombrar el commit del acta**.

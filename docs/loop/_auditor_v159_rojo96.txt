@@ -1,0 +1,31 @@
+====================================================================================================
+PRUEBA DE MUTACION DE LAS GUARDAS DE OP-E-03, TRAMO 1 (vuelta 96, TAREA 3)
+====================================================================================================
+
+CONTROL (dato real): material 40 filas / 2 fallos, veredictos 40 filas / 6 fallos -> ROJO
+MUTACION A (bolsa en memoria con un par que SI esta en la cola, calcula_costo_de_mantener_contra_costo_de_reponer / define_punto_maximo_de_stock): fallos 3 -> CAE (correcto)
+    fila 1: el par calcula_costo_de_mantener_contra_costo_de_reponer / define_punto_maximo_de_stock YA ESTA EN LA COLA tras resolver (lectura por dos puertas)
+    fila 27: el par rol_gates_agile / sistema_gates_go_kill YA ESTA EN LA COLA tras resolver (lectura por dos puertas)
+    fila 34: el par diamante_de_innovacion / estrategia_innovacion_producto YA ESTA EN LA COLA tras resolver (lectura por dos puertas)
+MUTACION B (corte esperado 3389 sobre el dato real): fallos 3 -> CAE (correcto)
+    el cribado no esta cerrado en 3389: PARES 3388, VEREDICTOS 3388
+    fila 26: el par rol_gates_agile / sistema_gates_go_kill YA ESTA EN LA COLA tras resolver (lectura por dos puertas)
+    fila 33: el par diamante_de_innovacion / estrategia_innovacion_producto YA ESTA EN LA COLA tras resolver (lectura por dos puertas)
+MUTACION C (clase 'Z' en el par 1): fallos 7 -> CAE (correcto)
+MUTACION D (el par 1 renumerado a 999): fallos 7 -> CAE (correcto)
+MUTACION E (direccion del par 1 con un nodo ajeno): fallos 6 -> CAE (correcto)
+MUTACION F (sin el veredicto del par 40): fallos 8 -> CAE (correcto)
+    fila 26: el par rol_gates_agile / sistema_gates_go_kill YA ESTA EN LA COLA tras resolver (lectura por dos puertas)
+    fila 33: el par diamante_de_innovacion / estrategia_innovacion_producto YA ESTA EN LA COLA tras resolver (lectura por dos puertas)
+    hay 39 veredictos y 40 filas de material: no es uno a uno
+    la direccion del par 1 nombra ['segmentos_de_clientes_problema_necesidad', 'get_out_of_the_building'], que no son los dos nodos resueltos de esa fila (segmentos_de_clientes_problema_necesidad, customer_discovery_get_out_of_building)
+    la direccion del par 7 nombra ['customer_development_team', 'get_out_of_the_building'], que no son los dos nodos resueltos de esa fila (customer_development_team, customer_discovery_get_out_of_building)
+    la direccion del par 17 nombra ['customer_discovery_overview', 'mvp_catalogo_tecnicas'], que no son los dos nodos resueltos de esa fila (customer_discovery, mvp_catalogo_tecnicas)
+    la direccion del par 33 nombra ['diamante_de_innovacion', 'estrategia_de_innovacion_de_producto'], que no son los dos nodos resueltos de esa fila (diamante_de_innovacion, estrategia_innovacion_producto)
+    faltan veredictos para las filas [40] del tramo
+CONTROL DE VUELTA (mutaciones deshechas): material 40/2, veredictos 40/6 -> ROJO
+
+LO QUE NO SE PRUEBA, Y SE DICE: la CLASE A/B/C/D de cada par es tabla a mano.
+NO HAY CASO ROJO AUTOMATICO PARA ELLA. No se le fabrica uno que se apruebe solo.
+
+VEREDICTO: ROJO, alguna guarda no se comporta

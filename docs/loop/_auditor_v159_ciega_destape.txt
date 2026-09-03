@@ -1,0 +1,44 @@
+LD-OPC05-004     MARCADO  mia=C  suya=D  DISCREPA
+LD-OPC05-009     fuera    mia=D  suya=D  COINCIDE
+LD-OPC05-016     fuera    mia=D  suya=D  COINCIDE
+LD-OPC05-018     MARCADO  mia=D  suya=D  COINCIDE
+LD-OPC05-025     fuera    mia=D  suya=D  COINCIDE
+LD-OPC05-037     fuera    mia=D  suya=D  COINCIDE
+LD-OPC05-039     MARCADO  mia=D  suya=D  COINCIDE
+LD-OPC05-042     MARCADO  mia=D  suya=D  COINCIDE
+LD-OPC05-050     fuera    mia=D  suya=D  COINCIDE
+LD-OPC05-052     MARCADO  mia=C  suya=C  COINCIDE
+LD-OPC05-061     fuera    mia=D  suya=D  COINCIDE
+LD-OPC05-063     MARCADO  mia=D  suya=D  COINCIDE
+LD-OPC05-066     MARCADO  mia=D  suya=D  COINCIDE
+LD-OPC05-070     fuera    mia=D  suya=D  COINCIDE
+LD-OPC05-075     fuera    mia=D  suya=D  COINCIDE
+LD-OPC05-078     MARCADO  mia=D  suya=D  COINCIDE
+LD-OPC05-080     fuera    mia=D  suya=D  COINCIDE
+LD-OPC05-081     MARCADO  mia=C  suya=C  COINCIDE
+LD-OPC05-084     MARCADO  mia=C  suya=C  COINCIDE
+LD-OPC05-085     fuera    mia=D  suya=D  COINCIDE
+LD-OPC05-090     fuera    mia=D  suya=D  COINCIDE
+LD-OPC05-095     fuera    mia=C  suya=C  COINCIDE
+LD-OPC05-100     fuera    mia=D  suya=C  DISCREPA
+LD-OPC05-103     MARCADO  mia=D  suya=D  COINCIDE
+LD-OPC05-105     fuera    mia=D  suya=D  COINCIDE
+LD-OPC05-110     fuera    mia=C  suya=C  COINCIDE
+LD-OPC05-115     fuera    mia=D  suya=D  COINCIDE
+LD-OPC05-116     MARCADO  mia=C  suya=C  COINCIDE
+LD-OPC05-120     fuera    mia=D  suya=D  COINCIDE
+
+CIFRA leidos: 29 | CIFRA coinciden: 27 | CIFRA discrepan: 2
+
+======================================================================
+DISCREPANCIA LD-OPC05-004 ( MARCADO ) mia=C suya=D
+RAZON ESCRITA:
+el tune-up semanal del Canvas con el feedback recibido contra la estrategia de pivote por reempaquetado (modulos, suscripcion, versiones): uno actualiza el lienzo, el otro decide que cambiar  [CORRECCION DECLARADA, LOTE 1 DE LA VUELTA 157 (2026-09-03), ANADIDA SIN BORRAR NADA DE LO ANTERIOR: LA CLASE PASA DE C A D. Leido contra los dos nodos bajo la pregunta binaria de la adjudicacion 6.4 del acta 157 (se pueden nombrar DOS LINEAS DISTINTAS, una en cada nodo, y decir que procedimiento del otro nodo expande cada una). NO SE PUEDE, y el motivo es este: UNA SOLA DIRECCION. El paso 4 de reempaquetado_producto (actualizar el lienzo) si lo expande el tune-up; el tune-up no trae linea que reempaquetado ejecute. Sin segunda linea no hay figura. Dossier de la lectura en docs/loop/SALIDA_V157_T2A_DOSSIER.txt y veredicto en docs/loop/SALIDA_V157_T2_LOTE1.txt.]  [SEGUNDA PASADA DE LA VUELTA 159 (2026-09-03), ANADIDA SIN BORRAR NADA DE LO ANTERIOR: LA CLASE SE SOSTIENE EN D, LEIDA DE NUEVO CONTRA LOS NODOS Y CON LA COMPROBACION DE LA 6.3 HECHA. DISCUTIBLE, Y LO MARCO YO. UNA DIRECCION LIMPIA Y LA OTRA NO. El paso 4 de reempaquetado (actualizar el lienzo de modelo de negocio con el nuevo modelo de entrega o precio) SI lo expanden los cuatro pasos del tune-up (revisa la propuesta de valor con el feedback, reevalua segmentos, ajusta hipotesis de ingresos, documenta cambios y sorpresas). PAR MAS FUERTE DESCARTADO EN LA OTRA DIRECCION: el paso 3 del tune-up (ajusta tus hipotesis de ingresos segun los segmentos que mostraron entusiasmo) contra los pasos 1 a 3 de reempaquetado (identificar si el problema es de tecnologia o de empaquetado, explorar modulos, suscripcion y versiones escalonadas, validar con clientes). SE DESCARTA porque reempaquetado es UN REMEDIO HERMANO, una de varias clases de pivote, y contesta QUE CAMBIAR, no COMO SE AJUSTAN las hipotesis de ingresos. UNA SOLA DIRECCION ES MADRE E HIJO Y EL PAR CONTINUA]  [UNIFICACION DEL CAMPO cita (VUELTA 159, ADJUDICACION 6.6 DEL ACTA 158), ANADIDA SIN BORRAR NADA DE LO ANTERIOR: el campo `cita` de esta fila decia 'LD-OPC05-004, clase D' y desde hoy dice 'LD-OPC05-004, clase D [ANTES C, RECLASIFICADA EN LA VUELTA 157: ver la razon]'. La clase NO se mueve: lo que cambia es que la cita deja de tapar su propia correccion. La historia de clases de la que sale este texto se reconstruyo de los commits del registro, no de esta prosa, y esta pegada en docs/loop/SALIDA_V159_T4_CITAS.txt.]
+
+======================================================================
+DISCREPANCIA LD-OPC05-100 ( fuera ) mia=D suya=C
+RAZON ESCRITA:
+el lienzo contra el proceso de ideacion de modelos con su equipo diverso y su fase de inmersion  [LOTE 2 DE LA VUELTA 159 (2026-09-03), ANADIDA SIN BORRAR NADA DE LO ANTERIOR: LA CLASE SE QUEDA EN C. LA C SE SOSTIENE Y AQUI VAN SUS DOS LINEAS. LINEA 1, en lienzo_modelo_negocio, paso 9: PAUSAR PARA INVESTIGAR MAS INFORMACION DONDE HAYA VACIOS IMPORTANTES; la expande el paso 2 de proceso_ideacion (realizar una fase de inmersion investigando clientes, tecnologias y modelos de negocio existentes), que es exactamente el como se llena ese vacio, junto con el paso 1 (ensamblar un equipo diverso en antiguedad, experiencia, area funcional y conocimiento del cliente). LINEA 2, en proceso_ideacion, paso 5: REDUCIR A ENTRE TRES Y CINCO IDEAS Y PROTOTIPARLAS USANDO EL LIENZO; la expanden los doce pasos del lienzo, que son el procedimiento entero de construir cada prototipo. DOS LINEAS DISTINTAS, UNA MANDA A INVESTIGAR Y LA OTRA MANDA A PROTOTIPAR, Y NINGUNO ES LA MADRE]
+
+CIFRA marcados leidos: 12 | discrepan: 1
+CIFRA fuera del marcado leidos: 17 | discrepan: 1

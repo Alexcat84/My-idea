@@ -1,0 +1,824 @@
+==============================================================================
+CASO LD-OPC05-052
+==============================================================================
+  NODO A: definicion_alineacion_cadena_suministro
+     titulo    : Definición y Alineación de la Cadena de Suministro con la Estrategia
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     entregable: Mapa de cadena de suministro con el rol de la empresa identificado y una declaración clara de la estrategia competitiva (costo vs. servicio) que guiará las decisiones operativas.
+     pasos:
+        1. Mapear todas las empresas y actividades que participan en la cadena de suministro de tu producto/servicio.
+        2. Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.), y sus core competencies
+        3. Definir si tu estrategia competitiva se basa en precio bajo (requiere eficiencia) o en servicio/conveniencia (requiere capacidad de respuesta).
+        4. Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida, que son los 5 drivers (producción, inventario, ubicación, transporte, información)
+        5. Identificar en qué categoría(s) participa tu empresa: productor, distribuidor, minorista, proveedor de servicios
+        6. Mapear todos los participantes de tu cadena de suministro actual, incluyendo proveedores del proveedor y clientes del cliente
+        7. Determinar qué proveedores de servicios (logística, financieros, TI) podrían mejorar tu eficiencia operativa
+        8. Responder las 6 preguntas de Chopra y Meindl sobre tu mercado: cantidad por lote, tiempo de respuesta, variedad, nivel de servicio, precio, tasa de innovación
+        9. Validar que la estrategia de cadena de suministro sea coherente con la propuesta de valor al cliente
+
+  NODO B: trade_off_responsividad_eficiencia
+     titulo    : Balance entre Capacidad de Respuesta y Eficiencia
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     entregable: Documento de posicionamiento estratégico que indique, para cada driver de la cadena de suministro, si la decisión prioriza eficiencia o capacidad de respuesta.
+     pasos:
+        1. Analizar qué valora más tu segmento de clientes: precio bajo o rapidez/servicio.
+        2. Evaluar el nivel de exceso de capacidad, inventario y flexibilidad de transporte actuales.
+        3. Ajustar cada driver (producción, inventario, ubicación, transporte, información) hacia el extremo del espectro que corresponda a la estrategia elegida.
+        4. Revisar periódicamente el balance, ya que cambios en el mercado pueden requerir reajustes.
+        5. Monitorear factores clave: demanda de producto, precios, tasas de producción, frecuencia de entregas
+        6. Evaluar la confiabilidad de los pronósticos y datos disponibles
+        7. Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece responsividad)
+        8. Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, features, velocidad)
+
+==============================================================================
+CASO LD-OPC05-018
+==============================================================================
+  NODO A: business_model_environment_mapping
+     titulo    : Mapeo del Entorno del Modelo de Negocio
+     fuente    : Business Model Generation - Osterwalder, Alexander
+     entregable: Mapa visual del entorno de negocio con las cuatro áreas documentadas y su impacto en el Business Model Canvas
+     pasos:
+        1. Analizar fuerzas de mercado: segmentos, necesidades, costos de cambio, atractivo de ingresos
+        2. Analizar fuerzas de la industria: competidores incumbentes, nuevos entrantes, proveedores, productos sustitutos
+        3. Identificar tendencias clave (regulatorias, tecnológicas, sociales, culturales)
+        4. Evaluar fuerzas macroeconómicas (mercados de capital, condiciones económicas, infraestructura)
+        5. Formular preguntas estratégicas por cada bloque del Canvas en base a los hallazgos
+        6. Listar stakeholders clave y su nivel de influencia sobre el modelo
+
+  NODO B: future_scenarios_planning
+     titulo    : Planificación de Escenarios Futuros (Scenario Planning)
+     fuente    : Business Model Generation - Osterwalder, Alexander
+     entregable: Documento con 2 a 4 escenarios futuros titulados y narrados, entre ellos el mejor y el peor caso descritos en detalle, con un modelo de negocio (Canvas) propuesto para cada uno, las decisiones primarias y de inversión asociadas con su probabilidad, y las señales de alerta temprana identificadas
+     pasos:
+        1. Identifica dos o más impulsores de incertidumbre clave que puedan transformar tu industria (por ejemplo la tecnología o la regulación): son las dimensiones que van a caracterizar a tus escenarios
+        2. Cruza esos impulsores en una matriz para generar entre 2 y 4 escenarios distintos, y asegúrate de que entre ellos estén descritos en detalle, a 5 a 10 años, el mejor y el peor escenario posible para el entorno externo de tu empresa
+        3. Titula y narra cada escenario con una historia breve que describa sus elementos principales
+        4. Organiza un taller donde los participantes desarrollen un modelo de negocio apropiado para cada escenario, usando lluvia de ideas y técnicas de creatividad, y formula preguntas específicas por bloque del Canvas (KP, KA, VP, CR, CS, C$, R$) para cada uno
+        5. Identifica las decisiones primarias que enfrenta tu empresa (nuevos negocios, tecnologías, productos), asigna una probabilidad pequeña a los escenarios alternativos y reconsidera con ella tus decisiones de inversión
+        6. Identifica las señales y marcadores tempranos que indiquen hacia qué escenario se está moviendo el mundo
+
+==============================================================================
+CASO LD-OPC05-042
+==============================================================================
+  NODO A: costo_de_mala_calidad_copq
+     titulo    : Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)
+     fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+     entregable: Reporte cuantificado del COPQ desglosado por categorías y como porcentaje de ventas, con los segmentos que concentran el mayor costo y una meta de reducción anual
+     pasos:
+        1. Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad
+        2. Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos
+        3. Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real
+        4. Identifica los pocos procesos o productos que concentran la mayor parte del costo
+        5. Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio
+        6. Establece una meta de reducción anual y repite el cálculo periódicamente para verificar la tendencia
+
+  NODO B: rejilla_madurez_gestion_calidad
+     titulo    : Rejilla de Madurez de Gestión de Calidad (Quality Management Maturity Grid)
+     fuente    : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+     entregable: Diagnóstico de madurez en calidad de tu negocio con la etapa actual identificada en las seis categorías y un plan de acción hacia la siguiente etapa
+     pasos:
+        1. Reúne información objetiva sobre el estado actual de la gestión de calidad en tu negocio
+        2. Ubica tu negocio en una de las cinco etapas de madurez usando las seis categorías de gestión
+        3. Evalúa honestamente según comportamientos observados, no según discursos
+        4. Compara la etapa actual con la etapa siguiente para identificar acciones concretas de mejora
+        5. Diseña un plan de transición hacia etapas de mayor madurez
+        6. Revisa periódicamente tu posición en la rejilla para monitorear avances o retrocesos
+
+==============================================================================
+CASO LD-OPC05-004
+==============================================================================
+  NODO A: actualizar_business_model_canvas_tuneup
+     titulo    : Actualización Iterativa del Business Model Canvas ('Tune-up')
+     fuente    : The Startup Owner's Manual - Blank, Steve
+     entregable: Business Model Canvas actualizado con anotaciones de cambios en propuesta de valor, segmentos de cliente e hipótesis de ingresos
+     pasos:
+        1. Revisa tu propuesta de valor a la luz del feedback de clientes recibido
+        2. Reevalúa tus segmentos de clientes identificando si el producto resuena solo con un subconjunto
+        3. Ajusta tus hipótesis de ingresos según los segmentos que mostraron entusiasmo real
+        4. Documenta los cambios, sorpresas y decepciones como parte de un tune-up, no una revisión final
+
+  NODO B: reempaquetado_producto
+     titulo    : Reempaquetado del Producto (Estrategia de Pivote)
+     fuente    : The Startup Owner's Manual - Blank, Steve
+     entregable: Nueva propuesta de empaquetado o precio del producto, validada con al menos un subconjunto de clientes, sin rediseño del núcleo tecnológico
+     pasos:
+        1. Identificar si el problema real es de tecnología o de empaquetado y posicionamiento comercial
+        2. Explorar alternativas de empaquetado: módulos, suscripción, versiones escalonadas de funcionalidad
+        3. Validar la nueva configuración con clientes, sin necesidad de rediseñar el producto central
+        4. Actualizar el lienzo de modelo de negocio con el nuevo modelo de entrega o precio
+
+==============================================================================
+CASO LD-OPC05-039
+==============================================================================
+  NODO A: control_estadistico_metodo_medicion
+     titulo    : Control Estadístico del Método de Medición (Condición de Validez)
+     fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+     entregable: Un reporte de control estadístico del sistema de medición que confirme la validez y reproducibilidad del método de prueba antes de usarlo en producción o inspección.
+     pasos:
+        1. Realiza mediciones repetidas del mismo ítem con el mismo operador e instrumento y grafícalas en un R-chart.
+        2. Verifica que el rango de variación se mantenga dentro de límites de control estadístico.
+        3. Compara resultados entre diferentes operadores usando el mismo instrumento para detectar inconsistencias.
+        4. Compara resultados entre diferentes instrumentos usados por el mismo operador.
+        5. Establece criterios de reproducibilidad aceptable antes de iniciar las pruebas.
+        6. Rechaza el método de medición si no logras control estadístico o reproducibilidad adecuada.
+
+  NODO B: definiciones_operacionales_3
+     titulo    : Definiciones Operacionales (Traducir Conceptos Abstractos)
+     fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+     entregable: Un documento de especificación técnica que contenga la definición operacional completa: prueba, criterio y regla de decisión para cada característica de calidad relevante.
+     pasos:
+        1. Identificar el adjetivo o concepto ambiguo que se desea especificar (ej. 'limpio', 'seguro', 'contaminado').
+        2. Definir una prueba específica y reproducible para evaluar dicho concepto.
+        3. Establecer un criterio de juicio claro y cuantificable.
+        4. Definir la regla de decisión (sí/no) sobre el cumplimiento del criterio.
+        5. Validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definición.
+        6. Escribe el procedimiento con el detalle suficiente para que cualquier persona que lo siga llegue al mismo resultado que tú.
+
+==============================================================================
+CASO LD-OPC05-063
+==============================================================================
+  NODO A: ecuacion_de_valor_cliente
+     titulo    : Ecuación de Valor del Cliente
+     fuente    : SPIN Selling - Neil Rackham
+     entregable: Mapa de 'costo vs valor percibido' para la oportunidad de venta actual, identificando qué preguntas faltan por hacer para inclinar la balanza
+     pasos:
+        1. Antes de presentar precio o solución, mapear qué tan grande percibe el cliente su problema
+        2. Usar preguntas de Implicación para amplificar las consecuencias no vistas del problema
+        3. Usar preguntas de Necesidad-Beneficio para que el cliente articule el valor de resolverlo
+        4. Solo entonces presentar la solución y su costo, cuando la balanza de valor ya se inclinó a favor
+
+  NODO B: modelo_spin_preguntas
+     titulo    : Modelo SPIN: Secuencia de Preguntas de Venta
+     fuente    : SPIN Selling - Neil Rackham
+     entregable: Guion o banco de preguntas SPIN personalizado por cliente o producto, listo para tu próxima llamada de venta clave
+     pasos:
+        1. Prepara preguntas de Situación mínimas y específicas sobre el contexto del cliente, usándolas con moderación
+        2. Formula preguntas de Problema para identificar dificultades o insatisfacciones del cliente
+        3. Desarrolla preguntas de Implicación que conecten el problema con consecuencias mayores no obvias
+        4. Cierra con preguntas de Necesidad-Beneficio para que el cliente exprese el valor de resolver el problema
+        5. Ajusta la secuencia según el flujo natural de la conversación sin forzar el orden rígido
+        6. Presenta tu solución recién cuando el cliente haya articulado la Necesidad Explícita
+        7. Deja de entrenarte en distinguir preguntas abiertas de cerradas; ese no es el factor que marca la diferencia
+        8. Practica pasar de un tipo de pregunta a otro sin que se note, en llamadas reales
+        9. Revisa tus llamadas o tus notas para detectar en qué parte de la secuencia te trabas
+
+==============================================================================
+CASO LD-OPC05-066
+==============================================================================
+  NODO A: el_riesgo_eres_tu
+     titulo    : El Fundador Como Punto Único de Falla
+     fuente    : Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)
+     entregable: Un documento con dónde vive todo, un contacto de emergencia con acceso, y un plan de qué pasa con tus clientes si faltas dos semanas.
+     pasos:
+        1. Documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.
+        2. Nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.
+        3. Escribe qué pasa con tus clientes si tú no puedes trabajar por dos semanas, y cómo se les avisaría.
+        4. Cuida tu energía y tu salud como cuidas tu negocio: son parte del activo, no algo aparte.
+
+  NODO B: sigue_operando_pese_al_golpe
+     titulo    : Continuidad del Negocio
+     fuente    : Edwards et al., Managing Project Risks
+     entregable: Una lista de las funciones que no pueden parar y un plan mínimo para sostenerlas durante una crisis.
+     pasos:
+        1. Define cuáles son las pocas funciones que no pueden parar pase lo que pase.
+        2. Para cada una, piensa cómo la sostendrías con lo mínimo si el resto está en crisis.
+        3. Decide de antemano qué puede esperar, para no gastar energía en lo secundario durante el golpe.
+        4. Avisa a tus clientes con honestidad si algo se afecta, en vez de desaparecer.
+
+==============================================================================
+CASO LD-OPC05-078
+==============================================================================
+  NODO A: estratificacion_datos
+     titulo    : Estratificación de Datos
+     fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+     entregable: Conjunto de histogramas o gráficos estratificados por categoría con conclusiones sobre causas del problema
+     pasos:
+        1. Seleccionar las variables de estratificación relevantes
+        2. Establecer categorías (valores discretos o rangos) para cada variable
+        3. Clasificar las observaciones en las categorías correspondientes
+        4. Calcular el fenómeno medido (conteo, promedio o histograma) para cada categoría
+        5. Mostrar los resultados, preferentemente en gráficos de barras
+        6. Repetir el proceso para otras variables de estratificación (segunda etapa)
+        7. Planificar confirmación adicional de los hallazgos
+
+  NODO B: planificacion_recoleccion_datos
+     titulo    : Planificación para Recolección y Análisis de Datos
+     fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+     entregable: Plan documentado de recolección y análisis de datos con preguntas formuladas, método de muestreo definido y plan de presentación de resultados
+     pasos:
+        1. Establecer objetivos de recolección de datos y formular la pregunta específica
+        2. Definir puntos de recolección de datos comprensivos
+        3. Seleccionar y capacitar recolectores de datos imparciales
+        4. Diseñar, preparar y probar métodos, formularios e instrucciones de recolección (incluir MSA)
+        5. Auditar el proceso de recolección y validar resultados
+        6. Filtrar y analizar los datos
+        7. Evaluar supuestos del tamaño de muestra y del análisis
+        8. Aplicar técnicas gráficas y estadísticas al problema original
+        9. Determinar si se necesitan más datos y análisis
+       10. Considerar un análisis de sensibilidad
+       11. Revisar que las conclusiones respondan al problema técnico original
+       12. Presentar los resultados en un informe claro con resumen ejecutivo
+       13. Determinar si las conclusiones aplican a otros problemas
+
+==============================================================================
+CASO LD-OPC05-103
+==============================================================================
+  NODO A: mapeo_flujo_valor
+     titulo    : Mapeo de Flujo de Valor (De la Concepción a la Comercialización)
+     fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+     entregable: Mapa de flujo de valor del estado actual y del estado futuro, con métricas de proceso, plan de implementación y mecanismos de control.
+     pasos:
+        1. Repasa los conceptos clave de Lean y Value Stream Mapping antes de empezar
+        2. Mapea el estado actual documentando tiempos de ciclo, esperas, inventarios, downtime y capacidad, y el flujo actual de materiales e información en el proceso
+        3. Clasifica cada actividad en valor agregado, no valor agregado pero necesaria, o desperdicio puro
+        4. Diseña y documenta el mapa del estado futuro con las mejoras que quieres lograr
+        5. Implementa los cambios y define mecanismos de control para validar el avance contra el mapa futuro
+        6. Registrar métricas de tiempo de ciclo y costo en cada etapa
+        7. Priorizar los problemas detectados como proyectos de mejora
+
+  NODO B: takt_time
+     titulo    : Takt Time y Producción en Flujo
+     fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+     entregable: Cálculo de takt time documentado con plan de balanceo de línea y ajuste de recursos según demanda
+     pasos:
+        1. Calcular la demanda del cliente en un periodo definido
+        2. Determinar el takt time dividiendo el tiempo disponible entre la demanda
+        3. Comparar el takt time con tu capacidad demostrada y teórica
+        4. Ajustar tu dotación de trabajo y balancear las estaciones según el takt
+        5. Reducir tiempos de cambio (setup) para permitir lotes más pequeños
+        6. Si la demanda varía significativamente, separa tus líneas de valor
+
+==============================================================================
+CASO LD-OPC05-081
+==============================================================================
+  NODO A: fase_accomplish_experiencia_cliente
+     titulo    : Fase Accomplish: Verificar que el Cliente Logró su Objetivo
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     entregable: Sistema de tracking de logros de clientes y protocolo de celebración definido para el momento en que se alcanza el objetivo
+     pasos:
+        1. Definir claramente cuál es el objetivo/resultado que el cliente busca al comprar tu producto, y no solo la entrega del producto
+        2. Implementar un sistema de seguimiento (automatizado o manual) para saber cuándo el cliente alcanza ese objetivo
+        3. Clasificar cada relación con cliente en uno de los tres escenarios: Mission Accomplished, Lukewarm Bath o Mission Failure
+        4. Diseñar un momento de celebración específico para cuando el cliente logra su objetivo
+        5. Reservar al menos 5% de las ganancias del proyecto para invertir en mejoras de experiencia del cliente
+        6. Identificar el objetivo superficial que el cliente dice buscar
+        7. Investigar el deseo o motivación real detrás de ese objetivo declarado
+        8. Diseñar un punto de seguimiento posterior al logro del objetivo aparente (ej. pedir una foto, confirmar el resultado real)
+        9. Mantener contacto y apoyo del equipo más allá del cumplimiento nominal del contrato
+       10. Evitar que el equipo 'desacelere' el esfuerzo justo cuando el cliente cree haber terminado
+       11. Recoger evidencia (testimonios, datos) del resultado logrado para usos futuros.
+
+  NODO B: reunion_conclusion_proyecto
+     titulo    : Reunión de Conclusión con Encuestas Internas y Externas
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     entregable: Protocolo de cierre de proyecto con encuestas internas/externas y plan de monitoreo post-entrega documentado
+     pasos:
+        1. Programar una Reunión de Conclusión al finalizar el proyecto, revisando los objetivos y métricas definidos en el kickoff
+        2. Diseñar una encuesta interna para el equipo: satisfacción de trabajar con el cliente, disposición a repetir, comentarios abiertos
+        3. Diseñar una encuesta externa para el cliente: satisfacción, probabilidad de recomendar, comentarios abiertos, con una calificación inicial de estrellas o NPS
+        4. Ramificar las preguntas según el puntaje recibido (alta satisfacción → pedir testimonio; baja satisfacción → espacio para desahogo y solución)
+        5. Establecer un periodo de monitoreo posterior (ej. 3 meses) para mitigar el 'remordimiento post-lanzamiento' del cliente
+        6. Solicitar testimonios y referidos solo después de dar valor y feedback positivo primero
+        7. Revisar los objetivos organizacionales y métricas de éxito definidas en el kickoff
+        8. Realizar una evaluación honesta del nivel de éxito en cada métrica
+        9. Solicitar feedback del cliente sobre esas métricas
+       10. Atender cualquier deficiencia pendiente antes de cerrar
+       11. Compartir testimonios y reconocimientos mutuos
+       12. Establecer un plan de monitoreo post-entrega (ej. 3 meses de seguimiento)
+       13. Usa los resultados para ajustar tus procesos futuros
+
+==============================================================================
+CASO LD-OPC05-084
+==============================================================================
+  NODO A: genchi_gembutsu_salir_del_edificio
+     titulo    : Genchi Gembutsu: Salir del Edificio
+     fuente    : The Lean Startup - Eric Ries
+     entregable: Registro de conversaciones y observaciones directas con clientes potenciales que validen o invaliden las hipótesis iniciales del negocio
+     pasos:
+        1. Identificar las preguntas de fe (leap-of-faith questions) más críticas del negocio
+        2. Salir físicamente a hablar con clientes potenciales reales, no solo encuestas remotas, lo que se llama get out of the building
+        3. Observar el comportamiento real de los usuarios en su contexto natural
+        4. Evitar tomar decisiones basadas únicamente en reportes de segunda mano
+        5. Documentar los hallazgos firsthand para contrastarlos con las hipótesis iniciales
+        6. Usar estas observaciones para ajustar el diseño del producto o servicio
+
+  NODO B: leap_of_faith_assumptions
+     titulo    : Supuestos de salto de fe (leap-of-faith assumptions)
+     fuente    : The Lean Startup - Eric Ries
+     entregable: Lista priorizada de tus supuestos de salto de fe, separados de los hechos comprobados de tu plan
+     pasos:
+        1. Revisa tu plan y separa los hechos comprobados de las suposiciones que aún no has verificado, incluidos el modelo de negocio y el spreadsheet financiero
+        2. Identifica cuáles suposiciones son de bajo riesgo y cuáles son verdaderos saltos de fe
+        3. Reescribe tus comparaciones con otros negocios en términos concretos y verificables, evitando analogías que te oculten el riesgo real
+        4. Ordena tus supuestos según el riesgo que representan para que tu negocio funcione
+        5. Diseñar experimentos específicos para validar cada leap-of-faith question antes de construir el producto completo
+
+==============================================================================
+CASO LD-OPC05-116
+==============================================================================
+  NODO A: reglas_gestion_riesgo_gambling
+     titulo    : Las Cinco Reglas de Gestión de Riesgo (Gambling Rules)
+     fuente    : Winning at New Products - Robert G. Cooper
+     entregable: Un mapa de riesgo del proyecto que muestre la relación entre incertidumbre y montos invertidos en cada etapa, con puntos de salida definidos
+     pasos:
+        1. Evaluar el nivel de incertidumbre actual antes de asignar recursos a la siguiente etapa
+        2. Dividir tu inversión total en etapas incrementales en vez de comprometer todo el presupuesto de una vez
+        3. Invertir en investigación de mercado y técnica (VoC, tests) para reducir la incertidumbre antes de aumentar el gasto
+        4. Definir puntos de decisión claros (gates) donde puedas matar el proyecto si la información no es favorable
+        5. Aumentar el monto invertido solo cuando la incertidumbre haya bajado en la etapa anterior
+
+  NODO B: sistema_gates_go_kill
+     titulo    : Sistema de Gates (Puntos de Decisión Go/Kill)
+     fuente    : Winning at New Products - Robert G. Cooper
+     entregable: Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control
+     pasos:
+        1. Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+        2. Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+        3. Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+        4. Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+        5. Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+        6. Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+        7. En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+        8. No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+        9. Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+       10. Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+       11. Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+       12. Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+       13. Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+       14. Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+       15. Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+       16. Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+       17. Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+
+==============================================================================
+CASO LD-OPC05-070
+==============================================================================
+  NODO A: encuadre_desafio_diseno
+     titulo    : Encuadre del Desafío de Diseño (Frame Your Design Challenge)
+     fuente    : The field guide to human-centered design
+     entregable: Un documento de encuadre con la pregunta de diseño, el impacto deseado, soluciones potenciales y restricciones identificadas
+     pasos:
+        1. Formular el problema como una pregunta de diseño abierta, utilizando la fórmula '¿Cómo podríamos...?'
+        2. Definir el impacto último que se busca lograr
+        3. Listar posibles soluciones pensando ampliamente, permitiendo resultados sorprendentes
+        4. Documentar contexto y restricciones (geográficas, tecnológicas, de tiempo, poblacionales)
+        5. Revisar y ajustar la pregunta original según lo aprendido, iterando la formulación con el equipo hasta encontrar el nivel de abstracción correcto
+        6. Validar el brief con conocimiento local ('local knowledge') de ONGs o actores en terreno antes de prototipar
+        7. Identificar el objetivo macro o problema social/de negocio a resolver.
+        8. Verifica que la pregunta no sea demasiado general (imposible de abordar) ni demasiado específica (limita soluciones)
+        9. Usa la pregunta como brújula durante todo el proceso de diseño
+       10. Usar esta pregunta como titular para las sesiones de brainstorming.
+
+  NODO B: integracion_deseabilidad_viabilidad_factibilidad_social
+     titulo    : Integración de Deseabilidad-Viabilidad-Factibilidad en Emprendimientos Sociales
+     fuente    : Change by Design, Revised and U - Tim Brown
+     entregable: Un modelo de negocio social documentado que especifique métricas de impacto y de sostenibilidad financiera
+     pasos:
+        1. Evaluar cada iniciativa social bajo el triple criterio: ¿es deseable para la comunidad?, ¿es viable financieramente sin depender solo de donaciones?, ¿es factible de ejecutar con la infraestructura disponible?
+        2. Formar equipos interdisciplinarios que incluyan expertos técnicos y del sector (salud, agricultura, finanzas) además de diseñadores
+        3. Diseñar métricas de éxito que balanceen impacto social y sostenibilidad económica
+        4. Navegar burocracias gubernamentales e infraestructura local como parte del diseño del sistema
+
+==============================================================================
+CASO LD-OPC05-075
+==============================================================================
+  NODO A: estrategia_captura_mercado_crecimiento
+     titulo    : Muévete rápido cuando un mercado empieza a crecer fuerte (captura rápida)
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     entregable: Tu plan de acción para los próximos 12 meses, con hitos de alianzas, capacitación, inventario e indicadores de percepción de marca.
+     pasos:
+        1. Identifica señales tempranas de que un mercado está entrando en una fase de crecimiento fuerte, investigando el mercado y revisando tus ventas.
+        2. Forma alianzas tempranas con proveedores clave que te aseguren el suministro.
+        3. Capacita e incentiva a tu equipo de ventas con bonos para que priorice el producto emergente.
+        4. Usa relaciones públicas y acciones visibles (por ejemplo, tu propia sostenibilidad operativa) para reforzar la percepción de tu marca.
+        5. Planifica el momento en que pasarás a una estrategia de eficiencia interna cuando el mercado se estabilice y madure.
+        6. Detecta tendencias de mercado emergentes mediante investigación de ventas y comportamiento de clientes clave
+        7. Identifica fabricantes con productos alineados a la tendencia emergente
+        8. Negocia alianzas con compromisos de compra anticipada a cambio de garantías de suministro preferencial
+        9. Capacita a la fuerza de ventas y crea incentivos para promover estos productos estratégicos
+
+  NODO B: market_type_revenue_growth
+     titulo    : Tipo de Mercado y Curvas de Crecimiento de Ingresos
+     fuente    : The Startup Owner's Manual - Blank, Steve
+     entregable: Proyección de ingresos ajustada según el tipo de mercado, con justificación basada en comparables o cuota de mercado y supuestos documentados
+     pasos:
+        1. Determina el tipo de mercado en el que opera tu startup (nuevo, existente, re-segmentado o clonado)
+        2. Si es mercado existente, analiza incumbentes y estima qué porcentaje de cuota de mercado puedes capturar por año
+        3. Si es mercado nuevo, busca proxies y mercados adyacentes, y compara con empresas similares para estimar el crecimiento
+        4. Si es mercado re-segmentado, evalúa el tamaño del mercado existente, el tamaño de tu segmento y la tasa de adopción o cambio
+        5. Considera contratos a largo plazo y costos hundidos de tus clientes potenciales como barreras que ralentizan tu adopción
+        6. Ajusta tus proyecciones de ingresos según el tipo de mercado identificado y documenta tus supuestos
+
+==============================================================================
+CASO LD-OPC05-080
+==============================================================================
+  NODO A: fallas_activas_condiciones_latentes
+     titulo    : Fallas Activas y Condiciones Latentes
+     fuente    : Managing the Risks of Organizat - Reason, J. T_
+     entregable: Tabla que clasifica fallas activas y condiciones latentes del incidente y traza el origen organizacional de cada condición latente.
+     pasos:
+        1. Identificar los actos inseguros (errores o violaciones) cometidos en el momento del incidente
+        2. Buscar las decisiones previas (presupuesto, capacitación, dotación, diseño) que crearon condiciones latentes
+        3. Elaborar una tabla que separe fallas activas de condiciones latentes para cada hallazgo
+        4. Rastrear el origen de cada condición latente hasta la decisión gerencial o de diseño que la generó
+        5. Priorizar la corrección de condiciones latentes por su impacto en futuros eventos
+        6. Mantener un registro de condiciones latentes conocidas para monitorearlas de forma continua, no solo tras un accidente
+
+  NODO B: vulnerabilidad_instalacion
+     titulo    : Vulnerabilidad de la Instalación frente al Desensamblaje
+     fuente    : Managing the Risks of Organizat - Reason, J. T_
+     entregable: Procedimiento de reinstalación con checklist de verificación por pasos críticos
+     pasos:
+        1. Diseñar procedimientos de reinstalación con secuencias claramente numeradas y verificables
+        2. Implementar listas de verificación específicas para pasos de reensamblaje, obligatorias y con firma paso a paso
+        3. Aumentar la supervisión y doble verificación durante la fase de instalación, no solo desensamblaje, con inspecciones independientes posteriores al reensamblaje antes de la puesta en servicio
+        4. Analizar históricos de fallas de mantenimiento para confirmar predominancia de errores de instalación, incluidas las omisiones en cubiertas, sujetadores
+
+==============================================================================
+CASO LD-OPC05-085
+==============================================================================
+  NODO A: gestion_alucinaciones_ia
+     titulo    : Gestión de Alucinaciones de la IA
+     fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+     entregable: Un protocolo de verificación de contenido generado por IA antes de su uso en decisiones de negocio o comunicaciones externas.
+     pasos:
+        1. Establecer como política interna que ningún dato, cifra o cita generado por IA se use en documentos externos (pitch decks, reportes, contratos) sin verificación humana en fuente original.
+        2. Pedir a la IA que cite fuentes verificables y luego contrastar manualmente esas fuentes.
+        3. Usar la IA para generar borradores o hipótesis, nunca como fuente final de verdad.
+        4. Entrenar al equipo en detectar el patrón de 'sonar creíble' como señal de alerta, no de confianza.
+        5. Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas
+
+  NODO B: ia_generacion_ideas_negocio
+     titulo    : IA como Motor de Generación de Ideas (Recombinación)
+     fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+     entregable: Lista curada de ideas de negocio o producto generadas con ayuda de IA, filtradas y priorizadas por el equipo humano
+     pasos:
+        1. Invitar siempre a la IA a sesiones de brainstorming como un participante más
+        2. Pedir a la IA que combine 2-3 conceptos distantes o no relacionados con el negocio para forzar recombinación creativa
+        3. Solicitar listas largas (20+ ideas) esperando que la mayoría sean mediocres, y filtrar humanamente las de mayor potencial
+        4. Asignar un rol experto a la IA en el prompt (ej. 'Eres un experto en marketing') para mejorar la calidad de las ideas generadas
+        5. Repetir la solicitud con distintos contextos o audiencias objetivo si las primeras ideas no inspiran
+
+==============================================================================
+CASO LD-OPC05-090
+==============================================================================
+  NODO A: ia_en_supply_chain
+     titulo    : Inteligencia Artificial Aplicada a la Cadena de Suministro
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     entregable: Un plan piloto de IA implementado en un área de tu cadena de suministro, con métricas de mejora documentadas para decidir si escalarlo.
+     pasos:
+        1. Auditar tus fuentes de datos actuales de demanda, rutas o almacén para evaluar su calidad y volumen
+        2. Priorizar un área piloto entre forecasting, optimización de rutas u operaciones de almacén
+        3. Seleccionar una herramienta de IA/ML compatible con los sistemas que ya usas
+        4. Integrar esa herramienta con tus datos históricos y en tiempo real disponibles (tráfico, clima, redes sociales)
+        5. Medir la mejora en precisión de pronóstico o eficiencia operativa antes de escalar a otra área
+        6. Definir qué decisiones puede tomar la IA sola y cuáles necesitas revisar tú mismo
+
+  NODO B: simulacion_de_operaciones_supply_chain
+     titulo    : Modelado de Simulación para Decisiones de Supply Chain
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     entregable: Modelo de simulación validado con recomendación de diseño de red, layout o política de inventario respaldada por datos
+     pasos:
+        1. Recopilar datos de ERP/SCM sobre productos, plantas, costos y restricciones de capacidad
+        2. Definir el horizonte de decisión (estratégico, táctico u operativo) y la pregunta a responder
+        3. Construir el modelo de simulación representando la red actual o propuesta
+        4. Ejecutar el modelo bajo distintos escenarios y variables de incertidumbre (demanda, tráfico, procesos), y no solo optimizar lo existente
+        5. Comparar resultados de escenarios para seleccionar el diseño con mejor relación costo-servicio
+        6. Validar la solución antes de implementarla físicamente para minimizar riesgo
+        7. Definir la estrategia de negocio antes de diseñar la cadena de suministro
+        8. Probar combinaciones de tecnologías (robots, manufactura aditiva, vehículos autónomos) en el modelo
+        9. Repetir el proceso de simulación periódicamente para adaptarse a cambios del mercado global
+
+==============================================================================
+CASO LD-OPC05-095
+==============================================================================
+  NODO A: investigacion_new_view
+     titulo    : Investigación de accidentes bajo el enfoque New View
+     fuente    : The Field Guide to Understandin - Dekker, Sidney
+     entregable: Informe de investigación de incidente estructurado según principios New View, con foco en prevención en lugar de culpabilización
+     pasos:
+        1. Reconstruir la situación tal como la vivieron los involucrados, sin usar el conocimiento del resultado final, a partir de la información y las señales disponibles para los actores en el momento del evento
+        2. Evitar declaraciones de causa única o 'causa probable'
+        3. Documentar hallazgos como causas, contribuciones y riesgos por separado
+        4. Dedicar una sección sustancial del informe a acciones de seguridad preventivas, y comunicar los hallazgos de forma que honren la experiencia humana en lugar de reducirla a una lista de errores
+        5. Contrastar la investigación oficial con relatos revisionistas o independientes si están disponibles
+        6. Involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento
+        7. Entrevistar a los involucrados para entender su percepción y objetivos en el momento
+
+  NODO B: process_tracing_methods
+     titulo    : Métodos de Rastreo de Procesos (Process-Tracing)
+     fuente    : The Field Guide to Understandin - Dekker, Sidney
+     entregable: Un informe de investigación de incidente/accidente que incluya el relato dual (contexto-específico y conceptual) explicando por qué las acciones de los practicantes tuvieron sentido dado su contexto y comprensión en el momento.
+     pasos:
+        1. Recolectar datos crudos del episodio (registros, transcripciones, testimonios, datos de sistemas)
+        2. Construir el relato específico del dominio en el lenguaje técnico de los practicantes
+        3. Identificar y aplicar conceptos dependientes (ej. sorpresa de automatización, carga de trabajo) para interpretar los datos
+        4. Buscar regularidades y patrones de desempeño humano a través de los dos relatos paralelos
+        5. Documentar las conclusiones evitando el lenguaje de déficit humano (culpar, señalar fallos)
+
+==============================================================================
+CASO LD-OPC05-100
+==============================================================================
+  NODO A: lienzo_modelo_negocio
+     titulo    : El Lienzo de Modelo de Negocio (Business Model Canvas)
+     fuente    : Business Model Generation - Osterwalder, Alexander
+     entregable: Lienzo de Modelo de Negocio completo con los 9 bloques definidos y coherentes entre sí
+     pasos:
+        1. Imprimir el lienzo en tamaño grande para trabajo colaborativo y un Business Model Canvas para cada miembro del equipo
+        2. Reunirse con el equipo aceptando que habrá vacíos en la primera versión
+        3. Escribir cada bloque en notas post-it sobre el lienzo
+        4. Identificar los segmentos de clientes a los que se dirige la organización
+        5. Definir la propuesta de valor para cada segmento
+        6. Mapear canales, relaciones y fuentes de ingresos
+        7. Mapear recursos, actividades y asociaciones clave
+        8. Calcular la estructura de costos y el profit resultante
+        9. Pausar para investigar más información donde haya vacíos importantes
+       10. Iterar y discutir en grupo hasta lograr coherencia entre los bloques
+       11. Publicar el canvas en el espacio de trabajo y actualizarlo conforme avanza el proyecto
+       12. Usar el lienzo como base para pivotar o validar hipótesis del negocio, y también para llevar una solución ya diseñada a un modelo de negocio viable
+
+  NODO B: proceso_ideacion_modelo_negocio
+     titulo    : Proceso de Ideación de Modelos de Negocio
+     fuente    : Business Model Generation - Osterwalder, Alexander
+     entregable: Lista corta de 3 a 5 prototipos de modelo de negocio esbozados en el lienzo de modelo de negocio, resultado de un proceso de ideación estructurado
+     pasos:
+        1. Ensamblar un equipo diverso en antigüedad, experiencia, área funcional y conocimiento del cliente
+        2. Realizar una fase de inmersión: investigar clientes, tecnologías y modelos de negocio existentes
+        3. Expandir generando la mayor cantidad de ideas posible por cada bloque del lienzo de modelo de negocio, sin criticar todavía y priorizando cantidad sobre calidad
+        4. Definir criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.)
+        5. Reducir a entre tres y cinco ideas y prototiparlas usando el lienzo de modelo de negocio
+
+==============================================================================
+CASO LD-OPC05-105
+==============================================================================
+  NODO A: metodo_valor_presente_neto
+     titulo    : Método del Valor Presente Neto (NPV)
+     fuente    : Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe
+     entregable: Cifra de valor presente neto en dólares, con supuestos y análisis de sensibilidad documentados, que indique si la inversión agrega valor real a la empresa
+     pasos:
+        1. Proyectar los flujos de efectivo futuros esperados de la inversión
+        2. Definir la tasa de descuento (hurdle rate) de la empresa
+        3. Aplicar la ecuación de descuento usando esa tasa para traer cada flujo futuro a valor presente, porque cualquier dinero que esperas recibir en el futuro tienes que descontarlo para poder compararlo con el efectivo que tienes hoy
+        4. Sumar los valores presentes de todos los flujos futuros y restar el desembolso inicial para obtener el NPV
+        5. Aceptar la inversión si el NPV es positivo, rechazarla si es negativo; entre proyectos alternativos, elegir el de mayor NPV positivo
+        6. Realizar un análisis de sensibilidad usando 80-90% de las proyecciones originales para probar la robustez de la decisión
+
+  NODO B: tasa_de_retorno_requerida
+     titulo    : Tasa de Retorno Requerida (Hurdle Rate)
+     fuente    : Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe
+     entregable: Una tasa de retorno mínima definida y justificada para evaluar proyectos de inversión
+     pasos:
+        1. Calcular el costo de capital de la empresa (deuda y capital propio ponderados)
+        2. Evaluar el costo de oportunidad de otras alternativas de inversión disponibles
+        3. Establecer una tasa de retorno mínima (hurdle rate) superior al costo de capital
+        4. Ajustar la tasa según el nivel de riesgo del proyecto específico
+
+==============================================================================
+CASO LD-OPC05-110
+==============================================================================
+  NODO A: portfolio_management
+     titulo    : Gestión de Portafolio de Proyectos (Portfolio Management)
+     fuente    : Winning at New Products - Robert G. Cooper
+     entregable: Portafolio de proyectos priorizado y balanceado, con recursos asignados según valor estratégico y decisiones explícitas de Go/Kill documentadas.
+     pasos:
+        1. Evaluar si existen demasiados proyectos para los recursos disponibles
+        2. Revisar el balance del portafolio (proyectos pequeños vs de alto valor)
+        3. Implementar revisiones periódicas de todo el portafolio de forma holística
+        4. Tomar decisiones Go/Kill continuas sobre proyectos individuales
+        5. Eliminar proyectos débiles o que ya no cumplen con la estrategia (aproximadamente un tercio suele requerir cancelación)
+        6. Reasignar los recursos liberados a los proyectos de mayor valor
+
+  NODO B: sistema_gates_go_kill
+     titulo    : Sistema de Gates (Puntos de Decisión Go/Kill)
+     fuente    : Winning at New Products - Robert G. Cooper
+     entregable: Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control
+     pasos:
+        1. Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+        2. Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+        3. Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+        4. Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+        5. Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+        6. Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+        7. En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+        8. No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+        9. Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+       10. Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+       11. Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+       12. Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+       13. Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+       14. Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+       15. Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+       16. Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+       17. Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+
+==============================================================================
+CASO LD-OPC05-115
+==============================================================================
+  NODO A: recomendaciones_smart
+     titulo    : Recomendaciones SMART para Investigaciones de Seguridad
+     fuente    : The Field Guide to Understandin - Dekker, Sidney
+     entregable: Documento de recomendaciones con criterios SMART y plan de seguimiento de implementación
+     pasos:
+        1. Identificar el factor de cambio real, distinto de los factores explicativos superficiales
+        2. Redactar la recomendación especificando qué parte de la organización debe hacer qué y cuándo
+        3. Definir criterios medibles de éxito
+        4. Validar la recomendación con los responsables de implementación considerando restricciones de producción/eficiencia
+        5. Establecer una fecha límite realista para la implementación
+
+  NODO B: revision_de_aprendizaje
+     titulo    : Revisión de Aprendizaje en Lugar de Investigación
+     fuente    : The Field Guide to Understandin - Dekker, Sidney
+     entregable: Reporte de aprendizaje colaborativo con propuestas de mejora generadas junto con el personal involucrado
+     pasos:
+        1. Renombrar el equipo investigador como 'equipo de aprendizaje'
+        2. Formular la pregunta clave: '¿qué necesitan ustedes para mejorar esto?'
+        3. Fomentar un diálogo abierto y honesto sobre cómo las personas se adaptan a conflictos de metas y restricciones de recursos
+        4. Evitar connotaciones de interrogatorio o búsqueda de culpables en el proceso
+
+==============================================================================
+CASO LD-OPC05-120
+==============================================================================
+  NODO A: tesis_boulder_inclusividad
+     titulo    : Filosofía de Inclusividad en el Ecosistema (Tesis Boulder - Principio 3)
+     fuente    : Venture Deals - Brad Feld
+     entregable: Política o cultura explícita de puertas abiertas en eventos y espacios del ecosistema
+     pasos:
+        1. Eliminar barreras de entrada a eventos y actividades del ecosistema
+        2. Fomentar que emprendedores establecidos den la bienvenida a nuevos participantes
+        3. Promover una mentalidad de abundancia en lugar de competencia por recursos locales
+        4. Facilitar la integración de recién llegados a la ciudad o comunidad
+
+  NODO B: tesis_boulder_stack_emprendedor
+     titulo    : Activa toda tu red de apoyo emprendedor (no solo el círculo social)
+     fuente    : Venture Deals - Brad Feld
+     entregable: Un calendario de actividades recurrentes que involucre activamente a toda tu red de apoyo emprendedor
+     pasos:
+        1. Diseña actividades prácticas (encuentros de trabajo intensivo, fines de semana de arranque) en lugar de solo juntadas para conocer gente
+        2. Asegúrate de que en esas actividades participen de verdad todos los roles: fundadores, inversionistas, mentores, posibles integrantes de tu equipo
+        3. Fíjate si la gente realmente participa o solo asiste sin involucrarse
+        4. Si una actividad deja de funcionar, no insistas: ciérrala y prueba con otra
+
+==============================================================================
+CASO LD-OPC05-009
+==============================================================================
+  NODO A: analisis_y_sintesis
+     titulo    : Analizar y unir las piezas al diseñar
+     fuente    : Change by Design, Revised and U - Tim Brown
+     entregable: Una historia que junte lo que descubriste en tu investigación y lo convierta en ideas que puedas usar para diseñar.
+     pasos:
+        1. Recolecta datos observando a la gente, haciendo entrevistas y revisando lo que ya existe (patentes, procesos, información disponible).
+        2. Aparta un tiempo, sean horas o semanas, dedicado solo a organizar e interpretar lo que recolectaste.
+        3. Busca patrones que tengan sentido y arma una historia coherente y creíble con esa información.
+        4. Si tienes objetivos que parecen chocar entre sí (por ejemplo costo bajo y calidad alta), no los conviertas en una simple lista de requisitos: busca una manera de unirlos que respete a ambos.
+
+  NODO B: pensamiento_convergente_divergente
+     titulo    : Pensamiento Convergente y Divergente
+     fuente    : Change by Design, Revised and U - Tim Brown
+     entregable: Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un set documentado de al menos 3-5 alternativas de solución evaluadas antes de cada decisión final
+     pasos:
+        1. Antes de buscar la solución, dedicar tiempo y energía explícitos a generar deliberadamente múltiples alternativas sin juzgarlas (fase divergente).
+        2. Fijar un deadline claro para la fase de divergencia, evitando la parálisis por análisis.
+        3. Usar la metáfora del embudo: abrir posibilidades ampliamente y luego estrechar hacia soluciones concretas.
+        4. Permitir la 'polinización cruzada' entre ideas distintas antes de converger en una.
+        5. Alternar conscientemente entre fases de generación de ideas y fases de selección o eliminación de ideas, de forma no lineal entre investigación de mercado, prototipado y generación.
+        6. Aceptar que descartar ideas prometedoras ('matar a los hijos favoritos') es parte necesaria del proceso, y evitar adoptar la primera solución razonable.
+        7. Aceptar la ambigüedad y la incertidumbre como parte natural del proceso creativo.
+
+==============================================================================
+CASO LD-OPC05-016
+==============================================================================
+  NODO A: bullseye_framework
+     titulo    : Bullseye Framework (Diana de Tracción)
+     fuente    : Traction - Gabriel Weinberg
+     entregable: Matriz de los 19 canales con ideas de brainstorm, resultados de los experimentos del anillo medio y el canal núcleo elegido para escalar.
+     pasos:
+        1. Lista los 19 canales de tracción posibles y evalúa cuáles podrían aplicar a tu negocio sin descartar ninguno por default.
+        2. Selecciona 3 a 5 canales prometedores según tu contexto, industria y modelo de negocio.
+        3. Diseña experimentos baratos, de menos de 1000 dólares y un mes de duración, para testear cada canal seleccionado en paralelo. Prueba en AdWords, pregunta el precio en tu mercado
+        4. Mide en cada experimento el costo de adquisición, el volumen disponible y la calidad de esos clientes.
+        5. Elige el canal con mejores resultados como tu canal núcleo y concentra ahí la mayoría de tus recursos. Es el paso previo para pasar a las pruebas del anillo interno
+        6. Si ningún canal funciona, repite el proceso o revisa tu producto.
+        7. Haz una lista de los 19 canales de tracción posibles para tu negocio
+        8. Diseña una prueba barata y corta para cada canal que te haga sentido, por ejemplo contactar a diez blogs de tu nicho, correr unos anuncios pagados o escribir un artículo semanal durante un mes
+        9. Corre las pruebas en paralelo o por lotes y mide resultados concretos, no solo clics o vistas
+       10. Compara los resultados entre canales y elige el o los que más prometan para invertirles más recursos
+       11. Anota lo que aprendes de cada prueba, incluidas las que fallaron, para mejorar tus próximos intentos
+       12. Compara los resultados de las distintas estrategias que probaste en una hoja de cálculo
+
+  NODO B: critical_path
+     titulo    : Critical Path (Camino Crítico)
+     fuente    : Traction - Gabriel Weinberg
+     entregable: Lista priorizada y validada de hitos críticos con proceso de reevaluación periódica establecido
+     pasos:
+        1. Enumera los hitos estrictamente necesarios para alcanzar tu traction goal
+        2. Excluye actividades que no sean absolutamente necesarias, aunque sean solicitadas por usuarios
+        3. Evalúa cada actividad propuesta contra el Critical Path antes de ejecutarla
+        4. Reevalúa el Critical Path después de completar cada hito, ya que las suposiciones cambian con feedback real
+        5. Comunica el Critical Path al equipo para alinear prioridades y evitar desperdicio de recursos
+
+==============================================================================
+CASO LD-OPC05-025
+==============================================================================
+  NODO A: checklist_sistema_stage_gate_primera_clase
+     titulo    : Checklist de un Sistema Stage-Gate de Primera Clase
+     fuente    : Winning at New Products - Robert G. Cooper
+     entregable: Auditoría completa del sistema Stage-Gate de la empresa contra la lista de siete características de primera clase, con plan de acción para las brechas identificadas.
+     pasos:
+        1. Documentar completamente el proceso: etapas, actividades, gates, criterios y entregables
+        2. Medir el grado real de adopción del proceso por los equipos (no solo su existencia)
+        3. Evaluar si el proceso facilita o entorpece el acceso a recursos
+        4. Implementar métricas de cumplimiento (compliance) del proceso
+        5. Crear versiones escalables del proceso según el riesgo y tamaño del proyecto
+        6. Designar un gerente de proceso responsable de coaching y mejora continua
+        7. Revisar y actualizar el proceso cada 3-5 años
+
+  NODO B: mitos_stage_gate
+     titulo    : Lo que Stage-Gate NO es (Desmitificación)
+     fuente    : Winning at New Products - Robert G. Cooper
+     entregable: Autoevaluación documentada del proceso actual de la empresa, identificando y corrigiendo cuáles de estos 'mitos' se están cometiendo.
+     pasos:
+        1. Verificar que el proceso permita actividades en paralelo, no solo secuenciales
+        2. Confirmar que existan flexibilidad y posibilidad de saltar u omitir etapas según el riesgo del proyecto
+        3. Asegurarse de que el proceso combine Stage-Gate (macro proceso) con gestión de proyectos (micro proceso, ej. Agile, Gantt)
+        4. Eliminar burocracia, papeleo y reuniones que no agreguen valor
+        5. Dar importancia real al front-end (ideación, definición y business case) y no solo al desarrollo/lanzamiento
+
+==============================================================================
+CASO LD-OPC05-037
+==============================================================================
+  NODO A: contract_close_out
+     titulo    : Cierre de Contrato
+     fuente    : A Project Manager's Book of Forms - Cynthia Stackpole Snyder
+     entregable: Informe de Cierre de Contrato con desempeño del proveedor, cambios, disputas y firma final
+     pasos:
+        1. Confirmar que todas las disputas contractuales estén resueltas
+        2. Verificar que el producto o resultado haya sido aceptado
+        3. Confirmar que se hayan realizado los pagos finales
+        4. Documentar el análisis de desempeño del proveedor y registro de cambios
+        5. Registrar la fecha de finalización del contrato y firma de cierre
+
+  NODO B: contractor_status_report
+     titulo    : Informe de Estado del Contratista
+     fuente    : A Project Manager's Book of Forms - Cynthia Stackpole Snyder
+     entregable: Informe de Estado del Contratista completo con desempeño actual y pronósticos futuros
+     pasos:
+        1. Solicitar al contratista el informe periódico de desempeño
+        2. Revisar el desempeño de alcance, calidad, cronograma y costo del periodo actual
+        3. Analizar los pronósticos de fecha de entrega y costo final
+        4. Registrar reclamaciones, disputas o riesgos nuevos
+        5. Integrar la información en el Informe de Desempeño del Proyecto
+
+==============================================================================
+CASO LD-OPC05-050
+==============================================================================
+  NODO A: decision_pivotar_o_proceder
+     titulo    : Decisión: Pivotar o Proceder
+     fuente    : The Startup Owner's Manual - Blank, Steve
+     entregable: Documento de decisión de pivotar o proceder, con checklist completado, Business Model Canvas actualizado y evidencia de las pruebas de éxito y fracaso realizadas
+     pasos:
+        1. Revisa honestamente si la validación convirtió opiniones en hechos, y no que moviste las metas para que coincidieran con el resultado
+        2. Confirma que el producto se vendió bien y fácilmente, que la llegada de clientes es predecible, escalable y rentable, y que existe un proceso de ventas repetible
+        3. Verifica que los tiempos de entrega del producto sean realistas con tu equipo de desarrollo
+        4. Toma un Business Model Canvas nuevo y busca game changers revisando propuesta de valor, precios, canales y relaciones con clientes, no solo mejoras incrementales
+        5. Presenta tu canvas a tu consejo asesor para que lo cuestione activamente
+        6. Actualiza el canvas con lo aprendido y decide formalmente si pivotar volviendo a descubrimiento o proceder avanzando a creación de clientes
+
+  NODO B: validar_modelo_financiero
+     titulo    : Validar el Modelo Financiero
+     fuente    : The Startup Owner's Manual - Blank, Steve
+     entregable: Un modelo financiero completo con pruebas pass/fail identificadas que demuestre la viabilidad de escalar el negocio de forma rentable
+     pasos:
+        1. Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable
+        2. Calcular costos de adquisición de clientes, tasas de conversión y Customer Lifetime Value (LTV)
+        3. Determinar costos operativos básicos, costos de canal y márgenes
+        4. Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año
+        5. Verificar el balance de caja disponible (runway)
+        6. Convertir las métricas validadas en un P&L, balance y flujo de caja multianual listo para inversionistas
+
+==============================================================================
+CASO LD-OPC05-061
+==============================================================================
+  NODO A: documentacion_exportacion
+     titulo    : Documentación de Exportación
+     fuente    : A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+     entregable: Carpeta completa de documentos de exportación por embarque, validada antes del envío
+     pasos:
+        1. Determina qué documentos necesitas según el destino y el tipo de producto
+        2. Prepara la factura pro forma para cotizar al comprador antes del envío
+        3. Emite la factura comercial una vez confirmada la venta, incluyendo los términos de venta y pago, y elabora la lista de empaque con el contenido, los pesos y las dimensiones
+        4. Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y delega la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker)
+        5. Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si tu envío supera el valor mínimo que se fije en tu país o si necesitas una licencia de exportación
+        6. Revisa toda la documentación antes del embarque y confirma con tu banco los plazos de cobro si hay carta de crédito
+
+  NODO B: seguro_exportacion
+     titulo    : Seguro de Exportación (Carga y Crédito)
+     fuente    : A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+     entregable: Pólizas de seguro de carga y/o crédito contratadas antes del embarque
+     pasos:
+        1. Determinar según términos de venta quién es responsable del seguro de carga
+        2. Contratar póliza propia o asegurar bajo la póliza del freight forwarder
+        3. No asumir que el comprador ha contratado seguro adecuado si es su responsabilidad, y verificar documentación
+        4. Evaluar contratación de seguro de crédito a la exportación para cubrir riesgo de impago
+        5. Verificar requisitos de instituciones financieras del comprador sobre seguro de crédito
+        6. Consultar con aseguradoras internacionales o freight forwarders para definir el nivel de cobertura (típicamente 110% del valor CIF/CIP).
+
