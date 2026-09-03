@@ -1,0 +1,37 @@
+====================================================================================================
+VUELTA 156, TAREA 4.b: EL CASO POSITIVO POR MUTACION DE LA PUERTA DEL NOMBRE
+====================================================================================================
+Vara VIEJA sacada de cf945888 (el HEAD de apertura sellado, no de HEAD)
+Copia escrita en scripts/loop/_v156_tallador_viejo_copia.py (1337 lineas), y se comprueba que NO trae el arreglo.
+
+----------------------------------------------------------------------------------------------------
+CASO A: vara NUEVA, --fase 06. SE ESPERA ROJO Y EXIT DISTINTO DE 0
+----------------------------------------------------------------------------------------------------
+  EXITCODE: 1 | ROJO: True | cifra: (0, 0, 0)
+  motivo: la fase '06' NO CALZA EXACTAMENTE con ningun nombre de docs/plan/OPERACIONES.jsonl. NO SE MIDE NADA: un nombre parcial (por ejemplo '06' en vez de '06
+
+----------------------------------------------------------------------------------------------------
+CASO B, LA CONTRAPRUEBA: vara VIEJA, --fase 06. SE ESPERA VERDE Y EXIT 0
+----------------------------------------------------------------------------------------------------
+  EXITCODE: 0 | ROJO: False | cifra (catalogo, cumplido, sin cumplir): (11, 11, 0)
+  LA MUTACION MUERDE: sobre LA MISMA ORDEN, la vieja da verde sobre 11 del
+  catalogo y la nueva cae en rojo. La contraprueba ataca el punto que era ciego.
+
+----------------------------------------------------------------------------------------------------
+CASO C: vara NUEVA, --fase 06_MESAS. SE ESPERA VERDE Y LA MISMA CIFRA DE ANTES
+----------------------------------------------------------------------------------------------------
+  cifra SELLADA antes del arreglo (leida de SALIDA_V156_T4_ANTES.txt): (16, 16, 0)
+  cifra de HOY con la vara nueva:                                     (16, 16, 0)
+  EXITCODE: 0 | ROJO: False | IDENTICAS: True
+
+----------------------------------------------------------------------------------------------------
+CASO D: vara NUEVA, --fase NO_EXISTE. LA RED DE ATRAS SIGUE PUESTA
+----------------------------------------------------------------------------------------------------
+  EXITCODE: 1 | ROJO: True
+
+====================================================================================================
+VERDE: los CUATRO casos salen como se esperaba.
+CIFRA casos del arnes en verde: 4 comprobacion(es)
+CIFRA operaciones del catalogo de 06_MESAS, antes y despues: 16 y 16
+====================================================================================================
+EXITCODE: 0

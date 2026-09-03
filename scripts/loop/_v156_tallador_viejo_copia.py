@@ -267,34 +267,6 @@ PRUEBA POR MUTACION"):
         OPERACIONES.jsonl: ROJO nombrandola;
   (iii) caso positivo sobre sujeto congelado: la fase 05, cerrada desde la
         vuelta 136.
-
---- ADJUDICACION 6.10 DEL ACTA 155 (3 sep 2026): UN `--fase` QUE NO CALCE
-EXACTAMENTE ES ROJO Y EXIT DISTINTO DE CERO ---
-
-CORRECCION DECLARADA POR ADICION. NADA DEL TEXTO ANTERIOR SE BORRA.
-
-EL HALLAZGO, MEDIDO POR EL AUDITOR EL 3 SEP 2026 Y SIN TUBERIA (la tuberia fue
-su propia caida 2 y la declara): `--fase 06_MESAS` daba 16 del catalogo, 16
-cumplidas, 0 sin cumplir y EXIT 0; `--fase 06` daba 11 DEL CATALOGO, 11
-cumplidas, 0 sin cumplir, EXIT 0 Y NI UNA QUEJA (cero propias, once recogidas
-por remision, porque `leer_remisiones` recorta el nombre de fase a su NUMERO y
-ese numero si casa). EL CATALOGO COMPLETAMENTE VACIO SI ESTABA CAZADO
-(`--fase NO_EXISTE`: ROJO y EXIT 1, por el fallo de `medir`); EL CATALOGO
-PARCIAL POR UN NOMBRE QUE NO EXISTE, NO.
-
-POR QUE IMPORTA Y NO ES TEORICO: es UN VERDE SOBRE UN UNIVERSO INCOMPLETO, la
-misma especie exacta del hallazgo de OP-C-05 del acta 153. Y este instrumento
-es el que midio el disparador que movio cinco fichas a HECHA, el que mide la
-celda de la fila 03 de la tabla por fase y el muro de la fase 08, y es contra
-el que `scripts/loop/verificar_cifras_del_reporte.py` coteja las afirmaciones
-de cierre del reporte.
-
-LO QUE SE ADJUDICA, POR EXTENSION DEL BANCO 9 (FALLAR RUIDOSO) Y SIN DOCTRINA
-NUEVA: es la misma regla que ya caza el catalogo vacio, aplicada al catalogo
-MUTILADO. `--fase X` donde X no sea EXACTAMENTE uno de los nombres de fase que
-`docs/plan/OPERACIONES.jsonl` trae es ROJO Y EXIT DISTINTO DE CERO, con la
-nomina de los nombres validos impresa al lado para que el rojo se pueda
-arreglar sin adivinar.
 """
 import argparse
 import io
@@ -1155,49 +1127,10 @@ def es_mesa(op):
     return (op.get("tipo") or "").upper().startswith("MESA ADJUDICADA")
 
 
-def nombres_de_fase(ops):
-    """LOS NOMBRES DE FASE QUE EL FICHERO TRAE, leidos del propio
-    OPERACIONES.jsonl y no tecleados aqui. Es el mismo universo que `--fases`
-    imprime, para que la puerta y la ayuda no puedan divergir."""
-    return sorted({o.get("fase") for o in ops if o.get("fase")})
-
-
 def medir(fase, ops, nodos, remisiones=None, ref="WORK"):
     """Devuelve (filas, cifra, fallos). Cada fila es un dict con todo lo que
-    la tabla imprime. Ninguna celda se teclea fuera de aqui.
-
-    --- LA PUERTA DEL NOMBRE DE FASE (vuelta 156, TAREA 4, adjudicacion 6.10 del
-    acta 155) ---
-
-    CORRECCION DECLARADA POR ADICION: el bloque de abajo que caza el CATALOGO
-    VACIO no se borra ni se toca, y sigue siendo la red de mas atras. Lo que se
-    anade es la puerta de delante.
-
-    UN `--fase` QUE NO CALCE EXACTAMENTE con un nombre de `docs/plan/
-    OPERACIONES.jsonl` es ROJO Y EXIT DISTINTO DE CERO, y ni se mide. El caso
-    real, medido por el auditor el 3 sep 2026 y reproducido aqui antes de tocar
-    nada (docs/loop/SALIDA_V156_T4_ANTES.txt): `--fase 06` daba 11 del catalogo,
-    11 cumplidas, 0 sin cumplir y EXIT 0 SIN UNA QUEJA, porque no hay ninguna
-    operacion con fase propia `06` pero `leer_remisiones` recorta el nombre a su
-    NUMERO y las once remitidas SI casaban. Un verde sobre un universo
-    incompleto.
-
-    LA PUERTA VA EN `medir` Y NO EN `main` A PROPOSITO: los arneses de las
-    vueltas 140 a 144 llaman a `medir` directamente, y una puerta que solo
-    viviera en la linea de ordenes los dejaria fuera."""
+    la tabla imprime. Ninguna celda se teclea fuera de aqui."""
     fallos = []
-    validos = nombres_de_fase(ops)
-    if fase not in validos:
-        fallos.append(
-            "la fase %r NO CALZA EXACTAMENTE con ningun nombre de %s. NO SE MIDE NADA: "
-            "un nombre parcial (por ejemplo '06' en vez de '06_MESAS') recoge las "
-            "remitidas por numero y daria un VERDE SOBRE UN UNIVERSO INCOMPLETO. Los "
-            "nombres validos son: %s" % (fase, REL_OPS, ", ".join(validos)))
-        cifra = dict(catalogo=0, cumplido=0, sin_cumplir=0, sin_vara=0,
-                     divergentes=0, consumidas=0, nombres_sin_cumplir=[],
-                     nombres_sin_vara=[], nombres_divergentes=[],
-                     nombres_consumidas=[])
-        return [], cifra, fallos
     if remisiones is None:
         remisiones = leer_remisiones(fase, ref)
     catalogo, por_id = construir_catalogo(fase, ops, remisiones, fallos)

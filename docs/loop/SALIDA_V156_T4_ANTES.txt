@@ -1,0 +1,42 @@
+=== ANTES DEL ARREGLO, MEDIDO SIN TUBERIA (el codigo de salida es el del instrumento) ===
+
+--- --fase 06_MESAS ---
+CIFRA: operaciones del catalogo: 16 | con destino cumplido: 16 | sin cumplir: 0 | de ellas, sin vara escrita: 0 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (0): ninguna
+EXITCODE: 0
+
+--- --fase 06 ---
+CIFRA: operaciones del catalogo: 11 | con destino cumplido: 11 | sin cumplir: 0 | de ellas, sin vara escrita: 0 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (0): ninguna
+EXITCODE: 0
+
+--- --fase NO_EXISTE ---
+CIFRA: operaciones del catalogo: 0 | con destino cumplido: 0 | sin cumplir: 0 | de ellas, sin vara escrita: 0 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (0): ninguna
+ROJO, 1 cosa(s) no cuadran:
+EXITCODE: 1
+
+--- --fase 03_FUSIONES ---
+CIFRA: operaciones del catalogo: 16 | con destino cumplido: 12 | sin cumplir: 4 | de ellas, sin vara escrita: 2 | de ellas, consumidas con superviviente divergente: 2 | de ellas, consumidas: 0
+SIN CUMPLIR (4): OP-M-02-ADMIT, OP-M-02-MEDIOS, OP-U-01, OP-U-02
+EXITCODE: 0
+
+--- --fase 08_VERIFICACION ---
+CIFRA: operaciones del catalogo: 1 | con destino cumplido: 0 | sin cumplir: 1 | de ellas, sin vara escrita: 1 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (1): OP-V-01
+EXITCODE: 0
+
+--- --fases (el catalogo de nombres) ---
+FASES EN docs/plan/OPERACIONES.jsonl (WORK):
+   00_CODIGO (7 operacion(es) con fase propia)
+   01_FUENTES (7 operacion(es) con fase propia)
+   02_DESTEJIDOS (9 operacion(es) con fase propia)
+   03_FUSIONES (16 operacion(es) con fase propia)
+   04_ENLACES (10 operacion(es) con fase propia)
+   05_SANEO (10 operacion(es) con fase propia)
+   06_MESAS (5 operacion(es) con fase propia)
+   07_ADUANA (2 operacion(es) con fase propia)
+   08_VERIFICACION (1 operacion(es) con fase propia)
+   09_LECTURAS_DIRIGIDAS (3 operacion(es) con fase propia)
+   10_INVENTARIO (1 operacion(es) con fase propia)
+EXITCODE: 0

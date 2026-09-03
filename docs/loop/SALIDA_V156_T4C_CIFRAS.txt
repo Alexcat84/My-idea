@@ -1,0 +1,70 @@
+========================================================================================================
+VUELTA 156, TAREA 4.c: NINGUNA CIFRA PUBLICADA DEPENDIA DEL VERDE SILENCIOSO
+========================================================================================================
+NOMBRES DE FASE VALIDOS, leidos del fichero con la misma funcion que usa la
+puerta (11): 00_CODIGO, 01_FUENTES, 02_DESTEJIDOS, 03_FUSIONES, 04_ENLACES, 05_SANEO, 06_MESAS, 07_ADUANA, 08_VERIFICACION, 09_LECTURAS_DIRIGIDAS, 10_INVENTARIO
+
+========================================================================================================
+EL BARRIDO, CONTADO
+========================================================================================================
+| |  |
+|---|---:|
+| invocaciones de --fase halladas en docs/ y scripts/ | 21 |
+| con un nombre que CALZA exactamente | 20 |
+| con un nombre que NO CALZA | 1 |
+
+CIFRA invocaciones de --fase halladas: 21 fichero(s)
+CIFRA invocaciones con nombre que no calza: 1 fichero(s)
+
+REPARTO POR NOMBRE INVOCADO:
+   05_SANEO                     3 vez(ces)   CALZA
+   06_MESAS                    16 vez(ces)   CALZA
+   07_ADUANA                    1 vez(ces)   CALZA
+   NO_EXISTE                    1 vez(ces)   NO CALZA
+
+========================================================================================================
+LAS QUE NO CALZAN, UNA A UNA. CADA UNA ES CIFRA PUBLICADA A REVISAR
+========================================================================================================
+   docs\loop\ACTA_AUDITOR.md                                :51325  --fase NO_EXISTE
+        Medi el codigo de salida de `tallar_estado_de_fase.py --fase NO_EXISTE` detras de
+
+========================================================================================================
+SEGUNDA VUELTA: LAS SALIDAS SELLADAS, LEIDAS POR SU PROPIA CABECERA
+========================================================================================================
+| |  |
+|---|---:|
+| salidas selladas de tallar_estado_de_fase.py halladas en docs/ | 52 |
+| con un nombre de fase que CALZA | 50 |
+| con un nombre de fase que NO CALZA | 2 |
+
+   00_CODIGO                    1 salida(s)   CALZA
+   01_FUENTES                   1 salida(s)   CALZA
+   02_DESTEJIDOS                1 salida(s)   CALZA
+   03_FUSIONES                  7 salida(s)   CALZA
+   05_SANEO                     5 salida(s)   CALZA
+   06                           1 salida(s)   NO CALZA
+   06_MESAS                    24 salida(s)   CALZA
+   07_ADUANA                    6 salida(s)   CALZA
+   08_VERIFICACION              3 salida(s)   CALZA
+   09_LECTURAS_DIRIGIDAS        1 salida(s)   CALZA
+   10_INVENTARIO                1 salida(s)   CALZA
+   NO_EXISTE_ESTA_FASE          1 salida(s)   NO CALZA
+
+CIFRA salidas selladas del tallador: 52 fichero(s)
+CIFRA salidas selladas con nombre de fase que no calza: 2 fichero(s)
+
+LAS QUE NO CALZAN, UNA A UNA, Y CADA UNA CON QUIEN LA CITA. UNA SALIDA QUE
+NADIE CITA NO PUEDE SOSTENER NINGUNA CIFRA PUBLICADA: eso NO se supone, se
+mide barriendo docs/ y scripts/ en busca de su nombre de fichero.
+   docs\loop\_auditor_v155_fase_06_corta.txt                  fase '06', catalogo 11
+        LA CITAN: NADIE
+   docs\loop\_auditor_v155_fase_inventada.txt                 fase 'NO_EXISTE_ESTA_FASE', catalogo 0
+        LA CITAN: NADIE
+
+   CIFRA salidas que no calzan y ADEMAS estan citadas: 0 fichero(s)
+
+   LAS DOS SON LOS FICHEROS DE DIAGNOSTICO DEL PROPIO AUDITOR EN LA VUELTA
+   155, escritos A PROPOSITO para exhibir el bug (un nombre de fase corto y
+   uno inventado), y NADIE LAS CITA. NINGUNA CIFRA PUBLICADA DEPENDIA DEL
+   BUG, Y POR TANTO NO HAY CIFRA PUBLICADA FALSA QUE CORREGIR.
+EXITCODE: 0
