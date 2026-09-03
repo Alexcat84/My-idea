@@ -1311,6 +1311,27 @@ def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
     # scripts/loop/vuelta154_tarea2a_universo_bidireccionales.py). Los dos
     # EXTREMOS siguen teniendo que resolver a nodos VIVOS: lo unico que se
     # afloja para contar el hueco es QUIEN declara la arista.
+    # CORRECCION DECLARADA POR ADICION (2026-09-03, vuelta 157, TAREA 1,
+    # ADJUDICACION 6.5 DEL ACTA 157). NADA DE LOS COMENTARIOS DE ARRIBA SE
+    # BORRA, Y EN PARTICULAR NO SE BORRA EL BLOQUE DE LA 6.9 DEL ACTA 155 QUE
+    # ESTA JUSTO ENCIMA: esta adjudicacion lo CONFIRMA, no lo enmienda.
+    #
+    # QUE SE PREGUNTO. El ejecutor de la vuelta 156 marco como DISCUTIBLE 2 la
+    # segunda mitad de aquella 6.9: el encargo mandaba la adjudicacion A LOS
+    # COMENTARIOS, y el ejecutor ademas cambio LA LINEA DE DETALLE DEL CHECK
+    # para que publicara el hueco, leyendo que "su cuenta se publica cada vez
+    # que la guarda hable" no lo puede cumplir un comentario, porque un
+    # comentario no habla cada vez. Lo marco por si sobraba.
+    #
+    # LA ADJUDICACION: SE QUEDA, Y NO SOBRA. El ejecutor leyo bien la letra: esa
+    # frase es LA LINEA DEL CHECK y no el comentario. El auditor lo comprobo en
+    # su propia corrida de Gate 0 del 3 sep 2026: la linea publica 154 pares,
+    # 154 con cita y 0 sin cita, y nombra LOS TRES excluidos y el 157 del
+    # universo ensanchado, TODO COMPUTADO Y NADA TECLEADO. NO SE REVIERTE.
+    #
+    # LO QUE ESTO DEJA ESCRITO PARA EL QUE VENGA DETRAS: cuando una adjudicacion
+    # mande "publicar" una cuenta, la sede es LA SALIDA DE LA GUARDA y no su
+    # comentario. Un comentario deja constancia; solo la salida publica.
     # ── FIN OP-C-05 ────────────────────────────────────────────
 
     # ── OP-A-01 (FASE 07 ADUANA): LOS TRES CONTROLES DE SU `verificacion` ────

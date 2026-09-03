@@ -83,6 +83,119 @@ LA FRONTERA, MEDIDA PARA QUE NADIE SE ASUSTE: la guarda de `OP-C-05` de
 `scripts/run_phase1.py` mete en `_citados` el campo `par` de TODA linea del
 registro, SIN MIRAR LA CLASE, asi que RECLASIFICAR DE C A D NO PONE GATE 0 EN
 ROJO. Lo que la clase mueve es la lectura, no la cobertura del registro.
+
+--- ADJUDICACION 6.3 DEL ACTA 157 (3 sep 2026): EL SACO DE LAS C SIN FIGURA SE
+VACIA LEYENDO, EN LOTES, Y NO EN BLOQUE ---
+
+REGISTRO POR ADICION. Nada de lo escrito arriba se borra.
+
+EL HECHO QUE LO OBLIGA, MEDIDO Y NO SOSPECHADO (auditor, acta 157 seccion 5.1,
+salida `_auditor_v157_figura.txt`, con vara propia mas estrecha que la del
+ejecutor y coincidiendo en el numero que importa):
+
+    en los 3.388 veredictos del cribado la C aparece 5 veces  : 0,15 por ciento
+    en este mismo registro, la via CRIBADO tiene 32 entradas  : CERO en C
+    en este mismo registro, la via LECTURA_DIRIGIDA tiene 122 : 119 en C, o sea
+                                                                97,5 por ciento
+    y el 9.22 dice de su figura: "Primera aparicion en 1.100 pares leidos. Es
+    rara".
+
+UNA FIGURA QUE EL BANCO LLAMA RARA NO PUEDE SER EL 97,5 POR CIENTO DE UNA VIA.
+LA C DE LA VIA DE LECTURAS DIRIGIDAS Y LA C DEL ARCHIVO NO SON LA MISMA LETRA, y
+eso no es una sospecha de redaccion: es una divergencia medida entre dos vias
+del mismo fichero.
+
+LAS TRES SALIDAS Y POR QUE SE ELIGE LA SEGUNDA. Reclasificar 116 clases EN
+BLOQUE seria mover 116 cifras publicadas sin una lectura detras, que es la
+especie exacta de caida que esta campana persigue. Ajustar la vara para que no
+las alcance seria dejar escrita como figura rara una letra que el 97,5 por
+ciento de una via lleva puesta. SE ADJUDICA LEER: LA CLASE ES UN HECHO SOBRE LOS
+NODOS Y SOLO UNA LECTURA LA FIJA. Se lee EN LOTES, una a una.
+
+LAS GUARDAS DEL LOTE, QUE NO SE AFLOJAN: correccion declarada y aditiva en cada
+una; `n` NO SE MUEVE; assert de frontera con sha256 de `dataset/` y conteo de
+censo y aristas antes y despues (el registro cambia, EL GRAFO NO); Gate 0 al
+terminar el lote; y LA QUE SALGA A NO SE VOLTEA, se marca como discutible y no
+se ejecuta ninguna fusion.
+
+--- ADJUDICACION 6.4 DEL ACTA 157 (3 sep 2026): NOMBRAR DOS PASOS NO BASTA. LA
+FIGURA PIDE DOS LINEAS DISTINTAS Y QUE CADA NODO EXPANDA LA DEL OTRO ---
+
+CORRECCION DECLARADA POR ADICION, y NO ES DOCTRINA NUEVA: es cita literal del
+9.22, que escribe su propia comprobacion separadora.
+
+LA VARA, EN UNA SOLA PREGUNTA ESTRECHA Y BINARIA, que es la que se aplica a cada
+lectura dirigida en clase C:
+
+    SE PUEDEN NOMBRAR DOS LINEAS DISTINTAS, UNA EN CADA NODO, Y DECIR QUE
+    PROCEDIMIENTO DEL OTRO NODO EXPANDE CADA UNA?
+
+  - Si SI: la C se sostiene, y la razon LAS NOMBRA.
+  - Si NO: la clase es D.
+  - Y si la razon describe que CADA NODO EXPANDE LO SUYO, eso es el PUESTO 2091
+    del banco y la clase es D. Dos nodos sanos que no se tocan son D, no C.
+
+LO QUE EL 9.22 DICE Y QUE ESTA VARA SOLO REPITE: "Si las dos direcciones apuntan
+a la misma linea, no es esta figura". O sea que ni siquiera nombrar dos punteros
+de paso basta si los dos punteros van a la misma linea. `LD-OPC05-031` se
+delataba solo diciendo de si mismo que las dos son "casi la misma linea" y
+sosteniendose "porque el sujeto es distinto": SUJETO DISTINTO ES LA DEFINICION
+DE D, NO DE C.
+
+ESTA VARA ALCANZA AL SACO PEQUENO IGUAL QUE AL GRANDE: traer puntero de paso NO
+protege. Y no protege tampoco ser SANO: la 6.3 del acta 155 sostuvo
+`LD-OPC05-046` en C por el 9.6.3, o sea POR SER SANO, y bajo esta vara SANO SIN
+FIGURA ES D. Esa parte de la 6.3 del acta 155 queda revocada por el acta 157.
+
+--- ADJUDICACION 6.6 DEL ACTA 157 (3 sep 2026): LA D SE QUEDA, EL MOTIVO LO
+LLEVA LA RAZON, Y ANTES DE PROPONER UNA LETRA NUEVA SE MIDE LA CUENTA ---
+
+REGISTRO POR ADICION. Nada de lo escrito arriba se borra.
+
+LA OBJECION, QUE EL ACTA CONCEDE: la etiqueta D se lee en el archivo como SANO Y
+DISTINTO, y hay pares registrados en D cuyo motivo real es MADRE E HIJO, EL PAR
+CONTINUA (tercer caso del 9.22). La etiqueta no miente sobre la clase, pero no
+cubre uno de sus dos motivos.
+
+POR QUE NO ES PARADA Y NO SE INVENTA LETRA: EL ARCHIVO YA RESOLVIO ESA ESPECIE
+EN D DESDE HACE TIEMPO, y el auditor lo midio en el registro del cribado el 3
+sep 2026: los PUESTOS 316 ("la eleccion del metodo de estimacion contra la hoja
+que lo calcula"), 478 ("EL HIJO CON CASA PROPIA"), 1424, 1494 y 2066 son todos
+madre e hijo REGISTRADOS EN D. No hay contradiccion que resolver ni regla nueva
+que escribir. UNA LETRA NUEVA SI SERIA DOCTRINA NUEVA Y ESO SI SERIA PARADA: no
+se abre sin la cuenta delante.
+
+LO QUE SE ENCARGA ANTES DE QUE NADIE PROPONGA NADA, Y ES SOLO MEDIR: repartir
+las D de este registro en MADRE E HIJO (el par continua) contra SANO Y DISTINTO,
+por lectura de su razon, publicar los dos conteos y la nomina de cada saco, y
+declarar la vara con sus limites. Se hace en la TAREA 8 de la vuelta 157 con
+`scripts/loop/vuelta157_tarea8_dos_especies_de_d.py`, salida
+`docs/loop/SALIDA_V157_T8_DOS_ESPECIES_D.txt`. ESA TAREA MIDE: no reclasifica
+nada y no toca una clase.
+
+--- ADJUDICACION 6.8 DEL ACTA 157 (3 sep 2026): EL LECTOR SE ENSANCHA PARA
+ACEPTAR LA CELDA TACHADA Y TOMAR LA ULTIMA CLASE ESCRITA ---
+
+CORRECCION DECLARADA POR ADICION, y toca `citas_de_lectura_dirigida`, que es la
+funcion de este fichero que lee `docs/plan/LECTURAS_DIRIGIDAS.md`.
+
+EL CHOQUE QUE LA ORIGINA, Y LAS DOS REGLAS QUE CHOCABAN. La costumbre de la casa
+es NO TAPAR LO QUE SE CORRIGE, y en el `.md` eso se escribe tachando la clase
+vieja (`~~C~~ D`). Pero el patron de esta funcion pedia `([A-Z]+)` en la celda
+de clase, asi que una celda tachada NO CASABA Y LA FILA DESAPARECIA DEL
+REGISTRO. Medido por mutacion por el auditor (acta 157, seccion 5.4, salida
+`_auditor_v157_tachado.txt`) sobre la fila 97: como estaba, 1 coincidencia; con
+`~~C~~ D`, 0 COINCIDENCIAS. La vuelta 156 eligio bien al dejar la celda limpia,
+porque lo otro tumbaba Gate 0.
+
+LO QUE SE ADJUDICA: LA GUARDA SE ADAPTA AL REGISTRO HONESTO, NO AL REVES (banco
+9, por extension). El patron acepta una celda con una o mas clases tachadas
+seguidas de la clase vigente, Y TOMA LA ULTIMA CLASE ESCRITA. Con su caso
+positivo por mutacion (`scripts/loop/vuelta157_tarea4b_mutacion_tachado.py`,
+salida `docs/loop/SALIDA_V157_T4B_MUTACION_TACHADO.txt`), que exige las tres
+cosas: que el lector VIEJO pierda la fila tachada, que el NUEVO la recupere con
+la clase buena, Y que el conteo de pares del registro salga IDENTICO antes y
+despues sobre el fichero SIN tachar.
 """
 import argparse
 import collections

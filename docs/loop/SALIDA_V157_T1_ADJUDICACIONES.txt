@@ -1,0 +1,47 @@
+==============================================================================
+VUELTA 157, TAREA 1: LAS DIEZ ADJUDICACIONES DE LA SECCION 6 DEL ACTA 157,
+ESCRITAS DONDE CADA UNA VIVE, TODAS POR ADICION.
+==============================================================================
+
+A) LOS SEIS FICHEROS .py
+  6.1  scripts/loop/vuelta156_tarea2a_pasos_con_hijo.py         ANADIDO (32 lineas)
+  6.2  scripts/loop/vuelta156_tarea2a_pasos_con_hijo.py         ANADIDO (34 lineas)
+  6.3  scripts/loop/vuelta152_registro_de_citas_opc05.py        ANADIDO (34 lineas)
+  6.4  scripts/loop/vuelta152_registro_de_citas_opc05.py        ANADIDO (29 lineas)
+  6.6  scripts/loop/vuelta152_registro_de_citas_opc05.py        ANADIDO (26 lineas)
+  6.8  scripts/loop/vuelta152_registro_de_citas_opc05.py        ANADIDO (24 lineas)
+  6.9  scripts/loop/verificar_mutaciones_viejas.py              ANADIDO (44 lineas)
+  6.10 scripts/loop/verificar_cifras_del_reporte.py             ANADIDO (30 lineas)
+  6.5  scripts/run_phase1.py (guarda OP-C-05)                   ANADIDO (21 lineas)
+  6.7  vuelta150_3_relectura_expediente.py (p3b)                ANADIDO (37 lineas)
+
+B) EL REGISTRO DE CITAS, POR ADICION AL CAMPO `razon` DE LD-OPC05-097
+  6.1  LD-OPC05-097     razon ampliada (+1108 caracteres)
+  6.2  LD-OPC05-097     razon ampliada (+1144 caracteres)
+  6.6  LD-OPC05-097     razon ampliada (+798 caracteres)
+
+C) LA ADITIVIDAD SE MIDE, NO SE PROMETE
+
+C.1) LOS .py, POR numstat DE GIT (se exige BORRADOS 0):
+     scripts/loop/vuelta156_tarea2a_pasos_con_hijo.py         +66   -0
+     scripts/loop/vuelta152_registro_de_citas_opc05.py        +113  -0
+     scripts/run_phase1.py                                    +21   -0
+     scripts/loop/vuelta150_3_relectura_expediente.py         +37   -0
+     scripts/loop/verificar_mutaciones_viejas.py              +44   -0
+     scripts/loop/verificar_cifras_del_reporte.py             +30   -0
+     CIFRA borrados totales en los seis .py: 0
+
+C.2) EL JSONL, POR ASSERT DE PREFIJO LITERAL sobre el campo `razon`:
+     CIFRA entradas del registro con el texto viejo comprobado como PREFIJO: 154
+     CIFRA entradas cuya `razon` CRECIO: 1 (LD-OPC05-097)
+     esquema IGUAL (7 claves), clases IGUALES, pares IGUALES (154).
+
+CIFRA adjudicaciones escritas en esta corrida: 13 operaciones
+CIFRA lineas del registro de citas: 154 linea(s)
+CIFRA ficheros de codigo tocados: 6 fichero(s)
+
+NADA SE BORRA: los ocho bloques de docstring de modulo se insertan al FINAL
+del docstring, el de la 6.7 al final del docstring de `p3b_caso_positivo`, el
+de la 6.5 DELANTE del cierre del comentario de OP-C-05 (o sea DEBAJO del
+bloque de la vuelta 156, que no se toca), y las tres adiciones del registro se
+CONCATENAN detras del texto viejo de la razon de LD-OPC05-097.

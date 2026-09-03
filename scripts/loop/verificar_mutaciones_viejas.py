@@ -104,6 +104,50 @@ USO:
   python scripts/loop/verificar_mutaciones_viejas.py
   python scripts/loop/verificar_mutaciones_viejas.py --mutar-ancla
   python scripts/loop/verificar_mutaciones_viejas.py --mutar-reproducibilidad
+
+--- ADJUDICACION 6.9 DEL ACTA 157 (3 sep 2026): ESTA GUARDA ATRIBUIA SUS ROJOS
+AL SCRIPT EQUIVOCADO, Y SE CINE A LOS FICHEROS QUE CADA SCRIPT ESCRIBE ---
+
+CORRECCION DECLARADA POR ADICION. Nada de lo escrito arriba se borra: el cotejo
+de reproducibilidad de la TAREA 2.f de la vuelta 141 sigue siendo lo que esta
+bateria hace, y sigue siendo necesario.
+
+COMO SE DESCUBRIO, Y LO DESCUBRIO EL AUDITOR CAYENDO EL (acta 157, caida 2 y
+seccion 5.3). Corrio esta bateria CON SUS PROPIOS INSTRUMENTOS CORRIENDO AL
+LADO, despues de haberle escrito al ejecutor que se corre SOLA. Salio ROJO
+exit 1 con DOS "salidas selladas que NO SE REPITEN", acusando a
+`vuelta144_2b_mutacion_giro.py` y a `vuelta147_2c_mutacion_vitalidad.py` por
+`_auditor_v157_p3b.txt` y `_auditor_v157_tachado.txt`, DOS FICHEROS SUYOS QUE
+NINGUNO DE LOS DOS SCRIPTS ESCRIBE: la propia salida decia de los dos "salidas
+selladas que escribe: ninguna". Re corrida sola: VERDE. Las dos corridas quedan
+selladas en `docs/loop/_auditor_v157_mutaciones.txt` (la roja) y
+`_auditor_v157_mutaciones2.txt` (la verde) para poder reproducir el escenario.
+
+EL DEFECTO, EN UNA LINEA: `correr_dos_veces` computaba `inestables` sobre
+`set(tras1) | set(tras2)`, o sea SOBRE EL DIRECTORIO ENTERO, y le colgaba a un
+script cualquier fichero que apareciera o cambiara mientras el corria. FALLA
+RUIDOSO, QUE ESTA BIEN, PERO NOMBRA AL CULPABLE EQUIVOCADO, Y UN ROJO QUE NOMBRA
+AL SCRIPT EQUIVOCADO ES UN ROJO QUE NO SE PUEDE SEGUIR: eso es media guarda.
+
+LO QUE SE ADJUDICA, POR EXTENSION DEL BANCO 9 Y SIN DOCTRINA NUEVA:
+  (a) LA COMPROBACION DE REPRODUCIBILIDAD SE CINE A `escritos`, que es la lista
+      de ficheros que ESE script escribio en su primera corrida, y que esta
+      guarda YA COMPUTA Y YA PUBLICA ("salidas selladas que escribe (computadas,
+      no tecleadas)"). Ningun fichero fuera de esa lista puede poner a un script
+      en NO REPRODUCIBLE.
+  (b) LO QUE APAREZCA O CAMBIE EN `docs/loop/` Y NO SEA DE NADIE NO SE CALLA: se
+      reporta APARTE, con su nombre, bajo el rotulo RUIDO DE CONCURRENCIA, y NO
+      ENCIENDE EL ROJO DE NINGUN SCRIPT. Callarlo seria la caida contraria.
+  (c) EL ROJO SE QUEDA INTACTO PARA LO QUE SI ES SUYO: si un fichero que el
+      script escribe cambia entre dos corridas, sigue siendo NO REPRODUCIBLE y
+      sigue siendo exit 1.
+
+SU CASO POSITIVO POR MUTACION YA EXISTIA ANTES QUE LA CORRECCION, que es lo mas
+limpio que le puede pasar a una guarda: es la corrida roja del auditor. Se
+reproduce con `scripts/loop/vuelta157_tarea5c_mutacion_ruido.py`, salida
+`docs/loop/SALIDA_V157_T5C_MUTACION_RUIDO.txt`, que exige las dos mitades: que
+la version VIEJA de `correr_dos_veces` siga saliendo ROJA sobre ese escenario y
+que la NUEVA salga VERDE nombrando el ruido aparte. Y LAS 23 SIGUEN SIENDO 23.
 """
 import argparse
 import hashlib

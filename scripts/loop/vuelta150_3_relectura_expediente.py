@@ -354,6 +354,43 @@ def p3b_caso_positivo(F, corte):
     LO QUE ESTA VUELTA NO HACE, Y SE DICE: NO mete esas nueve salidas en la
     bateria. Meterlas es una decision de tamano y de coste por vuelta que no es
     del ejecutor, y va al reporte como pregunta."""
+    # --- ADJUDICACION 6.7 DEL ACTA 157 (3 sep 2026): MIENTRAS LAS NUEVE
+    # SALIDAS NO ENTREN EN LA BATERIA, ESTA P3b ES UN PROXY SIN RESPALDO
+    # EFECTIVO ---
+    #
+    # REGISTRO POR ADICION, Y VA AQUI Y NO DENTRO DEL DOCSTRING POR UNA RAZON
+    # MEDIDA: el docstring de arriba cierra con TRES COMILLAS pegadas a su ultima
+    # de texto, y meter el bloque dentro obligaba a re escribir esa linea, lo
+    # que `git diff --numstat` canta como UN BORRADO. La regla de aditividad de
+    # esta vuelta dice CERO borrados, asi que el bloque baja un renglon. Nada de
+    # lo escrito arriba se borra, y en particular no se borra el bloque de la
+    # 6.6 del acta 155, que nombraba `verificar_mutaciones_viejas.py` como
+    # respaldo: esta adjudicacion dice exactamente por que ESE RESPALDO ERA
+    # NOMINAL, y la culpa es de aquella adjudicacion, que lo dio por bueno SIN
+    # CRUZARLO.
+    #
+    # LO QUE EL AUDITOR CERRO, Y NO POR NOMBRE (acta 157, seccion 5.4, salida
+    # `_auditor_v157_p3b.txt`): busco cada una de las NUEVE salidas citadas
+    # DENTRO DEL TEXTO de los VEINTITRES scripts de la bateria, y NINGUNO
+    # ESCRIBE NINGUNA. El hueco de 4 DE 4 medido por la vuelta 156 NO ESTA
+    # INFLADO, y el discutible 4 de aquel reporte (que declaraba que la
+    # correspondencia era por nombre y podia sobre estimar) queda cerrado A
+    # FAVOR DE LA CIFRA.
+    #
+    # LO QUE FALTABA ERA EL COSTE, Y SE MIDE EN VEZ DE ADIVINARSE. Meter nueve
+    # scripts mas en cada cierre es una decision de coste por vuelta que no es
+    # del ejecutor. La vuelta 157 corre las nueve UNA VEZ, cronometradas por
+    # script y con su salida sellada, y publica si cada una todavia MUERDE
+    # (`scripts/loop/vuelta157_tarea7_coste_p3b.py`, salida
+    # `docs/loop/SALIDA_V157_T7_COSTE_P3B.txt`). CON ESA CIFRA DELANTE se dice
+    # cuanto anadirian al cierre de cada vuelta, Y AHI PARA: no se meten en la
+    # bateria por cuenta del ejecutor.
+    #
+    # LA LETRA QUE ESTA FUNCION LLEVA MIENTRAS TANTO, Y ES LA QUE EL ACTA MANDA
+    # ESCRIBIR AQUI: LA P3b DE ESAS CUATRO FICHAS (OP-C-05, OP-E-03, OP-E-07 y
+    # OP-S-11) ES UN PROXY SIN RESPALDO EFECTIVO. Sostiene que el artefacto de
+    # la prueba EXISTE al corte, y NADIE LA VUELVE A CORRER. Un proxy con su
+    # agujero contado es aceptable; un respaldo que no respalda, no.
     r = subprocess.run(["git", "ls-tree", "-r", "--name-only", corte, "docs/loop/"],
                        capture_output=True, cwd=RAIZ)
     en_el_corte = {x.strip().split("/")[-1] for x in r.stdout.decode("utf-8", "replace").splitlines()

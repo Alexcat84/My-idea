@@ -351,6 +351,36 @@ EL CONTRATO, RE LEIDO Y CITADO POR SU LINEA:
     guarda la busca en el fichero citado y coteja contra ella.
   - LA LINEA EMPIEZA EN COLUMNA CERO: el patron es MULTILINE y anclado en `^`.
   - SE APLICA IGUAL A UN REPORTE DE FASE III: esta guarda no distingue fase.
+
+--- ADJUDICACION 6.10 DEL ACTA 157 (3 sep 2026): UNA SALIDA SELLADA QUE SE RE
+ESCRIBE DESPUES DEL COMMIT DE SU TAREA SE DECLARA. NO SE PROHIBE RE SELLAR: SE
+PROHIBE RE SELLAR EN SILENCIO ---
+
+CORRECCION DECLARADA POR ADICION. Nada de lo escrito arriba se borra.
+
+DE DONDE NACE, Y NACE DE UNA CAIDA DE REPORTE DEL EJECUTOR (acta 157, seccion
+4). La caida 4 del reporte de la vuelta 156 remataba con "las cifras no
+cambiaron: lo que cambio fue la columna", y el auditor lo desmintio con
+`git diff 92d29d23^ 92d29d23` sobre los propios ficheros del ejecutor: el re
+sellado movio `SALIDA_V156_T4C_CIFRAS.txt` de "salidas selladas 52" a 55 y de
+"con un nombre de fase que CALZA: 50" a 53, y
+`SALIDA_V156_T3A_FIGURA_DELGADA.txt` de {"C": 121, "D": 1} a {"C": 119, "D": 3}.
+NINGUNA CIFRA PUBLICADA ERA FALSA, porque el reporte pega las lineas FINALES y
+el auditor las verifico todas. LO FALSO ERA LA AFIRMACION SOBRE EL EFECTO DE LA
+PROPIA CORRECCION: lo que no movio cifras fue DEDENTAR, lo que las movio fue RE
+CORRER MAS TARDE, y la frase juntaba las dos cosas. Vive en prosa y NO ACUMULA,
+pero la especie si es estructural: una vara anclada a algo que se mueve.
+
+LO QUE SE ADJUDICA, Y ES POR CONSTRUCCION, NO POR PROMESA: para cada `SALIDA_*`
+que el reporte cite, se compara SU VERSION EN EL COMMIT DE SU TAREA contra la de
+HEAD, y si cambio, EL REPORTE TIENE QUE DECLARARLO, con el `numstat` y con LA
+LISTA DE LINEAS `CIFRA` CUYO VALOR CAMBIO, COMPUTADOS Y NO NARRADOS. Si cambio y
+el reporte no lo declara, es ROJO con su nombre.
+
+DONDE VIVE LA GUARDA: `scripts/loop/verificar_re_sellado.py`, con su caso por
+mutacion `scripts/loop/vuelta157_tarea6b_mutacion_re_sellado.py` (salida
+`docs/loop/SALIDA_V157_T6B_MUTACION_RE_SELLADO.txt`). Se corre en el ciclo de
+cierre, al lado de esta guarda.
 """
 import argparse
 import glob
