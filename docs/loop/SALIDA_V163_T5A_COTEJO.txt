@@ -1,0 +1,39 @@
+==============================================================================
+VUELTA 163, TAREA 5.a: NOMBRE ESTABLE POR REMISION PARA EL CONTADOR DE P.5.2
+==============================================================================
+
+A) EL VIEJO NO SE BORRA Y LAS CITAS SIGUEN RESOLVIENDO
+   existe scripts/loop/_v163_contador_viejo_copia.py                 True
+   existe scripts/loop/vuelta161_tarea1c_segunda_lectura.py          True
+   existe scripts/loop/contador_de_segundas_lecturas.py              True
+   CIFRA ficheros de docs/ que citan el nombre viejo: 4
+      docs/PENDIENTES.md:1
+      docs/loop/ACTA_AUDITOR.md:1
+      docs/loop/REPORTE.md:1
+      docs/plan/BANCO_DEL_PLAN.md:2
+   El nombre viejo SIGUE EXISTIENDO, asi que ninguna de esas citas se rompe.
+
+B) LOS TRES, CORRIDOS HOY
+   scripts/loop/_v163_contador_viejo_copia.py    exit 0  COPIA DEL VIEJO, TOMADA ANTES DE TOCAR NADA
+      con al menos una=92  con dos o mas=16  con ninguna=30  actos sobre filas=115  tipos de acto=8
+   scripts/loop/vuelta161_tarea1c_segunda_lectura.py exit 0  EL VIEJO, DESPUES DEL CAMBIO
+      con al menos una=92  con dos o mas=16  con ninguna=30  actos sobre filas=115  tipos de acto=8
+   scripts/loop/contador_de_segundas_lecturas.py exit 0  EL NOMBRE ESTABLE, POR REMISION
+      con al menos una=92  con dos o mas=16  con ninguna=30  actos sobre filas=115  tipos de acto=8
+
+C) LAS CINCO CIFRAS, COTEJADAS CONTRA LA VARA DEL ENCARGO Y ENTRE SI
+   con al menos una     [92, 92, 92]  | iguales en los tres: True  | vara del encargo 92: CALZA
+   con dos o mas        [16, 16, 16]  | iguales en los tres: True  | vara del encargo 16: CALZA
+   con ninguna          [30, 30, 30]  | iguales en los tres: True  | vara del encargo 30: CALZA
+   actos sobre filas    [115, 115, 115]  | iguales en los tres: True  | vara del encargo 115: CALZA
+   tipos de acto        [8, 8, 8]  | iguales en los tres: True  | vara del encargo 8: CALZA
+
+D) LA SALIDA ENTERA, BYTE A BYTE, Y NO SOLO LAS CIFRAS
+   scripts/loop/vuelta161_tarea1c_segunda_lectura.py IDENTICA
+   scripts/loop/contador_de_segundas_lecturas.py IDENTICA
+   La UNICA diferencia admitida es la linea de remision que el nombre
+   estable anade a proposito, y se descuenta con su literal declarado.
+   CIFRA lineas de remision en la salida del nombre estable: 1
+
+VERDE: los tres dan las MISMAS cinco cifras, calzan con la vara del encargo,
+y su salida es IDENTICA byte a byte salvo la linea de remision declarada.

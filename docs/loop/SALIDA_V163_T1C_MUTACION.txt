@@ -1,0 +1,31 @@
+==============================================================================
+VUELTA 163, TAREA 1.c: CASO POSITIVO POR MUTACION
+==============================================================================
+
+   la_R30_nombra_cinco_ids                        PASA   (real=5 esperado=5)
+   las_cinco_son_esas                             PASA   (real=['LD-OPC05-005', 'LD-OPC05-094', 'LD-OPC05-100', 'LD-OPC05-101', 'LD-OPC05-118'] esperado=['LD-OPC05-005', 'LD-OPC05-094', 'LD-OPC05-100', 'LD-OPC05-101', 'LD-OPC05-118'])
+   las_cinco_llevan_alguna_marca_contable         PASA   (real=['LD-OPC05-005', 'LD-OPC05-094', 'LD-OPC05-100', 'LD-OPC05-101', 'LD-OPC05-118'] esperado=['LD-OPC05-005', 'LD-OPC05-094', 'LD-OPC05-100', 'LD-OPC05-101', 'LD-OPC05-118'])
+   con_ciega_del_auditor_en_el_registro           PASA   (real=['LD-OPC05-005', 'LD-OPC05-100'] esperado=['LD-OPC05-005', 'LD-OPC05-100'])
+   sin_ciega_del_auditor_en_el_registro           PASA   (real=['LD-OPC05-094', 'LD-OPC05-101', 'LD-OPC05-118'] esperado=['LD-OPC05-094', 'LD-OPC05-101', 'LD-OPC05-118'])
+   la_ciega_162_sella_094                         PASA   (real='D' esperado='D')
+   la_ciega_162_sella_118                         PASA   (real='D' esperado='D')
+   la_ciega_162_sella_101_en_C                    PASA   (real='C' esperado='C')
+   el_sello_no_hace_contable_la_ciega_de_094      PASA   (real=False esperado=False)
+   la_marca_de_094_es_del_ejecutor_no_del_auditor PASA   (real=['TRAMO_AL_DOBLE'] esperado=['TRAMO_AL_DOBLE'])
+
+   CIFRA casos: 10 | pasan: 10 | fallan: 0
+
+   SEGUNDA PASADA: SE MUTA EL VALOR ESPERADO Y TIENE QUE CAER
+   la_R30_nombra_cinco_ids                        CAE
+   las_cinco_son_esas                             CAE
+   las_cinco_llevan_alguna_marca_contable         CAE
+   con_ciega_del_auditor_en_el_registro           CAE
+   sin_ciega_del_auditor_en_el_registro           CAE
+   la_ciega_162_sella_094                         CAE
+   la_ciega_162_sella_118                         CAE
+   la_ciega_162_sella_101_en_C                    CAE
+   el_sello_no_hace_contable_la_ciega_de_094      CAE
+   la_marca_de_094_es_del_ejecutor_no_del_auditor CAE
+
+   CIFRA casos que CAEN: 10 de 10
+VERDE: 10 casos, los 10 pasan y los 10 CAEN al mutarles el valor esperado.

@@ -93,25 +93,6 @@ VIEJAS = [
 ]
 
 
-def actos_de_relectura(razon):
-    """LOS ACTOS CONTABLES DE UNA RAZON, EN UNA SOLA FUENTE.
-
-    ANADIDA EN LA VUELTA 163 (TAREA 5.a, adjudicacion 6.11 del acta 162). NO
-    CAMBIA NI UNA CIFRA: es EXACTAMENTE el bucle que `main()` tenia dentro,
-    sacado a funcion para que quien necesite la definicion la IMPORTE en vez de
-    reimplementarla. `main()` la llama desde aqui, asi que no hay dos copias del
-    criterio, que es la enfermedad que P.5.2 vino a curar en su propio terreno.
-
-    Devuelve un conjunto de pares `(tipo, vuelta)`. Es un CONJUNTO a proposito:
-    la regla 3 de `P.5.2` colapsa dos marcas del mismo acto sobre la misma fila.
-    """
-    actos = set()
-    for patron, tipo in FORMAS_QUE_CUENTAN:
-        for m in re.finditer(patron, razon):
-            actos.add((tipo, int(m.group(1))))
-    return actos
-
-
 def linea_del_acta(numero):
     """Lee del fichero la linea que la cita nombra, para que la cita vaya con su
     linea leida HOY y no con la que alguien recuerde (EJECUTOR.md 1)."""
@@ -149,7 +130,10 @@ def main():
     actos_por_fila = {}
     actos_tot = collections.Counter()
     for f in ld:
-        actos = actos_de_relectura(f["razon"])
+        actos = set()
+        for patron, tipo in FORMAS_QUE_CUENTAN:
+            for m in re.finditer(patron, f["razon"]):
+                actos.add((tipo, int(m.group(1))))
         actos_por_fila[f["cita"].split(",")[0]] = actos
         for a in actos:
             actos_tot[a] += 1

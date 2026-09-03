@@ -1,0 +1,31 @@
+==============================================================================
+VUELTA 163, TAREA 1.b: CASO POSITIVO POR MUTACION (solo lo mecanico)
+==============================================================================
+
+   la_vara_trae_cuatro_ejemplares                       PASA   (real=4 esperado=4)
+   la_frase_es_la_congelada                             PASA   (real=True esperado=True)
+   los_cuatro_ejemplares_son_esos                       PASA   (real=['LD-OPC05-052', 'LD-OPC05-095', 'LD-OPC05-122', 'LD-OPC05-100'] esperado=['LD-OPC05-052', 'LD-OPC05-095', 'LD-OPC05-122', 'LD-OPC05-100'])
+   ni_la_027_ni_la_004_son_ejemplares                   PASA   (real=False esperado=False)
+   el_par_en_disputa_sale_asimetrico                    PASA   (real=True esperado=True)
+   sin_la_palabra_del_lienzo_el_cruce_CAMBIA            PASA   (real=True esperado=True)
+   sin_la_palabra_del_lienzo_deja_de_ser_asimetrico     PASA   (real=False esperado=False)
+   con_la_palabra_de_search_el_cruce_SE_VUELVE_SIMETRICO PASA   (real=True esperado=True)
+   el_par_existe_en_las_dos_vistas                      PASA   (real=4 esperado=4)
+
+   CIFRA casos: 9 | CIFRA que pasan: 9 | CIFRA que fallan: 0
+
+   SEGUNDA PASADA: SE MUTA EL VALOR ESPERADO DE CADA CASO Y TIENE QUE CAER
+   la_vara_trae_cuatro_ejemplares                       CAE
+   la_frase_es_la_congelada                             CAE
+   los_cuatro_ejemplares_son_esos                       CAE
+   ni_la_027_ni_la_004_son_ejemplares                   CAE
+   el_par_en_disputa_sale_asimetrico                    CAE
+   sin_la_palabra_del_lienzo_el_cruce_CAMBIA            CAE
+   sin_la_palabra_del_lienzo_deja_de_ser_asimetrico     CAE
+   con_la_palabra_de_search_el_cruce_SE_VUELVE_SIMETRICO CAE
+   el_par_existe_en_las_dos_vistas                      CAE
+
+   CIFRA casos que CAEN al mutar su esperado: 9 de 9
+VERDE: 9 casos, los 9 pasan y los 9 CAEN al mutarles el valor esperado.
+Y SE REPITE LO QUE IMPORTA: NINGUNO DE ESTOS CASOS DECIDE LA CLASE. El
+veredicto de la 101 es una lectura a mano y NO TIENE CASO ROJO AUTOMATICO.

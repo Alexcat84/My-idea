@@ -1,0 +1,79 @@
+==============================================================================
+VUELTA 163, TAREA 1.c: LA RELECTURA AL DOBLE DEL TRAMO, CONTADA DEL REGISTRO
+==============================================================================
+
+A) LA NOMINA DEL TRAMO, LEIDA DE LA R.30 Y NO TECLEADA
+   docs/PENDIENTES.md, lineas 10465 a 10553
+   CIFRA ids de lectura dirigida nombrados en la R.30: 5
+   NOMINA: LD-OPC05-005, LD-OPC05-100, LD-OPC05-094, LD-OPC05-101, LD-OPC05-118
+
+B) LAS MARCAS DE SEGUNDA LECTURA, CONTADAS DEL REGISTRO FILA A FILA
+   (el contador de P.5.2 se IMPORTA de contador_de_segundas_lecturas.py,
+   no se reimplementa)
+   LD-OPC05-005  clase C  |  CIFRA marcas contables: 3
+        CIEGA_DEL_AUDITOR, vuelta 161
+        TRAMO_DE_LAS_C, vuelta 161
+        RELECTURA_CONJUNTA, vuelta 159
+   LD-OPC05-100  clase D  |  CIFRA marcas contables: 2
+        CIEGA_DEL_AUDITOR, vuelta 161
+        RELECTURA_CONJUNTA, vuelta 160
+   LD-OPC05-094  clase D  |  CIFRA marcas contables: 1
+        TRAMO_AL_DOBLE, vuelta 160
+   LD-OPC05-101  clase D  |  CIFRA marcas contables: 1
+        TRAMO_AL_DOBLE, vuelta 160
+   LD-OPC05-118  clase D  |  CIFRA marcas contables: 1
+        TRAMO_AL_DOBLE, vuelta 160
+
+   CIFRA del tramo con al menos una marca en el registro: 5 (LD-OPC05-005, LD-OPC05-100, LD-OPC05-094, LD-OPC05-101, LD-OPC05-118)
+   CIFRA del tramo SIN ninguna marca en el registro: 0 (ninguna)
+
+C) LA CIEGA DE LA VUELTA 162, QUE NO VIVE EN EL REGISTRO, MEDIDA APARTE
+   fichero sellado: docs/loop/_auditor_v162_mis_adjudicaciones.txt
+   LD-OPC05-005  letra sellada en la ciega de la 162: NO APARECE    | clase vigente: C
+   LD-OPC05-100  letra sellada en la ciega de la 162: NO APARECE    | clase vigente: D
+   LD-OPC05-094  letra sellada en la ciega de la 162: D             | clase vigente: D
+   LD-OPC05-101  letra sellada en la ciega de la 162: C             | clase vigente: D
+   LD-OPC05-118  letra sellada en la ciega de la 162: D             | clase vigente: D
+   CIFRA del tramo con letra en la ciega de la 162: 3
+   CIFRA que coinciden con la clase vigente: 2 (LD-OPC05-094, LD-OPC05-118)
+   CIFRA que discrepan: 1 (LD-OPC05-101)
+
+D) LA CUENTA QUE EL ENCARGO PIDE PUBLICAR, Y LA DIFERENCIA MEDIDA
+   El encargo afirma: CUATRO del tramo ya llevan DOS LECTURAS CIEGAS
+   INDEPENDIENTES QUE COINCIDEN (005 y 100 de la ciega de la 161; 094 y
+   118 de la ciega de la 162), y que eso se comprueba DEL REGISTRO.
+
+   SE COMPRUEBA DEL REGISTRO, Y NO ES LO MISMO 'marca contable' QUE
+   'lectura ciega del auditor'. Una marca de TRAMO_AL_DOBLE es la segunda
+   pasada DEL PROPIO EJECUTOR sobre su tramo, no una lectura independiente
+   de otra pluma. Asi que se cuentan las DOS cosas por separado.
+
+   D.1 MARCA CONTABLE DE CUALQUIER TIPO, EN EL REGISTRO
+      CIFRA: 5 de 5 (LD-OPC05-005, LD-OPC05-100, LD-OPC05-094, LD-OPC05-101, LD-OPC05-118)
+
+   D.2 MARCA DE LECTURA CIEGA DEL AUDITOR, EN EL REGISTRO
+      CIFRA con marca de ciega en el registro: 2 (LD-OPC05-005, LD-OPC05-100)
+      CIFRA SIN marca de ciega en el registro: 3 (LD-OPC05-094, LD-OPC05-101, LD-OPC05-118)
+
+   D.3 LA DIFERENCIA, DECLARADA Y NO RESUELTA COPIANDO (EJECUTOR.md 2)
+      La ciega de la vuelta 162 dejo su letra SELLADA en el fichero del
+      auditor, y esa letra NO ESTA EN EL REGISTRO:
+      CIFRA leidas por la ciega de la 162 y sin marca de ciega en el
+      registro: 3 (LD-OPC05-094, LD-OPC05-101, LD-OPC05-118)
+      POR TANTO, MEDIDO DEL REGISTRO Y NO DE LA PALABRA DE NADIE: del tramo,
+      2 llevan la lectura ciega del auditor CONTABLE (LD-OPC05-005, LD-OPC05-100) y 3 NO la llevan
+      (LD-OPC05-094, LD-OPC05-101, LD-OPC05-118), aunque de esas 3 el fichero sellado si trae letra.
+      LA AFIRMACION DEL ENCARGO SE CUMPLE EN 005 Y 100 CONTRA EL REGISTRO;
+      EN 094 Y 118 SE CUMPLE CONTRA EL FICHERO SELLADO Y NO CONTRA EL
+      REGISTRO, y eso es lo que P.5.2 (1) llama no contable todavia.
+      NO SE ESCRIBE LA MARCA EN ESTA VUELTA, y se dice por que: la vara de
+      aceptacion de la TAREA 5.a exige que la cifra de P.5.2 salga IDENTICA
+      (92 / 16 / 30 / 115 / 8), y escribir marcas nuevas la moveria. Va como
+      discutible del reporte, no como decision callada.
+
+   CIFRA del tramo: 5
+   CIFRA con marca contable en el registro: 5
+   CIFRA con lectura ciega del auditor CONTABLE en el registro: 2
+   CIFRA con lectura ciega de la 162 SELLADA pero no contable: 3
+   CIFRA que la relectura conjunta de esta vuelta relee al doble: 1 (LD-OPC05-101, la TAREA 1.b)
+

@@ -1,0 +1,43 @@
+==============================================================================
+VUELTA 163, TAREA 5.a: CASO POSITIVO POR MUTACION
+==============================================================================
+
+   los_tres_dan_lo_mismo_en_con_al_menos_una            PASA   (real=1 esperado=1)
+   la_vara_del_encargo_en_con_al_menos_una              PASA   (real=92 esperado=92)
+   los_tres_dan_lo_mismo_en_con_dos_o_mas               PASA   (real=1 esperado=1)
+   la_vara_del_encargo_en_con_dos_o_mas                 PASA   (real=16 esperado=16)
+   los_tres_dan_lo_mismo_en_con_ninguna                 PASA   (real=1 esperado=1)
+   la_vara_del_encargo_en_con_ninguna                   PASA   (real=30 esperado=30)
+   los_tres_dan_lo_mismo_en_actos_sobre_filas           PASA   (real=1 esperado=1)
+   la_vara_del_encargo_en_actos_sobre_filas             PASA   (real=115 esperado=115)
+   los_tres_dan_lo_mismo_en_tipos_de_acto               PASA   (real=1 esperado=1)
+   la_vara_del_encargo_en_tipos_de_acto                 PASA   (real=8 esperado=8)
+   salida_del_viejo_refactorizado_IDENTICA              PASA   (real=True esperado=True)
+   salida_del_nombre_estable_IDENTICA                   PASA   (real=True esperado=True)
+   el_nombre_estable_anade_UNA_linea_de_remision        PASA   (real=1 esperado=1)
+   el_viejo_NO_anade_la_linea_de_remision               PASA   (real=0 esperado=0)
+   el_viejo_sigue_existiendo                            PASA   (real=True esperado=True)
+   el_estable_NO_reimplementa_FORMAS_QUE_CUENTAN        PASA   (real=0 esperado=0)
+
+   CIFRA casos: 16 | pasan: 16 | fallan: 0
+
+   SEGUNDA PASADA: SE MUTA EL VALOR ESPERADO Y TIENE QUE CAER
+   los_tres_dan_lo_mismo_en_con_al_menos_una            CAE
+   la_vara_del_encargo_en_con_al_menos_una              CAE
+   los_tres_dan_lo_mismo_en_con_dos_o_mas               CAE
+   la_vara_del_encargo_en_con_dos_o_mas                 CAE
+   los_tres_dan_lo_mismo_en_con_ninguna                 CAE
+   la_vara_del_encargo_en_con_ninguna                   CAE
+   los_tres_dan_lo_mismo_en_actos_sobre_filas           CAE
+   la_vara_del_encargo_en_actos_sobre_filas             CAE
+   los_tres_dan_lo_mismo_en_tipos_de_acto               CAE
+   la_vara_del_encargo_en_tipos_de_acto                 CAE
+   salida_del_viejo_refactorizado_IDENTICA              CAE
+   salida_del_nombre_estable_IDENTICA                   CAE
+   el_nombre_estable_anade_UNA_linea_de_remision        CAE
+   el_viejo_NO_anade_la_linea_de_remision               CAE
+   el_viejo_sigue_existiendo                            CAE
+   el_estable_NO_reimplementa_FORMAS_QUE_CUENTAN        CAE
+
+   CIFRA casos que CAEN: 16 de 16
+VERDE: 16 casos, los 16 pasan y los 16 CAEN al mutarles el valor esperado.

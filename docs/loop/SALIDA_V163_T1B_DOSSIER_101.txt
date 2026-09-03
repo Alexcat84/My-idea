@@ -1,0 +1,232 @@
+==============================================================================
+VUELTA 163, TAREA 1.b: LA RELECTURA CONJUNTA DE LA LD-OPC05-101
+==============================================================================
+
+LO QUE ESTE INSTRUMENTO NO HACE: no decide la clase. La clasificacion de
+los pasos es una LECTURA DEL EJECUTOR, tabla a mano, y por EJECUTOR.md 1
+SE DECLARA QUE NO HAY CASO ROJO AUTOMATICO PARA EL VEREDICTO en vez de
+fabricarle uno que se apruebe solo. El veredicto va en el reporte, con la
+letra de P.5.1 delante.
+
+A) LA VARA, LEIDA HOY DEL BANCO Y NO TECLEADA
+   docs/plan/BANCO_DEL_PLAN.md, lineas 342 a 379
+   FRASE: LA SEGUNDA LINEA DE UN PAR SOLO CUENTA COMO EXPANSION SI TRAE PROCEDIMIENTO PROPIO, Y NO SOLO EL NOMBRE DE OTRO.
+   CIFRA ejemplares parseados de la tabla: 4
+      LD-OPC05-052  ACEPTA   la segunda linea trae procedimiento propio
+      LD-OPC05-095  ACEPTA   la segunda linea trae procedimiento propio
+      LD-OPC05-122  EXCLUYE  la segunda linea solo nombra
+      LD-OPC05-100  EXCLUYE  la segunda linea solo nombra
+
+B) EL PAR EN DISPUTA, CONTRA EL GRAFO Y ENTERO
+   LD-OPC05-101 | clase VIGENTE en el registro: D | via: LECTURA_DIRIGIDA
+   cita: LD-OPC05-101, clase D [ANTES C, RECLASIFICADA EN LA VUELTA 160: ver la razon]
+
+   lienzo_modelo_negocio
+     titulo:     El Lienzo de Modelo de Negocio (Business Model Canvas)
+     fuente:     Business Model Generation - Osterwalder, Alexander
+     fase:       planificacion
+     entregable: Lienzo de Modelo de Negocio completo con los 9 bloques definidos y coherentes entre sí
+     PASOS (12):
+       1. Imprimir el lienzo en tamaño grande para trabajo colaborativo y un Business Model Canvas para cada miembro del equipo
+       2. Reunirse con el equipo aceptando que habrá vacíos en la primera versión
+       3. Escribir cada bloque en notas post-it sobre el lienzo
+       4. Identificar los segmentos de clientes a los que se dirige la organización
+       5. Definir la propuesta de valor para cada segmento
+       6. Mapear canales, relaciones y fuentes de ingresos
+       7. Mapear recursos, actividades y asociaciones clave
+       8. Calcular la estructura de costos y el profit resultante
+       9. Pausar para investigar más información donde haya vacíos importantes
+      10. Iterar y discutir en grupo hasta lograr coherencia entre los bloques
+      11. Publicar el canvas en el espacio de trabajo y actualizarlo conforme avanza el proyecto
+      12. Usar el lienzo como base para pivotar o validar hipótesis del negocio, y también para llevar una solución ya diseñada a un modelo de negocio viable
+
+   search_for_business_model
+     titulo:     Búsqueda de un Modelo de Negocio (Search)
+     fuente:     The Startup Owner's Manual - Blank, Steve
+     fase:       validacion
+     entregable: Un lienzo de hipótesis de modelo de negocio marcado explícitamente como no probado, junto con evidencia de que el modelo es repetible y escalable o una decisión clara de pivote.
+     PASOS (8):
+       1. Determina si tu proyecto está en modo búsqueda (hipótesis no probadas) o en modo ejecución (modelo conocido)
+       2. Lista explícitamente las hipótesis de tu modelo de negocio: mercado, cliente, producto, canal y precio, marcadas como no probadas
+       3. Aplica el proceso de Customer Development para salir a probar cada hipótesis con clientes reales
+       4. Evita montar estructuras o roles de ejecución antes de validar el modelo
+       5. Itera y pivota según la evidencia recogida hasta encontrar un modelo repetible y escalable
+       6. Adopta una mentalidad de aprendizaje y experimentación en vez de miedo al fracaso
+       7. Abandonar la idea de escribir un plan de negocio detallado al inicio
+       8. Usar el Business Model Canvas y Value Proposition Canvas como herramientas de planificación flexible
+
+C) LA ARISTA, EN LAS DOS VISTAS
+   a_previos_trae_b         True
+   a_siguientes_trae_b      True
+   b_previos_trae_a         True
+   b_siguientes_trae_a      True
+   CIFRA vistas que traen el par: 4 de 4
+
+D) LOS CUATRO EJEMPLARES, CON SUS DOS NODOS ENTEROS
+   (una regla sin sus casos se vuelve a estrechar sola: los ejemplares
+   son la vara tanto como la frase, y por eso se leen del grafo)
+
+   --- LD-OPC05-052 : ACEPTA (la segunda linea trae procedimiento propio) | clase vigente en el registro: C
+      definicion_alineacion_cadena_suministro
+        titulo:     Definición y Alineación de la Cadena de Suministro con la Estrategia
+        fuente:     Essentials of Supply Chain Management - Michael H. Hugos
+        fase:       planificacion
+        entregable: Mapa de cadena de suministro con el rol de la empresa identificado y una declaración clara de la estrategia competitiva (costo vs. servicio) que guiará las decisiones operativas.
+        PASOS (9):
+          1. Mapear todas las empresas y actividades que participan en la cadena de suministro de tu producto/servicio.
+          2. Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.), y sus core competencies
+          3. Definir si tu estrategia competitiva se basa en precio bajo (requiere eficiencia) o en servicio/conveniencia (requiere capacidad de respuesta).
+          4. Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida, que son los 5 drivers (producción, inventario, ubicación, transporte, información)
+          5. Identificar en qué categoría(s) participa tu empresa: productor, distribuidor, minorista, proveedor de servicios
+          6. Mapear todos los participantes de tu cadena de suministro actual, incluyendo proveedores del proveedor y clientes del cliente
+          7. Determinar qué proveedores de servicios (logística, financieros, TI) podrían mejorar tu eficiencia operativa
+          8. Responder las 6 preguntas de Chopra y Meindl sobre tu mercado: cantidad por lote, tiempo de respuesta, variedad, nivel de servicio, precio, tasa de innovación
+          9. Validar que la estrategia de cadena de suministro sea coherente con la propuesta de valor al cliente
+      trade_off_responsividad_eficiencia
+        titulo:     Balance entre Capacidad de Respuesta y Eficiencia
+        fuente:     Essentials of Supply Chain Management - Michael H. Hugos
+        fase:       planificacion
+        entregable: Documento de posicionamiento estratégico que indique, para cada driver de la cadena de suministro, si la decisión prioriza eficiencia o capacidad de respuesta.
+        PASOS (8):
+          1. Analizar qué valora más tu segmento de clientes: precio bajo o rapidez/servicio.
+          2. Evaluar el nivel de exceso de capacidad, inventario y flexibilidad de transporte actuales.
+          3. Ajustar cada driver (producción, inventario, ubicación, transporte, información) hacia el extremo del espectro que corresponda a la estrategia elegida.
+          4. Revisar periódicamente el balance, ya que cambios en el mercado pueden requerir reajustes.
+          5. Monitorear factores clave: demanda de producto, precios, tasas de producción, frecuencia de entregas
+          6. Evaluar la confiabilidad de los pronósticos y datos disponibles
+          7. Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece responsividad)
+          8. Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, features, velocidad)
+
+   --- LD-OPC05-095 : ACEPTA (la segunda linea trae procedimiento propio) | clase vigente en el registro: C
+      investigacion_new_view
+        titulo:     Investigación de accidentes bajo el enfoque New View
+        fuente:     The Field Guide to Understandin - Dekker, Sidney
+        fase:       ejecucion
+        entregable: Informe de investigación de incidente estructurado según principios New View, con foco en prevención en lugar de culpabilización
+        PASOS (7):
+          1. Reconstruir la situación tal como la vivieron los involucrados, sin usar el conocimiento del resultado final, a partir de la información y las señales disponibles para los actores en el momento del evento
+          2. Evitar declaraciones de causa única o 'causa probable'
+          3. Documentar hallazgos como causas, contribuciones y riesgos por separado
+          4. Dedicar una sección sustancial del informe a acciones de seguridad preventivas, y comunicar los hallazgos de forma que honren la experiencia humana en lugar de reducirla a una lista de errores
+          5. Contrastar la investigación oficial con relatos revisionistas o independientes si están disponibles
+          6. Involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento
+          7. Entrevistar a los involucrados para entender su percepción y objetivos en el momento
+      process_tracing_methods
+        titulo:     Métodos de Rastreo de Procesos (Process-Tracing)
+        fuente:     The Field Guide to Understandin - Dekker, Sidney
+        fase:       ejecucion
+        entregable: Un informe de investigación de incidente/accidente que incluya el relato dual (contexto-específico y conceptual) explicando por qué las acciones de los practicantes tuvieron sentido dado su contexto y comprensión en el momento.
+        PASOS (5):
+          1. Recolectar datos crudos del episodio (registros, transcripciones, testimonios, datos de sistemas)
+          2. Construir el relato específico del dominio en el lenguaje técnico de los practicantes
+          3. Identificar y aplicar conceptos dependientes (ej. sorpresa de automatización, carga de trabajo) para interpretar los datos
+          4. Buscar regularidades y patrones de desempeño humano a través de los dos relatos paralelos
+          5. Documentar las conclusiones evitando el lenguaje de déficit humano (culpar, señalar fallos)
+
+   --- LD-OPC05-122 : EXCLUYE (la segunda linea solo nombra) | clase vigente en el registro: D
+      error_proofing_servicio
+        titulo:     Error-Proofing (A Prueba de Errores) en Procesos de Servicio
+        fuente:     Juran's Quality Handbook_ The C - Joseph A. Defeo
+        fase:       ejecucion
+        entregable: Lista de mecanismos de error-proofing implementados en el proceso con evidencia de reducción de errores
+        PASOS (10):
+          1. Identificar actividades propensas a errores en el proceso o producto
+          2. Evaluar si la actividad puede eliminarse completamente
+          3. Buscar sustitutos más confiables para el proceso actual
+          4. Simplificar el trabajo para reducir la posibilidad de error humano
+          5. Implementar detección temprana de errores (software, códigos de barras, checklists)
+          6. Diseñar mecanismos para minimizar el impacto cuando ocurran errores
+          7. Clasifica el tipo de intervención según los cinco principios: eliminación, reemplazo, facilitación, detección o mitigación
+          8. Diseña dispositivos físicos o lógicos que hagan imposible o detectable el error, como encajes únicos o sensores
+          9. Prioriza la prevención proactiva en la etapa de diseño por encima de la mitigación reactiva
+         10. Valida que el dispositivo funcione consistentemente antes de escalar su uso
+      metodologia_6s
+        titulo:     Metodología 6S (Sort, Set in order, Shine, Standardize, Sustain, Safety)
+        fuente:     Juran's Quality Handbook_ The C - Joseph A. Defeo
+        fase:       ejecucion
+        entregable: Área de trabajo organizada según los 6 principios 6S, con checklist de auditoría periódica establecido
+        PASOS (6):
+          1. Sort: elimina de tu área de trabajo todo lo que no necesites
+          2. Set in order: organiza tus herramientas y materiales para acceder y devolverlos fácilmente
+          3. Shine: limpia tu espacio y mantenlo libre de suciedad
+          4. Standardize: crea procedimientos que conviertan la limpieza y el orden en un hábito
+          5. Sustain: reserva tiempo, recursos e incentivos para sostener la disciplina en el tiempo
+          6. Safety: revisa e integra prácticas seguras en cada etapa de tu trabajo
+
+   --- LD-OPC05-100 : EXCLUYE (la segunda linea solo nombra) | clase vigente en el registro: D
+      lienzo_modelo_negocio
+        titulo:     El Lienzo de Modelo de Negocio (Business Model Canvas)
+        fuente:     Business Model Generation - Osterwalder, Alexander
+        fase:       planificacion
+        entregable: Lienzo de Modelo de Negocio completo con los 9 bloques definidos y coherentes entre sí
+        PASOS (12):
+          1. Imprimir el lienzo en tamaño grande para trabajo colaborativo y un Business Model Canvas para cada miembro del equipo
+          2. Reunirse con el equipo aceptando que habrá vacíos en la primera versión
+          3. Escribir cada bloque en notas post-it sobre el lienzo
+          4. Identificar los segmentos de clientes a los que se dirige la organización
+          5. Definir la propuesta de valor para cada segmento
+          6. Mapear canales, relaciones y fuentes de ingresos
+          7. Mapear recursos, actividades y asociaciones clave
+          8. Calcular la estructura de costos y el profit resultante
+          9. Pausar para investigar más información donde haya vacíos importantes
+         10. Iterar y discutir en grupo hasta lograr coherencia entre los bloques
+         11. Publicar el canvas en el espacio de trabajo y actualizarlo conforme avanza el proyecto
+         12. Usar el lienzo como base para pivotar o validar hipótesis del negocio, y también para llevar una solución ya diseñada a un modelo de negocio viable
+      proceso_ideacion_modelo_negocio
+        titulo:     Proceso de Ideación de Modelos de Negocio
+        fuente:     Business Model Generation - Osterwalder, Alexander
+        fase:       ideacion
+        entregable: Lista corta de 3 a 5 prototipos de modelo de negocio esbozados en el lienzo de modelo de negocio, resultado de un proceso de ideación estructurado
+        PASOS (5):
+          1. Ensamblar un equipo diverso en antigüedad, experiencia, área funcional y conocimiento del cliente
+          2. Realizar una fase de inmersión: investigar clientes, tecnologías y modelos de negocio existentes
+          3. Expandir generando la mayor cantidad de ideas posible por cada bloque del lienzo de modelo de negocio, sin criticar todavía y priorizando cantidad sobre calidad
+          4. Definir criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.)
+          5. Reducir a entre tres y cinco ideas y prototiparlas usando el lienzo de modelo de negocio
+
+E) EL CRUCE DE ENTREGABLES, MEDIDO Y CON SU CALIBRACION
+   Es el TERCER criterio del ejemplar 100, el que su razon llama 'la
+   decisiva porque se lee de un campo y se puede volver a medir'.
+   Mecanizado: el entregable de X esta escrito EN TERMINOS DE Y si trae
+   alguna palabra DISTINTIVA del titulo de Y (las compartidas no cuentan).
+
+   LD-OPC05-052 (ACEPTA, clase C): ASIMETRICO: trade_off_responsividad_eficiencia consume a definicion_alineacion_cadena_suministro
+      palabras de trade_off_responsividad_eficiencia dentro del entregable de definicion_alineacion_cadena_suministro: ninguna
+      palabras de definicion_alineacion_cadena_suministro dentro del entregable de trade_off_responsividad_eficiencia: cadena, suministro
+      predice D -> NO CALZA
+   LD-OPC05-095 (ACEPTA, clase C): ASIMETRICO: process_tracing_methods consume a investigacion_new_view
+      palabras de process_tracing_methods dentro del entregable de investigacion_new_view: ninguna
+      palabras de investigacion_new_view dentro del entregable de process_tracing_methods: investigacion
+      predice D -> NO CALZA
+   LD-OPC05-122 (EXCLUYE, clase D): NINGUNO: ningun entregable nombra al otro
+      palabras de metodologia_6s dentro del entregable de error_proofing_servicio: ninguna
+      palabras de error_proofing_servicio dentro del entregable de metodologia_6s: ninguna
+      predice C -> NO CALZA
+   LD-OPC05-100 (EXCLUYE, clase D): ASIMETRICO: proceso_ideacion_modelo_negocio consume a lienzo_modelo_negocio
+      palabras de proceso_ideacion_modelo_negocio dentro del entregable de lienzo_modelo_negocio: ninguna
+      palabras de lienzo_modelo_negocio dentro del entregable de proceso_ideacion_modelo_negocio: lienzo, modelo
+      predice D -> CALZA
+
+   CIFRA ejemplares que el cruce reproduce: 1 de 4
+   POR TANTO NO SE USA COMO DECISOR, Y SE DICE: un corroborador que solo
+   acierta parte de su propia vara no puede sostener un veredicto. La
+   razon de la vuelta 160 lo cito como corroboracion del D de la 101; se
+   mide aqui y se publica que, mecanizado, no reproduce la vara entera.
+
+   EL PAR EN DISPUTA: ASIMETRICO: search_for_business_model consume a lienzo_modelo_negocio
+      palabras de search_for_business_model dentro del entregable de lienzo_modelo_negocio: ninguna
+      palabras de lienzo_modelo_negocio dentro del entregable de search_for_business_model: lienzo
+
+F) LO QUE LA VUELTA 160 USO PARA TUMBAR LA VUELTA, Y NO ESTA EN LA VARA
+   LD-OPC05-027 citado en la razon de la 101: 1 vez(ces) | es ejemplar de P.5.1: NO
+   LD-OPC05-004 citado en la razon de la 101: 1 vez(ces) | es ejemplar de P.5.1: NO
+   CIFRA sub varas citadas en la razon que NO son ejemplares de P.5.1: 2
+
+G) LA CIEGA DEL AUDITOR, COMPROBADA Y NO CITADA DE MEMORIA
+   fichero: docs/loop/_auditor_v162_mis_adjudicaciones.txt
+   existe: True
+   veredicto sellado para la 101, parseado del fichero: C
+
+VERDE: dossier completo. EL VEREDICTO NO LO DA ESTE FICHERO: lo da la
+lectura del ejecutor, publicada en el reporte con la letra de P.5.1
+delante y SIN apoyarse en la 027 ni en la 004.
