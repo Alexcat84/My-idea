@@ -1,0 +1,58 @@
+==============================================================================
+CASO POSITIVO POR MUTACION: LA GUARDA DE CIFRAS Y LA FILA DE TABLA
+==============================================================================
+
+A) LOS SUJETOS CONGELADOS
+   SUJETO_FIJO_V162_T3_REPORTE_161.md (30753 bytes)
+   SUJETO_FIJO_V162_T3_REPORTE_160.md (32518 bytes)
+
+B) LA GUARDA VIEJA, COPIADA ANTES DE TOCAR NADA
+   161: exit 0, cierres 0, fallos 0
+   160: exit 0, cierres 5, fallos 0
+
+C) LA GUARDA NUEVA SOBRE LOS MISMOS SUJETOS
+   161: exit 0, cierres 0, filas 4, avisos 0, fallos 0
+   160: exit 0, cierres 5, filas 0, avisos 0, fallos 0
+
+D) LA MUTACION 1: UNA CIFRA MOVIDA EN UNA FILA DE FASE
+   antes : | fase 06 | 16 / 16 / 0 | `docs/loop/SALIDA_V161_T4_FASE_06.txt` |
+   ahora : | fase 06 | 16 / 15 / 0 | `docs/loop/SALIDA_V161_T4_FASE_06.txt` |
+   resultado: exit 1, filas cotejadas 3, fallos 1
+      linea 467: FILA DE TABLA con sujeto de cierre 'fase' que cita `SALIDA_V161_T4_FASE_06.txt`, y sus numeros NO traen seguida la tripla que ese fichero publica. El fichero dice catalogo 16, cumplido 16, sin cumplir 0; la fila trae [6, 16, 15, 0, 161, 4, 6]. Fila: '| fase 06 | 16 / 15 / 0 | `docs/loop/SALIDA_V161_T4_FASE_06.txt` |'
+
+E) LA MUTACION 2: A ESA MISMA FILA SE LE QUITA LA CITA
+   ahora : | fase 06 | 16 / 16 / 0 | (sin cita) |
+   resultado: exit 0, filas cotejadas 3, avisos 1, fallos 0
+
+F) PASADA 1, LOS CASOS TAL CUAL: todos tienen que PASAR
+   el_161_cotejaba_cero_filas_con_la_guarda_vieja       esperado 0    obtenido 0    PASA
+   el_161_ahora_coteja_sus_filas_de_fase                esperado 4    obtenido 4    PASA
+   el_160_sigue_dando_cinco                             esperado 5    obtenido 5    PASA
+   el_160_no_gana_ni_una_fila_de_tabla                  esperado 0    obtenido 0    PASA
+   numero_movido_en_una_fila_pone_la_guarda_ROJA        esperado 1    obtenido 1    PASA
+   y_solo_cae_esa_fila                                  esperado 3    obtenido 3    PASA
+   fila_sin_cita_cae_al_AVISO                           esperado 1    obtenido 1    PASA
+   y_el_aviso_no_tumba_la_guarda                        esperado 0    obtenido 0    PASA
+   el_161_sigue_en_exit_0                               esperado 0    obtenido 0    PASA
+   el_160_sigue_en_exit_0                               esperado 0    obtenido 0    PASA
+   el_161_no_cambio_de_veredicto                        esperado 0    obtenido 0    PASA
+   el_160_no_cambio_de_veredicto                        esperado 0    obtenido 0    PASA
+   el_160_no_cambio_de_cierres                          esperado 5    obtenido 5    PASA
+
+G) PASADA 2, LA MUTACION DEL VALOR ESPERADO: cada caso TIENE que CAER
+   el_161_cotejaba_cero_filas_con_la_guarda_vieja       esperado MUTADO 1    obtenido 0    CAE (bien)
+   el_161_ahora_coteja_sus_filas_de_fase                esperado MUTADO 5    obtenido 4    CAE (bien)
+   el_160_sigue_dando_cinco                             esperado MUTADO 6    obtenido 5    CAE (bien)
+   el_160_no_gana_ni_una_fila_de_tabla                  esperado MUTADO 1    obtenido 0    CAE (bien)
+   numero_movido_en_una_fila_pone_la_guarda_ROJA        esperado MUTADO 2    obtenido 1    CAE (bien)
+   y_solo_cae_esa_fila                                  esperado MUTADO 4    obtenido 3    CAE (bien)
+   fila_sin_cita_cae_al_AVISO                           esperado MUTADO 2    obtenido 1    CAE (bien)
+   y_el_aviso_no_tumba_la_guarda                        esperado MUTADO 1    obtenido 0    CAE (bien)
+   el_161_sigue_en_exit_0                               esperado MUTADO 1    obtenido 0    CAE (bien)
+   el_160_sigue_en_exit_0                               esperado MUTADO 1    obtenido 0    CAE (bien)
+   el_161_no_cambio_de_veredicto                        esperado MUTADO 1    obtenido 0    CAE (bien)
+   el_160_no_cambio_de_veredicto                        esperado MUTADO 1    obtenido 0    CAE (bien)
+   el_160_no_cambio_de_cierres                          esperado MUTADO 6    obtenido 5    CAE (bien)
+
+VERDE: 13 casos, los 13 pasan y los 13 caen al mutarles el valor esperado.
+Y LOS TRES QUE IMPORTAN, POR SU NOMBRE: el reporte de la 160 SIGUE DANDO 5 y no gana ni una fila; una cifra movida en una fila de fase PONE LA GUARDA ROJA; y una fila sin cita CAE AL AVISO en vez de desaparecer en silencio.

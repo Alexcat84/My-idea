@@ -1,0 +1,98 @@
+==============================================================================
+CASO LD-OPC05-016   par: bullseye_framework  <->  critical_path
+==============================================================================
+  NODO bullseye_framework
+    titulo: Bullseye Framework (Diana de Tracción)
+    fuente: Traction - Gabriel Weinberg
+    entregable: Matriz de los 19 canales con ideas de brainstorm, resultados de los experimentos del anillo medio y el canal núcleo elegido para escalar.
+       1. Lista los 19 canales de tracción posibles y evalúa cuáles podrían aplicar a tu negocio sin descartar ninguno por default.
+       2. Selecciona 3 a 5 canales prometedores según tu contexto, industria y modelo de negocio.
+       3. Diseña experimentos baratos, de menos de 1000 dólares y un mes de duración, para testear cada canal seleccionado en paralelo. Prueba en AdWords, pregunta el precio en tu mercado
+       4. Mide en cada experimento el costo de adquisición, el volumen disponible y la calidad de esos clientes.
+       5. Elige el canal con mejores resultados como tu canal núcleo y concentra ahí la mayoría de tus recursos. Es el paso previo para pasar a las pruebas del anillo interno
+       6. Si ningún canal funciona, repite el proceso o revisa tu producto.
+       7. Haz una lista de los 19 canales de tracción posibles para tu negocio
+       8. Diseña una prueba barata y corta para cada canal que te haga sentido, por ejemplo contactar a diez blogs de tu nicho, correr unos anuncios pagados o escribir un artículo semanal durante un mes
+       9. Corre las pruebas en paralelo o por lotes y mide resultados concretos, no solo clics o vistas
+      10. Compara los resultados entre canales y elige el o los que más prometan para invertirles más recursos
+      11. Anota lo que aprendes de cada prueba, incluidas las que fallaron, para mejorar tus próximos intentos
+      12. Compara los resultados de las distintas estrategias que probaste en una hoja de cálculo
+  ---
+  NODO critical_path
+    titulo: Critical Path (Camino Crítico)
+    fuente: Traction - Gabriel Weinberg
+    entregable: Lista priorizada y validada de hitos críticos con proceso de reevaluación periódica establecido
+       1. Enumera los hitos estrictamente necesarios para alcanzar tu traction goal
+       2. Excluye actividades que no sean absolutamente necesarias, aunque sean solicitadas por usuarios
+       3. Evalúa cada actividad propuesta contra el Critical Path antes de ejecutarla
+       4. Reevalúa el Critical Path después de completar cada hito, ya que las suposiciones cambian con feedback real
+       5. Comunica el Critical Path al equipo para alinear prioridades y evitar desperdicio de recursos
+
+==============================================================================
+CASO LD-OPC05-029   par: clausula_no_shop_adquisicion  <->  condiciones_de_cierre_adquisicion
+==============================================================================
+  NODO clausula_no_shop_adquisicion
+    titulo: Cláusula No-Shop en Procesos de Venta de la Empresa
+    fuente: Venture Deals - Brad Feld
+    entregable: Cláusula de no-shop con duración y condiciones de salida claramente definidas en el LOI.
+       1. Negociar una duración de no-shop entre 45 y 60 días.
+       2. Incluir cláusula de terminación automática si el comprador abandona el proceso.
+       3. Evitar sobre-negociar en el momento de solicitud de extensión del no-shop.
+       4. Considerar excepciones (carve-outs) como rondas de financiamiento durante el período de no-shop.
+  ---
+  NODO condiciones_de_cierre_adquisicion
+    titulo: Condiciones de Cierre (Conditions to Close) en el LOI
+    fuente: Venture Deals - Brad Feld
+    entregable: Lista de condiciones de cierre negociada y con plan de resolución temprana.
+       1. Revisar la lista completa de condiciones de cierre propuestas por el comprador.
+       2. Cuestionar condiciones inusualmente restrictivas o específicas desde el inicio.
+       3. Resolver condiciones complejas (ej. liquidación de subsidiarias) temprano en el due diligence.
+       4. Evaluar el nivel de compromiso del comprador según la complejidad de las condiciones.
+
+==============================================================================
+CASO LD-OPC05-043   par: costo_de_mala_calidad_copq  <->  trilogia_de_juran
+==============================================================================
+  NODO costo_de_mala_calidad_copq
+    titulo: Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    entregable: Reporte cuantificado del COPQ desglosado por categorías y como porcentaje de ventas, con los segmentos que concentran el mayor costo y una meta de reducción anual
+       1. Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad
+       2. Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos
+       3. Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real
+       4. Identifica los pocos procesos o productos que concentran la mayor parte del costo
+       5. Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio
+       6. Establece una meta de reducción anual y repite el cálculo periódicamente para verificar la tendencia
+  ---
+  NODO trilogia_de_juran
+    titulo: Trilogía de Juran (Planificación, Control y Mejora)
+    fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+    entregable: Un diagrama o plan que muestre los tres procesos (planificación, control y mejora) aplicados a tu producto o servicio, incluyendo la clasificación del problema como esporádico o crónico.
+       1. Diseña tus procesos traduciendo lo que pide tu cliente en especificaciones concretas de tu producto o servicio
+       2. Verifica si el problema que enfrentas es un pico esporádico o un desperdicio crónico antes de decidir cómo actuar
+       3. Aplica control de proceso para eliminar picos esporádicos y devolver el desempeño al nivel planificado
+       4. Aplica un proceso de mejora o breakthrough para reducir el desperdicio crónico a un nivel sin precedentes
+       5. Revisa que lo que produces cumpla con los criterios de diseño originales
+       6. Integra los tres procesos como un ciclo continuo en tu forma de gestionar la calidad
+
+==============================================================================
+CASO LD-OPC05-057   par: dia_cero_defectos  <->  entrenamiento_supervisores_calidad
+==============================================================================
+  NODO dia_cero_defectos
+    titulo: Día de Cero Defectos (El Estándar se Fija en Un Solo Día)
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    entregable: Evento de lanzamiento del estándar Cero Defectos realizado en tu negocio.
+       1. Elige una fecha única para el lanzamiento oficial
+       2. Realiza actividades especiales que marquen el cambio de actitud
+       3. Explica el programa a todos el mismo día
+  ---
+  NODO entrenamiento_supervisores_calidad
+    titulo: Entrenamiento de Supervisores (El Supervisor como Clave)
+    fuente: Quality is free _ the art of making quality certain -- Philip B_ Crosby
+    entregable: Tu mismo y quienes te ayudan, capacitados y evaluados con un test, capaces de explicar y sostener correctamente el programa de calidad y Cero Defectos.
+       1. Dedica al menos 6 horas a estudiar el sistema de medicion de calidad, los costos de calidad y las acciones correctivas al iniciar la etapa de conciencia de calidad.
+       2. Explica de forma completa el programa Cero Defectos y el método para eliminar las causas de los errores a quienes te ayudan, al menos 4 semanas antes del día ZD.
+       3. Prepara un manual o guia detallada del programa para usarla como referencia.
+       4. Haz un test de comprension sobre el concepto ZD antes de replicarlo con tu equipo.
+       5. Resuelve de forma individual las dudas de cada persona antes de la implementacion.
+       6. Verifica que cada persona refuerce la formacion en su area de responsabilidad.
+

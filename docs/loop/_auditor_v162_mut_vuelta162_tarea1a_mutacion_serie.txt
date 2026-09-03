@@ -1,0 +1,45 @@
+==============================================================================
+CASO POSITIVO POR MUTACION: LA SERIE R.N SE LEE DE LOS DOS FICHEROS
+==============================================================================
+
+A) EL SUJETO: COPIAS TEMPORALES DE LAS DOS SEDES
+   PENDIENTES.md (654208 bytes)
+   CORRECCIONES_A_APLICAR.md (147103 bytes)
+
+B) SIN MUTAR: la serie de las copias tiene que dar lo mismo que el repo
+   CIFRA entradas: 23
+   CIFRA colisiones: 0
+   SIGUIENTE LIBRE: R.32
+
+C) LA MUTACION: se anade una R.31 DE MENTIRA al OTRO fichero, el que la
+   idempotencia caida de la vuelta 161 no miraba
+   fichero mutado: CORRECCIONES_A_APLICAR.md
+   CIFRA entradas tras la mutacion: 24
+   la R.31 de mentira, VISTA por el instrumento: [(31, '../../AppData/Local/Temp/v162_serie_i02minhb/CORRECCIONES_A_APLICAR.md', 2605), (31, '../../AppData/Local/Temp/v162_serie_i02minhb/PENDIENTES.md', 10554)]
+   SIGUIENTE LIBRE tras la mutacion: R.32
+
+D) LA MUTACION SOLO EN docs/PENDIENTES.md, para probar que la ceguera
+   habria sido de UN fichero y no de los dos
+   SIGUIENTE LIBRE mirando SOLO docs/PENDIENTES.md: R.32
+   (esa es exactamente la cifra que la vuelta 161 publico, y por eso cayo)
+
+E) PASADA 1, LOS CASOS TAL CUAL: todos tienen que PASAR
+   sin_mutar_la_serie_da_30                   esperado 30     obtenido 32     CAE
+   sin_mutar_hay_una_colision                 esperado 1      obtenido 0      CAE
+   la_R31_de_mentira_SE_VE                    esperado 1      obtenido 2      CAE
+   y_mueve_el_siguiente_libre_a_32            esperado 32     obtenido 32     PASA
+   mirando_solo_PENDIENTES_la_serie_miente    esperado 30     obtenido 32     CAE
+
+F) PASADA 2, LA MUTACION DEL VALOR ESPERADO: cada caso TIENE que CAER
+   sin_mutar_la_serie_da_30                   esperado MUTADO 31     obtenido 32     CAE (bien)
+   sin_mutar_hay_una_colision                 esperado MUTADO 2      obtenido 0      CAE (bien)
+   la_R31_de_mentira_SE_VE                    esperado MUTADO 2      obtenido 2      SOBREVIVE (mal)
+   y_mueve_el_siguiente_libre_a_32            esperado MUTADO 33     obtenido 32     CAE (bien)
+   mirando_solo_PENDIENTES_la_serie_miente    esperado MUTADO 31     obtenido 32     CAE (bien)
+
+G) EL ARBOL DE TRABAJO NO SE TOCO
+   antes:   [('docs/PENDIENTES.md', 654208), ('docs/plan/CORRECCIONES_A_APLICAR.md', 147103)]
+   despues: [('docs/PENDIENTES.md', 654208), ('docs/plan/CORRECCIONES_A_APLICAR.md', 147103)]
+   IDENTICO: SI
+
+ROJO: 4 caso(s) no pasan tal cual: ['sin_mutar_la_serie_da_30', 'sin_mutar_hay_una_colision', 'la_R31_de_mentira_SE_VE', 'mirando_solo_PENDIENTES_la_serie_miente']

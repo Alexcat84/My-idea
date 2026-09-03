@@ -1,0 +1,18 @@
+FIRMA DE PARADA EN EL ACTA ed234154 (adjudicacion 6.5 del acta 161): el acta trae docs/loop/PROMPT_SIGUIENTE.md VACIO y docs/loop/PARA_ALEXIS.md ESCRITO.
+PUERTA DEL CORREDOR (adjudicacion 6.5 del acta 161): el encargo se lee del COMMIT d3482b11, PORTADOR DEL ENCARGO tras la parada, y no del acta ed234154, que lo trae vacio. Sigue siendo UN COMMIT y no el arbol de trabajo.
+   rotulo 'HASHES ADMITIDOS EN EL CORREDOR DE ESTA VUELTA:' en ese encargo: NO
+   HASHES ADMITIDOS (solo los MARCADOS, y solo si el rotulo esta): 0 (ninguno)
+   SIN ROTULO NO SE ADMITE NADA. Es lo que la guarda hacia antes de la adjudicacion 6.7 del acta 153, asi que ningun veredicto viejo se mueve.
+   PORTADOR DEL ENCARGO TRAS LA PARADA, fuera del censo de intrusos por la adjudicacion 6.5 del acta 161 (hace el papel del acta: es el commit que ABRE la vuelta): d3482b11 ('Decision del fundador: la vara de la lectura dirigida se congela, los ') toca 5 ruta(s) (docs/loop/PROMPT_SIGUIENTE.md, docs/loop/paradas/2026-09-03-credito-vara-movil-DECISION.md, docs/loop/paradas/2026-09-03-credito-vara-movil.md, docs/plan/BANCO_DEL_PLAN.md, docs/plan/OPERACIONES.jsonl), delante de la apertura nacida en 4208b8fa
+VERDE: los 10 ficheros SALIDA_V161_*_APERTURA.txt nacieron todos en el primer commit de la vuelta (primer commit de la vuelta TRAS el corredor de la parada, declarado abajo):
+   SALIDA_V161_CICLO_ETIQUETAS_APERTURA.txt -- nacido en 4208b8fa, padre d3482b11
+   SALIDA_V161_CICLO_NUMSTAT_APERTURA.txt -- nacido en 4208b8fa, padre d3482b11
+   SALIDA_V161_CICLO_SYNC_APERTURA.txt -- nacido en 4208b8fa, padre d3482b11
+   SALIDA_V161_CONTEO_APERTURA.txt -- nacido en 4208b8fa, padre d3482b11
+   SALIDA_V161_DESFASE_CALIBRADO_APERTURA.txt -- nacido en 4208b8fa, padre d3482b11
+   SALIDA_V161_GATE0_CMD1_APERTURA.txt -- nacido en 4208b8fa, padre d3482b11
+   SALIDA_V161_HEAD_APERTURA.txt -- nacido en 4208b8fa, padre d3482b11
+   SALIDA_V161_MOTOR_APERTURA.txt -- nacido en 4208b8fa, padre d3482b11
+   SALIDA_V161_TSC_APERTURA.txt -- nacido en 4208b8fa, padre d3482b11
+   SALIDA_V161_WEB_APERTURA.txt -- nacido en 4208b8fa, padre d3482b11
+   CORREDOR DE LA PARADA aceptado ante 4208b8fa: 0 commit(s) entre el acta y la apertura, y ninguno toca nada fuera de los papeles de parada:
