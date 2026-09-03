@@ -50405,3 +50405,462 @@ acaba de limpiar**; los registros del expediente despues, **con la correccion an
 recorrer. **La vuelta 150 deberia dejar al bucle con una sola cosa por delante: la sesion
 con credencial.** Cuando ese sea el estado, y no antes, la parada sera la correcta y
 `PARA_ALEXIS.md` tendra algo que pedir que valga el viaje.
+
+# ACTA DEL AUDITOR, VUELTA 151 (2 sep 2026, auditor Opus 5)
+# =========================================================================
+
+**HUECO DE ACTA: NO HAY.** La ultima cabecera escrita antes de esta es la **149**, que
+audito la vuelta **148**; la **149** fue la corrida del propio auditor y por eso el
+ejecutor numero la suya como **150**. La vuelta que audito es la **150**, la
+inmediatamente siguiente a la ultima auditada. No audito vueltas de mas. Fecha leida de
+git (`git log -1 --format=%ad --date=format:'%d %b %Y'`): **02 Sep 2026**. Rama
+`pasada-unica`, HEAD `4444e1ca`, `origin/pasada-unica` sin ahead ni behind
+(`git status -sb`), arbol limpio al empezar. **REGIMEN COMPLETO: el modo austero sigue
+suspendido** por su propio punto 5.
+
+**EL VEREDICTO DE UNA LINEA: LA 150 NO PUBLICA UNA SOLA CIFRA FALSA EN SU REPORTE, Y SU
+PARADA NO SOLO ES LEGITIMA: ES LA QUE UNA REGLA ESCRITA YA MANDABA. RE MEDI TODO CON
+INSTRUMENTO PROPIO ESCRITO HOY Y TODO REPRODUCE AL DIGITO: EL CENSO Y LAS ARISTAS EN
+CINCO REFS, LAS TREINTA VERSIONES DEL RASTRO CON SU 1.015/802/1.056 Y SU 898/711/935, EL
+10 MAS 0 MAS 925, EL 888 CONTRA 0 DE LA GUARDA QUE RESUELVE, LOS 153 PARES DE HOY Y LOS
+83 DE ANTES DE LA CAMPANA, LA UNICA DE LAS CUATRO ARISTAS DE OP-E-05 QUE EXISTE, EL
+3.521/3.169/3.151/18/370 DEL INDICE, LOS 330 SOBRE DEPRECADOS, Y HASTA SU DISCREPANCIA
+DEL "MONOTONA", QUE CONFIRMO CON MI PROPIO RASTREADOR: UNA SOLA SUBIDA EN 29
+TRANSICIONES, 995 A 996, CON LA ANCESTRIA COMPROBADA. LOS DIEZ DISCUTIBLES: LOS DIEZ A
+FAVOR, CUATRO CON RESERVA, Y EN DOS AMPLIO LO QUE EL MISMO MARCO. Y AHORA LO QUE NO ESTA
+EN SU PAGINA Y CAE FUERA DE LO MARCADO: DOS DE SUS VARAS SE CUENTAN A SI MISMAS. LA
+PIERNA P3 DE LA TAREA 3 Y LA FILA 0 CODIGO DE LA TAREA 4 CUENTAN COMO PRUEBA DE EJECUCION
+EL PAPELEO DE ESTA MISMA VUELTA: HOY, SIN QUE NADIE TOQUE UN NODO, SUS 58/13/30/67 SON
+60/11/32/69 Y LAS DOS FICHAS QUE DECLARO SIN NINGUNA PRUEBA TIENEN UNA, QUE ES EL COMMIT
+QUE DIJO QUE NO LA TENIAN. Y UNA CIFRA SUYA TIENE LA UNIDAD MAL: LOS "307 NODOS VIVOS"
+DEL CASO DE BORDE SON 307 DESTINOS SOBRE 255 NODOS. PARADA, Y NO POR ESO: POR OP-C-05.**
+
+## 1. VERIFICACION, CON MIS PROPIOS INSTRUMENTOS Y EN ESTA VUELTA
+
+**EL CICLO ENTERO Y EN SU ORDEN, CORRIDO POR MI**, que es la leccion que la propia TAREA 5
+de la 150 acaba de cablear: `python scripts/run_phase1.py --reaplico-curaduria` con
+**`GATE 0: OK` y EXITCODE 0**, `python scripts/etiquetas_de_cara.py --aplicar` con **71
+etiquetas** y `python scripts/sync_assets_web.py` con **seis assets**, y despues
+`git diff HEAD --numstat -- dataset/ web/ engine/` **sin una sola fila**. Salidas mias en
+`docs/loop/_auditor_v151_gate0.txt`, `_etiq.txt`, `_sync.txt`.
+
+**GATE 0 SON 25 COMPROBACIONES Y LAS 25 EN OK**, contadas por mi. **Y LA CUENTA DEL 24 AL
+25 ES CIERTA Y LA COMPROBE POR LOS DOS LADOS**: `SALIDA_V150_GATE0_CMD1_APERTURA.txt` trae
+**24** y **cero** menciones de `OP-C-05`; el de cierre trae **25** con la guarda dentro. La
+guarda esta cableada en `scripts/run_phase1.py` y no en un script suelto, como su 2.a
+pedia.
+
+**LAS TRES SUITES, CORRIDAS POR MI:** motor **25/25** exit 0
+(`python engine/run_all_tests.py`), web **80 ficheros, 1.030 pasadas y 3 saltadas** exit 0
+(`npx vitest run`), `tsc --noEmit` **exit 0 y cero lineas**.
+
+**CENSO Y ARISTAS, CON INSTRUMENTO PROPIO ESCRITO HOY**
+(`docs/loop/_auditor_v151_censo.py`), corrido sobre **cinco refs** de la vuelta (`WORK`,
+`4444e1ca`, `0821eaa3`, `1f423cbc`, `fe98cf97`) y **las cinco dan la misma fila**:
+`nodos 3853 vivos 3169 depre 684 | sig 8780 prev 8740 suma 17520 union 9914 | auto 0`.
+**El +0 / +0 / +0 / +0 de la cabecera es cierto y no es una resta de dos celdas tecleadas:
+es la misma medicion en los dos extremos.**
+
+**LA CABECERA PEGADA ES IDENTICA A LA TALLADA, Y LA TALLE YO**:
+`tallar_cabecera_reporte.py --vuelta 150 --fase04 --comparar docs/loop/REPORTE.md` sale
+**exit 0** con **9 filas cotejadas, 0 distintas, 0 ausentes** y la linea `CABECERA:
+IDENTICA AL TALLADOR`.
+
+**LA APERTURA SELLADA, RE CORRIDA POR MI**: `verificar_apertura_sellada.py --vuelta 150`
+sale **VERDE exit 0**, los **diez** ficheros nacidos en `1f423cbc`, padre `fe98cf97`.
+**LOS COMMITS SON SIETE Y LOS CONTE**: `SALIDA_V150_COMMITS_TALLADOS.txt` trae **7 lineas**
+y `git log fe98cf97..HEAD` trae **8**, que son esas siete mas el commit del propio reporte,
+posterior al tallado. **La cifra no esta inflada ni encogida.**
+
+**EL RASTRO DE LAS TREINTA VERSIONES, REPRODUCIDO Y NO COPIADO** con
+`docs/loop/_auditor_v151_rastro.py`, que recorre `git log --reverse --follow` sobre
+`docs/plan/ARISTAS_DUPLICADAS.jsonl`:
+
+| lo medido por mi hoy | mi cifra | la del reporte 150 |
+|---|---:|---:|
+| versiones en git | **30** | 30 |
+| primera `af467eb1`: grupos / nodos / sobran | **1.015 / 802 / 1.056** | 1.015 / 802 / 1.056 |
+| HEAD `d6341ebe`: grupos / nodos / sobran | **898 / 711 / 935** | 898 / 711 / 935 |
+| de esas 935: deprecados / ausentes / vivos | **10 / 0 / 925** | 10 / 0 / 925 |
+| transiciones que SUBEN | **1** (706397c7 995 a 3ffc2091 996, ancestria en verde) | 1, la misma |
+| transiciones que no suben | **28** | 28 |
+
+**LAS SEIS REPRODUCEN AL DIGITO, Y LA SEPTIMA TAMBIEN: SU DISCREPANCIA CONTRA EL ACTA 149
+ES CIERTA.** La palabra **monotona** del acta 149, que es mia, es falsa por un escalon de
+una unidad, y el ejecutor hizo lo que `EJECUTOR.md` 2 manda: declararla en vez de copiarla.
+
+**`OP-C-05`, CON RESOLUCION RE ESCRITA POR MI** (`docs/loop/_auditor_v151_opc05.py`, copia
+propia de `resolverId`, sin importar `run_phase1`):
+
+| ref | duplicadas RESOLVIENDO | duplicadas LITERALES | bidireccionales vivos |
+|---|---|---|---|
+| `a34328b2~1` (antes de `OP-S-12`) | **888 grupos / 925 sobran / 702 nodos** | **0** | **153 pares** |
+| HEAD | **0 / 0 / 0** | **0** | **153 pares** |
+| mergebase con `main` (`36b57d78`) | **0 / 0 / 0** | **0** | **83 pares** |
+
+**Las cinco cifras de su seccion 1 reproducen: el 888, el cero literal, los 153, los 83 y
+la verificacion 2 en verde sobre el grafo saneado.** Y las **cuatro aristas de `OP-E-05`,
+comprobadas una a una por mi: existe UNA**,
+`requisitos_gates_con_dientes -> gestion_portafolio_formal`.
+
+**EL CASO POSITIVO EN GATE 0 REAL LO LEI ENTERO**: `SALIDA_V150_2C_CASO_POSITIVO_GATE0.txt`
+trae el `[FALLO]` de `OP-C-05` nombrando **nodo, campo y destino** con las dos entradas, y
+cierra en `GATE 0: FALLIDO` **EXITCODE 1**. El arbol quedo restaurado: `git diff HEAD`
+sobre `dataset/` **sin una fila**.
+
+**EL EXPEDIENTE: 71 fichas, UN SOLO ESQUEMA, 18 CLAVES**, contado por mi. `OP-S-12` en
+**HECHA** y **05_SANEO 10 de 10 en HECHA**. El diff de `OPERACIONES.jsonl` en toda la
+vuelta es **1 fila y un solo `id_op`**, `OP-S-12`. **Los dos registros son ADICION PURA
+PROBADA POR PREFIJO DE BYTES**, no solo por `numstat`: `CORRECCIONES_A_APLICAR.md`
+**222/0** y el fichero viejo es prefijo exacto del nuevo; `docs/PENDIENTES.md` **74/0**,
+igual.
+
+**EL INDICE SEMANTICO, MEDIDO POR MI SOBRE `web/lib/assets/semantic_index.json`: 3.521 ids,
+3.169 vivos, 3.151 con vector, 18 vivos SIN VECTOR, 370 no vivos que son 370 DEPRECADOS y
+CERO FANTASMAS**, con los dos cuadres en verde. **Y la linea 166 dice literalmente lo que
+el reporte afirma**: `ids = [k for k in graph.keys() if not graph[k].get("deprecado")]`.
+
+**LA TAREA 5, RE CORRIDA POR MI**: `vuelta150_5c_mutacion_ciclo.py` exit 0, **los cuatro
+casos en verde y los cuatro mutados CAEN**, con `dataset` y `web` en el **mismo sha256
+antes y despues**. Y el diagnostico esta en los **tres** sitios que el reporte nombra
+(`scripts/run_phase1.py:966`, `engine/test_gate_alias.py:133`, `.githooks/pre-commit:32`).
+**No afloja nada**: en el propio caso positivo de Gate 0 el `[FALLO]` de los 71 divergentes
+sigue siendo `[FALLO]` y el exit sigue siendo 1, con el diagnostico **dentro del valor**,
+no en lugar de el.
+
+**EL MARCADOR, RECOMPUTADO POR MI DESDE EL ARCHIVO**: `INTRA_DOMINIO_VEREDICTOS.jsonl`
+tiene **3.388 lineas**, **A 551, B 72, C 5, D 2.760**, y **551+72+5+2.760 = 3.388**.
+**Cero huecos.** El cribado sigue cerrado y esta vuelta no lo toco.
+
+## 2. LA RELECTURA CIEGA, Y LO QUE MIS INSTRUMENTOS ENCONTRARON
+
+Empece por los discutibles marcados, midiendo **antes** de leer la razon escrita del
+ejecutor, y en dos de ellos monte una vara distinta a la suya a proposito. **Los tres que
+siguen salen de un instrumento mio, escrito hoy y commiteado:**
+`docs/loop/_auditor_v151_discutibles.py`, salida en `_auditor_v151_discutibles.txt`.
+
+**D6, EL UMBRAL DE CONGELADO DECLARADO. SU RESERVA ES CIERTA Y ES MAS GRANDE DE LO QUE EL
+LA DICE.** Corri su lista de marcas y otras tres sobre las **60 fichas en LISTA**:
+
+| lista de marcas | declaradas de 60 |
+|---|---:|
+| la suya (ESTADO, DIFERIDA, CONGELAD, SIGUE EN LISTA, NO SE MUEVE) | **28** |
+| estrecha (solo CONGELAD y DIFERIDA) | **8** |
+| ancha (mas DECLARADA, NO SE TOCA, RESERVAD, PENDIENTE) | **43** |
+| muy estrecha (la palabra estado pegada a un verbo) | **18** |
+
+**El reparto 28 contra 30 no es una medicion, es una convencion**, y se mueve entre 8 y 43
+segun la lista. Lo marco el, y esta bien marcado: **el 30 no es un cardinal duro y no se
+puede encargar trabajo sobre el como si lo fuera.**
+
+**D2, LA VENTANA DE 4.000 CARACTERES DE LA FILA 06 MESAS. LA PUSE A PRUEBA CON LA VARA QUE
+EL NO USO Y AGUANTA.** `docs/plan/06_MESAS.md` **si** tiene secciones delimitadas por
+encabezado de nivel 2. Midiendo por **seccion delimitada** en vez de por ventana elegida a
+ojo, uniendo los bloques de cada mesa, sale **5 de 5 igual**, mesa por mesa, con decision,
+motivo y cobertura las tres en verde. **Su 5 de 5 NO depende de la ventana.**
+
+**D7, LA GUARDA SOBRE VIVOS Y LOS 330 EN DEPRECADOS.** Medido por mi hoy: **330 entradas
+que sobran sobre nodos deprecados y 0 sobre vivos.** Su cifra es exacta y su declaracion
+esta escrita dentro de la guarda, no callada.
+
+**Y AHORA LO QUE NO ESTABA MARCADO, QUE ES LO QUE DE VERDAD TRAIGO.**
+
+**HALLAZGO 1: LA PIERNA P3 DE LA TAREA 3 SE CUENTA A SI MISMA.** Corri **su propio
+instrumento**, `scripts/loop/vuelta150_3_relectura_expediente.py`, **hoy y sin tocarlo**:
+
+| lo que publica el reporte | lo que su instrumento dice HOY |
+|---|---|
+| no calzan **58** de 71, calzan **13** | no calzan **60**, calzan **11** |
+| congeladas en silencio **30** | **32** |
+| cobertura P1 / P2 / P3 **19 / 20 / 67** | **19 / 20 / 69** |
+| las **UNICAS DOS** fichas en LISTA sin ninguna prueba: `OP-V-01` y `OP-L-01` | **CERO** fichas |
+
+**Y NO ES QUE MINTIERA: ES QUE SU VARA COME DE SU PROPIA COLA, Y LO PROBE CONGELANDO EL
+RELOJ.** Corri su misma vara con el log de git cortado en `c9c6ea40~1`, o sea el arbol de
+justo ANTES del commit de su TAREA 3 (`docs/loop/_auditor_v151_expediente_congelado.txt`),
+y salen **19 / 20 / 67, no calzan 58, calzan 13, declaradas 28, en silencio 30, HECHA sin
+prueba 0, y las dos sin prueba son `OP-V-01` y `OP-L-01`**. **Las siete cifras reproducen
+al digito.** Su reporte es fiel al instrumento que corrio, que es lo que `AUDITOR.md` 1.1
+manda.
+
+**LA CAUSA, NOMBRADA CON SU COMMIT.** La P3 pide *"un commit que NOMBRA el id_op y ademas
+toca dataset/, scripts/, engine/ o web/"*. El commit **`c9c6ea40`** nombra a `OP-V-01` y a
+`OP-L-01` en su cuerpo (los conte: una vez cada uno) y toca
+`scripts/loop/vuelta150_3_relectura_expediente.py`. Barri **los 1.933 commits de la rama**
+con frontera de palabra y **la unica huella P3 de esas dos fichas es exactamente ese
+commit**. **El acto de publicar que no tienen prueba de ejecucion ES la prueba de ejecucion
+que les faltaba.**
+
+**HALLAZGO 2: LA FILA 0 CODIGO DE LA TAREA 4 HACE LO MISMO, Y ESA ES LA FILA QUE SOSTIENE
+LA PRIMERA DE LAS CINCO VARAS CORREGIDAS.** Corri `vuelta150_4_tabla_por_fase.py` hoy y lo
+compare linea a linea con su salida commiteada: **los ocho veredictos y las ocho celdas son
+identicos** (VERDE 4, VERDE PARCIAL 4, NO CUMPLE 0), **y lo unico que cambia son las lineas
+de la fila 0**:
+
+| en su corrida | en la mia, hoy |
+|---|---|
+| ficheros `SALIDA_*.txt` barridos: **5.024** | **5.041** |
+| `OP-S-06`: **POR PORTADORA**, sin salida propia | **DIRECTA: 1 salida** roja, `SALIDA_V150_4_TABLA_POR_FASE.txt` |
+| **7 de 7 (6 propias, 1 por portadora)** | **7 de 7 (7 propias, 0 por portadora)** |
+
+**La salida roja que hoy sostiene a `OP-S-06` es el fichero de salida de esa misma vara.**
+Y la pierna de portadora, que es **el cambio (1) de los cinco de
+`SALIDA_V150_4_LAS_DOS_VARAS.txt`**, hoy ya no haria falta, pero por el motivo equivocado.
+
+**Las dos son la misma especie: una vara que cuenta el papeleo de la vuelta como prueba del
+trabajo de la vuelta.** No falsean ninguna cifra publicada, y por eso no las registro como
+caida de cifra; **envejecen la vara antes de que se enfrie el commit**, que es lo que la
+casa llama guarda que no alcanza.
+
+**HALLAZGO 3, Y ESTE SI ES UNA CIFRA CON LA UNIDAD MAL.**
+`SALIDA_V150_2C_SIETE_VERIFICACIONES.txt`, linea 27, publica *"307 nodo(s) vivo(s) traen un
+mismo destino, tras resolver, en nodos_previos Y en nodos_siguientes"*, y esa frase esta
+copiada dentro del comentario de la guarda en `scripts/run_phase1.py`. **Medido por mi: son
+307 destinos sobre 255 nodos vivos.** El instrumento que la produce
+(`vuelta150_medir_opc05.py`, linea 130) hace `borde += len(s & p)`, que **suma tamanos de
+interseccion**, o sea cuenta destinos y no nodos. **El 307 es un cardinal verdadero con el
+sustantivo cambiado**, y es exactamente la especie que la 4.e del propio encargo mandaba
+evitar: una palabra por sentido. **No vive en `REPORTE.md`** (lo comprobe: cero
+apariciones); **vive en una salida commiteada y en el codigo de Gate 0.**
+
+## 3. ADJUDICACIONES
+
+**3.1 a 3.10, LOS DIEZ DISCUTIBLES: LOS DIEZ A FAVOR.** Con reserva en el 1, el 5, el 6 y
+el 10.
+
+**3.1 (D1, las cinco varas corregidas y el salto de cinco a cero). A FAVOR, CON RESERVA.**
+Lei los cinco cambios uno a uno contra la letra que cada uno cita y los cinco tienen cita
+verdadera: la nota y el `depende_de` de `OP-C-04` para la portadora; el universo 03
+FUSIONES de la propia celda; la letra *"en su id ni en su titulo"* de `OP-S-01` mas la
+decision del fundador del 28 ago; la correccion declarada de la vuelta 120 dentro de
+`OP-S-02`; y `06_MESAS.md` como sede. **Ninguno de los cinco es una vara ablandada: cuatro
+corrigen un error de UNIVERSO y uno corrige un error de UNIDAD.** Y dos de las cinco filas
+**siguen sin llegar a VERDE**, que es lo que un ablandamiento no deja nunca. **LA
+RESERVA:** la primera corrida **no se commiteo**, asi que la mitad de la evidencia es su
+palabra; y el cambio (1), el de la portadora, **descansa sobre la fila que el hallazgo 2
+prueba contaminada**. Se sostiene igual, porque la portadora exige que `OP-C-04` nombre a
+`OP-S-06` en su `depende_de` y eso lo comprobe.
+
+**3.2 (D2, la ventana de 4.000). A FAVOR.** Lo puse a prueba con la vara delimitada y da
+**5 de 5**. La ventana se cambia igual, pero no cambia un veredicto.
+
+**3.3 (D3, ejecutar media `OP-C-05` en vez de parar entera). A FAVOR, Y NO ES UN ATAJO: ES
+LO CORRECTO.** La ficha tiene **dos mitades separables** y lo demuestra su propia
+`verificacion`, que dedica las cuatro primeras entradas a la guarda de duplicadas y las
+tres ultimas a la lista blanca. Las cuatro primeras **se contestan sin decidir nada** y las
+verifique: caso positivo en Gate 0 real con exit 1, caso negativo verde sobre el grafo
+saneado, caso de borde verde, y el 888 contra 0 que prueba que resolver no es adorno.
+**Parar entera habria dejado sin guarda las 925 entradas que la 148 retiro**, y la propia
+nota dice que *"una limpieza sin guarda se deshace sola"*. **Ejecutar lo que no pide
+decision y traer lo que si la pide es la lectura correcta de `AUDITOR.md` 3.**
+
+**3.4 (D4, R.29 en CORRECCIONES_A_APLICAR.md). A FAVOR.** El encargo nombraba ese fichero
+con esas palabras, y una discrepancia de sede entre un encargo y una costumbre **no es una
+contradiccion con una regla vigente**, que es lo unico que obliga a parar y traer. Dejo
+remision y no copia. **La sede correcta para los R.x es `docs/PENDIENTES.md`**, donde viven
+R.20 a R.28, medido hoy, y asi lo dejo dicho para el proximo encargo.
+
+**3.5 (D5, la mitad de presencia de P2). A FAVOR, CON RESERVA.** Medir presencia y decirlo
+es honesto. **La reserva es mia y la amplio:** con el hallazgo 1 delante, **P2 es hoy la
+unica de las tres piernas que no puede contaminarse sola**, porque `scripts/loop/` queda
+fuera de su universo por la adjudicacion 3.9 del acta 144. Es la pierna mas debil en fuerza
+y la mas limpia en higiene.
+
+**3.6 (D6, el umbral de congelado declarado). A FAVOR, CON RESERVA MEDIDA.** Ver la seccion
+2: entre 8 y 43 segun la lista de marcas. **El 28 contra 30 se publica como convencion y no
+como cardinal**, y ningun encargo puede tratarlo como una nomina.
+
+**3.7 (D7, leer la guarda sobre vivos). A FAVOR.** No es doctrina nueva: es el criterio ya
+adjudicado para `OP-C-04` el 14 ago 2026 por decision del fundador, camino A, y la propia
+ficha de `OP-C-05` cita a `OP-C-04` como su patron. Los **330** sobre deprecados los medi y
+coinciden, y quedan declarados dentro de la guarda.
+
+**3.8 (D8, llamar discrepancia al monotona). A FAVOR.** `EJECUTOR.md` 2 manda declarar y no
+copiar, y lo hizo con la ancestria comprobada. **La palabra era mia, del acta 149, y era
+falsa**: queda registrada en la 4.3 de esta acta.
+
+**3.9 (D9, no pegar el bloque de commits). A FAVOR.** El choque que describe es real: la
+guarda de citas lee el asunto de un commit como prosa del ejecutor y un asunto ya escrito
+no admite respaldo en su misma frase. **Citar el fichero y contarlo (7 contra 8, con el
+motivo del octavo) conserva lo auditable y no afloja la guarda.** Lo verifique por fuera y
+cuadra.
+
+**3.10 (D10, la pierna P3 cuenta un commit que nombra y toca codigo). A FAVOR, Y LO AMPLIO,
+PORQUE VIO LA ESPECIE Y NO VIO EL EJEMPLAR MAS CERCANO.** Su discutible dice que P3 *"no
+separa del todo el registro de la ejecucion"*. **Es peor que eso y esta medido: no separa
+el registro de la ejecucion NI SIQUIERA CUANDO EL REGISTRO ES EL SUYO PROPIO.** El merito
+de haberlo marcado es real y por eso va a favor; la ampliacion es mia.
+
+**3.11, LA PREGUNTA 1 (que letra de `OP-C-05` cede): NO LA ADJUDICO. ES PARADA.** Ver la
+seccion 6.
+
+**3.12, LA PREGUNTA 2 (las treinta congeladas en silencio): ADJUDICADA, Y LA RESPUESTA ES
+QUE HOY NO SE DESCONGELAN.** Tres razones escritas y ninguna nueva. **(a)** El pase de
+`estado` esta **reservado a una sola adjudicacion del auditor, con el conteo antes y
+despues** (acta 139, 3.6, y acta 140, recogido en la 14.d de
+`CORRECCIONES_A_APLICAR.md`), asi que no es trabajo de encargo suelto. **(b)** La vara que
+hoy dice quien esta ejecutado **se cuenta a si misma** (hallazgo 1): descongelar treinta
+fichas sobre una vara que cambia de resultado con el commit que la publica seria un verde
+sobre una pregunta abierta, que es exactamente lo que la 1.c de la 150 evito con `OP-S-12`.
+**(c)** El **30** no es un cardinal (3.6): es una convencion que se mueve entre 8 y 43.
+**Lo que si queda adjudicado es el orden: primero se repara la vara, despues se recuenta
+con el reloj congelado, y solo entonces el auditor adjudica el pase de estado en un acto y
+con el conteo delante.**
+
+**3.13, LA PREGUNTA 3 (`OP-L-01`): ADJUDICADA, Y NO ESTA CERRADA POR OTRA VIA.** Lei su
+ficha: su propia adjudicacion dice *"TANDA DE ONCE LECTURAS DIRIGIDAS, hechas el 11 ago
+2026"* con **saldo 2 A y 9 D** y las once nombradas una a una en su nota. **Su trabajo esta
+hecho y consta en su propia ficha; lo que no esta hecho es su `estado`.** O sea: `OP-L-01`
+**no entra en ningun encargo de ejecucion**, entra en el pase de estado de la 3.12. Y
+`OP-V-01` es la mesa de la fase 08: **su `estado` no puede moverse hasta que la fase 08
+cierre**, y la fase 08 no cierra sin la sesion con credencial (acta 149, 3.10). **La huella
+P3 que hoy tienen las dos es el artefacto del hallazgo 1 y no cuenta.**
+
+**3.14, LA CIFRA DEL CASO DE BORDE: SE CORRIGE POR CORRECCION DECLARADA, NO SE BORRA.** El
+**307** es verdadero como cardinal de destinos y falso como cardinal de nodos. Se escribe
+la correccion con la cifra vieja intacta y la unidad buena al lado (**307 destinos sobre
+255 nodos vivos**), en el fichero de salida y en el comentario de la guarda. **Es el
+mecanismo que la casa ya usa** (la CORRECCION 30 de esta misma vuelta), no doctrina nueva.
+
+**3.15, LA SEDE DE LOS R.x.** Los registros de acta van a `docs/PENDIENTES.md`, donde viven
+R.20 a R.28. `CORRECCIONES_A_APLICAR.md` es la sede de las CORRECCION N. Lo adjudico para
+que el proximo encargo no repita el choque del D4.
+
+## 4. CAIDAS, CON NOMBRE
+
+**4.1, DEL EJECUTOR, DE VARA (guarda que no alcanza): LA PIERNA P3 SE CUENTA A SI MISMA.**
+Fuera de lo marcado en su especie exacta (su D10 marca la especie general, no el ejemplar
+propio). No falsea ninguna cifra publicada: sus siete cifras reproducen al digito con el
+reloj congelado. **Registrada con su nombre.**
+
+**4.2, DEL EJECUTOR, DE VARA (guarda que no alcanza): LA FILA 0 CODIGO SE CUENTA A SI
+MISMA.** Misma especie, segundo ejemplar. Ningun veredicto de la tabla cambia. **Fuera de
+lo marcado.**
+
+**4.3, DEL AUDITOR (mia, heredada de la 149), DE ACTA: EL MONOTONA.** El acta 149 llamo
+monotona a una bajada que sube una vez, y lo confirme con mi propio rastreador. Vive en una
+glosa en lista, **no en una tabla, una cabecera ni una conclusion**, asi que por la letra
+del 27 ago 2026 **se registra y NO acumula**. La direccion general del acta era correcta y
+ninguna cifra de su adjudicacion dependia de la palabra.
+
+**4.4, DEL EJECUTOR, DE CIFRA EN CODIGO: LOS 307 NODOS QUE SON 307 DESTINOS SOBRE 255
+NODOS.** Fuera de lo marcado. **No vive en `REPORTE.md`** (cero apariciones, comprobado) ni
+en `docs/plan/` ni en el banco: vive en `docs/loop/SALIDA_V150_2C_SIETE_VERIFICACIONES.txt`
+y en el comentario de la guarda de `scripts/run_phase1.py`. **Por la letra del 13 ago 2026,
+que define la especie CIFRA PUBLICADA por donde vive, NO acumula para la parada.** Y digo
+en voz alta que la letra no previo este sitio: **una cifra dentro del codigo de Gate 0 es
+mas duradera que una del reporte**, y si debe o no contar es cosa del fundador, no mia. Va
+como pregunta secundaria en `PARA_ALEXIS.md`.
+
+**4.5, DE LA CASA (el encargo, escrito por mi antecesor), MENOR: LA SEDE DE R.29.** El
+encargo mando R.29 a `CORRECCIONES_A_APLICAR.md` cuando R.20 a R.28 viven en
+`PENDIENTES.md`. El ejecutor obedecio la letra y dejo remision, que es lo correcto.
+Adjudicado en la 3.15.
+
+**CERO caidas de CLASE. CERO de CIFRA PUBLICADA en el sentido de la letra vigente. CERO de
+REPORTE: re medi todas las cifras de su pagina y ninguna es falsa.**
+
+## 5. METRICA DE CREDITO ACUMULADA
+
+**Esta tanda: CERO relecturas de par que muevan el marcador.**
+`INTRA_DOMINIO_VEREDICTOS.jsonl` sin tocar; lo recompute yo y da **3.388 con A 551, B 72, C
+5, D 2.760**, cero huecos. **De los DIEZ discutibles marcados, los DIEZ adjudicados: LOS
+DIEZ A FAVOR**, con reserva en el 1, el 5, el 6 y el 10, y **en dos amplio lo que el mismo
+marco** (el 6 con su medicion y el 10 con su ejemplar propio). **Sus tres preguntas: dos
+adjudicadas y una traida como parada.**
+
+**LA REGLA DEL CREDITO, APLICADA CON SU LETRA, Y BAJA OTRA VEZ.** `AUDITOR.md` 1.2: *"si
+una discrepancia aparece FUERA de los discutibles marcados, baja el credito de toda la
+tanda: ese tramo se relee al doble y lo dices en el acta."* **Aparecieron tres fuera de lo
+marcado: las dos varas que se cuentan a si mismas (4.1 y 4.2) y la unidad del 307 (4.4). EL
+CREDITO DE LA TANDA BAJA. EL TRAMO QUE SE RELEE AL DOBLE ES EL DE LAS VARAS DEL PROPIO
+EJECUTOR**, o sea todo instrumento nacido en `scripts/loop/` que produzca un cardinal para
+el reporte. **Lo dejo escrito aqui y va en `PARA_ALEXIS.md` como primera tarea del retomar,
+porque el encargo va vacio por la parada.**
+
+**Caidas del ejecutor: CERO de clase, CERO de cifra publicada, CERO de reporte, DOS de vara
+(4.1 y 4.2) y UNA de cifra en codigo (4.4). De la casa: UNA (4.5). Del auditor: UNA de acta
+(4.3).**
+
+**Acumulado:** **859 relecturas** (sin cambio), **912 puestos** (sin cambio), **12 caidas
+de clase del ejecutor** (sin cambio), **91 de reporte del ejecutor** (sin cambio), **21 de
+cifra publicada del ejecutor** (sin cambio: la 4.4 no es de esa especie por la letra), **23
+de expediente** (sin cambio), **23 de incumplimiento de encargo** (sin cambio), **9 de
+procedimiento del ejecutor** (sin cambio), **19 de cifra del auditor** (sin cambio), **21
+de acta del auditor** (20 mas la 4.3), **39 de procedimiento del auditor** (sin cambio),
+**1 de reporte del auditor** (sin cambio), **56 de encargo del auditor** (55 mas la 4.5),
+**2 de clase del auditor** (sin cambio), y **5 vueltas no entregadas enteras** (sin cambio:
+**la 150 se entrego entera**, seis tareas de seis, con su parada declarada y no callada).
+**POR ESPECIE, Y ESTO NO SUMA DOS VECES AL TOTAL: 9 de guarda envejecida** (sin cambio) y
+**46 de guarda que no alcanza o cegada** (44 mas la 4.1 y la 4.2). **NUEVA ENTRADA DE
+ESPECIE: 1 de cifra en codigo** (la 4.4), que hasta hoy no tenia casillero.
+
+**RACHAS:**
+
+> **CLASE O CIFRA PUBLICADA DEL EJECUTOR: SIGUE EN CERO**, por tercera vuelta consecutiva.
+> Re medi todas las cifras de su reporte con instrumento propio y **ninguna es falsa**. La
+> 4.4 no entra en esta especie por donde vive, y lo digo con la letra delante en vez de
+> forzarla.
+>
+> **REPORTE: SIGUE EN CERO.** Ninguna de las tres caidas de esta vuelta vive en
+> `REPORTE.md`.
+>
+> **`AUDITOR.md` 1.2 NO ME OBLIGA A ENCARGAR ESCALADA**, porque las dos rachas estan en
+> cero. **Repase la condicion en vez de olvidarla, y lo digo con su nombre**, que es la
+> leccion de la vuelta 89. Lo que si dejo encargado, dentro de `PARA_ALEXIS.md` y no en un
+> prompt, es la **reparacion de las dos varas**, porque la relectura al doble sin la vara
+> arreglada volveria a medir con el mismo metro torcido.
+
+## 6. LAS CONDICIONES DE PARADA, UNA A UNA. SE DISPARAN TRES
+
+  - **Doctrina NUEVA necesaria: SI, Y ES LA PRIMERA.** La lista blanca de `OP-C-05` tiene
+    **tres letras vigentes que no pueden ser ciertas a la vez**, y las tres las medi: (L1)
+    su adjudicacion, *"la guarda falla ante cualquier arista bidireccional SALVO las de la
+    lista blanca"*, con **dos** entradas; (L2) su verificacion 2, *"el grafo saneado por
+    OP-S-12 pasa en verde"*; (L3) su adjudicacion otra vez, *"cada entrada CITA SU
+    LECTURA"*. **Hay 153 pares bidireccionales vivos en HEAD y ya habia 83 en el mergebase
+    con main**, o sea antes de que esta campana empezara. **L1 mas L2 son imposibles sobre
+    el grafo de hoy y tambien sobre el de antes; L1 mas L3 obligaria a escribir 151
+    entradas sin una sola lectura detras.** Busque la regla que lo cubriera por extension y
+    **no la hay**: la CORRECCION 14 refina la vara del 9.22 a un **test de lineas con dos
+    salidas**, pero su alcance escrito es *"cuando una fusion colapsa dos aristas que eran
+    de pares distintos"*, que es una especie mas estrecha que este censo. **Y su 14.d dice
+    lo contrario de encenderla:** *"Si una retirada tocase una arista que ninguna operacion
+    del plan propuso ni prohibe, esa retirada se para y se trae, no se ejecuta (AUDITOR.md
+    4: no se borra contenido que ninguna regla ordena)"*. **La parada que el ejecutor trajo
+    no solo es legitima: es la que esa linea ya mandaba.**
+  - **Contradiccion con una regla vigente que no se resuelve con las reglas de correccion
+    existentes: SI, LA MISMA.** El mecanismo de correccion declarada arregla una **cifra**
+    vencida (asi se resolvio el 1.056 de `OP-S-12` y asi resuelvo el 307 en la 3.14). **Aqui
+    no vence una cifra: vence el ALCANCE de la guarda**, y decidirlo es cambiar lo que una
+    operacion del plan entrega. Eso lo reserva la casa.
+  - **Decision de fundador: SI.** Las dos salidas posibles caen las dos en lo reservado: o
+    **la guarda de bidireccionales no se enciende nunca tal como esta escrita** (cambiar el
+    alcance de una operacion de la campana), o **la lista blanca deja de ser por evidencia**
+    (autorizar 151 excepciones sin lectura). **No elijo yo.**
+  - **Fallo tecnico repetido: NO.** Gate 0 por el ciclo entero, motor, web, tsc, la apertura
+    sellada y el `--comparar` de la cabecera, **todo VERDE hoy y corrido por mi**.
+  - **Credito de tanda roto: NO.** Baja, y se debe la relectura al doble que dejo escrita en
+    la 5, pero **no hay dos tandas seguidas con caida de clase o de cifra publicada**: hay
+    cero de las dos por tercera vuelta seguida.
+  - **Cierre de las fases 03 y 05: CUMPLIDAS** y citables.
+  - **Credenciales ausentes: APLICA, Y AHORA SI ESTA DELANTE.** La fase 08 no cierra sin la
+    sesion con humano presente (acta 149, 3.10), el `.env` esta fuera del repo y ahi se
+    queda. **Lo que en la 149 aplazaba esta parada era que quedaba trabajo del bucle por
+    delante; ese trabajo era `OP-C-05`, y `OP-C-05` es de FASE 00 CODIGO, que AUDITOR.md 3
+    declara PRIMERA Y BLOQUEANTE.** Una operacion bloqueante de la fase 0 que **no puede
+    completarse sin una decision del fundador** no se rodea haciendo contabilidad de fases
+    posteriores.
+  - **Campana consumada: NO.** Y por eso **no se pide el merge**: `OP-C-05` esta a medias y
+    la fase 08 esta abierta. **El merge es del fundador y solo suyo, y aqui no se pide.**
+
+**ESCRIBO `docs/loop/PARA_ALEXIS.md` Y DEJO `docs/loop/PROMPT_SIGUIENTE.md` VACIO.**
+
+## 7. LO QUE NO ENCARGO, Y DONDE QUEDA
+
+No hay encargo porque hay parada. **Lo que el bucle tiene listo para el dia que se retome
+queda escrito en `PARA_ALEXIS.md` y no aqui**, para que el fundador lea una sola pagina: la
+reparacion de las dos varas que se cuentan a si mismas, el recuento con el reloj congelado,
+el pase de estado de las congeladas como acto unico del auditor, la correccion declarada
+del 307, y las cuatro filas VERDE PARCIAL de la tabla por fase con lo que le falta a cada
+una. **Nada de eso pide credencial y nada de eso decide lo que esta reservado.**
