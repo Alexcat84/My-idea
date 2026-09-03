@@ -1,0 +1,27 @@
+COTEJO DE VEREDICTOS, guarda VIEJA contra guarda NUEVA
+  vieja: docs/loop/SALIDA_V162_T2A_VIEJA.txt
+  nueva: docs/loop/SALIDA_V162_T2A_NUEVA.txt
+
+  VUELTA 156: vieja VERDE exit 0 con 0 fallo(s) | nueva VERDE exit 0 con 0 fallo(s) | IDENTICO
+  VUELTA 158: vieja ROJO exit 1 con 1 fallo(s) | nueva ROJO exit 1 con 1 fallo(s) | IDENTICO
+  VUELTA 159: vieja VERDE exit 0 con 0 fallo(s) | nueva VERDE exit 0 con 0 fallo(s) | IDENTICO
+  VUELTA 160: vieja VERDE exit 0 con 0 fallo(s) | nueva VERDE exit 0 con 0 fallo(s) | IDENTICO
+  VUELTA 161: vieja ROJO exit 1 con 10 fallo(s) | nueva VERDE exit 0 con 0 fallo(s) | MOVIDO
+      solo en la VIEJA: SALIDA_V161_CICLO_ETIQUETAS_APERTURA.txt nacio en 4208b8fa, y entre el acta ed234154 y ese commit vive d3482b11 ('Decision del fundador: la vara de la lectura dirigida se con') que toca 2 ruta(s) que NO son papel de parada (docs/plan/BANCO_DEL_PLAN.md, docs/plan/OPERACIONES.jsonl): la apertura se midio DESPUES de una operacion
+      solo en la VIEJA: SALIDA_V161_CICLO_NUMSTAT_APERTURA.txt nacio en 4208b8fa, y entre el acta ed234154 y ese commit vive d3482b11 ('Decision del fundador: la vara de la lectura dirigida se con') que toca 2 ruta(s) que NO son papel de parada (docs/plan/BANCO_DEL_PLAN.md, docs/plan/OPERACIONES.jsonl): la apertura se midio DESPUES de una operacion
+      solo en la VIEJA: SALIDA_V161_CICLO_SYNC_APERTURA.txt nacio en 4208b8fa, y entre el acta ed234154 y ese commit vive d3482b11 ('Decision del fundador: la vara de la lectura dirigida se con') que toca 2 ruta(s) que NO son papel de parada (docs/plan/BANCO_DEL_PLAN.md, docs/plan/OPERACIONES.jsonl): la apertura se midio DESPUES de una operacion
+      solo en la VIEJA: SALIDA_V161_CONTEO_APERTURA.txt nacio en 4208b8fa, y entre el acta ed234154 y ese commit vive d3482b11 ('Decision del fundador: la vara de la lectura dirigida se con') que toca 2 ruta(s) que NO son papel de parada (docs/plan/BANCO_DEL_PLAN.md, docs/plan/OPERACIONES.jsonl): la apertura se midio DESPUES de una operacion
+      solo en la VIEJA: SALIDA_V161_DESFASE_CALIBRADO_APERTURA.txt nacio en 4208b8fa, y entre el acta ed234154 y ese commit vive d3482b11 ('Decision del fundador: la vara de la lectura dirigida se con') que toca 2 ruta(s) que NO son papel de parada (docs/plan/BANCO_DEL_PLAN.md, docs/plan/OPERACIONES.jsonl): la apertura se midio DESPUES de una operacion
+      solo en la VIEJA: SALIDA_V161_GATE0_CMD1_APERTURA.txt nacio en 4208b8fa, y entre el acta ed234154 y ese commit vive d3482b11 ('Decision del fundador: la vara de la lectura dirigida se con') que toca 2 ruta(s) que NO son papel de parada (docs/plan/BANCO_DEL_PLAN.md, docs/plan/OPERACIONES.jsonl): la apertura se midio DESPUES de una operacion
+      solo en la VIEJA: SALIDA_V161_HEAD_APERTURA.txt nacio en 4208b8fa, y entre el acta ed234154 y ese commit vive d3482b11 ('Decision del fundador: la vara de la lectura dirigida se con') que toca 2 ruta(s) que NO son papel de parada (docs/plan/BANCO_DEL_PLAN.md, docs/plan/OPERACIONES.jsonl): la apertura se midio DESPUES de una operacion
+      solo en la VIEJA: SALIDA_V161_MOTOR_APERTURA.txt nacio en 4208b8fa, y entre el acta ed234154 y ese commit vive d3482b11 ('Decision del fundador: la vara de la lectura dirigida se con') que toca 2 ruta(s) que NO son papel de parada (docs/plan/BANCO_DEL_PLAN.md, docs/plan/OPERACIONES.jsonl): la apertura se midio DESPUES de una operacion
+      solo en la VIEJA: SALIDA_V161_TSC_APERTURA.txt nacio en 4208b8fa, y entre el acta ed234154 y ese commit vive d3482b11 ('Decision del fundador: la vara de la lectura dirigida se con') que toca 2 ruta(s) que NO son papel de parada (docs/plan/BANCO_DEL_PLAN.md, docs/plan/OPERACIONES.jsonl): la apertura se midio DESPUES de una operacion
+      solo en la VIEJA: SALIDA_V161_WEB_APERTURA.txt nacio en 4208b8fa, y entre el acta ed234154 y ese commit vive d3482b11 ('Decision del fundador: la vara de la lectura dirigida se con') que toca 2 ruta(s) que NO son papel de parada (docs/plan/BANCO_DEL_PLAN.md, docs/plan/OPERACIONES.jsonl): la apertura se midio DESPUES de una operacion
+  VUELTA 162: vieja VERDE exit 0 con 0 fallo(s) | nueva VERDE exit 0 con 0 fallo(s) | IDENTICO
+
+  quietas: [156, 158, 159, 160, 162]
+  movidas: [161]
+  se esperaba que se movieran: [161]
+
+VERDE: ningun veredicto viejo se movio, y el unico que se mueve es el que la adjudicacion 6.5 del acta 161 manda mover.
+EXITCODE: 0

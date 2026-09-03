@@ -1,0 +1,35 @@
+PASADA 1, LOS CASOS TAL CUAL: todos tienen que PASAR.
+  firma_positiva                                       esperado True                         obtenido True                         PASA
+  firma_no_con_acta_normal                             esperado False                        obtenido False                        PASA
+  firma_no_si_el_acta_no_trae_el_encargo               esperado False                        obtenido False                        PASA
+  firma_no_si_PARA_ALEXIS_esta_en_blanco               esperado False                        obtenido False                        PASA
+  portador_unico                                       esperado ['aaaaaaaa']                 obtenido ['aaaaaaaa']                 PASA
+  portador_ninguno_si_nadie_escribe_el_encargo         esperado []                           obtenido []                           PASA
+  dos_portadores_se_ven_los_dos_y_el_primero_es_el_mas_viejo esperado ['aaaaaaaa', 'cccccccc']     obtenido ['aaaaaaaa', 'cccccccc']     PASA
+  quitar_al_portador_deja_el_resto                     esperado ['bbbbbbbb']                 obtenido ['bbbbbbbb']                 PASA
+  sin_portador_None_no_quita_nada                      esperado ['bbbbbbbb', 'aaaaaaaa']     obtenido ['bbbbbbbb', 'aaaaaaaa']     PASA
+  puerta_abierta_deja_el_corredor_limpio               esperado []                           obtenido []                           PASA
+  puerta_solo_con_firma                                esperado ['aaaaaaaa']                 obtenido ['aaaaaaaa']                 PASA
+  rojo_del_ejecutor_intacto                            esperado ['bbbbbbbb']                 obtenido ['bbbbbbbb']                 PASA
+  rotulo_ausente_no_admite_nada                        esperado ([], False)                  obtenido ([], False)                  PASA
+  rotulo_con_NINGUNO_admite_cero_y_lo_dice             esperado ([], True)                   obtenido ([], True)                   PASA
+
+PASADA 2, LA MUTACION: se cambia el valor esperado y cada caso TIENE que CAER.
+  firma_positiva                                       esperado MUTADO False                        obtenido True                         CAE (bien)
+  firma_no_con_acta_normal                             esperado MUTADO True                         obtenido False                        CAE (bien)
+  firma_no_si_el_acta_no_trae_el_encargo               esperado MUTADO True                         obtenido False                        CAE (bien)
+  firma_no_si_PARA_ALEXIS_esta_en_blanco               esperado MUTADO True                         obtenido False                        CAE (bien)
+  portador_unico                                       esperado MUTADO ['aaaaaaaa', 'ZZZZZZZZ']     obtenido ['aaaaaaaa']                 CAE (bien)
+  portador_ninguno_si_nadie_escribe_el_encargo         esperado MUTADO ['ZZZZZZZZ']                 obtenido []                           CAE (bien)
+  dos_portadores_se_ven_los_dos_y_el_primero_es_el_mas_viejo esperado MUTADO ['aaaaaaaa', 'cccccccc', 'ZZZZZZZZ'] obtenido ['aaaaaaaa', 'cccccccc']     CAE (bien)
+  quitar_al_portador_deja_el_resto                     esperado MUTADO ['bbbbbbbb', 'ZZZZZZZZ']     obtenido ['bbbbbbbb']                 CAE (bien)
+  sin_portador_None_no_quita_nada                      esperado MUTADO ['bbbbbbbb', 'aaaaaaaa', 'ZZZZZZZZ'] obtenido ['bbbbbbbb', 'aaaaaaaa']     CAE (bien)
+  puerta_abierta_deja_el_corredor_limpio               esperado MUTADO ['ZZZZZZZZ']                 obtenido []                           CAE (bien)
+  puerta_solo_con_firma                                esperado MUTADO ['aaaaaaaa', 'ZZZZZZZZ']     obtenido ['aaaaaaaa']                 CAE (bien)
+  rojo_del_ejecutor_intacto                            esperado MUTADO ['bbbbbbbb', 'ZZZZZZZZ']     obtenido ['bbbbbbbb']                 CAE (bien)
+  rotulo_ausente_no_admite_nada                        esperado MUTADO ([], False, 'ZZZZZZZZ')      obtenido ([], False)                  CAE (bien)
+  rotulo_con_NINGUNO_admite_cero_y_lo_dice             esperado MUTADO ([], True, 'ZZZZZZZZ')       obtenido ([], True)                   CAE (bien)
+
+VERDE: 14 casos, los 14 pasan tal cual y los 14 caen al mutarles el valor esperado.
+Y LOS DOS QUE IMPORTAN, POR SU NOMBRE: `puerta_solo_con_firma` (sin firma de parada la puerta NO se abre) y `rojo_del_ejecutor_intacto` (un commit del ejecutor delante de la apertura sigue siendo intruso aunque el portador este en el mismo corredor).
+EXITCODE: 0
