@@ -1,0 +1,195 @@
+=== vuelta150_4_tabla_por_fase.py --corte cf9458888f71eae6cfca0cded883c566dd217d49 --gate0 docs/loop/SALIDA_V156_GATE0_CMD1_CIERRE.txt ===
+RELOJ DE GIT CONGELADO EN --corte cf9458888f71eae6cfca0cded883c566dd217d49 (cf945888). RANGO PROPIO: cf9458888f71eae6cfca0cded883c566dd217d49..HEAD
+SALIDA DE GATE 0 LEIDA DE: docs/loop/SALIDA_V156_GATE0_CMD1_CIERRE.txt
+FILAS DE LA TABLA POR FASE, LEIDAS DE docs/plan/08_VERIFICACION.md: 8
+  - 0 CODIGO
+  - 01 FUENTES
+  - 02 DESTEJIDOS
+  - 03 FUSIONES
+  - 04 ENLACES
+  - 05 SANEO
+  - 06 MESAS
+  - 07 ADUANA
+
+================================================================================================
+FILA 1 de 8: 0 CODIGO
+CELDA, LEIDA DE LA PAGINA: cada caso positivo **se cae antes** del arreglo y pasa despues
+------------------------------------------------------------------------------------------------
+INSTRUMENTO: para cada una de las 7 operaciones de 00_CODIGO se busca en
+docs/loop/ una salida COMMITEADA que nombre el id_op y contenga una marca de
+ROJO (FALLO, EXITCODE: 1, CAE o ROJO). La celda pide 'se cae ANTES del arreglo',
+que es un hecho historico: lo unico que lo prueba es esa salida roja guardada.
+ficheros SALIDA_*.txt en docs/loop EN EL ARBOL DEL CORTE: 5138
+GUARDA DE SALIDAS: salidas anadidas por la propia vuelta 29 | usadas como prueba 22 | INTRUSAS 0
+  OP-S-06    DIRECTA: 5 salida(s) roja(s) que lo nombran -> SALIDA_V150_4_TABLA_POR_FASE.txt, SALIDA_V152_T2_TABLA_POR_FASE.txt, SALIDA_V152_T7_TABLA_POR_FASE_CIERRE.txt
+  OP-S-07    DIRECTA: 6 salida(s) roja(s) que lo nombran -> SALIDA_V150_4_TABLA_POR_FASE.txt, SALIDA_V152_T2_TABLA_POR_FASE.txt, SALIDA_V152_T7_TABLA_POR_FASE_CIERRE.txt
+  OP-C-01    DIRECTA: 7 salida(s) roja(s) que lo nombran -> SALIDA_V118_TAREA4_1_GUARDAS_FASE0_DETALLE.txt, SALIDA_V150_4_TABLA_POR_FASE.txt, SALIDA_V152_T2_TABLA_POR_FASE.txt
+  OP-C-02    DIRECTA: 7 salida(s) roja(s) que lo nombran -> SALIDA_V118_TAREA4_1_GUARDAS_FASE0_DETALLE.txt, SALIDA_V150_4_TABLA_POR_FASE.txt, SALIDA_V152_T2_TABLA_POR_FASE.txt
+  OP-C-03    DIRECTA: 7 salida(s) roja(s) que lo nombran -> SALIDA_V118_TAREA4_1_GUARDAS_FASE0_DETALLE.txt, SALIDA_V150_4_TABLA_POR_FASE.txt, SALIDA_V152_T2_TABLA_POR_FASE.txt
+  OP-C-04    DIRECTA: 8 salida(s) roja(s) que lo nombran -> SALIDA_V118_TAREA4_1_GUARDAS_FASE0_DETALLE.txt, SALIDA_V150_2C_SIETE_VERIFICACIONES.txt, SALIDA_V150_4_TABLA_POR_FASE.txt
+  OP-C-05    DIRECTA: 21 salida(s) roja(s) que lo nombran -> SALIDA_V118_TAREA4_1_GUARDAS_FASE0_DETALLE.txt, SALIDA_V150_2C_CASO_POSITIVO_GATE0.txt, SALIDA_V150_2C_SIETE_VERIFICACIONES.txt
+CIFRA: 7 de 7 operaciones de 00_CODIGO tienen su caso positivo rojo guardado
+       (7 por salida propia, 0 por portadora declarada).
+VEREDICTO: VERDE
+
+================================================================================================
+FILA 2 de 8: 01 FUENTES
+CELDA, LEIDA DE LA PAGINA: ningun nodo de la clase con pasos alterados; **el material del segundo libro reubicado, no borrado**
+------------------------------------------------------------------------------------------------
+INSTRUMENTO: la nomina de las 7 fichas de 01_FUENTES son 73 nodos. Se mide
+(a) 'ningun nodo de la clase con pasos alterados': se comparan los
+    pasos_accionables de hoy contra los del grafo ANTERIOR A LA CAMPANA (36b57d78);
+(b) 'el material del segundo libro reubicado, NO BORRADO': se cuenta cuantos
+    de la nomina siguen existiendo en el grafo de hoy.
+  nodos de la nomina: 73
+  con pasos_accionables ALTERADOS respecto del grafo previo: 68
+    ab_testing_optimizacion
+    actualizacion_posiciones_existentes
+    analisis_tco_roi_b2b
+    analisis_trafico_competitivo
+    asociaciones_clave
+    background_startup_vs_corporativo
+    blueprint_de_experiencia
+    brainstorming_divergente
+    bundle_ideas
+    cliente_disena_producto
+  DESAPARECIDOS del grafo de hoy: 0
+  deprecados (siguen en el grafo, no borrados): 5
+  de esos alterados, cuantos estan tambien en la nomina de otra fase: 20 de 68
+  ATRIBUCION: no hay vara escrita que separe la alteracion de FUENTES de la
+  de un destejido sobre el mismo nodo. La cifra se publica; la culpa no se
+  reparte (EJECUTOR.md 11).
+VEREDICTO: VERDE PARCIAL (mitad 'no borrado' medida y VERDE, 0 desaparecidos de 73;
+           mitad 'pasos alterados' NO ATRIBUIBLE con las varas de hoy)
+
+================================================================================================
+FILA 3 de 8: 02 DESTEJIDOS
+CELDA, LEIDA DE LA PAGINA: los **quince congelados** releidos; **cada perdida en el bloque del que proviene**
+------------------------------------------------------------------------------------------------
+INSTRUMENTO: la celda tiene DOS mitades y solo una tiene vara escrita.
+(a) 'cada perdida en el bloque del que proviene': la mide
+    scripts/loop/verificar_mapas_destejido.py, que EJECUTOR.md 1 ya exige
+    correr sobre toda tabla de particion. Se corre aqui.
+    EXITCODE 0
+    | 14 tabla(s), 83 fila(s), 0 discrepancia(s).
+    |   vara 1 (todo numero citado en el motivo pertenece a su fila): CORRIDA
+    |   vara 2 (la particion de la tabla calza celda a celda con el plan sellado): **NO CORRIDA**, no se paso ningun --json.
+    |   ESTE RESULTADO MIDE SOLO LA VARA 1. Una particion cambiada a mano pasaria por aqui sin que este instrumento la vea.
+    | VERIFICADOR DE MAPAS DE DESTEJIDO: OK
+(b) 'los quince congelados releidos': NO TIENE VARA ESCRITA contra el repo.
+    La nomina de los quince vive en prosa de docs/plan/02_DESTEJIDOS.md (la
+    tabla del orden, linea 83 y siguientes) y en docs/PENDIENTES.md, y no hay
+    fichero de datos que la liste. EJECUTOR.md 5 prohibe inventar la regla.
+VEREDICTO: VERDE PARCIAL (mitad (a) medida y verde; mitad (b) NO MECANIZABLE hoy)
+
+================================================================================================
+FILA 4 de 8: 03 FUSIONES
+CELDA, LEIDA DE LA PAGINA: un superviviente por acto, el resto **DEPRECADO CON ALIAS**; `resolverId` devuelve el superviviente
+------------------------------------------------------------------------------------------------
+INSTRUMENTO: sobre TODA ficha del plan con `superviviente` escrito, se
+comprueban las tres cosas que la celda pide, una a una y contra el grafo.
+  fichas con superviviente FUERA de 03_FUSIONES, no medidas aqui: 4 (OP-D-02, OP-D-05, OP-S-01, OP-M-04)
+  fichas con superviviente escrito: 14
+  absorbidos comprobados: 21
+  incumplimientos: 0
+  supervivientes DIVERGENTES (CORRECCION 16, ni cumplida ni sin cumplir): 2
+    OP-M-02-MEDIOS: el superviviente escrito seis_medios_comunicacion_cliente esta deprecado
+    OP-M-02-ADMIT: el superviviente escrito fase_admit esta deprecado
+VEREDICTO: VERDE (los 2 divergente(s) de la CORRECCION 16 se siguen midiendo y nombrando arriba, pero YA NO DEGRADAN esta fila: adjudicacion 6.6 del acta 153, 2 sep 2026)
+
+================================================================================================
+FILA 5 de 8: 04 ENLACES
+CELDA, LEIDA DE LA PAGINA: cada arista nueva **confirmada por lectura**, no por el instrumento; ninguna crea auto-arista tras resolver
+------------------------------------------------------------------------------------------------
+INSTRUMENTO: la celda tiene DOS mitades y se dicen por separado.
+(b) 'ninguna crea auto-arista tras resolver': ES UN CHECK DE GATE 0 y esta
+    corriendo. Su linea, leida de SALIDA_V150_GATE0_CMD1_APERTURA.txt:
+    [OK] Ningun nodo VIVO se cita a si mismo tras RESOLVER (auto-arista via alias) (valor: 0 auto-aristas)
+(a) 'cada arista nueva CONFIRMADA POR LECTURA, no por el instrumento': la
+    celda EXCLUYE explicitamente al instrumento, o sea que por construccion
+    no hay vara mecanica que la conteste. Lo unico que se puede contar aqui
+    es cuantas aristas_nuevas del plan estan HOY presentes, y eso es
+    justamente 'por el instrumento', o sea la otra cosa.
+    fichas con aristas_nuevas escritas: 8
+VEREDICTO: VERDE PARCIAL (mitad (b) verde en Gate 0; mitad (a) NO MECANIZABLE POR SU PROPIA LETRA)
+
+================================================================================================
+FILA 6 de 8: 05 SANEO
+CELDA, LEIDA DE LA PAGINA: ningun id vivo con tratado extinto; los tres de Incoterms con su version; ningun nodo cablea `export.gov`; ninguna de las seis herramientas muertas; ningun nodo con dos claves de fase; **ningun nodo se cita a si mismo tras resolver**
+------------------------------------------------------------------------------------------------
+LA CORRECCION DECLARADA DE LA VUELTA 122, CITADA Y NO REINTERPRETADA, de la
+misma pagina: 'LA CELDA DE LA FILA 05 SANEO SE LEE ACOTADA A LAS NOMINAS DE
+SUS OPERACIONES'... 'esta celda se lee cumplida CUANDO LAS OPERACIONES DE SU
+NOMINA CIERRAN (OP-S-03, OP-S-04, OP-S-05), no cuando el catalogo entero queda
+barrido'.
+
+  [OK] ningun id vivo con tratado extinto, EN SU ID NI EN SU TITULO (nomina OP-S-01, 2 nodo(s)) -> 0 incumplimiento(s)
+  [OK] los de Incoterms con su version (nomina OP-S-02: 3 nodo(s), 1 vivo(s), 2 deprecado(s)) -> 0 incumplimiento(s)
+  [OK] ningun nodo cablea export.gov (dataset/nodos entero, 3853 ficheros) -> 0 incumplimiento(s)
+  [OK] ninguna de las herramientas muertas en la nomina de OP-S-04 (5 nodo(s), 5 nombre(s)) -> 0 incumplimiento(s)
+  [OK] ningun nodo con dos claves de fase (check de Gate 0: Ninguna clave de nodo fuera de la lista blanca del esquema (valor: 0 renegadas)) -> 0 incumplimiento(s)
+  [OK] ningun nodo se cita a si mismo tras resolver (check de Gate 0) -> 0 incumplimiento(s)
+CIFRA: 6 de 6 sub-celdas en verde.
+VEREDICTO: VERDE
+
+================================================================================================
+FILA 7 de 8: 06 MESAS
+CELDA, LEIDA DE LA PAGINA: cada decision escrita **con su motivo y su cobertura al lado** (banco 9.26)
+------------------------------------------------------------------------------------------------
+INSTRUMENTO: sobre las 5 fichas de 06_MESAS se mide lo que la celda nombra:
+que la decision este ESCRITA (campo adjudicacion no vacio), que traiga MOTIVO
+y que traiga COBERTURA AL LADO. Motivo y cobertura se buscan LITERALES en el
+texto de la ficha: 'porque'/'motivo' para el primero, y una cifra de cobertura
+(un 'N de M', un 'cobertura' o un porcentaje) para la segunda. Se mide literal
+y no se ensancha para que atrape a nadie.
+  sede anadida: docs/plan/06_MESAS.md (25843 caracteres)
+  [OK] OP-M-01    decision escrita True | motivo True | cobertura True | nombrada en 06_MESAS.md True
+  [OK] OP-M-02    decision escrita True | motivo True | cobertura True | nombrada en 06_MESAS.md True
+  [OK] OP-M-03    decision escrita True | motivo True | cobertura True | nombrada en 06_MESAS.md True
+  [OK] OP-M-04    decision escrita True | motivo True | cobertura True | nombrada en 06_MESAS.md True
+  [OK] OP-M-05    decision escrita True | motivo True | cobertura True | nombrada en 06_MESAS.md True
+CIFRA: 5 de 5 mesas con decision, motivo y cobertura.
+VEREDICTO: VERDE
+
+================================================================================================
+FILA 8 de 8: 07 ADUANA
+CELDA, LEIDA DE LA PAGINA: los cuatro controles mecanicos **corriendo en Gate 0**
+------------------------------------------------------------------------------------------------
+SE LEE CON LA FASE YA CERRADA POR EL ACTA 149 (adjudicacion 3.12), Y SE MIDE
+CONTRA GATE 0, QUE ES LO QUE LA CELDA NOMBRA, no contra la vara de codigo, que
+es otra unidad (frontera de la adjudicacion 3.9 del acta 144).
+  controles de la aduana corriendo en Gate 0: 4
+    [OK] OP-A-01: todo nodo VIVO con MAS DE UNA fuente pasa la comprobacion posicional (valor: 8 con fuente multiple, 0 sin adjudicar)
+    [OK] OP-A-01 / OP-A-02 (A2.4): el campo `fuente` resuelve contra la lista CANONICA de libros (valor: 0 incumplimiento(s))
+    [OK] OP-A-01: la nomina adjudicada de la aduana no se movio sin declararse (valor: 0 sin declarar)
+    [OK] OP-A-01: ningun nodo declara un SEGUNDO libro sin tener ni un paso donde pueda aparecer (valor: 0 sin pasos)
+CIFRA: 4 controles, 4 en OK. La celda pide CUATRO.
+VEREDICTO: VERDE
+
+================================================================================================
+LAS OCHO FILAS, RESUMIDAS. CONTADO, NO TECLEADO.
+================================================================================================
+| fase | veredicto | cifra |
+|---|---|---|
+| 0 CODIGO | **VERDE** | 7 de 7 con caso positivo rojo commiteado (7 propias, 0 por portadora) |
+| 01 FUENTES | **VERDE PARCIAL** | 0 desaparecidos de 73; 68 con pasos distintos del grafo previo, 20 de ellos en nomina de otra fase |
+| 02 DESTEJIDOS | **VERDE PARCIAL** | mapas de destejido exitcode 0; los quince congelados sin vara escrita |
+| 03 FUSIONES | **VERDE** | 14 ficha(s) de 03_FUSIONES con superviviente, 0 incumplimiento(s), 2 divergente(s) de la CORRECCION 16 (no degradan la fila por la adjudicacion 6.6 del acta 153) |
+| 04 ENLACES | **VERDE PARCIAL** | auto-aristas en Gate 0: OK; la confirmacion por lectura la excluye la celda |
+| 05 SANEO | **VERDE** | 6 de 6 sub-celdas en verde, acotadas a las nominas |
+| 06 MESAS | **VERDE** | 5 de 5 mesas completas |
+| 07 ADUANA | **VERDE** | 4 controles OP-A en Gate 0, 4 en OK |
+
+  VERDE: 5 de 8
+  VERDE PARCIAL: 3 de 8
+  NO CUMPLE: 0 de 8
+
+LA VERIFICACION TRANSVERSAL NO SE TOCA (TAREA 4.d): sus cinco puntos quedaron
+medidos en la vuelta 148 y adjudicados en el acta 149. Este arnes no la corre y
+no la declara cerrada.
+
+CIFRA filas de la tabla por fase en VERDE: 5 filas
+CIFRA filas de la tabla por fase en VERDE PARCIAL: 3 filas
+CIFRA filas de la tabla por fase en NO CUMPLE: 0 filas
+CIFRA filas de la tabla por fase: 8 filas
+EXITCODE: 0
