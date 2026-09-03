@@ -399,16 +399,38 @@ def main():
           % len(divergentes))
     for x in divergentes:
         print("    %s" % x)
+    # --- ADJUDICACION 6.6 DEL ACTA 153 (2 sep 2026), APLICADA AQUI ---
+    #
+    # CORRECCION DECLARADA (vuelta 154, TAREA 8). LA REGLA VIEJA NO SE BORRA y
+    # queda escrita entera aqui debajo para que se pueda auditar que cambio:
+    #     if fallos:      v = "NO CUMPLE"
+    #     elif divergentes: v = "VERDE PARCIAL"    <-- ESTA RAMA ES LA QUE MUERE
+    #     else:           v = "VERDE"
+    #
+    # LO QUE EL ACTA ADJUDICA, CITADO LITERAL: "los dos divergentes que la
+    # CORRECCION 16 ya clasifica NO son un pendiente de la fase 03. La celda
+    # pide un superviviente por acto con el resto deprecado y con alias, y eso
+    # esta medido en 0 incumplimientos sobre 14 fichas. La fila 03 pasa a VERDE
+    # en cuanto el arnes deje de contar los dos divergentes como falta, y eso es
+    # un cambio de la celda, NO DEL GRAFO."
+    #
+    # POR QUE NO ES AFLOJAR LA VARA: lo que le faltaba a esa celda NO era una
+    # medicion sino una DECISION, y la decision es del auditor y ya esta tomada.
+    # Los divergentes SE SIGUEN MIDIENDO, SE SIGUEN CONTANDO Y SE SIGUEN
+    # NOMBRANDO uno a uno en la salida de arriba (banco 9, fallar ruidoso): lo
+    # unico que cambia es que dejan de degradar el VEREDICTO de esta fila, que
+    # es la celda que la adjudicacion decide. Un incumplimiento de verdad
+    # (`fallos`) sigue poniendo la fila en NO CUMPLE, sin excepcion.
     if fallos:
         v = "NO CUMPLE"
-    elif divergentes:
-        v = "VERDE PARCIAL"
     else:
         v = "VERDE"
-    print("VEREDICTO: %s%s" % (v, " (todo lo medible en verde; lo que queda son los"
-                               " divergentes ya declarados)" if v == "VERDE PARCIAL" else ""))
+    print("VEREDICTO: %s%s"
+          % (v, " (los %d divergente(s) de la CORRECCION 16 se siguen midiendo y nombrando"
+                " arriba, pero YA NO DEGRADAN esta fila: adjudicacion 6.6 del acta 153,"
+                " 2 sep 2026)" % len(divergentes) if divergentes else ""))
     veredictos.append((filas[3][0], v,
-                       "%d ficha(s) de 03_FUSIONES con superviviente, %d incumplimiento(s), %d divergente(s) de la CORRECCION 16"
+                       "%d ficha(s) de 03_FUSIONES con superviviente, %d incumplimiento(s), %d divergente(s) de la CORRECCION 16 (no degradan la fila por la adjudicacion 6.6 del acta 153)"
                        % (len(con_surv), len(fallos), len(divergentes))))
 
     # ---- FILA 5: 04 ENLACES ----------------------------------------------
@@ -587,6 +609,17 @@ def main():
     print("LA VERIFICACION TRANSVERSAL NO SE TOCA (TAREA 4.d): sus cinco puntos quedaron")
     print("medidos en la vuelta 148 y adjudicados en el acta 149. Este arnes no la corre y")
     print("no la declara cerrada.")
+
+    # LAS LINEAS `CIFRA` (vuelta 154, TAREA 7.b; adjudicacion 6.8 del acta 153).
+    # El contrato vive en scripts/loop/verificar_cifras_del_reporte.py: la cifra
+    # que el reporte publica citando este fichero se coteja PRIMERO contra una
+    # linea `CIFRA <etiqueta>: <n> <unidad>` de este mismo fichero. Sin ella la
+    # guarda cae a un recuento generico y la cobertura queda en cero.
+    print("")
+    for etiqueta in ("VERDE", "VERDE PARCIAL", "NO CUMPLE"):
+        n = sum(1 for _f, v, _c in veredictos if v == etiqueta)
+        print("CIFRA filas de la tabla por fase en %s: %d filas" % (etiqueta, n))
+    print("CIFRA filas de la tabla por fase: %d filas" % len(veredictos))
 
 
 main()
