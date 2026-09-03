@@ -1,0 +1,84 @@
+==============================================================================
+VUELTA 164, TAREAS 3 Y 4: CASO POSITIVO POR MUTACION DE LO MECANICO
+==============================================================================
+
+   A_la_vara_trae_cuatro_ejemplares                         PASA   (real=4 esperado=4)
+   A_los_cuatro_son_esos                                    PASA   (real=['LD-OPC05-052', 'LD-OPC05-095', 'LD-OPC05-100', 'LD-OPC05-122'] esperado=['LD-OPC05-052', 'LD-OPC05-095', 'LD-OPC05-100', 'LD-OPC05-122'])
+   A_dos_ACEPTAN_y_dos_EXCLUYEN                             PASA   (real=['ACEPTA', 'ACEPTA', 'EXCLUYE', 'EXCLUYE'] esperado=['ACEPTA', 'ACEPTA', 'EXCLUYE', 'EXCLUYE'])
+   A_la_frase_dice_procedimiento_propio                     PASA   (real=True esperado=True)
+   A_y_dice_no_solo_el_nombre_de_otro                       PASA   (real=True esperado=True)
+   B_aim_of_leadership_tiene_SEIS_pasos                     PASA   (real=6 esperado=6)
+   B_causas_comunes_tiene_QUINCE_pasos                      PASA   (real=15 esperado=15)
+   B_el_paso_13_es_el_de_las_tolerancias                    PASA   (real=True esperado=True)
+   B_el_paso_1_de_aim_es_el_de_identificar                  PASA   (real=True esperado=True)
+   B_el_entregable_de_aim_es_un_plan                        PASA   (real=True esperado=True)
+   C_la_arista_esta_en_las_cuatro_vistas                    PASA   (real=4 esperado=4)
+   D_el_colapsado_no_tiene_solape_cero                      PASA   (real=True esperado=True)
+   D_ninguno_de_los_otros_lo_supera                         PASA   (real=False esperado=False)
+   D_el_solape_medio_de_los_otros_es_menor                  PASA   (real=True esperado=True)
+   D_la_palabra_comun_es_fuera                              PASA   (real=['fuera'] esperado=['fuera'])
+   D_el_paso_5_EMPATA_con_el_1_y_se_dice                    PASA   (real=1 esperado=1)
+   D_el_solape_por_si_solo_NO_decide_y_por_eso_hay_empate   PASA   (real=True esperado=True)
+   E_aim_tiene_UN_solo_paso_que_enumera                     PASA   (real=1 esperado=1)
+   E_aim_no_tiene_ningun_criterio_de_parada                 PASA   (real=0 esperado=0)
+   E_causas_tiene_DOS_pasos_que_enumeran                    PASA   (real=2 esperado=2)
+   E_los_pasos_de_los_dos_nodos_suman                       PASA   (real=21 esperado=21)
+   F_el_cruce_solo_reproduce_UNO_de_los_cuatro              PASA   (real=1 esperado=1)
+   F_en_la_005_el_cruce_no_dice_nada                        PASA   (real=True esperado=True)
+   F_en_la_101_el_cruce_si_es_asimetrico                    PASA   (real=True esperado=True)
+   F_pero_no_se_usa_de_decisor_porque_reproduce_1_de_4      PASA   (real=True esperado=True)
+   G_el_numero_de_filas_NO_se_mueve                         PASA   (real=0 esperado=0)
+   G_una_sola_clase_baja_de_C                               PASA   (real=1 esperado=1)
+   G_y_esa_misma_sube_a_D                                   PASA   (real=1 esperado=1)
+   G_el_saco_de_dirigidas_no_cambia_de_tamano               PASA   (real=0 esperado=0)
+   G_LD_OPC05_005_queda_en_D                                PASA   (real='D' esperado='D')
+   G_LD_OPC05_005_lleva_la_marca_de_la_164                  PASA   (real=True esperado=True)
+   G_LD_OPC05_005_la_cita_declara_su_clase_vigente          PASA   (real='D' esperado='D')
+   G_LD_OPC05_101_queda_en_D                                PASA   (real='D' esperado='D')
+   G_LD_OPC05_101_lleva_la_marca_de_la_164                  PASA   (real=True esperado=True)
+   G_LD_OPC05_101_la_cita_declara_su_clase_vigente          PASA   (real='D' esperado='D')
+   G_ninguna_dirigida_esta_en_A                             PASA   (real=0 esperado=0)
+
+   CIFRA casos: 36 | pasan: 36 | fallan: 0
+
+   SEGUNDA PASADA: SE MUTA EL VALOR ESPERADO Y TIENE QUE CAER
+   A_la_vara_trae_cuatro_ejemplares                         CAE
+   A_los_cuatro_son_esos                                    CAE
+   A_dos_ACEPTAN_y_dos_EXCLUYEN                             CAE
+   A_la_frase_dice_procedimiento_propio                     CAE
+   A_y_dice_no_solo_el_nombre_de_otro                       CAE
+   B_aim_of_leadership_tiene_SEIS_pasos                     CAE
+   B_causas_comunes_tiene_QUINCE_pasos                      CAE
+   B_el_paso_13_es_el_de_las_tolerancias                    CAE
+   B_el_paso_1_de_aim_es_el_de_identificar                  CAE
+   B_el_entregable_de_aim_es_un_plan                        CAE
+   C_la_arista_esta_en_las_cuatro_vistas                    CAE
+   D_el_colapsado_no_tiene_solape_cero                      CAE
+   D_ninguno_de_los_otros_lo_supera                         CAE
+   D_el_solape_medio_de_los_otros_es_menor                  CAE
+   D_la_palabra_comun_es_fuera                              CAE
+   D_el_paso_5_EMPATA_con_el_1_y_se_dice                    CAE
+   D_el_solape_por_si_solo_NO_decide_y_por_eso_hay_empate   CAE
+   E_aim_tiene_UN_solo_paso_que_enumera                     CAE
+   E_aim_no_tiene_ningun_criterio_de_parada                 CAE
+   E_causas_tiene_DOS_pasos_que_enumeran                    CAE
+   E_los_pasos_de_los_dos_nodos_suman                       CAE
+   F_el_cruce_solo_reproduce_UNO_de_los_cuatro              CAE
+   F_en_la_005_el_cruce_no_dice_nada                        CAE
+   F_en_la_101_el_cruce_si_es_asimetrico                    CAE
+   F_pero_no_se_usa_de_decisor_porque_reproduce_1_de_4      CAE
+   G_el_numero_de_filas_NO_se_mueve                         CAE
+   G_una_sola_clase_baja_de_C                               CAE
+   G_y_esa_misma_sube_a_D                                   CAE
+   G_el_saco_de_dirigidas_no_cambia_de_tamano               CAE
+   G_LD_OPC05_005_queda_en_D                                CAE
+   G_LD_OPC05_005_lleva_la_marca_de_la_164                  CAE
+   G_LD_OPC05_005_la_cita_declara_su_clase_vigente          CAE
+   G_LD_OPC05_101_queda_en_D                                CAE
+   G_LD_OPC05_101_lleva_la_marca_de_la_164                  CAE
+   G_LD_OPC05_101_la_cita_declara_su_clase_vigente          CAE
+   G_ninguna_dirigida_esta_en_A                             CAE
+
+   CIFRA casos que CAEN al mutarles el esperado: 36 de 36
+
+VERDE: 36 casos, los 36 pasan y los 36 CAEN al mutarles el esperado. EL VEREDICTO NO SE PRUEBA AQUI Y SE DECLARA: no hay caso rojo automatico para la clasificacion de un paso.

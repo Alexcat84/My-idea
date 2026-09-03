@@ -1,0 +1,213 @@
+==============================================================================
+VUELTA 164, TAREA 2.c: LA PRUEBA DE QUE EL ANCLAJE FUNCIONA
+==============================================================================
+
+SE REPRODUCE EL ESCENARIO QUE TUMBO AL ARNES SELLADO: se ensucian TRES
+docs/loop/SALIDA_* del arbol de trabajo (las mismas tres que el auditor tenia
+en vuelo cuando midio 14 de 17) y se corre el arnes ANCLADO sobre eso.
+P.16, QUIEN FABRICA LIMPIA: las tres se restauran con git checkout al final y
+se comprueba que el arbol vuelve a quedar limpio.
+
+A) EL ARBOL ENSUCIADO, MEDIDO CON git
+    M docs/loop/SALIDA_V135_2E_MUTACION_1.txt
+    M docs/loop/SALIDA_V135_2E_MUTACION_2.txt
+    M docs/loop/SALIDA_V135_2E_MUTACION_3.txt
+   ?? docs/loop/SALIDA_V164_T2C_ARNES_ANCLADO.txt
+   ?? docs/loop/SALIDA_V164_T2C_PRUEBA_DEL_ANCLAJE.txt
+
+B) LA GUARDA verificar_re_sellado.py SOBRE ESE ARBOL (tiene que MORDER)
+==============================================================================
+VERIFICAR RE SELLADO: TODA SALIDA_* QUE EL REPORTE CITE Y QUE HAYA CAMBIADO
+DESPUES DEL COMMIT DE SU TAREA TIENE QUE IR DECLARADA
+==============================================================================
+  reporte: docs/loop/REPORTE.md
+  CIFRA salidas selladas que el reporte cita: 33
+
+  SALIDA_V162_CICLO_NUMSTAT_CIERRE.txt           SIN RE SELLAR
+  SALIDA_V162_GATE0_CMD1_CIERRE.txt              SIN RE SELLAR
+  SALIDA_V162_HEAD_CIERRE.txt                    SIN RE SELLAR
+  SALIDA_V162_MOTOR_CIERRE.txt                   SIN RE SELLAR
+  SALIDA_V162_T1A_ARREGLO_FUENTE.txt             SIN RE SELLAR
+  SALIDA_V162_T1A_MUTACION_SERIE.txt             SIN RE SELLAR
+  SALIDA_V162_T1A_RENUMERAR.txt                  SIN RE SELLAR
+  SALIDA_V162_T1A_SERIE_ANTES.txt                SIN RE SELLAR
+  SALIDA_V162_T1B_ADJUDICACIONES.txt             SIN RE SELLAR
+  SALIDA_V162_T1C_ESCRITURA_P52.txt              SIN RE SELLAR
+  SALIDA_V162_T1C_MARCAS_CIEGA.txt               SIN RE SELLAR
+  SALIDA_V162_T2A_COTEJO.txt                     SIN RE SELLAR
+  SALIDA_V162_T2A_MUTACION.txt                   SIN RE SELLAR
+  SALIDA_V162_T2A_NUEVA.txt                      SIN RE SELLAR
+  SALIDA_V162_T2B_FASE_02_ANTES.txt              SIN RE SELLAR
+  SALIDA_V162_T2B_FASE_02_DESPUES.txt            SIN RE SELLAR
+  SALIDA_V162_T2B_MUTACION.txt                   SIN RE SELLAR
+  SALIDA_V162_T3_MUTACION.txt                    SIN RE SELLAR
+  SALIDA_V162_T3_NUEVA.txt                       SIN RE SELLAR
+  SALIDA_V162_T3_VIEJA.txt                       SIN RE SELLAR
+  SALIDA_V162_T4_COLISIONES_TITULO.txt           SIN RE SELLAR
+  SALIDA_V162_T5_ORDEN_Y_MURO.txt                SIN RE SELLAR
+  SALIDA_V162_T6_BATERIAS.txt                    SIN RE SELLAR
+  SALIDA_V162_T6_BATERIAS_DIFF.txt               SIN RE SELLAR
+  SALIDA_V162_T6_CABECERA.txt                    SIN RE SELLAR
+  SALIDA_V162_T6_CABECERA_COMPARADA.txt          SIN RE SELLAR
+  SALIDA_V162_T6_EXPEDIENTE.txt                  SIN RE SELLAR
+  SALIDA_V162_T6_FASE_02.txt                     SIN RE SELLAR
+  SALIDA_V162_T6_FASE_03.txt                     SIN RE SELLAR
+  SALIDA_V162_T6_FASE_06.txt                     SIN RE SELLAR
+  SALIDA_V162_T6_FASE_08.txt                     SIN RE SELLAR
+  SALIDA_V162_T6_FASE_09.txt                     SIN RE SELLAR
+  SALIDA_V162_T6_MARCADOR_CIERRE.txt             SIN RE SELLAR
+
+  CIFRA por estado: SIN RE SELLAR 33
+  CIFRA salidas EXENTAS por construccion: 0
+  CIFRA de esas exentas que ademas estan RE SELLADAS: 0
+  EXENCION POR CONSTRUCCION (adjudicacion 6.8 del acta 158): 0 fichero(s) exento(s) del rojo, por ser la salida de esta guarda o del verificador de cifras sobre el reporte final: ninguno
+  CIFRA re selladas SIN declarar en el reporte: 0
+
+==============================================================================
+CAMINO NUEVO (adjudicacion 6.7 del acta 162): TODA docs/loop/SALIDA_*
+MODIFICADA DESDE LA APERTURA DE LA VUELTA, LA CITE EL REPORTE O NO
+==============================================================================
+  vuelta tomada (computada del arbol): 164
+  commit de apertura, leido de git --diff-filter=A y no tecleado: 28dde491e131
+  CIFRA docs/loop/SALIDA_* MODIFICADAS desde la apertura: 3
+      SALIDA_V135_2E_MUTACION_1.txt
+      SALIDA_V135_2E_MUTACION_2.txt
+      SALIDA_V135_2E_MUTACION_3.txt
+  CIFRA de esas que el reporte NO nombra: 3
+      SIN DECLARAR: SALIDA_V135_2E_MUTACION_1.txt
+      SIN DECLARAR: SALIDA_V135_2E_MUTACION_2.txt
+      SIN DECLARAR: SALIDA_V135_2E_MUTACION_3.txt
+  (una salida que NACE en esta vuelta no cuenta: nacer no es re sellar)
+
+ROJO (camino nuevo): 3 salida(s) sellada(s) cambiaron desde la apertura
+de la vuelta y el reporte NO LAS NOMBRA: SALIDA_V135_2E_MUTACION_1.txt, SALIDA_V135_2E_MUTACION_2.txt, SALIDA_V135_2E_MUTACION_3.txt
+Nombrarlas las devuelve al camino viejo, que les exigira su linea
+computada con su numstat y sus cifras movidas.
+No se prohibe re sellar. Se prohibe re sellar EN SILENCIO.
+FIN
+   EXITCODE de la guarda: 1
+
+C) EL ARNES ANCLADO SOBRE EL MISMO ARBOL SUCIO
+==============================================================================
+VUELTA 163, TAREA 4.b: CASO POSITIVO POR MUTACION DEL CAMINO NUEVO
+==============================================================================
+
+A) EL ESCENARIO REAL DE LA VUELTA 162, CONTRA LA FUNCION NUEVA
+   apertura 78d10690  ->  cierre ac4af00d
+   CIFRA docs/loop/SALIDA_* MODIFICADAS entre esos dos commits: 3
+      SALIDA_V135_2E_MUTACION_1.txt
+      SALIDA_V135_2E_MUTACION_2.txt
+      SALIDA_V135_2E_MUTACION_3.txt
+   reporte de la 162 leido de git show 78d10690:docs/loop/REPORTE.md: 30752 caracteres
+   CIFRA de esas que ese reporte NO nombra: 3
+      SIN DECLARAR: SALIDA_V135_2E_MUTACION_1.txt
+      SIN DECLARAR: SALIDA_V135_2E_MUTACION_2.txt
+      SIN DECLARAR: SALIDA_V135_2E_MUTACION_3.txt
+
+B) LA CONTRAPRUEBA: LA GUARDA VIEJA NO TIENE ESTE CAMINO
+   la guarda NUEVA tiene salidas_modificadas_desde: True
+   la guarda VIEJA tiene salidas_modificadas_desde: False
+   POR CONSTRUCCION LA VIEJA NO PUEDE VER LO QUE EL REPORTE NO CITA, y
+   por eso salio VERDE sobre las tres de la 162 (acta 162, seccion 5.4).
+
+C) NOMBRARLAS LAS SACA DEL ROJO, Y ASI COMPONE CON EL CAMINO VIEJO
+   CIFRA sin declarar tras nombrarlas en el texto: 0
+
+D) NACER NO ES RE SELLAR: LAS ANADIDAS NO ENTRAN
+   CIFRA docs/loop/SALIDA_* ANADIDAS entre los dos commits: 53
+   CIFRA de esas que se colaron en la lista de MODIFICADAS: 0
+
+E) LA EXENCION POR CONSTRUCCION SIGUE VALIENDO EN EL CAMINO NUEVO
+   SALIDA_V162_T6_RE_SELLADO.txt            exento: True  (esperado True)
+   SALIDA_V162_T6_CIFRAS_REPORTE.txt        exento: True  (esperado True)
+   SALIDA_V135_2E_MUTACION_1.txt            exento: False (esperado False)
+
+F) EL CAMINO NUEVO NO INVENTA MODIFICADAS: SU LISTA CONTRA git EN CRUDO
+   ANCLADO EN LA VUELTA 164, TAREA 2.c (adjudicacion 6.6 del acta 163).
+   LO QUE HABIA AQUI, Y NO SE BORRA: dos casos que corrian la guarda entera
+   sobre EL ARBOL DE TRABAJO VIVO y clavaban su ESTADO,
+   `F_hoy_la_guarda_sale_VERDE` (exit esperado 0) y
+   `F_hoy_no_hay_ninguna_sin_nombrar` (sin nombrar esperado 0). Sellados
+   dieron VERDE; corridos por el auditor con tres SALIDA_* modificadas en
+   vuelo dieron ROJO SIN QUE NADIE TOCARA UNA LINEA DE CODIGO. No era un
+   falso verde: era un FALSO ROJO, y la raiz es la misma que la 163 curo en
+   `160_6b` y en `162_1a`. Se sustituyen por invariantes sobre PARES FIJOS
+   de la historia y por IMPLICACIONES, que no dependen del arbol de hoy.
+
+   par 162 (78d10690..ac4af00d): guarda 3 | git en crudo menos exentos 3
+   par 161 (4208b8fa..f290959c): guarda 0 | git en crudo menos exentos 0
+
+G) NINGUN VEREDICTO VIEJO SE MUEVE, VIEJA CONTRA NUEVA SOBRE EL MISMO ARBOL
+   LO QUE HABIA AQUI, Y NO SE BORRA: `G_mismo_exit`, que exigia que la guarda
+   NUEVA y la VIEJA dieran EL MISMO codigo de salida sobre el arbol de hoy.
+   Ese caso es FALSO POR CONSTRUCCION el dia que el camino nuevo muerde: si
+   la nueva ve algo que la vieja no puede ver, sus exit TIENEN que diferir, y
+   exigir que coincidan es exigir que el remedio no remedie. Se sustituye por
+   las dos afirmaciones que si son 'ningun veredicto viejo se mueve': que EL
+   CAMINO VIEJO da lo mismo en las dos, y que la nueva NUNCA AFLOJA.
+
+   nuevo exit 1 | viejo exit 0
+   camino NUEVO hoy: modificadas 3 | sin nombrar 3
+   camino viejo, sin declarar: nuevo 0 | viejo 0
+   camino viejo, salidas citadas: nuevo 33 | viejo 33
+
+H) PASADA 1, LOS CASOS TAL CUAL
+   A_la_162_trae_TRES_modificadas                       PASA   (real=3 esperado=3)
+   A_las_tres_son_las_SALIDA_V135_2E_MUTACION           PASA   (real=['SALIDA_V135_2E_MUTACION_1.txt', 'SALIDA_V135_2E_MUTACION_2.txt', 'SALIDA_V135_2E_MUTACION_3.txt'] esperado=['SALIDA_V135_2E_MUTACION_1.txt', 'SALIDA_V135_2E_MUTACION_2.txt', 'SALIDA_V135_2E_MUTACION_3.txt'])
+   A_y_las_TRES_salen_SIN_DECLARAR                      PASA   (real=3 esperado=3)
+   B_la_nueva_tiene_el_camino                           PASA   (real=True esperado=True)
+   B_la_vieja_NO_lo_tiene                               PASA   (real=False esperado=False)
+   B_la_vieja_no_nombraba_las_tres                      PASA   (real=0 esperado=0)
+   C_nombrarlas_deja_cero_sin_declarar                  PASA   (real=0 esperado=0)
+   D_hay_anadidas_de_verdad_en_ese_tramo                PASA   (real=True esperado=True)
+   D_y_ninguna_se_cuela_como_modificada                 PASA   (real=0 esperado=0)
+   E_exencion_SALIDA_V162_T6_RE_SELLADO_txt             PASA   (real=True esperado=True)
+   E_exencion_SALIDA_V162_T6_CIFRAS_REPORTE_txt         PASA   (real=True esperado=True)
+   E_exencion_SALIDA_V135_2E_MUTACION_1_txt             PASA   (real=False esperado=False)
+   F_162_la_apertura_tecleada_calza_con_la_computada    PASA   (real='78d10690' esperado='78d10690')
+   F_162_el_cierre_tecleado_calza_con_el_computado      PASA   (real='ac4af00d' esperado='ac4af00d')
+   F_161_los_dos_extremos_se_computan                   PASA   (real=True esperado=True)
+   F_162_la_lista_es_la_de_git_en_crudo                 PASA   (real=['docs/loop/SALIDA_V135_2E_MUTACION_1.txt', 'docs/loop/SALIDA_V135_2E_MUTACION_2.txt', 'docs/loop/SALIDA_V135_2E_MUTACION_3.txt'] esperado=['docs/loop/SALIDA_V135_2E_MUTACION_1.txt', 'docs/loop/SALIDA_V135_2E_MUTACION_2.txt', 'docs/loop/SALIDA_V135_2E_MUTACION_3.txt'])
+   F_162_ninguna_anadida_se_cuela                       PASA   (real=0 esperado=0)
+   F_161_la_lista_es_la_de_git_en_crudo                 PASA   (real=[] esperado=[])
+   F_161_ninguna_anadida_se_cuela                       PASA   (real=0 esperado=0)
+   G_misma_cuenta_del_camino_viejo                      PASA   (real=0 esperado=0)
+   G_mismas_salidas_citadas                             PASA   (real=33 esperado=33)
+   G_la_nueva_nunca_AFLOJA_a_la_vieja                   PASA   (real=True esperado=True)
+   G_si_los_exit_difieren_lo_explica_el_camino_nuevo    PASA   (real=True esperado=True)
+   G_el_exit_de_hoy_lo_explica_su_propia_cuenta         PASA   (real=True esperado=True)
+   CIFRA casos: 24 | pasan: 24 | fallan: 0
+
+I) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_la_162_trae_TRES_modificadas                       CAE
+   A_las_tres_son_las_SALIDA_V135_2E_MUTACION           CAE
+   A_y_las_TRES_salen_SIN_DECLARAR                      CAE
+   B_la_nueva_tiene_el_camino                           CAE
+   B_la_vieja_NO_lo_tiene                               CAE
+   B_la_vieja_no_nombraba_las_tres                      CAE
+   C_nombrarlas_deja_cero_sin_declarar                  CAE
+   D_hay_anadidas_de_verdad_en_ese_tramo                CAE
+   D_y_ninguna_se_cuela_como_modificada                 CAE
+   E_exencion_SALIDA_V162_T6_RE_SELLADO_txt             CAE
+   E_exencion_SALIDA_V162_T6_CIFRAS_REPORTE_txt         CAE
+   E_exencion_SALIDA_V135_2E_MUTACION_1_txt             CAE
+   F_162_la_apertura_tecleada_calza_con_la_computada    CAE
+   F_162_el_cierre_tecleado_calza_con_el_computado      CAE
+   F_161_los_dos_extremos_se_computan                   CAE
+   F_162_la_lista_es_la_de_git_en_crudo                 CAE
+   F_162_ninguna_anadida_se_cuela                       CAE
+   F_161_la_lista_es_la_de_git_en_crudo                 CAE
+   F_161_ninguna_anadida_se_cuela                       CAE
+   G_misma_cuenta_del_camino_viejo                      CAE
+   G_mismas_salidas_citadas                             CAE
+   G_la_nueva_nunca_AFLOJA_a_la_vieja                   CAE
+   G_si_los_exit_difieren_lo_explica_el_camino_nuevo    CAE
+   G_el_exit_de_hoy_lo_explica_su_propia_cuenta         CAE
+   CIFRA casos que CAEN: 24 de 24
+
+VERDE: 24 casos, los 24 pasan y los 24 CAEN al mutarles el valor esperado. EL CASO DE LA VUELTA 162 SE REPRODUCE ENTERO: las tres salidas de la 135 aparecen como modificadas y sin declarar, la guarda vieja no tenia con que verlas, nombrarlas las devuelve al camino viejo, y ningun veredicto viejo se movio.
+   EXITCODE del arnes anclado sobre el arbol sucio: 0
+
+D) P.16, EL ARBOL RESTAURADO
+   git status --porcelain -- docs/loop/SALIDA_V135_2E_MUTACION_*.txt:
+   (vacio arriba = limpio)

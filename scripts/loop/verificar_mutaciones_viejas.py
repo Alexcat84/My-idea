@@ -148,6 +148,28 @@ reproduce con `scripts/loop/vuelta157_tarea5c_mutacion_ruido.py`, salida
 `docs/loop/SALIDA_V157_T5C_MUTACION_RUIDO.txt`, que exige las dos mitades: que
 la version VIEJA de `correr_dos_veces` siga saliendo ROJA sobre ese escenario y
 que la NUEVA salga VERDE nombrando el ruido aparte. Y LAS 23 SIGUEN SIENDO 23.
+
+--- EL CRONOMETRO (VUELTA 164, TAREA 2.a; ADJUDICACION 6.8 DEL ACTA 163) ---
+
+CORRECCION DECLARADA POR ADICION: no se borra nada de lo de arriba, no se quita
+ni una comprobacion y NO SE RECORTA LA NOMINA para que corra antes.
+
+POR QUE NACE. En la vuelta 163 esta nomina paso de 23 a 51 entradas, y cada
+entrada se corre DOS VECES por el cotejo de reproducibilidad de la TAREA 2.f de
+la vuelta 141: la bateria hace mas del doble de trabajo que su cifra sugiere. El
+auditor la lanzo DOS VECES en la 163 y no termino ninguna; la primera la corto un
+`timeout 900` SIN UNA SOLA LINEA DE VEREDICTO, y dentro hay arneses de 38
+segundos (acta 163, seccion 5.3). Una guarda que el ciclo de cierre corre en cada
+vuelta y que puede tardar veinte minutos NECESITA SU RELOJ PUBLICADO, o el
+siguiente que la lance la matara creyendo que colgo, y matarla no es un rojo: es
+no haberla medido.
+
+QUE PUBLICA, Y TODO COMPUTADO DE `reloj`, NADA TECLEADO: el tiempo de CADA arnes
+en su propia fila, el TIEMPO TOTAL en segundos y en minutos, el mas lento, el mas
+rapido, la mediana, cuantos pasan de 30 segundos y los diez mas lentos en orden.
+Se mide con `time.perf_counter`, que es monotono, y no con la hora del reloj.
+
+QUE NO CAMBIA: ni un veredicto. El cronometro solo imprime.
 """
 import argparse
 import hashlib
@@ -158,6 +180,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LOOP = os.path.join(RAIZ, "scripts", "loop")
@@ -828,7 +851,20 @@ def main():
         filas = []
         inestables_todas = []
         ruido_todo = []
+        # EL CRONOMETRO (vuelta 164, TAREA 2.a; adjudicacion 6.8 del acta 163).
+        # POR QUE NACE: esta nomina paso de 23 a 51 entradas en la vuelta 163 y
+        # cada entrada se corre DOS VECES (el cotejo de reproducibilidad de la
+        # TAREA 2.f de la 141), o sea que la bateria hace mas del doble de
+        # trabajo que su cifra sugiere. El auditor la lanzo dos veces en la 163
+        # y no termino: la primera la corto un `timeout 900` SIN UNA SOLA LINEA
+        # DE VEREDICTO. Una guarda que el cierre corre en cada vuelta y que
+        # puede tardar veinte minutos necesita su reloj publicado, o el
+        # siguiente que la lance la matara creyendo que colgo. Se mide con
+        # `time.perf_counter`, que es monotono, y NO con la hora del reloj.
+        reloj = {}
+        t0 = time.perf_counter()
         for script, admite_sujeto in VIEJAS:
+            t_uno = time.perf_counter()
             usar = sujeto if (a.mutar and admite_sujeto) else None
             if a.mutar:
                 # En modo mutacion el sujeto es una copia con el ancla arrancada:
@@ -857,7 +893,9 @@ def main():
                 estado = "NO REPRODUCIBLE"
                 for nombre, num, la, lb in inestables:
                     inestables_todas.append((script, nombre, num, la, lb))
+            reloj[script] = time.perf_counter() - t_uno
             filas.append((script, codigo, estado, primera_linea_util(salida), escritos))
+        total_segundos = time.perf_counter() - t0
     finally:
         if tmp:
             shutil.rmtree(tmp, ignore_errors=True)
@@ -865,12 +903,38 @@ def main():
 
     print("")
     for script, codigo, estado, prim, escritos in filas:
-        print("  %-38s exit %d  %-16s" % (script, codigo, estado))
+        print("  %-38s exit %d  %-16s %7.1fs"
+              % (script, codigo, estado, reloj.get(script, 0.0)))
         if not a.mutar:
             print("      salidas selladas que escribe (computadas, no tecleadas): %s"
                   % (", ".join(escritos) or "ninguna"))
         if estado not in ("OK",):
             print("      %s" % prim)
+
+    # EL CRONOMETRO SE PUBLICA (vuelta 164, TAREA 2.a; adjudicacion 6.8 del acta
+    # 163). Todas las cifras se COMPUTAN de `reloj`, ninguna se teclea, para que
+    # el dia que la nomina crezca no quede una frase mintiendo detras.
+    print("")
+    print("  EL CRONOMETRO (adjudicacion 6.8 del acta 163)")
+    print("  CIFRA arneses cronometrados: %d" % len(reloj))
+    print("  CIFRA TIEMPO TOTAL de la bateria, en segundos: %.1f" % total_segundos)
+    print("  CIFRA TIEMPO TOTAL de la bateria, en minutos: %.1f" % (total_segundos / 60.0))
+    if reloj:
+        orden = sorted(reloj.items(), key=lambda kv: -kv[1])
+        print("  CIFRA arnes MAS LENTO: %s con %.1fs" % (orden[0][0], orden[0][1]))
+        print("  CIFRA arnes MAS RAPIDO: %s con %.1fs" % (orden[-1][0], orden[-1][1]))
+        print("  CIFRA mediana por arnes, en segundos: %.1f"
+              % sorted(reloj.values())[len(reloj) // 2])
+        print("  CIFRA arneses que pasan de 30 segundos: %d"
+              % len([v for v in reloj.values() if v > 30]))
+        print("  LOS DIEZ MAS LENTOS, DE MAS A MENOS:")
+        for nombre, seg in orden[:10]:
+            print("      %-42s %7.1fs" % (nombre, seg))
+        print("  AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de")
+        print("  reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo")
+        print("  de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que")
+        print("  darle al menos este total con holgura: matarla antes NO es un rojo,")
+        print("  es no haberla medido.")
 
     perdidas = [s for s, _, e, _, _ in filas if e == "ANCLA PERDIDA"]
     no_mordio = [s for s, _, e, _, _ in filas if e == "NO MORDIO"]

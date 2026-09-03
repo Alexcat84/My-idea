@@ -1,0 +1,46 @@
+==============================================================================
+VUELTA 164, TAREAS 3 Y 4: LOS DOS VEREDICTOS DE LA RELECTURA CONJUNTA
+==============================================================================
+
+CIFRA lecturas de la nomina sellada: 2
+CIFRA veredictos escritos en este instrumento: 2
+
+A) LA FRONTERA, ANTES DE TOCAR NADA
+   sha256 de dataset/ ANTES : 1330ccb9c46c03d371cb1ecf7911c83bbb4b14db71a878b3405738000c90e9d8
+   censo ANTES              : 3853 nodos, 3169 vivos, 684 deprecados
+   aristas ANTES            : 8780 siguientes, 8740 previos
+   CIFRA n, veredictos del cribado ANTES: 3388
+
+B) LOS VEREDICTOS, UNO A UNO
+   LD-OPC05-005     C -> D   LA CLASE PASA DE C A D Y ES CAIDA DE CLASE MIA, NO DEL AUDITOR: corrige MI l
+   LD-OPC05-101     D -> D   LA CLASE SE SOSTIENE EN D Y SU VEREDICTO SE PUBLICA, QUE ES LO QUE LA ADJUDI
+
+   LAS CELDAS DEL .md, ANTES Y DESPUES (el rastro no se tapa):
+      LD-OPC05-005     [~~C~~ ~~D~~ C] -> [~~C~~ ~~D~~ ~~C~~ D]
+      LD-OPC05-101     [~~C~~ D] -> [~~C~~ D]
+
+C) LAS GUARDAS, MEDIDAS Y NO PROMETIDAS
+   C.1 PREFIJO: las 154 razones conservan su texto viejo ENTERO
+   C.2 PARES: 154 pares, los mismos antes y despues
+   C.3 CLASES MOVIDAS: 1
+       LD-OPC05-005     C -> D
+       NINGUNA SE MUEVE A A: el limite de la 6.1 del acta 155 se cumple.
+   C.4 FRONTERA, sha256 de dataset/ DESPUES: 1330ccb9c46c03d371cb1ecf7911c83bbb4b14db71a878b3405738000c90e9d8
+       censo DESPUES  : 3853 nodos, 3169 vivos, 684 deprecados
+       aristas DESPUES: 8780 siguientes, 8740 previos
+       EL REGISTRO CAMBIA, EL GRAFO NO: sha256 IDENTICO y censo IDENTICO
+   C.5 CIFRA n, veredictos del cribado DESPUES: 3388
+       n NO SE MUEVE y sigue en 3.388
+   C.7 CIFRA citas cuya clase escrita NO es la vigente: 1
+       LD-OPC05-005     la cita dice C | la clase vigente es D
+Traceback (most recent call last):
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\vuelta164_tarea3_4_veredictos.py", line 248, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\vuelta164_tarea3_4_veredictos.py", line 242, in main
+    return motor.aplicar(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\vuelta159_motor_veredictos.py", line 278, in aplicar
+    assert not descuadradas, (
+           ^^^^^^^^^^^^^^^^
+AssertionError: LA CITA MIENTE SOBRE SU PROPIA CLASE en 1 fila(s): LD-OPC05-005. Reescribe el campo `cita` a la forma unica de la adjudicacion 6.6 del acta 158 (clase VIGENTE [ANTES ANTERIOR, RECLASIFICADA EN LA VUELTA N: ver la razon]) en la misma tarea que mueve la clase.
