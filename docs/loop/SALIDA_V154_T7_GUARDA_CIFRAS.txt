@@ -1,0 +1,24 @@
+=== verificar_cifras_del_reporte.py, sobre el reporte tal como queda commiteado ===
+=== La linea COBERTURA que el reporte pega es PUNTO FIJO: identica caracter a
+=== caracter a la que esta corrida mide, comprobado por igualdad de cadena.
+VERDE EXIT 0: 13 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cuadran:
+  154 pares == 154 contados en `SALIDA_V154_T2A_UNIVERSO.txt (CIFRA 'pares bidireccionales con la vara completa de los dos campos', POR ETIQUETA)`
+  0 lineas == 0 contados en `SALIDA_V154_T1_ADITIVIDAD.txt (CIFRA 'lineas borradas en los cuatro .py de la TAREA 1', POR ETIQUETA)`
+  255 nodos == 255 contados en `SALIDA_V154_T2A_UNIVERSO.txt (CIFRA 'nodos vivos que los declaran', POR ETIQUETA)`
+  153 pares == 153 contados en `SALIDA_V154_T2A_UNIVERSO.txt (CIFRA 'pares bidireccionales con la vara estrecha de la guarda vieja', POR ETIQUETA)`
+  3388 lineas == 3388 contados en `SALIDA_V154_T2C_LECTURA_DIRIGIDA.txt (CIFRA 'veredictos del cribado', POR ETIQUETA)`
+  154 pares == 154 contados en `SALIDA_V154_T2C_LECTURA_DIRIGIDA.txt (CIFRA 'pares distintos del registro de citas', POR ETIQUETA)`
+  155 pares == 155 contados en `SALIDA_V154_T2D_MUTACION.txt (CIFRA 'pares que ve la guarda mutada en el caso A', POR ETIQUETA)`  [FILA DE TABLA]
+  153 pares == 153 contados en `SALIDA_V154_T2D_MUTACION.txt (CIFRA 'pares que ve la guarda vieja en el caso B', POR ETIQUETA)`  [FILA DE TABLA]
+  154 pares == 154 contados en `SALIDA_V154_T2D_MUTACION.txt (CIFRA 'pares que ve la guarda intacta en el caso C', POR ETIQUETA)`  [FILA DE TABLA]
+  154 pares == 154 contados en `SALIDA_V154_T2A_UNIVERSO.txt (CIFRA 'pares bidireccionales con la vara completa de los dos campos', POR ETIQUETA)`
+  154 pares == 154 contados en `SALIDA_V154_T2F_ESTADO_OPC05.txt (CIFRA 'pares bidireccionales entre vivos al cierre', POR ETIQUETA)`
+  26 comprobaciones == 26 contados en `SALIDA_V154_T9_GUARDAS_CIERRE.txt (CIFRA 'comprobaciones verdes de Gate 0 al cierre', POR ETIQUETA)`
+  0 pares == 0 contados en `SALIDA_V154_T9_GUARDAS_CIERRE.txt (CIFRA 'pares que halla la guarda de cifras del plan', POR ETIQUETA)`  [FILA DE TABLA]
+afirmacion(es) de CIERRE cotejadas (4), cada una con LO QUE SU FICHERO DICE (computado, no tecleado):
+  linea 359 (sujeto 'fase', verbo 'cierre') <-> `SALIDA_V154_T5_DISPARADOR.txt`: sin cumplir: 0
+  linea 360 (sujeto 'fase', verbo 'cierre') <-> `SALIDA_V154_T5_DISPARADOR.txt`: sin cumplir: 0
+  linea 409 (sujeto 'fase', verbo 'cierre') <-> `SALIDA_V154_T8_ESTADO_FASE_03.txt`: sin cumplir: 4, y la ventana las nombra todas
+  linea 551 (sujeto 'fase', verbo 'cierra') <-> `SALIDA_V154_T9_ESTADO_FASE_08.txt`: sin cumplir: 1, y la ventana las nombra todas
+COBERTURA: 13 cotejadas / 0 exentas / 13 cifras | reparto: 13 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 4 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 4 | ficheros citados que NO son UTF-8: 0 [ninguno] | unidades vistas FUERA del vocabulario: 40 palabra(s) [fichas x9, puestos x3, claves x2, coinciden x2, discrepa x2, intruso x2, mutaciones x2, notas x2, pone x2, verde x2, absorbidos x1, adjudica x1, adjudicaciones x1, admitido x1, antes x1, avisa x1, campos x1, cifras x1, conservan x1, corra x1, cosas x1, cotejadas x1, cubrian x1, declaraba x1, despues x1, destinos x1, etiquetas x1, exentas x1, fusiones x1, lecturas x1, leido x1, manda x1, movieran x1, movio x1, nombradas x1, palabra x1, pasaron x1, pregunta x1, tenia x1, viven x1]
+EXITCODE: 0

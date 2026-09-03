@@ -50,10 +50,17 @@ consigo mismo.
   (B) MUTACION contra la guarda VIEJA  ->  se espera VERDE (contraprueba)
   (C) ARBOL INTACTO contra la NUEVA    ->  se espera VERDE
 
-La guarda VIEJA no se reimplementa aqui: se saca LITERAL de git
-(`git show HEAD:scripts/run_phase1.py`) a un fichero temporal dentro de
-`scripts/`, para que su `BASE` resuelva al mismo repo, y se borra al final. Una
-copia a mano de la vara vieja no probaria nada sobre la vara vieja.
+La guarda VIEJA no se reimplementa aqui: se saca LITERAL de git a un fichero
+temporal dentro de `scripts/`, para que su `BASE` resuelva al mismo repo, y se
+borra al final. Una copia a mano de la vara vieja no probaria nada sobre la vara
+vieja.
+
+Y SE SACA DE UNA REFERENCIA FIJA, NO DE `HEAD`: el HEAD DE APERTURA de la
+vuelta, leido de `docs/loop/SALIDA_V154_HEAD_APERTURA.txt`. Ver la correccion
+declarada en el CASO B: con `HEAD` este arnes daba verde mientras el ensanche no
+estaba commiteado y rojo en cuanto lo estuvo, porque `HEAD` habia pasado a ser
+la guarda NUEVA. Una contraprueba anclada a una referencia movil es un falso
+verde esperando su dia.
 
 CADA CASO PARTE DE ARBOL LIMPIO Y VUELVE A ARBOL LIMPIO: la mutacion se rehace
 entera para el caso B, porque la corrida del caso A deja el arbol simetrizado y
@@ -217,8 +224,30 @@ def main():
         restaurar()
 
         # --- CASO B: LA MISMA mutacion contra la guarda VIEJA (contraprueba) ---
+        #
+        # CORRECCION DECLARADA (vuelta 154, hallada al RE CORRER este arnes
+        # despues de commitear la TAREA 2). LA REFERENCIA ERA MOVIL, Y ESO ES UN
+        # FALSO VERDE ESPERANDO SU DIA: aqui ponia `git show
+        # HEAD:scripts/run_phase1.py`, y `HEAD` avanza. Mientras el ensanche no
+        # estaba commiteado, `HEAD` traia la guarda VIEJA y el caso B salia
+        # verde; en cuanto la TAREA 2 se commiteo, `HEAD` PASO A SER LA GUARDA
+        # NUEVA y el caso B se cayo publicando 155 pares y 1 sin cita, que es la
+        # guarda nueva hablando y no la vieja. El arnes lo canto en ROJO, que es
+        # exactamente lo que tenia que hacer.
+        #
+        # LA VARA PASA A SER EL HEAD DE APERTURA DE LA VUELTA, leido del sello
+        # que la propia apertura dejo y NO tecleado: ese commit es, por
+        # construccion, anterior a toda operacion de esta vuelta, asi que su
+        # `run_phase1.py` es la guarda vieja pase lo que pase con `HEAD`.
+        with io.open(os.path.join(RAIZ, "docs", "loop",
+                                  "SALIDA_V154_HEAD_APERTURA.txt"), encoding="utf-8") as fh:
+            ref_vieja = fh.read().strip()
+        print("LA GUARDA VIEJA SE SACA DE %s, el HEAD DE APERTURA leido de su sello,"
+              % ref_vieja[:8])
+        print("y NO de HEAD: HEAD es una referencia MOVIL y ya no trae la vara vieja.")
+        print("")
         with io.open(VIEJA, "w", encoding="utf-8", newline="\n") as fh:
-            fh.write(subprocess.run(["git", "show", "HEAD:scripts/run_phase1.py"],
+            fh.write(subprocess.run(["git", "show", "%s:scripts/run_phase1.py" % ref_vieja],
                                     cwd=RAIZ, capture_output=True).stdout.decode("utf-8", "replace"))
         mutar(A, ALIAS)
         rc2, linea2 = ciclo(os.path.join("scripts", "_v154_guarda_vieja_run_phase1.py"))
@@ -271,6 +300,22 @@ def main():
     print("sha256 de dataset/ DESPUES: %s" % DESPUES)
     print("dataset/ IDENTICO antes y despues: %s" % (ANTES == DESPUES))
     print("")
+    # LAS LINEAS `CIFRA` DE LOS PARES (vuelta 154, TAREA 7.b; adjudicacion 6.8):
+    # las cifras de la tabla de arriba viven dentro de la linea literal de la
+    # guarda y la convencion generica de recuento no sabe sacarlas de ahi. Se
+    # publican aparte, extraidas de esa misma linea por expresion regular.
+    import re as _re
+    for c, _q, _e, _rc, linea, _n in resultados:
+        m = _re.search(r"(\d+) par\(es\) bidireccional\(es\) tras resolver, "
+                       r"(\d+) con cita, (\d+) SIN CITA", linea)
+        if m:
+            # UNA ETIQUETA POR CASO Y CON UNA PALABRA UNICA CADA UNA (mutada,
+            # vieja, intacta): si dos etiquetas de la misma unidad comparten
+            # todas sus palabras, la guarda de cifras no puede saber contra cual
+            # cotejar y lo dice en rojo, con razon.
+            _mote = {"A": "mutada", "B": "vieja", "C": "intacta"}[c]
+            print("CIFRA pares que ve la guarda %s en el caso %s: %s pares"
+                  % (_mote, c, m.group(1)))
     print("CIFRA casos de mutacion corridos: %d comprobaciones" % len(resultados))
     print("CIFRA casos de mutacion que salen como se esperaba: %d comprobaciones"
           % sum([ok_a, ok_b, ok_c]))

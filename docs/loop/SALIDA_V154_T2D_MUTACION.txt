@@ -9,6 +9,9 @@ ELEGIDOS POR COMPUTO (no tecleados):
   ALIAS (deprecado que resuelve a B, se mete en LAS DOS listas de A): abandonar_la_falacia_del_arreglo_rapido
   par que se espera ver nombrado: ab_testing_optimizacion <-> abandonar_arreglos_rapidos
 
+LA GUARDA VIEJA SE SACA DE 32b2c76e, el HEAD DE APERTURA leido de su sello,
+y NO de HEAD: HEAD es una referencia MOVIL y ya no trae la vara vieja.
+
 | caso | que se prueba | esperado | exit | la linea de la guarda, literal |
 |---|---|---|---:|---|
 | A | MUTACION contra la guarda NUEVA | ROJO nombrando el par | 1 | [FALLO] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 155 par(es) bidireccional(es) tras resolver, 154 con cita, 1 SIN CITA: ['ab_testing_optimizacion <-> abandonar_arreglos_rapidos']) |
@@ -38,6 +41,9 @@ VEREDICTOS
 sha256 de dataset/ DESPUES: 0864e9cfe4e3b7746922bde54d8e551a45f02a7a1ba3780dcaed2e0986b65e37
 dataset/ IDENTICO antes y despues: True
 
+CIFRA pares que ve la guarda mutada en el caso A: 155 pares
+CIFRA pares que ve la guarda vieja en el caso B: 153 pares
+CIFRA pares que ve la guarda intacta en el caso C: 154 pares
 CIFRA casos de mutacion corridos: 3 comprobaciones
 CIFRA casos de mutacion que salen como se esperaba: 3 comprobaciones
 CIFRA ficheros de dataset movidos por esta prueba: 0 ficheros

@@ -1,0 +1,28 @@
+=== verificar_apertura_sellada.py --vuelta 154 ===
+HASHES QUE EL ENCARGO (docs/loop/PROMPT_SIGUIENTE.md) CITA Y QUE GIT RESUELVE: 2 (6f695db6, c9c6ea40)
+VERDE: los 10 ficheros SALIDA_V154_*_APERTURA.txt nacieron todos en el primer commit de la vuelta (hijo directo del acta):
+   SALIDA_V154_CICLO_ETIQUETAS_APERTURA.txt -- nacido en 12f87aae, padre 32b2c76e
+EXITCODE REAL: 0
+
+=== verificar_cifras_del_plan.py ===
+VERDE EXIT 0: 0 pares (base 32b2c76e). Filas cambiadas examinadas (6): OP-M-01, OP-M-02, OP-M-03, OP-M-04, OP-M-05, OP-C-05
+EXITCODE REAL: 0
+
+=== GATE 0 AL CIERRE, CONTADO DE SALIDA_V154_GATE0_CMD1_CIERRE.txt ===
+  comprobaciones verdes: 26 | comprobaciones rojas: 0
+
+=== EL ARCHIVO AL CIERRE, CONTADO DE SUS FICHEROS ===
+registro: 154 entradas, 154 pares distintos
+por via  : {'CRIBADO': 32, 'LECTURA_DIRIGIDA': 122}
+por clase: {'B': 1, 'C': 122, 'D': 31}
+veredictos del cribado (n): 3388
+fichas: 71 | {'HECHA': 28, 'LISTA': 43} | claves distintas: 1
+
+CIFRA comprobaciones verdes de Gate 0 al cierre: 26 comprobaciones
+CIFRA comprobaciones rojas de Gate 0 al cierre: 0 comprobaciones
+CIFRA pares que halla la guarda de cifras del plan: 0 pares
+CIFRA pares distintos del registro de citas al cierre: 154 pares
+CIFRA veredictos del cribado al cierre: 3388 lineas
+CIFRA fichas del expediente al cierre: 71 operaciones
+CIFRA fichas en HECHA al cierre: 28 operaciones
+CIFRA fichas en LISTA al cierre: 43 operaciones

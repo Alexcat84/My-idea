@@ -36,10 +36,12 @@ de que nodos (vivos o todos) y de que campos (uno o dos).
 
 USO:  python scripts/loop/vuelta154_tarea2a_universo_bidireccionales.py
 """
+import argparse
 import glob
 import io
 import json
 import os
+import subprocess
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 NODOS = os.path.join(RAIZ, "dataset", "nodos", "*.json")
@@ -117,11 +119,28 @@ def pares(dirs):
     return sorted({tuple(sorted(p)) for p in dirs if (p[1], p[0]) in dirs})
 
 
-def citados():
-    if not os.path.exists(REGISTRO):
-        return set()
+def citados(ref):
+    """EL REGISTRO SE LEE DE UNA REF, NO SIEMPRE DEL ARBOL DE TRABAJO.
+
+    CORRECCION DECLARADA (vuelta 154, hallada al RE CORRER este instrumento
+    despues de la TAREA 2.c). Aqui se leia el registro del arbol de trabajo, y
+    eso hace que la columna "sin cita" DEPENDA DEL MOMENTO EN QUE SE CORRA: antes
+    de escribir LD-OPC05-122 sale 0/1/2/4, que es la tabla del acta 153, y
+    despues sale 0/0/1/3, porque el par ya tiene su cita. Las dos mediciones son
+    ciertas y describen momentos distintos; lo que estaba mal era que el
+    instrumento no dijera CUAL. Con `--registro <ref>` la medicion es
+    REPRODUCIBLE: `--registro 32b2c76e` (el HEAD de apertura) reproduce la tabla
+    del acta para siempre, y `--registro WORK` mide el estado de hoy."""
+    if ref == "WORK":
+        if not os.path.exists(REGISTRO):
+            return set()
+        texto = io.open(REGISTRO, encoding="utf-8").read()
+    else:
+        texto = subprocess.run(
+            ["git", "show", "%s:docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl" % ref],
+            cwd=RAIZ, capture_output=True).stdout.decode("utf-8", "replace")
     s = set()
-    for linea in io.open(REGISTRO, encoding="utf-8"):
+    for linea in texto.splitlines():
         if not linea.strip():
             continue
         p = json.loads(linea).get("par") or []
@@ -131,11 +150,17 @@ def citados():
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--registro", default="WORK",
+                    help="ref de git de la que leer docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl, "
+                         "o WORK para el arbol de trabajo. La tabla del acta 153 se "
+                         "reproduce con el HEAD de apertura de la vuelta.")
+    args = ap.parse_args()
     todos = cargar()
     alias_de = tabla_de_alias(todos)
     resolver = hacer_resolutor(todos, alias_de)
     vivos = {n for n in todos if not todos[n].get("deprecado")}
-    cit = citados()
+    cit = citados(args.registro)
 
     print("=" * 92)
     print("VUELTA 154, TAREA 2.a: EL UNIVERSO DE PARES BIDIRECCIONALES, CON LAS CUATRO VARAS")
@@ -145,8 +170,11 @@ def main():
           % (len(todos), len(vivos), len(todos) - len(vivos)))
     print("Nodos con ids_alias: %d | entradas en la tabla de alias: %d"
           % (sum(1 for n in todos.values() if n.get("ids_alias")), len(alias_de)))
-    print("Registro de citas: %s, %d par(es) citado(s)"
-          % ("docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl", len(cit)))
+    print("Registro de citas: docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl LEIDO DE %s, "
+          "%d par(es) citado(s)" % (args.registro, len(cit)))
+    if args.registro == "WORK":
+        print("AVISO: con --registro WORK la columna 'sin cita' mide el estado de HOY, no")
+        print("el de la apertura. La tabla del acta 153 se reproduce con el HEAD de apertura.")
     print("")
 
     VARAS = [
@@ -192,10 +220,11 @@ def main():
               % (num, ep, len(P), es, len(sin), "SI" if ok else "NO"))
     print("")
     print("CIFRA varas que cuadran con el acta 153: %d comprobaciones" % cuadran)
-    print("CIFRA pares con la vara de la guarda de hoy: %d pares" % len(resultados[0][3]))
-    print("CIFRA pares con la vara de los dos campos sobre fuentes vivas: %d pares"
+    print("CIFRA pares bidireccionales con la vara estrecha de la guarda vieja: %d pares"
+          % len(resultados[0][3]))
+    print("CIFRA pares bidireccionales con la vara completa de los dos campos: %d pares"
           % len(resultados[1][3]))
-    print("CIFRA pares sin cita con la vara de los dos campos sobre fuentes vivas: %d pares"
+    print("CIFRA pares huerfanos que la vara completa destapa: %d pares"
           % len(resultados[1][4]))
     print("")
 

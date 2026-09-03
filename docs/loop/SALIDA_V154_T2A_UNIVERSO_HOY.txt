@@ -1,30 +1,30 @@
-MEDIDO CON EL REGISTRO DE LA APERTURA (--registro 32b2c76e), que es el estado
-que la tabla del acta 153, 4.1 describe. Reproducible para siempre.
+MEDIDO CON EL REGISTRO DE HOY (--registro WORK), o sea DESPUES de escribir
+LD-OPC05-122. La columna 'sin cita' de la vara completa cae a 0, que es
+exactamente lo que la TAREA 2.c reparo.
 ============================================================================================
 VUELTA 154, TAREA 2.a: EL UNIVERSO DE PARES BIDIRECCIONALES, CON LAS CUATRO VARAS
 ============================================================================================
 INSTRUMENTO PROPIO, escrito hoy, sin importar codigo de la casa.
 Nodos leidos de dataset/nodos/*.json: 3853 | vivos 3169 | deprecados 684
 Nodos con ids_alias: 562 | entradas en la tabla de alias: 761
-Registro de citas: docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl LEIDO DE 32b2c76e, 153 par(es) citado(s)
+Registro de citas: docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl LEIDO DE WORK, 154 par(es) citado(s)
+AVISO: con --registro WORK la columna 'sin cita' mide el estado de HOY, no
+el de la apertura. La tabla del acta 153 se reproduce con el HEAD de apertura.
 
 | vara | que admite | direcciones | pares bidireccionales | sin cita |
 |---|---|---:|---:|---:|
 | 1 | fuentes VIVAS, solo nodos_siguientes (la de la guarda de hoy) | 7309 | 153 | 0 |
-| 2 | fuentes VIVAS, LOS DOS campos | 7311 | 154 | 1 |
-| 3 | TODAS las fuentes, solo nodos_siguientes | 7312 | 155 | 2 |
-| 4 | TODAS las fuentes, LOS DOS campos | 7314 | 157 | 4 |
+| 2 | fuentes VIVAS, LOS DOS campos | 7311 | 154 | 0 |
+| 3 | TODAS las fuentes, solo nodos_siguientes | 7312 | 155 | 1 |
+| 4 | TODAS las fuentes, LOS DOS campos | 7314 | 157 | 3 |
 
 LOS PARES SIN CITA, NOMBRADOS UNO A UNO POR VARA (nunca resumidos):
   vara 1 (fuentes VIVAS, solo nodos_siguientes (la de la guarda de hoy)): 0 sin cita
-  vara 2 (fuentes VIVAS, LOS DOS campos): 1 sin cita
-      error_proofing_servicio <-> metodologia_6s
-  vara 3 (TODAS las fuentes, solo nodos_siguientes): 2 sin cita
+  vara 2 (fuentes VIVAS, LOS DOS campos): 0 sin cita
+  vara 3 (TODAS las fuentes, solo nodos_siguientes): 1 sin cita
       asignacion_recursos_en_gates <-> sistema_gates_go_kill
-      error_proofing_servicio <-> metodologia_6s
-  vara 4 (TODAS las fuentes, LOS DOS campos): 4 sin cita
+  vara 4 (TODAS las fuentes, LOS DOS campos): 3 sin cita
       asignacion_recursos_en_gates <-> sistema_gates_go_kill
-      error_proofing_servicio <-> metodologia_6s
       formalizar_junta_asesora <-> identificar_consejo_asesores
       revision_portafolio_periodica <-> sistema_gates_go_kill
 
@@ -33,17 +33,17 @@ EL CONTRASTE CONTRA LA TABLA DEL ACTA 153, SECCION 4.1
 | vara | pares esperados | pares medidos hoy | sin cita esperados | sin cita medidos | cuadra |
 |---|---:|---:|---:|---:|---|
 | 1 | 153 | 153 | 0 | 0 | SI |
-| 2 | 154 | 154 | 1 | 1 | SI |
-| 3 | 155 | 155 | 2 | 2 | SI |
-| 4 | 157 | 157 | 4 | 4 | SI |
+| 2 | 154 | 154 | 1 | 0 | NO |
+| 3 | 155 | 155 | 2 | 1 | NO |
+| 4 | 157 | 157 | 4 | 3 | NO |
 
-CIFRA varas que cuadran con el acta 153: 4 comprobaciones
+CIFRA varas que cuadran con el acta 153: 1 comprobaciones
 CIFRA pares bidireccionales con la vara estrecha de la guarda vieja: 153 pares
 CIFRA pares bidireccionales con la vara completa de los dos campos: 154 pares
-CIFRA pares huerfanos que la vara completa destapa: 1 pares
+CIFRA pares huerfanos que la vara completa destapa: 0 pares
 
-LAS CUATRO CUADRAN. La medicion del auditor reproduce con instrumento
-propio y no hay nada que parar.
+PARADA: 3 de 4 varas NO cuadran con el acta 153. No se toca la guarda
+hasta que se resuelva cual de las dos mediciones esta mal.
 
 ============================================================================================
 LA ARITMETICA QUE EL ACTA 153, 4.3 USA PARA CERRAR EL AGUJERO, RE MEDIDA AQUI

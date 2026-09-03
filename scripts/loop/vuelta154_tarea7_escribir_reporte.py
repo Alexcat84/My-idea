@@ -1,4 +1,62 @@
-# REPORTE DE LA VUELTA 154
+# -*- coding: utf-8 -*-
+"""vuelta154_tarea7_escribir_reporte.py . TAREA 7 DE LA VUELTA 154.
+
+ESCRIBE docs/loop/REPORTE.md CON LA CABECERA PEGADA DESDE EL FICHERO DEL
+TALLADOR, no tecleada. El cuerpo vive en CUERPO (abajo) y la tabla se EXTRAE de
+docs/loop/SALIDA_V154_T7_CABECERA.txt.
+
+LA DEUDA 7.a DEL ENCARGO, ATENDIDA POR CONSTRUCCION. La vuelta 152 escribio LA
+MARCA LITERAL de apertura de la cabecera dentro de la PROSA (linea 311) al
+contar que la habia arreglado, y la marca quedo dos veces: la guarda de cifras
+murio en ROJO POR AMBIGUA sin llegar a contar. Aqui las dos marcas SOLO existen
+en este fichero, se componen por concatenacion de trozos y NUNCA aparecen
+enteras en el cuerpo. Para citar el mecanismo en prosa, el cuerpo usa OTRO
+literal (`marca de cabecera`), como el propio mensaje de error de la guarda
+manda.
+
+USO:  python scripts/loop/vuelta154_tarea7_escribir_reporte.py
+"""
+import io
+import os
+
+RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+LOOP = os.path.join(RAIZ, "docs", "loop")
+CABECERA = os.path.join(LOOP, "SALIDA_V154_T7_CABECERA.txt")
+GUARDA_CIFRAS = os.path.join(LOOP, "SALIDA_V154_T7_GUARDA_CIFRAS.txt")
+REPORTE = os.path.join(LOOP, "REPORTE.md")
+
+# Las dos marcas se COMPONEN, para que ni siquiera este fichero las traiga
+# enteras mas de una vez y no haya forma de que se cuelen en el cuerpo.
+_A, _B = "<!-- ", " -->"
+MARCA_INI = _A + "CABECERA TALLADA" + _B
+MARCA_FIN = _A + "FIN CABECERA TALLADA" + _B
+
+
+def linea_cobertura():
+    """LA LINEA COBERTURA, PEGADA DEL FICHERO DE LA GUARDA Y NO TECLEADA.
+
+    El encargo la pide entera "salga como salga". Se extrae de la salida sellada
+    de `verificar_cifras_del_reporte.py`. Si esa salida no existe todavia (la
+    primera escritura del reporte, antes de que la guarda corra), se dice y no
+    se inventa nada."""
+    if not os.path.exists(GUARDA_CIFRAS):
+        return "(la guarda todavia no ha corrido sobre este reporte)"
+    for l in io.open(GUARDA_CIFRAS, encoding="utf-8"):
+        if l.startswith("COBERTURA:"):
+            return l.rstrip()
+    return "(la salida de la guarda no trae linea COBERTURA)"
+
+
+def tabla_tallada():
+    """La tabla, EXTRAIDA del fichero del tallador. Ni una celda se teclea."""
+    texto = io.open(CABECERA, encoding="utf-8").read()
+    lineas = texto.splitlines()
+    ini = next(i for i, l in enumerate(lineas) if l.startswith("| |"))
+    fin = next(i for i, l in enumerate(lineas) if l.strip() == "FIN")
+    return "\n".join(lineas[ini:fin]).rstrip()
+
+
+CUERPO = """# REPORTE DE LA VUELTA 154
 
 **Rama `pasada-unica`. FASE III, EJECUCION, modo continuo, REGIMEN COMPLETO.**
 **Las nueve tareas del encargo entregadas. La TAREA 2, que era bloqueante, cierra
@@ -15,19 +73,9 @@ script**, no copiada a mano: `scripts/loop/vuelta154_tarea7_escribir_reporte.py`
 extrae la tabla de ese fichero y la escribe aqui dentro. Ninguna celda de esta
 tabla la escribi yo.
 
-<!-- CABECERA TALLADA -->
-| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
-|---|---:|---:|
-| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
-| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
-| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
-| motor | 25/25 | **25/25** |
-| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
-| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
-| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
-| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `32b2c76e` (asunto real leido de git log: 'ACTA DE LA VUELTA 153 DEL AUDITOR: LA 152 ENTREGA LAS SEIS TAREAS Y CASI TODO REPRODUCE AL DIGITO CON MI INSTRUMENTO, PERO LA GUARDA NUEVA DE OP-C-05 ESTA VERDE SOBRE UN UNIVERSO INCOMPLETO.'), HEAD real de apertura `32b2c76e` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `7739bdb5` (leido de `SALIDA_V154_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
-<!-- FIN CABECERA TALLADA -->
+%(MARCA_INI)s
+%(TABLA)s
+%(MARCA_FIN)s
 
 ## 0. MIS SEIS CAIDAS, PRIMERO, PORQUE SON MIAS Y NO ME LAS ENCONTRARON
 
@@ -353,7 +401,7 @@ que no la tenia. **Y AQUI VA LA LINEA COBERTURA ENTERA, salga como salga, pegada
 guarda (`docs/loop/SALIDA_V154_T7_GUARDA_CIFRAS.txt`) y no tecleada:**
 
 ```
-COBERTURA: 13 cotejadas / 0 exentas / 13 cifras | reparto: 13 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 4 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 4 | ficheros citados que NO son UTF-8: 0 [ninguno] | unidades vistas FUERA del vocabulario: 40 palabra(s) [fichas x9, puestos x3, claves x2, coinciden x2, discrepa x2, intruso x2, mutaciones x2, notas x2, pone x2, verde x2, absorbidos x1, adjudica x1, adjudicaciones x1, admitido x1, antes x1, avisa x1, campos x1, cifras x1, conservan x1, corra x1, cosas x1, cotejadas x1, cubrian x1, declaraba x1, despues x1, destinos x1, etiquetas x1, exentas x1, fusiones x1, lecturas x1, leido x1, manda x1, movieran x1, movio x1, nombradas x1, palabra x1, pasaron x1, pregunta x1, tenia x1, viven x1]
+%(COBERTURA)s
 La linea de arriba dispara el detector de afirmaciones de cierre porque trae dentro las palabras que lo activan, asi que va con su medicion al lado: la unica fase que esta vuelta declara cerrada es la 06, medida con tallar_estado_de_fase.py en docs/loop/SALIDA_V154_T5_DISPARADOR.txt, que sale con cero sin cumplir.
 ```
 
@@ -542,3 +590,23 @@ Medida hoy (`docs/loop/SALIDA_V154_T9_ESTADO_FASE_08.txt`): una operacion en el
 catalogo y una sin cumplir, `OP-V-01`, sin vara escrita. Ahi termina lo que un
 bucle puede hacer solo. **EL MERGE NO SE PIDE NI SE HACE: es
 del fundador y solo suyo. La campana NO esta consumada.**
+"""
+
+
+def main():
+    texto = CUERPO % {"MARCA_INI": MARCA_INI, "MARCA_FIN": MARCA_FIN,
+                      "TABLA": tabla_tallada(), "COBERTURA": linea_cobertura()}
+    with io.open(REPORTE, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(texto)
+    n = texto.count(MARCA_INI)
+    m = texto.count(MARCA_FIN)
+    print("REPORTE escrito: %d lineas" % len(texto.splitlines()))
+    print("marca de cabecera de apertura, veces que aparece: %d (tiene que ser 1)" % n)
+    print("marca de cabecera de cierre,   veces que aparece: %d (tiene que ser 1)" % m)
+    assert n == 1 and m == 1, "una marca de cabecera aparece mas de una vez: la 7.a otra vez"
+    print("")
+    print("CIFRA lineas del reporte: %d lineas" % len(texto.splitlines()))
+    print("CIFRA marcas de cabecera en el reporte: %d lineas" % (n + m))
+
+
+main()
