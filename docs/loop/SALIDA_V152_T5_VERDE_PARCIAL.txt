@@ -1,0 +1,194 @@
+================================================================================================
+LAS CUATRO FILAS VERDE PARCIAL, CON LO QUE LE FALTA A CADA UNA, NOMBRADO
+================================================================================================
+Fuente de los veredictos: docs/loop/SALIDA_V152_T2_TABLA_POR_FASE.txt, corrida en
+esta vuelta con el reloj congelado en d9fa886b. Mergebase con main: 36b57d78
+
+================================================================================================
+FILA 01 FUENTES. MITAD MEDIDA: 'el material del segundo libro reubicado, NO
+BORRADO'. MITAD QUE FALTA: LA ATRIBUCION de la alteracion de pasos.
+================================================================================================
+MEDIDO: nomina de 7 fichas = 73 nodos | desaparecidos 0 | con pasos ALTERADOS 68
+
+LO QUE FALTA, NOMBRADO: no hay vara escrita que separe la alteracion de pasos hecha
+por FUENTES de la hecha por un DESTEJIDO sobre el mismo nodo. La unica comparacion
+disponible es contra el grafo previo a TODA la campana (36b57d78), y por ahi han pasado
+tambien los destejidos, que alteran pasos A PROPOSITO.
+
+LOS 20 ALTERADOS QUE OTRA FASE TAMBIEN RECLAMA (atribucion IMPOSIBLE con las varas de hoy):
+  ab_testing_optimizacion                              tambien en: OP-D-03(02_DESTEJIDOS)
+  analisis_trafico_competitivo                         tambien en: OP-S-04(05_SANEO)
+  blueprint_de_experiencia                             tambien en: OP-D-06(02_DESTEJIDOS)
+  brainstorming_divergente                             tambien en: OP-D-04(02_DESTEJIDOS)
+  customer_journey_mapping                             tambien en: OP-D-06(02_DESTEJIDOS)
+  decision_pivote_perseverar                           tambien en: OP-D-07(02_DESTEJIDOS), OP-M-03-I(03_FUSIONES)
+  estrategia_de_innovacion_producto                    tambien en: OP-S-09(05_SANEO)
+  future_scenarios_planning                            tambien en: OP-D-06(02_DESTEJIDOS)
+  key_partners_hypothesis                              tambien en: OP-D-06(02_DESTEJIDOS)
+  metricas_de_adquisicion_activacion                   tambien en: OP-D-06(02_DESTEJIDOS)
+  optimizacion_embudo_get_customers                    tambien en: OP-D-03(02_DESTEJIDOS)
+  plan_de_adquisicion_acquire                          tambien en: OP-D-06(02_DESTEJIDOS)
+  principio_calidad_mvp                                tambien en: OP-D-01(02_DESTEJIDOS), OP-D-06(02_DESTEJIDOS)
+  producto_unico_superior                              tambien en: OP-D-06(02_DESTEJIDOS)
+  propuesta_gasto_capital                              tambien en: OP-D-06(02_DESTEJIDOS)
+  retention_metrics                                    tambien en: OP-D-06(02_DESTEJIDOS)
+  seleccion_ceo_fundador                               tambien en: OP-D-05(02_DESTEJIDOS)
+  split_testing_experimentos_ab                        tambien en: OP-D-03(02_DESTEJIDOS)
+  superioridad_producto_beneficios                     tambien en: OP-D-06(02_DESTEJIDOS)
+  voz_del_cliente_voc                                  tambien en: OP-D-02(02_DESTEJIDOS)
+
+LOS 48 ALTERADOS QUE SOLO 01_FUENTES RECLAMA POR NOMINA:
+  actualizacion_posiciones_existentes
+  analisis_tco_roi_b2b
+  asociaciones_clave
+  background_startup_vs_corporativo
+  bundle_ideas
+  cliente_disena_producto
+  co_creation_session
+  coeficiente_viral
+  contratacion_experiencia_vs_potencial
+  criterios_seleccion_proveedores
+  cultura_de_experiencia
+  decision_de_salir_a_bolsa
+  decision_de_vender_startup
+  diseno_estructura_recompensas_roles
+  earned_vs_paid_media
+  economia_circular_como_modelo_de_negocio
+  elementos_plan_exportacion_ejemplo
+  empoderamiento_de_participantes
+  enfoque_motor_unico_crecimiento
+  estrategia_crecimiento_clientes
+  fit_problema_solucion
+  five_whys_inversion_proporcional
+  ganar_comprension_del_cliente
+  gestion_cuentas_por_cobrar
+  gestion_inventario
+  gut_check
+  keep_customers_strategy
+  manejo_empleados_en_adquisicion
+  mapa_de_canal_de_ventas
+  metas_vs_proposito
+  modelo_hibrido_agile_stage_gate
+  organizacion_adaptativa
+  plan_mejora_procesos
+  posicionamiento_de_empresa
+  preguntas_ipo_dolor_cliente
+  procesamiento_paralelo_con_espirales
+  project_close_out
+  ratios_eficiencia_inventario
+  reduccion_tamano_de_lote_batch_size
+  relaciones_con_clientes
+  revisiones_regulares_desempeno_ceo
+  sales_funnel_get_keep_grow
+  schedule_management_plan
+  seleccion_estrategia_pricing
+  seleccion_representante_extranjero
+  sistema_inmune_producto
+  transicion_producto_a_experiencia
+  viral_loop_marketing
+
+Y AQUI LA PRECISION QUE IMPIDE UN FALSO VERDE: que un nodo salga en esta segunda
+lista NO lo atribuye a 01_FUENTES. La nomina dice quien lo TENIA ASIGNADO, no quien
+lo TOCO, y una operacion puede tocar un nodo fuera de su nomina. Para atribuir haria
+falta una vara que hoy no existe: el rastro por commit de que operacion escribio cada
+paso. NO LA INVENTO AQUI (EJECUTOR.md 5). SE NOMBRA Y SE DEJA ESCRITA.
+
+================================================================================================
+FILA 02 DESTEJIDOS. MITAD MEDIDA: 'cada perdida en el bloque del que proviene'.
+MITAD QUE FALTA: 'los quince congelados releidos', SIN VARA ESCRITA.
+================================================================================================
+LA NOMINA VIVE EN PROSA, y se lee de la tabla '## EL ORDEN' de
+docs/plan/02_DESTEJIDOS.md, columna 'congelados que libera', fila a fila:
+  orden 1  OP-D-01    ~~**3** (494, 592, 830)~~ **3 LIBERADOS EL 15 ago 2026: 494 a `C`, 592 a `D`, 830 a `D`**
+  orden 2  OP-D-02    ~~**3** (724, 755, 827)~~ **3 LIBERADOS EL 15 ago 2026: los tres a `D`**
+  orden 3  OP-D-03    ~~**2** (738, 1061)~~ **2 LIBERADOS EL 15 ago 2026 (vuelta 34): los dos a `D`**
+  orden 4  OP-D-04    0
+  orden 5  OP-D-05    0
+  orden 6  OP-D-06    0
+
+PUESTOS DE CONGELADO QUE LA TABLA NOMBRA ENTRE PARENTESIS: 8 -> 494, 592, 724, 738, 755, 827, 830, 1061
+
+LOS QUE LA PROSA NOMBRA, COTEJADOS CONTRA EL ARCHIVO DEL CRIBADO DE HOY:
+  puesto 494   clase C  principio_calidad_mvp <-> producto_minimo_viable
+  puesto 592   clase D  mvp_catalogo_tecnicas <-> producto_minimo_viable
+  puesto 724   clase D  voice_of_customer_estrategico <-> voz_del_cliente_voc
+  puesto 738   clase D  ab_testing_optimizacion <-> split_testing_experimentos_ab
+  puesto 755   clase D  dia_en_la_vida_del_cliente <-> voz_del_cliente_voc
+  puesto 827   clase D  ganar_comprension_del_cliente <-> voz_del_cliente_voc
+  puesto 830   clase D  producto_minimo_viable <-> prueba_mvp_alta_fidelidad
+  puesto 1061  clase D  ab_testing_optimizacion <-> optimizacion_embudo_get_customers
+
+LO QUE FALTA, NOMBRADO Y CONTADO: la celda pide QUINCE y la tabla nombra 8.
+LOS OTROS 7 NO ESTAN NOMBRADOS EN NINGUN SITIO QUE YO PUEDA CONTAR:
+  - no hay campo `congelado` en docs/INTRA_DOMINIO_VEREDICTOS.jsonl (claves: banda_078_080, clase, clave, dominio, nodo_a, nodo_b, puesto_intra, razon)
+  - la tabla del orden solo cuenta CUANTOS libera cada operacion, y solo las tres
+    primeras filas llevan sus puestos entre parentesis; las otras tres liberan 0.
+  - la propia pagina dice 'OCHO de los quince congelados cuelgan de TRES nodos', y ese
+    OCHO cuadra al digito con los 8 puestos que acabo de extraer de la tabla. O sea que
+    LOS SIETE RESTANTES NUNCA SE ESCRIBIERON UNO A UNO EN NINGUNA PARTE: la pagina los
+    cuenta (quince) pero solo nombra ocho, y el archivo del cribado no los distingue.
+
+PARA QUE ESTA MITAD PUDIERA MEDIRSE HARIA FALTA: un campo por par en el archivo del
+cribado que diga si estuvo congelado y por que operacion, o una nomina de los quince
+en un fichero de datos. NO SE INVENTA AQUI. Es PENDIENTE DE DOCTRINA.
+
+================================================================================================
+FILA 03 FUSIONES. MITAD MEDIDA: los absorbidos deprecados, en ids_alias y
+resolviendo al superviviente. MITAD QUE FALTA: los DOS supervivientes
+DIVERGENTES, que la CORRECCION 16 ya clasifica.
+================================================================================================
+fichas de 03_FUSIONES con superviviente escrito: 14 | incumplimientos: 0 | DIVERGENTES: 2
+
+  OP-M-02-MEDIOS
+    superviviente ESCRITO en la ficha : seis_medios_comunicacion_cliente  (hoy DEPRECADO)
+    resuelve por alias (P.1) a        : estrategia_multicanal_bienvenida  (hoy VIVO)
+    y ese id esta en el campo eliminar: True
+    campo eliminar de la ficha        : estrategia_multicanal_bienvenida
+  OP-M-02-ADMIT
+    superviviente ESCRITO en la ficha : fase_admit  (hoy DEPRECADO)
+    resuelve por alias (P.1) a        : fase_admit_celebracion  (hoy VIVO)
+    y ese id esta en el campo eliminar: True
+    campo eliminar de la ficha        : fase_admit_celebracion
+
+LO QUE FALTA, NOMBRADO: NADA QUE MEDIR, y por eso esta fila es distinta de las otras
+tres. La CORRECCION 16 de docs/plan/CORRECCIONES_A_APLICAR.md ya dice que 'una fusion
+consumida al reves no es cumplida ni sin cumplir', o sea que estos dos casos tienen su
+casillero escrito y NO son un incumplimiento pendiente. Lo que falta no es una
+medicion: es una DECISION de si una fila con dos casos ya clasificados debe seguir
+leyendose VERDE PARCIAL o pasar a VERDE con los dos declarados al lado. ESO ES DEL
+AUDITOR Y NO ME LO ADJUDICO.
+
+================================================================================================
+FILA 04 ENLACES. MITAD MEDIDA: 'ninguna crea auto-arista tras resolver', que es
+un check de Gate 0. MITAD QUE FALTA: 'cada arista nueva CONFIRMADA POR LECTURA,
+NO POR EL INSTRUMENTO', excluida por la propia letra de la celda.
+================================================================================================
+fichas con aristas_nuevas escritas: 8 | aristas propuestas en total: 20
+
+LAS FICHAS Y SUS ARISTAS, NOMBRADAS UNA A UNA (esto es el CENSO de lo que habria
+que leer, no la lectura):
+  OP-E-04              04_ENLACES     9 arista(s) propuesta(s)
+  OP-E-05              04_ENLACES     2 arista(s) propuesta(s)
+  OP-M-01-ESLABONES    04_ENLACES     2 arista(s) propuesta(s)
+  OP-M-01-SEXTO        04_ENLACES     1 arista(s) propuesta(s)
+  OP-M-03-ENLACES      04_ENLACES     2 arista(s) propuesta(s)
+  OP-M-04              06_MESAS       2 arista(s) propuesta(s)
+  OP-M-05-APERTURA     03_FUSIONES    1 arista(s) propuesta(s)
+  OP-S-01              05_SANEO       1 arista(s) propuesta(s)
+
+LO QUE FALTA, NOMBRADO: la celda dice literalmente 'no por el instrumento'. O sea que
+POR CONSTRUCCION ninguna vara mecanica puede contestarla, y cualquier cifra que yo
+publique aqui contestaria la otra pregunta (cuantas ESTAN presentes), que es
+justamente la que la celda excluye. Lo unico honesto es el censo de arriba: 20 aristas
+sobre 8 fichas es el TAMANO del trabajo de lectura que la celda pide, y ese trabajo
+es de una sesion de lectura humana, no de este bucle.
+
+================================================================================================
+RESUMEN, CONTADO DE LO DE ARRIBA
+================================================================================================
+| fila | mitad medida | lo que le falta, nombrado | especie de lo que falta |
+|---|---|---|---|
+| 01 FUENTES | 0 desaparecidos de 73 | la ATRIBUCION de 68 nodos con pasos alterados, 20 de ellos reclamados tambien por otra fase | VARA QUE NO EXISTE (rastro por commit de que operacion escribio cada paso) |
+| 02 DESTEJIDOS | mapas de destejido exitcode 0 | los quince congelados: la prosa nombra 8 por su puesto y 7 NO ESTAN NOMBRADOS EN NINGUN FICHERO | NOMINA QUE NO EXISTE (no hay campo congelado en el archivo del cribado) |
+| 03 FUSIONES | 14 fichas, 0 incumplimientos | los 2 supervivientes divergentes, YA CLASIFICADOS por la CORRECCION 16 | DECISION DEL AUDITOR, no medicion |
+| 04 ENLACES | auto-aristas en Gate 0: OK | la confirmacion POR LECTURA de 20 aristas sobre 8 fichas | LECTURA HUMANA, excluida por la letra de la celda |
