@@ -1,0 +1,54 @@
+==============================================================================
+CASO POSITIVO POR MUTACION: LA SERIE R.N SE LEE DE LOS DOS FICHEROS
+==============================================================================
+
+A) EL SUJETO: COPIAS TEMPORALES DE LAS DOS SEDES
+   PENDIENTES.md (664523 bytes)
+   CORRECCIONES_A_APLICAR.md (147103 bytes)
+
+B) EL ESTADO DE PARTIDA, COMPUTADO HOY Y NO TECLEADO
+   CIFRA entradas: 24
+   CIFRA colisiones: 0
+   SIGUIENTE LIBRE de las DOS sedes: R.33
+   SIGUIENTE LIBRE mirando SOLO docs/PENDIENTES.md: R.33
+   CIFRA entradas que ya llevan el numero R.33: 0 (tiene que ser 0: es el libre)
+
+C) LA MUTACION: se anade una R.33 DE MENTIRA al OTRO fichero, el que la
+   idempotencia caida de la vuelta 161 no miraba. EL NUMERO SALE DE
+   siguiente_libre() Y NO ESTA TECLEADO.
+   fichero mutado: CORRECCIONES_A_APLICAR.md
+   CIFRA entradas tras la mutacion: 25
+   la R.33 de mentira, VISTA por el instrumento: [(33, '../../AppData/Local/Temp/v162_serie_bj6_bvnf/CORRECCIONES_A_APLICAR.md', 2605)]
+   SIGUIENTE LIBRE tras la mutacion: R.34
+
+D) LA MISMA MUTACION MIRADA SOLO DESDE docs/PENDIENTES.md, para probar que
+   la ceguera habria sido de UN fichero y no de los dos
+   SIGUIENTE LIBRE mirando SOLO docs/PENDIENTES.md, tras la mutacion: R.33
+   (mirando un solo fichero la entrada de mentira es INVISIBLE, y esa es
+   exactamente la ceguera con la que cayo la vuelta 161)
+
+E) PASADA 1, LOS CASOS TAL CUAL: todos tienen que PASAR
+   (el esperado de cada uno es un DELTA, no un estado)
+   sin_mutar_el_libre_no_esta_ocupado               esperado 0    obtenido 0    PASA
+   la_entrada_de_mentira_SE_VE                      esperado 1    obtenido 1    PASA
+   mueve_el_siguiente_libre_EXACTAMENTE_UNO         esperado 1    obtenido 1    PASA
+   anade_EXACTAMENTE_UNA_entrada                    esperado 1    obtenido 1    PASA
+   no_crea_colisiones                               esperado 0    obtenido 0    PASA
+   mirando_solo_PENDIENTES_el_libre_NO_se_mueve     esperado 0    obtenido 0    PASA
+   y_por_eso_PENDIENTES_solo_MIENTE_sobre_el_libre  esperado 1    obtenido 1    PASA
+
+F) PASADA 2, LA MUTACION DEL VALOR ESPERADO: cada caso TIENE que CAER
+   sin_mutar_el_libre_no_esta_ocupado               esperado MUTADO 1    obtenido 0    CAE (bien)
+   la_entrada_de_mentira_SE_VE                      esperado MUTADO 2    obtenido 1    CAE (bien)
+   mueve_el_siguiente_libre_EXACTAMENTE_UNO         esperado MUTADO 2    obtenido 1    CAE (bien)
+   anade_EXACTAMENTE_UNA_entrada                    esperado MUTADO 2    obtenido 1    CAE (bien)
+   no_crea_colisiones                               esperado MUTADO 1    obtenido 0    CAE (bien)
+   mirando_solo_PENDIENTES_el_libre_NO_se_mueve     esperado MUTADO 1    obtenido 0    CAE (bien)
+   y_por_eso_PENDIENTES_solo_MIENTE_sobre_el_libre  esperado MUTADO 2    obtenido 1    CAE (bien)
+
+G) EL ARBOL DE TRABAJO NO SE TOCO
+   antes:   [('docs/PENDIENTES.md', 664523), ('docs/plan/CORRECCIONES_A_APLICAR.md', 147103)]
+   despues: [('docs/PENDIENTES.md', 664523), ('docs/plan/CORRECCIONES_A_APLICAR.md', 147103)]
+   IDENTICO: SI
+
+VERDE: 7 casos, los 7 pasan y los 7 caen al mutar el valor esperado. LA ENTRADA DE MENTIRA EN EL OTRO FICHERO SE VE y mueve el siguiente libre EXACTAMENTE UNO (de R.33 a R.34); mirando solo docs/PENDIENTES.md el instrumento se queda en R.33, que es la ceguera exacta de la vuelta 161. NINGUN ESPERADO ES UN ESTADO: todos son deltas, y por eso esto no puede volver a caducar.

@@ -1,0 +1,77 @@
+==============================================================================
+VUELTA 163, TAREA 2: LOS 22 ARNESES POSTERIORES A LA VUELTA 147 QUE ESTAN FUERA DE LA NOMINA
+==============================================================================
+
+A) EL CENSO, RECOMPUTADO HOY
+   CIFRA nomina de verificar_mutaciones_viejas.py: 23
+   CIFRA arneses de mutacion en scripts/loop: 84
+   CIFRA fuera de la nomina: 63
+   CIFRA ultima vuelta representada en la nomina: 147
+   CIFRA fuera y POSTERIORES a esa vuelta: 22
+   CIFRA fuera y ANTERIORES o iguales a esa vuelta: 41
+
+B) EL LOTE DE ESTA CORRIDA, NOMBRE A NOMBRE Y SIN RESUMIR
+   vuelta 148  vuelta148_0d_mutacion_corredor.py
+   vuelta 148  vuelta148_1a_mutacion_embebido.py
+   vuelta 148  vuelta148_2a_mutacion_nomina_commiteada.py
+   vuelta 148  vuelta148_2b_mutacion_cifras_conjunto.py
+   vuelta 148  vuelta148_2c_mutacion_vara_parada.py
+   vuelta 148  vuelta148_2d_mutacion_exencion.py
+   vuelta 150  vuelta150_5c_mutacion_ciclo.py
+   vuelta 154  vuelta154_tarea2d_mutacion_guarda.py
+   vuelta 154  vuelta154_tarea6_mutacion_corredor.py
+   vuelta 156  vuelta156_tarea4b_mutacion_tallador.py
+   vuelta 156  vuelta156_tarea5d_mutacion_corredor.py
+   vuelta 157  vuelta157_tarea4b_mutacion_tachado.py
+   vuelta 157  vuelta157_tarea5c_mutacion_ruido.py
+   vuelta 157  vuelta157_tarea6b_mutacion_re_sellado.py
+   vuelta 159  vuelta159_tarea6c_mutacion_exencion.py
+   vuelta 160  vuelta160_tarea6b_mutacion_puerta.py
+   vuelta 160  vuelta160_tarea7c_mutacion_guarda_cita.py
+   vuelta 161  vuelta161_tarea1a_mutacion_alcance.py
+   vuelta 162  vuelta162_tarea1a_mutacion_serie.py
+   vuelta 162  vuelta162_tarea2a_mutacion_puerta.py
+   vuelta 162  vuelta162_tarea2b_mutacion_excepcion.py
+   vuelta 162  vuelta162_tarea3_mutacion_fila.py
+   CIFRA del lote: 22
+
+C) LA CORRIDA, CON SU CRONOMETRO
+   vuelta148_0d_mutacion_corredor.py              exit 1      1.3s
+      primera linea: CORREDOR REAL DE LA VUELTA 148, LEIDO DE GIT (no tecleado)
+      ultima  linea: ValueError: not enough values to unpack (expected 3, got 1)
+   vuelta148_1a_mutacion_embebido.py              exit 0      1.8s
+   vuelta148_2a_mutacion_nomina_commiteada.py     exit 0      0.8s
+   vuelta148_2b_mutacion_cifras_conjunto.py       exit 0      0.1s
+   vuelta148_2c_mutacion_vara_parada.py           exit 0      0.1s
+   vuelta148_2d_mutacion_exencion.py              exit 0      0.1s
+   vuelta150_5c_mutacion_ciclo.py                 exit 0      0.5s
+   vuelta154_tarea2d_mutacion_guarda.py           exit 1     34.3s
+      primera linea: ================================================================================================
+      ultima  linea: AssertionError: la guarda VIEJA sale roja: la mutacion no ataca el punto ciego
+   vuelta154_tarea6_mutacion_corredor.py          exit 0      1.3s
+   vuelta156_tarea4b_mutacion_tallador.py         exit 0      0.5s
+   vuelta156_tarea5d_mutacion_corredor.py         exit 0     20.1s
+   vuelta157_tarea4b_mutacion_tachado.py          exit 1      0.2s
+      primera linea: ==============================================================================
+      ultima  linea: FIN
+   vuelta157_tarea5c_mutacion_ruido.py            exit 0      0.4s
+   vuelta157_tarea6b_mutacion_re_sellado.py       exit 0      2.0s
+   vuelta159_tarea6c_mutacion_exencion.py         exit 0    181.0s
+   vuelta160_tarea6b_mutacion_puerta.py           exit 1     37.7s
+      primera linea: ==============================================================================
+      ultima  linea: ROJO: 1 de 4 no se comportan.
+   vuelta160_tarea7c_mutacion_guarda_cita.py      exit 0      2.3s
+   vuelta161_tarea1a_mutacion_alcance.py          exit 0      1.8s
+   vuelta162_tarea1a_mutacion_serie.py            exit 1      0.1s
+      primera linea: ==============================================================================
+      ultima  linea: ROJO: 5 caso(s) no pasan tal cual: ['sin_mutar_la_serie_da_30', 'sin_mutar_hay_una_colision', 'la_R31_de_mentira_SE_VE', 'y_mueve_el_siguiente_libre_a_32', 'mirando_solo_PENDIENTES_la_serie_miente']
+   vuelta162_tarea2a_mutacion_puerta.py           exit 0      0.1s
+   vuelta162_tarea2b_mutacion_excepcion.py        exit 0      0.1s
+   vuelta162_tarea3_mutacion_fila.py              exit 0      0.3s
+
+D) LA CUENTA
+   CIFRA corridos: 22
+   CIFRA exit 0: 17 (vuelta148_1a_mutacion_embebido.py, vuelta148_2a_mutacion_nomina_commiteada.py, vuelta148_2b_mutacion_cifras_conjunto.py, vuelta148_2c_mutacion_vara_parada.py, vuelta148_2d_mutacion_exencion.py, vuelta150_5c_mutacion_ciclo.py, vuelta154_tarea6_mutacion_corredor.py, vuelta156_tarea4b_mutacion_tallador.py, vuelta156_tarea5d_mutacion_corredor.py, vuelta157_tarea5c_mutacion_ruido.py, vuelta157_tarea6b_mutacion_re_sellado.py, vuelta159_tarea6c_mutacion_exencion.py, vuelta160_tarea7c_mutacion_guarda_cita.py, vuelta161_tarea1a_mutacion_alcance.py, vuelta162_tarea2a_mutacion_puerta.py, vuelta162_tarea2b_mutacion_excepcion.py, vuelta162_tarea3_mutacion_fila.py)
+   CIFRA en rojo: 5 (vuelta148_0d_mutacion_corredor.py, vuelta154_tarea2d_mutacion_guarda.py, vuelta157_tarea4b_mutacion_tachado.py, vuelta160_tarea6b_mutacion_puerta.py, vuelta162_tarea1a_mutacion_serie.py)
+   CRONOMETRO total del lote: 286.7s
+

@@ -26,6 +26,38 @@ esperado de (A) (se exige que el lector VIEJO conserve la fila tachada) y esta
 guarda tiene que CAER en ROJO con exit 1. Ninguno de los veredictos de aqui es
 una constante literal: los tres salen de correr el lector.
 
+--- CORRECCION DECLARADA (vuelta 163, TAREA 2; adjudicacion 6.8 del acta 162) ---
+
+ESTE ARNES NACIO CADUCADO DENTRO DE SU PROPIO COMMIT, igual que el de la TAREA
+1.a de la vuelta 162, y por la misma causa: SUS VALORES ESPERADOS ESTABAN
+CLAVADOS. Medido con git: el fichero nace en `5ebac882`, que es EXACTAMENTE el
+commit *"VUELTA 157, TAREA 4: EL LECTOR SE ENSANCHA Y LAS TRES FILAS RECIBEN SU
+TACHADO"*, o sea el commit que TACHO las celdas. El arnes exigia que la fila 97
+viniera con la celda LIMPIA (`| D |`) para poder tacharla en memoria, y su
+propio commit se la dejo tachada (`| ~~C~~ D |`). Desde el dia siguiente sale
+`ROJO PREVIO: la fila 97 no viene con la celda limpia esperada`, que es la
+especie del banco 9: verde y mal, y despues rojo y mudo.
+
+LO QUE SE ARREGLA, Y ES LA MISMA MEDICINA QUE LA TAREA 3 DE ESTA VUELTA: LOS
+ESPERADOS SE COMPUTAN DEL ESTADO DEL DIA Y LO QUE SE PRUEBA ES EL DELTA.
+
+  - LA FILA SUJETO SE ELIGE POR COMPUTO, no se teclea: la PRIMERA fila de
+    lectura dirigida cuya celda de clase venga TACHADA hoy. Si hoy no hubiera
+    ninguna tachada, se elige la primera limpia y se le tacha la celda EN
+    MEMORIA: el delta es el mismo en los dos sentidos.
+  - LOS DOS TEXTOS SE FABRICAN EN MEMORIA: `SIN TACHAR` normaliza TODAS las
+    celdas tachadas del fichero a su ultima clase, y `TACHADO` es el que trae la
+    fila sujeto con su tachado. Antes se usaba el fichero del repo como si fuera
+    el texto limpio, y eso solo era cierto el dia anterior al tachado.
+  - LA CLASE ESPERADA EN (B) NO ES `D`: es LA ULTIMA CLASE ESCRITA en la celda
+    de la fila sujeto, leida de la celda. Un literal ahi es lo que caduco.
+
+EL DELTA QUE PRUEBA, invariante al numero de fila y a la clase que toque: con la
+celda tachada el lector VIEJO PIERDE la fila y el NUEVO la conserva con su
+ultima clase; y sobre el texto SIN TACHAR los dos leen exactamente lo mismo.
+
+EL FICHERO DEL REPO SIGUE SIN TOCARSE: todo pasa en memoria.
+
 USO:  python scripts/loop/vuelta157_tarea4b_mutacion_tachado.py
       python scripts/loop/vuelta157_tarea4b_mutacion_tachado.py --mutar
 """
@@ -33,15 +65,22 @@ import argparse
 import importlib.util
 import io
 import os
+import re
 import sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LECTOR = os.path.join(RAIZ, "scripts", "loop", "vuelta152_registro_de_citas_opc05.py")
 LD = os.path.join(RAIZ, "docs", "plan", "LECTURAS_DIRIGIDAS.md")
 
-PAR_97 = ("juran_rcca_metodo", "viaje_diagnostico_remedial")
-CELDA_LIMPIA = "| juran_rcca_metodo <-> viaje_diagnostico_remedial | D |"
-CELDA_TACHADA = "| juran_rcca_metodo <-> viaje_diagnostico_remedial | ~~C~~ D |"
+# LA FILA DE LA QUE NACIO ESTE ARNES, CONSERVADA COMO CONTRASTE Y NO COMO VARA.
+# No se borra (EJECUTOR.md 8: una correccion que tapa lo que corrige no se puede
+# auditar), pero YA NO DECIDE NADA: la fila sujeto se elige por computo.
+PAR_97_HISTORICO = ("juran_rcca_metodo", "viaje_diagnostico_remedial")
+
+# LA CELDA DE CLASE DE UNA FILA DE LECTURA DIRIGIDA, con su parte tachada y su
+# clase vigente separadas. Es el mismo vocabulario del lector nuevo.
+PATRON_CELDA = re.compile(
+    r"(\|\s*([a-z0-9_]+)\s*<->\s*([a-z0-9_]+)\s*\|\s*)((?:~~[A-Z]+~~\s*)*)([A-Z]+)(\s*\|)")
 
 
 def cargar_lector():
@@ -81,20 +120,45 @@ def main():
     print("")
 
     texto = io.open(LD, encoding="utf-8").read()
-    if CELDA_LIMPIA not in texto:
-        print("ROJO PREVIO: la fila 97 no viene con la celda limpia esperada.")
+    celdas = [(m, m.group(2), m.group(3), m.group(4).strip(), m.group(5))
+              for m in PATRON_CELDA.finditer(texto)]
+    tachadas = [c for c in celdas if c[3]]
+    print("  EL SUJETO SE ELIGE POR COMPUTO, NO SE TECLEA")
+    print("    CIFRA celdas de clase de lectura dirigida en el fichero: %d" % len(celdas))
+    print("    CIFRA de esas que vienen TACHADAS hoy: %d" % len(tachadas))
+    if not celdas:
+        print("ROJO PREVIO: el fichero no trae ninguna fila de lectura dirigida.")
         print("FIN")
         return 1
-    tachado = texto.replace(CELDA_LIMPIA, CELDA_TACHADA, 1)
 
-    limpio_viejo = mod.citas_de_lectura_dirigida_de_texto(texto, r, mod.PATRON_FILA_LD_VIEJO)
-    limpio_nuevo = mod.citas_de_lectura_dirigida_de_texto(texto, r, mod.PATRON_FILA_LD)
+    # SIN TACHAR: todas las celdas normalizadas a su clase vigente. Antes se
+    # usaba el fichero del repo como si fuera el texto limpio, y eso solo era
+    # cierto el dia anterior al tachado.
+    sin_tachar = PATRON_CELDA.sub(lambda m: m.group(1) + m.group(5) + m.group(6), texto)
+
+    if tachadas:
+        m, a_id, b_id, tach, vigente = tachadas[0]
+        origen = "primera fila TACHADA del fichero de hoy"
+        tachado = texto
+    else:
+        m, a_id, b_id, tach, vigente = celdas[0]
+        origen = "primera fila LIMPIA, tachada EN MEMORIA (hoy no hay ninguna tachada)"
+        tachado = texto[:m.start()] + m.group(1) + "~~%s~~ %s" % (vigente, vigente)             + m.group(6) + texto[m.end():]
+    print("    SUJETO: %s <-> %s  | celda %r | %s"
+          % (a_id, b_id, (tach + vigente).strip(), origen))
+    print("    CLASE ESPERADA EN (B), LEIDA DE LA CELDA Y NO TECLEADA: %r" % vigente)
+    print("    fila historica de la que nacio este arnes (contraste, no vara): %s <-> %s"
+          % PAR_97_HISTORICO)
+    print("")
+
+    limpio_viejo = mod.citas_de_lectura_dirigida_de_texto(sin_tachar, r, mod.PATRON_FILA_LD_VIEJO)
+    limpio_nuevo = mod.citas_de_lectura_dirigida_de_texto(sin_tachar, r, mod.PATRON_FILA_LD)
     tach_viejo = mod.citas_de_lectura_dirigida_de_texto(tachado, r, mod.PATRON_FILA_LD_VIEJO)
     tach_nuevo = mod.citas_de_lectura_dirigida_de_texto(tachado, r, mod.PATRON_FILA_LD)
 
-    clave = tuple(sorted((r(PAR_97[0]), r(PAR_97[1]))))
+    clave = tuple(sorted((r(a_id), r(b_id))))
 
-    print("(C) EL CONTEO SOBRE EL FICHERO SIN TACHAR, QUE ES LO QUE NO SE PUEDE MOVER")
+    print("(C) EL CONTEO SOBRE EL TEXTO SIN TACHAR, QUE ES LO QUE NO SE PUEDE MOVER")
     print("    CIFRA pares que recoge el lector VIEJO: %d" % len(limpio_viejo))
     print("    CIFRA pares que recoge el lector NUEVO: %d" % len(limpio_nuevo))
     mismas_claves = set(limpio_viejo) == set(limpio_nuevo)
@@ -105,22 +169,22 @@ def main():
     print("    VEREDICTO (C): %s" % ("IDENTICO" if conteo_ok else "SE MOVIO"))
     print("")
 
-    print("(A) EL LECTOR VIEJO SOBRE LA FILA 97 TACHADA")
+    print("(A) EL LECTOR VIEJO SOBRE LA FILA SUJETO TACHADA")
     a_viejo_pierde = clave not in tach_viejo
     print("    CIFRA pares que recoge el lector VIEJO sobre el texto tachado: %d"
           % len(tach_viejo))
-    print("    la fila 97 esta en lo que recoge el VIEJO: %s" % (clave in tach_viejo))
-    print("    coincidencias del patron VIEJO en la fila 97: %d"
+    print("    la fila sujeto esta en lo que recoge el VIEJO: %s" % (clave in tach_viejo))
+    print("    coincidencias del patron VIEJO en la fila sujeto: %d"
           % (1 if clave in tach_viejo else 0))
     print("    VEREDICTO (A): %s" % ("LA FILA DESAPARECE" if a_viejo_pierde else "LA CONSERVA"))
     print("")
 
-    print("(B) EL LECTOR NUEVO SOBRE LA MISMA FILA 97 TACHADA")
+    print("(B) EL LECTOR NUEVO SOBRE LA MISMA FILA SUJETO TACHADA")
     clase_nueva = tach_nuevo.get(clave, {}).get("clase")
-    b_ok = clave in tach_nuevo and clase_nueva == "D"
+    b_ok = clave in tach_nuevo and clase_nueva == vigente
     print("    CIFRA pares que recoge el lector NUEVO sobre el texto tachado: %d"
           % len(tach_nuevo))
-    print("    la fila 97 esta en lo que recoge el NUEVO: %s" % (clave in tach_nuevo))
+    print("    la fila sujeto esta en lo que recoge el NUEVO: %s" % (clave in tach_nuevo))
     print("    clase que le asigna (la ULTIMA escrita en la celda): %r" % clase_nueva)
     print("    VEREDICTO (B): %s" % ("APARECE CON LA CLASE BUENA" if b_ok else "NO APARECE BIEN"))
     print("")
@@ -139,8 +203,10 @@ def main():
     print("  (C) esperado True, medido %s" % conteo_ok)
     print("")
     if bien:
-        print("VERDE: el lector viejo pierde la fila tachada, el nuevo la recupera con la")
-        print("clase D, y el conteo sobre el fichero sin tachar no se mueve.")
+        print("VERDE: el lector viejo pierde la fila tachada, el nuevo la recupera con")
+        print("la clase %r leida de la celda, y el conteo sobre el texto sin tachar no se"
+              % vigente)
+        print("mueve.")
         print("FIN")
         return 0
     print("ROJO: alguna de las tres condiciones no se cumple.")

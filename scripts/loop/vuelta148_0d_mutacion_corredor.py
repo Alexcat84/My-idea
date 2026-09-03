@@ -28,6 +28,30 @@ CASOS:
   D. VERDE DE CONTROL SOBRE OTRA VUELTA. La 147 no tuvo parada en medio: su
      corredor leido de git es vacio, y un corredor vacio no trae intrusos.
 
+--- CORRECCION DECLARADA (vuelta 163, TAREA 2; adjudicacion 6.8 del acta 162) ---
+
+ESTE ARNES LLEVABA ROTO DESDE LA VUELTA 154 Y NADIE SE ENTERO, que es
+exactamente la enfermedad que la 6.8 viene a curar. La vuelta 154 (TAREA 6, por
+la adjudicacion 6.7 del acta 153) le cambio la firma a
+`intrusos_del_corredor`: antes devolvia UNA lista y desde entonces devuelve DOS,
+`(intrusos, admitidos_por_el_encargo)`. Este fichero seguia recibiendo el
+resultado como si fuera UNA, asi que:
+
+  - el CASO A imprimia "2 intruso(s)" SIEMPRE, porque medía `len()` de la TUPLA
+    de dos listas y no de la lista de intrusos, y por eso siempre daba dos;
+  - el CASO B reventaba con `ValueError: not enough values to unpack (expected
+    3, got 1)` al intentar recorrer la tupla como si fuera la lista.
+
+LO QUE SE ARREGLA ES EL SITIO DE LA LLAMADA, NO EL CRITERIO: se desempaquetan
+las dos listas y se sigue midiendo sobre `intrusos`, que es lo que este arnes
+siempre quiso medir. Ni un caso se afloja, ni un esperado se toca. La lista de
+admitidos se IMPRIME ademas, porque una guarda que devuelve dos cosas y solo
+mira una es como estaba este fichero.
+
+NO SE BORRA NADA Y NO SE ALEGA VERDE: el rojo de hoy esta sellado en
+`docs/loop/SALIDA_V163_T2_CENSO_POST147.txt` con su traza entera, y el arnes
+entra en la bateria por la 6.8 DESPUES de arreglarse, no antes.
+
 USO:
   python scripts/loop/vuelta148_0d_mutacion_corredor.py
 """
@@ -79,7 +103,7 @@ def main():
     fallos = []
 
     # --- CASO A: VERDE sobre el corredor real ---
-    intrusos_a = G.intrusos_del_corredor(real)
+    intrusos_a, admitidos_a = G.intrusos_del_corredor(real)
     print("\nCASO A (verde, corredor real): %d intruso(s)" % len(intrusos_a))
     if intrusos_a:
         fallos.append("CASO A: el corredor real deberia estar limpio y trae %d intruso(s): %s"
@@ -87,7 +111,7 @@ def main():
 
     # --- CASO B: ROJO por mutacion, ruta de dataset ---
     mutado_b = con_ruta_extra(real, RUTA_INTRUSA)
-    intrusos_b = G.intrusos_del_corredor(mutado_b)
+    intrusos_b, _admitidos_b = G.intrusos_del_corredor(mutado_b)
     print("CASO B (rojo por mutacion, +%s): %d intruso(s)" % (RUTA_INTRUSA, len(intrusos_b)))
     for h, asunto, ajenas in intrusos_b:
         print("      %s nombra %s" % (h[:8], ajenas))
@@ -96,7 +120,7 @@ def main():
 
     # --- CASO C: ROJO por mutacion, ruta que solo se parece ---
     mutado_c = con_ruta_extra(real, RUTA_QUE_SE_PARECE)
-    intrusos_c = G.intrusos_del_corredor(mutado_c)
+    intrusos_c, _admitidos_c = G.intrusos_del_corredor(mutado_c)
     print("CASO C (rojo por mutacion, +%s): %d intruso(s)" % (RUTA_QUE_SE_PARECE, len(intrusos_c)))
     for h, asunto, ajenas in intrusos_c:
         print("      %s nombra %s" % (h[:8], ajenas))
@@ -105,7 +129,7 @@ def main():
 
     # --- CASO D: VERDE de control sobre la vuelta 147, sin parada en medio ---
     _, _, real_147 = corredor_real(147)
-    intrusos_d = G.intrusos_del_corredor(real_147)
+    intrusos_d, _admitidos_d = G.intrusos_del_corredor(real_147)
     print("CASO D (verde de control, vuelta 147): corredor de %d commit(s), %d intruso(s)"
           % (len(real_147), len(intrusos_d)))
     if len(real_147) != 0:
@@ -115,7 +139,7 @@ def main():
         fallos.append("CASO D: corredor vacio con intrusos: %s" % (intrusos_d,))
 
     # --- EL CASO A NO SE CONTAMINO CON LA MUTACION ---
-    intrusos_a2 = G.intrusos_del_corredor(real)
+    intrusos_a2, _admitidos_a2 = G.intrusos_del_corredor(real)
     if intrusos_a2:
         fallos.append("La mutacion contamino el corredor real: A ya no esta limpio (%s)" % (intrusos_a2,))
 

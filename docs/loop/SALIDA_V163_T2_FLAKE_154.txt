@@ -1,0 +1,25 @@
+==============================================================================
+VUELTA 163, TAREA 2: EL FLAKE DE vuelta154_tarea2d_mutacion_guarda.py, MEDIDO
+==============================================================================
+
+A) LAS DOS CORRIDAS DEL LOTE, PARSEADAS DE SUS SALIDAS SELLADAS
+   corrida 1 del lote   docs/loop/SALIDA_V163_T2_CENSO_POST147.txt           exit 1
+   corrida 2 del lote   docs/loop/SALIDA_V163_T2_CENSO_POST147_SEGUNDA.txt   exit 0
+   CIFRA corridas del lote parseadas: 2
+   LAS DOS DAN LO MISMO: NO, Y ESO ES EL FLAKE
+
+B) N CORRIDAS SOLITARIAS DE HOY, CON SU CRONOMETRO
+   corrida solitaria 1  exit 0     38.6s
+   corrida solitaria 2  exit 0     38.2s
+   corrida solitaria 3  exit 0     38.3s
+
+C) LA CUENTA, Y NO SE REDONDEA A SANO
+   CIFRA corridas solitarias: 3
+   CIFRA en exit 0: 3
+   CIFRA en rojo: 0
+   CIFRA veces que se ha visto en rojo, contando el lote: 1
+
+   VEREDICTO DE ESTA MEDICION: el rojo EXISTE y esta sellado en
+   docs/loop/SALIDA_V163_T2_CENSO_POST147.txt, y NO SE HA REPRODUCIDO en
+   ninguna de las reconstrucciones. Se declara INTERMITENTE NO REPRODUCIDO,
+   que no es lo mismo que sano, y entra en la bateria con esta nota.

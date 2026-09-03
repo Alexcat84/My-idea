@@ -53,6 +53,24 @@ delato al dar exit 1 sobre la vuelta 160, que es VERDE. Se corrige forzando
 `RAIZ` y `LOOP` del modulo cargado a los del repo, y se declara: sin esta
 correccion, el caso 3 habria salido OK POR EL MOTIVO EQUIVOCADO.
 
+--- CORRECCION DECLARADA (vuelta 163, TAREA 2; adjudicacion 6.8 del acta 162) ---
+
+EL CASO 3 ESTABA ANCLADO A `HEAD` Y ESO ES UN FALSO VERDE ESPERANDO SU DIA, con
+esas palabras y en este mismo repo: lo escribio
+`scripts/loop/vuelta154_tarea2d_mutacion_guarda.py` en su propia cabecera seis
+vueltas antes. Este arnes nace en `e8a30e83`, que es EL COMMIT DEL REMEDIO, y
+saca su "version vieja" de `git show HEAD:...`. El dia que nacio, `HEAD` todavia
+era la guarda de antes y el caso 3 mordia; desde el commit siguiente `HEAD` ES
+LA GUARDA NUEVA, asi que el caso 3 comparaba el remedio consigo mismo y salia
+`ROJO: 1 de 4 no se comportan`. Otro arnes caducado dentro de su propio commit.
+
+EL ARREGLO ES EL DE LA 154, Y SE COPIA A PROPOSITO: la version vieja se saca de
+una REFERENCIA FIJA Y COMPUTADA, el HEAD DE APERTURA de la vuelta 160 leido de
+`docs/loop/SALIDA_V160_HEAD_APERTURA.txt`, que es el arbol de ANTES del remedio
+y que ningun commit posterior puede mover. Ni un hash tecleado: el ref sale del
+fichero sellado. Si ese fichero faltara, el arnes PARA en vez de caer hacia
+`HEAD` y fingir un contraste.
+
 USO:  python scripts/loop/vuelta160_tarea6b_mutacion_puerta.py
 """
 import importlib.util
@@ -117,10 +135,30 @@ def correr(modulo, vuelta, sin_ficheros=False, sin_acta=False):
     return codigo, buf.valor()
 
 
+# EL REF FIJO DEL CONTRASTE, Y NO SE TECLEA: sale del HEAD DE APERTURA sellado
+# de la vuelta 160, que es el arbol de ANTES del remedio (el remedio es e8a30e83,
+# de esa misma vuelta). `HEAD` no vale: ver la correccion declarada de la
+# cabecera.
+SELLO_APERTURA_160 = os.path.join(RAIZ, "docs", "loop", "SALIDA_V160_HEAD_APERTURA.txt")
+
+
+def ref_del_contraste():
+    """El ref FIJO del que se saca la guarda vieja, leido del sello de apertura
+    de la vuelta 160. Devuelve None si no se puede leer: sin ref fijo NO se cae
+    hacia HEAD, se para."""
+    if not os.path.exists(SELLO_APERTURA_160):
+        return None
+    ref = io.open(SELLO_APERTURA_160, encoding="utf-8").read().strip().split()[0]
+    return ref or None
+
+
 def cargar_version_vieja():
-    """La version ANTERIOR de la guarda, sacada de git y cargada como modulo
-    aparte. No se toca el arbol de trabajo."""
-    r = subprocess.run(["git", "show", "HEAD:%s" % REL], cwd=RAIZ,
+    """La version ANTERIOR de la guarda, sacada de git EN UN REF FIJO y cargada
+    como modulo aparte. No se toca el arbol de trabajo."""
+    ref = ref_del_contraste()
+    if not ref:
+        return None, None
+    r = subprocess.run(["git", "show", "%s:%s" % (ref, REL)], cwd=RAIZ,
                        capture_output=True)
     if r.returncode != 0:
         return None, None
@@ -164,9 +202,12 @@ def main():
     corto = acta[:8]
     print("")
 
+    ref = ref_del_contraste()
     viejo, _ = cargar_version_vieja()
-    print("LA VERSION VIEJA, SACADA DE git show HEAD:%s : %s"
-          % (REL, "cargada" if viejo else "NO SE PUDO CARGAR"))
+    print("EL REF FIJO DEL CONTRASTE, LEIDO DE docs/loop/SALIDA_V160_HEAD_APERTURA.txt")
+    print("Y NO TECLEADO: %s" % ref)
+    print("LA VERSION VIEJA, SACADA DE git show %s:%s : %s"
+          % ((ref or "(sin ref)")[:8], REL, "cargada" if viejo else "NO SE PUDO CARGAR"))
     assert viejo is not None, "sin la version vieja no hay contraste que correr"
     print("")
 
