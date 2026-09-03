@@ -1,0 +1,55 @@
+==============================================================================
+VUELTA 157, TAREA 3: EL PASO 1 DE JURAN SI TIENE QUIEN LO DESPLIEGUE
+==============================================================================
+
+LA MADRE: juran_rcca_metodo
+  TITULO: Método RCCA de Juran (Análisis de Causa Raíz)
+  CIFRA pasos de la madre: 4
+    1. Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema
+    2. Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+    3. Mejorar: diseñar e implementar el remedio
+    4. Controlar: ajustar los controles para mantener las ganancias
+
+(1) EXISTE Y ESTA VIVO?
+    desperdicio_cronico_vs_esporadico EXISTE en el grafo.
+    deprecado: False
+    CIFRA veredicto (1): VIVO
+
+(2) SUS PASOS DESPLIEGAN EL PASO 1 DE LA MADRE?
+    PASO 1 DE juran_rcca_metodo: Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema
+    TITULO DEL CANDIDATO: Desperdicio Crónico vs. Picos Esporádicos
+    ENTREGABLE: Gráfico de control o tablero con la distinción entre nivel crónico de fallos y eventos esporádicos, junto con plan de acción diferenciado para cada uno
+    CIFRA pasos del candidato: 4
+      1. Monitorear los niveles de fallo/error de los procesos de forma continua
+      2. Diferenciar si un aumento de fallos es un pico esporádico (causa asignable) o parte del nivel crónico
+      3. Ante picos esporádicos, aplicar acción correctiva inmediata para restaurar el status quo
+      4. Ante desperdicio crónico, iniciar un proyecto de mejora para identificar y eliminar causas raíz
+
+(3) HAY ARISTA ENTRE LOS DOS, EN ALGUNA DE LAS DOS VISTAS?
+    desperdicio_cronico_vs_esporadico en nodos_siguientes de la madre : False
+    juran_rcca_metodo en nodos_previos del candidato  : False
+    juran_rcca_metodo en nodos_siguientes del candidato: False
+    desperdicio_cronico_vs_esporadico en nodos_previos de la madre    : False
+    CIFRA veredicto (3): NO HAY ARISTA
+
+(4) HAY FILA EN EL CALIBRADO PARA ESTE PAR?
+    CIFRA filas del calibrado con juran_rcca_metodo de madre: 2
+      paso 2 -> hijo prueba_teorias_causa_raiz (titulo_ratio 81.5, arista False)
+      paso 3 -> hijo diseno_implementacion_remedio (titulo_ratio 72.0, arista False)
+    CIFRA filas del calibrado que nombran a desperdicio_cronico_vs_esporadico: 0
+    CIFRA veredicto (4): NO HAY FILA EN EL CALIBRADO
+
+QUE SIGNIFICA, DICHO SIN ADORNO
+  El paso 1 de juran_rcca_metodo (Definir el problema: identificar si es esporádico o crónico )
+  TIENE en el grafo un nodo VIVO cuyos 4 pasos lo despliegan, y ese nodo NO
+  tiene arista con la madre ni fila en el calibrado. O sea: HAY HIJO, Y LA VARA
+  DE vuelta156_tarea2a_pasos_con_hijo.py NO LO VEIA, porque esa vara solo mira
+  HIJOS ADJUDICADOS. 'Ningun hijo adjudicado' es UNA AUSENCIA BAJO LA VARA
+  DECLARADA y NO una prueba de que el paso sea linea.
+
+  LA CLASE NO SE MUEVE: LD-OPC05-097 sigue en D por la adjudicacion 6.1 del
+  acta 157, que la sostiene por dos caminos independientes de esta inferencia.
+
+CIFRA condiciones del contraejemplo que se cumplen: 4 de 4
+VERDE: el contraejemplo se sostiene entero y esta medido, no supuesto.
+FIN
