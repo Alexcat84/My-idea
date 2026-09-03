@@ -1,0 +1,110 @@
+==============================================================================
+VUELTA 161, TAREA 2: LAS CATORCE EN C, RELEIDAS CON LA VARA CONGELADA
+==============================================================================
+
+CIFRA lecturas de la nomina sellada: 14
+CIFRA veredictos escritos en este instrumento: 14
+
+A) LA FRONTERA, ANTES DE TOCAR NADA
+   sha256 de dataset/ ANTES : 1330ccb9c46c03d371cb1ecf7911c83bbb4b14db71a878b3405738000c90e9d8
+   censo ANTES              : 3853 nodos, 3169 vivos, 684 deprecados
+   aristas ANTES            : 8780 siguientes, 8740 previos
+   CIFRA n, veredictos del cribado ANTES: 3388
+
+B) LOS VEREDICTOS, UNO A UNO
+   LD-OPC05-005     C -> C   LAS DOS LINEAS, POR SU NUMERO DE PASO. LINEA 1, aim_of_leadership paso 2 (in
+   LD-OPC05-038     C -> C   LINEA 1, control_estadistico_de_procesos paso 9 (calcular limites de control
+   LD-OPC05-049     C -> C   PARADA, Y LA CLASE NO SE TOCA. AQUI LA LETRA DE LA VARA CONGELADA Y UNO DE S
+   LD-OPC05-052     C -> C   EJEMPLAR DE ACEPTACION DE LA VARA CONGELADA, RELEIDO IGUAL QUE LOS DEMAS Y N
+   LD-OPC05-068     C -> C   LINEA 1, eliminar_metas_numericas_gerencia paso 3 (determinar la capacidad r
+   LD-OPC05-081     C -> C   LINEA 1, fase_accomplish_experiencia_cliente paso 2 (implementar un sistema 
+   LD-OPC05-084     C -> C   LINEA 1, genchi_gembutsu_salir_del_edificio paso 1 (identificar las pregunta
+   LD-OPC05-087     C -> C   LINEA 1, gestion_portafolio_dos_niveles paso 1 (establecer un proceso de gat
+   LD-OPC05-088     C -> C   LINEA 1, gestion_portafolio_foco paso 2 (aplicar criterios estrictos de Go K
+   LD-OPC05-095     C -> C   EJEMPLAR DE ACEPTACION DE LA VARA CONGELADA, RELEIDO IGUAL QUE LOS DEMAS Y N
+   LD-OPC05-098     C -> C   PARADA, Y LA CLASE NO SE TOCA. ES LA MISMA COLISION QUE LA LD-OPC05-049 Y SO
+   LD-OPC05-109     C -> C   LINEA 1, plan_gestion_comunicaciones paso 1 (haz una lista de las personas o
+   LD-OPC05-110     C -> C   LINEA 1, portfolio_management paso 4 (tomar decisiones Go Kill continuas sob
+   LD-OPC05-116     C -> C   LINEA 1, reglas_gestion_riesgo_gambling paso 4 (definir puntos de decision c
+
+   LAS CELDAS DEL .md, ANTES Y DESPUES (el rastro no se tapa):
+      LD-OPC05-005     [~~C~~ ~~D~~ C] -> [~~C~~ ~~D~~ C]
+      LD-OPC05-038     [C] -> [C]
+      LD-OPC05-049     [C] -> [C]
+      LD-OPC05-052     [~~C~~ ~~D~~ C] -> [~~C~~ ~~D~~ C]
+      LD-OPC05-068     [C] -> [C]
+      LD-OPC05-081     [C] -> [C]
+      LD-OPC05-084     [C] -> [C]
+      LD-OPC05-087     [C] -> [C]
+      LD-OPC05-088     [C] -> [C]
+      LD-OPC05-095     [C] -> [C]
+      LD-OPC05-098     [C] -> [C]
+      LD-OPC05-109     [C] -> [C]
+      LD-OPC05-110     [C] -> [C]
+      LD-OPC05-116     [C] -> [C]
+
+C) LAS GUARDAS, MEDIDAS Y NO PROMETIDAS
+   C.1 PREFIJO: las 154 razones conservan su texto viejo ENTERO
+   C.2 PARES: 154 pares, los mismos antes y despues
+   C.3 CLASES MOVIDAS: 0
+       NINGUNA SE MUEVE A A: el limite de la 6.1 del acta 155 se cumple.
+   C.4 FRONTERA, sha256 de dataset/ DESPUES: 1330ccb9c46c03d371cb1ecf7911c83bbb4b14db71a878b3405738000c90e9d8
+       censo DESPUES  : 3853 nodos, 3169 vivos, 684 deprecados
+       aristas DESPUES: 8780 siguientes, 8740 previos
+       EL REGISTRO CAMBIA, EL GRAFO NO: sha256 IDENTICO y censo IDENTICO
+   C.5 CIFRA n, veredictos del cribado DESPUES: 3388
+       n NO SE MUEVE y sigue en 3.388
+   C.7 CIFRA citas cuya clase escrita NO es la vigente: 0
+       NINGUNA: cada cita declara la clase que la fila tiene hoy.
+
+   C.6 numstat de docs/plan/:
+       14	14	docs/plan/LECTURAS_DIRIGIDAS.md
+       14	14	docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl
+
+D) EL SACO, RECONTADO SOBRE EL REGISTRO YA ESCRITO
+   CIFRA lecturas dirigidas por clase: {"C": 14, "D": 108}
+   CIFRA con la clase movida en esta tarea: 0
+   CIFRA que sostienen su clase en esta tarea: 14
+   CIFRA que ya estaban escritas: 0
+
+NINGUNA SALIO A. No hay candidato a fusion, no se toca una arista y n no
+se mueve. El limite de la 6.1 del acta 155 sigue vigente y no se cruzo.
+FIN
+==============================================================================
+D) LA GUARDA DE COHERENCIA DEL ENCARGO: LOS DOS EJEMPLARES DE ACEPTACION
+==============================================================================
+   LD-OPC05-052     clase tras la relectura: C
+   LD-OPC05-095     clase tras la relectura: C
+   LOS DOS SOSTIENEN C. La guarda pasa.
+
+==============================================================================
+E) EL REPARTO DE LA RELECTURA
+==============================================================================
+   CIFRA lecturas del tramo: 14
+   CIFRA que SOSTIENEN su clase: 14
+   CIFRA que CAMBIAN de clase: 0
+   CIFRA traidas como PARADA de frontera: 2
+      LD-OPC05-049 (clase intacta en C)
+      LD-OPC05-098 (clase intacta en C)
+
+F) LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+   (i) LAS DOS PARADAS DE FRONTERA, que son discutibles por definicion:
+      LD-OPC05-049
+      LD-OPC05-098
+   (ii) LAS QUE MARCO POR DUDA PROPIA: 3
+      LD-OPC05-005
+      LD-OPC05-068
+      LD-OPC05-084
+   CIFRA discutibles de este tramo: 5 de 14
+
+G) LA CORRECCION DE CITA QUE ESTE TRAMO TRAE, Y NO ES MIA
+   Las razones de LD-OPC05-087, LD-OPC05-088 y LD-OPC05-110 dicen que
+   la ficha de OP-E-04 declara el par mutuo exceptuado EN SU
+   VERIFICACION 5. Leida la ficha HOY en docs/plan/OPERACIONES.jsonl,
+   la verificacion 5 es la de P.9 y los ids resueltos, y la excepcion
+   del 9.22 vive en la VERIFICACION 6. Los tres pares SI estan
+   exceptuados; el numero citado estaba mal. Corregido por adicion en
+   las tres razones, sin borrar el texto viejo.
+
+FIN
+EXITCODE: 0

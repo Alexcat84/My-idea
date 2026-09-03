@@ -1,0 +1,63 @@
+==============================================================================
+VUELTA 161, TAREA 2: LA NOMINA DE LAS CATORCE EN C, RECOMPUTADA
+==============================================================================
+
+A) EL REGISTRO DE HOY, CONTADO DE SU FICHERO
+   CIFRA filas: 154
+   CIFRA de LECTURA_DIRIGIDA: 122
+   CIFRA de CRIBADO: 32
+   CIFRA en clase A (todo el registro): 0
+   CIFRA en clase B (todo el registro): 1
+   CIFRA en clase C (todo el registro): 14
+   CIFRA en clase D (todo el registro): 139
+
+B) LAS QUE HOY ESTAN EN C, RECOMPUTADAS
+   LD-OPC05-005
+   LD-OPC05-038
+   LD-OPC05-049
+   LD-OPC05-052
+   LD-OPC05-068
+   LD-OPC05-081
+   LD-OPC05-084
+   LD-OPC05-087
+   LD-OPC05-088
+   LD-OPC05-095
+   LD-OPC05-098
+   LD-OPC05-109
+   LD-OPC05-110
+   LD-OPC05-116
+   CIFRA recomputada: 14
+
+C) EL COTEJO CONTRA EL CONTRASTE DEL ENCARGO, ELEMENTO A ELEMENTO
+   CIFRA que el encargo nombra: 14
+   CIFRA en la recomputada y no en el encargo: 0 []
+   CIFRA en el encargo y no en la recomputada: 0 []
+   CALZAN ELEMENTO A ELEMENTO.
+
+D) LAS CUATRO QUE NO ENTRAN, COMPROBADAS (letra expresa del encargo)
+   LD-OPC05-094     clase HOY D   en la nomina: False
+   LD-OPC05-100     clase HOY D   en la nomina: False
+   LD-OPC05-101     clase HOY D   en la nomina: False
+   LD-OPC05-118     clase HOY D   en la nomina: False
+   LAS CUATRO EN D Y NINGUNA EN LA NOMINA.
+
+E) LOS CUATRO EJEMPLARES DE LA VARA CONGELADA (P.5.1), CONTRA EL REGISTRO
+   LD-OPC05-052     la vara dice C ; el registro dice C   CALZA
+   LD-OPC05-095     la vara dice C ; el registro dice C   CALZA
+   LD-OPC05-122     la vara dice D ; el registro dice D   CALZA
+   LD-OPC05-100     la vara dice D ; el registro dice D   CALZA
+   LOS CUATRO CALZAN.
+
+F) LA GUARDA DE COHERENCIA QUE EL ENCARGO IMPONE, DECLARADA ANTES DE LEER
+   DOS DE LAS CATORCE (LD-OPC05-052 y LD-OPC05-095) SON LOS EJEMPLARES DE
+   ACEPTACION DE LA VARA CONGELADA. Por construccion tienen que sobrevivir
+   la relectura. SI ALGUNA DE LAS DOS CAYERA, eso no es una
+   reclasificacion mas: es que la lectura contradice la vara que el
+   fundador acaba de congelar, y entonces SE PARA Y SE TRAE, sin tocar ni
+   la clase ni la vara.
+   los dos estan en la nomina: True
+
+NOMINA SELLADA en docs/loop/NOMINA_V161_TRAMO_C.json
+CIFRA lecturas selladas: 14
+FIN
+EXITCODE: 0

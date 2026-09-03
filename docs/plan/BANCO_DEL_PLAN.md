@@ -450,6 +450,43 @@ SEGUNDA_PASADA       vuelta 159  41 fila(s)
 TRAMO_AL_DOBLE       vuelta 160  37 fila(s)
 ```
 
+### LA MISMA CIFRA, RECOMPUTADA AL CIERRE DE LA VUELTA 161
+
+**`EJECUTOR.md` 1: el estado al cierre se mide al cierre.** La cifra de arriba se
+midio ANTES de la TAREA 2 de esta misma vuelta, y la TAREA 2 escribio **CATORCE
+marcas nuevas** de relectura sobre las catorce que estaban en `C`. **La cifra de
+apertura NO se borra ni se sustituye**: se queda entera con su corte y esta se
+anade debajo con el suyo.
+
+**Corte: 3 sep 2026, AL CIERRE de la vuelta 161. Autor: ejecutor de la vuelta
+161. Fichero de salida: `docs/loop/SALIDA_V161_T2_SEGUNDA_LECTURA_CIERRE.txt`.**
+
+| | apertura de la vuelta 161 | **cierre de la vuelta 161** |
+|---|---:|---:|
+| con AL MENOS UNA segunda lectura independiente | 85 | **92** |
+| con DOS O MAS | 0 | **7** |
+| con NINGUNA | 37 | **30** |
+| actos de relectura contados sobre filas | 85 | **99** |
+| actos distintos `(tipo, vuelta)` | 6 | **7** |
+
+**Los actos al cierre, pegados enteros de su fichero:**
+
+```
+RELECTURA            vuelta 156  2 fila(s)
+RELECTURA_CONJUNTA   vuelta 156  1 fila(s)
+RELECTURA_CONJUNTA   vuelta 159  3 fila(s)
+RELECTURA_CONJUNTA   vuelta 160  1 fila(s)
+SEGUNDA_PASADA       vuelta 159  41 fila(s)
+TRAMO_AL_DOBLE       vuelta 160  37 fila(s)
+TRAMO_DE_LAS_C       vuelta 161  14 fila(s)
+```
+
+**Y LA FORMA NUEVA SE DECLARA:** la marca que la TAREA 2 escribe,
+`RELECTURA DEL TRAMO DE LAS CATORCE EN C, VUELTA 161`, cumple las dos condiciones
+de esta regla (dice que es una relectura y dice en que vuelta) y se anadio a
+`FORMAS_QUE_CUENTAN` del contador **en la misma vuelta que la escribio**. Una
+definicion que no contara la lectura del dia en que nace naceria desfasada.
+
 ### LAS DOS CIFRAS VIEJAS, TACHADAS AL LADO Y NO BORRADAS
 
 **`EJECUTOR.md` 8: una correccion que tapa lo que corrige no se puede auditar.**

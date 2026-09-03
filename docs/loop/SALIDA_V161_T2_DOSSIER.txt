@@ -1,0 +1,538 @@
+DOSSIER DE LA VUELTA 159. NOMINA: docs/loop/NOMINA_V161_TRAMO_C.json (clave tramo)
+CIFRA lecturas de la nomina: 14. ESTE TRAMO CUBRE [0, 9999).
+
+==============================================================================
+LD-OPC05-005  [1 de 14]  clase de hoy: C
+PAR: aim_of_leadership <-> causas_comunes_vs_especiales
+RAZON ORIGINAL: el objetivo del liderazgo de Deming (ayudar y reducir variabilidad entre personas) contra el procedimiento estadistico de 15 pasos que separa causa comun de causa especial
+==============================================================================
+
+  --- aim_of_leadership ---
+  TITULO   : Objetivo del Liderazgo (Deming)
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Un plan de liderazgo enfocado en mejorar el sistema, con identificación de casos individuales fuera de lo esperado y acciones de apoyo basadas en datos.
+  PASOS (6):
+    1. Identificar, con datos o con criterio, quién está fuera de lo esperado, por bajo o por muy alto desempeño
+    2. Investigar las causas de raíz del sistema que afectan el desempeño general
+    3. Diseñar formas de ayuda individual o de reconocimiento según corresponda
+    4. Trabajar de forma continua en mejorar el sistema para todos, no solo en corregir personas
+    5. Reconocer y estudiar a quienes tienen un desempeño excepcional para replicar sus métodos
+    6. Buscar reducir la variabilidad de desempeño entre personas dentro del mismo sistema
+
+  --- causas_comunes_vs_especiales ---
+  TITULO   : Causas Comunes vs Causas Especiales de Variación
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Gráfico de corrida o de control con los puntos clasificados como causa común o especial y un plan de acción diferenciado para cada tipo.
+  PASOS (15):
+    1. Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes
+    2. Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos
+    3. Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales
+    4. Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla
+    5. Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas
+    6. Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales
+    7. Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo
+    8. Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+    9. Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).
+    10. Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.
+    11. Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.
+    12. Comunicar a los equipos que el objetivo es identificar problemas, no culpables
+    13. Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo
+    14. Fomentar la colaboración entre turnos y departamentos para resolver causas comunes
+    15. Analizar la distribución de errores o defectos entre todas las personas usando limites de control
+
+==============================================================================
+LD-OPC05-038  [2 de 14]  clase de hoy: C
+PAR: control_estadistico_de_procesos <-> plan_de_control
+RAZON ORIGINAL: el SPC y sus diez pasos para construir la carta contra el plan de control que define quien mide, quien actua y como se vuelve a control
+==============================================================================
+
+  --- control_estadistico_de_procesos ---
+  TITULO   : Control Estadístico de Procesos (SPC)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Gráfico de control implementado con límites calculados, subgrupos racionales definidos y protocolo de interpretación/acción
+  PASOS (10):
+    1. Elegir la característica a graficar, priorizando las de alta tasa de defectos
+    2. Identificar variables y condiciones del proceso que contribuyen a la característica final
+    3. Verificar que el sistema de medición tenga precisión y exactitud suficientes
+    4. Determinar el punto más temprano de prueba para detectar causas asignables
+    5. Elegir el tipo de gráfico de control adecuado (variables o atributos)
+    6. Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio
+    7. Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5
+    8. Establecer un sistema simple y confiable de recolección de datos
+    9. Calcular límites de control y definir instrucciones de interpretación y acción
+    10. Graficar los datos e interpretar los resultados
+
+  --- plan_de_control ---
+  TITULO   : Plan de Control
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Plan de control documentado con variables, mediciones, responsables y acciones correctivas definidas
+  PASOS (10):
+    1. Identificar las variables que afectan al remedio y al cliente directa o indirectamente
+    2. Establecer el estándar que activará una acción, idealmente un límite de control de una carta de control
+    3. Definir cómo se medirá cada variable de control, especificando unidad de medida, sensor, frecuencia y tamaño de muestra
+    4. Establecer dónde, cuándo y cómo se registrarán las mediciones
+    5. Decidir quién analizará las mediciones y determinará si el proceso está fuera de control
+    6. Decidir quién actuará para diagnosticar y eliminar la causa asignable
+    7. Definir los pasos para regresar el proceso a control
+    8. Revisar la matriz para verificar completitud y efectividad, y también su cobertura de variables críticas y velocidad de respuesta
+    9. Capacitar a los dueños del proceso en el uso del plan de control.
+    10. Auditar periódicamente la efectividad del plan de control.
+
+==============================================================================
+LD-OPC05-049  [3 de 14]  clase de hoy: C
+PAR: decision_pivotar_o_proceder <-> lienzo_modelo_negocio
+RAZON ORIGINAL: la decision de pivotar o proceder contra el lienzo mismo y sus doce pasos de construccion
+==============================================================================
+
+  --- decision_pivotar_o_proceder ---
+  TITULO   : Decisión: Pivotar o Proceder
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Documento de decisión de pivotar o proceder, con checklist completado, Business Model Canvas actualizado y evidencia de las pruebas de éxito y fracaso realizadas
+  PASOS (6):
+    1. Revisa honestamente si la validación convirtió opiniones en hechos, y no que moviste las metas para que coincidieran con el resultado
+    2. Confirma que el producto se vendió bien y fácilmente, que la llegada de clientes es predecible, escalable y rentable, y que existe un proceso de ventas repetible
+    3. Verifica que los tiempos de entrega del producto sean realistas con tu equipo de desarrollo
+    4. Toma un Business Model Canvas nuevo y busca game changers revisando propuesta de valor, precios, canales y relaciones con clientes, no solo mejoras incrementales
+    5. Presenta tu canvas a tu consejo asesor para que lo cuestione activamente
+    6. Actualiza el canvas con lo aprendido y decide formalmente si pivotar volviendo a descubrimiento o proceder avanzando a creación de clientes
+
+  --- lienzo_modelo_negocio ---
+  TITULO   : El Lienzo de Modelo de Negocio (Business Model Canvas)
+  FUENTE   : Business Model Generation - Osterwalder, Alexander
+  DOMINIO  : core
+  ENTREGABLE: Lienzo de Modelo de Negocio completo con los 9 bloques definidos y coherentes entre sí
+  PASOS (12):
+    1. Imprimir el lienzo en tamaño grande para trabajo colaborativo y un Business Model Canvas para cada miembro del equipo
+    2. Reunirse con el equipo aceptando que habrá vacíos en la primera versión
+    3. Escribir cada bloque en notas post-it sobre el lienzo
+    4. Identificar los segmentos de clientes a los que se dirige la organización
+    5. Definir la propuesta de valor para cada segmento
+    6. Mapear canales, relaciones y fuentes de ingresos
+    7. Mapear recursos, actividades y asociaciones clave
+    8. Calcular la estructura de costos y el profit resultante
+    9. Pausar para investigar más información donde haya vacíos importantes
+    10. Iterar y discutir en grupo hasta lograr coherencia entre los bloques
+    11. Publicar el canvas en el espacio de trabajo y actualizarlo conforme avanza el proyecto
+    12. Usar el lienzo como base para pivotar o validar hipótesis del negocio, y también para llevar una solución ya diseñada a un modelo de negocio viable
+
+==============================================================================
+LD-OPC05-052  [4 de 14]  clase de hoy: C
+PAR: definicion_alineacion_cadena_suministro <-> trade_off_responsividad_eficiencia
+RAZON ORIGINAL: alinear la cadena de suministro con la estrategia contra el balance concreto entre responsividad y eficiencia en los cinco drivers
+==============================================================================
+
+  --- definicion_alineacion_cadena_suministro ---
+  TITULO   : Definición y Alineación de la Cadena de Suministro con la Estrategia
+  FUENTE   : Essentials of Supply Chain Management - Michael H. Hugos
+  DOMINIO  : core
+  ENTREGABLE: Mapa de cadena de suministro con el rol de la empresa identificado y una declaración clara de la estrategia competitiva (costo vs. servicio) que guiará las decisiones operativas.
+  PASOS (9):
+    1. Mapear todas las empresas y actividades que participan en la cadena de suministro de tu producto/servicio.
+    2. Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.), y sus core competencies
+    3. Definir si tu estrategia competitiva se basa en precio bajo (requiere eficiencia) o en servicio/conveniencia (requiere capacidad de respuesta).
+    4. Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida, que son los 5 drivers (producción, inventario, ubicación, transporte, información)
+    5. Identificar en qué categoría(s) participa tu empresa: productor, distribuidor, minorista, proveedor de servicios
+    6. Mapear todos los participantes de tu cadena de suministro actual, incluyendo proveedores del proveedor y clientes del cliente
+    7. Determinar qué proveedores de servicios (logística, financieros, TI) podrían mejorar tu eficiencia operativa
+    8. Responder las 6 preguntas de Chopra y Meindl sobre tu mercado: cantidad por lote, tiempo de respuesta, variedad, nivel de servicio, precio, tasa de innovación
+    9. Validar que la estrategia de cadena de suministro sea coherente con la propuesta de valor al cliente
+
+  --- trade_off_responsividad_eficiencia ---
+  TITULO   : Balance entre Capacidad de Respuesta y Eficiencia
+  FUENTE   : Essentials of Supply Chain Management - Michael H. Hugos
+  DOMINIO  : core
+  ENTREGABLE: Documento de posicionamiento estratégico que indique, para cada driver de la cadena de suministro, si la decisión prioriza eficiencia o capacidad de respuesta.
+  PASOS (8):
+    1. Analizar qué valora más tu segmento de clientes: precio bajo o rapidez/servicio.
+    2. Evaluar el nivel de exceso de capacidad, inventario y flexibilidad de transporte actuales.
+    3. Ajustar cada driver (producción, inventario, ubicación, transporte, información) hacia el extremo del espectro que corresponda a la estrategia elegida.
+    4. Revisar periódicamente el balance, ya que cambios en el mercado pueden requerir reajustes.
+    5. Monitorear factores clave: demanda de producto, precios, tasas de producción, frecuencia de entregas
+    6. Evaluar la confiabilidad de los pronósticos y datos disponibles
+    7. Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece responsividad)
+    8. Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, features, velocidad)
+
+==============================================================================
+LD-OPC05-068  [5 de 14]  clase de hoy: C
+PAR: eliminar_metas_numericas_gerencia <-> sistema_estable_causas_comunes
+RAZON ORIGINAL: eliminar metas numericas sin metodo contra el procedimiento de verificar si el sistema es estable antes de intervenir
+==============================================================================
+
+  --- eliminar_metas_numericas_gerencia ---
+  TITULO   : Eliminación de Metas Numéricas Internas sin Método
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Documento de metas organizacionales revisado, con cada meta vinculada a un método y análisis de capacidad del sistema
+  PASOS (5):
+    1. Revisar las metas numéricas actuales de gerencia y verificar si cuentan con un plan de acción concreto
+    2. Eliminar metas que solo se basen en deseos o presión sin método definido
+    3. Determinar la capacidad real del sistema mediante análisis estadístico antes de fijar cualquier meta
+    4. Reemplazar metas arbitrarias por objetivos de mejora continua con planes de acción específicos
+    5. Reconocer el costo oculto de manejar tu negocio por miedo a los números
+
+  --- sistema_estable_causas_comunes ---
+  TITULO   : Sistema Estable y tu Responsabilidad sobre la Variación
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Una carta de control o run chart con el diagnóstico de estabilidad del proceso, la clasificación de causas y un plan de acción dirigido a cambiar el sistema si corresponde.
+  PASOS (5):
+    1. Recolectar datos diarios de defectos o errores durante varias semanas.
+    2. Graficar los datos en una carta de corrida o carta de control para verificar si la variación es estable o inestable.
+    3. Clasificar la variación como causa común (del sistema) o causa especial (puntual).
+    4. Si el sistema es estable, identificar qué cambios estructurales, como materiales, herramientas o capacitación, pueden mover su capacidad.
+    5. Evitar fijar metas numéricas o culpar a la persona que te ayuda hasta haber intervenido sobre el sistema mismo.
+
+==============================================================================
+LD-OPC05-081  [6 de 14]  clase de hoy: C
+PAR: fase_accomplish_experiencia_cliente <-> reunion_conclusion_proyecto
+RAZON ORIGINAL: la fase Accomplish y sus tres escenarios de mision contra la reunion de conclusion con encuestas internas y externas
+==============================================================================
+
+  --- fase_accomplish_experiencia_cliente ---
+  TITULO   : Fase Accomplish: Verificar que el Cliente Logró su Objetivo
+  FUENTE   : Never Lose a Customer Again - Joey Coleman
+  DOMINIO  : core
+  ENTREGABLE: Sistema de tracking de logros de clientes y protocolo de celebración definido para el momento en que se alcanza el objetivo
+  PASOS (11):
+    1. Definir claramente cuál es el objetivo/resultado que el cliente busca al comprar tu producto, y no solo la entrega del producto
+    2. Implementar un sistema de seguimiento (automatizado o manual) para saber cuándo el cliente alcanza ese objetivo
+    3. Clasificar cada relación con cliente en uno de los tres escenarios: Mission Accomplished, Lukewarm Bath o Mission Failure
+    4. Diseñar un momento de celebración específico para cuando el cliente logra su objetivo
+    5. Reservar al menos 5% de las ganancias del proyecto para invertir en mejoras de experiencia del cliente
+    6. Identificar el objetivo superficial que el cliente dice buscar
+    7. Investigar el deseo o motivación real detrás de ese objetivo declarado
+    8. Diseñar un punto de seguimiento posterior al logro del objetivo aparente (ej. pedir una foto, confirmar el resultado real)
+    9. Mantener contacto y apoyo del equipo más allá del cumplimiento nominal del contrato
+    10. Evitar que el equipo 'desacelere' el esfuerzo justo cuando el cliente cree haber terminado
+    11. Recoger evidencia (testimonios, datos) del resultado logrado para usos futuros.
+
+  --- reunion_conclusion_proyecto ---
+  TITULO   : Reunión de Conclusión con Encuestas Internas y Externas
+  FUENTE   : Never Lose a Customer Again - Joey Coleman
+  DOMINIO  : core
+  ENTREGABLE: Protocolo de cierre de proyecto con encuestas internas/externas y plan de monitoreo post-entrega documentado
+  PASOS (13):
+    1. Programar una Reunión de Conclusión al finalizar el proyecto, revisando los objetivos y métricas definidos en el kickoff
+    2. Diseñar una encuesta interna para el equipo: satisfacción de trabajar con el cliente, disposición a repetir, comentarios abiertos
+    3. Diseñar una encuesta externa para el cliente: satisfacción, probabilidad de recomendar, comentarios abiertos, con una calificación inicial de estrellas o NPS
+    4. Ramificar las preguntas según el puntaje recibido (alta satisfacción → pedir testimonio; baja satisfacción → espacio para desahogo y solución)
+    5. Establecer un periodo de monitoreo posterior (ej. 3 meses) para mitigar el 'remordimiento post-lanzamiento' del cliente
+    6. Solicitar testimonios y referidos solo después de dar valor y feedback positivo primero
+    7. Revisar los objetivos organizacionales y métricas de éxito definidas en el kickoff
+    8. Realizar una evaluación honesta del nivel de éxito en cada métrica
+    9. Solicitar feedback del cliente sobre esas métricas
+    10. Atender cualquier deficiencia pendiente antes de cerrar
+    11. Compartir testimonios y reconocimientos mutuos
+    12. Establecer un plan de monitoreo post-entrega (ej. 3 meses de seguimiento)
+    13. Usa los resultados para ajustar tus procesos futuros
+
+==============================================================================
+LD-OPC05-084  [7 de 14]  clase de hoy: C
+PAR: genchi_gembutsu_salir_del_edificio <-> leap_of_faith_assumptions
+RAZON ORIGINAL: salir del edificio a observar contra identificar y ordenar los supuestos de salto de fe: uno es el acto, el otro la lista que lo dirige
+==============================================================================
+
+  --- genchi_gembutsu_salir_del_edificio ---
+  TITULO   : Genchi Gembutsu: Salir del Edificio
+  FUENTE   : The Lean Startup - Eric Ries
+  DOMINIO  : core
+  ENTREGABLE: Registro de conversaciones y observaciones directas con clientes potenciales que validen o invaliden las hipótesis iniciales del negocio
+  PASOS (6):
+    1. Identificar las preguntas de fe (leap-of-faith questions) más críticas del negocio
+    2. Salir físicamente a hablar con clientes potenciales reales, no solo encuestas remotas, lo que se llama get out of the building
+    3. Observar el comportamiento real de los usuarios en su contexto natural
+    4. Evitar tomar decisiones basadas únicamente en reportes de segunda mano
+    5. Documentar los hallazgos firsthand para contrastarlos con las hipótesis iniciales
+    6. Usar estas observaciones para ajustar el diseño del producto o servicio
+
+  --- leap_of_faith_assumptions ---
+  TITULO   : Supuestos de salto de fe (leap-of-faith assumptions)
+  FUENTE   : The Lean Startup - Eric Ries
+  DOMINIO  : core
+  ENTREGABLE: Lista priorizada de tus supuestos de salto de fe, separados de los hechos comprobados de tu plan
+  PASOS (5):
+    1. Revisa tu plan y separa los hechos comprobados de las suposiciones que aún no has verificado, incluidos el modelo de negocio y el spreadsheet financiero
+    2. Identifica cuáles suposiciones son de bajo riesgo y cuáles son verdaderos saltos de fe
+    3. Reescribe tus comparaciones con otros negocios en términos concretos y verificables, evitando analogías que te oculten el riesgo real
+    4. Ordena tus supuestos según el riesgo que representan para que tu negocio funcione
+    5. Diseñar experimentos específicos para validar cada leap-of-faith question antes de construir el producto completo
+
+==============================================================================
+LD-OPC05-087  [8 de 14]  clase de hoy: C
+PAR: gestion_portafolio_dos_niveles <-> sistema_gates_go_kill
+RAZON ORIGINAL: el enfoque jerarquico de portafolio (gate individual mas revision trimestral del conjunto) contra el sistema de gates. LA FICHA DE OP-E-04 YA DECLARA ESTE PAR COMO MUTUO EXCEPTUADO del 9.22 en su verificacion 5, y esa declaracion sellada respalda la lectura
+==============================================================================
+
+  --- gestion_portafolio_dos_niveles ---
+  TITULO   : Enfoque Jerárquico de Gestión de Portafolio
+  FUENTE   : Winning at New Products - Robert G. Cooper
+  DOMINIO  : core
+  ENTREGABLE: Un sistema dual documentado de gates y revisiones de portafolio con roles y frecuencias definidas
+  PASOS (4):
+    1. Establecer un proceso de gating (compuertas) para revisar cada proyecto individualmente
+    2. Establecer revisiones de portafolio trimestrales o semestrales que vean el conjunto completo de proyectos
+    3. Definir qué decisiones son estratégicas (alto nivel) y cuáles tácticas (selección/priorización)
+    4. Usar ambos procesos de forma complementaria, no sustitutiva
+
+  --- sistema_gates_go_kill ---
+  TITULO   : Sistema de Gates (Puntos de Decisión Go/Kill)
+  FUENTE   : Winning at New Products - Robert G. Cooper
+  DOMINIO  : core
+  ENTREGABLE: Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control
+  PASOS (17):
+    1. Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+    2. Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+    3. Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+    4. Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+    5. Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+    6. Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+    7. En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+    8. No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+    9. Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+    10. Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+    11. Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+    12. Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+    13. Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+    14. Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+    15. Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+    16. Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+    17. Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+
+==============================================================================
+LD-OPC05-088  [9 de 14]  clase de hoy: C
+PAR: gestion_portafolio_foco <-> sistema_gates_go_kill
+RAZON ORIGINAL: la gestion del foco de recursos y su auditoria de proyectos activos contra el sistema de gates. TAMBIEN EXCEPTUADO por la verificacion 5 de OP-E-04
+==============================================================================
+
+  --- gestion_portafolio_foco ---
+  TITULO   : Gestión del Portafolio y Foco de Recursos
+  FUENTE   : Winning at New Products - Robert G. Cooper
+  DOMINIO  : core
+  ENTREGABLE: Portafolio de proyectos priorizado y balanceado según capacidad real de recursos disponibles
+  PASOS (5):
+    1. Auditar el número de proyectos activos versus la capacidad real de recursos
+    2. Aplicar criterios estrictos de Go/Kill para reducir el número de proyectos en pipeline
+    3. Priorizar proyectos de mayor potencial estratégico y financiero
+    4. Evitar el multitasking excesivo del personal entre proyectos simultáneos
+    5. Revisar periódicamente el balance del portafolio (riesgo, tipo de innovación, mercados)
+
+  --- sistema_gates_go_kill ---
+  TITULO   : Sistema de Gates (Puntos de Decisión Go/Kill)
+  FUENTE   : Winning at New Products - Robert G. Cooper
+  DOMINIO  : core
+  ENTREGABLE: Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control
+  PASOS (17):
+    1. Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+    2. Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+    3. Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+    4. Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+    5. Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+    6. Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+    7. En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+    8. No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+    9. Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+    10. Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+    11. Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+    12. Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+    13. Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+    14. Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+    15. Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+    16. Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+    17. Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+
+==============================================================================
+LD-OPC05-095  [10 de 14]  clase de hoy: C
+PAR: investigacion_new_view <-> process_tracing_methods
+RAZON ORIGINAL: la investigacion de accidentes bajo el enfoque New View contra los metodos de process tracing y sus dos relatos paralelos
+==============================================================================
+
+  --- investigacion_new_view ---
+  TITULO   : Investigación de accidentes bajo el enfoque New View
+  FUENTE   : The Field Guide to Understandin - Dekker, Sidney
+  DOMINIO  : health_safety
+  ENTREGABLE: Informe de investigación de incidente estructurado según principios New View, con foco en prevención en lugar de culpabilización
+  PASOS (7):
+    1. Reconstruir la situación tal como la vivieron los involucrados, sin usar el conocimiento del resultado final, a partir de la información y las señales disponibles para los actores en el momento del evento
+    2. Evitar declaraciones de causa única o 'causa probable'
+    3. Documentar hallazgos como causas, contribuciones y riesgos por separado
+    4. Dedicar una sección sustancial del informe a acciones de seguridad preventivas, y comunicar los hallazgos de forma que honren la experiencia humana en lugar de reducirla a una lista de errores
+    5. Contrastar la investigación oficial con relatos revisionistas o independientes si están disponibles
+    6. Involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento
+    7. Entrevistar a los involucrados para entender su percepción y objetivos en el momento
+
+  --- process_tracing_methods ---
+  TITULO   : Métodos de Rastreo de Procesos (Process-Tracing)
+  FUENTE   : The Field Guide to Understandin - Dekker, Sidney
+  DOMINIO  : health_safety
+  ENTREGABLE: Un informe de investigación de incidente/accidente que incluya el relato dual (contexto-específico y conceptual) explicando por qué las acciones de los practicantes tuvieron sentido dado su contexto y comprensión en el momento.
+  PASOS (5):
+    1. Recolectar datos crudos del episodio (registros, transcripciones, testimonios, datos de sistemas)
+    2. Construir el relato específico del dominio en el lenguaje técnico de los practicantes
+    3. Identificar y aplicar conceptos dependientes (ej. sorpresa de automatización, carga de trabajo) para interpretar los datos
+    4. Buscar regularidades y patrones de desempeño humano a través de los dos relatos paralelos
+    5. Documentar las conclusiones evitando el lenguaje de déficit humano (culpar, señalar fallos)
+
+==============================================================================
+LD-OPC05-098  [11 de 14]  clase de hoy: C
+PAR: lean_launchpad_web_startup_process <-> lienzo_modelo_negocio
+RAZON ORIGINAL: el proceso Lean LaunchPad para un startup web contra el lienzo mismo y sus doce pasos
+==============================================================================
+
+  --- lean_launchpad_web_startup_process ---
+  TITULO   : Proceso Lean LaunchPad para Construir un Startup Web
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Sitio web funcional de alta fidelidad con métricas de tráfico, feedback de usuarios y sistema de cobro implementado
+  PASOS (10):
+    1. Configurar la logística del equipo (blog, comunicación)
+    2. Redactar las hipótesis del modelo de negocio de 9 bloques
+    3. Escribir una propuesta de venta única (Unique Selling Proposition) en formato 'Ayudamos a X a hacer Y haciendo Z'
+    4. Configurar dominio y hosting del sitio web
+    5. Construir un sitio web de baja fidelidad (splash page, formularios de pre-orden)
+    6. Dirigir tráfico de clientes potenciales al sitio para probar segmento y propuesta de valor
+    7. Conectar la interfaz de usuario con el código backend
+    8. Probar el 'problema del cliente' recopilando datos mediante analytics y encuestas
+    9. Construir una versión de alta fidelidad para probar la 'solución'
+    10. Pedir dinero mediante formularios de pre-orden o cobro real
+
+  --- lienzo_modelo_negocio ---
+  TITULO   : El Lienzo de Modelo de Negocio (Business Model Canvas)
+  FUENTE   : Business Model Generation - Osterwalder, Alexander
+  DOMINIO  : core
+  ENTREGABLE: Lienzo de Modelo de Negocio completo con los 9 bloques definidos y coherentes entre sí
+  PASOS (12):
+    1. Imprimir el lienzo en tamaño grande para trabajo colaborativo y un Business Model Canvas para cada miembro del equipo
+    2. Reunirse con el equipo aceptando que habrá vacíos en la primera versión
+    3. Escribir cada bloque en notas post-it sobre el lienzo
+    4. Identificar los segmentos de clientes a los que se dirige la organización
+    5. Definir la propuesta de valor para cada segmento
+    6. Mapear canales, relaciones y fuentes de ingresos
+    7. Mapear recursos, actividades y asociaciones clave
+    8. Calcular la estructura de costos y el profit resultante
+    9. Pausar para investigar más información donde haya vacíos importantes
+    10. Iterar y discutir en grupo hasta lograr coherencia entre los bloques
+    11. Publicar el canvas en el espacio de trabajo y actualizarlo conforme avanza el proyecto
+    12. Usar el lienzo como base para pivotar o validar hipótesis del negocio, y también para llevar una solución ya diseñada a un modelo de negocio viable
+
+==============================================================================
+LD-OPC05-109  [12 de 14]  clase de hoy: C
+PAR: plan_gestion_comunicaciones <-> plan_gestion_interesados
+RAZON ORIGINAL: el plan de comunicaciones (que, como, cuando, quien) contra el plan de gestion de interesados (nivel de compromiso actual y deseado)
+==============================================================================
+
+  --- plan_gestion_comunicaciones ---
+  TITULO   : Plan de comunicación con las personas que te importan en el proyecto
+  FUENTE   : A Project Manager's Book of Forms - Cynthia Stackpole Snyder
+  DOMINIO  : core
+  ENTREGABLE: Un plan de comunicación completo con la lista de personas involucradas, el tipo de información, el método, la frecuencia y quién es responsable de cada envío.
+  PASOS (6):
+    1. Haz una lista de las personas o grupos que necesitan recibir información de tu proyecto
+    2. Describe qué tipo de información vas a comunicar a cada uno (reportes de avance, actas, actualizaciones)
+    3. Decide el método de entrega (correo, reuniones, videollamadas)
+    4. Define cada cuánto o en qué momento vas a enviar cada comunicación
+    5. Decide quién es el responsable de mandar cada comunicación
+    6. Anota las restricciones o supuestos de comunicación y un glosario con los términos que uses
+
+  --- plan_gestion_interesados ---
+  TITULO   : Plan para relacionarte con las personas interesadas en tu proyecto
+  FUENTE   : A Project Manager's Book of Forms - Cynthia Stackpole Snyder
+  DOMINIO  : core
+  ENTREGABLE: Una lista donde para cada persona interesada tienes anotado su nivel actual y deseado de compromiso, junto con la manera en que planeas acercarla.
+  PASOS (5):
+    1. Anota el nivel de compromiso actual y el nivel que te gustaría lograr con cada persona interesada
+    2. Ubica a cada una según cómo se relaciona con tu proyecto: si no lo conoce, si se resiste, si es neutral, si lo apoya o si ya lo defiende
+    3. Define qué necesita saber cada persona y cómo se lo vas a comunicar
+    4. Identifica cómo se relacionan entre sí los distintos grupos de personas interesadas
+    5. Piensa cómo vas a acercar a cada una al nivel de compromiso que necesitas
+
+==============================================================================
+LD-OPC05-110  [13 de 14]  clase de hoy: C
+PAR: portfolio_management <-> sistema_gates_go_kill
+RAZON ORIGINAL: la gestion de portafolio holistica contra el sistema de gates individual. TAMBIEN EXCEPTUADO por la verificacion 5 de OP-E-04
+==============================================================================
+
+  --- portfolio_management ---
+  TITULO   : Gestión de Portafolio de Proyectos (Portfolio Management)
+  FUENTE   : Winning at New Products - Robert G. Cooper
+  DOMINIO  : core
+  ENTREGABLE: Portafolio de proyectos priorizado y balanceado, con recursos asignados según valor estratégico y decisiones explícitas de Go/Kill documentadas.
+  PASOS (6):
+    1. Evaluar si existen demasiados proyectos para los recursos disponibles
+    2. Revisar el balance del portafolio (proyectos pequeños vs de alto valor)
+    3. Implementar revisiones periódicas de todo el portafolio de forma holística
+    4. Tomar decisiones Go/Kill continuas sobre proyectos individuales
+    5. Eliminar proyectos débiles o que ya no cumplen con la estrategia (aproximadamente un tercio suele requerir cancelación)
+    6. Reasignar los recursos liberados a los proyectos de mayor valor
+
+  --- sistema_gates_go_kill ---
+  TITULO   : Sistema de Gates (Puntos de Decisión Go/Kill)
+  FUENTE   : Winning at New Products - Robert G. Cooper
+  DOMINIO  : core
+  ENTREGABLE: Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control
+  PASOS (17):
+    1. Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+    2. Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+    3. Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+    4. Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+    5. Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+    6. Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+    7. En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+    8. No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+    9. Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+    10. Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+    11. Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+    12. Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+    13. Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+    14. Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+    15. Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+    16. Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+    17. Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+
+==============================================================================
+LD-OPC05-116  [14 de 14]  clase de hoy: C
+PAR: reglas_gestion_riesgo_gambling <-> sistema_gates_go_kill
+RAZON ORIGINAL: las cinco reglas de gestion de riesgo por etapas contra el sistema de gates que las materializa en puntos de decision
+==============================================================================
+
+  --- reglas_gestion_riesgo_gambling ---
+  TITULO   : Las Cinco Reglas de Gestión de Riesgo (Gambling Rules)
+  FUENTE   : Winning at New Products - Robert G. Cooper
+  DOMINIO  : core
+  ENTREGABLE: Un mapa de riesgo del proyecto que muestre la relación entre incertidumbre y montos invertidos en cada etapa, con puntos de salida definidos
+  PASOS (5):
+    1. Evaluar el nivel de incertidumbre actual antes de asignar recursos a la siguiente etapa
+    2. Dividir tu inversión total en etapas incrementales en vez de comprometer todo el presupuesto de una vez
+    3. Invertir en investigación de mercado y técnica (VoC, tests) para reducir la incertidumbre antes de aumentar el gasto
+    4. Definir puntos de decisión claros (gates) donde puedas matar el proyecto si la información no es favorable
+    5. Aumentar el monto invertido solo cuando la incertidumbre haya bajado en la etapa anterior
+
+  --- sistema_gates_go_kill ---
+  TITULO   : Sistema de Gates (Puntos de Decisión Go/Kill)
+  FUENTE   : Winning at New Products - Robert G. Cooper
+  DOMINIO  : core
+  ENTREGABLE: Un mapa de gates con checklist de criterios de decision y entregables requeridos en cada punto de control
+  PASOS (17):
+    1. Define los gates en los puntos clave de tu proceso (tras la idea, tras la validacion inicial, antes de desarrollar, antes de lanzar)
+    2. Establece criterios claros y visibles para cada gate: si el proyecto esta listo, si el negocio justifica seguir, y que recursos necesita la siguiente etapa
+    3. Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad
+    4. Detente en cada punto de control y toma una decision explicita: Go, Kill, Hold o Recycle, y una quinta salida, Conditional Go
+    5. Comprometete recursos (tiempo, dinero) solo despues de pasar el gate, no antes
+    6. Anota la decision tomada y el motivo antes de avanzar a la siguiente etapa
+    7. En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto
+    8. No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir
+    9. Acuerda con tu equipo los criterios de éxito de cada etapa antes de llegar al punto de decisión.
+    10. Conecta cada punto de decisión con la forma en que asignas recursos y con la visión general de tus proyectos.
+    11. Haz una revisión después del lanzamiento para confirmar que se cumplió lo prometido.
+    12. Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables
+    13. Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa
+    14. Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella
+    15. Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).
+    16. Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.
+    17. Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.
+
+EXITCODE: 0

@@ -1,0 +1,57 @@
+=== NOTA DECLARADA: el sello --antes se toma DESPUES de escribir el tramo, y se dice por que vale ===
+Esta guarda mide ARISTAS DUPLICADAS TRAS RESOLVER sobre dataset/metadata/master_graph.json.
+La TAREA 2 no toco el grafo: el motor midio sha256 de dataset/ ANTES y DESPUES y salio IDENTICO
+(1330ccb9c46c03d371cb1ecf7911c83bbb4b14db71a878b3405738000c90e9d8 en los dos lados,
+docs/loop/SALIDA_V161_T2_VEREDICTOS.txt, secciones A y C.4). O sea que el grafo sobre el que
+se sella el ANTES es BYTE A BYTE el mismo que habia antes del tramo. Se declara en vez de callarse.
+
+=== --antes ===
+ARISTAS DUPLICADAS TRAS RESOLUCION
+
+| | |
+|---|---:|
+| nodos vivos revisados | 3169 |
+| **nodos con al menos una duplicada** | **0** |
+| **entradas que SOBRAN** | **0** |
+| grupos afectados (nodo mas campo mas destino) | 0 |
+
+POR MOTIVO
+
+POR CAMPO
+
+| dominio | nodos | duplicadas |
+|---|---:|---:|
+
+LOS PEORES
+
+escrito: C:\Users\AlexDesk\AppData\Local\Temp\tmpabsgx5ip\ARISTAS_DUPLICADAS_ANTES.jsonl
+
+==============================================================================
+SELLO ANTES: 0 entradas que sobran, 0 nodos (escrito en C:\Users\AlexDesk\Documents\I have an idea\docs\loop\SALIDA_V161_GUARDA_OPC05_ANTES.txt)
+EXITCODE --antes: 0
+
+=== --despues ===
+ARISTAS DUPLICADAS TRAS RESOLUCION
+
+| | |
+|---|---:|
+| nodos vivos revisados | 3169 |
+| **nodos con al menos una duplicada** | **0** |
+| **entradas que SOBRAN** | **0** |
+| grupos afectados (nodo mas campo mas destino) | 0 |
+
+POR MOTIVO
+
+POR CAMPO
+
+| dominio | nodos | duplicadas |
+|---|---:|---:|
+
+LOS PEORES
+
+escrito: C:\Users\AlexDesk\AppData\Local\Temp\tmpdq7_b2cd\ARISTAS_DUPLICADAS_DESPUES.jsonl
+
+==============================================================================
+ANTES: 0 entradas que sobran | DESPUES: 0 entradas que sobran
+VERDE: la cuenta NO crecio (+0). Via de OP-C-05 cumplida.
+EXITCODE --despues: 0

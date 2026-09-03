@@ -50,6 +50,12 @@ REGISTRO = os.path.join(RAIZ, "docs", "plan", "REGISTRO_DE_CITAS_OPC05.jsonl")
 ACTA = os.path.join(RAIZ, "docs", "loop", "ACTA_AUDITOR.md")
 
 FORMAS_QUE_CUENTAN = [
+    # ANADIDA EN LA TAREA 2 DE ESTA MISMA VUELTA, Y SE DECLARA POR QUE: la
+    # relectura de las catorce en C escribe su marca con esta forma, y una
+    # definicion escrita hoy que no contara la lectura de hoy seria una
+    # definicion que nace desfasada. La forma cumple las dos condiciones de
+    # P.5.2: dice que es una RELECTURA y dice EN QUE VUELTA.
+    (r"RELECTURA DEL TRAMO DE LAS CATORCE EN C, VUELTA (\d+)", "TRAMO_DE_LAS_C"),
     (r"SEGUNDA PASADA DEL TRAMO AL DOBLE, VUELTA (\d+)", "TRAMO_AL_DOBLE"),
     (r"SEGUNDA PASADA DE LA VUELTA (\d+)", "SEGUNDA_PASADA"),
     (r"RELECTURA CONJUNTA DE LA VUELTA (\d+)", "RELECTURA_CONJUNTA"),
