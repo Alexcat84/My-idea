@@ -1,0 +1,55 @@
+==============================================================================
+VUELTA 161, TAREA 1.a: CASO ROJO POR MUTACION DE LA VARA DE CONTENIDO
+==============================================================================
+
+SHA256 DE LOS TRES FICHEROS REALES, ANTES:
+   vuelta89_tarea4_guarda_op_c05.py               fcd44b7d2ffacbf89cbf2459764682bf3d8d0577d1e21400e1cc361b8662e540
+   vuelta160_tarea3b_caso_positivo.py             d53b87e0762f4e01157dfb3bdf29a7fadec2bbd97f4bd64815db9df87fdb31e7
+   vuelta160_tarea3_remedio_p16.py                32d8d0703ce777153d69755721556f4705f06a06ee1a0e969f0bfeba9b9c6953
+
+CASO 1, VERDE DE CONTROL
+   clasificar(vuelta89_tarea4_guarda_op_c05.py) = ALCANCE
+   clasificar(vuelta160_tarea1_registrar_adjudicaciones.py) = SOLO_CITA
+   CIFRA en la clase ALCANCE, sin mutar nada: 12
+   VERDE: True
+
+CASO 2, ROJO: se le quita la marca del comentario a uno de los doce
+   CIFRA comentarios con la marca que se le quitaron: 1
+   clasificar(mutado) = SOLO_CITA   (antes: ALCANCE)
+   CIFRA en la clase ALCANCE con la mutacion puesta: 11 (antes 12)
+   EL CASO CAE COMO TIENE QUE CAER: True
+
+CASO 3, ROJO: se le pone la marca en un comentario a uno que no la tiene
+   fichero: vuelta160_tarea3b_caso_positivo.py (el nombre no cambia)
+   clasificar(real) = SOLO_CITA ; clasificar(mutado) = ALCANCE
+   CIFRA en la clase ALCANCE con la mutacion puesta: 13 (antes 12)
+   EL CASO CAE COMO TIENE QUE CAER: True
+
+CASO 4, ROJO: la marca se mueve del comentario a una constante de cadena
+   clasificar(mutado) = ESCRIBE_EL_REMEDIO   (esperado ESCRIBE_EL_REMEDIO)
+   EL CASO CAE COMO TIENE QUE CAER: True
+
+CASO 5, MUTACION DEL VALOR ESPERADO
+   ESPERADO_FICHEROS real: 12 ; mutado: 13
+   cotejo con el esperado real:   True
+   cotejo con el esperado mutado: False
+   EL COTEJO CAE AL MUTAR EL VALOR ESPERADO: True
+
+SHA256 DE LOS TRES FICHEROS REALES, DESPUES:
+   vuelta89_tarea4_guarda_op_c05.py               fcd44b7d2ffacbf89cbf2459764682bf3d8d0577d1e21400e1cc361b8662e540  intacto=True
+   vuelta160_tarea3b_caso_positivo.py             d53b87e0762f4e01157dfb3bdf29a7fadec2bbd97f4bd64815db9df87fdb31e7  intacto=True
+   vuelta160_tarea3_remedio_p16.py                32d8d0703ce777153d69755721556f4705f06a06ee1a0e969f0bfeba9b9c6953  intacto=True
+
+RESUMEN
+   CASO 1, verde de control                       VERDE
+   CASO 2, quitar la marca del comentario         VERDE
+   CASO 3, poner la marca en un comentario        VERDE
+   CASO 4, mover la marca a una cadena            VERDE
+   CASO 5, mutacion del valor esperado            VERDE
+   LOS TRES FICHEROS REALES QUEDAN INTACTOS       VERDE
+
+CIFRA casos: 6
+CIFRA en verde: 6
+VEREDICTO: VERDE
+FIN
+EXITCODE: 0

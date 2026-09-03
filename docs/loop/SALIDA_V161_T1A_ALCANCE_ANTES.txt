@@ -1,0 +1,66 @@
+==============================================================================
+VUELTA 159, TAREA 5.b: EL ALCANCE DEL CHECK DE P.16, RECOMPUTADO
+==============================================================================
+
+EXCLUSION DECLARADA: se descartan por nombre los dos buscadores que
+contienen el patron porque tienen que escribirlo para buscarlo:
+   vuelta159_tarea1_registrar_adjudicaciones.py
+   vuelta159_tarea5_alcance_p16.py
+
+A) LA BATERIA, CONTADA DE SU PROPIO FICHERO
+   fuente: scripts/loop/verificar_mutaciones_viejas.py
+   CIFRA mutaciones en la nomina de la bateria: 23
+
+B) LAS TRES LECTURAS DEL PATRON LITERAL
+   A ESTRECHA (dataset/ Y docs/plan/)
+      patron: "--porcelain", "--", "dataset/", "docs/plan/"
+      CIFRA ficheros: 4
+      CIFRA de ellos en la bateria de las 23: 3
+   B MEDIA (pathspec que empieza por dataset/)
+      patron: "--porcelain", "--", "dataset/
+      CIFRA ficheros: 15
+      CIFRA de ellos en la bateria de las 23: 7
+   C ANCHA (cualquier git status --porcelain)
+      patron: "--porcelain"
+      CIFRA ficheros: 17
+      CIFRA de ellos en la bateria de las 23: 7
+
+C) LA NOMINA PRINCIPAL (lectura B), UNA A UNA
+   vuelta142_2c_mutaciones.py                     fuera de la bateria
+   vuelta143_2a_mutaciones.py                     EN LA BATERIA
+   vuelta143_2c_mutacion_positivo.py              EN LA BATERIA
+   vuelta143_3c_girar_arista.py                   fuera de la bateria
+   vuelta144_2b_mutacion_giro.py                  EN LA BATERIA
+   vuelta144_3a_mutaciones.py                     EN LA BATERIA
+   vuelta144_3b_giro_sin_flecha.py                fuera de la bateria
+   vuelta144_3b_mutacion_negativa.py              EN LA BATERIA
+   vuelta146_3c_mutacion_aduana.py                fuera de la bateria
+   vuelta147_3d_mutacion_nomina.py                EN LA BATERIA
+   vuelta147_3e_simular_a26.py                    EN LA BATERIA
+   vuelta160_tarea1_registrar_adjudicaciones.py   fuera de la bateria
+   vuelta160_tarea3_remedio_p16.py                fuera de la bateria
+   vuelta160_tarea3b_caso_positivo.py             fuera de la bateria
+   vuelta89_tarea4_guarda_op_c05.py               fuera de la bateria
+
+   CIFRA ficheros con el patron: 15
+   CIFRA de ellos dentro de la bateria de las 23: 7
+   CIFRA de ellos fuera de la bateria: 8
+
+D) EL COTEJO CONTRA LA CIFRA DEL ACTA 158, ADJUDICACION 6.7
+   CIFRA que el acta declara, ficheros: 11
+   CIFRA que el acta declara, dentro de la bateria: 7
+   CIFRA que este computo da, ficheros: 15
+   CIFRA que este computo da, dentro de la bateria: 7
+
+   LOS SIETE DE LA BATERIA REPRODUCEN AL DIGITO.
+   LA CIFRA DE FICHEROS NO REPRODUCE: sale 15 y el acta dice 11.
+   EL RESIDUO SE PUEDE NOMBRAR, Y ES UNO SOLO: vuelta89_tarea4_guarda_op_c05.py
+   Quitandolo, la cuenta da 14, que es exactamente la del acta.
+
+   PARADA, POR MANDATO LITERAL DEL ENCARGO (TAREA 5.b): si la cuenta
+   no da once, se para y se dice. NO SE TOCA UN SOLO CHECK. El remedio
+   de la 5.a y el caso positivo de la 5.c NO SE EJECUTAN en esta
+   vuelta, porque su alcance esta en disputa y una guarda que se
+   reescribe con el alcance mal contado es peor que la que se deja.
+FIN
+EXITCODE: 1
