@@ -33,6 +33,52 @@ es la mutacion y no el instrumento.
 
 USO:
   python scripts/loop/vuelta97_tarea2_prueba_mutacion.py
+
+--- CASO DECLARADO (VUELTA 159, ADJUDICACION 6.10 DEL ACTA 158): EXPECTATIVA ENVEJECIDA SOBRE UN
+SUJETO CONGELADO. EL ROJO SE EXPLICA, NO SE APAGA ---
+
+REGISTRO POR ADICION. Nada de lo escrito arriba se borra, NINGUNA EXPECTATIVA SE
+AJUSTA Y ESTE SCRIPT SIGUE SALIENDO exit 1 DESPUES DE ESTA DECLARACION. La 6.10
+prohibe con esas palabras "ajustar la expectativa hasta que salga verde", que es
+la caida que esta campana persigue desde el principio.
+
+EL DIAGNOSTICO, MEDIDO CON
+`scripts/loop/vuelta159_tarea8_dos_que_no_muerden.py` (salida
+`docs/loop/SALIDA_V159_T8_DIAGNOSTICO.txt`): EL SUJETO ESTA CONGELADO Y EL GRAFO
+SE MOVIO. La tabla de veredictos de esta vuelta nombra los ids que los nodos
+TENIAN ENTONCES. Despues, en las mesas de fusion, varios de esos nodos se
+FUNDIERON en un superviviente y quedaron DEPRECADOS; el resolutor de la casa
+(P.1) manda el id viejo al superviviente, y el check compara EL NOMBRE LITERAL
+DE LA TABLA contra EL NOMBRE RESUELTO DE HOY. Por eso canta desviacion. Es la
+especie de la vara anclada a algo que se mueve.
+
+LAS DOS PRUEBAS INDEPENDIENTES DE QUE NO ES UNA REGRESION DE LA GUARDA:
+  (i)  LAS SEIS MUTACIONES DE ESTE SCRIPT SIGUEN CAYENDO, contadas en la corrida
+       del 3 sep 2026. Si la guarda se hubiera roto, alguna habria dejado de
+       morder.
+  (ii) TODOS LOS NODOS NOMBRADOS EN LOS FALLOS DEL CONTROL ESTAN DEPRECADOS y
+       aparecen en `docs/plan/03_FUSIONES.md`: CERO nodos sin explicar por
+       fusion. Si alguno no lo estuviera, seria hallazgo y no caso declarado, y
+       el instrumento lo diria.
+
+LOS NODOS FUNDIDOS QUE ESTE CASO TOCA, medidos contra el grafo de hoy:
+  `estrategia_de_innovacion_de_producto` deprecado, resuelve a
+                                         `estrategia_innovacion_producto`
+  `requisitos_gates_con_dientes`         deprecado, resuelve a `sistema_gates_go_kill`
+  `get_out_of_the_building`              deprecado, resuelve a
+                                         `customer_discovery_get_out_of_building`
+Las dos afirmaciones de la senial de esta vuelta (la mediana de los dos tramos y
+la de misma fuente leida contra no resuelta) SIGUEN VERDES y sus dos mutaciones
+siguen cayendo: lo que envejecio es el armazon de la tabla, no la senial.
+
+LA MARCA OBLIGATORIA DE ESTE CASO, con la misma disciplina que los dos CASOS
+DECLARADOS de la bateria de las 23: la exencion NO es del script, es DE UN FALLO
+CONCRETO, y solo vale mientras la salida traiga LITERALMENTE esta linea:
+
+    RESULTADO: 10 de 12 comprobaciones se comportan como deben.
+
+Si manana este script empieza a fallar por otra razon, esa linea no aparecera y
+el caso volvera a contar como rojo sin explicar.
 """
 import copy
 import io

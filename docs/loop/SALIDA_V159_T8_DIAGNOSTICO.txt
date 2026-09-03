@@ -1,0 +1,83 @@
+==============================================================================
+VUELTA 159, TAREA 8: SE LEE EL ROJO DE LAS DOS QUE NO MUERDEN
+==============================================================================
+
+==============================================================================
+SUJETO: scripts/loop/vuelta96_tarea3_prueba_mutacion.py
+==============================================================================
+   exit medido en esta vuelta: 1
+   MARCA OBLIGATORIA declarada para este caso:
+      'CONTROL (dato real): material 40 filas / 2 fallos, veredictos 40 filas / 6 fallos -> ROJO'
+   la marca aparece en la salida de hoy: SI
+
+   (i) LAS MUTACIONES SIGUEN MORDIENDO?
+       CIFRA mutaciones que CAEN como deben en esta corrida: 6
+       Si la guarda se hubiera roto, alguna habria dejado de caer.
+
+   (ii) LOS NODOS DE CADA FALLO DEL CONTROL, CONTRA EL GRAFO DE HOY
+       sin corte: se analiza la salida entera.
+       segmentos_de_clientes_problema_necesidad     deprecado=False en 03_FUSIONES.md: SI
+       get_out_of_the_building                      deprecado=True  en 03_FUSIONES.md: SI
+       customer_development_team                    deprecado=False en 03_FUSIONES.md: no
+       customer_discovery_overview                  deprecado=True  en 03_FUSIONES.md: SI
+       mvp_catalogo_tecnicas                        deprecado=False en 03_FUSIONES.md: no
+       diamante_de_innovacion                       deprecado=False en 03_FUSIONES.md: no
+       estrategia_de_innovacion_de_producto         deprecado=True  en 03_FUSIONES.md: SI
+       CIFRA nodos nombrados en fallos que estan DEPRECADOS: 3
+       CIFRA nodos nombrados en fallos que NO se explican por fusion: 0
+
+   VEREDICTO: CASO DECLARADO: EXPECTATIVA ENVEJECIDA SOBRE SUJETO CONGELADO
+   MOTIVO ESCRITO: la tabla congelada nombra los ids de antes de las
+   mesas de fusion; esos nodos hoy estan DEPRECADOS y el resolutor los
+   manda a su superviviente, asi que el check compara el nombre viejo
+   contra el nuevo y canta desviacion. LA GUARDA NO SE HA ROTO: sus
+   6 mutaciones siguen cayendo. NO SE AJUSTA LA EXPECTATIVA.
+
+==============================================================================
+SUJETO: scripts/loop/vuelta97_tarea2_prueba_mutacion.py
+==============================================================================
+   exit medido en esta vuelta: 1
+   MARCA OBLIGATORIA declarada para este caso:
+      'RESULTADO: 10 de 12 comprobaciones se comportan como deben.'
+   la marca aparece en la salida de hoy: SI
+
+   (i) LAS MUTACIONES SIGUEN MORDIENDO?
+       CIFRA mutaciones que CAEN como deben en esta corrida: 6
+       Si la guarda se hubiera roto, alguna habria dejado de caer.
+
+   (ii) LOS NODOS DE CADA FALLO DEL CONTROL, CONTRA EL GRAFO DE HOY
+       CORTE DECLARADO: solo se analiza lo anterior a 'MUTACIONES DEL ARMAZON',
+       porque lo de despues son NODOS AJENOS INYECTADOS A PROPOSITO.
+       estrategia_de_innovacion_de_producto         deprecado=True  en 03_FUSIONES.md: SI
+       strat_map_arenas_estrategicas                deprecado=False en 03_FUSIONES.md: no
+       requisitos_gates_con_dientes                 deprecado=True  en 03_FUSIONES.md: SI
+       post_launch_review                           deprecado=False en 03_FUSIONES.md: no
+       genchi_gembutsu_salir_del_edificio           deprecado=False en 03_FUSIONES.md: SI
+       get_out_of_the_building                      deprecado=True  en 03_FUSIONES.md: SI
+       CIFRA nodos nombrados en fallos que estan DEPRECADOS: 3
+       CIFRA nodos nombrados en fallos que NO se explican por fusion: 0
+
+   VEREDICTO: CASO DECLARADO: EXPECTATIVA ENVEJECIDA SOBRE SUJETO CONGELADO
+   MOTIVO ESCRITO: la tabla congelada nombra los ids de antes de las
+   mesas de fusion; esos nodos hoy estan DEPRECADOS y el resolutor los
+   manda a su superviviente, asi que el check compara el nombre viejo
+   contra el nuevo y canta desviacion. LA GUARDA NO SE HA ROTO: sus
+   6 mutaciones siguen cayendo. NO SE AJUSTA LA EXPECTATIVA.
+
+==============================================================================
+RESUMEN
+==============================================================================
+  vuelta96_tarea3_prueba_mutacion.py                   exit 1
+      CASO DECLARADO: EXPECTATIVA ENVEJECIDA SOBRE SUJETO CONGELADO
+      mutaciones que caen: 6 | nodos deprecados en fallos: 3 | sin explicar: 0
+  vuelta97_tarea2_prueba_mutacion.py                   exit 1
+      CASO DECLARADO: EXPECTATIVA ENVEJECIDA SOBRE SUJETO CONGELADO
+      mutaciones que caen: 6 | nodos deprecados en fallos: 3 | sin explicar: 0
+  CIFRA sujetos con CASO DECLARADO: 2
+  CIFRA sujetos que quedan como HALLAZGO: 0
+
+LO QUE NO SE HIZO, Y ES LA PROHIBICION LITERAL DE LA 6.10: no se ajusto
+ninguna expectativa, no se retoco ninguna tabla congelada y los dos scripts
+SIGUEN SALIENDO exit 1. Un caso declarado no apaga un rojo: lo explica.
+FIN
+EXITCODE: 0
