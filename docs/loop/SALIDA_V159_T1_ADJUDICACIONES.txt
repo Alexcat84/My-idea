@@ -1,0 +1,101 @@
+==============================================================================
+VUELTA 159, TAREA 1: LAS DOCE ADJUDICACIONES DEL ACTA 158
+==============================================================================
+
+A) EL ALCANCE DE LA 6.7, RECOMPUTADO ANTES DE ESCRIBIR NADA
+   patron literal buscado en el CODIGO: "--porcelain", "--", "dataset/
+   EXCLUSION DECLARADA: se descarta el propio instrumento, vuelta159_tarea1_registrar_adjudicaciones.py, que
+   contiene el patron porque tiene que escribirlo para buscarlo.
+   CIFRA ficheros de scripts/loop/ con el patron: 12
+      scripts/loop/vuelta142_2c_mutaciones.py
+      scripts/loop/vuelta143_2a_mutaciones.py
+      scripts/loop/vuelta143_2c_mutacion_positivo.py
+      scripts/loop/vuelta143_3c_girar_arista.py
+      scripts/loop/vuelta144_2b_mutacion_giro.py
+      scripts/loop/vuelta144_3a_mutaciones.py
+      scripts/loop/vuelta144_3b_giro_sin_flecha.py
+      scripts/loop/vuelta144_3b_mutacion_negativa.py
+      scripts/loop/vuelta146_3c_mutacion_aduana.py
+      scripts/loop/vuelta147_3d_mutacion_nomina.py
+      scripts/loop/vuelta147_3e_simular_a26.py
+      scripts/loop/vuelta89_tarea4_guarda_op_c05.py
+   CIFRA que el acta 158 (6.7) declara: 11
+   DISCREPANCIA DECLARADA: el computo da 12 y el acta dice 11.
+   Se escribe en LOS 12 MEDIDOS. La cifra se publica en el reporte.
+
+B) LOS BLOQUES, UNO A UNO, TODOS POR ADICION
+   6.1   scripts/loop/verificar_apertura_sellada.py                 ANADIDO    22
+   6.2   scripts/loop/verificar_apertura_sellada.py                 ANADIDO    16
+   6.1   scripts/loop/tallar_cabecera_reporte.py                    ANADIDO    22
+   6.2   scripts/loop/tallar_cabecera_reporte.py                    ANADIDO    16
+   6.3   scripts/loop/vuelta152_registro_de_citas_opc05.py          ANADIDO    25
+   6.3   scripts/loop/vuelta157_tarea2_lote1_veredictos.py          ANADIDO    25
+   6.6   scripts/loop/vuelta152_registro_de_citas_opc05.py          ANADIDO    31
+   6.6   scripts/loop/vuelta156_tarea2b_decidir_ld097.py            ANADIDO    31
+   6.6   scripts/loop/vuelta157_tarea2_lote1_veredictos.py          ANADIDO    31
+   6.7   scripts/loop/vuelta142_2c_mutaciones.py                    ANADIDO    36
+   6.7   scripts/loop/vuelta143_2a_mutaciones.py                    ANADIDO    36
+   6.7   scripts/loop/vuelta143_2c_mutacion_positivo.py             ANADIDO    36
+   6.7   scripts/loop/vuelta143_3c_girar_arista.py                  ANADIDO    36
+   6.7   scripts/loop/vuelta144_2b_mutacion_giro.py                 ANADIDO    36
+   6.7   scripts/loop/vuelta144_3a_mutaciones.py                    ANADIDO    36
+   6.7   scripts/loop/vuelta144_3b_giro_sin_flecha.py               ANADIDO    36
+   6.7   scripts/loop/vuelta144_3b_mutacion_negativa.py             ANADIDO    36
+   6.7   scripts/loop/vuelta146_3c_mutacion_aduana.py               ANADIDO    36
+   6.7   scripts/loop/vuelta147_3d_mutacion_nomina.py               ANADIDO    36
+   6.7   scripts/loop/vuelta147_3e_simular_a26.py                   ANADIDO    36
+   6.7   scripts/loop/vuelta89_tarea4_guarda_op_c05.py              ANADIDO    36
+   6.8   scripts/loop/verificar_re_sellado.py                       ANADIDO    26
+   6.9   scripts/loop/vuelta150_3_relectura_expediente.py           ANADIDO    19
+   6.10  scripts/loop/vuelta150_3_relectura_expediente.py           ANADIDO    19
+   6.11  scripts/loop/vuelta157_tarea8_dos_especies_de_d.py         ANADIDO    20
+   6.12  scripts/loop/vuelta157_tarea2_lote1_veredictos.py          ANADIDO    22
+   6.4   registro:LD-OPC05-005                                      ANADIDO    1
+   6.5   registro:LD-OPC05-005                                      ANADIDO    1
+   6.4   registro:LD-OPC05-027                                      ANADIDO    1
+   6.5   registro:LD-OPC05-027                                      ANADIDO    1
+   6.4   registro:LD-OPC05-122                                      ANADIDO    1
+   6.5   registro:LD-OPC05-122                                      ANADIDO    1
+
+CIFRA operaciones de escritura de esta corrida: 32
+CIFRA de ellas ANADIDAS: 32
+CIFRA de ellas YA ESTABAN: 0
+
+C) LA ADITIVIDAD, MEDIDA Y NO PROMETIDA
+   C.1 LOS .py, con git diff --numstat (se exige BORRADOS 0):
+       scripts/loop/tallar_cabecera_reporte.py                    mas 38    menos 0
+       scripts/loop/verificar_apertura_sellada.py                 mas 38    menos 0
+       scripts/loop/verificar_re_sellado.py                       mas 26    menos 0
+       scripts/loop/vuelta142_2c_mutaciones.py                    mas 36    menos 0
+       scripts/loop/vuelta143_2a_mutaciones.py                    mas 36    menos 0
+       scripts/loop/vuelta143_2c_mutacion_positivo.py             mas 36    menos 0
+       scripts/loop/vuelta143_3c_girar_arista.py                  mas 36    menos 0
+       scripts/loop/vuelta144_2b_mutacion_giro.py                 mas 36    menos 0
+       scripts/loop/vuelta144_3a_mutaciones.py                    mas 36    menos 0
+       scripts/loop/vuelta144_3b_giro_sin_flecha.py               mas 36    menos 0
+       scripts/loop/vuelta144_3b_mutacion_negativa.py             mas 36    menos 0
+       scripts/loop/vuelta146_3c_mutacion_aduana.py               mas 36    menos 0
+       scripts/loop/vuelta147_3d_mutacion_nomina.py               mas 36    menos 0
+       scripts/loop/vuelta147_3e_simular_a26.py                   mas 36    menos 0
+       scripts/loop/vuelta150_3_relectura_expediente.py           mas 38    menos 0
+       scripts/loop/vuelta152_registro_de_citas_opc05.py          mas 56    menos 0
+       scripts/loop/vuelta156_tarea2b_decidir_ld097.py            mas 31    menos 0
+       scripts/loop/vuelta157_tarea2_lote1_veredictos.py          mas 78    menos 0
+       scripts/loop/vuelta157_tarea8_dos_especies_de_d.py         mas 20    menos 0
+       scripts/loop/vuelta89_tarea4_guarda_op_c05.py              mas 36    menos 0
+   CIFRA ficheros .py tocados: 20
+   CIFRA borrados en los .py tocados: 0
+       CERO BORRADOS: ninguna linea vieja se toco.
+
+   C.2 EL JSONL, por assert de prefijo sobre las 154 entradas:
+       CIFRA razones cuyo texto viejo YA NO ES PREFIJO: 0
+       PREFIJO INTACTO en las 154.
+   C.3 CIFRA clases movidas por esta tarea: 0
+       NINGUNA. La relectura conjunta va en la TAREA 2, no aqui.
+   C.4 PARES: 154 pares, los mismos antes y despues
+
+   C.5 numstat de docs/plan/:
+       3	3	docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl
+
+FIN
+EXITCODE: 0

@@ -20,6 +20,37 @@ LA CLASE QUE SE ESCRIBE Y POR QUE, en una linea: NI C NI A, SINO D. El detalle
 entero va en el reporte de la vuelta 156 y en la propia razon del registro.
 
 USO:  python scripts/loop/vuelta156_tarea2b_decidir_ld097.py
+
+--- ADJUDICACION 6.6 DEL ACTA 158 (3 sep 2026): EL CAMPO `cita` SE UNIFICA EN
+UNA SOLA FORMA, Y GANA LA QUE NO TAPA ---
+
+CORRECCION DECLARADA POR ADICION, y toca el campo `cita` del registro
+`docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl`. Nada de lo escrito arriba se borra.
+
+EL HECHO, MEDIDO POR EL AUDITOR COMPARANDO EL REGISTRO DE `abb2fe4e` CONTRA HEAD
+(acta 158, seccion 5.1): en la vuelta 157 cambiaron 62 campos `cita`, y
+cambiaron POR SOBREESCRITURA (`'LD-OPC05-001, clase C'` paso a
+`'LD-OPC05-001, clase D'`, sin dejar el texto viejo). Pero las TRES que la
+vuelta 156 reclasifico dicen otra cosa EN EL MISMO FICHERO
+(`'LD-OPC05-002, clase C  [RECLASIFICADA A D EN LA VUELTA 156: ver la razon]'`).
+DOS FORMAS PARA EL MISMO HECHO, EN EL MISMO FICHERO, EN DOS VUELTAS SEGUIDAS. Y
+ademas esas tres hoy leen literalmente "clase C" en una fila cuya clase es D.
+
+LO QUE SE ADJUDICA, POR EXTENSION DE LA 6.8 DEL ACTA 157 (la costumbre de la
+casa, no tapar lo que se corrige) Y DE LA LEY DE UNA SOLA FUENTE: UNA SOLA FORMA
+para las 65 filas corregidas, la que lleva la clase VIGENTE Y el rastro:
+
+    clase D [ANTES C, RECLASIFICADA EN LA VUELTA N: ver la razon]
+
+Con eso las 62 recuperan el rastro que la sobreescritura les quito y las 3 de la
+vuelta 156 dejan de leer "clase C" en una fila que es D. Se hace POR ADICION,
+con correccion declarada, y con el assert de que NINGUNA clase se mueve al
+hacerlo y de que el conteo de pares del registro sale identico antes y despues.
+Se ejecuta en la TAREA 4 de la vuelta 159.
+
+NINGUNA CIFRA PUBLICADA ERA FALSA POR ESTO y el acta lo dice: la razon declara
+la correccion en las 62 y ningun reporte afirmo nada sobre las citas. Lo que se
+corrige es que la del 156 tapa menos y la del 157 tapa mas.
 """
 import glob
 import hashlib

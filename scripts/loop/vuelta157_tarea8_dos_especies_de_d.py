@@ -48,6 +48,26 @@ encargo:
   DISCREPANCIA en vez de retocar las marcas hasta que salga.
 
 USO:  python scripts/loop/vuelta157_tarea8_dos_especies_de_d.py
+
+--- ADJUDICACION 6.11 DEL ACTA 158 (3 sep 2026): LA CUENTA DE LAS DOS ESPECIES
+DE D SE CIERRA AQUI, Y SIN LETRA NUEVA. ESTE INSTRUMENTO NO SE VUELVE A CORRER
+COMO ENCARGO ---
+
+REGISTRO POR ADICION. Nada de lo escrito arriba se borra.
+
+QUE MIDIO ESTE INSTRUMENTO Y COMO LO JUZGA EL ACTA: su vara lexica cazo UNO de
+los CINCO puestos que el acta nombro, y dejo el 71,9 por ciento del registro y
+el 96,6 por ciento del archivo en SIN MARCA. EL EJECUTOR PUBLICO ESO EN VEZ DE
+RETOCAR LAS MARCAS HASTA QUE SALIERA, y el acta lo dice con todas sus letras:
+ES EXACTAMENTE LO QUE SE LE PIDIO.
+
+LO ADJUDICADO: LA CUENTA CUMPLIO SU ENCARGO Y NO SE REPITE. Lo que dejo medido
+es util y se escribe con su limite: LA ESPECIE EXISTE EN LOS DOS REGISTROS, ES
+UNA COTA INFERIOR, Y UNA VARA LEXICA NO LA PUEDE MEDIR; SOLO UNA LECTURA.
+
+LO QUE QUEDA PROHIBIDO Y POR QUE: NO SE ABRE LETRA NUEVA (seria doctrina nueva y
+seria parada) y NO SE ENCARGA UNA SEGUNDA PASADA LEXICA, que solo repetiria el
+mismo residuo. HILO CERRADO.
 """
 import io
 import json

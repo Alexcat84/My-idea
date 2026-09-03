@@ -42,6 +42,42 @@ LAS TRES COMPROBACIONES:
 EL SUJETO SE ELIGE POR COMPUTO: la primera ficha que dispare la excepcion con
 pares nombrados, y el par es el primero en orden de los que esa misma ficha
 exceptua, que es justo el que el giro NO debe poder borrar.
+
+--- ADJUDICACION 6.7 DEL ACTA 158 (3 sep 2026): EL CHECK DE P.16 SE CINE AL
+CONTENIDO Y A LA VENTANA DEL PROPIO SCRIPT ---
+
+REGISTRO POR ADICION. Nada de lo escrito arriba se borra, y el check que este
+fichero lleva NO se modifica al escribir esto: esto es la adjudicacion, no el
+remedio.
+
+LAS DOS ANCLAS QUE SE MUEVEN EN LA MISMA LINEA, y el hallazgo es del ejecutor de
+la vuelta 157, que lo trajo como pregunta en vez de esquivarlo callando. El
+docstring dice que se comprueba que `dataset/` y `docs/plan/` NO SE TOCAN NI UNA
+VEZ, o sea CONTENIDO. El instrumento es `git status --porcelain`, que ademas de
+contenido ve:
+  (i)  ESTADO DE FIN DE LINEA. Este repo tiene `core.autocrlf`, asi que un
+       fichero reescrito por el ciclo queda marcado como modificado aunque su
+       sha256 NORMALIZADO sea identico al de HEAD. Paso de verdad en la vuelta
+       157 y tumbo tres mutaciones de la bateria en ROJO con el contenido
+       intacto.
+  (ii) SUCIEDAD ANTERIOR AL ARRANQUE DEL SCRIPT, que no es suya. El veredicto de
+       este check depende de si alguien committeo tocando `dataset/` antes, y no
+       de si las mutaciones de este fichero tocaron el dataset.
+
+EL REMEDIO ADJUDICADO: huella de CONTENIDO tomada ANTES y DESPUES de las
+mutaciones DENTRO del propio script, y comparada consigo misma. Con su caso
+positivo por mutacion: si una mutacion escribe de verdad en `dataset/` o en
+`docs/plan/`, el check SIGUE SALIENDO ROJO.
+
+EL ALCANCE, Y AQUI HAY UNA DISCREPANCIA DE CIFRA QUE SE DECLARA EN VEZ DE
+COPIARSE: el acta 158 mide ONCE ficheros con el patron literal, siete de ellos
+dentro de la bateria de las 23. El recomputo de la vuelta 159
+(`scripts/loop/vuelta159_tarea1_registrar_adjudicaciones.py`, funcion
+`ficheros_con_patron_p16`, salida `docs/loop/SALIDA_V159_T1_ADJUDICACIONES.txt`)
+da DOCE ficheros, y los SIETE de la bateria reproducen exactamente. El duodecimo
+es `scripts/loop/vuelta89_tarea4_guarda_op_c05.py`: excluirlo devuelve los once
+del acta al digito. La cifra de la vuelta 159 es la del computo, y por eso el
+remedio de la 6.7 queda EN PARADA, declarada en el reporte de la vuelta 159.
 """
 import copy
 import io

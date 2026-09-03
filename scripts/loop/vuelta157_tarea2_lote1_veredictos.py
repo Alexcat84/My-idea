@@ -46,6 +46,84 @@ la C vieja queda A LA VISTA en vez de taparse.
 ES IDEMPOTENTE por marca literal.
 
 USO:  python scripts/loop/vuelta157_tarea2_lote1_veredictos.py
+
+--- ADJUDICACION 6.3 DEL ACTA 158 (3 sep 2026): LA PREGUNTA BINARIA DE LA 6.4 ES
+UN EXISTENCIAL. SE HACE SOBRE TODOS LOS PARES DE LINEAS CANDIDATOS, NO SOBRE EL
+PRIMERO QUE SE ENCUENTRE ---
+
+CORRECCION DECLARADA POR ADICION, y NO ES DOCTRINA NUEVA: es la letra de la 6.4
+del acta 157 leida entera. La 6.4 pregunta si SE PUEDEN nombrar dos lineas
+distintas, y eso es un existencial: basta con que EXISTA UN PAR que cumpla.
+
+LA CONSECUENCIA, QUE ES LO QUE AL LOTE 1 LE FALTO: hallar un par de lineas que
+colapsa en la misma linea prueba que ESE PAR no es la figura, NO que no la haya.
+El colapso del 9.22 descarta un par, no un nodo.
+
+LA REGLA DE ESCRITURA QUE SE ADJUDICA, Y ES OBLIGATORIA DESDE LA PRIMERA LECTURA
+DEL LOTE 2: cuando el colapso del 9.22 sea el motivo del descarte, la razon
+tiene que decir TAMBIEN que NINGUN otro par de lineas sostiene la figura, y
+NOMBRAR el par mas fuerte que se descarto.
+
+EL CASO QUE LA ORIGINA, PARA QUE NO SE LEA COMO UNA REGLA SIN CUERPO
+(`LD-OPC05-005`, acta 158 seccion 3.1): la razon del lote 1 descarto la figura
+porque el paso 1 de `aim_of_leadership` y el paso 13 de
+`causas_comunes_vs_especiales` son la misma linea, y para ESE par tenia razon.
+Pero habia otro par disponible: el paso 2 de aim (investigar las causas de raiz
+DEL SISTEMA) contra el paso 13 de causas, cada uno expandido por procedimientos
+del otro nodo. Un existencial no se refuta con un caso.
+
+--- ADJUDICACION 6.6 DEL ACTA 158 (3 sep 2026): EL CAMPO `cita` SE UNIFICA EN
+UNA SOLA FORMA, Y GANA LA QUE NO TAPA ---
+
+CORRECCION DECLARADA POR ADICION, y toca el campo `cita` del registro
+`docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl`. Nada de lo escrito arriba se borra.
+
+EL HECHO, MEDIDO POR EL AUDITOR COMPARANDO EL REGISTRO DE `abb2fe4e` CONTRA HEAD
+(acta 158, seccion 5.1): en la vuelta 157 cambiaron 62 campos `cita`, y
+cambiaron POR SOBREESCRITURA (`'LD-OPC05-001, clase C'` paso a
+`'LD-OPC05-001, clase D'`, sin dejar el texto viejo). Pero las TRES que la
+vuelta 156 reclasifico dicen otra cosa EN EL MISMO FICHERO
+(`'LD-OPC05-002, clase C  [RECLASIFICADA A D EN LA VUELTA 156: ver la razon]'`).
+DOS FORMAS PARA EL MISMO HECHO, EN EL MISMO FICHERO, EN DOS VUELTAS SEGUIDAS. Y
+ademas esas tres hoy leen literalmente "clase C" en una fila cuya clase es D.
+
+LO QUE SE ADJUDICA, POR EXTENSION DE LA 6.8 DEL ACTA 157 (la costumbre de la
+casa, no tapar lo que se corrige) Y DE LA LEY DE UNA SOLA FUENTE: UNA SOLA FORMA
+para las 65 filas corregidas, la que lleva la clase VIGENTE Y el rastro:
+
+    clase D [ANTES C, RECLASIFICADA EN LA VUELTA N: ver la razon]
+
+Con eso las 62 recuperan el rastro que la sobreescritura les quito y las 3 de la
+vuelta 156 dejan de leer "clase C" en una fila que es D. Se hace POR ADICION,
+con correccion declarada, y con el assert de que NINGUNA clase se mueve al
+hacerlo y de que el conteo de pares del registro sale identico antes y despues.
+Se ejecuta en la TAREA 4 de la vuelta 159.
+
+NINGUNA CIFRA PUBLICADA ERA FALSA POR ESTO y el acta lo dice: la razon declara
+la correccion en las 62 y ningun reporte afirmo nada sobre las citas. Lo que se
+corrige es que la del 156 tapa menos y la del 157 tapa mas.
+
+--- ADJUDICACION 6.12 DEL ACTA 158 (3 sep 2026): EL LOTE 2 VA, CON LA 6.3 PUESTA
+DESDE LA PRIMERA LECTURA ---
+
+REGISTRO POR ADICION. Nada de lo escrito arriba se borra.
+
+EL LOTE 2 SON 53, de `LD-OPC05-068` a `LD-OPC05-121`, y NINGUNA trae puntero de
+paso: el saco pequeno se agoto entero en el lote 1. LA NOMINA NO SE TECLEA: la
+recomputa su instrumento, como se hizo con la del lote 1, y si no da 53 se para
+y se dice ANTES de leer nada.
+
+EL CRITERIO ES EL MISMO DE LA 6.4 DEL ACTA 157, con la unica correccion de la
+6.3 del acta 158, que es lo que el lote 1 enseno: la pregunta es un existencial,
+asi que cuando el colapso del 9.22 sea el motivo del descarte, la razon tiene
+que decir TAMBIEN que ningun otro par de lineas sostiene la figura, y NOMBRAR el
+par mas fuerte que se descarto.
+
+LAS GUARDAS SON LAS MISMAS Y NO SE AFLOJAN: correccion declarada con el texto
+viejo entero como prefijo, `n` no se mueve y sigue en 3.388, assert de frontera
+con sha256 de `dataset/` y conteo de censo y aristas antes y despues (EL
+REGISTRO CAMBIA, EL GRAFO NO), Gate 0 al terminar, y LA QUE SALGA A NO SE
+VOLTEA.
 """
 import hashlib
 import io

@@ -63,6 +63,32 @@ salida `docs/loop/SALIDA_V157_T6B_MUTACION_RE_SELLADO.txt`.
 USO:
   python scripts/loop/verificar_re_sellado.py
   python scripts/loop/verificar_re_sellado.py --reporte docs/loop/REPORTE.md
+
+--- ADJUDICACION 6.8 DEL ACTA 158 (3 sep 2026): ESTA GUARDA NO PUEDE ACUSAR A SU
+PROPIA SALIDA ---
+
+CORRECCION DECLARADA POR ADICION. Nada de lo escrito arriba se borra.
+
+EL HECHO, MEDIDO POR EL AUDITOR CORRIENDO ESTA GUARDA (acta 158, seccion 5.2):
+sobre el reporte en HEAD sale ROJO exit 1 acusando
+`SALIDA_V157_T9_CIFRAS_REPORTE.txt` y `SALIDA_V157_T9_RE_SELLADO.txt`, y lo
+verifico con `git diff --numstat b166ab47 HEAD` (2 y 2 sobre el primero, 24 y 22
+sobre el segundo).
+
+Y EL MOTIVO ES DE CONSTRUCCION, NO DE DICTADO: esta guarda compara cada salida
+citada contra su commit de tarea, y EL COMMIT QUE PUBLICA EL REPORTE RE ESCRIBE
+NECESARIAMENTE la salida de esta misma guarda y la del verificador de cifras,
+porque las dos se re corren sobre el reporte final. NINGUN REPORTE PUEDE DEJARLA
+VERDE EN HEAD. Exigir al ejecutor una afirmacion que expira al commitearla seria
+exigir lo imposible, y el acta lo dice con esas palabras: NO ES CAIDA SUYA.
+
+EL REMEDIO ADJUDICADO: esta guarda EXIME de la comparacion los ficheros que ella
+misma y el verificador de cifras escriben sobre el reporte final (o compara
+contra el commit del reporte en vez de contra HEAD), Y PUBLICA ESA EXENCION COMO
+LINEA COMPUTADA CON LOS NOMBRES EXENTOS. Una exencion que no se imprime es un
+agujero; una que se imprime es una vara con su limite dicho. Con su caso
+positivo por mutacion: un fichero de tarea NORMAL re sellado y no declarado
+TIENE QUE SEGUIR SALIENDO ROJO.
 """
 import argparse
 import io

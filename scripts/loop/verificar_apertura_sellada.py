@@ -218,6 +218,44 @@ que el propio ejecutor ya se aplico a si mismo):
   (c) LA GUARDA LOS SIGUE NOMBRANDO APARTE, nunca en silencio.
   (d) EL ROJO POR UN COMMIT DEL PROPIO EJECUTOR DENTRO DEL CORREDOR SE QUEDA
       INTACTO. Esa mitad no se toca.
+
+--- ADJUDICACION 6.1 DEL ACTA 158 (3 sep 2026): LA VUELTA QUE ABRE UN ACTA N SE
+NUMERA N MAS 1, Y ESA ARITMETICA ES LA DE ESTA GUARDA ---
+
+REGISTRO POR ADICION. Nada de lo escrito arriba se borra.
+
+EL INVARIANTE, QUE ESTA GUARDA YA LLEVABA ESCRITO Y QUE AHORA QUEDA DICHO CON SU
+NOMBRE: la apertura de la vuelta N es el commit del acta de la vuelta N MENOS 1.
+Dicho al reves, que es como se lee desde fuera: EL ACTA N ABRE LA VUELTA N MAS 1.
+
+QUE PASO Y POR QUE NO FUE CAIDA DE NADIE (acta 158, seccion 4, medido con
+`git log` sobre la rama): el invariante se cumplio sin excepcion en todo el
+tramo (acta 149 abre la 150, acta 151 la 152, acta 153 la 154, acta 155 la 156).
+El acta 157 abria la vuelta 158, pero el encargo de aquella vuelta NUNCA dijo
+que numero de vuelta tocaba, solo de que acta venia; el ejecutor numero la suya
+157 igualando su vuelta al numero del acta, y esta guarda y
+`tallar_cabecera_reporte.py` se quedaron las dos ciegas buscando un
+"ACTA DE LA VUELTA 156" que no existe.
+
+EL REMEDIO NO ES DE CODIGO Y ESTA GUARDA NO SE TOCA: desde el acta 158 EL
+ENCARGO LLEVA EL NUMERO DE VUELTA EN SU CABECERA FIJA, junto al rotulo de hashes
+admitidos. La aritmetica de esta guarda era la correcta y sigue igual.
+
+--- ADJUDICACION 6.2 DEL ACTA 158 (3 sep 2026): EL SELLO DE APERTURA TARDIO ES
+CAIDA DE PROCEDIMIENTO, NO DE CIFRA, Y SU REMEDIO YA ESTABA CONSTRUIDO: ES ESTA
+GUARDA, DESBLOQUEADA ---
+
+REGISTRO POR ADICION. Nada de lo escrito arriba se borra.
+
+EL HECHO. En la vuelta 157 el valor de la apertura no fue falso (es re derivable
+de git, y el auditor lo re derivo: `git rev-parse 23004b4d^` da `abb2fe4e`),
+pero `SALIDA_V157_HEAD_APERTURA.txt` no se sello hasta el cierre. La regla que
+se incumplio ya existe, y su guarda es esta.
+
+LO QUE ESTE CASO DEJA ESCRITO, Y VALE PARA CUALQUIER GUARDA DE LA CASA: EN LA
+MISMA VUELTA EN QUE ESTA GUARDA QUEDO CIEGA PASO EXACTAMENTE EL FALLO QUE
+VIGILA. Una guarda bloqueada no es un evento neutro. No hay que construir nada:
+desbloqueada, muerde.
 """
 import argparse
 import glob

@@ -391,6 +391,44 @@ def p3b_caso_positivo(F, corte):
     # OP-S-11) ES UN PROXY SIN RESPALDO EFECTIVO. Sostiene que el artefacto de
     # la prueba EXISTE al corte, y NADIE LA VUELVE A CORRER. Un proxy con su
     # agujero contado es aceptable; un respaldo que no respalda, no.
+    # --- ADJUDICACION 6.9 DEL ACTA 158 (3 sep 2026): LAS DOS SALIDAS SIN
+    # PRODUCTOR SE BUSCAN EN LA HISTORIA DE GIT Y DESPUES SE DECLARAN, NO SE
+    # RETIRAN A CIEGAS ---
+    #
+    # REGISTRO POR ADICION. Nada de lo de arriba se borra ni se suaviza.
+    #
+    # EL HECHO. La vuelta 157 barrio 998 `.py` POR SU TEXTO y no hallo productor
+    # de `SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt` ni de
+    # `SALIDA_V136_3D_MUTACION.txt`, las dos citadas por fichas cuya P3b se
+    # sostiene en ellas. El acta concede que el barrido fue correcto y senala
+    # que le faltaba un angulo barato y decisivo: LA HISTORIA DE GIT, porque un
+    # productor pudo MORIR o CAMBIAR DE NOMBRE y un barrido del arbol de hoy no
+    # lo ve.
+    #
+    # LO ADJUDICADO. Se busca con `git log --all -S` sobre el texto de cada
+    # salida. Si aparece, se nombra el productor y la ficha lo cita. Si no
+    # aparece, la cita queda declarada ARTEFACTO HUERFANO junto a la funcion,
+    # con esa letra, igual que ya se hizo con el proxy sin respaldo efectivo.
+    # LA CITA NO SE BORRA: SE MARCA. Se ejecuta en la TAREA 7 de la vuelta 159.
+    # --- ADJUDICACION 6.10 DEL ACTA 158 (3 sep 2026): LAS DOS PRUEBAS DE
+    # MUTACION QUE NO MUERDEN. SE LEE EL ROJO ANTES DE TOCAR NADA ---
+    #
+    # REGISTRO POR ADICION. Nada de lo de arriba se borra ni se suaviza.
+    #
+    # EL HECHO, CONFIRMADO POR EL AUDITOR CORRIENDOLAS EL:
+    # `vuelta96_tarea3_prueba_mutacion.py` sale exit 1 y
+    # `vuelta97_tarea2_prueba_mutacion.py` sale exit 1. Las dos sostienen la P3b
+    # de `OP-E-03`, o sea que su rojo toca justo a esta funcion.
+    #
+    # LO ADJUDICADO, POR EL PRECEDENTE DE LOS CASOS DECLARADOS DE LA BATERIA: se
+    # lee POR QUE cae cada una ANTES de tocar nada. Si el rojo delata una
+    # REGRESION REAL de la guarda que nombra, ES HALLAZGO y se trae. Si es una
+    # EXPECTATIVA ENVEJECIDA sobre un sujeto congelado, se declara CASO
+    # DECLARADO con su motivo escrito y su marca obligatoria.
+    #
+    # LO QUE NO SE HACE, Y ES LA CAIDA QUE ESTA CAMPANA PERSIGUE DESDE EL
+    # PRINCIPIO: AJUSTAR LA EXPECTATIVA HASTA QUE SALGA VERDE. Se ejecuta en la
+    # TAREA 8 de la vuelta 159.
     r = subprocess.run(["git", "ls-tree", "-r", "--name-only", corte, "docs/loop/"],
                        capture_output=True, cwd=RAIZ)
     en_el_corte = {x.strip().split("/")[-1] for x in r.stdout.decode("utf-8", "replace").splitlines()
