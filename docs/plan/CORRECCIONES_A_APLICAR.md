@@ -2343,3 +2343,47 @@ sobre vivos) NO depende de esa palabra y queda intacta.**
 fichas siguen teniendo UN solo esquema de 18 claves**, comprobado despues de
 escribir. Y no mueve por si sola el `estado`: el `estado` se mueve **detras** de
 esta correccion, que es el orden que manda la adjudicacion 3.14 del acta 149.
+
+
+---
+
+## CORRECCION 31. **EL PASE DE `estado` DE LAS ONCE, EN UN SOLO ACTO, CON EL DISPARADOR MEDIDO Y LA CONVENCION DECLARADA ANTES DE CONTAR**
+
+**Fecha: 2026-09-02. Vuelta 152, TAREA 3. Reservada desde el acta 139, 3.6.**
+
+**LA RESERVA, CITADA LITERAL Y NO PARAFRASEADA** (acta 139, adjudicacion 3.6):
+*"Cuando las cinco remitidas queden con destino, el pase de estado de las once
+(las seis fusiones y las cinco remitidas) va en UNA sola adjudicacion, con el
+conteo antes y despues y la guarda de cifras del plan re-corrida, como en las
+vueltas 131 y 136."*
+
+**LAS ONCE, NOMBRADAS.**
+
+  - **seis fusiones:** `OP-M-01-FUSION`, `OP-M-02-ACCLIMATE`, `OP-M-03-III`, `OP-M-05-APERTURA`, `OP-M-05-EDIFICIO`, `OP-M-05-INDICE`
+  - **cinco remitidas:** `OP-E-04`, `OP-E-05`, `OP-M-01-ESLABONES`, `OP-M-01-SEXTO`, `OP-M-03-ENLACES`
+
+**EL DISPARADOR HA DISPARADO, Y SE MIDE EN VEZ DE AFIRMARSE.** Las once salen
+**CUMPLIDO** en la tabla de `scripts/loop/tallar_estado_de_fase.py`, que es la
+misma vara P1 con la que el expediente se relee. La salida entera, con las once
+filas una a una, esta en `docs/loop/SALIDA_V152_T3_PASE_DE_ESTADO.txt`.
+
+**LA CONVENCION SE DECLARA ANTES DE CONTAR, Y NO DESPUES.** El *"30 congeladas
+en silencio"* **no es un cardinal duro**: es una convencion que depende de con
+que lista de marcas se pregunta si una ficha habla de su propio `estado`. Medido
+hoy con **cuatro listas distintas sobre las mismas 71 fichas y el mismo arbol**,
+la respuesta va **de 26 a 52**. Por eso esta correccion declara la vara ANTES:
+se usa **la lista A**, la que ya vive en
+`scripts/loop/vuelta150_3_relectura_expediente.py:declara_su_estado`
+(`ESTADO`, `DIFERIDA`, `CONGELAD`, `SIGUE EN LISTA`, `NO SE MUEVE`), porque es la
+que produjo la cifra publicada y cambiarla en la misma vuelta en que se cuenta
+seria mover la vara y el sujeto a la vez. Con esa vara, ANTES del pase habia
+**32** fichas en `LISTA` que no hablan de su estado.
+
+**LO QUE ESTA CORRECCION NO HACE.** No borra ni reescribe una sola linea de las
+once fichas: el `estado` se mueve y el motivo se **anade** al campo `nota`. No
+toca el esquema, y se comprueba con un `assert` despues de escribir: las **71
+fichas siguen teniendo UN solo esquema de 18 claves**. Y **no mueve el `estado`
+de las cinco mesas** (`OP-M-01` a `OP-M-05`), que hoy tambien miden CUMPLIDO:
+la reserva del acta 139 nombra **once** y solo once, y ampliarla por mi cuenta
+seria doctrina nueva disfrazada de cita. Queda dicho aqui, medido, para que el
+auditor decida.

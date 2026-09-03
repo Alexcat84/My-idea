@@ -1,0 +1,109 @@
+================================================================================================
+EL ABANICO DE LA CONVENCION, MEDIDO ANTES DE ELEGIR (aviso del encargo)
+================================================================================================
+Pregunta: cuantas fichas en LISTA NO hablan de su propio estado, o sea
+cuantas estan CONGELADAS EN SILENCIO. La respuesta depende de la lista de marcas:
+
+  lista A (la del instrumento vigente, vuelta150_3:declara_su_estado)            -> 32
+  lista B (solo la palabra ESTADO)                                               -> 33
+  lista C (solo las dos que nombran el congelamiento)                            -> 52
+  lista D (ancha: se suma todo lo que la casa ha usado para decir que una ficha no corre) -> 26
+
+ABANICO MEDIDO HOY: de 26 a 52 sobre las mismas 71 fichas y el mismo arbol.
+POR ESO SE DECLARA LA VARA ANTES DE CONTAR: SE USA LA LISTA A, la que ya vive
+en vuelta150_3_relectura_expediente.py y la que produjo la cifra publicada.
+
+================================================================================================
+LA PUERTA DEL ACTA 139, 3.6: LAS CINCO REMITIDAS TIENEN QUE TENER DESTINO
+================================================================================================
+  [OK] fusion   OP-M-01-FUSION       destino medido: CUMPLIDO
+  [OK] fusion   OP-M-02-ACCLIMATE    destino medido: CUMPLIDO
+  [OK] fusion   OP-M-03-III          destino medido: CUMPLIDO
+  [OK] fusion   OP-M-05-APERTURA     destino medido: CUMPLIDO
+  [OK] fusion   OP-M-05-EDIFICIO     destino medido: CUMPLIDO
+  [OK] fusion   OP-M-05-INDICE       destino medido: CUMPLIDO
+  [OK] remitida OP-E-04              destino medido: CUMPLIDO
+  [OK] remitida OP-E-05              destino medido: CUMPLIDO
+  [OK] remitida OP-M-01-ESLABONES    destino medido: CUMPLIDO
+  [OK] remitida OP-M-01-SEXTO        destino medido: CUMPLIDO
+  [OK] remitida OP-M-03-ENLACES      destino medido: CUMPLIDO
+
+PUERTA: 11 de 11 con destino CUMPLIDO.
+LA PUERTA SE ABRE: el disparador que el acta 139 dejo escrito ha disparado.
+
+================================================================================================
+CONTEO ANTES
+================================================================================================
+CENSO ANTES: 71 fichas | HECHA 11 LISTA 60 | LISTA que NO hablan de su estado (lista A): 32
+  OP-M-01-FUSION       estado ANTES: LISTA
+  OP-M-02-ACCLIMATE    estado ANTES: LISTA
+  OP-M-03-III          estado ANTES: LISTA
+  OP-M-05-APERTURA     estado ANTES: LISTA
+  OP-M-05-EDIFICIO     estado ANTES: LISTA
+  OP-M-05-INDICE       estado ANTES: LISTA
+  OP-E-04              estado ANTES: LISTA
+  OP-E-05              estado ANTES: LISTA
+  OP-M-01-ESLABONES    estado ANTES: LISTA
+  OP-M-01-SEXTO        estado ANTES: LISTA
+  OP-M-03-ENLACES      estado ANTES: LISTA
+  de las once, ya estaban en HECHA: 0
+
+================================================================================================
+EL ACTO: UNO SOLO, LAS ONCE A LA VEZ
+================================================================================================
+  [OK] CORRECCION 31 anadida a docs/plan/CORRECCIONES_A_APLICAR.md POR ADICION PURA
+       (el fichero viejo es prefijo EXACTO del nuevo, comprobado con un assert)
+  [OK] 11 ficha(s) movidas de LISTA a HECHA: OP-M-02-ACCLIMATE, OP-M-03-III, OP-M-03-ENLACES, OP-M-01-FUSION, OP-E-04, OP-E-05, OP-M-01-ESLABONES, OP-M-05-INDICE, OP-M-05-EDIFICIO, OP-M-05-APERTURA, OP-M-01-SEXTO
+  [OK] esquema intacto: 71 fichas, UN solo esquema de 18 claves
+
+================================================================================================
+CONTEO DESPUES
+================================================================================================
+CENSO DESPUES: 71 fichas | HECHA 22 LISTA 49 | LISTA que NO hablan de su estado (lista A): 22
+  OP-M-01-FUSION       estado DESPUES: HECHA
+  OP-M-02-ACCLIMATE    estado DESPUES: HECHA
+  OP-M-03-III          estado DESPUES: HECHA
+  OP-M-05-APERTURA     estado DESPUES: HECHA
+  OP-M-05-EDIFICIO     estado DESPUES: HECHA
+  OP-M-05-INDICE       estado DESPUES: HECHA
+  OP-E-04              estado DESPUES: HECHA
+  OP-E-05              estado DESPUES: HECHA
+  OP-M-01-ESLABONES    estado DESPUES: HECHA
+  OP-M-01-SEXTO        estado DESPUES: HECHA
+  OP-M-03-ENLACES      estado DESPUES: HECHA
+
+| cifra | antes | despues |
+|---|---|---|
+| fichas en HECHA | 11 | 22 |
+| fichas en LISTA | 60 | 49 |
+| congeladas EN SILENCIO (lista A declarada) | 32 | 22 |
+
+LAS QUE SIGUEN EN SILENCIO DESPUES DEL PASE (22), nombradas y no resumidas:
+  OP-A-01
+  OP-A-02
+  OP-C-01
+  OP-C-02
+  OP-C-03
+  OP-F-01
+  OP-L-01
+  OP-L-02
+  OP-L-03
+  OP-M-01
+  OP-M-02
+  OP-M-02-ACCOMPLISH
+  OP-M-02-ACTIVATE
+  OP-M-02-ADMIT
+  OP-M-02-ASSESS
+  OP-M-02-MEDIOS
+  OP-M-02-PROG
+  OP-M-03
+  OP-M-03-I
+  OP-M-03-II
+  OP-M-05
+  OP-V-01
+
+================================================================================================
+LA GUARDA DE CIFRAS DEL PLAN, RE-CORRIDA (lo pide el acta 139, 3.6)
+================================================================================================
+VERDE EXIT 0: 0 pares (base bf514465). Filas cambiadas examinadas (12): OP-C-05, OP-M-02-ACCLIMATE, OP-M-03-III, OP-M-03-ENLACES, OP-M-01-FUSION, OP-E-04, OP-E-05, OP-M-01-ESLABONES, OP-M-05-INDICE, OP-M-05-EDIFICIO, OP-M-05-APERTURA, OP-M-01-SEXTO
+EXITCODE: 0
