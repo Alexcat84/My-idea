@@ -133,6 +133,16 @@ FASE III, EJECUCION: SOLO tras cerrar la fase II con Gate 0 verde. Se ejecuta en
   - **Caida de CLASE o de CIFRA PUBLICADA** (un veredicto, el marcador, o una
     cifra que vive en `docs/plan/` o en el banco): cuenta para el credito y
     para la parada. **Dos tandas seguidas: PARADA.**
+    SEDE NUEVA (decision del fundador, 2 sep 2026, PREGUNTA 2 de
+    `paradas/2026-09-02-opc05-bidireccionales-DECISION.md`): LA ESPECIE GANA
+    UNA CUARTA SEDE, **LOS COMENTARIOS Y DOCSTRINGS DE LAS GUARDAS EN
+    `scripts/`**. Una cifra falsa escrita ahi cuenta como CIFRA PUBLICADA
+    igual que una de `docs/plan/` o del banco, y por el mismo motivo: una
+    cifra dentro del codigo de una guarda dura mas que una del reporte y la
+    lee todo el que venga detras. **SIN RETROACTIVIDAD:** rige desde el 2 sep
+    2026, asi que el "307 nodos vivos" del comentario de
+    `scripts/run_phase1.py` (que son 307 DESTINOS sobre 255 nodos, medido en
+    el acta 151) SE CORRIGE POR DECLARACION Y NO ACUMULA.
   - ~~**Caida de REPORTE** (una afirmacion equivocada que vive solo en
     `REPORTE.md` y no mueve ningun dato): se registra con nombre en el acta
     y dispara la relectura al doble del tramo, pero **NO** acumula para la
