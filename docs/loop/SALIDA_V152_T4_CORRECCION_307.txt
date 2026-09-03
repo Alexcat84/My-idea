@@ -1,0 +1,17 @@
+MEDICION PROPIA DE ESTA VUELTA, sobre dataset/metadata/master_graph.json (WORK):
+  NODOS VIVOS con al menos un destino en nodos_previos Y en nodos_siguientes
+  a la vez, tras resolver: 255
+  DESTINOS (pares nodo-destino) en esa situacion:                      307
+
+LA CIFRA VIEJA DECIA '307 nodos vivos'. EL NUMERO ES CORRECTO; LA UNIDAD NO:
+307 es el cardinal de DESTINOS, y los NODOS son 255.
+
+SEDE 1, el comentario de la guarda en scripts/run_phase1.py:
+  [OK] scripts/run_phase1.py, comentario del CASO DE BORDE
+SEDE 2, docs/loop/SALIDA_V150_2C_SIETE_VERIFICACIONES.txt:
+  [OK] SALIDA_V150_2C_SIETE_VERIFICACIONES.txt: ADICION PURA (el viejo es prefijo EXACTO del nuevo, 6519 -> 7997 caracteres)
+REGISTRO, docs/plan/CORRECCIONES_A_APLICAR.md:
+  [OK] CORRECCIONES_A_APLICAR.md, CORRECCION 32: ADICION PURA (el viejo es prefijo EXACTO del nuevo, 135222 -> 137344 caracteres)
+
+LAS TRES SEDES ESCRITAS. Comprobacion de que la guarda sigue compilando:
+  [OK] compila: scripts/run_phase1.py

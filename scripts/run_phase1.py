@@ -1088,6 +1088,23 @@ def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
     # se vacia en cada `campo` y nunca se cruzan las dos listas: hoy hay 307
     # nodos vivos con un destino en las dos listas y ninguno es un fallo.
     #
+    # CORRECCION DECLARADA (2026-09-02, vuelta 152, TAREA 4; hallazgo del acta
+    # 151, caida 4.4. LA FRASE DE ARRIBA NO SE BORRA: esta se anade debajo).
+    # LA UNIDAD DE ESA CIFRA ESTABA MAL. El 307 es correcto, pero NO cuenta
+    # nodos: cuenta DESTINOS. Re medido en la vuelta 152 con instrumento propio
+    # (scripts/loop/_v152_tarea4_correccion_307.py, salida en
+    # docs/loop/SALIDA_V152_T4_CORRECCION_307.txt): son 307 DESTINOS repartidos
+    # sobre 255 NODOS VIVOS. Un nodo puede traer mas de un destino en las dos
+    # listas a la vez, y por eso los dos cardinales no coinciden.
+    #
+    # Y VA CON SU REGLA AL LADO, porque esta cifra vive DENTRO del codigo de una
+    # guarda de Gate 0 y hasta hoy eso no tenia casillero: por la DECISION DEL
+    # FUNDADOR del 2 sep 2026 (PREGUNTA 2, en
+    # docs/loop/paradas/2026-09-02-opc05-bidireccionales-DECISION.md), una cifra
+    # falsa en el codigo o el docstring de una guarda de scripts/ CUENTA COMO
+    # CIFRA PUBLICADA desde esa fecha, SIN RETROACTIVIDAD. Esta, por ser
+    # anterior, se corrige por declaracion y NO ACUMULA.
+    #
     # MIDE SOBRE VIVOS, y los deprecados quedan fuera. NO ES UNA DECISION
     # NUEVA: es el criterio ya escrito y adjudicado para OP-C-04 el 14 ago 2026
     # (decision del fundador, camino A), que la propia ficha de OP-C-05 cita

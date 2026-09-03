@@ -99,3 +99,27 @@ CIFRA bidireccionales vivos en mergebase: 83 pares
   contestadas. No lo estan. Un estado en HECHA con tres verificaciones
   abiertas encima seria un verde sobre una pregunta abierta.
 EXITCODE: 0
+
+
+==============================================================================
+CORRECCION DECLARADA, ANADIDA POR LA VUELTA 152 (2026-09-02). NADA DE LO DE
+ARRIBA SE HA REESCRITO: ESTE BLOQUE SE ANADE AL FINAL Y LA LINEA 27 SE QUEDA
+LITERAL, PORQUE UNA CORRECCION QUE TAPA LO QUE CORRIGE NO SE PUEDE AUDITAR.
+==============================================================================
+  DONDE: VERIFICACION 3 de 7, el CASO DE BORDE, linea 27 de este fichero.
+  DICE:  "307 nodo(s) vivo(s) traen un mismo destino, tras resolver, en
+          nodos_previos Y en nodos_siguientes a la vez"
+  Y LA UNIDAD ESTA MAL. El 307 es correcto, pero cuenta DESTINOS, no nodos.
+  MEDIDO DE NUEVO EN LA VUELTA 152 CON INSTRUMENTO PROPIO
+  (scripts/loop/_v152_tarea4_correccion_307.py):
+      NODOS VIVOS en esa situacion .......... 255
+      DESTINOS (pares nodo-destino) ......... 307
+  Un mismo nodo puede traer VARIOS destinos en las dos listas a la vez, y por
+  eso los dos cardinales no coinciden.
+  LO QUE NO CAMBIA: el VEREDICTO de la verificacion 3 sigue siendo CONTESTADA,
+  EN VERDE. La guarda saca 0 sobre este caso de borde, que es lo que la letra
+  pedia; lo que estaba mal era como se nombraba el tamano del caso, no el
+  comportamiento de la guarda.
+  HALLAZGO: acta 151, caida 4.4. REGLA: por la decision del fundador del 2 sep
+  2026 (PREGUNTA 2) esta especie cuenta como CIFRA PUBLICADA desde esa fecha,
+  SIN RETROACTIVIDAD; esta se corrige por declaracion y NO ACUMULA.

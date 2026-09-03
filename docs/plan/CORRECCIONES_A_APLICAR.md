@@ -2387,3 +2387,45 @@ de las cinco mesas** (`OP-M-01` a `OP-M-05`), que hoy tambien miden CUMPLIDO:
 la reserva del acta 139 nombra **once** y solo once, y ampliarla por mi cuenta
 seria doctrina nueva disfrazada de cita. Queda dicho aqui, medido, para que el
 auditor decida.
+
+
+---
+
+## CORRECCION 32. **LOS "307 NODOS VIVOS" DEL CASO DE BORDE DE `OP-C-05` SON 307 DESTINOS SOBRE 255 NODOS VIVOS**
+
+**Fecha: 2026-09-02. Vuelta 152, TAREA 4. Hallazgo del acta 151, caida 4.4.**
+
+**LA CIFRA VIEJA, INTACTA Y CITADA.** El comentario del CASO DE BORDE de la
+guarda de `OP-C-05` en `scripts/run_phase1.py` dice *"hoy hay 307 nodos vivos
+con un destino en las dos listas y ninguno es un fallo"*, y la linea 27 de
+`docs/loop/SALIDA_V150_2C_SIETE_VERIFICACIONES.txt` dice *"307 nodo(s) vivo(s)
+traen un mismo destino, tras resolver, en `nodos_previos` Y en
+`nodos_siguientes` a la vez"*. **Las dos frases se quedan donde estan.**
+
+**LA UNIDAD BUENA, AL LADO Y RE MEDIDA EN ESTA VUELTA.** El **307 es correcto**,
+pero **no cuenta nodos: cuenta destinos**. Medido con instrumento propio escrito
+en esta vuelta (`scripts/loop/_v152_tarea4_correccion_307.py`, salida en
+`docs/loop/SALIDA_V152_T4_CORRECCION_307.txt`):
+
+| cifra | valor |
+|---|---|
+| **NODOS VIVOS** con al menos un destino en `nodos_previos` Y en `nodos_siguientes` tras resolver | **255** |
+| **DESTINOS** (pares nodo-destino) en esa situacion | **307** |
+
+Un mismo nodo puede traer **varios** destinos en las dos listas a la vez, y por
+eso los dos cardinales no coinciden.
+
+**LO QUE ESTA CORRECCION NO TOCA.** El **veredicto** de la verificacion 3 de
+`OP-C-05` sigue siendo **CONTESTADA, EN VERDE**: la guarda saca **0** sobre este
+caso de borde, que es exactamente lo que su letra pide. Lo que estaba mal era
+**como se nombraba el tamano del caso**, no el comportamiento de la guarda. Y no
+se reescribe la linea 27 del fichero de la vuelta 150: se **anade** un bloque al
+final, con un `assert` que comprueba que el fichero viejo es **prefijo exacto**
+del nuevo.
+
+**LA REGLA CON LA QUE ENTRA, ESCRITA POR EL FUNDADOR.** Por la **decision del 2
+sep 2026, PREGUNTA 2**
+(`docs/loop/paradas/2026-09-02-opc05-bidireccionales-DECISION.md`), una cifra
+falsa en el **codigo o el docstring de una guarda de `scripts/`** cuenta como
+**CIFRA PUBLICADA desde esa fecha, sin retroactividad**. **Esta es anterior: se
+corrige por declaracion y NO ACUMULA.**
