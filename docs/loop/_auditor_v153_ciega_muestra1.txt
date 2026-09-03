@@ -1,0 +1,72 @@
+==============================================================================
+CASO LD-OPC05-005
+  NODO aim_of_leadership | Objetivo del Liderazgo (Deming)
+     - Identificar, con datos o con criterio, quién está fuera de lo esperado, por bajo o por muy alto desempeño
+     - Investigar las causas de raíz del sistema que afectan el desempeño general
+     - Diseñar formas de ayuda individual o de reconocimiento según corresponda
+     - Trabajar de forma continua en mejorar el sistema para todos, no solo en corregir personas
+     - Reconocer y estudiar a quienes tienen un desempeño excepcional para replicar sus métodos
+     - Buscar reducir la variabilidad de desempeño entre personas dentro del mismo sistema
+  NODO causas_comunes_vs_especiales | Causas Comunes vs Causas Especiales de Variación
+     - Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes
+     - Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos
+     - Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales
+     - Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla
+     - Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas
+     - Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales
+     - Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo
+     - Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+     - Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).
+     - Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.
+     - Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.
+     - Comunicar a los equipos que el objetivo es identificar problemas, no culpables
+     - Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo
+     - Fomentar la colaboración entre turnos y departamentos para resolver causas comunes
+     - Analizar la distribución de errores o defectos entre todas las personas usando limites de control
+  CLASE PROPUESTA POR EL AUDITOR: ____
+==============================================================================
+CASO LD-OPC05-020
+  NODO calibra_tu_propio_ojo | Calibración del Juicio
+     - En tus próximas diez estimaciones, da rangos con noventa por ciento de confianza.
+     - Cuando sepas el resultado real, cuenta cuántas veces cayó dentro de tu rango.
+     - Si aciertas menos de nueve de diez, amplía tus rangos: estás sobreconfiado.
+     - Usa la prueba de la apuesta: si por dinero ampliarías el rango, es que era muy estrecho.
+  NODO mide_lo_que_de_verdad_mueve_la_aguja | Análisis de Sensibilidad
+     - Lista los supuestos inciertos detrás de tu decisión o tu proyección.
+     - Pregunta de cada uno: si me equivoco en este, cuánto cambia el resultado final.
+     - Marca los dos o tres que más mueven la aguja e ignora por ahora los demás.
+     - Concentra tu siguiente esfuerzo de medición en reducir la incertidumbre de esos pocos.
+  CLASE PROPUESTA POR EL AUDITOR: ____
+==============================================================================
+CASO LD-OPC05-035
+  NODO constraint_management | Gestión de Restricciones (Teoría de las Restricciones)
+     - Identificar la restricción (equipo, mano de obra, información o proveedor) que limita el throughput
+     - Decidir cómo explotar al máximo la restricción actual
+     - Subordinar todos los demás procesos a esta decisión
+     - Elevar el desempeño de la restricción mediante inversión o mejora
+     - Repetir el ciclo identificando la nueva restricción
+  NODO sistema_pull_push | Sistemas Pull versus Push en Producción
+     - Evaluar si tu operacion actual funciona bajo un esquema push o pull
+     - Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso
+     - Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente
+     - Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor
+     - Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad
+     - Implementar el sistema y capacitar a los operadores
+  CLASE PROPUESTA POR EL AUDITOR: ____
+==============================================================================
+CASO LD-OPC05-050
+  NODO decision_pivotar_o_proceder | Decisión: Pivotar o Proceder
+     - Revisa honestamente si la validación convirtió opiniones en hechos, y no que moviste las metas para que coincidieran con el resultado
+     - Confirma que el producto se vendió bien y fácilmente, que la llegada de clientes es predecible, escalable y rentable, y que existe un proceso de ventas repetible
+     - Verifica que los tiempos de entrega del producto sean realistas con tu equipo de desarrollo
+     - Toma un Business Model Canvas nuevo y busca game changers revisando propuesta de valor, precios, canales y relaciones con clientes, no solo mejoras incrementales
+     - Presenta tu canvas a tu consejo asesor para que lo cuestione activamente
+     - Actualiza el canvas con lo aprendido y decide formalmente si pivotar volviendo a descubrimiento o proceder avanzando a creación de clientes
+  NODO validar_modelo_financiero | Validar el Modelo Financiero
+     - Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable
+     - Calcular costos de adquisición de clientes, tasas de conversión y Customer Lifetime Value (LTV)
+     - Determinar costos operativos básicos, costos de canal y márgenes
+     - Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año
+     - Verificar el balance de caja disponible (runway)
+     - Convertir las métricas validadas en un P&L, balance y flujo de caja multianual listo para inversionistas
+  CLASE PROPUESTA POR EL AUDITOR: ____

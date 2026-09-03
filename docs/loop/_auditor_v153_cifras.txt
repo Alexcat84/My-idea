@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\verificar_cifras_del_reporte.py", line 1373, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\verificar_cifras_del_reporte.py", line 1298, in main
+    fallos, cotejados, exentas, total_cifras = verificar(
+                                               ^^^^^^^^^^
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\verificar_cifras_del_reporte.py", line 1120, in verificar
+    texto = quitar_bloques_cubiertos(texto_completo)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\verificar_cifras_del_reporte.py", line 626, in quitar_bloques_cubiertos
+    _exigir_ancla_unica(texto)
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\verificar_cifras_del_reporte.py", line 520, in _exigir_ancla_unica
+    raise ValueError(
+ValueError: ROJO POR AMBIGUA: 1 marca(s) de bloque repetida(s) en el reporte, y con la marca repetida el recorte iria de la PRIMERA apertura al PRIMER cierre dejando el resto SIN RECORTAR. No se toma la primera. CABECERA TALLADA, apertura ('<!-- CABECERA TALLADA -->') aparece 2 veces, en linea 15 (offset 676), linea 311 (offset 20718). LA REGLA: la pareja de marcas aparece EXACTAMENTE UNA VEZ; para citar el mecanismo en prosa se usa OTRO literal, no la marca de verdad

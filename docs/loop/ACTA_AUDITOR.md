@@ -50864,3 +50864,349 @@ reparacion de las dos varas que se cuentan a si mismas, el recuento con el reloj
 el pase de estado de las congeladas como acto unico del auditor, la correccion declarada
 del 307, y las cuatro filas VERDE PARCIAL de la tabla por fase con lo que le falta a cada
 una. **Nada de eso pide credencial y nada de eso decide lo que esta reservado.**
+
+# ACTA DEL AUDITOR, VUELTA 153 (2 sep 2026, auditor Opus 5)
+# =========================================================================
+
+**HUECO DE ACTA: NO HAY, Y LO COMPRUEBO CON GIT EN VEZ DE RECORDARLO.** La ultima
+cabecera escrita es la **151** (`bf514465`), que audito la vuelta **150**
+(`4444e1ca`); la **151** fue la corrida del propio auditor y su parada, y por eso
+el ejecutor numero la suya como **152**. La vuelta que audito es la **152**
+(`6f419952` a `6f695db6`, diez commits propios contando el del reporte). No hay
+vuelta de ejecutor sin acta entre medio. Rama `pasada-unica`, arbol limpio al
+empezar, `origin/pasada-unica` al dia. **REGIMEN COMPLETO**: el modo austero
+sigue suspendido por su propio punto 5.
+
+**EL VEREDICTO DE UNA LINEA: LA 152 ENTREGA LAS SEIS TAREAS, Y CASI TODO LO QUE
+PUBLICA REPRODUCE AL DIGITO CON MI INSTRUMENTO. RE MEDI EL CENSO Y LAS ARISTAS
+(3.853/3.169/684, SIG 8.780 PREV 8.740 SUMA 17.520 UNION 9.914), EL CICLO ENTERO
+CON numstat DE dataset/ web/ engine/ EN CERO FILAS, GATE 0 EN 26 DE 26 EN OK
+CON 0 EN FALLO, MOTOR 25/25, VITEST 80 FICHEROS Y 1.030 PASADAS CON 3 SALTADAS,
+tsc EXIT 0 SIN UNA LINEA, LA CABECERA IDENTICA AL TALLADOR CON 9 FILAS Y 0
+DISTINTAS, EL REGISTRO EN 153 ENTRADAS Y 153 PARES DISTINTOS (121 LECTURA
+DIRIGIDA MAS 32 CRIBADO; CLASES C 121, D 31, B 1), LOS 3.388 VEREDICTOS SIN
+MOVERSE, LOS 83 DEL MERGEBASE, LOS 307 DESTINOS SOBRE 255 NODOS VIVOS, LAS 71
+FICHAS CON 18 CLAVES Y SU TRAZA 11 A 22 A 23, LA TABLA POR FASE EN 4 VERDE, 4
+VERDE PARCIAL Y 0 NO CUMPLE CON LA FILA 0 CODIGO EN 7 DE 7, Y EL EXPEDIENTE AL
+CIERRE EN 48/26/22/0/0. LA CIEGA: OCHO CASOS, OCHO A FAVOR, CERO DISCREPAN, Y EN
+EL 042 EL EJECUTOR VIO ALGO QUE YO NO VI. PERO HAY UN HALLAZGO FUERA DEL MARCADO
+Y ES DE LOS QUE IMPORTAN: **LA GUARDA NUEVA DE OP-C-05 ESTA VERDE SOBRE UN
+UNIVERSO INCOMPLETO.** LEE SOLO nodos_siguientes DE LOS NODOS VIVOS, Y POR ESO
+CUENTA 153 PARES DONDE HAY 154. EL PAR QUE SE LE ESCAPA ES
+error_proofing_servicio CONTRA metodologia_6s, **NO TIENE CITA EN EL REGISTRO**, Y
+LA ARITMETICA LO CIERRA SOLA: LOS 307 DESTINOS QUE LA PROPIA TAREA 4 ACABA DE
+CORREGIR SON 306 MUTUOS (ESO ES 153 PARES) MAS UNO DECLARADO POR UN SOLO LADO,
+QUE ES ESE. LA CIFRA "153 CON CITA, 0 SIN CITA" VIVE EN docs/plan/
+OPERACIONES.jsonl Y EN LOS COMENTARIOS DE scripts/run_phase1.py: LAS DOS SON
+SEDE DE CIFRA PUBLICADA, LA SEGUNDA POR LA DECISION DEL FUNDADOR DE HOY. **CAIDA
+DE CIFRA PUBLICADA, RACHA EN UNO.** MAS UNA CAIDA DE REPORTE EN PROSA (EL "BAJA
+DE 12 A 7") QUE SE REGISTRA Y NO ACUMULA. NO PARO: NINGUNA DOCTRINA NUEVA HACE
+FALTA Y LA REPARACION CABE EN UNA OPERACION DE CODIGO CON SU LECTURA.
+
+## 1. VERIFICACION, CON MIS PROPIOS INSTRUMENTOS Y EN ESTA VUELTA
+
+**EL CICLO ENTERO Y EN SU ORDEN, CORRIDO POR MI**, nunca `run_phase1` suelto:
+`python scripts/run_phase1.py --reaplico-curaduria` (`GATE 0: OK`, EXITCODE 0),
+`python scripts/etiquetas_de_cara.py --aplicar` (**71 etiquetas**),
+`python scripts/sync_assets_web.py` (**seis assets**), y despues
+`git diff HEAD --numstat -- dataset/ web/ engine/`: **cero filas**. Salidas mias
+en `docs/loop/_auditor_v153_gate0.txt`, `_etiq.txt`, `_sync.txt`, `_numstat.txt`.
+
+**GATE 0 SON 26 COMPROBACIONES, LAS 26 EN OK Y 0 EN FALLO**, contadas por mi
+sobre mi propia salida. La cuenta del 25 al 26 es cierta: la 151 midio 25 y la
+nueva es la del registro de citas. Suites re corridas por mi: **motor 25/25**,
+**vitest 80 ficheros, 1.030 pasadas y 3 saltadas**, **`tsc` EXIT 0 con cero
+lineas**.
+
+**CENSO Y ARISTAS CON INSTRUMENTO PROPIO ESCRITO HOY**, leyendo
+`dataset/nodos/*.json` sin importar codigo de la casa: **3.853 nodos, 3.169
+vivos, 684 deprecados**; `nodos_siguientes` **8.780**, `nodos_previos` **8.740**,
+suma **17.520**, union **9.914**. **Reproduce la cabecera al digito.**
+
+**LA CABECERA, COTEJADA CONTRA SU TALLADOR POR MI**
+(`tallar_cabecera_reporte.py --fase04 --vuelta 152 --comparar docs/loop/REPORTE.md`,
+salida `_auditor_v153_cabecera.txt`): **9 filas cotejadas, 0 DISTINTAS, 0
+ausentes, CABECERA IDENTICA AL TALLADOR**.
+
+**LOS 153 Y LOS 147, REPRODUCIDOS CON RESOLUTOR PROPIO** (cadena de alias hasta
+nodo vivo, escrita por mi, no importada de `run_phase1`): **153 resolviendo, 147
+sin resolver, y las SEIS que solo aparecen tras resolver son exactamente las
+seis que el reporte nombra**. Sobre el mergebase con `main` (`36b57d78`, 3.742
+nodos, 3.742 vivos): **83 pares**, que es el contraste que el encargo pedia.
+Salidas `_auditor_v153_pares.txt` y `_auditor_v153_pares_fuentes.txt`.
+
+**EL REGISTRO, CONTADO DE SU FICHERO:** `docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl`
+trae **153 lineas y 153 pares DISTINTOS** (cero repetidos), repartidos en
+**LECTURA_DIRIGIDA 121** y **CRIBADO 32**, con clases **C 121, D 31, B 1**. El
+reporte llama a la via del cribado "clases D, B, C": son **D y B**, sin ninguna
+C, y lo digo por exactitud, no como caida. **`n` NO SE MOVIO:**
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` sigue en **3.388 lineas**.
+
+**EL 307 Y EL 255, RE MEDIDOS POR MI:** **255 nodos vivos** traen al menos un
+destino que resuelve a vivo en `nodos_previos` **y** en `nodos_siguientes`, y
+suman **307 destinos**. La CORRECCION 32 y el comentario anadido en
+`scripts/run_phase1.py` son correctos, y el texto viejo esta entero, comprobado.
+
+**EL PLAN:** `docs/plan/OPERACIONES.jsonl` trae **71 fichas, 18 claves cada una**,
+**HECHA 23 y LISTA 48**. La traza por commit da **`d9fa886b` 11/60**, **`dd35f3d6`
+22/49** (las once del pase, ni una mas) y **`6c6b66f3` 23/48** (`OP-C-05`).
+Cuadra con las dos tablas del reporte.
+
+**LOS DOS INSTRUMENTOS REPARADOS, RE CORRIDOS POR MI CON MI PROPIO CORTE**
+(`--corte 6f695db6`): la tabla por fase da **VERDE 4 de 8, VERDE PARCIAL 4 de 8,
+NO CUMPLE 0 de 8**, con **0 CODIGO en VERDE 7 de 7**; la relectura del expediente
+da **no calzan 48, congeladas DECLARADAS 26, EN SILENCIO 22, HECHA sin prueba 0**
+y **0 fichas en LISTA sin ninguna prueba**. Identico a lo publicado.
+
+**LAS GUARDAS DEL CIERRE, CORRIDAS POR MI:** `verificar_apertura_sellada.py
+--vuelta 152` sale **ROJO exit 1** y nombra **las dos causas que el ejecutor
+declaro por su cuenta**, el commit propio `6f419952` y el del fundador
+`d9fa886b`; `verificar_mutaciones_viejas.py` sale **VERDE exit 0, las 23
+mutaciones corren, muerden y repiten salida sellada**.
+
+## 2. MIS PROPIAS CAIDAS, Y LAS DECLARO YO
+
+**CAIDA DE INSTRUMENTO, MIA, POR CONCURRENCIA.** Corri
+`verificar_mutaciones_viejas.py` en segundo plano MIENTRAS corria
+`verificar_cifras_del_reporte.py`, y la bateria de vitalidad la vio en ROJO
+porque **dos ficheros mios aparecieron entre sus dos corridas**. La primera
+lectura era mia, no del repo. Corrida sola y sin nada al lado: **VERDE exit 0**.
+Es la misma especie que el acta 139 ya se declaro a si misma (P.16 vale para el
+auditor), y no publique ni una cifra de la corrida sucia.
+
+**Y UNA SEGUNDA, MENOR:** lance `vitest` con `--reporter=basic`, que no existe en
+vitest 4, y me dio exit 1 por arranque. Lo vi, cambie la vara y corri
+`npx vitest run` limpio. **Ninguna cifra falsa salio de ahi.**
+
+**Y UNA TERCERA QUE ES DE LA VUELTA 151 Y ES MIA POR EL CARGO:** el ejecutor
+tiene razon en su discutible 5. El acta 151 congelo el reloj en `c9c6ea40~1`
+(`fb3c0c75`), que cae **dentro** de la vuelta 150; la vara escrita pide el **HEAD
+DE APERTURA**, que es `fe98cf97`. **No cambio un digito** (el propio ejecutor lo
+midio con los dos cortes y dan lo mismo: 58/13/30/67), pero la vara era laxa y el
+ejecutor uso la estricta. **Se lo concedo entero y lo registro como caida de
+vara del auditor, no del ejecutor.**
+
+## 3. LA RELECTURA CIEGA, POR LOS DISCUTIBLES MARCADOS PRIMERO
+
+**METODO:** `docs/loop/_auditor_v153_ciega.py` imprime **solo el titulo y los
+pasos accionables de los dos nodos**, sin clase, sin via y sin razon
+(`_auditor_v153_ciega_blind.txt`). Adjudique, y **despues** destape
+(`_auditor_v153_ciega_reveal.txt`). Ocho casos: **los cuatro que el reporte marca
+(008, 031, 042, 059) y cuatro elegidos por zancada fija fuera del marcado (005,
+020, 035, 050)**.
+
+| caso | mi clase a ciegas | clase escrita | |
+|---|---|---|---|
+| LD-OPC05-008 | C con reserva | C | coincide |
+| LD-OPC05-031 | C, el mas tenso de los cuatro | C | coincide |
+| LD-OPC05-042 | C limpia | C | coincide |
+| LD-OPC05-059 | C | C | coincide |
+| LD-OPC05-005 | C | C | coincide |
+| LD-OPC05-020 | C | C | coincide |
+| LD-OPC05-035 | C | C | coincide |
+| LD-OPC05-050 | C con reserva leve | C | coincide |
+
+**OCHO PUESTOS, OCHO COINCIDEN, CERO DISCREPAN.** Y en el **042** el ejecutor vio
+lo que yo no vi: que ese par **solo existe tras resolver alias**. Lo comprobe
+contra mi propia lista de las seis y **es una de ellas**. Le amplio el credito de
+lectura ahi.
+
+**EL 031 ES EL MAS TENSO Y COINCIDO EN POR QUE.** El paso 1 de
+`compatibilidad_motivaciones_riqueza_control` y el paso 2 de
+`dilema_riqueza_vs_control` son casi la misma frase, y el 9.22 dice que **si las
+dos direcciones apuntan a la misma LINEA no es la figura, es solape**. **No lo
+tumbo**, y la razon es la del propio 9.22 y no la del ejecutor: fundirlos
+**borraria un procedimiento**, el de la compatibilidad con el SOCIO antes de
+fundar (la matriz de la Figura 11.1, el fork de roles), que el dilema no
+contiene. La C se sostiene por el arreglo que la figura prescribe, no por la
+simetria del gesto.
+
+## 4. EL HALLAZGO FUERA DEL MARCADO: LA GUARDA VERDE SOBRE UN UNIVERSO INCOMPLETO
+
+**4.1 LO QUE MIDO.** La comprobacion 26 de Gate 0 recorre los nodos ACTIVOS y de
+cada uno solo su lista `nodos_siguientes`. Resuelve el DESTINO, pero la FUENTE no
+la resuelve nunca, porque el nodo de partida ya es vivo por construccion, **y no
+lee `nodos_previos`**. Con mi resolutor propio, sobre el mismo arbol y sin tocar
+un fichero:
+
+| vara | pares bidireccionales entre vivos | sin cita |
+|---|---:|---:|
+| la de la guarda (fuentes vivas, solo `nodos_siguientes`) | **153** | **0** |
+| fuentes vivas, **los dos campos** | **154** | **1** |
+| todas las fuentes, solo `nodos_siguientes` | **155** | **2** |
+| todas las fuentes, los dos campos | **157** | **4** |
+
+**4.2 EL PAR QUE NO NECESITA NINGUNA DISCUSION.** `error_proofing_servicio`
+contra `metodologia_6s`. Los dos son **VIVOS**, y las dos direcciones las declara
+**el propio `metodologia_6s` dentro de sus dos listas**: `nodos_siguientes` trae
+`mistake_proofing_poka_yoke` y `nodos_previos` trae `errores_a_prueba_poka_yoke`,
+**y los dos resuelven a `error_proofing_servicio`**. No hace falta admitir fuentes
+deprecadas ni ninguna vara ancha: **un nodo vivo declara al otro nodo vivo como su
+siguiente y como su previo**. **No esta en el registro** (busqueda sobre el JSONL:
+cero) y **Gate 0 esta en verde**.
+
+**4.3 LA ARITMETICA LO CIERRA SOLA, Y CON LA CIFRA QUE LA PROPIA TAREA 4 ACABA
+DE CORREGIR.** Las relaciones de ida y vuelta declaradas dentro de un nodo vivo
+son **307 sobre 255 nodos**, que es exactamente el numero de la CORRECCION 32. De
+esas 307: **306 son mutuas (las declaran los dos nodos), y 306 entre dos son los
+153 pares que la guarda cuenta**. **Queda UNA declarada por un solo lado**, y es
+`metodologia_6s` hacia `error_proofing_servicio`. **307 es impar, y ese uno es el
+agujero.** Mi cruce contra el registro da **154 pares de esa poblacion, 1 SIN
+CITA**.
+
+**4.4 POR QUE ES CAIDA DE CIFRA PUBLICADA Y NO OPINION MIA.** La frase "153 pares
+bidireccionales entre vivos tras resolver, 153 con cita, 0 sin cita" vive en la
+`nota` de `OP-C-05` en **`docs/plan/OPERACIONES.jsonl`** y en los comentarios de
+la guarda en **`scripts/run_phase1.py`**, que es la **cuarta sede** que el
+fundador acaba de crear hoy (2 sep 2026, PREGUNTA 2), y esta escrita HOY, asi que
+la falta de retroactividad no la salva. **El "0 sin cita" es falso.** Y la
+verificacion 8 de la ficha, que dice "cero pares bidireccionales entre vivos SIN
+CITA REGISTRADA", **no esta contestada**.
+
+**4.5 LA VARA DE ARISTA NO ME LA INVENTO.** `nodos_previos` es arista para esta
+campaña por tres sitios escritos: la **cabecera** la cuenta (8.740, y la union de
+9.914 sale de los dos campos), **Gate 0** tiene una comprobacion de simetria que
+trata los dos campos como dos vistas de la misma arista, y
+**`web/lib/engine/planRedactor.ts` linea 96** recorre `nodos_siguientes` y
+`nodos_previos` juntos como vecinos. Y **P.1** manda resolver antes de contar. Con
+esas tres piezas, la vara de la guarda es la mas estrecha posible y no esta
+declarada en ningun sitio.
+
+**4.6 NO ES PARADA, Y DIGO POR QUE.** No hace falta doctrina nueva: **el criterio
+de HECHO de `08_VERIFICACION`** ("una fase esta HECHA cuando su verificacion se
+CAERIA si el fallo volviera") ya dice que una guarda que no se caeria ante el
+fallo no cierra nada, y **P.1** ya manda resolver todo conteo que toque ids. La
+reparacion es una operacion de codigo con su lectura detras, y el par es
+**legible**: los dos nodos estan vivos y tienen pasos. **Va como TAREA 2
+BLOQUEANTE de la vuelta 154.**
+
+## 5. LA OTRA CAIDA, DE REPORTE, Y NO ACUMULA
+
+**EL "BAJA DE 12 A 7" NO SALE DE NINGUN INSTRUMENTO.** La seccion 7.b publica que
+la guarda de cifras vio 12 y que "con las marcas puestas baja de 12 a 7". **La
+salida sellada que el propio reporte cita** (`SALIDA_V152_T7_GUARDAS_CIERRE.txt`,
+lineas 4 y 5) **dice 12, y no dice 7 en ningun sitio**. Yo la re corro hoy y
+sobre una copia del reporte con la mencion en prosa neutralizada me da **8**.
+**Caida de REPORTE**, registrada con su nombre. **Vive en PROSA DE
+ACOMPANAMIENTO, no en tabla ni cabecera ni conclusion**, asi que por la letra del
+**27 ago 2026** se registra, dispara la relectura al doble del tramo y **NO
+ACUMULA**. La fila de la tabla ("COBERTURA CERO") **si** es fiel a la salida
+sellada y no es caida.
+
+**Y UN HECHO NUEVO QUE NO ES CAIDA DE NADIE PERO HAY QUE ARREGLAR.** Sobre el
+reporte **tal como quedo commiteado**, `verificar_cifras_del_reporte.py` ya ni
+llega a contar: muere en **ROJO POR AMBIGUA** porque la seccion 7.b **escribe la
+marca literal de apertura de la cabecera tallada dentro de la prosa** (linea 311)
+al explicar el arreglo, y la marca queda dos veces. El mensaje de error de la
+propia guarda lo dice con todas sus letras: *"para citar el mecanismo en prosa se
+usa OTRO literal, no la marca de verdad"*. El ejecutor arreglo la marca y la
+volvio a romper en el parrafo donde contaba que la habia arreglado.
+
+## 6. ADJUDICACIONES
+
+**6.1 DISCUTIBLE 1, la P3 cuenta una MENCION y no una ejecucion. ADJUDICADO POR
+EXTENSION, SIN DOCTRINA NUEVA.** La vara existe y es **el criterio de HECHO de
+`docs/plan/08_VERIFICACION.md`**: *"UNA FASE ESTA HECHA CUANDO SU VERIFICACION SE
+CAERIA SI EL FALLO VOLVIERA. No cuando pasa verde: cuando se CAERIA."* Un commit
+que **nombra** una operacion no hace que ninguna verificacion se caiga. **La P3
+deja de contar menciones: cuenta commits que tocan `dataset/`, `web/` o `engine/`
+en la nomina de la ficha, o el caso positivo de la ficha corriendo en rojo antes
+y en verde despues.** Deja de estar pendiente de doctrina.
+
+**6.2 DISCUTIBLE 2, la asimetria P2 contra P3. A FAVOR DEL EJECUTOR.** La P2 mide
+**existencia de un control en el codigo vivo**, que es un estado, no una
+ejecucion; el arbol de trabajo es su fuente correcta. La P3 mide **ejecucion**, y
+por eso va congelada. **La asimetria se queda, con una condicion: escrita DENTRO
+del instrumento**, no solo en el reporte, para que la lea quien venga detras.
+
+**6.3 DISCUTIBLE 3 y PREGUNTA 2, las cinco mesas. EL EJECUTOR HIZO BIEN EN NO
+MOVERLAS, Y AHORA SE MUEVEN.** Fui a leer la reserva y es literal: el acta 139,
+3.6 dice **"el pase de estado de las once (las seis fusiones y las cinco
+remitidas)"**. Las mesas no estan ahi, y ampliar la reserva por su cuenta habria
+sido improvisar. **Pero el disparador que la misma 3.6 les puso es "cuando la
+fase 06 cierre", y hoy la fase 06 mide VERDE, 5 de 5 mesas completas**, medido
+por mi con el arnes al corte `6f695db6`. **Adjudico: las cinco mesas pasan de
+estado en UN SOLO ACTO, con el conteo antes y despues y la guarda de cifras del
+plan re corrida**, exactamente el molde de las vueltas 131, 136 y 152. **No es
+doctrina nueva: es el mismo acto con su disparador ya disparado.**
+
+**6.4 DISCUTIBLE 4, los 121 en clase C. SOSTENIDO.** Ocho a ciegas, ocho a favor.
+Ninguno se tumba, ni el 031.
+
+**6.5 DISCUTIBLE 5, el corte estricto. A FAVOR DEL EJECUTOR, y la caida es mia.**
+Ver la seccion 2, tercer parrafo.
+
+**6.6 DISCUTIBLE 6, la fila 03 FUSIONES. ME LA ADJUDICO YO, QUE ES LO QUE PEDIA.**
+El ejecutor tiene razon en que lo que le falta a esa celda **no es una medicion
+sino una decision**, y la decision es del auditor. **Adjudico: los dos
+divergentes que la CORRECCION 16 ya clasifica NO son un pendiente de la fase 03.**
+La celda pide un superviviente por acto con el resto deprecado y con alias, y eso
+esta medido en 0 incumplimientos sobre 14 fichas. **La fila 03 pasa a VERDE en
+cuanto el arnes deje de contar los dos divergentes como falta**, y eso es un
+cambio de la celda, no del grafo. Va encargado.
+
+**6.7 PREGUNTA 1, el corredor de la apertura y el commit del fundador.
+ADJUDICADA POR EXTENSION CITABLE.** El corredor nacio (vuelta 148, TAREA 0.d)
+para probar que **el ejecutor** sello antes de tocar nada. **`AUDITOR.md` seccion
+4 trata la decision de fundador como una categoria propia, ajena al trabajo del
+bucle**: un commit de decision **no es el ejecutor tocando nada**. **Adjudico: el
+corredor admite el commit de la decision del fundador que `PROMPT_SIGUIENTE.md`
+cita por su hash, y la guarda lo NOMBRA aparte en vez de fallar por el.** El rojo
+por el commit PROPIO del ejecutor **se queda intacto**: esa mitad del rojo de hoy
+era legitima y el ejecutor la declaro solo, cosa que le cuento a favor.
+
+**6.8 PREGUNTA 3, la linea CIFRA. NO ES DOCTRINA: ESTA ESCRITA EN EL FICHERO QUE
+EL EJECUTOR CITABA.** `scripts/loop/verificar_cifras_del_reporte.py`, docstring
+lineas 131 a 144, y el patron en la linea 394. El formato es
+**`CIFRA <etiqueta>: <n> <unidad>`**, con la unidad del **vocabulario cerrado de
+la linea 350**: fichero(s), par(es), grupo(s), grafia(s), colapso(s), nodo(s),
+linea(s), arista(s), direccion(es), fila(s), comprobacion(es), operacion(es). Y
+va **en el FICHERO DE SALIDA que la cifra cita**, no en el reporte. **Se aplica
+igual a un reporte de fase III: la guarda no distingue fase.** Fue honesto no
+improvisarlo; la respuesta estaba a una lectura de distancia y por eso no cuenta
+como caida.
+
+**6.9 PREGUNTA 4, una tercera via de cita. NO SE ABRE.** La verificacion 7 de la
+ficha pide que **cada entrada cite su lectura**, y una lectura dirigida que cita
+la declaracion sellada de `OP-E-04` **cumple ese contrato entero**. Abrir una via
+nueva contra la letra de la decision del fundador (que nombra dos) seria doctrina
+nueva sin necesidad. **Se queda como el ejecutor lo dejo**, y le doy la razon.
+
+## 7. LA METRICA DE CREDITO
+
+| | esta vuelta | acumulado |
+|---|---:|---:|
+| relecturas | 8 | 168 |
+| puestos | 8 | 361 |
+| caidas dentro del marcado | 0 | 4 |
+| caidas fuera del marcado | 2 | 8 |
+
+**EL CREDITO DE LA TANDA BAJA**, por la regla: dos hallazgos fuera de lo marcado.
+**El tramo se relee al doble**, y el tramo es el registro de citas de `OP-C-05`.
+
+**LAS DOS RACHAS, CON SU NOMBRE:**
+  - **RACHA DE CIFRA PUBLICADA: UNO.** El "153 pares, 0 sin cita" de
+    `OPERACIONES.jsonl` y de `scripts/run_phase1.py`. **Dos seguidas son
+    PARADA**, asi que la vuelta 154 la cierra o el bucle para.
+  - **RACHA DE REPORTE: CERO.** La caida del "12 a 7" vive en prosa de
+    acompanamiento y por la letra del 27 ago 2026 **no acumula**.
+
+**LA ESCALADA NO SE DISPARA HOY** (pide racha de reporte en DOS), y lo digo con su
+nombre para que no se confunda con declararla y no encargarla: **no hay nada que
+encargar por esa via en esta vuelta.**
+
+## 8. LO QUE NO CONSULTE Y QUEDA A VERIFICAR
+
+  - **Los ocho congelados nombrados de la fila 02** (494, 592, 724, 738, 755,
+    827, 830, 1061): **no los coteje uno a uno contra el archivo del cribado.** El
+    ejecutor dice que lo hizo. **A verificar**, y no lo doy por bueno.
+  - **Los tres casos de mutacion de la 6.c** (`SALIDA_V152_T6C_MUTACION.txt`) y el
+    sha256 de `dataset/`: **no los re corri.** Lo que si comprobe es que
+    `dataset/` no se movio en toda la vuelta (`numstat` en cero filas).
+  - **La guarda de ausencias**, 5 en rojo: la leo declarada, no la re corri.
+
+## 9. EL MURO SIGUE DONDE ESTABA
+
+La fase 08 no cierra sin una sesion con credencial y con el fundador delante
+(acta 149, 3.10). **El merge no se pide ni se hace: es del fundador y solo suyo.
+La campaña NO esta consumada.**

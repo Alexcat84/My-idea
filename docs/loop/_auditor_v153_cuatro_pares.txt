@@ -1,0 +1,31 @@
+======================================================================
+PAR asignacion_recursos_en_gates <-> sistema_gates_go_kill
+  sistema_gates_go_kill -> asignacion_recursos_en_gates   [declarante asignacion_recursos_en_gates (VIVO).nodos_previos = "sistema_gates_go_kill"]
+  asignacion_recursos_en_gates -> sistema_gates_go_kill   [declarante estructura_de_gates (DEPRECADO).nodos_previos = "asignacion_recursos_en_gates"]
+  sistema_gates_go_kill -> asignacion_recursos_en_gates   [declarante gates_go_kill_decision_points (DEPRECADO).nodos_siguientes = "asignacion_recursos_en_gates"]
+  sistema_gates_go_kill -> asignacion_recursos_en_gates   [declarante sistema_gates_go_kill (VIVO).nodos_siguientes = "asignacion_recursos_en_gates"]
+  asignacion_recursos_en_gates -> sistema_gates_go_kill   [declarante sistema_gestion_recursos_en_gates (DEPRECADO).nodos_siguientes = "estructura_de_gates"]
+======================================================================
+PAR error_proofing_servicio <-> metodologia_6s
+  error_proofing_servicio -> metodologia_6s   [declarante 6s_lugar_trabajo (DEPRECADO).nodos_previos = "errores_a_prueba_poka_yoke"]
+  error_proofing_servicio -> metodologia_6s   [declarante 6s_lugar_trabajo (DEPRECADO).nodos_previos = "mistake_proofing_poka_yoke_2"]
+  metodologia_6s -> error_proofing_servicio   [declarante 6s_workplace_organization (DEPRECADO).nodos_siguientes = "mistake_proofing_poka_yoke"]
+  metodologia_6s -> error_proofing_servicio   [declarante 6s_workplace_organization (DEPRECADO).nodos_siguientes = "mistake_proofing_poka_yoke_2"]
+  error_proofing_servicio -> metodologia_6s   [declarante errores_a_prueba_poka_yoke (DEPRECADO).nodos_siguientes = "6s_lugar_trabajo"]
+  error_proofing_servicio -> metodologia_6s   [declarante errores_a_prueba_poka_yoke (DEPRECADO).nodos_siguientes = "metodologia_6s"]
+  metodologia_6s -> error_proofing_servicio   [declarante metodologia_6s (VIVO).nodos_siguientes = "mistake_proofing_poka_yoke"]
+  error_proofing_servicio -> metodologia_6s   [declarante metodologia_6s (VIVO).nodos_previos = "errores_a_prueba_poka_yoke"]
+  metodologia_6s -> error_proofing_servicio   [declarante mistake_proofing_poka_yoke (DEPRECADO).nodos_previos = "6s_workplace_organization"]
+  metodologia_6s -> error_proofing_servicio   [declarante mistake_proofing_poka_yoke (DEPRECADO).nodos_previos = "metodologia_6s"]
+  error_proofing_servicio -> metodologia_6s   [declarante mistake_proofing_poka_yoke_2 (DEPRECADO).nodos_siguientes = "6s_lugar_trabajo"]
+  metodologia_6s -> error_proofing_servicio   [declarante mistake_proofing_poka_yoke_2 (DEPRECADO).nodos_previos = "6s_workplace_organization"]
+======================================================================
+PAR formalizar_junta_asesora <-> identificar_consejo_asesores
+  identificar_consejo_asesores -> formalizar_junta_asesora   [declarante formalizar_junta_asesora (VIVO).nodos_previos = "identificar_consejo_asesores"]
+  identificar_consejo_asesores -> formalizar_junta_asesora   [declarante identificar_consejo_asesores (VIVO).nodos_siguientes = "formalizar_junta_asesora"]
+  formalizar_junta_asesora -> identificar_consejo_asesores   [declarante identificar_junta_asesores (DEPRECADO).nodos_previos = "formalizar_junta_asesora"]
+======================================================================
+PAR revision_portafolio_periodica <-> sistema_gates_go_kill
+  revision_portafolio_periodica -> sistema_gates_go_kill   [declarante gates_go_kill_decision_points (DEPRECADO).nodos_previos = "revision_portafolio_periodica"]
+  sistema_gates_go_kill -> revision_portafolio_periodica   [declarante revision_portafolio_periodica (VIVO).nodos_previos = "sistema_gates_go_kill"]
+  sistema_gates_go_kill -> revision_portafolio_periodica   [declarante sistema_gates_go_kill (VIVO).nodos_siguientes = "revision_portafolio_periodica"]
