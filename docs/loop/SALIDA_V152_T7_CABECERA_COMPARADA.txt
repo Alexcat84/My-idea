@@ -1,0 +1,27 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 152. Modo fase04.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `bf514465` (asunto real leido de git log: 'ACTA DE LA VUELTA 151 DEL AUDITOR + PARADA: LA 150 NO PUBLICA UNA SOLA CIFRA FALSA Y SU PARADA ES LA QUE UNA REGLA ESCRITA YA MANDABA. RE MEDI TODO CON INSTRUMENTO PROPIO Y TODO REPRODUCE AL DIGITO: CENSO Y ARISTAS EN CINCO REFS (3853/3169/684, SIG 8780 PREV 8740 SUMA 17520 UNION 9914, AUTO 0), LAS TREINTA VERSIONES DEL RASTRO CON SU 1015/802/1056 Y SU 898/711/935, EL 10 MAS 0 MAS 925, EL 888 CONTRA 0 DE LA GUARDA QUE RESUELVE, LOS 153 PARES DE HOY Y LOS 83 DEL MERGEBASE, LA UNICA DE LAS CUATRO ARISTAS DE OP-E-05 QUE EXISTE, EL 3521/3169/3151/18/370 DEL INDICE CON SUS DOS CUADRES, LOS 330 SOBRE DEPRECADOS, GATE 0 EN 25 DE 25 (ERAN 24 Y LO COMPROBE POR LOS DOS LADOS), LAS TRES SUITES VERDES Y LA CABECERA IDENTICA AL TALLADOR CON 9 FILAS Y CERO DISTINTAS. CONFIRMO SU DISCREPANCIA DEL MONOTONA CON MI PROPIO RASTREADOR: UNA SOLA SUBIDA EN 29 TRANSICIONES, 995 A 996, CON LA ANCESTRIA EN VERDE, Y LA PALABRA ERA MIA, DEL ACTA 149. LOS DIEZ DISCUTIBLES A FAVOR, CUATRO CON RESERVA, Y EN DOS AMPLIO LO QUE EL MISMO MARCO. TRES HALLAZGOS FUERA DE LO MARCADO Y EL CREDITO DE LA TANDA BAJA: DOS DE SUS VARAS SE CUENTAN A SI MISMAS (LA PIERNA P3 Y LA FILA 0 CODIGO CUENTAN EL PAPELEO DE LA VUELTA COMO PRUEBA DEL TRABAJO DE LA VUELTA; HOY SUS 58/13/30/67 SON 60/11/32/69 Y LAS DOS FICHAS QUE DECLARO SIN PRUEBA TIENEN UNA, QUE ES EL COMMIT QUE DIJO QUE NO LA TENIAN), Y UNA CIFRA CON LA UNIDAD MAL: LOS 307 NODOS VIVOS DEL CASO DE BORDE SON 307 DESTINOS SOBRE 255 NODOS. LO PROBE CONGELANDO EL RELOJ DE GIT EN c9c6ea40~1: SUS SIETE CIFRAS REPRODUCEN AL DIGITO, ASI QUE SU REPORTE ES FIEL AL INSTRUMENTO QUE CORRIO Y NO REGISTRO CAIDA DE CIFRA NI DE REPORTE. LAS DOS RACHAS SIGUEN EN CERO Y LO DIGO CON SU NOMBRE. PARADA POR TRES CONDICIONES A LA VEZ SOBRE EL MISMO SUJETO: LA LISTA BLANCA DE OP-C-05 TIENE TRES LETRAS VIGENTES QUE NO PUEDEN SER CIERTAS A LA VEZ, ENCENDERLA PONE GATE 0 EN ROJO 153 VECES SOBRE EL GRAFO SANEADO Y YA ERAN 83 ANTES DE LA CAMPANA, METERLOS EN LA LISTA OBLIGA A 151 ENTRADAS SIN LECTURA, Y LA CORRECCION 14.d MANDA LITERALMENTE PARAR Y TRAER LO QUE NINGUNA OPERACION PROPUSO NI PROHIBE. BUSQUE LA REGLA QUE LO CUBRIERA POR EXTENSION Y NO LA HAY. PARA_ALEXIS.md CON LAS TRES SALIDAS POSIBLES Y SIN RECOMENDAR NINGUNA, MAS UNA PREGUNTA SECUNDARIA DE REGLA (UNA CIFRA FALSA DENTRO DEL CODIGO DE GATE 0 NO TIENE CASILLERO HOY). PROMPT_SIGUIENTE.md VACIO. NO SE PIDE EL MERGE: LA CAMPANA NO ESTA CONSUMADA.'), HEAD real de apertura `6f419952` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `6c6b66f3` (leido de `SALIDA_V152_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+
+FIN
+EXITCODE: 0

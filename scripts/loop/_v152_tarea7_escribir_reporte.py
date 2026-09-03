@@ -1,4 +1,70 @@
-# REPORTE DE LA VUELTA 152
+# -*- coding: utf-8 -*-
+"""VUELTA 152, TAREA 7: ESCRIBE docs/loop/REPORTE.md.
+
+LA CABECERA NO SE TECLEA (EJECUTOR.md 1): se LEE de la salida del tallador,
+docs/loop/SALIDA_V152_T7_CABECERA.txt, y se pega ENTERA. Este script no compone
+una sola celda de esa tabla.
+
+TODA CIFRA DEL CUERPO CITA EL FICHERO DE SALIDA DEL QUE SALE, y las que se
+cuentan se cuentan AQUI, de ese fichero, en vez de copiarse de mi memoria.
+"""
+import io
+import json
+import os
+import re
+
+RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+L = os.path.join(RAIZ, "docs", "loop")
+
+
+def leer(n):
+    return io.open(os.path.join(L, n), encoding="utf-8", errors="replace").read()
+
+
+def tabla_tallada():
+    t = leer("SALIDA_V152_T7_CABECERA.txt")
+    ini = t.index("--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---")
+    fin = t.index("\nFIN")
+    return t[ini:fin].split("---\n", 1)[1].strip()
+
+
+# ---- CIFRAS CONTADAS DE SUS FICHEROS, NO RECORDADAS -----------------------
+exp = leer("SALIDA_V152_T7_EXPEDIENTE_CIERRE.txt")
+m = re.search(r"CONTADO: no calzan (\d+) \| de ellas, congeladas DECLARADAS (\d+) \| "
+              r"congeladas EN SILENCIO (\d+) \| HECHA sin prueba (\d+)", exp)
+nc, dec, sil, hsp = m.groups()
+p3 = re.search(r"P3 huella en git .*?: (\d+) ficha", exp).group(1)
+expA = leer("SALIDA_V152_T2_EXPEDIENTE_ANTES.txt")
+mA = re.search(r"CONTADO: no calzan (\d+) \| de ellas, congeladas DECLARADAS (\d+) \| "
+               r"congeladas EN SILENCIO (\d+)", expA)
+ncA, decA, silA = mA.groups()
+
+cruce = leer("SALIDA_V152_T6A_CRUCE.txt")
+cr = re.search(r"con cita por CRIBADO\s+: (\d+)", cruce).group(1)
+p10 = re.search(r"con cita por P\.10\s+: (\d+)", cruce).group(1)
+ld = re.search(r"con cita por LECTURA_DIRIGIDA\s+: (\d+)", cruce).group(1)
+tot = re.search(r"CON CITA, TOTAL\s+: (\d+) de (\d+)", cruce).groups()
+sinv = re.search(r"SIN VEREDICTO\s+: (\d+)", cruce).group(1)
+res153 = re.search(r"RESOLVIENDO ALIAS \(P\.1\) : (\d+)", cruce).group(1)
+res147 = re.search(r"SIN resolver\s+: (\d+)", cruce).group(1)
+mb = leer("SALIDA_V152_T6A_CONTRASTE_MERGEBASE.txt")
+mb153 = re.search(r"RESOLVIENDO ALIAS \(P\.1\) : (\d+)", mb).group(1)
+
+F = [json.loads(x) for x in io.open(os.path.join(RAIZ, "docs", "plan", "OPERACIONES.jsonl"),
+                                    encoding="utf-8") if x.strip()]
+por_estado = {}
+for f in F:
+    por_estado[f["estado"]] = por_estado.get(f["estado"], 0) + 1
+REG = [json.loads(x) for x in io.open(os.path.join(RAIZ, "docs", "plan",
+                                                   "REGISTRO_DE_CITAS_OPC05.jsonl"),
+                                      encoding="utf-8") if x.strip()]
+gate = leer("SALIDA_V152_GATE0_CMD1_CIERRE.txt")
+n_ok = len(re.findall(r"^\s*\[OK\]", gate, re.M))
+n_fallo = len(re.findall(r"^\s*\[FALLO\]", gate, re.M))
+n_cribado = sum(1 for _ in io.open(os.path.join(RAIZ, "docs", "INTRA_DOMINIO_VEREDICTOS.jsonl"),
+                                   encoding="utf-8"))
+
+TXT = """# REPORTE DE LA VUELTA 152
 
 **Rama `pasada-unica`. FASE III, EJECUCION, modo continuo, REGIMEN COMPLETO.**
 **Las seis tareas del encargo entregadas. `OP-C-05` CIERRA ENTERA. Una caida mia,
@@ -13,17 +79,7 @@ celda de esta tabla la escribi yo. Va entre las dos marcas literales que
 confunda las cifras de la cabecera con prosa tecleada.
 
 <!-- CABECERA TALLADA -->
-| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
-|---|---:|---:|
-| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
-| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
-| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
-| motor | 25/25 | **25/25** |
-| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
-| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
-| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
-| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `bf514465` (asunto real leido de git log: 'ACTA DE LA VUELTA 151 DEL AUDITOR + PARADA: LA 150 NO PUBLICA UNA SOLA CIFRA FALSA Y SU PARADA ES LA QUE UNA REGLA ESCRITA YA MANDABA. RE MEDI TODO CON INSTRUMENTO PROPIO Y TODO REPRODUCE AL DIGITO: CENSO Y ARISTAS EN CINCO REFS (3853/3169/684, SIG 8780 PREV 8740 SUMA 17520 UNION 9914, AUTO 0), LAS TREINTA VERSIONES DEL RASTRO CON SU 1015/802/1056 Y SU 898/711/935, EL 10 MAS 0 MAS 925, EL 888 CONTRA 0 DE LA GUARDA QUE RESUELVE, LOS 153 PARES DE HOY Y LOS 83 DEL MERGEBASE, LA UNICA DE LAS CUATRO ARISTAS DE OP-E-05 QUE EXISTE, EL 3521/3169/3151/18/370 DEL INDICE CON SUS DOS CUADRES, LOS 330 SOBRE DEPRECADOS, GATE 0 EN 25 DE 25 (ERAN 24 Y LO COMPROBE POR LOS DOS LADOS), LAS TRES SUITES VERDES Y LA CABECERA IDENTICA AL TALLADOR CON 9 FILAS Y CERO DISTINTAS. CONFIRMO SU DISCREPANCIA DEL MONOTONA CON MI PROPIO RASTREADOR: UNA SOLA SUBIDA EN 29 TRANSICIONES, 995 A 996, CON LA ANCESTRIA EN VERDE, Y LA PALABRA ERA MIA, DEL ACTA 149. LOS DIEZ DISCUTIBLES A FAVOR, CUATRO CON RESERVA, Y EN DOS AMPLIO LO QUE EL MISMO MARCO. TRES HALLAZGOS FUERA DE LO MARCADO Y EL CREDITO DE LA TANDA BAJA: DOS DE SUS VARAS SE CUENTAN A SI MISMAS (LA PIERNA P3 Y LA FILA 0 CODIGO CUENTAN EL PAPELEO DE LA VUELTA COMO PRUEBA DEL TRABAJO DE LA VUELTA; HOY SUS 58/13/30/67 SON 60/11/32/69 Y LAS DOS FICHAS QUE DECLARO SIN PRUEBA TIENEN UNA, QUE ES EL COMMIT QUE DIJO QUE NO LA TENIAN), Y UNA CIFRA CON LA UNIDAD MAL: LOS 307 NODOS VIVOS DEL CASO DE BORDE SON 307 DESTINOS SOBRE 255 NODOS. LO PROBE CONGELANDO EL RELOJ DE GIT EN c9c6ea40~1: SUS SIETE CIFRAS REPRODUCEN AL DIGITO, ASI QUE SU REPORTE ES FIEL AL INSTRUMENTO QUE CORRIO Y NO REGISTRO CAIDA DE CIFRA NI DE REPORTE. LAS DOS RACHAS SIGUEN EN CERO Y LO DIGO CON SU NOMBRE. PARADA POR TRES CONDICIONES A LA VEZ SOBRE EL MISMO SUJETO: LA LISTA BLANCA DE OP-C-05 TIENE TRES LETRAS VIGENTES QUE NO PUEDEN SER CIERTAS A LA VEZ, ENCENDERLA PONE GATE 0 EN ROJO 153 VECES SOBRE EL GRAFO SANEADO Y YA ERAN 83 ANTES DE LA CAMPANA, METERLOS EN LA LISTA OBLIGA A 151 ENTRADAS SIN LECTURA, Y LA CORRECCION 14.d MANDA LITERALMENTE PARAR Y TRAER LO QUE NINGUNA OPERACION PROPUSO NI PROHIBE. BUSQUE LA REGLA QUE LO CUBRIERA POR EXTENSION Y NO LA HAY. PARA_ALEXIS.md CON LAS TRES SALIDAS POSIBLES Y SIN RECOMENDAR NINGUNA, MAS UNA PREGUNTA SECUNDARIA DE REGLA (UNA CIFRA FALSA DENTRO DEL CODIGO DE GATE 0 NO TIENE CASILLERO HOY). PROMPT_SIGUIENTE.md VACIO. NO SE PIDE EL MERGE: LA CAMPANA NO ESTA CONSUMADA.'), HEAD real de apertura `6f419952` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `6c6b66f3` (leido de `SALIDA_V152_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+%(TABLA)s
 <!-- FIN CABECERA TALLADA -->
 
 ## 0. MI CAIDA, PRIMERO, PORQUE ES MIA Y NO ME LA ENCONTRARON
@@ -86,7 +142,7 @@ la vara estricta.
 ## 2. TAREA 2: EL RECUENTO, Y LO QUE EL CONGELADO NO ARREGLA
 
 Corte `d9fa886b`. `SALIDA_V152_T2_EXPEDIENTE_ANTES.txt`, contado de ese fichero:
-**no calzan 60, calzan 11, congeladas DECLARADAS 28, EN SILENCIO 32, HECHA sin
+**no calzan %(ncA)s, calzan 11, congeladas DECLARADAS %(decA)s, EN SILENCIO %(silA)s, HECHA sin
 prueba 0.** Cae justo en el 60/11/32/69 que el acta 151 predijo.
 
 **Y ESO NO ES LA BUENA NOTICIA QUE PARECE.** La reparacion impide que una vuelta se
@@ -128,9 +184,9 @@ produjo la cifra publicada.
 
 | cifra | antes | despues |
 |---|---:|---:|
-| fichas en `HECHA` | 11 | **23** |
-| fichas en `LISTA` | 60 | **48** |
-| congeladas EN SILENCIO (lista A) | 32 | **22** |
+| fichas en `HECHA` | 11 | **%(hecha)s** |
+| fichas en `LISTA` | 60 | **%(lista)s** |
+| congeladas EN SILENCIO (lista A) | %(silA)s | **%(sil)s** |
 
 Las que siguen en silencio van **nombradas una a una** en
 `SALIDA_V152_T3_PASE_DE_ESTADO.txt`. **CORRECCION 31** por adicion pura, esquema
@@ -188,19 +244,19 @@ VEINTICUATRO y el resto era **negativo**, -9). **No la publique: arregle la vara
 
 ### 6.a El cruce
 
-**P.1 primero, y aqui cumplirlo o no son SEIS PARES:** resolviendo alias **153**,
-sin resolver **147**, y las seis que solo aparecen tras resolver van nombradas en
+**P.1 primero, y aqui cumplirlo o no son SEIS PARES:** resolviendo alias **%(res153)s**,
+sin resolver **%(res147)s**, y las seis que solo aparecen tras resolver van nombradas en
 `SALIDA_V152_T6A_CRUCE.txt`. El instrumento resuelve **los dos lados**, tambien los
 del archivo del cribado. **Contraste que prueba que mide bien:** sobre el mergebase
-con `main` (`36b57d78`) salen **83** pares, no 153.
+con `main` (`36b57d78`) salen **%(mb153)s** pares, no %(res153)s.
 
 | via | pares |
 |---|---:|
-| CRIBADO (clases D, B, C, con su puesto) | **32** |
-| P.10 (declarado y no fundido) | **0** |
-| LECTURA DIRIGIDA (`LD-OPC05-001` a `LD-OPC05-121`) | **121** |
-| **CON CITA, TOTAL** | **153 de 153** |
-| **SIN CITA** | **0** |
+| CRIBADO (clases D, B, C, con su puesto) | **%(cr)s** |
+| P.10 (declarado y no fundido) | **%(p10)s** |
+| LECTURA DIRIGIDA (`LD-OPC05-001` a `LD-OPC05-121`) | **%(ld)s** |
+| **CON CITA, TOTAL** | **%(tot0)s de %(tot1)s** |
+| **SIN CITA** | **%(sinv)s** |
 
 **P.10 SUMA CERO Y DIGO POR QUE** en vez de dejarlo en blanco: `sistema_gates_go_kill`
 es el ejemplar 1 de P.10, pero su columna *"como acabo"* dice que **`LD-58` lo cerro
@@ -219,7 +275,7 @@ aqui los dos nodos de cada par son **procedimientos completos y distintos** del
 curriculo. Cada direccion manda a un procedimiento que el otro **no contiene**.
 
 **`n` NO SE MOVIO Y LO MEDI:** `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` sigue en
-**3.388 lineas**, contadas de ese mismo fichero y
+**%(ncrib)s lineas**, contadas de ese mismo fichero y
 registradas en `SALIDA_V152_T6A_CRUCE.txt`.
 
 **UN HALLAZGO FUERA DEL ENCARGO:** tres de los 121 (`87`, `88`, `110`) **ya estan
@@ -230,9 +286,9 @@ sellada. **PREGUNTA 3.**
 
 ### 6.c La guarda encendida, y muerde por los dos lados
 
-**Gate 0 pasa de 25 a 26 comprobaciones, las 26 en OK, exit 0** (0 en FALLO),
-contado de `SALIDA_V152_GATE0_CMD1_CIERRE.txt`. La nueva mide **153 pares tras
-resolver, 153 con cita, 0 SIN CITA**, leido de esa misma salida y de
+**Gate 0 pasa de 25 a %(nok)s comprobaciones, las %(nok)s en OK, exit 0** (%(nfallo)s en FALLO),
+contado de `SALIDA_V152_GATE0_CMD1_CIERRE.txt`. La nueva mide **%(tot1)s pares tras
+resolver, %(tot1)s con cita, 0 SIN CITA**, leido de esa misma salida y de
 `SALIDA_V152_T6C_GATE0_VERDE.txt`. **El grafo
 saneado pasa en verde**, que es la verificacion nueva de la ficha. **La guarda no
 construye el registro: lo EXIGE.** Si el fichero no existe es **ROJO**, no verde por
@@ -272,16 +328,16 @@ es el orden que la adjudicacion 3.14 del acta 149 fijo.
 ## 7. EL CIERRE, RECOMPUTADO AL CIERRE
 
 Ciclo entero en su orden, **`numstat` de `dataset/ web/ engine/` sin una fila**,
-**Gate 0 26 de 26 en OK exit 0** (`SALIDA_V152_GATE0_CMD1_CIERRE.txt`), **motor
+**Gate 0 %(nok)s de %(nok)s en OK exit 0** (`SALIDA_V152_GATE0_CMD1_CIERRE.txt`), **motor
 25/25** (`SALIDA_V152_MOTOR_CIERRE.txt`), **vitest 80 ficheros, 1.030 pasadas y 3
 saltadas** (`SALIDA_V152_WEB_CIERRE.txt`), **`tsc` EXIT 0 sin una linea**
 (`SALIDA_V152_TSC_CIERRE.txt`), **desfase del calibrado 4 filas sobre 468**
 (`SALIDA_V152_DESFASE_CALIBRADO_CIERRE.txt`).
 
 **EL EXPEDIENTE, RE MEDIDO AL CIERRE porque esta vuelta lo movio**
-(`SALIDA_V152_T7_EXPEDIENTE_CIERRE.txt`): **no calzan 48** (eran 60), **DECLARADAS
-26**, **EN SILENCIO 22** (eran 32), **HECHA sin prueba 0**, **LISTA sin ninguna
-prueba 0**, **P3 69**.
+(`SALIDA_V152_T7_EXPEDIENTE_CIERRE.txt`): **no calzan %(nc)s** (eran %(ncA)s), **DECLARADAS
+%(dec)s**, **EN SILENCIO %(sil)s** (eran %(silA)s), **HECHA sin prueba %(hsp)s**, **LISTA sin ninguna
+prueba 0**, **P3 %(p3)s**.
 
 **LAS DOS GUARDAS NUEVAS YA HACEN TRABAJO DE VERDAD**, y esa es la prueba de que la
 reparacion sirve: al cierre la vuelta tiene **9 commits propios** y **28 salidas
@@ -377,3 +433,18 @@ manda.
 
 **EL MERGE NO SE PIDE NI SE HACE: es del fundador y solo suyo. La campana no esta
 consumada.**
+""" % {
+    "TABLA": tabla_tallada(),
+    "nc": nc, "dec": dec, "sil": sil, "hsp": hsp, "p3": p3,
+    "ncA": ncA, "decA": decA, "silA": silA,
+    "hecha": por_estado.get("HECHA", 0), "lista": por_estado.get("LISTA", 0),
+    "cr": cr, "p10": p10, "ld": ld, "tot0": tot[0], "tot1": tot[1], "sinv": sinv,
+    "res153": res153, "res147": res147, "mb153": mb153,
+    "ncrib": "{:,}".format(n_cribado).replace(",", "."),
+    "nok": n_ok, "nfallo": n_fallo,
+}
+
+io.open(os.path.join(L, "REPORTE.md"), "w", encoding="utf-8", newline="\n").write(TXT)
+print("REPORTE.md escrito: %d lineas, %d caracteres" % (TXT.count("\n") + 1, len(TXT)))
+print("registro de citas: %d entradas | fichas: %d | Gate 0: %d OK, %d FALLO"
+      % (len(REG), len(F), n_ok, n_fallo))
