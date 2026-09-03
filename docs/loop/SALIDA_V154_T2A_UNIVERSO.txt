@@ -1,0 +1,58 @@
+============================================================================================
+VUELTA 154, TAREA 2.a: EL UNIVERSO DE PARES BIDIRECCIONALES, CON LAS CUATRO VARAS
+============================================================================================
+INSTRUMENTO PROPIO, escrito hoy, sin importar codigo de la casa.
+Nodos leidos de dataset/nodos/*.json: 3853 | vivos 3169 | deprecados 684
+Nodos con ids_alias: 562 | entradas en la tabla de alias: 761
+Registro de citas: docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl, 153 par(es) citado(s)
+
+| vara | que admite | direcciones | pares bidireccionales | sin cita |
+|---|---|---:|---:|---:|
+| 1 | fuentes VIVAS, solo nodos_siguientes (la de la guarda de hoy) | 7309 | 153 | 0 |
+| 2 | fuentes VIVAS, LOS DOS campos | 7311 | 154 | 1 |
+| 3 | TODAS las fuentes, solo nodos_siguientes | 7312 | 155 | 2 |
+| 4 | TODAS las fuentes, LOS DOS campos | 7314 | 157 | 4 |
+
+LOS PARES SIN CITA, NOMBRADOS UNO A UNO POR VARA (nunca resumidos):
+  vara 1 (fuentes VIVAS, solo nodos_siguientes (la de la guarda de hoy)): 0 sin cita
+  vara 2 (fuentes VIVAS, LOS DOS campos): 1 sin cita
+      error_proofing_servicio <-> metodologia_6s
+  vara 3 (TODAS las fuentes, solo nodos_siguientes): 2 sin cita
+      asignacion_recursos_en_gates <-> sistema_gates_go_kill
+      error_proofing_servicio <-> metodologia_6s
+  vara 4 (TODAS las fuentes, LOS DOS campos): 4 sin cita
+      asignacion_recursos_en_gates <-> sistema_gates_go_kill
+      error_proofing_servicio <-> metodologia_6s
+      formalizar_junta_asesora <-> identificar_consejo_asesores
+      revision_portafolio_periodica <-> sistema_gates_go_kill
+
+EL CONTRASTE CONTRA LA TABLA DEL ACTA 153, SECCION 4.1
+(cifras del auditor, citadas como contraste, NO como fuente):
+| vara | pares esperados | pares medidos hoy | sin cita esperados | sin cita medidos | cuadra |
+|---|---:|---:|---:|---:|---|
+| 1 | 153 | 153 | 0 | 0 | SI |
+| 2 | 154 | 154 | 1 | 1 | SI |
+| 3 | 155 | 155 | 2 | 2 | SI |
+| 4 | 157 | 157 | 4 | 4 | SI |
+
+CIFRA varas que cuadran con el acta 153: 4 comprobaciones
+CIFRA pares con la vara de la guarda de hoy: 153 pares
+CIFRA pares con la vara de los dos campos sobre fuentes vivas: 154 pares
+CIFRA pares sin cita con la vara de los dos campos sobre fuentes vivas: 1 pares
+
+LAS CUATRO CUADRAN. La medicion del auditor reproduce con instrumento
+propio y no hay nada que parar.
+
+============================================================================================
+LA ARITMETICA QUE EL ACTA 153, 4.3 USA PARA CERRAR EL AGUJERO, RE MEDIDA AQUI
+============================================================================================
+Nodos VIVOS que declaran ida y vuelta dentro de sus dos listas: 255
+Destinos asi declarados: 307
+De esos destinos, MUTUOS (los declaran los dos nodos): 306, o sea 153 par(es)
+DECLARADOS POR UN SOLO LADO: 1
+    metodologia_6s declara ida y vuelta hacia error_proofing_servicio, y error_proofing_servicio no se la devuelve
+
+CIFRA destinos de ida y vuelta declarados dentro de un nodo vivo: 307 direcciones
+CIFRA nodos vivos que los declaran: 255 nodos
+CIFRA destinos declarados por un solo lado: 1 direcciones
+EXITCODE: 0

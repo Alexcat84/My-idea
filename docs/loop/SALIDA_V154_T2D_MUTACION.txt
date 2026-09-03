@@ -1,0 +1,46 @@
+================================================================================================
+VUELTA 154, TAREA 2.d: EL CASO POSITIVO POR MUTACION DE LA GUARDA ENSANCHADA
+================================================================================================
+sha256 de dataset/ ANTES (arbol normalizado): 0864e9cfe4e3b7746922bde54d8e551a45f02a7a1ba3780dcaed2e0986b65e37
+
+ELEGIDOS POR COMPUTO (no tecleados):
+  A     (vivo, el que se muta) : ab_testing_optimizacion
+  B     (vivo, el destino)     : abandonar_arreglos_rapidos
+  ALIAS (deprecado que resuelve a B, se mete en LAS DOS listas de A): abandonar_la_falacia_del_arreglo_rapido
+  par que se espera ver nombrado: ab_testing_optimizacion <-> abandonar_arreglos_rapidos
+
+| caso | que se prueba | esperado | exit | la linea de la guarda, literal |
+|---|---|---|---:|---|
+| A | MUTACION contra la guarda NUEVA | ROJO nombrando el par | 1 | [FALLO] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 155 par(es) bidireccional(es) tras resolver, 154 con cita, 1 SIN CITA: ['ab_testing_optimizacion <-> abandonar_arreglos_rapidos']) |
+| B | LA MISMA mutacion contra la guarda VIEJA | VERDE (contraprueba) | 0 | [OK] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 153 par(es) bidireccional(es) tras resolver, 153 con cita, 0 SIN CITA) |
+| C | ARBOL INTACTO contra la guarda NUEVA | VERDE | 0 | [OK] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 154 par(es) bidireccional(es) tras resolver, 154 con cita, 0 SIN CITA) |
+
+CASO A (MUTACION contra la guarda NUEVA)
+  esperado: ROJO nombrando el par | exit real: 1
+  linea de la guarda: [FALLO] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 155 par(es) bidireccional(es) tras resolver, 154 con cita, 1 SIN CITA: ['ab_testing_optimizacion <-> abandonar_arreglos_rapidos'])
+  nombra el par ab_testing_optimizacion <-> abandonar_arreglos_rapidos: SI
+
+CASO B (LA MISMA mutacion contra la guarda VIEJA)
+  esperado: VERDE (contraprueba) | exit real: 0
+  linea de la guarda: [OK] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 153 par(es) bidireccional(es) tras resolver, 153 con cita, 0 SIN CITA)
+
+CASO C (ARBOL INTACTO contra la guarda NUEVA)
+  esperado: VERDE | exit real: 0
+  linea de la guarda: [OK] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 154 par(es) bidireccional(es) tras resolver, 154 con cita, 0 SIN CITA)
+
+================================================================================================
+VEREDICTOS
+  CASO A, la guarda NUEVA MUERDE por el lado ciego y nombra el par: SI
+  CASO B, la guarda VIEJA sale VERDE sobre la MISMA mutacion (la mutacion
+          ataca el punto ciego de verdad): SI
+  CASO C, la guarda NUEVA sale VERDE sobre el arbol intacto: SI
+
+sha256 de dataset/ DESPUES: 0864e9cfe4e3b7746922bde54d8e551a45f02a7a1ba3780dcaed2e0986b65e37
+dataset/ IDENTICO antes y despues: True
+
+CIFRA casos de mutacion corridos: 3 comprobaciones
+CIFRA casos de mutacion que salen como se esperaba: 3 comprobaciones
+CIFRA ficheros de dataset movidos por esta prueba: 0 ficheros
+
+LOS TRES CASOS SALEN COMO SE ESPERABA.
+EXITCODE: 0

@@ -2047,3 +2047,11 @@ archivo del cribado sigue en 3.388 lineas y no se toca.**
 | 121 | REGISTRO DE CITAS `OP-C-05` | venture_debt_introduccion <-> venture_debt_terminos_economicos | C | LD-OPC05-121 | la deuda de riesgo como complemento al equity contra sus condiciones de precio concretas (tasa, comisiones, warrants) |
 
 **LOS CUATRO DISCUTIBLES DE ESTA TANDA, MARCADOS ANTES DE SABER SI ACIERTO** (`EJECUTOR.md` 7): **LD-OPC05-008, LD-OPC05-031, LD-OPC05-042, LD-OPC05-059**. Son los unicos pares donde el solape de LINEA es real y la clase `C` se sostiene por poco; en los otros 117 los dos nodos son procedimientos completos y distintos y la figura no admite discusion. Quien discrepe tiene que ir a esos cuatro, no a los 121.
+
+## LECTURA DIRIGIDA `LD-OPC05-122`, LA QUE LA VARA DE LOS DOS CAMPOS DESTAPA (vuelta 154, TAREA 2.c)
+
+**Nace del hallazgo del acta 153, seccion 4:** la guarda de `OP-C-05` leia solo `nodos_siguientes` de los nodos vivos, y por eso contaba 153 pares donde la vara declarada de esta campana (LOS DOS CAMPOS) cuenta 154. Este es el par 154, y no tenia cita.
+
+| # | via | par | clase | cita | razon |
+|---:|---|---|---|---|---|
+| 122 | REGISTRO DE CITAS `OP-C-05` | error_proofing_servicio <-> metodologia_6s | C | LD-OPC05-122 | PAR QUE SOLO EXISTE TRAS RESOLVER ALIAS, y ademas SOLO SE VE LEYENDO LOS DOS CAMPOS: metodologia_6s nombra mistake_proofing_poka_yoke en nodos_siguientes y errores_a_prueba_poka_yoke en nodos_previos, y los dos resuelven a error_proofing_servicio. La organizacion del puesto de trabajo (sacar lo que no se necesita, ordenar, limpiar, estandarizar el habito, sostener la disciplina) contra el diseno de dispositivos a prueba de error (los cinco principios, el dispositivo fisico o logico, la validacion antes de escalar): el paso 6 de 6S nombra la seguridad y no la procedimenta, y el paso 4 de error-proofing nombra simplificar el trabajo y no lo procedimenta. Dos lineas distintas, una en cada nodo, y ninguno es la madre |

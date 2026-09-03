@@ -1192,15 +1192,65 @@ def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
                 _p = _e.get("par") or []
                 if len(_p) == 2:
                     _citados.add(tuple(sorted(_p)))
+    # CORRECCION DECLARADA (2026-09-02, vuelta 154, TAREA 2; hallazgo del acta
+    # 153, seccion 4, FUERA de lo marcado. NADA DEL COMENTARIO DE ARRIBA SE
+    # BORRA: describia con exactitud lo que la guarda hacia hasta hoy, y taparlo
+    # impediria auditar por que estuvo verde sobre un universo incompleto.)
+    #
+    # LA CIFRA QUE SE CORRIGE, Y ES CIFRA PUBLICADA POR LA CUARTA SEDE QUE EL
+    # FUNDADOR CREO EL 2 SEP 2026: donde el bloque de arriba y la nota de
+    # OP-C-05 dicen "153 pares bidireccionales entre vivos tras resolver, 153
+    # con cita, 0 SIN CITA", lo cierto es ~~153 pares, 0 sin cita~~ 154 PARES,
+    # Y UNO ESTABA SIN CITA. El "0 sin cita" era FALSO, y lo era porque la
+    # guarda contaba con una vara mas estrecha que la declarada.
+    #
+    # QUE HACIA MAL: recorria los nodos ACTIVOS y de cada uno leia SOLO su lista
+    # `nodos_siguientes`. La FUENTE no hacia falta resolverla (el nodo de
+    # partida ya es vivo por construccion), pero `nodos_previos` NO SE LEIA
+    # NUNCA. Una arista declarada solo por ese lado era invisible.
+    #
+    # LA VARA QUE SE DECLARA, Y NO ES NUEVA: LOS DOS CAMPOS, sobre FUENTES
+    # VIVAS. Esta escrita en tres sitios del repo, los tres re leidos en la
+    # vuelta 154 antes de tocar nada:
+    #   - la cabecera del reporte CUENTA `nodos_previos` (8.740) y su union de
+    #     9.914 sale de los dos campos, no de uno;
+    #   - `aristas_a_simetrizar` (arriba, en este mismo fichero) admite una
+    #     arista "si LA DECLARA UN NODO VIVO, EN CUALQUIERA DE SUS DOS VISTAS",
+    #     que es EXACTAMENTE esta vara, y la comprobacion de simetria de Gate 0
+    #     ya la usa;
+    #   - `web/lib/engine/planRedactor.ts` linea 96 recorre
+    #     `[...nodos_siguientes, ...nodos_previos]` juntos como vecinos.
+    # Mas P.1, que manda resolver antes de contar.
+    #
+    # LAS FUENTES DEPRECADAS SIGUEN FUERA, y no es un estrechamiento nuevo: es
+    # el criterio ya adjudicado el 14 ago 2026 (decision del fundador, camino A)
+    # que el bloque de arriba cita y que esta ficha hereda de OP-C-04. LO QUE
+    # ESO DEJA FUERA SE NOMBRA EN VEZ DE CALLARSE (banco 9, fallar ruidoso):
+    # con fuentes deprecadas admitidas saldrian 157 pares y 4 sin cita, o sea
+    # TRES pares mas que esta guarda no mira, medidos en la vuelta 154
+    # (scripts/loop/vuelta154_tarea2a_universo_bidireccionales.py):
+    # `asignacion_recursos_en_gates <-> sistema_gates_go_kill`,
+    # `formalizar_junta_asesora <-> identificar_consejo_asesores` y
+    # `revision_portafolio_periodica <-> sistema_gates_go_kill`. Los tres solo
+    # existen si se admite como declarante a un nodo deprecado.
+    #
+    # `nodos_previos` DECLARA LA ARISTA EN SENTIDO CONTRARIO y por eso se
+    # invierte al meterla: "B es previo mio" es la direccion B hacia A. Meterla
+    # como A hacia B invertiria la mitad del universo y la guarda contaria pares
+    # que no existen.
     _dirigidas = set()
     for _nid in sorted(activos):
-        for _dest in activos[_nid].get("nodos_siguientes") or []:
-            if _dest not in nodos_todos:
-                continue
-            _a, _b = _resolver(_nid), _resolver(_dest)
-            if (_a and _b and _a != _b
-                    and _a in activos and _b in activos):
-                _dirigidas.add((_a, _b))
+        for _campo in ("nodos_siguientes", "nodos_previos"):
+            for _dest in activos[_nid].get(_campo) or []:
+                if _dest not in nodos_todos:
+                    continue
+                _a, _b = _resolver(_nid), _resolver(_dest)
+                if (_a and _b and _a != _b
+                        and _a in activos and _b in activos):
+                    if _campo == "nodos_previos":
+                        _dirigidas.add((_b, _a))
+                    else:
+                        _dirigidas.add((_a, _b))
     _bidireccionales = sorted({tuple(sorted(_p)) for _p in _dirigidas
                                if (_p[1], _p[0]) in _dirigidas})
     _sin_cita = [f"{_a} <-> {_b}" for _a, _b in _bidireccionales
