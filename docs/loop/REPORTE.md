@@ -97,6 +97,36 @@ escribir esa linea. **La guarda mordio, revertí y baje el bloque un renglon**, 
 comentario inmediatamente debajo del docstring, dentro de la misma funcion.
 Resultado final: **borrados 0 en los seis .py**.
 
+**CAIDA 4, Y ES LA MAS UTIL DE LAS CUATRO PORQUE DEJA UN HALLAZGO.** La bateria
+de mutaciones, corrida sola al final del cierre, salio primero **ROJO exit 1 con
+3 NO MORDIO**: `vuelta143_2a_mutaciones.py`, `vuelta143_2c_mutacion_positivo.py`
+y `vuelta144_3a_mutaciones.py`. **No las toque:** fui a leer por que caian.
+
+**LA CAUSA, MEDIDA Y NO SUPUESTA.** Las tres comparten un check de P.16 que dice
+*dataset/ y docs/plan/ SIN TOCAR tras las mutaciones* y lo comprueba con
+`git status --porcelain -- dataset/ docs/plan/`. Esa orden decia
+`M dataset/metadata/master_graph.json`. **Pero el fichero no habia cambiado:**
+
+  - `git diff HEAD --numstat -- dataset/ web/ engine/` daba **cero filas**;
+  - y el `sha256` del blob de HEAD y el del arbol, los dos NORMALIZADOS a LF,
+    son **el mismo**: `627cc662296f7f00ba121e7ca2efca205820f74131603ead20e2d27fe00f4c55`.
+
+Lo que habia era **estado de FIN DE LINEA**: este repo tiene `core.autocrlf` y el
+fichero quedo en el arbol con LF despues de que el ciclo lo reescribiera, asi que
+`git status` lo marca como modificado aunque el contenido sea identico. **Mi
+commit del cierre uso `git add -A -- docs/ scripts/` y dejo `dataset/` fuera**, y
+por eso el indice quedo sin refrescar. Normalice el indice con `git add` del
+propio fichero (que no cambia una coma, porque el contenido normalizado ya era el
+de HEAD) y la bateria salio **VERDE exit 0**, con 0 ancla perdida, 0 no mordio, 0
+no reproducible, 2 casos declarados y RUIDO DE CONCURRENCIA 0
+(`docs/loop/SALIDA_V157_T9_BATERIA_FINAL.txt`).
+
+**EL HALLAZGO QUE DEJA, Y VA COMO PREGUNTA:** el check de P.16 de esas tres
+mutaciones **cuelga de `git status --porcelain`, que en este repo distingue
+estado de fin de linea y no solo contenido**. Es la misma especie que la vara
+anclada a algo que se mueve: el veredicto de esas tres depende de si alguien
+committeo tocando `dataset/` o no, y no de si las mutaciones tocaron el dataset.
+
 ## 2. TAREA 1, LAS DIEZ ADJUDICACIONES DEL ACTA 157
 
 ```
@@ -675,7 +705,14 @@ porque una salida mutilada no es una salida:
    y `SALIDA_V136_3D_MUTACION.txt` **no las escribe ningun `.py` del repo que yo
    pueda identificar por su texto**. Se busca su productor, se retira la cita de
    la ficha, o se declara que esas dos citas son artefactos huerfanos?
-3. **LAS DOS QUE NO MUERDEN.** `vuelta96_tarea3_prueba_mutacion.py` y
+3. **EL CHECK DE P.16 QUE CUELGA DE `git status --porcelain`.** Tres mutaciones
+   de la bateria (`vuelta143_2a`, `vuelta143_2c`, `vuelta144_3a`) caen en ROJO
+   cuando `dataset/` esta marcado como modificado por **estado de fin de linea**,
+   con el contenido identico y probado por `sha256` normalizado. **Hoy lo esquive
+   normalizando el indice, que no cambia una coma, pero la trampa sigue puesta.**
+   Se cine ese check al contenido (por ejemplo con `git diff --numstat`, que ya
+   dio cero), o se deja como esta y se documenta?
+4. **LAS DOS QUE NO MUERDEN.** `vuelta96_tarea3_prueba_mutacion.py` y
    `vuelta97_tarea2_prueba_mutacion.py` salen **exit 1 hoy**. Sostienen la P3b de
    `OP-E-03`. **No las toco** porque el modo de cierre me lo prohibe y el encargo
    no lo pide. Se arreglan, se declaran como casos declarados, o se retira la P3b
