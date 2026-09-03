@@ -298,18 +298,71 @@ def es_papel_de_la_parada(ruta):
     return ruta in PAPELES_DE_LA_PARADA or ruta.startswith(CARPETA_DE_PARADAS)
 
 
-def intrusos_del_corredor(corredor):
+PATRON_HASH = re.compile(r"\b[0-9a-f]{7,40}\b")
+
+
+def hashes_citados_por_el_encargo():
+    """LOS HASHES QUE `docs/loop/PROMPT_SIGUIENTE.md` CITA, resueltos con git a
+    su forma completa. Devuelve (conjunto de hashes completos, lista de los
+    literales que se leyeron), y nunca inventa: un literal que `git rev-parse`
+    no resuelve a un commit de este repo NO entra.
+
+    ES LA UNICA PUERTA DE ADMISION DEL CORREDOR (adjudicacion 6.7 del acta
+    153). Por HASH CITADO EN EL ENCARGO, no por autor adivinado, no por asunto
+    y no por ruta: si el encargo no lo cita, no entra."""
+    ruta = os.path.join(LOOP, "PROMPT_SIGUIENTE.md")
+    if not os.path.exists(ruta):
+        return set(), []
+    with open(ruta, encoding="utf-8", errors="replace") as fh:
+        texto = fh.read()
+    literales, completos = [], set()
+    for lit in sorted(set(PATRON_HASH.findall(texto))):
+        try:
+            r = subprocess.run(["git", "rev-parse", "--verify", "%s^{commit}" % lit],
+                               cwd=RAIZ, capture_output=True, check=True)
+        except Exception:
+            continue
+        completos.add(r.stdout.decode().strip())
+        literales.append(lit)
+    return completos, literales
+
+
+def intrusos_del_corredor(corredor, admitidos=()):
     """PURA A PROPOSITO (para que el caso rojo se pueda probar por mutacion
     sin tocar git ni el disco): recibe el corredor ya leido,
-    [(hash, asunto, [rutas])], y devuelve [(hash, asunto, [rutas ajenas])]
-    con SOLO los commits que tocan algo que no es papel de parada. Lista
-    vacia significa corredor limpio."""
-    intrusos = []
+    [(hash, asunto, [rutas])], y devuelve DOS listas,
+    (intrusos, admitidos_por_el_encargo), cada una [(hash, asunto, [rutas
+    ajenas])]. Lista de intrusos vacia significa corredor limpio.
+
+    --- ADJUDICACION 6.7 DEL ACTA 153, APLICADA AQUI (vuelta 154, TAREA 6) ---
+
+    CORRECCION DECLARADA POR ADICION. La firma vieja recibia solo `corredor` y
+    devolvia UNA lista; ahora recibe ademas `admitidos` (hashes completos que el
+    encargo cita) y devuelve DOS. `admitidos` VACIO reproduce exactamente el
+    comportamiento anterior, asi que ninguna corrida vieja cambia de veredicto
+    por esta ampliacion sola.
+
+    UN COMMIT DEL CORREDOR QUE ESTE EN `admitidos` NO ES INTRUSO: sale por la
+    segunda lista, para que la guarda LO NOMBRE APARTE en vez de fallar por el.
+    NO SE CALLA NUNCA (banco 9, fallar ruidoso): un commit admitido en silencio
+    seria peor que el rojo que sustituye, porque el corredor volveria a ser
+    invisible.
+
+    Y LA MITAD QUE NO SE TOCA: el rojo por un commit del PROPIO EJECUTOR sigue
+    intacto. La admision es POR HASH CITADO EN EL ENCARGO, y un commit que el
+    ejecutor escribe a mitad de vuelta no puede estar citado en el encargo que
+    se escribio antes de que existiera."""
+    intrusos, admitidos_vistos = [], []
+    admitidos = set(admitidos or ())
     for h, asunto, rutas in corredor:
         ajenas = sorted(r for r in rutas if not es_papel_de_la_parada(r))
-        if ajenas:
+        if not ajenas:
+            continue
+        if h in admitidos:
+            admitidos_vistos.append((h, asunto, ajenas))
+        else:
             intrusos.append((h, asunto, ajenas))
-    return intrusos
+    return intrusos, admitidos_vistos
 
 
 def corredor_desde_git(acta, nacido_en, fallos):
@@ -416,6 +469,10 @@ def verificar(vuelta):
     detalle = []
     corredores = {}   # cache: un corredor por commit de nacimiento, no uno por fichero
     declarados = {}   # corredores ACEPTADOS, que se imprimen y nunca se callan
+    # ADJUDICACION 6.7 DEL ACTA 153 (vuelta 154): la puerta de admision del
+    # corredor son LOS HASHES QUE EL ENCARGO CITA, leidos de git y no tecleados.
+    admitidos, literales_citados = hashes_citados_por_el_encargo()
+    admitidos_del_corredor = {}
     for nombre in nombres:
         nacido_en = commit_de_nacimiento(nombre, rama, fallos)
         if nacido_en is None:
@@ -438,7 +495,9 @@ def verificar(vuelta):
                               "y el corredor no se pudo medir" %
                               (nombre, nacido_en[:8], padre[:8], acta[:8]))
             else:
-                intrusos = intrusos_del_corredor(corredor)
+                intrusos, admitidos_aqui = intrusos_del_corredor(corredor, admitidos)
+                if admitidos_aqui:
+                    admitidos_del_corredor[nacido_en] = admitidos_aqui
                 if intrusos:
                     for h, asunto, ajenas in intrusos:
                         fallos.append("%s nacio en %s, y entre el acta %s y ese commit vive %s "
@@ -456,7 +515,7 @@ def verificar(vuelta):
                           "%s, sha256 de hoy %s" % (nombre, nacido_en[:8], h_nac, h_hoy))
 
         detalle.append((nombre, nacido_en[:8], padre[:8] if padre else "?", padre == acta))
-    return fallos, detalle, declarados
+    return fallos, detalle, declarados, admitidos_del_corredor, literales_citados
 
 
 def main():
@@ -464,7 +523,15 @@ def main():
     ap.add_argument("--vuelta", type=int, required=True)
     a = ap.parse_args()
 
-    fallos, detalle, declarados = verificar(a.vuelta)
+    fallos, detalle, declarados, admitidos_corredor, literales = verificar(a.vuelta)
+    print("HASHES QUE EL ENCARGO (docs/loop/PROMPT_SIGUIENTE.md) CITA Y QUE GIT RESUELVE: "
+          "%d (%s)" % (len(literales), ", ".join(literales) or "ninguno"))
+    for nacido_en, adms in sorted(admitidos_corredor.items()):
+        for h, asunto, ajenas in adms:
+            print("   ADMITIDO POR HASH CITADO EN EL ENCARGO, y se nombra aparte en vez "
+                  "de tumbar la guarda: %s ('%s') toca %d ruta(s) fuera de los papeles "
+                  "de parada (%s), delante de la apertura nacida en %s"
+                  % (h[:8], asunto[:70], len(ajenas), ", ".join(ajenas), nacido_en[:8]))
     if fallos:
         print("ROJO, apertura de la vuelta %d NO sellada antes de la 1.a operacion "
               "(%d cosa(s) no cuadran):" % (a.vuelta, len(fallos)))

@@ -1,0 +1,24 @@
+=== LA GUARDA SOBRE ESTA VUELTA (154) ===
+HASHES QUE EL ENCARGO (docs/loop/PROMPT_SIGUIENTE.md) CITA Y QUE GIT RESUELVE: 2 (6f695db6, c9c6ea40)
+VERDE: los 10 ficheros SALIDA_V154_*_APERTURA.txt nacieron todos en el primer commit de la vuelta (hijo directo del acta):
+   SALIDA_V154_CICLO_ETIQUETAS_APERTURA.txt -- nacido en 12f87aae, padre 32b2c76e
+   SALIDA_V154_CICLO_NUMSTAT_APERTURA.txt -- nacido en 12f87aae, padre 32b2c76e
+   SALIDA_V154_CICLO_SYNC_APERTURA.txt -- nacido en 12f87aae, padre 32b2c76e
+   SALIDA_V154_CONTEO_APERTURA.txt -- nacido en 12f87aae, padre 32b2c76e
+   SALIDA_V154_DESFASE_CALIBRADO_APERTURA.txt -- nacido en 12f87aae, padre 32b2c76e
+   SALIDA_V154_GATE0_CMD1_APERTURA.txt -- nacido en 12f87aae, padre 32b2c76e
+   SALIDA_V154_HEAD_APERTURA.txt -- nacido en 12f87aae, padre 32b2c76e
+   SALIDA_V154_MOTOR_APERTURA.txt -- nacido en 12f87aae, padre 32b2c76e
+   SALIDA_V154_TSC_APERTURA.txt -- nacido en 12f87aae, padre 32b2c76e
+   SALIDA_V154_WEB_APERTURA.txt -- nacido en 12f87aae, padre 32b2c76e
+EXITCODE REAL DE LA GUARDA: 0
+
+=== CONTRAPRUEBA: LA VUELTA 100, EL CASO ROJO REAL DE SIEMPRE. La ampliacion
+=== de la 6.7 NO puede haberla vuelto laxa.
+HASHES QUE EL ENCARGO (docs/loop/PROMPT_SIGUIENTE.md) CITA Y QUE GIT RESUELVE: 2 (6f695db6, c9c6ea40)
+ROJO, apertura de la vuelta 100 NO sellada antes de la 1.a operacion (48 cosa(s) no cuadran):
+   SALIDA_V100_CONTEO_APERTURA.txt nacio en 592cf8bc, y entre el acta c8827ef7 y ese commit vive 94ab70f3 ('VUELTA 100, TAREA 6: fase 04 contra la evidencia. BFS de 26 ') que toca 3 ruta(s) que NO son papel de parada (docs/loop/SALIDA_V100_TAREA6_FASE04_CONTRA_EVIDENCIA.md, docs/loop/SALIDA_V100_TAREA6_TRANSITIVAS.txt, scripts/loop/vuelta100_tarea6_transitivas_fase04.py): la apertura se midio DESPUES de una operacion
+   SALIDA_V100_CONTEO_APERTURA.txt nacio en 592cf8bc, y entre el acta c8827ef7 y ese commit vive a6bc96a8 ('VUELTA 100, TAREA 5: relectura al doble del tramo 4 en los d') que toca 9 ruta(s) que NO son papel de parada (docs/PENDIENTES.md, docs/loop/SALIDA_V100_TAREA5_CIERRE_TRAS_172_161.txt, docs/loop/SALIDA_V100_TAREA5_CORRECCION_CIERRE_FINAL.txt, docs/loop/SALIDA_V100_TAREA5_RELECTURA.txt, docs/plan/04_ENLACES.md, docs/plan/OPERACIONES.jsonl, docs/plan/OP_E_03_LECTURA_TRAMO4_V99.jsonl, scripts/loop/vuelta100_tarea5_correccion_cierre_final.py, scripts/loop/vuelta100_tarea5_relectura_doble_tramo4.py): la apertura se midio DESPUES de una operacion
+   [...%s lineas mas, no se pegan enteras]
+EXITCODE REAL DE LA GUARDA: 1
+COSAS QUE NO CUADRAN, contadas de la salida: 48
