@@ -1,0 +1,48 @@
+================================================================================================
+VUELTA 154, TAREA 6: EL CASO POR MUTACION DEL CORREDOR, POR LOS DOS LADOS
+================================================================================================
+EL CORREDOR REAL, LEIDO DE GIT (acta bf514465 .. apertura a569778a):
+  6f419952 'VUELTA 152, TAREA 1: EL RELOJ DE GIT CONGELADO. LAS DOS VARAS QUE ' -- 8 ruta(s)
+  d9fa886b 'Decision del fundador: la lista blanca es un registro de citas, y ' -- 5 ruta(s)
+
+COMPUTADO, no tecleado: el commit de decision del fundador dentro del corredor es
+d9fa886b, y es el que se pasa como admitido. Los del ejecutor son 1: 6f419952.
+
+| caso | que se prueba | intrusos esperados | intrusos medidos | admitidos medidos | veredicto | cuadra |
+|---|---|---:|---:|---:|---|---|
+| A | corredor real entero, admitidos VACIO (el estado ANTES de la 6.7) | 2 | 2 | 0 | ROJO | SI |
+| B | SOLO el del fundador, ADMITIDO por hash citado | 0 | 0 | 1 | VERDE | SI |
+| C | SOLO el del fundador, admitidos VACIO (que el verde lo da la admision) | 1 | 1 | 0 | ROJO | SI |
+| D | los DOS, con el del fundador admitido (la mitad que NO se afloja) | 1 | 1 | 1 | ROJO | SI |
+
+CASO A (corredor real entero, admitidos VACIO (el estado ANTES de la 6.7)): ROJO
+   INTRUSO NOMBRADO: 6f419952 'VUELTA 152, TAREA 1: EL RELOJ DE GIT CONGELADO. LAS DOS VARA' toca 8 ruta(s) ajenas, la primera docs/loop/SALIDA_V152_APERTURA_IDENTIDAD.txt
+   INTRUSO NOMBRADO: d9fa886b 'Decision del fundador: la lista blanca es un registro de cit' toca 2 ruta(s) ajenas, la primera docs/loop/AUDITOR.md
+
+CASO B (SOLO el del fundador, ADMITIDO por hash citado): VERDE
+   ADMITIDO Y NOMBRADO APARTE: d9fa886b 'Decision del fundador: la lista blanca es un registro de cit' toca 2 ruta(s) ajenas, la primera docs/loop/AUDITOR.md
+
+CASO C (SOLO el del fundador, admitidos VACIO (que el verde lo da la admision)): ROJO
+   INTRUSO NOMBRADO: d9fa886b 'Decision del fundador: la lista blanca es un registro de cit' toca 2 ruta(s) ajenas, la primera docs/loop/AUDITOR.md
+
+CASO D (los DOS, con el del fundador admitido (la mitad que NO se afloja)): ROJO
+   INTRUSO NOMBRADO: 6f419952 'VUELTA 152, TAREA 1: EL RELOJ DE GIT CONGELADO. LAS DOS VARA' toca 8 ruta(s) ajenas, la primera docs/loop/SALIDA_V152_APERTURA_IDENTIDAD.txt
+   ADMITIDO Y NOMBRADO APARTE: d9fa886b 'Decision del fundador: la lista blanca es un registro de cit' toca 2 ruta(s) ajenas, la primera docs/loop/AUDITOR.md
+
+================================================================================================
+LO QUE LA REGLA NO SALVA, MEDIDO Y NO SUPUESTO
+================================================================================================
+El PROMPT_SIGUIENTE.md que la vuelta 152 tenia delante CITA el hash del commit
+de la decision del fundador (d9fa886b): NO
+Luego la regla del acta 153, 6.7, APLICADA AL PIE DE LA LETRA, no habria salvado
+a la vuelta 152. Es PROSPECTIVA. No se afloja por eso: admitir por asunto o por
+autor seria una puerta que abre cualquiera. Va al reporte como discutible.
+
+Y EL ENCARGO DE HOY: cita 2 hash(es) que git resuelve (6f695db6, c9c6ea40).
+El corredor de ESTA vuelta esta VACIO (el bloque de apertura es hijo directo del
+acta 153), asi que la admision no se usa hoy: se prueba, no se ejerce.
+
+CIFRA casos de mutacion del corredor corridos: 4 comprobaciones
+CIFRA casos que salen como se esperaba: 4 comprobaciones
+
+LOS CUATRO CASOS SALEN COMO SE ESPERABA, Y LA GUARDA MUERDE POR LOS DOS LADOS.

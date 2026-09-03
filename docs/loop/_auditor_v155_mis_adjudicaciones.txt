@@ -1,0 +1,76 @@
+ADJUDICACIONES A CIEGAS DEL AUDITOR, VUELTA 155, LOS CUATRO DISCUTIBLES MARCADOS.
+Escritas ANTES de destapar la razon del registro y ANTES de releer la del reporte.
+La doctrina se cito de docs/BANCO_DE_TEXTOS.md 9.22, 9.6.2 y 9.6.3, leidas hoy.
+
+CASO 1 [LD-OPC05-097] juran_rcca_metodo contra viaje_diagnostico_remedial
+  MI CLASE: A
+  MI CASO, en tres varas que empujan al mismo sitio:
+   - NO ES MADRE E HIJO por el perfil del 9.6.2: el hijo tendria que caber ENTERO
+     dentro de UN paso de la madre, y viaje_diagnostico_remedial se reparte entre
+     los pasos 2, 3 y 4 de juran_rcca_metodo. El perfil no se cumple, asi que la
+     pregunta NO queda restringida a un solo sentido.
+   - POR EL 9.6.3, lo que decide es QUE QUEDA FUERA DEL SOLAPE Y EN QUE LADO.
+     Fuera queda el paso 1 de juran (esporadico contra cronico, y el enunciado del
+     problema) y el paso 7 del viaje (gestionar la resistencia). Los dos son
+     LINEA por la regla practica del informe 67.6: un criterio suelto y una accion
+     unica, ninguno obliga a varias decisiones dentro de si ni se repite en el
+     tiempo. NO queda procedimiento en ningun lado, que es lo que el 9.6.3 exige
+     para declarar sano.
+   - POR EL SEGUNDO POLO DEL 9.22: linea en los dos sentidos son dos nodos que
+     REPITEN, el mismo material a dos granularidades con dos apostillas, y su
+     arreglo es FUSION con las dos lineas repuestas.
+   - EL CONTRASTE DE LOS EJEMPLARES: el 2080 (A) es seis pasos de siete en el
+     mismo orden; el 2091 (D) es dos de cuatro con las colas apuntando a sitios
+     distintos. Aqui son tres de los cuatro pasos de juran cubriendo siete de los
+     ocho del viaje, y EN EL MISMO ORDEN. Cae del lado del 2080.
+  NO TOCO NADA: una fusion no se decide en una vuelta de lectura.
+
+CASO 2 [LD-OPC05-046] cultura_de_aprendizaje contra cultura_de_seguridad_componentes
+  MI CLASE: C
+  MI CASO: la linea compartida es el paso 2 de componentes (un sistema que
+  recolecte, analice y difunda informacion de incidentes). Pero el 9.6.3 dice que
+  el tamano del solape no decide y que se pesa EL RESTO: fuera del solape
+  componentes conserva la evaluacion de los cuatro subcomponentes, los indicadores
+  del nivel de cultura informada y el escrito de por que vale la pena invertir;
+  aprendizaje conserva los procesos de decision para implementar reformas, la
+  medicion de su efectividad y la institucionalizacion de la revision periodica.
+  Hay PROCEDIMIENTO en los dos lados fuera del solape, luego el par es SANO.
+  Y el perfil de madre e hijo del 9.6.2 tampoco se cumple: aprendizaje no cabe
+  entero en el paso 2 de componentes, porque sus pasos 2 a 4 salen de recolectar y
+  difundir y entran en reformar y sostener.
+
+CASO 3 [LD-OPC05-040] cost_management_plan contra stakeholder_register
+  MI CLASE: D
+  MI CASO: no funden, y en eso no hay duda ninguna. Pero la clase C del 9.22 es
+  SANO CON FIGURA, y la figura EXIGE que cada nodo expanda una linea del otro, una
+  linea distinta en cada lado. Aqui no hay tal cosa: son dos artefactos de
+  planificacion sin una sola linea en comun, el dinero por un lado y las personas
+  por el otro. Sin figura, la clase que le corresponde es D, sano y distinto.
+  Registrar C aqui es registrar una figura que no esta.
+
+CASO 4 [LD-OPC05-122] error_proofing_servicio contra metodologia_6s
+  MI CLASE: C
+  MI CASO: la figura del primer polo del 9.22 esta entera y con dos lineas
+  DISTINTAS, una en cada nodo. El paso 6 de 6S nombra la seguridad y no la
+  procedimenta, y error_proofing_servicio es el procedimiento que la ejecuta. El
+  paso 4 de error_proofing nombra simplificar el trabajo para reducir el error
+  humano y no lo procedimenta, y 6S (sort, set in order, shine, standardize) es el
+  procedimiento que lo ejecuta. Dos lineas distintas, procedimiento en los dos
+  sentidos: enlace mutuo, no fusion.
+
+=========================================================================
+LA MUESTRA FUERA DEL MARCADO, 11 puestos, zancada 12 arranque 2, CERO solape
+con los 41 del ejecutor (todos sus indices son 0 mod 3 y todos los mios 1 mod 3).
+Escritas ANTES de destapar.
+
+002 actividades_clave / key_resources_hypothesis          MI CLASE: C (con reserva: figura DELGADA, misma especie que el 040)
+014 auditoria_negocio / consejo_de_calidad                MI CLASE: C
+026 cierre_segun_complejidad_venta / escala_actitud_cierre MI CLASE: C
+038 control_estadistico_de_procesos / plan_de_control      MI CLASE: C (el 9.6.3 en estado puro: la ecuacion y el taller)
+050 decision_pivotar_o_proceder / validar_modelo_financiero MI CLASE: C
+062 documentacion_exportacion / seleccion_metodo_transporte MI CLASE: C
+074 estilos_de_negociacion / teoria_de_juegos_en_negociacion MI CLASE: C
+086 gestion_instalaciones / planificacion_cadena_suministro MI CLASE: C
+098 lean_launchpad_web_startup_process / lienzo_modelo_negocio MI CLASE: C
+110 portfolio_management / sistema_gates_go_kill           MI CLASE: C
+122 error_proofing_servicio / metodologia_6s               MI CLASE: C

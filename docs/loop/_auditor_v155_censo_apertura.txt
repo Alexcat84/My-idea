@@ -1,0 +1,28 @@
+CIFRA censo nodos totales: 3853 nodos
+CIFRA censo nodos vivos: 3169 nodos
+CIFRA censo nodos deprecados: 684 nodos
+CIFRA aristas nodos_siguientes: 8780 aristas
+CIFRA aristas nodos_previos: 8740 aristas
+CIFRA aristas suma de los dos campos: 17520 aristas
+CIFRA aristas union dirigida de los dos campos: 9914 aristas
+CIFRA registro lineas del registro de citas en 32b2c76e: 153 lineas
+CIFRA registro pares distintos del registro de citas en 32b2c76e: 153 pares
+  clases: {'C': 121, 'D': 31, 'B': 1} | vias: {'LECTURA_DIRIGIDA': 121, 'CRIBADO': 32}
+
+LAS CUATRO VARAS (registro leido de 32b2c76e)
+  vara estrecha (fuentes vivas, solo nodos_siguientes): 153 pares, 0 sin cita
+  vara completa (fuentes vivas, los dos campos): 154 pares, 1 sin cita
+      SIN CITA: error_proofing_servicio <-> metodologia_6s
+  todas las fuentes, solo nodos_siguientes: 155 pares, 2 sin cita
+      SIN CITA: asignacion_recursos_en_gates <-> sistema_gates_go_kill
+      SIN CITA: error_proofing_servicio <-> metodologia_6s
+  todas las fuentes, los dos campos: 157 pares, 4 sin cita
+      SIN CITA: asignacion_recursos_en_gates <-> sistema_gates_go_kill
+      SIN CITA: error_proofing_servicio <-> metodologia_6s
+      SIN CITA: formalizar_junta_asesora <-> identificar_consejo_asesores
+      SIN CITA: revision_portafolio_periodica <-> sistema_gates_go_kill
+
+CIFRA aritmetica nodos vivos con destino de ida y vuelta: 255 nodos
+CIFRA aritmetica destinos de ida y vuelta declarados dentro de un nodo vivo: 307 direcciones
+CIFRA aritmetica destinos mutuos: 306 direcciones
+  declarados por un solo lado: ['metodologia_6s -> error_proofing_servicio']
