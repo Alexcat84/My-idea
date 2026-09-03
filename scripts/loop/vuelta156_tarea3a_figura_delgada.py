@@ -196,7 +196,7 @@ def main():
               (ld, esperado, medido, "COINCIDE" if ok else "DISCREPA"))
         print("       fuente del esperado: %s" % fuente)
     print("")
-    print("  CIFRA casos de calibracion que coinciden: %d de %d" % (aciertos, len(ESPERADO)))
+    print("CIFRA casos de calibracion que coinciden: %d de %d" % (aciertos, len(ESPERADO)))
     assert aciertos == len(ESPERADO), (
         "el computo no reproduce los casos que el acta 155 etiqueto a mano: %d de %d"
         % (aciertos, len(ESPERADO)))
@@ -238,8 +238,8 @@ def main():
     print("  sustitucion: UNO SOLO BAJA, LD-OPC05-047, de UNA a NINGUNA, por falso positivo")
     print("  del patron vago. Los otros seis los CONFIRMA. El saco grande no se mueve por")
     print("  esta relectura: 115 medidos por computo, 116 tras la lectura.")
-    print("  CIFRA lecturas que corrigen al computo: 1 par(es)")
-    print("  CIFRA los tres sacos TRAS LA LECTURA: 2 / 4 / 116 par(es)")
+    print("CIFRA lecturas que corrigen al computo: 1 par(es)")
+    print("CIFRA lecturas dirigidas SIN FIGURA tras la relectura a mano: 116 par(es)")
 
     print("")
     print("=" * 104)

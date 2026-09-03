@@ -115,7 +115,7 @@ def main():
         print("     etiqueta_arbol: %s" % n.get("etiqueta_arbol"))
         print("     dominio: %s | fuente: %s" % (n.get("dominio"), n.get("fuente")))
     print("")
-    print("  CIFRA nodos vivos del par: %d nodo(s) de 2" % vivos)
+    print("CIFRA nodos vivos del par: %d nodo(s) de 2" % vivos)
 
     print("")
     print("-" * 96)
@@ -132,8 +132,8 @@ def main():
             texto = p if isinstance(p, str) else json.dumps(p, ensure_ascii=False)
             print("    %2d. %s" % (i, texto))
     print("")
-    print("  CIFRA pasos de %s: %d paso(s)" % (a, conteo_pasos[a]))
-    print("  CIFRA pasos de %s: %d paso(s)" % (b, conteo_pasos[b]))
+    print("CIFRA pasos de %s: %d paso(s)" % (a, conteo_pasos[a]))
+    print("CIFRA pasos de %s: %d paso(s)" % (b, conteo_pasos[b]))
 
     print("")
     print("-" * 96)
@@ -158,7 +158,7 @@ def main():
     print("  DIRECCION %s -> %s declarada por alguien: %s" % (a, b, ida))
     print("  DIRECCION %s -> %s declarada por alguien: %s" % (b, a, vuelta))
     print("  BIDIRECCIONAL: %s" % (ida and vuelta))
-    print("  CIFRA vistas que declaran la arista: %d direccion(es)"
+    print("CIFRA vistas que declaran la arista: %d direccion(es)"
           % sum(1 for v in vistas if v[3]))
 
     print("")
@@ -183,7 +183,7 @@ def main():
         print("  %-32s aparece con %-32s | clase %s | %s"
               % (nid, ", ".join(vecino), e["clase"], e["cita"]))
     print("")
-    print("  CIFRA otras entradas del registro que tocan al par: %d linea(s)" % len(otros))
+    print("CIFRA otras entradas del registro que tocan al par: %d linea(s)" % len(otros))
 
     print("")
     print("-" * 96)
@@ -208,7 +208,7 @@ def main():
     for f, i, linea in golpes:
         print("  %-42s :%-6d %s" % (f, i, linea))
     print("")
-    print("  CIFRA lineas de docs/plan/ que nombran a uno de los dos: %d linea(s)" % len(golpes))
+    print("CIFRA lineas de docs/plan/ que nombran a uno de los dos: %d linea(s)" % len(golpes))
 
     print("")
     print("=" * 96)

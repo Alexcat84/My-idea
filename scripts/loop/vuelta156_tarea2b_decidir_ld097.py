@@ -176,12 +176,18 @@ def main():
     clase_leida = tocada["clase"]
     print("  SEDE 1: docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl")
     print("     clase LEIDA hoy antes de tocar: %s" % clase_leida)
-    assert clase_leida == CLASE_VIEJA, (
-        "la clase de %s no es %s sino %s: el registro no esta donde se creia"
-        % (CITA, CLASE_VIEJA, clase_leida))
+    # LA IDEMPOTENCIA VA DELANTE DEL ASSERT (correccion de la propia vuelta 156):
+    # si el bloque ya esta escrito, la clase que se lee hoy es LA NUEVA, y exigirle
+    # que sea la vieja hacia que la segunda corrida reventara. Un instrumento que
+    # solo se puede correr una vez no se puede re correr para sellar su salida.
     if MARCA in razon_vieja:
         print("     YA ESTABA: la marca ya vive en la razon. No se duplica.")
+        assert clase_leida == CLASE_NUEVA, (
+            "%s trae la marca pero su clase es %s y no %s" % (CITA, clase_leida, CLASE_NUEVA))
     else:
+        assert clase_leida == CLASE_VIEJA, (
+            "la clase de %s no es %s sino %s: el registro no esta donde se creia"
+            % (CITA, CLASE_VIEJA, clase_leida))
         tocada["clase"] = CLASE_NUEVA
         tocada["razon"] = razon_vieja + CORRECCION
         tocada["cita"] = cita_vieja + "  [RECLASIFICADA A %s EN LA VUELTA 156: ver la razon]" % CLASE_NUEVA
@@ -242,7 +248,7 @@ def main():
     print("  La adjudicacion 6.1 del acta 155 manda registrar CANDIDATO A FUSION solo SI la")
     print("  clase pasa a A. La decision de hoy es D, asi que NO se registra candidato, NO")
     print("  se elige superviviente y NO se toca una sola arista.")
-    print("  CIFRA candidatos a fusion registrados: 0 par(es)")
+    print("CIFRA candidatos a fusion registrados: 0 par(es)")
 
     print("")
     print("2.d GUARDA DE FRONTERA, DESPUES")
@@ -258,7 +264,7 @@ def main():
         assert igual, "LA FRONTERA SE CRUZO: %s cambio de %s a %s" % (nombre, a, b)
     print("")
     print("  ASSERT: el registro cambia, EL GRAFO NO. Las ocho magnitudes iguales.")
-    print("  CIFRA veredictos del cribado: %d fila(s), y n NO se mueve." % despues[7])
+    print("CIFRA veredictos del cribado: %d fila(s), y n NO se mueve." % despues[7])
 
     print("")
     print("CIFRA entradas del registro reclasificadas: 1 par(es)")

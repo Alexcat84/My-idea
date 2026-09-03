@@ -127,7 +127,7 @@ def main():
             print("     %-18s al corte: %-8s hoy: %-8s%s"
                   % (i, "declara" if a else "silencio", "declara" if b else "silencio",
                      "  (NO EXISTIA AL CORTE)" if nueva else ""))
-        print("  CIFRA fichas que la vara nueva devuelve al silencio en el corte %s: "
+        print("CIFRA fichas que la vara nueva devuelve al silencio en el corte %s: "
               "%d operaciones" % (corte[:8], len(movidas)))
 
     print("")

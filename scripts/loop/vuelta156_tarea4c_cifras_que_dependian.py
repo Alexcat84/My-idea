@@ -192,7 +192,7 @@ def main():
             print("   %-58s fase %r, catalogo %s" % (rel, fase, cat))
             print("        LA CITAN: %s" % (", ".join(quien) if quien else "NADIE"))
         print("")
-        print("   CIFRA salidas que no calzan y ADEMAS estan citadas: %d fichero(s)" % citadas)
+        print("CIFRA salidas que no calzan y ADEMAS estan citadas: %d fichero(s)" % citadas)
         print("")
         if citadas == 0:
             print("   LAS DOS SON LOS FICHEROS DE DIAGNOSTICO DEL PROPIO AUDITOR EN LA VUELTA")

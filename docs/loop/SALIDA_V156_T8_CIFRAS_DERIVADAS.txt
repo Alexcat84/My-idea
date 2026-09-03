@@ -1,0 +1,50 @@
+====================================================================================================
+VUELTA 156, TAREA 8 (APOYO): LAS CIFRAS QUE SUS GUARDAS NO PUBLICAN COMO `CIFRA`,
+CONTADAS DE LAS SALIDAS SELLADAS DE ESTA VUELTA
+====================================================================================================
+
+FUENTE 1: docs/loop/SALIDA_V156_T1B_CICLO_Y_GUARDA.txt
+LINEA LEIDA, LITERAL:
+     [OK] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 154 par(es) bidireccional(es) tras resolver, 154 con cita, 0 SIN CITA [FUERA DE ESTA VARA, decision del fundador del 14 ago 2026, camino A: 3 par(es) mas que solo existen si se admite como declarante a un nodo DEPRECADO, o sea 157 con ellos: ['asignacion_recursos_en_gates <-> sistema_gates_go_kill', 'formalizar_junta_asesora <-> identificar_consejo_asesores', 'revision_portafolio_periodica <-> sistema_gates_go_kill']])
+
+   comprobado contando la propia linea: los pares nombrados uno a uno son 3
+      asignacion_recursos_en_gates <-> sistema_gates_go_kill
+      formalizar_junta_asesora <-> identificar_consejo_asesores
+      revision_portafolio_periodica <-> sistema_gates_go_kill
+
+CIFRA pares bidireccionales CITADOS: 154 par(es)
+CIFRA pares bidireccionales HUERFANOS: 0 par(es)
+CIFRA pares EXCLUIDOS por declarante deprecado: 3 par(es)
+CIFRA pares del universo ENSANCHADO: 157 par(es)
+
+FUENTE 2: docs/loop/SALIDA_V156_T9_GUARDAS_CIERRE.txt
+LINEAS LEIDAS, LITERALES:
+   VERDE: los 10 ficheros SALIDA_V156_*_APERTURA.txt nacieron todos en el primer commit de la vuelta (hijo directo del acta):
+   ROJO, apertura de la vuelta 100 NO sellada antes de la 1.a operacion (48 cosa(s) no cuadran):
+   VERDE EXIT 0: 0 pares (base cf945888). Filas cambiadas examinadas (0): ninguna
+
+   comprobado contando el fichero: lineas ' -- nacido en ' = 10
+
+CIFRA ficheros de apertura sellados de la vuelta 156: 10 fichero(s)
+CIFRA pares examinados por la guarda de cifras del plan: 0 par(es)
+FUENTE 3: docs/loop/SALIDA_V156_T9_TABLA_POR_FASE.txt
+LINEAS LEIDAS, LITERALES:
+   CIFRA filas de la tabla por fase en VERDE: 5 filas
+   CIFRA filas de la tabla por fase en VERDE PARCIAL: 3 filas
+   CIFRA filas de la tabla por fase en NO CUMPLE: 0 filas
+
+   LAS ETIQUETAS SE REESCRIBEN AQUI PARA QUE SEAN DISTINGUIBLES, y se dice
+   por que: 'en VERDE' y 'en VERDE PARCIAL' comparten todas sus palabras
+   utiles, asi que la guarda del reporte no puede saber de cual se habla.
+   Los numeros son los mismos; lo unico que cambia es el rotulo.
+
+CIFRA filas de la tabla por fase ENTERAS: 5 fila(s)
+CIFRA filas de la tabla por fase A MEDIAS: 3 fila(s)
+CIFRA filas de la tabla por fase INCUMPLIDAS: 0 fila(s)
+
+====================================================================================================
+NINGUNA DE ESTAS CIFRAS SE TECLEA: las seis salen de las cuatro lineas literales
+de arriba, y las dos que se pueden contar aparte (los pares nombrados y las
+lineas de nacimiento) se cuentan y se exige que cuadren, o esto cae en ROJO.
+====================================================================================================
+EXITCODE: 0

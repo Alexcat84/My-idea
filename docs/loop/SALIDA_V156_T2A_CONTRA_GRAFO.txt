@@ -15,7 +15,7 @@ Par: juran_rcca_metodo  <->  viaje_diagnostico_remedial
      etiqueta_arbol: Diagnostica y Corrige la Causa
      dominio: quality | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
 
-  CIFRA nodos vivos del par: 2 nodo(s) de 2
+CIFRA nodos vivos del par: 2 nodo(s) de 2
 
 ------------------------------------------------------------------------------------------------
 2. LOS PASOS ENTEROS DE LOS DOS, SIN RECORTAR
@@ -37,8 +37,8 @@ Par: juran_rcca_metodo  <->  viaje_diagnostico_remedial
      7. Gestionar la resistencia predecible al cambio
      8. Establecer nuevos controles para sostener las ganancias
 
-  CIFRA pasos de juran_rcca_metodo: 4 paso(s)
-  CIFRA pasos de viaje_diagnostico_remedial: 8 paso(s)
+CIFRA pasos de juran_rcca_metodo: 4 paso(s)
+CIFRA pasos de viaje_diagnostico_remedial: 8 paso(s)
 
 ------------------------------------------------------------------------------------------------
 3. LA ARISTA, MEDIDA EN LAS CUATRO VISTAS, CON EL RESOLUTOR DELANTE
@@ -51,16 +51,16 @@ Par: juran_rcca_metodo  <->  viaje_diagnostico_remedial
   DIRECCION juran_rcca_metodo -> viaje_diagnostico_remedial declarada por alguien: True
   DIRECCION viaje_diagnostico_remedial -> juran_rcca_metodo declarada por alguien: True
   BIDIRECCIONAL: True
-  CIFRA vistas que declaran la arista: 4 direccion(es)
+CIFRA vistas que declaran la arista: 4 direccion(es)
 
 ------------------------------------------------------------------------------------------------
 4. LOS DOS NODOS EN EL RESTO DEL REGISTRO DE CITAS
 ------------------------------------------------------------------------------------------------
   Lineas del registro: 154
-  LA PROPIA ENTRADA: LD-OPC05-097, clase C | clase C | via LECTURA_DIRIGIDA
+  LA PROPIA ENTRADA: LD-OPC05-097, clase C  [RECLASIFICADA A D EN LA VUELTA 156: ver la razon] | clase D | via LECTURA_DIRIGIDA
   viaje_diagnostico_remedial       aparece con six_sigma_dmaic                  | clase D | puesto 3118, dominio quality, clase D
 
-  CIFRA otras entradas del registro que tocan al par: 1 linea(s)
+CIFRA otras entradas del registro que tocan al par: 1 linea(s)
 
 ------------------------------------------------------------------------------------------------
 5. LOS DOS NODOS EN LOS ACTOS DECLARADOS DEL PLAN (docs/plan/)
@@ -80,7 +80,7 @@ Par: juran_rcca_metodo  <->  viaje_diagnostico_remedial
   DIFERENCIA_CONTRA_COLA_ENSAYO_AGOSTO.jsonl :268    {"dominio": "quality", "madre": "juran_rcca_metodo", "hijo": "prueba_teorias_causa_raiz", "paso": 2, "texto_paso": "Analizar y diagnosticar: analizar 
   DIFERENCIA_CONTRA_COLA_ENSAYO_AGOSTO.jsonl :382    {"dominio": "quality", "madre": "juran_rcca_metodo", "hijo": "diseno_implementacion_remedio", "paso": 3, "texto_paso": "Mejorar: diseñar e implementar
   INVENTARIO.jsonl                           :424    {"tipo":"acto","nombre":"analisis_causa_raiz_diagnostico","miembros":["analisis_causa_raiz_diagnostico","analisis_diagnostico_causa","viaje_diagnostic
-  LECTURAS_DIRIGIDAS.md                      :2023   | 97 | REGISTRO DE CITAS `OP-C-05` | juran_rcca_metodo <-> viaje_diagnostico_remedial | C | LD-OPC05-097 | el metodo RCCA de Juran en cuatro fases con
+  LECTURAS_DIRIGIDAS.md                      :2023   | 97 | REGISTRO DE CITAS `OP-C-05` | juran_rcca_metodo <-> viaje_diagnostico_remedial | D | LD-OPC05-097 | el metodo RCCA de Juran en cuatro fases con
   OPERACIONES.jsonl                          :25     {"id_op": "OP-E-01", "fase": "04_ENLACES", "tipo": "ENLACE", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": []
   OP_E_01_DECIDIDAS.jsonl                    :60     {"madre": "viaje_diagnostico_remedial", "hijo": "resistencia_al_cambio", "paso": "7", "tramo": 4, "decision": "ESCRITA", "fichero_origen": "SALIDA_V78
   OP_E_01_DECIDIDAS.jsonl                    :150    {"madre": "juran_rcca_metodo", "hijo": "prueba_teorias_causa_raiz", "paso": "2", "tramo": 9, "decision": "NO SE ENLAZA", "fichero_origen": "SALIDA_V84
@@ -118,7 +118,7 @@ Par: juran_rcca_metodo  <->  viaje_diagnostico_remedial
   RECOMPUTO_3388.md                          :339    | **FALSA** | **21** | `captura_conocimiento_mercado` (3769), `control_estadistico_de_procesos` (3717), `criterios_equity_split` (3700), `design_for_s
   RECOMPUTO_3388_COMPONENTES.jsonl           :86     {"miembros": ["analisis_causa_raiz_diagnostico", "analisis_diagnostico_causa", "viaje_diagnostico_remedial"], "tamano": 3, "posibles": 3, "leidos": 2,
 
-  CIFRA lineas de docs/plan/ que nombran a uno de los dos: 52 linea(s)
+CIFRA lineas de docs/plan/ que nombran a uno de los dos: 52 linea(s)
 
 ================================================================================================
 LO QUE ESTA TAREA NO HACE: no decide la clase. La decision con la vara va en

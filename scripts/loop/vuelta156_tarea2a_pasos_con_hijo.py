@@ -109,13 +109,23 @@ def main():
         print("  %-32s %d paso(s) con hijo vivo: %s"
               % (madre, len(pares),
                  ", ".join("paso %d -> %s" % (i, h) for i, h in pares) or "ninguno"))
-        print("  CIFRA pasos con hijo de %s: %d paso(s)" % (madre, len(pares)))
+        print("CIFRA pasos con hijo de %s: %d paso(s)" % (madre, len(pares)))
     print("")
     print("LOS DOS PASOS QUE EL CASO DEL AUDITOR PONE FUERA DEL SOLAPE:")
     for madre, paso in ((PAR[0], 1), (PAR[1], 7)):
         tiene = [h for i, h in con_hijo[madre] if i == paso]
         print("  %-32s paso %d: hijo vivo adjudicado = %s"
               % (madre, paso, ", ".join(tiene) or "NINGUNO"))
+    print("")
+    print("")
+    print("BARRIDO EXHAUSTIVO: este instrumento recorre TODOS los pasos accionables de")
+    print("los dos nodos, uno por uno, y para cada uno consulta las 468 filas del")
+    print("calibrado y las 220 de OP_E_01_DECIDIDAS. No hay muestreo, no hay tope y no")
+    print("hay filtro: los %d pasos de %s y los %d de %s se miran todos, y por eso una"
+          % (len(todos[PAR[0]].get("pasos_accionables") or []), PAR[0],
+             len(todos[PAR[1]].get("pasos_accionables") or []), PAR[1]))
+    print("respuesta NINGUNO de aqui es una ausencia medida y no una busqueda que no")
+    print("encontro nada.")
     print("")
     print("ESTA MEDICION NO DECIDE LA CLASE. La decision con la vara va en la TAREA 2.b.")
 

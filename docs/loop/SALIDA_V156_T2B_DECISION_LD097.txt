@@ -14,19 +14,13 @@ VUELTA 156, TAREAS 2.b a 2.e: LA DECISION DE LD-OPC05-097 CON LA VARA
   DECIDIDA: C -> D. NI la C escrita NI la A que adjudico el acta 155.
 
   SEDE 1: docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl
-     clase LEIDA hoy antes de tocar: C
-     clase escrita: D. razon ampliada +3568 caracteres. cita ampliada +52.
+     clase LEIDA hoy antes de tocar: D
+     YA ESTABA: la marca ya vive en la razon. No se duplica.
      ASSERT: texto viejo de `razon` y de `cita` sigue siendo PREFIJO LITERAL. OK
      ASSERT: 154 lineas antes, 154 despues. OK
 
   SEDE 2: docs/plan/LECTURAS_DIRIGIDAS.md, la fila 97
-     fila reescrita: la celda de clase pasa de C a D y la razon se AMPLIA
-     (+710 caracteres), con la clase vieja nombrada dentro de la razon.
-     LA CELDA DE CLASE SE DEJA LIMPIA A PROPOSITO: el lector de este fichero
-     (vuelta152_registro_de_citas_opc05.py) exige [A-Z]+ en esa celda, y un
-     tachado ahi haria DESAPARECER el par del registro y pondria Gate 0 en
-     rojo. La clase vieja no se pierde: vive en la razon de esta misma fila
-     y en la `cita` y la `razon` del registro.
+     YA ESTABA: la marca ya vive en la fila. No se duplica.
      ASSERT: la fila 97 es unica, su clase es D y trae la correccion. OK
 
 2.c LA FUSION NO SE EJECUTA, Y NO HABIA NADA QUE EJECUTAR
@@ -34,7 +28,7 @@ VUELTA 156, TAREAS 2.b a 2.e: LA DECISION DE LD-OPC05-097 CON LA VARA
   La adjudicacion 6.1 del acta 155 manda registrar CANDIDATO A FUSION solo SI la
   clase pasa a A. La decision de hoy es D, asi que NO se registra candidato, NO
   se elige superviviente y NO se toca una sola arista.
-  CIFRA candidatos a fusion registrados: 0 par(es)
+CIFRA candidatos a fusion registrados: 0 par(es)
 
 2.d GUARDA DE FRONTERA, DESPUES
 --------------------------------------------------------------------------------------------------
@@ -53,7 +47,7 @@ VUELTA 156, TAREAS 2.b a 2.e: LA DECISION DE LD-OPC05-097 CON LA VARA
   veredictos (n)           antes=3388  despues=3388  IGUAL=True
 
   ASSERT: el registro cambia, EL GRAFO NO. Las ocho magnitudes iguales.
-  CIFRA veredictos del cribado: 3388 fila(s), y n NO se mueve.
+CIFRA veredictos del cribado: 3388 fila(s), y n NO se mueve.
 
 CIFRA entradas del registro reclasificadas: 1 par(es)
 CIFRA sedes corregidas: 2 fichero(s)

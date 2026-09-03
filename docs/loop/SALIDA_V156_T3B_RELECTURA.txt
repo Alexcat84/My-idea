@@ -37,25 +37,26 @@ LOS DOS VEREDICTOS, ESCRITOS EN LAS DOS SEDES
 ====================================================================================================
 
   LD-OPC05-002 | actividades_clave <-> key_resources_hypothesis
-     clase LEIDA hoy antes de tocar: C
-     clase escrita: D (razon +1384 caracteres)
+     clase LEIDA hoy antes de tocar: D
+     YA ESTABA: no se duplica.
 
   LD-OPC05-040 | cost_management_plan <-> stakeholder_register
-     clase LEIDA hoy antes de tocar: C
-     clase escrita: D (razon +1515 caracteres)
+     clase LEIDA hoy antes de tocar: D
+     YA ESTABA: no se duplica.
 
   ASSERT: 154 lineas antes y despues, y las dos clases escritas. OK
 
   SEDE 2: docs/plan/LECTURAS_DIRIGIDAS.md
-     LD-OPC05-002 fila 2 reescrita: clase C -> D, razon +298 caracteres
-     LD-OPC05-040 fila 40 reescrita: clase C -> D, razon +298 caracteres
+     LD-OPC05-002 YA ESTABA en D
+     LD-OPC05-040 YA ESTABA en D
      ASSERT: las dos filas quedan en D en el fichero de lecturas. OK
 
 GUARDA DE FRONTERA, DESPUES
   DESPUES  sha256 dataset/ (3881 ficheros) bd1a7eb0fae6c1334a655bd9cec830a8 | censo 3853/3169 | aristas 8780/8740 | n 3388
   ASSERT: las siete magnitudes iguales. El registro cambia, EL GRAFO NO.
 
-CIFRA lecturas dirigidas reclasificadas en esta tarea: 2 par(es)
+movidas EN ESTA CORRIDA: 0 (0 si el bloque ya estaba escrito)
+CIFRA lecturas dirigidas reclasificadas por la TAREA 3.b: 2 par(es)
 CIFRA clases de las lecturas dirigidas tras la tarea: {"C": 119, "D": 3}
 CIFRA veredictos del cribado: 3388 fila(s), y n NO se mueve.
 EXITCODE: 0

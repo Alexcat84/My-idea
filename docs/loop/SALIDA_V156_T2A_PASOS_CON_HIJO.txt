@@ -46,13 +46,21 @@ viaje_diagnostico_remedial  (8 pasos)
 RESUMEN: PASOS CON HIJO VIVO ADJUDICADO EN EL CALIBRADO
 ====================================================================================================
   juran_rcca_metodo                2 paso(s) con hijo vivo: paso 2 -> prueba_teorias_causa_raiz, paso 3 -> diseno_implementacion_remedio
-  CIFRA pasos con hijo de juran_rcca_metodo: 2 paso(s)
+CIFRA pasos con hijo de juran_rcca_metodo: 2 paso(s)
   viaje_diagnostico_remedial       1 paso(s) con hijo vivo: paso 7 -> resistencia_al_cambio
-  CIFRA pasos con hijo de viaje_diagnostico_remedial: 1 paso(s)
+CIFRA pasos con hijo de viaje_diagnostico_remedial: 1 paso(s)
 
 LOS DOS PASOS QUE EL CASO DEL AUDITOR PONE FUERA DEL SOLAPE:
   juran_rcca_metodo                paso 1: hijo vivo adjudicado = NINGUNO
   viaje_diagnostico_remedial       paso 7: hijo vivo adjudicado = resistencia_al_cambio
+
+
+BARRIDO EXHAUSTIVO: este instrumento recorre TODOS los pasos accionables de
+los dos nodos, uno por uno, y para cada uno consulta las 468 filas del
+calibrado y las 220 de OP_E_01_DECIDIDAS. No hay muestreo, no hay tope y no
+hay filtro: los 4 pasos de juran_rcca_metodo y los 8 de viaje_diagnostico_remedial se miran todos, y por eso una
+respuesta NINGUNO de aqui es una ausencia medida y no una busqueda que no
+encontro nada.
 
 ESTA MEDICION NO DECIDE LA CLASE. La decision con la vara va en la TAREA 2.b.
 EXITCODE: 0

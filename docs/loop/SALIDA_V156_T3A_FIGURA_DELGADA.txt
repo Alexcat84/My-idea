@@ -6,7 +6,7 @@ DOS LINEAS DISTINTAS, UNA EN CADA NODO. ESTA TAREA MIDE, NO RECLASIFICA.
 
 Lineas del registro: 154
 De ellas, via LECTURA_DIRIGIDA: 122
-Clases de esas lecturas dirigidas, contadas: {"C": 121, "D": 1}
+Clases de esas lecturas dirigidas, contadas: {"C": 119, "D": 3}
 
 ========================================================================================================
 LOS TRES CONTEOS
@@ -50,7 +50,7 @@ NOMINA DEL SACO 'NOMBRA UNA SOLA' (5), CON SU PUNTERO Y SU RAZON ENTERA
 NOMINA DEL SACO 'NO NOMBRA NINGUNA' (115), CON SU RAZON ENTERA
 ========================================================================================================
 
-  LD-OPC05-002 | clase C | actividades_clave <-> key_resources_hypothesis
+  LD-OPC05-002 | clase D | actividades_clave <-> key_resources_hypothesis
     razon: dos bloques distintos del Canvas: que ACTIVIDADES exige la propuesta contra que RECURSOS fisicos, financieros, de talento y de propiedad intelectual hacen falta
 
   LD-OPC05-004 | clase C | actualizar_business_model_canvas_tuneup <-> reempaquetado_producto
@@ -155,7 +155,7 @@ NOMINA DEL SACO 'NO NOMBRA NINGUNA' (115), CON SU RAZON ENTERA
   LD-OPC05-039 | clase C | control_estadistico_metodo_medicion <-> definiciones_operacionales_3
     razon: validar estadisticamente el METODO DE MEDICION contra escribir definiciones operacionales que hagan reproducible un adjetivo ambiguo
 
-  LD-OPC05-040 | clase C | cost_management_plan <-> stakeholder_register
+  LD-OPC05-040 | clase D | cost_management_plan <-> stakeholder_register
     razon: el plan de gestion de costos con sus umbrales de varianza contra el registro de interesados con su influencia y su postura
 
   LD-OPC05-041 | clase C | costo_de_mala_calidad_copq <-> modelo_costo_optimo_calidad
@@ -415,7 +415,7 @@ que el acta dice, y el lado medido sale de recorrer el fichero.
   LD-OPC05-002     esperado NINGUNA  medido NINGUNA  COINCIDE
        fuente del esperado: acta 155, 6.2: 'dos bloques del Canvas sin una linea comun'
 
-  CIFRA casos de calibracion que coinciden: 3 de 3
+CIFRA casos de calibracion que coinciden: 3 de 3
 
 ========================================================================================================
 RELECTURA A MANO DE LOS DOS SACOS PEQUENOS, Y SE DECLARA QUE ES A MANO
@@ -437,8 +437,8 @@ la calibracion de arriba, cuyo lado esperado lo pone el acta y no este fichero.
   sustitucion: UNO SOLO BAJA, LD-OPC05-047, de UNA a NINGUNA, por falso positivo
   del patron vago. Los otros seis los CONFIRMA. El saco grande no se mueve por
   esta relectura: 115 medidos por computo, 116 tras la lectura.
-  CIFRA lecturas que corrigen al computo: 1 par(es)
-  CIFRA los tres sacos TRAS LA LECTURA: 2 / 4 / 116 par(es)
+CIFRA lecturas que corrigen al computo: 1 par(es)
+CIFRA lecturas dirigidas SIN FIGURA tras la relectura a mano: 116 par(es)
 
 ========================================================================================================
 EL LIMITE DE ESTE COMPUTO, DICHO OTRA VEZ AL FINAL PARA QUE NO SE LEA SOLO

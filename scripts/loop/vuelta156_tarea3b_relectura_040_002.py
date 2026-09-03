@@ -164,12 +164,17 @@ def main():
         print("")
         print("  %s | %s <-> %s" % (ld, c["par"][0], c["par"][1]))
         assert tuple(sorted(e["par"])) == tuple(sorted(c["par"])), "%s: el par no es el esperado" % ld
-        assert e["clase"] == c["clase_vieja"], (
-            "%s: la clase leida hoy es %s y no %s" % (ld, e["clase"], c["clase_vieja"]))
         print("     clase LEIDA hoy antes de tocar: %s" % e["clase"])
+        # LA IDEMPOTENCIA VA DELANTE DEL ASSERT (correccion de la propia vuelta 156):
+        # en la segunda corrida la clase leida es LA NUEVA, y exigirle la vieja hacia
+        # que el instrumento no se pudiera re correr para sellar su salida.
         if MARCA in e["razon"]:
             print("     YA ESTABA: no se duplica.")
+            assert e["clase"] == c["clase_nueva"], (
+                "%s trae la marca pero su clase es %s" % (ld, e["clase"]))
             continue
+        assert e["clase"] == c["clase_vieja"], (
+            "%s: la clase leida hoy es %s y no %s" % (ld, e["clase"], c["clase_vieja"]))
         bloque = ("  [CORRECCION DECLARADA (2026-09-03, vuelta 156, TAREA 3.b, " + MARCA
                   + " por la adjudicacion 6.2 del acta 155). EL TEXTO VIEJO NO SE BORRA Y LA "
                   "CLASE VIEJA SE NOMBRA: donde este par decia ~~clase " + c["clase_vieja"]
@@ -247,7 +252,13 @@ def main():
     F = entradas()
     LD = [x for x in F if x["via"] == "LECTURA_DIRIGIDA"]
     porclase = {k: sum(1 for x in LD if x["clase"] == k) for k in sorted({x["clase"] for x in LD})}
-    print("CIFRA lecturas dirigidas reclasificadas en esta tarea: %d par(es)" % movidas)
+    # LA CIFRA SE CUENTA DEL REGISTRO, NO DE LO QUE ESTA CORRIDA MOVIO (correccion
+    # de la propia vuelta 156): `movidas` vale 2 la primera vez y 0 la segunda, asi
+    # que una salida sellada en la segunda corrida publicaba un 0 que no describe
+    # nada. Se cuentan las entradas que llevan la marca de esta tarea.
+    con_marca = sum(1 for x in F if MARCA in x["razon"])
+    print("movidas EN ESTA CORRIDA: %d (0 si el bloque ya estaba escrito)" % movidas)
+    print("CIFRA lecturas dirigidas reclasificadas por la TAREA 3.b: %d par(es)" % con_marca)
     print("CIFRA clases de las lecturas dirigidas tras la tarea: %s"
           % json.dumps(porclase, ensure_ascii=False))
     print("CIFRA veredictos del cribado: %d fila(s), y n NO se mueve." % despues[6])
