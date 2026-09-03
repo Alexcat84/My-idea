@@ -1,0 +1,43 @@
+=== EL CORREDOR DE LA VUELTA 161, MEDIDO EN VEZ DE ALEGADO ===
+acta 160 (abre esta vuelta): ed234154a4e19d07464d6f17480d37e2215b560b ACTA DE LA VUELTA 160 DEL AUDITOR: HAY PARADA Y ES LEGITIMA. LA RELECTURA CONJU
+corredor (acta exclusive .. apertura exclusive):
+  d3482b11 alexcat84 :: Decision del fundador: la vara de la lectura dirigida se congela, los 14 C se releen una vez, y las tres deudas entran
+
+-- rutas tocadas por cada commit del corredor --
+  d3482b11b3f95e18907628fb741f2cb49e0a79b8:
+    docs/loop/PROMPT_SIGUIENTE.md
+    docs/loop/paradas/2026-09-03-credito-vara-movil-DECISION.md
+    docs/loop/paradas/2026-09-03-credito-vara-movil.md
+    docs/plan/BANCO_DEL_PLAN.md
+    docs/plan/OPERACIONES.jsonl
+
+-- las cifras que la apertura publica, medidas en LOS DOS EXTREMOS del corredor --
+  conteo de aristas en ed234154 (acta 160):
+        ed234154 | nodos 3853 vivos 3169 depre 684 | sig 8780 prev 8740 suma 17520 union 9914 | solo_sig 1174 solo_prev 1134 auto 0 | nodos_con_dup_en_lista 0
+  conteo de aristas en d3482b11 (decision del fundador):
+        d3482b11 | nodos 3853 vivos 3169 depre 684 | sig 8780 prev 8740 suma 17520 union 9914 | solo_sig 1174 solo_prev 1134 auto 0 | nodos_con_dup_en_lista 0
+  desfase del calibrado en ed234154:
+    REF: ed234154
+    FILAS EN EL CALIBRADO: 468
+    DESFASE DEL CALIBRADO RASTREADO: 4 fila(s)
+      dia_cero_defectos_2 -> eliminacion_causas_error_4 | arista guardada=False | arista real hoy=True
+      customer_validation -> establecer_linea_base_mvp | arista guardada=False | arista real hoy=True
+      dia_cero_defectos_3 -> eliminacion_causas_error_4 | arista guardada=False | arista real hoy=True
+      ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente | arista guardada=False | arista real hoy=True
+  desfase del calibrado en d3482b11:
+    REF: d3482b11
+    FILAS EN EL CALIBRADO: 468
+    DESFASE DEL CALIBRADO RASTREADO: 4 fila(s)
+      dia_cero_defectos_2 -> eliminacion_causas_error_4 | arista guardada=False | arista real hoy=True
+      customer_validation -> establecer_linea_base_mvp | arista guardada=False | arista real hoy=True
+      dia_cero_defectos_3 -> eliminacion_causas_error_4 | arista guardada=False | arista real hoy=True
+      ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente | arista guardada=False | arista real hoy=True
+
+-- arbol de dataset/ web/ engine/ en los dos extremos (si no se mueve, ninguna cifra de la apertura se pudo mover) --
+  dataset: ed234154=bfbdaa56995b340d22d414e2551aaf0834297ef3  d3482b11=bfbdaa56995b340d22d414e2551aaf0834297ef3
+  web: ed234154=5d6b8b39696b7474046b09425d030f2695a10bf3  d3482b11=5d6b8b39696b7474046b09425d030f2695a10bf3
+  engine: ed234154=caf82f2c6a81be0980aa0811781b592cb5dfbf35  d3482b11=caf82f2c6a81be0980aa0811781b592cb5dfbf35
+  git diff --numstat ed234154 d3482b11 -- dataset/ web/ engine/ :
+    (cero filas arriba = ninguna de las tres rutas se movio)
+  git diff --numstat ed234154 d3482b11 -- docs/plan/PASO_NODO_CALIBRADO.jsonl :
+    (cero filas arriba = el calibrado tampoco se movio)
