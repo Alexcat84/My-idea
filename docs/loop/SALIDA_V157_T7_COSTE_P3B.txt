@@ -1,0 +1,83 @@
+====================================================================================================
+VUELTA 157, TAREA 7: EL COSTE DE LAS NUEVE SALIDAS DE LA P3b, CRONOMETRADO
+====================================================================================================
+
+A) LA NOMINA, RECOMPUTADA DEL EXPEDIENTE (no tecleada)
+   CIFRA fichas con al menos una cita que la bateria no cubre: 4
+      OP-C-05    SALIDA_V154_T2D_MUTACION.txt
+      OP-E-03    SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt, SALIDA_V96_TAREA3_MUTACION.txt, SALIDA_V97_TAREA2_MUTACION.txt, SALIDA_V98_TAREA4_MUTACION.txt, SALIDA_V99_TAREA3_MUTACION.txt
+      OP-E-07    SALIDA_V93_TAREA3_MUTACION.txt, SALIDA_V94_TAREA2B_MUTACION.txt
+      OP-S-11    SALIDA_V136_3D_MUTACION.txt
+   CIFRA salidas distintas sin respaldo en la bateria: 9
+
+B) EL PRODUCTOR DE CADA UNA, BUSCADO POR SU PROPIO TEXTO
+   CIFRA ficheros .py barridos: 998
+   SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt     (ninguno)
+        PRODUCTOR NO ENCONTRADO
+   SALIDA_V136_3D_MUTACION.txt                (ninguno)
+        PRODUCTOR NO ENCONTRADO
+   SALIDA_V154_T2D_MUTACION.txt               scripts/loop/vuelta154_tarea2d_mutacion_guarda.py
+        POR SU TEXTO
+   SALIDA_V93_TAREA3_MUTACION.txt             scripts/loop/vuelta93_tarea3_guarda_direccion.py
+        POR SU TEXTO
+   SALIDA_V94_TAREA2B_MUTACION.txt            scripts/loop/vuelta93_tarea3_guarda_direccion.py
+        POR SU TEXTO
+   SALIDA_V96_TAREA3_MUTACION.txt             scripts/loop/vuelta96_tarea3_prueba_mutacion.py
+        POR SU TEXTO
+   SALIDA_V97_TAREA2_MUTACION.txt             scripts/loop/vuelta97_tarea2_prueba_mutacion.py
+        POR SU TEXTO
+   SALIDA_V98_TAREA4_MUTACION.txt             scripts/loop/vuelta98_tarea4_prueba_mutacion.py
+        POR SU TEXTO
+   SALIDA_V99_TAREA3_MUTACION.txt             scripts/loop/vuelta99_tarea3_prueba_mutacion.py
+        POR SU TEXTO
+   CIFRA salidas con productor identificado: 7 de 9
+
+C) LAS CORRIDAS, UNA VEZ CADA UNA Y CRONOMETRADAS
+   script                                     exit   segundos  muerde
+   SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt     -      -         SIN PRODUCTOR
+   SALIDA_V136_3D_MUTACION.txt                -      -         SIN PRODUCTOR
+   vuelta154_tarea2d_mutacion_guarda.py       0      38.32     SI
+        escribe en docs/loop/: nada
+        primera linea: ================================================================================================
+   vuelta93_tarea3_guarda_direccion.py        0      0.08      SI
+        escribe en docs/loop/: nada
+        primera linea: ==========================================================================================
+   vuelta93_tarea3_guarda_direccion.py        0      0.10      SI
+        escribe en docs/loop/: nada
+        primera linea: ==========================================================================================
+   vuelta96_tarea3_prueba_mutacion.py         1      0.81      NO (exit 1)
+        escribe en docs/loop/: nada
+        primera linea: ====================================================================================================
+        veredicto: LO QUE NO SE PRUEBA, Y SE DICE: la CLASE A/B/C/D de cada par es tabla a mano.
+        veredicto: NO HAY CASO ROJO AUTOMATICO PARA ELLA. No se le fabrica uno que se apruebe solo.
+        veredicto: VEREDICTO: ROJO, alguna guarda no se comporta
+   vuelta97_tarea2_prueba_mutacion.py         1      0.60      NO (exit 1)
+        escribe en docs/loop/: nada
+        primera linea: ====================================================================================================
+        veredicto: RESULTADO: 10 de 12 comprobaciones se comportan como deben.
+        veredicto: Mutaciones que TENIAN que caer: 6. Controles verdes: 6.
+        veredicto: ====================================================================================================
+   vuelta98_tarea4_prueba_mutacion.py         0      0.06      SI
+        escribe en docs/loop/: nada
+        primera linea: ================================================================================================================
+   vuelta99_tarea3_prueba_mutacion.py         0      0.06      SI
+        escribe en docs/loop/: nada
+        primera linea: ================================================================================================================
+
+D) EL COSTE, QUE ES LO QUE EL ACTA PIDE TENER DELANTE
+   CIFRA salidas de la P3b sin respaldo en la bateria: 9
+   CIFRA de esas con productor identificado y corrido: 7
+   CIFRA de las corridas que TODAVIA MUERDEN (exit 0): 5
+   CIFRA de las corridas que ESCRIBEN en docs/loop/: 0
+   CIFRA segundos de UNA corrida de todas: 40.04 segundos
+   CIFRA segundos que anadirian al cierre de cada vuelta: 80.07 segundos
+      (la bateria corre CADA mutacion DOS VECES para cotejar que su salida
+       sellada se repite, asi que el coste de entrada es el doble del de una
+       corrida suelta. La cifra de arriba ya lleva ese doble.)
+
+E) LO QUE ESTA TAREA NO HACE, Y SE DICE
+   NO mete ninguna de estas en verificar_mutaciones_viejas.py. La cifra se
+   publica y se trae. Y mientras no entren, la P3b de esas fichas queda
+   declarada JUNTO A LA FUNCION como PROXY SIN RESPALDO EFECTIVO, que es lo
+   que la TAREA 1 de esta vuelta ya escribio con la adjudicacion 6.7.
+FIN
