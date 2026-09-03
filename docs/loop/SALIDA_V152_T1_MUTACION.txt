@@ -1,0 +1,24 @@
+APERTURA DE LA VUELTA 150, LEIDA DE GIT (no tecleada):
+  fe98cf97 ACTA DE LA VUELTA 149 DEL AUDITOR: LA 148 NO PUBLICA UNA SOLA CIFRA FALSA, LA FASE 07 QUEDA CERRADA, 
+  commits en fe98cf97..HEAD: 10
+
+CASO A | P3 del expediente  | --corte fe98cf97    | esperado VERDE | obtenido VERDE | exit 0 | [OK]
+    | GUARDA DEL RELOJ: commits propios de la vuelta 10 | commits contados por P3 298 | INTRUSOS 0
+
+CASO B | P3 del expediente  | --corte HEAD        | esperado ROJO  | obtenido ROJO  | exit 1 | [OK]
+    | GUARDA DEL RELOJ: commits propios de la vuelta 10 | commits contados por P3 302 | INTRUSOS 4
+    | INTRUSOS: 4985136d, 76a18a90, c9c6ea40, fb3c0c75
+    | AssertionError: LA VARA SE CUENTA A SI MISMA: la P3 esta usando como prueba 4 commit(s) escritos por la propia vuelta (4985136d, 76a18a90, c9c6ea40, fb3c0c75)
+
+CASO C | fila 0 CODIGO      | --corte fe98cf97    | esperado VERDE | obtenido VERDE | exit 0 | [OK]
+    | GUARDA DE SALIDAS: salidas anadidas por la propia vuelta 36 | usadas como prueba 3 | INTRUSAS 0
+
+CASO D | fila 0 CODIGO      | --corte HEAD        | esperado ROJO  | obtenido ROJO  | exit 1 | [OK]
+    | GUARDA DE SALIDAS: salidas anadidas por la propia vuelta 36 | usadas como prueba 8 | INTRUSAS 5
+    | INTRUSAS: docs/loop/SALIDA_V150_2C_CASO_POSITIVO_GATE0.txt, docs/loop/SALIDA_V150_2C_SIETE_VERIFICACIONES.txt, docs/loop/SALIDA_V150_4_TABLA_POR_FASE.txt, docs/loop/SALIDA_V150_COMMITS_TALLADOS.txt, d
+    | AssertionError: LA VARA SE CUENTA A SI MISMA: la fila 0 CODIGO esta usando como prueba 5 salida(s) escritas por la propia vuelta (docs/loop/SALIDA_V150_2C_CASO_POSITIVO_GATE0.txt, docs/loop/SALIDA_V15
+
+================================================================================================
+PRUEBA DE MUTACION SUPERADA: los dos casos VERDE pasan y los dos ROJO CAEN,
+y caen NOMBRANDO los commits y las salidas de la propia vuelta. Las guardas
+muerden: sin el corte, las dos varas vuelven a contarse a si mismas.

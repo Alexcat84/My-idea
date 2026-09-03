@@ -19,9 +19,28 @@ mezcla nunca:
                  repo. No es un fracaso: es informacion, y abre la fase en vez
                  de cerrarla (TAREA 4.c).
 
+CORRECCION DECLARADA (2026-09-02, vuelta 152, TAREA 1; hallazgo del acta 151.
+NADA DEL TEXTO ANTERIOR SE BORRA, estas lineas se anaden). LA FILA 0 CODIGO SE
+CONTABA A SI MISMA: buscaba en docs/loop/ una salida COMMITEADA que nombrase el
+id_op y trajese una marca de ROJO, y la leia con os.listdir DEL ARBOL DE
+TRABAJO, o sea incluyendo las salidas que la PROPIA VUELTA acababa de escribir.
+El papeleo de la vuelta contaba como prueba historica de que la guarda se cayo
+antes del arreglo. Medido por el auditor: la cifra de la fila se movio de 58/13
+a 60/11 sin que nadie tocase un nodo.
+
+LA REPARACION, LA MISMA QUE EN LA P3: el catalogo de salidas se lee del ARBOL
+DEL `--corte` con git ls-tree y el contenido con git show, y una GUARDA compara
+dos conjuntos COMPUTADOS (las salidas usadas y las salidas ANADIDAS en el rango
+`--apertura`..HEAD) y CAE si se cruzan.
+
+TAMBIEN SE PARAMETRIZA LA SALIDA DE GATE 0 (`--gate0`), que estaba clavada en el
+fichero de la vuelta 150: una tabla del cierre se mide al cierre (EJECUTOR.md 1)
+y no con el Gate 0 de otra vuelta.
+
 USO:
-  python scripts/loop/vuelta150_4_tabla_por_fase.py
+  python scripts/loop/vuelta150_4_tabla_por_fase.py --corte <REF> [--apertura <REF>] [--gate0 <RUTA>]
 """
+import argparse
 import io
 import json
 import os
@@ -92,9 +111,14 @@ def resolutor(N):
     return res
 
 
-def gate0_checks():
-    """Lee la salida de Gate 0 de la apertura de esta vuelta, ya commiteada."""
-    ruta = os.path.join(RAIZ, "docs", "loop", "SALIDA_V150_GATE0_CMD1_APERTURA.txt")
+def gate0_checks(ruta=None):
+    """Lee la salida de Gate 0 de la apertura de esta vuelta, ya commiteada.
+
+    CORRECCION DECLARADA de la vuelta 152: la ruta deja de estar clavada en el
+    fichero de la vuelta 150 y entra por --gate0. El defecto se conserva para
+    que una corrida sin bandera reproduzca la de la 150 al digito."""
+    if ruta is None:
+        ruta = os.path.join(RAIZ, "docs", "loop", "SALIDA_V150_GATE0_CMD1_APERTURA.txt")
     out = []
     for linea in io.open(ruta, encoding="utf-8"):
         m = re.match(r"\s*\[(OK|FALLO)\]\s+(.*)$", linea.rstrip("\n"))
@@ -103,13 +127,57 @@ def gate0_checks():
     return out
 
 
-def salidas_del_bucle():
-    d = os.path.join(RAIZ, "docs", "loop")
-    return [os.path.join(d, x) for x in os.listdir(d)
-            if x.startswith("SALIDA_") and x.endswith(".txt")]
+def salidas_del_bucle(corte):
+    """El catalogo de SALIDA_*.txt LEIDO DEL ARBOL DEL CORTE, no del de trabajo.
+
+    Devuelve [(ruta_relativa, texto)]. Con el reloj parado aqui, una salida que
+    la propia vuelta escriba no existe para esta vara."""
+    r = subprocess.run(["git", "ls-tree", "-r", "--name-only", corte, "--", "docs/loop"],
+                       capture_output=True, cwd=RAIZ)
+    rutas = [x for x in r.stdout.decode("utf-8", "replace").splitlines()
+             if x.startswith("docs/loop/SALIDA_") and x.endswith(".txt")]
+    out = []
+    for x in rutas:
+        b = subprocess.run(["git", "show", "%s:%s" % (corte, x)], capture_output=True, cwd=RAIZ)
+        if b.returncode:
+            continue
+        out.append((x, b.stdout.decode("utf-8", "replace")))
+    return out
+
+
+def guarda_salidas_congeladas(usadas, apertura):
+    """LA GUARDA DE LA FILA 0, hermana de la del reloj de la P3 y con la misma
+    forma: DOS CONJUNTOS COMPUTADOS, ninguno tecleado.
+
+      `usadas`   las salidas que la fila esta usando como prueba.
+      `propias`  las salidas ANADIDAS en `apertura`..HEAD, o sea las que la
+                 propia vuelta ha escrito, sacadas de git diff --diff-filter=A.
+
+    Si se cruzan, la fila se cuenta a si misma y la guarda CAE."""
+    r = subprocess.run(["git", "diff", "--name-only", "--diff-filter=A",
+                        "%s..HEAD" % apertura, "--", "docs/loop"],
+                       capture_output=True, cwd=RAIZ)
+    propias = {x for x in r.stdout.decode("utf-8", "replace").splitlines()
+               if x.startswith("docs/loop/SALIDA_") and x.endswith(".txt")}
+    intrusas = sorted(set(usadas) & propias)
+    return propias, intrusas
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--corte", required=True)
+    ap.add_argument("--apertura", default=None)
+    ap.add_argument("--gate0", default=None)
+    args = ap.parse_args()
+    corte = args.corte
+    apertura = args.apertura or corte
+    corte_h = subprocess.run(["git", "rev-parse", "--short=8", corte],
+                             capture_output=True, cwd=RAIZ).stdout.decode().strip()
+    print("RELOJ DE GIT CONGELADO EN --corte %s (%s). RANGO PROPIO: %s..HEAD"
+          % (corte, corte_h, apertura))
+    print("SALIDA DE GATE 0 LEIDA DE: %s"
+          % (args.gate0 or "docs/loop/SALIDA_V150_GATE0_CMD1_APERTURA.txt (defecto)"))
+
     filas = celdas_de_la_tabla()
     print("FILAS DE LA TABLA POR FASE, LEIDAS DE docs/plan/08_VERIFICACION.md: %d" % len(filas))
     for f, _c in filas:
@@ -120,7 +188,7 @@ def main():
     por_id = {x["id_op"]: x for x in F}
     N = grafo("WORK")
     res = resolutor(N)
-    checks = gate0_checks()
+    checks = gate0_checks(args.gate0)
     vivos = {k for k, v in N.items() if not v.get("deprecado")}
     veredictos = []
 
@@ -138,20 +206,26 @@ def main():
     print("docs/loop/ una salida COMMITEADA que nombre el id_op y contenga una marca de")
     print("ROJO (FALLO, EXITCODE: 1, CAE o ROJO). La celda pide 'se cae ANTES del arreglo',")
     print("que es un hecho historico: lo unico que lo prueba es esa salida roja guardada.")
-    rutas = salidas_del_bucle()
-    print("ficheros SALIDA_*.txt en docs/loop: %d" % len(rutas))
+    rutas = salidas_del_bucle(corte)
+    print("ficheros SALIDA_*.txt en docs/loop EN EL ARBOL DEL CORTE: %d" % len(rutas))
     con_rojo = {}
-    for ruta in rutas:
-        try:
-            texto = io.open(ruta, encoding="utf-8", errors="replace").read()
-        except OSError:
-            continue
+    usadas = set()
+    for ruta, texto in rutas:
         tiene_rojo = bool(re.search(r"\[FALLO\]|EXITCODE: 1|EXIT=1| CAE\.|ROJO", texto))
         if not tiene_rojo:
             continue
         for x in fase00:
             if re.search(re.escape(x["id_op"]) + r"(?![A-Za-z0-9_-])", texto):
                 con_rojo.setdefault(x["id_op"], []).append(os.path.basename(ruta))
+                usadas.add(ruta)
+    propias, intrusas = guarda_salidas_congeladas(usadas, apertura)
+    print("GUARDA DE SALIDAS: salidas anadidas por la propia vuelta %d | usadas como prueba %d | INTRUSAS %d"
+          % (len(propias), len(usadas), len(intrusas)))
+    if intrusas:
+        print("  INTRUSAS: %s" % ", ".join(intrusas))
+    assert not intrusas, (
+        "LA VARA SE CUENTA A SI MISMA: la fila 0 CODIGO esta usando como prueba %d "
+        "salida(s) escritas por la propia vuelta (%s)" % (len(intrusas), ", ".join(intrusas)))
     # SEGUNDA PIERNA, Y NO ES UN ENSANCHE PARA QUE PASE: una guarda de la fase 0
     # puede llevar el caso positivo de OTRA que su ficha declara portadora. La
     # ficha de OP-C-04 lo dice literal: "ES LA GUARDA QUE HACE PERMANENTE A
