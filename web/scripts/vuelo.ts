@@ -38,6 +38,7 @@ import path from "node:path";
 import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, getJson, patchJson, postJson, ROOT } from "./_shared/http";
 import { verificarNumerosHuerfanos } from "../lib/verificadorHuerfanos";
 import { empaquetarFechas } from "../lib/empaquetado";
+import { PRECIOS } from "../lib/precios";
 
 cargarEnvRaiz();
 
@@ -1002,10 +1003,22 @@ async function faseMundoRiesgos(cookie: string, projectId: string) {
   if (u.ok !== true || u.dominio !== "risk_management") {
     throw new Error(`unlock de risk_management fallo: ${JSON.stringify(u)}`);
   }
-  // La respuesta reporta el PRECIO del catálogo del mundo (3): sigue vivo como
+  // La respuesta reporta el PRECIO del catálogo del mundo: sigue vivo como
   // el costo del PLAN (la entrega), que es donde 4.5 movió el cobro.
-  if (Number(u.creditos) !== 3) {
-    throw new Error(`el catálogo de risk_management debio reportar precio 3, reporto ${u.creditos}`);
+  //
+  // LA CIFRA ESPERADA NO SE TECLEA: SE LEE DE LA FUENTE ÚNICA.
+  // (decisión del fundador, 3 sep 2026, sesión con credencial). Esta
+  // aseveración decía `!== 3` y se venció: la campaña del catálogo
+  // congruente subió activar un mundo a 5 créditos
+  // (docs/ANALISIS_PRECIOS.md:117, "precios.ts SÍ cambia números... 10/5/5/5"),
+  // el catálogo reportaba 5 correctamente y la prueba seguía esperando 3.
+  // Leyéndolo de PRECIOS.mundo_activar la prueba sigue a la fuente única
+  // (web/lib/precios.ts) y no puede volver a vencerse: si el precio cambia,
+  // cambia con él. Es la misma ley que web/lib/catalogoMundos.test.ts ya
+  // impone al catálogo ("el catálogo NO guarda precios: los guarda
+  // precios.ts y nadie más").
+  if (Number(u.creditos) !== PRECIOS.mundo_activar) {
+    throw new Error(`el catálogo de risk_management debio reportar precio ${PRECIOS.mundo_activar} (PRECIOS.mundo_activar de web/lib/precios.ts), reporto ${u.creditos}`);
   }
   log(`OK: unlock de risk_management (precio de catálogo ${u.creditos}, migracion 019 viva).`);
 
