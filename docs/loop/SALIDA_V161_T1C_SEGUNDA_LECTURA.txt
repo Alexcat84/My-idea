@@ -1,0 +1,113 @@
+==============================================================================
+VUELTA 161, TAREA 1.c: SEGUNDA LECTURA INDEPENDIENTE, CONTADA POR SU
+DEFINICION (banco del plan, P.5.2)
+==============================================================================
+
+A) EL UNIVERSO, CONTADO DEL FICHERO
+   fuente: docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl
+   CIFRA filas del registro: 154
+   CIFRA filas de LECTURA_DIRIGIDA: 122
+   CIFRA filas de CRIBADO: 32
+
+B) LAS FORMAS QUE CUENTAN Y LAS QUE NO, DECLARADAS ANTES DE CONTAR
+   CUENTA    TRAMO_AL_DOBLE       SEGUNDA PASADA DEL TRAMO AL DOBLE, VUELTA (\d+)
+   CUENTA    SEGUNDA_PASADA       SEGUNDA PASADA DE LA VUELTA (\d+)
+   CUENTA    RELECTURA_CONJUNTA   RELECTURA CONJUNTA DE LA VUELTA (\d+)
+   CUENTA    RELECTURA_CONJUNTA   vuelta (\d+), TAREA [^,]*, RELECTURA CONJUNTA
+   CUENTA    RELECTURA            vuelta (\d+), TAREA [^,]*, RELECTURA POR
+   NO CUENTA LECTURA DEL LOTE 1 DE LA VUELTA          es la lectura que ABRE la fila
+   NO CUENTA LOTE 1 DE LA VUELTA 157                  es la lectura que ABRE la fila
+   NO CUENTA LOTE 2 DE LA VUELTA 159                  es la lectura que ABRE la fila
+   NO CUENTA UNIFICACION DEL CAMPO cita               mantenimiento: no vuelve a los nodos
+   NO CUENTA ADJUDICACION 6.                          registro de una adjudicacion: no vuelve a los nodos
+
+C) LOS ACTOS DE RELECTURA, POR TIPO Y VUELTA (regla 3 ya aplicada: el
+   conjunto colapsa dos marcas del mismo acto sobre la misma fila)
+   RELECTURA            vuelta 156  2 fila(s)
+   RELECTURA_CONJUNTA   vuelta 156  1 fila(s)
+   RELECTURA_CONJUNTA   vuelta 159  3 fila(s)
+   RELECTURA_CONJUNTA   vuelta 160  1 fila(s)
+   SEGUNDA_PASADA       vuelta 159  41 fila(s)
+   TRAMO_AL_DOBLE       vuelta 160  37 fila(s)
+   CIFRA actos distintos (tipo, vuelta): 6
+   CIFRA total de actos sobre filas: 85
+
+D) LA CIFRA, RECOMPUTADA HOY POR ESTA DEFINICION
+   CIFRA pares de LECTURA_DIRIGIDA: 122
+   CIFRA con AL MENOS UNA segunda lectura independiente: 85
+   CIFRA con DOS O MAS: 0
+   CIFRA con NINGUNA: 37
+   reparto por numero de actos:
+      0 acto(s): 37 par(es)
+      1 acto(s): 85 par(es)
+
+E) LAS DOS CIFRAS VIEJAS, TACHADAS AL LADO Y NO COPIADAS (EJECUTOR.md 8)
+   ~~84~~  autor: auditor (acta 158), corte 3 sep 2026
+      cita: docs/loop/ACTA_AUDITOR.md:52411
+      linea leida HOY: segundas lecturas independientes sube a **65 mas mis 19, o sea 84 de las 122**.
+      lo que media: cuenta acumulada de segundas lecturas independientes: 65 heredadas de las actas mas las 19 ciegas del propio auditor de aquella vuelta
+   ~~82~~  autor: auditor (acta 160), corte 3 sep 2026
+      cita: docs/loop/ACTA_AUDITOR.md:53172
+      linea leida HOY: lectura** y **82 llevan dos marcas distintas**; **solo dos no llevan ninguna**. La
+      lo que media: pares cuya razon lleva DOS MARCAS DISTINTAS, contando como marca cualquier bloque anadido, incluidos los de mantenimiento
+   NINGUNA de las dos se borra y NINGUNA se escribe encima de la otra.
+   Y NO MIDEN LO MISMO QUE ESTA: la de hoy cuenta ACTOS DE RELECTURA con
+   marca contable en el registro; la del acta 158 sumaba dos libros (las
+   heredadas de las actas mas las ciegas del auditor); la del acta 160
+   contaba BLOQUES ANADIDOS, que incluyen los de mantenimiento.
+
+F) LO QUE ESTA CIFRA NO VE, MEDIDO Y NO ALEGADO
+   CIFRA razones que NOMBRAN al auditor en prosa: 12
+   CIFRA de esas que ademas llevan marca contable: 10
+   La relectura CIEGA del auditor es una segunda lectura real y no deja
+   marca uniforme aqui: vive en su acta y en docs/loop/_auditor_v*_ciega*.
+   Por eso esta cifra la pierde, y por eso las cifras bailaban. EL REMEDIO
+   QUE LA DEFINICION IMPONE: quien relee, escribe su marca en el registro.
+   Mientras no este escrita, una lectura no es contable, y una cifra que no
+   se puede recomputar de un fichero no es cifra (EJECUTOR.md 2).
+
+G) LOS QUE NO LLEVAN NINGUNA, UNO A UNO Y SIN RESUMIR
+   LD-OPC05-007
+   LD-OPC05-011
+   LD-OPC05-014
+   LD-OPC05-017
+   LD-OPC05-019
+   LD-OPC05-020
+   LD-OPC05-023
+   LD-OPC05-026
+   LD-OPC05-029
+   LD-OPC05-030
+   LD-OPC05-031
+   LD-OPC05-032
+   LD-OPC05-035
+   LD-OPC05-038
+   LD-OPC05-041
+   LD-OPC05-043
+   LD-OPC05-044
+   LD-OPC05-047
+   LD-OPC05-049
+   LD-OPC05-055
+   LD-OPC05-056
+   LD-OPC05-067
+   LD-OPC05-070
+   LD-OPC05-075
+   LD-OPC05-078
+   LD-OPC05-080
+   LD-OPC05-081
+   LD-OPC05-084
+   LD-OPC05-085
+   LD-OPC05-090
+   LD-OPC05-095
+   LD-OPC05-103
+   LD-OPC05-105
+   LD-OPC05-110
+   LD-OPC05-115
+   LD-OPC05-116
+   LD-OPC05-120
+
+H) LA ADITIVIDAD DEL REGISTRO EN ESTA TAREA: ESTE INSTRUMENTO NO ESCRIBE
+   git diff --numstat del registro: ''
+
+CIFRA PUBLICADA POR LA DEFINICION DE P.5.2: 85 de 122
+FIN
+EXITCODE: 0

@@ -377,6 +377,94 @@ de mas retira una direccion de mas**, y por eso el coste de equivocarse no es si
 
 ---
 
+## P.5.2 LA SEGUNDA LECTURA INDEPENDIENTE: **LA QUE DEJA MARCA CONTABLE**
+
+**Escrita el 3 sep 2026, en la vuelta 161, por encargo expreso del fundador
+(TAREA 1.c) y sobre la tercera deuda que el auditor midio en la parada de la
+vuelta 160** (`docs/loop/paradas/2026-09-03-credito-vara-movil.md`). Va **junto a
+`P.5` y a `P.5.1`** y lleva su numero para no renumerar nada.
+
+**POR QUE NACE, Y NO ES POR EL NUMERO.** El acta 158 publico **84**, el acta 160
+midio **82**, y las dos son honestas: **no median lo mismo, porque la definicion
+nunca se escribio.** El propio auditor lo dejo dicho: *"No copio esa cifra ni la
+mia encima de la suya: lo que falta es la definicion, no el numero."*
+
+### LAS TRES COSAS QUE ESTA REGLA DICE
+
+> **(1) QUE MARCA CUENTA.** Cuenta la marca escrita **en el campo `razon` de la
+> fila del registro** (`docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl`), anadida por
+> adicion, que dice **DOS cosas**: que es una **RELECTURA** (no la lectura que
+> abrio la fila) y **EN QUE VUELTA** se hizo.
+>
+> **NO cuentan**, y se dice por que: la marca de la lectura que **ABRE** la fila
+> (`LOTE 1 DE LA VUELTA 157`, `LOTE 2 DE LA VUELTA 159`), porque una primera
+> lectura no es una segunda; ni las ediciones de **mantenimiento**
+> (`UNIFICACION DEL CAMPO cita`, `ADJUDICACION 6.x DEL ACTA N`), porque **no
+> vuelven a los nodos**.
+>
+> **(2) QUIEN PUEDE FIRMARLA.** **La firma la da LA VUELTA, no la persona.**
+> Cuenta la relectura hecha en una **vuelta posterior** a la que publico la
+> clase, y **pueden firmarla las dos plumas**: el ejecutor (segunda pasada, tramo
+> al doble, relectura conjunta) y el auditor (ciega). **Pero solo cuenta la que
+> deja su marca en el registro.** Una lectura que no deja marca **no es
+> contable**: no porque no haya ocurrido, sino porque **una cifra que no se puede
+> recomputar de un fichero no es una cifra** (`EJECUTOR.md` 2).
+>
+> **(3) UNA RELECTURA CONJUNTA CUENTA UNA SOLA VEZ.** Aunque la pidan dos plumas
+> y aunque deje dos marcas, es **UN acto de lectura sobre UN par**. Se computa
+> metiendo los actos en un **conjunto** de pares `(tipo, vuelta)`, asi que dos
+> marcas del mismo acto sobre la misma fila **colapsan solas**.
+
+### LA CONSECUENCIA QUE ESTA REGLA IMPONE, Y ES LA QUE ARREGLA EL BAILE
+
+**QUIEN RELEE, ESCRIBE SU MARCA EN EL REGISTRO.** Medido hoy: **12**
+razones nombran al auditor en prosa, y su relectura **ciega** vive en su acta y
+en `docs/loop/_auditor_v*_ciega*`, **no aqui**. Por eso una cifra contada del
+registro la pierde y por eso las dos cifras viejas no cuadraban. **La regla no
+cambia lo que se lee: cambia donde queda escrito.**
+
+### LA CIFRA, RECOMPUTADA POR ESTA DEFINICION
+
+**Corte: 3 sep 2026. Autor: ejecutor de la vuelta 161. Instrumento:
+`scripts/loop/vuelta161_tarea1c_segunda_lectura.py`. Fichero de salida:
+`docs/loop/SALIDA_V161_T1C_SEGUNDA_LECTURA.txt`.** Ninguna celda esta tecleada:
+todas se extraen de ese fichero.
+
+| | cifra |
+|---|---:|
+| pares de `LECTURA_DIRIGIDA` en el registro | 122 |
+| **con AL MENOS UNA segunda lectura independiente** | **85** |
+| con DOS O MAS | 0 |
+| con NINGUNA | 37 |
+| actos de relectura contados sobre filas | 85 |
+| actos distintos `(tipo, vuelta)` | 6 |
+
+**Los actos, pegados enteros de su fichero:**
+
+```
+RELECTURA            vuelta 156  2 fila(s)
+RELECTURA_CONJUNTA   vuelta 156  1 fila(s)
+RELECTURA_CONJUNTA   vuelta 159  3 fila(s)
+RELECTURA_CONJUNTA   vuelta 160  1 fila(s)
+SEGUNDA_PASADA       vuelta 159  41 fila(s)
+TRAMO_AL_DOBLE       vuelta 160  37 fila(s)
+```
+
+### LAS DOS CIFRAS VIEJAS, TACHADAS AL LADO Y NO BORRADAS
+
+**`EJECUTOR.md` 8: una correccion que tapa lo que corrige no se puede auditar.**
+Ninguna de las dos se borra y **ninguna se escribe encima de la otra**:
+
+| cifra | autor | corte | cita | que media |
+|---:|---|---|---|---|
+| ~~**84**~~ | auditor, acta 158 | 3 sep 2026 | `docs/loop/ACTA_AUDITOR.md:52411` | acumulado que **sumaba dos libros**: 65 heredadas de las actas mas las 19 ciegas del propio auditor |
+| ~~**82**~~ | auditor, acta 160 | 3 sep 2026 | `docs/loop/ACTA_AUDITOR.md:53172` | pares cuya razon lleva **dos bloques anadidos**, incluidos los de mantenimiento |
+
+**Las dos eran fieles a lo que cada una media. Lo que faltaba era decir que se
+mide.**
+
+---
+
 ## P.6 EL TEMA SE LEE, EL ACTO SE COMPUTA
 
 **Adoptada el 11 ago 2026, y nace de una degradacion que no cerraba.**
