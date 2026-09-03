@@ -1,0 +1,47 @@
+==============================================================================
+VUELTA 161, TAREA 1.0: LOS REGISTROS DE LAS DOS TANDAS Y DE LA PARADA
+==============================================================================
+
+A) EL REGISTRO, CONTADO DEL FICHERO
+   CIFRA filas: 154
+   CIFRA de LECTURA_DIRIGIDA: 122
+
+B) EL ARCHIVO DEL CRIBADO, CONTADO DEL FICHERO
+   fuente: docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   CIFRA pares con puesto_intra: 3388
+
+C) LAS CINCO CAIDAS, MEDIDAS UNA A UNA
+   LD-OPC05-005  fila 7 del registro  clase HOY C  puesto_intra (no esta en el archivo del cribado)
+      par: aim_of_leadership + causas_comunes_vs_especiales
+      cita: LD-OPC05-005, clase C [ANTES D, RECLASIFICADA EN LA VUELTA 159: ver la razon]
+   LD-OPC05-100  fila 127 del registro  clase HOY D  puesto_intra (no esta en el archivo del cribado)
+      par: lienzo_modelo_negocio + proceso_ideacion_modelo_negocio
+      cita: LD-OPC05-100, clase D [ANTES C, RECLASIFICADA EN LA VUELTA 160: ver la razon]
+   LD-OPC05-094  fila 121 del registro  clase HOY D  puesto_intra (no esta en el archivo del cribado)
+      par: investigacion_etnografica_ideacion + reglas_brainstorming
+      cita: LD-OPC05-094, clase D [ANTES C, RECLASIFICADA EN LA VUELTA 160: ver la razon]
+   LD-OPC05-101  fila 128 del registro  clase HOY D  puesto_intra (no esta en el archivo del cribado)
+      par: lienzo_modelo_negocio + search_for_business_model
+      cita: LD-OPC05-101, clase D [ANTES C, RECLASIFICADA EN LA VUELTA 160: ver la razon]
+   LD-OPC05-118  fila 149 del registro  clase HOY D  puesto_intra (no esta en el archivo del cribado)
+      par: search_for_business_model + vision_estrategia_producto_pivote
+      cita: LD-OPC05-118, clase D [ANTES C, RECLASIFICADA EN LA VUELTA 160: ver la razon]
+
+   CIFRA caidas registradas: 5
+   CIFRA de ellas CON puesto en el archivo del cribado: 0
+   CIFRA de ellas SIN puesto en el archivo del cribado: 5
+
+D) LA REGLA DEL CREDITO Y LA DECISION, LEIDAS DE SU FICHERO HOY
+   docs/loop/AUDITOR.md:135 -> para la parada. **Dos tandas seguidas: PARADA.**
+   docs/loop/paradas/2026-09-03-credito-vara-movil-DECISION.md: trae la
+   frase 'La racha del credito vuelve a CERO con la vara congelada'. SI
+
+E) LA ESCRITURA
+   R.29 anadida al final de docs/PENDIENTES.md, por adicion pura
+   CIFRA entradas escritas: 1
+   CIFRA filas de la tabla: 5
+   git diff --numstat: 66	0	docs/PENDIENTES.md
+   CIFRA borrados: 0
+   VERDE: adicion pura, cero borrados.
+FIN
+EXITCODE: 0
