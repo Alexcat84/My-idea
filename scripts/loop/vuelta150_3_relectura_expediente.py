@@ -311,7 +311,49 @@ def p3b_caso_positivo(F, corte):
     EL LIMITE SE DECLARA EN VEZ DE CALLARSE: esto prueba que el artefacto de la
     prueba EXISTE al corte, no que la prueba se haya vuelto a correr hoy. Es una
     prueba mas debil que correr la mutacion, y por eso se dice SIEMPRE cual de
-    las dos vias sostiene cada fila (P3a o P3b) en vez de fundirlas en una."""
+    las dos vias sostiene cada fila (P3a o P3b) en vez de fundirlas en una.
+
+    --- EL HUECO DE ESTE PROXY, CONTADO Y NOMBRADO (vuelta 156, TAREA 7,
+    adjudicacion 6.6 del acta 155) ---
+
+    REGISTRO POR ADICION. Nada de lo de arriba se borra ni se suaviza.
+
+    LO QUE EL ACTA CONCEDE: la P3b se queda como proxy declarado, porque re
+    correr 71 mutaciones por vuelta no cabe y el limite ya iba escrito aqui.
+    LO QUE EL ACTA MANDA: nombrar el hueco, para que un proxy sea un proxy CON SU
+    AGUJERO CONTADO. El respaldo que el acta nombra es
+    `scripts/loop/verificar_mutaciones_viejas.py`, que corre su bateria cada
+    vuelta al cierre, la hace MORDER y comprueba que su salida sellada se repite.
+
+    EL HUECO, MEDIDO EL 3 SEP 2026 CON
+    `scripts/loop/vuelta156_tarea7_hueco_p3b.py` (salida
+    `docs/loop/SALIDA_V156_T7_HUECO_P3B.txt`), Y SALE PEOR DE LO QUE LA
+    ADJUDICACION SUPONIA. De las 71 fichas del expediente, SOLO CUATRO se apoyan
+    en la P3b, y LAS CUATRO CITAN ARTEFACTOS QUE LA BATERIA NO RE CORRE: la
+    interseccion entre las 9 salidas citadas y los 23 scripts de la bateria es
+    VACIA.
+
+      OP-C-05   SALIDA_V154_T2D_MUTACION.txt
+      OP-E-03   SALIDA_V96_TAREA3_MUTACION.txt, SALIDA_V97_TAREA2_MUTACION.txt,
+                SALIDA_V98_TAREA4_MUTACION.txt, SALIDA_V99_TAREA3_MUTACION.txt,
+                SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt
+      OP-E-07   SALIDA_V93_TAREA3_MUTACION.txt, SALIDA_V94_TAREA2B_MUTACION.txt
+      OP-S-11   SALIDA_V136_3D_MUTACION.txt
+
+    POR QUE PASA, Y NO ES UN FALLO DE LA BATERIA: la bateria vigila LAS GUARDAS
+    DEL BUCLE (talladores, guardas de cifras, arneses), que es para lo que nacio;
+    las citas de la P3b son mutaciones DE OPERACIONES DEL PLAN. Son dos universos
+    distintos y hasta hoy nadie los habia cruzado.
+
+    LO QUE ESTO SIGNIFICA, SIN ADORNO: para esas cuatro fichas la P3b sostiene
+    que la prueba EXISTE, y nadie la vuelve a correr. La bateria NO es hoy su
+    respaldo efectivo, por mucho que corra cada vuelta. LA CIFRA DEL AGUJERO ES
+    4 DE 4, y queda escrita aqui para que el que venga detras no tenga que
+    volver a medirla para saber que existe.
+
+    LO QUE ESTA VUELTA NO HACE, Y SE DICE: NO mete esas nueve salidas en la
+    bateria. Meterlas es una decision de tamano y de coste por vuelta que no es
+    del ejecutor, y va al reporte como pregunta."""
     r = subprocess.run(["git", "ls-tree", "-r", "--name-only", corte, "docs/loop/"],
                        capture_output=True, cwd=RAIZ)
     en_el_corte = {x.strip().split("/")[-1] for x in r.stdout.decode("utf-8", "replace").splitlines()

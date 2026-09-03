@@ -1,0 +1,79 @@
+========================================================================================================
+VUELTA 156, TAREA 7: EL HUECO DE LA P3b, CONTADO Y NOMBRADO
+========================================================================================================
+Fichas del expediente: 71
+Scripts de la bateria de respaldo (verificar_mutaciones_viejas.VIEJAS): 23
+
+LA BATERIA, UNA A UNA (leida de VIEJAS, no tecleada):
+   vuelta133_tarea2e_mutacion_cifras.py
+   vuelta135_2e_mutacion_1.py
+   vuelta135_2e_mutacion_2.py
+   vuelta135_2e_mutacion_3.py
+   vuelta139_2b_mutaciones.py
+   vuelta140_2a_mutaciones.py
+   vuelta141_2_mutaciones.py
+   vuelta143_2a_mutaciones.py
+   vuelta143_2b_mutacion_bateria.py
+   vuelta143_2c_mutacion_positivo.py
+   vuelta144_2a_mutaciones.py
+   vuelta144_2b_mutacion_giro.py
+   vuelta144_2d_mutacion_cobertura.py
+   vuelta144_3a_mutaciones.py
+   vuelta144_3b_mutacion_negativa.py
+   vuelta144_3c_caso_positivo_1190.py
+   vuelta145_2a_mutacion_ancla_unica.py
+   vuelta145_2b_mutacion_arneses.py
+   vuelta145_2c_mutacion_censo.py
+   vuelta146_2b_mutacion_ausencias.py
+   vuelta147_2c_mutacion_vitalidad.py
+   vuelta147_3d_mutacion_nomina.py
+   vuelta147_3e_simular_a26.py
+
+CIFRA scripts de la bateria: 23 fichero(s)
+
+========================================================================================================
+EL HUECO, CONTADO
+========================================================================================================
+| |  |
+|---|---:|
+| fichas del expediente | 71 |
+| fichas que CITAN un caso positivo presente en el arbol (o sea, que se apoyan en la P3b) | 4 |
+| de ellas, con TODAS sus citas cubiertas por la bateria | 0 |
+| de ellas, CON AL MENOS UNA CITA QUE LA BATERIA NO CUBRE | 4 |
+| fichas que no citan ningun caso positivo presente | 67 |
+
+CIFRA fichas que se apoyan en la P3b: 4 operaciones
+CIFRA fichas con su caso positivo cubierto por la bateria: 0 operaciones
+CIFRA fichas con al menos una cita que la bateria no cubre: 4 operaciones
+
+========================================================================================================
+LA NOMINA DEL HUECO, UNA A UNA, CON LAS CITAS QUE NADIE RE CORRE
+========================================================================================================
+
+  OP-C-05          fase 00_CODIGO              estado HECHA
+     citas NO cubiertas por la bateria (1): SALIDA_V154_T2D_MUTACION.txt
+
+  OP-E-03          fase 04_ENLACES             estado LISTA
+     citas NO cubiertas por la bateria (5): SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt, SALIDA_V96_TAREA3_MUTACION.txt, SALIDA_V97_TAREA2_MUTACION.txt, SALIDA_V98_TAREA4_MUTACION.txt, SALIDA_V99_TAREA3_MUTACION.txt
+
+  OP-E-07          fase 04_ENLACES             estado LISTA
+     citas NO cubiertas por la bateria (2): SALIDA_V93_TAREA3_MUTACION.txt, SALIDA_V94_TAREA2B_MUTACION.txt
+
+  OP-S-11          fase 05_SANEO               estado HECHA
+     citas NO cubiertas por la bateria (1): SALIDA_V136_3D_MUTACION.txt
+
+========================================================================================================
+LAS CUBIERTAS, PARA QUE EL CONTRASTE SE VEA
+========================================================================================================
+  NINGUNA cita de la P3b esta cubierta por la bateria.
+
+========================================================================================================
+LO QUE ESTA CIFRA SIGNIFICA, DICHO SIN ADORNO
+========================================================================================================
+  La P3b da por buena una ficha porque CITA UN ARTEFACTO QUE EXISTE, no porque
+  la prueba se haya vuelto a correr. Para las 0 fichas cubiertas, la bateria SI
+  vuelve a correr esa prueba cada vuelta al cierre y la hace morder. Para las 4
+  del hueco, el artefacto existe y NADIE LO RE CORRE: la unica garantia es que el
+  fichero esta ahi. ESE ES EL AGUJERO DEL PROXY, y ahora esta contado.
+========================================================================================================
+EXITCODE: 0
