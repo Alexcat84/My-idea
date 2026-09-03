@@ -1,4 +1,34 @@
-# REPORTE DE LA VUELTA 160 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+# -*- coding: utf-8 -*-
+"""vuelta160_tarea7_escribir_reporte.py . TAREA 7 DE LA VUELTA 160, EL REPORTE.
+
+ESCRIBE `docs/loop/REPORTE.md`. LA CABECERA NO SE TECLEA: se LEE de
+`docs/loop/SALIDA_V160_T7_CABECERA.txt`, que es la salida de
+`tallar_cabecera_reporte.py --vuelta 160 --fase04`, y se pega ENTERA entre sus
+dos marcas. Es la regla de EJECUTOR.md 1 (*LA CABECERA DEL REPORTE SE TALLA, NO
+SE TECLEA*) cumplida en el codigo y no en la promesa: si el fichero de la
+cabecera no existe, este instrumento PARA.
+
+USO:  python scripts/loop/vuelta160_tarea7_escribir_reporte.py
+"""
+import io
+import os
+
+RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+LOOP = os.path.join(RAIZ, "docs", "loop")
+
+
+def tabla_tallada():
+    ruta = os.path.join(LOOP, "SALIDA_V160_T7_CABECERA.txt")
+    texto = io.open(ruta, encoding="utf-8").read()
+    ini = texto.index("| | **apertura**")
+    fin = texto.index("\n\nFIN")
+    tabla = texto[ini:fin].rstrip()
+    filas = [l for l in tabla.splitlines() if l.startswith("|")]
+    assert len(filas) == 11, "la tabla tallada no trae 11 filas, trae %d" % len(filas)
+    return tabla
+
+
+CABEZA = u"""# REPORTE DE LA VUELTA 160 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
 
 **EL VEREDICTO DE UNA LINEA: LAS SIETE TAREAS ENTREGADAS, Y HAY PARADA. LA
 RELECTURA CONJUNTA DE LA `LD-OPC05-100` CONFIRMA LA LECTURA DEL AUDITOR CONTRA LA
@@ -17,17 +47,9 @@ Todo lo de esta seccion sale de
 `scripts/loop/vuelta160_tarea7_escribir_reporte.py`, que la LEE del fichero.
 
 <!-- CABECERA TALLADA -->
-| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
-|---|---:|---:|
-| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
-| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
-| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
-| motor | 25/25 | **25/25** |
-| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
-| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
-| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
-| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `13cf21be` (asunto real leido de git log: 'ACTA DE LA VUELTA 159 DEL AUDITOR: EL CIERRE REPRODUCE AL DIGITO Y LA PARADA DE LA TAREA 5 ERA CORRECTA, PORQUE EL ALCANCE DA DOCE Y LA CIFRA MALA ERA LA MIA. PERO LA CIEGA DA UNA DISCREPANCIA FUERA DE LOS DOCE MARCADOS, LD-OPC05-100: BAJA EL CREDITO Y EL LOTE 2 SE RELEE AL DOBLE, 37 SEGUNDAS LECTURAS. Y LA RACHA DE CIFRA PUBLICADA QUEDA EN UNO, CON LA 005 CONFIRMADA.'), HEAD real de apertura `13cf21be` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `9163f13f` (leido de `SALIDA_V160_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+"""
+
+CUERPO = u"""
 <!-- FIN CABECERA TALLADA -->
 
 **Y EL SELLO DE APERTURA LLEGO A TIEMPO, QUE ES LA 6.2 DEL ACTA 158 CUMPLIDA POR
@@ -582,3 +604,20 @@ segunda lectura en este mismo tramo, y **queda abierta la pregunta 4 de la secci
 EL MERGE.** El merge es del fundador y solo suyo. **La campana NO esta consumada**,
 y ademas **el bucle esta en PARADA por la regla del credito**, que es lo que dice
 la seccion 2.
+"""
+
+
+def main():
+    texto = CABEZA + tabla_tallada() + CUERPO
+    ruta = os.path.join(LOOP, "REPORTE.md")
+    with io.open(ruta, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(texto)
+    print("ESCRITO %s" % ruta)
+    print("CIFRA lineas del reporte: %d" % len(texto.splitlines()))
+    print("LA CABECERA NO SE TECLEO: se leyo de SALIDA_V160_T7_CABECERA.txt y se")
+    print("pego entera entre sus dos marcas.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

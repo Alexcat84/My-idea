@@ -1,0 +1,56 @@
+==============================================================================
+VERIFICAR RE SELLADO: TODA SALIDA_* QUE EL REPORTE CITE Y QUE HAYA CAMBIADO
+DESPUES DEL COMMIT DE SU TAREA TIENE QUE IR DECLARADA
+==============================================================================
+  reporte: docs/loop/REPORTE.md
+  CIFRA salidas selladas que el reporte cita: 39
+
+  SALIDA_V159_T5_ALCANCE.txt                     SIN RE SELLAR
+  SALIDA_V160_CICLO_ETIQUETAS_CIERRE.txt         SIN RE SELLAR
+  SALIDA_V160_CICLO_NUMSTAT_CIERRE.txt           SIN RE SELLAR
+  SALIDA_V160_CICLO_SYNC_CIERRE.txt              SIN RE SELLAR
+  SALIDA_V160_GATE0_CMD1_CIERRE.txt              SIN RE SELLAR
+  SALIDA_V160_HEAD_APERTURA.txt                  SIN RE SELLAR
+  SALIDA_V160_HEAD_CIERRE.txt                    SIN COMMIT DE TAREA
+  SALIDA_V160_MOTOR_CIERRE.txt                   SIN RE SELLAR
+  SALIDA_V160_T1_ADJUDICACIONES.txt              SIN RE SELLAR
+  SALIDA_V160_T2A_CONTRASTE.txt                  SIN RE SELLAR
+  SALIDA_V160_T2A_DOSSIER.txt                    SIN RE SELLAR
+  SALIDA_V160_T2A_VEREDICTOS.txt                 SIN RE SELLAR
+  SALIDA_V160_T2B_NOMINA.txt                     SIN RE SELLAR
+  SALIDA_V160_T2B_VEREDICTOS.txt                 SIN RE SELLAR
+  SALIDA_V160_T3B_BATERIA_DESPUES.txt            SIN RE SELLAR
+  SALIDA_V160_T3B_CASO_POSITIVO.txt              SIN RE SELLAR
+  SALIDA_V160_T3_BATERIA.txt                     SIN RE SELLAR
+  SALIDA_V160_T3_FUERA_DE_BATERIA.txt            SIN RE SELLAR
+  SALIDA_V160_T3_REMEDIO.txt                     SIN RE SELLAR
+  SALIDA_V160_T4_PARAMETRIZADO.txt               SIN RE SELLAR
+  SALIDA_V160_T5_CITAS.txt                       SIN RE SELLAR
+  SALIDA_V160_T6B_MUTACION_PUERTA.txt            SIN RE SELLAR
+  SALIDA_V160_T7B_UNIFICAR_CITA.txt              SIN RE SELLAR
+  SALIDA_V160_T7C_MUTACION_GUARDA.txt            SIN RE SELLAR
+  SALIDA_V160_T7_APERTURA_SELLADA.txt            SIN COMMIT DE TAREA
+  SALIDA_V160_T7_BATERIA.txt                     SIN COMMIT DE TAREA
+  SALIDA_V160_T7_CABECERA.txt                    SIN COMMIT DE TAREA
+  SALIDA_V160_T7_CABECERA_COMPARADA.txt          SIN COMMIT DE TAREA
+  SALIDA_V160_T7_CIFRAS_REPORTE.txt              SIN COMMIT DE TAREA
+  SALIDA_V160_T7_CONTEO_GATE0.txt                SIN RE SELLAR
+  SALIDA_V160_T7_EXPEDIENTE.txt                  SIN RE SELLAR
+  SALIDA_V160_T7_FASE_03_FUSIONES.txt            SIN RE SELLAR
+  SALIDA_V160_T7_FASE_06_MESAS.txt               SIN RE SELLAR
+  SALIDA_V160_T7_FASE_08_VERIFICACION.txt        SIN RE SELLAR
+  SALIDA_V160_T7_FASE_09_LECTURAS_DIRIGIDAS.txt  SIN RE SELLAR
+  SALIDA_V160_T7_MARCADOR_CIERRE.txt             SIN RE SELLAR
+  SALIDA_V160_T7_RE_SELLADO.txt                  SIN COMMIT DE TAREA
+  SALIDA_V160_TSC_CIERRE.txt                     SIN RE SELLAR
+  SALIDA_V160_WEB_CIERRE.txt                     SIN RE SELLAR
+
+  CIFRA por estado: SIN COMMIT DE TAREA 7, SIN RE SELLAR 32
+  CIFRA salidas EXENTAS por construccion: 2
+  CIFRA de esas exentas que ademas estan RE SELLADAS: 0
+  EXENCION POR CONSTRUCCION (adjudicacion 6.8 del acta 158): 2 fichero(s) exento(s) del rojo, por ser la salida de esta guarda o del verificador de cifras sobre el reporte final: SALIDA_V160_T7_CIFRAS_REPORTE.txt, SALIDA_V160_T7_RE_SELLADO.txt
+  CIFRA re selladas SIN declarar en el reporte: 0
+
+VERDE: ninguna salida sellada citada por el reporte cambio en silencio.
+FIN
+EXITCODE: 0
