@@ -1,0 +1,77 @@
+==============================================================================
+VUELTA 160, TAREA 2.b: LA NOMINA DEL TRAMO AL DOBLE, RECOMPUTADA
+==============================================================================
+
+A) EL LOTE 2, DE SU FICHERO SELLADO
+   fuente: docs/loop/NOMINA_V159_LOTE2.json
+   CIFRA lote 2: 53
+
+B) LAS 16 RELEIDAS POR EL AUDITOR, DE SU PROPIO FICHERO DE COMPUTO
+   fuente: docs/loop/_auditor_v159_tramo_al_doble.txt, pegado entero:
+      | CIFRA lote 2 (TAREA 3 de la vuelta 159): 53
+      | CIFRA del lote 2 releidos por el auditor en la ciega de HOY: 16
+      |     078,103,081,084,116,070,075,080,085,090,095,100,105,110,115,120
+      | CIFRA del lote 2 SIN SEGUNDA LECTURA INDEPENDIENTE: 37
+      |     068,069,071,072,073,074,076,077,079,082,083,086,087,088,089,091,092,093,094,096,098,099,101,102,104,106,107,108,109,111,112,113,114,117,118,119,121
+      | CIFRA de las que faltan, por clase vigente: {'C': 8, 'D': 29}
+   CIFRA releidas leidas de la lista: 16
+   CIFRA releidas que el fichero declara: 16
+   CIFRA de las 16 que NO estan en el lote 2: 0
+   LAS 16 ESTAN TODAS DENTRO DEL LOTE 2.
+
+C) LA RESTA, Y SU COTEJO ELEMENTO A ELEMENTO
+   CIFRA lote 2 menos releidas: 53 menos 16 da 37
+   CIFRA que el auditor publica: 37
+   LAS DOS NOMINAS SALEN IDENTICAS, ELEMENTO A ELEMENTO.
+   Y DA 37, que es lo que la 6.4 del acta 159 encarga.
+
+D) EL REPARTO POR CLASE VIGENTE, CONTADO DEL REGISTRO DE HOY
+   CIFRA por clase: {"C": 8, "D": 29}
+   CIFRA que la 6.4 del acta 159 declara: 8 en C y 29 en D
+   REPRODUCE AL DIGITO.
+   Y SE DICE LO QUE NO CAMBIA LA CUENTA: la TAREA 2.a de esta vuelta
+   movio LD-OPC05-100 de C a D, pero la 100 esta entre las 16 del
+   auditor, o sea FUERA de las 37, y por eso este reparto no la ve.
+
+E) LA NOMINA, UNA A UNA, CON SU CLASE VIGENTE
+    1. LD-OPC05-068     clase C
+    2. LD-OPC05-069     clase D
+    3. LD-OPC05-071     clase D
+    4. LD-OPC05-072     clase D
+    5. LD-OPC05-073     clase D
+    6. LD-OPC05-074     clase D
+    7. LD-OPC05-076     clase D
+    8. LD-OPC05-077     clase D
+    9. LD-OPC05-079     clase D
+   10. LD-OPC05-082     clase D
+   11. LD-OPC05-083     clase D
+   12. LD-OPC05-086     clase D
+   13. LD-OPC05-087     clase C
+   14. LD-OPC05-088     clase C
+   15. LD-OPC05-089     clase D
+   16. LD-OPC05-091     clase D
+   17. LD-OPC05-092     clase D
+   18. LD-OPC05-093     clase D
+   19. LD-OPC05-094     clase C
+   20. LD-OPC05-096     clase D
+   21. LD-OPC05-098     clase C
+   22. LD-OPC05-099     clase D
+   23. LD-OPC05-101     clase C
+   24. LD-OPC05-102     clase D
+   25. LD-OPC05-104     clase D
+   26. LD-OPC05-106     clase D
+   27. LD-OPC05-107     clase D
+   28. LD-OPC05-108     clase D
+   29. LD-OPC05-109     clase C
+   30. LD-OPC05-111     clase D
+   31. LD-OPC05-112     clase D
+   32. LD-OPC05-113     clase D
+   33. LD-OPC05-114     clase D
+   34. LD-OPC05-117     clase D
+   35. LD-OPC05-118     clase C
+   36. LD-OPC05-119     clase D
+   37. LD-OPC05-121     clase D
+
+SELLADA en docs/loop/NOMINA_V160_TRAMO.json
+FIN
+EXITCODE: 0
