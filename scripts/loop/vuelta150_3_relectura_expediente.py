@@ -210,13 +210,68 @@ def p2_vara_de_codigo(ids):
     return hits
 
 
-def p3_huella_en_git(ids, corte):
-    """Commits de la rama activa cuyo mensaje nombra el id_op Y que tocan
-    dataset/, scripts/, engine/ o web/.
+# --- LAS DOS NOMINAS DE RUTAS DE LA P3 (vuelta 154, TAREA 4.a) ---
+# RUTAS_NUEVA es la vara vigente desde la adjudicacion 6.1 del acta 153.
+# RUTAS_VIEJA se conserva ENTERA y no por nostalgia: es la unica forma de
+# ENSENAR LAS DOS SALIDAS sobre el mismo corte, que es lo que el encargo pide
+# como caso de mutacion. Una vara vieja borrada no se puede contrastar.
+RUTAS_VIEJA = ("dataset/", "scripts/", "engine/", "web/")
+RUTAS_NUEVA = ("dataset/", "web/", "engine/")
+
+# Palabras RESERVADAS para las salidas de caso positivo y de mutacion. La
+# convencion no se inventa aqui: `verificar_apertura_sellada.py` ya declara
+# `MUTACION` como palabra reservada de las salidas de prueba, "por convencion
+# desde esta vuelta en adelante" (vuelta 102).
+PATRON_CASO_POSITIVO = re.compile(
+    r"SALIDA_V\d+_[A-Za-z0-9_]*(?:MUTACION|CASO_POSITIVO)[A-Za-z0-9_]*\.txt")
+
+
+def p3b_caso_positivo(F, corte):
+    """LA SEGUNDA VIA DE LA P3 (adjudicacion 6.1 del acta 153): "o el caso
+    positivo de la ficha corriendo en rojo antes y en verde despues".
+
+    QUE SE MIDE, Y QUE NO. NO se re corre un caso positivo por ficha en cada
+    corrida: serian 71 mutaciones por vuelta y ninguna vuelta cabria. Se mide
+    que la ficha CITE una salida de caso positivo o de mutacion Y que esa salida
+    EXISTA EN EL ARBOL DEL CORTE (`git ls-tree`, no el arbol de trabajo, por la
+    misma razon que la P3a va congelada).
+
+    EL LIMITE SE DECLARA EN VEZ DE CALLARSE: esto prueba que el artefacto de la
+    prueba EXISTE al corte, no que la prueba se haya vuelto a correr hoy. Es una
+    prueba mas debil que correr la mutacion, y por eso se dice SIEMPRE cual de
+    las dos vias sostiene cada fila (P3a o P3b) en vez de fundirlas en una."""
+    r = subprocess.run(["git", "ls-tree", "-r", "--name-only", corte, "docs/loop/"],
+                       capture_output=True, cwd=RAIZ)
+    en_el_corte = {x.strip().split("/")[-1] for x in r.stdout.decode("utf-8", "replace").splitlines()
+                   if x.strip()}
+    out = {}
+    for f in F:
+        partes = []
+        for k in ("verificacion", "evidencia"):
+            v = f.get(k)
+            partes += v if isinstance(v, list) else [str(v or "")]
+        for k in ("nota", "adjudicacion"):
+            partes.append(str(f.get(k) or ""))
+        citadas = sorted(set(PATRON_CASO_POSITIVO.findall(" ".join(partes))))
+        out[f["id_op"]] = [c for c in citadas if c in en_el_corte]
+    return out
+
+
+def p3_huella_en_git(ids, corte, rutas=RUTAS_NUEVA):
+    """Commits de la rama activa cuyo mensaje nombra el id_op Y que tocan las
+    rutas de `rutas`.
 
     CON EL RELOJ PARADO EN `corte` (correccion declarada de la vuelta 152): el
     `git log` no ve un solo commit posterior, asi que ningun commit de la propia
-    vuelta puede servirle de prueba a la propia vuelta."""
+    vuelta puede servirle de prueba a la propia vuelta.
+
+    CORRECCION DECLARADA (2026-09-02, vuelta 154, TAREA 4.a, adjudicacion 6.1
+    del acta 153; la firma vieja no se borra, se conserva bajo `RUTAS_VIEJA`):
+    ~~dataset/, scripts/, engine/ o web/~~ pasa a dataset/, web/ o engine/.
+    `scripts/` SALE. Un commit que NOMBRA una operacion y solo mueve el cuaderno
+    del bucle no hace que ninguna verificacion se caiga, y el criterio de HECHO
+    de docs/plan/08_VERIFICACION.md dice que eso es justo lo que separa una
+    ejecucion de un registro."""
     hits = {}
     for i in ids:
         # MISMA FRONTERA DE PALABRA que en P2, por el mismo motivo: sin ella
@@ -228,8 +283,8 @@ def p3_huella_en_git(ids, corte):
         for c in commits:
             n = subprocess.run(["git", "show", "--name-only", "--format=", c],
                                capture_output=True, cwd=RAIZ).stdout.decode("utf-8", "replace")
-            rutas = [x for x in n.splitlines() if x.strip()]
-            if any(x.startswith(("dataset/", "scripts/", "engine/", "web/")) for x in rutas):
+            tocadas = [x for x in n.splitlines() if x.strip()]
+            if any(x.startswith(rutas) for x in tocadas):
                 con_codigo.append(c[:8])
         hits[i] = (len(commits), con_codigo)
     return hits
@@ -270,15 +325,27 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--corte", required=True)
     ap.add_argument("--apertura", default=None)
+    ap.add_argument("--vara-vieja", action="store_true",
+                    help="corre la P3 con la nomina de rutas ANTERIOR a la adjudicacion "
+                         "6.1 del acta 153 (con scripts/ dentro). Solo para el contraste "
+                         "de la vuelta 154: NO es la vara vigente.")
     args = ap.parse_args()
     corte = args.corte
     apertura = args.apertura or corte
+    rutas = RUTAS_VIEJA if args.vara_vieja else RUTAS_NUEVA
     corte_h = subprocess.run(["git", "rev-parse", "--short=8", corte],
                              capture_output=True, cwd=RAIZ).stdout.decode().strip()
     apertura_h = subprocess.run(["git", "rev-parse", "--short=8", apertura],
                                 capture_output=True, cwd=RAIZ).stdout.decode().strip()
     print("RELOJ DE GIT CONGELADO EN --corte %s (%s). RANGO PROPIO DE LA VUELTA: %s..HEAD (%s)"
           % (corte, corte_h, apertura, apertura_h))
+    print("VARA DE LA P3: %s (rutas: %s)"
+          % ("VIEJA, anterior a la adjudicacion 6.1 del acta 153" if args.vara_vieja
+             else "VIGENTE, adjudicacion 6.1 del acta 153", ", ".join(rutas)))
+    print("LA ASIMETRIA P2 CONTRA P3 ESTA ESCRITA DENTRO DE ESTE INSTRUMENTO (adjudicacion")
+    print("6.2 del acta 153): la P3 va con el reloj congelado porque mide un ACTO fechado;")
+    print("la P2 lee el arbol de trabajo porque mide la EXISTENCIA de un control, que es un")
+    print("estado y no una ejecucion. Ver el docstring, bloque de la adjudicacion 6.2.")
 
     F = fichas()
     ids = [f["id_op"] for f in F]
@@ -293,7 +360,8 @@ def main():
 
     v1 = p1_vara_de_grafo()
     v2 = p2_vara_de_codigo(ids)
-    v3 = p3_huella_en_git(ids, corte)
+    v3 = p3_huella_en_git(ids, corte, rutas)
+    v3b = p3b_caso_positivo(F, corte)
 
     propios, contados, intrusos = guarda_reloj_congelado(v3, apertura)
     print("GUARDA DEL RELOJ: commits propios de la vuelta %d | commits contados por P3 %d | INTRUSOS %d"
@@ -309,8 +377,13 @@ def main():
           % (len(v1), sum(1 for k in v1 if v1[k][0])))
     print("  P2 vara de codigo (presencia): %d ficha(s) con el id_op en codigo vivo"
           % sum(1 for i in ids if v2[i]))
-    print("  P3 huella en git (mensaje + rutas de codigo o dato): %d ficha(s)"
-          % sum(1 for i in ids if v3[i][1]))
+    print("  P3a huella en git (mensaje + rutas %s): %d ficha(s)"
+          % ("/".join(x.strip("/") for x in rutas), sum(1 for i in ids if v3[i][1])))
+    print("  P3b caso positivo o mutacion citado y presente en el arbol del corte: %d ficha(s)"
+          % sum(1 for i in ids if v3b.get(i)))
+    for i in ids:
+        if v3b.get(i):
+            print("      %-18s %s" % (i, ", ".join(v3b[i])))
     print("")
 
     filas_malas = []
@@ -325,7 +398,9 @@ def main():
         if v2[i]:
             pruebas.append("P2")
         if v3[i][1]:
-            pruebas.append("P3")
+            pruebas.append("P3a")
+        if v3b.get(i):
+            pruebas.append("P3b")
         ejecutada = bool(pruebas)
         if estado == "HECHA" and ejecutada:
             calzan += 1
@@ -411,7 +486,7 @@ def main():
         i = f["id_op"]
         if f["estado"] != "LISTA":
             continue
-        if v1.get(i, (False,))[0] or v2[i] or v3[i][1]:
+        if v1.get(i, (False,))[0] or v2[i] or v3[i][1] or v3b.get(i):
             continue
         pendientes += 1
         dep = f.get("depende_de") or []
@@ -420,6 +495,16 @@ def main():
         print("| `%s` | %s | %s | %s |" % (i, f["fase"], f["tipo"], medido))
     print("")
     print("CONTADO: %d ficha(s) en LISTA sin ninguna prueba de ejecucion." % pendientes)
+
+    print("")
+    print("CIFRA fichas del expediente: %d operaciones" % len(F))
+    print("CIFRA fichas que no calzan: %d operaciones" % len(filas_malas))
+    print("CIFRA fichas congeladas declaradas: %d operaciones" % congelados_declarados)
+    print("CIFRA fichas congeladas en silencio: %d operaciones"
+          % sum(1 for x in filas_malas if "SILENCIO" in x[4]))
+    print("CIFRA fichas HECHA sin ninguna prueba: %d operaciones"
+          % sum(1 for x in filas_malas if "HECHA SIN" in x[4]))
+    print("CIFRA fichas en LISTA sin ninguna prueba: %d operaciones" % pendientes)
 
 
 main()

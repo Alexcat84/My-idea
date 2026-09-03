@@ -1,0 +1,46 @@
+========================================================================================
+VARA NUEVA (vigente), corte 32b2c76e
+fichero contado: docs/loop/SALIDA_V154_T4C_VARA_NUEVA.txt
+========================================================================================
+| celda | contado de las filas del fichero |
+|---|---:|
+| no calzan | 41 |
+| de ellas, congeladas DECLARADAS | 29 |
+| de ellas, congeladas EN SILENCIO | 12 |
+| de ellas, HECHA sin ninguna prueba | 0 |
+| en LISTA sin ninguna prueba (segunda tabla del fichero) | 7 |
+
+CIFRA nueva no calzan: 41 operaciones
+
+========================================================================================
+VARA VIEJA (contraste), corte 32b2c76e
+fichero contado: docs/loop/SALIDA_V154_T4A_VARA_VIEJA.txt
+========================================================================================
+| celda | contado de las filas del fichero |
+|---|---:|
+| no calzan | 48 |
+| de ellas, congeladas DECLARADAS | 30 |
+| de ellas, congeladas EN SILENCIO | 18 |
+| de ellas, HECHA sin ninguna prueba | 0 |
+| en LISTA sin ninguna prueba (segunda tabla del fichero) | 0 |
+
+CIFRA vieja no calzan: 48 operaciones
+
+========================================================================================
+EL CONTRASTE CONTRA LO QUE EL ACTA 153 PUBLICA (48 / 26 / 22 / 0 / 0, corte 6f695db6)
+========================================================================================
+| celda | acta 153 | vara VIEJA hoy | vara NUEVA hoy | a que se debe el movimiento |
+|---|---:|---:|---:|---|
+| no calzan | 48 | 48 | 41 | LA VARA: salen las 7 fichas cuya unica huella era `scripts/` y que pasan a LISTA sin prueba |
+| congeladas DECLARADAS | 26 | 30 | 29 | NO ES LA VARA: la TAREA 1 de esta vuelta anadio a OP-M-01, 02, 03 y 05 una nota que habla de su estado, y el instrumento lee la nota del ARBOL DE TRABAJO |
+| congeladas EN SILENCIO | 22 | 18 | 12 | lo mismo, en el otro lado del mismo split |
+| HECHA sin ninguna prueba | 0 | 0 | 0 | no se mueve |
+| en LISTA sin ninguna prueba | 0 | 0 | 7 | LA VARA: son exactamente las 7 que el 48 pierde |
+
+LA ARITMETICA CIERRA: 10 fichas pierden su P3a al salir `scripts/` de la vara
+(SALIDA_V154_T4C_ATRIBUCION.txt); 7 de ellas quedan en LISTA SIN NINGUNA prueba, y
+por eso su estado CALZA y salen de la tabla de las que no calzan (48 menos 7 son 41).
+Las otras 3 conservan otra prueba (P1, P2 o P3b) y siguen sin calzar.
+
+CIFRA celdas de la tabla que se mueven por la vara: 2 filas
+CIFRA celdas de la tabla que se mueven por la TAREA 1 de esta vuelta: 2 filas

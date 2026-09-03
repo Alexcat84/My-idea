@@ -1,0 +1,41 @@
+========================================================================================
+MOVIMIENTO 1: EL SPLIT DECLARADO/SILENCIO. LA CAUSA NO ES LA VARA.
+========================================================================================
+El instrumento lee `nota` y `adjudicacion` del ARBOL DE TRABAJO, no del corte,
+asi que las notas que la TAREA 1 de esta vuelta anadio cambian el split.
+
+  OP-M-01        antes declaraba su estado: False | hoy: True  | estado LISTA
+  OP-M-02        antes declaraba su estado: False | hoy: True  | estado LISTA
+  OP-M-03        antes declaraba su estado: False | hoy: True  | estado LISTA
+  OP-M-05        antes declaraba su estado: False | hoy: True  | estado LISTA
+
+CIFRA fichas que cambian de silencio a declarado por la TAREA 1: 4 operaciones
+
+========================================================================================
+MOVIMIENTO 2: EL 48 QUE BAJA A 41. LA CAUSA SI ES LA VARA.
+========================================================================================
+Fichas cuya UNICA huella en git venia por la ruta `scripts/` (mencion, no ejecucion):
+  OP-E-03        estado LISTA  fase 04_ENLACES
+  OP-I-01        estado LISTA  fase 10_INVENTARIO
+  OP-L-01        estado LISTA  fase 09_LECTURAS_DIRIGIDAS
+  OP-L-02        estado LISTA  fase 09_LECTURAS_DIRIGIDAS
+  OP-L-03        estado LISTA  fase 09_LECTURAS_DIRIGIDAS
+  OP-M-02-ACTIVATE estado LISTA  fase 03_FUSIONES
+  OP-M-02-ADMIT  estado LISTA  fase 03_FUSIONES
+  OP-M-02-MEDIOS estado LISTA  fase 03_FUSIONES
+  OP-S-08        estado HECHA  fase 05_SANEO
+  OP-V-01        estado LISTA  fase 08_VERIFICACION
+
+CIFRA fichas que pierden su P3 al salir scripts/ de la vara: 10 operaciones
+
+EL CASO DE MUTACION QUE EL ENCARGO NOMBRA, COMPROBADO APARTE:
+  OP-V-01: commits que lo nombran al corte 6f695db6: 466a3c6e, c9c6ea40
+      466a3c6e toca: docs/
+        cuenta con la vara VIEJA: False | con la NUEVA: False
+      c9c6ea40 toca: docs/, scripts/
+        cuenta con la vara VIEJA: True | con la NUEVA: False
+  OP-L-01: commits que lo nombran al corte 6f695db6: 466a3c6e, c9c6ea40
+      466a3c6e toca: docs/
+        cuenta con la vara VIEJA: False | con la NUEVA: False
+      c9c6ea40 toca: docs/, scripts/
+        cuenta con la vara VIEJA: True | con la NUEVA: False
