@@ -28,6 +28,17 @@ import argparse
 import io
 import json
 import os
+import sys
+
+# --- CORRECCION DECLARADA (vuelta 159, TAREA 3), Y NO SE TAPA LO QUE CORRIGE ---
+# La primera corrida del dossier del lote 2 MURIO en la lectura 14 de 53 con
+# UnicodeEncodeError: la consola de Windows redirige en cp1252 y el paso 13 de
+# `reunion_conclusion_proyecto` trae un caracter U+2192 (flecha). La salida quedo
+# TRUNCADA con exit 1. Un dossier truncado que no se declara es una lectura a
+# medias vendida como entera, asi que se arregla el instrumento y se dice.
+# El arreglo NO cambia lo que se imprime: solo fuerza utf-8 en la salida.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 GRAFO = os.path.join(RAIZ, "dataset", "metadata", "master_graph.json")
