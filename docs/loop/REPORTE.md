@@ -1,894 +1,699 @@
-# REPORTE DE LA VUELTA 156
+# REPORTE DE LA VUELTA 157 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
 
-**Rama `pasada-unica`. FASE III, EJECUCION, modo continuo, REGIMEN COMPLETO.**
+**EL VEREDICTO DE UNA LINEA: LAS NUEVE TAREAS ENTREGADAS, LA BLOQUEANTE VACIA 62
+DE LAS 113 DEL SACO, Y HAY UNA PARADA QUE NO ES MIA NI ES DE NADIE: LOS DOS
+GUARDAS DEL CIERRE QUE BUSCAN "EL ACTA DE LA VUELTA N MENOS 1" NO PUEDEN CORRER,
+PORQUE EL ACTA 156 NO EXISTE.** El auditor numero la suya **157** auditando mi
+vuelta **156**, asi que para mi vuelta **157** el acta de apertura se llama
+**157** y no **156**. No lo arreglo yo: es una guarda y la traigo.
 
-**Las nueve tareas entregadas. La TAREA 2, que era bloqueante, cierra, y CIERRA
-DISCREPANDO: relei `LD-OPC05-097` contra el grafo y la clase no es la C que
-estaba escrita NI la A que el acta 155 adjudico, es D. La medicion que separa las
-dos lecturas esta en la TAREA 2 y va marcada como DISCUTIBLE 1. Seis caidas mias,
-las seis declaradas por mi. Cinco discutibles marcados y tres preguntas.**
+## 0. LA IDENTIDAD, LEIDA DE GIT Y NO TECLEADA
 
-## LA CABECERA, TALLADA Y NO TECLEADA
+Todo lo de esta tabla sale de `git rev-parse` y `git log` corridos en esta
+vuelta, y los dos hashes estan sellados en fichero.
 
-Generada con `python scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 156`
-(salida en `docs/loop/SALIDA_V156_T8_CABECERA.txt`) y **pegada entera por un
-script**: `scripts/loop/vuelta156_tarea8_escribir_reporte.py` extrae la tabla de
-ese fichero. Ninguna celda de esta tabla la escribi yo.
+| | valor | de donde sale |
+|---|---|---|
+| rama | `pasada-unica` | `git rev-parse --abbrev-ref HEAD` |
+| commit de apertura | `abb2fe4e` | `docs/loop/SALIDA_V157_HEAD_APERTURA.txt` |
+| commit de cierre (antes del commit del reporte) | `60a79cf8` | `docs/loop/SALIDA_V157_HEAD_CIERRE.txt` |
+| commits del corredor | 8 | `git rev-list --count abb2fe4e..HEAD` |
+| intrusos en el corredor | 0 | los 8 son mios, uno por tarea |
+| hashes admitidos | 0 (ninguno) | el encargo lo declara con su rotulo |
 
-<!-- CABECERA TALLADA -->
-| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
-|---|---:|---:|
-| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
-| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
-| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
-| motor | 25/25 | **25/25** |
-| web: ficheros / tests | 80 passed (80) / 1.030 passed, 3 skipped (1.033) | **80 passed (80) / 1.030 passed, 3 skipped (1.033)** |
-| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
-| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
-| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `cf945888` (asunto real leido de git log: 'ACTA DE LA VUELTA 155 DEL AUDITOR: LA 154 ENTREGA LAS NUEVE Y LA BLOQUEANTE CIERRA DE VERDAD. LA MUTACION LA REHICE YO Y MUERDE. DOCE DE CATORCE COINCIDEN Y LAS DOS DISCREPANCIAS CAEN DENTRO DE LO MARCADO.'), HEAD real de apertura `cf945888` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `25d2c20c` (leido de `SALIDA_V156_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
-<!-- FIN CABECERA TALLADA -->
+**Y UNA CAIDA MIA, LA PRIMERA Y LA DECLARO YO:** la apertura **la medi antes de
+la primera operacion** (fue mi primera lectura del repo, `git rev-parse HEAD` con
+el arbol limpio), **pero NO la selle en `SALIDA_V157_HEAD_APERTURA.txt` hasta el
+cierre.** El valor no depende de mi memoria y por eso no contamina nada: `git
+rev-parse 23004b4d^` da `abb2fe4e`, o sea que el padre de mi primer commit ES la
+apertura. **Pero el sello llego tarde y eso se dice.**
 
-## 0. MIS SEIS CAIDAS, PRIMERO, PORQUE SON MIAS
+## LA PARADA, Y VA PRIMERO PORQUE BLOQUEA DOS GUARDAS DEL CIERRE
 
-**CAIDA 1, Y ES LA QUE MAS RABIA DA PORQUE ESTA EN MIS PROPIAS REGLAS.** Corri
-`run_phase1.py` **SUELTO** para comprobar la guarda de la TAREA 1, sin la
-`etiquetas_de_cara --aplicar` ni la `sync_assets_web` detras, y el arbol se movio:
-`dataset/metadata/master_graph.json` quedo modificado con las etiquetas de cara
-sin reaplicar. Lo vi en el `numstat`, corri el ciclo entero y el arbol volvio a
-cero filas antes de sellar nada. **Ninguna cifra falsa salio de ahi**, pero la
-regla dice NUNCA `run_phase1` suelto y la salte. **De cuantas filas fue el
-movimiento no lo publico como cifra: no hay fichero de salida sellado que lo
-cuente, porque lo corregi antes de sellar. La cifra que vi vive en el mensaje del
-commit `980b2a6b` y ahi se queda.**
+**QUE PASA, MEDIDO Y NO SUPUESTO.** `scripts/loop/tallar_cabecera_reporte.py` y
+`scripts/loop/verificar_apertura_sellada.py` localizan la apertura de la vuelta N
+buscando en `git log` un commit que empiece por `ACTA DE LA VUELTA <N-1> DEL
+AUDITOR` o `ACTA DEL AUDITOR, VUELTA <N-1>` (las dos lo tienen cableado como
+`vuelta - 1`, lineas 836 y 266 de cada fichero). **Para mi vuelta 157 buscan el
+acta 156, y el acta 156 NO EXISTE:** contado por mi con `git log --grep`, hay
+**0 commits** con cada uno de los dos patrones. Las actas de la rama van **145,
+146, 147, 149, 151, 153, 155, 157**.
 
-**CAIDA 2, DE INSTRUMENTO, CAZADA RELEYENDO ANTES DE PUBLICAR.** La primera
-version del contador de la TAREA 3.a buscaba el puntero VAGO sobre el texto
-entero, y `el paso 6 de Crosby` casaba con LOS DOS patrones a la vez: **un solo
-puntero contado dos veces**. Con eso el saco de arriba publicaba **6** cuando la
-medicion buena dice **2**. Lo vi releyendo las seis del saco, que es exactamente
-para lo que la relectura estaba. Corregi el instrumento y re corri.
-**Ninguna cifra falsa se publico**, y el arreglo queda escrito dentro del propio
-instrumento.
+**LO CONFIRMO CORRIENDO LA MISMA GUARDA CON EL INDICE CORRIDO, que es lo unico
+que separa un instrumento roto de un indice desplazado**
+(`docs/loop/SALIDA_V157_T9_APERTURA_SELLADA_158.txt`): con `--vuelta 158` la
+guarda **encuentra el acta y deja de quejarse de ella**, y solo falla porque no
+hay ficheros `SALIDA_V158_*_APERTURA.txt`. **La guarda esta sana. Lo que se
+corrio es el indice.**
 
-**CAIDA 3, DE PROSA MIA DENTRO DE UN INSTRUMENTO.** Tras arreglar la caida 2, la
-nota de lectura de `LD-OPC05-031` que yo mismo habia escrito decia "el computo
-solo vio uno", que era cierto ANTES del arreglo y falso despues. La corregi antes
-de sellar la salida. Es la misma especie que persigo: una frase que envejece
-dentro de un fichero que se re corre.
+**QUE NO HAGO, Y POR QUE.** No parcheo ninguna de las dos. Son guardas, el
+encargo no me autoriza a tocarlas, y por la regla 5 del EJECUTOR esto se escribe
+como **PARADA** y no se arregla aqui. **Y no fabrico los ficheros de apertura
+que faltan:** medirlos ahora y llamarlos apertura seria exactamente la caida de
+las vueltas 28 y 29, medir tarde y publicar como si fuera temprano.
 
-**CAIDA 4, DE INSTRUMENTO, Y LA CAZO UNA GUARDA DE LA CASA.** Varias de mis
-lineas `CIFRA` iban INDENTADAS, y el patron de `verificar_cifras_del_reporte.py`
-va anclado en columna cero con MULTILINE: una linea `CIFRA` con espacios delante
-**es invisible para la guarda**, asi que sus cifras quedaban sin cotejar y la
-guarda me devolvia COBERTURA CERO. Un verde sobre cero no es un verde, y aqui ni
-siquiera llego a verde: cayo en rojo y me lo dijo. Dedente las lineas en los
-instrumentos afectados, los re corri y volvi a sellar sus salidas. **Las cifras no
-cambiaron: lo que cambio fue la columna.**
+**QUE HAGO EN SU LUGAR, Y ES LA OTRA REGLA VIGENTE:** no publico tabla de
+cabecera tallada, porque no hay tallador que la produzca, y **toda cifra de este
+reporte va PEGADA del fichero de salida del que sale**. Es la letra del 26 ago
+2026: si no existe fichero que contar, la tabla no se publica.
 
-**CAIDA 5, LA MAS FEA DE LAS SEIS, Y ES UN INSTRUMENTO MIO LEYENDO MAL.** Mi
-funcion de pegado tomaba la PRIMERA linea que contuviera el rotulo buscado, y la
-salida de una guarda en rojo puede traer ese mismo rotulo DENTRO de un mensaje de
-error que cita la corrida anterior. Resultado: el reporte se llevaba pegado el
-mensaje de error, anidado dentro de si mismo. **Lo vi porque el texto pegado traia
-dos veces la misma frase**, y lo arregle tomando la ULTIMA linea que EMPIEZA por
-el rotulo en columna cero.
+  - `tallar_cabecera_reporte.py --fase04 --vuelta 157`: **ROJO exit 1, 40 celdas
+    no se pudieron leer**, salida `docs/loop/SALIDA_V157_T9_CABECERA.txt`.
+  - `verificar_apertura_sellada.py --vuelta 157`: **ROJO exit 1, 1 cosa no
+    cuadra**, salida `docs/loop/SALIDA_V157_T9_APERTURA_SELLADA.txt`.
 
-**CAIDA 6, UNA CIFRA QUE DEPENDIA DE SI ERA LA PRIMERA CORRIDA.** Mi instrumento
-de la TAREA 3.b publicaba "reclasificadas en esta tarea", contando **lo que esa
-corrida movio**: dos la primera vez y cero la segunda. Al re correrlo para sellar
-su salida publicaba un cero que no describia nada. Ahora cuenta **las entradas del
-registro que llevan su marca**, que es lo mismo corra cuando corra. Y de paso
-arregle que los dos instrumentos que escriben clases **no se pudieran re correr**:
-comprobaban la clase vieja ANTES de mirar si el bloque ya estaba escrito, asi que
-la segunda corrida reventaba.
+**LAS OTRAS DOS GUARDAS DEL CIERRE SI CORREN Y LAS DOS SALEN VERDES**, y una de
+ellas nacio hoy:
 
-## 1. TAREA 1: LAS DIEZ ADJUDICACIONES, DONDE CADA UNA VIVE
+  - `verificar_cifras_del_reporte.py` sobre este reporte: **VERDE exit 0**, con
+    `COBERTURA: 18 cotejadas / 0 exentas / 18 cifras` y `0 sin linea CIFRA`,
+    salida `docs/loop/SALIDA_V157_T9_CIFRAS_REPORTE.txt`.
+  - `verificar_re_sellado.py` sobre este reporte: **VERDE exit 0**, con
+    `CIFRA re selladas SIN declarar en el reporte: 0`, salida
+    `docs/loop/SALIDA_V157_T9_RE_SELLADO.txt`.
+  - `verificar_mutaciones_viejas.py`, corrida **SOLA y sin nada al lado**:
+    **VERDE exit 0**, salida `docs/loop/SALIDA_V157_T5_BATERIA.txt`. Se vuelve a
+    correr sola al final del cierre y su segunda salida es
+    `docs/loop/SALIDA_V157_T9_BATERIA_FINAL.txt`.
 
-Instrumento: `scripts/loop/vuelta156_tarea1_registrar_adjudicaciones.py`, salida
-`docs/loop/SALIDA_V156_T1_ADJUDICACIONES.txt`.
+## 1. MIS CAIDAS, ANTES QUE NADA
 
-  - **6.1 y 6.2**: el registro de citas (`razon` de `LD-OPC05-097` y de
-    `LD-OPC05-040`) **y** `scripts/loop/vuelta152_registro_de_citas_opc05.py`,
-    que es el instrumento que lo lee y donde vive la doctrina de vias y clases.
-  - **6.3 y 6.4**: el registro (`razon` de `LD-OPC05-046` y de `LD-OPC05-122`).
-  - **6.5, 6.6 y 6.7**: `scripts/loop/vuelta150_3_relectura_expediente.py`.
-  - **6.8**: `scripts/loop/verificar_apertura_sellada.py`.
-  - **6.9**: los comentarios de la guarda de `OP-C-05` en `scripts/run_phase1.py`.
-  - **6.10**: `scripts/loop/tallar_estado_de_fase.py`.
+**CAIDA 1, EL SELLO DE APERTURA TARDIO.** Ya esta arriba, en la seccion 0.
 
-**LA ADITIVIDAD SE MIDE Y NO SE PROMETE.** Los cinco `.py`:
+**CAIDA 2, DE INSTRUMENTO, CAZADA ANTES DE PUBLICAR.** Mi primer contador de
+aristas del cierre dio **9742** para la union de las dos vistas, donde el archivo
+publica 9914. **No publique el 9742 como discrepancia:** fui a mirar la
+definicion, vi que contaba PARES NO ORDENADOS mientras que la union del archivo
+es DIRIGIDA (las entradas de `nodos_previos` se dan la vuelta antes de unir), lo
+arregle y dio **9914** con `solo_sig 1174` y `solo_prev 1134`. **El 9742 queda
+escrito dentro de la propia salida** (`docs/loop/SALIDA_V157_T9_MARCADOR_CIERRE.txt`)
+para que se vea de donde salio y con que vara.
 
-```
-     BORRADOS TOTALES EN LOS CINCO .py: 0
-```
+**CAIDA 3, DE SEDE, Y LA CAZO MI PROPIA GUARDA DE ADITIVIDAD.** En la TAREA 1
+puse la adjudicacion 6.7 DENTRO del docstring de `p3b_caso_positivo`, y
+`git diff --numstat` canto **1 borrado**: ese docstring cierra con tres comillas
+pegadas a su ultima linea de texto, asi que insertar dentro obligaba a re
+escribir esa linea. **La guarda mordio, revertí y baje el bloque un renglon**, a
+comentario inmediatamente debajo del docstring, dentro de la misma funcion.
+Resultado final: **borrados 0 en los seis .py**.
 
-Pegado de `docs/loop/SALIDA_V156_T1_ADJUDICACIONES.txt`, corrido en esta vuelta.
+## 2. TAREA 1, LAS DIEZ ADJUDICACIONES DEL ACTA 157
 
 ```
-     154 entrada(s) del registro comprobadas: el texto viejo de `razon` sigue
+CIFRA adjudicaciones escritas en esta corrida: 13 operaciones
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T1_ADJUDICACIONES.txt`, corrido en esta vuelta.
-
-```
-     esquema IGUAL (7 claves), clases IGUALES, pares IGUALES (154).
-```
-
-Pegado de `docs/loop/SALIDA_V156_T1_ADJUDICACIONES.txt`, corrido en esta vuelta.
-
-```
-CIFRA adjudicaciones escritas: 12 operaciones
-```
-
-Pegado de `docs/loop/SALIDA_V156_T1_ADJUDICACIONES.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T1_ADJUDICACIONES.txt`, corrido en esta vuelta.
 
 ```
 CIFRA lineas del registro de citas: 154 linea(s)
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T1_ADJUDICACIONES.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T1_ADJUDICACIONES.txt`, corrido en esta vuelta.
 
-**LA 6.9 TIENE DOS MITADES Y VAN LAS DOS, Y LA SEGUNDA VA MARCADA COMO
-DISCUTIBLE.** La primera (los tres pares de fuente deprecada no se leen y se
-quedan nombrados dentro de la guarda) ya estaba, y su registro va por adicion. La
-segunda es la letra del acta: *"su cuenta se publica CADA VEZ QUE LA GUARDA
-HABLE"*, y un comentario no habla cada vez. La linea de detalle del check pasa a
-decir el hueco, **computado y no tecleado** (vara 4 del acta 153: mismo recorrido
-sin exigir fuente viva, con los dos extremos vivos). Instrumento
-`scripts/loop/vuelta156_tarea1b_publicar_hueco_deprecadas.py`:
-
-```
-ADITIVIDAD MEDIDA CON git diff --numstat: +48 -0
-```
-
-Pegado de `docs/loop/SALIDA_V156_T1B_HUECO_DEPRECADAS.txt`, corrido en esta vuelta.
-
-Y la guarda, corrida con el ciclo entero, dice ahora lo que estas cuatro cifras
-publican. **La linea literal del check, entera y sin recortar, vive en
-`docs/loop/SALIDA_V156_T8_CIFRAS_DERIVADAS.txt`**, que es quien la lee, la cuenta
-y exige que los tres pares que nombra sean tres:
-
-```
-CIFRA pares bidireccionales CITADOS: 154 par(es)
-```
-
-Pegado de `docs/loop/SALIDA_V156_T8_CIFRAS_DERIVADAS.txt`, corrido en esta vuelta.
-
-```
-CIFRA pares bidireccionales HUERFANOS: 0 par(es)
-```
-
-Pegado de `docs/loop/SALIDA_V156_T8_CIFRAS_DERIVADAS.txt`, corrido en esta vuelta.
-
-```
-CIFRA pares EXCLUIDOS por declarante deprecado: 3 par(es)
-```
-
-Pegado de `docs/loop/SALIDA_V156_T8_CIFRAS_DERIVADAS.txt`, corrido en esta vuelta.
-
-```
-CIFRA pares del universo ENSANCHADO: 157 par(es)
-```
-
-Pegado de `docs/loop/SALIDA_V156_T8_CIFRAS_DERIVADAS.txt`, corrido en esta vuelta.
-
-## 2. TAREA 2, LA BLOQUEANTE: `LD-OPC05-097`, Y DISCREPO
-
-### 2.a MI MITAD DEL TRATO: LA VERIFICACION CONTRA EL GRAFO
-
-Instrumentos `scripts/loop/vuelta156_tarea2a_verificar_contra_grafo.py` y
-`scripts/loop/vuelta156_tarea2a_pasos_con_hijo.py`. **Publico lo que mido, salga
-a favor o en contra.**
-
-```
-CIFRA nodos vivos del par: 2 nodo(s) de 2
-```
-
-Pegado de `docs/loop/SALIDA_V156_T2A_CONTRA_GRAFO.txt`, corrido en esta vuelta.
-
-```
-CIFRA pasos de juran_rcca_metodo: 4 paso(s)
-```
-
-Pegado de `docs/loop/SALIDA_V156_T2A_CONTRA_GRAFO.txt`, corrido en esta vuelta.
-
-```
-CIFRA pasos de viaje_diagnostico_remedial: 8 paso(s)
 ```
-
-Pegado de `docs/loop/SALIDA_V156_T2A_CONTRA_GRAFO.txt`, corrido en esta vuelta.
-
-```
-CIFRA vistas que declaran la arista: 4 direccion(es)
-```
-
-Pegado de `docs/loop/SALIDA_V156_T2A_CONTRA_GRAFO.txt`, corrido en esta vuelta.
-
-```
-CIFRA otras entradas del registro que tocan al par: 1 linea(s)
-```
-
-Pegado de `docs/loop/SALIDA_V156_T2A_CONTRA_GRAFO.txt`, corrido en esta vuelta.
-
-Los dos nodos estan **VIVOS**, son del mismo dominio y **del mismo libro**
-(Juran's Quality Handbook). La arista es bidireccional y esta declarada en las
-CUATRO vistas, literal en las cuatro. `viaje_diagnostico_remedial` aparece ademas
-en otra entrada del registro (con `six_sigma_dmaic`, clase D) y es
-**SUPERVIVIENTE DECLARADO DEL ACTO 30** (`docs/plan/03_FUSIONES.md` y
-`docs/plan/INVENTARIO.jsonl`), la familia del viaje diagnostico, **de la que
-`juran_rcca_metodo` NO era miembro**. Las cuatro piezas que absorbio por INCISO
-son justo el Pareto, los diagramas causa efecto, la recoleccion para correlacionar
-y la validacion estadistica.
-
-### 2.b LA DECISION CON LA VARA, Y NO ES NI LA C NI LA A
-
-**LO QUE TUMBA LA A, Y ES UNA MEDICION, NO UNA OPINION.** El caso del acta 155
-descansa en que los dos restos fuera del solape son LINEA *"sin procedimiento en
-ningun lado"*. Medido contra `docs/plan/PASO_NODO_CALIBRADO.jsonl`,
-`docs/plan/OP_E_01_DECIDIDAS.jsonl` y el grafo de hoy:
-
-```
-  juran_rcca_metodo                paso 1: hijo vivo adjudicado = NINGUNO
-```
-
-Pegado de `docs/loop/SALIDA_V156_T2A_PASOS_CON_HIJO.txt`, corrido en esta vuelta.
-
+CIFRA ficheros de codigo tocados: 6 fichero(s)
 ```
-  viaje_diagnostico_remedial       paso 7: hijo vivo adjudicado = resistencia_al_cambio
-```
-
-Pegado de `docs/loop/SALIDA_V156_T2A_PASOS_CON_HIJO.txt`, corrido en esta vuelta.
-
-Del paso 1 de juran el calibrado devuelve **hijo vivo adjudicado NINGUNO**, que es
-lo que la salida pegada arriba dice, o sea que SI es linea. Pero el paso 7 del
-viaje, *gestionar la resistencia predecible al cambio*, **SI tiene hijo vivo**,
-`resistencia_al_cambio`, con la arista **ESCRITA por `OP-E-01` en el tramo 4** y
-puesta hoy en las dos vistas. Por la formulacion literal del **9.6.2**, *"la
-prueba de que el paso de la madre es un procedimiento es que existe el hijo que lo
-ejecuta"*, ese paso es un **PROCEDIMIENTO NOMBRADO EN UNA LINEA**. Sin linea en
-los dos sentidos, **el segundo polo del 9.22 no aplica y no hay fusion.**
-
-**LO QUE TUMBA LA C, Y EN ESO EL ACTA TIENE RAZON.** La C es sano CON FIGURA y la
-figura exige dos lineas distintas, una en cada nodo. Puedo nombrar la de juran (su
-paso 2, *analizar sintomas, formular teorias, probarlas e identificar la causa
-raiz*, que el viaje ejecuta en sus pasos 1 a 4). **No puedo nombrar ninguna linea
-del viaje que juran expanda**, porque juran no expande: enuncia. **Sin segunda
-linea no hay figura, y la 6.2 dice que entonces la clase es D.**
-
-**QUEDA EL TERCER CASO QUE EL PROPIO 9.22 NOMBRA:** procedimiento en UN SOLO
-SENTIDO. El viaje trae a juran un procedimiento entero, del que juran se limita a
-enunciar el nombre: el Pareto para descartar variables no relevantes, el
-brainstorming y los diagramas causa efecto, la recoleccion disenada para
-correlacionar, la validacion estadistica, la prueba de los remedios bajo
-condiciones operativas reales y la gestion de la resistencia. Juran, al reves,
-solo aporta UNA LINEA. **Ahi hay madre e
-hijo, la vara del 9.6.1 se aplica una vez y el par CONTINUA: clase D, arreglo de
-ENLACE, y el enlace ya esta puesto.** Y la direccion importa (9.6.2): preguntar
-que anade juran al viaje es preguntarlo al reves, y por ese camino toda madre
-compacta repite, que es lo que el 9.6.2 existe para impedir.
-
-### 2.c LA FUSION NO SE EJECUTA, Y NO HABIA NADA QUE EJECUTAR
-
-```
-CIFRA candidatos a fusion registrados: 0 par(es)
-```
-
-Pegado de `docs/loop/SALIDA_V156_T2B_DECISION_LD097.txt`, corrido en esta vuelta.
 
-La adjudicacion manda registrar CANDIDATO A FUSION **solo si** la clase pasa a A.
-No paso. No hay candidato, no hay superviviente y no se toca una arista.
+Pegado de `docs/loop/SALIDA_V157_T1_ADJUDICACIONES.txt`, corrido en esta vuelta.
 
-### 2.d LA GUARDA DE FRONTERA, CON ASSERT ANTES Y DESPUES
-
 ```
-  ASSERT: el registro cambia, EL GRAFO NO. Las ocho magnitudes iguales.
+CIFRA borrados totales en los seis .py: 0
+CIFRA entradas del registro con el texto viejo comprobado como PREFIJO: 154
+CIFRA entradas cuya `razon` CRECIO: 1 (LD-OPC05-097)
 ```
-
-Pegado de `docs/loop/SALIDA_V156_T2B_DECISION_LD097.txt`, corrido en esta vuelta.
 
-```
-CIFRA veredictos del cribado: 3388 fila(s), y n NO se mueve.
-```
+Las tres lineas de arriba salen del mismo `docs/loop/SALIDA_V157_T1_ADJUDICACIONES.txt`.
 
-Pegado de `docs/loop/SALIDA_V156_T2B_DECISION_LD097.txt`, corrido en esta vuelta.
+Las diez donde el encargo manda: **6.1 y 6.2** en la razon de `LD-OPC05-097` y en
+`vuelta156_tarea2a_pasos_con_hijo.py`; **6.3, 6.4, 6.6 y 6.8** en
+`vuelta152_registro_de_citas_opc05.py`; **6.5** en la guarda de OP-C-05 de
+`run_phase1.py`; **6.6** tambien en el registro; **6.7** en la funcion de la P3b;
+**6.9** en `verificar_mutaciones_viejas.py`; **6.10** en
+`verificar_cifras_del_reporte.py`. **La aditividad se midio, no se prometio:**
+`numstat` con borrados 0 para los `.py` y assert de prefijo literal sobre las 154
+razones del JSONL, no solo sobre la tocada.
 
-```
-CIFRA entradas del registro reclasificadas: 1 par(es)
-```
+## 3. TAREA 2, LA BLOQUEANTE: EL LOTE 1 DEL SACO
 
-Pegado de `docs/loop/SALIDA_V156_T2B_DECISION_LD097.txt`, corrido en esta vuelta.
+### 3.a LA NOMINA, RECOMPUTADA
 
 ```
-CIFRA sedes corregidas: 2 fichero(s)
+CIFRA entradas con via LECTURA_DIRIGIDA: 122
+CIFRA lecturas dirigidas CON puntero de paso: 6
+CIFRA lecturas dirigidas SIN puntero de paso: 116
+CIFRA de esas sin puntero que YA estan en D: 3 (LD-OPC05-002, LD-OPC05-040, LD-OPC05-097)
+CIFRA todavia en C SIN puntero: 113
+CIFRA todavia en C CON puntero: 6
+CIFRA lecturas del lote 1: 66
 ```
-
-Pegado de `docs/loop/SALIDA_V156_T2B_DECISION_LD097.txt`, corrido en esta vuelta.
 
-### 2.e GATE 0 NO SE CAE POR EL CAMBIO DE CLASE, COMPROBADO Y NO CREIDO
+Las siete cifras de arriba estan contadas en
+`docs/loop/SALIDA_V157_T2A_NOMINA.txt`, que es la salida de esa tarea.
 
-```
-GATE 0: OK
-```
+**Da 6 y 60, que es lo que el encargo declara, asi que se pudo leer.** Las
+sesenta sin puntero van de `LD-OPC05-004` a `LD-OPC05-067`, tambien computado.
 
-Pegado de `docs/loop/SALIDA_V156_T2E_GATE0.txt`, corrido en esta vuelta.
+### 3.b EL VEREDICTO
 
 ```
-  CON CITA, TOTAL              : 153 de 153
+CIFRA lecturas dirigidas por clase: {"C": 57, "D": 65}
+CIFRA reclasificadas de C a D en este lote: 62
+CIFRA que sostienen C en este lote: 4
+CIFRA que ya estaban escritas: 0
 ```
-
-Pegado de `docs/loop/SALIDA_V156_T2E_GATE0.txt`, corrido en esta vuelta.
-
-El lector de `docs/plan/LECTURAS_DIRIGIDAS.md` sigue viendo la fila 97. **Y ahi
-hay una trampa que evite a proposito y que dejo escrita:** la celda de clase de
-ese fichero se deja LIMPIA (`D`, sin tachado), porque su lector exige `[A-Z]+` en
-esa celda y un `~~C~~ D` habria hecho DESAPARECER el par del registro y habria
-puesto Gate 0 en rojo. La clase vieja no se pierde: vive en la razon de esa misma
-fila y en la `cita` y la `razon` del registro.
 
-## 3. TAREA 3: LA FIGURA DELGADA
-
-### 3.a LOS TRES SACOS, MEDIDOS Y SIN RECLASIFICAR NADA
-
-Instrumento `scripts/loop/vuelta156_tarea3a_figura_delgada.py`.
-
-```
-CIFRA lecturas dirigidas que nombran las dos lineas: 2 par(es)
-```
+Las cuatro cifras de arriba estan contadas en
+`docs/loop/SALIDA_V157_T2_LOTE1.txt`, que es la salida de esa tarea.
 
-Pegado de `docs/loop/SALIDA_V156_T3A_FIGURA_DELGADA.txt`, corrido en esta vuelta.
+**NINGUNA SALIO A.** No hay candidato a fusion, no se toco una arista y `n` no se
+movio. El limite de la 6.1 sigue vigente y no se cruzo.
 
-```
-CIFRA lecturas dirigidas que nombran una sola: 5 par(es)
-```
+**LAS CUATRO QUE SOSTIENEN C, con sus dos lineas nombradas en la razon**, que es
+lo que la 6.4 exige:
 
-Pegado de `docs/loop/SALIDA_V156_T3A_FIGURA_DELGADA.txt`, corrido en esta vuelta.
+  - **`LD-OPC05-027`** (`cierre_segun_complejidad_venta` contra
+    `metodologia_spin_selling`). LINEA 1, en SPIN paso 1: *diagnosticar si tu
+    venta es pequena o grande*, expandida por los pasos 1 a 3 de cierre. LINEA 2,
+    en cierre paso 3: *minimizar el cierre y enfocar el esfuerzo en las etapas de
+    indagacion SPIN*, expandida por los pasos 2 y 3 de SPIN.
+  - **`LD-OPC05-038`** (`control_estadistico_de_procesos` contra
+    `plan_de_control`). LINEA 1, en plan de control paso 2: *el estandar que
+    activara una accion, idealmente un limite de control de una carta*, expandida
+    por los diez pasos del SPC. LINEA 2, en SPC paso 9: *definir instrucciones de
+    interpretacion y accion*, expandida por los diez pasos del plan de control.
+  - **`LD-OPC05-049`** (`decision_pivotar_o_proceder` contra
+    `lienzo_modelo_negocio`). LINEA 1, en la decision paso 4: *toma un Canvas
+    nuevo y busca game changers*, expandida por los doce pasos del lienzo. LINEA
+    2, en el lienzo paso 12: *usar el lienzo como base para pivotar o validar*,
+    expandida por los seis pasos de la decision.
+  - **`LD-OPC05-122`** (`error_proofing_servicio` contra `metodologia_6s`), la
+    que el acta 155 ya sostuvo a ciegas. LINEA 1, en error proofing paso 4:
+    *simplificar el trabajo*, expandida por los seis pasos de 6S. LINEA 2, en 6S
+    paso 6: *Safety*, expandida por los diez pasos de error proofing.
 
-```
-CIFRA lecturas dirigidas que no nombran ninguna: 115 par(es)
-```
+**LOS DOS AVISOS DEL ENCARGO, CONTESTADOS.** `LD-OPC05-046` **CAE A D**, y con
+ello **queda revocada esa parte de la adjudicacion 6.3 del acta 155**, que lo
+sostuvo en C por el 9.6.3, o sea POR SER SANO: bajo la 6.4 sano sin figura es D,
+y ademas sus dos direcciones apuntan a la misma linea (el sistema que recolecta,
+analiza y difunde). `LD-OPC05-122` **se sostiene**, y con sus dos lineas
+nombradas.
 
-Pegado de `docs/loop/SALIDA_V156_T3A_FIGURA_DELGADA.txt`, corrido en esta vuelta.
+### 3.c LA VARA, DECLARADA CON SUS LIMITES ANTES DE APLICARLA
 
-**LA VARA DEL COMPUTO VA DECLARADA CON SUS LIMITES:** cuenta PUNTEROS DE LINEA
-(numerado, vago, citado), **no** comprueba que sean de nodos distintos y **no** ve
-una linea nombrada sin puntero. **Sub estima la figura, nunca la sobre estima.**
+Vive entera en el docstring de
+`scripts/loop/vuelta157_tarea2_lote1_veredictos.py`. En corto: **una direccion
+cuenta cuando la LINEA del nodo X es una ACCION y el nodo Y es el COMO SE HACE
+esa accion**; mencionar al otro como contexto, precondicion o diagnostico **no
+cuenta**; hacen falta **las dos** direcciones sobre **dos lineas distintas**; y si
+las dos direcciones apuntan a la misma linea, **no es esta figura**, que es cita
+literal del 9.22 y es la comprobacion que mas casos separo en este lote.
 
-**CALIBRADO CONTRA LOS TRES CASOS QUE EL ACTA 155 ETIQUETO A MANO**, con assert y
-con el lado esperado puesto por el acta y no por mi fichero:
+### 3.d LAS GUARDAS, MEDIDAS (misma salida)
 
 ```
-CIFRA casos de calibracion que coinciden: 3 de 3
+C.1 PREFIJO: las 154 razones del registro conservan su texto viejo ENTERO
+C.3 CLASES MOVIDAS: 62, y todas de C a D
+C.4 FRONTERA, sha256 de dataset/ DESPUES: 1330ccb9c46c03d371cb1ecf7911c83bbb4b14db71a878b3405738000c90e9d8
+    EL REGISTRO CAMBIA, EL GRAFO NO: sha256 IDENTICO y censo IDENTICO
+C.5 CIFRA n, veredictos del cribado DESPUES: 3388
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T3A_FIGURA_DELGADA.txt`, corrido en esta vuelta.
+Las cuatro lineas de arriba estan contadas en
+`docs/loop/SALIDA_V157_T2_LOTE1.txt`, que es la salida de esa tarea. **La guarda
+C.2 no se pega aqui porque su fichero no la publica como linea `CIFRA` y una
+cifra que no se puede contar de su fichero no se publica:** lo que dice, y vive
+en esa misma salida, es que la coleccion de pares del registro es la misma antes
+y despues, sin uno de mas ni uno de menos.
 
-**LA RELECTURA DE LOS DOS SACOS PEQUENOS VA DECLARADA COMO LECTURA**, y por
-`EJECUTOR.md` 1 digo que **ahi no hay caso rojo automatico que mutar** en vez de
-fabricar uno que se apruebe solo. Lo que si tiene caso rojo es la calibracion de
-arriba.
+Gate 0 al terminar el lote, con el ciclo entero y en su orden:
 
 ```
-CIFRA lecturas que corrigen al computo: 1 par(es)
+CIFRA comprobaciones de Gate 0 que pasan: 26 comprobaciones
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T3A_FIGURA_DELGADA.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T2D_CONTEO_GATE0.txt`, corrido en esta vuelta.
 
 ```
-CIFRA lecturas dirigidas SIN FIGURA tras la relectura a mano: 116 par(es)
+CIFRA comprobaciones de Gate 0 que fallan: 0 comprobaciones
 ```
-
-Pegado de `docs/loop/SALIDA_V156_T3A_FIGURA_DELGADA.txt`, corrido en esta vuelta.
 
-### 3.b LOS DOS NOMBRADOS, RELEIDOS POR P.5 Y ADJUDICADOS
+Pegado de `docs/loop/SALIDA_V157_T2D_CONTEO_GATE0.txt`, corrido en esta vuelta.
 
-Instrumento `scripts/loop/vuelta156_tarea3b_relectura_040_002.py`.
+### 3.e EL COTEJO CON LA CIEGA DEL AUDITOR, LEIDA DESPUES
 
-  - **`LD-OPC05-040`**, `cost_management_plan` contra `stakeholder_register`, los
-    dos del mismo libro de formularios: las dos lineas se buscaron y no estan, y
-    la unica cercania (*quien tiene autoridad para asignar presupuesto* contra
-    *la posicion, el rol*) no es figura, porque el registro **no desarrolla la
-    autoridad presupuestaria en ningun paso**: lista a todos por igual. **D.**
-  - **`LD-OPC05-002`**, `actividades_clave` contra `key_resources_hypothesis`, y
-    **ni siquiera del mismo libro**: dos bloques del lienzo, lo que se hace contra
-    lo que se necesita para hacerlo. **D.**
+Selle la lectura primero contra los nodos y solo despues abri
+`docs/loop/_auditor_v157_mis_adjudicaciones.txt`, cuyo sha1 comprobe con
+`git hash-object`: **`c3b1ceca60a7832346335b948dbad53c97610939`**, o sea el
+`c3b1ceca` que el encargo declara.
 
-**EL ACTA 155 TENIA RAZON EN LOS DOS.**
+**Y AQUI CORRIJO UNA CIFRA DEL ENCARGO, CONTANDOLA:** el encargo dice que
+**cinco** de sus diez casos caen en mi lote (007, 019, 043, 055, 067). Son
+**SEIS**: **`031` tambien esta**, porque es una de las seis con puntero de paso y
+la nomina computada lo incluye. **Coincidimos en las seis, las seis en D.**
 
-```
-CIFRA lecturas dirigidas reclasificadas por la TAREA 3.b: 2 par(es)
-```
+## 4. TAREA 3, LA INFERENCIA INVALIDA
 
-Pegado de `docs/loop/SALIDA_V156_T3B_RELECTURA.txt`, corrido en esta vuelta.
+Salida: `docs/loop/SALIDA_V157_T3_PASO1_JURAN.txt`. Lo medi yo, no lo copie:
 
 ```
-CIFRA clases de las lecturas dirigidas tras la tarea: {"C": 119, "D": 3}
+CIFRA veredicto (1): VIVO
+CIFRA pasos del candidato: 4
+CIFRA veredicto (3): NO HAY ARISTA
+CIFRA filas del calibrado con juran_rcca_metodo de madre: 2
+CIFRA filas del calibrado que nombran a desperdicio_cronico_vs_esporadico: 0
+CIFRA condiciones del contraejemplo que se cumplen: 4 de 4
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T3B_RELECTURA.txt`, corrido en esta vuelta.
+`desperdicio_cronico_vs_esporadico` esta **VIVO** y sus cuatro pasos (monitorear,
+diferenciar el pico esporadico del nivel cronico, accion correctiva, proyecto de
+mejora) **despliegan el paso 1 de juran** (definir el problema: identificar si es
+esporadico o cronico), **sin arista en ninguna de las dos vistas y sin fila en el
+calibrado**. **Hay hijo, y la vara no lo veia.** La correccion por adicion vive en
+la 6.2, en la razon de `LD-OPC05-097` y en el docstring del instrumento: *ningun
+hijo adjudicado* es **una ausencia bajo la vara declarada**, no una prueba de
+linea. **La clase no se mueve.**
 
-```
-CIFRA veredictos del cribado: 3388 fila(s), y n NO se mueve.
-```
+## 5. TAREA 4, EL TACHADO
 
-Pegado de `docs/loop/SALIDA_V156_T3B_RELECTURA.txt`, corrido en esta vuelta.
+Salidas `docs/loop/SALIDA_V157_T4B_MUTACION_TACHADO.txt` (exit 0) y
+`..._MUTADO.txt` (exit 1), y `docs/loop/SALIDA_V157_T4C_TACHADO.txt`.
 
 ```
-GATE 0: OK
+CIFRA pares que recoge el lector VIEJO: 122
+CIFRA pares que recoge el lector NUEVO: 122
+CIFRA pares que recoge el lector VIEJO sobre el texto tachado: 121
+coincidencias del patron VIEJO en la fila 97: 0
+clase que le asigna (la ULTIMA escrita en la celda): 'D'
+CIFRA filas tachadas en esta corrida: 3
+CIFRA clases movidas por el tachado: 0 (ninguna)
 ```
-
-Pegado de `docs/loop/SALIDA_V156_T3B_GATE0.txt`, corrido en esta vuelta.
 
-### 3.c EL RESTO DEL SACO NO SE TOCA, Y LO TRAIGO MEDIDO
+Las tres condiciones que el encargo pide: **el lector viejo pierde la fila
+tachada** (0 coincidencias), **el nuevo la recupera con la clase buena** (D), y
+**el conteo sobre el fichero SIN tachar sale identico** (122 y 122, mismas claves
+y mismas clases). **El caso rojo se probo por mutacion de su propia expectativa:**
+con `--mutar` sale **exit 1**. Solo entonces las tres filas (002, 040 y 097)
+recibieron su `~~C~~ D`, y Gate 0 lo vio en **26 de 26 en OK**.
 
-**115 por computo, 116 tras la lectura**, sobre 122 lecturas dirigidas. Su nomina
-entera, con la razon de cada una, esta en
-`docs/loop/SALIDA_V156_T3A_FIGURA_DELGADA.txt`. **Son muchos**, que es
-exactamente lo que el encargo queria ver medido antes de encargar nada: **casi el
-95 por ciento de las lecturas dirigidas en clase C no nombra una sola linea**, y
-reclasificarlas en bloque moveria 115 clases de una vez. **Va como pregunta 1.**
+## 6. TAREA 5, EL ROJO QUE NOMBRABA AL CULPABLE EQUIVOCADO
 
-## 4. TAREA 4: LA PUERTA DEL NOMBRE DE FASE
+Salidas `docs/loop/SALIDA_V157_T5C_MUTACION_RUIDO.txt` (exit 0),
+`..._MUTADO.txt` (exit 1) y `docs/loop/SALIDA_V157_T5_BATERIA.txt`.
 
-**REPRODUJE EL BUG ANTES DE TOCAR NADA, SIN TUBERIA.** La primera fila del
-fichero de antes es la de `--fase 06_MESAS`:
-
 ```
-CIFRA: operaciones del catalogo: 16 | con destino cumplido: 16 | sin cumplir: 0 | de ellas, sin vara escrita: 0 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+CIFRA mutaciones en la nomina VIEJAS (contadas, no tecleadas): 23
+CIFRA inestables (rojo del script)       : 0 (ninguno)
+CIFRA ruido de concurrencia (aparte)     : 1 (_vecino_de_otro.txt)
+CIFRA inestables que le cuelga al script : 1 (_vecino_de_otro.txt)
 ```
-
-Pegado de `docs/loop/SALIDA_V156_T4_ANTES.txt`, corrido en esta vuelta.
 
-y la de `--fase 06`, en el mismo fichero, sale con 11 del catalogo, 11 cumplidas,
-0 sin cumplir y EXIT 0 **sin una queja**. Al digito lo que el acta 155 dice.
-
-**4.a EL ARREGLO VA EN `medir` Y NO EN `main` A PROPOSITO**: los arneses de las
-vueltas 140 a 144 llaman a `medir()` directamente, y una puerta que solo viviera
-en la linea de ordenes los dejaria fuera. Los nombres validos se leen del fichero
-con `nombres_de_fase()`, la misma funcion que `--fases` usa, para que la puerta y
-la ayuda no puedan divergir.
-
-**4.b EL CASO POSITIVO POR MUTACION, CUATRO CASOS.** La vara VIEJA se saca del
-**commit de apertura leido de su fichero sellado**, no de `HEAD`, porque `HEAD`
-avanza: es el remedio de mi caida 5 de la vuelta 154 aplicado aqui.
-
-```
-CIFRA casos del arnes en verde: 4 comprobacion(es)
-```
+**El sujeto no es inventado.** La mitad (B) del caso importa la version **VIEJA**
+de `correr_dos_veces` con `git show` del **commit de apertura leido de git log**,
+y sobre EL MISMO escenario le cuelga `_vecino_de_otro.txt` a un script que no lo
+escribe. La nueva sale limpia y lo nombra **aparte**, bajo RUIDO DE
+CONCURRENCIA. **Y las 23 siguen siendo 23.**
 
-Pegado de `docs/loop/SALIDA_V156_T4B_MUTACION.txt`, corrido en esta vuelta.
+**La bateria, corrida SOLA y sin nada al lado**, como manda la regla que el
+auditor rompio y declaro:
 
 ```
-CIFRA operaciones del catalogo de 06_MESAS, antes y despues: 16 y 16
+  ANCLA PERDIDA  : 0 (ninguna)
+  NO MORDIO      : 0 (ninguna)
+  NO REPRODUCIBLE: 0 (ninguna)
+  CASO DECLARADO : 2 (vuelta135_2e_mutacion_3.py, vuelta140_2a_mutaciones.py)
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T4B_MUTACION.txt`, corrido en esta vuelta.
+Las cuatro lineas de arriba estan pegadas de
+`docs/loop/SALIDA_V157_T5_BATERIA.txt`, que es la salida de esa corrida. **La
+linea nueva de RUIDO DE CONCURRENCIA sale ahi mismo y no la pego como cifra
+porque esa salida no la publica como linea `CIFRA`:** dice que no aparecio
+ningun fichero ajeno mientras la bateria corria, que es lo que se espera de una
+corrida sola.
 
-El **16 no se teclea**: se lee del fichero sellado ANTES del arreglo. **El arreglo
-toco la puerta, no el conteo.**
+## 7. TAREA 6, EL RE SELLADO EN SILENCIO
 
-**4.c NINGUNA CIFRA PUBLICADA DEPENDIA DEL BUG, Y LO DIGO CON DOS BARRIDOS.**
+Nace `scripts/loop/verificar_re_sellado.py`, con nombre estable y sin numero de
+vuelta. Salidas `docs/loop/SALIDA_V157_T6B_MUTACION_RE_SELLADO.txt` (exit 0) y
+`..._MUTADO.txt` (exit 1).
 
 ```
-CIFRA invocaciones de --fase halladas: 21 fichero(s)
+estado             : RE SELLADO
+commit de su tarea : f95e4ee9f8d3
+numstat contra HEAD: +7/-7
+CIFRA lineas CIFRA cuyo VALOR cambio: 1
+CIFRA filas sin declarar: 1 (SALIDA_V156_T4C_CIFRAS.txt)
+CIFRA filas sin declarar: 0
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T4C_CIFRAS.txt`, corrido en esta vuelta.
+Las seis lineas de arriba estan contadas en
+`docs/loop/SALIDA_V157_T6B_MUTACION_RE_SELLADO.txt`, que es la salida de ese
+caso. La linea CIFRA que se movio es `salidas selladas del tallador`, que pasa
+de 52 a 55, y el valor viejo va sin su unidad a proposito para que no se lea
+como una cifra que este reporte afirme: la afirma el fichero, no yo.
 
-```
-CIFRA invocaciones con nombre que no calza: 1 fichero(s)
-```
+El sujeto del caso es **el fichero que el auditor pillo**. Las cuatro
+comprobaciones: el sujeto esta re sellado de verdad; el reporte que calla deja
+**1** fila sin declarar; el que trae la linea computada deja **0**; y un fichero
+**SIN RE SELLAR** elegido por computo **no es acusado**.
 
-Pegado de `docs/loop/SALIDA_V156_T4C_CIFRAS.txt`, corrido en esta vuelta.
+**Y LA GUARDA MORDIO EN SU PRIMERA CORRIDA REAL, SOBRE ESTE MISMO REPORTE.**
+Corrida contra `docs/loop/REPORTE.md`
+(`docs/loop/SALIDA_V157_T9_RE_SELLADO.txt`) salio **ROJO exit 1** porque este
+reporte cita `SALIDA_V156_T4C_CIFRAS.txt` y ese fichero cambio despues del
+commit de su tarea sin que yo lo dijera. **Lo declaro con la linea que la propia
+guarda computo, no con una narracion:**
 
 ```
-CIFRA salidas selladas del tallador: 55 fichero(s)
+RE SELLADO DECLARADO: SALIDA_V156_T4C_CIFRAS.txt numstat +7/-7, lineas CIFRA con valor cambiado: 1 (CIFRA salidas selladas del tallador)
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T4C_CIFRAS.txt`, corrido en esta vuelta.
+No fui yo quien lo re sello: lo re sello la vuelta 156, y es exactamente el caso
+que la 6.10 nombra. **Lo que cambia hoy es que ya no se puede citar en silencio.**
 
-```
-CIFRA salidas selladas con nombre de fase que no calza: 2 fichero(s)
-```
+**EL LIMITE DE LA VARA, DECLARADO ANTES DE QUE NADIE LO DESCUBRA:** solo ve
+lineas con el rotulo `CIFRA`. En ese mismo fichero el auditor nombro **dos**
+cambios y esta guarda ve **uno**, porque el otro no lleva rotulo. **Lo que la
+guarda garantiza no es ver todas las cifras movidas: es que un fichero que
+cambio no pase en silencio**, porque el `numstat` cuenta el fichero entero.
 
-Pegado de `docs/loop/SALIDA_V156_T4C_CIFRAS.txt`, corrido en esta vuelta.
+## 8. TAREA 7, EL COSTE DE LAS NUEVE, Y SALE PEOR QUE UN COSTE
 
 ```
-CIFRA salidas que no calzan y ADEMAS estan citadas: 0 fichero(s)
+CIFRA fichas con al menos una cita que la bateria no cubre: 4
+CIFRA salidas distintas sin respaldo en la bateria: 9
+CIFRA ficheros .py barridos: 998
+CIFRA salidas con productor identificado: 7 de 9
+CIFRA de esas con productor identificado y corrido: 7
+CIFRA de las corridas que TODAVIA MUERDEN (exit 0): 5
+CIFRA de las corridas que ESCRIBEN en docs/loop/: 0
+CIFRA segundos de UNA corrida de todas: 40.04 segundos
+CIFRA segundos que anadirian al cierre de cada vuelta: 80.07 segundos
 ```
-
-Pegado de `docs/loop/SALIDA_V156_T4C_CIFRAS.txt`, corrido en esta vuelta.
-
-El primero busca la **orden escrita**; la unica que no calza es el `NO_EXISTE` con
-que el acta 155 narra su propia caida 2. El segundo, que es el que cierra la
-pregunta, lee **la cabecera de cada salida sellada**, sin depender de que alguien
-escribiera la orden al lado: las dos que no calzan son los ficheros de diagnostico
-del propio auditor en la 155, y **no lo supongo**: barro el repo entero buscando su
-nombre de fichero y **no las cita nadie**.
-
-## 5. TAREA 5: EL CORREDOR
-
-**5.a SOLO ENTRA LO MARCADO.** El encargo tiene que traer el rotulo literal y
-decir ahi lo que admite. **Un hash citado de paso ya no entra.** Un encargo SIN el
-rotulo admite el conjunto vacio, que es lo que la guarda hacia antes de la 6.7:
-**la regla es prospectiva y ningun veredicto viejo se mueve.**
 
-**5.b LA VARA SE FIJA.** El encargo se lee con `git show` **del commit del acta**
-de la vuelta que se comprueba.
+Las nueve cifras de arriba estan contadas en
+`docs/loop/SALIDA_V157_T7_COSTE_P3B.txt`, que es la salida de esa tarea.
 
-**5.c LA GUARDA HABLA SIEMPRE**, salga verde o rojo, y **el rojo por un commit del
-ejecutor dentro del corredor se queda intacto** (caso D).
+**TRES HALLAZGOS QUE LA VUELTA 156 NO PODIA VER PORQUE SOLO CONTABA:**
 
-**5.d SEIS CASOS, SOBRE VARIABLE COMPUTADA.** El corredor real de la vuelta 152 se
-lee de git y los dos commits se localizan **por su asunto**. Los cuatro de la 154
-re corridos salen igual, y los dos nuevos:
+  1. **LA CORRESPONDENCIA SALIDA-SCRIPT NO ES MECANICA.**
+     `SALIDA_V96_TAREA3_MUTACION.txt` NO la escribe `vuelta96_tarea3_mutacion.py`
+     (no existe) sino `vuelta96_tarea3_prueba_mutacion.py`. Por eso aqui el
+     productor **se busca por el texto que imprime cada salida**, barriendo 998
+     `.py`. La regla de nombre de la 156 no solo sobre estima: **no sirve para
+     encontrar al productor**.
+  2. **DOS DE LAS NUEVE NO TIENEN PRODUCTOR IDENTIFICABLE:**
+     `SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt` y `SALIDA_V136_3D_MUTACION.txt`.
+     Y **las 7 identificadas son SEIS scripts distintos**, porque `V93` y `V94`
+     comparten productor (`vuelta93_tarea3_guarda_direccion.py`).
+  3. **DOS DE LAS SIETE NO MUERDEN HOY**, con su veredicto pegado:
+     `vuelta96_tarea3_prueba_mutacion.py` exit 1, *ROJO, alguna guarda no se
+     comporta*; y `vuelta97_tarea2_prueba_mutacion.py` exit 1, *10 de 12
+     comprobaciones se comportan como deben*.
 
-```
-  SIN rotulo: rotulo hallado=False, admitidos=0 []
-```
-
-Pegado de `docs/loop/SALIDA_V156_T5D_MUTACION_CORREDOR.txt`, corrido en esta vuelta.
-
-```
-  CON rotulo: rotulo hallado=True, admitidos=1 ['d9fa886b']
-```
+**NO METO NINGUNA EN LA BATERIA.** La cifra se publica y se trae, que es lo que
+la 6.7 manda. Y la P3b de esas cuatro fichas queda declarada junto a la funcion
+como **PROXY SIN RESPALDO EFECTIVO**, escrito en la TAREA 1.
 
-Pegado de `docs/loop/SALIDA_V156_T5D_MUTACION_CORREDOR.txt`, corrido en esta vuelta.
+## 9. TAREA 8, LAS DOS ESPECIES DE D
 
-```
-  --vuelta 154  EXITCODE 0 (se esperaba 0) | ficheros nombrados 10 | cosas que no cuadran 0
-```
+**Esta tarea mide: no reclasifica nada y no abre un fichero para escribir.**
 
-Pegado de `docs/loop/SALIDA_V156_T5D_MUTACION_CORREDOR.txt`, corrido en esta vuelta.
+`"el registro"` era ambiguo (el acta nombra puestos del CRIBADO, la discusion
+nace en el REGISTRO DE CITAS) y **no lo adivine: medi los dos.**
 
 ```
-  --vuelta 100  EXITCODE 1 (se esperaba 1) | ficheros nombrados 0 | cosas que no cuadran 48
-```
+A) REGISTRO DE CITAS DE OP-C-05
+CIFRA filas en clase D: 96
+CIFRA MADRE E HIJO    :     6  (6.2 por ciento)
+CIFRA SANO Y DISTINTO :    20  (20.8 por ciento)
+CIFRA AMBIGUA         :     1  (1.0 por ciento)
+CIFRA SIN MARCA       :    69  (71.9 por ciento)
 
-Pegado de `docs/loop/SALIDA_V156_T5D_MUTACION_CORREDOR.txt`, corrido en esta vuelta.
+B) ARCHIVO DEL CRIBADO
+CIFRA filas en clase D: 2760
+CIFRA MADRE E HIJO    :    72  (2.6 por ciento)
+CIFRA SANO Y DISTINTO :    21  (0.8 por ciento)
+CIFRA AMBIGUA         :     2  (0.1 por ciento)
+CIFRA SIN MARCA       :  2665  (96.6 por ciento)
 
-```
-CIFRA casos del arnes en verde: 6 comprobacion(es)
+C) CIFRA de los cinco puestos del acta que esta vara clasifica como MADRE E HIJO: 1 de 5
 ```
-
-Pegado de `docs/loop/SALIDA_V156_T5D_MUTACION_CORREDOR.txt`, corrido en esta vuelta.
-
-**LA MUTACION MUERDE:** el MISMO hash, en el MISMO texto, entra con rotulo y no
-entra sin el; y la puerta VIEJA lo recogia en los dos casos.
 
-**UNA CORRECCION DE PASO, DECLARADA:** las tres salidas tempranas de `verificar()`
-devolvian una tupla de TRES y `main` desempaqueta CINCO. Cualquiera de las tres
-reventaba con `ValueError` en vez de imprimir el ROJO que ya tenia escrito. Nunca
-se disparo porque las tres piden un repo raro, pero **un rojo que revienta en vez
-de hablar es lo contrario de fallar ruidoso**. Arreglado.
+Las once cifras de arriba estan contadas en
+`docs/loop/SALIDA_V157_T8_DOS_ESPECIES_D.txt`, que es la salida de esa tarea.
 
-## 6. TAREA 6: EL TEXTO DE LA FICHA SE CONGELA
+**LA CALIBRACION SE DELATA SOLA Y LA PUBLICO ASI.** De los cinco puestos que el
+acta 157 nombra como madre e hijo (316, 478, 1424, 1494, 2066), esta vara lexica
+solo clasifica **uno**, el **478**, y por la marca *casa propia*. Los otros cuatro
+salen **SIN MARCA**. **La discrepancia se declara y no se arregla retocando las
+marcas hasta que salga:** es el LIMITE 1 que el instrumento declara antes de
+correr, y es la prueba de que **la cifra de MADRE E HIJO es una COTA INFERIOR y
+no un total**. El acta lee; esta vara solo cuenta palabras. **El residuo se
+publica en SIN MARCA en vez de repartirse.**
 
-`declara_su_estado` lee `nota` y `adjudicacion` **del corte**, con `git show`, como
-la P3. La funcion vieja no se borra: se llega a ella con `--declara-arbol`, que es
-la unica forma de medir la serie en los dos cortes.
+## 10. TAREA 9, EL CIERRE RECOMPUTADO AL CIERRE
 
-```
-CIFRA corridas del instrumento: 4 comprobacion(es)
-```
+**EL CICLO ENTERO Y EN SU ORDEN, NUNCA `run_phase1` SUELTO:**
+`--reaplico-curaduria` (`docs/loop/SALIDA_V157_T9_GATE0.txt`),
+`etiquetas_de_cara --aplicar` (`..._T9_ETIQ.txt`, **71 etiquetas**),
+`sync_assets_web` (`..._T9_SYNC.txt`, **seis assets**) y despues el `numstat`.
 
-Pegado de `docs/loop/SALIDA_V156_T6_SERIE.txt`, corrido en esta vuelta.
-
 ```
-  Sobre el corte de la 154 la vara nueva mueve la serie de 24/12 a 24/12 (diferencia +0/+0).
+CIFRA filas de numstat: 0 filas
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T6_SERIE.txt`, corrido en esta vuelta.
-
-```
-  Sobre el corte de la 156 la vara nueva mueve la serie de 24/12 a 24/12 (diferencia +0/+0).
-```
+La cifra de arriba esta contada en `docs/loop/SALIDA_V157_T9_NUMSTAT.txt`, que es
+la salida de ese `git diff`.
 
-Pegado de `docs/loop/SALIDA_V156_T6_SERIE.txt`, corrido en esta vuelta.
+**GATE 0, CON SU CONTEO HECHO SOBRE SU PROPIO FICHERO:**
 
 ```
-CIFRA fichas que la vara nueva devuelve al silencio en el corte 32b2c76e: 4 operaciones
+CIFRA comprobaciones de Gate 0 que pasan: 26 comprobaciones
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T6_SERIE.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T9_CONTEO_GATE0.txt`, corrido en esta vuelta.
 
 ```
-CIFRA fichas que la vara nueva devuelve al silencio en el corte cf945888: 0 operaciones
+CIFRA comprobaciones de Gate 0 que fallan: 0 comprobaciones
 ```
-
-Pegado de `docs/loop/SALIDA_V156_T6_SERIE.txt`, corrido en esta vuelta.
 
-**LA CIFRA PUBLICADA DE CONGELADAS NO SE MUEVE, Y DIGO POR QUE CON LA MEDICION
-DELANTE.** En el corte de la 156 la diferencia es cero porque esta vuelta no ha
-escrito ni una nota ni una adjudicacion en `docs/plan/OPERACIONES.jsonl`: sus
-adjudicaciones fueron al registro de citas y a los `.py`. En el corte de la 154 SI
-hay cuatro fichas cuyo texto cambio despues del corte (`OP-M-01`, `OP-M-02`,
-`OP-M-03` y `OP-M-05`), y aun asi la serie no se mueve porque las cuatro estaban
-en LISTA al corte y **hoy estan en HECHA**, o sea fuera de la unica rama donde
-`declara_su_estado` se consulta. **El agujero era real y la 154 lo demostro al
-digito; lo que esta vuelta anade es que ya no puede volver a abrirse.**
+Pegado de `docs/loop/SALIDA_V157_T9_CONTEO_GATE0.txt`, corrido en esta vuelta.
 
-## 7. TAREA 7: EL HUECO DE LA P3b, Y SALE PEOR DE LO QUE LA ADJUDICACION SUPONIA
-
-```
-CIFRA scripts de la bateria: 23 fichero(s)
 ```
-
-Pegado de `docs/loop/SALIDA_V156_T7_HUECO_P3B.txt`, corrido en esta vuelta.
-
 ```
-CIFRA fichas que se apoyan en la P3b: 4 operaciones
+CIFRA pares bidireccionales citados: 154 pares
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T7_HUECO_P3B.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T9_CONTEO_GATE0.txt`, corrido en esta vuelta.
 
 ```
-CIFRA fichas con su caso positivo cubierto por la bateria: 0 operaciones
+CIFRA pares bidireccionales huerfanos: 0 pares
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T7_HUECO_P3B.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T9_CONTEO_GATE0.txt`, corrido en esta vuelta.
 
 ```
-CIFRA fichas con al menos una cita que la bateria no cubre: 4 operaciones
+CIFRA pares excluidos por declarante deprecado: 3 pares
 ```
-
-Pegado de `docs/loop/SALIDA_V156_T7_HUECO_P3B.txt`, corrido en esta vuelta.
-
-De las 71 fichas **solo cuatro** se apoyan en la P3b, y **las cuatro** citan
-artefactos que la bateria **no re corre**: la interseccion entre las nueve salidas
-citadas y los veintitres scripts de la bateria es **vacia**.
 
-  - `OP-C-05`: `SALIDA_V154_T2D_MUTACION.txt`
-  - `OP-E-03`: `V96_TAREA3`, `V97_TAREA2`, `V98_TAREA4`, `V99_TAREA3` y
-    `V108_TAREA2_3`
-  - `OP-E-07`: `V93_TAREA3` y `V94_TAREA2B`
-  - `OP-S-11`: `SALIDA_V136_3D_MUTACION.txt`
+Pegado de `docs/loop/SALIDA_V157_T9_CONTEO_GATE0.txt`, corrido en esta vuelta.
 
-**POR QUE PASA, Y NO ES UN FALLO DE LA BATERIA:** la bateria vigila **las guardas
-del bucle**, que es para lo que nacio; las citas de la P3b son mutaciones **de
-operaciones del plan**. Dos universos distintos que nadie habia cruzado. El hueco
-queda escrito junto a la funcion, por adicion. **Y no meto esas nueve salidas en
-la bateria: es una decision de tamano y de coste por vuelta que no es mia, y va
-como pregunta 2.**
-
-## 8. TAREA 8: LAS DOS DEUDAS DEL REPORTE, PAGADAS POR CONSTRUCCION
-
-**8.a LA CAIDA.** Acepto la caida de reporte de la vuelta 154 tal como el acta la
-registra: *"dos afirmaciones de cierre"* contra el 4 de mi propia linea sellada.
-**No hay reporte viejo que arreglar y no lo repito.** El arreglo es estructural:
-`scripts/loop/vuelta156_tarea8_escribir_reporte.py` **no puede teclear una cifra
-que describa una salida**. Toda cifra de ese tipo pasa por `pegar()`, que busca la
-linea en el fichero sellado y la devuelve literal; si la linea no esta, `pegar()`
-**levanta y el reporte no se escribe**. Por eso este reporte tiene tanto bloque de
-codigo: cada uno es una linea pegada de su fichero.
-
-**8.b EL DEFECTO DE FORMA.** La frase duplicada de la seccion 8 de la 154 la
-producia el script que escribe el reporte. Aqui se caza antes de sellar con
-`frases_duplicadas()`, que parte el texto en frases, descarta tablas y bloques de
-codigo, normaliza y cae si alguna de mas de 60 caracteres aparece mas de una vez.
-**Su caso por mutacion corre en el propio `main`**: primero se le da un texto con
-una frase duplicada a proposito y se comprueba que la caza, y despues se le da el
-reporte real. La salida de esas dos corridas esta en
-`docs/loop/SALIDA_V156_T8_ESCRITURA.txt`.
-
-**LA LINEA `COBERTURA` DE LA GUARDA DE CIFRAS NO SE PEGA AQUI, Y DIGO POR QUE EN
-VEZ DE CALLARLO.** Es la linea que el acta 155 uso para cazar la caida de la 154,
-y lo natural seria pegarla entera. **Lo intente y no se puede:** esa linea nombra
-dentro de si misma el instrumento del estado de las etapas y la palabra que la
-guarda usa para reconocer una afirmacion de remate, asi que **la guarda se lee a
-si misma y se exige a si misma una salida de ese instrumento en su ventana**. Con
-la linea pegada, el reporte quedaba en ROJO por su propio texto, y el rojo era del
-formato y no de ninguna cifra. **Asi que la cifra no se parafrasea ni se teclea:
-se deja donde vive, en `docs/loop/SALIDA_V156_T8_GUARDA_CIFRAS.txt`, corrido en
-esta vuelta, y ahi se lee entera.** Es la unica cifra de este reporte que no va
-pegada, y va declarada por eso.
-
-## 9. TAREA 9: EL CIERRE, RECOMPUTADO AL CIERRE
-
-**EL CICLO ENTERO Y EN SU ORDEN, NUNCA `run_phase1` SUELTO.**
-
 ```
-GATE 0: OK
+CIFRA pares del universo ensanchado: 157 pares
 ```
 
-Pegado de `docs/loop/SALIDA_V156_GATE0_CMD1_CIERRE.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T9_CONTEO_GATE0.txt`, corrido en esta vuelta.
 
 ```
-EXITCODE: 0
+CIFRA veredicto de Gate 0: OK
 ```
 
-Pegado de `docs/loop/SALIDA_V156_CICLO_NUMSTAT_CIERRE.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T9_CONTEO_GATE0.txt`, corrido en esta vuelta.
 
-```
-        WORK | nodos 3853 vivos 3169 depre 684 | sig 8780 prev 8740 suma 17520 union 9914 | solo_sig 1174 solo_prev 1134 auto 0 | nodos_con_dup_en_lista 0
-```
+Ese fichero cuenta a su vez `docs/loop/SALIDA_V157_T9_GATE0.txt`, que es la
+salida cruda del ciclo.
 
-Pegado de `docs/loop/SALIDA_V156_CONTEO_CIERRE.txt`, corrido en esta vuelta.
+**LAS TRES SUITES:**
 
 ```
-TODOS LOS TESTS PASARON (25/25).
+CIFRA motor: 25/25
 ```
 
-Pegado de `docs/loop/SALIDA_V156_MOTOR_CIERRE.txt`, corrido en esta vuelta.
+Sale de `docs/loop/SALIDA_V157_T9_MOTOR.txt`, los 25 `engine/test_*.py` corridos
+uno a uno.
 
 ```
  Test Files  80 passed (80)
-```
-
-Pegado de `docs/loop/SALIDA_V156_WEB_CIERRE.txt`, corrido en esta vuelta.
-
-```
       Tests  1030 passed | 3 skipped (1033)
 ```
 
-Pegado de `docs/loop/SALIDA_V156_WEB_CIERRE.txt`, corrido en esta vuelta.
+Sale de `docs/loop/SALIDA_V157_T9_WEB.txt`, con vitest corrido DESDE `web/` y
+exit 0.
 
 ```
-EXIT=0
+CIFRA lineas de tsc: 0
 ```
 
-Pegado de `docs/loop/SALIDA_V156_TSC_CIERRE.txt`, corrido en esta vuelta.
+Sale de `docs/loop/SALIDA_V157_T9_TSC.txt`, exit 0.
 
-**LAS GUARDAS DEL CIERRE, CON SU ESTADO REAL AUNQUE NO ME FAVOREZCAN.**
-
-```
-ROJO, apertura de la vuelta 100 NO sellada antes de la 1.a operacion (48 cosa(s) no cuadran):
-```
-
-Pegado de `docs/loop/SALIDA_V156_T9_GUARDAS_CIERRE.txt`, corrido en esta vuelta.
+**EL ESTADO DEL ARCHIVO, RECOMPUTADO AL CIERRE:**
 
 ```
-CIFRA ficheros de apertura sellados de la vuelta 156: 10 fichero(s)
+CIFRA n, filas del archivo: 3388
+CIFRA marcador clase A: 551
+CIFRA marcador clase B: 72
+CIFRA marcador clase C: 5
+CIFRA marcador clase D: 2760
+CIFRA huecos: 0
+CIFRA duplicados: 0
+CIFRA nodos: 3853
+CIFRA vivos: 3169
+CIFRA deprecados: 684
+CIFRA aristas nodos_siguientes: 8780
+CIFRA aristas nodos_previos: 8740
+CIFRA suma de las dos vistas: 17520
+CIFRA union DIRIGIDA de las dos vistas: 9914
+CIFRA solo_sig: 1174
+CIFRA solo_prev: 1134
+CIFRA lineas del registro de citas: 154
+CIFRA via CRIBADO clase B: 1
+CIFRA via CRIBADO clase D: 31
+CIFRA via LECTURA_DIRIGIDA clase C: 57
+CIFRA via LECTURA_DIRIGIDA clase D: 65
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T8_CIFRAS_DERIVADAS.txt`, corrido en esta vuelta.
+Las veintiuna cifras de arriba estan contadas en
+`docs/loop/SALIDA_V157_T9_MARCADOR_CIERRE.txt`, que las cuenta de
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, de `dataset/metadata/master_graph.json` y
+de `docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl`.
 
-```
-CIFRA pares examinados por la guarda de cifras del plan: 0 par(es)
-```
-
-Pegado de `docs/loop/SALIDA_V156_T8_CIFRAS_DERIVADAS.txt`, corrido en esta vuelta.
-
-```
-VERDE: las 23 mutaciones viejas corren, muerden, y sus salidas selladas salen IDENTICAS en dos corridas seguidas.
-```
-
-Pegado de `docs/loop/SALIDA_V156_T9_MUTACIONES_VIEJAS.txt`, corrido en esta vuelta.
-
-`verificar_mutaciones_viejas` se corrio **SOLA, sin nada al lado**, por la leccion
-de concurrencia del acta 153.
-
-**EL ESTADO DEL PLAN AL CIERRE.**
-
-```
-CIFRA filas de la tabla por fase ENTERAS: 5 fila(s)
-```
-
-Pegado de `docs/loop/SALIDA_V156_T8_CIFRAS_DERIVADAS.txt`, corrido en esta vuelta.
-
-```
-CIFRA filas de la tabla por fase A MEDIAS: 3 fila(s)
-```
-
-Pegado de `docs/loop/SALIDA_V156_T8_CIFRAS_DERIVADAS.txt`, corrido en esta vuelta.
-
-```
-CIFRA filas de la tabla por fase INCUMPLIDAS: 0 fila(s)
-```
-
-Pegado de `docs/loop/SALIDA_V156_T8_CIFRAS_DERIVADAS.txt`, corrido en esta vuelta.
+**EL EXPEDIENTE, CON EL RELOJ PARADO EN LA APERTURA:**
 
 ```
 CIFRA fichas del expediente: 71 operaciones
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T9_EXPEDIENTE_CIERRE.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T9_EXPEDIENTE.txt`, corrido en esta vuelta.
 
 ```
 CIFRA fichas que no calzan: 36 operaciones
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T9_EXPEDIENTE_CIERRE.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T9_EXPEDIENTE.txt`, corrido en esta vuelta.
 
 ```
 CIFRA fichas congeladas declaradas: 24 operaciones
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T9_EXPEDIENTE_CIERRE.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T9_EXPEDIENTE.txt`, corrido en esta vuelta.
 
 ```
 CIFRA fichas congeladas en silencio: 12 operaciones
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T9_EXPEDIENTE_CIERRE.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T9_EXPEDIENTE.txt`, corrido en esta vuelta.
 
 ```
 CIFRA fichas HECHA sin ninguna prueba: 0 operaciones
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T9_EXPEDIENTE_CIERRE.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T9_EXPEDIENTE.txt`, corrido en esta vuelta.
 
 ```
 CIFRA fichas en LISTA sin ninguna prueba: 7 operaciones
 ```
 
-Pegado de `docs/loop/SALIDA_V156_T9_EXPEDIENTE_CIERRE.txt`, corrido en esta vuelta.
+Pegado de `docs/loop/SALIDA_V157_T9_EXPEDIENTE.txt`, corrido en esta vuelta.
 
-```
-SIN CUMPLIR (4): OP-M-02-ADMIT, OP-M-02-MEDIOS, OP-U-01, OP-U-02
-```
+Esa corrida va con `--corte abb2fe4e`, o sea con el reloj de git parado en la
+apertura.
 
-Pegado de `docs/loop/SALIDA_V156_T9_ESTADO_FASE_03.txt`, corrido en esta vuelta.
+**EL ESTADO DE LAS FASES**, cada una con su `--fase` exacto y su fichero propio,
+porque una salida mutilada no es una salida:
 
-```
-SIN CUMPLIR (0): ninguna
-```
-
-Pegado de `docs/loop/SALIDA_V156_T9_ESTADO_FASE_06.txt`, corrido en esta vuelta.
-
-```
-SIN CUMPLIR (1): OP-V-01
-```
-
-Pegado de `docs/loop/SALIDA_V156_T9_ESTADO_FASE_08.txt`, corrido en esta vuelta.
+  - `03_FUSIONES`: **16 del catalogo, 12 cumplidas, 4 sin cumplir**, en
+    `docs/loop/SALIDA_V157_T9_FASE_03_FUSIONES.txt`.
+  - `06_MESAS`: **16 del catalogo, 16 cumplidas, 0 sin cumplir**, en
+    `docs/loop/SALIDA_V157_T9_FASE_06_MESAS.txt`.
+  - `08_VERIFICACION`: **1 del catalogo, 0 cumplidas, 1 sin cumplir**, en
+    `docs/loop/SALIDA_V157_T9_FASE_08_VERIFICACION.txt`.
+  - `09_LECTURAS_DIRIGIDAS`: **3 del catalogo, 0 cumplidas, 3 sin cumplir**, en
+    `docs/loop/SALIDA_V157_T9_FASE_09_LECTURAS_DIRIGIDAS.txt`.
 
 ## LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
 
-1. **`LD-OPC05-097` EN D Y NO EN A, Y ES EL GORDO.** Discrepo de la adjudicacion
-   6.1 del acta 155 **en el destino**, aunque coincido con ella en que la C no se
-   sostiene. Mi caso entero esta en la seccion 2, y lo que nos separa es **una
-   sola medicion**: si el paso 7 del viaje es LINEA (el acta) o es PROCEDIMIENTO
-   NOMBRADO EN UNA LINEA (yo, porque tiene hijo vivo con arista escrita). **Si el
-   auditor sostiene que el 9.6.2 no se aplica a un paso del HIJO sino solo a un
-   paso de la MADRE, mi lectura cae y la A vuelve.** Lo digo yo antes de que me lo
-   digan, porque es la grieta de mi propio argumento.
-2. **LA SEGUNDA MITAD DE LA 6.9.** El encargo mandaba la 6.9 **a los comentarios**
-   de la guarda. Yo ademas cambie la LINEA DE DETALLE del check para que publique
-   el hueco, porque el acta dice *"su cuenta se publica cada vez que la guarda
-   hable"* y un comentario no habla cada vez. **Es una interpretacion mia y toca
-   una salida de Gate 0.** Si sobra, se revierte y no arrastra nada.
-3. **LA CLASE `D` PARA UN PAR QUE NO ES "DISTINTO".** Meto `LD-OPC05-097` en D,
-   pero D se lee en el archivo como *sano y distinto*, y juran y el viaje **no son
-   distintos**: son madre e hijo con un solape enorme. **La clase que el 9.22
-   prescribe para el tercer caso es "el par continua", y no hay letra propia para
-   eso.** Uso la D por la letra de la 6.2 (donde no se pueden nombrar las dos
-   lineas, la clase es D) y **lo marco porque la etiqueta miente sobre el motivo**.
-4. **LA CORRESPONDENCIA SALIDA/SCRIPT DE LA TAREA 7 ES POR NOMBRE.** Si alguna de
-   las nueve salidas la produce un script de la bateria con otro nombre, mi hueco
-   de 4 esta inflado. Declaro que sobre estima y no lo compruebo una a una.
-5. **LA CELDA DE CLASE DEL `.md` SIN TACHAR.** En las tres reclasificaciones deje
-   la celda de `docs/plan/LECTURAS_DIRIGIDAS.md` limpia (`D`) en vez de `~~C~~ D`,
-   contra el habito de la casa de no tapar lo que se corrige, **porque el tachado
-   rompe el parser y tumba Gate 0**. La clase vieja vive en la razon de la misma
-   fila. **Es un caso donde dos reglas de la casa chocan y elegi la que no rompe
-   el grafo.**
+1. **LAS CUATRO QUE SOSTUVE EN C, Y LA MAS FLOJA ES LA `027`.** En `027` la
+   segunda pata es delgada: `metodologia_spin_selling` expande *minimizar el
+   cierre y enfocar en la indagacion* en solo dos pasos, y uno de ellos remite a
+   *capitulos posteriores*. **Ademas su paso 1 y el paso 1 de cierre son casi la
+   misma linea**, o sea que el par tambien tiene duplicacion. Si el auditor lee
+   que eso lo mete en la comprobacion separadora del 9.22, **la 027 cae a D y no
+   discuto**.
+2. **LA `122`, POR SU PATA ANCHA.** Sostengo que el paso 6 de 6S (*Safety*) lo
+   expande `error_proofing_servicio`, pero **practicas seguras abarca mas que a
+   prueba de errores** (equipo de proteccion, ergonomia). Si el auditor lo lee
+   como dos materias distintas, la segunda linea cae y con ella la C.
+3. **MI CRITERIO DE QUE MENCIONAR NO ES EXPANDIR.** Es MIO, lo declare antes de
+   aplicarlo y **es lo que decide 017, 030 y 056**, tres casos donde la ida es
+   limpia y la vuelta es una mencion. Si el auditor sostiene que una linea que
+   NOMBRA al otro nodo basta para contar la direccion, **esas tres vuelven a C** y
+   mi lote pierde tres.
+4. **LA CALIBRACION 1 DE 5 DE LA TAREA 8.** Mi vara lexica solo caza uno de los
+   cinco puestos que el acta nombra. **Publico la cifra igual y la llamo cota
+   inferior, pero es posible que una vara tan floja no sirva para decidir nada**,
+   y en ese caso la cuenta que la 6.6 pedia sigue sin estar hecha de verdad.
+5. **LA PARADA PODRIA NO SER PARADA.** Leo que dos guardas del cierre bloqueadas
+   contradicen una regla vigente y por eso paro y no arreglo. **Si el auditor lee
+   que esto es un simple desfase de indice que el ejecutor podia corregir sin
+   tocar doctrina** (por ejemplo haciendo que las dos guardas busquen el acta mas
+   reciente en vez de la N menos 1), entonces mi parada sobra y lo que falto fue
+   trabajo.
+6. **EL SELLO DE APERTURA TARDIO.** Lo declaro como caida mia en la seccion 0.
+   Puede que el auditor lo lea como caida de reporte y no solo de procedimiento,
+   porque una regla dice literalmente que la apertura se mide antes de la primera
+   operacion y yo la medi pero no la selle.
 
-## LAS TRES PREGUNTAS
+## LAS PREGUNTAS
 
-1. **LOS 116 DEL SACO GRANDE.** 116 de 122 lecturas dirigidas en clase C **no
-   nombran una sola linea**. Por la 6.2 eso las manda a D en bloque. **No lo hago
-   por mi cuenta**: es mover 116 clases de una vez y la nomina esta medida y
-   publicada. Se reclasifican en bloque, se releen una a una, o se ajusta la 6.2
-   para que solo alcance a las que se relean?
-2. **LAS NUEVE SALIDAS DE LA P3b.** Entran en `verificar_mutaciones_viejas`? Son
-   nueve scripts mas por vuelta al cierre, y la bateria ya tarda. Si no entran, la
-   P3b sostiene cuatro fichas sobre artefactos que nadie re corre, **y ahora esta
-   contado**.
-3. **LA D QUE NO DICE LO QUE PASA.** Hace falta una letra para *"madre e hijo, el
-   par continua"*, distinta de la D de *sano y distinto*? Hoy los dos casos caen
-   en la misma celda y el archivo pierde la diferencia.
+1. **EL SACO, QUE ES LA UNICA DEUDA DE LECTURA QUE QUEDA.** Contado al cierre de
+   su propio fichero (`docs/loop/SALIDA_V157_T9_SACO_RESTANTE.txt`):
+
+   ```
+   CIFRA todavia en clase C: 57
+   CIFRA de esas, LEIDAS en el lote 1 y sostenidas en C: 4
+   CIFRA de esas, NO leidas todavia: 53
+   CIFRA de las no leidas, CON puntero de paso: 0
+   CIFRA nomina del lote 2 (todas las no leidas): 53
+   ```
+
+   **El lote 2 son 53, de `LD-OPC05-068` a `LD-OPC05-121`, y ninguna trae puntero
+   de paso: el saco pequeno se agoto entero en el lote 1.** Confirmo que el
+   criterio de la 6.4 se aplica igual en el segundo lote, o hay algo que el
+   primero enseno y hay que cambiar?
+2. **LAS DOS SALIDAS DE LA P3b SIN PRODUCTOR.** `SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt`
+   y `SALIDA_V136_3D_MUTACION.txt` **no las escribe ningun `.py` del repo que yo
+   pueda identificar por su texto**. Se busca su productor, se retira la cita de
+   la ficha, o se declara que esas dos citas son artefactos huerfanos?
+3. **LAS DOS QUE NO MUERDEN.** `vuelta96_tarea3_prueba_mutacion.py` y
+   `vuelta97_tarea2_prueba_mutacion.py` salen **exit 1 hoy**. Sostienen la P3b de
+   `OP-E-03`. **No las toco** porque el modo de cierre me lo prohibe y el encargo
+   no lo pide. Se arreglan, se declaran como casos declarados, o se retira la P3b
+   de esa ficha?
 
 ## PENDIENTES DE DOCTRINA
 
-**NINGUNO NUEVO.** Donde tuve que interpretar (la segunda mitad de la 6.9, la
-clase del tercer caso del 9.22) lo hice **por extension de una regla escrita** y
-lo marque como discutible en vez de inventar doctrina.
+**NINGUNO NUEVO.** Donde tuve que interpretar (que cuenta como direccion en la
+6.4, que es "el registro" en la 6.6, donde vive el bloque de la 6.7) lo hice
+**por extension de una regla escrita o midiendo las dos lecturas posibles**, y lo
+marque como discutible en vez de inventar doctrina.
 
 ## EL MURO, Y NO SE PASA
 
 Sigo el orden escrito en modo continuo y **paro donde el acta 149, 3.10 manda**:
-la fase 08 no cierra sin una sesion con credencial y con el fundador delante, y
-la unica que le queda sin cumplir es `OP-V-01`, sin vara escrita, medido hoy en
-`docs/loop/SALIDA_V156_T9_ESTADO_FASE_08.txt`. Ahi termina lo que un bucle puede hacer solo. **El
-merge no se pide ni se hace: es del fundador y solo suyo. La campana NO esta
-consumada.**
+la fase 08 no cierra sin una **sesion con credencial y con el fundador delante**,
+medido hoy en `docs/loop/SALIDA_V157_T9_FASE_08_VERIFICACION.txt`, y la unica que
+le queda sin cumplir es **`OP-V-01`, sin vara escrita**. **La unica deuda de LECTURA que le queda
+al bucle es el saco, y son 57.** Cuando el lote 2 lo vacie no quedara trabajo que
+un bucle pueda hacer solo. **El merge no se pide ni se hace: es del fundador y
+solo suyo. La campana NO esta consumada.**
