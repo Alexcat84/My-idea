@@ -1,0 +1,44 @@
+============================================================================================
+LAS OCHO VERIFICACIONES DE OP-C-05, UNA A UNA, AL CIERRE DE LA VUELTA 154
+============================================================================================
+estado escrito en la ficha AL CIERRE: HECHA
+
+  1. CASO POSITIVO: en una copia se mete a mano un campo con [destino, alias_de_destino] y la guarda TIENE que fallar nombrando nodo, campo y destino. Si p
+  2. caso negativo: el grafo saneado por OP-S-12 pasa en verde
+  3. CASO DE BORDE: el mismo destino en nodos_previos y en nodos_siguientes NO debe fallar
+  4. la guarda RESUELVE, no compara literal: las 1.056 entradas duplicadas son todas distintas como texto y una guarda literal daria verde sobre todas
+  5. CASO POSITIVO DE LA LISTA BLANCA: se mete a mano una arista bidireccional que NO este en la lista y la guarda TIENE que fallar. Si pasa, la lista blan
+  6. CASO NEGATIVO DE LA LISTA BLANCA: las cuatro aristas de OP-E-05 pasan en verde
+  7. cada entrada de la lista blanca cita su lectura: una entrada sin su C del 9.22 detras no es una excepcion, es un agujero
+  8. cero pares bidireccionales entre vivos SIN CITA REGISTRADA, y el grafo saneado pasa en verde CON LAS CITAS COMPLETAS (verificacion anadida el 2026-09-
+
+============================================================================================
+LA 8, QUE ES LA QUE EL ACTA 153 DECLARA SIN CONTESTAR
+============================================================================================
+La comprobacion en Gate 0 al CIERRE (SALIDA_V154_GATE0_CMD1_CIERRE.txt):
+  [OK] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 154 par(es) bidireccional(es) tras resolver, 154 con cita, 0 SIN CITA)
+
+  pares medidos 154 | con cita 154 | SIN CITA 0 | la comprobacion sale en OK: True
+
+QUE CAMBIA RESPECTO DEL ACTA 153. Aquella medicion era cierta sobre la vara
+VIEJA (solo nodos_siguientes) y por eso decia 153 y 0 sin cita sobre un universo
+incompleto. Hoy la guarda mide el universo DECLARADO (los dos campos, fuentes
+vivas), sale a 154 pares, y el par que faltaba tiene su cita (LD-OPC05-122).
+
+Y NO BASTA CON QUE SALGA VERDE: el criterio de HECHO de docs/plan/08_VERIFICACION.md
+pide que la verificacion SE CAERIA si el fallo volviera. Probado por mutacion en la
+TAREA 2.d (SALIDA_V154_T2D_MUTACION.txt): una arista bidireccional metida por el
+lado que era ciego TUMBA Gate 0 con exit 1 nombrando el par, y la guarda VIEJA sale
+VERDE sobre esa misma mutacion, que es lo que prueba que el ensanche muerde de
+verdad y no de adorno.
+
+VERIFICACION 8 CONTESTADA AL CIERRE: SI
+
+EL `estado` SE QUEDA EN HECHA, y se dice por que: las ocho verificaciones estan
+contestadas, la 8 desde hoy y sobre el universo declarado. NO hay correccion de
+estado que declarar en esta tarea; lo que si hay es la correccion de CIFRA de la
+TAREA 2.e, ya escrita en sus dos sedes.
+
+CIFRA verificaciones de la ficha OP-C-05: 8 comprobaciones
+CIFRA pares bidireccionales entre vivos al cierre: 154 pares
+CIFRA pares sin cita al cierre: 0 pares
