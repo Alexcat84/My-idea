@@ -1,0 +1,21 @@
+ESTADO DE LA FASE 02_DESTEJIDOS | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-D-01 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-D-02 | 02_DESTEJIDOS | LISTA | FUSION | no remitida | superviviente voz_del_cliente_voc vivo, 1 absorbido(s) deprecado(s) y en ids_alias. EXCEPCION DE ABSORBIDOS APLICADA, adjudicacion 6.4 del acta 161 (docs/loop/ACTA_AUDITOR.md, seccion 6.4), sobre la correccion declarada de la vuelta 33 en el campo `nota` de la propia ficha: homework_frontend_loading, voice_of_customer_homework NO cuentan como absorbidos porque la ficha manda TENERLOS DELANTE, no fundirlos, y sus frases se comprobaron hoy en la propia ficha | CUMPLIDO |
+| OP-D-03 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-D-04 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-D-05 | 02_DESTEJIDOS | LISTA | FUSION | no remitida | superviviente seleccion_ceo_fundador vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-D-06 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-D-07 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-D-08 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-D-09 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 9 | con destino cumplido: 2 | sin cumplir: 7 | de ellas, sin vara escrita: 7 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (7): OP-D-01, OP-D-03, OP-D-04, OP-D-06, OP-D-07, OP-D-08, OP-D-09
+SIN VARA ESCRITA (7): OP-D-01, OP-D-03, OP-D-04, OP-D-06, OP-D-07, OP-D-08, OP-D-09
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+EXITCODE: 0

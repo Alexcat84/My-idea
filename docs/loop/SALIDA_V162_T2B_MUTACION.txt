@@ -1,0 +1,58 @@
+==============================================================================
+CASO POSITIVO POR MUTACION: LA TABLA DE EXCEPCIONES DE ABSORBIDOS
+==============================================================================
+
+A) LA FICHA REAL, LEIDA DEL PLAN
+   id_op        : OP-D-02
+   superviviente: voz_del_cliente_voc
+   nodos        : voz_del_cliente_voc, enfoque_mercado_voc, homework_frontend_loading, voice_of_customer_homework
+   CIFRA nodos  : 4
+
+B) LA ENTRADA DE LA TABLA, IMPRESA ENTERA
+   no_absorbidos: homework_frontend_loading, voice_of_customer_homework
+   adjudicacion : adjudicacion 6.4 del acta 161 (docs/loop/ACTA_AUDITOR.md, seccion 6.4), sobre la correccion declarada de la vuelta 33 en el campo `nota` de la propia ficha
+   frase citada : 'homework_frontend_loading y voice_of_customer_homework NO ENTRAN EN LA FUSION'
+   frase citada : 'El campo nodos NO se toca: la nomina es el universo del acto'
+
+C) EL NODO INTRUSO DEL CASO 4, ELEGIDO POR COMPUTO Y NO TECLEADO
+   ab_testing_optimizacion (vivo, y NO esta en la lista de exentos)
+
+D) PASADA 1, LOS CASOS TAL CUAL: todos tienen que PASAR
+   op_d_02_con_excepcion_cumple                   esperado True   obtenido True   PASA
+   y_su_razon_nombra_la_excepcion                 esperado True   obtenido True   PASA
+   sin_la_tabla_vuelve_a_rojo                     esperado False  obtenido False  PASA
+   y_su_razon_dice_1_de_3                         esperado True   obtenido True   PASA
+   sin_la_cita_la_excepcion_no_aplica             esperado False  obtenido False  PASA
+   y_lo_dice_en_voz_alta                          esperado True   obtenido True   PASA
+   absorbido_de_verdad_pendiente_sigue_rojo       esperado False  obtenido False  PASA
+   id_exento_que_ya_no_esta_en_nodos_no_aplica    esperado False  obtenido False  PASA
+
+E) LAS RAZONES, ENTERAS Y SIN RESUMIR
+   [1 con excepcion] cumplido=True
+      superviviente voz_del_cliente_voc vivo, 1 absorbido(s) deprecado(s) y en ids_alias. EXCEPCION DE ABSORBIDOS APLICADA, adjudicacion 6.4 del acta 161 (docs/loop/ACTA_AUDITOR.md, seccion 6.4), sobre la correccion declarada de la vuelta 33 en el campo `nota` de la propia ficha: homework_frontend_loading, voice_of_customer_homework NO cuentan como absorbidos porque la ficha manda TENERLOS DELANTE, no fundirlos, y sus frases se comprobaron hoy en la propia ficha
+   [2 sin la tabla] cumplido=False
+      1 absorbido(s) OK de 3; homework_frontend_loading NO esta deprecado; homework_frontend_loading no esta en ids_alias de voz_del_cliente_voc; voice_of_customer_homework NO esta deprecado; voice_of_customer_homework no esta en ids_alias de voz_del_cliente_voc
+   [3 sin la cita] cumplido=False
+      1 absorbido(s) OK de 3; homework_frontend_loading NO esta deprecado; homework_frontend_loading no esta en ids_alias de voz_del_cliente_voc; voice_of_customer_homework NO esta deprecado; voice_of_customer_homework no esta en ids_alias de voz_del_cliente_voc. EXCEPCION DE ABSORBIDOS NO APLICADA (adjudicacion 6.4 del acta 161 (docs/loop/ACTA_AUDITOR.md, seccion 6.4), sobre la correccion declarada de la vuelta 33 en el campo `nota` de la propia ficha): la frase que sostiene la excepcion YA NO ESTA en la ficha: 'homework_frontend_loading y voice_of_customer_homework NO ENTRAN EN LA FUSION'. Se mide con la vara ancha, como si la excepcion no existiera.
+   [4 con pendiente] cumplido=False
+      1 absorbido(s) OK de 2; ab_testing_optimizacion NO esta deprecado; ab_testing_optimizacion no esta en ids_alias de voz_del_cliente_voc. EXCEPCION DE ABSORBIDOS APLICADA, adjudicacion 6.4 del acta 161 (docs/loop/ACTA_AUDITOR.md, seccion 6.4), sobre la correccion declarada de la vuelta 33 en el campo `nota` de la propia ficha: homework_frontend_loading, voice_of_customer_homework NO cuentan como absorbidos porque la ficha manda TENERLOS DELANTE, no fundirlos, y sus frases se comprobaron hoy en la propia ficha
+   [5 entrada rancia] cumplido=False
+      1 absorbido(s) OK de 2; voice_of_customer_homework NO esta deprecado; voice_of_customer_homework no esta en ids_alias de voz_del_cliente_voc. EXCEPCION DE ABSORBIDOS NO APLICADA (adjudicacion 6.4 del acta 161 (docs/loop/ACTA_AUDITOR.md, seccion 6.4), sobre la correccion declarada de la vuelta 33 en el campo `nota` de la propia ficha): la excepcion nombra homework_frontend_loading y ese id ya no esta en el campo `nodos` de la ficha. Se mide con la vara ancha, como si la excepcion no existiera.
+
+F) PASADA 2, LA MUTACION DEL VALOR ESPERADO: cada caso TIENE que CAER
+   op_d_02_con_excepcion_cumple                   esperado MUTADO False  obtenido True   CAE (bien)
+   y_su_razon_nombra_la_excepcion                 esperado MUTADO False  obtenido True   CAE (bien)
+   sin_la_tabla_vuelve_a_rojo                     esperado MUTADO True   obtenido False  CAE (bien)
+   y_su_razon_dice_1_de_3                         esperado MUTADO False  obtenido True   CAE (bien)
+   sin_la_cita_la_excepcion_no_aplica             esperado MUTADO True   obtenido False  CAE (bien)
+   y_lo_dice_en_voz_alta                          esperado MUTADO False  obtenido True   CAE (bien)
+   absorbido_de_verdad_pendiente_sigue_rojo       esperado MUTADO True   obtenido False  CAE (bien)
+   id_exento_que_ya_no_esta_en_nodos_no_aplica    esperado MUTADO True   obtenido False  CAE (bien)
+
+G) EL PLAN NO SE TOCO
+   docs/plan/OPERACIONES.jsonl: 475216 bytes antes, 475216 despues
+   IDENTICO: SI
+
+VERDE: 8 casos, los 8 pasan y los 8 caen al mutarles el valor esperado.
+Y EL QUE EL ENCARGO EXIGE POR SU NOMBRE: `absorbido_de_verdad_pendiente_sigue_rojo` SIGUE ROJO. La excepcion NO esta abierta de mas: solo saca del saco a los DOS ids que la ficha nombra, y solo mientras sus frases sigan en la ficha.
+EXITCODE: 0
