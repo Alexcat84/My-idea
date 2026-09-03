@@ -30,7 +30,9 @@ LAS DOS MITADES QUE EL ENCARGO PIDE, Y LAS DOS SE MIDEN:
   (C) Y ADEMAS, en la version nueva y en el mismo proceso, `cenir=False`
       reproduce el comportamiento viejo y tambien sale ROJO. Es la contraprueba
       barata de que la unica diferencia es el cenido.
-  (D) LAS 23 SIGUEN SIENDO 23: `len(VIEJAS)` se cuenta, no se teclea.
+  (D) LA NOMINA NO MENGUA: las entradas que la guarda tenia en el commit de
+      apertura de la vuelta 157 siguen TODAS dentro de la de hoy. Se mide
+      por contencion contra un ref fijo y computado, no contra un literal.
 
 PRUEBA DE MUTACION DE ESTE MISMO CASO (regla del ejecutor, 29 ago 2026): con
 `--mutar` se le da la vuelta al valor esperado de (A) y esta guarda tiene que
@@ -104,8 +106,7 @@ def main():
     nueva = importar(GUARDA, "guarda_nueva")
     print("  CIFRA mutaciones en la nomina VIEJAS (contadas, no tecleadas): %d"
           % len(nueva.VIEJAS))
-    las_23 = len(nueva.VIEJAS) == 23
-    print("  (D) LAS 23 SIGUEN SIENDO 23: %s" % las_23)
+    print("  (D) se mide mas abajo, con la nomina del commit de apertura delante.")
     print("")
 
     apertura = commit_de_apertura()
@@ -129,6 +130,36 @@ def main():
     print("  guarda VIEJA importada del commit de apertura, %d bytes" % len(r.stdout))
     print("  la vieja trae el parametro `cenir`: %s"
           % ("cenir" in vieja.correr_dos_veces.__code__.co_varnames))
+    print("")
+
+    # --- (D), ARREGLADO EN LA VUELTA 164, TAREA 2.a ---------------------------
+    #
+    # LO QUE HABIA AQUI, Y NO SE BORRA: `las_23 = len(nueva.VIEJAS) == 23`, una
+    # CONSTANTE LITERAL comparada contra el tamano de la nomina. Caduco el dia que
+    # la vuelta 163 hizo crecer la nomina de 23 a 51 por la adjudicacion 6.8 del
+    # acta 162, o sea que este caso llevaba ROJO desde entonces y nadie lo vio
+    # porque la bateria de la 163 nunca termino (acta 163, seccion 5.3). Hoy la
+    # nomina tiene mas todavia y seguia rojo. Es la misma enfermedad de siempre:
+    # un esperado clavado a un estado que otra vuelta mueve legitimamente.
+    #
+    # QUE QUERIA DECIR DE VERDAD, Y ES LO QUE SE MIDE AHORA: que LA NOMINA NO
+    # MENGUA. Una nomina que encoge es una guarda que dejo de mirar, y eso si es
+    # rojo; que crezca es exactamente lo que la regla de la vuelta 144 manda. Se
+    # mide como CONTENCION contra un REF FIJO Y COMPUTADO: las entradas que la
+    # guarda tenia EN EL COMMIT DE APERTURA DE LA VUELTA 157 (que son las 23 de
+    # entonces, leidas de git y no tecleadas) tienen que seguir TODAS dentro de la
+    # nomina de hoy. No puede volver a caducar por crecer.
+    originales = [s for s, _a in vieja.VIEJAS]
+    hoy = {s for s, _a in nueva.VIEJAS}
+    perdidas = sorted(s for s in originales if s not in hoy)
+    las_23 = (not perdidas) and len(nueva.VIEJAS) >= len(originales)
+    print("  (D) LA NOMINA NO MENGUA, MEDIDO CONTRA EL COMMIT DE APERTURA")
+    print("      CIFRA entradas en la nomina DEL COMMIT DE APERTURA %s: %d"
+          % (apertura[:8], len(originales)))
+    print("      CIFRA entradas en la nomina DE HOY: %d" % len(nueva.VIEJAS))
+    print("      CIFRA de las originales que YA NO ESTAN: %d (%s)"
+          % (len(perdidas), ", ".join(perdidas) or "ninguna"))
+    print("      (D) VEREDICTO: %s" % las_23)
     print("")
 
     resultados = {}
@@ -219,7 +250,8 @@ def main():
     print("")
     if (a_ok == esperado_a) and b_ok and c_ok and las_23:
         print("VERDE: sobre el mismo escenario la guarda vieja acusa al script equivocado y")
-        print("la nueva sale limpia nombrando el ruido aparte. Y las 23 siguen siendo 23.")
+        print("la nueva sale limpia nombrando el ruido aparte. Y LA NOMINA NO MENGUA:")
+        print("ninguna de las entradas del commit de apertura se ha perdido.")
         print("FIN")
         return 0
     print("ROJO: alguna de las cuatro condiciones no se cumple.")

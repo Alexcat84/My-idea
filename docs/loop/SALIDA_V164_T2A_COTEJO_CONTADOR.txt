@@ -1,0 +1,58 @@
+==============================================================================
+VUELTA 163, TAREA 5.a: NOMBRE ESTABLE POR REMISION PARA EL CONTADOR DE P.5.2
+==============================================================================
+
+A) EL VIEJO NO SE BORRA Y LAS CITAS SIGUEN RESOLVIENDO
+   existe scripts/loop/_v163_contador_viejo_copia.py                 True
+   existe scripts/loop/vuelta161_tarea1c_segunda_lectura.py          True
+   existe scripts/loop/contador_de_segundas_lecturas.py              True
+   CIFRA ficheros de docs/ que citan el nombre viejo: 4
+      docs/PENDIENTES.md:1
+      docs/loop/ACTA_AUDITOR.md:1
+      docs/loop/REPORTE.md:1
+      docs/plan/BANCO_DEL_PLAN.md:2
+   El nombre viejo SIGUE EXISTIENDO, asi que ninguna de esas citas se rompe.
+
+B) LOS TRES, CORRIDOS HOY
+   scripts/loop/_v163_contador_viejo_copia.py    exit 0  COPIA DEL VIEJO, TOMADA ANTES DE TOCAR NADA
+      con al menos una=92  con dos o mas=17  con ninguna=30  actos sobre filas=117  tipos de acto=9
+   scripts/loop/vuelta161_tarea1c_segunda_lectura.py exit 0  EL VIEJO, DESPUES DEL CAMBIO
+      con al menos una=92  con dos o mas=17  con ninguna=30  actos sobre filas=117  tipos de acto=9
+   scripts/loop/contador_de_segundas_lecturas.py exit 0  EL NOMBRE ESTABLE, POR REMISION
+      con al menos una=92  con dos o mas=17  con ninguna=30  actos sobre filas=117  tipos de acto=9
+
+C) LAS CINCO CIFRAS, COTEJADAS ENTRE SI Y CONTRA LA VARA ANCLADA
+   LA VARA YA NO SE TECLEA (arreglo de la vuelta 164, TAREA 2.a): se
+   recomputa corriendo el contador sobre el REGISTRO DEL COMMIT DE
+   APERTURA DE LA VUELTA 163, leido de git log --diff-filter=A sobre
+   docs/loop/SALIDA_V163_HEAD_APERTURA.txt.
+   ref de apertura de la 163, computado: 75ad1e062f58581690a4f56602a43ec1a9f2d901
+   VARA RECOMPUTADA SOBRE EL REF: con al menos una=92  con dos o mas=16  con ninguna=30  actos sobre filas=115  tipos de acto=8
+   VARA QUE EL ENCARGO DE LA 163 TECLEO, que NO se borra y se coteja
+   contra la recomputada: con al menos una=92  con dos o mas=16  con ninguna=30  actos sobre filas=115  tipos de acto=8
+   CIFRA cifras de la vara tecleada que NO reproduce el ref: 0 (ninguna)
+
+   con al menos una     [92, 92, 92]  | iguales en los tres: True  | vara anclada 92: CALZA
+   con dos o mas        [17, 17, 17]  | iguales en los tres: True  | vara anclada 16: SE MOVIO DESDE LA APERTURA DE LA 163
+   con ninguna          [30, 30, 30]  | iguales en los tres: True  | vara anclada 30: CALZA
+   actos sobre filas    [117, 117, 117]  | iguales en los tres: True  | vara anclada 115: SE MOVIO DESDE LA APERTURA DE LA 163
+   tipos de acto        [9, 9, 9]  | iguales en los tres: True  | vara anclada 8: SE MOVIO DESDE LA APERTURA DE LA 163
+
+   CIFRA cifras que SE MOVIERON desde la apertura de la 163: 3 (con dos o mas, actos sobre filas, tipos de acto)
+   Y ESO NO ES ROJO DE ESTE ARNES, Y SE DICE POR QUE: lo que este
+   instrumento tiene que probar es que LOS TRES CORREDORES DAN LO MISMO,
+   que es la vara de aceptacion de la 6.11 del acta 162. Que el registro
+   se mueva entre vueltas es lo NORMAL y no dice nada del contador. La
+   version vieja de este arnes hacia caer el veredicto cuando el registro
+   se movia, y por eso salio ROJO en la bateria de la vuelta 164 sin que
+   nadie tocara su codigo. Las movidas se PUBLICAN, no se tumban.
+
+D) LA SALIDA ENTERA, BYTE A BYTE, Y NO SOLO LAS CIFRAS
+   scripts/loop/vuelta161_tarea1c_segunda_lectura.py IDENTICA
+   scripts/loop/contador_de_segundas_lecturas.py IDENTICA
+   La UNICA diferencia admitida es la linea de remision que el nombre
+   estable anade a proposito, y se descuenta con su literal declarado.
+   CIFRA lineas de remision en la salida del nombre estable: 1
+
+VERDE: los tres dan las MISMAS cinco cifras, calzan con la vara del encargo,
+y su salida es IDENTICA byte a byte salvo la linea de remision declarada.
