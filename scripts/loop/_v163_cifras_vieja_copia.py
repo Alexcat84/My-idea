@@ -1212,16 +1212,10 @@ def comprobar_filas_de_tabla_de_cierre(texto, existentes):
     return fallos, cotejadas, avisos
 
 
-def comprobar_afirmaciones_de_cierre(frases, existentes, detectadas_out=None):
+def comprobar_afirmaciones_de_cierre(frases, existentes):
     """TAREA 2.b de la vuelta 140. Devuelve (fallos, cotejadas). Una frase de
     cierre sin cita de tallar_estado_de_fase.py en su ventana es ROJO; con cita
     a un fichero que no diga "sin cumplir: 0", ROJO NOMBRANDO las que faltan.
-
-    LA ARIDAD DEL RETORNO NO SE TOCA (misma doctrina que `verificar`): lo que se
-    anade en la vuelta 163 es el parametro opcional `detectadas_out`, una lista
-    que se rellena con TODAS las frases que DISPARAN el vocabulario de cierre,
-    esten cotejadas o no. Hace falta para la adjudicacion 6.6 del acta 162: sin
-    saber cuantas HAY no se puede decir que cotejar CERO sea ceguera.
 
     LA VENTANA ES LA MISMA QUE LA DEL COTEJO DE CIFRAS, frases[i:i+3], y por el
     mismo motivo: la asimetria de ventanas de esta guarda esta adjudicada como
@@ -1233,8 +1227,6 @@ def comprobar_afirmaciones_de_cierre(frases, existentes, detectadas_out=None):
         if disparo is None:
             continue
         sujeto, verbo = disparo
-        if detectadas_out is not None:
-            detectadas_out.append((i, sujeto, verbo, frase.strip()))
         ventana_txt = " ".join(frases[i:i + 3])
         citas = [c for c in PATRON_CITA_SALIDA.findall(ventana_txt) if c in existentes]
         estados = []
@@ -1277,7 +1269,7 @@ def comprobar_afirmaciones_de_cierre(frases, existentes, detectadas_out=None):
 
 
 def verificar(ruta_reporte, cierres_out=None, nomina_out=None,
-              filas_out=None, avisos_out=None, presentes_out=None):
+              filas_out=None, avisos_out=None):
     """LA ARIDAD NO SE TOCA (vuelta 140, 2.b): sigue devolviendo CUATRO valores
     porque scripts/loop/vuelta135_2a_diagnostico.py y
     scripts/loop/vuelta139_2b_mutaciones.py, los dos sellados en otras vueltas,
@@ -1285,12 +1277,7 @@ def verificar(ruta_reporte, cierres_out=None, nomina_out=None,
     lista `cierres_out` si el llamador la pasa, y la nomina de unidades vistas
     fuera del vocabulario en el dict `nomina_out` (TAREA 2.a.i, vuelta 142), por
     la misma razon: anadir un quinto valor de retorno romperia los dos scripts
-    sellados.
-
-    ADJUDICACION 6.6 DEL ACTA 162 (vuelta 163, TAREA 4.a): se anade el parametro
-    opcional `presentes_out`, un dict con cuantas afirmaciones de cierre HAY en
-    el reporte, en prosa y en tabla, cotejadas o no. La aridad del retorno sigue
-    intacta por el mismo motivo de siempre."""
+    sellados."""
     texto_completo = leer(ruta_reporte)
     texto = quitar_bloques_cubiertos(texto_completo)
     if nomina_out is not None:
@@ -1317,9 +1304,7 @@ def verificar(ruta_reporte, cierres_out=None, nomina_out=None,
     # TAREA 2.b de la vuelta 140: las AFIRMACIONES DE CIERRE, antes que las
     # cifras, porque una fase que no cierra invalida el parrafo entero y no
     # una celda. Ver el docstring del modulo.
-    cierres_detectados = []
-    fallos_cierre, cierres_cotejados = comprobar_afirmaciones_de_cierre(
-        frases, existentes, detectadas_out=cierres_detectados)
+    fallos_cierre, cierres_cotejados = comprobar_afirmaciones_de_cierre(frases, existentes)
     fallos.extend(fallos_cierre)
     if cierres_out is not None:
         cierres_out.extend(cierres_cotejados)
@@ -1336,18 +1321,6 @@ def verificar(ruta_reporte, cierres_out=None, nomina_out=None,
         filas_out.extend(filas_cotejadas)
     if avisos_out is not None:
         avisos_out.extend(avisos_filas)
-
-    # ADJUDICACION 6.6 DEL ACTA 162 (vuelta 163, TAREA 4.a): CUANTAS AFIRMACIONES
-    # DE CIERRE HAY, cotejadas o no, en PROSA y en TABLA. Sin esta cuenta no se
-    # puede distinguir "el reporte no habla de cierre" de "el reporte habla de
-    # cierre y esta guarda no vio nada", que son la misma salida y no la misma
-    # cosa. La de tabla suma las cotejadas Y las que cayeron al aviso: las dos
-    # son afirmaciones de cierre presentes en el texto.
-    if presentes_out is not None:
-        presentes_out["prosa"] = len(cierres_detectados)
-        presentes_out["tabla"] = len(filas_cotejadas) + len(avisos_filas)
-        presentes_out["prosa_detalle"] = list(cierres_detectados)
-        presentes_out["cotejadas"] = len(cierres_cotejados) + len(filas_cotejadas)
 
     for i, frase in enumerate(frases):
         for m in PATRON_NUMERO_UNIDAD.finditer(frase):
@@ -1499,42 +1472,9 @@ def main():
     nomina = {}
     filas_cierre = []
     avisos_filas = []
-    presentes = {}
     fallos, cotejados, exentas, total_cifras = verificar(
         a.reporte, cierres_out=cierres, nomina_out=nomina,
-        filas_out=filas_cierre, avisos_out=avisos_filas, presentes_out=presentes)
-
-    # --- (iii) LA COBERTURA DE CIERRE NO PUEDE MENGUAR EN SILENCIO
-    # (ADJUDICACION 6.6 DEL ACTA 162, vuelta 163, TAREA 4.a) ---
-    #
-    # LA ENFERMEDAD, MEDIDA Y CON SU FECHA (acta 161, seccion 5.2): esta guarda
-    # salio VERDE declarando "afirmaciones de CIERRE cotejadas: 0" sobre un
-    # reporte que SI las traia, porque se habian mudado de la prosa a una tabla.
-    # La cobertura de cierre cayo de CINCO a CERO y la guarda no dijo nada. Eso
-    # no es un aviso: es ceguera, y por banco 9 tiene que ROMPER.
-    #
-    # LA REGLA, ESCRITA ENTERA PARA QUE NO SE ENSANCHE SOLA: si el reporte TRAE
-    # afirmaciones de cierre (en prosa, en tabla, o en las dos) y esta guarda
-    # coteja CERO, es ROJO. NO dispara cuando no hay ninguna: un reporte que no
-    # habla de cierre no tiene cobertura de cierre que perder, y exigirle una
-    # seria inventar trabajo.
-    #
-    # EL AVISO DE LA 6.6 DEL ACTA 161 NO SE TOCA y sigue sin tumbar nada: un
-    # aviso suelto es una fila que no se pudo cotejar habiendo otras que si.
-    # Lo que rompe es el CERO ABSOLUTO teniendo de que cotejar.
-    presentes_total = presentes.get("prosa", 0) + presentes.get("tabla", 0)
-    cotejadas_de_cierre = presentes.get("cotejadas", 0)
-    if presentes_total and not cotejadas_de_cierre:
-        fallos.append(
-            "COBERTURA DE CIERRE CERO: el reporte trae %d afirmacion(es) de cierre "
-            "(%d en prosa, %d en fila de tabla) y esta guarda cotejo CERO. Eso no es "
-            "un aviso, es ceguera (adjudicacion 6.6 del acta 162, sobre la enfermedad "
-            "medida en la seccion 5.2 del acta 161: la cobertura cayo de cinco a cero "
-            "sin decir nada). Las de prosa detectadas: %s"
-            % (presentes_total, presentes.get("prosa", 0), presentes.get("tabla", 0),
-               "; ".join("linea %d (sujeto '%s', verbo '%s')" % (i, s_, v_)
-                         for i, s_, v_, _f in presentes.get("prosa_detalle", []))
-               or "ninguna"))
+        filas_out=filas_cierre, avisos_out=avisos_filas)
 
     # --- (ii) CERO CIFRAS COTEJADAS DEJA DE SER VERDE (TAREA 2.a.ii, vuelta
     # 142; acta 141, caida 4.5 del auditor). Si la guarda recorre el reporte
@@ -1571,14 +1511,6 @@ def main():
     # o rojo. Una cobertura que no dice lo que no midio es la que se quedo ciega.
     cobertura += (" | filas de TABLA de cierre cotejadas: %d | filas de TABLA de cierre "
                   "SIN COTEJAR (aviso): %d" % (len(filas_cierre), len(avisos_filas)))
-    # ADJUDICACION 6.6 DEL ACTA 162: la cobertura dice CUANTAS HAY, no solo
-    # cuantas se cotejaron. Una cobertura que solo publica el numerador no deja
-    # ver que ha menguado.
-    cobertura += (" | afirmaciones de cierre PRESENTES: %d (%d prosa, %d tabla) | de "
-                  "esas, COTEJADAS: %d"
-                  % (presentes.get("prosa", 0) + presentes.get("tabla", 0),
-                     presentes.get("prosa", 0), presentes.get("tabla", 0),
-                     presentes.get("cotejadas", 0)))
     # LA NOMINA VA EN LA MISMA LINEA QUE LA COBERTURA, siempre, verde o rojo
     # (TAREA 2.a.i, vuelta 142): una cobertura que no dice QUE SE QUEDO FUERA es
     # la que dejo colarse a `direcciones` durante dos vueltas.

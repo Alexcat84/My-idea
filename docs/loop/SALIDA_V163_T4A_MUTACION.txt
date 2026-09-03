@@ -1,0 +1,75 @@
+==============================================================================
+VUELTA 163, TAREA 4.a: CASO POSITIVO POR MUTACION DE LA COBERTURA DE CIERRE
+==============================================================================
+
+A) LOS DOS SUJETOS CONGELADOS, CON LA GUARDA NUEVA
+   sujeto 161: exit 0 | filas de tabla cotejadas 4 | prosa cotejada 0 | presentes 4
+   sujeto 160: exit 0 | filas de tabla cotejadas 0 | prosa cotejada 5 | presentes 5
+
+B) LA MUTACION: al sujeto 161 se le ARRANCAN LAS CITAS de sus filas
+   CIFRA filas a las que se les arranco la cita: 9
+   el sujeto del repo NO se toca: la mutacion vive en SUJETO_161_SIN_CITAS.md
+
+C) EL SUJETO MUTADO CONTRA LA GUARDA NUEVA: TIENE QUE SER ROJO
+   exit 1 | presentes 4 | filas cotejadas 0 | prosa cotejada 0
+   dice COBERTURA DE CIERRE CERO: True
+      COBERTURA DE CIERRE CERO: el reporte trae 4 afirmacion(es) de cierre (0 en prosa, 4 en fila de tabla) y esta guarda cotejo CERO. Eso no es un aviso, es ceguera (adjudicacion 6.6 del acta 162
+
+D) EL MISMO SUJETO MUTADO CONTRA LA GUARDA VIEJA: TIENE QUE SER VERDE
+   exit 0 | filas cotejadas 0 | prosa cotejada 0
+   LA VIEJA NO VE LA CEGUERA, Y ESO ES LO QUE CONVIERTE AL CASO C EN
+   PRUEBA DE UN REMEDIO Y NO EN UN VERDE QUE NO DICE NADA.
+
+E) UN REPORTE SIN NINGUNA AFIRMACION DE CIERRE: LA REGLA NO DISPARA
+   exit 1 | presentes 0
+   dice COBERTURA DE CIERRE CERO: False
+
+F) NINGUN VEREDICTO VIEJO SE MUEVE, COTEJADO VIEJA CONTRA NUEVA
+   sujeto 161  nuevo exit 0 | viejo exit 0 | filas 4 vs 4 | prosa 0 vs 0
+   sujeto 160  nuevo exit 0 | viejo exit 0 | filas 0 vs 0 | prosa 5 vs 5
+
+   P.16: el temporal se retira. Existe todavia: False
+
+G) PASADA 1, LOS CASOS TAL CUAL
+   A_161_sigue_VERDE                                    PASA   (real=0 esperado=0)
+   A_161_coteja_CUATRO_filas_de_fase                    PASA   (real=4 esperado=4)
+   B_160_sigue_VERDE                                    PASA   (real=0 esperado=0)
+   B_160_sigue_dando_CINCO                              PASA   (real=5 esperado=5)
+   la_mutacion_arranca_al_menos_una_cita                PASA   (real=True esperado=True)
+   C_el_sujeto_sin_citas_es_ROJO                        PASA   (real=1 esperado=1)
+   C_y_lo_dice_con_su_nombre                            PASA   (real=True esperado=True)
+   C_las_afirmaciones_de_cierre_SIGUEN_PRESENTES        PASA   (real=4 esperado=4)
+   C_y_las_cotejadas_son_CERO                           PASA   (real=0 esperado=0)
+   D_la_guarda_VIEJA_sobre_lo_mismo_sale_VERDE          PASA   (real=0 esperado=0)
+   E_sin_afirmaciones_de_cierre_no_hay_presentes        PASA   (real=0 esperado=0)
+   E_y_la_regla_nueva_NO_dispara                        PASA   (real=False esperado=False)
+   F_sujeto_161_mismo_exit                              PASA   (real=0 esperado=0)
+   F_sujeto_161_mismas_filas                            PASA   (real=4 esperado=4)
+   F_sujeto_161_misma_prosa                             PASA   (real=0 esperado=0)
+   F_sujeto_160_mismo_exit                              PASA   (real=0 esperado=0)
+   F_sujeto_160_mismas_filas                            PASA   (real=0 esperado=0)
+   F_sujeto_160_misma_prosa                             PASA   (real=5 esperado=5)
+   CIFRA casos: 18 | pasan: 18 | fallan: 0
+
+H) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_161_sigue_VERDE                                    CAE
+   A_161_coteja_CUATRO_filas_de_fase                    CAE
+   B_160_sigue_VERDE                                    CAE
+   B_160_sigue_dando_CINCO                              CAE
+   la_mutacion_arranca_al_menos_una_cita                CAE
+   C_el_sujeto_sin_citas_es_ROJO                        CAE
+   C_y_lo_dice_con_su_nombre                            CAE
+   C_las_afirmaciones_de_cierre_SIGUEN_PRESENTES        CAE
+   C_y_las_cotejadas_son_CERO                           CAE
+   D_la_guarda_VIEJA_sobre_lo_mismo_sale_VERDE          CAE
+   E_sin_afirmaciones_de_cierre_no_hay_presentes        CAE
+   E_y_la_regla_nueva_NO_dispara                        CAE
+   F_sujeto_161_mismo_exit                              CAE
+   F_sujeto_161_mismas_filas                            CAE
+   F_sujeto_161_misma_prosa                             CAE
+   F_sujeto_160_mismo_exit                              CAE
+   F_sujeto_160_mismas_filas                            CAE
+   F_sujeto_160_misma_prosa                             CAE
+   CIFRA casos que CAEN: 18 de 18
+
+VERDE: 18 casos, los 18 pasan y los 18 CAEN al mutarles el valor esperado. LA COBERTURA DE CIERRE YA NO PUEDE CAER A CERO EN SILENCIO, la guarda vieja sobre la misma mutacion sigue saliendo verde, y ningun veredicto viejo se movio sobre los dos sujetos congelados.

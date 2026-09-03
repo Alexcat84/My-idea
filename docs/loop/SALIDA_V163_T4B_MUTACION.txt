@@ -1,0 +1,83 @@
+==============================================================================
+VUELTA 163, TAREA 4.b: CASO POSITIVO POR MUTACION DEL CAMINO NUEVO
+==============================================================================
+
+A) EL ESCENARIO REAL DE LA VUELTA 162, CONTRA LA FUNCION NUEVA
+   apertura 78d10690  ->  cierre ac4af00d
+   CIFRA docs/loop/SALIDA_* MODIFICADAS entre esos dos commits: 3
+      SALIDA_V135_2E_MUTACION_1.txt
+      SALIDA_V135_2E_MUTACION_2.txt
+      SALIDA_V135_2E_MUTACION_3.txt
+   reporte de la 162 leido de git show 78d10690:docs/loop/REPORTE.md: 30752 caracteres
+   CIFRA de esas que ese reporte NO nombra: 3
+      SIN DECLARAR: SALIDA_V135_2E_MUTACION_1.txt
+      SIN DECLARAR: SALIDA_V135_2E_MUTACION_2.txt
+      SIN DECLARAR: SALIDA_V135_2E_MUTACION_3.txt
+
+B) LA CONTRAPRUEBA: LA GUARDA VIEJA NO TIENE ESTE CAMINO
+   la guarda NUEVA tiene salidas_modificadas_desde: True
+   la guarda VIEJA tiene salidas_modificadas_desde: False
+   POR CONSTRUCCION LA VIEJA NO PUEDE VER LO QUE EL REPORTE NO CITA, y
+   por eso salio VERDE sobre las tres de la 162 (acta 162, seccion 5.4).
+
+C) NOMBRARLAS LAS SACA DEL ROJO, Y ASI COMPONE CON EL CAMINO VIEJO
+   CIFRA sin declarar tras nombrarlas en el texto: 0
+
+D) NACER NO ES RE SELLAR: LAS ANADIDAS NO ENTRAN
+   CIFRA docs/loop/SALIDA_* ANADIDAS entre los dos commits: 53
+   CIFRA de esas que se colaron en la lista de MODIFICADAS: 0
+
+E) LA EXENCION POR CONSTRUCCION SIGUE VALIENDO EN EL CAMINO NUEVO
+   SALIDA_V162_T6_RE_SELLADO.txt            exento: True  (esperado True)
+   SALIDA_V162_T6_CIFRAS_REPORTE.txt        exento: True  (esperado True)
+   SALIDA_V135_2E_MUTACION_1.txt            exento: False (esperado False)
+
+F) HOY, SOBRE ESTA VUELTA: LA GUARDA ENTERA
+   exit 0 | modificadas desde la apertura 0 | sin nombrar 0
+
+G) NINGUN VEREDICTO VIEJO SE MUEVE, VIEJA CONTRA NUEVA SOBRE EL DE HOY
+   nuevo exit 0 | viejo exit 0
+   camino viejo, sin declarar: nuevo 0 | viejo 0
+   camino viejo, salidas citadas: nuevo 33 | viejo 33
+
+H) PASADA 1, LOS CASOS TAL CUAL
+   A_la_162_trae_TRES_modificadas                       PASA   (real=3 esperado=3)
+   A_las_tres_son_las_SALIDA_V135_2E_MUTACION           PASA   (real=['SALIDA_V135_2E_MUTACION_1.txt', 'SALIDA_V135_2E_MUTACION_2.txt', 'SALIDA_V135_2E_MUTACION_3.txt'] esperado=['SALIDA_V135_2E_MUTACION_1.txt', 'SALIDA_V135_2E_MUTACION_2.txt', 'SALIDA_V135_2E_MUTACION_3.txt'])
+   A_y_las_TRES_salen_SIN_DECLARAR                      PASA   (real=3 esperado=3)
+   B_la_nueva_tiene_el_camino                           PASA   (real=True esperado=True)
+   B_la_vieja_NO_lo_tiene                               PASA   (real=False esperado=False)
+   B_la_vieja_no_nombraba_las_tres                      PASA   (real=0 esperado=0)
+   C_nombrarlas_deja_cero_sin_declarar                  PASA   (real=0 esperado=0)
+   D_hay_anadidas_de_verdad_en_ese_tramo                PASA   (real=True esperado=True)
+   D_y_ninguna_se_cuela_como_modificada                 PASA   (real=0 esperado=0)
+   E_exencion_SALIDA_V162_T6_RE_SELLADO_txt             PASA   (real=True esperado=True)
+   E_exencion_SALIDA_V162_T6_CIFRAS_REPORTE_txt         PASA   (real=True esperado=True)
+   E_exencion_SALIDA_V135_2E_MUTACION_1_txt             PASA   (real=False esperado=False)
+   F_hoy_la_guarda_sale_VERDE                           PASA   (real=0 esperado=0)
+   F_hoy_no_hay_ninguna_sin_nombrar                     PASA   (real=0 esperado=0)
+   G_mismo_exit                                         PASA   (real=0 esperado=0)
+   G_misma_cuenta_del_camino_viejo                      PASA   (real=0 esperado=0)
+   G_mismas_salidas_citadas                             PASA   (real=33 esperado=33)
+   CIFRA casos: 17 | pasan: 17 | fallan: 0
+
+I) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_la_162_trae_TRES_modificadas                       CAE
+   A_las_tres_son_las_SALIDA_V135_2E_MUTACION           CAE
+   A_y_las_TRES_salen_SIN_DECLARAR                      CAE
+   B_la_nueva_tiene_el_camino                           CAE
+   B_la_vieja_NO_lo_tiene                               CAE
+   B_la_vieja_no_nombraba_las_tres                      CAE
+   C_nombrarlas_deja_cero_sin_declarar                  CAE
+   D_hay_anadidas_de_verdad_en_ese_tramo                CAE
+   D_y_ninguna_se_cuela_como_modificada                 CAE
+   E_exencion_SALIDA_V162_T6_RE_SELLADO_txt             CAE
+   E_exencion_SALIDA_V162_T6_CIFRAS_REPORTE_txt         CAE
+   E_exencion_SALIDA_V135_2E_MUTACION_1_txt             CAE
+   F_hoy_la_guarda_sale_VERDE                           CAE
+   F_hoy_no_hay_ninguna_sin_nombrar                     CAE
+   G_mismo_exit                                         CAE
+   G_misma_cuenta_del_camino_viejo                      CAE
+   G_mismas_salidas_citadas                             CAE
+   CIFRA casos que CAEN: 17 de 17
+
+VERDE: 17 casos, los 17 pasan y los 17 CAEN al mutarles el valor esperado. EL CASO DE LA VUELTA 162 SE REPRODUCE ENTERO: las tres salidas de la 135 aparecen como modificadas y sin declarar, la guarda vieja no tenia con que verlas, nombrarlas las devuelve al camino viejo, y ningun veredicto viejo se movio.
