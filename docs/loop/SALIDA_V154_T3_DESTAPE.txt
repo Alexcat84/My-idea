@@ -1,0 +1,307 @@
+================================================================================================
+VUELTA 154, TAREA 3: EL DESTAPE Y EL COTEJO
+================================================================================================
+MUESTRA POR COMPUTO: zancada 3, arranque 1, 41 puesto(s) de 122.
+Adjudicaciones leidas de docs/loop/SALIDA_V154_T3_MIS_ADJUDICACIONES.txt: 41
+
+| # | cita | mi clase a ciegas | clase escrita | coincide |
+|---:|---|---|---|---|
+| 1 | LD-OPC05-001 | C | C | si |
+| 2 | LD-OPC05-004 | C | C | si |
+| 3 | LD-OPC05-007 | C | C | si |
+| 4 | LD-OPC05-010 | C | C | si |
+| 5 | LD-OPC05-013 | C | C | si |
+| 6 | LD-OPC05-016 | C | C | si |
+| 7 | LD-OPC05-019 | C | C | si |
+| 8 | LD-OPC05-022 | C | C | si |
+| 9 | LD-OPC05-025 | C con reserva | C | si |
+| 10 | LD-OPC05-028 | C | C | si |
+| 11 | LD-OPC05-031 | C con reserva | C | si |
+| 12 | LD-OPC05-034 | C | C | si |
+| 13 | LD-OPC05-037 | C | C | si |
+| 14 | LD-OPC05-040 | C | C | si |
+| 15 | LD-OPC05-043 | C | C | si |
+| 16 | LD-OPC05-046 | C con reserva fuerte | C | si |
+| 17 | LD-OPC05-049 | C | C | si |
+| 18 | LD-OPC05-052 | C con reserva | C | si |
+| 19 | LD-OPC05-055 | C | C | si |
+| 20 | LD-OPC05-058 | C con reserva leve | C | si |
+| 21 | LD-OPC05-061 | C | C | si |
+| 22 | LD-OPC05-064 | C | C | si |
+| 23 | LD-OPC05-067 | C | C | si |
+| 24 | LD-OPC05-070 | C | C | si |
+| 25 | LD-OPC05-073 | C | C | si |
+| 26 | LD-OPC05-076 | C | C | si |
+| 27 | LD-OPC05-079 | C | C | si |
+| 28 | LD-OPC05-082 | C | C | si |
+| 29 | LD-OPC05-085 | C | C | si |
+| 30 | LD-OPC05-088 | C | C | si |
+| 31 | LD-OPC05-091 | C | C | si |
+| 32 | LD-OPC05-094 | C | C | si |
+| 33 | LD-OPC05-097 | A | C | NO |
+| 34 | LD-OPC05-100 | C con reserva | C | si |
+| 35 | LD-OPC05-103 | C | C | si |
+| 36 | LD-OPC05-106 | C | C | si |
+| 37 | LD-OPC05-109 | C con reserva | C | si |
+| 38 | LD-OPC05-112 | C | C | si |
+| 39 | LD-OPC05-115 | C | C | si |
+| 40 | LD-OPC05-118 | C con reserva | C | si |
+| 41 | LD-OPC05-121 | C | C | si |
+
+CONTADO: 40 coinciden, 1 discrepan, 0 sin adjudicar, sobre 41 puesto(s).
+
+LAS QUE DISCREPAN, CON SU CASO ESCRITO Y SIN ARREGLARLAS:
+  LD-OPC05-097: yo a ciegas A, escrito C
+
+EL DESTAPE, PUESTO A PUESTO: mi razon a ciegas contra la razon escrita.
+
+  CASO 1, LD-OPC05-001  accion_correctiva_sistematica <-> cero_defectos
+    mi clase a ciegas: C
+    mi razon a ciegas: la ficha diaria/semanal/mensual con escalado y causa raiz contra el estandar ZD, su dia de lanzamiento y el borrado del lenguaje AQL: dos procedimientos enteros y ninguno es la madre
+    clase escrita    : C
+    razon escrita    : el paso 6 de Crosby (fichar, revisar y escalar cada problema hasta la causa raiz) contra el estandar ZD y su dia de lanzamiento: cada uno expande un procedimiento que el otro no contiene
+
+  CASO 2, LD-OPC05-004  actualizar_business_model_canvas_tuneup <-> reempaquetado_producto
+    mi clase a ciegas: C
+    mi razon a ciegas: el tune-up del lienzo con el feedback recibido contra la decision de reempaquetar (modulos, suscripcion, versiones); uno actualiza el lienzo, el otro decide que cambiar sin redisenar el producto
+    clase escrita    : C
+    razon escrita    : el tune-up semanal del Canvas con el feedback recibido contra la estrategia de pivote por reempaquetado (modulos, suscripcion, versiones): uno actualiza el lienzo, el otro decide que cambiar
+
+  CASO 3, LD-OPC05-007  analisis_motivaciones_fundador <-> decision_cuando_fundar
+    mi clase a ciegas: C
+    mi razon a ciegas: el perfil de las trece motivaciones con CareerLeader contra los tres factores de carrera, mercado y personales y el plan para mitigar el mas debil: dos decisiones distintas, quien soy y cuando salto
+    clase escrita    : C
+    razon escrita    : el perfil motivacional del fundador con sus 13 motivaciones contra los tres factores de CUANDO fundar (carrera, mercado, personales): distinto sujeto y distinta decision
+
+  CASO 4, LD-OPC05-010  antidilucion_provisiones <-> pay_to_play
+    mi clase a ciegas: C
+    mi razon a ciegas: dos clausulas distintas del term sheet, cada una con su propia negociacion: weighted average contra full ratchet y sus carve-outs, contra la definicion de qualified financing y el pro rata minimo
+    clase escrita    : C
+    razon escrita    : la antidilucion (weighted average contra full ratchet, carve outs, waiver) contra el pay to play y su Qualified Financing: dos clausulas distintas del mismo term sheet
+
+  CASO 5, LD-OPC05-013  auditoria_de_posicionamiento <-> desarrollar_posicionamiento_empresa
+    mi clase a ciegas: C
+    mi razon a ciegas: el cuestionario externo e interno y el cruce de percepciones contra la redaccion de la declaracion de posicionamiento; auditar no es redactar
+    clase escrita    : C
+    razon escrita    : la auditoria de posicionamiento (cuestionario externo e interno, entrevistas, comparar percepciones) contra redactar la declaracion de posicionamiento: medir contra escribir
+
+  CASO 6, LD-OPC05-016  bullseye_framework <-> critical_path
+    mi clase a ciegas: C
+    mi razon a ciegas: los diecinueve canales con experimentos baratos en paralelo contra la disciplina del camino critico que excluye lo no imprescindible: eleccion de canal contra eleccion de hito
+    clase escrita    : C
+    razon escrita    : la diana de traccion con sus 19 canales y sus experimentos baratos contra el camino critico que excluye lo que no es imprescindible
+
+  CASO 7, LD-OPC05-019  calculo_roi_franquiciado_2 <-> decision_franquiciar_vs_expansion_propia
+    mi clase a ciegas: C
+    mi razon a ciegas: el calculo del retorno cash on cash del franquiciado contra la comparacion de cuatro escenarios de crecimiento frente a la meta personal; uno produce un numero, el otro elige una estrategia
+    clase escrita    : C
+    razon escrita    : calcular el ROI cash on cash del franquiciado contra decidir entre franquiciar, unidades propias o capital externo: uno alimenta al otro con una cifra
+
+  CASO 8, LD-OPC05-022  canales_distribucion <-> eventos_offline_como_canal_traccion
+    mi clase a ciegas: C
+    mi razon a ciegas: el bloque de canales del lienzo con sus cinco fases contra el manual concreto de un canal presencial (charla pequena, ponentes, sede, precio de entrada)
+    clase escrita    : C
+    razon escrita    : el bloque de Canales del Canvas con sus cinco fases contra los eventos presenciales como canal concreto de traccion
+
+  CASO 9, LD-OPC05-025  checklist_sistema_stage_gate_primera_clase <-> mitos_stage_gate
+    mi clase a ciegas: C con reserva
+    mi razon a ciegas: los dos son auditorias del mismo proceso y ahi esta la tension; sostengo C porque uno mide adopcion, metricas, versiones escalables y gerente de proceso, y el otro mide paralelismo, saltos de etapa y peso del front-end, y ninguna de esas listas cabe en la otra
+    clase escrita    : C
+    razon escrita    : el checklist de un Stage Gate de primera clase contra la desmitificacion de lo que Stage Gate NO es: uno construye, el otro desmonta creencias
+
+  CASO 10, LD-OPC05-028  cinco_porques_master <-> five_whys_inversion_proporcional
+    mi clase a ciegas: C
+    mi razon a ciegas: designar al maestro, elegir la categoria de sintomas de bajo riesgo y fijar la regla que dispara la sesion contra correr la sesion (preguntar cinco veces, accion proporcional, sin culpar): montar la practica no es ejecutarla
+    clase escrita    : C
+    razon escrita    : designar al maestro de los cinco porques y su regla de disparo contra la sesion misma con inversion proporcional al nivel del problema
+
+  CASO 11, LD-OPC05-031  compatibilidad_motivaciones_riqueza_control <-> dilema_riqueza_vs_control
+    mi clase a ciegas: C con reserva
+    mi razon a ciegas: EL MAS TENSO DE LA MUESTRA: el paso 1 de uno y el paso 2 del otro son casi la misma frase. Sostengo C porque solo el primero trae el procedimiento de compatibilidad CON EL SOCIO antes de fundar (la matriz, el fork de roles, que hacer si los dos quieren control) y solo el segundo trae la evaluacion control contra valor en cada decision de financiamiento y las estructuras de voto diferenciado
+    clase escrita    : C
+    razon escrita    : DISCUTIBLE 2, EL MAS AJUSTADO DE LOS CUATRO. El paso 1 de compatibilidad y el paso 2 del dilema son casi la misma linea. Se sostiene C porque el sujeto es distinto: compatibilidad se pregunta por TI Y TU SOCIO antes de asociarse, el dilema se pregunta por TI SOLO en cada decision de financiamiento
+
+  CASO 12, LD-OPC05-034  conexion_personal_emocional <-> rediseno_procesos_negocio_cx
+    mi clase a ciegas: C
+    mi razon a ciegas: clasificar los datos del cliente en personales y emocionales y hacer rituales con ellos contra el rediseno de los procesos internos, la capacitacion masiva y la unificacion de herramientas: escalas y actos distintos
+    clase escrita    : C
+    razon escrita    : conectar con datos personales y emocionales contra el redisenio de 16 pasos de los procesos internos que generan friccion
+
+  CASO 13, LD-OPC05-037  contract_close_out <-> contractor_status_report
+    mi clase a ciegas: C
+    mi razon a ciegas: cerrar el contrato (disputas resueltas, aceptacion, pagos finales, fecha de cierre) contra leer el informe periodico del contratista y sus pronosticos: cerrar no es monitorear
+    clase escrita    : C
+    razon escrita    : cerrar el contrato (disputas resueltas, aceptacion, pagos finales) contra el informe periodico de estado del contratista durante la ejecucion
+
+  CASO 14, LD-OPC05-040  cost_management_plan <-> stakeholder_register
+    mi clase a ciegas: C
+    mi razon a ciegas: dos artefactos de planificacion sin solape: precision, unidades, umbrales y valor ganado contra el censo de interesados con su influencia y su postura. LA FIGURA ES DELGADA (cuesta nombrar que linea de uno expande el otro), pero de fusion no tienen nada
+    clase escrita    : C
+    razon escrita    : el plan de gestion de costos con sus umbrales de varianza contra el registro de interesados con su influencia y su postura
+
+  CASO 15, LD-OPC05-043  costo_de_mala_calidad_copq <-> trilogia_de_juran
+    mi clase a ciegas: C
+    mi razon a ciegas: medir el costo de la mala calidad y fijar meta de reduccion contra la triloga de planificacion, control y mejora con la distincion pico esporadico contra desperdicio cronico
+    clase escrita    : C
+    razon escrita    : el COPQ contra la trilogia de Juran (planificar, controlar, mejorar) y su distincion entre pico esporadico y desperdicio cronico
+
+  CASO 16, LD-OPC05-046  cultura_de_aprendizaje <-> cultura_de_seguridad_componentes
+    mi clase a ciegas: C con reserva fuerte
+    mi razon a ciegas: EL QUE MENOS ME CONVENCE: los dos montan el sistema que recoge, analiza y difunde la informacion de incidentes, y la cultura de aprendizaje es UNO de los componentes de la cultura de seguridad, o sea huele a madre e hijo mas que a enlace mutuo. No lo tumbo porque el segundo trae la evaluacion de los cuatro subcomponentes y el escrito de por que vale la pena invertir, que el primero no tiene, pero lo marco como mi caso mas discutible
+    clase escrita    : C
+    razon escrita    : la cultura de aprendizaje y su ciclo de reformas contra los cuatro subcomponentes de la cultura de seguridad
+
+  CASO 17, LD-OPC05-049  decision_pivotar_o_proceder <-> lienzo_modelo_negocio
+    mi clase a ciegas: C
+    mi razon a ciegas: la puerta de decidir pivotar o proceder, con el consejo asesor cuestionando el lienzo, contra el lienzo mismo y su procedimiento de llenado: la herramienta no es la decision
+    clase escrita    : C
+    razon escrita    : la decision de pivotar o proceder contra el lienzo mismo y sus doce pasos de construccion
+
+  CASO 18, LD-OPC05-052  definicion_alineacion_cadena_suministro <-> trade_off_responsividad_eficiencia
+    mi clase a ciegas: C con reserva
+    mi razon a ciegas: se tocan en alinear los cinco drivers con la estrategia; sostengo C porque solo el primero mapea la cadena entera y aplica las seis preguntas de Chopra, y solo el segundo juzga si el entorno es estable o volatil y reajusta periodicamente
+    clase escrita    : C
+    razon escrita    : alinear la cadena de suministro con la estrategia contra el balance concreto entre responsividad y eficiencia en los cinco drivers
+
+  CASO 19, LD-OPC05-055  design_for_six_sigma_dfss <-> innovacion_tipo_ii
+    mi clase a ciegas: C
+    mi razon a ciegas: el DMADV con sus CTQs y su verificacion antes de escalar contra las tres columnas de mas grande, mas pequeno y combinarlo: nada en comun
+    clase escrita    : C
+    razon escrita    : el DFSS y su DMADV con CTQs contra la innovacion tipo II de mas grande, mas pequeno o combinado
+
+  CASO 20, LD-OPC05-058  diagnostico_antes_remedio <-> terminologia_clave_breakthrough
+    mi clase a ciegas: C con reserva leve
+    mi razon a ciegas: los dos son disciplina de diagnostico; el primero es el principio con sus contrastes contra la creencia arraigada y el segundo es el vocabulario y el Pareto antes de empezar
+    clase escrita    : C
+    razon escrita    : la regla de que el diagnostico precede al remedio contra la terminologia que hay que fijar con el equipo antes de diagnosticar
+
+  CASO 21, LD-OPC05-061  documentacion_exportacion <-> seguro_exportacion
+    mi clase a ciegas: C
+    mi razon a ciegas: la nomina de documentos con su factura pro forma, su codigo HS y su declaracion de exportacion contra la decision de seguro de carga y de credito con su nivel de cobertura
+    clase escrita    : C
+    razon escrita    : los documentos de exportacion (pro forma, comercial, packing list, HS, SED) contra el seguro de carga y de credito y su cobertura CIF
+
+  CASO 22, LD-OPC05-064  educacion_estadistica_para_la_calidad <-> responsabilidad_gerencial_en_la_calidad
+    mi clase a ciegas: C
+    mi razon a ciegas: capacitar en metodos estadisticos a todo el que trabaja contigo contra la responsabilidad propia de aprender, estar donde se hace el trabajo y escribir tus propios reportes: ensenar a otros no es la obligacion de uno mismo
+    clase escrita    : C
+    razon escrita    : la educacion masiva en metodos estadisticos contra tu propia responsabilidad gerencial de aprender y liderar la mejora
+
+  CASO 23, LD-OPC05-067  elementos_plan_exportacion_ejemplo <-> programas_ex_im_bank
+    mi clase a ciegas: C
+    mi razon a ciegas: redactar el plan de exportacion entero contra la nomina de programas de financiamiento del Ex-Im Bank y como se solicitan
+    clase escrita    : C
+    razon escrita    : los trece elementos practicos de un plan de exportacion contra los programas concretos de financiamiento del Ex-Im Bank
+
+  CASO 24, LD-OPC05-070  encuadre_desafio_diseno <-> integracion_deseabilidad_viabilidad_factibilidad_social
+    mi clase a ciegas: C
+    mi razon a ciegas: formular la pregunta de diseno abierta y iterarla contra el triple criterio de deseabilidad, viabilidad y factibilidad en emprendimientos sociales con sus equipos interdisciplinarios
+    clase escrita    : C
+    razon escrita    : encuadrar el desafio de diseno con la pregunta como podriamos contra el triple criterio deseabilidad, viabilidad y factibilidad en emprendimiento social
+
+  CASO 25, LD-OPC05-073  entrenamiento_supervisores_calidad <-> identificacion_empleado_con_el_trabajo
+    mi clase a ciegas: C
+    mi razon a ciegas: preparar al supervisor para el programa ZD (seis horas, manual, test de comprension, cuatro semanas antes) contra la identificacion del empleado con su trabajo (conocerlo, ensenarle el resultado final, ausentismo, autoevaluacion)
+    clase escrita    : C
+    razon escrita    : el entrenamiento del supervisor en el programa ZD contra la identificacion del empleado con su trabajo y su seguimiento de ausentismo
+
+  CASO 26, LD-OPC05-076  estrategia_crecimiento_clientes <-> get_customers_funnel_webmobile
+    mi clase a ciegas: C
+    mi razon a ciegas: hacer crecer al cliente que ya tienes (valor de vida, venta cruzada, referidos) contra conseguirlo (audiencia, contenido, comunidades, tacticas gratuitas y pagadas, tasa de activacion)
+    clase escrita    : C
+    razon escrita    : la estrategia de crecimiento (venta cruzada, referidos, motores de recomendacion) contra el embudo de adquisicion y activacion web y movil
+
+  CASO 27, LD-OPC05-079  evaluacion_necesidad_franquiciar <-> mix_ubicaciones_corporativas_franquicia
+    mi clase a ciegas: C
+    mi razon a ciegas: decidir si franquiciar contra decidir la mezcla de locales propios y franquiciados con su estrategia de ubicacion y su regla de encroachment
+    clase escrita    : C
+    razon escrita    : DECISION DE FRANQUICIAR, y este par tambien SOLO existe tras resolver alias. Evaluar la necesidad de franquiciar contra la mezcla de ubicaciones corporativas y franquiciadas y sus estrategias Home Sweet Home o Cherry Picking
+
+  CASO 28, LD-OPC05-082  future_scenarios_planning <-> iota_analysis
+    mi clase a ciegas: C
+    mi razon a ciegas: construir escenarios cruzando dos impulsores y narrarlos contra la tabla que junta todos los hallazgos previos con su timing, probabilidad e impacto
+    clase escrita    : C
+    razon escrita    : la planificacion de escenarios contra el IOTA que reune los hallazgos previos en una tabla y responde entonces que
+
+  CASO 29, LD-OPC05-085  gestion_alucinaciones_ia <-> ia_generacion_ideas_negocio
+    mi clase a ciegas: C
+    mi razon a ciegas: la politica que prohibe usar dato de IA sin verificacion humana contra el uso de la IA como motor de recombinacion en la sesion de ideas: control de riesgo contra uso generativo
+    clase escrita    : C
+    razon escrita    : la politica contra alucinaciones de la IA contra el uso de la IA como motor de recombinacion de ideas
+
+  CASO 30, LD-OPC05-088  gestion_portafolio_foco <-> sistema_gates_go_kill
+    mi clase a ciegas: C
+    mi razon a ciegas: auditar cuantos proyectos activos caben en la capacidad real contra el sistema de puntos de decision con sus criterios, su scorecard y sus cinco salidas: cuantos proyectos contra que hacer con cada uno
+    clase escrita    : C
+    razon escrita    : la gestion del foco de recursos y su auditoria de proyectos activos contra el sistema de gates. TAMBIEN EXCEPTUADO por la verificacion 5 de OP-E-04
+
+  CASO 31, LD-OPC05-091  incoterms_reglas_comerciales_internacionales <-> seleccion_de_metodo_de_pago
+    mi clase a ciegas: C
+    mi razon a ciegas: elegir el Incoterm y el punto de transferencia de riesgo contra elegir el metodo de pago segun la solvencia del comprador y el riesgo pais
+    clase escrita    : C
+    razon escrita    : los Incoterms y su punto de transferencia de riesgo contra la seleccion del metodo de pago y la solvencia del comprador
+
+  CASO 32, LD-OPC05-094  investigacion_etnografica_ideacion <-> reglas_brainstorming
+    mi clase a ciegas: C
+    mi razon a ciegas: LA FIGURA ES EXPLICITA AQUI: el paso 4 de las reglas de brainstorming pide una experiencia de inmersion previa, y eso es exactamente lo que el otro nodo procedimenta entero; y en el otro sentido, el brainstorming procedimenta la sesion que traduce lo observado en conceptos
+    clase escrita    : C
+    razon escrita    : la investigacion etnografica de campo contra las reglas de la sesion de brainstorming que consume sus hallazgos
+
+  CASO 33, LD-OPC05-097  juran_rcca_metodo <-> viaje_diagnostico_remedial
+    mi clase a ciegas: A
+    mi razon a ciegas: LA UNICA QUE TUMBO. Los cuatro pasos del primero contienen al segundo entero y EN EL MISMO ORDEN: su paso 2 es analizar sintomas, formular teorias, probarlas e identificar la causa raiz, que son los pasos 1 a 4 del segundo; su paso 3 es disenar e implementar el remedio, que son los pasos 5 y 6; su paso 4 es ajustar los controles, que es el paso 8. Es el mismo material a dos granularidades, con dos apostillas (el enunciado esporadico contra cronico de uno, la gestion de la resistencia del otro), que es la definicion literal del segundo polo del 9.22
+    clase escrita    : C
+    razon escrita    : el metodo RCCA de Juran en cuatro fases contra el viaje diagnostico y remedial en ocho pasos con su gestion de la resistencia
+
+  CASO 34, LD-OPC05-100  lienzo_modelo_negocio <-> proceso_ideacion_modelo_negocio
+    mi clase a ciegas: C con reserva
+    mi razon a ciegas: los dos son sesion de grupo alrededor del lienzo; sostengo C porque uno procedimenta LLENAR el lienzo y el otro procedimenta GENERAR muchos modelos y reducirlos a tres o cinco para prototipar
+    clase escrita    : C
+    razon escrita    : el lienzo contra el proceso de ideacion de modelos con su equipo diverso y su fase de inmersion
+
+  CASO 35, LD-OPC05-103  mapeo_flujo_valor <-> takt_time
+    mi clase a ciegas: C
+    mi razon a ciegas: el mapa de estado actual y futuro con su clasificacion de valor agregado contra el calculo del takt y el balanceo de estaciones
+    clase escrita    : C
+    razon escrita    : PAR QUE SOLO EXISTE TRAS RESOLVER ALIAS. El mapeo de flujo de valor y su estado futuro contra el takt time y el balanceo de estaciones
+
+  CASO 36, LD-OPC05-106  motor_crecimiento_viral <-> motor_de_crecimiento
+    mi clase a ciegas: C
+    mi razon a ciegas: el motor viral con su coeficiente y su mecanismo de transmision contra la eleccion entre los cuatro motores y el descarte de las metricas de vanidad: el caso concreto contra la eleccion entre casos
+    clase escrita    : C
+    razon escrita    : el motor viral y su coeficiente contra la eleccion entre los cuatro motores de crecimiento
+
+  CASO 37, LD-OPC05-109  plan_gestion_comunicaciones <-> plan_gestion_interesados
+    mi clase a ciegas: C con reserva
+    mi razon a ciegas: se tocan en definir que necesita saber cada persona; sostengo C porque uno es la logistica (metodo, frecuencia, responsable, glosario) y el otro es la estrategia de compromiso (nivel actual contra deseado, postura, como moverla)
+    clase escrita    : C
+    razon escrita    : el plan de comunicaciones (que, como, cuando, quien) contra el plan de gestion de interesados (nivel de compromiso actual y deseado)
+
+  CASO 38, LD-OPC05-112  problem_solution_fit <-> producto_minimo_viable
+    mi clase a ciegas: C
+    mi razon a ciegas: el criterio de encaje problema solucion contra la construccion del producto minimo viable con su hipotesis critica y sus early adopters
+    clase escrita    : C
+    razon escrita    : el problem solution fit contra el MVP y su hipotesis mas critica
+
+  CASO 39, LD-OPC05-115  recomendaciones_smart <-> revision_de_aprendizaje
+    mi clase a ciegas: C
+    mi razon a ciegas: redactar la recomendacion SMART con su responsable y su fecha contra renombrar al equipo como equipo de aprendizaje y cambiar la pregunta
+    clase escrita    : C
+    razon escrita    : las recomendaciones SMART de una investigacion de seguridad contra la revision de aprendizaje que cambia la pregunta y el nombre del equipo
+
+  CASO 40, LD-OPC05-118  search_for_business_model <-> vision_estrategia_producto_pivote
+    mi clase a ciegas: C con reserva
+    mi razon a ciegas: los dos acaban en iterar o pivotar; sostengo C porque uno es la disciplina de la busqueda (modo busqueda contra ejecucion, hipotesis listadas, Customer Development) y el otro es la separacion vision, estrategia y producto con el ciclo construir medir aprender
+    clase escrita    : C
+    razon escrita    : la busqueda de modelo de negocio contra la distincion entre vision inalterable, estrategia y producto
+
+  CASO 41, LD-OPC05-121  venture_debt_introduccion <-> venture_debt_terminos_economicos
+    mi clase a ciegas: C
+    mi razon a ciegas: levantar deuda de riesgo (cuando, con quien, para que) contra sus condiciones de precio (tasa, comisiones, warrants, strike, banco contra fondo)
+    clase escrita    : C
+    razon escrita    : la deuda de riesgo como complemento al equity contra sus condiciones de precio concretas (tasa, comisiones, warrants)
+
+CIFRA puestos releidos en la muestra: 41 pares
+CIFRA puestos que coinciden: 40 pares
+CIFRA puestos que discrepan: 1 pares
+EXITCODE: 0
