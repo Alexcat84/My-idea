@@ -487,6 +487,55 @@ de esta regla (dice que es una relectura y dice en que vuelta) y se anadio a
 `FORMAS_QUE_CUENTAN` del contador **en la misma vuelta que la escribio**. Una
 definicion que no contara la lectura del dia en que nace naceria desfasada.
 
+### LA MISMA CIFRA, RECOMPUTADA EN LA VUELTA 162, TRAS ESCRIBIR LAS 16 MARCAS DE LA CIEGA
+
+**`EJECUTOR.md` 1: el estado al cierre se mide al cierre, y esta vuelta lo
+movio otra vez.** La TAREA 1.c de la vuelta 162 escribio, por la **adjudicacion
+6.7 del acta 161**, las **16 marcas** de la relectura CIEGA DEL AUDITOR de la
+vuelta 161 (las catorce en `C` mas los ejemplares `100` y `122`), por adicion y
+**sin mover una sola clase**. **NI LA CIFRA DE APERTURA NI LA DE CIERRE DE LA
+VUELTA 161 SE BORRAN NI SE SUSTITUYEN**: se quedan enteras, cada una con su
+corte, y esta se anade a su derecha con el suyo.
+
+**Corte: 3 sep 2026, vuelta 162. Autor: ejecutor de la vuelta 162. Instrumento:
+`scripts/loop/vuelta161_tarea1c_segunda_lectura.py` (el mismo, con la forma nueva
+declarada). Fichero de salida: `docs/loop/SALIDA_V162_T1C_SEGUNDA_LECTURA.txt`.**
+Ninguna celda esta tecleada: todas se extraen de ese fichero, y las dos columnas
+de la vuelta 161 se leen de la tabla de arriba, no se recuerdan.
+
+| | apertura de la 161 | cierre de la 161 | **vuelta 162** |
+|---|---:|---:|---:|
+| con AL MENOS UNA segunda lectura independiente | 85 | 92 | **92** |
+| con DOS O MAS | 0 | 7 | **16** |
+| con NINGUNA | 37 | 30 | **30** |
+| actos de relectura contados sobre filas | 85 | 99 | **115** |
+| actos distintos `(tipo, vuelta)` | 6 | 7 | **8** |
+
+**Los actos en la vuelta 162, pegados enteros de su fichero:**
+
+```
+CIEGA_DEL_AUDITOR    vuelta 161  16 fila(s)
+RELECTURA            vuelta 156  2 fila(s)
+RELECTURA_CONJUNTA   vuelta 156  1 fila(s)
+RELECTURA_CONJUNTA   vuelta 159  3 fila(s)
+RELECTURA_CONJUNTA   vuelta 160  1 fila(s)
+SEGUNDA_PASADA       vuelta 159  41 fila(s)
+TRAMO_AL_DOBLE       vuelta 160  37 fila(s)
+TRAMO_DE_LAS_C       vuelta 161  14 fila(s)
+```
+
+**Y LA FORMA NUEVA SE DECLARA, IGUAL QUE SE DECLARO LA DE LA VUELTA 161:** la
+marca `RELECTURA CIEGA DEL AUDITOR, VUELTA 161` cumple las dos condiciones de
+esta regla y se anadio a `FORMAS_QUE_CUENTAN` **en la misma vuelta que la
+escribio**. Sin esa linea, la definicion no contaria justo la lectura que la
+adjudicacion 6.7 vino a hacer contable.
+
+**LO QUE ESTA CIFRA SI MUEVE, Y LO QUE NO.** El **con al menos una** no se mueve
+(92 y 92): las dieciseis ya tenian una marca de otra pluma. Lo que se mueve es el
+**con dos o mas**, de 7 a 16, que es exactamente lo que `P.5.2` persigue: **una
+segunda lectura independiente que antes no era contable porque vivia solo en el
+acta del auditor.**
+
 ### LAS DOS CIFRAS VIEJAS, TACHADAS AL LADO Y NO BORRADAS
 
 **`EJECUTOR.md` 8: una correccion que tapa lo que corrige no se puede auditar.**

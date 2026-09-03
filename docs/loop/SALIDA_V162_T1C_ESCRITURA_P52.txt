@@ -1,0 +1,22 @@
+==============================================================================
+VUELTA 162, TAREA 1.c: LA CIFRA DE P.5.2, RECOMPUTADA TRAS LAS 16 MARCAS
+==============================================================================
+
+A) LAS CIFRAS DE HOY, EXTRAIDAS DE SALIDA_V162_T1C_SEGUNDA_LECTURA.txt
+   pares de LECTURA_DIRIGIDA: 122
+   con al menos una: 92 | con dos o mas: 16 | con ninguna: 30
+   actos sobre filas: 115 | actos distintos: 8
+   CIFRA lineas de actos leidas: 8
+
+B) LAS CIFRAS DE LA VUELTA 161, LEIDAS DE LA TABLA QUE YA VIVE EN EL BANCO
+   con AL MENOS UNA segunda lectura independiente       apertura 161 85   cierre 161 92   hoy 92
+   con DOS O MAS                                        apertura 161 0    cierre 161 7    hoy 16
+   con NINGUNA                                          apertura 161 37   cierre 161 30   hoy 30
+   actos de relectura contados sobre filas              apertura 161 85   cierre 161 99   hoy 115
+   actos distintos `(tipo, vuelta)`                     apertura 161 6    cierre 161 7    hoy 8
+
+C) LA ESCRITURA
+   git diff --numstat: 49	0	docs/plan/BANCO_DEL_PLAN.md
+   VERDE: adicion pura, cero borrados. Las dos cifras de la 161 siguen enteras.
+CIFRA secciones escritas: 1
+EXITCODE: 0

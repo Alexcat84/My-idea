@@ -50,7 +50,16 @@ REGISTRO = os.path.join(RAIZ, "docs", "plan", "REGISTRO_DE_CITAS_OPC05.jsonl")
 ACTA = os.path.join(RAIZ, "docs", "loop", "ACTA_AUDITOR.md")
 
 FORMAS_QUE_CUENTAN = [
-    # ANADIDA EN LA TAREA 2 DE ESTA MISMA VUELTA, Y SE DECLARA POR QUE: la
+    # ANADIDA EN LA TAREA 1.c DE LA VUELTA 162, Y SE DECLARA POR QUE, IGUAL QUE
+    # SE DECLARO LA DE ABAJO EN LA 161: la adjudicacion 6.7 del acta 161 manda
+    # que la relectura CIEGA DEL AUDITOR deje marca contable en el registro, y
+    # la vuelta 162 la escribio sobre las 16 filas que el auditor releyo. La
+    # forma cumple las dos condiciones de P.5.2: dice que es una RELECTURA y
+    # dice EN QUE VUELTA. Sin esta linea, la definicion no contaria la lectura
+    # que la propia adjudicacion vino a hacer contable, que es la enfermedad
+    # que P.5.2 nombra.
+    (r"RELECTURA CIEGA DEL AUDITOR, VUELTA (\d+)", "CIEGA_DEL_AUDITOR"),
+    # ANADIDA EN LA TAREA 2 DE LA VUELTA 161, Y SE DECLARA POR QUE: la
     # relectura de las catorce en C escribe su marca con esta forma, y una
     # definicion escrita hoy que no contara la lectura de hoy seria una
     # definicion que nace desfasada. La forma cumple las dos condiciones de

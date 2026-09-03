@@ -1,0 +1,114 @@
+==============================================================================
+VUELTA 162, TAREA 1.c: LAS 16 MARCAS DE LA CIEGA DEL AUDITOR
+==============================================================================
+
+A) EL SELLO, COMPROBADO HOY CON git hash-object
+   sha1 de docs/loop/_auditor_v161_mis_adjudicaciones.txt: ffe1fa6f96217ed9ee38b4b38fa43f56aa1b3848
+   el acta 161 seccion 3 lo cita como: ffe1fa6f
+   CALZA.
+
+B) LA TABLA DE LA SECCION 3 DEL ACTA 161, LEIDA HOY
+   docs/loop/ACTA_AUDITOR.md:53375
+      | **total** | **16** | **16** | **0** |
+
+C) LA NOMINA, RECOMPUTADA DEL REGISTRO Y NO TECLEADA
+   CIFRA en C hoy: 14
+   nomina en C: 005, 038, 049, 052, 068, 081, 084, 087, 088, 095, 098, 109, 110, 116
+   mas los DOS ejemplares de exclusion: LD-OPC05-100, LD-OPC05-122
+   CIFRA nomina total: 16
+
+D) LOS VEREDICTOS DE LA CIEGA, CON SU PROCEDENCIA DECLARADA APARTE
+   CIFRA con veredicto SELLADO y parseado del fichero: 6
+      LD-OPC05-049     sello dice C | clase vigente C
+      LD-OPC05-052     sello dice C | clase vigente C
+      LD-OPC05-095     sello dice C | clase vigente C
+      LD-OPC05-098     sello dice C | clase vigente C
+      LD-OPC05-100     sello dice D | clase vigente D
+      LD-OPC05-122     sello dice D | clase vigente D
+   CIFRA discrepancias entre el sello y la clase vigente: 0
+   CIFRA con veredicto DERIVADO de la tabla del acta (16 de 16): 10
+      005, 038, 068, 081, 084, 087, 088, 109, 110, 116
+
+==============================================================================
+E) LA ESCRITURA, POR ADICION, CON LAS GUARDAS DEL MOTOR
+==============================================================================
+
+CIFRA lecturas de la nomina sellada: 16
+CIFRA veredictos escritos en este instrumento: 16
+
+A) LA FRONTERA, ANTES DE TOCAR NADA
+   sha256 de dataset/ ANTES : 1330ccb9c46c03d371cb1ecf7911c83bbb4b14db71a878b3405738000c90e9d8
+   censo ANTES              : 3853 nodos, 3169 vivos, 684 deprecados
+   aristas ANTES            : 8780 siguientes, 8740 previos
+   CIFRA n, veredictos del cribado ANTES: 3388
+
+B) LOS VEREDICTOS, UNO A UNO
+   LD-OPC05-005     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-038     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-049     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-052     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-068     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-081     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-084     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-087     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-088     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-095     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-098     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-100     D -> D   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-109     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-110     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-116     C -> C   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+   LD-OPC05-122     D -> D   MARCA DE SEGUNDA LECTURA POR P.5.2, ESCRITA POR EL EJECUTOR DE LA VUELTA 162
+
+   LAS CELDAS DEL .md, ANTES Y DESPUES (el rastro no se tapa):
+      LD-OPC05-005     [~~C~~ ~~D~~ C] -> [~~C~~ ~~D~~ C]
+      LD-OPC05-038     [C] -> [C]
+      LD-OPC05-049     [C] -> [C]
+      LD-OPC05-052     [~~C~~ ~~D~~ C] -> [~~C~~ ~~D~~ C]
+      LD-OPC05-068     [C] -> [C]
+      LD-OPC05-081     [C] -> [C]
+      LD-OPC05-084     [C] -> [C]
+      LD-OPC05-087     [C] -> [C]
+      LD-OPC05-088     [C] -> [C]
+      LD-OPC05-095     [C] -> [C]
+      LD-OPC05-098     [C] -> [C]
+      LD-OPC05-100     [~~C~~ D] -> [~~C~~ D]
+      LD-OPC05-109     [C] -> [C]
+      LD-OPC05-110     [C] -> [C]
+      LD-OPC05-116     [C] -> [C]
+      LD-OPC05-122     [~~C~~ D] -> [~~C~~ D]
+
+C) LAS GUARDAS, MEDIDAS Y NO PROMETIDAS
+   C.1 PREFIJO: las 154 razones conservan su texto viejo ENTERO
+   C.2 PARES: 154 pares, los mismos antes y despues
+   C.3 CLASES MOVIDAS: 0
+       NINGUNA SE MUEVE A A: el limite de la 6.1 del acta 155 se cumple.
+   C.4 FRONTERA, sha256 de dataset/ DESPUES: 1330ccb9c46c03d371cb1ecf7911c83bbb4b14db71a878b3405738000c90e9d8
+       censo DESPUES  : 3853 nodos, 3169 vivos, 684 deprecados
+       aristas DESPUES: 8780 siguientes, 8740 previos
+       EL REGISTRO CAMBIA, EL GRAFO NO: sha256 IDENTICO y censo IDENTICO
+   C.5 CIFRA n, veredictos del cribado DESPUES: 3388
+       n NO SE MUEVE y sigue en 3.388
+   C.7 CIFRA citas cuya clase escrita NO es la vigente: 0
+       NINGUNA: cada cita declara la clase que la fila tiene hoy.
+
+   C.6 numstat de docs/plan/:
+       16	16	docs/plan/LECTURAS_DIRIGIDAS.md
+       16	16	docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl
+
+D) EL SACO, RECONTADO SOBRE EL REGISTRO YA ESCRITO
+   CIFRA lecturas dirigidas por clase: {"C": 14, "D": 108}
+   CIFRA con la clase movida en esta tarea: 0
+   CIFRA que sostienen su clase en esta tarea: 16
+   CIFRA que ya estaban escritas: 0
+
+NINGUNA SALIO A. No hay candidato a fusion, no se toca una arista y n no
+se mueve. El limite de la 6.1 del acta 155 sigue vigente y no se cruzo.
+FIN
+
+F) LA MARCA, RECONTADA DEL FICHERO YA ESCRITO
+   CIFRA filas con la marca de la ciega: 16
+   005, 038, 049, 052, 068, 081, 084, 087, 088, 095, 098, 100, 109, 110, 116, 122
+   CIFRA clases movidas por esta tarea: 0
+VERDE: las 16 marcas escritas, cero clases movidas.
+EXITCODE: 0
