@@ -1,0 +1,129 @@
+==============================================================================
+VUELTA 161, TAREA 1.b: LOS SEIS ASSETS DE sync_assets_web, LEIDOS UNA VEZ
+==============================================================================
+
+A) LAS CUATRO COPIAS, COTEJADAS BYTE A BYTE CONTRA SU FUENTE
+   vara: bytes del origen con CRLF normalizado a LF, que es lo que el
+   propio sync_assets_web.py declara en su codigo.
+
+   master_graph.json      fuente dataset/metadata/master_graph.json
+      bytes origen 8375817 / bytes destino 8375817
+      sha256 origen 627cc662296f7f00ba121e7ca2efca205820f74131603ead20e2d27fe00f4c55
+      sha256 destino 627cc662296f7f00ba121e7ca2efca205820f74131603ead20e2d27fe00f4c55
+      json origen  : dict de 6 elementos, claves ['indice_por_dominio', 'indice_por_fase', 'nodos', 'stats', 'total_nodos', 'version']
+      json destino : dict de 6 elementos, claves ['indice_por_dominio', 'indice_por_fase', 'nodos', 'stats', 'total_nodos', 'version']
+      VEREDICTO: VERDE  (identicos byte a byte)
+
+   preguntas_cache.json   fuente engine/preguntas_cache.json
+      bytes origen 1484340 / bytes destino 1484340
+      sha256 origen e5f641feaa66c30602552058586d29040befd5113ee303f2813e27e7d989936e
+      sha256 destino e5f641feaa66c30602552058586d29040befd5113ee303f2813e27e7d989936e
+      json origen  : dict de 3565 elementos, claves ['6s_lugar_trabajo', '6s_workplace_organization', 'ab_testing_optimizacion', 'abandonar_la_falacia_del_arreglo_rapido', 'abolir_inspeccion_masiva', 'abrazar_la_incomodidad', 'abrazar_los_bordes_de_la_conciencia', 'acceptance_control']
+      json destino : dict de 3565 elementos, claves ['6s_lugar_trabajo', '6s_workplace_organization', 'ab_testing_optimizacion', 'abandonar_la_falacia_del_arreglo_rapido', 'abolir_inspeccion_masiva', 'abrazar_la_incomodidad', 'abrazar_los_bordes_de_la_conciencia', 'acceptance_control']
+      VEREDICTO: VERDE  (identicos byte a byte)
+
+   node_families.json     fuente engine/node_families.json
+      bytes origen 177925 / bytes destino 177925
+      sha256 origen 7a98d1852fd074b606890bc1c9e5ad54eaa10895ad99bace377ffe6d3649ad08
+      sha256 destino 7a98d1852fd074b606890bc1c9e5ad54eaa10895ad99bace377ffe6d3649ad08
+      json origen  : dict de 3853 elementos, claves ['6s_lugar_trabajo', '6s_workplace_organization', 'ab_testing_optimizacion', 'abandonar_arreglos_rapidos', 'abandonar_la_falacia_del_arreglo_rapido', 'abolir_inspeccion_masiva', 'abrazar_la_incomodidad', 'abrazar_los_bordes_de_la_conciencia']
+      json destino : dict de 3853 elementos, claves ['6s_lugar_trabajo', '6s_workplace_organization', 'ab_testing_optimizacion', 'abandonar_arreglos_rapidos', 'abandonar_la_falacia_del_arreglo_rapido', 'abolir_inspeccion_masiva', 'abrazar_la_incomodidad', 'abrazar_los_bordes_de_la_conciencia']
+      VEREDICTO: VERDE  (identicos byte a byte)
+
+   entry_seeds.json       fuente dataset/metadata/entry_seeds.json
+      bytes origen 1074 / bytes destino 1074
+      sha256 origen b67df7584ce577a502303b55fcf148079b175f0ffe41f9d00b01e8357329eba3
+      sha256 destino b67df7584ce577a502303b55fcf148079b175f0ffe41f9d00b01e8357329eba3
+      json origen  : dict de 2 elementos, claves ['description', 'seeds']
+      json destino : dict de 2 elementos, claves ['description', 'seeds']
+      VEREDICTO: VERDE  (identicos byte a byte)
+
+B) prompts.json, COTEJADO CARACTER A CARACTER CONTRA LAS CONSTANTES
+   fuente: engine/prototipo_motor.py (constantes SYSTEM_*)
+      CIFRA prompts que el script dice exportar: 12
+      CIFRA prompts guardados en prompts.json: 12
+      CIFRA que faltan: 0 []
+      CIFRA que sobran: 0 []
+      CIFRA cuyo texto NO es identico al de la constante: 0 []
+         SYSTEM_CLASIFICACION            604 caracteres  identico=True
+         SYSTEM_PUERTA_AVANZADA          942 caracteres  identico=True
+         SYSTEM_INTERPRETE_MULTI       29620 caracteres  identico=True
+         SYSTEM_PROFUNDIZAR              255 caracteres  identico=True
+         SYSTEM_PREGUNTA_DIRIGIDA        921 caracteres  identico=True
+         SYSTEM_PLAN                   17206 caracteres  identico=True
+         SYSTEM_ESTADO_VIVO              635 caracteres  identico=True
+         SYSTEM_JUEZ_SESION             1712 caracteres  identico=True
+         SYSTEM_ORGANIZADOR              876 caracteres  identico=True
+         SYSTEM_REPORTE                 3665 caracteres  identico=True
+         SYSTEM_CLASIFICAR_OFERTA        612 caracteres  identico=True
+         SYSTEM_DIAGNOSTICO_MUNDO       2000 caracteres  identico=True
+      VEREDICTO: VERDE  (los doce identicos a su constante)
+
+C) semantic_index.json, Y SU FUENTE NO VIVE EN EL REPO
+   lo escribe scripts/build_semantic_index_voyage.py llamando a una API
+   que cuesta dinero real, o sea que un cotejo byte a byte contra su
+   fuente seria gastar fuera del repo, que es decision de fundador.
+   Se mide lo que SI se puede medir sin salir del repo:
+      bytes 24282332, sha256 d70adc1db255358ce350d98dfe2d4e196273a4c75253118098ee0eccd9926ac8
+      json: dict de 4 elementos, claves de primer nivel ['dimension', 'embeddings', 'ids', 'model']
+      CIFRA entradas bajo 'embeddings': 3521
+      CIFRA entradas bajo 'ids': 3521
+      CIFRA ids distintos: 3521
+      CIFRA nodos del grafo: 3853
+      CIFRA claves del indice: 3521
+      CIFRA claves del indice que SON nodos del grafo: 3521
+      CIFRA claves del indice que NO son nodos del grafo: 0
+      CIFRA nodos del grafo SIN entrada en el indice: 332
+      CIFRA nodos vivos: 3169 ; deprecados: 684
+      CIFRA VIVOS sin entrada en el indice: 18
+      CIFRA DEPRECADOS sin entrada en el indice: 314
+      LOS VIVOS SIN ENTRADA, UNO A UNO Y SIN RESUMIR:
+         anillo_interior_explotar_el_canal_nucleo
+         autoservicio_y_autosanacion_del_producto
+         critica_del_plan_con_ia
+         driver_de_inventario
+         escenarios_de_evolucion_de_la_ia
+         estar_listo_para_ser_publica
+         estrategia_circular_y_mecanismo_de_retorno
+         formalizar_un_proceso_ad_hoc
+         ideacion_con_ia_en_la_sesion
+         incentivos_internos_alineados_a_retencion
+         inteligencia_de_anuncios_de_la_competencia
+         la_historia_de_la_empresa
+         observar_al_cliente_en_su_contexto
+         personalizacion_guiada_por_el_cliente
+         producto_como_servicio_de_acceso
+         puntos_brillantes_antes_del_pivote
+         seleccion_de_proveedores_por_costo_total
+         silla_vacia_del_cliente_en_decisiones
+      VEREDICTO: ROJO  (ROJO DE COBERTURA: 18 nodos VIVOS sin vector en el indice (nombrados arriba). Se declara y NO se arregla de paso: rehacer el indice llama a una API que cuesta dinero real y eso es decision de fundador)
+
+D) EL MANIFEST CONTRA LOS FICHEROS DE VERDAD
+   (el manifest es la vara de web/lib/assets/checksums.test.ts)
+   entry_seeds.json       sha256 cuadra=True bytes 1074/1074  fuente declarada: dataset/metadata/entry_seeds.json
+   master_graph.json      sha256 cuadra=True bytes 8375817/8375817  fuente declarada: dataset/metadata/master_graph.json
+   node_families.json     sha256 cuadra=True bytes 177925/177925  fuente declarada: engine/node_families.json
+   preguntas_cache.json   sha256 cuadra=True bytes 1484340/1484340  fuente declarada: engine/preguntas_cache.json
+   prompts.json           sha256 cuadra=True bytes 60059/60059  fuente declarada: engine/prototipo_motor.py (SYSTEM_* constants)
+   semantic_index.json    sha256 cuadra=True bytes 24282332/24282332  fuente declarada: scripts/build_semantic_index_voyage.py (Voyage AI voyage-4-lite)
+   CIFRA entradas en el manifest: 6
+   CIFRA que no cuadran: 0 []
+      VEREDICTO: VERDE
+
+==============================================================================
+REGISTRO DEL RESULTADO, CON NOMBRE, QUE ES LO QUE EL ENCARGO PIDE
+==============================================================================
+   master_graph.json      VERDE                      identicos byte a byte
+   preguntas_cache.json   VERDE                      identicos byte a byte
+   node_families.json     VERDE                      identicos byte a byte
+   entry_seeds.json       VERDE                      identicos byte a byte
+   prompts.json           VERDE                      los doce identicos a su constante
+   semantic_index.json    ROJO                       ROJO DE COBERTURA: 18 nodos VIVOS sin vector en el indice (nombrados arriba). Se declara y NO se arregla de paso: rehacer el indice llama a una API que cuesta dinero real y eso es decision de fundador
+   manifest.json          VERDE                      todas las entradas cuadran
+
+   CIFRA assets auditados: 7
+   CIFRA en VERDE: 6
+   CIFRA en ROJO: 1
+   VEREDICTO DE LA TAREA: ROJO, y se declara
+FIN
+EXITCODE: 1
