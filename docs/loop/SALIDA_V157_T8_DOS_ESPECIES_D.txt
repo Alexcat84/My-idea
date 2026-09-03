@@ -1,0 +1,80 @@
+==============================================================================
+VUELTA 157, TAREA 8: LAS DOS ESPECIES DE D, CONTADAS
+==============================================================================
+
+ESTA TAREA MIDE. NO RECLASIFICA NADA Y NO TOCA UNA CLASE.
+
+LA VARA, EN UNA LINEA: lexica sobre el campo `razon`, con 14 marcas de
+MADRE E HIJO, 11 marcas de SANO Y DISTINTO y 4 negaciones que se descartan
+antes de buscar. NO lee los nodos. La cifra de MADRE E HIJO es una COTA
+INFERIOR, porque las razones viejas describen la especie sin usar estas
+palabras. El residuo se publica en SIN MARCA en vez de repartirse.
+
+CIFRA filas del registro de citas de OP-C-05: 154
+
+------------------------------------------------------------------------------
+A) LAS D DEL REGISTRO DE CITAS DE OP-C-05 (docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl)
+------------------------------------------------------------------------------
+  CIFRA filas en clase D: 96
+  CIFRA MADRE E HIJO    :     6  (6.2 por ciento)
+  CIFRA SANO Y DISTINTO :    20  (20.8 por ciento)
+  CIFRA AMBIGUA         :     1  (1.0 por ciento)
+  CIFRA SIN MARCA       :    69  (71.9 por ciento)
+  suma de los cuatro sacos: 96 (tiene que ser 96)
+
+  NOMINA DE MADRE E HIJO (6):
+     LD-OPC05-003  puesto 478  LD-OPC05-017  LD-OPC05-028  LD-OPC05-056  LD-OPC05-063
+
+  NOMINA DE AMBIGUA (1):
+     LD-OPC05-097
+
+CIFRA filas del archivo del cribado: 3388
+
+------------------------------------------------------------------------------
+B) LAS D DEL ARCHIVO DEL CRIBADO (docs/INTRA_DOMINIO_VEREDICTOS.jsonl)
+------------------------------------------------------------------------------
+  CIFRA filas en clase D: 2760
+  CIFRA MADRE E HIJO    :    72  (2.6 por ciento)
+  CIFRA SANO Y DISTINTO :    21  (0.8 por ciento)
+  CIFRA AMBIGUA         :     2  (0.1 por ciento)
+  CIFRA SIN MARCA       :  2665  (96.6 por ciento)
+  suma de los cuatro sacos: 2760 (tiene que ser 2760)
+
+  NOMINA DE MADRE E HIJO (72):
+     305  384  393  396  402  409  425  455
+     459  466  470  473  478  490  495  497
+     520  522  528  540  552  553  555  560
+     566  572  576  581  582  606  610  613
+     619  624  625  633  640  643  644  645
+     ... y 32 mas (la nomina entera vive en este mismo saco)
+
+  NOMINA DE AMBIGUA (2):
+     557  2075
+
+------------------------------------------------------------------------------
+C) CALIBRACION: LOS CINCO PUESTOS QUE EL ACTA 157 NOMBRA COMO MADRE E HIJO
+------------------------------------------------------------------------------
+  puesto 316    SIN MARCA        marcas MH: ninguna | marcas SD: ninguna
+  puesto 478    MADRE E HIJO     marcas MH: casa propia | marcas SD: ninguna
+  puesto 1424   SIN MARCA        marcas MH: ninguna | marcas SD: ninguna
+  puesto 1494   SIN MARCA        marcas MH: ninguna | marcas SD: ninguna
+  puesto 2066   SIN MARCA        marcas MH: ninguna | marcas SD: ninguna
+  CIFRA de los cinco puestos del acta que esta vara clasifica como MADRE E HIJO: 1 de 5
+
+  DISCREPANCIA DECLARADA, Y NO SE ARREGLA RETOCANDO LAS MARCAS: el acta los
+  nombra como madre e hijo leyendolos, y esta vara es lexica. Donde no
+  coinciden, la razon MADRE E HIJO existe pero no esta ESCRITA con estas
+  palabras, que es justo el LIMITE 1 declarado arriba y la prueba de que la
+  cifra es una cota inferior.
+
+------------------------------------------------------------------------------
+D) LO QUE ESTA CUENTA HABILITA Y LO QUE NO
+------------------------------------------------------------------------------
+  HABILITA: discutir con cifras si hace falta una letra para 'madre e hijo, el
+  par continua'. La cuenta esta delante, que es lo que la 6.6 exigia ANTES de
+  que nadie proponga nada.
+  NO HABILITA: proponer la letra. Una letra nueva es DOCTRINA NUEVA y eso seria
+  PARADA. Esta tarea no la propone y no la escribe.
+  Y NO SE MOVIO NINGUNA CLASE: este instrumento no abre un fichero para
+  escribir. Solo lee.
+FIN
