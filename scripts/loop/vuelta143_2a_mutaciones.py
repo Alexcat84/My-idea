@@ -81,6 +81,38 @@ da DOCE ficheros, y los SIETE de la bateria reproducen exactamente. El duodecimo
 es `scripts/loop/vuelta89_tarea4_guarda_op_c05.py`: excluirlo devuelve los once
 del acta al digito. La cifra de la vuelta 159 es la del computo, y por eso el
 remedio de la 6.7 queda EN PARADA, declarada en el reporte de la vuelta 159.
+
+--- ADJUDICACION 6.1 DEL ACTA 159 (3 sep 2026): EL ALCANCE DEL CHECK DE P.16 SON
+DOCE, NO ONCE, Y LA VARA ES LA LECTURA B ---
+
+CORRECCION DECLARADA POR ADICION. Nada de lo escrito arriba se borra, y en
+particular NO SE BORRA la cifra ONCE que la adjudicacion 6.7 del acta 158 dejo
+escrita: se corrige delante de ella para que la correccion se pueda auditar.
+
+LA CIFRA VIEJA Y LA NUEVA, LAS DOS ESCRITAS. El acta 158 midio ONCE ficheros de
+`scripts/loop/` con el patron literal del check de P.16 y su encargo mando parar
+si la cuenta no daba once. La vuelta 159 recomputo y dio DOCE, paro por mandato
+literal y NO TOCO UN SOLO CHECK. EL ACTA 159 ADJUDICA QUE SON DOCE Y QUE LA
+CIFRA EQUIVOCADA ERA LA DEL ACTA, o sea la del auditor: lo midio el en dos
+arboles distintos, el del commit del acta 158 y HEAD, y los dos dan 4 / 12 / 14
+ficheros y 3 / 7 / 7 dentro de la bateria de las 23. EL ONCE NUNCA FUE CIERTO, y
+la diferencia no la introdujo ninguna vuelta.
+
+LA VARA DE LA LECTURA ES LA B, Y SE NOMBRA PARA QUE NO VUELVA A DERIVAR: B MEDIA
+es "pathspec que empieza por dataset/", que es la que el ejecutor publico como
+principal y la que la 6.7 del acta 158 sostiene al describir el defecto por su
+instrumento. LA LECTURA ESTRECHA DE CUATRO (dataset/ Y docs/plan/ a la vez) NO
+VALE, porque el defecto no depende de que el pathspec traiga tambien docs/plan/.
+
+EL DUODECIMO ENTRA Y TIENE NOMBRE: `vuelta89_tarea4_guarda_op_c05.py`. Es del
+mismo defecto que la serie 142 a 147, solo que mas viejo, y lleva las dos anclas
+que la 6.7 describe (la del fin de linea y la de la suciedad anterior al
+arranque), leidas por el auditor en su fuente. NO HAY MOTIVO DE VARA PARA
+EXCLUIRLO.
+
+LO QUE ESTO OBLIGA: la 5.a y la 5.c del encargo de la vuelta 159 se ejecutan
+sobre LOS DOCE, no sobre once ni sobre cuatro. La nomina no se teclea: se
+recomputa, y su medicion esta pegada en `docs/loop/SALIDA_V159_T5_ALCANCE.txt`.
 """
 import argparse
 import copy

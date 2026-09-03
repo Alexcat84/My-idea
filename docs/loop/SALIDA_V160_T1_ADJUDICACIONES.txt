@@ -1,0 +1,94 @@
+==============================================================================
+VUELTA 160, TAREA 1: LAS OCHO ADJUDICACIONES DEL ACTA 159
+==============================================================================
+
+A) EL ALCANCE DE LA 6.1, POR DOS VIAS INDEPENDIENTES
+   patron literal buscado en el CODIGO (lectura B): "--porcelain", "--", "dataset/
+   EXCLUSION DECLARADA: se descartan por nombre los TRES buscadores
+   que contienen el patron porque tienen que escribirlo para buscarlo:
+      vuelta159_tarea1_registrar_adjudicaciones.py
+      vuelta159_tarea5_alcance_p16.py
+      vuelta160_tarea1_registrar_adjudicaciones.py
+   A.1 RECOMPUTADO DEL CODIGO, CIFRA ficheros: 12
+   A.2 CONTADO DE SU FICHERO (docs/loop/SALIDA_V159_T5_ALCANCE.txt,
+       seccion C), CIFRA ficheros: 12
+      scripts/loop/vuelta142_2c_mutaciones.py
+      scripts/loop/vuelta143_2a_mutaciones.py
+      scripts/loop/vuelta143_2c_mutacion_positivo.py
+      scripts/loop/vuelta143_3c_girar_arista.py
+      scripts/loop/vuelta144_2b_mutacion_giro.py
+      scripts/loop/vuelta144_3a_mutaciones.py
+      scripts/loop/vuelta144_3b_giro_sin_flecha.py
+      scripts/loop/vuelta144_3b_mutacion_negativa.py
+      scripts/loop/vuelta146_3c_mutacion_aduana.py
+      scripts/loop/vuelta147_3d_mutacion_nomina.py
+      scripts/loop/vuelta147_3e_simular_a26.py
+      scripts/loop/vuelta89_tarea4_guarda_op_c05.py
+   CIFRA que el acta 158 (6.7) declaraba: 11
+   CIFRA que el acta 159 (6.1) adjudica: 12
+   LAS DOS VIAS DAN LA MISMA NOMINA, ELEMENTO A ELEMENTO.
+   Y DA DOCE, que es lo que la 6.1 adjudica.
+
+B) LOS BLOQUES, UNO A UNO, TODOS POR ADICION
+   6.1   scripts/loop/vuelta142_2c_mutaciones.py                    ANADIDO    32
+   6.1   scripts/loop/vuelta143_2a_mutaciones.py                    ANADIDO    32
+   6.1   scripts/loop/vuelta143_2c_mutacion_positivo.py             ANADIDO    32
+   6.1   scripts/loop/vuelta143_3c_girar_arista.py                  ANADIDO    32
+   6.1   scripts/loop/vuelta144_2b_mutacion_giro.py                 ANADIDO    32
+   6.1   scripts/loop/vuelta144_3a_mutaciones.py                    ANADIDO    32
+   6.1   scripts/loop/vuelta144_3b_giro_sin_flecha.py               ANADIDO    32
+   6.1   scripts/loop/vuelta144_3b_mutacion_negativa.py             ANADIDO    32
+   6.1   scripts/loop/vuelta146_3c_mutacion_aduana.py               ANADIDO    32
+   6.1   scripts/loop/vuelta147_3d_mutacion_nomina.py               ANADIDO    32
+   6.1   scripts/loop/vuelta147_3e_simular_a26.py                   ANADIDO    32
+   6.1   scripts/loop/vuelta89_tarea4_guarda_op_c05.py              ANADIDO    32
+   6.4   scripts/loop/vuelta159_tarea3_lote2.py                     ANADIDO    32
+   6.5   scripts/loop/vuelta152_registro_de_citas_opc05.py          ANADIDO    26
+   6.5   scripts/loop/vuelta159_tarea3_lote2.py                     ANADIDO    26
+   6.7   scripts/loop/vuelta159_tarea3_lote2.py                     ANADIDO    19
+   6.6   scripts/loop/vuelta150_3_relectura_expediente.py           ANADIDO    28
+   6.8   scripts/loop/vuelta159_tarea9_marcador_cierre.py           ANADIDO    22
+   6.2   registro:LD-OPC05-004                                      ANADIDO    1
+   6.3   registro:LD-OPC05-100                                   DIFERIDA A LA TAREA 2.a
+         (manda a RELECTURA CONJUNTA: su bloque lleva el veredicto
+          medido contra los nodos, y aqui todavia no hay medicion)
+
+CIFRA operaciones de escritura de esta corrida: 19
+CIFRA de ellas ANADIDAS: 19
+CIFRA de ellas YA ESTABAN: 0
+CIFRA adjudicaciones diferidas a otra tarea de esta misma vuelta: 1
+
+C) LA ADITIVIDAD, MEDIDA Y NO PROMETIDA
+   C.1 LOS .py, con git diff --numstat (se exige BORRADOS 0):
+       scripts/loop/vuelta142_2c_mutaciones.py                    mas 32    menos 0
+       scripts/loop/vuelta143_2a_mutaciones.py                    mas 32    menos 0
+       scripts/loop/vuelta143_2c_mutacion_positivo.py             mas 32    menos 0
+       scripts/loop/vuelta143_3c_girar_arista.py                  mas 32    menos 0
+       scripts/loop/vuelta144_2b_mutacion_giro.py                 mas 32    menos 0
+       scripts/loop/vuelta144_3a_mutaciones.py                    mas 32    menos 0
+       scripts/loop/vuelta144_3b_giro_sin_flecha.py               mas 32    menos 0
+       scripts/loop/vuelta144_3b_mutacion_negativa.py             mas 32    menos 0
+       scripts/loop/vuelta146_3c_mutacion_aduana.py               mas 32    menos 0
+       scripts/loop/vuelta147_3d_mutacion_nomina.py               mas 32    menos 0
+       scripts/loop/vuelta147_3e_simular_a26.py                   mas 32    menos 0
+       scripts/loop/vuelta150_3_relectura_expediente.py           mas 28    menos 0
+       scripts/loop/vuelta152_registro_de_citas_opc05.py          mas 26    menos 0
+       scripts/loop/vuelta159_tarea3_lote2.py                     mas 77    menos 0
+       scripts/loop/vuelta159_tarea9_marcador_cierre.py           mas 22    menos 0
+       scripts/loop/vuelta89_tarea4_guarda_op_c05.py              mas 32    menos 0
+   CIFRA ficheros .py tocados: 16
+   CIFRA borrados en los .py tocados: 0
+       CERO BORRADOS: ninguna linea vieja se toco.
+
+   C.2 EL JSONL, por assert de prefijo sobre las 154 entradas:
+       CIFRA razones cuyo texto viejo YA NO ES PREFIJO: 0
+       PREFIJO INTACTO en las 154.
+   C.3 CIFRA clases movidas por esta tarea: 0
+       NINGUNA. La relectura conjunta va en la TAREA 2, no aqui.
+   C.4 PARES: 154 pares, los mismos antes y despues
+
+   C.5 numstat de docs/plan/:
+       1	1	docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl
+
+FIN
+EXITCODE: 0

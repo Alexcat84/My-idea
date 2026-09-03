@@ -27,6 +27,28 @@ TODA LINEA VA CON EL ROTULO `CIFRA` para que `verificar_cifras_del_reporte.py`
 pueda cotejarla contra el reporte.
 
 USO:  python scripts/loop/vuelta159_tarea9_marcador_cierre.py
+
+--- ADJUDICACION 6.8 DEL ACTA 159 (3 sep 2026): ESTE INSTRUMENTO SE PARAMETRIZA.
+UN INSTRUMENTO QUE NACE PARA QUE LA CIFRA TENGA PRODUCTOR VIVO NO PUEDE OBLIGAR
+A ESCRIBIR OTRO EL MES QUE VIENE ---
+
+CORRECCION DECLARADA POR ADICION. Nada de lo escrito arriba se borra.
+
+QUE SE CONFIRMA PRIMERO, PORQUE ES LO QUE JUSTIFICA QUE ESTE FICHERO EXISTA: el
+auditor corrio `git log --all -S` sobre la cabecera de
+`SALIDA_V157_T9_MARCADOR_CIERRE.txt` y NO DEVUELVE NADA en `scripts/`, ni vivo
+ni muerto. Aquella salida era de un solo uso y el reporte de la vuelta 159 lo
+dice bien.
+
+EL AGUJERO DE CONSTRUCCION, HALLADO POR EL AUDITOR SOBRE ESTE MISMO REMEDIO
+(acta 159, seccion 5.2): este fichero imprimia `"VUELTA 159, CIERRE: ..."`
+LITERAL, sin `--vuelta` y sin `argparse`. En la vuelta 160 o mentia en su propia
+cabecera o obligaba a que naciera otro instrumento de un solo uso, QUE ES
+EXACTAMENTE EL DEFECTO QUE ESTE VINO A CERRAR. No es caida de reporte: el
+reporte nunca afirmo que estuviera parametrizado.
+
+EL REMEDIO, EJECUTADO EN LA TAREA 4 DE LA VUELTA 160: toma `--vuelta` y el
+rotulo se interpola. El literal viejo queda en este registro y no en el codigo.
 """
 import io
 import json

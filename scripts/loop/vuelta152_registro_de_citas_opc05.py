@@ -252,6 +252,32 @@ Se ejecuta en la TAREA 4 de la vuelta 159.
 NINGUNA CIFRA PUBLICADA ERA FALSA POR ESTO y el acta lo dice: la razon declara
 la correccion en las 62 y ningun reporte afirmo nada sobre las citas. Lo que se
 corrige es que la del 156 tapa menos y la del 157 tapa mas.
+
+--- ADJUDICACION 6.5 DEL ACTA 159 (3 sep 2026): UNA INSTANCIA NO ES EL
+PROCEDIMIENTO DE SU CATEGORIA. ADJUDICADA, Y NO ES DOCTRINA NUEVA ---
+
+REGISTRO POR ADICION. Nada de lo escrito arriba se borra.
+
+LA REGLA, TAL COMO EL EJECUTOR LA FORMULO EN EL LOTE 2 DE LA VUELTA 159 Y TAL
+COMO EL ACTA 159 LA ADJUDICA: cuando la linea de un nodo dice "aplica tecnicas
+graficas", "mapea tus fuentes de ingresos" o "consolida los planes
+subsidiarios", y el otro nodo ES UNA de esas tecnicas, uno de esos patrones o
+uno de esos planes, ESO NO ES EXPANSION: es un ejemplar de la categoria.
+
+POR QUE NO ES DOCTRINA NUEVA Y POR ESO NO HUBO PARADA: una regla escrita la
+cubre por extension citable. La 6.4 del acta 157 pregunta si el otro nodo es EL
+COMO SE HACE de una linea; un ejemplar de una categoria es el QUE, no el COMO, y
+por eso no la expande. Y la 6.4 del acta 158, en la `122`, ya escribio la forma
+general: NOMBRAR SIN PROCEDIMENTAR ES EXACTAMENTE LO QUE LA 6.4 EXCLUYE.
+
+LAS DOS CONDICIONES CON QUE SE ADJUDICA, Y LAS DOS SON OBLIGATORIAS:
+  (a) CUANDO SEA EL UNICO MOTIVO DEL DESCARTE, la razon lo dice con esa letra y
+      marca la fila como DISCUTIBLE, como ya se hizo en la `078` y la `103`.
+  (b) SU CONSISTENCIA SE AUDITA EN LA SEGUNDA PASADA DE LA 6.4, sobre las 37: en
+      cada una, si la regla APLICA se dice; y si NO aplica pudiendo parecer que
+      si, TAMBIEN se dice, y se publica el conteo de las dos cosas. EL RIESGO DE
+      UNA REGLA NUEVA NO ES APLICARLA MAL UNA VEZ, ES APLICARLA SOLO CUANDO
+      CONVIENE.
 """
 import argparse
 import collections

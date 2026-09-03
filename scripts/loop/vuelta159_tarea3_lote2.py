@@ -28,6 +28,83 @@ MARCADAS COMO DISCUTIBLES.
 LAS GUARDAS SON LAS DE LA 2.d Y VIVEN EN `vuelta159_motor_veredictos.py`.
 
 USO:  python scripts/loop/vuelta159_tarea3_lote2.py
+
+--- ADJUDICACION 6.4 DEL ACTA 159 (3 sep 2026): EL CREDITO DE LA TANDA BAJA Y EL
+LOTE 2 SE RELEE AL DOBLE. SON 37 SEGUNDAS LECTURAS Y VAN ENTERAS ---
+
+REGISTRO POR ADICION. Nada de lo escrito arriba se borra, y en particular NO SE
+BORRA el veredicto de CATORCE SOSTIENEN LA C Y TREINTA Y NUEVE BAJAN A D que
+este instrumento publico: la segunda pasada se escribe delante de el.
+
+EL MOTIVO ES LITERAL Y NO TIENE EXCEPCION: una discrepancia FUERA de los
+discutibles marcados baja el credito de TODA la tanda y el tramo se relee al
+doble. `LD-OPC05-100` esta fuera de los doce marcados de la vuelta 159.
+
+LA CIFRA, COMPUTADA POR EL AUDITOR Y NO TECLEADA
+(`docs/loop/_auditor_v159_tramo_al_doble.txt`): el lote 2 son 53; de esas releyo
+el auditor 16, que son los cinco marcados que caen dentro del lote (078, 081,
+084, 103, 116) mas los once de su muestra por computo (070, 075, 080, 085, 090,
+095, 100, 105, 110, 115, 120); 53 menos 16 da 37, de las cuales 8 estan hoy en C
+y 29 en D. EL INSTRUMENTO DEL TRAMO RECOMPUTA ESA NOMINA Y LA PUBLICA: si no da
+37, para y lo dice ANTES de leer nada.
+
+Y VAN LAS 37 ENTERAS, NO SOLO LAS QUE CAYERON A D, Y EL MOTIVO ESTA ESCRITO: la
+discrepancia que abrio la bajada, la `100`, es una que SOSTUVO C, asi que
+restringir el tramo a las caidas dejaria fuera justo la especie que lo disparo.
+
+LA VARA ES LA MISMA Y NO SE AFLOJA: segunda pasada independiente bajo la 6.3 del
+acta 158 (la pregunta binaria es un EXISTENCIAL y la razon nombra el par mas
+fuerte descartado), con correccion declarada y el texto viejo entero como
+prefijo, `n` sin moverse en 3.388, assert de frontera con sha256 de `dataset/` y
+conteo de censo y aristas antes y despues (EL REGISTRO CAMBIA, EL GRAFO NO), y
+Gate 0 con el ciclo entero al terminar. Y EL LIMITE DE LA 6.1 DEL ACTA 155 SIGUE
+VIGENTE: LA QUE SALGA A NO SE VOLTEA; se marca como discutible, se publica su
+caso y NO SE EJECUTA NINGUNA FUSION.
+
+--- ADJUDICACION 6.5 DEL ACTA 159 (3 sep 2026): UNA INSTANCIA NO ES EL
+PROCEDIMIENTO DE SU CATEGORIA. ADJUDICADA, Y NO ES DOCTRINA NUEVA ---
+
+REGISTRO POR ADICION. Nada de lo escrito arriba se borra.
+
+LA REGLA, TAL COMO EL EJECUTOR LA FORMULO EN EL LOTE 2 DE LA VUELTA 159 Y TAL
+COMO EL ACTA 159 LA ADJUDICA: cuando la linea de un nodo dice "aplica tecnicas
+graficas", "mapea tus fuentes de ingresos" o "consolida los planes
+subsidiarios", y el otro nodo ES UNA de esas tecnicas, uno de esos patrones o
+uno de esos planes, ESO NO ES EXPANSION: es un ejemplar de la categoria.
+
+POR QUE NO ES DOCTRINA NUEVA Y POR ESO NO HUBO PARADA: una regla escrita la
+cubre por extension citable. La 6.4 del acta 157 pregunta si el otro nodo es EL
+COMO SE HACE de una linea; un ejemplar de una categoria es el QUE, no el COMO, y
+por eso no la expande. Y la 6.4 del acta 158, en la `122`, ya escribio la forma
+general: NOMBRAR SIN PROCEDIMENTAR ES EXACTAMENTE LO QUE LA 6.4 EXCLUYE.
+
+LAS DOS CONDICIONES CON QUE SE ADJUDICA, Y LAS DOS SON OBLIGATORIAS:
+  (a) CUANDO SEA EL UNICO MOTIVO DEL DESCARTE, la razon lo dice con esa letra y
+      marca la fila como DISCUTIBLE, como ya se hizo en la `078` y la `103`.
+  (b) SU CONSISTENCIA SE AUDITA EN LA SEGUNDA PASADA DE LA 6.4, sobre las 37: en
+      cada una, si la regla APLICA se dice; y si NO aplica pudiendo parecer que
+      si, TAMBIEN se dice, y se publica el conteo de las dos cosas. EL RIESGO DE
+      UNA REGLA NUEVA NO ES APLICARLA MAL UNA VEZ, ES APLICARLA SOLO CUANDO
+      CONVIENE.
+
+--- ADJUDICACION 6.7 DEL ACTA 159 (3 sep 2026): LAS 18 EN C NO SE DAN POR
+CERRADAS, Y LA 6.4 YA CONTESTA CUALES ---
+
+REGISTRO POR ADICION. Nada de lo escrito arriba se borra, y en particular NO SE
+BORRA la conclusion de la vuelta 159 de que el saco de lectura quedaba vacio: se
+corrige delante de ella.
+
+EL REPARTO DE LAS 18, ADJUDICADO POR EL ACTA 159 Y ESCRITO AQUI PARA QUE NO HAYA
+QUE VOLVER A DECIDIRLO:
+  CUATRO quedan CERRADAS porque tienen dos lecturas independientes cada una:
+      `LD-OPC05-005`, `038`, `049` y `052`.
+  OCHO caen dentro de las 37 del tramo al doble y SE RELEEN AHI.
+  SEIS las releyo el auditor a ciegas en la vuelta 159: `095`, `100`, `110`,
+      `081`, `084` y `116`, con la `100` en disputa y mandada a relectura
+      conjunta por la 6.3.
+
+LO QUE ESTO OBLIGA: NO HACE FALTA UNA PASADA APARTE PARA EL SACO. La 6.4 lo
+cubre entero, y una pasada aparte solo repetiria lecturas ya hechas.
 """
 import io
 import json

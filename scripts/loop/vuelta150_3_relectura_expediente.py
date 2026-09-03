@@ -464,6 +464,34 @@ def p3b_caso_positivo(F, corte):
     # solo tres angulos, publico las dos como ARTEFACTO HUERFANO. Era falso, y
     # lo era por defecto del instrumento. Queda escrito para que no se lea la
     # cifra buena sin la mala.
+    # --- ADJUDICACION 6.6 DEL ACTA 159 (3 sep 2026): LAS FICHAS DE LAS DOS
+    # SALIDAS NO SE REESCRIBEN, Y LO QUE SI VA ES LA LECCION DEL ANGULO BARATO
+    # ---
+    #
+    # REGISTRO POR ADICION. Nada de lo escrito arriba se borra.
+    #
+    # LO QUE NO VA, Y SE DICE PRIMERO PARA QUE NADIE LO VUELVA A ENCARGAR: las
+    # fichas de `SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt` y de
+    # `SALIDA_V136_3D_MUTACION.txt` NO SE REESCRIBEN. Medido por el auditor
+    # (`docs/loop/_auditor_v159_productores.txt`) y recomputado por el ejecutor
+    # en la TAREA 5 de la vuelta 160: las dos salidas se citan en CUATRO
+    # lugares y en LOS CUATRO el nombre del productor ya esta en la misma cita
+    # o en su misma frase partida por el ancho de columna
+    # (`docs/plan/04_ENLACES.md:445` y `docs/plan/OPERACIONES.jsonl:45` nombran
+    # `verificar_cobertura_bolsa_tres_vias.py`; `OPERACIONES.jsonl:36` nombra
+    # `verificar_fuente_canonico.py`; `docs/PENDIENTES.md:6241` lo nombra dos
+    # lineas arriba dentro del mismo parentesis). LA 6.9 DEL ACTA 158 PEDIA QUE
+    # LA FICHA LO CITARA Y YA LO CITA. CIFRA fichas que hay que reescribir: 0.
+    #
+    # LO QUE SI VA, Y ES LA LECCION QUE HABRIA AHORRADO DOS VUELTAS: EL ANGULO
+    # BARATO ERA LEER LA FICHA QUE CITA LA SALIDA, donde el productor llevaba
+    # meses escrito al lado. Ni el barrido de 998 `.py` de la vuelta 157 ni los
+    # cuatro angulos de la vuelta 159 (nombre del fichero, texto literal, los
+    # `.py` de los commits, y la cabecera literal) lo miraron. LOS CUATRO
+    # ANGULOS BUSCAN AL PRODUCTOR DESDE LA SALIDA; EL BARATO LO BUSCA DESDE
+    # QUIEN LA CITA. Cuando una salida parezca huerfana, ESE ES EL PRIMER
+    # ANGULO, no el ultimo: cuesta un grep sobre `docs/plan/` y no depende de
+    # que el productor escriba su cabecera sin interpolar.
     r = subprocess.run(["git", "ls-tree", "-r", "--name-only", corte, "docs/loop/"],
                        capture_output=True, cwd=RAIZ)
     en_el_corte = {x.strip().split("/")[-1] for x in r.stdout.decode("utf-8", "replace").splitlines()
