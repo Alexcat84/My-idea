@@ -1,0 +1,450 @@
+========================================================================================================
+VUELTA 156, TAREA 3.a: LA FIGURA DELGADA, MEDIDA SOBRE LAS LECTURAS DIRIGIDAS
+========================================================================================================
+VARA: adjudicacion 6.2 del acta 155. La C es sano CON FIGURA y la figura exige
+DOS LINEAS DISTINTAS, UNA EN CADA NODO. ESTA TAREA MIDE, NO RECLASIFICA.
+
+Lineas del registro: 154
+De ellas, via LECTURA_DIRIGIDA: 122
+Clases de esas lecturas dirigidas, contadas: {"C": 121, "D": 1}
+
+========================================================================================================
+LOS TRES CONTEOS
+========================================================================================================
+| saco | lecturas dirigidas |
+|---|---:|
+| NOMBRA LAS DOS LINEAS (dos o mas punteros) | 2 |
+| NOMBRA UNA SOLA (un puntero) | 5 |
+| NO NOMBRA NINGUNA (cero punteros) | 115 |
+| TOTAL | 122 |
+
+CIFRA lecturas dirigidas que nombran las dos lineas: 2 par(es)
+CIFRA lecturas dirigidas que nombran una sola: 5 par(es)
+CIFRA lecturas dirigidas que no nombran ninguna: 115 par(es)
+
+========================================================================================================
+NOMINA DEL SACO 'NOMBRA UNA SOLA' (5), CON SU PUNTERO Y SU RAZON ENTERA
+========================================================================================================
+
+  LD-OPC05-001 | clase C | accion_correctiva_sistematica <-> cero_defectos
+    puntero(s): numerados=['paso 6'] vagos=- citados=-
+    razon: el paso 6 de Crosby (fichar, revisar y escalar cada problema hasta la causa raiz) contra el estandar ZD y su dia de lanzamiento: cada uno expande un procedimiento que el otro no contiene
+
+  LD-OPC05-003 | clase C | activity_duration_estimates <-> cronograma_proyecto
+    puntero(s): numerados=['paso 1'] vagos=- citados=-
+    razon: estimar duraciones por metodo (parametrico, analogo, tres puntos) contra construir el cronograma con dependencias, recursos y ruta: el paso 1 del cronograma consume la salida del otro y no la repite
+
+  LD-OPC05-008 | clase C | analisis_motivaciones_fundador <-> dilema_riqueza_vs_control
+    puntero(s): numerados=['paso 5'] vagos=- citados=-
+    razon: DISCUTIBLE 1. El paso 5 de motivaciones nombra el dilema riqueza contra control, que es el otro nodo entero. Se sostiene C porque motivaciones expande las influencias familiares y las 13 motivaciones, y el dilema expande el trade off en CADA decision de financiamiento
+
+  LD-OPC05-047 | clase C | customer_journey_mapping <-> economia_de_la_experiencia
+    puntero(s): numerados=- vagos=['su paso'] citados=-
+    razon: mapear el viaje del cliente con shadowing y momentos de verdad contra la economia de la experiencia y su paso de consumo pasivo a participacion
+
+  LD-OPC05-059 | clase C | dilema_riqueza_vs_control <-> puzzle_prima_capital_privado
+    puntero(s): numerados=['paso 2'] vagos=- citados=-
+    razon: DISCUTIBLE 4. El paso 2 del puzzle repite casi la pregunta del dilema. Se sostiene C porque el puzzle expande UN ARGUMENTO EMPIRICO (la prima de capital privado no existe) y el dilema expande UN PROCEDIMIENTO DE DECISION en cada ronda
+
+========================================================================================================
+NOMINA DEL SACO 'NO NOMBRA NINGUNA' (115), CON SU RAZON ENTERA
+========================================================================================================
+
+  LD-OPC05-002 | clase C | actividades_clave <-> key_resources_hypothesis
+    razon: dos bloques distintos del Canvas: que ACTIVIDADES exige la propuesta contra que RECURSOS fisicos, financieros, de talento y de propiedad intelectual hacen falta
+
+  LD-OPC05-004 | clase C | actualizar_business_model_canvas_tuneup <-> reempaquetado_producto
+    razon: el tune-up semanal del Canvas con el feedback recibido contra la estrategia de pivote por reempaquetado (modulos, suscripcion, versiones): uno actualiza el lienzo, el otro decide que cambiar
+
+  LD-OPC05-005 | clase C | aim_of_leadership <-> causas_comunes_vs_especiales
+    razon: el objetivo del liderazgo de Deming (ayudar y reducir variabilidad entre personas) contra el procedimiento estadistico de 15 pasos que separa causa comun de causa especial
+
+  LD-OPC05-006 | clase C | alineacion_ti_negocio <-> modelo_estrella_alineacion_organizacional
+    razon: alinear la TECNOLOGIA con el modelo de negocio (aplicaciones, datos, infraestructura, seguridad) contra alinear la ORGANIZACION con el Modelo Estrella (estrategia, estructura, procesos, recompensas, personas)
+
+  LD-OPC05-007 | clase C | analisis_motivaciones_fundador <-> decision_cuando_fundar
+    razon: el perfil motivacional del fundador con sus 13 motivaciones contra los tres factores de CUANDO fundar (carrera, mercado, personales): distinto sujeto y distinta decision
+
+  LD-OPC05-009 | clase C | analisis_y_sintesis <-> pensamiento_convergente_divergente
+    razon: analizar y sintetizar datos de campo en una historia coherente contra alternar deliberadamente fases divergentes y convergentes: uno es el metodo de interpretacion, el otro el ritmo del proceso
+
+  LD-OPC05-010 | clase C | antidilucion_provisiones <-> pay_to_play
+    razon: la antidilucion (weighted average contra full ratchet, carve outs, waiver) contra el pay to play y su Qualified Financing: dos clausulas distintas del mismo term sheet
+
+  LD-OPC05-011 | clase C | antidilucion_provisiones <-> preferencia_de_liquidacion
+    razon: la antidilucion contra la preferencia de liquidacion con su participante contra no participante, sus kick outs y su analisis de cascada
+
+  LD-OPC05-012 | clase C | asignacion_recursos_en_gates <-> gates_huecos_hollow_gates
+    razon: el METODO de asignar recursos en el gate contra el DIAGNOSTICO del gate hueco que aprueba sin recursos: uno instala la practica, el otro la audita
+
+  LD-OPC05-013 | clase C | auditoria_de_posicionamiento <-> desarrollar_posicionamiento_empresa
+    razon: la auditoria de posicionamiento (cuestionario externo e interno, entrevistas, comparar percepciones) contra redactar la declaracion de posicionamiento: medir contra escribir
+
+  LD-OPC05-014 | clase C | auditoria_negocio <-> consejo_de_calidad
+    razon: la auditoria de negocio de cinco pasos contra el consejo de calidad de Juran de once, que la encarga y decide los proyectos
+
+  LD-OPC05-015 | clase C | brief_competitivo <-> entrada_mercado_nuevo
+    razon: el brief competitivo y su razon de compra contra la entrada a un mercado nuevo con sus mercados adyacentes y su presupuesto de educacion
+
+  LD-OPC05-016 | clase C | bullseye_framework <-> critical_path
+    razon: la diana de traccion con sus 19 canales y sus experimentos baratos contra el camino critico que excluye lo que no es imprescindible
+
+  LD-OPC05-017 | clase C | business_model_canvas_scorecard <-> pivote_estrategico
+    razon: el Canvas usado como scorecard SEMANAL con sus cambios en rojo contra el pivote estrategico basado en evidencia: uno es la cadencia, el otro la decision
+
+  LD-OPC05-018 | clase C | business_model_environment_mapping <-> future_scenarios_planning
+    razon: mapear el entorno del modelo (fuerzas de mercado, industria, tendencias, macro) contra construir escenarios cruzando impulsores de incertidumbre
+
+  LD-OPC05-019 | clase C | calculo_roi_franquiciado_2 <-> decision_franquiciar_vs_expansion_propia
+    razon: calcular el ROI cash on cash del franquiciado contra decidir entre franquiciar, unidades propias o capital externo: uno alimenta al otro con una cifra
+
+  LD-OPC05-020 | clase C | calibra_tu_propio_ojo <-> mide_lo_que_de_verdad_mueve_la_aguja
+    razon: calibrar tu juicio con rangos al noventa por ciento contra el analisis de sensibilidad que elige que incertidumbre reducir
+
+  LD-OPC05-021 | clase C | calidad_de_diseno_vs_produccion <-> costo_de_mala_calidad_copq
+    razon: calidad de diseno contra calidad de produccion y su brecha, frente al COPQ y sus cuatro categorias de costo
+
+  LD-OPC05-022 | clase C | canales_distribucion <-> eventos_offline_como_canal_traccion
+    razon: el bloque de Canales del Canvas con sus cinco fases contra los eventos presenciales como canal concreto de traccion
+
+  LD-OPC05-023 | clase C | cap_table_basico <-> metodo_conversion_notas_cap_table
+    razon: armar el cap table basico (pre y post money, bolsa de opciones) contra convertir notas convertibles por tres metodos distintos
+
+  LD-OPC05-024 | clase C | causas_comunes_vs_especiales <-> mejora_continua_del_proceso
+    razon: el procedimiento estadistico que separa causas contra la mejora continua diaria de Deming, que pregunta que se hizo hoy para mejorar
+
+  LD-OPC05-025 | clase C | checklist_sistema_stage_gate_primera_clase <-> mitos_stage_gate
+    razon: el checklist de un Stage Gate de primera clase contra la desmitificacion de lo que Stage Gate NO es: uno construye, el otro desmonta creencias
+
+  LD-OPC05-026 | clase C | cierre_segun_complejidad_venta <-> escala_actitud_cierre
+    razon: la efectividad del cierre segun complejidad de venta contra el cuestionario de 15 afirmaciones que mide la ACTITUD del vendedor hacia el cierre
+
+  LD-OPC05-027 | clase C | cierre_segun_complejidad_venta <-> metodologia_spin_selling
+    razon: la efectividad del cierre segun complejidad contra la metodologia SPIN y su diagnostico de venta pequena o grande
+
+  LD-OPC05-028 | clase C | cinco_porques_master <-> five_whys_inversion_proporcional
+    razon: designar al maestro de los cinco porques y su regla de disparo contra la sesion misma con inversion proporcional al nivel del problema
+
+  LD-OPC05-029 | clase C | clausula_no_shop_adquisicion <-> condiciones_de_cierre_adquisicion
+    razon: la clausula no shop de 45 a 60 dias contra la lista de condiciones de cierre del LOI
+
+  LD-OPC05-030 | clase C | community_building_estrategia <-> eventos_offline_como_canal_traccion
+    razon: construir comunidad con mision, meta discusion y moderacion delegada contra organizar eventos presenciales con precio, espacio y auspiciantes
+
+  LD-OPC05-032 | clase C | compromiso_linea_tiempo_cliente <-> modelo_spin_preguntas
+    razon: pedir compromiso de fecha y respuesta si o no contra la secuencia SPIN de preguntas de situacion, problema, implicacion y necesidad beneficio
+
+  LD-OPC05-033 | clase C | concepcion_hormica_del_pensamiento <-> cuatro_etapas_del_pensamiento_creativo
+    razon: la concepcion hormica que permite que el pensamiento avance a saltos contra las cuatro etapas de Wallas con su incubacion e iluminacion
+
+  LD-OPC05-034 | clase C | conexion_personal_emocional <-> rediseno_procesos_negocio_cx
+    razon: conectar con datos personales y emocionales contra el redisenio de 16 pasos de los procesos internos que generan friccion
+
+  LD-OPC05-035 | clase C | constraint_management <-> sistema_pull_push
+    razon: la teoria de restricciones con sus cinco pasos de foco contra el rediseno del flujo de push a pull con kanbans
+
+  LD-OPC05-036 | clase C | contacto_con_el_cliente <-> rediseno_procesos_negocio_cx
+    razon: gestionar el contacto directo con el cliente y a quien lo atiende contra redisenar los procesos internos que producen la experiencia
+
+  LD-OPC05-037 | clase C | contract_close_out <-> contractor_status_report
+    razon: cerrar el contrato (disputas resueltas, aceptacion, pagos finales) contra el informe periodico de estado del contratista durante la ejecucion
+
+  LD-OPC05-038 | clase C | control_estadistico_de_procesos <-> plan_de_control
+    razon: el SPC y sus diez pasos para construir la carta contra el plan de control que define quien mide, quien actua y como se vuelve a control
+
+  LD-OPC05-039 | clase C | control_estadistico_metodo_medicion <-> definiciones_operacionales_3
+    razon: validar estadisticamente el METODO DE MEDICION contra escribir definiciones operacionales que hagan reproducible un adjetivo ambiguo
+
+  LD-OPC05-040 | clase C | cost_management_plan <-> stakeholder_register
+    razon: el plan de gestion de costos con sus umbrales de varianza contra el registro de interesados con su influencia y su postura
+
+  LD-OPC05-041 | clase C | costo_de_mala_calidad_copq <-> modelo_costo_optimo_calidad
+    razon: el COPQ medido con tus registros contables contra el modelo del costo optimo y su punto de interseccion de curvas
+
+  LD-OPC05-042 | clase C | costo_de_mala_calidad_copq <-> rejilla_madurez_gestion_calidad
+    razon: DISCUTIBLE 3, Y ES DE INSTRUMENTO ANTES QUE DE LECTURA. Este par SOLO existe tras resolver alias: el dossier muestra copq cableando a rejilla en nodos_previos y rejilla a copq en nodos_siguientes, y la ida y vuelta aparece por la resolucion. La lectura se sostiene igual: el COPQ mide costo, la rejilla ubica al negocio en una de cinco etapas de madurez
+
+  LD-OPC05-043 | clase C | costo_de_mala_calidad_copq <-> trilogia_de_juran
+    razon: el COPQ contra la trilogia de Juran (planificar, controlar, mejorar) y su distincion entre pico esporadico y desperdicio cronico
+
+  LD-OPC05-044 | clase C | csf_funcion_govern <-> csf_perfiles_organizacionales
+    razon: la funcion Govern del NIST CSF contra los perfiles Current y Target y sus Tiers: una gobierna, la otra mide la brecha
+
+  LD-OPC05-045 | clase C | cuatro_etapas_del_pensamiento_creativo <-> ruptura_de_habitos_para_estimulo
+    razon: las cuatro etapas de Wallas contra la ruptura deliberada de habitos cuando detectas estancamiento
+
+  LD-OPC05-046 | clase C | cultura_de_aprendizaje <-> cultura_de_seguridad_componentes
+    razon: la cultura de aprendizaje y su ciclo de reformas contra los cuatro subcomponentes de la cultura de seguridad
+
+  LD-OPC05-048 | clase C | customer_needs_spreadsheet <-> sipoc
+    razon: la hoja de necesidades del cliente correlacionadas contra el SIPOC que define proveedores, insumos, proceso, salidas y clientes
+
+  LD-OPC05-049 | clase C | decision_pivotar_o_proceder <-> lienzo_modelo_negocio
+    razon: la decision de pivotar o proceder contra el lienzo mismo y sus doce pasos de construccion
+
+  LD-OPC05-050 | clase C | decision_pivotar_o_proceder <-> validar_modelo_financiero
+    razon: la decision de pivotar o proceder contra validar el modelo financiero (CAC, LTV, runway, P and L)
+
+  LD-OPC05-051 | clase C | defensas_en_profundidad_3 <-> fallas_activas_condiciones_latentes
+    razon: mapear las capas de defensa y sus dependencias ocultas contra separar fallas activas de condiciones latentes
+
+  LD-OPC05-052 | clase C | definicion_alineacion_cadena_suministro <-> trade_off_responsividad_eficiencia
+    razon: alinear la cadena de suministro con la estrategia contra el balance concreto entre responsividad y eficiencia en los cinco drivers
+
+  LD-OPC05-053 | clase C | del_caos_al_metodo_madurez_de_riesgo <-> empieza_con_lo_que_ya_funciona
+    razon: los niveles de madurez en gestion de riesgo contra la regla de empezar con dos o tres practicas simples y probadas
+
+  LD-OPC05-054 | clase C | desarrollo_presentacion_problema <-> preguntas_ipo_dolor_cliente
+    razon: preparar la reunion de presentacion del problema (una diapositiva, tres columnas) contra las cuatro preguntas IPO que descubren el dolor
+
+  LD-OPC05-055 | clase C | design_for_six_sigma_dfss <-> innovacion_tipo_ii
+    razon: el DFSS y su DMADV con CTQs contra la innovacion tipo II de mas grande, mas pequeno o combinado
+
+  LD-OPC05-056 | clase C | design_test_repeat <-> prototyping_possibilities
+    razon: el ciclo disenar, probar, repetir contra el prototipado de POSIBILIDADES con multiples direcciones alternativas
+
+  LD-OPC05-057 | clase C | dia_cero_defectos <-> entrenamiento_supervisores_calidad
+    razon: el dia de cero defectos y sus tres pasos de lanzamiento contra el entrenamiento del supervisor cuatro semanas antes
+
+  LD-OPC05-058 | clase C | diagnostico_antes_remedio <-> terminologia_clave_breakthrough
+    razon: la regla de que el diagnostico precede al remedio contra la terminologia que hay que fijar con el equipo antes de diagnosticar
+
+  LD-OPC05-060 | clase C | diseno_etico_de_privacidad <-> diseno_intencional_etica
+    razon: el diseno etico de privacidad con opt out real contra la responsabilidad etica general del design thinking y sus efectos secundarios
+
+  LD-OPC05-061 | clase C | documentacion_exportacion <-> seguro_exportacion
+    razon: los documentos de exportacion (pro forma, comercial, packing list, HS, SED) contra el seguro de carga y de credito y su cobertura CIF
+
+  LD-OPC05-062 | clase C | documentacion_exportacion <-> seleccion_metodo_transporte_internacional
+    razon: los documentos de exportacion contra la seleccion del metodo de transporte (aereo, maritimo, multimodal, booking)
+
+  LD-OPC05-063 | clase C | ecuacion_de_valor_cliente <-> modelo_spin_preguntas
+    razon: la ecuacion de valor del cliente y su balanza contra la secuencia completa de preguntas del modelo SPIN
+
+  LD-OPC05-064 | clase C | educacion_estadistica_para_la_calidad <-> responsabilidad_gerencial_en_la_calidad
+    razon: la educacion masiva en metodos estadisticos contra tu propia responsabilidad gerencial de aprender y liderar la mejora
+
+  LD-OPC05-065 | clase C | ejecucion_auditoria <-> relaciones_humanas_auditoria
+    razon: verificar los hechos con el responsable antes de escribir el reporte contra las relaciones humanas del proceso de auditoria
+
+  LD-OPC05-066 | clase C | el_riesgo_eres_tu <-> sigue_operando_pese_al_golpe
+    razon: el fundador como punto unico de falla y su documentacion de accesos contra la continuidad del negocio y sus funciones que no pueden parar
+
+  LD-OPC05-067 | clase C | elementos_plan_exportacion_ejemplo <-> programas_ex_im_bank
+    razon: los trece elementos practicos de un plan de exportacion contra los programas concretos de financiamiento del Ex-Im Bank
+
+  LD-OPC05-068 | clase C | eliminar_metas_numericas_gerencia <-> sistema_estable_causas_comunes
+    razon: eliminar metas numericas sin metodo contra el procedimiento de verificar si el sistema es estable antes de intervenir
+
+  LD-OPC05-069 | clase C | employee_pool_esop <-> vesting_acciones_fundadores
+    razon: la reserva de acciones para empleados y su dilucion contra el vesting del fundador con su cliff, su 83(b) y su aceleracion
+
+  LD-OPC05-070 | clase C | encuadre_desafio_diseno <-> integracion_deseabilidad_viabilidad_factibilidad_social
+    razon: encuadrar el desafio de diseno con la pregunta como podriamos contra el triple criterio deseabilidad, viabilidad y factibilidad en emprendimiento social
+
+  LD-OPC05-071 | clase C | encuadre_desafio_diseno <-> usuarios_extremos_globales
+    razon: encuadrar el desafio de diseno contra la investigacion de campo con usuarios extremos en contextos de pobreza
+
+  LD-OPC05-072 | clase C | enfoques_generales_exportacion <-> programas_ex_im_bank
+    razon: los enfoques generales de involucramiento en la exportacion contra los programas de financiamiento del Ex-Im Bank
+
+  LD-OPC05-073 | clase C | entrenamiento_supervisores_calidad <-> identificacion_empleado_con_el_trabajo
+    razon: el entrenamiento del supervisor en el programa ZD contra la identificacion del empleado con su trabajo y su seguimiento de ausentismo
+
+  LD-OPC05-074 | clase C | estilos_de_negociacion <-> teoria_de_juegos_en_negociacion
+    razon: clasificar el estilo de la contraparte y adaptarse contra la teoria de juegos y su distincion entre una ronda y multi ronda
+
+  LD-OPC05-075 | clase C | estrategia_captura_mercado_crecimiento <-> market_type_revenue_growth
+    razon: la captura rapida cuando un mercado crece contra los cuatro tipos de mercado y sus curvas de crecimiento de ingresos
+
+  LD-OPC05-076 | clase C | estrategia_crecimiento_clientes <-> get_customers_funnel_webmobile
+    razon: la estrategia de crecimiento (venta cruzada, referidos, motores de recomendacion) contra el embudo de adquisicion y activacion web y movil
+
+  LD-OPC05-077 | clase C | estrategia_plataformas_existentes <-> programa_afiliados
+    razon: la estrategia de plataformas existentes y su feature complementaria contra el programa de afiliados y su estructura de comision
+
+  LD-OPC05-078 | clase C | estratificacion_datos <-> planificacion_recoleccion_datos
+    razon: la estratificacion de datos por variables contra la planificacion de trece pasos de recoleccion y analisis
+
+  LD-OPC05-079 | clase C | evaluacion_necesidad_franquiciar <-> mix_ubicaciones_corporativas_franquicia
+    razon: DECISION DE FRANQUICIAR, y este par tambien SOLO existe tras resolver alias. Evaluar la necesidad de franquiciar contra la mezcla de ubicaciones corporativas y franquiciadas y sus estrategias Home Sweet Home o Cherry Picking
+
+  LD-OPC05-080 | clase C | fallas_activas_condiciones_latentes <-> vulnerabilidad_instalacion
+    razon: fallas activas y condiciones latentes contra la vulnerabilidad especifica de la instalacion frente al desensamblaje y su checklist de reensamblaje
+
+  LD-OPC05-081 | clase C | fase_accomplish_experiencia_cliente <-> reunion_conclusion_proyecto
+    razon: la fase Accomplish y sus tres escenarios de mision contra la reunion de conclusion con encuestas internas y externas
+
+  LD-OPC05-082 | clase C | future_scenarios_planning <-> iota_analysis
+    razon: la planificacion de escenarios contra el IOTA que reune los hallazgos previos en una tabla y responde entonces que
+
+  LD-OPC05-083 | clase C | gates_sin_dientes_problema <-> sistema_gates_go_kill
+    razon: el DIAGNOSTICO de compuertas sin dientes (la curva de supervivencia, las 7 razones para no matar) contra el sistema de gates de 17 pasos que las instala
+
+  LD-OPC05-084 | clase C | genchi_gembutsu_salir_del_edificio <-> leap_of_faith_assumptions
+    razon: salir del edificio a observar contra identificar y ordenar los supuestos de salto de fe: uno es el acto, el otro la lista que lo dirige
+
+  LD-OPC05-085 | clase C | gestion_alucinaciones_ia <-> ia_generacion_ideas_negocio
+    razon: la politica contra alucinaciones de la IA contra el uso de la IA como motor de recombinacion de ideas
+
+  LD-OPC05-086 | clase C | gestion_instalaciones <-> planificacion_cadena_suministro
+    razon: la gestion de instalaciones y su capacidad optima contra el proceso de sourcing y su costo total de propiedad
+
+  LD-OPC05-087 | clase C | gestion_portafolio_dos_niveles <-> sistema_gates_go_kill
+    razon: el enfoque jerarquico de portafolio (gate individual mas revision trimestral del conjunto) contra el sistema de gates. LA FICHA DE OP-E-04 YA DECLARA ESTE PAR COMO MUTUO EXCEPTUADO del 9.22 en su verificacion 5, y esa declaracion sellada respalda la lectura
+
+  LD-OPC05-088 | clase C | gestion_portafolio_foco <-> sistema_gates_go_kill
+    razon: la gestion del foco de recursos y su auditoria de proyectos activos contra el sistema de gates. TAMBIEN EXCEPTUADO por la verificacion 5 de OP-E-04
+
+  LD-OPC05-089 | clase C | get_visual <-> reglas_brainstorming
+    razon: el pensamiento visual y su post it siempre a mano contra las ocho reglas del brainstorming efectivo
+
+  LD-OPC05-090 | clase C | ia_en_supply_chain <-> simulacion_de_operaciones_supply_chain
+    razon: la IA aplicada a la cadena de suministro contra el modelado de simulacion y sus escenarios
+
+  LD-OPC05-091 | clase C | incoterms_reglas_comerciales_internacionales <-> seleccion_de_metodo_de_pago
+    razon: los Incoterms y su punto de transferencia de riesgo contra la seleccion del metodo de pago y la solvencia del comprador
+
+  LD-OPC05-092 | clase C | innovation_games_speedboat <-> product_box_game
+    razon: el juego Speed Boat que saca los dolores contra el Product Box que saca los mensajes de marketing: dos juegos distintos con dos salidas distintas
+
+  LD-OPC05-093 | clase C | international_partner_search <-> seleccion_representante_extranjero
+    razon: el servicio International Partner Search del Commercial Service contra el checklist de nueve puntos para evaluar al representante
+
+  LD-OPC05-094 | clase C | investigacion_etnografica_ideacion <-> reglas_brainstorming
+    razon: la investigacion etnografica de campo contra las reglas de la sesion de brainstorming que consume sus hallazgos
+
+  LD-OPC05-095 | clase C | investigacion_new_view <-> process_tracing_methods
+    razon: la investigacion de accidentes bajo el enfoque New View contra los metodos de process tracing y sus dos relatos paralelos
+
+  LD-OPC05-096 | clase C | joint_ventures_internacionales <-> proteccion_propiedad_intelectual_internacional
+    razon: los joint ventures internacionales contra la proteccion de propiedad intelectual con PCT y Madrid Protocol
+
+  LD-OPC05-097 | clase D | juran_rcca_metodo <-> viaje_diagnostico_remedial
+    razon: el metodo RCCA de Juran en cuatro fases contra el viaje diagnostico y remedial en ocho pasos con su gestion de la resistencia
+
+  LD-OPC05-098 | clase C | lean_launchpad_web_startup_process <-> lienzo_modelo_negocio
+    razon: el proceso Lean LaunchPad para un startup web contra el lienzo mismo y sus doce pasos
+
+  LD-OPC05-099 | clase C | lienzo_modelo_negocio <-> patron_free_business_model
+    razon: el lienzo contra el patron FREE y sus tres variantes publicidad, freemium y bait and hook
+
+  LD-OPC05-100 | clase C | lienzo_modelo_negocio <-> proceso_ideacion_modelo_negocio
+    razon: el lienzo contra el proceso de ideacion de modelos con su equipo diverso y su fase de inmersion
+
+  LD-OPC05-101 | clase C | lienzo_modelo_negocio <-> search_for_business_model
+    razon: el lienzo contra la busqueda de modelo de negocio y su distincion entre modo busqueda y modo ejecucion
+
+  LD-OPC05-102 | clase C | lienzo_modelo_negocio <-> segmentos_de_clientes_problema_necesidad
+    razon: el lienzo contra la escala del problema del segmento (latente, pasivo, activo, con solucion casera)
+
+  LD-OPC05-103 | clase C | mapeo_flujo_valor <-> takt_time
+    razon: PAR QUE SOLO EXISTE TRAS RESOLVER ALIAS. El mapeo de flujo de valor y su estado futuro contra el takt time y el balanceo de estaciones
+
+  LD-OPC05-104 | clase C | market_type_revenue_growth <-> metrics_that_matter_framework
+    razon: PAR QUE SOLO EXISTE TRAS RESOLVER ALIAS. Los tipos de mercado y sus curvas contra las metricas que importan y el burn rate
+
+  LD-OPC05-105 | clase C | metodo_valor_presente_neto <-> tasa_de_retorno_requerida
+    razon: el NPV y su ecuacion de descuento contra la tasa de retorno requerida y el costo de capital que la fija
+
+  LD-OPC05-106 | clase C | motor_crecimiento_viral <-> motor_de_crecimiento
+    razon: el motor viral y su coeficiente contra la eleccion entre los cuatro motores de crecimiento
+
+  LD-OPC05-107 | clase C | no_shop_agreement <-> term_sheet_negociacion
+    razon: el acuerdo de exclusividad y su plazo contra la negociacion completa del term sheet
+
+  LD-OPC05-108 | clase C | plan_de_lanzamiento_al_mercado <-> reduccion_tiempo_de_mercado_velocidad
+    razon: el plan de lanzamiento al mercado contra la reduccion del tiempo al mercado y su procesamiento paralelo
+
+  LD-OPC05-109 | clase C | plan_gestion_comunicaciones <-> plan_gestion_interesados
+    razon: el plan de comunicaciones (que, como, cuando, quien) contra el plan de gestion de interesados (nivel de compromiso actual y deseado)
+
+  LD-OPC05-110 | clase C | portfolio_management <-> sistema_gates_go_kill
+    razon: la gestion de portafolio holistica contra el sistema de gates individual. TAMBIEN EXCEPTUADO por la verificacion 5 de OP-E-04
+
+  LD-OPC05-111 | clase C | principios_gestion_calidad_iso9000 <-> sistema_gestion_calidad
+    razon: los ocho principios ISO 9000 contra el sistema de gestion de calidad que los toma como criterios rectores
+
+  LD-OPC05-112 | clase C | problem_solution_fit <-> producto_minimo_viable
+    razon: el problem solution fit contra el MVP y su hipotesis mas critica
+
+  LD-OPC05-113 | clase C | project_management_plan <-> scope_management_plan
+    razon: el plan de gestion del proyecto que consolida los subsidiarios contra el plan de gestion del alcance y su WBS
+
+  LD-OPC05-114 | clase C | prototipado_rapido <-> prototipar_con_medios_no_convencionales
+    razon: el prototipado rapido con carton y cinta contra prototipar con un medio RADICALMENTE distinto al habitual para que emerjan propiedades nuevas
+
+  LD-OPC05-115 | clase C | recomendaciones_smart <-> revision_de_aprendizaje
+    razon: las recomendaciones SMART de una investigacion de seguridad contra la revision de aprendizaje que cambia la pregunta y el nombre del equipo
+
+  LD-OPC05-116 | clase C | reglas_gestion_riesgo_gambling <-> sistema_gates_go_kill
+    razon: las cinco reglas de gestion de riesgo por etapas contra el sistema de gates que las materializa en puntos de decision
+
+  LD-OPC05-117 | clase C | riesgos_lanzamiento_mvp <-> wizard_of_oz_testing
+    razon: los miedos que frenan al lanzar un MVP (legales, copia, marca, animo) contra la prueba Mago de Oz y su backend humano
+
+  LD-OPC05-118 | clase C | search_for_business_model <-> vision_estrategia_producto_pivote
+    razon: la busqueda de modelo de negocio contra la distincion entre vision inalterable, estrategia y producto
+
+  LD-OPC05-119 | clase C | simulacion_de_operaciones_supply_chain <-> vehiculos_autonomos_drones_supply_chain
+    razon: el modelado de simulacion contra los drones y vehiculos autonomos y su marco regulatorio
+
+  LD-OPC05-120 | clase C | tesis_boulder_inclusividad <-> tesis_boulder_stack_emprendedor
+    razon: el principio de inclusividad de la tesis Boulder contra la activacion de toda la red con actividades practicas
+
+  LD-OPC05-121 | clase C | venture_debt_introduccion <-> venture_debt_terminos_economicos
+    razon: la deuda de riesgo como complemento al equity contra sus condiciones de precio concretas (tasa, comisiones, warrants)
+
+========================================================================================================
+NOMINA DEL SACO 'NOMBRA LAS DOS LINEAS' (2), SOLO LOS IDENTIFICADORES
+========================================================================================================
+  LD-OPC05-031, LD-OPC05-122
+
+========================================================================================================
+CALIBRACION: LOS TRES CASOS QUE EL ACTA 155 YA ETIQUETO A MANO
+========================================================================================================
+El acta 155 etiqueta tres razones sin ambiguedad, y son la unica vara externa
+que este computo tiene. Si el computo no las reprodujera, el computo estaria
+mal y no las razones. NO ES UN LITERAL CONTRA SI MISMO: el lado esperado es lo
+que el acta dice, y el lado medido sale de recorrer el fichero.
+
+  LD-OPC05-122     esperado DOS      medido DOS      COINCIDE
+       fuente del esperado: acta 155, 6.4: 'la razon escrita nombra LAS DOS LINEAS DISTINTAS, una en cada nodo'
+  LD-OPC05-040     esperado NINGUNA  medido NINGUNA  COINCIDE
+       fuente del esperado: acta 155, 6.2: 'no hay una sola linea de uno que el otro expanda'
+  LD-OPC05-002     esperado NINGUNA  medido NINGUNA  COINCIDE
+       fuente del esperado: acta 155, 6.2: 'dos bloques del Canvas sin una linea comun'
+
+  CIFRA casos de calibracion que coinciden: 3 de 3
+
+========================================================================================================
+RELECTURA A MANO DE LOS DOS SACOS PEQUENOS, Y SE DECLARA QUE ES A MANO
+========================================================================================================
+EJECUTOR.md 1, EL CASO ROJO SE PRUEBA POR MUTACION: lo que sigue NO es computo
+sino LECTURA, y por tanto NO HAY CASO ROJO AUTOMATICO QUE MUTAR aqui. Se dice
+en vez de fabricar un assert que se apruebe solo. Lo que si tiene caso rojo es
+la calibracion de arriba, cuyo lado esperado lo pone el acta y no este fichero.
+
+  LD-OPC05-001     computo=UNA       lectura: CONFIRMA UNA. El unico puntero es `el paso 6 de Crosby`. Del otro lado nombra `el estandar ZD y su dia de lanzamiento`, que es contenido del nodo, no una linea suya senalada.
+  LD-OPC05-003     computo=UNA       lectura: CONFIRMA UNA. El unico puntero es `el paso 1 del cronograma`. Del otro lado enumera metodos de estimacion, no una linea.
+  LD-OPC05-008     computo=UNA       lectura: CONFIRMA UNA. `El paso 5 de motivaciones` es el unico puntero; del otro lado dice que el dilema expande el trade off, sin senalar linea.
+  LD-OPC05-031     computo=DOS       lectura: CONFIRMA DOS. Escribe `el paso 1 de compatibilidad` y `el paso 2 del dilema`, dos punteros numerados a DOS NODOS DISTINTOS. Y es el par que el propio ejecutor de la vuelta 154 marco como el mas ajustado de sus discutibles: la figura esta, aunque este tensa.
+  LD-OPC05-047     computo=UNA       lectura: NO ES PUNTERO: FALSO POSITIVO DEL PATRON VAGO. `su paso de consumo pasivo a participacion` usa `paso` como transito, no como linea del nodo. Leido, esta razon NO NOMBRA NINGUNA.
+  LD-OPC05-059     computo=UNA       lectura: CONFIRMA UNA. `El paso 2 del puzzle` es el unico puntero.
+  LD-OPC05-122     computo=DOS       lectura: CONFIRMA DOS. Nombra `el paso 6 de 6S` y `el paso 4 de error-proofing`, dos punteros numerados a DOS NODOS DISTINTOS, y ademas lo dice con todas sus letras.
+
+  LO QUE LA LECTURA CORRIGE DEL COMPUTO, dicho como diferencia y no como
+  sustitucion: UNO SOLO BAJA, LD-OPC05-047, de UNA a NINGUNA, por falso positivo
+  del patron vago. Los otros seis los CONFIRMA. El saco grande no se mueve por
+  esta relectura: 115 medidos por computo, 116 tras la lectura.
+  CIFRA lecturas que corrigen al computo: 1 par(es)
+  CIFRA los tres sacos TRAS LA LECTURA: 2 / 4 / 116 par(es)
+
+========================================================================================================
+EL LIMITE DE ESTE COMPUTO, DICHO OTRA VEZ AL FINAL PARA QUE NO SE LEA SOLO
+LA TABLA: el computo cuenta PUNTEROS, no comprueba que sean de nodos distintos
+ni ve una linea nombrada sin puntero. SUB ESTIMA LA FIGURA, NUNCA LA SOBRE
+ESTIMA, y por eso las dos nominas de abajo se publican enteras: son nomina
+PARA LEER, no veredicto. ESTA TAREA NO RECLASIFICA NADA.
+========================================================================================================
+EXITCODE: 0

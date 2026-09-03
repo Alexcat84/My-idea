@@ -1,0 +1,61 @@
+====================================================================================================
+VUELTA 156, TAREA 3.b: LOS DOS QUE EL ACTA 155 NOMBRO, RELEIDOS POR P.5
+====================================================================================================
+
+GUARDA DE FRONTERA, ANTES
+  ANTES    sha256 dataset/ (3881 ficheros) bd1a7eb0fae6c1334a655bd9cec830a8 | censo 3853/3169 | aristas 8780/8740 | n 3388
+
+LOS CUATRO NODOS, CON SUS PASOS ENTEROS LEIDOS HOY
+----------------------------------------------------------------------------------------------------
+  actividades_clave  (4 pasos)  fuente: Business Model Generation - Osterwalder, Alexander
+     1. Determinar si el negocio requiere principalmente producción, resolución de problemas o gestión de plataforma
+     2. Listar las actividades específicas necesarias para entregar la propuesta de valor
+     3. Vincular cada actividad clave con los canales, relaciones de cliente e ingresos que soporta
+     4. Priorizar actividades core vs. actividades delegables a socios
+  key_resources_hypothesis  (5 pasos)  fuente: The Startup Owner's Manual - Blank, Steve
+     1. Lista los recursos físicos que necesitas: instalaciones, insumos, equipo, redes de distribución
+     2. Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants), venta de facturas (factoring) o arrendamiento de equipo (leasing), y calcula cuánto hace falta en efectivo, líneas de crédito
+     3. Define qué talento necesitas ahora y cuál vas a necesitar más adelante
+     4. Identifica qué ideas, marcas o desarrollos tuyos valen la pena proteger como propiedad intelectual: marca, patentes, bases de datos, saber hacer
+     5. Revisa qué dependes de otros que está fuera de tu control
+
+  cost_management_plan  (4 pasos)  fuente: A Project Manager's Book of Forms - Cynthia Stackpole Snyder
+     1. Define el nivel de precisión requerido para tus estimaciones de costo
+     2. Establece las unidades de medida, la moneda y los umbrales de varianza que usarás para detectar desviaciones
+     3. Documenta las técnicas de estimación y el proceso para desarrollar el presupuesto por fases
+     4. Especifica las reglas de medición de desempeño, como el valor ganado, y quién tiene autoridad para asignar presupuesto
+  stakeholder_register  (6 pasos)  fuente: A Project Manager's Book of Forms - Cynthia Stackpole Snyder
+     1. Anota a todas las personas u organizaciones, internas y externas, que identificaste al arrancar el proyecto
+     2. Registra la posición, el rol, el contacto y lo que cada una necesita
+     3. Escribe qué espera cada persona de tu proyecto o producto
+     4. Marca cuánta influencia tiene cada una: alta, media o baja
+     5. Clasifícalas según su postura hacia ti (a favor, neutral, en contra) para saber cómo tratarlas
+     6. Actualiza esta lista a medida que conoces más sobre cada persona
+
+====================================================================================================
+LOS DOS VEREDICTOS, ESCRITOS EN LAS DOS SEDES
+====================================================================================================
+
+  LD-OPC05-002 | actividades_clave <-> key_resources_hypothesis
+     clase LEIDA hoy antes de tocar: C
+     clase escrita: D (razon +1384 caracteres)
+
+  LD-OPC05-040 | cost_management_plan <-> stakeholder_register
+     clase LEIDA hoy antes de tocar: C
+     clase escrita: D (razon +1515 caracteres)
+
+  ASSERT: 154 lineas antes y despues, y las dos clases escritas. OK
+
+  SEDE 2: docs/plan/LECTURAS_DIRIGIDAS.md
+     LD-OPC05-002 fila 2 reescrita: clase C -> D, razon +298 caracteres
+     LD-OPC05-040 fila 40 reescrita: clase C -> D, razon +298 caracteres
+     ASSERT: las dos filas quedan en D en el fichero de lecturas. OK
+
+GUARDA DE FRONTERA, DESPUES
+  DESPUES  sha256 dataset/ (3881 ficheros) bd1a7eb0fae6c1334a655bd9cec830a8 | censo 3853/3169 | aristas 8780/8740 | n 3388
+  ASSERT: las siete magnitudes iguales. El registro cambia, EL GRAFO NO.
+
+CIFRA lecturas dirigidas reclasificadas en esta tarea: 2 par(es)
+CIFRA clases de las lecturas dirigidas tras la tarea: {"C": 119, "D": 3}
+CIFRA veredictos del cribado: 3388 fila(s), y n NO se mueve.
+EXITCODE: 0
