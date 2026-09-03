@@ -1,0 +1,71 @@
+==============================================================================
+VERIFICAR RE SELLADO: TODA SALIDA_* QUE EL REPORTE CITE Y QUE HAYA CAMBIADO
+DESPUES DEL COMMIT DE SU TAREA TIENE QUE IR DECLARADA
+==============================================================================
+  reporte: docs/loop/REPORTE.md
+  CIFRA salidas selladas que el reporte cita: 37
+
+  SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt         SIN RE SELLAR
+  SALIDA_V136_3D_MUTACION.txt                    SIN RE SELLAR
+  SALIDA_V156_T4C_CIFRAS.txt                     RE SELLADO
+      commit de su tarea : f95e4ee9f8d3
+      numstat contra HEAD: +7/-7
+      CIFRA lineas CIFRA cuyo VALOR cambio: 1
+         CIFRA salidas selladas del tallador: '52 fichero(s)' -> '55 fichero(s)'
+      DECLARADO EN EL REPORTE: SI, con la linea que esta guarda computo
+  SALIDA_V157_HEAD_APERTURA.txt                  SIN RE SELLAR
+  SALIDA_V157_HEAD_CIERRE.txt                    SIN RE SELLAR
+  SALIDA_V157_T1_ADJUDICACIONES.txt              SIN RE SELLAR
+  SALIDA_V157_T2A_NOMINA.txt                     SIN RE SELLAR
+  SALIDA_V157_T2D_CONTEO_GATE0.txt               SIN RE SELLAR
+  SALIDA_V157_T2_LOTE1.txt                       SIN RE SELLAR
+  SALIDA_V157_T3_PASO1_JURAN.txt                 SIN RE SELLAR
+  SALIDA_V157_T4B_MUTACION_TACHADO.txt           SIN RE SELLAR
+  SALIDA_V157_T4C_TACHADO.txt                    SIN RE SELLAR
+  SALIDA_V157_T5C_MUTACION_RUIDO.txt             SIN RE SELLAR
+  SALIDA_V157_T5_BATERIA.txt                     SIN RE SELLAR
+  SALIDA_V157_T6B_MUTACION_RE_SELLADO.txt        SIN RE SELLAR
+  SALIDA_V157_T7_COSTE_P3B.txt                   SIN RE SELLAR
+  SALIDA_V157_T8_DOS_ESPECIES_D.txt              SIN RE SELLAR
+  SALIDA_V157_T9_APERTURA_SELLADA.txt            SIN RE SELLAR
+  SALIDA_V157_T9_APERTURA_SELLADA_158.txt        SIN RE SELLAR
+  SALIDA_V157_T9_BATERIA_FINAL.txt               SIN RE SELLAR
+  SALIDA_V157_T9_CABECERA.txt                    SIN RE SELLAR
+  SALIDA_V157_T9_CIFRAS_REPORTE.txt              RE SELLADO
+      commit de su tarea : b166ab479397
+      numstat contra HEAD: +2/-2
+      CIFRA lineas CIFRA cuyo VALOR cambio: 0
+      DECLARADO EN EL REPORTE: SI, con la linea que esta guarda computo
+  SALIDA_V157_T9_CONTEO_GATE0.txt                SIN RE SELLAR
+  SALIDA_V157_T9_EXPEDIENTE.txt                  SIN RE SELLAR
+  SALIDA_V157_T9_FASE_03_FUSIONES.txt            SIN RE SELLAR
+  SALIDA_V157_T9_FASE_06_MESAS.txt               SIN RE SELLAR
+  SALIDA_V157_T9_FASE_08_VERIFICACION.txt        SIN RE SELLAR
+  SALIDA_V157_T9_FASE_09_LECTURAS_DIRIGIDAS.txt  SIN RE SELLAR
+  SALIDA_V157_T9_GATE0.txt                       SIN RE SELLAR
+  SALIDA_V157_T9_MARCADOR_CIERRE.txt             SIN RE SELLAR
+  SALIDA_V157_T9_MOTOR.txt                       SIN RE SELLAR
+  SALIDA_V157_T9_NUMSTAT.txt                     SIN RE SELLAR
+  SALIDA_V157_T9_RE_SELLADO.txt                  RE SELLADO
+      commit de su tarea : b166ab479397
+      numstat contra HEAD: +24/-22
+      CIFRA lineas CIFRA cuyo VALOR cambio: 2
+         CIFRA por estado: 'RE SELLADO 1, SIN COMMIT DE TAREA 20, SIN RE SELLAR 14' -> 'RE SELLADO 1, SIN COMMIT DE TAREA 1, SIN RE SELLAR 35'
+         CIFRA salidas selladas que el reporte cita: '35' -> '37'
+      DECLARADO EN EL REPORTE: SI, con la linea que esta guarda computo
+  SALIDA_V157_T9_SACO_RESTANTE.txt               SIN RE SELLAR
+  SALIDA_V157_T9_TSC.txt                         SIN RE SELLAR
+  SALIDA_V157_T9_WEB.txt                         SIN RE SELLAR
+  SALIDA_V96_TAREA3_MUTACION.txt                 SIN RE SELLAR
+
+  CIFRA por estado: RE SELLADO 3, SIN RE SELLAR 34
+  CIFRA salidas EXENTAS por construccion: 2
+  CIFRA de esas exentas que ademas estan RE SELLADAS: 2
+  EXENCION POR CONSTRUCCION (adjudicacion 6.8 del acta 158): 2 fichero(s) exento(s) del rojo, por ser la salida de esta guarda o del verificador de cifras sobre el reporte final: SALIDA_V157_T9_CIFRAS_REPORTE.txt, SALIDA_V157_T9_RE_SELLADO.txt
+      SALIDA_V157_T9_CIFRAS_REPORTE.txt: RE SELLADO, numstat +2/-2, lineas CIFRA movidas 0
+      SALIDA_V157_T9_RE_SELLADO.txt: RE SELLADO, numstat +24/-22, lineas CIFRA movidas 2
+  CIFRA re selladas SIN declarar en el reporte: 0
+
+VERDE: ninguna salida sellada citada por el reporte cambio en silencio.
+FIN
+EXITCODE: 0

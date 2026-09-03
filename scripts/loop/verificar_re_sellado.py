@@ -173,12 +173,79 @@ def analizar(ruta_rel):
                                   len(movidas), ", ".join(movidas) or "ninguna")}
 
 
+# --- LA EXENCION DE LA 6.8 DEL ACTA 158, POR NOMBRE Y DECLARADA ---
+#
+# QUE SE EXIME Y POR QUE. Esta guarda y `verificar_cifras_del_reporte.py` se
+# CORREN SOBRE EL REPORTE FINAL, asi que el commit que publica ese reporte re
+# escribe necesariamente sus dos salidas. Ningun reporte puede dejarlas verdes
+# en HEAD, y exigir una afirmacion que expira al commitearla es exigir lo
+# imposible (acta 158, seccion 5.2 y adjudicacion 6.8).
+#
+# POR QUE POR SUFIJO DE NOMBRE Y NO POR UNA NOMINA CERRADA: la nomina fija
+# tendria que re escribirse cada vuelta, porque los nombres llevan el numero de
+# vuelta dentro (`SALIDA_V157_T9_RE_SELLADO.txt`, `SALIDA_V159_T9_RE_SELLADO.txt`).
+# El sufijo `_RE_SELLADO.txt` y `_CIFRAS_REPORTE.txt` queda RESERVADO desde hoy
+# para las salidas de estas dos guardas sobre el reporte final, por convencion,
+# igual que `verificar_apertura_sellada.py` reservo la palabra `MUTACION` en la
+# vuelta 102. Ninguna salida de tarea normal necesita esos sufijos.
+#
+# QUE NO HACE ESTA EXENCION, Y SE DICE: NO calla al fichero exento. Se sigue
+# analizando, se sigue imprimiendo con su estado y su numstat, y ademas se
+# imprime UNA LINEA COMPUTADA CON LOS NOMBRES EXENTOS. Lo unico que la exencion
+# quita es que cuenten para el ROJO. Una exencion que no se imprime es un
+# agujero; una que se imprime es una vara con su limite dicho.
+PATRON_EXENTO = re.compile(r"_(RE_SELLADO|CIFRAS_REPORTE)\.txt$")
+
+# Y LA EXENCION SE ESTRECHA ANTES DE PUBLICARSE, POR UN AGUJERO QUE LA PRIMERA
+# CORRIDA DE ESTA MISMA VUELTA ENSENO Y QUE SE DECLARA EN VEZ DE TAPARSE. Con
+# solo el sufijo, el patron tambien eximia a
+# `SALIDA_V157_T6B_MUTACION_RE_SELLADO.txt`, que NO es la salida de esta guarda
+# sobre el reporte final sino la salida de su PRUEBA DE MUTACION. Hoy ese
+# fichero esta SIN RE SELLAR y la exencion no cambiaba ningun veredicto, pero
+# una exencion mas ancha de lo que su motivo justifica es un agujero esperando.
+# Se descarta la palabra `MUTACION`, que ya es palabra reservada de las salidas
+# de prueba en esta casa desde la vuelta 102 (ver
+# `verificar_apertura_sellada.py`, "la guarda que se envenena sola").
+PATRON_NO_EXENTO = re.compile(r"MUTACION")
+
+
+def es_exento(ruta_rel):
+    base = os.path.basename(ruta_rel)
+    if PATRON_NO_EXENTO.search(base):
+        return False
+    return bool(PATRON_EXENTO.search(base))
+
+
+def exentos_de(filas):
+    """Las filas exentas POR CONSTRUCCION. Funcion propia para que el caso por
+    mutacion ejerza este codigo y no una copia."""
+    return [f for f in filas if es_exento(f["fichero"])]
+
+
+def linea_de_exencion(filas):
+    """LA LINEA COMPUTADA que la 6.8 exige publicar, con los nombres."""
+    ex = exentos_de(filas)
+    return ("EXENCION POR CONSTRUCCION (adjudicacion 6.8 del acta 158): %d "
+            "fichero(s) exento(s) del rojo, por ser la salida de esta guarda o "
+            "del verificador de cifras sobre el reporte final: %s"
+            % (len(ex), ", ".join(sorted(os.path.basename(f["fichero"]) for f in ex))
+               or "ninguno"))
+
+
 def las_que_faltan(filas, texto):
     """Las filas RE SELLADO cuya linea computada NO esta en el texto del
     reporte. Es EL veredicto de esta guarda, y vive en una funcion propia para
-    que el caso por mutacion ejerza EXACTAMENTE este codigo y no una copia."""
+    que el caso por mutacion ejerza EXACTAMENTE este codigo y no una copia.
+
+    CORRECCION DECLARADA (vuelta 159, adjudicacion 6.8 del acta 158): se anade
+    la condicion `not es_exento(...)`. La version anterior de esta linea era
+    `f["estado"] == "RE SELLADO" and f["linea"] not in texto`, sin la exencion,
+    y se escribe aqui entera para que la correccion se pueda auditar sin ir a
+    git."""
     return [f for f in filas
-            if f["estado"] == "RE SELLADO" and f["linea"] not in texto]
+            if f["estado"] == "RE SELLADO"
+            and not es_exento(f["fichero"])
+            and f["linea"] not in texto]
 
 
 def main():
@@ -230,6 +297,15 @@ def main():
     print("")
     print("  CIFRA por estado: %s"
           % ", ".join("%s %d" % (k, v) for k, v in sorted(por_estado.items())))
+    exentos = exentos_de(filas)
+    exentos_re = [f for f in exentos if f["estado"] == "RE SELLADO"]
+    print("  CIFRA salidas EXENTAS por construccion: %d" % len(exentos))
+    print("  CIFRA de esas exentas que ademas estan RE SELLADAS: %d" % len(exentos_re))
+    print("  %s" % linea_de_exencion(filas))
+    for f in exentos_re:
+        print("      %s: RE SELLADO, numstat +%d/-%d, lineas CIFRA movidas %d"
+              % (os.path.basename(f["fichero"]), f["mas"], f["menos"],
+                 len(f["movidas"])))
     print("  CIFRA re selladas SIN declarar en el reporte: %d" % len(sin_declarar))
     print("")
     if sin_declarar:

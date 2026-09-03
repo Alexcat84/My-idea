@@ -1,0 +1,35 @@
+==============================================================================
+VUELTA 159, TAREA 6.c: CASO POSITIVO POR MUTACION DE LA EXENCION 6.8
+==============================================================================
+
+  guarda importada de: scripts/loop/verificar_re_sellado.py
+  patron de exencion declarado en la guarda: _(RE_SELLADO|CIFRAS_REPORTE)\.txt$
+
+(A) EL SUJETO NORMAL, ELEGIDO POR COMPUTO
+    fichero            : SALIDA_V106_CABECERA_TALLADA.txt
+    estado             : RE SELLADO
+    es exento?         : False
+    commit de su tarea : d2aa753cf798
+    numstat contra HEAD: +1/-1
+    VEREDICTO (A): sirve
+
+(B) CASO ROJO: EL FICHERO NORMAL RE SELLADO Y NO DECLARADO SIGUE ROJO
+    CIFRA filas sin declarar: 1 (SALIDA_V106_CABECERA_TALLADA.txt)
+    esperado: 1, medido: 1
+    VEREDICTO (B): ROJO, la exencion NO apago la guarda
+
+(C) CASO VERDE DE LA EXENCION, Y CON SU LINEA IMPRESA
+    fichero            : SALIDA_V157_T9_CIFRAS_REPORTE.txt
+    numstat contra HEAD: +2/-2
+    CIFRA filas sin declarar: 0
+    linea de exencion computada:
+       EXENCION POR CONSTRUCCION (adjudicacion 6.8 del acta 158): 1 fichero(s) exento(s) del rojo, por ser la salida de esta guarda o del verificador de cifras sobre el reporte final: SALIDA_V157_T9_CIFRAS_REPORTE.txt
+    VEREDICTO (C): EXENTO Y NOMBRADO
+
+(D) CONTROL: el sujeto NORMAL declarado con su linea deja cero
+    CIFRA filas sin declarar: 0
+    VEREDICTO (D): VERDE
+
+RESULTADO: VERDE, las cuatro se comportan
+FIN
+EXITCODE: 0
