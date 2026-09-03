@@ -1,0 +1,43 @@
+==============================================================================
+VUELTA 157, TAREA 2.a: LA NOMINA DEL LOTE 1, RECOMPUTADA
+==============================================================================
+
+CIFRA entradas del registro de citas: 154
+CIFRA entradas con via LECTURA_DIRIGIDA: 122
+CIFRA lecturas dirigidas CON puntero de paso: 6
+CIFRA lecturas dirigidas SIN puntero de paso: 116
+CIFRA de esas sin puntero que YA estan en D: 3 (LD-OPC05-002, LD-OPC05-040, LD-OPC05-097)
+CIFRA todavia en C SIN puntero: 113
+CIFRA todavia en C CON puntero: 6
+
+LAS SEIS CON PUNTERO, UNA A UNA:
+  LD-OPC05-001     clase C   punteros: paso 6
+  LD-OPC05-003     clase C   punteros: paso 1
+  LD-OPC05-008     clase C   punteros: paso 5
+  LD-OPC05-031     clase C   punteros: paso 1, paso 2
+  LD-OPC05-059     clase C   punteros: paso 2
+  LD-OPC05-122     clase C   punteros: paso 6, paso 4
+
+EL LOTE 1: 66 lecturas
+  las SEIS con puntero : LD-OPC05-001, LD-OPC05-003, LD-OPC05-008, LD-OPC05-031, LD-OPC05-059, LD-OPC05-122
+  las SESENTA sin puntero van de LD-OPC05-004 a LD-OPC05-067
+
+LA NOMINA ENTERA, EN ORDEN:
+  LD-OPC05-001      LD-OPC05-003      LD-OPC05-004      LD-OPC05-005      LD-OPC05-006      LD-OPC05-007    
+  LD-OPC05-008      LD-OPC05-009      LD-OPC05-010      LD-OPC05-011      LD-OPC05-012      LD-OPC05-013    
+  LD-OPC05-014      LD-OPC05-015      LD-OPC05-016      LD-OPC05-017      LD-OPC05-018      LD-OPC05-019    
+  LD-OPC05-020      LD-OPC05-021      LD-OPC05-022      LD-OPC05-023      LD-OPC05-024      LD-OPC05-025    
+  LD-OPC05-026      LD-OPC05-027      LD-OPC05-028      LD-OPC05-029      LD-OPC05-030      LD-OPC05-031    
+  LD-OPC05-032      LD-OPC05-033      LD-OPC05-034      LD-OPC05-035      LD-OPC05-036      LD-OPC05-037    
+  LD-OPC05-038      LD-OPC05-039      LD-OPC05-041      LD-OPC05-042      LD-OPC05-043      LD-OPC05-044    
+  LD-OPC05-045      LD-OPC05-046      LD-OPC05-047      LD-OPC05-048      LD-OPC05-049      LD-OPC05-050    
+  LD-OPC05-051      LD-OPC05-052      LD-OPC05-053      LD-OPC05-054      LD-OPC05-055      LD-OPC05-056    
+  LD-OPC05-057      LD-OPC05-058      LD-OPC05-059      LD-OPC05-060      LD-OPC05-061      LD-OPC05-062    
+  LD-OPC05-063      LD-OPC05-064      LD-OPC05-065      LD-OPC05-066      LD-OPC05-067      LD-OPC05-122    
+
+CIFRA lecturas del lote 1: 66
+nomina sellada en docs/loop/NOMINA_V157_LOTE1.json
+
+VERDE: el computo da 6 con puntero y 60 sin puntero, que es lo que el
+encargo declara. Se puede leer.
+FIN

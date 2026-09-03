@@ -1,0 +1,2146 @@
+DOSSIER DEL LOTE 1: 66 lecturas. ESTE TRAMO CUBRE [0, 999).
+
+==============================================================================
+LD-OPC05-001  [1 de 66]  clase de hoy: C
+PAR: accion_correctiva_sistematica <-> cero_defectos
+RAZON ORIGINAL: el paso 6 de Crosby (fichar, revisar y escalar cada problema hasta la causa raiz) contra el estandar ZD y su dia de lanzamiento: cada uno expande un procedimiento que el otro no contiene
+==============================================================================
+
+  --- accion_correctiva_sistematica ---
+  TITULO   : Acción Correctiva Sistemática (Paso 6 de Crosby)
+  FUENTE   : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+  DOMINIO  : quality
+  ENTREGABLE: Un sistema documentado de seguimiento de problemas, con fichas de control en tres ritmos (diario, semanal, mensual) y un registro claro de cuándo se cierra cada problema
+  PASOS (9):
+    1. Documenta cada problema detectado en una ficha simple: qué pasó, qué tan grave es, por qué pasó, quién se encarga y para cuándo
+    2. Revisa a diario los problemas nuevos junto con la persona que te ayuda con calidad o producción, si la tienes
+    3. Si un problema no se resuelve en la revisión diaria, pásalo a una revisión semanal más a fondo
+    4. Revisa una vez al mes lo que sigue sin resolverse y decide si necesita un esfuerzo dedicado aparte
+    5. Para los problemas más complejos, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, y disuélvelo en cuanto el problema quede resuelto
+    6. Ordena los problemas por gravedad y ataca primero los más grandes
+    7. Define acciones que corrijan la causa raíz y prevengan la recurrencia, no solo alivien la presión del momento
+    8. Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular, para que no se acepten como normales
+    9. Dar seguimiento y verificar que la acción implementada haya eliminado el problema
+
+  --- cero_defectos ---
+  TITULO   : Cero Defectos (Zero Defects - ZD)
+  FUENTE   : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+  DOMINIO  : quality
+  ENTREGABLE: Declaración personal de compromiso con Cero Defectos, con fecha de lanzamiento, mecanismo de reconocimiento no monetario y plan de refuerzo periódico documentado.
+  PASOS (7):
+    1. Establece el estándar de Cero Defectos como compromiso personal de desempeño, no como eslogan motivacional pasajero
+    2. Comunícalo con absoluta claridad, trabajándolo caso por caso en vez de con mensajes masivos
+    3. Fija una fecha de lanzamiento (Día de Cero Defectos) tras un periodo breve de preparación para darle visibilidad
+    4. Reconoce el desempeño alineado al estándar de forma genuina, evitando el efectivo como único mecanismo
+    5. Extiende el estándar a todas tus áreas de trabajo, no solo a la producción o entrega del producto
+    6. Repite y refuerza el mensaje de forma constante hasta que se vuelva parte habitual de tu forma de trabajar
+    7. Eliminar el lenguaje que normaliza niveles aceptables de error (AQL)
+
+==============================================================================
+LD-OPC05-003  [2 de 66]  clase de hoy: C
+PAR: activity_duration_estimates <-> cronograma_proyecto
+RAZON ORIGINAL: estimar duraciones por metodo (parametrico, analogo, tres puntos) contra construir el cronograma con dependencias, recursos y ruta: el paso 1 del cronograma consume la salida del otro y no la repite
+==============================================================================
+
+  --- activity_duration_estimates ---
+  TITULO   : Activity Duration Estimates
+  FUENTE   : A Project Manager's Book of Forms - Cynthia Stackpole Snyder
+  DOMINIO  : core
+  ENTREGABLE: Documento de estimaciones de duración para cada actividad del WBS
+  PASOS (4):
+    1. Seleccionar el método de estimación apropiado (paramétrico, análogo, tres puntos)
+    2. Convertir horas de esfuerzo en días o semanas según corresponda
+    3. Incluir reserva de contingencia para riesgos de incertidumbre
+    4. Documentar la duración estimada para cada actividad
+
+  --- cronograma_proyecto ---
+  TITULO   : Cronograma del Proyecto (Project Schedule)
+  FUENTE   : A Project Manager's Book of Forms - Cynthia Stackpole Snyder
+  DOMINIO  : core
+  ENTREGABLE: Cronograma del proyecto completo en formato de diagrama de Gantt o gráfico de hitos, con fechas de inicio/fin, dependencias y recursos asignados
+  PASOS (6):
+    1. Recopilar lista de actividades, diagrama de red y estimaciones de duración
+    2. Determinar dependencias entre actividades
+    3. Asignar recursos a cada actividad y anotar sus nombres
+    4. Calcular fechas de inicio y fin usando software de programación o Gantt
+    5. Seleccionar el formato de presentación segun necesites, diagrama de Gantt o gráfico de hitos
+    6. Identificar hitos clave para el gráfico de hitos
+
+==============================================================================
+LD-OPC05-004  [3 de 66]  clase de hoy: C
+PAR: actualizar_business_model_canvas_tuneup <-> reempaquetado_producto
+RAZON ORIGINAL: el tune-up semanal del Canvas con el feedback recibido contra la estrategia de pivote por reempaquetado (modulos, suscripcion, versiones): uno actualiza el lienzo, el otro decide que cambiar
+==============================================================================
+
+  --- actualizar_business_model_canvas_tuneup ---
+  TITULO   : Actualización Iterativa del Business Model Canvas ('Tune-up')
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Business Model Canvas actualizado con anotaciones de cambios en propuesta de valor, segmentos de cliente e hipótesis de ingresos
+  PASOS (4):
+    1. Revisa tu propuesta de valor a la luz del feedback de clientes recibido
+    2. Reevalúa tus segmentos de clientes identificando si el producto resuena solo con un subconjunto
+    3. Ajusta tus hipótesis de ingresos según los segmentos que mostraron entusiasmo real
+    4. Documenta los cambios, sorpresas y decepciones como parte de un tune-up, no una revisión final
+
+  --- reempaquetado_producto ---
+  TITULO   : Reempaquetado del Producto (Estrategia de Pivote)
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Nueva propuesta de empaquetado o precio del producto, validada con al menos un subconjunto de clientes, sin rediseño del núcleo tecnológico
+  PASOS (4):
+    1. Identificar si el problema real es de tecnología o de empaquetado y posicionamiento comercial
+    2. Explorar alternativas de empaquetado: módulos, suscripción, versiones escalonadas de funcionalidad
+    3. Validar la nueva configuración con clientes, sin necesidad de rediseñar el producto central
+    4. Actualizar el lienzo de modelo de negocio con el nuevo modelo de entrega o precio
+
+==============================================================================
+LD-OPC05-005  [4 de 66]  clase de hoy: C
+PAR: aim_of_leadership <-> causas_comunes_vs_especiales
+RAZON ORIGINAL: el objetivo del liderazgo de Deming (ayudar y reducir variabilidad entre personas) contra el procedimiento estadistico de 15 pasos que separa causa comun de causa especial
+==============================================================================
+
+  --- aim_of_leadership ---
+  TITULO   : Objetivo del Liderazgo (Deming)
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Un plan de liderazgo enfocado en mejorar el sistema, con identificación de casos individuales fuera de lo esperado y acciones de apoyo basadas en datos.
+  PASOS (6):
+    1. Identificar, con datos o con criterio, quién está fuera de lo esperado, por bajo o por muy alto desempeño
+    2. Investigar las causas de raíz del sistema que afectan el desempeño general
+    3. Diseñar formas de ayuda individual o de reconocimiento según corresponda
+    4. Trabajar de forma continua en mejorar el sistema para todos, no solo en corregir personas
+    5. Reconocer y estudiar a quienes tienen un desempeño excepcional para replicar sus métodos
+    6. Buscar reducir la variabilidad de desempeño entre personas dentro del mismo sistema
+
+  --- causas_comunes_vs_especiales ---
+  TITULO   : Causas Comunes vs Causas Especiales de Variación
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Gráfico de corrida o de control con los puntos clasificados como causa común o especial y un plan de acción diferenciado para cada tipo.
+  PASOS (15):
+    1. Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes
+    2. Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos
+    3. Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales
+    4. Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla
+    5. Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas
+    6. Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales
+    7. Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo
+    8. Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+    9. Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).
+    10. Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.
+    11. Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.
+    12. Comunicar a los equipos que el objetivo es identificar problemas, no culpables
+    13. Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo
+    14. Fomentar la colaboración entre turnos y departamentos para resolver causas comunes
+    15. Analizar la distribución de errores o defectos entre todas las personas usando limites de control
+
+==============================================================================
+LD-OPC05-006  [5 de 66]  clase de hoy: C
+PAR: alineacion_ti_negocio <-> modelo_estrella_alineacion_organizacional
+RAZON ORIGINAL: alinear la TECNOLOGIA con el modelo de negocio (aplicaciones, datos, infraestructura, seguridad) contra alinear la ORGANIZACION con el Modelo Estrella (estrategia, estructura, procesos, recompensas, personas)
+==============================================================================
+
+  --- alineacion_ti_negocio ---
+  TITULO   : Alinear la tecnología con tu modelo de negocio
+  FUENTE   : Business Model Generation - Osterwalder, Alexander
+  DOMINIO  : core
+  ENTREGABLE: Un mapa que conecta tu modelo de negocio (el lienzo) con lo que necesitas en tecnología, aplicaciones e infraestructura, con respuestas claras sobre infraestructura, seguridad y capacitación
+  PASOS (6):
+    1. Usa el Canvas para describir con claridad tu visión de negocio antes de definir qué necesitas de tecnología
+    2. Identifica qué aplicaciones necesitas para sostener partes clave de tu negocio, como gestión de clientes, gestión de recursos o manejo de proveedores
+    3. Identifica qué información necesitas manejar, como perfiles de clientes o dónde guardar tus datos
+    4. Define qué infraestructura tecnológica necesitas, como servidores, almacenamiento de datos y comunicaciones
+    5. Evalúa en qué partes de tu negocio la seguridad es crítica
+    6. Decide si necesitas invertir en capacitación tecnológica o en investigación y desarrollo para mejorar tu modelo a futuro
+
+  --- modelo_estrella_alineacion_organizacional ---
+  TITULO   : Alineación Organizacional con el Modelo Estrella de Galbraith
+  FUENTE   : Business Model Generation - Osterwalder, Alexander
+  DOMINIO  : core
+  ENTREGABLE: Plan de alineación organizacional que cubra las cinco dimensiones (estrategia, estructura, procesos, recompensas, personas) coherente con el modelo de negocio a implementar
+  PASOS (5):
+    1. Definir la Estrategia: identificar objetivos estratégicos y cómo impulsan el modelo de negocio (nuevos segmentos, canales, actividades clave)
+    2. Evaluar la Estructura organizacional necesaria: ¿el modelo requiere una organización centralizada, descentralizada, integrada o independiente (spin-off)?
+    3. Diseñar los Procesos requeridos: ¿se necesitan procesos lean y automatizados, o procesos de calidad rigurosos?
+    4. Configurar el sistema de Recompensas: alinear incentivos con los comportamientos que el modelo de negocio demanda (ej. fuerza de ventas directa vs. satisfacción del cliente)
+    5. Definir el perfil de Personas necesario: identificar habilidades y mentalidad requeridas (ej. emprendedores, pensadores libres pero confiables)
+
+==============================================================================
+LD-OPC05-007  [6 de 66]  clase de hoy: C
+PAR: analisis_motivaciones_fundador <-> decision_cuando_fundar
+RAZON ORIGINAL: el perfil motivacional del fundador con sus 13 motivaciones contra los tres factores de CUANDO fundar (carrera, mercado, personales): distinto sujeto y distinta decision
+==============================================================================
+
+  --- analisis_motivaciones_fundador ---
+  TITULO   : Análisis de Motivaciones del Fundador
+  FUENTE   : The Founder's Dilemmas - Wasserman, Noam
+  DOMINIO  : core
+  ENTREGABLE: Un perfil personal de tus motivaciones, documentado, que muestre qué tan cerca estás del perfil típico de quien emprende
+  PASOS (5):
+    1. Reflexiona sobre las influencias familiares y culturales que tuviste relacionadas con emprender
+    2. Identifica tus 4 motivaciones principales (de una lista de 13: afiliación, altruismo, autonomía, ganancia financiera, etc.), por ejemplo con una herramienta tipo CareerLeader
+    3. Compara esas motivaciones con los perfiles típicos de quienes emprenden y de quienes no
+    4. Decide si tu perfil motivacional es compatible con el camino de emprender
+    5. Identifica si lo tuyo es más el control o más la riqueza, porque eso va a pesar cuando decidas cómo repartir participación y quién manda en tu negocio
+
+  --- decision_cuando_fundar ---
+  TITULO   : La Decisión de Cuándo Fundar: Factores de Carrera, Mercado y Personales
+  FUENTE   : The Founder's Dilemmas - Wasserman, Noam
+  DOMINIO  : core
+  ENTREGABLE: Matriz de autoevaluación de los tres factores (carrera, mercado, personal) con plan de mitigación para los factores débiles
+  PASOS (4):
+    1. Evaluar tus factores de carrera: ¿tienes las habilidades y experiencia necesarias o necesitarás cofundadores/empleados para compensar?
+    2. Evaluar factores de mercado: ¿tu idea es lo suficientemente sólida o tu pasión te está sesgando el juicio?
+    3. Evaluar factores personales: ¿tu situación familiar y económica permite asumir el riesgo del emprendimiento?
+    4. Identificar cuál de los tres factores es más débil y diseñar un plan para mitigarlo antes de dar el salto
+
+==============================================================================
+LD-OPC05-008  [7 de 66]  clase de hoy: C
+PAR: analisis_motivaciones_fundador <-> dilema_riqueza_vs_control
+RAZON ORIGINAL: DISCUTIBLE 1. El paso 5 de motivaciones nombra el dilema riqueza contra control, que es el otro nodo entero. Se sostiene C porque motivaciones expande las influencias familiares y las 13 motivaciones, y el dilema expande el trade off en CADA decision de financiamiento
+==============================================================================
+
+  --- analisis_motivaciones_fundador ---
+  TITULO   : Análisis de Motivaciones del Fundador
+  FUENTE   : The Founder's Dilemmas - Wasserman, Noam
+  DOMINIO  : core
+  ENTREGABLE: Un perfil personal de tus motivaciones, documentado, que muestre qué tan cerca estás del perfil típico de quien emprende
+  PASOS (5):
+    1. Reflexiona sobre las influencias familiares y culturales que tuviste relacionadas con emprender
+    2. Identifica tus 4 motivaciones principales (de una lista de 13: afiliación, altruismo, autonomía, ganancia financiera, etc.), por ejemplo con una herramienta tipo CareerLeader
+    3. Compara esas motivaciones con los perfiles típicos de quienes emprenden y de quienes no
+    4. Decide si tu perfil motivacional es compatible con el camino de emprender
+    5. Identifica si lo tuyo es más el control o más la riqueza, porque eso va a pesar cuando decidas cómo repartir participación y quién manda en tu negocio
+
+  --- dilema_riqueza_vs_control ---
+  TITULO   : Elegir entre hacerte rico o mantener el control (Rich vs. King)
+  FUENTE   : The Founder's Dilemmas - Wasserman, Noam
+  DOMINIO  : core
+  ENTREGABLE: Una declaración clara de tus prioridades, riqueza o control, que guíe tus futuras decisiones de financiamiento, contratación y gobierno de tu empresa
+  PASOS (6):
+    1. Reflexiona con honestidad sobre qué es más importante para ti: maximizar el valor de salida o mantener el control de las decisiones clave
+    2. Pregúntate si tu motivación principal es la riqueza financiera o el control, porque eso anticipa cómo vas a responder ante futuras decisiones de financiamiento o crecimiento
+    3. Evalúa, en cada decisión de financiamiento o contratación, cuánto control pierdes a cambio de cuánto valor ganas
+    4. Define con claridad qué decisiones no estás dispuesto a ceder en cuanto a control, por ejemplo la dirección estratégica o la cultura, y cuáles sí puedes soltar a cambio de recursos
+    5. Considera estructuras híbridas, como acciones con derechos de voto diferenciados, si quieres conservar el control mientras consigues capital
+    6. Ten presente que crecer rápido o levantar capital de riesgo suele significar sacrificar control
+
+==============================================================================
+LD-OPC05-009  [8 de 66]  clase de hoy: C
+PAR: analisis_y_sintesis <-> pensamiento_convergente_divergente
+RAZON ORIGINAL: analizar y sintetizar datos de campo en una historia coherente contra alternar deliberadamente fases divergentes y convergentes: uno es el metodo de interpretacion, el otro el ritmo del proceso
+==============================================================================
+
+  --- analisis_y_sintesis ---
+  TITULO   : Analizar y unir las piezas al diseñar
+  FUENTE   : Change by Design, Revised and U - Tim Brown
+  DOMINIO  : core
+  ENTREGABLE: Una historia que junte lo que descubriste en tu investigación y lo convierta en ideas que puedas usar para diseñar.
+  PASOS (4):
+    1. Recolecta datos observando a la gente, haciendo entrevistas y revisando lo que ya existe (patentes, procesos, información disponible).
+    2. Aparta un tiempo, sean horas o semanas, dedicado solo a organizar e interpretar lo que recolectaste.
+    3. Busca patrones que tengan sentido y arma una historia coherente y creíble con esa información.
+    4. Si tienes objetivos que parecen chocar entre sí (por ejemplo costo bajo y calidad alta), no los conviertas en una simple lista de requisitos: busca una manera de unirlos que respete a ambos.
+
+  --- pensamiento_convergente_divergente ---
+  TITULO   : Pensamiento Convergente y Divergente
+  FUENTE   : Change by Design, Revised and U - Tim Brown
+  DOMINIO  : core
+  ENTREGABLE: Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un set documentado de al menos 3-5 alternativas de solución evaluadas antes de cada decisión final
+  PASOS (7):
+    1. Antes de buscar la solución, dedicar tiempo y energía explícitos a generar deliberadamente múltiples alternativas sin juzgarlas (fase divergente).
+    2. Fijar un deadline claro para la fase de divergencia, evitando la parálisis por análisis.
+    3. Usar la metáfora del embudo: abrir posibilidades ampliamente y luego estrechar hacia soluciones concretas.
+    4. Permitir la 'polinización cruzada' entre ideas distintas antes de converger en una.
+    5. Alternar conscientemente entre fases de generación de ideas y fases de selección o eliminación de ideas, de forma no lineal entre investigación de mercado, prototipado y generación.
+    6. Aceptar que descartar ideas prometedoras ('matar a los hijos favoritos') es parte necesaria del proceso, y evitar adoptar la primera solución razonable.
+    7. Aceptar la ambigüedad y la incertidumbre como parte natural del proceso creativo.
+
+==============================================================================
+LD-OPC05-010  [9 de 66]  clase de hoy: C
+PAR: antidilucion_provisiones <-> pay_to_play
+RAZON ORIGINAL: la antidilucion (weighted average contra full ratchet, carve outs, waiver) contra el pay to play y su Qualified Financing: dos clausulas distintas del mismo term sheet
+==============================================================================
+
+  --- antidilucion_provisiones ---
+  TITULO   : Provisiones de Antidilución (Full Ratchet vs Weighted Average)
+  FUENTE   : Venture Deals - Brad Feld
+  DOMINIO  : core
+  ENTREGABLE: Cláusula de antidilución definida en el term sheet, con el mecanismo de ajuste (weighted average o full ratchet), su fórmula y las excepciones (carve-outs) claramente especificadas
+  PASOS (5):
+    1. Negociar antidilución basada en weighted average (broad-based), el estándar más equilibrado del mercado; evitar full ratchet salvo en negociaciones muy específicas o desfavorables
+    2. Identificar y listar las excepciones (carve-outs o 'excluded issuances') que no disparan el ajuste, como el pool de opciones para empleados o fusiones aprobadas por la junta
+    3. Negociar una cláusula de renuncia (waiver) por mayoría de la Serie A, para los casos en que la mayoría de inversionistas acuerde financiar una ronda futura a un precio menor
+    4. Negociar si el ajuste también aplica a splits de acciones, dividendos en acciones y recapitalizaciones
+    5. Consultar con un abogado corporativo el impacto de cada mecanismo en la tabla de capitalización ante un escenario de ronda a la baja
+
+  --- pay_to_play ---
+  TITULO   : Cláusula Pay-to-Play
+  FUENTE   : Venture Deals - Brad Feld
+  DOMINIO  : core
+  ENTREGABLE: Cláusula pay-to-play definida en el term sheet con mecánica de conversión clara.
+  PASOS (4):
+    1. Definir qué constituye una 'Qualified Financing' que gatilla la cláusula.
+    2. Establecer el porcentaje pro rata mínimo requerido para mantener status preferente.
+    3. Negociar si la conversión a común es total o parcial según el nivel de participación.
+    4. Permitir la asignación de derechos a fondos afiliados del inversionista.
+
+==============================================================================
+LD-OPC05-011  [10 de 66]  clase de hoy: C
+PAR: antidilucion_provisiones <-> preferencia_de_liquidacion
+RAZON ORIGINAL: la antidilucion contra la preferencia de liquidacion con su participante contra no participante, sus kick outs y su analisis de cascada
+==============================================================================
+
+  --- antidilucion_provisiones ---
+  TITULO   : Provisiones de Antidilución (Full Ratchet vs Weighted Average)
+  FUENTE   : Venture Deals - Brad Feld
+  DOMINIO  : core
+  ENTREGABLE: Cláusula de antidilución definida en el term sheet, con el mecanismo de ajuste (weighted average o full ratchet), su fórmula y las excepciones (carve-outs) claramente especificadas
+  PASOS (5):
+    1. Negociar antidilución basada en weighted average (broad-based), el estándar más equilibrado del mercado; evitar full ratchet salvo en negociaciones muy específicas o desfavorables
+    2. Identificar y listar las excepciones (carve-outs o 'excluded issuances') que no disparan el ajuste, como el pool de opciones para empleados o fusiones aprobadas por la junta
+    3. Negociar una cláusula de renuncia (waiver) por mayoría de la Serie A, para los casos en que la mayoría de inversionistas acuerde financiar una ronda futura a un precio menor
+    4. Negociar si el ajuste también aplica a splits de acciones, dividendos en acciones y recapitalizaciones
+    5. Consultar con un abogado corporativo el impacto de cada mecanismo en la tabla de capitalización ante un escenario de ronda a la baja
+
+  --- preferencia_de_liquidacion ---
+  TITULO   : Preferencia de Liquidación (Liquidation Preference)
+  FUENTE   : Venture Deals - Brad Feld | The Founder's Dilemmas - Wasserman, Noam
+  DOMINIO  : core
+  ENTREGABLE: Cláusula de liquidation preference definida en el term sheet (multiplicador, tipo participante/no participante, definición de evento de liquidación) y modelada en distintos escenarios de salida (análisis de cascada o waterfall)
+  PASOS (8):
+    1. Negociar una preferencia de liquidación simple (1x, no participante) en rondas iniciales; evitar múltiplos superiores a 1x, ya que son señal de alerta sobre el inversionista
+    2. Entender la diferencia entre preferencia participante (preferencia MÁS parte proporcional como común) y no participante (una u otra, no ambas)
+    3. Si se acepta participación, solicitar 'kick-outs' que la eliminen una vez el inversionista alcance un retorno de 2x-3x
+    4. Definir con claridad qué eventos constituyen un 'Change in Control' que dispara la liquidación; recordar que una oferta pública inicial NO se considera evento de liquidación
+    5. Entender el 'overhang' de la preferencia: el monto que debe devolverse a los inversionistas antes de que los comunes reciban cualquier proceso
+    6. Modelar distintos escenarios de venta (bajo, medio, alto) para entender el impacto real en el retorno de fundadores, empleados e inversionistas (análisis de cascada o waterfall)
+    7. Revisar cómo se tratan las contraprestaciones en garantía (escrow) o contingentes al calcular la distribución
+    8. Anticipar que un inversionista que percibe mayor riesgo (mercado incierto, competencia, condiciones de salida poco claras) tenderá a exigir términos más agresivos
+
+==============================================================================
+LD-OPC05-012  [11 de 66]  clase de hoy: C
+PAR: asignacion_recursos_en_gates <-> gates_huecos_hollow_gates
+RAZON ORIGINAL: el METODO de asignar recursos en el gate contra el DIAGNOSTICO del gate hueco que aprueba sin recursos: uno instala la practica, el otro la audita
+==============================================================================
+
+  --- asignacion_recursos_en_gates ---
+  TITULO   : Método de Asignación de Recursos en Gates
+  FUENTE   : Winning at New Products - Robert G. Cooper
+  DOMINIO  : core
+  ENTREGABLE: Sistema de seguimiento de recursos (hoja de cálculo o software) que muestre asignación de personas por proyecto y disponibilidad futura
+  PASOS (5):
+    1. Mostrar en cada gate la lista de proyectos activos con su priorización y compromisos de recursos actuales
+    2. Elegir un método de seguimiento de recursos: pre-conversación del líder con candidatos, software de gestión, o preparación previa de gatekeepers, o bien lista manual, hoja de cálculo o algún programa especializado
+    3. Verificar disponibilidad real de personas antes de comprometer recursos a un nuevo proyecto
+    4. Evitar agregar proyectos a la lista activa sin resolver las implicaciones de recursos
+    5. En la reunión, comprométete de forma explícita a asignar personas y presupuesto para la siguiente etapa.
+
+  --- gates_huecos_hollow_gates ---
+  TITULO   : Gates Huecos (Hollow Gates): Aprobación sin Recursos
+  FUENTE   : Winning at New Products - Robert G. Cooper
+  DOMINIO  : core
+  ENTREGABLE: Política formal que vincule cada decisión Go con un compromiso de recursos verificable y documentado
+  PASOS (3):
+    1. Verificar que cada decisión Go en un gate venga acompañada de compromiso explícito de recursos (personas, presupuesto, tiempo)
+    2. Auditar si los líderes de proyecto salen de las reuniones de gate con los recursos que necesitan
+    3. Eliminar la práctica de aprobar proyectos 'en principio' sin asignación real de equipo
+
+==============================================================================
+LD-OPC05-013  [12 de 66]  clase de hoy: C
+PAR: auditoria_de_posicionamiento <-> desarrollar_posicionamiento_empresa
+RAZON ORIGINAL: la auditoria de posicionamiento (cuestionario externo e interno, entrevistas, comparar percepciones) contra redactar la declaracion de posicionamiento: medir contra escribir
+==============================================================================
+
+  --- auditoria_de_posicionamiento ---
+  TITULO   : Auditoría de Posicionamiento (Positioning Audit)
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Línea base documentada de percepciones externas e internas sobre la empresa y sus competidores
+  PASOS (5):
+    1. Diseñar un cuestionario de auditoría externa para clientes, prensa, analistas e influenciadores
+    2. Entrevistar una muestra representativa que conozca y no conozca la empresa
+    3. Realizar las primeras 5-10 llamadas personalmente con el equipo fundador
+    4. Aplicar el mismo cuestionario internamente al equipo ejecutivo y la junta directiva
+    5. Comparar percepciones externas vs internas para detectar discrepancias
+
+  --- desarrollar_posicionamiento_empresa ---
+  TITULO   : Desarrollo del Posicionamiento de Empresa
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Company Positioning Brief que articula la visión y misión de la empresa
+  PASOS (5):
+    1. Revisar la declaración de misión creada durante el descubrimiento de clientes
+    2. Comparar la descripción de la empresa con la de sus competidores
+    3. Redactar una declaración de posicionamiento de empresa simple y centrada en el cliente
+    4. Evitar superlativos no demostrables; usar afirmaciones comprobables
+    5. Ajustar el posicionamiento al tipo de mercado correspondiente
+
+==============================================================================
+LD-OPC05-014  [13 de 66]  clase de hoy: C
+PAR: auditoria_negocio <-> consejo_de_calidad
+RAZON ORIGINAL: la auditoria de negocio de cinco pasos contra el consejo de calidad de Juran de once, que la encarga y decide los proyectos
+==============================================================================
+
+  --- auditoria_negocio ---
+  TITULO   : Auditoría de Negocio (Business Audit)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Un informe de auditoría con hallazgos, comparación contra criterios de calidad y recomendaciones de acción
+  PASOS (5):
+    1. Identificar las preguntas clave que quieres que la auditoría responda
+    2. Recopilar y analizar la información necesaria para responder esas preguntas
+    3. Comparar el desempeño auditado contra criterios externos o contra los que tú mismo definiste
+    4. Revisar los hallazgos y las recomendaciones con calma antes de decidir
+    5. Definir qué acciones tomar según los resultados de la auditoría
+
+  --- consejo_de_calidad ---
+  TITULO   : Consejo de Calidad (Liderazgo y Selección de Proyectos de Juran)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Un espacio de decisión activo, con proyectos priorizados y equipos con recursos asignados
+  PASOS (11):
+    1. Reune a las personas clave de tu negocio para formar este espacio de decisión, idealmente miembros del comité de alta dirección, presidido por el máximo responsable del nivel correspondiente
+    2. Capacitense en el método de mejora de calidad que van a usar
+    3. Identifica y prioriza los problemas mas importantes, por ejemplo con un análisis de Pareto
+    4. Elige los proyectos a trabajar y define con claridad el problema y la meta de cada uno
+    5. Asigna los recursos necesarios: capacitación, personas, tiempo y acompañamiento
+    6. Revisa el avance de cada equipo y reconoce los logros, con métricas de progreso y la remoción de obstáculos
+    7. Publicar y comunicar las responsabilidades del consejo a toda la organización
+    8. Establecer políticas de enfoque al cliente y continuidad del breakthrough
+    9. Vincular consejos corporativos con consejos divisionales o locales si la organización es grande
+    10. Incluir al director de calidad como miembro del consejo
+    11. Redactar una carta constitutiva con responsabilidades claras del consejo
+
+==============================================================================
+LD-OPC05-015  [14 de 66]  clase de hoy: C
+PAR: brief_competitivo <-> entrada_mercado_nuevo
+RAZON ORIGINAL: el brief competitivo y su razon de compra contra la entrada a un mercado nuevo con sus mercados adyacentes y su presupuesto de educacion
+==============================================================================
+
+  --- brief_competitivo ---
+  TITULO   : Escribe tu análisis de la competencia (brief competitivo)
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Tu análisis de la competencia, enfocado en la razón de compra del cliente
+  PASOS (5):
+    1. Mira cómo tus competidores definen la base de la competencia (precio, atributos, servicio)
+    2. Determina qué hace a tu producto dramáticamente diferente
+    3. Si tu mercado es nuevo, evalúa qué hace hoy la gente sin tu producto
+    4. Evita armar una simple lista más larga de características frente a la competencia
+    5. Enfoca tu análisis en la razón por la que el cliente compra ('reason to buy')
+
+  --- entrada_mercado_nuevo ---
+  TITULO   : Entrada a un Mercado Nuevo
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Brief de mercado nuevo con visión, estimación de costos de educación de mercado y pronósticos de adopción
+  PASOS (5):
+    1. Identificar mercados adyacentes de donde vendrán los primeros clientes
+    2. Articular la visión de la empresa y por qué importará a la gente
+    3. Estimar el tiempo y presupuesto necesario para educar al mercado
+    4. Definir pronósticos de ventas realistas para los primeros 3 años
+    5. Evaluar qué evitará que un competidor con más recursos tome el mercado una vez creado
+
+==============================================================================
+LD-OPC05-016  [15 de 66]  clase de hoy: C
+PAR: bullseye_framework <-> critical_path
+RAZON ORIGINAL: la diana de traccion con sus 19 canales y sus experimentos baratos contra el camino critico que excluye lo que no es imprescindible
+==============================================================================
+
+  --- bullseye_framework ---
+  TITULO   : Bullseye Framework (Diana de Tracción)
+  FUENTE   : Traction - Gabriel Weinberg
+  DOMINIO  : core
+  ENTREGABLE: Matriz de los 19 canales con ideas de brainstorm, resultados de los experimentos del anillo medio y el canal núcleo elegido para escalar.
+  PASOS (12):
+    1. Lista los 19 canales de tracción posibles y evalúa cuáles podrían aplicar a tu negocio sin descartar ninguno por default.
+    2. Selecciona 3 a 5 canales prometedores según tu contexto, industria y modelo de negocio.
+    3. Diseña experimentos baratos, de menos de 1000 dólares y un mes de duración, para testear cada canal seleccionado en paralelo. Prueba en AdWords, pregunta el precio en tu mercado
+    4. Mide en cada experimento el costo de adquisición, el volumen disponible y la calidad de esos clientes.
+    5. Elige el canal con mejores resultados como tu canal núcleo y concentra ahí la mayoría de tus recursos. Es el paso previo para pasar a las pruebas del anillo interno
+    6. Si ningún canal funciona, repite el proceso o revisa tu producto.
+    7. Haz una lista de los 19 canales de tracción posibles para tu negocio
+    8. Diseña una prueba barata y corta para cada canal que te haga sentido, por ejemplo contactar a diez blogs de tu nicho, correr unos anuncios pagados o escribir un artículo semanal durante un mes
+    9. Corre las pruebas en paralelo o por lotes y mide resultados concretos, no solo clics o vistas
+    10. Compara los resultados entre canales y elige el o los que más prometan para invertirles más recursos
+    11. Anota lo que aprendes de cada prueba, incluidas las que fallaron, para mejorar tus próximos intentos
+    12. Compara los resultados de las distintas estrategias que probaste en una hoja de cálculo
+
+  --- critical_path ---
+  TITULO   : Critical Path (Camino Crítico)
+  FUENTE   : Traction - Gabriel Weinberg
+  DOMINIO  : core
+  ENTREGABLE: Lista priorizada y validada de hitos críticos con proceso de reevaluación periódica establecido
+  PASOS (5):
+    1. Enumera los hitos estrictamente necesarios para alcanzar tu traction goal
+    2. Excluye actividades que no sean absolutamente necesarias, aunque sean solicitadas por usuarios
+    3. Evalúa cada actividad propuesta contra el Critical Path antes de ejecutarla
+    4. Reevalúa el Critical Path después de completar cada hito, ya que las suposiciones cambian con feedback real
+    5. Comunica el Critical Path al equipo para alinear prioridades y evitar desperdicio de recursos
+
+==============================================================================
+LD-OPC05-017  [16 de 66]  clase de hoy: C
+PAR: business_model_canvas_scorecard <-> pivote_estrategico
+RAZON ORIGINAL: el Canvas usado como scorecard SEMANAL con sus cambios en rojo contra el pivote estrategico basado en evidencia: uno es la cadencia, el otro la decision
+==============================================================================
+
+  --- business_model_canvas_scorecard ---
+  TITULO   : El Business Model Canvas como Scorecard Semanal
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Serie histórica de canvases semanales que documenta la evolución de tu modelo de negocio.
+  PASOS (8):
+    1. Llenar el canvas inicial con tus hipótesis en las 9 áreas: segmentos, propuesta de valor, canales, relaciones, recursos, socios e ingresos
+    2. Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho, y ademas cada vez que obtengas nueva evidencia
+    3. Resaltar en rojo los cambios respecto a la semana anterior
+    4. Una vez que confirmes los cambios, integrarlos como el nuevo canvas base en negro para la siguiente semana
+    5. Repetir este proceso de forma continua durante todo tu customer discovery
+    6. Sal a validar cada hipótesis con clientes reales cara a cara.
+    7. Conserva todas las versiones del canvas como un flip book que documente la evolución de tu modelo de negocio.
+    8. Evita convertir el canvas en un plan operativo prematuro basado en suposiciones sin validar.
+
+  --- pivote_estrategico ---
+  TITULO   : Pivote Estratégico basado en Evidencia
+  FUENTE   : The Lean Startup - Eric Ries
+  DOMINIO  : core
+  ENTREGABLE: Documento de pivote que explique: la estrategia original, la evidencia que la invalidó, la nueva hipótesis de valor y los primeros resultados métricos post-pivote
+  PASOS (9):
+    1. Aceptar la evidencia empírica aunque contradiga meses de trabajo e inversión previa (sunk cost)
+    2. Formular una nueva hipótesis de valor basada en los insights obtenidos de clientes
+    3. Redirigir el desarrollo de producto hacia la nueva hipótesis, incluso si implica desechar código o funcionalidades ya construidas
+    4. Validar la nueva dirección con nuevos experimentos y medir si las métricas empiezan a moverse
+    5. Comunicar el pivote y su justificación basada en datos a inversores, empleados y stakeholders
+    6. Decide con rapidez y sin miedo al fracaso si toca pivotar
+    7. Distingue con claridad entre un ajuste menor y un cambio sustancial
+    8. Usa tu lienzo de modelo de negocio para ubicar qué parte necesita el cambio
+    9. Documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio
+
+==============================================================================
+LD-OPC05-018  [17 de 66]  clase de hoy: C
+PAR: business_model_environment_mapping <-> future_scenarios_planning
+RAZON ORIGINAL: mapear el entorno del modelo (fuerzas de mercado, industria, tendencias, macro) contra construir escenarios cruzando impulsores de incertidumbre
+==============================================================================
+
+  --- business_model_environment_mapping ---
+  TITULO   : Mapeo del Entorno del Modelo de Negocio
+  FUENTE   : Business Model Generation - Osterwalder, Alexander
+  DOMINIO  : core
+  ENTREGABLE: Mapa visual del entorno de negocio con las cuatro áreas documentadas y su impacto en el Business Model Canvas
+  PASOS (6):
+    1. Analizar fuerzas de mercado: segmentos, necesidades, costos de cambio, atractivo de ingresos
+    2. Analizar fuerzas de la industria: competidores incumbentes, nuevos entrantes, proveedores, productos sustitutos
+    3. Identificar tendencias clave (regulatorias, tecnológicas, sociales, culturales)
+    4. Evaluar fuerzas macroeconómicas (mercados de capital, condiciones económicas, infraestructura)
+    5. Formular preguntas estratégicas por cada bloque del Canvas en base a los hallazgos
+    6. Listar stakeholders clave y su nivel de influencia sobre el modelo
+
+  --- future_scenarios_planning ---
+  TITULO   : Planificación de Escenarios Futuros (Scenario Planning)
+  FUENTE   : Business Model Generation - Osterwalder, Alexander
+  DOMINIO  : core
+  ENTREGABLE: Documento con 2 a 4 escenarios futuros titulados y narrados, entre ellos el mejor y el peor caso descritos en detalle, con un modelo de negocio (Canvas) propuesto para cada uno, las decisiones primarias y de inversión asociadas con su probabilidad, y las señales de alerta temprana identificadas
+  PASOS (6):
+    1. Identifica dos o más impulsores de incertidumbre clave que puedan transformar tu industria (por ejemplo la tecnología o la regulación): son las dimensiones que van a caracterizar a tus escenarios
+    2. Cruza esos impulsores en una matriz para generar entre 2 y 4 escenarios distintos, y asegúrate de que entre ellos estén descritos en detalle, a 5 a 10 años, el mejor y el peor escenario posible para el entorno externo de tu empresa
+    3. Titula y narra cada escenario con una historia breve que describa sus elementos principales
+    4. Organiza un taller donde los participantes desarrollen un modelo de negocio apropiado para cada escenario, usando lluvia de ideas y técnicas de creatividad, y formula preguntas específicas por bloque del Canvas (KP, KA, VP, CR, CS, C$, R$) para cada uno
+    5. Identifica las decisiones primarias que enfrenta tu empresa (nuevos negocios, tecnologías, productos), asigna una probabilidad pequeña a los escenarios alternativos y reconsidera con ella tus decisiones de inversión
+    6. Identifica las señales y marcadores tempranos que indiquen hacia qué escenario se está moviendo el mundo
+
+==============================================================================
+LD-OPC05-019  [18 de 66]  clase de hoy: C
+PAR: calculo_roi_franquiciado_2 <-> decision_franquiciar_vs_expansion_propia
+RAZON ORIGINAL: calcular el ROI cash on cash del franquiciado contra decidir entre franquiciar, unidades propias o capital externo: uno alimenta al otro con una cifra
+==============================================================================
+
+  --- calculo_roi_franquiciado_2 ---
+  TITULO   : Cuánto retorno gana quien compra tu franquicia (ROI cash on cash)
+  FUENTE   : Franchise Your Business - Mark Siebert
+  DOMINIO  : franquicias
+  ENTREGABLE: Una hoja de cálculo con la proyección de retorno de quien compre tu franquicia, mostrando al menos 15% para el año 2 o 3, lista para incluir en el documento de divulgación de tu franquicia (Item 19 del FDD) si decides publicarla.
+  PASOS (7):
+    1. Calcula la inversión inicial total que necesita quien compre tu franquicia (equipo, obra, inventario, cuota de entrada, capital de trabajo) en valores actuales.
+    2. Toma el estado de resultados de tu unidad más representativa del negocio actual.
+    3. Ajusta el salario de gerencia o dueño a la tasa de mercado.
+    4. Quita los gastos que quien compre tu franquicia no va a tener (oficina administrativa, soporte de campo, gastos legales de marca).
+    5. Quita los gastos financieros (intereses), los que no son en efectivo (depreciación y amortización) y los impuestos.
+    6. Agrega la línea de regalías y aportes al fondo de marketing del sistema.
+    7. Divide el flujo de caja ajustado entre la inversión total para obtener el retorno proyectado.
+
+  --- decision_franquiciar_vs_expansion_propia ---
+  TITULO   : Decisión Estratégica: Franquiciar vs. Expansión con Unidades Propias vs. Capital Externo
+  FUENTE   : Franchise Your Business - Mark Siebert
+  DOMINIO  : franquicias
+  ENTREGABLE: Documento comparativo de escenarios de crecimiento (status quo, unidades propias, franquicia, capital externo) con proyecciones a 5-10 años y la estrategia final seleccionada.
+  PASOS (6):
+    1. Define tu meta financiera personal: valoración objetivo del negocio y plazo de retiro o venta.
+    2. Calcula el escenario de mantener el negocio tal como está (status quo) a 5-10 años.
+    3. Modela el escenario de abrir más unidades propias: capital requerido, financiamiento y retorno proyectado.
+    4. Modela el escenario de franquiciar: ingresos por regalías y fees, inversión inicial del programa y ritmo de apertura.
+    5. Modela el escenario de traer un socio de capital: dilución de equity versus capital aportado.
+    6. Compara todos los escenarios contra tu meta y selecciona la estrategia, o combinación, que cierre la brecha dentro del plazo y riesgo que aceptas.
+
+==============================================================================
+LD-OPC05-020  [19 de 66]  clase de hoy: C
+PAR: calibra_tu_propio_ojo <-> mide_lo_que_de_verdad_mueve_la_aguja
+RAZON ORIGINAL: calibrar tu juicio con rangos al noventa por ciento contra el analisis de sensibilidad que elige que incertidumbre reducir
+==============================================================================
+
+  --- calibra_tu_propio_ojo ---
+  TITULO   : Calibración del Juicio
+  FUENTE   : Hubbard, The Failure of Risk Management
+  DOMINIO  : risk_management
+  ENTREGABLE: Un registro de tus estimaciones con rango y su resultado real, que muestra qué tan calibrado estás.
+  PASOS (4):
+    1. En tus próximas diez estimaciones, da rangos con noventa por ciento de confianza.
+    2. Cuando sepas el resultado real, cuenta cuántas veces cayó dentro de tu rango.
+    3. Si aciertas menos de nueve de diez, amplía tus rangos: estás sobreconfiado.
+    4. Usa la prueba de la apuesta: si por dinero ampliarías el rango, es que era muy estrecho.
+
+  --- mide_lo_que_de_verdad_mueve_la_aguja ---
+  TITULO   : Análisis de Sensibilidad
+  FUENTE   : DeMarco y Lister, Waltzing with Bears
+  DOMINIO  : risk_management
+  ENTREGABLE: Tus supuestos ordenados por cuánto mueven el resultado, con los dos o tres decisivos marcados para medir primero.
+  PASOS (4):
+    1. Lista los supuestos inciertos detrás de tu decisión o tu proyección.
+    2. Pregunta de cada uno: si me equivoco en este, cuánto cambia el resultado final.
+    3. Marca los dos o tres que más mueven la aguja e ignora por ahora los demás.
+    4. Concentra tu siguiente esfuerzo de medición en reducir la incertidumbre de esos pocos.
+
+==============================================================================
+LD-OPC05-021  [20 de 66]  clase de hoy: C
+PAR: calidad_de_diseno_vs_produccion <-> costo_de_mala_calidad_copq
+RAZON ORIGINAL: calidad de diseno contra calidad de produccion y su brecha, frente al COPQ y sus cuatro categorias de costo
+==============================================================================
+
+  --- calidad_de_diseno_vs_produccion ---
+  TITULO   : Calidad de Diseño vs. Calidad de Producción
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Especificación de diseño validada contra necesidades del cliente y sistema de medición de conformidad en producción
+  PASOS (4):
+    1. Definir claramente los requisitos del cliente antes de diseñar el producto o servicio
+    2. Documentar los procedimientos y programas que garantizan ese diseño
+    3. Medir la brecha entre lo diseñado y lo efectivamente producido
+    4. Investigar causas raíz de las desviaciones, no solo los síntomas
+
+  --- costo_de_mala_calidad_copq ---
+  TITULO   : Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Reporte cuantificado del COPQ desglosado por categorías y como porcentaje de ventas, con los segmentos que concentran el mayor costo y una meta de reducción anual
+  PASOS (6):
+    1. Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad
+    2. Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos
+    3. Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real
+    4. Identifica los pocos procesos o productos que concentran la mayor parte del costo
+    5. Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio
+    6. Establece una meta de reducción anual y repite el cálculo periódicamente para verificar la tendencia
+
+==============================================================================
+LD-OPC05-022  [21 de 66]  clase de hoy: C
+PAR: canales_distribucion <-> eventos_offline_como_canal_traccion
+RAZON ORIGINAL: el bloque de Canales del Canvas con sus cinco fases contra los eventos presenciales como canal concreto de traccion
+==============================================================================
+
+  --- canales_distribucion ---
+  TITULO   : Bloque de Canales (Channels)
+  FUENTE   : Business Model Generation - Osterwalder, Alexander
+  DOMINIO  : core
+  ENTREGABLE: Mapa de canales por segmento de cliente con fases cubiertas y tipo (propio/socio, directo/indirecto)
+  PASOS (4):
+    1. Mapear las 5 fases del canal (conocimiento, evaluación, compra, entrega, post-venta) para cada segmento
+    2. Decidir si usar canales propios (mayor margen, mayor costo) o de socios (menor margen, mayor alcance)
+    3. Evaluar la integración entre canales para generar una experiencia de cliente coherente
+    4. Calcular costo-eficiencia de cada canal seleccionado
+
+  --- eventos_offline_como_canal_traccion ---
+  TITULO   : Eventos presenciales para conseguir tus primeros clientes (canal de tracción)
+  FUENTE   : Traction - Gabriel Weinberg
+  DOMINIO  : core
+  ENTREGABLE: Un evento presencial piloto (encuentro o mini charla) que planeaste y realizaste, con la asistencia y el interés generado anotados
+  PASOS (10):
+    1. Piensa si las personas a las que quieres llegar comparten intereses o buscan comunidad
+    2. Empieza con un evento pequeño y de bajo costo, como una mini charla de un día; pregunta el precio en tu mercado, o un evento lujoso multi-día para decision makers de alto nivel
+    3. Invita a tres emprendedores o expertos locales relevantes para que den charlas cortas, y sin que el evento parezca un pitch de ventas
+    4. Busca un espacio accesible, como una universidad, para reducir gastos
+    5. Si el evento pequeño funciona, anímate a organizar uno más grande con auspiciantes
+    6. Mantén el precio de entrada relativamente alto para asegurar que quien va realmente esté interesado
+    7. Facilita que los que dan charlas y los asistentes se conecten entre sí, con almuerzos compartidos o mesas de conversación
+    8. Validar la demanda del evento preguntando directamente a tu audiencia (encuesta, venta anticipada de entradas).
+    9. Usar transmisión en vivo o meetups satélite para expandir el alcance sin aumentar costos de viaje.
+    10. Repetir el evento anualmente una vez validado, ajustando precio y escala según la demanda comprobada.
+
+==============================================================================
+LD-OPC05-023  [22 de 66]  clase de hoy: C
+PAR: cap_table_basico <-> metodo_conversion_notas_cap_table
+RAZON ORIGINAL: armar el cap table basico (pre y post money, bolsa de opciones) contra convertir notas convertibles por tres metodos distintos
+==============================================================================
+
+  --- cap_table_basico ---
+  TITULO   : Cómo armar tu tabla de reparto de acciones (cap table)
+  FUENTE   : Venture Deals - Brad Feld
+  DOMINIO  : core
+  ENTREGABLE: Tu tabla de capitalización completa y verificada, con cada tipo de acción, su porcentaje y el precio por acción calculados correctamente
+  PASOS (7):
+    1. Lista las acciones que tienes como fundador antes de recibir la inversión
+    2. Define la valuación antes de la inversión (pre-money) y el monto que vas a recibir, para calcular la valuación después de la inversión (post-money)
+    3. Calcula el porcentaje que le corresponde al inversionista dividiendo lo que invierte entre la valuación post-money
+    4. Si vas a crear una bolsa de opciones después de la inversión, resta ese porcentaje del tuyo para saber cuánto te queda realmente
+    5. Resuelve lo que falta en tu tabla (total de acciones, precio por acción) con álgebra básica
+    6. Verifica tus cálculos comparando la valuación pre-money implícita contra el número de acciones y el precio por acción
+    7. Usa decimales o fracciones de acciones en los cálculos intermedios y redondea solo al final
+
+  --- metodo_conversion_notas_cap_table ---
+  TITULO   : Cómo convertir tus notas convertibles en el reparto de acciones (cap table)
+  FUENTE   : Venture Deals - Brad Feld
+  DOMINIO  : core
+  ENTREGABLE: Un análisis comparativo de los tres métodos de conversión, con la elección documentada en el documento de términos (term sheet) de tu ronda Serie A
+  PASOS (6):
+    1. Identifica la valuación acordada antes de la inversión, el monto que invertirá la Serie A, el capital más interés de tus notas, y la tasa de descuento
+    2. Calcula el resultado si fijas la valuación antes de la inversión (método pre-money) y derivas el precio de conversión con el descuento
+    3. Calcula el resultado si fijas el porcentaje de propiedad de los inversionistas de la Serie A (método de porcentaje fijo)
+    4. Calcula el resultado si fijas el valor de tu empresa después de la inversión (método de dólares invertidos): valor después de la inversión igual a valor antes más inversión más notas convertidas
+    5. Compara los tres escenarios de dilución para ti, los tenedores de notas y los inversionistas de la Serie A
+    6. Negocia y deja por escrito en el documento de términos (term sheet) qué método vas a usar
+
+==============================================================================
+LD-OPC05-024  [23 de 66]  clase de hoy: C
+PAR: causas_comunes_vs_especiales <-> mejora_continua_del_proceso
+RAZON ORIGINAL: el procedimiento estadistico que separa causas contra la mejora continua diaria de Deming, que pregunta que se hizo hoy para mejorar
+==============================================================================
+
+  --- causas_comunes_vs_especiales ---
+  TITULO   : Causas Comunes vs Causas Especiales de Variación
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Gráfico de corrida o de control con los puntos clasificados como causa común o especial y un plan de acción diferenciado para cada tipo.
+  PASOS (15):
+    1. Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes
+    2. Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos
+    3. Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales
+    4. Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla
+    5. Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas
+    6. Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales
+    7. Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo
+    8. Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+    9. Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).
+    10. Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.
+    11. Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.
+    12. Comunicar a los equipos que el objetivo es identificar problemas, no culpables
+    13. Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo
+    14. Fomentar la colaboración entre turnos y departamentos para resolver causas comunes
+    15. Analizar la distribución de errores o defectos entre todas las personas usando limites de control
+
+  --- mejora_continua_del_proceso ---
+  TITULO   : Mejora Continua del Proceso (Never-Ending Improvement)
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Plan de mejora continua documentado con métricas de proceso (no solo de resultado) y evidencia de reducción de proveedores por ítem crítico
+  PASOS (5):
+    1. Preguntar diariamente qué se hizo para mejorar el conocimiento y habilidad en el puesto de trabajo
+    2. Evaluar si cada nuevo producto o servicio es mejor que el anterior
+    3. Trabajar en procesos, materiales y componentes en lugar de solo medir resultados finales
+    4. Verificar que las pruebas del producto final estén en control estadístico
+    5. Reducir progresivamente a un proveedor único por artículo mediante colaboración continua
+
+==============================================================================
+LD-OPC05-025  [24 de 66]  clase de hoy: C
+PAR: checklist_sistema_stage_gate_primera_clase <-> mitos_stage_gate
+RAZON ORIGINAL: el checklist de un Stage Gate de primera clase contra la desmitificacion de lo que Stage Gate NO es: uno construye, el otro desmonta creencias
+==============================================================================
+
+  --- checklist_sistema_stage_gate_primera_clase ---
+  TITULO   : Checklist de un Sistema Stage-Gate de Primera Clase
+  FUENTE   : Winning at New Products - Robert G. Cooper
+  DOMINIO  : core
+  ENTREGABLE: Auditoría completa del sistema Stage-Gate de la empresa contra la lista de siete características de primera clase, con plan de acción para las brechas identificadas.
+  PASOS (7):
+    1. Documentar completamente el proceso: etapas, actividades, gates, criterios y entregables
+    2. Medir el grado real de adopción del proceso por los equipos (no solo su existencia)
+    3. Evaluar si el proceso facilita o entorpece el acceso a recursos
+    4. Implementar métricas de cumplimiento (compliance) del proceso
+    5. Crear versiones escalables del proceso según el riesgo y tamaño del proyecto
+    6. Designar un gerente de proceso responsable de coaching y mejora continua
+    7. Revisar y actualizar el proceso cada 3-5 años
+
+  --- mitos_stage_gate ---
+  TITULO   : Lo que Stage-Gate NO es (Desmitificación)
+  FUENTE   : Winning at New Products - Robert G. Cooper
+  DOMINIO  : core
+  ENTREGABLE: Autoevaluación documentada del proceso actual de la empresa, identificando y corrigiendo cuáles de estos 'mitos' se están cometiendo.
+  PASOS (5):
+    1. Verificar que el proceso permita actividades en paralelo, no solo secuenciales
+    2. Confirmar que existan flexibilidad y posibilidad de saltar u omitir etapas según el riesgo del proyecto
+    3. Asegurarse de que el proceso combine Stage-Gate (macro proceso) con gestión de proyectos (micro proceso, ej. Agile, Gantt)
+    4. Eliminar burocracia, papeleo y reuniones que no agreguen valor
+    5. Dar importancia real al front-end (ideación, definición y business case) y no solo al desarrollo/lanzamiento
+
+==============================================================================
+LD-OPC05-026  [25 de 66]  clase de hoy: C
+PAR: cierre_segun_complejidad_venta <-> escala_actitud_cierre
+RAZON ORIGINAL: la efectividad del cierre segun complejidad de venta contra el cuestionario de 15 afirmaciones que mide la ACTITUD del vendedor hacia el cierre
+==============================================================================
+
+  --- cierre_segun_complejidad_venta ---
+  TITULO   : Efectividad del Cierre según la Complejidad de la Venta
+  FUENTE   : SPIN Selling - Neil Rackham
+  DOMINIO  : core
+  ENTREGABLE: Una estrategia de ventas diferenciada según el tipo de venta (transaccional vs. consultiva/compleja)
+  PASOS (12):
+    1. Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y tambien por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión
+    2. Si es venta pequeña y transaccional: aplicar técnicas de cierre tradicionales sin restricción
+    3. Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN)
+    4. Revisar el proceso de venta completo, no solo el cierre, para identificar el verdadero factor decisivo del éxito
+    5. Capacitar al equipo de ventas diferenciando el enfoque según el tipo de venta que manejan
+    6. Medir tiempo de transacción y tasa de éxito antes/después de cambiar el enfoque
+    7. Construir la relación en base a confianza y transparencia en lugar de tácticas de persuasión
+    8. Diseñar la estrategia de seguimiento entre llamadas, ya que las decisiones importantes ocurren cuando el vendedor no está presente
+    9. Anticipar que el cliente evaluará también la relación con el vendedor, no solo el producto, en decisiones grandes
+    10. Auditar el uso de técnicas de cierre en tu equipo comercial mediante observación de llamadas reales
+    11. Comparar tasas de éxito entre vendedores que usan muchas técnicas de cierre vs. pocas
+    12. Mide la satisfacción post-venta para detectar si tus técnicas de cierre están dañando la relación con el cliente.
+
+  --- escala_actitud_cierre ---
+  TITULO   : Escala de Actitud hacia el Cierre de Ventas
+  FUENTE   : SPIN Selling - Neil Rackham
+  DOMINIO  : core
+  ENTREGABLE: Puntaje individual de actitud hacia el cierre, con diagnóstico de si el vendedor necesita reorientar su enfoque hacia técnicas consultivas (SPIN) en vez de cierre agresivo.
+  PASOS (4):
+    1. Responder el cuestionario de 15 afirmaciones sobre creencias de cierre
+    2. Calcular el puntaje según las instrucciones de interpretación
+    3. Identificar si existe sesgo hacia técnicas de cierre agresivo vs. enfoque consultivo
+    4. Usar el resultado para ajustar el enfoque de entrenamiento o coaching individual del vendedor
+
+==============================================================================
+LD-OPC05-027  [26 de 66]  clase de hoy: C
+PAR: cierre_segun_complejidad_venta <-> metodologia_spin_selling
+RAZON ORIGINAL: la efectividad del cierre segun complejidad contra la metodologia SPIN y su diagnostico de venta pequena o grande
+==============================================================================
+
+  --- cierre_segun_complejidad_venta ---
+  TITULO   : Efectividad del Cierre según la Complejidad de la Venta
+  FUENTE   : SPIN Selling - Neil Rackham
+  DOMINIO  : core
+  ENTREGABLE: Una estrategia de ventas diferenciada según el tipo de venta (transaccional vs. consultiva/compleja)
+  PASOS (12):
+    1. Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y tambien por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión
+    2. Si es venta pequeña y transaccional: aplicar técnicas de cierre tradicionales sin restricción
+    3. Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN)
+    4. Revisar el proceso de venta completo, no solo el cierre, para identificar el verdadero factor decisivo del éxito
+    5. Capacitar al equipo de ventas diferenciando el enfoque según el tipo de venta que manejan
+    6. Medir tiempo de transacción y tasa de éxito antes/después de cambiar el enfoque
+    7. Construir la relación en base a confianza y transparencia en lugar de tácticas de persuasión
+    8. Diseñar la estrategia de seguimiento entre llamadas, ya que las decisiones importantes ocurren cuando el vendedor no está presente
+    9. Anticipar que el cliente evaluará también la relación con el vendedor, no solo el producto, en decisiones grandes
+    10. Auditar el uso de técnicas de cierre en tu equipo comercial mediante observación de llamadas reales
+    11. Comparar tasas de éxito entre vendedores que usan muchas técnicas de cierre vs. pocas
+    12. Mide la satisfacción post-venta para detectar si tus técnicas de cierre están dañando la relación con el cliente.
+
+  --- metodologia_spin_selling ---
+  TITULO   : Metodología SPIN Selling
+  FUENTE   : SPIN Selling - Neil Rackham
+  DOMINIO  : core
+  ENTREGABLE: Diagnóstico escrito de qué tipo de venta maneja el usuario (pequeña vs grande) y decisión de adoptar el enfoque SPIN en lugar de técnicas tradicionales
+  PASOS (4):
+    1. Diagnosticar si tu venta es 'pequeña' (una sola llamada, bajo valor) o 'grande' (ciclo largo, alto valor, decisión pública)
+    2. Abandonar el enfoque en cierres agresivos y manejo de objeciones si vendes productos/servicios de alto valor
+    3. Prepararse para usar preguntas de Situación, Problema, Implicación y Necesidad-Beneficio (se detallan en capítulos posteriores)
+    4. Medir el impacto de la investigación mejorada: los estudios muestran incrementos de más del 20% en volumen de ventas
+
+==============================================================================
+LD-OPC05-028  [27 de 66]  clase de hoy: C
+PAR: cinco_porques_master <-> five_whys_inversion_proporcional
+RAZON ORIGINAL: designar al maestro de los cinco porques y su regla de disparo contra la sesion misma con inversion proporcional al nivel del problema
+==============================================================================
+
+  --- cinco_porques_master ---
+  TITULO   : Designar un Maestro de los Cinco Porqués
+  FUENTE   : The Lean Startup - Eric Ries
+  DOMINIO  : core
+  ENTREGABLE: Persona designada como Five Whys Master, con regla de activación documentada y primer área piloto definida
+  PASOS (5):
+    1. Elegir a una persona con suficiente autoridad para asegurar cumplimiento de las tareas asignadas, pero con disponibilidad para asistir a las sesiones
+    2. Comenzar con una categoría de síntomas específica y de bajo riesgo (ej. una herramienta interna, no un sistema crítico de clientes)
+    3. Definir una regla simple e inequívoca sobre qué tipo de incidentes disparan automáticamente una sesión de Cinco Porqués
+    4. Expandir gradualmente el alcance del proceso a medida que el equipo gana experiencia y confianza
+    5. Evaluar periódicamente si las inversiones de prevención realizadas están reduciendo la frecuencia/severidad de los problemas
+
+  --- five_whys_inversion_proporcional ---
+  TITULO   : Los Cinco Porqués con Inversión Proporcional
+  FUENTE   : The Lean Startup - Eric Ries
+  DOMINIO  : core
+  ENTREGABLE: Documento de sesión Five Whys con cadena de causas, responsables asignados y acciones proporcionales implementadas
+  PASOS (7):
+    1. Ante un incidente o error, preguntar '¿por qué ocurrió?' de forma iterativa (mínimo 5 veces)
+    2. Para cada respuesta, asignar una persona responsable y una acción proporcional al nivel del problema
+    3. Documentar tanto el aprendizaje obtenido como las acciones correctivas tomadas
+    4. Evitar culpar a individuos; enfocar el análisis en procesos y sistemas
+    5. Revisar después de un tiempo si el problema se repitió para validar la efectividad de las correcciones
+    6. Cuando ocurra un fallo o síntoma negativo, reunir a todas las personas involucradas en su descubrimiento, diagnóstico y resolución
+    7. Identificar en cada nivel si la causa es técnica o humana/organizacional
+
+==============================================================================
+LD-OPC05-029  [28 de 66]  clase de hoy: C
+PAR: clausula_no_shop_adquisicion <-> condiciones_de_cierre_adquisicion
+RAZON ORIGINAL: la clausula no shop de 45 a 60 dias contra la lista de condiciones de cierre del LOI
+==============================================================================
+
+  --- clausula_no_shop_adquisicion ---
+  TITULO   : Cláusula No-Shop en Procesos de Venta de la Empresa
+  FUENTE   : Venture Deals - Brad Feld
+  DOMINIO  : core
+  ENTREGABLE: Cláusula de no-shop con duración y condiciones de salida claramente definidas en el LOI.
+  PASOS (4):
+    1. Negociar una duración de no-shop entre 45 y 60 días.
+    2. Incluir cláusula de terminación automática si el comprador abandona el proceso.
+    3. Evitar sobre-negociar en el momento de solicitud de extensión del no-shop.
+    4. Considerar excepciones (carve-outs) como rondas de financiamiento durante el período de no-shop.
+
+  --- condiciones_de_cierre_adquisicion ---
+  TITULO   : Condiciones de Cierre (Conditions to Close) en el LOI
+  FUENTE   : Venture Deals - Brad Feld
+  DOMINIO  : core
+  ENTREGABLE: Lista de condiciones de cierre negociada y con plan de resolución temprana.
+  PASOS (4):
+    1. Revisar la lista completa de condiciones de cierre propuestas por el comprador.
+    2. Cuestionar condiciones inusualmente restrictivas o específicas desde el inicio.
+    3. Resolver condiciones complejas (ej. liquidación de subsidiarias) temprano en el due diligence.
+    4. Evaluar el nivel de compromiso del comprador según la complejidad de las condiciones.
+
+==============================================================================
+LD-OPC05-030  [29 de 66]  clase de hoy: C
+PAR: community_building_estrategia <-> eventos_offline_como_canal_traccion
+RAZON ORIGINAL: construir comunidad con mision, meta discusion y moderacion delegada contra organizar eventos presenciales con precio, espacio y auspiciantes
+==============================================================================
+
+  --- community_building_estrategia ---
+  TITULO   : Construcción de Comunidad (Community Building)
+  FUENTE   : Traction - Gabriel Weinberg
+  DOMINIO  : core
+  ENTREGABLE: Documento de misión de comunidad, guías de calidad definidas y un plan de reconocimiento a evangelistas tempranos
+  PASOS (9):
+    1. Definir una misión clara y significativa que la comunidad pueda adoptar como propia
+    2. Aprovechar una audiencia existente (blog, redes) para dar feedback previo al lanzamiento, incluidas comunidades complementarias existentes online y offline
+    3. Crear espacios de meta-discusión donde los usuarios hablen sobre la comunidad misma
+    4. Reconocer y agradecer personalmente a los evangelistas tempranos (emails, regalos, eventos)
+    5. Establecer guías de calidad claras y visibles desde el inicio
+    6. Delegar cierta moderación a la propia comunidad (sistemas de karma/votación)
+    7. Combinar community building con otros canales como eventos offline y speaking
+    8. Evaluar si tu modelo de negocio se presta naturalmente a la construcción de comunidad (¿tu valor central conecta personas?).
+    9. Fomentar la conexión cruzada entre miembros de la comunidad, no solo entre miembro-empresa.
+
+  --- eventos_offline_como_canal_traccion ---
+  TITULO   : Eventos presenciales para conseguir tus primeros clientes (canal de tracción)
+  FUENTE   : Traction - Gabriel Weinberg
+  DOMINIO  : core
+  ENTREGABLE: Un evento presencial piloto (encuentro o mini charla) que planeaste y realizaste, con la asistencia y el interés generado anotados
+  PASOS (10):
+    1. Piensa si las personas a las que quieres llegar comparten intereses o buscan comunidad
+    2. Empieza con un evento pequeño y de bajo costo, como una mini charla de un día; pregunta el precio en tu mercado, o un evento lujoso multi-día para decision makers de alto nivel
+    3. Invita a tres emprendedores o expertos locales relevantes para que den charlas cortas, y sin que el evento parezca un pitch de ventas
+    4. Busca un espacio accesible, como una universidad, para reducir gastos
+    5. Si el evento pequeño funciona, anímate a organizar uno más grande con auspiciantes
+    6. Mantén el precio de entrada relativamente alto para asegurar que quien va realmente esté interesado
+    7. Facilita que los que dan charlas y los asistentes se conecten entre sí, con almuerzos compartidos o mesas de conversación
+    8. Validar la demanda del evento preguntando directamente a tu audiencia (encuesta, venta anticipada de entradas).
+    9. Usar transmisión en vivo o meetups satélite para expandir el alcance sin aumentar costos de viaje.
+    10. Repetir el evento anualmente una vez validado, ajustando precio y escala según la demanda comprobada.
+
+==============================================================================
+LD-OPC05-031  [30 de 66]  clase de hoy: C
+PAR: compatibilidad_motivaciones_riqueza_control <-> dilema_riqueza_vs_control
+RAZON ORIGINAL: DISCUTIBLE 2, EL MAS AJUSTADO DE LOS CUATRO. El paso 1 de compatibilidad y el paso 2 del dilema son casi la misma linea. Se sostiene C porque el sujeto es distinto: compatibilidad se pregunta por TI Y TU SOCIO antes de asociarse, el dilema se pregunta por TI SOLO en cada decision de financiamiento
+==============================================================================
+
+  --- compatibilidad_motivaciones_riqueza_control ---
+  TITULO   : Compatibilidad de motivaciones: riqueza contra control
+  FUENTE   : The Founder's Dilemmas - Wasserman, Noam
+  DOMINIO  : core
+  ENTREGABLE: Una conversacion documentada o un acuerdo informal sobre la motivacion de cada uno y el análisis de si son compatibles como equipo
+  PASOS (7):
+    1. Pregúntate honestamente si lo que mas te importa es la riqueza o el control antes de asociarte con alguien
+    2. Habla abiertamente de tu motivacion con tu posible socio antes de lanzar el proyecto juntos, y sobre cada fork de decisión (financiamiento, equity, roles)
+    3. Detecta si hay una fuente de conflicto por el rol de liderazgo cuando las motivaciones no calzan
+    4. Si ambos buscan control, anticipa el choque de poder y define desde el inicio como lo van a resolver, sin caer en un liderazgo compartido ambiguo
+    5. Si hay un mix de motivaciones, confirma que de verdad confias en la capacidad de tu socio antes de cederle esa autoridad
+    6. Usar una matriz tipo Figura 11.1 para simular escenarios futuros y verificar consenso.
+    7. Decidir explícitamente, antes de fundar, si existe compatibilidad motivacional suficiente para evitar conflictos destructivos.
+
+  --- dilema_riqueza_vs_control ---
+  TITULO   : Elegir entre hacerte rico o mantener el control (Rich vs. King)
+  FUENTE   : The Founder's Dilemmas - Wasserman, Noam
+  DOMINIO  : core
+  ENTREGABLE: Una declaración clara de tus prioridades, riqueza o control, que guíe tus futuras decisiones de financiamiento, contratación y gobierno de tu empresa
+  PASOS (6):
+    1. Reflexiona con honestidad sobre qué es más importante para ti: maximizar el valor de salida o mantener el control de las decisiones clave
+    2. Pregúntate si tu motivación principal es la riqueza financiera o el control, porque eso anticipa cómo vas a responder ante futuras decisiones de financiamiento o crecimiento
+    3. Evalúa, en cada decisión de financiamiento o contratación, cuánto control pierdes a cambio de cuánto valor ganas
+    4. Define con claridad qué decisiones no estás dispuesto a ceder en cuanto a control, por ejemplo la dirección estratégica o la cultura, y cuáles sí puedes soltar a cambio de recursos
+    5. Considera estructuras híbridas, como acciones con derechos de voto diferenciados, si quieres conservar el control mientras consigues capital
+    6. Ten presente que crecer rápido o levantar capital de riesgo suele significar sacrificar control
+
+==============================================================================
+LD-OPC05-032  [31 de 66]  clase de hoy: C
+PAR: compromiso_linea_tiempo_cliente <-> modelo_spin_preguntas
+RAZON ORIGINAL: pedir compromiso de fecha y respuesta si o no contra la secuencia SPIN de preguntas de situacion, problema, implicacion y necesidad beneficio
+==============================================================================
+
+  --- compromiso_linea_tiempo_cliente ---
+  TITULO   : Compromiso con Línea de Tiempo de Compra
+  FUENTE   : Traction - Gabriel Weinberg
+  DOMINIO  : core
+  ENTREGABLE: Acuerdo o documento de compromiso con fecha y condiciones claras de decisión de compra por parte del prospecto
+  PASOS (7):
+    1. Definir un plan de acción claro para el prospecto (ej. pilot de X semanas)
+    2. Comunicar explícitamente el cronograma y las condiciones de decisión
+    3. Solicitar un compromiso de respuesta sí/no al finalizar el plazo
+    4. Documentar y dar seguimiento a la fecha comprometida
+    5. Descartar o re-clasificar a los prospectos que no confirman compromiso
+    6. Establecer un timeline claro de compra y pedir compromiso explícito (sí/no) al prospecto
+    7. Documentar el acuerdo de cierre por escrito con el cliente
+
+  --- modelo_spin_preguntas ---
+  TITULO   : Modelo SPIN: Secuencia de Preguntas de Venta
+  FUENTE   : SPIN Selling - Neil Rackham
+  DOMINIO  : core
+  ENTREGABLE: Guion o banco de preguntas SPIN personalizado por cliente o producto, listo para tu próxima llamada de venta clave
+  PASOS (9):
+    1. Prepara preguntas de Situación mínimas y específicas sobre el contexto del cliente, usándolas con moderación
+    2. Formula preguntas de Problema para identificar dificultades o insatisfacciones del cliente
+    3. Desarrolla preguntas de Implicación que conecten el problema con consecuencias mayores no obvias
+    4. Cierra con preguntas de Necesidad-Beneficio para que el cliente exprese el valor de resolver el problema
+    5. Ajusta la secuencia según el flujo natural de la conversación sin forzar el orden rígido
+    6. Presenta tu solución recién cuando el cliente haya articulado la Necesidad Explícita
+    7. Deja de entrenarte en distinguir preguntas abiertas de cerradas; ese no es el factor que marca la diferencia
+    8. Practica pasar de un tipo de pregunta a otro sin que se note, en llamadas reales
+    9. Revisa tus llamadas o tus notas para detectar en qué parte de la secuencia te trabas
+
+==============================================================================
+LD-OPC05-033  [32 de 66]  clase de hoy: C
+PAR: concepcion_hormica_del_pensamiento <-> cuatro_etapas_del_pensamiento_creativo
+RAZON ORIGINAL: la concepcion hormica que permite que el pensamiento avance a saltos contra las cuatro etapas de Wallas con su incubacion e iluminacion
+==============================================================================
+
+  --- concepcion_hormica_del_pensamiento ---
+  TITULO   : Concepción Hórmica del Pensamiento (vs. Mecanicista)
+  FUENTE   : The Art of Thought - Wallas, Graham
+  DOMINIO  : core
+  ENTREGABLE: Una actitud/marco mental documentado (diario de pensamiento o notas de proceso) donde el usuario registra cómo diferentes impulsos (intuitivos, emocionales, lógicos) contribuyeron a una idea, sin forzar un único camino racional.
+  PASOS (4):
+    1. Al enfrentar un problema creativo, evitar forzar un proceso puramente lógico/lineal de principio a fin.
+    2. Permitir que distintas 'partes' del pensamiento (intuición, emoción, análisis, memoria) actúen de forma semi-independiente sin intentar controlarlas todas simultáneamente.
+    3. Reconocer y aceptar que el pensamiento puede avanzar de forma desigual, con saltos, retrocesos y aportes de fuentes no puramente racionales.
+    4. Dejar de exigirse una integración mental perfecta; aceptar la tensión entre impulsos como parte natural del proceso creativo.
+
+  --- cuatro_etapas_del_pensamiento_creativo ---
+  TITULO   : Las Cuatro Etapas del Pensamiento Creativo (Wallas)
+  FUENTE   : The Art of Thought - Graham Wallas
+  DOMINIO  : core
+  ENTREGABLE: Una bitácora del proceso creativo, con notas de preparación, incubación e iluminación, y una idea validada lógicamente lista para pasar a prototipado.
+  PASOS (6):
+    1. Preparación: define claramente el problema e investígalo a fondo, reuniendo toda la información relevante posible
+    2. Incubación: aléjate deliberadamente del problema (duerme, camina, trabaja en otra cosa) sin forzar conscientemente una solución, creando condiciones de silencio, actividad relajada
+    3. Lleva contigo una libreta o notas de voz para capturar cualquier señal sutil de que una idea se está formando, o el momento en que llega completa, como indicio de Intimación
+    4. Iluminación: cuando llegue el destello de la idea, captúralo de inmediato sin filtrarlo con crítica
+    5. Verificación: somete la idea capturada a un análisis lógico riguroso y a pruebas antes de implementarla
+    6. Anota en qué etapa se encuentra cada idea que estés trabajando, preparación, incubación, iluminación o verificación, para no perder el hilo
+
+==============================================================================
+LD-OPC05-034  [33 de 66]  clase de hoy: C
+PAR: conexion_personal_emocional <-> rediseno_procesos_negocio_cx
+RAZON ORIGINAL: conectar con datos personales y emocionales contra el redisenio de 16 pasos de los procesos internos que generan friccion
+==============================================================================
+
+  --- conexion_personal_emocional ---
+  TITULO   : Conexión mediante Datos Personales y Emocionales
+  FUENTE   : Never Lose a Customer Again - Joey Coleman
+  DOMINIO  : core
+  ENTREGABLE: Una lista de al menos 3 tipos de datos personales o emocionales por cada segmento de cliente, con un plan concreto de cómo vas a usarlos
+  PASOS (5):
+    1. Clasifica los datos que tienes de tus clientes en personales, emocionales, o ambos a la vez
+    2. Da prioridad a recolectar los datos que caen en ambas categorías
+    3. Usa siempre el nombre del cliente en tus interacciones, nunca un número de cliente
+    4. Crea pequeños rituales de reconocimiento con esos datos, por ejemplo felicitarlo cuando gana su equipo favorito
+    5. Prioriza datos que sean personales (únicos de cada persona) y emocionales (con una carga afectiva positiva)
+
+  --- rediseno_procesos_negocio_cx ---
+  TITULO   : Rediseño de Procesos de Negocio Centrado en el Cliente
+  FUENTE   : Never Lose a Customer Again - Joey Coleman
+  DOMINIO  : core
+  ENTREGABLE: Un plan de transformación de tus procesos, con formación para tu gente, menos herramientas duplicadas y presupuesto pensado para varios años
+  PASOS (16):
+    1. Revisa qué procesos internos le generan fricción innecesaria a tu cliente (números distintos, sistemas duplicados)
+    2. Enseña a todas las personas que trabajan contigo, no solo a quien atiende al cliente, cuál es su papel en la experiencia que vive
+    3. Reduce la cantidad de herramientas o sistemas que usas para atender a tu cliente
+    4. Ponte tú, o quien tenga visión de todo el proceso, a cargo de la experiencia del cliente, no solo para reaccionar cuando algo falla
+    5. Destina presupuesto sostenido durante varios años para esta transformación, en lugar de soluciones rápidas y parciales
+    6. Diagnosticar si los empleados saben que la experiencia del cliente es parte de su trabajo
+    7. Diseñar un programa de capacitación peer-to-peer a gran escala con plazos definidos
+    8. Unificar las herramientas internas de información del cliente para reducir errores y fricción
+    9. Consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas
+    10. Rediseñar procesos clave (ej: agendamiento, atención telefónica) para resolución en un solo contacto
+    11. Implementar compensaciones automáticas cuando la empresa incumple su promesa de servicio
+    12. Medir el impacto con métricas antes/después (volumen de llamadas, tasa de resolución en primer contacto)
+    13. Simplifica los procesos administrativos (formularios, papeleo) con herramientas digitales para reducir la fricción
+    14. Identificar y mapear los distintos journeys del cliente (facturación, soporte, onboarding, percepción)
+    15. Diagnosticar en qué punto los departamentos se pasan la responsabilidad del cliente sin resolución
+    16. Medir el impacto cuantitativo del mal servicio (llamadas repetidas, visitas técnicas, tasa de abandono)
+
+==============================================================================
+LD-OPC05-035  [34 de 66]  clase de hoy: C
+PAR: constraint_management <-> sistema_pull_push
+RAZON ORIGINAL: la teoria de restricciones con sus cinco pasos de foco contra el rediseno del flujo de push a pull con kanbans
+==============================================================================
+
+  --- constraint_management ---
+  TITULO   : Gestión de Restricciones (Teoría de las Restricciones)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Restricción del sistema identificada con plan de acción de las 5 etapas de TOC
+  PASOS (5):
+    1. Identificar la restricción (equipo, mano de obra, información o proveedor) que limita el throughput
+    2. Decidir cómo explotar al máximo la restricción actual
+    3. Subordinar todos los demás procesos a esta decisión
+    4. Elevar el desempeño de la restricción mediante inversión o mejora
+    5. Repetir el ciclo identificando la nueva restricción
+
+  --- sistema_pull_push ---
+  TITULO   : Sistemas Pull versus Push en Producción
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Sistema de produccion rediseñado bajo logica pull con kanbans implementados y metricas de flujo mejoradas.
+  PASOS (6):
+    1. Evaluar si tu operacion actual funciona bajo un esquema push o pull
+    2. Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso
+    3. Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente
+    4. Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor
+    5. Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad
+    6. Implementar el sistema y capacitar a los operadores
+
+==============================================================================
+LD-OPC05-036  [35 de 66]  clase de hoy: C
+PAR: contacto_con_el_cliente <-> rediseno_procesos_negocio_cx
+RAZON ORIGINAL: gestionar el contacto directo con el cliente y a quien lo atiende contra redisenar los procesos internos que producen la experiencia
+==============================================================================
+
+  --- contacto_con_el_cliente ---
+  TITULO   : Gestión del Contacto con el Cliente en Organizaciones de Servicio
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Plan de selección y capacitación específico para personal de contacto directo con clientes
+  PASOS (5):
+    1. Identificar quiénes en la organización tienen contacto directo con el cliente, aunque seas tu mismo
+    2. Priorizar en la contratación la capacidad de trato y servicio al cliente
+    3. Capacitar específicamente a los 'contact men' en manejo de clientes, incluido manejar situaciones dificiles
+    4. Reconocer que toda la organización, vea o no al cliente, contribuye a construir la calidad del servicio
+    5. Revisar cada cierto tiempo que percepción tiene el cliente sobre el trato que recibe
+
+  --- rediseno_procesos_negocio_cx ---
+  TITULO   : Rediseño de Procesos de Negocio Centrado en el Cliente
+  FUENTE   : Never Lose a Customer Again - Joey Coleman
+  DOMINIO  : core
+  ENTREGABLE: Un plan de transformación de tus procesos, con formación para tu gente, menos herramientas duplicadas y presupuesto pensado para varios años
+  PASOS (16):
+    1. Revisa qué procesos internos le generan fricción innecesaria a tu cliente (números distintos, sistemas duplicados)
+    2. Enseña a todas las personas que trabajan contigo, no solo a quien atiende al cliente, cuál es su papel en la experiencia que vive
+    3. Reduce la cantidad de herramientas o sistemas que usas para atender a tu cliente
+    4. Ponte tú, o quien tenga visión de todo el proceso, a cargo de la experiencia del cliente, no solo para reaccionar cuando algo falla
+    5. Destina presupuesto sostenido durante varios años para esta transformación, en lugar de soluciones rápidas y parciales
+    6. Diagnosticar si los empleados saben que la experiencia del cliente es parte de su trabajo
+    7. Diseñar un programa de capacitación peer-to-peer a gran escala con plazos definidos
+    8. Unificar las herramientas internas de información del cliente para reducir errores y fricción
+    9. Consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas
+    10. Rediseñar procesos clave (ej: agendamiento, atención telefónica) para resolución en un solo contacto
+    11. Implementar compensaciones automáticas cuando la empresa incumple su promesa de servicio
+    12. Medir el impacto con métricas antes/después (volumen de llamadas, tasa de resolución en primer contacto)
+    13. Simplifica los procesos administrativos (formularios, papeleo) con herramientas digitales para reducir la fricción
+    14. Identificar y mapear los distintos journeys del cliente (facturación, soporte, onboarding, percepción)
+    15. Diagnosticar en qué punto los departamentos se pasan la responsabilidad del cliente sin resolución
+    16. Medir el impacto cuantitativo del mal servicio (llamadas repetidas, visitas técnicas, tasa de abandono)
+
+==============================================================================
+LD-OPC05-037  [36 de 66]  clase de hoy: C
+PAR: contract_close_out <-> contractor_status_report
+RAZON ORIGINAL: cerrar el contrato (disputas resueltas, aceptacion, pagos finales) contra el informe periodico de estado del contratista durante la ejecucion
+==============================================================================
+
+  --- contract_close_out ---
+  TITULO   : Cierre de Contrato
+  FUENTE   : A Project Manager's Book of Forms - Cynthia Stackpole Snyder
+  DOMINIO  : core
+  ENTREGABLE: Informe de Cierre de Contrato con desempeño del proveedor, cambios, disputas y firma final
+  PASOS (5):
+    1. Confirmar que todas las disputas contractuales estén resueltas
+    2. Verificar que el producto o resultado haya sido aceptado
+    3. Confirmar que se hayan realizado los pagos finales
+    4. Documentar el análisis de desempeño del proveedor y registro de cambios
+    5. Registrar la fecha de finalización del contrato y firma de cierre
+
+  --- contractor_status_report ---
+  TITULO   : Informe de Estado del Contratista
+  FUENTE   : A Project Manager's Book of Forms - Cynthia Stackpole Snyder
+  DOMINIO  : core
+  ENTREGABLE: Informe de Estado del Contratista completo con desempeño actual y pronósticos futuros
+  PASOS (5):
+    1. Solicitar al contratista el informe periódico de desempeño
+    2. Revisar el desempeño de alcance, calidad, cronograma y costo del periodo actual
+    3. Analizar los pronósticos de fecha de entrega y costo final
+    4. Registrar reclamaciones, disputas o riesgos nuevos
+    5. Integrar la información en el Informe de Desempeño del Proyecto
+
+==============================================================================
+LD-OPC05-038  [37 de 66]  clase de hoy: C
+PAR: control_estadistico_de_procesos <-> plan_de_control
+RAZON ORIGINAL: el SPC y sus diez pasos para construir la carta contra el plan de control que define quien mide, quien actua y como se vuelve a control
+==============================================================================
+
+  --- control_estadistico_de_procesos ---
+  TITULO   : Control Estadístico de Procesos (SPC)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Gráfico de control implementado con límites calculados, subgrupos racionales definidos y protocolo de interpretación/acción
+  PASOS (10):
+    1. Elegir la característica a graficar, priorizando las de alta tasa de defectos
+    2. Identificar variables y condiciones del proceso que contribuyen a la característica final
+    3. Verificar que el sistema de medición tenga precisión y exactitud suficientes
+    4. Determinar el punto más temprano de prueba para detectar causas asignables
+    5. Elegir el tipo de gráfico de control adecuado (variables o atributos)
+    6. Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio
+    7. Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5
+    8. Establecer un sistema simple y confiable de recolección de datos
+    9. Calcular límites de control y definir instrucciones de interpretación y acción
+    10. Graficar los datos e interpretar los resultados
+
+  --- plan_de_control ---
+  TITULO   : Plan de Control
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Plan de control documentado con variables, mediciones, responsables y acciones correctivas definidas
+  PASOS (10):
+    1. Identificar las variables que afectan al remedio y al cliente directa o indirectamente
+    2. Establecer el estándar que activará una acción, idealmente un límite de control de una carta de control
+    3. Definir cómo se medirá cada variable de control, especificando unidad de medida, sensor, frecuencia y tamaño de muestra
+    4. Establecer dónde, cuándo y cómo se registrarán las mediciones
+    5. Decidir quién analizará las mediciones y determinará si el proceso está fuera de control
+    6. Decidir quién actuará para diagnosticar y eliminar la causa asignable
+    7. Definir los pasos para regresar el proceso a control
+    8. Revisar la matriz para verificar completitud y efectividad, y también su cobertura de variables críticas y velocidad de respuesta
+    9. Capacitar a los dueños del proceso en el uso del plan de control.
+    10. Auditar periódicamente la efectividad del plan de control.
+
+==============================================================================
+LD-OPC05-039  [38 de 66]  clase de hoy: C
+PAR: control_estadistico_metodo_medicion <-> definiciones_operacionales_3
+RAZON ORIGINAL: validar estadisticamente el METODO DE MEDICION contra escribir definiciones operacionales que hagan reproducible un adjetivo ambiguo
+==============================================================================
+
+  --- control_estadistico_metodo_medicion ---
+  TITULO   : Control Estadístico del Método de Medición (Condición de Validez)
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Un reporte de control estadístico del sistema de medición que confirme la validez y reproducibilidad del método de prueba antes de usarlo en producción o inspección.
+  PASOS (6):
+    1. Realiza mediciones repetidas del mismo ítem con el mismo operador e instrumento y grafícalas en un R-chart.
+    2. Verifica que el rango de variación se mantenga dentro de límites de control estadístico.
+    3. Compara resultados entre diferentes operadores usando el mismo instrumento para detectar inconsistencias.
+    4. Compara resultados entre diferentes instrumentos usados por el mismo operador.
+    5. Establece criterios de reproducibilidad aceptable antes de iniciar las pruebas.
+    6. Rechaza el método de medición si no logras control estadístico o reproducibilidad adecuada.
+
+  --- definiciones_operacionales_3 ---
+  TITULO   : Definiciones Operacionales (Traducir Conceptos Abstractos)
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Un documento de especificación técnica que contenga la definición operacional completa: prueba, criterio y regla de decisión para cada característica de calidad relevante.
+  PASOS (6):
+    1. Identificar el adjetivo o concepto ambiguo que se desea especificar (ej. 'limpio', 'seguro', 'contaminado').
+    2. Definir una prueba específica y reproducible para evaluar dicho concepto.
+    3. Establecer un criterio de juicio claro y cuantificable.
+    4. Definir la regla de decisión (sí/no) sobre el cumplimiento del criterio.
+    5. Validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definición.
+    6. Escribe el procedimiento con el detalle suficiente para que cualquier persona que lo siga llegue al mismo resultado que tú.
+
+==============================================================================
+LD-OPC05-041  [39 de 66]  clase de hoy: C
+PAR: costo_de_mala_calidad_copq <-> modelo_costo_optimo_calidad
+RAZON ORIGINAL: el COPQ medido con tus registros contables contra el modelo del costo optimo y su punto de interseccion de curvas
+==============================================================================
+
+  --- costo_de_mala_calidad_copq ---
+  TITULO   : Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Reporte cuantificado del COPQ desglosado por categorías y como porcentaje de ventas, con los segmentos que concentran el mayor costo y una meta de reducción anual
+  PASOS (6):
+    1. Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad
+    2. Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos
+    3. Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real
+    4. Identifica los pocos procesos o productos que concentran la mayor parte del costo
+    5. Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio
+    6. Establece una meta de reducción anual y repite el cálculo periódicamente para verificar la tendencia
+
+  --- modelo_costo_optimo_calidad ---
+  TITULO   : Modelo de Costo Óptimo de Calidad
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Un análisis gráfico y numérico que muestre si alcanzaste el óptimo económico de calidad o si aún existen oportunidades de mejora rentables, con recomendaciones de inversión.
+  PASOS (5):
+    1. Grafica las curvas de costo de fallas y de evaluación/prevención en función del nivel de conformidad de tu producto
+    2. Identifica el punto de intersección o mínimo de la curva de costo total de calidad
+    3. Evalúa si existen proyectos de mejora cuyo beneficio supere claramente su costo
+    4. Determina si tu negocio está lejos del punto óptimo o si ya alcanzaste el límite económico de mejora
+    5. Ajusta tu presupuesto de prevención según el análisis de beneficio costo que obtuviste
+
+==============================================================================
+LD-OPC05-042  [40 de 66]  clase de hoy: C
+PAR: costo_de_mala_calidad_copq <-> rejilla_madurez_gestion_calidad
+RAZON ORIGINAL: DISCUTIBLE 3, Y ES DE INSTRUMENTO ANTES QUE DE LECTURA. Este par SOLO existe tras resolver alias: el dossier muestra copq cableando a rejilla en nodos_previos y rejilla a copq en nodos_siguientes, y la ida y vuelta aparece por la resolucion. La lectura se sostiene igual: el COPQ mide costo, la rejilla ubica al negocio en una de cinco etapas de madurez
+==============================================================================
+
+  --- costo_de_mala_calidad_copq ---
+  TITULO   : Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Reporte cuantificado del COPQ desglosado por categorías y como porcentaje de ventas, con los segmentos que concentran el mayor costo y una meta de reducción anual
+  PASOS (6):
+    1. Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad
+    2. Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos
+    3. Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real
+    4. Identifica los pocos procesos o productos que concentran la mayor parte del costo
+    5. Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio
+    6. Establece una meta de reducción anual y repite el cálculo periódicamente para verificar la tendencia
+
+  --- rejilla_madurez_gestion_calidad ---
+  TITULO   : Rejilla de Madurez de Gestión de Calidad (Quality Management Maturity Grid)
+  FUENTE   : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+  DOMINIO  : quality
+  ENTREGABLE: Diagnóstico de madurez en calidad de tu negocio con la etapa actual identificada en las seis categorías y un plan de acción hacia la siguiente etapa
+  PASOS (6):
+    1. Reúne información objetiva sobre el estado actual de la gestión de calidad en tu negocio
+    2. Ubica tu negocio en una de las cinco etapas de madurez usando las seis categorías de gestión
+    3. Evalúa honestamente según comportamientos observados, no según discursos
+    4. Compara la etapa actual con la etapa siguiente para identificar acciones concretas de mejora
+    5. Diseña un plan de transición hacia etapas de mayor madurez
+    6. Revisa periódicamente tu posición en la rejilla para monitorear avances o retrocesos
+
+==============================================================================
+LD-OPC05-043  [41 de 66]  clase de hoy: C
+PAR: costo_de_mala_calidad_copq <-> trilogia_de_juran
+RAZON ORIGINAL: el COPQ contra la trilogia de Juran (planificar, controlar, mejorar) y su distincion entre pico esporadico y desperdicio cronico
+==============================================================================
+
+  --- costo_de_mala_calidad_copq ---
+  TITULO   : Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Reporte cuantificado del COPQ desglosado por categorías y como porcentaje de ventas, con los segmentos que concentran el mayor costo y una meta de reducción anual
+  PASOS (6):
+    1. Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad
+    2. Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos
+    3. Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real
+    4. Identifica los pocos procesos o productos que concentran la mayor parte del costo
+    5. Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio
+    6. Establece una meta de reducción anual y repite el cálculo periódicamente para verificar la tendencia
+
+  --- trilogia_de_juran ---
+  TITULO   : Trilogía de Juran (Planificación, Control y Mejora)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Un diagrama o plan que muestre los tres procesos (planificación, control y mejora) aplicados a tu producto o servicio, incluyendo la clasificación del problema como esporádico o crónico.
+  PASOS (6):
+    1. Diseña tus procesos traduciendo lo que pide tu cliente en especificaciones concretas de tu producto o servicio
+    2. Verifica si el problema que enfrentas es un pico esporádico o un desperdicio crónico antes de decidir cómo actuar
+    3. Aplica control de proceso para eliminar picos esporádicos y devolver el desempeño al nivel planificado
+    4. Aplica un proceso de mejora o breakthrough para reducir el desperdicio crónico a un nivel sin precedentes
+    5. Revisa que lo que produces cumpla con los criterios de diseño originales
+    6. Integra los tres procesos como un ciclo continuo en tu forma de gestionar la calidad
+
+==============================================================================
+LD-OPC05-044  [42 de 66]  clase de hoy: C
+PAR: csf_funcion_govern <-> csf_perfiles_organizacionales
+RAZON ORIGINAL: la funcion Govern del NIST CSF contra los perfiles Current y Target y sus Tiers: una gobierna, la otra mide la brecha
+==============================================================================
+
+  --- csf_funcion_govern ---
+  TITULO   : Función Govern del NIST CSF 2.0
+  FUENTE   : NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide
+  DOMINIO  : seguridad_digital
+  ENTREGABLE: Documento de gobernanza que incluya misión del negocio, riesgos identificados, requisitos legales/regulatorios/contractuales, y designación formal de responsables de ciberseguridad
+  PASOS (7):
+    1. Documentar la misión del negocio y qué riesgos de ciberseguridad podrían impedir alcanzarla
+    2. Identificar requisitos legales, regulatorios y contractuales de ciberseguridad aplicables
+    3. Asignar formalmente quién será responsable de desarrollar y ejecutar la estrategia de ciberseguridad
+    4. Evaluar el impacto potencial de perder activos o operaciones críticas
+    5. Evaluar si un seguro de ciberseguridad es apropiado para el negocio
+    6. Evaluar riesgos de proveedores y terceros antes de formalizar relaciones comerciales
+    7. Comunicar y hacer cumplir políticas de gestión de riesgo de ciberseguridad a toda la organización
+
+  --- csf_perfiles_organizacionales ---
+  TITULO   : Perfiles Organizacionales del CSF (Current y Target Profile)
+  FUENTE   : NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide
+  DOMINIO  : seguridad_digital
+  ENTREGABLE: Documento con Current Profile y Target Profile definidos, más un análisis de brechas entre ambos
+  PASOS (5):
+    1. Documentar el Current Profile: qué resultados de ciberseguridad se están logrando actualmente y en qué medida
+    2. Definir el Target Profile: qué resultados se han priorizado como objetivo de gestión de riesgo
+    3. Considerar usar un Community Profile del sector como base para el Target Profile
+    4. Usar los CSF Tiers para calificar el rigor actual o deseado de las prácticas por Función o Categoría
+    5. Comparar Current vs Target Profile para identificar brechas y priorizar acciones futuras
+
+==============================================================================
+LD-OPC05-045  [43 de 66]  clase de hoy: C
+PAR: cuatro_etapas_del_pensamiento_creativo <-> ruptura_de_habitos_para_estimulo
+RAZON ORIGINAL: las cuatro etapas de Wallas contra la ruptura deliberada de habitos cuando detectas estancamiento
+==============================================================================
+
+  --- cuatro_etapas_del_pensamiento_creativo ---
+  TITULO   : Las Cuatro Etapas del Pensamiento Creativo (Wallas)
+  FUENTE   : The Art of Thought - Graham Wallas
+  DOMINIO  : core
+  ENTREGABLE: Una bitácora del proceso creativo, con notas de preparación, incubación e iluminación, y una idea validada lógicamente lista para pasar a prototipado.
+  PASOS (6):
+    1. Preparación: define claramente el problema e investígalo a fondo, reuniendo toda la información relevante posible
+    2. Incubación: aléjate deliberadamente del problema (duerme, camina, trabaja en otra cosa) sin forzar conscientemente una solución, creando condiciones de silencio, actividad relajada
+    3. Lleva contigo una libreta o notas de voz para capturar cualquier señal sutil de que una idea se está formando, o el momento en que llega completa, como indicio de Intimación
+    4. Iluminación: cuando llegue el destello de la idea, captúralo de inmediato sin filtrarlo con crítica
+    5. Verificación: somete la idea capturada a un análisis lógico riguroso y a pruebas antes de implementarla
+    6. Anota en qué etapa se encuentra cada idea que estés trabajando, preparación, incubación, iluminación o verificación, para no perder el hilo
+
+  --- ruptura_de_habitos_para_estimulo ---
+  TITULO   : Ruptura Deliberada de Hábitos para Renovar el Estímulo Creativo
+  FUENTE   : The Art of Thought - Wallas, Graham
+  DOMINIO  : core
+  ENTREGABLE: Un plan de ruptura de rutina documentado con nuevas prácticas temporales y un registro de ideas obtenidas durante el cambio.
+  PASOS (5):
+    1. Vigilar señales de rigidez, estancamiento o mecanización en tu propio pensamiento
+    2. Cuando detectes estancamiento, alterar deliberadamente tu rutina (cambiar horario, lugar o actividad)
+    3. Reducir temporalmente el consumo de información rutinaria como noticias o lecturas habituales
+    4. Buscar experiencias nuevas como viajes o conversaciones con desconocidos mientras sigues pensando en el problema
+    5. Alternar entre modos de trabajo, por ejemplo de escribir a dar una conferencia o viceversa
+
+==============================================================================
+LD-OPC05-046  [44 de 66]  clase de hoy: C
+PAR: cultura_de_aprendizaje <-> cultura_de_seguridad_componentes
+RAZON ORIGINAL: la cultura de aprendizaje y su ciclo de reformas contra los cuatro subcomponentes de la cultura de seguridad
+==============================================================================
+
+  --- cultura_de_aprendizaje ---
+  TITULO   : Cultura de Aprendizaje Organizacional
+  FUENTE   : Managing the Risks of Organizat - Reason, J. T_
+  DOMINIO  : health_safety
+  ENTREGABLE: Proceso institucionalizado de revisión y aplicación de lecciones aprendidas con evidencia de reformas implementadas
+  PASOS (4):
+    1. Establecer mecanismos formales de análisis de datos del sistema de reporte de seguridad, incluida una forma sistematica de observar incidentes y condiciones de riesgo, y momentos regulares para analizar y diagnosticar
+    2. Definir procesos de decisión para implementar reformas basadas en hallazgos, comprometiendo tu tiempo y tus recursos explícitamente para IMPLEMENTAR las mejoras encontradas, no solo hablar de ellas
+    3. Medir la efectividad de las reformas implementadas mediante seguimiento continuo
+    4. Institucionalizar la revisión periódica de lecciones aprendidas
+
+  --- cultura_de_seguridad_componentes ---
+  TITULO   : Componentes de la Cultura de Seguridad
+  FUENTE   : Managing the Risks of Organizat - Reason, J. T_
+  DOMINIO  : health_safety
+  ENTREGABLE: Diagnostico documentado del estado de la cultura de seguridad de tu negocio con plan de accion para fortalecer cada subcomponente
+  PASOS (4):
+    1. Evaluar el estado actual de cada uno de los cuatro subcomponentes en tu negocio
+    2. Establecer un sistema que recolecte, analice y difunda información de incidentes
+    3. Definir indicadores para medir el nivel de cultura informada de tu negocio
+    4. Tener claro y por escrito por que vale la pena invertir en estos cuatro pilares antes de decidir
+
+==============================================================================
+LD-OPC05-047  [45 de 66]  clase de hoy: C
+PAR: customer_journey_mapping <-> economia_de_la_experiencia
+RAZON ORIGINAL: mapear el viaje del cliente con shadowing y momentos de verdad contra la economia de la experiencia y su paso de consumo pasivo a participacion
+==============================================================================
+
+  --- customer_journey_mapping ---
+  TITULO   : Mapeo del Customer Journey (Viaje del Cliente)
+  FUENTE   : Change by Design, Revised and U - Tim Brown
+  DOMINIO  : core
+  ENTREGABLE: Un mapa visual del viaje del cliente con todas sus etapas y todos sus touchpoints, los momentos emocionales clave identificados, cada punto evaluado por el valor que crea y por lo memorable que resulta, levantado con la estrategia general y el detalle operativo al mismo tiempo, y con las mejoras priorizadas por impacto
+  PASOS (5):
+    1. Observa directamente a clientes reales durante toda su experiencia de servicio, acompañándolos en todo su recorrido (shadowing) y sin limitarte al punto de contacto que asumiste como el más importante
+    2. Documenta cada etapa del viaje, desde el primer contacto hasta el cierre, identificando en cada una los momentos emocionales clave (los 'momentos de verdad'), y levanta el mapa con la estrategia general y el detalle operativo al mismo tiempo
+    3. Identifica todos los 'touchpoints' donde el cliente interactúa con la marca o el servicio
+    4. Evalúa cada touchpoint con dos varas distintas: si crea valor positivo o pierde al cliente, y si solo evita una mala experiencia o genera una experiencia memorable
+    5. Prioriza las mejoras en los puntos de mayor impacto, no solo en el producto central
+
+  --- economia_de_la_experiencia ---
+  TITULO   : La Economía de la Experiencia
+  FUENTE   : Change by Design, Revised and U - Tim Brown
+  DOMINIO  : core
+  ENTREGABLE: Un análisis de touchpoints con propuestas concretas de mejora para transformar la interacción funcional en una experiencia emocionalmente resonante.
+  PASOS (6):
+    1. Analizar el producto/servicio actual e identificar si solo resuelve una función o si genera una experiencia memorable.
+    2. Mapear los puntos de contacto (touchpoints) donde el usuario podría pasar de consumo pasivo a participación activa.
+    3. Diseñar elementos que generen conexión emocional, no solo eficiencia funcional.
+    4. Evaluar la ejecución del detalle (calidad, distribución, precio, diseño físico) ya que fallas de ejecución destruyen buenas ideas.
+    5. Iterar el diseño de la experiencia con el mismo rigor que se aplicaría a la ingeniería de un producto.
+    6. Analizar ejemplos de marcas de experiencia (Whole Foods, Virgin America) para inspirar el diseño propio
+
+==============================================================================
+LD-OPC05-048  [46 de 66]  clase de hoy: C
+PAR: customer_needs_spreadsheet <-> sipoc
+RAZON ORIGINAL: la hoja de necesidades del cliente correlacionadas contra el SIPOC que define proveedores, insumos, proceso, salidas y clientes
+==============================================================================
+
+  --- customer_needs_spreadsheet ---
+  TITULO   : Hoja de Cálculo de Necesidades del Cliente (Customer Needs Spreadsheet)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Una matriz completa de clientes vs necesidades, correlacionadas con evidencia y priorizadas, lista para guiar el diseño de tu producto o servicio.
+  PASOS (6):
+    1. Crea una hoja de cálculo multicolumna
+    2. Lista en la primera columna a tus clientes, internos y externos, en orden de prioridad
+    3. Lista en la fila superior todas las necesidades descubiertas, una por columna
+    4. Correlaciona cada cliente con cada necesidad usando una leyenda basada en evidencia
+    5. Analiza la fuerza de cada relación y la importancia del cliente para priorizar las necesidades
+    6. Usa la matriz resultante para enfocar tus recursos de diseño en lo más crítico
+
+  --- sipoc ---
+  TITULO   : SIPOC (Supplier-Input-Process-Output-Customer)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Mapa SIPOC validado que define alcance, proveedores, entradas, proceso, salidas y clientes
+  PASOS (5):
+    1. Definir el proceso, nombrarlo y establecer puntos de inicio y fin
+    2. Identificar proveedores e insumos críticos recibidos
+    3. Identificar clientes y las salidas que responden a sus necesidades
+    4. Identificar de 5 a 8 pasos mayores del proceso
+    5. Validar el mapa trabajando con las funciones clave que ejecutan los pasos
+
+==============================================================================
+LD-OPC05-049  [47 de 66]  clase de hoy: C
+PAR: decision_pivotar_o_proceder <-> lienzo_modelo_negocio
+RAZON ORIGINAL: la decision de pivotar o proceder contra el lienzo mismo y sus doce pasos de construccion
+==============================================================================
+
+  --- decision_pivotar_o_proceder ---
+  TITULO   : Decisión: Pivotar o Proceder
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Documento de decisión de pivotar o proceder, con checklist completado, Business Model Canvas actualizado y evidencia de las pruebas de éxito y fracaso realizadas
+  PASOS (6):
+    1. Revisa honestamente si la validación convirtió opiniones en hechos, y no que moviste las metas para que coincidieran con el resultado
+    2. Confirma que el producto se vendió bien y fácilmente, que la llegada de clientes es predecible, escalable y rentable, y que existe un proceso de ventas repetible
+    3. Verifica que los tiempos de entrega del producto sean realistas con tu equipo de desarrollo
+    4. Toma un Business Model Canvas nuevo y busca game changers revisando propuesta de valor, precios, canales y relaciones con clientes, no solo mejoras incrementales
+    5. Presenta tu canvas a tu consejo asesor para que lo cuestione activamente
+    6. Actualiza el canvas con lo aprendido y decide formalmente si pivotar volviendo a descubrimiento o proceder avanzando a creación de clientes
+
+  --- lienzo_modelo_negocio ---
+  TITULO   : El Lienzo de Modelo de Negocio (Business Model Canvas)
+  FUENTE   : Business Model Generation - Osterwalder, Alexander
+  DOMINIO  : core
+  ENTREGABLE: Lienzo de Modelo de Negocio completo con los 9 bloques definidos y coherentes entre sí
+  PASOS (12):
+    1. Imprimir el lienzo en tamaño grande para trabajo colaborativo y un Business Model Canvas para cada miembro del equipo
+    2. Reunirse con el equipo aceptando que habrá vacíos en la primera versión
+    3. Escribir cada bloque en notas post-it sobre el lienzo
+    4. Identificar los segmentos de clientes a los que se dirige la organización
+    5. Definir la propuesta de valor para cada segmento
+    6. Mapear canales, relaciones y fuentes de ingresos
+    7. Mapear recursos, actividades y asociaciones clave
+    8. Calcular la estructura de costos y el profit resultante
+    9. Pausar para investigar más información donde haya vacíos importantes
+    10. Iterar y discutir en grupo hasta lograr coherencia entre los bloques
+    11. Publicar el canvas en el espacio de trabajo y actualizarlo conforme avanza el proyecto
+    12. Usar el lienzo como base para pivotar o validar hipótesis del negocio, y también para llevar una solución ya diseñada a un modelo de negocio viable
+
+==============================================================================
+LD-OPC05-050  [48 de 66]  clase de hoy: C
+PAR: decision_pivotar_o_proceder <-> validar_modelo_financiero
+RAZON ORIGINAL: la decision de pivotar o proceder contra validar el modelo financiero (CAC, LTV, runway, P and L)
+==============================================================================
+
+  --- decision_pivotar_o_proceder ---
+  TITULO   : Decisión: Pivotar o Proceder
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Documento de decisión de pivotar o proceder, con checklist completado, Business Model Canvas actualizado y evidencia de las pruebas de éxito y fracaso realizadas
+  PASOS (6):
+    1. Revisa honestamente si la validación convirtió opiniones en hechos, y no que moviste las metas para que coincidieran con el resultado
+    2. Confirma que el producto se vendió bien y fácilmente, que la llegada de clientes es predecible, escalable y rentable, y que existe un proceso de ventas repetible
+    3. Verifica que los tiempos de entrega del producto sean realistas con tu equipo de desarrollo
+    4. Toma un Business Model Canvas nuevo y busca game changers revisando propuesta de valor, precios, canales y relaciones con clientes, no solo mejoras incrementales
+    5. Presenta tu canvas a tu consejo asesor para que lo cuestione activamente
+    6. Actualiza el canvas con lo aprendido y decide formalmente si pivotar volviendo a descubrimiento o proceder avanzando a creación de clientes
+
+  --- validar_modelo_financiero ---
+  TITULO   : Validar el Modelo Financiero
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Un modelo financiero completo con pruebas pass/fail identificadas que demuestre la viabilidad de escalar el negocio de forma rentable
+  PASOS (6):
+    1. Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable
+    2. Calcular costos de adquisición de clientes, tasas de conversión y Customer Lifetime Value (LTV)
+    3. Determinar costos operativos básicos, costos de canal y márgenes
+    4. Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año
+    5. Verificar el balance de caja disponible (runway)
+    6. Convertir las métricas validadas en un P&L, balance y flujo de caja multianual listo para inversionistas
+
+==============================================================================
+LD-OPC05-051  [49 de 66]  clase de hoy: C
+PAR: defensas_en_profundidad_3 <-> fallas_activas_condiciones_latentes
+RAZON ORIGINAL: mapear las capas de defensa y sus dependencias ocultas contra separar fallas activas de condiciones latentes
+==============================================================================
+
+  --- defensas_en_profundidad_3 ---
+  TITULO   : Defensas en Profundidad: Protección o Ocultamiento Peligroso
+  FUENTE   : Managing the Risks of Organizat - Reason, J. T_
+  DOMINIO  : health_safety
+  ENTREGABLE: Mapa de capas de defensa del sistema con análisis de independencia real y puntos ciegos de detección
+  PASOS (7):
+    1. Mapear todas las capas de defensa del sistema (barreras físicas, sistemas de protección, procedimientos), clasificándolas en las siete funciones defensivas
+    2. Evaluar si existen dependencias ocultas entre capas que se asumen independientes
+    3. Implementar mecanismos de detección temprana de fallas latentes antes de que se acumulen
+    4. Revisar si la confianza en las múltiples defensas ha generado complacencia operativa
+    5. Evaluar el balance entre defensas duras y blandas existentes.
+    6. Identificar funciones defensivas ausentes o débiles en el sistema.
+    7. Diseñar redundancia entre capas para evitar que un solo punto de falla comprometa todo el sistema
+
+  --- fallas_activas_condiciones_latentes ---
+  TITULO   : Fallas Activas y Condiciones Latentes
+  FUENTE   : Managing the Risks of Organizat - Reason, J. T_
+  DOMINIO  : health_safety
+  ENTREGABLE: Tabla que clasifica fallas activas y condiciones latentes del incidente y traza el origen organizacional de cada condición latente.
+  PASOS (6):
+    1. Identificar los actos inseguros (errores o violaciones) cometidos en el momento del incidente
+    2. Buscar las decisiones previas (presupuesto, capacitación, dotación, diseño) que crearon condiciones latentes
+    3. Elaborar una tabla que separe fallas activas de condiciones latentes para cada hallazgo
+    4. Rastrear el origen de cada condición latente hasta la decisión gerencial o de diseño que la generó
+    5. Priorizar la corrección de condiciones latentes por su impacto en futuros eventos
+    6. Mantener un registro de condiciones latentes conocidas para monitorearlas de forma continua, no solo tras un accidente
+
+==============================================================================
+LD-OPC05-052  [50 de 66]  clase de hoy: C
+PAR: definicion_alineacion_cadena_suministro <-> trade_off_responsividad_eficiencia
+RAZON ORIGINAL: alinear la cadena de suministro con la estrategia contra el balance concreto entre responsividad y eficiencia en los cinco drivers
+==============================================================================
+
+  --- definicion_alineacion_cadena_suministro ---
+  TITULO   : Definición y Alineación de la Cadena de Suministro con la Estrategia
+  FUENTE   : Essentials of Supply Chain Management - Michael H. Hugos
+  DOMINIO  : core
+  ENTREGABLE: Mapa de cadena de suministro con el rol de la empresa identificado y una declaración clara de la estrategia competitiva (costo vs. servicio) que guiará las decisiones operativas.
+  PASOS (9):
+    1. Mapear todas las empresas y actividades que participan en la cadena de suministro de tu producto/servicio.
+    2. Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.), y sus core competencies
+    3. Definir si tu estrategia competitiva se basa en precio bajo (requiere eficiencia) o en servicio/conveniencia (requiere capacidad de respuesta).
+    4. Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida, que son los 5 drivers (producción, inventario, ubicación, transporte, información)
+    5. Identificar en qué categoría(s) participa tu empresa: productor, distribuidor, minorista, proveedor de servicios
+    6. Mapear todos los participantes de tu cadena de suministro actual, incluyendo proveedores del proveedor y clientes del cliente
+    7. Determinar qué proveedores de servicios (logística, financieros, TI) podrían mejorar tu eficiencia operativa
+    8. Responder las 6 preguntas de Chopra y Meindl sobre tu mercado: cantidad por lote, tiempo de respuesta, variedad, nivel de servicio, precio, tasa de innovación
+    9. Validar que la estrategia de cadena de suministro sea coherente con la propuesta de valor al cliente
+
+  --- trade_off_responsividad_eficiencia ---
+  TITULO   : Balance entre Capacidad de Respuesta y Eficiencia
+  FUENTE   : Essentials of Supply Chain Management - Michael H. Hugos
+  DOMINIO  : core
+  ENTREGABLE: Documento de posicionamiento estratégico que indique, para cada driver de la cadena de suministro, si la decisión prioriza eficiencia o capacidad de respuesta.
+  PASOS (8):
+    1. Analizar qué valora más tu segmento de clientes: precio bajo o rapidez/servicio.
+    2. Evaluar el nivel de exceso de capacidad, inventario y flexibilidad de transporte actuales.
+    3. Ajustar cada driver (producción, inventario, ubicación, transporte, información) hacia el extremo del espectro que corresponda a la estrategia elegida.
+    4. Revisar periódicamente el balance, ya que cambios en el mercado pueden requerir reajustes.
+    5. Monitorear factores clave: demanda de producto, precios, tasas de producción, frecuencia de entregas
+    6. Evaluar la confiabilidad de los pronósticos y datos disponibles
+    7. Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece responsividad)
+    8. Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, features, velocidad)
+
+==============================================================================
+LD-OPC05-053  [51 de 66]  clase de hoy: C
+PAR: del_caos_al_metodo_madurez_de_riesgo <-> empieza_con_lo_que_ya_funciona
+RAZON ORIGINAL: los niveles de madurez en gestion de riesgo contra la regla de empezar con dos o tres practicas simples y probadas
+==============================================================================
+
+  --- del_caos_al_metodo_madurez_de_riesgo ---
+  TITULO   : Niveles de Madurez en la Gestión de Riesgo
+  FUENTE   : Edwards et al., Managing Project Risks
+  DOMINIO  : risk_management
+  ENTREGABLE: Tu nivel de madurez de riesgo identificado y la práctica concreta que te sube al siguiente escalón.
+  PASOS (4):
+    1. Ubica en qué nivel estás: improvisas, arrancas, creces o ya tienes método propio.
+    2. Identifica el escalón siguiente y una sola práctica que te llevaría a él.
+    3. No intentes saltar al método perfecto: consolida un nivel antes de subir al otro.
+    4. Repite y afina tu método en cada proyecto, para que suba de nivel con el tiempo.
+
+  --- empieza_con_lo_que_ya_funciona ---
+  TITULO   : Empezar con Métodos Simples y Probados
+  FUENTE   : Hubbard, The Failure of Risk Management
+  DOMINIO  : risk_management
+  ENTREGABLE: Dos o tres prácticas de riesgo simples y probadas en marcha, sin herramientas caras ni modelos que no comprobarías.
+  PASOS (4):
+    1. Elige dos o tres prácticas simples y probadas en vez de un modelo complicado.
+    2. Empieza por una lista viva de riesgos y por pensar en rangos: rinden desde el primer día.
+    3. No inviertas en herramientas caras hasta que el tamaño de tus decisiones lo justifique.
+    4. Sofistica el método solo cuando lo simple se te quede corto, no antes.
+
+==============================================================================
+LD-OPC05-054  [52 de 66]  clase de hoy: C
+PAR: desarrollo_presentacion_problema <-> preguntas_ipo_dolor_cliente
+RAZON ORIGINAL: preparar la reunion de presentacion del problema (una diapositiva, tres columnas) contra las cuatro preguntas IPO que descubren el dolor
+==============================================================================
+
+  --- desarrollo_presentacion_problema ---
+  TITULO   : Cómo preparar la reunión para presentar el problema
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Presentación del problema validada con comentarios cualitativos de al menos 10 a 15 clientes
+  PASOS (7):
+    1. Convierte tus hipótesis de propuesta de valor en una presentación simple de una diapositiva con tres columnas: problemas, soluciones actuales, solución propuesta
+    2. Presenta primero solo los problemas y haz una pausa para que el cliente reaccione y priorice
+    3. Pregúntale cómo resuelve hoy ese problema y quién más lo comparte, y preguntar cómo las rankean
+    4. Presenta tu solución al final y observa la reacción genuina del cliente, sin entrar en features
+    5. Cierra la reunión preguntando qué deberías haberle preguntado y pide referencias adicionales
+    6. Anota el costo estimado del problema para el cliente, en tiempo, dinero o frustración, para usarlo más adelante en la validación
+    7. Preguntar cómo se compara la solución propuesta con las soluciones actuales
+
+  --- preguntas_ipo_dolor_cliente ---
+  TITULO   : Preguntas IPO para Descubrir el Dolor del Cliente
+  FUENTE   : The Startup Owner's Manual - Blank, Steve
+  DOMINIO  : core
+  ENTREGABLE: Lista de dolores priorizados por cliente con estimación de costo asociado a cada problema
+  PASOS (4):
+    1. Preguntar: '¿Cuál es el mayor dolor en cómo trabajas?'
+    2. Preguntar: 'Si pudieras cambiar algo con una varita mágica, qué sería?'
+    3. Preguntar casualmente cuánto le cuesta este problema al cliente en términos monetarios o de tiempo
+    4. Registrar la respuesta para usarla luego en la presentación de validación de clientes
+
+==============================================================================
+LD-OPC05-055  [53 de 66]  clase de hoy: C
+PAR: design_for_six_sigma_dfss <-> innovacion_tipo_ii
+RAZON ORIGINAL: el DFSS y su DMADV con CTQs contra la innovacion tipo II de mas grande, mas pequeno o combinado
+==============================================================================
+
+  --- design_for_six_sigma_dfss ---
+  TITULO   : Design for Six Sigma (DFSS) y Metodología DMADV
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Diseño de producto/proceso completamente desarrollado y verificado contra los CTQs del cliente, con plan de producción y lanzamiento a escala completa.
+  PASOS (6):
+    1. Revisa tu plan de negocio y define el alcance del proyecto de diseño antes de empezar.
+    2. Identifica a tus clientes objetivo y traduce sus necesidades en requerimientos medibles (CTQs).
+    3. Analiza la voz del cliente y evalúa varios conceptos de diseño usando métodos estadísticos.
+    4. Diseña el producto y su proceso de producción de forma integrada, incorporando los CTQs como criterios de decisión.
+    5. Verifica que el diseño detallado cumple los niveles de calidad Six Sigma y los CTQs antes de producir a escala completa.
+    6. Prepara el plan de lanzamiento y define mecanismos de control para asegurar que se mantenga el cumplimiento de los CTQs.
+
+  --- innovacion_tipo_ii ---
+  TITULO   : Innovación Tipo II (Más grande/Más pequeño/Combinación)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Lista de ideas de innovación categorizadas y priorizadas, lista para pasar a evaluación de viabilidad
+  PASOS (5):
+    1. Definir el producto/servicio/proceso objetivo de la innovación
+    2. Crear tres columnas de encabezado: 'hacerlo más grande', 'hacerlo más pequeño', 'combinarlo con'
+    3. Generar ideas libremente en cada columna sin criticar durante la generación
+    4. Filtrar y transformar las ideas más disruptivas en propuestas viables
+    5. Seleccionar las ideas con mayor potencial para desarrollo posterior
+
+==============================================================================
+LD-OPC05-056  [54 de 66]  clase de hoy: C
+PAR: design_test_repeat <-> prototyping_possibilities
+RAZON ORIGINAL: el ciclo disenar, probar, repetir contra el prototipado de POSIBILIDADES con multiples direcciones alternativas
+==============================================================================
+
+  --- design_test_repeat ---
+  TITULO   : Diseñar, Probar, Repetir (Ciclo Iterativo)
+  FUENTE   : Value Proposition Design
+  DOMINIO  : core
+  ENTREGABLE: Un ciclo documentado de iteraciones de prototipo-prueba-aprendizaje.
+  PASOS (4):
+    1. Prototipar rápidamente una idea de propuesta de valor.
+    2. Testear el prototipo con clientes reales.
+    3. Aprender de los resultados y rediseñar.
+    4. Repetir el ciclo continuamente.
+
+  --- prototyping_possibilities ---
+  TITULO   : Prototipado de Posibilidades
+  FUENTE   : Value Proposition Design
+  DOMINIO  : core
+  ENTREGABLE: Conjunto de prototipos alternativos (sketches, ad-libs, canvases) listos para exponer a feedback.
+  PASOS (5):
+    1. Generar múltiples direcciones alternativas para la misma idea (no solo una).
+    2. Usar napkin sketches (bocetos rápidos de 5-15 min) para hacer tangibles las ideas.
+    3. Rellenar ad-libs para precisar cómo cada alternativa crea valor.
+    4. Desarrollar Value Proposition Canvases para las direcciones más prometedoras.
+    5. Construir un MVP para llevar la propuesta a la vida y testearla.
+
+==============================================================================
+LD-OPC05-057  [55 de 66]  clase de hoy: C
+PAR: dia_cero_defectos <-> entrenamiento_supervisores_calidad
+RAZON ORIGINAL: el dia de cero defectos y sus tres pasos de lanzamiento contra el entrenamiento del supervisor cuatro semanas antes
+==============================================================================
+
+  --- dia_cero_defectos ---
+  TITULO   : Día de Cero Defectos (El Estándar se Fija en Un Solo Día)
+  FUENTE   : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+  DOMINIO  : quality
+  ENTREGABLE: Evento de lanzamiento del estándar Cero Defectos realizado en tu negocio.
+  PASOS (3):
+    1. Elige una fecha única para el lanzamiento oficial
+    2. Realiza actividades especiales que marquen el cambio de actitud
+    3. Explica el programa a todos el mismo día
+
+  --- entrenamiento_supervisores_calidad ---
+  TITULO   : Entrenamiento de Supervisores (El Supervisor como Clave)
+  FUENTE   : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+  DOMINIO  : quality
+  ENTREGABLE: Tu mismo y quienes te ayudan, capacitados y evaluados con un test, capaces de explicar y sostener correctamente el programa de calidad y Cero Defectos.
+  PASOS (6):
+    1. Dedica al menos 6 horas a estudiar el sistema de medicion de calidad, los costos de calidad y las acciones correctivas al iniciar la etapa de conciencia de calidad.
+    2. Explica de forma completa el programa Cero Defectos y el método para eliminar las causas de los errores a quienes te ayudan, al menos 4 semanas antes del día ZD.
+    3. Prepara un manual o guia detallada del programa para usarla como referencia.
+    4. Haz un test de comprension sobre el concepto ZD antes de replicarlo con tu equipo.
+    5. Resuelve de forma individual las dudas de cada persona antes de la implementacion.
+    6. Verifica que cada persona refuerce la formacion en su area de responsabilidad.
+
+==============================================================================
+LD-OPC05-058  [56 de 66]  clase de hoy: C
+PAR: diagnostico_antes_remedio <-> terminologia_clave_breakthrough
+RAZON ORIGINAL: la regla de que el diagnostico precede al remedio contra la terminologia que hay que fijar con el equipo antes de diagnosticar
+==============================================================================
+
+  --- diagnostico_antes_remedio ---
+  TITULO   : Diagnóstico Debe Preceder al Remedio
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Un registro de causas validadas con evidencia, antes de proponer cualquier remedio
+  PASOS (4):
+    1. No aplicar ningún remedio sin evidencia validada de la causa real
+    2. Cuestionar cualquier afirmación, propia o de quien te asesora, que no tenga datos que la respalden
+    3. Investigar a fondo cuando tengas una creencia arraigada sobre la causa de un problema
+    4. Usar datos históricos parecidos a estudios de fallas para validar tus hipótesis
+
+  --- terminologia_clave_breakthrough ---
+  TITULO   : Terminología Clave para Diagnóstico de Breakthrough
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Glosario de términos de diagnóstico aplicado al proyecto y lista de teorías a probar
+  PASOS (4):
+    1. Definir claramente cada término con el equipo antes de iniciar el diagnóstico
+    2. Diferenciar síntomas de causas en cada problema detectado
+    3. Aplicar el principio de Pareto para identificar la causa dominante
+    4. Documentar teorías propuestas antes de validarlas con datos
+
+==============================================================================
+LD-OPC05-059  [57 de 66]  clase de hoy: C
+PAR: dilema_riqueza_vs_control <-> puzzle_prima_capital_privado
+RAZON ORIGINAL: DISCUTIBLE 4. El paso 2 del puzzle repite casi la pregunta del dilema. Se sostiene C porque el puzzle expande UN ARGUMENTO EMPIRICO (la prima de capital privado no existe) y el dilema expande UN PROCEDIMIENTO DE DECISION en cada ronda
+==============================================================================
+
+  --- dilema_riqueza_vs_control ---
+  TITULO   : Elegir entre hacerte rico o mantener el control (Rich vs. King)
+  FUENTE   : The Founder's Dilemmas - Wasserman, Noam
+  DOMINIO  : core
+  ENTREGABLE: Una declaración clara de tus prioridades, riqueza o control, que guíe tus futuras decisiones de financiamiento, contratación y gobierno de tu empresa
+  PASOS (6):
+    1. Reflexiona con honestidad sobre qué es más importante para ti: maximizar el valor de salida o mantener el control de las decisiones clave
+    2. Pregúntate si tu motivación principal es la riqueza financiera o el control, porque eso anticipa cómo vas a responder ante futuras decisiones de financiamiento o crecimiento
+    3. Evalúa, en cada decisión de financiamiento o contratación, cuánto control pierdes a cambio de cuánto valor ganas
+    4. Define con claridad qué decisiones no estás dispuesto a ceder en cuanto a control, por ejemplo la dirección estratégica o la cultura, y cuáles sí puedes soltar a cambio de recursos
+    5. Considera estructuras híbridas, como acciones con derechos de voto diferenciados, si quieres conservar el control mientras consigues capital
+    6. Ten presente que crecer rápido o levantar capital de riesgo suele significar sacrificar control
+
+  --- puzzle_prima_capital_privado ---
+  TITULO   : Por qué fundar rara vez te hace más rico (la prima de capital privado ausente)
+  FUENTE   : The Founder's Dilemmas - Wasserman, Noam
+  DOMINIO  : core
+  ENTREGABLE: Una reflexión escrita sobre tus expectativas realistas de retorno financiero frente al control, alineada con lo que realmente te motiva.
+  PASOS (3):
+    1. Cuestiona la suposición de que fundar te garantiza mayor retorno financiero que un empleo tradicional.
+    2. Evalúa si tus decisiones están priorizando el control por encima de maximizar el valor financiero.
+    3. Si eliges priorizar el control, acéptalo de forma consciente, entendiendo el costo de oportunidad financiero que conlleva.
+
+==============================================================================
+LD-OPC05-060  [58 de 66]  clase de hoy: C
+PAR: diseno_etico_de_privacidad <-> diseno_intencional_etica
+RAZON ORIGINAL: el diseno etico de privacidad con opt out real contra la responsabilidad etica general del design thinking y sus efectos secundarios
+==============================================================================
+
+  --- diseno_etico_de_privacidad ---
+  TITULO   : Agencia y Opt-Out: Diseño Ético de Privacidad de Datos
+  FUENTE   : Assembling Tomorrow: A Guide to Designing a Thriving Future
+  DOMINIO  : core
+  ENTREGABLE: Una política o mecanismo de consentimiento de datos diseñado con opciones claras de opt-in/opt-out, documentado en el sistema o prototipo.
+  PASOS (4):
+    1. Enumera qué datos sensibles recolecta tu sistema (ubicación, salud, comportamiento, emociones).
+    2. Diseña mecanismos de opt-out reales y accesibles, no ocultos en términos legales.
+    3. Evalúa el trade-off: ¿qué conveniencia pierde el usuario al optar por no compartir datos?
+    4. Comunica de forma transparente cómo se usan y quién se beneficia de los datos recolectados.
+
+  --- diseno_intencional_etica ---
+  TITULO   : Diseño Intencional: La Responsabilidad Ética del Design Thinking
+  FUENTE   : Change by Design, Revised and U - Tim Brown
+  DOMINIO  : core
+  ENTREGABLE: Un checklist o revisión ética documentada de las consecuencias intencionales y no intencionales de la solución antes de su lanzamiento.
+  PASOS (4):
+    1. Antes de lanzar una solución, preguntar explícitamente: ¿qué comportamiento humano estamos incentivando?
+    2. Evaluar si los efectos secundarios (adicción, exclusión, sesgo) son deseados o accidentales
+    3. Incluir revisiones éticas como parte del proceso de prototipado e iteración
+    4. Diseñar con conciencia del impacto en comunidades y sistemas más amplios, no solo en el usuario individual
+
+==============================================================================
+LD-OPC05-061  [59 de 66]  clase de hoy: C
+PAR: documentacion_exportacion <-> seguro_exportacion
+RAZON ORIGINAL: los documentos de exportacion (pro forma, comercial, packing list, HS, SED) contra el seguro de carga y de credito y su cobertura CIF
+==============================================================================
+
+  --- documentacion_exportacion ---
+  TITULO   : Documentación de Exportación
+  FUENTE   : A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+  DOMINIO  : exportacion
+  ENTREGABLE: Carpeta completa de documentos de exportación por embarque, validada antes del envío
+  PASOS (6):
+    1. Determina qué documentos necesitas según el destino y el tipo de producto
+    2. Prepara la factura pro forma para cotizar al comprador antes del envío
+    3. Emite la factura comercial una vez confirmada la venta, incluyendo los términos de venta y pago, y elabora la lista de empaque con el contenido, los pesos y las dimensiones
+    4. Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y delega la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker)
+    5. Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si tu envío supera el valor mínimo que se fije en tu país o si necesitas una licencia de exportación
+    6. Revisa toda la documentación antes del embarque y confirma con tu banco los plazos de cobro si hay carta de crédito
+
+  --- seguro_exportacion ---
+  TITULO   : Seguro de Exportación (Carga y Crédito)
+  FUENTE   : A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+  DOMINIO  : exportacion
+  ENTREGABLE: Pólizas de seguro de carga y/o crédito contratadas antes del embarque
+  PASOS (6):
+    1. Determinar según términos de venta quién es responsable del seguro de carga
+    2. Contratar póliza propia o asegurar bajo la póliza del freight forwarder
+    3. No asumir que el comprador ha contratado seguro adecuado si es su responsabilidad, y verificar documentación
+    4. Evaluar contratación de seguro de crédito a la exportación para cubrir riesgo de impago
+    5. Verificar requisitos de instituciones financieras del comprador sobre seguro de crédito
+    6. Consultar con aseguradoras internacionales o freight forwarders para definir el nivel de cobertura (típicamente 110% del valor CIF/CIP).
+
+==============================================================================
+LD-OPC05-062  [60 de 66]  clase de hoy: C
+PAR: documentacion_exportacion <-> seleccion_metodo_transporte_internacional
+RAZON ORIGINAL: los documentos de exportacion contra la seleccion del metodo de transporte (aereo, maritimo, multimodal, booking)
+==============================================================================
+
+  --- documentacion_exportacion ---
+  TITULO   : Documentación de Exportación
+  FUENTE   : A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+  DOMINIO  : exportacion
+  ENTREGABLE: Carpeta completa de documentos de exportación por embarque, validada antes del envío
+  PASOS (6):
+    1. Determina qué documentos necesitas según el destino y el tipo de producto
+    2. Prepara la factura pro forma para cotizar al comprador antes del envío
+    3. Emite la factura comercial una vez confirmada la venta, incluyendo los términos de venta y pago, y elabora la lista de empaque con el contenido, los pesos y las dimensiones
+    4. Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y delega la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker)
+    5. Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si tu envío supera el valor mínimo que se fije en tu país o si necesitas una licencia de exportación
+    6. Revisa toda la documentación antes del embarque y confirma con tu banco los plazos de cobro si hay carta de crédito
+
+  --- seleccion_metodo_transporte_internacional ---
+  TITULO   : Selección del Método de Transporte Internacional
+  FUENTE   : A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+  DOMINIO  : exportacion
+  ENTREGABLE: Método de transporte internacional seleccionado, con booking contract confirmado y documentación de embarque preparada con marcas de exportación.
+  PASOS (6):
+    1. Consulta con un freight forwarder internacional para determinar el mejor método de envío.
+    2. Compara costos y tiempos de entrega entre transporte aéreo, marítimo y multimodal.
+    3. Reserva espacio con anticipación mediante un booking contract si tu carga es voluminosa.
+    4. Verifica con el comprador el destino final de la mercancía, incluyendo zonas francas o puertos libres.
+    5. Agrega las marcas de exportación requeridas a tu documentación de embarque.
+    6. Confirma las instrucciones de notificación al freight forwarder por parte del transportista terrestre.
+
+==============================================================================
+LD-OPC05-063  [61 de 66]  clase de hoy: C
+PAR: ecuacion_de_valor_cliente <-> modelo_spin_preguntas
+RAZON ORIGINAL: la ecuacion de valor del cliente y su balanza contra la secuencia completa de preguntas del modelo SPIN
+==============================================================================
+
+  --- ecuacion_de_valor_cliente ---
+  TITULO   : Ecuación de Valor del Cliente
+  FUENTE   : SPIN Selling - Neil Rackham
+  DOMINIO  : core
+  ENTREGABLE: Mapa de 'costo vs valor percibido' para la oportunidad de venta actual, identificando qué preguntas faltan por hacer para inclinar la balanza
+  PASOS (4):
+    1. Antes de presentar precio o solución, mapear qué tan grande percibe el cliente su problema
+    2. Usar preguntas de Implicación para amplificar las consecuencias no vistas del problema
+    3. Usar preguntas de Necesidad-Beneficio para que el cliente articule el valor de resolverlo
+    4. Solo entonces presentar la solución y su costo, cuando la balanza de valor ya se inclinó a favor
+
+  --- modelo_spin_preguntas ---
+  TITULO   : Modelo SPIN: Secuencia de Preguntas de Venta
+  FUENTE   : SPIN Selling - Neil Rackham
+  DOMINIO  : core
+  ENTREGABLE: Guion o banco de preguntas SPIN personalizado por cliente o producto, listo para tu próxima llamada de venta clave
+  PASOS (9):
+    1. Prepara preguntas de Situación mínimas y específicas sobre el contexto del cliente, usándolas con moderación
+    2. Formula preguntas de Problema para identificar dificultades o insatisfacciones del cliente
+    3. Desarrolla preguntas de Implicación que conecten el problema con consecuencias mayores no obvias
+    4. Cierra con preguntas de Necesidad-Beneficio para que el cliente exprese el valor de resolver el problema
+    5. Ajusta la secuencia según el flujo natural de la conversación sin forzar el orden rígido
+    6. Presenta tu solución recién cuando el cliente haya articulado la Necesidad Explícita
+    7. Deja de entrenarte en distinguir preguntas abiertas de cerradas; ese no es el factor que marca la diferencia
+    8. Practica pasar de un tipo de pregunta a otro sin que se note, en llamadas reales
+    9. Revisa tus llamadas o tus notas para detectar en qué parte de la secuencia te trabas
+
+==============================================================================
+LD-OPC05-064  [62 de 66]  clase de hoy: C
+PAR: educacion_estadistica_para_la_calidad <-> responsabilidad_gerencial_en_la_calidad
+RAZON ORIGINAL: la educacion masiva en metodos estadisticos contra tu propia responsabilidad gerencial de aprender y liderar la mejora
+==============================================================================
+
+  --- educacion_estadistica_para_la_calidad ---
+  TITULO   : Educación Masiva en Métodos Estadísticos para la Calidad
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Un plan de capacitación estadística que llegue a cada persona involucrada en tu negocio, con evidencia de aplicación práctica de cartas de control y métodos de muestreo.
+  PASOS (5):
+    1. Diseñar una capacitación en métodos estadísticos para ti y para cada persona que trabaja contigo, sin importar la tarea que haga
+    2. Eliminar cualquier barrera que impida que quien hace el trabajo se sienta orgulloso de hacerlo bien
+    3. Impartir formación práctica en construcción e interpretación de cartas de control
+    4. Extender la capacitación a investigación de mercado y métodos modernos de muestreo
+    5. Buscar alianzas con instituciones educativas o asociaciones profesionales que te ayuden a sostener la capacitación en el tiempo
+
+  --- responsabilidad_gerencial_en_la_calidad ---
+  TITULO   : Tu responsabilidad en la mejora de la calidad
+  FUENTE   : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+  DOMINIO  : quality
+  ENTREGABLE: Un compromiso claro y por escrito con la mejora de calidad, que incluya tu participación activa y visible en los procesos de mejora.
+  PASOS (5):
+    1. Comprometerte a aprender de primera mano la filosofia y los métodos de calidad
+    2. Asumir tu mismo la responsabilidad de liderar las mejoras en tus procesos
+    3. Estar presente donde se hace el trabajo para entender los procesos de primera mano
+    4. Escribir tu mismo los reportes de mejora en lugar de delegarlos por completo
+    5. Conectar la mejora de calidad con la mejora de productividad y rentabilidad en la forma en que cuentas lo que haces
+
+==============================================================================
+LD-OPC05-065  [63 de 66]  clase de hoy: C
+PAR: ejecucion_auditoria <-> relaciones_humanas_auditoria
+RAZON ORIGINAL: verificar los hechos con el responsable antes de escribir el reporte contra las relaciones humanas del proceso de auditoria
+==============================================================================
+
+  --- ejecucion_auditoria ---
+  TITULO   : Verificar los hechos antes de escribir el reporte de auditoría
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Lista de hallazgos verificados y acordados con la persona del área revisada
+  PASOS (4):
+    1. Confirma cada hallazgo con la persona responsable de esa área antes de escribirlo en el reporte
+    2. Decide si tú vas a investigar la causa del problema o si se lo dejas a quien maneja esa parte del negocio
+    3. Propón mejoras, pero evita diseñar tú mismo la solución final
+    4. Mantén al cliente clave al tanto de cómo va avanzando la revisión
+
+  --- relaciones_humanas_auditoria ---
+  TITULO   : Relaciones Humanas en el Proceso de Auditoría
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Protocolo de comunicación y conducta ética para auditores
+  PASOS (5):
+    1. Explicar a supervisores y no supervisores las razones detrás de las auditorías
+    2. Evitar un enfoque de búsqueda de culpables; orientar el reporte al problema
+    3. Incluir observaciones positivas ('commendable observations') además de deficiencias
+    4. Basar las recomendaciones en hechos, evitando opiniones personales del auditor
+    5. Realizar una reunión post-auditoría para validar hallazgos con el equipo auditado
+
+==============================================================================
+LD-OPC05-066  [64 de 66]  clase de hoy: C
+PAR: el_riesgo_eres_tu <-> sigue_operando_pese_al_golpe
+RAZON ORIGINAL: el fundador como punto unico de falla y su documentacion de accesos contra la continuidad del negocio y sus funciones que no pueden parar
+==============================================================================
+
+  --- el_riesgo_eres_tu ---
+  TITULO   : El Fundador Como Punto Único de Falla
+  FUENTE   : Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)
+  DOMINIO  : risk_management
+  ENTREGABLE: Un documento con dónde vive todo, un contacto de emergencia con acceso, y un plan de qué pasa con tus clientes si faltas dos semanas.
+  PASOS (4):
+    1. Documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.
+    2. Nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.
+    3. Escribe qué pasa con tus clientes si tú no puedes trabajar por dos semanas, y cómo se les avisaría.
+    4. Cuida tu energía y tu salud como cuidas tu negocio: son parte del activo, no algo aparte.
+
+  --- sigue_operando_pese_al_golpe ---
+  TITULO   : Continuidad del Negocio
+  FUENTE   : Edwards et al., Managing Project Risks
+  DOMINIO  : risk_management
+  ENTREGABLE: Una lista de las funciones que no pueden parar y un plan mínimo para sostenerlas durante una crisis.
+  PASOS (4):
+    1. Define cuáles son las pocas funciones que no pueden parar pase lo que pase.
+    2. Para cada una, piensa cómo la sostendrías con lo mínimo si el resto está en crisis.
+    3. Decide de antemano qué puede esperar, para no gastar energía en lo secundario durante el golpe.
+    4. Avisa a tus clientes con honestidad si algo se afecta, en vez de desaparecer.
+
+==============================================================================
+LD-OPC05-067  [65 de 66]  clase de hoy: C
+PAR: elementos_plan_exportacion_ejemplo <-> programas_ex_im_bank
+RAZON ORIGINAL: los trece elementos practicos de un plan de exportacion contra los programas concretos de financiamiento del Ex-Im Bank
+==============================================================================
+
+  --- elementos_plan_exportacion_ejemplo ---
+  TITULO   : Elementos Prácticos de un Plan de Exportación (Ejemplo Aplicado)
+  FUENTE   : A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+  DOMINIO  : exportacion
+  ENTREGABLE: Tu plan de exportación detallado y personalizado, con cada sección completada según el modelo de ejemplo, listo para poner en marcha
+  PASOS (13):
+    1. Redacta una introducción breve explicando por qué quieres exportar
+    2. Define metas medibles (por ejemplo, aumentar tus ventas un 15% en dos años usando plataformas de venta en línea)
+    3. Lista los recursos financieros con que cuentas (presupuesto anual, tiempo que puedes dedicar, personal)
+    4. Lista tus recursos no financieros (experiencia de viaje, capacitación, investigación sobre ayuda del gobierno)
+    5. Documenta la capacidad de producción que ya tienes, sin necesidad de invertir más
+    6. Identifica los mercados a los que quieres llegar y respalda esa elección con datos
+    7. Define tu política de riesgo, crédito, devoluciones y envío
+    8. Determina si necesitas un agente de carga (forwarder), licencias de exportación y certificados sanitarios
+    9. Revisa qué idioma exige el empaque y el etiquetado en el mercado al que vas
+    10. Identifica el código arancelario de tu producto
+    11. Define cómo vas a proteger tu propiedad intelectual en los mercados a los que apuntas
+    12. Define tu estrategia de precios considerando el costo de flete, los aranceles y la comisión del distribuidor
+    13. Prepara tu sitio web para otros países: agrega conversor de moneda, testimonios internacionales y políticas claras
+
+  --- programas_ex_im_bank ---
+  TITULO   : Programas de Financiamiento del Ex-Im Bank
+  FUENTE   : A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+  DOMINIO  : exportacion
+  ENTREGABLE: Tu solicitud o precalificacion completada para un programa del Ex-Im Bank, con la garantia, el prestamo o el seguro y el banco participante ya identificados.
+  PASOS (6):
+    1. Solicita la Garantia de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportacion
+    2. Determina si te conviene mas una garantia de prestamo, que suele ser mas económica, o un prestamo directo de mediano o largo plazo para la venta
+    3. Evalua contratar un seguro de crédito a la exportacion, propio del Ex-Im Bank o privado si ya tienes historial como exportador establecido
+    4. Revisa si calificas para la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energia, telecomunicaciones o transporte
+    5. Presenta tu inventario y tus cuentas por cobrar de exportacion como garantia y negocia las tasas de anticipo con el prestamista
+    6. Consulta con la oficina local del U.S. Commercial Service o en exim.gov el proceso de solicitud y los bancos participantes
+
+==============================================================================
+LD-OPC05-122  [66 de 66]  clase de hoy: C
+PAR: error_proofing_servicio <-> metodologia_6s
+RAZON ORIGINAL: PAR QUE SOLO EXISTE TRAS RESOLVER ALIAS, y ademas SOLO SE VE LEYENDO LOS DOS CAMPOS: metodologia_6s nombra mistake_proofing_poka_yoke en nodos_siguientes y errores_a_prueba_poka_yoke en nodos_previos, y los dos resuelven a error_proofing_servicio. La organizacion del puesto de trabajo (sacar lo que no se necesita, ordenar, limpiar, estandarizar el habito, sostener la disciplina) contra el diseno de dispositivos a prueba de error (los cinco principios, el dispositivo fisico o logico, la validacion antes de escalar): el paso 6 de 6S nombra la seguridad y no la procedimenta, y el paso 4 de error-proofing nombra simplificar el trabajo y no lo procedimenta. Dos lineas distintas, una en cada nodo, y ninguno es la madre
+==============================================================================
+
+  --- error_proofing_servicio ---
+  TITULO   : Error-Proofing (A Prueba de Errores) en Procesos de Servicio
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Lista de mecanismos de error-proofing implementados en el proceso con evidencia de reducción de errores
+  PASOS (10):
+    1. Identificar actividades propensas a errores en el proceso o producto
+    2. Evaluar si la actividad puede eliminarse completamente
+    3. Buscar sustitutos más confiables para el proceso actual
+    4. Simplificar el trabajo para reducir la posibilidad de error humano
+    5. Implementar detección temprana de errores (software, códigos de barras, checklists)
+    6. Diseñar mecanismos para minimizar el impacto cuando ocurran errores
+    7. Clasifica el tipo de intervención según los cinco principios: eliminación, reemplazo, facilitación, detección o mitigación
+    8. Diseña dispositivos físicos o lógicos que hagan imposible o detectable el error, como encajes únicos o sensores
+    9. Prioriza la prevención proactiva en la etapa de diseño por encima de la mitigación reactiva
+    10. Valida que el dispositivo funcione consistentemente antes de escalar su uso
+
+  --- metodologia_6s ---
+  TITULO   : Metodología 6S (Sort, Set in order, Shine, Standardize, Sustain, Safety)
+  FUENTE   : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  DOMINIO  : quality
+  ENTREGABLE: Área de trabajo organizada según los 6 principios 6S, con checklist de auditoría periódica establecido
+  PASOS (6):
+    1. Sort: elimina de tu área de trabajo todo lo que no necesites
+    2. Set in order: organiza tus herramientas y materiales para acceder y devolverlos fácilmente
+    3. Shine: limpia tu espacio y mantenlo libre de suciedad
+    4. Standardize: crea procedimientos que conviertan la limpieza y el orden en un hábito
+    5. Sustain: reserva tiempo, recursos e incentivos para sostener la disciplina en el tiempo
+    6. Safety: revisa e integra prácticas seguras en cada etapa de tu trabajo
+
