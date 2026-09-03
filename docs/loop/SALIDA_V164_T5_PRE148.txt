@@ -1,0 +1,215 @@
+==============================================================================
+VUELTA 164, TAREA 5: LOS ARNESES PRE 148 QUE ESTAN FUERA DE LA NOMINA
+==============================================================================
+
+ES UNA MEDICION, NO UNA OPERACION. NINGUNO ENTRA EN LA BATERIA, NINGUNO
+SE ARREGLA, Y NO SE AFIRMA QUE LA REGLA DE LA VUELTA 144 LES ALCANCE:
+esa regla no dice si es retroactiva. Con la cifra delante se decide.
+
+A) LA NOMINA A MEDIR, COMPUTADA Y NO TECLEADA
+   CIFRA arneses de mutacion en scripts/loop/: 92
+   CIFRA entradas en la nomina de la bateria: 51
+   CIFRA fuera de la nomina y ANTERIORES a la vuelta 148: 41
+      vuelta102_tarea1_prueba_mutacion_apertura.py         vuelta 102
+      vuelta109_tarea2_4_prueba_mutacion.py                vuelta 109
+      vuelta110_tarea2_prueba_mutacion.py                  vuelta 110
+      vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py    vuelta 112
+      vuelta113_tarea2_mutacion_tsc.py                     vuelta 113
+      vuelta115_tarea2_4_mutacion_z.py                     vuelta 115
+      vuelta116_tarea2_3_mutacion_aa.py                    vuelta 116
+      vuelta117_tarea2_3_mutacion_bb.py                    vuelta 117
+      vuelta118_tarea2_5_mutacion_cc.py                    vuelta 118
+      vuelta118_tarea2_6_mutacion_dd.py                    vuelta 118
+      vuelta122_tarea1e_mutacion_citas.py                  vuelta 122
+      vuelta123_tarea1e_mutacion_fila_tabla.py             vuelta 123
+      vuelta133_tarea2c_mutaciones_identidad.py            vuelta 133
+      vuelta134_2d_mutacion_1.py                           vuelta 134
+      vuelta134_2d_mutacion_2.py                           vuelta 134
+      vuelta134_2f_mutacion.py                             vuelta 134
+      vuelta135_4c_mutacion.py                             vuelta 135
+      vuelta137_1a_mutacion.py                             vuelta 137
+      vuelta137_1c_mutacion.py                             vuelta 137
+      vuelta138_2a_mutaciones.py                           vuelta 138
+      vuelta139_2a_mutaciones.py                           vuelta 139
+      vuelta140_2b_mutaciones.py                           vuelta 140
+      vuelta140_2c_mutacion_ancla.py                       vuelta 140
+      vuelta141_2d_mutacion_commits.py                     vuelta 141
+      vuelta142_2a_mutaciones.py                           vuelta 142
+      vuelta142_2b_mutacion_commits.py                     vuelta 142
+      vuelta142_2c_mutaciones.py                           vuelta 142
+      vuelta142_2d_mutacion_bateria.py                     vuelta 142
+      vuelta146_3c_mutacion_aduana.py                      vuelta 146
+      vuelta90_tarea3_prueba_mutacion_tallador.py          vuelta 90
+      vuelta91_tarea3_prueba_mutacion_composicion.py       vuelta 91
+      vuelta91_tarea4_prueba_mutacion_direccion.py         vuelta 91
+      vuelta95_tarea2a_prueba_mutacion_barrido.py          vuelta 95
+      vuelta96_tarea1c_prueba_mutacion.py                  vuelta 96
+      vuelta96_tarea2_prueba_mutacion.py                   vuelta 96
+      vuelta96_tarea3_prueba_mutacion.py                   vuelta 96
+      vuelta97_tarea2_prueba_mutacion.py                   vuelta 97
+      vuelta98_tarea1_prueba_mutacion.py                   vuelta 98
+      vuelta98_tarea3_prueba_mutacion.py                   vuelta 98
+      vuelta98_tarea4_prueba_mutacion.py                   vuelta 98
+      vuelta99_tarea3_prueba_mutacion.py                   vuelta 99
+
+B) EL ARBOL ANTES DE CORRER NADA
+   CIFRA lineas de git status --porcelain: 3
+      ?? docs/loop/SALIDA_V164_T5_PRE148.txt
+      ?? scripts/loop/vuelta164_tarea5_medir_pre148.py
+      M dataset/metadata/master_graph.json
+
+C) LA CORRIDA, UNO A UNO Y CON SU CRONOMETRO
+   vuelta102_tarea1_prueba_mutacion_apertura.py         exit 1    NO MORDIO           19.2s
+        --- CASO (a): --vuelta 101 sobre el repo real, DESPUES del arreglo ---
+   vuelta109_tarea2_4_prueba_mutacion.py                exit 0    OK                  11.7s
+   vuelta110_tarea2_prueba_mutacion.py                  exit 1    NO MORDIO            6.2s
+        MUTACION: SALIDA_V108_TAREA5_2_TRAMO2_TRES_VIAS.md sustituido por C:\Users\AlexDesk\Documents\I have an idea\docs\loop\_auditor_v109_mut\tramo2_sin_de
+   vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py    exit 0    OK                   0.1s
+   vuelta113_tarea2_mutacion_tsc.py                     exit 0    OK                   0.1s
+   vuelta115_tarea2_4_mutacion_z.py                     exit 0    OK                 168.7s
+   vuelta116_tarea2_3_mutacion_aa.py                    exit 0    OK                 169.0s
+   vuelta117_tarea2_3_mutacion_bb.py                    exit 0    OK                 168.8s
+   vuelta118_tarea2_5_mutacion_cc.py                    exit 0    OK                   0.2s
+   vuelta118_tarea2_6_mutacion_dd.py                    exit 0    OK                   0.3s
+   vuelta122_tarea1e_mutacion_citas.py                  exit 0    OK                   0.2s
+   vuelta123_tarea1e_mutacion_fila_tabla.py             exit 0    OK                   0.2s
+   vuelta133_tarea2c_mutaciones_identidad.py            exit 0    OK                  23.6s
+   vuelta134_2d_mutacion_1.py                           exit 1    ANCLA PERDIDA        0.1s
+        ROJO PREVIO: no encuentro 'cifras del plan (0 pares)' en el reporte real, cambia el anclaje.
+   vuelta134_2d_mutacion_2.py                           exit 1    ANCLA PERDIDA        0.1s
+        ROJO PREVIO: no encuentro la cita a borrar en el reporte real, cambia el anclaje.
+   vuelta134_2f_mutacion.py                             exit 1    ANCLA PERDIDA        0.1s
+        ROJO PREVIO: no encuentro el ancla en la tabla real, cambia el anclaje.
+   vuelta135_4c_mutacion.py                             exit 0    OK                   4.9s
+   vuelta137_1a_mutacion.py                             exit 0    OK                  15.1s
+   vuelta137_1c_mutacion.py                             exit 1    NO MORDIO            1.6s
+        PRUEBAS POR MUTACION DE LAS DOS REPARACIONES 1.c (vuelta 137)
+   vuelta138_2a_mutaciones.py                           exit 0    OK                   0.2s
+   vuelta139_2a_mutaciones.py                           exit 0    OK                   0.2s
+   vuelta140_2b_mutaciones.py                           exit 0    OK                   0.3s
+   vuelta140_2c_mutacion_ancla.py                       exit 0    OK                   1.0s
+   vuelta141_2d_mutacion_commits.py                     exit 1    NO MORDIO            0.2s
+        Traceback (most recent call last):
+   vuelta142_2a_mutaciones.py                           exit 0    OK                   0.6s
+   vuelta142_2b_mutacion_commits.py                     exit 0    OK                   4.0s
+   vuelta142_2c_mutaciones.py                           exit 0    OK                   1.0s
+   vuelta142_2d_mutacion_bateria.py                     exit 0    OK                 465.4s
+   vuelta146_3c_mutacion_aduana.py                      exit 0    OK                  22.2s
+   vuelta90_tarea3_prueba_mutacion_tallador.py          exit 0    OK                   0.1s
+   vuelta91_tarea3_prueba_mutacion_composicion.py       exit 0    OK                   0.0s
+   vuelta91_tarea4_prueba_mutacion_direccion.py         exit 0    OK                   0.1s
+   vuelta95_tarea2a_prueba_mutacion_barrido.py          exit 0    OK                   0.1s
+   vuelta96_tarea1c_prueba_mutacion.py                  exit 0    OK                   0.2s
+   vuelta96_tarea2_prueba_mutacion.py                   exit 0    OK                   0.2s
+   vuelta96_tarea3_prueba_mutacion.py                   exit 1    NO MORDIO            0.9s
+        ====================================================================================================
+   vuelta97_tarea2_prueba_mutacion.py                   exit 1    NO MORDIO            0.6s
+        ====================================================================================================
+   vuelta98_tarea1_prueba_mutacion.py                   exit 1    NO MORDIO            3.4s
+        ======================================================================================================================
+   vuelta98_tarea3_prueba_mutacion.py                   exit 1    NO MORDIO            0.9s
+        ======================================================================================================================
+   vuelta98_tarea4_prueba_mutacion.py                   exit 0    OK                   0.1s
+   vuelta99_tarea3_prueba_mutacion.py                   exit 0    OK                   0.1s
+
+D) EL VEREDICTO CONTADO, Y SOLO CONTADO
+   CIFRA medidos: 41
+   CIFRA que dan exit 0: 30
+   CIFRA que dan ROJO (exit distinto de 0): 11
+   CIFRA con estado ANCLA PERDIDA:   3
+   CIFRA con estado NO MORDIO:       8
+   CIFRA con estado OK:              30
+
+   LOS QUE DAN exit 0, CON SU NOMBRE:
+      vuelta109_tarea2_4_prueba_mutacion.py
+      vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py
+      vuelta113_tarea2_mutacion_tsc.py
+      vuelta115_tarea2_4_mutacion_z.py
+      vuelta116_tarea2_3_mutacion_aa.py
+      vuelta117_tarea2_3_mutacion_bb.py
+      vuelta118_tarea2_5_mutacion_cc.py
+      vuelta118_tarea2_6_mutacion_dd.py
+      vuelta122_tarea1e_mutacion_citas.py
+      vuelta123_tarea1e_mutacion_fila_tabla.py
+      vuelta133_tarea2c_mutaciones_identidad.py
+      vuelta135_4c_mutacion.py
+      vuelta137_1a_mutacion.py
+      vuelta138_2a_mutaciones.py
+      vuelta139_2a_mutaciones.py
+      vuelta140_2b_mutaciones.py
+      vuelta140_2c_mutacion_ancla.py
+      vuelta142_2a_mutaciones.py
+      vuelta142_2b_mutacion_commits.py
+      vuelta142_2c_mutaciones.py
+      vuelta142_2d_mutacion_bateria.py
+      vuelta146_3c_mutacion_aduana.py
+      vuelta90_tarea3_prueba_mutacion_tallador.py
+      vuelta91_tarea3_prueba_mutacion_composicion.py
+      vuelta91_tarea4_prueba_mutacion_direccion.py
+      vuelta95_tarea2a_prueba_mutacion_barrido.py
+      vuelta96_tarea1c_prueba_mutacion.py
+      vuelta96_tarea2_prueba_mutacion.py
+      vuelta98_tarea4_prueba_mutacion.py
+      vuelta99_tarea3_prueba_mutacion.py
+   LOS QUE DAN ROJO, CON SU NOMBRE Y SU PRIMERA LINEA UTIL:
+      vuelta102_tarea1_prueba_mutacion_apertura.py         exit 1  NO MORDIO
+           --- CASO (a): --vuelta 101 sobre el repo real, DESPUES del arreglo ---
+      vuelta110_tarea2_prueba_mutacion.py                  exit 1  NO MORDIO
+           MUTACION: SALIDA_V108_TAREA5_2_TRAMO2_TRES_VIAS.md sustituido por C:\Users\AlexDesk\Documents\I have an idea\docs\loop\_auditor_v109_mut\tramo2_sin_de
+      vuelta134_2d_mutacion_1.py                           exit 1  ANCLA PERDIDA
+           ROJO PREVIO: no encuentro 'cifras del plan (0 pares)' en el reporte real, cambia el anclaje.
+      vuelta134_2d_mutacion_2.py                           exit 1  ANCLA PERDIDA
+           ROJO PREVIO: no encuentro la cita a borrar en el reporte real, cambia el anclaje.
+      vuelta134_2f_mutacion.py                             exit 1  ANCLA PERDIDA
+           ROJO PREVIO: no encuentro el ancla en la tabla real, cambia el anclaje.
+      vuelta137_1c_mutacion.py                             exit 1  NO MORDIO
+           PRUEBAS POR MUTACION DE LAS DOS REPARACIONES 1.c (vuelta 137)
+      vuelta141_2d_mutacion_commits.py                     exit 1  NO MORDIO
+           Traceback (most recent call last):
+      vuelta96_tarea3_prueba_mutacion.py                   exit 1  NO MORDIO
+           ====================================================================================================
+      vuelta97_tarea2_prueba_mutacion.py                   exit 1  NO MORDIO
+           ====================================================================================================
+      vuelta98_tarea1_prueba_mutacion.py                   exit 1  NO MORDIO
+           ======================================================================================================================
+      vuelta98_tarea3_prueba_mutacion.py                   exit 1  NO MORDIO
+           ======================================================================================================================
+
+E) EL CRONOMETRO
+   CIFRA TIEMPO TOTAL de la medicion, en segundos: 1091.4
+   CIFRA TIEMPO TOTAL de la medicion, en minutos: 18.2
+   CIFRA arnes MAS LENTO: vuelta142_2d_mutacion_bateria.py con 465.4s
+   CIFRA arnes MAS RAPIDO: vuelta91_tarea3_prueba_mutacion_composicion.py con 0.0s
+   CIFRA mediana por arnes, en segundos: 0.3
+   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
+      vuelta142_2d_mutacion_bateria.py                       465.4s
+      vuelta116_tarea2_3_mutacion_aa.py                      169.0s
+      vuelta117_tarea2_3_mutacion_bb.py                      168.8s
+      vuelta115_tarea2_4_mutacion_z.py                       168.7s
+      vuelta133_tarea2c_mutaciones_identidad.py               23.6s
+      vuelta146_3c_mutacion_aduana.py                         22.2s
+      vuelta102_tarea1_prueba_mutacion_apertura.py            19.2s
+      vuelta137_1a_mutacion.py                                15.1s
+      vuelta109_tarea2_4_prueba_mutacion.py                   11.7s
+      vuelta110_tarea2_prueba_mutacion.py                      6.2s
+   AVISO DE RELOJ: aqui cada arnes se corre UNA VEZ. La bateria los
+   correria DOS, asi que si algun dia se decidiera meterlos, el coste
+   sobre el ciclo de cierre seria del orden del DOBLE de este total.
+
+F) EL ARBOL DESPUES, Y LO QUE LA CORRIDA MOVIO, CON SU NOMBRE
+   CIFRA lineas de git status --porcelain: 8
+   CIFRA lineas NUEVAS respecto de antes: 5
+      APARECE O CAMBIA: M docs/loop/SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt
+      APARECE O CAMBIA: M docs/loop/SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt
+      APARECE O CAMBIA: M docs/loop/SALIDA_V135_4C_MUTACION.txt
+      APARECE O CAMBIA: M docs/loop/SALIDA_V137_1A_MUTACION.txt
+      APARECE O CAMBIA: M docs/loop/SALIDA_V137_1C_MUTACION.txt
+   CIFRA lineas que DESAPARECEN respecto de antes: 0
+
+G) LO QUE ESTA MEDICION NO HACE, DICHO OTRA VEZ AL CIERRE
+   NINGUNO de los 41 entra en la nomina de la bateria.
+   NINGUNO se arregla en esta vuelta.
+   NO se afirma que la regla de la vuelta 144 les alcance.
+   La decision de que hacer con esta cifra NO es del ejecutor.
+
+FIN

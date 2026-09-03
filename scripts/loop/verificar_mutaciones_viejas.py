@@ -345,6 +345,19 @@ VIEJAS = [
     ("vuelta163_tarea4a_mutacion_cobertura.py", False),
     ("vuelta163_tarea4b_mutacion_re_sellado.py", False),
     ("vuelta163_tarea5a_mutacion_contador.py", False),
+    # Y LAS QUE NACEN EN LA VUELTA 164, por la misma regla aplicada a si misma:
+    # entran el dia que nacen y no se esperan una vuelta mas. Ninguna admite
+    # `--sujeto`, ninguna escribe en `docs/loop/` y las dos eligen su sujeto por
+    # computo o lo fabrican en memoria, asi que ninguna puede caducar por el
+    # camino que la CORRECCION 22 curo.
+    #   - `164_tarea1`: actas de mentira como listas de lineas y series de
+    #     mentira como listas de tuplas; sus esperados que podrian caducar son
+    #     DELTAS (anadir una entrada mueve el libre EXACTAMENTE uno).
+    #   - `164_tarea4`: el grafo, el banco y el registro de HOY, y el estado del
+    #     registro medido como DELTA contra lo que el acta 163 midio al abrir la
+    #     vuelta, no como estado clavado.
+    ("vuelta164_tarea1_mutacion_registro.py", False),
+    ("vuelta164_tarea4_mutacion_005.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

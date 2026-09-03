@@ -1,0 +1,68 @@
+==============================================================================
+VUELTA 164, TAREA 5: LO QUE LA MEDICION ENSUCIO Y COMO SE LIMPIA (P.16)
+==============================================================================
+
+LA MEDICION DE LOS 41 ARNESES PRE 148 REESCRIBIO CINCO SALIDAS SELLADAS.
+No es un hallazgo nuevo ni un defecto de esos ficheros: son las salidas que
+esos arneses ESCRIBEN al correr, y correrlos es justamente lo que el encargo
+manda. Se mide lo que cambio, se restaura el arbol (P.16, quien fabrica
+limpia) y se DECLARA, porque re sellar en silencio es lo que la adjudicacion
+6.7 del acta 163 prohibe.
+
+A) EL NUMSTAT DE LAS CINCO, ANTES DE RESTAURAR
+   15	32	docs/loop/SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt
+   15	32	docs/loop/SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt
+   1	1	docs/loop/SALIDA_V135_4C_MUTACION.txt
+   1	1	docs/loop/SALIDA_V137_1A_MUTACION.txt
+   18	21	docs/loop/SALIDA_V137_1C_MUTACION.txt
+
+B) QUE CAMBIA DENTRO, PRIMERA LINEA DE CADA DIFF
+   +++ b/docs/loop/SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt
+   -(3) aristas segun el grafo: 0 de 9 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 9 entrada(s), 9 par(es) extraidos por regex
+   -    AUSENTE: gestion_portafolio_dos_niveles -> estructura_gates (sig=False prev=False)
+   -    AUSENTE: requisitos_gates_con_dientes -> portfolio_management (sig=False prev=False)
+   -    AUSENTE: requisitos_gates_con_dientes -> revision_portafolio_periodica (sig=False prev=False)
+   -    AUSENTE: requisitos_gates_con_dientes -> gestion_portafolio_foco (sig=False prev=False)
+   -    AUSENTE: portfolio_management -> gates_go_kill_decision_points (sig=False prev=False)
+   -    AUSENTE: gestion_portafolio_formal -> gates_go_kill_decision_points (sig=False prev=False)
+   -    AUSENTE: gestion_portafolio_dos_niveles -> gates_go_kill_decision_points (sig=False prev=False)
+   -    AUSENTE: gestion_portafolio_foco -> gates_go_kill_decision_points (sig=False prev=False)
+   -    AUSENTE: decision_factory_mentality -> gates_go_kill_decision_points (sig=False prev=False)
+   +(3) aristas segun el grafo: 9 de 9 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 9 entrada(s), 9 par(es) extraidos por regex
+   -(3) aristas segun el grafo: 1 de 4 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 4 par(es) extraidos por regex
+   -    AUSENTE: gestion_portafolio_formal -> requisitos_gates_con_dientes (sig=False prev=False)
+   -    AUSENTE: requisitos_gates_con_dientes -> gestion_portafolio_dos_niveles (sig=False prev=False)
+   -    AUSENTE: gestion_portafolio_dos_niveles -> requisitos_gates_con_dientes (sig=False prev=False)
+   +(3) aristas segun el grafo: 4 de 4 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 4 par(es) extraidos por regex
+   -(3) aristas segun el grafo: 0 de 2 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 2 par(es) extraidos por regex
+   -    AUSENTE: sistema_stage_gate -> sistema_gates_go_kill (sig=False prev=False)
+   -    AUSENTE: sistema_gates_go_kill -> asignacion_recursos_en_gates (sig=False prev=False)
+   +(3) aristas segun el grafo: 2 de 2 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 2 par(es) extraidos por regex
+   -(3) aristas segun el grafo: 0 de 1 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 1 entrada(s), 1 par(es) extraidos por regex
+   -    AUSENTE: gestion_de_portafolio_gates_go_kill -> sistema_gates_go_kill (sig=False prev=False)
+   +(3) aristas segun el grafo: 1 de 1 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 1 entrada(s), 1 par(es) extraidos por regex
+   -(3) aristas segun el grafo: 0 de 2 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 2 par(es) extraidos por regex
+   -    AUSENTE: pivotar_o_perseverar -> pivote_estrategico (sig=False prev=False)
+   -    AUSENTE: pivote_o_proceder -> pivote_estrategico (sig=False prev=False)
+   +(3) aristas segun el grafo: 2 de 2 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 2 par(es) extraidos por regex
+   -| OP-E-04 | LISTA | NO | NO | 0/9 |
+   -| OP-E-05 | LISTA | NO | NO | 1/4 |
+   +| OP-E-04 | HECHA | NO | NO | 9/9 |
+   +| OP-E-05 | HECHA | NO | NO | 4/4 |
+   -| OP-M-01-ESLABONES | LISTA | NO | NO | 0/2 |
+   -| OP-M-01-SEXTO | LISTA | NO | NO | 0/1 |
+   -| OP-M-03-ENLACES | LISTA | NO | NO | 0/2 |
+   +| OP-M-01-ESLABONES | HECHA | NO | NO | 2/2 |
+   +| OP-M-01-SEXTO | HECHA | NO | NO | 1/1 |
+   +| OP-M-03-ENLACES | HECHA | NO | NO | 2/2 |
+   +++ b/docs/loop/SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt
+   -(3) aristas segun el grafo: 0 de 9 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 9 entrada(s), 9 par(es) extraidos por regex
+
+C) EL ARBOL RESTAURADO (P.16)
+   git status --porcelain -- docs/loop/ tras el checkout:
+   (sin lineas arriba, aparte de las salidas nuevas de esta vuelta, = limpio)
+
+   git diff --numstat -- docs/loop/ :
+   (vacio = ninguna sellada queda modificada)
+
+FIN
