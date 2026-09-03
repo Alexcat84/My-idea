@@ -429,6 +429,41 @@ def p3b_caso_positivo(F, corte):
     # LO QUE NO SE HACE, Y ES LA CAIDA QUE ESTA CAMPANA PERSIGUE DESDE EL
     # PRINCIPIO: AJUSTAR LA EXPECTATIVA HASTA QUE SALGA VERDE. Se ejecuta en la
     # TAREA 8 de la vuelta 159.
+    # --- VEREDICTO DE LA 6.9, VUELTA 159: LAS DOS SALIDAS SIN PRODUCTOR NO ERAN HUERFANAS. LOS
+    # DOS PRODUCTORES ESTAN VIVOS, Y NINGUN BARRIDO ANTERIOR PODIA HALLARLOS ---
+    #
+    # REGISTRO POR ADICION. Nada de lo de arriba se borra ni se suaviza.
+    #
+    # LO QUE SE MIDIO (instrumento
+    # `scripts/loop/vuelta159_tarea7_productores_en_la_historia.py`, salida
+    # `docs/loop/SALIDA_V159_T7_PRODUCTORES.txt`, cuatro angulos corridos):
+    #
+    #   SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt lo produce
+    #      scripts/loop/verificar_cobertura_bolsa_tres_vias.py
+    #      (5 de 5 lineas casables salen de sus print)
+    #   SALIDA_V136_3D_MUTACION.txt lo produce
+    #      scripts/loop/verificar_fuente_canonico.py
+    #      (1 de 1 linea casable sale de su print, la de AUTOPRUEBA VERIFICADA)
+    #
+    # POR QUE NINGUN BARRIDO ANTERIOR LOS ENCONTRO, Y ES LA PARTE UTIL: LOS DOS
+    # PRODUCTORES IMPRIMEN POR STDOUT Y EL .txt ES UNA REDIRECCION DE SHELL. Por
+    # eso ningun `.py` contiene el NOMBRE del fichero, que es lo que el barrido
+    # de 998 `.py` de la vuelta 157 buscaba, y por eso tampoco contiene su TEXTO
+    # LITERAL: en el fuente ese texto va CON MARCADORES DE FORMATO
+    # ("FICHEROS DE ENTRADA (declarados en FICHEROS_VEREDICTO, %d):"), asi que
+    # buscar la linea YA INTERPOLADA no puede casar nunca. El angulo que si caza
+    # es el de la CABECERA LITERAL: probar prefijos cada vez mas cortos hasta que
+    # uno case.
+    #
+    # LA LECCION PARA ESTA FUNCION, QUE ES LO QUE JUSTIFICA ESCRIBIRLO AQUI: la
+    # P3b se sostiene en que la salida citada EXISTA al corte, y eso sigue igual.
+    # Lo que cambia es que ahora las dos citas tienen productor nombrado y la
+    # ficha puede citarlo. NINGUNA DE LAS DOS ES ARTEFACTO HUERFANO.
+    #
+    # Y LA CAIDA PROPIA, DECLARADA: la PRIMERA corrida de aquel instrumento, con
+    # solo tres angulos, publico las dos como ARTEFACTO HUERFANO. Era falso, y
+    # lo era por defecto del instrumento. Queda escrito para que no se lea la
+    # cifra buena sin la mala.
     r = subprocess.run(["git", "ls-tree", "-r", "--name-only", corte, "docs/loop/"],
                        capture_output=True, cwd=RAIZ)
     en_el_corte = {x.strip().split("/")[-1] for x in r.stdout.decode("utf-8", "replace").splitlines()
