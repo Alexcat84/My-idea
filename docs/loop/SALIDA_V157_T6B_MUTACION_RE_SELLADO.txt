@@ -1,0 +1,38 @@
+==============================================================================
+VUELTA 157, TAREA 6.b: CASO POSITIVO POR MUTACION DE verificar_re_sellado.py
+==============================================================================
+
+  guarda importada de: scripts/loop/verificar_re_sellado.py
+  sujeto (el fichero que el auditor pillo): SALIDA_V156_T4C_CIFRAS.txt
+
+(A) EL SUJETO ESTA RE SELLADO DE VERDAD?
+    estado             : RE SELLADO
+    commit de su tarea : f95e4ee9f8d3
+    numstat contra HEAD: +7/-7
+    CIFRA lineas CIFRA cuyo VALOR cambio: 1
+       CIFRA salidas selladas del tallador: '52 fichero(s)' -> '55 fichero(s)'
+    la linea que la guarda EXIGE, computada:
+       RE SELLADO DECLARADO: SALIDA_V156_T4C_CIFRAS.txt numstat +7/-7, lineas CIFRA con valor cambiado: 1 (CIFRA salidas selladas del tallador)
+    VEREDICTO (A): RE SELLADO, el sujeto sirve
+
+(B) CASO ROJO: el reporte lo cita y NO lo declara
+    CIFRA filas sin declarar: 1 (SALIDA_V156_T4C_CIFRAS.txt)
+    VEREDICTO (B): ROJO, como tiene que ser
+
+(C) CASO VERDE: el mismo reporte MAS la linea que la guarda computo
+    CIFRA filas sin declarar: 0
+    VEREDICTO (C): VERDE
+
+(D) CONTROL: un fichero SIN RE SELLAR no puede ser rojo
+    elegido por computo: SALIDA_ACTA21_AUDITOR.txt (SIN RE SELLAR)
+    CIFRA filas sin declarar: 0
+    VEREDICTO (D): no lo acusa
+
+  (A) esperado True, medido True
+  (B) esperado True, medido True
+  (C) esperado True, medido True
+  (D) esperado True, medido True
+
+VERDE: sobre el fichero que el auditor pillo, la guarda muerde cuando el
+reporte calla, calla cuando el reporte declara, y no acusa a los limpios.
+FIN
