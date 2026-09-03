@@ -10678,3 +10678,72 @@ estas doce la estrecha ni la ensancha. La relectura conjunta de la
 `LD-OPC05-101` (acta 162, seccion 5.3) NO se resuelve aqui: va por su cuenta en
 la TAREA 1.b de la vuelta 163, y si mueve una clase publicada lo hara con
 correccion declarada y recomputo, en su propia entrada.
+
+---
+
+## R.33. Registro de las diez adjudicaciones y la caida propia del acta de la vuelta 163
+
+(Acta del auditor, vuelta 163, secciones 4 y 6; escrito en la vuelta 164,
+TAREA 1.)
+
+Por adicion, como `R.21` a `R.32`. **Corte de todas las cifras de esta entrada:
+3 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes. La
+SEDE tampoco se supone: sale de la adjudicacion 6.3 del acta 162, leida hoy en
+`docs/loop/ACTA_AUDITOR.md:53933`, y se DECLARA que el acta 163 no la repite (la
+regla es de la casa, no de un acta suelta). Salida:
+`docs/loop/SALIDA_V164_T1_REGISTRO_ACTA_163.txt`.
+
+**LAS DIEZ ADJUDICACIONES, CON SU LINEA EN EL ACTA LEIDA HOY.** El titulo de
+cada una es LITERAL del fichero (localizado dentro del cuerpo del acta 163, no
+de cualquier acta); la glosa que sigue es prosa del ejecutor y va marcada como
+tal.
+
+  - **6.1 (`docs/loop/ACTA_AUDITOR.md:54293`, leida hoy). VIA: EN EL PROCEDIMIENTO.** Titulo
+    literal del acta: *"LA VUELTA 163 NO SE CIERRA POR ACTA: SE TERMINA, Y LA SIGUIENTE ES LA 164."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EL PROCEDIMIENTO DE ESTA MISMA VUELTA. La vuelta se abre como 164, no como una 163 prorrogada, y ABSORBE la cola de la 163: su reporte cubre las dos vueltas y las salidas ya selladas de la 163 se CITAN en vez de re correrse. El invariante ACTA N VUELTA N MAS 1 queda intacto, que es de donde cuelgan `tallar_cabecera_reporte.py` y `verificar_apertura_sellada.py`.
+  - **6.2 (`docs/loop/ACTA_AUDITOR.md:54301`, leida hoy). VIA: EN EL PROCEDIMIENTO.** Titulo
+    literal del acta: *"LA COLA SIN COMMITEAR DE LA 163 VA EN EL MISMO COMMIT QUE EL BLOQUE DE APERTURA DE LA 164, Y NO EN UNO SUYO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EL PROCEDIMIENTO, Y MEDIDA. La cola sin commitear de la 163 (la bateria nueva, las tres `SALIDA_V135_2E_MUTACION` re selladas y los ficheros sin versionar) entro en el MISMO commit que los diez `SALIDA_V164_*_APERTURA.txt`, primer commit del corredor e hijo directo del acta 163, sin fragmentar el bloque. La guarda `verificar_apertura_sellada.py --vuelta 164` sale VERDE sobre esa estructura.
+  - **6.3 (`docs/loop/ACTA_AUDITOR.md:54308`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL CRUCE DE ENTREGABLES NO ES DECISOR DE `P.5.1`: ES CORROBORADOR."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA SIN TOCAR NADA, Y ACATADA EN LA TAREA 3. El cruce de entregables queda como CORROBORADOR y no como decisor de `P.5.1`, asi que el veredicto de la `LD-OPC05-101` NO se decide con el, ni a favor ni en contra. La vara congelada no se estrecha.
+  - **6.4 (`docs/loop/ACTA_AUDITOR.md:54315`, leida hoy). VIA: EN EL REPORTE.** Titulo
+    literal del acta: *"LA `101` NO CAMBIA DE CLASE POR MI MANO, Y SU VEREDICTO SE PUBLICA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EL REPORTE, TAREA 3 de esta vuelta. El veredicto de la `LD-OPC05-101` deja de vivir en el asunto del commit `1fa1bac9` y se publica en `docs/loop/REPORTE.md` con la letra de `P.5.1` delante, nombrando que parte de la frase y que ejemplar lo sostienen, y respondiendo punto por punto al caso de la seccion 3.2 del acta.
+  - **6.5 (`docs/loop/ACTA_AUDITOR.md:54323`, leida hoy). VIA: EN EL REPORTE.** Titulo
+    literal del acta: *"LA `005` VA A RELECTURA CONJUNTA, Y MI PROPIA INESTABILIDAD VA DENTRO DEL ENCARGO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EL REPORTE, TAREA 4 de esta vuelta. La `LD-OPC05-005` se relee conjunta contra los dos nodos enteros del grafo con `P.5.1` y sus cuatro ejemplares delante. Si la clase se sostiene, la caida es del auditor y la firma el; si se mueve, va con correccion declarada y recomputo.
+  - **6.6 (`docs/loop/ACTA_AUDITOR.md:54328`, leida hoy). VIA: EN CODIGO.** Titulo
+    literal del acta: *"EL ARNES DE LA 4.b SE ANCLA, CON LA MEDICINA QUE LA PROPIA 163 ESCRIBIO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN CODIGO, TAREA 2.c de esta vuelta. Los casos `F_hoy_*` y `G_mismo_exit` del arnes de la 4.b dejan de leer el arbol de trabajo vivo y pasan a computarse como DELTA sobre un sujeto fabricado, igual que se hizo con `160_6b` y con `162_1a`. La guarda `verificar_re_sellado.py` NO se toca.
+  - **6.7 (`docs/loop/ACTA_AUDITOR.md:54334`, leida hoy). VIA: EN EL REPORTE.** Titulo
+    literal del acta: *"LAS TRES `SALIDA_V135_2E_MUTACION` SE DECLARAN EN EL REPORTE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EL REPORTE, TAREA 2.b de esta vuelta. Las tres `SALIDA_V135_2E_MUTACION` van nombradas con su `numstat` medido y su motivo, aunque el camino nuevo de la guarda ya no las vea desde la apertura de la 164. No se prohibe re sellar: se prohibe re sellar en silencio.
+  - **6.8 (`docs/loop/ACTA_AUDITOR.md:54340`, leida hoy). VIA: EN CODIGO.** Titulo
+    literal del acta: *"LA BATERIA PUBLICA SU CRONOMETRO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN CODIGO, TAREA 2.a de esta vuelta. La bateria corre entera y publica el tiempo TOTAL y el de CADA arnes. La nomina NO se recorta para que corra antes, ningun arnes entra en verde alegado y ninguno se borra.
+  - **6.9 (`docs/loop/ACTA_AUDITOR.md:54345`, leida hoy). VIA: EN MEDICION.** Titulo
+    literal del acta: *"LA 5.b SIGUE SIENDO MEDICION Y SIGUE SIN HACERSE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA COMO MEDICION Y SOLO COMO MEDICION, TAREA 5 de esta vuelta. Los arneses de mutacion anteriores a la vuelta 148 que estan fuera de la nomina se corren y se publica cuantos dan exit 0 y cuantos rojo, con su nomina entera y su cronometro. NINGUNO entra en la bateria: con la cifra delante se decide, que es lo que la 6.7 del acta 156 hizo con las nueve salidas de la P3b.
+  - **6.10 (`docs/loop/ACTA_AUDITOR.md:54348`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL `M` FALSO DE `master_graph.json` NO ES HALLAZGO, Y QUEDA ESCRITO PARA QUE NO SE HEREDE COMO SUSTO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA SIN TOCAR NADA, Y A PROPOSITO. La `M` de `dataset/metadata/master_graph.json` es fin de linea y no contenido: recomputado hoy en la apertura, `git diff HEAD --numstat -- dataset/ web/ engine/` da CERO FILAS. No se arregla y no se commitea sola. Queda escrito para que no se herede como susto.
+
+**EL REPARTO POR VIA, CONTADO Y NO TECLEADO:** EN CODIGO: 2 (6.6, 6.8); EN EL PROCEDIMIENTO: 2 (6.1, 6.2); EN EL REPORTE: 3 (6.4, 6.5, 6.7); EN MEDICION: 1 (6.9); SIN TOCAR NADA: 2 (6.3, 6.10).
+**Ninguna de las diez sube al fundador.**
+
+**LA CAIDA PROPIA DEL AUDITOR, REGISTRADA IGUAL QUE LAS DEL EJECUTOR** (letra
+del encargo de la vuelta 164, TAREA 1: *"Mis caidas se registran igual que las
+tuyas"*). No es del ejecutor y no acumula para sus rachas; se escribe aqui
+porque el registro de la casa no distingue de quien es la mano que cae.
+
+  - **CAIDA 1 (`docs/loop/ACTA_AUDITOR.md:54237`, leida hoy).** Titulo literal del
+    acta: *"CAIDA 1, Y ME LA CAZO EL EJECUTOR CON UN INSTRUMENTO: MANDE COMPROBAR CONTRA EL REGISTRO UNA COSA QUE EL REGISTRO NO DICE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y NO ACUMULA PARA NINGUNA RACHA DEL EJECUTOR, porque no es suya. Su remedio ya esta aplicado y lo aplico la propia TAREA 1.c de la vuelta 163: la cifra contable del tramo se lee del registro y son DOS lecturas ciegas del auditor (`005` y `100`), no cuatro; `094`, `101` y `118` llevan `TRAMO_AL_DOBLE`, que es la segunda pasada del propio ejecutor. La 1.c midio, publico la diferencia y NO escribio marcas para no mover la cifra de `P.5.2`, que es lo correcto.
+
+**LO QUE ESTE REGISTRO NO CIERRA.** La vara `P.5.1` sigue CONGELADA y ninguna de
+estas diez la estrecha ni la ensancha. Los veredictos de la `LD-OPC05-101` (6.4)
+y de la `LD-OPC05-005` (6.5) NO se resuelven aqui: van por su cuenta en las
+TAREAS 3 y 4 de la vuelta 164, y si mueven una clase publicada lo haran con
+correccion declarada y recomputo, en su propia entrada.

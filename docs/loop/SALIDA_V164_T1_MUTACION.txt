@@ -1,0 +1,88 @@
+==============================================================================
+VUELTA 164, TAREA 1: CASO POSITIVO POR MUTACION DEL REGISTRADOR DEL ACTA 163
+==============================================================================
+
+   A_patron_nuevo_ve_las_diez_con_sangria               PASA   (real=10 esperado=10)
+   A_patron_viejo_ve_cero_con_sangria                   PASA   (real=0 esperado=0)
+   A_patron_nuevo_ve_las_diez_sin_sangria               PASA   (real=10 esperado=10)
+   A_el_patron_no_confunde_6_1_con_6_10                 PASA   (real=1 esperado=1)
+   B_titulo_multilinea_se_acumula_hasta_el_cierre       PASA   (real='6.4 TITULO CUATRO QUE SIGUE EN LA LINEA DE ABAJO.' esperado='6.4 TITULO CUATRO QUE SIGUE EN LA LINEA DE ABAJO.')
+   B_titulo_multilinea_no_se_traga_el_cuerpo            PASA   (real=False esperado=False)
+   B_titulo_multilinea_sin_error                        PASA   (real=None esperado=None)
+   C_duplicada_para                                     PASA   (real=True esperado=True)
+   C_duplicada_dice_cuantas_veces                       PASA   (real=True esperado=True)
+   C_ausente_para                                       PASA   (real=True esperado=True)
+   C_negrita_sin_cierre_para                            PASA   (real=True esperado=True)
+   C2_la_VIEJA_no_para_sobre_un_acta_apretada           PASA   (real=True esperado=True)
+   C2_la_VIEJA_devuelve_titulo_en_vez_de_parar          PASA   (real=True esperado=True)
+   C2_y_el_titulo_es_el_texto_SIN_CERRAR_de_la_6_9      PASA   (real='6.9 TITULO NUEVE QUE NUNCA CIERRA' esperado='6.9 TITULO NUEVE QUE NUNCA CIERRA')
+   C2_o_sea_que_el_cierre_lo_tomo_prestado_de_la_6_10   PASA   (real=True esperado=True)
+   C2_la_VIEJA_tampoco_para_con_parrafos                PASA   (real=True esperado=True)
+   C2_y_la_NUEVA_si_para_sobre_lo_mismo                 PASA   (real=True esperado=True)
+   C2_las_dos_coinciden_donde_la_negrita_SI_cierra      PASA   (real=True esperado=True)
+   D_una_caida_se_ve_una_vez                            PASA   (real=1 esperado=1)
+   D_dos_caidas_se_ven_las_dos                          PASA   (real=2 esperado=2)
+   D_el_acotado_deja_fuera_el_ruido_de_otras_actas      PASA   (real=9 esperado=9)
+   E_el_acta_163_trae_las_diez_adjudicaciones           PASA   (real=10 esperado=10)
+   E_el_acta_163_trae_una_sola_caida                    PASA   (real=1 esperado=1)
+   E_la_frase_de_la_sede_esta_una_vez_en_el_fichero     PASA   (real=1 esperado=1)
+   E_y_cero_veces_dentro_del_acta_163                   PASA   (real=0 esperado=0)
+   E_las_once_negritas_se_leen_sin_error                PASA   (real=11 esperado=11)
+   E_los_once_titulos_leidos_hoy_estan_en_PENDIENTES    PASA   (real=11 esperado=11)
+   H_cabecera_de_una_linea_deja_ver_el_titulo_entero    PASA   (real=True esperado=True)
+   H_cabecera_partida_lo_trunca_y_la_idempotencia_queda_ciega PASA   (real=False esperado=False)
+   H_la_cabecera_que_ESTE_instrumento_escribe_es_de_una_linea PASA   (real=True esperado=True)
+   H_la_serie_de_hoy_ve_la_entrada_de_esta_vuelta       PASA   (real=1 esperado=1)
+   F_anadir_una_mueve_el_libre_exactamente_uno          PASA   (real=1 esperado=1)
+   F_un_hueco_no_rellena_el_libre                       PASA   (real=5 esperado=5)
+   F_el_hueco_si_se_cuenta                              PASA   (real=1 esperado=1)
+   F_una_colision_se_ve                                 PASA   (real=1 esperado=1)
+   F_serie_vacia_empieza_en_uno                         PASA   (real=1 esperado=1)
+   G_las_vias_reparten_las_diez                         PASA   (real=10 esperado=10)
+   G_toda_adjudicacion_tiene_via_y_glosa                PASA   (real=True esperado=True)
+
+   CIFRA casos: 38 | pasan: 38 | fallan: 0
+
+   SEGUNDA PASADA: SE MUTA EL VALOR ESPERADO Y TIENE QUE CAER
+   A_patron_nuevo_ve_las_diez_con_sangria               CAE
+   A_patron_viejo_ve_cero_con_sangria                   CAE
+   A_patron_nuevo_ve_las_diez_sin_sangria               CAE
+   A_el_patron_no_confunde_6_1_con_6_10                 CAE
+   B_titulo_multilinea_se_acumula_hasta_el_cierre       CAE
+   B_titulo_multilinea_no_se_traga_el_cuerpo            CAE
+   B_titulo_multilinea_sin_error                        CAE
+   C_duplicada_para                                     CAE
+   C_duplicada_dice_cuantas_veces                       CAE
+   C_ausente_para                                       CAE
+   C_negrita_sin_cierre_para                            CAE
+   C2_la_VIEJA_no_para_sobre_un_acta_apretada           CAE
+   C2_la_VIEJA_devuelve_titulo_en_vez_de_parar          CAE
+   C2_y_el_titulo_es_el_texto_SIN_CERRAR_de_la_6_9      CAE
+   C2_o_sea_que_el_cierre_lo_tomo_prestado_de_la_6_10   CAE
+   C2_la_VIEJA_tampoco_para_con_parrafos                CAE
+   C2_y_la_NUEVA_si_para_sobre_lo_mismo                 CAE
+   C2_las_dos_coinciden_donde_la_negrita_SI_cierra      CAE
+   D_una_caida_se_ve_una_vez                            CAE
+   D_dos_caidas_se_ven_las_dos                          CAE
+   D_el_acotado_deja_fuera_el_ruido_de_otras_actas      CAE
+   E_el_acta_163_trae_las_diez_adjudicaciones           CAE
+   E_el_acta_163_trae_una_sola_caida                    CAE
+   E_la_frase_de_la_sede_esta_una_vez_en_el_fichero     CAE
+   E_y_cero_veces_dentro_del_acta_163                   CAE
+   E_las_once_negritas_se_leen_sin_error                CAE
+   E_los_once_titulos_leidos_hoy_estan_en_PENDIENTES    CAE
+   H_cabecera_de_una_linea_deja_ver_el_titulo_entero    CAE
+   H_cabecera_partida_lo_trunca_y_la_idempotencia_queda_ciega CAE
+   H_la_cabecera_que_ESTE_instrumento_escribe_es_de_una_linea CAE
+   H_la_serie_de_hoy_ve_la_entrada_de_esta_vuelta       CAE
+   F_anadir_una_mueve_el_libre_exactamente_uno          CAE
+   F_un_hueco_no_rellena_el_libre                       CAE
+   F_el_hueco_si_se_cuenta                              CAE
+   F_una_colision_se_ve                                 CAE
+   F_serie_vacia_empieza_en_uno                         CAE
+   G_las_vias_reparten_las_diez                         CAE
+   G_toda_adjudicacion_tiene_via_y_glosa                CAE
+
+   CIFRA casos que CAEN al mutarles el esperado: 38 de 38
+
+VERDE: 38 casos, los 38 pasan y los 38 CAEN al mutarles el esperado.
