@@ -1,0 +1,66 @@
+==============================================================================
+VERIFICAR RE SELLADO: TODA SALIDA_* QUE EL REPORTE CITE Y QUE HAYA CAMBIADO
+DESPUES DEL COMMIT DE SU TAREA TIENE QUE IR DECLARADA
+==============================================================================
+  reporte: docs/loop/REPORTE.md
+  CIFRA salidas selladas que el reporte cita: 45
+
+  SALIDA_V106_CABECERA_TALLADA.txt               RE SELLADO
+      commit de su tarea : d2aa753cf798
+      numstat contra HEAD: +1/-1
+      CIFRA lineas CIFRA cuyo VALOR cambio: 0
+      DECLARADO EN EL REPORTE: SI, con la linea que esta guarda computo
+  SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt         SIN RE SELLAR
+  SALIDA_V136_3D_MUTACION.txt                    SIN RE SELLAR
+  SALIDA_V157_T6B_MUTACION_RE_SELLADO.txt        SIN RE SELLAR
+  SALIDA_V157_T9_MARCADOR_CIERRE.txt             SIN RE SELLAR
+  SALIDA_V159_CICLO_ETIQUETAS_CIERRE.txt         SIN COMMIT DE TAREA
+  SALIDA_V159_CICLO_NUMSTAT_CIERRE.txt           SIN COMMIT DE TAREA
+  SALIDA_V159_CICLO_SYNC_CIERRE.txt              SIN COMMIT DE TAREA
+  SALIDA_V159_GATE0_CMD1_CIERRE.txt              SIN COMMIT DE TAREA
+  SALIDA_V159_HEAD_APERTURA.txt                  SIN RE SELLAR
+  SALIDA_V159_HEAD_CIERRE.txt                    SIN COMMIT DE TAREA
+  SALIDA_V159_MOTOR_CIERRE.txt                   SIN COMMIT DE TAREA
+  SALIDA_V159_T0_APERTURA_SELLADA.txt            SIN RE SELLAR
+  SALIDA_V159_T1_ADJUDICACIONES.txt              SIN RE SELLAR
+  SALIDA_V159_T2A_DOSSIER.txt                    SIN RE SELLAR
+  SALIDA_V159_T2A_VEREDICTOS.txt                 SIN RE SELLAR
+  SALIDA_V159_T2B_NOMINA.txt                     SIN RE SELLAR
+  SALIDA_V159_T2B_VEREDICTOS.txt                 SIN RE SELLAR
+  SALIDA_V159_T2_CONTEO_GATE0.txt                SIN RE SELLAR
+  SALIDA_V159_T3_NOMINA.txt                      SIN RE SELLAR
+  SALIDA_V159_T3_VEREDICTOS.txt                  SIN RE SELLAR
+  SALIDA_V159_T4_CITAS.txt                       SIN RE SELLAR
+  SALIDA_V159_T5_ALCANCE.txt                     SIN RE SELLAR
+  SALIDA_V159_T6C_MUTACION_EXENCION.txt          SIN RE SELLAR
+  SALIDA_V159_T6C_MUTACION_EXENCION_MUTADO.txt   SIN RE SELLAR
+  SALIDA_V159_T6_MUTACION_157.txt                SIN RE SELLAR
+  SALIDA_V159_T6_RE_SELLADO_HEAD.txt             SIN RE SELLAR
+  SALIDA_V159_T7B_MARCA.txt                      SIN RE SELLAR
+  SALIDA_V159_T7_PRODUCTORES.txt                 SIN RE SELLAR
+  SALIDA_V159_T8B_DECLARACION.txt                SIN RE SELLAR
+  SALIDA_V159_T8_DIAGNOSTICO.txt                 SIN RE SELLAR
+  SALIDA_V159_T9_APERTURA_SELLADA.txt            SIN COMMIT DE TAREA
+  SALIDA_V159_T9_BATERIA.txt                     SIN COMMIT DE TAREA
+  SALIDA_V159_T9_CABECERA.txt                    SIN COMMIT DE TAREA
+  SALIDA_V159_T9_CABECERA_COMPARADA.txt          SIN COMMIT DE TAREA
+  SALIDA_V159_T9_CIFRAS_REPORTE.txt              SIN COMMIT DE TAREA
+  SALIDA_V159_T9_EXPEDIENTE.txt                  SIN COMMIT DE TAREA
+  SALIDA_V159_T9_FASE_03_FUSIONES.txt            SIN COMMIT DE TAREA
+  SALIDA_V159_T9_FASE_06_MESAS.txt               SIN COMMIT DE TAREA
+  SALIDA_V159_T9_FASE_08_VERIFICACION.txt        SIN COMMIT DE TAREA
+  SALIDA_V159_T9_FASE_09_LECTURAS_DIRIGIDAS.txt  SIN COMMIT DE TAREA
+  SALIDA_V159_T9_MARCADOR_CIERRE.txt             SIN COMMIT DE TAREA
+  SALIDA_V159_T9_RE_SELLADO.txt                  SIN COMMIT DE TAREA
+  SALIDA_V159_TSC_CIERRE.txt                     SIN COMMIT DE TAREA
+  SALIDA_V159_WEB_CIERRE.txt                     SIN COMMIT DE TAREA
+
+  CIFRA por estado: RE SELLADO 1, SIN COMMIT DE TAREA 20, SIN RE SELLAR 24
+  CIFRA salidas EXENTAS por construccion: 2
+  CIFRA de esas exentas que ademas estan RE SELLADAS: 0
+  EXENCION POR CONSTRUCCION (adjudicacion 6.8 del acta 158): 2 fichero(s) exento(s) del rojo, por ser la salida de esta guarda o del verificador de cifras sobre el reporte final: SALIDA_V159_T9_CIFRAS_REPORTE.txt, SALIDA_V159_T9_RE_SELLADO.txt
+  CIFRA re selladas SIN declarar en el reporte: 0
+
+VERDE: ninguna salida sellada citada por el reporte cambio en silencio.
+FIN
+EXITCODE: 0
