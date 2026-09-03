@@ -1,0 +1,56 @@
+====================================================================================================
+VUELTA 156, TAREA 6: LA SERIE EN LOS DOS CORTES Y CON LAS DOS VARAS
+====================================================================================================
+corte de la vuelta 154: 32b2c76e | corte de la vuelta 156: cf945888
+
+| corte | vara de `declara_su_estado` | congeladas DECLARADAS | congeladas EN SILENCIO | no calzan | exit |
+|---|---|---:|---:|---:|---:|
+| 32b2c76e (apertura de la 154) | VIEJA (arbol) | 24 | 12 | 36 | 0 |
+| 32b2c76e (apertura de la 154) | NUEVA (del corte) | 24 | 12 | 36 | 0 |
+| cf945888 (apertura de la 156) | VIEJA (arbol) | 24 | 12 | 36 | 0 |
+| cf945888 (apertura de la 156) | NUEVA (del corte) | 24 | 12 | 36 | 0 |
+
+CIFRA corridas del instrumento: 4 comprobacion(es)
+
+====================================================================================================
+LA DIFERENCIA, ATRIBUIDA FICHA A FICHA Y NO EN BLOQUE
+====================================================================================================
+
+  CORTE 32b2c76e: fichas cuyo texto DECLARA HOY y NO declaraba al corte (o al reves): 4
+     OP-M-01            al corte: silencio hoy: declara 
+     OP-M-02            al corte: silencio hoy: declara 
+     OP-M-03            al corte: silencio hoy: declara 
+     OP-M-05            al corte: silencio hoy: declara 
+  CIFRA fichas que la vara nueva devuelve al silencio en el corte 32b2c76e: 4 operaciones
+
+  CORTE cf945888: fichas cuyo texto DECLARA HOY y NO declaraba al corte (o al reves): 0
+  CIFRA fichas que la vara nueva devuelve al silencio en el corte cf945888: 0 operaciones
+
+====================================================================================================
+LECTURA DE LA TABLA, DICHA AUNQUE NO FAVOREZCA
+====================================================================================================
+  Sobre el corte de la 154 la vara nueva mueve la serie de 24/12 a 24/12 (diferencia +0/+0).
+  Sobre el corte de la 156 la vara nueva mueve la serie de 24/12 a 24/12 (diferencia +0/+0).
+
+  LA CIFRA PUBLICADA DE CONGELADAS NO SE MUEVE, Y DIGO POR QUE CON LA MEDICION
+  DELANTE, QUE ES LO QUE LA ADJUDICACION PIDE, NO UNA PROMESA:
+
+  (1) EN EL CORTE DE LA 156 la diferencia es CERO porque la vuelta 156 NO ha
+      escrito ni una nota ni una adjudicacion en docs/plan/OPERACIONES.jsonl:
+      sus adjudicaciones fueron al registro de citas y a los .py. El arbol y el
+      corte traen el MISMO texto de ficha, y las cuatro que se mueven en el otro
+      corte no se mueven aqui.
+
+  (2) EN EL CORTE DE LA 154 SI hay cuatro fichas cuyo texto cambio despues del
+      corte (OP-M-01, OP-M-02, OP-M-03 y OP-M-05, las notas que la propia 154
+      escribio), Y AUN ASI LA SERIE NO SE MUEVE. El motivo se mide, no se supone:
+        OP-M-01    estado al corte 32b2c76e: LISTA  | estado HOY: HECHA 
+        OP-M-02    estado al corte 32b2c76e: LISTA  | estado HOY: HECHA 
+        OP-M-03    estado al corte 32b2c76e: LISTA  | estado HOY: HECHA 
+        OP-M-05    estado al corte 32b2c76e: LISTA  | estado HOY: HECHA 
+      `declara_su_estado` SOLO se consulta en la rama LISTA Y EJECUTADA. Las
+      cuatro estan HOY en HECHA, o sea FUERA de esa rama, asi que su texto ya no
+      entra en el conteo por ningun lado. EL AGUJERO ERA REAL Y LA VUELTA 154 LO
+      DEMOSTRO AL DIGITO; lo que esta vuelta anade es que YA NO PUEDE VOLVER A
+      ABRIRSE, no una correccion de la cifra de hoy.
+EXITCODE: 0

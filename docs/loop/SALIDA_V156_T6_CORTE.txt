@@ -1,0 +1,32 @@
+=== VARA VIGENTE: declara_su_estado DEL CORTE ===
+| `OP-M-02-PROG` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA |
+| `OP-M-02-MEDIOS` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA |
+| `OP-D-07` | 02_DESTEJIDOS | DESTEJIDO | OP-M-03=HECHA |
+| `OP-M-03-II` | 03_FUSIONES | FUSION DE MESA | OP-M-03=HECHA |
+
+CONTADO: 4 operacion(es) LISTA con todas sus dependencias en HECHA.
+CONTRASTE: 24 operacion(es) LISTA con depende_de VACIO (nunca bloqueadas).
+
+Y LO QUE DE VERDAD QUEDA POR CORRER: las fichas en LISTA SIN NINGUNA de las
+tres pruebas. Son las unicas cuyo estado LISTA calza con el repo, o sea las
+unicas que el expediente y el arbol dicen a la vez que no se han ejecutado.
+
+| id_op | fase | tipo | depende_de medido |
+|---|---|---|---|
+| `OP-V-01` | 08_VERIFICACION | MESA | (vacio) |
+| `OP-L-01` | 09_LECTURAS_DIRIGIDAS | MESA | (vacio) |
+| `OP-L-02` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA |
+| `OP-L-03` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA, OP-D-04=LISTA, OP-D-05=LISTA, OP-D-06=LISTA |
+| `OP-I-01` | 10_INVENTARIO | MESA | (vacio) |
+| `OP-M-02-MEDIOS` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA |
+| `OP-M-02-ADMIT` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA, OP-M-02-MEDIOS=LISTA |
+
+CONTADO: 7 ficha(s) en LISTA sin ninguna prueba de ejecucion.
+
+CIFRA fichas del expediente: 71 operaciones
+CIFRA fichas que no calzan: 36 operaciones
+CIFRA fichas congeladas declaradas: 24 operaciones
+CIFRA fichas congeladas en silencio: 12 operaciones
+CIFRA fichas HECHA sin ninguna prueba: 0 operaciones
+CIFRA fichas en LISTA sin ninguna prueba: 7 operaciones
+EXITCODE: 0

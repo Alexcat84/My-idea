@@ -383,20 +383,75 @@ def guarda_reloj_congelado(v3, apertura):
     return propios, contados, intrusos
 
 
+MARCAS_DE_DECLARACION = ("ESTADO", "DIFERIDA", "CONGELAD", "SIGUE EN LISTA", "NO SE MUEVE")
+
+
 def declara_su_estado(f):
-    """La ficha dice algo explicito sobre su propio campo estado."""
+    """La ficha dice algo explicito sobre su propio campo estado.
+
+    --- ESTA FIRMA QUEDA SUSTITUIDA COMO VARA VIGENTE (vuelta 156, TAREA 6,
+    adjudicacion 6.7 del acta 155). NO SE BORRA: se conserva entera porque es la
+    unica forma de MEDIR LA SERIE EN LOS DOS CORTES y atribuir la diferencia, que
+    es justo lo que la adjudicacion exige. Se llega a ella con --declara-arbol. ---
+
+    LO QUE HACIA MAL, DEMOSTRADO AL DIGITO POR LA VUELTA 154 (su discutible 8):
+    lee la ficha DEL ARBOL DE TRABAJO, asi que las notas que la PROPIA VUELTA
+    escribe mueven la cifra que la propia vuelta publica. En la 154 fueron CUATRO
+    fichas que pasaron de "congelado en silencio" a "congelado declarado" dentro
+    de la misma corrida. UNA CIFRA QUE EL TEXTO DE LA VUELTA MUEVE ES UNA CIFRA
+    QUE MIDE LA VUELTA, NO EL REPO."""
     texto = " ".join(str(f.get(k) or "") for k in ("nota", "adjudicacion"))
     t = texto.upper()
-    for marca in ("ESTADO", "DIFERIDA", "CONGELAD", "SIGUE EN LISTA", "NO SE MUEVE"):
+    for marca in MARCAS_DE_DECLARACION:
         if marca in t:
             return True, marca
     return False, None
+
+
+def fichas_del_corte(corte):
+    """`docs/plan/OPERACIONES.jsonl` TAL COMO ESTABA EN `--corte`, indexado por
+    id_op. Es `git show <corte>:...`, la misma mecanica con que la P3 congela su
+    reloj (adjudicacion 6.7 del acta 155)."""
+    r = subprocess.run(["git", "show", "%s:docs/plan/OPERACIONES.jsonl" % corte],
+                       capture_output=True, cwd=RAIZ)
+    if r.returncode != 0:
+        raise SystemExit("ROJO: no se pudo leer OPERACIONES.jsonl en el corte %s" % corte)
+    texto = r.stdout.decode("utf-8", "replace")
+    out = {}
+    for linea in texto.splitlines():
+        if linea.strip():
+            d = json.loads(linea)
+            out[d["id_op"]] = d
+    return out
+
+
+def declara_su_estado_del_corte(f, en_el_corte):
+    """LA VARA VIGENTE DESDE LA VUELTA 156 (adjudicacion 6.7 del acta 155):
+    `nota` y `adjudicacion` SE LEEN DEL CORTE, como la P3.
+
+    UNA FICHA QUE NO EXISTIA AL CORTE NO DECLARA NADA, y es lo correcto: al corte
+    no habia nada que declarar. Se devuelve la marca NO EXISTIA AL CORTE para que
+    ese caso se vea en la salida en vez de confundirse con un silencio.
+
+    LA ASIMETRIA CON LA P2 SIGUE VALIENDO Y SIGUE ESCRITA ARRIBA (adjudicacion 6.2
+    del acta 153): la P2 mide EXISTENCIA de un control en el codigo vivo y lee el
+    arbol; esto mide LO QUE LA FICHA DICE DE SI MISMA, que no es existencia de un
+    control sino texto de la vuelta, y por eso va congelado."""
+    d = en_el_corte.get(f["id_op"])
+    if d is None:
+        return False, "NO EXISTIA AL CORTE"
+    return declara_su_estado(d)
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--corte", required=True)
     ap.add_argument("--apertura", default=None)
+    ap.add_argument("--declara-arbol", action="store_true",
+                    help="lee `nota` y `adjudicacion` del ARBOL DE TRABAJO para decidir si "
+                         "una ficha declara su estado, o sea la vara ANTERIOR a la "
+                         "adjudicacion 6.7 del acta 155. Solo para el contraste de la "
+                         "vuelta 156: NO es la vara vigente.")
     ap.add_argument("--vara-vieja", action="store_true",
                     help="corre la P3 con la nomina de rutas ANTERIOR a la adjudicacion "
                          "6.1 del acta 153 (con scripts/ dentro). Solo para el contraste "
@@ -428,6 +483,16 @@ def main():
     print("CRITERIO (TAREA 3.b): las tres pruebas estan escritas en el docstring de")
     print("este fichero, cada una con la fuente que la autoriza. Se dice SIEMPRE cual")
     print("de las tres sostiene cada fila.")
+    print("")
+
+    en_el_corte = fichas_del_corte(corte)
+    print("")
+    print("EL TEXTO DE LA FICHA VA CONGELADO EN --corte (adjudicacion 6.7 del acta 155):")
+    print("  fichas en OPERACIONES.jsonl AL CORTE %s: %d" % (corte_h, len(en_el_corte)))
+    print("  fichas en el ARBOL DE TRABAJO: %d" % len(F))
+    print("  VARA DE `declara_su_estado`: %s"
+          % ("ARBOL DE TRABAJO, la ANTERIOR a la adjudicacion 6.7 del acta 155 (contraste)"
+             if args.declara_arbol else "DEL CORTE, la vigente"))
     print("")
 
     v1 = p1_vara_de_grafo()
@@ -481,7 +546,10 @@ def main():
             calzan += 1
             continue
         if estado == "LISTA" and ejecutada:
-            dice, marca = declara_su_estado(f)
+            if args.declara_arbol:
+                dice, marca = declara_su_estado(f)
+            else:
+                dice, marca = declara_su_estado_del_corte(f, en_el_corte)
             if dice:
                 congelados_declarados += 1
                 filas_malas.append((i, f["fase"], estado, "+".join(pruebas),
