@@ -492,6 +492,30 @@ def p3b_caso_positivo(F, corte):
     # QUIEN LA CITA. Cuando una salida parezca huerfana, ESE ES EL PRIMER
     # ANGULO, no el ultimo: cuesta un grep sobre `docs/plan/` y no depende de
     # que el productor escriba su cabecera sin interpolar.
+    #
+    # CORRECCION DECLARADA POR ADICION (vuelta 160, TAREA 5, cazada por mi
+    # propio instrumento ANTES de publicar el reporte). EL TEXTO DE ARRIBA NO SE
+    # BORRA, y en particular no se borra su frase "`docs/PENDIENTES.md:6241` lo
+    # nombra dos lineas arriba dentro del mismo parentesis", que copie del acta
+    # 159 y del encargo SIN HABERLA MEDIDO. Leida en su sitio, esa frase deja
+    # entender que `PENDIENTES.md:6241` nombra a `verificar_fuente_canonico.py`,
+    # porque es el productor citado justo antes. RECOMPUTADO HOY con
+    # `scripts/loop/vuelta160_tarea5_citas_de_las_salidas.py`, salida pegada en
+    # `docs/loop/SALIDA_V160_T5_CITAS.txt`, EL REPARTO REAL ES OTRO:
+    #     SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt  TRES citas:
+    #         docs/plan/04_ENLACES.md:445      (productor EN LA MISMA LINEA)
+    #         docs/plan/OPERACIONES.jsonl:45   (productor EN LA MISMA LINEA)
+    #         docs/PENDIENTES.md:6241          (productor EN LA VECINDAD, dos
+    #                                           lineas arriba, y el productor es
+    #                                           verificar_cobertura_bolsa_tres_vias.py,
+    #                                           NO verificar_fuente_canonico.py)
+    #     SALIDA_V136_3D_MUTACION.txt             UNA cita:
+    #         docs/plan/OPERACIONES.jsonl:36   (productor EN LA MISMA LINEA)
+    # O SEA TRES Y UNA, NO DOS Y DOS. LO QUE NO CAMBIA, y por eso la 6.6 se
+    # sostiene entera: SON CUATRO CITAS, LAS CUATRO NOMBRAN A SU PRODUCTOR, y
+    # CIFRA fichas que hay que reescribir: 0. Lo que cambia es a quien nombra
+    # una de ellas, y se corrige aqui porque el comentario de una guarda es
+    # CIFRA PUBLICADA (decision del fundador del 2 sep 2026, la cuarta sede).
     r = subprocess.run(["git", "ls-tree", "-r", "--name-only", corte, "docs/loop/"],
                        capture_output=True, cwd=RAIZ)
     en_el_corte = {x.strip().split("/")[-1] for x in r.stdout.decode("utf-8", "replace").splitlines()

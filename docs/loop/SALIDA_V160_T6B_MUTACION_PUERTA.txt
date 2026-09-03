@@ -1,0 +1,58 @@
+==============================================================================
+VUELTA 160, TAREA 6.b: CASO POSITIVO POR MUTACION DE LA PUERTA DEL CORREDOR
+==============================================================================
+
+EL COMMIT DEL ACTA 159, LEIDO DE git log Y NO TECLEADO: 13cf21be46b52970ff55dcc66b067c431bbee05c
+
+LA VERSION VIEJA, SACADA DE git show HEAD:scripts/loop/verificar_apertura_sellada.py : cargada
+
+CASO 1: SIN FICHEROS DE APERTURA, SIGUE ROJO Y AHORA NOMBRA EL ACTA
+------------------------------------------------------------------------------
+   codigo de salida: 1 (ROJO: True)
+   la cabecera NOMBRA el acta 13cf21be: True
+   la cabecera dice (no hallado): False
+      | PUERTA DEL CORREDOR (adjudicacion 6.8 del acta 155): el encargo se lee del COMMIT DEL ACTA 13cf21be, no del arbol de trabajo.
+      |    rotulo 'HASHES ADMITIDOS EN EL CORREDOR DE ESTA VUELTA:' en ese encargo: NO
+      | ROJO, apertura de la vuelta 160 NO sellada antes de la 1.a operacion (1 cosa(s) no cuadran):
+   VEREDICTO: OK
+
+CASO 2: CON UN ACTA QUE DE VERDAD NO EXISTE, SIGUE DICIENDO (no hallado)
+------------------------------------------------------------------------------
+   codigo de salida: 1 (ROJO: True)
+   la cabecera dice (no hallado), que aqui es la verdad: True
+      | PUERTA DEL CORREDOR (adjudicacion 6.8 del acta 155): el encargo se lee del COMMIT DEL ACTA (no hallado), no del arbol de trabajo.
+      |    rotulo 'HASHES ADMITIDOS EN EL CORREDOR DE ESTA VUELTA:' en ese encargo: NO
+   VEREDICTO: OK
+
+CASO 3: EL CODIGO VIEJO, MISMO ESCENARIO DEL CASO 1, TIENE QUE MENTIR
+------------------------------------------------------------------------------
+   codigo de salida del VIEJO: 1 (ROJO: True)
+   el VIEJO dice (no hallado) sobre un acta que SI hallo: True
+      | PUERTA DEL CORREDOR (adjudicacion 6.8 del acta 155): el encargo se lee del COMMIT DEL ACTA (no hallado), no del arbol de trabajo.
+      |    rotulo 'HASHES ADMITIDOS EN EL CORREDOR DE ESTA VUELTA:' en ese encargo: NO
+   EL DEFECTO SE REPRODUCE EN EL CODIGO VIEJO Y NO EN EL NUEVO, que es
+   lo que convierte al caso 1 en prueba de un remedio y no en un
+   VERDE que no dice nada.
+   VEREDICTO: OK
+
+CASO 4: NINGUN VEREDICTO SE MOVIO, COTEJADO VIEJO CONTRA NUEVO
+------------------------------------------------------------------------------
+   vuelta 160: nuevo exit 0 | viejo exit 0 | igual: True
+      nuevo, primera linea de veredicto: VERDE: los 10 ficheros SALIDA_V160_*_APERTURA.txt nacieron todos en el primer commit de la vuelta (hijo directo del acta
+   vuelta 100: nuevo exit 1 | viejo exit 1 | igual: True
+      nuevo, primera linea de veredicto:    SIN ROTULO NO SE ADMITE NADA. Es lo que la guarda hacia antes de la adjudicacion 6.7 del acta 153, asi que ningun ver
+   VEREDICTO: OK
+
+==============================================================================
+  OK    CASO 1, sin ficheros: sigue ROJO y nombra el acta
+  OK    CASO 2, sin acta de verdad: (no hallado) sobrevive
+  OK    CASO 3, el codigo viejo reproduce el defecto
+  OK    CASO 4, los codigos de salida no se movieron
+
+CIFRA casos del arnes: 4
+CIFRA casos que se comportan: 4
+==============================================================================
+VERDE: los 4 se comportan. LA PUERTA YA NO DICE (no hallado) DE UN
+COMMIT QUE HALLO, Y LO SIGUE DICIENDO CUANDO DE VERDAD NO LO HALLA.
+FIN
+EXITCODE: 0

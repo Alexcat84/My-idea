@@ -1,0 +1,21 @@
+==============================================================================
+VUELTA 160, TAREA 4: EL MARCADOR DE CIERRE, PARAMETRIZADO (adjudicacion 6.8)
+==============================================================================
+
+A) LA ADITIVIDAD, MEDIDA CON git diff --numstat
+   21	1	scripts/loop/vuelta159_tarea9_marcador_cierre.py
+   LA UNICA LINEA RETIRADA ES EL print DE LA CABECERA CLAVADA, y queda
+   TACHADA Y LEGIBLE en el comentario de su propia correccion declarada.
+
+B) LA GUARDA DE QUE EL NUMERO YA NO SE PUEDE CLAVAR: SIN --vuelta, CAE
+   exit sin --vuelta: 2  (2 = argparse lo exige; NO hay valor por defecto)
+
+C) EL ROTULO SE INTERPOLA: LA MISMA CORRIDA CON DOS VUELTAS DISTINTAS
+   --vuelta 160 : VUELTA 160, CIERRE: MARCADOR, CENSO, ARISTAS Y REGISTRO, AL CIERRE
+   --vuelta 159 : VUELTA 159, CIERRE: MARCADOR, CENSO, ARISTAS Y REGISTRO, AL CIERRE
+   --vuelta 157 : VUELTA 157, CIERRE: MARCADOR, CENSO, ARISTAS Y REGISTRO, AL CIERRE
+
+D) Y LA CABECERA CON --vuelta 159 REPRODUCE LA DE SALIDA_V159_T9_MARCADOR_CIERRE.txt
+   pegada de esa salida: VUELTA 159, CIERRE: MARCADOR, CENSO, ARISTAS Y REGISTRO, AL CIERRE
+
+FIN

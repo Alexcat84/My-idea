@@ -629,19 +629,55 @@ def verificar(vuelta):
     # (sin rama, sin acta, sin ficheros de apertura), pero un rojo que revienta
     # en vez de hablar es lo contrario de fallar ruidoso (banco 9). Las tres
     # devuelven ahora la tupla completa, con los tres huecos vacios.
+    #
+    # ADJUDICACION 6.9 DEL ACTA 159 (3 sep 2026, addendum), Y ES CORRECCION
+    # DECLARADA POR ADICION SOBRE LA CORRECCION DE ARRIBA. LAS LINEAS VIEJAS
+    # QUEDAN AQUI, TACHADAS Y LEGIBLES, porque el veredicto de las vueltas 156 a
+    # 159 se dio con ellas:
+    #     ~~vacio = ([], {}, {}, [], False, None)~~
+    #     ~~    return (fallos,) + vacio~~        (la de `acta is None`)
+    #     ~~    return (fallos,) + vacio~~        (la de `not nombres`)
+    #
+    # EL DEFECTO, HALLADO POR EL AUDITOR PROBANDO SU PROPIO COMMIT DEL ACTA
+    # (acta 159, seccion 10): el ultimo hueco de `vacio` es el `acta`, y `main`
+    # lo imprime como `(no hallado)`. Cuando `verificar()` SI hallo el acta y
+    # sale por la salida temprana de "no hay ficheros de apertura" (que es lo
+    # correcto antes de que la vuelta corra), la puerta imprime
+    # `COMMIT DEL ACTA (no hallado)` SOBRE UN COMMIT QUE SI HALLO. La correccion
+    # de la vuelta 156 arreglo el ValueError y DEJO PASAR ESTA: la tupla ya no
+    # revienta, pero MIENTE sobre lo que la funcion si averiguo. Es la especie
+    # que esta campana persigue: UN ROJO QUE NOMBRA AL CULPABLE EQUIVOCADO ES
+    # MEDIA GUARDA (adjudicacion 6.9 del acta 157) y fallar ruidoso, no mentir
+    # calladito (banco 9).
+    #
+    # EL REMEDIO: las salidas tempranas LLEVAN EL `acta` QUE YA TIENEN en vez de
+    # un hueco. Y SI DE VERDAD NO SE HALLO, SE SIGUE DICIENDO: la salida de
+    # `acta is None` devuelve `None` porque ahi el acta de verdad no existe, y
+    # esa es la unica que tiene que imprimir `(no hallado)`.
+    #
+    # NINGUN VEREDICTO SE TOCA: `fallos` no cambia en ninguna de las tres
+    # salidas, asi que el rojo y el verde de esta guarda son exactamente los
+    # mismos antes y despues. Lo unico que cambia es a quien nombra la cabecera.
     fallos = []
-    vacio = ([], {}, {}, [], False, None)
+
+    def _vacio(acta_hallada):
+        """La tupla de las salidas tempranas, con el `acta` que ya se sepa."""
+        return ([], {}, {}, [], False, acta_hallada)
+
     rama = rama_actual(fallos)
     if rama is None:
-        return (fallos,) + vacio
+        # Sin rama no se pudo ni buscar el acta: aqui el hueco es verdad.
+        return (fallos,) + _vacio(None)
     acta = commit_acta(vuelta, rama, fallos)
     if acta is None:
-        return (fallos,) + vacio
+        # El acta NO se hallo de verdad: `(no hallado)` es la palabra correcta.
+        return (fallos,) + _vacio(None)
 
     nombres = ficheros_apertura(vuelta)
     if not nombres:
         fallos.append("no existe ningun docs/loop/SALIDA_V%d_*_APERTURA.txt en el arbol de trabajo" % vuelta)
-        return (fallos,) + vacio
+        # AQUI ESTABA LA MENTIRA: el acta SI se hallo y la cabecera decia que no.
+        return (fallos,) + _vacio(acta)
 
     detalle = []
     corredores = {}   # cache: un corredor por commit de nacimiento, no uno por fichero

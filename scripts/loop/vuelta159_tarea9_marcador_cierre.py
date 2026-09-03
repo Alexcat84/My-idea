@@ -50,6 +50,7 @@ reporte nunca afirmo que estuviera parametrizado.
 EL REMEDIO, EJECUTADO EN LA TAREA 4 DE LA VUELTA 160: toma `--vuelta` y el
 rotulo se interpola. El literal viejo queda en este registro y no en el codigo.
 """
+import argparse
 import io
 import json
 import os
@@ -70,8 +71,27 @@ def jsonl(ruta):
 
 
 def main():
+    # CORRECCION DECLARADA POR ADICION (vuelta 160, TAREA 4; adjudicacion 6.8 del
+    # acta 159, hallada por el auditor en la seccion 5.2 sobre este mismo
+    # remedio). LA LINEA VIEJA QUEDA AQUI, TACHADA Y LEGIBLE, porque la cabecera
+    # de docs/loop/SALIDA_V159_T9_MARCADOR_CIERRE.txt se escribio con ella:
+    #     ~~print("VUELTA 159, CIERRE: MARCADOR, CENSO, ARISTAS Y REGISTRO, AL CIERRE")~~
+    # EL DEFECTO: este fichero nacio en la vuelta 159 PARA MATAR LOS ARTEFACTOS
+    # DE UN SOLO USO (la salida de la 157 no tenia productor vivo en scripts/,
+    # comprobado por el auditor con git log --all -S), y traia el numero de
+    # vuelta CLAVADO en su propia cabecera, sin --vuelta y sin argparse. En la
+    # vuelta 160 o mentia en su cabecera o obligaba a escribir otro instrumento
+    # de un solo uso, QUE ES EXACTAMENTE EL DEFECTO QUE VINO A CERRAR.
+    # EL REMEDIO: toma --vuelta y el rotulo se interpola. Sin valor por defecto
+    # A PROPOSITO: un defecto silencioso volveria a clavar un numero, solo que
+    # mas escondido. Quien lo corra tiene que decir de que vuelta habla.
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--vuelta", type=int, required=True,
+                    help="numero de vuelta del cierre que se esta midiendo")
+    a = ap.parse_args()
     print("=" * 78)
-    print("VUELTA 159, CIERRE: MARCADOR, CENSO, ARISTAS Y REGISTRO, AL CIERRE")
+    print("VUELTA %d, CIERRE: MARCADOR, CENSO, ARISTAS Y REGISTRO, AL CIERRE" % a.vuelta)
     print("=" * 78)
     print("")
 

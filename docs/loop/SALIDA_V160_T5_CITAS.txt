@@ -1,0 +1,66 @@
+==============================================================================
+VUELTA 160, TAREA 5: LAS CUATRO CITAS DE LAS DOS SALIDAS, RECOMPUTADAS
+==============================================================================
+
+VARA DECLARADA ANTES DE CONTAR: cita = linea de docs/plan/ o de
+docs/PENDIENTES.md que nombre el fichero de salida. NOMBRA A SU
+PRODUCTOR si el .py aparece en la MISMA linea o en la vecindad de 2
+lineas a cada lado. La vecindad se imprime junto a cada cita.
+
+CIFRA ficheros barridos: 71
+
+------------------------------------------------------------------------------
+SALIDA: SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt
+PRODUCTOR BUSCADO: verificar_cobertura_bolsa_tres_vias.py
+------------------------------------------------------------------------------
+
+   CITA docs/plan/04_ENLACES.md:445   productor EN LA MISMA LINEA
+           443 | **EL CUARTO TRAMO (filas 151 a 183, 33 pares) por si solo:** clase D **33**, direccion leida **13**, NO RESUELTA **20** (**60,6%**), mediana de `titul
+           444 | 
+      >>   445 | **CORRECCION DECLARADA (vuelta 108, TAREA 2.5, remedio de la caida 1.1 del acta de la vuelta 107, cifra publicada). LO DE ARRIBA NO SE BORRA.** El **7
+           446 | 
+           447 | **ESTADO DE `OP-E-03` SE QUEDA EN `LISTA`**: la lectura esta completa, pero mover `estado` a `HECHA` es una decision que este addendum no toma; la TAR
+
+   CITA docs/plan/OPERACIONES.jsonl:45   productor EN LA MISMA LINEA
+            43 | {"id_op": "OP-L-03", "fase": "09_LECTURAS_DIRIGIDAS", "tipo": "MESA", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nu
+            44 | {"id_op": "OP-I-01", "fase": "10_INVENTARIO", "tipo": "MESA", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": [
+      >>    45 | {"id_op": "OP-E-03", "fase": "04_ENLACES", "tipo": "LECTURA DIRIGIDA", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_n
+            46 | {"id_op": "OP-S-12", "fase": "05_SANEO", "tipo": "SANEO MECANICO", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nueva
+            47 | {"id_op": "OP-C-05", "fase": "00_CODIGO", "tipo": "GUARDA", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": [],
+
+   CITA docs/PENDIENTES.md:6241   productor EN LA VECINDAD
+          6239 | Contado hoy con el instrumento nuevo (TAREA 2 de esta vuelta,
+          6240 | `scripts/loop/verificar_cobertura_bolsa_tres_vias.py`,
+      >>  6241 | `docs/loop/SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt`): confirma **73/74**. El
+          6242 | 46 no se escapo por azar: la guarda del paso mal casado lo aparta CADA
+          6243 | VUELTA por diseno (`docs/loop/SALIDA_V105_TAREA4_3_RE_BARRIDO.txt`, "SALTAN
+
+   CIFRA citas de SALIDA_V108_TAREA2_3_CASO_POSITIVO.txt: 3
+
+------------------------------------------------------------------------------
+SALIDA: SALIDA_V136_3D_MUTACION.txt
+PRODUCTOR BUSCADO: verificar_fuente_canonico.py
+------------------------------------------------------------------------------
+
+   CITA docs/plan/OPERACIONES.jsonl:36   productor EN LA MISMA LINEA
+            34 | {"id_op": "OP-V-01", "fase": "08_VERIFICACION", "tipo": "MESA", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas":
+            35 | {"id_op": "OP-U-02", "fase": "03_FUSIONES", "tipo": "FUSION", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": [
+      >>    36 | {"id_op": "OP-S-11", "fase": "05_SANEO", "tipo": "CAMPO_SUCIO", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas":
+            37 | {"id_op": "OP-F-04-COL", "fase": "01_FUENTES", "tipo": "DECISION_DE_FUENTE", "nodos": ["blueprint_de_experiencia", "cliente_disena_producto", "cultura
+            38 | {"id_op": "OP-F-04-HOR", "fase": "01_FUENTES", "tipo": "DECISION_DE_FUENTE", "nodos": ["actualizacion_posiciones_existentes", "background_startup_vs_c
+
+   CIFRA citas de SALIDA_V136_3D_MUTACION.txt: 1
+
+==============================================================================
+CIFRA citas halladas en total: 4
+CIFRA de ellas que NOMBRAN a su productor: 4
+CIFRA de ellas SIN productor a la vista: 0
+CIFRA que el acta 159 declara en su 5.1: 4 citas, las 4 con productor
+CIFRA fichas que hay que reescribir: 0
+
+REPRODUCE AL DIGITO: CUATRO CITAS Y LAS CUATRO NOMBRAN A SU PRODUCTOR.
+La 6.6 se sostiene: LAS FICHAS NO SE REESCRIBEN, cifra 0, y lo que va
+escrito junto a la funcion de la P3b es solo la leccion del angulo
+barato, que la TAREA 1 ya dejo puesta por adicion.
+FIN
+EXITCODE: 0
