@@ -1,0 +1,27 @@
+HUELLA sha256 DE dataset/ ANTES (con el ciclo cerrado): 0864e9cfe4e3b7746922bde54d8e551a45f02a7a1ba3780dcaed2e0986b65e37
+
+REGISTRO: 153 entradas. GRAFO: 8305326 bytes.
+
+CASO C, CONTRAPRUEBA, ARBOL INTACTO. esperado VERDE.
+  exit 0 | [OK] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 153 par(es) bidireccional(es) tras re
+  [OK]
+
+CASO A, SE CAE LA CITA. Par elegido POR COMPUTO (entrada del medio de 153): dia_cero_defectos <-> entrenamiento_supervisores_calidad
+  via de la cita que se quita: LECTURA_DIRIGIDA | LD-OPC05-057, clase C
+  exit 1 | [FALLO] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 153 par(es) bidireccional(es) tras resolver, 152 con cita, 1 SIN CITA: ['dia_cero_defectos <-> entrenami
+  cae: True | LA NOMBRA: True
+  [OK]
+
+CASO B, ARISTA BIDIRECCIONAL NUEVA QUE NADIE LEYO. Par elegido POR COMPUTO: ab_testing_optimizacion <-> zero_defects_concepto
+  exit 1 | [FALLO] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 154 par(es) bidireccional(es) tras resolver, 153 con cita, 1 SIN CITA: ['ab_testing_optimizacion <-> zer
+  cae: True | LA NOMBRA: True
+  [OK]
+
+HUELLA sha256 DE dataset/ DESPUES: 0864e9cfe4e3b7746922bde54d8e551a45f02a7a1ba3780dcaed2e0986b65e37
+dataset/ IDENTICO ANTES Y DESPUES: True
+
+================================================================================================
+CASO POSITIVO SUPERADO: la contraprueba pasa en VERDE y LOS DOS ATAQUES TUMBAN
+GATE 0 CON exit 1 NOMBRANDO EL PAR, por los dos lados por los que un par puede
+quedarse sin cita: que se caiga el registro y que llegue una arista sin leer.
+Y dataset/ queda IDENTICO al digito, comprobado por sha256 y no prometido.

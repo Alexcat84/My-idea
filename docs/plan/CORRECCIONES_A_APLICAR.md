@@ -2429,3 +2429,59 @@ sep 2026, PREGUNTA 2**
 falsa en el **codigo o el docstring de una guarda de `scripts/`** cuenta como
 **CIFRA PUBLICADA desde esa fecha, sin retroactividad**. **Esta es anterior: se
 corrige por declaracion y NO ACUMULA.**
+
+
+---
+
+## CORRECCION 33. **`OP-C-05` CIERRA ENTERA: LA MITAD DE BIDIRECCIONALES SE ENCIENDE COMO REGISTRO DE CITAS Y LAS TRES LETRAS DEJAN DE CHOCAR**
+
+**Fecha: 2026-09-02. Vuelta 152, TAREA 6. Por la decision del fundador del 2 sep 2026, PREGUNTA 1.**
+
+**LO QUE CHOCABA, CITADO Y NO BORRADO.** El acta 151 midio que las tres letras
+vigentes de esta ficha no podian ser ciertas a la vez: **L1** (*"la guarda falla
+ante cualquier arista bidireccional SALVO las de la lista blanca"*), **L2** (*"el
+grafo saneado por `OP-S-12` pasa en verde"*) y **L3** (*"cada entrada CITA SU
+LECTURA"*). Encender L1 como estaba escrita ponia Gate 0 **en rojo 153 veces**, y
+meter los 153 en la lista obligaba a **151 entradas sin lectura**.
+
+**LO QUE LA DECISION CAMBIA.** La lista blanca **deja de ser una lista y pasa a
+ser un REGISTRO DE CITAS**. La guarda ya no pregunta *"esta en la lista?"* sino
+**"tiene este par un veredicto de lectura registrado con cita?"**. **Un par sin
+cita es rojo.** Asi **L2 y L3 quedan intactas y se cumplen las dos a la vez**.
+
+**LAS CIFRAS, CONTADAS DE SUS FICHEROS Y NO TECLEADAS.**
+
+| cifra | valor | fichero |
+|---|---|---|
+| pares bidireccionales entre vivos, **resolviendo alias (P.1)** | **153** | `SALIDA_V152_T6A_CRUCE.txt` |
+| los mismos **sin resolver**, y la diferencia es la razon por la que P.1 no es opcional | **147** | `SALIDA_V152_T6A_CRUCE.txt` |
+| contraste sobre el **mergebase con `main`** (`36b57d78`) | **83** | `SALIDA_V152_T6A_CONTRASTE_MERGEBASE.txt` |
+| con cita por **CRIBADO** | **32** | `REGISTRO_DE_CITAS_OPC05.jsonl` |
+| con cita por **P.10** | **0** | idem |
+| con cita por **LECTURA DIRIGIDA** (`LD-OPC05-001` a `LD-OPC05-121`) | **121** | idem |
+| **CON CITA, TOTAL** | **153 de 153** | idem |
+| **SIN CITA** | **0** | idem |
+
+**LAS OCHO `verificacion` DE LA FICHA QUEDAN CONTESTADAS**, y las dos que faltaban
+se midieron en esta vuelta: la **6** (*"las cuatro aristas de `OP-E-05` pasan en
+verde"*) da **2 de 2 pares mutuos con cita** tras resolver
+(`SALIDA_V152_T6C_VERIFICACION6.txt`), y la **8**, anadida por la propia decision
+del fundador, da **0 pares sin cita con el grafo saneado en verde**.
+
+**EL CASO POSITIVO MUERDE POR LOS DOS LADOS, y esa es la parte que no se afloja.**
+`SALIDA_V152_T6C_MUTACION.txt`: la contraprueba pasa en **VERDE exit 0**; quitar
+**una** cita del registro tumba Gate 0 con **exit 1 nombrando el par**; y anadir
+una arista bidireccional que nadie leyo **tambien** lo tumba con **exit 1
+nombrandola**. Los dos pares se eligen **por computo** y no a dedo. **`dataset/`
+queda identico antes y despues, comprobado con sha256 y no prometido.**
+
+**DOS TRAMPAS QUE ME MORDIERON Y QUEDAN ESCRITAS DENTRO DEL ARNES**, porque la
+proxima vuelta las va a encontrar igual: **(1)** `run_phase1` **suelto** deja la
+copia web desincronizada y la corrida siguiente sale en rojo **por ciclo sin
+cerrar**, no por la guarda; **(2)** `master_graph.json` **se regenera** desde
+`dataset/nodos/*.json`, asi que **mutarlo no muta nada** y la guarda leia un grafo
+que ya habia borrado la mutacion. La primera version del arnes cayo en las dos y
+daba un **falso verde** en el caso B.
+
+**Y EL `estado` SE MUEVE DETRAS DE ESTA CORRECCION, NO DELANTE**, que es el orden
+que la adjudicacion 3.14 del acta 149 ya fijo para `OP-S-12`.

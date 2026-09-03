@@ -1,0 +1,22 @@
+VERIFICACION 6 de OP-C-05, CITADA LITERAL: 'CASO NEGATIVO DE LA LISTA BLANCA:
+las cuatro aristas de OP-E-05 pasan en verde'.
+
+LA PRIMERA VERSION DE ESTA COMPROBACION SE EQUIVOCO Y LO DEJO ESCRITO: partia las
+frases por espacios y se traia 'LD-41' como si fuera un node_id. La cifra se
+delataba sola (0 de 2) y no se publico: se arreglo la vara. Aqui los ids se sacan
+con un patron de id y se pasan por el RESOLUTOR (P.1), que es lo que faltaba:
+requisitos_gates_con_dientes esta HOY DEPRECADO y resuelve a sistema_gates_go_kill.
+
+  ficha: requisitos_gates_con_dientes -> gestion_portafolio_formal Y gestion_portafolio_formal -> requisitos_gates_con_dientes, por LD-41
+    ids reconocidos en el grafo: ['requisitos_gates_con_dientes', 'gestion_portafolio_formal']
+    tras resolver: ['gestion_portafolio_formal', 'sistema_gates_go_kill']
+  ficha: requisitos_gates_con_dientes -> gestion_portafolio_dos_niveles Y gestion_portafolio_dos_niveles -> requisitos_gates_con_dientes, por LD-43
+    ids reconocidos en el grafo: ['requisitos_gates_con_dientes', 'gestion_portafolio_dos_niveles']
+    tras resolver: ['gestion_portafolio_dos_niveles', 'sistema_gates_go_kill']
+
+PARES MUTUOS QUE FORMAN, TRAS RESOLVER: 2
+   gestion_portafolio_dos_niveles <-> sistema_gates_go_kill | los dos vivos: True | EN EL REGISTRO: SI, via LECTURA_DIRIGIDA, LD-OPC05-087, clase C
+   gestion_portafolio_formal <-> sistema_gates_go_kill | los dos vivos: True | EN EL REGISTRO: SI, via CRIBADO, puesto 1014, dominio core, clase D
+
+CIFRA: 2 de 2 pares de OP-E-05 con cita en el registro.
+VEREDICTO: VERDE, la verificacion 6 se cumple
