@@ -339,6 +339,44 @@ escrita.**
 
 ---
 
+## P.5.1 LA VARA DE LA LECTURA DIRIGIDA, CONGELADA: **NOMBRAR NO ES PROCEDIMENTAR**
+
+**Congelada por DECISION DEL FUNDADOR el 3 sep 2026**, tras la parada de la vuelta 160
+(`docs/loop/paradas/2026-09-03-credito-vara-movil-DECISION.md`). Va **junto a `P.5`** y
+lleva su numero para no renumerar nada: es la vara con la que se leen los pares de
+**lectura dirigida**, y es hermana de `P.11`, que dice lo mismo del otro lado (una
+advertencia califica el acto, no lo constituye).
+
+> **LA SEGUNDA LINEA DE UN PAR SOLO CUENTA COMO EXPANSION SI TRAE PROCEDIMIENTO PROPIO,
+> Y NO SOLO EL NOMBRE DE OTRO.**
+
+**POR QUE SE CONGELA, Y ESTA MEDIDO.** La vara existia y era correcta, pero **se fue
+estrechando vuelta a vuelta** (primero la `122`, luego la regla de la instancia, luego la
+`100`), y una vara que se mueve produce caidas que no son de lectura sino de calendario:
+el propio ejecutor leyo el ultimo tramo *"con la vara recien estrechada"* y marco **quince
+discutibles de treinta y siete**, mas del doble de lo normal. Las **cuatro caidas de las
+dos tandas** que dispararon la regla del credito son **todas de esta misma especie**.
+
+**LOS CUATRO EJEMPLARES, Y SON LA VARA TANTO COMO LA FRASE.** Una regla sin sus casos se
+vuelve a estrechar sola:
+
+| ejemplar | veredicto | por que |
+|---|---|---|
+| **`LD-OPC05-052`** | **ACEPTA** | la segunda linea trae **procedimiento propio** |
+| **`LD-OPC05-095`** | **ACEPTA** | la segunda linea trae **procedimiento propio** |
+| **`LD-OPC05-122`** | **EXCLUYE** | la segunda linea **solo nombra** |
+| **`LD-OPC05-100`** | **EXCLUYE** | la segunda linea **solo nombra** |
+
+**NINGUNA VUELTA LA ESTRECHA NI LA ENSANCHA SIN CORRECCION DECLARADA DEL FUNDADOR.** Si
+una lectura pide mover la frontera, **eso es parada y se trae**, no se ajusta la vara sobre
+la marcha. Esa es justamente la enfermedad que esta regla viene a curar.
+
+**DONDE MANDA.** En todas las lecturas dirigidas de `OP-C-05` y en cualquier lectura
+dirigida posterior que decida si un par bidireccional es enlace mutuo legitimo. **Una `C`
+de mas retira una direccion de mas**, y por eso el coste de equivocarse no es simetrico.
+
+---
+
 ## P.6 EL TEMA SE LEE, EL ACTO SE COMPUTA
 
 **Adoptada el 11 ago 2026, y nace de una degradacion que no cerraba.**
