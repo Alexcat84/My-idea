@@ -1,0 +1,52 @@
+==============================================================================
+VUELTA 159, TAREA 2.a: LAS TRES EN DISPUTA, RELECTURA CONJUNTA
+==============================================================================
+
+CIFRA lecturas de la nomina sellada: 3
+CIFRA veredictos escritos en este instrumento: 3
+
+A) LA FRONTERA, ANTES DE TOCAR NADA
+   sha256 de dataset/ ANTES : 1330ccb9c46c03d371cb1ecf7911c83bbb4b14db71a878b3405738000c90e9d8
+   censo ANTES              : 3853 nodos, 3169 vivos, 684 deprecados
+   aristas ANTES            : 8780 siguientes, 8740 previos
+   CIFRA n, veredictos del cribado ANTES: 3388
+
+B) LOS VEREDICTOS, UNO A UNO
+   LD-OPC05-005     D -> C   LA CLASE VUELVE DE D A C Y ES CORRECCION DE UN VEREDICTO MIO DE LA VUELTA 15
+   LD-OPC05-027     C -> D   LA CLASE PASA DE C A D Y CORRIGE MI PROPIA LECTURA DEL LOTE 1 DE LA VUELTA 1
+   LD-OPC05-122     C -> D   LA CLASE PASA DE C A D, Y CON ESTO SE REVOCAN DOS ADJUDICACIONES QUE LA SOST
+
+   LAS CELDAS DEL .md, ANTES Y DESPUES (el rastro no se tapa):
+      LD-OPC05-005     [~~C~~ D] -> [~~C~~ ~~D~~ C]
+      LD-OPC05-027     [C] -> [~~C~~ D]
+      LD-OPC05-122     [C] -> [~~C~~ D]
+
+C) LAS GUARDAS, MEDIDAS Y NO PROMETIDAS
+   C.1 PREFIJO: las 154 razones conservan su texto viejo ENTERO
+   C.2 PARES: 154 pares, los mismos antes y despues
+   C.3 CLASES MOVIDAS: 3
+       LD-OPC05-005     D -> C
+       LD-OPC05-027     C -> D
+       LD-OPC05-122     C -> D
+       NINGUNA SE MUEVE A A: el limite de la 6.1 del acta 155 se cumple.
+   C.4 FRONTERA, sha256 de dataset/ DESPUES: 1330ccb9c46c03d371cb1ecf7911c83bbb4b14db71a878b3405738000c90e9d8
+       censo DESPUES  : 3853 nodos, 3169 vivos, 684 deprecados
+       aristas DESPUES: 8780 siguientes, 8740 previos
+       EL REGISTRO CAMBIA, EL GRAFO NO: sha256 IDENTICO y censo IDENTICO
+   C.5 CIFRA n, veredictos del cribado DESPUES: 3388
+       n NO SE MUEVE y sigue en 3.388
+
+   C.6 numstat de docs/plan/:
+       3	3	docs/plan/LECTURAS_DIRIGIDAS.md
+       3	3	docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl
+
+D) EL SACO, RECONTADO SOBRE EL REGISTRO YA ESCRITO
+   CIFRA lecturas dirigidas por clase: {"C": 56, "D": 66}
+   CIFRA con la clase movida en esta tarea: 3
+   CIFRA que sostienen su clase en esta tarea: 0
+   CIFRA que ya estaban escritas: 0
+
+NINGUNA SALIO A. No hay candidato a fusion, no se toca una arista y n no
+se mueve. El limite de la 6.1 del acta 155 sigue vigente y no se cruzo.
+FIN
+EXITCODE: 0
