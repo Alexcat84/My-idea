@@ -101,6 +101,14 @@ sys.path.insert(0, os.path.join(RAIZ, "scripts", "loop"))
 import tallar_estado_de_fase as T  # noqa: E402
 import vuelta143_3c_girar_arista as G  # noqa: E402
 
+# --- REMEDIO DEL CHECK DE P.16 (vuelta 160, TAREA 3.a; adjudicacion 6.7 del
+# acta 158 y 6.1 del acta 159). La huella NO MIRA A GIT: compara el disco contra
+# el disco, y por eso ni el estado de fin de linea ni la suciedad anterior al
+# arranque pueden moverla. Ver scripts/loop/huella_de_contenido.py ---
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import huella_de_contenido as _HC  # noqa: E402
+_P16_RUTAS = ("dataset/",)
+
 ID_OP = "OP-M-04"
 
 
@@ -145,8 +153,12 @@ def main():
              MADRE, HIJO, T.arista_presente(grafo, T.resolver_de(grafo), MADRE, HIJO)[0]))
     print("")
 
-    antes_disco = subprocess.run(["git", "status", "--porcelain", "--", "dataset/"],
-                                 cwd=RAIZ, capture_output=True, text=True).stdout
+    # CORRECCION DECLARADA (vuelta 160, TAREA 3.a). LAS LINEAS VIEJAS, TACHADAS:
+    #     ~~antes_disco = subprocess.run(["git", "status", "--porcelain", "--", "dataset/"],~~
+    #     ~~                             cwd=RAIZ, capture_output=True, text=True).stdout~~
+    # Este arnes YA comparaba antes contra despues: la figura era correcta y el
+    # instrumento no. La huella no mira a git.
+    antes_disco = _HC.huella(*_P16_RUTAS)
     real_ops, real_grafo = T.cargar_ops, T.cargar_grafo
     real_argv, real_out = sys.argv, sys.stdout
     buf = Capturada()
@@ -166,8 +178,10 @@ def main():
         T.cargar_ops, T.cargar_grafo = real_ops, real_grafo
         sys.argv, sys.stdout = real_argv, real_out
     salida = buf.getvalue()
-    despues_disco = subprocess.run(["git", "status", "--porcelain", "--", "dataset/"],
-                                   cwd=RAIZ, capture_output=True, text=True).stdout
+    # CORRECCION DECLARADA (vuelta 160, TAREA 3.a). LAS LINEAS VIEJAS, TACHADAS:
+    #     ~~despues_disco = subprocess.run(["git", "status", "--porcelain", "--", "dataset/"],~~
+    #     ~~                               cwd=RAIZ, capture_output=True, text=True).stdout~~
+    despues_disco = _HC.huella(*_P16_RUTAS)
 
     for ln in salida.splitlines():
         print(ln)
@@ -178,6 +192,7 @@ def main():
     print("codigo de salida: %r (distinto de cero: %s)" % (codigo, codigo != 0))
     print("cae la guarda 4: %s | y nombra el motivo: %s" % (cae_guarda4, nombra))
     print("CERO ESCRITURAS en dataset/: %s" % sin_escrituras)
+    print("   %s" % _HC.comparar(antes_disco, despues_disco, *_P16_RUTAS)[1])
     ok = codigo != 0 and cae_guarda4 and nombra and sin_escrituras
     print("VEREDICTO: %s" % ("OK, la adicion era necesaria" if ok else "ROJO"))
     return 0 if ok else 1

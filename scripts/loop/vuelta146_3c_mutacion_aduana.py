@@ -133,10 +133,23 @@ ROTULO_PASOS = "OP-A-01: ningun nodo declara un SEGUNDO libro sin tener ni un pa
 _load_json_real = R.load_json
 
 
+
+# --- REMEDIO DEL CHECK DE P.16 (vuelta 160, TAREA 3.a; adjudicacion 6.7 del
+# acta 158 y 6.1 del acta 159). La huella NO MIRA A GIT: compara el disco contra
+# el disco, y por eso ni el estado de fin de linea ni la suciedad anterior al
+# arranque pueden moverla. Ver scripts/loop/huella_de_contenido.py ---
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import huella_de_contenido as _HC  # noqa: E402
+_P16_RUTAS = ("dataset/",)
+
+
 def estado_dataset():
-    r = subprocess.run(["git", "status", "--porcelain", "--", "dataset/"],
-                       cwd=RAIZ, capture_output=True, text=True)
-    return r.stdout
+    # CORRECCION DECLARADA (vuelta 160, TAREA 3.a). LAS LINEAS VIEJAS, TACHADAS:
+    #     ~~r = subprocess.run(["git", "status", "--porcelain", "--", "dataset/"],~~
+    #     ~~                   cwd=RAIZ, capture_output=True, text=True)~~
+    #     ~~return r.stdout~~
+    # Se llama ANTES y DESPUES: la figura era correcta y el instrumento no.
+    return _HC.huella(*_P16_RUTAS)
 
 
 def correr_checks(mutaciones=None):
@@ -259,6 +272,7 @@ def main():
         print("   VEREDICTO: %s" % ("OK" if ok else "ROJO"))
         print("")
     print("dataset/ IDENTICO antes y despues (cero escrituras): %s" % dataset_intacto)
+    print("   %s" % _HC.comparar(antes, despues, *_P16_RUTAS)[1])
     print("=" * 78)
     buenas = sum(1 for _, ok, _, _ in casos if ok)
     print("CASOS QUE MUERDEN: %d de %d" % (buenas, len(casos)))

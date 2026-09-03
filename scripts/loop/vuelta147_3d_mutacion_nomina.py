@@ -137,10 +137,23 @@ from verificar_nomina_sellada import (  # noqa: E402
 )
 
 
+
+# --- REMEDIO DEL CHECK DE P.16 (vuelta 160, TAREA 3.a; adjudicacion 6.7 del
+# acta 158 y 6.1 del acta 159). La huella NO MIRA A GIT: compara el disco contra
+# el disco, y por eso ni el estado de fin de linea ni la suciedad anterior al
+# arranque pueden moverla. Ver scripts/loop/huella_de_contenido.py ---
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import huella_de_contenido as _HC  # noqa: E402
+_P16_RUTAS = ("dataset/",)
+
+
 def estado_dataset():
-    r = subprocess.run(["git", "status", "--porcelain", "--", "dataset/"], cwd=RAIZ,
-                       capture_output=True, text=True)
-    return r.stdout
+    # CORRECCION DECLARADA (vuelta 160, TAREA 3.a). LAS LINEAS VIEJAS, TACHADAS:
+    #     ~~r = subprocess.run(["git", "status", "--porcelain", "--", "dataset/"], cwd=RAIZ,~~
+    #     ~~                   capture_output=True, text=True)~~
+    #     ~~return r.stdout~~
+    # Se llama ANTES y DESPUES: la figura era correcta y el instrumento no.
+    return _HC.huella(*_P16_RUTAS)
 
 
 def main():
@@ -227,8 +240,13 @@ def main():
         print("  %-70s %s" % (rotulo, "OK" if ok_ else "NO MORDIO"))
         print("      %s" % detalle)
     print("")
-    print("  dataset/ ANTES  : %s" % (antes.strip() or "(sin cambios)"))
-    print("  dataset/ DESPUES: %s" % (despues.strip() or "(sin cambios)"))
+    # CORRECCION DECLARADA (vuelta 160, TAREA 3.a). LAS LINEAS VIEJAS, TACHADAS:
+    #     ~~print("  dataset/ ANTES  : %s" % (antes.strip() or "(sin cambios)"))~~
+    #     ~~print("  dataset/ DESPUES: %s" % (despues.strip() or "(sin cambios)"))~~
+    # La huella no devuelve texto de git status, devuelve (sha256, conteo).
+    print("  dataset/ ANTES  : sha256 %s sobre %d fichero(s)" % (antes[0][:16], antes[1]))
+    print("  dataset/ DESPUES: sha256 %s sobre %d fichero(s)" % (despues[0][:16], despues[1]))
+    print("  %s" % _HC.comparar(antes, despues, *_P16_RUTAS)[1])
     print("  dataset/ IDENTICO ANTES Y DESPUES: %s" % ("SI" if antes == despues else "NO"))
     muerden = sum(1 for _, ok_, _ in casos if ok_)
     print("")

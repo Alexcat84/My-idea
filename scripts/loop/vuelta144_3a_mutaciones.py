@@ -203,6 +203,15 @@ def razon_de_la_tabla_vieja(id_op):
 
 def main():
     op = ficha("OP-M-04")
+
+    # --- REMEDIO DEL CHECK DE P.16 (vuelta 160, TAREA 3.a; adjudicacion 6.7 del
+    # acta 158 y 6.1 del acta 159). La huella NO MIRA A GIT: compara el disco contra
+    # el disco, y por eso ni el estado de fin de linea ni la suciedad anterior al
+    # arranque pueden moverla. Ver scripts/loop/huella_de_contenido.py ---
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import huella_de_contenido as _HC  # noqa: E402
+    _P16_RUTAS = ("dataset/", "docs/plan/")
+    _p16_antes = _HC.huella(*_P16_RUTAS)
     nodos = T.cargar_grafo("WORK")
     remisiones = T.leer_remisiones("06_MESAS", "WORK")
 
@@ -328,14 +337,22 @@ def main():
         print("  %-48s %s" % (nombre, "OK" if ok else "ROJO"))
     sucio = T.subprocess.run(["git", "status", "--porcelain", "--", "dataset/", "docs/plan/"],
                              cwd=RAIZ, capture_output=True, text=True).stdout.strip()
+    # CORRECCION DECLARADA (vuelta 160, TAREA 3.a). LAS LINEAS VIEJAS QUEDAN
+    # AQUI, TACHADAS Y LEGIBLES:
+    #     ~~print("P.16, dataset/ y docs/plan/ SIN TOCAR tras las mutaciones: %s" % (not sucio))~~
+    #     ~~return 0 if buenas == len(resultados) and not sucio else 1~~
+    # EL VEREDICTO PASA A LA HUELLA DE CONTENIDO. git status queda como INFORME.
+    _p16_despues = _HC.huella(*_P16_RUTAS)
+    _p16_ok, _p16_linea = _HC.comparar(_p16_antes, _p16_despues, *_P16_RUTAS)
     print("")
-    print("P.16, dataset/ y docs/plan/ SIN TOCAR tras las mutaciones: %s" % (not sucio))
+    print(_p16_linea)
+    print("git status --porcelain -- dataset/ docs/plan/ (INFORME, no vara): %s" % (not sucio))
     if sucio:
         for ln in sucio.splitlines():
             print("   %s" % ln)
     print("")
     print("MUTACIONES QUE MUERDEN: %d de %d" % (buenas, len(resultados)))
-    return 0 if buenas == len(resultados) and not sucio else 1
+    return 0 if buenas == len(resultados) and _p16_ok else 1
 
 
 if __name__ == "__main__":

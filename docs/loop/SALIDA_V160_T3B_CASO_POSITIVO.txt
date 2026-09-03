@@ -1,0 +1,63 @@
+==============================================================================
+VUELTA 160, TAREA 3.b: EL CASO POSITIVO POR MUTACION DEL CHECK DE P.16
+==============================================================================
+
+HUELLA DE APERTURA DE ESTE INSTRUMENTO: sha256 0a4ef49ba1614097 sobre 4089 fichero(s)
+
+CASO 1, DE UNIDAD: una escritura REAL cambia la huella
+------------------------------------------------------------------------------
+   con el fichero escrito : P.16 ROJO: el numero de ficheros bajo dataset/ cambio, de 4089 a 4090. Alguna mutacion creo o borro ficheros y no los devolvio.
+   tras borrarlo          : P.16 huella de CONTENIDO de dataset/ IDENTICA antes y despues: sha256 0a4ef49ba1614097 sobre 4089 fichero(s). NO SE MIRO A GIT: el disco se compara contra el disco.
+   la huella CAE con la escritura: True
+   y VUELVE al valor original al borrarla: True
+   y el rojo NOMBRA que cambio el numero de ficheros: True
+   VEREDICTO: OK
+
+CASO 2, DE EXTREMO A EXTREMO: con una escritura REAL inyectada,
+el caso rojo de vuelta89_tarea4_guarda_op_c05.py SIGUE SALIENDO ROJO
+------------------------------------------------------------------------------
+   codigo de salida: 1 (distinto de cero: True)
+   la salida trae la linea de rojo de la huella: True
+   y nombra el motivo correcto: True
+      | P.16 huella de CONTENIDO de dataset/ ANTES: sha256 0a4ef49ba1614097 sobre 4089 fichero(s)
+      | P.16 ROJO: el numero de ficheros bajo dataset/ cambio, de 4089 a 4090. Alguna mutacion creo o borro ficheros y no los devolvio.
+      | SystemExit: ROJO: dataset/ quedo con cambios tras el caso rojo: el caso rojo tiene que ser puramente en memoria
+   VEREDICTO: OK
+
+CASO 3, EL REMEDIO: con dataset/ SUCIO DE ANTES y sin escrituras
+del script, el caso rojo PASA (el codigo viejo abortaba aqui)
+------------------------------------------------------------------------------
+   git status -- dataset/ antes de arrancar: '?? dataset/_V160_ESCRITURA_DE_PRUEBA.txt'
+   LA CONDICION DEL CODIGO VIEJO, EVALUADA sobre ese mismo estado
+   (bool(r_antes.stdout.strip())): True
+   o sea que el codigo viejo HABRIA ABORTADO sin correr nada.
+   codigo de salida del remediado: 0
+      | P.16 huella de CONTENIDO de dataset/ ANTES: sha256 a26d40c9a637a699 sobre 4090 fichero(s)
+      | P.16 huella de CONTENIDO de dataset/ IDENTICA antes y despues: sha256 a26d40c9a637a699 sobre 4090 fichero(s). NO SE MIRO A GIT: el disco se compara co
+   VEREDICTO: OK
+
+CASO 4, LA CONTRAPRUEBA: limpio y sin escrituras, sale VERDE
+------------------------------------------------------------------------------
+   codigo de salida: 0
+   la huella sale IDENTICA antes y despues: True
+      | P.16 huella de CONTENIDO de dataset/ ANTES: sha256 0a4ef49ba1614097 sobre 4089 fichero(s)
+      | P.16 huella de CONTENIDO de dataset/ IDENTICA antes y despues: sha256 0a4ef49ba1614097 sobre 4089 fichero(s). NO SE MIRO A GIT: el disco se compara co
+   VEREDICTO: OK
+
+==============================================================================
+LA LIMPIEZA, MEDIDA Y NO PROMETIDA:
+   P.16 huella de CONTENIDO de dataset/ IDENTICA antes y despues: sha256 0a4ef49ba1614097 sobre 4089 fichero(s). NO SE MIRO A GIT: el disco se compara contra el disco.
+
+  OK    CASO 1, la huella cae con una escritura real y vuelve
+  OK    CASO 2, una escritura real SIGUE cayendo en rojo
+  OK    CASO 3, la suciedad ajena YA NO tumba la guarda
+  OK    CASO 4, contraprueba en limpio, sale verde
+  OK    LA LIMPIEZA: dataset/ vuelve identico a la apertura
+
+CIFRA casos del arnes: 5
+CIFRA casos que se comportan: 5
+==============================================================================
+VERDE: los 5 se comportan. EL CHECK SIGUE MORDIENDO UNA ESCRITURA REAL Y
+YA NO MUERDE A QUIEN NO ESCRIBIO.
+FIN
+EXITCODE: 0

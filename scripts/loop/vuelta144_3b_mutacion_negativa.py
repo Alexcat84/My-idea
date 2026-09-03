@@ -142,9 +142,24 @@ from vuelta145_2b_prestado_congelado import (  # noqa: E402
 RUTAS_DEL_PREESTADO = ["docs/plan/OPERACIONES.jsonl"]
 
 
+
+# --- REMEDIO DEL CHECK DE P.16 (vuelta 160, TAREA 3.a; adjudicacion 6.7 del
+# acta 158 y 6.1 del acta 159). La huella NO MIRA A GIT: compara el disco contra
+# el disco, y por eso ni el estado de fin de linea ni la suciedad anterior al
+# arranque pueden moverla. Ver scripts/loop/huella_de_contenido.py ---
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import huella_de_contenido as _HC  # noqa: E402
+_P16_RUTAS = ("dataset/", "docs/loop/")
+
+
 def estado():
-    return subprocess.run(["git", "status", "--porcelain", "--", "dataset/", "docs/loop/"],
-                          cwd=RAIZ, capture_output=True, text=True).stdout
+    # CORRECCION DECLARADA (vuelta 160, TAREA 3.a). LAS LINEAS VIEJAS, TACHADAS:
+    #     ~~return subprocess.run(["git", "status", "--porcelain", "--", "dataset/", "docs/loop/"],~~
+    #     ~~                      cwd=RAIZ, capture_output=True, text=True).stdout~~
+    #     ~~print("CERO ESCRITURAS: git status -- dataset/ docs/loop/ identico al de la apertura "~~
+    #     ~~      "del arnes: %s" % igual)~~
+    # Se llama ANTES y DESPUES: la figura era correcta y el instrumento no.
+    return _HC.huella(*_P16_RUTAS)
 
 
 class Capturada(object):
@@ -309,8 +324,9 @@ def _casos(argv, guardadas, resultados, antes):
     for nombre, ok in resultados:
         print("  %-48s %s" % (nombre, "OK" if ok else "ROJO"))
     print("")
-    print("CERO ESCRITURAS: git status -- dataset/ docs/loop/ identico al de la apertura "
-          "del arnes: %s" % igual)
+    print("CERO ESCRITURAS: huella de CONTENIDO de dataset/ y docs/loop/ identica a la "
+          "de la apertura del arnes: %s" % igual)
+    print("   %s" % _HC.comparar(antes, despues, *_P16_RUTAS)[1])
     print("")
     print("COMPROBACIONES QUE MUERDEN: %d de %d" % (buenas, len(resultados)))
     return 0 if buenas == len(resultados) and igual else 1

@@ -1,0 +1,63 @@
+==============================================================================
+VUELTA 160, TAREA 3.a: EL REMEDIO DEL CHECK DE P.16, EN LOS DOCE
+==============================================================================
+
+A) EL ALCANCE, CONTADO DE SU FICHERO ANTES DE TOCAR NADA
+   fuente: docs/loop/SALIDA_V159_T5_ALCANCE.txt, seccion C
+   CIFRA ficheros del alcance: 12
+   CIFRA ficheros que este instrumento edita: 12
+   LAS DOS NOMINAS SALEN IDENTICAS, ELEMENTO A ELEMENTO.
+   Y SON DOCE, que es lo que la 6.1 del acta 159 adjudica.
+
+B) LAS EDICIONES, UNA A UNA. El texto viejo tiene que aparecer
+   EXACTAMENTE UNA VEZ o el instrumento para.
+   vuelta142_2c_mutaciones.py                     REMEDIADO  (2 edicion(es))
+   vuelta143_2a_mutaciones.py                     REMEDIADO  (2 edicion(es))
+   vuelta143_2c_mutacion_positivo.py              REMEDIADO  (2 edicion(es))
+   vuelta144_3a_mutaciones.py                     REMEDIADO  (2 edicion(es))
+   vuelta143_3c_girar_arista.py                   REMEDIADO  (2 edicion(es))
+   vuelta144_2b_mutacion_giro.py                  REMEDIADO  (2 edicion(es))
+   vuelta144_3b_giro_sin_flecha.py                REMEDIADO  (4 edicion(es))
+   vuelta144_3b_mutacion_negativa.py              REMEDIADO  (2 edicion(es))
+   vuelta146_3c_mutacion_aduana.py                REMEDIADO  (2 edicion(es))
+   vuelta147_3d_mutacion_nomina.py                REMEDIADO  (2 edicion(es))
+   vuelta147_3e_simular_a26.py                    REMEDIADO  (2 edicion(es))
+   vuelta89_tarea4_guarda_op_c05.py               REMEDIADO  (3 edicion(es))
+
+CIFRA ficheros remediados en esta corrida: 12
+CIFRA ficheros que ya estaban: 0
+
+C) LA CONSECUENCIA QUE SE DECLARA: EL ALCANCE NO SE MUEVE
+   La linea vieja no se borra, queda TACHADA en un comentario, asi que
+   los doce SIGUEN casando con el patron literal de la lectura B.
+   CIFRA de los doce que siguen casando con el patron: 12
+   LOS DOCE. El alcance de la 6.1 sigue siendo doce despues del remedio.
+
+D) QUE CAMBIO EN CADA UNO, con git diff --numstat
+   vuelta142_2c_mutaciones.py                     mas 20    menos 2
+   vuelta143_2a_mutaciones.py                     mas 19    menos 2
+   vuelta143_2c_mutacion_positivo.py              mas 19    menos 2
+   vuelta144_3a_mutaciones.py                     mas 19    menos 2
+   vuelta143_3c_girar_arista.py                   mas 22    menos 0
+   vuelta144_2b_mutacion_giro.py                  mas 27    menos 4
+   vuelta144_3b_giro_sin_flecha.py                mas 19    menos 4
+   vuelta144_3b_mutacion_negativa.py              mas 20    menos 4
+   vuelta146_3c_mutacion_aduana.py                mas 17    menos 3
+   vuelta147_3d_mutacion_nomina.py                mas 23    menos 5
+   vuelta147_3e_simular_a26.py                    mas 22    menos 5
+   vuelta89_tarea4_guarda_op_c05.py               mas 37    menos 6
+   CIFRA lineas anadidas: 264
+   CIFRA lineas retiradas: 39
+   LAS RETIRADAS NO SON BORRADOS SILENCIOSOS: cada una de las lineas
+   que dejo de ejecutarse esta escrita ARRIBA, TACHADA Y LEGIBLE, en el
+   comentario de su propia correccion declarada. Eso se comprueba en la
+   seccion E y no se promete.
+
+E) LA COMPROBACION DE QUE NINGUNA LINEA SE PERDIO SIN TACHAR
+   Toda linea que el diff retira tiene que aparecer, en el mismo
+   fichero, dentro de un comentario con la marca ~~ de tachado.
+   CIFRA lineas retiradas SIN su copia tachada: 0
+   NINGUNA. Todo lo que dejo de ejecutarse sigue legible en su fichero.
+
+FIN
+EXITCODE: 0

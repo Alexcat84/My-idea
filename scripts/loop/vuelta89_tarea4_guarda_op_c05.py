@@ -121,6 +121,14 @@ import sys
 import tempfile
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# --- REMEDIO DEL CHECK DE P.16 (vuelta 160, TAREA 3.a; adjudicacion 6.7 del
+# acta 158 y 6.1 del acta 159). La huella NO MIRA A GIT: compara el disco contra
+# el disco, y por eso ni el estado de fin de linea ni la suciedad anterior al
+# arranque pueden moverla. Ver scripts/loop/huella_de_contenido.py ---
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import huella_de_contenido as _HC  # noqa: E402
+_P16_RUTAS = ("dataset/",)
 LOOP = os.path.join(RAIZ, "docs", "loop")
 INSTRUMENTO = os.path.join(RAIZ, "scripts", "plan", "aristas_duplicadas_tras_resolver.py")
 GRAFO_HOY = os.path.join(RAIZ, "dataset", "metadata", "master_graph.json")
@@ -197,12 +205,24 @@ def cmd_caso_rojo():
     print("TAREA 4.b: CASO ROJO OBLIGATORIO, SOBRE COPIA EN MEMORIA (dataset/ no se toca)")
     print("=" * 78)
 
+    _p16_antes = _HC.huella(*_P16_RUTAS)
     r_antes = subprocess.run(["git", "status", "--porcelain", "--", "dataset/"],
                              cwd=RAIZ, capture_output=True, text=True)
-    print("git status --porcelain -- dataset/ ANTES: %r" % r_antes.stdout)
-    if r_antes.stdout.strip():
-        raise SystemExit("ROJO: dataset/ ya tenia cambios antes del caso rojo: no se corre "
-                          "sobre un arbol sucio")
+    print("P.16 huella de CONTENIDO de dataset/ ANTES: sha256 %s sobre %d fichero(s)"
+          % (_p16_antes[0][:16], _p16_antes[1]))
+    print("git status --porcelain -- dataset/ ANTES (INFORME, no vara): %r" % r_antes.stdout)
+    # CORRECCION DECLARADA (vuelta 160, TAREA 3.a). LAS LINEAS VIEJAS QUEDAN
+    # AQUI, TACHADAS Y LEGIBLES, y esta es LA PARADA QUE EL REMEDIO RETIRA:
+    #     ~~print("git status --porcelain -- dataset/ ANTES: %r" % r_antes.stdout)~~
+    #     ~~if r_antes.stdout.strip():~~
+    #     ~~    raise SystemExit("ROJO: dataset/ ya tenia cambios antes del caso rojo: no se corre "~~
+    #     ~~                      "sobre un arbol sucio")~~
+    # ERA EL ANCLA 2 DE LA 6.7 EN SU FORMA MAS PURA: el caso rojo se negaba a
+    # correr por suciedad QUE NO ERA SUYA. Este script no escribe en dataset/ ni
+    # una vez (su caso rojo vive entero en un directorio temporal), asi que la
+    # suciedad anterior no puede falsear su medicion; lo que hay que probar es
+    # que EL no escribio, y eso lo prueba la huella comparada consigo misma al
+    # final. La suciedad anterior SE SIGUE IMPRIMIENDO, como informe.
 
     with tempfile.TemporaryDirectory() as tmp:
         # (1) LA CUENTA DE HOY, sobre el grafo real, sin tocarlo.
@@ -245,10 +265,21 @@ def cmd_caso_rojo():
         print("cuenta SOBRE LA COPIA FABRICADA (fichero temporal, nunca dataset/): "
               "%d entradas que sobran, %d nodos" % (sobran_fabricado, nodos_fabricado))
 
+    _p16_despues = _HC.huella(*_P16_RUTAS)
     r_despues = subprocess.run(["git", "status", "--porcelain", "--", "dataset/"],
                                cwd=RAIZ, capture_output=True, text=True)
-    print("git status --porcelain -- dataset/ DESPUES: %r" % r_despues.stdout)
-    if r_despues.stdout.strip():
+    print("git status --porcelain -- dataset/ DESPUES (INFORME, no vara): %r" % r_despues.stdout)
+    # CORRECCION DECLARADA (vuelta 160, TAREA 3.a). LAS LINEAS VIEJAS, TACHADAS:
+    #     ~~print("git status --porcelain -- dataset/ DESPUES: %r" % r_despues.stdout)~~
+    #     ~~if r_despues.stdout.strip():~~
+    #     ~~    raise SystemExit("ROJO: dataset/ quedo con cambios tras el caso rojo: el caso rojo "~~
+    #     ~~                      "tiene que ser puramente en memoria")~~
+    # EL VEREDICTO PASA A LA HUELLA, comparada consigo misma: SIGUE SALIENDO
+    # ROJO si este script escribio, y ya no cae por lo que otro dejo sucio ni
+    # por un fin de linea.
+    _p16_ok, _p16_linea = _HC.comparar(_p16_antes, _p16_despues, *_P16_RUTAS)
+    print(_p16_linea)
+    if not _p16_ok:
         raise SystemExit("ROJO: dataset/ quedo con cambios tras el caso rojo: el caso rojo "
                           "tiene que ser puramente en memoria")
 

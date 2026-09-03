@@ -1,0 +1,72 @@
+==============================================================================
+CORRIDA: python scripts/loop/vuelta142_2c_mutaciones.py
+==============================================================================
+
+P.16 huella de CONTENIDO de dataset/ docs/plan/ IDENTICA antes y despues: sha256 8582b6e5d09a9da1 sobre 4159 fichero(s). NO SE MIRO A GIT: el disco se compara contra el disco.
+git status --porcelain -- dataset/ docs/plan/ (INFORME, no vara) : ''
+
+==============================================================================
+  VERDE 0 CONTRAPRUEBA sin mutar: OP-M-02-PROG sale CUMPLIDA
+  VERDE i superviviente DEPRECADO con alias hacia un id que la ficha SI condena: sale DIVERGENTE y NO cumplida
+  VERDE ii superviviente DEPRECADO con alias hacia un id que la ficha NO condena: sale CONSUMIDA, no DIVERGENTE, y tampoco cumplida
+  VERDE iii CASO POSITIVO sobre el grafo de hoy: las 2 FUSION con superviviente deprecado que resuelve a un condenado salen TODAS DIVERGENTES
+  VERDE P.16 dataset/ y docs/plan/ SIN TOCAR tras las mutaciones
+CIFRA de la bateria 2.c: 5 comprobaciones
+CIFRA verdes de la bateria 2.c: 5 comprobaciones
+==============================================================================
+VERDE: los 5 casos se comportan.
+EXITCODE: 0
+==============================================================================
+CORRIDA: python scripts/loop/vuelta144_3b_giro_sin_flecha.py
+==============================================================================
+guarda 1, los dos ids son DIRECTOS: no hay alias que resolver
+guarda 1, los dos extremos existen y estan VIVOS: OK
+guarda 2, cero auto-aristas: OK
+guarda 3, estado de partida: la VUELTA formalizar_junta_asesora -> identificar_consejo_asesores esta puesta: True | la IDA identificar_consejo_asesores -> formalizar_junta_asesora esta puesta: False
+guarda 3: OK, es un giro
+guarda 4, la ficha PROHIBE la vuelta y NOMBRA el par: ROJO
+   OP-M-04 trae la clausula de escalera pero NO NOMBRA este par en sus aristas_nuevas: la contraorden cubre la vuelta de UNA FILA SUYA, no cualquier arista del grafo
+SE ABORTA SIN ESCRIBIR NADA (guarda 3.d del encargo).
+==============================================================================
+codigo de salida: 1 (distinto de cero: True)
+cae la guarda 4: True | y nombra el motivo: True
+CERO ESCRITURAS en dataset/: True
+   P.16 huella de CONTENIDO de dataset/ IDENTICA antes y despues: sha256 0a4ef49ba1614097 sobre 4089 fichero(s). NO SE MIRO A GIT: el disco se compara contra el disco.
+VEREDICTO: OK, la adicion era necesaria
+EXITCODE: 0
+==============================================================================
+CORRIDA: python scripts/loop/vuelta146_3c_mutacion_aduana.py
+==============================================================================
+   sujeto 'ab_testing_optimizacion' | el check pasa a FALLO: True | lo nombra: True
+   valor del check: 1 incumplimiento(s): [('ab_testing_optimizacion', "The Startup Owner's Manual - Blank, Steve, EDICION QUE NINGUNA CANONICA TIENE")]
+   VEREDICTO: OK
+
+D segundo libro sin ni un paso
+   sujeto 'arquetipos_de_cliente' | el check pasa a FALLO: True | lo nombra: True
+   valor del check: 1 sin pasos: ['arquetipos_de_cliente']
+   VEREDICTO: OK
+
+dataset/ IDENTICO antes y despues (cero escrituras): True
+   P.16 huella de CONTENIDO de dataset/ IDENTICA antes y despues: sha256 0a4ef49ba1614097 sobre 4089 fichero(s). NO SE MIRO A GIT: el disco se compara contra el disco.
+==============================================================================
+CASOS QUE MUERDEN: 4 de 4
+VEREDICTO GLOBAL: VERDE
+EXITCODE: 0
+==============================================================================
+CORRIDA: python scripts/loop/vuelta89_tarea4_guarda_op_c05.py --caso-rojo
+==============================================================================
+TAREA 4.b: CASO ROJO OBLIGATORIO, SOBRE COPIA EN MEMORIA (dataset/ no se toca)
+==============================================================================
+P.16 huella de CONTENIDO de dataset/ ANTES: sha256 0a4ef49ba1614097 sobre 4089 fichero(s)
+git status --porcelain -- dataset/ ANTES (INFORME, no vara): ''
+cuenta de hoy (grafo real, sin tocar): 0 entradas que sobran, 0 nodos
+fabricado EN MEMORIA (no en disco): ab_testing_optimizacion.nodos_siguientes gana una entrada duplicada de 'analisis_de_cohortes' (ab_testing_optimizacion -> analisis_de_cohortes x2)
+cuenta SOBRE LA COPIA FABRICADA (fichero temporal, nunca dataset/): 1 entradas que sobran, 1 nodos
+git status --porcelain -- dataset/ DESPUES (INFORME, no vara): ''
+P.16 huella de CONTENIDO de dataset/ IDENTICA antes y despues: sha256 0a4ef49ba1614097 sobre 4089 fichero(s). NO SE MIRO A GIT: el disco se compara contra el disco.
+
+LA COPIA FABRICADA CRECE LA CUENTA (0 -> 1, +1), que es EXACTAMENTE la condicion que --despues detecta como ROJO. El caso rojo CAE EN ROJO como se espera de el (simulando --despues con estas dos cuentas):
+   --despues simulado: ROJO (exit 1), LA OPERACION PARA. CASO ROJO: PROBADO.
+
+dataset/ nunca se toco: los dos git status de arriba salieron vacios.
+EXITCODE: 0

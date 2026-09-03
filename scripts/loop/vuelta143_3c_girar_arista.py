@@ -208,6 +208,15 @@ def main():
     arg = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
 
+    # --- REMEDIO DEL CHECK DE P.16 (vuelta 160, TAREA 3.a; adjudicacion 6.7 del
+    # acta 158 y 6.1 del acta 159). La huella NO MIRA A GIT: compara el disco contra
+    # el disco, y por eso ni el estado de fin de linea ni la suciedad anterior al
+    # arranque pueden moverla. Ver scripts/loop/huella_de_contenido.py ---
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import huella_de_contenido as _HC  # noqa: E402
+    _P16_RUTAS = ("dataset/nodos/",)
+    _p16_antes = _HC.huella(*_P16_RUTAS)
+
     ops = T.cargar_ops("WORK")
     por_id = {o["id_op"]: o for o in ops}
     if arg.por_la_op not in por_id:
@@ -402,6 +411,19 @@ def main():
     print("ESCRITO. ficheros de nodo tocados: 2 (%s, %s)" % (rd, rh))
     sucio = subprocess.run(["git", "status", "--porcelain", "--", "dataset/nodos/"],
                            cwd=T.RAIZ, capture_output=True, text=True).stdout.strip()
+    # REMEDIO DE LA FORMA 3 (vuelta 160, TAREA 3.a), Y SE DECLARA POR QUE ES
+    # DISTINTO: este fichero NO es un arnes de mutacion, es LA OPERACION que
+    # gira la arista y ESCRIBE dos ficheros de nodo. Su git status nunca fue un
+    # veredicto: era el informe de lo que acababa de escribir. La huella se
+    # toma igual, antes y despues, PERO AQUI DEBE CAMBIAR, y por eso se imprime
+    # como informe y no como vara. Fabricarle un veredicto que no le
+    # corresponde seria peor que decir que este caso es distinto.
+    _p16_despues = _HC.huella(*_P16_RUTAS)
+    _p16_igual, _p16_linea = _HC.comparar(_p16_antes, _p16_despues, *_P16_RUTAS)
+    print("P.16 (INFORME, NO VARA: este script escribe A PROPOSITO, asi que la huella")
+    print("     TIENE que cambiar cuando se corre con --ejecutar): huella igual = %s"
+          % _p16_igual)
+    print("     %s" % _p16_linea)
     print("git status --porcelain -- dataset/nodos/ tras el giro:")
     for ln in sucio.splitlines():
         print("   %s" % ln)

@@ -123,9 +123,26 @@ import tallar_estado_de_fase as T  # noqa: E402
 import vuelta143_3c_girar_arista as G  # noqa: E402
 
 
+
+# --- REMEDIO DEL CHECK DE P.16 (vuelta 160, TAREA 3.a; adjudicacion 6.7 del
+# acta 158 y 6.1 del acta 159). La huella NO MIRA A GIT: compara el disco contra
+# el disco, y por eso ni el estado de fin de linea ni la suciedad anterior al
+# arranque pueden moverla. Ver scripts/loop/huella_de_contenido.py ---
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import huella_de_contenido as _HC  # noqa: E402
+_P16_RUTAS = ("dataset/",)
+
+
 def estado_dataset():
-    return subprocess.run(["git", "status", "--porcelain", "--", "dataset/"],
-                          cwd=RAIZ, capture_output=True, text=True).stdout
+    # CORRECCION DECLARADA (vuelta 160, TAREA 3.a). LAS LINEAS VIEJAS QUEDAN
+    # AQUI, TACHADAS Y LEGIBLES:
+    #     ~~return subprocess.run(["git", "status", "--porcelain", "--", "dataset/"],~~
+    #     ~~                      cwd=RAIZ, capture_output=True, text=True).stdout~~
+    # ESTA FUNCION SE LLAMA ANTES Y DESPUES DE CADA MUTACION, o sea que la
+    # figura ya era la correcta y lo que fallaba era el instrumento. Devuelve la
+    # HUELLA DE CONTENIDO y con eso el arnes deja de depender del fin de linea y
+    # de la suciedad anterior al arranque, que son las dos anclas de la 6.7.
+    return _HC.huella(*_P16_RUTAS)
 
 
 def romper_formula(ops, idx_ficha, idx_linea):
@@ -319,8 +336,14 @@ def main():
         print("  %-46s %s" % (nombre, "OK" if ok else "ROJO"))
     final = estado_dataset()
     print("")
-    print("ESTADO FINAL DE dataset/: %d fila(s) en git status, identico al de la apertura "
-          "del arnes: %s" % (len(final.splitlines()), final == antes))
+    # CORRECCION DECLARADA (vuelta 160, TAREA 3.a). LA LINEA VIEJA, TACHADA:
+    #     ~~print("ESTADO FINAL DE dataset/: %d fila(s) en git status, identico al de la apertura "~~
+    #     ~~      "del arnes: %s" % (len(final.splitlines()), final == antes))~~
+    # La huella no devuelve filas de git status, devuelve (sha256, conteo).
+    _, _p16_linea = _HC.comparar(antes, final, *_P16_RUTAS)
+    print("ESTADO FINAL DE dataset/: %d fichero(s) bajo la huella, identico al de la "
+          "apertura del arnes: %s" % (final[1], final == antes))
+    print("   %s" % _p16_linea)
     print("")
     print("COMPROBACIONES QUE MUERDEN: %d de %d" % (buenas, len(resultados)))
     return 0 if buenas == len(resultados) and final == antes else 1
