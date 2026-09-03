@@ -1,0 +1,60 @@
+====================================================================================================
+VUELTA 156, TAREA 5.d: LOS CASOS POR MUTACION DEL CORREDOR ESTRECHADO
+====================================================================================================
+Corredor REAL de la vuelta 152, leido de git (2 commit(s)):
+   6f419952 'VUELTA 152, TAREA 1: EL RELOJ DE GIT CONGELADO. LAS DOS VARAS QUE ' (8 ruta(s))
+   d9fa886b 'Decision del fundador: la lista blanca es un registro de citas, y ' (5 ruta(s))
+
+El del FUNDADOR, localizado POR SU ASUNTO dentro del corredor leido: d9fa886b
+El del EJECUTOR: 6f419952
+
+----------------------------------------------------------------------------------------------------
+LOS CUATRO DE LA VUELTA 154, RE CORRIDOS
+----------------------------------------------------------------------------------------------------
+  A    intrusos 2 (se esperaban 2) | admitidos aparte 0 (se esperaban 0) | OK
+         INTRUSO: 6f419952 'VUELTA 152, TAREA 1: EL RELOJ DE GIT CONGELADO. LAS DOS VARAS QU'
+         INTRUSO: d9fa886b 'Decision del fundador: la lista blanca es un registro de citas, '
+  B    intrusos 0 (se esperaban 0) | admitidos aparte 1 (se esperaban 1) | OK
+         ADMITIDO APARTE: d9fa886b 'Decision del fundador: la lista blanca es un registro de citas, '
+  C    intrusos 1 (se esperaban 1) | admitidos aparte 0 (se esperaban 0) | OK
+         INTRUSO: d9fa886b 'Decision del fundador: la lista blanca es un registro de citas, '
+  D    intrusos 1 (se esperaban 1) | admitidos aparte 1 (se esperaban 1) | OK
+         INTRUSO: 6f419952 'VUELTA 152, TAREA 1: EL RELOJ DE GIT CONGELADO. LAS DOS VARAS QU'
+         ADMITIDO APARTE: d9fa886b 'Decision del fundador: la lista blanca es un registro de citas, '
+
+----------------------------------------------------------------------------------------------------
+CASO E, NUEVO: EL HASH CITADO PERO NO MARCADO NO ENTRA
+----------------------------------------------------------------------------------------------------
+  MISMO hash citado en los dos textos: d9fa886b
+  SIN rotulo: rotulo hallado=False, admitidos=0 []
+  CON rotulo: rotulo hallado=True, admitidos=1 ['d9fa886b']
+  E    intrusos 1 (se esperaban 1) | admitidos aparte 0 (se esperaban 0) | OK
+         INTRUSO: d9fa886b 'Decision del fundador: la lista blanca es un registro de citas, '
+  Y CON EL MISMO TEXTO MARCADO, para que se vea que la diferencia es el rotulo:
+  E2   intrusos 0 (se esperaban 0) | admitidos aparte 1 (se esperaban 1) | OK
+         ADMITIDO APARTE: d9fa886b 'Decision del fundador: la lista blanca es un registro de citas, '
+
+  LA CONTRAPRUEBA CONTRA LA PUERTA VIEJA, que por eso no se borro: la funcion
+  vieja no mira rotulos, mira el fichero del arbol de trabajo. Sobre el texto
+  SIN rotulo, la nueva admite 0; la vieja habria admitido el hash igual, porque
+  su unico criterio era 'aparece en el encargo'. Se ensena con el patron:
+     literales que la puerta VIEJA habria recogido del texto sin rotulo: ['d9fa886b']
+     LA MUTACION MUERDE: la vieja lo recoge, la nueva no.
+
+----------------------------------------------------------------------------------------------------
+CASO F, NUEVO: LA VARA FIJA, Y LAS DOS VUELTAS REALES
+----------------------------------------------------------------------------------------------------
+  --vuelta 154: encargo leido del acta 32b2c76e | rotulo: NO | admite: 0
+  --vuelta 156: encargo leido del acta cf945888 | rotulo: SI | admite: 0
+  EL ENCARGO DE LA 154, LEIDO DE SU ACTA, NO TRAE EL ROTULO: admite CERO, que es
+  lo que la guarda hacia antes de la 6.7. La regla es PROSPECTIVA y ningun
+  veredicto viejo se mueve.
+
+  --vuelta 154  EXITCODE 0 (se esperaba 0) | ficheros nombrados 10 | cosas que no cuadran 0
+  --vuelta 100  EXITCODE 1 (se esperaba 1) | ficheros nombrados 0 | cosas que no cuadran 48
+
+====================================================================================================
+VERDE: los SEIS casos salen como se esperaba.
+CIFRA casos del arnes en verde: 6 comprobacion(es)
+====================================================================================================
+EXITCODE: 0

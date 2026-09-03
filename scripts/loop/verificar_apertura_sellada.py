@@ -345,7 +345,23 @@ def hashes_citados_por_el_encargo():
 
     ES LA UNICA PUERTA DE ADMISION DEL CORREDOR (adjudicacion 6.7 del acta
     153). Por HASH CITADO EN EL ENCARGO, no por autor adivinado, no por asunto
-    y no por ruta: si el encargo no lo cita, no entra."""
+    y no por ruta: si el encargo no lo cita, no entra.
+
+    --- ESTA FUNCION QUEDA SUSTITUIDA (vuelta 156, TAREA 5, adjudicacion 6.8 del
+    acta 155). NO SE BORRA: se conserva entera porque es la unica forma de
+    ENSENAR LAS DOS PUERTAS sobre la misma entrada, que es lo que el caso por
+    mutacion necesita. Una puerta vieja borrada no se puede contrastar. ---
+
+    LOS DOS DEFECTOS QUE EL AUDITOR MIDIO LLAMANDO A ESTA MISMA FUNCION:
+      (i)  ADMITIA CUALQUIER HASH QUE EL ENCARGO CITARA, sea de quien sea. La
+           6.7 concedio EL COMMIT DE LA DECISION DEL FUNDADOR, no cualquier hash
+           citado de paso. Medido el 3 sep 2026: admitia `6f695db6` y
+           `c9c6ea40`, los dos commits del EJECUTOR.
+      (ii) LEIA EL ARBOL DE TRABAJO, asi que el veredicto del corredor de una
+           vuelta YA JUZGADA podia cambiar cuando se escribiera un encargo
+           posterior. Vara anclada a algo que se mueve.
+
+    La sustituta es `hashes_admitidos_por_el_encargo(vuelta, acta)`."""
     ruta = os.path.join(LOOP, "PROMPT_SIGUIENTE.md")
     if not os.path.exists(ruta):
         return set(), []
@@ -361,6 +377,85 @@ def hashes_citados_por_el_encargo():
         completos.add(r.stdout.decode().strip())
         literales.append(lit)
     return completos, literales
+
+
+# --- LA PUERTA ESTRECHA Y LA VARA FIJA (vuelta 156, TAREA 5, adjudicacion 6.8
+# del acta 155) -------------------------------------------------------------
+#
+# EL LITERAL QUE EL ENCARGO TIENE QUE ESCRIBIR PARA ADMITIR ALGO. Sin este
+# rotulo no hay admision posible: un hash citado de paso NO entra, por mucho que
+# aparezca en el encargo. El rotulo se busca en el encargo LEIDO DEL COMMIT DEL
+# ACTA de la vuelta que se comprueba, no del arbol de trabajo.
+ROTULO_ADMITIDOS = "HASHES ADMITIDOS EN EL CORREDOR DE ESTA VUELTA:"
+# La palabra con la que el encargo dice "ninguno" de forma explicita. Se exige
+# que lo DIGA: un rotulo con la lista vacia y sin palabra seria ambiguo.
+PALABRA_NINGUNO = "NINGUNO"
+
+
+def texto_del_encargo_en_el_acta(acta, fallos=None):
+    """EL ENCARGO SE LEE DEL COMMIT DEL ACTA, CON git show, NO DEL ARBOL DE
+    TRABAJO (adjudicacion 6.8 del acta 155, punto ii).
+
+    POR QUE: el veredicto del corredor de la vuelta N tiene que ser el mismo
+    hoy y dentro de diez vueltas. Leyendo el arbol de trabajo, el encargo de la
+    vuelta N+3 cambiaba el veredicto de la vuelta N. Es la misma especie que el
+    ejecutor declaro como sus caidas 5 y 6 en la vuelta 154, y el remedio es el
+    suyo: anclar la vara a un commit.
+
+    Devuelve None si el encargo no existe en ese commit (y lo registra), que es
+    lo mismo que "ese encargo no admitio nada"."""
+    r = subprocess.run(["git", "show", "%s:docs/loop/PROMPT_SIGUIENTE.md" % acta],
+                       cwd=RAIZ, capture_output=True)
+    if r.returncode != 0:
+        if fallos is not None:
+            fallos.append("el commit del acta %s no trae docs/loop/PROMPT_SIGUIENTE.md: "
+                          "no hay encargo del que leer hashes admitidos" % acta[:8])
+        return None
+    return r.stdout.decode("utf-8", "replace")
+
+
+def hashes_admitidos_por_el_encargo(texto, fallos=None):
+    """SOLO ENTRA LO MARCADO (adjudicacion 6.8 del acta 155, punto i).
+
+    Devuelve (conjunto de hashes completos, lista de literales leidos, rotulo
+    hallado si o no). La admision exige LAS TRES COSAS:
+      1. que el encargo traiga el rotulo literal `ROTULO_ADMITIDOS`;
+      2. que detras del rotulo, y HASTA EL FINAL DE ESA LINEA LOGICA (el
+         parrafo), venga o la palabra NINGUNO o una lista de hashes;
+      3. que cada hash resuelva con `git rev-parse` a un commit de este repo.
+
+    UN ENCARGO SIN EL ROTULO NO ADMITE NADA. Eso hace la regla PROSPECTIVA: los
+    encargos viejos, que no lo traen, admiten el conjunto vacio, que es
+    exactamente lo que la guarda hacia antes de la adjudicacion 6.7. NINGUN
+    VEREDICTO VIEJO CAMBIA POR ESTO.
+
+    PURA A PROPOSITO salvo por `git rev-parse`: recibe el TEXTO ya leido, para
+    que el caso por mutacion pueda darle un encargo fabricado sin tocar el disco
+    ni el arbol de trabajo."""
+    if texto is None:
+        return set(), [], False
+    i = texto.find(ROTULO_ADMITIDOS)
+    if i < 0:
+        return set(), [], False
+    # el parrafo que sigue al rotulo: hasta la primera linea en blanco
+    resto = texto[i + len(ROTULO_ADMITIDOS):]
+    corte = resto.find(chr(10) + chr(10))
+    parrafo = resto if corte < 0 else resto[:corte]
+    if PALABRA_NINGUNO in parrafo.upper().split(".")[0]:
+        return set(), [], True
+    literales, completos = [], set()
+    for lit in sorted(set(PATRON_HASH.findall(parrafo))):
+        try:
+            r = subprocess.run(["git", "rev-parse", "--verify", "%s^{commit}" % lit],
+                               cwd=RAIZ, capture_output=True, check=True)
+        except Exception:
+            if fallos is not None:
+                fallos.append("el encargo MARCA como admitido el literal %r y git no lo "
+                              "resuelve a un commit de este repo: no entra" % lit)
+            continue
+        completos.add(r.stdout.decode().strip())
+        literales.append(lit)
+    return completos, literales, True
 
 
 def intrusos_del_corredor(corredor, admitidos=()):
@@ -489,25 +584,51 @@ def contenido_igual_al_nacer(nombre, nacido_en, fallos):
 
 
 def verificar(vuelta):
+    # CORRECCION DECLARADA (vuelta 156, TAREA 5). LAS TRES SALIDAS TEMPRANAS
+    # DEVOLVIAN UNA TUPLA DE TRES Y `main` DESEMPAQUETA CINCO: cualquiera de las
+    # tres reventaba con ValueError en vez de imprimir el ROJO que ya tenia
+    # escrito en `fallos`. Nunca se disparo porque las tres piden un repo raro
+    # (sin rama, sin acta, sin ficheros de apertura), pero un rojo que revienta
+    # en vez de hablar es lo contrario de fallar ruidoso (banco 9). Las tres
+    # devuelven ahora la tupla completa, con los tres huecos vacios.
     fallos = []
+    vacio = ([], {}, {}, [], False, None)
     rama = rama_actual(fallos)
     if rama is None:
-        return fallos, [], {}
+        return (fallos,) + vacio
     acta = commit_acta(vuelta, rama, fallos)
     if acta is None:
-        return fallos, [], {}
+        return (fallos,) + vacio
 
     nombres = ficheros_apertura(vuelta)
     if not nombres:
         fallos.append("no existe ningun docs/loop/SALIDA_V%d_*_APERTURA.txt en el arbol de trabajo" % vuelta)
-        return fallos, [], {}
+        return (fallos,) + vacio
 
     detalle = []
     corredores = {}   # cache: un corredor por commit de nacimiento, no uno por fichero
     declarados = {}   # corredores ACEPTADOS, que se imprimen y nunca se callan
     # ADJUDICACION 6.7 DEL ACTA 153 (vuelta 154): la puerta de admision del
     # corredor son LOS HASHES QUE EL ENCARGO CITA, leidos de git y no tecleados.
-    admitidos, literales_citados = hashes_citados_por_el_encargo()
+    # ~~admitidos, literales_citados = hashes_citados_por_el_encargo()~~
+    #
+    # CORRECCION DECLARADA POR ADICION (vuelta 156, TAREA 5, adjudicacion 6.8 del
+    # acta 155). LA LINEA VIEJA QUEDA ARRIBA, TACHADA Y LEGIBLE, porque el
+    # veredicto de las vueltas 154 y 155 se dio con ella y taparla impediria
+    # auditarlo. LO QUE CAMBIA, Y SON LAS DOS COSAS QUE EL ACTA MANDA:
+    #   (i)  SOLO ENTRA LO MARCADO: el encargo tiene que traer el rotulo literal
+    #        `HASHES ADMITIDOS EN EL CORREDOR DE ESTA VUELTA:` y decir ahi lo
+    #        que admite. Un hash citado de paso ya NO entra.
+    #   (ii) LA VARA SE FIJA: el encargo se lee DEL COMMIT DEL ACTA de la vuelta
+    #        que se comprueba, no del arbol de trabajo, para que el veredicto de
+    #        una vuelta ya juzgada no pueda cambiar cuando se escriba un encargo
+    #        posterior.
+    # UN ENCARGO SIN EL ROTULO ADMITE EL CONJUNTO VACIO, que es lo que la guarda
+    # hacia antes de la 6.7: la regla es PROSPECTIVA y ningun veredicto viejo se
+    # mueve por ella.
+    texto_encargo = texto_del_encargo_en_el_acta(acta)
+    admitidos, literales_citados, hay_rotulo = hashes_admitidos_por_el_encargo(
+        texto_encargo, fallos=None)
     admitidos_del_corredor = {}
     for nombre in nombres:
         nacido_en = commit_de_nacimiento(nombre, rama, fallos)
@@ -551,7 +672,8 @@ def verificar(vuelta):
                           "%s, sha256 de hoy %s" % (nombre, nacido_en[:8], h_nac, h_hoy))
 
         detalle.append((nombre, nacido_en[:8], padre[:8] if padre else "?", padre == acta))
-    return fallos, detalle, declarados, admitidos_del_corredor, literales_citados
+    return (fallos, detalle, declarados, admitidos_del_corredor, literales_citados,
+            hay_rotulo, acta)
 
 
 def main():
@@ -559,12 +681,21 @@ def main():
     ap.add_argument("--vuelta", type=int, required=True)
     a = ap.parse_args()
 
-    fallos, detalle, declarados, admitidos_corredor, literales = verificar(a.vuelta)
-    print("HASHES QUE EL ENCARGO (docs/loop/PROMPT_SIGUIENTE.md) CITA Y QUE GIT RESUELVE: "
-          "%d (%s)" % (len(literales), ", ".join(literales) or "ninguno"))
+    (fallos, detalle, declarados, admitidos_corredor, literales,
+     hay_rotulo, acta) = verificar(a.vuelta)
+    # LA PUERTA HABLA SIEMPRE, salga verde o rojo (banco 9, fallar ruidoso): se
+    # dice DE DONDE se leyo el encargo, SI traia el rotulo y QUE admitio.
+    print("PUERTA DEL CORREDOR (adjudicacion 6.8 del acta 155): el encargo se lee del "
+          "COMMIT DEL ACTA %s, no del arbol de trabajo." % (acta[:8] if acta else "(no hallado)"))
+    print("   rotulo %r en ese encargo: %s" % (ROTULO_ADMITIDOS, "SI" if hay_rotulo else "NO"))
+    print("   HASHES ADMITIDOS (solo los MARCADOS, y solo si el rotulo esta): %d (%s)"
+          % (len(literales), ", ".join(literales) or "ninguno"))
+    if not hay_rotulo:
+        print("   SIN ROTULO NO SE ADMITE NADA. Es lo que la guarda hacia antes de la "
+              "adjudicacion 6.7 del acta 153, asi que ningun veredicto viejo se mueve.")
     for nacido_en, adms in sorted(admitidos_corredor.items()):
         for h, asunto, ajenas in adms:
-            print("   ADMITIDO POR HASH CITADO EN EL ENCARGO, y se nombra aparte en vez "
+            print("   ADMITIDO POR HASH MARCADO EN EL ENCARGO, y se nombra aparte en vez "
                   "de tumbar la guarda: %s ('%s') toca %d ruta(s) fuera de los papeles "
                   "de parada (%s), delante de la apertura nacida en %s"
                   % (h[:8], asunto[:70], len(ajenas), ", ".join(ajenas), nacido_en[:8]))
