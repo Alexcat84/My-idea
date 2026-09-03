@@ -1,0 +1,755 @@
+================================================================================
+SALIDA SELLADA DE LA SESION CON CREDENCIAL . EL VUELO COMPLETO
+Decision del fundador del 3 sep 2026, opcion a con condiciones.
+Rama pasada-unica. Etiqueta del acto: VUELO_FASE08_2026-09-03
+================================================================================
+
+RESUMEN EN CUATRO LINEAS
+  CORRIDA 1: matada por el techo de 10 minutos de la sesion, NO por el vuelo.
+             Iba por la fase 2g-bis, 310 lineas, sin un solo error.
+  CORRIDA 2: completa hasta el final, EXITCODE 1, duracion 603 segundos.
+             VUELO FALLIDO en la fase 2g-ter por una ASEVERACION DE PRECIO.
+  EL GRAFO:  VERDE. 150 nodos recomendados, todos vivos, cero en lista roja,
+             cero aristas rotas tras resolver.
+  EL FALLO:  NO es del grafo y NO es de infraestructura. Es de producto.
+
+================================================================================
+1. EL ERROR, LITERAL
+================================================================================
+==============================================================================
+OK: risk_management sin muro de pago (contrato 4.5); el ciclo abajo prueba su preview.
+
+==============================================================================
+  VUELO FALLIDO
+==============================================================================
+Error: el catálogo de risk_management debio reportar precio 3, reporto 5
+    at faseMundoRiesgos (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:1008:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async main (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:2736:28)
+
+Transcripcion guardada en C:\Users\AlexDesk\Documents\I have an idea\examples\fase3_0_vuelo_web.txt
+
+================================================================================
+2. REGISTROS CREADOS. NO SE BORRAN: SON EVIDENCIA.
+   Listados para que el fundador decida que hacer con ellos.
+================================================================================
+==============================================================================
+VERIFICACION DEL VUELO CON OJO DE PRODUCTO . corte 2026-09-03T23:15:20Z
+==============================================================================
+Grafo: 3853 nodos, 3169 vivos. Lista roja: 0 ids.
+
+REGISTROS CREADOS POR EL VUELO (no se borran: son evidencia)
+  projects           6 filas
+  sessions           16 filas
+  project_nodes      185 filas
+  plans              12 filas
+  project_bitacora   22 filas
+
+  [projects] 3ad36d4e-966b-4eb6-9cba-39dbb21f7def
+  [projects] c69d9d85-5928-4796-ba4f-7ed71cbbfce5
+  [projects] 5bb78597-4496-46e4-80ac-bacca059ad5f
+  [projects] 1bcb8888-8886-4d9f-b489-e0669d32a67b
+  [projects] 050058e3-d544-4234-a901-507d2ede567d
+  [projects] 0ea4d305-9b41-4be1-a3d0-12e030296bcd
+  [sessions] f0d00000-b371-4f1b-99c3-9d44dd26bf30
+  [sessions] 52e91f0d-4038-4895-9569-cbed470453f3
+  [sessions] f130bcc1-108e-48fa-bf7d-0398286ca9dc
+  [sessions] 4e3438dc-ad42-403f-8c6f-d417a50795c5
+  [sessions] e2b95266-761e-4016-9c10-c8e39eef6808
+  [sessions] f7288fe9-4a64-4505-89cb-baab1e948be7
+  [sessions] abb191d2-022a-4865-bccf-56405a1cd179
+  [sessions] 3e28ce03-fbb7-4a31-849a-e712b2fcc645
+  [sessions] 0d0bea8c-b385-4550-aa1e-6631d6984d54
+  [sessions] fb053b3b-f5d5-4e5d-abfe-4693472edc39
+  [sessions] afc56964-a1d1-462e-8151-0de883f95ab5
+  [sessions] f151f599-a43a-4dbf-9c75-b6afc63275c1
+  [sessions] cb8c6c8b-43c9-4a48-a0b9-624581cb26f4
+  [sessions] 24a6f46e-e573-4933-b3a5-b268bc7cdb63
+  [sessions] fb2328c0-3fc3-4eff-b88d-798c0a784184
+  [sessions] 885c3c35-8048-4303-a0dd-1699cab1ce47
+  [plans] 2b107dcc-f2ac-489c-8ef4-f2eda8c7dc73
+  [plans] 68ddfd7c-6688-4907-bc3e-9e6ba6d2cd72
+  [plans] 7a0ff63a-bbcd-471b-a473-ac872dd07b8e
+  [plans] 139c8f43-d6fd-4031-a3c3-6d61c7fabd9d
+  [plans] d5933dd7-ae5c-4ea8-9235-6014c1d5cd73
+  [plans] 56d987c7-7c66-4a6a-bee8-f56bf15b96a2
+  [plans] 9dee119c-335e-40a1-ab01-8324b00574ed
+  [plans] c49bd059-83c9-4bee-8bd4-63273845bcca
+  [plans] e9e69927-50b9-48c2-a524-d01927d60750
+  [plans] b5fe3d60-b860-407e-a9ab-a9b90ae8334c
+  [plans] 61416e2b-703f-43f4-b941-1892e655f88c
+  [plans] aff6bb45-eb3c-47bc-a19a-bfa762939466
+  [project_bitacora] 0fb1a6f3-03f2-4818-8737-8cf4aacd9c70
+  [project_bitacora] 1a1ce0da-60cb-4337-9b81-af75edfdae2a
+  [project_bitacora] 7a60c0cc-8dac-43e9-ba8b-1589fee54940
+  [project_bitacora] a09e3751-2eb7-4c21-a25a-e4c8fba41e3b
+  [project_bitacora] 4f4e2581-2dc7-4a96-b5fc-5442414fc62f
+  [project_bitacora] 00fa989a-b6a8-4c99-8c5b-e112c3a6e546
+  [project_bitacora] 4af4cf87-de10-416a-bace-8d203c2610bc
+  [project_bitacora] ec59c120-f96a-48db-894e-fe714da2012d
+  [project_bitacora] 325ae067-3ce7-47b9-a92b-c2cc8cff26c9
+  [project_bitacora] 5405296a-ce49-4f2d-b3a7-52168be55af5
+  [project_bitacora] a37673fe-e560-4f85-b569-9761e25758df
+  [project_bitacora] d9e5a515-acb4-4865-a340-e9f6323e3480
+  [project_bitacora] 663f5406-4b52-496a-a016-4b2efb794898
+  [project_bitacora] d0bf04b5-e6ae-4f02-b972-9121ab540aca
+  [project_bitacora] a35d1db6-29b9-4b96-80a1-6e8f5a62153a
+  [project_bitacora] baecc52c-15ae-4cf9-8f9e-08c79c959a4f
+  [project_bitacora] 3a9d6d4a-00a6-4e35-9de9-fbce8873a479
+  [project_bitacora] 674c92a8-9e6b-41e2-b12c-41ef7e68baa7
+  [project_bitacora] 6437c066-8637-43c4-a444-3c27dc6b7b36
+  [project_bitacora] 88972251-5f1c-4a32-9863-87daa7d18555
+  [project_bitacora] 96388f09-dfc0-4d38-8311-b5ef18227f42
+  [project_bitacora] 7335770d-e66f-44e9-9618-f06d7e450e4d
+
+NODOS RECOMENDADOS EN project_nodes: 185 filas, 150 ids distintos
+
+  EXISTEN Y VIVOS         : 150
+  NO EXISTEN EN EL GRAFO  : 0  
+  DEPRECADOS              : 0  
+  EN LA LISTA ROJA        : 0  
+
+ARISTAS DE LOS NODOS RECOMENDADOS, TRAS RESOLVER: 0 rotas
+
+==============================================================================
+VERDE: los 150 nodos recomendados existen, estan VIVOS, ninguno esta en la
+lista roja, y todas sus aristas resuelven.
+==============================================================================
+
+================================================================================
+3. LA CORRIDA 2 ENTERA (entrevistas, planes, checklists, tiempos)
+================================================================================
+
+==============================================================================
+  VUELO Fase 3.0.1 -- cerebro web completo vía HTTP real
+==============================================================================
+BASE_URL: http://localhost:3000
+Fecha: 2026-09-03T23:25:45.000Z
+
+==============================================================================
+  FASE 0 (Fase 3.1): caso sintetico -- numero inyectado fuera de material
+==============================================================================
+OK: numero inyectado (4500) detectado como huerfano -- contexto: "alas, podrias llegar a vender 4500 unidades el proximo trimestre"
+Autenticado como dev user.
+
+==============================================================================
+  FASE 1: organizer (capa gratuita) -- idea del sonar para ciegos
+==============================================================================
+project_id: 1bcb8888-8886-4d9f-b489-e0669d32a67b
+costo_usd: 0.00412
+tiempo: 6039ms
+--- markdown (primeras 500 chars) ---
+# Organizador de tu idea
+
+**En una frase:** Aplicación que utiliza tecnología de sonar para proporcionar orientación y alertas en tiempo real a personas ciegas.
+
+**Etapa detectada:** ideacion
+
+## Lo que ya tienes claro
+- Existe un problema de movilidad y orientación para personas ciegas
+- La tecnología de sonar/sensores puede captar información del entorno
+- Las alertas sonoras pueden transmitir esa información en tiempo real
+- El formato es una aplicación digital
+
+## Lo que estás asumiendo sin 
+  voz OK (sin guiones largos): organizer (sonar)
+
+==============================================================================
+  FASE 1b: organizer con idea larga multi-dominio (regresion tope de tokens)
+==============================================================================
+largo del texto: 1237 chars
+project_id: 050058e3-d544-4234-a901-507d2ede567d
+costo_usd: 0.005278
+tiempo: 7534ms
+  voz OK (sin guiones largos): organizer (idea larga, markdown)
+  voz OK (sin guiones largos): organizer (idea larga, data)
+OK -- frase: "Una plataforma SaaS que automatiza auditorías HSEQ (ISO 9001, 14001, 45001) permitiendo qu..."
+
+==============================================================================
+  FASE 2: sesion completa de macetas de cemento (HTTP + SSE)
+==============================================================================
+Entrada inicial: "Hago y vendo macetas de cemento decorativas, ya tengo ventas reales por Instagram, pero no se si el precio que cobro de verdad me deja ganancia."
+project_id: 0ea4d305-9b41-4be1-a3d0-12e030296bcd, session_id: afc56964-a1d1-462e-8151-0de883f95ab5
+
+[turno 1] PREGUNTA: Para saber si el precio que cobras te deja ganancia real, primero necesito entender qué gastos sumas en cada maceta: ¿cuánto te cuesta en cemento, pigmentos, moldes y otros materiales por pieza, y cuántas horas de tu tiempo dedicas a hacerla?
+[turno 1] RESPUESTA: Hago macetas de cemento decorativas, chicas y medianas, las vendo a tiendas de plantas y directo por Instagram.
+
+[turno 2] PREGUNTA: Entendido que vendes a tiendas y por Instagram. Para calcular si te queda ganancia, necesito los números concretos: ¿cuánto dinero gastas en materiales (cemento, pigmentos, moldes) por cada maceta que haces, y cuánto tiempo te lleva hacerla?
+[turno 2] RESPUESTA: Cobro por pieza pero no he calculado bien cuanto me cuesta en minutos y materiales hacer cada maceta.
+  nodos nuevos: undefined [salto]
+
+[turno 3] PREGUNTA: Lo primero es que saques esos números: dedica 30 minutos a hacer una maceta chica y otra mediana, anota exactamente cuánto gastaste en materiales en cada una (cemento, pigmentos, moldes), y cuánto tiempo te tomó. ¿Puedes hacer eso esta semana antes de que sigamos?
+[turno 3] RESPUESTA: Llevo dos meses vendiendo, ya tengo unas 15 ventas reales, sobre todo por Instagram y una tienda de plantas que me las revende.
+
+[turno 4] PREGUNTA: Excelente que ya tengas 15 ventas reales en dos meses. Ahora necesito los números: de esas 15 macetas que vendiste, ¿a qué precio las vendiste cada una, y cuánto dinero gastaste en total en materiales para hacerlas?
+[turno 4] RESPUESTA: Lo que mas me preocupa es no saber si el precio que cobro de verdad me deja ganancia una vez que cuento mi tiempo.
+  nodos nuevos: undefined [conversado]
+
+[turno 5] PREGUNTA: Entiendo que tu preocupación real es si el precio que cobras cubre tus costos y te deja ganancia; ese es el frente que atacamos ahora. Para eso necesito que me digas: de las 15 macetas que ya vendiste, ¿a cuánto vendiste cada una (precio que cobró el cliente) y cuánto gastaste en materiales en total para hacerlas?
+[turno 5] RESPUESTA: Cada maceta me cuesta como 68 en materiales -- cemento, moldes, pintura -- y le dedico un par de horas entre mezclar, moldear y pulir.
+
+[turno 6] PREGUNTA: Perfecto, tengo el costo: $68 en materiales y 2 horas de tu tiempo por maceta. Ahora el otro número que falta: ¿a qué precio vendiste cada una de esas 15 macetas? Por ejemplo, ¿vendiste todas al mismo precio o variaron entre las que vendiste directo por Instagram y las que la tienda revende?
+[turno 6] RESPUESTA: Valoro mi hora de trabajo en unos 17, aunque nunca lo habia puesto en numeros asi.
+  nodos nuevos: undefined [conversado]
+
+[turno 7] PREGUNTA: Bien, entonces tu costo total por maceta es $68 en materiales más 2 horas a $17 la hora, que son $34 en tu tiempo: total $102 por maceta. Ahora necesito saber: ¿a qué precio vendiste cada una de esas 15 macetas que ya colocaste?
+[turno 7] RESPUESTA: Las vendo en 85 cada una, mas o menos, dependiendo del tamano.
+
+Interprete se detuvo tras 7 turno(s). tipo final: listo_para_plan
+costo acumulado hasta aqui: $0.0678
+
+==============================================================================
+  FASE 2b: ensamblando el plan (SSE streaming)
+==============================================================================
+..............................................................................................................................
+SSE: 126 deltas de texto recibidos, 0 aviso(s), tiempo total: 107302ms
+evaluacion_cobertura: {"es_completa":false,"tiene_accion_clientes":false,"tiene_viabilidad_economica":true,"familias_faltantes":["validar con clientes reales (entrevistas, MVP, pruebas de usuario, una venta o preventa real)"]}
+costo_usd (sesion completa, incluye el plan): $0.1886
+--- plan generado (completo) ---
+_Plan inicial_
+
+# Tus macetas de cemento: de vender a precio de intuición a saber exactamente qué te deja cada pieza
+
+Ya tienes algo que mucha gente no tiene al empezar: ventas reales, un canal activo en Instagram y dos tipos de compradores. Lo que este plan resuelve es la pregunta que te trajo aquí: con tu costo total de $102 por maceta y un precio promedio de $85, cada venta te cuesta $17 de tu propio bolsillo. Este plan te lleva, paso a paso, a corregir eso con números propios, no con intuición.
+
+---
+
+## Etapa 1: Entiende exactamente qué te cuesta cada maceta y por qué el número importa
+
+Ya hiciste el cálculo inicial: $68 en materiales más $34 de tu tiempo (2 horas a $17/hora) da $102 de costo total por unidad. Eso es un punto de partida sólido, pero antes de cambiar precios necesitas confiar en ese número, porque cualquier decisión que tomes va a depender de él.
+
+El principio aquí es que ninguna cifra financiera es completamente automática: siempre hay una decisión detrás de cómo se calcula. Por ejemplo, ¿tu costo de $68 en materiales incluye el cemento que se desperdicia en cada colada, o solo el que termina en la maceta? ¿Las $34 de tu tiempo incluyen el tiempo de lijar, pintar o empacar, o solo el moldeado?
+
+**Pasos:**
+
+1. Abre una hoja (papel o digital) y lista cada material que usas para hacer una maceta: cemento, molde, pintura, sellador, empaque, etiqueta, lo que sea. Anota el costo real de cada uno por unidad producida, incluyendo el desperdicio típico.
+2. Cronometra el tiempo completo de fabricación de una maceta, desde que preparas la mezcla hasta que la tienes lista para entregar, incluyendo el secado que requiere tu presencia. Multiplica ese tiempo por $17.
+3. Suma todo. Si el resultado se aleja de $102, usa el número nuevo como tu costo base real.
+4. Separa los costos en dos columnas: los que cambian según cuántas macetas haces (materiales, tiempo de producción) y los que pagas igual aunque no produzcas nada (herramientas, tarifas de Instagram si las hubiera, transporte fijo). Esa separación te va a servir en la siguiente etapa.
+5. Anota qué supuesto tomaste en cada línea. Por ejemplo: "el cemento lo calculé por bolsa dividida entre las macetas que salen por bolsa". Eso te permite ajustar si algo cambia.
+
+**Entregable:** Una lista de costos por unidad con dos columnas (variables y fijos), con el supuesto anotado en cada línea, y tu costo total actualizado.
+
+**Esta semana:** Cronometra en tiempo real la fabricación de dos macetas (una chica, una mediana) y anota cada paso con su duración, para confirmar o corregir las 2 horas que asumiste antes.
+
+---
+
+## Etapa 2: Calcula tu margen real y entiende qué tan lejos está tu precio actual
+
+Con el costo por unidad confirmado, ahora puedes calcular cuánto ganas (o pierdes) por cada maceta que vendes, y entender si la pérdida de $17 es igual en ambos canales o si uno es peor que el otro.
+
+**Pasos:**
+
+1. Calcula tu margen por unidad para cada canal por separado. Para Instagram (venta directa): precio de venta menos costo total. Para la tienda de plantas (distribución): precio que le cobras a la tienda menos costo total. Si le cobras menos a la tienda porque ella pone el margen de reventa, ese canal probablemente pierde más todavía.
+2. Calcula el porcentaje que representa tu costo total respecto al precio de venta en cada canal. Fórmula: (costo total / precio de venta) × 100. Eso te dice qué tan desbalanceada está la relación ahora.
+3. Define qué margen mínimo necesitas para que valga la pena tu tiempo. Una referencia práctica: si no te queda al menos un 30% del precio de venta como ganancia después de cubrir todos los costos directos, el proyecto no se sostiene a medida que creces.
+4. Calcula el precio mínimo que deberías cobrar para llegar a ese margen. Fórmula simple: precio mínimo = costo total / (1 - margen deseado en decimal). Si quieres 35% de margen y tu costo es $102, el precio mínimo es $102 / 0.65 = $156.92.
+5. Compara ese precio mínimo con lo que ves que cobran otras personas por macetas de cemento decorativas similares en Instagram. No para copiarlo, sino para saber si el mercado aguanta ese precio o si necesitas ajustar el costo.
+
+**Entregable:** Una tabla con precio actual, costo total, margen en pesos y margen en porcentaje, por canal (Instagram y tienda), más el precio mínimo calculado para un margen objetivo.
+
+**Esta semana:** Anota el precio exacto que le cobras a la tienda de plantas y el precio que cobras en Instagram para las macetas chica y mediana, y pon esos cuatro números en la tabla junto a tu costo de $102.
+
+---
+
+## Etapa 3: Decide cuántas macetas necesitas vender para que el proyecto cubra sus propios costos
+
+Saber que pierdes $17 por maceta no te dice cuánto necesitas ajustar para que el proyecto sea autosustentable. Para eso necesitas calcular tu punto de equilibrio: cuántas macetas al mes tienes que vender al precio nuevo para que los ingresos cubran todos tus costos.
+
+**Pasos:**
+
+1. Con la separación de costos que hiciste en la Etapa 1, suma todo lo que pagas cada mes independientemente de cuánto produces: herramientas que se amortizan, costos de envío fijos, cualquier gasto mensual del proyecto. Ese es tu costo fijo mensual.
+2. Calcula tu margen de contribución por unidad al precio nuevo: precio de venta nuevo menos costo variable por unidad (materiales más tiempo). Ese número representa cuánto aporta cada maceta vendida a cubrir los costos fijos antes de que empieces a ganar.
+3. Divide el costo fijo mensual entre el margen de contribución por unidad. El resultado es tu punto de equilibrio: las macetas que necesitas vender cada mes solo para no perder.
+4. Compara ese número contra lo que produces hoy. Si en 2 meses vendiste 15 macetas (aproximadamente 7 al mes), ¿el punto de equilibrio al precio nuevo está por encima o por debajo de esas 7?
+5. Si el punto de equilibrio exige más macetas de las que puedes hacer sola en un mes, tienes dos palancas: subir el precio o reducir el costo. Anota cuál de las dos tiene más margen de maniobra en tu caso concreto.
+
+**Entregable:** El número de macetas por mes que necesitas vender al precio nuevo para cubrir todos los costos, con los costos fijos mensuales y el margen de contribución que lo sustentan.
+
+**Esta semana:** Lista todos los gastos mensuales del proyecto que pagas aunque no vendas nada (aunque sean pequeños) y súmalos para tener tu costo fijo mensual real.
+
+---
+
+## Etapa 4: Ajusta tu precio y prueba si el mercado lo acepta
+
+Ya tienes el costo real, el margen que necesitas y el precio mínimo calculado. Ahora viene la prueba que importa: si subes el precio, ¿tus compradores de Instagram siguen comprando?
+
+Tu bloqueo declarado era saber si el precio deja ganancia real. La respuesta ya la tienes: hoy no la deja. Esta etapa es donde conviertes ese descubrimiento en una decisión concreta y la pruebas antes de aplicarla a todo tu catálogo.
+
+**Pasos:**
+
+1. Elige una sola maceta de tu catálogo (por ejemplo, la mediana, que probablemente tiene más margen de ajuste) y define su nuevo precio basado en el cálculo de la Etapa 2.
+2. Actualiza esa pieza en Instagram con el precio nuevo y una foto clara. No cambies todo el catálogo todavía: prueba con una sola referencia durante dos semanas.
+3. Anota cuántas personas preguntan por esa maceta al precio nuevo versus cuántas compraban antes. Si el volumen de consultas cae mucho, tienes información real sobre el techo de precio que el mercado acepta por esa pieza.
+4. Para la tienda de plantas, conversa con ellos sobre el ajuste de precio antes de publicarlo, porque su margen de reventa depende del precio que tú les cobras. Si no pueden absorber el cambio, evalúa si ese canal sigue siendo viable o si conviene priorizarlo menos.
+5. Cambia solo una variable a la vez: primero prueba el precio nuevo sin cambiar la foto, la descripción ni el canal. Así sabes que cualquier cambio en las ventas se debe al precio, no a otra cosa.
+
+**Entregable:** Resultado de la prueba en 2 semanas: número de consultas y ventas de esa maceta al precio nuevo, comparado con el ritmo anterior.
+
+**Esta semana:** Define el precio nuevo para la maceta mediana usando el cálculo de la Etapa 2 y actualízalo en Instagram, sin cambiar nada más todavía.
+
+---
+
+## Etapa 5: Organiza tus números para que puedas verlos de un vistazo cada mes
+
+Con costos claros, margen calculado y precio ajustado, el último paso es que eso no se quede en un papel suelto. Necesitas una forma simple de ver cada mes si el proyecto está ganando o perdiendo, y dónde se va el dinero.
+
+**Pasos:**
+
+1. Arma un estado de resultados mensual simple con estas líneas: ingresos totales (cuánto vendiste), menos costo de los materiales y tu tiempo (lo que costó producir lo que vendiste), igual a ganancia bruta. Luego resta los gastos fijos del mes, y el resultado es tu ganancia real del mes.
+2. Calcula el porcentaje que representa cada costo respecto a tus ingresos totales. Por ejemplo: si los materiales son el 45% de tus ingresos, eso te dice cuánto margen te queda antes de contar tu tiempo.
+3. Ponle una meta a esas líneas. Por ejemplo: "quiero que los materiales no superen el 40% de mis ingresos" o "quiero que mi tiempo esté pagado al 100% antes de considerar que gané algo". Esas metas te avisan cuando algo se sale de control.
+4. Actualiza ese estado de resultados una vez al mes, con los números reales de ese mes. No necesitas software: una hoja con cinco líneas es suficiente para empezar.
+5. Si en algún mes el margen baja sin que hayas cambiado el precio, investiga si fue porque el costo de algún material subió o porque tardaste más tiempo en producir. Esa pregunta te da control real sobre el proyecto.
+
+**Entregable:** Un estado de resultados mensual con al menos tres meses de datos, que muestre ingresos, costo de producción, gastos fijos y ganancia real.
+
+**Esta semana:** Crea una hoja con las cinco líneas del estado de resultados y llénala con los datos de este mes, aunque algunos sean estimados. Un número aproximado que puedas mejorar vale más que no tener ninguno.
+
+---
+
+## ¿Puede sostenerse tu idea? Los números en simple
+
+Ya tienes los datos más importantes sobre la mesa. El descubrimiento central es claro: hoy el proyecto pierde dinero en cada venta. Estos son los números que necesitas tener calculados y actualizados para saber si eso cambia:
+
+- **Costo por unidad:** lo que te cuesta hacer una maceta sumando materiales ($68 según tu cálculo) más tu tiempo a $17/hora ($34 por 2 horas). Total actual: $102. Este número cambia si el precio del cemento sube o si una maceta te toma más tiempo de lo que mediste.
+
+- **Precio de venta necesario para ganar:** si quieres un margen de al menos 30% sobre el costo, el precio mínimo es de alrededor de $133. Si apuntas a 35%, sube a $157. Hoy vendes a $85, que no alcanza para cubrir ni el costo, menos la ganancia.
+
+- **Margen de contribución por unidad:** la diferencia entre tu precio nuevo y el costo variable (materiales más tiempo). Ese número te dice cuánto aporta cada maceta a pagar los gastos fijos del mes antes de que empieces a ganar de verdad.
+
+- **Punto de equilibrio mensual:** cuántas macetas necesitas vender al precio nuevo para que los ingresos cubran exactamente todos los costos, sin ganar ni perder. Con tu ritmo actual de unas 7 macetas al mes, ese punto de equilibrio te dice si el volumen actual alcanza o si necesitas vender más.
+
+- **Margen bruto en porcentaje:** (precio de venta menos costo de producción) dividido entre el precio de venta, multiplicado por 100. Este porcentaje te dice qué tan saludable está la operación mes a mes, y es el número que debes monitorear cada mes para detectar si algo se sale de control.
+
+**Esta semana:** Abre una hoja con cinco columnas (costo por unidad, precio de venta actual, precio mínimo para tu margen objetivo, macetas vendidas este mes, ganancia o pérdida del mes) y pon un número en cada columna, aunque algunos sean estimados. Ese es el tablero mínimo que necesita tu proyecto para dejar de operar a ciegas.
+
+## Lo que este plan aun no cubre
+
+- validar con clientes reales (entrevistas, MVP, pruebas de usuario, una venta o preventa real)
+
+Para profundizar, continua la conversacion en esta misma sesion.
+
+==============================================================================
+  FASE 2c (Hotfix v2.2.2): verificando persistencia real de saltos semanticos
+==============================================================================
+saltos detectados en la ruta: undefined (hoja_estimacion_costos)
+  OK: project_nodes.tipo='salto' persistido correctamente para 'hoja_estimacion_costos'
+
+==============================================================================
+  FASE 2d (Fase 3.1): verificando la bitacora de decisiones (caja de vidrio)
+==============================================================================
+decision_turno persistidos: 8, con salto+score verificable: 1
+OK: los 1 saltos quedaron en la bitacora con su score de afinidad.
+OK: procedencia por etapa valida (sin eventos procedencia_invalida en la bitacora).
+
+==============================================================================
+  FASE 2e (Fase 3.2): eventos del arbol == ruta persistida, 1:1 y en orden
+==============================================================================
+eventos del arbol (6): arte_de_las_finanzas[conversado] -> distincion_cogs_gastos_operativos[silencioso] -> margen_bruto[conversado] -> hoja_estimacion_costos[salto] -> linea_base_costos[conversado] -> estimate_at_completion_eac[conversado]
+ruta persistida  (6): arte_de_las_finanzas[conversado] -> distincion_cogs_gastos_operativos[silencioso] -> margen_bruto[conversado] -> hoja_estimacion_costos[salto] -> linea_base_costos[conversado] -> estimate_at_completion_eac[conversado]
+OK: el arbol que piensa muestra EXACTAMENTE la ruta persistida (misma secuencia, mismos modos).
+
+==============================================================================
+  FASE 2f (Fase 3.3): checklist -> PATCH -> follow -> plan seguimiento encadenado
+==============================================================================
+checklist derivado: 30 items en 5 etapa(s), dominio 'core'
+OK: estructura del checklist (1 destacado por etapa, al final; todos pendientes; resumen consistente).
+OK: 'Abre una hoja (papel o digital) y lista cada mater…' -> hecho (con nota); destacado etapa 1 -> en_proceso.
+OK: retirada 'Cronometra el tiempo completo de fabrica…' con motivo; activas=29, retiradas=1.
+OK: el expediente muestra la retirada aparte, con su motivo, y no como pendiente.
+OK: reactivación conserva historia en project_bitacora (retiro + reactivación).
+OK: estado fuera de CHECKLIST_ESTADO rechazado con 400.
+nodos cubiertos antes del follow: 25
+follow session_id: f151f599-a43a-4dbf-9c75-b6afc63275c1, tipo primer turno: pregunta
+OK: puerta avanzada 'undefined' (metricas_como_validacion_cuantitativa) fuera de lo ya cubierto.
+OK: mensaje compuesto auditable (estados, nota, detalles, enfoque, y la retirada aparte sin reproponerse).
+
+[seguimiento turno 1] PREGUNTA: Ya que tu bloqueo es precio y margen, necesito entender una cosa: cuando subes el precio de una maceta en Instagram, ¿sabes cuántas personas dejan de preguntar o comprar por esa razón, o aún no lo has medido?
+[seguimiento turno 1] RESPUESTA: Subí el precio a 250 y las ventas se mantuvieron; ya sé mi costo real por pieza: 130 incluyendo mi hora a 50.
+
+[seguimiento turno 2] PREGUNTA: Perfecto: a $250 tienes $120 de margen por pieza ($250 menos $130 de costo real). Antes de decidir si subes más el precio o si atascas dinero en Instagram pagada, necesito saber: de esas ventas que mantuvieron a $250, ¿cuántas vinieron de Instagram y cuántas de la tienda de plantas?
+[seguimiento turno 2] RESPUESTA: Vendo unas 12 macetas al mes por Instagram, y el proveedor nuevo me baja el cemento un 20%.
+
+listo_para_plan tras 2 turno(s) de seguimiento.
+............................................................................................................
+OK: plan persistido con etiqueta 'seguimiento' (b5fe3d60-b860-407e-a9ab-a9b90ae8334c).
+OK: checklist encadenado (30 items nuevos del plan de seguimiento; hechos previos preservados).
+OK: el replan nace estimado -- 30/30 items del plan de seguimiento traen banda.
+
+==============================================================================
+  FASE 2g (Fase 3.5): mundos HSEQ -- el muro, el unlock y el ciclo
+==============================================================================
+OK: contrato 4.5 -- sin plan core el mundo no abre (409); el muro de pago 403 murió.
+OK: pack fuera del catalogo rechazado (404).
+OK: unlock de quality con 5 creditos (stub).
+OK: unlock idempotente (23505 absorbido).
+OK: fila persistida (creditos_pagados=0).
+world session: cb8c6c8b-43c9-4a48-a0b9-624581cb26f4, tipo: pregunta
+[mundo turno 1] Ahora que entiendes cómo medir y controlar la variación en tu proceso, ¿qué es lo más urgente que necesitas resolver: mantener estable una mejora que ya lograste, entender por qué algunos miembros de tu equipo tienen resultados muy diferentes a otros, detectar problemas que son tan raros que casi nunca los ves, o descubrir dónde están realmente los errores que se repiten una y otra vez?
+[mundo turno 2] Cuando dices que hay burbujas y acabados irregulares, ¿eso ocurre en casi todas las piezas que haces o es algo que aparece solo en algunos lotes?
+[mundo turno 3] Para empezar a entender si las burbujas y los acabados irregulares vienen del mismo problema cada vez o si son situaciones diferentes, necesitas registrar qué falla en cada pieza: ¿ya tienes en mente cómo harías ese registro, o prefieres que te ayude a armar algo simple para empezar?
+[mundo turno 4] Antes de hornear, ¿qué parte del proceso crees que es donde aparecen esas burbujas y los acabados irregulares: cuando viertes la mezcla en el molde, mientras se cura, o después pero antes de meter al horno?
+OK: ciclo completo del mundo (plan dominio=quality, checklist quality con 29 items).
+
+==============================================================================
+  FASE 2g-bis (v1.3.2): mundos nuevos -- murallas x2 + ciclo de seguridad_digital
+==============================================================================
+OK: 'exportacion' abre su preview gratis (200); el muro murió.
+OK: 'franquicias' abre su preview gratis (200); el muro murió.
+OK: unlock de seguridad_digital con 5 creditos (migracion 017 viva).
+world session: 885c3c35-8048-4303-a0dd-1699cab1ce47, tipo: pregunta
+[seguridad_digital turno 1] Ahora que estás pensando en cómo verificar quién accede a tu proyecto y proteger esa información sensible, ¿qué te preocupa más: tener un plan claro de qué hacer si algo sale mal en la seguridad, o asegurarte de que las contraseñas y credenciales se manejen de forma realmente segura desde el principio?
+[seguridad_digital turno 2] Entiendo que necesitas asegurar esas cuentas ya; empecemos por lo concreto: ese Excel con datos de clientes que guardas sin clave en el celular, ¿qué información exacta tiene adentro (solo nombres y teléfonos, o también direcciones, montos de compra, datos de pago)?
+[seguridad_digital turno 3] Acabas de contar algo importante: usas la misma contraseña en el correo, Instagram y el banco. Antes de armar un plan, necesito confirmar: ¿alguien más (un familiar, un amigo, alguien que te ayude con las macetas) tiene acceso a cualquiera de esas cuentas o conoce esa contraseña?
+[seguridad_digital turno 4] Tu miedo real es perder el celular y con él todos los pedidos y contactos. Eso es un riesgo que atacamos en paralelo a asegurar las contraseñas. Primero: si mañana pierdes el celular, ¿a quién llamarías para recuperar esos pedidos, o no hay nadie que tenga esa información?
+[seguridad_digital turno 5] Entiendo que Instagram es donde estás probando precios como en la actividad #10, donde ya subiste a $250 y las ventas se mantuvieron, así que perder ese canal sería un golpe directo. Cuando dices que te preocupa que te roben la cuenta, ¿es porque alguien podría cambiar tu contraseña y sacarte, o es más por miedo a que alguien publique cosas falsas en tu nombre y asuste a tus clientes?
+OK: ciclo completo del mundo nuevo (plan dominio=seguridad_digital, checklist con 26 items).
+
+==============================================================================
+  FASE 2g-ter (v1.4): Riesgos Bajo Control -- contrato 4.5 (sin muro, unlock gratis) + ciclo
+==============================================================================
+OK: risk_management sin muro de pago (contrato 4.5); el ciclo abajo prueba su preview.
+
+==============================================================================
+  VUELO FALLIDO
+==============================================================================
+Error: el catálogo de risk_management debio reportar precio 3, reporto 5
+    at faseMundoRiesgos (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:1008:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async main (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:2736:28)
+
+Transcripcion guardada en C:\Users\AlexDesk\Documents\I have an idea\examples\fase3_0_vuelo_web.txt
+
+================================================================================
+4. LA CORRIDA 1, HASTA DONDE LLEGO ANTES DE QUE LA MATARA EL RELOJ
+================================================================================
+
+==============================================================================
+  VUELO Fase 3.0.1 -- cerebro web completo vía HTTP real
+==============================================================================
+BASE_URL: http://localhost:3000
+Fecha: 2026-09-03T23:15:22.235Z
+
+==============================================================================
+  FASE 0 (Fase 3.1): caso sintetico -- numero inyectado fuera de material
+==============================================================================
+OK: numero inyectado (4500) detectado como huerfano -- contexto: "alas, podrias llegar a vender 4500 unidades el proximo trimestre"
+Autenticado como dev user.
+
+==============================================================================
+  FASE 1: organizer (capa gratuita) -- idea del sonar para ciegos
+==============================================================================
+project_id: 3ad36d4e-966b-4eb6-9cba-39dbb21f7def
+costo_usd: 0.00418
+tiempo: 7497ms
+--- markdown (primeras 500 chars) ---
+# Organizador de tu idea
+
+**En una frase:** App de navegación para personas ciegas usando sonar y alertas sonoras en tiempo real
+
+**Etapa detectada:** ideacion
+
+## Lo que ya tienes claro
+- Existe un problema de movilidad y orientación para personas ciegas
+- La tecnología sonar y alertas de audio son herramientas técnicas viables
+- El valor principal es la independencia de movimiento sin asistencia
+
+## Lo que estás asumiendo sin saberlo
+- Que las personas ciegas realmente quieren una solución tec
+  voz OK (sin guiones largos): organizer (sonar)
+
+==============================================================================
+  FASE 1b: organizer con idea larga multi-dominio (regresion tope de tokens)
+==============================================================================
+largo del texto: 1237 chars
+project_id: c69d9d85-5928-4796-ba4f-7ed71cbbfce5
+costo_usd: 0.005333
+tiempo: 8277ms
+  voz OK (sin guiones largos): organizer (idea larga, markdown)
+  voz OK (sin guiones largos): organizer (idea larga, data)
+OK -- frase: "Plataforma SaaS que automatiza auditorías HSEQ (calidad, ambiental, seguridad) mediante un..."
+
+==============================================================================
+  FASE 2: sesion completa de macetas de cemento (HTTP + SSE)
+==============================================================================
+Entrada inicial: "Hago y vendo macetas de cemento decorativas, ya tengo ventas reales por Instagram, pero no se si el precio que cobro de verdad me deja ganancia."
+project_id: 5bb78597-4496-46e4-80ac-bacca059ad5f, session_id: f130bcc1-108e-48fa-bf7d-0398286ca9dc
+
+[turno 1] PREGUNTA: ¿ya sacaste la cuenta de cuanto te cuesta en materiales y tiempo hacer cada maceta, separado de otros gastos como envios o mantenimiento del taller?
+[turno 1] RESPUESTA: Hago macetas de cemento decorativas, chicas y medianas, las vendo a tiendas de plantas y directo por Instagram.
+
+[turno 2] PREGUNTA: Entiendo que vendes a tiendas y por Instagram. Pero para saber si hay ganancia real, necesito un número: ¿cuánto te cuesta en materiales y tiempo hacer una maceta (chica o mediana, elige una), y a cuánto la vendes?
+[turno 2] RESPUESTA: Cobro por pieza pero no he calculado bien cuanto me cuesta en minutos y materiales hacer cada maceta.
+  nodos nuevos: undefined [salto]
+
+[turno 3] PREGUNTA: Tu bloqueo real es que no has hecho la cuenta de costos, y eso es exactamente lo que necesitas resolver antes de seguir. ¿te parece si usamos una hoja de trabajo simple para desglosar: materiales por maceta, cuántos minutos te toma hacer una, y a cuánto las vendes hoy?
+[turno 3] RESPUESTA: Llevo dos meses vendiendo, ya tengo unas 15 ventas reales, sobre todo por Instagram y una tienda de plantas que me las revende.
+
+[turno 4] PREGUNTA: Bien, 15 ventas reales en dos meses es tracción. Pero todavía necesito los números concretos: de esas 15 ventas, ¿cuánto dinero efectivo entrante tuviste, y cuánto gastaste en materiales para hacerlas?
+[turno 4] RESPUESTA: Lo que mas me preocupa es no saber si el precio que cobro de verdad me deja ganancia una vez que cuento mi tiempo.
+  nodos nuevos: undefined [conversado]
+
+[turno 5] PREGUNTA: Tienes razón en el fondo: necesitas saber de verdad cuánto te cuesta cada maceta en materiales y tiempo. Empecemos por lo concreto: toma una maceta chica (o mediana, la que más vendes) y dame dos números: cuánto gastaste en cemento, pigmentos y otros materiales para hacerla, y cuántos minutos te tomó desde que empezaste a mezclar hasta que quedó lista.
+[turno 5] RESPUESTA: Cada maceta me cuesta como 68 en materiales -- cemento, moldes, pintura -- y le dedico un par de horas entre mezclar, moldear y pulir.
+
+[turno 6] PREGUNTA: Perfecto: $68 en materiales y 2 horas por maceta. Ahora el último número: ¿a cuánto vendes cada maceta? (precio directo por Instagram y a qué precio la tienda te la revende o te paga por ella).
+[turno 6] RESPUESTA: Valoro mi hora de trabajo en unos 17, aunque nunca lo habia puesto en numeros asi.
+  nodos nuevos: undefined [conversado]
+
+[turno 7] PREGUNTA: Entonces con esos $68 de materiales y 2 horas a $17 la hora, cada maceta te cuesta unos $102 en total. ¿A cuánto la vendes por Instagram y a cuánto te la paga la tienda que te revende?
+[turno 7] RESPUESTA: Las vendo en 85 cada una, mas o menos, dependiendo del tamano.
+  nodos nuevos: undefined [conversado]
+
+[turno 8] PREGUNTA: Ahora que has revisado qué funcionó y qué no en tu gestión de riesgos, ¿qué necesitas hacer con esa información: aplicarla para mejorar los próximos pasos de tu proyecto, evaluar cómo te fue con los proveedores o socios que contrataste, asegurarte de que cumpliste con los estándares de calidad que estableciste, o justificar ante otros por qué invertiste en ciertas medidas de protección?
+[turno 8] RESPUESTA: Puedo hacer unas 10 a la semana trabajando en mis ratos libres, sin descuidar mi otro trabajo.
+
+[turno 9] PREGUNTA: Perfecto, 10 macetas por semana es tu capacidad real. Ahora necesito el último número que falta para saber si ganas o pierdes: ¿a cuánto vendes cada maceta por Instagram y a cuánto te la paga la tienda que te revende?
+[turno 9] RESPUESTA: Tengo costos fijos como de 200 al mes: renta de un rincon del taller de un amigo y las herramientas que voy comprando.
+  nodos nuevos: undefined [conversado]
+
+[turno 10] PREGUNTA: Pensando en "Lecciones Aprendidas", cuentame en tus palabras donde estas parado ahora mismo con tu idea y que es lo que mas te preocupa o te entusiasma.
+[turno 10] RESPUESTA: No he hablado con clientes de forma organizada, solo veo que la gente compra por Instagram, nunca les he preguntado directamente por que.
+
+Interprete se detuvo tras 10 turno(s). tipo final: listo_para_plan
+costo acumulado hasta aqui: $0.1148
+
+==============================================================================
+  FASE 2b: ensamblando el plan (SSE streaming)
+==============================================================================
+....................................................................................................................
+SSE: 116 deltas de texto recibidos, 0 aviso(s), tiempo total: 103695ms
+evaluacion_cobertura: {"es_completa":false,"tiene_accion_clientes":false,"tiene_viabilidad_economica":true,"familias_faltantes":["validar con clientes reales (entrevistas, MVP, pruebas de usuario, una venta o preventa real)"]}
+costo_usd (sesion completa, incluye el plan): $0.2479
+--- plan generado (completo) ---
+_Plan inicial_
+
+# ¿Tus macetas de cemento generan ganancia real? Un plan para saberlo y actuar
+
+Tienes algo valioso: ventas reales en Instagram y un canal con tracción. Lo que falta es confirmar si cada maceta que vendes te deja dinero de verdad o solo te ocupa el tiempo. Ya tienes un dato clave, que tu hora vale $17 y que los materiales por maceta rondan los $68, así que este plan parte de ahí y convierte esos números en decisiones concretas.
+
+---
+
+## Etapa 1: Consolida el costo real por maceta y separa qué es producción y qué es operación
+
+Ya estimaste $102 por maceta (materiales más dos horas de trabajo). Ese número es un punto de partida sólido, pero todavía hay líneas de costo que probablemente no entraron en esa cuenta y que cambian el resultado.
+
+**Pasos:**
+
+1. Abre una hoja (papel, Excel, Google Sheets, lo que uses) y anota tres columnas: "qué es", "costo por maceta" y "tipo".
+2. En "qué es" lista cada insumo por separado: cemento, moldes, pintura o acabado, envase o empaque, herramientas que se desgastan con el uso. Para herramientas que duran meses, divide su costo total entre las macetas que calculas hacer con ellas antes de reponerlas: eso es lo que te cuesta esa herramienta por unidad.
+3. Suma todos esos ítems: ese total es tu costo de producción directa.
+4. En la columna "tipo", marca cuáles cambian con cada maceta que produces (materiales, tu tiempo) y cuáles pagas igual aunque no produzcas nada esa semana (por ejemplo, cuenta de Instagram si la tienes de pago, bolsas de envío fijas, cualquier renta de espacio).
+5. Los costos que cambian con cada pieza van en una columna; los que son fijos al mes, en otra. Esta separación es la base de todo lo que sigue.
+
+No necesitas un contador para esto todavía: con los datos que ya tienes puedes armar la primera versión tú misma.
+
+**Entregable:** Una tabla con el costo desglosado por maceta, separando lo que varía por unidad de lo que pagas fijo al mes.
+
+**Esta semana:** Anota los insumos de tu última tanda de macetas con su costo real (no estimado), calcula cuánto gastaste en total y divídelo entre las piezas que produjiste. Compara ese resultado con los $68 que tenías estimados y anota la diferencia.
+
+---
+
+## Etapa 2: Calcula tu margen real por maceta y por tamaño
+
+Con los costos separados, el siguiente paso es confrontarlos con tu precio de venta actual para saber exactamente cuánto te queda, o cuánto te falta, por pieza.
+
+**Pasos:**
+
+1. Confirma tu precio de venta por cada tamaño que manejas: maceta chica y maceta mediana, tanto para ventas directas por Instagram como para lo que recibe la tienda de plantas (que probablemente paga un precio menor porque revende).
+2. Calcula: precio de venta menos costo de producción por unidad. Ese es tu margen bruto por maceta.
+3. Ahora resta también la porción de costos fijos mensuales que le corresponde a cada maceta. Si produces 10 macetas a la semana (unas 40 al mes) y tus costos fijos son, por ejemplo, $200 al mes, cada maceta carga $5 de ese fijo. Súmalo al costo y recalcula el margen.
+4. Compara el margen de la venta directa por Instagram contra el margen de la venta a la tienda de plantas. Si la tienda paga considerablemente menos y ese margen ya era ajustado, ese canal puede estar operando casi sin ganancia para ti.
+5. Anota si el margen cubre tu hora de trabajo valorada en $17. Si el precio actual no la cubre, el número que necesitas ajustar es el precio, no tu hora.
+
+**Entregable:** Margen bruto calculado por tipo de maceta y por canal de venta (Instagram directo versus tienda).
+
+**Esta semana:** Toma tus 15 ventas históricas, anota cuánto cobraste en total y réstale el costo total estimado ($102 por maceta como punto de partida). Ese número te dice si en dos meses operaste con ganancia o con pérdida, aunque sea aproximado.
+
+---
+
+## Etapa 3: Encuentra cuántas macetas necesitas vender para que todo valga la pena
+
+Saber el margen por unidad es necesario, pero no suficiente: también necesitas saber cuántas macetas debes vender cada mes para que tus costos fijos queden cubiertos y empieces a recibir algo real.
+
+**Pasos:**
+
+1. Con los costos fijos mensuales que identificaste en la Etapa 1, divídelos entre el margen por maceta que calculaste en la Etapa 2. El resultado es tu punto de equilibrio: la cantidad mínima de macetas que debes vender al mes para no perder.
+2. Compara ese número con tu capacidad real: si produces 10 macetas por semana (40 al mes) trabajando en ratos libres, ¿el punto de equilibrio cabe en ese volumen?
+3. Si el punto de equilibrio supera tu capacidad actual, tienes dos palancas: subir el precio o reducir costos. Evalúa cuál es más viable sin perder a tus compradores actuales de Instagram.
+4. Recalcula este número cada vez que cambies el precio, un costo de material, o tus costos fijos. No es un cálculo de una sola vez.
+
+**Entregable:** Punto de equilibrio en unidades al mes, con los supuestos de costo fijo y margen por unidad que lo sostienen.
+
+**Esta semana:** Con el margen por maceta que calculaste en la Etapa 2 y tus costos fijos estimados del mes, divide y anota el número de macetas que necesitas vender mensualmente para no operar a pérdida.
+
+---
+
+## Etapa 4: Revisa tus supuestos y documenta las decisiones que tomaste
+
+Ningún número financiero es completamente objetivo: hay juicios detrás de cada uno. El costo de tu hora ($17), las horas que le dedicas a cada maceta, la vida útil de tus moldes, cómo decides cuándo registrar un ingreso cuando alguien paga: todo eso es una decisión que tomaste, y si no la tienes escrita, cada vez que revises tus números los estarás calculando de forma diferente sin notarlo.
+
+**Pasos:**
+
+1. Escribe en un párrafo corto (no necesita ser formal) las decisiones que tomaste al armar tu tabla de costos: ¿incluiste tu tiempo?, ¿a qué valor por hora?, ¿cómo distribuiste el costo de herramientas?, ¿qué pasa si tardas más de dos horas en una maceta más compleja?
+2. Anota también cuándo consideras que una venta ya "entró": ¿cuando el cliente te escribe que quiere?, ¿cuando paga?, ¿cuando la entrega está hecha? Ser consistente con eso evita que un mes se vea mejor de lo que fue solo porque llegaron pedidos pero no hubo entregas todavía.
+3. Cada vez que algo cambie (precio de cemento, un molde nuevo, una hora extra por diseño especial), actualiza esa nota antes de revisar tus números del mes.
+
+Esta documentación no es burocracia: es la diferencia entre confiar en tus propios números y dudar de ellos cada vez que los miras.
+
+**Entregable:** Una nota escrita con los supuestos principales detrás de tu tabla de costos, disponible para consultarla al revisar tus resultados cada mes.
+
+**Esta semana:** Escribe en tres oraciones los supuestos más importantes que usaste al calcular tu costo por maceta: tu valor por hora, cuántas horas por pieza, y cómo repartiste el costo de herramientas.
+
+---
+
+## Etapa 5: Decide qué precio cobrar y cómo comunicarlo sin perder ventas
+
+Con el costo real y el punto de equilibrio claros, la pregunta concreta es si tu precio actual funciona o necesita ajuste. Este es el paso donde los números se convierten en una decisión de venta.
+
+**Pasos:**
+
+1. Compara tu precio actual con tu costo total por unidad (producción más porción fija). Si la diferencia es positiva y cómoda, tienes margen para absorber un pedido grande o un mes lento sin perder. Si es negativa o casi cero, ajustar el precio no es opcional.
+2. Antes de subir el precio en Instagram, prueba con un lote pequeño: pon a la venta dos o tres macetas al precio nuevo y observa si el tiempo que tardan en venderse cambia de forma notable.
+3. Si la tienda de plantas te paga un precio que no cubre costos, tienes tres opciones: renegociar el precio con la tienda, solo surtirle modelos más simples con menor costo de producción, o considerar ese canal de forma distinta en tu mezcla. No necesitas cerrarlo hoy, pero sí necesitas saber con números si hoy te conviene.
+4. Calcula qué porcentaje de tu precio de venta representa cada línea de costo: materiales, tu tiempo, costos fijos por unidad. Si los materiales solos son más del 50% del precio, eres muy vulnerable a que suba el cemento o cualquier insumo.
+
+**Entregable:** Decisión documentada sobre el precio por tamaño y por canal, con el margen esperado escrito al lado de cada precio.
+
+**Esta semana:** Pon un precio nuevo (aunque sea $5 o $10 más) a las siguientes dos macetas que publiques en Instagram y anota si el ritmo de consultas cambia. No necesitas cambiar todo el catálogo: solo necesitas un dato real de cómo responde tu comprador actual.
+
+---
+
+## ¿Puede sostenerse tu idea? Los números en simple
+
+Ya tienes tracción real, lo que significa que el producto le gusta a la gente. La pregunta que este plan responde es si ese gusto se traduce en ganancia real una vez que cuentas todo.
+
+Estos son los números que necesitas tener claros, uno por uno:
+
+- **Costo variable por maceta:** todo lo que gastas directamente en materiales más el valor de tu tiempo por pieza. Con $68 en materiales y dos horas a $17, tu punto de partida es $102 por maceta, pero confirma si hay insumos que no entraron en esa cuenta.
+
+- **Costo fijo mensual:** lo que pagas aunque no produzcas nada ese mes, por ejemplo herramientas que amortizas, empaques que compras por lote, cualquier costo recurrente de operación. Suma todos y anota el total mensual.
+
+- **Margen por maceta:** tu precio de venta menos el costo variable por unidad. Ese margen es lo que cada maceta aporta a cubrir tus costos fijos y, después de eso, a generarte ganancia real.
+
+- **Punto de equilibrio mensual:** divide tus costos fijos mensuales entre el margen por maceta. El resultado te dice cuántas macetas debes vender cada mes antes de empezar a ganar. Si produces hasta 40 al mes, compara ese número con tu punto de equilibrio: la diferencia es tu margen de maniobra real.
+
+- **Margen por canal:** el precio que te paga la tienda de plantas probablemente es menor que tu precio directo en Instagram. Calcula el margen para cada canal por separado, porque puede haber uno que hoy no te conviene mantener en los mismos términos.
+
+**Esta semana:** Abre una hoja con cinco columnas (costo variable por maceta, costo fijo mensual, margen por maceta, punto de equilibrio en unidades, margen por canal) y pon un número en cada una, aunque sea estimado. Ese ejercicio convierte la urgencia que ya tienes en información que puedes usar el lunes.
+
+## Lo que este plan aun no cubre
+
+- validar con clientes reales (entrevistas, MVP, pruebas de usuario, una venta o preventa real)
+
+Para profundizar, continua la conversacion en esta misma sesion.
+
+==============================================================================
+  FASE 2c (Hotfix v2.2.2): verificando persistencia real de saltos semanticos
+==============================================================================
+saltos detectados en la ruta: undefined (hoja_estimacion_costos)
+  OK: project_nodes.tipo='salto' persistido correctamente para 'hoja_estimacion_costos'
+
+==============================================================================
+  FASE 2d (Fase 3.1): verificando la bitacora de decisiones (caja de vidrio)
+==============================================================================
+decision_turno persistidos: 10, con salto+score verificable: 1
+OK: los 1 saltos quedaron en la bitacora con su score de afinidad.
+OK: procedencia por etapa valida (sin eventos procedencia_invalida en la bitacora).
+
+==============================================================================
+  FASE 2e (Fase 3.2): eventos del arbol == ruta persistida, 1:1 y en orden
+==============================================================================
+eventos del arbol (8): arte_de_las_finanzas[conversado] -> distincion_cogs_gastos_operativos[silencioso] -> margen_bruto[conversado] -> hoja_estimacion_costos[salto] -> linea_base_costos[conversado] -> estimate_at_completion_eac[conversado] -> risk_audit[conversado] -> lessons_learned[conversado]
+ruta persistida  (8): arte_de_las_finanzas[conversado] -> distincion_cogs_gastos_operativos[silencioso] -> margen_bruto[conversado] -> hoja_estimacion_costos[salto] -> linea_base_costos[conversado] -> estimate_at_completion_eac[conversado] -> risk_audit[conversado] -> lessons_learned[conversado]
+OK: el arbol que piensa muestra EXACTAMENTE la ruta persistida (misma secuencia, mismos modos).
+
+==============================================================================
+  FASE 2f (Fase 3.3): checklist -> PATCH -> follow -> plan seguimiento encadenado
+==============================================================================
+checklist derivado: 26 items en 5 etapa(s), dominio 'core'
+OK: estructura del checklist (1 destacado por etapa, al final; todos pendientes; resumen consistente).
+OK: 'Abre una hoja (papel, Excel, Google Sheets, lo que…' -> hecho (con nota); destacado etapa 1 -> en_proceso.
+OK: retirada 'En "qué es" lista cada insumo por separa…' con motivo; activas=25, retiradas=1.
+OK: el expediente muestra la retirada aparte, con su motivo, y no como pendiente.
+OK: reactivación conserva historia en project_bitacora (retiro + reactivación).
+OK: estado fuera de CHECKLIST_ESTADO rechazado con 400.
+nodos cubiertos antes del follow: 31
+follow session_id: 4e3438dc-ad42-403f-8c6f-d417a50795c5, tipo primer turno: pregunta
+OK: puerta avanzada 'undefined' (diseno_experimentos_pass_fail) fuera de lo ya cubierto.
+OK: mensaje compuesto auditable (estados, nota, detalles, enfoque, y la retirada aparte sin reproponerse).
+
+[seguimiento turno 1] PREGUNTA: Ya que lo que más te interesa ahora es el precio y el margen, ¿qué precios estás usando en Instagram ahora mismo para la maceta chica y la mediana, y cuánto te paga la tienda de plantas por cada una?
+[seguimiento turno 1] RESPUESTA: Subí el precio a 250 y las ventas se mantuvieron; ya sé mi costo real por pieza: 130 incluyendo mi hora a 50.
+
+[seguimiento turno 2] PREGUNTA: Con ese margen de $120 por maceta ($250 menos $130), ¿ya probaste si ese precio funciona igual en la tienda de plantas, o solo lo validaste en Instagram?
+[seguimiento turno 2] RESPUESTA: Vendo unas 12 macetas al mes por Instagram, y el proveedor nuevo me baja el cemento un 20%.
+
+[seguimiento turno 3] PREGUNTA: Con el cemento 20% más barato, ¿ya calculaste cuál es tu costo real ahora por maceta, o aún no lo hiciste?
+[seguimiento turno 3] RESPUESTA: Mi duda ahora es si producir por lotes de 10 o seguir por pedido; por pedido no me atraso, pero pierdo el descuento de materiales.
+
+[seguimiento turno 4] PREGUNTA: Para decidir entre lotes de 10 o por pedido, ¿qué tan certero eres con los pedidos que recibes? Es decir, ¿sabes con una o dos semanas de anticipación cuántas macetas te van a pedir, o llegan sorpresas que te desacomodan?
+[seguimiento turno 4] RESPUESTA: Sí: tengo dos clientes mayoristas interesados que me pidieron precio por docena, todavía no les respondo.
+
+[seguimiento turno 5] PREGUNTA: ¿Cuál es el precio por docena que esos mayoristas te pidieron, y cuál es el volumen mensual que te ofrecerían si llegaras a un acuerdo?
+[seguimiento turno 5] RESPUESTA: Puedo dedicarle unas 15 horas a la semana; el resto lo cubre mi hermana cuando hay pedidos grandes.
+
+[seguimiento turno 6] PREGUNTA: Con tu hermana cubriendo los picos de demanda, ahora que tienes capacidad real de 15 horas tuyas más lo que ella puede hacer, ¿ya respondiste a esos mayoristas diciendo que sí o que no, o todavía estás en el limbo decidiendo?
+[seguimiento turno 6] RESPUESTA: Con eso ya tienes el panorama completo de mi negocio; ármame el plan de seguimiento con lo que te conté.
+
+listo_para_plan tras 6 turno(s) de seguimiento.
+....................................................................................................................................
+OK: plan persistido con etiqueta 'seguimiento' (139c8f43-d6fd-4031-a3c3-6d61c7fabd9d).
+OK: checklist encadenado (29 items nuevos del plan de seguimiento; hechos previos preservados).
+OK: el replan nace estimado -- 29/29 items del plan de seguimiento traen banda.
+
+==============================================================================
+  FASE 2g (Fase 3.5): mundos HSEQ -- el muro, el unlock y el ciclo
+==============================================================================
+OK: contrato 4.5 -- sin plan core el mundo no abre (409); el muro de pago 403 murió.
+OK: pack fuera del catalogo rechazado (404).
+OK: unlock de quality con 5 creditos (stub).
+OK: unlock idempotente (23505 absorbido).
+OK: fila persistida (creditos_pagados=0).
+world session: e2b95266-761e-4016-9c10-c8e39eef6808, tipo: pregunta
+[mundo turno 1] Después de ver estos números sobre lo que les cuesta la mala calidad, ¿qué crees que pasa en la cabeza de tu equipo? ¿Entienden realmente que los errores, los rechazos, el trabajo repetido, tienen un precio tan alto, o sienten que 'así es como funciona' y ya está?
+[mundo turno 2] Cuando aparecen esas burbujas y acabados irregulares, ¿sabes exactamente en qué paso del proceso sucede: durante el mezclado del cemento, al vertir, al secar, o en varios puntos diferentes?
+[mundo turno 3] De las macetas que rechazas al final, ¿cuántas sacas de cada lote producido, más o menos?
+OK: ciclo completo del mundo (plan dominio=quality, checklist quality con 29 items).
+
+==============================================================================
+  FASE 2g-bis (v1.3.2): mundos nuevos -- murallas x2 + ciclo de seguridad_digital
+==============================================================================
+OK: 'exportacion' abre su preview gratis (200); el muro murió.
+OK: 'franquicias' abre su preview gratis (200); el muro murió.
+OK: unlock de seguridad_digital con 5 creditos (migracion 017 viva).
+world session: 3e28ce03-fbb7-4a31-849a-e712b2fcc645, tipo: pregunta
+[seguridad_digital turno 1] Ahora que estás pensando en cómo verificar quién accede a tu proyecto y proteger esa información sensible, ¿qué te preocupa más: tener un plan claro de qué hacer si algo sale mal en la seguridad, o asegurarte de que las contraseñas y credenciales se manejen de forma realmente segura desde el principio?
+[seguridad_digital turno 2] Ninguna actividad del plan tiene que ver con archivos de clientes, carpetas compartidas ni dispositivos personales, así que devuelvo la pregunta tal cual:
+
+Para empezar a ordenar eso: ¿el Excel con datos de clientes está en tu computadora personal, en una carpeta compartida con tu hermana, o en ambos lados?
+[seguridad_digital turno 3] Ninguna de tus actividades tiene que ver con acceso a cuentas, contraseñas o seguridad digital, así que te devuelvo la pregunta tal cual:
+
+Entendido: misma contraseña en correo, Instagram y banco, sin verificación en dos pasos. Antes de armar un plan: ¿alguien más (tu hermana, clientes, proveedores) tiene acceso a alguna de esas cuentas hoy, o solo tú las usas?
+[seguridad_digital turno 4] Ninguna actividad del plan tiene que ver con respaldo digital, almacenamiento en la nube o gestión de contraseñas.
+
+Ya que todo está en el celular sin copia de seguridad (pedidos, contactos, contraseñas), ¿usas algún servicio en la nube (Google Drive, iCloud, Dropbox) o todo vive solo en el teléfono físico?
+[seguridad_digital turno 5] Ninguna de tus actividades vigentes tiene que ver con seguridad digital, acceso a cuentas o protección de datos. Por eso te devuelvo la pregunta tal cual:
+
+Cuando dices que te preocupa que te roben la cuenta de Instagram, ¿es porque alguien podría cambiar la contraseña y bloquearte, o porque podrían ver tus conversaciones con clientes y datos sensibles?
+OK: ciclo completo del mundo nuevo (plan dominio=seguridad_digital, checklist con 31 items).
+
+==============================================================================
+  FASE 2g-ter (v1.4): Riesgos Bajo Control -- contrato 4.5 (sin muro, unlock gratis) + ciclo
+==============================================================================
+OK: risk_management sin muro de pago (contrato 4.5); el ciclo abajo prueba su preview.
+
+==============================================================================
+  VUELO FALLIDO
+==============================================================================
+Error: el catálogo de risk_management debio reportar precio 3, reporto 5
+    at faseMundoRiesgos (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:1008:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async main (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:2736:28)
+
+Transcripcion guardada en C:\Users\AlexDesk\Documents\I have an idea\examples\fase3_0_vuelo_web.txt

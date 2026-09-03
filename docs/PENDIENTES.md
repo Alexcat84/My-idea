@@ -10747,3 +10747,66 @@ estas diez la estrecha ni la ensancha. Los veredictos de la `LD-OPC05-101` (6.4)
 y de la `LD-OPC05-005` (6.5) NO se resuelven aqui: van por su cuenta en las
 TAREAS 3 y 4 de la vuelta 164, y si mueven una clase publicada lo haran con
 correccion declarada y recomputo, en su propia entrada.
+
+---
+
+## MIN_SCORE_SALTO NO SE TOCA ANTES DEL MERGE (decision del fundador, 3 sep 2026, sesion con credencial)
+
+**LA DECISION, EN UNA LINEA:** `MIN_SCORE_SALTO` **no se toca antes del merge**. El
+candidato medido hoy queda **anotado** para una calibracion **post merge con consultas
+reales**, y esa es **decision de producto del fundador**, no del bucle ni de esta sesion.
+
+### UNA CORRECCION A LA PREMISA, MEDIDA ANTES DE ESCRIBIR ESTA FICHA
+
+El encargo hablaba de **"el 0,42 vigente"**. **El 0,42 NO es el vigente y no lo es desde la
+migracion a Voyage.** Leido hoy en el codigo:
+
+- **`web/lib/compass.ts` linea 38: `export const MIN_SCORE_SALTO = 0.3;`** Ese es el
+  vigente.
+- El **0,42** era el umbral de **sentence-transformers**, y el propio comentario de
+  `compass.ts` (lineas 21 a 33) ya declara que **los numeros no son comparables entre
+  proveedores**: *"solo el ORDEN relativo importa, y ese orden se preservo"*.
+- El mensaje del reindexador que hablaba del 0,42 lo cita como **numero historico**, no
+  como el valor en produccion.
+
+**La decision no cambia por esto: se refuerza.** Lo que se decide es no tocarlo, y resulta
+que el vigente ya esta donde tiene que estar.
+
+### LO MEDIDO HOY, Y POR QUE NO HAY NADA QUE ARREGLAR AHORA
+
+El reindexado del 3 sep 2026 re corrio los **dos casos de referencia de la Fase 2.9**
+contra los embeddings nuevos. Comparados con los que `compass.ts` tiene escritos:
+
+| caso de referencia | esperado | escrito en `compass.ts` | medido hoy |
+|---|---|---:|---:|
+| *"no he calculado bien cuanto me cuesta cada pieza"* -> `hoja_estimacion_costos` | **PASA** | 0,3507 | **0,3511** |
+| *"mi resina hace burbujas y mi QR grabado con laser se borra"* -> `alfabetizacion_en_materiales_maliciosos` | **EXCLUIDO** | 0,2581 | **0,2632** |
+
+**El vigente 0,30 sigue cayendo entre los dos**, con margen **0,0632 por encima del que
+debe quedar fuera** y **0,0511 por debajo del que debe pasar**. La deriva de los dos casos
+contra lo escrito es de **cuatro y cinco milesimas**.
+
+**Y la vara de puntería lo confirma por el otro lado:** la **prueba de rumbos** del mismo
+dia da **42 verdes, 1 ambar, 0 rojos (97,7% de 43)** y **SIN DERIVA contra la linea base**,
+corrida con el **0,30 vigente** y el indice recien reconstruido.
+
+### EL CANDIDATO ANOTADO, PARA LA CALIBRACION POST MERGE
+
+El reindexador propone **0,3071** como punto medio de esos dos casos. **Queda anotado y no
+se aplica**, por dos motivos escritos:
+
+1. **Dos puntos de referencia no son una calibracion.** El propio `compass.ts` eligio 0,30
+   buscando **margen simetrico** hacia los dos lados, no el punto medio exacto. Mover el
+   umbral a 0,3071 lo acercaria al caso que debe PASAR y le quitaria margen justo del lado
+   donde un falso negativo se le nota al usuario.
+2. **La calibracion buena se hace con consultas reales**, no con dos frases de laboratorio,
+   y eso vive despues del merge.
+
+**Diferencia entre el vigente y el candidato: 0,0071.** No justifica mover un umbral de
+producto antes de un merge.
+
+### LO QUE ESTA FICHA NO AUTORIZA
+
+**Nadie cambia `MIN_SCORE_SALTO` sin decision escrita del fundador.** Si una vuelta futura
+mide una deriva que lo justifique, **lo trae**, con los dos casos de referencia recorridos
+y la prueba de rumbos al lado. **No se ajusta el umbral para que una vara pase.**
