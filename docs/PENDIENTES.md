@@ -10598,3 +10598,83 @@ ocho sube al fundador y ninguna mueve una clase.
 **LO QUE ESTE REGISTRO NO CIERRA.** La vara `P.5.1` sigue CONGELADA y ninguna de
 estas ocho la estrecha ni la ensancha: la 6.1, la 6.2 y la 6.3 la LEEN entera,
 con sus ejemplares, y por eso no la mueven.
+
+---
+
+## R.32. Registro de las doce adjudicaciones y las tres caidas propias del acta
+de la vuelta 162 (acta del auditor, vuelta 162, secciones 2 y 6; escrito en la
+vuelta 163, TAREA 1.a)
+
+Por adicion, como `R.21` a `R.31`. **Corte de todas las cifras de esta entrada:
+3 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes. La
+SEDE tampoco se supone: sale de la adjudicacion 6.3 del propio acta 162, leida
+hoy en `docs/loop/ACTA_AUDITOR.md:53933`. Salida:
+`docs/loop/SALIDA_V163_T1A_REGISTRO_ACTA_162.txt`.
+
+**LAS DOCE ADJUDICACIONES, CON SU LINEA EN EL ACTA LEIDA HOY.** El titulo de
+cada una es LITERAL del fichero (localizado dentro del cuerpo del acta 162, no
+de cualquier acta); la glosa que sigue es prosa del ejecutor y va marcada como
+tal.
+
+  - **6.1 (`docs/loop/ACTA_AUDITOR.md:53906`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL "OCHO" DE LA VARA DE ACEPTACION DE LA TAREA 3 ERA MIO Y SE CORRIGE A CUATRO (su PREGUNTA 1)."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA SIN TOCAR NADA EN LO YA HECHO. La seccion 11 del reporte de la vuelta 162 no era un incumplimiento: era la medicion correcta de un error del auditor. La vara de aceptacion queda CORREGIDA POR DECLARACION a CUATRO filas de fase, y es esa la que usa la TAREA 4.a de esta vuelta. La PREGUNTA 1 del reporte 162 queda CERRADA.
+  - **6.2 (`docs/loop/ACTA_AUDITOR.md:53913`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL PORTADOR DEL ENCARGO FUERA DEL CENSO DE INTRUSOS: A FAVOR, CON SU FRONTERA ESCRITA (su discutible 1 y su PREGUNTA 2)."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA SIN TOCAR NADA. El discutible 1 y la PREGUNTA 2 del reporte 162 quedan adjudicados A FAVOR, con su frontera escrita en el acta: la exencion cubre UN solo commit, solo bajo la firma de parada y solo si el portador es unico. `scripts/loop/verificar_apertura_sellada.py` se queda como esta y esta vuelta no le toca una linea.
+  - **6.3 (`docs/loop/ACTA_AUDITOR.md:53929`, leida hoy). VIA: EN EL REGISTRO.** Titulo
+    literal del acta: *"LA SEDE DE `R.31` ES `docs/PENDIENTES.md`, Y SE ESCRIBE POR QUE (su discutible 2)."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EL REGISTRO, Y ESTA MISMA ENTRADA ES SU CUMPLIMIENTO. La sede por defecto de la serie `R.N` es `docs/PENDIENTES.md`, y salir de ahi exige remision escrita como la de la vuelta 150. Este registro se escribe ahi por esa regla, no por costumbre, y el instrumento LEE la frase de la 6.3 en el acta antes de elegir.
+  - **6.4 (`docs/loop/ACTA_AUDITOR.md:53937`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"LAS DIEZ LETRAS DERIVADAS SE QUEDAN, Y LA DEUDA SE CIERRA HACIA ADELANTE (su discutible 3 y su PREGUNTA 3)."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA SIN TOCAR NADA. Las diez marcas derivadas de la TAREA 1.c de la vuelta 162 se quedan como estan, con su procedencia escrita dentro de la marca. El discutible 3 y la PREGUNTA 3 del reporte 162 quedan CERRADOS. La deuda se cierra hacia adelante y es del auditor: desde el acta 162 su ciega sella la letra CASO POR CASO.
+  - **6.5 (`docs/loop/ACTA_AUDITOR.md:53949`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"LA FIRMA DE PARADA SE QUEDA COMO ESTA (su discutible 4)."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA SIN TOCAR NADA. La firma de parada sigue exigiendo que `docs/loop/PROMPT_SIGUIENTE.md` EXISTA Y ESTE VACIO, porque es lo que `AUDITOR.md` seccion 4 manda hacer. El discutible 4 del reporte 162 queda adjudicado EN CONTRA de ensanchar la guarda, y el error cae del lado seguro.
+  - **6.6 (`docs/loop/ACTA_AUDITOR.md:53955`, leida hoy). VIA: EN CODIGO.** Titulo
+    literal del acta: *"EL AVISO NO TUMBA LA GUARDA, PERO LA COBERTURA NO PUEDE MENGUAR EN SILENCIO (su discutible 5 y su PENDIENTE DE DOCTRINA 1)."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN CODIGO, TAREA 4.a de esta vuelta. `scripts/loop/verificar_cifras_del_reporte.py` pasa a ROMPER cuando el reporte trae afirmaciones de cierre y coteja CERO, en prosa y en tabla. El AVISO que no tumba se queda tal cual. El PENDIENTE DE DOCTRINA 1 del reporte 162 queda CERRADO sin doctrina nueva.
+  - **6.7 (`docs/loop/ACTA_AUDITOR.md:53965`, leida hoy). VIA: EN CODIGO.** Titulo
+    literal del acta: *"LA GUARDA DE RE SELLADO TIENE UN AGUJERO POR CONSTRUCCION Y SE TAPA (seccion 5.4)."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN CODIGO, TAREA 4.b de esta vuelta. `scripts/loop/verificar_re_sellado.py` mide ademas, contra el commit de apertura de la vuelta, TODA `docs/loop/SALIDA_*` MODIFICADA, y la que no este declarada en el reporte sale en ROJO con su nombre. El camino viejo no se toca.
+  - **6.8 (`docs/loop/ACTA_AUDITOR.md:53974`, leida hoy). VIA: EN CODIGO.** Titulo
+    literal del acta: *"LA NOMINA DE LA BATERIA SE PONE AL DIA, Y ES BLOQUEANTE (seccion 5.1)."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN CODIGO, TAREA 2 de esta vuelta y BLOQUEANTE. Los veintidos arneses de mutacion nacidos despues de la vuelta 147 entran en la nomina de `scripts/loop/verificar_mutaciones_viejas.py`, cada uno con su sujeto congelado o como CASO DECLARADO con su exit y su motivo MEDIDO. Y la guarda se mira a si misma: ROJO si algun arnes posterior a la ultima vuelta de su nomina se queda fuera.
+  - **6.9 (`docs/loop/ACTA_AUDITOR.md:53986`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"LA FORMA NUEVA EN `FORMAS_QUE_CUENTAN` ES CORRECTA (su discutible 6)."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA SIN TOCAR NADA. `RELECTURA CIEGA DEL AUDITOR, VUELTA N` se queda en `FORMAS_QUE_CUENTAN`: `P.5.2` (1) define que cuenta por su CONTENIDO, no por una lista cerrada de literales. El discutible 6 del reporte 162 queda adjudicado a favor de lo hecho.
+  - **6.10 (`docs/loop/ACTA_AUDITOR.md:53993`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"LA TABLA DE EXCEPCIONES POR OPERACION SE QUEDA, Y SU CADUCIDAD YA ESTA RESUELTA (su discutible 7 y su PENDIENTE DE DOCTRINA 2)."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA SIN TOCAR NADA. La tabla de excepciones de absorbidos sigue siendo POR OPERACION, y su caducidad ya esta resuelta por construccion: la entrada se cae sola si una de sus frases desaparece de la ficha. El discutible 7 y el PENDIENTE DE DOCTRINA 2 del reporte 162 quedan CERRADOS sin doctrina nueva.
+  - **6.11 (`docs/loop/ACTA_AUDITOR.md:54001`, leida hoy). VIA: EN CODIGO.** Titulo
+    literal del acta: *"RE CORRER EL INSTRUMENTO DE LA 161 FUE CORRECTO, Y EL NOMBRE ES DEUDA (su discutible 8)."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN CODIGO, TAREA 5.a de esta vuelta. `vuelta161_tarea1c_segunda_lectura.py` gana nombre estable POR REMISION, sin borrar el viejo y sin romper las citas de las actas, y la cifra de `P.5.2` sale IDENTICA antes y despues. El discutible 8 del reporte 162 queda adjudicado: reusar el instrumento fue correcto, el nombre era la deuda.
+  - **6.12 (`docs/loop/ACTA_AUDITOR.md:54008`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`node_modules/` NO ES PARADA Y QUEDA ANOTADO (su PREGUNTA 4)."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA SIN TOCAR NADA, Y A PROPOSITO. `node_modules/` sigue sin versionar y sin ignorar, y esta vuelta NO lo commitea y NO toca `.gitignore`, que es alcance del fundador. Queda anotado y no dispara parada. La PREGUNTA 4 del reporte 162 queda CERRADA.
+
+**EL REPARTO POR VIA, CONTADO Y NO TECLEADO:** EN CODIGO: 4 (6.6, 6.7, 6.8, 6.11); EN EL REGISTRO: 1 (6.3); SIN TOCAR NADA: 7 (6.1, 6.2, 6.4, 6.5, 6.9, 6.10, 6.12).
+**Ninguna de las doce sube al fundador.**
+
+**LAS TRES CAIDAS PROPIAS DEL AUDITOR, REGISTRADAS IGUAL QUE LAS DEL EJECUTOR**
+(letra del encargo de la vuelta 163, TAREA 1.a: *"Mis caidas se registran igual
+que las tuyas"*). Ninguna de las tres es del ejecutor y ninguna acumula para sus
+rachas; se escriben aqui porque el registro de la casa no distingue de quien es
+la mano que cae.
+
+  - **CAIDA 1 (`docs/loop/ACTA_AUDITOR.md:53745`, leida hoy).** Titulo literal del
+    acta: *"CAIDA 1, Y ES LA QUE EL EJECUTOR TRAJO SIN RESOLVER: EL "OCHO" ERA UNA CIFRA MIA DE MEMORIA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y NO ACUMULA PARA NINGUNA RACHA DEL EJECUTOR, porque no es suya. Su remedio ya esta aplicado: la vara de aceptacion de la TAREA 4.a de esta vuelta dice CUATRO, que es la cifra medida sobre el sujeto congelado, y no el OCHO recordado.
+  - **CAIDA 2 (`docs/loop/ACTA_AUDITOR.md:53757`, leida hoy).** Titulo literal del
+    acta: *"CAIDA 2, DE LINAJE Y MAS GORDA: SEIS ACTAS SEGUIDAS PUBLICAMOS "LA BATERIA DE LAS 23, VERDE" SIN CRUZAR NUNCA SU NOMINA CONTRA LOS ARNESES QUE NACIAN."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y SU REMEDIO ES LA TAREA 2 DE ESTA VUELTA, que es bloqueante. Un verde que cuenta 23 de 45 no es un verde: es un verde que no mira, y la guarda pasa a mirarse a si misma para que el linaje no pueda repetirse en silencio.
+  - **CAIDA 3 (`docs/loop/ACTA_AUDITOR.md:53764`, leida hoy).** Titulo literal del
+    acta: *"CAIDA 3, CAZADA ANTES DE PUBLICARLA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE AUNQUE NO LLEGO A PUBLICARSE, que es exactamente como se registran las del ejecutor cazadas antes del commit. La leccion es la de siempre: la definicion se LEE de la casa, no se inventa.
+
+**LO QUE ESTE REGISTRO NO CIERRA.** La vara `P.5.1` sigue CONGELADA y ninguna de
+estas doce la estrecha ni la ensancha. La relectura conjunta de la
+`LD-OPC05-101` (acta 162, seccion 5.3) NO se resuelve aqui: va por su cuenta en
+la TAREA 1.b de la vuelta 163, y si mueve una clase publicada lo hara con
+correccion declarada y recomputo, en su propia entrada.
