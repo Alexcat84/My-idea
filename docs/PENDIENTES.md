@@ -11333,3 +11333,47 @@ reanuda a mitad**: corre desde arriba.
 **PARA LA DEUDA DEL VUELO EN CADA RELEASE:** correrlo cuesta **75 creditos mas el
 gasto de modelo**. Esa cifra hay que tenerla delante al decidir la cadencia, y es
 otro motivo por el que el acto es del fundador.
+
+### SEGUNDA SIEMBRA: 93 CREDITOS, HASTA DEJAR EL SALDO EN 100 (4 sep 2026)
+
+**Acto del fundador, ejecutado por mano del asistente y registrado.** Corrige su
+propia estimacion de 60 con la cifra que la corrida H midio.
+
+| | |
+|---|---|
+| usuario | `4a05a687-fc7e-4427-8eaf-cc1cc1644678` (`dev@my-idea.local`) |
+| **saldo antes** | **7** (`creditos_usados` 413, `total_comprado` 360) |
+| llamada | `POST /rest/v1/rpc/otorgar_creditos` |
+| | `p_monto` **93**, `p_origen` **siembra_beta**, `p_pack` **siembra_beta** |
+| | `p_idempotency_key` **`siembra_vuelo_fase08_2026-09-04_B`** (NUEVA) |
+| respuesta | **100** |
+| **saldo despues** | **100** (`total_comprado` **360**, sin cambio) |
+
+**LA FILA DEL LEDGER:** `delta` **93**, `tipo` **grant**, `origen`
+**siembra_beta**, `saldo_resultante` **100**, `created_at`
+`2026-09-04T10:12:47Z`.
+
+**LA CLAVE ES NUEVA A PROPOSITO.** La de la primera siembra
+(`siembra_vuelo_fase08_2026-09-04`) **ya esta consumida**: repetirla habria
+devuelto 62 **sin sembrar nada**, que es justo lo que la idempotencia existe para
+hacer. Dos siembras distintas, dos claves distintas.
+
+### POR QUE 93 Y NO 60: LA TABLA QUE CORRIGE LA ESTIMACION
+
+**La corrida H consumio 55 creditos ella sola**, en diez cobros leidos del ledger
+y **cotejados uno por uno contra `web/lib/precios.ts`**:
+
+| concepto | veces | creditos | precio en `precios.ts` | cuadra |
+|---|---:|---:|---:|:---:|
+| `mundo_activar` | 5 | 25 | 5 | si |
+| `seguimiento` | 3 | 15 | 5 | si |
+| `plan_completo` | 1 | 10 | 10 | si |
+| `mundo_seguimiento` | 1 | 5 | 5 | si |
+| **TOTAL** | **10** | **55** | | **10 de 10** |
+
+**EL APP NO COBRA DE MAS.** Cobra diez operaciones porque el vuelo ejercita seis
+mundos, el plan del nucleo y sus seguimientos. **Lo que estaba mal era la
+estimacion de 60, no la aplicacion**, y la H lo dejo medido: con las dos fases
+finales, que arrancan sesion a 10 cada una, **una corrida entera necesita al
+menos 75**. Por eso el saldo se deja en **100**: los 75 leidos del codigo mas
+holgura para lo que todavia no se ha visto pasar.
