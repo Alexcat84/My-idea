@@ -20,17 +20,7 @@ Todo lo de esta seccion sale de
 PARA si no esta.
 
 <!-- CABECERA TALLADA -->
-| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
-|---|---:|---:|
-| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
-| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
-| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
-| motor | 25/25 | **25/25** |
-| web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
-| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
-| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
-| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
-| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `2c00a1c0` (asunto real leido de git log: 'ACTA DE LA VUELTA 164 DEL AUDITOR: LA VUELTA ENTREGA ENTERA, MI CIEGA COINCIDE EN LAS DOS, Y LO MAS GORDO NO ES DEL EJECUTOR: EL FUNDADOR CERRO LA FASE 08.'), HEAD real de apertura `2c00a1c0` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `c964bbd7` (leido de `SALIDA_V165_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+<<<CABECERA>>>
 <!-- FIN CABECERA TALLADA -->
 
 **LA UNICA FILA QUE SE MUEVE CONTRA LA CABECERA DE LA 164 ES LA DE LA WEB, Y EL
@@ -519,21 +509,7 @@ selladas. **Sus lineas van talladas por `verificar_re_sellado.py` y no
 tecleadas:**
 
 <!-- RE SELLADO DECLARADO -->
-  - `RE SELLADO DECLARADO: SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt numstat +15/-32, lineas CIFRA con valor cambiado: 0 (ninguna)`
-  - `RE SELLADO DECLARADO: SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt numstat +15/-32, lineas CIFRA con valor cambiado: 0 (ninguna)`
-  - `RE SELLADO DECLARADO: SALIDA_V135_4C_MUTACION.txt numstat +2/-1, lineas CIFRA con valor cambiado: 0 (ninguna)`
-  - `RE SELLADO DECLARADO: SALIDA_V137_1A_MUTACION.txt numstat +3/-3, lineas CIFRA con valor cambiado: 0 (ninguna)`
-  - `RE SELLADO DECLARADO: SALIDA_V137_1C_MUTACION.txt numstat +23/-26, lineas CIFRA con valor cambiado: 0 (ninguna)`
-  - `RE SELLADO DECLARADO: SALIDA_V165_T2_CENSO_ANTES_DESPUES.txt numstat +48/-53, lineas CIFRA con valor cambiado: 8 (CIFRA de esas entradas VISIBLES al censo nuevo, CIFRA de esas entradas VISIBLES al censo viejo, CIFRA entradas en la nomina, CIFRA entradas en la nomina antes y despues del arreglo, CIFRA fuera de la nomina, CIFRA pre 148 fuera de la nomina (patron viejo), CIFRA vistos por el censo NUEVO, CIFRA vistos por el censo VIEJO)`
-  - `RE SELLADO DECLARADO: SALIDA_V165_T4_MUTACION_SUJETO.txt numstat +19/-3, lineas CIFRA con valor cambiado: 2 (CIFRA casos, CIFRA casos que caen al mutar el esperado)`
-
-**Y DOS DE LAS SIETE SON SALIDAS DE ESTA MISMA VUELTA, RE CORRIDAS
-DESPUES DEL COMMIT DE SU TAREA, Y SE DECLARAN IGUAL.**
-`SALIDA_V165_T2_CENSO_ANTES_DESPUES.txt` se re corrio cada vez que la
-nomina crecio, y por eso mueve OCHO lineas `CIFRA`;
-`SALIDA_V165_T4_MUTACION_SUJETO.txt` se re corrio al anadirle el bloque
-`C2` de la transitividad, y mueve DOS. **Nacer no es re sellar, pero re
-correr si lo es, y la guarda no distingue de quien es la mano.**
+<<<RESELLADO>>>
 <!-- FIN RE SELLADO DECLARADO -->
 
 > **Y LO QUE ESAS CINCO ENSENAN, QUE ES MAS QUE SU NUMSTAT.** Las de la 118 y la

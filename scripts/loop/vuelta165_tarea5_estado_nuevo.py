@@ -91,6 +91,64 @@ def main():
         print("   %-44s %d bytes  sha256=%s"
               % (rel, len(datos), hashlib.sha256(datos).hexdigest()))
     print("   CIFRA sedes del indice que existen en disco: %d" % hallados)
+    print("")
+    # EL BARRIDO VA SELLADO EN LA FORMA DE LA CASA, con sus DOS PIERNAS, porque
+    # una busqueda negativa no se puede citar (EJECUTOR.md 9) y porque la frase
+    # "no existe en ninguna otra sede" es una afirmacion de AUSENCIA.
+    universo, por_nombre, por_contenido, no_leidos = [], [], [], 0
+    for base, dirs, ficheros in os.walk(RAIZ):
+        dirs[:] = [d for d in dirs if d not in ("node_modules", ".git", ".next",
+                                                "__pycache__")]
+        for f in ficheros:
+            ruta = os.path.join(base, f)
+            rel = os.path.relpath(ruta, RAIZ).replace(os.sep, "/")
+            universo.append(rel)
+            if f == nombre:
+                por_nombre.append(rel)
+    # LA SEGUNDA PIERNA, POR CONTENIDO: quien DECLARA la ruta del indice en su
+    # texto. Se mira solo lo que es texto y cabe en memoria; lo que no se puede
+    # decodificar se CUENTA y no se cuela como "sin coincidencia".
+    marca = "semantic_index"
+    for rel in universo:
+        if not rel.endswith((".py", ".ts", ".tsx", ".js", ".json", ".md", ".txt")):
+            continue
+        if rel.endswith(nombre):
+            continue
+        try:
+            texto = io.open(os.path.join(RAIZ, rel.replace("/", os.sep)),
+                            encoding="utf-8").read()
+        except (OSError, UnicodeDecodeError):
+            no_leidos += 1
+            continue
+        if marca in texto:
+            por_contenido.append(rel)
+    print("BARRIDO EXHAUSTIVO")
+    print("  PREGUNTA: existe el indice semantico en alguna sede que no sea la que")
+    print("  sync_assets_web.py declara, o es esa la unica")
+    print("  UNIVERSO: os.walk del repo entero ACOTADO a todo menos node_modules,")
+    print("  .git, .next y __pycache__")
+    print("  CARDINAL: %d" % len(universo))
+    print("  POR NOMBRE: %s | %d ficheros con coincidencia" % (nombre, len(por_nombre)))
+    for rel in sorted(por_nombre):
+        print("      %s  [nombre]" % rel)
+    print("  POR CONTENIDO: %s | %d ficheros con coincidencia"
+          % (marca, len(por_contenido)))
+    for rel in sorted(por_contenido)[:12]:
+        print("      %s  [contenido]" % rel)
+    if len(por_contenido) > 12:
+        print("      ... y %d mas" % (len(por_contenido) - 12))
+    print("  VITALIDAD DE LOS PATRONES DE CONTENIDO: %d de %d alternativas "
+          "aparecen en el universo" % (1 if por_contenido else 0, 1))
+    print("      %-46s -> %-6d %s"
+          % (marca, len(por_contenido), "viva" if por_contenido else "MUERTA"))
+    print("  NO DECODIFICABLES (mirados y no leidos, NO cuentan como sin "
+          "coincidencia): %d" % no_leidos)
+    print("  VEREDICTO: %s" % ("UNA SOLA SEDE" if len(por_nombre) == 1
+                               else "MAS DE UNA SEDE"))
+    print("CIFRA ficheros del universo: %d ficheros" % len(universo))
+    print("CIFRA sedes del indice halladas por nombre: %d ficheros" % len(por_nombre))
+    print("CIFRA ficheros que solo lo nombran, sin serlo: %d ficheros"
+          % len(por_contenido))
     print("   CONTRASTE, y solo contraste: el sello de la sesion con credencial")
     print("   publica 42223fcc y el auditor dice haberlo recomputado en la 164.")
     print("   La cifra que vale es la de arriba.")

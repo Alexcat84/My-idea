@@ -1,0 +1,225 @@
+########## 00_CODIGO
+ESTADO DE LA FASE 00_CODIGO | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-C-01 | 00_CODIGO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-C-02 | 00_CODIGO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-C-03 | 00_CODIGO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-C-04 | 00_CODIGO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-C-05 | 00_CODIGO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo GUARDA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-06 | 00_CODIGO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-07 | 00_CODIGO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 7 | con destino cumplido: 0 | sin cumplir: 7 | de ellas, sin vara escrita: 7 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (7): OP-C-01, OP-C-02, OP-C-03, OP-C-04, OP-C-05, OP-S-06, OP-S-07
+SIN VARA ESCRITA (7): OP-C-01, OP-C-02, OP-C-03, OP-C-04, OP-C-05, OP-S-06, OP-S-07
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+########## 01_FUENTES
+ESTADO DE LA FASE 01_FUENTES | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-F-01 | 01_FUENTES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DECISION_DE_FUENTE (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-F-02 | 01_FUENTES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DECISION_DE_FUENTE (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-F-03 | 01_FUENTES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DECISION_DE_FUENTE (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-F-04-COL | 01_FUENTES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DECISION_DE_FUENTE (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-F-04-HOR | 01_FUENTES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DECISION_DE_FUENTE (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-F-04-RAC | 01_FUENTES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DECISION_DE_FUENTE (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-F-04-WEI | 01_FUENTES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DECISION_DE_FUENTE (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 7 | con destino cumplido: 0 | sin cumplir: 7 | de ellas, sin vara escrita: 7 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (7): OP-F-01, OP-F-02, OP-F-03, OP-F-04-COL, OP-F-04-HOR, OP-F-04-RAC, OP-F-04-WEI
+SIN VARA ESCRITA (7): OP-F-01, OP-F-02, OP-F-03, OP-F-04-COL, OP-F-04-HOR, OP-F-04-RAC, OP-F-04-WEI
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+########## 02_DESTEJIDOS
+ESTADO DE LA FASE 02_DESTEJIDOS | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-D-01 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-D-02 | 02_DESTEJIDOS | LISTA | FUSION | no remitida | superviviente voz_del_cliente_voc vivo, 1 absorbido(s) deprecado(s) y en ids_alias. EXCEPCION DE ABSORBIDOS APLICADA, adjudicacion 6.4 del acta 161 (docs/loop/ACTA_AUDITOR.md, seccion 6.4), sobre la correccion declarada de la vuelta 33 en el campo `nota` de la propia ficha: homework_frontend_loading, voice_of_customer_homework NO cuentan como absorbidos porque la ficha manda TENERLOS DELANTE, no fundirlos, y sus frases se comprobaron hoy en la propia ficha | CUMPLIDO |
+| OP-D-03 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-D-04 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-D-05 | 02_DESTEJIDOS | LISTA | FUSION | no remitida | superviviente seleccion_ceo_fundador vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-D-06 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-D-07 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-D-08 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-D-09 | 02_DESTEJIDOS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo DESTEJIDO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 9 | con destino cumplido: 2 | sin cumplir: 7 | de ellas, sin vara escrita: 7 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (7): OP-D-01, OP-D-03, OP-D-04, OP-D-06, OP-D-07, OP-D-08, OP-D-09
+SIN VARA ESCRITA (7): OP-D-01, OP-D-03, OP-D-04, OP-D-06, OP-D-07, OP-D-08, OP-D-09
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+########## 03_FUSIONES
+ESTADO DE LA FASE 03_FUSIONES | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-M-01-FUSION | 03_FUSIONES | HECHA | FUSION | no remitida | superviviente sistema_gates_go_kill vivo, 4 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-02-ACCLIMATE | 03_FUSIONES | HECHA | FUSION | no remitida | superviviente fase_acclimate_experiencia_cliente vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-02-ACCOMPLISH | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente fase_accomplish_experiencia_cliente vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-02-ACTIVATE | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente fase_activate_primera_impresion vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-02-ADMIT | 03_FUSIONES | LISTA | FUSION | no remitida | CONSUMIDA CON SUPERVIVIENTE DIVERGENTE: el `superviviente` escrito en la ficha es fase_admit, hoy DEPRECADO; resuelve por alias (P.1) a fase_admit_celebracion, que esta VIVO; y fase_admit_celebracion es justamente uno de los que el campo `eliminar` de esta misma ficha manda eliminar (eliminar: fase_admit_celebracion). NO ES CUMPLIDA NI SIN CUMPLIR: la operacion se ejecuto al reves. Ver la correccion declarada de la vuelta 64 en el `nota` de la ficha ("ESTA FICHA ESTA CONSUMIDA. NO SE EJECUTA Y NO SE REHACE") y docs/loop/SALIDA_V64_CONSUMIDAS.txt, que computa cinco consumidas de las cuales dos DIVERGEN | CONSUMIDA CON SUPERVIVIENTE DIVERGENTE |
+| OP-M-02-ASSESS | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente fase_assess_ciclo_cliente vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-02-MEDIOS | 03_FUSIONES | LISTA | FUSION | no remitida | CONSUMIDA CON SUPERVIVIENTE DIVERGENTE: el `superviviente` escrito en la ficha es seis_medios_comunicacion_cliente, hoy DEPRECADO; resuelve por alias (P.1) a estrategia_multicanal_bienvenida, que esta VIVO; y estrategia_multicanal_bienvenida es justamente uno de los que el campo `eliminar` de esta misma ficha manda eliminar (eliminar: estrategia_multicanal_bienvenida). NO ES CUMPLIDA NI SIN CUMPLIR: la operacion se ejecuto al reves. Ver la correccion declarada de la vuelta 64 en el `nota` de la ficha ("ESTA FICHA ESTA CONSUMIDA. NO SE EJECUTA Y NO SE REHACE") y docs/loop/SALIDA_V64_CONSUMIDAS.txt, que computa cinco consumidas de las cuales dos DIVERGEN | CONSUMIDA CON SUPERVIVIENTE DIVERGENTE |
+| OP-M-02-PROG | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente ocho_fases_experiencia_cliente vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-03-I | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente pivotar_o_perseverar vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-03-II | 03_FUSIONES | LISTA | FUSION | no remitida | superviviente pivote_o_proceder vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-03-III | 03_FUSIONES | HECHA | FUSION | no remitida | superviviente pivote_estrategico vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-05-APERTURA | 03_FUSIONES | HECHA | FUSION | no remitida | superviviente customer_validation vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-05-EDIFICIO | 03_FUSIONES | HECHA | FUSION | no remitida | superviviente customer_discovery_get_out_of_building vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-05-INDICE | 03_FUSIONES | HECHA | FUSION | no remitida | superviviente customer_discovery vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-U-01 | 03_FUSIONES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo FUSION (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-U-02 | 03_FUSIONES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo FUSION (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 16 | con destino cumplido: 12 | sin cumplir: 4 | de ellas, sin vara escrita: 2 | de ellas, consumidas con superviviente divergente: 2 | de ellas, consumidas: 0
+SIN CUMPLIR (4): OP-M-02-ADMIT, OP-M-02-MEDIOS, OP-U-01, OP-U-02
+SIN VARA ESCRITA (2): OP-U-01, OP-U-02
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (2): OP-M-02-ADMIT, OP-M-02-MEDIOS
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+########## 04_ENLACES
+ESTADO DE LA FASE 04_ENLACES | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-E-01 | 04_ENLACES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo ENLACE (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-E-02 | 04_ENLACES | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo ENLACE (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-E-03 | 04_ENLACES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo LECTURA DIRIGIDA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-E-04 | 04_ENLACES | HECHA | ENLACE | no remitida | 8 de 8 direcciones con la IDA presente (9 filas de ficha colapsan en 8 direcciones); con la VUELTA presente 6 de 8: sistema_gates_go_kill -> gestion_portafolio_dos_niveles, portfolio_management -> sistema_gates_go_kill, gestion_portafolio_foco -> sistema_gates_go_kill, sistema_gates_go_kill -> portfolio_management, sistema_gates_go_kill -> gestion_portafolio_formal, sistema_gates_go_kill -> gestion_portafolio_foco; bajo PROHIBE con la VUELTA presente (impiden cumplir) 0; bajo MUTUO con las DOS direcciones (se exigen) 6: gestion_portafolio_dos_niveles -> sistema_gates_go_kill, sistema_gates_go_kill -> portfolio_management, sistema_gates_go_kill -> gestion_portafolio_foco, portfolio_management -> sistema_gates_go_kill, gestion_portafolio_formal -> sistema_gates_go_kill, gestion_portafolio_foco -> sistema_gates_go_kill; regimen de vuelta POR PAR por la EXCEPCION ESCRITA en la ficha (verificacion 5: excepcion del 9.22 para los pares mutuos nombrados), banco 9.22 y hueco de orden 1 del 00_INDICE: 6 direccion(es) de pares EXCEPTUADOS van bajo MUTUO (la vuelta NO penaliza y las dos se exigen) y 2 bajo PROHIBE (la vuelta presente IMPIDE cumplir); el regimen de base de la ficha es PROHIBE (verificacion 0: la vuelta no debe existir); PARES EXCEPTUADOS QUE LA FICHA NOMBRA (4): gestion_portafolio_dos_niveles <-> sistema_gates_go_kill, gestion_portafolio_foco <-> sistema_gates_go_kill, gestion_portafolio_formal <-> sistema_gates_go_kill, portfolio_management <-> sistema_gates_go_kill | CUMPLIDO |
+| OP-E-05 | 04_ENLACES | HECHA | ENLACE | no remitida | 4 de 4 direcciones con la IDA presente (4 filas de ficha, sin colapso); con la VUELTA presente 4 de 4: gestion_portafolio_formal -> sistema_gates_go_kill, sistema_gates_go_kill -> gestion_portafolio_formal, gestion_portafolio_dos_niveles -> sistema_gates_go_kill, sistema_gates_go_kill -> gestion_portafolio_dos_niveles; regimen de vuelta MUTUO por la ficha (verificacion 0: la vuelta si existe), banco 9.22: la vuelta NO penaliza y las dos direcciones se exigen | CUMPLIDO |
+| OP-E-06 | 04_ENLACES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo ENLACE CON EVIDENCIA DE LECTURA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-E-07 | 04_ENLACES | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo LECTURA DIRIGIDA CORTA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-M-01-ESLABONES | 04_ENLACES | HECHA | ENLACE | no remitida | 2 de 2 direcciones con la IDA presente (2 filas de ficha, sin colapso); con la VUELTA presente 0 de 2; regimen de vuelta PROHIBE por la ficha (verificacion 0: la vuelta no existe ni literal ni resuelta): la vuelta presente IMPIDE cumplir | CUMPLIDO |
+| OP-M-01-SEXTO | 04_ENLACES | HECHA | ENLACE | no remitida | 1 de 1 direcciones con la IDA presente (1 filas de ficha, sin colapso); con la VUELTA presente 0 de 1; regimen de vuelta PROHIBE por la ficha (verificacion 2: la vuelta no debe existir): la vuelta presente IMPIDE cumplir | CUMPLIDO |
+| OP-M-03-ENLACES | 04_ENLACES | HECHA | ENLACE | no remitida | 2 de 2 direcciones con la IDA presente (2 filas de ficha, sin colapso); con la VUELTA presente 0 de 2; regimen de vuelta PROHIBE por la ficha (verificacion 0: la vuelta es una instruccion falsa): la vuelta presente IMPIDE cumplir | CUMPLIDO |
+
+CIFRA: operaciones del catalogo: 10 | con destino cumplido: 5 | sin cumplir: 5 | de ellas, sin vara escrita: 5 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (5): OP-E-01, OP-E-02, OP-E-03, OP-E-06, OP-E-07
+SIN VARA ESCRITA (5): OP-E-01, OP-E-02, OP-E-03, OP-E-06, OP-E-07
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+########## 05_SANEO
+ESTADO DE LA FASE 05_SANEO | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-S-01 | 05_SANEO | HECHA | FUSION | no remitida | superviviente certificado_de_origen_tratados_libre_comercio vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-S-02 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo VIGENCIA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-03 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo VIGENCIA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-04 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo HERRAMIENTA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-05 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo HERRAMIENTA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-08 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-09 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo RENOMBRE_CON_ALIAS (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-10 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo REENCUADRE_DE_MARCO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-11 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-12 | 05_SANEO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo SANEO MECANICO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 10 | con destino cumplido: 1 | sin cumplir: 9 | de ellas, sin vara escrita: 9 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (9): OP-S-02, OP-S-03, OP-S-04, OP-S-05, OP-S-08, OP-S-09, OP-S-10, OP-S-11, OP-S-12
+SIN VARA ESCRITA (9): OP-S-02, OP-S-03, OP-S-04, OP-S-05, OP-S-08, OP-S-09, OP-S-10, OP-S-11, OP-S-12
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+########## 06_MESAS
+ESTADO DE LA FASE 06_MESAS | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-M-01 | 06_MESAS | HECHA | MESA | no remitida | 5 de 5 hijas del catalogo con destino cumplido; nomina de 6 (bloquea_a 5, remision 4, union 6); procedencia: OP-E-04 por las dos, OP-E-05 por las dos, OP-M-01-ESLABONES por las dos, OP-M-01-FUSION por bloquea_a, OP-M-01-SEXTO por remision; hijas FUERA del catalogo: OP-S-12 (05_SANEO) | CUMPLIDO |
+| OP-M-02 | 06_MESAS | HECHA | MESA | no remitida | 1 de 1 hijas del catalogo con destino cumplido; nomina de 8 (bloquea_a 8, remision 0, union 8); procedencia: OP-M-02-ACCLIMATE por bloquea_a; hijas FUERA del catalogo: OP-M-02-PROG (03_FUSIONES), OP-M-02-MEDIOS (03_FUSIONES), OP-M-02-ASSESS (03_FUSIONES), OP-M-02-ADMIT (03_FUSIONES), OP-M-02-ACTIVATE (03_FUSIONES), OP-M-02-ACCOMPLISH (03_FUSIONES), OP-S-12 (05_SANEO) | CUMPLIDO |
+| OP-M-03 | 06_MESAS | HECHA | MESA | no remitida | 2 de 2 hijas del catalogo con destino cumplido; nomina de 6 (bloquea_a 6, remision 1, union 6); procedencia: OP-M-03-III por bloquea_a, OP-M-03-ENLACES por las dos; hijas FUERA del catalogo: OP-D-07 (02_DESTEJIDOS), OP-M-03-I (03_FUSIONES), OP-M-03-II (03_FUSIONES), OP-S-12 (05_SANEO) | CUMPLIDO |
+| OP-M-05 | 06_MESAS | HECHA | MESA | no remitida | 3 de 3 hijas del catalogo con destino cumplido; nomina de 4 (bloquea_a 4, remision 0, union 4); procedencia: OP-M-05-INDICE por bloquea_a, OP-M-05-EDIFICIO por bloquea_a, OP-M-05-APERTURA por bloquea_a; hijas FUERA del catalogo: OP-S-12 (05_SANEO) | CUMPLIDO |
+| OP-E-04 | 04_ENLACES | HECHA | ENLACE | de 04_ENLACES / a OP-M-01 (docs/plan/04_ENLACES.md:1452) | 8 de 8 direcciones con la IDA presente (9 filas de ficha colapsan en 8 direcciones); con la VUELTA presente 6 de 8: sistema_gates_go_kill -> gestion_portafolio_dos_niveles, portfolio_management -> sistema_gates_go_kill, gestion_portafolio_foco -> sistema_gates_go_kill, sistema_gates_go_kill -> portfolio_management, sistema_gates_go_kill -> gestion_portafolio_formal, sistema_gates_go_kill -> gestion_portafolio_foco; bajo PROHIBE con la VUELTA presente (impiden cumplir) 0; bajo MUTUO con las DOS direcciones (se exigen) 6: gestion_portafolio_dos_niveles -> sistema_gates_go_kill, sistema_gates_go_kill -> portfolio_management, sistema_gates_go_kill -> gestion_portafolio_foco, portfolio_management -> sistema_gates_go_kill, gestion_portafolio_formal -> sistema_gates_go_kill, gestion_portafolio_foco -> sistema_gates_go_kill; regimen de vuelta POR PAR por la EXCEPCION ESCRITA en la ficha (verificacion 5: excepcion del 9.22 para los pares mutuos nombrados), banco 9.22 y hueco de orden 1 del 00_INDICE: 6 direccion(es) de pares EXCEPTUADOS van bajo MUTUO (la vuelta NO penaliza y las dos se exigen) y 2 bajo PROHIBE (la vuelta presente IMPIDE cumplir); el regimen de base de la ficha es PROHIBE (verificacion 0: la vuelta no debe existir); PARES EXCEPTUADOS QUE LA FICHA NOMBRA (4): gestion_portafolio_dos_niveles <-> sistema_gates_go_kill, gestion_portafolio_foco <-> sistema_gates_go_kill, gestion_portafolio_formal <-> sistema_gates_go_kill, portfolio_management <-> sistema_gates_go_kill | CUMPLIDO |
+| OP-E-05 | 04_ENLACES | HECHA | ENLACE | de 04_ENLACES / a OP-M-01 (docs/plan/04_ENLACES.md:1453) | 4 de 4 direcciones con la IDA presente (4 filas de ficha, sin colapso); con la VUELTA presente 4 de 4: gestion_portafolio_formal -> sistema_gates_go_kill, sistema_gates_go_kill -> gestion_portafolio_formal, gestion_portafolio_dos_niveles -> sistema_gates_go_kill, sistema_gates_go_kill -> gestion_portafolio_dos_niveles; regimen de vuelta MUTUO por la ficha (verificacion 0: la vuelta si existe), banco 9.22: la vuelta NO penaliza y las dos direcciones se exigen | CUMPLIDO |
+| OP-M-01-ESLABONES | 04_ENLACES | HECHA | ENLACE | de 04_ENLACES / a OP-M-01 (docs/plan/04_ENLACES.md:1454) | 2 de 2 direcciones con la IDA presente (2 filas de ficha, sin colapso); con la VUELTA presente 0 de 2; regimen de vuelta PROHIBE por la ficha (verificacion 0: la vuelta no existe ni literal ni resuelta): la vuelta presente IMPIDE cumplir | CUMPLIDO |
+| OP-M-01-FUSION | 03_FUSIONES | HECHA | FUSION | de 03_FUSIONES / a la fase, sin mesa nombrada (docs/plan/00_INDICE.md:261) | superviviente sistema_gates_go_kill vivo, 4 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-01-SEXTO | 04_ENLACES | HECHA | ENLACE | de 04_ENLACES / a OP-M-01 (docs/plan/04_ENLACES.md:1455) | 1 de 1 direcciones con la IDA presente (1 filas de ficha, sin colapso); con la VUELTA presente 0 de 1; regimen de vuelta PROHIBE por la ficha (verificacion 2: la vuelta no debe existir): la vuelta presente IMPIDE cumplir | CUMPLIDO |
+| OP-M-02-ACCLIMATE | 03_FUSIONES | HECHA | FUSION | de 03_FUSIONES / a la fase, sin mesa nombrada (docs/plan/00_INDICE.md:261) | superviviente fase_acclimate_experiencia_cliente vivo, 1 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-03-ENLACES | 04_ENLACES | HECHA | ENLACE | de 04_ENLACES / a OP-M-03 (docs/plan/04_ENLACES.md:1451) | 2 de 2 direcciones con la IDA presente (2 filas de ficha, sin colapso); con la VUELTA presente 0 de 2; regimen de vuelta PROHIBE por la ficha (verificacion 0: la vuelta es una instruccion falsa): la vuelta presente IMPIDE cumplir | CUMPLIDO |
+| OP-M-03-III | 03_FUSIONES | HECHA | FUSION | de 03_FUSIONES / a la fase, sin mesa nombrada (docs/plan/00_INDICE.md:261) | superviviente pivote_estrategico vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-04 | 06_MESAS | HECHA | MESA POR FIGURA | no remitida | figura declarada en el propio `tipo` ('MESA ADJUDICADA: DOS FUSIONES MAS UN ENLACE'), medida con las varas de FUSION y de ENLACE sobre los campos de la ficha: 2 de 2 fusiones con destino cumplido, reparto de absorbidos OK, y el enlace CUMPLIDO; fusion de formalizar_junta_asesora: superviviente formalizar_junta_asesora vivo, 1 absorbido(s) deprecado(s) y en ids_alias; fusion de identificar_consejo_asesores: superviviente identificar_consejo_asesores vivo, 1 absorbido(s) deprecado(s) y en ids_alias; enlace identificar_consejo_asesores -> formalizar_junta_asesora (direccion leida de la ficha): 1 de 1 direcciones con la IDA presente (1 filas de ficha, sin colapso); con la VUELTA presente 0 de 1; regimen de vuelta PROHIBE por la ficha (verificacion 7: la vuelta no existe ni literal ni resuelta): la vuelta presente IMPIDE cumplir | CUMPLIDO |
+| OP-M-05-APERTURA | 03_FUSIONES | HECHA | FUSION | de 03_FUSIONES / a la fase, sin mesa nombrada (docs/plan/00_INDICE.md:261) | superviviente customer_validation vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-05-EDIFICIO | 03_FUSIONES | HECHA | FUSION | de 03_FUSIONES / a la fase, sin mesa nombrada (docs/plan/00_INDICE.md:261) | superviviente customer_discovery_get_out_of_building vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+| OP-M-05-INDICE | 03_FUSIONES | HECHA | FUSION | de 03_FUSIONES / a la fase, sin mesa nombrada (docs/plan/00_INDICE.md:261) | superviviente customer_discovery vivo, 2 absorbido(s) deprecado(s) y en ids_alias | CUMPLIDO |
+
+CIFRA: operaciones del catalogo: 16 | con destino cumplido: 16 | sin cumplir: 0 | de ellas, sin vara escrita: 0 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (0): ninguna
+SIN VARA ESCRITA (0): ninguna
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+########## 07_ADUANA
+ESTADO DE LA FASE 07_ADUANA | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-A-01 | 07_ADUANA | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo FRONTERA_DECLARADA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-A-02 | 07_ADUANA | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo MESA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 2 | con destino cumplido: 0 | sin cumplir: 2 | de ellas, sin vara escrita: 2 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (2): OP-A-01, OP-A-02
+SIN VARA ESCRITA (2): OP-A-01, OP-A-02
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+########## 08_VERIFICACION
+ESTADO DE LA FASE 08_VERIFICACION | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-V-01 | 08_VERIFICACION | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo MESA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 1 | con destino cumplido: 0 | sin cumplir: 1 | de ellas, sin vara escrita: 1 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (1): OP-V-01
+SIN VARA ESCRITA (1): OP-V-01
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+########## 09_LECTURAS_DIRIGIDAS
+ESTADO DE LA FASE 09_LECTURAS_DIRIGIDAS | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-L-01 | 09_LECTURAS_DIRIGIDAS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo MESA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-L-02 | 09_LECTURAS_DIRIGIDAS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo MESA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-L-03 | 09_LECTURAS_DIRIGIDAS | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo MESA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 3 | con destino cumplido: 0 | sin cumplir: 3 | de ellas, sin vara escrita: 3 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (3): OP-L-01, OP-L-02, OP-L-03
+SIN VARA ESCRITA (3): OP-L-01, OP-L-02, OP-L-03
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+########## 10_INVENTARIO
+ESTADO DE LA FASE 10_INVENTARIO | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-I-01 | 10_INVENTARIO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo MESA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 1 | con destino cumplido: 0 | sin cumplir: 1 | de ellas, sin vara escrita: 1 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (1): OP-I-01
+SIN VARA ESCRITA (1): OP-I-01
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna
+
+==============================================================================
+SUMA DE LAS ONCE FASES, CONTADA DE ESTE MISMO FICHERO
+==============================================================================
+  CIFRA fases sumadas: 11
+  CIFRA operaciones del catalogo: 82
+  CIFRA con destino cumplido: 36
+  CIFRA sin cumplir: 46
+  CIFRA sin vara escrita: 44
+  CIFRA consumidas con superviviente divergente: 2
+  COMPROBACION: cumplidas mas sin cumplir es 82, y el catalogo es 82: CUADRA

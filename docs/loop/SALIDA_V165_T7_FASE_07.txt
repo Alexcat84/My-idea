@@ -1,0 +1,13 @@
+ESTADO DE LA FASE 07_ADUANA | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-A-01 | 07_ADUANA | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo FRONTERA_DECLARADA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-A-02 | 07_ADUANA | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo MESA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 2 | con destino cumplido: 0 | sin cumplir: 2 | de ellas, sin vara escrita: 2 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (2): OP-A-01, OP-A-02
+SIN VARA ESCRITA (2): OP-A-01, OP-A-02
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna

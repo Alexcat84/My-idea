@@ -1,0 +1,18 @@
+ESTADO DE LA FASE 00_CODIGO | REF: WORK
+El campo `estado` va como CONTRASTE, no como veredicto: ninguna cifra lo mira.
+
+| id_op | fase escrita | estado (contraste) | vara | remitida: de / a | destino medido contra el grafo | veredicto |
+|---|---|---|---|---|---|---|
+| OP-C-01 | 00_CODIGO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-C-02 | 00_CODIGO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-C-03 | 00_CODIGO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-C-04 | 00_CODIGO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-C-05 | 00_CODIGO | HECHA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo GUARDA (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-06 | 00_CODIGO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+| OP-S-07 | 00_CODIGO | LISTA | SIN VARA ESCRITA | no remitida | no hay regla escrita que mida contra el grafo el destino de un tipo CAMPO_SUCIO (ni superviviente resoluble ni aristas_nuevas) | NO COMPUTABLE |
+
+CIFRA: operaciones del catalogo: 7 | con destino cumplido: 0 | sin cumplir: 7 | de ellas, sin vara escrita: 7 | de ellas, consumidas con superviviente divergente: 0 | de ellas, consumidas: 0
+SIN CUMPLIR (7): OP-C-01, OP-C-02, OP-C-03, OP-C-04, OP-C-05, OP-S-06, OP-S-07
+SIN VARA ESCRITA (7): OP-C-01, OP-C-02, OP-C-03, OP-C-04, OP-C-05, OP-S-06, OP-S-07
+CONSUMIDAS CON SUPERVIVIENTE DIVERGENTE (0): ninguna
+CONSUMIDAS, superviviente deprecado que resuelve a un vivo NO condenado (0): ninguna

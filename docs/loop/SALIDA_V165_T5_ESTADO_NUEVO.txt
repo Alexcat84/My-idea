@@ -7,7 +7,7 @@ VUELTA 165, TAREA 5: EL ESTADO NUEVO, CORRIDO CON MI COMANDO
    RUN  v4.1.10 C:/Users/AlexDesk/Documents/I have an idea/web
    Test Files  82 passed (82)
    Tests  1040 passed (1040)
-   Duration  14.66s (transform 36.75s, setup 0ms, import 129.36s, tests 9.29s, environment 16ms)
+   Duration  14.78s (transform 32.78s, setup 0ms, import 137.51s, tests 9.37s, environment 16ms)
    EXITCODE: 0
    CIFRA ficheros de test: 82
    CIFRA pruebas pasadas: 1040
@@ -28,6 +28,36 @@ VUELTA 165, TAREA 5: EL ESTADO NUEVO, CORRIDO CON MI COMANDO
    dataset/metadata/semantic_index.json         NO EXISTE
    engine/semantic_index.json                   NO EXISTE
    CIFRA sedes del indice que existen en disco: 1
+
+BARRIDO EXHAUSTIVO
+  PREGUNTA: existe el indice semantico en alguna sede que no sea la que
+  sync_assets_web.py declara, o es esa la unica
+  UNIVERSO: os.walk del repo entero ACOTADO a todo menos node_modules,
+  .git, .next y __pycache__
+  CARDINAL: 28386
+  POR NOMBRE: semantic_index.json | 1 ficheros con coincidencia
+      web/lib/assets/semantic_index.json  [nombre]
+  POR CONTENIDO: semantic_index | 395 ficheros con coincidencia
+      docs/04_PROCESSES/PRO-02-Manual_de_Comandos_CLI.md  [contenido]
+      docs/AUDITORIA_MOTOR.md  [contenido]
+      docs/AUDITORIA_SEGUNDO_INDICE.md  [contenido]
+      docs/GRADIENTE_PARES_RESUMEN.md  [contenido]
+      docs/INTRA_DOMINIO_RESUMEN.md  [contenido]
+      docs/LECTURA_CONDICIONES_Y_DEPRECADOS.md  [contenido]
+      docs/PENDIENTES.md  [contenido]
+      docs/PLAN_CIRUGIA_2_GESTION_INVENTARIO.md  [contenido]
+      docs/PLAN_EXPANSION_V1_3_EJECUCION.md  [contenido]
+      docs/SOP_EXTRACCION_PACKS.md  [contenido]
+      docs/_censo_duplicacion.json  [contenido]
+      docs/audits/AUD-03-Fase2_6_a_2_9_Cierre_Motor_v2_0.md  [contenido]
+      ... y 383 mas
+  VITALIDAD DE LOS PATRONES DE CONTENIDO: 1 de 1 alternativas aparecen en el universo
+      semantic_index                                 -> 395    viva
+  NO DECODIFICABLES (mirados y no leidos, NO cuentan como sin coincidencia): 440
+  VEREDICTO: UNA SOLA SEDE
+CIFRA ficheros del universo: 28386 ficheros
+CIFRA sedes del indice halladas por nombre: 1 ficheros
+CIFRA ficheros que solo lo nombran, sin serlo: 395 ficheros
    CONTRASTE, y solo contraste: el sello de la sesion con credencial
    publica 42223fcc y el auditor dice haberlo recomputado en la 164.
    La cifra que vale es la de arriba.
