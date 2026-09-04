@@ -11186,3 +11186,50 @@ generador, ni un defecto**: la app se defiende como debe, y hasta lo dice bien
 por escrito, *"el fundador siembra creditos A MANO (RPC `otorgar_creditos`,
 origen `siembra_beta`)"*. Sembrar creditos es una escritura de estado de
 **negocio** en la base real: **acto del fundador**, no infraestructura.
+
+### QUINTO HALLAZGO DEL VUELO: EL PROCEDIMIENTO DE SIEMBRA ESTABA ROTO DESDE LA 020 (4 sep 2026)
+
+**Se suma a la lista de la ficha de deuda, y es el mas incomodo de los cinco,
+porque no lo cazo una prueba: lo cazo QUEDARSE SIN CREDITOS.**
+
+**EL HECHO:** la casa declara `siembra_beta` como origen **VIVO** de la RPC
+`otorgar_creditos` en **tres** sitios, con instrucciones y todo:
+
+- `docs/BETA_CUENTAS_README.md` lineas 152 a 165, con el SQL completo, afirmando
+  que *"deja rastro en `credit_transactions` (tipo `grant`)"*, y su tabla de
+  estado (linea 173) marcandolo **VIVA (§2.f)**.
+- `web/lib/creditos.ts:24`: *"el fundador siembra creditos A MANO"*.
+- `web/lib/cuentas.ts:69`, que lo repite y remite al README.
+
+**Y EL ESQUEMA LO RECHAZABA.** La 020 escribio
+`CHECK (origen IS NULL OR origen IN ('cortesia','revenuecat'))`, asi que la
+llamada documentada **muere siempre con 23514**.
+
+**COMPROBADO EN VIVO**, no deducido: la llamada fallo contra la base real con el
+codigo `23514` y la fila rechazada impresa por el propio error. **El saldo no se
+movio y no se escribio ni una fila** (cero con la clave de idempotencia).
+
+> **EL PROCEDIMIENTO MANUAL QUE EL MANUAL DABA POR VIVO NUNCA PUDO FUNCIONAR.**
+
+**POR QUE NADIE SE ENTERO:** **ninguna prueba lo ejercitaba**. Es el mismo patron
+que la doctrina de las pruebas de cruce nombra unas lineas mas arriba, en otra
+capa: **lo que no se corre no se sabe si funciona**, y un procedimiento escrito en
+un manual **no es una prueba**.
+
+**EL MANUAL SE CORRIGE POR ADICION**, sin borrar nada, con la migracion
+`supabase/migrations/my_idea_038_siembra_beta_en_el_ledger.sql` (commit
+`07c0cbbc`), que ensancha la restriccion para admitir `siembra_beta` y deja el
+motivo escrito en su cabecera con las tres citas. **Aditiva:** no toca datos, ni
+la restriccion de `tipo`, ni el indice de idempotencia, y `total_comprado` sigue
+moviendose solo con `revenuecat`.
+
+**LO QUE QUEDA PENDIENTE Y ES DEL FUNDADOR:** aplicar la 038 por el **SQL
+Editor** (`docs/MIGRACION_DE_BASE.md:28`), que es la via de la casa. **No hay
+manera de aplicarla desde el bucle ni desde esta sesion**, y esta comprobado: sin
+cadena de conexion directa en el `.env`, sin `psql`, sin CLI de Supabase y sin
+`supabase/config.toml`; PostgREST no ejecuta DDL.
+
+**Y UNA SUGERENCIA QUE NO SE APLICA HOY:** que el guion de comprobacion de
+migraciones (`my_idea_check_migraciones.sql`) **verifique tambien los valores
+admitidos por las restricciones que un procedimiento manual usa**, no solo que la
+tabla y el indice existan. Esta restriccion habria salido a la luz el primer dia.
