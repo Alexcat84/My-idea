@@ -11004,3 +11004,60 @@ protegido vive en el plan core `b7e86eb0` (01:02) cuando el vigente es `a6d79d9d
 de la prueba dada su propia secuencia. **Lleva ademas una pregunta de producto
 detras, y es del fundador:** si una marca de proteccion debe SOBREVIVIR a que el
 core replanifique.
+
+---
+
+## PRODUCTO: LA MARCA DE PROTECCION DEBERIA SOBREVIVIR A QUE EL CORE REPLANIFIQUE (decision del fundador post merge, 3 sep 2026)
+
+**HOY EL PRODUCTO NO LO HACE, Y NO ES UN FALLO: ES EL CONTRATO VIGENTE.** La
+marca protege **al item del plan en que se enlazo**. Si el core replanifica, ese
+item deja de estar vigente y la marca **desaparece del carril**. Queda anotado
+para que el fundador lo decida **despues del merge**. **Hoy no se toca producto.**
+
+### LO QUE PASA HOY, EN EL CODIGO
+
+`web/lib/analytics.ts` lineas 619 a 635 construye el carril y descarta la marca
+si el protegido no esta entre los items core vigentes:
+
+> `const protegido = porIdCore.get(i.protege_item as string);`
+> `if (!protegido || !fecha) return [];`
+
+`porIdCore` se arma con los items core **vigentes**. Un `protege_item` que apunta
+a un item de un plan superado **no se encuentra**, y la marca se cae en silencio.
+
+### LA EVIDENCIA, MEDIDA EN LA CORRIDA E
+
+Proyecto `bf630bc8-0238-4874-9c53-9dfc81faabe3`, leido de la base:
+
+- **39** respuestas de `risk_management`, **7** enlazadas, y de esas **1** con fecha.
+- La unica con fecha protegia a `19c2b7d4`, del plan core **`b7e86eb0`** (01:02).
+- El proyecto tenia **CUATRO** planes core, y el **VIGENTE** era **`a6d79d9d`**
+  (01:15): el core replanifico **dos veces** despues del enlace.
+- Resultado: **carril vacio**, `[]`.
+
+Sello completo en `docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_E.txt`.
+
+### LA PROPUESTA, PARA CUANDO SE DECIDA
+
+**Que la marca siga la IDENTIDAD DEL ITEM a traves de los replanes**, no su fila.
+La intencion del usuario cuando enlaza *"este riesgo protege a esta actividad"* no
+caduca porque el plan se regenere: **la actividad sigue siendo la misma para el
+usuario, aunque su fila sea nueva**. Hoy el enlace muere con la fila.
+
+**Lo que habria que resolver, y por eso es decision y no tarea:**
+
+- **Que es "el mismo item" a traves de un replan.** El texto puede cambiar de
+  redaccion; la etapa puede moverse. Hace falta una regla escrita, no una
+  heuristica silenciosa.
+- **Que pasa si la actividad protegida DESAPARECE en el replan.** La marca
+  deberia morir con ella, y probablemente **decirlo** en vez de callarse.
+- **Y la regla de la casa:** si se elige seguir la identidad, esa union se mide y
+  se declara; **una union que falla en silencio es peor que un enlace que muere
+  ruidosamente** (BANCO, fallar ruidoso).
+
+### LO QUE ESTA FICHA NO AUTORIZA
+
+**Nadie cambia el contrato del carril sin decision escrita del fundador.** La
+siembra del vuelo ya se ajusto al contrato **vigente** (commit `e3b18d53`: fecha
+las enlazadas y re-enlaza sobre el plan core vigente), asi que **la prueba mide lo
+que el producto promete hoy**, no lo que quizas prometa manana.
