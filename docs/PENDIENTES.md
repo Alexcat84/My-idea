@@ -11617,3 +11617,88 @@ entera son **55 y no 75**.
 **LA CONSECUENCIA PRACTICA, para la cadencia del vuelo en cada release:** un
 vuelo **gasta 55** pero **necesita no bajar de 10 en ningun arranque de sesion**.
 Arrancar con 55 justos **no basta**: hace falta holgura por encima del gasto.
+
+---
+
+## R.34. Registro de las diez adjudicaciones y las tres caidas propias del acta de la vuelta 164
+
+(Acta del auditor, vuelta 164, secciones 4 y 6; escrito en la vuelta 165,
+TAREA 1.)
+
+Por adicion, como `R.21` a `R.33`. **Corte de todas las cifras de esta entrada:
+4 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes. La
+SEDE tampoco se supone: sale de la adjudicacion 6.3 del acta 162, leida hoy en
+`docs/loop/ACTA_AUDITOR.md:53933`, y se DECLARA que el acta 164 no la repite (la
+regla es de la casa, no de un acta suelta). Salida:
+`docs/loop/SALIDA_V165_T1_REGISTRO_ACTA_164.txt`.
+
+**LAS DIEZ ADJUDICACIONES, CON SU LINEA EN EL ACTA LEIDA HOY.** El titulo de
+cada una es LITERAL del fichero (localizado dentro del cuerpo del acta 164, no
+de cualquier acta); la glosa que sigue es prosa del ejecutor y va marcada como
+tal.
+
+  - **6.1 (`docs/loop/ACTA_AUDITOR.md:54685`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"LA CAIDA DE CLASE DE LA `LD-OPC05-005` QUEDA CONFIRMADA, Y CUENTA UNA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. La caida de clase de la `LD-OPC05-005` queda CONFIRMADA por segunda pluma y cuenta UNA para la racha de cifra publicada, que queda en UNO. La vuelta 165 no la vuelve a abrir ni la vuelve a mover: lo que cambia es el cuidado, no el registro.
+  - **6.2 (`docs/loop/ACTA_AUDITOR.md:54691`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"LA `LD-OPC05-101` SE QUEDA EN `D` Y YO LO FIRMO, COMO DIJE QUE HARIA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. La `LD-OPC05-101` se queda en `D` con la firma del auditor, y su veredicto sigue viviendo en la razon del registro y no en el asunto de un commit. La vuelta 165 NO la relee y no la mueve.
+  - **6.3 (`docs/loop/ACTA_AUDITOR.md:54697`, leida hoy). VIA: EN CODIGO.** Titulo
+    literal del acta: *"EL CENSO DE ARNESES SE ARREGLA EN LA FUENTE, Y ES TAREA BLOQUEANTE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN CODIGO, TAREA 2 de esta vuelta. El punto ciego del censo de `verificar_mutaciones_viejas.py` se arregla EN LA FUENTE y con su caso positivo por mutacion, que hoy para este agujero no existia: el caso tiene que CAER si alguien devuelve el patron a su forma vieja.
+  - **6.4 (`docs/loop/ACTA_AUDITOR.md:54704`, leida hoy). VIA: EN EL REPORTE.** Titulo
+    literal del acta: *"LA CAIDA DE REPORTE DEL 5.2 SE CORRIGE POR DECLARACION Y NO SE BORRA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EL REPORTE, TAREA 3 de esta vuelta. La cadena entera y cerrada va escrita en el reporte de la 165 (92 vistos por el censo, 53 en la nomina, 51 visibles al censo, 41 fuera), SIN BORRAR la frase vieja, y la relectura al doble del tramo se hace.
+  - **6.5 (`docs/loop/ACTA_AUDITOR.md:54710`, leida hoy). VIA: EN MEDICION.** Titulo
+    literal del acta: *"LA PENDIENTE DE DOCTRINA DE LOS 41 NO ES DOCTRINA NUEVA, Y LA ADJUDICO CITANDO LA REGLA ESCRITA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA COMO MEDICION, TAREA 4 de esta vuelta. La PENDIENTE DE DOCTRINA queda retirada por el ejecutor: la regla no habla del calendario sino del ESTADO DEL SUJETO, asi que no puede ser retroactiva ni dejar de serlo. Los 41 se miden UNO POR UNO y se publica cual tiene sujeto congelado y cual sujeto vivo, con su evidencia. Ninguno entra en bloque y ninguno se descarta en bloque.
+  - **6.6 (`docs/loop/ACTA_AUDITOR.md:54724`, leida hoy). VIA: EN MEDICION.** Titulo
+    literal del acta: *"Y VA CON UN LIMITE QUE NO ESTABA ESCRITO Y QUE MIDO YO: EL RELOJ DE LA BATERIA ES AHORA UN COSTE DE CADA CIERRE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA COMO MEDICION, TAREA 4 de esta vuelta. Todo arnes que entre entra con su tiempo publicado al lado, y si el total de la bateria pasa de VEINTE MINUTOS se dice en el reporte con la cifra delante. La nomina NO se recorta por cuenta propia para que corra antes.
+  - **6.7 (`docs/loop/ACTA_AUDITOR.md:54736`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"LA PREGUNTA 1 DEL REPORTE, EL CAMPO `cita`, SE ADJUDICA: LA FORMA NO CRECE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. El campo `cita` NO crece: es el puntero que la guarda `C.7` coteja contra la `clase`, y la historia entera sigue viviendo en la `razon`. La PREGUNTA 1 del reporte de la 164 queda CERRADA y la 165 no la arrastra.
+  - **6.8 (`docs/loop/ACTA_AUDITOR.md:54744`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"LA PREGUNTA 2, `node_modules/`, YA ESTA CONTESTADA Y DEJA DE PREGUNTARSE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. `node_modules/` es alcance del fundador, no bloquea nada y no dispara parada. La PREGUNTA 2 queda CERRADA y el reporte de la 165 DEJA DE ARRASTRARLA; sigue apareciendo como `??` en `git status` y eso ya no es una pregunta del bucle.
+  - **6.9 (`docs/loop/ACTA_AUDITOR.md:54752`, leida hoy). VIA: EN MEDICION.** Titulo
+    literal del acta: *"EL CIERRE DE LA FASE 08 SE INCORPORA MIDIENDOLO, NO HEREDANDOLO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA COMO MEDICION, TAREA 5 de esta vuelta. Las suites de la web, el `tsc` y el `sha256` del indice semantico se CORREN con el comando del ejecutor y se publican con el; NINGUNA cifra se copia del commit del fundador, que se cita solo como CONTRASTE. Y `SELLO_SESION_CREDENCIAL_2026-09-03.md` se cierra POR ADICION, sin borrar su ultima linea, que era cierta el dia que se escribio.
+  - **6.10 (`docs/loop/ACTA_AUDITOR.md:54761`, leida hoy). VIA: EN EJECUCION.** Titulo
+    literal del acta: *"LA CAMPANA NO ESTA CONSUMADA Y AQUI ESTA LO QUE FALTA, MEDIDO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EJECUCION, TAREA 6 de esta vuelta. Se abre el ultimo tramo de la fase III por `OP-L-01`, la unica de las cuatro en `LISTA` sin dependencias declaradas: se lee su ficha entera y se comprueban sus TRES clausulas de verificacion contra el archivo de HOY. Si el texto de la operacion no alcanza para ejecutarse sin decidir, eso es PARADA y se trae con la letra delante, no se improvisa.
+
+**EL REPARTO POR VIA, CONTADO Y NO TECLEADO:** EN CODIGO: 1 (6.3); EN EJECUCION: 1 (6.10); EN EL REPORTE: 1 (6.4); EN MEDICION: 3 (6.5, 6.6, 6.9); SIN TOCAR NADA: 4 (6.1, 6.2, 6.7, 6.8).
+**Ninguna de las diez sube al fundador.**
+
+**LAS CAIDAS PROPIAS DEL AUDITOR, REGISTRADAS IGUAL QUE LAS DEL EJECUTOR**
+(letra del encargo de la vuelta 165, TAREA 1). No son del ejecutor y no acumulan
+para sus rachas; se escriben aqui porque el registro de la casa no distingue de
+quien es la mano que cae.
+
+**Y SE DECLARA LA DISCREPANCIA DE CIFRA DEL PROPIO ENCARGO, EN VEZ DE
+RESOLVERLA COPIANDO** (`EJECUTOR.md` 2). Su TAREA 1 pide registrar *"MIS DOS
+CAIDAS de la seccion 4 del acta"*; su prosa de apertura, en el mismo encargo,
+dice *"Y VAN MIS TRES CAIDAS DE HOY, que se registran igual que las tuyas"* y
+las enumera. La seccion 4 del acta 164, CONTADA HOY por este instrumento dentro
+del cuerpo acotado del acta, trae TRES negritas `CAIDA n`. Se registran LAS QUE
+LA SECCION CONTIENE: registrar tres cubre dos, y registrar dos dejaria una caida
+del auditor sin registro.
+
+  - **CAIDA 1 (`docs/loop/ACTA_AUDITOR.md:54578`, leida hoy).** Titulo literal del
+    acta: *"CAIDA 1. CORRI `run_phase1.py` SUELTO Y CASI PUBLICO UN NUMSTAT FALSO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y NO ACUMULA PARA NINGUNA RACHA DEL EJECUTOR, porque no es suya. Su remedio esta ACATADO en el procedimiento de esta vuelta y es comprobable en el bloque de apertura: `scripts/loop/vuelta165_apertura.py` corre el ciclo ENTERO y en su orden (`--reaplico-curaduria`, `etiquetas_de_cara --aplicar`, `sync_assets_web` y DESPUES el `numstat`), nunca `run_phase1` suelto, y su `numstat` de `dataset/ web/ engine/` da CERO FILAS.
+  - **CAIDA 2 (`docs/loop/ACTA_AUDITOR.md:54589`, leida hoy).** Titulo literal del
+    acta: *"CAIDA 2. SELLE A CIEGAS UN RECHAZO DEL CAMINO DEL EJECUTOR Y EL FICHERO LO DESMIENTE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y LO QUE ENSENA SE ESCRIBE ENTERO: una ciega que no puede ver la razon tampoco puede refutar la razon, y lo que la ciega decide es la CLASE y no el camino ajeno. No acumula para ninguna racha del ejecutor. La `LD-OPC05-101` no se reabre por esto: su letra coincide por los dos caminos y la 6.2 la firma.
+  - **CAIDA 3 (`docs/loop/ACTA_AUDITOR.md:54605`, leida hoy).** Titulo literal del
+    acta: *"CAIDA 3. CORRI LA BATERIA CON MI PROPIO TRABAJO AL LADO, Y ME CAZO SU GUARDA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y SU REMEDIO SE ACATA EN EL PROCEDIMIENTO DE ESTA VUELTA: la bateria se corre SOLA, sin trabajo del ejecutor al lado, y su comprobacion de RUIDO DE CONCURRENCIA se publica con la cifra que salga. Y va con lo que la propia caida ensena sobre la cifra que arrastra: el reloj de 19,9 minutos del auditor esta medido CON ruido, asi que es un TECHO y no un suelo, y asi se cita en la TAREA 4.
+
+**LO QUE ESTE REGISTRO NO CIERRA.** La vara `P.5.1` sigue CONGELADA y ninguna de
+estas diez la estrecha ni la ensancha. La `LD-OPC05-005` y la `LD-OPC05-101` NO
+se reabren aqui ni en ningun sitio de la vuelta 165: la 6.1 confirma la primera
+y la 6.2 firma la segunda. La `OP-L-01` que abre la 6.10 se ejecuta en la TAREA
+6 de la vuelta 165 y, si su texto no alcanza para ejecutarse sin decidir, sale
+por PARADA y no por improvisacion.

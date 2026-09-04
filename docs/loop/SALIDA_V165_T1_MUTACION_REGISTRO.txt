@@ -1,0 +1,72 @@
+==============================================================================
+VUELTA 165, TAREA 1: CASO POSITIVO POR MUTACION DEL REGISTRADOR DEL ACTA 164
+==============================================================================
+
+A) LA CIFRA DE CAIDAS SIGUE AL ACTA Y NO A UNA CONSTANTE
+   acta fabricada con 1 caidas -> el conteo ve 1
+   acta fabricada con 2 caidas -> el conteo ve 2
+   acta fabricada con 3 caidas -> el conteo ve 3
+   acta fabricada con 5 caidas -> el conteo ve 5
+
+B) EL ACOTADO DEJA FUERA EL RUIDO DE OTRAS ACTAS
+   sin acotar, el fichero entero trae 5 negritas CAIDA
+   acotado al cuerpo, trae 3
+
+C) LOS CAMINOS DE PARADA SIGUEN VIVOS
+   duplicada: PARADA: 6.5 aparece 2 veces dentro del acta 164.
+   ausente: PARADA: 6.7 aparece 0 veces dentro del acta 164.
+   negrita sin cierre: PARADA: la negrita de 6.9 no cierra dentro de su parrafo.
+
+D) UNA CAIDA SIN GLOSA TIENE QUE PARAR, NO PUBLICARSE COJA
+   claves del acta de 5 caidas: CAIDA 1, CAIDA 2, CAIDA 3, CAIDA 4, CAIDA 5
+   sin glosa escrita en este instrumento: CAIDA 4, CAIDA 5
+
+E) EL ACTA DE VERDAD, LEIDA HOY
+   cuerpo del acta 164: lineas 54404 a 54828
+   CIFRA adjudicaciones que se leen exactamente una vez: 10
+   CIFRA caidas que trae la seccion 4: 3
+   CIFRA negritas que se leen sin error: 13 de 13
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   A_con_1_caidas_ve_1                            PASA   (real=1 esperado=1)
+   A_con_2_caidas_ve_2                            PASA   (real=2 esperado=2)
+   A_con_3_caidas_ve_3                            PASA   (real=3 esperado=3)
+   A_con_5_caidas_ve_5                            PASA   (real=5 esperado=5)
+   B_sin_acotar_hay_ruido                         PASA   (real=5 esperado=5)
+   B_acotado_no_lo_ve                             PASA   (real=3 esperado=3)
+   B_el_acotado_ve_las_diez_adjudicaciones        PASA   (real=10 esperado=10)
+   B_sin_acotar_la_6_1_esta_tres_veces            PASA   (real=3 esperado=3)
+   C_duplicada_para                               PASA   (real=True esperado=True)
+   C_ausente_para                                 PASA   (real=True esperado=True)
+   C_negrita_sin_cierre_para                      PASA   (real=True esperado=True)
+   D_las_que_no_tienen_glosa_se_detectan          PASA   (real=2 esperado=2)
+   D_las_tres_de_hoy_SI_tienen_glosa              PASA   (real=0 esperado=0)
+   E_el_acta_164_trae_las_diez_adjudicaciones     PASA   (real=10 esperado=10)
+   E_el_acta_164_trae_TRES_caidas                 PASA   (real=3 esperado=3)
+   E_la_frase_de_la_sede_esta_una_vez_en_el_fichero PASA   (real=1 esperado=1)
+   E_y_cero_veces_dentro_del_acta_164             PASA   (real=0 esperado=0)
+   E_las_trece_negritas_se_leen_sin_error         PASA   (real=13 esperado=13)
+   CIFRA casos: 18 | pasan: 18 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_con_1_caidas_ve_1                            CAE   (esperado mutado=2)
+   A_con_2_caidas_ve_2                            CAE   (esperado mutado=3)
+   A_con_3_caidas_ve_3                            CAE   (esperado mutado=4)
+   A_con_5_caidas_ve_5                            CAE   (esperado mutado=6)
+   B_sin_acotar_hay_ruido                         CAE   (esperado mutado=6)
+   B_acotado_no_lo_ve                             CAE   (esperado mutado=4)
+   B_el_acotado_ve_las_diez_adjudicaciones        CAE   (esperado mutado=11)
+   B_sin_acotar_la_6_1_esta_tres_veces            CAE   (esperado mutado=4)
+   C_duplicada_para                               CAE   (esperado mutado=False)
+   C_ausente_para                                 CAE   (esperado mutado=False)
+   C_negrita_sin_cierre_para                      CAE   (esperado mutado=False)
+   D_las_que_no_tienen_glosa_se_detectan          CAE   (esperado mutado=3)
+   D_las_tres_de_hoy_SI_tienen_glosa              CAE   (esperado mutado=1)
+   E_el_acta_164_trae_las_diez_adjudicaciones     CAE   (esperado mutado=11)
+   E_el_acta_164_trae_TRES_caidas                 CAE   (esperado mutado=4)
+   E_la_frase_de_la_sede_esta_una_vez_en_el_fichero CAE   (esperado mutado=2)
+   E_y_cero_veces_dentro_del_acta_164             CAE   (esperado mutado=1)
+   E_las_trece_negritas_se_leen_sin_error         CAE   (esperado mutado=14)
+   CIFRA casos que caen al mutar el esperado: 18 de 18
+
+VERDE: los 18 casos pasan tal cual y los 18 caen al mutar el esperado.
