@@ -1,0 +1,58 @@
+==============================================================================
+VUELTA 168, TAREA 4: CASO POSITIVO POR MUTACION DE LA PRUEBA POR CITA
+==============================================================================
+
+A) LOS CINCO PUNTOS SE BUSCAN Y NO SE SUPONEN
+   un cuerpo que trae los cinco               -> 5 de 5
+   le quito los dos sellos                    -> 4 de 5
+   le quito ademas SIN DERIVA                 -> 3 de 5
+   un cuerpo vacio                            -> 0 de 5
+   un cuerpo que habla de otra cosa           -> 0 de 5
+
+B) EL COMMIT REAL, BUSCADO POR GIT HOY
+   hash medido: e966d896
+   LISTA -> HECHA
+   puntos presentes en su cuerpo: 5 de 5
+
+C) LA NOTA CAMBIA SI CAMBIA LA MEDICION
+   la nota real nombra e966d896 y declara que el instrumento sigue rojo
+
+D) PASADA 1, LOS CASOS TAL CUAL
+   A_un_cuerpo_que_trae_los_cinco                         PASA   (real=5 esperado=5)
+   A_le_quito_los_dos_sellos                              PASA   (real=4 esperado=4)
+   A_le_quito_ademas_SIN_DERIVA                           PASA   (real=3 esperado=3)
+   A_un_cuerpo_vacio                                      PASA   (real=0 esperado=0)
+   A_un_cuerpo_que_habla_de_otra_cosa                     PASA   (real=0 esperado=0)
+   B_el_hash_medido_empieza_por_e966d896                  PASA   (real=True esperado=True)
+   B_lo_mueve_de_LISTA_a_HECHA                            PASA   (real='LISTA->HECHA' esperado='LISTA->HECHA')
+   B_es_el_UNICO_movimiento_de_estado                     PASA   (real=1 esperado=1)
+   B_y_tiene_UN_solo_nacimiento                           PASA   (real=1 esperado=1)
+   B_el_nacimiento_no_es_el_mismo_commit_que_el_movimient PASA   (real=False esperado=False)
+   B_su_cuerpo_trae_los_cinco_puntos                      PASA   (real=5 esperado=5)
+   C_la_nota_no_es_la_misma_con_otro_commit               PASA   (real=False esperado=False)
+   C_la_nota_real_nombra_el_hash_medido                   PASA   (real=True esperado=True)
+   C_la_nota_real_dice_LISTA_a_HECHA                      PASA   (real=True esperado=True)
+   C_la_nota_declara_que_el_instrumento_sigue_rojo        PASA   (real=True esperado=True)
+   C_y_declara_que_NO_toca_el_instrumento                 PASA   (real=True esperado=True)
+   CIFRA casos: 16 | pasan: 16 | fallan: 0
+
+E) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_un_cuerpo_que_trae_los_cinco                         CAE   (esperado mutado=6)
+   A_le_quito_los_dos_sellos                              CAE   (esperado mutado=5)
+   A_le_quito_ademas_SIN_DERIVA                           CAE   (esperado mutado=4)
+   A_un_cuerpo_vacio                                      CAE   (esperado mutado=1)
+   A_un_cuerpo_que_habla_de_otra_cosa                     CAE   (esperado mutado=1)
+   B_el_hash_medido_empieza_por_e966d896                  CAE   (esperado mutado=False)
+   B_lo_mueve_de_LISTA_a_HECHA                            CAE   (esperado mutado='LISTA->HECHA_mutado')
+   B_es_el_UNICO_movimiento_de_estado                     CAE   (esperado mutado=2)
+   B_y_tiene_UN_solo_nacimiento                           CAE   (esperado mutado=2)
+   B_el_nacimiento_no_es_el_mismo_commit_que_el_movimient CAE   (esperado mutado=True)
+   B_su_cuerpo_trae_los_cinco_puntos                      CAE   (esperado mutado=6)
+   C_la_nota_no_es_la_misma_con_otro_commit               CAE   (esperado mutado=True)
+   C_la_nota_real_nombra_el_hash_medido                   CAE   (esperado mutado=False)
+   C_la_nota_real_dice_LISTA_a_HECHA                      CAE   (esperado mutado=False)
+   C_la_nota_declara_que_el_instrumento_sigue_rojo        CAE   (esperado mutado=False)
+   C_y_declara_que_NO_toca_el_instrumento                 CAE   (esperado mutado=False)
+   CIFRA casos que caen al mutar el esperado: 16 de 16
+
+VERDE: los 16 casos pasan tal cual y los 16 caen al mutar el esperado.

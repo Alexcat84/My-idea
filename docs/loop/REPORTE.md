@@ -47,9 +47,9 @@ tabla tallada entera cuando la vuelta cierre.
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS: el acta 167 en `R.37`, y la nota adosada al `R.36` | **CERRADA** | `SALIDA_V168_T1_REGISTRO_ACTA_167.txt`, `SALIDA_V168_T1_NOTA_R36.txt`, `SALIDA_V168_T1_MUTACION_NOTA_R36.txt` |
 | **TAREA 2** | EL REPORTE QUE CUBRE LAS VUELTAS 166 Y 167 | **CERRADA** | `SALIDA_V168_T2_RECONSTRUCCION_166_167.txt`, `SALIDA_V168_T2_MUTACION_RECONSTRUCTOR.txt` |
-| **TAREA 3** | EL MANTENIMIENTO DE LA BATERIA (3.a nomina, 3.b re anclaje, 3.c corrida entera) | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 4** | `OP-V-01` POR LA DECISION 5, VERIFICADA CONTRA GIT | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 5** | ABRIR LAS SEIS POR LA VARA DEL INSTRUMENTO (5.a, 5.b valvula, 5.c depende_de) | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 3** | EL MANTENIMIENTO DE LA BATERIA (3.a nomina, 3.b re anclaje, 3.c corrida entera) | **CERRADA CON UN ROJO QUE SE TRAE** | `SALIDA_V168_BATERIA.txt`, `SALIDA_V168_T3_BATERIA_CIERRE.txt` |
+| **TAREA 4** | `OP-V-01` POR LA DECISION 5, VERIFICADA CONTRA GIT | **CERRADA** | `SALIDA_V168_T4_OP_V_01.txt`, `SALIDA_V168_T4_MUTACION_OP_V_01.txt` |
+| **TAREA 5** | ABRIR LAS SEIS POR LA VARA DEL INSTRUMENTO (5.a, 5.b valvula, 5.c depende_de) | **CERRADA, CON DOS CLAUSULAS QUE SE TRAEN** | `SALIDA_V168_T5_LAS_SEIS.txt` |
 <!-- FIN TABLA DE TAREAS -->
 
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
@@ -203,5 +203,254 @@ en el comentario del propio instrumento, junto al caso, sin borrar el motivo.
 esperado, exit 0.** El contador de tareas se probo ademas sobre corredores
 fabricados en memoria, incluido uno cuyo asunto NOMBRA una tarea sin abrirla
 (*"ACTA: la TAREA 5 quedo en parada"*), que el instrumento no cuenta.
+
+### TAREA 3, EL MANTENIMIENTO DE LA BATERIA, Y UN ROJO QUE SOBREVIVE Y SE TRAE
+
+**Salidas:** `docs/loop/SALIDA_V168_BATERIA.txt` (la corrida entera) y
+`docs/loop/SALIDA_V168_T3_BATERIA_CIERRE.txt` (la re corrida sellada al cierre).
+**Instrumento:** `scripts/loop/verificar_mutaciones_viejas.py`.
+
+**(3.a) LOS SEIS ARNESES DE LAS VUELTAS 166 Y 167 ENTRAN A LA NOMINA**, mas los
+que nacen hoy. La cifra que lo prueba no es una afirmacion mia: la recomputa la
+propia bateria al cierre y la publica. **`CIFRA arneses POSTERIORES a la nomina
+que se quedan FUERA (recomputado al cierre): 0`**, contra los **6** que el acta
+167 midio en su hallazgo 4.5. Y **`CIFRA entradas de la nomina que el censo NO
+VE: 0`**, o sea que la nomina sigue siendo visible a su propio censo.
+
+**(3.b) EL ANCLA DE `vuelta165_tarea6_mutacion_op_l_01.py` PASA DE TRES A CINCO
+CLAUSULAS, Y NO SE AFLOJA AL HACERLO.** La vuelta 166 anadio `V4` y `V5` a
+`OP-L-01` **por adicion** y el acta 166 lo adjudico bien en su `6.8`; el arnes se
+quedo atras porque la bateria no se corrio en dos vueltas. El caso sigue siendo
+una **igualdad exacta** contra el conteo real de la ficha, asi que vuelve a caer
+en rojo si alguien anade o quita una clausula sin declararlo: **cambia el numero,
+no el filo**. Y se le anaden **dos invariantes que el numero solo no da**: que
+**2 de las 5** sean `CORRECCION DECLARADA` y que **las 3 viejas sigan enteras**,
+para que reescribir la ficha borrando el texto viejo caiga aunque el conteo
+siguiera dando cinco. Corrido: **16 casos pasan y los 16 caen al mutar**, exit 0.
+
+**(3.c) LA BATERIA, RE CORRIDA ENTERA, Y SU SALIDA PEGADA.** Cifras contadas de
+`docs/loop/SALIDA_V168_T3_BATERIA_CIERRE.txt`:
+
+| lo que mide la bateria | cifra al cierre de la 168 | cifra del acta 167 |
+|---|---:|---:|
+| arneses cronometrados (la nomina) | **72** | 62 |
+| ANCLA PERDIDA | **0** | 0 |
+| NO MORDIO | **1** | **2** |
+| NO REPRODUCIBLE | **0** | 0 |
+| CASO DECLARADO (los dos de siempre, con su marca) | **2** | 2 |
+| arneses posteriores FUERA de la nomina | **0** | **6** |
+| entradas de la nomina invisibles al censo | **0** | (no publicada) |
+| RUIDO DE CONCURRENCIA | **0** | 0 |
+
+**LOS DOS ROJOS DEL ACTA 167 ESTAN ARREGLADOS Y SE MIDE QUE LO ESTAN:**
+`vuelta163_tarea2_mutacion_nomina.py`, que mordia los seis fuera de la nomina,
+sale hoy **exit 0 OK**; y `vuelta165_tarea6_mutacion_op_l_01.py`, re anclado,
+tambien.
+
+**PERO LA BATERIA NO SALE EN VERDE, Y ESO ES LO PRIMERO QUE ESTA FILA DICE.**
+El encargo pedia verde y ordena que, si un rojo sobrevive, **se traiga sin
+aflojar la guarda**. Sobrevive uno, y **no es de los dos que el encargo mandaba
+arreglar: es un TERCERO que la primera corrida completa en tres vueltas destapo.**
+
+**EL ROJO QUE SE TRAE: `vuelta166_tarea3_mutacion_retrato.py`, exit 1 NO MORDIO,
+3 casos de 23 fallan.** Diagnosticado corriendolo solo, no supuesto:
+
+| caso que cae | real | esperado |
+|---|---|---|
+| `B_con_13_tachadas_el_siguiente_es_TRECE` | `CATORCE VECES` | `TRECE VECES` |
+| `B_mutar_la_palabra_no_mueve_el_computo` | `CATORCE VECES` | `TRECE VECES` |
+| `B_la_guarda_CAE_con_el_contador_desincronizado` | `True` | `False` |
+
+**LA CAUSA, MEDIDA: ES LA MISMA ESPECIE QUE EL 3.b, Y POR ESO NO SE TOCA SIN
+ORDEN.** El arnes lee la fila de los colapsos del documento VIVO y cuenta sus
+tachadas (`cuantas`), pero su valor esperado es la **CONSTANTE LITERAL**
+`"TRECE VECES"`. La vuelta 167, en su TAREA 4, anadio una tachada mas por el
+carril del banco 9.10, cosa que el acta 167 verifico y dio por buena; con eso el
+computo pasa a `CATORCE` y la constante se queda en `TRECE`. **La guarda muerde
+algo cierto: que la campana movio su sujeto. No esta rota.**
+
+**POR QUE NO LO ARREGLO YO, con la letra delante.** El encargo autoriza re
+anclar **uno** (`3.b`, nombrado por su fichero) y ordena que lo que sobreviva
+**se traiga**. Re anclar un arnes que el encargo no nombra seria decidir por mi
+cuenta que su sujeto se movio legitimamente, y esa es justo la lectura que el
+auditor tiene que hacer. **El remedio esta escrito y no lo aplico**: la
+constante `"TRECE VECES"` tiene que salir del conteo, igual que `cuantas`, y el
+`t.replace("DOCE VECES,", ...)` de su segundo caso tambien esta clavado al texto
+vivo. **Marcado como DISCUTIBLE.**
+
+### TAREA 4, `OP-V-01` POR LA DECISION 5: HAY PRUEBA, Y LA FICHA NO VUELVE A PENDIENTE
+
+**Salidas:** `docs/loop/SALIDA_V168_T4_OP_V_01.txt` y
+`docs/loop/SALIDA_V168_T4_MUTACION_OP_V_01.txt`. **Instrumento:**
+`scripts/loop/vuelta168_tarea4_op_v_01.py`.
+
+**EL HASH NO SE RECIBIO DEL ENCARGO: SE BUSCO.** El encargo nombra `e966d896` y
+ordena *"VERIFICALO TU TAMBIEN"*, asi que el instrumento recorre los commits que
+tocan `docs/plan/OPERACIONES.jsonl` y compara la ficha contra la de su padre
+hasta encontrar el que cambia el campo. Cifras de la seccion A de la salida:
+
+| lo que se midio | cifra |
+|---|---|
+| commits que MUEVEN el estado de `OP-V-01` en toda la historia | **1**, `e966d896`, `LISTA -> HECHA` |
+| commits que la HACEN NACER, contados aparte | **1**, `c891b3ff`, `(nace) -> LISTA` |
+| hash del encargo contra hash medido | `e966d896` contra `e966d896`, **COINCIDEN** |
+| los cinco puntos transversales en el cuerpo del commit medido | **5 de 5 PRESENTES** |
+
+**LOS CINCO PUNTOS SE BUSCARON POR SU MARCA PROPIA Y NO POR SU ORDEN** (seccion
+C): Gate 0 con su ciclo entero y `26 en OK`; las tres suites (`motor 25/25`,
+`1.040 pasadas`, `tsc exitcode 0`); el vuelo `16 de 16` en la `corrida K`; la
+`PRUEBA DE RUMBOS` `SIN DERIVA`; y el reindexado con `d70adc1d` y `42223fcc`.
+**Si faltara uno, el instrumento paraba y la ficha volvia a pendiente**, que es
+lo que la decision 5 manda. No falto ninguno.
+
+**LO ESCRITO, Y ES CORTO A PROPOSITO** (seccion E). La ficha **YA TRAIA** la
+corrida K y los dos sellos: los escribio el propio commit del fundador. Lo que
+**no traia**, y es exactamente lo que el hallazgo 4.4 del acta 167 declaro no
+haber verificado, es **que commit movio el estado**. Eso es lo que se adosa:
+**1.711 caracteres anadidos, de 3.394 a 5.105; la nota vieja sigue ENTERA dentro
+de la nueva (comprobado por el instrumento, no afirmado); 71 fichas antes y 71
+despues; 18 claves, el esquema no crece; y el estado NO se movio.**
+
+**Y LA NOTA DICE ALGO MAS, QUE ES LO QUE LE IMPIDE SER UN FALSO VERDE: LA FICHA
+SIGUE SIN CALZAR CON EL INSTRUMENTO, Y SE DECLARA.** Escribir la prueba por cita
+**no cambia** el veredicto de `vuelta150_3_relectura_expediente.py`, que en esta
+misma vuelta sigue midiendo `OP-V-01` como **HECHA SIN NINGUNA PRUEBA** (medido
+en la TAREA 5: `CIFRA fichas HECHA sin ninguna prueba: 1`). **Y EL INSTRUMENTO NO
+SE TOCA PARA QUE CAMBIE.** Sus tres pruebas son grafo, codigo vivo y huella en
+git con rutas `dataset/`, `web/` o `engine/`, y `e966d896` toca `docs/` y
+`examples/`, medido con `git show --numstat`. **La prueba por cita es una CUARTA
+via que la decision del fundador autoriza para esta ficha, no una de las tres.**
+Aflojar el instrumento para que la fila se pusiera verde habria sido la
+degradacion callada que el canon 9 del banco prohibe. **Marcado como
+DISCUTIBLE.**
+
+**EL CASO POSITIVO POR MUTACION: 16 casos pasan tal cual y los 16 caen al mutar
+el esperado**, exit 0. El veredicto de los cinco puntos es variable computada:
+alimentado con cuerpos fabricados, el mismo codigo da 5, 4, 3 y 0 segun lo que el
+cuerpo traiga.
+
+**UNA CIFRA MIA QUE ESTUVO MAL Y LA CAZO EL ARNES, declarada y no tapada:** puse
+que habia **1** movimiento de estado y el arnes midio **2**. No era la ficha, era
+mi vara: contaba el NACIMIENTO (`None -> LISTA`, en `c891b3ff`) como movimiento.
+Se arreglo **en la fuente**, separando las dos poblaciones y publicando las dos,
+que es mas exacto que antes y no mas laxo. El motivo queda escrito en el
+comentario del instrumento.
+
+### TAREA 5, LAS SEIS ABIERTAS POR LA VARA DEL INSTRUMENTO
+
+**Salida:** `docs/loop/SALIDA_V168_T5_LAS_SEIS.txt`. **Instrumento:**
+`scripts/loop/vuelta168_tarea5_abrir_las_seis.py`, que **no reimplementa la vara:
+invoca** `scripts/loop/vuelta150_3_relectura_expediente.py` y lee su salida.
+**Cero nodos tocados, cero estados movidos, cero fichas editadas por esta tarea.**
+
+**LA VARA, CORRIDA EN ESTA VUELTA** (seccion 0), comando pegado al lado:
+`python scripts/loop/vuelta150_3_relectura_expediente.py --corte edbc1a48
+--apertura 36bafc1a`, exit 0.
+
+| lo que mide el instrumento | cifra de hoy | cifra del acta 167 |
+|---|---:|---:|
+| fichas del expediente | **71** | 71 |
+| fichas que NO CALZAN | **37** | 37 |
+| congeladas DECLARADAS | **24** | 24 |
+| congeladas EN SILENCIO | **12** | 12 |
+| `HECHA` sin ninguna prueba | **1** | 1 |
+| `LISTA` sin ninguna prueba de ejecucion | **6** | 6 |
+
+**LAS SEIS SE LEYERON DE LA SALIDA DEL INSTRUMENTO, NO DE UNA LISTA MIA**, y el
+instrumento nombra: `OP-L-01`, `OP-L-02`, `OP-L-03`, `OP-I-01`,
+`OP-M-02-MEDIOS`, `OP-M-02-ADMIT`. **MISMO CONJUNTO que el encargo: SI.** Si
+hubieran discrepado, el instrumento paraba.
+
+**5.b LA VALVULA DE VIGENCIA, CORRIDA ANTES DE TOCAR NADA, Y LAS DOS SALEN
+CUMPLIDAS POR CONSUNCION.** La medicion **no se copio de la nota de las fichas**
+(que la traen desde la vuelta 64): se re corrio hoy con
+`scripts/loop/vuelta64_consumidas.py`, porque una nota vieja es contraste y nunca
+fuente.
+
+| ficha | sus dos miembros resueltos contra el grafo de HOY | veredicto |
+|---|---|---|
+| `OP-M-02-MEDIOS` | `seis_medios_comunicacion_cliente` DEPRECADO va a `estrategia_multicanal_bienvenida`, que esta VIVO: **UN solo vivo** | **CUMPLIDA POR CONSUNCION, NO SE EJECUTA** |
+| `OP-M-02-ADMIT` | `fase_admit` DEPRECADO va a `fase_admit_celebracion`, que esta VIVO: **UN solo vivo** | **CUMPLIDA POR CONSUNCION, NO SE EJECUTA** |
+
+**QUIEN CONSUMIO EL ACTO, CON SU LINEA:** `OP-U-01` TRAMO 3, vuelta 56, acto 32,
+lote B, `docs/plan/03_FUSIONES.md` **linea 2091** para MEDIOS; y `OP-U-01` TRAMO
+2, vuelta 55, acto 38, lote B, **linea 1840** para ADMIT. **Las cinco
+`OP-M-02-*` resuelven a un solo vivo (5 de 5).** Y la valvula publica ademas lo
+que ninguna de las dos fichas puede tapar: **DIVERGEN**, porque cada ficha
+adjudico el 12 ago 2026 el superviviente OPUESTO al que el tramo dejo vivo. **Eso
+no se deshace y no se copia: se declara**, como ya hizo la vuelta 64.
+
+**5.c LOS `depende_de`, LEIDOS POR EL INSTRUMENTO Y NO POR EL CAMPO.** El
+encargo avisa: *"Si el instrumento dice otra cosa, paras y lo traes."* **No dice
+otra cosa.**
+
+| `OP-D-*` | estado (CAMPO, historico) | pruebas (INSTRUMENTO) | por la vara nueva |
+|---|---|---|---|
+| `OP-D-01` | LISTA | P2+P3a | **CUMPLIDA** |
+| `OP-D-02` | LISTA | P1+P2+P3a | **CUMPLIDA** |
+| `OP-D-03` | LISTA | P3a | **CUMPLIDA** |
+| `OP-D-04` | LISTA | P2+P3a | **CUMPLIDA** |
+| `OP-D-05` | LISTA | P1+P3a | **CUMPLIDA** |
+| `OP-D-06` | LISTA | P3a | **CUMPLIDA** |
+
+**6 de 6 con prueba, 0 sin prueba**, asi que **`OP-L-02` y `OP-L-03` dejan de
+estar bloqueadas**. **Y LA DIFERENCIA ENTRE LAS DOS VARAS SE PUBLICA EN VEZ DE
+DISIMULARSE:** por el campo `estado` las seis siguen en `LISTA`, y la seccion
+3.c del propio instrumento, que **lee el campo**, no las lista como
+desbloqueadas. Es exactamente el caso que la decision del fundador zanja.
+
+**5.a `OP-I-01`, ABIERTA Y MEDIDA CLAUSULA A CLAUSULA.** No escribe nada en el
+grafo (0 elementos entre `nodos`, `preservar`, `eliminar` y `aristas_nuevas`).
+El inventario de hoy, contado de `docs/plan/INVENTARIO.jsonl`: **672 entradas**
+(556 actos, 54 familias de ids, 20 figuras, 19 defectos, 13 racimos, 10
+dominios), en **4 fechas de corte** (11 ago = 323, 12 ago = 11, 13 ago = 337, 14
+ago = 1).
+
+- **CLAUSULA 1**, *toda entrada lleva su `fecha_corte`*: **SE CUMPLE**, 0
+  entradas sin corte.
+- **CLAUSULA 2**, *toda forma con cobertura incompleta va marcada PROVISIONAL*:
+  **NO ES MEDIBLE POR CONTEO Y SE DICE en vez de darla por buena.** Se pueden
+  contar las **2** que SI estan marcadas; para saber si estan TODAS haria falta
+  la lista de las incompletas, y el inventario no la trae como campo.
+- **CLAUSULA 3**, *todo hueco va NOMBRADO, nunca rellenado*: **119** entradas
+  nombran un hueco, y la nota de la ficha nombra los suyos.
+- **CLAUSULA 4**, *el inventario se recomputa entero con el disparador de
+  `08_VERIFICACION`*: **ESTA ES LA QUE NO SE PUEDE EJECUTAR SIN DECIDIR.** La
+  nota de la ficha declara **335 actos (280 CERRADOS, 55 ABIERTOS)** al corte
+  3.388, medidos en la vuelta 14. **Medido hoy sobre
+  `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`: 332 lineas, 278 CERRADOS, 54
+  ABIERTOS.** **La discrepancia se declara y NO se resuelve copiando.** Y se
+  dice de donde viene, trazada commit a commit con `git show` sobre ese fichero:
+  **335 en `7f4ec6d9`** (vuelta 11), **334 en `7cec9ecc`**, **333 en
+  `97552714`**, **332 en `70878328`** (vuelta 40, `OP-D-05`), cada bajada
+  declarada en el asunto de su propio commit. **La cifra de la nota no es falsa:
+  es de su corte.** Lo que no existe es **un instrumento que regenere el
+  inventario**: sus dos formas se escribieron a mano entre las vueltas 17 y 20, y
+  la ficha no escribe el procedimiento. **Recomputarlo entero hoy exigiria
+  decidir su alcance**, y `AUDITOR.md` 3 dice que una operacion cuyo texto no
+  alcanza para ejecutarse sin decidir es **PARADA, no una improvisacion**.
+
+**5.a `OP-L-01`, ABIERTA Y MEDIDA CLAUSULA A CLAUSULA.** 5 clausulas, 2 de ellas
+`CORRECCION DECLARADA` de la vuelta 166; no escribe nada en el grafo.
+
+- **CLAUSULA 1: CERRADA** por la correccion de la vuelta 166, verificada por el
+  acta 166 y adjudicada en su `6.8`. No se reabre.
+- **CLAUSULA 2: CERRADA** por la correccion de la vuelta 166: el `2.117` es
+  **TESTIGO de su corte, no condicion**. Medido hoy, contado del fichero, el
+  marcador vale **3.388**.
+- **CLAUSULA 3**, *cada nomina afectada se re-mide con su cobertura al lado
+  (banco 9.26)*: **SIGUE ABIERTA, y con la medicion delante.** Para re-medir
+  *"cada nomina afectada"* hay que saber cuales son, y la ficha no las escribe:
+  sus cuatro listas de escritura estan **vacias**. La sede que nombra miembros es
+  el inventario, o sea `OP-I-01`, cuya clausula 4 acaba de quedar declarada no
+  ejecutable sin decidir. **La cadena es real y no una excusa: sin inventario
+  recomputado no hay nomina que re-medir.**
+
+**EL SALDO DE LAS SEIS, CONTADO:** **2 cumplidas por consuncion y no
+ejecutadas** (`OP-M-02-MEDIOS`, `OP-M-02-ADMIT`); **2 desbloqueadas por la vara
+nueva y no ejecutadas en esta vuelta** (`OP-L-02`, `OP-L-03`); **2 abiertas,
+medidas clausula a clausula y con su ultima clausula bloqueada por la misma
+cadena** (`OP-I-01` clausula 4, `OP-L-01` clausula 3). **Ninguna se cierra
+declarandola cerrada, y ninguna se improvisa.**
 
 <!-- FIN ANEXO DE TAREAS -->

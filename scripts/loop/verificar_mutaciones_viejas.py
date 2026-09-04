@@ -376,6 +376,61 @@ VIEJAS = [
     #     la ficha de OP-L-01 leida hoy, cuyas cifras se miden como PRESENCIA
     #     del numeral y como DESIGUALDAD, nunca como estado clavado.
     ("vuelta165_tarea6_mutacion_op_l_01.py", False),
+    # --- LOS SEIS DE LAS VUELTAS 166 Y 167, QUE ENTRAN EN LA VUELTA 168
+    #     (TAREA 3.a; hallazgo 4.5 del acta 167, decision del fundador 4) ------
+    #
+    # POR QUE ESTABAN FUERA, Y NO ES UN DESCUIDO SUELTO SINO EL MISMO AGUJERO DE
+    # LA VUELTA 163 ABIERTO OTRA VEZ: la bateria no se corrio ni en la 166 ni en
+    # la 167 (las dos dejaron su fichero de salida en CERO BYTES), y la unica
+    # guarda que vigila esto es `vuelta163_tarea2_mutacion_nomina.py`, que vive
+    # DENTRO de la bateria. Dos vueltas sin correrla bastaron para que la nomina
+    # se quedara atras sola. El acta 167 lo midio: 6 arneses posteriores a la
+    # 165 fuera de la nomina, y su arnes centinela dando `NO MORDIO` con real 6
+    # y esperado 0, que era el propio agujero cantando.
+    #
+    # LOS SEIS ENTRAN POR LA REGLA DE SIEMPRE, Y LA REGLA ES EL SUJETO
+    # CONGELADO, NO EL CALENDARIO. Ninguno admite `--sujeto`, ninguno escribe en
+    # `docs/loop/` y ninguno se ancla a un fichero vivo que pueda moverseles
+    # debajo:
+    #   - `166_tarea1`: actas y series de mentira en memoria; sus cifras son
+    #     conteos del sujeto fabricado y deltas, no estados clavados.
+    #   - `166_tarea2`: la ficha de OP-L-01 leida hoy, medida por PRESENCIA de
+    #     numeral y por DESIGUALDAD, mas mapas fabricados en memoria.
+    #   - `166_tarea3`: el retrato medido sobre copias en memoria; la fila que
+    #     valia cero se comprueba como delta de la resta.
+    #   - `166_tarea6`: la guarda estrechada, con su sujeto fabricado.
+    #   - `167_tarea1`: actas de mentira como listas de lineas; la concordancia
+    #     del titulo se computa de los conteos.
+    #   - `167_tarea3`: copia mutada del recomputo en memoria; su rojo es el de
+    #     la comprobacion `ii` y CAE si alguien devuelve el ultimo gana.
+    ("vuelta166_tarea1_mutacion_registro.py", False),
+    ("vuelta166_tarea2_mutacion_correccion.py", False),
+    ("vuelta166_tarea3_mutacion_retrato.py", False),
+    ("vuelta166_tarea6_mutacion_guarda.py", False),
+    ("vuelta167_tarea1_mutacion_registro.py", False),
+    ("vuelta167_tarea3_mutacion_ii.py", False),
+    # Y LOS QUE NACEN HOY, EN LA VUELTA 168, por la misma regla aplicada a si
+    # misma: entran el dia que nacen y no se esperan una vuelta mas. Meterlos
+    # ahora es ademas lo unico que impide repetir el agujero que esta misma
+    # TAREA 3 esta cerrando. Los tres eligen su sujeto por computo o lo fabrican
+    # en memoria, ninguno admite `--sujeto` y ninguno escribe en `docs/loop/`:
+    #   - `168_tarea1_mutacion_registro`: actas de mentira en memoria mas el
+    #     acta 167 real; la linea del fundador se computa del reparto.
+    #   - `168_tarea1_mutacion_nota`: mediciones fabricadas en memoria mas los
+    #     blobs del commit del acta 167, que es un commit FIJO de la historia.
+    #   - `168_tarea2_mutacion_reconstructor`: corredores fabricados en memoria
+    #     mas los corredores reales de las vueltas 166 y 167, delimitados por
+    #     commits de acta que ya no se mueven.
+    ("vuelta168_tarea1_mutacion_registro.py", False),
+    ("vuelta168_tarea1_mutacion_nota.py", False),
+    ("vuelta168_tarea2_mutacion_reconstructor.py", False),
+    #   - `168_tarea4_mutacion_op_v_01`: cuerpos de commit fabricados en memoria
+    #     mas el commit del cierre de la fase 08, que es un commit FIJO de la
+    #     historia. Nace DESPUES de la primera corrida de la bateria de esta
+    #     vuelta y por eso la bateria se RE CORRE ENTERA al cierre: una nomina
+    #     que crece despues de la corrida que la mide deja la corrida coja, y eso
+    #     es justo el agujero que esta TAREA 3 cerro.
+    ("vuelta168_tarea4_mutacion_op_v_01.py", False),
     # --- LOS CINCO PRE 148 QUE ENTRAN, Y ENTRAN MEDIDOS (vuelta 165, TAREA 4;
     #     adjudicaciones 6.5 y 6.6 del acta 164) --------------------------------
     #

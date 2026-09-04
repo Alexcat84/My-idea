@@ -74,7 +74,32 @@ def prueba():
     print("   CIFRA clausulas de verificacion: %d" % len(d.get("verificacion") or []))
     print("   estado: %s | fecha_corte: %s" % (d.get("estado"), d.get("fecha_corte")))
     casos.append(("C_la_ficha_no_escribe_nada", escribiria, 0))
-    casos.append(("C_tiene_tres_clausulas", len(d.get("verificacion") or []), 3))
+    # RE ANCLADO EN LA VUELTA 168 (TAREA 3.b; hallazgo 4.5 del acta 167).
+    # CORRECCION DECLARADA, Y EL MOTIVO NO SE BORRA: este caso esperaba TRES
+    # clausulas y hoy la ficha trae CINCO. NO es que la guarda se haya roto ni
+    # que se le afloje la vara para llegar al verde: LA CAMPANA MOVIO EL SUJETO
+    # A PROPOSITO. La vuelta 166, en su TAREA 2, anadio a `OP-L-01` las
+    # clausulas `V4` y `V5` POR ADICION, por el carril del banco 9.10 y con el
+    # texto viejo entero encima; el acta 166 lo verifico y lo adjudico bien en
+    # su 6.8. Este arnes se quedo anclado al numero de antes porque la bateria
+    # no se corrio ni en la 166 ni en la 167, asi que nadie lo vio hasta que el
+    # acta 167 lo midio (real 5, esperado 3).
+    # EL CASO NO SE AFLOJA AL RE ANCLARLO, Y ESO ES LO QUE IMPORTA: sigue siendo
+    # una IGUALDAD EXACTA contra el conteo real de la ficha de hoy, asi que
+    # vuelve a caer en rojo en cuanto alguien anada o quite una clausula sin
+    # declararlo. Lo que cambia es el numero, no el filo.
+    # Y SE ANADE EL INVARIANTE QUE EL NUMERO SOLO NO DA: las dos clausulas
+    # nuevas son CORRECCIONES DECLARADAS, y eso se comprueba, no se supone. Si
+    # alguien reescribiera la ficha borrando el texto viejo en vez de anadir,
+    # este caso caeria aunque el conteo siguiera dando cinco.
+    casos.append(("C_tiene_cinco_clausulas", len(d.get("verificacion") or []), 5))
+    declaradas = [c for c in (d.get("verificacion") or [])
+                  if c.startswith("CORRECCION DECLARADA")]
+    print("   CIFRA clausulas que son CORRECCION DECLARADA: %d" % len(declaradas))
+    casos.append(("C_dos_de_las_cinco_son_correccion_declarada", len(declaradas), 2))
+    casos.append(("C_las_tres_viejas_siguen_enteras",
+                  len([c for c in (d.get("verificacion") or [])
+                       if not c.startswith("CORRECCION DECLARADA")]), 3))
     casos.append(("C_sigue_en_LISTA", d.get("estado"), "LISTA"))
     casos.append(("C_su_corte_es_del_11_ago", d.get("fecha_corte"), "2026-08-11"))
     print("")
