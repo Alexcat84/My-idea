@@ -11113,3 +11113,52 @@ mapeo explicito mas TypeScript callado) puede haber comido otros.
 **LO QUE SIGUE EN PIE DE LA FICHA DE ARRIBA:** la pregunta de si la marca debe
 **sobrevivir a la replanificacion del core** es legitima y sigue siendo del
 fundador. **Pero es OTRA pregunta**, y no es la que vaciaba el carril.
+
+---
+
+## DOCTRINA DE PRUEBAS: TODA CAPA CONSUMIDORA NECESITA UNA PRUEBA DE CRUCE (decision del fundador, 4 sep 2026)
+
+> **UNA SUITE QUE FABRICA A MANO LOS OBJETOS DE UNA CAPA NO MIDE LA COSTURA CON
+> LA CAPA DE ENTRADA. TODA CAPA CONSUMIDORA NECESITA AL MENOS UNA PRUEBA DE
+> CRUCE QUE PASE POR LA ENTRADA REAL.**
+
+### POR QUE, Y EL EJEMPLAR ES DE ESTA MISMA SESION
+
+`web/lib/analytics.test.ts` construia sus `ItemAnalytics` **a mano**, con `id` y
+`protege_item` puestos, y **nunca** pasaba por `cargarEntradaAnalytics`. Por eso
+**ninguna suite** vio que el mapeo de la entrada
+(`analyticsEntrada.ts`, lineas 79 a 91) **se comia esos dos campos**, y que
+**`carrilProteccion` era SIEMPRE `[]` en la app real, para cualquier proyecto y
+desde siempre**.
+
+**Todo estaba verde mientras el defecto vivia:** `tsc` en 0, motor 25/25, web con
+1.033 pasadas, Gate 0 con 26 de 26. **Lo cazo el vuelo**, que es la unica vara que
+recorre las dos capas de verdad.
+
+**Y el codigo YA SABIA lo que necesitaba:** el `SELECT` pedia los dos campos y un
+comentario dos lineas antes decia que *"alimentan el carril de proteccion"*. El
+mapeo no los llevaba. **Como los dos son OPCIONALES en el tipo, TypeScript
+callo.** Ese es el patron completo: **tipo opcional, mas mapeo explicito, mas
+`tsc` sin nada que decir**.
+
+### LO QUE LA DOCTRINA PIDE, EN CONCRETO
+
+1. **Una prueba que parta de FILAS**, con la forma que devuelve la base, y las
+   pase por la funcion de entrada **real**. Nada de construir el tipo intermedio
+   a mano: **ese atajo es justo el que no ve el defecto**.
+2. **Que asevere lo que la capa consumidora produce**, no solo que los campos
+   estan. En el ejemplar: que **el carril trae la marca**, y anclada a la etapa
+   del protegido.
+3. **Con su caso por mutacion sobre el MAPEO**, no sobre los datos: quitar el
+   campo **del mapeo** tiene que **tumbar la prueba**. Corrido de verdad en el
+   ejemplar, y cae nombrando el campo.
+
+**EL EJEMPLAR VIVE EN `web/lib/analyticsEntrada.test.ts`** (commit `700dd8fe`).
+
+### DONDE MIRAR PRIMERO CUANDO SE APLIQUE AL RESTO
+
+**Cualquier tipo con campos OPCIONALES que un mapeo explicito pueda no llevar.**
+El barrido de esta sesion cubrio **toda** `analyticsEntrada.ts` (sus cuatro
+`.map()` y el contrato entero de `EntradaAnalytics`) y **el unico roto era el de
+los items**. **Queda por barrer el resto de capas de entrada de la app**, con la
+misma pregunta: *si este campo se cayera en el mapeo, se enteraria alguna prueba?*
