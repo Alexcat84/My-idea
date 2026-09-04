@@ -3,155 +3,174 @@ SESION EJECUTORA. FASE III, EJECUCION. RAMA pasada-unica. MODO DE
 EJECUCION CONTINUA (AUDITOR.md seccion 3), en REGIMEN COMPLETO, con las
 guardas obligatorias por operacion.
 
-TU VUELTA ES LA 164. El acta que te abre es la 163. Va en la cabecera fija
-por la adjudicacion 6.1 del acta 158: las dos guardas del cierre
-(tallar_cabecera_reporte.py y verificar_apertura_sellada.py) localizan la
-apertura buscando el acta de la vuelta N menos 1, y el invariante de la
-casa es ACTA N, VUELTA N MAS 1. Tus ficheros se llaman SALIDA_V164_*.
+TU VUELTA ES LA 165. El acta que te abre es la 164. Va en la cabecera fija
+por el invariante de la casa, ACTA N Y VUELTA N MAS 1, del que cuelgan
+tallar_cabecera_reporte.py y verificar_apertura_sellada.py. Tus ficheros se
+llaman SALIDA_V165_*.
 
-LA 163 SE CORTO A MEDIAS Y ESTA VUELTA LA TERMINA. No es un reproche y no
-hay parada: entregaste 1.a, 1.b, 1.c, 3, 4.a, 4.b y 5.a, todas verificadas
-por mi una a una en la seccion 2 del acta 163, y te cortaste dentro de la
-TAREA 2 (SALIDA_V163_T2_BATERIA_NUEVA.txt tiene CERO BYTES). Faltan la
-corrida de la bateria, la 5.b, la TAREA 6, el cierre y el reporte. Por la
-adjudicacion 6.1 del acta 163, la 164 ABSORBE esa cola: su reporte cubre
-las dos vueltas, y las salidas YA SELLADAS de la 163 no se re corren ni se
-re sellan, SE CITAN.
+LA 164 ENTREGO ENTERA Y LA VERIFIQUE CON MIS INSTRUMENTOS. Marcador
+3.388 / 551 / 72 / 5 / 2.760 con cero huecos y cero duplicados, censo
+3.853 / 3.169 / 684, aristas 8.780 / 8.740 / 17.520 / 9.914, registro 154
+filas con 13 en C y 109 en D de lectura dirigida y 110 citas con rastro,
+contador de P.5.2 en 92 / 17 / 30 / 117 / 9, las once fases sumadas en
+catalogo 82 con 36 cumplidas y 46 sin cumplir (44 sin vara escrita y 2 con
+vara que mide), la cabecera identica al tallador en sus once filas, la
+apertura VERDE con los diez nacidos en 28dde491 hijo directo del acta, y
+el motor en 25/25. TODAS ESAS LAS RECOMPUTE YO HOY. Si alguna se te mueve,
+se dice por que.
 
-LO PENDIENTE DE HOY TIENE SEDE FIJADA, Y ES ARITMETICA DE LA GUARDA
-(adjudicacion 6.2 del acta 163). En el arbol de trabajo te esperan la
-bateria nueva (scripts/loop/verificar_mutaciones_viejas.py, mas 282 lineas
-menos 5), las TRES docs/loop/SALIDA_V135_2E_MUTACION re selladas y siete
-ficheros sin versionar de la 163. NO LOS COMMITEES EN UN COMMIT SUYO: un
-commit entre el acta y la apertura es INTRUSO salvo que el encargo cite su
-hash, y ese hash no existe cuando escribo esto. VAN EN EL MISMO COMMIT QUE
-LOS DIEZ SALIDA_V164_*_APERTURA.txt, que es el primer commit del corredor
-e hijo directo del acta, y el bloque de apertura NO SE FRAGMENTA.
+Y LA BATERIA LA CORRI ENTERA YO, QUE ES LO QUE EL ACTA 163 NO CONSIGUIO:
+VERDE exit 0, 53 entradas, 92 arneses, ANCLA PERDIDA 0, NO MORDIO 0, NO
+REPRODUCIBLE 0, CASO DECLARADO 2, y cero posteriores fuera al abrir y al
+cierre. Tu veredicto reproduce entero. PERO SU RELOJ EN MI MAQUINA ES
+OTRO: 1.193,1 segundos, 19,9 minutos, contra tus 978,2 y 16,3. Ya esta
+rozando los veinte SIN un solo arnes nuevo dentro, y de ahi sale el limite
+de la TAREA 4.
 
-HASHES ADMITIDOS EN EL CORREDOR DE ESTA VUELTA: NINGUNO. El acta 163
-escribe su encargo en el mismo commit y no hay decision del fundador que
-admitir. Todo commit dentro del corredor es tuyo y cuenta como intruso.
+Y MI CIEGA COINCIDIO CONTIGO EN LAS DOS: la LD-OPC05-005 en D y la
+LD-OPC05-101 en D, selladas antes de destapar tu razon (sha1
+12da2ca8d0677a7755187b52eadd7be6c472046d). La caida de clase de la 005
+queda CONFIRMADA por segunda pluma y la 101 la FIRMO, como dije que haria.
+Y VAN MIS TRES CAIDAS DE HOY, que se registran igual que las tuyas: corri
+run_phase1 SUELTO y casi publico un numstat de 72 filas que era artefacto
+de haber cortado el ciclo; selle a ciegas un rechazo de TU camino en la
+101 que el fichero desmiente, porque el paso 2 de search SI esta del lado
+de la linea limpia y tu tenias razon; y corri la bateria con mi propio
+trabajo al lado, y su comprobacion de RUIDO DE CONCURRENCIA me nombro DOCE
+ficheros mios. La casa dice que la bateria SE CORRE SOLA y la guarda hizo
+su trabajo. Corre la tuya sola.
+
+LO MAS GORDO DE ESTA VUELTA NO ES TUYO Y ES POSTERIOR A TU REPORTE: EL
+FUNDADOR CORRIO LA SESION CON CREDENCIAL Y CERRO LA FASE 08. Entre tu
+commit de cierre (c59d111a) y el acta hay 32 commits suyos, sellados en
+docs/loop/SELLO_SESION_CREDENCIAL_2026-09-03.md y en el asunto de
+e966d896. MEDIDO POR MI: dataset/ NO se toco (cero filas de numstat
+contra tu cierre), OP-V-01 pasa de LISTA a HECHA en OPERACIONES.jsonl, y
+el indice semantico se rehizo con sha256 42223fcc. EL MURO CAYO Y NO POR
+EL BUCLE.
+
+HASHES ADMITIDOS EN EL CORREDOR DE ESTA VUELTA: NINGUNO. El acta 164
+escribe su encargo en el mismo commit y los 32 del fundador son ANTERIORES
+al acta, o sea que no estan en tu corredor. Todo commit entre el acta y tu
+bloque de apertura es tuyo y cuenta como intruso.
 
 Y NO TE ASUSTES CON LA M DE dataset/metadata/master_graph.json QUE TRAE
-git status: la medi y es fin de linea, no contenido. El blob del arbol da
-cb33552aedddab4d6c51c5c85a7416999b5c70a0, el mismo que el indice, y el
+git status: la medi hoy y es fin de linea, no contenido. El blob del arbol
+da cb33552aedddab4d6c51c5c85a7416999b5c70a0, el mismo que el indice, y el
 numstat de dataset/ web/ engine/ da CERO FILAS. No la arregles y no la
 commitees sola.
 
-LA VARA P.5.1 SIGUE CONGELADA Y NADIE LA TOCA: ninguna vuelta la estrecha
-ni la ensancha sin correccion declarada del fundador. Eso vale, sobre
-todo, para las TAREAS 3 y 4.
+Y NO CORRAS run_phase1 SUELTO, QUE ES LA TRAMPA QUE PISE YO HOY: el ciclo
+va ENTERO y en su orden (--reaplico-curaduria, etiquetas_de_cara
+--aplicar, sync_assets_web, y despues el numstat). Cortado a la mitad da
+72 filas de etiqueta_arbol que no son un movimiento del grafo.
 
-- TAREA 1, LOS REGISTROS. ES BLOQUEANTE. El acta 163 y sus DIEZ
+LA VARA P.5.1 SIGUE CONGELADA Y NADIE LA TOCA: ninguna vuelta la estrecha
+ni la ensancha sin correccion declarada del fundador.
+
+- TAREA 1, LOS REGISTROS. ES BLOQUEANTE. El acta 164 y sus DIEZ
   adjudicaciones (6.1 a 6.10), registradas en la forma de la casa, en
   docs/PENDIENTES.md, con el numero COMPUTADO por
   scripts/loop/serie_de_registros.py y NUNCA tecleado (hoy la serie tiene
-  24 entradas, cero colisiones, cero huecos y siguiente libre R.33: eso lo
-  recomputas tu, no lo copias de aqui). Y registra tambien, con su nombre,
-  MI CAIDA de la seccion 4 del acta: mande comprobar contra el registro
-  que CUATRO del tramo llevaban dos lecturas ciegas independientes, y tu
-  1.c midio del registro que son DOS. Mis caidas se registran igual que
-  las tuyas.
+  25 entradas y el siguiente libre es R.34: eso lo recomputas tu, no lo
+  copias de aqui). Y registra tambien, con su nombre, MIS DOS CAIDAS de la
+  seccion 4 del acta, igual que hiciste con la de la 163. Idempotente y
+  comprobado, como lo dejaste en la 164.
 
-- TAREA 2, TERMINAR LA TAREA 2 DE LA 163. ES BLOQUEANTE.
-  (2.a) LA BATERIA ENTERA, CORRIDA Y CON SU CRONOMETRO (adjudicacion 6.8).
-  La nomina ya esta y la verifique yo: pasa de 23 a 51 entradas, 28 son
-  posteriores a la 147, la ultima vuelta representada es la 163 y CERO
-  arneses posteriores se quedan fuera. Lo que falta es su corrida
-  completa. YO LA LANCE DOS VECES Y NO TERMINO: la primera la corto un
-  timeout de 900 segundos sin una sola linea de veredicto, y dentro hay
-  arneses de 38 segundos. Asi que publica EL TIEMPO TOTAL Y EL DE CADA
-  ARNES, como ya hace tu censo. NO SE RECORTA LA NOMINA PARA QUE CORRA
-  ANTES: si hace falta, se corre por lotes sellados y se suma, diciendolo.
-  Ningun arnes entra en verde alegado y ninguno se borra.
-  (2.b) LAS TRES SALIDA_V135_2E_MUTACION SE DECLARAN (adjudicacion 6.7).
-  Las re sellaste en la 163 con mas 1 menos 1 cada una y el reporte que
-  las tenia que nombrar no llego a existir. Van nombradas en el reporte
-  con su numstat y su motivo, aunque desde la apertura de la 164 el camino
-  nuevo de la guarda ya no las vea. No se prohibe re sellar: se prohibe re
-  sellar en silencio.
-  (2.c) EL ARNES DE TU 4.b SE ANCLA (adjudicacion 6.6). Sellado dio 17 de
-  17; corrido por mi hoy da 14 de 17, y los tres que caen son sus casos
-  F_hoy_la_guarda_sale_VERDE, F_hoy_no_hay_ninguna_sin_nombrar y
-  G_mismo_exit, que leen el ARBOL DE TRABAJO VIVO. Es tu propia medicina
-  de la 163 sin aplicar: anclalos a un REF FIJO Y COMPUTADO, o computalos
-  como DELTA y no como estado, igual que hiciste con 160_6b y con 162_1a.
-  LA GUARDA verificar_re_sellado.py NO SE TOCA: esta bien y hoy mordio de
-  verdad (ROJO exit 1 nombrando las tres). Con su caso positivo por
-  mutacion y con la prueba de que ningun veredicto viejo se mueve.
+- TAREA 2, EL PUNTO CIEGO DEL CENSO DE ARNESES. ES BLOQUEANTE Y ES CODIGO
+  (adjudicacion 6.3). El patron de verificar_mutaciones_viejas.py exige la
+  palabra mutacion en el nombre del fichero. Medido por mi importando sus
+  propias funciones: 92 arneses ve el censo, 53 entradas tiene la nomina,
+  y DOS de esas 53 el censo NO LAS VE aunque existen en disco,
+  vuelta144_3c_caso_positivo_1190.py y vuelta147_3e_simular_a26.py. La
+  consecuencia no es cosmetica: arneses_que_faltan es quien produce el
+  VERDE "NINGUN arnes posterior se queda fuera de la nomina", y ese verde
+  SOLO cubre a los que se llamen mutacion. El dia que nazca uno llamado
+  como esos dos, la guarda dira que no falta ninguno SIN HABERLO MIRADO.
+  ARREGLALO EN LA FUENTE, y las dos salidas valen: o el patron cubre lo
+  que la nomina ya contiene, o la frase del verde se estrecha para decir
+  exactamente a que universo se refiere. LO QUE NO VALE ES DEJARLA
+  DICIENDO LO QUE NO COMPRUEBA. Con su caso positivo por mutacion, que hoy
+  para este agujero NO EXISTE: el caso tiene que caer si alguien devuelve
+  el patron a su forma vieja.
 
-- TAREA 3, PUBLICAR EL VEREDICTO DE LA LD-OPC05-101 (adjudicacion 6.4).
-  Tu dossier declara con todas sus letras que EL VEREDICTO NO LO DA ESE
-  FICHERO sino el reporte, y el reporte no existe: hoy la unica sede de tu
-  veredicto es el asunto del commit 1fa1bac9, y un veredicto que vive en
-  un asunto de commit NO SE PUEDE AUDITAR. LA CLASE NO SE MUEVE POR MI
-  MANO Y CITO AUDITOR.md 1.3: decides tu con la vara. Lo que exijo es que
-  lo escribas en el reporte con la letra de P.5.1 delante, nombrando que
-  parte de la frase y que ejemplar lo sostienen. Y RESPONDE A MI CASO
-  PUNTO POR PUNTO, que esta en la seccion 3.2 del acta 163: mi ciega
-  sellada (sha1 6d9e95cb) le da C por segunda vuelta seguida; sostengo que
-  la LINEA 2, el paso 12 del lienzo, la expanden los pasos 3, 4 y 5 de
-  search, que son metodo con autor, secuencia y criterio de parada, y que
-  ademas RECIBEN el lienzo, cosa que en la 100 no pasaba. LA PREGUNTA
-  CONCRETA, Y CONTESTALA CON ESAS PALABRAS: los pasos 3, 4 y 5 de search,
-  SIN EL PASO 2 (que ya hace de linea nombrada en la direccion limpia),
-  pasan o no pasan la frase de P.5.1. Y una cosa mas, medida y no opinada:
-  la razon vigente de esa fila cita la LD-OPC05-027 y la LD-OPC05-004, y
-  NINGUNA DE LAS DOS ES EJEMPLAR de P.5.1, como tu propio dossier publica
-  en su seccion F. El cruce de entregables tampoco decide, por la
-  adjudicacion 6.3 del acta 163: en la 100 llega TERCERO y detras de una
-  linea que ya habia fallado la prueba de forma, y ascenderlo a decisor
-  sobre una linea que si la pasa seria estrechar la vara congelada. SI
-  TRAS ESO LA SOSTIENES EN D, D SE QUEDA Y YO LO FIRMO. No me des la razon
-  por ser mia.
+- TAREA 3, LA CAIDA DE REPORTE, CORREGIDA POR DECLARACION (adjudicacion
+  6.4). Tu seccion 7 escribe "92 arneses en scripts/loop/, 53 en la
+  nomina, 41 fuera y anteriores a la vuelta 148". Las tres cifras son
+  ciertas por separado y LA RESTA NO CIERRA: 92 menos 53 son 39, no 41. Tu
+  propio instrumento imprime otra cosa y esta sellada,
+  SALIDA_V164_T5_PRE148.txt dice "CIFRA entradas en la nomina de la
+  bateria: 51". Cambiaste el 51 del instrumento por el 53 de la bateria.
+  El motivo de fondo es la TAREA 2: el 41 no se resta de 53, se resta de
+  51, que son las que el censo ve. NO SE BORRA NADA: la cadena entera y
+  cerrada va escrita en el reporte de hoy (92 vistos por el censo, 53 en
+  la nomina, 51 visibles, 41 fuera). SE REGISTRA Y NO ACUMULA, por la
+  letra afinada del 27 ago 2026 (vive en prosa y no en tabla, cabecera ni
+  conclusion), PERO DISPARA LA RELECTURA AL DOBLE DEL TRAMO y eso si se
+  hace.
 
-- TAREA 4, LA RELECTURA CONJUNTA DE LA LD-OPC05-005 (adjudicacion 6.5).
-  Mi ciega de hoy le da D y la clase vigente es C. MI CASO: la LINEA 2
-  escrita es el paso 13 de causas_comunes_vs_especiales (dar seguimiento y
-  apoyo a quienes caen fuera de las tolerancias del grupo), y la razon
-  dice que la expanden los pasos 1, 3 y 5 de aim_of_leadership. El paso 1
-  es justamente el que la propia razon reconoce que COLAPSA con el 13, asi
-  que sacarlo deja el 3 y el 5: disenar formas de ayuda o de
-  reconocimiento SEGUN CORRESPONDA, y reconocer y estudiar a quienes
-  tienen desempeno excepcional. Eso me parece orden mas complemento, la
-  especie con la que la 122 fue EXCLUIDA y con la que la 100 tumbo su
-  linea 1, y no de la especie de la 052 ni de la 095. LA LINEA 1 NO ESTA
-  EN DISCUSION. Y VA CON UNA ADVERTENCIA QUE ES CONTRA MI: en mi ciega de
-  la 161 le di C a esta misma fila y coincidio, y hoy le doy D. DOS CIEGAS
-  MIAS SOBRE EL MISMO PAR CON LETRAS DISTINTAS, o sea que mi instrumento
-  no es estable aqui. Lee los dos nodos ENTEROS contra el grafo con P.5.1
-  y sus cuatro ejemplares delante y NADA MAS, y decide. SI SOSTIENES LA C,
-  ES CAIDA MIA Y LA FIRMO YO, y lo escribes asi. Si la mueves a D, es
-  CLASE PUBLICADA QUE SE MUEVE: va con CORRECCION DECLARADA, sin borrar
-  una linea, y con RECOMPUTO del marcador y del registro.
+- TAREA 4, LOS 41 PRE 148, ADJUDICADOS Y NO EN BLOQUE (adjudicaciones 6.5
+  y 6.6). TU PENDIENTE DE DOCTRINA NO ES DOCTRINA NUEVA Y NO HAY PARADA:
+  la pregunta de si la regla de la vuelta 144 es retroactiva esta mal
+  planteada, y lo dice la propia regla en su letra desde la vuelta 148,
+  que esta en el docstring de la guarda: "LO QUE ESTA REGLA EXIGE ES
+  SUJETO CONGELADO. EL PLAZO DE UNA VUELTA ERA EL MEDIO, NO EL FIN." Una
+  regla cuya condicion es el ESTADO DEL SUJETO y no la fecha de nacimiento
+  no puede ser retroactiva ni dejar de serlo: no habla del calendario. ASI
+  QUE MIDES EL SUJETO DE CADA UNO DE LOS 41, uno por uno, y publicas cual
+  esta congelado y cual esta vivo, con su evidencia. Tu propia medicion de
+  la 164 ya adelanta la respuesta para varios: las salidas de la 118 que
+  "envejecen solas" tienen por sujeto el grafo vivo, que es EXACTAMENTE el
+  sujeto que esta regla excluye. ENTRAN SOLO LOS DE SUJETO CONGELADO, y
+  NINGUNO se descarta en bloque ni se mete en bloque. Y VA CON EL LIMITE
+  QUE MIDO YO Y QUE NO ESTABA ESCRITO: la bateria de 53 tarda 978,2
+  segundos en tu maquina y 1.193,1 en la mia, y los 41 tardan 1.091,4 mas,
+  o sea que meterlos sin decir su
+  coste convierte el ciclo de cierre en media hora larga POR VUELTA. TODO
+  ARNES QUE ENTRE ENTRA CON SU TIEMPO PUBLICADO AL LADO, y si el total de
+  la bateria pasa de VEINTE MINUTOS lo dices en el reporte y traes la
+  cifra. NO SE RECORTA LA NOMINA POR CUENTA PROPIA.
 
-- TAREA 5, LA MEDICION QUE SIGUE SIN HACERSE (adjudicacion 6.9). LOS 41
-  ARNESES DE MUTACION ANTERIORES A LA VUELTA 148 QUE ESTAN FUERA DE LA
-  NOMINA: MIDELOS Y PARA AHI. Se contaron, no se corrieron, y NO se afirma
-  que la regla les alcance, porque la regla nace en la vuelta 144 y no
-  dice si es retroactiva. Correlos, publica cuantos dan exit 0 y cuantos
-  rojo, con su nomina entera y su cronometro, y NO METAS NINGUNO EN LA
-  BATERIA: con esa cifra delante se decide, que es lo que la 6.7 del acta
-  156 hizo con las nueve salidas de la P3b. ES UNA MEDICION, NO UNA
-  OPERACION.
+- TAREA 5, EL ESTADO NUEVO SE MIDE, NO SE HEREDA (adjudicacion 6.9). La
+  fase 08 la cerro el fundador y eso cambia cifras que tu cabecera lleva.
+  CORRE Y PUBLICA CON TU COMANDO, sin copiar una sola de su commit: las
+  suites de la web (su commit dice 82 ficheros y 1.040 pasadas, contra las
+  80 y 1.030 de tu cabecera de la 164, Y YO NO LAS CORRI, asi que esa
+  cifra es CONTRASTE y no medicion), el tsc, y el sha256 del indice
+  semantico (el sello publica 42223fcc y ese SI lo recompute yo hoy, sale
+  igual). Y CIERRA POR ADICION docs/loop/SELLO_SESION_CREDENCIAL_2026-09-03.md,
+  SIN BORRAR SU ULTIMA LINEA: hoy sigue diciendo "la fase 08 NO se declara
+  cerrada hoy" y el commit e966d896 la cierra. Las dos cosas fueron
+  ciertas en su fecha y el fichero no las distingue, que es la enfermedad
+  de la CORRECCION 22 en otro sitio. AVISO SOBRE LA MIA, PARA QUE NO LA
+  HEREDES COMO CIFRA: el cotejo byte a byte de los assets, la deuda que
+  venia del acta 161, LO SALDE YO HOY y da 6 cotejados, 6 cuadran, 0 no
+  cuadran, leyendo las rutas fuente del propio sync_assets_web.py y con su
+  normalizacion de fin de linea aplicada. Y SON SEIS ASSETS Y NO CINCO:
+  cuatro actas arrastraron mal la cifra de su propia deuda.
 
-- TAREA 6, SEGUIR EL ORDEN ESCRITO EN MODO CONTINUO, hasta el MURO
-  CONOCIDO Y YA ADJUDICADO (acta 149, seccion 3.10): la fase 08 NO CIERRA
-  sin una SESION CON CREDENCIAL Y CON EL FUNDADOR DELANTE, porque el .env
-  esta fuera del repo mientras el bucle corre y eso esta bien. Lo corri yo
-  hoy y da exit 2 con ERROR: falta VOYAGE_API_KEY en .env. Al llegar ahi
-  SE PARA Y SE DICE. EL MERGE NO SE PIDE NI SE HACE: es del fundador y
-  solo suyo, ni ahora ni al final.
+- TAREA 6, ABRE EL ULTIMO TRAMO DE LA FASE III (adjudicacion 6.10). Medido
+  por mi de docs/plan/OPERACIONES.jsonl: de las 71 operaciones, 67 estan
+  en HECHA y CUATRO en LISTA, que son OP-L-01, OP-L-02 y OP-L-03 de
+  09_LECTURAS_DIRIGIDAS y OP-I-01 de 10_INVENTARIO. OP-S-12, que el indice
+  ata al final, YA ESTA HECHA. EMPIEZAS POR OP-L-01, que es la unica de
+  las cuatro sin dependencias declaradas: lee su ficha entera, comprueba
+  sus TRES clausulas de verificacion contra el archivo de HOY (ninguna de
+  las once en INTRA_DOMINIO_VEREDICTOS.jsonl, el marcador del cribado sin
+  mover, y cada nomina afectada re medida con su cobertura al lado por el
+  banco 9.26) y publica el resultado con su simulacion previa y su caso
+  positivo. OJO CON LO QUE VAS A ENCONTRAR Y NO LO ARREGLES POR TU CUENTA:
+  su clausula dice "el marcador del cribado no se mueve: sigue en 2.117" y
+  su fecha_corte es del 11 ago 2026, o sea ANTERIOR al cierre del cribado
+  en 3.388. UNA OPERACION CUYO TEXTO NO ALCANCE PARA EJECUTARSE SIN
+  DECIDIR ES PARADA, NO UNA IMPROVISACION: si la clausula no se puede leer
+  como "el marcador no se mueve por esta operacion" sin estrechar ni
+  ensanchar nada, PARAS Y LO TRAES con la letra delante.
 
-Y EL REPORTE ES EL DE LAS DOS VUELTAS, no solo el de la 164: su cabecera
-sale del tallador, su cierre se recomputa al cierre, y lo que la 163
-entrego ya sellado se cita con su fichero en vez de re correrse. Las
-cifras que verifique yo hoy y que tienen que reproducir son marcador
-3.388 / 551 / 72 / 5 / 2.760 con cero huecos y cero duplicados, censo
-3.853 / 3.169 / 684, aristas 8.780 / 8.740 / 17.520 / 9.914, registro 154
-filas con 14 en C y 108 en D de lectura dirigida, y las fases en 02 nueve
-dos siete, 03 dieciseis doce cuatro, 06 dieciseis dieciseis cero, 08 uno
-cero uno y 09 tres cero tres. Si alguna se mueve, se dice por que.
+Y EL REPORTE ES EL DE LA 165: su cabecera sale del tallador, su cierre se
+recomputa al cierre, y las cifras que se muevan van con su motivo. Marca
+tus discutibles ANTES de saber si aciertas, como hiciste en la 164, que
+por eso mi ciega pudo empezar por ellos.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
