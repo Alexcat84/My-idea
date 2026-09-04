@@ -1,0 +1,80 @@
+================================================================================
+MEDICION DEL MODO Y DE LA BASELINE . SESION CON CREDENCIAL, 3 sep 2026
+Encargo del fundador, paso 1: MEDIR ANTES DE ADJUDICAR.
+Leido de la base con los UUID sellados de la corrida B.
+================================================================================
+
+DESENLACE: (b). EL MUNDO NO QUEDO EN FECHAS, Y ADEMAS NO ES EL MODO LO QUE
+SUPRIME LA LINEA. NO SE TOCA PRODUCTO.
+
+--------------------------------------------------------------------------------
+0. UNA CORRECCION MIA, PRIMERO, PORQUE LA DECISION SE ESCRIBIO SOBRE ELLA
+--------------------------------------------------------------------------------
+Ayer traje una PISTA MEDIDA (dicha como pista y no como adjudicacion): que la
+puerta de web/lib/engine/bloqueRealidad.ts:141 mira `aProyecto.modoCamino` en vez
+del modo del mundo. LA PISTA APUNTABA AL SITIO EQUIVOCADO, y la medicion de hoy
+lo demuestra: esa puerta evaluaba TRUE en la corrida que fallo. No es el modo lo
+que suprimio la linea.
+
+--------------------------------------------------------------------------------
+1. EL PROYECTO QUE FALLO, Y SUS MODOS
+--------------------------------------------------------------------------------
+La fase que cae es faseMundoSubproyecto, y su mundo NO es risk_management sino
+health_safety («Seguridad y Personas»), que es lo que el bloque y el log dicen.
+
+  PROYECTO 2f3aff85-cd21-4bf4-b26b-d14c443f6a6e
+    projects.modo_camino (columna vieja de la 018) : NULL
+    project_modos[core]                            : fechas
+    project_modos[health_safety]                   : SIN FILA
+    mundos abiertos: exportacion, franquicias, health_safety, quality,
+                     risk_management, seguridad_digital
+
+  (los otros dos proyectos de la corrida B, f216a885 y 3ca2dde4, no tienen
+   ninguna fila en project_modos ni mundos abiertos)
+
+--------------------------------------------------------------------------------
+2. POR QUE LA PUERTA DEL MODO NO ES LA CULPABLE
+--------------------------------------------------------------------------------
+web/lib/analyticsEntrada.ts:119 y 129:
+    const modoCore = modos.core ?? (proyecto.modo_camino) ?? null;
+    ... return { ..., modoCamino: modoCore, ... }
+
+O sea que `aProyecto.modoCamino` ES EL MODO DEL CORE, y el core esta en `fechas`.
+La puerta de bloqueRealidad.ts:141 (`aProyecto.modoCamino === "fechas" && c &&
+c.totalConFecha > 0`) evaluaba TRUE en su primer termino. Si la linea no salio,
+el que fallo es `c`.
+
+--------------------------------------------------------------------------------
+3. LO QUE DE VERDAD SUPRIME LA LINEA, MEDIDO EN LA BASE
+--------------------------------------------------------------------------------
+web/lib/analytics.ts:492 a 497, con su comentario escrito al lado:
+    // el cumplimiento del MUNDO con la MISMA vara que el core, SOLO si SU plan
+    // tiene baseline confirmada.
+    const baselinePlan = planBaselineVigente(planes);
+    const cumplimiento = baselinePlan ? capaCumplimientoDe(...) : null;
+
+Y la base dice:
+
+  ITEMS de health_safety en ese proyecto : 27, de ellos 5 CON fecha_base
+  planes que los contienen               : 1
+  plan cf40f55e  dominio=health_safety  items=27  con_fecha=5
+                 baseline_confirmada_at = NULL
+
+**EL PLAN DEL MUNDO NO TIENE BASELINE CONFIRMADA.** Por eso
+`planBaselineVigente` devuelve null, por eso `cumplimiento` es null, y por eso el
+bloque sale sin linea de cumplimiento y con la redaccion de ritmo.
+
+--------------------------------------------------------------------------------
+4. VEREDICTO
+--------------------------------------------------------------------------------
+EL PRODUCTO SE COMPORTA EXACTAMENTE COMO ESTA ESCRITO. Un mundo sin baseline
+confirmada no se juzga contra un calendario, que es la misma regla del core.
+
+LO VENCIDO ES LA SIEMBRA DEL VUELO: sembro las fechas de los items (5 de 27) y
+despues asevero una linea de cumplimiento que, por diseno, NO PUEDE APARECER
+mientras el plan del mundo no confirme su baseline. La siembra confirma fechas
+del CORE, no las del mundo.
+
+POR ESO, POR LA LETRA DEL ENCARGO (desenlace b): SE PARA Y SE TRAE, SIN TOCAR
+PRODUCTO. No se modifica bloqueRealidad.ts, no se re corre el vuelo, y los pasos
+4 y 6 (cerrar la fase 08) NO se ejecutan.
