@@ -11434,3 +11434,44 @@ ruidoso* prohibe.
 reproducir. **La regla manda parar ante producto nuevo, y no se puede descartar**;
 elegir la explicacion barata y cerrar seria justo lo que esta sesion lleva dos
 dias corrigiendo.
+
+### EL SDK NO REINTENTA LO TRANSITORIO EN `.stream()` (deuda de producto, 4 sep 2026)
+
+**Anotado como deuda, no aplicado.** La casa ya lo tenia visto y sin resolver: el
+SDK reintenta dos veces lo transitorio **salvo en `.stream()`**, y el plan de
+seguimiento se genera **en streaming**.
+
+**LA REGLA DE DECISION, escrita ANTES de la corrida J para que no se elija
+despues:** si la corrida siguiente clasifica su fallo como **TRANSITORIO DEL
+TRANSPORTE** (el mensaje nuevo del vuelo, commit `b6f34dd8`), entonces **la cura
+es un reintento unico en la ruta**, y es **decision de producto post merge** con
+las corridas **I** y **J** como evidencia.
+
+**UN REINTENTO, NO DOS**, y por el mismo motivo que la regeneracion del parrafo 3:
+una segunda pasada esconde el sintoma en vez de medirlo. **Y se registra**, para
+que la tasa se pueda contar algun dia en vez de estimarla.
+
+**LO QUE NO ES:** esto **no** cubre el caso del **defecto de ruta**. Ese ya quedo
+cerrado por la garantia del commit `b1b0fa79`: ningun stream del plan termina en
+silencio, y si lo intenta, grita por el log del servidor y por el canal. **Si la
+corrida J dice "cierre sin terminal", no es transitorio y no se cura con un
+reintento: es la ruta, y se para.**
+
+### TERCERA SIEMBRA: 35 CREDITOS, HASTA DEJAR EL SALDO EN 100 (4 sep 2026)
+
+| | |
+|---|---|
+| usuario | `4a05a687-fc7e-4427-8eaf-cc1cc1644678` (`dev@my-idea.local`) |
+| **saldo antes** | **65** (comprobado con assert antes de llamar) |
+| llamada | `p_monto` **35**, `p_origen` **siembra_beta**, `p_pack` **siembra_beta** |
+| | `p_idempotency_key` **`siembra_vuelo_fase08_2026-09-04_C`** (nueva) |
+| respuesta | **100** |
+| **saldo despues** | **100** (`total_comprado` **360**, sin cambio) |
+
+**FILA DEL LEDGER:** `delta` **35**, `tipo` **grant**, `origen` **siembra_beta**,
+`saldo_resultante` **100**, `created_at` `2026-09-04T11:01:56Z`.
+
+**POR QUE 100:** la lectura del codigo dice que **un vuelo entero pide al menos
+75** (los 55 medidos en la H mas las dos fases finales, que arrancan sesion a 10
+cada una). **Sigue siendo minimo estimado y no cifra observada**, y por eso el
+saldo se deja con holgura en vez de justo.
