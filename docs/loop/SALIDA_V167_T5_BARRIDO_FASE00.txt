@@ -1,0 +1,49 @@
+==============================================================================
+VUELTA 167, TAREA 5: LA FASE 00_CODIGO CONTRA SU HISTORIA EN GIT
+==============================================================================
+
+A) EL CENSO DE LA FASE, CONTADO DEL FICHERO
+   CIFRA filas del registro entero: 71
+   CIFRA filas de la fase 00_CODIGO: 7
+   reparto por estado: {'HECHA': 1, 'LISTA': 6}
+
+B) CADA UNA CONTRA GIT: hay commit que la nombre con EJECUTADA?
+
+   id_op      orden  estado   commit que la declara EJECUTADA
+   OP-C-01    1      LISTA    8b2ba536 FASE 0, OP-C-01 EJECUTADA: los tres sitios de fuera resuelven
+   OP-C-02    2      LISTA    41a9c570 FASE 0, OP-C-02 EJECUTADA: los dos que CALLABAN dejan de call
+   OP-C-03    3      LISTA    1578e641 FASE 0, OP-C-03 EJECUTADA: los que ROMPEN dejan de romper
+   OP-S-06    4      LISTA    a1c39585 FASE 0, OP-S-06 EJECUTADA: los campos sucios del esquema, sin
+   OP-S-07    5      LISTA    82ee608a OP-S-07 EJECUTADA por su letra nueva: 66 enlaces retirados, c
+   OP-C-04    6      LISTA    96c14726 OP-C-04 EJECUTADA: las dos guardas de Gate 0, cada una caida 
+   OP-C-05    7      HECHA    (ninguno)
+
+C) LOS DESVIOS, SI LOS HAY: estado del registro contra historia del arbol
+   CIFRA operaciones de la fase con commit de EJECUTADA y estado distinto
+   de HECHA: 6
+      OP-C-01: registro dice LISTA, y 8b2ba536 dice ejecutada el 2026-08-14
+      OP-C-02: registro dice LISTA, y 41a9c570 dice ejecutada el 2026-08-14
+      OP-C-03: registro dice LISTA, y 1578e641 dice ejecutada el 2026-08-14
+      OP-S-06: registro dice LISTA, y a1c39585 dice ejecutada el 2026-08-14
+      OP-S-07: registro dice LISTA, y 82ee608a dice ejecutada el 2026-08-14
+      OP-C-04: registro dice LISTA, y 96c14726 dice ejecutada el 2026-08-14
+
+D) EL PRECEDENTE ESCRITO, BUSCADO ANTES DE LLAMARLO HALLAZGO NUEVO
+   `EJECUTOR.md` 9: una afirmacion sobre el registro se re verifica, y
+   una busqueda negativa no se puede citar. Asi que antes de publicar
+   esto como novedad, se busca si YA ESTA DECLARADO en la casa.
+   CIFRA lineas de docs/PENDIENTES.md que citan la sede del commit: 1
+      PENDIENTES.md:5568| (`ACTA_AUDITOR.md:5056`, acta de la vuelta 25). Remedio de esta vuelta: TAREA
+      PENDIENTES.md:5569| 3, midiendo las seis operaciones de codigo contra las TRES sedes
+      PENDIENTES.md:5570| (pagina+jsonl, acta, commits) mas la vara del codigo vivo
+      PENDIENTES.md:5571| (`docs/loop/SALIDA_V101_TAREA3_FASE0_TRES_SEDES.md`): las cuatro que el
+      PENDIENTES.md:5572| auditor dejo "a verificar" (`OP-C-01`, `OP-C-02`, `OP-C-03`, `OP-S-06`) SI
+      PENDIENTES.md:5573| tienen registro de cierre, en la sede que nadie habia mirado (el mensaje del
+      PENDIENTES.md:5574| commit, "FASE 0, OP-X EJECUTADA", 14 ago 2026), y las seis reparaciones
+      PENDIENTES.md:5575| corren o estan aplicadas hoy contra el codigo y el dato de esta vuelta.
+      PENDIENTES.md:5576| Declarado sin tocar `estado` ni abrir fase.
+      PENDIENTES.md:5577| 
+
+E) LO QUE ESTA MEDICION NO HACE
+   NO mueve ni un estado, NO edita el registro y NO adjudica nada.
+   Solo pone el registro y el arbol uno al lado del otro.

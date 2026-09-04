@@ -1,0 +1,55 @@
+==============================================================================
+VUELTA 167, TAREA 5: EL ESTADO REAL DE OP-C-01, ANTES DE EJECUTAR NADA
+==============================================================================
+
+A) LA FICHA, LEIDA HOY DEL REGISTRO
+   docs/plan/OPERACIONES.jsonl:20
+   estado          : LISTA
+   fase            : 00_CODIGO   orden: 1
+   depende_de      : []
+   bloquea_a       : ['OP-S-01', 'OP-S-09', 'OP-F-01']
+   fecha_corte     : 2026-08-11
+   CIFRA clausulas de verificacion: 5
+      V1 aMaterial: construir una ruta que contenga un id DEPRECADO con alias vivo y pedir el plan. La prueba se cae hoy y pasa tras el arreglo. Si manana alguien quita el resolutor, la prueba VUELVE a caerse
+      V2 organizer: inyectar en entry_seeds.json de prueba un seed deprecado y comprobar que NO llega a la respuesta. Hoy llega
+      V3 compass: inyectar en el indice de prueba un id que ya no es nodo y comprobar que NO se ofrece. Hoy SI se ofrece, porque la condicion entera es falsa y no filtra
+      V4 la suite entera verde tras el arreglo
+      V5 ninguna prueba nueva pasa verde ANTES del arreglo: si pasa, no prueba nada
+
+B) LOS TRES PUNTOS DEL ARREGLO, BUSCADOS EN EL ARBOL DE HOY
+   1. resolver nid al entrar en aMaterial         PUESTO   (web/lib/engine/planRedactor.ts)
+   2a. cargarEntrySeeds(graph) en organizer       PUESTO   (web/app/api/organizer/route.ts)
+   2b. cargarEntrySeeds(graph) en organizer/stream PUESTO   (web/app/api/organizer/stream/route.ts)
+   3. resolver antes de puntuar en compass        PUESTO   (web/lib/compass.ts)
+   CIFRA puntos del arreglo ya puestos: 4 de 4
+
+C) LAS TRES PRUEBAS DE LA VERIFICACION, BUSCADAS EN LA SUITE
+   aMaterial con id deprecado de alias vivo       ESCRITA   (web/lib/engine/accesosResueltos.test.ts)
+   organizer con seed deprecado                   ESCRITA   (web/lib/engine/accesosResueltos.test.ts)
+   compass con id que ya no es nodo               ESCRITA   (web/lib/engine/accesosResueltos.test.ts)
+   CIFRA pruebas ya escritas: 3 de 3
+
+D) EL COMMIT DE CADA MARCA, LEIDO DE GIT Y NO SUPUESTO
+   1. resolver nid al entrar en aMaterial         8b2ba536 FASE 0, OP-C-01 EJECUTADA: los tres sitios de fuera resuelven antes de leer
+   2a. cargarEntrySeeds(graph) en organizer       8b2ba536 FASE 0, OP-C-01 EJECUTADA: los tres sitios de fuera resuelven antes de leer
+   2b. cargarEntrySeeds(graph) en organizer/stream 8b2ba536 FASE 0, OP-C-01 EJECUTADA: los tres sitios de fuera resuelven antes de leer
+   3. resolver antes de puntuar en compass        8b2ba536 FASE 0, OP-C-01 EJECUTADA: los tres sitios de fuera resuelven antes de leer
+   aMaterial con id deprecado de alias vivo       8b2ba536 FASE 0, OP-C-01 EJECUTADA: los tres sitios de fuera resuelven antes de leer
+   organizer con seed deprecado                   8b2ba536 FASE 0, OP-C-01 EJECUTADA: los tres sitios de fuera resuelven antes de leer
+   compass con id que ya no es nodo               8b2ba536 FASE 0, OP-C-01 EJECUTADA: los tres sitios de fuera resuelven antes de leer
+   CIFRA commits distintos que introdujeron las marcas: 1
+      8b2ba536  2026-08-14  FASE 0, OP-C-01 EJECUTADA: los tres sitios de fuera resuelven antes de leer
+
+E) LA HISTORIA DE LA FILA EN EL REGISTRO, LEIDA DE GIT
+   commit que anadio el fichero: 23f9ac32 2026-08-11 Plan: consolidado ejecutable, primera entrega (fases 00, 01, 02 y 05)
+   commits que tocaron el texto del id de la ficha:
+      c891b3ff 2026-08-11
+
+F) EL VEREDICTO DE ESTA MEDICION, SIN ADORNO
+   la ficha dice estado LISTA.
+   el arreglo esta puesto en 4 de 4 sitios.
+   las pruebas estan escritas en 3 de 3.
+   O SEA: EL ARREGLO YA ESTA HECHO Y LAS PRUEBAS YA ESTAN ESCRITAS,
+   Y LA FICHA SIGUE EN LISTA. La clausula V5 de la propia ficha
+   ('ninguna prueba nueva pasa verde ANTES del arreglo') NO SE PUEDE
+   CUMPLIR HOY: no hay codigo sin arreglar sobre el que estrenarlas.
