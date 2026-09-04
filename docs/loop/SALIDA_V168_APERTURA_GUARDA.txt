@@ -1,0 +1,19 @@
+FIRMA DE PARADA EN EL ACTA e3152a9c (adjudicacion 6.5 del acta 161): el acta trae docs/loop/PROMPT_SIGUIENTE.md VACIO y docs/loop/PARA_ALEXIS.md ESCRITO.
+PUERTA DEL CORREDOR (adjudicacion 6.5 del acta 161): el encargo se lee del COMMIT edbc1a48, PORTADOR DEL ENCARGO tras la parada, y no del acta e3152a9c, que lo trae vacio. Sigue siendo UN COMMIT y no el arbol de trabajo.
+   rotulo 'HASHES ADMITIDOS EN EL CORREDOR DE ESTA VUELTA:' en ese encargo: NO
+   HASHES ADMITIDOS (solo los MARCADOS, y solo si el rotulo esta): 0 (ninguno)
+   SIN ROTULO NO SE ADMITE NADA. Es lo que la guarda hacia antes de la adjudicacion 6.7 del acta 153, asi que ningun veredicto viejo se mueve.
+   PORTADOR DEL ENCARGO TRAS LA PARADA, fuera del censo de intrusos por la adjudicacion 6.5 del acta 161 (hace el papel del acta: es el commit que ABRE la vuelta): edbc1a48 ('Decision del fundador: el campo estado se jubila, la vara es el instru') toca 6 ruta(s) (docs/loop/AUDITOR.md, docs/loop/EJECUTOR.md, docs/loop/PARA_ALEXIS.md, docs/loop/PROMPT_SIGUIENTE.md, docs/loop/paradas/2026-09-04-estado-de-las-fichas-DECISION.md, docs/plan/00_INDICE.md), delante de la apertura nacida en 36bafc1a
+VERDE: los 10 ficheros SALIDA_V168_*_APERTURA.txt nacieron todos en el primer commit de la vuelta (primer commit de la vuelta TRAS el corredor de la parada, declarado abajo):
+   SALIDA_V168_CICLO_ETIQUETAS_APERTURA.txt -- nacido en 36bafc1a, padre edbc1a48
+   SALIDA_V168_CICLO_NUMSTAT_APERTURA.txt -- nacido en 36bafc1a, padre edbc1a48
+   SALIDA_V168_CICLO_SYNC_APERTURA.txt -- nacido en 36bafc1a, padre edbc1a48
+   SALIDA_V168_CONTEO_APERTURA.txt -- nacido en 36bafc1a, padre edbc1a48
+   SALIDA_V168_DESFASE_CALIBRADO_APERTURA.txt -- nacido en 36bafc1a, padre edbc1a48
+   SALIDA_V168_GATE0_CMD1_APERTURA.txt -- nacido en 36bafc1a, padre edbc1a48
+   SALIDA_V168_HEAD_APERTURA.txt -- nacido en 36bafc1a, padre edbc1a48
+   SALIDA_V168_MOTOR_APERTURA.txt -- nacido en 36bafc1a, padre edbc1a48
+   SALIDA_V168_TSC_APERTURA.txt -- nacido en 36bafc1a, padre edbc1a48
+   SALIDA_V168_WEB_APERTURA.txt -- nacido en 36bafc1a, padre edbc1a48
+   CORREDOR DE LA PARADA aceptado ante 36bafc1a: 0 commit(s) entre el acta y la apertura, y ninguno toca nada fuera de los papeles de parada:
+EXITCODE: 0

@@ -18,6 +18,19 @@ NO trae el rotulo literal que la adjudicacion 6.8 del acta 155 exige para
 admitir un hash. La guarda se corre IGUAL y su salida se pega tal cual: si sale
 en rojo, el rojo se publica, no se maquilla ni se arregla tocando el encargo.
 
+CORRECCION DECLARADA POR ADICION (4 sep 2026, tras correr la guarda; el parrafo
+de arriba NO se borra porque es lo que se predijo antes de medir y taparlo
+impediria auditar la prediccion). LA GUARDA SALIO VERDE, exit 0, salida en
+docs/loop/SALIDA_V168_APERTURA_GUARDA.txt. EL PARRAFO DE ARRIBA ACERTO EN LOS
+HECHOS Y FALLO EN LA CONCLUSION: es cierto que edbc1a48 toca seis rutas y tres
+caen fuera de la lista blanca, y es cierto que el encargo no trae el rotulo (la
+propia guarda lo imprime: "rotulo ... NO", "HASHES ADMITIDOS ... 0 (ninguno)").
+Lo que el parrafo no sabia es que la ADJUDICACION 6.5 DEL ACTA 161 ya trata a
+edbc1a48 como PORTADOR DEL ENCARGO tras la parada y lo deja FUERA del censo de
+intrusos, porque hace el papel del acta: es el commit que ABRE la vuelta. Con
+eso el corredor medido es de 0 commits y no hay nada que admitir. La leccion es
+la de siempre: la vara se lee entera antes de predecir su veredicto.
+
 EL CICLO DE GATE 0 VA ENTERO Y EN SU ORDEN, NUNCA run_phase1 SUELTO (encargo
 de la 167, heredado por la 168, que lo dice con esas palabras):
 --reaplico-curaduria, etiquetas_de_cara --aplicar, sync_assets_web y DESPUES el
