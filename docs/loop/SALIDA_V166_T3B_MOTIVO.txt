@@ -1,0 +1,43 @@
+==============================================================================
+VUELTA 166, TAREA 3b: EL MOTIVO ESCRITO, CITADO Y NO RECORDADO
+==============================================================================
+
+A) LA CITA, LEIDA HOY DE docs/plan/08_VERIFICACION.md
+   docs/plan/08_VERIFICACION.md:394
+   es el insumo de todo lo demas: la lista de A vigentes al cierre
+   CIFRA otras filas que nombran el paso 1: 2
+      linea 395: | **2** | **EL BARRIDO DE CONFIRMADAS contra las A** | cruza las costuras confirmadas contra el retrato del paso 1. **Da
+      linea 396: | **3** | **EL CIERRE TRANSITIVO** | las componentes se calculan **sobre el retrato del paso 1**, no sobre el archivo cr
+
+B) LA IDEMPOTENCIA, COMPROBADA ANTES DE ESCRIBIR
+   CIFRA veces que el ancla (la 4.a fila de la tabla) aparece: 1
+   se inserta DESPUES de docs/plan/RECOMPUTO_3388.md:249
+
+C) LAS GUARDAS, SOBRE EL TEXTO NUEVO SIN ESCRIBIRLO
+   1_el_documento_solo_crece                      PASA   (real=True esperado=True)
+   2_ninguna_linea_vieja_desaparece               PASA   (real=True esperado=True)
+   3_las_cuatro_filas_del_paso_1_siguen_intactas  PASA   (real=348 esperado=348)
+   4_el_bloque_cita_la_linea_medida               PASA   (real=True esperado=True)
+   5_y_declara_lo_que_no_se_hizo                  PASA   (real=True esperado=True)
+
+D) EL BLOQUE ENTERO, PARA QUE NADA ENTRE SIN LEERSE
+
+> **MOTIVO ESCRITO DEL RECOMPUTO (4 sep 2026, vuelta 166, TAREA 3, adjudicacion 5.12 del acta 165).** **POR QUE SE RECOMPUTA ESTA TABLA Y NO
+OTRA, dicho con la regla delante y no como preferencia:** `docs/plan/08_VERIFICACION.md`
+pone el retrato de las A como **PASO 1 DE CUATRO** y escribe, en su linea **394** y
+leida hoy: *"es el insumo de todo lo demas: la lista de A vigentes al cierre"*. Los otros dos pasos que lo nombran lo dicen en la misma tabla y
+tambien se leen hoy: el **PASO 2** (linea 395) dice *"cruza las costuras confirmadas contra el retrato del paso 1. Da las curas acopladas"*; el **PASO 3** (linea 396) dice *"las componentes se calculan sobre el retrato del paso 1, no sobre el archivo crudo"*. **Una tabla rancia en el paso 1 no falla: contamina los
+tres siguientes en silencio**, que es exactamente lo que el canon 9 del banco llama
+degradacion callada.
+
+> **Y SE DECLARA LO QUE ESTA VUELTA NO HIZO, para que nadie lo lea como hecho:**
+> **los PASOS 2, 3 y 4 de este documento NO se recomputan aqui.** El encargo de la
+> vuelta 166 pide el PASO 1 y nada mas, con estas palabras: *"NO recomputes los
+> pasos 2, 3 y 4: no estan encargados y meterlos aqui seria decidir su alcance por
+> tu cuenta"*. **Sus cifras siguen siendo las de su corte y no las de hoy**, y quien
+> las use tiene que saberlo: el insumo se movio debajo de ellas.
+
+E) ESCRITO
+   CIFRA lineas antes: 1906 | despues: 1922
+   el bloque esta: True
+   FIN

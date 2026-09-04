@@ -1,0 +1,79 @@
+==============================================================================
+VUELTA 166, TAREA 3: EL RETRATO DE LAS A SE RECOMPUTA (PASO 1)
+==============================================================================
+
+A) EL INSTRUMENTO DE LA CASA, CORRIDO EN ESTA VUELTA
+   comando: python scripts/plan/recomputo_3388.py --salida docs/loop/RECOMPUTO_V166.jsonl
+   EXITCODE: 0
+   CIFRA crudas:      551
+   CIFRA colapsos:    398
+   CIFRA distintos:   149
+   CIFRA multiples:   4
+   CIFRA pares con mas de un veredicto, nombrados: 4
+      ['customer_validation', 'customer_validation_sell_phase'] puestos [245, 781]
+      ['estrategia_de_innovacion_arenas', 'estrategia_innovacion_producto'] puestos [460, 1121]
+      ['formalizar_junta_asesora', 'identificar_consejo_asesores'] puestos [712, 976]
+      ['dia_cero_defectos', 'dia_cero_defectos_2'] puestos [2491, 2853]
+   CONTRASTE con el acta 165 (contraste, no fuente): dice 551, 398,
+   149 y 4, y los mismos cuatro pares. MI MEDICION DE HOY MANDA.
+
+B) LAS CUATRO FILAS DE LA TABLA, LOCALIZADAS EN EL DOCUMENTO
+   crudas      docs/plan/RECOMPUTO_3388.md:246
+      cifra viva publicada: 551
+      cifras tachadas en la cadena: 10 (583, 582, 581, 576, 575, 574, 573, 571, 566, 563)
+      contador que la celda escribe: DIEZ VECES
+      contador CONTADO de la cadena: DIEZ VECES
+      cadena y contador cuadran hoy: True
+   colapsos    docs/plan/RECOMPUTO_3388.md:247
+      cifra viva publicada: 207
+      cifras tachadas en la cadena: 12 (0, 1, 41, 48, 49, 57, 60, 72, 93, 117, 164, 208)
+      contador que la celda escribe: DOCE VECES
+      contador CONTADO de la cadena: DOCE VECES
+      cadena y contador cuadran hoy: True
+   distintos   docs/plan/RECOMPUTO_3388.md:248
+      cifra viva publicada: 344
+      cifras tachadas en la cadena: 15 (583, 582, 580, 575, 574, 533, 525, 522, 509, 503, 479, 458, 434, 387, 343)
+      contador que la celda escribe: QUINCE VECES
+      contador CONTADO de la cadena: QUINCE VECES
+      cadena y contador cuadran hoy: True
+   multiples   docs/plan/RECOMPUTO_3388.md:249
+      cifra viva publicada: 0
+      cifras tachadas en la cadena: 0 ()
+      contador que la celda escribe: (sin contador)
+      contador CONTADO de la cadena: ?
+      cadena y contador cuadran hoy: True
+
+C) QUE FILAS SE MUEVEN Y CUALES NO, CONTRA LA MEDICION DE HOY
+   crudas      publicada 551, medida hoy 551: NO SE MUEVE
+   colapsos    publicada 207, medida hoy 398: SE MUEVE (delta +191)
+   distintos   publicada 344, medida hoy 149: SE MUEVE (delta -195)
+   multiples   publicada 0, medida hoy 4: SE MUEVE (delta +4)
+   CIFRA filas que se mueven: 3 | filas quietas: 1
+
+D) LA SIMULACION PREVIA: LAS FILAS NUEVAS, EN MEMORIA
+   crudas      linea 246  RE MEDIDA  cifra 551 -> 551 | contador DIEZ VECES -> DIEZ VECES
+   colapsos    linea 247  CORREGIDA  cifra 207 -> 398 | contador DOCE VECES -> TRECE VECES
+   distintos   linea 248  CORREGIDA  cifra 344 -> 149 | contador QUINCE VECES -> DIECISEIS VECES
+   multiples   linea 249  CORREGIDA  cifra 0 -> 4 | contador None -> UNA VEZ
+
+E) LAS GUARDAS DEL CARRIL, SOBRE EL TEXTO NUEVO SIN ESCRIBIRLO
+   1_ninguna_cifra_vieja_desaparece           PASA   (real=41 esperado=41)
+   2_el_documento_solo_crece                  PASA   (real=True esperado=True)
+   3_mismo_numero_de_lineas                   PASA   (real=1906 esperado=1906)
+   4_solo_se_tocan_las_cuatro_filas           PASA   (real=4 esperado=4)
+   5_ninguna_nota_vieja_se_reescribe          PASA   (real=True esperado=True)
+   6_los_contadores_cuadran_con_su_cadena     PASA   (real=True esperado=True)
+   CIFRA guardas: 6 | pasan: 6 | fallan: 0
+
+F) ESCRITO
+   docs/plan/RECOMPUTO_3388.md
+   CIFRA filas corregidas: 3 | filas re medidas y no movidas: 1
+
+G) LA COMPROBACION QUE NO SE FIA DE LO QUE ACABA DE ESCRIBIR
+   crudas      cifra viva 551    | tachadas 10  | contador DIEZ VECES       | cuadra: True
+   colapsos    cifra viva 398    | tachadas 13  | contador TRECE VECES      | cuadra: True
+   distintos   cifra viva 149    | tachadas 16  | contador DIECISEIS VECES  | cuadra: True
+   multiples   cifra viva 4      | tachadas 1   | contador UNA VEZ          | cuadra: True
+   las cuatro filas publican la cifra medida hoy y su contador cuadra.
+
+FIN
