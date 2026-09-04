@@ -516,14 +516,17 @@ tecleadas:**
   - `RE SELLADO DECLARADO: SALIDA_V137_1C_MUTACION.txt numstat +23/-26, lineas CIFRA con valor cambiado: 0 (ninguna)`
   - `RE SELLADO DECLARADO: SALIDA_V165_T2_CENSO_ANTES_DESPUES.txt numstat +48/-53, lineas CIFRA con valor cambiado: 8 (CIFRA de esas entradas VISIBLES al censo nuevo, CIFRA de esas entradas VISIBLES al censo viejo, CIFRA entradas en la nomina, CIFRA entradas en la nomina antes y despues del arreglo, CIFRA fuera de la nomina, CIFRA pre 148 fuera de la nomina (patron viejo), CIFRA vistos por el censo NUEVO, CIFRA vistos por el censo VIEJO)`
   - `RE SELLADO DECLARADO: SALIDA_V165_T4_MUTACION_SUJETO.txt numstat +19/-3, lineas CIFRA con valor cambiado: 2 (CIFRA casos, CIFRA casos que caen al mutar el esperado)`
+  - `RE SELLADO DECLARADO: SALIDA_V165_T5_ESTADO_NUEVO.txt numstat +31/-1, lineas CIFRA con valor cambiado: 3 (CIFRA ficheros del universo, CIFRA ficheros que solo lo nombran, sin serlo, CIFRA sedes del indice halladas por nombre)`
 
-**Y DOS DE LAS SIETE SON SALIDAS DE ESTA MISMA VUELTA, RE CORRIDAS
+**Y TRES DE LAS OCHO SON SALIDAS DE ESTA MISMA VUELTA, RE CORRIDAS
 DESPUES DEL COMMIT DE SU TAREA, Y SE DECLARAN IGUAL.**
 `SALIDA_V165_T2_CENSO_ANTES_DESPUES.txt` se re corrio cada vez que la
 nomina crecio, y por eso mueve OCHO lineas `CIFRA`;
 `SALIDA_V165_T4_MUTACION_SUJETO.txt` se re corrio al anadirle el bloque
-`C2` de la transitividad, y mueve DOS. **Nacer no es re sellar, pero re
-correr si lo es, y la guarda no distingue de quien es la mano.**
+`C2` de la transitividad, y mueve DOS; y `SALIDA_V165_T5_ESTADO_NUEVO.txt`
+se re corrio cuando su instrumento gano el `BARRIDO EXHAUSTIVO` que la vara
+de ausencias pedia, y mueve TRES. **Nacer no es re sellar, pero re correr si
+lo es, y la guarda no distingue de quien es la mano.**
 <!-- FIN RE SELLADO DECLARADO -->
 
 > **Y LO QUE ESAS CINCO ENSENAN, QUE ES MAS QUE SU NUMSTAT.** Las de la 118 y la

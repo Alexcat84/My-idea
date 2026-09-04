@@ -3,7 +3,7 @@ VERIFICAR RE SELLADO: TODA SALIDA_* QUE EL REPORTE CITE Y QUE HAYA CAMBIADO
 DESPUES DEL COMMIT DE SU TAREA TIENE QUE IR DECLARADA
 ==============================================================================
   reporte: docs/loop/REPORTE.md
-  CIFRA salidas selladas que el reporte cita: 23
+  CIFRA salidas selladas que el reporte cita: 49
 
   SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt     RE SELLADO
       commit de su tarea : 15909529556c
@@ -32,10 +32,17 @@ DESPUES DEL COMMIT DE SU TAREA TIENE QUE IR DECLARADA
       DECLARADO EN EL REPORTE: SI, con la linea que esta guarda computo
   SALIDA_V164_T5_PRE148.txt                      SIN RE SELLAR
   SALIDA_V165_APERTURA_GUARDA.txt                SIN RE SELLAR
-  SALIDA_V165_BATERIA.txt                        SIN COMMIT DE TAREA
+  SALIDA_V165_BATERIA.txt                        SIN RE SELLAR
   SALIDA_V165_CICLO_NUMSTAT_APERTURA.txt         SIN RE SELLAR
-  SALIDA_V165_CICLO_NUMSTAT_CIERRE.txt           SIN COMMIT DE TAREA
-  SALIDA_V165_HEAD_CIERRE.txt                    SIN COMMIT DE TAREA
+  SALIDA_V165_CICLO_NUMSTAT_CIERRE.txt           SIN RE SELLAR
+  SALIDA_V165_CONTEO_APERTURA.txt                SIN RE SELLAR
+  SALIDA_V165_CONTEO_CIERRE.txt                  SIN RE SELLAR
+  SALIDA_V165_DESFASE_CALIBRADO_APERTURA.txt     SIN RE SELLAR
+  SALIDA_V165_GATE0_CMD1_APERTURA.txt            SIN RE SELLAR
+  SALIDA_V165_GATE0_CMD1_CIERRE.txt              SIN RE SELLAR
+  SALIDA_V165_HEAD_CIERRE.txt                    SIN RE SELLAR
+  SALIDA_V165_MOTOR_APERTURA.txt                 SIN RE SELLAR
+  SALIDA_V165_MOTOR_CIERRE.txt                   SIN RE SELLAR
   SALIDA_V165_T1_MUTACION_REGISTRO.txt           SIN RE SELLAR
   SALIDA_V165_T1_REGISTRO_ACTA_164.txt           SIN RE SELLAR
   SALIDA_V165_T1_REGISTRO_IDEM.txt               SIN RE SELLAR
@@ -62,12 +69,38 @@ DESPUES DEL COMMIT DE SU TAREA TIENE QUE IR DECLARADA
       DECLARADO EN EL REPORTE: SI, con la linea que esta guarda computo
   SALIDA_V165_T4_SUJETO_41.txt                   SIN RE SELLAR
   SALIDA_V165_T4_SUJETO_41_TRANSITIVO.txt        SIN RE SELLAR
-  SALIDA_V165_T5_ESTADO_NUEVO.txt                SIN RE SELLAR
+  SALIDA_V165_T5_ESTADO_NUEVO.txt                RE SELLADO
+      commit de su tarea : 9686f749ab23
+      numstat contra HEAD: +31/-1
+      CIFRA lineas CIFRA cuyo VALOR cambio: 3
+         CIFRA ficheros del universo: '(no estaba)' -> '28386 ficheros'
+         CIFRA ficheros que solo lo nombran, sin serlo: '(no estaba)' -> '395 ficheros'
+         CIFRA sedes del indice halladas por nombre: '(no estaba)' -> '1 ficheros'
+      DECLARADO EN EL REPORTE: SI, con la linea que esta guarda computo
   SALIDA_V165_T6_MUTACION_OP_L_01.txt            SIN RE SELLAR
   SALIDA_V165_T6_OP_L_01.txt                     SIN RE SELLAR
-  SALIDA_V165_T7_CABECERA.txt                    SIN COMMIT DE TAREA
+  SALIDA_V165_T7_CABECERA.txt                    SIN RE SELLAR
+  SALIDA_V165_T7_CABECERA_COMPARADA.txt          SIN RE SELLAR
+  SALIDA_V165_T7_CIFRAS_DE_ANTES_164.txt         SIN RE SELLAR
+  SALIDA_V165_T7_CIFRAS_DE_ANTES_165.txt         SIN RE SELLAR
+  SALIDA_V165_T7_FASES.txt                       SIN RE SELLAR
+  SALIDA_V165_T7_FASE_00.txt                     SIN RE SELLAR
+  SALIDA_V165_T7_FASE_01.txt                     SIN RE SELLAR
+  SALIDA_V165_T7_FASE_02.txt                     SIN RE SELLAR
+  SALIDA_V165_T7_FASE_03.txt                     SIN RE SELLAR
+  SALIDA_V165_T7_FASE_04.txt                     SIN RE SELLAR
+  SALIDA_V165_T7_FASE_05.txt                     SIN RE SELLAR
+  SALIDA_V165_T7_FASE_06.txt                     SIN RE SELLAR
+  SALIDA_V165_T7_FASE_07.txt                     SIN RE SELLAR
+  SALIDA_V165_T7_FASE_08.txt                     SIN RE SELLAR
+  SALIDA_V165_T7_FASE_09.txt                     SIN RE SELLAR
+  SALIDA_V165_T7_FASE_10.txt                     SIN RE SELLAR
+  SALIDA_V165_TSC_APERTURA.txt                   SIN RE SELLAR
+  SALIDA_V165_TSC_CIERRE.txt                     SIN RE SELLAR
+  SALIDA_V165_WEB_APERTURA.txt                   SIN RE SELLAR
+  SALIDA_V165_WEB_CIERRE.txt                     SIN RE SELLAR
 
-  CIFRA por estado: RE SELLADO 7, SIN COMMIT DE TAREA 4, SIN RE SELLAR 12
+  CIFRA por estado: RE SELLADO 8, SIN RE SELLAR 41
   CIFRA salidas EXENTAS por construccion: 0
   CIFRA de esas exentas que ademas estan RE SELLADAS: 0
   EXENCION POR CONSTRUCCION (adjudicacion 6.8 del acta 158): 0 fichero(s) exento(s) del rojo, por ser la salida de esta guarda o del verificador de cifras sobre el reporte final: ninguno
