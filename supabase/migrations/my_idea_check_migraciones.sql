@@ -522,5 +522,38 @@ FROM (
       WHERE conrelid = 'public.project_nodes'::regclass AND contype = 'u'
     )
 
+  UNION ALL
+  -- 038 . siembra_beta admitida en el origen del ledger de creditos.
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  --
+  -- ESTE BLOQUE MIRA EL VALOR ADMITIDO, NO SOLO QUE LA RESTRICCION EXISTA, y
+  -- esa es toda la leccion del defecto que lo trajo: la restriccion de la 020
+  -- existia y estaba sana, pero NO admitia 'siembra_beta', que es el origen que
+  -- el manual (BETA_CUENTAS_README.md:152-165), creditos.ts:24 y cuentas.ts:69
+  -- dan por VIVO. La siembra manual moria con 23514 y ningun chequeo lo veia,
+  -- porque comprobar "existe la tabla" y "existe el indice" no dice nada de lo
+  -- que la tabla ACEPTA.
+  SELECT '038', 'siembra_beta admitida en credit_transactions.origen (no solo que la restriccion exista)',
+    EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conrelid = 'public.credit_transactions'::regclass
+        AND conname = 'credit_transactions_origen_check'
+        AND pg_get_constraintdef(oid) LIKE '%siembra_beta%'
+    )
+    -- y los dos origenes viejos SIGUEN admitidos: la 038 es aditiva
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conrelid = 'public.credit_transactions'::regclass
+        AND conname = 'credit_transactions_origen_check'
+        AND pg_get_constraintdef(oid) LIKE '%cortesia%'
+        AND pg_get_constraintdef(oid) LIKE '%revenuecat%'
+    )
+    -- y la restriccion de tipo NO se toco
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conrelid = 'public.credit_transactions'::regclass
+        AND conname = 'credit_transactions_tipo_check'
+    )
+
 ) checks
 ORDER BY num;
