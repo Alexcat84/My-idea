@@ -14,6 +14,17 @@ de este documento. El estado de verdad es EL REPO, no tu memoria.
    ultimas secciones = checkpoints), docs/INTRA_DOMINIO_VEREDICTOS.jsonl,
    docs/PENDIENTES.md, las FICHA_*.md y docs/plan/CORRECCIONES_A_APLICAR.md.
 
+> **LA VARA DEL TRABAJO PENDIENTE ES EL INSTRUMENTO, NUNCA EL CAMPO `estado`**
+> (4 sep 2026, decision del fundador; declarada en `docs/plan/00_INDICE.md` y
+> citable en `paradas/2026-09-04-estado-de-las-fichas-DECISION.md`). Para saber
+> **que queda por ejecutar** se corre
+> `scripts/loop/vuelta150_3_relectura_expediente.py` y se lee su salida.
+> **El campo `estado` de `OPERACIONES.jsonl` es HISTORICO y no se usa para eso.**
+> Motivo medido: 37 de 71 fichas no calzan con el arbol, y por leer el campo como
+> si fuera la vara el bucle encargo ejecutar una operacion que llevaba ejecutada
+> desde el 14 ago 2026. **Contar bien un campo y sacar la conclusion equivocada
+> sigue siendo una caida: la fuente hay que elegirla antes de contarla.**
+
 ## 1. Tu ciclo en cada vuelta
 0. HUECO DE ACTA (15 ago 2026; motivo: la vuelta 34 corrio entera y NUNCA fue
    auditada. El auditor de esa vuelta corrio de 13:12:43 a 13:30:52 y termino

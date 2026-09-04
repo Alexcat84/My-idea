@@ -85,6 +85,18 @@ lo que diga el encargo.
    el caso CAE. Si la clasificacion es una tabla a mano y no hay nada que
    mutar, SE DECLARA QUE NO HAY CASO ROJO AUTOMATICO, y esa declaracion es la
    que se publica.
+   EL REPORTE ABRE CON LA VUELTA (4 sep 2026, decision del fundador; motivo:
+   las vueltas 166 y 167 terminaron SIN REPORTE, dos seguidas, y en las dos la
+   bateria quedo ademas en un fichero de cero bytes. docs/loop/REPORTE.md
+   seguia siendo el de la 165. Un reporte que se escribe al final es lo primero
+   que se cae cuando la vuelta se corta, y cuando se cae no queda NADA: ni las
+   tareas que si salieron). EL REPORTE SE ABRE AL EMPEZAR Y CRECE POR ANEXION:
+   el ESQUELETO se talla en la apertura, con la cabecera y las filas vacias de
+   las tareas encargadas; CADA TAREA ANEXA SU FILA AL CERRARSE, no al final de
+   la vuelta; y el cierre lo talla entero. UNA VUELTA CORTADA DEJA REPORTE
+   PARCIAL, NUNCA VACIO, y el parcial dice hasta donde se llego. TOPE DE CINCO
+   TAREAS POR VUELTA: si el encargo trae mas, se entregan cinco y las demas se
+   declaran como cola, en vez de empezar seis y no cerrar ninguna.
 2. EL INSTRUMENTO MANDA (14 ago 2026; motivo: las caidas de las vueltas 15
    y 16 fueron las dos de esta especie). Toda cifra o nombre propio que se
    publique se lee de la salida del instrumento corrido EN ESTA VUELTA. Una

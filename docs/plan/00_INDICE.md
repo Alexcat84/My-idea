@@ -119,6 +119,38 @@ el JSONL discrepan, manda el JSONL.
 > doctrina de esquema y no hace falta para nada de lo que sigue*). **La tercera vez que
 > se pregunta, la respuesta sigue siendo la misma: NO.**
 
+> **CORRECCION DECLARADA: EL CAMPO `estado` QUEDA JUBILADO COMO HISTORICO**
+> (4 sep 2026, decision del fundador, opcion (b) de la parada
+> `docs/loop/paradas/2026-09-04-estado-de-las-fichas-DECISION.md`). **Nada del
+> texto de arriba se borra: esta nota se anade.**
+>
+> **LA VARA DEL TRABAJO PENDIENTE ES EL INSTRUMENTO, NUNCA EL CAMPO:**
+> `scripts/loop/vuelta150_3_relectura_expediente.py`, que cruza cada ficha con
+> el arbol y dice cual tiene prueba de ejecucion y cual no. **El campo `estado`
+> no se lee para decidir que falta por hacer.**
+>
+> **POR QUE, Y ES UNA AVERIA MEDIDA Y NO UNA PREFERENCIA.** El instrumento,
+> corrido en la vuelta 167, dice que **37 de las 71 fichas NO CALZAN con el
+> arbol**, y que lo que de verdad queda son **SEIS** operaciones y no las 42 que
+> el campo sugiere. El bucle se metio dentro de ese hueco: encargo ejecutar
+> `OP-C-01`, que **estaba ejecutada desde el 14 ago 2026**.
+>
+> **Y EL REGISTRO DE ARRIBA LLEVABA ROTO DESDE LA VUELTA 76.** Dice que el valor
+> `HECHA` **no se estrena**, adjudicado tres veces. Hoy hay **29 fichas en
+> `HECHA`**, puestas ahi por vueltas sucesivas (la primera en `7fa9f979`,
+> vuelta 76; despues las vueltas 119, 120, 152 y 154; **y la ultima, `OP-V-01`,
+> en el commit `e966d896` de la sesion con credencial**). **La regla estaba
+> escrita y no se cumplio**, y esa es la raiz de que el campo mienta.
+>
+> **ESTO ES UNA RESTAURACION, NO UNA REGLA NUEVA:** el registro de arriba ya
+> decia que la ejecucion se declara en el campo `nota` y que **el commit por
+> operacion es el registro**. Jubilar el campo devuelve la vara a donde la
+> doctrina propia ya la habia puesto.
+>
+> **LA RECONCILIACION FICHA POR FICHA** (la opcion (a) de la parada) **se hace
+> UNA vez en la auditoria integral**, como acto de archivo y con cada prueba
+> citada. **No bloquea nada mientras tanto.**
+
 ---
 
 ## EL MARCADOR
