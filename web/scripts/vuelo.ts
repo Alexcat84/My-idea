@@ -2690,6 +2690,20 @@ async function faseCicloProteccion(cookie: string, projectId: string) {
   // un plan superado, `porIdCore.get(...)` devuelve undefined y la marca se
   // descarta. El producto hacía lo escrito: lo vencido era esta siembra.
   //
+  // CORRECCION DECLARADA (4 sep 2026, corrida F). EL DIAGNOSTICO DE ARRIBA ERA
+  // FALSO Y NO SE BORRA: el carril NO se vaciaba porque el protegido estuviera
+  // en un plan superado. `itemsCore` (analytics.ts:597) se arma con TODOS los
+  // items core, sin filtrar por plan, asi que ese protegido SI estaria.
+  // La causa real es un DEFECTO DE PRODUCTO: analyticsEntrada.ts:79-91 no lleva
+  // `id` ni `protege_item` en su mapeo (los dos son opcionales en ItemAnalytics,
+  // asi que tsc calla), con lo que `porIdCore` queda siempre vacio y el filtro
+  // del carril no casa nunca: carrilProteccion es SIEMPRE [] en la app real.
+  // Lo probo esta misma siembra: dejo 10 enlazadas, las 10 con fecha y las 10
+  // sobre items core vigentes, y la API siguio devolviendo [].
+  // ESTE BLOQUE SE QUEDA IGUAL de todos modos, porque sembrar bien no sobra:
+  // fechar las que se enlazan y apuntar al plan vigente es lo honesto. Pero su
+  // MOTIVO era otro, y queda dicho para que nadie lo lea al reves.
+  //
   // Remedio, las dos mitades: (a) se FECHAN TODAS las enlazadas, no una; y (b)
   // se RE-ENLAZA sobre el plan core VIGENTE al momento de la aserción, que es el
   // contrato escrito del producto hoy. Se respeta el trabajo del enlazador vivo:

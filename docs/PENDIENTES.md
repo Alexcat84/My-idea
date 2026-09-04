@@ -11061,3 +11061,55 @@ usuario, aunque su fila sea nueva**. Hoy el enlace muere con la fila.
 siembra del vuelo ya se ajusto al contrato **vigente** (commit `e3b18d53`: fecha
 las enlazadas y re-enlaza sobre el plan core vigente), asi que **la prueba mide lo
 que el producto promete hoy**, no lo que quizas prometa manana.
+
+### CORRECCION DECLARADA A LA FICHA DE ARRIBA, Y EL DEFECTO DE VERDAD (4 sep 2026, corrida F)
+
+**LA CAUSA QUE ESCRIBI EN LA FICHA DE ARRIBA ERA FALSA, Y LA CORRIJO SIN BORRARLA.**
+Dije que el carril salia vacio porque el item protegido vivia en un plan core
+**superado**. **No es cierto.** La corrida F lo desmiente por dos vias:
+
+1. **Por el codigo:** `itemsCore` (`web/lib/analytics.ts:597`) se arma con
+   `entrada.items.filter(esItemCore)`, o sea **todos** los items core del
+   proyecto, **sin filtrar por plan**. Un protegido de un plan superado **si**
+   estaria en `porIdCore`.
+2. **Por la medicion:** en la corrida F la siembra corregida dejo **10 respuestas
+   enlazadas, LAS 10 CON FECHA y LAS 10 protegiendo items core validos**
+   (proyecto `900aebde`). Por el filtro escrito, el carril **deberia** traer
+   **10** marcas. **La API devolvio `[]` otra vez.**
+
+### EL DEFECTO DE VERDAD, Y ES DE PRODUCTO
+
+**`web/lib/analyticsEntrada.ts` lineas 79 a 91** mapea cada item a un objeto
+nuevo con **solo** estos campos: `plan_id`, `dominio`, `etapa`, `estado`,
+`destacado`, `texto`, `completed_at`, `fecha_base`, `fecha_base_original`,
+`no_aplica_motivo`.
+
+**Ni `id` ni `protege_item` sobreviven al mapeo.** Y los dos estan declarados
+**opcionales** en `ItemAnalytics` (`id?: string`, `protege_item?: string | null`),
+asi que **TypeScript no protesta**. El comentario del propio tipo lo anuncia sin
+querer: *"Solo los usa el carril; ausentes en lecturas viejas"*.
+
+**Consecuencia, en `analytics.ts:618-621`:**
+
+- `porIdCore = new Map(itemsCore.filter(i => i.id)...)`: como ningun item trae
+  `id`, **el Map queda SIEMPRE VACIO**.
+- `.filter(i => ... && i.protege_item && ...)`: como ningun item trae
+  `protege_item`, **el filtro NO CASA NUNCA**.
+
+> **`carrilProteccion` ES SIEMPRE `[]` EN LA APP REAL, PARA CUALQUIER PROYECTO.**
+> No es de esta corrida ni de esta siembra: **es de siempre**.
+
+**POR QUE NINGUNA SUITE LO VEIA:** los tests de `analytics` construyen objetos
+`ItemAnalytics` **a mano**, con `id` y `protege_item` puestos, y **nunca pasan por
+`analyticsEntrada`**. La union entre la entrada real y la capa que la consume **no
+la mide nadie**. El vuelo es la unica vara que recorre las dos.
+
+**EL ARREGLO PROPUESTO, y no se aplica hoy:** que `analyticsEntrada` **lleve `id` y
+`protege_item`** en su mapeo, y que **una prueba cruce la entrada REAL con el
+carril** en vez de fabricar los objetos a mano. Y que se revise si hay **mas
+campos opcionales que se pierden igual**, porque el patron (tipo opcional mas
+mapeo explicito mas TypeScript callado) puede haber comido otros.
+
+**LO QUE SIGUE EN PIE DE LA FICHA DE ARRIBA:** la pregunta de si la marca debe
+**sobrevivir a la replanificacion del core** es legitima y sigue siendo del
+fundador. **Pero es OTRA pregunta**, y no es la que vaciaba el carril.
