@@ -11862,3 +11862,93 @@ operacion se abre ni se cierra, y **no se vuelve a dibujar cual es el ultimo
 tramo de la fase III**: el acta 164 lo dibujo desde una cifra falsa, y
 redibujarlo desde la cifra buena seguiria siendo una decision de alcance que
 nadie encargo.
+
+---
+
+## R.36. Registro de las nueve adjudicaciones y la caida propia del acta de la vuelta 166
+
+(Acta del auditor, vuelta 166, secciones 3 y 6; escrito en la vuelta 167,
+TAREA 1.)
+
+Por adicion, como `R.21` a `R.35`. **Corte de todas las cifras de esta entrada:
+4 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes. La
+SEDE tampoco se supone: sale de la adjudicacion 6.3 del acta 162, leida hoy en
+`docs/loop/ACTA_AUDITOR.md:53933`, y se DECLARA que el acta 166 no la repite (la
+regla es de la casa, no de un acta suelta). Salida:
+`docs/loop/SALIDA_V167_T1_REGISTRO_ACTA_166.txt`.
+
+**Y LAS DOS CIFRAS DEL TITULO TAMPOCO ESTAN TECLEADAS**, que es lo que la
+adjudicacion 5.7 del acta 165 firmo como metodo correcto y esta vuelta repite:
+se cuentan del acta (9 adjudicaciones `6.n` y 1 negrita `CAIDA n` dentro del
+cuerpo acotado, lineas 55288 a 55643) y de ahi sale el numeral en palabra, **incluida
+la concordancia del singular**, que es rama nueva de este instrumento porque el
+acta 165 traia dos caidas y la 166 trae una. El encargo de la 167 pide nueve y
+una; el conteo da lo mismo, asi que no hay discrepancia que declarar.
+
+**LAS NUEVE ADJUDICACIONES, CON SU LINEA EN EL ACTA LEIDA HOY.** El titulo de
+cada una es LITERAL del fichero (localizado dentro del cuerpo del acta 166, no
+de cualquier acta); la glosa que sigue es prosa del ejecutor y va marcada como
+tal.
+
+  - **6.1 (`docs/loop/ACTA_AUDITOR.md:55508`, leida hoy). VIA: EN EJECUCION.** Titulo
+    literal del acta: *"LA VUELTA 166 NO SE CIERRA POR ACTA: SE TERMINA, Y LA SIGUIENTE ES LA 167. ADJUDICADO CITANDO PRECEDENTE Y NO DOCTRINA NUEVA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EJECUCION, y es la que sostiene la vuelta entera. La 167 ABSORBE la cola de la 166 y su `REPORTE.md` (TAREA 2) cubre LAS DOS VUELTAS. El numero 166 no se reabre y el invariante de la casa, ACTA N VUELTA N MAS 1, queda intacto: el acta 166 abre la vuelta 167 y de ahi cuelgan `tallar_cabecera_reporte.py` y `verificar_apertura_sellada.py`. NO se declara parada, porque el precedente que se cita es de la casa (acta 163, adjudicacion 6.1) y no doctrina nueva.
+  - **6.2 (`docs/loop/ACTA_AUDITOR.md:55520`, leida hoy). VIA: EN EJECUCION.** Titulo
+    literal del acta: *"EL FICHERO DE CERO BYTES VA EN EL MISMO COMMIT QUE EL BLOQUE DE APERTURA DE LA 167, Y NO EN UNO SUYO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EJECUCION, TAREA 0 de esta vuelta. `docs/loop/SALIDA_V166_BATERIA.txt` entra en el MISMO commit que los diez `SALIDA_V167_*_APERTURA.txt`, primer commit del corredor e hijo directo del acta 166. NO se le hizo commit propio, y el motivo es aritmetico y no de gusto: un commit entre el acta y la apertura contaria como intruso y el encargo de la 167 declara CERO hashes admitidos en su corredor.
+  - **6.3 (`docs/loop/ACTA_AUDITOR.md:55526`, leida hoy). VIA: EN EJECUCION.** Titulo
+    literal del acta: *"LAS SALIDAS SELLADAS DE LA 166 NO SE RE CORREN NI SE RE SELLAN: SE CITAN."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EJECUCION, TAREA 2 de esta vuelta. Las salidas selladas de la 166 se CITAN POR SU RUTA dentro del reporte y NO se re corren ni se re sellan. Re correrlas hoy solo cambiaria sus relojes y dispararia `verificar_re_sellado.py` sin que nada de fondo se hubiera movido, que es justo lo que la 6.1 del acta 163 previno con estas mismas palabras.
+  - **6.4 (`docs/loop/ACTA_AUDITOR.md:55531`, leida hoy). VIA: EN EJECUCION.** Titulo
+    literal del acta: *"LA BATERIA SE CORRE EN LA 167 Y EL FICHERO DE CERO BYTES NO CUENTA COMO CORRIDA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EJECUCION, TAREA 0 y TAREA 2 de esta vuelta. El fichero de cero bytes queda commiteado Y DECLARADO COMO VACIO en el asunto de su commit: NO cuenta como corrida. La bateria de verdad se corre en esta vuelta, sola y con los ficheros quietos, con fichero propio de la 167 y su veredicto publicado con sus contadores y su reloj. Darla por verde desde un fichero vacio seria la degradacion callada que el canon 9 del banco prohibe.
+  - **6.5 (`docs/loop/ACTA_AUDITOR.md:55536`, leida hoy). VIA: EN CODIGO.** Titulo
+    literal del acta: *"LA COMPROBACION ii SE ARREGLA EN LA FUENTE Y SE DECLARA, Y NO SE DECLARA AJENA. ES TAREA BLOQUEANTE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN CODIGO, TAREA 3 de esta vuelta, y es BLOQUEANTE. La comprobacion ii de `scripts/plan/recomputo_3388.py` se arregla EN LA FUENTE, no se declara ajena ni se le baja la vara: el diccionario `leido` era ULTIMO GANA por par resuelto y sin mirar la clase, y perdia la `A` de un par que si tiene `A`. Lleva caso positivo por mutacion que CAE si alguien devuelve el ultimo gana, y el antes y el despues se publican de LAS CUATRO comprobaciones y no solo de la ii. La linea del pie se declara en el reporte, que era la mitad que faltaba.
+  - **6.6 (`docs/loop/ACTA_AUDITOR.md:55545`, leida hoy). VIA: EN MEDICION.** Titulo
+    literal del acta: *"LA FILA DEL RETRATO DICE DE QUE UNIVERSO HABLA, POR ADICION Y SIN BORRAR SU CIFRA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA COMO MEDICION, TAREA 4 de esta vuelta. La fila del retrato de `docs/plan/RECOMPUTO_3388.md` PASO 1 se corrige POR ADICION por el carril del banco 9.10: nota fechada adosada, ninguna nota vieja reescrita y NINGUNA CIFRA BORRADA. El `4` no se toca; lo que se anade es DE QUE POBLACION es ese 4, con el `221` y el `13` al lado, cada uno con su corte y su fichero de salida.
+  - **6.7 (`docs/loop/ACTA_AUDITOR.md:55550`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"LAS TRES FILAS DE `{customer_development_modelo, customer_discovery}` NO SON TRES LECTURAS QUE SE CONTRADIGAN, Y ES EL SEGUNDO EJEMPLAR NOMBRADO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. Las tres filas de `{customer_development_modelo, customer_discovery}` quedan como estan y NINGUNA CLASE SE MUEVE. La decision del ejecutor de la vuelta 166 de no declarar defectuosa la poblacion de los trece queda adjudicada a su favor, y esta vuelta no la reabre. Cuenta ademas para la TAREA 3: ese par es uno de los tres que hacen fallar la comprobacion ii, y el arreglo del instrumento NO le adjudica clase a ninguno de los tres.
+  - **6.8 (`docs/loop/ACTA_AUDITOR.md:55560`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL ESTADO DE `OP-L-01` SE QUEDA EN `LISTA` Y ESTA BIEN."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. `OP-L-01` sigue en `LISTA` y su estado no se mueve en esta vuelta. Su clausula 3 sigue abierta hasta donde el inventario nombra miembros, y mover un estado con una clausula abierta seria la especie del falso verde.
+  - **6.9 (`docs/loop/ACTA_AUDITOR.md:55567`, leida hoy). VIA: EN EJECUCION.** Titulo
+    literal del acta: *"EL TRABAJO DE LA CAMPANA SIGUE POR EL ORDEN ESCRITO, Y ESE ORDEN ES `OP-C-01`."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EJECUCION, TAREA 5 de esta vuelta. La campana vuelve a moverse por el orden escrito y ese orden es `OP-C-01`, la primera de la fase `00_CODIGO`. Se ejecuta TAL COMO SU FICHA ESTA ESCRITA, con las guardas obligatorias del MODO DE EJECUCION CONTINUA, y con la letra que manda sobre las demas: las pruebas nuevas se escriben y se corren PRIMERO sobre el codigo sin arreglar y se publica que se caen. Si el texto de la ficha no alcanzara para ejecutarla sin decidir, se para y se trae.
+
+**EL REPARTO POR VIA, CONTADO Y NO TECLEADO:** EN CODIGO: 1 (6.5); EN EJECUCION: 5 (6.1, 6.2, 6.3, 6.4, 6.9); EN MEDICION: 1 (6.6); SIN TOCAR NADA: 2 (6.7, 6.8).
+**Ninguna de las nueve sube al fundador.**
+
+**LA CAIDA PROPIA DEL AUDITOR, REGISTRADA IGUAL QUE LAS DEL EJECUTOR**
+(letra del encargo de la vuelta 167, TAREA 1). No es del ejecutor y no acumula
+para sus rachas; se escribe aqui porque el registro de la casa no distingue de
+quien es la mano que cae. En el acta 166 vive en la **seccion 3**, igual que en
+el acta 165.
+
+  - **CAIDA 1 (`docs/loop/ACTA_AUDITOR.md:55425`, leida hoy).** Titulo literal del
+    acta: *"CAIDA 1. CONTE LAS OPERACIONES SIN DEPENDENCIAS SOBRE UNA CLAVE QUE NO EXISTE, Y ME HABRIA DADO 42 DONDE HAY 23."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y NO ACUMULA PARA NINGUNA RACHA DEL EJECUTOR, porque no es suya. Y SE DICE LO QUE NO ARRASTRA, con la medicion delante: el propio acta declara que la cazo corriendo el inventario de claves ANTES de publicar la cifra, y que no llego a ninguna salida sellada ni a ningun encargo, asi que NO HAY CIFRA PUBLICADA QUE CORREGIR y esta entrada no declara ninguna correccion por ella. La cifra buena, 23 operaciones sin dependencias declaradas, es la que la TAREA 4 de la vuelta 166 midio sobre el campo real `depende_de` y publico en `docs/loop/SALIDA_V166_T4_CENSO_OPERACIONES.txt`. Lo que ensena se escribe entero porque muerde a cualquiera: un conteo sobre un campo se comprueba contra el ESQUEMA DEL FICHERO y no contra la palabra que uno esperaba encontrar, que es la especie del canon 9 del banco, no fallar ruidoso sino contestar una cosa distinta de la que se pregunto.
+
+**LO QUE ESTA CAIDA NO ARRASTRA, Y SE DICE CON LA MEDICION DELANTE**
+(`EJECUTOR.md` 8 pide correccion declarada sin borrar el texto viejo; aqui no
+hay texto viejo que corregir y eso tambien se escribe). La `CAIDA 1` del acta
+166 **no llego a ninguna salida sellada ni a ningun encargo**, segun declara el
+propio acta en su seccion 3, asi que **NO HAY CIFRA PUBLICADA QUE CORREGIR POR
+ELLA** y esta entrada no declara ninguna correccion en su nombre. **La cifra
+buena de esa poblacion sigue siendo la que la TAREA 4 de la vuelta 166 midio
+sobre el campo real `depende_de` y publico en
+`docs/loop/SALIDA_V166_T4_CENSO_OPERACIONES.txt`: 23 operaciones sin
+dependencias declaradas, sobre 42 en `LISTA` y 29 en `HECHA`.** Corte de las
+tres: 4 sep 2026.
+
+**LO QUE ESTE REGISTRO NO CIERRA.** La vara `P.5.1` sigue CONGELADA y ninguna de
+estas nueve la estrecha ni la ensancha. **Ninguna clase del cribado se mueve por
+esta entrada**: la 6.7 explica el conflicto de un par por una regla escrita, y
+explicarlo no es adjudicarlo. **El arreglo de la comprobacion ii (6.5) no mueve
+un veredicto, no adjudica clase a ninguno de los tres pares que la hacen fallar
+y no toca ni un nodo**: es un defecto de instrumento, medido en el instrumento y
+arreglado en el instrumento. Y los pasos 2, 3 y 4 del `RECOMPUTO_3388.md` siguen
+sin recomputarse: no estan encargados y ampliarlo seria decidir su alcance.
