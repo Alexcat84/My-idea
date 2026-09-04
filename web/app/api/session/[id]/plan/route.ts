@@ -16,6 +16,7 @@
  */
 import type Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
+import { garantizarTerminal } from "@/lib/streamTerminal";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import {
   costoAcumuladoUsd,
@@ -207,8 +208,16 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
   const encoder = new TextEncoder();
   const stream = new ReadableStream({
     async start(controller) {
+      // La garantia del terminal (4 sep 2026): se apunta lo emitido SOLO
+      // DESPUES de que el enqueue salga bien. Si el enqueue tira, no se
+      // apunta nada, que es justo lo que deja ver el cierre mudo.
+      const emitidos: string[] = [];
+      let terminalEmitido: string | null = null;
+      let causaCierre: unknown = null;
       function enviar(evento: string, data: unknown) {
         controller.enqueue(encoder.encode(`event: ${evento}\ndata: ${JSON.stringify(data)}\n\n`));
+        emitidos.push(evento);
+        if (evento === "done" || evento === "error") terminalEmitido = evento;
       }
       // ETAPA 2: el cobro aplicado en ESTA entrega (para la red de reembolso
       // del catch). null = aun no se cobra, o el done ya salio.
@@ -453,6 +462,7 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         });
         cobroAplicado = null; // el done salio: la entrega llego a su dueño
       } catch (e) {
+        causaCierre = e;
         // ETAPA 2 — la red del borde del streaming: si algo revento DESPUES
         // de un cobro exitoso y ANTES de que el done llegara, se reembolsa
         // con su log. El usuario JAMAS pierde creditos por un fallo nuestro
@@ -465,9 +475,26 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
             console.error("[plan] FALLO EL REEMBOLSO post-cobro (revisar a mano):", errRefund);
           }
         }
-        enviar("error", { error: e instanceof Error ? e.message : String(e) });
+        // Envuelto: si ESTE emit tira (el controller ya roto), su throw
+        // escapaba del catch y el finally cerraba EN SILENCIO. Ese era el
+        // camino del cierre mudo de la corrida I.
+        try {
+          enviar("error", { error: e instanceof Error ? e.message : String(e) });
+        } catch (errEmit) {
+          console.error("[plan] no se pudo emitir el error al cliente:", errEmit);
+        }
       } finally {
         clearInterval(heartbeat);
+        // NINGUN STREAM TERMINA EN SILENCIO: si no salio done ni error,
+        // esto grita por el log del servidor y lo intenta por el canal.
+        garantizarTerminal({
+          terminalEmitido,
+          emitidos,
+          causa: causaCierre,
+          sessionId,
+          projectId,
+          enviar,
+        });
         controller.close();
       }
     },
