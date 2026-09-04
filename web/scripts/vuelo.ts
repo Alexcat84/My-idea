@@ -2669,7 +2669,13 @@ async function faseCicloProteccion(cookie: string, projectId: string) {
   const { data: itemsRaw } = await supabaseAdmin
     .from("checklist_items")
     .select("id, dominio, etapa, texto, protege_item, deteccion, probabilidad, dolor, camino, banda, fecha_base")
-    .eq("project_id", projectId);
+    .eq("project_id", projectId)
+    // ORDER BY EXPLICITO (4 sep 2026). Sin el, Postgres devuelve las filas en el
+    // orden que le convenga, y este arnes leia por POSICION. Medido en la
+    // corrida J: de 30 riesgos, 12 enlazados, y el PRIMER enlazado estaba en la
+    // posicion 6 (los doce en 6..15 y 25..26). Un arnes no puede depender de un
+    // orden que nadie le prometio.
+    .order("id");
   type ItemP = {
     id: string; dominio: string | null; etapa: number; texto: string;
     protege_item: string | null; deteccion: string | null; probabilidad: string | null;
@@ -2793,8 +2799,22 @@ async function faseCicloProteccion(cookie: string, projectId: string) {
   }
   log(`OK: carril con ${carril.length} marca(s), anclada(s) a la etapa del protegido (${etapaEsperada}).`);
 
-  // 6. Las anclas y el no-llego, con los items REALES y fechas controladas
-  const respuestas = riesgos.slice(0, 3).map((r) => ({
+  // 6. Las anclas y el no-llego, con los items REALES y fechas controladas.
+  //
+  // SE ARMA A PARTIR DE LO REALMENTE ENLAZADO (4 sep 2026, decision del
+  // fundador). Antes esto tomaba riesgos.slice(0, 3) y despues buscaba ahi
+  // dentro al primer enlazado, con un `!` que tapaba el undefined. La corrida J
+  // lo rompio: de 30 riesgos, 12 enlazados, y NINGUNO en los tres primeros (el
+  // primero en la posicion 6). El TypeError salia dos lineas mas abajo, leyendo
+  // 'noLlegaAlAncla' de undefined, y no decia nada de la causa.
+  //
+  // POR QUE NO HABIA SALTADO ANTES: cuando el enlazador vivo no enlazaba nada,
+  // el propio arnes sembraba el enlace sobre riesgos[0], que SIEMPRE cae en los
+  // tres primeros. El fallo dormia detras de esa rama.
+  //
+  // Ahora el enlazado ENCABEZA la lista y el relleno sale de los demas riesgos.
+  const otrosRiesgos = riesgos.filter((r) => r.id !== enlaceVivo!.id).slice(0, 2);
+  const respuestas = [enlaceVivo!, ...otrosRiesgos].map((r) => ({
     id: r.id,
     etapa: 1,
     destacado: false,
@@ -2802,7 +2822,16 @@ async function faseCicloProteccion(cookie: string, projectId: string) {
     entregaAntesDe: r.id === enlaceVivo!.id ? new Date(Date.now() + 3 * 86400000).toISOString() : null,
   }));
   const emp = empaquetarFechas({ ancla: new Date().toISOString(), capacidad: "5-10", items: respuestas });
-  const anclada = emp.fechas.find((f) => f.id === enlaceVivo!.id)!;
+  // EL `!` QUE TAPABA EL undefined DESAPARECE: si el enlazado no esta aqui, se
+  // dice cual es el hueco en vez de reventar dos lineas mas abajo.
+  const anclada = emp.fechas.find((f) => f.id === enlaceVivo!.id);
+  if (!anclada) {
+    throw new Error(
+      `el empaquetado no devolvio fecha para el enlace vivo ${enlaceVivo!.id}: ` +
+        `entraron ${respuestas.length} respuesta(s) (${respuestas.map((r) => r.id).join(", ")}) ` +
+        `y salieron ${emp.fechas.length} fecha(s)`
+    );
+  }
   // A MANO: el protegido a 3 dias -> deseada = hace 4 dias -> NINGUNA fecha
   // honesta (la primera entrega posible es la semana siguiente) puede llegar.
   if (!anclada.noLlegaAlAncla) throw new Error("el no-llego no disparo con un ancla imposible: la mentira honesta volvio");
@@ -2811,7 +2840,10 @@ async function faseCicloProteccion(cookie: string, projectId: string) {
     capacidad: "5-10",
     items: respuestas.map((r) => (r.id === enlaceVivo!.id ? { ...r, entregaAntesDe: new Date(Date.now() + 60 * 86400000).toISOString() } : r)),
   });
-  const ancladaLejos = empLejos.fechas.find((f) => f.id === enlaceVivo!.id)!;
+  const ancladaLejos = empLejos.fechas.find((f) => f.id === enlaceVivo!.id);
+  if (!ancladaLejos) {
+    throw new Error(`el empaquetado lejano no devolvio fecha para el enlace vivo ${enlaceVivo!.id}`);
+  }
   if (ancladaLejos.noLlegaAlAncla) throw new Error("un ancla a 60 dias no debia disparar el aviso");
   if (empLejos.fechas[0].id !== enlaceVivo!.id) throw new Error("la anclada no gano la prioridad de reparto");
   log("OK: anclas -- la anclada se reparte primera; el ancla imposible DICE no-llego; la holgada no.");
