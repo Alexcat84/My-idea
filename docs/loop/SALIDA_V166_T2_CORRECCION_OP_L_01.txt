@@ -1,0 +1,192 @@
+==============================================================================
+VUELTA 166, TAREA 2: LA CORRECCION DECLARADA DE OP-L-01, CARRIL 9.10
+==============================================================================
+
+A) LA FICHA, LEIDA HOY, Y EL ESTADO ANTES
+   docs/plan/OPERACIONES.jsonl:41
+   id_op:           OP-L-01
+   fase:            09_LECTURAS_DIRIGIDAS
+   tipo:            MESA
+   orden:           1
+   estado:          LISTA
+   fecha_corte:     2026-08-11
+   depende_de:      CIFRA 0  []
+   bloquea_a:       CIFRA 0  []
+   nodos:           CIFRA 0  []
+   preservar:       CIFRA 0  []
+   eliminar:        CIFRA 0  []
+   aristas_nuevas:  CIFRA 0  []
+   verificacion, sus 3 clausulas de HOY:
+      1. ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui
+      2. el marcador del cribado no se mueve: sigue en 2.117
+      3. cada nomina afectada se re-mide con su cobertura al lado (banco 9.26)
+
+   EL CONTEO DE ESTADOS ANTES, del fichero entero:
+      HECHA    29
+      LISTA    42
+   CIFRA operaciones: 71
+
+B) LA SIMULACION PREVIA, PRIMERA MITAD: QUE ESCRIBE LA OPERACION
+   CIFRA elementos declarados para escribir en el grafo: 0
+   VEREDICTO: es una operacion de VERIFICACION PURA. No mueve un nodo,
+   no mueve una arista y no puede mover el marcador.
+
+C) EL RESOLUTOR, DELANTE DE TODO CONTEO (P.1)
+   CIFRA ficheros de nodo leidos: 3853
+   CIFRA alias en el mapa: 761
+   CIFRA cabeceras LD leidas de LECTURAS_DIRIGIDAS.md: 11
+   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388
+
+D) CLAUSULA 1, MEDIDA HOY POR LOS DOS CAMINOS
+   CIFRA pares distintos, comparacion LITERAL: 3388
+   CIFRA pares distintos, comparacion RESUELTA: 3009
+   CIFRA de las once que aparecen, LITERAL: 0
+   CIFRA de las once que aparecen, RESUELTA: 3
+   LD-01  formalizar_junta_asesora contra identificar_consejo_asesores  (lectura dirigida: D)
+      puesto 712   clase A   dominio core     ids crudos: formalizar_junta_asesora | identificar_junta_asesores
+      puesto 976   clase A   dominio core     ids crudos: formalize_advisory_board | identificar_junta_asesores
+      puesto 1190  clase D   dominio core     ids crudos: formalize_advisory_board | identificar_consejo_asesores
+   LD-05  estrategia_innovacion_producto contra estrategia_de_innovacion_producto  (lectura dirigida: D)
+      puesto 1325  clase D   dominio core     ids crudos: estrategia_de_innovacion_de_producto | estrategia_de_innovacion_producto
+   LD-11  pensamiento_visual contra pensamiento_visual_modelos_negocio  (lectura dirigida: D)
+      puesto 1281  clase D   dominio core     ids crudos: get_visual | pensamiento_visual_modelos_negocio
+   CIFRA puestos implicados en total: 5
+   CONTRASTE con el acta 165 (no es fuente, es contraste): dice 3 en
+   resuelta, LD-01 en 712 A, 976 A y 1190 D, LD-05 en 1325 D y LD-11
+   en 1281 D. MI MEDICION DE HOY MANDA, y coincide o se declara.
+
+E) CLAUSULA 2, MEDIDA HOY, CON EL CAMPO adjudicacion DE LA PROPIA FICHA
+   la letra de la clausula: 'el marcador del cribado no se mueve: sigue en 2.117'
+   fecha_corte de la ficha: 2026-08-11
+   CIFRA marcador del cribado HOY: 3388
+   CIFRA que la clausula escribe: 2117
+   CIFRA diferencia: 1271
+   EL CAMPO adjudicacion, LEIDO HOY DE LA FICHA:
+      TANDA DE ONCE LECTURAS DIRIGIDAS, hechas el 11 ago 2026. Misma vara y mismo formato de veredicto que el cribado, MARCADAS COMO LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador. SALDO: 2 A y 9 D.
+   la frase 'no entran en la cola ni mueven su marcador' esta en el
+   campo adjudicacion de la ficha: SI
+
+F) CLAUSULA 3: NO SE CORRIGE, SE MIDE Y SE PUBLICA CON SUS DOS SUMANDOS
+   LA ADJUDICACION 5.4 DEL ACTA 165 LA DA POR CUMPLIDA HASTA DONDE HAY
+   QUE MEDIR, y manda que las que faltan queden NOMBRADAS Y NO
+   RELLENADAS, que es lo que la verificacion de OP-I-01 pide.
+   NO SE REIMPLEMENTA SU VARA: se invoca el instrumento de la vuelta 165,
+   que es el que la midio y el que el auditor reprodujo. Dos varas para
+   la misma pregunta es exactamente lo que esta casa no hace.
+   | F) CLAUSULA 3: 'cada nomina afectada se re-mide con su cobertura al
+   |    lado (banco 9.26)'
+   |    CIFRA nominas que la tabla de LECTURAS_DIRIGIDAS.md nombra: 8
+   |    CIFRA filas de docs/plan/INVENTARIO.jsonl: 672
+   |       junta asesora                            -> inventario 'la junta asesora' (racimo)
+   |           CIFRA miembros: 2 | posibles: 1 | leidos en el cribado: 1
+   |           CIFRA lecturas dirigidas de esta tanda dentro: 1 (LD-01)
+   |           COBERTURA RE MEDIDA HOY (banco 9.26): 1 de 1
+   |           cobertura que el inventario declara: 6 de 6
+   |       seleccion de canal                       -> inventario 'la seleccion de canal' (racimo)
+   |           CIFRA miembros: 5 | posibles: 10 | leidos en el cribado: 8
+   |           CIFRA lecturas dirigidas de esta tanda dentro: 2 (LD-02, LD-03)
+   |           COBERTURA RE MEDIDA HOY (banco 9.26): 10 de 10
+   |           cobertura que el inventario declara: 10 de 10
+   |       tecnologias disruptivas                  SIN ENTRADA CON MIEMBROS en el inventario
+   |       pass/fail                                SIN ENTRADA CON MIEMBROS en el inventario
+   |       pensamiento visual                       SIN ENTRADA CON MIEMBROS en el inventario
+   |       estrategia de innovacion de producto     SIN ENTRADA CON MIEMBROS en el inventario
+   |       project_close_out                        SIN ENTRADA CON MIEMBROS en el inventario
+   |       sales roadmap                            -> inventario 'el sales roadmap' (racimo)
+   |           CIFRA miembros: 6 | posibles: 15 | leidos en el cribado: 10
+   |           CIFRA lecturas dirigidas de esta tanda dentro: 0 (ninguna)
+   |           COBERTURA RE MEDIDA HOY (banco 9.26): 10 de 15
+   |           cobertura que el inventario declara: 15 de 15 (LD-66 a LD-70, 14 ago 2026, vuelta 20). El texto viejo de es
+   |    CIFRA nominas RE MEDIDAS: 3
+   |    CIFRA nominas SIN ENTRADA MAPEABLE en el inventario: 5
+   |    CLAUSULA 3: NO SE PUEDE CUMPLIR ENTERA
+   |    Y SE DICE POR QUE, SIN ADIVINAR: la clausula dice 'cada nomina
+   |    afectada' y NO nombra cuales ni donde viven. Las que el
+   |    inventario nombra con sus miembros se re miden arriba; las
+   |    otras 5 solo existen como prosa, y elegirles una entrada del
+   |    inventario seria DECIDIR, no medir.
+   | 
+   EXITCODE del instrumento de la 165: 0
+   Y LA LEGIBILIDAD QUE EL ENCARGO PIDE, DICHA AQUI: donde una cobertura
+   suma dos universos, los DOS SUMANDOS van al lado del total. La
+   seleccion de canal publica 10 de 10 y sus sumandos son 8 leidos en el
+   cribado mas 2 lecturas dirigidas de esta tanda; el sales roadmap
+   publica 10 de 15 y sus sumandos son 10 mas 0. El criterio no cambio
+   entre los dos: cambia lo que cada racimo trae.
+
+G) LA SIMULACION PREVIA, SEGUNDA MITAD: LA FICHA NUEVA, EN MEMORIA
+   CIFRA bytes de la correccion 1: 3326
+   CIFRA bytes de la correccion 2: 1993
+   CIFRA bytes de la linea antes: 1962
+   CIFRA bytes de la linea despues: 7289
+
+   LOS CINCO INVARIANTES DEL CARRIL, SOBRE LA FICHA NUEVA SIN ESCRIBIRLA:
+      1_las_clausulas_viejas_siguen_byte_a_byte_y_en_su_orden PASA   3 clausulas viejas, las 3 primeras de las nuevas coinciden: True
+      2_el_esquema_no_gana_ni_pierde_una_clave             PASA   antes 18 claves, despues 18; identicas: True
+      3_verificacion_crece_en_exactamente_dos              PASA   de 3 a 5, delta 2
+      4_el_resto_de_la_ficha_no_se_toca_ni_en_estado       PASA   estado antes 'LISTA', despues 'LISTA'
+      5_las_otras_lineas_del_fichero_no_se_tocan           PASA   71 lineas comparadas, identicas: True
+   CIFRA invariantes: 5 | pasan: 5 | fallan: 0
+
+   EL TEXTO ENTERO QUE SE ANADIRIA, PARA QUE NADA ENTRE SIN LEERSE:
+   --- CORRECCION 1 ---
+   CORRECCION DECLARADA (2026-09-04, vuelta 166, TAREA 2 del encargo), POR EL CARRIL DEL BANCO 9.10 Y CON EL TEXTO VIEJO ENTERO ARRIBA, SIN TACHARLO Y SIN CLAVE NUEVA DE ESQUEMA (es un elemento mas de esta misma lista verificacion, que es la via que la ficha gemela OP-L-03 uso en la vuelta 72 para su clausula equivalente y que el acta 71, seccion 6, adjudicacion 3, adjudico CON LAS PALABRAS NO ES PARADA). LO QUE SE CORRIGE es la clausula que en esta lista dice, verbatim: 'ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui'. MEDIDO HOY CON EL RESOLUTOR PUESTO, que P.1 manda sin excepcion y da igual quien haya pedido el conteo: 3388 filas en docs/INTRA_DOMINIO_VEREDICTOS.jsonl, mapa de 761 alias construido de ids_alias de dataset/nodos/, 3388 pares literales distintos y 3009 pares RESUELTOS distintos. EN COMPARACION LITERAL LA CLAUSULA SIGUE SIENDO CIERTA Y SE DICE ANTES QUE NADA: 0 de las once aparecen. EN COMPARACION RESUELTA APARECEN 3, y se nombran una por una con su puesto, su clase y sus ids crudos, que es lo que la adjudicacion 5.3 del acta 165 manda: LD-01 (formalizar_junta_asesora contra identificar_consejo_asesores, cuya lectura dirigida es D) cae sobre 3 puesto(s) del archivo: el puesto 712 en A (formalizar_junta_asesora contra identificar_junta_asesores, dominio core); el puesto 976 en A (formalize_advisory_board contra identificar_junta_asesores, dominio core); el puesto 1190 en D (formalize_advisory_board contra identificar_consejo_asesores, dominio core); LD-05 (estrategia_innovacion_producto contra estrategia_de_innovacion_producto, cuya lectura dirigida es D) cae sobre 1 puesto(s) del archivo: el puesto 1325 en D (estrategia_de_innovacion_de_producto contra estrategia_de_innovacion_producto, dominio core); LD-11 (pensamiento_visual contra pensamiento_visual_modelos_negocio, cuya lectura dirigida es D) cae sobre 1 puesto(s) del archivo: el puesto 1281 en D (get_visual contra pensamiento_visual_modelos_negocio, dominio core). QUE ES ESA COINCIDENCIA Y QUE NO ES, DICHO CON LA MEDICION DELANTE: los ids crudos de esos puestos NO son los ids con los que las once estan escritas, y ninguno de esos puestos entro a la cola del cribado por una lectura dirigida; lo que los junta con las once es que la campana FUNDIO nodos DESPUES de la fecha_corte de esta ficha, y el resolutor los lleva hoy al mismo par. Es HUELLA DE FUSION, y el propio acta 165 lo dice de este mismo ejemplar en su seccion 4.3, con estas palabras: 'su conflicto es huella de fusion, no error de lectura'. LA VARA, DICHA ENTERA Y NO A MEDIAS: lo que la clausula pregunta es si alguna de las once entro a la cola del cribado y tiene ahi su veredicto, o sea si 'viven solo aqui'. La respuesta medida hoy es que NINGUNA entro, y se sostiene por los dos caminos: en literal no aparece ninguna, y en resuelto las que coinciden lo hacen sobre puestos que entraron a la cola por la semejanza y con otros ids. LA EXCEPCION QUEDA NOMBRADA Y MEDIDA EN VEZ DE CALLADA, que es todo lo que esta correccion pretende. LO QUE ESTA CORRECCION NO HACE: no mueve ni un veredicto, no adjudica clase a ninguno de esos puestos, no toca ni un nodo, no cambia el estado ni las dependencias de esta ficha ni de ninguna otra, y no autoriza ninguna lectura nueva. Ver docs/loop/SALIDA_V166_T2_CORRECCION_OP_L_01.txt.
+   --- CORRECCION 2 ---
+   CORRECCION DECLARADA (2026-09-04, vuelta 166, TAREA 2 del encargo), POR EL MISMO CARRIL DEL BANCO 9.10, CON EL TEXTO VIEJO ENTERO ARRIBA Y SIN CLAVE NUEVA DE ESQUEMA. LO QUE SE CORRIGE es la clausula que en esta lista dice, verbatim: 'el marcador del cribado no se mueve: sigue en 2.117'. LA VUELTA 165 LA TRAJO COMO PARADA por no poder leerla sin estrecharla ni ensancharla, e hizo bien en traerla con la letra delante en vez de improvisar. EL ACTA 165, EN SU ADJUDICACION 5.2, LA RESOLVIO SIN DOCTRINA NUEVA Y CITANDO EL CAMPO adjudicacion DE ESTA MISMA FICHA, que dice hoy, leido de este mismo registro: 'TANDA DE ONCE LECTURAS DIRIGIDAS, hechas el 11 ago 2026. Misma vara y mismo formato de veredicto que el cribado, MARCADAS COMO LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador. SALDO: 2 A y 9 D.'. La frase 'no entran en la cola ni mueven su marcador' es la lectura DE EFECTO, escrita por la propia operacion, y leerla asi NO es estrecharla: es leer la ficha ENTERA, que es lo que P.5 manda. EL NUMERAL 2.117 ES EL VALOR DEL MARCADOR EN LA fecha_corte DE ESTA FICHA, TESTIGO Y NO CONDICION. MEDIDO HOY: el marcador del cribado vale 3388, y la simulacion previa de esta operacion da 0 escrituras declaradas en nodos, preservar, eliminar y aristas_nuevas, o sea que la operacion no puede mover el marcador ni queriendo. LA CLAUSULA, LEIDA ASI, SE CUMPLE. PRECEDENTE AL BYTE, Y POR ESO NO HACE FALTA DOCTRINA NUEVA: la clausula gemela de OP-L-03, escrita el mismo dia y con el mismo corte, se corrigio por este mismo carril en la vuelta 72, por adicion dentro de su propia lista verificacion, con el texto viejo entero arriba y sin clave nueva de esquema, y el acta 71, seccion 6, adjudicacion 3, la adjudico CON LAS PALABRAS NO ES PARADA. LO QUE ESTA CORRECCION NO HACE: no borra el numeral 2.117 ni la clausula que lo lleva, no mueve el marcador, no toca un nodo y no cambia el estado ni las dependencias de ninguna ficha. Ver docs/loop/SALIDA_V166_T2_CORRECCION_OP_L_01.txt.
+
+H) ESCRITO
+   docs/plan/OPERACIONES.jsonl:41
+   CIFRA correcciones anadidas: 2
+
+I) LA COMPROBACION QUE NO SE FIA DE LO QUE ACABA DE ESCRIBIR
+   CIFRA lineas del fichero antes: 72 | despues: 72
+   CIFRA clausulas de verificacion antes: 3 | despues: 5
+   las tres clausulas originales siguen, byte a byte y en su orden: True
+   claves del esquema antes: 18 | despues: 18 | identicas: True
+   EL CONTEO DE ESTADOS DESPUES, del fichero entero:
+      HECHA    29
+      LISTA    42
+   CIFRA operaciones: 71
+   el conteo de estados NO se movio: True
+
+J) EL PASE DE ESTADO: SE MIDE CON LA VARA DE LA CASA Y NO SE DECIDE AQUI
+   LA PUERTA ES tallar_estado_de_fase.py, el mismo instrumento que los
+   pases de las vueltas 152 y 154 usaron como puerta, y su regla escrita
+   es literal: la ficha que NO salga CUMPLIDO no se mueve.
+      id_op:                           OP-L-01
+      fase escrita:                    09_LECTURAS_DIRIGIDAS
+      estado (contraste):              LISTA
+      vara:                            SIN VARA ESCRITA
+      remitida:                        no remitida
+      destino medido contra el grafo:  no hay regla escrita que mida contra el grafo el destino de un tipo MESA (ni superviviente resoluble ni aristas_nuevas)
+      veredicto:                       NO COMPUTABLE
+   VEREDICTO DEL TALLADOR: NO COMPUTABLE
+
+   LAS TRES CLAUSULAS, TRAS LAS DOS CORRECCIONES:
+      clausula 1: CUMPLIDA con su excepcion NOMBRADA Y MEDIDA
+      clausula 2: CUMPLIDA por la lectura de efecto de la propia ficha
+      clausula 3: CUMPLIDA hasta donde el inventario nombra miembros,
+                  con las cinco restantes NOMBRADAS Y NO RELLENADAS
+
+   LA PUERTA NO ABRE, Y NO SE FUERZA. EL ESTADO NO SE MUEVE.
+   EL MOTIVO, MEDIDO Y NO SUPUESTO: la fila de OP-L-01 dice vara 'SIN VARA ESCRITA' y
+   veredicto 'NO COMPUTABLE'. No existe regla escrita que mida contra el grafo
+   el destino de un tipo MESA, y esta ficha es de tipo MESA con
+   nodos, preservar, eliminar y aristas_nuevas VACIOS.
+   LOS DOS PRECEDENTES QUE EL ENCARGO CITA PIDEN LO CONTRARIO, y por
+   eso no sirven de puerta aqui: las once de la vuelta 152 y las
+   cinco mesas de la 154 se movieron POR SALIR CUMPLIDO en este
+   mismo tallador (las mesas con vara MESA, medida por sus hijas).
+   Mover esta ficha hoy exigiria adoptar una vara NUEVA, que para un
+   tipo MESA bastan sus clausulas de verificacion, y esa vara NO
+   ESTA ESCRITA EN NINGUN SITIO. Inventarla es lo que EJECUTOR.md 5
+   prohibe. VA COMO PENDIENTE DE DOCTRINA, no como parada: no
+   contradice ninguna regla vigente, es que la regla no existe.
+   Y SE TRAE EL CONTRAEJEMPLO EN VEZ DE ESCONDERLO: OP-V-01 es una
+   ficha de tipo MESA que HOY esta en HECHA y cuya fila del tallador
+   tambien dice SIN VARA ESCRITA y NO COMPUTABLE. Medido por mi con
+   git: paso de LISTA a HECHA en el commit e966d896, que es el del
+   FUNDADOR cerrando la fase 08, no un pase del ejecutor. Un acto
+   del fundador no le abre la puerta al ejecutor.
+
+FIN
