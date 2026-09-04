@@ -1,0 +1,51 @@
+BD   ['cierre_satisfaccion_postventa', 'cierre_segun_complejidad_venta']
+       puesto 337   clase B  dom core                    cierre_satisfaccion_postventa <-> riesgo_tecnicas_cierre_venta_compleja
+       puesto 1280  clase D  dom core                    cierre_satisfaccion_postventa <-> cierre_segun_complejidad_venta
+       puesto 1427  clase D  dom core                    cierre_satisfaccion_postventa <-> cierre_segun_tamano_decision
+BD   ['cierre_segun_complejidad_venta', 'obtencion_compromiso']
+       puesto 499   clase D  dom core                    ineficacia_cierre_ventas_grandes <-> obtencion_compromiso
+       puesto 527   clase B  dom core                    obtencion_compromiso <-> riesgo_tecnicas_cierre_venta_compleja
+       puesto 971   clase D  dom core                    cierre_segun_complejidad_venta <-> obtencion_compromiso
+       puesto 1598  clase D  dom core                    diferencias_venta_pequena_venta_grande <-> obtencion_compromiso
+BD   ['cuatro_etapas_del_pensamiento_creativo', 'wallas_intimacion_fringe_consciousness']
+       puesto 279   clase B  dom core                    intimation_illumination <-> wallas_etapa_iluminacion
+       puesto 721   clase D  dom core                    wallas_etapa_iluminacion <-> wallas_intimacion_fringe_consciousness
+BD   ['cuatro_etapas_llamada_de_ventas', 'enfoque_etapa_investigacion']
+       puesto 202   clase D  dom core                    cuatro_etapas_llamada_de_ventas <-> etapa_de_investigacion
+       puesto 775   clase B  dom core                    cuatro_etapas_llamada_de_ventas <-> enfoque_etapa_investigacion
+       puesto 1364  clase D  dom core                    cuatro_etapas_llamada_de_ventas <-> etapa_investigacion_ventas
+ABD  ['customer_development_modelo', 'customer_discovery']
+       puesto 635   clase A  dom core                    customer_development_modelo <-> customer_discovery
+       puesto 707   clase B  dom core                    customer_development_modelo <-> customer_discovery_overview
+       puesto 1255  clase D  dom core                    customer_development_modelo <-> customer_discovery_cuatro_fases
+AD   ['customer_discovery', 'customer_discovery_introduccion']
+       puesto 415   clase D  dom core                    customer_discovery_cuatro_fases <-> customer_discovery_introduccion
+       puesto 424   clase D  dom core                    customer_discovery_introduccion <-> customer_discovery_overview
+       puesto 611   clase A  dom core                    customer_discovery <-> customer_discovery_introduccion
+AD   ['customer_validation', 'earlyvangelists_ventas_tempranas']
+       puesto 697   clase D  dom core                    earlyvangelists_ventas_tempranas <-> introduccion_validacion_clientes
+       puesto 1096  clase A  dom core                    earlyvangelists_ventas_tempranas <-> filosofia_customer_validation
+       puesto 1185  clase D  dom core                    customer_validation <-> earlyvangelists_ventas_tempranas
+AD   ['customer_validation', 'filosofia_validacion_clientes']
+       puesto 332   clase D  dom core                    customer_validation <-> filosofia_validacion_clientes
+       puesto 349   clase D  dom core                    filosofia_validacion_clientes <-> introduccion_validacion_clientes
+       puesto 655   clase A  dom core                    filosofia_customer_validation <-> filosofia_validacion_clientes
+BD   ['enfoque_etapa_investigacion', 'modelo_spin_preguntas']
+       puesto 648   clase B  dom core                    enfoque_etapa_investigacion <-> modelo_spin
+       puesto 769   clase B  dom core                    investigacion_como_habilidad_clave <-> modelo_spin
+       puesto 1422  clase D  dom core                    etapa_investigacion_ventas <-> modelo_spin
+AD   ['formalizar_junta_asesora', 'identificar_consejo_asesores']
+       puesto 712   clase A  dom core                    formalizar_junta_asesora <-> identificar_junta_asesores
+       puesto 976   clase A  dom core                    formalize_advisory_board <-> identificar_junta_asesores
+       puesto 1190  clase D  dom core                    formalize_advisory_board <-> identificar_consejo_asesores
+BD   ['pivotar_o_perseverar', 'pivote_estrategico']
+       puesto 737   clase B  dom core                    pivotar_o_perseverar <-> pivote_startup
+       puesto 1245  clase D  dom core                    decision_pivote_perseverar <-> pivote_estrategico
+       puesto 1298  clase B  dom core                    decision_pivote_perseverar <-> pivote_startup
+       puesto 1320  clase D  dom core                    pivotar_o_perseverar <-> pivotes_e_iteraciones
+BD   ['pivote_estrategico', 'pivote_o_proceder']
+       puesto 668   clase B  dom core                    pivote_o_proceder <-> pivote_startup
+       puesto 1312  clase D  dom core                    pivotar_o_proceder <-> pivote_startup
+BD   ['pivote_o_proceder', 'reunion_pivotar_o_perseverar']
+       puesto 968   clase B  dom core                    pivote_o_proceder <-> reunion_pivotar_o_perseverar
+       puesto 1305  clase D  dom core                    pivotar_o_proceder <-> reunion_pivotar_o_perseverar
