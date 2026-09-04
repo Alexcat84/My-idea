@@ -1,0 +1,35 @@
+==============================================================================
+VUELTA 165, TAREA 5: EL ESTADO NUEVO, CORRIDO CON MI COMANDO
+==============================================================================
+
+1) LAS SUITES DE LA WEB
+   COMANDO: pnpm test   (cwd: web/)
+   RUN  v4.1.10 C:/Users/AlexDesk/Documents/I have an idea/web
+   Test Files  82 passed (82)
+   Tests  1040 passed (1040)
+   Duration  14.66s (transform 36.75s, setup 0ms, import 129.36s, tests 9.29s, environment 16ms)
+   EXITCODE: 0
+   CIFRA ficheros de test: 82
+   CIFRA pruebas pasadas: 1040
+   CONTRASTE, y solo contraste: la cabecera de la vuelta 164 publica
+   80 ficheros y 1.030 pasadas; el commit e966d896 del fundador dice
+   82 y 1.040. La cifra que vale es la de arriba, corrida aqui.
+
+2) EL TSC
+   COMANDO: npx tsc --noEmit -p tsconfig.json   (cwd: web/)
+   EXITCODE: 0
+   CIFRA lineas de salida: 0
+
+3) EL SHA256 DEL INDICE SEMANTICO
+   LA SEDE SE LEE DEL PROPIO sync_assets_web.py, NO DE LA MEMORIA
+   linea de DEST en el script: DEST = BASE / "web" / "lib" / "assets"
+   nombre del fichero, leido del script: semantic_index.json
+   web/lib/assets/semantic_index.json           21854994 bytes  sha256=42223fccc725103e861b40e7681afff135267c5c6c4761c8e13dac4fc076d8fd
+   dataset/metadata/semantic_index.json         NO EXISTE
+   engine/semantic_index.json                   NO EXISTE
+   CIFRA sedes del indice que existen en disco: 1
+   CONTRASTE, y solo contraste: el sello de la sesion con credencial
+   publica 42223fcc y el auditor dice haberlo recomputado en la 164.
+   La cifra que vale es la de arriba.
+
+FIN

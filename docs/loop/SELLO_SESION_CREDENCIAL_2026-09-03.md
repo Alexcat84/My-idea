@@ -99,3 +99,54 @@ verificacion que no se ha corrido no se puede caer, que es exactamente el
 razonamiento con el que el acta 149 la dejo abierta.
 
 **El `.env` se queda en la raiz** hasta que el fundador diga lo contrario.
+
+---
+
+## CIERRE POR ADICION (4 sep 2026, vuelta 165 del bucle, TAREA 5)
+
+**NADA DE LO DE ARRIBA SE BORRA, Y LA ULTIMA LINEA DE LA SECCION ANTERIOR SE
+QUEDA ENTERA.** Decia *"la fase 08 NO se declara cerrada hoy"* y **era cierta el
+3 sep 2026**, cuando se escribio: el punto 3 no se habia corrido. Este fichero no
+distinguia sus dos fechas, y esa es la enfermedad que la `CORRECCION 22` tiene
+nombrada en otro sitio. Aqui se distingue por adicion y no por sustitucion, que
+es como manda la casa.
+
+**QUE PASO DESPUES, Y NO ES DE ESTE FICHERO SINO DEL DIA SIGUIENTE.** El commit
+**`e966d896`** (4 sep 2026, 08:10:33 menos 0400), asunto *"LA FASE 08 QUEDA
+CERRADA: el vuelo completo en 16 de 16 con exitcode 0, y los cinco puntos de su
+verificacion transversal sellados"*, **corre el punto 3 y cierra la fase**. La
+ficha `OP-V-01` de `docs/plan/OPERACIONES.jsonl` pasa a `HECHA`. **El vuelo se
+cayo DIEZ VECES antes de pasar**, que es lo que el criterio de HECHO pedia: una
+verificacion que se caeria si el fallo volviera.
+
+**LAS DOS FRASES SON CIERTAS, CADA UNA CON SU FECHA:**
+
+| fecha | frase | por que era cierta |
+|---|---|---|
+| **3 sep 2026** | *"la fase 08 NO se declara cerrada hoy"* | el punto 3 no se habia corrido, y una verificacion que no se corre no se puede caer |
+| **4 sep 2026** | la fase 08 **queda cerrada** | el punto 3 corrio, **16 de 16 con exitcode 0**, y los cinco puntos quedaron sellados |
+
+**LO QUE EL BUCLE MIDE DE ESTO CON SU PROPIO COMANDO, Y NO COPIA DEL COMMIT**
+(salida `docs/loop/SALIDA_V165_T5_ESTADO_NUEVO.txt`, corrida el 4 sep 2026 en la
+vuelta 165):
+
+| medida | comando del ejecutor | medido hoy | **contraste, y solo contraste** |
+|---|---|---:|---|
+| suites de la web | `pnpm test` en `web/` | **82 ficheros (82) y 1.040 pasadas (1.040)**, exitcode 0 | el commit del fundador dice 82 y 1.040; la cabecera de la vuelta 164 decia 80 y 1.030 |
+| `tsc` | `npx tsc --noEmit -p tsconfig.json` en `web/` | **exitcode 0, CERO lineas de salida** | el commit del fundador dice exitcode 0 |
+| `sha256` del indice semantico | `hashlib` byte a byte sobre la sede que `sync_assets_web.py` declara | **`42223fccc725103e861b40e7681afff135267c5c6c4761c8e13dac4fc076d8fd`**, 21.854.994 bytes | el sello de arriba publica `42223fcc` |
+
+> **La sede del indice no se supone: se lee del propio `sync_assets_web.py`**
+> (`DEST = BASE / "web" / "lib" / "assets"`), y **hay UNA sola en disco**. Las
+> otras dos rutas que se comprobaron, `dataset/metadata/` y `engine/`, **NO
+> EXISTEN**.
+
+**Y UNA CIFRA DE ESTE MISMO FICHERO QUE EL AUDITOR CORRIGIO EN LA 164 Y QUE AQUI
+QUEDA ANOTADA:** el cotejo byte a byte de los assets es de **SEIS**, no de cinco.
+Cuatro actas arrastraron *"los cinco `sha256`"* y el manifest lleva **seis
+claves**. Corrido por el auditor el 4 sep 2026: **6 cotejados, 6 cuadran, 0 no
+cuadran.**
+
+**EL `.env` NO SE TOCA Y ESTA ADICION NO LO MUEVE.** Lo que dice la ultima linea
+de la seccion anterior sobre el `.env` sigue vigente: se queda en la raiz hasta
+que el fundador diga lo contrario.
