@@ -1,3 +1,150 @@
+================================================================================
+SALIDA SELLADA . EL VUELO, CORRIDA I (VUELO_FASE08_2026-09-04_I)
+Sesion con credencial, 4 sep 2026. Rama pasada-unica.
+A, B, D, E, F, G y H NO se sobreescriben: viven al lado.
+================================================================================
+
+RESUMEN
+  EXITCODE 1, duracion 1061 segundos, 354 lineas.
+  EL GRAFO: VERDE POR OCTAVA VEZ. 146 nodos recomendados, 146 vivos, 0
+  deprecados, 0 en lista roja, 0 aristas rotas.
+  CAE ANTES QUE LA H, en la FASE 2j, y por algo que NO se habia visto nunca.
+  EL SALDO NO FUE EL PROBLEMA: empezo en 100 y quedo en 65.
+
+--------------------------------------------------------------------------------
+EL FALLO, LITERAL
+--------------------------------------------------------------------------------
+  Error: el plan de seguimiento no devolvio markdown
+      at correrCicloSeguimiento (web/scripts/vuelo.ts:1431)
+      at faseBucleTracking (web/scripts/vuelo.ts:1466)
+
+--------------------------------------------------------------------------------
+LO QUE MEDI, Y LO QUE NO PUDE DETERMINAR
+--------------------------------------------------------------------------------
+Lo que SI queda establecido:
+
+  1. EL PRIMER CICLO DE ESA MISMA FASE FUNCIONO. La linea anterior del log
+     dice "OK: el plan de seguimiento asume la desviacion SIN regañar". Fallo
+     el SEGUNDO, el de modo a-mi-ritmo.
+  2. NI done NI error LLEGARON AL CLIENTE. La aseveracion que salta es la de
+     "no devolvio markdown", no la de "el plan de seguimiento fallo": si
+     hubiera llegado un evento `error`, habria saltado la otra.
+  3. EL SERVIDOR NO ENTRO EN SU CATCH. La ruta emite `error` en su catch
+     (plan/route.ts:468) y escribe "[plan] ..." con console.error en sus
+     reintentos (lineas 122 y 130). EN TODO EL LOG DEL SERVIDOR NO HAY UNA
+     SOLA LINEA [plan]. Y la llamada figura como "POST .../plan 200 in 115s".
+  4. NO FUE UN TIMEOUT DEL ARNES. consumirSSE (scripts/_shared/http.ts) lee
+     hasta que el stream termina y NO TIENE TIMEOUT NINGUNO.
+  5. NO FUE EL SALDO: quedaban 65 creditos.
+  6. ES INTERMITENTE: la corrida H atraveso esta misma fase sin problema.
+
+LO QUE NO PUEDO DETERMINAR CON LO QUE TENGO, y lo digo en vez de elegir la
+explicacion que mas me convenga: si el stream se trunco por algo transitorio
+(la casa ya tiene anotado que el SDK reintenta lo transitorio SALVO en
+.stream(), y esto es .stream()), o si la ruta puede cerrar el stream SIN
+emitir done y SIN emitir error, que seria un fallo silencioso y por tanto un
+DEFECTO NUEVO de los que el parrafo "fallar ruidoso" prohibe.
+
+Las dos explicaciones encajan con todo lo medido. Distinguirlas pide
+reproducir, y reproducir cuesta otra corrida.
+
+POR ESO SE PARA: la regla del fundador manda parar ante grafo, siembra o
+PRODUCTO NUEVO, y no puedo descartar el producto nuevo. Elegir la
+explicacion barata (transitorio) y cerrar seria exactamente lo que esta
+sesion lleva dos dias corrigiendo.
+
+--------------------------------------------------------------------------------
+EL GASTO OBSERVADO, QUE EL ENCARGO PEDIA SELLAR
+--------------------------------------------------------------------------------
+  saldo antes: 100     saldo despues: 65     gastado: 35
+
+  concepto            veces   creditos
+  mundo_activar           3         15
+  plan_completo           1         10
+  seguimiento             2         10
+  TOTAL                   6         35
+
+NO ES EL COSTO DE UN VUELO ENTERO, y no se puede publicar como tal: la
+corrida murio en la fase 2j, mucho antes del final. La H, que llego a la
+penultima fase, gasto 55. El costo de una corrida COMPLETA sigue SIN
+OBSERVARSE: el 75 leido del codigo sigue siendo el minimo estimado y no una
+cifra medida.
+
+================================================================================
+REGISTROS DE LA CORRIDA I. NO SE BORRAN: SON EVIDENCIA.
+================================================================================
+==============================================================================
+VERIFICACION DEL VUELO CON OJO DE PRODUCTO . corte 2026-09-04T10:12:55Z
+==============================================================================
+Grafo: 3853 nodos, 3169 vivos. Lista roja: 0 ids.
+
+REGISTROS CREADOS POR EL VUELO (no se borran: son evidencia)
+  projects           3 filas
+  sessions           11 filas
+  project_nodes      146 filas
+  plans              8 filas
+  project_bitacora   20 filas
+
+  [projects] ad77e1db-f5aa-4ed4-8afb-71faa58ebcbb
+  [projects] 0f7afbb2-b7e3-44b7-8a0a-abb077e21e45
+  [projects] 0487a156-6142-4b7e-a3b3-59fa2f7cc0da
+  [sessions] c68bc025-3abd-4fbb-a8d1-38e92bbbdbd2
+  [sessions] 1cee5aae-0775-4650-8216-9663061de70c
+  [sessions] c352945d-f4f3-43bf-9f1e-1adceeb5e17e
+  [sessions] e309690b-338d-4aa1-a9d2-2eaee7b7dacc
+  [sessions] afa95594-cb32-49a0-aefb-1e0dac3f7868
+  [sessions] cc62ec46-1ddc-496c-a510-66e4ba5f193f
+  [sessions] 1c6a7da9-9a5e-4487-9148-e52269c99a6f
+  [sessions] 0220beb1-4792-42a7-8fe4-9da0bc1c3bc1
+  [sessions] 95f9847a-0eb4-4547-a571-0c84e28f77e1
+  [sessions] 65510990-d49d-4a1a-b5d4-e62a27310dfa
+  [sessions] 26580fcd-6ea1-47aa-a56c-01444d30f07e
+  [plans] ec2d4ae8-ab44-414c-9cb8-457cc0fa055b
+  [plans] 0bea177f-dbbf-4f4c-bc21-ba4c50253b8e
+  [plans] da2caf1b-b7a9-484f-ad44-1a9209d67f3f
+  [plans] e285c8dd-c334-4bd0-b141-15940680f462
+  [plans] 974ea577-01be-46a8-a0c0-851de595bd00
+  [plans] 785b1c14-8c01-436c-b475-ec30ee6628e3
+  [plans] 56154323-e76d-4009-ac4e-a7e3e4a8f1c7
+  [plans] ac2ace21-821c-4608-b59c-f11d20113c86
+  [project_bitacora] e8eeeacb-81f8-49f2-a163-eb577f10b7ba
+  [project_bitacora] 37105d1e-3bd2-4c85-be3e-c5753772df44
+  [project_bitacora] 1f3714d2-6b94-4dd2-a85e-fbb427a0efce
+  [project_bitacora] f67c8484-a266-4fe1-8414-85504e11cfbb
+  [project_bitacora] 71083d93-34c0-42f2-966b-9771544cb651
+  [project_bitacora] 7a6d706d-58a2-48a7-b7df-9bc2ce5aada9
+  [project_bitacora] d53717e3-b6bc-4933-b30b-607bff3f993a
+  [project_bitacora] 1f5ea5bd-c7c7-49d3-85dd-b45acbfab608
+  [project_bitacora] 8e202804-dcdc-4e54-b8e1-caca3e5791f5
+  [project_bitacora] 949664e4-7def-425a-84a0-613b62e9e92a
+  [project_bitacora] 511e66fb-3f0b-45a5-9eb1-6d4c35047974
+  [project_bitacora] 9f7dfb7a-59aa-4bdf-8f40-e0e476f6ab0c
+  [project_bitacora] f335ffa6-8c6a-495a-bb3f-86b982ff486f
+  [project_bitacora] a1d55f5f-1938-4573-9b13-08fb2796a650
+  [project_bitacora] cd73a944-d46f-4ab9-a8b4-0d89e8ff44e5
+  [project_bitacora] 63a57407-ff53-4f1c-ade3-356e6bb63a71
+  [project_bitacora] 29c28aec-662e-4435-aee9-4abfd90468f3
+  [project_bitacora] 794f56f2-f892-4e81-a0b7-7a87eca203df
+  [project_bitacora] c67896ce-72f3-4b64-aa14-14eff9e10268
+  [project_bitacora] 75826c9a-7429-4854-bc6d-4952ff0261e2
+
+NODOS RECOMENDADOS EN project_nodes: 146 filas, 146 ids distintos
+
+  EXISTEN Y VIVOS         : 146
+  NO EXISTEN EN EL GRAFO  : 0  
+  DEPRECADOS              : 0  
+  EN LA LISTA ROJA        : 0  
+
+ARISTAS DE LOS NODOS RECOMENDADOS, TRAS RESOLVER: 0 rotas
+
+==============================================================================
+VERDE: los 146 nodos recomendados existen, estan VIVOS, ninguno esta en la
+lista roja, y todas sus aristas resuelven.
+==============================================================================
+
+================================================================================
+LA CORRIDA I ENTERA
+================================================================================
 
 ==============================================================================
   VUELO Fase 3.0.1 -- cerebro web completo vía HTTP real
@@ -98,6 +245,7 @@ costo acumulado hasta aqui: $0.1438
 ==============================================================================
   FASE 2b: ensamblando el plan (SSE streaming)
 ==============================================================================
+..........................................................................................................................................
 SSE: 138 deltas de texto recibidos, 0 aviso(s), tiempo total: 115067ms
 evaluacion_cobertura: {"es_completa":true,"tiene_accion_clientes":true,"tiene_viabilidad_economica":true,"familias_faltantes":[]}
 costo_usd (sesion completa, incluye el plan): $0.2983
@@ -262,6 +410,7 @@ OK: mensaje compuesto auditable (estados, nota, detalles, enfoque, y la retirada
 [seguimiento turno 6] RESPUESTA: Con eso ya tienes el panorama completo de mi negocio; ármame el plan de seguimiento con lo que te conté.
 
 listo_para_plan tras 6 turno(s) de seguimiento.
+.............................................................................................................................
 OK: plan persistido con etiqueta 'seguimiento' (e285c8dd-c334-4bd0-b141-15940680f462).
 OK: checklist encadenado (28 items nuevos del plan de seguimiento; hechos previos preservados).
 OK: el replan nace estimado -- 28/28 items del plan de seguimiento traen banda.
@@ -348,3 +497,5 @@ Error: el plan de seguimiento no devolvio markdown
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async faseBucleTracking (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:1466:14)
     at async main (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:2833:29)
+
+Transcripcion guardada en C:\Users\AlexDesk\Documents\I have an idea\examples\fase3_0_vuelo_web.txt

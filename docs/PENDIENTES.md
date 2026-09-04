@@ -11377,3 +11377,60 @@ estimacion de 60, no la aplicacion**, y la H lo dejo medido: con las dos fases
 finales, que arrancan sesion a 10 cada una, **una corrida entera necesita al
 menos 75**. Por eso el saldo se deja en **100**: los 75 leidos del codigo mas
 holgura para lo que todavia no se ha visto pasar.
+
+### REGISTROS DE LA CORRIDA I, Y UN FALLO QUE NO SE PUEDE CLASIFICAR TODAVIA (4 sep 2026)
+
+Corte `2026-09-04T10:12:55Z`. Ids en `docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_I.txt`.
+**Misma frontera: nadie los borra sin la letra del fundador.**
+
+**GRAFO VERDE POR OCTAVA VEZ: 146 nodos recomendados, 146 vivos, 0 deprecados, 0
+en lista roja, 0 aristas rotas.**
+
+**EL SALDO NO FUE EL PROBLEMA:** empezo en **100** y quedo en **65**.
+
+### EL GASTO OBSERVADO
+
+| concepto | veces | creditos |
+|---|---:|---:|
+| `mundo_activar` | 3 | 15 |
+| `plan_completo` | 1 | 10 |
+| `seguimiento` | 2 | 10 |
+| **TOTAL** | **6** | **35** |
+
+**NO ES EL COSTO DE UN VUELO ENTERO Y NO SE PUBLICA COMO TAL:** la corrida murio
+en la fase 2j, mucho antes del final. **El costo de una corrida completa sigue sin
+observarse.** Lo mejor que hay: la **H** llego a la penultima fase con **55**, y el
+**75** leido del codigo sigue siendo **minimo estimado**, no cifra medida.
+
+### EL FALLO, Y POR QUE SE PARA
+
+`Error: el plan de seguimiento no devolvio markdown`
+(`web/scripts/vuelo.ts:1431`, dentro de `faseBucleTracking`).
+
+**LO QUE QUEDA ESTABLECIDO:**
+
+1. **El primer ciclo de esa misma fase funciono**; fallo el segundo, el de modo
+   *a mi ritmo*.
+2. **Ni `done` ni `error` llegaron al cliente**: salto la aseveracion de "no
+   devolvio markdown", no la de "el plan fallo", que es la que un evento `error`
+   habria disparado.
+3. **El servidor no entro en su catch.** La ruta emite `error` en su catch
+   (`plan/route.ts:468`) y escribe `[plan] ...` en sus reintentos (lineas 122 y
+   130). **En todo el log del servidor no hay una sola linea `[plan]`**, y la
+   llamada figura como `POST .../plan 200 in 115s`.
+4. **No fue un timeout del arnes:** `consumirSSE` lee hasta que el stream termina
+   y **no tiene timeout ninguno**.
+5. **No fue el saldo** (65 disponibles) y **es intermitente**: la corrida H
+   atraveso esta misma fase sin problema.
+
+**LO QUE NO SE PUEDE DETERMINAR CON ESTO, y por eso se para:** si el stream se
+trunco por algo **transitorio** (la casa ya tiene anotado que el SDK reintenta lo
+transitorio **salvo en `.stream()`**, y esto es `.stream()`), **o** si la ruta
+puede cerrar el stream **sin `done` y sin `error`**, que seria un **fallo
+silencioso** y por tanto un **defecto nuevo** de los que la doctrina de *fallar
+ruidoso* prohibe.
+
+**Las dos explicaciones encajan con todo lo medido.** Distinguirlas pide
+reproducir. **La regla manda parar ante producto nuevo, y no se puede descartar**;
+elegir la explicacion barata y cerrar seria justo lo que esta sesion lleva dos
+dias corrigiendo.
