@@ -10973,3 +10973,34 @@ delante al arreglarlo:
 - **NO HAY TASA PUBLICABLE TODAVIA.** Con dos o tres corridas, decir "pasa una de
   cada N" **seria inventarla**. Si se quiere la cifra, se mide con corridas
   repetidas y se declara **con su banda**, como manda `P.15`.
+
+### REGISTROS DE LA CORRIDA E, y lo que la corrida E probo (3 sep 2026)
+
+Corte `2026-09-04T00:57:35Z`. Los ids, uno por uno, en
+`docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_E.txt`. **Misma frontera que las
+anteriores: nadie los borra sin la letra del fundador, y si se limpian, despues
+del merge.**
+
+**GRAFO VERDE POR CUARTA VEZ: 204 nodos recomendados, 204 vivos, 0 deprecados, 0
+en lista roja, 0 aristas rotas.**
+
+**DOS COSAS QUE LA CORRIDA E DEJA PROBADAS, y conviene que no se pierdan:**
+
+1. **El arreglo de la baseline del mundo (commit `f2856e1d`) QUEDA EJERCITADO Y
+   PASA.** Linea 346 del log: *"OK: el follow del MUNDO recibe SU cumplimiento
+   (1/1/3, +4.8) y NO el del core; una sola linea de contexto"*. Es exactamente
+   la aseveracion que tumbaba la corrida B. **Deja de estar sin probar.**
+2. **El no determinismo del parrafo 3 queda confirmado con TRES puntos, no dos:**
+   paso en la **B**, cayo en la **D**, y **volvio a pasar en la E**, con el mismo
+   codigo las tres veces.
+
+**Y UNA CUARTA ESPECIE, NUEVA, QUE LA E DESTAPO** (`faseCicloProteccion`, linea
+2704: *"el carril no trae la marca de riesgos: []"*): **la siembra enlaza
+respuestas de proteccion a items del core y despues REPLANIFICA EL CORE**, con lo
+que el item protegido deja de estar vigente y la marca se descarta. Medido:
+de 39 respuestas de `risk_management`, 7 enlazadas, **solo 1 con fecha**, y su
+protegido vive en el plan core `b7e86eb0` (01:02) cuando el vigente es `a6d79d9d`
+(01:15). **El producto hace lo escrito**; lo que no se sostiene es la expectativa
+de la prueba dada su propia secuencia. **Lleva ademas una pregunta de producto
+detras, y es del fundador:** si una marca de proteccion debe SOBREVIVIR a que el
+core replanifique.

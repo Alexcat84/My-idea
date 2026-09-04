@@ -1,3 +1,185 @@
+================================================================================
+SALIDA SELLADA . EL VUELO, CORRIDA E (VUELO_FASE08_2026-09-03_E)
+Sesion con credencial, 3 sep 2026. Rama pasada-unica.
+A, B y D NO se sobreescriben: viven al lado.
+================================================================================
+
+RESUMEN, Y TRAE DOS BUENAS Y UNA PARADA
+  EXITCODE 1, duracion 1491 segundos, 393 lineas (la mas larga de las cuatro).
+
+  BUENA 1. EL PARRAFO 3 PASO ESTA VEZ (linea 325). Con la B tambien paso y con
+  la D cayo: queda CONFIRMADO el no determinismo, con tres puntos y no dos.
+
+  BUENA 2. MI ARREGLO DE LA BASELINE QUEDA EJERCITADO Y PASA. Linea 346:
+    "OK: el follow del MUNDO recibe SU cumplimiento (1/1/3, +4.8) y NO el del
+     core; una sola linea de contexto."
+  Esa es EXACTAMENTE la aseveracion que tumbaba la corrida B. El commit
+  f2856e1d deja de estar sin probar.
+
+  EL GRAFO: VERDE POR CUARTA VEZ. 204 nodos recomendados, 204 vivos, 0
+  deprecados, 0 en lista roja, 0 aristas rotas.
+
+  LA PARADA: cae en faseCicloProteccion (linea 2704) y NO es del generador.
+  Es de LA SIEMBRA, que es el caso que el fundador reservo para si.
+
+--------------------------------------------------------------------------------
+EL FALLO, LITERAL
+--------------------------------------------------------------------------------
+  Error: el carril no trae la marca de riesgos: []
+      at faseCicloProteccion (web/scripts/vuelo.ts:2704)
+
+--------------------------------------------------------------------------------
+POR QUE NO ES EL GENERADOR, Y POR ESO NO SE CIERRA POR LA VIA (b)
+--------------------------------------------------------------------------------
+El carril se construye en web/lib/analytics.ts:619 a 635 y exige CINCO cosas
+por item: dominio de proteccion, `protege_item` puesto, estado distinto de
+no_aplica, QUE EL PROTEGIDO ESTE ENTRE LOS ITEMS CORE VIGENTES, y una fecha
+(`completed_at ?? fecha_base`).
+
+MEDIDO EN LA BASE, proyecto bf630bc8-0238-4874-9c53-9dfc81faabe3:
+
+  items de risk_management                          : 39
+  de esos, CON protege_item                         : 7
+  de los 7, con fecha                               : 1
+  de los 7, cuyo protegido ES un item core          : 7 de 7
+
+  EL UNICO CON FECHA:
+    respuesta 353e4a44, estado pendiente, fecha_base 2026-09-14
+    su plan             : 435ab49a (risk_management)
+    su protege_item     : 19c2b7d4, que vive en el plan core b7e86eb0
+
+  LOS PLANES CORE DEL PROYECTO, POR FECHA:
+    b679f9cb  core  01:00:43
+    b7e86eb0  core  01:02:43   <- el plan del PROTEGIDO
+    5a913a95  core  01:13:30
+    a6d79d9d  core  01:15:30   <- EL VIGENTE
+
+**EL PROTEGIDO VIVE EN UN PLAN CORE SUPERADO.** Despues de que la respuesta se
+enlazo, EL CORE REPLANIFICO DOS VECES (01:13 y 01:15). El item protegido dejo
+de estar entre los vigentes, `porIdCore.get(...)` devuelve undefined, la marca
+se descarta y el carril sale vacio.
+
+**EL PRODUCTO HACE LO QUE ESTA ESCRITO.** Lo que no se sostiene es la
+expectativa de la prueba dada su PROPIA secuencia: enlaza y despues replanifica
+el core dos veces, y luego exige que la marca siga ahi.
+
+--------------------------------------------------------------------------------
+POR QUE SE PARA Y NO SE CIERRA
+--------------------------------------------------------------------------------
+La decision del fundador autoriza cerrar la fase 08 si el vuelo cae "en el
+parrafo 3 o en cualquier otro fallo DEL GENERADOR no atribuible al grafo ni a
+la siembra", y manda **PARAR** si cae "por el grafo o por la siembra".
+
+ESTE FALLO ES DE LA SIEMBRA (la secuencia del propio vuelo), con una pregunta
+de producto detras que tampoco es mia: si una marca de proteccion DEBE
+sobrevivir a que el core replanifique. Las dos salidas son opuestas y las dos
+son del fundador, asi que SE PARA Y SE TRAE.
+
+QUEDA DICHO ADEMAS, POR SI PESA EN LA DECISION: los otros SEIS enlazados no
+tienen ninguna fecha, asi que aunque el protegido del septimo estuviera
+vigente, el carril traeria UNA marca y no siete. La siembra no fecha las
+respuestas que enlaza.
+
+================================================================================
+REGISTROS DE LA CORRIDA E. NO SE BORRAN: SON EVIDENCIA.
+================================================================================
+==============================================================================
+VERIFICACION DEL VUELO CON OJO DE PRODUCTO . corte 2026-09-04T00:57:35Z
+==============================================================================
+Grafo: 3853 nodos, 3169 vivos. Lista roja: 0 ids.
+
+REGISTROS CREADOS POR EL VUELO (no se borran: son evidencia)
+  projects           3 filas
+  sessions           15 filas
+  project_nodes      204 filas
+  plans              12 filas
+  project_bitacora   37 filas
+
+  [projects] 6cdec6ca-7fb9-4eef-94e8-c5cbec2867e7
+  [projects] 984c420a-3850-4dcc-b008-a7a39bcbe6ec
+  [projects] bf630bc8-0238-4874-9c53-9dfc81faabe3
+  [sessions] 3733323d-4660-4265-835f-c7e6563c8282
+  [sessions] 8d607cd2-ba30-4b5c-8b03-53f41d70d56c
+  [sessions] bfdb7f95-7d98-4100-afa0-dde89751a947
+  [sessions] a5f7a4a5-097b-445d-a310-5953f40da54e
+  [sessions] be048158-990e-467f-a6a0-8441146710a0
+  [sessions] 7b3dd0f1-658d-4d03-a26f-4cb2889e1863
+  [sessions] 882ba8c5-3598-4c4a-8851-d3e693ba7df8
+  [sessions] eebac5f3-7351-45fa-bea9-188650ae9d78
+  [sessions] 702370fc-56ba-4590-9d83-d1028d361640
+  [sessions] 75a76cf4-314a-4435-9b8c-5b8df30570ce
+  [sessions] abc85f30-8eab-4631-a740-6664831aadb2
+  [sessions] b6695472-f901-4431-82a7-35c6d8e6464e
+  [sessions] da580c37-d89a-4e54-897f-d9d42ed6acc5
+  [sessions] cc22dfba-a148-473c-9874-bbadb8798360
+  [sessions] 38566f2a-a5dd-49f4-a265-7c469df24ce8
+  [plans] 10570009-30c0-4450-a71f-41d7eb85cdaf
+  [plans] d743166d-0a4c-4dfd-966c-418f69ef5f99
+  [plans] b679f9cb-754a-45f1-8595-f32e60331f29
+  [plans] b7e86eb0-955d-497a-9512-7da1d3a1112f
+  [plans] 27db66ce-6ff9-4adc-a2d0-354e9358ed7e
+  [plans] e1a31c12-b39f-44b3-a019-394d1289adfc
+  [plans] 435ab49a-fd41-4c42-9f00-ad00b64a2d51
+  [plans] 5a913a95-be61-4cac-bb21-110ad6525e20
+  [plans] a6d79d9d-0485-413d-a4df-b44772dd2672
+  [plans] efd9d73a-ee94-4012-a040-8a1731ff022c
+  [plans] cbb33c3a-ac6a-4005-88a4-44ccc520d977
+  [plans] 40c072a7-6a4d-4347-b3b4-869d12142d09
+  [project_bitacora] 731f55e6-3076-4227-ada2-09ee1ce6d6e5
+  [project_bitacora] 22cfda19-d262-4e76-9eec-8f8908f5d3a7
+  [project_bitacora] 704abd56-10c2-4acd-8aab-b8350bc8a589
+  [project_bitacora] 8ba0de2c-921e-4f11-bb79-cf031a972ac2
+  [project_bitacora] 1e308645-ae61-4c42-9947-ac580b4aecd1
+  [project_bitacora] bb836b7e-c2f0-4032-b434-9a6027de4492
+  [project_bitacora] 05ca617a-3691-4fbe-9f05-f37c335115b9
+  [project_bitacora] 183b040d-1989-4070-873f-d38282a8848a
+  [project_bitacora] 81d16c4e-9f3d-424a-8e24-ecac84a423b2
+  [project_bitacora] 7e87c70f-afb1-4d70-a21d-e67a55243aae
+  [project_bitacora] a76683f3-bb2a-48d4-8686-7345afaa3097
+  [project_bitacora] 67dc3ba1-9d98-4bf0-b073-1a88cc393231
+  [project_bitacora] 1adbce9a-02bc-48d2-99b1-0a48330c7253
+  [project_bitacora] 9218ea5d-f8d9-40e7-98ef-c81e9e63ff21
+  [project_bitacora] 35a5d83c-7fa4-40a0-ac2f-210bc75bae76
+  [project_bitacora] 18d29a19-4fdb-42a7-82f9-34d3cfeb0175
+  [project_bitacora] b570d014-8a87-41ef-8bc0-0eda1df6b603
+  [project_bitacora] 6f87fe20-04fe-493d-8f08-e4d5edfb20bb
+  [project_bitacora] b4606d15-b613-43ac-95b6-bad9ff2af3e9
+  [project_bitacora] e4d7f49b-9a17-4b77-968c-c840e8243c96
+  [project_bitacora] ad431c39-737f-4c09-a521-7e9fba2efbfa
+  [project_bitacora] b2cab1a9-db13-4468-9478-a52145882b5c
+  [project_bitacora] 2232a346-96bd-4b6e-8c34-bf1022b7b558
+  [project_bitacora] 9e76cf9d-618d-4ba0-ac4a-28769a98c546
+  [project_bitacora] de75cc6a-ae79-4824-acb3-f3547bb2bff1
+  [project_bitacora] 011ad355-1cdb-49a3-8a3e-b1fdcf598c9c
+  [project_bitacora] 0a38356e-2de5-4965-88ac-3aeb8d56e207
+  [project_bitacora] b9b35d16-fa62-47b6-b97f-22f56183e534
+  [project_bitacora] 696be080-086b-416b-b165-8b337e583bc4
+  [project_bitacora] 4300d351-edab-4f64-bcff-0353c2cc6ca7
+  [project_bitacora] 76d601d1-a6b2-4965-8bc0-405e2456ce73
+  [project_bitacora] 31f48482-37df-43a5-aa9a-78131edeb327
+  [project_bitacora] ab9c02d0-b0d4-4ca7-b93e-f56b52ac74c6
+  [project_bitacora] cd5ec16b-3d55-4236-917a-ae31ee101a2b
+  [project_bitacora] 0c93cd75-b31e-4af3-b75b-c878a3b9ce4e
+  [project_bitacora] b30512b7-e788-4928-9e39-8acd74643b8d
+  [project_bitacora] 8824f10f-b811-46c4-bc66-bbbad4ca46f8
+
+NODOS RECOMENDADOS EN project_nodes: 204 filas, 204 ids distintos
+
+  EXISTEN Y VIVOS         : 204
+  NO EXISTEN EN EL GRAFO  : 0  
+  DEPRECADOS              : 0  
+  EN LA LISTA ROJA        : 0  
+
+ARISTAS DE LOS NODOS RECOMENDADOS, TRAS RESOLVER: 0 rotas
+
+==============================================================================
+VERDE: los 204 nodos recomendados existen, estan VIVOS, ninguno esta en la
+lista roja, y todas sus aristas resuelven.
+==============================================================================
+
+================================================================================
+LA CORRIDA E ENTERA
+================================================================================
 
 ==============================================================================
   VUELO Fase 3.0.1 -- cerebro web completo vía HTTP real
@@ -87,6 +269,7 @@ costo acumulado hasta aqui: $0.1017
 ==============================================================================
   FASE 2b: ensamblando el plan (SSE streaming)
 ==============================================================================
+.................................................................................................................
 SSE: 113 deltas de texto recibidos, 0 aviso(s), tiempo total: 93686ms
 evaluacion_cobertura: {"es_completa":false,"tiene_accion_clientes":false,"tiene_viabilidad_economica":true,"familias_faltantes":["validar con clientes reales (entrevistas, MVP, pruebas de usuario, una venta o preventa real)"]}
 costo_usd (sesion completa, incluye el plan): $0.2360
@@ -245,6 +428,7 @@ OK: mensaje compuesto auditable (estados, nota, detalles, enfoque, y la retirada
 [seguimiento turno 1] RESPUESTA: Subí el precio a 250 y las ventas se mantuvieron; ya sé mi costo real por pieza: 130 incluyendo mi hora a 50.
 
 listo_para_plan tras 1 turno(s) de seguimiento.
+......................................................................................................................
 OK: plan persistido con etiqueta 'seguimiento' (b7e86eb0-955d-497a-9512-7da1d3a1112f).
 OK: checklist encadenado (28 items nuevos del plan de seguimiento; hechos previos preservados).
 OK: el replan nace estimado -- 28/28 items del plan de seguimiento traen banda.
@@ -387,3 +571,5 @@ Error: el carril no trae la marca de riesgos: []
     at faseCicloProteccion (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:2704:21)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async main (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:2785:31)
+
+Transcripcion guardada en C:\Users\AlexDesk\Documents\I have an idea\examples\fase3_0_vuelo_web.txt
