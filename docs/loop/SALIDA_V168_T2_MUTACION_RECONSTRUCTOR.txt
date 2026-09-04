@@ -1,0 +1,65 @@
+==============================================================================
+VUELTA 168, TAREA 2: CASO POSITIVO POR MUTACION DEL RECONSTRUCTOR
+==============================================================================
+
+A) EL CONTEO DE TAREAS SIGUE A LOS ASUNTOS Y NO A UNA CONSTANTE
+   seis tareas mas apertura y cierre                    -> 6 tarea(s)
+   ninguna tarea, solo apertura                         -> 0 tarea(s)
+   tres tareas y una con letra                          -> 3 tarea(s)
+   un asunto que NOMBRA una tarea pero no la abre       -> 1 tarea(s)
+
+B) LOS CORREDORES REALES, LEIDOS DE GIT HOY
+   vuelta 166: 9 commits, 6 tareas con commit propio
+   vuelta 167: 6 commits, 4 tareas con commit propio
+
+C) LAS DOS VUELTAS TIENEN CORREDORES DISTINTOS Y NO SE CONFUNDEN
+   el acta que cierra la 166 (7028a76a) es la que abre la 167: True
+
+D) NINGUNA DE LAS DOS ESCRIBIO SU REPORTE, Y SE MIDE EN VEZ DE CREERSE
+   arbol del acta 166: el REPORTE.md dice ser el de la vuelta 165
+   arbol del acta 167: el REPORTE.md dice ser el de la vuelta 165
+
+E) LA LISTA DE NO RECONSTRUIBLES NO ESTA VACIA Y CADA UNA TRAE MOTIVO
+   CIFRA no reconstruibles: 4, todos con motivo escrito
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   A_seis_tareas_mas_apertura_y_cierre                      PASA   (real=6 esperado=6)
+   A_ninguna_tarea,_solo_apertura                           PASA   (real=0 esperado=0)
+   A_tres_tareas_y_una_con_letra                            PASA   (real=3 esperado=3)
+   A_un_asunto_que_NOMBRA_una_tarea_pero_no_l               PASA   (real=1 esperado=1)
+   B_la_166_tiene_9_commits_acta_incluida                   PASA   (real=9 esperado=9)
+   B_y_8_de_ellos_son_del_ejecutor                          PASA   (real=8 esperado=8)
+   B_la_166_entrego_6_tareas                                PASA   (real=6 esperado=6)
+   B_la_167_tiene_6_commits_acta_incluida                   PASA   (real=6 esperado=6)
+   B_y_5_de_ellos_son_del_ejecutor                          PASA   (real=5 esperado=5)
+   B_la_167_entrego_4_tareas                                PASA   (real=4 esperado=4)
+   B_la_166_entrego_MAS_tareas_que_la_167                   PASA   (real=True esperado=True)
+   C_el_acta_que_cierra_la_166_abre_la_167                  PASA   (real=True esperado=True)
+   C_los_corredores_no_comparten_ningun_commit              PASA   (real=0 esperado=0)
+   D_el_reporte_del_arbol_del_acta_166_es_el_de_la_165      PASA   (real=165 esperado=165)
+   D_el_reporte_del_arbol_del_acta_167_es_el_de_la_165      PASA   (real=165 esperado=165)
+   E_hay_no_reconstruibles_declarados                       PASA   (real=4 esperado=4)
+   E_todos_traen_motivo                                     PASA   (real=4 esperado=4)
+   CIFRA casos: 17 | pasan: 17 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_seis_tareas_mas_apertura_y_cierre                      CAE   (esperado mutado=7)
+   A_ninguna_tarea,_solo_apertura                           CAE   (esperado mutado=1)
+   A_tres_tareas_y_una_con_letra                            CAE   (esperado mutado=4)
+   A_un_asunto_que_NOMBRA_una_tarea_pero_no_l               CAE   (esperado mutado=2)
+   B_la_166_tiene_9_commits_acta_incluida                   CAE   (esperado mutado=10)
+   B_y_8_de_ellos_son_del_ejecutor                          CAE   (esperado mutado=9)
+   B_la_166_entrego_6_tareas                                CAE   (esperado mutado=7)
+   B_la_167_tiene_6_commits_acta_incluida                   CAE   (esperado mutado=7)
+   B_y_5_de_ellos_son_del_ejecutor                          CAE   (esperado mutado=6)
+   B_la_167_entrego_4_tareas                                CAE   (esperado mutado=5)
+   B_la_166_entrego_MAS_tareas_que_la_167                   CAE   (esperado mutado=False)
+   C_el_acta_que_cierra_la_166_abre_la_167                  CAE   (esperado mutado=False)
+   C_los_corredores_no_comparten_ningun_commit              CAE   (esperado mutado=1)
+   D_el_reporte_del_arbol_del_acta_166_es_el_de_la_165      CAE   (esperado mutado=166)
+   D_el_reporte_del_arbol_del_acta_167_es_el_de_la_165      CAE   (esperado mutado=166)
+   E_hay_no_reconstruibles_declarados                       CAE   (esperado mutado=5)
+   E_todos_traen_motivo                                     CAE   (esperado mutado=5)
+   CIFRA casos que caen al mutar el esperado: 17 de 17
+
+VERDE: los 17 casos pasan tal cual y los 17 caen al mutar el esperado.

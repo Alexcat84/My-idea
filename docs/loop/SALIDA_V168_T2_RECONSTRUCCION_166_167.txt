@@ -1,0 +1,105 @@
+==============================================================================
+VUELTA 168, TAREA 2: LAS VUELTAS 166 Y 167, RECONSTRUIDAS DE COMMITS Y ACTAS
+==============================================================================
+
+==============================================================================
+VUELTA 166
+==============================================================================
+A) LAS FRONTERAS, LEIDAS DE GIT Y NO TECLEADAS
+   abre tras el acta 165: 00cfe6e0  ACTA DE LA VUELTA 165 DEL AUDITOR: LA VUELTA ENTREGA ENTERA 
+   cierra en el acta 166:  7028a76a  ACTA DE LA VUELTA 166 DEL AUDITOR: LAS SEIS TAREAS ENTREGADA
+   CIFRA commits del corredor (acta anterior exclusive, acta inclusive): 9
+
+B) LOS COMMITS, UNO POR UNO, DEL MAS VIEJO AL MAS NUEVO
+   8472d645  +449    -0       11 ruta(s)  Bloque de apertura de la vuelta 166: los diez sellados de una vez, hijo direct
+   2ee2592a  +1133   -0       7 ruta(s)  TAREA 1: el acta 165 entera queda en R.35, y esta vez NI UNA de las dos cifras
+   a23509cf  +1027   -1       6 ruta(s)  TAREA 2: OP-L-01 corregida POR ADICION en sus clausulas 1 y 2, y su estado NO 
+   33fe1380  +1624   -4       9 ruta(s)  TAREA 3: el retrato de las A vuelve a estar vivo, y la fila que valia CERO es 
+   6c38fb39  +774    -0       5 ruta(s)  TAREA 4: el mapa real, 29 y 42, y OP-L-01 no era la unica sin dependencias: so
+   9363c1ba  +559    -0       5 ruta(s)  TAREA 5: el colapso medido en sus dos mitades, los 13 publicados uno por uno, 
+   0a0e658f  +1597   -2       10 ruta(s)  TAREA 6: la guarda se estrecha EN LA FUENTE, no se declara ajena, y los que so
+   0f7d5bb2  +449    -0       11 ruta(s)  Bloque de cierre de la vuelta 166: el estado se RECOMPUTA al cierre y no se he
+   7028a76a  +1274   -174     20 ruta(s)  ACTA DE LA VUELTA 166 DEL AUDITOR: LAS SEIS TAREAS ENTREGADAS Y VERIFICADAS AL
+
+C) LAS TAREAS ENTREGADAS, CONTADAS DE LOS ASUNTOS Y NO TECLEADAS
+   TAREA 1   2ee2592a  TAREA 1: el acta 165 entera queda en R.35, y esta vez NI UNA de las do
+   TAREA 2   a23509cf  TAREA 2: OP-L-01 corregida POR ADICION en sus clausulas 1 y 2, y su es
+   TAREA 3   33fe1380  TAREA 3: el retrato de las A vuelve a estar vivo, y la fila que valia 
+   TAREA 4   6c38fb39  TAREA 4: el mapa real, 29 y 42, y OP-L-01 no era la unica sin dependen
+   TAREA 5   9363c1ba  TAREA 5: el colapso medido en sus dos mitades, los 13 publicados uno p
+   TAREA 6   0a0e658f  TAREA 6: la guarda se estrecha EN LA FUENTE, no se declara ajena, y lo
+   CIFRA tareas con commit propio: 6
+
+D) EL VOLUMEN Y LAS RUTAS
+   CIFRA lineas anadidas en la vuelta: 8886
+   CIFRA lineas quitadas en la vuelta: 181
+   CIFRA rutas distintas tocadas: 83
+   CIFRA rutas bajo dataset/: 0
+   CIFRA rutas bajo web/: 0
+   CIFRA rutas bajo docs/plan/: 3
+
+E) EL VEREDICTO DEL AUDITOR, LEIDO DE SU ACTA Y MARCADO COMO SUYO
+   acta 166: docs/loop/ACTA_AUDITOR.md, lineas 55288 a 55643
+   docs/loop/ACTA_AUDITOR.md:55297
+   "EL VEREDICTO DE UNA LINEA: LAS SEIS TAREAS DE LA 166 ESTAN ENTREGADAS Y REPRODUCEN TODAS BAJO MIS INSTRUMENTOS, PERO LA VUELTA SE CORTO ANTES DE ESCRIBIR SU REPORTE Y ANTES DE QUE LA BATERIA TERMINARA. NO ES PARADA, Y NO LO DIGO POR COMODIDAD: HAY PRECEDENTE AL BYTE EN ESTA MISMA CAMPANA Y ESTA A TRES VUELTAS DE DISTANCIA."
+
+F) EL REPORTE DE ESA VUELTA, MEDIDO Y NO SUPUESTO
+   primera linea de docs/loop/REPORTE.md en el arbol del acta 166:
+      # REPORTE DE LA VUELTA 165 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   ESA VUELTA ESCRIBIO SU REPORTE: NO (el fichero era el de la vuelta 165)
+
+==============================================================================
+VUELTA 167
+==============================================================================
+A) LAS FRONTERAS, LEIDAS DE GIT Y NO TECLEADAS
+   abre tras el acta 166: 7028a76a  ACTA DE LA VUELTA 166 DEL AUDITOR: LAS SEIS TAREAS ENTREGADA
+   cierra en el acta 167:  e3152a9c  ACTA DE LA VUELTA 167 DEL AUDITOR Y PARADA: OP-C-01 NO SE PU
+   CIFRA commits del corredor (acta anterior exclusive, acta inclusive): 6
+
+B) LOS COMMITS, UNO POR UNO, DEL MAS VIEJO AL MAS NUEVO
+   b08543eb  +449    -0       12 ruta(s)  Bloque de apertura de la vuelta 167, y con el entra la cola de la 166: un fich
+   a6b318ca  +1116   -0       7 ruta(s)  TAREA 1: el acta 166 entera queda en R.36, y la concordancia del singular tamp
+   12053ade  +2076   -1       12 ruta(s)  TAREA 3: la guarda en rojo se arregla DONDE VIVE, y la A deja de perderse al a
+   c6ac70f6  +640    -1       7 ruta(s)  TAREA 4: el rotulo ancho dice ahora de que poblacion habla, y el 4 no se toca
+   3d0277d3  +376    -0       6 ruta(s)  TAREA 5: PARADA. OP-C-01 no se puede ejecutar porque YA ESTA EJECUTADA desde e
+   e3152a9c  +3097   -197     27 ruta(s)  ACTA DE LA VUELTA 167 DEL AUDITOR Y PARADA: OP-C-01 NO SE PUEDE EJECUTAR PORQU
+
+C) LAS TAREAS ENTREGADAS, CONTADAS DE LOS ASUNTOS Y NO TECLEADAS
+   TAREA 1   a6b318ca  TAREA 1: el acta 166 entera queda en R.36, y la concordancia del singu
+   TAREA 3   12053ade  TAREA 3: la guarda en rojo se arregla DONDE VIVE, y la A deja de perde
+   TAREA 4   c6ac70f6  TAREA 4: el rotulo ancho dice ahora de que poblacion habla, y el 4 no 
+   TAREA 5   3d0277d3  TAREA 5: PARADA. OP-C-01 no se puede ejecutar porque YA ESTA EJECUTADA
+   CIFRA tareas con commit propio: 4
+
+D) EL VOLUMEN Y LAS RUTAS
+   CIFRA lineas anadidas en la vuelta: 7754
+   CIFRA lineas quitadas en la vuelta: 199
+   CIFRA rutas distintas tocadas: 71
+   CIFRA rutas bajo dataset/: 0
+   CIFRA rutas bajo web/: 0
+   CIFRA rutas bajo docs/plan/: 1
+
+E) EL VEREDICTO DEL AUDITOR, LEIDO DE SU ACTA Y MARCADO COMO SUYO
+   acta 167: docs/loop/ACTA_AUDITOR.md, lineas 55644 a 56057
+   docs/loop/ACTA_AUDITOR.md:55653
+   "EL VEREDICTO DE UNA LINEA: LAS CUATRO TAREAS QUE LA 167 ENTREGO REPRODUCEN TODAS AL DIGITO BAJO MIS INSTRUMENTOS, SU QUINTA ENTREGA UNA PARADA QUE ES CORRECTA, Y LA SEGUNDA NO SE ENTREGO. HAY PARADA, Y NO ES SOLO LA QUE EL EJECUTOR TRAJO: ES MAS GRANDE, ES MIA EN SU ORIGEN, Y LA MIDE UN INSTRUMENTO DE LA PROPIA CASA QUE LLEVA DIECISIETE VUELTAS PUBLICANDOLA."
+
+F) EL REPORTE DE ESA VUELTA, MEDIDO Y NO SUPUESTO
+   primera linea de docs/loop/REPORTE.md en el arbol del acta 167:
+      # REPORTE DE LA VUELTA 165 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   ESA VUELTA ESCRIBIO SU REPORTE: NO (el fichero era el de la vuelta 165)
+
+==============================================================================
+G) LO QUE NO SE PUEDE RECONSTRUIR, DECLARADO EN VEZ DE RELLENADO
+==============================================================================
+   NO RECONSTRUIBLE: LOS DISCUTIBLES MARCADOS del ejecutor de cada vuelta
+      motivo: Un discutible se marca ANTES de saber si se acierta (`EJECUTOR.md` 7). Hoy el acta 167 ya publico su veredicto sobre las dos vueltas, asi que cualquier lista que se escribiera ahora seria una copia con la respuesta delante, no un discutible. El acta 167 lo dice de su lado con estas palabras: NO HAY DISCUTIBLES MARCADOS, PORQUE NO HAY REPORTE.
+   NO RECONSTRUIBLE: LAS PREGUNTAS del ejecutor de cada vuelta
+      motivo: Una pregunta es lo que el ejecutor no pudo medir EN SU VUELTA. Ni los commits ni las actas guardan las que no llegaron a escribirse, y fabricarlas hoy seria inventar el estado mental de una sesion cerrada.
+   NO RECONSTRUIBLE: LOS PENDIENTES DE DOCTRINA que las vueltas 166 y 167 hubieran levantado
+      motivo: Solo se conocen los que llegaron a un commit o a un acta. Si alguna de las dos vueltas levanto uno y no lo escribio, hoy no hay sede de la que leerlo, y suponerlo seria adivinar.
+   NO RECONSTRUIBLE: EL VEREDICTO DE UNA LINEA del ejecutor de cada vuelta
+      motivo: Es la lectura que el ejecutor hace de su propia vuelta antes de que el auditor la juzgue. Escribirla hoy, con las dos actas ya publicadas, seria escribir el veredicto del auditor con otra letra.
+   CIFRA cosas declaradas NO RECONSTRUIBLES: 4
+
+VERDE: las dos vueltas quedan reconstruidas de sus dos sedes.
