@@ -2675,11 +2675,50 @@ async function faseCicloProteccion(cookie: string, projectId: string) {
       .eq("id", riesgos[0].id);
     enlaceVivo = { ...riesgos[0], protege_item: objetivo.id, deteccion: "depende de un solo proveedor" };
   }
-  // la marca del carril necesita una fecha en la respuesta
-  await supabaseAdmin
-    .from("checklist_items")
-    .update({ fecha_base: new Date(Date.now() + 10 * 86400000).toISOString() })
-    .eq("id", enlaceVivo.id);
+  // LA SIEMBRA DEL CARRIL, CORREGIDA (decisión del fundador, 3 sep 2026,
+  // sesión con credencial). Antes esto fechaba UNA sola respuesta y dejaba los
+  // enlaces donde el enlazador vivo los hubiera puesto. Las dos cosas fallaban,
+  // y la corrida E lo midió en la base:
+  //
+  //   39 respuestas de risk_management, 7 enlazadas, y de esas SOLO 1 con fecha.
+  //   La única con fecha protegía a 19c2b7d4, que vive en el plan core b7e86eb0
+  //   (creado 01:02); pero el proyecto tenía CUATRO planes core y el VIGENTE era
+  //   a6d79d9d (01:15). Después de enlazar, el core replanificó DOS veces.
+  //
+  // El carril (web/lib/analytics.ts:619-635) exige que el PROTEGIDO esté entre
+  // los items core VIGENTES y que la respuesta tenga fecha; con el protegido en
+  // un plan superado, `porIdCore.get(...)` devuelve undefined y la marca se
+  // descarta. El producto hacía lo escrito: lo vencido era esta siembra.
+  //
+  // Remedio, las dos mitades: (a) se FECHAN TODAS las enlazadas, no una; y (b)
+  // se RE-ENLAZA sobre el plan core VIGENTE al momento de la aserción, que es el
+  // contrato escrito del producto hoy. Se respeta el trabajo del enlazador vivo:
+  // solo se re-apunta lo que quedó colgando de un plan superado.
+  const gruposCarril = await gruposChecklist(cookie, projectId);
+  const gCoreVigente = grupoVigenteDe(gruposCarril, "core");
+  if (!gCoreVigente) throw new Error("no hay grupo core vigente para anclar el carril");
+  const vigentes = gCoreVigente.etapas.flatMap((e) => e.items) as Array<{ id?: unknown }>;
+  const idsVigentes = new Set(vigentes.map((i) => String(i.id)));
+  if (idsVigentes.size === 0) throw new Error("el plan core vigente no tiene items para proteger");
+
+  const aFechar = enlazados.length > 0 ? [...enlazados] : [enlaceVivo];
+  if (!aFechar.some((i) => i.id === enlaceVivo.id)) aFechar.push(enlaceVivo);
+  const fechaCarril = new Date(Date.now() + 10 * 86400000).toISOString();
+  let reapuntados = 0;
+  for (const [k, resp] of aFechar.entries()) {
+    const cambio: Record<string, unknown> = { fecha_base: fechaCarril };
+    if (!resp.protege_item || !idsVigentes.has(String(resp.protege_item))) {
+      const destino = String(vigentes[k % vigentes.length].id);
+      cambio.protege_item = destino;
+      resp.protege_item = destino;
+      reapuntados += 1;
+    }
+    await supabaseAdmin.from("checklist_items").update(cambio).eq("id", resp.id);
+  }
+  log(
+    `OK: carril sembrado -- ${aFechar.length} respuesta(s) enlazada(s) FECHADAS, ` +
+      `${reapuntados} re-apuntada(s) al plan core vigente (${idsVigentes.size} items).`
+  );
 
   // 4. El registro, por su puerta de documentos
   const reg = await getJson(cookie, `/api/project/${projectId}/documentos?doc=registro:risk_management`);
