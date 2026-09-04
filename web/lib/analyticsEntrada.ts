@@ -79,6 +79,19 @@ export async function cargarEntradaAnalytics(
   const items: ItemAnalytics[] = ((itemsRaw ?? []) as Array<ItemAnalytics & { dominio: string | null }>)
     .map((i) => ({
       plan_id: i.plan_id,
+      // P4, ARREGLADO el 4 sep 2026 (decisión del fundador, sesión con
+      // credencial). `id` y `protege_item` SE PEDÍAN en COLS_ITEMS y el comentario
+      // de arriba ya decía que "alimentan el carril de protección", pero este
+      // mapeo NO los llevaba: como los dos son OPCIONALES en ItemAnalytics,
+      // TypeScript callaba. Efecto medido: `porIdCore` (analytics.ts:618) quedaba
+      // SIEMPRE vacío y el filtro del carril no casaba nunca, así que
+      // `carrilProteccion` era SIEMPRE [] en la app real, para cualquier
+      // proyecto. Lo cazó el vuelo (corridas E y F) y NINGUNA suite lo veía,
+      // porque los tests de analytics fabricaban los ItemAnalytics a mano con
+      // los dos campos puestos. La prueba de CRUCE que lo impide de ahora en
+      // adelante vive en analyticsEntrada.test.ts.
+      id: i.id,
+      protege_item: i.protege_item ?? null,
       dominio: i.dominio,
       etapa: i.etapa,
       estado: i.estado,
