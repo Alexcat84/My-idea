@@ -11162,3 +11162,27 @@ El barrido de esta sesion cubrio **toda** `analyticsEntrada.ts` (sus cuatro
 `.map()` y el contrato entero de `EntradaAnalytics`) y **el unico roto era el de
 los items**. **Queda por barrer el resto de capas de entrada de la app**, con la
 misma pregunta: *si este campo se cayera en el mapeo, se enteraria alguna prueba?*
+
+### REGISTROS DE LA CORRIDA G, y el arreglo del carril PROBADO contra la app real (4 sep 2026)
+
+Corte `2026-09-04T02:08:59Z`. Ids en `docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_G.txt`.
+**Misma frontera: nadie los borra sin la letra del fundador.**
+
+**GRAFO VERDE POR SEXTA VEZ: 188 nodos recomendados, 188 vivos, 0 deprecados, 0
+en lista roja, 0 aristas rotas.**
+
+**LO QUE LA G PROBO:** el arreglo de `analyticsEntrada` (commit `700dd8fe`)
+funciona **tambien contra la app real**, no solo contra su prueba unitaria. Linea
+412 del log: *"OK: carril con 1 marca(s), anclada(s) a la etapa del protegido
+(1)"*. Es la aseveracion que tumbaba la E y la F.
+
+**POR QUE CAYO, Y ES ESPECIE NUEVA:** `POST /api/session/start` devolvio **402**,
+*"Te quedan 2 creditos; esto cuesta 10"*. **Se agoto el saldo del usuario de
+pruebas** tras siete corridas completas. **No es el grafo, ni la siembra, ni el
+generador, ni un defecto**: la app se defiende como debe, y hasta lo dice bien
+(*"Tu trabajo queda guardado tal como esta"*). **Es un recurso del entorno.**
+
+**Y NO LO RESUELVE EL BUCLE NI ESTA SESION:** `web/lib/creditos.ts:24` lo reserva
+por escrito, *"el fundador siembra creditos A MANO (RPC `otorgar_creditos`,
+origen `siembra_beta`)"*. Sembrar creditos es una escritura de estado de
+**negocio** en la base real: **acto del fundador**, no infraestructura.
