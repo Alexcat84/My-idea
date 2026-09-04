@@ -1424,11 +1424,44 @@ async function correrCicloSeguimiento(cookie: string, projectId: string, enfoque
     headers: { "Content-Type": "application/json", Cookie: cookie },
     body: JSON.stringify({}),
   });
+  // LAS TRES CAUSAS SE DISTINGUEN POR EL EVENTO RECIBIDO (4 sep 2026, decision
+  // del fundador). La corrida I cayo aqui con "no devolvio markdown" y ese
+  // mensaje solo no permitia decidir si era un defecto de la ruta o un
+  // transitorio del transporte: las dos explicaciones encajaban con todo lo
+  // medido, y por eso hubo que parar. Ahora cada causa dice su nombre.
+  let eventosVistos = 0;
+  let cierreSinTerminal: unknown = null;
   await consumirSSE(res, ({ evento, data }) => {
+    eventosVistos += 1;
     if (evento === "done") markdown = String((data as { markdown: string }).markdown ?? "");
-    if (evento === "error") throw new Error(`el plan de seguimiento fallo: ${JSON.stringify(data)}`);
+    if (evento === "error") {
+      const d = (data ?? {}) as { motivo?: string };
+      // (a) DEFECTO DE RUTA, ahora ruidoso: el stream iba a cerrarse sin
+      // terminal y la garantia de web/lib/streamTerminal.ts lo grito.
+      if (d.motivo === "cierre sin terminal") {
+        cierreSinTerminal = data;
+        return;
+      }
+      // (b) FALLO DECLARADO del plan: la ruta dijo que fallo, y por que.
+      throw new Error(`el plan de seguimiento fallo (declarado por la ruta): ${JSON.stringify(data)}`);
+    }
   });
-  if (!markdown) throw new Error("el plan de seguimiento no devolvio markdown");
+  if (cierreSinTerminal !== null) {
+    throw new Error(
+      "DEFECTO DE RUTA: el stream del plan iba a cerrarse SIN evento terminal y la garantia lo cazo. " +
+        `Busca "[plan] cierre sin terminal" en el log del servidor. Detalle: ${JSON.stringify(cierreSinTerminal)}`
+    );
+  }
+  if (!markdown) {
+    // (c) TRANSITORIO DEL TRANSPORTE: ni done, ni error, ni la garantia. Si la
+    // ruta hubiera llegado a su finally habria gritado, asi que el stream se
+    // corto antes de eso o entre el servidor y aqui.
+    throw new Error(
+      `TRANSITORIO DEL TRANSPORTE: el stream del plan termino sin NINGUN evento terminal y SIN que la ` +
+        `garantia de la ruta gritara (eventos recibidos: ${eventosVistos}). No es la ruta: la garantia ` +
+        `habria dejado "[plan] cierre sin terminal" en el log del servidor. Comprueba que no este ahi.`
+    );
+  }
   return { markdown, costoUsd: Number(r.costo_usd ?? 0) };
 }
 
