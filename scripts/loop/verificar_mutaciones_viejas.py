@@ -358,6 +358,17 @@ VIEJAS = [
     #     vuelta, no como estado clavado.
     ("vuelta164_tarea1_mutacion_registro.py", False),
     ("vuelta164_tarea4_mutacion_005.py", False),
+    # Y LAS QUE NACEN EN LA VUELTA 165, por la misma regla aplicada a si misma:
+    # entran el dia que nacen. Ninguna admite `--sujeto`, ninguna escribe en
+    # `docs/loop/` y las dos fabrican su sujeto en memoria, asi que ninguna
+    # puede caducar por el camino que la CORRECCION 22 curo.
+    #   - `165_tarea1`: actas de mentira como listas de lineas; su cifra de
+    #     caidas se COMPUTA del acta fabricada, no se clava.
+    #   - `165_tarea2`: nominas y directorios de mentira; mide el patron VIEJO
+    #     contra el NUEVO sobre el mismo sujeto, asi que su rojo es el del
+    #     agujero real y CAE si alguien devuelve el patron a su forma vieja.
+    ("vuelta165_tarea1_mutacion_registro.py", False),
+    ("vuelta165_tarea2_mutacion_censo.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su
@@ -436,7 +447,55 @@ MARCA_RECURSION = "LOOP_BATERIA_EN_CURSO"
 # con esa cifra delante decide quien tiene que decidir. Ensanchar la vara sin
 # adjudicacion seria exactamente lo que la congelacion de `P.5.1` prohibe en su
 # terreno.
-PATRON_ARNES = re.compile(r"^vuelta(\d+).*mutacion.*\.py$")
+# EL PUNTO CIEGO DEL CENSO, ARREGLADO EN LA FUENTE (vuelta 165, TAREA 2;
+# adjudicacion 6.3 del acta 164, sobre su hallazgo 5.1).
+#
+# QUE ESTABA MAL, MEDIDO Y NO SUPUESTO. El patron era
+# `^vuelta(\d+).*mutacion.*\.py$`: EXIGIA la palabra `mutacion` en el nombre.
+# Medido por el auditor importando estas mismas funciones, y recomputado en la
+# vuelta 165 antes de tocar nada: 92 arneses veia el censo, 53 entradas tiene
+# la nomina, y DOS DE ESAS 53 EL CENSO NO LAS VEIA, aunque existen en disco:
+# `vuelta144_3c_caso_positivo_1190.py` y `vuelta147_3e_simular_a26.py`.
+#
+# POR QUE NO ERA COSMETICO. `arneses_que_faltan()` es quien produce el VERDE de
+# abajo, y ese verde SOLO cubria a los que se llamaran `mutacion`. El dia que
+# naciera un arnes llamado como esos dos, la guarda habria dicho que no falta
+# ninguno SIN HABERLO MIRADO. Es la especie que esta campana lleva cazando:
+# una guarda cuya frase promete mas de lo que su patron mide.
+#
+# LAS DOS SALIDAS QUE LA 6.3 ADMITE SE TOMAN LAS DOS, PORQUE NINGUNA SOLA
+# BASTA:
+#
+#   (a) EL PATRON CUBRE LO QUE LA NOMINA YA CONTIENE. `FAMILIAS_DE_ARNES` no se
+#       invento: se LEYO de los nombres que la nomina real ya trae (`mutacion`,
+#       `caso_positivo`, `simular`), y el arnes de mutacion COMPRUEBA que
+#       ninguna familia declarada sobre. `caso_rojo` estuvo declarada un rato y
+#       el arnes la TUMBO en su primera corrida: existe un
+#       `vuelta88_tarea3_caso_rojo.py` en el directorio, pero NO en la nomina,
+#       o sea que declararla era invento mio y no lectura. Con el patron
+#       ensanchado, las
+#       53 entradas de la nomina son visibles al censo: la cifra de invisibles
+#       pasa de 2 a 0, y esta medida, no afirmada.
+#
+#   (b) LA FRASE DEL VERDE SE ESTRECHA PARA DECIR A QUE UNIVERSO SE REFIERE.
+#       Ensanchar el patron mueve la frontera, no la borra: un arnes con un
+#       nombre de una familia QUINTA seguiria siendo invisible. Asi que el
+#       verde del cierre deja de decir "NINGUN arnes" a secas y NOMBRA las
+#       familias que reconoce.
+#
+# Y ENCIMA VA EL INVARIANTE QUE FALTABA, QUE ES LO QUE IMPIDE QUE ESTO SE
+# REPITA CON UNA FAMILIA QUE HOY NO EXISTE: `nomina_invisible_al_censo()`. UN
+# CENSO QUE NO PUEDE VER SU PROPIA NOMINA ESTA CIEGO, Y ESO ES ROJO. El dia que
+# alguien meta en `VIEJAS` un arnes con un nombre que este patron no reconoce,
+# esta guarda PARA EN ROJO con su lista entera en vez de salir verde sin mirar.
+# Esa es la unica de las tres que no caduca cuando aparezca la familia quinta.
+#
+# CASO POSITIVO POR MUTACION: `scripts/loop/vuelta165_tarea2_mutacion_censo.py`.
+# CAE si alguien devuelve el patron a su forma vieja.
+FAMILIAS_DE_ARNES = ("mutacion", "caso_positivo", "simular")
+PATRON_ARNES = re.compile(
+    r"^vuelta(\d+).*(?:%s).*\.py$" % "|".join(FAMILIAS_DE_ARNES))
+PATRON_ARNES_VIEJO = re.compile(r"^vuelta(\d+).*mutacion.*\.py$")
 
 
 def vuelta_de(nombre):
@@ -450,6 +509,22 @@ def arneses_del_directorio(directorio=None):
     pueda apuntarla a uno fabricado sin tocar el repo."""
     base = directorio or LOOP
     return sorted(n for n in os.listdir(base) if PATRON_ARNES.match(n))
+
+
+def nomina_invisible_al_censo(nomina=None, patron=None):
+    """LAS ENTRADAS DE LA NOMINA QUE EL CENSO NO PUEDE VER (vuelta 165, TAREA 2).
+
+    ES EL INVARIANTE QUE FALTABA Y EL UNICO QUE NO CADUCA. Un censo que no
+    reconoce los nombres de su propia nomina esta ciego sobre su propio
+    universo, y entonces `arneses_que_faltan()` puede salir en verde sin haber
+    mirado. Aqui eso deja de poder pasar en silencio: si esta lista no esta
+    vacia, la corrida es ROJA.
+
+    PURA a proposito, con `nomina` y `patron` por parametro, para que su caso
+    rojo se pruebe por mutacion sin tocar este fichero ni el disco."""
+    nombres = [s for s, _admite in (nomina if nomina is not None else VIEJAS)]
+    pat = patron or PATRON_ARNES
+    return sorted(n for n in nombres if not pat.match(n))
 
 
 def arneses_que_faltan(nomina=None, directorio=None):
@@ -826,10 +901,18 @@ def main():
     # salida es un verde sobre una parte, y eso es lo que hay que ver arriba y
     # no enterrado al final.
     ultima_de_la_nomina, faltan_en_la_nomina = arneses_que_faltan()
+    invisibles_al_abrir = nomina_invisible_al_censo()
     print("")
     print("  LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)")
     print("  CIFRA entradas en la nomina: %d" % len(VIEJAS))
-    print("  CIFRA arneses de mutacion en scripts/loop/: %d" % len(arneses_del_directorio()))
+    print("  CIFRA arneses en scripts/loop/ que el censo reconoce: %d"
+          % len(arneses_del_directorio()))
+    print("  EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros")
+    print("  `vuelta<N>...<familia>...py` de scripts/loop/, con familia en %s."
+          % ", ".join(FAMILIAS_DE_ARNES))
+    print("  CIFRA entradas de la nomina que el censo NO VE: %d" % len(invisibles_al_abrir))
+    for n in invisibles_al_abrir:
+        print("      INVISIBLE AL CENSO: %s" % n)
     print("  CIFRA ultima vuelta representada en la nomina: %s" % ultima_de_la_nomina)
     print("  CIFRA arneses POSTERIORES a esa vuelta que se quedan FUERA: %d"
           % len(faltan_en_la_nomina))
@@ -1001,13 +1084,24 @@ def main():
     # 162). Se recomputa AQUI, al cierre de la corrida, y no se hereda de la
     # cabecera: el estado al cierre se mide al cierre.
     _ultima, faltan_al_cierre = arneses_que_faltan()
+    invisibles_al_cierre = nomina_invisible_al_censo()
     print("  CIFRA arneses POSTERIORES a la nomina que se quedan FUERA (recomputado "
           "al cierre): %d" % len(faltan_al_cierre))
     for n in faltan_al_cierre:
         print("      FUERA DE LA NOMINA: %s" % n)
+    print("  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): "
+          "%d" % len(invisibles_al_cierre))
+    for n in invisibles_al_cierre:
+        print("      INVISIBLE AL CENSO: %s" % n)
 
-    if perdidas or no_mordio or no_reprod or faltan_al_cierre:
+    if perdidas or no_mordio or no_reprod or faltan_al_cierre or invisibles_al_cierre:
         print("")
+        if invisibles_al_cierre:
+            print("ROJO: %d entrada(s) de esta nomina tienen un nombre que el censo de "
+                  "este mismo fichero NO RECONOCE, asi que `arneses_que_faltan()` no "
+                  "puede haber mirado su familia y su verde no cubriria lo que dice. "
+                  "Ensancha FAMILIAS_DE_ARNES o renombra el arnes. La lista entera: %s"
+                  % (len(invisibles_al_cierre), ", ".join(invisibles_al_cierre)))
         if faltan_al_cierre:
             print("ROJO: %d arnes(es) de mutacion nacidos despues de la vuelta %s se "
                   "quedan FUERA de esta nomina, y la regla escrita en este mismo "
@@ -1020,9 +1114,19 @@ def main():
         print("FIN")
         return 1
     print("")
+    # LA FRASE DEL VERDE DICE EXACTAMENTE A QUE UNIVERSO SE REFIERE (vuelta 165,
+    # TAREA 2, salida (b) de la adjudicacion 6.3 del acta 164). Antes decia
+    # "NINGUN arnes posterior" a secas, y solo miraba a los que se llamaran
+    # `mutacion`. Ahora NOMBRA las familias que el censo reconoce y declara,
+    # ademas, que la nomina entera es visible al censo, que es la comprobacion
+    # que impide que este verde vuelva a ser un verde que no mira.
     print("VERDE: las %d mutaciones viejas corren, muerden, sus salidas selladas "
-          "salen IDENTICAS en dos corridas seguidas, y NINGUN arnes posterior a la "
-          "vuelta %s se queda fuera de la nomina." % (len(filas), _ultima))
+          "salen IDENTICAS en dos corridas seguidas, las %d entradas de la nomina "
+          "son TODAS visibles al censo, y NINGUN fichero de scripts/loop/ con nombre "
+          "`vuelta<N>...<familia>...py` (familias: %s) posterior a la vuelta %s se "
+          "queda fuera de la nomina. Un arnes con un nombre de OTRA familia seguiria "
+          "sin verse, y por eso la comprobacion de visibilidad de la nomina es ROJO."
+          % (len(filas), len(VIEJAS), ", ".join(FAMILIAS_DE_ARNES), _ultima))
     print("FIN")
     return 0
 

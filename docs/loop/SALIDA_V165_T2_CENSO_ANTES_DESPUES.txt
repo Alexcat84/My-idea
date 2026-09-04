@@ -1,0 +1,123 @@
+==============================================================================
+VUELTA 165, TAREA 2: EL CENSO DE ARNESES, ANTES Y DESPUES DEL ARREGLO
+==============================================================================
+
+A0) LA CADENA EN LA APERTURA DE ESTA VUELTA, LEIDA DEL ARBOL DE GIT
+    (no de la memoria y no del acta: `git ls-tree` sobre scripts/loop/ y
+    la nomina sacada del fuente de ESE arbol. Hace falta porque la propia
+    vuelta 165 anade arneses, asi que apertura y cierre no pueden coincidir)
+    acta 164, que es donde el auditor midio (2c00a1c0):
+      vistos por el censo viejo 92 | nomina 53 | visibles 51 | fuera 41
+      la resta que cierra: 92 menos 51 es 41
+    apertura de la 165, hijo directo del acta (d6fa3df1):
+      vistos por el censo viejo 92 | nomina 53 | visibles 51 | fuera 41
+      la resta que cierra: 92 menos 51 es 41
+
+A) LA CADENA DE LA CAIDA DE REPORTE DE LA 164, CON EL PATRON VIEJO
+   (es el universo en el que esa cadena se escribio, y es el que la
+   adjudicacion 6.4 del acta 164 manda publicar entero y cerrado)
+   CIFRA vistos por el censo VIEJO: 94
+   CIFRA entradas en la nomina: 55
+   CIFRA de esas entradas VISIBLES al censo viejo: 53
+   CIFRA fuera de la nomina: 41
+   LA RESTA QUE CIERRA: 94 menos 53 es 41
+   LA RESTA QUE NO CERRABA: 94 menos 55 es 39, y NO es la cifra de fuera
+
+B) LA MISMA CADENA CON EL PATRON NUEVO
+   CIFRA vistos por el censo NUEVO: 122
+   CIFRA entradas en la nomina: 55
+   CIFRA de esas entradas VISIBLES al censo nuevo: 55
+   CIFRA entradas de la nomina INVISIBLES al censo nuevo: 0
+   CIFRA fuera de la nomina: 67
+   LA RESTA QUE CIERRA: 122 menos 55 es 67
+   CIFRA ultima vuelta representada en la nomina: 165
+   CIFRA arneses POSTERIORES a esa vuelta que se quedan FUERA: 0 (ninguno)
+
+C) LOS PRE 148 FUERA DE LA NOMINA, CON EL PATRON VIEJO
+   ESTE ES EL UNIVERSO DE LA TAREA 4, y se computa con el patron VIEJO
+   A PROPOSITO: son los que el acta 164 nombra y su 6.5 adjudica, no un
+   conjunto que esta vuelta se invente por haber ensanchado el patron.
+   CIFRA pre 148 fuera de la nomina (patron viejo): 41
+   CIFRA 148 o posteriores fuera de la nomina (patron viejo): 0
+     1. vuelta102_tarea1_prueba_mutacion_apertura.py
+     2. vuelta109_tarea2_4_prueba_mutacion.py
+     3. vuelta110_tarea2_prueba_mutacion.py
+     4. vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py
+     5. vuelta113_tarea2_mutacion_tsc.py
+     6. vuelta115_tarea2_4_mutacion_z.py
+     7. vuelta116_tarea2_3_mutacion_aa.py
+     8. vuelta117_tarea2_3_mutacion_bb.py
+     9. vuelta118_tarea2_5_mutacion_cc.py
+    10. vuelta118_tarea2_6_mutacion_dd.py
+    11. vuelta122_tarea1e_mutacion_citas.py
+    12. vuelta123_tarea1e_mutacion_fila_tabla.py
+    13. vuelta133_tarea2c_mutaciones_identidad.py
+    14. vuelta134_2d_mutacion_1.py
+    15. vuelta134_2d_mutacion_2.py
+    16. vuelta134_2f_mutacion.py
+    17. vuelta135_4c_mutacion.py
+    18. vuelta137_1a_mutacion.py
+    19. vuelta137_1c_mutacion.py
+    20. vuelta138_2a_mutaciones.py
+    21. vuelta139_2a_mutaciones.py
+    22. vuelta140_2b_mutaciones.py
+    23. vuelta140_2c_mutacion_ancla.py
+    24. vuelta141_2d_mutacion_commits.py
+    25. vuelta142_2a_mutaciones.py
+    26. vuelta142_2b_mutacion_commits.py
+    27. vuelta142_2c_mutaciones.py
+    28. vuelta142_2d_mutacion_bateria.py
+    29. vuelta146_3c_mutacion_aduana.py
+    30. vuelta90_tarea3_prueba_mutacion_tallador.py
+    31. vuelta91_tarea3_prueba_mutacion_composicion.py
+    32. vuelta91_tarea4_prueba_mutacion_direccion.py
+    33. vuelta95_tarea2a_prueba_mutacion_barrido.py
+    34. vuelta96_tarea1c_prueba_mutacion.py
+    35. vuelta96_tarea2_prueba_mutacion.py
+    36. vuelta96_tarea3_prueba_mutacion.py
+    37. vuelta97_tarea2_prueba_mutacion.py
+    38. vuelta98_tarea1_prueba_mutacion.py
+    39. vuelta98_tarea3_prueba_mutacion.py
+    40. vuelta98_tarea4_prueba_mutacion.py
+    41. vuelta99_tarea3_prueba_mutacion.py
+
+D) LA POBLACION QUE EL ENSANCHE HACE VISIBLE Y QUE NADIE HA ADJUDICADO
+   NO ENTRA EN LA TAREA 4 Y NO SE MIDE AQUI: se declara y se deja
+   escrita para quien tenga que decidir, que es lo que la 6.5 hizo
+   con los 41. Ninguna de estas es reclamada por el verde de la
+   bateria, porque todas son ANTERIORES a la ultima vuelta de la
+   nomina y la regla solo reclama a las posteriores.
+   CIFRA arneses que el ensanche hace visibles y estan fuera: 26
+   CIFRA de esas que son posteriores a la ultima vuelta de la nomina: 0
+     1. vuelta123_tarea1f_caso_positivo.py (vuelta 123)
+     2. vuelta124_tarea1f_caso_positivo_ventana.py (vuelta 124)
+     3. vuelta136_simular_ops11.py (vuelta 136)
+     4. vuelta138_2a_caso_positivo_63_64.py (vuelta 138)
+     5. vuelta141_2e_caso_positivo_fase03.py (vuelta 141)
+     6. vuelta146_3b_simular_op_a_01.py (vuelta 146)
+     7. vuelta150_2d_simular_op_c_05.py (vuelta 150)
+     8. vuelta160_tarea3b_caso_positivo.py (vuelta 160)
+     9. vuelta24_opc04_caso_positivo.py (vuelta 24)
+    10. vuelta27_caso_positivo.py (vuelta 27)
+    11. vuelta28_caso_positivo.py (vuelta 28)
+    12. vuelta29_caso_positivo.py (vuelta 29)
+    13. vuelta30_caso_positivo.py (vuelta 30)
+    14. vuelta32_caso_positivo.py (vuelta 32)
+    15. vuelta33_caso_positivo.py (vuelta 33)
+    16. vuelta39_caso_positivo.py (vuelta 39)
+    17. vuelta52_caso_positivo.py (vuelta 52)
+    18. vuelta53_caso_positivo.py (vuelta 53)
+    19. vuelta54_caso_positivo.py (vuelta 54)
+    20. vuelta55_caso_positivo.py (vuelta 55)
+    21. vuelta56_caso_positivo.py (vuelta 56)
+    22. vuelta57_caso_positivo.py (vuelta 57)
+    23. vuelta65_caso_positivo_generador.py (vuelta 65)
+    24. vuelta65_caso_positivo_promesas.py (vuelta 65)
+    25. vuelta66_caso_positivo_varas.py (vuelta 66)
+    26. vuelta79_tarea2_caso_positivo.py (vuelta 79)
+
+E) LO QUE NO SE MUEVE, DICHO CON SU CIFRA
+   CIFRA entradas en la nomina antes y despues del arreglo: 55
+   (el arreglo NO recorta ni amplia la nomina: cambia lo que el censo VE)
+
+FIN
