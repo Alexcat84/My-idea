@@ -11808,3 +11808,57 @@ NO se recomputan en esta vuelta: la 5.12 encarga el PASO 1 y nada mas, y
 ampliarlo seria decidir su alcance por cuenta propia. Y ningun veredicto del
 cribado se mueve por esta entrada ni por la TAREA 5: el colapso se mide, la
 clase la decide una lectura.
+
+**CORRECCION DECLARADA DE LA CIFRA DE OPERACIONES (4 sep 2026, vuelta 166, TAREA 4; adjudicacion 5.13 del acta 165 y su caida 1).**
+**QUE SE CORRIGE Y DONDE VIAJO.** El acta 164, adjudicacion 6.10, publico
+*"de las 71 operaciones, 67 estan en `HECHA` y CUATRO en `LISTA`"* y con esa
+cifra dibujo el mapa del ultimo tramo de la fase III. **Esa cifra viajo a este
+mismo fichero**, dentro de la entrada `R.34`, en la linea **11670**, que dice hoy,
+citada entera y sin recortar:
+
+> *"**QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EJECUCION, TAREA 6 de esta vuelta. Se abre el ultimo tramo de la fase III por `OP-L-01`, la unica de las cuatro en `LISTA` sin dependencias declaradas: se lee su ficha entera y se comprueban sus TRES clausulas de verificacion contra el archivo de HOY. Si el texto de la operacion no alcanza para ejecutarse sin decidir, eso es PARADA y se trae con la letra delante, no se improvisa."*
+
+**NO SE BORRA NI UNA LETRA DE `R.34`** (`EJECUTOR.md` 8: una correccion que tapa
+lo que corrige no se puede auditar). La entrada vieja se queda entera con su
+cifra; **lo que manda desde aqui es la medicion de hoy.**
+
+**LA CIFRA DE HOY, MEDIDA POR EL EJECUTOR CON INSTRUMENTO PROPIO** sobre
+`docs/plan/OPERACIONES.jsonl` (`python scripts/loop/vuelta166_tarea4_censo_operaciones.py`,
+salida en [`loop/SALIDA_V166_T4_CENSO_OPERACIONES.txt`](loop/SALIDA_V166_T4_CENSO_OPERACIONES.txt)),
+**corte 4 sep 2026**: **71 operaciones, 29 en `HECHA` y 42 en `LISTA`.**
+**LA TABLA NO ESTA TECLEADA: se lee de ese fichero de salida y se pega entera.**
+
+| fase | `HECHA` | `LISTA` | total |
+|---|---:|---:|---:|
+| `00_CODIGO` | 1 | 6 | 7 |
+| `01_FUENTES` | 0 | 7 | 7 |
+| `02_DESTEJIDOS` | 0 | 9 | 9 |
+| `03_FUSIONES` | 6 | 10 | 16 |
+| `04_ENLACES` | 6 | 4 | 10 |
+| `05_SANEO` | 10 | 0 | 10 |
+| `06_MESAS` | 5 | 0 | 5 |
+| `07_ADUANA` | 0 | 2 | 2 |
+| `08_VERIFICACION` | 1 | 0 | 1 |
+| `09_LECTURAS_DIRIGIDAS` | 0 | 3 | 3 |
+| `10_INVENTARIO` | 0 | 1 | 1 |
+| **TOTAL** | **29** | **42** | **71** |
+
+**Y NO ES DERIVA DEL TIEMPO, Y ESO TAMBIEN SE MIDE EN VEZ DE HEREDARSE:** el
+mismo conteo corrido sobre el arbol del propio acta 164 (`git show
+2c00a1c0:docs/plan/OPERACIONES.jsonl`) da **las mismas 29 y 42**. La cifra del
+acta 164 **ya era falsa el dia que se escribio.**
+
+**LA SEGUNDA MITAD DE LA MISMA CAIDA, CORREGIDA EN EL MISMO ACTO.** La glosa
+citada arriba llama a `OP-L-01` *"la unica de las cuatro en `LISTA` sin
+dependencias declaradas"*. **Medido hoy: de las 42 que no estan en `HECHA`, 23
+no tienen dependencias declaradas, no una.** Van **NOMBRADAS Y NO RESUMIDAS**,
+que es como se publica una poblacion: `OP-F-01`, `OP-F-02`, `OP-F-03`, `OP-D-02`, `OP-D-03`, `OP-D-05`, `OP-D-06`, `OP-S-06`, `OP-S-07`, `OP-C-01`, `OP-C-02`, `OP-C-03`, `OP-E-01`, `OP-A-01`, `OP-A-02`, `OP-F-04-COL`, `OP-F-04-HOR`, `OP-F-04-WEI`, `OP-F-04-RAC`, `OP-L-01`, `OP-I-01`, `OP-D-08`, `OP-D-09`. Y de las 19 que si las tienen, **4
+tienen TODAS sus dependencias en `HECHA` hoy**, contado y no adjudicado: decidir
+si una operacion *puede correr* es una lectura, no un conteo.
+
+**LO QUE ESTA CORRECCION NO HACE, dicho antes de que se lea como hecho:**
+**ningun estado se cambia** (la TAREA 4 es un censo, no un pase), ninguna
+operacion se abre ni se cierra, y **no se vuelve a dibujar cual es el ultimo
+tramo de la fase III**: el acta 164 lo dibujo desde una cifra falsa, y
+redibujarlo desde la cifra buena seguiria siendo una decision de alcance que
+nadie encargo.

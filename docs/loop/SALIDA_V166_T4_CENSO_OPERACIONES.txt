@@ -1,0 +1,136 @@
+==============================================================================
+VUELTA 166, TAREA 4: EL CENSO DE OPERACIONES, POR ESTADO Y POR FASE
+==============================================================================
+
+ES UN CENSO Y NO UN PASE: este instrumento no escribe en
+docs/plan/OPERACIONES.jsonl y no cambia ningun estado.
+
+A) EL FICHERO DE HOY
+   docs/plan/OPERACIONES.jsonl
+   CIFRA operaciones: 71
+   CIFRA en HECHA:   29
+   CIFRA en LISTA:   42
+   la suma de los estados es el total: True
+
+B) EL REPARTO POR FASE, ENTERO Y SIN RECORTAR
+   fase                  | HECHA    | LISTA    | total
+   ---------------------------------------------------
+   00_CODIGO             | 1        | 6        | 7
+   01_FUENTES            | 0        | 7        | 7
+   02_DESTEJIDOS         | 0        | 9        | 9
+   03_FUSIONES           | 6        | 10       | 16
+   04_ENLACES            | 6        | 4        | 10
+   05_SANEO              | 10       | 0        | 10
+   06_MESAS              | 5        | 0        | 5
+   07_ADUANA             | 0        | 2        | 2
+   08_VERIFICACION       | 1        | 0        | 1
+   09_LECTURAS_DIRIGIDAS | 0        | 3        | 3
+   10_INVENTARIO         | 0        | 1        | 1
+   ---------------------------------------------------
+   TOTAL                 | 29       | 42       | 71
+   CIFRA fases distintas: 11
+
+C) EL MISMO CONTEO SOBRE EL ARBOL DEL ACTA 164, PARA SEPARAR
+   UNA CIFRA FALSA DE UNA DERIVA DEL TIEMPO
+   arbol 2c00a1c0 (acta 164): 71 operaciones
+      CIFRA en HECHA:   29
+      CIFRA en LISTA:   42
+   el reparto de HOY y el del arbol del acta 164 coinciden: True
+   VEREDICTO: la cifra del acta 164 NO es deriva del tiempo. Ya era
+   falsa el dia que se escribio, y esto lo mide el ejecutor, no lo
+   copia del acta 165.
+
+D) LOS TRES CONTRASTES, CON SU FUENTE Y MARCADOS COMO CONTRASTE
+   acta 164, adjudicacion 6.10  dice HECHA 67 y no HECHA 4 | mi medicion: 29 y 42 | DIFIERE
+   acta 165, caida 1            dice HECHA 29 y no HECHA 42 | mi medicion: 29 y 42 | COINCIDE
+
+   EL CONTRASTE POR FASE QUE EL ENCARGO TRAE (LISTA/HECHA):
+      00_CODIGO                encargo (6, 1)   | mio (6, 1)   | COINCIDE
+      01_FUENTES               encargo (7, 0)   | mio (7, 0)   | COINCIDE
+      02_DESTEJIDOS            encargo (9, 0)   | mio (9, 0)   | COINCIDE
+      03_FUSIONES              encargo (10, 6)  | mio (10, 6)  | COINCIDE
+      04_ENLACES               encargo (4, 6)   | mio (4, 6)   | COINCIDE
+      05_SANEO                 encargo (0, 10)  | mio (0, 10)  | COINCIDE
+      06_MESAS                 encargo (0, 5)   | mio (0, 5)   | COINCIDE
+      07_ADUANA                encargo (2, 0)   | mio (2, 0)   | COINCIDE
+      08_VERIFICACION          encargo (0, 1)   | mio (0, 1)   | COINCIDE
+      09_LECTURAS_DIRIGIDAS    encargo (3, 0)   | mio (3, 0)   | COINCIDE
+      10_INVENTARIO            encargo (1, 0)   | mio (1, 0)   | COINCIDE
+   CIFRA fases en que mi medicion DIFIERE del encargo: 0 (ninguna)
+   MANDA MI MEDICION. Si alguna difiere, queda declarada arriba.
+
+E) LAS QUE NO ESTAN HECHAS Y NO TIENEN DEPENDENCIAS DECLARADAS
+   LA SEGUNDA MITAD DE LA CAIDA 1: el acta 164 dijo que OP-L-01 era la
+   UNICA sin dependencias declaradas. Aqui se cuenta.
+   CIFRA operaciones no HECHA: 42
+   CIFRA de esas, SIN dependencias declaradas: 23
+   CIFRA de esas, CON dependencias declaradas: 19
+   la suma cuadra: True
+   LAS SIN DEPENDENCIAS, NOMBRADAS UNA POR UNA Y NO RESUMIDAS:
+      OP-F-01                01_FUENTES               LISTA    tipo DECISION_DE_FUENTE
+      OP-F-02                01_FUENTES               LISTA    tipo DECISION_DE_FUENTE
+      OP-F-03                01_FUENTES               LISTA    tipo DECISION_DE_FUENTE
+      OP-D-02                02_DESTEJIDOS            LISTA    tipo DESTEJIDO
+      OP-D-03                02_DESTEJIDOS            LISTA    tipo DESTEJIDO
+      OP-D-05                02_DESTEJIDOS            LISTA    tipo DESTEJIDO
+      OP-D-06                02_DESTEJIDOS            LISTA    tipo DESTEJIDO
+      OP-S-06                00_CODIGO                LISTA    tipo CAMPO_SUCIO
+      OP-S-07                00_CODIGO                LISTA    tipo CAMPO_SUCIO
+      OP-C-01                00_CODIGO                LISTA    tipo CAMPO_SUCIO
+      OP-C-02                00_CODIGO                LISTA    tipo CAMPO_SUCIO
+      OP-C-03                00_CODIGO                LISTA    tipo CAMPO_SUCIO
+      OP-E-01                04_ENLACES               LISTA    tipo ENLACE
+      OP-A-01                07_ADUANA                LISTA    tipo FRONTERA_DECLARADA
+      OP-A-02                07_ADUANA                LISTA    tipo MESA
+      OP-F-04-COL            01_FUENTES               LISTA    tipo DECISION_DE_FUENTE
+      OP-F-04-HOR            01_FUENTES               LISTA    tipo DECISION_DE_FUENTE
+      OP-F-04-WEI            01_FUENTES               LISTA    tipo DECISION_DE_FUENTE
+      OP-F-04-RAC            01_FUENTES               LISTA    tipo DECISION_DE_FUENTE
+      OP-L-01                09_LECTURAS_DIRIGIDAS    LISTA    tipo MESA
+      OP-I-01                10_INVENTARIO            LISTA    tipo MESA
+      OP-D-08                02_DESTEJIDOS            LISTA    tipo DESTEJIDO
+      OP-D-09                02_DESTEJIDOS            LISTA    tipo DESTEJIDO
+   VEREDICTO SOBRE LA FRASE DEL ACTA 164: OP-L-01 NO es la unica: son 23, y van nombradas arriba
+
+F) Y LAS QUE SI TIENEN DEPENDENCIAS, CON SU CUENTA DE DEPENDENCIAS
+   NO SE ADJUDICA SI ESTAN LIBRES O NO: se cuenta cuantas de sus
+   dependencias declaradas estan HOY en HECHA, y ya. Decidir si una
+   operacion 'puede correr' es una lectura, no un conteo.
+      OP-C-04                00_CODIGO                deps 2, en HECHA 0
+      OP-D-01                02_DESTEJIDOS            deps 1, en HECHA 0
+      OP-D-04                02_DESTEJIDOS            deps 2, en HECHA 0
+      OP-D-07                02_DESTEJIDOS            deps 1, en HECHA 1
+      OP-E-03                04_ENLACES               deps 2, en HECHA 0
+      OP-E-06                04_ENLACES               deps 7, en HECHA 0
+      OP-E-07                04_ENLACES               deps 1, en HECHA 0
+      OP-L-02                09_LECTURAS_DIRIGIDAS    deps 3, en HECHA 0
+      OP-L-03                09_LECTURAS_DIRIGIDAS    deps 6, en HECHA 0
+      OP-M-02-ACCOMPLISH     03_FUSIONES              deps 2, en HECHA 1
+      OP-M-02-ACTIVATE       03_FUSIONES              deps 2, en HECHA 1
+      OP-M-02-ADMIT          03_FUSIONES              deps 2, en HECHA 1
+      OP-M-02-ASSESS         03_FUSIONES              deps 2, en HECHA 1
+      OP-M-02-MEDIOS         03_FUSIONES              deps 1, en HECHA 1
+      OP-M-02-PROG           03_FUSIONES              deps 1, en HECHA 1
+      OP-M-03-I              03_FUSIONES              deps 2, en HECHA 1
+      OP-M-03-II             03_FUSIONES              deps 1, en HECHA 1
+      OP-U-01                03_FUSIONES              deps 13, en HECHA 0
+      OP-U-02                03_FUSIONES              deps 1, en HECHA 0
+   CIFRA con TODAS sus dependencias en HECHA: 4
+   CIFRA con alguna dependencia sin HECHA: 15
+   CIFRA con alguna dependencia que NO existe en el fichero: 0
+
+G) EL RESUMEN QUE EL REPORTE PUBLICA, PARA QUE NO SE TECLEE
+   CIFRA operaciones: 71
+   CIFRA HECHA: 29
+   CIFRA LISTA: 42
+   CIFRA no HECHA sin dependencias declaradas: 23
+   CIFRA no HECHA con todas sus dependencias en HECHA: 4
+   CIFRA fases: 11
+
+H) LO QUE ESTA TAREA NO HIZO, DICHO ANTES DE QUE SE LEA COMO HECHO
+   NINGUN ESTADO SE CAMBIA. Ninguna operacion se abre, se cierra ni se
+   remite. Y NO SE DECLARA CUAL ES 'EL ULTIMO TRAMO': el acta 164 lo
+   dibujo desde una cifra falsa, y dibujarlo otra vez desde la cifra
+   buena seguiria siendo una decision de alcance que nadie encargo.
+
+FIN
