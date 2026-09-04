@@ -1,0 +1,51 @@
+==============================================================================
+VUELTA 167, TAREA 4: LAS TRES POBLACIONES DEL ROTULO, MEDIDAS POR MI
+==============================================================================
+
+A) EL INSUMO Y EL CORTE
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388 filas, puesto mayor 3388
+   reparto por clase: {'A': 551, 'B': 72, 'C': 5, 'D': 2760}
+
+B) LA LECTURA DEL CODIGO, COMPROBADA EN LA FUENTE Y NO SUPUESTA
+   recomputo_3388.py:105| 
+   recomputo_3388.py:106|     a_crudas = [r for r in V if r["clase"] == "A"]
+   recomputo_3388.py:107|     retrato = {}          # frozenset(resueltos) -> lista de veredictos que lo forman
+   recomputo_3388.py:108|     colapsos = []          # A que se vuelven auto-arista tras resolver
+   recomputo_3388.py:109|     for r in a_crudas:
+   recomputo_3388.py:110|         ra, rb = res(r["nodo_a"]), res(r["nodo_b"])
+   recomputo_3388.py:111|         if ra == rb:
+   recomputo_3388.py:112|             colapsos.append(r)
+   CIFRA veces que el filtro de clase A aparece en la fuente: 1
+   lineas: [106]
+   VEREDICTO SOBRE LA LECTURA DEL AUDITOR (4.3 del acta 166): el
+   `retrato` se construye SOLO con filas de clase A. CONFIRMADO: SI
+
+C) POBLACION 1, EL 4: SOBRE EL RETRATO, SOLO FILAS A
+   A crudas: 551 | colapsan a auto par: 398 | pares distintos: 149
+   CIFRA pares con MAS DE UNA FILA A: 4
+      ['customer_validation', 'customer_validation_sell_phase']: puestos [245, 781]
+      ['dia_cero_defectos', 'dia_cero_defectos_2']: puestos [2491, 2853]
+      ['estrategia_de_innovacion_arenas', 'estrategia_innovacion_producto']: puestos [460, 1121]
+      ['formalizar_junta_asesora', 'identificar_consejo_asesores']: puestos [712, 976]
+
+D) POBLACION 2, EL 221: SOBRE TODAS LAS FILAS, SIN FILTRAR CLASE
+   filas: 3388 | colapsan a auto par: 401 | pares resueltos distintos: 2712
+   CIFRA pares con MAS DE UNA FILA de cualquier clase: 221
+
+E) POBLACION 3, EL 13: LOS DE (D) CON CLASES DISTINTAS
+   CIFRA pares con MAS DE UNA CLASE distinta: 13
+   reparto por juego de clases: {'ABD': 1, 'AD': 4, 'BD': 8}
+
+F) LAS TRES, UNA AL LADO DE LA OTRA, QUE ES LO QUE EL ROTULO NO DICE
+   (1) pares del RETRATO (solo A) con mas de una fila A                     4
+   (2) pares resueltos con mas de una fila, cualquier clase                 221
+   (3) de esos, los que llevan clases distintas                             13
+   SON SUBCONJUNTOS ENCAJADOS: (1) dentro de (2) por construccion.
+   CIFRA de (1) que ademas estan en (2): 4 de 4
+   CIFRA de (1) que ademas estan en (3): 1 de 4
+
+G) EL CONTRASTE CON EL ACTA 166, AL FINAL Y COMO CONTRASTE
+   el acta dice 4, 221 y 13. Mi medicion de hoy dice 4, 221 y 13.
+   COINCIDEN: SI
+
+CENSO COMPLETO. Esta salida NO escribe en docs/plan/: solo mide.

@@ -1,0 +1,30 @@
+==============================================================================
+VUELTA 167, TAREA 4: LA NOTA ADOSADA A LA FILA DEL RETRATO
+==============================================================================
+
+A) LAS CIFRAS, LEIDAS DE LA SALIDA DEL CENSO Y NO TECLEADAS
+   cuatro       4   (de docs/loop/SALIDA_V167_T4_CENSO_POBLACIONES.txt)
+   doscientos   221   (de docs/loop/SALIDA_V167_T4_CENSO_POBLACIONES.txt)
+   trece        13   (de docs/loop/SALIDA_V167_T4_CENSO_POBLACIONES.txt)
+   corte        3388   (de docs/loop/SALIDA_V167_T4_CENSO_POBLACIONES.txt)
+
+B) LA FILA, LOCALIZADA Y CONTADA
+   docs/plan/RECOMPUTO_3388.md:249
+   CIFRA bytes de la fila ANTES: 1993
+
+C) LA CIFRA DE LA CELDA, COMPROBADA INTACTA ANTES Y DESPUES
+   la celda dice hoy: 4 (y la tachada de al lado, 0)
+   CUADRA con el censo de hoy: SI
+
+D) ESCRITO, POR ADICION
+   CIFRA bytes de la fila DESPUES: 3523
+   CIFRA bytes anadidos: 1530
+   CIFRA notas escritas: 1
+
+E) LA COMPROBACION DE QUE FUE ADICION Y NO REESCRITURA
+   CIFRA lineas del fichero antes y despues: 1922 y 1922
+   toda linea distinta de la 249 es identica: True
+   el texto viejo de la fila sigue entero dentro de la nueva: True
+   la celda sigue diciendo: 4
+
+VERDE: nota adosada, cifra intacta, texto viejo entero.

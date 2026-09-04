@@ -1,0 +1,63 @@
+==============================================================================
+VUELTA 167, TAREA 4: CASO POSITIVO POR MUTACION DE LA NOTA ADOSADA
+==============================================================================
+
+A) LAS CIFRAS SALEN DEL FICHERO Y NO ESTAN TECLEADAS
+   censo falso (7, 300, 20, corte 9999) -> leido {'cuatro': 7, 'doscientos': 300, 'trece': 20, 'corte': 9999}
+
+B) UNA SALIDA DE CENSO ROTA PARA EN VEZ DE ESCRIBIR
+   falta una linea -> PARADA: 'trece' aparece 0 veces en la salida del censo, y tiene que aparecer una.
+   linea duplicada -> PARADA: 'cuatro' aparece 2 veces en la salida del censo, y tiene que aparecer una.
+
+C) LA FILA DEL PLAN SE LOCALIZA UNA SOLA VEZ
+   fila real: indice 248, error None
+
+D) LA NOTA ES ADICION: EL TEXTO VIEJO ENTERO Y LA CIFRA INTACTA
+   bytes antes 1993, bytes despues 3523
+   celda antes 4, celda despues 4
+
+E) PASADA 1, LOS CASOS TAL CUAL
+   A_lee_el_cuatro_del_fichero                          PASA   (real=7 esperado=7)
+   A_lee_el_doscientos_del_fichero                      PASA   (real=300 esperado=300)
+   A_lee_el_trece_del_fichero                           PASA   (real=20 esperado=20)
+   A_lee_el_corte_del_fichero                           PASA   (real=9999 esperado=9999)
+   A_la_nota_lleva_el_7_del_fichero                     PASA   (real=True esperado=True)
+   A_la_nota_NO_lleva_el_4_de_hoy                       PASA   (real=False esperado=False)
+   A_con_otras_cifras_la_nota_es_otra                   PASA   (real=False esperado=False)
+   B_si_falta_una_cifra_para                            PASA   (real=True esperado=True)
+   B_si_una_cifra_esta_dos_veces_para                   PASA   (real=True esperado=True)
+   B_si_no_existe_el_fichero_para                       PASA   (real=True esperado=True)
+   C_la_fila_real_se_localiza                           PASA   (real=True esperado=True)
+   C_si_estuviera_dos_veces_para                        PASA   (real=True esperado=True)
+   C_si_no_estuviera_para                               PASA   (real=True esperado=True)
+   D_el_texto_viejo_entero_sigue_dentro                 PASA   (real=True esperado=True)
+   D_la_nueva_es_mas_larga                              PASA   (real=True esperado=True)
+   D_la_celda_no_se_mueve                               PASA   (real='4' esperado='4')
+   D_la_tachada_sigue_estando                           PASA   (real=True esperado=True)
+   D_la_nota_nueva_esta                                 PASA   (real=True esperado=True)
+   D_las_notas_viejas_no_se_reescriben                  PASA   (real=1 esperado=1)
+   CIFRA casos: 19 | pasan: 19 | fallan: 0
+
+F) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_lee_el_cuatro_del_fichero                          CAE   (esperado mutado=8)
+   A_lee_el_doscientos_del_fichero                      CAE   (esperado mutado=301)
+   A_lee_el_trece_del_fichero                           CAE   (esperado mutado=21)
+   A_lee_el_corte_del_fichero                           CAE   (esperado mutado=10000)
+   A_la_nota_lleva_el_7_del_fichero                     CAE   (esperado mutado=False)
+   A_la_nota_NO_lleva_el_4_de_hoy                       CAE   (esperado mutado=True)
+   A_con_otras_cifras_la_nota_es_otra                   CAE   (esperado mutado=True)
+   B_si_falta_una_cifra_para                            CAE   (esperado mutado=False)
+   B_si_una_cifra_esta_dos_veces_para                   CAE   (esperado mutado=False)
+   B_si_no_existe_el_fichero_para                       CAE   (esperado mutado=False)
+   C_la_fila_real_se_localiza                           CAE   (esperado mutado=False)
+   C_si_estuviera_dos_veces_para                        CAE   (esperado mutado=False)
+   C_si_no_estuviera_para                               CAE   (esperado mutado=False)
+   D_el_texto_viejo_entero_sigue_dentro                 CAE   (esperado mutado=False)
+   D_la_nueva_es_mas_larga                              CAE   (esperado mutado=False)
+   D_la_celda_no_se_mueve                               CAE   (esperado mutado='4_mutado')
+   D_la_tachada_sigue_estando                           CAE   (esperado mutado=False)
+   D_la_nota_nueva_esta                                 CAE   (esperado mutado=False)
+   D_las_notas_viejas_no_se_reescriben                  CAE   (esperado mutado=2)
+   CIFRA casos que caen al mutar el esperado: 19 de 19
+
+VERDE: los 19 casos pasan tal cual y los 19 caen al mutar el esperado.
