@@ -11535,3 +11535,41 @@ creditos, los mismos conceptos y cantidades. **Sigue sin ser el costo de un vuel
 entero** (la J tampoco llego al final), pero **dos corridas independientes dando
 55 hasta aqui es una cifra estable**, y refuerza el **75** leido del codigo como
 minimo de una corrida completa.
+
+### CUARTA SIEMBRA, Y LA CIFRA ESTABLE DEL COSTO (4 sep 2026)
+
+| | |
+|---|---|
+| **saldo antes** | **45** (comprobado con assert) |
+| llamada | `p_monto` **55**, `p_origen` **siembra_beta**, clave **`siembra_vuelo_fase08_2026-09-04_D`** |
+| respuesta | **100** |
+| **saldo despues** | **100** (`total_comprado` **360**, sin cambio) |
+| ledger | `delta` **55**, `tipo` **grant**, `origen` **siembra_beta**, `saldo_resultante` **100** |
+
+### LA CIFRA ESTABLE, y lo que todavia NO se puede llamar costo de un vuelo
+
+**DOS corridas independientes gastaron exactamente 55 creditos hasta la
+penultima fase**, con **el mismo desglose al digito**:
+
+| concepto | veces | creditos |
+|---|---:|---:|
+| `mundo_activar` | 5 | 25 |
+| `seguimiento` | 3 | 15 |
+| `plan_completo` | 1 | 10 |
+| `mundo_seguimiento` | 1 | 5 |
+| **TOTAL** | **10** | **55** |
+
+**Corrida H** (llego a la penultima fase) y **corrida J** (llego a la fase de
+proteccion): **las dos, 55**. Que dos corridas distintas den la misma cifra con
+el mismo desglose es lo que la vuelve **estable**, no una casualidad.
+
+**PERO SIGUE SIN SER EL COSTO DE UN VUELO ENTERO**, y no se publica como tal:
+**ninguna de las dos llego al final**. Las dos fases que faltan
+(`faseReporteDigital` y `faseGuardianGigo`) **arrancan sesion a 10 cada una**,
+leido en el codigo. De ahi el **75 como MINIMO**, que sigue siendo **estimado y
+no observado**.
+
+**LA CIFRA OBSERVADA SE PUBLICARA SOLO CUANDO UNA CORRIDA LLEGUE AL FINAL.**
+Hasta entonces: **55 medidos hasta la penultima fase, 75 estimados para el
+total**, y la diferencia entre esas dos palabras es la que esta sesion lleva dias
+defendiendo.
