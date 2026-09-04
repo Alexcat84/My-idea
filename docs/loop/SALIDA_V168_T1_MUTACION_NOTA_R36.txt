@@ -1,0 +1,53 @@
+==============================================================================
+VUELTA 168, TAREA 1: CASO POSITIVO POR MUTACION DE LA NOTA DEL R.36
+==============================================================================
+
+A) EL VEREDICTO SIGUE A LA MEDICION Y NO A UNA CONSTANTE
+   reporte de la 167, bateria con 4.000 bytes, tarea 5 normal -> ocurrieron 4 de 4
+   reporte de la 165, bateria vacia, tarea 5 en parada (EL CA -> ocurrieron 0 de 4
+   reporte de la 167 pero bateria vacia                       -> ocurrieron 3 de 4
+   reporte de la 166, bateria llena, tarea 5 normal           -> ocurrieron 2 de 4
+
+B) LA MEDICION REAL, LEIDA DE GIT HOY
+   vuelta del reporte de aquel arbol: 165
+   bytes de la bateria de la 167:     0
+   asunto de la ultima tarea:         TAREA 5: PARADA. OP-C-01 no se puede ejecutar porque YA ESTA
+
+C) LA NOTA CAMBIA SI CAMBIA LA MEDICION
+   nota real: 4 de 4 no ocurrieron | nota mutada: 3 de 4, y nombra la 6.4
+
+D) PASADA 1, LOS CASOS TAL CUAL
+   A_167_4000_ocurren_4                                 PASA   (real=4 esperado=4)
+   A_165_0_ocurren_0                                    PASA   (real=0 esperado=0)
+   A_167_0_ocurren_3                                    PASA   (real=3 esperado=3)
+   A_166_900_ocurren_2                                  PASA   (real=2 esperado=2)
+   B_el_reporte_de_aquel_arbol_era_el_de_la_165         PASA   (real=165 esperado=165)
+   B_la_bateria_de_la_167_media_cero_bytes              PASA   (real=0 esperado=0)
+   B_la_tarea_5_empieza_por_TAREA_5_PARADA              PASA   (real=True esperado=True)
+   B_ninguna_de_las_cuatro_ocurrio                      PASA   (real=0 esperado=0)
+   B_el_arnes_mide_lo_mismo_que_el_instrumento          PASA   (real=[False, False, False, False] esperado=[False, False, False, False])
+   C_la_nota_no_es_la_misma_con_otra_medicion           PASA   (real=False esperado=False)
+   C_la_nota_real_dice_4_de_4                           PASA   (real=True esperado=True)
+   C_la_nota_mutada_dice_3_de_4                         PASA   (real=True esperado=True)
+   C_la_nota_mutada_nombra_la_que_si_ocurrio            PASA   (real=True esperado=True)
+   C_la_nota_real_dice_que_ninguna_ocurrio              PASA   (real=True esperado=True)
+   CIFRA casos: 14 | pasan: 14 | fallan: 0
+
+E) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_167_4000_ocurren_4                                 CAE   (esperado mutado=5)
+   A_165_0_ocurren_0                                    CAE   (esperado mutado=1)
+   A_167_0_ocurren_3                                    CAE   (esperado mutado=4)
+   A_166_900_ocurren_2                                  CAE   (esperado mutado=3)
+   B_el_reporte_de_aquel_arbol_era_el_de_la_165         CAE   (esperado mutado=166)
+   B_la_bateria_de_la_167_media_cero_bytes              CAE   (esperado mutado=1)
+   B_la_tarea_5_empieza_por_TAREA_5_PARADA              CAE   (esperado mutado=False)
+   B_ninguna_de_las_cuatro_ocurrio                      CAE   (esperado mutado=1)
+   B_el_arnes_mide_lo_mismo_que_el_instrumento          CAE   (esperado mutado=[True, True, True, True])
+   C_la_nota_no_es_la_misma_con_otra_medicion           CAE   (esperado mutado=True)
+   C_la_nota_real_dice_4_de_4                           CAE   (esperado mutado=False)
+   C_la_nota_mutada_dice_3_de_4                         CAE   (esperado mutado=False)
+   C_la_nota_mutada_nombra_la_que_si_ocurrio            CAE   (esperado mutado=False)
+   C_la_nota_real_dice_que_ninguna_ocurrio              CAE   (esperado mutado=False)
+   CIFRA casos que caen al mutar el esperado: 14 de 14
+
+VERDE: los 14 casos pasan tal cual y los 14 caen al mutar el esperado.
