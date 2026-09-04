@@ -11573,3 +11573,47 @@ no observado**.
 Hasta entonces: **55 medidos hasta la penultima fase, 75 estimados para el
 total**, y la diferencia entre esas dos palabras es la que esta sesion lleva dias
 defendiendo.
+
+### CORRIDA K: EXITCODE 0, 16 DE 16, Y EL COSTO DE UN VUELO POR FIN OBSERVADO (4 sep 2026)
+
+Corte `2026-09-04T11:38:10Z`. Ids en `docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_K.txt`.
+
+> **VUELO COMPLETO: 16/16 verificaciones OK, EXITCODE 0.** La primera corrida que
+> llega al final, tras **diez intentos** y **cinco defectos cerrados**.
+
+**GRAFO VERDE POR DECIMA VEZ: 214 nodos recomendados, 214 vivos, 0 deprecados, 0
+en lista roja, 0 aristas rotas.** Y **la garantia del terminal no tuvo que
+gritar**: cero lineas `cierre sin terminal`.
+
+### EL COSTO OBSERVADO DE UN VUELO ENTERO
+
+| concepto | veces | creditos |
+|---|---:|---:|
+| `mundo_activar` | 5 | 25 |
+| `seguimiento` | 3 | 15 |
+| `plan_completo` | 1 | 10 |
+| `mundo_seguimiento` | 1 | 5 |
+| **TOTAL** | **10** | **55** |
+
+**Saldo 100 a 45. UN VUELO COMPLETO CUESTA 55 CREDITOS.** Primera cifra
+**observada** de punta a punta, y por eso se publica.
+
+### CORRECCION DECLARADA A MI PROPIA ESTIMACION: EL 75 ERA FALSO
+
+Publique que un vuelo entero pedia *"al menos 75, leido del codigo"*: los 55
+medidos hasta la penultima fase mas 10 por cada una de las dos fases finales,
+porque las dos arrancan sesion y el 402 decia *"esto cuesta 10"*.
+
+**Era una lectura mia y era falsa.** `web/app/api/session/start/route.ts` lineas
+85 a 88 lo dice entero:
+
+> `// ETAPA 2 . VERIFICAR al inicio (no cobrar): la Exploracion cuesta ...`
+> `const saldo = await verificarSaldo(user.id, PRECIOS.plan_completo);`
+
+**`session/start` VERIFICA 10 y NO LOS COBRA.** Por eso la corrida H se bloqueo
+con 7 (7 < 10) **sin llegar a gastarlos**, y por eso el total de una corrida
+entera son **55 y no 75**.
+
+**LA CONSECUENCIA PRACTICA, para la cadencia del vuelo en cada release:** un
+vuelo **gasta 55** pero **necesita no bajar de 10 en ningun arranque de sesion**.
+Arrancar con 55 justos **no basta**: hace falta holgura por encima del gasto.
