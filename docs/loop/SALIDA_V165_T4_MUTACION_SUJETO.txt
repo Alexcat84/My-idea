@@ -1,0 +1,94 @@
+==============================================================================
+VUELTA 165, TAREA 4: CASO POSITIVO POR MUTACION DEL CLASIFICADOR DE SUJETO
+==============================================================================
+
+A) EL DESPOJO DE DOCSTRINGS: HABLAR DE UN ARTEFACTO NO ES TOCARLO
+   fuente que SOLO habla de dos artefactos vivos en su docstring
+   CIFRA literales de ruta que quedan tras el despojo: 0
+   la misma fuente, pero ABRIENDO el fichero: 1 literal(es)
+
+B) LA TABLA, LITERAL POR LITERAL
+   docs/loop/REPORTE.md                           -> VIVO       (se SOBRESCRIBE entero cada vuelta (EJECUTOR.md 7). E)
+   docs/loop/ACTA_AUDITOR.md                      -> VIVO       (el auditor le ANADE un acta por vuelta; sus numeros )
+   dataset/metadata/master_graph.json             -> VIVO       (ES EL GRAFO VIVO. Es exactamente el sujeto que la re)
+   verificar_mutaciones_viejas.py                 -> VIVO       (la nomina de la bateria CRECE cada vuelta: quien la )
+   tallar_cabecera_reporte.py                     -> VIVO       (instrumento de NOMBRE ESTABLE (sin numero de vuelta))
+   SUJETO_FIJO_V135_2E_REPORTE_134.md             -> CONGELADO  (salida SELLADA de una vuelta pasada: la casa no rees)
+   SALIDA_V107_TAREA4_3_TRAMO3_TRES_VIAS.md       -> CONGELADO  (salida SELLADA de una vuelta pasada: la casa no rees)
+   vuelta115_guardas_cierre.py                    -> CONGELADO  (script de una vuelta PASADA, que la casa trata como )
+   _v115_mut_z_copia.py                           -> CONGELADO  (script de una vuelta PASADA, que la casa trata como )
+   web/package.json                               -> NEUTRO     (no cae en ninguna de las dos listas de la tabla)
+
+C) EL VEREDICTO SOBRE FUENTES FABRICADAS, Y LA PRECEDENCIA
+   arnes_congelado.py         verde hoy -> SUJETO CONGELADO   (sale verde hoy y todo artefacto que toca es )
+   arnes_git_congelado.py     verde hoy -> SUJETO CONGELADO   (sale verde hoy y todo artefacto que toca es )
+   arnes_git_vivo.py          verde hoy -> SUJETO VIVO        (su codigo toca 1 artefacto(s) vivo(s): git s)
+   arnes_neutro.py            verde hoy -> NO DECIDIBLE       (sale verde hoy pero toca 1 artefacto(s) que )
+   arnes_sin_artefacto.py     verde hoy -> SUJETO CONGELADO   (sale verde hoy y NO TOCA NINGUN ARTEFACTO de)
+   arnes_vivo.py              verde hoy -> SUJETO VIVO        (su codigo toca 1 artefacto(s) vivo(s): docs/)
+
+   Y LA PRECEDENCIA: LA MEDICION MANDA SOBRE LA LECTURA.
+   arnes_congelado.py con estado ANCLA PERDIDA  -> SUJETO VIVO
+   arnes_congelado.py con estado NO MORDIO      -> SUJETO VIVO
+
+D) LA PUERTA DE ENTRADA: SOLO ENTRA SUJETO CONGELADO
+   ENTRAN: arnes_congelado.py, arnes_git_congelado.py, arnes_sin_artefacto.py
+   NO ENTRAN: arnes_git_vivo.py, arnes_neutro.py, arnes_vivo.py
+
+   P.16: el temporal se retira. Existe todavia: False
+
+E) PASADA 1, LOS CASOS TAL CUAL
+   A_la_prosa_no_deja_literales                             PASA   (real=0 esperado=0)
+   A_el_codigo_si_deja_literal                              PASA   (real=1 esperado=1)
+   B_docs_loop_REPORTE_md                                   PASA   (real='VIVO' esperado='VIVO')
+   B_docs_loop_ACTA_AUDITOR_md                              PASA   (real='VIVO' esperado='VIVO')
+   B_dataset_metadata_master_graph_json                     PASA   (real='VIVO' esperado='VIVO')
+   B_verificar_mutaciones_viejas_py                         PASA   (real='VIVO' esperado='VIVO')
+   B_tallar_cabecera_reporte_py                             PASA   (real='VIVO' esperado='VIVO')
+   B_SUJETO_FIJO_V135_2E_REPORTE_134_md                     PASA   (real='CONGELADO' esperado='CONGELADO')
+   B_SALIDA_V107_TAREA4_3_TRAMO3_TRES_VIAS_md               PASA   (real='CONGELADO' esperado='CONGELADO')
+   B_vuelta115_guardas_cierre_py                            PASA   (real='CONGELADO' esperado='CONGELADO')
+   B__v115_mut_z_copia_py                                   PASA   (real='CONGELADO' esperado='CONGELADO')
+   B_web_package_json                                       PASA   (real='NEUTRO' esperado='NEUTRO')
+   C_verde_arnes_congelado_py                               PASA   (real='SUJETO CONGELADO' esperado='SUJETO CONGELADO')
+   C_verde_arnes_git_congelado_py                           PASA   (real='SUJETO CONGELADO' esperado='SUJETO CONGELADO')
+   C_verde_arnes_git_vivo_py                                PASA   (real='SUJETO VIVO' esperado='SUJETO VIVO')
+   C_verde_arnes_neutro_py                                  PASA   (real='NO DECIDIBLE' esperado='NO DECIDIBLE')
+   C_verde_arnes_sin_artefacto_py                           PASA   (real='SUJETO CONGELADO' esperado='SUJETO CONGELADO')
+   C_verde_arnes_vivo_py                                    PASA   (real='SUJETO VIVO' esperado='SUJETO VIVO')
+   C_precedencia_ANCLA_PERDIDA                              PASA   (real='SUJETO VIVO' esperado='SUJETO VIVO')
+   C_precedencia_NO_MORDIO                                  PASA   (real='SUJETO VIVO' esperado='SUJETO VIVO')
+   C_precedencia_sobre_el_sin_artefacto                     PASA   (real='SUJETO VIVO' esperado='SUJETO VIVO')
+   D_entran_solo_los_congelados                             PASA   (real=3 esperado=3)
+   D_el_neutro_no_entra                                     PASA   (real=False esperado=False)
+   D_el_vivo_no_entra                                       PASA   (real=False esperado=False)
+   CIFRA casos: 24 | pasan: 24 | fallan: 0
+
+F) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_la_prosa_no_deja_literales                             CAE   (esperado mutado=1)
+   A_el_codigo_si_deja_literal                              CAE   (esperado mutado=2)
+   B_docs_loop_REPORTE_md                                   CAE   (esperado mutado='VIVO_MUTADO')
+   B_docs_loop_ACTA_AUDITOR_md                              CAE   (esperado mutado='VIVO_MUTADO')
+   B_dataset_metadata_master_graph_json                     CAE   (esperado mutado='VIVO_MUTADO')
+   B_verificar_mutaciones_viejas_py                         CAE   (esperado mutado='VIVO_MUTADO')
+   B_tallar_cabecera_reporte_py                             CAE   (esperado mutado='VIVO_MUTADO')
+   B_SUJETO_FIJO_V135_2E_REPORTE_134_md                     CAE   (esperado mutado='CONGELADO_MUTADO')
+   B_SALIDA_V107_TAREA4_3_TRAMO3_TRES_VIAS_md               CAE   (esperado mutado='CONGELADO_MUTADO')
+   B_vuelta115_guardas_cierre_py                            CAE   (esperado mutado='CONGELADO_MUTADO')
+   B__v115_mut_z_copia_py                                   CAE   (esperado mutado='CONGELADO_MUTADO')
+   B_web_package_json                                       CAE   (esperado mutado='NEUTRO_MUTADO')
+   C_verde_arnes_congelado_py                               CAE   (esperado mutado='SUJETO CONGELADO_MUTADO')
+   C_verde_arnes_git_congelado_py                           CAE   (esperado mutado='SUJETO CONGELADO_MUTADO')
+   C_verde_arnes_git_vivo_py                                CAE   (esperado mutado='SUJETO VIVO_MUTADO')
+   C_verde_arnes_neutro_py                                  CAE   (esperado mutado='NO DECIDIBLE_MUTADO')
+   C_verde_arnes_sin_artefacto_py                           CAE   (esperado mutado='SUJETO CONGELADO_MUTADO')
+   C_verde_arnes_vivo_py                                    CAE   (esperado mutado='SUJETO VIVO_MUTADO')
+   C_precedencia_ANCLA_PERDIDA                              CAE   (esperado mutado='SUJETO VIVO_MUTADO')
+   C_precedencia_NO_MORDIO                                  CAE   (esperado mutado='SUJETO VIVO_MUTADO')
+   C_precedencia_sobre_el_sin_artefacto                     CAE   (esperado mutado='SUJETO VIVO_MUTADO')
+   D_entran_solo_los_congelados                             CAE   (esperado mutado=4)
+   D_el_neutro_no_entra                                     CAE   (esperado mutado=True)
+   D_el_vivo_no_entra                                       CAE   (esperado mutado=True)
+   CIFRA casos que caen al mutar el esperado: 24 de 24
+
+VERDE: los 24 casos pasan tal cual y los 24 caen al mutar el esperado.

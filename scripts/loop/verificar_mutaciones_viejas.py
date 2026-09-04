@@ -367,8 +367,11 @@ VIEJAS = [
     #   - `165_tarea2`: nominas y directorios de mentira; mide el patron VIEJO
     #     contra el NUEVO sobre el mismo sujeto, asi que su rojo es el del
     #     agujero real y CAE si alguien devuelve el patron a su forma vieja.
+    #   - `165_tarea4`: fuentes de mentira escritas en un temporal; clasifica y
+    #     muta sus esperados. No lee ningun artefacto vivo del repo.
     ("vuelta165_tarea1_mutacion_registro.py", False),
     ("vuelta165_tarea2_mutacion_censo.py", False),
+    ("vuelta165_tarea4_mutacion_sujeto.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su
