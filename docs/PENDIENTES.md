@@ -11702,3 +11702,109 @@ se reabren aqui ni en ningun sitio de la vuelta 165: la 6.1 confirma la primera
 y la 6.2 firma la segunda. La `OP-L-01` que abre la 6.10 se ejecuta en la TAREA
 6 de la vuelta 165 y, si su texto no alcanza para ejecutarse sin decidir, sale
 por PARADA y no por improvisacion.
+
+---
+
+## R.35. Registro de las catorce adjudicaciones y las dos caidas propias del acta de la vuelta 165
+
+(Acta del auditor, vuelta 165, secciones 3 y 5; escrito en la vuelta 166,
+TAREA 1.)
+
+Por adicion, como `R.21` a `R.34`. **Corte de todas las cifras de esta entrada:
+4 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes. La
+SEDE tampoco se supone: sale de la adjudicacion 6.3 del acta 162, leida hoy en
+`docs/loop/ACTA_AUDITOR.md:53933`, y se DECLARA que el acta 165 no la repite (la
+regla es de la casa, no de un acta suelta). Salida:
+`docs/loop/SALIDA_V166_T1_REGISTRO_ACTA_165.txt`.
+
+**Y LAS DOS CIFRAS DEL TITULO TAMPOCO ESTAN TECLEADAS**, que es lo que la
+adjudicacion 5.7 del propio acta 165 firma como metodo correcto: se cuentan del
+acta (14 adjudicaciones `5.n` y 2 negritas `CAIDA n` dentro del cuerpo
+acotado) y de ahi sale el numeral en palabra. El encargo de la 166 pide catorce
+y dos; el conteo da lo mismo, asi que no hay discrepancia que declarar.
+
+**LAS CATORCE ADJUDICACIONES, CON SU LINEA EN EL ACTA LEIDA HOY.** El titulo de
+cada una es LITERAL del fichero (localizado dentro del cuerpo del acta 165, no
+de cualquier acta); la glosa que sigue es prosa del ejecutor y va marcada como
+tal.
+
+  - **5.1 (`docs/loop/ACTA_AUDITOR.md:55122`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL DISCUTIBLE 5 SE ADJUDICA A FAVOR DEL EJECUTOR, Y LA REGLA LO DICE SOLA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. El uso del resolutor para medir la clausula 1 de `OP-L-01` queda CONFIRMADO por segunda pluma, citando `P.1` en su propia letra. La vuelta 166 lo hereda como metodo y no lo vuelve a discutir: sus TAREAS 3 y 5 miden CON EL RESOLUTOR PUESTO, y por eso mismo la TAREA 5 se queda en censo y no adjudica clase.
+  - **5.2 (`docs/loop/ACTA_AUDITOR.md:55131`, leida hoy). VIA: EN EJECUCION.** Titulo
+    literal del acta: *"LA CLAUSULA 2 DE `OP-L-01` NO ES PARADA, Y LA ADJUDICO CITANDO LA PROPIA FICHA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EJECUCION, TAREA 2 de esta vuelta. La clausula 2 queda corregida POR ADICION dentro de la propia lista `verificacion`, citando el campo `adjudicacion` de la ficha y el precedente del acta 71. NO se borra una letra y NO se crea clave nueva de esquema. La PARADA que la vuelta 165 trajo queda LEVANTADA por esta adjudicacion, no por decision del ejecutor.
+  - **5.3 (`docs/loop/ACTA_AUDITOR.md:55146`, leida hoy). VIA: EN EJECUCION.** Titulo
+    literal del acta: *"LA CLAUSULA 1 NO SE CUMPLE Y SE CORRIGE POR EL MISMO CARRIL."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EJECUCION, TAREA 2 de esta vuelta. La clausula 1 se corrige POR ADICION nombrando las TRES lecturas que SI aparecen al resolver, cada una con su puesto y su clase, medidas hoy y no copiadas del acta.
+  - **5.4 (`docs/loop/ACTA_AUDITOR.md:55151`, leida hoy). VIA: EN EJECUCION.** Titulo
+    literal del acta: *"LA CLAUSULA 3 SE CUMPLE HASTA DONDE HAY QUE MEDIR, Y LAS CINCO QUE FALTAN QUEDAN NOMBRADAS Y NO RELLENADAS."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA Y NO SE RELLENA, TAREA 2 de esta vuelta. La clausula 3 NO se corrige: se cumple hasta donde el inventario nombra miembros, y las cinco nominas que solo existen como prosa quedan NOMBRADAS Y NO RELLENADAS, que es lo que la verificacion de `OP-I-01` manda. Elegirles una entrada seria decidir.
+  - **5.5 (`docs/loop/ACTA_AUDITOR.md:55158`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL DISCUTIBLE 1 SE ADJUDICA: LAS DOS SALIDAS ESTABAN BIEN TOMADAS."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. Las dos salidas del censo de arneses y el invariante `nomina_invisible_al_censo()` se quedan los tres. La vuelta 166 no los toca ni los sustituye.
+  - **5.6 (`docs/loop/ACTA_AUDITOR.md:55163`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL DISCUTIBLE 2 SE ADJUDICA: LA TRANSITIVIDAD SE QUEDA, CON SU DEUDA NOMBRADA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. La transitividad se queda con su deuda nombrada: los doce cuya exclusion no se comprobo uno por uno siguen escritos como deuda y NO como verde. La vuelta 166 no los cierra y no los borra.
+  - **5.7 (`docs/loop/ACTA_AUDITOR.md:55171`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL DISCUTIBLE 3 SE ADJUDICA A FAVOR DE REGISTRAR TRES."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. Contar la seccion en vez de copiar la cifra del encargo queda firmado como el metodo correcto, y esta vuelta lo repite: la cifra de adjudicaciones y la de caidas de esta misma entrada se CUENTAN del acta 165, y si difirieran del encargo mandaria el conteo.
+  - **5.8 (`docs/loop/ACTA_AUDITOR.md:55177`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL DISCUTIBLE 4 SE ADJUDICA: LAS DOS CIFRAS SON CIERTAS CON SU CORTE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. Las dos cifras del racimo de la junta asesora siguen vivas con su corte al lado, por el banco 9.21. La vuelta 166 no borra ninguna de las dos ni las funde.
+  - **5.9 (`docs/loop/ACTA_AUDITOR.md:55184`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"LA PREGUNTA 1 SE ADJUDICA: LOS 26 SE MIDEN, CON SU CIFRA CORREGIDA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. Los 26 quedan medidos uno por uno por la TAREA 4 de la vuelta 165, con su cifra corregida (24 pre 148 y 2 posteriores). La vuelta 166 no los vuelve a medir y no los mueve.
+  - **5.10 (`docs/loop/ACTA_AUDITOR.md:55188`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"LA PREGUNTA 2 SE ADJUDICA: SE DECLARAN Y NO SE ARREGLAN."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. `SALIDA_V135_4C_MUTACION.txt` y `SALIDA_V137_1A_MUTACION.txt` quedan DECLARADOS y no se arreglan: ninguna regla escrita manda reescribir ficheros de vueltas pasadas por cosmetica.
+  - **5.11 (`docs/loop/ACTA_AUDITOR.md:55194`, leida hoy). VIA: EN CODIGO.** Titulo
+    literal del acta: *"LA PREGUNTA 3 SE ADJUDICA, Y NO POR LA VIA DE DECLARAR LA VARA AJENA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN CODIGO, TAREA 6 de esta vuelta. `tallar_cifras_de_antes.py` se ESTRECHA EN LA FUENTE, con su caso positivo por mutacion, y su frase pasa a decir a que universo se refiere. NO se declara ajena al reporte de fase 04: eso seria apagar una guarda por incomoda. El antes y el despues se publican sobre los DOS reportes, el de la 164 y el de hoy, y los hallazgos que sobrevivan se NOMBRAN uno por uno.
+  - **5.12 (`docs/loop/ACTA_AUDITOR.md:55202`, leida hoy). VIA: EN MEDICION.** Titulo
+    literal del acta: *"EL RETRATO DE LAS A SE RECOMPUTA, Y ES TAREA BLOQUEANTE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA COMO MEDICION, TAREA 3 de esta vuelta, y es la BLOQUEANTE. El retrato de las A de `docs/plan/RECOMPUTO_3388.md` PASO 1 se RECOMPUTA con `scripts/plan/recomputo_3388.py`, por el carril de siempre: contador cuadrado en el mismo acto, nota fechada adosada, ninguna nota vieja reescrita y ninguna cifra vieja borrada. Los pasos 2, 3 y 4 NO se tocan: no estan encargados y meterlos aqui seria decidir su alcance.
+  - **5.13 (`docs/loop/ACTA_AUDITOR.md:55207`, leida hoy). VIA: EN MEDICION.** Titulo
+    literal del acta: *"MI CIFRA DE OPERACIONES SE CORRIGE POR DECLARACION Y EL MAPA DEL ULTIMO TRAMO SE REHACE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA COMO MEDICION, TAREA 4 de esta vuelta. El reparto de `docs/plan/OPERACIONES.jsonl` por estado y por fase se mide con instrumento propio y se publica entero, y la correccion declarada de la cifra falsa del auditor se escribe DONDE ESA CIFRA VIAJO. NINGUN ESTADO SE CAMBIA en esa tarea: es un censo, no un pase.
+  - **5.14 (`docs/loop/ACTA_AUDITOR.md:55211`, leida hoy). VIA: EN MEDICION.** Titulo
+    literal del acta: *"EL COLAPSO SE MIDE Y NO SE ADJUDICA CLASE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA COMO MEDICION, TAREA 5 de esta vuelta. El colapso se mide con el resolutor y se publica con su evidencia, y NO SE ADJUDICA CLASE NI SE MUEVE UN VEREDICTO. La frontera que `LD-07` dejo escrita se anota donde `LD-07` vive, POR ADICION y con su fecha.
+
+**EL REPARTO POR VIA, CONTADO Y NO TECLEADO:** EN CODIGO: 1 (5.11); EN EJECUCION: 3 (5.2, 5.3, 5.4); EN MEDICION: 3 (5.12, 5.13, 5.14); SIN TOCAR NADA: 7 (5.1, 5.5, 5.6, 5.7, 5.8, 5.9, 5.10).
+**Ninguna de las catorce sube al fundador.**
+
+**LAS CAIDAS PROPIAS DEL AUDITOR, REGISTRADAS IGUAL QUE LAS DEL EJECUTOR**
+(letra del encargo de la vuelta 166, TAREA 1). No son del ejecutor y no acumulan
+para sus rachas; se escriben aqui porque el registro de la casa no distingue de
+quien es la mano que cae. En el acta 165 viven en la **seccion 3**, no en la 4
+como en el acta 164.
+
+  - **CAIDA 1 (`docs/loop/ACTA_AUDITOR.md:55011`, leida hoy).** Titulo literal del
+    acta: *"CAIDA 1. MI ADJUDICACION 6.10 DEL ACTA 164 PUBLICO UNA CIFRA FALSA Y CON ELLA DIBUJE UN MAPA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y NO ACUMULA PARA NINGUNA RACHA DEL EJECUTOR, porque no es suya. Su remedio se EJECUTA en la TAREA 4 de esta vuelta: el reparto real de las 71 operaciones por estado y por fase se mide con instrumento propio del ejecutor, se publica entero, y la correccion declarada se escribe en esta misma entrada y alli donde el mapa del ultimo tramo de la fase III quedo escrito como si fueran cuatro operaciones. Y se cuenta ademas, porque el auditor lo pide por su nombre, cuantas de las que quedan en `LISTA` no tienen dependencias declaradas: la frase de que `OP-L-01` era la unica tambien era falsa.
+  - **CAIDA 2 (`docs/loop/ACTA_AUDITOR.md:55033`, leida hoy).** Titulo literal del
+    acta: *"CAIDA 2. SELLE A CIEGAS UNA ATRIBUCION QUE NO SE PUEDE HACER A CIEGAS, Y ES LA MISMA ESPECIE QUE MI CAIDA 2 DE LA 164."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y LO QUE ENSENA SE ESCRIBE ENTERO: la ciega decide la LETRA, no la GENEALOGIA. No acumula para ninguna racha del ejecutor. Su remedio se ACATA en el procedimiento de la TAREA 5 de esta vuelta, que es exactamente la especie contraria: se mide el colapso, se publican los pares en conflicto uno por uno con su evidencia, y NO se les atribuye causa ni clase. El ejemplar que el propio auditor nombra, `formalizar_junta_asesora` con `identificar_consejo_asesores`, se publica como los demas y sin adjudicarle nada.
+
+**LA CORRECCION DECLARADA QUE LA CAIDA 1 ARRASTRA, ESCRITA AQUI PORQUE AQUI ES
+DONDE LA CIFRA FALSA VIAJO** (`EJECUTOR.md` 8, *"toda correccion declarada sin
+borrar el texto viejo"*). La entrada `R.34` de este mismo fichero registro la
+adjudicacion 6.10 del acta 164 con su titulo literal, y ese titulo hablaba del
+*"ultimo tramo de la fase III"* apoyado en una cifra que hoy se sabe falsa: el
+acta 164 dijo **67 en `HECHA` y CUATRO en `LISTA`**. **NO SE BORRA NI UNA LETRA
+de `R.34`**: sigue entera y con su cifra vieja, porque una correccion que tapa lo
+que corrige no se puede auditar. **LA CIFRA DE HOY, medida por el ejecutor en la
+TAREA 4 de esta vuelta con instrumento propio sobre `docs/plan/OPERACIONES.jsonl`
+y publicada en `docs/loop/SALIDA_V166_T4_CENSO_OPERACIONES.txt`, es la que manda
+desde aqui**, y el reparto entero por fase va en esa salida y en el reporte de la
+vuelta 166. **Y la frase de que `OP-L-01` era la unica sin dependencias
+declaradas queda corregida en el mismo acto, con la cuenta al lado.**
+
+**LO QUE ESTE REGISTRO NO CIERRA.** La vara `P.5.1` sigue CONGELADA y ninguna de
+estas catorce la estrecha ni la ensancha. Los pasos 2, 3 y 4 del `RECOMPUTO_3388.md`
+NO se recomputan en esta vuelta: la 5.12 encarga el PASO 1 y nada mas, y
+ampliarlo seria decidir su alcance por cuenta propia. Y ningun veredicto del
+cribado se mueve por esta entrada ni por la TAREA 5: el colapso se mide, la
+clase la decide una lectura.
