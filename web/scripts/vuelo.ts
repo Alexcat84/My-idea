@@ -1980,9 +1980,37 @@ async function faseMundoSubproyecto(cookie: string, projectId: string) {
   }
   const nuevos = itemsMundo.filter((i) => !i.fecha_base).slice(0, 2);
   if (nuevos.length !== 2) throw new Error("el mundo no tiene 2 items libres para sembrar la desviacion");
+  const fechasSembradas = nuevos.map((it) => ({ item_id: it.id as string, fecha: dia(-30), origen: "sugerida" }));
   await postJson(cookie, `/api/project/${projectId}/baseline`, {
-    plan_id: gCorePrevio.plan_id, // la baseline es DEL PROYECTO; el plan del mundo no se sella
-    fechas: nuevos.map((it) => ({ item_id: it.id as string, fecha: dia(-30), origen: "sugerida" })),
+    plan_id: gCorePrevio.plan_id,
+    fechas: fechasSembradas,
+  });
+  // LA BASELINE DEL MUNDO SE SELLA TAMBIEN (decisión del fundador, 3 sep 2026,
+  // sesión con credencial). El comentario que aquí decía "la baseline es DEL
+  // PROYECTO; el plan del mundo no se sella" se venció con "Todo separado" (T3):
+  // cada espacio tiene su propia línea base, y web/lib/analytics.ts:492-497 dice
+  // literal que el cumplimiento del MUNDO se calcula "SOLO si SU plan tiene
+  // baseline confirmada" (planBaselineVigente sobre los planes DEL MUNDO; si
+  // ninguno la tiene, `cumplimiento` es null).
+  //
+  // MEDIDO EN LA BASE ANTES DE ARREGLARLO, no supuesto: en la corrida B el plan
+  // cf40f55e (dominio health_safety, 27 ítems, 5 con fecha_base) tenía
+  // baseline_confirmada_at = NULL, y por eso el bloque de seguimiento del mundo
+  // salía con la redacción de ritmo y sin su línea de cumplimiento. NO era el
+  // modo: project_modos[core] estaba en 'fechas' y esa puerta pasaba.
+  //
+  // De esta confirmación dependen TRES aseveraciones de más abajo, y por eso va
+  // aquí y no después: (1) la línea "N a tiempo, N adelantadas, N tardías (de N
+  // con fecha)", (2) la "desviación media de +4.8 días", y (3) la de "sus
+  // propias tardías con nombre y apellido", que bloqueRealidad.ts emite DENTRO
+  // del mismo bloque condicional (líneas 141 a 152).
+  //
+  // El Análisis NO lo necesitaba y por eso pasaba: su desglose por dominio
+  // (cumplimientoPorDominio) cuenta cualquier ítem con fecha, sin mirar la
+  // baseline del mundo. Son dos varas distintas y las dos siguen vivas.
+  await postJson(cookie, `/api/project/${projectId}/baseline`, {
+    plan_id: gMundoPrevio.plan_id,
+    fechas: fechasSembradas,
   });
   const REALES = [dia(-18), dia(-21)];
   for (const [k, it] of nuevos.entries()) {
