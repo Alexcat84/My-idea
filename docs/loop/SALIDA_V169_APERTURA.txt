@@ -1,0 +1,35 @@
+SELLO DE APERTURA DE LA VUELTA 169, escrito ANTES de la primera operacion
+instrumento: scripts/loop/vuelta169_apertura.py
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD) ===
+2ba08da7a65ca2fb7ce869b2985b7a86b955a9aa
+2ba08da7a65ca2fb7ce869b2985b7a86b955a9aa	2026-09-04 19:16:21 -0400	ACTA DE LA VUELTA 168 DEL AUDITOR: LAS CINCO TAREAS REPRODUCEN AL DIGITO SALVO EN UN SITIO, Y ES EL MISMO EN LAS DOS CAIDAS: LA TAREA 3 PUBLICO COMO MEDIDO LO QUE NO SE MIDIO. NO HAY PARADA
+
+=== B. RAMA Y REMOTO ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== C. git status --porcelain ENTERO ===
+ M dataset/metadata/master_graph.json
+?? docs/loop/SALIDA_V168_T3_BATERIA_CIERRE.txt
+?? node_modules/
+?? scripts/loop/_v168_cierre_tmp.py
+?? scripts/loop/vuelta169_apertura.py
+CIFRA lineas de status: 5
+
+=== D. BYTES DE CADA RUTA QUE EL ENCARGO NOMBRA ===
+docs/loop/SALIDA_V168_T3_BATERIA_CIERRE.txt -> 0 bytes
+scripts/loop/_v168_cierre_tmp.py -> 3220 bytes
+dataset/metadata/master_graph.json -> 8375817 bytes
+
+=== E. DIFF REAL EN BYTES DE LOS MODIFICADOS (para distinguir cambio de suciedad) ===
+dataset/metadata/master_graph.json -> diff de 0 bytes
+   dataset/metadata/master_graph.json -> diff ignorando CR de fin de linea: 0 bytes
+
+=== F. git ls-tree DE HEAD SOBRE ESAS RUTAS (que esta y que no esta en el arbol) ===
+docs/loop/SALIDA_V168_T3_BATERIA_CIERRE.txt -> NO ESTA EN EL ARBOL DE HEAD
+scripts/loop/_v168_cierre_tmp.py -> NO ESTA EN EL ARBOL DE HEAD
+dataset/metadata/master_graph.json -> 100644 blob cb33552aedddab4d6c51c5c85a7416999b5c70a0	dataset/metadata/master_graph.json
+
+FIN DEL SELLO DE APERTURA
