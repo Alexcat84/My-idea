@@ -55284,3 +55284,359 @@ tres suites verdes por mi mano, la bateria verde y sola, y el hook sin fallar.
 muro cayo. **Campana consumada: NO, y hoy mucho menos que ayer: quedan 42
 operaciones en `LISTA`, medidas por mi.** **El merge de `pasada-unica` no se pide y
 no se hace: es del fundador y solo suyo.**
+
+# ACTA DEL AUDITOR, VUELTA 166 (4 sep 2026, auditor Opus 5)
+# =========================================================================
+
+**HUECO DE ACTA: NO HAY, Y LO COMPRUEBO.** La ultima cabecera escrita antes de
+esta es la **165** (`docs/loop/ACTA_AUDITOR.md:54829`), su encargo numera la
+vuelta **166**, y la vuelta que audito hoy es la 166. El invariante ACTA N VUELTA
+N MAS 1 se cumple y no queda ninguna vuelta sin auditar detras. **REGIMEN
+COMPLETO:** el austero sigue suspendido por su punto 5.
+
+**EL VEREDICTO DE UNA LINEA: LAS SEIS TAREAS DE LA 166 ESTAN ENTREGADAS Y
+REPRODUCEN TODAS BAJO MIS INSTRUMENTOS, PERO LA VUELTA SE CORTO ANTES DE
+ESCRIBIR SU REPORTE Y ANTES DE QUE LA BATERIA TERMINARA. NO ES PARADA, Y NO LO
+DIGO POR COMODIDAD: HAY PRECEDENTE AL BYTE EN ESTA MISMA CAMPANA Y ESTA A TRES
+VUELTAS DE DISTANCIA.** No existe `REPORTE.md` de la 166: el fichero sigue siendo
+el de la 165 (`80610e09`), y `docs/loop/SALIDA_V166_BATERIA.txt` esta en el arbol
+de trabajo con **CERO BYTES** y sin commitear. Es la especie exacta de la vuelta
+163. **Y LO MAS GORDO DE ESTA ACTA LO TRAIGO YO DE UNA MEDICION MIA: la salida
+sellada de la propia TAREA 3 termina en `LAS CUATRO: AL MENOS UNA FALLA`, y
+ningun commit de la vuelta la nombra.** Traigo **TRES hallazgos fuera del
+marcado** (no habia marcado: sin reporte no hay discutibles que marcar), **UNA
+caida propia mia** y **CERO caidas de clase o de cifra publicada del ejecutor**.
+
+## 1. VERIFICACION, CON MIS INSTRUMENTOS Y EN ESTA VUELTA
+
+**LOS DIEZ COMANDOS DEL CIERRE, RE CORRIDOS POR MI Y NO LEIDOS**
+(`scripts/loop/_auditor_v166_verificacion.py`, mismo orden que
+`vuelta166_cierre.py`, salidas `docs/loop/_auditor_v166_*.txt`):
+
+**GATE 0, EL CICLO ENTERO Y EN SU ORDEN, NUNCA `run_phase1` SUELTO:**
+`run_phase1.py --reaplico-curaduria` da **GATE 0: OK, exit 0**;
+`etiquetas_de_cara.py --aplicar` da **71 etiquetas**; `sync_assets_web.py` da los
+**seis** assets con `semantic_index.json` en **`42223fccc725...`, 21.854.994
+bytes**; y `git diff HEAD --numstat -- dataset/ web/ engine/` da **CERO FILAS**.
+La `M` de `master_graph.json` es fin de linea y no contenido, y el numstat en cero
+lo prueba en el mismo acto.
+
+**CENSO, ARISTAS, CALIBRADO Y SUITES, TODO POR MI MANO:** censo
+**3.853 / 3.169 / 684**; aristas **8.780 / 8.740 / 17.520 / 9.914** con `solo_sig`
+**1.174**, `solo_prev` **1.134**, **auto 0** y **cero nodos con duplicada en
+lista**; desfase del calibrado **4 filas**, las mismas cuatro de siempre; motor
+**25/25 exit 0**; `tsc` **EXIT 0 y cero lineas**; `pnpm test` **82 ficheros y
+1.040 pasadas, exit 0**. **Las once cifras de la tabla de cierre reproducen al
+digito y no queda ninguna heredada.**
+
+**EL MARCADOR, RECOMPUTADO POR MI** (python propio sobre
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`): **n 3.388, A 551, B 72, C 5, D 2.760**,
+puestos **1 a 3.388**, **huecos 0, duplicados 0**. **Ni un veredicto se movio en
+esta vuelta y el archivo lo confirma.**
+
+**LA APERTURA, VERIFICADA CON SU GUARDA:** `verificar_apertura_sellada.py --vuelta
+166` sale **VERDE exit 0**; los **diez** `SALIDA_V166_*_APERTURA.txt` nacen
+**todos** en `8472d645`, **hijo directo** del acta 165 `00cfe6e0`, y **hashes
+admitidos 0**. **El bloque no se fragmento. EL CORREDOR TIENE OCHO COMMITS**,
+contados por mi con `git rev-list --count 00cfe6e0..HEAD`, **y los ocho son del
+ejecutor: cero intrusos.**
+
+**TAREA 1, RE CORRIDA POR MI:** `serie_de_registros.py` da **27 entradas, 0
+colisiones, 0 huecos**, mayor escrito **`R.35`** en `docs/PENDIENTES.md:11708`,
+siguiente libre **`R.36`**, VERDE. El titulo dice **catorce adjudicaciones y dos
+caidas propias**, y **conte del acta 165 sus 5.1 a 5.14 y sus dos caidas: cuadra**.
+Mutacion **28 de 28** y la corrida idempotente escribe **0 entradas**.
+
+**TAREA 2, RE LEIDA POR MI DEL REGISTRO:** `OP-L-01` sigue en **`LISTA`**, con
+`depende_de` **vacio**, y su lista `verificacion` tiene hoy **cinco elementos**:
+los **tres viejos intactos, letra por letra**, mas las dos correcciones como
+elementos **V4** y **V5**. **Ninguna clave nueva de esquema y ninguna letra
+borrada:** es el carril del banco **9.10** y la via que `OP-L-03` uso en la vuelta
+72. Mutacion **19 de 19** y el fichero identico byte a byte tras la prueba.
+
+**TAREA 3, RE MEDIDA POR MI CON EL INSTRUMENTO DE LA CASA**
+(`python scripts/plan/recomputo_3388.py --salida docs/loop/_auditor_v166_recomputo.txt`):
+**A crudas 551, colapsos a auto arista 398, pares distintos 149, y pares con mas
+de un veredicto crudo apuntando al mismo par resuelto 4**, con los cuatro pares y
+sus puestos identicos a los publicados. **Reproduce al digito. Y su pie NO, y ese
+es mi 4.2.**
+
+**TAREA 4, RE CONTADA POR MI DEL FICHERO:** `docs/plan/OPERACIONES.jsonl` tiene
+**71 filas**, **29 en `HECHA` y 42 en `LISTA`**, y el reparto por fase sale
+identico al publicado en las once fases. **Y las que no estan hechas y no tienen
+dependencias declaradas son 23**, contadas por mi sobre el campo real
+`depende_de`. **La correccion de la caida 1 del acta 165 es exacta.**
+
+**TAREA 5, RE MEDIDA POR MI CON RESOLUTOR PROPIO**
+(`docs/loop/_auditor_v166_t5.py`): **401 filas colapsan a un auto par**, quedan
+**2.712 pares resueltos distintos**, **221 llevan mas de una fila** y **13 de esos
+llevan clases distintas**, con el reparto **ocho `B` con `D`, cuatro `A` con `D` y
+uno con `A`, `B` y `D`**. **Los trece son los mismos trece, par por par.** Y la
+frontera de `LD-07` esta escrita donde `LD-07` vive, por adicion pura medida con
+git: **21 anadidas, 0 borradas**.
+
+**TAREA 6, RE CORRIDA POR MI SOBRE LOS DOS REPORTES:** la guarda estrechada da
+**exit 1 con 16 hallazgos** sobre el reporte de la 164 (`c59d111a`) y **exit 1 con
+10** sobre el `REPORTE.md` de hoy. **Son exactamente los 16 y los 10 que el
+ejecutor nombra uno por uno**, y **el exitcode no baja: el estrechamiento recorta
+el universo y no apaga la guarda**, que es lo que la 5.11 del acta 165 mandaba.
+Su caso positivo por mutacion, corrido por mi, sale **VERDE con 23 de 23**.
+
+## 2. RELECTURA CIEGA
+
+**METODO Y LIMITE DECLARADO, Y EL LIMITE ES DE ESTA VUELTA Y NO MIO: NO HAY
+DISCUTIBLES MARCADOS POR DONDE EMPEZAR, PORQUE NO HAY REPORTE.** `AUDITOR.md` 1.2
+manda empezar por ellos y hoy no existen. **Corri la ciega sobre el sujeto que mi
+propia verificacion levanto**: el par resuelto
+`{customer_development_modelo, customer_discovery}`, que es **el UNICO de los trece
+de la TAREA 5 con las tres letras a la vez** (`A`, `B` y `D`) y **uno de los TRES
+que hacen fallar la comprobacion ii** del 4.2.
+
+**IMPRIMI PRIMERO Y ADJUDIQUE DESPUES**, en ese orden: titulo, fuente, dominio,
+fase, etiqueta de arbol, entregable, resumen teorico, condiciones y **pasos
+accionables** de los dos nodos (`docs/loop/_auditor_v166_ciega_nodos.txt`), sin
+abrir el campo `razon` de ninguna de las tres filas. Selle mi letra y mi motivo en
+`docs/loop/_auditor_v166_ciega_sello.txt`, **sha1
+`c4226fb122246404d454c5558382a92ce2700b1f`** comprobado con `git hash-object`,
+**antes** de destapar nada.
+
+**MI LETRA SELLADA: `D`.** `customer_discovery` **se declara etapa del otro con
+todas sus letras** en su resumen (*"es el primer paso del desarrollo de clientes"*)
+y trae **procedimiento propio que la madre no tiene**: las cuatro fases, el
+desarme en las nueve partes del lienzo, la comparacion del MVP contra metas de
+exito y fracaso **fijadas de antemano**, y la puerta de avanzar o volver.
+`customer_development_modelo` trae lo suyo: el **desarrollo agil en paralelo** y el
+detalle de que se pregunta. **Lo compartido es el tronco generico de Blank, no el
+procedimiento.** Y las fases de proyecto difieren: `ideacion` contra `validacion`.
+
+**DESTAPADAS LAS TRES RAZONES, COINCIDO CON DOS Y LA TERCERA NO ES UNA LECTURA.**
+El puesto **1255 (`D`)** dice lo mismo que yo y casi con mis palabras: *"el modelo
+entero contra las cuatro fases de su primer paso"*, *"cada uno trae la mitad que al
+otro le falta"*, y su prueba es si la fusion **borraria o sumaria**. El **707
+(`B`)** difiere el par a la mesa de la familia y su sustancia no me contradice.
+**Y EL 635 (`A`) NO ES UN VEREDICTO DE LECTURA:** su razon empieza *"FAMILIA
+DECLARADA: los dos son miembros del racimo censado ..., asi que NO SE PELEA LA
+CLASE. Se registra `A`"*. **Es la regla del racimo censada, no una lectura que
+choque con la mia**, y eso lo verifique en la fuente de la regla
+(`docs/INTRA_DOMINIO_INFORME.md:30`). **Va como adjudicacion 6.7.**
+
+## 3. MI CAIDA PROPIA, CON SU NOMBRE
+
+  **CAIDA 1. CONTE LAS OPERACIONES SIN DEPENDENCIAS SOBRE UNA CLAVE QUE NO
+  EXISTE, Y ME HABRIA DADO 42 DONDE HAY 23.** Mi primer conteo pregunto por
+  `dependencias` y el campo real del esquema es **`depende_de`**. Un `.get()` de
+  una clave ausente da vacio para las 42, o sea que **el instrumento habria
+  publicado que las 42 no tienen dependencias y habria salido verde**. Es la
+  especie del canon 9 del banco: no fallo ruidoso, contesto una cosa distinta de
+  la que le preguntaron. **La cace corriendo primero el inventario de claves del
+  fichero antes de publicar la cifra, y no llego a ninguna salida sellada ni a
+  ningun encargo.** Se registra igual, porque las mias se declaran como las del
+  ejecutor. **Lo que ensena: un conteo sobre un campo se comprueba contra el
+  esquema del fichero, no contra la palabra que uno esperaba encontrar.**
+
+## 4. HALLAZGOS FUERA DEL MARCADO
+
+  **4.1 NO EXISTE `REPORTE.md` DE LA 166 Y LA BATERIA NO SE CORRIO.** `REPORTE.md`
+  sigue siendo el de la 165 (`git log` sobre el fichero: su ultimo commit es
+  `80610e09`). `docs/loop/SALIDA_V166_BATERIA.txt` existe en el arbol de trabajo
+  con **CERO BYTES**, sin commitear, con fecha **un minuto posterior** al commit
+  del bloque de cierre. **El ejecutor se corto justo despues de sellar el cierre y
+  antes de escribir el reporte.** Lo digo entero y a favor de la vuelta: **el
+  bloque de apertura, las SEIS tareas y el bloque de cierre estan commiteados y
+  reproducen todos**; lo que falta es la narracion publica y la bateria. **NO ES
+  CAIDA DE REPORTE**, y se dice con la letra delante: la caida de reporte del 27
+  ago 2026 es *"una afirmacion equivocada que vive solo en `REPORTE.md`"*, y aqui
+  no hay afirmacion equivocada porque no hay reporte. **Es una vuelta cortada, y su
+  adjudicacion va en la 6.1.**
+
+  **4.2 LA SALIDA SELLADA DE LA TAREA 3 TERMINA EN `LAS CUATRO: AL MENOS UNA
+  FALLA`, Y NINGUN COMMIT DE LA VUELTA LA NOMBRA. ES EL HALLAZGO GORDO DE ESTA
+  ACTA Y ES MIO.** En `docs/loop/SALIDA_V166_T3_RECOMPUTO.txt:552`, leido hoy y
+  reproducido por mi corrida propia del instrumento:
+
+  > `ii. A vigentes resueltas del retrato (149) == suma de aristas A internas de las componentes (146): FALLA`
+
+  **MEDI LA CAUSA EN VEZ DE SUPONERLA** (`docs/loop/_auditor_v166_ii.py`): el
+  `leido` de `scripts/plan/recomputo_3388.py:202` es un diccionario
+  **ULTIMO GANA por par resuelto y SIN MIRAR LA CLASE**, asi que un par del
+  retrato cuya **ultima** fila del fichero no es `A` no cuenta como arista `A`
+  interna. **Son exactamente TRES, nombrados uno por uno con sus filas crudas:**
+
+| par resuelto | sus filas crudas (puesto, clase) | la que el instrumento guarda |
+|---|---|---|
+| `customer_development_modelo` con `customer_discovery` | (635 `A`), (707 `B`), (1255 `D`) | **1255 `D`** |
+| `formalizar_junta_asesora` con `identificar_consejo_asesores` | (712 `A`), (976 `A`), (1190 `D`) | **1190 `D`** |
+| `customer_validation` con `earlyvangelists_ventas_tempranas` | (697 `D`), (1096 `A`), (1185 `D`) | **1185 `D`** |
+
+  **149 menos 3 son 146, que es el numero que el instrumento imprime.** La cuenta
+  cierra entera y no queda residuo. **QUE ESPECIE ES Y QUE NO ES, con la regla
+  delante:** no es caida de cifra publicada del ejecutor, porque **el grafo no se
+  movio en esta vuelta** y la comprobacion ya estaba en rojo al abrirla; y no la
+  cuento como caida de reporte porque **el reporte donde se habria declarado no
+  llego a existir**, y colgarle a nadie lo que no escribio es contar una caida en
+  la espalda de quien no la hizo. **Pero es una GUARDA EN ROJO publicada como
+  cimiento de una cifra corregida de `docs/plan/`, y el MODO DE EJECUCION CONTINUA
+  dice que una guarda en rojo detiene al ejecutor y convoca al auditor.** Va como
+  **tarea bloqueante** en la 6.5.
+
+  **4.3 LA FILA DEL RETRATO NO DICE DE QUE UNIVERSO HABLA, Y AHORA IMPORTA.** La
+  fila que esta vuelta movio de `0` a `4` se llama *"pares con mas de un veredicto
+  crudo apuntando al mismo par resuelto"*. **Medido por mi en la fuente
+  (`scripts/plan/recomputo_3388.py:105-110`): el `retrato` se construye SOLO con
+  filas de clase `A`**, asi que ese **4** son los pares con mas de una fila **`A`**,
+  no los pares con mas de una fila. **Los pares con mas de una fila son 221 y los
+  que ademas llevan clases distintas son 13**, y las dos cifras viven hoy en la
+  misma campana: el 4 en `docs/plan/RECOMPUTO_3388.md` y el 13 en la TAREA 5.
+  **La celda es cierta y su rotulo es ancho**, y un rotulo ancho al lado de otra
+  cifra parecida se lee como contradiccion cuando no la hay. **No es caida de
+  nadie de esta tanda:** el rotulo es viejo y estuvo en `0` mientras nadie barria.
+  Se corrige por adicion en la 6.6.
+
+## 5. LO QUE NO CONSULTE Y QUEDA A VERIFICAR
+
+  - **La bateria de arneses: NO LA CORRI Y NO LA DOY POR VERDE.** El fichero de la
+    vuelta esta en cero bytes y mi corrida propia habria tardado los veinte minutos
+    de siempre sobre un arbol que la 166 no movio en `dataset/`. **Va encargada.**
+  - **Los doce restantes de los trece pares en conflicto:** los conte y publique su
+    censo, lei **uno**. **Ninguna clase se mueve por esta acta.**
+  - **Los pasos 2, 3 y 4 del recomputo:** no los verifique. **Sus cifras son las de
+    su corte y su insumo se movio debajo**, cosa que el propio fichero declara.
+  - **Las 3.385 filas del cribado que no lei:** siguen con sus lecturas anteriores.
+
+## 6. ADJUDICACIONES
+
+  **6.1 LA VUELTA 166 NO SE CIERRA POR ACTA: SE TERMINA, Y LA SIGUIENTE ES LA 167.
+  ADJUDICADO CITANDO PRECEDENTE Y NO DOCTRINA NUEVA.** El acta 163, adjudicacion
+  **6.1**, resolvio esta misma especie con estas palabras: *"Ninguna condicion de
+  parada se cumple y una vuelta cortada no es una de ellas. Mantener abierto el
+  numero 163 romperia el invariante de la casa (ACTA N VUELTA N MAS 1) del que
+  cuelgan `tallar_cabecera_reporte.py` y `verificar_apertura_sellada.py`. La 164
+  ABSORBE la cola de la 163, su reporte cubre las dos, y las salidas ya selladas de
+  la 163 no se re corren ni se re sellan: se citan."* **Se aplica al byte: la 167
+  absorbe la cola de la 166 y su reporte cubre las dos.** Y la diferencia va dicha
+  a favor de esta vuelta: **la 163 se corto a mitad de su TAREA 2 y la 166 entrego
+  sus SEIS tareas commiteadas y su bloque de cierre.**
+
+  **6.2 EL FICHERO DE CERO BYTES VA EN EL MISMO COMMIT QUE EL BLOQUE DE APERTURA DE
+  LA 167, Y NO EN UNO SUYO.** Acta 163, adjudicacion **6.2**, misma letra y mismo
+  motivo aritmetico: **un commit entre el acta y la apertura es intruso salvo que el
+  encargo cite su hash, y ese hash no existe cuando escribo esto.** Un solo commit,
+  primer commit del corredor e hijo directo de esta acta, sin fragmentar el bloque.
+
+  **6.3 LAS SALIDAS SELLADAS DE LA 166 NO SE RE CORREN NI SE RE SELLAN: SE CITAN.**
+  Misma letra de la 6.1 del acta 163. **Las verifique yo hoy una por una y
+  reproducen todas** (seccion 1); re correrlas manana solo cambiaria sus relojes y
+  dispararia `verificar_re_sellado.py` sin que nada de fondo se hubiera movido.
+
+  **6.4 LA BATERIA SE CORRE EN LA 167 Y EL FICHERO DE CERO BYTES NO CUENTA COMO
+  CORRIDA.** Un fichero vacio no es una medicion: es el rastro de una corrida que
+  no termino, y darlo por verde seria exactamente la degradacion callada que el
+  canon 9 del banco prohibe.
+
+  **6.5 LA COMPROBACION ii SE ARREGLA EN LA FUENTE Y SE DECLARA, Y NO SE DECLARA
+  AJENA. ES TAREA BLOQUEANTE.** Por el 4.2, y **por la misma doctrina con la que el
+  acta 165 adjudico su 5.11**: una guarda que molesta no se apaga, se estrecha o se
+  arregla donde vive. **Aqui el defecto esta medido y es del instrumento, no del
+  dato**: un diccionario ultimo gana que pierde la `A` de un par que tiene `A`. El
+  arreglo lleva **caso positivo por mutacion** que tiene que **caerse** si alguien
+  devuelve el ultimo gana. Y **la linea del pie se declara en el reporte** que
+  publique el retrato, que es la mitad que faltaba.
+
+  **6.6 LA FILA DEL RETRATO DICE DE QUE UNIVERSO HABLA, POR ADICION Y SIN BORRAR
+  SU CIFRA.** Por el 4.3. Carril del banco **9.10**: nota fechada adosada, cifra
+  intacta, ninguna nota vieja reescrita. **El `4` no se toca: lo que se anade es de
+  que poblacion es 4**, y al lado el `221` y el `13` de la TAREA 5 con su corte.
+
+  **6.7 LAS TRES FILAS DE `{customer_development_modelo, customer_discovery}` NO
+  SON TRES LECTURAS QUE SE CONTRADIGAN, Y ES EL SEGUNDO EJEMPLAR NOMBRADO.** Por la
+  seccion 2. La `A` del **635** se registro por **FAMILIA DECLARADA**, regla que
+  dice literalmente que **no se pelea la clase** (`docs/INTRA_DOMINIO_INFORME.md:30`),
+  o sea que **no es una lectura del par**. Junto con la **huella de fusion** del par
+  de la junta asesora (acta 165, 4.3), **son ya DOS de los trece con su conflicto
+  explicado por una regla y no por un error**. **Refuerza y no debilita la decision
+  del ejecutor de no declarar la poblacion defectuosa**, y esa decision queda
+  adjudicada a su favor. **Ninguna clase se mueve por esta acta.**
+
+  **6.8 EL ESTADO DE `OP-L-01` SE QUEDA EN `LISTA` Y ESTA BIEN.** El encargo daba
+  las dos salidas y el ejecutor tomo la que la vara sostiene, diciendo por que. **Su
+  clausula 3 sigue sin cumplirse hasta donde el inventario nombra miembros**, que es
+  lo que la 5.4 del acta 165 adjudico, asi que **la ficha no esta cumplida y su
+  estado no se mueve.** Mover un estado con una clausula abierta seria la especie
+  del falso verde.
+
+  **6.9 EL TRABAJO DE LA CAMPANA SIGUE POR EL ORDEN ESCRITO, Y ESE ORDEN ES
+  `OP-C-01`.** Medido por mi hoy sobre `docs/plan/OPERACIONES.jsonl`: la fase
+  **`00_CODIGO`** tiene **6 en `LISTA` y 1 en `HECHA`**, y su orden escrito es
+  **`OP-C-01` (1), `OP-C-02` (2), `OP-C-03` (3), `OP-S-06` (4), `OP-S-07` (5),
+  `OP-C-04` (6)**. El mapa de fases del `00_INDICE` dice **`FASE 0 CODIGO bloquea
+  TODO lo que mueve un id`**, y `OP-C-01` no tiene dependencias y bloquea a
+  `OP-S-01`, `OP-S-09` y `OP-F-01`. **Su ficha esta escrita entera**, con sus sitios
+  y sus lineas, su arreglo en tres puntos y su verificacion con caso positivo. **No
+  hay que decidir nada para ejecutarla, asi que no es parada: es la siguiente.**
+
+## 7. LA METRICA DE CREDITO
+
+Cuento como las actas 153 a 165.
+
+| | esta vuelta | acumulado |
+|---|---:|---:|
+| relecturas | 1 | 301 |
+| puestos | 3 | 495 |
+| discrepancias DENTRO del marcado | 0 | 19 |
+| discrepancias y hallazgos FUERA del marcado | 3 | 44 |
+| caidas propias del auditor | 1 | (se declaran, no se acumulan aqui) |
+
+**LOS PUESTOS SUBEN TRES Y DIGO EXACTAMENTE QUE LEI:** no lei tres pares, lei **un
+par resuelto**, y ese par lo forman **tres filas del cribado** (635, 707 y 1255),
+las tres del archivo y con puesto. **Las tres quedan cubiertas por la misma
+lectura y por eso cuentan tres**; el par es uno y por eso la relectura es una.
+
+**EL CREDITO DE LA TANDA, CON LA REGLA DELANTE (`AUDITOR.md` 1.2).** Mi unica
+relectura **coincide con la sustancia de las dos filas que si son lecturas** y la
+tercera **no es una lectura**, asi que **no hay discrepancia de clase, ni dentro ni
+fuera del marcado, y la ciega no baja el credito de la tanda**. **PERO LA RELECTURA
+AL DOBLE SIGUE VIVA POR HERENCIA:** el acta 165 la dejo disparada por tres motivos
+escritos y **ninguno se ha saldado**, porque esta vuelta no leyo ni un par nuevo.
+
+**LAS DOS RACHAS, CON SU NOMBRE:**
+
+  - **RACHA DE CIFRA PUBLICADA: CERO.** Venia en **CERO**. **Esta tanda no mueve ni
+    una clase ni una cifra publicada por error del ejecutor**: verifique las cuatro
+    cifras del retrato, las tres de la TAREA 4, las cuatro de la TAREA 5 y las dos
+    de la TAREA 6, **y todas reproducen bajo mi comando**. La racha sigue en cero.
+    **Y digo expresamente por que el 4.2 no la abre:** la comprobacion en rojo no es
+    una cifra falsa escrita por esta vuelta, es una guarda que ya estaba roja cuando
+    la vuelta abrio, sobre un grafo que la vuelta no toco.
+  - **RACHA DE REPORTE: NO SE PUEDE MEDIR, Y ESO NO ES CERO.** Misma letra con que
+    el acta 163 la declaro en su caso: **no hay `REPORTE.md` de la 166**. **No la
+    doy por cero ni por rota: la declaro NO MEDIBLE**, y se mide en la 167 sobre el
+    reporte que cubra las dos vueltas.
+  - **LA ESCALADA NO SE DISPARA**, porque pide **racha de reporte en DOS** y hoy
+    **no es medible** y antes estaba en **CERO**. **Lo digo con la regla delante y no
+    por omision**, que es la caida que el propio `AUDITOR.md` 1.2 tiene escrita con
+    nombre desde la vuelta 89.
+
+## 8. NO HAY PARADA Y ESCRIBO ENCARGO
+
+**Recorro las condiciones de la seccion 4 de `AUDITOR.md` una a una y ninguna se
+cumple.**
+**Doctrina nueva:** ninguna hace falta. La vuelta cortada la resuelven las
+adjudicaciones **6.1 y 6.2 del acta 163** al byte; la guarda en rojo la resuelve la
+misma doctrina de la **5.11 del acta 165**; el rotulo ancho lo resuelve el carril
+del banco **9.10**; y el par de la ciega lo resuelve la regla de **familia
+declarada** que ya esta escrita. **No invento sede nueva para ninguno.**
+**Contradiccion:** la comprobacion **ii** en rojo es real y **se resuelve con las
+reglas de correccion existentes**: se mide, se arregla en la fuente con caso
+positivo y se declara. No contradice ninguna cifra publicada, la explica.
+**Decision de fundador:** nada de lo encargado borra contenido, cambia el alcance,
+gasta fuera del repo ni toca produccion; `OP-C-01` toca `web/` **dentro de la rama
+de la pasada** y con las suites como vara.
+**Fallo tecnico repetido:** Gate 0 verde por mi mano, las tres suites verdes por mi
+mano, la apertura verde con su guarda y el hook sin fallar. **No hay dos vueltas
+seguidas de nada en rojo por la misma causa.**
+**Credito:** cifra publicada en **CERO** y reporte **NO MEDIBLE**; la parada pide
+**dos**.
+**Credenciales:** no aplican a nada de lo encargado.
+**Campana consumada: NO.** Medido por mi hoy: **42 operaciones en `LISTA`**, y la
+fase bloqueante de la campana, `00_CODIGO`, tiene **seis de ellas sin empezar**.
+**El merge de `pasada-unica` no se pide y no se hace: es del fundador y solo suyo.**
