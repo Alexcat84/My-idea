@@ -1,0 +1,101 @@
+==============================================================================
+VUELTA 166, TAREA 6: CASO POSITIVO POR MUTACION DEL ESTRECHAMIENTO
+==============================================================================
+
+A) LA FRASE DICE A QUE UNIVERSO SE REFIERE, Y SE COMPRUEBA QUE LO DICE
+UNIVERSO DE ESTA GUARDA, DICHO Y NO DEDUCIDO: mide LAS ORACIONES QUE
+AFIRMAN UN ESTADO ANTERIOR O SU PERMANENCIA Y QUE ADEMAS PUBLICAN UNA
+MEDIDA (un numero, o uno de estos estados medibles: VERDE, ROJO, EXITCODE, exit, LISTA, HECHA, CUMPLIDO).
+NO mide la prosa que usa 'antes', 'era' o 'sigue' SIN publicar cifra ni
+estado: esa no es una cifra de antes. NO mide tampoco 'antes de
+<infinitivo>', que es orden y no estado. Las dos poblaciones se
+IMPRIMEN aparte con su cuenta, no se callan.
+
+B) CADA SUJETO, CLASIFICADO POR LA FUNCION REAL
+   prosa con el verbo ser, sin cifra ni estado          -> sin_medida (esperado sin_medida)
+   orden con infinitivo que la lista vieja no traia     -> excluida   (esperado excluida)
+   orden con infinitivo, segunda forma                  -> excluida   (esperado excluida)
+   cifra de antes de verdad, sin cita: TIENE que ser ha -> hallazgo   (esperado hallazgo)
+   estado medible de antes, sin cita: TIENE que ser hal -> hallazgo   (esperado hallazgo)
+   cifra de antes CON su cita: tiene que pasar la vara  -> ok         (esperado ok)
+
+C) LA MUTACION: SE DEVUELVE EL VOCABULARIO A SU FORMA ANCHA
+   se apaga el filtro de MEDIDA y se apaga la CONSTRUCCION de orden,
+   que es exactamente el estado en que la guarda estaba antes de esta
+   vuelta. Los tres primeros sujetos TIENEN QUE CAER a 'hallazgo'.
+   prosa con el verbo ser, sin cifra ni estado          estrecho=sin_medida ancho=hallazgo   CAE
+   orden con infinitivo que la lista vieja no traia     estrecho=excluida   ancho=hallazgo   CAE
+   orden con infinitivo, segunda forma                  estrecho=excluida   ancho=hallazgo   CAE
+   cifra de antes de verdad, sin cita: TIENE que ser ha estrecho=hallazgo   ancho=hallazgo   no cambia
+   estado medible de antes, sin cita: TIENE que ser hal estrecho=hallazgo   ancho=hallazgo   no cambia
+   cifra de antes CON su cita: tiene que pasar la vara  estrecho=ok         ancho=ok         no cambia
+
+D) LOS DOS REPORTES ENTEROS, ESTRECHO CONTRA ANCHO
+   reporte 164: ANCHO 36 hallazgos | ESTRECHO 16 hallazgos, 14 sin medida, 8 exclusiones
+   reporte 165: ANCHO 27 hallazgos | ESTRECHO 10 hallazgos, 14 sin medida, 7 exclusiones
+
+E) LAS DOS GUARDAS HISTORICAS SIGUEN EN PIE, y esto es lo que impide
+   que un estrechamiento se coma la guarda entera: el caso positivo
+   de la vuelta 111 sobre el reporte de la 110 tiene que SEGUIR
+   nombrando el caso O y NO nombrando el caso N.
+   reporte 110: 4 hallazgos | el caso O sale nombrado: True
+   reporte 110: el caso N pasa la vara con sus 2 citas: True
+   reporte 110 mutado (una cita menos al caso N): el caso N sale nombrado: True
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   A_el_universo_nombra_MEDIDA                                PASA   (real=True esperado=True)
+   A_el_universo_nombra_antes_de                              PASA   (real=True esperado=True)
+   A_el_universo_nombra_no_se_callan                          PASA   (real=True esperado=True)
+   B_prosa_con_el_verbo_ser,_sin_cifra_ni_estado              PASA   (real='sin_medida' esperado='sin_medida')
+   B_orden_con_infinitivo_que_la_lista_vieja_no_t             PASA   (real='excluida' esperado='excluida')
+   B_orden_con_infinitivo,_segunda_forma                      PASA   (real='excluida' esperado='excluida')
+   B_cifra_de_antes_de_verdad,_sin_cita:_TIENE_qu             PASA   (real='hallazgo' esperado='hallazgo')
+   B_estado_medible_de_antes,_sin_cita:_TIENE_que             PASA   (real='hallazgo' esperado='hallazgo')
+   B_cifra_de_antes_CON_su_cita:_tiene_que_pasar_             PASA   (real='ok' esperado='ok')
+   C_con_vocabulario_ancho_prosa_con_el_verbo_ser,_sin_cifra_ PASA   (real='hallazgo' esperado='hallazgo')
+   C_con_vocabulario_ancho_orden_con_infinitivo_que_la_lista_ PASA   (real='hallazgo' esperado='hallazgo')
+   C_con_vocabulario_ancho_orden_con_infinitivo,_segunda_form PASA   (real='hallazgo' esperado='hallazgo')
+   C_cifra_de_antes_de_verdad,_sin_cita:_TI_no_depende_del_es PASA   (real='hallazgo' esperado='hallazgo')
+   C_estado_medible_de_antes,_sin_cita:_TIE_no_depende_del_es PASA   (real='hallazgo' esperado='hallazgo')
+   C_cifra_de_antes_CON_su_cita:_tiene_que__no_depende_del_es PASA   (real='ok' esperado='ok')
+   D_el_reporte_164_baja_al_estrechar                         PASA   (real=True esperado=True)
+   D_el_reporte_164_no_esconde_nada                           PASA   (real=True esperado=True)
+   D_el_reporte_165_baja_al_estrechar                         PASA   (real=True esperado=True)
+   D_el_reporte_165_no_esconde_nada                           PASA   (real=True esperado=True)
+   E_el_caso_O_sigue_nombrado                                 PASA   (real=True esperado=True)
+   E_el_caso_N_limpio_sigue_pasando                           PASA   (real=True esperado=True)
+   E_el_caso_N_mutado_sigue_cayendo                           PASA   (real=True esperado=True)
+   E_y_el_mutado_trae_mas_hallazgos_que_el_limpio             PASA   (real=True esperado=True)
+   CIFRA casos: 23 | pasan: 23 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_el_universo_nombra_MEDIDA                                CAE   (esperado mutado=False)
+   A_el_universo_nombra_antes_de                              CAE   (esperado mutado=False)
+   A_el_universo_nombra_no_se_callan                          CAE   (esperado mutado=False)
+   B_prosa_con_el_verbo_ser,_sin_cifra_ni_estado              CAE   (esperado mutado='sin_medida_mutado')
+   B_orden_con_infinitivo_que_la_lista_vieja_no_t             CAE   (esperado mutado='excluida_mutado')
+   B_orden_con_infinitivo,_segunda_forma                      CAE   (esperado mutado='excluida_mutado')
+   B_cifra_de_antes_de_verdad,_sin_cita:_TIENE_qu             CAE   (esperado mutado='hallazgo_mutado')
+   B_estado_medible_de_antes,_sin_cita:_TIENE_que             CAE   (esperado mutado='hallazgo_mutado')
+   B_cifra_de_antes_CON_su_cita:_tiene_que_pasar_             CAE   (esperado mutado='ok_mutado')
+   C_con_vocabulario_ancho_prosa_con_el_verbo_ser,_sin_cifra_ CAE   (esperado mutado='hallazgo_mutado')
+   C_con_vocabulario_ancho_orden_con_infinitivo_que_la_lista_ CAE   (esperado mutado='hallazgo_mutado')
+   C_con_vocabulario_ancho_orden_con_infinitivo,_segunda_form CAE   (esperado mutado='hallazgo_mutado')
+   C_cifra_de_antes_de_verdad,_sin_cita:_TI_no_depende_del_es CAE   (esperado mutado='hallazgo_mutado')
+   C_estado_medible_de_antes,_sin_cita:_TIE_no_depende_del_es CAE   (esperado mutado='hallazgo_mutado')
+   C_cifra_de_antes_CON_su_cita:_tiene_que__no_depende_del_es CAE   (esperado mutado='ok_mutado')
+   D_el_reporte_164_baja_al_estrechar                         CAE   (esperado mutado=False)
+   D_el_reporte_164_no_esconde_nada                           CAE   (esperado mutado=False)
+   D_el_reporte_165_baja_al_estrechar                         CAE   (esperado mutado=False)
+   D_el_reporte_165_no_esconde_nada                           CAE   (esperado mutado=False)
+   E_el_caso_O_sigue_nombrado                                 CAE   (esperado mutado=False)
+   E_el_caso_N_limpio_sigue_pasando                           CAE   (esperado mutado=False)
+   E_el_caso_N_mutado_sigue_cayendo                           CAE   (esperado mutado=False)
+   E_y_el_mutado_trae_mas_hallazgos_que_el_limpio             CAE   (esperado mutado=False)
+   CIFRA casos que caen al mutar el esperado: 23 de 23
+
+H) Y SE COMPRUEBA QUE ESTA PRUEBA NO TOCO LA FUENTE
+   tallar_cifras_de_antes.py sigue byte a byte igual: True
+   los dos patrones estan restaurados: True
+
+VERDE: los 23 casos pasan tal cual y los 23 caen al mutar el esperado.

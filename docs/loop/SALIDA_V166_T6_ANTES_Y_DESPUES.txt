@@ -1,0 +1,89 @@
+==============================================================================
+VUELTA 166, TAREA 6: EL ANTES Y EL DESPUES SOBRE LOS DOS REPORTES
+==============================================================================
+
+EL ANTES sale de la copia sellada de la guarda tal como estaba al abrir
+esta vuelta: scripts/loop/_v166_tallador_cifras_vieja_copia.py, que es
+byte a byte la version de 00cfe6e0. EL DESPUES sale de la guarda
+estrechada. Los dos se corren AQUI, con el mismo comando y sobre los
+mismos dos ficheros. LA SECCION DE HALLAZGOS SE ACOTA CON UN ANCLA DE
+PRINCIPIO DE LINEA: la prosa de los reportes trae la palabra ROJO por
+dentro y un find suelto se comia filas de la seccion OK.
+
+ANTES (copia vieja)    reporte de la vuelta 164 (git show c59d111a)   exitcode 1, 36 hallazgo(s)
+ANTES (copia vieja)    REPORTE.md de la vuelta 165 (el de hoy)        exitcode 1, 27 hallazgo(s)
+DESPUES (estrechada)   reporte de la vuelta 164 (git show c59d111a)   exitcode 1, 16 hallazgo(s)
+DESPUES (estrechada)   REPORTE.md de la vuelta 165 (el de hoy)        exitcode 1, 10 hallazgo(s)
+
+LA TABLA, CONTADA DE ESAS CUATRO CORRIDAS:
+
+| fichero medido | ANTES | DESPUES | caen |
+|---|---:|---:|---:|
+| reporte de la vuelta 164 (git show c59d111a) | 36 | 16 | 20 |
+| REPORTE.md de la vuelta 165 (el de hoy) | 27 | 10 | 17 |
+
+EL EXITCODE NO BAJA Y SE DICE: los dos siguen en 1. El estrechamiento
+recorta el universo, NO apaga la guarda.
+
+==============================================================================
+LOS QUE SOBREVIVEN EN EL reporte de la vuelta 164 (git show c59d111a): 16, NOMBRADOS UNO POR UNO
+==============================================================================
+   CIFRA filas extraidas de la seccion de hallazgos: 16
+   1. linea 13, 0/1 citas (ninguna)
+      `LD-OPC05-005` pasa de `C` a `D` con correccion declarada.
+   2. linea 39, 0/1 citas (ninguna)
+      NO EXISTE REPORTE.md DE LA 163: el fichero sigue siendo el de la 162 (ac4af00d) y el ejecutor se corto a mitad de la TAREA 2, con SALIDA_V163_T2_BATERIA_NUEVA.txt de CERO BYTES y la bateria nueva sin commitear.
+   3. linea 97, 0/1 citas (ninguna)
+      seccion 4 del acta se registra igual que las mias, por letra del encargo.
+   4. linea 175, 0/1 citas (ninguna)
+      **ROJO 2, `vuelta157_tarea5c_mutacion_ruido.py`.** Su caso (D) era literalmente
+   5. linea 184, 0/1 citas (ninguna)
+      `--mutar` sigue cayendo con exit 1.
+   6. linea 199, 0/2 citas (ninguna)
+      tres siguen en **ROJO con `EXITCODE proceso: 1`** antes y despues.
+   7. linea 246, 0/1 citas (ninguna)
+      **este arnes sigue dando 24 de 24 VERDE sobre ese mismo arbol sucio**.
+   8. linea 311, 0/1 citas (ninguna)
+      TAREA 4, LA `LD-OPC05-005`: **PASA DE `C` A `D`, Y ES CAIDA DE CLASE MIA**
+   9. linea 321, 0/2 citas (ninguna)
+      DECIA ANTES DE HOY:** la vuelta 157 declaro, y la relectura conjunta de la 159 lo
+  10. linea 365, 0/1 citas (ninguna)
+      auditor de la vuelta 161 dio `C` sobre este par y coincidio; la de la 163 da `D`.
+  11. linea 374, 0/1 citas (ninguna)
+      1 nombrando `LD-OPC05-005` antes de que nada se publicara.**
+  12. linea 393, 0/1 citas (ninguna)
+      de veredictos comprueba ademas que el `sha256` de `dataset/` es **IDENTICO antes
+  13. linea 408, 1/2 citas (docs/loop/SALIDA_V164_T34_P52_ANTES.txt)
+      Antes y despues sellados en `docs/loop/SALIDA_V164_T34_P52_ANTES.txt` y
+  14. linea 534, 0/1 citas (ninguna)
+      cita dice *"clase D [ANTES C, RECLASIFICADA EN LA VUELTA 164]"*, que es cierto
+  15. linea 539, 0/1 citas (ninguna)
+      **PREGUNTA 2.** `node_modules/` del raiz sigue **sin versionar y sin ignorar**
+  16. linea 562, 0/1 citas (ninguna)
+      - **La `LD-OPC05-101` queda en `D` y la `LD-OPC05-005` en `D`.** Ninguna otra
+
+==============================================================================
+LOS QUE SOBREVIVEN EN EL REPORTE.md de la vuelta 165 (el de hoy): 10, NOMBRADOS UNO POR UNO
+==============================================================================
+   CIFRA filas extraidas de la seccion de hallazgos: 10
+   1. linea 37, 0/1 citas (ninguna)
+      MOTIVO ESTA FUERA DEL BUCLE.** De **80 y 1.030**, que era la cifra vieja de la
+   2. linea 162, 0/1 citas (ninguna)
+      La ultima fila es de ANTES de que la TAREA 6 anadiera
+   3. linea 240, 0/1 citas (ninguna)
+      primera pasada del clasificador dio **17 SUJETOS CONGELADOS**.
+   4. linea 330, 0/2 citas (ninguna)
+      Su ultima linea sigue diciendo *"la fase 08 NO se declara cerrada hoy"* y **era
+   5. linea 381, 0/1 citas (ninguna)
+      no se mueve: sigue en 2.117"*, con `fecha_corte` **2026-08-11**.
+   6. linea 424, 0/1 citas (ninguna)
+      **`OP-L-01` NO SE CIERRA Y SU ESTADO NO SE TOCA: sigue en `LISTA`.** **Cero nodos
+   7. linea 512, 0/2 citas (ninguna)
+      > `sigue`, `hoy`), asi que sobre un reporte de fase 04 marca prosa que no es
+   8. linea 527, 0/2 citas (ninguna)
+      - `RE SELLADO DECLARADO: SALIDA_V165_T2_CENSO_ANTES_DESPUES.txt numstat +48/-53, lineas CIFRA con valor cambiado: 8 (CIFRA de esas entradas VISIBLES al censo nuevo, CIFRA de esas entradas VISIBLES al censo viejo, CIFRA entradas en
+   9. linea 575, 0/1 citas (ninguna)
+      | suites de la web | 82 / 1.040 | **82 / 1.040** | se movio ANTES de esta vuelta, y fuera del bucle |
+  10. linea 588, 0/1 citas (ninguna)
+      **cambia una cifra publicada**: el censo pasa de ver 92 a ver 122 sobre el
+

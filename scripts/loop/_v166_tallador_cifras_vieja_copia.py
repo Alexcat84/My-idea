@@ -179,49 +179,6 @@ existio. Los DOS ficheros reales, commiteados, son
 `docs/loop/SALIDA_V113_TAREA2_5_MUTACION_X_DESPUES.txt` (el estado DESPUES).
 Se corrige aqui, de forma aditiva, sin borrar el texto viejo de arriba, y se
 deja dicho que se corrige.
-
---- TAREA 6 de la vuelta 166: LA GUARDA PROMETIA MAS DE LO QUE MEDIA (acta de
-la vuelta 165, adjudicacion 5.11, y PREGUNTA 3 del reporte de la 165) ---
-
-POR QUE NACE, CON LA MEDICION DELANTE. Esta guarda lleva al menos dos vueltas
-en exitcode 1 y nadie la miraba: medido el 4 sep 2026, da 36 hallazgos sobre
-el reporte de la vuelta 164 (sacado de c59d111a) y 27 sobre el REPORTE.md de
-la 165. La PREGUNTA 3 de la 165 ofrecia dos salidas y el acta 165 dejo dicho
-que SOLO UNA VALE: declararla ajena al reporte de fase 04 seria APAGAR UNA
-GUARDA POR INCOMODA, y eso no lo hace esta casa. Se estrecha EN LA FUENTE.
-
-QUE LE PASABA, DICHO EXACTO: su frase promete mas de lo que su patron mide.
-Su nombre dice CIFRAS DE ANTES, pero su vara marcaba CUALQUIER oracion con
-una palabra corriente (antes, era, sigue, pasa de) y le exigia una cita de
-fichero aunque la oracion no publicara ninguna cifra ni ningun estado. "Su
-caso (D) era literalmente" y "que declararla era lectura de mi cabeza" no son
-cifras de antes: son prosa espanola con el verbo ser.
-
-(6.1) EL UNIVERSO SE DECLARA, Y ES LA MITAD QUE LA 5.11 PEDIA. Esta guarda
-mide UNA cosa: ORACIONES QUE AFIRMAN UN ESTADO ANTERIOR O SU PERMANENCIA Y
-QUE ADEMAS PUBLICAN UNA MEDIDA (un numero, o uno de los estados medibles de
-la campana: VERDE, ROJO, EXITCODE, exit, LISTA, HECHA, CUMPLIDO). Una oracion
-marcada SIN medida NO entra en la vara, porque no hay cifra de antes que
-citar. NO SE ESCONDEN: se imprimen una por una bajo MARCADAS SIN MEDIDA con
-su cuenta, igual que las exclusiones de orden, porque una exclusion callada
-es un boquete (letra del encargo de la vuelta 110).
-
-(6.2) EL USO DE ORDEN DEJA DE SER UNA ENUMERACION, Y ES LA MISMA CURA QUE LA
-VUELTA 113 LE DIO A LAS MARCAS. EXCLUSIONES_ORDEN era una lista de nueve
-frases; "antes de saber", "antes de decir" y "antes de aplicar" no estaban y
-por eso disparaban. Se anade la CONSTRUCCION: "antes de" seguido de un
-INFINITIVO (con o sin enclitico) es un uso de ORDEN por construccion, no por
-enumeracion. La lista vieja se queda entera y no se borra: sigue cubriendo
-las formas que no son infinitivo puro ("antes de nada", "antes de la 1.a
-operacion").
-
-LO QUE ESTE ESTRECHAMIENTO NO HACE: no toca MARCAS, no toca la mecanica de
-las citas, no toca la regla de las dos citas cuando la oracion habla de los
-dos lados, y NO baja el exitcode. La guarda sigue dando ROJO cuando queda un
-hallazgo, y los que queden se nombran uno por uno.
-
-SU CASO POSITIVO POR MUTACION es scripts/loop/vuelta166_tarea6_mutacion_guarda.py:
-el caso tiene que CAER si alguien devuelve el vocabulario a su forma ancha.
 """
 import argparse
 import glob
@@ -255,33 +212,6 @@ EXCLUSIONES_ORDEN = [
 ]
 
 INDICIOS_DEL_OTRO_LADO = ["despues", "después", "hoy", "ahora"]
-
-# (6.2, vuelta 166) EL USO DE ORDEN, POR CONSTRUCCION Y NO POR ENUMERACION.
-# "antes de <infinitivo>" es secuencia, no afirmacion de estado. La lista
-# EXCLUSIONES_ORDEN de arriba se queda ENTERA y no se borra: cubre las formas
-# que NO son infinitivo puro ("antes de nada", "antes de la 1.a operacion").
-_RE_ORDEN_CONSTRUCCION = re.compile(
-    r"\bantes de\s+(?:no\s+)?[a-z\u00e1\u00e9\u00ed\u00f3\u00fa]+"
-    r"(?:ar|er|ir)(?:la|lo|se|las|los)?\b", re.IGNORECASE)
-
-# (6.1, vuelta 166) EL UNIVERSO: esta guarda mide CIFRAS de antes. Una oracion
-# marcada entra en la vara SOLO si publica una MEDIDA: un digito, o uno de los
-# estados medibles de la campana. Sin medida no hay cifra de antes que citar.
-ESTADOS_MEDIBLES = ["VERDE", "ROJO", "EXITCODE", "exit", "LISTA", "HECHA",
-                    "CUMPLIDO"]
-_RE_MEDIDA = re.compile(r"\d|\b(" + "|".join(ESTADOS_MEDIBLES) + r")\b")
-
-# LA FRASE DICE A QUE UNIVERSO SE REFIERE (la otra mitad de la 5.11): se
-# imprime en la CABECERA DE TODA CORRIDA, para que nadie tenga que deducirlo
-# leyendo el codigo.
-UNIVERSO = (
-    "UNIVERSO DE ESTA GUARDA, DICHO Y NO DEDUCIDO: mide LAS ORACIONES QUE\n"
-    "AFIRMAN UN ESTADO ANTERIOR O SU PERMANENCIA Y QUE ADEMAS PUBLICAN UNA\n"
-    "MEDIDA (un numero, o uno de estos estados medibles: %s).\n"
-    "NO mide la prosa que usa 'antes', 'era' o 'sigue' SIN publicar cifra ni\n"
-    "estado: esa no es una cifra de antes. NO mide tampoco 'antes de\n"
-    "<infinitivo>', que es orden y no estado. Las dos poblaciones se\n"
-    "IMPRIMEN aparte con su cuenta, no se callan." % ", ".join(ESTADOS_MEDIBLES))
 
 _RE_MARCAS = re.compile(r"\b(" + "|".join(re.escape(m) for m in
                         sorted(MARCAS, key=len, reverse=True)) + r")\b", re.IGNORECASE)
@@ -352,19 +282,6 @@ def clasificar(oracion):
         if not _RE_MARCAS.search(resto):
             return {"tipo": "excluida", "motivo": exc.group(1)}
 
-    # (6.2, vuelta 166) LA MISMA REGLA, POR CONSTRUCCION. Se quitan TODAS las
-    # apariciones de "antes de <infinitivo>" y se mira si al resto le sobra
-    # alguna marca: si no le sobra, la oracion era secuencia y no estado.
-    con = _RE_ORDEN_CONSTRUCCION.search(oracion)
-    if con and not _RE_MARCAS.search(_RE_ORDEN_CONSTRUCCION.sub(" ", oracion)):
-        return {"tipo": "excluida",
-                "motivo": "construccion de orden: %s" % con.group(0)}
-
-    # (6.1, vuelta 166) EL UNIVERSO. Sin medida no hay cifra de antes que
-    # citar, y se declara aparte en vez de callarse.
-    if not _RE_MEDIDA.search(oracion):
-        return {"tipo": "sin_medida"}
-
     citas = []
     for m in _RE_CITA.finditer(oracion):
         nombre = m.group(1)
@@ -386,7 +303,6 @@ def verificar(ruta_fichero):
     excluidas = []
     hallazgos = []
     ok = []
-    sin_medida = []
     for i, linea in enumerate(lineas, start=1):
         for num_linea, oracion in oraciones_de_la_linea(i, linea):
             veredicto = clasificar(oracion)
@@ -394,13 +310,11 @@ def verificar(ruta_fichero):
                 continue
             if veredicto["tipo"] == "excluida":
                 excluidas.append((num_linea, oracion, veredicto["motivo"]))
-            elif veredicto["tipo"] == "sin_medida":
-                sin_medida.append((num_linea, oracion))
             elif veredicto["tipo"] == "hallazgo":
                 hallazgos.append((num_linea, oracion, veredicto["citas"], veredicto["requeridas"]))
             else:
                 ok.append((num_linea, oracion, veredicto["citas"], veredicto["requeridas"]))
-    return excluidas, hallazgos, ok, sin_medida
+    return excluidas, hallazgos, ok
 
 
 def main():
@@ -412,16 +326,8 @@ def main():
         print("ROJO: no existe %s" % a.fichero)
         return 1
 
-    excluidas, hallazgos, ok, sin_medida = verificar(a.fichero)
+    excluidas, hallazgos, ok = verificar(a.fichero)
 
-    print(UNIVERSO)
-    print()
-    print("MARCADAS SIN MEDIDA (%d), fuera del universo y NO escondidas "
-          "(6.1, vuelta 166):" % len(sin_medida))
-    for num_linea, oracion in sin_medida:
-        print("   linea %d: %s" % (num_linea, oracion))
-
-    print()
     print("EXCLUSIONES (%d), letra del encargo 'no se esconden':" % len(excluidas))
     for num_linea, oracion, motivo in excluidas:
         print("   linea %d, motivo '%s': %s" % (num_linea, motivo, oracion))
