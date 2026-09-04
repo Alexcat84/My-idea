@@ -1,0 +1,402 @@
+==============================================================================
+VUELTA 165, TAREA 4: EL SUJETO DE CADA UNO DE LOS 41, UNO POR UNO
+==============================================================================
+
+A) EL UNIVERSO, COMPUTADO CON EL PATRON VIEJO Y NO TECLEADO
+   CIFRA arneses a medir: 41
+
+B) LA TABLA DE REGLAS, PUBLICADA ENTERA ANTES DE APLICARLA
+   ARTEFACTOS VIVOS (10):
+      docs/loop/REPORTE.md                           se SOBRESCRIBE entero cada vuelta (EJECUTOR.md 7). Es el sujeto que hizo caer a vuelta144_2d_mutacion_cobertura.py en la vuelta 145 y el ejemplar que la propia regla del sujeto congelado cita
+      docs/loop/ACTA_AUDITOR.md                      el auditor le ANADE un acta por vuelta; sus numeros de linea se mueven
+      docs/PENDIENTES.md                             la serie de registros le anade una entrada por vuelta
+      docs/plan/OPERACIONES.jsonl                    las operaciones cambian de estado segun la campana avanza
+      docs/plan/CORRECCIONES_A_APLICAR.md            sede alterna de la serie de registros; crece
+      docs/plan/PASO_NODO_CALIBRADO.jsonl            se recalibra contra el grafo
+      docs/plan/INTRA_DOMINIO_VEREDICTOS.jsonl       el cribado y las lecturas dirigidas le escriben
+      dataset/metadata/master_graph.json             ES EL GRAFO VIVO. Es exactamente el sujeto que la regla excluye, y la adjudicacion 6.5 del acta 164 lo nombra asi
+      dataset/nodos                                  los nodos del grafo vivo
+      scripts/loop/verificar_mutaciones_viejas.py    la nomina de la bateria CRECE cada vuelta: quien la mida tiene sujeto vivo
+   ARTEFACTOS CONGELADOS (5):
+      SUJETO_FIJO_                                   la convencion de la casa para una copia sellada que nadie reescribe
+      _vieja_copia                                   copia congelada de una version anterior de un instrumento, guardada para poder correr la vieja contra la nueva
+      _viejo_copia                                   misma convencion, en masculino
+      tempfile                                       el arnes FABRICA su sujeto en un temporal y lo retira (P.16): no puede moverse debajo de nadie
+      mkdtemp                                        idem
+   git: `show <ref>` congela; `rev-parse`, `status`, `diff` y
+   `ls-files` leen el arbol vivo.
+   listar scripts/loop/ o docs/loop/ es sujeto vivo: crecen cada vuelta.
+
+C) EL ARBOL ANTES DE CORRER NADA
+   CIFRA lineas de git status --porcelain: 3
+       M dataset/metadata/master_graph.json
+      ?? docs/loop/SALIDA_V165_T4_SUJETO_41.txt
+      ?? node_modules/
+
+D) LA MEDICION, UNO POR UNO, CON SU EVIDENCIA
+    1. vuelta102_tarea1_prueba_mutacion_apertura.py
+       corrida de HOY: exit 1, NO MORDIO, 20.2s
+       primera linea util: --- CASO (a): --vuelta 101 sobre el repo real, DESPUES del arreglo ---
+       SENAL VIVA      [verificar_apertura_sellada.py] linea 37: GUARDA = os.path.join(RAIZ, "scripts", "loop", "verificar_apertura_sellada.py")
+       SENAL CONGELADA [SALIDA_V5_TARDIO_APERTURA.txt] linea 117: ok = codigo == 1 and salida.startswith("ROJO") and "SALIDA_V5_TARDIO_APERTURA.txt" in salida \
+       SENAL CONGELADA [SALIDA_V5_TAREA_X_MUTACION_APERTURA.txt] linea 118: and "SALIDA_V5_TAREA_X_MUTACION_APERTURA.txt" not in salida
+       SENAL CONGELADA [SALIDA_V5_HEAD_APERTURA.txt] linea 98: with open(os.path.join(tmp, "docs", "loop", "SALIDA_V5_HEAD_APERTURA.txt"), "w") as f:
+       SENAL CONGELADA [tempfile] linea 34: import tempfile
+       SENAL CONGELADA [mkdtemp] linea 78: tmp = tempfile.mkdtemp(prefix="v102_tarea13_")
+       SIN CLASIFICAR   [README_ACTA.txt] linea 91: with open(os.path.join(tmp, "README_ACTA.txt"), "w") as f:
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+    2. vuelta109_tarea2_4_prueba_mutacion.py
+       corrida de HOY: exit 0, OK, 12.3s
+       SENAL CONGELADA [SALIDA_V107_TAREA4_3_TRAMO3_TRES_VIAS.md] linea 42: overrides = {"SALIDA_V107_TAREA4_3_TRAMO3_TRES_VIAS.md": RUTA_MUTADA}
+       SIN CLASIFICAR   [TRAMO3_SIN_DECLARACION_123.md] linea 24: RUTA_MUTADA = os.path.join(RAIZ, "docs", "loop", "_v109_mut", "TRAMO3_SIN_DECLARACION_123.md")
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y todo artefacto que toca es congelado: SALIDA_V107_TAREA4_3_TRAMO3_TRES_VIAS.md
+    3. vuelta110_tarea2_prueba_mutacion.py
+       corrida de HOY: exit 1, NO MORDIO, 6.1s
+       primera linea util: MUTACION: SALIDA_V108_TAREA5_2_TRAMO2_TRES_VIAS.md sustituido por C:\Users\AlexDesk\Documents\I have
+       SENAL CONGELADA [SALIDA_V108_TAREA5_2_TRAMO2_TRES_VIAS.md] linea 34: overrides = {"SALIDA_V108_TAREA5_2_TRAMO2_TRES_VIAS.md": ruta_mutada}
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+    4. vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py
+       corrida de HOY: exit 0, OK, 0.1s
+       NO TOCA NINGUN ARTEFACTO DEL REPO
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y NO TOCA NINGUN ARTEFACTO del repo: su sujeto lo fabrica el o vive en memoria, asi que no hay nada que se le pueda mover debajo. Es el caso mas congelado que hay
+    5. vuelta113_tarea2_mutacion_tsc.py
+       corrida de HOY: exit 0, OK, 0.1s
+       NO TOCA NINGUN ARTEFACTO DEL REPO
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y NO TOCA NINGUN ARTEFACTO del repo: su sujeto lo fabrica el o vive en memoria, asi que no hay nada que se le pueda mover debajo. Es el caso mas congelado que hay
+    6. vuelta115_tarea2_4_mutacion_z.py
+       corrida de HOY: exit 0, OK, 159.2s
+       SENAL CONGELADA [vuelta115_guardas_cierre.py] linea 38: ORIGINAL = os.path.join(RAIZ, "scripts", "loop", "vuelta115_guardas_cierre.py")
+       SENAL CONGELADA [_v115_mut_z_copia.py] linea 39: COPIA = os.path.join(RAIZ, "scripts", "loop", "_v115_mut_z_copia.py")
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y todo artefacto que toca es congelado: _v115_mut_z_copia.py, vuelta115_guardas_cierre.py
+    7. vuelta116_tarea2_3_mutacion_aa.py
+       corrida de HOY: exit 0, OK, 158.7s
+       SENAL CONGELADA [vuelta116_guardas_cierre.py] linea 46: ORIGINAL = os.path.join(RAIZ, "scripts", "loop", "vuelta116_guardas_cierre.py")
+       SENAL CONGELADA [_v116_mut_aa_copia.py] linea 47: COPIA = os.path.join(RAIZ, "scripts", "loop", "_v116_mut_aa_copia.py")
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y todo artefacto que toca es congelado: _v116_mut_aa_copia.py, vuelta116_guardas_cierre.py
+    8. vuelta117_tarea2_3_mutacion_bb.py
+       corrida de HOY: exit 0, OK, 158.7s
+       SENAL CONGELADA [vuelta117_guardas_cierre.py] linea 33: ORIGINAL = os.path.join(RAIZ, "scripts", "loop", "vuelta117_guardas_cierre.py")
+       SENAL CONGELADA [_v117_mut_bb_copia.py] linea 34: COPIA = os.path.join(RAIZ, "scripts", "loop", "_v117_mut_bb_copia.py")
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y todo artefacto que toca es congelado: _v117_mut_bb_copia.py, vuelta117_guardas_cierre.py
+    9. vuelta118_tarea2_5_mutacion_cc.py
+       corrida de HOY: exit 0, OK, 0.2s
+       SENAL CONGELADA [vuelta118_tarea2_1_censo_tres_superficies_reparado.py] linea 25: ORIGINAL = os.path.join(RAIZ, "scripts", "loop", "vuelta118_tarea2_1_censo_tres_superficies_reparado.py")
+       SENAL CONGELADA [_v118_mut_cc_censo1_sin_guarda.py] linea 26: MUTADO = os.path.join(RAIZ, "scripts", "loop", "_v118_mut_cc_censo1_sin_guarda.py")
+       SENAL CONGELADA [SALIDA_V118_TAREA2_5_MUTACION_CC_ANTES.txt] linea 66: ruta_antes = os.path.join(RAIZ, "docs", "loop", "SALIDA_V118_TAREA2_5_MUTACION_CC_ANTES.txt")
+       SENAL CONGELADA [SALIDA_V118_TAREA2_5_MUTACION_CC_DESPUES.txt] linea 67: ruta_despues = os.path.join(RAIZ, "docs", "loop", "SALIDA_V118_TAREA2_5_MUTACION_CC_DESPUES.txt")
+       SENAL CONGELADA [SALIDA_V118_TAREA2_5_MUTACION_CC_VEREDICTO.txt] linea 68: ruta_veredicto = os.path.join(RAIZ, "docs", "loop", "SALIDA_V118_TAREA2_5_MUTACION_CC_VEREDICTO.txt")
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y todo artefacto que toca es congelado: SALIDA_V118_TAREA2_5_MUTACION_CC_ANTES.txt, SALIDA_V118_TAREA2_5_MUTACION_CC_DESPUES.txt, SALIDA_V118_TAREA2_5_MUTACION_CC_VEREDICTO.txt, _v118_mut_cc_censo1_sin_guarda.py, vuelta118_tarea2_1_censo_tres_superficies_reparado.py
+   10. vuelta118_tarea2_6_mutacion_dd.py
+       corrida de HOY: exit 0, OK, 0.2s
+       SENAL CONGELADA [vuelta118_tarea2_2_censo_ejecucion_fase04_reparado.py] linea 27: ORIGINAL = os.path.join(RAIZ, "scripts", "loop", "vuelta118_tarea2_2_censo_ejecucion_fase04_reparado.py")
+       SENAL CONGELADA [_v118_mut_dd_censo2_sin_cierre.py] linea 28: MUTADO = os.path.join(RAIZ, "scripts", "loop", "_v118_mut_dd_censo2_sin_cierre.py")
+       SENAL CONGELADA [SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt] linea 69: ruta_antes = os.path.join(RAIZ, "docs", "loop", "SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt")
+       SENAL CONGELADA [SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt] linea 70: ruta_despues = os.path.join(RAIZ, "docs", "loop", "SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt")
+       SENAL CONGELADA [SALIDA_V118_TAREA2_6_MUTACION_DD_VEREDICTO.txt] linea 71: ruta_veredicto = os.path.join(RAIZ, "docs", "loop", "SALIDA_V118_TAREA2_6_MUTACION_DD_VEREDICTO.txt")
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y todo artefacto que toca es congelado: SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt, SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt, SALIDA_V118_TAREA2_6_MUTACION_DD_VEREDICTO.txt, _v118_mut_dd_censo2_sin_cierre.py, vuelta118_tarea2_2_censo_ejecucion_fase04_reparado.py
+   11. vuelta122_tarea1e_mutacion_citas.py
+       corrida de HOY: exit 0, OK, 0.2s
+       SENAL VIVA      [ed916471:docs/loop/REPORTE.md] linea 26: r = subprocess.run(["git", "show", "ed916471:docs/loop/REPORTE.md"], cwd=RAIZ,
+       SENAL VIVA      [verificar_citas_del_reporte.py] linea 47: "verificar_citas_del_reporte.py"), "--reporte", ruta],
+       SENAL VIVA      [git sobre el arbol de trabajo] linea 32: original = ("`git status\n--porcelain` vacio tras el rojo (sin escritura nueva).")
+       SENAL CONGELADA [tempfile] linea 20: import tempfile
+       SENAL CONGELADA [git show sobre una ref] linea 26: r = subprocess.run(["git", "show", "ed916471:docs/loop/REPORTE.md"], cwd=RAIZ,
+       SIN CLASIFICAR   [REPORTE_121_MUTADO_TAREA1E.md] linea 43: ruta = os.path.join(tempfile.gettempdir(), "REPORTE_121_MUTADO_TAREA1E.md")
+       VEREDICTO: SUJETO VIVO . su codigo toca 3 artefacto(s) vivo(s): ed916471:docs/loop/REPORTE.md, git sobre el arbol de trabajo, verificar_citas_del_reporte.py
+   12. vuelta123_tarea1e_mutacion_fila_tabla.py
+       corrida de HOY: exit 0, OK, 0.1s
+       SENAL VIVA      [128d0e5b:docs/loop/REPORTE.md] linea 35: r = subprocess.run(["git", "show", "128d0e5b:docs/loop/REPORTE.md"], cwd=RAIZ,
+       SENAL VIVA      [verificar_citas_del_reporte.py] linea 51: "verificar_citas_del_reporte.py"), "--reporte", ruta],
+       SENAL CONGELADA [tempfile] linea 28: import tempfile
+       SENAL CONGELADA [git show sobre una ref] linea 35: r = subprocess.run(["git", "show", "128d0e5b:docs/loop/REPORTE.md"], cwd=RAIZ,
+       SIN CLASIFICAR   [REPORTE_122_MUTADO_TAREA1E_FILA.md] linea 47: ruta = os.path.join(tempfile.gettempdir(), "REPORTE_122_MUTADO_TAREA1E_FILA.md")
+       VEREDICTO: SUJETO VIVO . su codigo toca 2 artefacto(s) vivo(s): 128d0e5b:docs/loop/REPORTE.md, verificar_citas_del_reporte.py
+   13. vuelta133_tarea2c_mutaciones_identidad.py
+       corrida de HOY: exit 0, OK, 25.1s
+       SENAL VIVA      [tallar_identidad_reporte.py] linea 26: TALLADOR = os.path.join(RAIZ, "scripts", "loop", "tallar_identidad_reporte.py")
+       SENAL CONGELADA [tempfile] linea 23: import tempfile
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): tallar_identidad_reporte.py
+   14. vuelta134_2d_mutacion_1.py
+       corrida de HOY: exit 1, ANCLA PERDIDA, 0.1s
+       primera linea util: ROJO PREVIO: no encuentro 'cifras del plan (0 pares)' en el reporte real, cambia el anclaje.
+       SENAL VIVA      [REPORTE.md] linea 19: REPORTE_REAL = os.path.join(RAIZ, "docs", "loop", "REPORTE.md")
+       SENAL VIVA      [verificar_cifras_del_reporte.py] linea 20: GUARDA = os.path.join(RAIZ, "scripts", "loop", "verificar_cifras_del_reporte.py")
+       SENAL CONGELADA [tempfile] linea 16: import tempfile
+       VEREDICTO: SUJETO VIVO . sale ANCLA PERDIDA HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   15. vuelta134_2d_mutacion_2.py
+       corrida de HOY: exit 1, ANCLA PERDIDA, 0.0s
+       primera linea util: ROJO PREVIO: no encuentro la cita a borrar en el reporte real, cambia el anclaje.
+       SENAL VIVA      [REPORTE.md] linea 22: REPORTE_REAL = os.path.join(RAIZ, "docs", "loop", "REPORTE.md")
+       SENAL VIVA      [verificar_cifras_del_reporte.py] linea 23: GUARDA = os.path.join(RAIZ, "scripts", "loop", "verificar_cifras_del_reporte.py")
+       SENAL CONGELADA [tempfile] linea 19: import tempfile
+       VEREDICTO: SUJETO VIVO . sale ANCLA PERDIDA HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   16. vuelta134_2f_mutacion.py
+       corrida de HOY: exit 1, ANCLA PERDIDA, 0.0s
+       primera linea util: ROJO PREVIO: no encuentro el ancla en la tabla real, cambia el anclaje.
+       SENAL VIVA      [verificar_cabecera_mapeo.py] linea 24: GUARDA = os.path.join(RAIZ, "scripts", "loop", "verificar_cabecera_mapeo.py")
+       SENAL CONGELADA [tempfile] linea 20: import tempfile
+       SIN CLASIFICAR   [OP_S_11_MAPEO_PROPUESTO.md] linea 23: TABLA_REAL = os.path.join(RAIZ, "docs", "plan", "OP_S_11_MAPEO_PROPUESTO.md")
+       VEREDICTO: SUJETO VIVO . sale ANCLA PERDIDA HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   17. vuelta135_4c_mutacion.py
+       corrida de HOY: exit 0, OK, 5.2s
+       SENAL VIVA      [verificar_cabecera_mapeo.py] linea 29: GUARDA = os.path.join(RAIZ, "scripts", "loop", "verificar_cabecera_mapeo.py")
+       SENAL CONGELADA [SALIDA_V135_4C_MUTACION.txt] linea 30: SALIDA = os.path.join(RAIZ, "docs", "loop", "SALIDA_V135_4C_MUTACION.txt")
+       SENAL CONGELADA [tempfile] linea 25: import tempfile
+       SIN CLASIFICAR   [OP_S_11_MAPEO_PROPUESTO.md] linea 28: TABLA_REAL = os.path.join(RAIZ, "docs", "plan", "OP_S_11_MAPEO_PROPUESTO.md")
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): verificar_cabecera_mapeo.py
+   18. vuelta137_1a_mutacion.py
+       corrida de HOY: exit 0, OK, 14.7s
+       SENAL VIVA      [verificar_cabecera_mapeo.py] linea 41: GUARDA = os.path.join(LOOP, "verificar_cabecera_mapeo.py")
+       SENAL CONGELADA [vuelta135_tabla_mapeo_propuesto.py] linea 42: RECOMPUTO = os.path.join(LOOP, "vuelta135_tabla_mapeo_propuesto.py")
+       SENAL CONGELADA [SALIDA_V135_4B_PELDANOS.txt] linea 44: PELDANOS = os.path.join(RAIZ, "docs", "loop", "SALIDA_V135_4B_PELDANOS.txt")
+       SENAL CONGELADA [SALIDA_V137_1A_MUTACION.txt] linea 45: SALIDA = os.path.join(RAIZ, "docs", "loop", "SALIDA_V137_1A_MUTACION.txt")
+       SENAL CONGELADA [tempfile] linea 37: import tempfile
+       SIN CLASIFICAR   [OP_S_11_MAPEO_PROPUESTO.md] linea 43: TABLA_REAL = os.path.join(RAIZ, "docs", "plan", "OP_S_11_MAPEO_PROPUESTO.md")
+       SIN CLASIFICAR   [docs/plan/OP_S_11_MAPEO_PROPUESTO.md] linea 127: subprocess.run(["git", "checkout", "--", "docs/plan/OP_S_11_MAPEO_PROPUESTO.md"], cwd=RAIZ)
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): verificar_cabecera_mapeo.py
+   19. vuelta137_1c_mutacion.py
+       corrida de HOY: exit 1, NO MORDIO, 1.6s
+       primera linea util: PRUEBAS POR MUTACION DE LAS DOS REPARACIONES 1.c (vuelta 137)
+       SENAL VIVA      [verificar_cifras_del_reporte.py] linea 45: GUARDA = os.path.join(RAIZ, "scripts", "loop", "verificar_cifras_del_reporte.py")
+       SENAL VIVA      [%s:scripts/loop/verificar_cifras_del_reporte.py] linea 117: rv = subprocess.run(["git", "show", "%s:scripts/loop/verificar_cifras_del_reporte.py"
+       SENAL CONGELADA [SALIDA_V135_4B_PELDANOS.txt] linea 51: PROPIO = "SALIDA_V135_4B_PELDANOS.txt"
+       SENAL CONGELADA [SALIDA_V133_2E_MUTACION.txt] linea 52: VECINO = "SALIDA_V133_2E_MUTACION.txt"
+       SENAL CONGELADA [SALIDA_V137_1C_MUTACION.txt] linea 46: SALIDA = os.path.join(LOOP, "SALIDA_V137_1C_MUTACION.txt")
+       SENAL CONGELADA [vuelta133_tarea2e_mutacion_cifras.py] linea 55: "vuelta133_tarea2e_mutacion_cifras.py",
+       SENAL CONGELADA [vuelta135_2e_mutacion_1.py] linea 56: "vuelta135_2e_mutacion_1.py",
+       SENAL CONGELADA [vuelta135_2e_mutacion_2.py] linea 57: "vuelta135_2e_mutacion_2.py",
+       SENAL CONGELADA [vuelta135_2e_mutacion_3.py] linea 58: "vuelta135_2e_mutacion_3.py",
+       SENAL CONGELADA [tempfile] linea 41: import tempfile
+       SENAL CONGELADA [git show sobre una ref] linea 117: rv = subprocess.run(["git", "show", "%s:scripts/loop/verificar_cifras_del_reporte.py"
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   20. vuelta138_2a_mutaciones.py
+       corrida de HOY: exit 0, OK, 0.2s
+       SENAL CONGELADA [tempfile] linea 54: import tempfile
+       SENAL CONGELADA [mkdtemp] linea 218: tmp = tempfile.mkdtemp(prefix="banco_v138_2a_")
+       SIN CLASIFICAR   [OPERACIONES_FIXTURE.jsonl] linea 129: operaciones = os.path.join(tmp, "OPERACIONES_FIXTURE.jsonl")
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y todo artefacto que toca es congelado: mkdtemp, tempfile
+   21. vuelta139_2a_mutaciones.py
+       corrida de HOY: exit 0, OK, 0.2s
+       SENAL CONGELADA [tempfile] linea 72: import tempfile
+       SENAL CONGELADA [mkdtemp] linea 307: tmp = tempfile.mkdtemp(prefix="banco_v139_2a_")
+       SIN CLASIFICAR   [OPERACIONES_FIXTURE.jsonl] linea 159: operaciones = os.path.join(tmp, "OPERACIONES_FIXTURE.jsonl")
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y todo artefacto que toca es congelado: mkdtemp, tempfile
+   22. vuelta140_2b_mutaciones.py
+       corrida de HOY: exit 0, OK, 0.3s
+       SENAL CONGELADA [SALIDA_V999_MUTACION_ESTADO_LIMPIO.txt] linea 54: F_ESTADO_LIMPIO = "SALIDA_V999_MUTACION_ESTADO_LIMPIO.txt"
+       SENAL CONGELADA [SALIDA_V999_MUTACION_ESTADO_SUCIO.txt] linea 55: F_ESTADO_SUCIO = "SALIDA_V999_MUTACION_ESTADO_SUCIO.txt"
+       SIN CLASIFICAR   [_v140_2b_reporte_fabricado.md] linea 56: F_REPORTE = "_v140_2b_reporte_fabricado.md"
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y todo artefacto que toca es congelado: SALIDA_V999_MUTACION_ESTADO_LIMPIO.txt, SALIDA_V999_MUTACION_ESTADO_SUCIO.txt
+   23. vuelta140_2c_mutacion_ancla.py
+       corrida de HOY: exit 0, OK, 1.0s
+       SENAL CONGELADA [vuelta139_2b_mutaciones.py] linea 38: ORIGINAL = os.path.join(LOOP_SCRIPTS, "vuelta139_2b_mutaciones.py")
+       SENAL CONGELADA [_v140_copia_mutacion_ancla.py] linea 39: COPIA = os.path.join(LOOP_SCRIPTS, "_v140_copia_mutacion_ancla.py")
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y todo artefacto que toca es congelado: _v140_copia_mutacion_ancla.py, vuelta139_2b_mutaciones.py
+   24. vuelta141_2d_mutacion_commits.py
+       corrida de HOY: exit 1, NO MORDIO, 0.2s
+       primera linea util: Traceback (most recent call last):
+       SENAL VIVA      [tallar_cabecera_reporte.py] linea 64: os.path.join(RAIZ, "scripts", "loop", "tallar_cabecera_reporte.py"),
+       SENAL CONGELADA [tempfile] linea 35: import tempfile
+       SENAL CONGELADA [mkdtemp] linea 89: tmp = tempfile.mkdtemp(prefix="v141_2d_")
+       SIN CLASIFICAR   [REPORTE_DE_MENTIRA.md] linea 91: ruta = os.path.join(tmp, "REPORTE_DE_MENTIRA.md")
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   25. vuelta142_2a_mutaciones.py
+       corrida de HOY: exit 0, OK, 0.6s
+       SENAL VIVA      [verificar_cifras_del_reporte.py] linea 98: "verificar_cifras_del_reporte.py"),
+       SENAL CONGELADA [SALIDA_V142_1B_DESGLOSE_DIRECCIONES.txt] linea 46: FICHERO_CITADO = "SALIDA_V142_1B_DESGLOSE_DIRECCIONES.txt"
+       SIN CLASIFICAR   [_prueba_v142_2a_reporte.md] linea 52: PRUEBA_A = os.path.join(LOOP, "_prueba_v142_2a_reporte.md")
+       SIN CLASIFICAR   [_prueba_v142_2a_cobertura.md] linea 53: PRUEBA_B = os.path.join(LOOP, "_prueba_v142_2a_cobertura.md")
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): verificar_cifras_del_reporte.py
+   26. vuelta142_2b_mutacion_commits.py
+       corrida de HOY: exit 0, OK, 4.2s
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py] linea 51: REL_TALLADOR = "scripts/loop/tallar_cabecera_reporte.py"
+       SENAL VIVA      [docs/loop/REPORTE.md] linea 52: REL_REPORTE = "docs/loop/REPORTE.md"
+       SENAL VIVA      [tallar_cabecera_reporte.py] linea 50: TALLADOR = os.path.join(AQUI, "tallar_cabecera_reporte.py")
+       SENAL CONGELADA [git show sobre una ref] linea 66: r = subprocess.run(["git", "show", "%s:%s" % (ref, rel)], cwd=RAIZ, capture_output=True)
+       SIN CLASIFICAR   [docs/loop/SALIDA_V%d_HEAD_CIERRE.txt] linea 53: REL_SELLO = "docs/loop/SALIDA_V%d_HEAD_CIERRE.txt" % VUELTA
+       SIN CLASIFICAR   [_prueba_v142_2b_reporte141.md] linea 55: SUJETO = os.path.join(LOOP, "_prueba_v142_2b_reporte141.md")
+       SIN CLASIFICAR   [_prueba_v142_2b_reporte141_mutado.md] linea 56: SUJETO_MUTADO = os.path.join(LOOP, "_prueba_v142_2b_reporte141_mutado.md")
+       SIN CLASIFICAR   [_prueba_v142_2b_tallador_viejo.py] linea 57: TALLADOR_VIEJO = os.path.join(AQUI, "_prueba_v142_2b_tallador_viejo.py")
+       VEREDICTO: SUJETO VIVO . su codigo toca 3 artefacto(s) vivo(s): docs/loop/REPORTE.md, scripts/loop/tallar_cabecera_reporte.py, tallar_cabecera_reporte.py
+   27. vuelta142_2c_mutaciones.py
+       corrida de HOY: exit 0, OK, 1.1s
+       SENAL VIVA      [git sobre el arbol de trabajo] linea 257: sucio = subprocess.run(["git", "status", "--porcelain", "--", "dataset/", "docs/plan/"],
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): git sobre el arbol de trabajo
+   28. vuelta142_2d_mutacion_bateria.py
+       corrida de HOY: exit 0, OK, 507.6s
+       SENAL VIVA      [verificar_mutaciones_viejas.py] linea 93: fuente = io.open(os.path.join(AQUI, "verificar_mutaciones_viejas.py"),
+       SIN CLASIFICAR   [_prueba_v142_2d_bateria.py] linea 46: COPIA = os.path.join(AQUI, "_prueba_v142_2d_bateria.py")
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): verificar_mutaciones_viejas.py
+   29. vuelta146_3c_mutacion_aduana.py
+       corrida de HOY: exit 0, OK, 21.6s
+       SENAL VIVA      [git sobre el arbol de trabajo] linea 148: #     ~~r = subprocess.run(["git", "status", "--porcelain", "--", "dataset/"],~~
+       SIN CLASIFICAR   [aduana_fuente_multiple.json] linea 205: os.path.join(RAIZ, "dataset", "metadata", "aduana_fuente_multiple.json"),
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): git sobre el arbol de trabajo
+   30. vuelta90_tarea3_prueba_mutacion_tallador.py
+       corrida de HOY: exit 0, OK, 0.1s
+       SENAL VIVA      [clasifica_longitud() de scripts/loop/tallar_conteo_campo.py] linea 45: nombre="clasifica_longitud() de scripts/loop/tallar_conteo_campo.py",
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): clasifica_longitud() de scripts/loop/tallar_conteo_campo.py
+   31. vuelta91_tarea3_prueba_mutacion_composicion.py
+       corrida de HOY: exit 0, OK, 0.1s
+       SENAL VIVA      [clasifica_fila() de scripts/loop/tallar_composicion_salida.py] linea 46: nombre="clasifica_fila() de scripts/loop/tallar_composicion_salida.py",
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): clasifica_fila() de scripts/loop/tallar_composicion_salida.py
+   32. vuelta91_tarea4_prueba_mutacion_direccion.py
+       corrida de HOY: exit 0, OK, 0.1s
+       SENAL CONGELADA [extraer_direccion_automatica() de scripts/loop/vuelta91_tarea4_direccion_ope07.py] linea 47: nombre="extraer_direccion_automatica() de scripts/loop/vuelta91_tarea4_direccion_ope07.py",
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y todo artefacto que toca es congelado: extraer_direccion_automatica() de scripts/loop/vuelta91_tarea4_direccion_ope07.py
+   33. vuelta95_tarea2a_prueba_mutacion_barrido.py
+       corrida de HOY: exit 0, OK, 0.1s
+       SENAL VIVA      [tiene_salvedad() de scripts/loop/tallar_barrido_cifras.py] linea 50: nombre="tiene_salvedad() de scripts/loop/tallar_barrido_cifras.py",
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): tiene_salvedad() de scripts/loop/tallar_barrido_cifras.py
+   34. vuelta96_tarea1c_prueba_mutacion.py
+       corrida de HOY: exit 0, OK, 0.1s
+       NO TOCA NINGUN ARTEFACTO DEL REPO
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y NO TOCA NINGUN ARTEFACTO del repo: su sujeto lo fabrica el o vive en memoria, asi que no hay nada que se le pueda mover debajo. Es el caso mas congelado que hay
+   35. vuelta96_tarea2_prueba_mutacion.py
+       corrida de HOY: exit 0, OK, 0.3s
+       NO TOCA NINGUN ARTEFACTO DEL REPO
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y NO TOCA NINGUN ARTEFACTO del repo: su sujeto lo fabrica el o vive en memoria, asi que no hay nada que se le pueda mover debajo. Es el caso mas congelado que hay
+   36. vuelta96_tarea3_prueba_mutacion.py
+       corrida de HOY: exit 1, NO MORDIO, 0.9s
+       primera linea util: PRUEBA DE MUTACION DE LAS GUARDAS DE OP-E-03, TRAMO 1 (vuelta 96, TAREA 3)
+       NO TOCA NINGUN ARTEFACTO DEL REPO
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   37. vuelta97_tarea2_prueba_mutacion.py
+       corrida de HOY: exit 1, NO MORDIO, 0.6s
+       primera linea util: PRUEBA POR MUTACION, VUELTA 97 TAREA 2
+       SENAL VIVA      [master_graph.json] linea 98: GRAFO = os.path.join(RAIZ, "dataset", "metadata", "master_graph.json")
+       SIN CLASIFICAR   [DIFERENCIA_CONTRA_COLA.jsonl] linea 96: BOLSA = os.path.join(RAIZ, "docs", "plan", "DIFERENCIA_CONTRA_COLA.jsonl")
+       SIN CLASIFICAR   [OP_E_03_LECTURA_TRAMO2_V97.jsonl] linea 97: LECTURA = os.path.join(RAIZ, "docs", "plan", "OP_E_03_LECTURA_TRAMO2_V97.jsonl")
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   38. vuelta98_tarea1_prueba_mutacion.py
+       corrida de HOY: exit 1, NO MORDIO, 3.5s
+       primera linea util: PRUEBA DE MUTACION, VUELTA 98 TAREA 1
+       SENAL CONGELADA [tempfile] linea 47: import tempfile
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   39. vuelta98_tarea3_prueba_mutacion.py
+       corrida de HOY: exit 1, NO MORDIO, 1.0s
+       primera linea util: PRUEBA DE MUTACION, VUELTA 98 TAREA 3 (recomputo del par 42)
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl] linea 55: "OPERACIONES": "docs/plan/OPERACIONES.jsonl",
+       SENAL VIVA      [OPERACIONES.jsonl] linea 175: p = os.path.join(d, "OPERACIONES.jsonl")
+       SENAL CONGELADA [vuelta98_tarea3_relectura_par42.py] linea 63: ruta = os.path.join(LOOP, "vuelta98_tarea3_relectura_par42.py")
+       SENAL CONGELADA [tempfile] linea 47: import tempfile
+       SENAL CONGELADA [mkdtemp] linea 100: d = tempfile.mkdtemp(prefix="v98t3_")
+       SENAL CONGELADA [git show sobre una ref] linea 72: r = subprocess.run(["git", "show", "%s:%s" % (ref, ruta)],
+       SIN CLASIFICAR   [docs/plan/OP_E_03_LECTURA_TRAMO2_V97.jsonl] linea 53: "TRAMO2": "docs/plan/OP_E_03_LECTURA_TRAMO2_V97.jsonl",
+       SIN CLASIFICAR   [docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl] linea 54: "TRAMO1": "docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl",
+       SIN CLASIFICAR   [docs/plan/04_ENLACES.md] linea 56: "ENLACES": "docs/plan/04_ENLACES.md",
+       SIN CLASIFICAR   [OP_E_03_LECTURA_TRAMO2_V97.jsonl] linea 157: p = os.path.join(d, "OP_E_03_LECTURA_TRAMO2_V97.jsonl")
+       SIN CLASIFICAR   [OP_E_03_LECTURA_TRAMO1_V96.jsonl] linea 166: p = os.path.join(d, "OP_E_03_LECTURA_TRAMO1_V96.jsonl")
+       SIN CLASIFICAR   [04_ENLACES.md] linea 186: p = os.path.join(d, "04_ENLACES.md")
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   40. vuelta98_tarea4_prueba_mutacion.py
+       corrida de HOY: exit 0, OK, 0.1s
+       NO TOCA NINGUN ARTEFACTO DEL REPO
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y NO TOCA NINGUN ARTEFACTO del repo: su sujeto lo fabrica el o vive en memoria, asi que no hay nada que se le pueda mover debajo. Es el caso mas congelado que hay
+   41. vuelta99_tarea3_prueba_mutacion.py
+       corrida de HOY: exit 0, OK, 0.1s
+       NO TOCA NINGUN ARTEFACTO DEL REPO
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y NO TOCA NINGUN ARTEFACTO del repo: su sujeto lo fabrica el o vive en memoria, asi que no hay nada que se le pueda mover debajo. Es el caso mas congelado que hay
+
+E) EL ARBOL DESPUES, Y LO QUE LA CORRIDA MOVIO
+   CIFRA lineas de git status --porcelain: 8
+   CIFRA lineas NUEVAS respecto de antes: 5
+      APARECE O CAMBIA:  M docs/loop/SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt
+      APARECE O CAMBIA:  M docs/loop/SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt
+      APARECE O CAMBIA:  M docs/loop/SALIDA_V135_4C_MUTACION.txt
+      APARECE O CAMBIA:  M docs/loop/SALIDA_V137_1A_MUTACION.txt
+      APARECE O CAMBIA:  M docs/loop/SALIDA_V137_1C_MUTACION.txt
+
+F) EL VEREDICTO CONTADO, Y SOLO CONTADO
+   CIFRA medidos: 41
+   CIFRA con estado ANCLA PERDIDA:   3
+   CIFRA con estado NO MORDIO:       8
+   CIFRA con estado OK:              30
+
+   CIFRA con veredicto SUJETO CONGELADO:  17
+   CIFRA con veredicto SUJETO VIVO:       24
+
+   SUJETO CONGELADO, CON SU NOMBRE:
+      vuelta109_tarea2_4_prueba_mutacion.py
+      vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py
+      vuelta113_tarea2_mutacion_tsc.py
+      vuelta115_tarea2_4_mutacion_z.py
+      vuelta116_tarea2_3_mutacion_aa.py
+      vuelta117_tarea2_3_mutacion_bb.py
+      vuelta118_tarea2_5_mutacion_cc.py
+      vuelta118_tarea2_6_mutacion_dd.py
+      vuelta138_2a_mutaciones.py
+      vuelta139_2a_mutaciones.py
+      vuelta140_2b_mutaciones.py
+      vuelta140_2c_mutacion_ancla.py
+      vuelta91_tarea4_prueba_mutacion_direccion.py
+      vuelta96_tarea1c_prueba_mutacion.py
+      vuelta96_tarea2_prueba_mutacion.py
+      vuelta98_tarea4_prueba_mutacion.py
+      vuelta99_tarea3_prueba_mutacion.py
+   SUJETO VIVO, CON SU NOMBRE:
+      vuelta102_tarea1_prueba_mutacion_apertura.py
+      vuelta110_tarea2_prueba_mutacion.py
+      vuelta122_tarea1e_mutacion_citas.py
+      vuelta123_tarea1e_mutacion_fila_tabla.py
+      vuelta133_tarea2c_mutaciones_identidad.py
+      vuelta134_2d_mutacion_1.py
+      vuelta134_2d_mutacion_2.py
+      vuelta134_2f_mutacion.py
+      vuelta135_4c_mutacion.py
+      vuelta137_1a_mutacion.py
+      vuelta137_1c_mutacion.py
+      vuelta141_2d_mutacion_commits.py
+      vuelta142_2a_mutaciones.py
+      vuelta142_2b_mutacion_commits.py
+      vuelta142_2c_mutaciones.py
+      vuelta142_2d_mutacion_bateria.py
+      vuelta146_3c_mutacion_aduana.py
+      vuelta90_tarea3_prueba_mutacion_tallador.py
+      vuelta91_tarea3_prueba_mutacion_composicion.py
+      vuelta95_tarea2a_prueba_mutacion_barrido.py
+      vuelta96_tarea3_prueba_mutacion.py
+      vuelta97_tarea2_prueba_mutacion.py
+      vuelta98_tarea1_prueba_mutacion.py
+      vuelta98_tarea3_prueba_mutacion.py
+
+G) LOS QUE ENTRAN, Y ENTRAN CON SU TIEMPO AL LADO (adjudicacion 6.6)
+   CIFRA que ENTRAN en la nomina de la bateria: 17
+      vuelta109_tarea2_4_prueba_mutacion.py                  12.3s (una corrida)
+      vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py       0.1s (una corrida)
+      vuelta113_tarea2_mutacion_tsc.py                        0.1s (una corrida)
+      vuelta115_tarea2_4_mutacion_z.py                      159.2s (una corrida)
+      vuelta116_tarea2_3_mutacion_aa.py                     158.7s (una corrida)
+      vuelta117_tarea2_3_mutacion_bb.py                     158.7s (una corrida)
+      vuelta118_tarea2_5_mutacion_cc.py                       0.2s (una corrida)
+      vuelta118_tarea2_6_mutacion_dd.py                       0.2s (una corrida)
+      vuelta138_2a_mutaciones.py                              0.2s (una corrida)
+      vuelta139_2a_mutaciones.py                              0.2s (una corrida)
+      vuelta140_2b_mutaciones.py                              0.3s (una corrida)
+      vuelta140_2c_mutacion_ancla.py                          1.0s (una corrida)
+      vuelta91_tarea4_prueba_mutacion_direccion.py            0.1s (una corrida)
+      vuelta96_tarea1c_prueba_mutacion.py                     0.1s (una corrida)
+      vuelta96_tarea2_prueba_mutacion.py                      0.3s (una corrida)
+      vuelta98_tarea4_prueba_mutacion.py                      0.1s (una corrida)
+      vuelta99_tarea3_prueba_mutacion.py                      0.1s (una corrida)
+   CIFRA coste de los que entran, una corrida: 491.7s
+   CIFRA coste de los que entran, DOS corridas (que es lo que la
+   bateria hace por el cotejo de reproducibilidad): 983.4s
+
+H) EL CRONOMETRO DE ESTA MEDICION
+   CIFRA TIEMPO TOTAL, en segundos: 1106.2
+   CIFRA TIEMPO TOTAL, en minutos: 18.4
+   CIFRA arnes MAS LENTO: vuelta142_2d_mutacion_bateria.py con 507.6s
+   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
+      vuelta142_2d_mutacion_bateria.py                        507.6s
+      vuelta115_tarea2_4_mutacion_z.py                        159.2s
+      vuelta117_tarea2_3_mutacion_bb.py                       158.7s
+      vuelta116_tarea2_3_mutacion_aa.py                       158.7s
+      vuelta133_tarea2c_mutaciones_identidad.py                25.1s
+      vuelta146_3c_mutacion_aduana.py                          21.6s
+      vuelta102_tarea1_prueba_mutacion_apertura.py             20.2s
+      vuelta137_1a_mutacion.py                                 14.7s
+      vuelta109_tarea2_4_prueba_mutacion.py                    12.3s
+      vuelta110_tarea2_prueba_mutacion.py                       6.1s
+
+FIN

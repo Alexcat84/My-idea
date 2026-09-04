@@ -6,9 +6,11 @@ PRUEBAS POR MUTACION DE LAS DOS REPARACIONES 1.c (vuelta 137)
 
 La tabla de peldanos (`SALIDA_V135_4B_PELDANOS.txt`) deja 38 grafias sin agrupar.
 --- salida ---
-ROJO, 1 cifra(s) no cuadran:
+ROJO, 2 cifra(s) no cuadran:
   linea 1: "38 grafias" <-> `SALIDA_V135_4B_PELDANOS.txt`: contado 37 (linea CIFRA 'grafias sin agrupar', elegida POR ETIQUETA) [candidatas de esa unidad en el fichero: 'grafias en grupo'=92, 'grafias sin agrupar'=37]
-COBERTURA: 0 cotejadas / 0 exentas / 1 cifras
+  COBERTURA CERO: la guarda vio 1 cifra(s) con unidad del vocabulario, cotejo 0 y eximio 0. UN VERDE SOBRE CERO NO ES UN VERDE. Unidades vistas detras de un numero y FUERA del vocabulario (0 palabra(s)): ninguna
+AVISO: 0 fila(s) de tabla de cierre quedaron sin cotejar.
+COBERTURA: 0 cotejadas / 0 exentas / 1 cifras | reparto: 0 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 0 | filas de TABLA de cierre cotejadas: 0 | filas de TABLA de cierre SIN COTEJAR (aviso): 0 | afirmaciones de cierre PRESENTES: 0 (0 prosa, 0 tabla) | de esas, COTEJADAS: 0 | ficheros citados que NO son UTF-8: 0 [ninguno] | unidades vistas FUERA del vocabulario: 0 palabra(s) [ninguna]
 EXITCODE proceso: 1
 MUTACION A: VERIFICADA
 
@@ -19,9 +21,11 @@ MUTACION A: VERIFICADA
 
 La tabla de peldanos (`SALIDA_V135_4B_PELDANOS.txt`) deja 92 grafias sin agrupar.
 --- salida ---
-ROJO, 1 cifra(s) no cuadran:
+ROJO, 2 cifra(s) no cuadran:
   linea 1: "92 grafias" <-> `SALIDA_V135_4B_PELDANOS.txt`: contado 37 (linea CIFRA 'grafias sin agrupar', elegida POR ETIQUETA) [candidatas de esa unidad en el fichero: 'grafias en grupo'=92, 'grafias sin agrupar'=37]
-COBERTURA: 0 cotejadas / 0 exentas / 1 cifras
+  COBERTURA CERO: la guarda vio 1 cifra(s) con unidad del vocabulario, cotejo 0 y eximio 0. UN VERDE SOBRE CERO NO ES UN VERDE. Unidades vistas detras de un numero y FUERA del vocabulario (0 palabra(s)): ninguna
+AVISO: 0 fila(s) de tabla de cierre quedaron sin cotejar.
+COBERTURA: 0 cotejadas / 0 exentas / 1 cifras | reparto: 0 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 0 | filas de TABLA de cierre cotejadas: 0 | filas de TABLA de cierre SIN COTEJAR (aviso): 0 | afirmaciones de cierre PRESENTES: 0 (0 prosa, 0 tabla) | de esas, COTEJADAS: 0 | ficheros citados que NO son UTF-8: 0 [ninguno] | unidades vistas FUERA del vocabulario: 0 palabra(s) [ninguna]
 EXITCODE proceso: 1
 MUTACION B: VERIFICADA
 
@@ -39,9 +43,11 @@ VERDE EXIT 0: 1 cifra(s) cotejadas contra su fichero de salida o wc -l, todas cu
 COBERTURA: 1 cotejadas / 0 exentas / 1 cifras
 EXITCODE proceso viejo: 0
 --- salida de la guarda REPARADA ---
-ROJO, 1 cifra(s) no cuadran:
+ROJO, 2 cifra(s) no cuadran:
   linea 1: "2 grafias" <-> `SALIDA_V135_4B_PELDANOS.txt`: contado 92 (linea CIFRA 'grafias en grupo', elegida POR ETIQUETA) [candidatas de esa unidad en el fichero: 'grafias en grupo'=92, 'grafias sin agrupar'=37]
-COBERTURA: 0 cotejadas / 0 exentas / 1 cifras
+  COBERTURA CERO: la guarda vio 1 cifra(s) con unidad del vocabulario, cotejo 0 y eximio 0. UN VERDE SOBRE CERO NO ES UN VERDE. Unidades vistas detras de un numero y FUERA del vocabulario (0 palabra(s)): ninguna
+AVISO: 0 fila(s) de tabla de cierre quedaron sin cotejar.
+COBERTURA: 0 cotejadas / 0 exentas / 1 cifras | reparto: 0 POR ETIQUETA, 0 POR CONJUNTO, 0 sin linea CIFRA | de las cotejadas, 0 viven en una FILA DE TABLA | afirmaciones de CIERRE cotejadas contra tallar_estado_de_fase.py: 0 | filas de TABLA de cierre cotejadas: 0 | filas de TABLA de cierre SIN COTEJAR (aviso): 0 | afirmaciones de cierre PRESENTES: 0 (0 prosa, 0 tabla) | de esas, COTEJADAS: 0 | ficheros citados que NO son UTF-8: 0 [ninguno] | unidades vistas FUERA del vocabulario: 0 palabra(s) [ninguna]
 EXITCODE proceso nuevo: 1
 MUTACION C: VERIFICADA: la vieja daba VERDE sobre una cifra falsa y la reparada cae ROJO
 
@@ -52,19 +58,10 @@ esta: REPORTE.md se sobreescribe cada vuelta). Un EXIT 1 por ancla perdida
 NO es un fallo de la guarda, y contarlo como tal seria mentir en la otra
 direccion. Ver el hallazgo lateral en el reporte de la vuelta 137.
   vuelta133_tarea2e_mutacion_cifras.py: EXIT proceso 0, OK, la guarda mordio como se esperaba
-  vuelta135_2e_mutacion_1.py: EXIT proceso 1, ANCLA PERDIDA, no llega a probar la guarda: ROJO PREVIO: '118 grafias (sin instrumento)' no aparece exactamente una vez en el reporte real.
-  vuelta135_2e_mutacion_2.py: EXIT proceso 1, ANCLA PERDIDA, no llega a probar la guarda: ROJO PREVIO: '54 grupos (sin instrumento)' no aparece exactamente una vez en el reporte real.
-  vuelta135_2e_mutacion_3.py: EXIT proceso 1, ANCLA PERDIDA, no llega a probar la guarda: ROJO PREVIO: '118 grafias (sin instrumento)' no aparece exactamente una vez en el reporte real.
-MUTACION D: VERIFICADA (ninguna mutacion vieja acusa a la guarda)
-HALLAZGO LATERAL, DECLARADO: 3 de las 4 mutaciones viejas no pueden correr hoy
-  (vuelta135_2e_mutacion_1.py, vuelta135_2e_mutacion_2.py, vuelta135_2e_mutacion_3.py).
-  Estan ancladas a un literal del REPORTE.md de la vuelta 134, que se
-  sobreescribio. El docstring de verificar_cifras_del_reporte.py las
-  sigue nombrando 'PRUEBA DE MUTACION (obligatoria)'. Medido: fallan
-  IGUAL contra la guarda VIEJA (comprobado en la vuelta 137 con git
-  stash), asi que NO es una regresion de esta reparacion. No las toco:
-  re-anclarlas es una operacion sobre instrumentos sellados que este
-  encargo no pide. Queda DISCUTIBLE en el reporte.
+  vuelta135_2e_mutacion_1.py: EXIT proceso 0, OK, la guarda mordio como se esperaba
+  vuelta135_2e_mutacion_2.py: EXIT proceso 0, OK, la guarda mordio como se esperaba
+  vuelta135_2e_mutacion_3.py: EXIT proceso 1, FALLO: la guarda NO mordio
+MUTACION D: NO VERIFICADA
 
-RESUMEN: A OK / B OK / C OK / D OK
-EXITCODE: 0
+RESUMEN: A OK / B OK / C OK / D FALLO
+EXITCODE: 1

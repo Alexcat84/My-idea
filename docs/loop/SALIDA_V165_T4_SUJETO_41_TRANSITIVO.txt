@@ -1,0 +1,857 @@
+REUSANDO LA MITAD EMPIRICA DE docs/loop/SALIDA_V165_T4_SUJETO_41.txt
+   CIFRA arneses con estado y cronometro leidos de esa salida: 41
+
+==============================================================================
+VUELTA 165, TAREA 4: EL SUJETO DE CADA UNO DE LOS 41, UNO POR UNO
+==============================================================================
+
+A) EL UNIVERSO, COMPUTADO CON EL PATRON VIEJO Y NO TECLEADO
+   CIFRA arneses a medir: 41
+
+B) LA TABLA DE REGLAS, PUBLICADA ENTERA ANTES DE APLICARLA
+   ARTEFACTOS VIVOS (10):
+      docs/loop/REPORTE.md                           se SOBRESCRIBE entero cada vuelta (EJECUTOR.md 7). Es el sujeto que hizo caer a vuelta144_2d_mutacion_cobertura.py en la vuelta 145 y el ejemplar que la propia regla del sujeto congelado cita
+      docs/loop/ACTA_AUDITOR.md                      el auditor le ANADE un acta por vuelta; sus numeros de linea se mueven
+      docs/PENDIENTES.md                             la serie de registros le anade una entrada por vuelta
+      docs/plan/OPERACIONES.jsonl                    las operaciones cambian de estado segun la campana avanza
+      docs/plan/CORRECCIONES_A_APLICAR.md            sede alterna de la serie de registros; crece
+      docs/plan/PASO_NODO_CALIBRADO.jsonl            se recalibra contra el grafo
+      docs/plan/INTRA_DOMINIO_VEREDICTOS.jsonl       el cribado y las lecturas dirigidas le escriben
+      dataset/metadata/master_graph.json             ES EL GRAFO VIVO. Es exactamente el sujeto que la regla excluye, y la adjudicacion 6.5 del acta 164 lo nombra asi
+      dataset/nodos                                  los nodos del grafo vivo
+      scripts/loop/verificar_mutaciones_viejas.py    la nomina de la bateria CRECE cada vuelta: quien la mida tiene sujeto vivo
+   ARTEFACTOS CONGELADOS (5):
+      SUJETO_FIJO_                                   la convencion de la casa para una copia sellada que nadie reescribe
+      _vieja_copia                                   copia congelada de una version anterior de un instrumento, guardada para poder correr la vieja contra la nueva
+      _viejo_copia                                   misma convencion, en masculino
+      tempfile                                       el arnes FABRICA su sujeto en un temporal y lo retira (P.16): no puede moverse debajo de nadie
+      mkdtemp                                        idem
+   git: `show <ref>` congela; `rev-parse`, `status`, `diff` y
+   `ls-files` leen el arbol vivo.
+   listar scripts/loop/ o docs/loop/ es sujeto vivo: crecen cada vuelta.
+
+B2) LAS REESCRITURAS CON CAMBIO REAL, ATRIBUIDAS POR COMPUTO
+   CIFRA ficheros de docs/loop/ con cambio de contenido hoy: 5
+      vuelta118_tarea2_6_mutacion_dd.py                    escribe SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt, SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt
+      vuelta135_4c_mutacion.py                             escribe SALIDA_V135_4C_MUTACION.txt
+      vuelta137_1a_mutacion.py                             escribe SALIDA_V137_1A_MUTACION.txt
+      vuelta137_1c_mutacion.py                             escribe SALIDA_V137_1C_MUTACION.txt
+
+C) EL ARBOL ANTES DE CORRER NADA
+   CIFRA lineas de git status --porcelain: 10
+       M dataset/metadata/master_graph.json
+       M docs/loop/SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt
+       M docs/loop/SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt
+       M docs/loop/SALIDA_V135_4C_MUTACION.txt
+       M docs/loop/SALIDA_V137_1A_MUTACION.txt
+       M docs/loop/SALIDA_V137_1C_MUTACION.txt
+       M scripts/loop/vuelta165_tarea4_sujeto_de_los_41.py
+      ?? docs/loop/SALIDA_V165_T4_SUJETO_41.txt
+      ?? docs/loop/SALIDA_V165_T4_SUJETO_41_TRANSITIVO.txt
+      ?? node_modules/
+
+D) LA MEDICION, UNO POR UNO, CON SU EVIDENCIA
+    1. vuelta102_tarea1_prueba_mutacion_apertura.py
+       corrida de HOY: exit 1, NO MORDIO, 20.2s
+       primera linea util: (estado y cronometro reusados de docs/loop/SALIDA_V165_T4_SUJETO_41.txt)
+       SENAL VIVA      [verificar_apertura_sellada.py] linea 37: GUARDA = os.path.join(RAIZ, "scripts", "loop", "verificar_apertura_sellada.py")
+       SENAL CONGELADA [SALIDA_V5_TARDIO_APERTURA.txt] linea 117: ok = codigo == 1 and salida.startswith("ROJO") and "SALIDA_V5_TARDIO_APERTURA.txt" in salida \
+       SENAL CONGELADA [SALIDA_V5_TAREA_X_MUTACION_APERTURA.txt] linea 118: and "SALIDA_V5_TAREA_X_MUTACION_APERTURA.txt" not in salida
+       SENAL CONGELADA [SALIDA_V5_HEAD_APERTURA.txt] linea 98: with open(os.path.join(tmp, "docs", "loop", "SALIDA_V5_HEAD_APERTURA.txt"), "w") as f:
+       SENAL CONGELADA [tempfile] linea 34: import tempfile
+       SENAL CONGELADA [mkdtemp] linea 78: tmp = tempfile.mkdtemp(prefix="v102_tarea13_")
+       SIN CLASIFICAR   [README_ACTA.txt] linea 91: with open(os.path.join(tmp, "README_ACTA.txt"), "w") as f:
+       CADENA (transitividad): vuelta102_tarea1_prueba_mutacion_apertura.py -> verificar_apertura_sellada.py
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+    2. vuelta109_tarea2_4_prueba_mutacion.py
+       corrida de HOY: exit 0, OK, 12.3s
+       SENAL CONGELADA [SALIDA_V107_TAREA4_3_TRAMO3_TRES_VIAS.md] linea 42: overrides = {"SALIDA_V107_TAREA4_3_TRAMO3_TRES_VIAS.md": RUTA_MUTADA}
+       SIN CLASIFICAR   [TRAMO3_SIN_DECLARACION_123.md] linea 24: RUTA_MUTADA = os.path.join(RAIZ, "docs", "loop", "_v109_mut", "TRAMO3_SIN_DECLARACION_123.md")
+       CADENA (transitividad): vuelta109_tarea2_4_prueba_mutacion.py -> verificar_vuelco_de_veredicto.py; verificar_vuelco_de_veredicto.py -> verificar_cobertura_bolsa_tres_vias.py; verificar_cobertura_bolsa_tres_vias.py -> contar_cierre_efectivo.py
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y todo artefacto que toca es congelado: SALIDA_V107_TAREA4_3_TRAMO3_TRES_VIAS.md
+    3. vuelta110_tarea2_prueba_mutacion.py
+       corrida de HOY: exit 1, NO MORDIO, 6.1s
+       primera linea util: (estado y cronometro reusados de docs/loop/SALIDA_V165_T4_SUJETO_41.txt)
+       SENAL CONGELADA [SALIDA_V108_TAREA5_2_TRAMO2_TRES_VIAS.md] linea 34: overrides = {"SALIDA_V108_TAREA5_2_TRAMO2_TRES_VIAS.md": ruta_mutada}
+       CADENA (transitividad): vuelta110_tarea2_prueba_mutacion.py -> verificar_vuelco_de_veredicto.py; verificar_vuelco_de_veredicto.py -> verificar_cobertura_bolsa_tres_vias.py; verificar_cobertura_bolsa_tres_vias.py -> contar_cierre_efectivo.py
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+    4. vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py
+       corrida de HOY: exit 0, OK, 0.1s
+       NO TOCA NINGUN ARTEFACTO DEL REPO
+       CADENA (transitividad): vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py -> censar_alcance_de_la_vara.py; vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py -> contar_cierre_efectivo.py; vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py -> verificar_cobertura_bolsa_tres_vias.py
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y NO TOCA NINGUN ARTEFACTO del repo: su sujeto lo fabrica el o vive en memoria, asi que no hay nada que se le pueda mover debajo. Es el caso mas congelado que hay
+    5. vuelta113_tarea2_mutacion_tsc.py
+       corrida de HOY: exit 0, OK, 0.1s
+       NO TOCA NINGUN ARTEFACTO DEL REPO
+       CADENA (transitividad): vuelta113_tarea2_mutacion_tsc.py -> tallar_cabecera_reporte.py
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y NO TOCA NINGUN ARTEFACTO del repo: su sujeto lo fabrica el o vive en memoria, asi que no hay nada que se le pueda mover debajo. Es el caso mas congelado que hay
+    6. vuelta115_tarea2_4_mutacion_z.py
+       corrida de HOY: exit 0, OK, 159.2s
+       SENAL VIVA      [scripts/loop/tallar_veredictos_reporte.py (via _v115_mut_z_copia.py)] linea 54: en _v115_mut_z_copia.py:54
+       SENAL VIVA      [docs/loop/REPORTE.md (via _v115_mut_z_copia.py)] linea 62: en _v115_mut_z_copia.py:62
+       SENAL VIVA      [scripts/loop/verificar_cabecera_pegada_o_condensada.py (via _v115_mut_z_copia.py)] linea 63: en _v115_mut_z_copia.py:63
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py (via _v115_mut_z_copia.py)] linea 64: en _v115_mut_z_copia.py:64
+       SENAL VIVA      [scripts/loop/tallar_cifras_de_antes.py (via _v115_mut_z_copia.py)] linea 68: en _v115_mut_z_copia.py:68
+       SENAL VIVA      [scripts/loop/tallar_nombre_de_operacion.py (via _v115_mut_z_copia.py)] linea 127: en _v115_mut_z_copia.py:127
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via _v115_mut_z_copia.py)] linea 129: en _v115_mut_z_copia.py:129
+       SENAL VIVA      [scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via _v115_mut_z_copia.py)] linea 133: en _v115_mut_z_copia.py:133
+       SENAL VIVA      [scripts/loop/contar_cierre_efectivo.py (via _v115_mut_z_copia.py)] linea 135: en _v115_mut_z_copia.py:135
+       SENAL VIVA      [scripts/loop/verificar_vuelco_de_veredicto.py (via _v115_mut_z_copia.py)] linea 137: en _v115_mut_z_copia.py:137
+       SENAL VIVA      [REPORTE.md (via tallar_cifras_de_antes.py)] linea 322: en tallar_cifras_de_antes.py:322
+       SENAL VIVA      [OPERACIONES.jsonl (via tallar_nombre_de_operacion.py)] linea 46: en tallar_nombre_de_operacion.py:46
+       SENAL VIVA      [tallar_cabecera_reporte.py (via tallar_veredictos_reporte.py)] linea 469: en tallar_veredictos_reporte.py:469
+       SENAL VIVA      [docs/loop/REPORTE.md (via tallar_veredictos_reporte.py)] linea 626: en tallar_veredictos_reporte.py:626
+       SENAL VIVA      [tallar_cabecera_reporte.py (via verificar_cabecera_pegada_o_condensada.py)] linea 56: en verificar_cabecera_pegada_o_condensada.py:56
+       SENAL VIVA      [REPORTE.md (via verificar_cabecera_pegada_o_condensada.py)] linea 228: en verificar_cabecera_pegada_o_condensada.py:228
+       SENAL VIVA      [scripts/loop/tallar_veredictos_reporte.py (via vuelta115_guardas_cierre.py)] linea 54: en vuelta115_guardas_cierre.py:54
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta115_guardas_cierre.py)] linea 62: en vuelta115_guardas_cierre.py:62
+       SENAL VIVA      [scripts/loop/verificar_cabecera_pegada_o_condensada.py (via vuelta115_guardas_cierre.py)] linea 63: en vuelta115_guardas_cierre.py:63
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py (via vuelta115_guardas_cierre.py)] linea 64: en vuelta115_guardas_cierre.py:64
+       SENAL VIVA      [scripts/loop/tallar_cifras_de_antes.py (via vuelta115_guardas_cierre.py)] linea 68: en vuelta115_guardas_cierre.py:68
+       SENAL VIVA      [scripts/loop/tallar_nombre_de_operacion.py (via vuelta115_guardas_cierre.py)] linea 127: en vuelta115_guardas_cierre.py:127
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via vuelta115_guardas_cierre.py)] linea 129: en vuelta115_guardas_cierre.py:129
+       SENAL VIVA      [scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via vuelta115_guardas_cierre.py)] linea 133: en vuelta115_guardas_cierre.py:133
+       SENAL VIVA      [scripts/loop/contar_cierre_efectivo.py (via vuelta115_guardas_cierre.py)] linea 135: en vuelta115_guardas_cierre.py:135
+       SENAL VIVA      [scripts/loop/verificar_vuelco_de_veredicto.py (via vuelta115_guardas_cierre.py)] linea 137: en vuelta115_guardas_cierre.py:137
+       SENAL CONGELADA [vuelta115_guardas_cierre.py] linea 38: ORIGINAL = os.path.join(RAIZ, "scripts", "loop", "vuelta115_guardas_cierre.py")
+       SENAL CONGELADA [_v115_mut_z_copia.py] linea 39: COPIA = os.path.join(RAIZ, "scripts", "loop", "_v115_mut_z_copia.py")
+       CADENA (transitividad): vuelta115_tarea2_4_mutacion_z.py -> _v115_mut_z_copia.py; vuelta115_tarea2_4_mutacion_z.py -> vuelta115_guardas_cierre.py; _v115_mut_z_copia.py -> contar_cierre_efectivo.py; _v115_mut_z_copia.py -> tallar_cabecera_reporte.py; _v115_mut_z_copia.py -> tallar_cifras_de_antes.py; _v115_mut_z_copia.py -> tallar_nombre_de_operacion.py; _v115_mut_z_copia.py -> tallar_veredictos_reporte.py; _v115_mut_z_copia.py -> verificar_apertura_sellada.py; _v115_mut_z_copia.py -> verificar_cabecera_pegada_o_condensada.py; _v115_mut_z_copia.py -> verificar_cobertura_bolsa_tres_vias.py; _v115_mut_z_copia.py -> verificar_vuelco_de_veredicto.py; _v115_mut_z_copia.py -> vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py; _v115_mut_z_copia.py -> vuelta113_tarea2_mutacion_tsc.py; _v115_mut_z_copia.py -> vuelta114_tarea2_1_barrido_talladores.py; vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py -> censar_alcance_de_la_vara.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 26 artefacto(s) vivo(s): OPERACIONES.jsonl (via tallar_nombre_de_operacion.py), REPORTE.md (via tallar_cifras_de_antes.py), REPORTE.md (via verificar_cabecera_pegada_o_condensada.py), docs/loop/REPORTE.md (via _v115_mut_z_copia.py), docs/loop/REPORTE.md (via tallar_veredictos_reporte.py), docs/loop/REPORTE.md (via vuelta115_guardas_cierre.py), scripts/loop/contar_cierre_efectivo.py (via _v115_mut_z_copia.py), scripts/loop/contar_cierre_efectivo.py (via vuelta115_guardas_cierre.py), scripts/loop/tallar_cabecera_reporte.py (via _v115_mut_z_copia.py), scripts/loop/tallar_cabecera_reporte.py (via vuelta115_guardas_cierre.py), scripts/loop/tallar_cifras_de_antes.py (via _v115_mut_z_copia.py), scripts/loop/tallar_cifras_de_antes.py (via vuelta115_guardas_cierre.py), scripts/loop/tallar_nombre_de_operacion.py (via _v115_mut_z_copia.py), scripts/loop/tallar_nombre_de_operacion.py (via vuelta115_guardas_cierre.py), scripts/loop/tallar_veredictos_reporte.py (via _v115_mut_z_copia.py), scripts/loop/tallar_veredictos_reporte.py (via vuelta115_guardas_cierre.py), scripts/loop/verificar_apertura_sellada.py (via _v115_mut_z_copia.py), scripts/loop/verificar_apertura_sellada.py (via vuelta115_guardas_cierre.py), scripts/loop/verificar_cabecera_pegada_o_condensada.py (via _v115_mut_z_copia.py), scripts/loop/verificar_cabecera_pegada_o_condensada.py (via vuelta115_guardas_cierre.py), scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via _v115_mut_z_copia.py), scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via vuelta115_guardas_cierre.py), scripts/loop/verificar_vuelco_de_veredicto.py (via _v115_mut_z_copia.py), scripts/loop/verificar_vuelco_de_veredicto.py (via vuelta115_guardas_cierre.py), tallar_cabecera_reporte.py (via tallar_veredictos_reporte.py), tallar_cabecera_reporte.py (via verificar_cabecera_pegada_o_condensada.py)
+    7. vuelta116_tarea2_3_mutacion_aa.py
+       corrida de HOY: exit 0, OK, 158.7s
+       SENAL VIVA      [scripts/loop/tallar_veredictos_reporte.py (via _v116_mut_aa_copia.py)] linea 56: en _v116_mut_aa_copia.py:56
+       SENAL VIVA      [docs/loop/REPORTE.md (via _v116_mut_aa_copia.py)] linea 64: en _v116_mut_aa_copia.py:64
+       SENAL VIVA      [scripts/loop/verificar_cabecera_pegada_o_condensada.py (via _v116_mut_aa_copia.py)] linea 65: en _v116_mut_aa_copia.py:65
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py (via _v116_mut_aa_copia.py)] linea 66: en _v116_mut_aa_copia.py:66
+       SENAL VIVA      [scripts/loop/tallar_cifras_de_antes.py (via _v116_mut_aa_copia.py)] linea 70: en _v116_mut_aa_copia.py:70
+       SENAL VIVA      [scripts/loop/tallar_nombre_de_operacion.py (via _v116_mut_aa_copia.py)] linea 171: en _v116_mut_aa_copia.py:171
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via _v116_mut_aa_copia.py)] linea 173: en _v116_mut_aa_copia.py:173
+       SENAL VIVA      [scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via _v116_mut_aa_copia.py)] linea 177: en _v116_mut_aa_copia.py:177
+       SENAL VIVA      [scripts/loop/contar_cierre_efectivo.py (via _v116_mut_aa_copia.py)] linea 179: en _v116_mut_aa_copia.py:179
+       SENAL VIVA      [scripts/loop/verificar_vuelco_de_veredicto.py (via _v116_mut_aa_copia.py)] linea 181: en _v116_mut_aa_copia.py:181
+       SENAL VIVA      [REPORTE.md (via tallar_cifras_de_antes.py)] linea 322: en tallar_cifras_de_antes.py:322
+       SENAL VIVA      [OPERACIONES.jsonl (via tallar_nombre_de_operacion.py)] linea 46: en tallar_nombre_de_operacion.py:46
+       SENAL VIVA      [tallar_cabecera_reporte.py (via tallar_veredictos_reporte.py)] linea 469: en tallar_veredictos_reporte.py:469
+       SENAL VIVA      [docs/loop/REPORTE.md (via tallar_veredictos_reporte.py)] linea 626: en tallar_veredictos_reporte.py:626
+       SENAL VIVA      [tallar_cabecera_reporte.py (via verificar_cabecera_pegada_o_condensada.py)] linea 56: en verificar_cabecera_pegada_o_condensada.py:56
+       SENAL VIVA      [REPORTE.md (via verificar_cabecera_pegada_o_condensada.py)] linea 228: en verificar_cabecera_pegada_o_condensada.py:228
+       SENAL VIVA      [scripts/loop/tallar_veredictos_reporte.py (via vuelta116_guardas_cierre.py)] linea 56: en vuelta116_guardas_cierre.py:56
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta116_guardas_cierre.py)] linea 64: en vuelta116_guardas_cierre.py:64
+       SENAL VIVA      [scripts/loop/verificar_cabecera_pegada_o_condensada.py (via vuelta116_guardas_cierre.py)] linea 65: en vuelta116_guardas_cierre.py:65
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py (via vuelta116_guardas_cierre.py)] linea 66: en vuelta116_guardas_cierre.py:66
+       SENAL VIVA      [scripts/loop/tallar_cifras_de_antes.py (via vuelta116_guardas_cierre.py)] linea 70: en vuelta116_guardas_cierre.py:70
+       SENAL VIVA      [scripts/loop/tallar_nombre_de_operacion.py (via vuelta116_guardas_cierre.py)] linea 171: en vuelta116_guardas_cierre.py:171
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via vuelta116_guardas_cierre.py)] linea 173: en vuelta116_guardas_cierre.py:173
+       SENAL VIVA      [scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via vuelta116_guardas_cierre.py)] linea 177: en vuelta116_guardas_cierre.py:177
+       SENAL VIVA      [scripts/loop/contar_cierre_efectivo.py (via vuelta116_guardas_cierre.py)] linea 179: en vuelta116_guardas_cierre.py:179
+       SENAL VIVA      [scripts/loop/verificar_vuelco_de_veredicto.py (via vuelta116_guardas_cierre.py)] linea 181: en vuelta116_guardas_cierre.py:181
+       SENAL CONGELADA [vuelta116_guardas_cierre.py] linea 46: ORIGINAL = os.path.join(RAIZ, "scripts", "loop", "vuelta116_guardas_cierre.py")
+       SENAL CONGELADA [_v116_mut_aa_copia.py] linea 47: COPIA = os.path.join(RAIZ, "scripts", "loop", "_v116_mut_aa_copia.py")
+       CADENA (transitividad): vuelta116_tarea2_3_mutacion_aa.py -> _v116_mut_aa_copia.py; vuelta116_tarea2_3_mutacion_aa.py -> vuelta116_guardas_cierre.py; _v116_mut_aa_copia.py -> contar_cierre_efectivo.py; _v116_mut_aa_copia.py -> tallar_cabecera_reporte.py; _v116_mut_aa_copia.py -> tallar_cifras_de_antes.py; _v116_mut_aa_copia.py -> tallar_nombre_de_operacion.py; _v116_mut_aa_copia.py -> tallar_veredictos_reporte.py; _v116_mut_aa_copia.py -> verificar_apertura_sellada.py; _v116_mut_aa_copia.py -> verificar_cabecera_pegada_o_condensada.py; _v116_mut_aa_copia.py -> verificar_cobertura_bolsa_tres_vias.py; _v116_mut_aa_copia.py -> verificar_vuelco_de_veredicto.py; _v116_mut_aa_copia.py -> vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py; _v116_mut_aa_copia.py -> vuelta113_tarea2_mutacion_tsc.py; _v116_mut_aa_copia.py -> vuelta114_tarea2_1_barrido_talladores.py; vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py -> censar_alcance_de_la_vara.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 26 artefacto(s) vivo(s): OPERACIONES.jsonl (via tallar_nombre_de_operacion.py), REPORTE.md (via tallar_cifras_de_antes.py), REPORTE.md (via verificar_cabecera_pegada_o_condensada.py), docs/loop/REPORTE.md (via _v116_mut_aa_copia.py), docs/loop/REPORTE.md (via tallar_veredictos_reporte.py), docs/loop/REPORTE.md (via vuelta116_guardas_cierre.py), scripts/loop/contar_cierre_efectivo.py (via _v116_mut_aa_copia.py), scripts/loop/contar_cierre_efectivo.py (via vuelta116_guardas_cierre.py), scripts/loop/tallar_cabecera_reporte.py (via _v116_mut_aa_copia.py), scripts/loop/tallar_cabecera_reporte.py (via vuelta116_guardas_cierre.py), scripts/loop/tallar_cifras_de_antes.py (via _v116_mut_aa_copia.py), scripts/loop/tallar_cifras_de_antes.py (via vuelta116_guardas_cierre.py), scripts/loop/tallar_nombre_de_operacion.py (via _v116_mut_aa_copia.py), scripts/loop/tallar_nombre_de_operacion.py (via vuelta116_guardas_cierre.py), scripts/loop/tallar_veredictos_reporte.py (via _v116_mut_aa_copia.py), scripts/loop/tallar_veredictos_reporte.py (via vuelta116_guardas_cierre.py), scripts/loop/verificar_apertura_sellada.py (via _v116_mut_aa_copia.py), scripts/loop/verificar_apertura_sellada.py (via vuelta116_guardas_cierre.py), scripts/loop/verificar_cabecera_pegada_o_condensada.py (via _v116_mut_aa_copia.py), scripts/loop/verificar_cabecera_pegada_o_condensada.py (via vuelta116_guardas_cierre.py), scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via _v116_mut_aa_copia.py), scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via vuelta116_guardas_cierre.py), scripts/loop/verificar_vuelco_de_veredicto.py (via _v116_mut_aa_copia.py), scripts/loop/verificar_vuelco_de_veredicto.py (via vuelta116_guardas_cierre.py), tallar_cabecera_reporte.py (via tallar_veredictos_reporte.py), tallar_cabecera_reporte.py (via verificar_cabecera_pegada_o_condensada.py)
+    8. vuelta117_tarea2_3_mutacion_bb.py
+       corrida de HOY: exit 0, OK, 158.7s
+       SENAL VIVA      [scripts/loop/tallar_veredictos_reporte.py (via _v117_mut_bb_copia.py)] linea 62: en _v117_mut_bb_copia.py:62
+       SENAL VIVA      [docs/loop/REPORTE.md (via _v117_mut_bb_copia.py)] linea 70: en _v117_mut_bb_copia.py:70
+       SENAL VIVA      [scripts/loop/verificar_cabecera_pegada_o_condensada.py (via _v117_mut_bb_copia.py)] linea 71: en _v117_mut_bb_copia.py:71
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py (via _v117_mut_bb_copia.py)] linea 72: en _v117_mut_bb_copia.py:72
+       SENAL VIVA      [scripts/loop/tallar_cifras_de_antes.py (via _v117_mut_bb_copia.py)] linea 76: en _v117_mut_bb_copia.py:76
+       SENAL VIVA      [scripts/loop/tallar_nombre_de_operacion.py (via _v117_mut_bb_copia.py)] linea 160: en _v117_mut_bb_copia.py:160
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via _v117_mut_bb_copia.py)] linea 162: en _v117_mut_bb_copia.py:162
+       SENAL VIVA      [scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via _v117_mut_bb_copia.py)] linea 166: en _v117_mut_bb_copia.py:166
+       SENAL VIVA      [scripts/loop/contar_cierre_efectivo.py (via _v117_mut_bb_copia.py)] linea 168: en _v117_mut_bb_copia.py:168
+       SENAL VIVA      [scripts/loop/verificar_vuelco_de_veredicto.py (via _v117_mut_bb_copia.py)] linea 170: en _v117_mut_bb_copia.py:170
+       SENAL VIVA      [REPORTE.md (via tallar_cifras_de_antes.py)] linea 322: en tallar_cifras_de_antes.py:322
+       SENAL VIVA      [OPERACIONES.jsonl (via tallar_nombre_de_operacion.py)] linea 46: en tallar_nombre_de_operacion.py:46
+       SENAL VIVA      [tallar_cabecera_reporte.py (via tallar_veredictos_reporte.py)] linea 469: en tallar_veredictos_reporte.py:469
+       SENAL VIVA      [docs/loop/REPORTE.md (via tallar_veredictos_reporte.py)] linea 626: en tallar_veredictos_reporte.py:626
+       SENAL VIVA      [tallar_cabecera_reporte.py (via verificar_cabecera_pegada_o_condensada.py)] linea 56: en verificar_cabecera_pegada_o_condensada.py:56
+       SENAL VIVA      [REPORTE.md (via verificar_cabecera_pegada_o_condensada.py)] linea 228: en verificar_cabecera_pegada_o_condensada.py:228
+       SENAL VIVA      [scripts/loop/tallar_veredictos_reporte.py (via vuelta117_guardas_cierre.py)] linea 62: en vuelta117_guardas_cierre.py:62
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta117_guardas_cierre.py)] linea 70: en vuelta117_guardas_cierre.py:70
+       SENAL VIVA      [scripts/loop/verificar_cabecera_pegada_o_condensada.py (via vuelta117_guardas_cierre.py)] linea 71: en vuelta117_guardas_cierre.py:71
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py (via vuelta117_guardas_cierre.py)] linea 72: en vuelta117_guardas_cierre.py:72
+       SENAL VIVA      [scripts/loop/tallar_cifras_de_antes.py (via vuelta117_guardas_cierre.py)] linea 76: en vuelta117_guardas_cierre.py:76
+       SENAL VIVA      [scripts/loop/tallar_nombre_de_operacion.py (via vuelta117_guardas_cierre.py)] linea 160: en vuelta117_guardas_cierre.py:160
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via vuelta117_guardas_cierre.py)] linea 162: en vuelta117_guardas_cierre.py:162
+       SENAL VIVA      [scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via vuelta117_guardas_cierre.py)] linea 166: en vuelta117_guardas_cierre.py:166
+       SENAL VIVA      [scripts/loop/contar_cierre_efectivo.py (via vuelta117_guardas_cierre.py)] linea 168: en vuelta117_guardas_cierre.py:168
+       SENAL VIVA      [scripts/loop/verificar_vuelco_de_veredicto.py (via vuelta117_guardas_cierre.py)] linea 170: en vuelta117_guardas_cierre.py:170
+       SENAL CONGELADA [vuelta117_guardas_cierre.py] linea 33: ORIGINAL = os.path.join(RAIZ, "scripts", "loop", "vuelta117_guardas_cierre.py")
+       SENAL CONGELADA [_v117_mut_bb_copia.py] linea 34: COPIA = os.path.join(RAIZ, "scripts", "loop", "_v117_mut_bb_copia.py")
+       CADENA (transitividad): vuelta117_tarea2_3_mutacion_bb.py -> _v117_mut_bb_copia.py; vuelta117_tarea2_3_mutacion_bb.py -> vuelta117_guardas_cierre.py; _v117_mut_bb_copia.py -> contar_cierre_efectivo.py; _v117_mut_bb_copia.py -> tallar_cabecera_reporte.py; _v117_mut_bb_copia.py -> tallar_cifras_de_antes.py; _v117_mut_bb_copia.py -> tallar_nombre_de_operacion.py; _v117_mut_bb_copia.py -> tallar_veredictos_reporte.py; _v117_mut_bb_copia.py -> verificar_apertura_sellada.py; _v117_mut_bb_copia.py -> verificar_cabecera_pegada_o_condensada.py; _v117_mut_bb_copia.py -> verificar_cobertura_bolsa_tres_vias.py; _v117_mut_bb_copia.py -> verificar_vuelco_de_veredicto.py; _v117_mut_bb_copia.py -> vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py; _v117_mut_bb_copia.py -> vuelta113_tarea2_mutacion_tsc.py; _v117_mut_bb_copia.py -> vuelta114_tarea2_1_barrido_talladores.py; vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py -> censar_alcance_de_la_vara.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 26 artefacto(s) vivo(s): OPERACIONES.jsonl (via tallar_nombre_de_operacion.py), REPORTE.md (via tallar_cifras_de_antes.py), REPORTE.md (via verificar_cabecera_pegada_o_condensada.py), docs/loop/REPORTE.md (via _v117_mut_bb_copia.py), docs/loop/REPORTE.md (via tallar_veredictos_reporte.py), docs/loop/REPORTE.md (via vuelta117_guardas_cierre.py), scripts/loop/contar_cierre_efectivo.py (via _v117_mut_bb_copia.py), scripts/loop/contar_cierre_efectivo.py (via vuelta117_guardas_cierre.py), scripts/loop/tallar_cabecera_reporte.py (via _v117_mut_bb_copia.py), scripts/loop/tallar_cabecera_reporte.py (via vuelta117_guardas_cierre.py), scripts/loop/tallar_cifras_de_antes.py (via _v117_mut_bb_copia.py), scripts/loop/tallar_cifras_de_antes.py (via vuelta117_guardas_cierre.py), scripts/loop/tallar_nombre_de_operacion.py (via _v117_mut_bb_copia.py), scripts/loop/tallar_nombre_de_operacion.py (via vuelta117_guardas_cierre.py), scripts/loop/tallar_veredictos_reporte.py (via _v117_mut_bb_copia.py), scripts/loop/tallar_veredictos_reporte.py (via vuelta117_guardas_cierre.py), scripts/loop/verificar_apertura_sellada.py (via _v117_mut_bb_copia.py), scripts/loop/verificar_apertura_sellada.py (via vuelta117_guardas_cierre.py), scripts/loop/verificar_cabecera_pegada_o_condensada.py (via _v117_mut_bb_copia.py), scripts/loop/verificar_cabecera_pegada_o_condensada.py (via vuelta117_guardas_cierre.py), scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via _v117_mut_bb_copia.py), scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via vuelta117_guardas_cierre.py), scripts/loop/verificar_vuelco_de_veredicto.py (via _v117_mut_bb_copia.py), scripts/loop/verificar_vuelco_de_veredicto.py (via vuelta117_guardas_cierre.py), tallar_cabecera_reporte.py (via tallar_veredictos_reporte.py), tallar_cabecera_reporte.py (via verificar_cabecera_pegada_o_condensada.py)
+    9. vuelta118_tarea2_5_mutacion_cc.py
+       corrida de HOY: exit 0, OK, 0.2s
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via _v118_mut_cc_censo1_sin_guarda.py)] linea 37: en _v118_mut_cc_censo1_sin_guarda.py:37
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via vuelta118_tarea2_1_censo_tres_superficies_reparado.py)] linea 37: en vuelta118_tarea2_1_censo_tres_superficies_reparado.py:37
+       SENAL CONGELADA [vuelta118_tarea2_1_censo_tres_superficies_reparado.py] linea 25: ORIGINAL = os.path.join(RAIZ, "scripts", "loop", "vuelta118_tarea2_1_censo_tres_superficies_reparado.py")
+       SENAL CONGELADA [_v118_mut_cc_censo1_sin_guarda.py] linea 26: MUTADO = os.path.join(RAIZ, "scripts", "loop", "_v118_mut_cc_censo1_sin_guarda.py")
+       SENAL CONGELADA [SALIDA_V118_TAREA2_5_MUTACION_CC_ANTES.txt] linea 66: ruta_antes = os.path.join(RAIZ, "docs", "loop", "SALIDA_V118_TAREA2_5_MUTACION_CC_ANTES.txt")
+       SENAL CONGELADA [SALIDA_V118_TAREA2_5_MUTACION_CC_DESPUES.txt] linea 67: ruta_despues = os.path.join(RAIZ, "docs", "loop", "SALIDA_V118_TAREA2_5_MUTACION_CC_DESPUES.txt")
+       SENAL CONGELADA [SALIDA_V118_TAREA2_5_MUTACION_CC_VEREDICTO.txt] linea 68: ruta_veredicto = os.path.join(RAIZ, "docs", "loop", "SALIDA_V118_TAREA2_5_MUTACION_CC_VEREDICTO.txt")
+       CADENA (transitividad): vuelta118_tarea2_5_mutacion_cc.py -> _v118_mut_cc_censo1_sin_guarda.py; vuelta118_tarea2_5_mutacion_cc.py -> vuelta118_tarea2_1_censo_tres_superficies_reparado.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 2 artefacto(s) vivo(s): docs/plan/OPERACIONES.jsonl (via _v118_mut_cc_censo1_sin_guarda.py), docs/plan/OPERACIONES.jsonl (via vuelta118_tarea2_1_censo_tres_superficies_reparado.py)
+   10. vuelta118_tarea2_6_mutacion_dd.py
+       corrida de HOY: exit 0, OK, 0.2s
+       SENAL VIVA      [reescritura con cambio real de SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt] linea 0: (medido en el arbol, no leido del fuente)
+       SENAL VIVA      [reescritura con cambio real de SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt] linea 0: (medido en el arbol, no leido del fuente)
+       SENAL VIVA      [dataset/metadata/master_graph.json (via _v118_mut_dd_censo2_sin_cierre.py)] linea 39: en _v118_mut_dd_censo2_sin_cierre.py:39
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via _v118_mut_dd_censo2_sin_cierre.py)] linea 40: en _v118_mut_dd_censo2_sin_cierre.py:40
+       SENAL VIVA      [dataset/metadata/master_graph.json (via vuelta118_tarea2_2_censo_ejecucion_fase04_reparado.py)] linea 39: en vuelta118_tarea2_2_censo_ejecucion_fase04_reparado.py:39
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via vuelta118_tarea2_2_censo_ejecucion_fase04_reparado.py)] linea 40: en vuelta118_tarea2_2_censo_ejecucion_fase04_reparado.py:40
+       SENAL CONGELADA [vuelta118_tarea2_2_censo_ejecucion_fase04_reparado.py] linea 27: ORIGINAL = os.path.join(RAIZ, "scripts", "loop", "vuelta118_tarea2_2_censo_ejecucion_fase04_reparado.py")
+       SENAL CONGELADA [_v118_mut_dd_censo2_sin_cierre.py] linea 28: MUTADO = os.path.join(RAIZ, "scripts", "loop", "_v118_mut_dd_censo2_sin_cierre.py")
+       SENAL CONGELADA [SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt] linea 69: ruta_antes = os.path.join(RAIZ, "docs", "loop", "SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt")
+       SENAL CONGELADA [SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt] linea 70: ruta_despues = os.path.join(RAIZ, "docs", "loop", "SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt")
+       SENAL CONGELADA [SALIDA_V118_TAREA2_6_MUTACION_DD_VEREDICTO.txt] linea 71: ruta_veredicto = os.path.join(RAIZ, "docs", "loop", "SALIDA_V118_TAREA2_6_MUTACION_DD_VEREDICTO.txt")
+       CADENA (transitividad): vuelta118_tarea2_6_mutacion_dd.py -> _v118_mut_dd_censo2_sin_cierre.py; vuelta118_tarea2_6_mutacion_dd.py -> vuelta118_tarea2_2_censo_ejecucion_fase04_reparado.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 6 artefacto(s) vivo(s): dataset/metadata/master_graph.json (via _v118_mut_dd_censo2_sin_cierre.py), dataset/metadata/master_graph.json (via vuelta118_tarea2_2_censo_ejecucion_fase04_reparado.py), docs/plan/OPERACIONES.jsonl (via _v118_mut_dd_censo2_sin_cierre.py), docs/plan/OPERACIONES.jsonl (via vuelta118_tarea2_2_censo_ejecucion_fase04_reparado.py), reescritura con cambio real de SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt, reescritura con cambio real de SALIDA_V118_TAREA2_6_MUTACION_DD_DESPUES.txt
+   11. vuelta122_tarea1e_mutacion_citas.py
+       corrida de HOY: exit 0, OK, 0.2s
+       SENAL VIVA      [REPORTE.md (via verificar_citas_del_reporte.py)] linea 286: en verificar_citas_del_reporte.py:286
+       SENAL VIVA      [ed916471:docs/loop/REPORTE.md] linea 26: r = subprocess.run(["git", "show", "ed916471:docs/loop/REPORTE.md"], cwd=RAIZ,
+       SENAL VIVA      [verificar_citas_del_reporte.py] linea 47: "verificar_citas_del_reporte.py"), "--reporte", ruta],
+       SENAL VIVA      [git sobre el arbol de trabajo] linea 32: original = ("`git status\n--porcelain` vacio tras el rojo (sin escritura nueva).")
+       SENAL CONGELADA [tempfile] linea 20: import tempfile
+       SENAL CONGELADA [git show sobre una ref] linea 26: r = subprocess.run(["git", "show", "ed916471:docs/loop/REPORTE.md"], cwd=RAIZ,
+       SIN CLASIFICAR   [REPORTE_121_MUTADO_TAREA1E.md] linea 43: ruta = os.path.join(tempfile.gettempdir(), "REPORTE_121_MUTADO_TAREA1E.md")
+       CADENA (transitividad): vuelta122_tarea1e_mutacion_citas.py -> verificar_citas_del_reporte.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 4 artefacto(s) vivo(s): REPORTE.md (via verificar_citas_del_reporte.py), ed916471:docs/loop/REPORTE.md, git sobre el arbol de trabajo, verificar_citas_del_reporte.py
+   12. vuelta123_tarea1e_mutacion_fila_tabla.py
+       corrida de HOY: exit 0, OK, 0.1s
+       SENAL VIVA      [REPORTE.md (via verificar_citas_del_reporte.py)] linea 286: en verificar_citas_del_reporte.py:286
+       SENAL VIVA      [128d0e5b:docs/loop/REPORTE.md] linea 35: r = subprocess.run(["git", "show", "128d0e5b:docs/loop/REPORTE.md"], cwd=RAIZ,
+       SENAL VIVA      [verificar_citas_del_reporte.py] linea 51: "verificar_citas_del_reporte.py"), "--reporte", ruta],
+       SENAL CONGELADA [tempfile] linea 28: import tempfile
+       SENAL CONGELADA [git show sobre una ref] linea 35: r = subprocess.run(["git", "show", "128d0e5b:docs/loop/REPORTE.md"], cwd=RAIZ,
+       SIN CLASIFICAR   [REPORTE_122_MUTADO_TAREA1E_FILA.md] linea 47: ruta = os.path.join(tempfile.gettempdir(), "REPORTE_122_MUTADO_TAREA1E_FILA.md")
+       CADENA (transitividad): vuelta123_tarea1e_mutacion_fila_tabla.py -> verificar_citas_del_reporte.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 3 artefacto(s) vivo(s): 128d0e5b:docs/loop/REPORTE.md, REPORTE.md (via verificar_citas_del_reporte.py), verificar_citas_del_reporte.py
+   13. vuelta133_tarea2c_mutaciones_identidad.py
+       corrida de HOY: exit 0, OK, 25.1s
+       SENAL VIVA      [tallar_identidad_reporte.py] linea 26: TALLADOR = os.path.join(RAIZ, "scripts", "loop", "tallar_identidad_reporte.py")
+       SENAL CONGELADA [tempfile] linea 23: import tempfile
+       CADENA (transitividad): vuelta133_tarea2c_mutaciones_identidad.py -> tallar_identidad_reporte.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): tallar_identidad_reporte.py
+   14. vuelta134_2d_mutacion_1.py
+       corrida de HOY: exit 1, ANCLA PERDIDA, 0.1s
+       primera linea util: (estado y cronometro reusados de docs/loop/SALIDA_V165_T4_SUJETO_41.txt)
+       SENAL VIVA      [OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 96: en verificar_cifras_del_plan.py:96
+       SENAL VIVA      [%s:docs/plan/OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 147: en verificar_cifras_del_plan.py:147
+       SENAL VIVA      [REPORTE.md (via verificar_cifras_del_reporte.py)] linea 394: en verificar_cifras_del_reporte.py:394
+       SENAL VIVA      [REPORTE.md] linea 19: REPORTE_REAL = os.path.join(RAIZ, "docs", "loop", "REPORTE.md")
+       SENAL VIVA      [verificar_cifras_del_reporte.py] linea 20: GUARDA = os.path.join(RAIZ, "scripts", "loop", "verificar_cifras_del_reporte.py")
+       SENAL CONGELADA [tempfile] linea 16: import tempfile
+       CADENA (transitividad): vuelta134_2d_mutacion_1.py -> verificar_cifras_del_reporte.py; verificar_cifras_del_reporte.py -> verificar_cifras_del_plan.py
+       VEREDICTO: SUJETO VIVO . sale ANCLA PERDIDA HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   15. vuelta134_2d_mutacion_2.py
+       corrida de HOY: exit 1, ANCLA PERDIDA, 0.0s
+       primera linea util: (estado y cronometro reusados de docs/loop/SALIDA_V165_T4_SUJETO_41.txt)
+       SENAL VIVA      [OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 96: en verificar_cifras_del_plan.py:96
+       SENAL VIVA      [%s:docs/plan/OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 147: en verificar_cifras_del_plan.py:147
+       SENAL VIVA      [REPORTE.md (via verificar_cifras_del_reporte.py)] linea 394: en verificar_cifras_del_reporte.py:394
+       SENAL VIVA      [REPORTE.md] linea 22: REPORTE_REAL = os.path.join(RAIZ, "docs", "loop", "REPORTE.md")
+       SENAL VIVA      [verificar_cifras_del_reporte.py] linea 23: GUARDA = os.path.join(RAIZ, "scripts", "loop", "verificar_cifras_del_reporte.py")
+       SENAL CONGELADA [tempfile] linea 19: import tempfile
+       CADENA (transitividad): vuelta134_2d_mutacion_2.py -> verificar_cifras_del_reporte.py; verificar_cifras_del_reporte.py -> verificar_cifras_del_plan.py
+       VEREDICTO: SUJETO VIVO . sale ANCLA PERDIDA HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   16. vuelta134_2f_mutacion.py
+       corrida de HOY: exit 1, ANCLA PERDIDA, 0.0s
+       primera linea util: (estado y cronometro reusados de docs/loop/SALIDA_V165_T4_SUJETO_41.txt)
+       SENAL VIVA      [verificar_cabecera_mapeo.py] linea 24: GUARDA = os.path.join(RAIZ, "scripts", "loop", "verificar_cabecera_mapeo.py")
+       SENAL CONGELADA [tempfile] linea 20: import tempfile
+       SIN CLASIFICAR   [OP_S_11_MAPEO_PROPUESTO.md] linea 23: TABLA_REAL = os.path.join(RAIZ, "docs", "plan", "OP_S_11_MAPEO_PROPUESTO.md")
+       CADENA (transitividad): vuelta134_2f_mutacion.py -> verificar_cabecera_mapeo.py; verificar_cabecera_mapeo.py -> vuelta135_tabla_mapeo_propuesto.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta131_grupos_por_titulo.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta132_bolsa2_particion.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta132_grupos_por_localizador.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta133_cola_localizador_apendice.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta135_cola_localizador_cap.py
+       VEREDICTO: SUJETO VIVO . sale ANCLA PERDIDA HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   17. vuelta135_4c_mutacion.py
+       corrida de HOY: exit 0, OK, 5.2s
+       SENAL VIVA      [reescritura con cambio real de SALIDA_V135_4C_MUTACION.txt] linea 0: (medido en el arbol, no leido del fuente)
+       SENAL VIVA      [verificar_cabecera_mapeo.py] linea 29: GUARDA = os.path.join(RAIZ, "scripts", "loop", "verificar_cabecera_mapeo.py")
+       SENAL CONGELADA [SALIDA_V135_4C_MUTACION.txt] linea 30: SALIDA = os.path.join(RAIZ, "docs", "loop", "SALIDA_V135_4C_MUTACION.txt")
+       SENAL CONGELADA [tempfile] linea 25: import tempfile
+       SIN CLASIFICAR   [OP_S_11_MAPEO_PROPUESTO.md] linea 28: TABLA_REAL = os.path.join(RAIZ, "docs", "plan", "OP_S_11_MAPEO_PROPUESTO.md")
+       CADENA (transitividad): vuelta135_4c_mutacion.py -> verificar_cabecera_mapeo.py; verificar_cabecera_mapeo.py -> vuelta135_tabla_mapeo_propuesto.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta131_grupos_por_titulo.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta132_bolsa2_particion.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta132_grupos_por_localizador.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta133_cola_localizador_apendice.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta135_cola_localizador_cap.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 2 artefacto(s) vivo(s): reescritura con cambio real de SALIDA_V135_4C_MUTACION.txt, verificar_cabecera_mapeo.py
+   18. vuelta137_1a_mutacion.py
+       corrida de HOY: exit 0, OK, 14.7s
+       SENAL VIVA      [reescritura con cambio real de SALIDA_V137_1A_MUTACION.txt] linea 0: (medido en el arbol, no leido del fuente)
+       SENAL VIVA      [verificar_cabecera_mapeo.py] linea 41: GUARDA = os.path.join(LOOP, "verificar_cabecera_mapeo.py")
+       SENAL CONGELADA [vuelta135_tabla_mapeo_propuesto.py] linea 42: RECOMPUTO = os.path.join(LOOP, "vuelta135_tabla_mapeo_propuesto.py")
+       SENAL CONGELADA [SALIDA_V135_4B_PELDANOS.txt] linea 44: PELDANOS = os.path.join(RAIZ, "docs", "loop", "SALIDA_V135_4B_PELDANOS.txt")
+       SENAL CONGELADA [SALIDA_V137_1A_MUTACION.txt] linea 45: SALIDA = os.path.join(RAIZ, "docs", "loop", "SALIDA_V137_1A_MUTACION.txt")
+       SENAL CONGELADA [tempfile] linea 37: import tempfile
+       SIN CLASIFICAR   [OP_S_11_MAPEO_PROPUESTO.md] linea 43: TABLA_REAL = os.path.join(RAIZ, "docs", "plan", "OP_S_11_MAPEO_PROPUESTO.md")
+       SIN CLASIFICAR   [docs/plan/OP_S_11_MAPEO_PROPUESTO.md] linea 127: subprocess.run(["git", "checkout", "--", "docs/plan/OP_S_11_MAPEO_PROPUESTO.md"], cwd=RAIZ)
+       CADENA (transitividad): vuelta137_1a_mutacion.py -> verificar_cabecera_mapeo.py; vuelta137_1a_mutacion.py -> vuelta135_tabla_mapeo_propuesto.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta131_grupos_por_titulo.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta132_bolsa2_particion.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta132_grupos_por_localizador.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta133_cola_localizador_apendice.py; vuelta135_tabla_mapeo_propuesto.py -> vuelta135_cola_localizador_cap.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 2 artefacto(s) vivo(s): reescritura con cambio real de SALIDA_V137_1A_MUTACION.txt, verificar_cabecera_mapeo.py
+   19. vuelta137_1c_mutacion.py
+       corrida de HOY: exit 1, NO MORDIO, 1.6s
+       primera linea util: (estado y cronometro reusados de docs/loop/SALIDA_V165_T4_SUJETO_41.txt)
+       SENAL VIVA      [reescritura con cambio real de SALIDA_V137_1C_MUTACION.txt] linea 0: (medido en el arbol, no leido del fuente)
+       SENAL VIVA      [OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 96: en verificar_cifras_del_plan.py:96
+       SENAL VIVA      [%s:docs/plan/OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 147: en verificar_cifras_del_plan.py:147
+       SENAL VIVA      [REPORTE.md (via verificar_cifras_del_reporte.py)] linea 394: en verificar_cifras_del_reporte.py:394
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta133_tarea2e_mutacion_cifras.py)] linea 22: en vuelta133_tarea2e_mutacion_cifras.py:22
+       SENAL VIVA      [e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_1.py)] linea 61: en vuelta135_2e_mutacion_1.py:61
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_1.py)] linea 54: en vuelta135_2e_mutacion_1.py:54
+       SENAL VIVA      [e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_2.py)] linea 58: en vuelta135_2e_mutacion_2.py:58
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_2.py)] linea 51: en vuelta135_2e_mutacion_2.py:51
+       SENAL VIVA      [e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_3.py)] linea 80: en vuelta135_2e_mutacion_3.py:80
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_3.py)] linea 61: en vuelta135_2e_mutacion_3.py:61
+       SENAL VIVA      [verificar_cifras_del_reporte.py] linea 45: GUARDA = os.path.join(RAIZ, "scripts", "loop", "verificar_cifras_del_reporte.py")
+       SENAL VIVA      [%s:scripts/loop/verificar_cifras_del_reporte.py] linea 117: rv = subprocess.run(["git", "show", "%s:scripts/loop/verificar_cifras_del_reporte.py"
+       SENAL CONGELADA [SALIDA_V135_4B_PELDANOS.txt] linea 51: PROPIO = "SALIDA_V135_4B_PELDANOS.txt"
+       SENAL CONGELADA [SALIDA_V133_2E_MUTACION.txt] linea 52: VECINO = "SALIDA_V133_2E_MUTACION.txt"
+       SENAL CONGELADA [SALIDA_V137_1C_MUTACION.txt] linea 46: SALIDA = os.path.join(LOOP, "SALIDA_V137_1C_MUTACION.txt")
+       SENAL CONGELADA [vuelta133_tarea2e_mutacion_cifras.py] linea 55: "vuelta133_tarea2e_mutacion_cifras.py",
+       SENAL CONGELADA [vuelta135_2e_mutacion_1.py] linea 56: "vuelta135_2e_mutacion_1.py",
+       SENAL CONGELADA [vuelta135_2e_mutacion_2.py] linea 57: "vuelta135_2e_mutacion_2.py",
+       SENAL CONGELADA [vuelta135_2e_mutacion_3.py] linea 58: "vuelta135_2e_mutacion_3.py",
+       SENAL CONGELADA [tempfile] linea 41: import tempfile
+       SENAL CONGELADA [git show sobre una ref] linea 117: rv = subprocess.run(["git", "show", "%s:scripts/loop/verificar_cifras_del_reporte.py"
+       CADENA (transitividad): vuelta137_1c_mutacion.py -> verificar_cifras_del_reporte.py; vuelta137_1c_mutacion.py -> vuelta133_tarea2e_mutacion_cifras.py; vuelta137_1c_mutacion.py -> vuelta135_2e_mutacion_1.py; vuelta137_1c_mutacion.py -> vuelta135_2e_mutacion_2.py; vuelta137_1c_mutacion.py -> vuelta135_2e_mutacion_3.py; verificar_cifras_del_reporte.py -> verificar_cifras_del_plan.py
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   20. vuelta138_2a_mutaciones.py
+       corrida de HOY: exit 0, OK, 0.2s
+       SENAL VIVA      [OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py)] linea 153: en generar_plan_de_fusion_de_mesa.py:153
+       SENAL VIVA      [ficha leida de: docs/plan/OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py)] linea 520: en generar_plan_de_fusion_de_mesa.py:520
+       SENAL CONGELADA [tempfile] linea 54: import tempfile
+       SENAL CONGELADA [mkdtemp] linea 218: tmp = tempfile.mkdtemp(prefix="banco_v138_2a_")
+       SIN CLASIFICAR   [OPERACIONES_FIXTURE.jsonl] linea 129: operaciones = os.path.join(tmp, "OPERACIONES_FIXTURE.jsonl")
+       CADENA (transitividad): vuelta138_2a_mutaciones.py -> generar_plan_de_fusion_de_mesa.py; generar_plan_de_fusion_de_mesa.py -> generar_plan_del_lote.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 2 artefacto(s) vivo(s): OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py), ficha leida de: docs/plan/OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py)
+   21. vuelta139_2a_mutaciones.py
+       corrida de HOY: exit 0, OK, 0.2s
+       SENAL VIVA      [OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py)] linea 153: en generar_plan_de_fusion_de_mesa.py:153
+       SENAL VIVA      [ficha leida de: docs/plan/OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py)] linea 520: en generar_plan_de_fusion_de_mesa.py:520
+       SENAL CONGELADA [tempfile] linea 72: import tempfile
+       SENAL CONGELADA [mkdtemp] linea 307: tmp = tempfile.mkdtemp(prefix="banco_v139_2a_")
+       SIN CLASIFICAR   [OPERACIONES_FIXTURE.jsonl] linea 159: operaciones = os.path.join(tmp, "OPERACIONES_FIXTURE.jsonl")
+       CADENA (transitividad): vuelta139_2a_mutaciones.py -> fundir_por_plan.py; vuelta139_2a_mutaciones.py -> generar_plan_de_fusion_de_mesa.py; generar_plan_de_fusion_de_mesa.py -> generar_plan_del_lote.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 2 artefacto(s) vivo(s): OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py), ficha leida de: docs/plan/OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py)
+   22. vuelta140_2b_mutaciones.py
+       corrida de HOY: exit 0, OK, 0.3s
+       SENAL VIVA      [OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 96: en verificar_cifras_del_plan.py:96
+       SENAL VIVA      [%s:docs/plan/OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 147: en verificar_cifras_del_plan.py:147
+       SENAL VIVA      [REPORTE.md (via verificar_cifras_del_reporte.py)] linea 394: en verificar_cifras_del_reporte.py:394
+       SENAL CONGELADA [SALIDA_V999_MUTACION_ESTADO_LIMPIO.txt] linea 54: F_ESTADO_LIMPIO = "SALIDA_V999_MUTACION_ESTADO_LIMPIO.txt"
+       SENAL CONGELADA [SALIDA_V999_MUTACION_ESTADO_SUCIO.txt] linea 55: F_ESTADO_SUCIO = "SALIDA_V999_MUTACION_ESTADO_SUCIO.txt"
+       SIN CLASIFICAR   [_v140_2b_reporte_fabricado.md] linea 56: F_REPORTE = "_v140_2b_reporte_fabricado.md"
+       CADENA (transitividad): vuelta140_2b_mutaciones.py -> verificar_cifras_del_reporte.py; verificar_cifras_del_reporte.py -> verificar_cifras_del_plan.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 3 artefacto(s) vivo(s): %s:docs/plan/OPERACIONES.jsonl (via verificar_cifras_del_plan.py), OPERACIONES.jsonl (via verificar_cifras_del_plan.py), REPORTE.md (via verificar_cifras_del_reporte.py)
+   23. vuelta140_2c_mutacion_ancla.py
+       corrida de HOY: exit 0, OK, 1.0s
+       SENAL VIVA      [scripts/loop/tallar_veredictos_reporte.py (via _v115_mut_z_copia.py)] linea 54: en _v115_mut_z_copia.py:54
+       SENAL VIVA      [docs/loop/REPORTE.md (via _v115_mut_z_copia.py)] linea 62: en _v115_mut_z_copia.py:62
+       SENAL VIVA      [scripts/loop/verificar_cabecera_pegada_o_condensada.py (via _v115_mut_z_copia.py)] linea 63: en _v115_mut_z_copia.py:63
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py (via _v115_mut_z_copia.py)] linea 64: en _v115_mut_z_copia.py:64
+       SENAL VIVA      [scripts/loop/tallar_cifras_de_antes.py (via _v115_mut_z_copia.py)] linea 68: en _v115_mut_z_copia.py:68
+       SENAL VIVA      [scripts/loop/tallar_nombre_de_operacion.py (via _v115_mut_z_copia.py)] linea 127: en _v115_mut_z_copia.py:127
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via _v115_mut_z_copia.py)] linea 129: en _v115_mut_z_copia.py:129
+       SENAL VIVA      [scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via _v115_mut_z_copia.py)] linea 133: en _v115_mut_z_copia.py:133
+       SENAL VIVA      [scripts/loop/contar_cierre_efectivo.py (via _v115_mut_z_copia.py)] linea 135: en _v115_mut_z_copia.py:135
+       SENAL VIVA      [scripts/loop/verificar_vuelco_de_veredicto.py (via _v115_mut_z_copia.py)] linea 137: en _v115_mut_z_copia.py:137
+       SENAL VIVA      [dataset/metadata/master_graph.json (via _v156_tallador_viejo_copia.py)] linea 279: en _v156_tallador_viejo_copia.py:279
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via _v156_tallador_viejo_copia.py)] linea 280: en _v156_tallador_viejo_copia.py:280
+       SENAL VIVA      [REPORTE.md (via _v162_cifras_vieja_copia.py)] linea 394: en _v162_cifras_vieja_copia.py:394
+       SENAL VIVA      [REPORTE.md (via _v163_cifras_vieja_copia.py)] linea 394: en _v163_cifras_vieja_copia.py:394
+       SENAL VIVA      [ACTA_AUDITOR.md (via _v163_contador_viejo_copia.py)] linea 50: en _v163_contador_viejo_copia.py:50
+       SENAL VIVA      [docs/loop/REPORTE.md (via _v163_re_sellado_vieja_copia.py)] linea 100: en _v163_re_sellado_vieja_copia.py:100
+       SENAL VIVA      [master_graph.json (via aduana_semantica.py)] linea 92: en aduana_semantica.py:92
+       SENAL VIVA      [master_graph.json (via diagnostico_ciclo_a_medias.py)] linea 57: en diagnostico_ciclo_a_medias.py:57
+       SENAL VIVA      [dataset/metadata/master_graph.json (via diagnostico_ciclo_a_medias.py)] linea 170: en diagnostico_ciclo_a_medias.py:170
+       SENAL VIVA      [OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py)] linea 153: en generar_plan_de_fusion_de_mesa.py:153
+       SENAL VIVA      [ficha leida de: docs/plan/OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py)] linea 520: en generar_plan_de_fusion_de_mesa.py:520
+       SENAL VIVA      [PENDIENTES.md (via serie_de_registros.py)] linea 52: en serie_de_registros.py:52
+       SENAL VIVA      [CORRECCIONES_A_APLICAR.md (via serie_de_registros.py)] linea 53: en serie_de_registros.py:53
+       SENAL VIVA      [REPORTE.md (via tallar_cifras_de_antes.py)] linea 322: en tallar_cifras_de_antes.py:322
+       SENAL VIVA      [dataset/metadata/master_graph.json (via tallar_estado_de_fase.py)] linea 307: en tallar_estado_de_fase.py:307
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via tallar_estado_de_fase.py)] linea 308: en tallar_estado_de_fase.py:308
+       SENAL VIVA      [OPERACIONES.jsonl (via tallar_nombre_de_operacion.py)] linea 46: en tallar_nombre_de_operacion.py:46
+       SENAL VIVA      [tallar_cabecera_reporte.py (via tallar_veredictos_reporte.py)] linea 469: en tallar_veredictos_reporte.py:469
+       SENAL VIVA      [docs/loop/REPORTE.md (via tallar_veredictos_reporte.py)] linea 626: en tallar_veredictos_reporte.py:626
+       SENAL VIVA      [REPORTE.md (via verificar_ausencias_del_reporte.py)] linea 245: en verificar_ausencias_del_reporte.py:245
+       SENAL VIVA      [tallar_cabecera_reporte.py (via verificar_cabecera_pegada_o_condensada.py)] linea 56: en verificar_cabecera_pegada_o_condensada.py:56
+       SENAL VIVA      [REPORTE.md (via verificar_cabecera_pegada_o_condensada.py)] linea 228: en verificar_cabecera_pegada_o_condensada.py:228
+       SENAL VIVA      [OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 96: en verificar_cifras_del_plan.py:96
+       SENAL VIVA      [%s:docs/plan/OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 147: en verificar_cifras_del_plan.py:147
+       SENAL VIVA      [REPORTE.md (via verificar_cifras_del_reporte.py)] linea 394: en verificar_cifras_del_reporte.py:394
+       SENAL VIVA      [REPORTE.md (via verificar_nomina_sellada.py)] linea 105: en verificar_nomina_sellada.py:105
+       SENAL VIVA      [docs/loop/REPORTE.md (via verificar_re_sellado.py)] linea 100: en verificar_re_sellado.py:100
+       SENAL VIVA      [scripts/loop/tallar_veredictos_reporte.py (via vuelta115_guardas_cierre.py)] linea 54: en vuelta115_guardas_cierre.py:54
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta115_guardas_cierre.py)] linea 62: en vuelta115_guardas_cierre.py:62
+       SENAL VIVA      [scripts/loop/verificar_cabecera_pegada_o_condensada.py (via vuelta115_guardas_cierre.py)] linea 63: en vuelta115_guardas_cierre.py:63
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py (via vuelta115_guardas_cierre.py)] linea 64: en vuelta115_guardas_cierre.py:64
+       SENAL VIVA      [scripts/loop/tallar_cifras_de_antes.py (via vuelta115_guardas_cierre.py)] linea 68: en vuelta115_guardas_cierre.py:68
+       SENAL VIVA      [scripts/loop/tallar_nombre_de_operacion.py (via vuelta115_guardas_cierre.py)] linea 127: en vuelta115_guardas_cierre.py:127
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via vuelta115_guardas_cierre.py)] linea 129: en vuelta115_guardas_cierre.py:129
+       SENAL VIVA      [scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via vuelta115_guardas_cierre.py)] linea 133: en vuelta115_guardas_cierre.py:133
+       SENAL VIVA      [scripts/loop/contar_cierre_efectivo.py (via vuelta115_guardas_cierre.py)] linea 135: en vuelta115_guardas_cierre.py:135
+       SENAL VIVA      [scripts/loop/verificar_vuelco_de_veredicto.py (via vuelta115_guardas_cierre.py)] linea 137: en vuelta115_guardas_cierre.py:137
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta133_tarea2e_mutacion_cifras.py)] linea 22: en vuelta133_tarea2e_mutacion_cifras.py:22
+       SENAL VIVA      [e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_1.py)] linea 61: en vuelta135_2e_mutacion_1.py:61
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_1.py)] linea 54: en vuelta135_2e_mutacion_1.py:54
+       SENAL VIVA      [e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_2.py)] linea 58: en vuelta135_2e_mutacion_2.py:58
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_2.py)] linea 51: en vuelta135_2e_mutacion_2.py:51
+       SENAL VIVA      [e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_3.py)] linea 80: en vuelta135_2e_mutacion_3.py:80
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_3.py)] linea 61: en vuelta135_2e_mutacion_3.py:61
+       SENAL VIVA      [scripts/loop/verificar_cifras_del_reporte.py (via vuelta139_2b_mutaciones.py)] linea 63: en vuelta139_2b_mutaciones.py:63
+       SENAL VIVA      [e12e4c36:docs/loop/REPORTE.md (via vuelta139_2b_mutaciones.py)] linea 72: en vuelta139_2b_mutaciones.py:72
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta139_2b_mutaciones.py)] linea 74: en vuelta139_2b_mutaciones.py:74
+       SENAL VIVA      [23bde6cd:docs/loop/REPORTE.md (via vuelta139_2b_mutaciones.py)] linea 86: en vuelta139_2b_mutaciones.py:86
+       SENAL VIVA      [verificar_mutaciones_viejas.py (via vuelta139_2b_mutaciones.py)] linea 276: en vuelta139_2b_mutaciones.py:276
+       SENAL VIVA      [dataset/metadata/master_graph.json (via vuelta140_2a_mutaciones.py)] linea 44: en vuelta140_2a_mutaciones.py:44
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via vuelta140_2a_mutaciones.py)] linea 45: en vuelta140_2a_mutaciones.py:45
+       SENAL VIVA      [dataset/metadata/master_graph.json (via vuelta141_2e_caso_positivo_fase03.py)] linea 89: en vuelta141_2e_caso_positivo_fase03.py:89
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via vuelta141_2e_caso_positivo_fase03.py)] linea 91: en vuelta141_2e_caso_positivo_fase03.py:91
+       SENAL VIVA      [OPERACIONES.jsonl (via vuelta144_1b_medir_ventana.py)] linea 39: en vuelta144_1b_medir_ventana.py:39
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via vuelta144_3b_mutacion_negativa.py)] linea 142: en vuelta144_3b_mutacion_negativa.py:142
+       SENAL VIVA      [OPERACIONES.jsonl (via vuelta144_3b_mutacion_negativa.py)] linea 254: en vuelta144_3b_mutacion_negativa.py:254
+       SENAL VIVA      [dataset/nodos/%s.json (via vuelta144_3b_mutacion_negativa.py)] linea 246: en vuelta144_3b_mutacion_negativa.py:246
+       SENAL VIVA      [ficha leida de: docs/plan/OPERACIONES.jsonl (via vuelta144_3b_sellar_mesa_opm04.py)] linea 117: en vuelta144_3b_sellar_mesa_opm04.py:117
+       SENAL VIVA      [b7f07648:docs/loop/REPORTE.md (via vuelta145_2a_mutacion_ancla_unica.py)] linea 54: en vuelta145_2a_mutacion_ancla_unica.py:54
+       SENAL VIVA      [c02b9fad:docs/loop/REPORTE.md (via vuelta145_2a_mutacion_ancla_unica.py)] linea 55: en vuelta145_2a_mutacion_ancla_unica.py:55
+       SENAL VIVA      [dataset/nodos/%s.json (via vuelta145_2b_prestado_congelado.py)] linea 63: en vuelta145_2b_prestado_congelado.py:63
+       SENAL VIVA      [OPERACIONES.jsonl (via vuelta145_3b_vara_de_codigo_fase07.py)] linea 58: en vuelta145_3b_vara_de_codigo_fase07.py:58
+       SENAL VIVA      [master_graph.json (via vuelta145_3b_vara_de_codigo_fase07.py)] linea 310: en vuelta145_3b_vara_de_codigo_fase07.py:310
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta146_2b_mutacion_ausencias.py)] linea 65: en vuelta146_2b_mutacion_ausencias.py:65
+       SENAL VIVA      [verificar_ausencias_del_reporte.py (via vuelta146_2b_mutacion_ausencias.py)] linea 62: en vuelta146_2b_mutacion_ausencias.py:62
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta147_2c_mutacion_vitalidad.py)] linea 85: en vuelta147_2c_mutacion_vitalidad.py:85
+       SENAL VIVA      [verificar_ausencias_del_reporte.py (via vuelta147_2c_mutacion_vitalidad.py)] linea 81: en vuelta147_2c_mutacion_vitalidad.py:81
+       SENAL VIVA      [dataset/nodos/un_nodo_cualquiera.json (via vuelta148_0d_mutacion_corredor.py)] linea 65: en vuelta148_0d_mutacion_corredor.py:65
+       SENAL VIVA      [OPERACIONES.jsonl (via vuelta150_3_relectura_expediente.py)] linea 226: en vuelta150_3_relectura_expediente.py:226
+       SENAL VIVA      [%s:docs/plan/OPERACIONES.jsonl (via vuelta150_3_relectura_expediente.py)] linea 619: en vuelta150_3_relectura_expediente.py:619
+       SENAL VIVA      [tallar_estado_de_fase.py (via vuelta150_3_relectura_expediente.py)] linea 241: en vuelta150_3_relectura_expediente.py:241
+       SENAL VIVA      [master_graph.json (via vuelta150_5c_mutacion_ciclo.py)] linea 43: en vuelta150_5c_mutacion_ciclo.py:43
+       SENAL VIVA      [master_graph.json (via vuelta152_registro_de_citas_opc05.py)] linea 291: en vuelta152_registro_de_citas_opc05.py:291
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta152_registro_de_citas_opc05.py)] linea 292: en vuelta152_registro_de_citas_opc05.py:292
+       SENAL VIVA      [%s:dataset/metadata/master_graph.json (via vuelta152_registro_de_citas_opc05.py)] linea 314: en vuelta152_registro_de_citas_opc05.py:314
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta156_tarea2b_decidir_ld097.py)] linea 65: en vuelta156_tarea2b_decidir_ld097.py:65
+       SENAL VIVA      [scripts/loop/tallar_estado_de_fase.py (via vuelta156_tarea4b_mutacion_tallador.py)] linea 38: en vuelta156_tarea4b_mutacion_tallador.py:38
+       SENAL VIVA      [verificar_apertura_sellada.py (via vuelta156_tarea5d_mutacion_corredor.py)] linea 147: en vuelta156_tarea5d_mutacion_corredor.py:147
+       SENAL VIVA      [master_graph.json (via vuelta157_tarea2_lote1_veredictos.py)] linea 138: en vuelta157_tarea2_lote1_veredictos.py:138
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta157_tarea2_lote1_veredictos.py)] linea 139: en vuelta157_tarea2_lote1_veredictos.py:139
+       SENAL VIVA      [scripts/loop/verificar_mutaciones_viejas.py (via vuelta157_tarea5c_mutacion_ruido.py)] linea 53: en vuelta157_tarea5c_mutacion_ruido.py:53
+       SENAL VIVA      [verificar_re_sellado.py (via vuelta157_tarea6b_mutacion_re_sellado.py)] linea 37: en vuelta157_tarea6b_mutacion_re_sellado.py:37
+       SENAL VIVA      [guarda importada de: scripts/loop/verificar_re_sellado.py (via vuelta157_tarea6b_mutacion_re_sellado.py)] linea 75: en vuelta157_tarea6b_mutacion_re_sellado.py:75
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta157_tarea8_dos_especies_de_d.py)] linea 79: en vuelta157_tarea8_dos_especies_de_d.py:79
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta159_motor_veredictos.py)] linea 75: en vuelta159_motor_veredictos.py:75
+       SENAL VIVA      [master_graph.json (via vuelta159_motor_veredictos.py)] linea 77: en vuelta159_motor_veredictos.py:77
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via vuelta159_tarea1_registrar_adjudicaciones.py)] linea 524: en vuelta159_tarea1_registrar_adjudicaciones.py:524
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py (via vuelta159_tarea1_registrar_adjudicaciones.py)] linea 525: en vuelta159_tarea1_registrar_adjudicaciones.py:525
+       SENAL VIVA      [scripts/loop/verificar_re_sellado.py (via vuelta159_tarea1_registrar_adjudicaciones.py)] linea 541: en vuelta159_tarea1_registrar_adjudicaciones.py:541
+       SENAL VIVA      [verificar_mutaciones_viejas.py (via vuelta159_tarea5_alcance_p16.py)] linea 89: en vuelta159_tarea5_alcance_p16.py:89
+       SENAL VIVA      [fuente: scripts/loop/verificar_mutaciones_viejas.py (via vuelta159_tarea5_alcance_p16.py)] linea 242: en vuelta159_tarea5_alcance_p16.py:242
+       SENAL VIVA      [verificar_re_sellado.py (via vuelta159_tarea6c_mutacion_exencion.py)] linea 47: en vuelta159_tarea6c_mutacion_exencion.py:47
+       SENAL VIVA      [guarda importada de: scripts/loop/verificar_re_sellado.py (via vuelta159_tarea6c_mutacion_exencion.py)] linea 81: en vuelta159_tarea6c_mutacion_exencion.py:81
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta159_tarea9_marcador_cierre.py)] linea 63: en vuelta159_tarea9_marcador_cierre.py:63
+       SENAL VIVA      [master_graph.json (via vuelta159_tarea9_marcador_cierre.py)] linea 64: en vuelta159_tarea9_marcador_cierre.py:64
+       SENAL VIVA      [MARCADOR DEL ARCHIVO, CONTADO DE docs/INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta159_tarea9_marcador_cierre.py)] linea 106: en vuelta159_tarea9_marcador_cierre.py:106
+       SENAL VIVA      [CENSO Y ARISTAS, CONTADOS DE dataset/metadata/master_graph.json (via vuelta159_tarea9_marcador_cierre.py)] linea 134: en vuelta159_tarea9_marcador_cierre.py:134
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via vuelta160_tarea6b_mutacion_puerta.py)] linea 88: en vuelta160_tarea6b_mutacion_puerta.py:88
+       SENAL VIVA      [verificar_apertura_sellada.py (via vuelta160_tarea6b_mutacion_puerta.py)] linea 125: en vuelta160_tarea6b_mutacion_puerta.py:125
+       SENAL VIVA      [docs/INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta160_tarea7c_mutacion_guarda_cita.py)] linea 137: en vuelta160_tarea7c_mutacion_guarda_cita.py:137
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta160_tarea7c_mutacion_guarda_cita.py)] linea 104: en vuelta160_tarea7c_mutacion_guarda_cita.py:104
+       SENAL VIVA      [ACTA_AUDITOR.md (via vuelta161_tarea1c_segunda_lectura.py)] linea 50: en vuelta161_tarea1c_segunda_lectura.py:50
+       SENAL VIVA      [dataset/metadata/master_graph.json (via vuelta162_tarea2a_mutacion_puerta.py)] linea 60: en vuelta162_tarea2a_mutacion_puerta.py:60
+       SENAL VIVA      [OPERACIONES.jsonl (via vuelta162_tarea2b_mutacion_excepcion.py)] linea 70: en vuelta162_tarea2b_mutacion_excepcion.py:70
+       SENAL VIVA      [master_graph.json (via vuelta163_tarea1b_relectura_101.py)] linea 46: en vuelta163_tarea1b_relectura_101.py:46
+       SENAL VIVA      [PENDIENTES.md (via vuelta163_tarea1c_tramo_al_doble.py)] linea 38: en vuelta163_tarea1c_tramo_al_doble.py:38
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta163_tarea4a_mutacion_cobertura.py)] linea 56: en vuelta163_tarea4a_mutacion_cobertura.py:56
+       SENAL VIVA      [verificar_re_sellado.py (via vuelta163_tarea4b_mutacion_re_sellado.py)] linea 93: en vuelta163_tarea4b_mutacion_re_sellado.py:93
+       SENAL VIVA      [%s:docs/loop/REPORTE.md (via vuelta163_tarea4b_mutacion_re_sellado.py)] linea 157: en vuelta163_tarea4b_mutacion_re_sellado.py:157
+       SENAL VIVA      [docs/loop/ACTA_AUDITOR.md (via vuelta163_tarea5a_cotejo_contador.py)] linea 184: en vuelta163_tarea5a_cotejo_contador.py:184
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta163_tarea5a_cotejo_contador.py)] linea 184: en vuelta163_tarea5a_cotejo_contador.py:184
+       SENAL VIVA      [docs/PENDIENTES.md (via vuelta163_tarea5a_cotejo_contador.py)] linea 185: en vuelta163_tarea5a_cotejo_contador.py:185
+       SENAL VIVA      [ACTA_AUDITOR.md (via vuelta164_tarea1_registrar_acta163.py)] linea 51: en vuelta164_tarea1_registrar_acta163.py:51
+       SENAL VIVA      [docs/PENDIENTES.md (via vuelta164_tarea1_registrar_acta163.py)] linea 271: en vuelta164_tarea1_registrar_acta163.py:271
+       SENAL VIVA      [docs/plan/CORRECCIONES_A_APLICAR.md (via vuelta164_tarea1_registrar_acta163.py)] linea 242: en vuelta164_tarea1_registrar_acta163.py:242
+       SENAL VIVA      [PENDIENTES.md (via vuelta164_tarea1_registrar_acta163.py)] linea 621: en vuelta164_tarea1_registrar_acta163.py:621
+       SENAL VIVA      [ACTA_AUDITOR.md (via vuelta165_tarea1_registrar_acta164.py)] linea 54: en vuelta165_tarea1_registrar_acta164.py:54
+       SENAL VIVA      [docs/PENDIENTES.md (via vuelta165_tarea1_registrar_acta164.py)] linea 239: en vuelta165_tarea1_registrar_acta164.py:239
+       SENAL VIVA      [docs/plan/CORRECCIONES_A_APLICAR.md (via vuelta165_tarea1_registrar_acta164.py)] linea 210: en vuelta165_tarea1_registrar_acta164.py:210
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta165_tarea4_mutacion_sujeto.py)] linea 66: en vuelta165_tarea4_mutacion_sujeto.py:66
+       SENAL VIVA      [docs/loop/ACTA_AUDITOR.md (via vuelta165_tarea4_mutacion_sujeto.py)] linea 67: en vuelta165_tarea4_mutacion_sujeto.py:67
+       SENAL VIVA      [dataset/metadata/master_graph.json (via vuelta165_tarea4_mutacion_sujeto.py)] linea 68: en vuelta165_tarea4_mutacion_sujeto.py:68
+       SENAL VIVA      [verificar_mutaciones_viejas.py (via vuelta165_tarea4_mutacion_sujeto.py)] linea 69: en vuelta165_tarea4_mutacion_sujeto.py:69
+       SENAL VIVA      [tallar_cabecera_reporte.py (via vuelta165_tarea4_mutacion_sujeto.py)] linea 70: en vuelta165_tarea4_mutacion_sujeto.py:70
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 76: en vuelta165_tarea4_sujeto_de_los_41.py:76
+       SENAL VIVA      [docs/loop/ACTA_AUDITOR.md (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 80: en vuelta165_tarea4_sujeto_de_los_41.py:80
+       SENAL VIVA      [docs/PENDIENTES.md (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 82: en vuelta165_tarea4_sujeto_de_los_41.py:82
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 84: en vuelta165_tarea4_sujeto_de_los_41.py:84
+       SENAL VIVA      [docs/plan/CORRECCIONES_A_APLICAR.md (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 86: en vuelta165_tarea4_sujeto_de_los_41.py:86
+       SENAL VIVA      [docs/plan/PASO_NODO_CALIBRADO.jsonl (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 88: en vuelta165_tarea4_sujeto_de_los_41.py:88
+       SENAL VIVA      [docs/plan/INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 90: en vuelta165_tarea4_sujeto_de_los_41.py:90
+       SENAL VIVA      [dataset/metadata/master_graph.json (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 92: en vuelta165_tarea4_sujeto_de_los_41.py:92
+       SENAL VIVA      [scripts/loop/verificar_mutaciones_viejas.py (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 97: en vuelta165_tarea4_sujeto_de_los_41.py:97
+       SENAL VIVA      [master_graph.json (via vuelta89_tarea4_guarda_op_c05.py)] linea 134: en vuelta89_tarea4_guarda_op_c05.py:134
+       SENAL CONGELADA [vuelta139_2b_mutaciones.py] linea 38: ORIGINAL = os.path.join(LOOP_SCRIPTS, "vuelta139_2b_mutaciones.py")
+       SENAL CONGELADA [_v140_copia_mutacion_ancla.py] linea 39: COPIA = os.path.join(LOOP_SCRIPTS, "_v140_copia_mutacion_ancla.py")
+       CADENA (transitividad): vuelta140_2c_mutacion_ancla.py -> verificar_mutaciones_viejas.py; vuelta140_2c_mutacion_ancla.py -> vuelta139_2b_mutaciones.py; verificar_mutaciones_viejas.py -> vuelta133_tarea2e_mutacion_cifras.py; verificar_mutaciones_viejas.py -> vuelta135_2e_mutacion_1.py; verificar_mutaciones_viejas.py -> vuelta135_2e_mutacion_2.py; verificar_mutaciones_viejas.py -> vuelta135_2e_mutacion_3.py; verificar_mutaciones_viejas.py -> vuelta140_2a_mutaciones.py; verificar_mutaciones_viejas.py -> vuelta141_2_mutaciones.py; verificar_mutaciones_viejas.py -> vuelta143_2a_mutaciones.py; verificar_mutaciones_viejas.py -> vuelta143_2b_mutacion_bateria.py; verificar_mutaciones_viejas.py -> vuelta143_2c_mutacion_positivo.py; verificar_mutaciones_viejas.py -> vuelta144_2a_mutaciones.py; verificar_mutaciones_viejas.py -> vuelta144_2b_mutacion_giro.py; verificar_mutaciones_viejas.py -> vuelta144_2d_mutacion_cobertura.py; verificar_mutaciones_viejas.py -> vuelta144_3a_mutaciones.py; verificar_mutaciones_viejas.py -> vuelta144_3b_mutacion_negativa.py; verificar_mutaciones_viejas.py -> vuelta144_3c_caso_positivo_1190.py; verificar_mutaciones_viejas.py -> vuelta145_2a_mutacion_ancla_unica.py; verificar_mutaciones_viejas.py -> vuelta145_2b_mutacion_arneses.py; verificar_mutaciones_viejas.py -> vuelta145_2c_mutacion_censo.py; verificar_mutaciones_viejas.py -> vuelta146_2b_mutacion_ausencias.py; verificar_mutaciones_viejas.py -> vuelta147_2c_mutacion_vitalidad.py; verificar_mutaciones_viejas.py -> vuelta147_3d_mutacion_nomina.py; verificar_mutaciones_viejas.py -> vuelta147_3e_simular_a26.py; verificar_mutaciones_viejas.py -> vuelta148_0d_mutacion_corredor.py; verificar_mutaciones_viejas.py -> vuelta148_1a_mutacion_embebido.py; verificar_mutaciones_viejas.py -> vuelta148_2a_mutacion_nomina_commiteada.py; verificar_mutaciones_viejas.py -> vuelta148_2b_mutacion_cifras_conjunto.py; verificar_mutaciones_viejas.py -> vuelta148_2c_mutacion_vara_parada.py; verificar_mutaciones_viejas.py -> vuelta148_2d_mutacion_exencion.py; verificar_mutaciones_viejas.py -> vuelta150_5c_mutacion_ciclo.py; verificar_mutaciones_viejas.py -> vuelta154_tarea2d_mutacion_guarda.py; verificar_mutaciones_viejas.py -> vuelta154_tarea6_mutacion_corredor.py; verificar_mutaciones_viejas.py -> vuelta156_tarea4b_mutacion_tallador.py; verificar_mutaciones_viejas.py -> vuelta156_tarea5d_mutacion_corredor.py; verificar_mutaciones_viejas.py -> vuelta157_tarea4b_mutacion_tachado.py; verificar_mutaciones_viejas.py -> vuelta157_tarea5c_mutacion_ruido.py; verificar_mutaciones_viejas.py -> vuelta157_tarea6b_mutacion_re_sellado.py; verificar_mutaciones_viejas.py -> vuelta159_tarea6c_mutacion_exencion.py; verificar_mutaciones_viejas.py -> vuelta160_tarea6b_mutacion_puerta.py; verificar_mutaciones_viejas.py -> vuelta160_tarea7c_mutacion_guarda_cita.py; verificar_mutaciones_viejas.py -> vuelta161_tarea1a_mutacion_alcance.py; verificar_mutaciones_viejas.py -> vuelta162_tarea1a_mutacion_serie.py; verificar_mutaciones_viejas.py -> vuelta162_tarea2a_mutacion_puerta.py; verificar_mutaciones_viejas.py -> vuelta162_tarea2b_mutacion_excepcion.py; verificar_mutaciones_viejas.py -> vuelta162_tarea3_mutacion_fila.py; verificar_mutaciones_viejas.py -> vuelta163_tarea1b_mutacion_relectura.py; verificar_mutaciones_viejas.py -> vuelta163_tarea1c_mutacion_tramo.py; verificar_mutaciones_viejas.py -> vuelta163_tarea2_mutacion_nomina.py; verificar_mutaciones_viejas.py -> vuelta163_tarea4a_mutacion_cobertura.py; verificar_mutaciones_viejas.py -> vuelta163_tarea4b_mutacion_re_sellado.py; verificar_mutaciones_viejas.py -> vuelta163_tarea5a_mutacion_contador.py; verificar_mutaciones_viejas.py -> vuelta164_tarea1_mutacion_registro.py; verificar_mutaciones_viejas.py -> vuelta164_tarea4_mutacion_005.py; verificar_mutaciones_viejas.py -> vuelta165_tarea1_mutacion_registro.py; verificar_mutaciones_viejas.py -> vuelta165_tarea2_mutacion_censo.py; verificar_mutaciones_viejas.py -> vuelta165_tarea4_mutacion_sujeto.py; vuelta139_2b_mutaciones.py -> verificar_cifras_del_reporte.py; vuelta140_2a_mutaciones.py -> tallar_estado_de_fase.py; vuelta143_2a_mutaciones.py -> huella_de_contenido.py; vuelta143_2c_mutacion_positivo.py -> vuelta141_2e_caso_positivo_fase03.py; vuelta144_2a_mutaciones.py -> vuelta144_1b_medir_ventana.py; vuelta144_2b_mutacion_giro.py -> vuelta143_3c_girar_arista.py; vuelta144_3b_mutacion_negativa.py -> _v144_opm04_328.py; vuelta144_3b_mutacion_negativa.py -> _v144_opm04_367.py; vuelta144_3b_mutacion_negativa.py -> generar_plan_de_fusion_de_mesa.py; vuelta144_3b_mutacion_negativa.py -> vuelta144_3b_sellar_mesa_opm04.py; vuelta144_3b_mutacion_negativa.py -> vuelta145_2b_prestado_congelado.py; vuelta146_2b_mutacion_ausencias.py -> verificar_ausencias_del_reporte.py; vuelta147_2c_mutacion_vitalidad.py -> barrer_ausencia.py; vuelta147_3d_mutacion_nomina.py -> verificar_nomina_sellada.py; vuelta147_3e_simular_a26.py -> aduana_semantica.py; vuelta148_0d_mutacion_corredor.py -> verificar_apertura_sellada.py; vuelta148_2c_mutacion_vara_parada.py -> vuelta145_3b_vara_de_codigo_fase07.py; vuelta150_5c_mutacion_ciclo.py -> diagnostico_ciclo_a_medias.py; vuelta156_tarea4b_mutacion_tallador.py -> _v156_tallador_viejo_copia.py; vuelta157_tarea4b_mutacion_tachado.py -> vuelta152_registro_de_citas_opc05.py; vuelta157_tarea6b_mutacion_re_sellado.py -> verificar_re_sellado.py; vuelta160_tarea7c_mutacion_guarda_cita.py -> vuelta159_motor_veredictos.py; vuelta161_tarea1a_mutacion_alcance.py -> vuelta159_tarea5_alcance_p16.py; vuelta161_tarea1a_mutacion_alcance.py -> vuelta160_tarea1_registrar_adjudicaciones.py; vuelta161_tarea1a_mutacion_alcance.py -> vuelta160_tarea3_remedio_p16.py; vuelta161_tarea1a_mutacion_alcance.py -> vuelta160_tarea3b_caso_positivo.py; vuelta161_tarea1a_mutacion_alcance.py -> vuelta89_tarea4_guarda_op_c05.py; vuelta162_tarea1a_mutacion_serie.py -> serie_de_registros.py; vuelta162_tarea3_mutacion_fila.py -> _v162_cifras_vieja_copia.py; vuelta163_tarea1b_mutacion_relectura.py -> vuelta163_tarea1b_relectura_101.py; vuelta163_tarea1c_mutacion_tramo.py -> vuelta163_tarea1c_tramo_al_doble.py; vuelta163_tarea4a_mutacion_cobertura.py -> _v163_cifras_vieja_copia.py; vuelta163_tarea4b_mutacion_re_sellado.py -> _v163_re_sellado_vieja_copia.py; vuelta163_tarea5a_mutacion_contador.py -> vuelta163_tarea5a_cotejo_contador.py; vuelta164_tarea1_mutacion_registro.py -> vuelta164_tarea1_registrar_acta163.py; vuelta164_tarea4_mutacion_005.py -> vuelta164_tarea4_dossier_005.py; vuelta165_tarea1_mutacion_registro.py -> vuelta165_tarea1_registrar_acta164.py; vuelta165_tarea4_mutacion_sujeto.py -> _v115_mut_z_copia.py; vuelta165_tarea4_mutacion_sujeto.py -> tallar_cabecera_reporte.py; vuelta165_tarea4_mutacion_sujeto.py -> vuelta115_guardas_cierre.py; vuelta165_tarea4_mutacion_sujeto.py -> vuelta165_tarea4_sujeto_de_los_41.py; verificar_cifras_del_reporte.py -> verificar_cifras_del_plan.py; vuelta143_3c_girar_arista.py -> vuelta141_3_retirar_vuelta.py; generar_plan_de_fusion_de_mesa.py -> generar_plan_del_lote.py; vuelta145_3b_vara_de_codigo_fase07.py -> verificar_fuente_canonico.py; vuelta145_3b_vara_de_codigo_fase07.py -> vuelta146_3c_mutacion_aduana.py; vuelta159_tarea5_alcance_p16.py -> vuelta159_tarea1_registrar_adjudicaciones.py; vuelta160_tarea1_registrar_adjudicaciones.py -> vuelta150_3_relectura_expediente.py; vuelta160_tarea1_registrar_adjudicaciones.py -> vuelta159_tarea3_lote2.py; vuelta160_tarea1_registrar_adjudicaciones.py -> vuelta159_tarea9_marcador_cierre.py; vuelta160_tarea3_remedio_p16.py -> vuelta142_2c_mutaciones.py; vuelta160_tarea3_remedio_p16.py -> vuelta144_3b_giro_sin_flecha.py; vuelta163_tarea5a_cotejo_contador.py -> _v163_contador_viejo_copia.py; vuelta163_tarea5a_cotejo_contador.py -> contador_de_segundas_lecturas.py; vuelta163_tarea5a_cotejo_contador.py -> vuelta161_tarea1c_segunda_lectura.py; _v115_mut_z_copia.py -> contar_cierre_efectivo.py; _v115_mut_z_copia.py -> tallar_cifras_de_antes.py; _v115_mut_z_copia.py -> tallar_nombre_de_operacion.py; _v115_mut_z_copia.py -> tallar_veredictos_reporte.py; _v115_mut_z_copia.py -> verificar_cabecera_pegada_o_condensada.py; _v115_mut_z_copia.py -> verificar_cobertura_bolsa_tres_vias.py; _v115_mut_z_copia.py -> verificar_vuelco_de_veredicto.py; _v115_mut_z_copia.py -> vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py; _v115_mut_z_copia.py -> vuelta113_tarea2_mutacion_tsc.py; _v115_mut_z_copia.py -> vuelta114_tarea2_1_barrido_talladores.py; verificar_fuente_canonico.py -> vuelta136_simular_ops11.py; vuelta159_tarea1_registrar_adjudicaciones.py -> vuelta156_tarea2b_decidir_ld097.py; vuelta159_tarea1_registrar_adjudicaciones.py -> vuelta157_tarea2_lote1_veredictos.py; vuelta159_tarea1_registrar_adjudicaciones.py -> vuelta157_tarea8_dos_especies_de_d.py; vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py -> censar_alcance_de_la_vara.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 144 artefacto(s) vivo(s): %s:dataset/metadata/master_graph.json (via vuelta152_registro_de_citas_opc05.py), %s:docs/loop/REPORTE.md (via vuelta163_tarea4b_mutacion_re_sellado.py), %s:docs/plan/OPERACIONES.jsonl (via verificar_cifras_del_plan.py), %s:docs/plan/OPERACIONES.jsonl (via vuelta150_3_relectura_expediente.py), 23bde6cd:docs/loop/REPORTE.md (via vuelta139_2b_mutaciones.py), ACTA_AUDITOR.md (via _v163_contador_viejo_copia.py), ACTA_AUDITOR.md (via vuelta161_tarea1c_segunda_lectura.py), ACTA_AUDITOR.md (via vuelta164_tarea1_registrar_acta163.py), ACTA_AUDITOR.md (via vuelta165_tarea1_registrar_acta164.py), CENSO Y ARISTAS, CONTADOS DE dataset/metadata/master_graph.json (via vuelta159_tarea9_marcador_cierre.py), CORRECCIONES_A_APLICAR.md (via serie_de_registros.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta152_registro_de_citas_opc05.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta156_tarea2b_decidir_ld097.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta157_tarea2_lote1_veredictos.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta157_tarea8_dos_especies_de_d.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta159_motor_veredictos.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta159_tarea9_marcador_cierre.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta160_tarea7c_mutacion_guarda_cita.py), MARCADOR DEL ARCHIVO, CONTADO DE docs/INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta159_tarea9_marcador_cierre.py), OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py), OPERACIONES.jsonl (via tallar_nombre_de_operacion.py), OPERACIONES.jsonl (via verificar_cifras_del_plan.py), OPERACIONES.jsonl (via vuelta144_1b_medir_ventana.py), OPERACIONES.jsonl (via vuelta144_3b_mutacion_negativa.py), OPERACIONES.jsonl (via vuelta145_3b_vara_de_codigo_fase07.py), OPERACIONES.jsonl (via vuelta150_3_relectura_expediente.py), OPERACIONES.jsonl (via vuelta162_tarea2b_mutacion_excepcion.py), PENDIENTES.md (via serie_de_registros.py), PENDIENTES.md (via vuelta163_tarea1c_tramo_al_doble.py), PENDIENTES.md (via vuelta164_tarea1_registrar_acta163.py), REPORTE.md (via _v162_cifras_vieja_copia.py), REPORTE.md (via _v163_cifras_vieja_copia.py), REPORTE.md (via tallar_cifras_de_antes.py), REPORTE.md (via verificar_ausencias_del_reporte.py), REPORTE.md (via verificar_cabecera_pegada_o_condensada.py), REPORTE.md (via verificar_cifras_del_reporte.py), REPORTE.md (via verificar_nomina_sellada.py), b7f07648:docs/loop/REPORTE.md (via vuelta145_2a_mutacion_ancla_unica.py), c02b9fad:docs/loop/REPORTE.md (via vuelta145_2a_mutacion_ancla_unica.py), dataset/metadata/master_graph.json (via _v156_tallador_viejo_copia.py), dataset/metadata/master_graph.json (via diagnostico_ciclo_a_medias.py), dataset/metadata/master_graph.json (via tallar_estado_de_fase.py), dataset/metadata/master_graph.json (via vuelta140_2a_mutaciones.py), dataset/metadata/master_graph.json (via vuelta141_2e_caso_positivo_fase03.py), dataset/metadata/master_graph.json (via vuelta162_tarea2a_mutacion_puerta.py), dataset/metadata/master_graph.json (via vuelta165_tarea4_mutacion_sujeto.py), dataset/metadata/master_graph.json (via vuelta165_tarea4_sujeto_de_los_41.py), dataset/nodos/%s.json (via vuelta144_3b_mutacion_negativa.py), dataset/nodos/%s.json (via vuelta145_2b_prestado_congelado.py), dataset/nodos/un_nodo_cualquiera.json (via vuelta148_0d_mutacion_corredor.py), docs/INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta160_tarea7c_mutacion_guarda_cita.py), docs/PENDIENTES.md (via vuelta163_tarea5a_cotejo_contador.py), docs/PENDIENTES.md (via vuelta164_tarea1_registrar_acta163.py), docs/PENDIENTES.md (via vuelta165_tarea1_registrar_acta164.py), docs/PENDIENTES.md (via vuelta165_tarea4_sujeto_de_los_41.py), docs/loop/ACTA_AUDITOR.md (via vuelta163_tarea5a_cotejo_contador.py), docs/loop/ACTA_AUDITOR.md (via vuelta165_tarea4_mutacion_sujeto.py), docs/loop/ACTA_AUDITOR.md (via vuelta165_tarea4_sujeto_de_los_41.py), docs/loop/REPORTE.md (via _v115_mut_z_copia.py), docs/loop/REPORTE.md (via _v163_re_sellado_vieja_copia.py), docs/loop/REPORTE.md (via tallar_veredictos_reporte.py), docs/loop/REPORTE.md (via verificar_re_sellado.py), docs/loop/REPORTE.md (via vuelta115_guardas_cierre.py), docs/loop/REPORTE.md (via vuelta139_2b_mutaciones.py), docs/loop/REPORTE.md (via vuelta146_2b_mutacion_ausencias.py), docs/loop/REPORTE.md (via vuelta147_2c_mutacion_vitalidad.py), docs/loop/REPORTE.md (via vuelta163_tarea5a_cotejo_contador.py), docs/loop/REPORTE.md (via vuelta165_tarea4_mutacion_sujeto.py), docs/loop/REPORTE.md (via vuelta165_tarea4_sujeto_de_los_41.py), docs/plan/CORRECCIONES_A_APLICAR.md (via vuelta164_tarea1_registrar_acta163.py), docs/plan/CORRECCIONES_A_APLICAR.md (via vuelta165_tarea1_registrar_acta164.py), docs/plan/CORRECCIONES_A_APLICAR.md (via vuelta165_tarea4_sujeto_de_los_41.py), docs/plan/INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta165_tarea4_sujeto_de_los_41.py), docs/plan/OPERACIONES.jsonl (via _v156_tallador_viejo_copia.py), docs/plan/OPERACIONES.jsonl (via tallar_estado_de_fase.py), docs/plan/OPERACIONES.jsonl (via vuelta140_2a_mutaciones.py), docs/plan/OPERACIONES.jsonl (via vuelta141_2e_caso_positivo_fase03.py), docs/plan/OPERACIONES.jsonl (via vuelta144_3b_mutacion_negativa.py), docs/plan/OPERACIONES.jsonl (via vuelta165_tarea4_sujeto_de_los_41.py), docs/plan/PASO_NODO_CALIBRADO.jsonl (via vuelta165_tarea4_sujeto_de_los_41.py), e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_1.py), e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_2.py), e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_3.py), e12e4c36:docs/loop/REPORTE.md (via vuelta139_2b_mutaciones.py), ficha leida de: docs/plan/OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py), ficha leida de: docs/plan/OPERACIONES.jsonl (via vuelta144_3b_sellar_mesa_opm04.py), fuente: scripts/loop/verificar_mutaciones_viejas.py (via vuelta159_tarea5_alcance_p16.py), guarda importada de: scripts/loop/verificar_re_sellado.py (via vuelta157_tarea6b_mutacion_re_sellado.py), guarda importada de: scripts/loop/verificar_re_sellado.py (via vuelta159_tarea6c_mutacion_exencion.py), master_graph.json (via aduana_semantica.py), master_graph.json (via diagnostico_ciclo_a_medias.py), master_graph.json (via vuelta145_3b_vara_de_codigo_fase07.py), master_graph.json (via vuelta150_5c_mutacion_ciclo.py), master_graph.json (via vuelta152_registro_de_citas_opc05.py), master_graph.json (via vuelta157_tarea2_lote1_veredictos.py), master_graph.json (via vuelta159_motor_veredictos.py), master_graph.json (via vuelta159_tarea9_marcador_cierre.py), master_graph.json (via vuelta163_tarea1b_relectura_101.py), master_graph.json (via vuelta89_tarea4_guarda_op_c05.py), scripts/loop/contar_cierre_efectivo.py (via _v115_mut_z_copia.py), scripts/loop/contar_cierre_efectivo.py (via vuelta115_guardas_cierre.py), scripts/loop/tallar_cabecera_reporte.py (via _v115_mut_z_copia.py), scripts/loop/tallar_cabecera_reporte.py (via vuelta115_guardas_cierre.py), scripts/loop/tallar_cabecera_reporte.py (via vuelta159_tarea1_registrar_adjudicaciones.py), scripts/loop/tallar_cifras_de_antes.py (via _v115_mut_z_copia.py), scripts/loop/tallar_cifras_de_antes.py (via vuelta115_guardas_cierre.py), scripts/loop/tallar_estado_de_fase.py (via vuelta156_tarea4b_mutacion_tallador.py), scripts/loop/tallar_nombre_de_operacion.py (via _v115_mut_z_copia.py), scripts/loop/tallar_nombre_de_operacion.py (via vuelta115_guardas_cierre.py), scripts/loop/tallar_veredictos_reporte.py (via _v115_mut_z_copia.py), scripts/loop/tallar_veredictos_reporte.py (via vuelta115_guardas_cierre.py), scripts/loop/verificar_apertura_sellada.py (via _v115_mut_z_copia.py), scripts/loop/verificar_apertura_sellada.py (via vuelta115_guardas_cierre.py), scripts/loop/verificar_apertura_sellada.py (via vuelta159_tarea1_registrar_adjudicaciones.py), scripts/loop/verificar_apertura_sellada.py (via vuelta160_tarea6b_mutacion_puerta.py), scripts/loop/verificar_cabecera_pegada_o_condensada.py (via _v115_mut_z_copia.py), scripts/loop/verificar_cabecera_pegada_o_condensada.py (via vuelta115_guardas_cierre.py), scripts/loop/verificar_cifras_del_reporte.py (via vuelta139_2b_mutaciones.py), scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via _v115_mut_z_copia.py), scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via vuelta115_guardas_cierre.py), scripts/loop/verificar_mutaciones_viejas.py (via vuelta157_tarea5c_mutacion_ruido.py), scripts/loop/verificar_mutaciones_viejas.py (via vuelta165_tarea4_sujeto_de_los_41.py), scripts/loop/verificar_re_sellado.py (via vuelta159_tarea1_registrar_adjudicaciones.py), scripts/loop/verificar_vuelco_de_veredicto.py (via _v115_mut_z_copia.py), scripts/loop/verificar_vuelco_de_veredicto.py (via vuelta115_guardas_cierre.py), tallar_cabecera_reporte.py (via tallar_veredictos_reporte.py), tallar_cabecera_reporte.py (via verificar_cabecera_pegada_o_condensada.py), tallar_cabecera_reporte.py (via vuelta165_tarea4_mutacion_sujeto.py), tallar_estado_de_fase.py (via vuelta150_3_relectura_expediente.py), verificar_apertura_sellada.py (via vuelta156_tarea5d_mutacion_corredor.py), verificar_apertura_sellada.py (via vuelta160_tarea6b_mutacion_puerta.py), verificar_ausencias_del_reporte.py (via vuelta146_2b_mutacion_ausencias.py), verificar_ausencias_del_reporte.py (via vuelta147_2c_mutacion_vitalidad.py), verificar_cifras_del_reporte.py (via vuelta133_tarea2e_mutacion_cifras.py), verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_1.py), verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_2.py), verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_3.py), verificar_cifras_del_reporte.py (via vuelta163_tarea4a_mutacion_cobertura.py), verificar_mutaciones_viejas.py (via vuelta139_2b_mutaciones.py), verificar_mutaciones_viejas.py (via vuelta159_tarea5_alcance_p16.py), verificar_mutaciones_viejas.py (via vuelta165_tarea4_mutacion_sujeto.py), verificar_re_sellado.py (via vuelta157_tarea6b_mutacion_re_sellado.py), verificar_re_sellado.py (via vuelta159_tarea6c_mutacion_exencion.py), verificar_re_sellado.py (via vuelta163_tarea4b_mutacion_re_sellado.py)
+   24. vuelta141_2d_mutacion_commits.py
+       corrida de HOY: exit 1, NO MORDIO, 0.2s
+       primera linea util: (estado y cronometro reusados de docs/loop/SALIDA_V165_T4_SUJETO_41.txt)
+       SENAL VIVA      [tallar_cabecera_reporte.py] linea 64: os.path.join(RAIZ, "scripts", "loop", "tallar_cabecera_reporte.py"),
+       SENAL CONGELADA [tempfile] linea 35: import tempfile
+       SENAL CONGELADA [mkdtemp] linea 89: tmp = tempfile.mkdtemp(prefix="v141_2d_")
+       SIN CLASIFICAR   [REPORTE_DE_MENTIRA.md] linea 91: ruta = os.path.join(tmp, "REPORTE_DE_MENTIRA.md")
+       CADENA (transitividad): vuelta141_2d_mutacion_commits.py -> tallar_cabecera_reporte.py
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   25. vuelta142_2a_mutaciones.py
+       corrida de HOY: exit 0, OK, 0.6s
+       SENAL VIVA      [OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 96: en verificar_cifras_del_plan.py:96
+       SENAL VIVA      [%s:docs/plan/OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 147: en verificar_cifras_del_plan.py:147
+       SENAL VIVA      [REPORTE.md (via verificar_cifras_del_reporte.py)] linea 394: en verificar_cifras_del_reporte.py:394
+       SENAL VIVA      [verificar_cifras_del_reporte.py] linea 98: "verificar_cifras_del_reporte.py"),
+       SENAL CONGELADA [SALIDA_V142_1B_DESGLOSE_DIRECCIONES.txt] linea 46: FICHERO_CITADO = "SALIDA_V142_1B_DESGLOSE_DIRECCIONES.txt"
+       SIN CLASIFICAR   [_prueba_v142_2a_reporte.md] linea 52: PRUEBA_A = os.path.join(LOOP, "_prueba_v142_2a_reporte.md")
+       SIN CLASIFICAR   [_prueba_v142_2a_cobertura.md] linea 53: PRUEBA_B = os.path.join(LOOP, "_prueba_v142_2a_cobertura.md")
+       CADENA (transitividad): vuelta142_2a_mutaciones.py -> verificar_cifras_del_reporte.py; verificar_cifras_del_reporte.py -> verificar_cifras_del_plan.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 4 artefacto(s) vivo(s): %s:docs/plan/OPERACIONES.jsonl (via verificar_cifras_del_plan.py), OPERACIONES.jsonl (via verificar_cifras_del_plan.py), REPORTE.md (via verificar_cifras_del_reporte.py), verificar_cifras_del_reporte.py
+   26. vuelta142_2b_mutacion_commits.py
+       corrida de HOY: exit 0, OK, 4.2s
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py] linea 51: REL_TALLADOR = "scripts/loop/tallar_cabecera_reporte.py"
+       SENAL VIVA      [docs/loop/REPORTE.md] linea 52: REL_REPORTE = "docs/loop/REPORTE.md"
+       SENAL VIVA      [tallar_cabecera_reporte.py] linea 50: TALLADOR = os.path.join(AQUI, "tallar_cabecera_reporte.py")
+       SENAL CONGELADA [git show sobre una ref] linea 66: r = subprocess.run(["git", "show", "%s:%s" % (ref, rel)], cwd=RAIZ, capture_output=True)
+       SIN CLASIFICAR   [docs/loop/SALIDA_V%d_HEAD_CIERRE.txt] linea 53: REL_SELLO = "docs/loop/SALIDA_V%d_HEAD_CIERRE.txt" % VUELTA
+       SIN CLASIFICAR   [_prueba_v142_2b_reporte141.md] linea 55: SUJETO = os.path.join(LOOP, "_prueba_v142_2b_reporte141.md")
+       SIN CLASIFICAR   [_prueba_v142_2b_reporte141_mutado.md] linea 56: SUJETO_MUTADO = os.path.join(LOOP, "_prueba_v142_2b_reporte141_mutado.md")
+       SIN CLASIFICAR   [_prueba_v142_2b_tallador_viejo.py] linea 57: TALLADOR_VIEJO = os.path.join(AQUI, "_prueba_v142_2b_tallador_viejo.py")
+       CADENA (transitividad): vuelta142_2b_mutacion_commits.py -> tallar_cabecera_reporte.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 3 artefacto(s) vivo(s): docs/loop/REPORTE.md, scripts/loop/tallar_cabecera_reporte.py, tallar_cabecera_reporte.py
+   27. vuelta142_2c_mutaciones.py
+       corrida de HOY: exit 0, OK, 1.1s
+       SENAL VIVA      [dataset/metadata/master_graph.json (via tallar_estado_de_fase.py)] linea 307: en tallar_estado_de_fase.py:307
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via tallar_estado_de_fase.py)] linea 308: en tallar_estado_de_fase.py:308
+       SENAL VIVA      [git sobre el arbol de trabajo] linea 257: sucio = subprocess.run(["git", "status", "--porcelain", "--", "dataset/", "docs/plan/"],
+       CADENA (transitividad): vuelta142_2c_mutaciones.py -> huella_de_contenido.py; vuelta142_2c_mutaciones.py -> tallar_estado_de_fase.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 3 artefacto(s) vivo(s): dataset/metadata/master_graph.json (via tallar_estado_de_fase.py), docs/plan/OPERACIONES.jsonl (via tallar_estado_de_fase.py), git sobre el arbol de trabajo
+   28. vuelta142_2d_mutacion_bateria.py
+       corrida de HOY: exit 0, OK, 507.6s
+       SENAL VIVA      [scripts/loop/tallar_veredictos_reporte.py (via _v115_mut_z_copia.py)] linea 54: en _v115_mut_z_copia.py:54
+       SENAL VIVA      [docs/loop/REPORTE.md (via _v115_mut_z_copia.py)] linea 62: en _v115_mut_z_copia.py:62
+       SENAL VIVA      [scripts/loop/verificar_cabecera_pegada_o_condensada.py (via _v115_mut_z_copia.py)] linea 63: en _v115_mut_z_copia.py:63
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py (via _v115_mut_z_copia.py)] linea 64: en _v115_mut_z_copia.py:64
+       SENAL VIVA      [scripts/loop/tallar_cifras_de_antes.py (via _v115_mut_z_copia.py)] linea 68: en _v115_mut_z_copia.py:68
+       SENAL VIVA      [scripts/loop/tallar_nombre_de_operacion.py (via _v115_mut_z_copia.py)] linea 127: en _v115_mut_z_copia.py:127
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via _v115_mut_z_copia.py)] linea 129: en _v115_mut_z_copia.py:129
+       SENAL VIVA      [scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via _v115_mut_z_copia.py)] linea 133: en _v115_mut_z_copia.py:133
+       SENAL VIVA      [scripts/loop/contar_cierre_efectivo.py (via _v115_mut_z_copia.py)] linea 135: en _v115_mut_z_copia.py:135
+       SENAL VIVA      [scripts/loop/verificar_vuelco_de_veredicto.py (via _v115_mut_z_copia.py)] linea 137: en _v115_mut_z_copia.py:137
+       SENAL VIVA      [dataset/metadata/master_graph.json (via _v156_tallador_viejo_copia.py)] linea 279: en _v156_tallador_viejo_copia.py:279
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via _v156_tallador_viejo_copia.py)] linea 280: en _v156_tallador_viejo_copia.py:280
+       SENAL VIVA      [REPORTE.md (via _v162_cifras_vieja_copia.py)] linea 394: en _v162_cifras_vieja_copia.py:394
+       SENAL VIVA      [REPORTE.md (via _v163_cifras_vieja_copia.py)] linea 394: en _v163_cifras_vieja_copia.py:394
+       SENAL VIVA      [ACTA_AUDITOR.md (via _v163_contador_viejo_copia.py)] linea 50: en _v163_contador_viejo_copia.py:50
+       SENAL VIVA      [docs/loop/REPORTE.md (via _v163_re_sellado_vieja_copia.py)] linea 100: en _v163_re_sellado_vieja_copia.py:100
+       SENAL VIVA      [master_graph.json (via aduana_semantica.py)] linea 92: en aduana_semantica.py:92
+       SENAL VIVA      [master_graph.json (via diagnostico_ciclo_a_medias.py)] linea 57: en diagnostico_ciclo_a_medias.py:57
+       SENAL VIVA      [dataset/metadata/master_graph.json (via diagnostico_ciclo_a_medias.py)] linea 170: en diagnostico_ciclo_a_medias.py:170
+       SENAL VIVA      [OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py)] linea 153: en generar_plan_de_fusion_de_mesa.py:153
+       SENAL VIVA      [ficha leida de: docs/plan/OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py)] linea 520: en generar_plan_de_fusion_de_mesa.py:520
+       SENAL VIVA      [PENDIENTES.md (via serie_de_registros.py)] linea 52: en serie_de_registros.py:52
+       SENAL VIVA      [CORRECCIONES_A_APLICAR.md (via serie_de_registros.py)] linea 53: en serie_de_registros.py:53
+       SENAL VIVA      [REPORTE.md (via tallar_cifras_de_antes.py)] linea 322: en tallar_cifras_de_antes.py:322
+       SENAL VIVA      [dataset/metadata/master_graph.json (via tallar_estado_de_fase.py)] linea 307: en tallar_estado_de_fase.py:307
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via tallar_estado_de_fase.py)] linea 308: en tallar_estado_de_fase.py:308
+       SENAL VIVA      [OPERACIONES.jsonl (via tallar_nombre_de_operacion.py)] linea 46: en tallar_nombre_de_operacion.py:46
+       SENAL VIVA      [tallar_cabecera_reporte.py (via tallar_veredictos_reporte.py)] linea 469: en tallar_veredictos_reporte.py:469
+       SENAL VIVA      [docs/loop/REPORTE.md (via tallar_veredictos_reporte.py)] linea 626: en tallar_veredictos_reporte.py:626
+       SENAL VIVA      [REPORTE.md (via verificar_ausencias_del_reporte.py)] linea 245: en verificar_ausencias_del_reporte.py:245
+       SENAL VIVA      [tallar_cabecera_reporte.py (via verificar_cabecera_pegada_o_condensada.py)] linea 56: en verificar_cabecera_pegada_o_condensada.py:56
+       SENAL VIVA      [REPORTE.md (via verificar_cabecera_pegada_o_condensada.py)] linea 228: en verificar_cabecera_pegada_o_condensada.py:228
+       SENAL VIVA      [OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 96: en verificar_cifras_del_plan.py:96
+       SENAL VIVA      [%s:docs/plan/OPERACIONES.jsonl (via verificar_cifras_del_plan.py)] linea 147: en verificar_cifras_del_plan.py:147
+       SENAL VIVA      [REPORTE.md (via verificar_cifras_del_reporte.py)] linea 394: en verificar_cifras_del_reporte.py:394
+       SENAL VIVA      [REPORTE.md (via verificar_nomina_sellada.py)] linea 105: en verificar_nomina_sellada.py:105
+       SENAL VIVA      [docs/loop/REPORTE.md (via verificar_re_sellado.py)] linea 100: en verificar_re_sellado.py:100
+       SENAL VIVA      [scripts/loop/tallar_veredictos_reporte.py (via vuelta115_guardas_cierre.py)] linea 54: en vuelta115_guardas_cierre.py:54
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta115_guardas_cierre.py)] linea 62: en vuelta115_guardas_cierre.py:62
+       SENAL VIVA      [scripts/loop/verificar_cabecera_pegada_o_condensada.py (via vuelta115_guardas_cierre.py)] linea 63: en vuelta115_guardas_cierre.py:63
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py (via vuelta115_guardas_cierre.py)] linea 64: en vuelta115_guardas_cierre.py:64
+       SENAL VIVA      [scripts/loop/tallar_cifras_de_antes.py (via vuelta115_guardas_cierre.py)] linea 68: en vuelta115_guardas_cierre.py:68
+       SENAL VIVA      [scripts/loop/tallar_nombre_de_operacion.py (via vuelta115_guardas_cierre.py)] linea 127: en vuelta115_guardas_cierre.py:127
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via vuelta115_guardas_cierre.py)] linea 129: en vuelta115_guardas_cierre.py:129
+       SENAL VIVA      [scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via vuelta115_guardas_cierre.py)] linea 133: en vuelta115_guardas_cierre.py:133
+       SENAL VIVA      [scripts/loop/contar_cierre_efectivo.py (via vuelta115_guardas_cierre.py)] linea 135: en vuelta115_guardas_cierre.py:135
+       SENAL VIVA      [scripts/loop/verificar_vuelco_de_veredicto.py (via vuelta115_guardas_cierre.py)] linea 137: en vuelta115_guardas_cierre.py:137
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta133_tarea2e_mutacion_cifras.py)] linea 22: en vuelta133_tarea2e_mutacion_cifras.py:22
+       SENAL VIVA      [e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_1.py)] linea 61: en vuelta135_2e_mutacion_1.py:61
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_1.py)] linea 54: en vuelta135_2e_mutacion_1.py:54
+       SENAL VIVA      [e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_2.py)] linea 58: en vuelta135_2e_mutacion_2.py:58
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_2.py)] linea 51: en vuelta135_2e_mutacion_2.py:51
+       SENAL VIVA      [e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_3.py)] linea 80: en vuelta135_2e_mutacion_3.py:80
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_3.py)] linea 61: en vuelta135_2e_mutacion_3.py:61
+       SENAL VIVA      [scripts/loop/verificar_cifras_del_reporte.py (via vuelta139_2b_mutaciones.py)] linea 63: en vuelta139_2b_mutaciones.py:63
+       SENAL VIVA      [e12e4c36:docs/loop/REPORTE.md (via vuelta139_2b_mutaciones.py)] linea 72: en vuelta139_2b_mutaciones.py:72
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta139_2b_mutaciones.py)] linea 74: en vuelta139_2b_mutaciones.py:74
+       SENAL VIVA      [23bde6cd:docs/loop/REPORTE.md (via vuelta139_2b_mutaciones.py)] linea 86: en vuelta139_2b_mutaciones.py:86
+       SENAL VIVA      [verificar_mutaciones_viejas.py (via vuelta139_2b_mutaciones.py)] linea 276: en vuelta139_2b_mutaciones.py:276
+       SENAL VIVA      [dataset/metadata/master_graph.json (via vuelta140_2a_mutaciones.py)] linea 44: en vuelta140_2a_mutaciones.py:44
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via vuelta140_2a_mutaciones.py)] linea 45: en vuelta140_2a_mutaciones.py:45
+       SENAL VIVA      [dataset/metadata/master_graph.json (via vuelta141_2e_caso_positivo_fase03.py)] linea 89: en vuelta141_2e_caso_positivo_fase03.py:89
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via vuelta141_2e_caso_positivo_fase03.py)] linea 91: en vuelta141_2e_caso_positivo_fase03.py:91
+       SENAL VIVA      [OPERACIONES.jsonl (via vuelta144_1b_medir_ventana.py)] linea 39: en vuelta144_1b_medir_ventana.py:39
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via vuelta144_3b_mutacion_negativa.py)] linea 142: en vuelta144_3b_mutacion_negativa.py:142
+       SENAL VIVA      [OPERACIONES.jsonl (via vuelta144_3b_mutacion_negativa.py)] linea 254: en vuelta144_3b_mutacion_negativa.py:254
+       SENAL VIVA      [dataset/nodos/%s.json (via vuelta144_3b_mutacion_negativa.py)] linea 246: en vuelta144_3b_mutacion_negativa.py:246
+       SENAL VIVA      [ficha leida de: docs/plan/OPERACIONES.jsonl (via vuelta144_3b_sellar_mesa_opm04.py)] linea 117: en vuelta144_3b_sellar_mesa_opm04.py:117
+       SENAL VIVA      [b7f07648:docs/loop/REPORTE.md (via vuelta145_2a_mutacion_ancla_unica.py)] linea 54: en vuelta145_2a_mutacion_ancla_unica.py:54
+       SENAL VIVA      [c02b9fad:docs/loop/REPORTE.md (via vuelta145_2a_mutacion_ancla_unica.py)] linea 55: en vuelta145_2a_mutacion_ancla_unica.py:55
+       SENAL VIVA      [dataset/nodos/%s.json (via vuelta145_2b_prestado_congelado.py)] linea 63: en vuelta145_2b_prestado_congelado.py:63
+       SENAL VIVA      [OPERACIONES.jsonl (via vuelta145_3b_vara_de_codigo_fase07.py)] linea 58: en vuelta145_3b_vara_de_codigo_fase07.py:58
+       SENAL VIVA      [master_graph.json (via vuelta145_3b_vara_de_codigo_fase07.py)] linea 310: en vuelta145_3b_vara_de_codigo_fase07.py:310
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta146_2b_mutacion_ausencias.py)] linea 65: en vuelta146_2b_mutacion_ausencias.py:65
+       SENAL VIVA      [verificar_ausencias_del_reporte.py (via vuelta146_2b_mutacion_ausencias.py)] linea 62: en vuelta146_2b_mutacion_ausencias.py:62
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta147_2c_mutacion_vitalidad.py)] linea 85: en vuelta147_2c_mutacion_vitalidad.py:85
+       SENAL VIVA      [verificar_ausencias_del_reporte.py (via vuelta147_2c_mutacion_vitalidad.py)] linea 81: en vuelta147_2c_mutacion_vitalidad.py:81
+       SENAL VIVA      [dataset/nodos/un_nodo_cualquiera.json (via vuelta148_0d_mutacion_corredor.py)] linea 65: en vuelta148_0d_mutacion_corredor.py:65
+       SENAL VIVA      [OPERACIONES.jsonl (via vuelta150_3_relectura_expediente.py)] linea 226: en vuelta150_3_relectura_expediente.py:226
+       SENAL VIVA      [%s:docs/plan/OPERACIONES.jsonl (via vuelta150_3_relectura_expediente.py)] linea 619: en vuelta150_3_relectura_expediente.py:619
+       SENAL VIVA      [tallar_estado_de_fase.py (via vuelta150_3_relectura_expediente.py)] linea 241: en vuelta150_3_relectura_expediente.py:241
+       SENAL VIVA      [master_graph.json (via vuelta150_5c_mutacion_ciclo.py)] linea 43: en vuelta150_5c_mutacion_ciclo.py:43
+       SENAL VIVA      [master_graph.json (via vuelta152_registro_de_citas_opc05.py)] linea 291: en vuelta152_registro_de_citas_opc05.py:291
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta152_registro_de_citas_opc05.py)] linea 292: en vuelta152_registro_de_citas_opc05.py:292
+       SENAL VIVA      [%s:dataset/metadata/master_graph.json (via vuelta152_registro_de_citas_opc05.py)] linea 314: en vuelta152_registro_de_citas_opc05.py:314
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta156_tarea2b_decidir_ld097.py)] linea 65: en vuelta156_tarea2b_decidir_ld097.py:65
+       SENAL VIVA      [scripts/loop/tallar_estado_de_fase.py (via vuelta156_tarea4b_mutacion_tallador.py)] linea 38: en vuelta156_tarea4b_mutacion_tallador.py:38
+       SENAL VIVA      [verificar_apertura_sellada.py (via vuelta156_tarea5d_mutacion_corredor.py)] linea 147: en vuelta156_tarea5d_mutacion_corredor.py:147
+       SENAL VIVA      [master_graph.json (via vuelta157_tarea2_lote1_veredictos.py)] linea 138: en vuelta157_tarea2_lote1_veredictos.py:138
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta157_tarea2_lote1_veredictos.py)] linea 139: en vuelta157_tarea2_lote1_veredictos.py:139
+       SENAL VIVA      [scripts/loop/verificar_mutaciones_viejas.py (via vuelta157_tarea5c_mutacion_ruido.py)] linea 53: en vuelta157_tarea5c_mutacion_ruido.py:53
+       SENAL VIVA      [verificar_re_sellado.py (via vuelta157_tarea6b_mutacion_re_sellado.py)] linea 37: en vuelta157_tarea6b_mutacion_re_sellado.py:37
+       SENAL VIVA      [guarda importada de: scripts/loop/verificar_re_sellado.py (via vuelta157_tarea6b_mutacion_re_sellado.py)] linea 75: en vuelta157_tarea6b_mutacion_re_sellado.py:75
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta157_tarea8_dos_especies_de_d.py)] linea 79: en vuelta157_tarea8_dos_especies_de_d.py:79
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta159_motor_veredictos.py)] linea 75: en vuelta159_motor_veredictos.py:75
+       SENAL VIVA      [master_graph.json (via vuelta159_motor_veredictos.py)] linea 77: en vuelta159_motor_veredictos.py:77
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via vuelta159_tarea1_registrar_adjudicaciones.py)] linea 524: en vuelta159_tarea1_registrar_adjudicaciones.py:524
+       SENAL VIVA      [scripts/loop/tallar_cabecera_reporte.py (via vuelta159_tarea1_registrar_adjudicaciones.py)] linea 525: en vuelta159_tarea1_registrar_adjudicaciones.py:525
+       SENAL VIVA      [scripts/loop/verificar_re_sellado.py (via vuelta159_tarea1_registrar_adjudicaciones.py)] linea 541: en vuelta159_tarea1_registrar_adjudicaciones.py:541
+       SENAL VIVA      [verificar_mutaciones_viejas.py (via vuelta159_tarea5_alcance_p16.py)] linea 89: en vuelta159_tarea5_alcance_p16.py:89
+       SENAL VIVA      [fuente: scripts/loop/verificar_mutaciones_viejas.py (via vuelta159_tarea5_alcance_p16.py)] linea 242: en vuelta159_tarea5_alcance_p16.py:242
+       SENAL VIVA      [verificar_re_sellado.py (via vuelta159_tarea6c_mutacion_exencion.py)] linea 47: en vuelta159_tarea6c_mutacion_exencion.py:47
+       SENAL VIVA      [guarda importada de: scripts/loop/verificar_re_sellado.py (via vuelta159_tarea6c_mutacion_exencion.py)] linea 81: en vuelta159_tarea6c_mutacion_exencion.py:81
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta159_tarea9_marcador_cierre.py)] linea 63: en vuelta159_tarea9_marcador_cierre.py:63
+       SENAL VIVA      [master_graph.json (via vuelta159_tarea9_marcador_cierre.py)] linea 64: en vuelta159_tarea9_marcador_cierre.py:64
+       SENAL VIVA      [MARCADOR DEL ARCHIVO, CONTADO DE docs/INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta159_tarea9_marcador_cierre.py)] linea 106: en vuelta159_tarea9_marcador_cierre.py:106
+       SENAL VIVA      [CENSO Y ARISTAS, CONTADOS DE dataset/metadata/master_graph.json (via vuelta159_tarea9_marcador_cierre.py)] linea 134: en vuelta159_tarea9_marcador_cierre.py:134
+       SENAL VIVA      [scripts/loop/verificar_apertura_sellada.py (via vuelta160_tarea6b_mutacion_puerta.py)] linea 88: en vuelta160_tarea6b_mutacion_puerta.py:88
+       SENAL VIVA      [verificar_apertura_sellada.py (via vuelta160_tarea6b_mutacion_puerta.py)] linea 125: en vuelta160_tarea6b_mutacion_puerta.py:125
+       SENAL VIVA      [docs/INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta160_tarea7c_mutacion_guarda_cita.py)] linea 137: en vuelta160_tarea7c_mutacion_guarda_cita.py:137
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta160_tarea7c_mutacion_guarda_cita.py)] linea 104: en vuelta160_tarea7c_mutacion_guarda_cita.py:104
+       SENAL VIVA      [ACTA_AUDITOR.md (via vuelta161_tarea1c_segunda_lectura.py)] linea 50: en vuelta161_tarea1c_segunda_lectura.py:50
+       SENAL VIVA      [dataset/metadata/master_graph.json (via vuelta162_tarea2a_mutacion_puerta.py)] linea 60: en vuelta162_tarea2a_mutacion_puerta.py:60
+       SENAL VIVA      [OPERACIONES.jsonl (via vuelta162_tarea2b_mutacion_excepcion.py)] linea 70: en vuelta162_tarea2b_mutacion_excepcion.py:70
+       SENAL VIVA      [master_graph.json (via vuelta163_tarea1b_relectura_101.py)] linea 46: en vuelta163_tarea1b_relectura_101.py:46
+       SENAL VIVA      [PENDIENTES.md (via vuelta163_tarea1c_tramo_al_doble.py)] linea 38: en vuelta163_tarea1c_tramo_al_doble.py:38
+       SENAL VIVA      [verificar_cifras_del_reporte.py (via vuelta163_tarea4a_mutacion_cobertura.py)] linea 56: en vuelta163_tarea4a_mutacion_cobertura.py:56
+       SENAL VIVA      [verificar_re_sellado.py (via vuelta163_tarea4b_mutacion_re_sellado.py)] linea 93: en vuelta163_tarea4b_mutacion_re_sellado.py:93
+       SENAL VIVA      [%s:docs/loop/REPORTE.md (via vuelta163_tarea4b_mutacion_re_sellado.py)] linea 157: en vuelta163_tarea4b_mutacion_re_sellado.py:157
+       SENAL VIVA      [docs/loop/ACTA_AUDITOR.md (via vuelta163_tarea5a_cotejo_contador.py)] linea 184: en vuelta163_tarea5a_cotejo_contador.py:184
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta163_tarea5a_cotejo_contador.py)] linea 184: en vuelta163_tarea5a_cotejo_contador.py:184
+       SENAL VIVA      [docs/PENDIENTES.md (via vuelta163_tarea5a_cotejo_contador.py)] linea 185: en vuelta163_tarea5a_cotejo_contador.py:185
+       SENAL VIVA      [ACTA_AUDITOR.md (via vuelta164_tarea1_registrar_acta163.py)] linea 51: en vuelta164_tarea1_registrar_acta163.py:51
+       SENAL VIVA      [docs/PENDIENTES.md (via vuelta164_tarea1_registrar_acta163.py)] linea 271: en vuelta164_tarea1_registrar_acta163.py:271
+       SENAL VIVA      [docs/plan/CORRECCIONES_A_APLICAR.md (via vuelta164_tarea1_registrar_acta163.py)] linea 242: en vuelta164_tarea1_registrar_acta163.py:242
+       SENAL VIVA      [PENDIENTES.md (via vuelta164_tarea1_registrar_acta163.py)] linea 621: en vuelta164_tarea1_registrar_acta163.py:621
+       SENAL VIVA      [ACTA_AUDITOR.md (via vuelta165_tarea1_registrar_acta164.py)] linea 54: en vuelta165_tarea1_registrar_acta164.py:54
+       SENAL VIVA      [docs/PENDIENTES.md (via vuelta165_tarea1_registrar_acta164.py)] linea 239: en vuelta165_tarea1_registrar_acta164.py:239
+       SENAL VIVA      [docs/plan/CORRECCIONES_A_APLICAR.md (via vuelta165_tarea1_registrar_acta164.py)] linea 210: en vuelta165_tarea1_registrar_acta164.py:210
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta165_tarea4_mutacion_sujeto.py)] linea 66: en vuelta165_tarea4_mutacion_sujeto.py:66
+       SENAL VIVA      [docs/loop/ACTA_AUDITOR.md (via vuelta165_tarea4_mutacion_sujeto.py)] linea 67: en vuelta165_tarea4_mutacion_sujeto.py:67
+       SENAL VIVA      [dataset/metadata/master_graph.json (via vuelta165_tarea4_mutacion_sujeto.py)] linea 68: en vuelta165_tarea4_mutacion_sujeto.py:68
+       SENAL VIVA      [verificar_mutaciones_viejas.py (via vuelta165_tarea4_mutacion_sujeto.py)] linea 69: en vuelta165_tarea4_mutacion_sujeto.py:69
+       SENAL VIVA      [tallar_cabecera_reporte.py (via vuelta165_tarea4_mutacion_sujeto.py)] linea 70: en vuelta165_tarea4_mutacion_sujeto.py:70
+       SENAL VIVA      [docs/loop/REPORTE.md (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 76: en vuelta165_tarea4_sujeto_de_los_41.py:76
+       SENAL VIVA      [docs/loop/ACTA_AUDITOR.md (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 80: en vuelta165_tarea4_sujeto_de_los_41.py:80
+       SENAL VIVA      [docs/PENDIENTES.md (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 82: en vuelta165_tarea4_sujeto_de_los_41.py:82
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 84: en vuelta165_tarea4_sujeto_de_los_41.py:84
+       SENAL VIVA      [docs/plan/CORRECCIONES_A_APLICAR.md (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 86: en vuelta165_tarea4_sujeto_de_los_41.py:86
+       SENAL VIVA      [docs/plan/PASO_NODO_CALIBRADO.jsonl (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 88: en vuelta165_tarea4_sujeto_de_los_41.py:88
+       SENAL VIVA      [docs/plan/INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 90: en vuelta165_tarea4_sujeto_de_los_41.py:90
+       SENAL VIVA      [dataset/metadata/master_graph.json (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 92: en vuelta165_tarea4_sujeto_de_los_41.py:92
+       SENAL VIVA      [scripts/loop/verificar_mutaciones_viejas.py (via vuelta165_tarea4_sujeto_de_los_41.py)] linea 97: en vuelta165_tarea4_sujeto_de_los_41.py:97
+       SENAL VIVA      [master_graph.json (via vuelta89_tarea4_guarda_op_c05.py)] linea 134: en vuelta89_tarea4_guarda_op_c05.py:134
+       SENAL VIVA      [verificar_mutaciones_viejas.py] linea 93: fuente = io.open(os.path.join(AQUI, "verificar_mutaciones_viejas.py"),
+       SIN CLASIFICAR   [_prueba_v142_2d_bateria.py] linea 46: COPIA = os.path.join(AQUI, "_prueba_v142_2d_bateria.py")
+       CADENA (transitividad): vuelta142_2d_mutacion_bateria.py -> verificar_mutaciones_viejas.py; verificar_mutaciones_viejas.py -> vuelta133_tarea2e_mutacion_cifras.py; verificar_mutaciones_viejas.py -> vuelta135_2e_mutacion_1.py; verificar_mutaciones_viejas.py -> vuelta135_2e_mutacion_2.py; verificar_mutaciones_viejas.py -> vuelta135_2e_mutacion_3.py; verificar_mutaciones_viejas.py -> vuelta139_2b_mutaciones.py; verificar_mutaciones_viejas.py -> vuelta140_2a_mutaciones.py; verificar_mutaciones_viejas.py -> vuelta141_2_mutaciones.py; verificar_mutaciones_viejas.py -> vuelta143_2a_mutaciones.py; verificar_mutaciones_viejas.py -> vuelta143_2b_mutacion_bateria.py; verificar_mutaciones_viejas.py -> vuelta143_2c_mutacion_positivo.py; verificar_mutaciones_viejas.py -> vuelta144_2a_mutaciones.py; verificar_mutaciones_viejas.py -> vuelta144_2b_mutacion_giro.py; verificar_mutaciones_viejas.py -> vuelta144_2d_mutacion_cobertura.py; verificar_mutaciones_viejas.py -> vuelta144_3a_mutaciones.py; verificar_mutaciones_viejas.py -> vuelta144_3b_mutacion_negativa.py; verificar_mutaciones_viejas.py -> vuelta144_3c_caso_positivo_1190.py; verificar_mutaciones_viejas.py -> vuelta145_2a_mutacion_ancla_unica.py; verificar_mutaciones_viejas.py -> vuelta145_2b_mutacion_arneses.py; verificar_mutaciones_viejas.py -> vuelta145_2c_mutacion_censo.py; verificar_mutaciones_viejas.py -> vuelta146_2b_mutacion_ausencias.py; verificar_mutaciones_viejas.py -> vuelta147_2c_mutacion_vitalidad.py; verificar_mutaciones_viejas.py -> vuelta147_3d_mutacion_nomina.py; verificar_mutaciones_viejas.py -> vuelta147_3e_simular_a26.py; verificar_mutaciones_viejas.py -> vuelta148_0d_mutacion_corredor.py; verificar_mutaciones_viejas.py -> vuelta148_1a_mutacion_embebido.py; verificar_mutaciones_viejas.py -> vuelta148_2a_mutacion_nomina_commiteada.py; verificar_mutaciones_viejas.py -> vuelta148_2b_mutacion_cifras_conjunto.py; verificar_mutaciones_viejas.py -> vuelta148_2c_mutacion_vara_parada.py; verificar_mutaciones_viejas.py -> vuelta148_2d_mutacion_exencion.py; verificar_mutaciones_viejas.py -> vuelta150_5c_mutacion_ciclo.py; verificar_mutaciones_viejas.py -> vuelta154_tarea2d_mutacion_guarda.py; verificar_mutaciones_viejas.py -> vuelta154_tarea6_mutacion_corredor.py; verificar_mutaciones_viejas.py -> vuelta156_tarea4b_mutacion_tallador.py; verificar_mutaciones_viejas.py -> vuelta156_tarea5d_mutacion_corredor.py; verificar_mutaciones_viejas.py -> vuelta157_tarea4b_mutacion_tachado.py; verificar_mutaciones_viejas.py -> vuelta157_tarea5c_mutacion_ruido.py; verificar_mutaciones_viejas.py -> vuelta157_tarea6b_mutacion_re_sellado.py; verificar_mutaciones_viejas.py -> vuelta159_tarea6c_mutacion_exencion.py; verificar_mutaciones_viejas.py -> vuelta160_tarea6b_mutacion_puerta.py; verificar_mutaciones_viejas.py -> vuelta160_tarea7c_mutacion_guarda_cita.py; verificar_mutaciones_viejas.py -> vuelta161_tarea1a_mutacion_alcance.py; verificar_mutaciones_viejas.py -> vuelta162_tarea1a_mutacion_serie.py; verificar_mutaciones_viejas.py -> vuelta162_tarea2a_mutacion_puerta.py; verificar_mutaciones_viejas.py -> vuelta162_tarea2b_mutacion_excepcion.py; verificar_mutaciones_viejas.py -> vuelta162_tarea3_mutacion_fila.py; verificar_mutaciones_viejas.py -> vuelta163_tarea1b_mutacion_relectura.py; verificar_mutaciones_viejas.py -> vuelta163_tarea1c_mutacion_tramo.py; verificar_mutaciones_viejas.py -> vuelta163_tarea2_mutacion_nomina.py; verificar_mutaciones_viejas.py -> vuelta163_tarea4a_mutacion_cobertura.py; verificar_mutaciones_viejas.py -> vuelta163_tarea4b_mutacion_re_sellado.py; verificar_mutaciones_viejas.py -> vuelta163_tarea5a_mutacion_contador.py; verificar_mutaciones_viejas.py -> vuelta164_tarea1_mutacion_registro.py; verificar_mutaciones_viejas.py -> vuelta164_tarea4_mutacion_005.py; verificar_mutaciones_viejas.py -> vuelta165_tarea1_mutacion_registro.py; verificar_mutaciones_viejas.py -> vuelta165_tarea2_mutacion_censo.py; verificar_mutaciones_viejas.py -> vuelta165_tarea4_mutacion_sujeto.py; vuelta133_tarea2e_mutacion_cifras.py -> verificar_cifras_del_reporte.py; vuelta140_2a_mutaciones.py -> tallar_estado_de_fase.py; vuelta143_2a_mutaciones.py -> huella_de_contenido.py; vuelta143_2c_mutacion_positivo.py -> vuelta141_2e_caso_positivo_fase03.py; vuelta144_2a_mutaciones.py -> vuelta144_1b_medir_ventana.py; vuelta144_2b_mutacion_giro.py -> vuelta143_3c_girar_arista.py; vuelta144_3b_mutacion_negativa.py -> _v144_opm04_328.py; vuelta144_3b_mutacion_negativa.py -> _v144_opm04_367.py; vuelta144_3b_mutacion_negativa.py -> generar_plan_de_fusion_de_mesa.py; vuelta144_3b_mutacion_negativa.py -> vuelta144_3b_sellar_mesa_opm04.py; vuelta144_3b_mutacion_negativa.py -> vuelta145_2b_prestado_congelado.py; vuelta146_2b_mutacion_ausencias.py -> verificar_ausencias_del_reporte.py; vuelta147_2c_mutacion_vitalidad.py -> barrer_ausencia.py; vuelta147_3d_mutacion_nomina.py -> verificar_nomina_sellada.py; vuelta147_3e_simular_a26.py -> aduana_semantica.py; vuelta148_0d_mutacion_corredor.py -> verificar_apertura_sellada.py; vuelta148_2c_mutacion_vara_parada.py -> vuelta145_3b_vara_de_codigo_fase07.py; vuelta150_5c_mutacion_ciclo.py -> diagnostico_ciclo_a_medias.py; vuelta156_tarea4b_mutacion_tallador.py -> _v156_tallador_viejo_copia.py; vuelta157_tarea4b_mutacion_tachado.py -> vuelta152_registro_de_citas_opc05.py; vuelta157_tarea6b_mutacion_re_sellado.py -> verificar_re_sellado.py; vuelta160_tarea7c_mutacion_guarda_cita.py -> vuelta159_motor_veredictos.py; vuelta161_tarea1a_mutacion_alcance.py -> vuelta159_tarea5_alcance_p16.py; vuelta161_tarea1a_mutacion_alcance.py -> vuelta160_tarea1_registrar_adjudicaciones.py; vuelta161_tarea1a_mutacion_alcance.py -> vuelta160_tarea3_remedio_p16.py; vuelta161_tarea1a_mutacion_alcance.py -> vuelta160_tarea3b_caso_positivo.py; vuelta161_tarea1a_mutacion_alcance.py -> vuelta89_tarea4_guarda_op_c05.py; vuelta162_tarea1a_mutacion_serie.py -> serie_de_registros.py; vuelta162_tarea3_mutacion_fila.py -> _v162_cifras_vieja_copia.py; vuelta163_tarea1b_mutacion_relectura.py -> vuelta163_tarea1b_relectura_101.py; vuelta163_tarea1c_mutacion_tramo.py -> vuelta163_tarea1c_tramo_al_doble.py; vuelta163_tarea4a_mutacion_cobertura.py -> _v163_cifras_vieja_copia.py; vuelta163_tarea4b_mutacion_re_sellado.py -> _v163_re_sellado_vieja_copia.py; vuelta163_tarea5a_mutacion_contador.py -> vuelta163_tarea5a_cotejo_contador.py; vuelta164_tarea1_mutacion_registro.py -> vuelta164_tarea1_registrar_acta163.py; vuelta164_tarea4_mutacion_005.py -> vuelta164_tarea4_dossier_005.py; vuelta165_tarea1_mutacion_registro.py -> vuelta165_tarea1_registrar_acta164.py; vuelta165_tarea4_mutacion_sujeto.py -> _v115_mut_z_copia.py; vuelta165_tarea4_mutacion_sujeto.py -> tallar_cabecera_reporte.py; vuelta165_tarea4_mutacion_sujeto.py -> vuelta115_guardas_cierre.py; vuelta165_tarea4_mutacion_sujeto.py -> vuelta165_tarea4_sujeto_de_los_41.py; verificar_cifras_del_reporte.py -> verificar_cifras_del_plan.py; vuelta143_3c_girar_arista.py -> vuelta141_3_retirar_vuelta.py; generar_plan_de_fusion_de_mesa.py -> generar_plan_del_lote.py; vuelta145_3b_vara_de_codigo_fase07.py -> verificar_fuente_canonico.py; vuelta145_3b_vara_de_codigo_fase07.py -> vuelta146_3c_mutacion_aduana.py; vuelta159_tarea5_alcance_p16.py -> vuelta159_tarea1_registrar_adjudicaciones.py; vuelta160_tarea1_registrar_adjudicaciones.py -> vuelta150_3_relectura_expediente.py; vuelta160_tarea1_registrar_adjudicaciones.py -> vuelta159_tarea3_lote2.py; vuelta160_tarea1_registrar_adjudicaciones.py -> vuelta159_tarea9_marcador_cierre.py; vuelta160_tarea3_remedio_p16.py -> vuelta142_2c_mutaciones.py; vuelta160_tarea3_remedio_p16.py -> vuelta144_3b_giro_sin_flecha.py; vuelta163_tarea5a_cotejo_contador.py -> _v163_contador_viejo_copia.py; vuelta163_tarea5a_cotejo_contador.py -> contador_de_segundas_lecturas.py; vuelta163_tarea5a_cotejo_contador.py -> vuelta161_tarea1c_segunda_lectura.py; _v115_mut_z_copia.py -> contar_cierre_efectivo.py; _v115_mut_z_copia.py -> tallar_cifras_de_antes.py; _v115_mut_z_copia.py -> tallar_nombre_de_operacion.py; _v115_mut_z_copia.py -> tallar_veredictos_reporte.py; _v115_mut_z_copia.py -> verificar_cabecera_pegada_o_condensada.py; _v115_mut_z_copia.py -> verificar_cobertura_bolsa_tres_vias.py; _v115_mut_z_copia.py -> verificar_vuelco_de_veredicto.py; _v115_mut_z_copia.py -> vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py; _v115_mut_z_copia.py -> vuelta113_tarea2_mutacion_tsc.py; _v115_mut_z_copia.py -> vuelta114_tarea2_1_barrido_talladores.py; verificar_fuente_canonico.py -> vuelta136_simular_ops11.py; vuelta159_tarea1_registrar_adjudicaciones.py -> vuelta156_tarea2b_decidir_ld097.py; vuelta159_tarea1_registrar_adjudicaciones.py -> vuelta157_tarea2_lote1_veredictos.py; vuelta159_tarea1_registrar_adjudicaciones.py -> vuelta157_tarea8_dos_especies_de_d.py; vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py -> censar_alcance_de_la_vara.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 145 artefacto(s) vivo(s): %s:dataset/metadata/master_graph.json (via vuelta152_registro_de_citas_opc05.py), %s:docs/loop/REPORTE.md (via vuelta163_tarea4b_mutacion_re_sellado.py), %s:docs/plan/OPERACIONES.jsonl (via verificar_cifras_del_plan.py), %s:docs/plan/OPERACIONES.jsonl (via vuelta150_3_relectura_expediente.py), 23bde6cd:docs/loop/REPORTE.md (via vuelta139_2b_mutaciones.py), ACTA_AUDITOR.md (via _v163_contador_viejo_copia.py), ACTA_AUDITOR.md (via vuelta161_tarea1c_segunda_lectura.py), ACTA_AUDITOR.md (via vuelta164_tarea1_registrar_acta163.py), ACTA_AUDITOR.md (via vuelta165_tarea1_registrar_acta164.py), CENSO Y ARISTAS, CONTADOS DE dataset/metadata/master_graph.json (via vuelta159_tarea9_marcador_cierre.py), CORRECCIONES_A_APLICAR.md (via serie_de_registros.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta152_registro_de_citas_opc05.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta156_tarea2b_decidir_ld097.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta157_tarea2_lote1_veredictos.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta157_tarea8_dos_especies_de_d.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta159_motor_veredictos.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta159_tarea9_marcador_cierre.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta160_tarea7c_mutacion_guarda_cita.py), MARCADOR DEL ARCHIVO, CONTADO DE docs/INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta159_tarea9_marcador_cierre.py), OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py), OPERACIONES.jsonl (via tallar_nombre_de_operacion.py), OPERACIONES.jsonl (via verificar_cifras_del_plan.py), OPERACIONES.jsonl (via vuelta144_1b_medir_ventana.py), OPERACIONES.jsonl (via vuelta144_3b_mutacion_negativa.py), OPERACIONES.jsonl (via vuelta145_3b_vara_de_codigo_fase07.py), OPERACIONES.jsonl (via vuelta150_3_relectura_expediente.py), OPERACIONES.jsonl (via vuelta162_tarea2b_mutacion_excepcion.py), PENDIENTES.md (via serie_de_registros.py), PENDIENTES.md (via vuelta163_tarea1c_tramo_al_doble.py), PENDIENTES.md (via vuelta164_tarea1_registrar_acta163.py), REPORTE.md (via _v162_cifras_vieja_copia.py), REPORTE.md (via _v163_cifras_vieja_copia.py), REPORTE.md (via tallar_cifras_de_antes.py), REPORTE.md (via verificar_ausencias_del_reporte.py), REPORTE.md (via verificar_cabecera_pegada_o_condensada.py), REPORTE.md (via verificar_cifras_del_reporte.py), REPORTE.md (via verificar_nomina_sellada.py), b7f07648:docs/loop/REPORTE.md (via vuelta145_2a_mutacion_ancla_unica.py), c02b9fad:docs/loop/REPORTE.md (via vuelta145_2a_mutacion_ancla_unica.py), dataset/metadata/master_graph.json (via _v156_tallador_viejo_copia.py), dataset/metadata/master_graph.json (via diagnostico_ciclo_a_medias.py), dataset/metadata/master_graph.json (via tallar_estado_de_fase.py), dataset/metadata/master_graph.json (via vuelta140_2a_mutaciones.py), dataset/metadata/master_graph.json (via vuelta141_2e_caso_positivo_fase03.py), dataset/metadata/master_graph.json (via vuelta162_tarea2a_mutacion_puerta.py), dataset/metadata/master_graph.json (via vuelta165_tarea4_mutacion_sujeto.py), dataset/metadata/master_graph.json (via vuelta165_tarea4_sujeto_de_los_41.py), dataset/nodos/%s.json (via vuelta144_3b_mutacion_negativa.py), dataset/nodos/%s.json (via vuelta145_2b_prestado_congelado.py), dataset/nodos/un_nodo_cualquiera.json (via vuelta148_0d_mutacion_corredor.py), docs/INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta160_tarea7c_mutacion_guarda_cita.py), docs/PENDIENTES.md (via vuelta163_tarea5a_cotejo_contador.py), docs/PENDIENTES.md (via vuelta164_tarea1_registrar_acta163.py), docs/PENDIENTES.md (via vuelta165_tarea1_registrar_acta164.py), docs/PENDIENTES.md (via vuelta165_tarea4_sujeto_de_los_41.py), docs/loop/ACTA_AUDITOR.md (via vuelta163_tarea5a_cotejo_contador.py), docs/loop/ACTA_AUDITOR.md (via vuelta165_tarea4_mutacion_sujeto.py), docs/loop/ACTA_AUDITOR.md (via vuelta165_tarea4_sujeto_de_los_41.py), docs/loop/REPORTE.md (via _v115_mut_z_copia.py), docs/loop/REPORTE.md (via _v163_re_sellado_vieja_copia.py), docs/loop/REPORTE.md (via tallar_veredictos_reporte.py), docs/loop/REPORTE.md (via verificar_re_sellado.py), docs/loop/REPORTE.md (via vuelta115_guardas_cierre.py), docs/loop/REPORTE.md (via vuelta139_2b_mutaciones.py), docs/loop/REPORTE.md (via vuelta146_2b_mutacion_ausencias.py), docs/loop/REPORTE.md (via vuelta147_2c_mutacion_vitalidad.py), docs/loop/REPORTE.md (via vuelta163_tarea5a_cotejo_contador.py), docs/loop/REPORTE.md (via vuelta165_tarea4_mutacion_sujeto.py), docs/loop/REPORTE.md (via vuelta165_tarea4_sujeto_de_los_41.py), docs/plan/CORRECCIONES_A_APLICAR.md (via vuelta164_tarea1_registrar_acta163.py), docs/plan/CORRECCIONES_A_APLICAR.md (via vuelta165_tarea1_registrar_acta164.py), docs/plan/CORRECCIONES_A_APLICAR.md (via vuelta165_tarea4_sujeto_de_los_41.py), docs/plan/INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta165_tarea4_sujeto_de_los_41.py), docs/plan/OPERACIONES.jsonl (via _v156_tallador_viejo_copia.py), docs/plan/OPERACIONES.jsonl (via tallar_estado_de_fase.py), docs/plan/OPERACIONES.jsonl (via vuelta140_2a_mutaciones.py), docs/plan/OPERACIONES.jsonl (via vuelta141_2e_caso_positivo_fase03.py), docs/plan/OPERACIONES.jsonl (via vuelta144_3b_mutacion_negativa.py), docs/plan/OPERACIONES.jsonl (via vuelta165_tarea4_sujeto_de_los_41.py), docs/plan/PASO_NODO_CALIBRADO.jsonl (via vuelta165_tarea4_sujeto_de_los_41.py), e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_1.py), e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_2.py), e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md (via vuelta135_2e_mutacion_3.py), e12e4c36:docs/loop/REPORTE.md (via vuelta139_2b_mutaciones.py), ficha leida de: docs/plan/OPERACIONES.jsonl (via generar_plan_de_fusion_de_mesa.py), ficha leida de: docs/plan/OPERACIONES.jsonl (via vuelta144_3b_sellar_mesa_opm04.py), fuente: scripts/loop/verificar_mutaciones_viejas.py (via vuelta159_tarea5_alcance_p16.py), guarda importada de: scripts/loop/verificar_re_sellado.py (via vuelta157_tarea6b_mutacion_re_sellado.py), guarda importada de: scripts/loop/verificar_re_sellado.py (via vuelta159_tarea6c_mutacion_exencion.py), master_graph.json (via aduana_semantica.py), master_graph.json (via diagnostico_ciclo_a_medias.py), master_graph.json (via vuelta145_3b_vara_de_codigo_fase07.py), master_graph.json (via vuelta150_5c_mutacion_ciclo.py), master_graph.json (via vuelta152_registro_de_citas_opc05.py), master_graph.json (via vuelta157_tarea2_lote1_veredictos.py), master_graph.json (via vuelta159_motor_veredictos.py), master_graph.json (via vuelta159_tarea9_marcador_cierre.py), master_graph.json (via vuelta163_tarea1b_relectura_101.py), master_graph.json (via vuelta89_tarea4_guarda_op_c05.py), scripts/loop/contar_cierre_efectivo.py (via _v115_mut_z_copia.py), scripts/loop/contar_cierre_efectivo.py (via vuelta115_guardas_cierre.py), scripts/loop/tallar_cabecera_reporte.py (via _v115_mut_z_copia.py), scripts/loop/tallar_cabecera_reporte.py (via vuelta115_guardas_cierre.py), scripts/loop/tallar_cabecera_reporte.py (via vuelta159_tarea1_registrar_adjudicaciones.py), scripts/loop/tallar_cifras_de_antes.py (via _v115_mut_z_copia.py), scripts/loop/tallar_cifras_de_antes.py (via vuelta115_guardas_cierre.py), scripts/loop/tallar_estado_de_fase.py (via vuelta156_tarea4b_mutacion_tallador.py), scripts/loop/tallar_nombre_de_operacion.py (via _v115_mut_z_copia.py), scripts/loop/tallar_nombre_de_operacion.py (via vuelta115_guardas_cierre.py), scripts/loop/tallar_veredictos_reporte.py (via _v115_mut_z_copia.py), scripts/loop/tallar_veredictos_reporte.py (via vuelta115_guardas_cierre.py), scripts/loop/verificar_apertura_sellada.py (via _v115_mut_z_copia.py), scripts/loop/verificar_apertura_sellada.py (via vuelta115_guardas_cierre.py), scripts/loop/verificar_apertura_sellada.py (via vuelta159_tarea1_registrar_adjudicaciones.py), scripts/loop/verificar_apertura_sellada.py (via vuelta160_tarea6b_mutacion_puerta.py), scripts/loop/verificar_cabecera_pegada_o_condensada.py (via _v115_mut_z_copia.py), scripts/loop/verificar_cabecera_pegada_o_condensada.py (via vuelta115_guardas_cierre.py), scripts/loop/verificar_cifras_del_reporte.py (via vuelta139_2b_mutaciones.py), scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via _v115_mut_z_copia.py), scripts/loop/verificar_cobertura_bolsa_tres_vias.py (via vuelta115_guardas_cierre.py), scripts/loop/verificar_mutaciones_viejas.py (via vuelta157_tarea5c_mutacion_ruido.py), scripts/loop/verificar_mutaciones_viejas.py (via vuelta165_tarea4_sujeto_de_los_41.py), scripts/loop/verificar_re_sellado.py (via vuelta159_tarea1_registrar_adjudicaciones.py), scripts/loop/verificar_vuelco_de_veredicto.py (via _v115_mut_z_copia.py), scripts/loop/verificar_vuelco_de_veredicto.py (via vuelta115_guardas_cierre.py), tallar_cabecera_reporte.py (via tallar_veredictos_reporte.py), tallar_cabecera_reporte.py (via verificar_cabecera_pegada_o_condensada.py), tallar_cabecera_reporte.py (via vuelta165_tarea4_mutacion_sujeto.py), tallar_estado_de_fase.py (via vuelta150_3_relectura_expediente.py), verificar_apertura_sellada.py (via vuelta156_tarea5d_mutacion_corredor.py), verificar_apertura_sellada.py (via vuelta160_tarea6b_mutacion_puerta.py), verificar_ausencias_del_reporte.py (via vuelta146_2b_mutacion_ausencias.py), verificar_ausencias_del_reporte.py (via vuelta147_2c_mutacion_vitalidad.py), verificar_cifras_del_reporte.py (via vuelta133_tarea2e_mutacion_cifras.py), verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_1.py), verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_2.py), verificar_cifras_del_reporte.py (via vuelta135_2e_mutacion_3.py), verificar_cifras_del_reporte.py (via vuelta163_tarea4a_mutacion_cobertura.py), verificar_mutaciones_viejas.py, verificar_mutaciones_viejas.py (via vuelta139_2b_mutaciones.py), verificar_mutaciones_viejas.py (via vuelta159_tarea5_alcance_p16.py), verificar_mutaciones_viejas.py (via vuelta165_tarea4_mutacion_sujeto.py), verificar_re_sellado.py (via vuelta157_tarea6b_mutacion_re_sellado.py), verificar_re_sellado.py (via vuelta159_tarea6c_mutacion_exencion.py), verificar_re_sellado.py (via vuelta163_tarea4b_mutacion_re_sellado.py)
+   29. vuelta146_3c_mutacion_aduana.py
+       corrida de HOY: exit 0, OK, 21.6s
+       SENAL VIVA      [git sobre el arbol de trabajo] linea 148: #     ~~r = subprocess.run(["git", "status", "--porcelain", "--", "dataset/"],~~
+       SIN CLASIFICAR   [aduana_fuente_multiple.json] linea 205: os.path.join(RAIZ, "dataset", "metadata", "aduana_fuente_multiple.json"),
+       CADENA (transitividad): vuelta146_3c_mutacion_aduana.py -> huella_de_contenido.py; vuelta146_3c_mutacion_aduana.py -> verificar_fuente_canonico.py; vuelta146_3c_mutacion_aduana.py -> vuelta136_simular_ops11.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): git sobre el arbol de trabajo
+   30. vuelta90_tarea3_prueba_mutacion_tallador.py
+       corrida de HOY: exit 0, OK, 0.1s
+       SENAL VIVA      [clasifica_longitud() de scripts/loop/tallar_conteo_campo.py] linea 45: nombre="clasifica_longitud() de scripts/loop/tallar_conteo_campo.py",
+       CADENA (transitividad): vuelta90_tarea3_prueba_mutacion_tallador.py -> tallar_conteo_campo.py; vuelta90_tarea3_prueba_mutacion_tallador.py -> verificar_caso_rojo_por_mutacion.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): clasifica_longitud() de scripts/loop/tallar_conteo_campo.py
+   31. vuelta91_tarea3_prueba_mutacion_composicion.py
+       corrida de HOY: exit 0, OK, 0.1s
+       SENAL VIVA      [clasifica_fila() de scripts/loop/tallar_composicion_salida.py] linea 46: nombre="clasifica_fila() de scripts/loop/tallar_composicion_salida.py",
+       CADENA (transitividad): vuelta91_tarea3_prueba_mutacion_composicion.py -> tallar_composicion_salida.py; vuelta91_tarea3_prueba_mutacion_composicion.py -> verificar_caso_rojo_por_mutacion.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): clasifica_fila() de scripts/loop/tallar_composicion_salida.py
+   32. vuelta91_tarea4_prueba_mutacion_direccion.py
+       corrida de HOY: exit 0, OK, 0.1s
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta91_tarea4_direccion_ope07.py)] linea 93: en vuelta91_tarea4_direccion_ope07.py:93
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta93_tarea3_guarda_direccion.py)] linea 55: en vuelta93_tarea3_guarda_direccion.py:55
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta94_tarea4_reparar_marca_hijo.py)] linea 50: en vuelta94_tarea4_reparar_marca_hijo.py:50
+       SENAL CONGELADA [extraer_direccion_automatica() de scripts/loop/vuelta91_tarea4_direccion_ope07.py] linea 47: nombre="extraer_direccion_automatica() de scripts/loop/vuelta91_tarea4_direccion_ope07.py",
+       CADENA (transitividad): vuelta91_tarea4_prueba_mutacion_direccion.py -> verificar_caso_rojo_por_mutacion.py; vuelta91_tarea4_prueba_mutacion_direccion.py -> vuelta91_tarea4_direccion_ope07.py; vuelta91_tarea4_direccion_ope07.py -> vuelta94_tarea4_reparar_marca_hijo.py; vuelta94_tarea4_reparar_marca_hijo.py -> vuelta93_tarea3_guarda_direccion.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 3 artefacto(s) vivo(s): INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta91_tarea4_direccion_ope07.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta93_tarea3_guarda_direccion.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta94_tarea4_reparar_marca_hijo.py)
+   33. vuelta95_tarea2a_prueba_mutacion_barrido.py
+       corrida de HOY: exit 0, OK, 0.1s
+       SENAL VIVA      [tiene_salvedad() de scripts/loop/tallar_barrido_cifras.py] linea 50: nombre="tiene_salvedad() de scripts/loop/tallar_barrido_cifras.py",
+       CADENA (transitividad): vuelta95_tarea2a_prueba_mutacion_barrido.py -> tallar_barrido_cifras.py; vuelta95_tarea2a_prueba_mutacion_barrido.py -> verificar_caso_rojo_por_mutacion.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): tiene_salvedad() de scripts/loop/tallar_barrido_cifras.py
+   34. vuelta96_tarea1c_prueba_mutacion.py
+       corrida de HOY: exit 0, OK, 0.1s
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta95_tarea3a_cribado_cita_de_linea.py)] linea 36: en vuelta95_tarea3a_cribado_cita_de_linea.py:36
+       CADENA (transitividad): vuelta96_tarea1c_prueba_mutacion.py -> vuelta96_tarea1c_etiqueta_grupo_c.py; vuelta96_tarea1c_etiqueta_grupo_c.py -> vuelta95_tarea3a_cribado_cita_de_linea.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 1 artefacto(s) vivo(s): INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta95_tarea3a_cribado_cita_de_linea.py)
+   35. vuelta96_tarea2_prueba_mutacion.py
+       corrida de HOY: exit 0, OK, 0.3s
+       SENAL VIVA      [master_graph.json (via vuelta96_tarea2_mesa_de_formula.py)] linea 36: en vuelta96_tarea2_mesa_de_formula.py:36
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta96_tarea2_mesa_de_formula.py)] linea 37: en vuelta96_tarea2_mesa_de_formula.py:37
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta96_tarea2_vara_de_la_mesa.py)] linea 54: en vuelta96_tarea2_vara_de_la_mesa.py:54
+       CADENA (transitividad): vuelta96_tarea2_prueba_mutacion.py -> vuelta96_tarea2_mesa_de_formula.py; vuelta96_tarea2_prueba_mutacion.py -> vuelta96_tarea2_vara_de_la_mesa.py
+       VEREDICTO: SUJETO VIVO . su codigo toca 3 artefacto(s) vivo(s): INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta96_tarea2_mesa_de_formula.py), INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta96_tarea2_vara_de_la_mesa.py), master_graph.json (via vuelta96_tarea2_mesa_de_formula.py)
+   36. vuelta96_tarea3_prueba_mutacion.py
+       corrida de HOY: exit 1, NO MORDIO, 0.9s
+       primera linea util: (estado y cronometro reusados de docs/loop/SALIDA_V165_T4_SUJETO_41.txt)
+       SENAL VIVA      [master_graph.json (via vuelta96_tarea3_tramo1_opE03.py)] linea 49: en vuelta96_tarea3_tramo1_opE03.py:49
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta96_tarea3_tramo1_opE03.py)] linea 52: en vuelta96_tarea3_tramo1_opE03.py:52
+       CADENA (transitividad): vuelta96_tarea3_prueba_mutacion.py -> vuelta96_tarea3_tramo1_opE03.py; vuelta96_tarea3_prueba_mutacion.py -> vuelta96_tarea3_veredictos_tramo1.py
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   37. vuelta97_tarea2_prueba_mutacion.py
+       corrida de HOY: exit 1, NO MORDIO, 0.6s
+       primera linea util: (estado y cronometro reusados de docs/loop/SALIDA_V165_T4_SUJETO_41.txt)
+       SENAL VIVA      [master_graph.json (via vuelta96_tarea3_tramo1_opE03.py)] linea 49: en vuelta96_tarea3_tramo1_opE03.py:49
+       SENAL VIVA      [INTRA_DOMINIO_VEREDICTOS.jsonl (via vuelta96_tarea3_tramo1_opE03.py)] linea 52: en vuelta96_tarea3_tramo1_opE03.py:52
+       SENAL VIVA      [master_graph.json (via vuelta97_tarea2_senal_de_la_bolsa.py)] linea 61: en vuelta97_tarea2_senal_de_la_bolsa.py:61
+       SENAL VIVA      [master_graph.json] linea 98: GRAFO = os.path.join(RAIZ, "dataset", "metadata", "master_graph.json")
+       SIN CLASIFICAR   [DIFERENCIA_CONTRA_COLA.jsonl] linea 96: BOLSA = os.path.join(RAIZ, "docs", "plan", "DIFERENCIA_CONTRA_COLA.jsonl")
+       SIN CLASIFICAR   [OP_E_03_LECTURA_TRAMO2_V97.jsonl] linea 97: LECTURA = os.path.join(RAIZ, "docs", "plan", "OP_E_03_LECTURA_TRAMO2_V97.jsonl")
+       CADENA (transitividad): vuelta97_tarea2_prueba_mutacion.py -> vuelta96_tarea3_veredictos_tramo1.py; vuelta97_tarea2_prueba_mutacion.py -> vuelta97_tarea2_senal_de_la_bolsa.py; vuelta97_tarea2_prueba_mutacion.py -> vuelta97_tarea2_veredictos_tramo2.py; vuelta96_tarea3_veredictos_tramo1.py -> vuelta96_tarea3_tramo1_opE03.py
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   38. vuelta98_tarea1_prueba_mutacion.py
+       corrida de HOY: exit 1, NO MORDIO, 3.5s
+       primera linea util: (estado y cronometro reusados de docs/loop/SALIDA_V165_T4_SUJETO_41.txt)
+       SENAL CONGELADA [tempfile] linea 47: import tempfile
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   39. vuelta98_tarea3_prueba_mutacion.py
+       corrida de HOY: exit 1, NO MORDIO, 1.0s
+       primera linea util: (estado y cronometro reusados de docs/loop/SALIDA_V165_T4_SUJETO_41.txt)
+       SENAL VIVA      [OPERACIONES.jsonl (via vuelta98_tarea3_relectura_par42.py)] linea 57: en vuelta98_tarea3_relectura_par42.py:57
+       SENAL VIVA      [docs/plan/OPERACIONES.jsonl] linea 55: "OPERACIONES": "docs/plan/OPERACIONES.jsonl",
+       SENAL VIVA      [OPERACIONES.jsonl] linea 175: p = os.path.join(d, "OPERACIONES.jsonl")
+       SENAL CONGELADA [vuelta98_tarea3_relectura_par42.py] linea 63: ruta = os.path.join(LOOP, "vuelta98_tarea3_relectura_par42.py")
+       SENAL CONGELADA [tempfile] linea 47: import tempfile
+       SENAL CONGELADA [mkdtemp] linea 100: d = tempfile.mkdtemp(prefix="v98t3_")
+       SENAL CONGELADA [git show sobre una ref] linea 72: r = subprocess.run(["git", "show", "%s:%s" % (ref, ruta)],
+       SIN CLASIFICAR   [docs/plan/OP_E_03_LECTURA_TRAMO2_V97.jsonl] linea 53: "TRAMO2": "docs/plan/OP_E_03_LECTURA_TRAMO2_V97.jsonl",
+       SIN CLASIFICAR   [docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl] linea 54: "TRAMO1": "docs/plan/OP_E_03_LECTURA_TRAMO1_V96.jsonl",
+       SIN CLASIFICAR   [docs/plan/04_ENLACES.md] linea 56: "ENLACES": "docs/plan/04_ENLACES.md",
+       SIN CLASIFICAR   [OP_E_03_LECTURA_TRAMO2_V97.jsonl] linea 157: p = os.path.join(d, "OP_E_03_LECTURA_TRAMO2_V97.jsonl")
+       SIN CLASIFICAR   [OP_E_03_LECTURA_TRAMO1_V96.jsonl] linea 166: p = os.path.join(d, "OP_E_03_LECTURA_TRAMO1_V96.jsonl")
+       SIN CLASIFICAR   [04_ENLACES.md] linea 186: p = os.path.join(d, "04_ENLACES.md")
+       CADENA (transitividad): vuelta98_tarea3_prueba_mutacion.py -> vuelta98_tarea3_relectura_par42.py
+       VEREDICTO: SUJETO VIVO . sale NO MORDIO HOY con el mismo codigo con el que nacio verde: su ancla ya no esta donde la espera, y eso es una MEDICION de que el sujeto se movio
+   40. vuelta98_tarea4_prueba_mutacion.py
+       corrida de HOY: exit 0, OK, 0.1s
+       NO TOCA NINGUN ARTEFACTO DEL REPO
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y NO TOCA NINGUN ARTEFACTO del repo: su sujeto lo fabrica el o vive en memoria, asi que no hay nada que se le pueda mover debajo. Es el caso mas congelado que hay
+   41. vuelta99_tarea3_prueba_mutacion.py
+       corrida de HOY: exit 0, OK, 0.1s
+       NO TOCA NINGUN ARTEFACTO DEL REPO
+       VEREDICTO: SUJETO CONGELADO . sale verde hoy y NO TOCA NINGUN ARTEFACTO del repo: su sujeto lo fabrica el o vive en memoria, asi que no hay nada que se le pueda mover debajo. Es el caso mas congelado que hay
+
+E) EL ARBOL DESPUES, Y LO QUE LA CORRIDA MOVIO
+   CIFRA lineas de git status --porcelain: 10
+   CIFRA lineas NUEVAS respecto de antes: 0
+
+F) EL VEREDICTO CONTADO, Y SOLO CONTADO
+   CIFRA medidos: 41
+   CIFRA con estado ANCLA PERDIDA:   3
+   CIFRA con estado NO MORDIO:       8
+   CIFRA con estado OK:              30
+
+   CIFRA con veredicto SUJETO CONGELADO:  5
+   CIFRA con veredicto SUJETO VIVO:       36
+
+   SUJETO CONGELADO, CON SU NOMBRE:
+      vuelta109_tarea2_4_prueba_mutacion.py
+      vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py
+      vuelta113_tarea2_mutacion_tsc.py
+      vuelta98_tarea4_prueba_mutacion.py
+      vuelta99_tarea3_prueba_mutacion.py
+   SUJETO VIVO, CON SU NOMBRE:
+      vuelta102_tarea1_prueba_mutacion_apertura.py
+      vuelta110_tarea2_prueba_mutacion.py
+      vuelta115_tarea2_4_mutacion_z.py
+      vuelta116_tarea2_3_mutacion_aa.py
+      vuelta117_tarea2_3_mutacion_bb.py
+      vuelta118_tarea2_5_mutacion_cc.py
+      vuelta118_tarea2_6_mutacion_dd.py
+      vuelta122_tarea1e_mutacion_citas.py
+      vuelta123_tarea1e_mutacion_fila_tabla.py
+      vuelta133_tarea2c_mutaciones_identidad.py
+      vuelta134_2d_mutacion_1.py
+      vuelta134_2d_mutacion_2.py
+      vuelta134_2f_mutacion.py
+      vuelta135_4c_mutacion.py
+      vuelta137_1a_mutacion.py
+      vuelta137_1c_mutacion.py
+      vuelta138_2a_mutaciones.py
+      vuelta139_2a_mutaciones.py
+      vuelta140_2b_mutaciones.py
+      vuelta140_2c_mutacion_ancla.py
+      vuelta141_2d_mutacion_commits.py
+      vuelta142_2a_mutaciones.py
+      vuelta142_2b_mutacion_commits.py
+      vuelta142_2c_mutaciones.py
+      vuelta142_2d_mutacion_bateria.py
+      vuelta146_3c_mutacion_aduana.py
+      vuelta90_tarea3_prueba_mutacion_tallador.py
+      vuelta91_tarea3_prueba_mutacion_composicion.py
+      vuelta91_tarea4_prueba_mutacion_direccion.py
+      vuelta95_tarea2a_prueba_mutacion_barrido.py
+      vuelta96_tarea1c_prueba_mutacion.py
+      vuelta96_tarea2_prueba_mutacion.py
+      vuelta96_tarea3_prueba_mutacion.py
+      vuelta97_tarea2_prueba_mutacion.py
+      vuelta98_tarea1_prueba_mutacion.py
+      vuelta98_tarea3_prueba_mutacion.py
+
+G) LOS QUE ENTRAN, Y ENTRAN CON SU TIEMPO AL LADO (adjudicacion 6.6)
+   CIFRA que ENTRAN en la nomina de la bateria: 5
+      vuelta109_tarea2_4_prueba_mutacion.py                  12.3s (una corrida)
+      vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py       0.1s (una corrida)
+      vuelta113_tarea2_mutacion_tsc.py                        0.1s (una corrida)
+      vuelta98_tarea4_prueba_mutacion.py                      0.1s (una corrida)
+      vuelta99_tarea3_prueba_mutacion.py                      0.1s (una corrida)
+   CIFRA coste de los que entran, una corrida: 12.7s
+   CIFRA coste de los que entran, DOS corridas (que es lo que la
+   bateria hace por el cotejo de reproducibilidad): 25.4s
+
+H) EL CRONOMETRO DE ESTA MEDICION
+   CIFRA TIEMPO TOTAL, en segundos: 1106.8
+   CIFRA TIEMPO TOTAL, en minutos: 18.4
+   CIFRA arnes MAS LENTO: vuelta142_2d_mutacion_bateria.py con 507.6s
+   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
+      vuelta142_2d_mutacion_bateria.py                        507.6s
+      vuelta115_tarea2_4_mutacion_z.py                        159.2s
+      vuelta117_tarea2_3_mutacion_bb.py                       158.7s
+      vuelta116_tarea2_3_mutacion_aa.py                       158.7s
+      vuelta133_tarea2c_mutaciones_identidad.py                25.1s
+      vuelta146_3c_mutacion_aduana.py                          21.6s
+      vuelta102_tarea1_prueba_mutacion_apertura.py             20.2s
+      vuelta137_1a_mutacion.py                                 14.7s
+      vuelta109_tarea2_4_prueba_mutacion.py                    12.3s
+      vuelta110_tarea2_prueba_mutacion.py                       6.1s
+
+FIN

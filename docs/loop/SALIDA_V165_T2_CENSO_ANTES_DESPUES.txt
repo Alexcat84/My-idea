@@ -16,20 +16,20 @@ A0) LA CADENA EN LA APERTURA DE ESTA VUELTA, LEIDA DEL ARBOL DE GIT
 A) LA CADENA DE LA CAIDA DE REPORTE DE LA 164, CON EL PATRON VIEJO
    (es el universo en el que esa cadena se escribio, y es el que la
    adjudicacion 6.4 del acta 164 manda publicar entero y cerrado)
-   CIFRA vistos por el censo VIEJO: 94
-   CIFRA entradas en la nomina: 55
-   CIFRA de esas entradas VISIBLES al censo viejo: 53
-   CIFRA fuera de la nomina: 41
-   LA RESTA QUE CIERRA: 94 menos 53 es 41
-   LA RESTA QUE NO CERRABA: 94 menos 55 es 39, y NO es la cifra de fuera
+   CIFRA vistos por el censo VIEJO: 95
+   CIFRA entradas en la nomina: 61
+   CIFRA de esas entradas VISIBLES al censo viejo: 59
+   CIFRA fuera de la nomina: 36
+   LA RESTA QUE CIERRA: 95 menos 59 es 36
+   LA RESTA QUE NO CERRABA: 95 menos 61 es 34, y NO es la cifra de fuera
 
 B) LA MISMA CADENA CON EL PATRON NUEVO
-   CIFRA vistos por el censo NUEVO: 122
-   CIFRA entradas en la nomina: 55
-   CIFRA de esas entradas VISIBLES al censo nuevo: 55
+   CIFRA vistos por el censo NUEVO: 123
+   CIFRA entradas en la nomina: 61
+   CIFRA de esas entradas VISIBLES al censo nuevo: 61
    CIFRA entradas de la nomina INVISIBLES al censo nuevo: 0
-   CIFRA fuera de la nomina: 67
-   LA RESTA QUE CIERRA: 122 menos 55 es 67
+   CIFRA fuera de la nomina: 62
+   LA RESTA QUE CIERRA: 123 menos 61 es 62
    CIFRA ultima vuelta representada en la nomina: 165
    CIFRA arneses POSTERIORES a esa vuelta que se quedan FUERA: 0 (ninguno)
 
@@ -37,49 +37,44 @@ C) LOS PRE 148 FUERA DE LA NOMINA, CON EL PATRON VIEJO
    ESTE ES EL UNIVERSO DE LA TAREA 4, y se computa con el patron VIEJO
    A PROPOSITO: son los que el acta 164 nombra y su 6.5 adjudica, no un
    conjunto que esta vuelta se invente por haber ensanchado el patron.
-   CIFRA pre 148 fuera de la nomina (patron viejo): 41
+   CIFRA pre 148 fuera de la nomina (patron viejo): 36
    CIFRA 148 o posteriores fuera de la nomina (patron viejo): 0
      1. vuelta102_tarea1_prueba_mutacion_apertura.py
-     2. vuelta109_tarea2_4_prueba_mutacion.py
-     3. vuelta110_tarea2_prueba_mutacion.py
-     4. vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py
-     5. vuelta113_tarea2_mutacion_tsc.py
-     6. vuelta115_tarea2_4_mutacion_z.py
-     7. vuelta116_tarea2_3_mutacion_aa.py
-     8. vuelta117_tarea2_3_mutacion_bb.py
-     9. vuelta118_tarea2_5_mutacion_cc.py
-    10. vuelta118_tarea2_6_mutacion_dd.py
-    11. vuelta122_tarea1e_mutacion_citas.py
-    12. vuelta123_tarea1e_mutacion_fila_tabla.py
-    13. vuelta133_tarea2c_mutaciones_identidad.py
-    14. vuelta134_2d_mutacion_1.py
-    15. vuelta134_2d_mutacion_2.py
-    16. vuelta134_2f_mutacion.py
-    17. vuelta135_4c_mutacion.py
-    18. vuelta137_1a_mutacion.py
-    19. vuelta137_1c_mutacion.py
-    20. vuelta138_2a_mutaciones.py
-    21. vuelta139_2a_mutaciones.py
-    22. vuelta140_2b_mutaciones.py
-    23. vuelta140_2c_mutacion_ancla.py
-    24. vuelta141_2d_mutacion_commits.py
-    25. vuelta142_2a_mutaciones.py
-    26. vuelta142_2b_mutacion_commits.py
-    27. vuelta142_2c_mutaciones.py
-    28. vuelta142_2d_mutacion_bateria.py
-    29. vuelta146_3c_mutacion_aduana.py
-    30. vuelta90_tarea3_prueba_mutacion_tallador.py
-    31. vuelta91_tarea3_prueba_mutacion_composicion.py
-    32. vuelta91_tarea4_prueba_mutacion_direccion.py
-    33. vuelta95_tarea2a_prueba_mutacion_barrido.py
-    34. vuelta96_tarea1c_prueba_mutacion.py
-    35. vuelta96_tarea2_prueba_mutacion.py
-    36. vuelta96_tarea3_prueba_mutacion.py
-    37. vuelta97_tarea2_prueba_mutacion.py
-    38. vuelta98_tarea1_prueba_mutacion.py
-    39. vuelta98_tarea3_prueba_mutacion.py
-    40. vuelta98_tarea4_prueba_mutacion.py
-    41. vuelta99_tarea3_prueba_mutacion.py
+     2. vuelta110_tarea2_prueba_mutacion.py
+     3. vuelta115_tarea2_4_mutacion_z.py
+     4. vuelta116_tarea2_3_mutacion_aa.py
+     5. vuelta117_tarea2_3_mutacion_bb.py
+     6. vuelta118_tarea2_5_mutacion_cc.py
+     7. vuelta118_tarea2_6_mutacion_dd.py
+     8. vuelta122_tarea1e_mutacion_citas.py
+     9. vuelta123_tarea1e_mutacion_fila_tabla.py
+    10. vuelta133_tarea2c_mutaciones_identidad.py
+    11. vuelta134_2d_mutacion_1.py
+    12. vuelta134_2d_mutacion_2.py
+    13. vuelta134_2f_mutacion.py
+    14. vuelta135_4c_mutacion.py
+    15. vuelta137_1a_mutacion.py
+    16. vuelta137_1c_mutacion.py
+    17. vuelta138_2a_mutaciones.py
+    18. vuelta139_2a_mutaciones.py
+    19. vuelta140_2b_mutaciones.py
+    20. vuelta140_2c_mutacion_ancla.py
+    21. vuelta141_2d_mutacion_commits.py
+    22. vuelta142_2a_mutaciones.py
+    23. vuelta142_2b_mutacion_commits.py
+    24. vuelta142_2c_mutaciones.py
+    25. vuelta142_2d_mutacion_bateria.py
+    26. vuelta146_3c_mutacion_aduana.py
+    27. vuelta90_tarea3_prueba_mutacion_tallador.py
+    28. vuelta91_tarea3_prueba_mutacion_composicion.py
+    29. vuelta91_tarea4_prueba_mutacion_direccion.py
+    30. vuelta95_tarea2a_prueba_mutacion_barrido.py
+    31. vuelta96_tarea1c_prueba_mutacion.py
+    32. vuelta96_tarea2_prueba_mutacion.py
+    33. vuelta96_tarea3_prueba_mutacion.py
+    34. vuelta97_tarea2_prueba_mutacion.py
+    35. vuelta98_tarea1_prueba_mutacion.py
+    36. vuelta98_tarea3_prueba_mutacion.py
 
 D) LA POBLACION QUE EL ENSANCHE HACE VISIBLE Y QUE NADIE HA ADJUDICADO
    NO ENTRA EN LA TAREA 4 Y NO SE MIDE AQUI: se declara y se deja
@@ -117,7 +112,7 @@ D) LA POBLACION QUE EL ENSANCHE HACE VISIBLE Y QUE NADIE HA ADJUDICADO
     26. vuelta79_tarea2_caso_positivo.py (vuelta 79)
 
 E) LO QUE NO SE MUEVE, DICHO CON SU CIFRA
-   CIFRA entradas en la nomina antes y despues del arreglo: 55
+   CIFRA entradas en la nomina antes y despues del arreglo: 61
    (el arreglo NO recorta ni amplia la nomina: cambia lo que el censo VE)
 
 FIN

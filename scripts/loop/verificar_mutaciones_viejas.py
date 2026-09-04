@@ -372,6 +372,29 @@ VIEJAS = [
     ("vuelta165_tarea1_mutacion_registro.py", False),
     ("vuelta165_tarea2_mutacion_censo.py", False),
     ("vuelta165_tarea4_mutacion_sujeto.py", False),
+    # --- LOS CINCO PRE 148 QUE ENTRAN, Y ENTRAN MEDIDOS (vuelta 165, TAREA 4;
+    #     adjudicaciones 6.5 y 6.6 del acta 164) --------------------------------
+    #
+    # NO ENTRAN POR SER VIEJOS NI SE QUEDAN FUERA POR SERLO. La regla de entrada
+    # NO habla del calendario: exige SUJETO CONGELADO ("EL PLAZO DE UNA VUELTA
+    # ERA EL MEDIO, NO EL FIN", letra de la vuelta 148, arriba en este mismo
+    # fichero). Asi que se midio el sujeto de LOS 41 uno por uno, con las dos
+    # mitades, y salen CINCO congelados y 36 vivos. Salida:
+    # `docs/loop/SALIDA_V165_T4_SUJETO_41.txt` (primera pasada) y
+    # `docs/loop/SALIDA_V165_T4_SUJETO_41_TRANSITIVO.txt` (la que manda, con la
+    # transitividad ya arreglada). NINGUNO entra en bloque y NINGUNO se descarta
+    # en bloque.
+    #
+    # SU TIEMPO, PUBLICADO AL LADO, QUE ES LO QUE LA 6.6 EXIGE. Medido hoy, una
+    # corrida cada uno: 109 en 12,3s; 112 en 0,1s; 113 en 0,1s; 98 en 0,1s; 99 en
+    # 0,1s. TOTAL 12,7s una corrida, 25,4s las dos que esta bateria hace por su
+    # cotejo de reproducibilidad. Los 36 que se quedan fuera costarian 1.094,1s
+    # mas, y por eso importa que el criterio sea el sujeto y no la antiguedad.
+    ("vuelta98_tarea4_prueba_mutacion.py", False),
+    ("vuelta99_tarea3_prueba_mutacion.py", False),
+    ("vuelta109_tarea2_4_prueba_mutacion.py", False),
+    ("vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py", False),
+    ("vuelta113_tarea2_mutacion_tsc.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

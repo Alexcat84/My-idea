@@ -31,6 +31,14 @@ C) EL VEREDICTO SOBRE FUENTES FABRICADAS, Y LA PRECEDENCIA
    arnes_congelado.py con estado ANCLA PERDIDA  -> SUJETO VIVO
    arnes_congelado.py con estado NO MORDIO      -> SUJETO VIVO
 
+C2) LA TRANSITIVIDAD, QUE ES EL ARREGLO QUE UNA MEDICION CAZO
+   Un arnes que NO nombra ningun artefacto vivo pero CORRE a otro
+   que si lo hace tiene el sujeto vivo igual. Es el caso real de
+   vuelta118_tarea2_6_mutacion_dd.py, y la primera pasada de este
+   instrumento lo dio por congelado.
+   arnes_delega.py -> SUJETO VIVO
+      CADENA (transitividad): arnes_delega.py -> delegado.py
+
 D) LA PUERTA DE ENTRADA: SOLO ENTRA SUJETO CONGELADO
    ENTRAN: arnes_congelado.py, arnes_git_congelado.py, arnes_sin_artefacto.py
    NO ENTRAN: arnes_git_vivo.py, arnes_neutro.py, arnes_vivo.py
@@ -59,10 +67,14 @@ E) PASADA 1, LOS CASOS TAL CUAL
    C_precedencia_ANCLA_PERDIDA                              PASA   (real='SUJETO VIVO' esperado='SUJETO VIVO')
    C_precedencia_NO_MORDIO                                  PASA   (real='SUJETO VIVO' esperado='SUJETO VIVO')
    C_precedencia_sobre_el_sin_artefacto                     PASA   (real='SUJETO VIVO' esperado='SUJETO VIVO')
+   C2_el_que_delega_hereda_el_sujeto_del_delegado           PASA   (real='SUJETO VIVO' esperado='SUJETO VIVO')
+   C2_y_la_cadena_se_imprime                                PASA   (real=True esperado=True)
+   C2_el_que_no_delega_no_hereda_nada                       PASA   (real='SUJETO CONGELADO' esperado='SUJETO CONGELADO')
    D_entran_solo_los_congelados                             PASA   (real=3 esperado=3)
+   D_el_que_delega_tampoco_entra                            PASA   (real=False esperado=False)
    D_el_neutro_no_entra                                     PASA   (real=False esperado=False)
    D_el_vivo_no_entra                                       PASA   (real=False esperado=False)
-   CIFRA casos: 24 | pasan: 24 | fallan: 0
+   CIFRA casos: 28 | pasan: 28 | fallan: 0
 
 F) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
    A_la_prosa_no_deja_literales                             CAE   (esperado mutado=1)
@@ -86,9 +98,13 @@ F) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
    C_precedencia_ANCLA_PERDIDA                              CAE   (esperado mutado='SUJETO VIVO_MUTADO')
    C_precedencia_NO_MORDIO                                  CAE   (esperado mutado='SUJETO VIVO_MUTADO')
    C_precedencia_sobre_el_sin_artefacto                     CAE   (esperado mutado='SUJETO VIVO_MUTADO')
+   C2_el_que_delega_hereda_el_sujeto_del_delegado           CAE   (esperado mutado='SUJETO VIVO_MUTADO')
+   C2_y_la_cadena_se_imprime                                CAE   (esperado mutado=False)
+   C2_el_que_no_delega_no_hereda_nada                       CAE   (esperado mutado='SUJETO CONGELADO_MUTADO')
    D_entran_solo_los_congelados                             CAE   (esperado mutado=4)
+   D_el_que_delega_tampoco_entra                            CAE   (esperado mutado=True)
    D_el_neutro_no_entra                                     CAE   (esperado mutado=True)
    D_el_vivo_no_entra                                       CAE   (esperado mutado=True)
-   CIFRA casos que caen al mutar el esperado: 24 de 24
+   CIFRA casos que caen al mutar el esperado: 28 de 28
 
-VERDE: los 24 casos pasan tal cual y los 24 caen al mutar el esperado.
+VERDE: los 28 casos pasan tal cual y los 28 caen al mutar el esperado.

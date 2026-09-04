@@ -20,27 +20,15 @@ CRITERIO IMPRESO (TAREA 2.1/2.4): PALABRAS_CIERRE (lista ampliada, 4 palabra(s))
 (2) registro de cierre en docs/plan/04_ENLACES.md (lista ampliada): NO
 (3) aristas segun el grafo: 0 par(es) a resolver -- fuente: aristas_nuevas vacio en OPERACIONES.jsonl (OP-E-03 es LECTURA, no escritura de aristas)
 
---- OP-E-04 (estado=LISTA) ---
+--- OP-E-04 (estado=HECHA) ---
 (1) ADDENDUM DE EJECUCION: NO
 (2) registro de cierre en docs/plan/04_ENLACES.md (lista ampliada): NO
-(3) aristas segun el grafo: 0 de 9 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 9 entrada(s), 9 par(es) extraidos por regex
-    AUSENTE: gestion_portafolio_dos_niveles -> estructura_gates (sig=False prev=False)
-    AUSENTE: requisitos_gates_con_dientes -> portfolio_management (sig=False prev=False)
-    AUSENTE: requisitos_gates_con_dientes -> revision_portafolio_periodica (sig=False prev=False)
-    AUSENTE: requisitos_gates_con_dientes -> gestion_portafolio_foco (sig=False prev=False)
-    AUSENTE: portfolio_management -> gates_go_kill_decision_points (sig=False prev=False)
-    AUSENTE: gestion_portafolio_formal -> gates_go_kill_decision_points (sig=False prev=False)
-    AUSENTE: gestion_portafolio_dos_niveles -> gates_go_kill_decision_points (sig=False prev=False)
-    AUSENTE: gestion_portafolio_foco -> gates_go_kill_decision_points (sig=False prev=False)
-    AUSENTE: decision_factory_mentality -> gates_go_kill_decision_points (sig=False prev=False)
+(3) aristas segun el grafo: 9 de 9 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 9 entrada(s), 9 par(es) extraidos por regex
 
---- OP-E-05 (estado=LISTA) ---
+--- OP-E-05 (estado=HECHA) ---
 (1) ADDENDUM DE EJECUCION: NO
 (2) registro de cierre en docs/plan/04_ENLACES.md (lista ampliada): NO
-(3) aristas segun el grafo: 1 de 4 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 4 par(es) extraidos por regex
-    AUSENTE: gestion_portafolio_formal -> requisitos_gates_con_dientes (sig=False prev=False)
-    AUSENTE: requisitos_gates_con_dientes -> gestion_portafolio_dos_niveles (sig=False prev=False)
-    AUSENTE: gestion_portafolio_dos_niveles -> requisitos_gates_con_dientes (sig=False prev=False)
+(3) aristas segun el grafo: 4 de 4 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 4 par(es) extraidos por regex
 
 --- OP-E-06 (estado=LISTA) ---
 (1) ADDENDUM DE EJECUCION: SI (fecha/vuelta no parseada del texto) -- "ADDENDUM DE EJECUCION (29 ago 2026, vuelta 90) [CORRECCION DECLARADA DE FECHA (vuelta 98, TAREA 1): la fecha "29 ago 2026" de este addendum estaba TECLEADA y es FALSA. El texto viejo se queda entero y"
@@ -52,25 +40,20 @@ CRITERIO IMPRESO (TAREA 2.1/2.4): PALABRAS_CIERRE (lista ampliada, 4 palabra(s))
 (2) registro de cierre en docs/plan/04_ENLACES.md (lista ampliada): NO
 (3) aristas segun el grafo: 84 de 84 PRESENTES hoy -- fuente: docs/plan/OP_E_07_DIRECCION_V94.jsonl (ULTIMO de 4 ficheros V91-V94)
 
---- OP-M-01-ESLABONES (estado=LISTA) ---
+--- OP-M-01-ESLABONES (estado=HECHA) ---
 (1) ADDENDUM DE EJECUCION: NO
 (2) registro de cierre en docs/plan/04_ENLACES.md (lista ampliada): NO
-(3) aristas segun el grafo: 0 de 2 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 2 par(es) extraidos por regex
-    AUSENTE: sistema_stage_gate -> sistema_gates_go_kill (sig=False prev=False)
-    AUSENTE: sistema_gates_go_kill -> asignacion_recursos_en_gates (sig=False prev=False)
+(3) aristas segun el grafo: 2 de 2 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 2 par(es) extraidos por regex
 
---- OP-M-01-SEXTO (estado=LISTA) ---
+--- OP-M-01-SEXTO (estado=HECHA) ---
 (1) ADDENDUM DE EJECUCION: NO
 (2) registro de cierre en docs/plan/04_ENLACES.md (lista ampliada): NO
-(3) aristas segun el grafo: 0 de 1 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 1 entrada(s), 1 par(es) extraidos por regex
-    AUSENTE: gestion_de_portafolio_gates_go_kill -> sistema_gates_go_kill (sig=False prev=False)
+(3) aristas segun el grafo: 1 de 1 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 1 entrada(s), 1 par(es) extraidos por regex
 
---- OP-M-03-ENLACES (estado=LISTA) ---
+--- OP-M-03-ENLACES (estado=HECHA) ---
 (1) ADDENDUM DE EJECUCION: NO
 (2) registro de cierre en docs/plan/04_ENLACES.md (lista ampliada): NO
-(3) aristas segun el grafo: 0 de 2 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 2 par(es) extraidos por regex
-    AUSENTE: pivotar_o_perseverar -> pivote_estrategico (sig=False prev=False)
-    AUSENTE: pivote_o_proceder -> pivote_estrategico (sig=False prev=False)
+(3) aristas segun el grafo: 2 de 2 PRESENTES hoy -- fuente: prosa de aristas_nuevas en OPERACIONES.jsonl, 2 entrada(s), 2 par(es) extraidos por regex
 
 --- RESUMEN (con la lista ampliada, PALABRAS_CIERRE de 5) ---
 | operacion | estado | addendum ejecucion | registro en pagina | aristas presentes/total |
@@ -78,12 +61,12 @@ CRITERIO IMPRESO (TAREA 2.1/2.4): PALABRAS_CIERRE (lista ampliada, 4 palabra(s))
 | OP-E-01 | LISTA | NO | SI | 98/98 |
 | OP-E-02 | HECHA | NO | NO | 0/0 |
 | OP-E-03 | LISTA | SI | NO | 0/0 |
-| OP-E-04 | LISTA | NO | NO | 0/9 |
-| OP-E-05 | LISTA | NO | NO | 1/4 |
+| OP-E-04 | HECHA | NO | NO | 9/9 |
+| OP-E-05 | HECHA | NO | NO | 4/4 |
 | OP-E-06 | LISTA | SI | NO | 114/114 |
 | OP-E-07 | LISTA | SI | NO | 84/84 |
-| OP-M-01-ESLABONES | LISTA | NO | NO | 0/2 |
-| OP-M-01-SEXTO | LISTA | NO | NO | 0/1 |
-| OP-M-03-ENLACES | LISTA | NO | NO | 0/2 |
+| OP-M-01-ESLABONES | HECHA | NO | NO | 2/2 |
+| OP-M-01-SEXTO | HECHA | NO | NO | 1/1 |
+| OP-M-03-ENLACES | HECHA | NO | NO | 2/2 |
 
 TAREA 2.4: OPERACIONES CUYAS CITAS DE 'registro en pagina' SE MUEVEN (ganan o pierden linea) respecto de la lista vieja de 117 (4 palabras): 0 de 10: []

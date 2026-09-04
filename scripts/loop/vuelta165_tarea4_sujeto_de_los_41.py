@@ -215,8 +215,52 @@ def clasificar_literal(v):
     return "NEUTRO", "no cae en ninguna de las dos listas de la tabla"
 
 
-def senales(nombre):
-    """LAS SENALES DEL FUENTE, CON SU LINEA LITERAL. Devuelve
+# --- LA TRANSITIVIDAD, Y ESTE ARREGLO LO CAZO UNA MEDICION MIA, NO UNA LECTURA
+#     (vuelta 165, TAREA 4, correccion declarada dentro de la propia tarea) ----
+#
+# LA PRIMERA PASADA DE ESTE INSTRUMENTO CLASIFICO
+# `vuelta118_tarea2_6_mutacion_dd.py` COMO SUJETO CONGELADO, Y ES FALSO. Su
+# fuente no nombra ningun artefacto vivo: lo que hace es CORRER OTRO SCRIPT,
+# `vuelta118_tarea2_2_censo_ejecucion_fase04_reparado.py`, y ESE si lee
+# `docs/plan/OPERACIONES.jsonl` y el grafo. Un clasificador que mira un solo
+# nivel de profundidad no ve el sujeto de nadie que delegue.
+#
+# COMO SE CAZO, Y ES LO QUE LO HACE MEDICION Y NO OPINION: la seccion E de la
+# corrida de hoy (`docs/loop/SALIDA_V165_T4_SUJETO_41.txt`) publica el `git
+# status` antes y despues, y ahi salen `SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES`
+# y `_DESPUES` REESCRITOS con contenido distinto: `OP-E-04` y `OP-E-05` pasan de
+# `LISTA` a `HECHA` y sus aristas de AUSENTES a PRESENTES. Eso lo movio la sesion
+# con credencial del fundador, no el arnes. Un arnes cuya salida sellada cambia
+# porque el archivo cambio TIENE EL SUJETO VIVO, y se le veia en el arbol.
+#
+# LOS DOS ARREGLOS QUE SE HACEN, LOS DOS MEDIBLES:
+#   (1) TRANSITIVIDAD. Se sigue a los scripts de `scripts/loop/` que el arnes
+#       INVOCA o IMPORTA, hasta punto fijo y con visitados, y sus artefactos
+#       cuentan como del arnes. La cadena se imprime entera.
+#   (2) LA REESCRITURA CON CAMBIO REAL ES SENAL VIVA, Y ES EMPIRICA. Si el arnes
+#       reescribio un fichero RASTREADO del repo y ese fichero sale con cambio de
+#       contenido en `git diff`, su sujeto se movio y esta demostrado. La
+#       atribucion se COMPUTA del nombre del fichero, no se teclea.
+MAX_SALTOS = 6
+
+
+def scripts_invocados(codigo):
+    """Los scripts de `scripts/loop/` que este codigo invoca o importa, sacados
+    de sus literales y de sus `import`."""
+    fuera = set()
+    for v, _ln in literales_de_ruta(codigo):
+        base = v.replace("\\", "/").split("/")[-1]
+        if base.endswith(".py") and os.path.exists(os.path.join(LOOP_SCRIPTS, base)):
+            fuera.add(base)
+    for m in re.finditer(r"^\s*(?:import|from)\s+([a-zA-Z_][\w]*)", codigo, re.M):
+        cand = m.group(1) + ".py"
+        if os.path.exists(os.path.join(LOOP_SCRIPTS, cand)):
+            fuera.add(cand)
+    return sorted(fuera)
+
+
+def senales(nombre, reescrituras=None):
+    """LAS SENALES DEL FUENTE, CON SU LINEA LITERAL Y SU CADENA. Devuelve
     (vivas, congeladas, neutras, avisos); cada senal es
     (etiqueta, motivo, linea, texto)."""
     ruta = os.path.join(LOOP_SCRIPTS, nombre)
@@ -224,6 +268,51 @@ def senales(nombre):
     codigo, avisos = codigo_sin_docstrings(fuente)
     lineas = codigo.split("\n")
     vivas, congeladas, neutras = [], [], []
+
+    # (2) LA SENAL EMPIRICA VA PRIMERO, porque manda sobre la lectura.
+    for fichero in (reescrituras or {}).get(nombre, []):
+        vivas.append(("reescritura con cambio real de %s" % fichero,
+                      "el arnes REESCRIBIO un fichero rastreado del repo y su "
+                      "contenido cambio: su sujeto se movio, y se ve en git diff",
+                      0, "(medido en el arbol, no leido del fuente)"))
+
+    # (1) LA CADENA, hasta punto fijo.
+    cadena, pendientes, vistos = [], [nombre], {nombre}
+    saltos = 0
+    while pendientes and saltos < MAX_SALTOS:
+        saltos += 1
+        siguientes = []
+        for quien in pendientes:
+            try:
+                f = io.open(os.path.join(LOOP_SCRIPTS, quien),
+                            encoding="utf-8", errors="replace").read()
+            except OSError:
+                continue
+            c, _av = codigo_sin_docstrings(f)
+            for hijo in scripts_invocados(c):
+                if hijo not in vistos:
+                    vistos.add(hijo)
+                    siguientes.append(hijo)
+                    cadena.append((quien, hijo))
+        pendientes = siguientes
+    avisos = list(avisos)
+    if cadena:
+        avisos.append("CADENA (transitividad): " + "; ".join(
+            "%s -> %s" % (a, b) for a, b in cadena))
+
+    for quien in sorted(vistos - {nombre}):
+        try:
+            f = io.open(os.path.join(LOOP_SCRIPTS, quien),
+                        encoding="utf-8", errors="replace").read()
+        except OSError:
+            continue
+        c, _av = codigo_sin_docstrings(f)
+        for v, ln in literales_de_ruta(c):
+            clase, motivo = clasificar_literal(v)
+            if clase == "VIVO":
+                vivas.append(("%s (via %s)" % (v, quien),
+                              motivo + " [heredado por la cadena]", ln,
+                              "en %s:%d" % (quien, ln)))
 
     for v, ln in literales_de_ruta(codigo):
         clase, motivo = clasificar_literal(v)
@@ -325,7 +414,53 @@ def main():
     sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser()
     ap.add_argument("--solo-estatico", action="store_true")
+    ap.add_argument("--reusar", metavar="FICHERO",
+                    help="lee la MITAD EMPIRICA (estado y cronometro) de una "
+                         "salida de ESTA MISMA vuelta en vez de re correr los 41. "
+                         "Se usa cuando lo que se arregla es la mitad ESTATICA: la "
+                         "medicion de hoy ya esta hecha y sellada, y re correrla "
+                         "costaria otros 18 minutos sin anadir una sola cifra.")
     a = ap.parse_args()
+
+    previo = {}
+    if a.reusar:
+        texto = io.open(os.path.join(RAIZ, a.reusar), encoding="utf-8").read()
+        actual = None
+        for l in texto.split("\n"):
+            m = re.match(r"^\s+\d+\. (vuelta\S+\.py)$", l)
+            if m:
+                actual = m.group(1)
+                continue
+            m = re.match(r"^\s+corrida de HOY: exit (\d+), (.+?), ([\d.]+)s$", l)
+            if m and actual:
+                previo[actual] = (int(m.group(1)), m.group(2), float(m.group(3)))
+                actual = None
+        print("REUSANDO LA MITAD EMPIRICA DE %s" % a.reusar)
+        print("   CIFRA arneses con estado y cronometro leidos de esa salida: %d"
+              % len(previo))
+        print("")
+
+    # LA ATRIBUCION DE LAS REESCRITURAS, COMPUTADA Y NO TECLEADA. El nombre de
+    # una salida sellada codifica el arnes que la escribe
+    # (SALIDA_V118_TAREA2_6_MUTACION_DD_ANTES.txt -> vuelta118_tarea2_6_mutacion_dd.py),
+    # asi que la atribucion sale de cruzar los ficheros que git ve cambiados
+    # contra los nombres del censo, sin ninguna tabla a mano.
+    reescrituras = {}
+    r = subprocess.run(["git", "diff", "--numstat", "--", "docs/loop/"],
+                       cwd=RAIZ, capture_output=True, text=True)
+    cambiados = [l.split("\t")[-1].split("/")[-1] for l in r.stdout.split("\n")
+                 if l.strip() and "\t" in l]
+    todos = sorted(os.listdir(LOOP_SCRIPTS))
+    for fichero in cambiados:
+        clave = re.sub(r"^SALIDA_V(\d+)_", r"vuelta\1_", fichero)
+        clave = re.sub(r"\.txt$|\.md$", "", clave).lower()
+        for cand in todos:
+            if not cand.endswith(".py"):
+                continue
+            raiz_cand = cand[:-3].lower()
+            if clave == raiz_cand or clave.startswith(raiz_cand + "_"):
+                reescrituras.setdefault(cand, []).append(fichero)
+                break
 
     print("=" * 78)
     print("VUELTA 165, TAREA 4: EL SUJETO DE CADA UNO DE LOS 41, UNO POR UNO")
@@ -349,6 +484,15 @@ def main():
     print("   listar scripts/loop/ o docs/loop/ es sujeto vivo: crecen cada vuelta.")
     print("")
 
+    print("B2) LAS REESCRITURAS CON CAMBIO REAL, ATRIBUIDAS POR COMPUTO")
+    print("   CIFRA ficheros de docs/loop/ con cambio de contenido hoy: %d"
+          % sum(len(v) for v in reescrituras.values()))
+    for k in sorted(reescrituras):
+        print("      %-52s escribe %s" % (k, ", ".join(reescrituras[k])))
+    if not reescrituras:
+        print("      (ninguno)")
+    print("")
+
     antes = porcelain()
     print("C) EL ARBOL ANTES DE CORRER NADA")
     print("   CIFRA lineas de git status --porcelain: %d" % len(antes))
@@ -360,8 +504,12 @@ def main():
     filas = []
     total = 0.0
     for i, n in enumerate(nombres, 1):
-        vivas, congeladas, neutras, avisos = senales(n)
-        if a.solo_estatico:
+        vivas, congeladas, neutras, avisos = senales(n, reescrituras)
+        if n in previo:
+            codigo, estado, dt = previo[n]
+            primera = "(estado y cronometro reusados de %s)" % a.reusar
+            total += dt
+        elif a.solo_estatico:
             codigo, estado, dt, primera = 0, "OK", 0.0, "(no corrido)"
         else:
             codigo, estado, dt, primera = correr(n)

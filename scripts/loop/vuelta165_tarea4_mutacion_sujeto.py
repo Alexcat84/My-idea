@@ -124,6 +124,30 @@ def prueba():
         casos.append(("C_precedencia_sobre_el_sin_artefacto", ver, "SUJETO VIVO"))
         print("")
 
+        print("C2) LA TRANSITIVIDAD, QUE ES EL ARREGLO QUE UNA MEDICION CAZO")
+        print("   Un arnes que NO nombra ningun artefacto vivo pero CORRE a otro")
+        print("   que si lo hace tiene el sujeto vivo igual. Es el caso real de")
+        print("   vuelta118_tarea2_6_mutacion_dd.py, y la primera pasada de este")
+        print("   instrumento lo dio por congelado.")
+        io.open(os.path.join(tmp, "delegado.py"), "w", encoding="utf-8").write(
+            'import io\nio.open("docs/plan/OPERACIONES.jsonl")\n')
+        io.open(os.path.join(tmp, "arnes_delega.py"), "w", encoding="utf-8").write(
+            'import subprocess, sys\n'
+            'subprocess.run([sys.executable, "delegado.py"])\n')
+        vi, co, ne, av = T.senales("arnes_delega.py")
+        ver, mot = T.clasificar("OK", vi, co, ne)
+        print("   arnes_delega.py -> %s" % ver)
+        for a_ in av:
+            print("      %s" % a_[:100])
+        casos.append(("C2_el_que_delega_hereda_el_sujeto_del_delegado",
+                      ver, "SUJETO VIVO"))
+        casos.append(("C2_y_la_cadena_se_imprime",
+                      any("CADENA" in x for x in av), True))
+        vi0, co0, ne0, _a0 = T.senales("arnes_sin_artefacto.py")
+        casos.append(("C2_el_que_no_delega_no_hereda_nada",
+                      T.clasificar("OK", vi0, co0, ne0)[0], "SUJETO CONGELADO"))
+        print("")
+
         print("D) LA PUERTA DE ENTRADA: SOLO ENTRA SUJETO CONGELADO")
         entran, fuera = [], []
         for nombre in sorted(fuentes):
@@ -133,6 +157,7 @@ def prueba():
         print("   ENTRAN: %s" % ", ".join(entran))
         print("   NO ENTRAN: %s" % ", ".join(fuera))
         casos.append(("D_entran_solo_los_congelados", len(entran), 3))
+        casos.append(("D_el_que_delega_tampoco_entra", "arnes_delega.py" in entran, False))
         casos.append(("D_el_neutro_no_entra", "arnes_neutro.py" in entran, False))
         casos.append(("D_el_vivo_no_entra", "arnes_vivo.py" in entran, False))
         print("")
