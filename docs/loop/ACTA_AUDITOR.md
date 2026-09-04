@@ -54825,3 +54825,462 @@ fallo. **Credito:** racha de cifra publicada en **UNO** y racha de reporte en
 no por el bucle. **Campana consumada:** **NO**, quedan cuatro operaciones en
 `LISTA` (6.10). **El merge de `pasada-unica` no se pide y no se hace: es del
 fundador y solo suyo.**
+
+# ACTA DEL AUDITOR, VUELTA 165 (4 sep 2026, auditor Opus 5)
+# =========================================================================
+
+**HUECO DE ACTA: NO HAY, Y LO COMPRUEBO.** La ultima cabecera escrita antes de
+esta es la **164** (`docs/loop/ACTA_AUDITOR.md:54404`), su encargo numera la
+vuelta **165**, y el reporte que audito hoy es el de la 165. El invariante ACTA N
+VUELTA N MAS 1 se cumple y no queda ninguna vuelta sin auditar detras. **REGIMEN
+COMPLETO:** el austero sigue suspendido por su punto 5.
+
+**EL VEREDICTO DE UNA LINEA: LA VUELTA 165 ENTREGA ENTERA, SUS SEIS TAREAS
+REPRODUCEN CONTRA MIS INSTRUMENTOS, Y SU PARADA NO SE SOSTIENE PORQUE LA PROPIA
+FICHA CONTESTA LA PREGUNTA. NO HAY PARADA.** Pero lo mas gordo de esta acta no es
+del ejecutor y otra vez es mio: **la adjudicacion 6.10 de mi acta 164 dijo que de
+las 71 operaciones 67 estaban en `HECHA` y CUATRO en `LISTA`, y medidas hoy sobre
+el mismo fichero y el mismo arbol son 29 y 42.** Con esa cifra mal escrita monte
+el mapa del ultimo tramo de la fase III y la puse en el encargo. Traigo ademas
+**una cifra publicada de `docs/plan/` que lleva rancia desde la vuelta 58**, **dos
+caidas de reporte del ejecutor** (registradas, ninguna acumula), **DOS caidas
+propias mias** y **cinco hallazgos fuera del marcado**.
+
+## 1. VERIFICACION, CON MIS INSTRUMENTOS Y EN ESTA VUELTA
+
+**GATE 0, EL CICLO ENTERO Y EN SU ORDEN, CORRIDO POR MI, NUNCA `run_phase1`
+SUELTO:** `run_phase1.py --reaplico-curaduria` da **GATE 0: OK, exit 0**;
+`etiquetas_de_cara.py --aplicar` da **71 etiquetas**; `sync_assets_web.py` da los
+**seis** assets con `semantic_index.json` en **`42223fccc725...`, 21.854.994
+bytes**; y `git diff HEAD --numstat -- dataset/ web/ engine/` da **CERO FILAS**.
+La `M` de `master_graph.json` es fin de linea y no contenido, y el numstat en cero
+lo prueba en el mismo acto.
+
+**EL MARCADOR Y EL CENSO, RECOMPUTADOS POR MI HOY** (python propio sobre
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` y `dataset/metadata/master_graph.json`):
+archivo **n 3.388, A 551, B 72, C 5, D 2.760**, puestos **1 a 3.388**, **huecos 0,
+duplicados 0**; censo **3.853 / 3.169 / 684**; aristas **8.780 / 8.740 / 17.520 /
+9.914**, con `solo_sig` **1.174**, `solo_prev` **1.134**, **auto 0** y **cero
+nodos con duplicada en lista**. **Todo reproduce al digito.**
+
+**LAS TRES SUITES, CORRIDAS POR MI Y NO HEREDADAS, QUE ES JUSTO LO QUE LA 6.9
+PEDIA:** motor `python engine/run_all_tests.py` en **25/25, exit 0**; `tsc` en
+`web/` con **exit 0 y CERO lineas**; y `pnpm test` en `web/` con
+**`Test Files 82 passed (82)`** y **`Tests 1040 passed (1040)`, exit 0**. **La
+medicion de la TAREA 5 reproduce entera bajo mi comando**, y con ella la unica fila
+de la cabecera que se movio contra la 164.
+
+**LA BATERIA ENTERA, CORRIDA POR MI Y SOLA** (`docs/loop/` intacto durante la
+corrida, mis ficheros fuera del repo): **VERDE, exit 0**, **62 entradas en la
+nomina**, **124 arneses que el censo reconoce**, **ANCLA PERDIDA 0, NO MORDIO 0,
+NO REPRODUCIBLE 0**, **CASO DECLARADO 2** (`vuelta135_2e_mutacion_3.py` y
+`vuelta140_2a_mutaciones.py`), **entradas que el censo NO VE 0**, **posteriores
+fuera 0** y **RUIDO DE CONCURRENCIA 0**, que es lo que mi caida 3 de la 164 no
+consiguio. **El veredicto del ejecutor reproduce entero.**
+**Y SU RELOJ EN MI MAQUINA ES OTRO, Y ES EL DATO QUE IMPORTA: 1.195,6 segundos,
+19,9 minutos**, contra los **1.156,2 y 19,3** del ejecutor. El mas lento es el
+mismo (`vuelta159_tarea6c_mutacion_exencion.py`, aqui **430,1s**) y los que pasan
+de 30 segundos siguen siendo **6**. **En la 164 medi 19,9 minutos con 53 entradas
+y hoy mido 19,9 con 62: los nueve que entraron no costaron nada, tal como la 6.6
+pedia que se comprobara.**
+
+**LAS ONCE FASES, TALLADAS UNA POR UNA POR MI** (`tallar_estado_de_fase.py --fase`,
+once corridas, exit 0 las once) **Y SUMADAS DE MIS PROPIAS SALIDAS**, no de las del
+ejecutor: **00 en 7/0/7, 01 en 7/0/7, 02 en 9/2/7, 03 en 16/12/4, 04 en 10/5/5,
+05 en 10/1/9, 06 en 16/16/0, 07 en 2/0/2, 08 en 1/0/1, 09 en 3/0/3, 10 en 1/0/1**.
+Suma: **catalogo 82, cumplidas 36, sin cumplir 46, sin vara escrita 44, consumidas
+con superviviente divergente 2**, y **36 mas 46 son 82: CUADRA**. **La TAREA 7 del
+reporte reproduce fila por fila y digito por digito.**
+
+**LA APERTURA, VERIFICADA CON SU GUARDA:** `verificar_apertura_sellada.py --vuelta
+165` sale **VERDE exit 0**; los **diez** `SALIDA_V165_*_APERTURA.txt` nacen
+**todos** en `d6fa3df1`, **hijo directo** del acta 164 `2c00a1c0` (comprobado el
+padre por mi con `git log --format=%p`), y **hashes admitidos 0**. **El bloque no
+se fragmento.**
+
+**LA CABECERA, COTEJADA POR MI CONTRA EL TALLADOR:** extraidas las filas de
+`REPORTE.md` entre sus marcas y las de `SALIDA_V165_T7_CABECERA.txt` salen **11 y
+11, IDENTICAS, 0 distintas y 0 ausentes**. La guarda del ejecutor coteja nueve; yo
+coteje las once.
+
+**LA SERIE DE REGISTROS, RECOMPUTADA POR MI:** **26 entradas, 0 colisiones,
+0 huecos**, mayor escrito **`R.34`**, siguiente libre **`R.35`**, VERDE. Y las dos
+escrituras son adicion pura, leidas de git por mi: `docs/PENDIENTES.md`
+**85 anadidas y 0 borradas** en `b2de37da`, y
+`SELLO_SESION_CREDENCIAL_2026-09-03.md` **51 anadidas y 0 borradas** en `9686f749`,
+con su ultima linea vieja intacta y las dos fechas en tabla.
+
+**EL CENSO DE ARNESES, RECOMPUTADO POR MI SOBRE TRES ARBOLES DE GIT** (patron leido
+del fuente de cada arbol, nomina leida por `ast` del mismo fuente):
+
+| arbol | patron | vistos | nomina | visibles | fuera | la resta |
+|---|---|---:|---:|---:|---:|---|
+| acta 164 `2c00a1c0` | VIEJO | 92 | 53 | 51 | 41 | 92 menos 51 es 41 |
+| apertura `d6fa3df1` | VIEJO | 92 | 53 | 51 | 41 | 92 menos 51 es 41 |
+| HOY `HEAD` | VIEJO | 96 | 62 | 60 | 36 | 96 menos 60 es 36 |
+| HOY `HEAD` | NUEVO | 124 | 62 | **62** | 62 | 124 menos 62 es 62 |
+
+**LA CADENA DE LA TAREA 3 CIERRA Y LA CORRECCION DEL EJECUTOR ES EXACTA:** el 41 se
+resta de 51, no de 53, y los dos invisibles al patron viejo son exactamente
+`vuelta144_3c_caso_positivo_1190.py` y `vuelta147_3e_simular_a26.py`. **El ensanche
+los pone a cero**, y las cifras de cierre de la seccion 7 del reporte (**nomina 62,
+censo 124**) son las mias de hoy y las de la bateria.
+
+**LA CLAUSULA 1 DE `OP-L-01`, MEDIDA POR MI CON RESOLUTOR PROPIO** (mapa de alias
+construido de `ids_alias`: **761 alias, 0 con dos duenos**), **y reproduce al
+digito**: pares literales distintos **3.388**, pares resueltos distintos
+**3.009**, **de las once aparecen 0 en literal y 3 en resuelta**, y las tres son
+`LD-01` en los puestos **712 (`A`), 976 (`A`) y 1190 (`D`)**, `LD-05` en **1325
+(`D`)** y `LD-11` en **1281 (`D`)**. **La medicion del ejecutor es correcta y su
+hallazgo es real.**
+
+**LA COBERTURA DE LOS TRES RACIMOS, RE MEDIDA POR MI:** junta asesora **1 de 1**,
+sales roadmap **10 de 15**, y en la seleccion de canal mi cuenta contra el fichero
+de veredictos da **8**, que es exactamente lo que la salida sellada del ejecutor
+imprime en su linea `leidos en el cribado: 8` antes de sumarle las dos dirigidas de
+la propia tanda. **El instrumento publica sus dos sumandos y es consistente; la
+tabla del reporte publica solo la suma, y esa es una legibilidad que se gana barata
+en el proximo reporte.**
+
+**LO QUE EL TALLADOR DE CIFRAS DICE Y NO ESCONDO:** `tallar_cifras_de_antes.py` da
+**exit 1** sobre los dos reportes, y lo reproduzco: **36 hallazgos** sobre el
+reporte de la 164 sacado de `c59d111a` (identico a lo que el reporte publica) y
+**27** sobre el `REPORTE.md` de hoy, que son mas que los 23 que el reporte publica
+**porque el commit `80610e09` lo reescribio despues de sellar esa salida**. La
+cifra del reporte era cierta en su corte; la de hoy es la mia. **Y uno de sus 27
+hallazgos senala la linea 588, que es exactamente mi 4.4.**
+
+**EL CORREDOR TIENE NUEVE COMMITS HOY**, contados por mi con
+`git rev-list --count 2c00a1c0..HEAD`. El reporte dice siete y era cierto al
+escribirse: el octavo lo lleva y el noveno (`80610e09`) es el re sellado posterior.
+**No lo cuento como caida, por el mismo motivo que la menor 5.4 de mi acta 164: un
+reporte no puede nombrar los commits que aun no existen.**
+
+## 2. RELECTURA CIEGA
+
+**METODO Y LIMITE DECLARADO.** Los cinco discutibles de esta vuelta **no son
+veredictos de nodos**: son decisiones de codigo y de lectura de ficha, asi que la
+ciega de clase no tiene sujeto donde morder. **La corri sobre el sujeto que mi
+propia verificacion levanto**: el par **resuelto**
+`{project_close_out, reunion_conclusion_proyecto}`, al que hoy apuntan **dos
+lecturas dirigidas con letras distintas**, `LD-06` en **A DE BLOQUE** y `LD-07` en
+**D**. Imprimi de `master_graph.json` titulo, fuente, fase, etiqueta, entregable,
+resumen, condiciones y **pasos** de los dos nodos, adjudique, y selle en
+`_auditor_v165_mis_adjudicaciones.txt`, **sha1
+`3f06b994480ab9e8a01d5378d5e32f8302ae6ed6`** comprobado con `git hash-object`,
+**antes** de abrir `docs/plan/LECTURAS_DIRIGIDAS.md`. **DECLARO SU LIMITE Y NO LO
+DISIMULO: no es ciega de clase, porque las dos clases publicadas ya las habia leido
+al medir el colapso. Lo que sello a ciegas es MI LETRA sobre el par de HOY y MI
+MOTIVO, antes de ver el motivo ajeno.**
+
+**MI LETRA SELLADA: `D`.** `project_close_out` (Snyder) entrega un informe de
+cierre con evidencia contra el acta de constitucion, variaciones y **aprobaciones
+formales**; `reunion_conclusion_proyecto` (Coleman) entrega reunion espejo del
+kickoff, **dos encuestas**, ramificacion por puntaje, testimonios y **monitoreo de
+tres meses**. Lo unico compartido es el marco generico de revisar al cerrar lo que
+se prometio al abrir. **NOMBRAR NO ES PROCEDIMENTAR.**
+
+**DESTAPADA LA RAZON, COINCIDO EN LA SUSTANCIA.** `LD-06` dice con todas sus letras
+que **la A no es entre los nodos**: es entre el **bloque injertado** (pasos 6 a 11
+de `project_close_out`, que eran de Coleman) y el otro nodo entero, y que el arreglo
+**no es fundir los nodos** sino destejer y fundir el bloque. **Mi `D` sobre los
+nodos y su `A DE BLOQUE` sobre el bloque no se contradicen: dicen lo mismo desde los
+dos lados.**
+
+**Y AQUI VA MI CAIDA 2, EN LA SECCION 3.**
+
+**LO QUE LA CIEGA DESTAPO Y NO ESTABA BUSCANDO: EL DESTEJIDO YA SE EJECUTO.**
+Medido por mi sobre tres arboles de git, contando pasos del propio grafo:
+
+| arbol | `project_close_out` | `reunion_conclusion_proyecto` | `encuesta_satisfaccion_postproyecto` |
+|---|---:|---:|---|
+| `50f03099` (encendido del bucle) | **11 pasos** | 6 pasos | vivo |
+| `3ffc2091` (vuelta 58) | **5 pasos** | **13 pasos** | **deprecado** |
+| `2c00a1c0` (acta 164) | 5 pasos | 13 pasos | deprecado |
+
+**Once menos cinco son seis, que son exactamente los pasos 6 a 11 que `LD-06`
+nombra.** O sea: **el destejido mas fusion parcial que `LD-06` prescribio ESTA
+EJECUTADO EN EL GRAFO**, y `OP-L-01`, la operacion de cuya tanda salio esa lectura,
+**sigue en `LISTA`**, y **ninguna operacion de `02_DESTEJIDOS` esta en `HECHA`**
+(nueve `LISTA`, cero `HECHA`, medido hoy), y **`project_close_out` no aparece
+nombrado en `docs/plan/02_DESTEJIDOS.md`**. **Que operacion se comio ese trabajo no
+esta escrito en nada de lo que lei hoy, y no lo adivino: va como encargo medible.**
+
+## 3. MIS CAIDAS PROPIAS, CON SU NOMBRE
+
+  **CAIDA 1. MI ADJUDICACION 6.10 DEL ACTA 164 PUBLICO UNA CIFRA FALSA Y CON ELLA
+  DIBUJE UN MAPA.** Escribi, literal: *"Leido por mi de `docs/plan/OPERACIONES.jsonl`
+  hoy: de las 71 operaciones, 67 estan en `HECHA` y CUATRO en `LISTA`"*, y de ahi
+  saque *"ese es el ultimo tramo de la fase III"*. **Medido hoy por mi sobre el
+  mismo fichero: 71 operaciones, 29 en `HECHA` y 42 en `LISTA`.** Y no es deriva del
+  tiempo: **corrido sobre el arbol del propio acta 164 (`2c00a1c0`) da las mismas 29
+  y 42**, asi que la cifra ya era falsa el dia que la escribi. El reparto real por
+  fase, `LISTA` contra `HECHA`: `00_CODIGO` 6/1, `01_FUENTES` 7/0, `02_DESTEJIDOS`
+  9/0, `03_FUSIONES` 10/6, `04_ENLACES` 4/6, `05_SANEO` 0/10, `06_MESAS` 0/5,
+  `07_ADUANA` 2/0, `08_VERIFICACION` 0/1, `09_LECTURAS_DIRIGIDAS` 3/0,
+  `10_INVENTARIO` 1/0.
+  **Las cuatro que nombre estan en `LISTA` y eso era cierto; lo falso es que fueran
+  las unicas, y `OP-L-01` tampoco es la unica de las cuatro sin dependencias:
+  entre las 42 hay veintitantas sin dependencias declaradas.**
+  **QUE ESPECIE ES, CON LA LETRA DELANTE Y SIN INVENTARME UNA SEDE.** La regla del
+  credito nombra CUATRO sedes para la cifra publicada: un veredicto, el marcador,
+  una cifra de `docs/plan/` o del banco, y desde el 2 sep 2026 los comentarios y
+  docstrings de las guardas de `scripts/`. **El acta del auditor no es ninguna de
+  las cuatro**, y anadirla seria doctrina nueva, que es parada. **Asi que se
+  registra con su nombre, dispara la relectura al doble, y NO acumula en ninguna
+  racha. Lo digo con la regla delante y no por omision.**
+
+  **CAIDA 2. SELLE A CIEGAS UNA ATRIBUCION QUE NO SE PUEDE HACER A CIEGAS, Y ES LA
+  MISMA ESPECIE QUE MI CAIDA 2 DE LA 164.** En el sello escribi que la cola
+  duplicada de `reunion_conclusion_proyecto` (sus pasos 7 a 13 repiten los 1, 5 y 6)
+  es *"la huella de la fusion que absorbio `encuesta_satisfaccion_postproyecto`"*.
+  **Destapada la razon, es falso: esa cola es el bloque injertado de
+  `project_close_out`**, y lo que si dejo la encuesta son los pasos 2, 3 y 4, que
+  traen su mecanica propia (estrellas o NPS y ramificacion por puntaje) tal como
+  `LD-07` la describe. **El hecho que observe era real y la atribucion era mia.**
+  **Lo que ensena, otra vez: la ciega decide la letra, no la genealogia.**
+
+## 4. HALLAZGOS FUERA DEL MARCADO
+
+  **4.1 EL RETRATO DE LAS A LLEVA RANCIO DESDE LA VUELTA 58, Y ES UNA CIFRA
+  PUBLICADA DE `docs/plan/`.** `docs/plan/RECOMPUTO_3388.md`, PASO 1, tabla del
+  retrato. Sus tres primeras filas llevan **entre doce y quince correcciones
+  fechadas cada una**, todas por el mismo carril: cada vuelta que fundia actos
+  cuadraba el contador y adosaba su nota. **Ese barrido paro en la vuelta 58**
+  (`git log` sobre el fichero: su ultimo commit es `3ffc2091`), y desde entonces la
+  campana fundio el resto del tramo unico y sento las cinco mesas. **Medido hoy por
+  mi con instrumento propio, con el resolutor puesto:**
+
+| fila de la tabla | publicado | **medido hoy** |
+|---|---:|---:|
+| A crudas, corte 3.388 | 551 | **551** |
+| de esas, colapsan a auto-arista al resolver | 207 | **398** |
+| pares distintos tras resolver y deduplicar | 344 | **149** |
+| pares con mas de un veredicto crudo apuntando al mismo par resuelto | **0** | **4** |
+
+  **Y LA ULTIMA FILA ES LA QUE MAS IMPORTA, PORQUE ES LA QUE SOSTENIA LAS OTRAS:**
+  mientras valia cero, la fila de los pares distintos podia ser la resta de las dos
+  de arriba. **Hoy no lo es: 551 menos 398 son 153, y los pares distintos son 149**,
+  porque cuatro pares llevan dos veredictos crudos cada uno. Los cuatro, con sus
+  puestos: `customer_validation` con `customer_validation_sell_phase` (245 y 781),
+  `estrategia_de_innovacion_arenas` con `estrategia_innovacion_producto` (460 y
+  1121), `formalizar_junta_asesora` con `identificar_consejo_asesores` (712 y 976) y
+  `dia_cero_defectos` con `dia_cero_defectos_2` (2491 y 2853).
+  **NO ES CAIDA DE NADIE DE ESTA TANDA Y LO DIGO ANTES DE QUE SE LE ATRIBUYA A
+  NADIE:** es un mantenimiento que dejo de hacerse hace ciento y pico de vueltas.
+  **Y no es cosmetico:** `08_VERIFICACION` pone el retrato de las A como **paso 1 de
+  cuatro** y escribe que **es el insumo de todo lo demas**.
+
+  **4.2 LAS ONCE LECTURAS DIRIGIDAS SON NUEVE PARES, RESUELTAS.** Con el mismo
+  resolutor que `P.1` obliga y que el ejecutor uso para su hallazgo, **`LD-07`
+  colapsa sobre `LD-06`** (`encuesta_satisfaccion_postproyecto` resuelve a
+  `reunion_conclusion_proyecto`) y **`LD-10` colapsa sobre `LD-09`**
+  (`framework_evaluacion_director_ventas` resuelve a `evaluacion_vp_ventas`).
+  **`LD-09` y `LD-10` son las dos `D` y no chocan; `LD-06` y `LD-07` traen letras
+  distintas sobre el mismo par de hoy.** Mi ciega de la seccion 2 dice por que eso
+  **no es una contradiccion**: las dos leyeron el bloque injertado contra dos nodos
+  que entonces eran dos y hoy son uno. **Pero si borra una frontera que `LD-07` dejo
+  escrita**: *"la reunion de conclusion y la encuesta no son lo mismo"*. **Los dos
+  nodos que esa frase separa son hoy el mismo nodo.**
+
+  **4.3 EN EL FICHERO ENTERO, TRECE PARES RESUELTOS LLEVAN CLASES EN CONFLICTO.**
+  Medido hoy por mi sobre las 3.388 filas: **401 filas colapsan a un auto-par**
+  (los dos ids son hoy el mismo nodo), quedan **2.712 pares resueltos distintos**,
+  **221 llevan mas de una fila** y **13 de esos 221 llevan clases distintas**: ocho
+  `B` con `D`, cuatro `A` con `D` y uno con `A`, `B` y `D` a la vez.
+  **NO LO DECLARO DEFECTO Y DIGO POR QUE, con el ejemplar que lei yo mismo
+  delante:** el par `{formalizar_junta_asesora, identificar_consejo_asesores}` esta
+  en esos 13 y su conflicto es **huella de fusion**, no error de lectura. **Un
+  conflicto por par resuelto se mide uno por uno o no se dice nada.**
+
+  **4.4 CAIDA DE REPORTE 1: EL 92 A 122 SOBRE EL MISMO ARBOL.** El DISCUTIBLE 1
+  escribe que el ensanche hace que *"el censo pasa de ver 92 a ver 122 sobre el
+  mismo arbol"*. **Las dos cifras son ciertas y no son del mismo arbol.** Medido por
+  mi sobre los diez arboles del corredor: `2c00a1c0` da **92 viejo y 120 nuevo**;
+  el **122** aparece en `affc1d93`, que es el commit de la propia TAREA 2. **El par
+  del mismo arbol es 92 a 120, o 94 a 122.** Es la especie exacta que la TAREA 3 de
+  este mismo reporte estaba corrigiendo. **Vive en prosa de un discutible, no en
+  tabla, cabecera ni conclusion: SE REGISTRA, DISPARA LA RELECTURA AL DOBLE Y NO
+  ACUMULA**, por la letra afinada del 27 ago 2026. **Y se dice a favor del ejecutor
+  que el mismo la marco como discutible antes de saber si acertaba.**
+
+  **4.5 CAIDA DE REPORTE 2: LOS 26 ARNESES PRE 148 NO SON 26 PRE 148.** La
+  seccion 2 y la PREGUNTA 1 los llaman *"26 arneses pre 148"*. **Medido por mi: son
+  26 fuera de la nomina, si, pero 24 son pre 148 y DOS no lo son**,
+  `vuelta150_2d_simular_op_c_05.py` (vuelta 150) y
+  `vuelta160_tarea3b_caso_positivo.py` (vuelta 160). **Y esto no es una etiqueta:**
+  la regla de entrada del sujeto congelado nace en la 144 y se declara en la 148, o
+  sea que esos dos caen **dentro** de la era que esa regla gobierna, y llamarlos
+  pre 148 los saca de ella. **LA SALIDA SELLADA DEL INSTRUMENTO NO DICE ESO Y ESTA
+  BIEN ESCRITA:** imprime *"CIFRA arneses que el ensanche hace visibles y estan
+  fuera: 26"* y *"posteriores a la ultima vuelta de la nomina: 0"*, las dos ciertas.
+  **El pre 148 lo puso la prosa del reporte encima de un instrumento correcto.**
+  **Prosa de acompanamiento: SE REGISTRA, RELECTURA AL DOBLE, NO ACUMULA.**
+
+## 5. ADJUDICACIONES
+
+  **5.1 EL DISCUTIBLE 5 SE ADJUDICA A FAVOR DEL EJECUTOR, Y LA REGLA LO DICE SOLA.**
+  Preguntaba si medir la clausula 1 con el resolutor puesto no sera leerle a la
+  clausula una intencion que no tenia. **`P.1` contesta en su propia letra**, leida
+  hoy en `docs/plan/BANCO_DEL_PLAN.md:11`: *"todo instrumento que cuente, cruce o
+  compare ids RESUELVE PRIMERO. Sin excepcion, y da igual quien haya pedido el
+  conteo"*, y su primer ejemplar es literalmente el de una comparacion literal que
+  **INVENTA SALUD**. **`P.1` se adopto el 11 ago 2026, el mismo dia que la ficha:
+  no hay retroactividad que discutir.** El hallazgo es correcto y es real.
+
+  **5.2 LA CLAUSULA 2 DE `OP-L-01` NO ES PARADA, Y LA ADJUDICO CITANDO LA PROPIA
+  FICHA.** El ejecutor hizo **exactamente lo que el protocolo pide**: no improviso y
+  la trajo con la letra delante. **Pero la ficha contesta la pregunta en su propio
+  registro.** Su campo `adjudicacion`, leido hoy de `docs/plan/OPERACIONES.jsonl`,
+  dice literal: *"MARCADAS COMO LECTURA DIRIGIDA: no entran en la cola ni mueven su
+  marcador"*. **Esa es la lectura (b) del ejecutor, escrita por la propia
+  operacion.** Leerla asi **no es estrecharla**: es leer la ficha entera, que es lo
+  que `P.5` manda. **El numeral 2.117 es el valor del marcador en la `fecha_corte`
+  del 11 ago 2026, testigo y no condicion.** Y hay **precedente al byte**: la
+  clausula gemela de `OP-L-03`, escrita el mismo dia y con el mismo corte, se
+  corrigio por el carril del **banco 9.10**, por adicion dentro de la propia lista
+  `verificacion`, con el texto viejo entero arriba y sin clave nueva de esquema, y
+  el **acta 71, seccion 6, adjudicacion 3** lo adjudico **con las palabras NO ES
+  PARADA**. **Se aplica el mismo carril, y no hace falta doctrina nueva.**
+
+  **5.3 LA CLAUSULA 1 NO SE CUMPLE Y SE CORRIGE POR EL MISMO CARRIL.** Tres de las
+  once aparecen en el archivo al resolver, con sus puestos y sus clases medidos por
+  el ejecutor y por mi. **La correccion va por adicion dentro de `verificacion`, sin
+  borrar la letra vieja**, y nombra las tres con su puesto.
+
+  **5.4 LA CLAUSULA 3 SE CUMPLE HASTA DONDE HAY QUE MEDIR, Y LAS CINCO QUE FALTAN
+  QUEDAN NOMBRADAS Y NO RELLENADAS.** El ejecutor re midio las tres nominas que el
+  inventario nombra con miembros y dijo de las otras cinco que solo existen como
+  prosa. **Eso no es media tarea: es literalmente lo que la verificacion de
+  `OP-I-01` manda**, *"todo hueco va NOMBRADO, nunca rellenado"*. **Adjudicado por
+  extension citada.** Elegirles una entrada habria sido decidir.
+
+  **5.5 EL DISCUTIBLE 1 SE ADJUDICA: LAS DOS SALIDAS ESTABAN BIEN TOMADAS.** Mi 6.3
+  de la 164 escribio *"las dos salidas valen"*, no que se eligiera una. **Y el
+  invariante `nomina_invisible_al_censo()` vale mas que las dos juntas**, porque
+  cierra el agujero en vez de moverlo. **Se quedan las tres cosas.**
+
+  **5.6 EL DISCUTIBLE 2 SE ADJUDICA: LA TRANSITIVIDAD SE QUEDA, CON SU DEUDA
+  NOMBRADA.** Su error es conservador y el criterio es el sujeto, que es lo que la
+  6.5 fijo. **Verifique yo los cinco que entran, uno por uno, leyendo su fuente**:
+  ninguno toca artefacto vivo, las dos menciones de `EJECUTOR.md` son citas de
+  docstring y el `web/lib/x.ts` es una cadena fabricada dentro del propio arnes.
+  **Los doce cuya exclusion no se comprobo uno por uno quedan como deuda escrita, no
+  como verde.**
+
+  **5.7 EL DISCUTIBLE 3 SE ADJUDICA A FAVOR DE REGISTRAR TRES.** El encargo traia
+  dos cifras que no cuadraban entre si y la seccion 4 del acta 164 trae **tres**
+  caidas con su nombre. **Tres cubre dos; dos habria perdido una caida mia**, y la
+  regla de la casa es que las del auditor se declaran igual que las del ejecutor.
+  **Contar la seccion en vez de copiar la cifra fue lo correcto.**
+
+  **5.8 EL DISCUTIBLE 4 SE ADJUDICA: LAS DOS CIFRAS SON CIERTAS CON SU CORTE.** El
+  `6 de 6` del inventario tiene `fecha_corte` **2026-08-11** y cuatro miembros; el
+  `1 de 1` de hoy sale de que **la campana fundio dos de esos cuatro**, medido por
+  mi. **No se corrige borrando: se anade la cifra de hoy con su corte al lado, por
+  el banco 9.21.** El racimo no esta declarado sobre ids que a proposito no se
+  resuelvan: es que sus ids envejecieron.
+
+  **5.9 LA PREGUNTA 1 SE ADJUDICA: LOS 26 SE MIDEN, CON SU CIFRA CORREGIDA.** Son
+  24 pre 148 y 2 posteriores (4.5). **Se miden con el mismo instrumento del sujeto,
+  y ninguno entra ni sale en bloque**, que es la 6.5 aplicada a su poblacion.
+
+  **5.10 LA PREGUNTA 2 SE ADJUDICA: SE DECLARAN Y NO SE ARREGLAN.**
+  `SALIDA_V135_4C_MUTACION.txt` y `SALIDA_V137_1A_MUTACION.txt` embeben el nombre de
+  un temporal aleatorio. **Ninguna regla escrita manda reescribir ficheros de
+  vueltas pasadas por cosmetica, y sus arneses no estan en la nomina**, asi que la
+  bateria no los ve. **Queda escrito y ahi se queda.**
+
+  **5.11 LA PREGUNTA 3 SE ADJUDICA, Y NO POR LA VIA DE DECLARAR LA VARA AJENA.**
+  `tallar_cifras_de_antes.py` da exit 1 sobre los dos reportes, medido por mi hoy
+  (**36** sobre el de la 164 y **27** sobre el de hoy). **Declararla ajena al reporte
+  de fase 04 seria apagar una guarda por incomoda.** Lo que le pasa es exactamente
+  lo que le pasaba al censo de arneses en mi 5.1 de la 164: **su frase promete mas
+  de lo que su patron mide**, y dispara con palabras corrientes. **Se estrecha en la
+  fuente, con su caso positivo por mutacion, igual que se arreglo el censo.**
+
+  **5.12 EL RETRATO DE LAS A SE RECOMPUTA, Y ES TAREA BLOQUEANTE.** Por el 4.1, y
+  por el orden escrito de `08_VERIFICACION`, que lo pone de paso 1 e insumo de los
+  otros tres. **Por el carril de siempre: contador cuadrado, nota fechada, nada
+  tachado que no lleve su cifra vieja al lado.**
+
+  **5.13 MI CIFRA DE OPERACIONES SE CORRIGE POR DECLARACION Y EL MAPA DEL ULTIMO
+  TRAMO SE REHACE.** Por la caida 1. **29 en `HECHA` y 42 en `LISTA`**, con su
+  reparto por fase, medido y publicado.
+
+  **5.14 EL COLAPSO SE MIDE Y NO SE ADJUDICA CLASE.** Por el 4.2 y el 4.3. **Ningun
+  veredicto se mueve en esa tarea**: se publica la poblacion con su evidencia y cada
+  caso con su motivo posible, y la clase la decide una lectura, no un colapso.
+
+## 6. LA METRICA DE CREDITO
+
+Cuento como las actas 153 a 164.
+
+| | esta vuelta | acumulado |
+|---|---:|---:|
+| relecturas | 1 | 300 |
+| puestos | 0 | 492 |
+| discrepancias DENTRO del marcado | 0 | 19 |
+| discrepancias y hallazgos FUERA del marcado | 5 | 41 |
+| caidas propias del auditor | 2 | (se declaran, no se acumulan aqui) |
+
+**LOS PUESTOS NO SUBEN Y SE DICE POR QUE:** el par que relei **no es un puesto del
+cribado**, vive solo en `LECTURAS_DIRIGIDAS.md`, que es justo lo que la clausula 1
+de `OP-L-01` afirmaba y lo que el hallazgo de hoy matiza.
+
+**EL CREDITO DE LA TANDA, CON LA REGLA DELANTE (`AUDITOR.md` 1.2).** Mi unica
+relectura coincide en sustancia con la letra publicada y **no hay discrepancia de
+clase ni dentro ni fuera del marcado**, asi que **la ciega no baja el credito de la
+tanda**. **Pero la relectura al doble SIGUE**, y ahora por **tres** motivos
+escritos: las dos caidas de reporte del 4.4 y el 4.5 la disparan cada una por su
+letra, y mi propia caida 1 la dispara sobre el tramo de las cifras de operaciones.
+
+**LAS DOS RACHAS, CON SU NOMBRE:**
+
+  - **RACHA DE CIFRA PUBLICADA: CERO.** Venia en **UNO** (acta 164, 6.1, la caida de
+    clase de la `LD-OPC05-005`). **Esta tanda no mueve ninguna clase ni ninguna
+    cifra publicada por acto del ejecutor**, asi que la racha se corta. **Y digo
+    expresamente por que el 4.1 no la reabre:** el retrato rancio es una cifra falsa
+    de `docs/plan/`, si, pero **no es un acto de esta tanda**; nacio de un
+    mantenimiento que paro en la vuelta 58, y colgarselo al ejecutor de la 165 seria
+    contar una caida en la espalda de quien no la hizo. **Se registra con su nombre
+    en el 4.1 y se encarga su correccion.**
+  - **RACHA DE REPORTE: CERO.** Venia en **CERO**. Las dos caidas de reporte de hoy
+    (4.4 y 4.5) **viven las dos en prosa de acompanamiento**, no en tabla, cabecera
+    ni conclusion, asi que **por la letra afinada del 27 ago 2026 se registran, se
+    releen al doble y NO acumulan**.
+  - **LA ESCALADA NO SE DISPARA**, porque pide **racha de reporte en DOS** y esta en
+    **CERO**. **Lo digo con la regla delante y no por omision**, que es la caida que
+    el propio `AUDITOR.md` 1.2 tiene escrita con nombre desde la vuelta 89.
+
+## 7. LO QUE NO CONSULTE Y QUEDA A VERIFICAR
+
+  - **Los 41 arneses pre 148 uno por uno:** no los corri. Reproduje su cifra
+    agregada del fichero sellado y verifique **la mitad estatica** leyendo la fuente
+    de los cinco que entran. **El reloj de 18,4 minutos es del ejecutor, no mio.**
+  - **Los doce arneses que la transitividad excluye por cadena:** no comprobe la
+    cadena uno por uno. Queda como deuda nombrada en el 5.6.
+  - **Los 13 pares resueltos en conflicto:** los conte, no los lei. **Ninguna clase
+    se mueve por esta acta.**
+  - **Las 3.375 filas del cribado que no lei:** siguen con sus lecturas anteriores.
+  - **Que operacion ejecuto el destejido de `project_close_out`:** medido que esta
+    hecho, no medido quien lo hizo. Va en el encargo.
+
+## 8. NO HAY PARADA Y ESCRIBO ENCARGO
+
+**Recorro las condiciones de la seccion 4 de `AUDITOR.md` una a una.**
+**Doctrina nueva:** no hace falta ninguna. Las tres clausulas de `OP-L-01` se
+adjudican citando `P.1`, la propia `adjudicacion` de la ficha, el precedente de la
+clausula gemela de `OP-L-03` (acta 71, adjudicacion 3, con las palabras NO ES
+PARADA) y la verificacion de `OP-I-01`. **Y me abstengo expresamente de anadir una
+quinta sede a la regla del credito para mi propia caida 1, porque eso si seria
+doctrina nueva.** **Contradiccion:** las dos cifras falsas que traigo (mi 6.10 y el
+retrato de las A) **se resuelven las dos con las reglas de correccion existentes**,
+por declaracion y por el carril del banco 9.10 con contador cuadrado. **Decision de
+fundador:** nada de lo encargado borra contenido, cambia el alcance, gasta fuera del
+repo ni toca produccion. **Fallo tecnico repetido:** Gate 0 verde por mi mano, las
+tres suites verdes por mi mano, la bateria verde y sola, y el hook sin fallar.
+**Credito:** las dos rachas en **CERO**; la parada pide dos. **Credenciales:** el
+muro cayo. **Campana consumada: NO, y hoy mucho menos que ayer: quedan 42
+operaciones en `LISTA`, medidas por mi.** **El merge de `pasada-unica` no se pide y
+no se hace: es del fundador y solo suyo.**
