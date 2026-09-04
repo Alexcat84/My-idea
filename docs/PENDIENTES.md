@@ -10810,3 +10810,69 @@ producto antes de un merge.
 **Nadie cambia `MIN_SCORE_SALTO` sin decision escrita del fundador.** Si una vuelta futura
 mide una deriva que lo justifique, **lo trae**, con los dos casos de referencia recorridos
 y la prueba de rumbos al lado. **No se ajusta el umbral para que una vara pase.**
+
+---
+
+## LOS REGISTROS DE LAS TRES CORRIDAS DEL VUELO EN LA BASE, COMO EVIDENCIA (sesion con credencial, 3 sep 2026)
+
+**Encargo del fundador, paso 3.** Las tres corridas del vuelo de esta sesion
+escribieron en la base **real**. **Nada se borro: los registros son evidencia**, y
+esta ficha los deja anotados para que **el fundador decida si limpiarlos tras el
+merge**. **Ninguna vuelta del bucle los toca por su cuenta.**
+
+### QUE HAY, CONTADO DE LA BASE HOY
+
+Medido con la service role key, filtrando por `created_at` desde el arranque de
+la primera corrida (**2026-09-03T23:15:20Z**):
+
+| tabla | filas de las TRES corridas | de esas, de la corrida B |
+|---|---:|---:|
+| `projects` | **9** | 3 |
+| `sessions` | **30** | 14 |
+| `project_nodes` | **375** | 190 |
+| `plans` | **22** | 10 |
+| `project_bitacora` | **47** | 25 |
+
+### DONDE ESTAN LOS IDS, UNO POR UNO
+
+**No se copian aqui para no tener dos listas que puedan divergir.** Viven en las
+salidas selladas, cada una con su corte:
+
+- **Corrida A** (la que murio por el techo de 10 minutos) **y la primera
+  completa**: `docs/loop/SALIDA_SESION_CREDENCIAL_VUELO.txt`, seccion 2. Corte
+  `2026-09-03T23:15:20Z`.
+- **Corrida B** (tras atar el precio a la fuente unica):
+  `docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_B.txt`, seccion 2. Corte
+  `2026-09-03T23:56:42Z`.
+- **La medicion del modo y la baseline** que cerro el frente:
+  `docs/loop/SALIDA_SESION_CREDENCIAL_MEDICION_MODOS.txt`.
+
+### POR QUE SON TRES Y NO UNA
+
+1. **Corrida A, primera parte:** lanzada en primer plano y **matada por el techo
+   de 10 minutos de la sesion**, no por el vuelo. Iba por la fase 2g-bis sin un
+   solo error.
+2. **Corrida A, segunda parte:** relanzada en segundo plano, llego al final y
+   cayo con `exitcode 1` por una **aseveracion de precio vencida** (esperaba 3,
+   el catalogo reportaba 5).
+3. **Corrida B:** tras atar la cifra a `PRECIOS.mundo_activar`, paso esa puerta
+   y llego mas lejos (392 lineas contra 301), cayendo despues en la aseveracion
+   del **cumplimiento del mundo**, que la medicion demostro que es **siembra
+   vencida y no defecto de producto**.
+
+### LO QUE SI QUEDO PROBADO CON ELLOS, Y ES LO QUE LA FASE 08 NECESITA
+
+**El grafo hace su trabajo, en las dos corridas y por instrumento propio:**
+
+| corrida | ids distintos en `project_nodes` | existen y vivos | deprecados | en lista roja | aristas rotas |
+|---|---:|---:|---:|---:|---:|
+| A | 150 | **150** | 0 | 0 | **0** |
+| B | 190 | **190** | 0 | 0 | **0** |
+
+### LO QUE ESTA FICHA NO AUTORIZA
+
+**Nadie borra estas filas sin decision escrita del fundador**, y desde luego no
+el bucle. Si se limpian, se limpian **despues del merge**, con las salidas
+selladas delante y dejando constancia de que se limpiaron. **Borrarlas antes
+seria destruir la unica evidencia de que el vuelo corrio de verdad contra la
+base real.**
