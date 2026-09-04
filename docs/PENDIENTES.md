@@ -10876,3 +10876,57 @@ el bucle. Si se limpian, se limpian **despues del merge**, con las salidas
 selladas delante y dejando constancia de que se limpiaron. **Borrarlas antes
 seria destruir la unica evidencia de que el vuelo corrio de verdad contra la
 base real.**
+
+---
+
+## DEUDA DE PRODUCTO: EL VUELO CAZA DEFECTOS VIEJOS QUE NADIE PODIA VER (3 sep 2026)
+
+**Encargo del fundador, paso 3.** Se escribe **aunque la fase 08 no cerrara**, y se
+dice por que: la corrida D aporto un **tercer** ejemplar, asi que la deuda esta
+mejor sostenida hoy que cuando se encargo. **No se toca nada: es una linea de
+deuda.**
+
+**EL HECHO:** el vuelo llevaba sin poder correr desde que el `.env` salio del repo,
+y en cuanto corrio con credencial **caza defectos viejos de la app que ninguna
+otra vara veia**. Tres en una sola sesion, los tres reales y los tres distintos:
+
+1. **Una aseveracion de precio vencida** (corrida A). El catalogo reportaba 5 y la
+   prueba esperaba 3, desde antes de la campana del catalogo congruente. Arreglado
+   atando la cifra a la fuente unica (`PRECIOS.mundo_activar`).
+2. **Una siembra sin baseline del mundo** (corrida B). La siembra sellaba la linea
+   base del proyecto y **no la del mundo**, con un comentario que decia "el plan
+   del mundo no se sella" vencido por "Todo separado" (T3). Arreglado en la
+   siembra, **sin tocar producto**.
+3. **Lenguaje de cumplimiento en modo "a mi ritmo"** (corrida D). El plan generado
+   escribio *"a tiempo"*, que el paragrafo 3 prohibe en ese modo. **La guarda hizo
+   su trabajo.** Es **intermitente**: la misma aseveracion paso en la corrida B y
+   fallo en la D, con el mismo codigo. Lo que cambia es la prosa del modelo.
+
+**LO QUE ESTO SUGIERE, Y ES LA DEUDA:** **conviene que el vuelo corra en CADA
+RELEASE, con el fundador delante, como parte del criterio de merge.** Las suites
+(motor, web, `tsc`) y Gate 0 estaban **verdes** todo el tiempo mientras estos tres
+defectos vivian: **ninguna de esas varas los ve**, porque el vuelo es la unica que
+recorre la app entera por HTTP real, con base real y modelo real.
+
+**POR QUE PIDE AL FUNDADOR DELANTE, y no automatizarlo sin mas:**
+
+- **Escribe en la base real** (`projects`, `sessions`, `project_nodes`, `plans`,
+  `project_bitacora`) y esos registros hay que decidir si se limpian.
+- **Gasta credencial y dinero** (modelo y Voyage) en cada corrida.
+- **Necesita el `.env`**, que vive fuera del repo mientras el bucle corre.
+- Y ya estaba reservado por escrito: `docs/FASE_3_3_y_3_5_BACKEND_MUNDOS.md`
+  linea 52, *"YO (avisame): correr el vuelo completo"*.
+
+**UN AVISO PARA QUIEN LO AUTOMATICE ALGUN DIA:** el defecto 3 es **no
+determinista**, asi que un vuelo en verde **no prueba** que el generador ya no se
+desliza. Con dos corridas no hay tasa que publicar, y **decir una seria
+inventarla**. Si se quiere una cifra, se mide con corridas repetidas y se declara
+con su banda, como manda `P.15`.
+
+### REGISTROS DE LA CORRIDA D, que se suman a los de la ficha anterior
+
+Corte `2026-09-04T00:33:13Z`. Los ids, uno por uno, en
+`docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_D.txt`. **Grafo VERDE otra vez: 144
+nodos recomendados, 144 vivos, 0 deprecados, 0 en lista roja, 0 aristas rotas.**
+Misma frontera que la ficha anterior: **nadie los borra sin la letra del
+fundador, y si se limpian, despues del merge.**
