@@ -372,6 +372,10 @@ VIEJAS = [
     ("vuelta165_tarea1_mutacion_registro.py", False),
     ("vuelta165_tarea2_mutacion_censo.py", False),
     ("vuelta165_tarea4_mutacion_sujeto.py", False),
+    #   - `165_tarea6`: mapas de alias y veredictos fabricados en memoria mas
+    #     la ficha de OP-L-01 leida hoy, cuyas cifras se miden como PRESENCIA
+    #     del numeral y como DESIGUALDAD, nunca como estado clavado.
+    ("vuelta165_tarea6_mutacion_op_l_01.py", False),
     # --- LOS CINCO PRE 148 QUE ENTRAN, Y ENTRAN MEDIDOS (vuelta 165, TAREA 4;
     #     adjudicaciones 6.5 y 6.6 del acta 164) --------------------------------
     #

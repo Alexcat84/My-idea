@@ -1,0 +1,125 @@
+==============================================================================
+VUELTA 165, TAREA 6: OP-L-01 CONTRA EL ARCHIVO DE HOY
+==============================================================================
+
+A) LA FICHA ENTERA, LEIDA HOY
+   docs/plan/OPERACIONES.jsonl:41
+   id_op:           OP-L-01
+   fase:            09_LECTURAS_DIRIGIDAS
+   tipo:            MESA
+   orden:           1
+   estado:          LISTA
+   fecha_corte:     2026-08-11
+   depende_de:      [] (CIFRA 0)
+   bloquea_a:       [] (CIFRA 0)
+   nodos:           [] (CIFRA 0)
+   preservar:       [] (CIFRA 0)
+   eliminar:        [] (CIFRA 0)
+   aristas_nuevas:  [] (CIFRA 0)
+   verificacion, sus 3 clausulas:
+      1. ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui
+      2. el marcador del cribado no se mueve: sigue en 2.117
+      3. cada nomina afectada se re-mide con su cobertura al lado (banco 9.26)
+   evidencia, sus 4 entradas:
+      . LECTURAS_DIRIGIDAS.md, las once con su razon
+      . INTRA_DOMINIO_INFORME.md seccion 52, las parejas que el ejercicio no puede cerrar
+      . BANCO_DE_TEXTOS.md, TABLA VIVA DE LOS PUROS
+      . MEDIDO el 11 ago 2026: 205 pares internos fuera de cola sobre 221 componentes
+   adjudicacion: TANDA DE ONCE LECTURAS DIRIGIDAS, hechas el 11 ago 2026. Misma vara y mismo formato de veredicto que el cribado, MARCADAS COMO LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador. SALDO: 2 A y 9 D.
+
+B) LA SIMULACION PREVIA: QUE ESCRIBIRIA ESTA OPERACION
+   CIFRA elementos que la ficha declara para escribir: 0
+   CIFRA dependencias declaradas: 0
+   VEREDICTO DE LA SIMULACION: es una operacion de VERIFICACION PURA.
+   No mueve un nodo, no mueve una arista y no toca el grafo. Lo unico
+   que puede cambiar es su propio campo `estado`, y solo si sus tres
+   clausulas se cumplen.
+
+C) EL RESOLUTOR, DELANTE DE TODO CONTEO (P.1)
+   CIFRA ficheros de nodo leidos: 3853
+   CIFRA alias en el mapa: 761
+
+D) CLAUSULA 1: 'ninguna de las once aparece en
+   INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui'
+   CIFRA cabeceras LD leidas de LECTURAS_DIRIGIDAS.md: 11
+   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388
+   CIFRA pares distintos, comparacion LITERAL: 3388
+   CIFRA pares distintos, comparacion RESUELTA: 3009
+      LD-01   formalizar_junta_asesora                 identificar_consejo_asesores             literal=NO  resuelto=SI 
+      LD-02   channels_hypothesis_physical             channels_hypothesis_web_mobile           literal=NO  resuelto=NO 
+      LD-03   channels_hypothesis_web_mobile           seleccion_canal_fisico                   literal=NO  resuelto=NO 
+      LD-04   evaluacion_tecnologias_disruptivas       explotacion_tecnologias_disruptivas      literal=NO  resuelto=NO 
+      LD-05   estrategia_innovacion_producto           estrategia_de_innovacion_producto        literal=NO  resuelto=SI 
+      LD-06   project_close_out                        reunion_conclusion_proyecto              literal=NO  resuelto=NO 
+      LD-07   project_close_out                        encuesta_satisfaccion_postproyecto       literal=NO  resuelto=NO 
+              el resolutor mueve: project_close_out -> project_close_out | encuesta_satisfaccion_postproyecto -> reunion_conclusion_proyecto
+      LD-08   disenar_tests_pass_fail                  diseno_experimentos_hipotesis            literal=NO  resuelto=NO 
+      LD-09   refinar_sales_roadmap                    evaluacion_vp_ventas                     literal=NO  resuelto=NO 
+      LD-10   refinar_sales_roadmap                    framework_evaluacion_director_ventas     literal=NO  resuelto=NO 
+              el resolutor mueve: refinar_sales_roadmap -> refinar_sales_roadmap | framework_evaluacion_director_ventas -> evaluacion_vp_ventas
+      LD-11   pensamiento_visual                       pensamiento_visual_modelos_negocio       literal=NO  resuelto=SI 
+              el resolutor mueve: pensamiento_visual -> get_visual | pensamiento_visual_modelos_negocio -> pensamiento_visual_modelos_negocio
+   CIFRA de las once que APARECEN, comparacion literal: 0
+   CIFRA de las once que APARECEN, comparacion resuelta: 3
+   CLAUSULA 1: NO SE CUMPLE
+
+E) CLAUSULA 2: 'el marcador del cribado no se mueve: sigue en 2.117'
+   LA LETRA, COPIADA DE LA FICHA: 'el marcador del cribado no se mueve: sigue en 2.117'
+   LA FECHA DE CORTE DE LA FICHA: 2026-08-11
+   CIFRA marcador del cribado HOY (filas del fichero): 3388
+   CIFRA que la clausula escribe: 2117
+   CIFRA diferencia: 1271
+
+   LAS DOS LECTURAS POSIBLES, Y NINGUNA SE ELIGE AQUI:
+   (a) LITERAL, 'el marcador vale 2.117 hoy': NO se cumple, y no puede
+       cumplirse, porque el cribado cerro en 3388 con su corte publicado.
+   (b) DE EFECTO, 'esta operacion no mueve el marcador': se cumpliria,
+       porque la simulacion de la seccion B da CERO escrituras. Pero
+       para leerla asi hay que DESCARTAR el numeral '2.117' de la
+       propia clausula, y eso es ESTRECHARLA.
+   VEREDICTO: la clausula NO se puede leer sin estrechar ni ensanchar.
+   ESO ES PARADA (EJECUTOR.md 5), y no se improvisa una lectura.
+
+F) CLAUSULA 3: 'cada nomina afectada se re-mide con su cobertura al
+   lado (banco 9.26)'
+   CIFRA nominas que la tabla de LECTURAS_DIRIGIDAS.md nombra: 8
+   CIFRA filas de docs/plan/INVENTARIO.jsonl: 672
+      junta asesora                            -> inventario 'la junta asesora' (racimo)
+          CIFRA miembros: 2 | posibles: 1 | leidos en el cribado: 1
+          CIFRA lecturas dirigidas de esta tanda dentro: 1 (LD-01)
+          COBERTURA RE MEDIDA HOY (banco 9.26): 1 de 1
+          cobertura que el inventario declara: 6 de 6
+      seleccion de canal                       -> inventario 'la seleccion de canal' (racimo)
+          CIFRA miembros: 5 | posibles: 10 | leidos en el cribado: 8
+          CIFRA lecturas dirigidas de esta tanda dentro: 2 (LD-02, LD-03)
+          COBERTURA RE MEDIDA HOY (banco 9.26): 10 de 10
+          cobertura que el inventario declara: 10 de 10
+      tecnologias disruptivas                  SIN ENTRADA CON MIEMBROS en el inventario
+      pass/fail                                SIN ENTRADA CON MIEMBROS en el inventario
+      pensamiento visual                       SIN ENTRADA CON MIEMBROS en el inventario
+      estrategia de innovacion de producto     SIN ENTRADA CON MIEMBROS en el inventario
+      project_close_out                        SIN ENTRADA CON MIEMBROS en el inventario
+      sales roadmap                            -> inventario 'el sales roadmap' (racimo)
+          CIFRA miembros: 6 | posibles: 15 | leidos en el cribado: 10
+          CIFRA lecturas dirigidas de esta tanda dentro: 0 (ninguna)
+          COBERTURA RE MEDIDA HOY (banco 9.26): 10 de 15
+          cobertura que el inventario declara: 15 de 15 (LD-66 a LD-70, 14 ago 2026, vuelta 20). El texto viejo de es
+   CIFRA nominas RE MEDIDAS: 3
+   CIFRA nominas SIN ENTRADA MAPEABLE en el inventario: 5
+   CLAUSULA 3: NO SE PUEDE CUMPLIR ENTERA
+   Y SE DICE POR QUE, SIN ADIVINAR: la clausula dice 'cada nomina
+   afectada' y NO nombra cuales ni donde viven. Las que el
+   inventario nombra con sus miembros se re miden arriba; las
+   otras 5 solo existen como prosa, y elegirles una entrada del
+   inventario seria DECIDIR, no medir.
+
+G) EL VEREDICTO DE LA OPERACION
+   clausula 1: NO SE CUMPLE
+   clausula 2: PARADA (no se puede leer sin estrechar ni ensanchar)
+   clausula 3: SE CUMPLE SOLO EN PARTE
+
+   OP-L-01 NO SE CIERRA Y SU ESTADO NO SE TOCA: sigue en 'LISTA'.
+   UNA OPERACION CUYO TEXTO NO ALCANZA PARA EJECUTARSE SIN DECIDIR ES
+   PARADA, NO UNA IMPROVISACION.
+
+FIN
