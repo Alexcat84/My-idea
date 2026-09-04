@@ -1,0 +1,146 @@
+==============================================================================
+VUELTA 166, TAREA 5: EL COLAPSO, MEDIDO Y SIN ADJUDICAR CLASE
+==============================================================================
+
+A) EL RESOLUTOR, DELANTE DE TODO CONTEO (P.1)
+   es el MISMO de la TAREA 2, importado y no reimplementado.
+   CIFRA ficheros de nodo leidos: 3853
+   CIFRA alias en el mapa: 761
+   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388
+   CIFRA cabeceras LD leidas: 11
+
+B) PRIMERA MITAD: LAS ONCE LECTURAS DIRIGIDAS, RESUELTAS
+   CIFRA lecturas dirigidas: 11
+   CIFRA PARES RESUELTOS DISTINTOS que son de verdad: 9
+   CIFRA pares sobre los que cae MAS DE UNA lectura: 2
+
+   LOS COLAPSOS, UNO POR UNO, CON LAS LETRAS QUE TRAEN:
+      par resuelto: project_close_out contra reunion_conclusion_proyecto
+         LD-06   clase A DE BLOQUE  ids escritos: project_close_out contra reunion_conclusion_proyecto
+         LD-07   clase D            ids escritos: project_close_out contra encuesta_satisfaccion_postproyecto  | el resolutor mueve: encuesta_satisfaccion_postproyecto -> reunion_conclusion_proyecto
+         CIFRA letras distintas sobre este par: 2 (A DE BLOQUE, D)
+         SE MIDE Y NO SE ADJUDICA: ninguna de las dos se mueve aqui.
+      par resuelto: evaluacion_vp_ventas contra refinar_sales_roadmap
+         LD-09   clase D            ids escritos: refinar_sales_roadmap contra evaluacion_vp_ventas
+         LD-10   clase D            ids escritos: refinar_sales_roadmap contra framework_evaluacion_director_ventas  | el resolutor mueve: framework_evaluacion_director_ventas -> evaluacion_vp_ventas
+         CIFRA letras distintas sobre este par: 1 (D)
+         SE MIDE Y NO SE ADJUDICA: ninguna de las dos se mueve aqui.
+
+   Y SE DICE POR QUE NO ES UNA CONTRADICCION, con la razon del acta 165
+   (seccion 2) y NO con una inventada: las dos leyeron el BLOQUE
+   INJERTADO de project_close_out contra dos nodos que ENTONCES eran
+   dos y HOY son uno. La A de LD-06 no es entre los nodos: es entre el
+   bloque injertado y el otro nodo entero, y eso lo dice la propia
+   LD-06 con todas sus letras.
+
+C) SEGUNDA MITAD: EL FICHERO ENTERO
+   CIFRA filas que COLAPSAN a un auto-par (los dos ids son hoy el
+      mismo nodo): 401
+   CIFRA pares resueltos distintos que quedan: 2712
+   CIFRA de esos, con MAS DE UNA fila: 221
+   CIFRA de esos, con CLASES DISTINTAS: 13
+   la suma cuadra: 401 auto mas 2987 filas repartidas es 3388
+
+   EL REPARTO DE LOS CONFLICTOS POR COMBINACION DE CLASES, CONTADO:
+      A con B con D: 1
+      A con D: 4
+      B con D: 8
+   CIFRA combinaciones distintas: 3
+
+D) LOS PARES EN CONFLICTO, UNO POR UNO, CON SUS PUESTOS, SUS CLASES
+   Y SUS IDS CRUDOS. NINGUNA CLASE SE ADJUDICA Y NINGUN VEREDICTO SE
+   MUEVE: esto es un censo con evidencia, no una lectura.
+
+    1. par resuelto: cuatro_etapas_llamada_de_ventas contra enfoque_etapa_investigacion
+       CIFRA filas: 3 | clases: B, D
+       puesto 202   clase D   dominio core                   ids crudos: cuatro_etapas_llamada_de_ventas | etapa_de_investigacion
+       puesto 775   clase B   dominio core                   ids crudos: cuatro_etapas_llamada_de_ventas | enfoque_etapa_investigacion
+       puesto 1364  clase D   dominio core                   ids crudos: cuatro_etapas_llamada_de_ventas | etapa_investigacion_ventas
+
+    2. par resuelto: cuatro_etapas_del_pensamiento_creativo contra wallas_intimacion_fringe_consciousness
+       CIFRA filas: 2 | clases: B, D
+       puesto 279   clase B   dominio core                   ids crudos: intimation_illumination | wallas_etapa_iluminacion
+       puesto 721   clase D   dominio core                   ids crudos: wallas_etapa_iluminacion | wallas_intimacion_fringe_consciousness
+
+    3. par resuelto: customer_validation contra filosofia_validacion_clientes
+       CIFRA filas: 3 | clases: A, D
+       puesto 332   clase D   dominio core                   ids crudos: customer_validation | filosofia_validacion_clientes
+       puesto 349   clase D   dominio core                   ids crudos: filosofia_validacion_clientes | introduccion_validacion_clientes
+       puesto 655   clase A   dominio core                   ids crudos: filosofia_customer_validation | filosofia_validacion_clientes
+
+    4. par resuelto: cierre_satisfaccion_postventa contra cierre_segun_complejidad_venta
+       CIFRA filas: 3 | clases: B, D
+       puesto 337   clase B   dominio core                   ids crudos: cierre_satisfaccion_postventa | riesgo_tecnicas_cierre_venta_compleja
+       puesto 1280  clase D   dominio core                   ids crudos: cierre_satisfaccion_postventa | cierre_segun_complejidad_venta
+       puesto 1427  clase D   dominio core                   ids crudos: cierre_satisfaccion_postventa | cierre_segun_tamano_decision
+
+    5. par resuelto: customer_discovery contra customer_discovery_introduccion
+       CIFRA filas: 3 | clases: A, D
+       puesto 415   clase D   dominio core                   ids crudos: customer_discovery_cuatro_fases | customer_discovery_introduccion
+       puesto 424   clase D   dominio core                   ids crudos: customer_discovery_introduccion | customer_discovery_overview
+       puesto 611   clase A   dominio core                   ids crudos: customer_discovery | customer_discovery_introduccion
+
+    6. par resuelto: cierre_segun_complejidad_venta contra obtencion_compromiso
+       CIFRA filas: 4 | clases: B, D
+       puesto 499   clase D   dominio core                   ids crudos: ineficacia_cierre_ventas_grandes | obtencion_compromiso
+       puesto 527   clase B   dominio core                   ids crudos: obtencion_compromiso | riesgo_tecnicas_cierre_venta_compleja
+       puesto 971   clase D   dominio core                   ids crudos: cierre_segun_complejidad_venta | obtencion_compromiso
+       puesto 1598  clase D   dominio core                   ids crudos: diferencias_venta_pequena_venta_grande | obtencion_compromiso
+
+    7. par resuelto: customer_development_modelo contra customer_discovery
+       CIFRA filas: 3 | clases: A, B, D
+       puesto 635   clase A   dominio core                   ids crudos: customer_development_modelo | customer_discovery
+       puesto 707   clase B   dominio core                   ids crudos: customer_development_modelo | customer_discovery_overview
+       puesto 1255  clase D   dominio core                   ids crudos: customer_development_modelo | customer_discovery_cuatro_fases
+
+    8. par resuelto: enfoque_etapa_investigacion contra modelo_spin_preguntas
+       CIFRA filas: 3 | clases: B, D
+       puesto 648   clase B   dominio core                   ids crudos: enfoque_etapa_investigacion | modelo_spin
+       puesto 769   clase B   dominio core                   ids crudos: investigacion_como_habilidad_clave | modelo_spin
+       puesto 1422  clase D   dominio core                   ids crudos: etapa_investigacion_ventas | modelo_spin
+
+    9. par resuelto: pivote_estrategico contra pivote_o_proceder
+       CIFRA filas: 2 | clases: B, D
+       puesto 668   clase B   dominio core                   ids crudos: pivote_o_proceder | pivote_startup
+       puesto 1312  clase D   dominio core                   ids crudos: pivotar_o_proceder | pivote_startup
+
+   10. par resuelto: customer_validation contra earlyvangelists_ventas_tempranas
+       CIFRA filas: 3 | clases: A, D
+       puesto 697   clase D   dominio core                   ids crudos: earlyvangelists_ventas_tempranas | introduccion_validacion_clientes
+       puesto 1096  clase A   dominio core                   ids crudos: earlyvangelists_ventas_tempranas | filosofia_customer_validation
+       puesto 1185  clase D   dominio core                   ids crudos: customer_validation | earlyvangelists_ventas_tempranas
+
+   11. par resuelto: formalizar_junta_asesora contra identificar_consejo_asesores
+       CIFRA filas: 3 | clases: A, D
+       puesto 712   clase A   dominio core                   ids crudos: formalizar_junta_asesora | identificar_junta_asesores
+       puesto 976   clase A   dominio core                   ids crudos: formalize_advisory_board | identificar_junta_asesores
+       puesto 1190  clase D   dominio core                   ids crudos: formalize_advisory_board | identificar_consejo_asesores
+
+   12. par resuelto: pivotar_o_perseverar contra pivote_estrategico
+       CIFRA filas: 4 | clases: B, D
+       puesto 737   clase B   dominio core                   ids crudos: pivotar_o_perseverar | pivote_startup
+       puesto 1245  clase D   dominio core                   ids crudos: decision_pivote_perseverar | pivote_estrategico
+       puesto 1298  clase B   dominio core                   ids crudos: decision_pivote_perseverar | pivote_startup
+       puesto 1320  clase D   dominio core                   ids crudos: pivotar_o_perseverar | pivotes_e_iteraciones
+
+   13. par resuelto: pivote_o_proceder contra reunion_pivotar_o_perseverar
+       CIFRA filas: 2 | clases: B, D
+       puesto 968   clase B   dominio core                   ids crudos: pivote_o_proceder | reunion_pivotar_o_perseverar
+       puesto 1305  clase D   dominio core                   ids crudos: pivotar_o_proceder | reunion_pivotar_o_perseverar
+
+   CIFRA pares publicados uno por uno: 13
+   CIFRA pares en conflicto que esta vuelta ADJUDICA: 0
+   CIFRA veredictos que esta vuelta MUEVE: 0
+
+E) EL EJEMPLAR QUE EL ACTA 165 YA LEYO, SENALADO Y NO ADJUDICADO
+   el par {formalizar_junta_asesora, identificar_consejo_asesores}
+   esta entre los publicados: True
+      puesto 712   clase A    formalizar_junta_asesora | identificar_junta_asesores
+      puesto 976   clase A    formalize_advisory_board | identificar_junta_asesores
+      puesto 1190  clase D    formalize_advisory_board | identificar_consejo_asesores
+   LO QUE EL ACTA 165 DICE DE EL (seccion 4.3), y por eso la poblacion
+   NO se declara defectuosa: 'su conflicto es huella de fusion, no
+   error de lectura'. Un conflicto por par resuelto se mide uno por
+   uno o no se dice nada.
+
+FIN

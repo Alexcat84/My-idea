@@ -200,6 +200,27 @@ monitoreo de tres meses**, que la encuesta no tiene.
 > reunion de conclusion y la encuesta no son lo mismo**, y el bloque injertado se
 > parece a **una sola de las dos**.
 
+> **LA FRONTERA DE ARRIBA YA NO SEPARA DOS NODOS (4 sep 2026, vuelta 166, TAREA 5;
+> adjudicacion 5.14 del acta 165 y su hallazgo 4.2). POR ADICION Y SIN BORRAR
+> NI UNA LETRA DE ARRIBA:** la frontera se escribio el 11 ago 2026 y era cierta
+> aquel dia. **Hoy los dos nodos que separa son EL MISMO NODO:** medido en esta
+> vuelta con el resolutor que `P.1` obliga, `encuesta_satisfaccion_postproyecto` resuelve a
+> `reunion_conclusion_proyecto`, asi que `LD-06` y `LD-07` apuntan hoy al mismo par
+> resuelto y las once lecturas dirigidas son **NUEVE pares distintos**.
+>
+> **QUE SE PIERDE Y QUE NO.** No se pierde la lectura: los dos textos que se
+> leyeron aquel dia siguen siendo los que se leyeron. **Lo que se pierde es la
+> frontera**, porque ya no hay dos nodos entre los que trazarla. Y no es una
+> contradiccion entre `LD-06` y `LD-07`: las dos leyeron el **BLOQUE INJERTADO**
+> de `project_close_out` contra dos nodos que entonces eran dos, y la `A` de
+> `LD-06` no es entre los nodos sino entre el bloque y el otro nodo entero, tal
+> como esa misma ficha lo dice.
+>
+> **LO QUE ESTA ANOTACION NO HACE:** no mueve la `D` de `LD-07`, no mueve la
+> `A DE BLOQUE` de `LD-06`, no declara cual de las dos manda y no toca ni un
+> nodo. **La clase la decide una lectura, no un colapso.** Medido en
+> `../loop/SALIDA_V166_T5_COLAPSO.txt`.
+
 ### `LD-08` . `disenar_tests_pass_fail` contra `diseno_experimentos_hipotesis` . **D**
 
 Lo compartido son **dos lineas casi textuales**: preguntarse que se quiere
