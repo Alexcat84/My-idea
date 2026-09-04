@@ -1,0 +1,20 @@
+CIFRA alias en el mapa: 3930
+CIFRA veredictos indexados: 3216
+CIFRA pares posibles: 15 | CON veredicto: 10 | SIN veredicto: 5
+-- CON --
+  puesto 872   clase D   customer_validation_sales_roadmap      hoja_de_ruta_de_ventas
+  puesto 1023  clase D   customer_validation_sales_roadmap      refinar_sales_roadmap
+  puesto 319   clase A   customer_validation_sales_roadmap      sales_roadmap_vs_sales_force
+  puesto 966   clase A   estrategia_de_ventas                   sales_roadmap
+  puesto 200   clase A   hoja_de_ruta_de_ventas                 refinar_sales_roadmap
+  puesto 255   clase A   hoja_de_ruta_de_ventas                 sales_roadmap
+  puesto 1330  clase D   hoja_de_ruta_de_ventas                 sales_roadmap_vs_sales_force
+  puesto 192   clase A   refinar_sales_roadmap                  sales_roadmap
+  puesto 918   clase A   refinar_sales_roadmap                  sales_roadmap_vs_sales_force
+  puesto 1306  clase D   sales_roadmap                          sales_roadmap_vs_sales_force
+-- SIN --
+  customer_validation_sales_roadmap      estrategia_de_ventas
+  customer_validation_sales_roadmap      sales_roadmap
+  estrategia_de_ventas                   hoja_de_ruta_de_ventas
+  estrategia_de_ventas                   refinar_sales_roadmap
+  estrategia_de_ventas                   sales_roadmap_vs_sales_force

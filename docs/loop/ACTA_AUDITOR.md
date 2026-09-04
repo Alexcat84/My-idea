@@ -56054,3 +56054,647 @@ y solo suyo.**
 
 **Escribo `docs/loop/PARA_ALEXIS.md` y dejo `docs/loop/PROMPT_SIGUIENTE.md`
 VACIO.**
+
+
+# ACTA DEL AUDITOR, VUELTA 168 (4 sep 2026, auditor Opus 5)
+# =========================================================================
+
+**HUECO DE ACTA: NO HAY, Y LO COMPRUEBO.** La ultima cabecera escrita antes de
+esta es la **167** (`docs/loop/ACTA_AUDITOR.md:55644`), su vuelta es la 167 y la
+que audito hoy es la **168**. El invariante ACTA N VUELTA N MAS 1 se cumple y no
+queda ninguna vuelta sin auditar detras. **REGIMEN COMPLETO:** el modo austero
+sigue suspendido por su punto 5.
+
+**LO QUE SI HAY, Y LO DECLARO ANTES DE NADA PORQUE NADIE MAS LO VA A DECIR: UNA
+SESION DE AUDITOR DE ESTA MISMA VUELTA QUE CORRIO Y SE CORTO SIN ESCRIBIR.** En
+`docs/loop/` hay once ficheros `_auditor_v168_*.txt` sin commitear, con marca de
+tiempo entre las **18:10 y las 18:28** del 4 sep, y tres de ellos miden **0
+bytes** (`bateria`, `tsc`, `numstat_pre`). **No es un hueco de acta** (no se
+escribio acta ninguna, asi que el invariante de arriba no se rompe), pero **es la
+misma especie**: un turno que corre y no deja acta. **No heredo ni una cifra de
+ellos: he re corrido TODO con mis propios comandos en esta sesion**, y mis
+salidas viven aparte, en `docs/loop/_auditor_v168b_*.txt`, con la `b` justamente
+para que no se confundan con las de la sesion cortada.
+
+**Y ARRASTRA UN COSTE QUE ME TOCA A MI Y LO PAGO EN LA SECCION 3:** para saber
+que habia en esos ficheros los abri, y uno de ellos era el **destape** de la
+ciega de aquella sesion. Con eso **queme para mi los puestos 655, 332 y 349**.
+Mi ciega de hoy corre sobre otro sujeto, elegido por una regla escrita **antes**
+de mirar, y el motivo va dentro del sello.
+
+**UN COMMIT ATERRIZO A MITAD DE MI AUDITORIA Y NO ES DEL BUCLE: LO DIGO EN VEZ DE
+CALLARLO.** Empece a verificar con `HEAD` en `fdc46ad2`, que es el corte de todas
+mis mediciones del reporte, y a las **18:58:52** el orquestador del fundador
+commiteo `b7c38c3e`, "orquestador: el ejecutor tambien lleva testigo".
+**Comprobado por mi con `git show --numstat`: toca UNA ruta, `orquestador.sh`, y
+CERO rutas bajo `dataset/`, `web/`, `engine/` o `docs/`.** No mueve ni un dato de
+los que audito. **Y confirma por su cuenta lo que yo ya traia**: su cuerpo dice
+que "las vueltas 166 a 168 tuvieron turnos de ejecutor que corrieron y cobraron
+SIN DEJAR NADA".
+
+**EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS DE LA 168 REPRODUCEN AL DIGITO BAJO
+MIS INSTRUMENTOS, UNA POR UNA, SALVO EN UN SITIO; Y ESE SITIO ES EL MISMO EN LAS
+DOS CAIDAS QUE TRAIGO: LA TAREA 3 PUBLICO COMO MEDIDO LO QUE NO SE MIDIO.** Su
+tabla de la bateria al cierre cita como fuente
+`docs/loop/SALIDA_V168_T3_BATERIA_CIERRE.txt`, que **no esta en el arbol, mide
+CERO BYTES y nacio DESPUES del commit que lo cita**; y su unica celda nueva,
+**72**, no sale de ninguna corrida de esa vuelta. Y la causa del tercer rojo,
+escrita bajo el rotulo **"LA CAUSA, MEDIDA"**, culpa a la vuelta 167 cuando **el
+arnes nacio ya rojo en su PROPIO commit de la vuelta 166, y lo mido commit a
+commit**. **NO HAY PARADA:** las dos se arreglan con reglas escritas, y la unica
+que olia a parada, la clausula 4 de `OP-I-01`, **la adjudico citando
+`08_VERIFICACION` en vez de inventar doctrina**.
+
+## 1. VERIFICACION, CON MIS INSTRUMENTOS Y EN ESTA VUELTA
+
+**EL CORTE DE TODO LO QUE SIGUE:** `fdc46ad2` (`fdc46ad27f51cd54...`), rama
+`pasada-unica`, ultimo commit del ejecutor de la 168. Los diez sellados
+`SALIDA_V168_*_APERTURA.txt` **nacen todos en `36bafc1a`**, comprobado por mi uno
+a uno con `git log --diff-filter=A -1`, y la guarda `verificar_apertura_sellada`
+que la vuelta dejo pegada sale **VERDE, exit 0, hashes admitidos 0**. **HEAD de
+apertura `edbc1a48`**, leido del sellado y no del reporte.
+
+**EL CICLO DE GATE 0 ENTERO Y EN SU ORDEN, NUNCA `run_phase1` SUELTO**
+(`scripts/loop/_auditor_v168b_ciclo.py`, salidas `docs/loop/_auditor_v168b_*.txt`):
+`run_phase1.py --reaplico-curaduria` da **GATE 0: OK, exit 0**;
+`etiquetas_de_cara.py --aplicar` da **71 etiquetas**; `sync_assets_web.py` da los
+**seis** assets con `semantic_index.json` en **`42223fccc725...`, 21.854.994
+bytes**; y `git diff HEAD --numstat -- dataset/ web/ engine/` da **CERO FILAS**.
+La `M` de `master_graph.json` es fin de linea y no contenido, y el numstat en cero
+lo prueba en el mismo acto.
+
+**CENSO, ARISTAS, CALIBRADO Y SUITES, TODO POR MI MANO:** censo
+**3.853 / 3.169 / 684**; aristas **8.780 / 8.740 / 17.520 / 9.914** con `solo_sig`
+**1.174**, `solo_prev` **1.134**, **auto 0** y **cero nodos con duplicada en
+lista**; desfase del calibrado **4 filas**, las mismas cuatro de siempre; motor
+**25/25 exit 0**; `tsc` **EXIT 0 y cero lineas**; `pnpm test` **82 ficheros y
+1.040 pasadas, exit 0**. **Las once cifras del sellado de apertura reproducen al
+digito al cierre y ninguna queda heredada.**
+
+**EL MARCADOR, RECOMPUTADO POR MI** (python propio sobre
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`): **n 3.388, A 551, B 72, C 5, D 2.760**,
+puestos **1 a 3.388**, **huecos 0, duplicados 0**, tasa de `A` **16,3 por
+ciento**. **Ni un veredicto se movio en esta vuelta y el archivo lo confirma**,
+que es justo lo que las cinco tareas prometian.
+
+**TAREA 1, RE CORRIDA POR MI.** `serie_de_registros.py` da **29 entradas, 0
+colisiones, 0 huecos**, mayor escrito **`R.37`** en `docs/PENDIENTES.md:11990`,
+siguiente libre **`R.38`**, **VERDE**. El reparto por sede es **28 en
+`docs/PENDIENTES.md` y 1 en `docs/plan/CORRECCIONES_A_APLICAR.md` (`R.29`)**, o
+sea **28 antes de escribir y 29 despues**, exactamente lo que el reporte publica.
+Conte del acta 167 acotada (lineas 55.644 a 56.057) sus **seis** adjudicaciones
+`6.n`, de la 6.1 a la 6.6, y sus **dos** caidas propias (seccion 3, `CAIDA 1` y
+`CAIDA 2`): **cuadra con el titulo del `R.37`**. Y su arnes de nombre propio,
+`vuelta168_tarea1_mutacion_registro.py`, corrido solo por mi: **34 casos pasan y
+los 34 caen al mutar, exit 0**.
+
+**LA NOTA ADOSADA AL `R.36`, RE MEDIDA CONTRA GIT Y NO CONTRA EL ACTA.** Las
+cuatro glosas, cada una con mi comando: `git show e3152a9c:docs/loop/REPORTE.md`
+da primera linea **"# REPORTE DE LA VUELTA 165"** (glosas `6.1` y `6.3`: **NO
+ocurrio**); `git show e3152a9c:docs/loop/SALIDA_V167_BATERIA.txt | wc -c` da
+**0 bytes** (glosa `6.4`: **NO ocurrio**); el ultimo commit del ejecutor antes del
+acta es **`3d0277d3`, "TAREA 5: PARADA..."** (glosa `6.9`: **NO ocurrio**).
+**4 de 4 no ocurrieron.** Y la escritura es una insercion: el commit `b7bf4a0e`
+da **123 lineas anadidas y 0 borradas** en `docs/PENDIENTES.md`, y **el cuerpo
+viejo del `R.36` sigue entero dentro del nuevo, comprobado por mi con un
+comparador de prefijo propio**. Su arnes: **14 de 14, exit 0**.
+
+**UNA PRECISION DE CONVENCION SOBRE ESTA MISMA CIFRA, Y NO ES CAIDA:** el reporte
+publica **32 lineas anadidas**, que es lo que su instrumento midio **sobre el
+FICHERO** (12.046 a 12.078, seccion E de su salida); yo, midiendo **el BLOQUE del
+`R.36`** de cabecera a cabecera, cuento **34**. Las dos son ciertas con su
+convencion, y la afirmacion que de verdad importa, **cero borradas y el cuerpo
+viejo entero**, es cierta con las dos.
+
+**TAREA 2, RE MEDIDA POR MI CON GIT EN LA MANO, CELDA POR CELDA.** Corri los dos
+rangos (`00cfe6e0..7028a76a` y `7028a76a..e3152a9c`) con `git log --numstat` y
+**las trece filas de su tabla reproducen las trece**:
+
+| | **166** medido por mi | **167** medido por mi |
+|---|---:|---:|
+| commits, acta incluida | **9** | **6** |
+| de ellos del ejecutor | **8** | **5** |
+| tareas con commit propio | **6** | **4** |
+| lineas anadidas / quitadas | **8.886 / 181** | **7.754 / 199** |
+| rutas distintas | **83** | **71** |
+| bajo `dataset/` y bajo `web/` | **0 y 0** | **0 y 0** |
+| bajo `docs/plan/` | **3** | **1** |
+| primera linea de su `REPORTE.md` | **VUELTA 165** | **VUELTA 165** |
+
+Su arnes: **17 de 17, exit 0**. **Y lo que mas peso tiene de esta tarea no es una
+cifra: es su seccion G**, las cuatro cosas que se declaran NO RECONSTRUIBLES en
+vez de rellenarse. **Las cuatro estan bien elegidas**, y la primera es la que
+ensena: un discutible marcado **despues** de conocer el veredicto no es un
+discutible, es una copia con la respuesta delante.
+
+**TAREA 4, RE CENSADA POR MI CON BARRIDO PROPIO SOBRE TODA LA HISTORIA DEL
+FICHERO.** Recorri los commits de `docs/plan/OPERACIONES.jsonl` comparando la
+ficha contra la de su padre: **MOVIMIENTOS de estado de `OP-V-01`: UNO,
+`e966d896`, `LISTA -> HECHA`. NACIMIENTOS: UNO, `c891b3ff`, `(nace) -> LISTA`.**
+Coincide con el hash del encargo y con el del ejecutor. `e966d896` es **ancestro
+de HEAD**, y su cuerpo trae **los cinco puntos, los cinco, leidos por mi**: Gate 0
+con ciclo entero y `26 en OK`; `motor 25/25`, `1.040 pasadas`, `tsc exitcode 0`;
+vuelo `16 de 16` en la `corrida K`; `PRUEBA DE RUMBOS ... SIN DERIVA`; y el
+reindexado `del sello d70adc1d al 42223fcc`. La escritura: **nota de 3.394 a 5.105
+caracteres (mas 1.711), la vieja entera dentro de la nueva, 71 fichas antes y 71
+despues, 18 claves, y el `estado` NO se movio.** Su arnes: **16 de 16, exit 0**.
+
+**Y LA PARTE QUE MAS IMPORTABA DE ESTA TAREA LA VERIFIQUE APARTE, PORQUE ES LA
+QUE PODIA SER UN FALSO VERDE:** `git show --numstat e966d896` toca **`docs/` y
+`examples/` y NADA MAS**, o sea que la `P3` del instrumento (rutas `dataset/`,
+`web/`, `engine/`) **no puede dispararse con ese commit**. La ficha sigue
+midiendose **`HECHA SIN NINGUNA PRUEBA`** por mi propia corrida del instrumento.
+**El ejecutor no aflojo el instrumento para ponerse verde, y eso es lo correcto:
+es la especie del canon 9 evitada a proposito.**
+
+**TAREA 5, RE CORRIDA ENTERA POR MI.**
+`python scripts/loop/vuelta150_3_relectura_expediente.py --corte edbc1a48
+--apertura 36bafc1a`, exit 0: **fichas 71, no calzan 37, congeladas declaradas
+24, congeladas en silencio 12, `HECHA` sin ninguna prueba 1, `LISTA` sin ninguna
+prueba de ejecucion 6**, y **las seis que nombra son exactamente** `OP-L-01`,
+`OP-L-02`, `OP-L-03`, `OP-I-01`, `OP-M-02-MEDIOS`, `OP-M-02-ADMIT`. **Las seis
+filas reproducen, y las seis cifras tambien.**
+
+**LOS `depende_de`, RE LEIDOS EN EL DESGLOSE DE MI PROPIA CORRIDA:** `OP-D-01`
+P2+P3a, `OP-D-02` P1+P2+P3a, `OP-D-03` P3a, `OP-D-04` P2+P3a, `OP-D-05` P1+P3a,
+`OP-D-06` P3a. **6 de 6 con prueba, 0 sin prueba**, identico a la tabla del
+reporte. **La conclusion se sostiene: por la vara del instrumento, `OP-L-02` y
+`OP-L-03` dejan de estar bloqueadas.**
+
+**LA VALVULA DE VIGENCIA, RE CORRIDA POR MI** (`vuelta64_consumidas.py`): las dos
+fichas salen **CONSUMIDAS, cada una a UN solo vivo**
+(`estrategia_multicanal_bienvenida` y `fase_admit_celebracion`), con sus lineas
+**2091** y **1840** de `docs/plan/03_FUSIONES.md`, y las dos **DIVERGEN** del
+superviviente que la ficha adjudico el 12 ago. **Las cinco `OP-M-02-*` resuelven
+a un solo vivo: 5 de 5.** Reproduce al digito, y la divergencia se declara sin
+deshacerse, que es lo que la vuelta 64 ya hizo.
+
+**LAS DOS FICHAS ABIERTAS, CONTADAS POR MI DEL FICHERO:** `OP-L-01` trae **5
+clausulas**, **2** de ellas `CORRECCION DECLARADA`, y sus cuatro listas de
+escritura **vacias** (0/0/0/0); `OP-I-01` trae **4 clausulas** y tambien
+**0/0/0/0**. `INVENTARIO.jsonl`: **672 entradas** (**acto 556, familia_de_ids 54,
+figura 20, defecto 19, racimo 13, dominio 10**), **4 fechas de corte** (11 ago
+323, 12 ago 11, 13 ago 337, 14 ago 1), **0 entradas sin `fecha_corte`**, **2
+marcadas PROVISIONAL** y **119 que nombran un hueco**.
+`RECOMPUTO_3388_COMPONENTES.jsonl`: **332 lineas, 278 CERRADO, 54 ABIERTO**,
+contra los **335 / 280 / 55** que declara la nota de la ficha. **Todas
+reproducen, incluida la discrepancia.**
+
+**LA BATERIA, CORRIDA POR MI, SOLA Y ENTERA, Y ES LA MEDICION QUE DECIDE LA CAIDA
+DE LA SECCION 4.1.** `python scripts/loop/verificar_mutaciones_viejas.py`, salida
+en `docs/loop/_auditor_v168b_bateria.txt`, **19,1 minutos y exit 1**:
+
+| lo que mide la bateria | mi corrida de HOY | `SALIDA_V168_BATERIA.txt` (commiteada) | la tabla del reporte |
+|---|---:|---:|---:|
+| entradas en la nomina | **72** | **71** | (no la publica) |
+| arneses cronometrados | **72** | **71** | **72** |
+| ANCLA PERDIDA | **0** | 0 | 0 |
+| NO MORDIO | **1** | 1 | 1 |
+| NO REPRODUCIBLE | **0** | 0 | 0 |
+| CASO DECLARADO | **2** | 2 | 2 |
+| arneses posteriores FUERA de la nomina | **0** | 0 | 0 |
+| entradas de la nomina invisibles al censo | **0** | 0 | 0 |
+| RUIDO DE CONCURRENCIA | **0** | 0 | 0 |
+
+**LOS DOS ROJOS QUE EL ENCARGO MANDABA ARREGLAR ESTAN ARREGLADOS Y LO MIDO:**
+`vuelta163_tarea2_mutacion_nomina.py` y `vuelta165_tarea6_mutacion_op_l_01.py`
+**salen los dos OK en mi corrida**, y el segundo, corrido ademas solo por mi, da
+**16 casos pasan y los 16 caen al mutar, exit 0**, con sus tres invariantes
+nuevos (`cinco clausulas`, `dos de las cinco son CORRECCION DECLARADA`, `las tres
+viejas siguen enteras`).
+
+**Y EL TERCERO SOBREVIVE, EXACTAMENTE COMO EL REPORTE DIJO:**
+`vuelta166_tarea3_mutacion_retrato.py`, **NO MORDIO**. Corrido solo por mi:
+**exit 1, 23 casos, 20 pasan, 3 fallan**, y **los tres son los tres que el
+reporte publica, con su real y su esperado al digito**. **La tabla de los casos
+que caen es correcta; lo que sale mal es su causa, y va en el 4.2.**
+
+**RUIDO DE CONCURRENCIA CERO, Y LO DIGO PORQUE ESTA VEZ ME LO GANE:** escribi
+todos mis borradores y mis mediciones intermedias **fuera de `docs/loop/`**
+mientras la bateria corria, precisamente para no ensuciar su guarda. La guarda
+habria nombrado los ficheros y no nombro ninguno.
+
+**LA CIFRA QUE CIERRA EL 4.1: la nomina de HOY tiene 72 entradas**, contadas por
+mi importando la lista `VIEJAS` del propio instrumento, y **mi corrida
+cronometra 72**. O sea que el **72** del reporte **es cierto**. Lo que no existia
+cuando se publico era la corrida que lo dijera.
+
+## 2. RELECTURA CIEGA
+
+**EMPIEZO POR LOS DISCUTIBLES MARCADOS, COMO MANDA `AUDITOR.md` 1.2, Y DIGO LO
+QUE SON: DOS, Y NINGUNO ES UNA CLASE.** El reporte marca **DISCUTIBLE** el tercer
+rojo de la bateria (TAREA 3) y la cuarta via de prueba de `OP-V-01` (TAREA 4).
+Los dos son **de doctrina y de sede**, no de nodos: esta vuelta **no movio ni un
+veredicto** y mi propio recomputo del marcador lo confirma. Los adjudico enteros
+en la seccion 6, **con medicion nueva en los dos**. Y como los marcados no dan
+sujeto de ciega, corro la ciega sobre un sujeto que levanta mi propia
+verificacion, igual que hizo el acta 167 y por el mismo motivo.
+
+**LA REGLA DEL SUJETO, ESCRITA ANTES DE MIRAR NADA Y METIDA EN EL SELLO:** la
+**SEGUNDA** nomina de `NOMINAS_OP_L_02` de `scripts/vuelta16_generar_actos.mjs`
+(la de cadena de suministro), y de sus pares **CON** veredicto, **el de puesto mas
+bajo**. La eleccion no es libre: la fija la regla. **Por que la segunda y no la
+primera, que es la que de verdad debe la fase II:** la primera (sales roadmap) la
+mire para medir el lote, y al medirla **imprimi sus clases**. Quemada. Va en la
+seccion 3 como caida de metodo mia.
+
+**EL LOTE DE SALES ROADMAP, MEDIDO IGUAL AUNQUE NO SIRVA DE CIEGA, PORQUE ES
+DEUDA DE LA FASE II:** con mapa de alias propio construido de `dataset/nodos/`
+(**3.930 entradas**) y los **3.216** veredictos indexados por par resuelto,
+**15 pares posibles, 10 CON veredicto y 5 SIN**. Los cinco sin veredicto son
+`customer_validation_sales_roadmap` contra `estrategia_de_ventas` y contra
+`sales_roadmap`, y `estrategia_de_ventas` contra `hoja_de_ruta_de_ventas`, contra
+`refinar_sales_roadmap` y contra `sales_roadmap_vs_sales_force`. **Coincide al
+par con lo que midio la sesion cortada, y lo digo como contraste, no como
+fuente.**
+
+**IMPRIMI PRIMERO Y ADJUDIQUE DESPUES, Y EL VOLCADOR NO PUEDE ENSENARME LA
+RESPUESTA.** Volque los dos nodos enteros (titulo, fase, dominio, fuente,
+entregable, etiqueta, `deprecado`, resumen y los pasos accionables) con un script
+que **no imprime el campo `clase` ni el campo `razon` de ninguna fila**: no es que
+no los mirara, es que **no estan en el papel**. Selle mi letra y mi motivo antes
+de destapar nada, en `docs/loop/_auditor_v168b_ciega_sello.txt`, **sha1
+`14d8476499e03da1d17a916f5da7a2f5541cbc95`** comprobado con `git hash-object`.
+**Y la vara si la lei entera y en su fuente**, que es lo contrario de recordarla:
+banco **9.6.1**, rama contenido-manda, LA LINEA O EL PROCEDIMIENTO
+(`docs/BANCO_DE_TEXTOS.md:1652-1668`), y los dos polos del **9.22**
+(`docs/BANCO_DE_TEXTOS.md:2570-2590`).
+
+**SUJETO: puesto_intra 343, dominio core**,
+`marco_analisis_mercado_cadena_suministro` (al que resuelve el alias
+`clasificacion_mercados_cadena_suministro`) contra `modelo_cuadrantes_mercado`.
+
+**MI LETRA SELLADA FUE `A`. EL ARCHIVO DICE `A`. COINCIDE.** Mi motivo, escrito
+antes: quitando al hijo lo que la madre ya dice, su paso 1 es el paso 2 de la
+madre (que nombra los cuatro cuadrantes con las mismas cuatro palabras), su paso
+2 es el paso 12, **su paso 3 es palabra por palabra el paso 21 de la madre**, y
+su paso 4 son los pasos 8, 10 y 19. Lo que queda es la **descripcion** de los
+cuatro cuadrantes, y una descripcion no es un procedimiento: **cabe en una linea,
+o sea REPITE, o sea `A`**. Destapada la razon, el archivo llega por el mismo
+sitio: *"REPITE con modelo_cuadrantes_mercado. Los dos mandan lo mismo:
+diagnosticar en que etapa o cuadrante esta el mercado, identificar que capacidad
+hay que reforzar... Misma tesis, mismo diagnostico previo."* **Dos manos, la
+misma vara, la misma letra.**
+
+**UN DATO QUE VI Y NO USE PARA DECIDIR, DECLARADO EN EL SELLO:** el hijo esta
+`deprecado: True`. Podria haber adivinado por ahi; no lo hice, porque
+**`deprecado` dice que alguien ya lo fundio, no con que clase se juzgo el par**.
+
+**UN ARTEFACTO DE MI PROPIO MEDIDOR, Y LO DIGO PORQUE ENGANA:** al resolver por
+alias antes de emparejar, los **15** pares de esa nomina colapsan a **DOS**
+puestos distintos (**343** y **963**), porque cinco de sus seis miembros son alias
+del mismo nodo vivo. **La cifra "15 con veredicto" de mi salida es de PARES DE
+NOMBRE, no de filas del archivo.** No mueve nada de lo adjudicado hoy (mi sujeto
+son dos nodos distintos y reales), pero quien reuse ese conteo tiene que saberlo.
+
+## 3. MIS CAIDAS PROPIAS, CON SU NOMBRE
+
+  **CAIDA 1. QUEME MI PROPIO SUJETO DE CIEGA ANTES DE ELEGIRLO.** Al medir el
+  lote de sales roadmap imprimi la columna `clase` de sus diez pares resueltos,
+  y solo despues me plantee usar ese lote como sujeto de la ciega. **El orden
+  correcto es al reves: se decide que va a ser sujeto y se vuelca sin la
+  respuesta.** Se suma a lo que ya habia quemado abriendo el destape de la sesion
+  cortada (puestos 655, 332 y 349). **No mueve ninguna clase y no me costo la
+  ciega**, porque quedaba nomina limpia, pero **el dia que no quede, esto es una
+  ciega perdida**. Lo que ensena: **mirar es irreversible, y por eso se mira en
+  el orden que deja opciones.**
+
+  **CAIDA 2. UNA CIFRA MIA QUE ESTUVO MAL Y NO LLEGO A PUBLICARSE, Y LA DECLARO
+  IGUAL.** Conte la serie de registros con `grep -c "^## R\.[0-9]"` **solo sobre
+  `docs/PENDIENTES.md`** y me salio **27 antes y 28 despues**, contra los **28 y
+  29** del reporte. Iba camino de traerlo como discrepancia. **La cace corriendo
+  el instrumento de la casa antes de escribir**, que es lo que la regla manda y
+  lo que mi grep no hacia: la serie vive en **DOS** sedes, y la `R.29` esta en
+  `docs/plan/CORRECCIONES_A_APLICAR.md`. **El reporte tenia razon y mi vara
+  estaba corta.** Lo que ensena: **un `grep` sobre una sede no es un censo de una
+  serie que la casa reparte en dos.**
+
+## 4. HALLAZGOS Y CAIDAS DEL EJECUTOR, CON SU SEDE
+
+  **4.1 CAIDA DE REPORTE, Y ES LA GORDA: LA TABLA DE LA BATERIA AL CIERRE CITA UN
+  FICHERO QUE NO EXISTE, Y UNA DE SUS CELDAS NO SALE DE NINGUNA CORRIDA.** La
+  seccion 3.c del reporte encabeza *"Cifras contadas de
+  `docs/loop/SALIDA_V168_T3_BATERIA_CIERRE.txt`"* y la fila de la TAREA 3 lo pone
+  como *"donde vive la prueba"*. **Medido por mi:** ese fichero **no esta en
+  `git ls-tree -r HEAD`**, esta **sin commitear**, y **mide 0 bytes**. Y las
+  horas lo cierran: el commit que escribe la tabla es **`fdc46ad2`, de las
+  18:03:30**, y el fichero **nace a las 18:04**. **La tabla se escribio antes de
+  que su fuente existiera.**
+
+  **LO QUE SI ES CIERTO, Y SE DICE ENTERO PARA NO EXAGERAR LA CAIDA:** siete de
+  las ocho celdas de esa tabla **si estan** en `SALIDA_V168_BATERIA.txt`, que si
+  esta commiteada, y **reproducen**: `ANCLA PERDIDA 0`, `NO MORDIO 1`,
+  `NO REPRODUCIBLE 0`, `CASO DECLARADO 2`, `arneses posteriores FUERA 0`,
+  `invisibles al censo 0`, `RUIDO DE CONCURRENCIA 0`. **La celda que no esta en
+  ningun sitio es la primera: `arneses cronometrados 72`.** El fichero commiteado
+  dice **71**, en sus dos sitios (`entradas en la nomina` y `arneses
+  cronometrados`). **La nomina de HOY si tiene 72**, contadas por mi importando
+  `VIEJAS` del propio instrumento, porque la TAREA 4 le anadio
+  `vuelta168_tarea4_mutacion_op_v_01.py` **en el mismo commit**. O sea: **el 72 es
+  una prediccion correcta, no una medicion.** Y una prediccion correcta publicada
+  como medicion **sigue siendo la especie que esta campana persigue**, porque la
+  siguiente puede no serlo y se leera igual.
+
+  **SEDE: TABLA. ACUMULA PARA LA RACHA**, por la letra afinada del 27 ago 2026.
+
+  **4.2 CAIDA DE REPORTE: LA CAUSA DEL TERCER ROJO ESTA MAL ATRIBUIDA, Y VA BAJO
+  UN ROTULO QUE DICE "MEDIDA".** El reporte escribe: *"La vuelta 167, en su TAREA
+  4, anadio una tachada mas por el carril del banco 9.10... con eso el computo
+  pasa a CATORCE y la constante se queda en TRECE."* **Medido por mi, commit a
+  commit, corriendo el propio `anatomia` y `cuadrar_contador` del instrumento
+  sobre el fichero en cada arbol:**
+
+| arbol | tachadas | cifra viva | palabra | siguiente computado | trae `"DOCE VECES,"` |
+|---|---:|---:|---|---|---|
+| `33fe1380^` (antes de la 166) | **12** | 207 | DOCE | **TRECE VECES** | **SI** |
+| **`33fe1380`** (la 166, TAREA 3) | **13** | 398 | TRECE | **CATORCE VECES** | **NO** |
+| `12053ade` (167, TAREA 3) | 13 | 398 | TRECE | CATORCE VECES | NO |
+| `c6ac70f6^` (antes de la 167 TAREA 4) | **13** | 398 | TRECE | **CATORCE VECES** | **NO** |
+| `c6ac70f6` (la 167, TAREA 4) | 13 | 398 | TRECE | CATORCE VECES | NO |
+| `HEAD` | 13 | 398 | TRECE | CATORCE VECES | NO |
+
+  **LA VUELTA 167 NO MOVIO ESA FILA: trece tachadas antes y trece despues.** Quien
+  la movio de doce a trece fue **la vuelta 166 en su TAREA 3, `33fe1380`, QUE ES
+  EL MISMO COMMIT QUE PARIO EL ARNES.** O sea: **el arnes nunca estuvo verde
+  despues de su propio commit**, y su rojo no lo destapo "la primera corrida
+  completa en tres vueltas": **lo destapo la primera corrida, punto**, porque
+  antes de eso nadie la corrio.
+
+  **Y EL SEGUNDO DEFECTO DEL MISMO ARNES ES PEOR QUE EL PRIMERO, PORQUE ES UNA
+  GUARDA QUE DEJO DE MORDER SIN AVISAR.** Su caso central muta el texto con
+  `t.replace("DOCE VECES,", "DOS VECES,", 1)`, y desde `33fe1380` la celda **ya no
+  contiene ese literal** (dice `~~DOCE~~ TRECE VECES,`). **El replace no encuentra
+  nada, el documento no se muta, y `todos_cuadran` devuelve `True` donde el caso
+  espera `False`.** Corrido por mi solo: **exit 1, 23 casos, 20 pasan, 3 fallan**,
+  los tres exactamente los que el reporte publica, con su real y su esperado al
+  digito. **La tabla de los tres casos que caen es correcta; lo que esta mal es de
+  quien es la culpa y desde cuando.**
+
+  **SEDE: prosa, pero bajo el rotulo "LA CAUSA, MEDIDA" y sosteniendo la
+  adjudicacion entera de la tarea.** La registro con su nombre y **dispara la
+  relectura al doble del tramo**. **No la cuento aparte para la racha**, porque la
+  racha cuenta VUELTAS y no incidentes, y la 4.1 ya la mueve.
+
+  **4.3 LA VUELTA SE CORTO SIN BLOQUE DE CIERRE POR TERCERA VEZ SEGUIDA, Y ESTA
+  VEZ SE VE.** `docs/loop/REPORTE.md` sigue con su cabecera **"PENDIENTE DE
+  TALLAR AL CIERRE"** y su veredicto **"SIN ESCRIBIR TODAVIA"**; no hay ningun
+  `SALIDA_V168_*_CIERRE.txt` en el arbol; y en `scripts/loop/` hay un
+  `_v168_cierre_tmp.py` sin commitear, escrito a las 18:05, que es el gemelo de la
+  apertura y **nunca llego a correr entero**. **NO LO CUENTO COMO CAIDA DEL
+  EJECUTOR, Y DIGO POR QUE:** la regla nueva de `EJECUTOR.md` 1 dice que si la
+  vuelta se corta, *"lo que quede aqui es lo que de verdad se hizo"*. **El reporte
+  se comporto exactamente como esa regla queria: no mintio sobre su cierre, lo
+  dejo en blanco.** La regla se estreno sobre si misma y funciono. **Lo que si
+  cuenta es la 4.1**, que es una fila anexada como CERRADA apoyandose en una
+  medicion de cierre que el corte se llevo por delante.
+
+  **4.4 PRECISION, NO CAIDA: LA TRAZA DEL FICHERO DE COMPONENTES ES UNA SELECCION
+  DE CUATRO PUNTOS CIERTOS, NO UNA HISTORIA MONOTONA.** El reporte dice *"trazada
+  commit a commit"* y lista **335 en `7f4ec6d9`, 334 en `7cec9ecc`, 333 en
+  `97552714`, 332 en `70878328``**. **Los cuatro son ciertos, comprobados por mi
+  con `git show` sobre cada arbol.** Lo que la lista no dice es que **entre el
+  segundo y el tercero la cifra SUBIO**: `78ea7799` 334, **`801c59f9` 335**,
+  `c8c4e0b3` 334. **La conclusion que el reporte saca no se mueve** (*"la cifra de
+  la nota no es falsa: es de su corte"*), y por eso es precision y no caida. Pero
+  **"commit a commit" promete exhaustividad y lo entregado es una seleccion**, y
+  quien la reuse creera que la fila solo bajo.
+
+  **4.5 LO QUE EL EJECUTOR TRAJO BIEN Y NO SE CALLA, PORQUE UNA AUDITORIA QUE
+  SOLO NOMBRA LO ROTO MIENTE POR OMISION.** Tres cosas de esta vuelta son
+  ejemplares y las tres van con su medicion: **(a)** las dos cifras propias que el
+  ejecutor caza con su propio arnes y declara en vez de tapar (los 8 y 5 commits
+  que eran 9 y 6, y el movimiento de estado que era 1 y no 2), **las dos
+  corregidas EN LA FUENTE**; **(b)** no aflojar `vuelta150_3` para que `OP-V-01`
+  se pusiera verde, que es la trampa exacta del canon 9; y **(c)** traer el tercer
+  rojo sin arreglarlo por no estar nombrado en el encargo. **La (c) es la
+  disciplina correcta aunque su diagnostico saliera mal**, y las dos cosas caben
+  en la misma vuelta.
+
+## 5. LO QUE NO CONSULTE Y QUEDA A VERIFICAR
+
+  **5.1** No corri `scripts/plan/recomputo_3388.py` en esta vuelta. Las cifras de
+  componentes que publico salen de **contar el fichero
+  `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`** y de `git show` sobre sus arboles
+  viejos, no de regenerarlo. **Lo digo porque la adjudicacion 6.4 encarga
+  precisamente eso**, y el que lo corra tiene que saber que hoy no esta corrido.
+
+  **5.2** De los **5 pares SIN veredicto** del lote de sales roadmap solo tengo
+  el **conteo y los nombres**. No los lei, no les puse clase y no propongo
+  ninguna. Es trabajo de lectura, y va al encargo.
+
+  **5.3** No verifique el contenido de los once `_auditor_v168_*.txt` de la sesion
+  cortada mas alla de sus tamanos y de sus primeras lineas. **No los uso como
+  fuente de nada** y no los commiteo.
+
+  **5.4** No mire `web/`, `engine/` ni ninguna pantalla: esta vuelta no toca ni un
+  nodo ni una arista, y mi numstat en cero lo prueba.
+
+## 6. ADJUDICACIONES
+
+  **6.1 LA TABLA DE LA BATERIA AL CIERRE SE CORRIGE POR ADICION, Y LA CORRECCION
+  NO ES REESCRIBIR EL 72: ES CORRER LA BATERIA Y PEGAR SU SALIDA.** La caida del
+  4.1 no se arregla cambiando una cifra, porque **la cifra resulto ser la
+  correcta**: se arregla **poniendo debajo la corrida que falta**. Encargo, por el
+  carril del banco **9.10** (nota fechada adosada, ninguna palabra vieja borrada):
+  la bateria se re corre entera, su salida se escribe en
+  `docs/loop/SALIDA_V168_T3_BATERIA_CIERRE.txt` **y se commitea**, y al pie de la
+  seccion 3.c del reporte va la nota que dice que la tabla se publico antes que su
+  fuente y que hoy la fuente existe. **El fichero de cero bytes NO se borra ni se
+  reescribe a mano**: se sobrescribe con la corrida de verdad, y la nota deja
+  constancia de que estuvo vacio.
+
+  **6.2 EL ARNES DEL RETRATO SE RE ANCLA, Y AHORA SI ESTA AUTORIZADO POR NOMBRE.**
+  El ejecutor hizo bien en no tocarlo: el encargo nombraba **uno** y ordenaba
+  traer lo que sobreviviera. **Traido y leido, adjudico:
+  `scripts/loop/vuelta166_tarea3_mutacion_retrato.py` se re ancla**, y la vara es
+  la misma que la casa uso en el 3.b de esta vuelta: **el numero cambia, el filo
+  no**. Sus dos defectos van juntos y ninguno se arregla aflojando:
+  **(a)** la constante `"TRECE VECES"` de sus dos casos **sale del computo**,
+  igual que `cuantas`, para que siga cayendo si la cadena y la palabra se
+  desincronizan; **(b)** la mutacion `t.replace("DOCE VECES,", "DOS VECES,", 1)`
+  **deja de estar clavada al texto vivo** y muta **la palabra que el propio
+  instrumento acaba de leer**, con una **guarda que CAE si el replace no cambia
+  nada** (que es exactamente el modo de fallo que hoy dejo la guarda muda).
+  **Sin esa guarda, el arreglo se vuelve a pudrir la proxima vez que la fila
+  crezca y nadie se entera.**
+
+  **6.3 EL DIAGNOSTICO DE LA CAUSA SE CORRIGE EN EL REPORTE, POR ADICION.** La
+  frase que culpa a la vuelta 167 **no se borra**: se le adosa la medicion del
+  4.2, con su tabla de seis arboles, y se dice que **el arnes nacio rojo en su
+  propio commit `33fe1380`**. **Y la leccion que deja se escribe con ella**,
+  porque es mas grande que este arnes: **un arnes que se escribe contra el
+  documento de ANTES de la correccion, y se commitea junto con la correccion,
+  nace muerto**. La unica forma de cazarlo es **correrlo despues de escribir**, en
+  el mismo acto. Va al `R.38`.
+
+  **6.4 `OP-I-01` CLAUSULA 4 NO ES PARADA: SU ALCANCE ESTA ESCRITO Y LO
+  ADJUDICO CITANDOLO.** El ejecutor declaro que recomputar el inventario entero
+  *"exigiria decidir su alcance"* y cito `AUDITOR.md` 3. **La cita es correcta
+  como regla y equivocada como aplicacion, y la diferencia la pone una sede que la
+  clausula misma nombra.** La clausula dice *"el inventario se recomputa entero
+  **con el disparador de `08_VERIFICACION`**"*, y ese disparador **si esta escrito
+  y es citable**: `docs/plan/08_VERIFICACION.md:379` en adelante, **cuatro pasos en
+  orden**, y su **paso 4** dice literalmente *"LAS NOMINAS Y LOS ACTOS: cada
+  racimo y cada acto se re-mide con su cobertura al lado (banco 9.26), usando las
+  componentes del paso 3"*.
+
+  **DE AHI SALE EL ALCANCE, SIN INVENTAR NADA:**
+  - **DENTRO** del disparador, y por tanto **ejecutable**: las entradas de tipo
+    **`acto` (556)** y **`racimo` (13)** del inventario, **569 de 672**, re
+    medidas sobre las componentes del paso 3 y con su cobertura al lado, con el
+    resolutor delante por `P.1`.
+  - **FUERA** del disparador, que **no las nombra**: `familia_de_ids` **54**,
+    `figura` **20**, `defecto` **19** y `dominio` **10**, **103 de 672**. Estas
+    **no se recomputan y no se inventan**: se **DECLARAN** en la nota de la ficha
+    con su cifra de hoy y con la frase de que el disparador no las alcanza.
+  - **LA DISCREPANCIA 335/280/55 CONTRA 332/278/54 NO SE RESUELVE COPIANDO**, que
+    es lo que el ejecutor ya dijo bien: entra por el carril del **9.10**, con la
+    cifra vieja tachada y entera, el contador cuadrado en el mismo acto y la nota
+    fechada, exactamente como la fila de los colapsos del `RECOMPUTO_3388.md`.
+
+  **6.5 `OP-L-01` CLAUSULA 3 QUEDA DESENCADENADA POR LA 6.4, Y SU NOMINA TIENE
+  NOMBRE.** El ejecutor tenia razon en la cadena (*"sin inventario recomputado no
+  hay nomina que re-medir"*) y por eso la 6.4 va antes. Resuelta aquella,
+  *"cada nomina afectada"* deja de ser indefinido: **son las nominas que el paso 4
+  del disparador re-mide**, o sea las de los **569** actos y racimos, **con su
+  cobertura al lado por el banco 9.26**. **No hay doctrina nueva: hay una sede
+  citada.**
+
+  **6.6 LAS DOS `OP-M-02` QUEDAN CUMPLIDAS POR CONSUNCION, CONFIRMADO POR MI
+  CORRIDA.** `OP-M-02-MEDIOS` y `OP-M-02-ADMIT` **no se ejecutan**, con la
+  medicion de hoy citada (un solo vivo cada una, lineas 2091 y 1840 de
+  `docs/plan/03_FUSIONES.md`). **Y su divergencia con el superviviente que la
+  ficha adjudico el 12 ago se DECLARA y no se deshace**, por el mismo criterio
+  con que la vuelta 64 la declaro: **el tramo ya ejecutado manda sobre la
+  adjudicacion previa, y borrar la adjudicacion vieja taparia el desacuerdo.**
+
+  **6.7 `OP-L-02` Y `OP-L-03` QUEDAN DESBLOQUEADAS, Y SON EL TRABAJO DE LA VUELTA
+  SIGUIENTE.** Sus seis `OP-D-*` dan **6 de 6 con prueba** bajo mi propia corrida
+  del instrumento. **La discrepancia con el campo `estado` (que las seis siguen
+  diciendo `LISTA`) no las bloquea**, por la decision del fundador del 4 sep: **la
+  vara es el instrumento**. El campo no se toca.
+
+  **6.8 LA CUARTA VIA DE PRUEBA DE `OP-V-01` ES CORRECTA Y EL INSTRUMENTO NO SE
+  TOCA.** Adjudico el discutible de la TAREA 4 **a favor del ejecutor**, con mi
+  medicion delante: `e966d896` toca `docs/` y `examples/`, o sea que **la `P3` no
+  puede darla por probada**, y la ficha **sigue midiendose `HECHA SIN NINGUNA
+  PRUEBA`** en mi corrida de hoy. **La prueba por cita que la decision 5 del
+  fundador autoriza vive en la nota, no en el instrumento**, y aflojar
+  `vuelta150_3` para que la fila se pusiera verde habria sido la degradacion
+  callada del canon 9. **Que la ficha siga saliendo en rojo en el instrumento
+  DESPUES de escribir su prueba es la senal de que el arreglo se hizo bien.**
+
+  **6.9 LA TRAZA DEL FICHERO DE COMPONENTES SE COMPLETA, POR ADICION Y EN UNA
+  LINEA.** El 4.4 es precision y no mueve ninguna cifra, pero *"commit a commit"*
+  promete lo que no entrega. Se anade al reporte la subida que falta
+  (**`801c59f9` 335**) y se cambia *"trazada commit a commit"* por lo que de
+  verdad es: **los cuatro puntos en que la cifra cambia hacia abajo**.
+
+  **6.10 NINGUNA CLASE SE MUEVE POR ESTA ACTA.** Mi unica ciega **coincidio**, el
+  marcador reproduce al digito en sus cinco cifras, y ni el reporte ni yo tocamos
+  `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`.
+
+## 7. LA METRICA DE CREDITO
+
+Cuento como las actas 153 a 167.
+
+| | esta vuelta | acumulado |
+|---|---:|---:|
+| relecturas | 1 | 303 |
+| puestos | 1 | 499 |
+| discrepancias DENTRO del marcado | 1 | 20 |
+| discrepancias y hallazgos FUERA del marcado | 2 | 51 |
+| caidas propias del auditor | 2 | (se declaran, no se acumulan aqui) |
+
+**LOS PUESTOS SUBEN UNO Y DIGO QUE LEI:** un par resuelto, **una sola fila del
+archivo con puesto (343)**. Las otras catorce combinaciones de esa nomina
+colapsan por alias a dos filas, y contarlas como quince habria sido inflar la
+metrica: **cuento filas leidas, no nombres emparejados.**
+
+**LA DE DENTRO ES LA 4.2** (la causa del tercer rojo, que el ejecutor SI marco
+como discutible) y **LAS DE FUERA SON LA 4.1 Y LA 4.4** (la tabla que cita un
+fichero de cero bytes, y la traza incompleta del fichero de componentes).
+
+**EL CREDITO DE LA TANDA BAJA, Y LO DIGO CON LA REGLA DELANTE.** `AUDITOR.md`
+1.2: *"si una discrepancia aparece FUERA de los discutibles marcados, baja el
+credito de toda la tanda: ese tramo se relee al doble y lo dices en el acta"*.
+La **4.1** aparece fuera. **EL TRAMO QUE SE RELEE AL DOBLE ES EL DE LAS GUARDAS
+Y SUS SALIDAS SELLADAS**, y no es una frase: significa que en la vuelta siguiente
+**toda cifra que el reporte atribuya a un fichero de salida se comprueba contra
+el fichero, y contra `git ls-tree`, antes de darla por buena**. Va escrito en el
+encargo como tarea con nombre.
+
+**LAS DOS RACHAS, CON SU NOMBRE:**
+
+  - **RACHA DE CIFRA PUBLICADA: CERO.** Venia en **CERO** (actas 165, 166 y 167).
+    Esta vuelta escribio en `docs/plan/OPERACIONES.jsonl` (la nota de `OP-V-01`),
+    en `docs/PENDIENTES.md` (`R.37` y la nota del `R.36`) y **en la CUARTA SEDE,
+    los comentarios de las guardas de `scripts/`** (el re anclado del 3.b y el
+    bloque nuevo de la nomina). **Las comprobe las tres, una por una, y ninguna
+    trae una cifra falsa**: la nota de `OP-V-01` reproduce al caracter, el titulo
+    del `R.37` cuadra con las seis y las dos que conte del acta, y los
+    comentarios del re anclado (cinco clausulas, dos correcciones declaradas, el
+    real 5 contra esperado 3 del acta 167, los seis arneses fuera) **son todos
+    ciertos bajo mi medicion**. La racha sigue en **cero**.
+  - **RACHA DE REPORTE: UNO, Y EXPLICO POR QUE NO ES DOS.** Venia en **CERO**
+    (acta 165) y estuvo **NO MEDIBLE dos vueltas** (166 y 167, sin reporte). Hoy
+    vuelve a ser medible y hay una caida que acumula: la **4.1**, cuya cifra vive
+    en una **TABLA**. **Sube a UNO.** La **4.2** se registra con su nombre y
+    dispara la relectura al doble, pero **no la cuento como una segunda unidad de
+    racha**, porque la racha de la regla cuenta **vueltas seguidas** y no
+    incidentes dentro de una vuelta, que es como la contaron las actas 164 y 165
+    cuando trajeron dos caidas el mismo dia. **Y no la doy por DOS aprovechando el
+    tramo no medible: dos vueltas sin reporte no son dos caidas, son dos vueltas
+    sin medir, y contarlas como caidas seria fabricar una parada.**
+  - **LA ESCALADA NO SE DISPARA, Y LO DIGO CON LA REGLA DELANTE Y NO POR
+    OMISION.** Pide **racha de reporte en DOS** y esta en **UNO**. **PERO DEJO
+    ESCRITO EL DISPARO PARA QUIEN AUDITE LA 169**, porque el precedente de la
+    vuelta 89 fue exactamente no dejarlo escrito: **si el reporte de la 169 trae
+    otra caida en tabla, cabecera o conclusion, la racha llega a DOS y el auditor
+    de esa vuelta ENCARGA en su misma acta la operacion de codigo de la escalada,
+    como tarea bloqueante, sin esperar decision nueva del fundador.**
+
+## 8. NO HAY PARADA, Y RECORRO LAS CONDICIONES UNA A UNA
+
+**DOCTRINA NUEVA NECESARIA: NO.** La unica candidata era la clausula 4 de
+`OP-I-01`, y **la cubre por extension citable el disparador escrito en
+`docs/plan/08_VERIFICACION.md:379` y siguientes**, cuyo paso 4 nombra *"cada
+racimo y cada acto"*. La adjudique en la **6.4** citando la sede, y lo que ese
+disparador no alcanza **se declara con su cifra en vez de improvisarse**. **No es
+la parada de "una operacion cuyo texto no alcanza": el texto alcanza, lo que
+faltaba era leer la sede que la propia clausula nombra.**
+
+**CONTRADICCION CON UNA REGLA VIGENTE O CON UNA CIFRA PUBLICADA QUE NO SE
+RESUELVA: NO.** Las dos caidas de hoy **se resuelven con las reglas de correccion
+existentes**: la 4.1 por el carril del banco **9.10** (corrida real pegada y nota
+adosada, sin borrar), y la 4.2 igual, por adicion. **Y la discrepancia
+335/280/55 contra 332/278/54 tampoco es contradiccion sin salida:** es una cifra
+de otro corte, con su bajada trazada, y entra por el mismo carril.
+
+**DECISION DE FUNDADOR: NO.** Nada de lo adjudicado hoy borra contenido que
+ninguna regla ordene, cambia el alcance de la campana, gasta fuera del repo ni
+toca produccion. **El merge de `pasada-unica` no se pide y no se hace: es suyo y
+solo suyo.**
+
+**FALLO TECNICO REPETIDO: NO, Y LO DIGO CON LA LETRA DELANTE PORQUE HOY HAY UN
+ROJO.** La condicion pide *"hook o Gate 0 en rojo DOS VUELTAS SEGUIDAS por la
+misma causa SIN REGLA QUE LO RESUELVA"*. **Gate 0 esta VERDE por mi mano**, con
+su ciclo entero; **las tres suites verdes por mi mano**; el hook sin fallar. El
+rojo es de **la bateria**, que no es Gate 0, **y su remedio esta escrito** en la
+6.2. **Es el mismo rojo que el acta 167 conto como uno**, o sea que **si lleva
+dos vueltas y lo digo**: por eso la 6.2 **lo encarga con nombre** en vez de
+volver a traerlo.
+
+**CREDITO DE TANDA ROTO: NO.** Racha de cifra publicada **cero**, racha de
+reporte **uno**. La parada de credito pide **dos tandas seguidas de clase o cifra
+publicada** y no hay ninguna; la de reporte pide **tres seguidas** y hay una.
+
+**CREDENCIALES AUSENTES: NO APLICAN.** Ninguna suite del Gate 0 las pidio hoy.
+
+**CAMPANA CONSUMADA: NO.** Quedan, medidas por el instrumento en esta vuelta,
+**dos operaciones desbloqueadas y sin ejecutar** (`OP-L-02`, `OP-L-03`), **dos
+abiertas con su ultima clausula ahora desencadenada** (`OP-I-01`, `OP-L-01`) y la
+deuda de lectura del lote de sales roadmap. **Hay trabajo escrito para la vuelta
+siguiente y por eso escribo encargo.**
+
+**ESCRIBO `docs/loop/PROMPT_SIGUIENTE.md` Y NO ESCRIBO `PARA_ALEXIS.md`.**

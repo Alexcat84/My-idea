@@ -1,0 +1,72 @@
+==============================================================================
+VUELTA 165, TAREA 6: CASO POSITIVO POR MUTACION DE LA VERIFICACION
+==============================================================================
+
+A) EL RESOLUTOR, SOBRE UN MAPA FABRICADO
+   resolver(alias_de_a      ) = nodo_a
+   resolver(alias_de_alias  ) = nodo_a
+   resolver(nodo_a          ) = nodo_a
+   resolver(desconocido     ) = desconocido
+   y un ciclo no cuelga: resolver(x) = x
+
+B) LO QUE LA COMPARACION LITERAL NO VE Y LA RESUELTA SI
+   veredictos fabricados: [('alias_de_a', 'alias_de_b'), ('otro_1', 'otro_2')]
+   el par buscado: nodo_a contra nodo_b
+   aparece en la comparacion LITERAL:  False
+   aparece en la comparacion RESUELTA: True
+   ESTA ES LA ESPECIE QUE P.1 TIENE ESCRITA: una comparacion literal
+   INVENTA SALUD, hace desaparecer un problema real.
+
+C) LA FICHA REAL DE OP-L-01, LEIDA HOY
+   docs/plan/OPERACIONES.jsonl:41
+   CIFRA elementos declarados para escribir: 0
+   CIFRA clausulas de verificacion: 5
+   estado: LISTA | fecha_corte: 2026-08-11
+   CIFRA clausulas que son CORRECCION DECLARADA: 2
+
+D) LA PARADA, CON SUS DOS CIFRAS COMPUTADAS
+   la clausula: 'el marcador del cribado no se mueve: sigue en 2.117'
+   CIFRA marcador HOY, contada del fichero: 3388
+   CIFRA que la clausula escribe: 2117
+   LAS DOS LECTURAS NO PUEDEN SER CIERTAS A LA VEZ, y por eso es
+   PARADA y no eleccion del ejecutor.
+
+E) PASADA 1, LOS CASOS TAL CUAL
+   A_resolver_alias_de_a                          PASA   (real='nodo_a' esperado='nodo_a')
+   A_resolver_alias_de_alias                      PASA   (real='nodo_a' esperado='nodo_a')
+   A_resolver_nodo_a                              PASA   (real='nodo_a' esperado='nodo_a')
+   A_resolver_desconocido                         PASA   (real='desconocido' esperado='desconocido')
+   A_un_ciclo_no_cuelga                           PASA   (real=True esperado=True)
+   B_la_literal_NO_lo_ve                          PASA   (real=False esperado=False)
+   B_la_resuelta_SI_lo_ve                         PASA   (real=True esperado=True)
+   C_la_ficha_no_escribe_nada                     PASA   (real=0 esperado=0)
+   C_tiene_cinco_clausulas                        PASA   (real=5 esperado=5)
+   C_dos_de_las_cinco_son_correccion_declarada    PASA   (real=2 esperado=2)
+   C_las_tres_viejas_siguen_enteras               PASA   (real=3 esperado=3)
+   C_sigue_en_LISTA                               PASA   (real='LISTA' esperado='LISTA')
+   C_su_corte_es_del_11_ago                       PASA   (real='2026-08-11' esperado='2026-08-11')
+   D_la_clausula_trae_el_numeral                  PASA   (real=True esperado=True)
+   D_el_marcador_de_hoy_no_es_ese                 PASA   (real=False esperado=False)
+   D_y_la_diferencia_no_es_cero                   PASA   (real=True esperado=True)
+   CIFRA casos: 16 | pasan: 16 | fallan: 0
+
+F) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_resolver_alias_de_a                          CAE   (esperado mutado='nodo_a_MUTADO')
+   A_resolver_alias_de_alias                      CAE   (esperado mutado='nodo_a_MUTADO')
+   A_resolver_nodo_a                              CAE   (esperado mutado='nodo_a_MUTADO')
+   A_resolver_desconocido                         CAE   (esperado mutado='desconocido_MUTADO')
+   A_un_ciclo_no_cuelga                           CAE   (esperado mutado=False)
+   B_la_literal_NO_lo_ve                          CAE   (esperado mutado=True)
+   B_la_resuelta_SI_lo_ve                         CAE   (esperado mutado=False)
+   C_la_ficha_no_escribe_nada                     CAE   (esperado mutado=1)
+   C_tiene_cinco_clausulas                        CAE   (esperado mutado=6)
+   C_dos_de_las_cinco_son_correccion_declarada    CAE   (esperado mutado=3)
+   C_las_tres_viejas_siguen_enteras               CAE   (esperado mutado=4)
+   C_sigue_en_LISTA                               CAE   (esperado mutado='LISTA_MUTADO')
+   C_su_corte_es_del_11_ago                       CAE   (esperado mutado='2026-08-11_MUTADO')
+   D_la_clausula_trae_el_numeral                  CAE   (esperado mutado=False)
+   D_el_marcador_de_hoy_no_es_ese                 CAE   (esperado mutado=True)
+   D_y_la_diferencia_no_es_cero                   CAE   (esperado mutado=False)
+   CIFRA casos que caen al mutar el esperado: 16 de 16
+
+VERDE: los 16 casos pasan tal cual y los 16 caen al mutar el esperado.
