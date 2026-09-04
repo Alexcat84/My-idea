@@ -11475,3 +11475,63 @@ reintento: es la ruta, y se para.**
 75** (los 55 medidos en la H mas las dos fases finales, que arrancan sesion a 10
 cada una). **Sigue siendo minimo estimado y no cifra observada**, y por eso el
 saldo se deja con holgura en vez de justo.
+
+### REGISTROS DE LA CORRIDA J: LA GARANTIA NO TUVO QUE GRITAR, Y CAE UN LATENTE DE LA SIEMBRA (4 sep 2026)
+
+Corte `2026-09-04T11:01:56Z`. Ids en `docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_J.txt`.
+
+**GRAFO VERDE POR NOVENA VEZ: 205 nodos recomendados, 205 vivos, 0 deprecados, 0
+en lista roja, 0 aristas rotas.**
+
+**LO QUE LA J RESUELVE, y hay que anotarlo porque estaba abierto:**
+
+- **La fase 2j paso limpia.** El fallo de la corrida I **no se repitio**, y **la
+  garantia del terminal NO tuvo que gritar**: **cero** lineas
+  `cierre sin terminal` en el log del servidor. Con la regla escrita **antes** de
+  correr, esto deja el caso de la I **sin clasificar todavia** y **sin nueva
+  evidencia**: no se puede llamar transitorio ni defecto de ruta, porque no
+  volvio a pasar.
+- **El carril escala:** **12 marcas**, contra la 1 de la corrida G.
+
+### EL FALLO NUEVO: UN LATENTE DE LA SIEMBRA
+
+`TypeError: Cannot read properties of undefined (reading 'noLlegaAlAncla')`
+(`vuelo.ts:2808`).
+
+El arnes arma sus respuestas con **los tres primeros riesgos**
+(`riesgos.slice(0, 3)`, linea 2797) y despues busca dentro de ellas **al primer
+enlazado** (linea 2805, con un `!` que tapaba el `undefined`).
+
+**MEDIDO EN LA BASE:** 30 riesgos, **12 enlazados**, y **el primero esta en la
+posicion 6**. Posiciones de los doce: **6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 25,
+26**. **Ninguno cae dentro de los tres primeros.**
+
+**POR QUE NO HABIA SALTADO ANTES:** cuando el enlazador vivo no enlazaba nada, el
+arnes **sembraba** el enlace sobre `riesgos[0]`, que **siempre** esta entre los
+tres primeros. El fallo dormia detras de esa rama. En la J el enlazador enlazo
+doce por su cuenta y el supuesto se rompio.
+
+**Y HAY UN FILO MAS:** la consulta **no lleva `ORDER BY`**, asi que *"los tres
+primeros"* **no es determinista**. El fallo no solo era latente: ademas es
+**irreproducible a voluntad**.
+
+**EL ARREGLO PROPUESTO** (no aplicado, porque la regla manda parar ante la
+siembra): que `respuestas` se arme **a partir de `enlaceVivo`** en vez de
+`slice(0,3)`, y que la consulta lleve **su `ORDER BY`**, para que el arnes deje de
+depender de un orden que nadie le prometio.
+
+### EL GASTO, Y UNA CIFRA QUE YA SE REPITE
+
+| concepto | veces | creditos |
+|---|---:|---:|
+| `mundo_activar` | 5 | 25 |
+| `seguimiento` | 3 | 15 |
+| `plan_completo` | 1 | 10 |
+| `mundo_seguimiento` | 1 | 5 |
+| **TOTAL** | **10** | **55** |
+
+**Saldo 100 a 45.** **Mismo patron exacto que la corrida H**: 10 cobros, 55
+creditos, los mismos conceptos y cantidades. **Sigue sin ser el costo de un vuelo
+entero** (la J tampoco llego al final), pero **dos corridas independientes dando
+55 hasta aqui es una cifra estable**, y refuerza el **75** leido del codigo como
+minimo de una corrida completa.
