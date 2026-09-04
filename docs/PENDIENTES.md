@@ -10930,3 +10930,46 @@ Corte `2026-09-04T00:33:13Z`. Los ids, uno por uno, en
 nodos recomendados, 144 vivos, 0 deprecados, 0 en lista roja, 0 aristas rotas.**
 Misma frontera que la ficha anterior: **nadie los borra sin la letra del
 fundador, y si se limpian, despues del merge.**
+
+### EL DESLIZAMIENTO DEL PARRAFO 3 ES DEFECTO DE PRODUCTO, Y SE CURA EN EL GENERADOR (decision del fundador, 3 sep 2026)
+
+**ADJUDICADO POR EL FUNDADOR:** el deslizamiento **NO es de la prueba ni del
+grafo**. La aseveracion del vuelo aplica bien una regla vigente, y el grafo salio
+verde en las tres corridas completas. **El defecto esta en el generador y ahi se
+cura. Hoy no se toca producto: queda registrado con su arreglo propuesto.**
+
+**EL DEFECTO, EN UNA LINEA:** en modo **a mi ritmo**, el plan generado puede
+deslizarse al **lenguaje de cumplimiento**, que el **parrafo 3** prohibe (no se
+juzga contra fechas que el usuario no tiene).
+
+**EL ARREGLO PROPUESTO, EN DOS MITADES, y las dos hacen falta:**
+
+1. **EL PROMPT LO PROHIBE EXPLICITAMENTE.** El prompt del modo **a mi ritmo**
+   nombra y veta el vocabulario de `VOCES_CUMPLIMIENTO`
+   (`web/scripts/vuelo.ts:1368`): **"a tiempo", "tardia", "adelantada",
+   "desviacion", "dias tarde"**. Hoy la regla vive en el paragrafo 3 y en la
+   cabeza de quien escribio el prompt, no en el prompt.
+2. **EL PRODUCTO SE COMPRUEBA A SI MISMO, con UNA regeneracion.** El generador
+   aplica al plan ya generado **la misma comprobacion que hoy aplica el vuelo**, y
+   **si se cuela una de esas frases, REGENERA UNA VEZ**. Una sola: una segunda
+   pasada seria esconder el sintoma en vez de medirlo, y **la regeneracion se
+   registra** para que la tasa se pueda contar.
+
+**LA EVIDENCIA, LAS TRES CORRIDAS, CITADAS:**
+
+| corrida | la aseveracion del parrafo 3 | fichero sellado |
+|---|---|---|
+| **B** | **PASO** (linea 324: *"el plan del ciclo a-mi-ritmo no juzga contra fechas que el usuario no tiene"*) | `docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_B.txt` |
+| **D** | **CAYO** (linea 349: *"el plan a-mi-ritmo habla de cumplimiento (parrafo 3 violado): a tiempo"*) | `docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_D.txt` |
+| **E** | ver su propio sello | `docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_E.txt` |
+
+**LA NOTA DE NO DETERMINISMO, Y NO ES UN DETALLE:** el **mismo codigo** y la
+**misma aseveracion** dieron resultados **distintos** entre la B y la D. Lo unico
+que cambio es la prosa del modelo. De ahi se siguen dos cosas que hay que tener
+delante al arreglarlo:
+
+- **UN VERDE NO PRUEBA QUE NO SE DESLICE.** Una corrida limpia solo dice que esa
+  vez no se colo.
+- **NO HAY TASA PUBLICABLE TODAVIA.** Con dos o tres corridas, decir "pasa una de
+  cada N" **seria inventarla**. Si se quiere la cifra, se mide con corridas
+  repetidas y se declara **con su banda**, como manda `P.15`.
