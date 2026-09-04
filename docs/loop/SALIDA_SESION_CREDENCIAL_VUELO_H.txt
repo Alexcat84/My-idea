@@ -1,3 +1,181 @@
+================================================================================
+SALIDA SELLADA . EL VUELO, CORRIDA H (VUELO_FASE08_2026-09-04_H)
+Sesion con credencial, 4 sep 2026. Rama pasada-unica.
+A, B, D, E, F y G NO se sobreescriben: viven al lado.
+================================================================================
+
+RESUMEN
+  EXITCODE 1, duracion 1513 segundos, 410 lineas.
+
+  TODO LO QUE FALLABA, PASA. Las tres aseveraciones que tumbaron corridas
+  anteriores salieron VERDES en esta:
+    linea 323  parrafo 3: "el plan del ciclo a-mi-ritmo no juzga contra
+               fechas que el usuario no tiene"
+    linea 344  baseline del mundo: "el follow del MUNDO recibe SU
+               cumplimiento (1/1/3, +4.8) y NO el del core"
+    linea 384  carril: "carril con 1 marca(s), anclada(s) a la etapa del
+               protegido (1)"
+  Mas el precio de catalogo, que dejo de fallar desde la corrida B.
+
+  EL GRAFO: VERDE POR SEPTIMA VEZ. 200 nodos recomendados, 200 vivos, 0
+  deprecados, 0 en lista roja, 0 aristas rotas.
+
+  LA CORRIDA LLEGO A LA PENULTIMA FASE. Solo quedaban dos.
+
+  Y CAE OTRA VEZ POR CREDITOS. Ese es el disparador que el fundador escribio.
+
+--------------------------------------------------------------------------------
+EL FALLO, LITERAL
+--------------------------------------------------------------------------------
+  Error: POST /api/session/start -> 402:
+    {"error":"Te quedan 7 creditos; esto cuesta 10...","saldo":7}
+      at faseReporteDigital (web/scripts/vuelo.ts:2443)
+
+--------------------------------------------------------------------------------
+LO QUE EL FUNDADOR PIDIO QUE SE MIDIERA, MEDIDO
+--------------------------------------------------------------------------------
+Su letra: "60 alcanza para dos corridas completas con margen; si el vuelo
+vuelve a agotarlo, es senal de que gasta mas de lo que su propio contrato
+dice, y eso se trae."
+
+SE AGOTO. De 62 a 7: LA CORRIDA CONSUMIO 55 CREDITOS ELLA SOLA.
+
+EL DESGLOSE, leido del ledger y no estimado:
+
+  concepto                veces   creditos
+  mundo_activar               5         25
+  seguimiento                 3         15
+  plan_completo               1         10
+  mundo_seguimiento           1          5
+  TOTAL                      10         55
+
+PERO EL CONTRATO NO SE INCUMPLE. Cotejado contra web/lib/precios.ts:
+  plan_completo 10, seguimiento 5, mundo_activar 5, mundo_seguimiento 5.
+CADA UNO DE LOS DIEZ COBROS CUADRA AL DIGITO CON LA LISTA DE PRECIOS. El app
+no cobra de mas: cobra diez operaciones porque el vuelo ejercita seis mundos,
+el plan del nucleo y sus seguimientos.
+
+LO QUE ESTABA MAL ERA LA ESTIMACION, NO LA APP.
+
+--------------------------------------------------------------------------------
+CUANTO CUESTA DE VERDAD UNA CORRIDA COMPLETA
+--------------------------------------------------------------------------------
+Las dos fases que faltaban son faseReporteDigital y faseGuardianGigo, y son
+las DOS ULTIMAS de main(). Leidas en el codigo, LAS DOS arrancan sesion con
+POST /api/session/start, y el propio 402 dice que ese arranque cuesta 10.
+
+  55 gastados + 10 + 10 = 75 CREDITOS POR CORRIDA COMPLETA.
+
+O sea que 60 no daba "para dos corridas con margen": NO DABA NI PARA UNA.
+La estimacion se quedo corta por un factor de dos y medio.
+
+SALDO ACTUAL: 7. El vuelo no se puede reanudar a mitad: corre desde arriba.
+Para una corrida entera hacen falta 75.
+
+Y SE DICE LO QUE NO SE SABE: nunca se ha visto pasar esas dos ultimas fases,
+asi que el 75 es el MINIMO leido del codigo, no una cifra observada. Si
+alguna de las dos cobra algo mas por dentro, saldra ahi.
+
+================================================================================
+REGISTROS DE LA CORRIDA H. NO SE BORRAN: SON EVIDENCIA.
+================================================================================
+==============================================================================
+VERIFICACION DEL VUELO CON OJO DE PRODUCTO . corte 2026-09-04T02:52:49Z
+==============================================================================
+Grafo: 3853 nodos, 3169 vivos. Lista roja: 0 ids.
+
+REGISTROS CREADOS POR EL VUELO (no se borran: son evidencia)
+  projects           3 filas
+  sessions           15 filas
+  project_nodes      200 filas
+  plans              12 filas
+  project_bitacora   37 filas
+
+  [projects] 6c8f3a5c-9dcd-49ba-95c8-b905b3f62c9a
+  [projects] 48742949-5ed5-4669-8779-3f916cb092e9
+  [projects] 1734d025-8c22-4dec-b538-098fdb42a91f
+  [sessions] 72eb2c4e-fec9-42f7-b795-a2921ab379a9
+  [sessions] 2adb4907-e058-4815-a218-415efc28c1c0
+  [sessions] 79f43fc3-23a1-459b-916e-f983f394256a
+  [sessions] 70a666cc-d453-4fb3-985a-7ca214814740
+  [sessions] 1b27a8e2-786b-4ca8-a652-c4e87d818f73
+  [sessions] 9698fff3-26bd-49a4-9a3f-4d7a093464cc
+  [sessions] 171aee21-8e5b-4037-af6a-763a7067633b
+  [sessions] fb311a1f-bbe4-46e7-8cd9-985f699b7bd6
+  [sessions] 84eca64c-affa-4675-8e2d-38670e2a5768
+  [sessions] 32cbf258-56ce-4724-a31d-fcd342f756fc
+  [sessions] b475c6a6-9c66-45a8-8313-949b3c04f2a6
+  [sessions] dc0a0b40-b387-4cce-bf52-62d41bf41d9e
+  [sessions] 8b4d3e12-85b5-42d7-a519-ec3e6268182b
+  [sessions] b69904eb-de40-4a47-99eb-42a4a9fc71e1
+  [sessions] 322a7a5c-ff78-4e1e-b5c0-6abb6c2d0cd1
+  [plans] 79ed0b60-95a8-4d58-b516-2b0a5f20a0e5
+  [plans] c98475a4-4050-46d1-ac74-b20cade1b3bb
+  [plans] ce1cc5bb-3c14-4b46-ae22-69018aafd7e7
+  [plans] d75b6d11-2c2b-4a62-a485-2eb880f570f9
+  [plans] bebd9e47-ef34-4ff1-be0c-5a5aa0ae4a19
+  [plans] 63eb441d-0a3d-4412-a6e8-c8e0baaaa2ac
+  [plans] 1c445b05-1738-4e12-a509-1a706004b6db
+  [plans] a9a04f9d-51e5-4d9a-b8a2-4b833d18b517
+  [plans] 24f55d57-4226-4a3b-9c04-2c444233bf03
+  [plans] e5f9976d-7e16-4379-b101-49c9dc875ed4
+  [plans] f411752c-a9fb-463e-beb0-edabbfa96b5f
+  [plans] aafd9e4e-7e5e-490e-bf1e-a8cda93e1961
+  [project_bitacora] 6dd74b7c-9db2-4034-8989-0027863e266c
+  [project_bitacora] cbeefd26-c2c7-4430-8729-d03b5c3ddbc2
+  [project_bitacora] 8c372ce8-88a0-41a0-b641-0f9c5acacda3
+  [project_bitacora] c1c9f26b-f532-4efe-952a-72f178ae5888
+  [project_bitacora] af7cf694-3cd7-4db9-939b-a2db815159a2
+  [project_bitacora] ffece6d8-80e4-4df0-826c-1fb8405e1bcb
+  [project_bitacora] deacc6be-9c3c-4648-bff2-8964ae37bba7
+  [project_bitacora] 89709143-7dcd-4f3e-aec3-19dc59ab4b98
+  [project_bitacora] d454f739-3905-4e3b-a4dc-36669b9b745d
+  [project_bitacora] 2fa8f454-013a-4ca6-8670-0c16c3f22781
+  [project_bitacora] be057f4e-0eec-4bbf-927a-e754f33d8273
+  [project_bitacora] 132e51a2-660f-4898-ad63-3f313b287311
+  [project_bitacora] bfc989f3-f3a7-41d2-9994-f26bfdb088cd
+  [project_bitacora] 71ead793-2613-4b24-9c46-40982eb41193
+  [project_bitacora] 88a6b38a-2d8d-487c-a33e-20b4c416702c
+  [project_bitacora] 565e753b-4356-4163-b54d-2e2b4ba3b8d2
+  [project_bitacora] 1beffe3e-89d4-44f0-aa31-fd94c9af9030
+  [project_bitacora] dc81adf1-712a-4e8a-846f-71398d69f86e
+  [project_bitacora] f5459b86-f1e2-4022-b8f9-3da71585e083
+  [project_bitacora] d13bddee-156a-4d28-8ac2-fb169f4cf0fc
+  [project_bitacora] 8326e776-fb38-498f-87c5-3e23d6ab96f1
+  [project_bitacora] 84602dc4-2994-4edc-815a-74d9bdb6338b
+  [project_bitacora] 054a8ba3-1267-45ba-b71b-f6a4adcbdc95
+  [project_bitacora] 6cee56fc-dc94-4d8e-984f-cefbfc182e4b
+  [project_bitacora] ad2a50bc-7995-433d-a371-55f58338ce8c
+  [project_bitacora] 624db27b-56d3-43e9-aeb6-3c4a58ad12a9
+  [project_bitacora] 1716efbc-8dc8-4315-9da3-3a650f27d7ec
+  [project_bitacora] 707e838a-4e8b-4ed3-86fe-e700fe8e29f4
+  [project_bitacora] 553c41d3-c4ca-4372-855d-3046f28a44c9
+  [project_bitacora] 9d6f688f-eec9-49d7-8950-74905dacaf93
+  [project_bitacora] 86bf0f3f-d880-4ef0-afb8-6ac559197e99
+  [project_bitacora] ff14e338-4d82-48c2-801e-c284a9f7ad6a
+  [project_bitacora] 0b9c9a68-2963-4097-a3fc-9c12c301cdf5
+  [project_bitacora] 0aab6f12-5c62-4494-93e0-abe8fd25d483
+  [project_bitacora] d73cb7c6-9926-46f4-8ce3-c0b293e783ad
+  [project_bitacora] c57cacb9-8beb-4d99-89cc-a6b3e7791237
+  [project_bitacora] 157da616-4e37-4e02-b471-63c1f5235d90
+
+NODOS RECOMENDADOS EN project_nodes: 200 filas, 200 ids distintos
+
+  EXISTEN Y VIVOS         : 200
+  NO EXISTEN EN EL GRAFO  : 0  
+  DEPRECADOS              : 0  
+  EN LA LISTA ROJA        : 0  
+
+ARISTAS DE LOS NODOS RECOMENDADOS, TRAS RESOLVER: 0 rotas
+
+==============================================================================
+VERDE: los 200 nodos recomendados existen, estan VIVOS, ninguno esta en la
+lista roja, y todas sus aristas resuelven.
+==============================================================================
+
+================================================================================
+LA CORRIDA H ENTERA
+================================================================================
 
 ==============================================================================
   VUELO Fase 3.0.1 -- cerebro web completo vía HTTP real
@@ -99,6 +277,7 @@ costo acumulado hasta aqui: $0.1423
 ==============================================================================
   FASE 2b: ensamblando el plan (SSE streaming)
 ==============================================================================
+....................................................................................................................................
 SSE: 132 deltas de texto recibidos, 0 aviso(s), tiempo total: 114657ms
 evaluacion_cobertura: {"es_completa":true,"tiene_accion_clientes":true,"tiene_viabilidad_economica":true,"familias_faltantes":[]}
 costo_usd (sesion completa, incluye el plan): $0.2986
@@ -242,6 +421,7 @@ OK: mensaje compuesto auditable (estados, nota, detalles, enfoque, y la retirada
 [seguimiento turno 1] RESPUESTA: Subí el precio a 250 y las ventas se mantuvieron; ya sé mi costo real por pieza: 130 incluyendo mi hora a 50.
 
 listo_para_plan tras 1 turno(s) de seguimiento.
+...........................................................................................................
 OK: plan persistido con etiqueta 'seguimiento' (d75b6d11-2c2b-4a62-a485-2eb880f570f9).
 OK: checklist encadenado (28 items nuevos del plan de seguimiento; hechos previos preservados).
 OK: el replan nace estimado -- 28/28 items del plan de seguimiento traen banda.
@@ -404,3 +584,5 @@ Error: POST /api/session/start -> 402: {"error":"Te quedan 7 créditos; esto cue
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async faseReporteDigital (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:2443:17)
     at async main (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:2839:30)
+
+Transcripcion guardada en C:\Users\AlexDesk\Documents\I have an idea\examples\fase3_0_vuelo_web.txt

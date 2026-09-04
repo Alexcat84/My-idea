@@ -11278,3 +11278,58 @@ si alguien repite la llamada, la RPC devuelve el saldo ya aplicado y **no siembr
 dos veces**. **60 alcanzan para dos corridas completas con margen**; si el vuelo
 vuelve a agotarlo, es senal de que gasta mas de lo que su propio contrato dice, y
 **eso se trae** en vez de volver a sembrar.
+
+### REGISTROS DE LA CORRIDA H, Y LO QUE CUESTA DE VERDAD UN VUELO COMPLETO (4 sep 2026)
+
+Corte `2026-09-04T02:52:49Z`. Ids en `docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_H.txt`.
+**Misma frontera: nadie los borra sin la letra del fundador.**
+
+**GRAFO VERDE POR SEPTIMA VEZ: 200 nodos recomendados, 200 vivos, 0 deprecados, 0
+en lista roja, 0 aristas rotas.**
+
+**TODO LO QUE FALLABA, PASA.** Las tres aseveraciones que tumbaron corridas
+anteriores salieron verdes en la H: el **parrafo 3** (linea 323), la **baseline
+del mundo** (linea 344) y el **carril** (linea 384), mas el precio de catalogo,
+que dejo de fallar desde la B. **La corrida llego a la penultima fase.**
+
+### EL DISPARADOR DEL FUNDADOR SE CUMPLIO, Y AQUI ESTA LA MEDICION
+
+Su letra: *"si el vuelo vuelve a agotarlo, es senal de que gasta mas de lo que su
+propio contrato dice, y eso se trae."* **Se agoto: de 62 a 7, o sea 55 creditos en
+una sola corrida.**
+
+| concepto | veces | creditos |
+|---|---:|---:|
+| `mundo_activar` | 5 | 25 |
+| `seguimiento` | 3 | 15 |
+| `plan_completo` | 1 | 10 |
+| `mundo_seguimiento` | 1 | 5 |
+| **TOTAL** | **10** | **55** |
+
+**PERO EL CONTRATO NO SE INCUMPLE, Y ESTO ES LO IMPORTANTE.** Cotejado contra
+`web/lib/precios.ts` (`plan_completo` 10, `seguimiento` 5, `mundo_activar` 5,
+`mundo_seguimiento` 5): **los diez cobros cuadran al digito con la lista**. El app
+**no cobra de mas**; cobra diez operaciones porque el vuelo ejercita seis mundos,
+el plan del nucleo y sus seguimientos.
+
+> **LO QUE ESTABA MAL ERA LA ESTIMACION, NO LA APP.**
+
+### CUANTO CUESTA UNA CORRIDA COMPLETA
+
+Las dos fases que faltaban (`faseReporteDigital` y `faseGuardianGigo`) son **las
+dos ultimas de `main()`**, y **las dos arrancan sesion** con
+`POST /api/session/start`, que cuesta **10** segun el propio 402:
+
+> **55 + 10 + 10 = 75 CREDITOS POR CORRIDA COMPLETA.**
+
+**60 no daba "para dos corridas con margen": no daba ni para una.** La estimacion
+se quedo corta por un factor de **dos y medio**.
+
+**Y SE DICE LO QUE NO SE SABE:** nunca se han visto pasar esas dos ultimas fases,
+asi que **75 es el minimo LEIDO DEL CODIGO, no una cifra observada**. Si alguna
+cobra algo mas por dentro, saldra ahi. **Saldo actual: 7**, y el vuelo **no se
+reanuda a mitad**: corre desde arriba.
+
+**PARA LA DEUDA DEL VUELO EN CADA RELEASE:** correrlo cuesta **75 creditos mas el
+gasto de modelo**. Esa cifra hay que tenerla delante al decidir la cadencia, y es
+otro motivo por el que el acto es del fundador.
