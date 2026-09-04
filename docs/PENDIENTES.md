@@ -11233,3 +11233,48 @@ cadena de conexion directa en el `.env`, sin `psql`, sin CLI de Supabase y sin
 migraciones (`my_idea_check_migraciones.sql`) **verifique tambien los valores
 admitidos por las restricciones que un procedimiento manual usa**, no solo que la
 tabla y el indice existan. Esta restriccion habria salido a la luz el primer dia.
+
+### LA MIGRACION 038 Y LA SIEMBRA DE 60 CREDITOS, EJECUTADAS Y SELLADAS (4 sep 2026)
+
+**Acto del fundador, ejecutado por mano del asistente y registrado aqui.** Es
+**evidencia de negocio en la base real**, y el fundador decide si la revierte tras
+el merge.
+
+**LA MIGRACION 038**, aplicada por el fundador en el SQL Editor
+(`docs/MIGRACION_DE_BASE.md:28`, que es la via de la casa). Fichero:
+`supabase/migrations/my_idea_038_siembra_beta_en_el_ledger.sql` (commit
+`07c0cbbc`), con su entrada en el checker (commit `c56221eb`).
+
+**LA SIEMBRA, sellada de punta a punta:**
+
+| | |
+|---|---|
+| usuario | `4a05a687-fc7e-4427-8eaf-cc1cc1644678` (`dev@my-idea.local`) |
+| **saldo antes** | **2** creditos (`creditos_usados` 358, `total_comprado` 360) |
+| llamada | `POST /rest/v1/rpc/otorgar_creditos` |
+| | `p_monto` **60**, `p_origen` **siembra_beta**, `p_pack` **siembra_beta** |
+| | `p_idempotency_key` `siembra_vuelo_fase08_2026-09-04` |
+| respuesta | **62** (saldo resultante) |
+| **saldo despues** | **62** (`creditos_usados` 358, `total_comprado` **360**, sin cambio) |
+
+**LA FILA DEL LEDGER, leida de la base y no supuesta:**
+
+> `delta` **60**, `tipo` **grant**, `origen` **siembra_beta**, `concepto`
+> `siembra_beta`, `saldo_resultante` **62**, `idempotency_key`
+> `siembra_vuelo_fase08_2026-09-04`, `created_at` `2026-09-04T02:52:40Z`.
+
+**DOS COSAS QUE LA SIEMBRA PROBO DE PASO:**
+
+1. **La 038 quedo aplicada de verdad.** Ayer la MISMA llamada moria con `23514`;
+   hoy devuelve 62. **Es la prueba por el comportamiento**, que es la unica que
+   esta sesion podia dar: no hay forma de leer `pg_constraint` desde aqui.
+2. **La 038 es aditiva de verdad, y no solo de palabra:** `total_comprado` **se
+   quedo en 360**. `siembra_beta` **no** mueve esa columna, exactamente como el
+   README declara en su linea 165 y como la 021 lo escribio. Si la migracion
+   hubiera tocado algo mas, aqui se habria visto.
+
+**LA CLAVE DE IDEMPOTENCIA ES LA MISMA del intento fallido de ayer**, a proposito:
+si alguien repite la llamada, la RPC devuelve el saldo ya aplicado y **no siembra
+dos veces**. **60 alcanzan para dos corridas completas con margen**; si el vuelo
+vuelve a agotarlo, es senal de que gasta mas de lo que su propio contrato dice, y
+**eso se trae** en vez de volver a sembrar.
