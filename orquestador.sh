@@ -8,7 +8,8 @@
 # Se detiene solo si: existe docs/loop/PARA_ALEXIS.md, no hay prompt siguiente,
 # se alcanza MAX_VUELTAS, o una invocacion falla 7 veces seguidas por una de las
 # dos especies que el orquestador vigila: instantanea (probable limite de uso
-# agotado) o auditor mudo (el turno corrio y cobro, pero no escribio su acta).
+# agotado) o TURNO MUDO (el turno corrio y cobro, pero no movio su testigo: el
+# acta si es el auditor, el reporte si es el ejecutor).
 # El estado vive en el repo; cada vuelta sobrevive a caidas porque todo se
 # commitea y pushea.
 set -uo pipefail
@@ -64,7 +65,7 @@ hash_fichero() { # $1 = ruta. Vacio si no existe: asi un fichero que NACE cuenta
 # de fallo con nombre y con fecha: la vuelta 34 (15 ago 2026) corrio entera y
 # nunca fue auditada, porque el auditor murio sin escribir acta y el relanzar
 # volvio a poner al ejecutor delante, encima de un reporte que nadie habia
-# verificado. El testigo del auditor mudo cierra el caso DENTRO de una corrida;
+# verificado. El testigo del turno mudo cierra el caso DENTRO de una corrida;
 # esto cierra el caso ENTRE corridas.
 #
 # LA MEDICION, y es de las baratas: la fecha del ultimo commit que toco el
@@ -134,11 +135,14 @@ reintentar el MISMO turno, sin avanzar de rol):
 - instantaneo: la invocacion duro menos de $UMBRAL_SEGUNDOS segundos, o el
   json de salida no trae total_cost_usd mayor que 0. Es el patron esperable
   de un limite de uso agotado: el rol no llego a trabajar.
-- auditor mudo: el turno corrio y cobro, pero docs/loop/ACTA_AUDITOR.md
-  quedo IDENTICO al de antes del turno. Es lo que paso de verdad en la
-  vuelta 34 (15 ago 2026): el auditor corrio dieciocho minutos y termino sin
-  escribir acta, y la vuelta 35 arranco con el encargo de la 34 ya
-  ejecutado y sin nadie que lo hubiera verificado.
+- turno mudo: el turno corrio y cobro, pero SU TESTIGO quedo IDENTICO al de
+  antes del turno. El testigo del auditor es docs/loop/ACTA_AUDITOR.md y el
+  del ejecutor es docs/loop/REPORTE.md. Lo del auditor paso de verdad en la
+  vuelta 34 (15 ago 2026): corrio dieciocho minutos y termino sin escribir
+  acta, y la vuelta 35 arranco con el encargo de la 34 ya ejecutado y sin
+  nadie que lo hubiera verificado. Lo del ejecutor paso en las vueltas 166 a
+  168: turnos que corrieron y cobraron sin dejar reporte, y REPORTE.md se
+  quedo en el de la 165 durante tres vueltas.
 
 Ultimo intento: duracion ${duracion}s, costo reportado "${c:-vacio}".
 
@@ -162,6 +166,20 @@ invocar_claude() { # rol modelo prompt salida vuelta [testigo]
   # turno parecia bueno por duracion y por costo, y no lo era. Un turno que no
   # movio su testigo se trata IGUAL que el fallo instantaneo: se espera y se
   # reintenta el MISMO turno, sin avanzar de rol y con el mismo tope.
+  #
+  # LOS DOS ROLES LO LLEVAN (4 sep 2026, decision del fundador). El auditor
+  # vigila docs/loop/ACTA_AUDITOR.md desde el 15 ago; el EJECUTOR vigila
+  # docs/loop/REPORTE.md desde hoy. Motivo: las vueltas 166 a 168 tuvieron
+  # turnos de ejecutor que corrieron y cobraron SIN MOVER SU REPORTE, que es
+  # la misma especie de fallo que el acta muda de la vuelta 34, y el bucle no
+  # se enteraba. Lo que lo vuelve exigible sin falsos positivos es la regla EL
+  # REPORTE ABRE CON LA VUELTA (EJECUTOR.md regla 1, 4 sep 2026): el reporte
+  # se talla en la APERTURA, asi que TODO turno legitimo lo mueve, aunque la
+  # vuelta se corte a la mitad. Un reporte identico ya no significa "no le dio
+  # tiempo": significa que el turno no empezo.
+  #
+  # Por eso el motivo se llama "turno mudo" y ya no "auditor mudo": la especie
+  # es la misma, el rol no.
   local rol="$1" modelo="$2" prompt="$3" salida="$4" vuelta="$5" testigo="${6:-}"
   local intento inicio duracion c hash_antes hash_despues motivo
   for intento in $(seq 1 "$MAX_INTENTOS"); do
@@ -179,7 +197,7 @@ invocar_claude() { # rol modelo prompt salida vuelta [testigo]
     if [ "$duracion" -lt "$UMBRAL_SEGUNDOS" ] || ! costo_mayor_que_cero "$c"; then
       motivo="instantaneo"
     elif [ -n "$testigo" ] && [ "$hash_antes" = "$hash_despues" ]; then
-      motivo="auditor mudo"
+      motivo="turno mudo"
     fi
 
     if [ -z "$motivo" ]; then
@@ -187,8 +205,8 @@ invocar_claude() { # rol modelo prompt salida vuelta [testigo]
       return 0
     fi
 
-    if [ "$motivo" = "auditor mudo" ]; then
-      log "$rol: AUDITOR MUDO, el turno corrio ${duracion}s y cobro \"${c:-vacio}\" pero $testigo quedo identico, intento $intento de $MAX_INTENTOS"
+    if [ "$motivo" = "turno mudo" ]; then
+      log "$rol: TURNO MUDO, el turno corrio ${duracion}s y cobro \"${c:-vacio}\" pero $testigo quedo identico, intento $intento de $MAX_INTENTOS"
     else
       log "$rol: fallo instantaneo (probable limite de uso), ${duracion}s, costo \"${c:-vacio}\", intento $intento de $MAX_INTENTOS"
     fi
@@ -226,7 +244,7 @@ for i in $(seq 1 "$MAX_VUELTAS"); do
     log "VUELTA $i : EJECUTOR ($MODELO_EJECUTOR)"
     invocar_claude "ejecutor" "$MODELO_EJECUTOR" \
       "Estas en el repo de la campaña. Lee docs/loop/EJECUTOR.md (tus reglas permanentes) y despues docs/loop/PROMPT_SIGUIENTE.md (tu encargo). Ejecuta el encargo al pie de la letra. Escribe tu reporte completo en docs/loop/REPORTE.md sobrescribiendo el anterior, con los discutibles marcados. Commitea y pushea TODO a la rama activa antes de terminar." \
-      "$LOOP/ultimo_ejecutor.json" "$i"
+      "$LOOP/ultimo_ejecutor.json" "$i" "$LOOP/REPORTE.md"
 
     git pull --rebase origin "$RAMA" >/dev/null 2>&1 || true
   fi
