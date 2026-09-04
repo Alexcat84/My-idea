@@ -1,0 +1,48 @@
+==============================================================================
+VUELTA 167, TAREA 3: CASO POSITIVO POR MUTACION DE LA COMPROBACION ii
+==============================================================================
+
+A) LA CIRUGIA, Y SE COMPRUEBA A SI MISMA ANTES DE CORRER NADA
+   veces que la marca del arreglo aparece en la fuente: 1
+   la copia mutada difiere del original: True
+   escrita: scripts/loop/_v167_recomputo_ultimo_gana_copia.py
+
+B) LAS DOS CORRIDAS, SOBRE EL ARCHIVO REAL Y CON EL INSTRUMENTO REAL
+   FUENTE ARREGLADA : retrato 149, aristas A internas 149, ii OK, pie 'TODAS OK'
+   ULTIMO GANA      : retrato 149, aristas A internas 146, ii FALLA, pie 'AL MENOS UNA FALLA'
+
+C) LOS CASOS, CADA UNO CON SU VALOR LEIDO DEL PIE DE UNA CORRIDA
+   LAS CUATRO con la fuente arreglada: {'i': 'OK', 'ii': 'OK', 'iii': 'OK', 'iv': 'OK'}
+   LAS CUATRO con el ultimo gana     : {'i': 'OK', 'ii': 'FALLA', 'iii': 'OK', 'iv': 'OK'}
+
+D) PASADA 1, LOS CASOS TAL CUAL
+   A_la_cirugia_cambia_el_texto                         PASA   (real=True esperado=True)
+   C_arreglada_ii_dice_OK                               PASA   (real='OK' esperado='OK')
+   C_arreglada_las_cuatro_TODAS_OK                      PASA   (real='TODAS OK' esperado='TODAS OK')
+   C_arreglada_las_dos_mitades_son_iguales              PASA   (real=True esperado=True)
+   C_ultimo_gana_ii_dice_FALLA                          PASA   (real='FALLA' esperado='FALLA')
+   C_ultimo_gana_las_cuatro_AL_MENOS_UNA_FALLA          PASA   (real='AL MENOS UNA FALLA' esperado='AL MENOS UNA FALLA')
+   C_ultimo_gana_las_dos_mitades_NO_son_iguales         PASA   (real=False esperado=False)
+   C_el_retrato_no_se_mueve_entre_las_dos               PASA   (real=True esperado=True)
+   C_lo_que_se_mueve_son_las_aristas_internas           PASA   (real=3 esperado=3)
+   C_arreglada_las_cuatro_en_verde                      PASA   (real=['OK', 'OK', 'OK', 'OK'] esperado=['OK', 'OK', 'OK', 'OK'])
+   C_ultimo_gana_solo_la_ii_cae                         PASA   (real=['ii'] esperado=['ii'])
+   CIFRA casos: 11 | pasan: 11 | fallan: 0
+
+E) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_la_cirugia_cambia_el_texto                         CAE   (esperado mutado=False)
+   C_arreglada_ii_dice_OK                               CAE   (esperado mutado='OK_mutado')
+   C_arreglada_las_cuatro_TODAS_OK                      CAE   (esperado mutado='TODAS OK_mutado')
+   C_arreglada_las_dos_mitades_son_iguales              CAE   (esperado mutado=False)
+   C_ultimo_gana_ii_dice_FALLA                          CAE   (esperado mutado='FALLA_mutado')
+   C_ultimo_gana_las_cuatro_AL_MENOS_UNA_FALLA          CAE   (esperado mutado='AL MENOS UNA FALLA_mutado')
+   C_ultimo_gana_las_dos_mitades_NO_son_iguales         CAE   (esperado mutado=True)
+   C_el_retrato_no_se_mueve_entre_las_dos               CAE   (esperado mutado=False)
+   C_lo_que_se_mueve_son_las_aristas_internas           CAE   (esperado mutado=4)
+   C_arreglada_las_cuatro_en_verde                      CAE   (esperado mutado=['OK', 'OK', 'OK', 'OK', '_mutado'])
+   C_ultimo_gana_solo_la_ii_cae                         CAE   (esperado mutado=['ii', '_mutado'])
+   CIFRA casos que caen al mutar el esperado: 11 de 11
+
+VERDE: los 11 casos pasan tal cual y los 11 caen al mutar el esperado.
+Y LO QUE IMPORTA, DICHO CON SU CIFRA: devolver el ultimo gana baja las
+aristas A internas de 149 a 146 y pone la ii en FALLA.

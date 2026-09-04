@@ -226,11 +226,7 @@ def main():
         ra, rb = res(r["nodo_a"]), res(r["nodo_b"])
         if ra == rb:
             continue
-        k = frozenset((ra, rb))
-        previo = leido.get(k)
-        if previo is not None and previo["clase"] == "A" and r["clase"] != "A":
-            continue          # LA A NO SE PIERDE: marca de la correccion de la 167
-        leido[k] = r
+        leido[frozenset((ra, rb))] = r
     encola = set()
     for p in P:
         ra, rb = res(p["nodo_a"]), res(p["nodo_b"])

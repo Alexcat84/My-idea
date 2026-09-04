@@ -1,0 +1,45 @@
+==============================================================================
+VUELTA 167, TAREA 3: LA CAUSA DE LA COMPROBACION ii, MEDIDA POR MI
+==============================================================================
+
+A) EL INSUMO, CONTADO Y NO SUPUESTO
+   fichero de veredictos: docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   CIFRA filas: 3388
+   CIFRA puesto mayor (corte): 3388
+   CIFRA nodos del grafo: 3853
+   CIFRA entradas de alias: 761
+
+B) EL RETRATO DE LAS A, RECOMPUTADO AQUI (poblacion (a))
+   CIFRA A crudas: 551
+   CIFRA que colapsan a auto par tras resolver: 398
+   CIFRA pares distintos en el retrato: 149
+
+C) EL ULTIMO GANA DEL PASO 4, REPRODUCIDO AQUI (poblacion (b))
+   regla reproducida: un solo registro por par resuelto, el ULTIMO
+   del fichero, y SIN mirar la clase.
+   CIFRA pares resueltos distintos en `leido`: 2712
+   CIFRA pares del retrato cuya fila guardada SI es A: 146
+
+D) LA DIFERENCIA, NOMBRADA UNO POR UNO (poblacion (c))
+   CIFRA pares del retrato que el ultimo gana pierde: 3
+   CIFRA de la resta: 149 menos 3 son 146
+
+   customer_development_modelo con customer_discovery
+      filas crudas: (635 A), (707 B), (1255 D)
+      la que el ultimo gana guarda: 1255 D (ultima del FICHERO, no del puesto)
+   customer_validation con earlyvangelists_ventas_tempranas
+      filas crudas: (697 D), (1096 A), (1185 D)
+      la que el ultimo gana guarda: 1185 D (ultima del FICHERO, no del puesto)
+   formalizar_junta_asesora con identificar_consejo_asesores
+      filas crudas: (712 A), (976 A), (1190 D)
+      la que el ultimo gana guarda: 1190 D (ultima del FICHERO, no del puesto)
+
+E) EL CONTRASTE CON EL ACTA 166, QUE VA AL FINAL Y COMO CONTRASTE
+   el acta 166 (4.2) dice retrato 149, aristas A internas 146 y TRES
+   pares perdidos. MI MEDICION DE HOY dice retrato 149, aristas A
+   internas 146 y 3 pares perdidos.
+   COINCIDEN: SI
+   Y LOS NOMBRES: los tres pares que el acta nombra son los mismos
+   tres que yo mido: SI
+
+MEDICION PROPIA COMPLETA. Esta salida NO arregla nada: solo mide.
