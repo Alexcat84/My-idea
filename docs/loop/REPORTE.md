@@ -269,6 +269,35 @@ carril del banco 9.10, cosa que el acta 167 verifico y dio por buena; con eso el
 computo pasa a `CATORCE` y la constante se queda en `TRECE`. **La guarda muerde
 algo cierto: que la campana movio su sujeto. No esta rota.**
 
+**MEDICION ADOSADA EL 4 sep 2026 (vuelta 169, TAREA 1.c), POR LA ADJUDICACION 6.3
+DEL ACTA 168, Y EL PARRAFO DE ARRIBA SE QUEDA ENTERO.** El diagnostico de arriba
+culpa a la vuelta 167 de haber movido el sujeto, y **eso esta mal atribuido**. La
+medicion del auditor, con seis arboles mirados uno a uno: **el arnes
+`vuelta166_tarea3_mutacion_retrato.py` NACIO ROJO EN SU PROPIO COMMIT
+`33fe1380`, de la vuelta 166**, y **la vuelta 167 NO movio esa fila**: trece
+tachadas antes y trece despues. La constante `"TRECE VECES"` ya discrepaba de su
+propio computo el dia que se escribio.
+
+**Y EL SEGUNDO DEFECTO ES PEOR QUE EL PRIMERO, PORQUE ES UNA GUARDA QUE DEJO DE
+MORDER SIN AVISAR:** desde `33fe1380` la celda ya no contiene el literal
+`DOCE VECES,` (dice `~~DOCE~~ TRECE VECES,`), asi que el `replace` no encontraba
+nada, el documento **no se mutaba**, y `todos_cuadran` devolvia `True` donde el
+caso espera `False`. **Un caso que no muta no prueba nada, y nadie se entera.**
+
+**LA LECCION, QUE ES MAS GRANDE QUE ESTE ARNES Y POR ESO VIAJA AL `R.38`:** un
+arnes que se escribe contra el documento de ANTES de la correccion, y se commitea
+JUNTO CON la correccion, **nace muerto**. La unica forma de cazarlo es
+**correrlo DESPUES de escribir, en el mismo acto**. Aqui no se cazo porque la
+bateria no se corrio en dos vueltas.
+
+**LO QUE NO CAMBIA:** la tabla de los tres casos que caen, con su real y su
+esperado, **es correcta al digito** y el auditor la reprodujo. Lo que estaba mal
+era **de quien era la culpa y desde cuando**. Y la decision de no arreglarlo sin
+orden **fue la correcta**: el acta 168 lo adjudico a favor del ejecutor en su
+4.5 (c) y lo encargo por nombre en su 6.2, ejecutado en la TAREA 2 de la vuelta
+169.
+
+
 **POR QUE NO LO ARREGLO YO, con la letra delante.** El encargo autoriza re
 anclar **uno** (`3.b`, nombrado por su fichero) y ordena que lo que sobreviva
 **se traiga**. Re anclar un arnes que el encargo no nombra seria decidir por mi
@@ -277,6 +306,40 @@ auditor tiene que hacer. **El remedio esta escrito y no lo aplico**: la
 constante `"TRECE VECES"` tiene que salir del conteo, igual que `cuantas`, y el
 `t.replace("DOCE VECES,", ...)` de su segundo caso tambien esta clavado al texto
 vivo. **Marcado como DISCUTIBLE.**
+
+
+**NOTA FECHADA ADOSADA EL 4 sep 2026 (vuelta 169, TAREA 1.b), POR EL CARRIL DEL
+BANCO 9.10 Y POR LA ADJUDICACION 6.1 DEL ACTA 168. NINGUNA PALABRA DE ARRIBA SE
+BORRA.** La tabla de esta seccion 3.c encabeza *"Cifras contadas de
+`docs/loop/SALIDA_V168_T3_BATERIA_CIERRE.txt`"* y **se publico ANTES de que ese
+fichero existiera**: el commit que la escribe es `fdc46ad2`, de las 18:03:30, y
+el fichero nacio a las 18:04, **sin commitear y con CERO BYTES**. Medido y
+sellado al abrir la vuelta 169, antes de la primera operacion, en
+`docs/loop/SALIDA_V169_APERTURA.txt` secciones D y F: **0 bytes** y **NO ESTA EN
+EL ARBOL DE HEAD**.
+
+**LA CELDA QUE NO ERA UNA MEDICION, DICHA CON SU NOMBRE:** de las ocho celdas,
+siete si estaban en `SALIDA_V168_BATERIA.txt`, que si estaba commiteada. **La
+primera no: `arneses cronometrados 72`.** El fichero commiteado decia **71**, y
+el **72** salia de contar la nomina de HOY, que la propia TAREA 4 de la 168 habia
+hecho crecer en el mismo commit. **Era una prediccion correcta, no una medicion**,
+y una prediccion correcta publicada como medicion sigue siendo la especie que
+esta campana persigue, porque la siguiente puede no serlo y se leera igual.
+
+**HOY LA FUENTE EXISTE, Y EL FICHERO NO SE BORRO NI SE RELLENO A MANO: SE
+SOBRESCRIBIO CON LA CORRIDA DE VERDAD.** La bateria se re corrio entera en la
+vuelta 169 (`python scripts/loop/verificar_mutaciones_viejas.py`), tardo **1.548,4
+segundos, 25,8 minutos** por su propio cronometro, y su salida vive commiteada en
+`docs/loop/SALIDA_V168_T3_BATERIA_CIERRE.txt`, **15.212 bytes**, commit
+`07446f2a`. **LAS OCHO CELDAS REPRODUCEN AL DIGITO**, incluida la que era una
+prediccion: `arneses cronometrados` **72**, `ANCLA PERDIDA` **0**, `NO MORDIO`
+**1**, `NO REPRODUCIBLE` **0**, `CASO DECLARADO` **2**, `arneses posteriores
+FUERA` **0**, `invisibles al censo` **0**, `RUIDO DE CONCURRENCIA` **0**.
+
+**LO QUE ESTA NOTA NO HACE:** no cambia ni una celda de la tabla de arriba, que
+resulto ser correcta entera; no borra el encabezado que cito un fichero vacio; y
+no convierte la caida en un malentendido. **La caida fue publicar como contado lo
+que no se habia contado, y esa sigue escrita.**
 
 ### TAREA 4, `OP-V-01` POR LA DECISION 5: HAY PRUEBA, Y LA FICHA NO VUELVE A PENDIENTE
 
@@ -420,7 +483,8 @@ ago = 1).
   3.388, medidos en la vuelta 14. **Medido hoy sobre
   `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`: 332 lineas, 278 CERRADOS, 54
   ABIERTOS.** **La discrepancia se declara y NO se resuelve copiando.** Y se
-  dice de donde viene, trazada commit a commit con `git show` sobre ese fichero:
+  dice de donde viene, ~~trazada commit a commit~~ **trazada en LOS CUATRO
+PUNTOS EN QUE LA CIFRA BAJA** con `git show` sobre ese fichero:
   **335 en `7f4ec6d9`** (vuelta 11), **334 en `7cec9ecc`**, **333 en
   `97552714`**, **332 en `70878328`** (vuelta 40, `OP-D-05`), cada bajada
   declarada en el asunto de su propio commit. **La cifra de la nota no es falsa:
@@ -429,6 +493,16 @@ ago = 1).
   la ficha no escribe el procedimiento. **Recomputarlo entero hoy exigiria
   decidir su alcance**, y `AUDITOR.md` 3 dice que una operacion cuyo texto no
   alcanza para ejecutarse sin decidir es **PARADA, no una improvisacion**.
+
+**PRECISION ADOSADA EL 4 sep 2026 (vuelta 169, TAREA 1.c), POR LA ADJUDICACION
+6.9 DEL ACTA 168. NO MUEVE NINGUNA CIFRA Y NINGUNA PALABRA DE ARRIBA SE BORRA.**
+Los cuatro puntos listados **son ciertos los cuatro**, comprobados por el auditor
+con `git show` sobre cada arbol. Lo que la lista no dice es que **entre el segundo
+y el tercero la cifra SUBIO**: `78ea7799` **334**, **`801c59f9` 335**, `c8c4e0b3`
+**334**. Por eso *"commit a commit"* queda tachado arriba: **prometia
+exhaustividad y lo entregado es una seleccion**, y quien la reuse creeria que la
+fila solo bajo. **La conclusion no se mueve** (*"la cifra de la nota no es falsa:
+es de su corte"*): sigue siendo cierta, y por eso esto es precision y no caida.
 
 **5.a `OP-L-01`, ABIERTA Y MEDIDA CLAUSULA A CLAUSULA.** 5 clausulas, 2 de ellas
 `CORRECCION DECLARADA` de la vuelta 166; no escribe nada en el grafo.

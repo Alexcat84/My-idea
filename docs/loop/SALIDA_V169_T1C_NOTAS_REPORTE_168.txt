@@ -1,0 +1,44 @@
+==============================================================================
+VUELTA 169, TAREA 1.b y 1.c: LAS TRES NOTAS AL REPORTE DE LA 168
+==============================================================================
+
+A) EL SUJETO, MEDIDO ANTES DE TOCARLO
+   ruta: docs/loop/REPORTE.md
+   CIFRA bytes antes: 26577
+   CIFRA lineas antes: 456
+   primera linea, leida y no supuesta: # REPORTE DE LA VUELTA 168 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+
+B) LAS CUATRO ANCLAS, BUSCADAS UNA A UNA
+   6.1 (pie de la 3.c)                            apariciones: 1
+   6.3 (LA CAUSA, MEDIDA)                         apariciones: 1
+   6.9 (frase vieja de la traza)                  apariciones: 1
+   6.9 (cabecera de la 5.a, donde acaba la traza) apariciones: 1
+
+C) LAS CIFRAS DE LA NOTA 6.1 SE COMPRUEBAN CONTRA EL FICHERO Y CONTRA GIT
+   (relectura al doble, ordenada por el acta 168 en su metrica de credito)
+   bytes del fichero en disco: 15212
+   git ls-tree -r HEAD lo ve: SI
+   la nota dira 15.212                       y el fichero lo dice: True
+   la nota dira 1.548,4 segundos             y el fichero lo dice: True
+   la nota dira 25,8 minutos                 y el fichero lo dice: True
+   la nota dira arneses cronometrados 72     y el fichero lo dice: True
+   la nota dira ANCLA PERDIDA 0              y el fichero lo dice: True
+   la nota dira NO MORDIO 1                  y el fichero lo dice: True
+   la nota dira NO REPRODUCIBLE 0            y el fichero lo dice: True
+   la nota dira CASO DECLARADO 2             y el fichero lo dice: True
+   la nota dira posteriores FUERA 0          y el fichero lo dice: True
+   la nota dira invisibles al censo 0        y el fichero lo dice: True
+   la nota dira RUIDO 0                      y el fichero lo dice: True
+   CIFRA celdas comprobadas contra el fichero: 11 de 11
+
+D) EL FICHERO SOLO CRECE, Y LO VIEJO SIGUE DENTRO
+   CIFRA bytes despues: 31263
+   CIFRA lineas despues: 530
+   crece y no encoge: True
+   sigue dentro 'trazada commit a commit'                           : True
+   sigue dentro 'La vuelta 167, en su TAREA 4, anadio una tachada'  : True
+   sigue dentro 'Cifras contadas de'                                : True
+   sigue dentro '**Marcado como DISCUTIBLE.**'                      : True
+
+ESCRITO: docs/loop/REPORTE.md (el de la vuelta 168, anotado por adicion)
+VERDE: las tres notas adosadas, cero palabras viejas borradas.
