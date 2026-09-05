@@ -1,0 +1,371 @@
+SELLO DE APERTURA DE LA VUELTA 178, escrito ANTES de la primera operacion
+instrumento: scripts/loop/vuelta178_apertura.py
+regimen: VUELTA NORMAL, NO DE BATERIA (la proxima es la 181).
+         CINCO sub-tareas: el regimen temporal de AUDITOR.md 6.2 queda
+         CUMPLIDO por dos vueltas seguidas que cerraron su reporte, y el
+         bloque B.1 de abajo lo LOCALIZA EN GIT en vez de teclearlo.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD) ===
+77621a68c1c14b1fc9feb133b7722bc6dd864ae0
+77621a68c1c14b1fc9feb133b7722bc6dd864ae0	2026-09-05 13:10:43 -0400	ACTA DEL AUDITOR, VUELTA 177: LAS DOS TAREAS ENTERAS Y TODO LO QUE PUBLICA REPRODUCE BAJO MI MANO SALVO UNA FRASE, Y EL TOPE VUELVE A CINCO PORQUE LA VUELTA LO DISPARO.
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== B.1 LOS CUATRO COMMITS QUE DEVUELVEN EL TOPE A CINCO, LOCALIZADOS EN GIT ===
+(AUDITOR.md 6.2: el regimen de dos dura HASTA QUE DOS VUELTAS SEGUIDAS
+ CIERREN SU PROPIO REPORTE con cerrar_reporte.py. No se teclea ningun hash:
+ se busca en el log el commit de CIERRE y el de ARCHIVO de la 176 y de la 177)
+   176 cierre   -> 27b80563	TAREA 2 CERRADA: EL REPORTE DE LA 176 SE ABRIO Y SE CERRO EN SU MISMA VUELTA, CON SUS CUATRO PIEZAS (95231 bytes, 1447 lineas). cerrar_report
+   176 archivo  -> 8c176390	LA VUELTA 176 ARCHIVA TAMBIEN SU PROPIO REPORTE, EN SU MISMA VUELTA Y SIN ESPERAR A LA 177, que es lo que el encargo pide expresamente: docs/
+   177 cierre   -> b9c2f01d	EL REPORTE DE LA 177 SE CIERRA EN SU MISMA VUELTA, CON SUS CUATRO PIEZAS Y CERO QUE FALTEN. docs/loop/REPORTE.md, 53201 bytes, 738 lineas. ce
+   177 archivo  -> 1d29275c	LA VUELTA 177 ARCHIVA TAMBIEN SU PROPIO REPORTE, EN SU MISMA VUELTA Y SIN ESPERAR A LA 178, que es lo que el encargo pide expresamente: docs/
+   commits que tocan cerrar_reporte.py en los 40 ultimos: 2
+
+=== C. git status --porcelain ENTERO ===
+?? docs/loop/SALIDA_V178_APERTURA_CONSOLA.txt
+?? scripts/loop/vuelta178_apertura.py
+CIFRA lineas de status: 2
+
+=== D. BYTES DE CADA RUTA QUE EL ENCARGO NOMBRA, POR LAS DOS CONVENCIONES ===
+(disco = os.path.getsize; git = git cat-file -s HEAD:<ruta>. Acta 177 punto
+ 7.11: mientras la convencion no este fijada, SE PUBLICAN LAS DOS)
+dataset/metadata/master_graph.json -> disco 8375817 bytes | git 8375817 bytes
+docs/loop/REPORTE.md -> disco 53201 bytes | git 53201 bytes
+docs/loop/ACTA_AUDITOR.md -> disco 4091959 bytes | git 4091959 bytes
+docs/loop/EJECUTOR.md -> disco 12244 bytes | git 12244 bytes
+docs/loop/AUDITOR.md -> disco 22612 bytes | git 22612 bytes
+docs/loop/PROMPT_SIGUIENTE.md -> disco 17866 bytes | git 17866 bytes
+docs/loop/reportes/REPORTE_V177.md -> disco 53201 bytes | git 53201 bytes
+docs/plan/OPERACIONES.jsonl -> disco 498085 bytes | git 498085 bytes
+docs/plan/OP_L_03_LECTURAS.jsonl -> disco 24158 bytes | git 24158 bytes
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4051967 bytes | git 4051967 bytes
+scripts/loop/guarda_commit_dataset.py -> disco 14928 bytes | git 14928 bytes
+scripts/loop/archivar_reporte.py -> disco 7181 bytes | git 7181 bytes
+scripts/loop/anexar_tarea_al_reporte.py -> disco 6243 bytes | git 6243 bytes
+scripts/loop/tallar_cabecera_reporte.py -> disco 100077 bytes | git 100077 bytes
+scripts/loop/verificar_mutaciones_viejas.py -> disco 90250 bytes | git 90250 bytes
+scripts/loop/cotejar_clon_declarado.py -> disco 17883 bytes | git 17883 bytes
+scripts/loop/aislador_de_ciega.py -> disco 10697 bytes | git 10697 bytes
+scripts/loop/cerrar_reporte.py -> disco 20841 bytes | git 20841 bytes
+scripts/loop/_auditor_v178_ciega.py -> disco 3479 bytes | git 3479 bytes
+scripts/loop/backlog_l03_vuelta14.py -> disco 6791 bytes | git 6791 bytes
+scripts/loop/vuelta166_tarea2_correccion_op_l_01.py -> disco 25900 bytes | git 25900 bytes
+scripts/loop/vuelta150_3_relectura_expediente.py -> disco 45369 bytes | git 45369 bytes
+
+=== E. DIFF REAL EN BYTES DE LOS MODIFICADOS (cambio contra suciedad) ===
+CIFRA ficheros modificados: 0
+
+=== F. LO NO SEGUIDO POR GIT, FICHERO A FICHERO CON SUS BYTES ===
+docs/loop/SALIDA_V178_APERTURA_CONSOLA.txt -> 0 bytes
+scripts/loop/vuelta178_apertura.py -> 20871 bytes
+CIFRA ficheros no seguidos: 2
+
+=== G. git ls-tree DE HEAD SOBRE ESAS RUTAS ===
+dataset/metadata/master_graph.json -> 100644 blob cb33552aedddab4d6c51c5c85a7416999b5c70a0	dataset/metadata/master_graph.json
+docs/loop/REPORTE.md -> 100644 blob a7553f136cbcebc7615f0c709cb8bc1bda9b720a	docs/loop/REPORTE.md
+docs/loop/ACTA_AUDITOR.md -> 100644 blob 7520968915a880ed69bf49647fcf98ead4766c1d	docs/loop/ACTA_AUDITOR.md
+docs/loop/EJECUTOR.md -> 100644 blob 44734d1a2d159b5ef8edcf0acaafa4c1da5e6c33	docs/loop/EJECUTOR.md
+docs/loop/AUDITOR.md -> 100644 blob 7f59fc443fc901c4500ebfe6603539a6e25a0482	docs/loop/AUDITOR.md
+docs/loop/PROMPT_SIGUIENTE.md -> 100644 blob 763f61d57e268071e190c4ed0fca4e1e894d64eb	docs/loop/PROMPT_SIGUIENTE.md
+docs/loop/reportes/REPORTE_V177.md -> 100644 blob a7553f136cbcebc7615f0c709cb8bc1bda9b720a	docs/loop/reportes/REPORTE_V177.md
+docs/plan/OPERACIONES.jsonl -> 100644 blob ff13a2b37c1ae6dd82ef97329193e862b515a5b2	docs/plan/OPERACIONES.jsonl
+docs/plan/OP_L_03_LECTURAS.jsonl -> 100644 blob dd22eb8e1c10e33650a6e324b752c0311eadd046	docs/plan/OP_L_03_LECTURAS.jsonl
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> 100644 blob 806c7c485a4b922a01a9615e6ad759267b78c278	docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+scripts/loop/guarda_commit_dataset.py -> 100644 blob 317306df5a384e5bdc6fa263b4f3d4faf7a91178	scripts/loop/guarda_commit_dataset.py
+scripts/loop/archivar_reporte.py -> 100644 blob 5c94daf630332f973b1771e14a6f5c0462ee4f1d	scripts/loop/archivar_reporte.py
+scripts/loop/anexar_tarea_al_reporte.py -> 100644 blob 70dcc2818a6687903f275f2cde3ae594a0c9ab1d	scripts/loop/anexar_tarea_al_reporte.py
+scripts/loop/tallar_cabecera_reporte.py -> 100644 blob 9dfb962267aea81f703e2de4eba05cd584a17762	scripts/loop/tallar_cabecera_reporte.py
+scripts/loop/verificar_mutaciones_viejas.py -> 100644 blob 637bf723dcbe4e65a409f8ccb3171daedbdf9a43	scripts/loop/verificar_mutaciones_viejas.py
+scripts/loop/cotejar_clon_declarado.py -> 100644 blob 31fb4922ab59f8f26080e790841417eef714cd62	scripts/loop/cotejar_clon_declarado.py
+scripts/loop/aislador_de_ciega.py -> 100644 blob b6202e8904c146c14f080c439a62c4d179422a97	scripts/loop/aislador_de_ciega.py
+scripts/loop/cerrar_reporte.py -> 100644 blob 34cf0d86740d685087de0a367a662c3486d5f0cf	scripts/loop/cerrar_reporte.py
+scripts/loop/_auditor_v178_ciega.py -> 100644 blob 45619a77ca2d2a4319d22dcbb8808dac552dcc5b	scripts/loop/_auditor_v178_ciega.py
+scripts/loop/backlog_l03_vuelta14.py -> 100644 blob 4b8efdc3802c4b63bb5378c4053a4d49f9dbfefb	scripts/loop/backlog_l03_vuelta14.py
+scripts/loop/vuelta166_tarea2_correccion_op_l_01.py -> 100644 blob b2c2831a89c786eb0f20dce7b344157e30806285	scripts/loop/vuelta166_tarea2_correccion_op_l_01.py
+scripts/loop/vuelta150_3_relectura_expediente.py -> 100644 blob 70c21ed9e4c0e2fcf84be419284418084c1b518f	scripts/loop/vuelta150_3_relectura_expediente.py
+
+=== H. EL REPORTE EN HEAD, MEDIDO SIN CREERLE AL ENCARGO ===
+primera linea: # REPORTE DE LA VUELTA 177 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+lineas (saltos de linea contados): 738
+bytes en git: 53201
+   contiene 'SIN ESCRIBIR TODAVIA'             -> NO
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'    -> NO
+   contiene 'ABIERTA, SIN CERRAR'              -> SI
+   contiene 'HUECO DECLARADO Y MEDIDO'         -> SI
+   contiene '\n## 3.'                          -> SI
+   contiene '\n## 4.'                          -> SI
+   contiene '\n## 5.'                          -> SI
+   contiene '\n## 6.'                          -> SI
+   contiene '\n## 7.'                          -> SI
+   contiene '\n## 8.'                          -> SI
+   contiene '\n## 9.'                          -> SI
+
+=== H.1 EL REPORTE DEL ARBOL, QUE ES EL QUE EL ESQUELETO DE LA 178 PISARA ===
+primera linea: # REPORTE DE LA VUELTA 177 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+bytes en disco (normalizado a LF): 53201 | saltos de linea: 738
+bytes en disco (crudos, os.path.getsize): 53201
+identico byte a byte al de HEAD: SI
+   contiene 'SIN ESCRIBIR TODAVIA'             -> NO
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'    -> NO
+   contiene 'ABIERTA, SIN CERRAR'              -> SI
+   contiene 'HUECO DECLARADO Y MEDIDO'         -> SI
+   contiene '\n## 3.'                          -> SI
+   contiene '\n## 4.'                          -> SI
+   contiene '\n## 5.'                          -> SI
+   contiene '\n## 6.'                          -> SI
+   contiene '\n## 7.'                          -> SI
+   contiene '\n## 8.'                          -> SI
+   contiene '\n## 9.'                          -> SI
+
+=== H.2 EL COMMIT QUE DE VERDAD TOCA REPORTE.md POR ULTIMA VEZ ===
+(no se teclea ningun hash: se localiza con git log y se imprime lo que salga)
+los ocho ultimos commits:
+   77621a68	ACTA DEL AUDITOR, VUELTA 177: LAS DOS TAREAS ENTERAS Y TODO LO QUE PUBLICA REPRODUCE BAJO MI MANO SALVO UNA FRASE, Y EL TOPE VUELVE A CINCO P
+   1d29275c	LA VUELTA 177 ARCHIVA TAMBIEN SU PROPIO REPORTE, EN SU MISMA VUELTA Y SIN ESPERAR A LA 178, que es lo que el encargo pide expresamente: docs/
+   b9c2f01d	EL REPORTE DE LA 177 SE CIERRA EN SU MISMA VUELTA, CON SUS CUATRO PIEZAS Y CERO QUE FALTEN. docs/loop/REPORTE.md, 53201 bytes, 738 lineas. ce
+   4cafaf56	TAREA 2 CERRADA: OP-L-03 SE DESAPLAZA DESPUES DE SIETE VUELTAS, Y LO QUE ENCUENTRA CAMBIA LA TAREA. El tramo entero, 6 de 6 actos grandes y 9
+   d9a8a44c	LA FILA DE LA TAREA 1 SE ANEXA AL REPORTE AL CERRARSE LA TAREA, NO AL FINAL DE LA VUELTA, que es la letra de EJECUTOR.md 1 desde el 4 sep. do
+   4bb4f459	TAREAS 1.e Y 1.f CERRADAS, LAS TRES CORRECCIONES DEL ACTA CON SU ARNES CADA UNA.
+   0c3320dd	TAREAS 1.c Y 1.d CERRADAS: LA FRASE FALSA QUEDA CORREGIDA POR DECLARACION EN LOS DOS DOCSTRINGS, Y NACE EL INSTRUMENTO QUE HACE INNECESARIA E
+   2a33a295	TAREA 1.b CERRADA, Y ERA LA BLOQUEANTE: EL ARNES DEL ROJO YA NO MIDE CONTRA UN NUMERO TECLEADO, Y SIGUE MORDIENDO. Reproduje el rojo bajo mi 
+ultimo commit que TOCA docs/loop/REPORTE.md: b9c2f01d
+   su asunto: EL REPORTE DE LA 177 SE CIERRA EN SU MISMA VUELTA, CON SUS CUATRO PIEZAS Y CERO QUE FALTEN. docs/loop/REPORTE.md, 53201 bytes, 738 lineas. cerrar_repo
+
+=== H.3 LAS PIEZAS QUE cerrar_reporte.py PEDIRA PARA CERRAR LA 178 ===
+(al abrir NO EXISTE NINGUNA, y eso es lo correcto: las produce esta vuelta.
+ La de bateria NO SE VA A PRODUCIR: esta vuelta no es de bateria y la seccion
+ 9 cierra con el HUECO DECLARADO Y MEDIDO)
+docs/loop/SALIDA_V178_TALLADOR_CABECERA.txt -> NO EXISTE
+scripts/loop/_v178_cierre_texto.md -> NO EXISTE
+docs/loop/SALIDA_V178_BATERIA.txt -> NO EXISTE
+
+=== H.4 QUE REPORTES ESTAN YA ARCHIVADOS EN docs/loop/reportes/ ===
+   REPORTE_V168.md -> disco 31263 bytes | git 31263 bytes
+   REPORTE_V169.md -> disco 43586 bytes | git 43586 bytes
+   REPORTE_V170.md -> disco 45706 bytes | git 45706 bytes
+   REPORTE_V171.md -> disco 43956 bytes | git 43956 bytes
+   REPORTE_V172.md -> disco 48851 bytes | git 48851 bytes
+   REPORTE_V174.md -> disco 32568 bytes | git 32568 bytes
+   REPORTE_V175.md -> disco 5953 bytes | git 5953 bytes
+   REPORTE_V176.md -> disco 95231 bytes | git 95231 bytes
+   REPORTE_V177.md -> disco 53201 bytes | git 53201 bytes
+CIFRA reportes archivados: 9
+REPORTE_V177.md archivado: SI
+
+=== H.5 LA CUENTA DE LA NOMINA Y DEL CENSO, RECOMPUTADA (TAREA 1.a) ===
+(el encargo dice que el censo ve 154 y que la nomina va de 88 a 92. NI UNO
+ NI OTRO SE COPIAN: se llaman las funciones puras del propio sujeto)
+CIFRA arneses que ve arneses_del_directorio(): 154
+CIFRA entradas de VIEJAS (la nomina): 92
+CIFRA entradas de la nomina que el censo NO ve (nomina_invisible_al_censo): 0
+CIFRA del censo que estan FUERA de la nomina: 62
+LA RESTA COMPROBADA: censo 154 menos nomina 92 = 62, y fuera de nomina = 62. CALZAN: SI
+arneses_que_faltan() HOY, CON LA FUNCION VIEJA:
+   ultima vuelta de la nomina: 177
+   CIFRA que dice que faltan: 0
+   CIFRA que la funcion NO VE y el censo SI (fuera de nomina menos los que dice): 62
+
+=== H.6 EL CUARTO VEREDICTO DEL COTEJO DE CLONES, MEDIDO ANTES (TAREA 1.c) ===
+scripts/loop/cotejar_clon_declarado.py: 409 lineas
+   nombra 'EL ARBOL DE SINTAXIS'   -> NO
+   nombra 'ast_identico'           -> NO
+   nombra 'ast.dump'               -> NO
+   nombra 'TRES VEREDICTOS'        -> SI
+   nombra 'CUATRO VEREDICTOS'      -> NO
+
+=== H.7 EL --puestos DEL AISLADOR, MEDIDO ANTES (TAREA 1.d) ===
+scripts/loop/aislador_de_ciega.py: 250 lineas
+   nombra '--puestos'    -> NO
+   nombra '--excluir'    -> NO
+   nombra 'puestos='     -> NO
+   nombra 'excluir='     -> NO
+la muleta del auditor scripts/loop/_auditor_v178_ciega.py existe: SI
+   disco 3479 bytes | git 3479 bytes
+   importa aislador_de_ciega (no copia sus funciones): SI
+
+=== H.8 LA GUARDA DE LA PAREJA DE BYTES Y SHA, MEDIDA ANTES (TAREA 1.e) ===
+scripts/loop/cerrar_reporte.py: 422 lineas
+   nombra 'PATRON_BYTES'         -> SI
+   nombra 'normalizado a LF'     -> NO
+   nombra 'cifras_sin_pareja'    -> NO
+   nombra 'sha sin su pareja'    -> NO
+
+=== H.9 LA GUARDA DEL SUJETO CONGELADO, MEDIDA ANTES (TAREA 1.e) ===
+scripts/loop/verificar_mutaciones_viejas.py: 1584 lineas
+CIFRA veces que dice 'SUJETO CONGELADO': 12
+   nombra 'def sujeto_congelado'   -> NO
+   nombra 'def anclaje_de'         -> NO
+   nombra 'CASOS_DECLARADOS'       -> SI
+   nombra '--sujeto-congelado'     -> NO
+
+=== H.10 EL UNIVERSO DE OP-L-03, RECOMPUTADO Y NO COPIADO DE SU NOTA (TAREA 2) ===
+(la cifra adjudicada en la vuelta 15 es 40 actos y 73 pares, al corte 3.388.
+ Se corre el instrumento que la propia nota cita y se imprime lo que salga)
+comando: python scripts/loop/backlog_l03_vuelta14.py -> exit 0
+   ABIERTOS tamano 3-6, corte 3.388: 48 actos, 99 pares fuera de cola
+   tras excluir las SEIS nominas ya cerradas por OP-L-02: 42 actos, 75 pares
+   de esos, ESPERAN destejido o cirugia (tocan una nomina DESTEJIDO): 2 actos, 2 pares
+      tamano 3, 1 pares: ['homework_frontend_loading', 'voice_of_customer_homework', 'voz_del_cliente_voc'] -- ['OP-D-02']
+      tamano 3, 1 pares: ['construir_sobre_ideas_ajenas', 'pensamiento_convergente_divergente', 'reglas_brainstorming'] -- ['OP-D-04']
+   BACKLOG DE OP-L-03 AL CORTE 3.388: 40 actos, 73 pares
+   reparto por tamano de acto:
+      tamano 3: 24 actos, 24 pares
+      tamano 4: 10 actos, 20 pares
+      tamano 5: 4 actos, 15 pares
+      tamano 6: 2 actos, 14 pares
+   LISTA DECLARADA, un acto por linea:
+      [6, 8 pares] breakthrough_desempeno_actual, secuencia_universal_breakthrough, secuencia_universal_para_el_breakthrough, seis_sigma_servicios, six_sigma_dmaic
+      [6, 6 pares] cierre_segun_complejidad_venta, cierre_segun_tamano_decision, cierre_sofisticacion_comprador, diferencias_venta_pequena_venta_grande, ineficacia
+      [5, 4 pares] cash_burn_calculation, metrics_that_matter_framework, validacion_hipotesis_ingresos, validar_modelo_financiero, verificar_modelo_ingresos
+      [5, 3 pares] construccion_de_leverage, estrategia_competencia_vcs, gestion_multiples_term_sheets, leverage_en_negociacion_con_vcs, tecnica_anclaje_negociacio
+      [5, 6 pares] encuadre_desafio_diseno, how_might_we_brief_social, how_might_we_briefs, how_might_we_framing, how_might_we_hmw
+      [5, 2 pares] estrategia_de_innovacion_arenas, estrategia_de_innovacion_de_producto, estrategia_de_innovacion_y_tecnologia, estrategia_innovacion_producto, se
+      [4, 3 pares] alianzas_cross_industry, co_opetition_industria, colaboracion_sectorial, trabajo_colectivo_estandares_industria
+      [4, 3 pares] automatizacion_tareas_aburridas, descomposicion_tareas_trabajo, division_trabajo_humano_ia, framework_tareas_ia_humano
+      [4, 2 pares] colaboracion_cadena_suministro, compartir_datos_cadena_suministro, diagnostico_efecto_latigo, efecto_bullwhip
+      [4, 1 pares] compra_por_precio_mas_bajo_como_error, fin_precio_como_criterio_unico, relacion_largo_plazo_proveedor_unico, relaciones_largo_plazo_con_proveedo
+      [4, 3 pares] comprension_capacidades_limitaciones_ia, invitar_ia_a_todo, jagged_frontier_ia, principio_invitar_ia_siempre
+      [4, 1 pares] creacion_option_pool, employee_pool_esop, option_pool_negociacion, pool_opciones_empleados
+      [4, 1 pares] disenar_tests_pass_fail, diseno_experimentos_hipotesis, diseno_experimentos_pass_fail, realizar_pruebas_pasa_no_pasa
+      [4, 1 pares] enfoque_etapa_investigacion, etapa_de_investigacion, etapa_investigacion_ventas, investigacion_como_habilidad_clave
+      [4, 3 pares] etnografia_aplicada_en_equipos_multidisciplinarios, etnografia_de_proyecto, etnografia_investigacion_usuario, investigacion_etnografica_ideacion
+      [4, 2 pares] fase_diseno_prototipado_modelos, proceso_ideacion_modelo_negocio, prototipado_modelos_negocio, prototyping_possibilities
+      [3, 1 pares] advances_vs_continuations, marco_avances_continuaciones, objetivos_de_llamada_orientados_a_avance
+      [3, 1 pares] analisis_causa_raiz_diagnostico, analisis_diagnostico_causa, viaje_diagnostico_remedial
+      [3, 1 pares] analisis_trafico_competitivo, captura_conocimiento_mercado, capturar_conocimiento_de_mercado
+      [3, 1 pares] atacar_mercados_establecidos_con_problema, encontrar_grandes_problemas_mercados_emergentes, resolver_problemas_grandes
+      [3, 1 pares] atencion_focal_y_periferica, intimation_illumination, wallas_intimacion_fringe_consciousness
+      [3, 1 pares] ciclo_de_culpa, ciclo_de_culpa_2, dysfunctional_organizational_culture_patterns
+      [3, 1 pares] comunidad_tribu_marca, construccion_tribu_de_marca, marcador_visual_marca
+      [3, 1 pares] control_mantener_ganancias, matriz_de_control_de_proceso, plan_de_control
+      [3, 1 pares] crowdfunding_legal_exemptions_jobs_act, cumplimiento_inversionistas_acreditados, equity_crowdfunding
+      [3, 1 pares] customer_segments_hypothesis, problem_recognition_scale, segmentos_de_clientes_problema_necesidad
+      [3, 1 pares] defensas_en_profundidad, defensas_en_profundidad_2, defensas_en_profundidad_3
+      [3, 1 pares] definir_meta_de_traccion, moving_the_needle, traction_goal
+      [3, 1 pares] design_for_six_sigma_dfss, design_for_six_sigma_dmadv, design_for_six_sigma_dmadv_2
+      [3, 1 pares] diseno_organizacional_equipos_innovacion, equipo_multifuncional, equipo_multifuncional_real
+      [3, 1 pares] escalamiento_prematuro, preservar_efectivo_buscar_modelo, restriccion_gasto_validacion
+      [3, 1 pares] evaluacion_tecnologias_disruptivas, explotacion_tecnologias_disruptivas, tecnologias_disruptivas_oportunidad
+      [3, 1 pares] evitar_sesgo_retrospectivo_hindsight, evitar_shopping_bag, reconstruccion_contexto_situacional
+      [3, 1 pares] gestion_eco_riesgos, mitigacion_riesgos_ambientales, responsabilidad_extendida_productor
+      [3, 1 pares] gestion_terminacion_franquiciado, perdida_control_operativo, terminacion_franquiciado_causas
+      [3, 1 pares] incentivos_transparencia_ia, shadow_ai_use_organizacional, shadow_ia_organizacional
+      [3, 1 pares] investigacion_new_view, new_view_vs_old_view_de_error_humano, perspectiva_dentro_del_tunel
+      [3, 1 pares] metodo_valor_presente_neto, valor_del_dinero_en_el_tiempo, valor_presente
+      [3, 1 pares] pivote_estrategico, pivote_startup, pivotes_e_iteraciones
+      [3, 1 pares] reconocimiento, reconocimiento_al_desempeno, reconocimiento_crosby
+   DISCUTIBLE: de los 40 del backlog, cuantos tocan ADEMAS una operacion NO destejido (MESA, HERRAMIENTA, CAMPO_SUCIO, DECISION_DE_FUENTE), sin que la regla escrit
+      tamano 5, 2 pares: ['estrategia_de_innovacion_arenas', 'estrategia_de_innovacion_de_producto', 'estrategia_de_innovacion_y_tecnologia', 'estrategia_innovacio
+      tamano 4, 1 pares: ['disenar_tests_pass_fail', 'diseno_experimentos_hipotesis', 'diseno_experimentos_pass_fail', 'realizar_pruebas_pasa_no_pasa'] -- ['OP-S-0
+      tamano 3, 1 pares: ['pivote_estrategico', 'pivote_startup', 'pivotes_e_iteraciones'] -- ['OP-M-03-III:FUSION DE MESA', 'OP-M-03-ENLACES:ENLACE']
+      tamano 3, 1 pares: ['crowdfunding_legal_exemptions_jobs_act', 'cumplimiento_inversionistas_acreditados', 'equity_crowdfunding'] -- ['OP-S-07:CAMPO_SUCIO']
+      tamano 3, 1 pares: ['analisis_trafico_competitivo', 'captura_conocimiento_mercado', 'capturar_conocimiento_de_mercado'] -- ['OP-S-04:HERRAMIENTA', 'OP-F-04-W
+   total: 5 de 40
+
+=== H.11 LOS SEIS ACTOS YA LEIDOS, CONTADOS DE SU REGISTRO ===
+docs/plan/OP_L_03_LECTURAS.jsonl -> 6 filas, disco 24158 bytes
+
+=== H.12 LA VARA DEL TRABAJO PENDIENTE, CORRIDA EN ESTA VUELTA (TAREA 4) ===
+(la vara es scripts/loop/vuelta150_3_relectura_expediente.py y NUNCA el campo
+ estado, decision del fundador del 4 sep 2026)
+comando: vuelta150_3_relectura_expediente.py --corte 77621a68 -> exit 0
+   | `OP-F-01` | 01_FUENTES | LISTA | P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-F-02` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-F-03` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-01` | 02_DESTEJIDOS | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-02` | 02_DESTEJIDOS | LISTA | P1+P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-03` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-04` | 02_DESTEJIDOS | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-05` | 02_DESTEJIDOS | LISTA | P1+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-06` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-S-06` | 00_CODIGO | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-S-07` | 00_CODIGO | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-C-01` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-C-02` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-C-03` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-C-04` | 00_CODIGO | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-U-01` | 03_FUSIONES | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-E-01` | 04_ENLACES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-A-01` | 07_ADUANA | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-A-02` | 07_ADUANA | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-U-02` | 03_FUSIONES | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-F-04-COL` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-F-04-HOR` | 01_FUENTES | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-F-04-WEI` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-F-04-RAC` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-E-03` | 04_ENLACES | LISTA | P3b | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-M-02-PROG` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-02-ASSESS` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-02-ACTIVATE` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-02-ACCOMPLISH` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-D-07` | 02_DESTEJIDOS | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-M-03-I` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-03-II` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-E-06` | 04_ENLACES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-E-07` | 04_ENLACES | LISTA | P3a+P3b | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-08` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-09` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+     OP-F-01 (01_FUENTES, estado LISTA)
+     OP-F-02 (01_FUENTES, estado LISTA)
+     OP-F-03 (01_FUENTES, estado LISTA)
+     OP-D-01 (02_DESTEJIDOS, estado LISTA)
+     OP-D-02 (02_DESTEJIDOS, estado LISTA)
+     OP-D-03 (02_DESTEJIDOS, estado LISTA)
+     OP-D-04 (02_DESTEJIDOS, estado LISTA)
+     OP-D-05 (02_DESTEJIDOS, estado LISTA)
+     OP-D-06 (02_DESTEJIDOS, estado LISTA)
+     OP-S-06 (00_CODIGO, estado LISTA)
+     OP-S-07 (00_CODIGO, estado LISTA)
+     OP-C-01 (00_CODIGO, estado LISTA)
+     OP-C-02 (00_CODIGO, estado LISTA)
+     OP-C-03 (00_CODIGO, estado LISTA)
+     OP-C-04 (00_CODIGO, estado LISTA)
+     OP-U-01 (03_FUSIONES, estado LISTA)
+     OP-E-01 (04_ENLACES, estado LISTA)
+     OP-A-01 (07_ADUANA, estado LISTA)
+     OP-A-02 (07_ADUANA, estado LISTA)
+     OP-U-02 (03_FUSIONES, estado LISTA)
+     OP-F-04-COL (01_FUENTES, estado LISTA)
+     OP-F-04-HOR (01_FUENTES, estado LISTA)
+     OP-F-04-WEI (01_FUENTES, estado LISTA)
+     OP-F-04-RAC (01_FUENTES, estado LISTA)
+     OP-E-03 (04_ENLACES, estado LISTA)
+     OP-M-02-PROG (03_FUSIONES, estado LISTA)
+     OP-M-02-ASSESS (03_FUSIONES, estado LISTA)
+     OP-M-02-ACTIVATE (03_FUSIONES, estado LISTA)
+     OP-M-02-ACCOMPLISH (03_FUSIONES, estado LISTA)
+     OP-D-07 (02_DESTEJIDOS, estado LISTA)
+     OP-M-03-I (03_FUSIONES, estado LISTA)
+     OP-M-03-II (03_FUSIONES, estado LISTA)
+     OP-E-06 (04_ENLACES, estado LISTA)
+     OP-E-07 (04_ENLACES, estado LISTA)
+     OP-D-08 (02_DESTEJIDOS, estado LISTA)
+     OP-D-09 (02_DESTEJIDOS, estado LISTA)
+   Criterio: estado LISTA y TODAS sus depende_de en HECHA. Las de depende_de VACIO
+   | `OP-M-02-PROG` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA |
+   | `OP-M-02-MEDIOS` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA |
+   CONTADO: 4 operacion(es) LISTA con todas sus dependencias en HECHA.
+   CONTRASTE: 23 operacion(es) LISTA con depende_de VACIO (nunca bloqueadas).
+   Y LO QUE DE VERDAD QUEDA POR CORRER: las fichas en LISTA SIN NINGUNA de las
+   tres pruebas. Son las unicas cuyo estado LISTA calza con el repo, o sea las
+   | `OP-L-02` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA |
+   | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA, OP-D-04=LISTA, OP-D-05=LISTA, OP-D-06=LISTA |
+   | `OP-M-02-MEDIOS` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA |
+   | `OP-M-02-ADMIT` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA, OP-M-02-MEDIOS=LISTA |
+   CONTADO: 6 ficha(s) en LISTA sin ninguna prueba de ejecucion.
+   CIFRA fichas del expediente: 71 operaciones
+   CIFRA fichas que no calzan: 37 operaciones
+   CIFRA fichas congeladas declaradas: 24 operaciones
+   CIFRA fichas congeladas en silencio: 12 operaciones
+   CIFRA fichas HECHA sin ninguna prueba: 1 operaciones
+   CIFRA fichas en LISTA sin ninguna prueba: 6 operaciones
+la vara nombra CONSUMIDA hoy: NO
+
+=== H.13 LOS CINCO TRIANGULOS, LOCALIZADOS EN EL REPORTE DE LA 177 (TAREA 3) ===
+   LINEA 467: | acto | el triangulo | de donde sale cada lado |
+CIFRA veces que el reporte 177 dice 'triangulo': 5
+
+FIN DEL SELLO DE APERTURA
