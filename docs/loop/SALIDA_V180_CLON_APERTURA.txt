@@ -1,0 +1,421 @@
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta179_apertura.py
+  B: scripts/loop/vuelta180_apertura.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 179, 180
+  CIFRA lineas de docstring: A 55 | B 55
+  CIFRA lineas de maquina:   A 461 | B 494
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 4221 | B 4584
+     CIFRA tipos de nodo que NO empatan: 37
+        Load                   A  1066 | B  1159 | diferencia +93
+        Name                   A   881 | B   942 | diferencia +61
+        Call                   A   436 | B   490 | diferencia +54
+        Constant               A   482 | B   536 | diferencia +54
+        Attribute              A   257 | B   291 | diferencia +34
+        Expr                   A   164 | B   180 | diferencia +16
+        BinOp                  A   116 | B   131 | diferencia +15
+        Mod                    A    80 | B    91 | diferencia +11
+        If                     A    17 | B    23 | diferencia +6
+        Store                  A   209 | B   215 | diferencia +6
+        keyword                A    26 | B    31 | diferencia +5
+        Assign                 A    96 | B   100 | diferencia +4
+        For                    A    26 | B    30 | diferencia +4
+        Add                    A    37 | B    40 | diferencia +3
+        And                    A     4 | B     7 | diferencia +3
+        IfExp                  A    22 | B    19 | diferencia -3
+        ListComp               A    14 | B    11 | diferencia -3
+        comprehension          A    14 | B    11 | diferencia -3
+        BoolOp                 A    10 | B    12 | diferencia +2
+        Compare                A    27 | B    29 | diferencia +2
+        Continue               A     2 | B     0 | diferencia -2
+        ExceptHandler          A     3 | B     1 | diferencia -2
+        Try                    A     3 | B     1 | diferencia -2
+        Tuple                  A    82 | B    84 | diferencia +2
+        AugAssign              A     4 | B     3 | diferencia -1
+        Dict                   A     2 | B     1 | diferencia -1
+        Eq                     A     5 | B     6 | diferencia +1
+        In                     A    18 | B    17 | diferencia -1
+        Is                     A     0 | B     1 | diferencia +1
+        Lambda                 A     0 | B     1 | diferencia +1
+        List                   A    35 | B    36 | diferencia +1
+        NotEq                  A     0 | B     1 | diferencia +1
+        Or                     A     6 | B     5 | diferencia -1
+        Slice                  A    13 | B    12 | diferencia -1
+        Subscript              A    20 | B    21 | diferencia +1
+        arg                    A     7 | B     8 | diferencia +1
+        arguments              A     4 | B     5 | diferencia +1
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 347
+  CIFRA tokens de maquina: A 3919 | B 4273
+  CIFRA tokens que difieren con el texto normalizado: 2454
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 252
+  CIFRA LITERALES DE TEXTO:   95
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:295  w(" siendo verdad y al cerrar eran 15 de 98)")
+     A:319  for r in ("scripts/loop/vuelta150_2d_simular_op_c_05.py",
+     A:320  "scripts/loop/vuelta160_tarea3b_caso_positivo.py"):
+     A:321  b = os.path.basename(r)
+     A:323  % (b, "SI" if b in nomina else "NO",
+     A:324  "SI" if os.path.exists(os.path.join(RAIZ, r.replace("/", os.sep))) else "NO"))
+     A:329  w("=== H.6 LA CAIDA DE LA 178, MEDIDA ANTES DE CORREGIRLA (TAREA 1.a) ===")
+     A:330  w("(el encargo dice que el reporte de la 178 publica 16 donde su propio fichero")
+     A:331  w(" dice 18. NI UNO NI OTRO SE COPIAN: se buscan los dos y se imprime lo que salga)")
+     A:332  RUTA_178 = os.path.join(LOOP, "reportes", "REPORTE_V178.md")
+     A:333  if os.path.exists(RUTA_178):
+     A:334  t178 = io.open(RUTA_178, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     A:335  w("docs/loop/reportes/REPORTE_V178.md -> disco %d bytes | LF %d bytes"
+     A:336  % (os.path.getsize(RUTA_178), len(t178.encode("utf-8"))))
+     A:337  for i, l in enumerate(t178.split(NL), 1):
+     A:338  if "SALIDA_V178_T1E_MUTACION" in l or ("casos, los" in l and "pasan" in l):
+     A:339  w("   LINEA %d: %s" % (i, l.strip()[:NNN]))
+     A:340  else:
+     A:341  w("docs/loop/reportes/REPORTE_V178.md -> NO EXISTE")
+     A:342  RUTA_T1E = os.path.join(LOOP, "SALIDA_V178_T1E_MUTACION.txt")
+     A:343  if os.path.exists(RUTA_T1E):
+     A:344  tT1E = io.open(RUTA_T1E, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     A:345  w("docs/loop/SALIDA_V178_T1E_MUTACION.txt -> disco %d bytes | LF %d bytes"
+     A:346  % (os.path.getsize(RUTA_T1E), len(tT1E.encode("utf-8"))))
+     A:347  for l in tT1E.split(NL):
+     A:348  if l.strip().startswith("CIFRA") or l.strip().startswith("VERDE DE LA MUTACION"):
+     A:349  w("   %s" % l.strip()[:200])
+     A:350  w("   CIFRA lineas del fichero que terminan en CAE: %d"
+     A:351  % len([l for l in tT1E.split(NL) if l.rstrip().endswith("CAE")]))
+     A:352  else:
+     A:353  w("docs/loop/SALIDA_V178_T1E_MUTACION.txt -> NO EXISTE")
+     A:356  w("=== H.7 cerrar_reporte.py MEDIDO ANTES DE LA GUARDA NUEVA (TAREA 1.b) ===")
+     A:357  CER = os.path.join(RAIZ, "scripts", "loop", "cerrar_reporte.py")
+     A:358  t_cer = io.open(CER, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     A:359  w("scripts/loop/cerrar_reporte.py: %d lineas, disco %d bytes | LF %d bytes"
+     A:360  % (t_cer.count(NL), os.path.getsize(CER), len(t_cer.encode("utf-8"))))
+     A:361  for aguja in ("def cifras_sin_pareja", "def piezas_que_faltan",
+     A:362  "def hueco_declarado_que_falta", "def citas_de_arnes_que_no_calzan",
+     A:363  "SALIDA_V", "CIFRA casos que CAEN"):
+     A:364  w("   nombra %-36s -> %s" % (repr(aguja), "SI" if aguja in t_cer else "NO"))
+     A:365  w("CIFRA funciones def de nivel cero: %d"
+     A:366  % len([l for l in t_cer.split(NL) if l.startswith("def ")]))
+     A:375  if l.strip() and ("CIFRA" in l or "VERDE" in l or "ROJO" in l or "TOTAL" in l):
+     A:377  REG = os.path.join(RAIZ, "docs", "plan", "OP_L_03_LECTURAS.jsonl")
+     A:378  if os.path.exists(REG):
+     A:379  filas = [l for l in io.open(REG, encoding="utf-8").read().split(NL) if l.strip()]
+     A:380  w("docs/plan/OP_L_03_LECTURAS.jsonl -> %d filas, disco %d bytes"
+     A:381  % (len(filas), os.path.getsize(REG)))
+     A:382  con_clases = 0
+     A:383  for f in filas:
+     A:384  try:
+     A:385  d = json.loads(f)
+     A:386  except Exception:
+     A:387  continue
+     A:388  if d.get("clases_de_los_pares_por_leer"):
+     A:389  con_clases += 1
+     A:390  w("   CIFRA filas con clases_de_los_pares_por_leer: %d" % con_clases)
+     A:391  else:
+     A:392  w("docs/plan/OP_L_03_LECTURAS.jsonl -> NO EXISTE")
+     A:393  VER = os.path.join(RAIZ, "docs", "INTRA_DOMINIO_VEREDICTOS.jsonl")
+     A:394  if os.path.exists(VER):
+     A:395  fv = [l for l in io.open(VER, encoding="utf-8").read().split(NL) if l.strip()]
+     A:396  w("docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> %d filas, disco %d bytes"
+     A:397  % (len(fv), os.path.getsize(VER)))
+     A:398  w("")
+     A:400  w("=== H.9 LOS TRIANGULOS, MEDIDOS Y SELLADOS ANTES DE TOCARLOS (TAREA 3) ===")
+     A:401  w("(el encargo da 38 lados del archivo, 10 del registro de la 177, 8 triangulos")
+     A:402  w(" enteros, 8 con un lado fuera y 6 en que ese lado es el D. Ninguno se copia)")
+     A:403  TRI = os.path.join(RAIZ, "docs", "plan", "OP_L_03_TRIANGULOS.jsonl")
+     A:404  if os.path.exists(TRI):
+     A:405  ttri = io.open(TRI, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     A:406  ftri = [l for l in ttri.split(NL) if l.strip()]
+     A:407  w("docs/plan/OP_L_03_TRIANGULOS.jsonl -> %d filas, disco %d bytes | LF %d bytes"
+     A:408  % (len(ftri), os.path.getsize(TRI), len(ttri.encode("utf-8"))))
+     A:409  w("   sha256 del fichero normalizado a LF: %s"
+     A:410  % hashlib.sha256(ttri.encode("utf-8")).hexdigest()[:32])
+     A:411  fuentes = {}
+     A:412  tiene_campo = 0
+     A:413  for l in ftri:
+     A:414  try:
+     A:415  d = json.loads(l)
+     A:416  except Exception:
+     A:417  continue
+     A:418  if "recomputable_entero_del_archivo" in d:
+     A:419  tiene_campo += 1
+     A:420  mapa = d.get("fuente_de_la_clase") or {}
+     A:421  for lado in sorted(mapa):
+     A:422  v = mapa[lado]
+     A:423  if v:
+     A:424  fuentes[v] = fuentes.get(v, 0) + 1
+     A:425  w("   CIFRA filas que YA traen recomputable_entero_del_archivo: %d" % tiene_campo)
+     A:426  for k in sorted(fuentes):
+     A:427  w("   fuente_de_la_clase %-58s -> %d lados" % (k[:58], fuentes[k]))
+     A:428  else:
+     A:429  w("docs/plan/OP_L_03_TRIANGULOS.jsonl -> NO EXISTE")
+     A:436  % (r, hashlib.sha256(t.encode("utf-8")).hexdigest()[:32],
+     A:437  os.path.getsize(p), len(t.encode("utf-8"))))
+     A:452  REG_SC = os.path.join(RAIZ, "docs", "plan", "SUJETO_CONGELADO_VEREDICTOS.jsonl")
+     A:454  % ("SI" if os.path.exists(REG_SC) else "NO"))
+     A:458  CINCO = [
+     A:459  ("1. segunda sede de la clausula 4.4", "docs/loop/reportes/REPORTE_V172.md"),
+     A:460  ("2. docstring del paso 0", "scripts/loop/paso0_archivar_anterior.py"),
+     A:461  ("3. dependencia del D.4 de la 174", "scripts/loop/vuelta174_esqueleto_reporte.py"),
+     A:462  ("4. grano del tope de 10 minutos", "scripts/loop/verificar_mutaciones_viejas.py"),
+     A:463  ("5. convencion de bytes", "docs/loop/AUDITOR.md"),
+     A:464  ]
+     A:465  for etiqueta, ruta in CINCO:
+     A:466  p = os.path.join(RAIZ, ruta.replace("/", os.sep))
+     A:470  % (etiqueta, ruta, os.path.getsize(p), len(t.encode("utf-8"))))
+     A:472  w("%-36s %-52s NO EXISTE" % (etiqueta, ruta))
+     B:81  "scripts/loop/vueltaNNN_tarea2_cobertura_final.py",
+     B:83  "scripts/loop/vuelta174_esqueleto_reporte.py",
+     B:84  "scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py",
+     B:85  "scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py",
+     B:106  "scripts/loop/cerrar_reporte.py",
+     B:109  # LOS DIECISIETE DEL SUJETO CONGELADO NO SE TECLEAN: se leen del registro que la
+     B:110  # NNN escribio, y si el registro no esta se dice y no se inventa la lista.
+     B:111  REGISTRO_SC = os.path.join(RAIZ, "docs", "plan", "SUJETO_CONGELADO_VEREDICTOS.jsonl")
+     B:330  w("EL SELLO DE CORTE, LLAMADO Y NO PARAFRASEADO:")
+     B:332  % VMV.sello_de_corte(len(nomina), VMV.corte_de_git()))
+     B:346  for r in ("docs/INTRA_DOMINIO_VEREDICTOS.jsonl", "docs/plan/OP_L_03_LECTURAS.jsonl",
+     B:350  t = io.open(p, "rb").read()
+     B:351  w("   %-42s sha256 disco %s" % (r, hashlib.sha256(t).hexdigest()))
+     B:352  w("   %-42s sha256 LF    %s | disco %d bytes | LF %d bytes"
+     B:353  % ("", hashlib.sha256(t.replace(chr(13).encode(), b"")).hexdigest(),
+     B:354  os.path.getsize(p), len(t.replace(chr(13).encode(), b""))))
+     B:355  else:
+     B:356  w("   %-42s NO EXISTE" % r)
+     B:357  w("EL LITERAL CLAVADO, BUSCADO EN EL SUJETO Y CONTADO:")
+     B:358  SUJ_T3 = os.path.join(RAIZ, "scripts", "loop", "vuelta178_tarea3_anotar_triangulos.py")
+     B:359  t_t3 = io.open(SUJ_T3, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:360  LITERAL = "docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)"
+     B:361  w("   CIFRA apariciones de %r en el sujeto: %d" % (LITERAL, t_t3.count(LITERAL)))
+     B:362  for i, l in enumerate(t_t3.split(NL), 1):
+     B:363  if LITERAL in l:
+     B:364  w("      LINEA %d: %s" % (i, l.strip()[:160]))
+     B:379  w("EL REGISTRO DE LOS DIECISIETE, CONTADO DE SU FICHERO Y NO TECLEADO:")
+     B:380  if os.path.exists(REGISTRO_SC):
+     B:381  filas_sc = [json.loads(l) for l in io.open(REGISTRO_SC, encoding="utf-8") if l.strip()]
+     B:382  w("   docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> %d filas, disco %d bytes"
+     B:383  % (len(filas_sc), os.path.getsize(REGISTRO_SC)))
+     B:384  por_lectura = {}
+     B:385  for f in filas_sc:
+     B:386  k = f.get("veredicto_de_la_lectura")
+     B:387  por_lectura[k] = por_lectura.get(k, 0) + 1
+     B:388  for k in sorted(por_lectura, key=lambda x: (x is None, x)):
+     B:389  w("   CIFRA con veredicto_de_la_lectura %-28s: %d" % (repr(k), por_lectura[k]))
+     B:390  w("   LOS QUE ABREN FICHERO VIVO, NOMBRADOS UNO A UNO:")
+     B:391  for f in filas_sc:
+     B:392  if f.get("veredicto_de_la_lectura") == "ABRE FICHERO VIVO":
+     B:393  w("      %-46s abre %s"
+     B:394  % (f["arnes"], ", ".join(f.get("ficheros_vivos_atribuidos") or [])))
+     B:395  w("   LOS QUE SOLO LO NOMBRAN O YA LO TIENEN CLAVADO:")
+     B:396  for f in filas_sc:
+     B:397  if f.get("veredicto_de_la_lectura") != "ABRE FICHERO VIVO":
+     B:398  w("      %-46s %-26s guarda dice %s"
+     B:399  % (f["arnes"], f.get("veredicto_de_la_lectura"),
+     B:400  f.get("veredicto_de_la_guarda")))
+     B:401  ya = 0
+     B:402  for f in filas_sc:
+     B:403  pa = os.path.join(RAIZ, "scripts", "loop", f["arnes"])
+     B:404  if os.path.exists(pa) and "SUJETO CONGELADO" in io.open(
+     B:405  pa, encoding="utf-8", errors="replace").read():
+     B:406  ya += 1
+     B:407  w("   CIFRA filas cuyo arnes YA declara el literal de la guarda en su texto: %d" % ya)
+     B:408  else:
+     B:409  w("   docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> NO EXISTE")
+     B:410  w("EL CABLEADO AL ROJO GLOBAL, BUSCADO Y NO SUPUESTO:")
+     B:411  CER_VMV = os.path.join(RAIZ, "scripts", "loop", "verificar_mutaciones_viejas.py")
+     B:412  t_vmv = io.open(CER_VMV, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:413  for aguja in ("guarda_del_sujeto_congelado", "informe_del_sujeto_congelado",
+     B:414  "sujeto_congelado", "def main"):
+     B:415  w("   CIFRA apariciones de %-34s: %d" % (repr(aguja), t_vmv.count(aguja)))
+     B:419  w("(el encargo dice que la 2.a de la NNN publico 6/29/8 y 34/44/10 y que hoy da")
+     B:420  w(" 14/39/18 y 26/34/0. NINGUNA SE COPIA: se corre y se pega lo que salga)")
+     B:421  c, o = correr([PY, "scripts/loop/backlog_l03_resuelto.py"])
+     B:422  w("comando: python scripts/loop/backlog_l03_resuelto.py -> exit %d" % c)
+     B:423  dentro_f = False
+     B:424  for l in o.split(NL):
+     B:425  if l.strip().startswith("F) LO QUE SOBRA"):
+     B:426  dentro_f = True
+     B:427  if dentro_f and l.strip():
+     B:428  w("   " + l.rstrip()[:NNN])
+     B:429  if dentro_f and l.strip().startswith("| **todos**"):
+     B:430  dentro_f = False
+     B:431  for l in o.split(NL):
+     B:432  if l.strip() and ("VERDE" in l or "ROJO" in l):
+     B:433  w("   " + l.rstrip()[:NNN])
+     B:434  w("EL SELLO DE CORTE, BUSCADO EN LOS DOS SUJETOS DE LA TAREA 3:")
+     B:435  for r in ("scripts/loop/backlog_l03_resuelto.py",
+     B:437  p = os.path.join(RAIZ, r.replace("/", os.sep))
+     B:441  % (r, t.count("sello_de_corte"), t.count("corte_de_git"), t.count("corte")))
+     B:443  w("   %-52s NO EXISTE" % r)
+     B:444  w("")
+     B:446  w("=== H.9 TAREA 4: LAS DOS PENDIENTES BARATAS, MEDIDAS ANTES DE TOCARLAS ===")
+     B:447  P0 = os.path.join(RAIZ, "scripts", "loop", "paso0_archivar_anterior.py")
+     B:448  t_p0 = io.open(P0, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:449  w("scripts/loop/paso0_archivar_anterior.py -> %d lineas, disco %d bytes | LF %d bytes"
+     B:450  % (t_p0.count(NL), os.path.getsize(P0), len(t_p0.encode("utf-8"))))
+     B:451  w("   LAS LINEAS QUE DICEN 'ANTERIOR', UNA A UNA:")
+     B:452  for i, l in enumerate(t_p0.split(NL), 1):
+     B:453  if "anterior" in l.lower():
+     B:454  w("      LINEA %d: %s" % (i, l.strip()[:170]))
+     B:455  w("   CIFRA apariciones de 'vuelta anterior' en el fichero: %d"
+     B:456  % t_p0.lower().count("vuelta anterior"))
+     B:457  w("   CIFRA apariciones de 'que va a pisar' en el fichero: %d"
+     B:458  % t_p0.lower().count("que va a pisar"))
+     B:459  ESQ174 = os.path.join(RAIZ, "scripts", "loop", "vuelta174_esqueleto_reporte.py")
+     B:460  w("scripts/loop/vuelta174_esqueleto_reporte.py existe: %s"
+     B:461  % ("SI" if os.path.exists(ESQ174) else "NO"))
+     B:462  if os.path.exists(ESQ174):
+     B:463  t_e = io.open(ESQ174, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:464  w("   -> %d lineas, disco %d bytes | LF %d bytes"
+     B:465  % (t_e.count(NL), os.path.getsize(ESQ174), len(t_e.encode("utf-8"))))
+     B:466  w("   CIFRA apariciones de 'def vuelta_del_reporte_del_arbol': %d"
+     B:467  % t_e.count("def vuelta_del_reporte_del_arbol"))
+     B:468  ESQNNN = os.path.join(RAIZ, "scripts", "loop", "vueltaNNN_esqueleto_reporte.py")
+     B:469  if os.path.exists(ESQNNN):
+     B:470  t_e9 = io.open(ESQNNN, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:471  w("scripts/loop/vueltaNNN_esqueleto_reporte.py -> CIFRA 'CLON DECLARADO': %d"
+     B:472  % t_e9.count("CLON DECLARADO"))
+     B:473  w("   CIFRA apariciones de 'vuelta174_esqueleto_reporte': %d"
+     B:474  % t_e9.count("vuelta174_esqueleto_reporte"))
+     B:475  w("")
+     B:477  w("=== H.10 TAREA 5: OP-L-02, SUS INSTRUMENTOS Y SU FICHA, MEDIDOS Y NO LEIDOS ===")
+     B:478  w("(no se lee NINGUN par en esta apertura ni en esa tarea: solo se mide)")
+     B:479  for r in ("scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py",
+     B:480  "scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py",
+     B:481  "scripts/loop/vuelta150_3_relectura_expediente.py"):
+     B:482  p = os.path.join(RAIZ, r.replace("/", os.sep))
+     B:483  if os.path.exists(p):
+     B:484  t = io.open(p, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:485  w("   %-56s %d lineas | disco %d bytes | LF %d bytes"
+     B:486  % (r, t.count(NL), os.path.getsize(p), len(t.encode("utf-8"))))
+     B:488  w("   %-56s NO EXISTE" % r)
+     B:489  OPS = os.path.join(RAIZ, "docs", "plan", "OPERACIONES.jsonl")
+     B:490  if os.path.exists(OPS):
+     B:491  fops = [json.loads(l) for l in io.open(OPS, encoding="utf-8") if l.strip()]
+     B:492  w("   docs/plan/OPERACIONES.jsonl -> %d filas" % len(fops))
+     B:493  for f in fops:
+     B:494  if f.get("id_op") in ("OP-L-01", "OP-L-02", "OP-L-03", "OP-I-01"):
+     B:495  w("      %-10s estado %s" % (f.get("id_op"), repr(f.get("estado"))))
+     B:496  w("      (EL ESTADO NO ES LA VARA. La vara es la salida de")
+     B:497  w("       scripts/loop/vuelta150_3_relectura_expediente.py --corte <HEAD>)")
+     B:498  LD = os.path.join(RAIZ, "docs", "plan", "LECTURAS_DIRIGIDAS.md")
+     B:499  if os.path.exists(LD):
+     B:500  t_ld = io.open(LD, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:501  w("   docs/plan/LECTURAS_DIRIGIDAS.md -> %d lineas | disco %d bytes | LF %d bytes"
+     B:502  % (t_ld.count(NL), os.path.getsize(LD), len(t_ld.encode("utf-8"))))
+     B:503  w("   CIFRA apariciones de 'SALES ROADMAP' (sin distinguir mayusculas): %d"
+     B:504  % t_ld.upper().count("SALES ROADMAP"))
+     B:505  w("   CIFRA apariciones de 'sales_roadmap': %d" % t_ld.count("sales_roadmap"))
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:72  "scripts/loop/cerrar_reporte.py",
+     A:74  "scripts/loop/vuelta178_tarea1e_mutacion_higiene.py",
+     A:75  "scripts/loop/vuelta178_tarea3_anotar_triangulos.py",
+     A:77  "scripts/loop/vuelta160_tarea3b_caso_positivo.py",
+     A:90  "docs/loop/reportes/REPORTE_V178.md",
+     A:136  w("regimen: VUELTA NORMAL, NO DE BATERIA (la proxima es la 181).")
+     A:137  w("         CINCO sub-tareas, la 1 BLOQUEANTE. El tope de cinco de")
+     A:138  w("         AUDITOR.md 6.2 sigue vigente, y el bloque B.1 de abajo lo")
+     A:139  w("         LOCALIZA EN GIT en vez de teclearlo.")
+     A:162  w(" se busca en el log el commit de CIERRE y el de ARCHIVO de la 176 y de la 177)")
+     A:164  for etiqueta, aguja in (("177 cierre", "REPORTE DE LA 177"),
+     A:165  ("177 archivo", "REPORTE_V177.md"),
+     A:166  ("178 cierre", "REPORTE DE LA 178"),
+     A:167  ("178 archivo", "REPORTE_V178.md")):
+     A:267  w(" 9 cierra con el HUECO DECLARADO Y MEDIDO)")
+     A:287  w("REPORTE_V178.md archivado: %s" % ("SI" if "REPORTE_V178.md" in arch else "NO"))
+     A:290  w("=== H.5 LA NOMINA Y EL CENSO, RECOMPUTADOS Y CON SU CORTE (TAREA 1.c y 1.d) ===")
+     A:294  w(" denominador crece DENTRO de la propia vuelta: la 178 publico 15 de 92")
+     A:322  w("   LOS DOS DESTAPADOS DE LA 178: %-46s en la nomina HOY: %s | existe en disco: %s"
+     A:367  w("")
+     A:368  
+     A:369  w("=== H.8 EL UNIVERSO DE OP-L-03, RECOMPUTADO Y NO COPIADO (TAREA 2) ===")
+     A:370  w("(el encargo dice 73 pares del instrumento, 18 reales, 8 leidos por la 177 y 10")
+     A:371  w(" por leer. NINGUNO SE COPIA: se corre el filtro y se imprime lo que salga)")
+     A:372  c, o = correr([PY, "scripts/loop/backlog_l03_resuelto.py"])
+     A:373  w("comando: python scripts/loop/backlog_l03_resuelto.py -> exit %d" % c)
+     A:374  for l in o.split(NL):
+     A:376  w("   " + l.rstrip()[:NNN])
+     A:399  
+     A:430  w("EL SELLO DE LOS VEREDICTOS, PARA PODER PROBAR DESPUES QUE NO SE MOVIO NINGUNO:")
+     A:431  for r in ("docs/INTRA_DOMINIO_VEREDICTOS.jsonl", "docs/plan/OP_L_03_LECTURAS.jsonl"):
+     A:432  p = os.path.join(RAIZ, r.replace("/", os.sep))
+     A:433  if os.path.exists(p):
+     A:434  t = io.open(p, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     A:435  w("   %-42s sha256 LF %s | disco %d bytes | LF %d bytes"
+     A:438  w("")
+     A:439  
+     A:440  w("=== H.10 LA GUARDA DEL SUJETO CONGELADO, CORRIDA ANTES (TAREA 4) ===")
+     A:441  w("(el encargo dice 15 entradas, 7 SUJETO VIVO y 8 NO DECIDIBLE. No se copian:")
+     A:442  w(" se corre la guarda y se cuenta su propia salida)")
+     A:453  w("docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl existe al abrir: %s (lo escribe esta vuelta)"
+     A:457  w("=== H.11 LAS CINCO DE LA TAREA 5, MEDIDAS Y NO AFIRMADAS ===")
+     A:469  w("%-36s %-52s disco %d bytes | LF %d bytes"
+     A:499  # EL DESFASE DEL CALIBRADO, EN SU SITIO Y NO AL CIERRE. El encargo de la NNN lo
+     A:500  # dice con dientes: con el remedio de la 177 puesto y verificado en la 178, la columna de
+     A:501  # apertura medida al cierre pasa a ser CAIDA QUE ACUMULA. Aqui corre en la
+     A:502  # apertura, antes de la primera operacion, que es donde EJECUTOR.md 1 la manda.
+     B:72  "scripts/loop/vuelta178_tarea3_anotar_triangulos.py",
+     B:73  "scripts/loop/vueltaNNN_tarea3_etiqueta_de_fuente.py",
+     B:75  "scripts/loop/vuelta157_tarea4b_mutacion_tachado.py",
+     B:76  "scripts/loop/vuelta160_tarea7c_mutacion_guarda_cita.py",
+     B:77  "scripts/loop/vuelta174_tarea1b_mutacion_esqueleto.py",
+     B:95  "docs/loop/reportes/REPORTE_VNNN.md",
+     B:99  "docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl",
+     B:100  "docs/plan/LECTURAS_DIRIGIDAS.md",
+     B:108  
+     B:148  w("regimen: VUELTA NORMAL, NO DE BATERIA (la proxima es la 181, y es la")
+     B:149  w("         SIGUIENTE). CINCO sub-tareas, la 1 y la 2 BLOQUEANTES y en ese")
+     B:150  w("         orden. El tope de cinco de AUDITOR.md 6.2 sigue vigente, y el")
+     B:151  w("         bloque B.1 de abajo lo LOCALIZA EN GIT en vez de teclearlo.")
+     B:174  w(" se busca en el log el commit de CIERRE y el de ARCHIVO de la 178 y de la NNN)")
+     B:176  for etiqueta, aguja in (("178 cierre", "REPORTE DE LA 178"),
+     B:177  ("178 archivo", "REPORTE_V178.md"),
+     B:178  ("NNN cierre", "REPORTE DE LA NNN"),
+     B:179  ("NNN archivo", "REPORTE_VNNN.md")):
+     B:279  w(" 9 cierra con el HUECO DECLARADO Y MEDIDO. La 181 la corre)")
+     B:299  w("REPORTE_VNNN.md archivado: %s" % ("SI" if "REPORTE_VNNN.md" in arch else "NO"))
+     B:302  w("=== H.5 LA NOMINA Y EL CENSO, RECOMPUTADOS Y CON SU CORTE ===")
+     B:306  w(" denominador crece DENTRO de la propia vuelta)")
+     B:331  w("   sello_de_corte(len(VIEJAS), corte_de_git()) -> %s"
+     B:337  w("=== H.6 TAREA 1: LA ETIQUETA DE FUENTE, MEDIDA ANTES DE ARREGLARLA ===")
+     B:338  w("(el encargo dice 15 etiquetados como de la 177, 10 verdaderos y 5 falsos.")
+     B:339  w(" NINGUNO SE COPIA: se corre el instrumento de la NNN y se imprime lo que salga)")
+     B:340  c, o = correr([PY, "scripts/loop/vueltaNNN_tarea3_etiqueta_de_fuente.py"])
+     B:341  w("comando: python scripts/loop/vueltaNNN_tarea3_etiqueta_de_fuente.py -> exit %d" % c)
+     B:342  for l in o.split(NL):
+     B:343  if l.strip() and ("CIFRA" in l or "LA RESTA" in l or "acto `" in l):
+     B:344  w("   " + l.rstrip()[:NNN])
+     B:345  w("EL SELLO DE LOS TRES REGISTROS QUE LA TAREA 1 PROMETE NO MOVER:")
+     B:347  "docs/plan/OP_L_03_TRIANGULOS.jsonl"):
+     B:348  p = os.path.join(RAIZ, r.replace("/", os.sep))
+     B:349  if os.path.exists(p):
+     B:367  w("=== H.7 TAREA 2: LA GUARDA DEL SUJETO CONGELADO, CORRIDA ANTES DE TOCAR NADA ===")
+     B:368  w("(el encargo dice 17 de 103 al corte c348de45f70f, medido por el fundador. NO SE")
+     B:369  w(" COPIA: se corre la guarda y se cuenta su propia salida)")
+     B:418  w("=== H.8 TAREA 3: EL CORTE, Y DONDE FALTA. LA TABLA DE TRAMOS MEDIDA HOY ===")
+     B:436  "scripts/loop/vueltaNNN_tarea2_cobertura_final.py"):
+     B:440  w("   %-52s sello_de_corte: %d | corte_de_git: %d | 'corte': %d"
+     B:445  
+     B:476  
+     B:487  else:
+     B:532  # EL DESFASE DEL CALIBRADO, EN SU SITIO Y NO AL CIERRE. Desde la 178, con el
+     B:533  # remedio de la 177 puesto y verificado, la columna de apertura medida al cierre
+     B:534  # pasa a ser CAIDA QUE ACUMULA. Aqui corre en la apertura, antes de la primera
+     B:535  # operacion, que es donde EJECUTOR.md 1 la manda.
+
+
+FIN
