@@ -1,0 +1,38 @@
+==============================================================================
+LA RELECTURA AL DOBLE, PIEZAS 1, 2, LEIDA DE GIT DESPUES DE COMMITEAR
+==============================================================================
+
+HEAD desde el que se lee (git rev-parse, no tecleado): 99d54005
+   su asunto: TAREA 1.a: EL REPORTE DE LA VUELTA 171 QUEDA CERRADO, Y ESTE COMMIT SI TOCA REPORTE.md
+
+EL SUJETO: docs/loop/REPORTE.md, LEIDO DE git show HEAD:
+   docs/loop/REPORTE.md entre los ficheros de 99d54005: SI
+   CIFRA bytes: 43956 | saltos de linea: 688
+
+PIEZA 1. EL REPORTE CERRADO
+   CIFRA discutibles contados del fichero commiteado: 4
+   CIFRA caidas contadas del fichero commiteado: 1
+   es el reporte de la vuelta 171                             SI
+   el veredicto ya no dice SIN ESCRIBIR TODAVIA               SI
+   el hueco PENDIENTE DE TALLAR AL CIERRE ya no esta          SI
+   el veredicto de una linea esta escrito                     SI
+   la seccion 3 existe                                        SI
+   la seccion 4 existe                                        SI
+   la seccion 5 existe                                        SI
+   la seccion 6 existe                                        SI
+   la seccion 7 existe                                        SI
+   la seccion 8 existe                                        SI
+   la seccion 9 existe                                        SI
+   los cuatro discutibles siguen enteros                      SI
+   la caida sigue entera                                      SI
+   cero guiones largos y cero guiones medios                  SI
+   la seccion 3 no publica ningun hash que git no conozca     SI
+
+PIEZA 2. LA CABECERA PEGADA, COTEJADA FILA A FILA CONTRA EL TALLADOR
+   docs/loop/SALIDA_V171_TALLADOR_CABECERA.txt -> 11 filas de tabla
+   CIFRA filas del tallador dentro del reporte commiteado: 11 de 11
+   las 11 filas estan las 11                                  SI
+
+==============================================================================
+CIFRA comprobaciones corridas: 16 | FALLAN: 0
+VERDE: las piezas 1, 2 se leyeron de git y calzan.
