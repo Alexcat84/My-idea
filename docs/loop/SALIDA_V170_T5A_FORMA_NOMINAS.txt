@@ -1,0 +1,113 @@
+==============================================================================
+VUELTA 170, TAREA 5.a: LA FORMA DE LAS TRES NOMINAS, RE ESCRITA CON SU
+COBERTURA AL LADO (9.26) Y CON EL RESOLUTOR DELANTE (P.1)
+==============================================================================
+
+A) LAS SEDES, LEIDAS HOY
+   grafo: 3853 nodos, 761 entradas de alias
+   cola: 3388 filas, corte 3388, 3009 pares distintos tras resolver
+   lecturas dirigidas: 21 con cabecera `LD-nn`, 16 como fila de tabla
+   CIFRA pares dirigidos distintos tras resolver: 27
+
+B) LAS TRES NOMINAS, LOCALIZADAS EN docs/plan/INVENTARIO.jsonl
+   CIFRA entradas del inventario: 672
+   los cuadrantes de mercado      linea 237, tipo racimo, 6 miembros escritos
+   la ecuacion de valor           linea 233, tipo racimo, 5 miembros escritos
+   la supervision de la IA        linea 241, tipo racimo, 10 miembros escritos
+
+C) LA NOMINA DE OP-L-02 QUE LE CORRESPONDE A CADA RACIMO, CASADA POR
+   INTERSECCION DE MIEMBROS Y NO POR NOMBRE
+   NOMINAS_OP_L_02 parseadas de scripts/vuelta16_generar_actos.mjs: 6
+   los cuadrantes de mercado      nomina 2 de OP-L-02, 6 miembros escritos, 1 en comun
+   la ecuacion de valor           nomina 4 de OP-L-02, 5 miembros escritos, 5 en comun
+   la supervision de la IA        nomina 3 de OP-L-02, 5 miembros escritos, 5 en comun
+
+D) CADA NOMINA, MEDIDA DOS VECES: COMO ESTA ESCRITA Y TRAS RESOLVER
+   los cuadrantes de mercado
+      EL RACIMO ENTERO, tal como el inventario lo escribe:
+         miembros escritos 6 | vivos tras resolver 1 | colapsados 5
+            clasificacion_mercados_cadena_suministro -> marco_analisis_mercado_cadena_suministro
+            cuatro_capacidades_mercado -> marco_analisis_mercado_cadena_suministro
+            cuatro_categorias_desempeno_cadena_suministro -> marco_analisis_mercado_cadena_suministro
+            estrategia_cuatro_capacidades_mercado -> marco_analisis_mercado_cadena_suministro
+            modelo_cuadrantes_mercado -> marco_analisis_mercado_cadena_suministro
+         pares posibles 0 | de cola 0 | dirigidas 0 | SIN veredicto 0
+         reparto de clases: (ninguna)
+         P.10 puentes: 0
+      forma escrita hoy:     'MEZCLADO'
+      cobertura escrita hoy: '15 de 15'
+
+   la ecuacion de valor
+      EL RACIMO ENTERO, tal como el inventario lo escribe:
+         miembros escritos 5 | vivos tras resolver 5 | colapsados 0
+         pares posibles 10 | de cola 5 | dirigidas 5 | SIN veredicto 0
+         reparto de clases: {'A': 6, 'D': 4}
+         P.10 puentes: 4
+            puente `ecuacion_de_valor` sobre (`construccion_de_valor_percibido` , `ecuacion_de_valor_cliente`)
+            puente `ecuacion_de_valor_cliente` sobre (`ecuacion_de_valor` , `prevencion_objeciones_vs_manejo`)
+            puente `ecuacion_de_valor_cliente` sobre (`ecuacion_de_valor_venta` , `prevencion_objeciones_vs_manejo`)
+            puente `ecuacion_de_valor_venta` sobre (`construccion_de_valor_percibido` , `ecuacion_de_valor_cliente`)
+      forma escrita hoy:     'MEZCLADO'
+      cobertura escrita hoy: '10 de 10'
+
+   la supervision de la IA
+      EL RACIMO ENTERO, tal como el inventario lo escribe:
+         miembros escritos 10 | vivos tras resolver 7 | colapsados 3
+            invitar_ia_a_todo -> comprension_capacidades_limitaciones_ia
+            jagged_frontier_ia -> comprension_capacidades_limitaciones_ia
+            principio_invitar_ia_siempre -> comprension_capacidades_limitaciones_ia
+         pares posibles 21 | de cola 10 | dirigidas 3 | SIN veredicto 8
+            SIN VEREDICTO: alineacion_etica_ia_negocio contra comprension_capacidades_limitaciones_ia
+            SIN VEREDICTO: comprender_alineacion_etica_ia contra comprension_capacidades_limitaciones_ia
+            SIN VEREDICTO: comprender_alineacion_etica_ia contra human_in_the_loop_ia
+            SIN VEREDICTO: comprender_alineacion_etica_ia contra mitigar_falling_asleep_wheel
+            SIN VEREDICTO: comprender_alineacion_etica_ia contra principio_humano_en_el_loop
+            SIN VEREDICTO: comprender_alineacion_etica_ia contra riesgo_sobredependencia_ia
+            SIN VEREDICTO: comprension_capacidades_limitaciones_ia contra mitigar_falling_asleep_wheel
+            SIN VEREDICTO: comprension_capacidades_limitaciones_ia contra riesgo_sobredependencia_ia
+         reparto de clases: {'A': 5, 'D': 8}
+         P.10 puentes: 3
+            puente `human_in_the_loop_ia` sobre (`alineacion_etica_ia_negocio` , `mitigar_falling_asleep_wheel`)
+            puente `human_in_the_loop_ia` sobre (`mitigar_falling_asleep_wheel` , `principio_humano_en_el_loop`)
+            puente `mitigar_falling_asleep_wheel` sobre (`human_in_the_loop_ia` , `riesgo_sobredependencia_ia`)
+      LA NOMINA DE OP-L-02, QUE ES UN SUBCONJUNTO Y SE MIDE APARTE:
+         miembros escritos 5 | vivos 5 | pares 10 | leidos 10 | SIN 0 | clases {'A': 5, 'D': 5}
+      forma escrita hoy:     'PARTIDO 5 mas 4 mas 1'
+      cobertura escrita hoy: '18 de 45 al corte 3.388 (vuelta 15)'
+
+E) LA FORMA NUEVA DE CADA UNA, COMPUESTA DE LO MEDIDO Y NO TECLEADA
+   los cuadrantes de mercado
+      forma nueva:     FUNDIDA. Al corte 2026-09-04 la nomina entera resuelve a UN SOLO NODO VIVO, `marco_analisis_mercado_cadena_suministro`: sus 6 miembros escritos colaps
+      cobertura nueva: 0 de 0 al corte 2026-09-04: no hay pares entre un solo nodo. El texto viejo de este campo, sin tocar: '15 de 15'
+
+   la ecuacion de valor
+      forma nueva:     MEZCLADO, con cobertura COMPLETA al corte 2026-09-04: 10 de 10 pares leidos entre los 5 nodos VIVOS tras resolver (5 de la cola y 5 por lectura dirigi
+      cobertura nueva: 10 de 10 al corte 2026-09-04, con el resolutor delante por P.1 (5 de la cola, 5 por lectura dirigida, 0 sin veredicto). El texto viejo de este campo, 
+
+   la supervision de la IA
+      forma nueva:     PROVISIONAL al corte 2026-09-04, y lo es por el banco 9.26: faltan 8 pares por leer de los 21 posibles entre los 7 nodos VIVOS tras resolver, y mientr
+      cobertura nueva: 13 de 21 al corte 2026-09-04, con el resolutor delante por P.1 (10 de la cola, 3 por lectura dirigida, 8 SIN veredicto). El texto viejo de este campo,
+
+F) LA GUARDA DE ADICION: NINGUNA PALABRA VIEJA SE PIERDE
+   los cuadrantes de mercado      la forma vieja sigue dentro: True | la cobertura vieja: True
+   la ecuacion de valor           la forma vieja sigue dentro: True | la cobertura vieja: True
+   la supervision de la IA        la forma vieja sigue dentro: True | la cobertura vieja: True
+
+G) EL ESQUEMA NO CRECE Y NADA MAS SE MUEVE
+   los cuadrantes de mercado      claves antes 9, despues 9 | movidos de mas: 0 []
+      estado antes 'repite, forma cerrada', despues 'repite, forma cerrada'
+   la ecuacion de valor           claves antes 9, despues 9 | movidos de mas: 0 []
+      estado antes 'repite, forma cerrada', despues 'repite, forma cerrada'
+   la supervision de la IA        claves antes 9, despues 9 | movidos de mas: 0 []
+      estado antes 'en mesa, particion PROVISIONAL', despues 'en mesa, particion PROVISIONAL'
+
+H) ESCRITO, Y RECONTADO DESPUES DE ESCRIBIR
+   CIFRA entradas antes 672, despues 672
+   reparto por tipo antes:   {'acto': 556, 'defecto': 19, 'dominio': 10, 'familia_de_ids': 54, 'figura': 20, 'racimo': 13}
+   reparto por tipo despues: {'acto': 556, 'defecto': 19, 'dominio': 10, 'familia_de_ids': 54, 'figura': 20, 'racimo': 13}
+   los cuadrantes de mercado      sigue en la linea 237: True | forma de 311 caracteres
+   la ecuacion de valor           sigue en la linea 233: True | forma de 1057 caracteres
+   la supervision de la IA        sigue en la linea 241: True | forma de 753 caracteres
+
+VERDE: las tres formas quedan re escritas por adicion, con su cobertura
+al lado y con el resolutor delante.

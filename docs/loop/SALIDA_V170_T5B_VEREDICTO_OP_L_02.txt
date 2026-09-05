@@ -1,0 +1,87 @@
+==============================================================================
+VUELTA 170, TAREA 5.b: LAS TRES CLAUSULAS DE OP-L-02, MEDIDAS UNA A UNA
+==============================================================================
+
+A) LAS CLAUSULAS, LEIDAS DE LA FICHA Y NO TECLEADAS
+   CIFRA elementos de `verificacion`: 4
+   CIFRA clausulas propiamente dichas: 3
+   CIFRA correcciones declaradas (no son clausulas que cumplir): 1
+      1. las tres nominas afectadas quedan con cobertura COMPLETA y su forma reescrita
+      2. el marcador del cribado no se mueve: sigue en 2.117
+      3. cada grupo del backlog lleva su motivo escrito, no solo su cuenta
+
+B) CLAUSULA 1: cobertura COMPLETA y forma reescrita
+   NOMINAS_OP_L_02 parseadas del fichero: 6
+   | # | miembros | vivos | posibles | leidos | SIN | cobertura |
+   |---:|---:|---:|---:|---:|---:|---|
+   | 1 | 6 | 6 | 15 | 15 | 0 | 15 de 15 |
+   | 2 | 6 | 1 | 0 | 0 | 0 | 0 de 0 |
+   | 3 | 5 | 5 | 10 | 10 | 0 | 10 de 10 |
+   | 4 | 5 | 5 | 10 | 10 | 0 | 10 de 10 |
+   | 5 | 5 | 5 | 10 | 10 | 0 | 10 de 10 |
+   | 6 | 4 | 2 | 1 | 1 | 0 | 1 de 1 |
+   CIFRA pares SIN veredicto en las SEIS nominas: 0
+   los cuadrantes de mercado      forma reescrita con el corte 2026-09-04: SI | 311 caracteres
+   la ecuacion de valor           forma reescrita con el corte 2026-09-04: SI | 1057 caracteres
+   la supervision de la IA        forma reescrita con el corte 2026-09-04: SI | 753 caracteres
+   VEREDICTO CLAUSULA 1: CUMPLIDA
+
+C) CLAUSULA 2: el marcador del cribado no se mueve
+   LA CLAUSULA DICE QUE LA OPERACION NO LO MUEVA, no que valga 2.117 hoy,
+   y desde la TAREA 3 de esta vuelta esa lectura esta escrita en la ficha
+   con su fecha de corte al lado, por 9.21.
+   marcador recomputado del archivo HOY: 3388 filas (A 551, B 72, C 5, D 2760)
+   HEAD de apertura, leido del sello: 46208790
+   git diff 46208790 HEAD --numstat -- docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   CIFRA filas del numstat: 0
+   y sin commitear (arbol de trabajo): 0 filas
+   VEREDICTO CLAUSULA 2: CUMPLIDA
+
+D) CLAUSULA 3: cada grupo del backlog lleva su motivo escrito
+   CIFRA tablas del backlog halladas en LECTURAS_DIRIGIDAS.md: 1
+   CIFRA grupos del backlog: 4
+   linea 505   **126**  **esperan destejido o cirugia**                motivo escrito: SI (64 caracteres)
+   linea 506   **55**   **resto sin mesa ni nomina**                   motivo escrito: SI (140 caracteres)
+   linea 507   ~~**5**~ ~~**sales roadmap**~~ **LEIDOS, 14 ago 2026**  motivo escrito: SI (448 caracteres)
+   linea 508   3        **junta asesora y seleccion de canal**         motivo escrito: SI (33 caracteres)
+   CIFRA grupos SIN motivo escrito: 0 []
+   VEREDICTO CLAUSULA 3: CUMPLIDA
+
+E) EL VEREDICTO DE OP-L-02, CON LA MEDICION DELANTE
+   clausula 1: CUMPLIDA
+   clausula 2: CUMPLIDA
+   clausula 3: CUMPLIDA
+   CIFRA clausulas cumplidas: 3 de 3
+   EL CAMPO `estado` NO SE TOCA, y sigue diciendo 'LISTA'. No es la vara.
+
+F) LA VARA DEL TRABAJO PENDIENTE, QUE ES EL INSTRUMENTO Y NO EL CAMPO
+   comando: python scripts/loop/vuelta150_3_relectura_expediente.py --corte HEAD
+   | `OP-L-02` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA |
+   | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA, OP-D-04=LISTA, OP-D-05=LISTA, OP-D-06=LISTA |
+   CONTADO: 6 ficha(s) en LISTA sin ninguna prueba de ejecucion.
+   CIFRA fichas del expediente: 71 operaciones
+   CIFRA fichas que no calzan: 37 operaciones
+   CIFRA fichas congeladas declaradas: 24 operaciones
+   CIFRA fichas congeladas en silencio: 12 operaciones
+   CIFRA fichas HECHA sin ninguna prueba: 1 operaciones
+   CIFRA fichas en LISTA sin ninguna prueba: 6 operaciones
+   exit del instrumento: 0
+
+G) OP-L-03 SE ABRE LEYENDO SUS CLAUSULAS, Y NO SE EJECUTA NINGUNA
+   ficha OP-L-03: linea 43, tipo MESA, estado 'LISTA', fecha_corte 2026-08-11
+   depende_de: ['OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06'] | bloquea_a: ['OP-U-01', 'OP-U-02']
+   CIFRA elementos de `verificacion`: 4
+   CIFRA clausulas propiamente dichas: 3
+   CIFRA correcciones declaradas: 1
+   CONTRASTE, y es contraste y no fuente: el encargo dice CUATRO clausulas.
+   yo cuento 3, NO CALZA
+      1. ningun acto se funde con un par interno sin veredicto
+      2. las 55 lecturas marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador
+      3. cada acto cuya lectura completa cambie su forma se re-mide con su cobertura al lado
+   adjudicacion: LOS 55 DEJAN DE SER BACKLOG. Por la regla P.5, cada acto que vaya a fundirse se lee ENTERO despues de su destejido y antes de su fusion. Los 55 pares se reparten entre 29 actos y bajan del backlog.
+
+   NO SE EJECUTA NINGUNA DE ELLAS EN ESTA VUELTA: el encargo manda
+   'empezando por leer sus cuatro clausulas en su ficha antes de ejecutar
+   nada', y esta vuelta ya ha entregado sus cinco tareas. Lo leido queda
+   en el reporte para que la vuelta siguiente empiece con la ficha abierta
+   y no con la ficha por abrir.
