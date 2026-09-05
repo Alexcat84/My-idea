@@ -1,0 +1,51 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE backlog_l02_resuelto (vuelta 180, TAREA 5)
+==============================================================================
+
+TODO EL MATERIAL VA FABRICADO: nomina de 4 miembros de mentira, mapa de
+alias fabricado, veredictos fabricados y lecturas dirigidas fabricadas.
+NO SE LEE NI EL ARCHIVO, NI EL GRAFO, NI docs/plan/, NI dataset/.
+
+(A) UNA NOMINA QUE COLAPSA A UN SOLO NODO DA CERO PARES REALES
+      pares del instrumento: 6 | disueltos: 6 | distintos: 0 | reales: 0
+   A: cero pares reales                                               SI
+   A: y los seis pares escritos salen como DISUELTOS                  SI
+   A: y cero distintos tras resolver                                  SI
+
+(B) LA CONTRAPRUEBA: SIN EL ALIAS, LOS PARES VUELVEN
+      pares del instrumento: 6 | disueltos: 0 | distintos: 6 | reales: 6
+   B: sin alias, los seis pares son reales                            SI
+   B: y cero disueltos                                                SI
+
+(C) EL CASO QUE MORDIO HOY: DOS PAREJAS ESCRITAS QUE SON UN SOLO PAR
+    `nodo_dos` es alias de `nodo_uno`, asi que (uno,tres) y (dos,tres) son
+    EL MISMO par una vez resueltos, y hay UNA lectura que hacer, no dos.
+      pares del instrumento: 6 | disueltos: 1 | DISTINTOS: 3 | reales: 3
+   C: los 6 escritos menos 1 disuelto dejan 5 escritos                SI
+   C: pero los DISTINTOS tras resolver son 3, no 5                    SI
+   C: y los reales son 3, o sea los distintos y no los escritos       SI
+   C: LA IDENTIDAD distintos = con veredicto + reales contra el archivo SI
+      LA MUTACION DE ESTE CASO: si se contaran los ESCRITOS, la identidad
+      daria 5 = 0 mas 5 y el instrumento publicaria 5 lecturas que hacer
+      donde hay 3. Con los escritos, 5 no es igual a 3: CAE.
+   C, LA MUTACION: contar escritos NO da lo mismo que contar distintos SI
+
+(D) UN PAR CON VEREDICTO EN EL ARCHIVO NO ES REAL
+   D: con el veredicto puesto, quedan 5 reales                        SI
+      con veredicto: 1
+   D, LA CONTRAPRUEBA: sin el veredicto vuelven a ser 6               SI
+
+(E) UN PAR CON LECTURA DIRIGIDA: LAS DOS COLUMNAS DICEN COSAS DISTINTAS
+      reales contra el archivo: 6 | reales contra las dos sedes: 5
+   E: contra el archivo sigue siendo real, o sea 6                    SI
+   E: contra las dos sedes deja de serlo, o sea 5                     SI
+   E: y la resta que las une esta contada, no supuesta                SI
+
+(F) LOS DOS CAMINOS: SI DISCREPAN, SE DICE
+      vivos por resolutor: 4 | vivos por grafo: 2 | calzan: False
+   F: con el grafo diciendo 2 y el resolutor 4, NO calzan             SI
+   F, LA CONTRAPRUEBA: con los dos diciendo 4, SI calzan              SI
+
+CIFRA comprobaciones: 16 | fallan: 0
+VERDE: el resolutor esta puesto de verdad (una nomina que colapsa da cero y sin el alias vuelve), los pares se cuentan RESUELTOS y no escritos (que es lo que mordio hoy en la primera corrida del instrumento), el veredicto y la lectura dirigida restan cada uno en su columna, y los dos caminos se cotejan de verdad.
+FIN

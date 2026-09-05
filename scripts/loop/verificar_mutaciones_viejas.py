@@ -796,6 +796,16 @@ VIEJAS = [
     #
     # LA NOMINA CRECE DE 106 A 107.
     ("vuelta180_tarea4_mutacion_texto_y_clon.py", False),
+    # VUELTA 180, TAREA 5. EL BACKLOG DE OP-L-02 CON LA VARA RESUELTA. Prueba
+    # que el resolutor de P.1 esta puesto de verdad y que los pares se cuentan
+    # RESUELTOS y no ESCRITOS, que es la trampa que mordio a
+    # backlog_l02_resuelto.py en su primera corrida y que su propia guarda de
+    # restas cazo. Todo el material va fabricado: mapa de alias, grafo,
+    # veredictos y lecturas dirigidas. No lee el archivo ni dataset/ ni
+    # docs/plan/. No admite --sujeto.
+    #
+    # LA NOMINA CRECE DE 107 A 108.
+    ("vuelta180_tarea5_mutacion_backlog_l02.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

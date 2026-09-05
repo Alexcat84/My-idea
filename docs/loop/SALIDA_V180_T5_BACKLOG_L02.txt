@@ -1,0 +1,115 @@
+==============================================================================
+EL BACKLOG DE OP-L-02, CON EL RESOLUTOR DE P.1 POR ENCIMA
+==============================================================================
+
+   EL CORTE DE TODA ESTA CORRIDA: HEAD 0d3073204d57
+   NO SE LEE NI UN PAR, NO SE ESCRIBE NINGUN VEREDICTO, NO SE TOCA EL
+   MARCADOR Y NO SE TOCA EL ESTADO DE NINGUNA FICHA.
+
+A) EL INSTRUMENTO VIEJO, CORRIDO POR DENTRO Y NO CITADO DE MEMORIA
+   la nomina vive en scripts/vuelta16_generar_actos.mjs, constante
+   NOMINAS_OP_L_02, y se PARSEA con leer_nominas() de
+   scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py, importado. NI UNO NI
+   OTRO SE TOCAN.
+   CIFRA nominas que la constante trae: 6 (NO se mueve dentro de una vuelta: sale de una constante sellada)
+   CIFRA PARES QUE EL INSTRUMENTO DA, sumados de sus nominas: 66 (NO se mueve dentro de una vuelta: sale de la misma constante)
+      NOMINA 1: customer_validation_sales_roadmap              6 miembros, 15 pares
+      NOMINA 2: clasificacion_mercados_cadena_suministro       6 miembros, 15 pares
+      NOMINA 3: alineacion_etica_ia_negocio                    5 miembros, 10 pares
+      NOMINA 4: construccion_de_valor_percibido                5 miembros, 10 pares
+      NOMINA 5: channels_hypothesis_physical                   5 miembros, 10 pares
+      NOMINA 6: formalizar_junta_asesora                       4 miembros, 6 pares
+
+A.1) LA CIFRA VIEJA DE LA FICHA, COMO CONTRASTE Y NUNCA COMO FUENTE
+     (EJECUTOR.md 2: una nota vieja no es fuente de una cifra nueva. Se
+     cita, y si discrepa de la medicion de hoy la discrepancia SE DECLARA)
+     evidencia de la ficha: MEDIDO el 11 ago 2026: 205 pares fuera de cola, 11 leidos, 194 pendientes
+     fecha_corte de la ficha: 2026-08-11 | estado de la ficha: LISTA
+     LA DISCREPANCIA, DECLARADA Y NO RESUELTA COPIANDO: la evidencia de la
+     ficha mide OTRO UNIVERSO, los pares FUERA DE COLA de todo el dominio,
+     y esta corrida mide LAS SEIS NOMINAS que la constante declara. Las dos
+     cifras son verdaderas y no son la misma pregunta.
+     Y EL ESTADO DE LA FICHA NO ES LA VARA (TAREA 5 del encargo): la vara
+     es la salida de scripts/loop/vuelta150_3_relectura_expediente.py.
+
+B) EL RESOLUTOR, EL GRAFO Y LAS DOS SEDES DE CLASE, PUESTOS ANTES DE CONTAR
+   CIFRA ficheros de dataset/nodos/ leidos: 3853 (corte: HEAD 0d3073204d57, ficheros de dataset/nodos/ contados en esta corrida)
+   CIFRA alias del mapa: 761 (corte: HEAD 0d3073204d57, alias del resolutor contados en esta corrida)
+   CIFRA nodos del grafo: 3853 (corte: HEAD 0d3073204d57, nodos del grafo contados en esta corrida)
+   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388 (corte: HEAD 0d3073204d57, filas del archivo contadas en esta corrida)
+   CIFRA pares distintos con veredicto tras resolver: 3009 (corte: HEAD 0d3073204d57, pares con veredicto contados en esta corrida)
+   CIFRA pares distintos con LECTURA DIRIGIDA tras resolver: 26 (corte: HEAD 0d3073204d57, pares con lectura dirigida contados en esta corrida)
+
+C) LA MEDICION, NOMINA POR NOMINA Y CON LAS DOS COLUMNAS AL LADO
+   EL CORTE DE ESTA TABLA, CABLEADO DONDE SE GENERA: HEAD 0d3073204d57
+
+| nomina (primer miembro) | miembros | vivos resolutor | vivos grafo | calzan | pares del instrumento | disueltos | con veredicto | con dirigida | REALES contra el archivo | REALES contra las dos sedes |
+|---|---|---|---|---|---|---|---|---|---|---|
+| `customer_validation_sales_roadmap` | 6 | 6 | 6 | SI | 15 | 0 | 10 | 5 | **5** | **0** |
+| `clasificacion_mercados_cadena_suministro` | 6 | 1 | 1 | SI | 15 | 15 | 0 | 0 | **0** | **0** |
+| `alineacion_etica_ia_negocio` | 5 | 5 | 5 | SI | 10 | 0 | 7 | 3 | **3** | **0** |
+| `construccion_de_valor_percibido` | 5 | 5 | 5 | SI | 10 | 0 | 5 | 5 | **5** | **0** |
+| `channels_hypothesis_physical` | 5 | 5 | 5 | SI | 10 | 0 | 8 | 2 | **2** | **0** |
+| `formalizar_junta_asesora` | 4 | 2 | 2 | SI | 6 | 2 | 1 | 1 | **0** | **0** |
+
+D) LOS DOS CAMINOS, COTEJADOS NOMINA POR NOMINA
+   CIFRA nominas medidas: 6
+   CIFRA nominas donde los dos caminos CALZAN: 6 (corte: HEAD 0d3073204d57, nominas donde los dos caminos calzan contadas en esta corrida)
+   CIFRA nominas donde NO calzan: 0 (corte: HEAD 0d3073204d57, nominas donde no calzan contadas en esta corrida)
+
+E) EL TOTAL, CON LAS DOS COLUMNAS Y SIN BORRAR LA VIEJA
+
+| cifra | valor | se mueve dentro de una vuelta |
+|---|---|---|
+| nominas que el instrumento da | **6** | no, sale de una constante sellada |
+| PARES QUE EL INSTRUMENTO DA (la cifra vieja, que no se borra) | **66** | no, sale de la misma constante |
+| pares DISUELTOS (los dos extremos en el mismo nodo tras resolver) | **17 (corte: HEAD 0d3073204d57, pares disueltos contados en esta corrida)** | SI, depende del resolutor de dataset/ |
+| pares DISTINTOS tras resolver (dos escritos pueden ser UNO) | **46 (corte: HEAD 0d3073204d57, pares distintos tras resolver contados en esta corrida)** | SI, depende del resolutor de dataset/ |
+| pares que YA TIENEN VEREDICTO en el archivo, por el par RESUELTO | **31 (corte: HEAD 0d3073204d57, pares con veredicto contados en esta corrida)** | SI, depende de docs/INTRA_DOMINIO_VEREDICTOS.jsonl |
+| pares con LECTURA DIRIGIDA escrita | **16 (corte: HEAD 0d3073204d57, pares con lectura dirigida contados en esta corrida)** | SI, depende de docs/plan/*.md |
+| PARES REALES contra el archivo (la definicion literal del encargo) | **15 (corte: HEAD 0d3073204d57, pares reales contra el archivo contados en esta corrida)** | SI, es la resta |
+| PARES REALES contra las DOS sedes (lo que queda de verdad) | **0 (corte: HEAD 0d3073204d57, pares reales contra las dos sedes contados en esta corrida)** | SI, es la resta |
+
+   LAS RESTAS, COMPROBADAS, Y VAN EN TRES PASOS PORQUE HACEN FALTA TRES.
+   EL PASO DEL MEDIO ES EL QUE LA PRIMERA CORRIDA DE ESTE INSTRUMENTO SE
+   COMIO, Y SU PROPIA GUARDA LO CAZO: dos parejas de miembros ESCRITAS
+   distintas pueden resolver AL MISMO par, y entonces hay UNA lectura que
+   hacer y no dos. Restar sobre los pares escritos, sin colapsar primero,
+   no cuadra nunca. Es la misma trampa que backlog_l03_resuelto.py declara
+   en su medir_acto(), y aqui volvio a morder.
+   PASO 1: del instrumento 66, menos 17 disueltos, quedan 49 ESCRITOS.
+   PASO 2: de esos 49 escritos, los DISTINTOS tras resolver son 46, o sea 3 duplicados que colapsan.
+   PASO 3: de los 46 distintos, 31 ya tienen veredicto y quedan 15.
+   Y los REALES contra el archivo medidos son 15. CALZA: SI
+   PASO 4: de esos 15 reales, 15 tienen ADEMAS lectura dirigida escrita, y quedan 0.
+   Y los REALES contra las dos sedes medidos son 0. CALZA: SI
+
+F) EL REPARTO POR TRAMO, CON SU CORTE PEGADO
+   EL CRITERIO, DICHO ANTES DE REPARTIR: una nomina esta YA MIRADA si
+   alguno de sus pares tiene LECTURA DIRIGIDA escrita, y SIN MIRAR si
+   ninguno. No se teclea ninguna lista: se lee de docs/plan/*.md.
+   EL CORTE DE ESTA TABLA, CABLEADO DONDE SE GENERA: HEAD 0d3073204d57
+
+| tramo | nominas | pares del instrumento | reales contra el archivo | reales contra las dos sedes | corte |
+|---|---|---|---|---|---|
+| YA MIRADAS | **5** | **51** | **15** | **0** | HEAD 0d3073204d57 |
+| SIN MIRAR | **1** | **15** | **0** | **0** | HEAD 0d3073204d57 |
+| **todas** | **6** | **66** | **15** | **0** | HEAD 0d3073204d57 |
+
+G) LOS CINCO PARES DE SALES ROADMAP, NOMBRADOS Y DEJADOS
+   docs/plan/LECTURAS_DIRIGIDAS.md los deja expresamente como DECISION
+   REVOCABLE DEL FUNDADOR, y el punto 8 del acta 179 los sube. AQUI NO SE
+   TOCAN: se nombran para que no se pierdan, y se dice de que fichero salen.
+   CIFRA pares con lectura dirigida en LD_SALES_ROADMAP.md: 5 (corte: HEAD 0d3073204d57, pares de sales roadmap contados en esta corrida)
+      `customer_validation_sales_roadmap` contra `estrategia_de_ventas` | clase D | sede LD_SALES_ROADMAP.md
+      `customer_validation_sales_roadmap` contra `sales_roadmap` | clase D | sede LD_SALES_ROADMAP.md
+      `estrategia_de_ventas` contra `hoja_de_ruta_de_ventas` | clase A | sede LD_SALES_ROADMAP.md
+      `estrategia_de_ventas` contra `refinar_sales_roadmap` | clase D | sede LD_SALES_ROADMAP.md
+      `estrategia_de_ventas` contra `sales_roadmap_vs_sales_force` | clase D | sede LD_SALES_ROADMAP.md
+
+H) LO QUE ESTA CORRIDA NO HIZO, DICHO Y NO INSINUADO
+   pares leidos: 0. veredictos escritos: 0. filas anadidas al archivo: 0.
+   marcador tocado: no. estado de fichas tocado: no. nodos tocados: 0.
+
+VERDE: los dos caminos calzan en las 6 nominas medidas. El instrumento viejo da 66 pares y quedan 15 reales contra el archivo y 0 contra las dos sedes, con 17 disueltos, 31 ya con veredicto y 16 con lectura dirigida. LAS DOS COLUMNAS VAN LAS DOS Y LA VIEJA NO SE BORRA. NI UN PAR LEIDO.
+FIN
