@@ -1,0 +1,402 @@
+=============== vuelta172_tarea1b_mutacion_registro ===============
+==============================================================================
+VUELTA 172, TAREA 1.b: CASO POSITIVO POR MUTACION DEL REGISTRADOR DEL ACTA 171
+==============================================================================
+
+A) LA CIFRA DE ADJUDICACIONES SIGUE AL ACTA Y NO A UNA CONSTANTE
+   acta fabricada con 1 adjudicaciones -> el barrido ve 1
+   acta fabricada con 5 adjudicaciones -> el barrido ve 5
+   acta fabricada con 9 adjudicaciones -> el barrido ve 9
+   acta fabricada con 12 adjudicaciones -> el barrido ve 12
+   acta fabricada con 14 adjudicaciones -> el barrido ve 14
+   acta fabricada con 17 adjudicaciones -> el barrido ve 17
+
+B) EL BARRIDO NO CONFUNDE 6.1 CON 6.10, 6.11, 6.12 NI 6.13 A 6.14
+   6.1 acierta 1 vez dentro del cuerpo con 6.10 a 6.14 presentes
+
+C) EL BARRIDO PARA EN EL PRIMER HUECO Y NO SALTA POR ENCIMA
+   acta de 14 con la 6.7 ausente -> el barrido ve 6
+   negrita sin cierre: PARADA: la negrita de 6.9 no cierra dentro de su parrafo.
+
+D) EL ACOTADO DEJA FUERA EL RUIDO DE OTRAS ACTAS
+   sin acotar: 6 negritas CAIDA | acotado: 4
+
+E) EL PATRON DE CAIDA CASA CON LAS DOS FORMAS, Y ES LO NUEVO DE HOY
+   forma VINETA (acta 170): patron nuevo 4, patron viejo 0
+   forma PLANA  (acta 169): patron nuevo 4, patron viejo 4
+   titulo leido de una caida con vineta: '`CAIDA 2`. TITULO DE LA CAIDA 2 FABRICADA.'
+
+F) EL TITULO SIGUE A LOS DOS CONTEOS Y CONCUERDA EN NUMERO
+   (6, 2) -> Registro de las seis adjudicaciones y las dos caidas propias del acta de la vuelta 171
+   (9, 1) -> Registro de las nueve adjudicaciones y la caida propia del acta de la vuelta 171
+   (12, 4) -> Registro de las doce adjudicaciones y las cuatro caidas propias del acta de la vuelta 171
+   (14, 3) -> Registro de las catorce adjudicaciones y las tres caidas propias del acta de la vuelta 171
+
+G) UNA ADJUDICACION O UNA CAIDA SIN GLOSA TIENE QUE PARAR
+   claves del acta de 17 sin glosa: 6.13, 6.14, 6.15, 6.16, 6.17
+
+H) EL ACTA DE VERDAD, LEIDA HOY
+   cuerpo del acta 171: lineas 57847 a 58374
+   CIFRA adjudicaciones 6.n que trae la seccion 6: 12
+   CIFRA caidas con el patron nuevo: 3 | con el viejo: 0
+   CIFRA negritas que se leen sin error: 15 de 15
+
+I) PASADA 1, LOS CASOS TAL CUAL
+   A_con_1_adjudicaciones_ve_1                          PASA   (real=1 esperado=1)
+   A_con_5_adjudicaciones_ve_5                          PASA   (real=5 esperado=5)
+   A_con_9_adjudicaciones_ve_9                          PASA   (real=9 esperado=9)
+   A_con_12_adjudicaciones_ve_12                        PASA   (real=12 esperado=12)
+   A_con_14_adjudicaciones_ve_14                        PASA   (real=14 esperado=14)
+   A_con_17_adjudicaciones_ve_17                        PASA   (real=17 esperado=17)
+   B_el_patron_de_6_1_acierta_una_sola_vez              PASA   (real=1 esperado=1)
+   B_y_su_titulo_se_lee_sin_error                       PASA   (real=True esperado=True)
+   C_para_en_el_hueco_y_ve_6                            PASA   (real=6 esperado=6)
+   C_la_duplicada_se_detecta                            PASA   (real=1 esperado=1)
+   C_duplicada_para                                     PASA   (real=True esperado=True)
+   C_negrita_sin_cierre_para                            PASA   (real=True esperado=True)
+   D_sin_acotar_hay_ruido_de_caidas                     PASA   (real=6 esperado=6)
+   D_acotado_no_lo_ve                                   PASA   (real=4 esperado=4)
+   D_sin_acotar_la_6_1_esta_tres_veces                  PASA   (real=3 esperado=3)
+   E_el_patron_nuevo_ve_las_vineta                      PASA   (real=4 esperado=4)
+   E_el_patron_nuevo_ve_las_planas                      PASA   (real=4 esperado=4)
+   E_el_patron_VIEJO_NO_ve_las_vineta                   PASA   (real=0 esperado=0)
+   E_el_patron_viejo_si_ve_las_planas                   PASA   (real=4 esperado=4)
+   E_no_casa_con_negritas_que_no_son_caida              PASA   (real=0 esperado=0)
+   E_el_titulo_sale_sin_el_guion_de_lista               PASA   (real='`CAIDA 2`. TITULO DE LA CAIDA 2 FABRICADA.' esperado='`CAIDA 2`. TITULO DE LA CAIDA 2 FABRICADA.')
+   F_titulo_6_2_dice_seis                               PASA   (real='seis' esperado='seis')
+   F_titulo_9_1_dice_nueve                              PASA   (real='nueve' esperado='nueve')
+   F_titulo_12_4_dice_doce                              PASA   (real='doce' esperado='doce')
+   F_titulo_14_3_dice_catorce                           PASA   (real='catorce' esperado='catorce')
+   F_la_rama_de_UNA_caida_va_en_singular                PASA   (real=True esperado=True)
+   F_la_rama_de_CUATRO_va_en_plural                     PASA   (real=True esperado=True)
+   F_titulo_12_3_no_es_igual_al_de_12_4                 PASA   (real=False esperado=False)
+   G_las_adjudicaciones_sin_glosa_se_detectan           PASA   (real=5 esperado=5)
+   G_las_caidas_sin_glosa_se_detectan                   PASA   (real=3 esperado=3)
+   G_las_doce_de_hoy_SI_tienen_glosa                    PASA   (real=0 esperado=0)
+   H_el_acta_171_trae_DOCE_adjudicaciones               PASA   (real=12 esperado=12)
+   H_cada_una_aparece_una_sola_vez                      PASA   (real=0 esperado=0)
+   H_el_acta_171_trae_TRES_caidas                       PASA   (real=3 esperado=3)
+   H_y_el_patron_viejo_no_habria_visto_ninguna          PASA   (real=0 esperado=0)
+   H_la_frase_de_la_sede_esta_una_vez_en_el_fichero     PASA   (real=1 esperado=1)
+   H_y_cero_veces_dentro_del_acta_171                   PASA   (real=0 esperado=0)
+   H_las_quince_negritas_se_leen_sin_error              PASA   (real=15 esperado=15)
+   H_el_titulo_que_saldra_dice_doce_y_tres              PASA   (real='Registro de las doce adjudicaciones y las tres caidas propias del acta de la vuelta 171' esperado='Registro de las doce adjudicaciones y las tres caidas propias del acta de la vuelta 171')
+   H_las_vias_reales_no_suben_NINGUNA_al_fundador       PASA   (real=0 esperado=0)
+   H_el_reparto_real_da_SIETE_ejecutadas                PASA   (real=7 esperado=7)
+   H_y_CINCO_sin_tocar_nada                             PASA   (real=5 esperado=5)
+   H_y_las_dos_vias_suman_las_doce                      PASA   (real=12 esperado=12)
+   CIFRA casos: 43 | pasan: 43 | fallan: 0
+
+J) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_con_1_adjudicaciones_ve_1                          CAE   (esperado mutado=2)
+   A_con_5_adjudicaciones_ve_5                          CAE   (esperado mutado=6)
+   A_con_9_adjudicaciones_ve_9                          CAE   (esperado mutado=10)
+   A_con_12_adjudicaciones_ve_12                        CAE   (esperado mutado=13)
+   A_con_14_adjudicaciones_ve_14                        CAE   (esperado mutado=15)
+   A_con_17_adjudicaciones_ve_17                        CAE   (esperado mutado=18)
+   B_el_patron_de_6_1_acierta_una_sola_vez              CAE   (esperado mutado=2)
+   B_y_su_titulo_se_lee_sin_error                       CAE   (esperado mutado=False)
+   C_para_en_el_hueco_y_ve_6                            CAE   (esperado mutado=7)
+   C_la_duplicada_se_detecta                            CAE   (esperado mutado=2)
+   C_duplicada_para                                     CAE   (esperado mutado=False)
+   C_negrita_sin_cierre_para                            CAE   (esperado mutado=False)
+   D_sin_acotar_hay_ruido_de_caidas                     CAE   (esperado mutado=7)
+   D_acotado_no_lo_ve                                   CAE   (esperado mutado=5)
+   D_sin_acotar_la_6_1_esta_tres_veces                  CAE   (esperado mutado=4)
+   E_el_patron_nuevo_ve_las_vineta                      CAE   (esperado mutado=5)
+   E_el_patron_nuevo_ve_las_planas                      CAE   (esperado mutado=5)
+   E_el_patron_VIEJO_NO_ve_las_vineta                   CAE   (esperado mutado=1)
+   E_el_patron_viejo_si_ve_las_planas                   CAE   (esperado mutado=5)
+   E_no_casa_con_negritas_que_no_son_caida              CAE   (esperado mutado=1)
+   E_el_titulo_sale_sin_el_guion_de_lista               CAE   (esperado mutado='`CAIDA 2`. TITULO DE LA CAIDA 2 FABRICADA._mutado')
+   F_titulo_6_2_dice_seis                               CAE   (esperado mutado='seis_mutado')
+   F_titulo_9_1_dice_nueve                              CAE   (esperado mutado='nueve_mutado')
+   F_titulo_12_4_dice_doce                              CAE   (esperado mutado='doce_mutado')
+   F_titulo_14_3_dice_catorce                           CAE   (esperado mutado='catorce_mutado')
+   F_la_rama_de_UNA_caida_va_en_singular                CAE   (esperado mutado=False)
+   F_la_rama_de_CUATRO_va_en_plural                     CAE   (esperado mutado=False)
+   F_titulo_12_3_no_es_igual_al_de_12_4                 CAE   (esperado mutado=True)
+   G_las_adjudicaciones_sin_glosa_se_detectan           CAE   (esperado mutado=6)
+   G_las_caidas_sin_glosa_se_detectan                   CAE   (esperado mutado=4)
+   G_las_doce_de_hoy_SI_tienen_glosa                    CAE   (esperado mutado=1)
+   H_el_acta_171_trae_DOCE_adjudicaciones               CAE   (esperado mutado=13)
+   H_cada_una_aparece_una_sola_vez                      CAE   (esperado mutado=1)
+   H_el_acta_171_trae_TRES_caidas                       CAE   (esperado mutado=4)
+   H_y_el_patron_viejo_no_habria_visto_ninguna          CAE   (esperado mutado=1)
+   H_la_frase_de_la_sede_esta_una_vez_en_el_fichero     CAE   (esperado mutado=2)
+   H_y_cero_veces_dentro_del_acta_171                   CAE   (esperado mutado=1)
+   H_las_quince_negritas_se_leen_sin_error              CAE   (esperado mutado=16)
+   H_el_titulo_que_saldra_dice_doce_y_tres              CAE   (esperado mutado='Registro de las doce adjudicaciones y las tres caidas propias del acta de la vuelta 171_mutado')
+   H_las_vias_reales_no_suben_NINGUNA_al_fundador       CAE   (esperado mutado=1)
+   H_el_reparto_real_da_SIETE_ejecutadas                CAE   (esperado mutado=8)
+   H_y_CINCO_sin_tocar_nada                             CAE   (esperado mutado=6)
+   H_y_las_dos_vias_suman_las_doce                      CAE   (esperado mutado=13)
+   CIFRA casos que caen al mutar el esperado: 43 de 43
+
+VERDE: los 43 casos pasan tal cual y los 43 caen al mutar el esperado.
+EXITCODE: 0
+=============== vuelta172_tarea2a_mutacion_exclusion ===============
+==============================================================================
+VUELTA 172, TAREA 2.a: CASO POSITIVO POR MUTACION DE LA EXCLUSION DEL
+ARCHIVO DE REPORTES EN vuelta48_contar_ld.py
+==============================================================================
+
+A) EL ARCHIVO DE REPORTES NO CUENTA, Y NO POR SU NUMERO DE VUELTA
+   docs/loop/reportes/REPORTE_V168.md           -> NARRATIVO
+   docs/loop/reportes/REPORTE_V170.md           -> NARRATIVO
+   docs/loop/reportes/REPORTE_V171.md           -> NARRATIVO
+   docs/loop/reportes/REPORTE_V172.md           -> NARRATIVO
+   docs/loop/reportes/REPORTE_V9999.md          -> NARRATIVO
+   docs/loop/reportes/REPORTE_V1.md             -> NARRATIVO
+
+B) LA REGLA NO SE ENSANCHA: LO QUE NO ES UN REPORTE ARCHIVADO SI CUENTA
+   docs/loop/reportes/notas.md                  -> None
+   docs/loop/reportes/REPORTE_VX.md             -> None
+   docs/loop/reportes/REPORTE_V12.txt           -> None
+   docs/loop/reportes/REPORTE_V12.md.bak        -> None
+   docs/loop/reportes/sub/REPORTE_V12.md        -> None
+   docs/loop/REPORTE_V12.md                     -> None
+
+C) SI SE ESTRECHA LA REGLA, EL CASO CAE. ES LO QUE EL ENCARGO PIDE.
+   con la regla POR PATRON:   4 de 4 excluidos
+   con la regla ESTRECHA:     0 de 4 excluidos
+
+D) SI EL ARCHIVO VUELVE A CONTAR, EL CASO CAE
+   con el patron desactivado: 0 de 4 excluidos
+
+E) LAS TRES EXCLUSIONES VIEJAS SIGUEN MORDIENDO, Y UNA NORMAL NO
+   docs/loop/SALIDA_V171_APERTURA.txt           -> SALIDA     (se esperaba SALIDA)
+   docs/loop/reportes/SALIDA_V1_X.txt           -> SALIDA     (se esperaba SALIDA)
+   docs/loop/REPORTE.md                         -> NARRATIVO  (se esperaba NARRATIVO)
+   docs/loop/ACTA_AUDITOR.md                    -> NARRATIVO  (se esperaba NARRATIVO)
+   docs/loop/PROMPT_SIGUIENTE.md                -> NARRATIVO  (se esperaba NARRATIVO)
+   docs/loop/ultimo_ejecutor.json               -> ARNES      (se esperaba ARNES)
+   docs/loop/ultimo_auditor.json                -> ARNES      (se esperaba ARNES)
+   docs/plan/LECTURAS_DIRIGIDAS.md              -> None       (se esperaba None)
+   docs/PENDIENTES.md                           -> None       (se esperaba None)
+   docs/plan/00_INDICE.md                       -> None       (se esperaba None)
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   A_REPORTE_V168.md_es_NARRATIVO                         PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   A_REPORTE_V170.md_es_NARRATIVO                         PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   A_REPORTE_V171.md_es_NARRATIVO                         PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   A_REPORTE_V172.md_es_NARRATIVO                         PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   A_REPORTE_V9999.md_es_NARRATIVO                        PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   A_REPORTE_V1.md_es_NARRATIVO                           PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   B_docs_loop_reportes_notas.md_sigue_contando           PASA   (real=None esperado=None)
+   B_docs_loop_reportes_REPORTE_VX.md_sigue_contando      PASA   (real=None esperado=None)
+   B_docs_loop_reportes_REPORTE_V12.txt_sigue_contando    PASA   (real=None esperado=None)
+   B_docs_loop_reportes_REPORTE_V12.md.bak_sigue_contando PASA   (real=None esperado=None)
+   B_docs_loop_reportes_sub_REPORTE_V12.md_sigue_contando PASA   (real=None esperado=None)
+   B_docs_loop_REPORTE_V12.md_sigue_contando              PASA   (real=None esperado=None)
+   C_la_regla_por_patron_los_ve_todos                     PASA   (real=4 esperado=4)
+   C_la_estrecha_no_ve_ninguno_de_esos                    PASA   (real=0 esperado=0)
+   C_pero_la_estrecha_si_ve_el_suyo                       PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   D_sin_patron_el_archivo_vuelve_a_contar                PASA   (real=0 esperado=0)
+   D_y_con_patron_no_cuenta_ninguno                       PASA   (real=4 esperado=4)
+   E_docs_loop_SALIDA_V171_APERTURA.txt                   PASA   (real='SALIDA' esperado='SALIDA')
+   E_docs_loop_reportes_SALIDA_V1_X.txt                   PASA   (real='SALIDA' esperado='SALIDA')
+   E_docs_loop_REPORTE.md                                 PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   E_docs_loop_ACTA_AUDITOR.md                            PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   E_docs_loop_PROMPT_SIGUIENTE.md                        PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   E_docs_loop_ultimo_ejecutor.json                       PASA   (real='ARNES' esperado='ARNES')
+   E_docs_loop_ultimo_auditor.json                        PASA   (real='ARNES' esperado='ARNES')
+   E_docs_plan_LECTURAS_DIRIGIDAS.md                      PASA   (real=None esperado=None)
+   E_docs_PENDIENTES.md                                   PASA   (real=None esperado=None)
+   E_docs_plan_00_INDICE.md                               PASA   (real=None esperado=None)
+   CIFRA casos: 27 | pasan: 27 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_REPORTE_V168.md_es_NARRATIVO                         CAE   (esperado mutado='NARRATIVO_mutado')
+   A_REPORTE_V170.md_es_NARRATIVO                         CAE   (esperado mutado='NARRATIVO_mutado')
+   A_REPORTE_V171.md_es_NARRATIVO                         CAE   (esperado mutado='NARRATIVO_mutado')
+   A_REPORTE_V172.md_es_NARRATIVO                         CAE   (esperado mutado='NARRATIVO_mutado')
+   A_REPORTE_V9999.md_es_NARRATIVO                        CAE   (esperado mutado='NARRATIVO_mutado')
+   A_REPORTE_V1.md_es_NARRATIVO                           CAE   (esperado mutado='NARRATIVO_mutado')
+   B_docs_loop_reportes_notas.md_sigue_contando           CAE   (esperado mutado='NARRATIVO')
+   B_docs_loop_reportes_REPORTE_VX.md_sigue_contando      CAE   (esperado mutado='NARRATIVO')
+   B_docs_loop_reportes_REPORTE_V12.txt_sigue_contando    CAE   (esperado mutado='NARRATIVO')
+   B_docs_loop_reportes_REPORTE_V12.md.bak_sigue_contando CAE   (esperado mutado='NARRATIVO')
+   B_docs_loop_reportes_sub_REPORTE_V12.md_sigue_contando CAE   (esperado mutado='NARRATIVO')
+   B_docs_loop_REPORTE_V12.md_sigue_contando              CAE   (esperado mutado='NARRATIVO')
+   C_la_regla_por_patron_los_ve_todos                     CAE   (esperado mutado=5)
+   C_la_estrecha_no_ve_ninguno_de_esos                    CAE   (esperado mutado=1)
+   C_pero_la_estrecha_si_ve_el_suyo                       CAE   (esperado mutado='NARRATIVO_mutado')
+   D_sin_patron_el_archivo_vuelve_a_contar                CAE   (esperado mutado=1)
+   D_y_con_patron_no_cuenta_ninguno                       CAE   (esperado mutado=5)
+   E_docs_loop_SALIDA_V171_APERTURA.txt                   CAE   (esperado mutado='SALIDA_mutado')
+   E_docs_loop_reportes_SALIDA_V1_X.txt                   CAE   (esperado mutado='SALIDA_mutado')
+   E_docs_loop_REPORTE.md                                 CAE   (esperado mutado='NARRATIVO_mutado')
+   E_docs_loop_ACTA_AUDITOR.md                            CAE   (esperado mutado='NARRATIVO_mutado')
+   E_docs_loop_PROMPT_SIGUIENTE.md                        CAE   (esperado mutado='NARRATIVO_mutado')
+   E_docs_loop_ultimo_ejecutor.json                       CAE   (esperado mutado='ARNES_mutado')
+   E_docs_loop_ultimo_auditor.json                        CAE   (esperado mutado='ARNES_mutado')
+   E_docs_plan_LECTURAS_DIRIGIDAS.md                      CAE   (esperado mutado='NARRATIVO')
+   E_docs_PENDIENTES.md                                   CAE   (esperado mutado='NARRATIVO')
+   E_docs_plan_00_INDICE.md                               CAE   (esperado mutado='NARRATIVO')
+   CIFRA casos que caen al mutar el esperado: 27 de 27
+
+VERDE: los 27 casos pasan tal cual y los 27 caen al mutar el esperado.
+EXITCODE: 0
+=============== vuelta172_tarea3_mutacion_numeracion ===============
+==============================================================================
+VUELTA 172, TAREA 3: CASO POSITIVO POR MUTACION DE LAS DOS GUARDAS DE LA
+NUMERACION LD
+==============================================================================
+
+A) GUARDA (i): EL NUMERO SE COMPUTA Y SIGUE AL MAPA DE HECHAS
+   hechas con mayor 138  -> siguiente libre 139
+   hechas con mayor 200  -> siguiente libre 201
+   hechas con mayor 7    -> siguiente libre 8
+   hechas con mayor 3    -> siguiente libre 4
+   hechas con mayor (vacio) -> siguiente libre 1
+
+B) GUARDA (i), EL LADO QUE IMPORTA: UNA CONSTANTE NO PASARIA ESTO
+   valores distintos que devuelve para cuatro mapas distintos: 4
+   (no rellena huecos: con {1, 5} devuelve 6 y no 2, que es la misma
+    regla que serie_de_registros.siguiente_libre)
+
+C) GUARDA (ii): LA ASIGNACION AJENA SE VE, Y SU AUSENCIA TAMBIEN
+   sobre un mapa limpio, con corte 138: []
+   sobre uno con un intruso:            [145]
+   sobre uno con dos:                   [145, 154]
+   (sin corte explicito usa el mayor del propio mapa, y entonces por
+    definicion no hay nadie por encima: por eso main() le pasa el corte)
+
+D) EL LECTOR DE FILAS CUENTA LO QUE HAY Y NO LO QUE ESPERA
+   pagina fabricada con 3+2+1 filas de par -> el lector ve 6
+   clases leidas, en orden: DDADAD
+   pagina fabricada SIN filas de par -> el lector ve 0
+
+E) LOS NUMEROS QUE SALDRIAN, ENCADENANDO LAS DOS COSAS
+   con mayor 138 y 16 filas: LD-139 a LD-154
+   con mayor 90 y 16 filas:  LD-91 a LD-106
+   (si el rango 139 a 154 estuviera tecleado, esta ultima no se moveria)
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   A_siguiente_de_138_es_139                            PASA   (real=139 esperado=139)
+   A_siguiente_de_200_es_201                            PASA   (real=201 esperado=201)
+   A_siguiente_de_7_es_8                                PASA   (real=8 esperado=8)
+   A_siguiente_de_3_es_4                                PASA   (real=4 esperado=4)
+   A_siguiente_de_vacio_es_1                            PASA   (real=1 esperado=1)
+   B_devuelve_cuatro_valores_distintos                  PASA   (real=4 esperado=4)
+   B_no_es_la_constante_139                             PASA   (real=False esperado=False)
+   B_no_rellena_huecos                                  PASA   (real=6 esperado=6)
+   C_el_limpio_no_da_ninguno                            PASA   (real=0 esperado=0)
+   C_el_de_un_intruso_da_uno                            PASA   (real=1 esperado=1)
+   C_y_lo_nombra                                        PASA   (real=[145] esperado=[145])
+   C_el_de_dos_da_dos                                   PASA   (real=2 esperado=2)
+   C_sin_corte_usa_el_mayor_y_da_cero                   PASA   (real=0 esperado=0)
+   D_ve_las_seis                                        PASA   (real=6 esperado=6)
+   D_no_se_traga_el_ruido_de_otra_tabla                 PASA   (real=False esperado=False)
+   D_no_cruza_a_la_tercera_tanda                        PASA   (real=False esperado=False)
+   D_no_se_traga_la_tabla_de_oficios                    PASA   (real=False esperado=False)
+   D_las_clases_se_leen_literales                       PASA   (real='DDADAD' esperado='DDADAD')
+   D_el_reparto_por_bloque_es_3_2_1                     PASA   (real=[3, 2, 1] esperado=[3, 2, 1])
+   D_una_pagina_sin_pares_da_cero                       PASA   (real=0 esperado=0)
+   D_con_16_fabricadas_ve_16                            PASA   (real=16 esperado=16)
+   E_el_rango_empieza_en_139                            PASA   (real=139 esperado=139)
+   E_y_termina_en_154                                   PASA   (real=154 esperado=154)
+   E_con_otro_mayor_el_rango_se_mueve                   PASA   (real=91 esperado=91)
+   CIFRA casos: 24 | pasan: 24 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_siguiente_de_138_es_139                            CAE   (esperado mutado=140)
+   A_siguiente_de_200_es_201                            CAE   (esperado mutado=202)
+   A_siguiente_de_7_es_8                                CAE   (esperado mutado=9)
+   A_siguiente_de_3_es_4                                CAE   (esperado mutado=5)
+   A_siguiente_de_vacio_es_1                            CAE   (esperado mutado=2)
+   B_devuelve_cuatro_valores_distintos                  CAE   (esperado mutado=5)
+   B_no_es_la_constante_139                             CAE   (esperado mutado=True)
+   B_no_rellena_huecos                                  CAE   (esperado mutado=7)
+   C_el_limpio_no_da_ninguno                            CAE   (esperado mutado=1)
+   C_el_de_un_intruso_da_uno                            CAE   (esperado mutado=2)
+   C_y_lo_nombra                                        CAE   (esperado mutado=[145, 999])
+   C_el_de_dos_da_dos                                   CAE   (esperado mutado=3)
+   C_sin_corte_usa_el_mayor_y_da_cero                   CAE   (esperado mutado=1)
+   D_ve_las_seis                                        CAE   (esperado mutado=7)
+   D_no_se_traga_el_ruido_de_otra_tabla                 CAE   (esperado mutado=True)
+   D_no_cruza_a_la_tercera_tanda                        CAE   (esperado mutado=True)
+   D_no_se_traga_la_tabla_de_oficios                    CAE   (esperado mutado=True)
+   D_las_clases_se_leen_literales                       CAE   (esperado mutado='DDADAD_mutado')
+   D_el_reparto_por_bloque_es_3_2_1                     CAE   (esperado mutado=[3, 2, 1, 999])
+   D_una_pagina_sin_pares_da_cero                       CAE   (esperado mutado=1)
+   D_con_16_fabricadas_ve_16                            CAE   (esperado mutado=17)
+   E_el_rango_empieza_en_139                            CAE   (esperado mutado=140)
+   E_y_termina_en_154                                   CAE   (esperado mutado=155)
+   E_con_otro_mayor_el_rango_se_mueve                   CAE   (esperado mutado=92)
+   CIFRA casos que caen al mutar el esperado: 24 de 24
+
+VERDE: los 24 casos pasan tal cual y los 24 caen al mutar el esperado.
+EXITCODE: 0
+=============== vuelta172_tarea5_mutacion_cierre ===============
+==============================================================================
+VUELTA 172, TAREA 5: CASO POSITIVO POR MUTACION DE LAS CUATRO PIEZAS DE
+cerrar_reporte.py
+==============================================================================
+
+A) EL CASO VERDE: LAS CUATRO PUESTAS Y NO FALTA NINGUNA
+   reporte de mentira: 994 bytes -> faltan 0 []
+
+B) SE QUITA UNA A UNA Y LA QUE FALTA TIENE QUE SALIR NOMBRADA
+   sin veredicto                    faltan 1, codigos ['(1)']
+   sin cabecera pegada              faltan 1, codigos ['(2)']
+   sin secciones 3 a 9              faltan 2, codigos ['(3)', '(4)']
+   sin la bateria dentro de la 9    faltan 1, codigos ['(4)']
+
+C) LOS DOS CASOS TRAMPOSOS: NO BASTA CON QUE EL ROTULO DESAPAREZCA
+   hueco quitado pero filas NO pegadas -> faltan 1, codigos ['(2)']
+   bateria a medias dentro de la 9  -> faltan 1, codigos ['(4)']
+   bateria de cero lineas            -> faltan 1, codigos ['(4)']
+   tallador sin filas                -> faltan 1, codigos ['(2)']
+
+D) SIN NINGUNA DE LAS CUATRO, LAS CUATRO TIENEN QUE SALIR
+   reporte sin cerrar del todo -> faltan 4, codigos ['(1)', '(2)', '(3)', '(4)']
+
+E) EL ESQUELETO RECIEN TALLADO, QUE ES EL CASO REAL DEL PRINCIPIO
+   esqueleto sin cerrar -> faltan 4, codigos ['(1)', '(2)', '(3)', '(4)']
+   (esto es lo que las vueltas 170 y 171 dejaron commiteado: si este
+    instrumento hubiera existido, habria salido ROJO en vez de callar)
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   A_con_las_cuatro_no_falta_ninguna                        PASA   (real=0 esperado=0)
+   A_y_no_nombra_ningun_codigo                              PASA   (real=[] esperado=[])
+   B_sin_veredicto_da_al_menos_una                          PASA   (real=True esperado=True)
+   B_sin_veredicto_nombra_la_pieza                          PASA   (real=True esperado=True)
+   B_sin_cabecera_pegada_da_al_menos_una                    PASA   (real=True esperado=True)
+   B_sin_cabecera_pegada_nombra_la_pieza                    PASA   (real=True esperado=True)
+   B_sin_secciones_3_a_9_da_al_menos_una                    PASA   (real=True esperado=True)
+   B_sin_secciones_3_a_9_nombra_la_pieza                    PASA   (real=True esperado=True)
+   B_sin_la_bateria_dentro_de_la_9_da_al_menos_una          PASA   (real=True esperado=True)
+   B_sin_la_bateria_dentro_de_la_9_nombra_la_pieza          PASA   (real=True esperado=True)
+   C_el_hueco_quitado_sin_pegar_sigue_siendo_falta          PASA   (real=True esperado=True)
+   C_una_bateria_recortada_sigue_siendo_falta               PASA   (real=True esperado=True)
+   C_una_bateria_vacia_es_falta                             PASA   (real=True esperado=True)
+   C_un_tallador_sin_filas_es_falta                         PASA   (real=True esperado=True)
+   D_sin_nada_faltan_las_cuatro                             PASA   (real=4 esperado=4)
+   D_y_estan_las_cuatro_nombradas                           PASA   (real=['(1)', '(2)', '(3)', '(4)'] esperado=['(1)', '(2)', '(3)', '(4)'])
+   E_un_esqueleto_recien_tallado_falla_las_cuatro           PASA   (real=4 esperado=4)
+   CIFRA casos: 17 | pasan: 17 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_con_las_cuatro_no_falta_ninguna                        CAE   (esperado mutado=1)
+   A_y_no_nombra_ningun_codigo                              CAE   (esperado mutado=['(9)'])
+   B_sin_veredicto_da_al_menos_una                          CAE   (esperado mutado=False)
+   B_sin_veredicto_nombra_la_pieza                          CAE   (esperado mutado=False)
+   B_sin_cabecera_pegada_da_al_menos_una                    CAE   (esperado mutado=False)
+   B_sin_cabecera_pegada_nombra_la_pieza                    CAE   (esperado mutado=False)
+   B_sin_secciones_3_a_9_da_al_menos_una                    CAE   (esperado mutado=False)
+   B_sin_secciones_3_a_9_nombra_la_pieza                    CAE   (esperado mutado=False)
+   B_sin_la_bateria_dentro_de_la_9_da_al_menos_una          CAE   (esperado mutado=False)
+   B_sin_la_bateria_dentro_de_la_9_nombra_la_pieza          CAE   (esperado mutado=False)
+   C_el_hueco_quitado_sin_pegar_sigue_siendo_falta          CAE   (esperado mutado=False)
+   C_una_bateria_recortada_sigue_siendo_falta               CAE   (esperado mutado=False)
+   C_una_bateria_vacia_es_falta                             CAE   (esperado mutado=False)
+   C_un_tallador_sin_filas_es_falta                         CAE   (esperado mutado=False)
+   D_sin_nada_faltan_las_cuatro                             CAE   (esperado mutado=5)
+   D_y_estan_las_cuatro_nombradas                           CAE   (esperado mutado=['(1)', '(2)', '(3)', '(4)', '(9)'])
+   E_un_esqueleto_recien_tallado_falla_las_cuatro           CAE   (esperado mutado=5)
+   CIFRA casos que caen al mutar el esperado: 17 de 17
+
+VERDE: los 17 casos pasan tal cual y los 17 caen al mutar el esperado.
+EXITCODE: 0

@@ -1,0 +1,87 @@
+==============================================================================
+VUELTA 173, TAREA 1.b: CASO POSITIVO POR MUTACION DEL HUECO DECLARADO
+Y MEDIDO de cerrar_reporte.py
+==============================================================================
+
+A) EL HUECO COMPLETO SI CIERRA (si esto no pasara, la 1.b no serviria)
+   hueco completo -> le faltan 0 motivo(s): []
+   reporte con hueco completo y bateria vacia -> faltan 0, codigos []
+
+B) LOS TRES QUE EL ENCARGO EXIGE QUE CAIGAN
+   un hueco SIN MEDICION                motivos 1, codigos ['(4)']
+      el hueco no trae sus bytes medidos
+   un hueco SIN ATRIBUCION              motivos 1, codigos ['(4)']
+      el hueco no trae atribucion de quien si la corrio ni declaracion de que no la corrio nadie
+   un hueco con la ATRIBUCION VACIA     motivos 1, codigos ['(4)']
+      el hueco no trae atribucion de quien si la corrio ni declaracion de que no la corrio nadie
+   una CORRIDA DE OTRA VUELTA           motivos 2, codigos ['(4)']
+      el hueco no nombra la bateria de la vuelta 172
+
+C) LA AUSENCIA MUDA NO ES UN HUECO DECLARADO
+   seccion 9 muda -> motivos 1, codigos ['(4)']
+
+D) UNA CORRIDA DE OTRA VUELTA PEGADA COMO BATERIA TAMPOCO PASA
+   la bateria de SU vuelta   -> faltan 0, codigos []
+   la bateria de la 171      -> faltan 1, codigos ['(4)']
+
+E) SIN SABER DE QUE VUELTA ES EL REPORTE, UN HUECO NO SE PUEDE JUZGAR
+   vuelta=None -> motivos 1, codigos ['(4)']
+
+F) LOS 17 CASOS VIEJOS LLAMAN CON TRES ARGUMENTOS Y NO SE ROMPEN
+   piezas_que_faltan(texto, filas, bateria) -> faltan 0, codigos []
+
+G) PASADA 1, LOS CASOS TAL CUAL
+   A_al_hueco_completo_no_le_falta_nada                     PASA
+   A_el_reporte_con_hueco_completo_no_falla                 PASA
+   A_y_no_nombra_la_pieza_4                                 PASA
+   B_un_hueco_SIN_MEDICION_da_al_menos_un_motivo            PASA
+   B_un_hueco_SIN_MEDICION_nombra_su_causa                  PASA
+   B_un_hueco_SIN_MEDICION_hace_fallar_la_pieza_4           PASA
+   B_un_hueco_SIN_ATRIBUCION_da_al_menos_un_motivo          PASA
+   B_un_hueco_SIN_ATRIBUCION_nombra_su_causa                PASA
+   B_un_hueco_SIN_ATRIBUCION_hace_fallar_la_pieza_4         PASA
+   B_un_hueco_con_la_ATRIBUCION_VACIA_da_al_menos_un_motivo PASA
+   B_un_hueco_con_la_ATRIBUCION_VACIA_nombra_su_causa       PASA
+   B_un_hueco_con_la_ATRIBUCION_VACIA_hace_fallar_la_pieza_4 PASA
+   B_una_CORRIDA_DE_OTRA_VUELTA_da_al_menos_un_motivo       PASA
+   B_una_CORRIDA_DE_OTRA_VUELTA_nombra_su_causa             PASA
+   B_una_CORRIDA_DE_OTRA_VUELTA_hace_fallar_la_pieza_4      PASA
+   C_la_ausencia_muda_da_motivo                             PASA
+   C_y_la_nombra_como_muda                                  PASA
+   C_y_hace_fallar_la_pieza_4                               PASA
+   D_la_bateria_de_su_vuelta_cierra                         PASA
+   D_una_bateria_ajena_hace_fallar_la_4                     PASA
+   D_y_dice_de_que_vuelta_es                                PASA
+   E_sin_vuelta_el_hueco_no_se_juzga                        PASA
+   E_y_la_pieza_4_falla                                     PASA
+   F_la_llamada_de_tres_argumentos_sigue_cerrando           PASA
+   CIFRA casos que pasan: 24 de 24
+
+H) PASADA 2, SE MUTA EL ESPERADO Y CADA CASO TIENE QUE CAER
+   A_al_hueco_completo_no_le_falta_nada                     CAE  (esperado mutado=1)
+   A_el_reporte_con_hueco_completo_no_falla                 CAE  (esperado mutado=1)
+   A_y_no_nombra_la_pieza_4                                 CAE  (esperado mutado=True)
+   B_un_hueco_SIN_MEDICION_da_al_menos_un_motivo            CAE  (esperado mutado=False)
+   B_un_hueco_SIN_MEDICION_nombra_su_causa                  CAE  (esperado mutado=False)
+   B_un_hueco_SIN_MEDICION_hace_fallar_la_pieza_4           CAE  (esperado mutado=False)
+   B_un_hueco_SIN_ATRIBUCION_da_al_menos_un_motivo          CAE  (esperado mutado=False)
+   B_un_hueco_SIN_ATRIBUCION_nombra_su_causa                CAE  (esperado mutado=False)
+   B_un_hueco_SIN_ATRIBUCION_hace_fallar_la_pieza_4         CAE  (esperado mutado=False)
+   B_un_hueco_con_la_ATRIBUCION_VACIA_da_al_menos_un_motivo CAE  (esperado mutado=False)
+   B_un_hueco_con_la_ATRIBUCION_VACIA_nombra_su_causa       CAE  (esperado mutado=False)
+   B_un_hueco_con_la_ATRIBUCION_VACIA_hace_fallar_la_pieza_4 CAE  (esperado mutado=False)
+   B_una_CORRIDA_DE_OTRA_VUELTA_da_al_menos_un_motivo       CAE  (esperado mutado=False)
+   B_una_CORRIDA_DE_OTRA_VUELTA_nombra_su_causa             CAE  (esperado mutado=False)
+   B_una_CORRIDA_DE_OTRA_VUELTA_hace_fallar_la_pieza_4      CAE  (esperado mutado=False)
+   C_la_ausencia_muda_da_motivo                             CAE  (esperado mutado=False)
+   C_y_la_nombra_como_muda                                  CAE  (esperado mutado=False)
+   C_y_hace_fallar_la_pieza_4                               CAE  (esperado mutado=False)
+   D_la_bateria_de_su_vuelta_cierra                         CAE  (esperado mutado=1)
+   D_una_bateria_ajena_hace_fallar_la_4                     CAE  (esperado mutado=False)
+   D_y_dice_de_que_vuelta_es                                CAE  (esperado mutado=False)
+   E_sin_vuelta_el_hueco_no_se_juzga                        CAE  (esperado mutado=2)
+   E_y_la_pieza_4_falla                                     CAE  (esperado mutado=False)
+   F_la_llamada_de_tres_argumentos_sigue_cerrando           CAE  (esperado mutado=1)
+   CIFRA casos que caen al mutar el esperado: 24 de 24
+
+VERDE: los 24 casos pasan tal cual y los 24 caen al mutar el esperado.

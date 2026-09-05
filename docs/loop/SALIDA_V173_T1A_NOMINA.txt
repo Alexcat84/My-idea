@@ -1,0 +1,31 @@
+==============================================================================
+TAREA 1.a. LOS CUATRO ARNESES DE LA 172 ENTRAN EN LA NOMINA
+==============================================================================
+
+A) ANTES, MEDIDO CON LA FUNCION PURA DEL PROPIO FICHERO
+   ANTES    entradas de VIEJAS: 78 | ultima vuelta representada: 171
+   ANTES    arneses_que_faltan(): 4 -> vuelta172_tarea1b_mutacion_registro.py, vuelta172_tarea2a_mutacion_exclusion.py, vuelta172_tarea3_mutacion_numeracion.py, vuelta172_tarea5_mutacion_cierre.py
+   ANTES    nomina_invisible_al_censo(): 0
+   ANTES    bytes: 70829 | lineas: 1268
+
+B) SE ESCRIBE, POR ADICION PURA
+   ESCRITO: scripts/loop/verificar_mutaciones_viejas.py (72663 bytes, 1297 lineas)
+   lineas anadidas: 29 | lineas borradas: 0
+   CIFRA lineas del fichero de ANTES que YA NO ESTAN: 0
+
+C) DESPUES, MEDIDO OTRA VEZ CON LA MISMA FUNCION PURA
+   DESPUES  entradas de VIEJAS: 82 | ultima vuelta representada: 172
+   DESPUES  arneses_que_faltan(): 0 -> (ninguno)
+   DESPUES  nomina_invisible_al_censo(): 0
+
+D) LO QUE EL ENCARGO EXIGE AL TERMINAR
+   la nomina tiene 82 entradas                    SI (medido: 82)
+   su ultima vuelta representada es la 172        SI (medido: 172)
+   arneses_que_faltan() queda en cero             SI (medido: [])
+   nomina_invisible_al_censo() sigue en cero      SI (medido: [])
+   la adicion fue pura (cero lineas perdidas)     SI (medido: 0)
+   la nomina crecio en exactamente cuatro         SI (medido: 4)
+
+VERDE: los cuatro arneses de la 172 estan dentro, la nomina da 82 y su ultima vuelta es la 172.
+29	0	scripts/loop/verificar_mutaciones_viejas.py
+(anadidas / borradas / fichero, medido con git diff --numstat)

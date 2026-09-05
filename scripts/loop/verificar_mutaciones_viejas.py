@@ -502,6 +502,35 @@ VIEJAS = [
     ("vuelta171_mutacion_busqueda_acta.py", False),
     ("vuelta171_tarea1a_mutacion_registro.py", False),
     ("vuelta171_tarea5a_mutacion_enchufe.py", False),
+    # --- LOS CUATRO DE LA VUELTA 172, QUE ENTRAN EN LA 173 (TAREA 1.a;
+    #     adjudicacion 6.4 del acta 172) ----------------------------------------
+    #
+    # POR QUE ENTRAN AHORA: la regla escrita mas arriba en este mismo fichero dice
+    # que una mutacion entra en la vuelta SIGUIENTE a la que nace, no mas tarde. Al
+    # abrir la vuelta 173 la funcion pura `arneses_que_faltan()` devolvia CUATRO y
+    # la ultima vuelta representada en la nomina era la 171, con 78 entradas
+    # (`docs/loop/SALIDA_V173_APERTURA.txt`, bloque H.4). El propio codigo dice que
+    # eso es ROJO.
+    #
+    # NO METEN NINGUN ROJO, Y ESTA MEDIDO ANTES DE METERLOS: el auditor los corrio
+    # los cuatro en su acta de la vuelta 172 (43 de 43, 27 de 27, 24 de 24 y 17 de
+    # 17), y esta misma vuelta los vuelve a correr uno a uno antes del parche
+    # (`docs/loop/SALIDA_V173_T1A_ANTES.txt`) y dentro de la bateria despues
+    # (`docs/loop/SALIDA_V173_BATERIA.txt`).
+    #
+    # LOS CUATRO CON SUJETO CONGELADO, que es la condicion desde la vuelta 148, y
+    # ninguno admite `--sujeto`: los cuatro fabrican los suyos.
+    #   . `vuelta172_tarea1b_mutacion_registro.py`: actas de mentira en memoria mas
+    #     el acta 171, ya cerrada y firmada.
+    #   . `vuelta172_tarea2a_mutacion_exclusion.py`: nombres de fichero fabricados
+    #     como cadenas, sin tocar la carpeta de archivo.
+    #   . `vuelta172_tarea3_mutacion_numeracion.py`: mapas de hechas fabricados.
+    #   . `vuelta172_tarea5_mutacion_cierre.py`: un reporte cerrado de mentira, en
+    #     memoria, al que se le quitan las cuatro piezas una a una.
+    ("vuelta172_tarea1b_mutacion_registro.py", False),
+    ("vuelta172_tarea2a_mutacion_exclusion.py", False),
+    ("vuelta172_tarea3_mutacion_numeracion.py", False),
+    ("vuelta172_tarea5_mutacion_cierre.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

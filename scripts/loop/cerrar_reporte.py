@@ -37,12 +37,40 @@ Y CAE EN ROJO SI AL TERMINAR FALTA CUALQUIERA DE LAS CUATRO PIEZAS:
                                   esta.
   (3) LAS SECCIONES 3 A 9       . las siete existen.
   (4) LA BATERIA DENTRO DE LA 9 . la salida de la bateria de ESTA vuelta esta
-                                  dentro de la seccion 9, y no vacia.
+                                  dentro de la seccion 9 y no vacia, **O** un
+                                  HUECO DECLARADO Y MEDIDO en su sitio.
+
+LA PIEZA (4) ADMITE EL HUECO DECLARADO Y MEDIDO (vuelta 173, TAREA 1.b;
+adjudicacion 6.2 del acta del auditor de la vuelta 172). POR QUE CAMBIA, Y NO ES
+DOCTRINA NUEVA SINO UN CHOQUE ENTRE DOS REGLAS ESCRITAS: chocan la 6.6 del acta
+171, que exige *"la salida de la bateria dentro de la 9"*, y la regla de la casa
+que el reporte de la 171 aplico al pie de la letra, *"el hueco se declara y no se
+rellena"*, que sale de `EJECUTOR.md` 1 y del carril `9.10`. Tal como estaba, este
+instrumento **solo podia cerrar los reportes que no lo necesitaban** y no podia
+cerrar ninguno de los tres que habian fallado, que es exactamente para lo que
+nacio.
+
+LA LETRA ES ESTRECHA A PROPOSITO, y es la del acta:
+
+  . la (4) se satisface con LA SALIDA DE LA BATERIA DENTRO DE LA SECCION 9,
+    COMO HASTA AHORA;
+  . O con un HUECO DECLARADO que traiga LAS TRES COSAS JUNTAS: el NOMBRE DEL
+    FICHERO, sus BYTES MEDIDOS EN LA CORRIDA, y la ATRIBUCION de quien si la
+    corrio o la declaracion de que no la corrio nadie;
+  . LA AUSENCIA MUDA NO LA SATISFACE: una seccion 9 que se calla no es un hueco
+    declarado, es un hueco escondido;
+  . UNA CORRIDA DE OTRA VUELTA PEGADA AHI TAMPOCO: ni como bateria (se mira el
+    numero de vuelta del fichero que se pega) ni dentro del hueco (se mira el
+    numero de vuelta de todo `SALIDA_V<N>_BATERIA` que la seccion 9 nombre).
 
 LAS CUATRO SE COMPRUEBAN CON `piezas_que_faltan()`, que es PURA y recibe el
 texto: asi su caso positivo por mutacion puede tumbarla una a una sin tocar el
 repo ni escribir nada. Su arnes es
-`scripts/loop/vuelta172_tarea5_mutacion_cierre.py`.
+`scripts/loop/vuelta172_tarea5_mutacion_cierre.py`, cuyos 17 casos SIGUEN VERDES
+y no se tocan (condicion expresa de la 6.2), y la conducta nueva se prueba en un
+arnes NUEVO, `scripts/loop/vuelta173_tarea1b_mutacion_hueco.py`. Los dos
+parametros nuevos de `piezas_que_faltan()` son OPCIONALES justamente para que los
+17 casos viejos, que la llaman con tres argumentos, sigan llamandola igual.
 
 LO QUE NO HACE: no talla la cabecera (eso es de `tallar_cabecera_reporte.py`), no
 archiva (eso es de `archivar_reporte.py`), no corre la bateria y NO ANEXA TAREAS
@@ -55,6 +83,12 @@ USO:
       --tallador docs/loop/SALIDA_V172_TALLADOR_CABECERA.txt \
       --bateria docs/loop/SALIDA_V172_BATERIA.txt \
       --veredicto "LA VUELTA 172 ..."
+
+  Y cuando la bateria de esa vuelta NO CORRIO, con la atribucion delante, que es
+  lo unico que convierte una ausencia muda en un hueco declarado:
+
+  python scripts/loop/cerrar_reporte.py --vuelta 172 ... \
+      --hueco-atribucion "NADIE la corrio: ni el ejecutor ni el auditor."
 """
 import argparse
 import hashlib
@@ -72,6 +106,15 @@ MARCA_CIERRA = "<!-- FIN CABECERA TALLADA -->"
 VEREDICTO_VIEJO = "**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.**"
 HUECO_CABECERA = "PENDIENTE DE TALLAR AL CIERRE"
 CAB_9 = "## 9. LA BATERIA DE MUTACIONES, CORRIDA ENTERA Y SOLA AL CIERRE"
+CAB_9_HUECO = "## 9. LA BATERIA DE MUTACIONES: HUECO DECLARADO Y MEDIDO"
+
+# LAS TRES MARCAS DEL HUECO DECLARADO. Son literales y no expresiones sueltas
+# justamente para que un hueco no se pueda declarar "por parecido": o trae la
+# marca, o no hay hueco declarado y la ausencia sigue siendo muda.
+MARCA_HUECO = "HUECO DECLARADO Y MEDIDO"
+MARCA_ATRIBUCION = "ATRIBUCION:"
+PATRON_FICHERO_BATERIA = re.compile(r"SALIDA_V(\d+)_BATERIA")
+PATRON_BYTES = re.compile(r"(\d[\d.]*)\s+bytes")
 
 
 def sha(t):
@@ -86,7 +129,59 @@ def rel(ruta):
     return os.path.relpath(ruta, RAIZ).replace(os.sep, "/")
 
 
-def piezas_que_faltan(texto, filas_tallador, lineas_bateria):
+def vuelta_de_fichero(nombre):
+    """El numero de vuelta que lleva dentro un `SALIDA_V<N>_BATERIA...`, o None
+    si el nombre no dice de que vuelta es. PURA."""
+    if not nombre:
+        return None
+    m = PATRON_FICHERO_BATERIA.search(nombre)
+    return int(m.group(1)) if m else None
+
+
+def hueco_declarado_que_falta(seccion9, vuelta):
+    """LO QUE LE FALTA A UN HUECO PARA ESTAR DECLARADO Y MEDIDO. Devuelve la
+    lista de motivos, VACIA si el hueco esta completo.
+
+    LAS TRES COSAS TIENEN QUE VENIR JUNTAS (adjudicacion 6.2 del acta 172): el
+    NOMBRE DEL FICHERO, sus BYTES MEDIDOS y la ATRIBUCION. Traer dos de tres no
+    es un hueco declarado a medias: es un hueco que no cuenta.
+
+    PURA a proposito, como su hermana `piezas_que_faltan()`: recibe el texto de
+    la seccion 9 y el numero de vuelta, y no lee ni escribe nada. Asi su caso
+    positivo por mutacion la puede tumbar motivo a motivo sin tocar el repo."""
+    if vuelta is None:
+        return ["no se dijo de que vuelta es este reporte, y sin eso un hueco no "
+                "se puede juzgar"]
+    if MARCA_HUECO not in seccion9:
+        return ["LA AUSENCIA ES MUDA: la seccion 9 no declara ningun hueco (no "
+                "trae la marca %r)" % MARCA_HUECO]
+    motivos = []
+
+    nombrados = sorted(set(int(n) for n in PATRON_FICHERO_BATERIA.findall(seccion9)))
+    if not nombrados:
+        motivos.append("el hueco no nombra el fichero de la bateria")
+    elif vuelta not in nombrados:
+        motivos.append("el hueco no nombra la bateria de la vuelta %d" % vuelta)
+    ajenas = [n for n in nombrados if n != vuelta]
+    if ajenas:
+        motivos.append("la seccion 9 trae la bateria de la vuelta %s, que es UNA "
+                       "CORRIDA DE OTRA VUELTA"
+                       % ", ".join(str(n) for n in ajenas))
+
+    if not PATRON_BYTES.search(seccion9):
+        motivos.append("el hueco no trae sus bytes medidos")
+
+    atribucion = ""
+    if MARCA_ATRIBUCION in seccion9:
+        atribucion = seccion9.split(MARCA_ATRIBUCION, 1)[1].split(NL, 1)[0].strip()
+    if not atribucion:
+        motivos.append("el hueco no trae atribucion de quien si la corrio ni "
+                       "declaracion de que no la corrio nadie")
+    return motivos
+
+
+def piezas_que_faltan(texto, filas_tallador, lineas_bateria,
+                      vuelta=None, nombre_bateria=None):
     """LAS CUATRO PIEZAS, COMPROBADAS SOBRE EL TEXTO YA ESCRITO. Devuelve la
     lista de las que FALTAN, vacia si estan las cuatro.
 
@@ -120,17 +215,27 @@ def piezas_que_faltan(texto, filas_tallador, lineas_bateria):
         faltan.append("(3) faltan las secciones %s"
                       % ", ".join(str(k) for k in ausentes))
 
-    # (4) LA BATERIA DENTRO DE LA SECCION 9
+    # (4) LA BATERIA DENTRO DE LA SECCION 9, O EL HUECO DECLARADO Y MEDIDO
     if (NL + "## 9.") not in texto:
         faltan.append("(4) no hay seccion 9 donde meter la bateria")
-    elif not lineas_bateria:
-        faltan.append("(4) la salida de la bateria esta vacia")
     else:
         seccion9 = texto[texto.index(NL + "## 9."):]
-        fuera = [l for l in lineas_bateria if l.rstrip() not in seccion9]
-        if fuera:
-            faltan.append("(4) %d linea(s) de la bateria no estan dentro de la "
-                          "seccion 9" % len(fuera))
+        if lineas_bateria:
+            fuera = [l for l in lineas_bateria if l.rstrip() not in seccion9]
+            if fuera:
+                faltan.append("(4) %d linea(s) de la bateria no estan dentro de la "
+                              "seccion 9" % len(fuera))
+            else:
+                ajena = vuelta_de_fichero(nombre_bateria)
+                if vuelta is not None and ajena is not None and ajena != vuelta:
+                    faltan.append("(4) la salida pegada en la seccion 9 es la de la "
+                                  "vuelta %d y no la de la %d: UNA CORRIDA DE OTRA "
+                                  "VUELTA NO SATISFACE ESTA PIEZA" % (ajena, vuelta))
+        else:
+            motivos = hueco_declarado_que_falta(seccion9, vuelta)
+            if motivos:
+                faltan.append("(4) la bateria no esta y el hueco no vale: %s"
+                              % "; ".join(motivos))
     return faltan
 
 
@@ -141,6 +246,11 @@ def main():
     ap.add_argument("--tallador", required=True)
     ap.add_argument("--bateria", required=True)
     ap.add_argument("--veredicto", required=True)
+    ap.add_argument("--hueco-atribucion", dest="hueco_atribucion", default="",
+                    help="LA ATRIBUCION DEL HUECO. Solo se usa cuando la salida "
+                         "de la bateria de ESTA vuelta esta vacia o no existe. "
+                         "Sin ella, una bateria vacia sigue siendo ROJO: la "
+                         "ausencia muda no cierra ningun reporte.")
     a = ap.parse_args()
     V = a.vuelta
 
@@ -193,9 +303,22 @@ def main():
     bateria = leer(ruta_bat) if existe and tam > 0 else ""
     lineas_bat = [l for l in bateria.split(NL) if l.strip()]
     print("   CIFRA lineas no vacias de la bateria: %d" % len(lineas_bat))
+    ajena = vuelta_de_fichero(a.bateria)
+    print("   vuelta que lleva dentro el nombre del fichero: %s" % ajena)
+    if ajena is not None and ajena != V:
+        rojos.append("el fichero de bateria que se pasa es el de la vuelta %d y se "
+                     "esta cerrando la %d. UNA CORRIDA DE OTRA VUELTA NO CIERRA "
+                     "ESTE REPORTE." % (ajena, V))
+    atribucion = a.hueco_atribucion.strip()
     if not lineas_bat:
-        rojos.append("la salida de la bateria de la vuelta %d esta vacia o no existe. "
-                     "ESTE INSTRUMENTO NO CIERRA UN REPORTE SIN SU BATERIA." % V)
+        print("   LA BATERIA DE ESTA VUELTA NO CORRIO. Se mira la atribucion:")
+        print("   --hueco-atribucion: %s"
+              % (repr(atribucion) if atribucion else "(vacia)"))
+        if not atribucion:
+            rojos.append("la salida de la bateria de la vuelta %d esta vacia o no "
+                         "existe y NO SE DECLARO NINGUNA ATRIBUCION. La ausencia "
+                         "muda no cierra un reporte: o va la bateria, o va un "
+                         "HUECO DECLARADO Y MEDIDO con --hueco-atribucion." % V)
     print("")
 
     if rojos:
@@ -228,14 +351,33 @@ def main():
     texto = texto[:i] + veredicto + texto[j + 1:]
     print("   veredicto escrito: %d bytes" % len(veredicto.encode("utf-8")))
 
-    seccion9 = (
-        CAB_9 + NL + NL +
-        "**CORRIDA ENTERA Y SOLA, Y SU SALIDA VA AQUI COMPLETA Y SIN RECORTAR.**" + NL +
-        "Fichero: `%s` (**%d bytes, %d lineas no vacias**, contadas" % (a.bateria, tam,
-                                                                       len(lineas_bat)) + NL +
-        "por `scripts/loop/cerrar_reporte.py`). **Este instrumento CAE EN ROJO si esta" + NL +
-        "seccion se queda sin ella**, que es la cuarta de sus cuatro piezas." + NL + NL +
-        "```" + NL + bateria.rstrip(NL) + NL + "```" + NL)
+    if lineas_bat:
+        seccion9 = (
+            CAB_9 + NL + NL +
+            "**CORRIDA ENTERA Y SOLA, Y SU SALIDA VA AQUI COMPLETA Y SIN RECORTAR.**" + NL +
+            "Fichero: `%s` (**%d bytes, %d lineas no vacias**, contadas" % (a.bateria, tam,
+                                                                           len(lineas_bat)) + NL +
+            "por `scripts/loop/cerrar_reporte.py`). **Este instrumento CAE EN ROJO si esta" + NL +
+            "seccion se queda sin ella**, que es la cuarta de sus cuatro piezas." + NL + NL +
+            "```" + NL + bateria.rstrip(NL) + NL + "```" + NL)
+    else:
+        # EL HUECO SE DECLARA Y NO SE RELLENA. Las tres cosas van juntas, y las
+        # dos primeras SE MIDEN AQUI con os.path.getsize: ninguna se teclea.
+        seccion9 = (
+            CAB_9_HUECO + NL + NL +
+            "**%s. LA BATERIA DE LA VUELTA %d NO CORRIO, Y EL HUECO SE DECLARA EN VEZ"
+            % (MARCA_HUECO, V) + NL +
+            "DE RELLENARSE CON OTRA COSA.**" + NL + NL +
+            "**EL NOMBRE DEL FICHERO:** `%s`." % a.bateria + NL +
+            "**SUS BYTES, MEDIDOS EN ESTA CORRIDA** con `os.path.getsize` por" + NL +
+            "`scripts/loop/cerrar_reporte.py`, no tecleados: **%d bytes**." % max(tam, 0) + NL + NL +
+            "%s %s" % (MARCA_ATRIBUCION, atribucion) + NL + NL +
+            "**POR QUE ESTO CIERRA Y UNA AUSENCIA MUDA NO.** La pieza (4) de este" + NL +
+            "instrumento admite el hueco declarado desde la vuelta 173, TAREA 1.b" + NL +
+            "(adjudicacion 6.2 del acta del auditor de la vuelta 172), y la letra es" + NL +
+            "estrecha: **el nombre, los bytes medidos y la atribucion, LAS TRES JUNTAS**." + NL +
+            "Faltando cualquiera de las tres, este instrumento sigue cayendo en ROJO, y" + NL +
+            "**una corrida de otra vuelta pegada aqui tampoco vale**." + NL)
 
     texto = texto.rstrip(NL) + NL + NL + cuerpo.rstrip(NL) + NL + NL + seccion9
     io.open(REPORTE, "w", encoding="utf-8", newline=NL).write(texto)
@@ -245,9 +387,11 @@ def main():
 
     print("D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS")
     de_nuevo = leer(REPORTE)
-    faltan = piezas_que_faltan(de_nuevo, filas, lineas_bat)
+    faltan = piezas_que_faltan(de_nuevo, filas, lineas_bat,
+                               vuelta=V, nombre_bateria=a.bateria)
     for etiqueta in ("(1) veredicto escrito", "(2) cabecera pegada",
-                     "(3) secciones 3 a 9", "(4) bateria dentro de la 9"):
+                     "(3) secciones 3 a 9",
+                     "(4) bateria dentro de la 9 o hueco declarado"):
         codigo = etiqueta[:3]
         mal = [f for f in faltan if f.startswith(codigo)]
         print("   %-34s %s" % (etiqueta, "SI" if not mal else "NO: " + mal[0]))
