@@ -1,0 +1,30 @@
+==============================================================================
+LA COMPOSICION DE LOS 9 TRAMOS EN UNA SOLA SALIDA
+==============================================================================
+  CIFRA entradas de la nomina (leida del modulo): 88
+
+  TRAMO 1: SALIDA_V176_BATERIA_TRAMO_1.txt           7883 bytes disco |    7883 bytes LF |  108 lineas | sha256 3eb603bf542d | 10 entradas
+  TRAMO 2: SALIDA_V176_BATERIA_TRAMO_2.txt           6090 bytes disco |    6090 bytes LF |  102 lineas | sha256 ddcb66f52ca4 | 10 entradas
+  TRAMO 3: SALIDA_V176_BATERIA_TRAMO_3.txt           6138 bytes disco |    6138 bytes LF |  102 lineas | sha256 8d20b549a124 | 10 entradas
+  TRAMO 4: SALIDA_V176_BATERIA_TRAMO_4.txt           6177 bytes disco |    6177 bytes LF |  102 lineas | sha256 f696b14aad78 | 10 entradas
+  TRAMO 5: SALIDA_V176_BATERIA_TRAMO_5.txt           6166 bytes disco |    6166 bytes LF |  102 lineas | sha256 90f5d8d3d7f1 | 10 entradas
+  TRAMO 6: SALIDA_V176_BATERIA_TRAMO_6.txt           5782 bytes disco |    5782 bytes LF |  103 lineas | sha256 3b7f02d2a42d | 10 entradas
+  TRAMO 7: SALIDA_V176_BATERIA_TRAMO_7.txt           6155 bytes disco |    6155 bytes LF |  102 lineas | sha256 82375a04803e | 10 entradas
+  TRAMO 8: SALIDA_V176_BATERIA_TRAMO_8.txt           6180 bytes disco |    6180 bytes LF |  102 lineas | sha256 01670a3ad9f4 | 10 entradas
+  TRAMO 9: SALIDA_V176_BATERIA_TRAMO_9.txt           5616 bytes disco |    5616 bytes LF |   94 lineas | sha256 8554150fa59c |  8 entradas
+
+  LA COBERTURA, LEIDA DE LAS SALIDAS Y NO RECALCULADA DEL REPARTO
+  CIFRA entradas que los tramos dicen haber corrido: 88
+  CIFRA entradas de la nomina que NINGUN tramo corrio: 0
+  CIFRA entradas corridas que NO estan en la nomina: 0
+  CIFRA entradas corridas MAS DE UNA VEZ: 0
+
+LA SALIDA UNICA, MEDIDA ANTES DE NOMBRARLA EN NINGUN SITIO
+   docs/loop/SALIDA_V176_BATERIA.txt
+   CIFRA bytes en disco: 60197
+   CIFRA bytes normalizado a LF: 60197
+   CIFRA lineas: 995
+   CIFRA sha256 (LF): 2f86d9e075d4e5cecbfc724c00835ccf23bb0e4ed2c84a9904c24a2ecd34cdeb
+
+VERDE: los 9 tramos cubren la nomina entera, cada entrada EXACTAMENTE
+UNA VEZ, y la salida unica existe y mide 60197 bytes.

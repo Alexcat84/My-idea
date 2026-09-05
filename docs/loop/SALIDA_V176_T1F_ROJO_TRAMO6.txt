@@ -1,0 +1,39 @@
+EL ROJO DE LA BATERIA DE LA VUELTA 176, CON SU EVIDENCIA ENTERA Y SIN ARREGLARLO
+==============================================================================
+
+(1) LA LINEA DEL TRAMO 6 QUE LO DECLARA, de docs/loop/SALIDA_V176_BATERIA_TRAMO_6.txt:
+38:      ENTRADA DEL TRAMO: vuelta166_tarea2_mutacion_correccion.py
+58:  vuelta166_tarea2_mutacion_correccion.py exit 1  NO MORDIO            9.6s
+74:      vuelta166_tarea2_mutacion_correccion.py        9.6s
+90:  NO MORDIO      : 1 (vuelta166_tarea2_mutacion_correccion.py)
+97:ROJO: 0 con el ancla perdida, 1 que no mordieron y 0 cuya salida sellada NO SE REPITE.
+
+(2) EL CONTRASTE, de la ultima bateria con cuerpo (auditor de la vuelta 171),
+    docs/loop/SALIDA_V171_AUDITOR_BATERIA.txt. ENTONCES SALIA VERDE:
+134:  vuelta166_tarea2_mutacion_correccion.py exit 0  OK                   4.5s
+
+(3) EL CASO QUE FALLA, corrido suelto HOY. 18 de 19 pasan y los 19 CAEN al
+    mutarles el esperado, o sea que el arnes NO es vacio: lo que falla es UNO.
+   CIFRA hallazgos medidos hoy: 11
+   H_el_texto_nombra_las_tres                           FALLA   (real=11 esperado=3)
+   CIFRA casos: 19 | pasan: 18 | fallan: 1
+   H_el_texto_nombra_las_tres                           CAE   (esperado mutado=4)
+   CIFRA casos que caen al mutar el esperado: 19 de 19
+ROJO: fallos=1, casos que no caen=0
+
+(4) LA LINEA CULPABLE DEL ARNES, con su ESPERADO LITERAL. El 3 esta tecleado
+    en el codigo y el 11 sale de medir sobre el registro VIVO:
+175:    casos.append(("H_el_texto_nombra_las_tres", real.count("cae sobre"), 3))
+
+(5) QUIEN TOCO EL ARNES Y SU SUJETO POR ULTIMA VEZ. NO FUE ESTA VUELTA:
+   a23509cf 2026-09-04  TAREA 2: OP-L-01 corregida POR ADICION en sus clausulas 1 y 2, y su estado N
+   a23509cf 2026-09-04  TAREA 2: OP-L-01 corregida POR ADICION en sus clausulas 1 y 2, y su estado N
+
+(6) LA REGLA QUE ESTO INCUMPLE YA ESTABA ESCRITA, en el docstring de
+    scripts/loop/verificar_mutaciones_viejas.py desde la vuelta 145:
+71:esa misma vuelta. Un sujeto vivo hace que el verde de una vuelta no sobreviva a
+72-la vuelta. La que no pueda tener sujeto congelado entra como CASO DECLARADO,
+73-con su exit esperado y su motivo escrito en el propio fichero, como ya hacen
+74-`vuelta135_2e_mutacion_3.py` y `vuelta140_2a_mutaciones.py`.
+
+NO SE ARREGLA AQUI. EJECUTOR.md 5 y la letra (f) del encargo de la 176.
