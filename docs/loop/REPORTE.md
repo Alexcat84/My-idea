@@ -56,7 +56,7 @@ Este hueco se rellena con la tabla tallada entera cuando la vuelta cierre.
 | **TAREA 2** | BLOQUEANTE PARA LA 3. SE DESENVENENA EL CONTADOR Y SE CORRIGE EL `R.40` (adjudicaciones 6.1 y 6.3): 2.a `docs/loop/reportes/REPORTE_V<N>.md` entra en los narrativos del bucle POR PATRON, con su caso positivo por mutacion; 2.b la afirmacion falsa del `R.40` corregida por el carril del `9.10` con el reparto recomputado; 2.c el contador otra vez, con la atribucion fichero a fichero y linea a linea | **CERRADA** | `SALIDA_V172_T2_CONTAR_LD_ANTES.txt`, `_T2A_MUTACION_EXCLUSION`, `_T2A_CONTAR_LD_DESPUES`, `_T2B_CORREGIR_R40`, `_T2C_ATRIBUCION` |
 | **TAREA 3** | LA NUMERACION `LD`, QUE AHORA SI SE ESCRIBE (adjudicacion 6.2): las 16 filas de la segunda tanda de `docs/plan/LECTURAS_DIRIGIDAS.md` ganan `LD-139` a `LD-154` POR ADICION PURA, con los numeros COMPUTADOS y con dos guardas que tienen que caer por mutacion; y despues la fila de `docs/plan/00_INDICE.md` recibe su cifra de hoy por `9.21` (adjudicacion 6.10) | **CERRADA** | `SALIDA_V172_T3_NUMERAR_LD.txt`, `_T3_MUTACION_NUMERACION`, `_T3_ATRIBUCION_DESPUES`, `_T3_CONTAR_LD`, `_T3B_INDICE` |
 | **TAREA 4** | LOS TRES ARNESES Y LA BATERIA (adjudicaciones 6.4 y 6.5), Y EL ORDEN ES OBLIGATORIO: 4.a el caso `F` de `vuelta171_tarea5a_mutacion_enchufe.py` refundado sobre SUJETO CONGELADO; 4.b los tres arneses de la 171 dentro de la nomina de `verificar_mutaciones_viejas.py`; 4.c la bateria corrida ENTERA Y SOLA al cierre, con su salida en la seccion 9 | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 5** | EL CIERRE DEL REPORTE DEJA DE SER UN PASO A MANO (adjudicacion 6.6): nace `scripts/loop/cerrar_reporte.py`, de nombre estable y sin numero de vuelta, que pega la cabecera, anexa el cuerpo, escribe el veredicto y CAE EN ROJO si al terminar falta cualquiera de las cuatro piezas. Con su caso positivo por mutacion, y esta vuelta se cierra con el | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 5** | EL CIERRE DEL REPORTE DEJA DE SER UN PASO A MANO (adjudicacion 6.6): nace `scripts/loop/cerrar_reporte.py`, de nombre estable y sin numero de vuelta, que pega la cabecera, anexa el cuerpo, escribe el veredicto y CAE EN ROJO si al terminar falta cualquiera de las cuatro piezas. Con su caso positivo por mutacion, y esta vuelta se cierra con el | **CERRADA** | `SALIDA_V172_T5_MUTACION_CIERRE.txt`, `_T5_CERRAR_REPORTE` (la corrida de esta misma vuelta) |
 <!-- FIN TABLA DE TAREAS -->
 
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
@@ -443,5 +443,69 @@ una cifra con su corte sino una contradiccion, **y la habria creado yo**. Se
 adosa por el mismo `9.21`, diciendo en palabras el antes y el despues (*"82 antes
 de la TAREA 3 de la vuelta 172, 98 despues"*, diferencia exacta **16**), y **sin
 tocar el 82, ni el 81, ni el 65**. Va como `D.7`.
+
+### TAREA 5. EL CIERRE DEL REPORTE DEJA DE SER UN PASO A MANO
+
+**NACE `scripts/loop/cerrar_reporte.py`, DE NOMBRE ESTABLE Y SIN NUMERO DE
+VUELTA** (adjudicacion 6.6 del acta 171), como sus hermanos
+`paso0_archivar_anterior.py`, `tallar_cabecera_reporte.py`,
+`archivar_reporte.py`, `serie_de_registros.py` y `aislador_de_ciega.py`, **para
+que el proximo clon no lo pierda**. Su plano es
+`vuelta171_tarea1b_cerrar_reporte_170.py`, que ya sabia hacer esto para un
+reporte ajeno; lo que cambia es que aqui **esta parametrizado** y **cae en rojo**.
+
+**LA CAUSA QUE LO PIDE ESTA MEDIDA Y NO SUPUESTA:** `vuelta171_cierre.py` **solo
+mide**, escribe once ficheros `SALIDA_*` y **no toca `REPORTE.md` en ninguna
+linea**. Cerrar el reporte era un paso a mano que venia despues, y **ahi cayeron
+las dos ultimas vueltas**. El clon de esta vuelta, `vuelta172_cierre.py`, lo dice
+en su propia cabecera para que nadie vuelva a confiarse.
+
+**LO QUE HACE, EN UN SOLO ACTO:** pega la cabecera leyendola del fichero del
+tallador (ninguna celda tecleada), anexa el cuerpo del cierre comprobando su
+sha256, escribe la seccion 9 **con la salida de la bateria entera dentro**,
+escribe el veredicto de una linea, y **relee del disco**.
+
+**Y CAE EN ROJO SI AL TERMINAR FALTA CUALQUIERA DE LAS CUATRO PIEZAS:**
+
+| pieza | que exige |
+|---|---|
+| **(1)** veredicto escrito | el *"SIN ESCRIBIR TODAVIA"* ya no esta y hay veredicto en su sitio |
+| **(2)** cabecera pegada | el hueco *"PENDIENTE DE TALLAR"* ya no esta **y** todas las filas del tallador estan dentro, byte a byte |
+| **(3)** secciones 3 a 9 | las siete existen |
+| **(4)** bateria dentro de la 9 | la salida de la bateria de ESTA vuelta esta dentro de la seccion 9, entera y no vacia |
+
+**LAS CUATRO VIVEN EN UNA FUNCION PURA, `piezas_que_faltan(texto, filas,
+lineas)`, Y NO DENTRO DEL CUERPO QUE ESCRIBE.** El motivo es el mismo que en la
+TAREA 2.a: **una guarda que no se puede llamar no se puede probar por
+mutacion**.
+
+**EL CASO POSITIVO POR MUTACION:**
+`scripts/loop/vuelta172_tarea5_mutacion_cierre.py`, salida
+`docs/loop/SALIDA_V172_T5_MUTACION_CIERRE.txt`, **exit 0**: **17 casos, 17
+pasan, 17 caen al mutar el esperado**. Prueba exactamente lo que el encargo pide
+y dos cosas mas:
+
+- **se quita una pieza a una y la que falta sale NOMBRADA por su numero**;
+- **los casos tramposos**: el hueco de la cabecera quitado **pero las filas sin
+  pegar** sigue siendo falta de la **(2)**; una bateria **recortada** dentro de
+  la seccion 9 sigue siendo falta de la **(4)**; una bateria de cero lineas y un
+  tallador sin filas tambien;
+- **el escenario real del principio**: un esqueleto recien tallado, que es lo que
+  las vueltas 170 y 171 dejaron commiteado, **falla las cuatro**. Si este
+  instrumento hubiera existido, **habria salido ROJO en vez de callar**.
+
+**SUJETO CONGELADO:** todos los reportes de mentira son cadenas literales del
+proceso, **cero lecturas de disco y cero escrituras**.
+
+**Y ESTA VUELTA SE CIERRA CON EL, QUE ES LA UNICA FORMA DE SABER SI SIRVE.** Su
+corrida y su veredicto viven en `docs/loop/SALIDA_V172_T5_CERRAR_REPORTE.txt`, y
+si esa salida no existe es que el instrumento no llego a correr, cosa que
+tambien se sabria leyendo este mismo reporte.
+
+**LO QUE ESTE INSTRUMENTO NO HACE, Y VA DICHO PARA QUE NO SE LE PIDA:** no talla
+la cabecera, no archiva, no corre la bateria y **no anexa tareas**. Recibe lo que
+otros produjeron y lo monta; si algo falta lo dice en rojo **en vez de escribir
+un reporte a medias**, que es la diferencia entera con las dos vueltas
+anteriores.
 
 <!-- FIN ANEXO DE TAREAS -->
