@@ -10,6 +10,15 @@ reporte se reconstruye contando su fichero, asi que se cuenta: se recorren los
 pares reales que el instrumento da HOY y se busca cada uno, RESUELTO POR `P.1`,
 en el `clases_de_los_pares_por_leer` de su acto.
 
+Y DESDE LA VUELTA 180 (TAREA 3) CADA CIFRA QUE SE PUEDE MOVER DENTRO DE UNA
+VUELTA LLEVA SU CORTE PEGADO, cableado donde se genera y no en una frase del
+reporte. **TODAS LAS DE ESTE FICHERO SE MUEVEN**, y por eso aqui no hay columna
+que separar: las filas del registro de lecturas las escribe la propia vuelta que
+lee, y los pares reales dependen de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, que la
+propia vuelta escribe. La unica que no se mueve dentro de una vuelta de cribado
+es la cifra de actos que el instrumento viejo da, que sale de un corte sellado en
+la vuelta 15, y va dicho al lado.
+
 USO:
   python scripts/loop/vuelta179_tarea2_cobertura_final.py
 """
@@ -21,6 +30,10 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import backlog_l03_resuelto as B   # noqa: E402
 import vuelta166_tarea2_correccion_op_l_01 as T   # noqa: E402
+import verificar_mutaciones_viejas as VMV   # noqa: E402
+
+# EL SELLO DE CORTE, PRESTADO Y NO RE-IMPLEMENTADO (vuelta 180, TAREA 3).
+sello = VMV.sello_de_corte
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 REGISTRO = os.path.join(RAIZ, "docs", "plan", "OP_L_03_LECTURAS.jsonl")
@@ -39,14 +52,26 @@ def main():
     actos, _s, _c = B.actos_del_instrumento()
     reg = [json.loads(l) for l in io.open(REGISTRO, encoding="utf-8") if l.strip()]
 
-    print("A) LAS DOS FUENTES, MEDIDAS")
-    print("   CIFRA ficheros de dataset/nodos/ leidos por el resolutor: %d" % n_nodos)
-    print("   CIFRA actos que el instrumento da: %d" % len(actos))
-    print("   CIFRA filas de docs/plan/OP_L_03_LECTURAS.jsonl: %d" % len(reg))
-    print("   CIFRA de esas filas escritas por la vuelta 177: %d"
-          % sum(1 for d in reg if d.get("vuelta") == 177))
-    print("   CIFRA de esas filas escritas por la vuelta 179: %d"
-          % sum(1 for d in reg if d.get("vuelta") == 179))
+    corte = VMV.corte_de_git()
+    print("A) LAS DOS FUENTES, MEDIDAS, Y CADA CIFRA CON SU CORTE PEGADO")
+    print("   EL CORTE DE TODA ESTA CORRIDA: HEAD %s" % corte)
+    print("   CIFRA ficheros de dataset/nodos/ leidos por el resolutor: %s"
+          % sello(n_nodos, corte, "ficheros de dataset/nodos/ contados en esta corrida"))
+    print("   CIFRA actos que el instrumento da: %d (NO se mueve dentro de una "
+          "vuelta: sale del corte sellado en la vuelta 15)" % len(actos))
+    print("   CIFRA filas de docs/plan/OP_L_03_LECTURAS.jsonl: %s"
+          % sello(len(reg), corte, "filas del registro de lecturas contadas en esta corrida"))
+    # EL REPARTO POR VUELTA NO SE TECLEA NI SE LIMITA A DOS VUELTAS: se cuenta
+    # del propio registro. Hasta la 179 estaban escritas la 177 y la 179 a mano,
+    # y el dia que escriba una tercera vuelta esa lista se quedaba muda.
+    por_vuelta_filas = {}
+    for d in reg:
+        k = d.get("vuelta")
+        por_vuelta_filas[k] = por_vuelta_filas.get(k, 0) + 1
+    for v in sorted(por_vuelta_filas, key=lambda x: (x is None, x)):
+        print("   CIFRA de esas filas escritas por la vuelta %s: %s"
+              % (v, sello(por_vuelta_filas[v], corte,
+                          "filas de la vuelta %s contadas en esta corrida" % v)))
     print("")
 
     por_acto = {}
@@ -59,9 +84,12 @@ def main():
             por_vuelta.setdefault(d.get("vuelta"), set()).add(par)
     print("B) LAS LECTURAS ESCRITAS, CONTADAS DEL REGISTRO Y RESUELTAS POR P.1")
     for v in sorted(por_vuelta, key=lambda x: (x is None, x)):
-        print("   CIFRA pares con clase escrita por la vuelta %s: %d" % (v, len(por_vuelta[v])))
+        print("   CIFRA pares con clase escrita por la vuelta %s: %s"
+              % (v, sello(len(por_vuelta[v]), corte,
+                          "pares con clase de la vuelta %s contados en esta corrida" % v)))
     todas = set().union(*por_vuelta.values()) if por_vuelta else set()
-    print("   CIFRA pares distintos con clase escrita, en total: %d" % len(todas))
+    print("   CIFRA pares distintos con clase escrita, en total: %s"
+          % sello(len(todas), corte, "pares con clase contados en esta corrida"))
     print("")
 
     print("C) LOS PARES REALES DE HOY, BUSCADOS UNO A UNO EN SU ACTO")
@@ -76,9 +104,12 @@ def main():
                 cubiertos += 1
             else:
                 sin.append((n, a, b))
-    print("   CIFRA pares reales en todo el backlog: %d" % total)
-    print("   CIFRA de esos CON lectura escrita en su acto: %d" % cubiertos)
-    print("   CIFRA de esos SIN lectura: %d" % len(sin))
+    print("   CIFRA pares reales en todo el backlog: %s"
+          % sello(total, corte, "pares reales contados en esta corrida"))
+    print("   CIFRA de esos CON lectura escrita en su acto: %s"
+          % sello(cubiertos, corte, "pares reales con lectura contados en esta corrida"))
+    print("   CIFRA de esos SIN lectura: %s"
+          % sello(len(sin), corte, "pares reales sin lectura contados en esta corrida"))
     for n, a, b in sin:
         print("      SIN LECTURA: acto `%s` | %s + %s" % (n, a, b))
     if not sin:

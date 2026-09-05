@@ -29,6 +29,27 @@ instrumento da y lo que queda resuelto. Es la forma de la CORRECCION DECLARADA
 del banco 9.10 aplicada a un instrumento: **la cifra vieja no se borra, se le
 pone la nueva al lado con su procedencia**.
 
+Y CADA CIFRA QUE SE PUEDE MOVER DENTRO DE UNA VUELTA LLEVA SU CORTE PEGADO,
+CABLEADO DONDE SE GENERA Y NO EN UNA FRASE DEL REPORTE (vuelta 180, TAREA 3;
+hallazgo del fundador medido en la seccion 6 del acta 179, adjudicado por
+`banco 9.21` y por el punto 7.2 del acta 178). EL MOTIVO ESTA MEDIDO Y NO
+SUPUESTO: la 179 publico en su 2.a la tabla de tramos con `6/29/8` y `34/44/10`,
+CONTADA DE SU FICHERO Y SIENDO VERDAD, y el mismo instrumento corrido despues de
+que su propia TAREA 2 escribiera diez lecturas dio `14/39/18` y `26/34/0`. **Las
+dos son verdaderas y sin corte no hay manera de saber cual mira que.** El sello
+lo compone `sello_de_corte()` de `scripts/loop/verificar_mutaciones_viejas.py`,
+que desde la 180 recibe QUE se esta contando para no escribir la palabra `nomina`
+sobre una cifra que no lo es.
+
+QUE CIFRAS DE AQUI SE MUEVEN DENTRO DE UNA VUELTA, Y CUALES NO. **SE MUEVEN** las
+que dependen de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (pares con veredicto, y por
+tanto pares reales) y las que dependen de `docs/plan/OP_L_03_LECTURAS.jsonl` (el
+reparto por tramo entre actos leidos y actos sin mirar): las dos las escribe la
+propia campana dentro de la vuelta. **NO SE MUEVEN** dentro de una vuelta de
+cribado los actos y los pares que el instrumento viejo da, que salen de un corte
+sellado en la vuelta 15. Esa clasificacion es A MANO, va con su motivo, y su
+barrido esta en `scripts/loop/vuelta180_tarea3_barrido_de_cortes.py`.
+
 LOS DOS CAMINOS VAN SIEMPRE LOS DOS (`EJECUTOR.md` 9, toda perdida de catalogo
 declarada se re-verifica contra el grafo):
 
@@ -77,6 +98,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(os.path.dirname(AQUI))
 sys.path.insert(0, AQUI)
 import vuelta166_tarea2_correccion_op_l_01 as T   # noqa: E402
+import verificar_mutaciones_viejas as VMV   # noqa: E402
 
 NL = chr(10)
 GRAFO = os.path.join(RAIZ, "dataset", "metadata", "master_graph.json")
@@ -85,6 +107,12 @@ GRAFO = os.path.join(RAIZ, "dataset", "metadata", "master_graph.json")
 REGISTRO = os.path.join(RAIZ, "docs", "plan", "OP_L_03_LECTURAS.jsonl")
 PATRON_ACTO = re.compile(r"^\s*\[(\d+),\s*(\d+) pares\]\s*(.+)$")
 PATRON_TOTAL = re.compile(r"^BACKLOG DE OP-L-03 AL CORTE ([\d.]+): (\d+) actos, (\d+) pares")
+
+# EL SELLO DE CORTE, PRESTADO Y NO RE-IMPLEMENTADO (vuelta 180, TAREA 3).
+# Una segunda copia de la misma frase seria una segunda sede que envejeceria
+# sola: se llama a la de siempre, que es PURA y ya tiene su caso positivo por
+# mutacion en `scripts/loop/vuelta179_tarea1d_mutacion_corte.py`.
+sello = VMV.sello_de_corte
 
 
 def actos_del_instrumento():
@@ -200,17 +228,20 @@ def main():
     p("=" * 78)
     p("")
 
+    corte = VMV.corte_de_git()
     p("A) EL INSTRUMENTO VIEJO, CORRIDO Y NO CITADO DE MEMORIA")
     p("   instrumento: scripts/loop/backlog_l03_vuelta14.py (NO SE TOCA)")
+    p("   EL CORTE DE TODA ESTA CORRIDA: HEAD %s" % corte)
     actos, salida, codigo = actos_del_instrumento()
     p("   exit del instrumento: %d" % codigo)
     tot = PATRON_TOTAL.search(salida)
     if tot:
         p("   su linea de total, pegada: BACKLOG DE OP-L-03 AL CORTE %s: %s actos, "
           "%s pares" % (tot.group(1), tot.group(2), tot.group(3)))
-    p("   CIFRA actos que su LISTA DECLARADA trae: %d" % len(actos))
-    p("   CIFRA pares que el instrumento da, sumados de su lista: %d"
-      % sum(x[1] for x in actos))
+    p("   CIFRA actos que su LISTA DECLARADA trae: %d (NO se mueve dentro de una "
+      "vuelta: sale del corte sellado en la vuelta 15)" % len(actos))
+    p("   CIFRA pares que el instrumento da, sumados de su lista: %d (NO se mueve "
+      "dentro de una vuelta: sale del mismo corte)" % sum(x[1] for x in actos))
     if not actos:
         p("   ROJO: el instrumento viejo no da ningun acto. Sin universo no hay nada")
         p("         que resolver, y este fichero no inventa uno.")
@@ -225,14 +256,20 @@ def main():
     idx = veredictos_por_par(mapa)
     p("   CAMINO 1, resolutor P.1: mapa_de_alias() de "
       "scripts/loop/vuelta166_tarea2_correccion_op_l_01.py")
-    p("      CIFRA ficheros de dataset/nodos/ leidos: %d" % n_nodos)
-    p("      CIFRA alias del mapa: %d" % len(mapa))
+    p("      CIFRA ficheros de dataset/nodos/ leidos: %s"
+      % sello(n_nodos, corte, "ficheros de dataset/nodos/ contados en esta corrida"))
+    p("      CIFRA alias del mapa: %s"
+      % sello(len(mapa), corte, "alias del resolutor contados en esta corrida"))
     p("   CAMINO 2, campo deprecado del grafo: dataset/metadata/master_graph.json")
-    p("      CIFRA nodos del grafo: %d" % len(vivos_grafo))
-    p("      CIFRA nodos VIVOS (deprecado falso): %d"
-      % sum(1 for v in vivos_grafo.values() if v))
-    p("   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: %d" % len(filas_v))
-    p("   CIFRA pares distintos tras resolver: %d" % len(idx))
+    p("      CIFRA nodos del grafo: %s"
+      % sello(len(vivos_grafo), corte, "nodos del grafo contados en esta corrida"))
+    p("      CIFRA nodos VIVOS (deprecado falso): %s"
+      % sello(sum(1 for v in vivos_grafo.values() if v), corte,
+              "nodos vivos contados en esta corrida"))
+    p("   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: %s"
+      % sello(len(filas_v), corte, "filas del archivo contadas en esta corrida"))
+    p("   CIFRA pares distintos tras resolver: %s"
+      % sello(len(idx), corte, "pares distintos tras resolver contados en esta corrida"))
     p("")
 
     elegidos = [x for x in actos if x[0] >= a.minimo]
@@ -257,10 +294,13 @@ def main():
 
     no_calzan = [(n, m) for n, m in medidas if not m["los_dos_caminos_calzan"]]
     p("D) LOS DOS CAMINOS, COTEJADOS ACTO POR ACTO")
-    p("   CIFRA actos medidos: %d" % len(medidas))
-    p("   CIFRA actos donde los dos caminos CALZAN: %d"
-      % sum(1 for _n, m in medidas if m["los_dos_caminos_calzan"]))
-    p("   CIFRA actos donde NO calzan: %d" % len(no_calzan))
+    p("   CIFRA actos medidos: %d (NO se mueve dentro de una vuelta: sale del "
+      "corte sellado en la vuelta 15)" % len(medidas))
+    p("   CIFRA actos donde los dos caminos CALZAN: %s"
+      % sello(sum(1 for _n, m in medidas if m["los_dos_caminos_calzan"]), corte,
+              "actos donde los dos caminos calzan contados en esta corrida"))
+    p("   CIFRA actos donde NO calzan: %s"
+      % sello(len(no_calzan), corte, "actos donde no calzan contados en esta corrida"))
     for nombre, m in no_calzan:
         p("      NO CALZAN en `%s`: resolutor dice %d vivos (%s) y el grafo dice %d "
           "(%s)" % (nombre, m["cifra_vivos_por_resolutor"],
@@ -274,17 +314,23 @@ def main():
     con = sum(m["cifra_pares_con_veredicto"] for _n, m in medidas)
     pos = sum(m["cifra_pares_posibles"] for _n, m in medidas)
     p("E) EL TOTAL, CON LAS DOS COLUMNAS Y SIN BORRAR LA VIEJA")
+    p("   EL CORTE DE ESTA TABLA, CABLEADO DONDE SE GENERA: HEAD %s" % corte)
     p("")
-    p("| cifra | valor |")
-    p("|---|---|")
-    p("| actos que el instrumento da | **%d** |" % len(medidas))
-    p("| pares POSIBLES entre los miembros escritos | **%d** |" % pos)
-    p("| PARES QUE EL INSTRUMENTO DA (la cifra vieja, que no se borra) | **%d** |" % ins)
-    p("| pares DISUELTOS (los dos extremos en el mismo nodo tras resolver) | **%d** |" % dis)
-    p("| pares que YA TIENEN VEREDICTO buscados por el par RESUELTO | **%d** |" % con)
-    p("| PARES REALES (la cifra nueva, al lado de la vieja) | **%d** |" % rea)
-    p("| actos SIN NINGUN PAR REAL | **%d** |"
-      % sum(1 for _n, m in medidas if m["cifra_pares_reales"] == 0))
+    p("| cifra | valor | se mueve dentro de una vuelta |")
+    p("|---|---|---|")
+    p("| actos que el instrumento da | **%d** | no, sale del corte sellado en la vuelta 15 |"
+      % len(medidas))
+    p("| pares POSIBLES entre los miembros escritos | **%d** | no, sale del mismo corte |" % pos)
+    p("| PARES QUE EL INSTRUMENTO DA (la cifra vieja, que no se borra) | **%d** | no, sale del mismo corte |" % ins)
+    p("| pares DISUELTOS (los dos extremos en el mismo nodo tras resolver) | **%s** | SI, depende del resolutor de dataset/ |"
+      % sello(dis, corte, "pares disueltos contados en esta corrida"))
+    p("| pares que YA TIENEN VEREDICTO buscados por el par RESUELTO | **%s** | SI, depende de docs/INTRA_DOMINIO_VEREDICTOS.jsonl |"
+      % sello(con, corte, "pares con veredicto contados en esta corrida"))
+    p("| PARES REALES (la cifra nueva, al lado de la vieja) | **%s** | SI, es la resta de las dos de arriba |"
+      % sello(rea, corte, "pares reales contados en esta corrida"))
+    p("| actos SIN NINGUN PAR REAL | **%s** | SI, se mueve con los pares reales |"
+      % sello(sum(1 for _n, m in medidas if m["cifra_pares_reales"] == 0), corte,
+              "actos sin ningun par real contados en esta corrida"))
     p("")
     if ins:
         p("   LO QUE SOBRA, EN CRUDO: de los %d pares que el instrumento da, quedan"
@@ -301,21 +347,42 @@ def main():
         for linea in io.open(REGISTRO, encoding="utf-8"):
             if linea.strip():
                 leidos.add(json.loads(linea).get("acto"))
-    p("   CIFRA actos que el registro dice leidos: %d" % len(leidos))
-    p("   CIFRA de esos que el instrumento sigue dando: %d"
-      % sum(1 for n, _m in medidas if n in leidos))
+    p("   CIFRA actos que el registro dice leidos: %s"
+      % sello(len(leidos), corte, "actos que el registro dice leidos, contados en esta corrida"))
+    p("   CIFRA de esos que el instrumento sigue dando: %s"
+      % sello(sum(1 for n, _m in medidas if n in leidos), corte,
+              "de esos, los que el instrumento sigue dando, contados en esta corrida"))
     p("")
-    p("| tramo | actos | pares del instrumento | pares reales | pares disueltos | sobran |")
-    p("|---|---|---|---|---|---|")
+    # EL CORTE DE LA TABLA DE TRAMOS, CABLEADO DONDE SE GENERA LA TABLA Y NO EN
+    # UNA FRASE DEL REPORTE (vuelta 180, TAREA 3). ESTA TABLA ES LA QUE SE MOVIO
+    # DENTRO DE LA 179 y la que el fundador midio en la seccion 6 de su acta: sus
+    # tres columnas de la izquierda dependen de quien haya escrito en
+    # docs/plan/OP_L_03_LECTURAS.jsonl, y ese fichero lo escribe la propia vuelta.
+    p("   EL CORTE DE ESTA TABLA, CABLEADO DONDE SE GENERA: HEAD %s" % corte)
+    p("   TODA FILA DE ESTA TABLA SE MUEVE DENTRO DE UNA VUELTA: el reparto entre")
+    p("   `YA LEIDOS` y `SIN LEER` sale del registro de lecturas, que la campana")
+    p("   escribe mientras lee, y los pares reales salen del archivo de veredictos.")
+    p("")
+    p("| tramo | actos | pares del instrumento | pares reales | pares disueltos | sobran | corte |")
+    p("|---|---|---|---|---|---|---|")
     for etiqueta, filtro in (("YA LEIDOS (la 177)", True), ("SIN LEER", False)):
         sub = [(n, m) for n, m in medidas if (n in leidos) == filtro]
         s_ins = sum(m["pares_del_instrumento"] for _n, m in sub)
         s_rea = sum(m["cifra_pares_reales"] for _n, m in sub)
         s_dis = sum(m["cifra_pares_disueltos"] for _n, m in sub)
-        p("| %s | **%d** | **%d** | **%d** | **%d** | **%d** |"
-          % (etiqueta, len(sub), s_ins, s_rea, s_dis, s_ins - s_rea))
-    p("| **todos** | **%d** | **%d** | **%d** | **%d** | **%d** |"
-      % (len(medidas), ins, rea, dis, ins - rea))
+        p("| %s | **%d** | **%d** | **%d** | **%d** | **%d** | HEAD %s |"
+          % (etiqueta, len(sub), s_ins, s_rea, s_dis, s_ins - s_rea, corte))
+    p("| **todos** | **%d** | **%d** | **%d** | **%d** | **%d** | HEAD %s |"
+      % (len(medidas), ins, rea, dis, ins - rea, corte))
+    p("")
+    p("   LA MISMA TABLA, CON EL SELLO ENTERO EN CADA CIFRA QUE SE MUEVE:")
+    for etiqueta, filtro in (("YA LEIDOS (la 177)", True), ("SIN LEER", False)):
+        sub = [(n, m) for n, m in medidas if (n in leidos) == filtro]
+        p("      %-20s actos %s" % (etiqueta, sello(len(sub), corte,
+          "actos del tramo %s contados en esta corrida" % etiqueta)))
+        p("      %-20s pares reales %s" % ("", sello(
+            sum(m["cifra_pares_reales"] for _n, m in sub), corte,
+            "pares reales del tramo %s contados en esta corrida" % etiqueta)))
     p("")
 
     if no_calzan:

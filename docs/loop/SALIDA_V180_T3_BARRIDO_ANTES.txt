@@ -1,0 +1,76 @@
+==============================================================================
+EL BARRIDO DE CORTES DE LOS DOS INSTRUMENTOS (vuelta 180, TAREA 3)
+==============================================================================
+
+   corrido: backlog_l03_resuelto.py                      exit 0, 112 lineas
+   corrido: vuelta179_tarea2_cobertura_final.py          exit 0, 26 lineas
+
+A) LA TABLA DEL BARRIDO, FILA A FILA
+
+| instrumento | cifra | se mueve dentro de una vuelta | de que depende | lleva su corte |
+|---|---|---|---|---|
+| `backlog_l03_resuelto.py` | CIFRA actos que su LISTA DECLARADA trae | NO SE MUEVE | `la salida del instrumento viejo, corte sellado en la vuelta 15` | **NO LO DICE** |
+| `backlog_l03_resuelto.py` | CIFRA pares que el instrumento da, sumados de su lista | NO SE MUEVE | `la salida del instrumento viejo, corte sellado en la vuelta 15` | **NO LO DICE** |
+| `backlog_l03_resuelto.py` | CIFRA ficheros de dataset/nodos/ leidos | SE MUEVE | `dataset/nodos/` | **NO, Y DEBERIA** |
+| `backlog_l03_resuelto.py` | CIFRA alias del mapa | SE MUEVE | `dataset/nodos/` | **NO, Y DEBERIA** |
+| `backlog_l03_resuelto.py` | CIFRA nodos del grafo | SE MUEVE | `dataset/metadata/master_graph.json` | **NO, Y DEBERIA** |
+| `backlog_l03_resuelto.py` | CIFRA nodos VIVOS (deprecado falso) | SE MUEVE | `dataset/metadata/master_graph.json` | **NO, Y DEBERIA** |
+| `backlog_l03_resuelto.py` | CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl | SE MUEVE | `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | **NO, Y DEBERIA** |
+| `backlog_l03_resuelto.py` | CIFRA pares distintos tras resolver | SE MUEVE | `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | **NO, Y DEBERIA** |
+| `backlog_l03_resuelto.py` | CIFRA actos medidos | NO SE MUEVE | `la salida del instrumento viejo, corte sellado en la vuelta 15` | **NO LO DICE** |
+| `backlog_l03_resuelto.py` | CIFRA actos donde los dos caminos CALZAN | SE MUEVE | `dataset/ contra el resolutor` | **NO, Y DEBERIA** |
+| `backlog_l03_resuelto.py` | CIFRA actos donde NO calzan | SE MUEVE | `dataset/ contra el resolutor` | **NO, Y DEBERIA** |
+| `backlog_l03_resuelto.py` | | actos que el instrumento da | | NO SE MUEVE | `la salida del instrumento viejo, corte sellado en la vuelta 15` | no le hace falta, y lo dice |
+| `backlog_l03_resuelto.py` | | pares POSIBLES entre los miembros escritos | | NO SE MUEVE | `la salida del instrumento viejo, corte sellado en la vuelta 15` | no le hace falta, y lo dice |
+| `backlog_l03_resuelto.py` | | PARES QUE EL INSTRUMENTO DA | NO SE MUEVE | `la salida del instrumento viejo, corte sellado en la vuelta 15` | no le hace falta, y lo dice |
+| `backlog_l03_resuelto.py` | | pares DISUELTOS | SE MUEVE | `dataset/nodos/, por el resolutor` | **SI** |
+| `backlog_l03_resuelto.py` | | pares que YA TIENEN VEREDICTO | SE MUEVE | `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | **SI** |
+| `backlog_l03_resuelto.py` | | PARES REALES | SE MUEVE | `docs/INTRA_DOMINIO_VEREDICTOS.jsonl y dataset/` | **SI** |
+| `backlog_l03_resuelto.py` | | actos SIN NINGUN PAR REAL | | SE MUEVE | `docs/INTRA_DOMINIO_VEREDICTOS.jsonl y dataset/` | **SI** |
+| `backlog_l03_resuelto.py` | CIFRA actos que el registro dice leidos | SE MUEVE | `docs/plan/OP_L_03_LECTURAS.jsonl` | **NO, Y DEBERIA** |
+| `backlog_l03_resuelto.py` | CIFRA de esos que el instrumento sigue dando | SE MUEVE | `docs/plan/OP_L_03_LECTURAS.jsonl` | **NO, Y DEBERIA** |
+| `backlog_l03_resuelto.py` | | YA LEIDOS (la 177) | | SE MUEVE | `docs/plan/OP_L_03_LECTURAS.jsonl, LA FILA QUE SE MOVIO EN LA 179` | **SI** |
+| `backlog_l03_resuelto.py` | | SIN LEER | | SE MUEVE | `docs/plan/OP_L_03_LECTURAS.jsonl, LA FILA QUE SE MOVIO EN LA 179` | **SI** |
+| `backlog_l03_resuelto.py` | | **todos** | | SE MUEVE | `docs/INTRA_DOMINIO_VEREDICTOS.jsonl y dataset/` | **SI** |
+| `vuelta179_tarea2_cobertura_final.py` | CIFRA ficheros de dataset/nodos/ leidos por el resolutor | SE MUEVE | `dataset/nodos/` | **SI** |
+| `vuelta179_tarea2_cobertura_final.py` | CIFRA actos que el instrumento da | NO SE MUEVE | `la salida del instrumento viejo, corte sellado en la vuelta 15` | no le hace falta, y lo dice |
+| `vuelta179_tarea2_cobertura_final.py` | CIFRA filas de docs/plan/OP_L_03_LECTURAS.jsonl | SE MUEVE | `docs/plan/OP_L_03_LECTURAS.jsonl` | **SI** |
+| `vuelta179_tarea2_cobertura_final.py` | CIFRA de esas filas escritas por la vuelta | SE MUEVE | `docs/plan/OP_L_03_LECTURAS.jsonl` | **SI** |
+| `vuelta179_tarea2_cobertura_final.py` | CIFRA pares con clase escrita por la vuelta | SE MUEVE | `docs/plan/OP_L_03_LECTURAS.jsonl` | **SI** |
+| `vuelta179_tarea2_cobertura_final.py` | CIFRA pares distintos con clase escrita, en total | SE MUEVE | `docs/plan/OP_L_03_LECTURAS.jsonl` | **SI** |
+| `vuelta179_tarea2_cobertura_final.py` | CIFRA pares reales en todo el backlog | SE MUEVE | `docs/INTRA_DOMINIO_VEREDICTOS.jsonl y dataset/` | **SI** |
+| `vuelta179_tarea2_cobertura_final.py` | CIFRA de esos CON lectura escrita en su acto | SE MUEVE | `docs/plan/OP_L_03_LECTURAS.jsonl` | **SI** |
+| `vuelta179_tarea2_cobertura_final.py` | CIFRA de esos SIN lectura | SE MUEVE | `docs/plan/OP_L_03_LECTURAS.jsonl` | **SI** |
+
+B) NINGUNA CIFRA SE ESCAPA DE LA TABLA, COMPROBADO Y NO PROMETIDO
+   backlog_l03_resuelto.py                      CIFRA lineas de cifra: 23 | sin cubrir: 0
+   vuelta179_tarea2_cobertura_final.py          CIFRA lineas de cifra: 11 | sin cubrir: 0
+
+C) EL RECUENTO
+   CIFRA filas declaradas: 32
+   CIFRA de esas que SE MUEVEN dentro de una vuelta: 25
+   CIFRA de esas que NO se mueven: 7
+   CIFRA lineas de cifra en las dos salidas: 34
+   CIFRA fallos: 13
+
+   Y SE REPITE LA DECLARACION, QUE NO ES UN ADORNO: la columna
+   'se mueve dentro de una vuelta' es UNA CLASIFICACION A MANO. NO HAY
+   CASO ROJO AUTOMATICO PARA ESA COLUMNA y no se fabrica uno que se
+   apruebe solo. Lo que si es mecanico son las cuatro comprobaciones de
+   arriba, y esas si caen.
+
+ROJO: 13 fallo(s).
+   backlog_l03_resuelto.py: la cifra 'CIFRA actos que su LISTA DECLARADA trae' NO se mueve y no lo dice en su linea
+   backlog_l03_resuelto.py: la cifra 'CIFRA pares que el instrumento da, sumados de su lista' NO se mueve y no lo dice en su linea
+   backlog_l03_resuelto.py: la cifra 'CIFRA ficheros de dataset/nodos/ leidos' SE MUEVE y NO lleva su corte
+   backlog_l03_resuelto.py: la cifra 'CIFRA alias del mapa' SE MUEVE y NO lleva su corte
+   backlog_l03_resuelto.py: la cifra 'CIFRA nodos del grafo' SE MUEVE y NO lleva su corte
+   backlog_l03_resuelto.py: la cifra 'CIFRA nodos VIVOS (deprecado falso)' SE MUEVE y NO lleva su corte
+   backlog_l03_resuelto.py: la cifra 'CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl' SE MUEVE y NO lleva su corte
+   backlog_l03_resuelto.py: la cifra 'CIFRA pares distintos tras resolver' SE MUEVE y NO lleva su corte
+   backlog_l03_resuelto.py: la cifra 'CIFRA actos medidos' NO se mueve y no lo dice en su linea
+   backlog_l03_resuelto.py: la cifra 'CIFRA actos donde los dos caminos CALZAN' SE MUEVE y NO lleva su corte
+   backlog_l03_resuelto.py: la cifra 'CIFRA actos donde NO calzan' SE MUEVE y NO lleva su corte
+   backlog_l03_resuelto.py: la cifra 'CIFRA actos que el registro dice leidos' SE MUEVE y NO lleva su corte
+   backlog_l03_resuelto.py: la cifra 'CIFRA de esos que el instrumento sigue dando' SE MUEVE y NO lleva su corte
+FIN

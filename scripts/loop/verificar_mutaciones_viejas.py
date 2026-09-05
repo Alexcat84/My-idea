@@ -204,9 +204,25 @@ def corte_de_git():
         return "(no medible)"
 
 
-def sello_de_corte(denominador, head):
-    """LA CIFRA DE LA NOMINA, SIEMPRE CON SU CORTE PEGADO. PURA: recibe el
-    denominador y el head, y devuelve el texto que se imprime.
+def sello_de_corte(denominador, head, que="nomina contada en esta corrida"):
+    """UNA CIFRA QUE SE MUEVE DENTRO DE LA VUELTA, SIEMPRE CON SU CORTE PEGADO.
+    PURA: recibe la cifra, el head y QUE se esta contando, y devuelve el texto
+    que se imprime.
+
+    EL TERCER PARAMETRO NACE EN LA VUELTA 180 (TAREA 3; hallazgo del fundador
+    medido en la seccion 6 del acta 179, adjudicado por `banco 9.21` y por el
+    punto 7.2 del acta 178). Hasta hoy este sello decia `nomina` con esa palabra
+    clavada, porque la nomina era la unica cifra que sabiamos que se movia
+    dentro de la vuelta. **NO ES LA UNICA:** la tabla de tramos de
+    `scripts/loop/backlog_l03_resuelto.py` se movio dentro de la 179, de
+    `6/29/8` y `34/44/10` a `14/39/18` y `26/34/0`, y las dos mediciones eran
+    verdaderas. Con la palabra clavada, cablear este sello en la tabla de tramos
+    habria escrito la palabra `nomina` sobre una cifra que no es la nomina, o
+    sea una etiqueta falsa; con el parametro, cada sede dice QUE cuenta.
+
+    EL VALOR POR DEFECTO CONSERVA A SUS LLAMADORES VIEJOS byte a byte, y eso se
+    comprueba: `scripts/loop/vuelta179_tarea1d_mutacion_corte.py` no cambia ni
+    una linea y sigue pasando.
 
     POR QUE EXISTE, Y EL MOTIVO ESTA MEDIDO (vuelta 179, TAREA 1.d; adjudicacion
     7.2 del acta del auditor de la vuelta 178, por `banco 9.21`). La 178 publico
@@ -218,7 +234,7 @@ def sello_de_corte(denominador, head):
     CABLEADO DONDE SE GENERA LA CIFRA, NO EN UNA FRASE, que es la letra exacta
     del encargo. Quien imprima un denominador de la nomina llama a esto y no
     teclea el numero suelto."""
-    return "%d (corte: HEAD %s, nomina contada en esta corrida)" % (denominador, head)
+    return "%d (corte: HEAD %s, %s)" % (denominador, head, que)
 
 # Las CUATRO. La primera fabrica su propio reporte y nunca estuvo anclada a
 # REPORTE.md, por eso no admite --sujeto y no entra en la prueba del ancla.
@@ -758,6 +774,17 @@ VIEJAS = [
     #
     # LA NOMINA CRECE DE 104 A 105.
     ("vuelta180_tarea2c_mutacion_cableado.py", False),
+    # VUELTA 180, TAREA 3. EL CORTE DE LA TABLA DE TRAMOS (hallazgo del
+    # fundador, seccion 6 del acta 179, por `banco 9.21` y el punto 7.2 del
+    # acta 178). Prueba que la misma tabla medida en dos cortes no se
+    # confunde, que la misma cifra con dos cortes distintos tampoco, y que
+    # dos cosas distintas del mismo tamano y del mismo corte tampoco, que es
+    # la confusion que aparece al sacar el sello fuera de la nomina. Su
+    # sujeto son tres funciones puras y unos literales fabricados: no toca
+    # git, no lee ficheros y no corre nada. No admite --sujeto.
+    #
+    # LA NOMINA CRECE DE 105 A 106.
+    ("vuelta180_tarea3_mutacion_corte_de_tramos.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

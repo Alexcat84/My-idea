@@ -1,0 +1,57 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DEL CORTE DE LA TABLA DE TRAMOS (vuelta 180, 3)
+==============================================================================
+
+EL ESCENARIO, QUE ES LA MEDICION DEL FUNDADOR EN LA SECCION 6 DEL ACTA 179:
+   la 179 publico 8 pares reales en los actos ya leidos y el mismo
+   instrumento dio 18 despues, dentro de la misma vuelta.
+   LAS DOS SON VERDAD. Lo que faltaba era el corte.
+
+A) LOS CASOS, CORRIDOS
+   A_el_sello_lleva_la_cifra                                        PASA
+   A_y_lleva_el_corte_que_se_le_da                                  PASA
+   A_y_dice_QUE_esta_contando                                       PASA
+   B_ES_EL_CASO_DEL_ACTA_179_la_misma_tabla_en_dos_cortes_no_se_confunde PASA
+   B_y_las_dos_cifras_se_leen_enteras_cada_una_con_su_corte         PASA
+   C_LA_MISMA_CIFRA_CON_DOS_CORTES_DISTINTOS_NO_SE_CONFUNDE         PASA
+   C_y_la_diferencia_esta_en_el_corte_y_no_en_el_numero             PASA
+   D_DOS_COSAS_DISTINTAS_DEL_MISMO_TAMANO_Y_MISMO_CORTE_NO_SE_CONFUNDEN PASA
+   D_y_es_lo_que_el_sello_VIEJO_no_podia_distinguir                 PASA
+   E_el_valor_por_defecto_conserva_a_los_llamadores_viejos          PASA
+   F_es_PURA_dos_llamadas_iguales_dan_lo_mismo                      PASA
+   G_lleva_corte_ve_una_linea_sellada                               PASA
+   G_y_NO_ve_corte_donde_no_lo_hay                                  PASA
+   H_dice_que_no_se_mueve_reconoce_la_frase                         PASA
+   H_y_no_la_ve_donde_no_esta                                       PASA
+   I_lineas_de_cifra_recoge_las_CIFRA_y_las_filas_de_tabla          PASA
+   CIFRA casos: 16 | fallan: 0
+
+B) LA MUTACION: A CADA CASO SE LE MUEVE EL VALOR ESPERADO Y TIENE QUE CAER
+   A_el_sello_lleva_la_cifra                                        CAE
+   A_y_lleva_el_corte_que_se_le_da                                  CAE
+   A_y_dice_QUE_esta_contando                                       CAE
+   B_ES_EL_CASO_DEL_ACTA_179_la_misma_tabla_en_dos_cortes_no_se_confunde CAE
+   B_y_las_dos_cifras_se_leen_enteras_cada_una_con_su_corte         CAE
+   C_LA_MISMA_CIFRA_CON_DOS_CORTES_DISTINTOS_NO_SE_CONFUNDE         CAE
+   C_y_la_diferencia_esta_en_el_corte_y_no_en_el_numero             CAE
+   D_DOS_COSAS_DISTINTAS_DEL_MISMO_TAMANO_Y_MISMO_CORTE_NO_SE_CONFUNDEN CAE
+   D_y_es_lo_que_el_sello_VIEJO_no_podia_distinguir                 CAE
+   E_el_valor_por_defecto_conserva_a_los_llamadores_viejos          CAE
+   F_es_PURA_dos_llamadas_iguales_dan_lo_mismo                      CAE
+   G_lleva_corte_ve_una_linea_sellada                               CAE
+   G_y_NO_ve_corte_donde_no_lo_hay                                  CAE
+   H_dice_que_no_se_mueve_reconoce_la_frase                         CAE
+   H_y_no_la_ve_donde_no_esta                                       CAE
+   I_lineas_de_cifra_recoge_las_CIFRA_y_las_filas_de_tabla          CAE
+   CIFRA casos que CAEN: 16 de 16
+
+C) LA MUTACION DE LA GUARDA DEL BARRIDO, QUE ES LA OTRA MITAD
+   Se sustituye BAR.lleva_corte por una version que dice SI siempre, que es
+   la forma en que esta guarda dejaria de mirar sin que nadie lo notara.
+      con la guarda tumbada, una linea SIN corte pasaria: True
+      con la guarda de verdad, la misma linea pasa: False
+      LA GUARDA MUERDE Y LA MUTACION LA TUMBA: SI
+      la mutacion queda deshecha: SI
+
+VERDE: 16 casos, los 16 pasan y los 16 CAEN al mutarles el valor esperado. La misma tabla medida en dos cortes no se confunde, la misma cifra con dos cortes distintos tampoco, y dos cosas distintas del mismo tamano y del mismo corte tampoco. Y la guarda del barrido muerde: tumbada, una linea sin corte pasaria.
+FIN

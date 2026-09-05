@@ -80,7 +80,7 @@ vuelta cierre.
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS Y LA ETIQUETA DE FUENTE, Y ES BLOQUEANTE. (a) El acta del auditor de la vuelta 179 vive en `docs/loop/ACTA_AUDITOR.md` y NO levanta ninguna caida contra la 179: la racha de reporte vuelve a CERO, la de cifra publicada sigue en CERO y no hay correccion declarada que arrastrar. (b) LA ETIQUETA DE FUENTE, ARREGLADA, y eso LEVANTA LA PARADA DE LA 3.f DE LA 179: `clases_por_par()` LEE LA VUELTA DE LA FILA DEL REGISTRO en vez del literal `docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)` clavado, con `sha256` de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` y de `docs/plan/OP_L_03_LECTURAS.jsonl` ANTES y DESPUES dentro del propio instrumento y los CUATRO publicados, con `vuelta179_tarea3_etiqueta_de_fuente.py` re-corrido y las DOS mediciones al lado (la de antes y la de despues, y la de despues en CERO falsos o se para), con `vuelta178_tarea3_anotar_triangulos.py` re-corrido y el total de triangulos y de lados sin moverse, y con su caso positivo por mutacion sobre un registro fabricado de dos vueltas distintas | **CERRADA** | `SALIDA_V180_T1B_TRIANGULOS.txt`, `SALIDA_V180_T1B_ETIQUETA_DESPUES.txt`, `SALIDA_V180_T1B_MUTACION_ETIQUETA.txt`, `SALIDA_V180_APERTURA.txt` H.6 |
 | **TAREA 2** | EL SUJETO CONGELADO, RESUELTO Y CABLEADO, Y ES LA QUE LIMPIA LA PISTA DE LA 181. El orden es: los trece declaran, los cuatro congelan, y SOLO ENTONCES se cablea. (a) LOS TRECE QUE NO ABREN NADA VIVO DECLARAN SU SUJETO, once `LO NOMBRA SIN ABRIRLO` y dos `ABRE UN SUJETO YA CLAVADO`, una linea por arnes con el literal que la guarda busca y NINGUNA otra linea tocada, comprobado con `git diff --numstat` sobre `scripts/loop/` publicando las lineas anadidas por fichero. (b) LOS CUATRO QUE SI ABREN, CONGELADOS DE VERDAD, cada uno con que abria, que abre ahora y la prueba de que su resultado ya no se mueve. (c) Y SOLO ENTONCES EL CABLEADO al rojo global de la bateria, con la cifra de antes y su corte pegado y la de despues, que TIENE QUE DAR 0 o no se cablea. (d) NADA SE PODA DE LA NOMINA: todo arnes que esta vuelta escriba entra en `verificar_mutaciones_viejas.py` con la cuenta entera y la resta comprobada, antes de la 181 | **CERRADA** | `SALIDA_V180_T2A_DECLARAR.txt`, `SALIDA_V180_T2A_GUARDA_TRAS_DECLARAR.txt`, `SALIDA_V180_T2B_CONGELACION.txt`, `SALIDA_V180_T2B_RELECTURA.txt`, `SALIDA_V180_T2C_GUARDA_DESPUES.txt`, `SALIDA_V180_T2C_TRAMO_CABLEADO.txt`, `SALIDA_V180_T2C_MUTACION_CABLEADO.txt`, `SALIDA_V180_T2_NUMSTAT.txt` |
-| **TAREA 3** | EL CORTE, CABLEADO DONDE TODAVIA FALTA. El hallazgo es del fundador y esta medido en la seccion 6 del acta 179: la tabla de tramos de la 2.a de la 179 esta contada de su fichero y sus cifras eran verdad, pero LE FALTA EL CORTE, y sin corte no hay manera de saber cual mira que. Se cablea el sello de `sello_de_corte()` DONDE SE GENERA LA TABLA DE TRAMOS de `backlog_l03_resuelto.py`, no en una frase del reporte, por `banco 9.21` y el punto 7.2 del acta 178. Y SE BARRE EL RESTO: la lista de toda cifra de ese instrumento y de `vuelta179_tarea2_cobertura_final.py` que pueda moverse dentro de una vuelta, diciendo cuales llevan corte y cuales no, y las que no lo lleven lo llevan al terminar. Con su caso positivo por mutacion: dos cortes distintos con la misma cifra no se confunden, y la misma cifra con dos cortes distintos tampoco | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 3** | EL CORTE, CABLEADO DONDE TODAVIA FALTA. El hallazgo es del fundador y esta medido en la seccion 6 del acta 179: la tabla de tramos de la 2.a de la 179 esta contada de su fichero y sus cifras eran verdad, pero LE FALTA EL CORTE, y sin corte no hay manera de saber cual mira que. Se cablea el sello de `sello_de_corte()` DONDE SE GENERA LA TABLA DE TRAMOS de `backlog_l03_resuelto.py`, no en una frase del reporte, por `banco 9.21` y el punto 7.2 del acta 178. Y SE BARRE EL RESTO: la lista de toda cifra de ese instrumento y de `vuelta179_tarea2_cobertura_final.py` que pueda moverse dentro de una vuelta, diciendo cuales llevan corte y cuales no, y las que no lo lleven lo llevan al terminar. Con su caso positivo por mutacion: dos cortes distintos con la misma cifra no se confunden, y la misma cifra con dos cortes distintos tampoco | **CERRADA** | `SALIDA_V180_T3_BACKLOG.txt`, `SALIDA_V180_T3_COBERTURA.txt`, `SALIDA_V180_T3_BARRIDO_ANTES.txt` (rojo, 13 fallos), `SALIDA_V180_T3_BARRIDO.txt`, `SALIDA_V180_T3_MUTACION_CORTE.txt` |
 | **TAREA 4** | LAS DOS PENDIENTES BARATAS QUE YA LLEVAN VUELTAS SUBIENDO, LAS DOS TEXTO QUE MIENTE SOBRE SU PROPIA MAQUINA. (a) EL DOCSTRING DE `scripts/loop/paso0_archivar_anterior.py`, que sigue hablando de LA VUELTA ANTERIOR cuando la maquina ya pregunta por EL REPORTE QUE VA A PISAR: se arregla, se publican la linea vieja y la nueva sin borrar la vieja del reporte, y SE ESCRIBE LA GUARDA QUE HACE VISIBLE LA DIFERENCIA, un caso fabricado donde las dos preguntas NO coinciden y que demuestra que la maquina responde a la buena. (b) LA GUARDA QUE FALTA EN LA DEPENDENCIA DEL `D.4` DE LA 174: el esqueleto CLONA `vuelta_del_reporte_del_arbol()` en vez de importarla y nada avisa si el fichero del que se clono desaparece; la guarda CAE EN ROJO nombrandolo, con su caso positivo por mutacion sobre una ruta fabricada que no existe | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 5** | EL BACKLOG DE `OP-L-02`, MEDIDO Y NO LEIDO, CON LA MISMA VARA RESUELTA QUE CERRO `OP-L-03`. Se corre el instrumento viejo de `OP-L-02` por dentro y sin citarlo de memoria y se publican LOS PARES QUE DA; se le pone encima el resolutor de `P.1` y se publican LOS PARES REALES, o sea los que no estan ya en el archivo tras resolver a nodo vivo; LAS DOS COLUMNAS VAN LAS DOS Y LA VIEJA NO SE BORRA (`banco 9.10`); el reparto por tramo va CON SU CORTE PEGADO por la TAREA 3 de este mismo encargo; y LOS DOS CAMINOS TIENEN QUE CALZAR en todos los actos medidos o se publica donde y se para. LO QUE NO SE HACE: no se lee ningun par, no se escribe ningun veredicto, no se toca el marcador, no se toca el estado de ninguna ficha (`EJECUTOR.md` 4, modo de cierre) y NO SE TOCAN LOS CINCO PARES DE SALES ROADMAP, que `docs/plan/LECTURAS_DIRIGIDAS.md` deja como decision revocable del fundador: se nombran y se dejan | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
@@ -339,5 +339,116 @@ vuelta, es instrumento estable) ni `vuelta180_tarea2a_declarar_sujeto.py` ni
 **Ninguno de los tres se publica como caso positivo por mutacion**: el primero es
 un lector, el segundo una operacion de una sola corrida y el tercero una MEDICION
 de estabilidad, y asi esta escrito en sus docstrings.
+
+### TAREA 3. EL CORTE, CABLEADO DONDE TODAVIA FALTABA
+
+**EL HALLAZGO ES DEL FUNDADOR Y ESTA MEDIDO EN LA SECCION 6 DEL ACTA 179**
+(`docs/loop/ACTA_AUDITOR.md:62247`), y su propia acta dice con esas palabras
+**"NO ES UNA CAIDA Y NO LA REGISTRO COMO TAL"**: las cifras de la 2.a de la 179
+estaban contadas de su fichero y eran verdad. **Lo que faltaba es el corte.**
+
+**EL SELLO GANA UN TERCER PARAMETRO, Y NO ES UN CAPRICHO.**
+`sello_de_corte(denominador, head)` tenia la palabra `nomina` **clavada en su
+texto**: cablearlo tal cual en la tabla de tramos habria escrito `nomina` encima
+de una cifra que no es la nomina, o sea una etiqueta falsa. Ahora es
+`sello_de_corte(cifra, head, que="nomina contada en esta corrida")`, y **el valor
+por defecto conserva a sus llamadores viejos byte a byte**: lo prueba
+`scripts/loop/vuelta179_tarea1d_mutacion_corte.py`, sin tocarle una linea, que
+sigue dando **10 casos, los 10 pasan y los 10 CAEN** al mutarles el esperado.
+
+**CABLEADO DONDE SE GENERA LA TABLA, NO EN UNA FRASE.** En
+`scripts/loop/backlog_l03_resuelto.py` el corte se compone en el bloque `A)` con
+`VMV.corte_de_git()` y baja a los bloques `B)`, `D)`, `E)` y `F)`. La tabla de
+tramos, que es **la que se movio dentro de la 179**, sale hoy asi
+(`docs/loop/SALIDA_V180_T3_BACKLOG.txt`, bloque `F)`, exit **0**):
+
+| tramo | actos | pares del instrumento | pares reales | pares disueltos | sobran | corte |
+|---|---|---|---|---|---|---|
+| YA LEIDOS (la 177) | **14** | **39** | **18** | **41** | **21** | HEAD `cbe0feb94087` |
+| SIN LEER | **26** | **34** | **0** | **93** | **34** | HEAD `cbe0feb94087` |
+| **todos** | **40** | **73** | **18** | **134** | **55** | HEAD `cbe0feb94087` |
+
+**LAS TRES MEDICIONES DE LA MISMA TABLA, LAS TRES VERDADERAS, CADA UNA CON SU
+CORTE**, y la vieja no se borra (`banco 9.10`):
+
+| quien la midio | corte | actos ya leidos | pares sin leer | reales sin leer |
+|---|---|---|---|---|
+| la 2.a de la 179 (`SALIDA_V179_T2_LOS_DIEZ.txt`) | **sin corte, y eso es lo que se arregla** | 6 actos, 29 pares, 8 reales | 34 actos, 44 pares | 10 |
+| el fundador, seccion 6 del acta 179 | el de su corrida, que su acta no fija | 14 / 39 / 18 | 26 / 34 | 0 |
+| esta vuelta, bloque `H.8` de la apertura | HEAD `d3240915e994` | 14 / 39 / 18 | 26 / 34 | 0 |
+| esta vuelta, tras el cableado | HEAD `cbe0feb94087` | 14 / 39 / 18 | 26 / 34 | 0 |
+
+**EL BARRIDO DEL RESTO, Y ENCONTRO TRECE.** Instrumento nuevo:
+`scripts/loop/vuelta180_tarea3_barrido_de_cortes.py`. Corre los dos instrumentos
+que el encargo nombra, recoge **toda** linea que publique una cifra y la cruza
+con una tabla declarada. **Su primera corrida salio en ROJO con 13 cifras que se
+mueven y no llevaban su corte**, y esa corrida esta guardada sin retocar en
+`docs/loop/SALIDA_V180_T3_BARRIDO_ANTES.txt` (exit **1**). Las trece se
+cablearon, y la corrida de despues
+(`docs/loop/SALIDA_V180_T3_BARRIDO.txt`, exit **0**) da:
+
+| cifra del barrido | valor | corte |
+|---|---:|---|
+| filas declaradas | **32** | HEAD `cbe0feb94087` |
+| de esas, las que SE MUEVEN dentro de una vuelta | **25** | HEAD `cbe0feb94087` |
+| de esas, las que NO se mueven | **7** | HEAD `cbe0feb94087` |
+| lineas de cifra en las dos salidas | **34** | HEAD `cbe0feb94087` |
+| lineas de cifra **sin cubrir** por la tabla | **0** | HEAD `cbe0feb94087` |
+| fallos | **0** | HEAD `cbe0feb94087` |
+
+**LAS TRECE QUE NO LLEVABAN CORTE Y AHORA LO LLEVAN**, nombradas del fichero rojo:
+en `backlog_l03_resuelto.py`, `ficheros de dataset/nodos/ leidos`, `alias del
+mapa`, `nodos del grafo`, `nodos VIVOS`, `filas de
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, `pares distintos tras resolver`, `actos
+donde los dos caminos CALZAN`, `actos donde NO calzan`, `actos que el registro
+dice leidos` y `de esos que el instrumento sigue dando`, mas las tres que **no se
+mueven y no lo decian**: `actos que su LISTA DECLARADA trae`, `pares que el
+instrumento da` y `actos medidos`, que ahora dicen en su propia linea que salen
+del corte sellado en la vuelta 15.
+
+**Y EL SEGUNDO INSTRUMENTO, `vuelta179_tarea2_cobertura_final.py`, ENTERO:** sus
+**once** lineas de cifra llevan corte hoy
+(`docs/loop/SALIDA_V180_T3_COBERTURA.txt`, exit **0**), menos la de `actos que el
+instrumento da`, que dice en su linea que no se mueve. De paso, su reparto por
+vuelta **deja de estar tecleado en dos vueltas** (`177` y `179` a mano) y se
+cuenta del propio registro, para que el dia que escriba una tercera no se quede
+muda.
+
+**LA DECLARACION QUE `EJECUTOR.md` 1 EXIGE, Y VA DELANTE:** la columna **"se
+mueve dentro de una vuelta" es una clasificacion A MANO**, porque no hay forma de
+medir en una sola corrida si una cifra se movera en la siguiente. **NO HAY CASO
+ROJO AUTOMATICO PARA ESA COLUMNA**, y no se fabrica uno que se apruebe solo. Lo
+que **si** es mecanico y **si** cae en rojo son las cuatro comprobaciones del
+barrido: que cada cifra declarada se publique hoy, que cada movible lleve su
+corte, que cada no movible lo diga, y que **ninguna linea de cifra se escape de la
+tabla**. Esa cuarta es la que impide que la tabla se quede corta en silencio.
+
+**EL CASO POSITIVO POR MUTACION**
+(`scripts/loop/vuelta180_tarea3_mutacion_corte_de_tramos.py`, salida
+`docs/loop/SALIDA_V180_T3_MUTACION_CORTE.txt`, exit **0**): **16 casos, los 16
+pasan y los 16 CAEN** al mutarles el valor esperado.
+
+| lo que prueba | resultado |
+|---|---|
+| B, **el caso del acta 179**: la misma tabla en dos cortes (`8` y `18`) no se confunde | pasa y CAE al mutar |
+| C, **la misma cifra con dos cortes distintos** tampoco se confunde | pasa y CAE al mutar |
+| D, **dos cosas distintas del mismo tamano y del mismo corte** tampoco | pasa y CAE al mutar |
+| E, el valor por defecto conserva a los llamadores viejos | pasa y CAE al mutar |
+| G, H, I, las tres funciones puras del barrido | pasan y CAEN al mutar |
+| C del informe, **la guarda del barrido tumbada**: una linea sin corte pasaria | `True` tumbada, `False` de verdad |
+
+**LA D MERECE UNA LINEA APARTE Y ES HALLAZGO DE ESTA TAREA:** en la corrida de hoy
+hay un **18** que son pares reales y otro **18** que son pares con clase escrita.
+Con la palabra `nomina` clavada, los dos sellos habrian salido **identicos**. Esa
+confusion solo aparece al sacar el sello fuera de la nomina, y es exactamente por
+lo que el tercer parametro no es cosmetico.
+
+**LA NOMINA CRECE DE 105 A 106** con
+`vuelta180_tarea3_mutacion_corte_de_tramos.py`. Recontada al cerrar esta tarea:
+censo **166**, nomina **106**, `166 - 106 = 60` y fuera de la nomina **60**;
+`arneses_que_faltan()` **0**, invisibles al censo **0**, sujetos sin congelar
+**0**. **`vuelta180_tarea3_barrido_de_cortes.py` NO entra**, y la vara es la
+misma que en la TAREA 2: su nombre no trae ninguna de las tres familias del
+censo, y no se publica como caso positivo por mutacion.
 
 <!-- FIN ANEXO DE TAREAS -->
