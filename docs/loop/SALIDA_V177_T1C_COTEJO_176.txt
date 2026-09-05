@@ -1,0 +1,96 @@
+==============================================================================
+TAREA 1.c DE LA VUELTA 177: EL COTEJO DE LOS DOS CLONES DE LA 176, CORRIDO
+CON EL INSTRUMENTO DE LA TAREA 1.d Y NO CON UN diff PELADO
+==============================================================================
+sujetos leidos de git en el corte del acta 176 (f3087229), no del arbol,
+porque el arbol ya lleva la correccion declarada de esta misma tarea.
+
+###############################################################################
+### PAR 1: EL ESQUELETO. El acta 176 mide 33 lineas de maquina, SENTENCIAS 0
+###         y LITERALES 33.
+###############################################################################
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta175_esqueleto_reporte.py
+  B: C:/Users/AlexDesk/AppData/Local/Temp/v177/v176_esq_al_corte.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 175, 176
+  CIFRA lineas de docstring: A 38 | B 42
+  CIFRA lineas de maquina:   A 240 | B 251
+
+LOS TRES VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 33
+  CIFRA tokens de maquina: A 1260 | B 1259
+  CIFRA tokens que difieren con el texto normalizado: 1
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 1
+  CIFRA LITERALES DE TEXTO:   32
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:62  ("2", "ABRIR Y CERRAR ESTE MISMO REPORTE EN LA MISMA VUELTA, QUE ES LA SEGUNDA DE LAS DOS SEGUIDAS que `AUDITO
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:61  ("1", "LA BATERIA DE MUTACIONES ENTERA, SOLA Y CON SU DOBLE CORRIDA, Y LA NOMINA AL DIA DENTRO DE ESTA MISMA T
+     A:204  > **ESTA ES UNA VUELTA DE BATERIA Y ESO MANDA SOBRE TODO LO DEMAS** (`AUDITOR.md`
+     A:205  > 6.1, decision del fundador del 5 sep 2026): la bateria corre CADA CINCO, en una
+     A:206  > vuelta propia QUE NO LLEVA NADA MAS. Aqui no hay trabajo de plan al lado, y
+     A:207  > `OP-L-03` no se toca. **EL TOPE DE ESTA VUELTA NO ES CINCO SINO DOS**
+     A:210  > primera de esas dos; esta es la segunda.**
+     A:213  > LA VUELTA ANTERIOR.** Esta vez las dos preguntas coinciden, porque la %(ant)d si
+     A:214  > escribio su reporte y es el que hay en el arbol; el fichero corre LAS DOS
+     A:215  > igualmente y publica lo que salga de cada una, porque una guarda que solo se
+     A:216  > mira cuando difiere no se puede auditar el dia que difiera.
+     B:65  ("1", "LA BATERIA DE MUTACIONES ENTERA, SOLA Y CON SU DOBLE CORRIDA, PERO PARTIDA EN TRAMOS QUE QUEPAN EN UNA 
+     B:66  ("2", "ABRIR Y CERRAR ESTE MISMO REPORTE EN LA MISMA VUELTA. La 174 lo hizo entero, la NNN NO LLEGO (murio den
+     B:208  > **ESTA ES OTRA VEZ UNA VUELTA DE BATERIA, Y NO ES UN CAMBIO DE CADENCIA: ES LA
+     B:209  > DEUDA DE LA NNN, QUE NO SE PAGO** (`AUDITOR.md` 6.1, decision del fundador del 5
+     B:210  > sep 2026). La bateria corre CADA CINCO, en una vuelta propia QUE NO LLEVA NADA
+     B:211  > MAS, y la vuelta propia que le tocaba se murio antes de producir una linea. Aqui
+     B:212  > no hay trabajo de plan al lado, y `OP-L-03` no se toca: lleva SEIS vueltas
+     B:213  > aplazada y se cuenta en voz alta. **EL TOPE DE ESTA VUELTA NO ES CINCO SINO DOS**
+     B:216  > primera de esas dos, la NNN no cerro, y la racha VUELVE A EMPEZAR: esta es otra
+     B:217  > vez la primera.**
+     B:218  >
+     B:219  > **LO QUE SE PARTE ES EL BOCADO, NO LA BATERIA.** La NNN murio DENTRO de la
+     B:220  > corrida, y la causa esta medida y no supuesta: 87 entradas, cada una corrida DOS
+     B:221  > VECES, son un bloque indivisible de entre 57 y 75 minutos. Partirla en tramos
+     B:222  > DENTRO de esta misma vuelta no toca ninguna de las cuatro cosas que la letra del
+     B:223  > fundador fija (cadencia, soledad, integridad y la prohibicion de podar la
+     B:224  > nomina). **La nomina sigue en 87 y sigue creciendo.**
+     B:227  > LA VUELTA ANTERIOR.** Esta vez las dos preguntas vuelven a coincidir, porque la
+     B:228  > %(ant)d si escribio su reporte (ABIERTO Y SIN CERRAR, que es texto igual) y es el
+     B:229  > que hay en el arbol; el fichero corre LAS DOS igualmente y publica lo que salga
+     B:230  > de cada una, porque una guarda que solo se mira cuando difiere no se puede
+     B:231  > auditar el dia que difiera.
+
+
+FIN
+
+###############################################################################
+### PAR 2: EL CIERRE. El acta 176 dice que aqui la maquina SALE VACIA DE VERDAD.
+###############################################################################
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta175_cierre.py
+  B: C:/Users/AlexDesk/AppData/Local/Temp/v177/v176_cierre_al_corte.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 175, 176
+  CIFRA lineas de docstring: A 40 | B 40
+  CIFRA lineas de maquina:   A 68 | B 68
+
+LOS TRES VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : IDENTICO
+
+LA MAQUINA NO CAMBIA EN NADA, Y ESTA MEDIDO Y NO AFIRMADO.
+  CIFRA lineas de maquina que difieren: 0
+
+FIN

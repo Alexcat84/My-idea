@@ -29,6 +29,46 @@ maquina tocadas, y esta COMPROBADO y no afirmado: el `diff` de los dos ficheros
 con todo `175` y `176` sustituido por `NNN` SALE VACIO, y esa comprobacion se
 corrio en la vuelta 176 antes de usar este fichero.
 
+CORRECCION DECLARADA (2026-09-05, vuelta 177, TAREA 1.c; hallazgo del auditor en
+el acta 176, seccion 5, CAIDA DE REPORTE 1. LAS FRASES DE ARRIBA NO SE BORRAN:
+esta se anade debajo, que es el carril del banco 9.10 y el mismo con el que el
+fundador corrigio el "307 nodos vivos" de scripts/run_phase1.py).
+
+LO QUE ESTA MAL ES LA COMPROBACION, NO LA CONCLUSION, Y HAY QUE DECIR LAS DOS
+COSAS. La frase de arriba dice que el `diff` de los dos ficheros con todo `175`
+y `176` sustituido por `NNN` SALE VACIO. NO SALE VACIO. El auditor lo corrio y
+midio 58 lineas de diff. Y lo midio hasta el fondo antes de acusar, con este
+resultado, que es el que cambia la gravedad:
+
+    fichero                          entero   docstring   LA MAQUINA
+    vuelta176_esqueleto_reporte.py   DIFIERE  DIFIERE     DIFIERE, 33 lineas
+    vuelta176_cierre.py              DIFIERE  DIFIERE     VACIO DE VERDAD
+
+De esas 33 lineas de maquina del esqueleto, la clasificacion del auditor da
+SENTENCIAS DE CODIGO 0 y LITERALES DE TEXTO 33 (las dos filas de tarea y la
+prosa que el esqueleto escribe). O sea: LO QUE ESTA FRASE QUERIA DECIR, que la
+maquina no cambia, ES VERDAD EN LOS DOS FICHEROS; LO QUE PUBLICA, que el diff
+sale vacio, ES FALSO. Un `diff` de fichero entero entre dos clones declarados no
+sale vacio nunca, porque el docstring cuenta de que va la vuelta y debe contarlo.
+
+RE MEDIDO EN LA VUELTA 177 CON INSTRUMENTO PROPIO, y no copiando la cifra del
+acta: `scripts/loop/cotejar_clon_declarado.py`, salida en
+docs/loop/SALIDA_V177_T1C_COTEJO_176.txt. Reproduce las 33 lineas del auditor y
+el VACIO DE VERDAD de vuelta176_cierre.py. DIFIERE DEL AUDITOR EN UNA COSA Y SE
+DECLARA EN VEZ DE ALISARSE: donde el auditor clasifico a mano SENTENCIAS 0 y
+LITERALES 33, el instrumento, que clasifica por token, dice SENTENCIAS 1 y
+LITERALES 32, y la sentencia es UNA COMA FINAL de la lista `TAREAS` que el
+fichero de la 175 lleva y el de la 176 no. Una coma final no cambia lo que el
+programa hace, asi que la conclusion del auditor se sostiene entera; lo que no
+se sostiene es el CERO exacto, y por eso el numero que este fichero publica es
+el del instrumento y no el de la prosa.
+
+Y POR ESO ESTA CORRECCION NO ES LO IMPORTANTE DE LA TAREA. Una frase corregida a
+mano vuelve a torcerse en el proximo clon. Lo que impide que vuelva es el
+instrumento: A PARTIR DE LA VUELTA 178, NINGUN REPORTE ESCRIBE "CLON DECLARADO"
+SIN PEGAR SU SALIDA.
+
+
 Y LO QUE ESTE FICHERO SIGUE SIN HACER, DICHO AQUI PARA QUE NADIE SE CONFIE:
 NO CIERRA EL REPORTE. Solo mide y escribe ficheros SALIDA_*. Esa fue la causa
 medida de que las vueltas 170 y 171 murieran sin cerrar (acta 171, seccion 4.1).

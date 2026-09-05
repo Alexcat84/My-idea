@@ -1,0 +1,125 @@
+==============================================================================
+VUELTA 177, TAREA 1.d: CASO POSITIVO POR MUTACION DEL COTEJO DE CLONES
+==============================================================================
+
+A) EL SUJETO Y LOS CLONES DE MENTIRA
+   sujeto: scripts/loop/cotejar_clon_declarado.py
+   directorio temporal: C:\Users\AlexDesk\AppData\Local\Temp\v177_cotejo_x9p6gohq
+   CIFRA lineas del fichero base fabricado: 19
+
+B) CASO 1: DOS FICHEROS IDENTICOS. LOS TRES VEREDICTOS, IDENTICO
+   entero=True docstring=True maquina=True
+
+C) CASO 2: SOLO CAMBIA EL DOCSTRING. LA MAQUINA TIENE QUE SALIR IGUAL
+   entero=False docstring=False maquina=True
+
+D) CASO 3: SOLO CAMBIA UNA CADENA. SENTENCIAS 0 Y LITERALES MAS DE 0
+   (ESTA ES LA DISTINCION ENTERA DEL INSTRUMENTO)
+   maquina=False | sentencias=0 | literales=2 | flujo de codigo igual=True
+
+E) CASO 4: SOLO CAMBIA UN COMENTARIO. UN COMENTARIO ES TEXTO
+   maquina=False | sentencias=0 | literales=2
+
+F) CASO 5: CAMBIA UNA LLAMADA DE VERDAD. TIENE QUE MORDER
+   (si esto no muerde, el instrumento no sirve para nada)
+   maquina=False | sentencias=2 | literales=0 | flujo de codigo igual=False
+
+G) CASO 6: UNA CADENA DE VARIAS LINEAS SE ALARGA. SENTENCIAS 0 IGUAL
+   (ESTE ES EL CASO QUE TUMBO LA PRIMERA VERSION DEL INSTRUMENTO:
+    tapando caracter a caracter, dos cadenas de distinto largo
+    seguian difiriendo y se clasificaban como SENTENCIA DE CODIGO)
+   maquina=False | sentencias=0 | literales=3 | flujo de codigo igual=True
+   CIFRA lineas de maquina: A 18 | B 21
+
+H) CASO 7: SOLO CAMBIA EL NUMERO DE VUELTA. IDENTICOS ENTEROS
+   (los DOS numeros se sustituyen por NNN en los DOS ficheros)
+   entero=True docstring=True maquina=True
+   y SIN sustituir (numeros que no aparecen), tiene que DIFERIR:
+   entero=False
+
+I) CASO 8: FALTA UN FICHERO. ROJO, exit 1, POR SUBPROCESO
+   exit: 1
+   dice ROJO: True
+   y con los dos ficheros presentes, exit 0:
+   exit: 0
+
+J) CASO 9: --exigir-maquina-identica EXTIENDE EL ROJO A LA MAQUINA
+   EL CARRIL ESTRICTO, --exigir-maquina-identica: enrojece con
+   CUALQUIER linea de maquina distinta, INCLUIDAS las de solo texto.
+   maquina distinta         -> exit 1
+   solo texto distinto      -> exit 1
+
+   EL CARRIL UTIL, --exigir-codigo-identico: enrojece SOLO si difiere
+   una SENTENCIA DE CODIGO, y deja pasar las de solo texto. ESTE CASO
+   ES POR QUE EL SEGUNDO CARRIL EXISTE: la primera version del
+   instrumento solo tenia el estricto, y esta misma prueba lo tumbo
+   con un exit 1 donde tenia que dar 0.
+   maquina distinta         -> exit 1
+   solo texto distinto      -> exit 0
+
+K) EL DIRECTORIO TEMPORAL SE BORRO: True
+
+L) PASADA 1, LOS CASOS TAL CUAL
+   1_identicos_entero                                   PASA   (real=True esperado=True)
+   1_identicos_docstring                                PASA   (real=True esperado=True)
+   1_identicos_maquina                                  PASA   (real=True esperado=True)
+   2_solo_docstring_entero_difiere                      PASA   (real=False esperado=False)
+   2_solo_docstring_docstring_difiere                   PASA   (real=False esperado=False)
+   2_solo_docstring_maquina_identica                    PASA   (real=True esperado=True)
+   3_solo_cadena_maquina_difiere                        PASA   (real=False esperado=False)
+   3_solo_cadena_sentencias_cero                        PASA   (real=0 esperado=0)
+   3_solo_cadena_literales_hay                          PASA   (real=True esperado=True)
+   3_solo_cadena_flujo_de_codigo_igual                  PASA   (real=True esperado=True)
+   4_solo_comentario_sentencias_cero                    PASA   (real=0 esperado=0)
+   4_solo_comentario_literales_hay                      PASA   (real=True esperado=True)
+   5_llamada_distinta_maquina_difiere                   PASA   (real=False esperado=False)
+   5_llamada_distinta_sentencias_hay                    PASA   (real=True esperado=True)
+   5_llamada_distinta_flujo_de_codigo_distinto          PASA   (real=False esperado=False)
+   6_cadena_mas_larga_maquina_difiere                   PASA   (real=False esperado=False)
+   6_cadena_mas_larga_sentencias_cero                   PASA   (real=0 esperado=0)
+   6_cadena_mas_larga_flujo_de_codigo_igual             PASA   (real=True esperado=True)
+   6_cadena_mas_larga_cambia_el_conteo_de_lineas        PASA   (real=False esperado=False)
+   7_solo_el_numero_entero_identico                     PASA   (real=True esperado=True)
+   7_sin_sustituir_entero_difiere                       PASA   (real=False esperado=False)
+   8_falta_un_fichero_exit_1                            PASA   (real=1 esperado=1)
+   8_falta_un_fichero_dice_rojo                         PASA   (real=True esperado=True)
+   8_con_los_dos_ficheros_exit_0                        PASA   (real=0 esperado=0)
+   9_estricto_maquina_distinta                          PASA   (real=1 esperado=1)
+   9_estricto_solo_texto_distinto                       PASA   (real=1 esperado=1)
+   9_codigo_maquina_distinta                            PASA   (real=1 esperado=1)
+   9_codigo_solo_texto_distinto                         PASA   (real=0 esperado=0)
+   CIFRA casos: 28 | pasan: 28 | fallan: 0
+
+M) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   1_identicos_entero                                   CAE   (esperado mutado=False)
+   1_identicos_docstring                                CAE   (esperado mutado=False)
+   1_identicos_maquina                                  CAE   (esperado mutado=False)
+   2_solo_docstring_entero_difiere                      CAE   (esperado mutado=True)
+   2_solo_docstring_docstring_difiere                   CAE   (esperado mutado=True)
+   2_solo_docstring_maquina_identica                    CAE   (esperado mutado=False)
+   3_solo_cadena_maquina_difiere                        CAE   (esperado mutado=True)
+   3_solo_cadena_sentencias_cero                        CAE   (esperado mutado=1)
+   3_solo_cadena_literales_hay                          CAE   (esperado mutado=False)
+   3_solo_cadena_flujo_de_codigo_igual                  CAE   (esperado mutado=False)
+   4_solo_comentario_sentencias_cero                    CAE   (esperado mutado=1)
+   4_solo_comentario_literales_hay                      CAE   (esperado mutado=False)
+   5_llamada_distinta_maquina_difiere                   CAE   (esperado mutado=True)
+   5_llamada_distinta_sentencias_hay                    CAE   (esperado mutado=False)
+   5_llamada_distinta_flujo_de_codigo_distinto          CAE   (esperado mutado=True)
+   6_cadena_mas_larga_maquina_difiere                   CAE   (esperado mutado=True)
+   6_cadena_mas_larga_sentencias_cero                   CAE   (esperado mutado=1)
+   6_cadena_mas_larga_flujo_de_codigo_igual             CAE   (esperado mutado=False)
+   6_cadena_mas_larga_cambia_el_conteo_de_lineas        CAE   (esperado mutado=True)
+   7_solo_el_numero_entero_identico                     CAE   (esperado mutado=False)
+   7_sin_sustituir_entero_difiere                       CAE   (esperado mutado=True)
+   8_falta_un_fichero_exit_1                            CAE   (esperado mutado=2)
+   8_falta_un_fichero_dice_rojo                         CAE   (esperado mutado=False)
+   8_con_los_dos_ficheros_exit_0                        CAE   (esperado mutado=1)
+   9_estricto_maquina_distinta                          CAE   (esperado mutado=2)
+   9_estricto_solo_texto_distinto                       CAE   (esperado mutado=2)
+   9_codigo_maquina_distinta                            CAE   (esperado mutado=2)
+   9_codigo_solo_texto_distinto                         CAE   (esperado mutado=1)
+   CIFRA casos que caen al mutar el esperado: 28 de 28
+
+VERDE: los 28 casos pasan tal cual y los 28 caen al mutar el esperado.
+EXIT=0

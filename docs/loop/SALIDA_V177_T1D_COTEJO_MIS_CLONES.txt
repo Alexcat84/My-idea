@@ -1,0 +1,331 @@
+==============================================================================
+LOS CLONES DECLARADOS DE LA PROPIA VUELTA 177, COTEJADOS CON SU INSTRUMENTO
+==============================================================================
+La 177 no esta obligada a esto (la obligacion empieza en la 178), pero un
+instrumento que nace en una vuelta y no se aplica a esa misma vuelta es un
+instrumento sin estrenar. Se corre sobre los clones propios y se pega salga
+lo que salga.
+
+### CLON 1: vuelta177_apertura.py, clonado de vuelta175_apertura.py
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta175_apertura.py
+  B: scripts/loop/vuelta177_apertura.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 175, 177
+  CIFRA lineas de docstring: A 45 | B 59
+  CIFRA lineas de maquina:   A 304 | B 362
+
+LOS TRES VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 208
+  CIFRA tokens de maquina: A 2481 | B 3024
+  CIFRA tokens que difieren con el texto normalizado: 1183
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 151
+  CIFRA LITERALES DE TEXTO:   57
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:57  LOS_CINCO_DEL_ACTA = [
+     A:82  ] + ["scripts/loop/" + n for n in LOS_CINCO_DEL_ACTA]
+     A:252  import verificar_mutaciones_viejas as VMV
+     A:253  ultima, faltan = VMV.arneses_que_faltan()
+     A:254  w("entradas de la nomina VIEJAS: %d" % len(VMV.VIEJAS))
+     A:255  w("arneses que el censo reconoce en scripts/loop/: %d" % len(VMV.arneses_del_directorio()))
+     A:257  % len([n for n in os.listdir(os.path.join(RAIZ, "scripts", "loop")) if n.endswith(".py")]))
+     A:258  w("ultima vuelta representada en la nomina: %s" % ultima)
+     A:259  w("arneses_que_faltan(): %d" % len(faltan))
+     A:260  for n in faltan:
+     A:261  w("   FUERA DE LA NOMINA: " + n)
+     A:262  w("nomina_invisible_al_censo(): %d" % len(VMV.nomina_invisible_al_censo()))
+     A:263  w("familias que el censo reconoce: %s" % ", ".join(VMV.FAMILIAS_DE_ARNES))
+     A:269  devueltos = set(faltan)
+     A:270  for n in LOS_CINCO_DEL_ACTA:
+     A:271  p = os.path.join(RAIZ, "scripts", "loop", n)
+     A:272  existe = os.path.exists(p)
+     A:273  txt = io.open(p, encoding="utf-8", errors="replace").read() if existe else ""
+     A:274  w("%s" % n)
+     A:275  w("   existe: %s | disco %s bytes | admite --sujeto: %s | lo devuelve arneses_que_faltan(): %s"
+     A:276  % (existe, os.path.getsize(p) if existe else "NO EXISTE",
+     A:277  "SI" if "--sujeto" in txt else "NO",
+     A:278  "SI" if n in devueltos else "NO"))
+     A:279  w("CIFRA de los cinco del acta que la funcion pura confirma: %d de %d"
+     A:280  % (len([n for n in LOS_CINCO_DEL_ACTA if n in devueltos]), len(LOS_CINCO_DEL_ACTA)))
+     A:281  w("CIFRA que la funcion pura devuelve y el acta NO nombra: %d"
+     A:282  % len([n for n in faltan if n not in LOS_CINCO_DEL_ACTA]))
+     A:283  for n in faltan:
+     A:284  if n not in LOS_CINCO_DEL_ACTA:
+     A:285  w("   NO NOMBRADO POR EL ACTA: " + n)
+     A:288  w("=== H.7 LAS CORRIDAS DE BATERIA DE docs/loop/, CON SUS BYTES ===")
+     A:289  w("(regla del 5 sep 2026: LA RUTA QUE PROMETE PRUEBA ES CIFRA, y CERO BYTES es")
+     A:290  w(" CAIDA DE CIFRA. El encargo dice que llevan CUATRO vueltas en cero: se mide)")
+     A:291  vacias = 0
+     A:292  todas = [n for n in sorted(os.listdir(LOOP)) if "BATERIA" in n and n.endswith(".txt")]
+     A:293  for n in todas:
+     A:294  tam = os.path.getsize(os.path.join(LOOP, n))
+     A:295  if tam == 0:
+     A:296  vacias += 1
+     A:297  w("   %-46s -> %d bytes%s" % (n, tam, "   CERO BYTES" if tam == 0 else ""))
+     A:298  w("CIFRA ficheros de bateria en docs/loop/: %d" % len(todas))
+     A:299  w("CIFRA de ellos con CERO BYTES: %d" % vacias)
+     A:305  for n in todas:
+     A:306  p = os.path.join(LOOP, n)
+     A:307  if os.path.getsize(p) == 0:
+     A:308  continue
+     A:309  t = io.open(p, encoding="utf-8", errors="replace").read()
+     A:310  for l in t.split(NL):
+     A:311  if ("CIFRA TIEMPO TOTAL" in l and "minutos" in l) or "MUTACIONES VIEJAS." in l:
+     A:312  w("   %s :: %s" % (n, l.strip()))
+     B:71  # LOS SEIS SUJETOS DE LA TAREA 1, nombrados aqui para que el bloque H no los
+     B:72  # pueda elegir despues de ver el resultado.
+     B:73  SUJETOS_T1 = [
+     B:74  "scripts/loop/vuelta166_tarea2_mutacion_correccion.py",
+     B:101  ] + SUJETOS_T1
+     B:103  FRASE_CLON = "SALE VACIO"
+     B:140  w("regimen: VUELTA NORMAL, NO DE BATERIA (acta 176 punto 7.8: la proxima es la 181).")
+     B:249  w(" La de bateria NO SE VA A PRODUCIR: esta vuelta no es de bateria y la seccion 9")
+     B:250  w(" cierra con el HUECO DECLARADO Y MEDIDO, acta 176 punto 7.8)")
+     B:275  w(" que la medicion viva da 11. NI UNA NI OTRA SE COPIAN: se localiza la linea")
+     B:276  w(" en el fichero y se recomputa la cifra viva con las funciones puras del sujeto)")
+     B:277  ARNES = os.path.join(RAIZ, "scripts", "loop", "vuelta166_tarea2_mutacion_correccion.py")
+     B:278  txt_arnes = io.open(ARNES, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:279  ls_arnes = txt_arnes.split(NL)
+     B:280  w("fichero: scripts/loop/vuelta166_tarea2_mutacion_correccion.py (%d lineas)" % len(ls_arnes))
+     B:281  for i, l in enumerate(ls_arnes, 1):
+     B:282  if "H_el_texto_nombra" in l or "H_con_un_hallazgo" in l:
+     B:283  w("   LINEA %d: %s" % (i, l.strip()))
+     B:284  w("CIFRA lineas que llevan el literal 'cae sobre': %d"
+     B:285  % len([l for l in ls_arnes if "cae sobre" in l]))
+     B:286  try:
+     B:288  import vuelta166_tarea2_correccion_op_l_01 as T166   # noqa: E402
+     B:289  _mapa, _nn = T166.mapa_de_alias()
+     B:290  _once = T166.las_once()
+     B:291  _V = T166.veredictos()
+     B:292  _nl, _nr, _npl, _npr, _hall = T166.medir_clausula_1(_mapa, _once, _V)
+     B:293  _real = T166.texto_correccion_1(_hall, _nl, _nr, _npl, _npr, len(_mapa), len(_V))
+     B:294  w("CIFRA hallazgos que la medicion VIVA da hoy (len(hall)): %d" % len(_hall))
+     B:295  w("CIFRA veces que el texto real dice 'cae sobre': %d" % _real.count("cae sobre"))
+     B:296  w("CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: %d" % len(_V))
+     B:297  w("CIFRA alias del mapa: %d" % len(_mapa))
+     B:298  w("EL ESPERADO TECLEADO Y LA MEDICION VIVA COINCIDEN: %s"
+     B:299  % ("SI" if _real.count("cae sobre") == 3 else "NO"))
+     B:300  except Exception as e:
+     B:301  w("NO SE PUDO RECOMPUTAR LA CIFRA VIVA: %r" % (e,))
+     B:304  w("=== H.6 LAS DOS FRASES DEL CLON DECLARADO, LOCALIZADAS Y NO SUPUESTAS ===")
+     B:305  w("(TAREA 1.c. El acta 176 seccion 5 dice que la frase esta en DOS docstrings de")
+     B:306  w(" scripts/. Aqui se busca el literal %r en todo scripts/loop/ y se imprime lo" % FRASE_CLON)
+     B:307  w(" que salga, sin dar por buena la cifra dos)")
+     B:308  sede = []
+     B:309  DIRS = os.path.join(RAIZ, "scripts", "loop")
+     B:310  for n in sorted(os.listdir(DIRS)):
+     B:311  if not n.endswith(".py"):
+     B:312  continue
+     B:313  t = io.open(os.path.join(DIRS, n), encoding="utf-8", errors="replace").read()
+     B:314  if FRASE_CLON in t:
+     B:315  cuantas = t.count(FRASE_CLON)
+     B:316  sede.append(n)
+     B:317  w("   %s -> %d vez/veces" % (n, cuantas))
+     B:318  w("CIFRA ficheros de scripts/loop/ con el literal %r: %d" % (FRASE_CLON, len(sede)))
+     B:324  lanz = [n for n in sorted(os.listdir(LOOP)) if "LANZADOR" in n.upper()]
+     B:325  for n in lanz:
+     B:326  w("   %-52s -> %d bytes" % (n, os.path.getsize(os.path.join(LOOP, n))))
+     B:327  w("CIFRA ficheros de LANZADOR dentro de docs/loop/: %d" % len(lanz))
+     B:328  LANZ = os.path.join(RAIZ, "scripts", "loop", "vuelta176_bateria_por_tramos.py")
+     B:329  t_lanz = io.open(LANZ, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:331  % ("SI" if "tempfile" in t_lanz else "NO"))
+     B:333  % ("SI" if "TRANSCRIPCION" in t_lanz else "NO"))
+     B:339  rech = [n for n in sorted(os.listdir(LOOP)) if "TALLADOR_RECHAZO" in n]
+     B:340  for n in rech:
+     B:341  w("   %s -> %d bytes" % (n, os.path.getsize(os.path.join(LOOP, n))))
+     B:342  w("CIFRA ficheros SALIDA_V<N>_TALLADOR_RECHAZO.txt en docs/loop/: %d" % len(rech))
+     B:343  TALL = os.path.join(RAIZ, "scripts", "loop", "tallar_cabecera_reporte.py")
+     B:344  t_tall = io.open(TALL, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:345  w("el tallador nombra TALLADOR_RECHAZO en su codigo: %s"
+     B:346  % ("SI" if "TALLADOR_RECHAZO" in t_tall else "NO"))
+     B:347  for i, l in enumerate(t_tall.split(NL), 1):
+     B:348  if "no se pudieron leer" in l:
+     B:349  w("   LINEA %d: %s" % (i, l.strip()))
+     B:350  w("")
+     B:352  w("=== H.9 EL TAMANO DE TRAMO, QUE HOY SE ELIGE Y NO SE COMPUTA (D.3 y P.3) ===")
+     B:353  BAT = os.path.join(RAIZ, "scripts", "loop", "verificar_mutaciones_viejas.py")
+     B:354  t_bat = io.open(BAT, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:355  for i, l in enumerate(t_bat.split(NL), 1):
+     B:356  if "def reparto_en_tramos" in l or "tamano-tramo" in l or "tamano_tramo" in l:
+     B:357  w("   LINEA %d: %s" % (i, l.strip()[:130]))
+     B:358  w("reparto_en_tramos nombra minutos hoy: %s"
+     B:359  % ("SI" if "minutos" in t_bat.split("def reparto_en_tramos", 1)[-1][:4000] else "NO"))
+     B:360  w("el fichero nombra tope_de_minutos: %s" % ("SI" if "tope_de_minutos" in t_bat else "NO"))
+     B:361  w("el fichero nombra tamano_por_minutos: %s" % ("SI" if "tamano_por_minutos" in t_bat else "NO"))
+     B:362  w("")
+     B:364  w("=== H.10 EL UNIVERSO DE OP-L-03, RECOMPUTADO Y NO COPIADO DE SU NOTA ===")
+     B:365  w("(TAREA 2. El encargo cita 55 pares en 29 actos, corte 2117, que es la")
+     B:366  w(" fecha_corte de la ficha. La nota de la MISMA ficha declara un recomputo")
+     B:367  w(" adjudicado en la vuelta 15 al corte 3388. Se corre el instrumento que la")
+     B:368  w(" propia nota cita y se imprime lo que salga, sin elegir entre los dos)")
+     B:369  c, o = correr([PY, "scripts/plan/backlog_l03_vuelta14.py"])
+     B:370  w("comando: python scripts/plan/backlog_l03_vuelta14.py -> exit %d" % c)
+     B:371  for l in o.split(NL):
+     B:372  if l.strip():
+     B:373  w("   " + l.rstrip()[:160])
+     B:374  w("")
+     B:376  w("=== H.11 LA VARA DEL TRABAJO PENDIENTE, CORRIDA POR MI EN ESTA VUELTA ===")
+     B:377  w("(la vara es scripts/loop/vuelta150_3_relectura_expediente.py y NUNCA el campo")
+     B:378  w(" estado, decision del fundador del 4 sep 2026)")
+     B:379  c, o = correr([PY, "scripts/loop/vuelta150_3_relectura_expediente.py", "--corte", head])
+     B:380  w("comando: vuelta150_3_relectura_expediente.py --corte %s -> exit %d" % (head[:8], c))
+     B:381  for l in o.split(NL):
+     B:382  if ("LISTA" in l or "CIFRA" in l or "OP-L-03" in l or "OP-L-01" in l
+     B:383  or "OP-L-02" in l or "OP-I-01" in l):
+     B:384  w("   " + l.rstrip()[:160])
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:58  "vuelta173_tarea1b_mutacion_hueco.py",
+     A:59  "vuelta174_tarea1a_mutacion_44.py",
+     A:60  "vuelta174_tarea1b_mutacion_esqueleto.py",
+     A:61  "vuelta174_tarea1b_mutacion_sellar.py",
+     A:62  "vuelta174_tarea2b_mutacion_confirmar.py",
+     A:71  "docs/loop/reportes/REPORTE_V174.md",
+     A:72  "docs/loop/SALIDA_VNNN_BATERIA.txt",
+     A:73  "docs/loop/SALIDA_VNNN_TALLADOR_CABECERA.txt",
+     A:74  "scripts/loop/_vNNN_cierre_texto.md",
+     A:75  "scripts/loop/verificar_mutaciones_viejas.py",
+     A:80  "scripts/loop/tallar_cabecera_reporte.py",
+     A:119  w("regimen: VUELTA DE BATERIA (AUDITOR.md 6.1). Dos sub-tareas (AUDITOR.md 6.2).")
+     A:148  w(" acta 174: divergen en el numero de finales de linea y NO HAY CONVENCION FIJADA)")
+     A:226  w("(al abrir NO EXISTE NINGUNA, y eso es lo correcto: las produce esta vuelta)")
+     A:246  w("REPORTE_V174.md archivado: %s" % ("SI" if "REPORTE_V174.md" in arch else "NO"))
+     A:249  w("=== H.5 LA NOMINA Y LOS QUE FALTAN, POR SU PROPIA FUNCION PURA ===")
+     A:250  w("(esta es LA CIFRA DE LA TAREA 1. NO se copia del acta: se recomputa aqui)")
+     A:251  sys.path.insert(0, os.path.join(RAIZ, "scripts", "loop"))
+     A:256  w("ficheros .py en scripts/loop/: %d"
+     A:266  w("=== H.6 LOS CINCO QUE EL ACTA 174 NOMBRA, UNO A UNO ===")
+     A:267  w("(el acta los nombra; aqui se comprueba que existen, cuanto miden, si admiten")
+     A:268  w(" --sujeto y si la funcion pura de arriba los devuelve DE VERDAD)")
+     A:302  w("=== H.8 EL RELOJ DE LAS BATERIAS QUE SI TIENEN CUERPO, COMO CONTRASTE ===")
+     A:303  w("(contraste, NO fuente: EJECUTOR.md 2. La cifra de ESTA vuelta la dara su")
+     A:304  w(" propia corrida y ninguna otra)")
+     B:75  "scripts/loop/vuelta176_esqueleto_reporte.py",
+     B:76  "scripts/loop/vuelta176_cierre.py",
+     B:77  "scripts/loop/vuelta176_bateria_por_tramos.py",
+     B:78  "scripts/loop/tallar_cabecera_reporte.py",
+     B:79  "scripts/loop/verificar_mutaciones_viejas.py",
+     B:88  "docs/loop/reportes/REPORTE_V176.md",
+     B:89  "docs/plan/OPERACIONES.jsonl",
+     B:90  "docs/plan/LECTURAS_DIRIGIDAS.md",
+     B:91  "docs/INTRA_DOMINIO_VEREDICTOS.jsonl",
+     B:92  "scripts/plan/backlog_l03_vuelta14.py",
+     B:93  "scripts/loop/vuelta150_3_relectura_expediente.py",
+     B:94  "scripts/loop/cotejar_clon_declarado.py",
+     B:95  "scripts/loop/guarda_commit_dataset.py",
+     B:102  
+     B:141  w("         Dos sub-tareas (AUDITOR.md 6.2, regimen temporal todavia vigente).")
+     B:170  w(" acta 174: divergen en el numero de finales de linea y SIGUE SIN CONVENCION)")
+     B:248  w("(al abrir NO EXISTE NINGUNA, y eso es lo correcto: las produce esta vuelta.")
+     B:270  w("REPORTE_V176.md archivado: %s" % ("SI" if "REPORTE_V176.md" in arch else "NO"))
+     B:273  w("=== H.5 EL ARNES DEL ROJO, MEDIDO SIN CORRERLO Y SIN CREERLE AL ENCARGO ===")
+     B:274  w("(TAREA 1.b. El encargo dice que la linea NNN compara contra un 3 tecleado y")
+     B:287  sys.path.insert(0, os.path.join(RAIZ, "scripts", "loop"))
+     B:321  w("=== H.7 LA SALIDA DEL LANZADOR DE TRAMO DENTRO DE docs/loop/ (D.5) ===")
+     B:322  w("(TAREA 1.e. Se cuentan los ficheros de lanzador que HOY viven en docs/loop/,")
+     B:323  w(" que es lo que el acta 176 punto 7.5 manda sacar de ahi)")
+     B:330  w("el lanzador nombra tempfile (fichero de trabajo fuera de docs/loop/): %s"
+     B:332  w("el lanzador escribe su PROPIA transcripcion a algun sitio: %s"
+     B:336  w("=== H.8 EL RECHAZO DEL TALLADOR, QUE HOY NO DEJA RASTRO ===")
+     B:337  w("(TAREA 1.e. El acta 176 seccion 9 punto 4 dice que el 37 no se puede")
+     B:338  w(" re-verificar porque el tallador no dejo salida de aquel rechazo)")
+     B:351  
+     B:363  
+     B:375  
+
+
+FIN
+
+### CLON 2: vuelta177_esqueleto_reporte.py, clonado de vuelta176_esqueleto_reporte.py
+### (el fichero A se lee de git en el corte f3087229, ANTES de que la TAREA 1.c
+###  de esta misma vuelta le anadiera su correccion declarada al docstring)
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: C:/Users/AlexDesk/AppData/Local/Temp/v177/v176_esq_al_corte.py
+  B: scripts/loop/vuelta177_esqueleto_reporte.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 176, 177
+  CIFRA lineas de docstring: A 42 | B 52
+  CIFRA lineas de maquina:   A 251 | B 255
+
+LOS TRES VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 50
+  CIFRA tokens de maquina: A 1259 | B 1260
+  CIFRA tokens que difieren con el texto normalizado: 1
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 1
+  CIFRA LITERALES DE TEXTO:   49
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     B:76  ("2", "`OP-L-03`, QUE LLEVA SIETE VUELTAS APLAZADA Y SE DESAPLAZA AQUI. La vara de hoy la sigue dando en LISTA
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:65  ("1", "LA BATERIA DE MUTACIONES ENTERA, SOLA Y CON SU DOBLE CORRIDA, PERO PARTIDA EN TRAMOS QUE QUEPAN EN UNA 
+     A:66  ("2", "ABRIR Y CERRAR ESTE MISMO REPORTE EN LA MISMA VUELTA. La 174 lo hizo entero, la 175 NO LLEGO (murio den
+     A:208  > **ESTA ES OTRA VEZ UNA VUELTA DE BATERIA, Y NO ES UN CAMBIO DE CADENCIA: ES LA
+     A:209  > DEUDA DE LA 175, QUE NO SE PAGO** (`AUDITOR.md` 6.1, decision del fundador del 5
+     A:210  > sep 2026). La bateria corre CADA CINCO, en una vuelta propia QUE NO LLEVA NADA
+     A:211  > MAS, y la vuelta propia que le tocaba se murio antes de producir una linea. Aqui
+     A:212  > no hay trabajo de plan al lado, y `OP-L-03` no se toca: lleva SEIS vueltas
+     A:213  > aplazada y se cuenta en voz alta. **EL TOPE DE ESTA VUELTA NO ES CINCO SINO DOS**
+     A:214  > (`AUDITOR.md` 6.2, regimen temporal vigente hasta que DOS vueltas seguidas
+     A:215  > cierren su propio reporte), y el encargo trae exactamente dos. **La 174 fue la
+     A:216  > primera de esas dos, la 175 no cerro, y la racha VUELVE A EMPEZAR: esta es otra
+     A:217  > vez la primera.**
+     A:219  > **LO QUE SE PARTE ES EL BOCADO, NO LA BATERIA.** La 175 murio DENTRO de la
+     A:220  > corrida, y la causa esta medida y no supuesta: 87 entradas, cada una corrida DOS
+     A:221  > VECES, son un bloque indivisible de entre 57 y 75 minutos. Partirla en tramos
+     A:222  > DENTRO de esta misma vuelta no toca ninguna de las cuatro cosas que la letra del
+     A:223  > fundador fija (cadencia, soledad, integridad y la prohibicion de podar la
+     A:224  > nomina). **La nomina sigue en 87 y sigue creciendo.**
+     A:227  > LA VUELTA ANTERIOR.** Esta vez las dos preguntas vuelven a coincidir, porque la
+     A:228  > %(ant)d si escribio su reporte (ABIERTO Y SIN CERRAR, que es texto igual) y es el
+     A:229  > que hay en el arbol; el fichero corre LAS DOS igualmente y publica lo que salga
+     A:230  > de cada una, porque una guarda que solo se mira cuando difiere no se puede
+     A:231  > auditar el dia que difiera.
+     B:75  ("1", "LOS REGISTROS Y LAS CORRECCIONES, Y ES BLOQUEANTE. Siete letras: (a) dejar constancia de la lectura del
+     B:218  > **ESTA VUELTA NO ES DE BATERIA, Y LA CADENCIA NO SE ELIGE AQUI: ESTA
+     B:219  > ADJUDICADA.** El acta NNN, punto 7.8, reancla el contador a la vuelta que de
+     B:220  > verdad corrio la bateria y no a la que la tenia encargada: **la 175 no fue una
+     B:221  > vuelta de bateria porque murio sin producir una linea**, la corrio la NNN, y
+     B:222  > desde ella se cuentan los cinco. **La proxima vuelta de bateria es la 181, no
+     B:223  > la 180.** Por eso la seccion 9 de este reporte cierra con el **HUECO DECLARADO
+     B:224  > Y MEDIDO** por el carril de la TAREA 1.b de la 173, con su medicion, su
+     B:225  > atribucion y su corrida. Un hueco declarado no es un hueco escondido.
+     B:227  > **EL TOPE DE ESTA VUELTA SIGUE EN DOS** (`AUDITOR.md` 6.2, regimen temporal
+     B:228  > vigente hasta que DOS vueltas seguidas cierren su propio reporte con
+     B:229  > `cerrar_reporte.py`), y el encargo trae exactamente dos. **LA NNN ES LA PRIMERA
+     B:230  > DE LAS DOS SEGUIDAS**, medido y no supuesto: cerro su reporte y lo archivo en su
+     B:231  > misma vuelta. **Si esta cierra el suyo, el tope vuelve a CINCO por la propia
+     B:232  > letra de la 6.2, sin que nadie tenga que decidirlo.**
+     B:233  >
+     B:234  > **Y ESTA VUELTA SI CORRIO SU BLOQUE DE APERTURA ANTES DE SU PRIMERA
+     B:235  > OPERACION**, que es lo que la NNN no hizo. Su lectura (que la 6.1 sacaba el
+     B:236  > aparato de abrir y cerrar la vuelta) **quedo corregida en el acta NNN punto
+     B:237  > 7.1**: la 6.1 saca el TRABAJO DE PLAN, no el aparato; si lo sacara, sacaria
+     B:238  > tambien el reporte y la 6.1 y la 6.2 se contradirian. Ademas esta vuelta no es
+     B:239  > de bateria, asi que la duda ni se plantea.
+     B:242  > LA VUELTA ANTERIOR.** Esta vez las dos preguntas coinciden, porque la
+     B:243  > %(ant)d escribio su reporte, lo cerro y lo archivo; el fichero corre LAS DOS
+     B:244  > igualmente y publica lo que salga de cada una, porque una guarda que solo se
+     B:245  > mira cuando difiere no se puede auditar el dia que difiera.
+
+
+FIN
