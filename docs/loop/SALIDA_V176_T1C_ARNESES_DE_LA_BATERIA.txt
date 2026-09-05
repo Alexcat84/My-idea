@@ -1,0 +1,37 @@
+=== vuelta142_2d_mutacion_bateria ===
+EXIT=0
+CIFRA de la bateria 2.d: 3 comprobaciones
+CIFRA verdes de la bateria 2.d: 3 comprobaciones
+==============================================================================
+VERDE: los 3 casos se comportan.
+=== vuelta163_tarea2_mutacion_nomina ===
+EXIT=0
+   CIFRA casos que CAEN: 6 de 6
+
+VERDE DE LA MUTACION: 6 casos, los 6 pasan y los 6 CAEN al mutarles el valor esperado. La mirada VE los que faltan, deja de verlos cuando entran, no reclama los anteriores a su vara, y sobre el repo de hoy no falta ninguno.
+FIN
+=== vuelta165_tarea2_mutacion_censo ===
+EXIT=0
+Y LO QUE ESTE ARNES GARANTIZA: si alguien devuelve PATRON_ARNES a su
+forma vieja, los casos A_el_patron_NUEVO_las_ve_todas,
+B_el_censo_nuevo_ve_las_tres_familias, B_el_patron_NUEVO_reclama_los_tres,
+B_y_los_DOS_que_deja_pasar y D_el_patron_nuevo_ve_mas_que_el_viejo CAEN.
+=== --mutar-nomina ===
+EXIT=0
+
+VERDE DE LA MUTACION: 6 casos, los 6 pasan y los 6 CAEN al mutarles el valor esperado. La mirada VE los que faltan, deja de verlos cuando entran, no reclama los anteriores a su vara, y sobre el repo de hoy no falta ninguno.
+FIN
+=== --mutar-reproducibilidad ===
+EXIT=0
+REPRODUCIBLE y deja pasar la fija, y las dos comprobaciones caen al
+mutarles el esperado.
+FIN
+=== NEGATIVA: --tramo con --mutar-ancla (TIENE QUE SER ROJO) ===
+ROJO: --tramo no se mezcla con ningun modo de mutacion. Los modos de
+      mutacion juzgan la nomina ENTERA, y sobre un pedazo darian un
+      rojo de mentira. Corre el modo de mutacion sin --tramo.
+EXIT=1
+=== NEGATIVA: tramo fuera de rango (TIENE QUE SER ROJO) ===
+      (ninguno)
+
+ROJO: se pidio el tramo 99 y el reparto de esta nomina (88 entradas de 10 en 10) solo tiene 9 tramos.

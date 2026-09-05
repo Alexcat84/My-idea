@@ -574,6 +574,29 @@ VIEJAS = [
     ("vuelta174_tarea1b_mutacion_esqueleto.py", False),
     ("vuelta174_tarea1b_mutacion_sellar.py", False),
     ("vuelta174_tarea2b_mutacion_confirmar.py", False),
+    # --- EL DE LA 176, QUE ENTRA EN SU MISMA VUELTA (TAREA 1.c) --------------
+    #
+    # POR QUE HOY Y NO EN LA 177, con la letra de este mismo fichero delante: la
+    # regla desde la vuelta 148 (TAREA 2.5, adjudicacion 3.5 del acta 147) dice
+    # que LO QUE SE EXIGE ES SUJETO CONGELADO y que EL PLAZO DE UNA VUELTA ERA EL
+    # MEDIO, NO EL FIN. `vuelta176_tarea1c_mutacion_tramos.py` no tiene ancla
+    # sobre ningun fichero vivo: llama a la funcion PURA `reparto_en_tramos()`
+    # con nominas FABRICADAS en memoria, asi que su sujeto no se le puede mover
+    # debajo y esperar una vuelta no lo haria mas seguro, solo mas tarde.
+    #
+    # Y SI NO ENTRARA HOY, ESTA MISMA BATERIA SALDRIA EN ROJO Y CON RAZON:
+    # `arneses_que_faltan()` lo veria como un arnes de la vuelta 176, posterior a
+    # la ultima vuelta representada, y se quejaria de que se queda fuera.
+    #
+    # QUE PRUEBA: que el reparto de la bateria en tramos conserva la nomina
+    # ENTERA, en su orden, sin perder ni repetir ni una entrada. Su invariante NO
+    # es vacio, y eso se demuestra en vez de afirmarse: el arnes le pasa TRES
+    # repartos rotos a proposito (uno que pierde, uno que repite y uno que
+    # desordena) y exige que los cace LOS TRES, en 4 escenarios cada uno.
+    #
+    # LA NOMINA NO SE PODA, CRECE (AUDITOR.md 6.1, opcion c RECHAZADA): con esta
+    # entrada pasa de 87 a 88, y el reloj que eso suma se cuenta y se publica.
+    ("vuelta176_tarea1c_mutacion_tramos.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su
@@ -1077,6 +1100,35 @@ def prueba_de_reproducibilidad():
     return 1
 
 
+def reparto_en_tramos(nomina, tamano):
+    """LA NOMINA REPARTIDA EN TRAMOS DE A LO SUMO `tamano` ENTRADAS.
+
+    PURA: recibe la lista y el tamano, y no lee ni escribe nada. Devuelve una
+    lista de listas. La union de los tramos, en orden, ES la nomina entera y en
+    su mismo orden: no se cae ni se repite ninguna entrada, y eso es lo que su
+    caso positivo por mutacion comprueba sobre nominas fabricadas.
+
+    POR QUE EXISTE (vuelta 176, TAREA 1.c). La vuelta 175 murio DENTRO de la
+    bateria y la causa esta medida: 87 entradas, cada una corrida DOS VECES, son
+    un bloque indivisible de entre 57 y 75 minutos. LO QUE SE PARTE ES EL BOCADO,
+    NO LA BATERIA: la letra del fundador del 5 sep 2026 fija CUATRO cosas (la
+    cadencia de cada cinco, la soledad de la vuelta, la integridad de la corrida
+    y la prohibicion de podar la nomina) y partir la corrida en tramos DENTRO de
+    una misma vuelta no toca ninguna de las cuatro. Cada entrada sigue corriendo,
+    y sigue corriendo dos veces.
+
+    LO QUE UN TRAMO NO AFLOJA, Y ES LA PARTE QUE IMPORTA: la mirada de la nomina
+    sobre si misma (`arneses_que_faltan()` y `nomina_invisible_al_censo()`) sigue
+    corriendo SOBRE LA NOMINA ENTERA en cada tramo, y sigue encendiendo el rojo.
+    Lo unico que el tramo recorta es CUANTAS ENTRADAS SE EJECUTAN en esta
+    corrida, y por eso el verde de un tramo se publica como VERDE PARCIAL y dice
+    a que entradas se refiere, una por una."""
+    if tamano < 1:
+        raise ValueError("el tamano de tramo tiene que ser 1 o mas, y llego %r"
+                         % tamano)
+    return [list(nomina[i:i + tamano]) for i in range(0, len(nomina), tamano)]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--mutar-ancla", dest="mutar", action="store_true")
@@ -1086,8 +1138,25 @@ def main():
     ap.add_argument("--mutar-reproducibilidad", dest="mutar_repro", action="store_true",
                     help="TAREA 2.f (vuelta 141): prueba de mutacion del cotejo de "
                          "reproducibilidad, sobre dos scripts de mentira fabricados")
+    ap.add_argument("--tramo", type=int, default=None,
+                    help="vuelta 176, TAREA 1.c: corre SOLO el tramo numero N "
+                         "(empezando en 1) del reparto de la nomina. Sin esta "
+                         "opcion se corre la nomina ENTERA, como siempre.")
+    ap.add_argument("--tamano-tramo", dest="tamano_tramo", type=int, default=10,
+                    help="entradas por tramo. El numero de tramos NO se teclea: "
+                         "se computa de la nomina y de este tamano.")
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
+
+    # UN TRAMO NO SE MEZCLA CON NINGUN MODO DE MUTACION, Y SE NIEGA EN VEZ DE
+    # APANARSELO. Los tres modos de mutacion comprueban la nomina ENTERA contra
+    # lo que esperan (el `--mutar-ancla` exige que caigan las re-ancladas, que
+    # son 3 de las 87), y correrlos sobre un pedazo daria un rojo de mentira.
+    if a.tramo is not None and (a.mutar or a.mutar_nomina or a.mutar_repro):
+        print("ROJO: --tramo no se mezcla con ningun modo de mutacion. Los modos de")
+        print("      mutacion juzgan la nomina ENTERA, y sobre un pedazo darian un")
+        print("      rojo de mentira. Corre el modo de mutacion sin --tramo.")
+        return 1
 
     if a.mutar_repro:
         return prueba_de_reproducibilidad()
@@ -1127,6 +1196,38 @@ def main():
         print("      (ninguno)")
     print("")
 
+    # EL TRAMO (vuelta 176, TAREA 1.c). VA DESPUES DE LA MIRADA DE LA NOMINA
+    # SOBRE SI MISMA A PROPOSITO: esa mirada NO se reparte, corre entera en cada
+    # tramo y sigue encendiendo el rojo. Lo unico que el tramo reparte es cuantas
+    # entradas se EJECUTAN aqui. NINGUNA CIFRA SE TECLEA: el numero de tramos
+    # sale de la nomina y del tamano.
+    tramos = reparto_en_tramos(VIEJAS, a.tamano_tramo)
+    if a.tramo is None:
+        a_correr = list(VIEJAS)
+        print("  SIN --tramo: SE CORRE LA NOMINA ENTERA, como siempre.")
+        print("  CIFRA entradas que se van a ejecutar en esta corrida: %d" % len(a_correr))
+    else:
+        if not (1 <= a.tramo <= len(tramos)):
+            print("ROJO: se pidio el tramo %d y el reparto de esta nomina (%d entradas "
+                  "de %d en %d) solo tiene %d tramos."
+                  % (a.tramo, len(VIEJAS), a.tamano_tramo, a.tamano_tramo, len(tramos)))
+            return 1
+        a_correr = tramos[a.tramo - 1]
+        print("  EL REPARTO EN TRAMOS (vuelta 176, TAREA 1.c). LO QUE SE PARTE ES EL")
+        print("  BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo")
+        print("  DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba")
+        print("  corre ENTERA en este tramo y sigue encendiendo el rojo.")
+        print("  CIFRA nomina entera: %d" % len(VIEJAS))
+        print("  CIFRA tamano de tramo: %d" % a.tamano_tramo)
+        print("  CIFRA tramos del reparto (computada, no tecleada): %d" % len(tramos))
+        print("  CIFRA TRAMO QUE SE CORRE: %d de %d" % (a.tramo, len(tramos)))
+        print("  CIFRA entradas de ESTE tramo: %d" % len(a_correr))
+        print("  CIFRA suma de las entradas de TODOS los tramos: %d"
+              % sum(len(t) for t in tramos))
+        for s, _admite in a_correr:
+            print("      ENTRADA DEL TRAMO: %s" % s)
+    print("")
+
     sujeto = None
     tmp = None
     try:
@@ -1164,7 +1265,7 @@ def main():
         # `time.perf_counter`, que es monotono, y NO con la hora del reloj.
         reloj = {}
         t0 = time.perf_counter()
-        for script, admite_sujeto in VIEJAS:
+        for script, admite_sujeto in a_correr:
             t_uno = time.perf_counter()
             usar = sujeto if (a.mutar and admite_sujeto) else None
             if a.mutar:
@@ -1319,6 +1420,25 @@ def main():
         print("FIN")
         return 1
     print("")
+    # EL VERDE DE UN TRAMO ES UN VERDE PARCIAL Y LO DICE CON ESAS PALABRAS
+    # (vuelta 176, TAREA 1.c). NO puede usar la frase de abajo, porque esa dice
+    # "las N mutaciones viejas corren y muerden" y en un tramo NO han corrido
+    # todas. Un verde que dijera de mas seria exactamente la especie de caida
+    # que la casa lleva persiguiendo desde la vuelta 74.
+    if a.tramo is not None:
+        print("VERDE PARCIAL DEL TRAMO %d DE %d: las %d entradas DE ESTE TRAMO corren, "
+              "muerden y sus salidas selladas salen IDENTICAS en dos corridas "
+              "seguidas. LAS OTRAS %d ENTRADAS DE LA NOMINA NO SE HAN CORRIDO AQUI, y "
+              "este verde NO dice nada de ellas: lo dira la composicion de los %d "
+              "tramos. Lo que SI cubre entero este tramo es la mirada de la nomina "
+              "sobre si misma: sus %d entradas son TODAS visibles al censo y NINGUN "
+              "fichero de scripts/loop/ con nombre `vuelta<N>...<familia>...py` "
+              "(familias: %s) posterior a la vuelta %s se queda fuera de la nomina."
+              % (a.tramo, len(tramos), len(filas), len(VIEJAS) - len(filas),
+                 len(tramos), len(VIEJAS), ", ".join(FAMILIAS_DE_ARNES), _ultima))
+        print("FIN")
+        return 0
+
     # LA FRASE DEL VERDE DICE EXACTAMENTE A QUE UNIVERSO SE REFIERE (vuelta 165,
     # TAREA 2, salida (b) de la adjudicacion 6.3 del acta 164). Antes decia
     # "NINGUN arnes posterior" a secas, y solo miraba a los que se llamaran
