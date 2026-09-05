@@ -42,7 +42,16 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 INVENTARIO = os.path.join(RAIZ, "docs", "plan", "INVENTARIO.jsonl")
 COMPONENTES = os.path.join(RAIZ, "docs", "plan", "RECOMPUTO_3388_COMPONENTES.jsonl")
 GRAFO = os.path.join(RAIZ, "dataset", "metadata", "master_graph.json")
-SALIDA_V169 = os.path.join(RAIZ, "docs", "loop", "RECOMPUTO_V169.jsonl")
+# LA SALIDA DEL RECOMPUTO ES CONFIGURABLE, Y SE DICE POR QUE. Su sitio de la casa
+# es `docs/loop/RECOMPUTO_V169.jsonl` (asi lo hizo la vuelta 166 con el suyo), pero
+# la bateria de mutaciones vigila `docs/loop/` y reporta como RUIDO DE
+# CONCURRENCIA todo fichero que aparezca ahi mientras corre. Cuando este
+# instrumento se corre EN PARALELO con la bateria, su salida va fuera y se mueve
+# a su sitio despues. El destino final NO cambia: cambia donde se escribe mientras
+# hay otra guarda mirando el directorio.
+SALIDA_V169 = os.environ.get(
+    "V169_RECOMPUTO_SALIDA",
+    os.path.join(RAIZ, "docs", "loop", "RECOMPUTO_V169.jsonl"))
 DISPARADOR = os.path.join(RAIZ, "docs", "plan", "08_VERIFICACION.md")
 
 # LOS TIPOS QUE EL PASO 4 DEL DISPARADOR NOMBRA, LEIDOS DE SU FRASE Y NO TECLEADOS
@@ -98,12 +107,29 @@ def main():
     for (t, c), n in sorted(cortes.items()):
         print("   %-8s corte %s -> %d" % (t, c, n))
     corte_nuevo = max(c for (_t, c) in cortes)
-    vigentes = [x for x in dentro if x.get("fecha_corte") == corte_nuevo]
-    superadas = [x for x in dentro if x.get("fecha_corte") != corte_nuevo]
+    # QUE ES VIGENTE, Y SE CORRIGE AQUI PORQUE LA PRIMERA CORRIDA DE ESTE
+    # INSTRUMENTO LO TENIA MAL. La primera version partia por `fecha_corte`, y eso
+    # dejaba fuera ONCE racimos del corte 2026-08-11 QUE NO ESTAN SUPERADOS: la
+    # marca SUPERADA la llevan los 221 actos viejos, uno a uno, y NINGUN racimo.
+    # Partir por la fecha en vez de por la marca daba 337 vigentes donde hay 348,
+    # y once nominas se habrian quedado sin re-medir sin que nadie lo notara.
+    # Cazado midiendo antes de publicar. LA VARA ES LA MARCA, NO LA FECHA.
+    def superada(e):
+        return "SUPERADA" in ((e.get("estado") or "") + (e.get("nota") or ""))
+    vigentes = [x for x in dentro if not superada(x)]
+    superadas = [x for x in dentro if superada(x)]
     print("   corte mas reciente, computado y no tecleado: %s" % corte_nuevo)
-    print("   CIFRA entradas VIGENTES en ese corte: %d" % len(vigentes))
-    print("   CIFRA entradas de cortes anteriores (superadas, no se borran): %d"
+    print("   LA VARA DE VIGENCIA ES LA MARCA `SUPERADA`, NO LA `fecha_corte`.")
+    print("   CIFRA entradas VIGENTES (sin marca SUPERADA): %d" % len(vigentes))
+    print("   CIFRA entradas marcadas SUPERADA (no se borran, no se re-miden): %d"
           % len(superadas))
+    rep_vig = collections.Counter(x["tipo"] for x in vigentes)
+    rep_sup = collections.Counter(x["tipo"] for x in superadas)
+    print("   reparto de las vigentes: %s" % dict(sorted(rep_vig.items())))
+    print("   reparto de las superadas: %s" % dict(sorted(rep_sup.items())))
+    fechas_vig = collections.Counter(x.get("fecha_corte") for x in vigentes)
+    print("   y las vigentes NO son todas del corte nuevo: %s"
+          % dict(sorted(fechas_vig.items())))
     print("")
 
     print("D) EL FICHERO SELLADO DE COMPONENTES, CONTADO Y NO REGENERADO")
@@ -170,13 +196,23 @@ def main():
             continue
         cob_hoy = "%d de %d pares leidos; %d en cola; %d fuera de cola" % (
             c["leidos"], c["posibles"], c["en_cola_sin_leer"], c["fuera_de_cola"])
-        if e.get("cobertura", "").strip() == cob_hoy:
+        # LA COMPARACION ES DE CIFRAS, NO DE CADENA, Y SE DICE POR QUE. Las
+        # entradas de tipo `racimo` escriben su cobertura como "N de M" y las de
+        # tipo `acto` como "N de M pares leidos; X en cola; Y fuera de cola".
+        # Comparar al caracter entre los dos formatos daba DOCE diferencias de las
+        # que NUEVE eran solo de formato: la cifra era la misma. Lo que el banco
+        # 9.26 pide es "cuantos pares leidos de cuantos posibles", asi que eso es
+        # lo que se compara, y el calce al caracter se publica APARTE.
+        m = re.search(r"(\d+) de (\d+)", e.get("cobertura", "") or "")
+        cifras_ficha = (int(m.group(1)), int(m.group(2))) if m else None
+        cifras_hoy = (c["leidos"], c["posibles"])
+        if cifras_ficha == cifras_hoy:
             calzan.append(e)
         else:
             no_calzan.append((e, cob_hoy))
     print("   CIFRA entradas vigentes re medidas: %d" % len(vigentes))
-    print("   CIFRA que CALZAN al caracter con su componente de hoy: %d" % len(calzan))
-    print("   CIFRA cuya cobertura DIFIERE de la de hoy: %d" % len(no_calzan))
+    print("   CIFRA cuyas CIFRAS de cobertura calzan con su componente de hoy: %d" % len(calzan))
+    print("   CIFRA cuyas CIFRAS de cobertura DIFIEREN de las de hoy: %d" % len(no_calzan))
     print("   CIFRA sin componente en el fichero sellado: %d" % len(sin_componente))
     for e, cob_hoy in no_calzan[:40]:
         print("      DIFIERE %s" % e["nombre"])
@@ -204,7 +240,7 @@ def main():
     print("H) (3.c) LA DISCREPANCIA DE LA NOTA DE LA FICHA, MEDIDA Y NO RESUELTA AQUI")
     actos_vig = [x for x in vigentes if x["tipo"] == "acto"]
     print("   la nota de OP-I-01 declara: 335 actos (280 CERRADOS, 55 ABIERTOS)")
-    print("   CIFRA entradas de tipo acto vigentes en el INVENTARIO hoy: %d" % len(actos_vig))
+    print("   CIFRA entradas de tipo acto vigentes (sin marca SUPERADA) hoy: %d" % len(actos_vig))
     print("   CIFRA lineas del fichero de componentes hoy: %d" % len(comps))
     for k in sorted(est):
         print("   CIFRA componentes %-9s hoy: %d" % (k, est[k]))
