@@ -1,0 +1,89 @@
+==============================================================================
+VUELTA 172, TAREA 3: CASO POSITIVO POR MUTACION DE LAS DOS GUARDAS DE LA
+NUMERACION LD
+==============================================================================
+
+A) GUARDA (i): EL NUMERO SE COMPUTA Y SIGUE AL MAPA DE HECHAS
+   hechas con mayor 138  -> siguiente libre 139
+   hechas con mayor 200  -> siguiente libre 201
+   hechas con mayor 7    -> siguiente libre 8
+   hechas con mayor 3    -> siguiente libre 4
+   hechas con mayor (vacio) -> siguiente libre 1
+
+B) GUARDA (i), EL LADO QUE IMPORTA: UNA CONSTANTE NO PASARIA ESTO
+   valores distintos que devuelve para cuatro mapas distintos: 4
+   (no rellena huecos: con {1, 5} devuelve 6 y no 2, que es la misma
+    regla que serie_de_registros.siguiente_libre)
+
+C) GUARDA (ii): LA ASIGNACION AJENA SE VE, Y SU AUSENCIA TAMBIEN
+   sobre un mapa limpio, con corte 138: []
+   sobre uno con un intruso:            [145]
+   sobre uno con dos:                   [145, 154]
+   (sin corte explicito usa el mayor del propio mapa, y entonces por
+    definicion no hay nadie por encima: por eso main() le pasa el corte)
+
+D) EL LECTOR DE FILAS CUENTA LO QUE HAY Y NO LO QUE ESPERA
+   pagina fabricada con 3+2+1 filas de par -> el lector ve 6
+   clases leidas, en orden: DDADAD
+   pagina fabricada SIN filas de par -> el lector ve 0
+
+E) LOS NUMEROS QUE SALDRIAN, ENCADENANDO LAS DOS COSAS
+   con mayor 138 y 16 filas: LD-139 a LD-154
+   con mayor 90 y 16 filas:  LD-91 a LD-106
+   (si el rango 139 a 154 estuviera tecleado, esta ultima no se moveria)
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   A_siguiente_de_138_es_139                            PASA   (real=139 esperado=139)
+   A_siguiente_de_200_es_201                            PASA   (real=201 esperado=201)
+   A_siguiente_de_7_es_8                                PASA   (real=8 esperado=8)
+   A_siguiente_de_3_es_4                                PASA   (real=4 esperado=4)
+   A_siguiente_de_vacio_es_1                            PASA   (real=1 esperado=1)
+   B_devuelve_cuatro_valores_distintos                  PASA   (real=4 esperado=4)
+   B_no_es_la_constante_139                             PASA   (real=False esperado=False)
+   B_no_rellena_huecos                                  PASA   (real=6 esperado=6)
+   C_el_limpio_no_da_ninguno                            PASA   (real=0 esperado=0)
+   C_el_de_un_intruso_da_uno                            PASA   (real=1 esperado=1)
+   C_y_lo_nombra                                        PASA   (real=[145] esperado=[145])
+   C_el_de_dos_da_dos                                   PASA   (real=2 esperado=2)
+   C_sin_corte_usa_el_mayor_y_da_cero                   PASA   (real=0 esperado=0)
+   D_ve_las_seis                                        PASA   (real=6 esperado=6)
+   D_no_se_traga_el_ruido_de_otra_tabla                 PASA   (real=False esperado=False)
+   D_no_cruza_a_la_tercera_tanda                        PASA   (real=False esperado=False)
+   D_no_se_traga_la_tabla_de_oficios                    PASA   (real=False esperado=False)
+   D_las_clases_se_leen_literales                       PASA   (real='DDADAD' esperado='DDADAD')
+   D_el_reparto_por_bloque_es_3_2_1                     PASA   (real=[3, 2, 1] esperado=[3, 2, 1])
+   D_una_pagina_sin_pares_da_cero                       PASA   (real=0 esperado=0)
+   D_con_16_fabricadas_ve_16                            PASA   (real=16 esperado=16)
+   E_el_rango_empieza_en_139                            PASA   (real=139 esperado=139)
+   E_y_termina_en_154                                   PASA   (real=154 esperado=154)
+   E_con_otro_mayor_el_rango_se_mueve                   PASA   (real=91 esperado=91)
+   CIFRA casos: 24 | pasan: 24 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_siguiente_de_138_es_139                            CAE   (esperado mutado=140)
+   A_siguiente_de_200_es_201                            CAE   (esperado mutado=202)
+   A_siguiente_de_7_es_8                                CAE   (esperado mutado=9)
+   A_siguiente_de_3_es_4                                CAE   (esperado mutado=5)
+   A_siguiente_de_vacio_es_1                            CAE   (esperado mutado=2)
+   B_devuelve_cuatro_valores_distintos                  CAE   (esperado mutado=5)
+   B_no_es_la_constante_139                             CAE   (esperado mutado=True)
+   B_no_rellena_huecos                                  CAE   (esperado mutado=7)
+   C_el_limpio_no_da_ninguno                            CAE   (esperado mutado=1)
+   C_el_de_un_intruso_da_uno                            CAE   (esperado mutado=2)
+   C_y_lo_nombra                                        CAE   (esperado mutado=[145, 999])
+   C_el_de_dos_da_dos                                   CAE   (esperado mutado=3)
+   C_sin_corte_usa_el_mayor_y_da_cero                   CAE   (esperado mutado=1)
+   D_ve_las_seis                                        CAE   (esperado mutado=7)
+   D_no_se_traga_el_ruido_de_otra_tabla                 CAE   (esperado mutado=True)
+   D_no_cruza_a_la_tercera_tanda                        CAE   (esperado mutado=True)
+   D_no_se_traga_la_tabla_de_oficios                    CAE   (esperado mutado=True)
+   D_las_clases_se_leen_literales                       CAE   (esperado mutado='DDADAD_mutado')
+   D_el_reparto_por_bloque_es_3_2_1                     CAE   (esperado mutado=[3, 2, 1, 999])
+   D_una_pagina_sin_pares_da_cero                       CAE   (esperado mutado=1)
+   D_con_16_fabricadas_ve_16                            CAE   (esperado mutado=17)
+   E_el_rango_empieza_en_139                            CAE   (esperado mutado=140)
+   E_y_termina_en_154                                   CAE   (esperado mutado=155)
+   E_con_otro_mayor_el_rango_se_mueve                   CAE   (esperado mutado=92)
+   CIFRA casos que caen al mutar el esperado: 24 de 24
+
+VERDE: los 24 casos pasan tal cual y los 24 caen al mutar el esperado.

@@ -32,6 +32,7 @@ CERO ESCRITURAS EN EL REPO: solo lee y escribe su salida por stdout.
 USO:
   python scripts/loop/vuelta172_tarea2c_atribucion.py
 """
+import argparse
 import io
 import os
 import subprocess
@@ -44,7 +45,7 @@ import vuelta48_contar_ld as C   # noqa: E402
 RAIZ = C.RAIZ
 DOCS = C.DOCS
 PLAN = C.PLAN
-CORTE = 138
+CORTE_POR_DEFECTO = 138
 
 
 def rel(p):
@@ -90,8 +91,18 @@ def universo_con_linea():
 
 
 def main():
+    # EL CORTE ES PARAMETRO Y NO CONSTANTE (vuelta 172): este mismo instrumento
+    # se corre ANTES de la TAREA 3 con corte 138, que es la guarda que decide si
+    # la 3 se corre, y DESPUES con corte 154, que es la comprobacion de cierre.
+    # Con el corte clavado en 138 la segunda corrida saldria ROJA por diseno, y
+    # un rojo que solo dice "hiciste tu trabajo" es un rojo que no se puede leer.
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--corte", type=int, default=CORTE_POR_DEFECTO)
+    a = ap.parse_args()
+    CORTE = a.corte
     print("=" * 78)
     print("VUELTA 172, TAREA 2.c: EL CONTADOR OTRA VEZ, CON LA ATRIBUCION DELANTE")
+    print("CORTE DE ESTA CORRIDA: LD-%d" % CORTE)
     print("=" * 78)
     print("")
 
@@ -157,6 +168,9 @@ def main():
         ("ningun numero por encima de LD-%d tiene seccion propia" % CORTE,
          len(ajenos) == 0),
         ("el mayor de las HECHAS es LD-%d" % CORTE, max(hechas) == CORTE),
+        ("y el mayor del UNIVERSO tambien" if CORTE != CORTE_POR_DEFECTO
+         else "el mayor del UNIVERSO no baja del corte",
+         max(universo) == CORTE if CORTE != CORTE_POR_DEFECTO else max(universo) >= CORTE),
         ("las dos varas salen de la MISMA lectura y del MISMO instrumento",
          r.returncode == 0),
         ("el archivo de reportes ya no cuenta",

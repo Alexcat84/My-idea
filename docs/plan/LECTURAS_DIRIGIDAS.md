@@ -516,6 +516,158 @@ comparativa**.
 
 ---
 
+<!-- NUMERACION LD DE LA SEGUNDA TANDA, VUELTA 172 -->
+
+## LA NUMERACION `LD` DE ESTA TANDA, ESCRITA EN LA VUELTA 172
+
+**LAS DIECISEIS LECTURAS DE ARRIBA YA ESTABAN HECHAS DESDE EL 11 AGO 2026 Y
+SUS VEREDICTOS YA ESTABAN ESCRITOS; LO UNICO QUE LES FALTABA ERA EL NUMERO.**
+Aqui se les pone, **por adicion pura**: las tres tablas de arriba **no se han
+tocado, ni una palabra ni un byte**, y el par y la clase de cada seccion se han
+**leido de esas tablas**, no tecleado. **Ninguna clase se mueve, ningun nodo se
+toca y ningun par se vuelve a leer.**
+
+**LOS NUMEROS ESTAN COMPUTADOS, NO TECLEADOS** (`EJECUTOR.md` 1, y adjudicacion
+6.2 del acta del auditor de la vuelta 171). La vara que asigna es **la de las
+HECHAS, las que tienen seccion propia**, igual que `serie_de_registros.py`
+computa la serie `R.n` sobre entradas escritas y no sobre menciones: **una
+mencion en prosa no asigna un numero; una entrada escrita si.** Corrido por
+`scripts/loop/vuelta172_tarea3_numerar_ld.py` el 5 sep 2026: **82 hechas, mayor
+`LD-138`, siguiente libre `LD-139`.**
+
+**GUARDA COMPROBADA ANTES DE ESCRIBIR:** ningun numero por encima de
+`LD-138` tenia seccion propia (**0**, contados por el instrumento). Si alguno
+la hubiera tenido, habria una asignacion ajena y esto habria parado.
+
+### `LD-139` . `clasificacion_mercados_cadena_suministro` contra `cuatro_capacidades_mercado` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `cuadrantes de mercado`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:402` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-140` . `clasificacion_mercados_cadena_suministro` contra `cuatro_categorias_desempeno_cadena_suministro` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `cuadrantes de mercado`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:403` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-141` . `cuatro_capacidades_mercado` contra `modelo_cuadrantes_mercado` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `cuadrantes de mercado`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:404` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-142` . `cuatro_categorias_desempeno_cadena_suministro` contra `estrategia_cuatro_capacidades_mercado` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `cuadrantes de mercado`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:405` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-143` . `cuatro_categorias_desempeno_cadena_suministro` contra `marco_analisis_mercado_cadena_suministro` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `cuadrantes de mercado`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:406` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-144` . `cuatro_categorias_desempeno_cadena_suministro` contra `modelo_cuadrantes_mercado` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `cuadrantes de mercado`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:407` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-145` . `estrategia_cuatro_capacidades_mercado` contra `marco_analisis_mercado_cadena_suministro` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `cuadrantes de mercado`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:408` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-146` . `marco_analisis_mercado_cadena_suministro` contra `modelo_cuadrantes_mercado` . **A**
+
+**Lectura de la SEGUNDA TANDA, nomina `cuadrantes de mercado`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:409` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-147` . `construccion_de_valor_percibido` contra `ecuacion_de_valor_cliente` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `ecuacion de valor`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:437` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-148` . `construccion_de_valor_percibido` contra `ecuacion_de_valor_venta` . **A**
+
+**Lectura de la SEGUNDA TANDA, nomina `ecuacion de valor`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:438` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-149` . `construccion_de_valor_percibido` contra `prevencion_objeciones_vs_manejo` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `ecuacion de valor`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:439` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-150` . `ecuacion_de_valor` contra `prevencion_objeciones_vs_manejo` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `ecuacion de valor`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:440` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-151` . `ecuacion_de_valor_venta` contra `prevencion_objeciones_vs_manejo` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `ecuacion de valor`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:441` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-152` . `alineacion_etica_ia_negocio` contra `mitigar_falling_asleep_wheel` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `supervision de la IA, bloque humano`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:469` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-153` . `alineacion_etica_ia_negocio` contra `riesgo_sobredependencia_ia` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `supervision de la IA, bloque humano`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:470` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+### `LD-154` . `principio_humano_en_el_loop` contra `riesgo_sobredependencia_ia` . **D**
+
+**Lectura de la SEGUNDA TANDA, nomina `supervision de la IA, bloque humano`, hecha el 11 ago 2026.**
+El par y la clase se leen de la tabla de esta misma pagina (`docs/plan/LECTURAS_DIRIGIDAS.md:471` al escribirse esta seccion),
+**y la razon escrita de la lectura sigue viviendo alli y no se copia aqui**: una
+copia seria una segunda version de lo mismo. **Esta seccion aporta el numero y
+nada mas.**
+
+---
 # TERCERA TANDA: **LAS DOS FASES QUE LA MESA DE COLEMAN NO ADJUDICA**
 
 **Encargadas el 12 ago 2026 por la adjudicacion de `OP-M-02`, punto e.** Las fases

@@ -54,7 +54,7 @@ Este hueco se rellena con la tabla tallada entera cuando la vuelta cierre.
 |---|---|---|---|
 | **TAREA 1** | BLOQUEANTE Y VA PRIMERA. EL CIERRE QUE FALTA Y LOS REGISTROS (1.a el reporte de la 171 CERRADO con la cabecera tallada pegada, sus cuatro discutibles y su caida sin suavizar, y la seccion 9 diciendo que la bateria NO corrio; 1.b el acta 171 y sus adjudicaciones 6.1 a 6.12 al `R.41` con su arnes de mutacion del registro; 1.c el archivador para la 171 y este esqueleto) | **CERRADA** | `SALIDA_V172_T1A_CERRAR_REPORTE_171.txt`, `_T1A_COMPARAR_CABECERA_171`, `_T1A_RELECTURA_DESDE_GIT`, `_T1B_REGISTRO_ACTA_171`, `_T1B_MUTACION_REGISTRO`, `_T1B_SERIE`, `_T1C_GUARDA_QUE_MORDIO`, `_T1C_ESQUELETO` |
 | **TAREA 2** | BLOQUEANTE PARA LA 3. SE DESENVENENA EL CONTADOR Y SE CORRIGE EL `R.40` (adjudicaciones 6.1 y 6.3): 2.a `docs/loop/reportes/REPORTE_V<N>.md` entra en los narrativos del bucle POR PATRON, con su caso positivo por mutacion; 2.b la afirmacion falsa del `R.40` corregida por el carril del `9.10` con el reparto recomputado; 2.c el contador otra vez, con la atribucion fichero a fichero y linea a linea | **CERRADA** | `SALIDA_V172_T2_CONTAR_LD_ANTES.txt`, `_T2A_MUTACION_EXCLUSION`, `_T2A_CONTAR_LD_DESPUES`, `_T2B_CORREGIR_R40`, `_T2C_ATRIBUCION` |
-| **TAREA 3** | LA NUMERACION `LD`, QUE AHORA SI SE ESCRIBE (adjudicacion 6.2): las 16 filas de la segunda tanda de `docs/plan/LECTURAS_DIRIGIDAS.md` ganan `LD-139` a `LD-154` POR ADICION PURA, con los numeros COMPUTADOS y con dos guardas que tienen que caer por mutacion; y despues la fila de `docs/plan/00_INDICE.md` recibe su cifra de hoy por `9.21` (adjudicacion 6.10) | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 3** | LA NUMERACION `LD`, QUE AHORA SI SE ESCRIBE (adjudicacion 6.2): las 16 filas de la segunda tanda de `docs/plan/LECTURAS_DIRIGIDAS.md` ganan `LD-139` a `LD-154` POR ADICION PURA, con los numeros COMPUTADOS y con dos guardas que tienen que caer por mutacion; y despues la fila de `docs/plan/00_INDICE.md` recibe su cifra de hoy por `9.21` (adjudicacion 6.10) | **CERRADA** | `SALIDA_V172_T3_NUMERAR_LD.txt`, `_T3_MUTACION_NUMERACION`, `_T3_ATRIBUCION_DESPUES`, `_T3_CONTAR_LD`, `_T3B_INDICE` |
 | **TAREA 4** | LOS TRES ARNESES Y LA BATERIA (adjudicaciones 6.4 y 6.5), Y EL ORDEN ES OBLIGATORIO: 4.a el caso `F` de `vuelta171_tarea5a_mutacion_enchufe.py` refundado sobre SUJETO CONGELADO; 4.b los tres arneses de la 171 dentro de la nomina de `verificar_mutaciones_viejas.py`; 4.c la bateria corrida ENTERA Y SOLA al cierre, con su salida en la seccion 9 | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 5** | EL CIERRE DEL REPORTE DEJA DE SER UN PASO A MANO (adjudicacion 6.6): nace `scripts/loop/cerrar_reporte.py`, de nombre estable y sin numero de vuelta, que pega la cabecera, anexa el cuerpo, escribe el veredicto y CAE EN ROJO si al terminar falta cualquiera de las cuatro piezas. Con su caso positivo por mutacion, y esta vuelta se cierra con el | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
@@ -334,5 +334,114 @@ cita un encargo**, que es exactamente el `PD.1` que la 171 dejo abierto.
 `LD-138` tiene seccion propia"* y *"el archivo de reportes ya no cuenta"*
 (comprobado barriendo todos los sitios del universo). **LA TAREA 3 SE PUEDE
 CORRER, y el siguiente libre por la vara que asigna es `LD-139`.**
+
+### TAREA 3. LA NUMERACION `LD`, QUE AHORA SI SE ESCRIBE
+
+**LAS 16 LECTURAS DE LA SEGUNDA TANDA GANAN `LD-139` A `LD-154`.** Instrumento
+`scripts/loop/vuelta172_tarea3_numerar_ld.py`, salida
+`docs/loop/SALIDA_V172_T3_NUMERAR_LD.txt`, **exit 0**.
+
+| celda | de donde sale | valor |
+|---|---|---:|
+| hechas antes de escribir | funciones del propio contador | **82** |
+| mayor de las HECHAS, computado | `siguiente_libre` sobre ese mapa | **LD-138** |
+| siguiente libre, computado y no tecleado | mayor mas uno | **LD-139** |
+| numeros con seccion propia por encima de `LD-138` | guarda (ii) | **0** |
+| filas de par leidas de la tabla | barrido de los tres bloques | **8 + 5 + 3 = 16** |
+| clases leidas de la tabla | del mismo barrido | **A 2, D 14** |
+| numeros asignados | computados | **`LD-139` a `LD-154`** |
+| el fichero antes | contado | 205.820 bytes, 2.078 saltos de linea |
+| el fichero despues | contado | 214.916 bytes, 2.230 saltos de linea |
+
+**QUE SIGNIFICA "POR ADICION PURA" AQUI, DICHO EXACTO PARA QUE SE PUEDA
+DISCUTIR.** Las tres tablas **no se han tocado, ni una palabra ni un byte**: el
+instrumento lo comprueba al releer, buscando cada una de las 16 filas de par tal
+como estaba (`(nodo_a, nodo_b, clase)`) y contando **16 de 16 intactas**. Lo que
+se anade es un **bloque nuevo al final de la segunda tanda**, con las 16
+secciones en la forma de la casa
+(``### `LD-nn` . `a` contra `b` . **CLASE**``), **y el par y la clase de cada una
+se LEEN de la tabla**, no se teclean.
+
+**Y DIGO LO QUE ESTE INSTRUMENTO NO HACE, PORQUE ES LO QUE MAS PODRIA
+MALINTERPRETARSE: NO VUELVE A LEER NINGUN PAR.** Las 16 lecturas estan hechas y
+sus veredictos escritos **desde el 11 ago 2026**; lo unico que les faltaba era el
+numero. **Ninguna clase se mueve, ningun nodo se toca y `master_graph.json` no se
+abre siquiera.** Cada seccion nueva remite a la tabla y **no copia su razon**,
+porque una copia seria una segunda version de lo mismo.
+
+**EL CONTRASTE CON EL SALDO QUE LA PROPIA PAGINA PUBLICA, Y ES CONTRASTE Y NO
+FUENTE:** la pagina dice **leidas 16, REPITEN (A) 2, SANAS (D) 14** desde el 11
+ago 2026, y mi conteo de hoy da **16, A 2, D 14**. Calzan al digito. **Manda mi
+conteo**, que es el que se corrio hoy.
+
+**LAS DOS GUARDAS, Y LAS DOS CAEN POR MUTACION.** Arnes
+`scripts/loop/vuelta172_tarea3_mutacion_numeracion.py`, salida
+`docs/loop/SALIDA_V172_T3_MUTACION_NUMERACION.txt`, **exit 0**: **24 casos, 24
+pasan, 24 caen al mutar el esperado**. Y **para poder probarlas hubo que sacarlas
+a funciones puras**, `siguiente_libre(hechas)` y `asignacion_ajena(hechas,
+corte)`, porque dentro de `main()` no hay nada que un arnes pueda llamar.
+
+- **La (i), que el numero se compute y no se teclee**, se prueba por donde
+  importa: la funcion **devuelve cuatro valores distintos para cuatro mapas
+  distintos**, y con mayor 90 el rango sale **`LD-91` a `LD-106`**. **Si el
+  `LD-139` estuviera tecleado, ese caso no se moveria.**
+- **La (ii), la asignacion ajena**, se prueba con mapas limpios, de un intruso y
+  de dos, y **el arnes exige que los NOMBRE**, no solo que los cuente.
+- Y el lector de filas se prueba contra una pagina fabricada: **no se traga el
+  ruido de otra tabla, no cruza a la tercera tanda, no se traga la tabla de
+  oficios, y lee las clases LITERALES** (`DDADAD` sobre un caso fabricado).
+
+**SUJETO CONGELADO:** paginas y mapas son literales del proceso, **cero lecturas
+de disco y cero escrituras**, asi que el arnes seguira verde dentro de diez
+vueltas.
+
+**EL CIERRE DE LA VARA, MEDIDO DESPUES** (`docs/loop/SALIDA_V172_T3_ATRIBUCION_DESPUES.txt`,
+exit 0, y `docs/loop/SALIDA_V172_T3_CONTAR_LD.txt`):
+
+| vara | antes de la 2.a | tras la 2.a | **al cerrar la TAREA 3** |
+|---|---:|---:|---:|
+| **hechas** | 82 | 82 | **98** |
+| mayor de las **HECHAS** | LD-138 | LD-138 | **LD-154** |
+| mayor del **UNIVERSO** | LD-155 | LD-154 | **LD-154** |
+| nombrados sin seccion propia | 9 | 6 | **4** |
+
+**LAS DOS VARAS CONVERGEN EN `LD-154`, QUE ES LO QUE EL ENCARGO PEDIA**, y las
+**98** hechas tambien salen. **Los 4 que quedan estan nombrados uno a uno**:
+`LD-12` y `LD-27` (las menciones de la serie `R.n` al glosar un encargo, o sea el
+`PD.1` abierto) y `LD-71` y `LD-99`, que **la vuelta 48 ya declaraba como no
+pendientes** con su linea de acta.
+
+**Y UNA NOTA SOBRE EL INSTRUMENTO DE LA 2.c QUE NO ME AHORRO:** su corte estaba
+**clavado en 138**, asi que al correrlo DESPUES de la TAREA 3 salia ROJO **por
+diseno**, diciendo que hay asignacion ajena cuando lo que hay es el trabajo
+recien hecho. **Un rojo que solo dice "hiciste tu tarea" es un rojo que no se
+puede leer**, asi que el corte paso a ser parametro (`--corte`). Va como `D.6`.
+
+**Y UNA CAIDA MIA AL HACERLO** (va como `CAIDA 3` de la seccion 8): al anadir el
+parametro **volvi a correr el instrumento con `--corte 138` y pise su salida
+vieja**, que era la evidencia de la guarda previa. **No se perdio nada porque
+estaba commiteada**, y la restaure con `git checkout 96940490 --`. La salida que
+hoy vive en `docs/loop/SALIDA_V172_T2C_ATRIBUCION.txt` es **la corrida original,
+la de antes de la TAREA 3**, y la de despues vive aparte.
+
+**LA SEGUNDA MITAD: LAS DOS FILAS DE `docs/plan/00_INDICE.md`, POR `9.21`.**
+Instrumento `scripts/loop/vuelta172_tarea3b_indice.py`, salida
+`docs/loop/SALIDA_V172_T3B_INDICE.txt`, **exit 0, 10 comprobaciones y 0 fallos**.
+
+**LA FILA QUE EL ENCARGO NOMBRA** es *"lecturas dirigidas encargadas y sin
+hacer"*, que publicaba **CERO** con corte 19 ago 2026 y hoy mide **4**. El `D.4`
+de la vuelta 171 se nego a adosarla y **tenia razon**: entonces el barrido daba
+**8** y seis salian del archivo de reportes. **Hoy ya se puede**, y los cuatro
+van nombrados uno a uno dentro de la celda.
+
+**Y TOQUE UNA SEGUNDA FILA QUE EL ENCARGO NO NOMBRA, ASI QUE LO DIGO EN VEZ DE
+COLARLO.** La fila de arriba, *"lecturas dirigidas hechas"*, llevaba adosada
+desde la vuelta 171 la cifra **82 con corte 5 sep 2026**, y **mi TAREA 3, del
+mismo 5 sep 2026, la ha movido a 98**. Dejarla asi habria puesto **dos cifras
+distintas con la misma fecha para la misma vara en la misma celda**, que no es
+una cifra con su corte sino una contradiccion, **y la habria creado yo**. Se
+adosa por el mismo `9.21`, diciendo en palabras el antes y el despues (*"82 antes
+de la TAREA 3 de la vuelta 172, 98 despues"*, diferencia exacta **16**), y **sin
+tocar el 82, ni el 81, ni el 65**. Va como `D.7`.
 
 <!-- FIN ANEXO DE TAREAS -->
