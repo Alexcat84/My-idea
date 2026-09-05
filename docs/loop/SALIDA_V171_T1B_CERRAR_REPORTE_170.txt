@@ -1,0 +1,82 @@
+==============================================================================
+VUELTA 171, TAREA 1.b: SE CIERRA EL REPORTE DE LA VUELTA 170
+==============================================================================
+
+A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
+   docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 170 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   lineas: 530 | bytes: 32473
+   contiene '**EL VEREDICTO DE UNA LINEA: SIN ESC' -> SI (se esperaba SI)
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'        -> SI (se esperaba SI)
+   contiene '\n## 3.'                              -> NO (se esperaba NO)
+   contiene '\n## 9.'                              -> NO (se esperaba NO)
+
+B) LA CABECERA, LEIDA DEL FICHERO DEL TALLADOR Y NO TECLEADA
+   docs/loop/SALIDA_V170_TALLADOR_CABECERA.txt -> 2443 bytes, 11 filas de tabla
+   filas con las dos columnas: 11
+      | | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+      |---|---:|---:|
+      | censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+      | Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, diver
+      | aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.
+      | motor | 25/25 | **25/25** |
+      | web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
+      | tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+      | aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | 
+      | desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defe
+      | identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `4
+
+C) EL BORRADOR DEL CIERRE, COMPROBADO ANTES DE ANEXARLO
+   scripts/loop/_v170_cierre_texto.md -> 9010 bytes, 150 lineas, sha256 91a7e3782ce4a8df
+   secciones que trae: 7
+      ## 3. EL CIERRE, CON SU IDENTIDAD LEIDA DE GIT
+      ## 4. LA PARADA, Y ES UNA
+      ## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+      ## 6. LAS PREGUNTAS
+      ## 7. PENDIENTES DE DOCTRINA
+      ## 8. MIS CAIDAS PROPIAS, CON SU NOMBRE Y NINGUNA TAPADA
+      ## 9. LA BATERIA DE MUTACIONES, CORRIDA ENTERA Y SOLA AL CIERRE
+   CIFRA discutibles `D.n` contados del borrador: 8
+   CIFRA caidas numeradas contadas del borrador: 4
+   CIFRA caidas sin numero ('UNA QUINTA'): 1
+   CIFRA caidas totales: 5
+
+D) LOS OCHO COMMITS QUE EL BORRADOR NOMBRA, VERIFICADOS EN GIT
+   (se VERIFICAN, no se reescriben: el borrador se anexa tal cual)
+   commits en 46208790..29f04e86, contados de git log: 8
+   commits nombrados en la tabla del borrador: 8
+      abb85566  EN EL RANGO  APERTURA DE LA VUELTA 170, EL BLOQUE ENTERO: la caida 1 que la 169
+      4c6fd7c1  EN EL RANGO  VUELTA 170: EL ESQUELETO DEL REPORTE, TALLADO ANTES DE LA PRIMERA 
+      e6840378  EN EL RANGO  TAREA 1 CERRADA (adjudicaciones 6.2 y 6.3 del acta 169): la cifra 
+      47323f12  EN EL RANGO  TAREA 2 CERRADA (adjudicaciones 6.1 y 6.4): el aislador nace de un
+      222ca6a7  EN EL RANGO  TAREA 3 CERRADA (adjudicacion 6.11): las tres cifras ganan su cort
+      28c5a5dc  EN EL RANGO  TAREA 4 (adjudicaciones 6.9 y 6.10): los cinco puentes quedan REGI
+      220ecb86  EN EL RANGO  TAREA 5 CERRADA (adjudicacion 6.12 y la vara): las tres clausulas 
+      29f04e86  EN EL RANGO  EL BLOQUE DE CIERRE DE LA VUELTA 170, ENTERO, Y EL TALLADOR SALE V
+   CIFRA nombrados que NO estan en el rango: 0
+
+E) LA BATERIA DE LA VUELTA 170, MEDIDA HOY
+   docs/loop/SALIDA_V170_BATERIA.txt -> 0 bytes
+   seccion 5 del acta (la corrida del auditor): ACTA_AUDITOR.md:57574
+   ultimo commit que toca el acta: 0caca89f
+
+F) SE ESCRIBE
+   cabecera sustituida: 581 bytes de hueco -> 2648 bytes de tabla pegada
+   veredicto sustituido: 99 bytes -> 1010 bytes
+   ESCRITO: docs/loop/REPORTE.md (45706 bytes, 729 lineas)
+
+G) LA PRIMERA DE LAS DOS COMPROBACIONES: SE RELEE DEL DISCO
+   el veredicto ya no dice SIN ESCRIBIR TODAVIA               SI
+   el hueco PENDIENTE DE TALLAR ya no esta                    SI
+   las secciones 3 a 9 estan las siete                        SI
+   las secciones 3 a 8 del borrador estan byte a byte         SI
+   los ocho discutibles siguen                                SI
+   las cinco caidas siguen                                    SI
+   la tabla tallada esta pegada entera                        SI
+   la seccion 9 dice que la bateria NO corrio                 SI
+   la seccion 9 no cuela ninguna corrida de la 171            SI
+   CIFRA comprobaciones: 9 | fallan: 0
+
+VERDE: el reporte de la vuelta 170 queda cerrado.
+   LA SEGUNDA COMPROBACION (leer de git lo que se acaba de commitear)
+   NO la hace este fichero: se hace DESPUES del commit, con git show,
+   que es lo que la relectura al doble de este encargo manda.

@@ -8,8 +8,22 @@
 > hizo, y las filas que sigan diciendo ABIERTA, SIN CERRAR son las que no se
 > hicieron.** Tope de cinco tareas, y el encargo trae exactamente cinco.
 
-**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.** Se talla al cierre, cuando
-haya de que hablar.
+**EL VEREDICTO DE UNA LINEA: LA VUELTA 170 HIZO SUS CINCO TAREAS Y NO CERRO
+SU REPORTE; ESTE CIERRE LO ESCRIBE LA VUELTA 171, Y LO DICE EN VEZ DE
+DISIMULARLO.**
+
+> **QUIEN ESCRIBE ESTE CIERRE, Y CUANDO, PORQUE CALLARLO SERIA MAQUILLARLO.**
+> Las secciones 3 a 9 de abajo NO se commitearon en la vuelta 170. Su borrador
+> quedo en `scripts/loop/_v170_cierre_texto.md` y el commit `29f04e86`,
+> titulado *"EL BLOQUE DE CIERRE DE LA VUELTA 170, ENTERO"*, **toca doce
+> ficheros y `docs/loop/REPORTE.md` no es ninguno de ellos** (medido en la
+> vuelta 171 por `scripts/loop/vuelta171_apertura.py`, bloque H, salida
+> `docs/loop/SALIDA_V171_APERTURA.txt`). **La vuelta 171 las pega aqui TAL COMO
+> ESTAN**, sin reescribir una palabra y sin suavizar ninguno de sus **ocho**
+> discutibles ni de sus **cinco** caidas (las dos cifras contadas del
+> borrador, no tecleadas). **Lo unico que la 171 escribe de su mano en este
+> reporte son este recuadro y la seccion 9**, que el borrador dejo con
+> cabecera y sin cuerpo.
 
 ## 0. LA IDENTIDAD Y LA CABECERA, TALLADAS Y NO TECLEADAS
 
@@ -29,13 +43,26 @@ EN ROJO si algo no se encuentra o es ambiguo:
   que lo lleva**, porque ese commit se crea despues de escribirlo.
 
 <!-- CABECERA TALLADA -->
-**PENDIENTE DE TALLAR AL CIERRE, Y SE DICE EN VEZ DE RELLENARLA.** La tabla sale
-de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 170`. **Esta
-vuelta SI corrio el bloque de apertura entero**, asi que la mitad izquierda ya
-se puede leer: corrido en la apertura, el tallador dice **"ROJO, 19
-celdas no se pudieron leer"** y de esas lineas de rojo, **0 mencionan
-APERTURA**. Son todas del lado CIERRE, que en la apertura todavia no existe.
-Este hueco se rellena con la tabla tallada entera cuando la vuelta cierre.
+**LA TABLA, PEGADA ENTERA DEL FICHERO QUE LA LLEVA Y NO TECLEADA.** Salio
+de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 170`, corrido al
+cierre de la vuelta 170, y su salida cruda vive en
+`docs/loop/SALIDA_V170_TALLADOR_CABECERA.txt` (2443 bytes, 11 filas de tabla,
+contadas por `scripts/loop/vuelta171_tarea1b_cerrar_reporte_170.py`). **Es la
+primera vez en dos vueltas que el tallador saca la tabla entera con sus dos
+columnas**, y por eso aqui no queda ningun hueco que rellenar.
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `46208790` (asunto real leido de git log: 'ACTA DE LA VUELTA 169 DEL AUDITOR: LAS CINCO TAREAS REPRODUCEN AL DIGITO Y LA BATERIA SALE VERDE POR MI MANO, PERO LA VUELTA SE CONTRADIJO A SI MISMA EN LA MISMA SESION Y ESO ES CIFRA PUBLICADA. NO HAY PARADA'), HEAD real de apertura `46208790` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `220ecb86` (leido de `SALIDA_V170_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
 <!-- FIN CABECERA TALLADA -->
 
 ## 1. LAS CINCO TAREAS DEL ENCARGO, Y SU ESTADO
@@ -528,3 +555,175 @@ cinco tareas esta agotado y esta es la quinta. **Lo leido queda aqui para que la
 vuelta siguiente empiece con la ficha abierta y no con la ficha por abrir.**
 
 <!-- FIN ANEXO DE TAREAS -->
+
+## 3. EL CIERRE, CON SU IDENTIDAD LEIDA DE GIT
+
+**LOS COMMITS DE LA VUELTA, LEIDOS DE `git log 46208790..HEAD`: OCHO.**
+
+| # | commit | que cierra |
+|---:|---|---|
+| 1 | `abb85566` | la apertura, el bloque ENTERO |
+| 2 | `4c6fd7c1` | el archivador, el archivado hacia atras y el esqueleto |
+| 3 | `e6840378` | TAREA 1 (y el aislador de la 2.a) |
+| 4 | `47323f12` | TAREA 2 |
+| 5 | `222ca6a7` | TAREA 3 |
+| 6 | `28c5a5dc` | TAREA 4 |
+| 7 | `220ecb86` | TAREA 5 |
+| 8 | `29f04e86` | el bloque de cierre y la cabecera tallada |
+
+**EL GRAFO NO SE MOVIO, PROBADO Y NO CREIDO:**
+`git diff 46208790 HEAD --numstat -- dataset/ web/ engine/` sale **VACIO, cero
+filas**. Las **69 rutas** que la vuelta toca son **47 de `docs/loop/`, 17 de
+`scripts/loop/`, 2 de `docs/plan/`, 2 de `docs/loop/reportes/` y 1 de `docs/`**.
+**Cero nodos tocados, cero aristas movidas, cero clases movidas.**
+
+**EL COMMIT QUE LLEVA ESTE REPORTE NO SE NOMBRA AQUI**, porque se crea despues
+de escribirlo. El `HEAD` de cierre que la cabecera publica, `220ecb86`, es el
+sello leido de `git rev-parse HEAD` **tras la ultima operacion**, que es lo unico
+que se puede leer sin inventarlo.
+
+## 4. LA PARADA, Y ES UNA
+
+**LA NUMERACION `LD` DE LAS 16 LECTURAS DE LA SEGUNDA TANDA NO SE PUEDE ESCRIBIR
+SIN INVENTAR UNA REGLA.** Esta medida entera en la TAREA 4.a y no se repite aqui.
+En una linea: **la serie `R.n` tiene 0 huecos y la serie `LD` tiene 54**, asi que
+*"el siguiente libre"* significa **`LD-139`** por la vara que el encargo nombra y
+**`LD-12`** por el tramo que encaja al numero, y **elegir entre los dos es
+escribir doctrina**. `EJECUTOR.md` 5 lo prohibe y el propio encargo manda parar.
+
+**LO QUE HACE FALTA PARA CERRARLA CABE EN UNA LINEA:** decir si el siguiente
+libre de la serie `LD` es **el mayor mas uno** o **el primer hueco**. Con eso, el
+instrumento escribe los 16 numeros en una vuelta, por adicion pura y sin tocar
+una palabra de su texto.
+
+## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+
+**Los marco ahora, con la relectura ciega del auditor por delante y sin saber
+como va a adjudicarlos.**
+
+- **`D.1` `node_modules/` NO ENTRA EN `.gitignore` POR MI MANO.** El arbol abrio
+  con un solo fichero no seguido, `node_modules/.vite/vitest/.../results.json`,
+  **12.460 bytes**, cache de `vitest`. Lo medi y lo declare, **pero no lo meti en
+  `.gitignore`**: eso seria decidir por el fundador sobre un fichero que el
+  encargo no nombra. **Discutible: puede que la decision correcta fuera anadirlo
+  y que dejarlo suelto sea dejar basura ocho vueltas mas.**
+- **`D.2` EL ARCHIVADOR NO SE ENCHUFA SOLO.** `archivar_reporte.py` existe y
+  archivo dos reportes, **pero nadie lo llama automaticamente en la apertura**.
+  Esta vuelta lo corrio a mano. **Discutible: puede que la adjudicacion 6.4
+  quisiera el automatismo dentro del esqueleto, y yo lea de menos.**
+- **`D.3` A `OP-L-01` NO LE ESCRIBI UNA SEGUNDA CORRECCION.** Su clausula 2 ya
+  tiene una fechada desde la vuelta 166 y escribir otra igual seria dejar dos
+  versiones de lo mismo. **Discutible: el encargo dice "se le pone por adicion" a
+  las dos, y yo se lo puse a una.**
+- **`D.4` EL CAMPO `forma` DE `la supervision de la IA` LLEVA DOS UNIVERSOS.**
+  Escribi la del **racimo entero** (PROVISIONAL, 13 de 21) como cuerpo y la de la
+  **nomina de `OP-L-02`** (10 de 10) como coletilla. **Discutible: puede que el
+  campo `forma` de un racimo deba hablar SOLO del racimo, y la nomina tenga que
+  ir a otro sitio.**
+- **`D.5` ESCRIBI LA PALABRA `FUNDIDA` EN UN CAMPO `forma`.** Los cuadrantes de
+  mercado resuelven a un solo nodo vivo y no tienen forma que medir, asi que
+  escribi `FUNDIDA`. **Discutible: no he encontrado esa palabra en el vocabulario
+  de formas de la casa (`MEZCLADO`, `SUB-PURO`, `PARTIDO`, `PROVISIONAL`,
+  `REPITE`), y puede que estrenar una palabra sea inventar doctrina.**
+- **`D.6` PARE EN LA 4.a EN VEZ DE RELLENAR EL HUECO.** El tramo `LD-12` a
+  `LD-27` mide **exactamente 16** y esta **exactamente** entre la primera tanda y
+  la tercera. **Discutible: puede que la coincidencia sea tan cerrada que no haya
+  regla que inventar, y que parar sea de mas.**
+- **`D.7` LOS DOS ARNESES NUEVOS ENTRAN EN LA NOMINA DE LA BATERIA EL MISMO DIA
+  QUE NACEN.** La condicion desde la vuelta 148 es **sujeto congelado**, no el
+  plazo, y creo que los dos la cumplen (actas de mentira en memoria mas un acta
+  ya firmada; filas y pasos fabricados en memoria). **Discutible: puede que el
+  acta 169 quiera plazo igual, como lo discutio para el de la 169.**
+- **`D.8` TRAIGO EL AGUJERO DEL `R.38` COMO HALLAZGO Y NO LO CORRIJO.** La
+  entrada `R.38` afirma que su arnes hermano prueba el barrido por mutacion y ese
+  arnes no existe. **No lo corrijo porque no es mio y el encargo no lo nombra.**
+  **Discutible: puede que una afirmacion falsa en `docs/PENDIENTES.md` haya que
+  corregirla la vea quien la vea.**
+
+## 6. LAS PREGUNTAS
+
+- **`P.1`** ¿El siguiente libre de la serie `LD` es **el mayor mas uno** o **el
+  primer hueco**? Es la PARADA, y es lo unico que bloquea 16 numeros.
+- **`P.2`** La celda de `docs/plan/00_INDICE.md:644` publica **81** lecturas
+  hechas con corte **19 ago 2026** y el mismo instrumento mide **82** hoy (entro
+  `LD-138-01`). **No es una mentira**, lleva su corte escrito. ¿Se le adosa la
+  cifra de hoy por `9.21`, o se deja hasta que alguien la encargue?
+- **`P.3`** Cuando la nomina de una operacion es un **subconjunto** de un racimo
+  del inventario, ¿que universo manda en el campo `forma` del racimo?
+- **`P.4`** ¿Existe un vocabulario cerrado para el campo `forma`? Si existe, ¿en
+  que pagina, y cabe `FUNDIDA` en el?
+- **`P.5`** Los 8 pares sin leer de `la supervision de la IA` (racimo entero)
+  quedan medidos y nombrados uno a uno. ¿Entran en alguna operacion escrita, o
+  son backlog nuevo?
+
+## 7. PENDIENTES DE DOCTRINA
+
+- **`PD.1` NO HAY REGLA PARA "EL SIGUIENTE LIBRE" DE UNA SERIE CON HUECOS.**
+  `serie_de_registros.py` computa `mayor mas uno` porque su serie no tiene
+  huecos; la serie `LD` tiene 54. La regla que falta es de una linea y sirve para
+  las dos series a la vez. **Es la PARADA de la 4.a.**
+- **`PD.2` NO HAY VOCABULARIO ESCRITO PARA EL CAMPO `forma`.** El inventario usa
+  hoy `MEZCLADO`, `SUB-PURO`, `PARTIDO n mas m mas k`, `PROVISIONAL` y frases
+  libres. Sin nomina cerrada, cada vuelta puede estrenar una palabra sin que nada
+  lo cace. **Yo estrene una (`FUNDIDA`) y lo declaro en `D.5`.**
+- **`PD.3` NO HAY REGLA SOBRE EL SUBCONJUNTO.** Cuando una operacion cierra una
+  nomina que es parte de un racimo, no esta escrito si la forma del racimo se
+  reescribe, se deja, o se reescribe con las dos cifras. **Yo elegi las dos
+  cifras y lo declaro en `D.4`.**
+
+## 8. MIS CAIDAS PROPIAS, CON SU NOMBRE Y NINGUNA TAPADA
+
+- **`CAIDA 1`. CORRI `run_phase1.py` SUELTO**, sin los pasos 2, 3 y 4 del ciclo,
+  que es exactamente lo que el encargo prohibe con esas palabras. **La cazo el
+  guardian del commit**: 71 nodos divergentes de `etiqueta_arbol`, commit
+  ABORTADO. **El remedio no fue saltarse el guardian**: corri el ciclo entero
+  **dos veces seguidas** para probar que cierra, y las dos dan Gate 0 OK y
+  `numstat` en cero filas (`docs/loop/SALIDA_V170_T3_CICLO_REPARADO.txt`).
+- **`CAIDA 2`. UNA GUARDA MIA MIDIO LO COMODO EN VEZ DE LO QUE IMPORTA.** En la
+  TAREA 3 comprobaba que el **total** de apariciones del `53` no cambiara, y la
+  correccion nueva nombra esa cifra varias veces porque **es de lo que habla**:
+  salio ROJA **despues** de escribir. Restaure `OPERACIONES.jsonl` con
+  `git checkout`, cambie la guarda a lo que importa (**que las siete viejas
+  sobrevivan enteras**) y la volvi a correr. **La guarda no se aflojo: se
+  reapunto.**
+- **`CAIDA 3`. PEGUE LA MISMA COLETILLA DOS VECES.** En la TAREA 5.a, el campo
+  `forma` de `la supervision de la IA` salio con la coletilla del subconjunto
+  duplicada. **La vi leyendo el campo en disco despues de escribir**, restaure
+  `INVENTARIO.jsonl` con `git checkout`, arregle el instrumento y lo volvi a
+  correr: **de 1.064 a 753 caracteres**, la diferencia exacta.
+- **`CAIDA 4`, Y ESTA LA CAZO LA RELECTURA AL DOBLE ANTES DE PUBLICARLA.** Mi
+  primera version de la tabla de commits del comentario del arnes puso
+  `c6ac70f6` en la **vuelta 166**, y es de la **167**. La cazo el propio
+  instrumento al computar la vuelta de las actas en vez de leerla del asunto.
+  **Habria sido una cifra falsa en la CUARTA SEDE, o sea la misma especie que
+  esta vuelta venia a corregir**, y por eso la declaro aunque no llegara a
+  commitearse.
+- **UNA QUINTA, MECANICA Y SIN CONSECUENCIA, y la digo por no elegir cuales
+  cuento:** tres intentos de parchear ficheros con `heredoc` me convirtieron
+  secuencias de escape en saltos de linea reales y dejaron ficheros que no
+  parseaban. **Ninguno llego a commitearse**, los tres los cazo el propio
+  interprete al correr, y el remedio fue escribir los ficheros enteros en vez de
+  parchearlos.
+
+## 9. LA BATERIA DE MUTACIONES, CORRIDA ENTERA Y SOLA AL CIERRE
+
+**NO CORRIO. Y SE DICE CON LA MEDICION DELANTE EN VEZ DE RELLENARSE CON UNA
+CORRIDA DE OTRA VUELTA.** `docs/loop/SALIDA_V170_BATERIA.txt` **existe y mide
+0 bytes**, medido en la vuelta 171 por
+`scripts/loop/vuelta171_tarea1b_cerrar_reporte_170.py` con `os.path.getsize`.
+El fichero de salida se creo y **la corrida no llego a escribir ni una linea**:
+la vuelta 170 se corto antes de lanzarla.
+
+**AQUI NO SE PEGA UNA CORRIDA DE LA VUELTA 171.** Escribir en la seccion 9 del
+reporte de la 170 una bateria corrida en otra vuelta seria publicar como de una
+vuelta lo medido en otra, que es **exactamente la especie que esta campana
+persigue**. El hueco se declara y no se rellena.
+
+**LA BATERIA DE LA VUELTA 170 SI ESTA CORRIDA, PERO POR OTRA MANO Y EN OTRO
+SITIO, Y AHI ES DONDE HAY QUE IR A LEERLA:** seccion 5 del acta del auditor de
+la vuelta 170, *"LA BATERIA DE MUTACIONES, CORRIDA POR MI MANO"*, en
+`docs/loop/ACTA_AUDITOR.md:57574` (linea localizada por este instrumento, no
+tecleada). **Su cifra es del auditor y lleva su atribucion**: 75 entradas en la
+nomina, exit 0, ANCLA PERDIDA 0, NO MORDIO 0, NO REPRODUCIBLE 0, y los dos
+CASO DECLARADO de siempre. **Esa corrida no es de este reporte y por eso se
+cita y no se copia como propia.**
