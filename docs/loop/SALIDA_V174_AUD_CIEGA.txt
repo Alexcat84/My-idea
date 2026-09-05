@@ -1,0 +1,141 @@
+==============================================================================
+SUJETO DE CIEGA, AISLADO ANTES DEL PRIMER COMANDO DE VERIFICACION
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (literal, tal como se paso):
+   REMEDIO BLOQUEANTE DE LA CAIDA PROPIA REPETIDA (AUDITOR.md 1.2, dientes del 5 sep 2026): el sujeto se aisla ANTES de Gate 0, de la vara, de los arneses y de cualquier recomputo. Tramo 1 a 1085, que es el que la vuelta 173 dejo en RELECTURA AL DOBLE por la regla del credito. Muestra de 8 con semilla 174.
+
+CIFRA pares elegidos: 8
+CAMPOS QUE ESTA SALIDA LLEVA (lista blanca): puesto_intra, nodo_a, nodo_b
+
+------------------------------------------------------------------------------
+puesto_intra: 10
+nodo_a: decide_criterio_eleccion_proveedor
+nodo_b: domina_lo_que_compras
+  pasos de A (decide_criterio_eleccion_proveedor): 5
+     paso 1: Escribe en una hoja qué necesitas comprar con el mayor detalle posible antes de contactar a nadie.
+     paso 2: Decide si esta compra es de bajo riesgo, donde manda el precio, o de alto riesgo, donde manda el valor.
+     paso 3: Si manda el valor, anota entre tres y cinco criterios que te importan además del precio.
+     paso 4: Si vas a comprarle a un solo proveedor sin comparar, escribe en una línea la razón concreta.
+     paso 5: Guarda esa lista para usarla cuando compares cotizaciones, no la improvises después.
+  pasos de B (domina_lo_que_compras): 5
+     paso 1: Investiga precios de referencia y variantes del insumo o servicio antes de hablar con el proveedor.
+     paso 2: Pregunta a otras personas de tu rubro que condiciones de compra consideran normales.
+     paso 3: Usa tu propio formato para pedir cotizaciones en vez del que te entrega el proveedor.
+     paso 4: Identifica quienes son los competidores de tu proveedor y que ofrecen.
+     paso 5: Anota las preguntas que aun no puedes responder antes de sentarte a negociar.
+------------------------------------------------------------------------------
+puesto_intra: 50
+nodo_a: usa_preguntas_de_como_para_negociar_precio
+nodo_b: usa_silencio_no_partas_diferencia
+  pasos de A (usa_preguntas_de_como_para_negociar_precio): 5
+     paso 1: Cuando te den un precio o condición que no te conviene, responde con una pregunta que empiece por 'cómo'.
+     paso 2: Usa un tono de petición de ayuda, no de reclamo, para que no se sienta atacado.
+     paso 3: Guarda silencio después de preguntar y deja que la otra parte piense su respuesta.
+     paso 4: Si te ofrecen una mejora, repite la misma técnica hasta acercarte a tu número real.
+     paso 5: Evita aceptar la primera mejora que te ofrezcan, sigue preguntando cómo hacerlo posible.
+  pasos de B (usa_silencio_no_partas_diferencia): 5
+     paso 1: Antes de la llamada o reunión, escribe el precio mínimo que puedes aceptar y no lo digas hasta que haga falta.
+     paso 2: Cuando plantees tu oferta, cállate y espera la respuesta sin rellenar el silencio con justificaciones.
+     paso 3: Si te ofrecen partir la diferencia, pregunta qué problema resuelve esa cifra antes de aceptarla.
+     paso 4: Practica quedarte en silencio unos segundos después de tu oferta, aunque te incomode.
+     paso 5: Anota después de cada negociación si cediste por presión del silencio o por una razón real.
+------------------------------------------------------------------------------
+puesto_intra: 140
+nodo_a: decide_criterio_eleccion_proveedor
+nodo_b: prepara_posicion_agenda_antes_negociar
+  pasos de A (decide_criterio_eleccion_proveedor): 5
+     paso 1: Escribe en una hoja qué necesitas comprar con el mayor detalle posible antes de contactar a nadie.
+     paso 2: Decide si esta compra es de bajo riesgo, donde manda el precio, o de alto riesgo, donde manda el valor.
+     paso 3: Si manda el valor, anota entre tres y cinco criterios que te importan además del precio.
+     paso 4: Si vas a comprarle a un solo proveedor sin comparar, escribe en una línea la razón concreta.
+     paso 5: Guarda esa lista para usarla cuando compares cotizaciones, no la improvises después.
+  pasos de B (prepara_posicion_agenda_antes_negociar): 6
+     paso 1: Escribe en una hoja todos tus objetivos para esta compra, no solo el precio.
+     paso 2: Ordena esos objetivos de mayor a menor prioridad y marca cuales podrias soltar sin problema.
+     paso 3: Busca o pregunta directamente quien toma las decisiones del lado del proveedor.
+     paso 4: Averigua como le va al negocio del proveedor: su industria, su competencia, sus dificultades actuales.
+     paso 5: Redacta la agenda de la reunion de negociacion y enviala con un dia de anticipacion.
+     paso 6: Abre tu la reunion el dia acordado para marcar el ritmo de la conversacion.
+------------------------------------------------------------------------------
+puesto_intra: 462
+nodo_a: crowdfunding_legal_exemptions_jobs_act
+nodo_b: equity_crowdfunding
+  pasos de A (crowdfunding_legal_exemptions_jobs_act): 5
+     paso 1: Determina si lo que ofreces es un security (equity, deuda convertible) o algo distinto, como la preventa de un producto.
+     paso 2: Evalúa si los inversionistas a los que apuntas son acreditados o no acreditados.
+     paso 3: Elige el marco adecuado (506(b), 506(c) o Título III) según si necesitas hacer publicidad abierta y cuánto quieres levantar.
+     paso 4: Consulta con un abogado especializado en valores antes de publicitar tu ronda.
+     paso 5: Si usas el Título III, elige un portal de financiamiento autorizado y prepara las divulgaciones que exige la SEC.
+  pasos de B (equity_crowdfunding): 4
+     paso 1: Revisa si las personas que quieren invertir califican como 'inversionista acreditado' según las reglas de la SEC
+     paso 2: Evita promocionar tu ronda de financiamiento públicamente, salvo que cumplas con las excepciones que lo permiten
+     paso 3: Consulta con un abogado de valores qué excepción de registro ante la SEC aplica a tu forma de levantar capital
+     paso 4: Si usas una plataforma como AngelList, entiende cómo funcionan los grupos de inversionistas ('syndicates') que juntan capital
+------------------------------------------------------------------------------
+puesto_intra: 496
+nodo_a: customer_discovery_cuatro_fases
+nodo_b: customer_discovery_phase2_problem_test
+  pasos de A (customer_discovery_cuatro_fases): 4
+     paso 1: Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis
+     paso 2: Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales
+     paso 3: Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano
+     paso 4: Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más
+  pasos de B (customer_discovery_phase2_problem_test): 5
+     paso 1: Diseñar experimentos de prueba del problema con clientes reales
+     paso 2: Prepararse para contactos y entrevistas con clientes
+     paso 3: Probar la comprensión del problema y su importancia percibida por el cliente
+     paso 4: Profundizar en el entendimiento del cliente (perfiles, comportamientos)
+     paso 5: Capturar conocimiento competitivo y de mercado durante las entrevistas
+------------------------------------------------------------------------------
+puesto_intra: 737
+nodo_a: pivotar_o_perseverar
+nodo_b: pivote_startup
+  pasos de A (pivotar_o_perseverar): 6
+     paso 1: Compara el progreso de tus metricas actuales con el modelo ideal de tu plan de negocio y con las expectativas cuantitativas definidas al inicio
+     paso 2: Si las metricas se acercan a ese ideal, sigue con tu estrategia actual (perseveras)
+     paso 3: Si las metricas no mejoran después de varios intentos, reconoce que no esta funcionando y considera un cambio de rumbo (pivote), con datos concretos en la sala, no solo con intuición
+     paso 4: Si pivotas, establece una nueva línea base y vuelve a empezar el ciclo de ajuste de tu negocio
+     paso 5: Comprueba que, después del cambio, tus nuevas acciones den mejores resultados que las anteriores
+     paso 6: Evaluar si el equipo puede racionalizar el fracaso en lugar de aceptarlo
+  pasos de B (pivote_startup): 5
+     paso 1: Revisa los resultados de tus pruebas de sí o no sobre las hipótesis de tu negocio
+     paso 2: Identifica qué parte de tu modelo de negocio necesita cambiar
+     paso 3: Decide con rapidez y sin miedo al fracaso si toca pivotar
+     paso 4: Si trabajas con alguien más, cuéntale el cambio como parte normal del proceso
+     paso 5: Vuelve a poner a prueba tu modelo ajustado hablando con clientes
+------------------------------------------------------------------------------
+puesto_intra: 906
+nodo_a: decision_consciente_de_crecimiento
+nodo_b: eleccion_ritmo_crecimiento
+  pasos de A (decision_consciente_de_crecimiento): 5
+     paso 1: Evalúa si de verdad quieres crecer o prefieres mantener estabilidad
+     paso 2: Revisa si tu negocio, hoy, tiene la capacidad operativa y financiera para soportar una expansión
+     paso 3: Proyecta cómo afectaría contratar gente nueva a tu flujo de caja y a tu nómina
+     paso 4: Calcula cuánto dinero gastas cada mes por encima de lo que entra (burn rate) y cuánto te dura el capital antes de expandirte
+     paso 5: Diseña un plan de contratación que responda a lo que tu negocio realmente necesita
+  pasos de B (eleccion_ritmo_crecimiento): 3
+     paso 1: Mira que tan fuerte es la competencia en tu mercado y en que momento del ciclo estas
+     paso 2: Decide si quieres crecer al ritmo en que tu vas aprendiendo o acelerar porque el mercado te lo exige
+     paso 3: Elige el tipo de financiamiento que calce con la meta de crecimiento que decidiste
+------------------------------------------------------------------------------
+puesto_intra: 1017
+nodo_a: funnel_get_customers_optimizacion
+nodo_b: herramientas_de_activacion_web
+  pasos de A (funnel_get_customers_optimizacion): 7
+     paso 1: Revisar resultados de cada programa 'get' implementado (SEO, ads, referidos, etc.)
+     paso 2: Identificar el programa más productivo y escalarlo primero
+     paso 3: Diseñar tests pass/fail para los programas más decepcionantes
+     paso 4: Identificar comportamiento de clientes de alto LTV y buscar más similares
+     paso 5: Probar variedad de ofertas, incentivos, descuentos y límites de tiempo
+     paso 6: Revisar diariamente las 10-12 métricas clave con el 'data chief'
+     paso 7: No optimizar demasiados programas a la vez para evitar resultados confusos
+  pasos de B (herramientas_de_activacion_web): 5
+     paso 1: Diseña un demo funcional de menos de un minuto que termine en una llamada a la acción clara
+     paso 2: Ofrece pruebas gratuitas limitadas en funcionalidad o duración, seguidas de emails de seguimiento
+     paso 3: Implementa opciones de contacto directo (chat, formularios, click-to-call) para sitios de comercio o suscripción
+     paso 4: Usa animaciones o videos de bienvenida de forma moderada para no saturar al usuario
+     paso 5: Crea páginas de aterrizaje específicas según la fuente del tráfico (ej: 'Bienvenido, amigos de Yahoo')
+------------------------------------------------------------------------------
+FIN DE LA SALIDA CIEGA. El destape vive en OTRO fichero.
