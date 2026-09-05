@@ -85,6 +85,18 @@ segun EN QUE MINUTO DE LA SESION se corra. Una celda publicada no puede colgar d
 eso. Los registros del arnes no son papel del plan ni salida de instrumento: son
 estado de la maquina que corre el bucle, y no es un sitio donde quepa un ENCARGO.
 
+CORRECCION DECLARADA 4 (vuelta 172, TAREA 2.a; adjudicacion 6.1 del acta 171).
+EL ARCHIVO DE LOS REPORTES ES EL REPORTE. Desde que `archivar_reporte.py` guarda
+cada reporte en `docs/loop/reportes/REPORTE_V<N>.md`, ese fichero entraba en el
+universo y le metia TODOS los numeros de `LD` que el reporte narraba. Medido en
+la vuelta 171: el sha256 de `docs/loop/reportes/REPORTE_V170.md` es identico byte
+a byte al blob de `docs/loop/REPORTE.md` en `ca55afd8`, o sea que el instrumento
+contaba como encargo un fichero que ya excluye por NARRATIVO DEL BUCLE, solo que
+con otro nombre. Entra por PATRON de la carpeta de archivo, no por el nombre de
+una vuelta, para que no haya que volver a tocarlo cada tres vueltas. NO es la
+guarda general sobre ficheros nuevos bajo `docs/`, que el acta 170 reservo al
+fundador.
+
 LA VARA, escrita para poder discutirla: quedan EXCLUIDOS los ficheros
 docs/loop/ultimo_*.json (hoy ultimo_ejecutor.json y ultimo_auditor.json, y sus
 hermanos si el arnes anade alguno, que es lo que el patron cubre por adelantado).
@@ -122,6 +134,45 @@ NARRATIVOS_DEL_BUCLE = {
 # correccion declarada del docstring. Es un PATRON y no una lista cerrada, para
 # que un hermano nuevo del arnes no vuelva a entrar por la puerta de atras.
 RE_ARNES = re.compile(r"^docs/loop/ultimo_[a-z_]+\.json$")
+
+# EL ARCHIVO DE LOS REPORTES (correccion declarada 4, vuelta 172, TAREA 2.a;
+# adjudicacion 6.1 del acta 171). `docs/loop/reportes/REPORTE_V<N>.md` NO SE
+# PARECE al reporte: ES el reporte, guardado bajo otro nombre por
+# `archivar_reporte.py`. Lo probo el sha256 de la vuelta 171, identico byte a
+# byte al blob de `docs/loop/REPORTE.md` en `ca55afd8`. Sin esta linea, cada
+# vuelta que archiva su reporte le mete al universo todos los numeros de `LD`
+# que ese reporte NARRABA, y el instrumento vuelve a leerse a si mismo por la
+# puerta de atras, que es la misma caida de las correcciones 1 y 2.
+#
+# ES UN PATRON Y NO UNA LISTA DE NOMBRES, a proposito: si aqui pusiera
+# `REPORTE_V171.md`, dentro de tres vueltas habria que volver a tocar esto y
+# nadie se acordaria. El patron cubre la carpeta de archivo entera y SOLO esa.
+#
+# LO QUE ESTO NO ES: no es la guarda general sobre ficheros nuevos bajo `docs/`
+# que el acta 170 reservo al fundador en su seccion 7.3. Esa sigue siendo suya.
+RE_ARCHIVO_DEL_REPORTE = re.compile(r"^docs/loop/reportes/REPORTE_V\d+\.md$")
+
+
+def motivo_de_exclusion(rel):
+    """POR QUE UN FICHERO NO ENTRA EN EL UNIVERSO. Devuelve la etiqueta del
+    motivo, o None si el fichero SI cuenta.
+
+    PURA A PROPOSITO (vuelta 172, TAREA 2.a): antes este criterio vivia dentro
+    del bucle de `main()` y no habia nada que un arnes pudiera llamar, asi que
+    no se podia probar por mutacion. Ahora `main()` llama aqui y no hay dos
+    copias del criterio.
+
+    `rel` es la ruta relativa a la raiz, con barra unix."""
+    nombre = rel.rsplit("/", 1)[-1]
+    if nombre.startswith("SALIDA_"):
+        return "SALIDA"
+    if rel in NARRATIVOS_DEL_BUCLE:
+        return "NARRATIVO"
+    if RE_ARCHIVO_DEL_REPORTE.match(rel):
+        return "NARRATIVO"
+    if RE_ARNES.match(rel):
+        return "ARNES"
+    return None
 
 RE_ID = re.compile(r"LD-(\d+)")
 RE_CAB = re.compile(r"^#+\s*\**\s*`?LD-(\d+)`?")
@@ -184,13 +235,16 @@ def main():
             #  (c) LOS REGISTROS DEL ARNES (docs/loop/ultimo_*.json): estado de la
             #      maquina, fuera de git, y con contenido NO REPRODUCIBLE dentro
             #      de una misma sesion (correccion 3, vuelta 50). Ver el docstring.
-            if f.startswith("SALIDA_"):
+            # UNA SOLA FUENTE DEL CRITERIO: la funcion pura de arriba, que es
+            # la que el arnes de mutacion llama (vuelta 172, TAREA 2.a).
+            motivo = motivo_de_exclusion(rel_f)
+            if motivo == "SALIDA":
                 excluidos.append(rel_f)
                 continue
-            if rel_f in NARRATIVOS_DEL_BUCLE:
+            if motivo == "NARRATIVO":
                 excluidos_narrativos.append(rel_f)
                 continue
-            if RE_ARNES.match(rel_f):
+            if motivo == "ARNES":
                 excluidos_arnes.append(rel_f)
                 continue
             p = os.path.join(base, f)

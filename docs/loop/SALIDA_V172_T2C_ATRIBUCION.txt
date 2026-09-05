@@ -1,0 +1,63 @@
+==============================================================================
+VUELTA 172, TAREA 2.c: EL CONTADOR OTRA VEZ, CON LA ATRIBUCION DELANTE
+==============================================================================
+
+A) EL CONTADOR DE VERDAD, CORRIDO EN ESTA VUELTA
+   exit del contador: 0
+   | LECTURAS DIRIGIDAS HECHAS (ids distintos con seccion propia): 82
+   | rango: LD-01 a LD-138
+   | ficheros EXCLUIDOS por ser salida de instrumento (SALIDA_*): 5911
+   | ficheros EXCLUIDOS por ser NARRATIVOS del bucle: 7  ->  docs/loop/ACTA_AUDITOR.md, docs/loop/PROMPT_SIGUIENTE.md, docs/loop/REPORTE.md, docs/loop/repo
+   | ficheros EXCLUIDOS por ser REGISTROS DEL ARNES: 2  ->  docs/loop/ultimo_auditor.json, docs/loop/ultimo_ejecutor.json
+   | rango del universo: LD-01 a LD-154
+   | numeros nombrados sin seccion propia: 6
+   | huecos en el rango: 66 -> LD-13, LD-14, LD-15, LD-16, LD-17, LD-18, LD-19, LD-20, LD-21, LD-22, LD-23, LD-24, LD-25, LD-26, LD-100, LD-101, LD-102, LD
+
+B) LAS DOS VARAS, RECOMPUESTAS AQUI CON LAS MISMAS FUNCIONES DEL CONTADOR
+   CIFRA hechas (ids con seccion propia): 82
+   mayor de las HECHAS:   LD-138
+   CIFRA universo (ids nombrados bajo docs/): 88
+   mayor del UNIVERSO:    LD-154
+   CIFRA ficheros excluidos por ARNES      2
+   CIFRA ficheros excluidos por NARRATIVO  7
+   CIFRA ficheros excluidos por SALIDA     5911
+   los excluidos por NARRATIVO, uno a uno:
+      docs/loop/ACTA_AUDITOR.md
+      docs/loop/PROMPT_SIGUIENTE.md
+      docs/loop/REPORTE.md
+      docs/loop/reportes/REPORTE_V168.md
+      docs/loop/reportes/REPORTE_V169.md
+      docs/loop/reportes/REPORTE_V170.md
+      docs/loop/reportes/REPORTE_V171.md
+
+C) LA LECTURA NUEVA AL LADO DE LA VIEJA, Y LAS DOS CON SU CORTE
+   | vara | antes de la 2.a (mismo arbol, con el archivo contando) | hoy |
+   |---|---:|---:|
+   | mayor de las HECHAS  | LD-138 | LD-138 |
+   | mayor del UNIVERSO   | LD-155 | LD-154 |
+   | nombrados sin seccion| 9      | 6 |
+   LA CIFRA VIEJA (LD-155 y 9) SALE DE docs/loop/SALIDA_V172_T2_CONTAR_LD_ANTES.txt,
+   corrida en ESTA misma vuelta antes de tocar el instrumento. NO es de un
+   reporte viejo ni de un acta: es una medicion de hoy sobre el arbol de hoy.
+
+D) LA ATRIBUCION: CADA NUMERO POR ENCIMA DE LD-138, CON FICHERO Y LINEA
+   CIFRA numeros del universo por encima de LD-138: 2
+   LD-139  seccion propia: NO
+      docs/PENDIENTES.md:12323
+      docs/PENDIENTES.md:12446
+      docs/PENDIENTES.md:12488
+   LD-154  seccion propia: NO
+      docs/PENDIENTES.md:12323
+      docs/PENDIENTES.md:12447
+      docs/PENDIENTES.md:12488
+   CIFRA de esos que TIENEN seccion propia: 0
+
+E) LAS DOS GUARDAS DE LA TAREA 3
+   ningun numero por encima de LD-138 tiene seccion propia        SI
+   el mayor de las HECHAS es LD-138                               SI
+   las dos varas salen de la MISMA lectura y del MISMO instrumento SI
+   el archivo de reportes ya no cuenta                            SI
+   CIFRA comprobaciones: 4 | fallan: 0
+
+VERDE: la TAREA 3 se puede correr. El siguiente libre por la vara que
+   asigna (las HECHAS, las que tienen seccion propia) es LD-139.

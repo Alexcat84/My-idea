@@ -12318,9 +12318,48 @@ cada una es LITERAL del fichero (localizado dentro del cuerpo del acta 170, no
 de cualquier acta); la glosa que sigue es prosa del ejecutor y va marcada como
 tal.
 
-  - **6.1 (`docs/loop/ACTA_AUDITOR.md:57628`, leida hoy). VIA: EJECUTADA.** Titulo
+  - **6.1 (`docs/loop/ACTA_AUDITOR.md:57628`, leida hoy). ~~VIA: EJECUTADA.~~ VIA CORREGIDA (5 sep 2026): NO SE CORRIO.** Titulo
     literal del acta: *"LA PARADA DE LA `4.a` NO ES PARADA. EL SIGUIENTE LIBRE ES EL MAYOR MAS UNO, Y LA REGLA ESTABA ESCRITA."*
-    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA, TAREA 3 de esta vuelta. La 'parada' de la numeracion `LD` queda cerrada por donde el acta dice: la regla estaba escrita en el codigo del instrumento que el encargo nombraba, `serie_de_registros.py:97-102`, `return (max(nums) + 1) if nums else 1`, sin condicional de huecos. EL SIGUIENTE LIBRE ES EL MAYOR MAS UNO, y las 16 filas de la segunda tanda ganan `LD-139` a `LD-154` por ADICION PURA, con los numeros COMPUTADOS POR INSTRUMENTO y sin tocar una palabra de su texto. El `D.6` (la adyacencia del tramo `LD-12` a `LD-27`) se publica como CONTRASTE MEDIDO y no como fundamento: una adyacencia no es una asignacion.
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** ~~EJECUTADA, TAREA 3 de esta vuelta. La 'parada' de la numeracion `LD` queda cerrada por donde el acta dice:~~ la regla estaba escrita en el codigo del instrumento que el encargo nombraba, `serie_de_registros.py:97-102`, `return (max(nums) + 1) if nums else 1`, sin condicional de huecos. ~~EL SIGUIENTE LIBRE ES EL MAYOR MAS UNO, y las 16 filas de la segunda tanda ganan `LD-139` a `LD-154` por ADICION PURA, con los numeros COMPUTADOS POR INSTRUMENTO y sin tocar una palabra de su texto.~~ El `D.6` (la adyacencia del tramo `LD-12` a `LD-27`) se publica como CONTRASTE MEDIDO y no como fundamento: una adyacencia no es una asignacion.
+
+    **CORRECCION DECLARADA (5 sep 2026, vuelta 172, TAREA 2.b; adjudicacion 6.3 del
+    acta 171). LO TACHADO DE ARRIBA ES FALSO Y SE QUEDA ENTERO Y TACHADO, QUE
+    ES EL CARRIL DEL BANCO `9.10`: UNA CORRECCION QUE TAPA LO QUE CORRIGE NO SE
+    PUEDE AUDITAR.** La TAREA 3 de la vuelta 171 **no se corrio**. La guarda de
+    su TAREA 2 cayo (las dos varas del contador no convergian) y la 3 quedo sin
+    correr; esta glosa se escribio ANTES, en la TAREA 1.a de aquella vuelta, y
+    nadie volvio a ella.
+
+    **LA MEDICION, PEGADA Y CORRIDA HOY POR `scripts/loop/vuelta172_tarea2b_correg
+    ir_r40.py`:** el reporte archivado de la 171
+    (`docs/loop/reportes/REPORTE_V171.md`) dice **3 veces** *"NO SE CORRE"*, y
+    `git log 0caca89f..cae2731d -- docs/plan/LECTURAS_DIRIGIDAS.md` devuelve
+    **0 commits**: la vuelta 171 no toco el fichero donde esas 16 filas viven.
+
+    **QUE SE TACHA Y QUE NO, PORQUE ES UNA DECISION.** La glosa abria diciendo
+    que la regla estaba escrita en el codigo de `serie_de_registros.py`, con su
+    cita de lineas, **y eso es CIERTO y se queda en pie**. Lo falso es el tiempo
+    verbal de la ejecucion, y es lo unico tachado. Es el criterio del `D.3` de la
+    vuelta 171, que la `6.9` del acta 171 dio por correcto: enterrar una
+    afirmacion buena para tapar una mala no es corregir.
+
+    **Y LA VIA TAMBIEN ERA FALSA, ASI QUE EL REPARTO DE ABAJO TAMBIEN LO ES.** El
+    reparto se ha RECOMPUTADO POR INSTRUMENTO leyendo las doce lineas `VIA:` de
+    esta misma entrada, no tecleando:
+
+    - reparto VIEJO, contado de la entrada: **EJECUTADA: 8 (6.1, 6.2, 6.3, 6.4, 6.6, 6.9, 6.11, 6.12); SIN TOCAR NADA: 4 (6.5, 6.7, 6.8, 6.10)**
+    - reparto CORREGIDO, con la 6.1 reclasificada: **EJECUTADA: 7 (6.2, 6.3, 6.4, 6.6, 6.9, 6.11, 6.12); NO SE CORRIO: 1 (6.1); SIN TOCAR NADA: 4 (6.5, 6.7, 6.8, 6.10)**
+
+    **LA ETIQUETA `NO SE CORRIO` NO ESTABA EN EL VOCABULARIO DE VIAS DE LA CASA**
+    (que trae `EJECUTADA`, `SIN TOCAR NADA` y `AL FUNDADOR`) y **se declara como
+    estreno**, no se cuela: describe un hecho medido y ninguna regla escrita la
+    prohibe, pero estrenar una palabra es lo que el `D.5` de la vuelta 170 hizo y
+    se le pidio cuenta. Va como discutible en el reporte de la vuelta 172.
+
+    **LO QUE ESTA CORRECCION NO TOCA:** la glosa de la `6.2` ni su via, por letra
+    de la adjudicacion 6.3 del acta 171, que dice que describe bien lo que paso,
+    parada incluida. Y no toca ninguna otra entrada de la serie.
+
   - **6.2 (`docs/loop/ACTA_AUDITOR.md:57649`, leida hoy). VIA: EJECUTADA.** Titulo
     literal del acta: *"PERO LA NUMERACION NO SE ESCRIBE HASTA QUE EL BORRADOR SALGA DE `docs/`, Y ESE ORDEN ES OBLIGATORIO."*
     **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA, Y LA FORMA DE EJECUTARLA ES EL ORDEN. La numeracion no se escribe hasta que los cinco borradores salen de `docs/`: primero la TAREA 2 limpia y vuelve a medir, y solo cuando las dos varas (el mayor de las HECHAS y el mayor del UNIVERSO) convergen en `LD-138` entra la TAREA 3. Si no convergieran, esta vuelta para y lo trae, que es lo que el acta manda.

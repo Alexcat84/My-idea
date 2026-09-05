@@ -1,0 +1,101 @@
+==============================================================================
+VUELTA 172, TAREA 2.a: CASO POSITIVO POR MUTACION DE LA EXCLUSION DEL
+ARCHIVO DE REPORTES EN vuelta48_contar_ld.py
+==============================================================================
+
+A) EL ARCHIVO DE REPORTES NO CUENTA, Y NO POR SU NUMERO DE VUELTA
+   docs/loop/reportes/REPORTE_V168.md           -> NARRATIVO
+   docs/loop/reportes/REPORTE_V170.md           -> NARRATIVO
+   docs/loop/reportes/REPORTE_V171.md           -> NARRATIVO
+   docs/loop/reportes/REPORTE_V172.md           -> NARRATIVO
+   docs/loop/reportes/REPORTE_V9999.md          -> NARRATIVO
+   docs/loop/reportes/REPORTE_V1.md             -> NARRATIVO
+
+B) LA REGLA NO SE ENSANCHA: LO QUE NO ES UN REPORTE ARCHIVADO SI CUENTA
+   docs/loop/reportes/notas.md                  -> None
+   docs/loop/reportes/REPORTE_VX.md             -> None
+   docs/loop/reportes/REPORTE_V12.txt           -> None
+   docs/loop/reportes/REPORTE_V12.md.bak        -> None
+   docs/loop/reportes/sub/REPORTE_V12.md        -> None
+   docs/loop/REPORTE_V12.md                     -> None
+
+C) SI SE ESTRECHA LA REGLA, EL CASO CAE. ES LO QUE EL ENCARGO PIDE.
+   con la regla POR PATRON:   4 de 4 excluidos
+   con la regla ESTRECHA:     0 de 4 excluidos
+
+D) SI EL ARCHIVO VUELVE A CONTAR, EL CASO CAE
+   con el patron desactivado: 0 de 4 excluidos
+
+E) LAS TRES EXCLUSIONES VIEJAS SIGUEN MORDIENDO, Y UNA NORMAL NO
+   docs/loop/SALIDA_V171_APERTURA.txt           -> SALIDA     (se esperaba SALIDA)
+   docs/loop/reportes/SALIDA_V1_X.txt           -> SALIDA     (se esperaba SALIDA)
+   docs/loop/REPORTE.md                         -> NARRATIVO  (se esperaba NARRATIVO)
+   docs/loop/ACTA_AUDITOR.md                    -> NARRATIVO  (se esperaba NARRATIVO)
+   docs/loop/PROMPT_SIGUIENTE.md                -> NARRATIVO  (se esperaba NARRATIVO)
+   docs/loop/ultimo_ejecutor.json               -> ARNES      (se esperaba ARNES)
+   docs/loop/ultimo_auditor.json                -> ARNES      (se esperaba ARNES)
+   docs/plan/LECTURAS_DIRIGIDAS.md              -> None       (se esperaba None)
+   docs/PENDIENTES.md                           -> None       (se esperaba None)
+   docs/plan/00_INDICE.md                       -> None       (se esperaba None)
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   A_REPORTE_V168.md_es_NARRATIVO                         PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   A_REPORTE_V170.md_es_NARRATIVO                         PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   A_REPORTE_V171.md_es_NARRATIVO                         PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   A_REPORTE_V172.md_es_NARRATIVO                         PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   A_REPORTE_V9999.md_es_NARRATIVO                        PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   A_REPORTE_V1.md_es_NARRATIVO                           PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   B_docs_loop_reportes_notas.md_sigue_contando           PASA   (real=None esperado=None)
+   B_docs_loop_reportes_REPORTE_VX.md_sigue_contando      PASA   (real=None esperado=None)
+   B_docs_loop_reportes_REPORTE_V12.txt_sigue_contando    PASA   (real=None esperado=None)
+   B_docs_loop_reportes_REPORTE_V12.md.bak_sigue_contando PASA   (real=None esperado=None)
+   B_docs_loop_reportes_sub_REPORTE_V12.md_sigue_contando PASA   (real=None esperado=None)
+   B_docs_loop_REPORTE_V12.md_sigue_contando              PASA   (real=None esperado=None)
+   C_la_regla_por_patron_los_ve_todos                     PASA   (real=4 esperado=4)
+   C_la_estrecha_no_ve_ninguno_de_esos                    PASA   (real=0 esperado=0)
+   C_pero_la_estrecha_si_ve_el_suyo                       PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   D_sin_patron_el_archivo_vuelve_a_contar                PASA   (real=0 esperado=0)
+   D_y_con_patron_no_cuenta_ninguno                       PASA   (real=4 esperado=4)
+   E_docs_loop_SALIDA_V171_APERTURA.txt                   PASA   (real='SALIDA' esperado='SALIDA')
+   E_docs_loop_reportes_SALIDA_V1_X.txt                   PASA   (real='SALIDA' esperado='SALIDA')
+   E_docs_loop_REPORTE.md                                 PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   E_docs_loop_ACTA_AUDITOR.md                            PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   E_docs_loop_PROMPT_SIGUIENTE.md                        PASA   (real='NARRATIVO' esperado='NARRATIVO')
+   E_docs_loop_ultimo_ejecutor.json                       PASA   (real='ARNES' esperado='ARNES')
+   E_docs_loop_ultimo_auditor.json                        PASA   (real='ARNES' esperado='ARNES')
+   E_docs_plan_LECTURAS_DIRIGIDAS.md                      PASA   (real=None esperado=None)
+   E_docs_PENDIENTES.md                                   PASA   (real=None esperado=None)
+   E_docs_plan_00_INDICE.md                               PASA   (real=None esperado=None)
+   CIFRA casos: 27 | pasan: 27 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_REPORTE_V168.md_es_NARRATIVO                         CAE   (esperado mutado='NARRATIVO_mutado')
+   A_REPORTE_V170.md_es_NARRATIVO                         CAE   (esperado mutado='NARRATIVO_mutado')
+   A_REPORTE_V171.md_es_NARRATIVO                         CAE   (esperado mutado='NARRATIVO_mutado')
+   A_REPORTE_V172.md_es_NARRATIVO                         CAE   (esperado mutado='NARRATIVO_mutado')
+   A_REPORTE_V9999.md_es_NARRATIVO                        CAE   (esperado mutado='NARRATIVO_mutado')
+   A_REPORTE_V1.md_es_NARRATIVO                           CAE   (esperado mutado='NARRATIVO_mutado')
+   B_docs_loop_reportes_notas.md_sigue_contando           CAE   (esperado mutado='NARRATIVO')
+   B_docs_loop_reportes_REPORTE_VX.md_sigue_contando      CAE   (esperado mutado='NARRATIVO')
+   B_docs_loop_reportes_REPORTE_V12.txt_sigue_contando    CAE   (esperado mutado='NARRATIVO')
+   B_docs_loop_reportes_REPORTE_V12.md.bak_sigue_contando CAE   (esperado mutado='NARRATIVO')
+   B_docs_loop_reportes_sub_REPORTE_V12.md_sigue_contando CAE   (esperado mutado='NARRATIVO')
+   B_docs_loop_REPORTE_V12.md_sigue_contando              CAE   (esperado mutado='NARRATIVO')
+   C_la_regla_por_patron_los_ve_todos                     CAE   (esperado mutado=5)
+   C_la_estrecha_no_ve_ninguno_de_esos                    CAE   (esperado mutado=1)
+   C_pero_la_estrecha_si_ve_el_suyo                       CAE   (esperado mutado='NARRATIVO_mutado')
+   D_sin_patron_el_archivo_vuelve_a_contar                CAE   (esperado mutado=1)
+   D_y_con_patron_no_cuenta_ninguno                       CAE   (esperado mutado=5)
+   E_docs_loop_SALIDA_V171_APERTURA.txt                   CAE   (esperado mutado='SALIDA_mutado')
+   E_docs_loop_reportes_SALIDA_V1_X.txt                   CAE   (esperado mutado='SALIDA_mutado')
+   E_docs_loop_REPORTE.md                                 CAE   (esperado mutado='NARRATIVO_mutado')
+   E_docs_loop_ACTA_AUDITOR.md                            CAE   (esperado mutado='NARRATIVO_mutado')
+   E_docs_loop_PROMPT_SIGUIENTE.md                        CAE   (esperado mutado='NARRATIVO_mutado')
+   E_docs_loop_ultimo_ejecutor.json                       CAE   (esperado mutado='ARNES_mutado')
+   E_docs_loop_ultimo_auditor.json                        CAE   (esperado mutado='ARNES_mutado')
+   E_docs_plan_LECTURAS_DIRIGIDAS.md                      CAE   (esperado mutado='NARRATIVO')
+   E_docs_PENDIENTES.md                                   CAE   (esperado mutado='NARRATIVO')
+   E_docs_plan_00_INDICE.md                               CAE   (esperado mutado='NARRATIVO')
+   CIFRA casos que caen al mutar el esperado: 27 de 27
+
+VERDE: los 27 casos pasan tal cual y los 27 caen al mutar el esperado.

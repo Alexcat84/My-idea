@@ -1,0 +1,57 @@
+==============================================================================
+VUELTA 172, TAREA 2.b: EL `R.40` TRAE UNA AFIRMACION FALSA Y SE CORRIGE
+==============================================================================
+
+A) LA ENTRADA, ACOTADA ANTES DE TOCAR NADA
+   `R.40` en docs/PENDIENTES.md, lineas 12289 a 12391
+   CIFRA bytes de la entrada: 14838
+
+B) LA AFIRMACION FALSA, LOCALIZADA Y CONTADA
+   la via EJECUTADA de la 6.1                       dentro del R.40: 1 | en el fichero entero: 1
+   la clausula 'EJECUTADA, TAREA 3 de esta vuelta'  dentro del R.40: 1 | en el fichero entero: 1
+   la frase de las 16 filas en pasado               dentro del R.40: 1 | en el fichero entero: 1
+
+C) LA PRUEBA DE QUE ES FALSA, CONTADA DEL REPORTE ARCHIVADO DE LA 171
+   docs/loop/reportes/REPORTE_V171.md -> 43956 bytes
+   CIFRA veces que dice 'NO SE CORRE': 3
+      | **TAREA 3** | LA NUMERACION `LD`, QUE YA NO ES PARADA (adjudicacion 6.1): las 16 filas de la s
+      da `LD-154`. **No convergen. LA TAREA 3 NO SE CORRE**, y no por prudencia: si se
+      ### TAREA 3. LA NUMERACION `LD`. NO SE CORRE, Y LA PARADA ES DE LA TAREA 2
+   CIFRA commits de la vuelta 171 que tocan docs/plan/LECTURAS_DIRIGIDAS.md: 0
+   (cero commits tocandolo es la prueba dura de que la TAREA 3 no corrio)
+
+D) EL REPARTO POR VIA, RECOMPUTADO DE LA PROPIA ENTRADA Y NO TECLEADO
+   CIFRA lineas de VIA halladas en el R.40: 12
+   VIEJO  EJECUTADA        8 (6.1, 6.2, 6.3, 6.4, 6.6, 6.9, 6.11, 6.12)
+   VIEJO  SIN TOCAR NADA   4 (6.5, 6.7, 6.8, 6.10)
+   NUEVO  EJECUTADA        7 (6.2, 6.3, 6.4, 6.6, 6.9, 6.11, 6.12)
+   NUEVO  NO SE CORRIO     1 (6.1)
+   NUEVO  SIN TOCAR NADA   4 (6.5, 6.7, 6.8, 6.10)
+
+E) LO QUE NO SE TOCA, COMPROBADO ANTES DE ESCRIBIR
+   la linea de la 6.2 esta en la entrada: SI
+   (la 6.3 del acta 171 dice que su glosa describe bien lo que paso)
+
+F) SE ESCRIBE, POR EL CARRIL DEL `9.10`
+   guiones largos y medios que YA HABIA en el fichero: 54 y 0
+   (el fichero es historico y trae 54 de antiguo; la guarda mira el DELTA,
+    no el total, o una guarda buena se caeria por culpa de texto de 2026)
+   ESCRITO: docs/PENDIENTES.md (826158 bytes)
+
+G) LA RELECTURA DEL DISCO
+   la clausula falsa sigue ENTERA en el fichero               SI
+   y ahora esta TACHADA                                       SI
+   la frase de las 16 filas sigue ENTERA                      SI
+   y ahora esta TACHADA                                       SI
+   la via vieja de la 6.1 sigue escrita y tachada             SI
+   la parte CIERTA de la glosa sigue en pie y sin tachar      SI
+   la correccion esta dentro del R.40                         SI
+   el reparto corregido esta escrito                          SI
+   el reparto viejo tambien, sin borrarlo                     SI
+   la linea de la 6.2 sigue INTACTA                           SI
+   no se toco ninguna otra entrada de la serie                SI
+   no anado ni un guion largo ni uno medio (delta cero)       SI
+   y mi propio bloque de correccion no trae ninguno           SI
+   CIFRA comprobaciones: 13 | fallan: 0
+
+VERDE: el `R.40` queda corregido por el carril del `9.10`.
