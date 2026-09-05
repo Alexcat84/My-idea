@@ -1,0 +1,386 @@
+SELLO DE APERTURA DE LA VUELTA 181, escrito ANTES de la primera operacion
+instrumento: scripts/loop/vuelta181_apertura.py
+regimen: VUELTA DE BATERIA, Y NO LLEVA NADA MAS (AUDITOR.md 6.1). DOS
+         sub-tareas por la adjudicacion 6.8 del acta 180, la 1 BLOQUEANTE.
+         El tope vuelve a cinco en la 182.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD) ===
+b9f25049f545d011f567e3fdaa164698351ab8cf
+b9f25049f545d011f567e3fdaa164698351ab8cf	2026-09-05 17:42:07 -0400	ACTA DEL AUDITOR, VUELTA 180: LEVANTO UNA CAIDA DE REPORTE EN CABECERA, LA RACHA PASA A UNO, Y LAS TRECE DISCREPANCIAS DE LA CIEGA LAS PIERDO YO.
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== B.1 LA CADENCIA DE LA BATERIA, LOCALIZADA EN GIT Y NO TECLEADA ===
+(AUDITOR.md 6.1: la bateria corre CADA CINCO, en vuelta propia. Aqui NO se
+ teclea ningun hash: se busca en el log el commit de cada acta que la
+ adjudica o la reconfirma, y se imprime lo que salga)
+   acta 176     -> f3087229	ACTA DEL AUDITOR, VUELTA 176: LA VUELTA PAGO LA DEUDA DE LA 175 ENTERA Y TODO LO QUE PUBLICA REPRODUCE BAJO MI MANO SALVO UNA FRASE. Recomput
+   acta 178     -> 74cad47d	ACTA DEL AUDITOR, VUELTA 178: 29 DE 33 A CIEGAS Y LAS CUATRO QUE FALLARON LAS FALLE YO, PERO LA RACHA DE REPORTE LLEGA A DOS Y LA ESCALADA SE
+   acta 179     -> d3240915	ACTA DEL AUDITOR, VUELTA 179: NI UNA CAIDA CONTRA EL EJECUTOR, LA ESCALADA QUE ENCARGUE CAZA LA CAIDA DE LA 178 BAJO MI MANO, Y LA RACHA DE R
+   acta 180     -> b9f25049	ACTA DEL AUDITOR, VUELTA 180: LEVANTO UNA CAIDA DE REPORTE EN CABECERA, LA RACHA PASA A UNO, Y LAS TRECE DISCREPANCIAS DE LA CIEGA LAS PIERDO
+   commits que tocan verificar_mutaciones_viejas.py en los 120 ultimos: 36
+
+=== C. git status --porcelain ENTERO ===
+?? docs/loop/SALIDA_V181_APERTURA_CONSOLA.txt
+?? scripts/loop/vuelta181_apertura.py
+CIFRA lineas de status: 2
+
+=== D. BYTES DE CADA RUTA QUE EL ENCARGO NOMBRA, POR LAS DOS CONVENCIONES ===
+(disco = os.path.getsize; git = git cat-file -s HEAD:<ruta>. Acta 177 punto
+ 7.11 y acta 180 punto 6.7: mientras la convencion no este fijada, SE
+ PUBLICAN LAS DOS)
+dataset/metadata/master_graph.json -> disco 8375817 bytes | git 8375817 bytes
+docs/loop/REPORTE.md -> disco 63677 bytes | git 63677 bytes
+docs/loop/ACTA_AUDITOR.md -> disco 4177731 bytes | git 4177301 bytes
+docs/loop/EJECUTOR.md -> disco 12244 bytes | git 12244 bytes
+docs/loop/AUDITOR.md -> disco 22612 bytes | git 22612 bytes
+docs/loop/PROMPT_SIGUIENTE.md -> disco 7909 bytes | git 7909 bytes
+docs/loop/reportes/REPORTE_V180.md -> disco 63677 bytes | git 63677 bytes
+docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> disco 20939 bytes | git 20939 bytes
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4051967 bytes | git 4051967 bytes
+scripts/loop/guarda_commit_dataset.py -> disco 14928 bytes | git 14928 bytes
+scripts/loop/archivar_reporte.py -> disco 7181 bytes | git 7181 bytes
+scripts/loop/anexar_tarea_al_reporte.py -> disco 6243 bytes | git 6243 bytes
+scripts/loop/tallar_cabecera_reporte.py -> disco 100077 bytes | git 100077 bytes
+scripts/loop/cotejar_clon_declarado.py -> disco 25949 bytes | git 25949 bytes
+scripts/loop/verificar_mutaciones_viejas.py -> disco 118819 bytes | git 118819 bytes
+scripts/loop/cerrar_reporte.py -> disco 38947 bytes | git 38947 bytes
+scripts/loop/vuelta175_correr_bateria.py -> disco 6859 bytes | git 6859 bytes
+scripts/loop/vuelta176_bateria_por_tramos.py -> disco 22507 bytes | git 22507 bytes
+scripts/loop/vuelta172_tarea1c_guarda_que_mordio.py -> disco 9127 bytes | git 9127 bytes
+scripts/loop/vuelta174_tarea1b_mutacion_esqueleto.py -> disco 11157 bytes | git 11157 bytes
+scripts/loop/sujeto_congelado_de_git.py -> disco 4648 bytes | git 4648 bytes
+
+=== E. DIFF REAL EN BYTES DE LOS MODIFICADOS (cambio contra suciedad) ===
+CIFRA ficheros modificados: 0
+
+=== F. LO NO SEGUIDO POR GIT, FICHERO A FICHERO CON SUS BYTES ===
+docs/loop/SALIDA_V181_APERTURA_CONSOLA.txt -> 0 bytes
+scripts/loop/vuelta181_apertura.py -> 24299 bytes
+CIFRA ficheros no seguidos: 2
+
+=== G. git ls-tree DE HEAD SOBRE ESAS RUTAS ===
+dataset/metadata/master_graph.json -> 100644 blob cb33552aedddab4d6c51c5c85a7416999b5c70a0	dataset/metadata/master_graph.json
+docs/loop/REPORTE.md -> 100644 blob 15700dc2f7ece2b27e49dba805184b4f65bdd14d	docs/loop/REPORTE.md
+docs/loop/ACTA_AUDITOR.md -> 100644 blob 33c95e1b0b3d14e64140964d70b7cb93b43aa0f5	docs/loop/ACTA_AUDITOR.md
+docs/loop/EJECUTOR.md -> 100644 blob 44734d1a2d159b5ef8edcf0acaafa4c1da5e6c33	docs/loop/EJECUTOR.md
+docs/loop/AUDITOR.md -> 100644 blob 7f59fc443fc901c4500ebfe6603539a6e25a0482	docs/loop/AUDITOR.md
+docs/loop/PROMPT_SIGUIENTE.md -> 100644 blob a3a63afdd019fcc10eb141bbc7e95bb76718a29c	docs/loop/PROMPT_SIGUIENTE.md
+docs/loop/reportes/REPORTE_V180.md -> 100644 blob 15700dc2f7ece2b27e49dba805184b4f65bdd14d	docs/loop/reportes/REPORTE_V180.md
+docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> 100644 blob 128d4a9f27aeb759ce541f4f09db1c857e4b17c0	docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> 100644 blob 806c7c485a4b922a01a9615e6ad759267b78c278	docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+scripts/loop/guarda_commit_dataset.py -> 100644 blob 317306df5a384e5bdc6fa263b4f3d4faf7a91178	scripts/loop/guarda_commit_dataset.py
+scripts/loop/archivar_reporte.py -> 100644 blob 5c94daf630332f973b1771e14a6f5c0462ee4f1d	scripts/loop/archivar_reporte.py
+scripts/loop/anexar_tarea_al_reporte.py -> 100644 blob 70dcc2818a6687903f275f2cde3ae594a0c9ab1d	scripts/loop/anexar_tarea_al_reporte.py
+scripts/loop/tallar_cabecera_reporte.py -> 100644 blob 9dfb962267aea81f703e2de4eba05cd584a17762	scripts/loop/tallar_cabecera_reporte.py
+scripts/loop/cotejar_clon_declarado.py -> 100644 blob f064a8b673348434f53ccaca750c1ef5bdeb7406	scripts/loop/cotejar_clon_declarado.py
+scripts/loop/verificar_mutaciones_viejas.py -> 100644 blob 3cb02a75df70a212d4d8713daf181ea7e065bfce	scripts/loop/verificar_mutaciones_viejas.py
+scripts/loop/cerrar_reporte.py -> 100644 blob 948ab11f14b06661fbb6cd0fcb605dd8f62c9523	scripts/loop/cerrar_reporte.py
+scripts/loop/vuelta175_correr_bateria.py -> 100644 blob a96fe5d1974ff30679d71199f9013eedd57a3e50	scripts/loop/vuelta175_correr_bateria.py
+scripts/loop/vuelta176_bateria_por_tramos.py -> 100644 blob c4f4e7ea7bd916d07d9e1f8bfd65508602eeb315	scripts/loop/vuelta176_bateria_por_tramos.py
+scripts/loop/vuelta172_tarea1c_guarda_que_mordio.py -> 100644 blob e2cc548d74cd5ce317afbbd7436cd4a7d87cbcfc	scripts/loop/vuelta172_tarea1c_guarda_que_mordio.py
+scripts/loop/vuelta174_tarea1b_mutacion_esqueleto.py -> 100644 blob a33e6da97d01e73f2f46c649daeea00787b69002	scripts/loop/vuelta174_tarea1b_mutacion_esqueleto.py
+scripts/loop/sujeto_congelado_de_git.py -> 100644 blob 55720302ef57002b1886c8007ec1cbc47163ddfc	scripts/loop/sujeto_congelado_de_git.py
+
+=== H. EL REPORTE EN HEAD, MEDIDO SIN CREERLE AL ENCARGO ===
+primera linea: # REPORTE DE LA VUELTA 180 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+lineas (saltos de linea contados): 941
+bytes en git: 63677
+   contiene 'SIN ESCRIBIR TODAVIA'               -> NO
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> NO
+   contiene 'ABIERTA, SIN CERRAR'                -> SI
+   contiene 'HUECO DECLARADO Y MEDIDO'           -> SI
+   contiene 'CORRIDA ENTERA Y SOLA AL CIERRE'    -> SI
+   contiene '\n## 3.'                            -> SI
+   contiene '\n## 4.'                            -> SI
+   contiene '\n## 5.'                            -> SI
+   contiene '\n## 6.'                            -> SI
+   contiene '\n## 7.'                            -> SI
+   contiene '\n## 8.'                            -> SI
+   contiene '\n## 9.'                            -> SI
+
+=== H.1 EL REPORTE DEL ARBOL, QUE ES EL QUE EL ESQUELETO DE LA 181 PISARA ===
+primera linea: # REPORTE DE LA VUELTA 180 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+bytes en disco (normalizado a LF): 63677 | saltos de linea: 941
+bytes en disco (crudos, os.path.getsize): 63677
+identico byte a byte al de HEAD: SI
+   contiene 'SIN ESCRIBIR TODAVIA'               -> NO
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> NO
+   contiene 'ABIERTA, SIN CERRAR'                -> SI
+   contiene 'HUECO DECLARADO Y MEDIDO'           -> SI
+   contiene 'CORRIDA ENTERA Y SOLA AL CIERRE'    -> SI
+   contiene '\n## 3.'                            -> SI
+   contiene '\n## 4.'                            -> SI
+   contiene '\n## 5.'                            -> SI
+   contiene '\n## 6.'                            -> SI
+   contiene '\n## 7.'                            -> SI
+   contiene '\n## 8.'                            -> SI
+   contiene '\n## 9.'                            -> SI
+
+=== H.2 EL COMMIT QUE DE VERDAD TOCA REPORTE.md POR ULTIMA VEZ ===
+(no se teclea ningun hash: se localiza con git log y se imprime lo que salga)
+los ocho ultimos commits:
+   b9f25049	ACTA DEL AUDITOR, VUELTA 180: LEVANTO UNA CAIDA DE REPORTE EN CABECERA, LA RACHA PASA A UNO, Y LAS TRECE DISCREPANCIAS DE LA CIEGA LAS PIERDO
+   8da1c6f9	EL REPORTE DE LA 180 QUEDA ARCHIVADO EN SU MISMA VUELTA Y LAS TRES COPIAS CALZAN BYTE A BYTE. SERIAN CINCO SEGUIDAS.
+   51976fbf	EL REPORTE DE LA 180 QUEDA CERRADO EN SU MISMA VUELTA, CON LAS CUATRO PIEZAS Y LA CABECERA IDENTICA AL TALLADOR.
+   e4f5248e	TAREA 5 CERRADA: OP-L-02 MEDIDO CON LA VARA RESUELTA, NI UN PAR LEIDO, Y EL INSTRUMENTO CAYO EN ROJO EN SU PRIMERA CORRIDA.
+   0d307320	TAREA 4 CERRADA, CON UNA CAIDA MIA DECLARADA DELANTE: LAS DOS PENDIENTES BARATAS TIENEN INSTRUMENTO.
+   7b0a1ef1	TAREA 3 CERRADA: EL CORTE CABLEADO DONDE SE GENERA, Y EL BARRIDO CAZO TRECE CIFRAS SIN EL.
+   cbe0feb9	TAREA 2 CERRADA: LA PISTA DE LA 181 QUEDA LIMPIA. DE 17 A 0, Y SOLO ENTONCES SE CABLEA.
+   7aacaa47	TAREA 1 CERRADA: LA ETIQUETA DE FUENTE LEE LA VUELTA DE LA FILA, Y LOS CINCO LADOS FALSOS BAJAN A CERO.
+ultimo commit que TOCA docs/loop/REPORTE.md: 51976fbf
+   su asunto: EL REPORTE DE LA 180 QUEDA CERRADO EN SU MISMA VUELTA, CON LAS CUATRO PIEZAS Y LA CABECERA IDENTICA AL TALLADOR.
+
+=== H.3 LAS PIEZAS QUE cerrar_reporte.py PEDIRA PARA CERRAR LA 181 ===
+(al abrir NO EXISTE NINGUNA, y eso es lo correcto: las produce esta vuelta.
+ LA DE BATERIA SI SE VA A PRODUCIR, y esa es la diferencia entera con la 180:
+ esta vuelta la corre y la seccion 9 lleva su salida dentro)
+docs/loop/SALIDA_V181_TALLADOR_CABECERA.txt -> NO EXISTE
+scripts/loop/_v181_cierre_texto.md -> NO EXISTE
+docs/loop/SALIDA_V181_BATERIA.txt -> NO EXISTE
+
+=== H.4 QUE REPORTES ESTAN YA ARCHIVADOS EN docs/loop/reportes/ ===
+   REPORTE_V168.md -> disco 31263 bytes | git 31263 bytes
+   REPORTE_V169.md -> disco 43586 bytes | git 43586 bytes
+   REPORTE_V170.md -> disco 45706 bytes | git 45706 bytes
+   REPORTE_V171.md -> disco 43956 bytes | git 43956 bytes
+   REPORTE_V172.md -> disco 48851 bytes | git 48851 bytes
+   REPORTE_V174.md -> disco 32568 bytes | git 32568 bytes
+   REPORTE_V175.md -> disco 5953 bytes | git 5953 bytes
+   REPORTE_V176.md -> disco 95231 bytes | git 95231 bytes
+   REPORTE_V177.md -> disco 53201 bytes | git 53201 bytes
+   REPORTE_V178.md -> disco 59617 bytes | git 59617 bytes
+   REPORTE_V179.md -> disco 54466 bytes | git 54466 bytes
+   REPORTE_V180.md -> disco 63677 bytes | git 63677 bytes
+CIFRA reportes archivados: 12
+REPORTE_V180.md archivado: SI
+
+=== H.5 LA NOMINA Y EL CENSO, RECOMPUTADOS Y CON SU CORTE ===
+(el encargo dice 108 entradas de nomina, censo 168 y fuera 60, medido por el
+ auditor al cierre de la 180. NO SE COPIA NINGUNA: se llaman las funciones
+ puras del propio sujeto y se imprime lo que salga.
+ EL CORTE VA AL LADO por adjudicacion 7.2 del acta 178, porque el
+ denominador crece DENTRO de la propia vuelta)
+CORTE DE ESTA MEDICION: HEAD b9f25049f545, APERTURA de la vuelta 181, antes de la
+                        primera operacion de esta vuelta.
+CIFRA arneses que ve arneses_del_directorio(): 168
+CIFRA entradas de VIEJAS (la nomina): 108
+CIFRA entradas de la nomina que el censo NO ve: 0
+CIFRA del censo que estan FUERA de la nomina: 60
+     FUERA: vuelta102_tarea1_prueba_mutacion_apertura.py
+     FUERA: vuelta110_tarea2_prueba_mutacion.py
+     FUERA: vuelta115_tarea2_4_mutacion_z.py
+     FUERA: vuelta116_tarea2_3_mutacion_aa.py
+     FUERA: vuelta117_tarea2_3_mutacion_bb.py
+     FUERA: vuelta118_tarea2_5_mutacion_cc.py
+     FUERA: vuelta118_tarea2_6_mutacion_dd.py
+     FUERA: vuelta122_tarea1e_mutacion_citas.py
+     FUERA: vuelta123_tarea1e_mutacion_fila_tabla.py
+     FUERA: vuelta123_tarea1f_caso_positivo.py
+     FUERA: vuelta124_tarea1f_caso_positivo_ventana.py
+     FUERA: vuelta133_tarea2c_mutaciones_identidad.py
+     FUERA: vuelta134_2d_mutacion_1.py
+     FUERA: vuelta134_2d_mutacion_2.py
+     FUERA: vuelta134_2f_mutacion.py
+     FUERA: vuelta135_4c_mutacion.py
+     FUERA: vuelta136_simular_ops11.py
+     FUERA: vuelta137_1a_mutacion.py
+     FUERA: vuelta137_1c_mutacion.py
+     FUERA: vuelta138_2a_caso_positivo_63_64.py
+     FUERA: vuelta138_2a_mutaciones.py
+     FUERA: vuelta139_2a_mutaciones.py
+     FUERA: vuelta140_2b_mutaciones.py
+     FUERA: vuelta140_2c_mutacion_ancla.py
+     FUERA: vuelta141_2d_mutacion_commits.py
+     FUERA: vuelta141_2e_caso_positivo_fase03.py
+     FUERA: vuelta142_2a_mutaciones.py
+     FUERA: vuelta142_2b_mutacion_commits.py
+     FUERA: vuelta142_2c_mutaciones.py
+     FUERA: vuelta142_2d_mutacion_bateria.py
+     FUERA: vuelta146_3b_simular_op_a_01.py
+     FUERA: vuelta146_3c_mutacion_aduana.py
+     FUERA: vuelta24_opc04_caso_positivo.py
+     FUERA: vuelta27_caso_positivo.py
+     FUERA: vuelta28_caso_positivo.py
+     FUERA: vuelta29_caso_positivo.py
+     FUERA: vuelta30_caso_positivo.py
+     FUERA: vuelta32_caso_positivo.py
+     FUERA: vuelta33_caso_positivo.py
+     FUERA: vuelta39_caso_positivo.py
+     FUERA: vuelta52_caso_positivo.py
+     FUERA: vuelta53_caso_positivo.py
+     FUERA: vuelta54_caso_positivo.py
+     FUERA: vuelta55_caso_positivo.py
+     FUERA: vuelta56_caso_positivo.py
+     FUERA: vuelta57_caso_positivo.py
+     FUERA: vuelta65_caso_positivo_generador.py
+     FUERA: vuelta65_caso_positivo_promesas.py
+     FUERA: vuelta66_caso_positivo_varas.py
+     FUERA: vuelta79_tarea2_caso_positivo.py
+     FUERA: vuelta90_tarea3_prueba_mutacion_tallador.py
+     FUERA: vuelta91_tarea3_prueba_mutacion_composicion.py
+     FUERA: vuelta91_tarea4_prueba_mutacion_direccion.py
+     FUERA: vuelta95_tarea2a_prueba_mutacion_barrido.py
+     FUERA: vuelta96_tarea1c_prueba_mutacion.py
+     FUERA: vuelta96_tarea2_prueba_mutacion.py
+     FUERA: vuelta96_tarea3_prueba_mutacion.py
+     FUERA: vuelta97_tarea2_prueba_mutacion.py
+     FUERA: vuelta98_tarea1_prueba_mutacion.py
+     FUERA: vuelta98_tarea3_prueba_mutacion.py
+LA RESTA COMPROBADA: censo 168 menos nomina 108 = 60, y fuera de nomina = 60. CALZAN: SI
+arneses_que_faltan() HOY: ultima vuelta de la nomina 180, y dice que faltan 0
+EL SELLO DE CORTE, LLAMADO Y NO PARAFRASEADO:
+   sello_de_corte(len(VIEJAS), corte_de_git()) -> 108 (corte: HEAD b9f25049f545, nomina contada en esta corrida)
+LAS CONSTANTES DE LA BATERIA, LEIDAS Y NO TECLEADAS:
+   TOPE_DE_MINUTOS_POR_TRAMO = 10.0
+   FAMILIAS_DE_ARNES = mutacion, caso_positivo, simular
+   VARA_DEL_CENSO = 148
+LA GUARDA DEL SUJETO CONGELADO, LLAMADA COMO FUNCION (no como proceso):
+   CIFRA entradas cuyo SUJETO NO ESTA CONGELADO: 0
+LAS SEIS PIEZAS DE hay_rojo_al_cierre(), MIRADAS ANTES DE CORRER NADA:
+   (las tres primeras SOLO se pueden medir CORRIENDO la bateria, asi que
+    aqui salen NO MEDIBLES por construccion y no por resultado. Se dicen
+    igual, porque un hueco declarado no es un hueco escondido)
+   perdidas            -> NO MEDIBLE EN APERTURA (exige correr los arneses)
+   no mordio           -> NO MEDIBLE EN APERTURA (exige correr los arneses)
+   no reproducible     -> NO MEDIBLE EN APERTURA (exige correr los arneses)
+   faltan de la nomina -> 0
+   invisibles al censo -> 0
+   sujeto sin congelar -> 0
+
+=== H.6 TAREA 1: LA E.1 DEL ACTA 180, MEDIDA EN EL CODIGO Y NO LEIDA ===
+(el acta 180 seccion 5 dice que cerrar_reporte.py tiene DOS ramas para la
+ seccion 9 y que la 180 entro por la equivocada. NO SE COPIA: se busca en el
+ fichero y se imprime la linea con su numero)
+   'CAB_9 ='                                      -> 1 aparicion(es)
+      LINEA 155: CAB_9 = "## 9. LA BATERIA DE MUTACIONES, CORRIDA ENTERA Y SOLA AL CIERRE"
+   'CAB_9_HUECO ='                                -> 1 aparicion(es)
+      LINEA 156: CAB_9_HUECO = "## 9. LA BATERIA DE MUTACIONES: HUECO DECLARADO Y MEDIDO"
+   'PATRON_FICHERO_BATERIA ='                     -> 1 aparicion(es)
+      LINEA 163: PATRON_FICHERO_BATERIA = re.compile(r"SALIDA_V(\d+)_BATERIA")
+   'def vuelta_de_fichero'                        -> 1 aparicion(es)
+      LINEA 238: def vuelta_de_fichero(nombre):
+   'def hueco_declarado_que_falta'                -> 1 aparicion(es)
+      LINEA 247: def hueco_declarado_que_falta(seccion9, vuelta):
+   'if lineas_bat:'                               -> 1 aparicion(es)
+      LINEA 679: if lineas_bat:
+   'hueco_declarado_que_falta(seccion9'           -> 2 aparicion(es)
+      LINEA 247: def hueco_declarado_que_falta(seccion9, vuelta):
+      LINEA 558: motivos = hueco_declarado_que_falta(seccion9, vuelta)
+   'vuelta que lleva dentro el nombre del fichero' -> 1 aparicion(es)
+      LINEA 631: print("   vuelta que lleva dentro el nombre del fichero: %s" % ajena)
+EL PATRON, APLICADO A LOS CINCO NOMBRES, CON vuelta_de_fichero() DE VERDAD:
+   docs/loop/SALIDA_V177_BATERIA.txt            vuelta_de_fichero -> 177   | existe: NO | bytes en disco: n/a
+   docs/loop/SALIDA_V178_BATERIA.txt            vuelta_de_fichero -> 178   | existe: NO | bytes en disco: n/a
+   docs/loop/SALIDA_V179_BATERIA.txt            vuelta_de_fichero -> 179   | existe: NO | bytes en disco: n/a
+   docs/loop/SALIDA_V180_HUECO_BATERIA.txt      vuelta_de_fichero -> None  | existe: SI | bytes en disco: 1484
+   docs/loop/SALIDA_V181_BATERIA.txt            vuelta_de_fichero -> 181   | existe: NO | bytes en disco: n/a
+QUIEN ESCRIBE EL NOMBRE SALIDA_V180_HUECO_BATERIA, BUSCADO EN scripts/:
+      LO NOMBRA: scripts/loop/vuelta181_apertura.py
+   CIFRA ficheros de scripts/ que nombran SALIDA_V180_HUECO_BATERIA: 1
+EL ACTA 180, LOCALIZADA EN SU FICHERO Y CON SU LINEA:
+   docs/loop/ACTA_AUDITOR.md -> 62906 lineas | disco 4177731 bytes | LF 4177301 bytes
+   CABECERA DEL ACTA 180 en la LINEA 62449: # ACTA DEL AUDITOR, VUELTA 180 (5 sep 2026, auditor Opus 5)
+   '## 5. LA CAIDA DEL EJECUTOR'      -> lineas 62687
+   '## 6. LAS ADJUDICACIONES'         -> lineas 62756
+   '**6.1 '                           -> lineas 62758
+   '**6.2 '                           -> lineas 62770
+   '**6.3 '                           -> lineas 62779
+   '**6.4 '                           -> lineas 62787
+   '**6.5 '                           -> lineas 62796
+   '**6.6 '                           -> lineas 62806
+   '**6.7 '                           -> lineas 62823
+   '**6.8 '                           -> lineas 62827
+   '## 8. LA METRICA DE CREDITO'      -> lineas 62854
+   '## 10. LA CADENCIA Y EL TOPE'     -> lineas 62886
+   '## 11. PARADA'                    -> lineas 62896
+
+=== H.7 TAREA 2: LAS BATERIAS VIEJAS Y SU RELOJ, CONTADAS DE SU DIRECTORIO ===
+(el grano del tope de 10 minutos se mide EN ESTA VUELTA con el reloj de ESTA
+ corrida. Aqui solo se deja el CONTRASTE de lo que las corridas viejas
+ midieron, leido de sus propios ficheros con reloj_de_la_corrida())
+   SALIDA_V124_BATERIAS_CMP.txt                       disco      136 bytes
+   SALIDA_V125_BATERIAS_CMP.txt                       disco      573 bytes
+   SALIDA_V126_BATERIAS_CMP.txt                       disco      799 bytes
+   SALIDA_V128_BATERIAS_CMP.txt                       disco     2336 bytes
+   SALIDA_V130_BATERIAS_CMP.txt                       disco     2256 bytes
+   SALIDA_V131_BATERIAS_CMP.txt                       disco      785 bytes
+   SALIDA_V132_BATERIAS_CMP.txt                       disco      785 bytes
+   SALIDA_V133_BATERIAS_CMP.txt                       disco      785 bytes
+   SALIDA_V134_BATERIAS_CMP.txt                       disco      785 bytes
+   SALIDA_V135_BATERIAS_CMP.txt                       disco      785 bytes
+   SALIDA_V136_BATERIAS_CMP.txt                       disco      785 bytes
+   SALIDA_V139_BATERIAS_CMP.txt                       disco      789 bytes
+   SALIDA_V139_BATERIAS_CMP_RUN.txt                   disco      835 bytes
+   SALIDA_V161_BATERIAS_CMP.txt                       disco      702 bytes
+   SALIDA_V162_BATERIAS_CMP.txt                       disco      702 bytes
+   SALIDA_V165_BATERIA.txt                            disco    13979 bytes
+   SALIDA_V166_BATERIA.txt                            disco        0 bytes
+   SALIDA_V167_BATERIA.txt                            disco        0 bytes
+   SALIDA_V168_BATERIA.txt                            disco    15045 bytes
+   SALIDA_V170_BATERIA.txt                            disco        0 bytes
+   SALIDA_V171_BATERIA.txt                            disco        0 bytes
+   SALIDA_V172_BATERIA.txt                            disco        0 bytes
+   SALIDA_V173_BATERIA.txt                            disco        0 bytes
+   SALIDA_V176_BATERIA.txt                            disco    60197 bytes
+   SALIDA_V176_BATERIA_TRAMO_1.txt                    disco     7883 bytes
+   SALIDA_V176_BATERIA_TRAMO_2.txt                    disco     6090 bytes
+   SALIDA_V176_BATERIA_TRAMO_3.txt                    disco     6138 bytes
+   SALIDA_V176_BATERIA_TRAMO_4.txt                    disco     6177 bytes
+   SALIDA_V176_BATERIA_TRAMO_5.txt                    disco     6166 bytes
+   SALIDA_V176_BATERIA_TRAMO_6.txt                    disco     5782 bytes
+   SALIDA_V176_BATERIA_TRAMO_7.txt                    disco     6155 bytes
+   SALIDA_V176_BATERIA_TRAMO_8.txt                    disco     6180 bytes
+   SALIDA_V176_BATERIA_TRAMO_9.txt                    disco     5616 bytes
+CIFRA ficheros SALIDA_V<N>_BATERIA*.txt en docs/loop/: 33
+CIFRA de ellos que miden CERO BYTES: 6
+EL RELOJ DE LAS CORRIDAS VIEJAS, LEIDO CON reloj_de_la_corrida():
+   SALIDA_V124_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V125_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V126_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V128_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V130_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V131_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V132_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V133_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V134_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V135_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V136_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V139_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V139_BATERIAS_CMP_RUN.txt                   tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V161_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V162_BATERIAS_CMP.txt                       tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V165_BATERIA.txt                            tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V166_BATERIA.txt                            CERO BYTES: no hay reloj que leer
+   SALIDA_V167_BATERIA.txt                            CERO BYTES: no hay reloj que leer
+   SALIDA_V168_BATERIA.txt                            tramos con reloj:  0 | minutos por entrada (MAXIMO): (sin reloj)
+   SALIDA_V170_BATERIA.txt                            CERO BYTES: no hay reloj que leer
+   SALIDA_V171_BATERIA.txt                            CERO BYTES: no hay reloj que leer
+   SALIDA_V172_BATERIA.txt                            CERO BYTES: no hay reloj que leer
+   SALIDA_V173_BATERIA.txt                            CERO BYTES: no hay reloj que leer
+   SALIDA_V176_BATERIA.txt                            tramos con reloj:  9 | minutos por entrada (MAXIMO): 1.5900
+   SALIDA_V176_BATERIA_TRAMO_1.txt                    tramos con reloj:  1 | minutos por entrada (MAXIMO): 0.1500
+   SALIDA_V176_BATERIA_TRAMO_2.txt                    tramos con reloj:  1 | minutos por entrada (MAXIMO): 0.2600
+   SALIDA_V176_BATERIA_TRAMO_3.txt                    tramos con reloj:  1 | minutos por entrada (MAXIMO): 0.3900
+   SALIDA_V176_BATERIA_TRAMO_4.txt                    tramos con reloj:  1 | minutos por entrada (MAXIMO): 1.5900
+   SALIDA_V176_BATERIA_TRAMO_5.txt                    tramos con reloj:  1 | minutos por entrada (MAXIMO): 0.2000
+   SALIDA_V176_BATERIA_TRAMO_6.txt                    tramos con reloj:  1 | minutos por entrada (MAXIMO): 0.1600
+   SALIDA_V176_BATERIA_TRAMO_7.txt                    tramos con reloj:  1 | minutos por entrada (MAXIMO): 0.1500
+   SALIDA_V176_BATERIA_TRAMO_8.txt                    tramos con reloj:  1 | minutos por entrada (MAXIMO): 0.1800
+   SALIDA_V176_BATERIA_TRAMO_9.txt                    tramos con reloj:  1 | minutos por entrada (MAXIMO): 0.1375
+   tamano_por_minutos sobre el reloj VACIO (el por defecto declarado): (10, 'SIN RELOJ QUE LEER: no se computo nada y se usa el por defecto 10, dicho en voz alta')
+EL REGISTRO DEL SUJETO CONGELADO, CONTADO DE SU FICHERO Y NO TECLEADO:
+   docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> 17 filas, disco 20939 bytes
+   CIFRA con veredicto_de_la_lectura 'ABRE FICHERO VIVO'         : 4
+   CIFRA con veredicto_de_la_lectura 'ABRE UN SUJETO YA CLAVADO' : 2
+   CIFRA con veredicto_de_la_lectura 'LO NOMBRA SIN ABRIRLO'     : 11
+LA P.1, QUE NO SE TOCA AQUI (adjudicacion 6.6 del acta 180: VA A LA 182):
+   scripts/loop/vuelta172_tarea1c_guarda_que_mordio.py existe: SI
+   -> disco 9127 bytes
+   esta en el censo de arneses_del_directorio(): NO
+   esta en la nomina VIEJAS: NO
+
+FIN DEL SELLO DE APERTURA
