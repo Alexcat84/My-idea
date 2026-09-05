@@ -1,0 +1,385 @@
+SELLO DE APERTURA DE LA VUELTA 180, escrito ANTES de la primera operacion
+instrumento: scripts/loop/vuelta180_apertura.py
+regimen: VUELTA NORMAL, NO DE BATERIA (la proxima es la 181, y es la
+         SIGUIENTE). CINCO sub-tareas, la 1 y la 2 BLOQUEANTES y en ese
+         orden. El tope de cinco de AUDITOR.md 6.2 sigue vigente, y el
+         bloque B.1 de abajo lo LOCALIZA EN GIT en vez de teclearlo.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD) ===
+d3240915e9943016d026302cad437c4567e45653
+d3240915e9943016d026302cad437c4567e45653	2026-09-05 16:11:57 -0400	ACTA DEL AUDITOR, VUELTA 179: NI UNA CAIDA CONTRA EL EJECUTOR, LA ESCALADA QUE ENCARGUE CAZA LA CAIDA DE LA 178 BAJO MI MANO, Y LA RACHA DE REPORTE VUELVE A CERO.
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== B.1 LOS CUATRO COMMITS QUE SOSTIENEN EL TOPE DE CINCO, LOCALIZADOS EN GIT ===
+(AUDITOR.md 6.2: el regimen de dos dura HASTA QUE DOS VUELTAS SEGUIDAS
+ CIERREN SU PROPIO REPORTE con cerrar_reporte.py. No se teclea ningun hash:
+ se busca en el log el commit de CIERRE y el de ARCHIVO de la 178 y de la 179)
+   178 cierre   -> 5b64f744	EL REPORTE DE LA 178 SE CIERRA EN SU MISMA VUELTA, CON SUS CUATRO PIEZAS Y CERO QUE FALTEN, Y LA GUARDA NUEVA LO CAZO ANTES DE DEJARLO PASAR.
+   178 archivo  -> NO LOCALIZADO EN LOS 40 ULTIMOS
+   179 cierre   -> c348de45	EL REPORTE DE LA 179 QUEDA ARCHIVADO EN SU MISMA VUELTA Y LAS TRES COPIAS CALZAN BYTE A BYTE. SERIAN CUATRO SEGUIDAS.
+   179 archivo  -> NO LOCALIZADO EN LOS 40 ULTIMOS
+   commits que tocan cerrar_reporte.py en los 40 ultimos: 6
+
+=== C. git status --porcelain ENTERO ===
+?? docs/loop/SALIDA_V180_APERTURA_CONSOLA.txt
+?? scripts/loop/vuelta180_apertura.py
+CIFRA lineas de status: 2
+
+=== D. BYTES DE CADA RUTA QUE EL ENCARGO NOMBRA, POR LAS DOS CONVENCIONES ===
+(disco = os.path.getsize; git = git cat-file -s HEAD:<ruta>. Acta 177 punto
+ 7.11: mientras la convencion no este fijada, SE PUBLICAN LAS DOS)
+dataset/metadata/master_graph.json -> disco 8375817 bytes | git 8375817 bytes
+docs/loop/REPORTE.md -> disco 54466 bytes | git 54466 bytes
+docs/loop/ACTA_AUDITOR.md -> disco 4149203 bytes | git 4148773 bytes
+docs/loop/EJECUTOR.md -> disco 12244 bytes | git 12244 bytes
+docs/loop/AUDITOR.md -> disco 22612 bytes | git 22612 bytes
+docs/loop/PROMPT_SIGUIENTE.md -> disco 12160 bytes | git 12160 bytes
+docs/loop/reportes/REPORTE_V179.md -> disco 54466 bytes | git 54466 bytes
+docs/plan/OP_L_03_TRIANGULOS.jsonl -> disco 55705 bytes | git 55705 bytes
+docs/plan/OPERACIONES.jsonl -> disco 498085 bytes | git 498085 bytes
+docs/plan/OP_L_03_LECTURAS.jsonl -> disco 51368 bytes | git 51368 bytes
+docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> disco 20939 bytes | git 20939 bytes
+docs/plan/LECTURAS_DIRIGIDAS.md -> disco 214916 bytes | git 214916 bytes
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4051967 bytes | git 4051967 bytes
+scripts/loop/guarda_commit_dataset.py -> disco 14928 bytes | git 14928 bytes
+scripts/loop/archivar_reporte.py -> disco 7181 bytes | git 7181 bytes
+scripts/loop/anexar_tarea_al_reporte.py -> disco 6243 bytes | git 6243 bytes
+scripts/loop/tallar_cabecera_reporte.py -> disco 100077 bytes | git 100077 bytes
+scripts/loop/cerrar_reporte.py -> disco 38947 bytes | git 38947 bytes
+scripts/loop/vuelta178_tarea3_anotar_triangulos.py -> disco 21483 bytes | git 21483 bytes
+scripts/loop/vuelta179_tarea3_etiqueta_de_fuente.py -> disco 5228 bytes | git 5228 bytes
+scripts/loop/verificar_mutaciones_viejas.py -> disco 111914 bytes | git 111914 bytes
+scripts/loop/vuelta157_tarea4b_mutacion_tachado.py -> disco 10771 bytes | git 10771 bytes
+scripts/loop/vuelta160_tarea7c_mutacion_guarda_cita.py -> disco 10586 bytes | git 10586 bytes
+scripts/loop/vuelta174_tarea1b_mutacion_esqueleto.py -> disco 9988 bytes | git 9988 bytes
+scripts/loop/vuelta150_2d_simular_op_c_05.py -> disco 8627 bytes | git 8627 bytes
+scripts/loop/backlog_l03_resuelto.py -> disco 15741 bytes | git 15741 bytes
+scripts/loop/backlog_l03_vuelta14.py -> disco 6791 bytes | git 6791 bytes
+scripts/loop/vuelta179_tarea2_cobertura_final.py -> disco 4121 bytes | git 4121 bytes
+scripts/loop/paso0_archivar_anterior.py -> disco 7112 bytes | git 7112 bytes
+scripts/loop/vuelta174_esqueleto_reporte.py -> disco 13918 bytes | git 13918 bytes
+scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py -> disco 9310 bytes | git 9310 bytes
+scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py -> disco 13487 bytes | git 13487 bytes
+
+=== E. DIFF REAL EN BYTES DE LOS MODIFICADOS (cambio contra suciedad) ===
+CIFRA ficheros modificados: 0
+
+=== F. LO NO SEGUIDO POR GIT, FICHERO A FICHERO CON SUS BYTES ===
+docs/loop/SALIDA_V180_APERTURA_CONSOLA.txt -> 0 bytes
+scripts/loop/vuelta180_apertura.py -> 26557 bytes
+CIFRA ficheros no seguidos: 2
+
+=== G. git ls-tree DE HEAD SOBRE ESAS RUTAS ===
+dataset/metadata/master_graph.json -> 100644 blob cb33552aedddab4d6c51c5c85a7416999b5c70a0	dataset/metadata/master_graph.json
+docs/loop/REPORTE.md -> 100644 blob e3a9819abf284702c7a11603333867642422df36	docs/loop/REPORTE.md
+docs/loop/ACTA_AUDITOR.md -> 100644 blob 8b605f8e5ae633b4e77fdf5bfbfeea2f1ad3573f	docs/loop/ACTA_AUDITOR.md
+docs/loop/EJECUTOR.md -> 100644 blob 44734d1a2d159b5ef8edcf0acaafa4c1da5e6c33	docs/loop/EJECUTOR.md
+docs/loop/AUDITOR.md -> 100644 blob 7f59fc443fc901c4500ebfe6603539a6e25a0482	docs/loop/AUDITOR.md
+docs/loop/PROMPT_SIGUIENTE.md -> 100644 blob 6210ee92fc8ad40388a07ed3ca0a5e731ec7f9e6	docs/loop/PROMPT_SIGUIENTE.md
+docs/loop/reportes/REPORTE_V179.md -> 100644 blob e3a9819abf284702c7a11603333867642422df36	docs/loop/reportes/REPORTE_V179.md
+docs/plan/OP_L_03_TRIANGULOS.jsonl -> 100644 blob 85bbc892ca9ddbf0a6f5c5fa8f1d65498b7fe165	docs/plan/OP_L_03_TRIANGULOS.jsonl
+docs/plan/OPERACIONES.jsonl -> 100644 blob ff13a2b37c1ae6dd82ef97329193e862b515a5b2	docs/plan/OPERACIONES.jsonl
+docs/plan/OP_L_03_LECTURAS.jsonl -> 100644 blob 0a6039922e0fc8dfb9fee7112f64a24e386745c4	docs/plan/OP_L_03_LECTURAS.jsonl
+docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> 100644 blob 128d4a9f27aeb759ce541f4f09db1c857e4b17c0	docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl
+docs/plan/LECTURAS_DIRIGIDAS.md -> 100644 blob 97e42644132e628f97dfc4661fd9ee6a616e87b7	docs/plan/LECTURAS_DIRIGIDAS.md
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> 100644 blob 806c7c485a4b922a01a9615e6ad759267b78c278	docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+scripts/loop/guarda_commit_dataset.py -> 100644 blob 317306df5a384e5bdc6fa263b4f3d4faf7a91178	scripts/loop/guarda_commit_dataset.py
+scripts/loop/archivar_reporte.py -> 100644 blob 5c94daf630332f973b1771e14a6f5c0462ee4f1d	scripts/loop/archivar_reporte.py
+scripts/loop/anexar_tarea_al_reporte.py -> 100644 blob 70dcc2818a6687903f275f2cde3ae594a0c9ab1d	scripts/loop/anexar_tarea_al_reporte.py
+scripts/loop/tallar_cabecera_reporte.py -> 100644 blob 9dfb962267aea81f703e2de4eba05cd584a17762	scripts/loop/tallar_cabecera_reporte.py
+scripts/loop/cerrar_reporte.py -> 100644 blob 948ab11f14b06661fbb6cd0fcb605dd8f62c9523	scripts/loop/cerrar_reporte.py
+scripts/loop/vuelta178_tarea3_anotar_triangulos.py -> 100644 blob 1c4d487785199095d9c22480accc9001b67d676e	scripts/loop/vuelta178_tarea3_anotar_triangulos.py
+scripts/loop/vuelta179_tarea3_etiqueta_de_fuente.py -> 100644 blob a07a299ca7577860ede11dfc86110416a3b76129	scripts/loop/vuelta179_tarea3_etiqueta_de_fuente.py
+scripts/loop/verificar_mutaciones_viejas.py -> 100644 blob 5ca768cf16422c8fdea3cc3df54e9aa6b7811fc2	scripts/loop/verificar_mutaciones_viejas.py
+scripts/loop/vuelta157_tarea4b_mutacion_tachado.py -> 100644 blob 0c347ab78c34d0b8f4edb808d7c124428a98f8a2	scripts/loop/vuelta157_tarea4b_mutacion_tachado.py
+scripts/loop/vuelta160_tarea7c_mutacion_guarda_cita.py -> 100644 blob 46b85ce5913526a1a9c921d04b2879fb1b59d9cd	scripts/loop/vuelta160_tarea7c_mutacion_guarda_cita.py
+scripts/loop/vuelta174_tarea1b_mutacion_esqueleto.py -> 100644 blob 1b9a9b4798cc54616d8ef6e1dc97e9e8819e05fd	scripts/loop/vuelta174_tarea1b_mutacion_esqueleto.py
+scripts/loop/vuelta150_2d_simular_op_c_05.py -> 100644 blob 870bfbdbd4c62b7eab34a9eaf51a60e60772be23	scripts/loop/vuelta150_2d_simular_op_c_05.py
+scripts/loop/backlog_l03_resuelto.py -> 100644 blob 7a50cf532783d4adffcf17d9a58d1161cdf69330	scripts/loop/backlog_l03_resuelto.py
+scripts/loop/backlog_l03_vuelta14.py -> 100644 blob 4b8efdc3802c4b63bb5378c4053a4d49f9dbfefb	scripts/loop/backlog_l03_vuelta14.py
+scripts/loop/vuelta179_tarea2_cobertura_final.py -> 100644 blob 531541910409f8266982165c0ed0731c0682f228	scripts/loop/vuelta179_tarea2_cobertura_final.py
+scripts/loop/paso0_archivar_anterior.py -> 100644 blob 71dc36b3ea3c4cf1a2f180741519aa7f9cf8aead	scripts/loop/paso0_archivar_anterior.py
+scripts/loop/vuelta174_esqueleto_reporte.py -> 100644 blob 94f84d9c782fb54dcae54830c2a7783ec0757d09	scripts/loop/vuelta174_esqueleto_reporte.py
+scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py -> 100644 blob b8ca178c0bccdec52d440ca41d8d2f52103098db	scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py
+scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py -> 100644 blob 165fb6195c1f36d11eb2ea363dd02ec8d13a9012	scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py
+
+=== H. EL REPORTE EN HEAD, MEDIDO SIN CREERLE AL ENCARGO ===
+primera linea: # REPORTE DE LA VUELTA 179 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+lineas (saltos de linea contados): 847
+bytes en git: 54466
+   contiene 'SIN ESCRIBIR TODAVIA'             -> NO
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'    -> NO
+   contiene 'ABIERTA, SIN CERRAR'              -> SI
+   contiene 'HUECO DECLARADO Y MEDIDO'         -> SI
+   contiene '\n## 3.'                          -> SI
+   contiene '\n## 4.'                          -> SI
+   contiene '\n## 5.'                          -> SI
+   contiene '\n## 6.'                          -> SI
+   contiene '\n## 7.'                          -> SI
+   contiene '\n## 8.'                          -> SI
+   contiene '\n## 9.'                          -> SI
+
+=== H.1 EL REPORTE DEL ARBOL, QUE ES EL QUE EL ESQUELETO DE LA 180 PISARA ===
+primera linea: # REPORTE DE LA VUELTA 179 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+bytes en disco (normalizado a LF): 54466 | saltos de linea: 847
+bytes en disco (crudos, os.path.getsize): 54466
+identico byte a byte al de HEAD: SI
+   contiene 'SIN ESCRIBIR TODAVIA'             -> NO
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'    -> NO
+   contiene 'ABIERTA, SIN CERRAR'              -> SI
+   contiene 'HUECO DECLARADO Y MEDIDO'         -> SI
+   contiene '\n## 3.'                          -> SI
+   contiene '\n## 4.'                          -> SI
+   contiene '\n## 5.'                          -> SI
+   contiene '\n## 6.'                          -> SI
+   contiene '\n## 7.'                          -> SI
+   contiene '\n## 8.'                          -> SI
+   contiene '\n## 9.'                          -> SI
+
+=== H.2 EL COMMIT QUE DE VERDAD TOCA REPORTE.md POR ULTIMA VEZ ===
+(no se teclea ningun hash: se localiza con git log y se imprime lo que salga)
+los ocho ultimos commits:
+   d3240915	ACTA DEL AUDITOR, VUELTA 179: NI UNA CAIDA CONTRA EL EJECUTOR, LA ESCALADA QUE ENCARGUE CAZA LA CAIDA DE LA 178 BAJO MI MANO, Y LA RACHA DE R
+   c348de45	EL REPORTE DE LA 179 QUEDA ARCHIVADO EN SU MISMA VUELTA Y LAS TRES COPIAS CALZAN BYTE A BYTE. SERIAN CUATRO SEGUIDAS.
+   ab4b52b0	LA VUELTA 179 ARCHIVA SU PROPIO REPORTE Y DECLARA LA CIRCULARIDAD QUE SE COMIO AL INTENTARLO.
+   da3585a0	EL REPORTE DE LA 179 SE CIERRA EN SU MISMA VUELTA, Y LA GUARDA NUEVA CAZO PRIMERO LA CAIDA DE LA 178 Y DESPUES ESTE MISMO REPORTE.
+   2037f785	TAREA 5 CERRADA: LAS CINCO QUE NO ENTRAN, NOMBRADAS Y MEDIDAS, Y EL INSTRUMENTO CAYO EN ROJO EN SU PRIMERA CORRIDA.
+   09e0d2df	TAREAS 3 Y 4 CERRADAS: LOS TRIANGULOS PARTIDOS POR SU FUENTE Y LAS DEL SUJETO CONGELADO JUZGADAS UNA A UNA.
+   8bd3bd3e	TAREA 2 CERRADA: LOS DIEZ PARES REALES DE OP-L-03, LEIDOS, Y EL BACKLOG QUEDA EN CERO SIN LECTURA.
+   d4a1028c	TAREA 1 CERRADA: LA ESCALADA DEJA DE SER UNA ORDEN PENDIENTE Y ES CODIGO QUE CAZA LA CAIDA QUE LA MOTIVO.
+ultimo commit que TOCA docs/loop/REPORTE.md: ab4b52b0
+   su asunto: LA VUELTA 179 ARCHIVA SU PROPIO REPORTE Y DECLARA LA CIRCULARIDAD QUE SE COMIO AL INTENTARLO.
+
+=== H.3 LAS PIEZAS QUE cerrar_reporte.py PEDIRA PARA CERRAR LA 180 ===
+(al abrir NO EXISTE NINGUNA, y eso es lo correcto: las produce esta vuelta.
+ La de bateria NO SE VA A PRODUCIR: esta vuelta no es de bateria y la seccion
+ 9 cierra con el HUECO DECLARADO Y MEDIDO. La 181 la corre)
+docs/loop/SALIDA_V180_TALLADOR_CABECERA.txt -> NO EXISTE
+scripts/loop/_v180_cierre_texto.md -> NO EXISTE
+docs/loop/SALIDA_V180_BATERIA.txt -> NO EXISTE
+
+=== H.4 QUE REPORTES ESTAN YA ARCHIVADOS EN docs/loop/reportes/ ===
+   REPORTE_V168.md -> disco 31263 bytes | git 31263 bytes
+   REPORTE_V169.md -> disco 43586 bytes | git 43586 bytes
+   REPORTE_V170.md -> disco 45706 bytes | git 45706 bytes
+   REPORTE_V171.md -> disco 43956 bytes | git 43956 bytes
+   REPORTE_V172.md -> disco 48851 bytes | git 48851 bytes
+   REPORTE_V174.md -> disco 32568 bytes | git 32568 bytes
+   REPORTE_V175.md -> disco 5953 bytes | git 5953 bytes
+   REPORTE_V176.md -> disco 95231 bytes | git 95231 bytes
+   REPORTE_V177.md -> disco 53201 bytes | git 53201 bytes
+   REPORTE_V178.md -> disco 59617 bytes | git 59617 bytes
+   REPORTE_V179.md -> disco 54466 bytes | git 54466 bytes
+CIFRA reportes archivados: 11
+REPORTE_V179.md archivado: SI
+
+=== H.5 LA NOMINA Y EL CENSO, RECOMPUTADOS Y CON SU CORTE ===
+(el encargo NO da cifra de nomina ni de censo para esta vuelta, y aunque la
+ diera no se copiaria: se llaman las funciones puras del propio sujeto.
+ EL CORTE VA AL LADO por adjudicacion 7.2 del acta 178, porque el
+ denominador crece DENTRO de la propia vuelta)
+CORTE DE ESTA MEDICION: HEAD d3240915e994, APERTURA de la vuelta 180, antes de la
+                        primera operacion de esta vuelta.
+CIFRA arneses que ve arneses_del_directorio(): 163
+CIFRA entradas de VIEJAS (la nomina): 103
+CIFRA entradas de la nomina que el censo NO ve: 0
+CIFRA del censo que estan FUERA de la nomina: 60
+     FUERA: vuelta102_tarea1_prueba_mutacion_apertura.py
+     FUERA: vuelta110_tarea2_prueba_mutacion.py
+     FUERA: vuelta115_tarea2_4_mutacion_z.py
+     FUERA: vuelta116_tarea2_3_mutacion_aa.py
+     FUERA: vuelta117_tarea2_3_mutacion_bb.py
+     FUERA: vuelta118_tarea2_5_mutacion_cc.py
+     FUERA: vuelta118_tarea2_6_mutacion_dd.py
+     FUERA: vuelta122_tarea1e_mutacion_citas.py
+     FUERA: vuelta123_tarea1e_mutacion_fila_tabla.py
+     FUERA: vuelta123_tarea1f_caso_positivo.py
+     FUERA: vuelta124_tarea1f_caso_positivo_ventana.py
+     FUERA: vuelta133_tarea2c_mutaciones_identidad.py
+     FUERA: vuelta134_2d_mutacion_1.py
+     FUERA: vuelta134_2d_mutacion_2.py
+     FUERA: vuelta134_2f_mutacion.py
+     FUERA: vuelta135_4c_mutacion.py
+     FUERA: vuelta136_simular_ops11.py
+     FUERA: vuelta137_1a_mutacion.py
+     FUERA: vuelta137_1c_mutacion.py
+     FUERA: vuelta138_2a_caso_positivo_63_64.py
+     FUERA: vuelta138_2a_mutaciones.py
+     FUERA: vuelta139_2a_mutaciones.py
+     FUERA: vuelta140_2b_mutaciones.py
+     FUERA: vuelta140_2c_mutacion_ancla.py
+     FUERA: vuelta141_2d_mutacion_commits.py
+     FUERA: vuelta141_2e_caso_positivo_fase03.py
+     FUERA: vuelta142_2a_mutaciones.py
+     FUERA: vuelta142_2b_mutacion_commits.py
+     FUERA: vuelta142_2c_mutaciones.py
+     FUERA: vuelta142_2d_mutacion_bateria.py
+     FUERA: vuelta146_3b_simular_op_a_01.py
+     FUERA: vuelta146_3c_mutacion_aduana.py
+     FUERA: vuelta24_opc04_caso_positivo.py
+     FUERA: vuelta27_caso_positivo.py
+     FUERA: vuelta28_caso_positivo.py
+     FUERA: vuelta29_caso_positivo.py
+     FUERA: vuelta30_caso_positivo.py
+     FUERA: vuelta32_caso_positivo.py
+     FUERA: vuelta33_caso_positivo.py
+     FUERA: vuelta39_caso_positivo.py
+     FUERA: vuelta52_caso_positivo.py
+     FUERA: vuelta53_caso_positivo.py
+     FUERA: vuelta54_caso_positivo.py
+     FUERA: vuelta55_caso_positivo.py
+     FUERA: vuelta56_caso_positivo.py
+     FUERA: vuelta57_caso_positivo.py
+     FUERA: vuelta65_caso_positivo_generador.py
+     FUERA: vuelta65_caso_positivo_promesas.py
+     FUERA: vuelta66_caso_positivo_varas.py
+     FUERA: vuelta79_tarea2_caso_positivo.py
+     FUERA: vuelta90_tarea3_prueba_mutacion_tallador.py
+     FUERA: vuelta91_tarea3_prueba_mutacion_composicion.py
+     FUERA: vuelta91_tarea4_prueba_mutacion_direccion.py
+     FUERA: vuelta95_tarea2a_prueba_mutacion_barrido.py
+     FUERA: vuelta96_tarea1c_prueba_mutacion.py
+     FUERA: vuelta96_tarea2_prueba_mutacion.py
+     FUERA: vuelta96_tarea3_prueba_mutacion.py
+     FUERA: vuelta97_tarea2_prueba_mutacion.py
+     FUERA: vuelta98_tarea1_prueba_mutacion.py
+     FUERA: vuelta98_tarea3_prueba_mutacion.py
+LA RESTA COMPROBADA: censo 163 menos nomina 103 = 60, y fuera de nomina = 60. CALZAN: SI
+arneses_que_faltan() HOY: ultima vuelta de la nomina 179, y dice que faltan 0
+EL SELLO DE CORTE, LLAMADO Y NO PARAFRASEADO:
+   sello_de_corte(len(VIEJAS), corte_de_git()) -> 103 (corte: HEAD d3240915e994, nomina contada en esta corrida)
+
+=== H.6 TAREA 1: LA ETIQUETA DE FUENTE, MEDIDA ANTES DE ARREGLARLA ===
+(el encargo dice 15 etiquetados como de la 177, 10 verdaderos y 5 falsos.
+ NINGUNO SE COPIA: se corre el instrumento de la 179 y se imprime lo que salga)
+comando: python scripts/loop/vuelta179_tarea3_etiqueta_de_fuente.py -> exit 0
+      CIFRA pares con clase escrita por la vuelta 177: 9
+      CIFRA pares con clase escrita por la vuelta 179: 10
+      CIFRA pares con clase en el registro, en total: 19
+      CIFRA filas de docs/plan/OP_L_03_TRIANGULOS.jsonl: 19
+      CIFRA lados etiquetados como de la vuelta 177: 15
+      CIFRA de esos que SI son de la vuelta 177: 10
+      CIFRA de esos que NO lo son: 5
+      CIFRA de esos cuyo par no se encontro en el registro: 0
+      LA RESTA: 10 mas 5 mas 0 = 15, y los etiquetados son 15. CALZA: SI
+         acto `colaboracion_cadena_suministro` | colaboracion_cadena_suministro + diagnostico_efecto_latigo | lo escribio la vuelta 179 y la etiqueta dice 177
+         acto `colaboracion_cadena_suministro` | compartir_datos_cadena_suministro + diagnostico_efecto_latigo | lo escribio la vuelta 179 y la etiqueta dice 177
+         acto `creacion_option_pool` | creacion_option_pool + employee_pool_esop | lo escribio la vuelta 179 y la etiqueta dice 177
+         acto `fase_diseno_prototipado_modelos` | fase_diseno_prototipado_modelos + prototyping_possibilities | lo escribio la vuelta 179 y la etiqueta dice 177
+         acto `fase_diseno_prototipado_modelos` | proceso_ideacion_modelo_negocio + prototyping_possibilities | lo escribio la vuelta 179 y la etiqueta dice 177
+EL SELLO DE LOS TRES REGISTROS QUE LA TAREA 1 PROMETE NO MOVER:
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl        sha256 disco ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
+                                              sha256 LF    ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be | disco 4051967 bytes | LF 4051967 bytes
+   docs/plan/OP_L_03_LECTURAS.jsonl           sha256 disco d93c59a86372cf501f407a82cc79d649d02fd73c404429489ec6c07b4272719f
+                                              sha256 LF    d93c59a86372cf501f407a82cc79d649d02fd73c404429489ec6c07b4272719f | disco 51368 bytes | LF 51368 bytes
+   docs/plan/OP_L_03_TRIANGULOS.jsonl         sha256 disco 6b3fce70a787f14e7ff2504dea7c888dd040fc366971c6fccb2be0d4789700eb
+                                              sha256 LF    6b3fce70a787f14e7ff2504dea7c888dd040fc366971c6fccb2be0d4789700eb | disco 55705 bytes | LF 55705 bytes
+EL LITERAL CLAVADO, BUSCADO EN EL SUJETO Y CONTADO:
+   CIFRA apariciones de 'docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)' en el sujeto: 1
+      LINEA 160: "fuente": "docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)",
+
+=== H.7 TAREA 2: LA GUARDA DEL SUJETO CONGELADO, CORRIDA ANTES DE TOCAR NADA ===
+(el encargo dice 17 de 103 al corte c348de45f70f, medido por el fundador. NO SE
+ COPIA: se corre la guarda y se cuenta su propia salida)
+comando: verificar_mutaciones_viejas.py --sujeto-congelado -> exit 1
+   CIFRA lineas no vacias de la salida: 45
+   CIFRA lineas que dicen 'SUJETO VIVO'     : 9
+   CIFRA lineas que dicen 'NO DECIDIBLE'    : 11
+   CIFRA lineas que dicen 'CASO DECLARADO'  : 1
+   CIFRA lineas que dicen 'CONGELADO'       : 7
+      CIFRA entradas que no cumplen la regla: 17
+   ROJO DE LA GUARDA DEL SUJETO CONGELADO: 17 entrada(s) de 103 (corte: HEAD d3240915e994, nomina contada en esta corrida) no
+EL REGISTRO DE LOS DIECISIETE, CONTADO DE SU FICHERO Y NO TECLEADO:
+   docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> 17 filas, disco 20939 bytes
+   CIFRA con veredicto_de_la_lectura 'ABRE FICHERO VIVO'         : 4
+   CIFRA con veredicto_de_la_lectura 'ABRE UN SUJETO YA CLAVADO' : 2
+   CIFRA con veredicto_de_la_lectura 'LO NOMBRA SIN ABRIRLO'     : 11
+   LOS QUE ABREN FICHERO VIVO, NOMBRADOS UNO A UNO:
+      vuelta157_tarea4b_mutacion_tachado.py          abre LECTURAS_DIRIGIDAS.md
+      vuelta160_tarea7c_mutacion_guarda_cita.py      abre INTRA_DOMINIO_VEREDICTOS.jsonl, LECTURAS_DIRIGIDAS.md
+      vuelta174_tarea1b_mutacion_esqueleto.py        abre REPORTE.md
+      vuelta150_2d_simular_op_c_05.py                abre master_graph.json
+   LOS QUE SOLO LO NOMBRAN O YA LO TIENEN CLAVADO:
+      vuelta135_2e_mutacion_1.py                     ABRE UN SUJETO YA CLAVADO  guarda dice NO DECIDIBLE
+      vuelta135_2e_mutacion_2.py                     ABRE UN SUJETO YA CLAVADO  guarda dice NO DECIDIBLE
+      vuelta145_2a_mutacion_ancla_unica.py           LO NOMBRA SIN ABRIRLO      guarda dice NO DECIDIBLE
+      vuelta148_2d_mutacion_exencion.py              LO NOMBRA SIN ABRIRLO      guarda dice SUJETO VIVO
+      vuelta150_5c_mutacion_ciclo.py                 LO NOMBRA SIN ABRIRLO      guarda dice NO DECIDIBLE
+      vuelta162_tarea2a_mutacion_puerta.py           LO NOMBRA SIN ABRIRLO      guarda dice SUJETO VIVO
+      vuelta162_tarea2b_mutacion_excepcion.py        LO NOMBRA SIN ABRIRLO      guarda dice NO DECIDIBLE
+      vuelta163_tarea4b_mutacion_re_sellado.py       LO NOMBRA SIN ABRIRLO      guarda dice NO DECIDIBLE
+      vuelta165_tarea6_mutacion_op_l_01.py           LO NOMBRA SIN ABRIRLO      guarda dice SUJETO VIVO
+      vuelta166_tarea2_mutacion_correccion.py        LO NOMBRA SIN ABRIRLO      guarda dice SUJETO VIVO
+      vuelta166_tarea6_mutacion_guarda.py            LO NOMBRA SIN ABRIRLO      guarda dice SUJETO VIVO
+      vuelta177_tarea1b_mutacion_esperado_vivo.py    LO NOMBRA SIN ABRIRLO      guarda dice SUJETO VIVO
+      vuelta179_tarea3_mutacion_triangulos.py        LO NOMBRA SIN ABRIRLO      guarda dice SUJETO VIVO
+   CIFRA filas cuyo arnes YA declara el literal de la guarda en su texto: 0
+EL CABLEADO AL ROJO GLOBAL, BUSCADO Y NO SUPUESTO:
+   CIFRA apariciones de 'guarda_del_sujeto_congelado'     : 2
+   CIFRA apariciones de 'informe_del_sujeto_congelado'    : 2
+   CIFRA apariciones de 'sujeto_congelado'                : 6
+   CIFRA apariciones de 'def main'                        : 1
+
+=== H.8 TAREA 3: EL CORTE, Y DONDE FALTA. LA TABLA DE TRAMOS MEDIDA HOY ===
+(el encargo dice que la 2.a de la 179 publico 6/29/8 y 34/44/10 y que hoy da
+ 14/39/18 y 26/34/0. NINGUNA SE COPIA: se corre y se pega lo que salga)
+comando: python scripts/loop/backlog_l03_resuelto.py -> exit 0
+   F) LO QUE SOBRA EN LOS ACTOS QUE TODAVIA NO SE HAN LEIDO
+      (los leidos NO se teclean: se cuentan del registro
+      docs/plan/OP_L_03_LECTURAS.jsonl, que es donde OP-L-03 escribe)
+      CIFRA actos que el registro dice leidos: 14
+      CIFRA de esos que el instrumento sigue dando: 14
+   | tramo | actos | pares del instrumento | pares reales | pares disueltos | sobran |
+   |---|---|---|---|---|---|
+   | YA LEIDOS (la 177) | **14** | **39** | **18** | **41** | **21** |
+   | SIN LEER | **26** | **34** | **0** | **93** | **34** |
+   | **todos** | **40** | **73** | **18** | **134** | **55** |
+   VERDE: los dos caminos calzan en los 40 actos medidos. El instrumento viejo da 73 pares y quedan 18 reales, con 134 disueltos y 47 ya con veredicto. LAS DOS COLUMNAS VAN LAS DOS Y 
+EL SELLO DE CORTE, BUSCADO EN LOS DOS SUJETOS DE LA TAREA 3:
+   scripts/loop/backlog_l03_resuelto.py                 sello_de_corte: 0 | corte_de_git: 0 | 'corte': 1
+   scripts/loop/vuelta179_tarea2_cobertura_final.py     sello_de_corte: 0 | corte_de_git: 0 | 'corte': 0
+
+=== H.9 TAREA 4: LAS DOS PENDIENTES BARATAS, MEDIDAS ANTES DE TOCARLAS ===
+scripts/loop/paso0_archivar_anterior.py -> 162 lineas, disco 7112 bytes | LF 7112 bytes
+   LAS LINEAS QUE DICEN 'ANTERIOR', UNA A UNA:
+      LINEA 2: r"""paso0_archivar_anterior.py . EL PASO 0 DEL ESQUELETO DEL REPORTE: EL
+      LINEA 3: ARCHIVADOR ENCHUFADO, Y LA NEGATIVA A ESCRIBIR SI EL REPORTE ANTERIOR NO ESTA
+      LINEA 16: `docs/loop/REPORTE.md` sin preguntar**, y si el reporte anterior no esta
+      LINEA 25: (a) el archivador no sale VERDE para la vuelta anterior; o
+      LINEA 42: import paso0_archivar_anterior as PASO0
+      LINEA 76: def exigir_archivado(vuelta_anterior, ruta_reporte=None, dir_archivo=None,
+      LINEA 94: c, sal = correr_archivador(vuelta_anterior)
+      LINEA 95: w("   archivar_reporte.py --vuelta %d -> EXIT %d" % (vuelta_anterior, c))
+      LINEA 101: % vuelta_anterior)
+      LINEA 105: destino = os.path.join(dir_archivo, "REPORTE_V%d.md" % vuelta_anterior)
+      LINEA 120: elif int(m.group(1)) != vuelta_anterior:
+      LINEA 151: cola.append("   VERDE: el reporte anterior esta archivado y lo que se va a")
+   CIFRA apariciones de 'vuelta anterior' en el fichero: 1
+   CIFRA apariciones de 'que va a pisar' en el fichero: 0
+scripts/loop/vuelta174_esqueleto_reporte.py existe: SI
+   -> 273 lineas, disco 13918 bytes | LF 13918 bytes
+   CIFRA apariciones de 'def vuelta_del_reporte_del_arbol': 1
+scripts/loop/vuelta179_esqueleto_reporte.py -> CIFRA 'CLON DECLARADO': 2
+   CIFRA apariciones de 'vuelta174_esqueleto_reporte': 2
+
+=== H.10 TAREA 5: OP-L-02, SUS INSTRUMENTOS Y SU FICHA, MEDIDOS Y NO LEIDOS ===
+(no se lee NINGUN par en esta apertura ni en esa tarea: solo se mide)
+   scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py       203 lineas | disco 9310 bytes | LF 9310 bytes
+   scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py      287 lineas | disco 13487 bytes | LF 13487 bytes
+   scripts/loop/vuelta150_3_relectura_expediente.py         1012 lineas | disco 52519 bytes | LF 52519 bytes
+   docs/plan/OPERACIONES.jsonl -> 71 filas
+      OP-L-01    estado 'LISTA'
+      OP-L-02    estado 'LISTA'
+      OP-L-03    estado 'LISTA'
+      OP-I-01    estado 'LISTA'
+      (EL ESTADO NO ES LA VARA. La vara es la salida de
+       scripts/loop/vuelta150_3_relectura_expediente.py --corte <HEAD>)
+   docs/plan/LECTURAS_DIRIGIDAS.md -> 2230 lineas | disco 214916 bytes | LF 214916 bytes
+   CIFRA apariciones de 'SALES ROADMAP' (sin distinguir mayusculas): 6
+   CIFRA apariciones de 'sales_roadmap': 3
+
+FIN DEL SELLO DE APERTURA
