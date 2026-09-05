@@ -1,68 +1,3 @@
-# REPORTE DE LA VUELTA 172 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
-
-> **ESTE REPORTE SE ABRIO AL EMPEZAR LA VUELTA Y CRECE POR ANEXION** (`EJECUTOR.md`
-> 1, "EL REPORTE ABRE CON LA VUELTA"). El esqueleto lo tallo
-> `scripts/loop/vuelta172_esqueleto_reporte.py`; cada tarea ANEXA SU FILA AL
-> CERRARSE, no al final; y el cierre talla la cabecera. **Si esta vuelta se corta,
-> lo que quede aqui es lo que de verdad se hizo, y las filas que sigan diciendo
-> ABIERTA, SIN CERRAR son las que no se hicieron.** Tope de cinco tareas, y el
-> encargo trae exactamente cinco.
->
-> **Y EL ESQUELETO YA NO PUEDE PISAR UN REPORTE SIN ARCHIVAR** (guarda nacida en
-> la TAREA 5.a de la vuelta 171): su paso 0 corre el archivador y **se niega a
-> escribir** si el reporte anterior no esta guardado byte a byte. **Y esa guarda
-> YA MORDIO en la vuelta siguiente a la que nacio**: corrida en modo solo
-> comprobacion al abrir esta vuelta, dijo ROJO por su clausula (d), porque el
-> `REPORTE.md` del arbol era el de la 171 sin cerrar. Esta corrida lo paso en
-> verde contra `docs/loop/reportes/REPORTE_V171.md` **solo despues de que la
-> TAREA 1.a cerrara ese reporte**.
-
-**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.** Se talla al cierre, cuando
-haya de que hablar.
-
-## 0. LA IDENTIDAD Y LA CABECERA, TALLADAS Y NO TECLEADAS
-
-**LA IDENTIDAD, LEIDA DE GIT EN ESTA VUELTA** por
-`scripts/loop/vuelta172_esqueleto_reporte.py`, con
-`git rev-parse --abbrev-ref HEAD`, `git log` y `git log --diff-filter=A`, y CAE
-EN ROJO si algo no se encuentra o es ambiguo:
-
-- rama: `pasada-unica`
-- commit del acta de la vuelta 171: `0c415430`, asunto real leido de git log:
-  'ACTA DEL AUDITOR, VUELTA 171: LAS CUATRO TAREAS REPRODUCEN AL DIGITO Y LA PARADA NO ES PARADA, PERO EL REPORTE VUELVE A QUEDARSE SIN CERRAR Y ESTA VEZ EL TRAMO YA ESTABA EN RELECTURA AL DOBLE'
-- HEAD real de apertura, sellado ANTES de la primera operacion en
-  `docs/loop/SALIDA_V172_HEAD_APERTURA.txt`: `002e0517`
-- commit de nacimiento del bloque de apertura, leido con
-  `git log --diff-filter=A`: `ad3cea43`
-- commit de cierre: se talla al cierre. **Un reporte no puede nombrar el commit
-  que lo lleva**, porque ese commit se crea despues de escribirlo.
-
-<!-- CABECERA TALLADA -->
-**PENDIENTE DE TALLAR AL CIERRE, Y SE DICE EN VEZ DE RELLENARLA.** La tabla sale
-de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 172`. **Esta
-vuelta corrio el bloque de apertura entero ANTES de su primera operacion**, asi
-que la mitad izquierda ya se puede leer: corrido aqui, el tallador dice **"ROJO,
-19 celdas no se pudieron leer"** y de esas lineas de rojo, **0
-mencionan APERTURA**. Son todas del lado CIERRE, que al abrir todavia no existe.
-Este hueco se rellena con la tabla tallada entera cuando la vuelta cierre.
-<!-- FIN CABECERA TALLADA -->
-
-## 1. LAS CINCO TAREAS DEL ENCARGO, Y SU ESTADO
-
-<!-- TABLA DE TAREAS -->
-| tarea | que encarga | estado | donde vive la prueba |
-|---|---|---|---|
-| **TAREA 1** | BLOQUEANTE Y VA PRIMERA. EL CIERRE QUE FALTA Y LOS REGISTROS (1.a el reporte de la 171 CERRADO con la cabecera tallada pegada, sus cuatro discutibles y su caida sin suavizar, y la seccion 9 diciendo que la bateria NO corrio; 1.b el acta 171 y sus adjudicaciones 6.1 a 6.12 al `R.41` con su arnes de mutacion del registro; 1.c el archivador para la 171 y este esqueleto) | **CERRADA** | `SALIDA_V172_T1A_CERRAR_REPORTE_171.txt`, `_T1A_COMPARAR_CABECERA_171`, `_T1A_RELECTURA_DESDE_GIT`, `_T1B_REGISTRO_ACTA_171`, `_T1B_MUTACION_REGISTRO`, `_T1B_SERIE`, `_T1C_GUARDA_QUE_MORDIO`, `_T1C_ESQUELETO` |
-| **TAREA 2** | BLOQUEANTE PARA LA 3. SE DESENVENENA EL CONTADOR Y SE CORRIGE EL `R.40` (adjudicaciones 6.1 y 6.3): 2.a `docs/loop/reportes/REPORTE_V<N>.md` entra en los narrativos del bucle POR PATRON, con su caso positivo por mutacion; 2.b la afirmacion falsa del `R.40` corregida por el carril del `9.10` con el reparto recomputado; 2.c el contador otra vez, con la atribucion fichero a fichero y linea a linea | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 3** | LA NUMERACION `LD`, QUE AHORA SI SE ESCRIBE (adjudicacion 6.2): las 16 filas de la segunda tanda de `docs/plan/LECTURAS_DIRIGIDAS.md` ganan `LD-139` a `LD-154` POR ADICION PURA, con los numeros COMPUTADOS y con dos guardas que tienen que caer por mutacion; y despues la fila de `docs/plan/00_INDICE.md` recibe su cifra de hoy por `9.21` (adjudicacion 6.10) | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 4** | LOS TRES ARNESES Y LA BATERIA (adjudicaciones 6.4 y 6.5), Y EL ORDEN ES OBLIGATORIO: 4.a el caso `F` de `vuelta171_tarea5a_mutacion_enchufe.py` refundado sobre SUJETO CONGELADO; 4.b los tres arneses de la 171 dentro de la nomina de `verificar_mutaciones_viejas.py`; 4.c la bateria corrida ENTERA Y SOLA al cierre, con su salida en la seccion 9 | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 5** | EL CIERRE DEL REPORTE DEJA DE SER UN PASO A MANO (adjudicacion 6.6): nace `scripts/loop/cerrar_reporte.py`, de nombre estable y sin numero de vuelta, que pega la cabecera, anexa el cuerpo, escribe el veredicto y CAE EN ROJO si al terminar falta cualquiera de las cuatro piezas. Con su caso positivo por mutacion, y esta vuelta se cierra con el | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-<!-- FIN TABLA DE TAREAS -->
-
-## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
-
-<!-- ANEXO DE TAREAS -->
-
 ### TAREA 1 (BLOQUEANTE Y VA PRIMERA). EL CIERRE QUE FALTA Y LOS REGISTROS
 
 **LA MEDICION DE APERTURA SE CORRIO ANTES QUE TODO, IGUAL QUE EN LA 171 Y POR EL
@@ -215,5 +150,3 @@ vuelta. El esqueleto sabe abrir el reporte y `cerrar_reporte.py` sabe cerrarlo,
 pero **anexar la fila de cada tarea al cerrarse era un paso a mano**, que es
 exactamente la especie que ha matado las dos ultimas vueltas. Esta seccion que
 estas leyendo la anexo el. Va como `D.3`.
-
-<!-- FIN ANEXO DE TAREAS -->

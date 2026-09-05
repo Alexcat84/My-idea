@@ -1,0 +1,57 @@
+==============================================================================
+VUELTA 172, TAREA 1.c: LA GUARDA DEL PASO 0, MEDIDA ANTES DE ARCHIVAR
+==============================================================================
+
+A) EL COMMIT DEL ACTA 171, LOCALIZADO Y NO TECLEADO
+   HEAD de apertura de esta vuelta, del sello: 002e0517
+   su padre: 0c415430
+   asunto del padre: ACTA DEL AUDITOR, VUELTA 171: LAS CUATRO TAREAS REPRODUCEN AL DIGITO Y LA PARADA NO ES PARADA, P
+   (el HEAD de apertura es el commit de suciedad de esta vuelta, que no
+    toca REPORTE.md; su padre es el commit del acta del auditor)
+
+B) EL SUJETO DE ENTONCES: EL REPORTE.md QUE HABIA AL ABRIR ESTA VUELTA
+   primera linea: # REPORTE DE LA VUELTA 171 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   bytes: 28467 | saltos de linea: 453
+   sha256: 8e9ce848425fd70408921a55e39188b731ca9ef47c0f4f95bd8ec93cadc422bb
+   CONTRASTE, CON SU ATRIBUCION: el auditor publica en su acta 171,
+   seccion 4.1, el sha256 8e9ce848425fd704 para este mismo fichero.
+   ES SU CIFRA. La mia, medida hoy con codigo propio, empieza por 8e9ce848425fd704.
+   CALZAN: SI
+
+C) LO QUE HABIA ARCHIVADO ENTONCES
+   CIFRA ficheros en docs/loop/reportes/: 3
+      REPORTE_V168.md      31263 bytes  sha256 068fe39fb36a4209  # REPORTE DE LA VUELTA 168 (ejecutor). F
+      REPORTE_V169.md      43586 bytes  sha256 262f8409de097e60  # REPORTE DE LA VUELTA 169 (ejecutor). F
+      REPORTE_V170.md      45706 bytes  sha256 0b85f30e9c78e2b4  # REPORTE DE LA VUELTA 170 (ejecutor). F
+   ¿existe REPORTE_V171.md?: NO
+
+D) LA GUARDA CORRIDA CONTRA EL ESCENARIO DE ENTONCES, EN UN TEMPORAL
+   (modo solo comprobacion: ejecutar_archivador=False, CERO escrituras)
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR ../../AppData/Local/Temp/v172_guarda_n4527244/REPORTE.md
+      archivar_reporte.py NO se lanza (modo solo comprobacion)
+      ../../AppData/Local/Temp/v172_guarda_n4527244/reportes/REPORTE_V171.md -> NO EXISTE
+      ROJO, 1 motivo(s). EL ESQUELETO NO ESCRIBE:
+         (b) no existe el archivo ../../AppData/Local/Temp/v172_guarda_n4527244/reportes/REPORTE_V171.md
+   VEREDICTO SOBRE EL ESCENARIO DE ENTONCES: ROJO
+   temporal borrado: True
+
+E) LA MISMA GUARDA CONTRA EL ARBOL DE HOY, CON LA 171 YA CERRADA
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py NO se lanza (modo solo comprobacion)
+      docs/loop/reportes/REPORTE_V171.md -> NO EXISTE
+      ROJO, 1 motivo(s). EL ESQUELETO NO ESCRIBE:
+         (b) no existe el archivo docs/loop/reportes/REPORTE_V171.md
+   VEREDICTO SOBRE EL ARBOL DE HOY: ROJO
+
+F) LO QUE ESTO SOSTIENE, Y NI UNA PALABRA MAS
+   la guarda MORDIA sobre el escenario de apertura                SI
+   y sigue mordiendo hoy, porque la 171 aun no esta archivada     SI
+   el reporte de entonces NO estaba en el archivo                 SI
+   mi sha256 y el del auditor calzan en sus 16 primeros digitos   SI
+   CIFRA comprobaciones: 4 | fallan: 0
+
+VERDE: LA GUARDA QUE NACIO EN LA VUELTA 171 ESTA MORDIENDO EN LA 172,
+   que es la vuelta siguiente a la que nacio, y por la clausula (d),
+   que es la unica que mira lo que se va a destruir.
