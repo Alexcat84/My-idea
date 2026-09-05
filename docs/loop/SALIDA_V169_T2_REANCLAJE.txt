@@ -1,0 +1,30 @@
+==============================================================================
+VUELTA 169, TAREA 2: RE ANCLAJE DE vuelta166_tarea3_mutacion_retrato.py
+==============================================================================
+
+A) EL SUJETO, MEDIDO ANTES DE TOCARLO
+   ruta: scripts/loop/vuelta166_tarea3_mutacion_retrato.py
+   CIFRA bytes antes: 9141
+   CIFRA lineas antes: 189
+
+B) CADA SUSTITUCION SE BUSCA, Y SI NO APARECE EXACTAMENTE UNA VEZ, PARA
+   (2.a) primer caso: la constante sale del computo           apariciones: 1
+   (2.b) la mutacion muta lo que acaba de leer, con guarda que cae apariciones: 1
+   (2.a) segundo caso: la constante sale del computo          apariciones: 1
+   (2.b) el rotulo impreso sale del computo                   apariciones: 1
+   rotulo de C: el numeral sale de len(tach)                  apariciones: 1
+   CIFRA sustituciones localizadas: 5 de 5
+
+C) NINGUNA PALABRA VIEJA SE BORRA, COMPROBADO Y NO AFIRMADO
+   el literal "TRECE VECES"    sigue en el fichero: True
+   el literal DOCE VECES,      sigue en el fichero: True
+   el literal DOS VECES,       sigue en el fichero: True
+
+D) EL FICHERO SOLO CRECE Y SIGUE COMPILANDO
+   CIFRA bytes despues: 11523
+   CIFRA lineas despues: 224
+   crece y no encoge: True
+   compile() del texto nuevo: OK
+
+ESCRITO: scripts/loop/vuelta166_tarea3_mutacion_retrato.py
+VERDE: las 5 sustituciones aplicadas, ninguna comprobacion quitada.

@@ -1,0 +1,89 @@
+==============================================================================
+VUELTA 166, TAREA 3: CASO POSITIVO POR MUTACION DEL CARRIL DEL 9.10
+==============================================================================
+
+A) EL SUJETO, LEIDO DEL DOCUMENTO DE VERDAD
+   docs/plan/RECOMPUTO_3388.md, 1922 lineas
+   CIFRA filas del PASO 1 localizadas: 4 | errores: 0
+
+B) EL CONTADOR SE COMPUTA DE LA CADENA Y NO DE LA PALABRA ESCRITA
+   la fila de los colapsos trae 13 tachadas y la palabra TRECE
+   se MUTA la palabra viva 'TRECE VECES' a 'DOS VECES' sin tocar la cadena
+   la palabra escrita pasa a 'DOS VECES' y el computo sigue dando 'CATORCE VECES'
+   y la guarda de que todos cuadran, sobre el documento MUTADO:
+      CAE
+
+C) LA CIFRA VIEJA NO SE BORRA: SE TACHA Y SE QUEDA
+   cifra viva antes: 398
+   la fila nueva contiene ~~**398**~~: True
+   de las 13 tachadas viejas sobreviven 13
+
+D) LA CELDA QUE NO SALE DE UN INSTRUMENTO NO SE ESCRIBE
+   salida completa -> 4 cifras, 0 faltan
+   sin la linea de crudas     -> faltan 1 (crudas)
+   sin la linea de distintos  -> faltan 1 (distintos)
+   sin la linea de multiples  -> faltan 1 (multiples)
+
+E) EL TEXTO DE LA NOTA SIGUE A LA MEDICION Y NO A UNA CONSTANTE
+   con 398 la nota dice 'de 207 a 398': True
+   con 300 la nota dice 'de 207 a 300': True
+   la nota de los multiples nombra los pares uno por uno: True
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   A_las_cuatro_filas_se_localizan                      PASA   (real=4 esperado=4)
+   A_sin_errores_de_localizacion                        PASA   (real=0 esperado=0)
+   B_con_13_tachadas_el_siguiente_es_CATORCE            PASA   (real='CATORCE VECES' esperado='CATORCE VECES')
+   B_la_mutacion_MUERDE_el_texto_vivo                   PASA   (real=True esperado=True)
+   B_mutar_la_palabra_no_mueve_el_computo               PASA   (real='CATORCE VECES' esperado='CATORCE VECES')
+   B_la_cadena_sigue_teniendo_las_mismas_tachadas       PASA   (real=13 esperado=13)
+   B_la_guarda_CAE_con_el_contador_desincronizado       PASA   (real=False esperado=False)
+   B_y_PASA_sobre_el_documento_sin_mutar                PASA   (real=True esperado=True)
+   C_la_vieja_queda_tachada_y_entera                    PASA   (real=True esperado=True)
+   C_la_nueva_esta_viva                                 PASA   (real=True esperado=True)
+   C_las_13_tachadas_viejas_sobreviven                  PASA   (real=13 esperado=13)
+   C_la_fila_solo_crece                                 PASA   (real=True esperado=True)
+   D_la_salida_completa_da_las_cuatro                   PASA   (real=0 esperado=0)
+   D_y_las_lee_bien                                     PASA   (real=[551, 398, 149, 4] esperado=[551, 398, 149, 4])
+   D_sin_crudas_el_lector_lo_dice                       PASA   (real=['crudas'] esperado=['crudas'])
+   D_sin_distintos_el_lector_lo_dice                    PASA   (real=['distintos'] esperado=['distintos'])
+   D_sin_multiples_el_lector_lo_dice                    PASA   (real=['multiples'] esperado=['multiples'])
+   E_la_nota_lleva_la_cifra_medida                      PASA   (real=True esperado=True)
+   E_y_cambia_si_la_medicion_cambia                     PASA   (real=False esperado=False)
+   E_el_ordinal_sale_del_conteo                         PASA   (real=True esperado=True)
+   E_con_cinco_tachadas_el_ordinal_es_SEXTA             PASA   (real=True esperado=True)
+   E_la_nota_de_multiples_nombra_sus_pares              PASA   (real=2 esperado=2)
+   E_y_dice_que_no_adjudica_clase                       PASA   (real=True esperado=True)
+   E_la_nota_de_distintos_avisa_de_la_resta_rota        PASA   (real=True esperado=True)
+   CIFRA casos: 24 | pasan: 24 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_las_cuatro_filas_se_localizan                      CAE   (esperado mutado=5)
+   A_sin_errores_de_localizacion                        CAE   (esperado mutado=1)
+   B_con_13_tachadas_el_siguiente_es_CATORCE            CAE   (esperado mutado='CATORCE VECES_mutado')
+   B_la_mutacion_MUERDE_el_texto_vivo                   CAE   (esperado mutado=False)
+   B_mutar_la_palabra_no_mueve_el_computo               CAE   (esperado mutado='CATORCE VECES_mutado')
+   B_la_cadena_sigue_teniendo_las_mismas_tachadas       CAE   (esperado mutado=14)
+   B_la_guarda_CAE_con_el_contador_desincronizado       CAE   (esperado mutado=True)
+   B_y_PASA_sobre_el_documento_sin_mutar                CAE   (esperado mutado=False)
+   C_la_vieja_queda_tachada_y_entera                    CAE   (esperado mutado=False)
+   C_la_nueva_esta_viva                                 CAE   (esperado mutado=False)
+   C_las_13_tachadas_viejas_sobreviven                  CAE   (esperado mutado=14)
+   C_la_fila_solo_crece                                 CAE   (esperado mutado=False)
+   D_la_salida_completa_da_las_cuatro                   CAE   (esperado mutado=1)
+   D_y_las_lee_bien                                     CAE   (esperado mutado=[551, 398, 149, 4, '_mutado'])
+   D_sin_crudas_el_lector_lo_dice                       CAE   (esperado mutado=['crudas', '_mutado'])
+   D_sin_distintos_el_lector_lo_dice                    CAE   (esperado mutado=['distintos', '_mutado'])
+   D_sin_multiples_el_lector_lo_dice                    CAE   (esperado mutado=['multiples', '_mutado'])
+   E_la_nota_lleva_la_cifra_medida                      CAE   (esperado mutado=False)
+   E_y_cambia_si_la_medicion_cambia                     CAE   (esperado mutado=True)
+   E_el_ordinal_sale_del_conteo                         CAE   (esperado mutado=False)
+   E_con_cinco_tachadas_el_ordinal_es_SEXTA             CAE   (esperado mutado=False)
+   E_la_nota_de_multiples_nombra_sus_pares              CAE   (esperado mutado=3)
+   E_y_dice_que_no_adjudica_clase                       CAE   (esperado mutado=False)
+   E_la_nota_de_distintos_avisa_de_la_resta_rota        CAE   (esperado mutado=False)
+   CIFRA casos que caen al mutar el esperado: 24 de 24
+
+H) Y SE COMPRUEBA QUE ESTA PRUEBA NO ESCRIBIO NADA
+   el documento es identico byte a byte al de antes: True
+
+VERDE: los 24 casos pasan tal cual y los 24 caen al mutar el esperado.

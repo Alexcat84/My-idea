@@ -1,0 +1,85 @@
+==============================================================================
+VUELTA 169, TAREA 2: CASO POSITIVO POR MUTACION DEL RE ANCLAJE
+==============================================================================
+
+A) EL RE ANCLAJE ESTA EN EL FICHERO, Y LO VIEJO SIGUE CITADO
+   el esperado sale del computo           True
+   y el segundo caso tambien              True
+   la guarda nueva existe                 True
+   la palabra viva se lee del texto       True
+   la constante vieja sigue citada        True
+   el literal viejo sigue citado          True
+
+B) (A) LA CONSTANTE SALE DEL COMPUTO Y NO ES UNA TAUTOLOGIA
+   con 12 tachadas y la palabra DOCE VECES     -> cadena contada 12
+      el bueno computa TRECE VECES      y el esperado es TRECE VECES      -> PASA: True
+      el ROTO devuelve  DOCE VECES       -> el caso CAE: True
+   con 13 tachadas y la palabra TRECE VECES    -> cadena contada 13
+      el bueno computa CATORCE VECES    y el esperado es CATORCE VECES    -> PASA: True
+      el ROTO devuelve  TRECE VECES      -> el caso CAE: True
+   con 14 tachadas y la palabra CATORCE VECES  -> cadena contada 14
+      el bueno computa QUINCE VECES     y el esperado es QUINCE VECES     -> PASA: True
+      el ROTO devuelve  CATORCE VECES    -> el caso CAE: True
+
+C) (B) LA GUARDA NUEVA CAE CUANDO EL REPLACE NO MUERDE
+   la celda de mentira lleva la palabra 'TRECE VECES'
+   el replace CLAVADO busca 'DOCE VECES,', que la celda no tiene
+   la celda cambia: False
+   la guarda nueva (mutada != t) da False y el caso espera True: CAE True
+
+D) (C) Y LA VERSION NUEVA SI MUERDE SOBRE LA MISMA CELDA
+   la palabra viva se lee del texto: 'TRECE VECES'
+   se muta a 'DOS VECES'
+   la celda cambia: True
+   y la CADENA no se movio: 13 tachadas antes y 13 despues
+
+E) PASADA 1, LOS CASOS TAL CUAL
+   A_el_esperado_sale_del_computo                           PASA   (real=True esperado=True)
+   A_y_el_segundo_caso_tambien                              PASA   (real=True esperado=True)
+   A_la_guarda_nueva_existe                                 PASA   (real=True esperado=True)
+   A_la_palabra_viva_se_lee_del_texto                       PASA   (real=True esperado=True)
+   A_la_constante_vieja_sigue_citada                        PASA   (real=True esperado=True)
+   A_el_literal_viejo_sigue_citado                          PASA   (real=True esperado=True)
+   B_12_la_cadena_manda_y_el_caso_pasa                      PASA   (real='TRECE VECES' esperado='TRECE VECES')
+   B_12_con_cuadrar_contador_ROTO_el_caso_CAE               PASA   (real=True esperado=True)
+   B_12_la_cadena_contada_no_es_la_palabra_escrita          PASA   (real=12 esperado=12)
+   B_13_la_cadena_manda_y_el_caso_pasa                      PASA   (real='CATORCE VECES' esperado='CATORCE VECES')
+   B_13_con_cuadrar_contador_ROTO_el_caso_CAE               PASA   (real=True esperado=True)
+   B_13_la_cadena_contada_no_es_la_palabra_escrita          PASA   (real=13 esperado=13)
+   B_14_la_cadena_manda_y_el_caso_pasa                      PASA   (real='QUINCE VECES' esperado='QUINCE VECES')
+   B_14_con_cuadrar_contador_ROTO_el_caso_CAE               PASA   (real=True esperado=True)
+   B_14_la_cadena_contada_no_es_la_palabra_escrita          PASA   (real=14 esperado=14)
+   C_el_replace_clavado_NO_muta                             PASA   (real=False esperado=False)
+   C_y_por_eso_la_guarda_nueva_CAE                          PASA   (real=True esperado=True)
+   D_la_version_nueva_SI_muta                               PASA   (real=True esperado=True)
+   D_y_no_toca_la_cadena                                    PASA   (real=13 esperado=13)
+   D_la_palabra_viva_se_leyo_y_no_se_teclo                  PASA   (real='TRECE VECES' esperado='TRECE VECES')
+   CIFRA casos: 20 | pasan: 20 | fallan: 0
+
+F) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_el_esperado_sale_del_computo                           CAE
+   A_y_el_segundo_caso_tambien                              CAE
+   A_la_guarda_nueva_existe                                 CAE
+   A_la_palabra_viva_se_lee_del_texto                       CAE
+   A_la_constante_vieja_sigue_citada                        CAE
+   A_el_literal_viejo_sigue_citado                          CAE
+   B_12_la_cadena_manda_y_el_caso_pasa                      CAE
+   B_12_con_cuadrar_contador_ROTO_el_caso_CAE               CAE
+   B_12_la_cadena_contada_no_es_la_palabra_escrita          CAE
+   B_13_la_cadena_manda_y_el_caso_pasa                      CAE
+   B_13_con_cuadrar_contador_ROTO_el_caso_CAE               CAE
+   B_13_la_cadena_contada_no_es_la_palabra_escrita          CAE
+   B_14_la_cadena_manda_y_el_caso_pasa                      CAE
+   B_14_con_cuadrar_contador_ROTO_el_caso_CAE               CAE
+   B_14_la_cadena_contada_no_es_la_palabra_escrita          CAE
+   C_el_replace_clavado_NO_muta                             CAE
+   C_y_por_eso_la_guarda_nueva_CAE                          CAE
+   D_la_version_nueva_SI_muta                               CAE
+   D_y_no_toca_la_cadena                                    CAE
+   D_la_palabra_viva_se_leyo_y_no_se_teclo                  CAE
+   CIFRA casos que caen al mutar el esperado: 20 de 20
+
+G) Y SE COMPRUEBA QUE ESTA PRUEBA NO ESCRIBIO NADA
+   el arnes hermano sigue identico byte a byte: True
+
+VERDE: los 20 casos pasan tal cual y los 20 caen al mutar el esperado.

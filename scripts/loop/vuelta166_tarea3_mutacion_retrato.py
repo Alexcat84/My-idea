@@ -52,15 +52,46 @@ def main():
     print("   la fila de los colapsos trae %d tachadas y la palabra %s"
           % (cuantas, T.PAT_CONTADOR.search(t.split("|")[2]).group(2)))
     _c, antes_p, despues_p = T.cuadrar_contador(t.split("|")[2], cuantas)
-    casos.append(("B_con_%d_tachadas_el_siguiente_es_TRECE" % cuantas,
-                  despues_p, "TRECE VECES"))
-    mutada = t.replace("DOCE VECES,", "DOS VECES,", 1)
+    # (2.a) RE ANCLADO EN LA VUELTA 169, adjudicacion 6.2 del acta 168.
+    # LA PALABRA ESPERADA SALE DEL COMPUTO, igual que `cuantas`, y NO de una
+    # constante tecleada. Antes decia, literal: despues_p, "TRECE VECES", y
+    # el 4 sep 2026 la vuelta 167 anadio una tachada por el carril del 9.10:
+    # el computo paso a CATORCE, la constante se quedo en TRECE y el caso
+    # empezo a fallar por su valor esperado y no por su sujeto. EL FILO NO SE
+    # AFLOJA: despues_p sigue saliendo de T.cuadrar_contador y el esperado
+    # de T.CARDINAL leido con `cuantas`, que son DOS caminos distintos; si
+    # cuadrar_contador volviera a leer la palabra escrita en vez de contar
+    # la cadena, este caso CAE.
+    siguiente = T.CARDINAL[cuantas + 1]
+    casos.append(("B_con_%d_tachadas_el_siguiente_es_%s"
+                  % (cuantas, siguiente.split()[0]), despues_p, siguiente))
+    # (2.b) RE ANCLADO EN LA VUELTA 169, adjudicacion 6.2 del acta 168.
+    # LA MUTACION DEJA DE ESTAR CLAVADA AL TEXTO VIVO. Antes decia, literal:
+    # t.replace("DOCE VECES,", "DOS VECES,", 1), y el dia que la fila crecio
+    # ese literal dejo de existir: el replace no encontraba nada, la fila no se
+    # mutaba y el caso que espera que la guarda CAIGA recibia CUADRA. Ahora se
+    # muta LA PALABRA QUE EL PROPIO INSTRUMENTO ACABA DE LEER, y la palabra
+    # falsa sale de T.CARDINAL eligiendo una DISTINTA de la viva.
+    m_viva = T.PAT_CONTADOR.search(t.split("|")[2])
+    palabra_viva = "%s %s" % (m_viva.group(2), m_viva.group(3))
+    palabra_falsa = T.CARDINAL[2] if palabra_viva != T.CARDINAL[2] else T.CARDINAL[3]
+    mutada = t.replace(palabra_viva + ",", palabra_falsa + ",", 1)
+    # Y LA GUARDA QUE FALTABA, que es la que dejaba muda a la de abajo:
+    # si el replace no cambia NADA, este caso CAE y el arnes sale en rojo, en
+    # vez de seguir corriendo sobre una fila sin mutar.
+    casos.append(("B_la_mutacion_MUERDE_el_texto_vivo", mutada != t, True))
     tm, vm, cm = T.anatomia(mutada)
     _c2, antes2, despues2 = T.cuadrar_contador(mutada.split("|")[2], cm)
-    print("   se MUTA la palabra a DOS VECES sin tocar la cadena")
+    print("   se MUTA la palabra viva %r a %r sin tocar la cadena"
+          % (palabra_viva, palabra_falsa))
     print("   la palabra escrita pasa a %r y el computo sigue dando %r"
           % (antes2, despues2))
-    casos.append(("B_mutar_la_palabra_no_mueve_el_computo", despues2, "TRECE VECES"))
+    # (2.a, segundo caso) MISMO RE ANCLAJE. Antes decia, literal:
+    # despues2, "TRECE VECES". El esperado sale de `cm`, que es la cadena
+    # contada SOBRE LA FILA YA MUTADA: si la mutacion de la palabra tocara la
+    # cadena sin querer, `cm` cambiaria y este caso CAE.
+    casos.append(("B_mutar_la_palabra_no_mueve_el_computo",
+                  despues2, T.CARDINAL[cm + 1]))
     casos.append(("B_la_cadena_sigue_teniendo_las_mismas_tachadas", cm, cuantas))
     lm = list(lineas)
     lm[n - 1] = mutada
@@ -84,7 +115,11 @@ def main():
     casos.append(("C_la_nueva_esta_viva", "**398**" in nueva_fila, True))
     sobreviven = sum(1 for x in tach if ("~~**%s**~~" % x) in nueva_fila)
     print("   de las %d tachadas viejas sobreviven %d" % (len(tach), sobreviven))
-    casos.append(("C_las_doce_tachadas_viejas_sobreviven", sobreviven, len(tach)))
+    # RETOQUE DE ROTULO DECLARADO EN LA VUELTA 169 (no encargado por nombre,
+    # declarado en el reporte): el rotulo tecleaba DOCE y su propia cifra sale
+    # de len(tach), que hoy vale 13. Ninguna comprobacion cambia.
+    casos.append(("C_las_%d_tachadas_viejas_sobreviven" % len(tach),
+                  sobreviven, len(tach)))
     casos.append(("C_la_fila_solo_crece", len(nueva_fila) > len(t), True))
     print("")
     print("D) LA CELDA QUE NO SALE DE UN INSTRUMENTO NO SE ESCRIBE")
