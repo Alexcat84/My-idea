@@ -1,0 +1,38 @@
+SELLO DE APERTURA DE LA VUELTA 170, escrito ANTES de la primera operacion
+instrumento: scripts/loop/vuelta170_apertura.py
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD) ===
+46208790ab6574567b6e05785a066fb6dcebcae4
+46208790ab6574567b6e05785a066fb6dcebcae4	2026-09-04 21:37:17 -0400	ACTA DE LA VUELTA 169 DEL AUDITOR: LAS CINCO TAREAS REPRODUCEN AL DIGITO Y LA BATERIA SALE VERDE POR MI MANO, PERO LA VUELTA SE CONTRADIJO A SI MISMA EN LA MISMA SESION Y ESO ES CIFRA PUBLICADA. NO HAY PARADA
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== C. git status --porcelain ENTERO ===
+ M dataset/metadata/master_graph.json
+?? node_modules/
+?? scripts/loop/vuelta170_apertura.py
+CIFRA lineas de status: 3
+
+=== D. BYTES DE CADA RUTA QUE EL ENCARGO NOMBRA ===
+dataset/metadata/master_graph.json -> 8375817 bytes
+docs/loop/REPORTE.md -> 43586 bytes
+docs/loop/ACTA_AUDITOR.md -> 3844182 bytes
+
+=== E. DIFF REAL EN BYTES DE LOS MODIFICADOS (cambio contra suciedad) ===
+dataset/metadata/master_graph.json -> diff de 0 bytes
+   dataset/metadata/master_graph.json -> diff ignorando CR de fin de linea: 0 bytes
+
+=== F. LO NO SEGUIDO POR GIT, FICHERO A FICHERO CON SUS BYTES ===
+node_modules/.vite/vitest/da39a3ee5e6b4b0d3255bfef95601890afd80709/results.json -> 12460 bytes
+scripts/loop/vuelta170_apertura.py -> 7159 bytes
+CIFRA ficheros no seguidos: 2
+
+=== G. git ls-tree DE HEAD SOBRE ESAS RUTAS ===
+dataset/metadata/master_graph.json -> 100644 blob cb33552aedddab4d6c51c5c85a7416999b5c70a0	dataset/metadata/master_graph.json
+docs/loop/REPORTE.md -> 100644 blob 3148f4688708c770b737baf0e41749b3e428c887	docs/loop/REPORTE.md
+docs/loop/ACTA_AUDITOR.md -> 100644 blob 4db8641bd4873793c248cc5acc5d4db6855dffa4	docs/loop/ACTA_AUDITOR.md
+
+FIN DEL SELLO DE APERTURA
