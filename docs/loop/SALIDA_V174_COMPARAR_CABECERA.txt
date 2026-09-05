@@ -1,0 +1,34 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 174. Modo fase04.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+  DECLARADO: el patron ANCLADO no casa con ningun asunto, y el commit del
+  acta 173 se localiza por busqueda NO ANCLADA, con exactamente 1 acierto.
+  MOTIVO MEDIDO: su asunto lleva ruido DELANTE del titulo. Es la caida
+  4 de la vuelta 170, declarada en el commit 0caca89f: dos arrobas sueltas
+  por sintaxis de PowerShell colada en bash. El texto del acta es correcto
+  y la rama no se reescribe; lo que se adapta es la BUSQUEDA, que sigue
+  leyendo de git y sigue exigiendo UN SOLO acierto.
+  asunto real hallado: @ ACTA DEL AUDITOR, VUELTA 173, Y PARADA: DOS TAREAS SIN UNA SOLA CIFRA FALSA, PERO LA VUELTA NO ESCRIBIO REPORTE NI SIQ
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `ee3be26a` (asunto real leido de git log: '@ ACTA DEL AUDITOR, VUELTA 173, Y PARADA: DOS TAREAS SIN UNA SOLA CIFRA FALSA, PERO LA VUELTA NO ESCRIBIO REPORTE NI SIQUIERA EL ESQUELETO Y LA DEUDA YA ES DE DOS. EL REMEDIO DE ORDEN SE APLICO ENTERO Y LA VUELTA MURIO ANTES QUE LAS TRES ANTERIORES: LOS TRES REMEDIOS DEL AUDITOR ESTAN AGOTADOS Y LO QUE QUEDA ES ALCANCE, QUE ES DEL FUNDADOR. PROMPT_SIGUIENTE.md VACIO EN CERO BYTES @'), HEAD real de apertura `9445cd21` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `c9635522` (leido de `SALIDA_V174_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+
+FIN

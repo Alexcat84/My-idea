@@ -1,0 +1,56 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE sellar(), VUELTA 174
+==============================================================================
+
+------------------------------------------------------------------------------
+(A) LOS ROJOS DE sellar(), Y EL TEXTO VUELVE INTACTO
+------------------------------------------------------------------------------
+   cae sin ninguna ruta medida                                    SI
+      -> no se paso ninguna ruta medida: sin prueba no se sella
+   cae si la fila de la tarea no esta                             SI
+      -> la fila '| **TAREA 9** |' aparece 0 veces y tiene que aparecer UNA
+   cae si la fila esta DOS veces                                  SI
+      -> la fila '| **TAREA 1** |' aparece 2 veces y tiene que aparecer UNA
+   cae si la fila no tiene cuatro celdas                          SI
+      -> la fila de la tarea 1 tiene 3 celdas y tiene que tener 4
+   cae si la celda YA estaba sellada                              SI
+      -> la celda de estado YA esta sellada: no se sella dos veces
+
+------------------------------------------------------------------------------
+(B) EL CASO VERDE
+------------------------------------------------------------------------------
+   no devuelve ningun motivo                                      SI
+   el estado viejo sigue ENTERO                                   SI
+   y esta TACHADO                                                 SI
+   el estado nuevo esta al lado                                   SI
+   la ruta de la prueba esta nombrada                             SI
+   y sus bytes MEDIDOS van al lado                                SI
+   la fila de la TAREA 2 no se toco                               SI
+   solo se tacha UNA celda                                        SI
+   es adicion: el texto crecio                                    SI
+   la fila sigue teniendo cuatro celdas                           SI
+
+------------------------------------------------------------------------------
+(C) LOS BYTES NO SON UNA CONSTANTE: OTRA MEDIDA DA OTRO TEXTO
+------------------------------------------------------------------------------
+   con otra medida escribe otros bytes                            SI
+   y NO escribe los de la otra corrida                            SI
+   y nombra la otra ruta                                          SI
+
+------------------------------------------------------------------------------
+(D) medir(), CONTRA FICHEROS DE VERDAD EN UN TEMPORAL
+------------------------------------------------------------------------------
+   mide un fichero que existe y no esta vacio (5 bytes exactos)   SI
+      -> [('../../AppData/Local/Temp/v174_sellar_ruqrty_a/lleno.txt', 5)]
+   CAE si el fichero mide CERO BYTES                              SI
+      -> la ruta ../../AppData/Local/Temp/v174_sellar_ruqrty_a/vacio.txt existe pero mide CERO BYTES
+   CAE si el fichero NO EXISTE                                    SI
+      -> la ruta ../../AppData/Local/Temp/v174_sellar_ruqrty_a/no_existe.txt NO EXISTE, y una ruta que promet
+   y CAE aunque solo UNA de varias falte                          SI
+   temporal borrado: existe -> NO
+
+==============================================================================
+CIFRA casos: 22 | verdes: 22 | rojos: 0
+==============================================================================
+VERDE: las 22 comprobaciones se comportan. Una celda no se puede sellar
+       contra un fichero inexistente ni contra uno de cero bytes.

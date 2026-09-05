@@ -1,0 +1,44 @@
+==============================================================================
+SE CIERRA EL REPORTE DE LA VUELTA 174, EN UN SOLO ACTO
+==============================================================================
+
+A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
+   docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 174 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   CIFRA bytes: 17017 | saltos de linea: 268
+   contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
+   contiene '\n## 3.'                            -> NO (se esperaba NO)
+   contiene '\n## 9.'                            -> NO (se esperaba NO)
+
+B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
+   docs/loop/SALIDA_V174_TALLADOR_CABECERA.txt             3257 bytes, 11 filas de tabla
+   scripts/loop/_v174_cierre_texto.md                     10546 bytes, sha256 55d2094deefb7821
+      ## 3. EL CIERRE, CON SU IDENTIDAD LEIDA DE GIT
+      ## 4. NO HAY PARADA, Y RECORRO LAS CONDICIONES QUE ME TOCAN
+      ## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+      ## 6. LAS PREGUNTAS
+      ## 7. PENDIENTES DE DOCTRINA
+      ## 8. MIS CAIDAS PROPIAS, CON SU NOMBRE Y NINGUNA TAPADA
+   docs/loop/SALIDA_V174_BATERIA.txt                    NO EXISTE
+   CIFRA lineas no vacias de la bateria: 0
+   vuelta que lleva dentro el nombre del fichero: 174
+   LA BATERIA DE ESTA VUELTA NO CORRIO. Se mira la atribucion:
+   --hueco-atribucion: 'NADIE la corrio, y esta vez POR REGIMEN y no por caida: la decision del fundador del 5 sep 2026 (AUDITOR.md 6.1, citada en EJECUTOR.md 1) saca la bateria del ciclo por vuelta y la manda a una VUELTA DE BATERIA propia cada cinco, y el encargo de esta vuelta dice con esas palabras que la proxima es la 175. docs/loop/SALIDA_V174_BATERIA.txt no existe y por eso mide 0 bytes, medido con os.path.getsize por scripts/loop/cerrar_reporte.py en esta corrida.'
+
+C) SE ESCRIBE
+   cabecera: 592 bytes de hueco -> 2678 bytes de tabla pegada
+   veredicto escrito: 341 bytes
+   ESCRITO: docs/loop/REPORTE.md (31154 bytes, 470 saltos de linea)
+
+D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
+   (1) veredicto escrito              SI
+   (2) cabecera pegada                SI
+   (3) secciones 3 a 9                SI
+   (4) bateria dentro de la 9 o hueco declarado SI
+   CIFRA piezas que faltan: 0
+   el cuerpo del cierre esta byte a byte SI
+   cero guiones largos y cero guiones medios SI
+
+VERDE: el reporte de la vuelta 174 queda cerrado, con sus cuatro piezas.
+   LA SEGUNDA COMPROBACION (leer de git lo que se acaba de commitear)
+   NO la hace este fichero: va DESPUES del commit, con git show.
