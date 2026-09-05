@@ -1,0 +1,60 @@
+==============================================================================
+SUJETO DE CIEGA, AISLADO ANTES DEL PRIMER COMANDO DE VERIFICACION
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (literal, tal como se paso):
+   los puestos sueltos que la 177 marco como discutibles, sin el 878 que la TAREA 3 no toca
+
+CIFRA pares elegidos: 3
+CAMPOS QUE ESTA SALIDA LLEVA (lista blanca): puesto_intra, nodo_a, nodo_b
+
+------------------------------------------------------------------------------
+puesto_intra: 334
+nodo_a: construccion_de_leverage
+nodo_b: leverage_en_negociacion_con_vcs
+  pasos de A (construccion_de_leverage): 5
+     paso 1: Buscar generar interés de múltiples inversionistas en paralelo, no de forma secuencial
+     paso 2: Sincronizar los tiempos de respuesta de los distintos VCs para recibir term sheets en ventanas similares
+     paso 3: Comunicar que existe interés de otras firmas sin revelar nombres ni compartir term sheets reales
+     paso 4: Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto
+     paso 5: Nunca ser el primero en ofrecer un term sheet con precio a un VC
+  pasos de B (leverage_en_negociacion_con_vcs): 4
+     paso 1: Desarrolla tracción (producto, ingresos, contratos) antes de acercarte a los inversionistas
+     paso 2: Busca varias propuestas de inversión (term sheets) al mismo tiempo, de distintos inversionistas
+     paso 3: Explora ofertas de compra como palanca de negociación
+     paso 4: Empieza las negociaciones con suficiente anticipación, antes de que se te acabe el efectivo disponible (runway)
+------------------------------------------------------------------------------
+puesto_intra: 394
+nodo_a: construccion_de_leverage
+nodo_b: gestion_multiples_term_sheets
+  pasos de A (construccion_de_leverage): 5
+     paso 1: Buscar generar interés de múltiples inversionistas en paralelo, no de forma secuencial
+     paso 2: Sincronizar los tiempos de respuesta de los distintos VCs para recibir term sheets en ventanas similares
+     paso 3: Comunicar que existe interés de otras firmas sin revelar nombres ni compartir term sheets reales
+     paso 4: Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto
+     paso 5: Nunca ser el primero en ofrecer un term sheet con precio a un VC
+  pasos de B (gestion_multiples_term_sheets): 5
+     paso 1: Identificar a todos los VCs objetivo antes de iniciar conversaciones formales
+     paso 2: Coordinar el ritmo de las conversaciones para que avancen en paralelo
+     paso 3: Comunicar a cada VC que existen otras conversaciones en curso sin revelar identidades
+     paso 4: Nunca compartir el contenido de un term sheet con otro inversor
+     paso 5: Usar el primer term sheet recibido como palanca para acelerar a otros interesados
+------------------------------------------------------------------------------
+puesto_intra: 404
+nodo_a: cash_burn_calculation
+nodo_b: metrics_that_matter_framework
+  pasos de A (cash_burn_calculation): 4
+     paso 1: Calcula tus ingresos netos por trimestre (ingresos brutos menos costos de canal)
+     paso 2: Resta tus costos de ventas, de producto y los operativos corrientes
+     paso 3: El resultado es cuánto dinero quemaste o generaste (cash burn) en ese periodo
+     paso 4: Resta ese número del efectivo que tenías al inicio del trimestre para saber cuánto efectivo te queda
+  pasos de B (metrics_that_matter_framework): 6
+     paso 1: Identifica el tipo de canal de venta de tu producto: físico, digital directo o mercado multi-lado
+     paso 2: Calcula las unidades vendidas por periodo y el precio de venta promedio validado con clientes
+     paso 3: Resta los descuentos y costos de canal a las ventas brutas para obtener el ingreso neto
+     paso 4: Resta los costos de ventas, producto y operativos al ingreso neto para calcular el burn rate por periodo
+     paso 5: Construye una hoja de cálculo trimestral que muestre el efectivo restante en banco después de cada periodo
+     paso 6: Define cuál burn rate es aceptable para ti y cuántos pivotes más puedes costear antes de quedarte sin fondos
+------------------------------------------------------------------------------
+FIN DE LA SALIDA CIEGA. El destape vive en OTRO fichero.

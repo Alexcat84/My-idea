@@ -1,0 +1,73 @@
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta175_esqueleto_reporte.py
+  B: scripts/loop/vuelta176_esqueleto_reporte.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 175, 176
+  CIFRA lineas de docstring: A 38 | B 82
+  CIFRA lineas de maquina:   A 240 | B 251
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 1368 | B 1368
+     CIFRA tipos de nodo que NO empatan: 0
+        (ninguno: los censos por tipo empatan y aun asi los
+        arboles difieren, o sea que lo que cambia es el VALOR de
+        algun nodo y no cuantos hay)
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 33
+  CIFRA tokens de maquina: A 1260 | B 1259
+  CIFRA tokens que difieren con el texto normalizado: 1
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 1
+  CIFRA LITERALES DE TEXTO:   32
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:62  ("2", "ABRIR Y CERRAR ESTE MISMO REPORTE EN LA MISMA VUELTA, QUE ES LA SEGUNDA DE LAS DOS SEGUIDAS que `AUDITO
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:61  ("1", "LA BATERIA DE MUTACIONES ENTERA, SOLA Y CON SU DOBLE CORRIDA, Y LA NOMINA AL DIA DENTRO DE ESTA MISMA T
+     A:204  > **ESTA ES UNA VUELTA DE BATERIA Y ESO MANDA SOBRE TODO LO DEMAS** (`AUDITOR.md`
+     A:205  > 6.1, decision del fundador del 5 sep 2026): la bateria corre CADA CINCO, en una
+     A:206  > vuelta propia QUE NO LLEVA NADA MAS. Aqui no hay trabajo de plan al lado, y
+     A:207  > `OP-L-03` no se toca. **EL TOPE DE ESTA VUELTA NO ES CINCO SINO DOS**
+     A:210  > primera de esas dos; esta es la segunda.**
+     A:213  > LA VUELTA ANTERIOR.** Esta vez las dos preguntas coinciden, porque la %(ant)d si
+     A:214  > escribio su reporte y es el que hay en el arbol; el fichero corre LAS DOS
+     A:215  > igualmente y publica lo que salga de cada una, porque una guarda que solo se
+     A:216  > mira cuando difiere no se puede auditar el dia que difiera.
+     B:105  ("1", "LA BATERIA DE MUTACIONES ENTERA, SOLA Y CON SU DOBLE CORRIDA, PERO PARTIDA EN TRAMOS QUE QUEPAN EN UNA 
+     B:106  ("2", "ABRIR Y CERRAR ESTE MISMO REPORTE EN LA MISMA VUELTA. La 174 lo hizo entero, la NNN NO LLEGO (murio den
+     B:248  > **ESTA ES OTRA VEZ UNA VUELTA DE BATERIA, Y NO ES UN CAMBIO DE CADENCIA: ES LA
+     B:249  > DEUDA DE LA NNN, QUE NO SE PAGO** (`AUDITOR.md` 6.1, decision del fundador del 5
+     B:250  > sep 2026). La bateria corre CADA CINCO, en una vuelta propia QUE NO LLEVA NADA
+     B:251  > MAS, y la vuelta propia que le tocaba se murio antes de producir una linea. Aqui
+     B:252  > no hay trabajo de plan al lado, y `OP-L-03` no se toca: lleva SEIS vueltas
+     B:253  > aplazada y se cuenta en voz alta. **EL TOPE DE ESTA VUELTA NO ES CINCO SINO DOS**
+     B:256  > primera de esas dos, la NNN no cerro, y la racha VUELVE A EMPEZAR: esta es otra
+     B:257  > vez la primera.**
+     B:258  >
+     B:259  > **LO QUE SE PARTE ES EL BOCADO, NO LA BATERIA.** La NNN murio DENTRO de la
+     B:260  > corrida, y la causa esta medida y no supuesta: 87 entradas, cada una corrida DOS
+     B:261  > VECES, son un bloque indivisible de entre 57 y 75 minutos. Partirla en tramos
+     B:262  > DENTRO de esta misma vuelta no toca ninguna de las cuatro cosas que la letra del
+     B:263  > fundador fija (cadencia, soledad, integridad y la prohibicion de podar la
+     B:264  > nomina). **La nomina sigue en 87 y sigue creciendo.**
+     B:267  > LA VUELTA ANTERIOR.** Esta vez las dos preguntas vuelven a coincidir, porque la
+     B:268  > %(ant)d si escribio su reporte (ABIERTO Y SIN CERRAR, que es texto igual) y es el
+     B:269  > que hay en el arbol; el fichero corre LAS DOS igualmente y publica lo que salga
+     B:270  > de cada una, porque una guarda que solo se mira cuando difiere no se puede
+     B:271  > auditar el dia que difiera.
+
+
+FIN

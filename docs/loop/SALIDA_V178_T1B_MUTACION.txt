@@ -1,0 +1,50 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE LA VARA DEL CENSO (vuelta 178, TAREA 1.b)
+==============================================================================
+
+A) EL DIRECTORIO FABRICADO Y LA NOMINA FABRICADA
+   ficheros: vuelta050_c_mutacion_muy_vieja.py, vuelta200_a_mutacion_dentro.py, vuelta200_b_mutacion_fuera.py
+   nomina:   vuelta200_a_mutacion_dentro.py
+   CIFRA arneses que el censo reconoce ahi: 3
+
+B) LA CORRIDA NUEVA, QUE ES LA QUE TIENE QUE VER AL HERMANO
+   ultima vuelta de la nomina: 200
+   vara pasada a mano: 100
+   CIFRA que faltan: 1 (vuelta200_b_mutacion_fuera.py)
+
+C) LA CORRIDA VIEJA SOBRE EL MISMO CASO. ESTA ES LA QUE CAE
+   (funcion congelada en scripts/loop/_v178_arneses_que_faltan_viejo_copia.py)
+   ultima vuelta de la nomina: 200
+   CIFRA que faltan segun la vieja: 0 (ninguno)
+   LA VIEJA VE AL HERMANO: NO
+   ROJO DE LA VIEJA: el censo tiene el fichero delante y la funcion
+   contesta que no falta ninguno. Es la caida de la vuelta 177 entera,
+   reproducida sobre un directorio de mentira y sin tocar el repo.
+
+D) LA VARA PROTEGE A LOS VIEJOS, Y SE COMPRUEBA MOVIENDOLA
+   con la vara en 100, el de la vuelta 50 se reclama: NO
+   con la vara en   0, el de la vuelta 50 se reclama: SI
+
+E) LA VARA VIVA DEL FICHERO, LEIDA Y NO TECLEADA DOS VECES
+   VARA_DEL_CENSO = 148 (tipo int)
+
+   P.16: el temporal se retira. Existe todavia: False
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   la_nueva_VE_al_hermano_de_la_misma_vuelta      PASA   (real=True esperado=True)
+   la_vieja_NO_VE_al_hermano_de_la_misma_vuelta   PASA   (real=False esperado=False)
+   la_vara_en_100_deja_fuera_al_de_la_50          PASA   (real=False esperado=False)
+   la_vara_en_0_si_reclama_al_de_la_50            PASA   (real=True esperado=True)
+   la_vara_viva_es_un_entero_y_vale_148           PASA   (real=148 esperado=148)
+   CIFRA casos: 5 | pasan: 5 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   la_nueva_VE_al_hermano_de_la_misma_vuelta      CAE
+   la_vieja_NO_VE_al_hermano_de_la_misma_vuelta   CAE
+   la_vara_en_100_deja_fuera_al_de_la_50          CAE
+   la_vara_en_0_si_reclama_al_de_la_50            CAE
+   la_vara_viva_es_un_entero_y_vale_148           CAE
+   CIFRA casos que CAEN: 5 de 5
+
+VERDE DE LA MUTACION: 5 casos, los 5 pasan y los 5 CAEN al mutarles el valor esperado. LA FUNCION NUEVA VE al hermano de la misma vuelta que la ultima de la nomina y LA VIEJA NO LO VE, sobre el mismo directorio fabricado y en la misma corrida; y la vara sigue protegiendo a los anteriores, cosa que se prueba MOVIENDOLA y no afirmandola.
+FIN

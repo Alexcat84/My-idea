@@ -1,0 +1,15 @@
+=== LOS DOS QUE LA VARA DEL CENSO DESTAPA, CORRIDOS UNA VEZ CADA UNO ===
+(medicion para que la decision de si entran en la nomina se tome con cifras)
+
+--- vuelta150_2d_simular_op_c_05.py
+    exit: 0
+    primera linea util:   VERDE
+    lineas de salida: 35
+    git status --porcelain tras correrlo: 29 lineas
+    git diff --numstat -- dataset/: 0 filas
+--- vuelta160_tarea3b_caso_positivo.py
+    exit: 0
+    primera linea util:    con el fichero escrito : P.16 ROJO: el numero de ficheros bajo dataset/ cambio, de 4089 a 4090. Alguna mutacion creo o borro ficheros y no los devolvio.
+    lineas de salida: 62
+    git status --porcelain tras correrlo: 29 lineas
+    git diff --numstat -- dataset/: 0 filas

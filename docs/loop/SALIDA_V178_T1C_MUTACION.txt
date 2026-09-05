@@ -1,0 +1,101 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DEL CUARTO VEREDICTO (vuelta 178, TAREA 1.c)
+==============================================================================
+
+1) EL CASO QUE LO DECIDE TODO: DOS FICHEROS QUE SOLO SE DIFERENCIAN
+   EN UNA COMA FINAL
+   A: ...sumar(1, 2)   B: ...sumar(1, 2,)
+   SOLO LA MAQUINA        : DIFIERE
+   CIFRA SENTENCIAS DE CODIGO que la clasificacion vieja cuenta: 1
+   AST DEL FICHERO ENTERO : IDENTICO
+   AST SIN EL DOCSTRING   : IDENTICO
+   LO QUE ESTE CASO PRUEBA: la clasificacion vieja NO SE TOCA y sigue
+   diciendo 1, y el cuarto veredicto dice que el programa no cambia. Las
+   dos cifras son verdaderas y ahora estan las dos en el mismo sitio.
+
+2) UNA LLAMADA DISTINTA DE VERDAD SI MUEVE EL AST
+   AST SIN EL DOCSTRING   : DIFIERE
+   CIFRA nodos: A 25 | B 25
+
+3) UN DOCSTRING DISTINTO MUEVE EL ENTERO Y NO MUEVE LA MAQUINA
+   AST DEL FICHERO ENTERO : DIFIERE
+   AST SIN EL DOCSTRING   : IDENTICO
+
+4) UNA CADENA QUE SE IMPRIME DISTINTA SI MUEVE EL AST, Y SE DECLARA
+   (es la frontera de esta vara: mide el ARBOL, o sea el valor del nodo
+   Constant, no la intencion. La clasificacion por token de los tres
+   veredictos viejos es la que sabe que eso es LITERAL DE TEXTO, y por eso
+   los cuatro veredictos van juntos y ninguno sustituye a otro)
+   AST SIN EL DOCSTRING   : DIFIERE
+   CIFRA SENTENCIAS DE CODIGO: 0 | LITERALES DE TEXTO: 2
+
+5) LAS LINEAS EN BLANCO NO MUEVEN EL AST
+   SOLO LA MAQUINA        : DIFIERE
+   AST SIN EL DOCSTRING   : IDENTICO
+
+6) UN FICHERO QUE NO PARSEA CAE EN ROJO CON SU LINEA
+   CIFRA lados que no parsean: 1
+      B: SyntaxError en la linea 9: invalid syntax
+   hay cuarto veredicto: NO
+   de extremo a extremo, el instrumento sale con exit 1
+   y con los dos ficheros buenos, exit 0
+   P.16: el temporal se retira. Existe todavia: False
+
+7) CUANDO LOS ARBOLES DIFIEREN SE DICE CUANTOS NODOS Y DE QUE TIPO
+   AST SIN EL DOCSTRING   : DIFIERE
+   CIFRA nodos: A 25 | B 37
+   tipos de nodo que no empatan:
+      Constant         A   3 | B   7
+      Call             A   2 | B   4
+      Expr             A   2 | B   4
+      Load             A   4 | B   6
+      Name             A   4 | B   6
+
+8) PASADA 1, LOS CASOS TAL CUAL
+   1_coma_final_maquina_DIFIERE                   PASA   (real=False esperado=False)
+   1_coma_final_la_vieja_cuenta_UNA_sentencia     PASA   (real=1 esperado=1)
+   1_coma_final_AST_entero_IDENTICO               PASA   (real=True esperado=True)
+   1_coma_final_AST_maquina_IDENTICO              PASA   (real=True esperado=True)
+   2_llamada_distinta_AST_DIFIERE                 PASA   (real=False esperado=False)
+   3_docstring_distinto_AST_entero_DIFIERE        PASA   (real=False esperado=False)
+   3_docstring_distinto_AST_maquina_IDENTICO      PASA   (real=True esperado=True)
+   4_cadena_distinta_AST_DIFIERE                  PASA   (real=False esperado=False)
+   4_cadena_distinta_sentencias_CERO              PASA   (real=0 esperado=0)
+   5_lineas_en_blanco_AST_IDENTICO                PASA   (real=True esperado=True)
+   6_el_roto_no_parsea                            PASA   (real=1 esperado=1)
+   6_el_motivo_nombra_su_linea                    PASA   (real=True esperado=True)
+   6_sin_arbol_no_hay_cuarto_veredicto            PASA   (real=False esperado=False)
+   6_de_extremo_a_extremo_exit_1                  PASA   (real=1 esperado=1)
+   6_de_extremo_a_extremo_dice_ROJO               PASA   (real=True esperado=True)
+   6_con_los_dos_buenos_exit_0                    PASA   (real=0 esperado=0)
+   6_imprime_los_CUATRO_veredictos                PASA   (real=True esperado=True)
+   6_imprime_EL_ARBOL_DE_SINTAXIS                 PASA   (real=True esperado=True)
+   7_arboles_distintos_hay_censo                  PASA   (real=True esperado=True)
+   7_el_censo_nombra_Call                         PASA   (real=True esperado=True)
+   CIFRA casos: 20 | pasan: 20 | fallan: 0
+
+9) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   1_coma_final_maquina_DIFIERE                   CAE
+   1_coma_final_la_vieja_cuenta_UNA_sentencia     CAE
+   1_coma_final_AST_entero_IDENTICO               CAE
+   1_coma_final_AST_maquina_IDENTICO              CAE
+   2_llamada_distinta_AST_DIFIERE                 CAE
+   3_docstring_distinto_AST_entero_DIFIERE        CAE
+   3_docstring_distinto_AST_maquina_IDENTICO      CAE
+   4_cadena_distinta_AST_DIFIERE                  CAE
+   4_cadena_distinta_sentencias_CERO              CAE
+   5_lineas_en_blanco_AST_IDENTICO                CAE
+   6_el_roto_no_parsea                            CAE
+   6_el_motivo_nombra_su_linea                    CAE
+   6_sin_arbol_no_hay_cuarto_veredicto            CAE
+   6_de_extremo_a_extremo_exit_1                  CAE
+   6_de_extremo_a_extremo_dice_ROJO               CAE
+   6_con_los_dos_buenos_exit_0                    CAE
+   6_imprime_los_CUATRO_veredictos                CAE
+   6_imprime_EL_ARBOL_DE_SINTAXIS                 CAE
+   7_arboles_distintos_hay_censo                  CAE
+   7_el_censo_nombra_Call                         CAE
+   CIFRA casos que CAEN: 20 de 20
+
+VERDE DE LA MUTACION: 20 casos, los 20 pasan y los 20 CAEN al mutarles el valor esperado. EL CASO QUE LO DECIDE TODO SALE COMO TIENE QUE SALIR: dos ficheros que solo se diferencian en UNA COMA FINAL dan MAQUINA DIFIERE con UNA sentencia contada por la clasificacion vieja, y AST IDENTICO por las dos mitades del cuarto veredicto. Y un fichero que no parsea sale en ROJO con su linea, comprobado de extremo a extremo.
+FIN

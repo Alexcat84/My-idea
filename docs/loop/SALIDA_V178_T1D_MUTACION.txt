@@ -1,0 +1,109 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DEL CARRIL POR PUESTOS (vuelta 178, TAREA 1.d)
+==============================================================================
+
+EL ARCHIVO FABRICADO, que NO es docs/INTRA_DOMINIO_VEREDICTOS.jsonl:
+   puesto 334   dominio ventas   clase A banda False
+   puesto 394   dominio ventas   clase D banda True
+   puesto 404   dominio compras  clase A banda False
+   puesto 878   dominio ventas   clase A banda False
+   puesto 1374  dominio compras  clase D banda True
+   CIFRA filas fabricadas: 5
+
+1) lista_de_puestos() PARTE, ORDENA Y QUITA REPETIDOS
+   '404, 334,394,334' -> [334, 394, 404]
+   None               -> None
+   ''                 -> []
+
+2) --puestos SE QUEDA SOLO CON LOS PEDIDOS
+   puestos elegidos: [334, 404]
+
+3) --excluir QUITA LOS SUYOS, Y LOS DOS SE COMPONEN
+   solo --excluir 878          : [334, 394, 404, 1374]
+   --puestos 334,394,404,878 y --excluir 878: [334, 394, 404]
+
+4) SE COMPONEN CON LOS SELECTORES VIEJOS, Y EL ORDEN ES EL ESCRITO
+   --dominio ventas --puestos 334,404: [334]
+   (el 404 es de compras, asi que el dominio lo filtra ANTES: la lista se
+   aplica DESPUES y no lo devuelve. Es 'de los de ventas, esos dos')
+   --desde 390 --hasta 900 --puestos 334,394,878: [394, 878]
+
+5) puestos_que_no_existen() MIRA CONTRA EL ARCHIVO ENTERO
+   pedidos 334, 999, 1234 -> [999, 1234]
+
+6) EL ROJO DE EXTREMO A EXTREMO, CORRIENDO EL PROGRAMA DE VERDAD
+   VERDE esperado: exit 0
+   escribe la ciega: True
+   ROJO esperado, puesto 9999: exit 1
+   nombra el puesto: True
+   no escribe nada: True
+   ROJO esperado tambien en --excluir 9999: exit 1
+   NO ROJO cuando el puesto existe pero otro selector lo filtra: exit 0
+
+7) LA GUARDA DE FUGA SIGUE CORRIENDO SOBRE LA SELECCION NUEVA
+   con la lista blanca de siempre, fugas: 0
+   ensanchando la lista blanca a clase y razon, fugas: 6
+      FUGA: puesto 334, campo clase
+      FUGA: puesto 334, campo razon
+      FUGA: puesto 394, campo clase
+      FUGA: puesto 394, campo razon
+      FUGA: puesto 404, campo clase
+      FUGA: puesto 404, campo razon
+   P.16: el temporal se retira. Existe todavia: False
+
+8) PASADA 1, LOS CASOS TAL CUAL
+   1_parte_ordena_y_deduplica                     PASA   (real=[334, 394, 404] esperado=[334, 394, 404])
+   1_None_es_no_se_pidio                          PASA   (real=True esperado=True)
+   1_vacio_es_lista_vacia_y_no_None               PASA   (real=[] esperado=[])
+   2_solo_los_pedidos_y_en_orden                  PASA   (real=[334, 404] esperado=[334, 404])
+   3_excluir_quita_el_878                         PASA   (real=False esperado=False)
+   3_los_dos_se_componen                          PASA   (real=[334, 394, 404] esperado=[334, 394, 404])
+   4_el_dominio_filtra_antes_que_la_lista         PASA   (real=[334] esperado=[334])
+   4_el_rango_tambien_filtra_antes                PASA   (real=[394, 878] esperado=[394, 878])
+   5_nombra_los_que_no_existen                    PASA   (real=[999, 1234] esperado=[999, 1234])
+   5_no_reclama_los_que_si_existen                PASA   (real=[] esperado=[])
+   6_el_caso_bueno_exit_0                         PASA   (real=0 esperado=0)
+   6_el_caso_bueno_elige_TRES                     PASA   (real=True esperado=True)
+   6_el_caso_bueno_escribe_la_ciega               PASA   (real=True esperado=True)
+   6_la_ciega_no_lleva_la_fila_del_878            PASA   (real=False esperado=False)
+   6_la_ciega_lleva_las_TRES_filas_pedidas        PASA   (real=3 esperado=3)
+   6_puesto_inexistente_exit_1                    PASA   (real=1 esperado=1)
+   6_puesto_inexistente_lo_NOMBRA                 PASA   (real=True esperado=True)
+   6_puesto_inexistente_NO_escribe_nada           PASA   (real=False esperado=False)
+   6_excluir_inexistente_exit_1                   PASA   (real=1 esperado=1)
+   6_existe_pero_filtrado_NO_es_rojo              PASA   (real=0 esperado=0)
+   6_existe_pero_filtrado_elige_UNO               PASA   (real=True esperado=True)
+   7_sin_ensanchar_no_hay_fugas                   PASA   (real=0 esperado=0)
+   7_ensanchada_la_guarda_CAZA                    PASA   (real=True esperado=True)
+   7_caza_las_SEIS_fugas_de_los_tres_pares        PASA   (real=6 esperado=6)
+   CIFRA casos: 24 | pasan: 24 | fallan: 0
+
+9) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   1_parte_ordena_y_deduplica                     CAE
+   1_None_es_no_se_pidio                          CAE
+   1_vacio_es_lista_vacia_y_no_None               CAE
+   2_solo_los_pedidos_y_en_orden                  CAE
+   3_excluir_quita_el_878                         CAE
+   3_los_dos_se_componen                          CAE
+   4_el_dominio_filtra_antes_que_la_lista         CAE
+   4_el_rango_tambien_filtra_antes                CAE
+   5_nombra_los_que_no_existen                    CAE
+   5_no_reclama_los_que_si_existen                CAE
+   6_el_caso_bueno_exit_0                         CAE
+   6_el_caso_bueno_elige_TRES                     CAE
+   6_el_caso_bueno_escribe_la_ciega               CAE
+   6_la_ciega_no_lleva_la_fila_del_878            CAE
+   6_la_ciega_lleva_las_TRES_filas_pedidas        CAE
+   6_puesto_inexistente_exit_1                    CAE
+   6_puesto_inexistente_lo_NOMBRA                 CAE
+   6_puesto_inexistente_NO_escribe_nada           CAE
+   6_excluir_inexistente_exit_1                   CAE
+   6_existe_pero_filtrado_NO_es_rojo              CAE
+   6_existe_pero_filtrado_elige_UNO               CAE
+   7_sin_ensanchar_no_hay_fugas                   CAE
+   7_ensanchada_la_guarda_CAZA                    CAE
+   7_caza_las_SEIS_fugas_de_los_tres_pares        CAE
+   CIFRA casos que CAEN: 24 de 24
+
+VERDE DE LA MUTACION: 24 casos, los 24 pasan y los 24 CAEN al mutarles el valor esperado. `--puestos` y `--excluir` eligen, se componen entre si y con los selectores viejos en el orden escrito, PIDEN UN PUESTO QUE NO EXISTE Y SALEN EN ROJO NOMBRANDOLO SIN ESCRIBIR NADA, no confunden eso con un puesto filtrado por otro selector, y LA GUARDA DE FUGA SIGUE MORDIENDO sobre la seleccion nueva.
+FIN

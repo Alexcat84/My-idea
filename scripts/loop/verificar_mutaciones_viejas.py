@@ -172,6 +172,7 @@ Se mide con `time.perf_counter`, que es monotono, y no con la hora del reloj.
 QUE NO CAMBIA: ni un veredicto. El cronometro solo imprime.
 """
 import argparse
+import ast
 import hashlib
 import io
 import os
@@ -640,6 +641,23 @@ VIEJAS = [
     #
     # LA NOMINA CRECE DE 91 A 92 con esta entrada.
     ("vuelta177_tarea1f_mutacion_tope_minutos.py", False),
+    # VUELTA 178, LOS CUATRO ARNESES DE LA TAREA 1, Y ENTRAN EN SU MISMA VUELTA
+    # POR LA LETRA DE LA 148 (un arnes entra en la nomina; la condicion es
+    # SUJETO CONGELADO, no plazo) mas el acta 176 punto 7.2, que acepto que
+    # entre en su misma vuelta. LOS CUATRO TIENEN SUJETO CONGELADO Y LO
+    # DECLARAN EN SU DOCSTRING: los cuatro fabrican lo que miden en memoria o
+    # en un temporal que retiran, y ninguno abre un fichero vivo de la campana.
+    #
+    # Y ESTA VEZ NO SE ANADEN A MANO A CIEGAS. La 177 los anadio a mano porque
+    # `arneses_que_faltan()` no los veia; en esta misma vuelta esa ceguera
+    # queda arreglada (TAREA 1.b, LA VARA DEL CENSO), asi que la funcion los
+    # nombro ella sola antes de que se escribieran estas cuatro lineas.
+    #
+    # LA NOMINA CRECE DE 92 A 96, y NINGUNA SE PODA.
+    ("vuelta178_tarea1b_mutacion_hermano.py", False),
+    ("vuelta178_tarea1c_mutacion_ast.py", False),
+    ("vuelta178_tarea1d_mutacion_puestos.py", False),
+    ("vuelta178_tarea1e_mutacion_higiene.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su
@@ -768,6 +786,176 @@ PATRON_ARNES = re.compile(
     r"^vuelta(\d+).*(?:%s).*\.py$" % "|".join(FAMILIAS_DE_ARNES))
 PATRON_ARNES_VIEJO = re.compile(r"^vuelta(\d+).*mutacion.*\.py$")
 
+# LA VARA DEL CENSO, EXPLICITA Y CON SU MOTIVO (vuelta 178, TAREA 1.b;
+# adjudicacion del acta 177 punto 7.10, sobre el `PD.1` del reporte 177).
+#
+# QUE ERA ANTES Y POR QUE ESTABA MAL. Hasta esta vuelta la vara del censo no
+# tenia nombre: vivia IMPLICITA dentro de un `>` de `arneses_que_faltan()`, que
+# solo reclamaba arneses de vuelta ESTRICTAMENTE POSTERIOR a la ultima
+# representada en la nomina. Ese filtro es el equivocado, y la prueba es de la
+# vuelta 177: con la entrada de la 177 ya dentro de la nomina, la funcion dijo
+# que NO FALTABA NINGUNO cuando faltaban CUATRO ARNESES DE LA PROPIA 177. Los
+# hermanos de la misma vuelta que la ultima de la nomina eran invisibles por
+# construccion, y hubo que anadirlos a mano.
+#
+# QUE ES AHORA, Y ES LO QUE LA REGLA ESCRITA DE ESTE MISMO FICHERO YA DECIA. La
+# letra desde la vuelta 148 (TAREA 2.5, sobre la adjudicacion 3.5 del acta 147)
+# dice que UN ARNES ENTRA EN LA NOMINA y que la condicion es SUJETO CONGELADO,
+# no plazo; y el acta 176, punto 7.2, acepto que entre EN SU MISMA VUELTA. Con
+# eso, la pregunta correcta no es "es posterior a la nomina" sino ESTA EN EL
+# CENSO Y NO ESTA EN LA NOMINA.
+#
+# Y POR QUE LA VARA ES 148 Y NO CERO. Porque todo lo anterior a la 148 YA SE
+# MIDIO Y YA SE ADJUDICO FUERA, y reclamarlo aqui seria moverle la vara a otro:
+# `scripts/loop/vuelta164_tarea5_medir_pre148.py` (TAREA 5 de la vuelta 164,
+# adjudicacion 6.9 del acta 163) midio con esa misma frontera, `CORTE = 148`, y
+# su primer punto dice literalmente "NINGUNO ENTRA EN VIEJAS" y "NO SE AFIRMA
+# QUE LA REGLA LES ALCANCE". Ensanchar la vara hacia atras sin adjudicacion
+# nueva seria legislar. LA VARA SE DEJA EXPLICITA Y PARAMETRIZABLE para que su
+# caso positivo por mutacion pueda moverla sin tocar este fichero.
+VARA_DEL_CENSO = 148
+
+
+# LA REGLA DEL SUJETO CONGELADO DEJA DE SER UNA FRASE (vuelta 178, TAREA 1.e;
+# `PD.2` del reporte 176, adjudicado a favor del ejecutor en el acta 176 punto
+# 7.9 con destino esta vuelta).
+#
+# LA REGLA EXISTE DESDE LA VUELTA 145 Y SIGUE ESCRITA ARRIBA, palabra por
+# palabra: una mutacion entra en la nomina SOLO SI SU SUJETO ESTA CONGELADO, y
+# la que no pueda tenerlo entra como CASO DECLARADO. Lo que NO existia es nada
+# que la hiciera cumplir: la nomina admitia arneses anclados a ficheros vivos y
+# nadie lo veia hasta que el registro crecia lo bastante. El rojo del tramo 6 de
+# la vuelta 176 fue exactamente eso.
+#
+# QUE MIDE, Y ES SOBRE EL TEXTO DEL PROPIO ARNES. Un sujeto congelado deja
+# HUELLA EN EL CODIGO que lo lee, y esa huella es de una de estas formas:
+# fabrica su sujeto en un temporal, se hace una copia en memoria, lee un blob de
+# git clavado, o apunta a un fichero `SUJETO_FIJO_*` commiteado. Un sujeto vivo
+# tambien deja huella: abre por su nombre uno de los ficheros que la campana
+# mueve cada vuelta.
+#
+# LA CLASIFICACION ES DE TRES ESTADOS Y NO DE DOS, y esa es la parte honesta: si
+# un arnes trae LAS DOS huellas, esta guarda NO ADIVINA cual manda. Pide que el
+# propio arnes lo declare con el literal `SUJETO CONGELADO` en su texto, que es
+# lo que la casa ya escribe en los que lo tienen. Sin esa declaracion el
+# veredicto es NO DECIDIBLE, y NO DECIDIBLE no es verde.
+#
+# LO QUE ESTA GUARDA NO HACE: no poda la nomina, no reescribe ningun arnes y no
+# decide si un arnes vale. Clasifica y publica.
+
+HUELLAS_DE_CONGELADO = (
+    "SUJETO_FIJO",       # un fichero congelado y commiteado en docs/loop/
+    "tempfile",          # fabrica su propio sujeto y lo retira (P.16)
+    "mkdtemp",
+    "deepcopy",          # copia en memoria, el original no se toca
+    "git show",          # blob de git, que no se mueve
+    "cat-file",
+    "sha256",            # sujeto clavado por su huella de contenido
+    "SUJETO CONGELADO",  # lo declara el propio arnes
+)
+
+HUELLAS_DE_VIVO = (
+    "REPORTE.md",
+    "INTRA_DOMINIO_VEREDICTOS.jsonl",
+    "OPERACIONES.jsonl",
+    "master_graph.json",
+    "ACTA_AUDITOR.md",
+    "LECTURAS_DIRIGIDAS.md",
+)
+
+MARCA_DECLARA_CONGELADO = "SUJETO CONGELADO"
+
+
+def texto_del_arnes(nombre, directorio=None):
+    """EL TEXTO DE UN ARNES, o cadena vacia si no esta. Lo unico de esta familia
+    que toca disco, y se aisla aqui para que el resto sea puro."""
+    ruta = os.path.join(directorio or LOOP, nombre)
+    if not os.path.isfile(ruta):
+        return ""
+    return io.open(ruta, encoding="utf-8", errors="replace").read().replace(
+        chr(13) + chr(10), chr(10))
+
+
+def sin_docstring_de_modulo(texto):
+    """EL TEXTO DEL ARNES SIN SU DOCSTRING DE MODULO. PURA.
+
+    HACE FALTA Y NO ES UN ADORNO: los docstrings de esta casa son largos y
+    NOMBRAN los ficheros de los que hablan. Buscar `REPORTE.md` en el texto
+    entero marca como SUJETO VIVO a arneses cuyo docstring solo CUENTA que su
+    sujeto es una copia congelada del reporte de otra vuelta. La huella de
+    sujeto vivo tiene que buscarse EN LA MAQUINA, que es la que abre ficheros.
+
+    Si el fichero no parsea se devuelve el texto entero, y eso es lo prudente:
+    ante la duda, la guarda mira MAS y no menos."""
+    try:
+        arbol = ast.parse(texto)
+    except (SyntaxError, ValueError):
+        return texto
+    if not arbol.body:
+        return texto
+    n0 = arbol.body[0]
+    es_doc = (isinstance(n0, ast.Expr) and isinstance(n0.value, ast.Constant)
+              and isinstance(n0.value.value, str))
+    if not es_doc:
+        return texto
+    lineas = texto.split(chr(10))
+    fin = (n0.end_lineno or n0.lineno)
+    return chr(10).join(lineas[fin:])
+
+
+def anclaje_de(texto, declarado=False):
+    """EL VEREDICTO DE ANCLAJE DE UN ARNES, LEIDO DE SU TEXTO. PURA.
+
+    Devuelve (veredicto, huellas_de_congelado, huellas_de_vivo). El veredicto es
+    uno de: CASO DECLARADO, CONGELADO, SUJETO VIVO, NO DECIDIBLE.
+
+    `declarado` dice si el arnes esta en `CASOS_DECLARADOS`, que es la exencion
+    que la regla de la vuelta 145 ya preveia y la unica que hay."""
+    # LA HUELLA DE CONGELADO SE BUSCA EN EL TEXTO ENTERO, porque una de ellas
+    # (`SUJETO CONGELADO`) es una DECLARACION y vive en el docstring por
+    # definicion. LA HUELLA DE SUJETO VIVO SE BUSCA SOLO EN LA MAQUINA, porque
+    # un docstring que NOMBRA un fichero no lo abre.
+    maquina = sin_docstring_de_modulo(texto)
+    congela = [h for h in HUELLAS_DE_CONGELADO if h in texto]
+    vive = [h for h in HUELLAS_DE_VIVO if h in maquina]
+    if declarado:
+        return "CASO DECLARADO", congela, vive
+    if congela and not vive:
+        return "CONGELADO", congela, vive
+    if vive and not congela:
+        return "SUJETO VIVO", congela, vive
+    if congela and vive:
+        if MARCA_DECLARA_CONGELADO in texto:
+            return "CONGELADO", congela, vive
+        return "NO DECIDIBLE", congela, vive
+    return "CONGELADO", congela, vive
+
+
+def anclaje_de_la_nomina(nomina=None, directorio=None, declarados=None):
+    """[(nombre, veredicto, congela, vive)] para toda la nomina, en su orden.
+
+    Semi-pura: lo unico que toca disco es leer los ficheros, y `directorio` va
+    por parametro para que su caso positivo por mutacion pueda apuntarla a uno
+    fabricado."""
+    entradas = nomina if nomina is not None else VIEJAS
+    dec = CASOS_DECLARADOS if declarados is None else declarados
+    salida = []
+    for nombre, _admite in entradas:
+        texto = texto_del_arnes(nombre, directorio)
+        v, c, vv = anclaje_de(texto, declarado=(nombre in dec))
+        salida.append((nombre, v, c, vv))
+    return salida
+
+
+def guarda_del_sujeto_congelado(nomina=None, directorio=None, declarados=None):
+    """LOS QUE NO CUMPLEN LA REGLA. Devuelve [(nombre, veredicto, vive)].
+
+    Solo `SUJETO VIVO` y `NO DECIDIBLE` cuentan: un `CASO DECLARADO` esta exento
+    por la propia regla, y un `CONGELADO` la cumple."""
+    return [(n, v, vv)
+            for n, v, _c, vv in anclaje_de_la_nomina(nomina, directorio, declarados)
+            if v in ("SUJETO VIVO", "NO DECIDIBLE")]
+
 
 def vuelta_de(nombre):
     m = re.match(r"^vuelta(\d+)", nombre)
@@ -798,18 +986,28 @@ def nomina_invisible_al_censo(nomina=None, patron=None):
     return sorted(n for n in nombres if not pat.match(n))
 
 
-def arneses_que_faltan(nomina=None, directorio=None):
+def arneses_que_faltan(nomina=None, directorio=None, vara=None):
     """(ultima_vuelta_de_la_nomina, los_que_faltan). PURA a proposito: recibe la
-    nomina y el directorio, para que su caso rojo se pueda probar por mutacion
-    sin tocar ni este fichero ni el disco."""
+    nomina, el directorio y la vara, para que su caso rojo se pueda probar por
+    mutacion sin tocar ni este fichero ni el disco.
+
+    EL FILTRO, DESDE LA VUELTA 178: ESTA EN EL CENSO Y NO ESTA EN LA NOMINA,
+    menos los anteriores a `VARA_DEL_CENSO`. El filtro viejo ("vuelta
+    estrictamente posterior a la ultima de la nomina") era ciego a los hermanos
+    de la misma vuelta, y esa ceguera esta MEDIDA en la vuelta 177: dijo que no
+    faltaba ninguno cuando faltaban cuatro de esa misma vuelta.
+
+    `ultima` SE SIGUE DEVOLVIENDO porque la bateria la publica, pero YA NO
+    DECIDE NADA: es informativa. Quien decide es la vara, y por eso la vara
+    tiene nombre, valor y motivo escrito arriba, en vez de estar escondida en un
+    signo de comparacion."""
     nombres = [s for s, _admite in (nomina if nomina is not None else VIEJAS)]
     vueltas = [v for v in (vuelta_de(n) for n in nombres) if v is not None]
-    if not vueltas:
-        return None, []
-    ultima = max(vueltas)
+    ultima = max(vueltas) if vueltas else None
+    v = VARA_DEL_CENSO if vara is None else vara
     dentro = set(nombres)
     fuera = [n for n in arneses_del_directorio(directorio)
-             if n not in dentro and (vuelta_de(n) or 0) > ultima]
+             if n not in dentro and (vuelta_de(n) or 0) >= v]
     return ultima, sorted(fuera)
 
 
@@ -848,7 +1046,12 @@ def prueba_de_la_nomina():
         print("")
 
         print("B) LA MIRADA, CON DOS FUERA DE LA NOMINA")
-        ultima, faltan = arneses_que_faltan(nomina, tmp)
+        print("   (LA VARA VA EXPLICITA EN CADA LLAMADA DESDE LA VUELTA 178: este")
+        print("   directorio es de mentira y sus vueltas son de mentira, asi que la")
+        print("   vara real, %d, no le vale. Pasarla a mano es lo que la hace"
+              % VARA_DEL_CENSO)
+        print("   auditable; antes vivia escondida en un signo de comparacion)")
+        ultima, faltan = arneses_que_faltan(nomina, tmp, vara=0)
         print("   ultima vuelta de la nomina: %s" % ultima)
         print("   CIFRA que faltan: %d (%s)" % (len(faltan), ", ".join(faltan)))
         casos.append(("la_ultima_vuelta_se_computa_de_la_nomina", ultima, 110))
@@ -860,29 +1063,62 @@ def prueba_de_la_nomina():
         print("C) SI ENTRAN EN LA NOMINA, DEJA DE FALTAR NADIE")
         completa = nomina + [("vuelta120_tarea3_mutacion_fuera.py", False),
                              ("vuelta121_tarea4_mutacion_tambien_fuera.py", False)]
-        _u2, faltan2 = arneses_que_faltan(completa, tmp)
+        _u2, faltan2 = arneses_que_faltan(completa, tmp, vara=0)
         print("   CIFRA que faltan tras meterlos: %d" % len(faltan2))
         casos.append(("metidos_en_la_nomina_ya_no_faltan", len(faltan2), 0))
         print("")
 
-        print("D) LOS ANTERIORES A LA ULTIMA VUELTA NO SE RECLAMAN, Y SE DICE POR QUE")
-        print("   (la regla de esta bateria nace en la vuelta 144 y no dice si")
-        print("   alcanza a lo anterior: ensancharla sin adjudicacion seria")
-        print("   moverle la vara a nadie)")
+        print("D) LOS ANTERIORES A LA VARA DEL CENSO NO SE RECLAMAN, Y SE DICE POR QUE")
+        print("   (CAMBIA EN LA VUELTA 178, Y NO SE BORRA DE QUE IBA. La version")
+        print("   vieja de este caso protegia a los anteriores a LA ULTIMA VUELTA DE")
+        print("   LA NOMINA, que es justo el filtro que la 178 tumba por ciego. Lo")
+        print("   que de verdad protege a los viejos es LA VARA DEL CENSO, que tiene")
+        print("   nombre y motivo: la 164 los midio con CORTE = 148 y los adjudico")
+        print("   fuera. Aqui la vara se pone en 121 sobre el directorio fabricado")
+        print("   para probar la MISMA conducta con la palanca correcta)")
         solo_una = [("vuelta120_tarea3_mutacion_fuera.py", False),
                     ("vuelta121_tarea4_mutacion_tambien_fuera.py", False)]
-        _u3, faltan3 = arneses_que_faltan(solo_una, tmp)
-        print("   con la nomina en la vuelta 121, faltan: %d (%s)"
+        _u3, faltan3 = arneses_que_faltan(solo_una, tmp, vara=120)
+        print("   con la vara en 120, faltan: %d (%s)"
               % (len(faltan3), ", ".join(faltan3) or "ninguno"))
-        casos.append(("los_anteriores_no_se_reclaman", len(faltan3), 0))
+        casos.append(("los_anteriores_a_la_vara_no_se_reclaman", len(faltan3), 0))
+        print("")
+
+        print("D.2) Y LOS HERMANOS DE LA MISMA VUELTA QUE LA ULTIMA DE LA NOMINA")
+        print("     SI SE RECLAMAN, QUE ES LO QUE LA 177 DEMOSTRO QUE FALTABA")
+        io.open(os.path.join(tmp, "vuelta110_tarea9_mutacion_hermana.py"), "w",
+                encoding="utf-8").write("# de mentira" + chr(10))
+        _u4, faltan4 = arneses_que_faltan(nomina, tmp, vara=0)
+        print("     la nomina llega a la vuelta 110 y hay un arnes de la 110 fuera")
+        print("     CIFRA que faltan ahora: %d (%s)" % (len(faltan4), ", ".join(faltan4)))
+        casos.append(("ve_al_hermano_de_la_misma_vuelta",
+                      "vuelta110_tarea9_mutacion_hermana.py" in faltan4, True))
+        os.remove(os.path.join(tmp, "vuelta110_tarea9_mutacion_hermana.py"))
         print("")
 
         print("E) Y SOBRE EL REPO DE VERDAD, HOY")
+        print("   (EL CASO SE RE-FUNDA EN LA VUELTA 178, Y SE DICE POR QUE. El caso")
+        print("   viejo exigia que en el repo de hoy no faltara NINGUNO, y eso era")
+        print("   una expectativa sobre el estado del repo, no sobre la conducta de")
+        print("   la funcion: el dia que falte uno de verdad, ese caso cae sin que")
+        print("   nada este roto. El caso nuevo comprueba LO QUE LA FUNCION HACE,")
+        print("   re-derivando su resultado por conjuntos SIN LLAMARLA, que es lo")
+        print("   unico que un caso puede comprobar de una funcion)")
         ultima_real, faltan_real = arneses_que_faltan()
+        censo_real = arneses_del_directorio()
+        dentro_real = {s for s, _a in VIEJAS}
+        derivado = sorted(n for n in censo_real
+                          if n not in dentro_real
+                          and (vuelta_de(n) or 0) >= VARA_DEL_CENSO)
         print("   ultima vuelta de la nomina real: %s" % ultima_real)
-        print("   CIFRA que faltan de verdad: %d (%s)"
+        print("   vara del censo: %d" % VARA_DEL_CENSO)
+        print("   CIFRA que la funcion dice que faltan: %d (%s)"
               % (len(faltan_real), ", ".join(faltan_real) or "ninguno"))
-        casos.append(("en_el_repo_de_hoy_no_falta_ninguno", len(faltan_real), 0))
+        print("   CIFRA re-derivada aqui por conjuntos, sin llamarla: %d"
+              % len(derivado))
+        casos.append(("la_funcion_calza_con_su_re_derivacion", faltan_real, derivado))
+        casos.append(("la_nomina_entera_es_visible_al_censo",
+                      len(nomina_invisible_al_censo()), 0))
         print("")
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
@@ -919,8 +1155,10 @@ def prueba_de_la_nomina():
         return 1
     print("VERDE DE LA MUTACION: %d casos, los %d pasan y los %d CAEN al mutarles el "
           "valor esperado. La mirada VE los que faltan, deja de verlos cuando entran, "
-          "no reclama los anteriores a su vara, y sobre el repo de hoy no falta "
-          "ninguno." % (len(casos), len(casos), len(casos)))
+          "NO reclama los anteriores a LA VARA DEL CENSO (%d), SI VE al hermano de la "
+          "misma vuelta que la ultima de la nomina, y sobre el repo de hoy su "
+          "resultado calza byte a byte con su re-derivacion por conjuntos."
+          % (len(casos), len(casos), len(casos), VARA_DEL_CENSO))
     print("FIN")
     return 0
 
@@ -1253,6 +1491,73 @@ def reparto_en_tramos(nomina, tamano, reloj=None,
     return [list(nomina[i:i + tamano]) for i in range(0, len(nomina), tamano)]
 
 
+def informe_del_sujeto_congelado():
+    """LA GUARDA DEL SUJETO CONGELADO, CORRIDA Y PUBLICADA (vuelta 178, TAREA
+    1.e). NO corre ningun arnes, NO toca la nomina y NO reescribe nada:
+    clasifica y publica.
+
+    CAE EN ROJO si alguna entrada de la nomina sale `SUJETO VIVO` o `NO
+    DECIDIBLE`. Un `NO DECIDIBLE` es rojo a proposito: la regla de la vuelta 145
+    exige sujeto congelado, y un arnes que no deja claro cual es el suyo NO
+    demuestra que lo cumpla. La salida verde de una guarda que no pudo mirar es
+    exactamente lo que esta casa persigue."""
+    print("=" * 78)
+    print("LA GUARDA DEL SUJETO CONGELADO (vuelta 178, TAREA 1.e)")
+    print("=" * 78)
+    print("")
+    print("LA REGLA, CITADA Y NO PARAFRASEADA, del docstring de este mismo fichero:")
+    print("   'UNA MUTACION ENTRA EN LA VUELTA SIGUIENTE A LA QUE NACE, Y SOLO SI SU")
+    print("   SUJETO ESTA CONGELADO' (vuelta 145), y desde la 148 'LO QUE ESTA REGLA")
+    print("   EXIGE ES SUJETO CONGELADO. EL PLAZO DE UNA VUELTA ERA EL MEDIO, NO EL")
+    print("   FIN'. Existe desde la 145 y hasta hoy era una frase.")
+    print("")
+    print("COMO SE MIDE: por la huella que el sujeto deja EN EL CODIGO del arnes.")
+    print("   huellas de CONGELADO (en el texto entero): %s"
+          % ", ".join(HUELLAS_DE_CONGELADO))
+    print("   huellas de VIVO (SOLO en la maquina, sin el docstring de modulo): %s"
+          % ", ".join(HUELLAS_DE_VIVO))
+    print("   y si trae LAS DOS, la guarda NO ADIVINA: pide que el propio arnes lo")
+    print("   declare con el literal %r, y sin esa declaracion sale NO DECIDIBLE."
+          % MARCA_DECLARA_CONGELADO)
+    print("")
+
+    filas = anclaje_de_la_nomina()
+    cuenta = {}
+    for _n, v, _c, _vv in filas:
+        cuenta[v] = cuenta.get(v, 0) + 1
+    print("EL REPARTO, CONTADO DE LA NOMINA VIVA")
+    print("| veredicto | entradas |")
+    print("|---|---|")
+    for v in ("CONGELADO", "CASO DECLARADO", "SUJETO VIVO", "NO DECIDIBLE"):
+        print("| %s | %d |" % (v, cuenta.get(v, 0)))
+    print("| **total** | **%d** |" % len(filas))
+    print("")
+
+    malas = guarda_del_sujeto_congelado()
+    print("LAS QUE NO CUMPLEN, UNA A UNA")
+    if not malas:
+        print("   (ninguna)")
+    for nombre, veredicto, vive in malas:
+        print("   %-14s %-52s abre: %s"
+              % (veredicto, nombre, ", ".join(vive) or "(nada)"))
+    print("   CIFRA entradas que no cumplen la regla: %d" % len(malas))
+    print("")
+
+    if malas:
+        print("ROJO DE LA GUARDA DEL SUJETO CONGELADO: %d entrada(s) de %d no"
+              % (len(malas), len(filas)))
+        print("demuestran tener sujeto congelado. La regla existe desde la vuelta")
+        print("145 y esta es la primera vez que se mide, asi que este rojo NO es una")
+        print("regresion: es el estado que la frase tapaba.")
+        print("FIN")
+        return 1
+    print("VERDE DE LA GUARDA DEL SUJETO CONGELADO: las %d entradas de la nomina"
+          % len(filas))
+    print("demuestran sujeto congelado o son caso declarado.")
+    print("FIN")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--mutar-ancla", dest="mutar", action="store_true")
@@ -1262,6 +1567,12 @@ def main():
     ap.add_argument("--mutar-reproducibilidad", dest="mutar_repro", action="store_true",
                     help="TAREA 2.f (vuelta 141): prueba de mutacion del cotejo de "
                          "reproducibilidad, sobre dos scripts de mentira fabricados")
+    ap.add_argument("--sujeto-congelado", dest="sujeto_congelado",
+                    action="store_true",
+                    help="vuelta 178, TAREA 1.e: LA GUARDA DEL SUJETO CONGELADO. "
+                         "Clasifica la nomina entera y CAE EN ROJO si alguna "
+                         "entrada tiene SUJETO VIVO o queda NO DECIDIBLE. Corre "
+                         "SOLA: no corre ningun arnes y no toca la nomina.")
     ap.add_argument("--tramo", type=int, default=None,
                     help="vuelta 176, TAREA 1.c: corre SOLO el tramo numero N "
                          "(empezando en 1) del reparto de la nomina. Sin esta "
@@ -1288,6 +1599,9 @@ def main():
     if a.mutar_nomina:
         return prueba_de_la_nomina()
 
+    if a.sujeto_congelado:
+        return informe_del_sujeto_congelado()
+
     print("=" * 78)
     print("LAS %d MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO." % len(VIEJAS))
     if a.mutar:
@@ -1311,9 +1625,12 @@ def main():
     print("  CIFRA entradas de la nomina que el censo NO VE: %d" % len(invisibles_al_abrir))
     for n in invisibles_al_abrir:
         print("      INVISIBLE AL CENSO: %s" % n)
-    print("  CIFRA ultima vuelta representada en la nomina: %s" % ultima_de_la_nomina)
-    print("  CIFRA arneses POSTERIORES a esa vuelta que se quedan FUERA: %d"
-          % len(faltan_en_la_nomina))
+    print("  CIFRA ultima vuelta representada en la nomina: %s (INFORMATIVA desde la"
+          " vuelta 178: ya no decide)" % ultima_de_la_nomina)
+    print("  LA VARA DEL CENSO, que es la que decide: %d (vuelta 178, TAREA 1.b)"
+          % VARA_DEL_CENSO)
+    print("  CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA "
+          "de la nomina: %d" % len(faltan_en_la_nomina))
     for n in faltan_en_la_nomina:
         print("      FUERA DE LA NOMINA: %s" % n)
     if not faltan_en_la_nomina:
@@ -1515,8 +1832,9 @@ def main():
     # cabecera: el estado al cierre se mide al cierre.
     _ultima, faltan_al_cierre = arneses_que_faltan()
     invisibles_al_cierre = nomina_invisible_al_censo()
-    print("  CIFRA arneses POSTERIORES a la nomina que se quedan FUERA (recomputado "
-          "al cierre): %d" % len(faltan_al_cierre))
+    print("  CIFRA arneses DEL CENSO, no anteriores a la vara %d, que se quedan "
+          "FUERA de la nomina (recomputado al cierre): %d"
+          % (VARA_DEL_CENSO, len(faltan_al_cierre)))
     for n in faltan_al_cierre:
         print("      FUERA DE LA NOMINA: %s" % n)
     print("  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): "
@@ -1533,11 +1851,13 @@ def main():
                   "Ensancha FAMILIAS_DE_ARNES o renombra el arnes. La lista entera: %s"
                   % (len(invisibles_al_cierre), ", ".join(invisibles_al_cierre)))
         if faltan_al_cierre:
-            print("ROJO: %d arnes(es) de mutacion nacidos despues de la vuelta %s se "
-                  "quedan FUERA de esta nomina, y la regla escrita en este mismo "
-                  "fichero dice que una mutacion entra en la vuelta SIGUIENTE a la que "
-                  "nace, no mas tarde. La lista entera: %s"
-                  % (len(faltan_al_cierre), _ultima, ", ".join(faltan_al_cierre)))
+            print("ROJO: %d arnes(es) que el censo VE y que la nomina NO tiene, "
+                  "nacidos en la vuelta %d o despues, se quedan FUERA. La regla "
+                  "escrita en este mismo fichero desde la vuelta 148 dice que UN "
+                  "ARNES ENTRA EN LA NOMINA, y el acta 176 punto 7.2 acepto que "
+                  "entre EN SU MISMA VUELTA. La lista entera: %s"
+                  % (len(faltan_al_cierre), VARA_DEL_CENSO,
+                     ", ".join(faltan_al_cierre)))
         if perdidas or no_mordio or no_reprod:
             print("ROJO: %d con el ancla perdida, %d que no mordieron y %d cuya salida "
                   "sellada NO SE REPITE." % (len(perdidas), len(no_mordio), len(no_reprod)))
@@ -1557,9 +1877,10 @@ def main():
               "tramos. Lo que SI cubre entero este tramo es la mirada de la nomina "
               "sobre si misma: sus %d entradas son TODAS visibles al censo y NINGUN "
               "fichero de scripts/loop/ con nombre `vuelta<N>...<familia>...py` "
-              "(familias: %s) posterior a la vuelta %s se queda fuera de la nomina."
+              "(familias: %s) de la vuelta %d o posterior se queda fuera de la nomina."
               % (a.tramo, len(tramos), len(filas), len(VIEJAS) - len(filas),
-                 len(tramos), len(VIEJAS), ", ".join(FAMILIAS_DE_ARNES), _ultima))
+                 len(tramos), len(VIEJAS), ", ".join(FAMILIAS_DE_ARNES),
+                 VARA_DEL_CENSO))
         print("FIN")
         return 0
 
@@ -1572,10 +1893,13 @@ def main():
     print("VERDE: las %d mutaciones viejas corren, muerden, sus salidas selladas "
           "salen IDENTICAS en dos corridas seguidas, las %d entradas de la nomina "
           "son TODAS visibles al censo, y NINGUN fichero de scripts/loop/ con nombre "
-          "`vuelta<N>...<familia>...py` (familias: %s) posterior a la vuelta %s se "
+          "`vuelta<N>...<familia>...py` (familias: %s) de la vuelta %d o posterior se "
           "queda fuera de la nomina. Un arnes con un nombre de OTRA familia seguiria "
-          "sin verse, y por eso la comprobacion de visibilidad de la nomina es ROJO."
-          % (len(filas), len(VIEJAS), ", ".join(FAMILIAS_DE_ARNES), _ultima))
+          "sin verse, y por eso la comprobacion de visibilidad de la nomina es ROJO. "
+          "Los anteriores a la vara %d NO se reclaman, y el motivo esta escrito donde "
+          "la vara: la 164 los midio y los adjudico fuera."
+          % (len(filas), len(VIEJAS), ", ".join(FAMILIAS_DE_ARNES), VARA_DEL_CENSO,
+             VARA_DEL_CENSO))
     print("FIN")
     return 0
 

@@ -1,0 +1,75 @@
+==============================================================================
+PRUEBA DE MUTACION DE LA MIRADA DE LA NOMINA SOBRE SI MISMA
+(vuelta 163, TAREA 2; adjudicacion 6.8 del acta 162)
+==============================================================================
+
+A) EL DIRECTORIO FABRICADO Y LA NOMINA FABRICADA
+   ficheros: vuelta100_tarea1_mutacion_vieja.py, vuelta110_tarea2_mutacion_dentro.py, vuelta115_tarea9_un_script_cualquiera.py, vuelta120_tarea3_mutacion_fuera.py, vuelta121_tarea4_mutacion_tambien_fuera.py
+   nomina:   vuelta100_tarea1_mutacion_vieja.py, vuelta110_tarea2_mutacion_dentro.py
+   CIFRA arneses que el censo reconoce: 4 (vuelta100_tarea1_mutacion_vieja.py, vuelta110_tarea2_mutacion_dentro.py, vuelta120_tarea3_mutacion_fuera.py, vuelta121_tarea4_mutacion_tambien_fuera.py)
+
+B) LA MIRADA, CON DOS FUERA DE LA NOMINA
+   (LA VARA VA EXPLICITA EN CADA LLAMADA DESDE LA VUELTA 178: este
+   directorio es de mentira y sus vueltas son de mentira, asi que la
+   vara real, 148, no le vale. Pasarla a mano es lo que la hace
+   auditable; antes vivia escondida en un signo de comparacion)
+   ultima vuelta de la nomina: 110
+   CIFRA que faltan: 2 (vuelta120_tarea3_mutacion_fuera.py, vuelta121_tarea4_mutacion_tambien_fuera.py)
+
+C) SI ENTRAN EN LA NOMINA, DEJA DE FALTAR NADIE
+   CIFRA que faltan tras meterlos: 0
+
+D) LOS ANTERIORES A LA VARA DEL CENSO NO SE RECLAMAN, Y SE DICE POR QUE
+   (CAMBIA EN LA VUELTA 178, Y NO SE BORRA DE QUE IBA. La version
+   vieja de este caso protegia a los anteriores a LA ULTIMA VUELTA DE
+   LA NOMINA, que es justo el filtro que la 178 tumba por ciego. Lo
+   que de verdad protege a los viejos es LA VARA DEL CENSO, que tiene
+   nombre y motivo: la 164 los midio con CORTE = 148 y los adjudico
+   fuera. Aqui la vara se pone en 121 sobre el directorio fabricado
+   para probar la MISMA conducta con la palanca correcta)
+   con la vara en 120, faltan: 0 (ninguno)
+
+D.2) Y LOS HERMANOS DE LA MISMA VUELTA QUE LA ULTIMA DE LA NOMINA
+     SI SE RECLAMAN, QUE ES LO QUE LA 177 DEMOSTRO QUE FALTABA
+     la nomina llega a la vuelta 110 y hay un arnes de la 110 fuera
+     CIFRA que faltan ahora: 3 (vuelta110_tarea9_mutacion_hermana.py, vuelta120_tarea3_mutacion_fuera.py, vuelta121_tarea4_mutacion_tambien_fuera.py)
+
+E) Y SOBRE EL REPO DE VERDAD, HOY
+   (EL CASO SE RE-FUNDA EN LA VUELTA 178, Y SE DICE POR QUE. El caso
+   viejo exigia que en el repo de hoy no faltara NINGUNO, y eso era
+   una expectativa sobre el estado del repo, no sobre la conducta de
+   la funcion: el dia que falte uno de verdad, ese caso cae sin que
+   nada este roto. El caso nuevo comprueba LO QUE LA FUNCION HACE,
+   re-derivando su resultado por conjuntos SIN LLAMARLA, que es lo
+   unico que un caso puede comprobar de una funcion)
+   ultima vuelta de la nomina real: 178
+   vara del censo: 148
+   CIFRA que la funcion dice que faltan: 2 (vuelta150_2d_simular_op_c_05.py, vuelta160_tarea3b_caso_positivo.py)
+   CIFRA re-derivada aqui por conjuntos, sin llamarla: 2
+
+   P.16: el temporal se retira. Existe todavia: False
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   el_censo_no_cuenta_lo_que_no_es_arnes          PASA   (real=4 esperado=4)
+   la_ultima_vuelta_se_computa_de_la_nomina       PASA   (real=110 esperado=110)
+   y_ve_LOS_DOS_que_faltan                        PASA   (real=['vuelta120_tarea3_mutacion_fuera.py', 'vuelta121_tarea4_mutacion_tambien_fuera.py'] esperado=['vuelta120_tarea3_mutacion_fuera.py', 'vuelta121_tarea4_mutacion_tambien_fuera.py'])
+   metidos_en_la_nomina_ya_no_faltan              PASA   (real=0 esperado=0)
+   los_anteriores_a_la_vara_no_se_reclaman        PASA   (real=0 esperado=0)
+   ve_al_hermano_de_la_misma_vuelta               PASA   (real=True esperado=True)
+   la_funcion_calza_con_su_re_derivacion          PASA   (real=['vuelta150_2d_simular_op_c_05.py', 'vuelta160_tarea3b_caso_positivo.py'] esperado=['vuelta150_2d_simular_op_c_05.py', 'vuelta160_tarea3b_caso_positivo.py'])
+   la_nomina_entera_es_visible_al_censo           PASA   (real=0 esperado=0)
+   CIFRA casos: 8 | pasan: 8 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   el_censo_no_cuenta_lo_que_no_es_arnes          CAE
+   la_ultima_vuelta_se_computa_de_la_nomina       CAE
+   y_ve_LOS_DOS_que_faltan                        CAE
+   metidos_en_la_nomina_ya_no_faltan              CAE
+   los_anteriores_a_la_vara_no_se_reclaman        CAE
+   ve_al_hermano_de_la_misma_vuelta               CAE
+   la_funcion_calza_con_su_re_derivacion          CAE
+   la_nomina_entera_es_visible_al_censo           CAE
+   CIFRA casos que CAEN: 8 de 8
+
+VERDE DE LA MUTACION: 8 casos, los 8 pasan y los 8 CAEN al mutarles el valor esperado. La mirada VE los que faltan, deja de verlos cuando entran, NO reclama los anteriores a LA VARA DEL CENSO (148), SI VE al hermano de la misma vuelta que la ultima de la nomina, y sobre el repo de hoy su resultado calza byte a byte con su re-derivacion por conjuntos.
+FIN

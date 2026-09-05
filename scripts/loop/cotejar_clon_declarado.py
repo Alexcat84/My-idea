@@ -20,10 +20,11 @@ que PUBLICABA (el diff sale vacio) era falso.
 
 DE AHI SALEN LAS DOS COSAS QUE ESTE FICHERO HACE Y QUE UN `diff` pelado no hace:
 
-  1. TRES VEREDICTOS SEPARADOS Y NO UNO. `FICHERO ENTERO`, `SOLO DOCSTRING` y
-     `SOLO LA MAQUINA`. Un clon declarado casi nunca es identico entero (el
-     docstring cuenta de que va la vuelta, y debe contarlo), asi que un unico
-     veredicto sobre el fichero entero no responde la pregunta que se hace.
+  1. CUATRO VEREDICTOS SEPARADOS Y NO UNO. `FICHERO ENTERO`, `SOLO DOCSTRING`,
+     `SOLO LA MAQUINA` y, desde la vuelta 178, `EL ARBOL DE SINTAXIS`. Un clon
+     declarado casi nunca es identico entero (el docstring cuenta de que va la
+     vuelta, y debe contarlo), asi que un unico veredicto sobre el fichero
+     entero no responde la pregunta que se hace.
   2. LA CLASIFICACION DE LO QUE DIFIERA EN LA MAQUINA, en SENTENCIAS DE CODIGO
      y LITERALES DE TEXTO, que es LA DISTINCION QUE AQUI DECIDE SI UN CLON ES UN
      CLON. Cambiar el texto que un script imprime no es cambiar el script;
@@ -49,6 +50,31 @@ verlo como el mismo trozo de texto. POR TOKEN NO PASA NINGUNA DE LAS DOS COSAS:
 una cadena de veinte lineas es UN token, y normalizada vale `<TEXTO>` a los dos
 lados mida lo que mida.
 
+EL CUARTO VEREDICTO, Y POR QUE NACE (vuelta 178, TAREA 1.c; adjudicacion del
+acta 177 punto 7.7). El auditor conto A OJO las diferencias del par del acta 176
+y publico SENTENCIAS DE CODIGO 0; este instrumento, corrido, dice 1. Los dos
+tenian razon, y ese es justo el problema: EL INSTRUMENTO MIDE LINEAS POR RESIDUO
+TEXTUAL Y SE LE PEDIA UNA CONCLUSION SOBRE COMPORTAMIENTO. La unica sentencia
+que sobrevivia a tapar cadenas y comentarios era UNA COMA FINAL, que mueve un
+token y no mueve nada mas.
+
+LA CLASIFICACION VIEJA NO SE TOCA Y SIGUE PUBLICANDO SU 1. Meterle una excepcion
+para comas seria decidir a ojo, dentro del instrumento, LA DISTINCION QUE AQUI
+DECIDE SI UN CLON ES UN CLON. Lo que se anade es una vara distinta AL LADO: el
+ARBOL DE SINTAXIS, comparado con `ast` tras la misma sustitucion de numeros de
+vuelta. Nadie lo escribe a ojo, y una coma final no mueve un AST.
+
+Y VA EN DOS MITADES, POR EL MISMO MOTIVO QUE LOS TRES DE ARRIBA: `AST DEL
+FICHERO ENTERO` y `AST SIN EL DOCSTRING`. El docstring de un clon cambia
+siempre, asi que un unico AST sobre el fichero entero diria DIFIERE en todos los
+clones reales. Cuando difieren, se publica CUANTOS NODOS Y DE QUE TIPO, no un
+DIFIERE pelado.
+
+CAE EN ROJO SI UN FICHERO NO PARSEA, y lo dice con su linea. Es la segunda
+condicion de rojo por defecto, al lado de "falta un fichero": sin arbol no hay
+cuarto veredicto, y publicar tres de cuatro como si fueran cuatro seria comerse
+un `SyntaxError` en silencio.
+
 SI UN FICHERO NO SE PUEDE TOKENIZAR, LA CLASIFICACION NO SE INVENTA: se dice en
 voz alta que no hay clasificacion y por que, y eso ES el resultado. Un
 instrumento que se calla cuando no puede medir es peor que no tenerlo (banco 9,
@@ -61,9 +87,9 @@ la 177 que menciona la 176 tiene que normalizarse igual que el de la 176 que
 menciona su propio numero. Sustituir solo el propio dejaria diferencias de
 mentira en cada referencia cruzada.
 
-CAE EN ROJO (exit 1) SI LE FALTA UN FICHERO, que es la unica condicion de rojo
-por defecto: que los dos difieran NO es un fallo, es el veredicto que se venia a
-buscar.
+CAE EN ROJO (exit 1) SI LE FALTA UN FICHERO O SI UN FICHERO NO PARSEA, que son
+sus dos condiciones de rojo por defecto: que los dos difieran NO es un fallo, es
+el veredicto que se venia a buscar.
 
 Y HAY DOS CARRILES QUE BLOQUEAN, NO UNO, PORQUE EL PRIMERO QUE ESCRIBI NO SERVIA
 PARA LO QUE ESTE FICHERO EXISTE. `--exigir-maquina-identica` enrojece en cuanto
@@ -74,11 +100,14 @@ es `--exigir-codigo-identico`, que enrojece solo si difiere una SENTENCIA DE
 CODIGO, o sea exactamente lo que un clon declarado promete. Los dos se quedan y
 cada uno dice para que es.
 
-SU CASO POSITIVO POR MUTACION es
+SUS CASOS POSITIVOS POR MUTACION SON DOS, y ninguno sustituye al otro:
 `scripts/loop/vuelta177_tarea1d_mutacion_cotejo.py`, que le fabrica clones de
 mentira en un directorio temporal (identicos, distintos solo en el docstring,
 distintos solo en una cadena, distintos en una llamada de verdad) y exige que
-los tres veredictos y la clasificacion salgan como tienen que salir en cada uno.
+los tres veredictos de lineas y la clasificacion salgan como tienen que salir en
+cada uno; y `scripts/loop/vuelta178_tarea1c_mutacion_ast.py`, que prueba el
+cuarto veredicto e incluye EL CASO QUE LO DECIDE TODO: dos ficheros que solo se
+diferencian en UNA COMA FINAL tienen que dar maquina DIFIERE y AST IDENTICO.
 
 A PARTIR DE LA VUELTA 178, NINGUN REPORTE ESCRIBE "CLON DECLARADO" SIN PEGAR LA
 SALIDA DE ESTE FICHERO.
@@ -181,6 +210,72 @@ def lineas_de_tokens(flujo, indices):
     return tocadas
 
 
+def arbol_de_sintaxis(texto):
+    """EL ARBOL DE SINTAXIS DEL TEXTO. Devuelve (arbol, None) o (None, motivo).
+    PURA: no lee ni escribe nada.
+
+    EL MOTIVO LLEVA SU LINEA SIEMPRE QUE PYTHON LA DE, y esa es la mitad del
+    valor de este veredicto: un instrumento que se come un `SyntaxError` en
+    silencio miente (banco 9, fallar ruidoso), y uno que lo canta sin decir
+    DONDE obliga a buscarlo a mano."""
+    try:
+        return ast.parse(texto), None
+    except (SyntaxError, ValueError) as e:
+        linea = getattr(e, "lineno", None)
+        return None, ("%s%s: %s"
+                      % (type(e).__name__,
+                         (" en la linea %d" % linea) if linea else "",
+                         getattr(e, "msg", None) or e))
+
+
+def sin_docstring_de_modulo(arbol):
+    """EL CUERPO DEL MODULO SIN SU DOCSTRING. Devuelve un `ast.Module` nuevo.
+    PURA.
+
+    POR QUE HACE FALTA, Y NO ES UN CAPRICHO: el docstring de un clon declarado
+    CAMBIA SIEMPRE, porque cuenta de que va la vuelta y debe contarlo. Un unico
+    veredicto de AST sobre el fichero entero diria DIFIERE en todos los clones
+    reales y no responderia la pregunta que se hace. Por eso este fichero
+    publica LOS DOS arboles, el entero y el de la maquina, igual que ya publica
+    el fichero entero y la maquina por separado en los tres veredictos de
+    lineas."""
+    cuerpo = list(arbol.body)
+    if cuerpo:
+        n0 = cuerpo[0]
+        if (isinstance(n0, ast.Expr) and isinstance(n0.value, ast.Constant)
+                and isinstance(n0.value.value, str)):
+            cuerpo = cuerpo[1:]
+    return ast.Module(body=cuerpo, type_ignores=list(arbol.type_ignores))
+
+
+def huella_de_arbol(arbol):
+    """EL VOLCADO CANONICO DEL ARBOL, SIN POSICIONES. PURA.
+
+    `include_attributes=False` deja fuera lineas y columnas a proposito: mover
+    una sentencia de linea no cambia lo que el programa hace, y este veredicto
+    mide exactamente eso."""
+    return ast.dump(arbol, annotate_fields=True, include_attributes=False)
+
+
+def censo_de_nodos(arbol):
+    """{tipo_de_nodo: cuantos}. PURA. Es lo que permite decir CUANTOS NODOS Y DE
+    QUE TIPO cuando los dos arboles difieren, en vez de un DIFIERE pelado."""
+    cuenta = {}
+    for n in ast.walk(arbol):
+        k = type(n).__name__
+        cuenta[k] = cuenta.get(k, 0) + 1
+    return cuenta
+
+
+def diferencia_de_censos(ca, cb):
+    """[(tipo, cuantos_en_a, cuantos_en_b)] SOLO de los tipos que no empatan,
+    ordenado por el tamano de la diferencia. PURA."""
+    tipos = set(ca) | set(cb)
+    filas = [(t, ca.get(t, 0), cb.get(t, 0)) for t in tipos
+             if ca.get(t, 0) != cb.get(t, 0)]
+    return sorted(filas, key=lambda f: (-abs(f[1] - f[2]), f[0]))
+
+
 def rango_del_docstring(texto):
     """LOS INDICES (base 0) DE LAS LINEAS DEL DOCSTRING DE MODULO, como set.
 
@@ -252,6 +347,30 @@ def cotejar(texto_a, texto_b, numeros):
     r["docstring_identico"] = ([t for _n, t in da] == [t for _n, t in db])
     r["maquina_identica"] = ([t for _n, t in ma] == [t for _n, t in mb])
 
+    # EL CUARTO VEREDICTO: EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c;
+    # adjudicacion del acta 177 punto 7.7). Los tres de arriba miden LINEAS y
+    # TOKENS, y a una conclusion sobre COMPORTAMIENTO le falta una vara que no
+    # dependa del formato. Una coma final mueve un token y NO mueve un AST.
+    aa, mot_aa = arbol_de_sintaxis(na)
+    ab, mot_ab = arbol_de_sintaxis(nb)
+    r["ast_no_parsea"] = ([("A", mot_aa)] if mot_aa else []) + \
+                         ([("B", mot_ab)] if mot_ab else [])
+    if aa is None or ab is None:
+        r["ast_hay"] = False
+        r["ast_identico_entero"] = None
+        r["ast_identico_maquina"] = None
+        r["ast_censo_distinto"] = []
+        r["ast_nodos_a"], r["ast_nodos_b"] = None, None
+    else:
+        r["ast_hay"] = True
+        r["ast_identico_entero"] = (huella_de_arbol(aa) == huella_de_arbol(ab))
+        sa, sb = sin_docstring_de_modulo(aa), sin_docstring_de_modulo(ab)
+        r["ast_identico_maquina"] = (huella_de_arbol(sa) == huella_de_arbol(sb))
+        censo_a, censo_b = censo_de_nodos(sa), censo_de_nodos(sb)
+        r["ast_nodos_a"] = sum(censo_a.values())
+        r["ast_nodos_b"] = sum(censo_b.values())
+        r["ast_censo_distinto"] = diferencia_de_censos(censo_a, censo_b)
+
     # EL DIFF CRUDO DE LA MAQUINA
     ia, ib = indices_que_difieren([t for _n, t in ma], [t for _n, t in mb])
     r["maquina_difieren_a"] = sorted(ia)
@@ -307,10 +426,38 @@ def imprimir(r, ruta_a, ruta_b, numeros):
     p("  CIFRA lineas de maquina:   A %d | B %d"
       % (r["lineas_maquina_a"], r["lineas_maquina_b"]))
     p("")
-    p("LOS TRES VEREDICTOS, SEPARADOS Y NO UNO")
+    p("LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO")
     p("  1) FICHERO ENTERO  : %s" % ("IDENTICO" if r["entero_identico"] else "DIFIERE"))
     p("  2) SOLO DOCSTRING  : %s" % ("IDENTICO" if r["docstring_identico"] else "DIFIERE"))
     p("  3) SOLO LA MAQUINA : %s" % ("IDENTICO" if r["maquina_identica"] else "DIFIERE"))
+    p("  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden")
+    p("     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que")
+    p("     el programa hace'. Una coma final mueve un token y NO mueve un AST.")
+    if not r.get("ast_hay"):
+        p("     NO HAY VEREDICTO DE AST, y se dice en vez de inventarlo:")
+        for lado, motivo in r.get("ast_no_parsea") or []:
+            p("        %s: %s" % (lado, motivo))
+        p("     UN FICHERO QUE NO PARSEA ES ROJO EN ESTE INSTRUMENTO.")
+    else:
+        p("     4.a) AST DEL FICHERO ENTERO   : %s"
+          % ("IDENTICO" if r["ast_identico_entero"] else "DIFIERE"))
+        p("     4.b) AST SIN EL DOCSTRING     : %s"
+          % ("IDENTICO" if r["ast_identico_maquina"] else "DIFIERE"))
+        p("     CIFRA nodos del arbol sin docstring: A %d | B %d"
+          % (r["ast_nodos_a"], r["ast_nodos_b"]))
+        if r["ast_identico_maquina"]:
+            p("     LOS DOS ARBOLES SON EL MISMO ARBOL. Lo que difiera en lineas o")
+            p("     en tokens NO CAMBIA LO QUE EL PROGRAMA HACE.")
+        else:
+            filas = r["ast_censo_distinto"]
+            p("     CIFRA tipos de nodo que NO empatan: %d" % len(filas))
+            for tipo, na_, nb_ in filas:
+                p("        %-22s A %5d | B %5d | diferencia %+d"
+                  % (tipo, na_, nb_, nb_ - na_))
+            if not filas:
+                p("        (ninguno: los censos por tipo empatan y aun asi los")
+                p("        arboles difieren, o sea que lo que cambia es el VALOR de")
+                p("        algun nodo y no cuantos hay)")
     p("")
     if r["maquina_identica"]:
         p("LA MAQUINA NO CAMBIA EN NADA, Y ESTA MEDIDO Y NO AFIRMADO.")
@@ -387,6 +534,18 @@ def main():
 
     r = cotejar(ta, tb, (a.num_a, a.num_b))
     imprimir(r, a.a, a.b, (a.num_a, a.num_b))
+
+    # ROJO SI UN FICHERO NO PARSEA (vuelta 178, TAREA 1.c). Es la segunda
+    # condicion de rojo por defecto de este instrumento, al lado de "falta un
+    # fichero", y por el mismo motivo: sin poder construir el arbol NO HAY
+    # CUARTO VEREDICTO, y un instrumento que se come un SyntaxError en silencio
+    # publica tres veredictos de cuatro como si fueran los cuatro.
+    if r.get("ast_no_parsea"):
+        print("ROJO: %d fichero(s) no parsean y sin arbol no hay cuarto veredicto."
+              % len(r["ast_no_parsea"]))
+        for lado, motivo in r["ast_no_parsea"]:
+            print("   %s: %s" % (lado, motivo))
+        return 1
 
     if a.exigir and not r["maquina_identica"]:
         print("ROJO POR --exigir-maquina-identica: la maquina difiere en %d linea(s)."
