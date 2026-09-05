@@ -1,0 +1,66 @@
+TODA RUTA QUE EL REPORTE PUBLICA COMO PRUEBA ES UNA CIFRA PUBLICADA
+(AUDITOR.md 4, letra del 5 sep 2026). Si apunta a un fichero inexistente o
+de CERO BYTES es CAIDA DE CIFRA. Se comprueban TODAS antes de commitear.
+
+fichero contado: docs/loop/REPORTE.md
+CIFRA rutas distintas que el reporte nombra entre acentos graves: 54
+
+    4051967 B  docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+    4149203 B  docs/loop/ACTA_AUDITOR.md
+      48065 B  docs/loop/REPORTE.md
+      26912 B  docs/loop/SALIDA_V180_APERTURA.txt
+         41 B  docs/loop/SALIDA_V180_HEAD_APERTURA.txt
+       1299 B  docs/loop/SALIDA_V180_T1B_ETIQUETA_DESPUES.txt
+       2111 B  docs/loop/SALIDA_V180_T1B_MUTACION_ETIQUETA.txt
+      31080 B  docs/loop/SALIDA_V180_T1B_TRIANGULOS.txt
+       8215 B  docs/loop/SALIDA_V180_T2A_DECLARAR.txt
+       2193 B  docs/loop/SALIDA_V180_T2A_GUARDA_TRAS_DECLARAR.txt
+       3586 B  docs/loop/SALIDA_V180_T2B_CONGELACION.txt
+       1210 B  docs/loop/SALIDA_V180_T2B_RELECTURA.txt
+       1665 B  docs/loop/SALIDA_V180_T2C_GUARDA_DESPUES.txt
+       2213 B  docs/loop/SALIDA_V180_T2C_MUTACION_CABLEADO.txt
+       4128 B  docs/loop/SALIDA_V180_T2C_TRAMO_CABLEADO.txt
+       1415 B  docs/loop/SALIDA_V180_T2_NUMSTAT.txt
+       7128 B  docs/loop/SALIDA_V180_T3_BACKLOG.txt
+       6117 B  docs/loop/SALIDA_V180_T3_BARRIDO.txt
+       7357 B  docs/loop/SALIDA_V180_T3_BARRIDO_ANTES.txt
+       2085 B  docs/loop/SALIDA_V180_T3_COBERTURA.txt
+       3784 B  docs/loop/SALIDA_V180_T3_MUTACION_CORTE.txt
+       1667 B  docs/loop/SALIDA_V180_T4B_ARCHIVO_PREMATURO.txt
+       3620 B  docs/loop/SALIDA_V180_T4_MUTACION.txt
+       8831 B  docs/loop/SALIDA_V180_T5_BACKLOG_L02.txt
+       7749 B  docs/loop/SALIDA_V180_T5_BACKLOG_L02_ANTES.txt
+       3181 B  docs/loop/SALIDA_V180_T5_MUTACION.txt
+  NO EXISTE      docs/loop/reportes/REPORTE_V180.md
+      20563 B  docs/plan/LD_SALES_ROADMAP.md
+     214916 B  docs/plan/LECTURAS_DIRIGIDAS.md
+      51368 B  docs/plan/OP_L_03_LECTURAS.jsonl
+      55705 B  docs/plan/OP_L_03_TRIANGULOS.jsonl
+      20939 B  docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl
+      19473 B  scripts/loop/backlog_l02_resuelto.py
+      20671 B  scripts/loop/backlog_l03_resuelto.py
+      38947 B  scripts/loop/cerrar_reporte.py
+       5680 B  scripts/loop/guarda_de_la_fuente_del_clon.py
+       8928 B  scripts/loop/paso0_archivar_anterior.py
+       4648 B  scripts/loop/sujeto_congelado_de_git.py
+       9310 B  scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py
+      13918 B  scripts/loop/vuelta174_esqueleto_reporte.py
+      25254 B  scripts/loop/vuelta178_tarea3_anotar_triangulos.py
+       5140 B  scripts/loop/vuelta179_tarea1d_mutacion_corte.py
+       5228 B  scripts/loop/vuelta179_tarea3_etiqueta_de_fuente.py
+      26557 B  scripts/loop/vuelta180_apertura.py
+      21229 B  scripts/loop/vuelta180_esqueleto_reporte.py
+       7475 B  scripts/loop/vuelta180_tarea1b_mutacion_etiqueta.py
+       9005 B  scripts/loop/vuelta180_tarea2a_declarar_sujeto.py
+       6765 B  scripts/loop/vuelta180_tarea2b_prueba_de_congelacion.py
+       7442 B  scripts/loop/vuelta180_tarea2c_mutacion_cableado.py
+      12817 B  scripts/loop/vuelta180_tarea3_barrido_de_cortes.py
+       8159 B  scripts/loop/vuelta180_tarea3_mutacion_corte_de_tramos.py
+      11304 B  scripts/loop/vuelta180_tarea4_mutacion_texto_y_clon.py
+       9046 B  scripts/loop/vuelta180_tarea5_mutacion_backlog_l02.py
+       5158 B  scripts/vuelta16_generar_actos.mjs
+
+CIFRA rutas que NO EXISTEN: 1
+CIFRA rutas de CERO BYTES: 0
+
+ROJO: hay rutas publicadas como prueba que no se pueden abrir.

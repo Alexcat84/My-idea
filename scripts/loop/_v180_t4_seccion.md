@@ -15,8 +15,9 @@ restauro con `git checkout HEAD -- docs/loop/REPORTE.md` desde el commit de cier
 de la TAREA 3, y los dos `sha256` cotejados **calzan byte a byte**:
 `4836dc51e19092efd56d164d945eaeac4605a96ce95ca6195971c6949a9c9563` el del arbol y
 el de `HEAD`, con **3 filas que dicen CERRADA** dentro, contadas del texto. El
-archivo prematuro `docs/loop/reportes/REPORTE_V180.md` (32.854 bytes, **no
-seguido por git**, salia como `??`) **se retiro**, y se dice por que: era el
+archivo prematuro `docs/loop/reportes/REPORTE_V180.md`,
+32.854 bytes en disco y 32.854 bytes normalizados a LF, **no seguido por git**,
+salia como `??`, **se retiro**, y se dice por que: era el
 archivo de un reporte a medias, y dejarlo haria que el
 `archivar_reporte.py --vuelta 180` del cierre encontrara su destino **ya
 existente con contenido distinto**, o sea rojo.
@@ -76,8 +77,9 @@ otro instrumento, `cotejar_clon_declarado.py`.
 Va **enchufada** en `scripts/loop/vuelta180_esqueleto_reporte.py` como **PASO
 0.0**, antes del paso 0, con la fuente y la funcion declaradas en dos constantes
 del propio esqueleto. Corrida contra la fuente de verdad
-(`scripts/loop/vuelta174_esqueleto_reporte.py`, **13.918 bytes, 273 lineas, 2
-funciones definidas**) sale **VERDE**.
+(`scripts/loop/vuelta174_esqueleto_reporte.py`,
+**13.918 bytes en disco y 13.918 bytes normalizados a LF**, 273 lineas y 2
+funciones definidas) sale **VERDE**.
 
 **EL CASO POSITIVO POR MUTACION DE LAS DOS LETRAS**
 (`scripts/loop/vuelta180_tarea4_mutacion_texto_y_clon.py`, salida

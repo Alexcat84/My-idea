@@ -1,0 +1,25 @@
+EL HUECO DE LA BATERIA DE LA VUELTA 180, DECLARADO Y MEDIDO, CON SUS TRES
+PIEZAS JUNTAS (AUDITOR.md 6.1, y es la ULTIMA vuelta que lo declara).
+
+1. EL NOMBRE DEL FICHERO: docs/loop/SALIDA_V180_BATERIA.txt
+
+2. SUS BYTES, MEDIDOS POR LAS DOS CONVENCIONES:
+   existe en disco: NO
+   bytes en disco (os.path.getsize): NO EXISTE, o sea 0 bytes por no haber fichero
+   bytes en git (git cat-file -s HEAD:<ruta>): NO ESTA EN HEAD
+
+3. LA ATRIBUCION: NADIE LA CORRIO EN LA VUELTA 180, y no es un olvido.
+   La cadencia esta adjudicada en el acta 176 punto 7.8 y reconfirmada en
+   el acta 178 punto 11 y en el acta 179 punto 11: LA BATERIA CORRE CADA
+   CINCO, EN VUELTA PROPIA, Y LA PROXIMA ES LA 181. El encargo de esta
+   vuelta lo repite con todas las letras y anade que ESTA ES LA ULTIMA QUE
+   LO DECLARA. Ni el ejecutor ni el auditor la corrieron en la 180.
+
+Y LO QUE SI CORRIO DE LA BATERIA EN ESTA VUELTA, DICHO PARA NO CONFUNDIR:
+   la GUARDA DEL SUJETO CONGELADO, que corre sola con --sujeto-congelado y
+   no es la bateria. Su salida es docs/loop/SALIDA_V180_T2C_GUARDA_DESPUES.txt
+   docs/loop/SALIDA_V180_T2C_GUARDA_DESPUES.txt -> existe: SI | bytes en disco: 1665
+   y UN TRAMO de la bateria, corrido SOLO para ver el cableado en vivo:
+   docs/loop/SALIDA_V180_T2C_TRAMO_CABLEADO.txt -> existe: SI | bytes en disco: 4128
+   ESO NO ES LA BATERIA Y NO SE PUBLICA COMO TAL: son 2 entradas de 104,
+   y su propio verde dice VERDE PARCIAL DEL TRAMO 1 DE 52.

@@ -45,7 +45,7 @@ de uno.
 | `vuelta157_tarea4b_mutacion_tachado.py` | `io.open(LD).read()` sobre `docs/plan/LECTURAS_DIRIGIDAS.md` **VIVO** | blob `24bd395b0cde:docs/plan/LECTURAS_DIRIGIDAS.md`, `sha256 dda1cdd67042c733...` comprobado dentro | dos corridas, salida enmascarada identica, `sha 231f53052759b502` las dos, exit 0 y 0 |
 | `vuelta160_tarea7c_mutacion_guarda_cita.py` | `shutil.copy` de **TRES ficheros VIVOS** a un temporal, en cada corrida | `volcar_blob` de los tres blobs clavados (`7dff83ab6a17`, `24bd395b0cde`, `2743bd88faed`), los tres con su `sha256` comprobado | dos corridas, `sha 558a488b8793407f` las dos, exit 0 y 0 |
 | `vuelta150_2d_simular_op_c_05.py` | `json.load(open("dataset/metadata/master_graph.json"))` **VIVO** | blob `a34328b23a7d:dataset/metadata/master_graph.json`, `sha256 627cc662296f7f00...` comprobado | dos corridas, `sha c2951c5e99c94698` las dos, exit 0 y 0 |
-| `vuelta174_tarea1b_mutacion_esqueleto.py` | **NADA VIVO, y esto es la correccion** | lo mismo que antes: un `REPORTE.md` **fabricado por el en un `tempfile.mkdtemp`** | dos corridas, `sha 09f85ae25297d0ec` las dos, exit 0 y 0 |
+| `vuelta174_tarea1b_mutacion_esqueleto.py` | **NADA VIVO, y esto es la correccion** | lo mismo que antes: un `REPORTE.md` **fabricado por el en un `tempfile.mkdtemp`** | dos corridas, `sha 09f85ae25297d0ec` y `sha 09f85ae25297d0ec`, exit 0 y 0 |
 
 **LA CORRECCION, DECLARADA SIN BORRAR LO QUE CORRIGE** (`EJECUTOR.md` 8). El
 encargo pone `vuelta174_tarea1b_mutacion_esqueleto.py` entre los cuatro que **si
