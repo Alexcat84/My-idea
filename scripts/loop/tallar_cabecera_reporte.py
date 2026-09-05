@@ -842,6 +842,52 @@ def rama_actual(fallos):
         return None
 
 
+def buscar_acta(filas, patrones):
+    """EL COMMIT DEL ACTA, BUSCADO EN DOS PASADAS Y NUNCA INVENTADO.
+
+    FILAS es [(hash, asunto)] tal como sale de `git log`, y PATRONES son las
+    formas del titulo del acta. Devuelve (hallados, anclado), donde `anclado`
+    dice si el acierto vino de la pasada ESTRICTA.
+
+    PASADA 1, LA ESTRICTA, Y ES LA DE SIEMPRE: `p.match(asunto)`, o sea el
+    titulo AL PRINCIPIO del asunto. Mientras esta acierte, el comportamiento de
+    este fichero es byte a byte el de antes de la vuelta 171: la pasada 2 no se
+    corre siquiera.
+
+    PASADA 2, LA SUELTA, Y SOLO SI LA ESTRICTA DA CERO: `p.search(asunto)`, o
+    sea el titulo EN CUALQUIER SITIO del asunto.
+
+    POR QUE NACE LA PASADA 2 (vuelta 171, y el motivo esta medido, no supuesto).
+    El commit del acta de la vuelta 170 es `d7b18370` y su asunto es
+    `@ ACTA DE LA VUELTA 170 DEL AUDITOR: ...  @`: lleva DOS ARROBAS SUELTAS,
+    una delante del titulo y otra al final, por sintaxis de PowerShell colada en
+    bash. Eso esta declarado como CAIDA 4 de la vuelta 170 en el commit
+    `0caca89f`, que dice ademas que *"el texto es correcto y no se reescribe la
+    rama"*. La consecuencia mecanica que aquella declaracion no midio es esta:
+    **el patron anclado deja de casar, y con el se cae la fila de identidad de
+    la cabecera de la vuelta 171 entera**. Medido: de 400 asuntos, los que
+    EMPIEZAN por el titulo son **0** y los que lo CONTIENEN son **1**.
+
+    ES EL MISMO REMEDIO Y EL MISMO MOTIVO QUE LA SEGUNDA FORMA DEL TITULO
+    (vuelta 106, el acta que empezo a titularse `ACTA DEL AUDITOR, VUELTA N`):
+    la casa no reescribe la historia, adapta la busqueda.
+
+    LO QUE NO SE AFLOJA, Y ES LO QUE HACE QUE ESTO SIGA SIENDO UNA GUARDA: la
+    pasada 2 exige IGUAL exactamente UN acierto. Cero sigue siendo ROJO y dos
+    siguen siendo ROJO. Nunca se inventa un hash y nunca se elige entre dos."""
+    anclados = [(h, s) for h, s in filas if any(p.match(s) for p in patrones)]
+    if anclados:
+        return anclados, True
+    # EL ANCLA SE QUITA DEL PATRON, NO SE CAMBIA match POR search: los patrones
+    # de la casa llevan `^` ESCRITO DENTRO, asi que un `search` sobre ellos
+    # seguiria exigiendo el principio de la cadena y esta pasada no serviria de
+    # nada. Se recompila cada patron sin su `^` de cabeza y el resto se respeta
+    # entero, incluidos sus `\b`.
+    sueltos_pat = [re.compile(p.pattern.lstrip("^")) for p in patrones]
+    sueltos = [(h, s) for h, s in filas if any(p.search(s) for p in sueltos_pat)]
+    return sueltos, False
+
+
 def commit_apertura_desde_git(vuelta, rama, fallos):
     """EL COMMIT DE APERTURA, LEIDO DE GIT (escalada del 26 ago 2026, vuelta
     80): busca en `git log` de RAMA el commit cuyo mensaje EMPIEZA por 'ACTA
@@ -874,17 +920,28 @@ def commit_apertura_desde_git(vuelta, rama, fallos):
         re.compile(r"^ACTA DE LA VUELTA %d DEL AUDITOR\b" % (vuelta - 1)),
         re.compile(r"^ACTA DEL AUDITOR,\s*VUELTA %d\b" % (vuelta - 1)),
     ]
-    hallados = []
+    filas = []
     for linea in r.stdout.splitlines():
         if "\x01" not in linea:
             continue
-        h, s = linea.split("\x01", 1)
-        if any(p.match(s) for p in patrones):
-            hallados.append((h, s))
+        filas.append(linea.split("\x01", 1))
+    hallados, anclado = buscar_acta(filas, patrones)
+    if hallados and not anclado:
+        # LA TERCERA FORMA, Y ES RUIDO Y NO UN TITULO NUEVO (vuelta 171). Se
+        # dice a gritos porque es lo contrario de tallar en silencio.
+        print("  DECLARADO: el patron ANCLADO no casa con ningun asunto, y el commit del")
+        print("  acta %d se localiza por busqueda NO ANCLADA, con exactamente 1 acierto."
+              % (vuelta - 1))
+        print("  MOTIVO MEDIDO: su asunto lleva ruido DELANTE del titulo. Es la caida")
+        print("  4 de la vuelta 170, declarada en el commit 0caca89f: dos arrobas sueltas")
+        print("  por sintaxis de PowerShell colada en bash. El texto del acta es correcto")
+        print("  y la rama no se reescribe; lo que se adapta es la BUSQUEDA, que sigue")
+        print("  leyendo de git y sigue exigiendo UN SOLO acierto.")
+        print("  asunto real hallado: %s" % hallados[0][1][:120])
     if not hallados:
         fallos.append("git log de la rama %s no trae ningun commit 'ACTA DE LA VUELTA %d "
-                      "DEL AUDITOR' ni 'ACTA DEL AUDITOR, VUELTA %d': no se talla el commit "
-                      "de apertura" % (rama, vuelta - 1, vuelta - 1))
+                      "DEL AUDITOR' ni 'ACTA DEL AUDITOR, VUELTA %d', ni anclado ni suelto: "
+                      "no se talla el commit de apertura" % (rama, vuelta - 1, vuelta - 1))
         return None, None
     if len(hallados) > 1:
         fallos.append("git log de la rama %s trae %d commits 'ACTA DE LA VUELTA %d DEL "

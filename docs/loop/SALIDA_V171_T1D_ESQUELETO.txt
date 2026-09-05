@@ -1,0 +1,37 @@
+PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+   el esqueleto va a PISAR docs/loop/REPORTE.md
+   archivar_reporte.py --vuelta 170 -> EXIT 0
+      | ==============================================================================
+      | ARCHIVADOR DE REPORTES. Vuelta 170.
+      | El texto se lee de git, no del arbol de trabajo.
+      | ==============================================================================
+      |   commit elegido solo (ultimo que toco la ruta): ca55afd823c1b7085c5b11244a86ca8b66338260
+      |   asunto de ese commit: 2026-09-04 23:35:15 -0400	TAREA 1.b: EL REPORTE DE LA VUELTA 170 QUEDA CERRADO, Y ESTE COMMIT SI TOCA REPORTE.md
+      |   vuelta LEIDA de la cabecera del texto: 170
+      |   el destino docs/loop/reportes/REPORTE_V170.md YA EXISTE con contenido IDENTICO (sha256 0b85f30e9c78)
+      |   VERDE.
+      |      vuelta            170
+      |      commit de origen  ca55afd823c1b7085c5b11244a86ca8b66338260
+      |      ruta de origen    docs/loop/REPORTE.md
+      |      destino           docs/loop/reportes/REPORTE_V170.md
+      |      bytes             45706
+      |      lineas            729
+      |      sha256 (LF)       0b85f30e9c78e2b4d59e19deb9aa30d61d3724800bd54e7309246fb405bd1e16
+   docs/loop/reportes/REPORTE_V170.md -> 45706 bytes, sha256 0b85f30e9c78e2b4
+   vuelta leida de la cabecera del archivo: 170
+   el reporte que se va a pisar -> 45706 bytes, sha256 0b85f30e9c78e2b4
+   LOS DOS sha256 CALZAN: lo que se va a pisar ya esta guardado
+   VERDE: el reporte anterior esta archivado y lo que se va a
+   pisar esta guardado byte a byte. El esqueleto puede escribir.
+
+DECLARADO: el commit del acta 170 NO empieza por su titulo; se localiza
+   por busqueda NO ANCLADA, con exactamente 1 acierto. Su asunto real,
+   con el ruido y todo, es el que se publica en la identidad.
+ESQUELETO ESCRITO: docs/loop/REPORTE.md (4794 bytes, 62 lineas)
+   rama leida de git: pasada-unica
+   acta 170 leida de git log: d7b18370  @ ACTA DE LA VUELTA 170 DEL AUDITOR: LAS CINCO TAREAS REPRODUCEN AL DI
+   HEAD de apertura leido del sello: 0caca89f
+   nacimiento del bloque de apertura, --diff-filter=A: ce1e3aa3
+   celdas ilegibles que el tallador imprime HOY: 19
+   de ellas, del lado APERTURA: 0
+   filas de tarea abiertas: 5

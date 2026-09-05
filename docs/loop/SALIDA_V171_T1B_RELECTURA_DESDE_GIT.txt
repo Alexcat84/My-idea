@@ -1,0 +1,30 @@
+=== RELECTURA AL DOBLE, PIEZA 1 (EL REPORTE CERRADO), LEIDA DE GIT DESPUES DE COMMITEAR ===
+commit leido: ca55afd823c1b7085c5b11244a86ca8b66338260
+asunto: TAREA 1.b: EL REPORTE DE LA VUELTA 170 QUEDA CERRADO, Y ESTE COMMIT SI TOCA REPORTE.md
+--- git show --stat --format= HEAD ---
+ docs/loop/REPORTE.md                               | 217 +++++++++++++-
+ docs/loop/SALIDA_V171_T1B_CERRAR_REPORTE_170.txt   |  82 ++++++
+ .../loop/SALIDA_V171_T1B_COMPARAR_CABECERA_170.txt |  26 ++
+ .../loop/vuelta171_tarea1b_cerrar_reporte_170.py   | 321 +++++++++++++++++++++
+ 4 files changed, 637 insertions(+), 9 deletions(-)
+REPORTE.md entre los ficheros del commit: 1
+
+--- LO QUE GIT GUARDA, MEDIDO DE GIT Y NO DEL ARBOL ---
+lineas: 729 | bytes: 45706
+primera linea: # REPORTE DE LA VUELTA 170 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+secciones ## que trae: 10
+   el veredicto ya no dice SIN ESCRIBIR TODAVIA               PASA   (real=0 esperado=0)
+   el hueco PENDIENTE DE TALLAR ya no esta                    PASA   (real=0 esperado=0)
+   secciones 3 a 9, las siete                                 PASA   (real=7 esperado=7)
+   discutibles D.n                                            PASA   (real=8 esperado=8)
+   caidas numeradas                                           PASA   (real=4 esperado=4)
+   caida sin numero (UNA QUINTA)                              PASA   (real=1 esperado=1)
+   filas DENTRO del bloque de cabecera tallada                PASA   (real=11 esperado=11)
+   filas del bloque que salen del fichero del tallador        PASA   (real=11 esperado=11)
+   la seccion 9 dice NO CORRIO                                PASA   (real=1 esperado=1)
+   la seccion 9 no cuela ninguna bateria de la 171            PASA   (real=0 esperado=0)
+   el borrador entero, byte a byte dentro del commiteado      PASA   (real=True esperado=True)
+   CIFRA comprobaciones: 11 | fallan: 0
+   sha256 del borrador: 6dc8c7bb9396ec7a
+
+VERDE

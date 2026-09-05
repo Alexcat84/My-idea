@@ -1,63 +1,3 @@
-# REPORTE DE LA VUELTA 171 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
-
-> **ESTE REPORTE SE ABRIO AL EMPEZAR LA VUELTA Y CRECE POR ANEXION** (`EJECUTOR.md`
-> 1, "EL REPORTE ABRE CON LA VUELTA"). El esqueleto lo tallo
-> `scripts/loop/vuelta171_esqueleto_reporte.py`; cada tarea ANEXA SU FILA AL
-> CERRARSE, no al final; y el cierre talla la cabecera. **Si esta vuelta se corta,
-> lo que quede aqui es lo que de verdad se hizo, y las filas que sigan diciendo
-> ABIERTA, SIN CERRAR son las que no se hicieron.** Tope de cinco tareas, y el
-> encargo trae exactamente cinco.
->
-> **Y EL ESQUELETO YA NO PUEDE PISAR UN REPORTE SIN ARCHIVAR** (TAREA 5.a de esta
-> misma vuelta): su paso 0 corre el archivador y **se niega a escribir** si el
-> reporte anterior no esta guardado byte a byte. Esta corrida lo paso en verde
-> contra `docs/loop/reportes/REPORTE_V170.md`.
-
-**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.** Se talla al cierre, cuando
-haya de que hablar.
-
-## 0. LA IDENTIDAD Y LA CABECERA, TALLADAS Y NO TECLEADAS
-
-**LA IDENTIDAD, LEIDA DE GIT EN ESTA VUELTA** por
-`scripts/loop/vuelta171_esqueleto_reporte.py`, con
-`git rev-parse --abbrev-ref HEAD`, `git log` y `git log --diff-filter=A`, y CAE
-EN ROJO si algo no se encuentra o es ambiguo:
-
-- rama: `pasada-unica`
-- commit del acta de la vuelta 170: `d7b18370`, asunto real leido de git log:
-  '@ ACTA DE LA VUELTA 170 DEL AUDITOR: LAS CINCO TAREAS REPRODUCEN AL DIGITO, PERO LA VUELTA NO CERRO SU REPORTE Y SU PROPIO BORRADOR ENVENENO AL INSTRUMENTO QUE SOSTIENE SU PARADA. NO HAY PARADA: LA REGLA QUE EL EJECUTOR BUSCABA ESTABA ESCRITA EN EL CODIGO @'
-- HEAD real de apertura, sellado ANTES de la primera operacion en
-  `docs/loop/SALIDA_V171_HEAD_APERTURA.txt`: `0caca89f`
-- commit de nacimiento del bloque de apertura, leido con
-  `git log --diff-filter=A`: `ce1e3aa3`
-- commit de cierre: se talla al cierre. **Un reporte no puede nombrar el commit
-  que lo lleva**, porque ese commit se crea despues de escribirlo.
-
-<!-- CABECERA TALLADA -->
-**PENDIENTE DE TALLAR AL CIERRE, Y SE DICE EN VEZ DE RELLENARLA.** La tabla sale
-de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 171`. **Esta
-vuelta corrio el bloque de apertura entero ANTES de su primera operacion**, asi
-que la mitad izquierda ya se puede leer: corrido aqui, el tallador dice **"ROJO,
-19 celdas no se pudieron leer"** y de esas lineas de rojo, **0
-mencionan APERTURA**. Son todas del lado CIERRE, que al abrir todavia no existe.
-Este hueco se rellena con la tabla tallada entera cuando la vuelta cierre.
-<!-- FIN CABECERA TALLADA -->
-
-## 1. LAS CINCO TAREAS DEL ENCARGO, Y SU ESTADO
-
-<!-- TABLA DE TAREAS -->
-| tarea | que encarga | estado | donde vive la prueba |
-|---|---|---|---|
-| **TAREA 1** | BLOQUEANTE. LOS REGISTROS Y EL CIERRE QUE FALTO (1.a el acta 170 al `R.40` con su arnes de mutacion del registro, 1.b el reporte de la 170 CERRADO con la cabecera tallada pegada y sus ocho discutibles y cinco caidas sin suavizar, 1.c la seccion 9 dice que la bateria NO corrio y no se rellena con una corrida de hoy, 1.d el archivador para la 170 y este esqueleto) | **CERRADA** | `SALIDA_V171_T1A_REGISTRO_ACTA_170.txt`, `_T1A_MUTACION_REGISTRO`, `_T1B_CERRAR_REPORTE_170`, `_T1B_COMPARAR_CABECERA_170`, `_T1B_RELECTURA_DESDE_GIT`, `_T1D_ARCHIVADOR_170`, `_T1D_ESQUELETO` |
-| **TAREA 2** | BLOQUEANTE PARA LA 3. EL BORRADOR QUE ENVENENO UN INSTRUMENTO (adjudicacion 6.3): los cinco `docs/loop/_v170_t*_seccion.md` salen de `docs/` con `git mv`, sin borrar ni editar ninguno, y las dos varas del contador `LD` tienen que converger en `LD-138` o se para | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 3** | LA NUMERACION `LD`, QUE YA NO ES PARADA (adjudicacion 6.1): las 16 filas de la segunda tanda de `docs/plan/LECTURAS_DIRIGIDAS.md` ganan `LD-139` a `LD-154` POR ADICION PURA, con los numeros COMPUTADOS POR INSTRUMENTO y sin tocar una palabra de su texto | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 4** | LAS DOS DEUDAS DE REGISTRO (adjudicaciones 6.4 y 6.11): 4.a el agujero del `R.38` corregido por el carril del `9.10` con la frase vieja entera y tachada, 4.b el `81` de `docs/plan/00_INDICE.md:644` con la cifra de hoy adosada por `9.21` y sin tocar la letra vieja | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 5** | LOS TRES INSTRUMENTOS QUE FALTAN (adjudicaciones 6.6, 6.9 y 6.12): 5.a el archivador ENCHUFADO como paso 0 del esqueleto, 5.b el CENSO del campo `forma` sobre las 672 entradas del inventario, 5.c el barrido MEDIDO de los 8 pares sin leer de `la supervision de la IA` sobre las 71 fichas | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-<!-- FIN TABLA DE TAREAS -->
-
-## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
-
-<!-- ANEXO DE TAREAS -->
 ### TAREA 1 (BLOQUEANTE). LOS REGISTROS Y EL CIERRE QUE FALTO
 
 **EL ORDEN DE LA APERTURA SE INVIRTIO COMO EL ENCARGO MANDA, CON UNA SOLA
@@ -148,5 +88,3 @@ pasan, 43 caen al mutar el esperado**. Sus cinco casos nuevos son los del patron
 que el nuevo ve las dos formas (4 y 4), que **el viejo no ve ninguna vineta (0)**,
 que no casa con negritas que no son de caida (0 de 4 senuelos), y que el titulo
 de una caida con vineta sale **sin el guion de lista pegado**.
-
-<!-- FIN ANEXO DE TAREAS -->
