@@ -1,0 +1,121 @@
+==============================================================================
+LO QUE EL ARCHIVO YA DICE DE CADA PAR POR UN TERCER NODO (179, TAREA 2)
+==============================================================================
+
+A) EL ARCHIVO, MEDIDO ANTES DE USARLO
+   CIFRA ficheros de dataset/nodos/ leidos por el resolutor: 3853
+   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388
+
+B) LOS TERCEROS QUE EL ARCHIVO YA JUZGO CONTRA LOS DOS EXTREMOS
+
+   PAR 1 | colaboracion_cadena_suministro  vs  diagnostico_efecto_latigo
+      vecinos juzgados de a: 4 | de b: 1 | COMUNES: 1
+      tercero `efecto_bullwhip`
+         a contra el: clase A, puesto 730
+         b contra el: clase A, puesto 329
+      CADENAS DE REPITE (los dos en A con el mismo tercero): 1 efecto_bullwhip
+      FRONTERAS (uno en A y el otro en D con el mismo tercero): 0 
+
+   PAR 2 | compartir_datos_cadena_suministro  vs  diagnostico_efecto_latigo
+      vecinos juzgados de a: 2 | de b: 1 | COMUNES: 1
+      tercero `efecto_bullwhip`
+         a contra el: clase D, puesto 994
+         b contra el: clase A, puesto 329
+      CADENAS DE REPITE (los dos en A con el mismo tercero): 0 
+      FRONTERAS (uno en A y el otro en D con el mismo tercero): 1 efecto_bullwhip
+
+   PAR 3 | compra_por_precio_mas_bajo_como_error  vs  relacion_largo_plazo_proveedor_unico
+      vecinos juzgados de a: 3 | de b: 3 | COMUNES: 2
+      tercero `fin_precio_como_criterio_unico`
+         a contra el: clase A, puesto 2424
+         b contra el: clase D, puesto 3102
+      tercero `relaciones_largo_plazo_con_proveedores`
+         a contra el: clase D, puesto 2927
+         b contra el: clase A, puesto 2421
+      CADENAS DE REPITE (los dos en A con el mismo tercero): 0 
+      FRONTERAS (uno en A y el otro en D con el mismo tercero): 2 fin_precio_como_criterio_unico, relaciones_largo_plazo_con_proveedores
+
+   PAR 4 | creacion_option_pool  vs  employee_pool_esop
+      vecinos juzgados de a: 2 | de b: 2 | COMUNES: 2
+      tercero `option_pool_negociacion`
+         a contra el: clase A, puesto 1112
+         b contra el: clase D, puesto 1193
+      tercero `pool_opciones_empleados`
+         a contra el: clase A, puesto 1436
+         b contra el: clase A, puesto 1371
+      CADENAS DE REPITE (los dos en A con el mismo tercero): 1 pool_opciones_empleados
+      FRONTERAS (uno en A y el otro en D con el mismo tercero): 1 option_pool_negociacion
+
+   PAR 5 | disenar_tests_pass_fail  vs  diseno_experimentos_hipotesis
+      vecinos juzgados de a: 3 | de b: 4 | COMUNES: 2
+      tercero `diseno_experimentos_pass_fail`
+         a contra el: clase A, puesto 511
+         b contra el: clase A, puesto 467
+      tercero `realizar_pruebas_pasa_no_pasa`
+         a contra el: clase D, puesto 1346
+         b contra el: clase D, puesto 636
+      CADENAS DE REPITE (los dos en A con el mismo tercero): 1 diseno_experimentos_pass_fail
+      FRONTERAS (uno en A y el otro en D con el mismo tercero): 0 
+
+   PAR 6 | fase_diseno_prototipado_modelos  vs  prototyping_possibilities
+      vecinos juzgados de a: 5 | de b: 5 | COMUNES: 1
+      tercero `prototipado_modelos_negocio`
+         a contra el: clase A, puesto 641
+         b contra el: clase A, puesto 1056
+      CADENAS DE REPITE (los dos en A con el mismo tercero): 1 prototipado_modelos_negocio
+      FRONTERAS (uno en A y el otro en D con el mismo tercero): 0 
+
+   PAR 7 | proceso_ideacion_modelo_negocio  vs  prototyping_possibilities
+      vecinos juzgados de a: 5 | de b: 5 | COMUNES: 1
+      tercero `prototipado_modelos_negocio`
+         a contra el: clase D, puesto 572
+         b contra el: clase A, puesto 1056
+      CADENAS DE REPITE (los dos en A con el mismo tercero): 0 
+      FRONTERAS (uno en A y el otro en D con el mismo tercero): 1 prototipado_modelos_negocio
+
+   PAR 8 | analisis_trafico_competitivo  vs  captura_conocimiento_mercado
+      vecinos juzgados de a: 1 | de b: 1 | COMUNES: 1
+      tercero `capturar_conocimiento_de_mercado`
+         a contra el: clase A, puesto 508
+         b contra el: clase A, puesto 941
+      CADENAS DE REPITE (los dos en A con el mismo tercero): 1 capturar_conocimiento_de_mercado
+      FRONTERAS (uno en A y el otro en D con el mismo tercero): 0 
+
+   PAR 9 | crowdfunding_legal_exemptions_jobs_act  vs  cumplimiento_inversionistas_acreditados
+      vecinos juzgados de a: 1 | de b: 1 | COMUNES: 1
+      tercero `equity_crowdfunding`
+         a contra el: clase A, puesto 462
+         b contra el: clase A, puesto 916
+      CADENAS DE REPITE (los dos en A con el mismo tercero): 1 equity_crowdfunding
+      FRONTERAS (uno en A y el otro en D con el mismo tercero): 0 
+
+   PAR 10 | evaluacion_tecnologias_disruptivas  vs  explotacion_tecnologias_disruptivas
+      vecinos juzgados de a: 1 | de b: 1 | COMUNES: 1
+      tercero `tecnologias_disruptivas_oportunidad`
+         a contra el: clase A, puesto 505
+         b contra el: clase A, puesto 513
+      CADENAS DE REPITE (los dos en A con el mismo tercero): 1 tecnologias_disruptivas_oportunidad
+      FRONTERAS (uno en A y el otro en D con el mismo tercero): 0 
+
+C) EL RESUMEN, CONTADO DE LO DE ARRIBA
+| par | a | b | terceros comunes | cadenas de REPITE | fronteras |
+|---:|---|---|---:|---:|---:|
+| 1 | `colaboracion_cadena_suministro` | `diagnostico_efecto_latigo` | 1 | **1** | **0** |
+| 2 | `compartir_datos_cadena_suministro` | `diagnostico_efecto_latigo` | 1 | **0** | **1** |
+| 3 | `compra_por_precio_mas_bajo_como_error` | `relacion_largo_plazo_proveedor_unico` | 2 | **0** | **2** |
+| 4 | `creacion_option_pool` | `employee_pool_esop` | 2 | **1** | **1** |
+| 5 | `disenar_tests_pass_fail` | `diseno_experimentos_hipotesis` | 2 | **1** | **0** |
+| 6 | `fase_diseno_prototipado_modelos` | `prototyping_possibilities` | 1 | **1** | **0** |
+| 7 | `proceso_ideacion_modelo_negocio` | `prototyping_possibilities` | 1 | **0** | **1** |
+| 8 | `analisis_trafico_competitivo` | `captura_conocimiento_mercado` | 1 | **1** | **0** |
+| 9 | `crowdfunding_legal_exemptions_jobs_act` | `cumplimiento_inversionistas_acreditados` | 1 | **1** | **0** |
+| 10 | `evaluacion_tecnologias_disruptivas` | `explotacion_tecnologias_disruptivas` | 1 | **1** | **0** |
+
+   CIFRA pares con al menos una CADENA DE REPITE: 7
+   CIFRA pares con al menos una FRONTERA: 4
+   CIFRA pares sin ningun tercero comun: 0
+
+   ESTO NO DECIDE NINGUN VEREDICTO. Pone delante lo que el archivo ya
+   dijo, que es lo que `banco 9.3` obliga a mirar antes de fijar una
+   direccion de fusion sobre un par suelto.
+FIN

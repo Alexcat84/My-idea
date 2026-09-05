@@ -73,7 +73,7 @@ vuelta cierre.
 | tarea | que encarga | estado | donde vive la prueba |
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS, LAS CORRECCIONES Y LA OPERACION DE CODIGO DE LA ESCALADA, Y ES BLOQUEANTE. Cuatro letras: (a) LA CORRECCION DECLARADA DE LA CAIDA DE LA 178, que publico en su 1.e `16 casos` donde su propio fichero `docs/loop/SALIDA_V178_T1E_MUTACION.txt` dice 18, con las TRES cifras al lado (la publicada, la del fichero y la de la re-corrida de hoy) y SIN retocar el reporte archivado, que dice lo que se publico; (b) LA OPERACION DE CODIGO DE LA ESCALADA, que es la pieza que manda: la guarda de LA PROSA QUE CITA UN FICHERO, dentro de `cerrar_reporte.py` y como funcion PURA junto a sus hermanas, que caza toda frase que publique una cifra de casos de un arnes Y nombre un `SALIDA_V*.txt` en la misma linea, lee la cifra propia de ese fichero y CAE EN ROJO nombrando la linea, la cifra publicada y la del fichero, con los bloques cercados fuera y con el fichero inexistente o de cero bytes tambien en ROJO; con su caso positivo por mutacion y CORRIDA SOBRE `REPORTE_V178.md` publicando lo que salga; (c) LOS DOS ARNESES DESTAPADOS ENTRAN EN LA NOMINA de `verificar_mutaciones_viejas.py`, mas todo arnes que esta vuelta escriba, con la cuenta entera y la resta comprobada, ANTES de la 181 para que el rojo que la 178 anuncio no llegue a existir; (d) EL CORTE DEL DENOMINADOR CABLEADO DONDE SE GENERA LA CIFRA y no en una frase, porque la 178 publico 15 de 92 siendo verdad y al cerrar eran 15 de 98 | **CERRADA** | `SALIDA_V179_T1A_RECORRIDA_178.txt`, `_T1B_SOBRE_178.txt`, `_T1B_MUTACION.txt`, `_T1C_CUENTA.txt`, `_T1D_MUTACION.txt` |
-| **TAREA 2** | `OP-L-03`: SE LEEN LOS DIEZ PARES REALES DE LOS ACTOS SIN LEER. El backlog ya esta re-medido y `backlog_l03_resuelto.py` sale VERDE con los dos caminos calzando en los 40 actos: de los 73 pares que el instrumento da quedan 18 reales, 8 los leyo la 177 y quedan 10 en los 34 actos que nadie ha mirado. Los diez se leen con la vara del banco, par por par, y cada uno con su veredicto y su razon en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` SOLO SI EL PAR TIENE PUESTO EN LA COLA; si no lo tiene NO SE INVENTA UN PUESTO y su clase y su razon van al registro de `OP-L-03` en el campo `clases_de_los_pares_por_leer`, que es donde la 177 las puso y donde son trazables. El marcador no se toca si no hay puesto, y si lo hay se recomputa del archivo con sus cuatro clases. Cada acto cierra con su forma escrita: la figura, su cobertura y lo que queda. Y la cifra va al lado, siempre las dos: pares del instrumento y pares reales | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 2** | `OP-L-03`: SE LEEN LOS DIEZ PARES REALES DE LOS ACTOS SIN LEER. El backlog ya esta re-medido y `backlog_l03_resuelto.py` sale VERDE con los dos caminos calzando en los 40 actos: de los 73 pares que el instrumento da quedan 18 reales, 8 los leyo la 177 y quedan 10 en los 34 actos que nadie ha mirado. Los diez se leen con la vara del banco, par por par, y cada uno con su veredicto y su razon en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` SOLO SI EL PAR TIENE PUESTO EN LA COLA; si no lo tiene NO SE INVENTA UN PUESTO y su clase y su razon van al registro de `OP-L-03` en el campo `clases_de_los_pares_por_leer`, que es donde la 177 las puso y donde son trazables. El marcador no se toca si no hay puesto, y si lo hay se recomputa del archivo con sus cuatro clases. Cada acto cierra con su forma escrita: la figura, su cobertura y lo que queda. Y la cifra va al lado, siempre las dos: pares del instrumento y pares reales | **CERRADA** | `SALIDA_V179_T2_LOS_DIEZ.txt`, `_T2_VECINOS.txt`, `_T2_ESCRIBIR.txt`, `_T2_COBERTURA.txt` |
 | **TAREA 3** | LOS DIECISEIS TRIANGULOS SE PUBLICAN PARTIDOS POR SU FUENTE, y NINGUNA CLASE SE MUEVE. `vuelta178_tarea3_anotar_triangulos.py` publica la cifra PARTIDA y no solo el 16: cuantos descansan enteros en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` y cuantos se apoyan en un lado de fuera, y NOMBRA aquellos en que el lado de fuera es el `D`, que es el lado que hace que el triangulo sea un triangulo. `docs/plan/OP_L_03_TRIANGULOS.jsonl` gana un campo por fila que diga si el triangulo es recomputable entero del archivo, y el campo `fuente_de_la_clase` por lado NO se toca. CERO VEREDICTOS MOVIDOS, comprobado por `sha256` antes y despues. Con su caso positivo por mutacion sobre un registro fabricado, donde un triangulo con sus tres lados en el archivo y otro con el `D` fuera caen en casillas distintas | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 4** | LAS QUINCE DEL SUJETO CONGELADO SE JUZGAN, UNA A UNA, Y NO SE CABLEA NADA TODAVIA. Primero se juzgan, despues se cablea, y no al reves. Por cada una de las quince, un veredicto escrito con su prueba: o el arnes de verdad ABRE un fichero vivo de la campana y hay que congelarle el sujeto, o LO NOMBRA SIN ABRIRLO y basta con que lo declare, o es un CASO DECLARADO legitimo y se anota por que. Registro propio y no prosa: `docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl`, una fila por arnes, con el nombre, el veredicto, el fichero que abre y la evidencia (la linea del codigo). NO se arregla ningun arnes en esta vuelta y NO se cablea la guarda al rojo global de la bateria: el cableado se decide con los quince veredictos delante. NADA se borra de la nomina | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 5** | LO QUE NO ENTRA Y NO SE PIERDE, CONTADO EN VOZ ALTA. Ninguna de estas cinco se toca aqui, y las cinco se nombran CON SU MEDICION (existe, bytes en disco y normalizados a LF) para que no se caigan: la segunda sede de la clausula 4.4 en `REPORTE_V172.md:535`; el docstring de `paso0_archivar_anterior.py`, que sigue hablando de LA VUELTA ANTERIOR cuando la maquina pregunta por EL REPORTE QUE VA A PISAR; la guarda que falta en la dependencia del `D.4` de la 174, donde el esqueleto clona en vez de importar y nada avisa si el fichero del que se clono desaparece; el grano del tope de 10 minutos, que se mide EN LA 181 con el reloj de esa corrida y no se re-elige a ojo antes; y la convencion de bytes, que es del fundador, lleva seis actas subiendo y sube como PENDIENTE y no como problema, porque el remedio provisional de publicar siempre las dos ya es instrumento | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
@@ -214,5 +214,131 @@ dice contra que denominador se midio.**
 CAEN**. Su caso que manda es el de la 178: el 92 y el 98 no se confunden aunque
 el corte sea el mismo, y dos cortes distintos no se confunden aunque el numero
 sea el mismo. **No se llama a git en ningun caso.**
+
+### TAREA 2. `OP-L-03`: LOS DIEZ PARES REALES DE LOS ACTOS SIN LEER, LEIDOS
+
+#### 2.a. LA CIFRA AL LADO, SIEMPRE LAS DOS, Y NINGUNA COPIADA DEL ENCARGO
+
+Contada de `docs/loop/SALIDA_V179_T2_LOS_DIEZ.txt`, que sale de correr
+`backlog_l03_resuelto.py` por dentro y no de teclear lo que el encargo dice:
+
+| tramo | actos | pares del instrumento | pares reales |
+|---|---:|---:|---:|
+| actos QUE LA 177 LEYO | 6 | 29 | **8** |
+| actos QUE NADIE HA MIRADO | 34 | 44 | **10** |
+| **todo el backlog** | 40 | 73 | **18** |
+
+**Los diez de la fila del medio son el trabajo de esta tarea**, y quedan leidos
+los diez. **La columna vieja no se borra:** el instrumento sigue dando 73, y al
+lado van los 18 reales.
+
+#### 2.b. DONDE VA CADA VEREDICTO, Y LA DISTINCION NO SE DIFUMINA
+
+**Ninguno de los diez tiene puesto en la cola**, medido y no supuesto:
+
+| donde va el veredicto | pares |
+|---|---:|
+| `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (TIENEN puesto) | **0** |
+| `docs/plan/OP_L_03_LECTURAS.jsonl` (NO tienen puesto) | **10** |
+
+**Y HAY QUE DECIR POR QUE SALE ASI, EN VEZ DE PRESENTARLO COMO UNA CASUALIDAD DE
+ESTOS DIEZ.** Mi primera medicion de este campo estaba mal y la corrijo aqui:
+preguntaba si alguno de los DOS EXTREMOS aparece en algun puesto, que es otra
+cosa, y con esa vara los diez salian **SI**. La pregunta buena es si **EL PAR**
+tiene puesto, y la respuesta es **NO para los diez y no puede ser otra**: un par
+real esta definido por `medir_acto()` como el que **no esta ya en el archivo**,
+asi que un par real nunca puede traer puesto. El archivo tiene hoy **3.388**
+puestos ocupados, del **1** al **3.388**, **cero huecos**, y ninguno libre que
+asignar. Eso explica ademas por que los **ocho** que la 177 leyo fueron todos al
+registro y ninguno al archivo. **Se mide igualmente y se publica**, porque una
+guarda que solo se mira cuando difiere no se puede auditar el dia que difiera.
+
+**EL MARCADOR NO SE TOCA**, y se recomputa igual para poder decirlo
+(`docs/loop/SALIDA_V179_T2_ESCRIBIR.txt`, bloque G): **A 551, B 72, C 5, D
+2.760, total 3.388**. **Cero veredictos movidos**, comprobado por `sha256` antes
+y despues, y los dos son `ea6e850d331d14f0`.
+
+#### 2.c. COMO SE LEYERON, Y EL ARCHIVO SE MIRO ANTES DE JUZGAR
+
+**Dos apoyos por par, y los dos van escritos en cada razon.** El primero es **la
+vara del banco** (`9.6.1` y su rama contenido-manda, la linea o el
+procedimiento) sobre los `pasos_accionables` de los dos extremos. El segundo es
+**lo que el archivo ya dijo por un tercer nodo**, que `banco 9.3` obliga a mirar
+porque **una direccion de fusion decidida sobre un par no sobrevive a su
+familia**.
+
+Lo mide `scripts/loop/vuelta179_tarea2_vecinos_del_archivo.py`
+(`docs/loop/SALIDA_V179_T2_VECINOS.txt`), y **el resultado cambio mi lectura**:
+
+| que salio | pares |
+|---|---:|
+| pares con al menos un tercero ya juzgado contra LOS DOS extremos | **10** |
+| de esos, con una CADENA DE REPITE (los dos en `A` con el mismo tercero) | **7** |
+| de esos, con una FRONTERA (uno en `A` y el otro en `D` con el mismo tercero) | **4** |
+| pares sin ningun tercero comun | **0** |
+
+**LO DIGO CLARO PORQUE ES UNA CORRECCION DE MI PROPIO TRABAJO EN CURSO:** habia
+leido los diez por contenido y tenia **nueve `D` y una `A`**. Con el archivo
+delante quedan **seis `A` y cuatro `D`**. **Las cinco que cambiaron las cambio el
+archivo, no yo**, y en cada razon esta el puesto que lo hizo.
+
+#### 2.d. LAS DIEZ LECTURAS, CON SU CLASE Y SU APOYO
+
+| par | clase | quien lo sostiene en el archivo |
+|---|---|---|
+| `colaboracion_cadena_suministro` vs `diagnostico_efecto_latigo` | **A** | 730 (`A`) y 329 (`A`) por `efecto_bullwhip` |
+| `compartir_datos_cadena_suministro` vs `diagnostico_efecto_latigo` | **D** | frontera 994 (`D`) contra 329 (`A`) |
+| `compra_por_precio_mas_bajo_como_error` vs `relacion_largo_plazo_proveedor_unico` | **D** | dos fronteras en espejo, 2424/3102 y 2421/2927 |
+| `creacion_option_pool` vs `employee_pool_esop` | **D** | frontera 1112 (`A`) contra 1193 (`D`). **DISCUTIBLE** |
+| `disenar_tests_pass_fail` vs `diseno_experimentos_hipotesis` | **A** | 511 y 467, y el 511 declara la familia de TRES |
+| `fase_diseno_prototipado_modelos` vs `prototyping_possibilities` | **A** | 641 (`A`) y 1056 (`A`) por `prototipado_modelos_negocio` |
+| `proceso_ideacion_modelo_negocio` vs `prototyping_possibilities` | **D** | frontera 572 (`D`) contra 1056 (`A`) |
+| `analisis_trafico_competitivo` vs `captura_conocimiento_mercado` | **A** | 508 y 941, y el 941 dice que el tercero es el mismo nodo |
+| `crowdfunding_legal_exemptions_jobs_act` vs `cumplimiento_inversionistas_acreditados` | **A** | 462 (`A`) y 916 (`A`) por `equity_crowdfunding` |
+| `evaluacion_tecnologias_disruptivas` vs `explotacion_tecnologias_disruptivas` | **A** | 505 (`A`) y 513 (`A`). **DISCUTIBLE** |
+
+**El reparto: seis `A` y cuatro `D`, y seis mas cuatro son diez.**
+
+#### 2.e. LOS OCHO ACTOS, CERRADOS CON SU FORMA Y SU COBERTURA
+
+Cada uno lleva su `forma` escrita y su `cobertura` (`banco 9.26`) en
+`docs/plan/OP_L_03_LECTURAS.jsonl`, que pasa de **6** filas a **14**, **ocho
+anadidas por anexion y sin pisar ninguna de la 177**. **Los ocho quedan con cero
+pares sin cubrir.** Lo que sale de leerlos enteros y no de a pares:
+
+- **`colaboracion_cadena_suministro`**: una madre con **cero hermanos enlazados**
+  y **dos hijos de paso**, y el contenido parte el acto en dos: el hijo de la
+  medicion repite con la madre y el del compartir no.
+- **`compra_por_precio_mas_bajo_como_error`**: **dos familias de dos** que se
+  tocan en una linea y no se funden, cada una con su gemelo ya declarado y **los
+  dos cruces en `D`**.
+- **`creacion_option_pool`**: una familia de cuatro **partida en dos oficios con
+  un nodo a caballo**. Es el unico de los ocho **en que el archivo se contradice
+  consigo mismo** por dos terceros distintos, y eso queda escrito.
+- **`disenar_tests_pass_fail`**: la familia de **tres** que el propio puesto 511
+  declara, con una frontera comun enfrente que **no la parte**.
+- **`fase_diseno_prototipado_modelos`**: un acto **partido en dos alturas**, y la
+  misma pieza es **hija arriba y gemela abajo**. Dos de abajo se funden, el de
+  arriba no.
+- **`analisis_trafico_competitivo`**: un racimo de tres con un **gemelo
+  ortografico** dentro, que es la figura mas barata de las ocho.
+- **`crowdfunding_legal_exemptions_jobs_act`**: un racimo de tres sobre la misma
+  regla de valores, **cerrado por el tercero**.
+- **`evaluacion_tecnologias_disruptivas`**: el **par gemelo por nombre**, y con
+  una cosa anotada que no cambia la clase: **no hay arista entre ellos** y el
+  paso 4 de uno es la pregunta que el otro contesta. **No se toca**: la campana
+  esta en modo de cierre.
+
+#### 2.f. LO QUE QUEDA
+
+**De los 18 pares reales, los 18 quedan leidos**, y no es una suma de cabeza: lo
+cuenta `scripts/loop/vuelta179_tarea2_cobertura_final.py`
+(`docs/loop/SALIDA_V179_T2_COBERTURA.txt`), que recorre los pares reales que el
+instrumento da hoy y busca cada uno, **resuelto por `P.1`**, en el
+`clases_de_los_pares_por_leer` de su acto. **Ocho** los escribio la 177 y **diez**
+esta vuelta, **18 con lectura y 0 sin lectura**, y la resta cierra. **Cero pares
+reales sin lectura en todo el backlog de `OP-L-03`.** El
+estado de la ficha **NO se toca**, que es lo que `EJECUTOR.md` 4 manda mientras la
+campana este en modo de cierre.
 
 <!-- FIN ANEXO DE TAREAS -->

@@ -1,0 +1,160 @@
+==============================================================================
+LOS PARES REALES DE LOS ACTOS QUE NADIE HA MIRADO (vuelta 179, TAREA 2)
+==============================================================================
+
+A) EL UNIVERSO, RECOMPUTADO Y NO COPIADO DEL ENCARGO
+   CIFRA ficheros de dataset/nodos/ leidos por el resolutor: 3853
+   CIFRA alias del mapa: 761
+   CIFRA actos que el instrumento da: 40
+   CIFRA pares que el instrumento da, sumados: 73
+   CIFRA pares distintos que ya tienen veredicto: 3009
+
+B) LOS ACTOS QUE EL REGISTRO DICE LEIDOS, CONTADOS DE SU FICHERO
+   docs/plan/OP_L_03_LECTURAS.jsonl
+   CIFRA actos que el registro dice leidos: 6
+      LEIDO: breakthrough_desempeno_actual
+      LEIDO: cash_burn_calculation
+      LEIDO: cierre_segun_complejidad_venta
+      LEIDO: construccion_de_leverage
+      LEIDO: encuadre_desafio_diseno
+      LEIDO: estrategia_de_innovacion_arenas
+
+C) LOS PARES REALES, PARTIDOS POR SI SU ACTO SE LEYO O NO
+| tramo | actos | pares del instrumento | pares reales |
+|---|---:|---:|---:|
+| actos QUE LA 177 LEYO | 6 | 29 | **8** |
+| actos QUE NADIE HA MIRADO | 34 | 44 | **10** |
+| **todo el backlog** | 40 | 73 | **18** |
+
+   CIFRA pares reales EN LOS ACTOS SIN LEER, que son el trabajo de hoy: 10
+
+D) LOS PARES, UNO A UNO, CON TODO LO QUE HACE FALTA PARA LEERLOS
+
+   PAR 1 de 10 | acto `colaboracion_cadena_suministro`
+      a: colaboracion_cadena_suministro                       pasos_accionables 5
+      b: diagnostico_efecto_latigo                            pasos_accionables 4
+      puestos en que aparece a (contra OTROS nodos): 500, 573, 730, 1321
+      puestos en que aparece b (contra OTROS nodos): 329
+      EL PAR TIENE PUESTO EN LA COLA: NO
+
+   PAR 2 de 10 | acto `colaboracion_cadena_suministro`
+      a: compartir_datos_cadena_suministro                    pasos_accionables 4
+      b: diagnostico_efecto_latigo                            pasos_accionables 4
+      puestos en que aparece a (contra OTROS nodos): 573, 994
+      puestos en que aparece b (contra OTROS nodos): 329
+      EL PAR TIENE PUESTO EN LA COLA: NO
+
+   PAR 3 de 10 | acto `compra_por_precio_mas_bajo_como_error`
+      a: compra_por_precio_mas_bajo_como_error                pasos_accionables 3
+      b: relacion_largo_plazo_proveedor_unico                 pasos_accionables 4
+      puestos en que aparece a (contra OTROS nodos): 2424, 2927, 3065
+      puestos en que aparece b (contra OTROS nodos): 2421, 3102, 3168
+      EL PAR TIENE PUESTO EN LA COLA: NO
+
+   PAR 4 de 10 | acto `creacion_option_pool`
+      a: creacion_option_pool                                 pasos_accionables 3
+      b: employee_pool_esop                                   pasos_accionables 4
+      puestos en que aparece a (contra OTROS nodos): 1112, 1436
+      puestos en que aparece b (contra OTROS nodos): 1193, 1371
+      EL PAR TIENE PUESTO EN LA COLA: NO
+
+   PAR 5 de 10 | acto `disenar_tests_pass_fail`
+      a: disenar_tests_pass_fail                              pasos_accionables 5
+      b: diseno_experimentos_hipotesis                        pasos_accionables 4
+      puestos en que aparece a (contra OTROS nodos): 511, 1111, 1346
+      puestos en que aparece b (contra OTROS nodos): 467, 636, 1105, 1246
+      EL PAR TIENE PUESTO EN LA COLA: NO
+
+   PAR 6 de 10 | acto `fase_diseno_prototipado_modelos`
+      a: fase_diseno_prototipado_modelos                      pasos_accionables 5
+      b: prototyping_possibilities                            pasos_accionables 5
+      puestos en que aparece a (contra OTROS nodos): 507, 633, 641, 684, 740
+      puestos en que aparece b (contra OTROS nodos): 923, 981, 1056, 1134, 1553
+      EL PAR TIENE PUESTO EN LA COLA: NO
+
+   PAR 7 de 10 | acto `fase_diseno_prototipado_modelos`
+      a: proceso_ideacion_modelo_negocio                      pasos_accionables 5
+      b: prototyping_possibilities                            pasos_accionables 5
+      puestos en que aparece a (contra OTROS nodos): 395, 507, 572, 865, 1461
+      puestos en que aparece b (contra OTROS nodos): 923, 981, 1056, 1134, 1553
+      EL PAR TIENE PUESTO EN LA COLA: NO
+
+   PAR 8 de 10 | acto `analisis_trafico_competitivo`
+      a: analisis_trafico_competitivo                         pasos_accionables 4
+      b: captura_conocimiento_mercado                         pasos_accionables 7
+      puestos en que aparece a (contra OTROS nodos): 508
+      puestos en que aparece b (contra OTROS nodos): 941
+      EL PAR TIENE PUESTO EN LA COLA: NO
+
+   PAR 9 de 10 | acto `crowdfunding_legal_exemptions_jobs_act`
+      a: crowdfunding_legal_exemptions_jobs_act               pasos_accionables 5
+      b: cumplimiento_inversionistas_acreditados              pasos_accionables 5
+      puestos en que aparece a (contra OTROS nodos): 462
+      puestos en que aparece b (contra OTROS nodos): 916
+      EL PAR TIENE PUESTO EN LA COLA: NO
+
+   PAR 10 de 10 | acto `evaluacion_tecnologias_disruptivas`
+      a: evaluacion_tecnologias_disruptivas                   pasos_accionables 4
+      b: explotacion_tecnologias_disruptivas                  pasos_accionables 6
+      puestos en que aparece a (contra OTROS nodos): 505
+      puestos en que aparece b (contra OTROS nodos): 513
+      EL PAR TIENE PUESTO EN LA COLA: NO
+
+E) EL REPARTO POR PUESTO, QUE DECIDE DONDE VA CADA VEREDICTO
+| donde va el veredicto | pares |
+|---|---:|
+| `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (TIENEN puesto) | **0** |
+| `docs/plan/OP_L_03_LECTURAS.jsonl` (NO tienen puesto) | **10** |
+| **total** | **10** |
+   LA RESTA: 0 mas 10 = 10, y el total es 10. CALZA: SI
+
+   Y NO SE INVENTA NINGUN PUESTO: la distincion es la del punto 7.8 del
+   acta 178 y no se difumina.
+
+   LO QUE SALE DE MEDIRLO BIEN, Y SE DICE EN VEZ DE ESCONDERSE: un PAR
+   REAL no puede tener puesto, porque `medir_acto()` define par real
+   como el que NO esta ya en el archivo. La condicion es decidible y su
+   respuesta es siempre NO. Eso explica por que los OCHO que la 177 leyo
+   tambien fueron todos al registro de OP-L-03 y ninguno al archivo.
+   Y NO HAY PUESTO LIBRE QUE ASIGNAR, contado del propio archivo:
+      CIFRA puestos distintos ocupados: 3388 | menor 1 | mayor 3388
+      CIFRA huecos en el rango (puestos que faltarian): 0
+      CIFRA pares distintos tras resolver, que es OTRA cifra: 3009
+
+F) LOS ACTOS DE ESOS PARES, QUE SON LOS QUE HAY QUE CERRAR CON SU FORMA
+   acto `analisis_trafico_competitivo`
+      miembros escritos 3 | vivos por el resolutor 3 | vivos por el grafo 3
+      pares del instrumento 1 | pares reales 1 | disueltos 0 | ya con veredicto 2
+      pares de este acto en la lista de hoy: 1
+   acto `colaboracion_cadena_suministro`
+      miembros escritos 4 | vivos por el resolutor 4 | vivos por el grafo 4
+      pares del instrumento 2 | pares reales 2 | disueltos 0 | ya con veredicto 4
+      pares de este acto en la lista de hoy: 2
+   acto `compra_por_precio_mas_bajo_como_error`
+      miembros escritos 4 | vivos por el resolutor 4 | vivos por el grafo 4
+      pares del instrumento 1 | pares reales 1 | disueltos 0 | ya con veredicto 5
+      pares de este acto en la lista de hoy: 1
+   acto `creacion_option_pool`
+      miembros escritos 4 | vivos por el resolutor 4 | vivos por el grafo 4
+      pares del instrumento 1 | pares reales 1 | disueltos 0 | ya con veredicto 5
+      pares de este acto en la lista de hoy: 1
+   acto `crowdfunding_legal_exemptions_jobs_act`
+      miembros escritos 3 | vivos por el resolutor 3 | vivos por el grafo 3
+      pares del instrumento 1 | pares reales 1 | disueltos 0 | ya con veredicto 2
+      pares de este acto en la lista de hoy: 1
+   acto `disenar_tests_pass_fail`
+      miembros escritos 4 | vivos por el resolutor 4 | vivos por el grafo 4
+      pares del instrumento 1 | pares reales 1 | disueltos 0 | ya con veredicto 5
+      pares de este acto en la lista de hoy: 1
+   acto `evaluacion_tecnologias_disruptivas`
+      miembros escritos 3 | vivos por el resolutor 3 | vivos por el grafo 3
+      pares del instrumento 1 | pares reales 1 | disueltos 0 | ya con veredicto 2
+      pares de este acto en la lista de hoy: 1
+   acto `fase_diseno_prototipado_modelos`
+      miembros escritos 4 | vivos por el resolutor 4 | vivos por el grafo 4
+      pares del instrumento 2 | pares reales 2 | disueltos 0 | ya con veredicto 4
+      pares de este acto en la lista de hoy: 2
+   CIFRA actos implicados: 8
+
+   la lista, en json para la lectura: docs/loop/SALIDA_V179_T2_LOS_DIEZ.json
+FIN

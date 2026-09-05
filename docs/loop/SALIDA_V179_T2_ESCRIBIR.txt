@@ -1,0 +1,104 @@
+==============================================================================
+LAS DIEZ LECTURAS DE OP-L-03, ESCRITAS EN SU REGISTRO (179, TAREA 2)
+==============================================================================
+
+A) EL ARCHIVO DE VEREDICTOS, SELLADO ANTES DE TOCAR NADA
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   sha256 ANTES: ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
+   CIFRA bytes en disco: 4051967
+
+B) LAS DIEZ LECTURAS SE COTEJAN CONTRA LA LISTA DEL INSTRUMENTO
+   (ni una clase se escribe para un par que el instrumento no dio)
+   CIFRA pares que el instrumento da: 10
+   CIFRA lecturas escritas aqui: 10
+   CIFRA lecturas que NO estan en la lista del instrumento: 0
+   CIFRA pares del instrumento SIN lectura: 0
+
+C) EL REPARTO DE CLASES, CONTADO DE LAS LECTURAS
+| clase | pares |
+|---|---:|
+| A | **6** |
+| D | **4** |
+| **total** | **10** |
+   LA RESTA: 6 mas 4 = 10, y los pares son 10. CALZA: SI
+
+D) LAS FILAS QUE SE ESCRIBEN, UNA POR ACTO
+
+   acto `analisis_trafico_competitivo`
+      miembros: analisis_trafico_competitivo, captura_conocimiento_mercado
+      pares reales del acto: 1 | leidos aqui: 1 | sin cubrir: 0
+      A    analisis_trafico_competitivo|captura_conocimiento_mercado
+      reparto: {"A": 1}
+
+   acto `colaboracion_cadena_suministro`
+      miembros: colaboracion_cadena_suministro, compartir_datos_cadena_suministro, diagnostico_efecto_latigo
+      pares reales del acto: 2 | leidos aqui: 2 | sin cubrir: 0
+      A    colaboracion_cadena_suministro|diagnostico_efecto_latigo
+      D    compartir_datos_cadena_suministro|diagnostico_efecto_latigo
+      reparto: {"A": 1, "D": 1}
+
+   acto `compra_por_precio_mas_bajo_como_error`
+      miembros: compra_por_precio_mas_bajo_como_error, relacion_largo_plazo_proveedor_unico
+      pares reales del acto: 1 | leidos aqui: 1 | sin cubrir: 0
+      D    compra_por_precio_mas_bajo_como_error|relacion_largo_plazo_proveedor_unico
+      reparto: {"D": 1}
+
+   acto `creacion_option_pool`
+      miembros: creacion_option_pool, employee_pool_esop
+      pares reales del acto: 1 | leidos aqui: 1 | sin cubrir: 0
+      D    creacion_option_pool|employee_pool_esop
+      reparto: {"D": 1}
+
+   acto `crowdfunding_legal_exemptions_jobs_act`
+      miembros: crowdfunding_legal_exemptions_jobs_act, cumplimiento_inversionistas_acreditados
+      pares reales del acto: 1 | leidos aqui: 1 | sin cubrir: 0
+      A    crowdfunding_legal_exemptions_jobs_act|cumplimiento_inversionistas_acreditados
+      reparto: {"A": 1}
+
+   acto `disenar_tests_pass_fail`
+      miembros: disenar_tests_pass_fail, diseno_experimentos_hipotesis
+      pares reales del acto: 1 | leidos aqui: 1 | sin cubrir: 0
+      A    disenar_tests_pass_fail|diseno_experimentos_hipotesis
+      reparto: {"A": 1}
+
+   acto `evaluacion_tecnologias_disruptivas`
+      miembros: evaluacion_tecnologias_disruptivas, explotacion_tecnologias_disruptivas
+      pares reales del acto: 1 | leidos aqui: 1 | sin cubrir: 0
+      A    evaluacion_tecnologias_disruptivas|explotacion_tecnologias_disruptivas
+      reparto: {"A": 1}
+
+   acto `fase_diseno_prototipado_modelos`
+      miembros: fase_diseno_prototipado_modelos, proceso_ideacion_modelo_negocio, prototyping_possibilities
+      pares reales del acto: 2 | leidos aqui: 2 | sin cubrir: 0
+      A    fase_diseno_prototipado_modelos|prototyping_possibilities
+      D    proceso_ideacion_modelo_negocio|prototyping_possibilities
+      reparto: {"A": 1, "D": 1}
+
+   CIFRA filas que se escriben: 8
+   CIFRA pares cubiertos por esas filas: 10
+
+E) EL REGISTRO DE OP-L-03, ESCRITO POR ANEXION Y SIN PISAR NADA
+   docs/plan/OP_L_03_LECTURAS.jsonl
+   CIFRA filas ANTES: 6 | DESPUES: 14 | anadidas: 8
+   CIFRA bytes ANTES: 24158 | DESPUES: 51368
+   las filas de la 177 siguen enteras: SI
+
+F) CERO VEREDICTOS MOVIDOS, COMPROBADO Y NO PROMETIDO
+   sha256 ANTES:   ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
+   sha256 DESPUES: ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
+   IDENTICOS: SI
+
+G) EL MARCADOR, RECOMPUTADO DEL ARCHIVO (banco 9.10)
+| clase | puestos |
+|---|---:|
+| A | **551** |
+| B | **72** |
+| C | **5** |
+| D | **2760** |
+| **total** | **3388** |
+   EL MARCADOR NO SE TOCA porque ninguno de los diez tiene puesto, y se
+   recomputa igualmente para poder decir que no se movio.
+
+VERDE: las 10 lecturas quedan escritas en 8 filas de acto, cero veredictos
+movidos y cero puestos inventados.
+FIN
