@@ -1,0 +1,306 @@
+SELLO DE APERTURA DE LA VUELTA 177, escrito ANTES de la primera operacion
+instrumento: scripts/loop/vuelta177_apertura.py
+regimen: VUELTA NORMAL, NO DE BATERIA (acta 176 punto 7.8: la proxima es la 181).
+         Dos sub-tareas (AUDITOR.md 6.2, regimen temporal todavia vigente).
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD) ===
+f3087229f6e7d718a5dbb1676a0505d9ee75d133
+f3087229f6e7d718a5dbb1676a0505d9ee75d133	2026-09-05 11:38:49 -0400	ACTA DEL AUDITOR, VUELTA 176: LA VUELTA PAGO LA DEUDA DE LA 175 ENTERA Y TODO LO QUE PUBLICA REPRODUCE BAJO MI MANO SALVO UNA FRASE. Recomputo verificado: bateria 88 de 88 con su doble corrida, 0 repetidas, 0 ajenas, 0 de la nomina sin correr, y los seis nombres que mi conteo vio de mas NO EXISTEN COMO FICHERO, son literales de pru
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== C. git status --porcelain ENTERO ===
+ M dataset/metadata/master_graph.json
+?? scripts/loop/vuelta177_apertura.py
+CIFRA lineas de status: 2
+
+=== D. BYTES DE CADA RUTA QUE EL ENCARGO NOMBRA, POR LAS DOS CONVENCIONES ===
+(disco = os.path.getsize; git = git cat-file -s HEAD:<ruta>. Hallazgo 4.1 del
+ acta 174: divergen en el numero de finales de linea y SIGUE SIN CONVENCION)
+dataset/metadata/master_graph.json -> disco 8375817 bytes | git 8375817 bytes
+docs/loop/REPORTE.md -> disco 95231 bytes | git 95231 bytes
+docs/loop/ACTA_AUDITOR.md -> disco 4056083 bytes | git 4056083 bytes
+docs/loop/EJECUTOR.md -> disco 12244 bytes | git 12244 bytes
+docs/loop/PROMPT_SIGUIENTE.md -> disco 12838 bytes | git 12838 bytes
+docs/loop/reportes/REPORTE_V176.md -> disco 95231 bytes | git 95231 bytes
+docs/plan/OPERACIONES.jsonl -> disco 498085 bytes | git 498085 bytes
+docs/plan/LECTURAS_DIRIGIDAS.md -> disco 214916 bytes | git 214916 bytes
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4051967 bytes | git 4051967 bytes
+scripts/plan/backlog_l03_vuelta14.py -> disco NO EXISTE | git NO ESTA EN HEAD
+scripts/loop/vuelta150_3_relectura_expediente.py -> disco 45369 bytes | git 45369 bytes
+scripts/loop/cotejar_clon_declarado.py -> disco NO EXISTE | git NO ESTA EN HEAD
+scripts/loop/guarda_commit_dataset.py -> disco 14928 bytes | git 14928 bytes
+scripts/loop/cerrar_reporte.py -> disco 20841 bytes | git 20841 bytes
+scripts/loop/archivar_reporte.py -> disco 7181 bytes | git 7181 bytes
+scripts/loop/anexar_tarea_al_reporte.py -> disco 6243 bytes | git 6243 bytes
+scripts/loop/paso0_archivar_anterior.py -> disco 7112 bytes | git 7112 bytes
+scripts/loop/serie_de_registros.py -> disco 6595 bytes | git 6595 bytes
+scripts/loop/vuelta166_tarea2_mutacion_correccion.py -> disco 10736 bytes | git 10736 bytes
+scripts/loop/vuelta176_esqueleto_reporte.py -> disco 15371 bytes | git 15371 bytes
+scripts/loop/vuelta176_cierre.py -> disco 4469 bytes | git 4469 bytes
+scripts/loop/vuelta176_bateria_por_tramos.py -> disco 19475 bytes | git 19475 bytes
+scripts/loop/tallar_cabecera_reporte.py -> disco 96677 bytes | git 96677 bytes
+scripts/loop/verificar_mutaciones_viejas.py -> disco 82867 bytes | git 82867 bytes
+
+=== E. DIFF REAL EN BYTES DE LOS MODIFICADOS (cambio contra suciedad) ===
+dataset/metadata/master_graph.json -> diff de 0 bytes
+   dataset/metadata/master_graph.json -> git diff --numstat: 0 filas
+
+=== F. LO NO SEGUIDO POR GIT, FICHERO A FICHERO CON SUS BYTES ===
+scripts/loop/vuelta177_apertura.py -> 19559 bytes
+CIFRA ficheros no seguidos: 1
+
+=== G. git ls-tree DE HEAD SOBRE ESAS RUTAS ===
+dataset/metadata/master_graph.json -> 100644 blob cb33552aedddab4d6c51c5c85a7416999b5c70a0	dataset/metadata/master_graph.json
+docs/loop/REPORTE.md -> 100644 blob 75cc7a4f8f57a48226f5e886d0cdf813043d99bb	docs/loop/REPORTE.md
+docs/loop/ACTA_AUDITOR.md -> 100644 blob 5c59b57aa09705eed6d32fea9b727c5c6a56b4d4	docs/loop/ACTA_AUDITOR.md
+docs/loop/EJECUTOR.md -> 100644 blob 44734d1a2d159b5ef8edcf0acaafa4c1da5e6c33	docs/loop/EJECUTOR.md
+docs/loop/PROMPT_SIGUIENTE.md -> 100644 blob 76598c64625607472bfea2e27182383dcb326a96	docs/loop/PROMPT_SIGUIENTE.md
+docs/loop/reportes/REPORTE_V176.md -> 100644 blob 75cc7a4f8f57a48226f5e886d0cdf813043d99bb	docs/loop/reportes/REPORTE_V176.md
+docs/plan/OPERACIONES.jsonl -> 100644 blob ff13a2b37c1ae6dd82ef97329193e862b515a5b2	docs/plan/OPERACIONES.jsonl
+docs/plan/LECTURAS_DIRIGIDAS.md -> 100644 blob 97e42644132e628f97dfc4661fd9ee6a616e87b7	docs/plan/LECTURAS_DIRIGIDAS.md
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> 100644 blob 806c7c485a4b922a01a9615e6ad759267b78c278	docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+scripts/plan/backlog_l03_vuelta14.py -> NO ESTA EN EL ARBOL DE HEAD
+scripts/loop/vuelta150_3_relectura_expediente.py -> 100644 blob 70c21ed9e4c0e2fcf84be419284418084c1b518f	scripts/loop/vuelta150_3_relectura_expediente.py
+scripts/loop/cotejar_clon_declarado.py -> NO ESTA EN EL ARBOL DE HEAD
+scripts/loop/guarda_commit_dataset.py -> 100644 blob 317306df5a384e5bdc6fa263b4f3d4faf7a91178	scripts/loop/guarda_commit_dataset.py
+scripts/loop/cerrar_reporte.py -> 100644 blob 34cf0d86740d685087de0a367a662c3486d5f0cf	scripts/loop/cerrar_reporte.py
+scripts/loop/archivar_reporte.py -> 100644 blob 5c94daf630332f973b1771e14a6f5c0462ee4f1d	scripts/loop/archivar_reporte.py
+scripts/loop/anexar_tarea_al_reporte.py -> 100644 blob 70dcc2818a6687903f275f2cde3ae594a0c9ab1d	scripts/loop/anexar_tarea_al_reporte.py
+scripts/loop/paso0_archivar_anterior.py -> 100644 blob 71dc36b3ea3c4cf1a2f180741519aa7f9cf8aead	scripts/loop/paso0_archivar_anterior.py
+scripts/loop/serie_de_registros.py -> 100644 blob f85eb0f5e4f25650de3bbbca70f4e0d779be8562	scripts/loop/serie_de_registros.py
+scripts/loop/vuelta166_tarea2_mutacion_correccion.py -> 100644 blob 4168e3bb0da07cdbb65add3120f7b7956177ad68	scripts/loop/vuelta166_tarea2_mutacion_correccion.py
+scripts/loop/vuelta176_esqueleto_reporte.py -> 100644 blob a4d4e76df790001d2e208a0bf85336950743efac	scripts/loop/vuelta176_esqueleto_reporte.py
+scripts/loop/vuelta176_cierre.py -> 100644 blob 8fec83e6b723cc68edf6c1b542786712aa5276cd	scripts/loop/vuelta176_cierre.py
+scripts/loop/vuelta176_bateria_por_tramos.py -> 100644 blob 1d013f44ca48b5bd0fef43835ce363ae531a65e5	scripts/loop/vuelta176_bateria_por_tramos.py
+scripts/loop/tallar_cabecera_reporte.py -> 100644 blob b34332d5f339fcc0135799e6c805dbb725e39e9f	scripts/loop/tallar_cabecera_reporte.py
+scripts/loop/verificar_mutaciones_viejas.py -> 100644 blob 84e96d8ef923d0437d8e4a8ae0fc5e6e113e4b42	scripts/loop/verificar_mutaciones_viejas.py
+
+=== H. EL REPORTE EN HEAD, MEDIDO SIN CREERLE AL ENCARGO ===
+primera linea: # REPORTE DE LA VUELTA 176 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+lineas (saltos de linea contados): 1447
+bytes en git: 95231
+   contiene 'SIN ESCRIBIR TODAVIA'             -> NO
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'    -> NO
+   contiene 'ABIERTA, SIN CERRAR'              -> SI
+   contiene 'HUECO DECLARADO Y MEDIDO'         -> NO
+   contiene '\n## 3.'                          -> SI
+   contiene '\n## 4.'                          -> SI
+   contiene '\n## 5.'                          -> SI
+   contiene '\n## 6.'                          -> SI
+   contiene '\n## 7.'                          -> SI
+   contiene '\n## 8.'                          -> SI
+   contiene '\n## 9.'                          -> SI
+
+=== H.1 EL REPORTE DEL ARBOL, QUE ES EL QUE EL ESQUELETO DE LA 177 PISARA ===
+primera linea: # REPORTE DE LA VUELTA 176 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+bytes en disco (normalizado a LF): 95231 | saltos de linea: 1447
+bytes en disco (crudos, os.path.getsize): 95231
+identico byte a byte al de HEAD: SI
+   contiene 'SIN ESCRIBIR TODAVIA'             -> NO
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'    -> NO
+   contiene 'ABIERTA, SIN CERRAR'              -> SI
+   contiene 'HUECO DECLARADO Y MEDIDO'         -> NO
+   contiene '\n## 3.'                          -> SI
+   contiene '\n## 4.'                          -> SI
+   contiene '\n## 5.'                          -> SI
+   contiene '\n## 6.'                          -> SI
+   contiene '\n## 7.'                          -> SI
+   contiene '\n## 8.'                          -> SI
+   contiene '\n## 9.'                          -> SI
+
+=== H.2 EL COMMIT QUE DE VERDAD TOCA REPORTE.md POR ULTIMA VEZ ===
+(no se teclea ningun hash: se localiza con git log y se imprime lo que salga)
+los seis ultimos commits:
+   f3087229	ACTA DEL AUDITOR, VUELTA 176: LA VUELTA PAGO LA DEUDA DE LA 175 ENTERA Y TODO LO QUE PUBLICA REPRODUCE BAJO MI MANO SALVO UNA FRASE. Recomput
+   8c176390	LA VUELTA 176 ARCHIVA TAMBIEN SU PROPIO REPORTE, EN SU MISMA VUELTA Y SIN ESPERAR A LA 177, que es lo que el encargo pide expresamente: docs/
+   27b80563	TAREA 2 CERRADA: EL REPORTE DE LA 176 SE ABRIO Y SE CERRO EN SU MISMA VUELTA, CON SUS CUATRO PIEZAS (95231 bytes, 1447 lineas). cerrar_report
+   fd1ea61d	TAREA 1 CERRADA: LA BATERIA CORRIO ENTERA, 88 DE 88, Y SU SALIDA UNICA TIENE CUERPO POR PRIMERA VEZ DESDE LA 171. docs/loop/SALIDA_V176_BATER
+   55e67983	TRAMO 9 DE 9 DE LA BATERIA DE LA VUELTA 176, CERRADO Y SELLADO, Y CORRIDO DESPUES DEL ROJO DEL TRAMO 6 CON LA DECISION DECLARADA Y NO ESCONDI
+   2011f025	TRAMO 8 DE 9 DE LA BATERIA DE LA VUELTA 176, CERRADO Y SELLADO, Y CORRIDO DESPUES DEL ROJO DEL TRAMO 6 CON LA DECISION DECLARADA Y NO ESCONDI
+ultimo commit que TOCA docs/loop/REPORTE.md: 27b80563
+   su asunto: TAREA 2 CERRADA: EL REPORTE DE LA 176 SE ABRIO Y SE CERRO EN SU MISMA VUELTA, CON SUS CUATRO PIEZAS (95231 bytes, 1447 lineas). cerrar_reporte.py sale
+
+=== H.3 LAS PIEZAS QUE cerrar_reporte.py PEDIRA PARA CERRAR LA 177 ===
+(al abrir NO EXISTE NINGUNA, y eso es lo correcto: las produce esta vuelta.
+ La de bateria NO SE VA A PRODUCIR: esta vuelta no es de bateria y la seccion 9
+ cierra con el HUECO DECLARADO Y MEDIDO, acta 176 punto 7.8)
+docs/loop/SALIDA_V177_TALLADOR_CABECERA.txt -> NO EXISTE
+scripts/loop/_v177_cierre_texto.md -> NO EXISTE
+docs/loop/SALIDA_V177_BATERIA.txt -> NO EXISTE
+
+=== H.4 QUE REPORTES ESTAN YA ARCHIVADOS EN docs/loop/reportes/ ===
+   REPORTE_V168.md -> disco 31263 bytes | git 31263 bytes
+   REPORTE_V169.md -> disco 43586 bytes | git 43586 bytes
+   REPORTE_V170.md -> disco 45706 bytes | git 45706 bytes
+   REPORTE_V171.md -> disco 43956 bytes | git 43956 bytes
+   REPORTE_V172.md -> disco 48851 bytes | git 48851 bytes
+   REPORTE_V174.md -> disco 32568 bytes | git 32568 bytes
+   REPORTE_V175.md -> disco 5953 bytes | git 5953 bytes
+   REPORTE_V176.md -> disco 95231 bytes | git 95231 bytes
+CIFRA reportes archivados: 8
+REPORTE_V176.md archivado: SI
+
+=== H.5 EL ARNES DEL ROJO, MEDIDO SIN CORRERLO Y SIN CREERLE AL ENCARGO ===
+(TAREA 1.b. El encargo dice que la linea 175 compara contra un 3 tecleado y
+ que la medicion viva da 11. NI UNA NI OTRA SE COPIAN: se localiza la linea
+ en el fichero y se recomputa la cifra viva con las funciones puras del sujeto)
+fichero: scripts/loop/vuelta166_tarea2_mutacion_correccion.py (234 lineas)
+   LINEA 175: casos.append(("H_el_texto_nombra_las_tres", real.count("cae sobre"), 3))
+   LINEA 176: casos.append(("H_con_un_hallazgo_solo_nombra_una", falso.count("cae sobre"), 1))
+CIFRA lineas que llevan el literal 'cae sobre': 2
+CIFRA hallazgos que la medicion VIVA da hoy (len(hall)): 11
+CIFRA veces que el texto real dice 'cae sobre': 11
+CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388
+CIFRA alias del mapa: 761
+EL ESPERADO TECLEADO Y LA MEDICION VIVA COINCIDEN: NO
+
+=== H.6 LAS DOS FRASES DEL CLON DECLARADO, LOCALIZADAS Y NO SUPUESTAS ===
+(TAREA 1.c. El acta 176 seccion 5 dice que la frase esta en DOS docstrings de
+ scripts/. Aqui se busca el literal 'SALE VACIO' en todo scripts/loop/ y se imprime lo
+ que salga, sin dar por buena la cifra dos)
+   vuelta176_cierre.py -> 1 vez/veces
+   vuelta177_apertura.py -> 1 vez/veces
+CIFRA ficheros de scripts/loop/ con el literal 'SALE VACIO': 2
+
+=== H.7 LA SALIDA DEL LANZADOR DE TRAMO DENTRO DE docs/loop/ (D.5) ===
+(TAREA 1.e. Se cuentan los ficheros de lanzador que HOY viven en docs/loop/,
+ que es lo que el acta 176 punto 7.5 manda sacar de ahi)
+   SALIDA_V176_T1_LANZADOR_TRAMO_1.txt                  -> 2635 bytes
+   SALIDA_V176_T1_LANZADOR_TRAMO_2.txt                  -> 2667 bytes
+   SALIDA_V176_T1_LANZADOR_TRAMO_3.txt                  -> 2692 bytes
+   SALIDA_V176_T1_LANZADOR_TRAMO_4.txt                  -> 2730 bytes
+   SALIDA_V176_T1_LANZADOR_TRAMO_5.txt                  -> 2721 bytes
+   SALIDA_V176_T1_LANZADOR_TRAMO_6.txt                  -> 2833 bytes
+   SALIDA_V176_T1_LANZADOR_TRAMO_7.txt                  -> 2718 bytes
+   SALIDA_V176_T1_LANZADOR_TRAMO_8.txt                  -> 2726 bytes
+   SALIDA_V176_T1_LANZADOR_TRAMO_9.txt                  -> 2626 bytes
+CIFRA ficheros de LANZADOR dentro de docs/loop/: 9
+el lanzador nombra tempfile (fichero de trabajo fuera de docs/loop/): SI
+el lanzador escribe su PROPIA transcripcion a algun sitio: NO
+
+=== H.8 EL RECHAZO DEL TALLADOR, QUE HOY NO DEJA RASTRO ===
+(TAREA 1.e. El acta 176 seccion 9 punto 4 dice que el 37 no se puede
+ re-verificar porque el tallador no dejo salida de aquel rechazo)
+CIFRA ficheros SALIDA_V<N>_TALLADOR_RECHAZO.txt en docs/loop/: 0
+el tallador nombra TALLADOR_RECHAZO en su codigo: NO
+   LINEA 1583: print("  ROJO, %d cosa(s) no se pudieron leer y NO se talla nada:" % len(fallos))
+   LINEA 1592: print("  ROJO, %d cosa(s) no se pudieron leer y NO se talla nada:" % len(fallos_reg))
+   LINEA 1761: print("  ROJO, %d celdas no se pudieron leer y NO se talla nada:" % len(fallos))
+
+=== H.9 EL TAMANO DE TRAMO, QUE HOY SE ELIGE Y NO SE COMPUTA (D.3 y P.3) ===
+   LINEA 1103: def reparto_en_tramos(nomina, tamano):
+   LINEA 1145: ap.add_argument("--tamano-tramo", dest="tamano_tramo", type=int, default=10,
+   LINEA 1204: tramos = reparto_en_tramos(VIEJAS, a.tamano_tramo)
+   LINEA 1213: % (a.tramo, len(VIEJAS), a.tamano_tramo, a.tamano_tramo, len(tramos)))
+   LINEA 1221: print("  CIFRA tamano de tramo: %d" % a.tamano_tramo)
+reparto_en_tramos nombra minutos hoy: SI
+el fichero nombra tope_de_minutos: NO
+el fichero nombra tamano_por_minutos: NO
+
+=== H.10 EL UNIVERSO DE OP-L-03, RECOMPUTADO Y NO COPIADO DE SU NOTA ===
+(TAREA 2. El encargo cita 55 pares en 29 actos, corte 2117, que es la
+ fecha_corte de la ficha. La nota de la MISMA ficha declara un recomputo
+ adjudicado en la vuelta 15 al corte 3388. Se corre el instrumento que la
+ propia nota cita y se imprime lo que salga, sin elegir entre los dos)
+comando: python scripts/plan/backlog_l03_vuelta14.py -> exit 2
+   C:\Users\AlexDesk\AppData\Local\Programs\Python\Python312\python.exe: can't open file 'C:\\Users\\AlexDesk\\Documents\\I have an idea\\scripts\\plan\\backlog_l0
+
+=== H.11 LA VARA DEL TRABAJO PENDIENTE, CORRIDA POR MI EN ESTA VUELTA ===
+(la vara es scripts/loop/vuelta150_3_relectura_expediente.py y NUNCA el campo
+ estado, decision del fundador del 4 sep 2026)
+comando: vuelta150_3_relectura_expediente.py --corte f3087229 -> exit 0
+   | `OP-F-01` | 01_FUENTES | LISTA | P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-F-02` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-F-03` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-01` | 02_DESTEJIDOS | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-02` | 02_DESTEJIDOS | LISTA | P1+P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-03` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-04` | 02_DESTEJIDOS | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-05` | 02_DESTEJIDOS | LISTA | P1+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-06` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-S-06` | 00_CODIGO | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-S-07` | 00_CODIGO | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-C-01` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-C-02` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-C-03` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-C-04` | 00_CODIGO | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-U-01` | 03_FUSIONES | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-E-01` | 04_ENLACES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-A-01` | 07_ADUANA | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-A-02` | 07_ADUANA | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-U-02` | 03_FUSIONES | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-F-04-COL` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-F-04-HOR` | 01_FUENTES | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-F-04-WEI` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-F-04-RAC` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-E-03` | 04_ENLACES | LISTA | P3b | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-M-02-PROG` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-02-ASSESS` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-02-ACTIVATE` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-02-ACCOMPLISH` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-D-07` | 02_DESTEJIDOS | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-M-03-I` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-03-II` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-E-06` | 04_ENLACES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-E-07` | 04_ENLACES | LISTA | P3a+P3b | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-08` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | `OP-D-09` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+     OP-F-01 (01_FUENTES, estado LISTA)
+     OP-F-02 (01_FUENTES, estado LISTA)
+     OP-F-03 (01_FUENTES, estado LISTA)
+     OP-D-01 (02_DESTEJIDOS, estado LISTA)
+     OP-D-02 (02_DESTEJIDOS, estado LISTA)
+     OP-D-03 (02_DESTEJIDOS, estado LISTA)
+     OP-D-04 (02_DESTEJIDOS, estado LISTA)
+     OP-D-05 (02_DESTEJIDOS, estado LISTA)
+     OP-D-06 (02_DESTEJIDOS, estado LISTA)
+     OP-S-06 (00_CODIGO, estado LISTA)
+     OP-S-07 (00_CODIGO, estado LISTA)
+     OP-C-01 (00_CODIGO, estado LISTA)
+     OP-C-02 (00_CODIGO, estado LISTA)
+     OP-C-03 (00_CODIGO, estado LISTA)
+     OP-C-04 (00_CODIGO, estado LISTA)
+     OP-U-01 (03_FUSIONES, estado LISTA)
+     OP-E-01 (04_ENLACES, estado LISTA)
+     OP-A-01 (07_ADUANA, estado LISTA)
+     OP-A-02 (07_ADUANA, estado LISTA)
+     OP-U-02 (03_FUSIONES, estado LISTA)
+     OP-F-04-COL (01_FUENTES, estado LISTA)
+     OP-F-04-HOR (01_FUENTES, estado LISTA)
+     OP-F-04-WEI (01_FUENTES, estado LISTA)
+     OP-F-04-RAC (01_FUENTES, estado LISTA)
+     OP-E-03 (04_ENLACES, estado LISTA)
+     OP-M-02-PROG (03_FUSIONES, estado LISTA)
+     OP-M-02-ASSESS (03_FUSIONES, estado LISTA)
+     OP-M-02-ACTIVATE (03_FUSIONES, estado LISTA)
+     OP-M-02-ACCOMPLISH (03_FUSIONES, estado LISTA)
+     OP-D-07 (02_DESTEJIDOS, estado LISTA)
+     OP-M-03-I (03_FUSIONES, estado LISTA)
+     OP-M-03-II (03_FUSIONES, estado LISTA)
+     OP-E-06 (04_ENLACES, estado LISTA)
+     OP-E-07 (04_ENLACES, estado LISTA)
+     OP-D-08 (02_DESTEJIDOS, estado LISTA)
+     OP-D-09 (02_DESTEJIDOS, estado LISTA)
+   Criterio: estado LISTA y TODAS sus depende_de en HECHA. Las de depende_de VACIO
+   CONTADO: 4 operacion(es) LISTA con todas sus dependencias en HECHA.
+   CONTRASTE: 23 operacion(es) LISTA con depende_de VACIO (nunca bloqueadas).
+   Y LO QUE DE VERDAD QUEDA POR CORRER: las fichas en LISTA SIN NINGUNA de las
+   tres pruebas. Son las unicas cuyo estado LISTA calza con el repo, o sea las
+   | `OP-L-01` | 09_LECTURAS_DIRIGIDAS | MESA | (vacio) |
+   | `OP-L-02` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA |
+   | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA, OP-D-04=LISTA, OP-D-05=LISTA, OP-D-06=LISTA |
+   | `OP-I-01` | 10_INVENTARIO | MESA | (vacio) |
+   | `OP-M-02-ADMIT` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA, OP-M-02-MEDIOS=LISTA |
+   CONTADO: 6 ficha(s) en LISTA sin ninguna prueba de ejecucion.
+   CIFRA fichas del expediente: 71 operaciones
+   CIFRA fichas que no calzan: 37 operaciones
+   CIFRA fichas congeladas declaradas: 24 operaciones
+   CIFRA fichas congeladas en silencio: 12 operaciones
+   CIFRA fichas HECHA sin ninguna prueba: 1 operaciones
+   CIFRA fichas en LISTA sin ninguna prueba: 6 operaciones
+
+FIN DEL SELLO DE APERTURA
